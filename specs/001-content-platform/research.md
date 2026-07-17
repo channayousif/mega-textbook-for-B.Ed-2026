@@ -98,17 +98,20 @@ The SDD source (`SDD/001-content-platform.md`, `SDD/ROADMAP.md`) and Constitutio
   `/semester-1/efmp-301/unit-01/`, `/ur/`, `/ur/semester-1/efmp-301/unit-01/`). The homepage
   renders the configured title. So the site, i18n locales, routing, MDX components, and content
   all compile and run.
-- **Known environment issue (not a code defect)** — only the static export fails: `docusaurus
-  build` compiles the client + server bundles, but the **SSG render step fails inside this
-  sandbox's Node `vm`** (`@docusaurus/core/lib/ssg/ssg.js` → `eval` → `runInNewContext`) with
-  `require.resolveWeak is not a function`. This reproduces identically on Docusaurus 3.6.3 /
-  3.7.0 / 3.8.1 / 3.10.2, so it is the sandbox vm/eval context, not a version or content
-  problem. A separate `webpack ProgressPlugin` schema error seen while pinning older Docusaurus
-  lines was a real version mismatch (webpackbar vs webpack) and is **fixed** by using coherent
-  Docusaurus 3.10.2 (webpackbar 7 + webpack 5.108, which match) — the shipped config. Resolve
-  the SSG export in a standard CI/dev environment (normal `docusaurus build` there does not hit
-  the sandbox vm limitation); dev/preview via `npm run start` works today. Tracked as the first
-  follow-up for the engineering review gate; separate from the R5 Urdu-search risk (T025).
+- **Static build (`docusaurus build`) — RESOLVED.** The `require.resolveWeak is not a function`
+  SSG failure was **not** an environment limit (it reproduced on GitHub Actions ubuntu too); it
+  was a real config bug: **`"type": "module"` in package.json** broke Docusaurus's CommonJS
+  server bundle during SSG. Removing it fixed the build (the `.mjs` scripts stay ESM by
+  extension). A second, content bug then surfaced — the scaffold gave every course the same
+  `Unit 1 (coming soon)` sidebar label, producing duplicate i18n translation keys that failed
+  the `ur` build; labels are now course-code-prefixed and unique. `docusaurus build` now
+  succeeds for **en + ur**, and CI (GitHub Actions) runs green end-to-end: build (both locales)
+  + Lighthouse + the full Playwright e2e suite. A separate `webpack ProgressPlugin` schema error
+  seen while pinning older Docusaurus lines was a version mismatch, avoided by coherent 3.10.2.
+- **T026 note**: the initial `DocItem/Metadata` swizzle did not emit the `noindex` meta;
+  replaced with an explicit in-content `<Head>` in scaffolded placeholders — verified that
+  coming_soon pages are dropped from `build/search-index.json` while the golden unit stays
+  indexed.
 
 ## Deferred (curriculum-owner) decisions — non-blocking
 
