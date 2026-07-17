@@ -85,7 +85,9 @@ for (const sem of catalog.semesters) {
       ].join('\n'),
     );
     const unitDir = join(courseDir, 'unit-01');
-    write(join(unitDir, '_category_.json'), JSON.stringify({ label: 'Unit 1 (coming soon)', position: 1 }, null, 2) + '\n');
+    // Label must be unique across the whole sidebar or Docusaurus i18n produces duplicate
+    // translation keys — hence the course code prefix.
+    write(join(unitDir, '_category_.json'), JSON.stringify({ label: `${course.code} · Unit 1 (coming soon)`, position: 1 }, null, 2) + '\n');
     for (const f of UNIT_FILES) write(join(unitDir, f), placeholderFrontMatter(course, f));
   });
 }
