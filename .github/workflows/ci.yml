@@ -20,6 +20,14 @@ jobs:
       - name: Validate content
         run: npm run validate:content
 
+      # No answer keys / private marking material in public content (FR-012, SC-010, T028)
+      - name: Answer-key safety check
+        run: npm run check:no-answer-keys
+
+      # Adding a course is content-only — zero platform-code change (FR-005, SC-006, T034)
+      - name: Add-course content-only check
+        run: npm run check:add-course
+
       # Validator fixture tests (T013/T014/T032/T033)
       - name: Unit tests
         run: npm test
@@ -28,7 +36,32 @@ jobs:
       - name: Build (en + ur)
         run: npm run build
 
+      # No answer keys leaked into the built output either (T028)
+      - name: Answer-key safety check (built output)
+        run: npm run check:no-answer-keys
+
       # Lighthouse budget: a11y ≥ 0.9, FCP < 2.5s Slow-4G, total weight budget (SC-002, T038).
-      # Config: .lighthouserc.json (asserts against the static build in ./build).
       - name: Lighthouse CI
         run: npx --yes @lhci/cli@0.14.x autorun || echo "::warning::Lighthouse budget not met"
+
+  e2e:
+    # Browser e2e (T012/T022/T023/T027) — needs a real build + browser host deps, which the
+    # sandbox lacks; GitHub Actions ubuntu provides them. Search e2e needs the production
+    # build's index, so we serve the build rather than the dev server.
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run validate:content
+      - run: npm run build
+      - name: Install Playwright + browser deps
+        run: npx playwright install --with-deps chromium
+      - name: Run e2e (against served build)
+        env:
+          PW_WEBSERVER: npm run serve -- --port 3000
+        run: npm run test:e2e

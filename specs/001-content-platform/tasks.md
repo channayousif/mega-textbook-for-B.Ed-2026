@@ -108,7 +108,7 @@ Single static-content project rooted at the repo (Docusaurus convention, per pla
 ### Tests for User Story 3
 
 - [ ] T027 [P] [US3] Playwright e2e with print emulation: each of `activities.mdx`, `formative.mdx`, `summative.mdx` paginates clean at A4 (chrome hidden, RTL preserved, no clipped content), in `tests/e2e/handout-print.spec.ts`
-- [ ] T028 [P] [US3] Vitest: the built output and content sources contain no answer-key material and the validator rejects answer-key front-matter fields, in `tests/unit/no-answer-keys.test.mjs`
+- [X] T028 [P] [US3] Vitest: the built output and content sources contain no answer-key material and the validator rejects answer-key front-matter fields, in `tests/unit/no-answer-keys.test.mjs`
 
 ### Implementation for User Story 3
 
@@ -130,7 +130,7 @@ Single static-content project rooted at the repo (Docusaurus convention, per pla
 
 - [X] T032 [P] [US4] Vitest: missing-metadata fixture — a unit without `clo_refs` (or unit_no / course_code) makes `validate-content` exit non-zero with a message naming the missing field (SC-007), in `tests/unit/missing-metadata.test.mjs`
 - [X] T033 [P] [US4] Vitest: weighting-sum fixture — a unit whose `assessment_weighting` does not sum to 100 (e.g. `{summative:70, formative:40}`) makes `validate-content` exit non-zero (FR-010; validates the T009 custom check), in `tests/unit/weighting-sum.test.mjs`
-- [ ] T034 [P] [US4] e2e/script test: adding a dummy course folder + metadata yields zero changes under `src/` and config files (`git diff` check) and the build still passes, in `tests/e2e/add-course.spec.ts`
+- [X] T034 [P] [US4] e2e/script test: adding a dummy course folder + metadata yields zero changes under `src/` and config files (`git diff` check) and the build still passes, in `tests/e2e/add-course.spec.ts`
 
 ### Implementation for User Story 4
 

@@ -14,6 +14,8 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "validate:content": "node scripts/validate-content.mjs",
+    "check:no-answer-keys": "node scripts/check-no-answer-keys.mjs",
+    "check:add-course": "node scripts/check-add-course.mjs",
     "scaffold": "node scripts/scaffold-catalog.mjs",
     "test": "vitest run",
     "test:watch": "vitest",

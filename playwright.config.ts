@@ -13,9 +13,11 @@ export default defineConfig({
     ...devices['Desktop Chrome'],
   },
   webServer: {
-    command: 'npm run serve -- --port 3000',
+    // Prefer a real static build in CI (`npm run serve`); locally the dev server works too
+    // and avoids the SSG step. Override with PW_WEBSERVER if needed.
+    command: process.env.PW_WEBSERVER || 'npm run start -- --port 3000 --no-open',
     url: 'http://localhost:3000',
     reuseExistingServer: !process.env.CI,
-    timeout: 120_000,
+    timeout: 180_000,
   },
 });
