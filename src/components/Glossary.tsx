@@ -20,7 +20,7 @@ export default function Glossary({
     ? `EN: ${entry.definition_en}\nUR: ${entry.definition_ur}`
     : term;
   return (
-    <abbr className="glossary-term" title={title} tabIndex={0}>
+    <abbr className="glossary-term" title={title} aria-label={title} tabIndex={0}>
       {children ?? term}
     </abbr>
   );

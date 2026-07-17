@@ -14,9 +14,11 @@ export default function PrintHandout({
     <button
       type="button"
       className="print-handout print-hidden"
+      aria-label="Print or save this handout as a PDF"
       onClick={() => typeof window !== 'undefined' && window.print()}
     >
-      🖨 {label}
+      <span aria-hidden="true">🖨 </span>
+      {label}
     </button>
   );
 }

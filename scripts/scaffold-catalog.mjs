@@ -28,6 +28,11 @@ const SECTION = {
 };
 let created = 0;
 
+// Explicit noindex for un-authored placeholder pages (T026, FR-006/SC-005): keeps them in
+// the sidebar but out of the search index. In-content <Head> is emitted into the built HTML,
+// which @easyops-cn/docusaurus-search-local honors (parse.js skips robots=noindex pages).
+const NOINDEX = ["import Head from '@docusaurus/Head';", '', '<Head>', '  <meta name="robots" content="noindex" />', '</Head>', ''].join('\n');
+
 const write = (path, content) => {
   if (existsSync(path)) return;
   mkdirSync(join(path, '..'), { recursive: true });
@@ -48,6 +53,7 @@ const placeholderFrontMatter = (course, file) =>
     'coming_soon: true',
     '---',
     '',
+    NOINDEX,
     `# ${course.title_en} — Unit 1 (${SECTION[file]})`,
     '',
     ':::info Coming soon',
@@ -76,6 +82,7 @@ for (const sem of catalog.semesters) {
         `category: "${course.category}"`,
         '---',
         '',
+        NOINDEX,
         `# ${course.title_en} — Course Overview`,
         '',
         ':::info Coming soon',
@@ -85,7 +92,9 @@ for (const sem of catalog.semesters) {
       ].join('\n'),
     );
     const unitDir = join(courseDir, 'unit-01');
-    write(join(unitDir, '_category_.json'), JSON.stringify({ label: 'Unit 1 (coming soon)', position: 1 }, null, 2) + '\n');
+    // Label must be unique across the whole sidebar or Docusaurus i18n produces duplicate
+    // translation keys — hence the course code prefix.
+    write(join(unitDir, '_category_.json'), JSON.stringify({ label: `${course.code} · Unit 1 (coming soon)`, position: 1 }, null, 2) + '\n');
     for (const f of UNIT_FILES) write(join(unitDir, f), placeholderFrontMatter(course, f));
   });
 }
