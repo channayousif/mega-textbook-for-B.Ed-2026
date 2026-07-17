@@ -12,8 +12,9 @@ const config: Config = {
   title: 'B.Ed Mega Textbook',
   tagline: 'Bilingual digital textbook for the B.Ed (4-Year) programme',
   favicon: 'img/favicon.ico',
-  url: 'https://example.invalid',
+  url: 'https://www.a2ahs.com',
   baseUrl: '/',
+  trailingSlash: true, // emit /path/index.html so plain static file servers (nginx/Apache) serve directory URLs
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
