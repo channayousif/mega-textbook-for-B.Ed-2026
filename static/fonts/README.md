@@ -1,11 +1,11 @@
 # Fonts
 
-Place the self-hosted Urdu webfont here (FR-002):
+`NotoNastaliqUrdu-Regular.woff2` (FR-002) — the self-hosted Urdu webfont.
 
-- `NotoNastaliqUrdu-Regular.woff2` — a WOFF2 subset of **Noto Nastaliq Urdu** limited to
-  the Urdu/Arabic Unicode ranges (see `unicode-range` in `src/css/custom.css`), single
-  weight, to respect the low-bandwidth budget (SC-002, research R3).
-
-The font file is a binary asset and is intentionally not committed as source; add it during
-setup (e.g. subset from Google Fonts with `fonttools`/`glyphhanger`). The site builds
-without it, but Urdu will fall back to system Naskh until it is present.
+- Source: **Noto Nastaliq Urdu** (OFL), the Arabic/Urdu Unicode-range subset served by Google
+  Fonts (`fonts.gstatic.com`), downloaded and committed for self-hosting so no third-party
+  request is made on slow connections (Constitution V.5, research R3).
+- Referenced by `@font-face` in `src/css/custom.css` with a matching `unicode-range` and
+  `font-display: swap`, plus a Naskh/system fallback.
+- ~159 KB (single weight). Further subsetting to only the glyphs used is a possible
+  optimisation if the low-bandwidth budget (SC-002) needs it.

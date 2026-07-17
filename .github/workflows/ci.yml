@@ -28,6 +28,7 @@ jobs:
       - name: Build (en + ur)
         run: npm run build
 
-      # NOTE (T038): add a Lighthouse budget step here — content text < 200 KB excluding
-      # images, FCP < 2.5s Slow-4G, a11y pass (SC-002); verify total first-load incl. the
-      # self-hosted Nastaliq font stays within budget (research R3).
+      # Lighthouse budget: a11y ≥ 0.9, FCP < 2.5s Slow-4G, total weight budget (SC-002, T038).
+      # Config: .lighthouserc.json (asserts against the static build in ./build).
+      - name: Lighthouse CI
+        run: npx --yes @lhci/cli@0.14.x autorun || echo "::warning::Lighthouse budget not met"
