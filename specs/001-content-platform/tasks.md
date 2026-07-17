@@ -60,7 +60,7 @@ Single static-content project rooted at the repo (Docusaurus convention, per pla
 
 ### Tests for User Story 1
 
-- [ ] T012 [P] [US1] Playwright e2e: EN↔UR toggle renders RTL with Nastaliq and the same sections, **completes in under 2 seconds (SC-001)**, and a content page fits a 360px viewport with no horizontal scroll, in `tests/e2e/read-bilingual.spec.ts`
+- [X] T012 [P] [US1] Playwright e2e: EN↔UR toggle renders RTL with Nastaliq and the same sections, **completes in under 2 seconds (SC-001)**, and a content page fits a 360px viewport with no horizontal scroll, in `tests/e2e/read-bilingual.spec.ts`
 - [X] T013 [P] [US1] Vitest: EN↔UR parity-gate fixture — a `translation_status: reviewed` unit with a removed/added UR heading makes `validate-content` exit non-zero naming the divergence, in `tests/unit/parity.test.mjs`
 - [X] T014 [P] [US1] Vitest: glossary-reference fixture — a `<Glossary term="X">` with no matching `glossary.json` key, or an entry missing `definition_en`/`definition_ur`, makes `validate-content` exit non-zero, in `tests/unit/glossary.test.mjs`
 
@@ -86,8 +86,8 @@ Single static-content project rooted at the repo (Docusaurus convention, per pla
 
 ### Tests for User Story 2
 
-- [ ] T022 [P] [US2] Playwright e2e: navigation is organized Semester → Course → Unit, highlights the current location, and reaches a unit in ≤3 steps, in `tests/e2e/navigation.spec.ts`
-- [ ] T023 [P] [US2] Playwright e2e: a term searched in EN and in UR each returns a relevant result that opens the intended page, and `coming_soon` units are absent from results, in `tests/e2e/search.spec.ts`
+- [X] T022 [P] [US2] Playwright e2e: navigation is organized Semester → Course → Unit, highlights the current location, and reaches a unit in ≤3 steps, in `tests/e2e/navigation.spec.ts`
+- [X] T023 [P] [US2] Playwright e2e: a term searched in EN and in UR each returns a relevant result that opens the intended page, and `coming_soon` units are absent from results, in `tests/e2e/search.spec.ts`
 
 ### Implementation for User Story 2
 
@@ -107,7 +107,7 @@ Single static-content project rooted at the repo (Docusaurus convention, per pla
 
 ### Tests for User Story 3
 
-- [ ] T027 [P] [US3] Playwright e2e with print emulation: each of `activities.mdx`, `formative.mdx`, `summative.mdx` paginates clean at A4 (chrome hidden, RTL preserved, no clipped content), in `tests/e2e/handout-print.spec.ts`
+- [X] T027 [P] [US3] Playwright e2e with print emulation: each of `activities.mdx`, `formative.mdx`, `summative.mdx` paginates clean at A4 (chrome hidden, RTL preserved, no clipped content), in `tests/e2e/handout-print.spec.ts`
 - [X] T028 [P] [US3] Vitest: the built output and content sources contain no answer-key material and the validator rejects answer-key front-matter fields, in `tests/unit/no-answer-keys.test.mjs`
 
 ### Implementation for User Story 3
@@ -150,7 +150,7 @@ Single static-content project rooted at the repo (Docusaurus convention, per pla
 - [X] T039 [P] Accessibility sweep across components and content: semantic heading order, alt text on all images/diagrams, no color-only meaning, RTL correctness (FR-013)
 - [X] T040 [P] Deployment config: Vercel primary + GitHub Pages fallback, deploy preview on PR and prod on merge to `main` (research R9)
 - [ ] T041 Golden-unit review gates — Content + Engineering + Teacher sign-off — then freeze the unit template as the quality bar (FR-015, SC-008)
-- [ ] T042 Run the full `quickstart.md` acceptance verification map (SC-001…SC-010) and record results
+- [X] T042 Run the full `quickstart.md` acceptance verification map (SC-001…SC-010) and record results
 
 ---
 
