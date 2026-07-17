@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+
+      # Build gate: block on missing metadata / EN<->UR parity / glossary refs / weighting (FR-009, SC-007)
+      - name: Validate content
+        run: npm run validate:content
+
+      # Validator fixture tests (T013/T014/T032/T033)
+      - name: Unit tests
+        run: npm test
+
+      # Static build for both locales (FR-001)
+      - name: Build (en + ur)
+        run: npm run build
+
+      # NOTE (T038): add a Lighthouse budget step here — content text < 200 KB excluding
+      # images, FCP < 2.5s Slow-4G, a11y pass (SC-002); verify total first-load incl. the
+      # self-hosted Nastaliq font stays within budget (research R3).

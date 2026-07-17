@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bed-textbook/contracts/category.schema.json",
+  "title": "_category_.json",
+  "description": "Docusaurus category file for auto-generated sidebar. Present in each semester/course/unit folder so adding a course requires zero code changes (FR-005, SC-006). Verify exact keys against current Docusaurus v3 docs at build time.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["label", "position"],
+  "properties": {
+    "label": { "type": "string", "minLength": 1, "description": "Sidebar display label (EN; UR mirror lives under i18n/ur)." },
+    "position": { "type": "number", "description": "Order within parent." },
+    "collapsed": { "type": "boolean" },
+    "link": {
+      "type": "object",
+      "properties": {
+        "type": { "enum": ["generated-index", "doc"] },
+        "title": { "type": "string" },
+        "slug": { "type": "string" }
+      }
+    },
+    "customProps": {
+      "type": "object",
+      "properties": {
+        "coming_soon": { "type": "boolean" },
+        "course_code": { "type": "string" }
+      }
+    }
+  }
+}

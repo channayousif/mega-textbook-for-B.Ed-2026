@@ -1,0 +1,113 @@
+/* ==========================================================================
+   Bilingual Content Platform — theme, RTL/Nastaliq, and A4 print styles.
+   ========================================================================== */
+
+/* --- Self-hosted Urdu webfont (FR-002). Place the WOFF2 in static/fonts/. ---- */
+@font-face {
+  font-family: 'Noto Nastaliq Urdu';
+  src: url('/fonts/NotoNastaliqUrdu-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+FB50-FDFF, U+FE70-FEFF;
+}
+
+:root {
+  --ifm-color-primary: #1f6f5c;
+  --ifm-color-primary-dark: #1c6453;
+}
+
+/* --- RTL / Nastaliq rendering (FR-002, FR-013, T019) ----------------------- */
+html[dir='rtl'] {
+  font-family: 'Noto Nastaliq Urdu', 'Noto Naskh Arabic', 'Jameel Noori Nastaleeq', serif;
+}
+
+html[dir='rtl'] .markdown {
+  line-height: 2.2; /* Nastaliq glyphs stack; needs generous leading */
+  text-align: right;
+}
+
+/* Mixed LTR terms/numerals inside RTL text stay correctly isolated */
+html[dir='rtl'] .glossary-term,
+html[dir='rtl'] code {
+  unicode-bidi: isolate;
+}
+
+/* --- Glossary term (FR-016) ------------------------------------------------ */
+.glossary-term {
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+  cursor: help;
+}
+
+/* --- Translation status banner (FR-003) ------------------------------------ */
+.translation-badge {
+  border-radius: 6px;
+  padding: 0.6rem 0.9rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+}
+.translation-badge--draft {
+  background: #fff4e5;
+  border-color: #f0b429;
+  color: #7a4d00;
+}
+.translation-badge--untranslated {
+  background: #eef2ff;
+  border-color: #6366f1;
+  color: #3730a3;
+}
+
+/* --- Print handout button + Bloom/activity styling ------------------------- */
+.print-handout {
+  border: 1px solid var(--ifm-color-primary);
+  background: var(--ifm-color-primary);
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+.bloom-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  background: #e2e8f0;
+  color: #1e293b;
+}
+.activity-card {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+/* --- A4 print stylesheet (FR-011, SC-009, T031) ---------------------------- */
+@media print {
+  @page {
+    size: A4;
+    margin: 15mm;
+  }
+  .navbar,
+  .theme-doc-sidebar-container,
+  .theme-doc-toc-desktop,
+  .theme-doc-breadcrumbs,
+  .pagination-nav,
+  footer,
+  .print-hidden {
+    display: none !important;
+  }
+  .main-wrapper,
+  main,
+  article {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  /* keep RTL/Nastaliq in printed Urdu handouts */
+  html[dir='rtl'] .markdown {
+    line-height: 2.2;
+  }
+}

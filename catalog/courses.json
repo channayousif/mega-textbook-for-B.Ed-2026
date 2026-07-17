@@ -1,0 +1,24 @@
+{
+  "_note": "Machine-readable 8-semester catalog (FR-014). Seed for scripts/scaffold-catalog.mjs. Semester 1 is fully listed from specs/gaps.md; Semesters 2-8 are placeholders to be filled from the board scheme (specs/gaps.md tracks open code discrepancies).",
+  "semesters": [
+    {
+      "number": 1,
+      "priority": 1,
+      "courses": [
+        { "code": "GENG-300", "title_en": "Functional English", "title_ur": "فنکشنل انگریزی", "credit_hours": "3 (3-0)", "category": "General Education" },
+        { "code": "GNAS-301", "title_en": "Environmental Science", "title_ur": "ماحولیاتی سائنس", "credit_hours": "3 (3-0)", "category": "General Education" },
+        { "code": "GICT-300", "title_en": "Application of ICT", "title_ur": "آئی سی ٹی کا اطلاق", "credit_hours": "3 (2-1)", "category": "General Education" },
+        { "code": "GQUR-300", "title_en": "Quantitative Reasoning-I", "title_ur": "مقداری استدلال-1", "credit_hours": "3 (3-0)", "category": "General Education" },
+        { "code": "EFMP-301", "title_en": "Educational Psychology", "title_ur": "تعلیمی نفسیات", "credit_hours": "3 (3-0)", "category": "Major: Professional" },
+        { "code": "EFMP-302", "title_en": "Teaching Profession", "title_ur": "پیشہ تدریس", "credit_hours": "3 (3-0)", "category": "Major: Professional" }
+      ]
+    },
+    { "number": 2, "priority": 2, "courses": [] },
+    { "number": 3, "priority": 3, "courses": [] },
+    { "number": 4, "priority": 4, "courses": [] },
+    { "number": 5, "priority": 5, "courses": [] },
+    { "number": 6, "priority": 6, "courses": [] },
+    { "number": 7, "priority": 7, "courses": [] },
+    { "number": 8, "priority": 8, "courses": [] }
+  ]
+}
