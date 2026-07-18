@@ -59,7 +59,8 @@ Downstream artifacts updated in this amendment:
   ✅ SDD/ROADMAP.md — Decision #4 rewritten to match (self-selectable teacher + verified_teacher gate).
 
 Follow-up TODOs:
-  - ADR-0005 is Proposed; flip to Accepted once this amendment is committed.
+  ✅ ADR-0005 is Accepted; the amendment landed in commit 9b996bd, and the ADR's Decision
+     section was updated for the v2.1.0 sign-up-only narrowing.
   - Prior TODO carried forward: reconcile ROADMAP course catalog codes once specs/gaps.md
     G-2026-02..05 are resolved (GNAS code, Pakistan Studies placement, Fehm-e-Quran code, GSOS CH).
 -->

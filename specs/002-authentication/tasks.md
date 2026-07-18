@@ -231,7 +231,7 @@ Art. V.1) — hence Edge Functions.
 - [ ] T063 Register OAuth redirect URLs for localhost, Vercel preview, and `https://www.a2ahs.com`, then smoke-test the Google flow on a real mobile device, recording click count and elapsed time from "Sign up" to signed-in state; assert ≤ 2 clicks and < 30 s (quickstart.md §1.4 — the most common silent-failure mode; SC-001)
 - [ ] T064 [P] Document the RLS access-control matrix results in `specs/002-authentication/rls-matrix-results.md` as the SC-004 evidence artifact
 - [ ] T065 Run the full `quickstart.md` verification checklist end-to-end against a preview deployment
-- [ ] T066 Flip ADR-0005 from Proposed to Accepted in `history/adr/0005-self-selectable-teacher-role-with-verified-teacher-gate.md` and note the sign-up-only role restriction from Constitution v2.1.0
+- [x] T066 Flip ADR-0005 from Proposed to Accepted in `history/adr/0005-self-selectable-teacher-role-with-verified-teacher-gate.md` and note the sign-up-only role restriction from Constitution v2.1.0 — **done 2026-07-18**: status was already Accepted; the Decision section's stale "may later switch their own role" clause was corrected to match v2.1.0, and plan/data-model references were added
 
 ---
 

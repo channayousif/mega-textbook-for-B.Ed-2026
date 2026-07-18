@@ -16,7 +16,7 @@
 
 Decouple the **teacher role** (a self-service identity choice) from **access to restricted material** (an admin-granted capability). Concretely:
 
-- **Role selection is self-service.** At sign-up a user self-selects `student` (default) or `teacher`; a user may later switch their own role between these two. The `admin` role is never self-selectable.
+- **Role selection is self-service at sign-up only.** At sign-up a user self-selects `student` (default) or `teacher`. Once the account exists the role is **immutable to the account holder** — only an administrator can change it, which prevents a teacher from stranding an active class by self-downgrading. The `admin` role is never self-selectable. *(Amended 2026-07-18: the original decision allowed users to switch their own role freely; that clause was narrowed by Constitution v2.1.0 after the role-switch lifecycle was clarified. See Consequences → Negative.)*
 - **The teacher role grants only peer-teaching capabilities**: create classes, assign work, give feedback, and view the teacher's *own* students' submissions. No approval workflow, no pending state.
 - **Answer keys and other restricted teaching material are gated behind a separate `verified_teacher` capability** (a boolean flag on the profile), which **only an administrator can grant or revoke**. Self-selecting the teacher role never confers it; it defaults to off.
 - **Administrators manage roles directly** — an admin can edit any user's role and grant/remove `verified_teacher`. There is no request/approval queue.
@@ -40,6 +40,7 @@ This replaces the request→pending→approve model (former FR-005–FR-008, "Te
 - **Self-declared teacher capabilities are ungated**: any user can create classes/assignments as a "teacher." A student could self-declare to explore teacher UI or create spam classes. Mitigation lives in later specs (class ownership, moderation, admin demotion), not here.
 - **Two concepts to explain**: users/admins must understand that "teacher" ≠ "can see answer keys." Requires clear UI labelling to avoid confusion.
 - **Verified status is a new admin workflow**: admins still need a screen to grant/revoke `verified_teacher`, so admin tooling is not eliminated, only reshaped away from an approval queue.
+- **No self-service role correction**: because the role is fixed after sign-up (v2.1.0 narrowing), a user who picks the wrong role at sign-up must ask an administrator to change it. This trades a small amount of admin load for the guarantee that a teacher cannot orphan an active class. Accepted deliberately; revisit if it becomes a common support request.
 
 ## Alternatives Considered
 
@@ -50,8 +51,9 @@ This replaces the request→pending→approve model (former FR-005–FR-008, "Te
 
 ## References
 
-- Feature Spec: [specs/002-authentication/spec.md](../../specs/002-authentication/spec.md) — see `## Clarifications → Session 2026-07-17`, User Story 3, FR-003/005/005a/006/007/008/010/015–017, Key Entities (Profile, Verified-teacher capability), SC-002/004/005.
-- Implementation Plan: not yet created (`/sp.plan` pending) — this ADR is spec/clarification-derived and should be linked from plan.md once it exists.
+- Feature Spec: [specs/002-authentication/spec.md](../../specs/002-authentication/spec.md) — see `## Clarifications` (Sessions 2026-07-17 and 2026-07-18), User Story 3, FR-003/005/005a/006/007/008/010/010a/015–017, Key Entities (Profile, Verified-teacher capability), SC-002/004/005.
+- Implementation Plan: [specs/002-authentication/plan.md](../../specs/002-authentication/plan.md) — Constitution Check records the Art. V.3 gate failure that produced the v2.1.0 narrowing. Data model: [data-model.md](../../specs/002-authentication/data-model.md) (`profiles.role`, `verified_teacher`, guard trigger).
 - Related ADRs: [ADR-0002](0002-content-platform-architecture-and-hosting.md) (platform/hosting; Supabase backend context), [ADR-0004](0004-content-integrity-build-gate-and-data-driven-catalog.md) (content integrity — answer-key protection lineage).
 - Evaluator Evidence: [history/prompts/002-authentication/0003-clarify-role-model-self-select-teacher.spec.prompt.md](../prompts/002-authentication/0003-clarify-role-model-self-select-teacher.spec.prompt.md)
-- Governance: Constitution **v2.0.0** (Art. V.3 renamed "Roles and restricted-material access" + Art. IX.3) and ROADMAP Decision #4 amended 2026-07-17 to match this ADR. Status moved Proposed → Accepted on that basis.
+- Governance: Constitution **v2.0.0** (Art. V.3 renamed "Roles and restricted-material access" + Art. IX.3) and ROADMAP Decision #4 amended 2026-07-17 to match this ADR. Status moved Proposed → Accepted on that basis; the amendment landed in commit `9b996bd`.
+- Superseding detail: Constitution **v2.1.0** (2026-07-18) narrowed Art. V.3 so roles are self-selectable *at sign-up only*. This ADR's Decision section has been updated in place rather than superseded, because the core decision — decoupling the teacher role from restricted-material access — is unchanged; only the role-mutability clause moved.
