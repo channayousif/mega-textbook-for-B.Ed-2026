@@ -34,7 +34,7 @@ Content repo (Git) ── CI ──> validate front-matter ──> build EN+UR �
 |---|---|---|---|
 | 0 | Constitution + all specs | Approved foundation (this bundle) | done pending your review |
 | 1 | 001 | Bilingual site live with all-8-semester scaffold (folders + metadata) + golden unit | 1–2 weeks |
-| 2 | 002 | Login (Google + email), roles, admin approval | 1 week |
+| 2 | 002 | Login (Google + email), self-selectable roles, admin role management + verified-teacher gate | 1 week |
 | 3 | 003 | Classes, assignments, submissions, grading | 2–3 weeks |
 | 4 | 004 + 005 | Both dashboards + suggestion loop | 2–3 weeks |
 | 5 | 006 (ongoing) | Semesters 1–4 content through the pipeline, sem-by-sem (then 5–8) | ~6–8 weeks/semester in parallel from Phase 1 |
@@ -46,7 +46,7 @@ Content repo (Git) ── CI ──> validate front-matter ──> build EN+UR �
 1. **Docusaurus + Supabase** stack; dashboards embedded as Docusaurus custom pages.
 2. **All 8 semesters scaffolded; content priority Semesters 1–4** (new 2026 scheme). Source of truth = the local `Scheme-and-Course-guides/` folder (board scheme + all 8 semester guides).
 3. **Answer keys live only in the backend** (`quiz_items`), never in the static site or Git repo.
-4. **Teacher role requires admin approval.**
+4. **Teacher role is self-selectable; answer-key access requires admin verification.** Users self-select `student`/`teacher` at sign-up (default student); the teacher role grants peer-teaching only. Access to answer keys/restricted material is a separate admin-granted `verified_teacher` capability (default off). The `admin` role is never self-selectable. *(Amended 2026-07-17 — reverses the original "teacher requires admin approval"; see Constitution v2.0.0 Art. V.3 / IX.3 and ADR-0005.)*
 5. **Golden unit** = EFMP-301 Educational Psychology, Unit 1 — sets the quality bar for all 3,000+ future documents.
 
 ## Decisions Still Needed From You
