@@ -27,6 +27,21 @@ const config: Config = {
     },
   },
 
+  /**
+   * Auth config surfaced to client code (Spec 002).
+   * `process.env` is NOT readable from the browser bundle, so these must pass
+   * through customFields and be read via useDocusaurusContext().siteConfig.customFields.
+   *
+   * Both values are public by design: the anon key is safe to ship ONLY because
+   * Row-Level Security is enabled on every table (Constitution Art. V.1/V.2).
+   * The service-role key must never appear here or anywhere under src/ —
+   * `npm run check:no-service-key` fails the build if it does.
+   */
+  customFields: {
+    supabaseUrl: process.env.DOCUSAURUS_SUPABASE_URL ?? '',
+    supabaseAnonKey: process.env.DOCUSAURUS_SUPABASE_ANON_KEY ?? '',
+  },
+
   presets: [
     [
       'classic',

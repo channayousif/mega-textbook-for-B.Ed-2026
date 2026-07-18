@@ -32,12 +32,12 @@ Decision. New code lands in `src/lib`, `src/contexts`, `src/pages/app`, `supabas
 
 **Purpose**: Dependencies, environment plumbing, and tooling before any auth code
 
-- [ ] T001 Add `@supabase/supabase-js` ^2 to dependencies in `package.json` and run `npm install`
-- [ ] T002 Expose `DOCUSAURUS_SUPABASE_URL` and `DOCUSAURUS_SUPABASE_ANON_KEY` via `customFields` in `docusaurus.config.ts` (direct `process.env` reads are `undefined` in the browser bundle — see quickstart.md §2)
-- [ ] T003 [P] Initialise the Supabase CLI project and create `supabase/` with `config.toml`, `migrations/`, and `functions/` directories
-- [ ] T004 [P] Add `test:rls` script to `package.json` and create `vitest.rls.config.ts` scoped to `tests/rls/` (mirror the e2e-exclusion pattern already used in `vitest.config.ts`)
-- [ ] T005 [P] Create `.env.example` documenting the two public vars, and add `.env.local` to `.gitignore`
-- [ ] T006 [P] Add a `check:no-service-key` guard in `scripts/check-no-service-key.mjs` that fails the build if a service-role key pattern appears anywhere under `src/` (Constitution Art. V.1 — release-blocking if violated)
+- [X] T001 Add `@supabase/supabase-js` ^2 to dependencies in `package.json` and run `npm install`
+- [X] T002 Expose `DOCUSAURUS_SUPABASE_URL` and `DOCUSAURUS_SUPABASE_ANON_KEY` via `customFields` in `docusaurus.config.ts` (direct `process.env` reads are `undefined` in the browser bundle — see quickstart.md §2)
+- [X] T003 [P] Initialise the Supabase CLI project and create `supabase/` with `config.toml`, `migrations/`, and `functions/` directories
+- [X] T004 [P] Add `test:rls` script to `package.json` and create `vitest.rls.config.ts` scoped to `tests/rls/` (mirror the e2e-exclusion pattern already used in `vitest.config.ts`)
+- [X] T005 [P] Create `.env.example` documenting the two public vars, and add `.env.local` to `.gitignore`
+- [X] T006 [P] Add a `check:no-service-key` guard in `scripts/check-no-service-key.mjs` that fails the build if a service-role key pattern appears anywhere under `src/` (Constitution Art. V.1 — release-blocking if violated)
 
 ---
 
@@ -51,30 +51,30 @@ does not exist yet (quickstart.md §3).
 
 ### Database schema
 
-- [ ] T007 Create migration `supabase/migrations/0001_enums.sql` defining `user_role`, `account_status`, and `audit_change` enums per data-model.md
-- [ ] T007a Set `enable_confirmations = true` under `[auth.email]` in `supabase/config.toml` so email confirmation is version-controlled rather than a dashboard-only setting, and record the equivalent hosted-project setting in `quickstart.md` §1.2 (FR-002)
-- [ ] T008 Create migration `supabase/migrations/0002_profiles.sql` for the `profiles` table (id, full_name, role, verified_teacher, status, role_chosen_at, deleted_at, created_at) with FK to `auth.users(id)` ON DELETE CASCADE
-- [ ] T009 Create migration `supabase/migrations/0003_privilege_audit.sql` for the append-only `privilege_audit` table with FK `subject_id` → `profiles(id)` and index on `(subject_id, created_at desc)`
-- [ ] T010 Create migration `supabase/migrations/0004_is_admin.sql` defining the `is_admin(uid)` `SECURITY DEFINER` helper (bypasses RLS for the admin lookup — prevents infinite policy recursion, see data-model.md "Recursion note")
+- [X] T007 Create migration `supabase/migrations/0001_enums.sql` defining `user_role`, `account_status`, and `audit_change` enums per data-model.md
+- [X] T007a Set `enable_confirmations = true` under `[auth.email]` in `supabase/config.toml` so email confirmation is version-controlled rather than a dashboard-only setting, and record the equivalent hosted-project setting in `quickstart.md` §1.2 (FR-002)
+- [X] T008 Create migration `supabase/migrations/0002_profiles.sql` for the `profiles` table (id, auth_user_id, full_name, role, verified_teacher, status, role_chosen_at, deleted_at, created_at) — **corrected during implementation**: the planned `id … REFERENCES auth.users(id) ON DELETE CASCADE` contradicted FR-021 (CASCADE destroys the tombstone that Spec 003 foreign keys depend on). Profile now owns an independent PK with a nullable `auth_user_id` FK **ON DELETE SET NULL**; data-model.md amended to match
+- [X] T009 Create migration `supabase/migrations/0003_privilege_audit.sql` for the append-only `privilege_audit` table with FK `subject_id` → `profiles(id)` and index on `(subject_id, created_at desc)`
+- [X] T010 Create migration `supabase/migrations/0004_is_admin.sql` defining the `is_admin(uid)` `SECURITY DEFINER` helper (bypasses RLS for the admin lookup — prevents infinite policy recursion, see data-model.md "Recursion note")
 
 ### Authorization policies and triggers
 
-- [ ] T011 Create migration `supabase/migrations/0005_profiles_policies.sql`: enable RLS; SELECT own row; SELECT all for admin; UPDATE own row — every policy predicated on `status = 'active'`
-- [ ] T012 Create migration `supabase/migrations/0006_audit_policies.sql`: enable RLS; SELECT for admin only; **no INSERT/UPDATE/DELETE policy at all** so those commands are denied by default (FR-019)
-- [ ] T013 Create migration `supabase/migrations/0007_handle_new_user.sql`: `SECURITY DEFINER` AFTER INSERT trigger on `auth.users` creating the profile, reading role from `raw_user_meta_data` **through a `{student,teacher}` allowlist**, coercing anything else to `student` (FR-003, FR-009 — untrusted input, see research.md R3)
-- [ ] T014 Create migration `supabase/migrations/0008_guard_privileged_columns.sql`: BEFORE UPDATE trigger on `profiles` raising unless `is_admin(auth.uid())` when `role`, `verified_teacher`, or `status` changes (FR-006, FR-010a)
-- [ ] T015 Create migration `supabase/migrations/0009_write_privilege_audit.sql`: AFTER UPDATE trigger emitting one `privilege_audit` row per changed privileged column with `actor_id = auth.uid()` read server-side, never from client input (FR-018)
+- [X] T011 Create migration `supabase/migrations/0005_profiles_policies.sql`: enable RLS; SELECT own row; SELECT all for admin; UPDATE own row — every policy predicated on `status = 'active'`
+- [X] T012 Create migration `supabase/migrations/0006_audit_policies.sql`: enable RLS; SELECT for admin only; **no INSERT/UPDATE/DELETE policy at all** so those commands are denied by default (FR-019)
+- [X] T013 Create migration `supabase/migrations/0007_handle_new_user.sql`: `SECURITY DEFINER` AFTER INSERT trigger on `auth.users` creating the profile, reading role from `raw_user_meta_data` **through a `{student,teacher}` allowlist**, coercing anything else to `student` (FR-003, FR-009 — untrusted input, see research.md R3)
+- [X] T014 Create migration `supabase/migrations/0008_guard_privileged_columns.sql`: BEFORE UPDATE trigger on `profiles` raising unless `is_admin(auth.uid())` when `role`, `verified_teacher`, or `status` changes (FR-006, FR-010a)
+- [X] T015 Create migration `supabase/migrations/0009_write_privilege_audit.sql`: AFTER UPDATE trigger emitting one `privilege_audit` row per changed privileged column with `actor_id = auth.uid()` read server-side, never from client input (FR-018)
 
 ### Client foundation
 
-- [ ] T016 [P] Implement the SSG-safe lazy Supabase singleton in `src/lib/supabase.ts` — no client construction at module scope, or the Docusaurus prerender fails with `window is not defined` (research.md R1)
-- [ ] T017 [P] Implement the provider-error → bilingual message dictionary in `src/lib/authErrors.ts`, stubbing keys for **all** cases up front (unconfirmed email, invalid credentials, already-registered, expired/used reset link, rate limited, account suspended) so T035 and T058 only supply translations and never restructure the module (FR-014)
-- [ ] T018 Implement `src/contexts/AuthContext.tsx` exposing session, profile, role, and `verified_teacher`, reading role from `profiles` (**not** from a JWT claim — long sessions would serve stale roles, research.md R2)
-- [ ] T019 Create the Docusaurus Root swizzle `src/theme/Root.tsx` wrapping every page in `<AuthProvider>` (only swizzle point covering docs *and* app pages, FR-011)
+- [X] T016 [P] Implement the SSG-safe lazy Supabase singleton in `src/lib/supabase.ts` — no client construction at module scope, or the Docusaurus prerender fails with `window is not defined` (research.md R1)
+- [X] T017 [P] Implement the provider-error → bilingual message dictionary in `src/lib/authErrors.ts`, stubbing keys for **all** cases up front (unconfirmed email, invalid credentials, already-registered, expired/used reset link, rate limited, account suspended) so T035 and T058 only supply translations and never restructure the module (FR-014)
+- [X] T018 Implement `src/contexts/AuthContext.tsx` exposing session, profile, role, and `verified_teacher`, reading role from `profiles` (**not** from a JWT claim — long sessions would serve stale roles, research.md R2)
+- [X] T019 Create the Docusaurus Root swizzle `src/theme/Root.tsx` wrapping every page in `<AuthProvider>` (only swizzle point covering docs *and* app pages, FR-011)
 
 ### Test harness
 
-- [ ] T020 Create the RLS test harness in `tests/rls/_helpers.mjs` providing per-role authenticated clients (anon, student, unverified teacher, verified teacher, suspended user, admin) and per-test fixture teardown
+- [X] T020 Create the RLS test harness in `tests/rls/_helpers.mjs` providing per-role authenticated clients (anon, student, unverified teacher, verified teacher, suspended user, admin) and per-test fixture teardown
 
 **Checkpoint**: Schema, policies, triggers, and session provider in place — user stories can begin.
 
@@ -224,7 +224,7 @@ Art. V.1) — hence Edge Functions.
 ## Phase 8: Polish & Cross-Cutting Concerns
 
 - [ ] T059 [P] Verify the Urdu locale renders all auth pages RTL-correctly; run `npm run write-translations` and translate new strings in `i18n/ur/code.json` (FR-014, SC-007, Constitution Art. III.8)
-- [ ] T060 [P] Measure the content-page first-load bundle and lazy-load the auth client so pages stay under the < 200 KB budget (Constitution Art. V.5 — the plan's watch item)
+- [ ] T060 [P] Measure the content-page first-load bundle and lazy-load the auth client so pages stay under the < 200 KB budget (Constitution Art. V.5 — the plan's watch item). **MEASURED 2026-07-18, currently VIOLATING**: mounting `<AuthProvider>` at Root pulls `supabase-js` into `main.js`, which every content page loads. Baseline 465.2 KB raw / **144.5 KB gzip** → with auth 697.2 KB raw / **204.1 KB gzip**. That is +59.6 KB gzip and **4.1 KB over the budget**. Root cause: `getSupabase()` uses `require()`, which webpack bundles statically rather than code-splitting. Fix: switch to dynamic `import()` so supabase-js becomes a separate chunk fetched only when auth is used (makes `getSupabase()` async — ripples into `AuthContext`), or mount `<AuthProvider>` only on `/app` routes. Re-measure after fixing
 - [ ] T060a [P] Run a Lighthouse audit against a preview deployment for one docs page and one auth page; record scores in `specs/002-authentication/lighthouse-results.md` and treat a Performance or Accessibility score below 90 as a gate failure (Constitution Art. VII engineering gate)
 - [ ] T061 [P] Add accessibility passes to all auth forms: labels, focus order, error announcement, and 44px tap targets (Constitution Art. III.8)
 - [ ] T062 Wire `npm run test:rls` and the auth e2e specs into `.github/workflows/` CI so a missing negative test fails the build (Constitution Art. VII engineering gate)

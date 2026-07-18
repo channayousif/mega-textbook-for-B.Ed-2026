@@ -1,0 +1,125 @@
+/**
+ * RLS test harness (Spec 002, T020) — per-role authenticated clients + fixtures.
+ *
+ * These tests are the SC-004 evidence set and the Art. VII engineering gate.
+ * They assert NEGATIVE cases: that policies REFUSE access. A suite proving only
+ * happy paths cannot detect an over-permissive policy, which is the principal
+ * risk this feature carries.
+ *
+ * Requires a live Supabase project (local stack or a disposable hosted one):
+ *   DOCUSAURUS_SUPABASE_URL, DOCUSAURUS_SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY
+ *
+ * ⚠️ Point these at a THROWAWAY project. The harness creates and deletes users.
+ */
+
+import { createClient } from '@supabase/supabase-js';
+import { randomUUID } from 'node:crypto';
+
+const URL = process.env.DOCUSAURUS_SUPABASE_URL;
+const ANON = process.env.DOCUSAURUS_SUPABASE_ANON_KEY;
+const SERVICE = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+/** Skip (not fail) when unconfigured, so `npm test` stays green offline. */
+export const rlsConfigured = Boolean(URL && ANON && SERVICE);
+
+export function requireConfig() {
+  if (!rlsConfigured) {
+    throw new Error(
+      'RLS tests need DOCUSAURUS_SUPABASE_URL, DOCUSAURUS_SUPABASE_ANON_KEY and ' +
+      'SUPABASE_SERVICE_ROLE_KEY. See .env.example and quickstart.md §1.'
+    );
+  }
+}
+
+/** Service-role client — bypasses RLS. Fixture setup/teardown ONLY, never assertions. */
+export function serviceClient() {
+  requireConfig();
+  return createClient(URL, SERVICE, { auth: { persistSession: false, autoRefreshToken: false } });
+}
+
+/** Anonymous client — the unauthenticated caller. */
+export function anonClient() {
+  requireConfig();
+  return createClient(URL, ANON, { auth: { persistSession: false, autoRefreshToken: false } });
+}
+
+export const testEmail = (tag) => `rls-${tag}-${randomUUID()}@example.test`;
+const PASSWORD = 'Test-Passw0rd!';
+
+/**
+ * Create a confirmed user and return a client authenticated AS THAT USER, so
+ * requests carry their JWT and RLS applies exactly as in the browser.
+ *
+ * `role` here is the *requested* role passed through user_metadata — deliberately
+ * the untrusted path, so tests exercise the 0007 allowlist rather than bypassing it.
+ */
+export async function createUser({ role = 'student', confirmed = true, fullName = null } = {}) {
+  const svc = serviceClient();
+  const email = testEmail(role);
+
+  const { data, error } = await svc.auth.admin.createUser({
+    email,
+    password: PASSWORD,
+    email_confirm: confirmed,
+    user_metadata: { role, ...(fullName ? { full_name: fullName } : {}) },
+  });
+  if (error) throw new Error(`createUser(${role}): ${error.message}`);
+
+  return { authUserId: data.user.id, email, password: PASSWORD };
+}
+
+/** Sign in and return an RLS-bound client. Returns { client: null, error } on failure. */
+export async function signIn(email, password = PASSWORD) {
+  const client = anonClient();
+  const { error } = await client.auth.signInWithPassword({ email, password });
+  if (error) return { client: null, error };
+  return { client, error: null };
+}
+
+/** Create a user and return them already signed in. */
+export async function createSignedInUser(opts = {}) {
+  const user = await createUser(opts);
+  const { client, error } = await signIn(user.email);
+  if (error) throw new Error(`signIn(${user.email}): ${error.message}`);
+  return { ...user, client };
+}
+
+/** Read a profile by auth id using the service role (fixture inspection). */
+export async function getProfileByAuthId(authUserId) {
+  const svc = serviceClient();
+  const { data, error } = await svc
+    .from('profiles').select('*').eq('auth_user_id', authUserId).maybeSingle();
+  if (error) throw new Error(`getProfileByAuthId: ${error.message}`);
+  return data;
+}
+
+/**
+ * Grant a privileged attribute via the service role, simulating an admin action
+ * without needing an admin session. Use ONLY for fixture setup — assertions about
+ * who *may* grant must go through a real admin client.
+ */
+export async function adminSet(authUserId, patch) {
+  const svc = serviceClient();
+  const { error } = await svc.from('profiles').update(patch).eq('auth_user_id', authUserId);
+  if (error) throw new Error(`adminSet: ${error.message}`);
+}
+
+/** Delete fixture users; cascades to their profiles. Safe to call with junk ids. */
+export async function cleanupUsers(authUserIds = []) {
+  const svc = serviceClient();
+  await Promise.allSettled(authUserIds.filter(Boolean).map((id) => svc.auth.admin.deleteUser(id)));
+}
+
+/**
+ * Assert a Postgres permission error (the 0008 guard raising 42501).
+ * A silent no-op is a FAILURE: FR-006 requires the caller learn the write failed.
+ */
+export function expectPermissionError(error, expect) {
+  expect(error, 'expected a permission error, got success (silent no-op)').toBeTruthy();
+  const code = error.code ?? '';
+  const msg = (error.message ?? '').toLowerCase();
+  expect(
+    code === '42501' || msg.includes('requires admin') || msg.includes('permission'),
+    `expected 42501/permission error, got code=${code} message=${error.message}`
+  ).toBe(true);
+}

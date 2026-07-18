@@ -14,7 +14,8 @@ Maps spec entity **Profile**. One row per account, created automatically by trig
 
 | Column | Type | Constraints | Maps to |
 |---|---|---|---|
-| `id` | `uuid` | PK, FK → `auth.users(id)` ON DELETE CASCADE | Account ↔ Profile link |
+| `id` | `uuid` | PK, `default gen_random_uuid()` — **independent of `auth.users`** | Profile identity (stable across deletion) |
+| `auth_user_id` | `uuid` | UNIQUE, nullable, FK → `auth.users(id)` **ON DELETE SET NULL** | Account ↔ Profile link |
 | `full_name` | `text` | nullable | FR-010b (optional display name) |
 | `role` | `user_role` enum | NOT NULL, default `'student'` | FR-003, FR-010 |
 | `verified_teacher` | `boolean` | NOT NULL, default `false` | FR-005a, FR-016 |
@@ -28,9 +29,19 @@ create type user_role      as enum ('student','teacher','admin');
 create type account_status as enum ('active','suspended');
 ```
 
-**Derived rule**: a profile with `deleted_at IS NOT NULL` is a tombstone — `full_name` is NULL
-and the corresponding `auth.users` row no longer exists. It is retained solely so Spec 003's
-submissions/grades keep a valid foreign key (FR-021).
+**Derived rule**: a profile with `deleted_at IS NOT NULL` is a tombstone — `full_name` is NULL,
+`auth_user_id` is NULL, and the corresponding `auth.users` row no longer exists. It is retained
+solely so Spec 003's submissions/grades keep a valid foreign key (FR-021).
+
+> **Correction (2026-07-18, found during implementation).** This table originally specified
+> `id uuid PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE`. That is **incompatible with
+> FR-021**: `delete-account` calls `auth.admin.deleteUser()`, and CASCADE would destroy the very
+> tombstone the requirement depends on, breaking every Spec 003 foreign key pointing at it.
+> The profile now owns an independent primary key, with the auth link held in a nullable
+> `auth_user_id` (ON DELETE SET NULL). Deleting the auth identity therefore severs the link and
+> leaves the stripped profile intact, which is what FR-021 and Constitution Art. VIII.4 require.
+> Consequence: all lookups key on `auth_user_id`, not `id` — see `0004_is_admin.sql` and
+> `AuthContext.loadProfile`.
 
 ### Validation rules
 
