@@ -118,8 +118,10 @@ Each row is an executable assertion for the RLS suite that SC-004 requires.
 - [ ] `signUp` with `data.role='admin'` yields `role='student'` — R3, FR-009
 - [ ] `signUp` with `data.role='teacher'` yields `role='teacher'`, `verified_teacher=false` — FR-003, FR-005a
 - [ ] Student selecting own row: 1 row; selecting another user's row: 0 rows — FR-016
+- [ ] A user CAN update `full_name` on their own row; the same statement touching `role` / `verified_teacher` / `status` errors — FR-010 (positive case paired with the next assertion)
 - [ ] Non-admin updating own `role` / `verified_teacher` / `status`: error — FR-006, FR-010a
 - [ ] Admin updating another user's `role`: succeeds **and** writes exactly one audit row with `actor_id` = admin — FR-007, FR-018
+- [ ] An admin's role change and `verified_teacher` grant apply to a signed-in user on their next page load, without re-authentication — FR-008, SC-005 (regression guard: fails if role is ever served from a JWT claim instead of `profiles`)
 - [ ] Audit row `actor_id` cannot be overridden by client-supplied value — FR-018
 - [ ] Non-admin selecting `privilege_audit`: 0 rows; insert/update/delete: error — FR-019
 - [ ] Suspended user: every protected read/write fails; sign-in refused — FR-020

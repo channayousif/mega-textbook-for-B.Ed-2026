@@ -103,10 +103,14 @@ src/
         └── audit.tsx           # privilege-change history view
 
 supabase/
+├── config.toml                 # enable_confirmations = true (email verification, FR-002)
 ├── migrations/                 # enums → tables → is_admin() → policies → triggers
 └── functions/
     ├── admin-suspend/          # service-role: status + global signOut
     └── delete-account/         # service-role: strip identity + delete auth user
+
+scripts/
+└── check-no-service-key.mjs    # build guard: fails if a service-role key reaches src/
 
 tests/
 ├── rls/                        # NEW — access-control matrix (SC-004 evidence)

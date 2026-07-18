@@ -187,7 +187,7 @@ signed in throughout; sign out and confirm every page treats the user as signed 
 - [ ] T049 [US4] Add sign-out to `src/components/NavbarAuthWidget.tsx`, clearing context state and redirecting to the current page signed out (FR-012)
 - [ ] T050 [US4] Add a loading state to `src/contexts/AuthContext.tsx` so pages do not flash signed-out content during session rehydration
 
-**Checkpoint**: All four user stories independently functional.
+**Checkpoint**: US1–US4 independently functional; US5 (account lifecycle) follows in Phase 7.
 
 ---
 
