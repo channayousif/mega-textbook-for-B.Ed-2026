@@ -28,8 +28,22 @@ begin
   end if;
 
   if new.role is distinct from old.role and not caller_is_admin then
-    raise exception 'privileged column change requires admin: role'
-      using errcode = '42501';  -- insufficient_privilege
+    -- Carve-out (2026-07-18, found during T031 implementation): the OAuth
+    -- one-time role prompt (research.md R3 — Google has no pre-consent
+    -- metadata hook) needs exactly one non-admin role change, from the
+    -- trigger-assigned default into the account holder's choice. Allowed
+    -- ONLY while role_chosen_at is still unset, ONLY into {student, teacher}
+    -- (never 'admin' — FR-009), and ONLY in the same statement that stamps
+    -- role_chosen_at (ties the two together; the write-once check below then
+    -- blocks any further attempt, since old.role_chosen_at is no longer null).
+    if old.role_chosen_at is null
+       and new.role in ('student', 'teacher')
+       and new.role_chosen_at is not null then
+      null; -- falls through — allowed
+    else
+      raise exception 'privileged column change requires admin: role'
+        using errcode = '42501';  -- insufficient_privilege
+    end if;
   end if;
 
   if new.verified_teacher is distinct from old.verified_teacher and not caller_is_admin then
@@ -70,7 +84,10 @@ $$;
 
 comment on function public.guard_privileged_columns() is
   'FR-006/FR-010a — rejects non-admin changes to role, verified_teacher, status, '
-  'deleted_at, and auth_user_id. Complements RLS, which cannot express column-level rules.';
+  'deleted_at, and auth_user_id, with a single carved-out exception: a non-admin may set '
+  'role once (student/teacher only) in the same statement that stamps role_chosen_at from '
+  'null (research.md R3, the OAuth one-time role prompt). Complements RLS, which cannot '
+  'express column-level rules.';
 
 create trigger profiles_guard_privileged_columns
   before update on public.profiles
