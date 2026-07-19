@@ -125,14 +125,31 @@ default under RLS.
 
 **Decision**: `profiles.status` (`active` | `suspended`), enforced in two places: (a) every RLS
 policy on protected tables requires the caller's status to be `active`; (b) the admin suspend
-action also calls an Edge Function that invokes the Admin API
-`auth.admin.signOut(user_id, 'global')` to revoke refresh tokens.
+action also calls an Edge Function that invokes the Admin API to stop GoTrue from issuing the
+account any further sessions.
+
+> **Correction (2026-07-19, found by actually calling the function during T054/T051).** This
+> originally specified `auth.admin.signOut(user_id, 'global')`, which was never verified against
+> the real API and doesn't work as assumed — it revokes sessions for the caller identified by a
+> **JWT**, not an arbitrary user id, and an admin acting on someone else's account never holds
+> their JWT. Calling it with a uuid throws a JWT-parse error. The actual mechanism is
+> `auth.admin.updateUserById(uid, { ban_duration })`: GoTrue's own docs confirm banning "prevent[s]
+> them from obtaining new access tokens, refreshing existing ones, or authenticating... verified
+> on every authenticated request" — which is a stronger guarantee than `signOut` would have been,
+> and it surfaces as GoTrue's own `user_banned` error code on a fresh sign-in attempt (which
+> `authErrors.ts` already classified to a bilingual "account suspended" message before this
+> correction was even found). See `supabase/functions/admin-suspend/index.ts`.
+>
+> A second gap found alongside it: `profiles_select_own`'s RLS policy never checked
+> `status = 'active'` at all (only the UPDATE policy did), so a suspended user could still read
+> their own profile — contradicting this feature's own access-control matrix. Fixed in
+> `0005_profiles_policies.sql`.
 
 **Rationale**:
 - A status column alone does not end a live session — an already-issued access token stays
   valid until it expires (~1 hour). FR-020 requires the user be "signed out immediately", so
-  refresh-token revocation is required to stop renewal, and the RLS status check makes the
-  remaining access-token window harmless (all protected reads/writes fail).
+  stopping session renewal is required, and the RLS status check makes the remaining
+  access-token window harmless (all protected reads/writes fail immediately).
 - The Admin API needs the service-role key, which per Constitution Art. V.1 must never ship to
   the browser — hence an Edge Function, the only server-side compute in this stack.
 
