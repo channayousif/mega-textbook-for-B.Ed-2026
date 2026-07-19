@@ -78,6 +78,9 @@ const config: Config = {
       items: [
         { type: 'localeDropdown', position: 'right' },
         { type: 'search', position: 'right' },
+        // Spec 002, T030 — registers src/components/NavbarAuthWidget.tsx via
+        // the swizzled src/theme/NavbarItem/ComponentTypes.tsx.
+        { type: 'custom-authWidget', position: 'right' },
       ],
     },
     footer: {
