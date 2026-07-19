@@ -1,5 +1,16 @@
+import { config as loadEnv } from 'dotenv';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+
+/**
+ * Loads `.env.local` into `process.env` for local `npm run build`/`start` —
+ * without this, DOCUSAURUS_SUPABASE_URL/ANON_KEY silently come through empty
+ * (no error), and every auth-gated UI (NavbarAuthWidget, AuthGuard) just
+ * renders nothing. CI is unaffected: it sets these as real environment
+ * variables via the workflow's own `env:` block, and dotenv silently no-ops
+ * when `.env.local` doesn't exist rather than overriding anything.
+ */
+loadEnv({ path: '.env.local' });
 
 /**
  * Bilingual Content Platform (FR-001..FR-006).
