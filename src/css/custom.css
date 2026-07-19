@@ -197,3 +197,21 @@ html[dir='rtl'] div:has(> .theme-doc-sidebar-container) {
 html[dir='rtl'] div:has(> .theme-doc-sidebar-container) > main {
   direction: rtl;
 }
+
+/*
+ * Mobile-only (Infima's own <=996px breakpoint): the search box becomes
+ * `position: absolute`, anchored `right` in the English source CSS. rtlcss
+ * flips that to `left` for the ur build (correct for a fully-mirrored
+ * layout), but `direction: ltr` above already keeps the mobile sidebar
+ * toggle pinned left — without this override the two collide and overlap
+ * instead of sitting on opposite sides. No stable class exists on this
+ * container, so target it structurally via the stable `.navbar__search`
+ * class it wraps.
+ */
+@media (max-width: 996px) {
+  /*rtl:ignore*/
+  html[dir='rtl'] div:has(> .navbar__search) {
+    left: auto;
+    right: var(--ifm-navbar-padding-horizontal);
+  }
+}
