@@ -24,6 +24,10 @@ A public, bilingual (English + Urdu) digital textbook for the B.Ed (4-Year) prog
 
 > **Open terminology note (for curriculum owner):** Constitution v1.1.0 Art. II.2 names the traceability field `clo_refs`; this feature uses SLO-format values inside it. If the field itself should be renamed `slo_refs`, that requires a Constitution PATCH — tracked as a follow-up, not resolved here.
 
+### Session 2026-07-19
+
+- Q: Does every course require a full Urdu translation, with no exceptions? → A: No — some courses are English-only by design (e.g. GENG-300 Functional English, where the subject itself is the English language). Such courses are flagged `bilingual: false` in `course-overview.mdx` and are exempt from the EN↔UR parity gate for every one of their units, regardless of `translation_status` (Constitution III.2 carve-out, amended v2.3.0). Their `/ur/` route still falls back to the English content, but without the "translation not yet available" banner — the absence is by design, not a gap.
+
 ## User Scenarios & Testing *(mandatory)*
 
 ### User Story 1 - Read any unit in English or Urdu (Priority: P1)
@@ -101,9 +105,9 @@ The curriculum owner adds a new course, or new units to an existing course, pure
 
 ### Functional Requirements
 
-- **FR-001**: The platform MUST present every unit in two languages — English (default, left-to-right) and Urdu (right-to-left) — with a per-page language toggle. Structural parity MUST be build-enforced: for any unit marked `translation_status: reviewed`, the build MUST fail if the EN and UR versions diverge in section-file presence or in heading structure / section counts. (Units in `draft` or with no Urdu file yet are exempt from the heading-parity gate and instead carry the badge/banner defined in FR-003.)
+- **FR-001**: The platform MUST present every unit in two languages — English (default, left-to-right) and Urdu (right-to-left) — with a per-page language toggle, **except units belonging to a Course explicitly flagged `bilingual: false`** (an English-only course by design, e.g. GENG-300 Functional English — Constitution III.2). Structural parity MUST be build-enforced: for any unit marked `translation_status: reviewed` whose Course is bilingual, the build MUST fail if the EN and UR versions diverge in section-file presence or in heading structure / section counts. (Units in `draft` or with no Urdu file yet are exempt from the heading-parity gate and instead carry the badge/banner defined in FR-003; units of an English-only Course are exempt regardless of `translation_status`.)
 - **FR-002**: Urdu content MUST render right-to-left in an appropriate Nastaliq/Naskh webfont with legible line spacing, including a fallback when the primary font is unavailable.
-- **FR-003**: A unit's Urdu version MUST be publishable as "reviewed" only after a human quality pass; un-reviewed translations MUST be visibly distinguished from finished ones. When `translation_status: draft`, the `ur` route MUST render the Urdu draft with a visible "draft translation" badge at the top of the page (rather than hiding it or substituting English). When a unit has **no Urdu file at all**, the `ur` route MUST fall back to the English content (default-locale fallback) with a prominent "Urdu translation not yet available" banner — the route MUST NOT dead-end, and the fallback English MUST NOT be presented as though it were Urdu.
+- **FR-003**: A unit's Urdu version MUST be publishable as "reviewed" only after a human quality pass; un-reviewed translations MUST be visibly distinguished from finished ones. When `translation_status: draft`, the `ur` route MUST render the Urdu draft with a visible "draft translation" badge at the top of the page (rather than hiding it or substituting English). When a unit has **no Urdu file at all**, the `ur` route MUST fall back to the English content (default-locale fallback) with a prominent "Urdu translation not yet available" banner — the route MUST NOT dead-end, and the fallback English MUST NOT be presented as though it were Urdu. **Exception**: units of a Course flagged `bilingual: false` fall back to English silently, without this banner — the absence of Urdu there is by design, not a pending gap.
 - **FR-004**: The catalog MUST be organized Semester → Course → Unit, and navigation MUST always indicate the reader's current location.
 - **FR-005**: Navigation for all 8 semesters MUST be generated from the content structure and metadata, so adding a course requires no platform code change.
 - **FR-006**: Readers MUST be able to search the full book in both English and Urdu and open a chosen result directly. Un-authored ("coming soon") placeholder units MUST be excluded from the search index so they never appear as empty results.
@@ -121,7 +125,7 @@ The curriculum owner adds a new course, or new units to an existing course, pure
 ### Key Entities *(include if feature involves data)*
 
 - **Semester**: One of the 8 programme terms; groups courses; ordered; carries priority (1–4 first).
-- **Course**: A subject within a semester (code, English title, Urdu title, credit hours); owns a course overview and a set of units.
+- **Course**: A subject within a semester (code, English title, Urdu title, credit hours); owns a course overview and a set of units. Bilingual by default; a course may be flagged `bilingual: false` when the subject itself is English-only (e.g. GENG-300 Functional English), exempting its units from the Urdu-parity requirement (FR-001).
 - **Unit**: A chapter within a course; has English and Urdu versions; carries the five sections, traceability metadata (course reference, unit number, curriculum-outcome references as SLO-format `SLO:<course-code>-<unit-no>-<n>`, reading estimate, translation status), and optional resources/strategies/assessment-weighting.
 - **Course overview**: Course-wide teaching strategies, assessment criteria, and recommended resources, referenced by that course's units.
 - **Recommended resource / reading material**: A bibliographic reference drawn from the course guide, listed for scoping and further reading — never reproduced as content.
