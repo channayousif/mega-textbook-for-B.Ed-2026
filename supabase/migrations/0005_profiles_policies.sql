@@ -13,12 +13,22 @@
 alter table public.profiles enable row level security;
 
 -- FR-016 — a user may read their own row. Tombstones are unreadable.
+--
+-- Correction (2026-07-19, found during T054 implementation): this policy
+-- originally omitted the `status = 'active'` check present on the UPDATE
+-- policy below, so a suspended user could still read their own profile —
+-- contradicting data-model.md's access matrix ("any suspended user: denied"
+-- across every column, reads included) and FR-020. login.tsx (T058) also
+-- depends on this: it treats "signed in but the profile fetch returns zero
+-- rows" as the suspension signal, since GoTrue itself has no knowledge of
+-- this column. Without this fix that signal never fires.
 create policy profiles_select_own
   on public.profiles
   for select
   to authenticated
   using (
     auth_user_id = auth.uid()
+    and status = 'active'
     and deleted_at is null
   );
 
