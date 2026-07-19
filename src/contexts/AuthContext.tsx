@@ -71,7 +71,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }): React
   }, [siteConfig]);
 
   const loadProfile = useCallback(async (activeSession: Session | null) => {
-    const supabase = getSupabase();
+    const supabase = await getSupabase();
     if (!supabase || !activeSession) {
       setProfile(null);
       return;
@@ -96,38 +96,49 @@ export function AuthProvider({ children }: { children: React.ReactNode }): React
       setLoading(false);
       return undefined;
     }
-    const supabase = getSupabase();
-    if (!supabase) {
-      setLoading(false);
-      return undefined;
-    }
 
+    // Async setup / sync cleanup: getSupabase() is async since T060 (dynamic
+    // import for code-splitting), but a useEffect cleanup function must be
+    // returned synchronously. `cancelled` guards state updates after unmount;
+    // `unsubscribe` starts as a no-op and is replaced once the subscription
+    // actually exists, so the returned cleanup is always safe to call even if
+    // the import hasn't resolved yet.
     let cancelled = false;
+    let unsubscribe = (): void => {};
 
-    // Rehydrate an existing session first (FR-011a — survives browser restart).
-    supabase.auth.getSession().then(async ({ data }) => {
+    (async () => {
+      const supabase = await getSupabase();
+      if (!supabase || cancelled) {
+        if (!cancelled) setLoading(false);
+        return;
+      }
+
+      // Rehydrate an existing session first (FR-011a — survives browser restart).
+      const { data } = await supabase.auth.getSession();
       if (cancelled) return;
       setSession(data.session);
       await loadProfile(data.session);
       if (!cancelled) setLoading(false);
-    });
 
-    // Keep state in step with sign-in / sign-out / token refresh across tabs.
-    const { data: sub } = supabase.auth.onAuthStateChange(async (_event, nextSession) => {
-      if (cancelled) return;
-      setSession(nextSession);
-      await loadProfile(nextSession);
-      setLoading(false);
-    });
+      // Keep state in step with sign-in / sign-out / token refresh across tabs.
+      const { data: sub } = supabase.auth.onAuthStateChange(async (_event, nextSession) => {
+        if (cancelled) return;
+        setSession(nextSession);
+        await loadProfile(nextSession);
+        setLoading(false);
+      });
+      unsubscribe = () => sub.subscription.unsubscribe();
+      if (cancelled) unsubscribe(); // unmounted while the import/getSession was in flight
+    })();
 
     return () => {
       cancelled = true;
-      sub.subscription.unsubscribe();
+      unsubscribe();
     };
   }, [configured, loadProfile]);
 
   const signOut = useCallback(async () => {
-    const supabase = getSupabase();
+    const supabase = await getSupabase();
     if (supabase) await supabase.auth.signOut();
     setSession(null);
     setProfile(null);
