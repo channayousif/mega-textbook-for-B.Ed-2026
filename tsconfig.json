@@ -4,5 +4,5 @@
     "baseUrl": ".",
     "jsx": "react-jsx"
   },
-  "exclude": [".docusaurus", "build", "node_modules", "scripts", "tests"]
+  "exclude": [".docusaurus", "build", "node_modules", "scripts", "tests", "supabase/functions"]
 }
