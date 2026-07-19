@@ -71,17 +71,17 @@ export async function createUser({ role = 'student', confirmed = true, fullName 
 /** Sign in and return an RLS-bound client. Returns { client: null, error } on failure. */
 export async function signIn(email, password = PASSWORD) {
   const client = anonClient();
-  const { error } = await client.auth.signInWithPassword({ email, password });
+  const { data, error } = await client.auth.signInWithPassword({ email, password });
   if (error) return { client: null, error };
-  return { client, error: null };
+  return { client, error: null, accessToken: data.session.access_token };
 }
 
 /** Create a user and return them already signed in. */
 export async function createSignedInUser(opts = {}) {
   const user = await createUser(opts);
-  const { client, error } = await signIn(user.email);
+  const { client, error, accessToken } = await signIn(user.email);
   if (error) throw new Error(`signIn(${user.email}): ${error.message}`);
-  return { ...user, client };
+  return { ...user, client, accessToken };
 }
 
 /** Read a profile by auth id using the service role (fixture inspection). */
@@ -108,6 +108,26 @@ export async function adminSet(authUserId, patch) {
 export async function cleanupUsers(authUserIds = []) {
   const svc = serviceClient();
   await Promise.allSettled(authUserIds.filter(Boolean).map((id) => svc.auth.admin.deleteUser(id)));
+}
+
+/**
+ * Call a deployed Edge Function with a caller's own access token (T054/T055 —
+ * admin-suspend, delete-account). Deliberately a real HTTP call, not a
+ * service-role bypass — this feature's mail (T025) and PKCE-link (T032) bugs
+ * were both hidden behind exactly that kind of shortcut.
+ */
+export async function callEdgeFunction(name, { token, body, method = 'POST' } = {}) {
+  requireConfig();
+  const headers = { apikey: ANON };
+  if (token) headers.Authorization = `Bearer ${token}`;
+  if (body) headers['Content-Type'] = 'application/json';
+  const res = await fetch(`${URL}/functions/v1/${name}`, {
+    method,
+    headers,
+    body: body ? JSON.stringify(body) : undefined,
+  });
+  const json = await res.json().catch(() => null);
+  return { status: res.status, body: json };
 }
 
 /**
