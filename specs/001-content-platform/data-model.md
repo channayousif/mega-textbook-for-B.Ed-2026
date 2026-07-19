@@ -31,10 +31,11 @@ A subject within a semester.
 | credit_hours | string | `catalog/courses.json` | e.g. `3 (3-0)` |
 | category | enum | catalog | General Education / Major: Professional / Pedagogy / Elective / Practical / Interdisciplinary / Internship / Capstone |
 | position | int | `_category_.json` | sidebar order within semester |
+| bilingual | boolean | `course-overview.mdx` | defaults `true`; `false` marks an English-only course (Constitution III.2 carve-out, e.g. GENG-300 Functional English) |
 
 - **Representation**: `docs/semester-{n}/<course-code>/` with a `_category_.json` and one `course-overview.mdx`.
 - **Relationships**: belongs to one Semester; has one Course overview; has many Units.
-- **Rules**: adding a Course = new folder + metadata only, no code change (FR-005, SC-006). Un-authored courses still render with "coming soon" placeholder units (SC-005).
+- **Rules**: adding a Course = new folder + metadata only, no code change (FR-005, SC-006). Un-authored courses still render with "coming soon" placeholder units (SC-005). A Course with `bilingual: false` exempts every one of its Units from the EN↔UR parity gate regardless of `translation_status` (FR-001).
 
 ## Entity: Course overview
 
@@ -80,10 +81,11 @@ A chapter within a course — the core reading artifact.
 - **Representation**: `docs/semester-{n}/<course-code>/unit-NN/` (EN) mirrored under `i18n/ur/...` (UR).
 - **Relationships**: belongs to one Course; references Course overview; references CLOs; may produce Handouts.
 - **State** (per-language render on the `/ur/` route):
+  - parent Course `bilingual: false` → English-only by design (e.g. GENG-300 Functional English); exempt from the parity gate at every `translation_status`; `/ur/` falls back to EN body without the "not yet available" banner, since a translation was never intended rather than merely missing.
   - `coming_soon: true` → placeholder, marked forthcoming, excluded from search index and from the parity gate.
   - **no UR file** → `/ur/` falls back to EN body under an "Urdu translation not yet available" banner (FR-003, Q1); exempt from parity gate.
   - `translation_status: draft` → UR file shown with a visible "draft translation" badge (FR-003); exempt from parity gate.
-  - `translation_status: reviewed` → publishable as complete bilingual unit; **subject to the EN↔UR structural parity gate** (rule 6).
+  - `translation_status: reviewed` → publishable as complete bilingual unit; **subject to the EN↔UR structural parity gate** (rule 6), unless the parent Course is `bilingual: false`.
 
 ## Entity: Recommended resource / reading material
 

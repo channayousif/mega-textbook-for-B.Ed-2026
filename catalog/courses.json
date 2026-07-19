@@ -5,7 +5,7 @@
       "number": 1,
       "priority": 1,
       "courses": [
-        { "code": "GENG-300", "title_en": "Functional English", "title_ur": "فنکشنل انگریزی", "credit_hours": "3 (3-0)", "category": "General Education" },
+        { "code": "GENG-300", "title_en": "Functional English", "title_ur": "فنکشنل انگریزی", "credit_hours": "3 (3-0)", "category": "General Education", "bilingual": false },
         { "code": "GNAS-301", "title_en": "Environmental Science", "title_ur": "ماحولیاتی سائنس", "credit_hours": "3 (3-0)", "category": "General Education" },
         { "code": "GICT-300", "title_en": "Application of ICT", "title_ur": "آئی سی ٹی کا اطلاق", "credit_hours": "3 (2-1)", "category": "General Education" },
         { "code": "GQUR-300", "title_en": "Quantitative Reasoning-I", "title_ur": "مقداری استدلال-1", "credit_hours": "3 (3-0)", "category": "General Education" },

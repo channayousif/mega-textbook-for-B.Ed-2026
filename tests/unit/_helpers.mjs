@@ -60,6 +60,15 @@ export function makeFixture(opts = {}) {
   mkdirSync(enDir, { recursive: true });
   if (!opts.omitUr) mkdirSync(urDir, { recursive: true });
 
+  if (opts.courseOverview) {
+    const courseDir = join(root, 'docs', 'semester-1', 'efmp-301');
+    const ov = { title: 'Course', course_code: 'EFMP-301', credit_hours: '3 (3-0)', category: 'General Education', ...opts.courseOverview };
+    const lines = ['---'];
+    for (const [k, v] of Object.entries(ov)) lines.push(`${k}: ${typeof v === 'string' ? `"${v}"` : v}`);
+    lines.push('---', '');
+    writeFileSync(join(courseDir, 'course-overview.mdx'), lines.join('\n'));
+  }
+
   const overrides = opts.overrides || {};
   for (const f of UNIT_FILES) {
     const useGlossary = f === 'index.mdx' && opts.glossaryRef;

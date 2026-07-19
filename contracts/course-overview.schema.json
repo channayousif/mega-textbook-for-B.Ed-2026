@@ -38,6 +38,11 @@
       },
       "default": { "summative": 60, "formative": 40 }
     },
+    "bilingual": {
+      "type": "boolean",
+      "default": true,
+      "description": "false marks an English-only course (e.g. Functional English) exempt from the EN<->UR parity gate (Constitution III.2)."
+    },
     "teaching_strategies": { "type": "array", "items": { "type": "string" } },
     "assessment_criteria": { "type": "array", "items": { "type": "string" } },
     "practical_work": { "type": "array", "items": { "type": "string" } },

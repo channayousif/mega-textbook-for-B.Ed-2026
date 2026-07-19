@@ -31,4 +31,13 @@ describe('EN<->UR parity gate', () => {
     expect(out).toMatch(/requires an Urdu mirror/);
     cleanup(root);
   });
+
+  // Constitution III.2 carve-out — a course flagged `bilingual: false` (e.g. GENG-300
+  // Functional English) is exempt from the parity gate even when reviewed with no UR mirror.
+  it('passes when a reviewed unit has no UR mirror but its course is bilingual: false', () => {
+    const { root } = makeFixture({ omitUr: true, courseOverview: { bilingual: false } });
+    const { code } = runValidator(root);
+    expect(code).toBe(0);
+    cleanup(root);
+  });
 });
