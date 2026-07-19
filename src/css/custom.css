@@ -83,6 +83,57 @@ html[dir='rtl'] code {
   margin: 1rem 0;
 }
 
+/* --- Auth form controls (Spec 002, T061) -----------------------------------
+   Found while doing the accessibility pass: Infima ships no `.input` class at
+   all — every text input across every auth page (`className="input"`) had
+   been rendering as a bare, unstyled, browser-default control all session,
+   under the 44px tap-target minimum (Constitution Art. III.8). Real styling,
+   not a cosmetic pass: uses Infima's own custom properties so it tracks the
+   site's light/dark theme instead of hardcoding colors. */
+.input {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+  padding: 0.6rem 0.75rem;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--ifm-font-color-base);
+  background-color: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-button-border-radius, 6px);
+  box-sizing: border-box;
+}
+.input:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 1px;
+}
+
+/* Checkboxes/radios are natively far under 44px; the label (which toggles
+   the input on click, same as the input itself) is what needs the tap-target
+   size, not the native control — resizing that cross-browser is unreliable. */
+.auth-tap-target {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+.auth-tap-target input[type='checkbox'],
+.auth-tap-target input[type='radio'] {
+  width: 1.15rem;
+  height: 1.15rem;
+  flex-shrink: 0;
+}
+
+/* Infima's default `.button` renders ~36px tall (0.375rem vertical padding +
+   1.5 line-height at 14px) — under 44px. Scoped to `.auth-page` rather than
+   overriding `.button` globally, since Feature 001 (print/search buttons)
+   also uses that class and this fix is Spec 002's accessibility pass, not a
+   site-wide restyle. */
+.auth-page .button {
+  min-height: 44px;
+}
+
 /* --- A4 print stylesheet (FR-011, SC-009, T031) ---------------------------- */
 @media print {
   @page {

@@ -1,42 +1,116 @@
 <!--
+SYNC IMPACT REPORT (v2.2.0)
+===========================
+Version change: 2.1.0 → 2.2.0
+Bump rationale: MINOR — the backend hosting model is redefined (managed/hosted → self-hosted on
+  project-controlled infrastructure) and a "free-tier friendly" cost mandate is relaxed to a
+  "cost-controlled infrastructure" one. This changes an operational commitment, not a user-facing
+  authorization or content principle, and does not invalidate any approved spec's requirements or
+  acceptance criteria — Spec 002's migrations, RLS policies, and client code are the same
+  self-hosted-or-cloud-portable Supabase OSS stack either way (see ADR-0006). Source: owner
+  decision, this session — `#decision: we will go with selfhosted backend. we will need it in
+  future also. we must have strong foundations` — confirmed via AskUserQuestion
+  ("Self-hosted Supabase (Recommended)").
+
+Modified: Article V.1 — "a managed backend (**Supabase**: ...)" → "a **self-hosted Supabase**
+  stack ... running on infrastructure the project controls."
+Modified: Article V.6 — renamed "Free-tier friendly" → "Cost-controlled infrastructure";
+  "MUST run on free/low-cost tiers (e.g., Vercel/Netlify/GitHub Pages ..., Supabase free tier
+  for the backend)" → runs on infrastructure the project already owns/controls; a future move
+  to a metered vendor tier requires a new ADR.
+
+Downstream artifacts updated in this amendment (same session, 2026-07-18):
+  ✅ specs/002-authentication/plan.md — Technical Context and Constitution Check table rewritten
+     for self-hosted (VPS + Kong:8000), a "Gate resolution (Art. V.1/V.6)" section added.
+  ✅ specs/002-authentication/quickstart.md — §1 rewritten as a self-hosted Docker Compose
+     walkthrough (verified against Supabase's own self-hosting docs, not assumed); §3 migration
+     application and §7 Edge Function deployment rewritten for the self-hosted flow (no cloud
+     `supabase link`/`functions deploy`); §4's admin-seeding SQL also fixed to key on
+     `auth_user_id`, not `id` (a pre-existing, unrelated bug found while editing this section).
+  ✅ specs/002-authentication/tasks.md — T063 no longer references a Vercel preview environment.
+  ✅ SDD/ROADMAP.md — architecture diagram and Decision #1 updated to self-hosted; the
+     "Domain & hosting" open question marked resolved.
+  ⚠ specs/002-authentication/spec.md and research.md still use technology-agnostic or
+     historical-alternative language ("a managed backend service", "rejected: Vercel serverless")
+     — left as-is; spec.md is explicitly implementation-agnostic by its own framing, and
+     research.md's line documents a rejected alternative, not a current claim.
+  — Feature 001's plan.md/research.md/tasks.md (site hosting: "Vercel primary, GitHub Pages
+     fallback") are **out of scope for this amendment** — that is ADR-0002's decision for the
+     *site*, not this ADR's backend decision, and the site's actual hosting reality (nginx →
+     apache2 on this VPS) predates and is independent of today's change. Left flagged, not fixed.
+
+Follow-up TODOs:
+  - Reconcile Feature 001's ADR-0002/plan.md Vercel references against the site's actual
+    self-hosted deployment — a separate, pre-existing inaccuracy, not created by this amendment.
+  - Prior TODO carried forward: reconcile ROADMAP course catalog codes once specs/gaps.md
+    G-2026-02..05 are resolved (GNAS code, Pakistan Studies placement, Fehm-e-Quran code, GSOS CH).
+
+--- prior report (v2.1.0) retained below ---
+
+SYNC IMPACT REPORT (v2.1.0)
+===========================
+Version change: 2.0.0 → 2.1.0
+Bump rationale: MINOR — a stated capability is narrowed, not reversed. Article V.3 previously
+  granted "a user MAY switch their own role between these two" (student/teacher). Spec 002's
+  clarify session (2026-07-18, Q1 answer D) established that the role is self-selectable at
+  SIGN-UP ONLY and thereafter changeable by an admin alone, so a teacher cannot strand an
+  active class by self-downgrading. No existing spec is invalidated (Spec 002 already encodes
+  this as FR-010/FR-010a; Spec 001 does not touch roles). Detected by the Constitution Check
+  gate during /sp.plan for 002-authentication and confirmed by the owner.
+
+Modified: Article V.3 — "a user MAY switch their own role between these two" → roles are
+  self-selectable at sign-up only; the role is immutable to the account holder afterwards and
+  changeable only by an admin.
+
+Downstream artifacts: specs/002-authentication/spec.md already aligned (FR-010, FR-010a,
+  US3 acceptance scenario 5). ADR-0005 unaffected in substance (its verified_teacher gate
+  stands); its role-switching prose should note the sign-up-only restriction.
+
+--- prior report (v2.0.0) retained below ---
+
 SYNC IMPACT REPORT
 ==================
-Version change: 1.0.0 → 1.1.0
-Bump rationale: MINOR — new non-negotiable requirements added to Article III (guide-section
-  fidelity; GECE assessment weighting) and expanded guidance in Articles II and VI. No
-  principle removed or redefined in a way that invalidates existing specs, so not MAJOR;
-  more than wording, so not PATCH. Synced from the ratified author amendment at
-  SDD/constitution.md (v1.0 → v1.1).
+Version change: 1.1.0 → 2.0.0
+Bump rationale: MAJOR — backward-incompatible redefinition of a governance principle. The
+  former non-negotiable rule "Teacher role assignment requires admin approval — no
+  self-declared teachers" (Article V.3, reinforced by Article IX.3) is REVERSED: the teacher
+  role is now self-selectable, and admin control moves to a separate `verified_teacher`
+  capability that gates answer keys/restricted material. Reversing a stated non-negotiable is
+  a breaking governance change even though no already-approved spec is invalidated (Spec 001
+  does not touch roles; Spec 002 is being drafted to match). Source: /sp.clarify (2026-07-17)
+  owner decision + ADR-0005.
 
-Source: SDD/constitution.md v1.1 (Yousif, curriculum owner) — full 8-semester course guides
-  now available locally under Scheme-and-Course-guides/.
+Source: history/adr/0005-self-selectable-teacher-role-with-verified-teacher-gate.md
+  (Proposed) and specs/002-authentication/spec.md Clarifications (Session 2026-07-17).
 
 Modified principles/articles:
-  - Article II — Guiding Document Supremacy: source of truth moved from the remote Drive
-    folder to the local `Scheme-and-Course-guides/` folder (all 8 semesters; Sem I–II PDF,
-    Sem III–VIII DOCX); gaps note records that guides are extracted and open board-vs-guide
-    discrepancies are tracked in specs/gaps.md.
-  - Article III — Content Quality Standards: item 5 now permits each guide's recommended
-    books/resources as a cited-not-reproduced starting point; NEW item 6 (Guide-section
-    fidelity); NEW item 7 (Assessment weighting 60% summative / 40% formative for GECEs);
-    Accessibility renumbered 6 → 8.
-  - Article VI — Scope Discipline: reframed from "Pilot = Semester I (6 courses)" to
-    "Build once, scale by semester — all 8 semesters scaffolded, content priority Sems 1–4;
-    golden unit EFMP-301 U1."
+  - Article V.3 — Roles: "Teacher role assignment requires admin approval — no self-declared
+    teachers" → self-selectable `student`/`teacher` roles (default student; admin never
+    self-selectable); teacher grants peer-teaching only; restricted-material access gated
+    behind an admin-granted `verified_teacher` capability (default off). Renamed to
+    "Roles and restricted-material access."
+  - Article IX.3 — Authentication & Access: "Teacher-role elevation is an explicit admin
+    action and MUST be recorded" → the audited admin action is now the `verified_teacher`
+    grant (access to answer keys/restricted material); self-selecting teacher needs no approval.
 
-Added sections: none (two new numbered clauses within Article III).
-Removed sections: none.
+Added sections: none.
+Removed sections: none (the admin-approval obligation is relocated to the verified_teacher grant).
 
 Templates requiring updates:
   ✅ .specify/templates/plan-template.md — "Constitution Check" gate derives from this file
-     at plan time; no hardcoded principle text; no change needed.
+     at plan time; no hardcoded principle text; verified by grep (no admin-approval strings).
   ✅ .specify/templates/spec-template.md — mandatory sections compatible; no change needed.
   ✅ .specify/templates/tasks-template.md — no hardcoded principle references; no change needed.
   ⚠ .specify/templates/commands/*.md — directory absent/empty in this repo; nothing to reconcile.
 
+Downstream artifacts updated in this amendment:
+  ✅ SDD/ROADMAP.md — Decision #4 rewritten to match (self-selectable teacher + verified_teacher gate).
+
 Follow-up TODOs:
-  - Reconcile the ROADMAP course catalog codes once specs/gaps.md G-2026-02..05 are resolved
-    by the curriculum owner (GNAS code, Pakistan Studies placement, Fehm-e-Quran code, GSOS CH).
+  ✅ ADR-0005 is Accepted; the amendment landed in commit 9b996bd, and the ADR's Decision
+     section was updated for the v2.1.0 sign-up-only narrowing.
+  - Prior TODO carried forward: reconcile ROADMAP course catalog codes once specs/gaps.md
+    G-2026-02..05 are resolved (GNAS code, Pakistan Studies placement, Fehm-e-Quran code, GSOS CH).
 -->
 
 # CONSTITUTION
@@ -119,22 +193,36 @@ authors' preference; traceability makes accreditation review auditable.
 1. **Content and application are separate concerns.**
    - Content (the textbook) = Markdown/MDX in a Git repository, rendered by **Docusaurus**.
      Versioned, diffable, reviewable.
-   - Application state (users, submissions, grades, feedback) = a managed backend
-     (**Supabase**: Postgres + Auth + Row-Level Security + Storage). Docusaurus is static
-     and MUST NOT be trusted with secrets or access control.
+   - Application state (users, submissions, grades, feedback) = a **self-hosted Supabase**
+     stack (Postgres + Auth + Row-Level Security + Storage) running on infrastructure the
+     project controls, not a third-party managed tier. Docusaurus is static and MUST NOT be
+     trusted with secrets or access control. (Rationale and alternatives in ADR-0006.)
 2. **Security lives in the backend.** Answer keys, grades, and submissions are protected by
    database Row-Level Security, never by "hidden" static pages. Anything shipped in the
    static bundle is public — treat it as such.
-3. **Roles**: `student`, `teacher`, `admin` (curriculum owner). Teacher role assignment
-   requires admin approval — no self-declared teachers.
+3. **Roles and restricted-material access.** The roles are `student`, `teacher`, and `admin`
+   (curriculum owner). The `student` and `teacher` roles are **self-selectable at sign-up
+   only** (default `student`) so a capable student MAY lead a peer study group. Once an
+   account exists its role is **immutable to the account holder**: changing it is an admin
+   action. This prevents a teacher from stranding an active class by self-downgrading. The
+   `admin` role is **never** self-selectable — it is seeded or assigned only by an existing
+   admin. The teacher role grants **peer-teaching
+   capabilities only** (create classes, assign, give feedback, view own students' work); it
+   MUST NOT by itself grant access to answer keys or other restricted teaching material.
+   Access to restricted material is a separate **`verified_teacher` capability**, granted only
+   by an admin (default off), enforced at the backend per Article V.2. (This reverses the
+   former "teacher requires admin approval" rule; rationale and alternatives in ADR-0005.)
 4. **One course = one content module.** Adding a course MUST NOT require changing platform
    code — only adding content folders + metadata.
 5. **Offline-tolerant & low-bandwidth first**: the site MUST be usable on low-end mobile
    devices and unreliable connections common in Sindh. Budget: content pages usable at
    < 200 KB first load (excluding images); images lazy-loaded and compressed.
-6. **Free-tier friendly**: initial deployment MUST run on free/low-cost tiers (e.g.,
-   Vercel/Netlify/GitHub Pages for the site, Supabase free tier for the backend) with a
-   documented upgrade path.
+6. **Cost-controlled infrastructure**: the platform runs on infrastructure the project already
+   owns or controls rather than a metered vendor tier — the static site and the self-hosted
+   Supabase backend (Art. V.1) share the project's existing server. This trades a hosted
+   provider's free-tier caps and pause-on-inactivity risk for direct operational ownership
+   (backups, upgrades, uptime). A future move to a managed or additional-cost tier requires a
+   new ADR.
 
 ## Article VI — Scope Discipline
 
@@ -173,8 +261,10 @@ Before any unit or feature is marked complete, all applicable gates MUST pass:
    provider requires a new spec.
 2. Every authenticated action MUST be authorized against the caller's role (Article V.3)
    at the database layer, not only in the UI.
-3. Teacher-role elevation is an explicit admin action and MUST be recorded (who approved,
-   when).
+3. **Verified-teacher elevation** — granting the `verified_teacher` capability (access to
+   answer keys and other restricted material) — is an explicit admin action and MUST be
+   recorded (who granted, when). Self-selecting the `teacher` role is not an elevation and
+   requires no approval.
 
 ## Article X — Amendment Procedure & Versioning
 
@@ -192,4 +282,4 @@ Before any unit or feature is marked complete, all applicable gates MUST pass:
 
 ---
 
-**Version**: 1.1.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-07-17
+**Version**: 2.2.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-07-18
