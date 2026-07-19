@@ -95,12 +95,3 @@ jobs:
           DOCUSAURUS_SUPABASE_ANON_KEY: ${{ secrets.DOCUSAURUS_SUPABASE_ANON_KEY }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: npm run test:e2e
-      # TEMPORARY diagnostic for a search.spec.ts CI-only failure under investigation —
-      # remove once root-caused (see PHR under history/prompts/002-authentication/).
-      - name: Upload Playwright trace on failure
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-trace
-          path: test-results/
-          retention-days: 3
