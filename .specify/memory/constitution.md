@@ -1,4 +1,45 @@
 <!--
+SYNC IMPACT REPORT (v2.3.0)
+===========================
+Version change: 2.2.0 → 2.3.0
+Bump rationale: MINOR — Article III.2's Urdu-parity requirement, previously unconditional for
+  every student-facing unit, gains an explicit carve-out for courses designated English-only by
+  the subject matter itself (e.g. GENG-300 Functional English). This materially narrows a
+  non-negotiable content obligation rather than merely clarifying wording, so it is not a PATCH;
+  it does not remove or invalidate any existing approved unit's requirements (no unit currently
+  relies on the old unconditional wording — GENG-300 is still unauthored/`coming_soon`), so it is
+  not MAJOR. Source: owner instruction, this session — "there are some english only courses that
+  do not require urdu translation like Functional english."
+
+Modified: Article III.2 — added the `bilingual: false` course-level exemption from the Urdu-parity
+  gate, naming GENG-300 Functional English as the first instance.
+
+Downstream artifacts updated in this amendment (same session, 2026-07-19):
+  ✅ specs/001-content-platform/spec.md — new Clarifications entry (session 2026-07-19); FR-001
+     and FR-003 amended with the `bilingual: false` exemption and its `/ur/` fallback behavior
+     (no "not yet available" banner when the absence is by design); Key Entities' Course line
+     updated.
+  ✅ specs/001-content-platform/data-model.md — Course entity gains a `bilingual` field; Unit's
+     per-language render "State" list gains the English-only-course case.
+  ✅ contracts/course-overview.schema.json (and its specs/001-content-platform/contracts/ copy) —
+     new optional `bilingual` boolean property, default `true`.
+  ✅ scripts/validate-content.mjs — the EN<->UR structural-parity gate now reads the parent
+     course's `bilingual` flag (via a new `isBilingualCourse()` helper) and skips entirely for
+     English-only courses, regardless of `translation_status`.
+  ✅ docs/semester-1/geng-300/course-overview.mdx — `bilingual: false` set (GENG-300 is the first
+     course flagged this way).
+  ✅ catalog/courses.json — GENG-300's entry gains `"bilingual": false` for reference; this file
+     is a human/scaffold reference, not read by the validator.
+
+Follow-up TODOs:
+  - If additional English-only courses are identified beyond GENG-300, flag them the same way
+    (`bilingual: false` in their `course-overview.mdx`) — no further code or spec change needed,
+    the mechanism is general.
+  - Prior TODOs carried forward from v2.2.0 (Feature 001 Vercel-reference reconciliation;
+    specs/gaps.md G-2026-02..05 catalog-code reconciliation) — untouched by this amendment.
+
+--- prior report (v2.2.0) retained below ---
+
 SYNC IMPACT REPORT (v2.2.0)
 ===========================
 Version change: 2.1.0 → 2.2.0
@@ -154,8 +195,12 @@ authors' preference; traceability makes accreditation review auditable.
 1. **Simple English**: student-facing prose targets an accessible register for a fresh
    HSC/intermediate graduate. No graduate-level jargon without a bilingual glossary entry.
 2. **Urdu parity**: every student-facing unit MUST have a complete, human-reviewed Urdu
-   version before publish. Machine translation MAY draft; a human quality pass is mandatory.
-   Register: academic-plain (درسی مگر عام فہم), not literary/archaic.
+   version before publish, **except units belonging to a course explicitly designated
+   English-only** (e.g. GENG-300 Functional English, where the subject itself is the
+   English language) — such courses are flagged `bilingual: false` in their course-overview
+   metadata and are exempt from the Urdu-parity gate. Machine translation MAY draft; a human
+   quality pass is mandatory for every course that is not so exempted. Register: academic-plain
+   (درسی مگر عام فہم), not literary/archaic.
 3. **Bloom's tagging**: every assessment item MUST carry a Bloom's-level tag. Formative sets
    skew Remember→Apply; summative sets MUST include Analyze or above.
 4. **Pakistan-grounded examples**: case studies and examples use Pakistani/Sindh classroom
@@ -282,4 +327,4 @@ Before any unit or feature is marked complete, all applicable gates MUST pass:
 
 ---
 
-**Version**: 2.2.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-07-18
+**Version**: 2.3.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-07-19

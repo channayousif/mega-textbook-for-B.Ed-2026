@@ -107,7 +107,19 @@ function checkOverview(courseDir, courseCode) {
   }
 }
 
-function checkUnit(unitDir, semester, courseFolder, courseCode, unitNo) {
+/**
+ * A course is bilingual by default; `bilingual: false` in course-overview.mdx
+ * marks an English-only course (e.g. GENG-300 Functional English) exempt from
+ * the EN<->UR parity gate (Constitution III.2 carve-out).
+ */
+function isBilingualCourse(courseDir) {
+  const ovFile = join(courseDir, 'course-overview.mdx');
+  if (!existsSync(ovFile)) return true;
+  const { data } = matter(readFileSync(ovFile, 'utf8'));
+  return data.bilingual !== false;
+}
+
+function checkUnit(unitDir, semester, courseFolder, courseCode, unitNo, bilingual) {
   // Five-file structural rule
   for (const f of UNIT_FILES) {
     if (!existsSync(join(unitDir, f))) err(join(unitDir, f), `missing required unit file '${f}'`);
@@ -152,9 +164,10 @@ function checkUnit(unitDir, semester, courseFolder, courseCode, unitNo) {
     }
   }
 
-  // T016: EN<->UR structural parity for reviewed units (skip coming_soon)
+  // T016: EN<->UR structural parity for reviewed units (skip coming_soon and
+  // English-only courses, Constitution III.2 carve-out)
   const urUnitDir = join(UR_BASE, `semester-${semester}`, courseFolder, `unit-${String(unitNo).padStart(2, '0')}`);
-  if (!comingSoon && translationStatus === 'reviewed') {
+  if (bilingual && !comingSoon && translationStatus === 'reviewed') {
     if (!existsSync(urUnitDir)) {
       err(urUnitDir, `reviewed unit requires an Urdu mirror (parity gate, FR-001)`);
     } else {
@@ -198,12 +211,13 @@ function walk() {
       const courseCode = course.toUpperCase();
       checkCategory(courseDir);
       checkOverview(courseDir, courseCode);
+      const bilingual = isBilingualCourse(courseDir);
 
       for (const unit of dirs(courseDir)) {
         const unitMatch = /^unit-(\d+)$/.exec(unit);
         if (!unitMatch) continue;
         checkCategory(join(courseDir, unit));
-        checkUnit(join(courseDir, unit), semester, course, courseCode, Number(unitMatch[1]));
+        checkUnit(join(courseDir, unit), semester, course, courseCode, Number(unitMatch[1]), bilingual);
       }
     }
   }

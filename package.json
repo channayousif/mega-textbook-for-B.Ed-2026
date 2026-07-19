@@ -4,7 +4,7 @@
   "private": true,
   "description": "Bilingual (English + Urdu) digital textbook for the B.Ed (4-Year) programme — Docusaurus content platform.",
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "scripts": {
     "docusaurus": "docusaurus",
