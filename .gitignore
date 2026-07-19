@@ -19,6 +19,12 @@ playwright/.cache/
 .env.local
 .env.*.local
 
+# Supabase CLI local state (Spec 002). Note: supabase/config.toml,
+# supabase/migrations/ and supabase/functions/ ARE tracked — only local
+# runtime state is ignored.
+supabase/.temp/
+supabase/.branches/
+
 # Logs
 *.log
 npm-debug.log*

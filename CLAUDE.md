@@ -213,6 +213,8 @@ See `.specify/memory/constitution.md` for code quality, testing, performance, se
 ## Active Technologies
 - TypeScript 5.x on Node.js 20+ (local Node 22.22.1); content in Markdown/MDX + Docusaurus v3 (classic preset, TS); `@easyops-cn/docusaurus-search-local` (bilingual offline search); `gray-matter` + `ajv` + `ajv-formats` (front-matter validation); self-hosted Noto Nastaliq Urdu webfont; client-side print stylesheet for A4 handouts (no PDF pipeline); Playwright (RTL / narrow-viewport / A4 print-emulation checks) (001-content-platform)
 - Filesystem / Git — content is Markdown/MDX + `_category_.json` + `catalog/courses.json`. **No database** in this feature (Supabase is a later-spec concern, explicitly out of scope) (001-content-platform)
+- TypeScript 5.6 on Node 20+ (repo pins `~5.6.0`, engines `>=20`) + Docusaurus 3.10 (existing), `@supabase/supabase-js` ^2 (new), React 18.3 (002-authentication)
+- Supabase Postgres (`profiles`, `privilege_audit`) — first database in this repo; content stays in Git per Constitution Art. V.1 (002-authentication)
 
 ## Recent Changes
 - 001-content-platform: Planned — Docusaurus v3 static site; `@easyops-cn/docusaurus-search-local` for bilingual offline search; `gray-matter`+`ajv` validation with an EN↔UR structural parity gate; client-side print-stylesheet A4 handouts (no PDF pipeline); missing-Urdu fallback to EN with an "untranslated" banner; self-hosted Noto Nastaliq Urdu webfont
