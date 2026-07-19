@@ -26,24 +26,24 @@ Edge Functions cover the only operations needing the service-role key (suspensio
 **Primary Dependencies**: Docusaurus 3.10 (existing), `@supabase/supabase-js` ^2 (new), React 18.3
 **Storage**: Supabase Postgres (`profiles`, `privilege_audit`) — first database in this repo; content stays in Git per Constitution Art. V.1
 **Testing**: Vitest (unit + RLS matrix), Playwright (auth e2e) — both already configured
-**Target Platform**: Static site on Vercel (`www.a2ahs.com`) + Supabase `ap-south-1` (Mumbai)
-**Project Type**: Web — static frontend + managed backend; no application server
+**Target Platform**: Static site (`www.a2ahs.com`) + self-hosted Supabase — both on the existing a2ahs.com VPS (nginx → apache2 for the docroot; nginx → Kong:8000 for a new `api.a2ahs.com`, per ADR-0006). Not Vercel: the site has run on this VPS since its original deploy, and the backend is now self-hosted rather than Supabase Cloud.
+**Project Type**: Web — static frontend + self-hosted backend; no application server
 **Performance Goals**: Google sign-up → signed in < 30 s, ≤ 2 clicks (SC-001); auth bundle must not push content pages past the < 200 KB first-load budget (Art. V.5)
-**Constraints**: Free tier (Art. V.6); anon key ships to browser, service-role key never does (Art. V.1); SSG-safe — no `window` at module scope; bilingual EN/UR incl. RTL (Art. III.8)
+**Constraints**: Self-hosted, cost-controlled infrastructure (Art. V.6, ADR-0006) — no vendor-tier caps, but backups/upgrades/uptime are now the project's own obligation; anon key ships to browser, service-role key never does (Art. V.1); SSG-safe — no `window` at module scope; bilingual EN/UR incl. RTL (Art. III.8)
 **Scale/Scope**: Low hundreds of users initially (one faculty); 4 auth pages + 1 admin area + 2 Edge Functions + 2 tables
 
 ## Constitution Check
 
-*GATE: evaluated against Constitution v2.1.0.*
+*GATE: evaluated against Constitution v2.2.0 (re-checked after the v2.2.0 self-hosting amendment — see gate resolution below).*
 
 | Article | Requirement | Status |
 |---|---|---|
-| V.1 | Content in Git; app state in Supabase; static site holds no secrets | ✅ Only anon key client-side; service-role confined to Edge Functions |
+| V.1 | Content in Git; app state in a self-hosted Supabase stack; static site holds no secrets | ✅ Only anon key client-side; service-role confined to Edge Functions; self-hosted per ADR-0006 |
 | V.2 | Security in the backend; answer keys protected by RLS, not hidden pages | ✅ `verified_teacher` enforced in RLS; nothing gated by static-bundle obscurity |
 | V.3 | Roles self-selectable **at sign-up only**; admin never self-selectable; teacher ≠ restricted access | ✅ Trigger allowlist + guard trigger; matches FR-003/010/010a — **see gate resolution below** |
 | V.4 | Adding a course must not require platform-code change | ✅ Feature adds no per-course logic |
 | V.5 | < 200 KB first load, low-bandwidth first | ⚠️ supabase-js adds weight — mitigated by lazy-loading auth on content pages; verify in Art. VII engineering gate |
-| V.6 | Free-tier friendly | ✅ Supabase free tier, Mumbai region |
+| V.6 | Cost-controlled infrastructure (self-hosted, not a metered vendor tier) | ✅ Self-hosted on the existing a2ahs.com VPS — ADR-0006; no Supabase Cloud/Vercel dependency |
 | VIII.1 | Student data visible only to student, their teachers, admin — RLS-tested | ✅ Access-control matrix + negative tests (SC-004) |
 | VIII.2 | Collect the minimum — no CNIC/phone/address | ✅ Only name (optional), email, role |
 | VIII.3 | No plaintext passwords | ✅ Delegated to GoTrue |
@@ -60,6 +60,19 @@ session. Owner confirmed the spec is authoritative; the constitution was amended
 
 **Post-Phase-1 re-check**: design introduces no new constitutional conflict. The one item to
 watch is V.5 (bundle budget), tracked as a measurable check rather than a violation.
+
+**Gate resolution (Art. V.1/V.6, added mid-implementation, 2026-07-18)** — the owner made an
+explicit hosting-model decision (`#decision: we will go with selfhosted backend...`) after Phase
+1–2 implementation had begun: self-hosted Supabase on the existing a2ahs.com VPS rather than
+Supabase Cloud's free tier. This is a hosting-location change, not an architecture change —
+self-hosted Supabase is the same OSS stack (Postgres + GoTrue + PostgREST + RLS) the migrations
+and client code already target, so nothing built in Phase 1–2 required rework. The constitution
+was amended to **v2.2.0** (Art. V.1 "managed backend" → "self-hosted"; Art. V.6 "Free-tier
+friendly" → "Cost-controlled infrastructure") and the decision recorded in **ADR-0006**, which
+also fixes the Kong/Postgres port-mapping and mandates a transactional mail relay (Resend/SES)
+for GoTrue email — local `exim4` deliverability to Gmail is fragile enough to break FR-002/FR-004
+silently. The Technical Context above, and quickstart.md, are updated to match; Docker is not yet
+installed on the host, which is the concrete blocker before this can be exercised end-to-end.
 
 ## Project Structure
 

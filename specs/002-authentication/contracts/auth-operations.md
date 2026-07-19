@@ -54,6 +54,16 @@ before display (FR-014). Raw GoTrue strings are never shown.
 - *Writes* to privileged columns **raise an error** — the caller must know the write failed
   rather than believing it succeeded.
 
+> **Correction (2026-07-19, found while writing T051).** This is precise for an *active* account
+> writing to a privileged column on its own row (`profiles_update_own`'s row matches, the 0008
+> trigger raises). It is **not** the shape a *suspended* account's write gets, including to
+> ordinary columns like `full_name`: `profiles_update_own`'s own USING clause requires
+> `status='active'`, so RLS filters the row out before the UPDATE — and before the trigger — ever
+> runs. That's a **silent zero-row success** (`error: null, data: []`), the same shape as a
+> read-denial, not a raise. `tests/rls/suspended-lockout.test.mjs` asserts this exact shape and
+> additionally re-reads via the service role to confirm nothing actually changed, since "no
+> error" alone doesn't prove that.
+
 ---
 
 ## C. Suspension & deletion (Edge Functions — service-role)

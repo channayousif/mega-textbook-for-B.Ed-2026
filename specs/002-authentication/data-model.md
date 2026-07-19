@@ -46,7 +46,18 @@ solely so Spec 003's submissions/grades keep a valid foreign key (FR-021).
 ### Validation rules
 
 - `role` is settable by the account holder **only at insert**, and only to `student`/`teacher`
-  (trigger allowlist, R3). Any later self-change is rejected → FR-010, FR-010a.
+  (trigger allowlist, R3). Any later self-change is rejected → FR-010, FR-010a — **except** the
+  single OAuth one-time role choice (see correction below).
+
+> **Correction (2026-07-18, found during T031 implementation).** The statement above was
+> incomplete: `guard_privileged_columns()` (0008) originally rejected **every** non-admin role
+> change unconditionally, which made the OAuth one-time role prompt this same requirement
+> mandates (R3 — Google has no pre-consent metadata hook) impossible to implement — any attempt
+> would raise `42501`. The trigger now carves out exactly one exception: a non-admin may set
+> `role` to `student`/`teacher` (never `admin`, preserving FR-009) in the same `UPDATE` statement
+> that stamps `role_chosen_at` from `null`. Once `role_chosen_at` is non-null, the existing
+> write-once check closes the door — a second attempt falls back to the unconditional rejection.
+> See `0008_guard_privileged_columns.sql` and `src/pages/app/profile.tsx`.
 - `verified_teacher`, `status`, and promotion to `role='admin'` are admin-only → FR-006, FR-009.
 - `full_name` is the only column the account holder may update → FR-010.
 - Display fallback: when `full_name` is NULL the UI shows the account email → FR-010b.
@@ -153,6 +164,19 @@ Key negative assertions to test:
 | Name | Timing | Purpose |
 |---|---|---|
 | `handle_new_user()` | AFTER INSERT on `auth.users` | Create `profiles` row; read role from `raw_user_meta_data` through an allowlist (`student`/`teacher`, else `student`). `SECURITY DEFINER`. → FR-003, R3 |
+
+> **Finding (2026-07-18, found while writing the T023 test).** `handle_new_user()`'s
+> email-matching re-link branch (FR-003a) is unreachable for the scenario it was written for.
+> Supabase's GoTrue links a Google identity to an existing verified-email account at the
+> `auth.identities` level, keeping `auth.users.id` unchanged — no new `auth.users` row is
+> inserted, so this AFTER INSERT trigger never fires for "Google after existing password
+> account". FR-003a's "one email = one account" guarantee is therefore delivered natively by
+> GoTrue, not by this trigger. The branch is harmless (a defensive no-op for an edge case
+> `admin.createUser` cannot even simulate, since it enforces email uniqueness up front) but is
+> not the mechanism actually satisfying FR-003a. Left in place; not removed, since GoTrue's
+> automatic-linking config (`GOTRUE_MANUAL_LINKING_ENABLED`, unverified-provider-email edge
+> cases) is an external setting this migration should not assume permanently. Real verification
+> is T063's live Google OAuth smoke test, not an RLS unit test — see `tests/rls/identity-linking.test.mjs`.
 | `guard_privileged_columns()` | BEFORE UPDATE on `profiles` | Raise unless caller is admin when `role`, `verified_teacher`, or `status` changes. → FR-006, FR-010a |
 | `write_privilege_audit()` | AFTER UPDATE on `profiles` | Emit a `privilege_audit` row per changed privileged column, `actor_id = auth.uid()`. → FR-018 |
 | `is_admin(uid)` | — | `SECURITY DEFINER` helper returning whether a uid is an active admin. Used by policies; avoids recursive RLS evaluation on `profiles`. |
@@ -170,6 +194,7 @@ correctness trap if missed.
 |---|---|---|
 | `admin-suspend` | Set `status`, then `auth.admin.signOut(uid,'global')` to revoke refresh tokens | FR-020, R5 |
 | `delete-account` | Strip `full_name`, set `deleted_at`, then `auth.admin.deleteUser(uid)` | FR-021, FR-022, R6 |
+| `admin-list-users` | Join `profiles` with `auth.users.email` for the admin user list — added during T043 (not originally planned in this table), confirmed with the owner rather than assumed. `profiles` deliberately has no email column (Art. VIII.2); an admin managing accounts needs one, and reading `auth.users` for arbitrary users needs the service-role key. | FR-007, FR-015 |
 
-Both verify the caller's role server-side before acting; `admin-suspend` requires admin,
-`delete-account` requires the caller to be the account owner.
+All three verify the caller's role server-side before acting — `admin-suspend` and
+`admin-list-users` require admin, `delete-account` requires the caller to be the account owner.
