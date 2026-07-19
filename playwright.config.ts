@@ -10,8 +10,6 @@ export default defineConfig({
   timeout: 30_000,
   use: {
     baseURL: 'http://localhost:3000',
-    trace: 'retain-on-failure',
-    screenshot: 'only-on-failure',
     ...devices['Desktop Chrome'],
   },
   webServer: {
