@@ -1,4 +1,52 @@
 <!--
+SYNC IMPACT REPORT (v2.2.0)
+===========================
+Version change: 2.1.0 → 2.2.0
+Bump rationale: MINOR — the backend hosting model is redefined (managed/hosted → self-hosted on
+  project-controlled infrastructure) and a "free-tier friendly" cost mandate is relaxed to a
+  "cost-controlled infrastructure" one. This changes an operational commitment, not a user-facing
+  authorization or content principle, and does not invalidate any approved spec's requirements or
+  acceptance criteria — Spec 002's migrations, RLS policies, and client code are the same
+  self-hosted-or-cloud-portable Supabase OSS stack either way (see ADR-0006). Source: owner
+  decision, this session — `#decision: we will go with selfhosted backend. we will need it in
+  future also. we must have strong foundations` — confirmed via AskUserQuestion
+  ("Self-hosted Supabase (Recommended)").
+
+Modified: Article V.1 — "a managed backend (**Supabase**: ...)" → "a **self-hosted Supabase**
+  stack ... running on infrastructure the project controls."
+Modified: Article V.6 — renamed "Free-tier friendly" → "Cost-controlled infrastructure";
+  "MUST run on free/low-cost tiers (e.g., Vercel/Netlify/GitHub Pages ..., Supabase free tier
+  for the backend)" → runs on infrastructure the project already owns/controls; a future move
+  to a metered vendor tier requires a new ADR.
+
+Downstream artifacts updated in this amendment (same session, 2026-07-18):
+  ✅ specs/002-authentication/plan.md — Technical Context and Constitution Check table rewritten
+     for self-hosted (VPS + Kong:8000), a "Gate resolution (Art. V.1/V.6)" section added.
+  ✅ specs/002-authentication/quickstart.md — §1 rewritten as a self-hosted Docker Compose
+     walkthrough (verified against Supabase's own self-hosting docs, not assumed); §3 migration
+     application and §7 Edge Function deployment rewritten for the self-hosted flow (no cloud
+     `supabase link`/`functions deploy`); §4's admin-seeding SQL also fixed to key on
+     `auth_user_id`, not `id` (a pre-existing, unrelated bug found while editing this section).
+  ✅ specs/002-authentication/tasks.md — T063 no longer references a Vercel preview environment.
+  ✅ SDD/ROADMAP.md — architecture diagram and Decision #1 updated to self-hosted; the
+     "Domain & hosting" open question marked resolved.
+  ⚠ specs/002-authentication/spec.md and research.md still use technology-agnostic or
+     historical-alternative language ("a managed backend service", "rejected: Vercel serverless")
+     — left as-is; spec.md is explicitly implementation-agnostic by its own framing, and
+     research.md's line documents a rejected alternative, not a current claim.
+  — Feature 001's plan.md/research.md/tasks.md (site hosting: "Vercel primary, GitHub Pages
+     fallback") are **out of scope for this amendment** — that is ADR-0002's decision for the
+     *site*, not this ADR's backend decision, and the site's actual hosting reality (nginx →
+     apache2 on this VPS) predates and is independent of today's change. Left flagged, not fixed.
+
+Follow-up TODOs:
+  - Reconcile Feature 001's ADR-0002/plan.md Vercel references against the site's actual
+    self-hosted deployment — a separate, pre-existing inaccuracy, not created by this amendment.
+  - Prior TODO carried forward: reconcile ROADMAP course catalog codes once specs/gaps.md
+    G-2026-02..05 are resolved (GNAS code, Pakistan Studies placement, Fehm-e-Quran code, GSOS CH).
+
+--- prior report (v2.1.0) retained below ---
+
 SYNC IMPACT REPORT (v2.1.0)
 ===========================
 Version change: 2.0.0 → 2.1.0
@@ -145,9 +193,10 @@ authors' preference; traceability makes accreditation review auditable.
 1. **Content and application are separate concerns.**
    - Content (the textbook) = Markdown/MDX in a Git repository, rendered by **Docusaurus**.
      Versioned, diffable, reviewable.
-   - Application state (users, submissions, grades, feedback) = a managed backend
-     (**Supabase**: Postgres + Auth + Row-Level Security + Storage). Docusaurus is static
-     and MUST NOT be trusted with secrets or access control.
+   - Application state (users, submissions, grades, feedback) = a **self-hosted Supabase**
+     stack (Postgres + Auth + Row-Level Security + Storage) running on infrastructure the
+     project controls, not a third-party managed tier. Docusaurus is static and MUST NOT be
+     trusted with secrets or access control. (Rationale and alternatives in ADR-0006.)
 2. **Security lives in the backend.** Answer keys, grades, and submissions are protected by
    database Row-Level Security, never by "hidden" static pages. Anything shipped in the
    static bundle is public — treat it as such.
@@ -168,9 +217,12 @@ authors' preference; traceability makes accreditation review auditable.
 5. **Offline-tolerant & low-bandwidth first**: the site MUST be usable on low-end mobile
    devices and unreliable connections common in Sindh. Budget: content pages usable at
    < 200 KB first load (excluding images); images lazy-loaded and compressed.
-6. **Free-tier friendly**: initial deployment MUST run on free/low-cost tiers (e.g.,
-   Vercel/Netlify/GitHub Pages for the site, Supabase free tier for the backend) with a
-   documented upgrade path.
+6. **Cost-controlled infrastructure**: the platform runs on infrastructure the project already
+   owns or controls rather than a metered vendor tier — the static site and the self-hosted
+   Supabase backend (Art. V.1) share the project's existing server. This trades a hosted
+   provider's free-tier caps and pause-on-inactivity risk for direct operational ownership
+   (backups, upgrades, uptime). A future move to a managed or additional-cost tier requires a
+   new ADR.
 
 ## Article VI — Scope Discipline
 
@@ -230,4 +282,4 @@ Before any unit or feature is marked complete, all applicable gates MUST pass:
 
 ---
 
-**Version**: 2.1.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-07-18
+**Version**: 2.2.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-07-18

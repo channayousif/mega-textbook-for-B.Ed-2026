@@ -3,24 +3,26 @@
 ## System Architecture (one picture in words)
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  Docusaurus site  (static, deployed to Vercel/Netlify)      │
-│  ├── /docs/...            textbook EN                       │
-│  ├── /ur/docs/...         textbook UR (RTL)                 │
-│  ├── /app/login|signup    auth pages (React, Spec 002)      │
-│  ├── /app/student         student dashboard (Spec 004)      │
-│  ├── /app/teacher         teacher dashboard (Spec 005)      │
-│  └── /app/admin           moderation & approvals            │
-│         │  supabase-js (anon key + RLS)                     │
-└─────────┼───────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────┐
+│  Docusaurus site  (static, self-hosted: nginx → apache2)      │
+│  ├── /docs/...            textbook EN                         │
+│  ├── /ur/docs/...         textbook UR (RTL)                   │
+│  ├── /app/login|signup    auth pages (React, Spec 002)        │
+│  ├── /app/student         student dashboard (Spec 004)        │
+│  ├── /app/teacher         teacher dashboard (Spec 005)        │
+│  └── /app/admin           moderation & approvals              │
+│         │  supabase-js (anon key + RLS)                       │
+└─────────┼─────────────────────────────────────────────────────┘
           ▼
-┌─────────────────────────────────────────────────────────────┐
-│  Supabase (managed backend)                                 │
-│  ├── Auth: Google OAuth + email/password                    │
-│  ├── Postgres + Row-Level Security (all app tables)         │
-│  ├── Storage: submissions/ bucket                           │
-│  └── Edge functions: achievements, exports                  │
-└─────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────┐
+│  Supabase, self-hosted on the same VPS (ADR-0006,              │
+│  nginx → Kong:8000 — Docker Compose, not Supabase Cloud)       │
+│  ├── Auth: Google OAuth + email/password (mail via a           │
+│  │         transactional relay — Resend/SES, not local exim)   │
+│  ├── Postgres + Row-Level Security (all app tables)            │
+│  ├── Storage: submissions/ bucket                              │
+│  └── Edge functions: achievements, exports                     │
+└───────────────────────────────────────────────────────────────┘
 
 Content repo (Git) ── CI ──> validate front-matter ──> build EN+UR ──> deploy
                         └──> unit-sync script ──> upsert `units` table
@@ -43,14 +45,17 @@ Content repo (Git) ── CI ──> validate front-matter ──> build EN+UR �
 *Effort assumes part-time work with Claude doing drafting/implementation and you reviewing. Content (Phase 5) runs in parallel with engineering phases.
 
 ## Decisions Locked In (change requires spec amendment)
-1. **Docusaurus + Supabase** stack; dashboards embedded as Docusaurus custom pages.
+1. **Docusaurus + Supabase** stack; dashboards embedded as Docusaurus custom pages. Both the
+   static site and Supabase are **self-hosted on the existing a2ahs.com VPS** — not Vercel/Netlify
+   and not Supabase Cloud. *(Backend hosting amended 2026-07-18 — see Constitution v2.2.0 Art.
+   V.1/V.6 and ADR-0006; the site itself has run self-hosted since its original deploy.)*
 2. **All 8 semesters scaffolded; content priority Semesters 1–4** (new 2026 scheme). Source of truth = the local `Scheme-and-Course-guides/` folder (board scheme + all 8 semester guides).
 3. **Answer keys live only in the backend** (`quiz_items`), never in the static site or Git repo.
 4. **Teacher role is self-selectable; answer-key access requires admin verification.** Users self-select `student`/`teacher` at sign-up (default student); the teacher role grants peer-teaching only. Access to answer keys/restricted material is a separate admin-granted `verified_teacher` capability (default off). The `admin` role is never self-selectable. *(Amended 2026-07-17 — reverses the original "teacher requires admin approval"; see Constitution v2.0.0 Art. V.3 / IX.3 and ADR-0005.)*
 5. **Golden unit** = EFMP-301 Educational Psychology, Unit 1 — sets the quality bar for all 3,000+ future documents.
 
 ## Decisions Still Needed From You
-1. **Domain & hosting**: do you have a domain in mind, and is Vercel acceptable for the site host? (Supabase project region: Mumbai `ap-south-1` is nearest to Hyderabad.)
+1. ~~**Domain & hosting**: do you have a domain in mind, and is Vercel acceptable for the site host?~~ **Resolved**: `a2ahs.com`, self-hosted on the project's own VPS for both the site and the backend (Decision #1 above; ADR-0006).
 2. **Urdu review**: will you personally review Urdu drafts, or should the pipeline plan for a second reviewer?
 3. **Institution branding**: should the site carry University of Sindh / Faculty of Education branding (needs permission), or launch as an independent companion resource?
 4. **Suggestion access**: teachers only (as specced), or may students also file book suggestions?
