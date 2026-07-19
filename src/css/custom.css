@@ -162,3 +162,38 @@ html[dir='rtl'] code {
     line-height: 2.2;
   }
 }
+
+/*
+ * Pin the navbar and sidebar chrome to the same left/right arrangement as the
+ * English site for the Urdu (RTL) locale too — owner decision, 2026-07-19.
+ * Only the Urdu prose itself should read right-to-left; the navigation chrome
+ * (sidebar position, navbar item order) stays fixed so switching languages
+ * doesn't also relocate the controls a reader has already learned.
+ *
+ * Docusaurus builds the `ur` locale by running the whole stylesheet through
+ * rtlcss, which auto-mirrors every directional value — including a plain
+ * direction: ltr/rtl we write here ourselves, silently inverting it and
+ * canceling out the fix. The "rtl:ignore" comment directive immediately
+ * before each rule below is rtlcss's own escape hatch: it makes that rule
+ * pass through unflipped, so it applies exactly as written in the built
+ * output.
+ *
+ * `direction` inherits, so flipping these flex containers back to `ltr` (to
+ * keep DOM source order = visual left-to-right) would otherwise also flip the
+ * actual Urdu article text — re-assert `rtl` on the content containers below
+ * to keep prose reading correctly.
+ */
+/*rtl:ignore*/
+html[dir='rtl'] .navbar__inner {
+  direction: ltr;
+}
+
+/*rtl:ignore*/
+html[dir='rtl'] div:has(> .theme-doc-sidebar-container) {
+  direction: ltr;
+}
+
+/*rtl:ignore*/
+html[dir='rtl'] div:has(> .theme-doc-sidebar-container) > main {
+  direction: rtl;
+}
