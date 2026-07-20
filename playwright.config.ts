@@ -8,6 +8,11 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({
   testDir: './tests/e2e',
   timeout: 30_000,
+  // CI runners talk to the self-hosted Supabase instance over real network
+  // latency (vs. same-host access in local dev), occasionally pushing a
+  // single assertion past its default timeout — retry there, not locally,
+  // so a genuinely broken feature still fails every attempt.
+  retries: process.env.CI ? 2 : 0,
   use: {
     baseURL: 'http://localhost:3000',
     ...devices['Desktop Chrome'],
