@@ -1,13 +1,15 @@
 name: Deploy (GitHub Pages fallback)
 
-# Vercel is the primary host (vercel.json); this workflow is the free GitHub Pages
-# fallback (research R9). Enable Pages in repo Settings → Pages (source: GitHub Actions),
-# and set `url`/`baseUrl` in docusaurus.config.ts to the Pages URL before first deploy.
+# Production is the self-hosted origin (www.a2ahs.com on the project's own
+# server, deployed by scripts/deploy-prod.sh via cron — pull-based, CI-gated).
+# This workflow is only the never-enabled GitHub Pages fallback (research R9);
+# it 404s on every run because Pages was never turned on in repo settings, so
+# the push trigger is disabled to stop failing every merge to main. Manual
+# dispatch is kept in case Pages is ever actually set up (enable Pages in
+# Settings → Pages first, and set `url`/`baseUrl` in docusaurus.config.ts).
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
 
 permissions:
   contents: read
