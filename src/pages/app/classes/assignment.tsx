@@ -65,8 +65,15 @@ function StudentSubmissionForm({
   const load = useCallback(async () => {
     const { data } = await fetchOwnSubmission(assignment.id, studentId);
     setSubmission(data);
-    setText(data?.text_content ?? '');
+    // Only sync `text` from a fetched submission when one actually exists
+    // (resuming an editable draft). Found via a CI-only failure that also
+    // reproduced locally once: this fetch is async, and unconditionally
+    // calling setText('') on the no-submission-yet path can resolve AFTER
+    // the student has already started typing, silently wiping their input —
+    // `text` already starts at '' from useState, so there's nothing to sync
+    // when there's no prior submission to restore.
     if (data) {
+      setText(data.text_content ?? '');
       const { data: gradeData } = await fetchGradeForSubmission(data.id);
       setGrade(gradeData);
     } else {
