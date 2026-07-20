@@ -134,6 +134,36 @@ html[dir='rtl'] code {
   min-height: 44px;
 }
 
+/* Visually hidden but still screen-reader-visible — standard accessible
+   pattern (not `display:none`/`visibility:hidden`, which hide from screen
+   readers too). Used for table column headers whose purpose is visually
+   obvious (an actions column of buttons) but which axe's td-has-header rule
+   still flags as unlabeled for screen-reader table navigation — found via
+   the same Lighthouse a11y audit as the danger-button contrast fix below. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Infima's default --ifm-color-danger (#fa383e) against the button's white
+   text is a 3.75:1 contrast ratio — fails WCAG AA's 4.5:1 minimum for normal
+   text. Found via a Lighthouse accessibility audit on roster.tsx's "Archive
+   class" button (Spec 003); also affects profile.tsx's danger button (Spec
+   002), so this is a global fix, not page-scoped. Uses
+   --ifm-color-danger-darkest — an existing shade in Infima's own palette
+   (6.88:1, passes AA), not a new invented color. */
+.button--danger {
+  --ifm-button-background-color: var(--ifm-color-danger-darkest);
+  --ifm-button-border-color: var(--ifm-color-danger-darkest);
+}
+
 /* --- A4 print stylesheet (FR-011, SC-009, T031) ---------------------------- */
 @media print {
   @page {
