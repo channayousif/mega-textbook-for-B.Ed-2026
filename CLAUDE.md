@@ -215,6 +215,8 @@ See `.specify/memory/constitution.md` for code quality, testing, performance, se
 - Filesystem / Git — content is Markdown/MDX + `_category_.json` + `catalog/courses.json`. **No database** in this feature (Supabase is a later-spec concern, explicitly out of scope) (001-content-platform)
 - TypeScript 5.6 on Node 20+ (repo pins `~5.6.0`, engines `>=20`) + Docusaurus 3.10 (existing), `@supabase/supabase-js` ^2 (new), React 18.3 (002-authentication)
 - Supabase Postgres (`profiles`, `privilege_audit`) — first database in this repo; content stays in Git per Constitution Art. V.1 (002-authentication)
+- TypeScript 5.6 on Node 22+ (repo `engines: ">=22"`, bumped from 20 in PR #3 for `@supabase/supabase-js`'s WebSocket requirement) + Docusaurus 3.10 (existing), `@supabase/supabase-js` ^2 (existing), React 18.3 (existing); **new**: `exceljs` (gradebook export, FR-014/R5) (003-classes-assignments)
+- Supabase Postgres — 8 new tables (`classes`, `enrollments`, `assignments`, `submissions`, `grades`, `quiz_items`, `quiz_attempts`, `answer_keys`) extending Spec 002's `profiles`; one new private Supabase Storage bucket (`submissions`, 10 MB/type-limited). Course/unit content stays in Git (Constitution Art. V.1) — referenced by `course_code`/`unit_no` only, never duplicated. (003-classes-assignments)
 
 ## Recent Changes
 - 001-content-platform: Planned — Docusaurus v3 static site; `@easyops-cn/docusaurus-search-local` for bilingual offline search; `gray-matter`+`ajv` validation with an EN↔UR structural parity gate; client-side print-stylesheet A4 handouts (no PDF pipeline); missing-Urdu fallback to EN with an "untranslated" banner; self-hosted Noto Nastaliq Urdu webfont
