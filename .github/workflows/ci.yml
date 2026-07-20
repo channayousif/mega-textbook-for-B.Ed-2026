@@ -95,3 +95,13 @@ jobs:
           DOCUSAURUS_SUPABASE_ANON_KEY: ${{ secrets.DOCUSAURUS_SUPABASE_ANON_KEY }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: npm run test:e2e
+      # Traces/screenshots only exist when a test fails (playwright.config.ts
+      # `retain-on-failure`/`only-on-failure`) — upload them so a CI-specific
+      # failure is actually debuggable instead of guesswork from log text alone.
+      - name: Upload Playwright traces on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-traces
+          path: test-results/
+          retention-days: 7

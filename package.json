@@ -8,10 +8,13 @@
   },
   "scripts": {
     "docusaurus": "docusaurus",
+    "prestart": "node scripts/build-content-index.mjs",
     "start": "docusaurus start",
+    "prebuild": "node scripts/build-content-index.mjs",
     "build": "docusaurus build",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
+    "build:content-index": "node scripts/build-content-index.mjs",
     "validate:content": "node scripts/validate-content.mjs",
     "check:no-answer-keys": "node scripts/check-no-answer-keys.mjs",
     "check:add-course": "node scripts/check-add-course.mjs",
@@ -29,6 +32,7 @@
     "@mdx-js/react": "^3.0.0",
     "@supabase/supabase-js": "^2.110.7",
     "clsx": "^2.1.0",
+    "exceljs": "^4.4.0",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.3.0",
     "react-dom": "^18.3.0"

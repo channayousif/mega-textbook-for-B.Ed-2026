@@ -9,6 +9,10 @@ build/
 # Generated / search
 .swc/
 
+# Generated content index (Spec 003, T034) — rebuilt by prestart/prebuild;
+# not source of truth, no need to track drift in git.
+static/content-index.json
+
 # Playwright
 test-results/
 playwright-report/
