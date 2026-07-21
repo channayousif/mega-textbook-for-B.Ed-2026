@@ -110,3 +110,33 @@ export type AssignmentStudentStatus =
   | 'late'
   | 'graded'
   | 'missing'; // teacher queue view only
+
+/**
+ * Dashboard-domain types (Spec 004) mirroring data-model.md's
+ * `unit_progress`/`student_achievements` columns.
+ */
+
+export type UnitProgressMethod = 'self_marked' | 'assignment' | 'quiz';
+
+export type UnitProgress = {
+  id: string;
+  student_id: string;
+  course_code: string;
+  unit_no: number;
+  method: UnitProgressMethod;
+  occurred_at: string;
+};
+
+export type AchievementKey =
+  | 'first_submission'
+  | 'study_streak'
+  | 'full_course_coverage'
+  | 'on_time_class_completion';
+
+export type StudentAchievement = {
+  id: string;
+  student_id: string;
+  achievement_key: AchievementKey;
+  earned_at: string;
+  context: Record<string, unknown> | null;
+};

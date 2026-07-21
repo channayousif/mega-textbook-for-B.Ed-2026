@@ -1,4 +1,47 @@
 <!--
+SYNC IMPACT REPORT (v2.4.0)
+===========================
+Version change: 2.3.0 → 2.4.0
+Bump rationale: MINOR — a new governance article is added (Article X — Documentation for
+  Multiple Audiences); no existing principle is redefined or removed, and no approved spec is
+  invalidated. Source: owner instruction, this session — "update for maintaining Project docs
+  for different readers, mainly the main project docs as github readme, a student guide, teacher
+  docs."
+
+Added: Article X — Documentation for Multiple Audiences. Establishes three distinct,
+  purpose-built documentation surfaces (README for contributors, Student Guide, Teacher Guide),
+  each written for its own reader and never merged; ties their upkeep to the spec-drift rule
+  (Article IV.4) and adds a Docs gate row to Article VII's review-gate table.
+
+Renumbered: former Article X (Amendment Procedure & Versioning) → Article XI. The intro's
+  "(Article X)" cross-reference updated to "(Article XI)".
+
+Downstream artifacts reviewed this amendment (2026-07-20):
+  ✅ .specify/templates/plan-template.md — "Constitution Check" section derives from this file
+     generically (no hardcoded article numbers found via grep); no change needed.
+  ✅ .specify/templates/spec-template.md — no hardcoded article references found; no change
+     needed.
+  ✅ .specify/templates/tasks-template.md — no hardcoded article references found; no change
+     needed.
+  ⚠ README.md — does not yet exist at repo root. Creating it satisfies this amendment's new
+     Article X.1 obligation but is separate implementation work, not a constitution edit.
+  ⚠ Student Guide / Teacher Guide — do not yet exist. No spec currently owns them; the natural
+     home is a new or existing feature spec (see Follow-up TODOs) since Article X only mandates
+     that they exist and stay in sync, not their authoring.
+
+Follow-up TODOs:
+  - Author `README.md` at repo root (contributor-facing: setup, build/test, contribution flow,
+    links to specs/ADRs) — no spec currently tracks this; consider a small standalone task or
+    folding into whichever spec next touches root-level project scaffolding.
+  - Decide which feature spec owns the Student Guide and Teacher Guide's initial authoring (likely
+    Spec 004/005's dashboards, since those are the first features giving students/teachers a
+    workflow substantial enough to document) — flagged for the owner, not decided here.
+  - Prior TODOs carried forward from v2.3.0 (additional English-only courses flagged the same
+    way as GENG-300; Feature 001 Vercel-reference reconciliation; specs/gaps.md G-2026-02..05
+    catalog-code reconciliation) — untouched by this amendment.
+
+--- prior report (v2.3.0) retained below ---
+
 SYNC IMPACT REPORT (v2.3.0)
 ===========================
 Version change: 2.2.0 → 2.3.0
@@ -160,7 +203,7 @@ Follow-up TODOs:
 
 This constitution is the highest-authority document of the project. Every spec, plan, task,
 and line of code MUST comply with it. Amendments require an explicit version bump and a
-written rationale (Article X).
+written rationale (Article XI).
 
 ---
 
@@ -290,6 +333,7 @@ Before any unit or feature is marked complete, all applicable gates MUST pass:
 | Content gate | CLO traceability • simple-English readability • Urdu parity & register • Bloom's tags • citations • guide-section fidelity • accessibility | Curriculum owner |
 | Engineering gate | Spec compliance • RLS policies tested • responsive/RTL rendering verified • Lighthouse performance pass | Developer |
 | Teacher gate (per course, once) | One practicing teacher dry-runs the unit's activities & assessments | Pilot teacher |
+| Docs gate | A shipped spec that changes a student/teacher workflow or contributor setup updates the matching guide (Student Guide, Teacher Guide, or README — Article X) in the same branch | Feature author |
 
 ## Article VIII — Data Protection & Ethics
 
@@ -311,7 +355,40 @@ Before any unit or feature is marked complete, all applicable gates MUST pass:
    recorded (who granted, when). Self-selecting the `teacher` role is not an elevation and
    requires no approval.
 
-## Article X — Amendment Procedure & Versioning
+## Article X — Documentation for Multiple Audiences (non-negotiable)
+
+1. The project MUST maintain three distinct, purpose-built documentation surfaces. Each is
+   written for one reader and MUST NOT be merged into a generic catch-all document:
+   - **README** (`README.md`, repo root) — for developers and contributors: what the project
+     is, local setup, how to build/test, contribution flow, and links to `specs/`, ADRs, and
+     the constitution. Technical register; assumes engineering literacy.
+   - **Student Guide** — for students: how to navigate the platform, join a class, submit
+     work, read grades, and use the dashboard. Plain-English register per Article III.1,
+     extended here from curriculum prose to app/workflow text; bilingual per Article III.2,
+     since it is student-facing.
+   - **Teacher Guide** — for teachers: class, assignment, and grading workflows, the teacher
+     dashboard, and what `verified_teacher`-gated features unlock. Written for a pedagogical,
+     non-technical reader; describes role capabilities, never implementation.
+2. **Stay-in-sync obligation**: a spec that changes a student- or teacher-facing workflow MUST
+   update the corresponding guide in the same feature branch; a spec that changes contributor-
+   facing setup or process MUST update the README likewise. This extends the spec-drift rule
+   (Article IV.4) to these three surfaces — a stale guide is a defect, not a later cleanup task.
+3. **No substitution between surfaces**: a developer setting up the repo MUST NOT need to read
+   the Student or Teacher Guide, and a student or teacher MUST NOT be pointed at the README or
+   `specs/` to learn how to use the platform.
+4. **Location & format**: `README.md` is plain Markdown at repo root, GitHub-rendered. The
+   Student Guide and Teacher Guide are bilingual Docusaurus-rendered pages (reusing the same
+   content pipeline as curriculum material, per Article V.1's content/app separation — these are
+   platform-usage docs, not curriculum content) and are reachable from in-app navigation for the
+   relevant signed-in role.
+
+**Rationale:** distinct readers have distinct goals and vocabularies. A single combined
+document either drowns non-technical readers in engineering detail or starves contributors of
+the internals they need. Article III's Simple English mandate governs curriculum content; this
+article extends the same plain-language discipline to platform-usage docs for students and
+teachers specifically, while keeping the README technical and separate.
+
+## Article XI — Amendment Procedure & Versioning
 
 1. **Procedure**: propose the change in writing → assess impact on existing specs, plans,
    and templates → bump this constitution's version → update affected specs before touching
@@ -327,4 +404,4 @@ Before any unit or feature is marked complete, all applicable gates MUST pass:
 
 ---
 
-**Version**: 2.3.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-07-19
+**Version**: 2.4.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-07-20
