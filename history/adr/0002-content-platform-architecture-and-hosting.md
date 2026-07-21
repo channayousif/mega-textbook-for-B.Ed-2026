@@ -2,7 +2,7 @@
 
 > **Scope**: Document decision clusters, not individual technology choices. Group related decisions that work together (e.g., "Frontend Stack" not separate ADRs for framework, styling, deployment).
 
-- **Status:** Accepted
+- **Status:** Accepted — **"Hosting & delivery" bullet superseded by [ADR-0008](0008-production-deployment-architecture.md)** (2026-07-21): production delivery is a pull-based, CI-gated deploy to the self-hosted origin, not Vercel/GitHub Pages. All other decisions in this cluster stand.
 - **Date:** 2026-07-17
 - **Feature:** 001-content-platform
 - **Context:** The B.Ed textbook must be a public, bilingual, low-bandwidth reading platform that stays economically maintainable across 40+ courses and years of growth, on free/low-cost tiers, with no server security surface for the reading layer. Constitution Art. V mandates strict separation of content (a versioned, diffable, reviewable textbook) from application state (users/grades/submissions, which land in later specs), and Art. V.4 requires that "one course = one content module" — adding a course must not touch platform code. This feature also had to *replace an existing WordPress site* at a2ahs.com. The framework, content substrate, navigation/search mechanism, and hosting are tightly coupled and would change together, so they are captured as one cluster.
