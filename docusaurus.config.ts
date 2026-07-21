@@ -69,16 +69,38 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    /**
+     * Second docs-plugin instance for the Student/Teacher Guides (Spec 004,
+     * ADR-0009, research.md R6, T001). Kept deliberately separate from the
+     * curriculum docs instance above — its topic-based navigation (guide ->
+     * guide) has nothing to do with the curriculum's semester -> course ->
+     * unit hierarchy, and mixing the two would confuse both the sidebar and
+     * Spec 001's SC-003 promise that the curriculum catalog is the site's home.
+     */
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'guides',
+        path: 'guides',
+        routeBasePath: 'guides',
+        sidebarPath: './sidebars-guides.ts',
+      },
+    ],
+  ],
+
   themes: [
     [
       '@easyops-cn/docusaurus-search-local',
       /** Bilingual offline search (FR-006, SC-004). 'ur' added to `language` once
-       *  the Urdu tokenizer is verified against SC-004 (research R5 / T025). */
+       *  the Urdu tokenizer is verified against SC-004 (research R5 / T025).
+       *  `docsRouteBasePath` now also indexes the `guides` instance (Spec 004,
+       *  T001) alongside the curriculum instance at `/`. */
       {
         hashed: true,
         language: ['en'],
         indexBlog: false,
-        docsRouteBasePath: '/',
+        docsRouteBasePath: ['/', '/guides'],
       },
     ],
   ],
@@ -89,6 +111,9 @@ const config: Config = {
       items: [
         { type: 'localeDropdown', position: 'right' },
         { type: 'search', position: 'right' },
+        // Spec 004, T007 — registers src/components/DashboardNavLink.tsx;
+        // renders nothing unless signed in as a student.
+        { type: 'custom-dashboardLink', position: 'right' },
         // Spec 002, T030 — registers src/components/NavbarAuthWidget.tsx via
         // the swizzled src/theme/NavbarItem/ComponentTypes.tsx.
         { type: 'custom-authWidget', position: 'right' },
