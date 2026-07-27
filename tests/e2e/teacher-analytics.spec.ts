@@ -77,7 +77,7 @@ test('analytics shows correct distribution/unit average and flags only at-risk s
     }
 
     await signIn(page, teacherEmail);
-    await page.goto(`/app/teacher/analytics?classId=${classId}`);
+    await page.goto(`/app/teacher/analytics/?classId=${classId}`);
 
     // Distribution: A1 avg (90+60)/2=75%, A2 (70+70)/2=70%, A3 (50+80)/2=65%.
     await expect(page.getByTestId('distribution-row').filter({ hasText: 'A1' })).toContainText('75%');

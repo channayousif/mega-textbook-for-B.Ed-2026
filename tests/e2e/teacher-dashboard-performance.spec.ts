@@ -74,7 +74,7 @@ test('overview and analytics load within the SC-005 budget at representative sca
     expect(overviewElapsedMs, `Overview took ${overviewElapsedMs}ms, budget is ${SC005_BUDGET_MS}ms`).toBeLessThan(SC005_BUDGET_MS);
 
     const analyticsStart = Date.now();
-    await page.goto(`/app/teacher/analytics?classId=${classId}`);
+    await page.goto(`/app/teacher/analytics/?classId=${classId}`);
     await expect(page.getByTestId('distribution-row').first()).toBeVisible();
     const analyticsElapsedMs = Date.now() - analyticsStart;
     expect(analyticsElapsedMs, `Analytics took ${analyticsElapsedMs}ms, budget is ${SC005_BUDGET_MS}ms`).toBeLessThan(SC005_BUDGET_MS);
