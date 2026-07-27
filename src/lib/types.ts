@@ -140,3 +140,68 @@ export type StudentAchievement = {
   earned_at: string;
   context: Record<string, unknown> | null;
 };
+
+/**
+ * Teacher-dashboard-domain types (Spec 005) mirroring data-model.md's
+ * `teaching_log_entries`/`activity_feedback`/`improvement_suggestions` columns.
+ */
+
+export type TeachingLogSourceKind = 'activity' | 'formative' | 'summative';
+
+export type TeachingLogEntry = {
+  id: string;
+  teacher_id: string;
+  class_id: string;
+  course_code: string;
+  unit_no: number;
+  source_kind: TeachingLogSourceKind;
+  occurred_on: string;
+  duration_minutes: number;
+  reflection: string;
+  created_at: string;
+};
+
+export type ActivityFeedback = {
+  id: string;
+  teacher_id: string;
+  course_code: string;
+  unit_no: number;
+  source_kind: TeachingLogSourceKind;
+  rating: number;
+  what_worked: string | null;
+  what_didnt: string | null;
+  actual_minutes: number;
+  created_at: string;
+  updated_at: string;
+};
+
+export type SuggestionCategory =
+  | 'typo'
+  | 'clarity'
+  | 'factual'
+  | 'pedagogy'
+  | 'translation'
+  | 'other';
+
+export type SuggestionStatus =
+  | 'submitted'
+  | 'under_review'
+  | 'accepted'
+  | 'rejected'
+  | 'published';
+
+export type ImprovementSuggestion = {
+  id: string;
+  teacher_id: string;
+  page_slug: string;
+  section_anchor: string | null;
+  locale: 'en' | 'ur';
+  course_code: string;
+  unit_no: number | null;
+  category: SuggestionCategory;
+  body: string;
+  status: SuggestionStatus;
+  admin_note: string | null;
+  created_at: string;
+  updated_at: string;
+};
