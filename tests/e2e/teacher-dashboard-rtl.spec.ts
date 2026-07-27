@@ -80,8 +80,8 @@ test('every teacher-dashboard and admin area renders RTL under /ur/ with no hori
     await checkRtlNoOverflow(teacherPage, '/ur/app/teacher/');
     await checkRtlNoOverflow(teacherPage, '/ur/app/teacher/teaching-log');
     await checkRtlNoOverflow(teacherPage, '/ur/app/teacher/feedback-suggestions');
-    await checkRtlNoOverflow(teacherPage, `/ur/app/teacher/analytics?classId=${classId}`);
-    await checkRtlNoOverflow(teacherPage, `/ur/app/teacher/student?classId=${classId}&studentId=${studentProfile.id}`);
+    await checkRtlNoOverflow(teacherPage, `/ur/app/teacher/analytics/?classId=${classId}`);
+    await checkRtlNoOverflow(teacherPage, `/ur/app/teacher/student/?classId=${classId}&studentId=${studentProfile.id}`);
 
     await signIn(adminPage, adminEmail);
     await checkRtlNoOverflow(adminPage, '/ur/app/admin/suggestions');

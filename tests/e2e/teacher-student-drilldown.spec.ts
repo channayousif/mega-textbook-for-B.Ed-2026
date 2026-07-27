@@ -54,7 +54,7 @@ test('student drill-down shows exactly that student\'s submissions, grades, and 
     await svc.from('grades').insert({ submission_id: sub1.id, mark: 85, graded_by: teacherProfile.id });
 
     await signIn(page, teacherEmail);
-    await page.goto(`/app/teacher/student?classId=${classId}&studentId=${studentProfile.id}`);
+    await page.goto(`/app/teacher/student/?classId=${classId}&studentId=${studentProfile.id}`);
 
     await expect(page.getByTestId('drilldown-submission-row')).toContainText('Drilldown Assignment 1');
     await expect(page.getByTestId('drilldown-grade-row')).toContainText('85/100');

@@ -65,7 +65,7 @@ test('a student meeting the at-risk criteria sees no at-risk flag anywhere on th
 
     // Confirm the teacher's own Analytics does flag this student.
     await signIn(teacherPage, teacherEmail);
-    await teacherPage.goto(`/app/teacher/analytics?classId=${classId}`);
+    await teacherPage.goto(`/app/teacher/analytics/?classId=${classId}`);
     await expect(teacherPage.getByTestId('at-risk-student-row')).toHaveCount(1);
 
     // The student's own dashboard must show nothing at-risk-related anywhere.
