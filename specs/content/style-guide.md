@@ -1,5 +1,5 @@
 ---
-version: "0.1-draft"
+version: "1.0"
 ---
 
 # Content Style Guide
