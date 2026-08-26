@@ -7,8 +7,8 @@ reviewer initials). One row per unit per stage (`G1`–`G7`; `G0` course-intake 
 | Unit | Stage | Status | Reviewer | Suggestion |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ✅ | YM | |
-| Unit 1 | G2 en-draft | ▢ | | |
-| Unit 1 | G3 en-review | ▢ | | |
+| Unit 1 | G2 en-draft | ✅ | YM | |
+| Unit 1 | G3 en-review | ✅ | YM | |
 | Unit 1 | G4 ur-translation | ▢ | | |
 | Unit 1 | G5 ur-review | ▢ | | |
 | Unit 1 | G6 assets | ▢ | | |
