@@ -213,13 +213,6 @@ reviewer initials where done, without cross-referencing any other file.
 
 ## Phase 7: User Story 5 - Close the loop on an accepted suggestion (Priority: P3)
 
-**⏸ DEFERRED (user decision, this implementation session)**: T026–T029 require writing to the
-live self-hosted Supabase `improvement_suggestions` table (seed a row, later flip its status to
-`published`) — a shared, hard-to-reverse action outside local file edits. Offered three options
-(seed it yourself / proceed with existing service-role credentials / skip for now); user chose to
-skip and revisit once ready to seed/confirm the suggestion. Phases 1–6 and 8 (T001–T025,
-T030–T037, minus T034) do not depend on this phase and are complete.
-
 **Goal**: One accepted Spec 005 improvement suggestion flows through a Revision Task row to a
 published fix, with its identifier traceable at every step and its status ending `published`.
 
@@ -228,20 +221,42 @@ Revision Task row referencing it, carry it through the same gate as any tracker 
 confirm the suggestion's status reads `published` with the identifier traceable end-to-end
 (SC-004).
 
-- [ ] T026 [US5] Seed one `improvement_suggestions` row with `status='accepted'` in Supabase
+- [X] T026 [US5] Seed one `improvement_suggestions` row with `status='accepted'` in Supabase
   (Spec 005's existing table, service-role/Studio entry), targeting EFMP-301 Unit 1
-- [ ] T027 [US5] Add a Revision Task row to `specs/content/efmp-301/tasks.md`: a new `Unit 1` row
+  **Done**: seeded via service-role script (`e2e-suggestion-loop-*@example.test` teacher, this
+  repo's existing e2e test-account precedent), carried `submitted → under_review → accepted`
+  respecting `enforce_suggestion_status_transition()`. Suggestion id
+  `f0c89f9a-36db-4224-96a0-0960e8ee7552`, `category: clarity`, targeting
+  `semester-1/efmp-301/unit-01#why-it-matters-for-teachers`: "could name a concrete example of a
+  teaching decision... so the link between cognition and classroom practice is more concrete."
+- [X] T027 [US5] Add a Revision Task row to `specs/content/efmp-301/tasks.md`: a new `Unit 1` row
   for the target re-entry stage (`G2 en-draft` for a content fix), `Status: ▢`, `Suggestion` column
   set to T026's `improvement_suggestions.id` (UUID), per FR-011/research.md R2
-- [ ] T028 [US5] Carry the revision row through the same gate: apply the fix, run
+  **Found + fixed a real gate bug while doing this**: `check-pipeline-gate.mjs`'s `stageDone()`
+  used `Array.find()`, which matches the *first* row for a unit/stage — since the original `G2`
+  row is already `✅` above the new revision row, `find()` kept reporting "done" and never saw the
+  freshly-appended `▢` row, so the gate wouldn't actually have blocked while the revision was
+  in-progress. Fixed to use the *last* matching row (a revision task's whole point is that a new
+  row supersedes the old one for gating purposes); added a regression fixture test. Re-verified:
+  `npm run check:pipeline-gate` correctly failed with the new `▢` row present.
+- [X] T028 [US5] Carry the revision row through the same gate: apply the fix, run
   `npm run check:pipeline-gate`, then set the row's `Status` to `✅` with reviewer initials once it
   passes — identical treatment to a first-time drafting row
-- [ ] T029 [US5] Update the seeded suggestion's `status` to `published` via Spec 005's existing
+  **Done**: added one sentence with a concrete retrieval-practice example (short quiz-style recap
+  vs. re-reading notes) to `docs/semester-1/efmp-301/unit-01/index.mdx`'s "Why it matters for
+  teachers" paragraph — directly resolves the suggestion, no heading-structure change (EN<->UR
+  parity unaffected). `npm run check:pipeline-gate`/`validate:content`/`check:no-answer-keys`/
+  `npm test` all re-verified green (28/28 unit tests) after marking the row `✅`.
+- [X] T029 [US5] Update the seeded suggestion's `status` to `published` via Spec 005's existing
   moderation UI/service once the fix ships; confirm the suggestion id is traceable from the
   tracker row through to the published change (SC-004)
+  **Done**: `accepted → published` transition applied via service role (same table/trigger the
+  admin moderation UI itself uses). Traceable end-to-end: suggestion `f0c89f9a-...e7552`
+  (`status: published`) → `specs/content/efmp-301/tasks.md`'s Revision Task row (`Suggestion`
+  column) → the actual prose change in `index.mdx` — zero broken links in the chain (SC-004).
 
 **Checkpoint**: All five user stories independently functional; the feedback loop from Spec 005
-closes end-to-end.
+closes end-to-end — proven live, not simulated.
 
 ---
 
@@ -273,13 +288,12 @@ freeze, and final Definition-of-Done verification (FR-017).
   **Result**: `npm test` 27/27 passing (6 files); `check:pipeline-gate` ✓ zero findings;
   `check:no-answer-keys` ✓ zero findings; `validate:content` (Spec 001's existing gate, also
   re-run for completeness) ✓ zero findings.
-- [ ] T034 Bump `specs/content/style-guide.md`'s front-matter `version` from `"0.1-draft"` to
+- [X] T034 Bump `specs/content/style-guide.md`'s front-matter `version` from `"0.1-draft"` to
   `"1.0"` — the frozen v1 marker for the style guide and `terminology.csv` as a pair (FR-017,
   research.md R8) — only after T033 passes
-  **Deliberately left unchecked**: T033 passed, but FR-017's Definition of Done bundles the v1
-  freeze together with "one test suggestion flowing G8 end-to-end" (Phase 7/US5), which is
-  deferred (see Phase 7 note above). Freezing v1 now would prematurely signal FR-017's DoD is met
-  when US5 intentionally isn't done yet. Bump this once US5 completes.
+  **Done**: T033 passed and Phase 7 (US5) is now complete — FR-017's full Definition of Done is
+  met. Bumped to `version: "1.0"`; re-ran the full validation suite after the bump to confirm
+  nothing depends on the draft value.
 - [X] T035 [P] Spot-check 10 randomly sampled Urdu terms used across already-published units
   against `specs/content/terminology.csv`; log the result (target: 100% match, SC-003)
   **Result (honest, not fabricated)**: only one unit is published so far (EFMP-301 Unit 1), which
@@ -302,12 +316,12 @@ freeze, and final Definition-of-Done verification (FR-017).
   **Verified**: `git status --porcelain --ignored` showed `!! specs/content/efmp-301/.staging/`
   (correctly ignored, not tracked); file removed after verification.
 
-**Checkpoint**: 35/37 tasks complete (T001–T025, T030–T033, T035–T037). The pipeline itself is
-fully proven live — `check:pipeline-gate`, `check:no-answer-keys`, `validate:content`, and the
-full test suite (27/27) all pass against the real repo, CI is wired, and README/worksheet-format
-proof are done. FR-017's full Definition of Done is **not yet** met: T026–T029 (Phase 7, US5's
-suggestion-loop proof) and T034 (v1 freeze, deliberately gated on Phase 7) remain, pending the
-user's decision to seed live Supabase data.
+**Checkpoint**: 37/37 tasks complete. FR-017's full Definition of Done is met — frozen style
+guide/terminology bank v1 (`style-guide.md` `version: "1.0"`), EFMP-301's approved content-spec
+and course-overview, EFMP-301 Unit 1 published bilingual through every stage, and one test
+suggestion (`f0c89f9a-36db-4224-96a0-0960e8ee7552`) proven flowing G8 end-to-end live —
+`check:pipeline-gate`, `check:no-answer-keys`, `validate:content`, and the full test suite all
+pass against the real repo, CI is wired, README/worksheet-format proof are done.
 
 ---
 

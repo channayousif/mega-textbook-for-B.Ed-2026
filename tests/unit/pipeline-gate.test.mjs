@@ -130,6 +130,22 @@ describe('check-pipeline-gate.mjs', () => {
       expect(code).toBe(1);
       expect(out).toMatch(/G3 en-review.*no reviewer initials/);
     });
+
+    it('re-blocks on an appended, in-progress Revision Task row even though an earlier done row for the same stage exists (FR-011)', () => {
+      ({ root } = makeFixture({ omitUr: true }));
+      writePipelineFixtures(root, {
+        trackerRows: [
+          '| Unit | Stage | Status | Reviewer | Suggestion |',
+          '|---|---|---|---|---|',
+          '| Unit 1 | G2 en-draft | ✅ | YM | |',
+          '| Unit 1 | G3 en-review | ✅ | YM | |',
+          '| Unit 1 | G2 en-draft | ▢ | | some-suggestion-uuid |',
+        ],
+      });
+      const { code, out } = runGate(root);
+      expect(code).toBe(1);
+      expect(out).toMatch(/G2 en-draft.*is not done/);
+    });
   });
 
   // ---- US3: UR tracker + terminology checks (T023, FR-016a UR portion / FR-016c) ----
