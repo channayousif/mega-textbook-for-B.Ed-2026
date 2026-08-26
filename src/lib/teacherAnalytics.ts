@@ -125,9 +125,12 @@ export async function fetchClassAnalytics(classId: string): Promise<Result<Class
     };
   });
 
+  // Parallelized (was a sequential per-student await) — at 30-student "representative scale"
+  // (T050's e2e perf check) the sequential version issued 30 serial round-trips before the
+  // page could render, alone exceeding the 5s SC-005 budget. Each student's computation is
+  // independent, so Promise.all is safe and preserves student order in the result.
   const nowIso = new Date().toISOString();
-  const atRiskStudents: AtRiskStudent[] = [];
-  for (const student of students) {
+  const atRiskResults = await Promise.all(students.map(async (student): Promise<AtRiskStudent | null> => {
     const { data: attempted } = await fetchAttemptedAssignmentIds(student.studentId, assignments);
     const missedCount = assignments.filter((a) => a.due_at < nowIso && !attempted?.has(a.id)).length;
 
@@ -138,11 +141,14 @@ export async function fetchClassAnalytics(classId: string): Promise<Result<Class
       && lastThree[2] < lastThree[1];
 
     if (missedCount >= 2) {
-      atRiskStudents.push({ studentId: student.studentId, fullName: student.fullName, reason: { kind: 'missed_deadlines', count: missedCount } });
-    } else if (isFallingTrend) {
-      atRiskStudents.push({ studentId: student.studentId, fullName: student.fullName, reason: { kind: 'falling_trend', scores: lastThree } });
+      return { studentId: student.studentId, fullName: student.fullName, reason: { kind: 'missed_deadlines' as const, count: missedCount } };
     }
-  }
+    if (isFallingTrend) {
+      return { studentId: student.studentId, fullName: student.fullName, reason: { kind: 'falling_trend' as const, scores: lastThree } };
+    }
+    return null;
+  }));
+  const atRiskStudents: AtRiskStudent[] = atRiskResults.filter((s): s is AtRiskStudent => s !== null);
 
   return { data: { distribution, trends, unitAverages, atRiskStudents }, error: null };
 }
