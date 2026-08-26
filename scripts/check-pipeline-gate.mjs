@@ -1,0 +1,209 @@
+#!/usr/bin/env node
+/**
+ * Pipeline governance gate for the content authoring pipeline (Spec 006, tasks.md T009/T012/
+ * T016/T021/T022).
+ *
+ * For every non-`coming_soon` unit under docs/, checks:
+ *   (a) tracker check — the unit's course `tasks.md` has done rows (with reviewer initials)
+ *       for `G2 en-draft`/`G3 en-review`, and for `G4 ur-translation`/`G5 ur-review` when the
+ *       unit's UR mirror is `translation_status: reviewed` (FR-016a, research.md R6).
+ *   (b) approval check — the unit's course `content-spec.md` has `status: approved` (FR-016b).
+ *   (c) terminology check — the unit's UR `index.mdx` `key_terms` conform to `terminology.csv`
+ *       (FR-016c, research.md R4).
+ *
+ * `G1`/`G6`/`G7` are intentionally not re-checked here (research.md R6 scope note). Answer-key
+ * leak scanning (FR-016d) stays in check-no-answer-keys.mjs (research.md R5).
+ *
+ * Pure Node + gray-matter, no new dependency (research.md R7). CONTENT_ROOT lets fixture tests
+ * point this at a temp dir, matching validate-content.mjs's convention.
+ */
+import { readdirSync, statSync, readFileSync, existsSync } from 'node:fs';
+import { join, relative, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import matter from 'gray-matter';
+
+const REPO = resolve(fileURLToPath(new URL('..', import.meta.url)));
+const ROOT = process.env.CONTENT_ROOT ? resolve(process.env.CONTENT_ROOT) : REPO;
+const DOCS_DIR = join(ROOT, 'docs');
+const UR_BASE = join(ROOT, 'i18n', 'ur', 'docusaurus-plugin-content-docs', 'current');
+const CONTENT_SPEC_DIR = join(ROOT, 'specs', 'content');
+
+const errors = [];
+const err = (unitLabel, msg) => errors.push(`${unitLabel}: ${msg}`);
+
+const dirs = (p) =>
+  existsSync(p) ? readdirSync(p).filter((n) => statSync(join(p, n)).isDirectory()) : [];
+
+// ---- terminology.csv parser (research.md R7 — ~15-line hand-rolled parser) ----
+function parseCsv(text) {
+  const lines = text.split(/\r?\n/).filter((l) => l.trim().length > 0);
+  const [header, ...rows] = lines;
+  if (!header) return [];
+  const cols = header.split(',').map((c) => c.trim());
+  return rows.map((line) => {
+    const cells = [];
+    let cur = '';
+    let inQuotes = false;
+    for (const c of line) {
+      if (c === '"') {
+        inQuotes = !inQuotes;
+      } else if (c === ',' && !inQuotes) {
+        cells.push(cur);
+        cur = '';
+      } else {
+        cur += c;
+      }
+    }
+    cells.push(cur);
+    const obj = {};
+    cols.forEach((col, i) => {
+      obj[col] = (cells[i] ?? '').trim();
+    });
+    return obj;
+  });
+}
+
+function loadTerminology() {
+  const file = join(CONTENT_SPEC_DIR, 'terminology.csv');
+  const map = new Map();
+  if (!existsSync(file)) return map;
+  for (const r of parseCsv(readFileSync(file, 'utf8'))) {
+    if (r.term_en) map.set(r.term_en, r.term_ur);
+  }
+  return map;
+}
+
+// ---- tasks.md tracker parser (data-model.md's `| Unit | Stage | Status | Reviewer | Suggestion |`) ----
+function parseTasksTable(text) {
+  const rows = [];
+  for (const line of text.split(/\r?\n/)) {
+    if (!line.trim().startsWith('|')) continue;
+    const cells = line.split('|').slice(1, -1).map((c) => c.trim());
+    if (cells.length < 4) continue;
+    const [unit, stage, status, reviewer, suggestion] = cells;
+    if (unit === 'Unit' || /^-+$/.test(unit)) continue; // header/separator rows
+    rows.push({ unit, stage, status, reviewer: reviewer || '', suggestion: suggestion || '' });
+  }
+  return rows;
+}
+
+function loadTracker(courseCode) {
+  const file = join(CONTENT_SPEC_DIR, courseCode.toLowerCase(), 'tasks.md');
+  if (!existsSync(file)) return null;
+  return parseTasksTable(readFileSync(file, 'utf8'));
+}
+
+function loadContentSpecStatus(courseCode) {
+  const file = join(CONTENT_SPEC_DIR, courseCode.toLowerCase(), 'content-spec.md');
+  if (!existsSync(file)) return { exists: false, status: null };
+  const { data } = matter(readFileSync(file, 'utf8'));
+  return { exists: true, status: data.status ?? null };
+}
+
+/** True when `rows` has a row for `unitLabel`/a stage starting with `stagePrefix`, done, with reviewer initials. */
+function stageDone(rows, unitLabel, stagePrefix) {
+  const row = rows.find((r) => r.unit === unitLabel && r.stage.startsWith(stagePrefix));
+  if (!row) return { ok: false, reason: `no '${stagePrefix}' row found for ${unitLabel}` };
+  if (row.status !== '✅') {
+    return { ok: false, reason: `'${stagePrefix}' row for ${unitLabel} is not done (status: '${row.status}')` };
+  }
+  if (!row.reviewer) {
+    return { ok: false, reason: `'${stagePrefix}' row for ${unitLabel} is done but has no reviewer initials` };
+  }
+  return { ok: true };
+}
+
+// ---- per-unit checks -----------------------------------------------------------
+function checkUnit({ unitDir, semester, courseFolder, courseCode, unitNo }) {
+  const enIndex = join(unitDir, 'index.mdx');
+  if (!existsSync(enIndex)) return; // structural issues are validate-content.mjs's concern
+  const enFm = matter(readFileSync(enIndex, 'utf8')).data;
+  if (enFm.coming_soon === true) return; // scaffolded, not yet authored — skip (research.md R6)
+
+  const unitLabel = `Unit ${unitNo}`;
+  const label = `${courseCode} ${unitLabel} (${relative(ROOT, unitDir)})`;
+
+  // (b) Approval check (FR-016b)
+  const spec = loadContentSpecStatus(courseCode);
+  if (!spec.exists) {
+    err(label, `no content-spec.md found at specs/content/${courseCode.toLowerCase()}/content-spec.md`);
+  } else if (spec.status !== 'approved') {
+    err(label, `course content-spec.md is not approved (status: '${spec.status ?? 'missing'}')`);
+  }
+
+  // (a) Tracker check (FR-016a) — EN stages always required for a drafted, non-coming_soon unit
+  const tracker = loadTracker(courseCode);
+  if (!tracker) {
+    err(label, `no tasks.md found at specs/content/${courseCode.toLowerCase()}/tasks.md`);
+    return;
+  }
+  for (const stagePrefix of ['G2 en-draft', 'G3 en-review']) {
+    const r = stageDone(tracker, unitLabel, stagePrefix);
+    if (!r.ok) err(label, r.reason);
+  }
+
+  // UR stages + terminology check only apply when the UR mirror exists and is reviewed
+  const urUnitDir = join(UR_BASE, `semester-${semester}`, courseFolder, `unit-${String(unitNo).padStart(2, '0')}`);
+  const urIndex = join(urUnitDir, 'index.mdx');
+  const urFm = existsSync(urIndex) ? matter(readFileSync(urIndex, 'utf8')).data : null;
+
+  if (urFm && urFm.translation_status === 'reviewed') {
+    for (const stagePrefix of ['G4 ur-translation', 'G5 ur-review']) {
+      const r = stageDone(tracker, unitLabel, stagePrefix);
+      if (!r.ok) err(label, r.reason);
+    }
+
+    // (c) Terminology conformance check (FR-016c, research.md R4)
+    const bank = loadTerminology();
+    const keyTerms = Array.isArray(urFm.key_terms) ? urFm.key_terms : [];
+    for (const { en, ur } of keyTerms) {
+      if (!bank.has(en)) {
+        err(label, `key term '${en}' is not in terminology.csv — add it to the bank`);
+      } else if (bank.get(en) !== ur) {
+        err(label, `key term '${en}' declares ur:'${ur}' but terminology.csv has '${bank.get(en)}'`);
+      }
+    }
+  }
+}
+
+// ---- walk docs/ (mirrors validate-content.mjs's walk) --------------------------
+function walk() {
+  if (!existsSync(DOCS_DIR)) {
+    console.error('check-pipeline-gate: docs/ not found — nothing to check.');
+    return;
+  }
+  for (const sem of dirs(DOCS_DIR)) {
+    const semMatch = /^semester-(\d+)$/.exec(sem);
+    if (!semMatch) continue;
+    const semester = Number(semMatch[1]);
+    const semDir = join(DOCS_DIR, sem);
+
+    for (const course of dirs(semDir)) {
+      const courseDir = join(semDir, course);
+      const courseCode = course.toUpperCase();
+
+      for (const unit of dirs(courseDir)) {
+        const unitMatch = /^unit-(\d+)$/.exec(unit);
+        if (!unitMatch) continue;
+        checkUnit({
+          unitDir: join(courseDir, unit),
+          semester,
+          courseFolder: course,
+          courseCode,
+          unitNo: Number(unitMatch[1]),
+        });
+      }
+    }
+  }
+}
+
+walk();
+
+if (errors.length) {
+  console.error(`\n✗ Pipeline gate failed with ${errors.length} finding(s):\n`);
+  for (const e of errors) console.error(`  - ${e}`);
+  console.error('');
+  process.exit(1);
+} else {
+  console.log('✓ Pipeline gate passed (content-spec approval, tracker completeness, terminology conformance).');
+}

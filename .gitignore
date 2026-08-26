@@ -39,3 +39,6 @@ Thumbs.db
 *.swp
 .vscode/
 .idea/
+
+# Spec 006: quiz/answer-key staging worksheets — never committed (FR-018)
+specs/content/**/.staging/

@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://bed-textbook/contracts/unit-frontmatter.schema.json",
   "title": "Unit front-matter",
-  "description": "Contract for front-matter of every unit file (index/activities/formative/summative/teacher-notes). Required fields gate the build (FR-009, SC-007); optional fields are shape-checked only when present. Answer-key fields are forbidden (FR-012).",
+  "description": "Contract for front-matter of every unit file (index/activities/formative/summative/teacher-notes). Required fields gate the build (FR-009, SC-007); optional fields are shape-checked only when present. Answer-key fields are forbidden (FR-012). Spec 006 adds the optional `key_terms` field (FR-016c, research.md R4).",
   "type": "object",
   "additionalProperties": true,
   "required": [
@@ -78,6 +78,19 @@
       "type": "string",
       "minLength": 1,
       "description": "Justification for any per-unit deviation from the default 60/40 split (FR-010). Required in practice whenever assessment_weighting is not {60,40}; shape-checked when present."
+    },
+    "key_terms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["en", "ur"],
+        "additionalProperties": false,
+        "properties": {
+          "en": { "type": "string", "minLength": 1 },
+          "ur": { "type": "string", "minLength": 1 }
+        }
+      },
+      "description": "Spec 006 FR-016c/research.md R4: declared on a unit's Urdu index.mdx only. Each `en` is looked up in specs/content/terminology.csv; `ur` must equal the bank's term_ur for that term, checked by scripts/check-pipeline-gate.mjs. An `en` absent from the bank is flagged, not silently accepted."
     }
   }
 }

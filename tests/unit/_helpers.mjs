@@ -29,7 +29,16 @@ function fm(extra = {}) {
   for (const [k, v] of Object.entries(base)) {
     if (Array.isArray(v)) {
       lines.push(`${k}:`);
-      for (const item of v) lines.push(`  - "${item}"`);
+      for (const item of v) {
+        if (item && typeof item === 'object') {
+          // Spec 006: array-of-objects, e.g. key_terms: [{en, ur}].
+          Object.entries(item).forEach(([sk, sv], i) => {
+            lines.push(`${i === 0 ? '  - ' : '    '}${sk}: ${JSON.stringify(sv)}`);
+          });
+        } else {
+          lines.push(`  - "${item}"`);
+        }
+      }
     } else if (v && typeof v === 'object') {
       lines.push(`${k}:`);
       for (const [sk, sv] of Object.entries(v)) lines.push(`  ${sk}: ${sv}`);
