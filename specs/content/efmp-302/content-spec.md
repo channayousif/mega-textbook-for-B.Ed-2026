@@ -1,6 +1,6 @@
 ---
 course_code: EFMP-302
-status: draft
+status: approved
 ---
 
 # EFMP-302 — Teaching Profession — Content Spec
