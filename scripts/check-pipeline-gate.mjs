@@ -100,9 +100,16 @@ function loadContentSpecStatus(courseCode) {
   return { exists: true, status: data.status ?? null };
 }
 
-/** True when `rows` has a row for `unitLabel`/a stage starting with `stagePrefix`, done, with reviewer initials. */
+/**
+ * True when `rows` has a row for `unitLabel`/a stage starting with `stagePrefix`, done, with
+ * reviewer initials. A Revision Task (FR-011) appends a *new* row for the same unit/stage rather
+ * than editing the original — so the *last* matching row (most recently added) is authoritative,
+ * not the first: an in-progress revision row must re-block the gate even though an earlier,
+ * already-done row for that same stage still exists above it.
+ */
 function stageDone(rows, unitLabel, stagePrefix) {
-  const row = rows.find((r) => r.unit === unitLabel && r.stage.startsWith(stagePrefix));
+  const matches = rows.filter((r) => r.unit === unitLabel && r.stage.startsWith(stagePrefix));
+  const row = matches[matches.length - 1];
   if (!row) return { ok: false, reason: `no '${stagePrefix}' row found for ${unitLabel}` };
   if (row.status !== '✅') {
     return { ok: false, reason: `'${stagePrefix}' row for ${unitLabel} is not done (status: '${row.status}')` };
