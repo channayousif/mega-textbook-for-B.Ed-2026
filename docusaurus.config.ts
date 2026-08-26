@@ -114,6 +114,9 @@ const config: Config = {
         // Spec 004, T007 — registers src/components/DashboardNavLink.tsx;
         // renders nothing unless signed in as a student.
         { type: 'custom-dashboardLink', position: 'right' },
+        // Spec 005, T003 — registers src/components/TeacherDashboardNavLink.tsx;
+        // renders nothing unless signed in as a teacher.
+        { type: 'custom-teacherDashboardLink', position: 'right' },
         // Spec 002, T030 — registers src/components/NavbarAuthWidget.tsx via
         // the swizzled src/theme/NavbarItem/ComponentTypes.tsx.
         { type: 'custom-authWidget', position: 'right' },

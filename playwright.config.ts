@@ -2,8 +2,17 @@ import { defineConfig, devices } from '@playwright/test';
 
 /**
  * E2E config for render/RTL/print/nav/search checks (T012, T022, T023, T027).
- * Requires a served build: `npm run build && npm run serve` (port 3000).
  * Run: `npm run test:e2e` (after `npx playwright install chromium`).
+ *
+ * webServer runs `docusaurus serve --build` (port 3000) — a full static
+ * build, then served — never `docusaurus start`. The dev server only ever
+ * serves ONE locale per process (Docusaurus docs: "you cannot run
+ * Docusaurus sites in multiple locales simultaneously" in dev mode), so
+ * every `/ur/...` RTL assertion would silently see English content
+ * (`dir="ltr"`) instead of failing loudly — reproduced by three RTL specs
+ * (classes-rtl, dashboard-rtl, teacher-dashboard-rtl) all failing
+ * identically against the dev server (005-teacher-dashboard investigation),
+ * then all passing once switched to a served build.
  */
 export default defineConfig({
   testDir: './tests/e2e',
@@ -24,11 +33,15 @@ export default defineConfig({
     screenshot: 'only-on-failure',
   },
   webServer: {
-    // Prefer a real static build in CI (`npm run serve`); locally the dev server works too
-    // and avoids the SSG step. Override with PW_WEBSERVER if needed.
-    command: process.env.PW_WEBSERVER || 'npm run start -- --port 3000 --no-open',
+    // Always a full static build+serve, never `docusaurus start` — the dev
+    // server only ever serves one locale per process, which makes every
+    // `/ur/...` RTL assertion silently see English content instead of
+    // failing loudly (see the file-level comment above). `serve --build`
+    // builds then serves in one step, matching Docusaurus's documented
+    // self-hosting pattern. Override with PW_WEBSERVER if needed.
+    command: process.env.PW_WEBSERVER || 'npm run serve -- --build --port 3000 --no-open',
     url: 'http://localhost:3000',
     reuseExistingServer: !process.env.CI,
-    timeout: 180_000,
+    timeout: 300_000,
   },
 });
