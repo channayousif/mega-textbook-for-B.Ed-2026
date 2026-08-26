@@ -21,29 +21,29 @@ reviewer initials). One row per unit per stage (`G1`–`G7`; `G0` course-intake 
 | Unit 2 | G6 assets | ▢ | | |
 | Unit 2 | G7 publish | ▢ | | |
 | Unit 3 | G1 unit-spec | ✅ | YM | |
-| Unit 3 | G2 en-draft | ▢ | | |
-| Unit 3 | G3 en-review | ▢ | | |
+| Unit 3 | G2 en-draft | ✅ | YM | |
+| Unit 3 | G3 en-review | ✅ | YM | |
 | Unit 3 | G4 ur-translation | ▢ | | |
 | Unit 3 | G5 ur-review | ▢ | | |
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
 | Unit 4 | G1 unit-spec | ✅ | YM | |
-| Unit 4 | G2 en-draft | ▢ | | |
-| Unit 4 | G3 en-review | ▢ | | |
+| Unit 4 | G2 en-draft | ✅ | YM | |
+| Unit 4 | G3 en-review | ✅ | YM | |
 | Unit 4 | G4 ur-translation | ▢ | | |
 | Unit 4 | G5 ur-review | ▢ | | |
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
 | Unit 5 | G1 unit-spec | ✅ | YM | |
-| Unit 5 | G2 en-draft | ▢ | | |
-| Unit 5 | G3 en-review | ▢ | | |
+| Unit 5 | G2 en-draft | ✅ | YM | |
+| Unit 5 | G3 en-review | ✅ | YM | |
 | Unit 5 | G4 ur-translation | ▢ | | |
 | Unit 5 | G5 ur-review | ▢ | | |
 | Unit 5 | G6 assets | ▢ | | |
 | Unit 5 | G7 publish | ▢ | | |
 | Unit 6 | G1 unit-spec | ✅ | YM | |
-| Unit 6 | G2 en-draft | ▢ | | |
-| Unit 6 | G3 en-review | ▢ | | |
+| Unit 6 | G2 en-draft | ✅ | YM | |
+| Unit 6 | G3 en-review | ✅ | YM | |
 | Unit 6 | G4 ur-translation | ▢ | | |
 | Unit 6 | G5 ur-review | ▢ | | |
 | Unit 6 | G6 assets | ▢ | | |
