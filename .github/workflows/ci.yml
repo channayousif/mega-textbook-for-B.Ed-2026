@@ -20,6 +20,11 @@ jobs:
       - name: Validate content
         run: npm run validate:content
 
+      # Pipeline gate: tracker completeness, content-spec approval, terminology conformance
+      # (Spec 006 FR-016a/b/c, SC-007) — runs after content-shape validation, before build.
+      - name: Pipeline gate (tracker, content-spec, terminology)
+        run: npm run check:pipeline-gate
+
       # No answer keys / private marking material in public content (FR-012, SC-010, T028)
       - name: Answer-key safety check
         run: npm run check:no-answer-keys

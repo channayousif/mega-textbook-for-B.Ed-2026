@@ -10,9 +10,11 @@ import { join, resolve, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = resolve(fileURLToPath(new URL('..', import.meta.url)));
-const TARGETS = ['docs', 'i18n', 'build'].map((d) => join(ROOT, d)).filter(existsSync);
+const TARGETS = ['docs', 'i18n', 'build', 'specs/content'].map((d) => join(ROOT, d)).filter(existsSync);
 
 // Forbidden front-matter keys (schema also rejects these) + answer-key content markers.
+// Spec 006 FR-016d / research.md R5: `correct answer` and the `specs/content` target added so an
+// accidentally force-added (despite .gitignore) staging worksheet is still caught.
 const PATTERNS = [
   /^\s*answer_key\s*:/im,
   /^\s*answers\s*:/im,
@@ -20,13 +22,19 @@ const PATTERNS = [
   /^\s*rubric_answers\s*:/im,
   /\banswer\s*key\b/i,
   /\bmarking\s*scheme\b/i,
+  /\bcorrect\s*answer\b/i,
 ];
 const SCAN_EXT = new Set(['.md', '.mdx', '.html']);
+// Spec 006: style-guide.md is the documented, human-reviewable home for these exact marker
+// phrases (research.md R5's "kept here as the documented source") — it will always legitimately
+// contain them, so it is excluded rather than perpetually flagged as a false positive.
+const EXCLUDE = new Set([join(ROOT, 'specs', 'content', 'style-guide.md')]);
 const hits = [];
 
 function walk(dir) {
   for (const name of readdirSync(dir)) {
     const p = join(dir, name);
+    if (EXCLUDE.has(p)) continue;
     const st = statSync(p);
     if (st.isDirectory()) walk(p);
     else if (SCAN_EXT.has(extname(p))) {
