@@ -5,6 +5,17 @@ status: approved
 
 # EFMP-301 — Educational Psychology — Content Spec
 
+> **Pending: Unit 1 v2.0 depth-standard re-proof.** Constitution Art. VI.1 (v2.5.0, "Standard
+> versioning") makes this the *immediate-next content task* after Spec 007's proving unit
+> (EFMP-302 Unit 1). It is not started here — Spec 007 only queues it. When scheduled, on its
+> own branch: add a `### Sub-topic checklist` + `**Depth budget**` to the Unit 1 subsection
+> below, re-draft the five English files to the `## Unit depth standard`
+> (`specs/content/style-guide.md` v2.0), emit `specs/content/efmp-301/coverage/unit-01.md` +
+> `specs/content/efmp-301/sources/unit-01.md`, and create the matching `G1`–`G7` rows in
+> `specs/content/efmp-301/tasks.md` at that point (not before — a `▢` row here would flip the
+> already-published Unit 1 to "not done" in `check-pipeline-gate.mjs`). Until then, EFMP-302
+> Unit 1 is the working depth exemplar.
+
 Golden course (Constitution Art. VI.1, research.md R10). This content-spec is authored
 **retroactively** against EFMP-301 Unit 1, which was already drafted, reviewed, and published
 bilingual by Spec 001's earlier template work — no prose below is new; this document records the
