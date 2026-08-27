@@ -4,13 +4,22 @@ Legend (FR-005's 3-value status enum): `▢` not-started · `▣` in-progress ·
 reviewer initials). One row per unit per stage (`G1`–`G7`; `G0` course-intake is tracked via
 `content-spec.md`'s own `status` field, not a row here — research.md R2).
 
+**Unit 1 — Spec 007 v2.0 depth-standard re-draft (2026-08-27):** the English content was
+re-authored against the `## Unit depth standard` (style-guide v2.0). G1 gained the enumerated
+`### Sub-topic checklist` in `content-spec.md` and was re-affirmed at the Content gate;
+G2/G3 re-cleared the Content gate (curriculum owner, 2026-08-27) against the re-drafted five
+English files. G4/G5 are re-open because the English re-draft invalidated the reviewed Urdu
+mirror (`translation_status: draft`, downstream re-translation — Spec 007 FR-016/FR-017).
+G6/G7 stand (assets and the published route are unchanged; the `ur` route falls back to EN
+behind the Spec 001 FR-003 banner until G5 re-clears).
+
 | Unit | Stage | Status | Reviewer | Suggestion |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ✅ | YM | |
 | Unit 1 | G2 en-draft | ✅ | YM | |
 | Unit 1 | G3 en-review | ✅ | YM | |
-| Unit 1 | G4 ur-translation | ✅ | YM | |
-| Unit 1 | G5 ur-review | ✅ | YM | |
+| Unit 1 | G4 ur-translation | ▢ | | |
+| Unit 1 | G5 ur-review | ▢ | | |
 | Unit 1 | G6 assets | ✅ | YM | |
 | Unit 1 | G7 publish | ✅ | YM | |
 | Unit 2 | G1 unit-spec | ✅ | YM | |
