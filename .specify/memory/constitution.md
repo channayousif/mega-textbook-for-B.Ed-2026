@@ -1,4 +1,46 @@
 <!--
+SYNC IMPACT REPORT (v2.5.0)
+===========================
+Version change: 2.4.0 → 2.5.0
+Bump rationale: MINOR — Article VI.1 gains a new, materially expanded requirement ("Standard
+  versioning"): when the content quality standard is versioned up (the style-guide /
+  terminology-bank freeze marker, Spec 006 FR-007), the golden unit MUST be re-proven at the
+  new version as the immediate next content task after the proving unit, and a "working depth
+  exemplar" fills the gap until it is. No existing principle is removed or redefined, and no
+  approved spec is invalidated — Feature 007's approach (prove on EFMP-302 Unit 1, re-proof
+  EFMP-301 Unit 1 as the tracked next task) is exactly what the new wording permits. Source:
+  owner instruction, this session (Feature 007 planning surfaced the tension).
+
+Modified: Article VI.1 — the golden unit (EFMP-301 Unit 1) is now named explicitly as "the
+  canonical exemplar for unit structure, CLO/SLO traceability, and bilingual parity", and a
+  "Standard versioning" paragraph is appended covering proving unit vs golden unit, the
+  re-proof obligation, and the working-depth-exemplar fallback. Items VI.2 and VI.3 are
+  unchanged and NOT renumbered (they are cross-referenced across specs/ and history/adr/).
+
+Downstream artifacts reviewed this amendment (2026-08-27):
+  ✅ .specify/templates/plan-template.md — "Constitution Check" derives generically, no
+     hardcoded article numbers (confirmed at v2.4.0, unchanged); no edit needed.
+  ✅ .specify/templates/spec-template.md — no hardcoded article references; no edit needed.
+  ✅ .specify/templates/tasks-template.md — no hardcoded article references; no edit needed.
+  ✅ specs/007-content-depth-standard/plan.md — Constitution Check VI.1 row + note + risks
+     updated in the same branch to cite the amended VI.1 (re-proof of EFMP-301 Unit 1 is now
+     an explicit constitutional obligation, tracked as the immediate next content task, not a
+     mere "governance smell").
+  ✅ specs/007-content-depth-standard/spec.md — Dependencies line referencing "Art. VI.1
+     (golden-unit-first)" reworded to "Art. VI.1 (golden-unit exemplar + standard-versioning
+     re-proof)".
+  ℹ history/adr/0010 — references "Art. VI.1's golden-unit-first discipline"; still accurate,
+     left as-is (an ADR records the decision as-of its date).
+
+Follow-up TODOs:
+  - Feature 007 execution MUST include (or immediately follow with) a tracked task to bring
+    EFMP-301 Unit 1 to style-guide v2.0 per the amended VI.1.
+  - Prior TODOs carried forward from v2.4.0 (author README.md; decide which spec owns the
+    Student/Teacher Guide initial authoring; v2.3.0 carried items) — untouched by this
+    amendment.
+
+--- prior report (v2.4.0) retained below ---
+
 SYNC IMPACT REPORT (v2.4.0)
 ===========================
 Version change: 2.3.0 → 2.4.0
@@ -318,7 +360,18 @@ authors' preference; traceability makes accreditation review auditable.
    scaffolded** (folders + metadata from the Scheme of Study and each guide's unit list).
    **Content-creation priority is Semesters 1–4** for the new 2026 scheme (Sem 1 → 2 → 3 → 4),
    then Semesters 5–8. The **golden unit** that sets the quality bar is EFMP-301
-   (Educational Psychology), Unit 1.
+   (Educational Psychology), Unit 1 — the canonical exemplar for unit structure, CLO/SLO
+   traceability, and bilingual parity.
+
+   **Standard versioning.** The content quality standard is versioned by the
+   `specs/content/style-guide.md` + terminology-bank freeze marker (Spec 006 FR-007). When
+   that standard is bumped to a new version, the raised bar is first demonstrated on one
+   **proving unit** (which need NOT be the golden unit). The golden unit MUST then be brought
+   to the new standard version as the **immediate next content task after the proving unit**,
+   recorded as a row in its course's pipeline task tracker; the version bump itself is not
+   blocked on it. Until the golden unit is re-proven at the current standard version, the most
+   recently accepted unit authored at that version is the **working depth exemplar** in its
+   place.
 2. Features not in an approved spec are out of scope. A parking lot (`specs/backlog.md`)
    captures ideas without blocking delivery.
 3. Real-time features (live chat, video, notifications beyond email) are explicitly
@@ -404,4 +457,4 @@ teachers specifically, while keeping the README technical and separate.
 
 ---
 
-**Version**: 2.4.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-07-20
+**Version**: 2.5.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-08-27
