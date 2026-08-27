@@ -25,6 +25,13 @@ jobs:
       - name: Pipeline gate (tracker, content-spec, terminology)
         run: npm run check:pipeline-gate
 
+      # Depth gate: for every unit whose content-spec subsection carries a `### Sub-topic
+      # checklist`, checks concept coverage, the required index.mdx blocks, the formative
+      # floor, the reading-minutes band, and coverage↔sources consistency (Spec 007 FR-012,
+      # SC-004/SC-007). Units without a checklist are grandfathered/skipped.
+      - name: Depth gate (concept coverage, required blocks, formative floor)
+        run: npm run check:depth-gate
+
       # No answer keys / private marking material in public content (FR-012, SC-010, T028)
       - name: Answer-key safety check
         run: npm run check:no-answer-keys

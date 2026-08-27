@@ -18,6 +18,7 @@
     "validate:content": "node scripts/validate-content.mjs",
     "check:no-answer-keys": "node scripts/check-no-answer-keys.mjs",
     "check:pipeline-gate": "node scripts/check-pipeline-gate.mjs",
+    "check:depth-gate": "node scripts/check-unit-depth.mjs",
     "check:add-course": "node scripts/check-add-course.mjs",
     "scaffold": "node scripts/scaffold-catalog.mjs",
     "test": "vitest run",
