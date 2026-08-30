@@ -1,0 +1,14 @@
+# Figure manifest — EFMP-302 Unit 1 (Understanding Teaching)
+
+Per `specs/008-rich-unit-pedagogy/contracts/figures-manifest.md`. One row per `{/* FIGURE[…] */}`
+marker in the unit's `topic-*.mdx` files. `Topic` is the `topic_label` of the file the marker
+sits in. `Status` is `prompt-only` for the whole of Spec 008 — nothing is generated or placed
+yet. The marker-ID set and this table's ID set must match both ways
+(`scripts/check-figures.mjs`).
+
+| Figure ID | Topic | Prompt | Alt text | Status |
+|---|---|---|---|---|
+| fig-U1-1 | 1.1 | clean flat vector comparison table, landscape, three labelled columns (government-school teacher, shopkeeper, doctor) by four rows (specialised knowledge, extended training and a qualification, a code of conduct, accountability to a professional community), each cell a tick or a cross, high contrast, no colour-only meaning | Table comparing a teacher, a shopkeeper and a doctor against the four features of a profession — the teacher and the doctor meet all four, the shopkeeper meets none. | prompt-only |
+| fig-U1-2 | 1.2 | two-panel split illustration, landscape; left panel labelled "industrial" shows rows of silent pupils copying from the board while the teacher reads from a fixed script; right panel labelled "inquiry" shows the same pupils in small groups with talk bubbles and the teacher kneeling beside one group with a notebook; clean flat vector, labelled, high contrast, no colour-only meaning | Two classroom scenes side by side — on the left, pupils in rows copying silently; on the right, the same pupils working in groups while the teacher listens and takes notes. | prompt-only |
+| fig-U1-3 | 1.3 | clean flat vector diagram, portrait; an upward triangle with the three vertices labelled "accountability", "autonomy", "collegiality" and a horizontal base bar beneath the whole triangle labelled "specialised knowledge and training"; a small caption "held in balance"; high contrast, labelled, no colour-only meaning | A triangle whose three corners are accountability, autonomy and collegiality, resting on a base labelled specialised knowledge and training — the caption reads "held in balance". | prompt-only |
+| fig-U1-4 | 1.4 | clean flat vector diagram, landscape; a central circle labelled "who am I becoming as a teacher?" with arrows pointing into it from six labelled boxes — "my own schooling", "family and community", "national policy and standards", "beliefs about how learning happens", "the pupils in front of me", "mentors and colleagues"; high contrast, labelled, no colour-only meaning | A central question, "who am I becoming as a teacher?", with arrows into it from six influences: my own schooling, family and community, national policy and standards, beliefs about learning, the pupils in front of me, and mentors and colleagues. | prompt-only |

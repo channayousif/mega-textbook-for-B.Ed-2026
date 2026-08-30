@@ -60,10 +60,18 @@ const MESSAGES = {
  * summative.mdx from index.mdx/teacher-notes.mdx (all five share the same
  * course_code/unit_no shape) — derived instead from the page's own path,
  * the same "read from the URL" approach FR-003's slug capture already uses.
+ *
+ * Spec 008 per-topic pages (`topic-NN`, `unit-assessment`, `course-review`) are
+ * whole lessons / assessments, not one of the three FR-004 activity kinds — they
+ * carry no per-activity feedback control, so this returns null for them (explicit
+ * for clarity; the fallthrough already would). "Suggest improvement" and
+ * "Mark as studied" still work — they read course_code [+ unit_no], present on all
+ * the new files.
  */
 function deriveSourceKindFromPath(pathname: string): TeachingLogSourceKind | null {
   const trimmed = pathname.replace(/\/+$/, '');
   const last = trimmed.split('/').pop() ?? '';
+  if (/^topic-\d+$/.test(last) || last === 'unit-assessment' || last === 'course-review') return null;
   if (last === 'activities') return 'activity';
   if (last === 'formative') return 'formative';
   if (last === 'summative') return 'summative';

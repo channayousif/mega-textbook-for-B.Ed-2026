@@ -39,8 +39,8 @@ marker per `topic-*.mdx` (FR-014).
 |---|---|
 | `Figure ID` | a marker `<id>`; matches `^fig-U\d+-\d+$`; unique in the table. |
 | `Topic` | the `topic_label` of the `topic-*.mdx` file the marker sits in (e.g. `1.2`). |
-| `Prompt` | equals the marker's `<prompt>` (whitespace-normalised). |
-| `Alt text` | equals the marker's `<alt>` (whitespace-normalised). |
+| `Prompt` | equals the marker's `<prompt>` (whitespace-normalised). *Authoring rule; the `check-figures.mjs` gate does not byte-compare these — see the gate table below. The human Content gate checks they match.* |
+| `Alt text` | equals the marker's `<alt>` (whitespace-normalised). *Same: authoring rule, not automated.* |
 | `Status` | one of `prompt-only` \| `generated` \| `placed`. **All rows are `prompt-only` in this feature** — nothing is generated or placed yet. |
 
 Parser tolerance: leading/trailing `|` required, cells trimmed, `|---|` separator row skipped, a row
