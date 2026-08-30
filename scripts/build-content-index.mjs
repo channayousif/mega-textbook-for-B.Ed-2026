@@ -12,10 +12,12 @@
  * build output — a page under `src/pages/app/*` can then `fetch(
  * '/content-index.json')` at runtime with no Docusaurus plugin API involved.
  *
- * Only `activities.mdx`/`formative.mdx`/`summative.mdx` are indexed — those
- * are the three unit-item kinds FR-004 lets a teacher pick an assignment
- * from. `index.mdx` (unit overview) and `teacher-notes.mdx` (never
- * student-facing) are deliberately excluded.
+ * LEGACY units contribute `activities.mdx`/`formative.mdx`/`summative.mdx` as the
+ * three FR-004 unit-item kinds. `index.mdx` and `teacher-notes.mdx` are excluded.
+ *
+ * Spec 008 per-topic units (T023) instead contribute each `topic-NN.mdx`
+ * (`kind: 'topic'`) and `unit-assessment.mdx` (`kind: 'assessment'`); at course
+ * level, an optional `course-review.mdx` is indexed (`kind: 'course-review'`).
  */
 import { readFileSync, readdirSync, existsSync, statSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join, resolve } from 'node:path';
@@ -26,13 +28,29 @@ const REPO = resolve(fileURLToPath(new URL('..', import.meta.url)));
 const DOCS_DIR = join(REPO, 'docs');
 const OUT_FILE = join(REPO, 'static', 'content-index.json');
 
-/** kind (per AssignmentSourceKind) → source filename stem. */
+/** kind (per AssignmentSourceKind) → source filename stem (legacy layout). */
 const KIND_FILES = { activity: 'activities.mdx', formative: 'formative.mdx', summative: 'summative.mdx' };
 
 const dirs = (p) =>
   existsSync(p) ? readdirSync(p).filter((n) => statSync(join(p, n)).isDirectory()) : [];
 
+const topicFilesIn = (p) =>
+  existsSync(p) ? readdirSync(p).filter((n) => /^topic-\d{2}\.mdx$/.test(n)).sort() : [];
+
 const records = [];
+
+function push(semester, semesterDir, courseDir, unitDir, filename, kind, filePath) {
+  const { data } = matter(readFileSync(filePath, 'utf8'));
+  records.push({
+    semester,
+    course_code: data.course_code,
+    unit_no: data.unit_no,
+    kind,
+    title: data.title,
+    coming_soon: Boolean(data.coming_soon),
+    permalink: `/${semesterDir}/${courseDir}/${unitDir}/${filename.replace('.mdx', '')}`,
+  });
+}
 
 for (const semesterDir of dirs(DOCS_DIR)) {
   const semesterMatch = /^semester-(\d+)$/.exec(semesterDir);
@@ -43,25 +61,44 @@ for (const semesterDir of dirs(DOCS_DIR)) {
   for (const courseDir of dirs(semesterPath)) {
     const coursePath = join(semesterPath, courseDir);
 
+    // course-level: optional course-review.mdx (Spec 008)
+    const crPath = join(coursePath, 'course-review.mdx');
+    if (existsSync(crPath)) {
+      const { data } = matter(readFileSync(crPath, 'utf8'));
+      records.push({
+        semester,
+        course_code: data.course_code,
+        unit_no: null,
+        kind: 'course-review',
+        title: data.title,
+        coming_soon: Boolean(data.coming_soon),
+        permalink: `/${semesterDir}/${courseDir}/course-review`,
+      });
+    }
+
     for (const unitDir of dirs(coursePath)) {
       const unitMatch = /^unit-(\d+)$/.exec(unitDir);
       if (!unitMatch) continue;
       const unitPath = join(coursePath, unitDir);
+      const topicFiles = topicFilesIn(unitPath);
 
+      if (topicFiles.length > 0) {
+        // Spec 008 per-topic layout
+        for (const tf of topicFiles) {
+          push(semester, semesterDir, courseDir, unitDir, tf, 'topic', join(unitPath, tf));
+        }
+        const uaPath = join(unitPath, 'unit-assessment.mdx');
+        if (existsSync(uaPath)) {
+          push(semester, semesterDir, courseDir, unitDir, 'unit-assessment.mdx', 'assessment', uaPath);
+        }
+        continue;
+      }
+
+      // legacy layout
       for (const [kind, filename] of Object.entries(KIND_FILES)) {
         const filePath = join(unitPath, filename);
         if (!existsSync(filePath)) continue;
-
-        const { data } = matter(readFileSync(filePath, 'utf8'));
-        records.push({
-          semester,
-          course_code: data.course_code,
-          unit_no: data.unit_no,
-          kind,
-          title: data.title,
-          coming_soon: Boolean(data.coming_soon),
-          permalink: `/${semesterDir}/${courseDir}/${unitDir}/${filename.replace('.mdx', '')}`,
-        });
+        push(semester, semesterDir, courseDir, unitDir, filename, kind, filePath);
       }
     }
   }

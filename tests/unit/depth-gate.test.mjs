@@ -295,3 +295,344 @@ describe('check-unit-depth.mjs', () => {
     expect(out).toMatch(/depth budget/i);
   });
 });
+
+// ---------------------------------------------------------------------------
+// Spec 008 — new-shape (per-topic) layout (T013 red-first suite, T020 impl)
+// ---------------------------------------------------------------------------
+
+const CYCLE_HEADINGS = [
+  '## A real classroom situation',
+  '## Explanation',
+  '## Activity: Sorting task',
+  '## Check your understanding',
+  '## Summary',
+  '## Self-assessment checklist',
+  '## Try this at your practicum school',
+  '## Summative task',
+  '## Further reading',
+];
+
+function cycleBodyFor(headings, { cyuItems = 3, sacItems = 3, furtherReading = true } = {}) {
+  const parts = [`# Topic`, ''];
+  for (const h of headings) {
+    parts.push(h, '');
+    if (h === '## Check your understanding') {
+      for (let i = 1; i <= cyuItems; i++) parts.push(`${i}. Question ${i}. *(Apply)*`);
+      parts.push('');
+    } else if (h === '## Self-assessment checklist') {
+      for (let i = 1; i <= sacItems; i++) parts.push(`- [ ] I can do thing ${i}.`);
+      parts.push('');
+    } else if (h === '## Summative task') {
+      parts.push('Write 250 words analysing a described case. **Mini-rubric**: identification / evidence / judgement.', '');
+    } else if (h === '## Further reading') {
+      if (furtherReading) parts.push('- Carr, D. (2000). *Professionalism and ethics in teaching*. Routledge.', '');
+    } else {
+      parts.push('Some prose.', '');
+    }
+  }
+  return parts.join('\n') + '\n';
+}
+
+function numbered(n, tag = '(Remember)') {
+  return Array.from({ length: n }, (_, i) => `${i + 1}. Item ${i + 1}. *${tag}*`).join('\n');
+}
+
+const DEFAULT_UA_BODY = ({ mcq = 10, rrq = 10, erq = 5, trailingSection = false, answerNumbered = false } = {}) => `# Unit 1 — assessment and review
+
+## Unit summary
+
+A recap of the unit's enduring understandings.
+
+## Summative assessment
+
+### Multiple-choice questions (MCQs)
+
+${numbered(mcq, '(Remember)')}
+
+### Restricted-response questions (RRQs)
+
+${numbered(rrq, '(Understand)')}
+
+### Extended-response questions (ERQs)
+
+${numbered(erq, '(Analyze)')}
+
+## Answers and marking guidance
+
+${answerNumbered ? numbered(6, '(key)') : '- Prose guidance only.'}
+${trailingSection ? '\n## Extra notes\n\ntext\n' : ''}`;
+
+const DEFAULT_TOPIC_INDEX_BODY = `# Understanding Teaching
+
+## Unit learning outcomes
+
+- outcome
+
+## Prerequisite knowledge
+
+none
+
+## In this unit
+
+1. [Topic 1](./topic-01)
+2. [Topic 2](./topic-02)
+
+## How to use this unit
+
+Read each topic in order.
+`;
+
+const TOPIC_CHECKLIST = `### Sub-topic checklist
+
+| ID | Guide ref | Topic | Sub-topic |
+|---|---|---|---|
+| U1-01 | 1.1 | 1.1 | Concept A |
+| U1-02 | 1.1 | 1.1 | Concept B |
+| U1-03 | 1.2 | 1.2 | Concept C |
+| U1-04 | 1.2 | 1.2 | Concept D |
+`;
+
+const TOPIC_LIST = `### Topic list
+
+| Topic | Title | Sub-topic IDs | Reading-min | Figures |
+|---|---|---|---|---|
+| 1.1 | First topic | U1-01, U1-02 | 20–30 | fig-U1-1 |
+| 1.2 | Second topic | U1-03, U1-04 | 20–30 | fig-U1-2 |
+`;
+
+const TOPIC_DEPTH_BUDGET = '**Depth budget**: 4 sub-topics; 2 topics; 60–110 reading-min';
+
+const TOPIC_COVERAGE = `| Sub-topic ID | File | Section | Source |
+|---|---|---|---|
+| U1-01 | topic-01.mdx | Concept A | carr2000 |
+| U1-02 | topic-01.mdx | Concept B | carr2000 |
+| U1-03 | topic-02.mdx | Concept C | carr2000 |
+| U1-04 | topic-02.mdx | Concept D | carr2000 |
+`;
+
+const TOPIC_SOURCES = `| Key | Citation | URL/DOI | Supports | Kind |
+|---|---|---|---|---|
+| carr2000 | Carr, D. (2000). Professionalism and ethics in teaching. Routledge. | (print) | U1-01..U1-04 | guide-required |
+`;
+
+const TOPIC_MINUTES = { 'index.mdx': 10, 'topic-01.mdx': 30, 'topic-02.mdx': 30, 'unit-assessment.mdx': 20 }; // sum 90
+
+/**
+ * opts:
+ *   topicFiles       - array of topic filenames to write (default topic-01, topic-02)
+ *   topic1Headings   - override the nine-heading vector for topic-01
+ *   topic1Opts       - {cyuItems, sacItems, furtherReading} for topic-01
+ *   omitUnitAssessment - skip unit-assessment.mdx
+ *   uaOpts           - options passed to DEFAULT_UA_BODY
+ *   checklist / topicList / depthBudget / coverageTable / sourcesTable / minutes - overrides
+ */
+function makeTopicFixture(opts = {}) {
+  const root = mkdtempSync(join(tmpdir(), 'bed-depth-topic-'));
+  const unitDir = join(root, 'docs', 'semester-1', 'efmp-302', 'unit-01');
+  mkdirSync(unitDir, { recursive: true });
+  const minutes = opts.minutes || TOPIC_MINUTES;
+
+  writeFileSync(join(unitDir, 'index.mdx'), fm('index.mdx', minutes['index.mdx'] ?? 10) + (opts.indexBody ?? DEFAULT_TOPIC_INDEX_BODY));
+
+  const topicFiles = opts.topicFiles ?? ['topic-01.mdx', 'topic-02.mdx'];
+  for (const tf of topicFiles) {
+    const n = Number(/^topic-(\d{2})\.mdx$/.exec(tf)[1]);
+    const headings = tf === 'topic-01.mdx' && opts.topic1Headings ? opts.topic1Headings : CYCLE_HEADINGS;
+    const bodyOpts = tf === 'topic-01.mdx' ? (opts.topic1Opts ?? {}) : {};
+    const label = n === 1 ? '1.1' : n === 2 ? '1.2' : `1.${n}`;
+    writeFileSync(
+      join(unitDir, tf),
+      fm(tf, minutes[tf] ?? 30, `topic_no: ${n}\ntopic_label: "${label}"`) + cycleBodyFor(headings, bodyOpts),
+    );
+  }
+
+  if (!opts.omitUnitAssessment) {
+    writeFileSync(
+      join(unitDir, 'unit-assessment.mdx'),
+      fm('unit-assessment.mdx', minutes['unit-assessment.mdx'] ?? 20) + DEFAULT_UA_BODY(opts.uaOpts || {}),
+    );
+  }
+
+  const courseDir = join(root, 'specs', 'content', 'efmp-302');
+  mkdirSync(courseDir, { recursive: true });
+  const checklist = opts.checklist ?? TOPIC_CHECKLIST;
+  const topicList = opts.topicList === '' ? '' : (opts.topicList ?? TOPIC_LIST);
+  const budget = opts.depthBudget === '' ? '' : (opts.depthBudget ?? TOPIC_DEPTH_BUDGET);
+  writeFileSync(
+    join(courseDir, 'content-spec.md'),
+    `---\ncourse_code: EFMP-302\nstatus: approved\n---\n\n## Course-wide items\n\ntext\n\n## Unit 1: Understanding Teaching\n\nintro\n\n${checklist}\n\n${topicList}\n\n${budget}\n\n## Unit 2: Next\n\ntext\n`,
+  );
+
+  if (opts.coverageTable !== null) {
+    mkdirSync(join(courseDir, 'coverage'), { recursive: true });
+    writeFileSync(join(courseDir, 'coverage', 'unit-01.md'), `# Coverage — Unit 1\n\n${opts.coverageTable ?? TOPIC_COVERAGE}`);
+  }
+  if (opts.sourcesTable !== null) {
+    mkdirSync(join(courseDir, 'sources'), { recursive: true });
+    writeFileSync(join(courseDir, 'sources', 'unit-01.md'), `# Sources — Unit 1\n\n${opts.sourcesTable ?? TOPIC_SOURCES}`);
+  }
+  return root;
+}
+
+describe('check-unit-depth.mjs — new-shape (per-topic) layout', () => {
+  let root;
+  afterEach(() => {
+    if (root) rmSync(root, { recursive: true, force: true });
+    root = undefined;
+  });
+
+  it('passes the happy new-shape path', () => {
+    root = makeTopicFixture();
+    const { code, out } = runGate(root);
+    expect(code).toBe(0);
+    expect(out).toMatch(/passed/i);
+  });
+
+  it('fails and names the topic + heading for a missing cycle heading', () => {
+    root = makeTopicFixture({ topic1Headings: CYCLE_HEADINGS.filter((h) => h !== '## Summary') });
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/topic-01\.mdx/);
+    expect(out).toMatch(/Summary/);
+  });
+
+  it('fails and names the topic for an out-of-order cycle heading', () => {
+    const swapped = [...CYCLE_HEADINGS];
+    [swapped[4], swapped[5]] = [swapped[5], swapped[4]]; // Summary <-> Self-assessment checklist
+    root = makeTopicFixture({ topic1Headings: swapped });
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/topic-01\.mdx/);
+  });
+
+  it('fails when `## Check your understanding` has fewer than 3 items', () => {
+    root = makeTopicFixture({ topic1Opts: { cyuItems: 2 } });
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/Check your understanding/);
+  });
+
+  it('fails when `## Self-assessment checklist` has fewer than 3 items', () => {
+    root = makeTopicFixture({ topic1Opts: { sacItems: 1 } });
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/Self-assessment checklist/);
+  });
+
+  it('fails when `## Further reading` has no citation line', () => {
+    root = makeTopicFixture({ topic1Opts: { furtherReading: false } });
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/Further reading/);
+  });
+
+  it('fails when the `### Topic list` row count disagrees with topic files on disk', () => {
+    root = makeTopicFixture({ topicFiles: ['topic-01.mdx'] }); // list still has 2 rows
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/Topic list|topic-\*\.mdx file/);
+  });
+
+  it('fails when a topic file on disk is not in the `### Topic list`', () => {
+    root = makeTopicFixture({ topicFiles: ['topic-01.mdx', 'topic-02.mdx', 'topic-03.mdx'] });
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/Topic list has 2 row|3 topic-\*\.mdx/);
+  });
+
+  it('fails and names a checklist ID assigned to no topic row', () => {
+    const list = TOPIC_LIST.replace('U1-03, U1-04', 'U1-03');
+    root = makeTopicFixture({ topicList: list });
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/U1-04/);
+  });
+
+  it('fails and names a checklist ID assigned to two topic rows', () => {
+    const list = TOPIC_LIST.replace('U1-01, U1-02', 'U1-01, U1-02, U1-03');
+    root = makeTopicFixture({ topicList: list });
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/U1-03/);
+  });
+
+  it('fails when unit-assessment.mdx is missing', () => {
+    root = makeTopicFixture({ omitUnitAssessment: true });
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/unit-assessment\.mdx/);
+  });
+
+  it('fails and names the count when an MCQ/RRQ/ERQ band is off', () => {
+    root = makeTopicFixture({ uaOpts: { mcq: 9, rrq: 11, erq: 4 } });
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/MCQs.*9|9 numbered/);
+  });
+
+  it('fails when a `##` heading follows `## Answers and marking guidance`', () => {
+    root = makeTopicFixture({ uaOpts: { trailingSection: true } });
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/Answers and marking guidance/);
+  });
+
+  it('counts the 10/10/5 bands per-###-band, not file-wide', () => {
+    // 10/10/5 correct per band, plus 6 numbered lines under the answers heading -> 31 file-wide.
+    root = makeTopicFixture({ uaOpts: { answerNumbered: true } });
+    const { code } = runGate(root);
+    expect(code).toBe(0);
+  });
+
+  it('fails when the reading-minutes sum is outside the depth-budget band', () => {
+    root = makeTopicFixture({ minutes: { 'index.mdx': 5, 'topic-01.mdx': 10, 'topic-02.mdx': 10, 'unit-assessment.mdx': 5 } }); // 30 < 60
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/reading-min/i);
+  });
+
+  it('fails on a coverage row whose File is not in the new-shape set', () => {
+    const cov = TOPIC_COVERAGE.replace('| U1-04 | topic-02.mdx | Concept D | carr2000 |', '| U1-04 | topic-99.mdx | Concept D | carr2000 |');
+    root = makeTopicFixture({ coverageTable: cov });
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/topic-99\.mdx/);
+  });
+
+  it('fails when a topic file is unreferenced by any coverage row', () => {
+    const cov = `| Sub-topic ID | File | Section | Source |
+|---|---|---|---|
+| U1-01 | topic-01.mdx | Concept A | carr2000 |
+| U1-02 | topic-01.mdx | Concept B | carr2000 |
+| U1-03 | topic-01.mdx | Concept C | carr2000 |
+| U1-04 | topic-01.mdx | Concept D | carr2000 |
+`;
+    root = makeTopicFixture({ coverageTable: cov });
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/topic-02\.mdx/);
+  });
+
+  it('fails when a checklist ID coverage row names a different topic file than its `### Topic list` assignment', () => {
+    // U1-03 is assigned to topic-02 by the Topic list; point its only coverage row at topic-01.
+    const cov = TOPIC_COVERAGE.replace('| U1-03 | topic-02.mdx | Concept C | carr2000 |', '| U1-03 | topic-01.mdx | Concept C | carr2000 |');
+    root = makeTopicFixture({ coverageTable: cov });
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/U1-03/);
+    expect(out).toMatch(/topic-01\.mdx/);
+    expect(out).toMatch(/topic-02\.mdx/);
+  });
+
+  it('fails loudly when only one opt-in signal is present (topic files, no `### Topic list`)', () => {
+    root = makeTopicFixture({ topicList: '' });
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/Topic list/);
+  });
+
+  it('still passes the pre-existing legacy fixture', () => {
+    root = makeDepthFixture();
+    expect(runGate(root).code).toBe(0);
+  });
+});

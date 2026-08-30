@@ -32,6 +32,13 @@ jobs:
       - name: Depth gate (concept coverage, required blocks, formative floor)
         run: npm run check:depth-gate
 
+      # Figure marker gate: for every new-shape (per-topic) unit, checks that every topic file
+      # carries ≥1 well-formed unique FIGURE marker and that the marker set matches the
+      # specs/content/<course>/figures/unit-NN.md manifest both ways (Spec 008 FR-012–014).
+      # Legacy units (no topic-*.mdx) are skipped.
+      - name: Figure marker gate
+        run: npm run check:figures
+
       # No answer keys / private marking material in public content (FR-012, SC-010, T028)
       - name: Answer-key safety check
         run: npm run check:no-answer-keys

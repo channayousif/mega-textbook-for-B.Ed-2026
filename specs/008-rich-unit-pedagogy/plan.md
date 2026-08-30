@@ -375,6 +375,47 @@ Tracking entry**. The design adds no backend, no dependency, no new *rendered* c
 carve-out is bounded, gated and reversible; VI.1 is satisfied by re-running the Standard-versioning
 clause; the docs-gate task covers X.2; III.8 is strengthened (alt text now gated).
 
+## Implementation notes (drift reconciliation — T059, 2026-08-30)
+
+Recorded after Phases 1–7 landed; the design above is unchanged in substance, these pin the
+few places the built gates ended up slightly more lenient than the contract prose, plus one
+estimation choice.
+
+1. **`check-figures.mjs` does not string-compare `Prompt` / `Alt text` between marker and
+   manifest.** It enforces the marker↔manifest **ID set** match (both ways), the per-row
+   `Topic` == the marker file's `topic_label`, non-blank cells, and the `Status` enum — which
+   is exactly the gate-rules table in `contracts/figures-manifest.md`. The contract's *column*
+   prose ("`Prompt` equals the marker's `<prompt>`, whitespace-normalised") is treated as a
+   human-Content-gate concern, not an automated check (a byte-diff on a long prompt would be
+   brittle and low-value). Authors should still keep them matching; the EFMP-302 Unit 1
+   manifest does.
+2. **`check-unit-depth.mjs` `## Further reading` check counts "≥ 1 non-blank line"**, not
+   specifically a parsed citation/link line. `contracts/topic-cycle.md` says "≥ 1 citation or
+   link line"; judging whether a line is a real citation is the human gate's job. Same posture
+   as the Spec 007 depth gate.
+3. **`check-no-answer-keys.mjs` built-HTML route match** is
+   `/(?:^|\/)(unit-assessment|course-review)(?:\/index)?\.html$/` — it accepts both the
+   trailing-slash route (`…/unit-assessment/index.html`) and a flat `…/unit-assessment.html`.
+   Marginally broader than "last segment before `index.html`", deliberately, to survive a
+   Docusaurus `trailingSlash` config change. The `.mjs` source-file match is unchanged
+   (`/(?:^|\/)(unit-assessment|course-review)\.mdx$/`).
+4. **`detectLayout()` returns `{layout:'topic', signal}`** and the caller `err()`s + returns on
+   a non-null `signal` — i.e. exactly-one-opt-in-signal is a loud per-unit failure naming which
+   signal is missing, as `research.md` R1 requires. Confirmed live: adding the `### Topic list`
+   to EFMP-302 Unit 1 before the `topic-*.mdx` files existed failed the gate with a named
+   message, and adding the files cleared it.
+5. **EFMP-302 Unit 1 `**Depth budget**` band (`90–120 reading-min`) was set from a
+   ~110-wpm "work-through" rate**, not the style guide's ~180–200-wpm pure-reading rate,
+   because each `topic-*.mdx` carries an activity, a formative check, a rubric table and a
+   summative task that a learner *works through* rather than just reads. The drafted total is
+   103 (`index` 4 · topics 18/14/19/16 · `unit-assessment` 24 · `unit-teacher-notes` 8). Only
+   the band is gated; per Risk 2 below the style guide's "±25%" guidance is now a documented
+   range. This choice should be applied consistently to the EFMP-301 v3.0 re-proof.
+
+All six new contract Markdown files and `course-review.schema.json` matched the implementation
+as written — no contract edits were needed beyond the two clarifying notes folded into
+`figures-manifest.md` / `topic-cycle.md` alongside this reconciliation.
+
 ## Phase 2 — (handled by `/sp.tasks`, not here)
 
 `/sp.tasks` decomposes this into dependency-ordered tasks per the approved plan's 12 phases:

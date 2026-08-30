@@ -5,16 +5,21 @@ status: approved
 
 # EFMP-301 — Educational Psychology — Content Spec
 
-> **Pending: Unit 1 v2.0 depth-standard re-proof.** Constitution Art. VI.1 (v2.5.0, "Standard
-> versioning") makes this the *immediate-next content task* after Spec 007's proving unit
-> (EFMP-302 Unit 1). It is not started here — Spec 007 only queues it. When scheduled, on its
-> own branch: add a `### Sub-topic checklist` + `**Depth budget**` to the Unit 1 subsection
-> below, re-draft the five English files to the `## Unit depth standard`
-> (`specs/content/style-guide.md` v2.0), emit `specs/content/efmp-301/coverage/unit-01.md` +
-> `specs/content/efmp-301/sources/unit-01.md`, and create the matching `G1`–`G7` rows in
-> `specs/content/efmp-301/tasks.md` at that point (not before — a `▢` row here would flip the
-> already-published Unit 1 to "not done" in `check-pipeline-gate.mjs`). Until then, EFMP-302
-> Unit 1 is the working depth exemplar.
+> **Pending: Unit 1 v3.0 per-topic re-proof.** Constitution Art. VI.1 ("Standard versioning",
+> re-run in the v2.6.0 amendment) makes this the *immediate-next content task* after Spec 008's
+> proving unit (EFMP-302 Unit 1, restructured to the per-topic layout on 2026-08-30). The
+> earlier v2.5.0 obligation to re-prove Unit 1 at the flat v2.0 depth standard is **superseded,
+> owner-acknowledged** — the golden unit skips straight to v3.0 rather than being re-drafted
+> twice. It is not started here — Spec 008 only queues it. When scheduled, on its own branch:
+> add a `### Sub-topic checklist` (with a `Topic` column) + a `### Topic list` + a re-baselined
+> `**Depth budget**` to the Unit 1 subsection below; restructure the unit to the per-topic
+> layout (`index.mdx` opening + `topic-NN.mdx` cycles + `unit-assessment.mdx`); emit
+> `specs/content/efmp-301/coverage/unit-01.md` (v2) + `.../sources/unit-01.md` +
+> `.../figures/unit-01.md`; then create the matching `G1`–`G7` rows in
+> `specs/content/efmp-301/tasks.md` **at that point** (not before — a `▢` row here would flip
+> the already-published Unit 1 to "not done" in `check-pipeline-gate.mjs` and break the deploy
+> cron). Until then, EFMP-302 Unit 1 is the working exemplar and EFMP-301 stays grandfathered
+> by the opt-in predicate (no `### Topic list` → legacy depth-gate path).
 
 Golden course (Constitution Art. VI.1, research.md R10). This content-spec is authored
 **retroactively** against EFMP-301 Unit 1, which was already drafted, reviewed, and published

@@ -1,5 +1,9 @@
 # Contract: Unit Coverage Matrix
 
+> **Extended by Spec 008 — see `specs/008-rich-unit-pedagogy/contracts/coverage-matrix-v2.md`.**
+> This v1 contract stays in force for legacy five-file units; v2 governs any unit on the
+> per-topic layout.
+
 **File**: `specs/content/<course-code>/coverage/unit-NN.md` (`NN` = zero-padded unit number)
 **Read by**: `scripts/check-unit-depth.mjs` (FR-002, FR-012a, FR-012e)
 **Format**: Markdown. Front matter optional and ignored. Body MUST contain exactly one

@@ -19,7 +19,7 @@ cannot see the filename). No `sidebar_position`.
 | 6 | Self-assessment checklist | `## Self-assessment checklist` | `^##\s+Self-assessment checklist\s*$` | ≥ **3** task-list items (`/^\s*-\s+\[ \]\s+\S/gm`) |
 | 7 | Practicum transfer | `## Try this at your practicum school` | `^##\s+Try this at your practicum school\s*$` | — |
 | 8 | Summative task | `## Summative task` | `^##\s+Summative task\s*$` | contains a mini-rubric; human gate checks ≥ 1 Analyze-or-higher demand |
-| 9 | Further reading | `## Further reading` | `^##\s+Further reading\s*$` | ≥ **1** citation or link line |
+| 9 | Further reading | `## Further reading` | `^##\s+Further reading\s*$` | ≥ **1** citation or link line — *the gate counts ≥ 1 non-blank line under the heading; whether that line is a real citation is the human Content gate's call* |
 
 **Order rule**: the nine headings MUST appear in the file in exactly this sequence. Other `##`/`###`
 headings MAY appear *between* them (e.g. `### …` sub-headings under `## Explanation`), but the nine
