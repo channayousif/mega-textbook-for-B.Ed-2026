@@ -10,10 +10,16 @@
 - **Cite where you make a claim.** If a sentence asserts a fact, a definition, or a research
   finding, attribute it inline — e.g. "Hargreaves (2000) describes four 'ages' of teacher
   professionalism…". Keep a matching row in `sources/unit-NN.md`.
-- **APA-ish reference form** for the `## Further reading` block and the sources list:
+- **APA-ish reference form** for the `## Further reading` sections and the sources list:
   `Author, A. A. (Year). *Title* (edition). Publisher.` for books;
   `Author, A. A. (Year). Title of article. *Journal, Vol*(Issue), pages. https://doi.org/…`
   for articles. Include the DOI or a stable URL when one exists.
+- **Per-topic `## Further reading` (Spec 008 per-topic layout).** There is no single unit-level
+  further-reading list any more — each `topic-NN.mdx` ends with its own `## Further reading`
+  (≥ 1 line) citing the subset of `sources/unit-NN.md` that topic draws on. The
+  coverage↔sources mutual-consistency rule is unchanged: every key cited in any topic appears
+  in `sources/unit-NN.md`, and every non-`no-external-source` key there is cited somewhere.
+  A legacy five-file unit still uses the single `index.mdx` `## Further reading` block.
 - **Never fabricate** a DOI, a page range, an author list, or a quotation. If you can't verify
   it, don't cite it — use a `no-external-source` row and escalate in `specs/gaps.md`.
 - **Open-access substitutes** must be genuinely on-topic for the sub-topic they back. An

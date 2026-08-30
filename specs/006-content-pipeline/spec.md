@@ -282,6 +282,20 @@ updates to `published` with the identifier traceable at every step.
   | Practical Work | `teacher-notes.mdx` "Practical work" block |
   | Assessment Criteria (+ 60/40 split) | `formative.mdx` / `summative.mdx` framing + `assessment_weighting` |
   | Recommended Books/References | `index.mdx` "References" + content-spec resource list |
+
+  > **Superseded *in part* by Spec 008 (rich unit pedagogy), not deleted.** The five-file rule
+  > above remains the **default** and governs every unit that has **not** opted into the
+  > per-topic layout. Spec 008 introduces an opt-in alternative unit shape —
+  > `index.mdx` + `topic-NN.mdx` (one nine-part learning cycle each) + `unit-assessment.mdx`
+  > (+ optional `unit-teacher-notes.mdx`) — selected when a unit's content-spec `## Unit N`
+  > subsection carries a `### Topic list` table **and** `topic-*.mdx` files exist on disk. The
+  > folding table's guide-section → destination *intent* is preserved in that shape:
+  > Teaching/Instructional Strategies + Practical Work → `unit-teacher-notes.mdx`; Suggested
+  > Practical Activities + Assessment Criteria (formative/summative) → each topic's nine-part
+  > cycle (`## Activity`, `## Check your understanding`, `## Summative task`) plus the unit-end
+  > `unit-assessment.mdx` 10/10/5 bank; Reading/Instructional Materials + Recommended
+  > Books/References → per-topic `## Further reading`. See
+  > `specs/008-rich-unit-pedagogy/contracts/` and Constitution Art. III.6 (amended v2.6.0).
 - **FR-005**: A single task tracker `specs/content/<course-code>/tasks.md` MUST record one row per
   unit per stage, each carrying a status mark from the fixed 3-value enum — not-started (▢) /
   in-progress (▣) / done (✅) — and reviewer initials (required once a row reaches `done`), and
@@ -398,7 +412,9 @@ updates to `published` with the identifier traceable at every step.
   correctly reading `published` at the end, with zero broken links in the chain.
 - **SC-005**: Once the template is frozen, a content author drafting a new unit needs zero
   clarifying questions about which of the five files a given course-guide section belongs in — the
-  folding-rule mapping fully determines it.
+  folding-rule mapping fully determines it. *(Spec 008: for a unit on the opt-in per-topic
+  layout the same "no clarifying questions" guarantee holds against the nine-part topic cycle +
+  `unit-assessment.mdx` mapping instead — see FR-004's superseding note.)*
 - **SC-006**: No answer-key content is ever found in a committed content-repository file across
   the golden unit and any subsequent unit produced by this pipeline — verified by the CI gate's
   answer-key keyword/pattern scan (FR-016d) on every PR.

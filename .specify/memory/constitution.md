@@ -1,4 +1,75 @@
 <!--
+SYNC IMPACT REPORT (v2.6.0)
+===========================
+Version change: 2.5.0 → 2.6.0
+Bump rationale: MINOR — several existing Article III/V/VI/VII requirements are materially
+  expanded to admit the Spec 008 opt-in nested per-topic unit shape and its enforcement. No
+  principle is removed or redefined, and no approved spec is invalidated (Specs 001–007 are
+  unaffected; the legacy five-file unit layout remains the default and passes every gate
+  unchanged). Source: owner instruction, this session — Feature 008 (`008-rich-unit-pedagogy`)
+  planning + /sp.analyze finding X1. See ADR-0011.
+
+Modified:
+  - Article III.1 — one-sentence reaffirmation appended: a richer unit *structure* does not
+    raise the *language* register; the plain-English ceiling is unchanged.
+  - Article III.3 — expanded: a Spec 008 new-shape unit additionally carries a per-topic
+    formative + summative cycle AND a unit-end bank of 10 multiple-choice + 10
+    restricted-response + 5 extended-response items with rubrics; the "summative includes
+    Analyze or above" rule holds at BOTH the per-topic and the unit-end level.
+  - Article III.6 — expanded: the Spec 008 per-topic layout (`index.mdx` + `topic-NN.mdx` +
+    `unit-assessment.mdx` [+ optional `unit-teacher-notes.mdx`], plus an optional course-level
+    `course-review.mdx`) is a permitted alternative carrier of the same guide sections. Spec
+    006 FR-004's five-file folding rule is superseded IN PART, not deleted; "MUST NOT be
+    invented where the guide is silent" is unchanged.
+  - Article V.2 — expanded with a carve-out: a bounded `## Answers and marking guidance`
+    section that is the final section of a `unit-assessment.mdx` or `course-review.mdx` page is
+    INTENTIONALLY-PUBLIC self-study content (as in a printed textbook), and is distinct from
+    the RLS-protected LMS quiz bank / answer-key store (Spec 003), which stays backend-only and
+    `verified_teacher`-gated. The "anything in the static bundle is public" principle is
+    unchanged — this makes the answers section knowingly, deliberately public. Front-matter
+    answer-key fields (`answer_key`/`answers`/`marking_scheme`/`rubric_answers`) remain
+    forbidden everywhere.
+  - Article VI.1 "Standard versioning" — re-run for the v3.0 bump: the proving unit is
+    EFMP-302 Unit 1; the golden unit (EFMP-301 Unit 1) MUST be brought to v3.0 as the
+    immediate next content task after the proving unit; EFMP-302 Unit 1 is the working depth
+    exemplar until then. (The clause wording is unchanged — this report records its
+    application.)
+  - Article VII — the Review-Gate table's Engineering-gate row gains "figure-marker/manifest
+    consistency" (the `scripts/check-figures.mjs` CI gate).
+
+Downstream artifacts reviewed this amendment (2026-08-27):
+  ✅ .specify/templates/{plan,spec,tasks}-template.md — no hardcoded article numbers
+     (confirmed at v2.4.0/v2.5.0, unchanged); no edit needed.
+  ✅ specs/008-rich-unit-pedagogy/{spec,plan}.md — spec FR-024 + Dependencies + Assumptions and
+     plan's Constitution Check already cite this v2.6.0 amendment as a required first task
+     (T004); no further edit needed here.
+  ✅ specs/content/style-guide.md — v2.0 → v3.0 is a content-pipeline artefact bump (Spec 006
+     FR-007 mechanism), covered by the amended VI.1; the bump itself lands last (Spec 008 T056,
+     after the human Content gate).
+  ℹ history/adr/0011 — records this decision cluster as-of its date; left as-is.
+  ℹ history/adr/0005 — Art. V.2's `verified_teacher` line is the boundary the new carve-out
+     draws against; still accurate, left as-is.
+
+Superseded obligation (owner-acknowledged, 2026-08-27): the v2.5.0 "Standard versioning"
+  obligation — bring the golden unit EFMP-301 Unit 1 to **style-guide v2.0** as the immediate-next
+  content task after Spec 007's proving unit — was NOT satisfied (it was never started; EFMP-301's
+  content-spec still carries the "> Pending … v2.0" note, and the style guide is still at v2.0).
+  It is **superseded, not deferred**: the golden unit skips v2.0 and its next re-proof is directly
+  at **v3.0** (the Spec 008 per-topic standard), so it is not proven twice in quick succession.
+  Art. VI.1's mechanism is still honoured — the re-proof is the tracked immediate-next content
+  task, and EFMP-302 Unit 1 is the working exemplar until it lands.
+
+Follow-up TODOs:
+  - Feature 008 execution MUST include (or immediately follow with) bringing EFMP-301 Unit 1 to
+    style-guide v3.0 per Article VI.1 — tracked as a prose "> Pending" note now (Spec 008 T058,
+    which REPLACES the stale "v2.0" note; a `▢` tracker row would flip the published unit to "not
+    done" and break the deploy cron), tracker rows when it is scheduled on its own branch.
+  - Prior TODOs carried forward from v2.4.0 (README / Student-Guide / Teacher-Guide initial
+    authoring) — untouched by this amendment. (The v2.5.0 "EFMP-301 Unit 1 → v2.0" item is
+    resolved by the "Superseded obligation" note above.)
+
+--- prior report (v2.5.0) retained below ---
+
 SYNC IMPACT REPORT (v2.5.0)
 ===========================
 Version change: 2.4.0 → 2.5.0
@@ -278,7 +349,9 @@ authors' preference; traceability makes accreditation review auditable.
 ## Article III — Content Quality Standards (non-negotiable)
 
 1. **Simple English**: student-facing prose targets an accessible register for a fresh
-   HSC/intermediate graduate. No graduate-level jargon without a bilingual glossary entry.
+   HSC/intermediate graduate. No graduate-level jargon without a bilingual glossary entry. A
+   richer unit *structure* (e.g. the Spec 008 per-topic learning cycle) does not raise the
+   *language* register — the plain-English ceiling is unchanged by it.
 2. **Urdu parity**: every student-facing unit MUST have a complete, human-reviewed Urdu
    version before publish, **except units belonging to a course explicitly designated
    English-only** (e.g. GENG-300 Functional English, where the subject itself is the
@@ -287,7 +360,11 @@ authors' preference; traceability makes accreditation review auditable.
    quality pass is mandatory for every course that is not so exempted. Register: academic-plain
    (درسی مگر عام فہم), not literary/archaic.
 3. **Bloom's tagging**: every assessment item MUST carry a Bloom's-level tag. Formative sets
-   skew Remember→Apply; summative sets MUST include Analyze or above.
+   skew Remember→Apply; summative sets MUST include Analyze or above. A Spec 008 new-shape unit
+   additionally carries a per-topic formative + summative cycle **and** a unit-end bank of
+   **10 multiple-choice + 10 restricted-response + 5 extended-response** items with rubrics;
+   the "Analyze or above" rule holds at **both** the per-topic `## Summative task` and the
+   unit-end extended-response rubrics.
 4. **Pakistan-grounded examples**: case studies and examples use Pakistani/Sindh classroom
    contexts wherever the subject allows.
 5. **Citations**: definitions and claims cite the course guide, HEC document, or a named
@@ -299,8 +376,12 @@ authors' preference; traceability makes accreditation review auditable.
    Activities (optional)**, **Suggested Instructional/Reading Materials**, **Practical Work**
    (group work, group/individual assignments, presentations), and **Assessment Criteria**
    (class test, mid-term, assignment evaluation, attendance, participation). These fold into
-   the existing unit files and a per-course overview page (see Spec 006); they MUST NOT be
-   invented where the guide is silent.
+   the existing unit files and a per-course overview page (see Spec 006), **or** into the
+   Spec 008 opt-in per-topic layout (`index.mdx` + `topic-NN.mdx` + `unit-assessment.mdx`
+   [+ optional `unit-teacher-notes.mdx`], plus an optional course-level `course-review.mdx`) as
+   an alternative carrier of the same sections — Spec 006 FR-004's five-file folding rule is
+   superseded **in part**, not deleted, and still governs every unit that has not opted in.
+   They MUST NOT be invented where the guide is silent.
 7. **Assessment weighting**: for the affiliated GECEs (colleges), assessment is **60%
    summative and 40% formative** by default. Assessment blueprints in the pipeline follow
    this split; per-unit deviations MUST be justified in the unit spec.
@@ -327,9 +408,22 @@ authors' preference; traceability makes accreditation review auditable.
      stack (Postgres + Auth + Row-Level Security + Storage) running on infrastructure the
      project controls, not a third-party managed tier. Docusaurus is static and MUST NOT be
      trusted with secrets or access control. (Rationale and alternatives in ADR-0006.)
-2. **Security lives in the backend.** Answer keys, grades, and submissions are protected by
-   database Row-Level Security, never by "hidden" static pages. Anything shipped in the
-   static bundle is public — treat it as such.
+2. **Security lives in the backend.** Graded-assessment answer keys, grades, and submissions
+   are protected by database Row-Level Security, never by "hidden" static pages. Anything
+   shipped in the static bundle is public — treat it as such.
+
+   **Carve-out (Spec 008): self-study textbook answers.** A single bounded
+   `## Answers and marking guidance` section that is the **final** section of a
+   `unit-assessment.mdx` or `course-review.mdx` page MAY carry answer keys and marking rubrics
+   as **intentionally public** self-study content — the same role that answers printed at the
+   back of a textbook serve for an independent learner. This is distinct from, and MUST NOT be
+   confused with, the RLS-protected LMS quiz bank and answer-key store (Spec 003), which
+   remains backend-only and gated by the `verified_teacher` capability (Art. V.3, IX.3). The
+   "anything in the static bundle is public" principle is unchanged — the carve-out makes the
+   answers section *knowingly* public, nothing more. Answer-key **front-matter fields**
+   (`answer_key`/`answers`/`marking_scheme`/`rubric_answers`) remain forbidden on every file,
+   and the answer-key content scan (`scripts/check-no-answer-keys.mjs`) still rejects
+   answer-key markers everywhere outside that one bounded section.
 3. **Roles and restricted-material access.** The roles are `student`, `teacher`, and `admin`
    (curriculum owner). The `student` and `teacher` roles are **self-selectable at sign-up
    only** (default `student`) so a capable student MAY lead a peer study group. Once an
@@ -384,7 +478,7 @@ Before any unit or feature is marked complete, all applicable gates MUST pass:
 | Gate | Checks | Owner |
 |---|---|---|
 | Content gate | CLO traceability • simple-English readability • Urdu parity & register • Bloom's tags • citations • guide-section fidelity • accessibility | Curriculum owner |
-| Engineering gate | Spec compliance • RLS policies tested • responsive/RTL rendering verified • Lighthouse performance pass | Developer |
+| Engineering gate | Spec compliance • RLS policies tested • responsive/RTL rendering verified • Lighthouse performance pass • figure-marker ↔ manifest consistency (Spec 008 `check:figures`) | Developer |
 | Teacher gate (per course, once) | One practicing teacher dry-runs the unit's activities & assessments | Pilot teacher |
 | Docs gate | A shipped spec that changes a student/teacher workflow or contributor setup updates the matching guide (Student Guide, Teacher Guide, or README — Article X) in the same branch | Feature author |
 
@@ -457,4 +551,4 @@ teachers specifically, while keeping the README technical and separate.
 
 ---
 
-**Version**: 2.5.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-08-27
+**Version**: 2.6.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-08-27

@@ -30,6 +30,7 @@ npm run test:e2e          # end-to-end tests (Playwright, needs a build)
 npm run validate:content  # content-shape gate: front-matter, EN<->UR parity, glossary refs
 npm run check:pipeline-gate     # content-pipeline gate: tracker/content-spec/terminology (see below)
 npm run check:depth-gate        # content depth gate: concept coverage / required blocks / formative floor (see below)
+npm run check:figures           # figure marker <-> manifest consistency for per-topic units (see below)
 npm run check:no-answer-keys    # answer-key leak scan
 ```
 
@@ -81,16 +82,52 @@ of reviewer stamina:
   units without a checklist are grandfathered. It is additive to `check:pipeline-gate` and the
   Spec 001 validators — it replaces neither.
 
-`references/depth-standard.md` inside the skill restates the same rules and **must be kept in
-sync** with the `## Unit depth standard` section of `style-guide.md`; changing either requires
-updating the other and bumping `style-guide.md`'s `version`.
+`references/structure-standard.md` inside the skill restates the same rules and **must be kept in
+sync** with the `## Unit depth standard` / `## Unit structure standard` sections of
+`style-guide.md`; changing either requires updating the other and bumping `style-guide.md`'s
+`version`.
+
+## Unit structure standard (per-topic layout)
+
+[`specs/008-rich-unit-pedagogy/`](specs/008-rich-unit-pedagogy/) adds an **opt-in alternative
+unit shape** in which each topic is a self-contained nine-part learning cycle. Legacy five-file
+units are unchanged and are not required to migrate.
+
+- A unit is on this standard **only** when *both* signals are present: a `### Topic list` table
+  in its `content-spec.md` `## Unit N` subsection **and** `topic-*.mdx` files in its `docs/`
+  folder. Exactly one present (or a row-count mismatch) is a **loud depth-gate failure**.
+- **File set:** `index.mdx` (opening only — outcomes / prerequisites / `## In this unit` /
+  how-to-use, no exposition) · `topic-01.mdx … topic-NN.mdx` (zero-padded, contiguous; front
+  matter carries `topic_no` + `topic_label`) · `unit-assessment.mdx` (`## Unit summary` + a
+  fixed **10 MCQ / 10 RRQ / 5 ERQ** bank + a final `## Answers and marking guidance` section) ·
+  optional `unit-teacher-notes.mdx` · optional course-level `course-review.mdx` (the only content
+  file allowed `sidebar_position`, `900`).
+- **The nine cycle headings, checked for presence and order:** `## A real classroom situation` →
+  `## Explanation` → `## Activity: <name>` → `## Check your understanding` (≥3 numbered) →
+  `## Summary` → `## Self-assessment checklist` (≥3 `- [ ]`) → `## Try this at your practicum
+  school` → `## Summative task` → `## Further reading` (≥1 line).
+- **Figures** are inline `{/* FIGURE[fig-U<n>-<seq>]: <prompt>; alt: <alt> */}` comments (never
+  rendered), one per topic, tracked in `specs/content/<course>/figures/unit-NN.md`.
+  `npm run check:figures` enforces marker ↔ manifest consistency; legacy units are skipped.
+- **Answers policy:** the prose patterns *answer key / marking scheme / correct answer* are
+  permitted **only** inside the single, final `## Answers and marking guidance` section of
+  `unit-assessment.mdx` / `course-review.mdx`. The four front-matter answer-key keys are
+  forbidden everywhere. `npm run check:no-answer-keys` implements the bounded exception; the
+  RLS-protected Spec 003 LMS quiz store is separate and stays `verified_teacher`-gated.
+- Per unit: `coverage/unit-NN.md` is v2 (`File` ∈ the new-shape set; every `topic-NN.mdx`
+  referenced; coverage agrees with the `### Topic list` on where each sub-topic is taught).
+- `style-guide.md` gains `## Unit structure standard`, `## Answers and marking guidance policy`
+  and `## Figure markers and manifests` sections, frozen at `version: "3.0"`.
+- The `.claude/skills/author-unit/` skill authors a whole unit to this standard and emits the
+  coverage / sources / figures artefacts.
 
 ## Contribution flow
 
 1. Branch from `main` (`NNN-feature-name`, matching the `specs/` directory it implements).
 2. Follow the Spec-Driven Development workflow: spec → plan → tasks → implementation (see
    `.specify/memory/constitution.md` Article IV).
-3. Open a PR; CI must pass (content validation, pipeline gate, depth gate, answer-key scan, unit
-   tests, RLS tests, e2e, Lighthouse budget — see `.github/workflows/ci.yml`).
+3. Open a PR; CI must pass (content validation, pipeline gate, depth gate, figure gate,
+   answer-key scan, unit tests, RLS tests, e2e, Lighthouse budget — see
+   `.github/workflows/ci.yml`).
 4. Reference the relevant `specs/NNN-*/` directory and, for architecturally significant
    decisions, the matching `history/adr/` entry.

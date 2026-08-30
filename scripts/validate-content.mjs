@@ -4,6 +4,8 @@
  *
  * Implements (tasks.md): T009 base gate, T016 EN<->UR structural parity,
  * T018 glossary-reference check, plus the FR-010 assessment_weighting sum check.
+ * Spec 008 (T021): legacy vs per-topic layout branch, checkCourseReview(), and a
+ * dynamic EN<->UR parity file set.
  *
  * Blocks publish (non-zero exit) when any rule fails, printing a per-file message
  * naming the file and the offending field/rule (FR-009, SC-007).
@@ -27,6 +29,8 @@ const CONTRACTS = join(REPO, 'contracts');
 const GLOSSARY_FILE = join(ROOT, 'glossary.json');
 
 const UNIT_FILES = ['index.mdx', 'activities.mdx', 'formative.mdx', 'summative.mdx', 'teacher-notes.mdx'];
+// Spec 008: pooled legacy files may NOT coexist with topic-*.mdx in one folder.
+const FORBIDDEN_IN_TOPIC_LAYOUT = ['activities.mdx', 'formative.mdx', 'summative.mdx', 'teacher-notes.mdx'];
 
 const errors = [];
 const err = (file, msg) => errors.push(`${relative(ROOT, file)}: ${msg}`);
@@ -39,10 +43,17 @@ const validateUnit = ajv.compile(loadSchema('unit-frontmatter.schema.json'));
 const validateOverview = ajv.compile(loadSchema('course-overview.schema.json'));
 const validateCategory = ajv.compile(loadSchema('category.schema.json'));
 const validateGlossary = ajv.compile(loadSchema('glossary.schema.json'));
+const validateCourseReview = ajv.compile(loadSchema('course-review.schema.json'));
 
 // ---- helpers ---------------------------------------------------------------
 const dirs = (p) =>
   existsSync(p) ? readdirSync(p).filter((n) => statSync(join(p, n)).isDirectory()) : [];
+
+const mdxFilesIn = (p) =>
+  existsSync(p) ? readdirSync(p).filter((n) => n.endsWith('.mdx')) : [];
+
+const topicFilesIn = (p) =>
+  mdxFilesIn(p).filter((n) => /^topic-\d{2}\.mdx$/.test(n)).sort();
 
 const ajvErrors = (v) => (v.errors || []).map((e) => `${e.instancePath || '/'} ${e.message}`).join('; ');
 
@@ -108,6 +119,21 @@ function checkOverview(courseDir, courseCode) {
 }
 
 /**
+ * Spec 008 FR-006: an optional course-level `course-review.mdx` — front matter only
+ * (body headings are the human Content gate's concern). Mirrors checkOverview().
+ */
+function checkCourseReview(courseDir, courseCode) {
+  const crFile = join(courseDir, 'course-review.mdx');
+  if (!existsSync(crFile)) return;
+  const { data } = matter(readFileSync(crFile, 'utf8'));
+  if (!validateCourseReview(data)) {
+    err(crFile, `invalid course-review front-matter: ${ajvErrors(validateCourseReview)}`);
+  } else if (data.course_code && data.course_code !== courseCode) {
+    err(crFile, `course_code '${data.course_code}' does not match folder '${courseCode}'`);
+  }
+}
+
+/**
  * A course is bilingual by default; `bilingual: false` in course-overview.mdx
  * marks an English-only course (e.g. GENG-300 Functional English) exempt from
  * the EN<->UR parity gate (Constitution III.2 carve-out).
@@ -119,8 +145,62 @@ function isBilingualCourse(courseDir) {
   return data.bilingual !== false;
 }
 
-function checkUnit(unitDir, semester, courseFolder, courseCode, unitNo, bilingual) {
-  // Five-file structural rule
+/** Per-file front-matter checks shared by both layouts. */
+function checkUnitFileFm(file, courseCode, unitNo) {
+  const parsed = matter(readFileSync(file, 'utf8'));
+  const fm = parsed.data;
+
+  if (!validateUnit(fm)) {
+    err(file, `invalid front-matter: ${ajvErrors(validateUnit)}`);
+  }
+  if (fm.course_code && fm.course_code !== courseCode) {
+    err(file, `course_code '${fm.course_code}' != folder '${courseCode}'`);
+  }
+  if (fm.unit_no != null && Number(fm.unit_no) !== unitNo) {
+    err(file, `unit_no ${fm.unit_no} != folder unit-${String(unitNo).padStart(2, '0')}`);
+  }
+  if (fm.assessment_weighting) {
+    const { summative, formative } = fm.assessment_weighting;
+    if (Number(summative) + Number(formative) !== 100) {
+      err(file, `assessment_weighting must sum to 100 (got ${summative}+${formative})`);
+    }
+  }
+  for (const term of glossaryRefs(parsed.content)) {
+    if (!glossaryTerms.has(term)) {
+      err(file, `<Glossary term="${term}"> has no matching entry in glossary.json`);
+    }
+  }
+  return fm;
+}
+
+/** EN<->UR structural parity for a reviewed unit, over an explicit file list. */
+function checkParity(unitDir, urUnitDir, fileList) {
+  if (!existsSync(urUnitDir)) {
+    err(urUnitDir, `reviewed unit requires an Urdu mirror (parity gate, FR-001)`);
+    return;
+  }
+  for (const f of fileList) {
+    const enFile = join(unitDir, f);
+    const urFile = join(urUnitDir, f);
+    if (!existsSync(enFile)) continue;
+    if (!existsSync(urFile)) {
+      err(urFile, `reviewed unit missing UR file '${f}' (section-file parity)`);
+      continue;
+    }
+    const enVec = headingVector(matter(readFileSync(enFile, 'utf8')).content);
+    const urVec = headingVector(matter(readFileSync(urFile, 'utf8')).content);
+    const n = Math.max(enVec.length, urVec.length);
+    for (let i = 0; i < n; i++) {
+      if (enVec[i] !== urVec[i]) {
+        err(urFile, `heading structure diverges from EN at heading #${i + 1} (EN=${enVec[i] ?? '∅'} UR=${urVec[i] ?? '∅'})`);
+        break;
+      }
+    }
+  }
+}
+
+// ---- LEGACY five-file layout (unchanged) ----------------------------------
+function checkUnitLegacy(unitDir, semester, courseFolder, courseCode, unitNo, bilingual) {
   for (const f of UNIT_FILES) {
     if (!existsSync(join(unitDir, f))) err(join(unitDir, f), `missing required unit file '${f}'`);
   }
@@ -131,65 +211,80 @@ function checkUnit(unitDir, semester, courseFolder, courseCode, unitNo, bilingua
   for (const f of UNIT_FILES) {
     const file = join(unitDir, f);
     if (!existsSync(file)) continue;
-    const parsed = matter(readFileSync(file, 'utf8'));
-    const fm = parsed.data;
+    const fm = checkUnitFileFm(file, courseCode, unitNo);
+    if (fm.coming_soon === true) comingSoon = true;
+    if (f === 'index.mdx') translationStatus = fm.translation_status;
+  }
 
-    if (!validateUnit(fm)) {
-      err(file, `invalid front-matter: ${ajvErrors(validateUnit)}`);
+  const urUnitDir = join(UR_BASE, `semester-${semester}`, courseFolder, `unit-${String(unitNo).padStart(2, '0')}`);
+  if (bilingual && !comingSoon && translationStatus === 'reviewed') {
+    checkParity(unitDir, urUnitDir, UNIT_FILES);
+  }
+}
+
+// ---- Spec 008 per-topic layout ------------------------------------------------
+function checkUnitTopic(unitDir, semester, courseFolder, courseCode, unitNo, bilingual, topicFiles) {
+  // required files
+  for (const f of ['index.mdx', 'unit-assessment.mdx']) {
+    if (!existsSync(join(unitDir, f))) err(join(unitDir, f), `per-topic unit missing required file '${f}'`);
+  }
+  // forbidden pooled legacy files
+  for (const f of FORBIDDEN_IN_TOPIC_LAYOUT) {
+    if (existsSync(join(unitDir, f))) {
+      const hint = f === 'teacher-notes.mdx' ? " — rename to 'unit-teacher-notes.mdx'" : ' — fold it into the topic cycles';
+      err(join(unitDir, f), `legacy file '${f}' cannot coexist with topic-*.mdx${hint}`);
     }
+  }
+  // topic files contiguous from 01
+  const ordinals = topicFiles.map((f) => Number(/^topic-(\d{2})\.mdx$/.exec(f)[1]));
+  for (let i = 0; i < ordinals.length; i++) {
+    if (ordinals[i] !== i + 1) {
+      err(join(unitDir, topicFiles[i]), `topic files are not contiguous from 01 — expected topic-${String(i + 1).padStart(2, '0')}.mdx`);
+      break;
+    }
+  }
+
+  // the full new-shape file set that exists
+  const fileSet = ['index.mdx', ...topicFiles, 'unit-assessment.mdx'];
+  if (existsSync(join(unitDir, 'unit-teacher-notes.mdx'))) fileSet.push('unit-teacher-notes.mdx');
+
+  let comingSoon = false;
+  let translationStatus = null;
+
+  for (const f of fileSet) {
+    const file = join(unitDir, f);
+    if (!existsSync(file)) continue;
+    const fm = checkUnitFileFm(file, courseCode, unitNo);
     if (fm.coming_soon === true) comingSoon = true;
     if (f === 'index.mdx') translationStatus = fm.translation_status;
 
-    // path <-> front-matter agreement
-    if (fm.course_code && fm.course_code !== courseCode) {
-      err(file, `course_code '${fm.course_code}' != folder '${courseCode}'`);
-    }
-    if (fm.unit_no != null && Number(fm.unit_no) !== unitNo) {
-      err(file, `unit_no ${fm.unit_no} != folder unit-${String(unitNo).padStart(2, '0')}`);
-    }
-
-    // FR-010: assessment_weighting must sum to 100 when present
-    if (fm.assessment_weighting) {
-      const { summative, formative } = fm.assessment_weighting;
-      if (Number(summative) + Number(formative) !== 100) {
-        err(file, `assessment_weighting must sum to 100 (got ${summative}+${formative})`);
+    // topic files: topic_no must equal the filename ordinal; topic_label required
+    const tm = /^topic-(\d{2})\.mdx$/.exec(f);
+    if (tm) {
+      const ord = Number(tm[1]);
+      if (fm.topic_no == null || Number(fm.topic_no) !== ord) {
+        err(file, `topic_no ${fm.topic_no ?? '(missing)'} != filename ordinal ${ord}`);
       }
-    }
-
-    // T018: glossary references resolve
-    for (const term of glossaryRefs(parsed.content)) {
-      if (!glossaryTerms.has(term)) {
-        err(file, `<Glossary term="${term}"> has no matching entry in glossary.json`);
+      if (!fm.topic_label || String(fm.topic_label).trim() === '') {
+        err(file, `topic file is missing a non-empty 'topic_label' front-matter field`);
       }
     }
   }
 
-  // T016: EN<->UR structural parity for reviewed units (skip coming_soon and
-  // English-only courses, Constitution III.2 carve-out)
+  // EN<->UR parity over the dynamic union of EN + UR unit-folder .mdx names
   const urUnitDir = join(UR_BASE, `semester-${semester}`, courseFolder, `unit-${String(unitNo).padStart(2, '0')}`);
   if (bilingual && !comingSoon && translationStatus === 'reviewed') {
-    if (!existsSync(urUnitDir)) {
-      err(urUnitDir, `reviewed unit requires an Urdu mirror (parity gate, FR-001)`);
-    } else {
-      for (const f of UNIT_FILES) {
-        const enFile = join(unitDir, f);
-        const urFile = join(urUnitDir, f);
-        if (!existsSync(enFile)) continue;
-        if (!existsSync(urFile)) {
-          err(urFile, `reviewed unit missing UR file '${f}' (section-file parity)`);
-          continue;
-        }
-        const enVec = headingVector(matter(readFileSync(enFile, 'utf8')).content);
-        const urVec = headingVector(matter(readFileSync(urFile, 'utf8')).content);
-        const n = Math.max(enVec.length, urVec.length);
-        for (let i = 0; i < n; i++) {
-          if (enVec[i] !== urVec[i]) {
-            err(urFile, `heading structure diverges from EN at heading #${i + 1} (EN=${enVec[i] ?? '∅'} UR=${urVec[i] ?? '∅'})`);
-            break;
-          }
-        }
-      }
-    }
+    const union = [...new Set([...mdxFilesIn(unitDir), ...mdxFilesIn(urUnitDir)])].sort();
+    checkParity(unitDir, urUnitDir, union);
+  }
+}
+
+function checkUnit(unitDir, semester, courseFolder, courseCode, unitNo, bilingual) {
+  const topicFiles = topicFilesIn(unitDir);
+  if (topicFiles.length === 0) {
+    checkUnitLegacy(unitDir, semester, courseFolder, courseCode, unitNo, bilingual);
+  } else {
+    checkUnitTopic(unitDir, semester, courseFolder, courseCode, unitNo, bilingual, topicFiles);
   }
 }
 
@@ -211,6 +306,7 @@ function walk() {
       const courseCode = course.toUpperCase();
       checkCategory(courseDir);
       checkOverview(courseDir, courseCode);
+      checkCourseReview(courseDir, courseCode);
       const bilingual = isBilingualCourse(courseDir);
 
       for (const unit of dirs(courseDir)) {

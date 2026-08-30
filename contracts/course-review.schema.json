@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bed-textbook/contracts/course-review.schema.json",
+  "title": "Course-review front-matter",
+  "description": "Contract for course-review.mdx front-matter (Spec 008 FR-006, contract: specs/008-rich-unit-pedagogy/contracts/end-of-course-review.md). A course-level end-matter page: course summary, practice-question bank, practicum project ideas, and a bounded '## Answers and marking guidance' final section. Optional file. Answer-key front-matter fields are forbidden (only prose answers inside the bounded body section are permitted). This file is the ONLY content file allowed sidebar_position.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["title", "course_code"],
+  "not": {
+    "anyOf": [
+      { "required": ["answer_key"] },
+      { "required": ["answers"] },
+      { "required": ["marking_scheme"] },
+      { "required": ["rubric_answers"] }
+    ]
+  },
+  "properties": {
+    "title": { "type": "string", "minLength": 1 },
+    "course_code": {
+      "type": "string",
+      "pattern": "^[A-Z]{2,4}-[0-9]{3}(--)?$",
+      "description": "Must match the parent course folder (uppercased)."
+    },
+    "sidebar_position": {
+      "type": "number",
+      "description": "The single sanctioned sidebar_position in content. Convention: 900, so the page sorts after the last unit-NN folder. Mirror the same value in the UR i18n copy."
+    },
+    "translation_status": { "enum": ["draft", "reviewed"] },
+    "bilingual": {
+      "type": "boolean",
+      "default": true,
+      "description": "Inherited meaning from course-overview: false marks an English-only course, exempt from the EN<->UR parity gate."
+    },
+    "resources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["ref"],
+        "additionalProperties": true,
+        "properties": {
+          "ref": { "type": "string", "minLength": 1 },
+          "type": { "type": "string" }
+        }
+      },
+      "description": "Optional further-reading pointers for the whole course - cited only, never reproduced (Constitution III.5)."
+    }
+  }
+}
