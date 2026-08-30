@@ -105,6 +105,40 @@ Spec 006 FR-010).
 - **OECD (TALIS / Education Working Papers)** — `suarez2022` anchors **Unit 1**'s
   teacher-identity material with an international evidence base.
 
+## Course review plan
+
+Seeds an eventual `docs/semester-1/efmp-302/course-review.mdx` (Spec 008 FR-016; contract:
+`specs/008-rich-unit-pedagogy/contracts/end-of-course-review.md`). Not parsed by any gate;
+authoring the actual page is out of Spec 008's scope (FR-029) — it is written when EFMP-302 is
+fully restructured to the per-topic layout.
+
+- **Course summary points** (the through-lines the review should recap):
+  - Teaching is a profession — it has a specialised knowledge base, formal training, a code of
+    conduct, and public accountability (Units 1, 3, 4).
+  - Professional practice is *ethical* practice — codes of conduct, moral reasoning models, and
+    reflective decision-making (Units 1–2, 6).
+  - Standards make the profession legible — national and global professional standards, and
+    their use in self-evaluation, licensing, and appraisal (Unit 4).
+  - The profession is under real pressure — workload, multi-grade classrooms, accountability,
+    the digital age — and professionals respond by continuing to learn (Units 5–6).
+  - Teacher *identity* is developed, not fixed — shaped by context, beliefs, and reflection
+    across a whole career (Units 1, 3, 6).
+- **Practice-question mix**: `### MCQs` ~15 (spread across all six units, Remember → Apply);
+  `### RRQs` ~10 (Understand → Analyze, ≥ 1 per unit); `### ERQs` ~5 (Analyze → Evaluate/Create,
+  each integrating two or more units).
+- **Practicum project ideas** (3–6 briefs a trainee carries into placement):
+  - *Profession audit* — observe your cooperating teacher for a week; document evidence of each
+    of the four features of a profession; bring back a one-page annotated log.
+  - *Ethics-in-action journal* — record three real classroom decisions with an ethical edge;
+    analyse each with the four-step framework; bring back the journal + a short reflection.
+  - *Standards self-map* — map your own current practice against three domains of Pakistan's
+    National Professional Standards; bring back the map + one development goal per domain.
+  - *Challenge case study* — pick one challenge your placement school actually faces
+    (multi-grade, resourcing, workload); document it and one growth-oriented response the staff
+    use; bring back the write-up.
+  - *One-term PD plan* — build a personal professional-development plan naming one activity from
+    each "ways to continue developing" category; bring back the plan for peer review.
+
 ## Unit 1: Understanding Teaching
 
 Weeks 1–3. Unit Spec (G1) for `docs/semester-1/efmp-302/unit-01/`.
@@ -134,24 +168,43 @@ The authoritative list the depth gate (`scripts/check-unit-depth.mjs`) grades
 `specs/content/efmp-302/coverage/unit-01.md` against (Spec 007 FR-009a). One row per leaf
 bullet of course-guide sections 1.1–1.4. IDs are stable once assigned.
 
-| ID | Guide ref | Sub-topic |
-|---|---|---|
-| U1-01 | 1.1 | Concept of a profession and a professional |
-| U1-02 | 1.1 | Features that distinguish a profession from an occupation |
-| U1-03 | 1.1 | Professionalism *in* teaching vs professionalisation *of* teaching |
-| U1-04 | 1.1 | Comparative perspective: teaching vs other professions |
-| U1-05 | 1.2 | Historical "industrial" metaphors of teaching (efficiency, control, compliance) |
-| U1-06 | 1.2 | Shift toward reflective, inquiry-based, learning-centred professionalism |
-| U1-07 | 1.3 | Specialised knowledge and training |
-| U1-08 | 1.3 | Professional code of conduct and ethical behaviour |
-| U1-09 | 1.3 | Accountability, autonomy, and collegiality in professional practice |
-| U1-10 | 1.3 | Role of professional associations and accreditation bodies |
-| U1-11 | 1.4 | Influence of sociocultural and policy contexts on teacher professionalism/identity |
-| U1-12 | 1.4 | How personal beliefs and values shape teacher identity |
-| U1-13 | 1.4 | Reflection and self-awareness in teacher-identity formation |
-| U1-14 | 1.4 | Reflecting on "who am I becoming as a teacher?" |
+| ID | Guide ref | Topic | Sub-topic |
+|---|---|---|---|
+| U1-01 | 1.1 | 1.1 | Concept of a profession and a professional |
+| U1-02 | 1.1 | 1.1 | Features that distinguish a profession from an occupation |
+| U1-03 | 1.1 | 1.1 | Professionalism *in* teaching vs professionalisation *of* teaching |
+| U1-04 | 1.1 | 1.1 | Comparative perspective: teaching vs other professions |
+| U1-05 | 1.2 | 1.2 | Historical "industrial" metaphors of teaching (efficiency, control, compliance) |
+| U1-06 | 1.2 | 1.2 | Shift toward reflective, inquiry-based, learning-centred professionalism |
+| U1-07 | 1.3 | 1.3 | Specialised knowledge and training |
+| U1-08 | 1.3 | 1.3 | Professional code of conduct and ethical behaviour |
+| U1-09 | 1.3 | 1.3 | Accountability, autonomy, and collegiality in professional practice |
+| U1-10 | 1.3 | 1.3 | Role of professional associations and accreditation bodies |
+| U1-11 | 1.4 | 1.4 | Influence of sociocultural and policy contexts on teacher professionalism/identity |
+| U1-12 | 1.4 | 1.4 | How personal beliefs and values shape teacher identity |
+| U1-13 | 1.4 | 1.4 | Reflection and self-awareness in teacher-identity formation |
+| U1-14 | 1.4 | 1.4 | Reflecting on "who am I becoming as a teacher?" |
 
-**Depth budget**: 14 sub-topics; 45–70 reading-min (unit total across the five English files)
+The `Topic` column declares the per-topic partition (Spec 008, `contracts/content-spec-v3.md`);
+the depth gate checks it against the `### Topic list` cells below.
+
+### Topic list
+
+The opt-in per-topic partition for `docs/semester-1/efmp-302/unit-01/` (Spec 008 FR-015/FR-016).
+Its presence, together with `topic-*.mdx` files on disk, puts Unit 1 on the new-shape gates.
+The `Sub-topic IDs` cells form a **total, disjoint partition** of the `### Sub-topic checklist`.
+
+| Topic | Title | Sub-topic IDs | Reading-min | Figures |
+|---|---|---|---|---|
+| 1.1 | What makes teaching a profession | U1-01, U1-02, U1-03, U1-04 | 15–21 | fig-U1-1 |
+| 1.2 | From an industrial model to inquiry-based teaching | U1-05, U1-06 | 11–17 | fig-U1-2 |
+| 1.3 | The four dimensions of teacher professionalism | U1-07, U1-08, U1-09, U1-10 | 16–22 | fig-U1-3 |
+| 1.4 | Becoming a teacher: developing your identity | U1-11, U1-12, U1-13, U1-14 | 13–19 | fig-U1-4 |
+
+**Depth budget**: 14 sub-topics; 4 topics; 90–120 reading-min (per-topic re-baseline; sums
+`index.mdx` (4) + `topic-01…04.mdx` (18 + 14 + 19 + 16) + `unit-assessment.mdx` (24) +
+`unit-teacher-notes.mdx` (8) = 103, band set ±~15% around the drafted total — T049; the five
+legacy files' 45–70 band no longer applies)
 
 **Prerequisite knowledge**: none beyond HSC-level general study skills — this is the opening
 unit of the course and of the semester. Learners are not assumed to know any education theory.
@@ -174,6 +227,26 @@ their own schooling shapes the teacher they are becoming (U1-11–U1-14).
 professionalism" (industrial → autonomous → collegial → post-modern) so the industrial→inquiry
 shift is not presented as a simple before/after; use the OECD/`suarez2022` identity model
 (identity as ongoing, relational, context-shaped) rather than a fixed-traits view.
+
+**Figure plan** (one per topic — seeds `specs/content/efmp-302/figures/unit-01.md`):
+  - fig-U1-1 — four-features comparison table: teacher vs shopkeeper vs doctor against specialised
+    knowledge / formal training / code of conduct / public accountability (Topic 1.1)
+  - fig-U1-2 — "one lesson, two ways" split panel: the same lesson taught in an industrial
+    (scripted, compliance) frame and an inquiry-based (reflective) frame (Topic 1.2)
+  - fig-U1-3 — accountability / autonomy / collegiality triangle, with the specialised-knowledge
+    base underneath (Topic 1.3)
+  - fig-U1-4 — identity-shaping influences web: schooling history, family, community, policy,
+    beliefs and values feeding into "who am I becoming as a teacher?" (Topic 1.4)
+
+**Unit-end assessment blueprint** (`unit-assessment.mdx` — Spec 008 fixed 10/10/5 bank):
+  - MCQs (10): Remember → Apply; ≥ 2 per topic — 1.1 (U1-01…U1-04), 1.2 (U1-05…U1-06),
+    1.3 (U1-07…U1-10), 1.4 (U1-11…U1-14)
+  - RRQs (10): Understand → Analyze; ≥ 2 per topic; each with a model answer + point-by-point
+    mark scheme in `## Answers and marking guidance`
+  - ERQs (5): Analyze → Evaluate/Create; one per topic (1.1–1.4) + one integrative item that
+    asks the learner to classify a described teacher's practice against all four dimensions and
+    the industrial→inquiry frame; each ERQ carries an analytic rubric, ≥ 1 demanding
+    Analyze-or-higher
 
 ## Unit 2: Models and Frameworks of Professional Ethics and Behaviors
 

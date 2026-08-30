@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://bed-textbook/contracts/style-guide-frontmatter.schema.json",
   "title": "Style guide front-matter",
-  "description": "Contract for specs/content/style-guide.md front-matter (Spec 006 FR-007). The `version` field is the single freeze marker for both the style guide and the terminology bank as a pair (Spec 006 FR-017, research.md R8) — bumping it is required for any further edit to either document. Spec 007 (content depth standard) sets it to \"2.0\" when the `## Unit depth standard` section is added and proven on the EFMP-302 Unit 1 proving unit; terminology.csv carries no version field of its own.",
+  "description": "Contract for specs/content/style-guide.md front-matter (Spec 006 FR-007). The `version` field is the single freeze marker for both the style guide and the terminology bank as a pair (Spec 006 FR-017, research.md R8) — bumping it is required for any further edit to either document. Spec 007 (content depth standard) sets it to \"2.0\" when the `## Unit depth standard` section is added and proven on the EFMP-302 Unit 1 proving unit; Spec 008 (rich unit pedagogy) sets it to \"3.0\" as the freeze marker for the `## Unit structure standard` / `## Answers and marking guidance policy` / `## Figure markers and manifests` sections — the existing `^[0-9]+\\.[0-9]+$` pattern already admits \"3.0\", so this is a description-only note, no structural change. terminology.csv carries no version field of its own.",
   "type": "object",
   "additionalProperties": true,
   "required": ["version"],

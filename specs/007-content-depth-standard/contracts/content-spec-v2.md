@@ -1,5 +1,8 @@
 # Contract: Expanded Course Content-Spec (v2)
 
+> **Extended by Spec 008 — see `specs/008-rich-unit-pedagogy/contracts/content-spec-v3.md`.**
+> v2 stays valid for any course/unit that has not opted into the per-topic layout.
+
 **File**: `specs/content/<course-code>/content-spec.md`
 **Extends**: Spec 006's content-spec (front matter `course_code`, `status` — **unchanged**;
 `contracts/content-spec-frontmatter.schema.json` still applies as-is).
