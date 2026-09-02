@@ -101,7 +101,7 @@ assets in `static/img/figures/`.
 - [x] T033 [P] Reconcile any implementation drift (final `<Figure>` prop names, SVG boilerplate, gate parser tolerances) back into `plan.md` / `data-model.md` / `contracts/`. [Constitution Art. IV.4]
 - [x] T034 `/sp.adr` — ADR-0012 for the figure-rendering decision cluster: `<Figure>` (revisits ADR-0011 rejected alt. D), the `prompt-only → generated → placed` lifecycle + carrier concept, SVG-first with HF-MCP raster, `.ur.svg` bilingual diagrams, `sharp` devDep.
 - [x] T035 PHRs under `history/prompts/009-figure-rendering/`: `0001-implement-…green` (embeds the full gate/build verification), `0002-plan-…plan` + `0003-tasks-…tasks` (backfill — the dir was empty).
-- [ ] T036 Final verification: `npm run validate:content && npm run check:pipeline-gate && npm run check:depth-gate && npm run check:figures && npm run check:no-answer-keys && npm run check:add-course && npm test && npm run build && npm run check:no-answer-keys` — all green. Commit + PR.
+- [x] T036 Final verification: `npm run validate:content && npm run check:pipeline-gate && npm run check:depth-gate && npm run check:figures && npm run check:no-answer-keys && npm run check:add-course && npm test && npm run build && npm run check:no-answer-keys` — all green. Commit + PR.
 
 ---
 
