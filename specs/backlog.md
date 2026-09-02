@@ -38,3 +38,17 @@ lost, without blocking delivery of the feature that surfaced them.
   stubs; the `ur` route falls back to EN behind the Spec 001 FR-003 banner until re-reviewed.
 - **EFMP-302 `course-review.mdx`.** Spec 008 seeded the `## Course review plan` in the
   content-spec (T028); the actual page is authored when EFMP-302 is fully restructured (FR-029).
+
+## From 008-rich-unit-pedagogy (2026-08-30)
+
+- **Figure image pass → delivered by Spec 009 (`009-figure-rendering`).** Spec 008 stopped at
+  `Status: prompt-only` (a comment marker per topic + a manifest) and scoped image generation
+  "Out of Scope". Spec 009 renders them: a `<Figure>` MDX component, hand-authored SVG for
+  schematic figures + the Hugging Face MCP image tool for illustrations, a `prompt-only →
+  generated → placed` manifest lifecycle, the widened `check:figures`, and the
+  `.claude/skills/generate-figures/` skill — proven on EFMP-302 Unit 1's four figures.
+- **Render figures for the rest of EFMP-302 (Units 2–6) and other courses** once they have a
+  per-topic layout with markers. Per-unit, via `generate-figures` (Spec 009 FR-017, Out of Scope).
+- **`fig-U1-2` raster re-do (optional).** EFMP-302 Unit 1's `fig-U1-2` shipped as a flat-vector
+  SVG (`Kind: diagram`) per its own "clean flat vector" prompt; re-run via HF MCP as a
+  `Kind: illustration` only if the owner wants a pictorial version.
