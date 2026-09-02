@@ -14,7 +14,7 @@ links:
   spec: specs/009-figure-rendering/spec.md
   ticket: null
   adr: history/adr/0012-figure-rendering-component-manifest-lifecycle-and-the-generate-figures-skill.md (Accepted)
-  pr: null
+  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/19
 files:
   - .gitignore
   - CLAUDE.md
