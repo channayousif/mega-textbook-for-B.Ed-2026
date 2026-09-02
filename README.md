@@ -106,9 +106,34 @@ units are unchanged and are not required to migrate.
   `## Explanation` → `## Activity: <name>` → `## Check your understanding` (≥3 numbered) →
   `## Summary` → `## Self-assessment checklist` (≥3 `- [ ]`) → `## Try this at your practicum
   school` → `## Summative task` → `## Further reading` (≥1 line).
-- **Figures** are inline `{/* FIGURE[fig-U<n>-<seq>]: <prompt>; alt: <alt> */}` comments (never
-  rendered), one per topic, tracked in `specs/content/<course>/figures/unit-NN.md`.
-  `npm run check:figures` enforces marker ↔ manifest consistency; legacy units are skipped.
+- **Figures** are authored as inline `{/* FIGURE[fig-U<n>-<seq>]: <prompt>; alt: <alt> */}`
+  comments, one per topic, tracked in `specs/content/<course>/figures/unit-NN.md`.
+  `npm run check:figures` enforces carrier ↔ manifest consistency; legacy units are skipped.
+
+### Rendering figures
+
+[`specs/009-figure-rendering/`](specs/009-figure-rendering/) turns those prompt-markers into
+committed, accessible, lazy-loaded images that render in both locales.
+
+- The **`.claude/skills/generate-figures/`** skill runs the pass: classify each marker →
+  `diagram` (hand-authored self-contained SVG, `<title>`/`role="img"`, a
+  `prefers-color-scheme` block, ≤ 20 KB) or `illustration` (a raster via the owner's Hugging
+  Face MCP image tool, or a generation brief + git-ignored `figures/.staging/` when none is
+  connected; optimised to WebP ≤ 150 KB) → **replace** the comment with `<Figure id=… src=… alt=… />`
+  → mirror into the Urdu topic file with a translated-label `<figId>.ur.svg` → move the manifest
+  row `prompt-only → generated → placed`.
+- `<Figure>` (`src/components/Figure.tsx`, registered globally) renders
+  `<figure><img loading="lazy" decoding="async"></figure>`; `src` is a root-absolute
+  `/img/figures/<course>/unit-NN/<figId>.<ext>` into `static/`. Styled by the `.figure` block in
+  `src/css/custom.css` (light/dark, `break-inside: avoid` in `@media print`).
+- `npm run optimize:figure -- [--svg] <in> <out>` (`scripts/optimize-figure.mjs`, offline,
+  `sharp` devDep) resizes + WebP-encodes a raster, or strips SVG whitespace; hard-fails over
+  budget.
+- The manifest becomes v2 — `| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |`
+  (contract: [`figure-manifest-v2.md`](specs/009-figure-rendering/contracts/figure-manifest-v2.md)).
+  `check:figures` keeps the exact Spec 008 code path for `prompt-only` and legacy units; the new
+  checks (carrier is a `<Figure>`, `Src` asset exists, `Kind` enum, UR `<Figure>` + `.ur.svg`)
+  apply only from `generated`/`placed`.
 - **Answers policy:** the prose patterns *answer key / marking scheme / correct answer* are
   permitted **only** inside the single, final `## Answers and marking guidance` section of
   `unit-assessment.mdx` / `course-review.mdx`. The four front-matter answer-key keys are
@@ -117,7 +142,8 @@ units are unchanged and are not required to migrate.
 - Per unit: `coverage/unit-NN.md` is v2 (`File` ∈ the new-shape set; every `topic-NN.mdx`
   referenced; coverage agrees with the `### Topic list` on where each sub-topic is taught).
 - `style-guide.md` gains `## Unit structure standard`, `## Answers and marking guidance policy`
-  and `## Figure markers and manifests` sections, frozen at `version: "3.0"`.
+  and `## Figure markers and manifests` sections (`version: "3.0"`; bumped to `"3.1"` when
+  Spec 009 rewrote the figure section for the rendering pass).
 - The `.claude/skills/author-unit/` skill authors a whole unit to this standard and emits the
   coverage / sources / figures artefacts.
 

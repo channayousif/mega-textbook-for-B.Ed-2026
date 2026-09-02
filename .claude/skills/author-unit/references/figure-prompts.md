@@ -1,8 +1,13 @@
 # Figure markers & prompts (author-unit)
 
 Teaching figures are planned now as **inline MDX comments** and tracked in a per-unit manifest.
-**Nothing renders yet** — a later, out-of-scope pass generates the images, places them, and
-flips the manifest `Status`. Your job: one good marker per topic + a matching manifest row.
+**Nothing renders yet** — the `generate-figures` skill (Spec 009) is the separate rendering pass:
+it classifies each marker (`diagram` → hand-authored SVG / `illustration` → Hugging Face MCP
+raster), optimises the asset, **replaces** the marker with a `<Figure>` element, mirrors it into
+the Urdu topic file, and moves the manifest row `prompt-only → generated → placed`. That is
+**not this skill's job** — author-unit stops at one good marker per topic + a matching
+`Status: prompt-only` manifest row. (Full contract:
+`specs/009-figure-rendering/contracts/figure-manifest-v2.md`.)
 
 ## Marker grammar
 

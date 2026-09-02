@@ -1,5 +1,5 @@
 ---
-version: "3.0"
+version: "3.1"
 ---
 
 # Content Style Guide
@@ -20,6 +20,12 @@ EFMP-302 Unit 1 proving unit. v1.0 was Spec 006's freeze.
 plus the extensions to `## Assessment blueprint defaults` and the depth-gate-vs-human table,
 proven on the EFMP-302 Unit 1 proving unit (restructured to the per-topic layout and passed the
 human Content gate, 2026-08-30 — Spec 008 FR-026 / SC-006).
+
+**v3.1** (2026-08-30, Spec 009) rewrites `## Figure markers and manifests` for the **rendering**
+pass: the `<Figure>` end-state, the `Kind` (`diagram`/`illustration`) split, the manifest v2
+columns (`+Kind`, `+Src`) and the `prompt-only → generated → placed` lifecycle, the `.ur.svg`
+bilingual-diagram rule, and the widened `check:figures` — proven by rendering EFMP-302 Unit 1's
+four figures.
 
 ## EN readability rules
 
@@ -315,14 +321,16 @@ This is a bounded, reversible carve-out (Constitution Art. V.2, amended v2.6.0).
 **distinct** from the RLS-protected Spec 003 LMS quiz/answer-key store, which stays
 backend-only and `verified_teacher`-gated.
 
-## Figure markers and manifests (Spec 008)
+## Figure markers and manifests (Spec 008 authoring, Spec 009 rendering)
 
-Teaching figures are planned as **inline MDX comments** in the topic files and tracked in a
-per-unit manifest. **Nothing renders yet** — a later, out-of-scope image pass will generate the
-images, place them, and flip the manifest `Status`.
+A teaching figure is **authored** as an inline MDX comment (Spec 008) and later **rendered** as
+a committed image (Spec 009). The comment marks the spot and carries the generation prompt +
+alt text; once the image exists, the comment is replaced by a `<Figure>` element and the
+manifest row moves through `prompt-only → generated → placed`.
 
-**Marker grammar** (inside a `topic-*.mdx`, usually in `## A real classroom situation` or
-`## Explanation`):
+### Authoring — the marker (Spec 008)
+
+Inside a `topic-*.mdx`, usually in `## A real classroom situation` or `## Explanation`:
 
 ```
 {/* FIGURE[fig-U<unitNo>-<seq>]: <generation prompt>; alt: <alt text> */}
@@ -333,19 +341,58 @@ Extraction regex:
 
 - **`<id>`** matches `^fig-U\d+-\d+$`; the `U<n>` group **==** the unit-folder number; `<seq>`
   is a **unit-scoped** integer, unique within the unit (not per topic).
-- **`<prompt>`** ≥ 10 non-space chars — a concrete instruction: subject; style
-  ("clean flat vector, labelled, high contrast, no colour-only meaning"); aspect.
-- **`<alt>`** non-empty — the accessible description that becomes the image `alt` text
-  (Constitution Art. III.8).
-- **At least one marker per `topic-*.mdx`** (FR-014).
+- **`<prompt>`** ≥ 10 non-space chars — subject; style ("clean flat vector, labelled, high
+  contrast, no colour-only meaning"); aspect.
+- **`<alt>`** non-empty — the accessible description that becomes the image `alt` (Art. III.8).
+- **At least one figure per `topic-*.mdx`.**
 
-**Manifest**: `specs/content/<course>/figures/unit-NN.md`, one table
-`| Figure ID | Topic | Prompt | Alt text | Status |`. `Status ∈ {prompt-only, generated,
-placed}` — **all `prompt-only` in this feature**. Marker-ID set **==** manifest-ID set (both
-directions); each row's `Topic` **==** the `topic_label` of the file its marker sits in; no
-blank cells. For `translation_status: reviewed` bilingual units, the UR `topic-*.mdx` carry the
-**same** marker IDs (the manifest is English-only; the ID match is the parity mechanism).
+### Rendering — the `<Figure>` end-state (Spec 009)
 
-**Gate**: `npm run check:figures` (`scripts/check-figures.mjs`) — CI step in the `build` job,
-after the depth gate, before the answer-key check. Legacy units (no `topic-*.mdx`) are skipped.
-Full contract: `specs/008-rich-unit-pedagogy/contracts/figures-manifest.md`.
+When a figure is rendered, its comment marker is **replaced** at the same position by:
+
+```mdx
+<Figure id="fig-U1-1" src="/img/figures/efmp-302/unit-01/fig-U1-1.svg" alt="<the marker's alt, verbatim>" />
+```
+
+- `id` == the marker id / manifest `Figure ID`; `alt` == the marker's alt text verbatim;
+  `src` == the manifest `Src` (root-absolute `/img/figures/<course-lowercase>/unit-NN/<figId>.<ext>`).
+- `<Figure>` renders `<figure><img loading="lazy" decoding="async" …></figure>` — lazy, print-safe
+  (`break-inside: avoid`), light/dark-aware. Registered globally in `src/theme/MDXComponents.tsx`.
+- A **carrier** for figure `X` is a `{/* FIGURE[X] */}` comment **or** a `<Figure id="X" />`. The
+  invariants below count carriers of either form.
+
+**Kinds.** `diagram` — a labelled schematic, hand-authored as a self-contained SVG
+(`<title>` + `role="img"`, system-font stack, a `@media (prefers-color-scheme: dark)` block,
+meaning by shape+label never colour, ≤ 20 KB). `illustration` — a scene, generated via the
+Hugging Face MCP image tool (or a generation brief + `figures/.staging/` when no tool is
+connected), optimised to WebP ≤ 150 KB, longest edge ≤ 1600 px. `diagram` is the default.
+
+**Bilingual.** A placed `diagram` also has `<figId>.ur.svg` with the labels translated; the UR
+`topic-*.mdx` `<Figure src>` points at it. A placed `illustration` reuses the one `.webp` with a
+translated `alt`. Enforced when the EN `index.mdx` is `translation_status: reviewed`;
+written-and-wired but not gate-blocked while `draft`.
+
+### Manifest (v2)
+
+`specs/content/<course>/figures/unit-NN.md`, one table:
+
+```
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+```
+
+- `Kind ∈ {diagram, illustration}`; `Src` is the `/img/…` path, **blank iff `Status: prompt-only`**.
+- `Status`: `prompt-only` (comment only, no asset) → `generated` (asset exists, still a comment)
+  → `placed` (comment replaced by `<Figure>`, asset committed).
+- Carrier-id set **==** manifest-id set both ways; each row's `Topic` **==** the carrier file's
+  `topic_label`. Parser is column-aware (a 5-column Spec 008 manifest still parses).
+- Full contract: `specs/009-figure-rendering/contracts/figure-manifest-v2.md` (supersedes the
+  Spec 008 `figures-manifest.md`).
+
+### Gate + tooling
+
+- `npm run check:figures` (`scripts/check-figures.mjs`) — CI step in the `build` job. `prompt-only`
+  units and legacy units take the exact Spec 008 path; the new checks (carrier is a `<Figure>`;
+  `Src` file exists; `Kind` enum; UR `<Figure>` + `.ur.svg`) apply only from `generated`/`placed`.
+- `npm run optimize:figure -- [--svg] <in> <out>` (`scripts/optimize-figure.mjs`) — offline
+  raster resize + WebP encode, or SVG whitespace strip; hard-fails over budget.
+- The `generate-figures` skill (`.claude/skills/generate-figures/`) runs the render loop.
