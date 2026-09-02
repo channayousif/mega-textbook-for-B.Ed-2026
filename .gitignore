@@ -42,3 +42,6 @@ Thumbs.db
 
 # Spec 006: quiz/answer-key staging worksheets — never committed (FR-018)
 specs/content/**/.staging/
+
+# Spec 009: figure generation staging (raster drops awaiting optimise) — never committed (FR-004)
+specs/content/**/figures/.staging/
