@@ -1,9 +1,16 @@
 # Contract: Figure Markers & Manifest
 
+> **Superseded for rendered units by
+> [`specs/009-figure-rendering/contracts/figure-manifest-v2.md`](../../009-figure-rendering/contracts/figure-manifest-v2.md).**
+> Spec 009 executed this file's "Lifecycle note" (below): it adds the `<Figure>` end-state, the
+> `Kind`/`Src` columns and the `prompt-only → generated → placed` lifecycle. A unit still
+> entirely at `Status: prompt-only` is byte-for-byte valid under both contracts; the authoring
+> rules here (marker grammar, IDs, alt text) are unchanged and still govern `author-unit`.
+
 **Marker location**: inline in each `docs/semester-N/<course>/unit-NN/topic-NN.mdx`
 **Manifest file**: `specs/content/<course-code>/figures/unit-NN.md` (`NN` = zero-padded unit number)
 **Read by**: `scripts/check-figures.mjs` (FR-012–014)
-**Renders**: never — markers are MDX comments.
+**Renders**: never — the *marker* is an MDX comment (Spec 009 replaces it with a `<Figure>`).
 
 ## Marker grammar
 
@@ -76,3 +83,7 @@ description; whether a figure is needed at that exact spot. Human Content gate.
 A later, out-of-scope image pass will generate images from the prompts, drop the files under
 `static/`, replace each marker with a real `<img>` / `<figure>`, and flip the manifest `Status` to
 `generated` then `placed`. Spec 008 stops at `prompt-only`.
+
+> **Executed by Spec 009 (2026-08-30).** The image pass is
+> `.claude/skills/generate-figures/` + the `<Figure>` component + manifest v2. See
+> `specs/009-figure-rendering/contracts/figure-manifest-v2.md`.

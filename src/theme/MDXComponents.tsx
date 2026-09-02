@@ -5,6 +5,7 @@ import PrintHandout from '@site/src/components/PrintHandout';
 import BloomTag from '@site/src/components/BloomTag';
 import ActivityCard from '@site/src/components/ActivityCard';
 import ObjectiveList from '@site/src/components/ObjectiveList';
+import Figure from '@site/src/components/Figure';
 
 /**
  * Register unit components globally (T010) so MDX content can use them without a
@@ -18,4 +19,5 @@ export default {
   BloomTag,
   ActivityCard,
   ObjectiveList,
+  Figure,
 };

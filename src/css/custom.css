@@ -83,6 +83,28 @@ html[dir='rtl'] code {
   margin: 1rem 0;
 }
 
+/* --- Rendered teaching figures (Spec 009, <Figure>) ----------------------- */
+.figure {
+  display: block;
+  margin: 1.5rem auto;
+  text-align: center;
+}
+.figure img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+}
+/* Schematic diagrams are hand-authored SVG — cap their width so labels stay legible. */
+.figure--diagram img {
+  max-width: 640px;
+}
+.figure figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
 /* --- Auth form controls (Spec 002, T061) -----------------------------------
    Found while doing the accessibility pass: Infima ships no `.input` class at
    all — every text input across every auth page (`className="input"`) had
@@ -190,6 +212,10 @@ html[dir='rtl'] code {
   /* keep RTL/Nastaliq in printed Urdu handouts */
   html[dir='rtl'] .markdown {
     line-height: 2.2;
+  }
+  /* never split a figure across an A4 page boundary (Spec 009) */
+  .figure {
+    break-inside: avoid;
   }
 }
 
