@@ -101,7 +101,7 @@ test('student takes a quiz, retakes it and improves, teacher sees the best score
     await expect(studentPage.getByText(/you joined the class/i)).toBeVisible();
 
     await studentPage.goto(`/app/classes/assignments/?classId=${classId}`);
-    await studentPage.getByRole('link', { name: /quiz — unit 5/i }).click();
+    await studentPage.getByRole('link', { name: /quiz - unit 5/i }).click();
     await expect(studentPage).toHaveURL(/\/app\/classes\/quiz\/?\?/);
 
     // Attempt 1: both correct -> instant score 10/10 (AS1).
