@@ -9,9 +9,10 @@
  * ("5-8 items"), so it is NOT flagged here.
  *
  * Scanned roots: docs/, guides/, i18n/, specs/content/ - every published or
- * pipeline-authored content tree. history/ is exempt as an immutable record
- * (see the amendment PHR); .claude/skills/, src/, README.md and CLAUDE.md are
- * kept clean by convention but not gated here.
+ * pipeline-authored content tree - plus the standalone glossary.json. history/ is
+ * exempt as an immutable record (see the amendment PHR); .claude/skills/, src/,
+ * docusaurus.config.ts, README.md and CLAUDE.md are kept clean by convention but
+ * not gated here.
  *
  * Flagged characters (the em-dash class):
  *   U+2014 EM DASH               "—"
@@ -25,10 +26,12 @@
  *   node scripts/check-no-em-dash.mjs [--scan-dir <dir>]...
  */
 
-import { readdirSync, readFileSync, statSync } from 'node:fs';
+import { readdirSync, readFileSync, statSync, existsSync } from 'node:fs';
 import { join, extname } from 'node:path';
 
 const DEFAULT_SCAN_DIRS = ['docs', 'guides', 'i18n', 'specs/content'];
+// Individual authored-content files that live outside the scanned trees.
+const DEFAULT_SCAN_FILES = ['glossary.json'];
 const SCAN_EXTENSIONS = new Set(['.md', '.mdx', '.csv']);
 
 const EM_DASH_RE = /[—―⸺⸻]/g;
@@ -86,8 +89,12 @@ for (let i = 0; i < args.length; i += 1) {
   if (args[i] === '--scan-dir' && args[i + 1]) scanDirs.push(args[(i += 1)]);
 }
 const dirs = scanDirs.length > 0 ? scanDirs : DEFAULT_SCAN_DIRS;
+const extraFiles = scanDirs.length > 0 ? [] : DEFAULT_SCAN_FILES.filter((f) => existsSync(f));
 
-const findings = dirs.flatMap((dir) => [...walk(dir)].flatMap(scanFile));
+const findings = [
+  ...dirs.flatMap((dir) => [...walk(dir)].flatMap(scanFile)),
+  ...extraFiles.flatMap(scanFile),
+];
 
 if (findings.length > 0) {
   console.error(`\n✖ Em dash found in authored content (${findings.length} occurrence(s)).\n`);
@@ -103,4 +110,6 @@ if (findings.length > 0) {
   process.exit(1);
 }
 
-console.log(`✓ no em dash in authored content (scanned: ${dirs.join(', ')})`);
+console.log(
+  `✓ no em dash in authored content (scanned: ${[...dirs, ...extraFiles].join(', ')})`
+);
