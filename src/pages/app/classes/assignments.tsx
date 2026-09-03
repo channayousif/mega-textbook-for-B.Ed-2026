@@ -10,15 +10,15 @@ import { fetchOwnSubmission, computeStudentStatus, statusLabel } from '@site/src
 import { fetchOwnBestScore } from '@site/src/lib/quiz';
 import type { Assignment, AssignmentStudentStatus } from '@site/src/lib/types';
 
-/** A quiz-sourced assignment has no `submissions` row at all (it's scored via `quiz_attempts`) — routes to quiz.tsx, not assignment.tsx/queue.tsx. */
+/** A quiz-sourced assignment has no `submissions` row at all (it's scored via `quiz_attempts`) - routes to quiz.tsx, not assignment.tsx/queue.tsx. */
 function detailHref(classId: string, a: Assignment): string {
   const page = a.source_kind === 'quiz' ? 'quiz' : 'assignment';
   return `/app/classes/${page}?classId=${classId}&assignmentId=${a.id}`;
 }
 
 /**
- * Assignment list — teacher (all, incl. unpublished) / student (published
- * only, with computed status) — Spec 003, T035/T062. FR-005, FR-006, FR-016.
+ * Assignment list - teacher (all, incl. unpublished) / student (published
+ * only, with computed status) - Spec 003, T035/T062. FR-005, FR-006, FR-016.
  */
 
 const MESSAGES = {
@@ -131,10 +131,10 @@ function StudentAssignmentsList({ classId }: { classId: string }): React.ReactEl
     }
     const withStatus = await Promise.all(
       (data ?? []).map(async (a) => {
-        // A quiz-sourced assignment has no `submissions` row at all — it's
+        // A quiz-sourced assignment has no `submissions` row at all - it's
         // scored via `quiz_attempts`/`quiz_best_scores`, not `grades`. Score
         // exists <=> "graded" (an instant score IS the returned result, same
-        // as a teacher-returned grade conceptually — data-model.md's
+        // as a teacher-returned grade conceptually - data-model.md's
         // "Graded / Returned" row applies here via a best score, not a
         // `grades` row).
         if (a.source_kind === 'quiz') {
@@ -144,7 +144,7 @@ function StudentAssignmentsList({ classId }: { classId: string }): React.ReactEl
         }
         const { data: submission } = await fetchOwnSubmission(a.id, profile.id);
         // "graded" isn't determined here (that reads `grades`, on the detail
-        // page) — this list treats "submitted"/"late" as the ceiling, matching
+        // page) - this list treats "submitted"/"late" as the ceiling, matching
         // FR-006's status list without a second round-trip per assignment.
         const status = computeStudentStatus({ dueAtIso: a.due_at, submission, graded: false });
         return { assignment: a, status };
@@ -205,7 +205,7 @@ function AssignmentsContent({ classId }: { classId: string }): React.ReactElemen
   }
   return (
     <div>
-      <h2>Assignments — {classRow.name}</h2>
+      <h2>Assignments - {classRow.name}</h2>
       {role === 'teacher' ? <TeacherAssignmentsList classId={classId} /> : <StudentAssignmentsList classId={classId} />}
     </div>
   );

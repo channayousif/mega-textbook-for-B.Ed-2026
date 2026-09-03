@@ -5,7 +5,7 @@ import { fetchAllAggregatedFeedback, type ActivityAggregateSummary } from '@site
 
 /**
  * Admin: aggregated Activity Feedback per activity (Spec 005, T032, FR-008)
- * — average rating and every recorded what-didn't-work note across every
+ * - average rating and every recorded what-didn't-work note across every
  * teacher who has rated it, to prioritize content revisions.
  */
 function AdminFeedbackContent(): React.ReactElement {
@@ -56,7 +56,7 @@ function AdminFeedbackContent(): React.ReactElement {
                 <td data-testid="aggregate-average-rating">{s.averageRating.toFixed(1)}</td>
                 <td>{s.responseCount}</td>
                 <td>
-                  {s.whatDidntNotes.length === 0 ? '—' : (
+                  {s.whatDidntNotes.length === 0 ? '-' : (
                     <ul>
                       {s.whatDidntNotes.map((note, i) => <li key={i}>{note}</li>)}
                     </ul>

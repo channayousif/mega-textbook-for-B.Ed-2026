@@ -13,15 +13,15 @@ import type { Assignment, AnswerKey } from '@site/src/lib/types';
 
 /**
  * Teacher's grading queue (Spec 003, T044/T049/T062). List view, one row per
- * actively enrolled student — submitted/late/missing/graded (FR-006),
+ * actively enrolled student - submitted/late/missing/graded (FR-006),
  * mark+feedback entry with max-mark validation (FR-010), anonymized
  * placeholder for a tombstoned student whose `profiles.full_name IS NULL`
- * (FR-019), and — for a verified teacher grading a formative/summative
- * unit item — the official answer key/rubric (FR-013). Bilingual status/
+ * (FR-019), and - for a verified teacher grading a formative/summative
+ * unit item - the official answer key/rubric (FR-013). Bilingual status/
  * error text (FR-016); static labels stay English (Spec 002 precedent).
  */
 
-const ANONYMIZED_LABEL = '(no name set)'; // same convention as roster.tsx — covers both "never set" and tombstoned
+const ANONYMIZED_LABEL = '(no name set)'; // same convention as roster.tsx - covers both "never set" and tombstoned
 
 const MESSAGES = {
   loading: { en: 'Loading…', ur: 'لوڈ ہو رہا ہے…' },
@@ -46,9 +46,9 @@ function useLocale(): 'en' | 'ur' {
 }
 
 /**
- * FR-013 — only rendered when the caller's `verified_teacher` flag is true;
+ * FR-013 - only rendered when the caller's `verified_teacher` flag is true;
  * absent (not just hidden) otherwise. Fetches lazily on reveal, not on page
- * load — RLS already denies an unverified caller 0 rows either way, but
+ * load - RLS already denies an unverified caller 0 rows either way, but
  * there is no reason to fetch restricted content before the teacher asks for it.
  */
 function AnswerKeyPanel({ assignment }: { assignment: Pick<Assignment, 'course_code' | 'unit_no' | 'source_kind'> }): React.ReactElement | null {
@@ -212,7 +212,7 @@ function QueueRowView({
           <div>
             <p>
               {row.grade.mark} / {maxMark}
-              {row.grade.feedback && <> — {row.grade.feedback}</>}
+              {row.grade.feedback && <> - {row.grade.feedback}</>}
             </p>
             <button type="button" className="button button--sm button--secondary" onClick={() => setEditing(true)}>
               Edit
@@ -229,7 +229,7 @@ function QueueRowView({
             }}
           />
         ) : (
-          <span>—</span>
+          <span>-</span>
         )}
       </td>
     </tr>
@@ -275,7 +275,7 @@ function QueueContent({ classId, assignmentId }: { classId: string; assignmentId
 
   return (
     <div>
-      <h2>Grading queue — {assignment.title}</h2>
+      <h2>Grading queue - {assignment.title}</h2>
       <p>Due {new Date(assignment.due_at).toLocaleString()} · Max mark {assignment.max_mark}</p>
       {verifiedTeacher && <AnswerKeyPanel assignment={assignment} />}
       {rows.length === 0 ? (

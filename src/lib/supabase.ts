@@ -3,7 +3,7 @@ import type { SupabaseClient } from '@supabase/supabase-js';
 /**
  * Supabase browser client (Spec 002, research.md R1).
  *
- * ⚠️ SSG SAFETY — do not "simplify" this into a module-level `createClient(...)`.
+ * ⚠️ SSG SAFETY - do not "simplify" this into a module-level `createClient(...)`.
  * Docusaurus prerenders every page in Node during `npm run build`, where
  * `window` and `localStorage` do not exist. Constructing the client at module
  * scope makes the build fail with `window is not defined`. Spec 001 already lost
@@ -16,12 +16,12 @@ import type { SupabaseClient } from '@supabase/supabase-js';
  * auto-refreshing session that survives browser restarts, and the spec forbids
  * custom token storage. Do not hand-roll refresh logic.
  *
- * ⚠️ T060 (2026-07-19) — `getSupabase()` is async and uses a dynamic
+ * ⚠️ T060 (2026-07-19) - `getSupabase()` is async and uses a dynamic
  * `import()`, not `require()`. `require()` is a *synchronous* call, so webpack
- * bundles `@supabase/supabase-js` directly into `main.js` — every content page
+ * bundles `@supabase/supabase-js` directly into `main.js` - every content page
  * paid for it, measured at +59.6 KB gzip, 4.1 KB over the Art. V.5 budget
  * (PHR 0011). Dynamic `import()` lets webpack code-split it into its own chunk,
- * fetched only when a page actually calls `getSupabase()` — i.e. only on
+ * fetched only when a page actually calls `getSupabase()` - i.e. only on
  * `/app/*` pages. Callers MUST `await` it now; every call site already lived
  * inside an async function or effect, so this was mechanical everywhere except
  * `AuthContext`'s and `reset.tsx`'s `useEffect`s, which need the standard
@@ -66,10 +66,10 @@ export function isAuthConfigured(): boolean {
 
 /**
  * Get the singleton client, or `null` when unavailable (during SSG, or before
- * config is supplied). Callers MUST handle null rather than assuming a client —
+ * config is supplied). Callers MUST handle null rather than assuming a client -
  * that is what keeps prerendering working.
  *
- * Async since T060 — dynamic `import()` is what lets webpack code-split
+ * Async since T060 - dynamic `import()` is what lets webpack code-split
  * supabase-js out of every content page's bundle (see file header). Caches
  * the in-flight promise, not just the resolved client, so concurrent callers
  * (e.g. AuthContext's effect and a page's own effect both mounting at once)
@@ -84,8 +84,8 @@ export async function getSupabase(): Promise<SupabaseClient | null> {
     clientPromise = import('@supabase/supabase-js').then(({ createClient }) => {
       const created = createClient(cachedConfig!.supabaseUrl, cachedConfig!.supabaseAnonKey, {
         auth: {
-          persistSession: true,      // FR-011a — survives browser restarts
-          autoRefreshToken: true,    // FR-011a — no re-prompt during normal use
+          persistSession: true,      // FR-011a - survives browser restarts
+          autoRefreshToken: true,    // FR-011a - no re-prompt during normal use
           detectSessionInUrl: true,  // completes the OAuth redirect handshake
           flowType: 'pkce',
         },

@@ -4,10 +4,10 @@ import type { Assignment } from '@site/src/lib/types';
 
 /**
  * Shared per-student-per-assignment mark computation (Spec 005, research.md
- * R4) — extracted from `gradebookExport.ts` (Spec 003) so Analytics (T036)
+ * R4) - extracted from `gradebookExport.ts` (Spec 003) so Analytics (T036)
  * and the gradebook export reuse one implementation instead of two parallel
  * ones. Non-quiz assignments are scored via `submissions.grades(mark)`;
- * quiz assignments via the existing `quiz_best_scores` (Spec 003) view —
+ * quiz assignments via the existing `quiz_best_scores` (Spec 003) view -
  * never `grades` (data-model.md's design decision, unchanged).
  */
 
@@ -52,7 +52,7 @@ export async function fetchMarksByStudentForAssignments(
       .from('quiz_best_scores')
       .select('student_id, assignment_id, best_score')
       .in('assignment_id', quizIds);
-    // Tolerated, not returned, matching gradebookExport.ts's precedent — a
+    // Tolerated, not returned, matching gradebookExport.ts's precedent - a
     // failure reading quiz scores shouldn't block the rest of the marks map.
     if (!error) {
       type QuizScore = { student_id: string; assignment_id: string; best_score: number };

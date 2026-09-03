@@ -4,8 +4,8 @@ import { AuthProvider } from '@site/src/contexts/AuthContext';
 /**
  * Docusaurus `Root` swizzle (Spec 002, FR-011).
  *
- * Root is the ONLY component that wraps every page — docs, blog, and custom
- * /app pages alike — and it survives client-side navigation without remounting.
+ * Root is the ONLY component that wraps every page - docs, blog, and custom
+ * /app pages alike - and it survives client-side navigation without remounting.
  * That is exactly what FR-011 needs: one continuous session across the textbook
  * and the personal pages, with no re-prompt when crossing between them.
  *

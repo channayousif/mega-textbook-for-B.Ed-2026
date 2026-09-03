@@ -4,7 +4,7 @@ import type { Result } from '@site/src/lib/classes';
 /**
  * Teacher Overview queries (Spec 005, T007, FR-002).
  *
- * COSMETIC CONVENIENCE ONLY (Constitution Art. IX.2) — every function here is
+ * COSMETIC CONVENIENCE ONLY (Constitution Art. IX.2) - every function here is
  * a thin wrapper around a PostgREST call; real authorization is Spec 003's
  * existing RLS on `classes`/`assignments`/`submissions`/`quiz_attempts` (a
  * teacher's queries are already scoped to their own classes by the database,
@@ -25,7 +25,7 @@ async function client() {
 export type UngradedCount = { classId: string; className: string; ungradedCount: number };
 
 /**
- * FR-002 — an ungraded submission count per active class, never combined.
+ * FR-002 - an ungraded submission count per active class, never combined.
  * Quiz-type assignments never populate `submissions` (they use
  * `quiz_attempts`, auto-scored) and are therefore naturally excluded from
  * "ungraded," consistent with Spec 003's `computeStudentStatus` precedent.
@@ -80,7 +80,7 @@ export type SoonestDueAssignment = {
 };
 
 /**
- * FR-002, 2026-07-24 clarification — the 5 soonest-due assignments across
+ * FR-002, 2026-07-24 clarification - the 5 soonest-due assignments across
  * all of the teacher's own active classes combined, regardless of any
  * individual student's submission state (this is the teacher's own upcoming
  * deadline awareness, not a per-student due-soon list).
@@ -126,7 +126,7 @@ export type RecentActivityItem = {
 };
 
 /**
- * FR-002, 2026-07-24 clarification — a fixed 10-item feed merging assignment
+ * FR-002, 2026-07-24 clarification - a fixed 10-item feed merging assignment
  * submissions and quiz attempts across all of the teacher's own classes,
  * newest first.
  */

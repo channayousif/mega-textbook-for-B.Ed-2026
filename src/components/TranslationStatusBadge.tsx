@@ -15,8 +15,8 @@ export default function TranslationStatusBadge({
 
   const label =
     status === 'draft'
-      ? 'Draft translation — not yet human-reviewed / مسودہ ترجمہ'
-      : 'Urdu translation not yet available — showing English / اردو ترجمہ ابھی دستیاب نہیں';
+      ? 'Draft translation - not yet human-reviewed / مسودہ ترجمہ'
+      : 'Urdu translation not yet available - showing English / اردو ترجمہ ابھی دستیاب نہیں';
 
   return (
     <div className={`translation-badge translation-badge--${status}`} role="note">

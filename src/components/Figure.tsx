@@ -8,7 +8,7 @@ import React from 'react';
  *    `/img/figures/efmp-302/unit-01/fig-U1-1.svg` (diagram) or `…/fig-U1-2.webp`
  *    (illustration). No import, locale-agnostic.
  *  - `alt` is the accessible description, verbatim from the figure marker
- *    (Constitution Art. III.8) — required and non-empty.
+ *    (Constitution Art. III.8) - required and non-empty.
  *  - `loading="lazy"` + `decoding="async"` always (Art. V.5, low-bandwidth first).
  *
  * Contract: specs/009-figure-rendering/contracts/figure-component.md.

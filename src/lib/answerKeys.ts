@@ -5,10 +5,10 @@ import type { AnswerKey, SubmissionQuizItemKind } from '@site/src/lib/types';
 /**
  * Answer key / marking rubric lookup (Spec 003, T048).
  *
- * COSMETIC CONVENIENCE ONLY (Constitution Art. IX.2) — real authorization is
+ * COSMETIC CONVENIENCE ONLY (Constitution Art. IX.2) - real authorization is
  * RLS (supabase/migrations/0021), gated on `is_verified_teacher()`. An
  * unverified teacher or student calling this simply gets `data: null` back
- * (0 rows), never an error — the RLS policy filters, it doesn't reject.
+ * (0 rows), never an error - the RLS policy filters, it doesn't reject.
  */
 
 async function client() {
@@ -17,7 +17,7 @@ async function client() {
   return supabase;
 }
 
-/** FR-013 — the official answer key/rubric for one unit's formative or summative item. */
+/** FR-013 - the official answer key/rubric for one unit's formative or summative item. */
 export async function fetchAnswerKey(
   courseCode: string,
   unitNo: number,

@@ -12,7 +12,7 @@ import type { QuizAttemptResult, ClassBestScoreRow } from '@site/src/lib/quiz';
 import type { Assignment, QuizItem } from '@site/src/lib/types';
 
 /**
- * Auto-graded practice quiz — student take/retake UI, teacher best-score
+ * Auto-graded practice quiz - student take/retake UI, teacher best-score
  * results view (Spec 003, T060/T062). FR-017, FR-016, 2026-07-19 clarification.
  */
 
@@ -25,8 +25,8 @@ const MESSAGES = {
   submitError: { en: 'Could not submit the quiz. The due date may have passed.', ur: 'کوئز جمع نہیں ہو سکا۔ ہو سکتا ہے آخری تاریخ گزر چکی ہو۔' },
   noQuestions: { en: 'No quiz questions available for this unit yet.', ur: 'اس یونٹ کے لیے ابھی کوئی کوئز سوالات دستیاب نہیں۔' },
   pastDueWarning: {
-    en: 'The due date for this quiz has passed — new attempts are no longer accepted.',
-    ur: 'اس کوئز کی آخری تاریخ گزر چکی ہے — نئی کوششیں اب قبول نہیں کی جاتیں۔',
+    en: 'The due date for this quiz has passed - new attempts are no longer accepted.',
+    ur: 'اس کوئز کی آخری تاریخ گزر چکی ہے - نئی کوششیں اب قبول نہیں کی جاتیں۔',
   },
   submitting: { en: 'Submitting…', ur: 'جمع ہو رہا ہے…' },
   loadResultsError: { en: 'Could not load the results.', ur: 'نتائج لوڈ نہیں ہو سکے۔' },

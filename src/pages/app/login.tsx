@@ -22,10 +22,10 @@ export default function LoginPage(): React.ReactElement {
 
   const returnTo = getReturnTo(location.search);
 
-  // Already signed in — no reason to show the form again.
+  // Already signed in - no reason to show the form again.
   if (session) {
     if (typeof window !== 'undefined') window.location.assign(returnTo);
-    return <Layout title="Sign in"><p>Signed in — redirecting…</p></Layout>;
+    return <Layout title="Sign in"><p>Signed in - redirecting…</p></Layout>;
   }
 
   async function handleGoogle(): Promise<void> {
@@ -52,12 +52,12 @@ export default function LoginPage(): React.ReactElement {
       return;
     }
 
-    // FR-020 — GoTrue itself has no concept of `profiles.status` (research.md
+    // FR-020 - GoTrue itself has no concept of `profiles.status` (research.md
     // R5 deliberately doesn't set a GoTrue ban; suspension is enforced purely
     // via RLS + refresh-token revocation). So credentials for a suspended
     // account validate fine here, but the profile fetch RLS filters to zero
     // rows (profiles_select_own requires status='active'). That's the only
-    // signal available — treat it as suspended, not a generic sign-out.
+    // signal available - treat it as suspended, not a generic sign-out.
     const { data: profileRow } = await supabase
       .from('profiles')
       .select('id')

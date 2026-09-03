@@ -14,9 +14,9 @@ description: >-
 
 # generate-figures
 
-Turn one unit's `{/* FIGURE[fig-U<n>-<seq>]: <prompt>; alt: <alt> */}` comment markers — planned
+Turn one unit's `{/* FIGURE[fig-U<n>-<seq>]: <prompt>; alt: <alt> */}` comment markers - planned
 by `author-unit` (Spec 008) and tracked in `specs/content/<course>/figures/unit-NN.md` at
-`Status: prompt-only` — into rendered figures:
+`Status: prompt-only` - into rendered figures:
 
 - a committed image under `static/img/figures/<course-lowercase>/unit-NN/`,
 - the marker **replaced** (not kept) by `<Figure id="…" src="/img/…" alt="…" />` at the same
@@ -52,26 +52,26 @@ figures for a unit that has no per-topic markers yet.
 
 ---
 
-## Step 1 — Read the markers, classify each figure
+## Step 1 - Read the markers, classify each figure
 
 1. List every `{/* FIGURE[...] */}` marker across the unit's `topic-*.mdx`. For each, record:
    `id`, the carrier `topic-NN.mdx` and its `topic_label`, the `prompt` (verbatim,
    whitespace-normalised), the `alt` (verbatim, whitespace-normalised).
-2. Cross-check against `specs/content/<course-lowercase>/figures/unit-NN.md` — the marker-id set
+2. Cross-check against `specs/content/<course-lowercase>/figures/unit-NN.md` - the marker-id set
    and the manifest-id set MUST already match both ways. If they don't, stop: the manifest is an
    `author-unit` artefact; fixing it is a G1/Spec 008 action, not this skill's job.
 3. **Classify `Kind` for each figure** (`references/svg-authoring.md` §"Diagram or illustration"):
-   - `diagram` (the default) — a labelled schematic: a comparison table, a relationship diagram
+   - `diagram` (the default) - a labelled schematic: a comparison table, a relationship diagram
      (triangle / Venn / cycle), a node-and-arrow web, a two-panel contrast, a left-to-right flow,
      a timeline, an annotated cross-section. Anything whose meaning is **shape + label**.
-   - `illustration` — a scene that needs pictorial depth: people, a classroom, a place, a
+   - `illustration` - a scene that needs pictorial depth: people, a classroom, a place, a
      photograph-like image. Rare in a textbook figure set.
    - A prompt that says "clean flat vector" is a `diagram`, even if it depicts a scene
      (e.g. a two-panel "industrial vs inquiry" classroom drawn as flat labelled panels).
-4. Read `specs/content/<course-lowercase>/figures/unit-NN.brief.md` if it exists — it lists
+4. Read `specs/content/<course-lowercase>/figures/unit-NN.brief.md` if it exists - it lists
    illustration figures whose rasters the owner was asked to drop into `figures/.staging/`.
 
-## Step 2 — Diagrams: author a self-contained SVG
+## Step 2 - Diagrams: author a self-contained SVG
 
 Per `references/svg-authoring.md`, for each `Kind: diagram` figure:
 
@@ -88,16 +88,16 @@ Per `references/svg-authoring.md`, for each `Kind: diagram` figure:
      static/img/figures/<course>/unit-NN/<figId>.svg
    ```
    It strips comments/whitespace and **hard-fails if the result is > 20 KB**. If it fails,
-   simplify the SVG (fewer nodes, shorter labels) — do not raise the budget.
-5. Self-check: open the file mentally in both themes — every label legible on both grounds; the
+   simplify the SVG (fewer nodes, shorter labels) - do not raise the budget.
+5. Self-check: open the file mentally in both themes - every label legible on both grounds; the
    `<title>` present; no colour-only distinction; labels in the unit's plain register.
 
-## Step 3 — Illustrations: Hugging Face MCP, or a brief
+## Step 3 - Illustrations: Hugging Face MCP, or a brief
 
 Per `references/raster-hf-mcp.md`, for each `Kind: illustration` figure:
 
 1. **Detect** a connected MCP tool that turns a text prompt into an image (the tool name varies
-   by the owner's configured HF Space — do not hardcode one). If found: call it with the marker
+   by the owner's configured HF Space - do not hardcode one). If found: call it with the marker
    `prompt` + an aspect hint; receive a URL or bytes; fetch the file **in this turn** (exactly as
    `author-unit` uses `WebFetch`) to a temp path.
 2. Optimise + budget-check into place:
@@ -109,12 +109,12 @@ Per `references/raster-hf-mcp.md`, for each `Kind: illustration` figure:
    with one block per outstanding illustration (prompt verbatim, aspect, the exact target
    filename, a one-line "paste into an image generator and drop the result in
    `figures/.staging/`" instruction). Set that row to `Status: prompt-only` still (nothing is
-   generated), tell the owner, and stop for those figures — the diagram figures can still be
+   generated), tell the owner, and stop for those figures - the diagram figures can still be
    fully rendered in the same run.
 4. If a raster is already waiting in `figures/.staging/<figId>.<ext>`, ingest it through
    `optimize:figure` as in step 2.
 
-## Step 4 — Place: marker → `<Figure>`, manifest row → v2
+## Step 4 - Place: marker → `<Figure>`, manifest row → v2
 
 Per `references/placement.md`, for each figure whose asset now exists under `static/`:
 
@@ -123,7 +123,7 @@ Per `references/placement.md`, for each figure whose asset now exists under `sta
    ```mdx
    <Figure id="<id>" src="/img/figures/<course-lowercase>/unit-NN/<figId>.<ext>" alt="<the marker's alt, verbatim, whitespace-normalised>" />
    ```
-   The comment is **not** kept. `<Figure>` is registered globally — no import line needed.
+   The comment is **not** kept. `<Figure>` is registered globally - no import line needed.
 2. Rewrite the manifest to the v2 columns if it is still v1:
    `| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |`. For this figure's row set
    `Kind`, `Src` (`/img/figures/…`), and `Status: placed`. `Prompt` and `Alt text` stay verbatim
@@ -131,26 +131,27 @@ Per `references/placement.md`, for each figure whose asset now exists under `sta
 3. Update the manifest's header prose to point at
    `specs/009-figure-rendering/contracts/figure-manifest-v2.md`.
 
-## Step 5 — Mirror into Urdu
+## Step 5 - Mirror into Urdu
 
 Per `references/bilingual-figures.md`:
 
-- `Kind: diagram` — copy `<figId>.svg` → `<figId>.ur.svg`; translate every **visible** label to
+- `Kind: diagram` - copy `<figId>.svg` → `<figId>.ur.svg`; translate every **visible** label to
   Urdu; set `text-anchor` / `direction: rtl` for the Urdu text; use the Nastaliq-first font
   stack. Optimise it (`--svg`, ≤ 20 KB). In the UR `topic-NN.mdx`, replace the marker with
   `<Figure id="<id>" src="/img/figures/<course>/unit-NN/<figId>.ur.svg" alt="<Urdu alt>" />`.
-- `Kind: illustration` — reuse the one `<figId>.webp`; in the UR `topic-NN.mdx` replace the
+- `Kind: illustration` - reuse the one `<figId>.webp`; in the UR `topic-NN.mdx` replace the
   marker with `<Figure id="<id>" src="/img/figures/<course>/unit-NN/<figId>.webp" alt="<Urdu alt>" />`.
 - **Gate posture**: if the EN `index.mdx` is `translation_status: reviewed`, the `.ur.svg` and the
   UR `<Figure>` are gate-enforced. If it is `draft` (a skeleton-stub UR mirror), author and wire
-  them anyway — it is not gate-blocked, matching Spec 008's UR marker-ID parity posture.
+  them anyway - it is not gate-blocked, matching Spec 008's UR marker-ID parity posture.
 
-## Step 6 — Run the gates, then build
+## Step 6 - Run the gates, then build
 
 Run, and fix every finding before reporting done:
 
 ```
-npm run validate:content && npm run check:figures && npm run check:no-answer-keys && npm test
+npm run validate:content && npm run check:figures && npm run check:no-answer-keys && \
+  npm run check:no-em-dash && npm test
 ```
 
 Then a full build to confirm the pages render:
@@ -159,7 +160,7 @@ Then a full build to confirm the pages render:
 npm run build
 ```
 
-`check:figures` for a unit still entirely at `prompt-only` takes the exact Spec 008 code path —
+`check:figures` for a unit still entirely at `prompt-only` takes the exact Spec 008 code path -
 a regression there means the placement/manifest edit is wrong, not the gate. A green
 `check:figures` is **structural** (carrier present, asset exists, `Kind` in enum, ids consistent);
 whether the diagram actually communicates the concept and whether the Urdu labels read well is
@@ -167,6 +168,6 @@ the human Content gate.
 
 ## Incremental rendering
 
-A unit may hold a mix of statuses — render `fig-U1-1` and `fig-U1-3` now, leave `fig-U1-2` at
+A unit may hold a mix of statuses - render `fig-U1-1` and `fig-U1-3` now, leave `fig-U1-2` at
 `prompt-only` until its raster arrives. The gate accepts the mix. A row must never silently
 regress from `placed`.

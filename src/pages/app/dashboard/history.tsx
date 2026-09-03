@@ -7,7 +7,7 @@ import { fetchPastSemesters, type PastSemesterGroup } from '@site/src/lib/dashbo
 
 /**
  * History area (Spec 004, T029, FR-007). Past (archived) semesters, grouped,
- * strictly read-only — no edit/resubmit control anywhere in this component,
+ * strictly read-only - no edit/resubmit control anywhere in this component,
  * matching SC-003's guarantee (Spec 003's archived-class immutability
  * already enforces this at the database layer; this page never renders a
  * control that would suggest otherwise).
@@ -61,9 +61,9 @@ function HistoryContent(): React.ReactElement {
             <h3>{group.termLabel}</h3>
             {group.classes.map(({ klass, grades }) => (
               <div key={klass.id} style={{ marginBottom: '1rem' }}>
-                <h4>{klass.name} — {klass.course_code}</h4>
+                <h4>{klass.name} - {klass.course_code}</h4>
                 {grades.length === 0 ? (
-                  <p>—</p>
+                  <p>-</p>
                 ) : (
                   <ul>
                     {grades.map((g, i) => (

@@ -20,6 +20,7 @@
     "check:pipeline-gate": "node scripts/check-pipeline-gate.mjs",
     "check:depth-gate": "node scripts/check-unit-depth.mjs",
     "check:figures": "node scripts/check-figures.mjs",
+    "check:no-em-dash": "node scripts/check-no-em-dash.mjs",
     "optimize:figure": "node scripts/optimize-figure.mjs",
     "check:add-course": "node scripts/check-add-course.mjs",
     "scaffold": "node scripts/scaffold-catalog.mjs",

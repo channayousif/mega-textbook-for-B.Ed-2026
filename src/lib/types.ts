@@ -2,7 +2,7 @@
  * Class-domain types (Spec 003) mirroring data-model.md's columns.
  *
  * Kept separate from src/contexts/AuthContext.tsx's Profile/UserRole types
- * (Spec 002) — this feature only ever *references* a profile by id, it never
+ * (Spec 002) - this feature only ever *references* a profile by id, it never
  * redefines identity/role shape.
  */
 
@@ -103,7 +103,7 @@ export type AnswerKey = {
   updated_at: string;
 };
 
-/** Computed per-assignment status for a student — never a stored column (FR-006). */
+/** Computed per-assignment status for a student - never a stored column (FR-006). */
 export type AssignmentStudentStatus =
   | 'not_yet_submitted'
   | 'submitted'

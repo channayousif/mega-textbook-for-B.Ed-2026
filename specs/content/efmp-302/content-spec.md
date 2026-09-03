@@ -3,22 +3,22 @@ course_code: EFMP-302
 status: approved
 ---
 
-# EFMP-302 — Teaching Profession — Content Spec
+# EFMP-302 - Teaching Profession - Content Spec
 
 Semester 1, Major: Professional Course-II, 3 (3-0) credit hours. Source: `Scheme-and-Course-guides/1st 2026.pdf` (extracted text, `extracted-text/1st 2026.txt` lines 715–1006).
 
 **Guide-silence note (Constitution Art. III.6)**: unlike EFMP-301, this course's guide block
 carries no separate "Teaching/Instructional Strategies," "Suggested Practical Activities," or
-"Assessment Criteria" headings — only the Course Description, 7 Course Learning Outcomes, the
+"Assessment Criteria" headings - only the Course Description, 7 Course Learning Outcomes, the
 6-unit topic list, and one shared "Suggested Readings" list at the end. This is guide silence on
 those *optional* enrichment sections, not an ambiguity on a required one (Constitution Art.
 II.3's escalation applies to guide ambiguity/silence on something the pipeline *requires*, not to
-these guide-dependent extras) — nothing is invented in their place; `specs/gaps.md` is not
+these guide-dependent extras) - nothing is invented in their place; `specs/gaps.md` is not
 updated for this course.
 
 ## Course-wide items
 
-- **Course Learning Outcomes (guide, verbatim topic coverage — not reproduced, paraphrased for
+- **Course Learning Outcomes (guide, verbatim topic coverage - not reproduced, paraphrased for
   the spec record only)**:
   1. Identify and exhibit the characteristics and qualities of an effective teacher.
   2. Define and explain the role and responsibilities of teachers in education.
@@ -28,19 +28,19 @@ updated for this course.
   6. Demonstrate professional ethics in teaching, learning, and assessment.
   7. Engage in professional learning and collegial collaboration to enhance continuous growth.
 - **Teaching strategies**: none listed in the guide for this course (guide-silent, see note
-  above) — Content gate reviewers should not expect a course-overview `teaching_strategies` list
+  above) - Content gate reviewers should not expect a course-overview `teaching_strategies` list
   distinct from what individual units derive from their own topics.
 - **Assessment criteria**: no course-specific weighting given; falls back to the Constitution
-  Art. III.7 default — 60% summative / 40% formative.
+  Art. III.7 default - 60% summative / 40% formative.
 - **Practical work**: none listed in the guide for this course (guide-silent).
 - **Recommended resources**: see `## Reading list` below (cited by reference only, never
-  reproduced — Constitution Art. III.5).
+  reproduced - Constitution Art. III.5).
 
 ## Course Description
 
 From the course guide (paraphrased; the guide's own wording is quoted only in fragments < 15
 words per Constitution Art. III.5): being an effective professional teacher in the 21st century
-is challenging and transformative — society and multiple stakeholders have redefined teachers'
+is challenging and transformative - society and multiple stakeholders have redefined teachers'
 roles at local and global levels. This course builds a comprehensive understanding of the
 teaching profession as a "dynamic, yet ethical and evolving field of practice", covering
 professional ethics, codes of conduct, national and global professional standards, emotional
@@ -53,7 +53,7 @@ professionalism in teaching.
 
 Full references for the guide's "Suggested Readings" plus curated open-access supplements.
 `Key` is the citation key used in each unit's `sources/unit-NN.md`. `Units` tags which unit(s)
-each source supports. Cited by reference only — never reproduced (Constitution Art. III.5,
+each source supports. Cited by reference only - never reproduced (Constitution Art. III.5,
 Spec 006 FR-010).
 
 ### Guide-required
@@ -64,12 +64,12 @@ Spec 006 FR-010).
 | brookfield2017 | Brookfield, S. D. (2017). *Becoming a critically reflective teacher* (2nd ed.). Jossey-Bass. | (print) | 1, 3, 6 | reflection and self-awareness as professional habits |
 | carr2000 | Carr, D. (2000). *Professionalism and ethics in teaching*. Routledge. | (print) | 1, 2 | what makes teaching a profession; ethical basis of professional practice |
 | day1999 | Day, C. (1999). *Developing teachers: The challenges of lifelong learning*. Falmer Press. | (print) | 6 | continuing professional development across a career |
-| demirkasimoglu2010 | Demirkasımoğlu, N. (2010). Defining "teacher professionalism" from different perspectives. *Procedia — Social and Behavioral Sciences, 9*, 2047–2051. | https://doi.org/10.1016/j.sbspro.2010.12.444 | 1 | competing definitions of "teacher professionalism"; dimensions of professionalism |
+| demirkasimoglu2010 | Demirkasımoğlu, N. (2010). Defining "teacher professionalism" from different perspectives. *Procedia - Social and Behavioral Sciences, 9*, 2047–2051. | https://doi.org/10.1016/j.sbspro.2010.12.444 | 1 | competing definitions of "teacher professionalism"; dimensions of professionalism |
 | ehrich2011 | Ehrich, L. C., Kimber, M., Millwater, J., & Cranston, N. (2011). Ethical dilemmas: A model to understand teacher practice. *Teachers and Teaching: Theory and Practice, 17*(2), 173–185. | https://doi.org/10.1080/13540602.2011.539794 | 2 | a model for working through classroom ethical dilemmas |
 | guskey2000 | Guskey, T. R. (2000). *Evaluating professional development*. Corwin Press. | (print) | 6 | evaluating whether professional development actually works |
 | hargreaves2000 | Hargreaves, A. (2000). Four ages of professionalism and professional learning. *Teachers and Teaching, 6*(2), 151–182. | https://doi.org/10.1080/713698714 | 1, 5 | the historical shift from an "industrial" model of teaching toward inquiry-based professionalism |
 | hurst2009 | Hurst, B., & Reding, G. (2009). *Professionalism in teaching*. Pearson Education. | (print) | 1, 3 | day-to-day markers of professional conduct for teachers |
-| icka2024 | Icka, E., & Kochoska, J. (2024). The influence of teachers as an ethical model on students' development. *International Journal of Education Teacher, 27*, 99–107. | (open access — journal site) | 2 | the teacher as an ethical model for students |
+| icka2024 | Icka, E., & Kochoska, J. (2024). The influence of teachers as an ethical model on students' development. *International Journal of Education Teacher, 27*, 99–107. | (open access - journal site) | 2 | the teacher as an ethical model for students |
 | suarez2022 | Suarez, V., & McGrath, J. (2022). *Teacher professional identity: How to develop and support it in times of change* (OECD Education Working Paper No. 267). OECD Publishing. | https://doi.org/10.1787/b19f5af7-en | 1 | how teacher identity develops and can be supported during change |
 | villegas2003 | Villegas-Reimers, E. (2003). *Teacher professional development: An international review of the literature*. UNESCO IIEP. | https://unesdoc.unesco.org/ark:/48223/pf0000133010 | 6 | international overview of teacher professional development models |
 
@@ -77,73 +77,73 @@ Spec 006 FR-010).
 
 | Key | Citation | DOI/URL | Units | Note |
 |---|---|---|---|---|
-| npst-pakistan-2009 | Government of Pakistan, Ministry of Education, Policy & Planning Wing (2009). *National Professional Standards for Teachers in Pakistan*. | https://itacec.org/document/2015/7/National_Professional_Standards_for_Teachers.pdf | 4 | the 10 standards, their domains and indicators — Unit 4's core text |
+| npst-pakistan-2009 | Government of Pakistan, Ministry of Education, Policy & Planning Wing (2009). *National Professional Standards for Teachers in Pakistan*. | https://itacec.org/document/2015/7/National_Professional_Standards_for_Teachers.pdf | 4 | the 10 standards, their domains and indicators - Unit 4's core text |
 | unesco-teacher-ethics | UNESCO / International Task Force on Teachers (2019). *Global framework of professional teaching standards*. | https://unesdoc.unesco.org/ark:/48223/pf0000372167 | 2, 4 | a global reference point for professional and ethical teaching standards |
 
 ## Week schedule
 
 | Week(s) | Unit | Sub-topics |
 |---|---|---|
-| 1–3 | Unit 1 — Understanding Teaching | nature of a profession; profession vs occupation; professionalism vs professionalisation; comparative view; industrial→inquiry shift; dimensions of professionalism; developing teacher identity |
-| 4–5 | Unit 2 — Models & Frameworks of Professional Ethics and Behaviors | meaning of professional ethics; codes of ethical conduct (students, practice, parents/community, colleagues; UNESCO/NACTE); Rest's four-component model; four-step ethical decision-making; classroom dilemmas |
-| 6–8 | Unit 3 — Becoming an Effective Teacher | teacher effectiveness & its components; personal/professional qualities; social skills & relationships; verbal & non-verbal communication; the evolving 21st-century roles |
-| 9–11 | Unit 4 — Professional Standards and Competencies | concept & purpose of standards; global & national perspectives; Pakistan's National Professional Standards (structure, domains, indicators); applying standards for self-evaluation; linking standards to licensing/certification/appraisal |
-| 12–13 | Unit 5 — Issues and Challenges in the Teaching Profession | workload, stress, burnout; multilingual/multi-grade classrooms; accountability pressure; lack of support; stakeholder expectations; professionalism in the digital age; responding to challenges |
-| 14–16 | Unit 6 — Sustaining Professionalism through Continuous Learning | CPD concept & principles; stages of professional development; ways to keep developing (conferences, workshops, PLCs, reflective tools); building a personal PD plan |
+| 1–3 | Unit 1 - Understanding Teaching | nature of a profession; profession vs occupation; professionalism vs professionalisation; comparative view; industrial→inquiry shift; dimensions of professionalism; developing teacher identity |
+| 4–5 | Unit 2 - Models & Frameworks of Professional Ethics and Behaviors | meaning of professional ethics; codes of ethical conduct (students, practice, parents/community, colleagues; UNESCO/NACTE); Rest's four-component model; four-step ethical decision-making; classroom dilemmas |
+| 6–8 | Unit 3 - Becoming an Effective Teacher | teacher effectiveness & its components; personal/professional qualities; social skills & relationships; verbal & non-verbal communication; the evolving 21st-century roles |
+| 9–11 | Unit 4 - Professional Standards and Competencies | concept & purpose of standards; global & national perspectives; Pakistan's National Professional Standards (structure, domains, indicators); applying standards for self-evaluation; linking standards to licensing/certification/appraisal |
+| 12–13 | Unit 5 - Issues and Challenges in the Teaching Profession | workload, stress, burnout; multilingual/multi-grade classrooms; accountability pressure; lack of support; stakeholder expectations; professionalism in the digital age; responding to challenges |
+| 14–16 | Unit 6 - Sustaining Professionalism through Continuous Learning | CPD concept & principles; stages of professional development; ways to keep developing (conferences, workshops, PLCs, reflective tools); building a personal PD plan |
 
 ## Standards & frameworks anchors
 
-- **National Professional Standards for Teachers in Pakistan (2009)** — the primary text for
+- **National Professional Standards for Teachers in Pakistan (2009)** - the primary text for
   **Unit 4** (structure, domains, indicators; links to licensing, certification, appraisal).
   Also informs Unit 3's "professional qualities" and Unit 6's self-evaluation tools.
-- **UNESCO / International Task Force on Teachers — professional teaching standards & ethics**
-  — anchors **Unit 2** (local and international codes of ethical conduct) and gives **Unit 4**
+- **UNESCO / International Task Force on Teachers, professional teaching standards & ethics.**
+  Anchors **Unit 2** (local and international codes of ethical conduct) and gives **Unit 4**
   a global comparison point.
-- **NACTE (National Accreditation Council for Teacher Education, Pakistan)** — named in the
+- **NACTE (National Accreditation Council for Teacher Education, Pakistan)** - named in the
   guide for **Unit 2**'s codes of ethical conduct; the accreditation body referenced in
   **Unit 1**'s "professional associations/accreditation" sub-topic.
-- **OECD (TALIS / Education Working Papers)** — `suarez2022` anchors **Unit 1**'s
+- **OECD (TALIS / Education Working Papers)** - `suarez2022` anchors **Unit 1**'s
   teacher-identity material with an international evidence base.
 
 ## Course review plan
 
 Seeds an eventual `docs/semester-1/efmp-302/course-review.mdx` (Spec 008 FR-016; contract:
 `specs/008-rich-unit-pedagogy/contracts/end-of-course-review.md`). Not parsed by any gate;
-authoring the actual page is out of Spec 008's scope (FR-029) — it is written when EFMP-302 is
+authoring the actual page is out of Spec 008's scope (FR-029) - it is written when EFMP-302 is
 fully restructured to the per-topic layout.
 
 - **Course summary points** (the through-lines the review should recap):
-  - Teaching is a profession — it has a specialised knowledge base, formal training, a code of
+  - Teaching is a profession - it has a specialised knowledge base, formal training, a code of
     conduct, and public accountability (Units 1, 3, 4).
-  - Professional practice is *ethical* practice — codes of conduct, moral reasoning models, and
+  - Professional practice is *ethical* practice - codes of conduct, moral reasoning models, and
     reflective decision-making (Units 1–2, 6).
-  - Standards make the profession legible — national and global professional standards, and
+  - Standards make the profession legible - national and global professional standards, and
     their use in self-evaluation, licensing, and appraisal (Unit 4).
-  - The profession is under real pressure — workload, multi-grade classrooms, accountability,
-    the digital age — and professionals respond by continuing to learn (Units 5–6).
-  - Teacher *identity* is developed, not fixed — shaped by context, beliefs, and reflection
+  - The profession is under real pressure - workload, multi-grade classrooms, accountability,
+    the digital age - and professionals respond by continuing to learn (Units 5–6).
+  - Teacher *identity* is developed, not fixed - shaped by context, beliefs, and reflection
     across a whole career (Units 1, 3, 6).
 - **Practice-question mix**: `### MCQs` ~15 (spread across all six units, Remember → Apply);
   `### RRQs` ~10 (Understand → Analyze, ≥ 1 per unit); `### ERQs` ~5 (Analyze → Evaluate/Create,
   each integrating two or more units).
 - **Practicum project ideas** (3–6 briefs a trainee carries into placement):
-  - *Profession audit* — observe your cooperating teacher for a week; document evidence of each
+  - *Profession audit* - observe your cooperating teacher for a week; document evidence of each
     of the four features of a profession; bring back a one-page annotated log.
-  - *Ethics-in-action journal* — record three real classroom decisions with an ethical edge;
+  - *Ethics-in-action journal* - record three real classroom decisions with an ethical edge;
     analyse each with the four-step framework; bring back the journal + a short reflection.
-  - *Standards self-map* — map your own current practice against three domains of Pakistan's
+  - *Standards self-map* - map your own current practice against three domains of Pakistan's
     National Professional Standards; bring back the map + one development goal per domain.
-  - *Challenge case study* — pick one challenge your placement school actually faces
+  - *Challenge case study* - pick one challenge your placement school actually faces
     (multi-grade, resourcing, workload); document it and one growth-oriented response the staff
     use; bring back the write-up.
-  - *One-term PD plan* — build a personal professional-development plan naming one activity from
+  - *One-term PD plan* - build a personal professional-development plan naming one activity from
     each "ways to continue developing" category; bring back the plan for peer review.
 
 ## Unit 1: Understanding Teaching
 
 Weeks 1–3. Unit Spec (G1) for `docs/semester-1/efmp-302/unit-01/`.
 
-- **CLO/SLO refs**: `SLO:EFMP-302-1-1` (profession vs. occupation, professionalism), `SLO:EFMP-302-1-2` (teacher identity) — traces to guide CLOs 1–3.
+- **CLO/SLO refs**: `SLO:EFMP-302-1-1` (profession vs. occupation, professionalism), `SLO:EFMP-302-1-2` (teacher identity) - traces to guide CLOs 1–3.
 - **Key terms**: Profession, Professionalism, Professionalization, Teacher Identity.
 - **Topics** (from guide 1.1–1.4): the nature of a profession/professionalism; features
   distinguishing a profession from an occupation; professionalism-in-teaching vs.
@@ -154,8 +154,8 @@ Weeks 1–3. Unit Spec (G1) for `docs/semester-1/efmp-302/unit-01/`.
   role of professional associations/accreditation); developing teacher identity (sociocultural
   and policy influences, personal beliefs/values, reflection and self-awareness, "who am I
   becoming as a teacher").
-- **Worked-example / activity concepts**: contrast two short classroom vignettes — one framed as
-  "industrial" (compliance-driven) and one as "inquiry-based" (reflective) — and ask which
+- **Worked-example / activity concepts**: contrast two short classroom vignettes - one framed as
+  "industrial" (compliance-driven) and one as "inquiry-based" (reflective) - and ask which
   features signal professionalism vs. mere occupation.
 - **Assessment blueprint**: formative 5–8 items (Remember/Understand/Apply) on
   profession-vs-occupation distinctions and the industrial→inquiry shift; summative includes one
@@ -203,10 +203,10 @@ The `Sub-topic IDs` cells form a **total, disjoint partition** of the `### Sub-t
 
 **Depth budget**: 14 sub-topics; 4 topics; 90–120 reading-min (per-topic re-baseline; sums
 `index.mdx` (4) + `topic-01…04.mdx` (18 + 14 + 19 + 16) + `unit-assessment.mdx` (24) +
-`unit-teacher-notes.mdx` (8) = 103, band set ±~15% around the drafted total — T049; the five
+`unit-teacher-notes.mdx` (8) = 103, band set ±~15% around the drafted total - T049; the five
 legacy files' 45–70 band no longer applies)
 
-**Prerequisite knowledge**: none beyond HSC-level general study skills — this is the opening
+**Prerequisite knowledge**: none beyond HSC-level general study skills - this is the opening
 unit of the course and of the semester. Learners are not assumed to know any education theory.
 
 **Common misconceptions**: "a profession just means a respectable, well-paid job"; "teaching is
@@ -217,10 +217,10 @@ a profession only because the government says so"; "reflective practice = keepin
 brookfield2017, suarez2022 (all from `## Reading list` → `### Guide-required`).
 
 **Worked-examples plan** (≈ one Pakistan-grounded example per sub-topic group):
-profession-vs-occupation — compare a government-school teacher, a shopkeeper, and a doctor
-against the four features (U1-01–U1-04); industrial-vs-inquiry — one lesson described two ways,
-scripted vs reflective (U1-05–U1-06); dimensions — a teacher joining a subject association and
-following its code (U1-07–U1-10); identity — a trainee from a Sindh village reflecting on how
+profession-vs-occupation - compare a government-school teacher, a shopkeeper, and a doctor
+against the four features (U1-01–U1-04); industrial-vs-inquiry - one lesson described two ways,
+scripted vs reflective (U1-05–U1-06); dimensions - a teacher joining a subject association and
+following its code (U1-07–U1-10); identity - a trainee from a Sindh village reflecting on how
 their own schooling shapes the teacher they are becoming (U1-11–U1-14).
 
 **International best-practice notes**: frame professionalism using Hargreaves' "ages of
@@ -228,18 +228,18 @@ professionalism" (industrial → autonomous → collegial → post-modern) so th
 shift is not presented as a simple before/after; use the OECD/`suarez2022` identity model
 (identity as ongoing, relational, context-shaped) rather than a fixed-traits view.
 
-**Figure plan** (one per topic — seeds `specs/content/efmp-302/figures/unit-01.md`):
-  - fig-U1-1 — four-features comparison table: teacher vs shopkeeper vs doctor against specialised
+**Figure plan** (one per topic - seeds `specs/content/efmp-302/figures/unit-01.md`):
+  - fig-U1-1 - four-features comparison table: teacher vs shopkeeper vs doctor against specialised
     knowledge / formal training / code of conduct / public accountability (Topic 1.1)
-  - fig-U1-2 — "one lesson, two ways" split panel: the same lesson taught in an industrial
+  - fig-U1-2 - "one lesson, two ways" split panel: the same lesson taught in an industrial
     (scripted, compliance) frame and an inquiry-based (reflective) frame (Topic 1.2)
-  - fig-U1-3 — accountability / autonomy / collegiality triangle, with the specialised-knowledge
+  - fig-U1-3 - accountability / autonomy / collegiality triangle, with the specialised-knowledge
     base underneath (Topic 1.3)
-  - fig-U1-4 — identity-shaping influences web: schooling history, family, community, policy,
+  - fig-U1-4 - identity-shaping influences web: schooling history, family, community, policy,
     beliefs and values feeding into "who am I becoming as a teacher?" (Topic 1.4)
 
-**Unit-end assessment blueprint** (`unit-assessment.mdx` — Spec 008 fixed 10/10/5 bank):
-  - MCQs (10): Remember → Apply; ≥ 2 per topic — 1.1 (U1-01…U1-04), 1.2 (U1-05…U1-06),
+**Unit-end assessment blueprint** (`unit-assessment.mdx` - Spec 008 fixed 10/10/5 bank):
+  - MCQs (10): Remember → Apply; ≥ 2 per topic - 1.1 (U1-01…U1-04), 1.2 (U1-05…U1-06),
     1.3 (U1-07…U1-10), 1.4 (U1-11…U1-14)
   - RRQs (10): Understand → Analyze; ≥ 2 per topic; each with a model answer + point-by-point
     mark scheme in `## Answers and marking guidance`
@@ -252,13 +252,13 @@ shift is not presented as a simple before/after; use the OECD/`suarez2022` ident
 
 Weeks 4–5. Unit Spec (G1) for `docs/semester-1/efmp-302/unit-02/`.
 
-- **CLO/SLO refs**: `SLO:EFMP-302-2-1` (professional ethics, codes of conduct), `SLO:EFMP-302-2-2` (ethical decision-making models) — traces to guide CLOs 3, 6.
+- **CLO/SLO refs**: `SLO:EFMP-302-2-1` (professional ethics, codes of conduct), `SLO:EFMP-302-2-2` (ethical decision-making models) - traces to guide CLOs 3, 6.
 - **Key terms**: Professional Ethics, Code of Ethical Conduct, Ethical Dilemma, Reflective
   Decision Making.
 - **Topics** (from guide 2.1–2.3): meaning and significance of professional ethics; teacher
   behavior and codes of ethical conduct toward students, practice/performance, parents/community,
   and colleagues (local and international codes, e.g. UNESCO/NACTE guidelines); models and
-  frameworks of ethical behavior — Rest's four-component model of moral behavior, a four-step
+  frameworks of ethical behavior - Rest's four-component model of moral behavior, a four-step
   ethical decision-making framework (Empathy, Context, Reflect, Action), reflective decision
   making, and handling ethical dilemmas in the classroom (grading, confidentiality, social media,
   equity).
@@ -273,12 +273,12 @@ Weeks 4–5. Unit Spec (G1) for `docs/semester-1/efmp-302/unit-02/`.
 
 Weeks 6–8. Unit Spec (G1) for `docs/semester-1/efmp-302/unit-03/`.
 
-- **CLO/SLO refs**: `SLO:EFMP-302-3-1` (teacher effectiveness, personal/professional qualities), `SLO:EFMP-302-3-2` (communication and relationship-building) — traces to guide CLOs 1, 5.
+- **CLO/SLO refs**: `SLO:EFMP-302-3-1` (teacher effectiveness, personal/professional qualities), `SLO:EFMP-302-3-2` (communication and relationship-building) - traces to guide CLOs 1, 5.
 - **Key terms**: Teacher Effectiveness, Verbal Communication, Non-verbal Communication.
 - **Topics** (from guide 3.1–3.5): understanding/redefining teacher effectiveness and its
   components; personal and professional qualities of an effective teacher (attitude toward the
-  profession, dressing/grooming as professional image, personality traits — empathy, patience,
-  self-control, optimism, humor, resilience, adaptability — and their influence on effectiveness);
+  profession, dressing/grooming as professional image, personality traits - empathy, patience,
+  self-control, optimism, humor, resilience, adaptability - and their influence on effectiveness);
   social skills and relationship building with stakeholders, managing conflict; effective verbal
   and non-verbal communication (types and classroom use); the evolving roles of the effective
   teacher in the 21st century (facilitator, researcher, change agent, moral agent, life-long
@@ -294,12 +294,12 @@ Weeks 6–8. Unit Spec (G1) for `docs/semester-1/efmp-302/unit-03/`.
 
 Weeks 9–11. Unit Spec (G1) for `docs/semester-1/efmp-302/unit-04/`.
 
-- **CLO/SLO refs**: `SLO:EFMP-302-4-1` (professional standards concept and purpose), `SLO:EFMP-302-4-2` (Pakistan's National Professional Standards, applying/linking them) — traces to guide CLOs 3, 6.
+- **CLO/SLO refs**: `SLO:EFMP-302-4-1` (professional standards concept and purpose), `SLO:EFMP-302-4-2` (Pakistan's National Professional Standards, applying/linking them) - traces to guide CLOs 3, 6.
 - **Key terms**: Professional Standards, National Professional Standards for Teachers (Pakistan),
   Teacher Licensing, Teacher Certification.
 - **Topics** (from guide 4.1–4.4): concept and purpose of professional standards; global and
   national perspectives on teacher standards, and their use in ensuring teacher quality/
-  accountability; overview of Pakistan's National Professional Standards for Teachers —
+  accountability; overview of Pakistan's National Professional Standards for Teachers -
   structure, domains, and indicators; applying standards in practice for self-evaluation; linking
   standards to teacher licensing, certification, and appraisal.
 - **Worked-example / activity concepts**: map one classroom practice example against a named
@@ -313,16 +313,16 @@ Weeks 9–11. Unit Spec (G1) for `docs/semester-1/efmp-302/unit-04/`.
 Weeks 12–13. Unit Spec (G1) for `docs/semester-1/efmp-302/unit-05/`.
 
 - **CLO/SLO refs**: `SLO:EFMP-302-5-1` (challenges/realities of the profession, digital-age
-  professionalism) — traces to guide CLOs 3, 4.
+  professionalism) - traces to guide CLOs 3, 4.
 - **Key terms**: Teacher Burnout, Multi-grade Classroom, Digital Professionalism.
 - **Topics** (from guide 5.1–5.3): challenges and realities of teacher professionalism (workload,
   stress and burnout; multilingual/multi-grade classrooms; increased accountability pressure;
   lack of support/resources; stakeholder expectations; socio-economic status and public
   recognition); professionalism in the digital age (pressure to integrate technology, responsible
-  use of digital platforms/resources); responding to professional challenges — growth and
+  use of digital platforms/resources); responding to professional challenges - growth and
   development.
 - **Worked-example / activity concepts**: a short case of a Pakistani classroom teacher juggling
-  a multi-grade setting with limited resources — identify which challenges from the unit apply
+  a multi-grade setting with limited resources - identify which challenges from the unit apply
   and one growth-oriented response.
 - **Assessment blueprint**: formative 5–8 items (Remember/Understand) on the named challenge
   categories; summative includes an Analyze-or-higher item proposing and justifying a response to
@@ -332,13 +332,13 @@ Weeks 12–13. Unit Spec (G1) for `docs/semester-1/efmp-302/unit-05/`.
 
 Weeks 14–16. Unit Spec (G1) for `docs/semester-1/efmp-302/unit-06/`.
 
-- **CLO/SLO refs**: `SLO:EFMP-302-6-1` (continuous professional development concept and stages), `SLO:EFMP-302-6-2` (personal professional development planning) — traces to guide CLOs 4, 7.
+- **CLO/SLO refs**: `SLO:EFMP-302-6-1` (continuous professional development concept and stages), `SLO:EFMP-302-6-2` (personal professional development planning) - traces to guide CLOs 4, 7.
 - **Key terms**: Continuous Professional Development (CPD), Professional Learning Community.
 - **Topics** (from guide 6.1–6.4): definition and basic concept of Continuous Professional
   Development (CPD), the need for it, and its principles; stages of professional development
   (preservice, new-teacher, experienced-teacher); ways to continue developing as a professional
   (conferences, workshops, online PD platforms, Professional Learning Communities, reflective
-  practice/self-evaluation tools — journals, portfolios, peer feedback, lesson study); building a
+  practice/self-evaluation tools - journals, portfolios, peer feedback, lesson study); building a
   personal professional development plan.
 - **Worked-example / activity concepts**: draft a short, one-term personal professional
   development plan naming one activity from each "ways to continue developing" category.

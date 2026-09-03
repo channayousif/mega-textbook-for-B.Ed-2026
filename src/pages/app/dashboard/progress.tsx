@@ -11,7 +11,7 @@ import { checkFullCoverageAchievement } from '@site/src/lib/achievements';
 
 /**
  * Progress area (Spec 004, T020/T024/T041, FR-005/FR-006). Per-course
- * coverage fraction (CSS-only bar, research.md R7 — no charting dependency)
+ * coverage fraction (CSS-only bar, research.md R7 - no charting dependency)
  * plus a semester-level figure for the share of enrolled courses with any
  * recorded progress. A "Mark as studied" control appears per not-yet-covered
  * unit (T024); reaching 100% for a course triggers the full-coverage
@@ -78,7 +78,7 @@ function CourseRow({
       return;
     }
     onMarked(course.courseCode, unitNo);
-    // T041 — reaching 100% coverage for this course checks the achievement;
+    // T041 - reaching 100% coverage for this course checks the achievement;
     // the server recomputes the numerator authoritatively, only p_total_units
     // crosses the client/server boundary (research.md R2).
     if (course.covered.size + 1 >= course.total && course.total > 0) {
@@ -88,7 +88,7 @@ function CourseRow({
 
   return (
     <li data-testid="course-progress" style={{ marginBottom: '1.5rem' }}>
-      <div>{course.courseCode} — {course.covered.size} / {course.total} {MESSAGES.units[locale]}</div>
+      <div>{course.courseCode} - {course.covered.size} / {course.total} {MESSAGES.units[locale]}</div>
       <CoverageBar covered={course.covered.size} total={course.total} />
       {error && <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>}
       <ul style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', listStyle: 'none', padding: 0, marginTop: '0.5rem' }}>
@@ -105,7 +105,7 @@ function CourseRow({
                   disabled={pendingUnit !== null}
                   onClick={() => handleMark(unitNo)}
                 >
-                  {MESSAGES.unit[locale]} {unitNo} — {MESSAGES.markStudied[locale]}
+                  {MESSAGES.unit[locale]} {unitNo} - {MESSAGES.markStudied[locale]}
                 </button>
               )}
             </li>
@@ -151,7 +151,7 @@ function ProgressContent(): React.ReactElement {
     }));
     setCoverage(result);
 
-    // T041 — check the full-coverage achievement for any course already at
+    // T041 - check the full-coverage achievement for any course already at
     // 100% on load (not only right after a self-mark action below); the RPC
     // is idempotent (ON CONFLICT DO NOTHING server-side), so calling it again
     // for an already-granted course is harmless.

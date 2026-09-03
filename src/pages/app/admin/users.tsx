@@ -18,10 +18,10 @@ type AdminUserRow = {
 };
 
 /**
- * Admin user list (Spec 002, T043) — role editing + verified_teacher toggle.
+ * Admin user list (Spec 002, T043) - role editing + verified_teacher toggle.
  * Wrapped in AuthGuard requiring admin (FR-007, FR-015); the actual writes are
  * enforced by RLS + the 0008 guard trigger regardless of this page's UI, and
- * the row list (including email — see supabase/functions/admin-list-users)
+ * the row list (including email - see supabase/functions/admin-list-users)
  * comes from an admin-verified Edge Function since profiles has no email
  * column by design.
  */
@@ -90,7 +90,7 @@ function AdminUsersContent(): React.ReactElement {
     if (!confirmed) return;
 
     setPendingId(row.id);
-    // admin-suspend (T054) — needs the service-role key to ban at the GoTrue
+    // admin-suspend (T054) - needs the service-role key to ban at the GoTrue
     // level (RLS alone can't stop a fresh sign-in), so this goes through the
     // Edge Function rather than a direct table update.
     const { error: fnError } = await supabase.functions.invoke('admin-suspend', {
@@ -127,8 +127,8 @@ function AdminUsersContent(): React.ReactElement {
           <tbody>
             {rows.map((row) => (
               <tr key={row.id}>
-                <td>{row.deleted_at ? '(deleted account)' : row.email ?? '—'}</td>
-                <td>{row.full_name ?? '—'}</td>
+                <td>{row.deleted_at ? '(deleted account)' : row.email ?? '-'}</td>
+                <td>{row.full_name ?? '-'}</td>
                 <td>
                   <select
                     className="input"

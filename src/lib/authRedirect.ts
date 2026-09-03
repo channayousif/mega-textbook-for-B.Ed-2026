@@ -21,7 +21,7 @@ export function getReturnTo(search: string): string {
   const params = new URLSearchParams(search);
   const next = params.get('next');
   if (!next) return DEFAULT_RETURN_TO;
-  // Only ever redirect within this site — an absolute or protocol-relative
+  // Only ever redirect within this site - an absolute or protocol-relative
   // `next` would be an open-redirect vector.
   if (!next.startsWith('/') || next.startsWith('//')) return DEFAULT_RETURN_TO;
   return next;
