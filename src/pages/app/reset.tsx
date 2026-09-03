@@ -9,8 +9,8 @@ import { authErrorMessage } from '@site/src/lib/authErrors';
  * Password recovery (Spec 002, T034). Two modes on one page:
  *
  * - Request mode (default): email -> resetPasswordForEmail. ALWAYS reports the
- *   same success message regardless of whether the account exists — this is
- *   deliberate (contracts/auth-operations.md §A: "always reports success — no
+ *   same success message regardless of whether the account exists - this is
+ *   deliberate (contracts/auth-operations.md §A: "always reports success - no
  *   account enumeration"). The one exception is a rate-limit error, which is
  *   safe to surface distinctly because it reveals nothing about the account.
  * - Recovery mode: entered when supabase-js fires the `PASSWORD_RECOVERY` auth
@@ -34,7 +34,7 @@ export default function ResetPage(): React.ReactElement {
   const [passwordUpdated, setPasswordUpdated] = useState(false);
 
   useEffect(() => {
-    // Async setup / sync cleanup — see AuthContext.tsx's equivalent comment
+    // Async setup / sync cleanup - see AuthContext.tsx's equivalent comment
     // (T060: getSupabase() is async since it dynamic-imports supabase-js).
     let cancelled = false;
     let unsubscribe = (): void => {};
@@ -64,7 +64,7 @@ export default function ResetPage(): React.ReactElement {
     });
     setRequestSubmitting(false);
 
-    // Only a rate-limit error is shown distinctly — it reveals nothing about
+    // Only a rate-limit error is shown distinctly - it reveals nothing about
     // whether the account exists. Every other outcome, including a genuine
     // failure for a non-existent account, reports the same uniform success.
     if (error && (error.status === 429 || (error as { code?: string }).code === 'over_request_rate_limit')) {

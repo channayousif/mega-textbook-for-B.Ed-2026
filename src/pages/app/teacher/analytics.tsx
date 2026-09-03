@@ -6,7 +6,7 @@ import { useClassRole, useQueryParam } from '@site/src/contexts/ClassContext';
 import { fetchClassAnalytics, type ClassAnalytics, type AtRiskStudent } from '@site/src/lib/teacherAnalytics';
 
 /**
- * Analytics (Spec 005, T037) — FR-009: score distribution per assignment,
+ * Analytics (Spec 005, T037) - FR-009: score distribution per assignment,
  * per-student trend, unit-by-unit class average. FR-010: at-risk flag with
  * a plain-language reason per student, scoped to one class the caller owns
  * (`useClassRole`, matching Spec 003's `roster.tsx`/`queue.tsx` precedent).
@@ -94,7 +94,7 @@ function AnalyticsContent(): React.ReactElement {
               const avg = d.scores.reduce((s, v) => s + v, 0) / d.scores.length;
               return (
                 <li key={d.assignmentId} data-testid="distribution-row">
-                  {d.title} — <Bar fraction={avg} /> {Math.round(avg * 100)}%
+                  {d.title} - <Bar fraction={avg} /> {Math.round(avg * 100)}%
                 </li>
               );
             })}
@@ -104,7 +104,7 @@ function AnalyticsContent(): React.ReactElement {
           <ul>
             {analytics.unitAverages.map((u) => (
               <li key={`${u.courseCode}-${u.unitNo}`} data-testid="unit-average-row">
-                {u.courseCode} Unit {u.unitNo} — <Bar fraction={u.averageScore} /> {Math.round(u.averageScore * 100)}%
+                {u.courseCode} Unit {u.unitNo} - <Bar fraction={u.averageScore} /> {Math.round(u.averageScore * 100)}%
               </li>
             ))}
           </ul>
@@ -113,7 +113,7 @@ function AnalyticsContent(): React.ReactElement {
           <ul>
             {analytics.trends.filter((t) => t.points.length > 0).map((t) => (
               <li key={t.studentId} data-testid="student-trend-row">
-                {t.fullName ?? '(no name set)'} — {t.points.map((p) => `${Math.round(p.normalizedScore * 100)}%`).join(' → ')}
+                {t.fullName ?? '(no name set)'} - {t.points.map((p) => `${Math.round(p.normalizedScore * 100)}%`).join(' → ')}
               </li>
             ))}
           </ul>
@@ -131,7 +131,7 @@ function AnalyticsContent(): React.ReactElement {
               data-testid="at-risk-student-row"
               title={atRiskReasonText(s, locale)}
             >
-              {s.fullName ?? '(no name set)'} — <span data-testid="at-risk-reason">{atRiskReasonText(s, locale)}</span>
+              {s.fullName ?? '(no name set)'} - <span data-testid="at-risk-reason">{atRiskReasonText(s, locale)}</span>
             </li>
           ))}
         </ul>

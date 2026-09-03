@@ -13,12 +13,12 @@ import type { SuggestionCategory, TeachingLogSourceKind } from '@site/src/lib/ty
  * Swizzled DocItem/Footer (Spec 004 T025, Spec 005 T014/T029).
  *
  * Renders three role-scoped controls on doc content pages:
- * - Student-only "Mark as studied" (Spec 004, unchanged) — unit pages only.
- * - Teacher-only "Suggest improvement" (Spec 005, FR-003) — any page
+ * - Student-only "Mark as studied" (Spec 004, unchanged) - unit pages only.
+ * - Teacher-only "Suggest improvement" (Spec 005, FR-003) - any page
  *   carrying `course_code` in front matter, including course-overview pages
  *   with no `unit_no` (2026-07-24 remediation, research.md R1).
  * - Teacher-only "Give feedback on this activity" (Spec 005, FR-007, T029)
- *   — unit pages only (`course_code` AND `unit_no` both required), since
+ *   - unit pages only (`course_code` AND `unit_no` both required), since
  *   feedback is inherently about one specific activity.
  */
 
@@ -58,14 +58,14 @@ const MESSAGES = {
 /**
  * No front-matter field distinguishes activities.mdx/formative.mdx/
  * summative.mdx from index.mdx/teacher-notes.mdx (all five share the same
- * course_code/unit_no shape) — derived instead from the page's own path,
+ * course_code/unit_no shape) - derived instead from the page's own path,
  * the same "read from the URL" approach FR-003's slug capture already uses.
  *
  * Spec 008 per-topic pages (`topic-NN`, `unit-assessment`, `course-review`) are
- * whole lessons / assessments, not one of the three FR-004 activity kinds — they
+ * whole lessons / assessments, not one of the three FR-004 activity kinds - they
  * carry no per-activity feedback control, so this returns null for them (explicit
  * for clarity; the fallthrough already would). "Suggest improvement" and
- * "Mark as studied" still work — they read course_code [+ unit_no], present on all
+ * "Mark as studied" still work - they read course_code [+ unit_no], present on all
  * the new files.
  */
 function deriveSourceKindFromPath(pathname: string): TeachingLogSourceKind | null {
@@ -90,7 +90,7 @@ const CATEGORY_OPTIONS: { value: SuggestionCategory; label: keyof typeof MESSAGE
 type TocEntry = { value: string; id: string; level: number };
 
 /**
- * research.md R1 — the last toc heading whose element has already scrolled
+ * research.md R1 - the last toc heading whose element has already scrolled
  * to or above a small "reading position" threshold; `null` if the reader is
  * above the first heading (top of page). Computed once, on click, not via a
  * continuous scroll listener.

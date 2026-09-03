@@ -12,7 +12,7 @@ import { ACHIEVEMENT_CATALOG, fetchEarnedAchievements } from '@site/src/lib/achi
 import type { StudentAchievement } from '@site/src/lib/types';
 
 /**
- * Dashboard Home (Spec 004, T012/T040) — FR-002: current semester, enrolled
+ * Dashboard Home (Spec 004, T012/T040) - FR-002: current semester, enrolled
  * classes, due-soon assignments/quizzes (48h-first), and up to 5 recent
  * grades, all above the fold on a 360px screen. FR-009: also previews the
  * student's most recently earned achievement(s), added by T040.
@@ -33,7 +33,7 @@ const MESSAGES = {
     ur: 'آپ ابھی تک کسی کلاس میں شامل نہیں ہیں۔ اپنے استاد کے کوڈ سے کلاس میں شامل ہوں۔',
   },
   dueSoon: { en: 'Due soon', ur: 'جلد واجب' },
-  allCaughtUp: { en: "You're all caught up — nothing due right now.", ur: 'آپ بالکل اپ ٹو ڈیٹ ہیں — ابھی کچھ بھی واجب نہیں۔' },
+  allCaughtUp: { en: "You're all caught up - nothing due right now.", ur: 'آپ بالکل اپ ٹو ڈیٹ ہیں - ابھی کچھ بھی واجب نہیں۔' },
   recentGrades: { en: 'Recent grades', ur: 'حالیہ گریڈز' },
   noGrades: { en: 'No grades yet.', ur: 'ابھی تک کوئی گریڈ نہیں۔' },
   viewAllAssignments: { en: 'View all assignments', ur: 'تمام اسائنمنٹس دیکھیں' },
@@ -100,7 +100,7 @@ function HomeContent(): React.ReactElement {
       ) : (
         <ul>
           {semester.classes.map((row) => (
-            <li key={row.id}>{row.classes.name} — {row.classes.course_code}</li>
+            <li key={row.id}>{row.classes.name} - {row.classes.course_code}</li>
           ))}
         </ul>
       )}
@@ -112,7 +112,7 @@ function HomeContent(): React.ReactElement {
         <ul>
           {dueSoon.slice(0, 5).map((item) => (
             <li key={item.assignment.id} data-testid="due-soon-item">
-              {item.assignment.title} — {item.className} — {new Date(item.assignment.due_at).toLocaleString()}
+              {item.assignment.title} - {item.className} - {new Date(item.assignment.due_at).toLocaleString()}
               {dueLabel(item, locale) && ` (${dueLabel(item, locale)})`}
             </li>
           ))}
@@ -126,7 +126,7 @@ function HomeContent(): React.ReactElement {
       ) : (
         <ul>
           {recentGrades.map((g, i) => (
-            <li key={`${g.kind}-${g.title}-${i}`}>{g.title} — {g.className} — {g.mark}/{g.maxMark}</li>
+            <li key={`${g.kind}-${g.title}-${i}`}>{g.title} - {g.className} - {g.mark}/{g.maxMark}</li>
           ))}
         </ul>
       )}

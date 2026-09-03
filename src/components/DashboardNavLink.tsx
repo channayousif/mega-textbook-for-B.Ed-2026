@@ -7,7 +7,7 @@ import { useAuth } from '@site/src/contexts/AuthContext';
  * src/theme/NavbarItem/ComponentTypes.tsx, mirroring the existing
  * `custom-authWidget` (NavbarAuthWidget) precedent from Spec 002.
  *
- * Visible only when signed in as a student — a teacher/admin never sees this
+ * Visible only when signed in as a student - a teacher/admin never sees this
  * link in the first place (StudentDashboardGuard, T006, still handles the
  * case of a teacher/admin reaching a dashboard URL directly, e.g. a stale
  * bookmark or shared link).

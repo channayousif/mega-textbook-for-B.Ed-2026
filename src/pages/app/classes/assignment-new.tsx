@@ -11,7 +11,7 @@ import { fetchQuizUnitsForCourse } from '@site/src/lib/quiz';
 import type { AssignmentSourceKind } from '@site/src/lib/types';
 
 /**
- * Assignment creation — unit-item picker, quiz picker, or custom (Spec 003,
+ * Assignment creation - unit-item picker, quiz picker, or custom (Spec 003,
  * T034/T061/T062). FR-004, FR-005, FR-017, FR-016; targets SC-001's
  * ≤3-click/<2-min flow.
  */
@@ -31,8 +31,8 @@ const MESSAGES = {
     ur: 'اسائنمنٹ نہیں بنائی جا سکی۔ آخری تاریخ اور زیادہ سے زیادہ نمبر چیک کریں۔',
   },
   publishError: {
-    en: 'Assignment created but could not be published — publish it from the assignment list.',
-    ur: 'اسائنمنٹ بن گئی مگر شائع نہیں ہو سکی — اسے اسائنمنٹس کی فہرست سے شائع کریں۔',
+    en: 'Assignment created but could not be published - publish it from the assignment list.',
+    ur: 'اسائنمنٹ بن گئی مگر شائع نہیں ہو سکی - اسے اسائنمنٹس کی فہرست سے شائع کریں۔',
   },
   published: { en: 'Assignment published.', ur: 'اسائنمنٹ شائع ہو گئی۔' },
   backToAssignments: { en: 'Back to assignments', ur: 'اسائنمنٹس کی فہرست پر واپس جائیں' },
@@ -79,7 +79,7 @@ function AssignmentNewContent({ classId }: { classId: string }): React.ReactElem
 
   useEffect(() => {
     if (mode !== 'quiz' || !selectedQuizUnit) return;
-    setTitle(`Quiz — Unit ${selectedQuizUnit}`);
+    setTitle(`Quiz - Unit ${selectedQuizUnit}`);
   }, [selectedQuizUnit, mode]);
 
   async function handleSubmit(e: React.FormEvent): Promise<void> {
@@ -154,7 +154,7 @@ function AssignmentNewContent({ classId }: { classId: string }): React.ReactElem
 
   return (
     <div>
-      <h2>New assignment — {classRow.name}</h2>
+      <h2>New assignment - {classRow.name}</h2>
       {error && (
         <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>
       )}
@@ -189,7 +189,7 @@ function AssignmentNewContent({ classId }: { classId: string }): React.ReactElem
               <option value="">Choose…</option>
               {unitItems.map((entry) => (
                 <option key={`${entry.unit_no}|${entry.kind}`} value={`${entry.unit_no}|${entry.kind}`}>
-                  Unit {entry.unit_no} — {entry.kind} — {entry.title}
+                  Unit {entry.unit_no} - {entry.kind} - {entry.title}
                   {entry.coming_soon ? ' (coming soon)' : ''}
                 </option>
               ))}

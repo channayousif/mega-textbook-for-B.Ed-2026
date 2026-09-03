@@ -7,7 +7,7 @@ import { fetchAllGrades, type GradeItem } from '@site/src/lib/dashboardQueries';
 
 /**
  * Grades area (Spec 004, T017, FR-004). Every returned assignment/quiz
- * score, with mark and maximum — deliberately never a class/cohort average
+ * score, with mark and maximum - deliberately never a class/cohort average
  * anywhere on this page (a permanent privacy placeholder, spec.md
  * Assumptions).
  */

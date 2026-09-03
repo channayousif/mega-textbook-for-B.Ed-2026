@@ -7,7 +7,7 @@ import { exportGradebook } from '@site/src/lib/gradebookExport';
 
 /**
  * Gradebook export (Spec 003, T052/T062). Teacher-only export button
- * triggering a client-side `.xlsx` generation and download — no export
+ * triggering a client-side `.xlsx` generation and download - no export
  * endpoint (R5). Bilingual status/error text (FR-016).
  */
 
@@ -47,8 +47,8 @@ function GradebookContent({ classId }: { classId: string }): React.ReactElement 
 
   return (
     <div>
-      <h2>Gradebook — {classRow.name}</h2>
-      <p>{classRow.course_code} — {classRow.term_label}</p>
+      <h2>Gradebook - {classRow.name}</h2>
+      <p>{classRow.course_code} - {classRow.term_label}</p>
       {error && (
         <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>
       )}

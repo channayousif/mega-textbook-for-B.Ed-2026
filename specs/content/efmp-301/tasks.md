@@ -1,8 +1,8 @@
-# EFMP-301 — Task Tracker
+# EFMP-301 - Task Tracker
 
 Legend (FR-005's 3-value status enum): `▢` not-started · `▣` in-progress · `✅` done (requires
 reviewer initials). One row per unit per stage (`G1`–`G7`; `G0` course-intake is tracked via
-`content-spec.md`'s own `status` field, not a row here — research.md R2). A Revision Task
+`content-spec.md`'s own `status` field, not a row here - research.md R2). A Revision Task
 (FR-011) is recorded as a new row in this same table, tagged with the originating suggestion's
 `improvement_suggestions.id` (UUID) in the `Suggestion` column and its target re-entry stage.
 

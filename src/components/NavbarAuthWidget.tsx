@@ -5,10 +5,10 @@ import { loginUrlWithReturnTo } from '@site/src/lib/authRedirect';
 
 /**
  * Navbar identity widget (Spec 002, T029/T049). "Sign in" when signed out,
- * else the account's display name plus Sign out — falling back to the email
+ * else the account's display name plus Sign out - falling back to the email
  * when `full_name` is null (FR-010b). Rendered on every route via
  * docusaurus.config.ts (T030), because Root (src/theme/Root.tsx) mounts
- * <AuthProvider> around the whole site — the same session spans docs and app
+ * <AuthProvider> around the whole site - the same session spans docs and app
  * pages, so signing out here ends it everywhere (FR-012).
  */
 export default function NavbarAuthWidget(): React.ReactElement | null {
@@ -16,7 +16,7 @@ export default function NavbarAuthWidget(): React.ReactElement | null {
   const { loading, session, displayName, isConfigured, signOut } = useAuth();
 
   if (!isConfigured) return null;
-  // Resolving the session — render neither state to avoid a signed-out flash.
+  // Resolving the session - render neither state to avoid a signed-out flash.
   if (loading) return <span className="navbar__item" aria-hidden="true" />;
 
   if (!session) {

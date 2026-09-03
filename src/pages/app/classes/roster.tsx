@@ -10,11 +10,11 @@ import {
 import type { RosterRow } from '@site/src/lib/classes';
 
 /**
- * Roster management — join-code reissue/revoke, archive/reactivate,
+ * Roster management - join-code reissue/revoke, archive/reactivate,
  * remove/restore (Spec 003, T020/T021/T069/T076/T062).
  * FR-002, FR-015, FR-018, FR-020, FR-022, FR-016, 2026-07-19 clarifications.
  *
- * Query-string routing (`?classId=…`), not a nested `[classId]` route — see
+ * Query-string routing (`?classId=…`), not a nested `[classId]` route - see
  * ClassContext.tsx's header comment for why.
  */
 
@@ -30,12 +30,12 @@ const MESSAGES = {
   },
   archiveError: { en: 'Could not archive this class.', ur: 'کلاس آرکائیو نہیں ہو سکی۔' },
   reactivateError: {
-    en: 'Could not reactivate this class — you may no longer be an eligible teacher.',
-    ur: 'کلاس دوبارہ فعال نہیں ہو سکی — ہو سکتا ہے اب آپ اہل استاد نہ ہوں۔',
+    en: 'Could not reactivate this class - you may no longer be an eligible teacher.',
+    ur: 'کلاس دوبارہ فعال نہیں ہو سکی - ہو سکتا ہے اب آپ اہل استاد نہ ہوں۔',
   },
   archivedBanner: {
-    en: 'This class is archived — read-only. No new joins, assignments, or submissions are possible until it is reactivated.',
-    ur: 'یہ کلاس آرکائیو ہے — صرف دیکھنے کے لیے۔ دوبارہ فعال ہونے تک نئی شمولیت، اسائنمنٹس یا جمع کروائے گئے کام ممکن نہیں۔',
+    en: 'This class is archived - read-only. No new joins, assignments, or submissions are possible until it is reactivated.',
+    ur: 'یہ کلاس آرکائیو ہے - صرف دیکھنے کے لیے۔ دوبارہ فعال ہونے تک نئی شمولیت، اسائنمنٹس یا جمع کروائے گئے کام ممکن نہیں۔',
   },
 } as const;
 
@@ -147,7 +147,7 @@ function RosterContent({ classId }: { classId: string }): React.ReactElement {
   return (
     <div>
       <h2>{classRow.name}</h2>
-      <p>{classRow.course_code} — {classRow.term_label}</p>
+      <p>{classRow.course_code} - {classRow.term_label}</p>
       {error && (
         <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>
       )}
@@ -159,7 +159,7 @@ function RosterContent({ classId }: { classId: string }): React.ReactElement {
 
       <div className="margin-vert--md">
         <h3>Join code</h3>
-        <p>{classRow.join_code ?? '(revoked — no new joins possible)'}</p>
+        <p>{classRow.join_code ?? '(revoked - no new joins possible)'}</p>
         <button
           type="button"
           className="button button--sm button--secondary"
@@ -254,7 +254,7 @@ function RosterContent({ classId }: { classId: string }): React.ReactElement {
                 return (
                   <tr key={r.id}>
                     <td>{label}</td>
-                    <td>{r.removed_at ? new Date(r.removed_at).toLocaleDateString() : '—'}</td>
+                    <td>{r.removed_at ? new Date(r.removed_at).toLocaleDateString() : '-'}</td>
                     <td>
                       <button
                         type="button"

@@ -8,7 +8,7 @@ import {
 import type { ImprovementSuggestion, SuggestionCategory, SuggestionStatus } from '@site/src/lib/types';
 
 /**
- * Admin moderation queue (Spec 005, T019, FR-005) — every suggestion from
+ * Admin moderation queue (Spec 005, T019, FR-005) - every suggestion from
  * every teacher, filterable by status/category/course, with a
  * transition-with-note control presenting only the currently legal next
  * status per row (research.md R5's one-directional graph, enforced at the

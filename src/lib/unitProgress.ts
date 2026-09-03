@@ -4,10 +4,10 @@ import type { Result } from '@site/src/lib/classes';
 import type { UnitProgress } from '@site/src/lib/types';
 
 /**
- * Unit coverage — self-marking + read helpers (Spec 004, T005/T023).
+ * Unit coverage - self-marking + read helpers (Spec 004, T005/T023).
  *
  * COSMETIC CONVENIENCE ONLY (Constitution Art. IX.2) for the read helper and
- * the self-mark insert — real authorization is RLS (supabase/migrations/0024).
+ * the self-mark insert - real authorization is RLS (supabase/migrations/0024).
  * `method='assignment'`/`'quiz'` rows are written exclusively by the
  * SECURITY DEFINER sync triggers (0025); this file never attempts those.
  */
@@ -19,7 +19,7 @@ async function client() {
 }
 
 /**
- * FR-006 — mark a unit studied, independent of any assignment. Idempotent:
+ * FR-006 - mark a unit studied, independent of any assignment. Idempotent:
  * re-marking an already-covered unit (self-marked or otherwise) is a no-op,
  * never a duplicate row or an error (User Story 4 AS2/AS3).
  */
@@ -36,7 +36,7 @@ export async function markUnitStudied(studentId: string, courseCode: string, uni
   return { data: (data as UnitProgress) ?? null, error };
 }
 
-/** FR-005 — the signed-in student's own unit_progress rows (RLS-scoped). */
+/** FR-005 - the signed-in student's own unit_progress rows (RLS-scoped). */
 export async function fetchOwnUnitProgress(): Promise<Result<UnitProgress[]>> {
   const supabase = await client();
   const { data, error } = await supabase
@@ -46,10 +46,10 @@ export async function fetchOwnUnitProgress(): Promise<Result<UnitProgress[]>> {
 }
 
 /**
- * FR-005, research.md R1 — total units for a course, derived from the
+ * FR-005, research.md R1 - total units for a course, derived from the
  * build-time content index (never duplicated into Postgres). Counts distinct
  * `unit_no` across all indexed kinds (activities/formative/summative), which
- * already covers every scaffolded unit — authored or `coming_soon` — since
+ * already covers every scaffolded unit - authored or `coming_soon` - since
  * Spec 001's five-file-per-unit rule guarantees `activities.mdx` exists for
  * every unit folder.
  */
@@ -62,7 +62,7 @@ export async function fetchTotalUnitsForCourse(courseCode: string): Promise<numb
 }
 
 /**
- * FR-005 — total units for every course the student has any unit_progress in,
+ * FR-005 - total units for every course the student has any unit_progress in,
  * keyed by course_code. Used by the Progress area (T020) so it only has to
  * fetch the content index once for every course it needs to display.
  */
@@ -77,7 +77,7 @@ export async function fetchTotalUnitsForCourses(courseCodes: string[]): Promise<
   return result;
 }
 
-/** FR-006 — the full sorted list of unit numbers for a course, so the Progress area (T024) can offer a "Mark as studied" control per not-yet-covered unit. */
+/** FR-006 - the full sorted list of unit numbers for a course, so the Progress area (T024) can offer a "Mark as studied" control per not-yet-covered unit. */
 export async function fetchUnitNumbersForCourse(courseCode: string): Promise<number[]> {
   const entries = await fetchContentIndex();
   return Array.from(new Set(entries.filter((e) => e.course_code === courseCode).map((e) => e.unit_no))).sort((a, b) => a - b);

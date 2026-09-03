@@ -58,7 +58,7 @@ function AchievementsContent(): React.ReactElement {
               <h3>{definition.title[locale]}</h3>
               <p>{definition.description[locale]}</p>
               {earnedRow ? (
-                <p><strong>{MESSAGES.earned[locale]}</strong> — {new Date(earnedRow.earned_at).toLocaleDateString()}</p>
+                <p><strong>{MESSAGES.earned[locale]}</strong> - {new Date(earnedRow.earned_at).toLocaleDateString()}</p>
               ) : (
                 <p>{MESSAGES.howToReach[locale]} {definition.howToReach[locale]}</p>
               )}

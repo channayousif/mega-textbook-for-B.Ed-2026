@@ -1,4 +1,4 @@
-# Placement — marker → `<Figure>`, manifest row → v2 (generate-figures)
+# Placement - marker → `<Figure>`, manifest row → v2 (generate-figures)
 
 Once a figure's asset exists under `static/img/figures/<course-lowercase>/unit-NN/`, wire it in.
 
@@ -8,14 +8,14 @@ Find the whole marker in `docs/semester-N/<course>/unit-NN/topic-NN.mdx`:
 
 ```mdx
 {/* FIGURE[fig-U1-1]: clean flat vector comparison table … ; alt: Table comparing a teacher,
-a shopkeeper and a doctor against the four features of a profession — the teacher and the
+a shopkeeper and a doctor against the four features of a profession - the teacher and the
 doctor meet all four, the shopkeeper meets none. */}
 ```
 
-**Replace it entirely** — the comment is not kept — at the same position with one line:
+**Replace it entirely** - the comment is not kept - at the same position with one line:
 
 ```mdx
-<Figure id="fig-U1-1" src="/img/figures/efmp-302/unit-01/fig-U1-1.svg" alt="Table comparing a teacher, a shopkeeper and a doctor against the four features of a profession — the teacher and the doctor meet all four, the shopkeeper meets none." />
+<Figure id="fig-U1-1" src="/img/figures/efmp-302/unit-01/fig-U1-1.svg" alt="Table comparing a teacher, a shopkeeper and a doctor against the four features of a profession - the teacher and the doctor meet all four, the shopkeeper meets none." />
 ```
 
 Rules (contract: `specs/009-figure-rendering/contracts/figure-component.md`):
@@ -24,10 +24,10 @@ Rules (contract: `specs/009-figure-rendering/contracts/figure-component.md`):
 - `alt` **==** the marker's alt text, **verbatim**, whitespace-normalised (collapse newlines +
   runs of spaces to single spaces; trim). The gate compares the `<Figure alt>` to the manifest
   `Alt text`.
-- `src` **==** the manifest `Src` — a **root-absolute** site path
+- `src` **==** the manifest `Src` - a **root-absolute** site path
   `/img/figures/<course-lowercase>/unit-NN/<figId>.<ext>`. No `import`, no relative path, no
   external URL. `.svg` for a diagram, `.webp` for an illustration.
-- `<Figure>` is registered globally in `src/theme/MDXComponents.tsx` — **no import line** in the
+- `<Figure>` is registered globally in `src/theme/MDXComponents.tsx` - **no import line** in the
   topic file.
 - Keep it on its own line, where the marker was (normally under `## A real classroom situation`
   or early in `## Explanation`).
@@ -49,10 +49,10 @@ shape, rewrite the whole table header + rows to v2:
 |---|---|
 | `Figure ID` | unchanged; `^fig-U\d+-\d+$`, unique, `U<n>` == unit-folder number |
 | `Topic` | unchanged; the `topic_label` of the carrier `topic-NN.mdx` |
-| `Kind` | `diagram` or `illustration` — must match the asset extension (`.svg` / `.webp`) |
+| `Kind` | `diagram` or `illustration` - must match the asset extension (`.svg` / `.webp`) |
 | `Prompt` | **verbatim from the marker**, whitespace-normalised (retained for regeneration + the human gate) |
 | `Alt text` | verbatim from the marker; SHOULD equal the `<Figure alt>` |
-| `Src` | `/img/figures/<course-lowercase>/unit-NN/<figId>.<ext>` — the same string as `<Figure src>` |
+| `Src` | `/img/figures/<course-lowercase>/unit-NN/<figId>.<ext>` - the same string as `<Figure src>` |
 | `Status` | `placed` |
 
 Also update the manifest's header prose to reference
@@ -70,7 +70,7 @@ Also update the manifest's header prose to reference
 - A row may hold at any stage; a unit may be a **mix** (incremental rendering).
 - A row must **never silently regress** from `placed`. If you have to pull a figure, that is a
   deliberate manifest + topic-file edit, called out in the PR.
-- `generated` is a transient state — use it only if you have the asset but are deferring the
+- `generated` is a transient state - use it only if you have the asset but are deferring the
   topic-file edit. Normally go straight `prompt-only → placed` in one pass.
 
 ## 4. Re-run the gate set
@@ -81,13 +81,13 @@ npm run validate:content && npm run check:figures && npm run check:no-answer-key
 
 `check:figures` failures name the unit + the exact condition. Common ones:
 
-- *"placed but … still carries the comment marker"* — step 1 not done for that id.
-- *"placed but its Src file does not exist"* — `Src` path typo, or the asset isn't under
+- *"placed but … still carries the comment marker"* - step 1 not done for that id.
+- *"placed but its Src file does not exist"* - `Src` path typo, or the asset isn't under
   `static/` (check the leading `/img/…` maps to `static/img/…`).
-- *"Kind … not in {diagram, illustration}"* — blank or misspelled `Kind` cell.
-- *"manifest Topic … != topic_label"* — the `Topic` cell doesn't match the carrier file's
+- *"Kind … not in {diagram, illustration}"* - blank or misspelled `Kind` cell.
+- *"manifest Topic … != topic_label"* - the `Topic` cell doesn't match the carrier file's
   front-matter `topic_label`.
-- *"prompt-only but its Src/Kind cell is not blank"* — a half-filled row; either finish placing
+- *"prompt-only but its Src/Kind cell is not blank"* - a half-filled row; either finish placing
   it or blank the cells.
 
 ## Incremental-unit rule

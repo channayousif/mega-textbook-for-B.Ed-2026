@@ -39,6 +39,11 @@ jobs:
       - name: Figure marker gate
         run: npm run check:figures
 
+      # Zero em dash in authored content (Constitution Art. III.9) - docs/, guides/,
+      # i18n/, specs/content/. history/ is exempt as an immutable record.
+      - name: No em dash in content
+        run: npm run check:no-em-dash
+
       # No answer keys / private marking material in public content (FR-012, SC-010, T028)
       - name: Answer-key safety check
         run: npm run check:no-answer-keys

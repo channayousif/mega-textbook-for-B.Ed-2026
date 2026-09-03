@@ -5,7 +5,7 @@ import type { Assignment, AssignmentStudentStatus, Submission } from '@site/src/
 /**
  * Submission submit/resubmit + computed status (Spec 003, T033).
  *
- * COSMETIC CONVENIENCE ONLY (Constitution Art. IX.2) — real authorization is
+ * COSMETIC CONVENIENCE ONLY (Constitution Art. IX.2) - real authorization is
  * RLS + `compute_submission_late()`/`guard_submission_updates()`
  * (supabase/migrations/0018) and the Storage bucket policies (0019).
  */
@@ -27,7 +27,7 @@ const MAX_FILE_SIZE_BYTES = 10 * 1024 * 1024; // 10 MB, FR-009
 
 export type FileValidationError = 'too_large' | 'unsupported_type';
 
-/** Client-side pre-check (FR-009) — the Storage bucket config is the real enforcement. */
+/** Client-side pre-check (FR-009) - the Storage bucket config is the real enforcement. */
 export function validateFile(file: File): FileValidationError | null {
   if (file.size > MAX_FILE_SIZE_BYTES) return 'too_large';
   if (!ALLOWED_MIME_TYPES.includes(file.type)) return 'unsupported_type';
@@ -42,11 +42,11 @@ export type SubmitInput = {
 };
 
 /**
- * FR-007 — submit or resubmit (before the due date). One `upsert` on
+ * FR-007 - submit or resubmit (before the due date). One `upsert` on
  * `(assignment_id, student_id)` covers both: the INSERT branch for a first
- * submission, the UPDATE branch (via `ON CONFLICT`) for a resubmission —
+ * submission, the UPDATE branch (via `ON CONFLICT`) for a resubmission -
  * each governed by its own RLS policy (0018). A new file always gets a
- * fresh Storage path (data-model.md — no Storage UPDATE policy needed);
+ * fresh Storage path (data-model.md - no Storage UPDATE policy needed);
  * omitting `file` on a resubmission leaves the previously uploaded file
  * untouched.
  */
@@ -109,7 +109,7 @@ export async function getSubmissionFileUrl(filePath: string): Promise<Result<str
   return { data: data.signedUrl, error: null };
 }
 
-/** FR-006 — computed per-assignment status for a student; never a stored column. */
+/** FR-006 - computed per-assignment status for a student; never a stored column. */
 export function computeStudentStatus(params: {
   dueAtIso: string;
   submission: Submission | null;
@@ -127,7 +127,7 @@ export function isSubmissionEditable(assignment: Pick<Assignment, 'due_at'>): bo
   return Date.now() <= new Date(assignment.due_at).getTime();
 }
 
-/** FR-006, FR-016 — bilingual label for a computed status, shared by assignments.tsx and queue.tsx. */
+/** FR-006, FR-016 - bilingual label for a computed status, shared by assignments.tsx and queue.tsx. */
 const STATUS_LABELS: Record<AssignmentStudentStatus, { en: string; ur: string }> = {
   not_yet_submitted: { en: 'not yet submitted', ur: 'ابھی جمع نہیں کروایا' },
   submitted: { en: 'submitted', ur: 'جمع کروا دیا گیا' },

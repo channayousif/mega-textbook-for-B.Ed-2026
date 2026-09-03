@@ -3,7 +3,7 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 /**
- * Loads `.env.local` into `process.env` for local `npm run build`/`start` —
+ * Loads `.env.local` into `process.env` for local `npm run build`/`start` -
  * without this, DOCUSAURUS_SUPABASE_URL/ANON_KEY silently come through empty
  * (no error), and every auth-gated UI (NavbarAuthWidget, AuthGuard) just
  * renders nothing. CI is unaffected: it sets these as real environment
@@ -45,7 +45,7 @@ const config: Config = {
    *
    * Both values are public by design: the anon key is safe to ship ONLY because
    * Row-Level Security is enabled on every table (Constitution Art. V.1/V.2).
-   * The service-role key must never appear here or anywhere under src/ —
+   * The service-role key must never appear here or anywhere under src/ -
    * `npm run check:no-service-key` fails the build if it does.
    */
   customFields: {
@@ -73,7 +73,7 @@ const config: Config = {
     /**
      * Second docs-plugin instance for the Student/Teacher Guides (Spec 004,
      * ADR-0009, research.md R6, T001). Kept deliberately separate from the
-     * curriculum docs instance above — its topic-based navigation (guide ->
+     * curriculum docs instance above - its topic-based navigation (guide ->
      * guide) has nothing to do with the curriculum's semester -> course ->
      * unit hierarchy, and mixing the two would confuse both the sidebar and
      * Spec 001's SC-003 promise that the curriculum catalog is the site's home.
@@ -111,20 +111,20 @@ const config: Config = {
       items: [
         { type: 'localeDropdown', position: 'right' },
         { type: 'search', position: 'right' },
-        // Spec 004, T007 — registers src/components/DashboardNavLink.tsx;
+        // Spec 004, T007 - registers src/components/DashboardNavLink.tsx;
         // renders nothing unless signed in as a student.
         { type: 'custom-dashboardLink', position: 'right' },
-        // Spec 005, T003 — registers src/components/TeacherDashboardNavLink.tsx;
+        // Spec 005, T003 - registers src/components/TeacherDashboardNavLink.tsx;
         // renders nothing unless signed in as a teacher.
         { type: 'custom-teacherDashboardLink', position: 'right' },
-        // Spec 002, T030 — registers src/components/NavbarAuthWidget.tsx via
+        // Spec 002, T030 - registers src/components/NavbarAuthWidget.tsx via
         // the swizzled src/theme/NavbarItem/ComponentTypes.tsx.
         { type: 'custom-authWidget', position: 'right' },
       ],
     },
     footer: {
       style: 'dark',
-      copyright: 'B.Ed (4-Year) Mega Textbook — University of Sindh, Faculty of Education.',
+      copyright: 'B.Ed (4-Year) Mega Textbook - University of Sindh, Faculty of Education.',
     },
   } satisfies Preset.ThemeConfig,
 };

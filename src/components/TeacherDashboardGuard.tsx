@@ -8,7 +8,7 @@ import { loginUrlWithReturnTo } from '@site/src/lib/authRedirect';
 /**
  * Client-side gate for `/app/teacher/*` pages (Spec 005, T002, FR-013).
  *
- * ⚠️ COSMETIC ONLY (Constitution Art. IX.2) — same disclaimer as
+ * ⚠️ COSMETIC ONLY (Constitution Art. IX.2) - same disclaimer as
  * `src/components/AuthGuard.tsx`/`StudentDashboardGuard.tsx`. Every teacher
  * dashboard query is still RLS-scoped to the caller's own classes regardless
  * of what this component renders.

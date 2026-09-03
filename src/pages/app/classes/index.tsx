@@ -10,10 +10,10 @@ import {
 import type { Class, Enrollment } from '@site/src/lib/types';
 
 /**
- * Class list + create (teacher) / join-by-code + joined list (student) —
+ * Class list + create (teacher) / join-by-code + joined list (student) -
  * Spec 003, T019/T062. FR-001, FR-003, FR-016 (bilingual status/error text;
  * static labels/headings stay English, matching Spec 002's login.tsx
- * precedent — see PHR 0019).
+ * precedent - see PHR 0019).
  */
 
 const MESSAGES = {
@@ -248,7 +248,7 @@ function StudentClassesView(): React.ReactElement {
         <ul>
           {enrollments.map((e) => (
             <li key={e.id}>
-              {e.classes.name} — {e.classes.course_code} ({e.classes.term_label})
+              {e.classes.name} - {e.classes.course_code} ({e.classes.term_label})
             </li>
           ))}
         </ul>
