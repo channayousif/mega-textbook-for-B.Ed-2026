@@ -6,7 +6,7 @@ import type { AchievementKey, StudentAchievement } from '@site/src/lib/types';
  * Achievement catalog + earned-achievement reads (Spec 004, T038).
  *
  * The fixed, four-entry catalog is static code, not a Postgres table
- * (research.md R4) — it never changes without a deploy, matching this repo's
+ * (research.md R4) - it never changes without a deploy, matching this repo's
  * established convention for platform-wide bilingual UI copy (the same
  * `{ en, ur }`-keyed pattern used throughout `src/pages/app/`). Only *earned*
  * achievements (`student_achievements`) are persisted.
@@ -48,7 +48,7 @@ export const ACHIEVEMENT_CATALOG: Record<AchievementKey, AchievementDefinition> 
       en: 'Awarded the first time you reach 100% unit coverage in any course.',
       ur: 'کسی بھی کورس میں پہلی بار 100% یونٹ کوریج تک پہنچنے پر دیا جاتا ہے۔',
     },
-    howToReach: { en: 'Cover every unit of one course — through grades, quizzes, or self-marking.', ur: 'گریڈز، کوئز یا خود نشان زد کرنے کے ذریعے کسی ایک کورس کے تمام یونٹس مکمل کریں۔' },
+    howToReach: { en: 'Cover every unit of one course - through grades, quizzes, or self-marking.', ur: 'گریڈز، کوئز یا خود نشان زد کرنے کے ذریعے کسی ایک کورس کے تمام یونٹس مکمل کریں۔' },
   },
   on_time_class_completion: {
     key: 'on_time_class_completion',
@@ -67,7 +67,7 @@ async function client() {
   return supabase;
 }
 
-/** FR-009 — the signed-in student's own earned achievements. */
+/** FR-009 - the signed-in student's own earned achievements. */
 export async function fetchEarnedAchievements(): Promise<Result<StudentAchievement[]>> {
   const supabase = await client();
   const { data, error } = await supabase
@@ -78,9 +78,9 @@ export async function fetchEarnedAchievements(): Promise<Result<StudentAchieveme
 }
 
 /**
- * FR-008 — checks (and grants if newly earned) the "100% course coverage"
+ * FR-008 - checks (and grants if newly earned) the "100% course coverage"
  * achievement. The server recomputes the numerator authoritatively; only
- * `totalUnits` (Git-derived, unavailable to Postgres) crosses the boundary —
+ * `totalUnits` (Git-derived, unavailable to Postgres) crosses the boundary -
  * a deliberate, narrowly-scoped exception (research.md R2). Returns whether
  * the achievement is newly or already granted.
  */

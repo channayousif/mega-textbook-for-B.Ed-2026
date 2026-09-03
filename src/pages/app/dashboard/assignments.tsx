@@ -7,7 +7,7 @@ import { fetchDueSoon, type DueSoonItem } from '@site/src/lib/dashboardQueries';
 
 /**
  * Full Assignments area (Spec 004, T013, FR-003). Shares `fetchDueSoon()`
- * with Home (T012) — data-model.md's read-only query shapes table describes
+ * with Home (T012) - data-model.md's read-only query shapes table describes
  * this as "the same query, unfiltered by time window," meaning no item is
  * ever excluded here either; this page just shows the complete list rather
  * than only the first few.
@@ -23,11 +23,11 @@ const MESSAGES = {
   loadError: { en: 'Could not load assignments.', ur: 'اسائنمنٹس لوڈ نہیں ہو سکیں۔' },
   title: { en: 'Assignments', ur: 'اسائنمنٹس' },
   nothingDue: {
-    en: "Nothing due — you're all caught up across every class.",
-    ur: 'کچھ بھی واجب نہیں — آپ ہر کلاس میں اپ ٹو ڈیٹ ہیں۔',
+    en: "Nothing due - you're all caught up across every class.",
+    ur: 'کچھ بھی واجب نہیں - آپ ہر کلاس میں اپ ٹو ڈیٹ ہیں۔',
   },
-  overdueLate: { en: 'Overdue — late submission accepted', ur: 'وقت گزر گیا — تاخیر سے جمع کرانا قبول' },
-  closed: { en: 'Closed — window has ended', ur: 'بند — وقت ختم ہو گیا' },
+  overdueLate: { en: 'Overdue - late submission accepted', ur: 'وقت گزر گیا - تاخیر سے جمع کرانا قبول' },
+  closed: { en: 'Closed - window has ended', ur: 'بند - وقت ختم ہو گیا' },
   open: { en: 'Open', ur: 'کھلا' },
   colTitle: { en: 'Title', ur: 'عنوان' },
   colClass: { en: 'Class', ur: 'کلاس' },

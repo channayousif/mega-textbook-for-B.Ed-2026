@@ -4,10 +4,10 @@ import type { Result } from '@site/src/lib/classes';
 import type { Assignment, Class, Enrollment } from '@site/src/lib/types';
 
 /**
- * Read-only dashboard aggregation queries (Spec 004, T011/T016/T028) — every
+ * Read-only dashboard aggregation queries (Spec 004, T011/T016/T028) - every
  * area except Progress/Achievements is a plain RLS-scoped `SELECT` over
  * existing Spec 003 tables, composed client-side (data-model.md's "Read-only
- * query shapes" table). COSMETIC CONVENIENCE ONLY (Constitution Art. IX.2) —
+ * query shapes" table). COSMETIC CONVENIENCE ONLY (Constitution Art. IX.2) -
  * real authorization is Spec 003's existing RLS policies; this file adds no
  * new policy.
  */
@@ -19,12 +19,12 @@ async function client() {
 }
 
 // ---------------------------------------------------------------------------
-// US1 — Home: current semester + classes, due soon (also backs the full
+// US1 - Home: current semester + classes, due soon (also backs the full
 // Assignments area, FR-003), recent grades.
 // ---------------------------------------------------------------------------
 
 export type CurrentSemesterResult = {
-  /** Highest semester number among the student's active classes' courses — a
+  /** Highest semester number among the student's active classes' courses - a
    * label, never a filter (resolved via `/sp.analyze`, 2026-07-21: a student
    * can hold active classes across more than one semester at once). `null`
    * when the student has no active classes at all. */
@@ -32,7 +32,7 @@ export type CurrentSemesterResult = {
   classes: (Enrollment & { classes: Class })[];
 };
 
-/** FR-002 — every active class, unfiltered by semester, plus the highest-semester label. */
+/** FR-002 - every active class, unfiltered by semester, plus the highest-semester label. */
 export async function fetchCurrentSemesterClasses(studentId: string): Promise<Result<CurrentSemesterResult>> {
   const supabase = await client();
   const { data, error } = await supabase
@@ -63,7 +63,7 @@ export type DueSoonItem = {
   assignment: Assignment;
   className: string;
   /** `open`: not yet due. `overdue-late-allowed`: past due, still acceptable.
-   * `closed`: past due, no longer acceptable — never rendered as actionable
+   * `closed`: past due, no longer acceptable - never rendered as actionable
    * (FR-003). Quizzes are always `closed` once past due (no late attempts). */
   state: DueSoonState;
 };
@@ -76,13 +76,13 @@ function computeDueSoonState(assignment: Assignment, now: Date): DueSoonState {
 }
 
 /**
- * FR-002, FR-003 — every published assignment/quiz not yet submitted
+ * FR-002, FR-003 - every published assignment/quiz not yet submitted
  * (assignments) or attempted (quizzes) across the student's active classes.
  * `windowHours` (default 48) only affects ordering, never filtering: items
  * due within the window sort first (Home's "48h-first" rule), then the rest
  * by `due_at`, with a stable class-then-title tiebreak for same-due-date
  * items (spec.md Edge Cases). The full Assignments area (T013) calls this
- * with the same default — it is "the same query, unfiltered by time window"
+ * with the same default - it is "the same query, unfiltered by time window"
  * only in the sense that no item is ever excluded by the window either way.
  */
 export async function fetchDueSoon(studentId: string, windowHours = 48): Promise<Result<DueSoonItem[]>> {
@@ -184,7 +184,7 @@ type QuizAttemptRow = {
   assignments: { title: string; max_mark: number; classes: { name: string } | null } | null;
 };
 
-/** Quiz "grades" — one entry per quiz assignment, from the student's most recent attempt (not necessarily the best score, since "recent" is a recency view, not the score-of-record shown elsewhere). */
+/** Quiz "grades" - one entry per quiz assignment, from the student's most recent attempt (not necessarily the best score, since "recent" is a recency view, not the score-of-record shown elsewhere). */
 async function fetchQuizGradeItems(studentId: string): Promise<GradeItem[]> {
   const supabase = await client();
   const { data } = await supabase
@@ -210,7 +210,7 @@ async function fetchQuizGradeItems(studentId: string): Promise<GradeItem[]> {
   return items;
 }
 
-/** FR-002 — the student's `limit` most recent results (assignment + quiz), newest first. */
+/** FR-002 - the student's `limit` most recent results (assignment + quiz), newest first. */
 export async function fetchRecentGrades(studentId: string, limit = 5): Promise<Result<GradeItem[]>> {
   try {
     const [assignmentItems, quizItems] = await Promise.all([
@@ -227,11 +227,11 @@ export async function fetchRecentGrades(studentId: string, limit = 5): Promise<R
 }
 
 // ---------------------------------------------------------------------------
-// US2 — Grades area: every returned grade, no average anywhere.
+// US2 - Grades area: every returned grade, no average anywhere.
 // ---------------------------------------------------------------------------
 
 /**
- * FR-004 — every returned assignment/quiz score, full list, no
+ * FR-004 - every returned assignment/quiz score, full list, no
  * average/aggregate computed anywhere in this function.
  */
 export async function fetchAllGrades(studentId: string): Promise<Result<GradeItem[]>> {
@@ -249,7 +249,7 @@ export async function fetchAllGrades(studentId: string): Promise<Result<GradeIte
 }
 
 // ---------------------------------------------------------------------------
-// US5 — History: past (archived) semesters, frozen and grouped.
+// US5 - History: past (archived) semesters, frozen and grouped.
 // ---------------------------------------------------------------------------
 
 export type PastSemesterGroup = {
@@ -261,10 +261,10 @@ export type PastSemesterGroup = {
 };
 
 /**
- * FR-007 — the student's archived classes, grouped by `term_label`, each with
+ * FR-007 - the student's archived classes, grouped by `term_label`, each with
  * its own grades exactly as they stood at archive time. Archived classes are
  * already read-only in Spec 003 (assignments/submissions/grades cannot be
- * written once `status='archived'`) — this function only composes reads.
+ * written once `status='archived'`) - this function only composes reads.
  */
 export async function fetchPastSemesters(studentId: string): Promise<Result<PastSemesterGroup[]>> {
   const supabase = await client();

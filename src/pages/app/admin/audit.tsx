@@ -16,7 +16,7 @@ type AuditRow = {
 type ProfileLabel = { full_name: string | null; role: string };
 
 /**
- * Admin audit history (Spec 002, T044) — SC-008: "who granted answer-key
+ * Admin audit history (Spec 002, T044) - SC-008: "who granted answer-key
  * access to this account, and when". `privilege_audit` is append-only and
  * admin-readable-only (0006_audit_policies.sql); this page is a read-only
  * view over it, wrapped in AuthGuard requiring admin.
@@ -91,7 +91,7 @@ function AuditHistoryContent(): React.ReactElement {
                 <td>{label(row.subject_id)}</td>
                 <td>{label(row.actor_id)}</td>
                 <td>{row.change_type}</td>
-                <td>{row.old_value ?? '—'}</td>
+                <td>{row.old_value ?? '-'}</td>
                 <td>{row.new_value}</td>
               </tr>
             ))}

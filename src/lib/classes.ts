@@ -4,15 +4,15 @@ import type { Class, Enrollment } from '@site/src/lib/types';
 /**
  * Class CRUD + roster operations (Spec 003, T018/T068/T075).
  *
- * COSMETIC CONVENIENCE ONLY (Constitution Art. IX.2) — every function here is
+ * COSMETIC CONVENIENCE ONLY (Constitution Art. IX.2) - every function here is
  * a thin wrapper around a PostgREST call or the `join_class_by_code` RPC;
  * real authorization is RLS + the `guard_class_updates()`/
  * `guard_enrollment_updates()` triggers (supabase/migrations 0012-0016), not
  * anything in this file. A bug here would degrade UX, not security.
  */
 
-const JOIN_CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; // R8 — excludes 0/O, 1/I
-const JOIN_CODE_RETRY_LIMIT = 5; // 32^6 combinations — collision is a near-non-event (research.md R8)
+const JOIN_CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; // R8 - excludes 0/O, 1/I
+const JOIN_CODE_RETRY_LIMIT = 5; // 32^6 combinations - collision is a near-non-event (research.md R8)
 
 function randomJoinCode(): string {
   let code = '';
@@ -30,7 +30,7 @@ async function client() {
   return supabase;
 }
 
-/** FR-001 — create a class with a fresh, unique join code (retried on the rare collision). */
+/** FR-001 - create a class with a fresh, unique join code (retried on the rare collision). */
 export async function createClass(input: {
   teacherId: string;
   courseCode: string;
@@ -80,7 +80,7 @@ export async function listJoinedClasses(studentId: string): Promise<Result<(Enro
   return { data: (data as (Enrollment & { classes: Class })[]) ?? null, error };
 }
 
-/** FR-002 — reissue a class's join code; the old code stops matching any row. */
+/** FR-002 - reissue a class's join code; the old code stops matching any row. */
 export async function reissueJoinCode(classId: string): Promise<Result<Class>> {
   const supabase = await client();
   let lastError: Error | null = null;
@@ -98,7 +98,7 @@ export async function reissueJoinCode(classId: string): Promise<Result<Class>> {
   return { data: null, error: lastError };
 }
 
-/** FR-002 — revoke a class's join code; new joins fail, existing roster unaffected. */
+/** FR-002 - revoke a class's join code; new joins fail, existing roster unaffected. */
 export async function revokeJoinCode(classId: string): Promise<Result<Class>> {
   const supabase = await client();
   const { data, error } = await supabase
@@ -110,7 +110,7 @@ export async function revokeJoinCode(classId: string): Promise<Result<Class>> {
   return { data: (data as Class) ?? null, error };
 }
 
-/** FR-015 — archive a class (manual). archived_reason must be 'manual' for a non-admin (0013 trigger). */
+/** FR-015 - archive a class (manual). archived_reason must be 'manual' for a non-admin (0013 trigger). */
 export async function archiveClass(classId: string): Promise<Result<Class>> {
   const supabase = await client();
   const { data, error } = await supabase
@@ -122,7 +122,7 @@ export async function archiveClass(classId: string): Promise<Result<Class>> {
   return { data: (data as Class) ?? null, error };
 }
 
-/** FR-015/2026-07-19 clarification — reactivate an archived class (eligible teacher or admin only). */
+/** FR-015/2026-07-19 clarification - reactivate an archived class (eligible teacher or admin only). */
 export async function reactivateClass(classId: string): Promise<Result<Class>> {
   const supabase = await client();
   const { data, error } = await supabase
@@ -150,7 +150,7 @@ export function classifyJoinError(error: unknown): JoinClassErrorKind {
   return 'unknown';
 }
 
-/** FR-003 — join a class by its code. See classifyJoinError for failure handling. */
+/** FR-003 - join a class by its code. See classifyJoinError for failure handling. */
 export async function joinClassByCode(code: string): Promise<Result<JoinClassOutcome>> {
   const supabase = await client();
   const { data, error } = await supabase.rpc('join_class_by_code', { p_code: code });
@@ -159,7 +159,7 @@ export async function joinClassByCode(code: string): Promise<Result<JoinClassOut
   return { data: { classId: outcome.class_id, alreadyEnrolled: outcome.already_enrolled }, error: null };
 }
 
-/** FR-018 — remove a student from the caller's own class. */
+/** FR-018 - remove a student from the caller's own class. */
 export async function removeStudent(enrollmentId: string): Promise<Result<Enrollment>> {
   const supabase = await client();
   const { data, error } = await supabase
@@ -171,7 +171,7 @@ export async function removeStudent(enrollmentId: string): Promise<Result<Enroll
   return { data: (data as Enrollment) ?? null, error };
 }
 
-/** FR-022 — restore a student previously removed from the caller's own class. */
+/** FR-022 - restore a student previously removed from the caller's own class. */
 export async function restoreStudent(enrollmentId: string): Promise<Result<Enrollment>> {
   const supabase = await client();
   const { data, error } = await supabase
@@ -188,7 +188,7 @@ export type RosterRow = Enrollment & { profiles: { full_name: string | null } | 
 /**
  * Roster (all enrollments, active and removed) for a class the caller owns,
  * with each student's display name embedded via `profiles_select_own_students`
- * (migration 0015 — see data-model.md's "Second implementation correction").
+ * (migration 0015 - see data-model.md's "Second implementation correction").
  */
 export async function listRoster(classId: string): Promise<Result<RosterRow[]>> {
   const supabase = await client();

@@ -8,14 +8,14 @@ import { loginUrlWithReturnTo } from '@site/src/lib/authRedirect';
 /**
  * Client-side gate for `/app/dashboard/*` pages (Spec 004, T006, FR-012).
  *
- * ⚠️ COSMETIC ONLY (Constitution Art. IX.2) — same disclaimer as
+ * ⚠️ COSMETIC ONLY (Constitution Art. IX.2) - same disclaimer as
  * `src/components/AuthGuard.tsx`. Every dashboard query is still RLS-scoped
  * to the caller's own rows regardless of what this component renders.
  *
  * Differs from AuthGuard in one deliberate way: FR-012 requires a signed-in
  * teacher/admin who reaches the student dashboard to see a *specific* notice
  * pointing them to their own tools, not AuthGuard's generic "you don't have
- * access" text — this is a distinct, spec-mandated message, not a bug in the
+ * access" text - this is a distinct, spec-mandated message, not a bug in the
  * generic gate.
  */
 

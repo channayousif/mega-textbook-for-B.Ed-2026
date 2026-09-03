@@ -11,7 +11,7 @@ type RoleChoice = 'student' | 'teacher';
 
 /**
  * Sign-up page (Spec 002, T026). Google + email/password, optional role choice
- * defaulting to student (FR-001, FR-003). `role` here is a REQUEST — the
+ * defaulting to student (FR-001, FR-003). `role` here is a REQUEST - the
  * handle_new_user trigger is the actual control (FR-009, research.md R3).
  */
 export default function SignupPage(): React.ReactElement {
@@ -29,7 +29,7 @@ export default function SignupPage(): React.ReactElement {
 
   if (session) {
     if (typeof window !== 'undefined') window.location.assign(returnTo);
-    return <Layout title="Create an account"><p>Signed in — redirecting…</p></Layout>;
+    return <Layout title="Create an account"><p>Signed in - redirecting…</p></Layout>;
   }
 
   async function handleGoogle(): Promise<void> {

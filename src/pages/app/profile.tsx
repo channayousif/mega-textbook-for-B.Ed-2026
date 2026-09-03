@@ -8,15 +8,15 @@ type RoleChoice = 'student' | 'teacher';
 /**
  * Account page (Spec 002).
  *
- * T031 — one-time role prompt for OAuth users: Google sign-up has no
+ * T031 - one-time role prompt for OAuth users: Google sign-up has no
  * pre-consent metadata hook (research.md R3), so those accounts land with
  * `role='student'`, `role_chosen_at=null`. This page prompts once; the
  * `role`+`role_chosen_at` update is permitted by exactly one carve-out in
- * `guard_privileged_columns()` (0008) — see data-model.md's 2026-07-18
+ * `guard_privileged_columns()` (0008) - see data-model.md's 2026-07-18
  * correction. Email/password sign-ups already recorded a choice at sign-up
  * (T026), so `role_chosen_at` is non-null for them and this prompt is skipped.
  *
- * T031a — a user may set or change their own `full_name` at any time (FR-010).
+ * T031a - a user may set or change their own `full_name` at any time (FR-010).
  */
 export default function ProfilePage(): React.ReactElement {
   const { loading, session, profile, refreshProfile } = useAuth();
@@ -94,7 +94,7 @@ export default function ProfilePage(): React.ReactElement {
     setDeleteError(null);
     setDeleteSubmitting(true);
     // delete-account (T055) needs the service-role key to strip identity and
-    // remove the auth user server-side — never a direct client call.
+    // remove the auth user server-side - never a direct client call.
     const { error } = await supabase.functions.invoke('delete-account', { body: {} });
     if (error) {
       setDeleteSubmitting(false);
@@ -103,7 +103,7 @@ export default function ProfilePage(): React.ReactElement {
     }
     // The account is already gone server-side, so the local session is
     // orphaned regardless. Navigate immediately rather than awaiting
-    // signOut() first — awaiting it triggers a SIGNED_OUT re-render of this
+    // signOut() first - awaiting it triggers a SIGNED_OUT re-render of this
     // very page, whose own "not authenticated" guard (above) races this
     // navigation to `/` and can win, landing on /app/login instead. Clearing
     // storage is still worth doing; just don't block navigation on it.
@@ -119,7 +119,7 @@ export default function ProfilePage(): React.ReactElement {
         {!profile.role_chosen_at && (
           <section className="alert alert--info margin-bottom--lg">
             <form onSubmit={chooseRoleOnce}>
-              <p><strong>Are you a student or a teacher?</strong> You can only set this once — an administrator changes it after that.</p>
+              <p><strong>Are you a student or a teacher?</strong> You can only set this once - an administrator changes it after that.</p>
               {roleError && <p role="alert" aria-live="assertive" className="alert alert--danger">{roleError}</p>}
               <label className="auth-tap-target margin-right--md">
                 <input
@@ -169,7 +169,7 @@ export default function ProfilePage(): React.ReactElement {
           </button>
         </form>
 
-        {/* T045 — read-only once role_chosen_at is set (FR-010a): role and
+        {/* T045 - read-only once role_chosen_at is set (FR-010a): role and
             verified-teacher status are server-authoritative; only an admin
             changes them (0008_guard_privileged_columns.sql). */}
         {profile.role_chosen_at && (
@@ -182,19 +182,19 @@ export default function ProfilePage(): React.ReactElement {
         )}
         {profile.role_chosen_at && (
           <p>
-            Role and verified-teacher status are set by an administrator — contact one if this
+            Role and verified-teacher status are set by an administrator - contact one if this
             needs to change.
           </p>
         )}
 
-        {/* T057 — FR-021/FR-022: identity removed, submitted work retained
+        {/* T057 - FR-021/FR-022: identity removed, submitted work retained
             anonymously. Requires an explicit acknowledgement before the
             (irreversible) delete button is even clickable. */}
         <section className="margin-top--lg">
           <h2>Delete account</h2>
           <p>
             Deleting your account removes your sign-in and personal details permanently. Any work
-            you have submitted is <strong>retained, but anonymised</strong> — it stays linked to
+            you have submitted is <strong>retained, but anonymised</strong> - it stays linked to
             your coursework record without your name attached. This cannot be undone.
           </p>
           {deleteError && <p role="alert" aria-live="assertive" className="alert alert--danger">{deleteError}</p>}

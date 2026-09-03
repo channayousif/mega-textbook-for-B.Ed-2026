@@ -9,12 +9,12 @@ import {
 } from '@site/src/lib/teacherOverview';
 
 /**
- * Teacher Overview (Spec 005, T008) — FR-002: per-class ungraded submission
+ * Teacher Overview (Spec 005, T008) - FR-002: per-class ungraded submission
  * count, the 5 soonest-due assignments across all classes, a 10-item
  * recent-activity feed merging submissions and quiz attempts, and an
  * explicit "caught up" state when nothing is pending. Links out to Spec
  * 003's existing `/app/classes/*` pages for Classes/Grading management
- * (plan.md's Structure Decision — those areas are reused, not rebuilt).
+ * (plan.md's Structure Decision - those areas are reused, not rebuilt).
  */
 
 function useLocale(): 'en' | 'ur' {
@@ -30,8 +30,8 @@ const MESSAGES = {
   soonestDue: { en: 'Upcoming due dates', ur: 'آنے والی آخری تاریخیں' },
   recentActivity: { en: 'Recent student activity', ur: 'حالیہ طلبہ کی سرگرمی' },
   caughtUp: {
-    en: "You're all caught up — nothing ungraded and nothing due soon.",
-    ur: 'آپ بالکل اپ ٹو ڈیٹ ہیں — کچھ بھی غیر گریڈ شدہ یا جلد واجب نہیں۔',
+    en: "You're all caught up - nothing ungraded and nothing due soon.",
+    ur: 'آپ بالکل اپ ٹو ڈیٹ ہیں - کچھ بھی غیر گریڈ شدہ یا جلد واجب نہیں۔',
   },
   noClasses: {
     en: 'You have no classes yet. Create one to get started.',
@@ -95,7 +95,7 @@ function OverviewContent(): React.ReactElement {
           <ul>
             {ungraded.map((c) => (
               <li key={c.classId} data-testid="ungraded-count-row">
-                {c.className} — {c.ungradedCount} {MESSAGES.ungradedCount[locale]}
+                {c.className} - {c.ungradedCount} {MESSAGES.ungradedCount[locale]}
               </li>
             ))}
           </ul>
@@ -104,7 +104,7 @@ function OverviewContent(): React.ReactElement {
           <ul>
             {soonestDue.map((item) => (
               <li key={item.id} data-testid="soonest-due-item">
-                {item.title} — {item.className} — {new Date(item.dueAt).toLocaleString()}
+                {item.title} - {item.className} - {new Date(item.dueAt).toLocaleString()}
               </li>
             ))}
           </ul>
@@ -115,7 +115,7 @@ function OverviewContent(): React.ReactElement {
       <ul>
         {recentActivity.map((item) => (
           <li key={`${item.kind}-${item.id}`} data-testid="recent-activity-item">
-            {item.assignmentTitle} — {item.className} — {new Date(item.occurredAt).toLocaleString()}
+            {item.assignmentTitle} - {item.className} - {new Date(item.occurredAt).toLocaleString()}
           </li>
         ))}
       </ul>

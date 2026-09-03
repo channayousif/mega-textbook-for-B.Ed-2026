@@ -1,5 +1,5 @@
 ---
-version: "3.1"
+version: "3.2"
 ---
 
 # Content Style Guide
@@ -7,7 +7,7 @@ version: "3.1"
 Shared reference for every course/unit produced through the content authoring pipeline
 (Spec 006, extended by Spec 007). The Content gate (Constitution Art. VII) checks every
 drafted unit against this document. `version` (front matter above) is the single freeze marker
-for **both** this document and `terminology.csv` (Spec 006 FR-007, research.md R8) — the two
+for **both** this document and `terminology.csv` (Spec 006 FR-007, research.md R8) - the two
 are always versioned/frozen together; `terminology.csv` carries no version field of its own,
 and any further edit to either document requires bumping this field.
 
@@ -19,29 +19,41 @@ EFMP-302 Unit 1 proving unit. v1.0 was Spec 006's freeze.
 `## Answers and marking guidance policy` and `## Figure markers and manifests` sections below,
 plus the extensions to `## Assessment blueprint defaults` and the depth-gate-vs-human table,
 proven on the EFMP-302 Unit 1 proving unit (restructured to the per-topic layout and passed the
-human Content gate, 2026-08-30 — Spec 008 FR-026 / SC-006).
+human Content gate, 2026-08-30 - Spec 008 FR-026 / SC-006).
 
 **v3.1** (2026-08-30, Spec 009) rewrites `## Figure markers and manifests` for the **rendering**
 pass: the `<Figure>` end-state, the `Kind` (`diagram`/`illustration`) split, the manifest v2
 columns (`+Kind`, `+Src`) and the `prompt-only → generated → placed` lifecycle, the `.ur.svg`
-bilingual-diagram rule, and the widened `check:figures` — proven by rendering EFMP-302 Unit 1's
+bilingual-diagram rule, and the widened `check:figures` - proven by rendering EFMP-302 Unit 1's
 four figures.
+
+**v3.2** (2026-09-03, Constitution v2.7.0 amendment) adds the no-em-dash rule to
+`## EN readability rules` and `## UR register rules` (Constitution Art. III.9), enforced by the
+new `check:no-em-dash` CI gate over `docs/`, `guides/`, `i18n/`, `specs/content/`. A one-time
+cleanup pass removed every existing em dash from those trees. No section is added or removed;
+`terminology.csv` is unchanged (the version bump re-freezes the pair per Spec 006 FR-007).
 
 ## EN readability rules
 
 - Target register: accessible to a fresh HSC/intermediate graduate (Constitution Art. III.1).
   No graduate-level jargon without a bilingual glossary entry (`glossary.json`).
 - Prefer short sentences and active voice. One idea per paragraph.
-- Define a technical term the first time it appears in a unit, then use it consistently —
+- Define a technical term the first time it appears in a unit, then use it consistently -
   do not switch between synonyms for the same concept within a unit.
+- **No em dash** (U+2014, and U+2015 / U+2E3A / U+2E3B). Restructure the sentence (comma,
+  colon, parentheses, or two sentences) or use a spaced hyphen `" - "`. The en dash (U+2013)
+  is for numeric ranges only (`5-8 items`). Enforced by `check:no-em-dash` (Constitution
+  Art. III.9).
 
 ## UR register rules
 
-- Register: academic-plain (درسی مگر عام فہم) — not literary/archaic (Constitution Art. III.2).
+- Register: academic-plain (درسی مگر عام فہم) - not literary/archaic (Constitution Art. III.2).
 - Every student-facing unit MUST have a complete, human-reviewed Urdu version before publish,
   except units belonging to a course flagged `bilingual: false`.
 - Machine translation MAY draft; a human quality pass is mandatory before a unit is marked
   `translation_status: reviewed`.
+- **No em dash** in Urdu prose either (Constitution Art. III.9). Use a comma, a full stop, or
+  parentheses; a spaced hyphen `" - "` is the fallback. `check:no-em-dash` scans `i18n/` too.
 
 ## Pakistan/Sindh localization rules
 
@@ -52,7 +64,7 @@ four figures.
 
 - All prose is original. Quotations under 15 words carry a citation to the course guide, HEC
   document, or a named academic source.
-- A course guide's recommended readings are cited by reference only — never reproduced
+- A course guide's recommended readings are cited by reference only - never reproduced
   (Constitution Art. III.5, FR-010).
 
 ## Diagram conventions
@@ -81,7 +93,7 @@ maintained here alongside the scan itself:
 
 **Spec 008 bounded exception.** The three *prose* patterns ("answer key", "marking scheme",
 "correct answer") are permitted **inside one bounded, final `## Answers and marking guidance`
-section** of `unit-assessment.mdx` / `course-review.mdx` — see `## Answers and marking guidance
+section** of `unit-assessment.mdx` / `course-review.mdx` - see `## Answers and marking guidance
 policy` below for the exact rule. The four **front-matter key** patterns are still forbidden
 everywhere, including inside that section.
 
@@ -97,35 +109,35 @@ everywhere, including inside that section.
 Each `topic-NN.mdx` in a per-topic unit carries **both** a formative check and a summative task
 inside its nine-part cycle:
 
-- `## Check your understanding` — **≥ 3** top-level numbered items, Remember → Apply
+- `## Check your understanding` - **≥ 3** top-level numbered items, Remember → Apply
   (retrieval practice, not recognition).
-- `## Self-assessment checklist` — **≥ 3** `- [ ]` "I can …" statements (metacognition).
-- `## Summative task` — one task with a mini-rubric; **at least one criterion demands
+- `## Self-assessment checklist` - **≥ 3** `- [ ]` "I can …" statements (metacognition).
+- `## Summative task` - one task with a mini-rubric; **at least one criterion demands
   Analyze-or-higher** (Constitution Art. III.3, held at the per-topic level).
 
 ### Unit-end assessment bank (Spec 008, per-topic layout)
 
 `unit-assessment.mdx` carries a fixed bank, counted **per `###` band**:
 
-- `### Multiple-choice questions (MCQs)` — **exactly 10**, Remember → Apply.
-- `### Restricted-response questions (RRQs)` — **exactly 10**, Understand → Analyze.
-- `### Extended-response questions (ERQs)` — **exactly 5**, Analyze → Evaluate/Create;
+- `### Multiple-choice questions (MCQs)` - **exactly 10**, Remember → Apply.
+- `### Restricted-response questions (RRQs)` - **exactly 10**, Understand → Analyze.
+- `### Extended-response questions (ERQs)` - **exactly 5**, Analyze → Evaluate/Create;
   **at least one ERQ rubric demands Analyze-or-higher**.
 - Every item carries a Bloom tag. Model answers / mark schemes / rubrics live **only** in the
   final `## Answers and marking guidance` section (next section).
 
 The end-of-course `course-review.mdx` practice bank (`### MCQs` / `### RRQs` / `### ERQs`) has
-**no fixed count** — it is sized to the course; the human Content gate judges sufficiency.
+**no fixed count** - it is sized to the course; the human Content gate judges sufficiency.
 
 ## Unit depth standard (Spec 007)
 
 > Applies to every unit whose `content-spec.md` `## Unit N` subsection carries a
-> `### Sub-topic checklist` table. A unit without that table is grandfathered — this standard
+> `### Sub-topic checklist` table. A unit without that table is grandfathered - this standard
 > and its CI gate (`scripts/check-unit-depth.mjs`) simply skip it. **Adopting the standard for
 > a new unit = add the checklist table to its content-spec subsection**; the gate then picks
 > it up automatically.
 >
-> **Keep this section in sync with `.claude/skills/author-unit/references/structure-standard.md`** —
+> **Keep this section in sync with `.claude/skills/author-unit/references/structure-standard.md`** -
 > that file is the authoring aid, this section is the human reference; when either changes, the
 > other must be updated in the same branch, and `style-guide.md`'s `version` bumps.
 >
@@ -136,38 +148,38 @@ The end-of-course `course-review.mdx` practice bank (`### MCQs` / `### RRQs` / `
 
 **Concept coverage is the hard rule.** For every unit in scope, each guide sub-topic on that
 unit's enumerated `### Sub-topic checklist` (leaf-bullet granularity, faithful to the course
-guide — the curriculum owner's responsibility at the Content gate) MUST have its own **named
+guide - the curriculum owner's responsibility at the Content gate) MUST have its own **named
 subsection** in the file it folds into per the FR-004 mapping. Sub-topics MAY share one
 subsection only if each is still individually accounted for in the unit's coverage matrix
 (`specs/content/<course-code>/coverage/unit-NN.md`). A checklist sub-topic with no mapped
 subsection fails the gate.
 
-**Length is soft — precise, not padded.** There is no word floor. Prose is complete over the
+**Length is soft - precise, not padded.** There is no word floor. Prose is complete over the
 concept set and no longer than it needs to be; padding to look substantial is a defect. Aim
 for roughly **one concrete, Pakistan-grounded example per sub-topic** (Constitution Art.
-III.4) — enough to make the idea land, not a case-study anthology.
+III.4) - enough to make the idea land, not a case-study anthology.
 
 **Scholarly engagement.** Each unit paraphrases-and-cites the scholarly readings mapped to it
-in the content-spec `## Reading list` (or a topically-related open-access substitute — never
+in the content-spec `## Reading list` (or a topically-related open-access substitute - never
 an off-topic one). Every source actually used is recorded in
 `specs/content/<course-code>/sources/unit-NN.md` with its exact URL/DOI and `Kind`
 (`guide-required` / `open-access-substitute` / `no-external-source`). Where no source can be
 found for a sub-topic, cover it from the guide text and general knowledge, record a
-`no-external-source` row, and escalate the gap in `specs/gaps.md` — never invent a citation.
+`no-external-source` row, and escalate the gap in `specs/gaps.md` - never invent a citation.
 
 **Required blocks in `index.mdx`.** Both a `## Common misconceptions` block **and** a
 `## Further reading` block (real citations) MUST be present. The gate fails if **either** is
 missing.
 
 **Formative floor.** The formative set MUST have **at least 5 items, written as a top-level
-numbered list** (`1.`, `2.`, …) — this is the format the gate counts. Summative keeps a rubric
+numbered list** (`1.`, `2.`, …) - this is the format the gate counts. Summative keeps a rubric
 plus at least one Analyze-or-higher item (Constitution Art. III.3).
 
 **Depth budget.** Each unit's content-spec subsection records
 `**Depth budget**: N sub-topics; A–B reading-min`. The `N` count is authoring guidance only.
 The `A–B` reading-minutes range **is** checked: the gate sums `est_reading_minutes` across the
 unit's five English files and fails if the unit total falls outside `[A, B]`. Keep the band
-tight — roughly ±25% of the target — so the check has teeth.
+tight - roughly ±25% of the target - so the check has teeth.
 
 **Register is unchanged (Constitution Art. III.1).** The depth standard raises the depth of
 *concepts*, not the complexity of *language*. Student-facing prose stays accessible to a fresh
@@ -185,12 +197,12 @@ for graduate-level vocabulary to signal depth is a Content-gate failure.
 | Formative set has ≥ 5 numbered items | Whether the items are good, correctly Bloom-levelled, and cover the unit |
 | Unit-total `est_reading_minutes` is within the depth-budget band | Whether the prose is padded or genuinely that length |
 | Coverage matrix and sources list are mutually consistent (every cited key exists, no orphan keys) | Whether an `open-access-substitute` is genuinely on-topic; whether a `no-external-source` row was escalated |
-| — | Whether the HSC-graduate register held (Art. III.1) |
+| - | Whether the HSC-graduate register held (Art. III.1) |
 
 A green depth gate means the structure is in place; it does **not** mean the unit passed
 review. Only the curriculum owner's Content-gate pass does that.
 
-### Per-topic layout — additional automated vs. human split (Spec 008)
+### Per-topic layout - additional automated vs. human split (Spec 008)
 
 For a unit on the per-topic layout, the gate set (`check-unit-depth.mjs` new-shape path,
 `check-figures.mjs`, `check-no-answer-keys.mjs` bounded exception, `validate-content.mjs`
@@ -206,51 +218,51 @@ new-shape branch) adds these **automated** checks:
 | `unit-assessment.mdx`: `## Unit summary` present; MCQ/RRQ/ERQ counts **exactly 10 / 10 / 5 per `###` band**; `## Answers and marking guidance` present, ≤1, and the file's **last** `##` section | Whether questions are well-constructed and the rubrics sound; whether the bank samples the whole unit |
 | Coverage matrix v2: `File` ∈ the new-shape set; every `topic-NN.mdx` referenced by ≥1 row; for every checklist ID ≥1 coverage row names the exact `topic-NN.mdx` its `### Topic list` row assigns it to | Whether `Section` names a heading that genuinely covers the sub-topic; whether the cited source is apt |
 | Reading-minutes sum across `index.mdx` + every `topic-*.mdx` + `unit-assessment.mdx` (+ `unit-teacher-notes.mdx`) ∈ the re-baselined `**Depth budget**` band | Whether the prose is padded |
-| Figure marker ↔ manifest consistency (`check:figures`) — every topic ≥1 marker; well-formed unique `fig-U<n>-<seq>` IDs; non-empty prompt + alt; marker set == manifest set both ways; each row's `Topic` == the marker file's `topic_label` | Whether the figure prompt would produce a useful teaching aid; whether the alt text is a good description; whether a figure is needed there |
+| Figure marker ↔ manifest consistency (`check:figures`) - every topic ≥1 marker; well-formed unique `fig-U<n>-<seq>` IDs; non-empty prompt + alt; marker set == manifest set both ways; each row's `Topic` == the marker file's `topic_label` | Whether the figure prompt would produce a useful teaching aid; whether the alt text is a good description; whether a figure is needed there |
 | Answer prose (`answer key` / `marking scheme` / `correct answer`) appears **only** below the `## Answers and marking guidance` line in `unit-assessment.mdx` / `course-review.mdx`; front-matter answer-key keys nowhere | Whether the model answers and rubrics are correct and sufficient |
 
-## Unit structure standard (Spec 008 — per-topic layout)
+## Unit structure standard (Spec 008 - per-topic layout)
 
 > **Opt-in, additive.** A unit is on this standard **only** when *both* signals are present:
 > a `### Topic list` table in its `content-spec.md` `## Unit N` subsection **and**
 > `topic-*.mdx` files in its `docs/` folder. Exactly one signal present (or a row-count
 > mismatch) is a **loud depth-gate failure**, never a silent fallback. Legacy five-file units
-> that have neither signal are **unchanged and not required to migrate** — they keep the
+> that have neither signal are **unchanged and not required to migrate** - they keep the
 > `## Unit depth standard` (Spec 007) rules above.
 >
 > **Keep this section in sync with
-> `.claude/skills/author-unit/references/structure-standard.md`** — authoring aid vs. human
+> `.claude/skills/author-unit/references/structure-standard.md`** - authoring aid vs. human
 > reference; change one, change the other in the same branch, and bump `version`.
 
 ### The nested model
 
 ```
 docs/semester-N/<course>/unit-NN/
-├── index.mdx                 # unit opening — orientation only, no exposition body
+├── index.mdx                 # unit opening - orientation only, no exposition body
 ├── topic-01.mdx … topic-NN.mdx   # one nine-part learning cycle each
 ├── unit-assessment.mdx       # chapter summary + 10/10/5 bank + bounded answers section
-└── unit-teacher-notes.mdx    # OPTIONAL — teaching strategies + practical work, no assessment items
+└── unit-teacher-notes.mdx    # OPTIONAL - teaching strategies + practical work, no assessment items
 docs/semester-N/<course>/course-review.mdx   # OPTIONAL course-level end matter
 ```
 
-**`index.mdx` (unit opening)** — required `##` sections: `## Unit learning outcomes`;
+**`index.mdx` (unit opening)** - required `##` sections: `## Unit learning outcomes`;
 `## Prerequisite knowledge`; `## In this unit` (an ordered list, **one item per topic file**,
 each linking `./topic-NN`); `## How to use this unit`. Keeps `<TranslationStatusBadge>`; **no**
 `<PrintHandout />`, **no** exposition body. The Spec 007 `## Common misconceptions` /
-`## Further reading` requirement does **not** apply to a new-shape `index.mdx` — it moves into
+`## Further reading` requirement does **not** apply to a new-shape `index.mdx` - it moves into
 each topic file.
 
-### The nine-part topic cycle — canonical `##` headings, checked for presence AND order
+### The nine-part topic cycle - canonical `##` headings, checked for presence AND order
 
 | # | Canonical heading | Gate minimum |
 |---|---|---|
-| 1 | `## A real classroom situation` | — (a FIGURE marker usually sits here) |
-| 2 | `## Explanation` | — (this topic's misconceptions are named and corrected here) |
-| 3 | `## Activity: <name>` | — (`## Activity:` matched as a prefix; the author names the activity) |
+| 1 | `## A real classroom situation` | - (a FIGURE marker usually sits here) |
+| 2 | `## Explanation` | - (this topic's misconceptions are named and corrected here) |
+| 3 | `## Activity: <name>` | - (`## Activity:` matched as a prefix; the author names the activity) |
 | 4 | `## Check your understanding` | ≥ **3** top-level numbered items |
-| 5 | `## Summary` | — |
+| 5 | `## Summary` | - |
 | 6 | `## Self-assessment checklist` | ≥ **3** `- [ ]` items |
-| 7 | `## Try this at your practicum school` | — |
+| 7 | `## Try this at your practicum school` | - |
 | 8 | `## Summative task` | mini-rubric; human gate checks ≥ 1 Analyze-or-higher demand |
 | 9 | `## Further reading` | ≥ **1** citation or link line |
 
@@ -262,23 +274,23 @@ the first heading missing or out of place **and** the topic file. Full contract:
 ### Topic-file front matter
 
 The unit schema **plus** `topic_no` (integer ≥ 1, **==** the filename ordinal) and
-`topic_label` (non-empty string, e.g. `"1.1"`) — required in practice on `topic-*.mdx`,
+`topic_label` (non-empty string, e.g. `"1.1"`) - required in practice on `topic-*.mdx`,
 enforced by `validate-content.mjs` (JSON Schema cannot see the filename). `clo_refs` = the
 subset of the unit's SLO refs this topic serves. **No `sidebar_position`.**
 
 ### File naming
 
-- `topic-NN.mdx` — zero-padded single ordinal, contiguous from `01` (not `topic-1-1.mdx`;
+- `topic-NN.mdx` - zero-padded single ordinal, contiguous from `01` (not `topic-1-1.mdx`;
   a two-part name re-introduces the `topic-1-10 < topic-1-2` sort bug and duplicates the
   folder's unit number). The human "Topic 1.1" label comes from `title` / `topic_label`.
-- `unit-assessment.mdx`, `unit-teacher-notes.mdx` — the `unit-` prefix sorts them after every
+- `unit-assessment.mdx`, `unit-teacher-notes.mdx` - the `unit-` prefix sorts them after every
   `topic-*.mdx`.
-- `course-review.mdx` — course-level, sibling of `course-overview.mdx`.
+- `course-review.mdx` - course-level, sibling of `course-overview.mdx`.
 
 ### The one sanctioned `sidebar_position`
 
-`course-review.mdx` MAY carry `sidebar_position: 900` — the **only** sanctioned
-`sidebar_position` anywhere in content — so it sorts after the last `unit-NN`. Mirror the key
+`course-review.mdx` MAY carry `sidebar_position: 900` - the **only** sanctioned
+`sidebar_position` anywhere in content - so it sorts after the last `unit-NN`. Mirror the key
 in the UR i18n copy. No `topic-*.mdx`, `index.mdx`, `unit-assessment.mdx` or
 `unit-teacher-notes.mdx` may set `sidebar_position` (natural filename sort is relied on).
 
@@ -291,7 +303,7 @@ in the UR i18n copy. No `topic-*.mdx`, `index.mdx`, `unit-assessment.mdx` or
 ## Answers and marking guidance policy (Spec 008)
 
 Self-study answer material (answer keys, model answers, mark schemes, analytic rubrics) is
-permitted in **published content** — but only inside one tightly-bounded section, so the
+permitted in **published content** - but only inside one tightly-bounded section, so the
 `check-no-answer-keys.mjs` safety gate stays meaningful everywhere else.
 
 **The bounded-block rule (verbatim):**
@@ -311,7 +323,7 @@ permitted in **published content** — but only inside one tightly-bounded secti
 **How `scripts/check-no-answer-keys.mjs` implements it** (so authors do not trip it): patterns
 split into `FRONT_MATTER_PATTERNS` (the 4 key regexes) and `PROSE_PATTERNS` (`answer key`,
 `marking scheme`, `correct answer`). A non-whitelisted file is scanned whole with all 7. A
-whitelisted file: locate the canonical heading — `> 1` → error; `0` → whole-file scan; exactly
+whitelisted file: locate the canonical heading - `> 1` → error; `0` → whole-file scan; exactly
 `1` at line *k* → error if any `^##\s` appears after *k*, else scan `[0, k)` with all 7 and
 `[k, EOF)` with the front-matter patterns only. For `build/` HTML, only the prose patterns are
 suppressed, and only for routes whose last path segment before `index.html` is
@@ -328,7 +340,7 @@ a committed image (Spec 009). The comment marks the spot and carries the generat
 alt text; once the image exists, the comment is replaced by a `<Figure>` element and the
 manifest row moves through `prompt-only → generated → placed`.
 
-### Authoring — the marker (Spec 008)
+### Authoring - the marker (Spec 008)
 
 Inside a `topic-*.mdx`, usually in `## A real classroom situation` or `## Explanation`:
 
@@ -341,12 +353,12 @@ Extraction regex:
 
 - **`<id>`** matches `^fig-U\d+-\d+$`; the `U<n>` group **==** the unit-folder number; `<seq>`
   is a **unit-scoped** integer, unique within the unit (not per topic).
-- **`<prompt>`** ≥ 10 non-space chars — subject; style ("clean flat vector, labelled, high
+- **`<prompt>`** ≥ 10 non-space chars - subject; style ("clean flat vector, labelled, high
   contrast, no colour-only meaning"); aspect.
-- **`<alt>`** non-empty — the accessible description that becomes the image `alt` (Art. III.8).
+- **`<alt>`** non-empty - the accessible description that becomes the image `alt` (Art. III.8).
 - **At least one figure per `topic-*.mdx`.**
 
-### Rendering — the `<Figure>` end-state (Spec 009)
+### Rendering - the `<Figure>` end-state (Spec 009)
 
 When a figure is rendered, its comment marker is **replaced** at the same position by:
 
@@ -356,14 +368,14 @@ When a figure is rendered, its comment marker is **replaced** at the same positi
 
 - `id` == the marker id / manifest `Figure ID`; `alt` == the marker's alt text verbatim;
   `src` == the manifest `Src` (root-absolute `/img/figures/<course-lowercase>/unit-NN/<figId>.<ext>`).
-- `<Figure>` renders `<figure><img loading="lazy" decoding="async" …></figure>` — lazy, print-safe
+- `<Figure>` renders `<figure><img loading="lazy" decoding="async" …></figure>` - lazy, print-safe
   (`break-inside: avoid`), light/dark-aware. Registered globally in `src/theme/MDXComponents.tsx`.
 - A **carrier** for figure `X` is a `{/* FIGURE[X] */}` comment **or** a `<Figure id="X" />`. The
   invariants below count carriers of either form.
 
-**Kinds.** `diagram` — a labelled schematic, hand-authored as a self-contained SVG
+**Kinds.** `diagram` - a labelled schematic, hand-authored as a self-contained SVG
 (`<title>` + `role="img"`, system-font stack, a `@media (prefers-color-scheme: dark)` block,
-meaning by shape+label never colour, ≤ 20 KB). `illustration` — a scene, generated via the
+meaning by shape+label never colour, ≤ 20 KB). `illustration` - a scene, generated via the
 Hugging Face MCP image tool (or a generation brief + `figures/.staging/` when no tool is
 connected), optimised to WebP ≤ 150 KB, longest edge ≤ 1600 px. `diagram` is the default.
 
@@ -390,9 +402,9 @@ written-and-wired but not gate-blocked while `draft`.
 
 ### Gate + tooling
 
-- `npm run check:figures` (`scripts/check-figures.mjs`) — CI step in the `build` job. `prompt-only`
+- `npm run check:figures` (`scripts/check-figures.mjs`) - CI step in the `build` job. `prompt-only`
   units and legacy units take the exact Spec 008 path; the new checks (carrier is a `<Figure>`;
   `Src` file exists; `Kind` enum; UR `<Figure>` + `.ur.svg`) apply only from `generated`/`placed`.
-- `npm run optimize:figure -- [--svg] <in> <out>` (`scripts/optimize-figure.mjs`) — offline
+- `npm run optimize:figure -- [--svg] <in> <out>` (`scripts/optimize-figure.mjs`) - offline
   raster resize + WebP encode, or SVG whitespace strip; hard-fails over budget.
 - The `generate-figures` skill (`.claude/skills/generate-figures/`) runs the render loop.

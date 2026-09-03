@@ -6,11 +6,11 @@ import type { QuizAttempt, QuizItem } from '@site/src/lib/types';
  * Auto-graded practice quiz (Spec 003, T059). FR-017, 2026-07-19 clarification
  * (unlimited retakes, best score of record).
  *
- * COSMETIC CONVENIENCE ONLY (Constitution Art. IX.2) for the read helpers —
+ * COSMETIC CONVENIENCE ONLY (Constitution Art. IX.2) for the read helpers -
  * real authorization is RLS (supabase/migrations/0022-0023). Scoring itself
  * is NOT a client concern at all: `submitAttempt` is a thin wrapper around
  * the `submit_quiz_attempt()` SECURITY DEFINER RPC, which computes the score
- * server-side — this file never sees `correct_option`.
+ * server-side - this file never sees `correct_option`.
  */
 
 async function client() {
@@ -19,7 +19,7 @@ async function client() {
   return supabase;
 }
 
-/** FR-017 — the distinct units of a course that have at least one quiz item (assignment-new.tsx's picker, T061). */
+/** FR-017 - the distinct units of a course that have at least one quiz item (assignment-new.tsx's picker, T061). */
 export async function fetchQuizUnitsForCourse(courseCode: string): Promise<Result<number[]>> {
   const supabase = await client();
   const { data, error } = await supabase
@@ -31,7 +31,7 @@ export async function fetchQuizUnitsForCourse(courseCode: string): Promise<Resul
   return { data: units, error: null };
 }
 
-/** FR-017 — every quiz item for a unit, via `quiz_items_public` (never exposes `correct_option`). */
+/** FR-017 - every quiz item for a unit, via `quiz_items_public` (never exposes `correct_option`). */
 export async function fetchQuizItemsForUnit(courseCode: string, unitNo: number): Promise<Result<QuizItem[]>> {
   const supabase = await client();
   const { data, error } = await supabase
@@ -51,7 +51,7 @@ export type QuizAttemptResult = {
   correct_count: number;
 };
 
-/** FR-017 — submit one attempt; the RPC computes the score server-side and returns it. */
+/** FR-017 - submit one attempt; the RPC computes the score server-side and returns it. */
 export async function submitAttempt(
   assignmentId: string,
   answers: Record<string, string>,
@@ -92,7 +92,7 @@ export async function fetchOwnBestScore(assignmentId: string, studentId: string)
 export type ClassBestScoreRow = { student: { id: string; full_name: string | null }; bestScore: number | null };
 
 /**
- * Teacher's results view — every actively enrolled student's best score for
+ * Teacher's results view - every actively enrolled student's best score for
  * one assignment. `quiz_best_scores` (0023) carries no FK a PostgREST embed
  * can follow, so this composes two RLS-scoped queries client-side, same
  * pattern as grading.ts's `fetchQueue`.

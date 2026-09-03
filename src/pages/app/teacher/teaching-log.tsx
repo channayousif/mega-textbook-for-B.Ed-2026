@@ -10,7 +10,7 @@ import { submitFeedback, fetchOwnFeedback } from '@site/src/lib/activityFeedback
 import type { Class, TeachingLogEntry } from '@site/src/lib/types';
 
 /**
- * My Teaching Log (Spec 005, T024/T030) — FR-006: log a teaching activity
+ * My Teaching Log (Spec 005, T024/T030) - FR-006: log a teaching activity
  * (unit/activity, class, date, duration, reflection) in a single, fast entry
  * flow; view the own log most-recent-first. Each entry's "Give feedback"
  * affordance is wired in US5 (T030) to open Activity Feedback for that
@@ -55,7 +55,7 @@ const MESSAGES = {
 
 type ContentOption = ContentIndexEntry;
 
-/** T030 — inline feedback form wired to a specific log entry's activity. */
+/** T030 - inline feedback form wired to a specific log entry's activity. */
 function LogEntryFeedback({ entry, locale }: { entry: TeachingLogEntry; locale: 'en' | 'ur' }): React.ReactElement {
   const { profile } = useAuth();
   const [open, setOpen] = useState(false);
@@ -276,7 +276,7 @@ function TeachingLogContent(): React.ReactElement {
             >
               {contentOptions.map((opt) => (
                 <option key={`${opt.unit_no}::${opt.kind}`} value={`${opt.unit_no}::${opt.kind}`}>
-                  Unit {opt.unit_no} — {opt.title} ({opt.kind})
+                  Unit {opt.unit_no} - {opt.title} ({opt.kind})
                 </option>
               ))}
             </select>
@@ -332,8 +332,8 @@ function TeachingLogContent(): React.ReactElement {
             const className = classes.find((c) => c.id === entry.class_id)?.name ?? '';
             return (
               <li key={entry.id} data-testid="teaching-log-row">
-                {entry.occurred_on} — {className} — Unit {entry.unit_no} ({entry.source_kind}) —
-                {' '}{entry.duration_minutes} min — {entry.reflection}
+                {entry.occurred_on} - {className} - Unit {entry.unit_no} ({entry.source_kind}) -
+                {' '}{entry.duration_minutes} min - {entry.reflection}
                 <LogEntryFeedback entry={entry} locale={locale} />
               </li>
             );

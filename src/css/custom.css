@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Bilingual Content Platform — theme, RTL/Nastaliq, and A4 print styles.
+   Bilingual Content Platform - theme, RTL/Nastaliq, and A4 print styles.
    ========================================================================== */
 
 /* --- Self-hosted Urdu webfont (FR-002). Place the WOFF2 in static/fonts/. ---- */
@@ -95,7 +95,7 @@ html[dir='rtl'] code {
   border: 1px solid var(--ifm-color-emphasis-300);
   border-radius: 6px;
 }
-/* Schematic diagrams are hand-authored SVG — cap their width so labels stay legible. */
+/* Schematic diagrams are hand-authored SVG - cap their width so labels stay legible. */
 .figure--diagram img {
   max-width: 640px;
 }
@@ -107,7 +107,7 @@ html[dir='rtl'] code {
 
 /* --- Auth form controls (Spec 002, T061) -----------------------------------
    Found while doing the accessibility pass: Infima ships no `.input` class at
-   all — every text input across every auth page (`className="input"`) had
+   all - every text input across every auth page (`className="input"`) had
    been rendering as a bare, unstyled, browser-default control all session,
    under the 44px tap-target minimum (Constitution Art. III.8). Real styling,
    not a cosmetic pass: uses Infima's own custom properties so it tracks the
@@ -132,7 +132,7 @@ html[dir='rtl'] code {
 
 /* Checkboxes/radios are natively far under 44px; the label (which toggles
    the input on click, same as the input itself) is what needs the tap-target
-   size, not the native control — resizing that cross-browser is unreliable. */
+   size, not the native control - resizing that cross-browser is unreliable. */
 .auth-tap-target {
   display: inline-flex;
   align-items: center;
@@ -148,7 +148,7 @@ html[dir='rtl'] code {
 }
 
 /* Infima's default `.button` renders ~36px tall (0.375rem vertical padding +
-   1.5 line-height at 14px) — under 44px. Scoped to `.auth-page` rather than
+   1.5 line-height at 14px) - under 44px. Scoped to `.auth-page` rather than
    overriding `.button` globally, since Feature 001 (print/search buttons)
    also uses that class and this fix is Spec 002's accessibility pass, not a
    site-wide restyle. */
@@ -156,11 +156,11 @@ html[dir='rtl'] code {
   min-height: 44px;
 }
 
-/* Visually hidden but still screen-reader-visible — standard accessible
+/* Visually hidden but still screen-reader-visible - standard accessible
    pattern (not `display:none`/`visibility:hidden`, which hide from screen
    readers too). Used for table column headers whose purpose is visually
    obvious (an actions column of buttons) but which axe's td-has-header rule
-   still flags as unlabeled for screen-reader table navigation — found via
+   still flags as unlabeled for screen-reader table navigation - found via
    the same Lighthouse a11y audit as the danger-button contrast fix below. */
 .sr-only {
   position: absolute;
@@ -175,11 +175,11 @@ html[dir='rtl'] code {
 }
 
 /* Infima's default --ifm-color-danger (#fa383e) against the button's white
-   text is a 3.75:1 contrast ratio — fails WCAG AA's 4.5:1 minimum for normal
+   text is a 3.75:1 contrast ratio - fails WCAG AA's 4.5:1 minimum for normal
    text. Found via a Lighthouse accessibility audit on roster.tsx's "Archive
    class" button (Spec 003); also affects profile.tsx's danger button (Spec
    002), so this is a global fix, not page-scoped. Uses
-   --ifm-color-danger-darkest — an existing shade in Infima's own palette
+   --ifm-color-danger-darkest - an existing shade in Infima's own palette
    (6.88:1, passes AA), not a new invented color. */
 .button--danger {
   --ifm-button-background-color: var(--ifm-color-danger-darkest);
@@ -221,13 +221,13 @@ html[dir='rtl'] code {
 
 /*
  * Pin the navbar and sidebar chrome to the same left/right arrangement as the
- * English site for the Urdu (RTL) locale too — owner decision, 2026-07-19.
+ * English site for the Urdu (RTL) locale too - owner decision, 2026-07-19.
  * Only the Urdu prose itself should read right-to-left; the navigation chrome
  * (sidebar position, navbar item order) stays fixed so switching languages
  * doesn't also relocate the controls a reader has already learned.
  *
  * Docusaurus builds the `ur` locale by running the whole stylesheet through
- * rtlcss, which auto-mirrors every directional value — including a plain
+ * rtlcss, which auto-mirrors every directional value - including a plain
  * direction: ltr/rtl we write here ourselves, silently inverting it and
  * canceling out the fix. The "rtl:ignore" comment directive immediately
  * before each rule below is rtlcss's own escape hatch: it makes that rule
@@ -236,7 +236,7 @@ html[dir='rtl'] code {
  *
  * `direction` inherits, so flipping these flex containers back to `ltr` (to
  * keep DOM source order = visual left-to-right) would otherwise also flip the
- * actual Urdu article text — re-assert `rtl` on the content containers below
+ * actual Urdu article text - re-assert `rtl` on the content containers below
  * to keep prose reading correctly.
  */
 /*rtl:ignore*/
@@ -259,7 +259,7 @@ html[dir='rtl'] div:has(> .theme-doc-sidebar-container) > main {
  * `position: absolute`, anchored `right` in the English source CSS. rtlcss
  * flips that to `left` for the ur build (correct for a fully-mirrored
  * layout), but `direction: ltr` above already keeps the mobile sidebar
- * toggle pinned left — without this override the two collide and overlap
+ * toggle pinned left - without this override the two collide and overlap
  * instead of sitting on opposite sides. No stable class exists on this
  * container, so target it structurally via the stable `.navbar__search`
  * class it wraps.

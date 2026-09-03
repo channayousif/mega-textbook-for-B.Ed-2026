@@ -6,7 +6,7 @@ import type { Assignment, AssignmentStudentStatus, Grade, Submission } from '@si
 /**
  * Grading queue + grade/return/edit (Spec 003, T043).
  *
- * COSMETIC CONVENIENCE ONLY (Constitution Art. IX.2) — real authorization is
+ * COSMETIC CONVENIENCE ONLY (Constitution Art. IX.2) - real authorization is
  * RLS + the `enforce_max_mark()` trigger (supabase/migrations/0020); a bug
  * here would degrade UX, not security.
  */
@@ -25,11 +25,11 @@ export type QueueRow = {
 };
 
 /**
- * FR-010, US3 AS4 — the teacher's grading queue for one assignment: every
+ * FR-010, US3 AS4 - the teacher's grading queue for one assignment: every
  * actively enrolled student, cross-referenced against submissions (+ grades)
  * to classify each as not-yet-submitted/missing/submitted/late/graded. Two
  * RLS-scoped queries composed client-side (contracts/classes-operations.md
- * §D) rather than a single view — enrollments carries the roster (incl.
+ * §D) rather than a single view - enrollments carries the roster (incl.
  * non-submitters), submissions carries who has actually turned work in.
  */
 export async function fetchQueue(
@@ -84,7 +84,7 @@ export type GradeInput = {
   gradedBy: string;
 };
 
-/** FR-010 — grade and return a submission in one atomic action (one `grades` row). */
+/** FR-010 - grade and return a submission in one atomic action (one `grades` row). */
 export async function gradeAndReturn(input: GradeInput): Promise<Result<Grade>> {
   const supabase = await client();
   const { data, error } = await supabase
@@ -100,7 +100,7 @@ export async function gradeAndReturn(input: GradeInput): Promise<Result<Grade>> 
   return { data: (data as Grade) ?? null, error };
 }
 
-/** FR-011 — edit an already-returned grade; the student's next read reflects the correction. */
+/** FR-011 - edit an already-returned grade; the student's next read reflects the correction. */
 export async function editGrade(
   gradeId: string,
   patch: { mark: number; feedback: string | null },

@@ -3,10 +3,10 @@ import type { Result } from '@site/src/lib/classes';
 import type { ImprovementSuggestion, SuggestionCategory, SuggestionStatus } from '@site/src/lib/types';
 
 /**
- * Improvement suggestions — file/list-own (FR-003, FR-004), admin
+ * Improvement suggestions - file/list-own (FR-003, FR-004), admin
  * list+filter+transition (FR-005). Spec 005, T013/T018.
  *
- * COSMETIC CONVENIENCE ONLY (Constitution Art. IX.2) for the query shapes —
+ * COSMETIC CONVENIENCE ONLY (Constitution Art. IX.2) for the query shapes -
  * real authorization is RLS (supabase/migrations/0030) plus the
  * enforce_suggestion_status_transition() guard trigger (0031); a bug here
  * would degrade UX, not security.
@@ -29,7 +29,7 @@ export type FileSuggestionInput = {
   body: string;
 };
 
-/** FR-003 — file a new suggestion; status always defaults to 'submitted' server-side. */
+/** FR-003 - file a new suggestion; status always defaults to 'submitted' server-side. */
 export async function fileSuggestion(input: FileSuggestionInput): Promise<Result<ImprovementSuggestion>> {
   const supabase = await client();
   const { data, error } = await supabase
@@ -49,7 +49,7 @@ export async function fileSuggestion(input: FileSuggestionInput): Promise<Result
   return { data: (data as ImprovementSuggestion) ?? null, error };
 }
 
-/** FR-004 — every suggestion the signed-in teacher has filed, most-recent-first. */
+/** FR-004 - every suggestion the signed-in teacher has filed, most-recent-first. */
 export async function fetchOwnSuggestions(): Promise<Result<ImprovementSuggestion[]>> {
   const supabase = await client();
   const { data, error } = await supabase
@@ -65,7 +65,7 @@ export type ModerationQueueFilters = {
   courseCode?: string;
 };
 
-/** FR-005 — admin moderation queue, filterable by any combination of status/category/course. */
+/** FR-005 - admin moderation queue, filterable by any combination of status/category/course. */
 export async function fetchModerationQueue(filters: ModerationQueueFilters = {}): Promise<Result<ImprovementSuggestion[]>> {
   const supabase = await client();
   let query = supabase.from('improvement_suggestions').select('*');
@@ -76,7 +76,7 @@ export async function fetchModerationQueue(filters: ModerationQueueFilters = {})
   return { data: (data as ImprovementSuggestion[]) ?? null, error };
 }
 
-/** FR-005 — transition a suggestion's status and attach a note; admin only (enforced by RLS + the guard trigger). */
+/** FR-005 - transition a suggestion's status and attach a note; admin only (enforced by RLS + the guard trigger). */
 export async function transitionSuggestion(
   id: string,
   status: SuggestionStatus,
