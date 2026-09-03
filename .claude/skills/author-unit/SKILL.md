@@ -4,7 +4,7 @@ description: >-
   Author or re-draft one course unit as nested per-topic learning cycles (Spec 008 v3.0 unit
   structure standard): an index opening, one nine-part topic file per topic, a unit-assessment
   file with a 10/10/5 question bank and a bounded answers section, and an optional
-  unit-teacher-notes file — then emit the unit's coverage matrix (v2), sources-consulted list,
+  unit-teacher-notes file - then emit the unit's coverage matrix (v2), sources-consulted list,
   and figure manifest. Use when asked to "author a unit", "draft unit content", "restructure a
   unit", "re-draft a unit to the per-topic standard", "write EFMP-xxx Unit N", or to bring a
   unit up to the unit structure standard / v3.0 style guide. Produces gate-passing,
@@ -16,7 +16,7 @@ description: >-
 Turn one unit's approved content-spec subsection + its course guide into a nested per-topic
 unit (Spec 008): `index.mdx` (opening) + `topic-01.mdx … topic-NN.mdx` (one nine-part learning
 cycle each) + `unit-assessment.mdx` (chapter summary + 10 MCQ / 10 RRQ / 5 ERQ + a bounded
-`## Answers and marking guidance` section) + an optional `unit-teacher-notes.mdx` — plus the
+`## Answers and marking guidance` section) + an optional `unit-teacher-notes.mdx` - plus the
 governance artefacts the gates read: `coverage/unit-NN.md` (v2), `sources/unit-NN.md`,
 `figures/unit-NN.md`.
 
@@ -27,10 +27,10 @@ cycle in the main loop.
 **Inputs you need before starting**
 
 - `course_code` and `unit_no` (e.g. EFMP-302, Unit 1).
-- `specs/content/<course-code>/content-spec.md` — the approved content-spec. The unit's
+- `specs/content/<course-code>/content-spec.md` - the approved content-spec. The unit's
   `## Unit N` subsection MUST already carry: a `### Sub-topic checklist` table (with a `Topic`
   column), a `### Topic list` table, a re-baselined `**Depth budget**` line, a `**Figure plan**`
-  and a `**Unit-end assessment blueprint**`. Those are stage G1 / Spec 008 US2 — **not this
+  and a `**Unit-end assessment blueprint**`. Those are stage G1 / Spec 008 US2 - **not this
   skill's job**. If any is missing, stop and ask for the content-spec to be completed first.
 - The course guide extract: `Scheme-and-Course-guides/extracted-text/<file>.txt`, the block for
   this course/unit.
@@ -42,16 +42,16 @@ cycle in the main loop.
   `references/citation-and-register.md` (citation form + register).
 
 **Out of scope**: generating/optimising/placing images (a later pass); the graded LMS quiz
-bank (Spec 003, RLS-protected — different from this file's public self-study answers).
+bank (Spec 003, RLS-protected - different from this file's public self-study answers).
 
 ---
 
-## Step 1 — Gather sources, per topic
+## Step 1 - Gather sources, per topic
 
 1. Read the guide's unit block **verbatim**. List every leaf sub-topic; confirm it matches the
    `### Sub-topic checklist` IDs. If the guide says something the checklist misses, stop and
-   flag it to the curriculum owner — the checklist is authoritative; fixing it is a G1 action.
-2. Read the `### Topic list`. For **each topic row**, note its `Sub-topic IDs` — that is the
+   flag it to the curriculum owner - the checklist is authoritative; fixing it is a G1 action.
+2. Read the `### Topic list`. For **each topic row**, note its `Sub-topic IDs` - that is the
    slice of the checklist this topic file must teach.
 3. For each `**Mapped readings**` key, get the full reference from the content-spec
    `## Reading list`. For any fact/claim you need to cite and don't already have a source for:
@@ -61,19 +61,19 @@ bank (Spec 003, RLS-protected — different from this file's public self-study a
 4. If a sub-topic has no mapped reading and no verifiable topically-related open-access source:
    cover it from the guide text + general knowledge, add a `no-external-source` row to
    `sources/unit-NN.md`, and escalate the gap in `specs/gaps.md`.
-5. Keep a running list `{key, full citation, url/doi, what it supports, kind}` — becomes
+5. Keep a running list `{key, full citation, url/doi, what it supports, kind}` - becomes
    `sources/unit-NN.md`. Each topic's `## Further reading` will cite a subset of it.
 
-## Step 2 — Design backward, per topic (Understanding by Design)
+## Step 2 - Design backward, per topic (Understanding by Design)
 
 For **each topic** in the `### Topic list`:
 
 1. Write 1–3 **enduring understandings** for that topic (what a learner still grasps a year on).
 2. Decide the topic's **assessment evidence**:
-   - `## Check your understanding` — ≥ 3 retrieval items, Remember → Apply, that actually test
+   - `## Check your understanding` - ≥ 3 retrieval items, Remember → Apply, that actually test
      those understandings (produce/define/classify/justify, not recognise);
-   - `## Self-assessment checklist` — ≥ 3 "I can …" statements mirroring the understandings;
-   - `## Summative task` — one task + a mini-rubric; **≥ 1 rubric criterion demands
+   - `## Self-assessment checklist` - ≥ 3 "I can …" statements mirroring the understandings;
+   - `## Summative task` - one task + a mini-rubric; **≥ 1 rubric criterion demands
      Analyze-or-higher** (Constitution Art. III.3).
 3. Build a small **Bloom mini-table** over that topic's sub-topic IDs: sub-topic → target Bloom
    level → the `### …` heading under `## Explanation` that teaches it → where it is assessed.
@@ -83,21 +83,21 @@ Then, for the **whole unit**, plan the `unit-assessment.mdx` bank from the conte
 `**Unit-end assessment blueprint**`: exactly **10 MCQ / 10 RRQ / 5 ERQ**, every item Bloom-
 tagged, spread across all topics per the blueprint (see `references/item-writing.md`).
 
-## Step 3 — Draft the files
+## Step 3 - Draft the files
 
 Apply `references/pedagogy-checklist.md` throughout. Register: **plain English for a fresh
-HSC/intermediate graduate (Art. III.1)** — deeper concepts, not harder words
+HSC/intermediate graduate (Art. III.1)** - deeper concepts, not harder words
 (`references/citation-and-register.md`).
 
-### `index.mdx` — the unit opening (orientation only, no exposition body)
+### `index.mdx` - the unit opening (orientation only, no exposition body)
 
 Required `##` sections, in this order: `## Unit learning outcomes`; `## Prerequisite
 knowledge`; `## In this unit` (an **ordered list, one item per topic file**, each linking
 `./topic-NN`); `## How to use this unit`. Keep `<TranslationStatusBadge status="…" />` at the
 top. **No `<PrintHandout />`. No exposition.** The Spec 007 `## Common misconceptions` /
-`## Further reading` requirement does **not** apply here — it moves into each topic file.
+`## Further reading` requirement does **not** apply here - it moves into each topic file.
 
-### `topic-01.mdx … topic-NN.mdx` — one nine-part cycle each
+### `topic-01.mdx … topic-NN.mdx` - one nine-part cycle each
 
 Front matter = the unit schema **plus** `topic_no` (== the filename ordinal) and `topic_label`
 (the `### Topic list` label, e.g. `"1.1"`). `clo_refs` = the subset the topic serves. Add
@@ -105,40 +105,40 @@ Front matter = the unit schema **plus** `topic_no` (== the filename ordinal) and
 
 The nine canonical `##` headings, **in this exact order** (contract: `contracts/topic-cycle.md`):
 
-1. `## A real classroom situation` — a short, concrete, Pakistan/Sindh-grounded vignette that
+1. `## A real classroom situation` - a short, concrete, Pakistan/Sindh-grounded vignette that
    sets up the topic. Put a `{/* FIGURE[fig-U<n>-<seq>]: …; alt: … */}` marker here or in
-   `## Explanation` (≥ 1 marker per topic file — see `references/figure-prompts.md`).
-2. `## Explanation` — the teaching. A `### …` sub-heading per sub-topic ID in this topic's
+   `## Explanation` (≥ 1 marker per topic file - see `references/figure-prompts.md`).
+2. `## Explanation` - the teaching. A `### …` sub-heading per sub-topic ID in this topic's
    slice; ~one concrete Pakistan-grounded example per sub-topic; paraphrase-and-cite the mapped
    readings; **name and correct this topic's misconception here**. Define new terms on first
    use (`glossary.json` + `<Glossary>`). Show a **worked example before** asking the learner to
    perform the move.
-3. `## Activity: <name>` — one genuinely collaborative task (pairs/groups), Pakistan classroom
+3. `## Activity: <name>` - one genuinely collaborative task (pairs/groups), Pakistan classroom
    context, with a rough time box.
-4. `## Check your understanding` — **≥ 3** top-level numbered items, Remember → Apply, retrieval
+4. `## Check your understanding` - **≥ 3** top-level numbered items, Remember → Apply, retrieval
    not recognition. Bloom-tag each `*(Apply)*`.
-5. `## Summary` — a short recap of the topic's enduring understandings.
-6. `## Self-assessment checklist` — **≥ 3** `- [ ]` "I can …" statements.
-7. `## Try this at your practicum school` — a transfer task the trainee does on placement.
-8. `## Summative task` — one task + a **mini-rubric**; ≥ 1 criterion demands Analyze-or-higher.
-9. `## Further reading` — **≥ 1** real citation/link line (APA-ish; DOI/URL when one exists).
+5. `## Summary` - a short recap of the topic's enduring understandings.
+6. `## Self-assessment checklist` - **≥ 3** `- [ ]` "I can …" statements.
+7. `## Try this at your practicum school` - a transfer task the trainee does on placement.
+8. `## Summative task` - one task + a **mini-rubric**; ≥ 1 criterion demands Analyze-or-higher.
+9. `## Further reading` - **≥ 1** real citation/link line (APA-ish; DOI/URL when one exists).
 
 ### `unit-assessment.mdx`
 
 Front matter = the unit schema (no `topic_no`/`topic_label`). `<PrintHandout />` at the top.
 Sections, in order:
 
-- `## Unit summary` — the chapter summary; recaps the unit's enduring understandings.
+- `## Unit summary` - the chapter summary; recaps the unit's enduring understandings.
 - `## Summative assessment` containing `### Multiple-choice questions (MCQs)` (**exactly 10**
   top-level numbered items), `### Restricted-response questions (RRQs)` (**exactly 10**),
   `### Extended-response questions (ERQs)` (**exactly 5**). Every item Bloom-tagged.
-- `## Answers and marking guidance` — **MUST be the file's final `##` section**, exactly this
+- `## Answers and marking guidance` - **MUST be the file's final `##` section**, exactly this
   heading (case-sensitive, no trailing text). `### MCQ answer key` (letter + one-line
   justification); `### RRQ model answers and mark schemes`; `### ERQ rubrics` (analytic; ≥ 1
-  demands Analyze-or-higher). Prose only — **no** `answer_key:` / `answers:` / `marking_scheme:`
+  demands Analyze-or-higher). Prose only - **no** `answer_key:` / `answers:` / `marking_scheme:`
   / `rubric_answers:` front-matter keys anywhere. See `references/answers-block-formatting.md`.
 
-### `unit-teacher-notes.mdx` — OPTIONAL
+### `unit-teacher-notes.mdx` - OPTIONAL
 
 Include only where the course guide supplies teaching strategies / practical work (Art. III.6).
 Front matter = the unit schema; `blooms_summary` notes "no assessment items". Body: teaching
@@ -151,23 +151,23 @@ Recompute `est_reading_minutes` on every file from its final word count (~180–
 **sum** across `index.mdx` + every `topic-*.mdx` + `unit-assessment.mdx` (+
 `unit-teacher-notes.mdx` if present) must land inside the content-spec `**Depth budget**` `A–B`
 band. If the draft lands outside, tell the curriculum owner the actual total so the band can be
-re-baselined (T049) — do **not** pad or trim prose to hit a number.
+re-baselined (T049) - do **not** pad or trim prose to hit a number.
 
-## Step 4 — Self-review, then emit the artefacts
+## Step 4 - Self-review, then emit the artefacts
 
 Run the checklist in `references/structure-standard.md`. Then write:
 
-- **`specs/content/<course-code>/coverage/unit-NN.md`** — per
+- **`specs/content/<course-code>/coverage/unit-NN.md`** - per
   `contracts/coverage-matrix-v2.md`: `| Sub-topic ID | File | Section | Source |`. `File` ∈
   `{index.mdx, topic-01.mdx … topic-NN.mdx, unit-assessment.mdx, unit-teacher-notes.mdx}`;
   `Section` = the exact heading (normally the `###` under a topic's `## Explanation`). Every
   checklist ID mapped; **every `topic-NN.mdx` named by ≥ 1 row**; for every checklist ID, ≥ 1
   row names the exact `topic-NN.mdx` its `### Topic list` row assigns it to. A second
   `## Reinforcement` table is allowed.
-- **`specs/content/<course-code>/sources/unit-NN.md`** — per
+- **`specs/content/<course-code>/sources/unit-NN.md`** - per
   `contracts/sources-consulted.md`: `| Key | Citation | URL/DOI | Supports | Kind |`. Every key
   cited in the coverage matrix appears here; no unused non-`no-external-source` keys.
-- **`specs/content/<course-code>/figures/unit-NN.md`** — per `contracts/figures-manifest.md`:
+- **`specs/content/<course-code>/figures/unit-NN.md`** - per `contracts/figures-manifest.md`:
   `| Figure ID | Topic | Prompt | Alt text | Status |`. One row per FIGURE marker; `Topic` =
   the marker file's `topic_label`; `Prompt` / `Alt text` match the marker; `Status` =
   `prompt-only`. Marker-ID set **==** manifest-ID set, both ways.
@@ -176,11 +176,11 @@ Then run, and fix every finding:
 
 ```
 npm run validate:content && npm run check:depth-gate && npm run check:figures && \
-  npm run check:no-answer-keys && npm test
+  npm run check:no-answer-keys && npm run check:no-em-dash && npm test
 ```
 
 `check:pipeline-gate` may be **red** for this unit until its `tasks.md` G2/G3 rows re-clear the
-human Content gate — that is expected during a re-restructure, not a defect. A green
+human Content gate - that is expected during a re-restructure, not a defect. A green
 `check:depth-gate` is **structural only**; the curriculum owner's Content-gate pass
 (traceability, register, example aptness, source relevance, topic grouping, figure-prompt
 aptness, rubric soundness, whether the hooks land) is the real acceptance.
@@ -202,6 +202,6 @@ After Step 4, in `i18n/ur/docusaurus-plugin-content-docs/current/…/unit-NN/`:
   that `G4 ur-translation` / `G5 ur-review` scope changed to the per-topic layout.
 
 The parity gate skips `draft`; the `ur` route falls back to English behind Spec 001 FR-003's
-"translation in progress" banner until the downstream G4/G5 re-review — expected, not a breach.
-**Do not merge the branch** between this `tasks.md` edit and the human Content-gate pass —
+"translation in progress" banner until the downstream G4/G5 re-review - expected, not a breach.
+**Do not merge the branch** between this `tasks.md` edit and the human Content-gate pass -
 `check:pipeline-gate` is red for the unit by design in that window.

@@ -13,7 +13,7 @@ import { fetchGradeForSubmission } from '@site/src/lib/grading';
 import type { Assignment, Grade, Submission } from '@site/src/lib/types';
 
 /**
- * Assignment detail — student submit/resubmit view (Spec 003, T036/T062).
+ * Assignment detail - student submit/resubmit view (Spec 003, T036/T062).
  * FR-007, FR-008, FR-016 (bilingual status/error text; static labels stay
  * English, matching Spec 002's login.tsx precedent).
  */
@@ -28,14 +28,14 @@ const MESSAGES = {
     ur: 'آخری تاریخ گزر چکی ہے۔ یہ جمع شدہ کام تاخیر سے شمار ہوگا۔',
   },
   locked: {
-    en: 'The due date has passed — you can no longer edit this submission.',
-    ur: 'آخری تاریخ گزر چکی ہے — اب آپ یہ جمع شدہ کام تبدیل نہیں کر سکتے۔',
+    en: 'The due date has passed - you can no longer edit this submission.',
+    ur: 'آخری تاریخ گزر چکی ہے - اب آپ یہ جمع شدہ کام تبدیل نہیں کر سکتے۔',
   },
   fileTooLarge: { en: 'That file is larger than 10 MB.', ur: 'یہ فائل 10 MB سے بڑی ہے۔' },
   fileTypeRejected: { en: 'That file type is not accepted.', ur: 'اس قسم کی فائل قبول نہیں کی جاتی۔' },
   emptySubmission: { en: 'Enter some text or choose a file.', ur: 'کچھ متن لکھیں یا کوئی فائل منتخب کریں۔' },
   submitError: { en: 'Could not submit. Please try again.', ur: 'جمع نہیں کروایا جا سکا۔ براہِ کرم دوبارہ کوشش کریں۔' },
-  submittedLate: { en: 'Submitted — marked late.', ur: 'جمع کروا دیا گیا — تاخیر سے۔' },
+  submittedLate: { en: 'Submitted - marked late.', ur: 'جمع کروا دیا گیا - تاخیر سے۔' },
   submittedOnTime: { en: 'Submitted on time.', ur: 'وقت پر جمع کروا دیا گیا۔' },
   submitting: { en: 'Submitting…', ur: 'جمع ہو رہا ہے…' },
   loading: { en: 'Loading…', ur: 'لوڈ ہو رہا ہے…' },
@@ -69,7 +69,7 @@ function StudentSubmissionForm({
     // (resuming an editable draft). Found via a CI-only failure that also
     // reproduced locally once: this fetch is async, and unconditionally
     // calling setText('') on the no-submission-yet path can resolve AFTER
-    // the student has already started typing, silently wiping their input —
+    // the student has already started typing, silently wiping their input -
     // `text` already starts at '' from useState, so there's nothing to sync
     // when there's no prior submission to restore.
     if (data) {
@@ -154,7 +154,7 @@ function StudentSubmissionForm({
       )}
       {submission && (
         <p>
-          Current status: {submission.late ? 'Submitted (late)' : 'Submitted (on time)'} —{' '}
+          Current status: {submission.late ? 'Submitted (late)' : 'Submitted (on time)'} -{' '}
           {new Date(submission.submitted_at).toLocaleString()}
           {fileUrl && (
             <>
@@ -167,7 +167,7 @@ function StudentSubmissionForm({
       {grade && (
         <div className="alert alert--success" role="status">
           Grade: {grade.mark} / {assignment.max_mark}
-          {grade.feedback && <> — {grade.feedback}</>}
+          {grade.feedback && <> - {grade.feedback}</>}
         </div>
       )}
       <form onSubmit={handleSubmit}>

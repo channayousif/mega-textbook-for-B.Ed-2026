@@ -6,20 +6,20 @@ import type { Assignment } from '@site/src/lib/types';
  * Gradebook `.xlsx` export (Spec 003, T051). FR-014, FR-018, FR-019, SC-007.
  *
  * `exceljs` (research.md R5) is imported dynamically here, inside the
- * function body, so it never lands in the base app bundle — only pulled in
+ * function body, so it never lands in the base app bundle - only pulled in
  * when a teacher actually triggers an export (Constitution Art. V.5).
  *
- * COSMETIC CONVENIENCE ONLY (Constitution Art. IX.2) for the query shape —
+ * COSMETIC CONVENIENCE ONLY (Constitution Art. IX.2) for the query shape -
  * real authorization is RLS on classes/enrollments/assignments/submissions/
  * grades (already covering "own class only"); a bug here would produce a
  * wrong-looking spreadsheet, never leak another teacher's data.
  *
  * The per-student-per-assignment marks computation is shared with Spec 005's
  * Analytics area via `fetchMarksByStudentForAssignments()` (research.md R4)
- * — one implementation of the grades+quiz_best_scores merge, not two.
+ * - one implementation of the grades+quiz_best_scores merge, not two.
  */
 
-const ANONYMIZED_LABEL = '(no name set)'; // same convention as roster.tsx/queue.tsx — covers tombstoned students (FR-019)
+const ANONYMIZED_LABEL = '(no name set)'; // same convention as roster.tsx/queue.tsx - covers tombstoned students (FR-019)
 
 async function client() {
   const supabase = await getSupabase();
@@ -28,13 +28,13 @@ async function client() {
 }
 
 /**
- * FR-014 — every student (active AND removed, per FR-018/FR-019 — a removed
+ * FR-014 - every student (active AND removed, per FR-018/FR-019 - a removed
  * or tombstoned student's marks stay in the gradebook) x every assignment x
  * every mark, as one matrix sheet. Quiz-sourced assignments are scored via
  * `quiz_best_scores` (0023, US6), never `grades` (data-model.md's design
- * decision) — the query for it is skipped entirely when the class has no
+ * decision) - the query for it is skipped entirely when the class has no
  * quiz assignments, and any other failure there is tolerated (treated as "no
- * scores yet") rather than blocking the rest of the export — originally a
+ * scores yet") rather than blocking the rest of the export - originally a
  * soft dependency written before US6 existed, kept soft even now that it
  * does (contracts/classes-operations.md §G).
  */

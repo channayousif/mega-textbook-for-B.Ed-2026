@@ -7,10 +7,10 @@ import { fetchOwnFeedbackHistory } from '@site/src/lib/activityFeedback';
 import type { ImprovementSuggestion, ActivityFeedback } from '@site/src/lib/types';
 
 /**
- * Feedback & Suggestions area (Spec 005, T015/T031) — "My Suggestions" list
+ * Feedback & Suggestions area (Spec 005, T015/T031) - "My Suggestions" list
  * (FR-004): every suggestion the teacher has filed, with category, body,
  * current status, and any admin note; plus the teacher's own Activity
- * Feedback history (FR-007) — every activity they've rated, most recently
+ * Feedback history (FR-007) - every activity they've rated, most recently
  * updated first.
  */
 
@@ -86,7 +86,7 @@ function FeedbackSuggestionsContent(): React.ReactElement {
         <ul>
           {suggestions.map((s) => (
             <li key={s.id} data-testid="suggestion-row">
-              <strong>{s.category}</strong> — {s.body} — <span data-testid="suggestion-status">{MESSAGES[STATUS_LABELS[s.status]][locale]}</span>
+              <strong>{s.category}</strong> - {s.body} - <span data-testid="suggestion-status">{MESSAGES[STATUS_LABELS[s.status]][locale]}</span>
               {s.admin_note && (
                 <p><em>{MESSAGES.adminNote[locale]}: {s.admin_note}</em></p>
               )}
@@ -102,7 +102,7 @@ function FeedbackSuggestionsContent(): React.ReactElement {
         <ul>
           {feedbackHistory.map((f) => (
             <li key={f.id} data-testid="feedback-history-row">
-              {f.course_code} Unit {f.unit_no} ({f.source_kind}) — {f.rating}/5 — {f.actual_minutes} min
+              {f.course_code} Unit {f.unit_no} ({f.source_kind}) - {f.rating}/5 - {f.actual_minutes} min
             </li>
           ))}
         </ul>

@@ -7,7 +7,7 @@ import { loginUrlWithReturnTo } from '@site/src/lib/authRedirect';
  * Client-side gate for `/app/admin/*` pages (Spec 002, T042).
  *
  * ⚠️ COSMETIC ONLY (Constitution Art. IX.2). This component decides what to
- * *render*, nothing more — it has no bearing on what data the page can
+ * *render*, nothing more - it has no bearing on what data the page can
  * actually fetch. A bug here degrades UX, not security: every admin query
  * still runs through RLS (`is_admin()`), which is the real enforcement point
  * and denies unauthorized reads/writes regardless of what this component does

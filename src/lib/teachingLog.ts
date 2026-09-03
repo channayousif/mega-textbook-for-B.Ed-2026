@@ -3,10 +3,10 @@ import type { Result } from '@site/src/lib/classes';
 import type { TeachingLogEntry, TeachingLogSourceKind } from '@site/src/lib/types';
 
 /**
- * Teaching log entries — create/list (FR-006), most-recent-first.
+ * Teaching log entries - create/list (FR-006), most-recent-first.
  * Spec 005, T023.
  *
- * COSMETIC CONVENIENCE ONLY (Constitution Art. IX.2) — real authorization is
+ * COSMETIC CONVENIENCE ONLY (Constitution Art. IX.2) - real authorization is
  * RLS (supabase/migrations/0028); a log entry is immutable once created, no
  * edit/delete path exists at any layer.
  */
@@ -28,7 +28,7 @@ export type LogActivityInput = {
   reflection: string;
 };
 
-/** FR-006 — log a teaching activity in one flow; rejected if class_id isn't owned by the caller. */
+/** FR-006 - log a teaching activity in one flow; rejected if class_id isn't owned by the caller. */
 export async function logActivity(input: LogActivityInput): Promise<Result<TeachingLogEntry>> {
   const supabase = await client();
   const { data, error } = await supabase
@@ -49,9 +49,9 @@ export async function logActivity(input: LogActivityInput): Promise<Result<Teach
 }
 
 /**
- * FR-006 — the signed-in teacher's own log, most-recent-first. `occurred_on`
+ * FR-006 - the signed-in teacher's own log, most-recent-first. `occurred_on`
  * is a date (no time component), so multiple entries logged for the same
- * day need a deterministic tiebreaker — `created_at desc` resolves ties in
+ * day need a deterministic tiebreaker - `created_at desc` resolves ties in
  * actual logging order (found via teacher-teaching-log.spec.ts: two
  * same-day entries otherwise had no guaranteed relative order).
  */

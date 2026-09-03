@@ -14,7 +14,7 @@ import { getSupabase, setAuthConfig, isAuthConfigured, isBrowser } from '@site/s
  * ⚠️ ROLE IS READ FROM `profiles`, NOT FROM A JWT CLAIM (research.md R2).
  * Do not "optimise" this into a token claim. FR-011a gives sessions a long,
  * auto-refreshing life; a role baked into the token would stay stale until the
- * token rotated — potentially days — which breaks FR-008's guarantee that an
+ * token rotated - potentially days - which breaks FR-008's guarantee that an
  * admin's change applies by the user's next visit. tests/e2e/auth-role-propagation
  * exists to fail if anyone makes that change.
  */
@@ -33,15 +33,15 @@ export type Profile = {
 };
 
 export type AuthState = {
-  /** Still resolving the session — render neutral UI, not signed-out UI. */
+  /** Still resolving the session - render neutral UI, not signed-out UI. */
   loading: boolean;
   session: Session | null;
   profile: Profile | null;
   /** Convenience: profile?.role, defaulting to null when signed out. */
   role: UserRole | null;
-  /** FR-005a — the answer-key gate. Never inferred from role. */
+  /** FR-005a - the answer-key gate. Never inferred from role. */
   verifiedTeacher: boolean;
-  /** FR-010b — display name, falling back to the account email. */
+  /** FR-010b - display name, falling back to the account email. */
   displayName: string | null;
   isConfigured: boolean;
   signOut: () => Promise<void>;
@@ -60,7 +60,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }): React
   const [profile, setProfile] = useState<Profile | null>(null);
 
   // Thread Docusaurus customFields into the client module (process.env is not
-  // readable from the browser bundle — quickstart.md §2).
+  // readable from the browser bundle - quickstart.md §2).
   const configured = useMemo(() => {
     const url = (siteConfig.customFields?.supabaseUrl as string) ?? '';
     const anonKey = (siteConfig.customFields?.supabaseAnonKey as string) ?? '';
@@ -82,7 +82,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }): React
       .eq('auth_user_id', activeSession.user.id)
       .maybeSingle();
 
-    // A suspended user is filtered out by RLS and returns no row (FR-020) —
+    // A suspended user is filtered out by RLS and returns no row (FR-020) -
     // treat that the same as signed-out rather than surfacing a hard error.
     if (error) {
       setProfile(null);
@@ -113,7 +113,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }): React
         return;
       }
 
-      // Rehydrate an existing session first (FR-011a — survives browser restart).
+      // Rehydrate an existing session first (FR-011a - survives browser restart).
       const { data } = await supabase.auth.getSession();
       if (cancelled) return;
       setSession(data.session);
@@ -153,9 +153,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }): React
     session,
     profile,
     role: profile?.role ?? null,
-    // Defaults to false whenever the profile is missing — fail closed.
+    // Defaults to false whenever the profile is missing - fail closed.
     verifiedTeacher: profile?.verified_teacher ?? false,
-    // FR-010b — name when set, otherwise the account email.
+    // FR-010b - name when set, otherwise the account email.
     displayName: profile?.full_name?.trim() || session?.user?.email || null,
     isConfigured: configured,
     signOut,

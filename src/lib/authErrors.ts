@@ -4,7 +4,7 @@
  * Supabase/GoTrue errors arrive in English only and are often technical
  * ("Invalid login credentials", "Email not confirmed", raw rate-limit text).
  * FR-014 requires simple English *and* Urdu, so raw pass-through cannot satisfy
- * the requirement — every user-visible auth error goes through this map.
+ * the requirement - every user-visible auth error goes through this map.
  *
  * ⚠️ ALL keys are stubbed here up front (T017) so that T035 (reset flows) and
  * T058 (suspension) only supply translations and never restructure this module.
@@ -12,7 +12,7 @@
  * what prevents a merge conflict.
  *
  * Urdu register: academic-plain (درسی مگر عام فہم), matching Constitution
- * Art. III.2 — not literary, not machine-literal.
+ * Art. III.2 - not literary, not machine-literal.
  */
 
 export type AuthMessageKey =
@@ -36,8 +36,8 @@ export type BilingualMessage = {
 
 export const AUTH_MESSAGES: Record<AuthMessageKey, BilingualMessage> = {
   email_not_confirmed: {
-    en: 'Please confirm your email first. We sent you a link — open it, then sign in.',
-    ur: 'پہلے اپنا ای میل تصدیق کریں۔ ہم نے آپ کو ایک لنک بھیجا ہے — اسے کھولیں، پھر سائن اِن کریں۔',
+    en: 'Please confirm your email first. We sent you a link - open it, then sign in.',
+    ur: 'پہلے اپنا ای میل تصدیق کریں۔ ہم نے آپ کو ایک لنک بھیجا ہے - اسے کھولیں، پھر سائن اِن کریں۔',
   },
   invalid_credentials: {
     en: 'That email or password is not correct. Please try again.',
@@ -48,8 +48,8 @@ export const AUTH_MESSAGES: Record<AuthMessageKey, BilingualMessage> = {
     ur: 'اس ای میل سے پہلے ہی ایک اکاؤنٹ موجود ہے۔ براہِ کرم سائن اِن کریں یا پاس ورڈ دوبارہ مقرر کریں۔',
   },
   weak_password: {
-    en: 'Please choose a longer password — at least 8 characters.',
-    ur: 'براہِ کرم لمبا پاس ورڈ منتخب کریں — کم از کم 8 حروف۔',
+    en: 'Please choose a longer password - at least 8 characters.',
+    ur: 'براہِ کرم لمبا پاس ورڈ منتخب کریں - کم از کم 8 حروف۔',
   },
   reset_link_invalid: {
     en: 'This reset link has expired or was already used. Please request a new one.',
@@ -113,7 +113,7 @@ export function classifyAuthError(error: unknown): AuthMessageKey {
   ) {
     return 'reset_link_invalid';
   }
-  // FR-020 — surfaced by the sign-in path when a suspended account authenticates.
+  // FR-020 - surfaced by the sign-in path when a suspended account authenticates.
   if (code === 'user_banned' || message.includes('suspended')) return 'account_suspended';
   if (message.includes('oauth') || message.includes('provider')) return 'oauth_failed';
 

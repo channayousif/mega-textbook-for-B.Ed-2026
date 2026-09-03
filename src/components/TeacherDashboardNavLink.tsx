@@ -7,7 +7,7 @@ import { useAuth } from '@site/src/contexts/AuthContext';
  * swizzled src/theme/NavbarItem/ComponentTypes.tsx, mirroring the existing
  * `custom-dashboardLink` (DashboardNavLink) precedent from Spec 004.
  *
- * Visible only when signed in as a teacher — a student/admin never sees this
+ * Visible only when signed in as a teacher - a student/admin never sees this
  * link in the first place (TeacherDashboardGuard still handles the case of a
  * non-teacher reaching a teacher dashboard URL directly).
  */

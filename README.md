@@ -6,7 +6,7 @@ programme, University of Sindh, Faculty of Education, Elsa Kazi Campus, Hyderaba
 backend for application state (auth, classes, grading, teacher/student dashboards).
 
 Governance, requirements, and every architectural decision are recorded under [`.specify/`](.specify/),
-[`specs/`](specs/), and [`history/adr/`](history/adr/) — see [`.specify/memory/constitution.md`](.specify/memory/constitution.md)
+[`specs/`](specs/), and [`history/adr/`](history/adr/) - see [`.specify/memory/constitution.md`](.specify/memory/constitution.md)
 for the project's non-negotiable principles.
 
 ## Local setup
@@ -42,18 +42,18 @@ Adding or revising a unit follows the process defined in
 [`specs/006-content-pipeline/`](specs/006-content-pipeline/): a fixed stage sequence (course
 intake → unit spec → EN draft/review → UR translation/review → assets → publish), gated by:
 
-- `specs/content/style-guide.md` — readability, register, localization, citation, and diagram
+- `specs/content/style-guide.md` - readability, register, localization, citation, and diagram
   rules; the maintained answer-key marker pattern list.
-- `specs/content/terminology.csv` — the shared EN↔UR term bank every translator consults.
-- `specs/content/<course-code>/content-spec.md` — the approved, per-course source of truth (must
+- `specs/content/terminology.csv` - the shared EN↔UR term bank every translator consults.
+- `specs/content/<course-code>/content-spec.md` - the approved, per-course source of truth (must
   carry `status: approved` before any unit under it may be drafted or merged).
-- `specs/content/<course-code>/tasks.md` — the per-course task tracker (one row per unit per
+- `specs/content/<course-code>/tasks.md` - the per-course task tracker (one row per unit per
   stage) that CI checks before allowing a merge.
 
 A required CI step, `npm run check:pipeline-gate`, blocks merging a unit's draft unless its
 course's content-spec is approved, its tracker rows are marked done with reviewer initials, and
 (for units touching Urdu) its declared key terms match the terminology bank. Quiz-bank and
-answer-key content is never committed to this repository — it's staged in a git-ignored per-unit
+answer-key content is never committed to this repository - it's staged in a git-ignored per-unit
 worksheet under `specs/content/<course-code>/.staging/` and entered manually into the backend via
 Supabase Studio. See [`specs/006-content-pipeline/quickstart.md`](specs/006-content-pipeline/quickstart.md)
 for the full walkthrough.
@@ -69,7 +69,7 @@ of reviewer stamina:
   own named subsection; `index.mdx` must carry `## Common misconceptions` **and**
   `## Further reading`; the formative set is a numbered list of **≥ 5 items**; the unit's total
   `est_reading_minutes` must sit inside the content-spec's `**Depth budget**` band. Language
-  register is unchanged — deeper *concepts*, not harder *words* (Constitution Art. III.1).
+  register is unchanged - deeper *concepts*, not harder *words* (Constitution Art. III.1).
 - Each migrated `content-spec.md` `## Unit N` subsection carries a `### Sub-topic checklist`
   table (the authoritative list) plus a `**Depth budget**` line, prerequisites, misconceptions,
   mapped readings, and a worked-examples plan.
@@ -80,7 +80,7 @@ of reviewer stamina:
 - A required CI step, `npm run check:depth-gate`, runs for **every unit whose content-spec
   subsection has a `### Sub-topic checklist`** and blocks a merge on any structural shortfall;
   units without a checklist are grandfathered. It is additive to `check:pipeline-gate` and the
-  Spec 001 validators — it replaces neither.
+  Spec 001 validators - it replaces neither.
 
 `references/structure-standard.md` inside the skill restates the same rules and **must be kept in
 sync** with the `## Unit depth standard` / `## Unit structure standard` sections of
@@ -96,7 +96,7 @@ units are unchanged and are not required to migrate.
 - A unit is on this standard **only** when *both* signals are present: a `### Topic list` table
   in its `content-spec.md` `## Unit N` subsection **and** `topic-*.mdx` files in its `docs/`
   folder. Exactly one present (or a row-count mismatch) is a **loud depth-gate failure**.
-- **File set:** `index.mdx` (opening only — outcomes / prerequisites / `## In this unit` /
+- **File set:** `index.mdx` (opening only - outcomes / prerequisites / `## In this unit` /
   how-to-use, no exposition) · `topic-01.mdx … topic-NN.mdx` (zero-padded, contiguous; front
   matter carries `topic_no` + `topic_label`) · `unit-assessment.mdx` (`## Unit summary` + a
   fixed **10 MCQ / 10 RRQ / 5 ERQ** bank + a final `## Answers and marking guidance` section) ·
@@ -129,7 +129,7 @@ committed, accessible, lazy-loaded images that render in both locales.
 - `npm run optimize:figure -- [--svg] <in> <out>` (`scripts/optimize-figure.mjs`, offline,
   `sharp` devDep) resizes + WebP-encodes a raster, or strips SVG whitespace; hard-fails over
   budget.
-- The manifest becomes v2 — `| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |`
+- The manifest becomes v2 - `| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |`
   (contract: [`figure-manifest-v2.md`](specs/009-figure-rendering/contracts/figure-manifest-v2.md)).
   `check:figures` keeps the exact Spec 008 code path for `prompt-only` and legacy units; the new
   checks (carrier is a `<Figure>`, `Src` asset exists, `Kind` enum, UR `<Figure>` + `.ur.svg`)
@@ -153,7 +153,7 @@ committed, accessible, lazy-loaded images that render in both locales.
 2. Follow the Spec-Driven Development workflow: spec → plan → tasks → implementation (see
    `.specify/memory/constitution.md` Article IV).
 3. Open a PR; CI must pass (content validation, pipeline gate, depth gate, figure gate,
-   answer-key scan, unit tests, RLS tests, e2e, Lighthouse budget — see
+   answer-key scan, unit tests, RLS tests, e2e, Lighthouse budget - see
    `.github/workflows/ci.yml`).
 4. Reference the relevant `specs/NNN-*/` directory and, for architecturally significant
    decisions, the matching `history/adr/` entry.

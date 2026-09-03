@@ -7,14 +7,14 @@ import type { Class } from '@site/src/lib/types';
 /**
  * Resolves the caller's role within a given class (Spec 003, T003).
  *
- * COSMETIC ONLY (Constitution Art. IX.2), exactly like AuthGuard.tsx — this
+ * COSMETIC ONLY (Constitution Art. IX.2), exactly like AuthGuard.tsx - this
  * hook decides what a page *renders*, nothing more. The real enforcement is
  * RLS: `classes_select` (migration 0012) already returns the row only if the
- * caller is the owning teacher, an admin, or an actively-enrolled student —
+ * caller is the owning teacher, an admin, or an actively-enrolled student -
  * zero rows otherwise. `role` here is derived from *why* the row was
  * visible, not an independent authorization decision.
  *
- * ⚠️ NO REACT CONTEXT/PROVIDER — this feature uses query-string-based routing
+ * ⚠️ NO REACT CONTEXT/PROVIDER - this feature uses query-string-based routing
  * (`?classId=…`), not nested dynamic path segments, because Docusaurus's
  * file-based router has no built-in dynamic-segment convention the way
  * Next.js's `[classId]` does. plan.md's file-tree sketch used bracket
@@ -23,7 +23,7 @@ import type { Class } from '@site/src/lib/types';
  * params work with plain static pages (the same pattern every existing
  * `src/pages/app/*.tsx` from Spec 002 already uses) and need no new
  * Docusaurus infrastructure. Each page reads its own `classId` via
- * `useQueryParam` and calls `useClassRole` directly — no ancestor provider
+ * `useQueryParam` and calls `useClassRole` directly - no ancestor provider
  * needed, since nothing here is truly global session state the way
  * AuthContext is.
  */
@@ -31,7 +31,7 @@ import type { Class } from '@site/src/lib/types';
 export type ClassRole = 'teacher' | 'student' | 'none';
 
 export type ClassRoleState = {
-  /** Still resolving — render neutral UI, not an access-denied state. */
+  /** Still resolving - render neutral UI, not an access-denied state. */
   loading: boolean;
   classRow: Class | null;
   role: ClassRole;

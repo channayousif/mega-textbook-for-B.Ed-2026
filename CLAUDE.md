@@ -103,7 +103,7 @@ After completing requests, you **MUST** create a PHR (Prompt History Record).
 
 ### 4. Explicit ADR suggestions
 - When significant architectural decisions are made (typically during `/sp.plan` and sometimes `/sp.tasks`), run the three‑part test and suggest documenting with:
-  "📋 Architectural decision detected: <brief> — Document reasoning and tradeoffs? Run `/sp.adr <decision-title>`"
+  "📋 Architectural decision detected: <brief> - Document reasoning and tradeoffs? Run `/sp.adr <decision-title>`"
 - Wait for user consent; never auto‑create the ADR.
 
 ### 5. Human as Tool Strategy
@@ -119,6 +119,7 @@ You are not expected to solve every problem autonomously. You MUST invoke the us
 - Clarify and plan first - keep business understanding separate from technical plan and carefully architect and implement.
 - Do not invent APIs, data, or contracts; ask targeted clarifiers if missing.
 - Never hardcode secrets or tokens; use `.env` and docs.
+- Never use an em dash (U+2014). Zero em dash in any file - restructure or use a spaced hyphen. Enforced in `docs/`, `guides/`, `i18n/`, `specs/content/` by `check:no-em-dash` (Constitution Art. III.9); the same rule applies by convention everywhere else.
 - Prefer the smallest viable diff; do not refactor unrelated code.
 - Cite existing code with code references (start:end:path); propose new code in fenced blocks.
 - Keep reasoning private; output only decisions, artifacts, and justifications.
@@ -198,13 +199,13 @@ Wait for consent; never auto-create ADRs. Group related decisions (stacks, authe
 
 ## Basic Project Structure
 
-- `.specify/memory/constitution.md` — Project principles
-- `specs/<feature>/spec.md` — Feature requirements
-- `specs/<feature>/plan.md` — Architecture decisions
-- `specs/<feature>/tasks.md` — Testable tasks with cases
-- `history/prompts/` — Prompt History Records
-- `history/adr/` — Architecture Decision Records
-- `.specify/` — SpecKit Plus templates and scripts
+- `.specify/memory/constitution.md` - Project principles
+- `specs/<feature>/spec.md` - Feature requirements
+- `specs/<feature>/plan.md` - Architecture decisions
+- `specs/<feature>/tasks.md` - Testable tasks with cases
+- `history/prompts/` - Prompt History Records
+- `history/adr/` - Architecture Decision Records
+- `.specify/` - SpecKit Plus templates and scripts
 
 ## Code Standards
 See `.specify/memory/constitution.md` for code quality, testing, performance, security, and architecture principles.
@@ -212,23 +213,23 @@ See `.specify/memory/constitution.md` for code quality, testing, performance, se
 
 ## Active Technologies
 - TypeScript 5.x on Node.js 20+ (local Node 22.22.1); content in Markdown/MDX + Docusaurus v3 (classic preset, TS); `@easyops-cn/docusaurus-search-local` (bilingual offline search); `gray-matter` + `ajv` + `ajv-formats` (front-matter validation); self-hosted Noto Nastaliq Urdu webfont; client-side print stylesheet for A4 handouts (no PDF pipeline); Playwright (RTL / narrow-viewport / A4 print-emulation checks) (001-content-platform)
-- Filesystem / Git — content is Markdown/MDX + `_category_.json` + `catalog/courses.json`. **No database** in this feature (Supabase is a later-spec concern, explicitly out of scope) (001-content-platform)
+- Filesystem / Git - content is Markdown/MDX + `_category_.json` + `catalog/courses.json`. **No database** in this feature (Supabase is a later-spec concern, explicitly out of scope) (001-content-platform)
 - TypeScript 5.6 on Node 20+ (repo pins `~5.6.0`, engines `>=20`) + Docusaurus 3.10 (existing), `@supabase/supabase-js` ^2 (new), React 18.3 (002-authentication)
-- Supabase Postgres (`profiles`, `privilege_audit`) — first database in this repo; content stays in Git per Constitution Art. V.1 (002-authentication)
+- Supabase Postgres (`profiles`, `privilege_audit`) - first database in this repo; content stays in Git per Constitution Art. V.1 (002-authentication)
 - TypeScript 5.6 on Node 22+ (repo `engines: ">=22"`, bumped from 20 in PR #3 for `@supabase/supabase-js`'s WebSocket requirement) + Docusaurus 3.10 (existing), `@supabase/supabase-js` ^2 (existing), React 18.3 (existing); **new**: `exceljs` (gradebook export, FR-014/R5) (003-classes-assignments)
-- Supabase Postgres — 8 new tables (`classes`, `enrollments`, `assignments`, `submissions`, `grades`, `quiz_items`, `quiz_attempts`, `answer_keys`) extending Spec 002's `profiles`; one new private Supabase Storage bucket (`submissions`, 10 MB/type-limited). Course/unit content stays in Git (Constitution Art. V.1) — referenced by `course_code`/`unit_no` only, never duplicated. (003-classes-assignments)
-- TypeScript 5.6 on Node 22+ (unchanged from Specs 002/003) + Docusaurus 3.10 (existing), `@supabase/supabase-js` ^2 (existing), React 18.3 (existing) — **no new dependency** (research.md R7: progress bars are plain CSS/SVG, not a charting library, per Art. V.5's bundle budget) (004-student-dashboard)
-- Supabase Postgres — 2 new tables (`unit_progress`, `student_achievements`) extending Specs 002/003's schema (research.md R3, R4). Course/unit content and the fixed achievement catalog both stay outside Postgres — the former in Git (unchanged Art. V.1 posture), the latter as a static TypeScript constant (research.md R4) — neither is duplicated into the database. (004-student-dashboard)
-- TypeScript 5.6 on Node 22+ (unchanged from Specs 002–004) + Docusaurus 3.10 (existing), `@supabase/supabase-js` ^2 (existing), React 18.3 (existing) — **no new dependency** (research.md R7: Analytics renders as plain CSS/SVG bars, not a charting library, per Art. V.5's bundle budget, same precedent as Spec 004 R7) (005-teacher-dashboard)
-- Supabase Postgres — 3 new tables (`teaching_log_entries`, `activity_feedback`, `improvement_suggestions`) extending Specs 002/003's schema. Course/unit content stays in Git (Art. V.1); every course/unit reference on these tables (`course_code`, `unit_no`, `source_kind`) is an unvalidated pointer, exactly like Spec 003's `assignments` (research.md R2). Spec 004's `unit_progress` table is explicitly **not** read by this feature (spec.md Clarifications, 2026-07-24) — FR-011's coverage figure is derived independently from `submissions`/`grades`/`quiz_attempts` instead. (005-teacher-dashboard)
-- Plain Node.js (`.mjs`, ES modules) on Node 22+ (unchanged from Specs 001–005) + `gray-matter` (existing, for all front-matter reads) — **no new dependency** (research.md R7: a hand-rolled ~15-line CSV parser for `terminology.csv`, not a new package) (006-content-pipeline)
-- Filesystem/Git only — **no database**. New tree: `specs/content/style-guide.md`, `specs/content/terminology.csv`, `specs/content/<course-code>/content-spec.md` + `tasks.md`, git-ignored per-unit `.staging/` worksheets (006-content-pipeline)
-- Plain Node.js (`.mjs`, ES modules) on Node 22+ (unchanged from Specs 001–006) + `gray-matter` (existing) — **no new dependency**; one new CI script `scripts/check-unit-depth.mjs` (same shape as `check-pipeline-gate.mjs`) plus a Claude Code skill `.claude/skills/author-unit/` (007-content-depth-standard)
-- Filesystem / Git only — **no database**. New committed trees: `specs/content/<course-code>/coverage/unit-NN.md` + `.../sources/unit-NN.md`; expanded `content-spec.md` body sections + per-unit `### Sub-topic checklist` table; `style-guide.md` → `version: "2.0"` (007-content-depth-standard)
-- Plain Node.js (`.mjs`, ES modules) on Node 22+ (unchanged from Specs 001–007) + `gray-matter` + `ajv`/`ajv-formats` (all existing) — **no new dependency**; one new CI gate `scripts/check-figures.mjs` plus rewrites to `check-unit-depth.mjs` / `validate-content.mjs` / `check-no-answer-keys.mjs` / `build-content-index.mjs`; the `.claude/skills/author-unit/` skill rewritten for the per-topic layout (008-rich-unit-pedagogy)
-- Filesystem / Git only — **no database**. Opt-in per-topic unit shape: `docs/.../unit-NN/index.mdx` + `topic-NN.mdx` + `unit-assessment.mdx` (+ optional `unit-teacher-notes.mdx`); optional course-level `course-review.mdx`; new `specs/content/<course>/figures/unit-NN.md` manifest; `contracts/` gains `course-review.schema.json` + 6 Markdown contracts; `style-guide.md` → `version: "3.0"`; Constitution v2.5.0 → v2.6.0 (008-rich-unit-pedagogy)
-- TypeScript 5.6 on Node 22+ + Docusaurus 3.10 (existing), React 18.3 (existing); **new devDep** `sharp` (offline raster resize + WebP encode in `scripts/optimize-figure.mjs`, never at build/render) — no runtime dependency added. New `<Figure>` component (`src/components/Figure.tsx`, registered in `src/theme/MDXComponents.tsx`); `scripts/check-figures.mjs` rewritten column-aware + `<Figure>`-carrier-aware; `.claude/skills/generate-figures/` skill (009-figure-rendering)
-- Filesystem / Git only — **no database**. New committed tree `static/img/figures/<course-lowercase>/unit-NN/` (`<figId>.svg` diagrams, `<figId>.ur.svg` translated-label variants, `<figId>.webp` illustrations); git-ignored `specs/content/**/figures/.staging/`; figure manifest → v2 (`| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |`, lifecycle `prompt-only → generated → placed`); `style-guide.md` → `version: "3.1"`; no Constitution amendment (009-figure-rendering)
+- Supabase Postgres - 8 new tables (`classes`, `enrollments`, `assignments`, `submissions`, `grades`, `quiz_items`, `quiz_attempts`, `answer_keys`) extending Spec 002's `profiles`; one new private Supabase Storage bucket (`submissions`, 10 MB/type-limited). Course/unit content stays in Git (Constitution Art. V.1) - referenced by `course_code`/`unit_no` only, never duplicated. (003-classes-assignments)
+- TypeScript 5.6 on Node 22+ (unchanged from Specs 002/003) + Docusaurus 3.10 (existing), `@supabase/supabase-js` ^2 (existing), React 18.3 (existing) - **no new dependency** (research.md R7: progress bars are plain CSS/SVG, not a charting library, per Art. V.5's bundle budget) (004-student-dashboard)
+- Supabase Postgres - 2 new tables (`unit_progress`, `student_achievements`) extending Specs 002/003's schema (research.md R3, R4). Course/unit content and the fixed achievement catalog both stay outside Postgres - the former in Git (unchanged Art. V.1 posture), the latter as a static TypeScript constant (research.md R4) - neither is duplicated into the database. (004-student-dashboard)
+- TypeScript 5.6 on Node 22+ (unchanged from Specs 002–004) + Docusaurus 3.10 (existing), `@supabase/supabase-js` ^2 (existing), React 18.3 (existing) - **no new dependency** (research.md R7: Analytics renders as plain CSS/SVG bars, not a charting library, per Art. V.5's bundle budget, same precedent as Spec 004 R7) (005-teacher-dashboard)
+- Supabase Postgres - 3 new tables (`teaching_log_entries`, `activity_feedback`, `improvement_suggestions`) extending Specs 002/003's schema. Course/unit content stays in Git (Art. V.1); every course/unit reference on these tables (`course_code`, `unit_no`, `source_kind`) is an unvalidated pointer, exactly like Spec 003's `assignments` (research.md R2). Spec 004's `unit_progress` table is explicitly **not** read by this feature (spec.md Clarifications, 2026-07-24) - FR-011's coverage figure is derived independently from `submissions`/`grades`/`quiz_attempts` instead. (005-teacher-dashboard)
+- Plain Node.js (`.mjs`, ES modules) on Node 22+ (unchanged from Specs 001–005) + `gray-matter` (existing, for all front-matter reads) - **no new dependency** (research.md R7: a hand-rolled ~15-line CSV parser for `terminology.csv`, not a new package) (006-content-pipeline)
+- Filesystem/Git only - **no database**. New tree: `specs/content/style-guide.md`, `specs/content/terminology.csv`, `specs/content/<course-code>/content-spec.md` + `tasks.md`, git-ignored per-unit `.staging/` worksheets (006-content-pipeline)
+- Plain Node.js (`.mjs`, ES modules) on Node 22+ (unchanged from Specs 001–006) + `gray-matter` (existing) - **no new dependency**; one new CI script `scripts/check-unit-depth.mjs` (same shape as `check-pipeline-gate.mjs`) plus a Claude Code skill `.claude/skills/author-unit/` (007-content-depth-standard)
+- Filesystem / Git only - **no database**. New committed trees: `specs/content/<course-code>/coverage/unit-NN.md` + `.../sources/unit-NN.md`; expanded `content-spec.md` body sections + per-unit `### Sub-topic checklist` table; `style-guide.md` → `version: "2.0"` (007-content-depth-standard)
+- Plain Node.js (`.mjs`, ES modules) on Node 22+ (unchanged from Specs 001–007) + `gray-matter` + `ajv`/`ajv-formats` (all existing) - **no new dependency**; one new CI gate `scripts/check-figures.mjs` plus rewrites to `check-unit-depth.mjs` / `validate-content.mjs` / `check-no-answer-keys.mjs` / `build-content-index.mjs`; the `.claude/skills/author-unit/` skill rewritten for the per-topic layout (008-rich-unit-pedagogy)
+- Filesystem / Git only - **no database**. Opt-in per-topic unit shape: `docs/.../unit-NN/index.mdx` + `topic-NN.mdx` + `unit-assessment.mdx` (+ optional `unit-teacher-notes.mdx`); optional course-level `course-review.mdx`; new `specs/content/<course>/figures/unit-NN.md` manifest; `contracts/` gains `course-review.schema.json` + 6 Markdown contracts; `style-guide.md` → `version: "3.0"`; Constitution v2.5.0 → v2.6.0 (008-rich-unit-pedagogy)
+- TypeScript 5.6 on Node 22+ + Docusaurus 3.10 (existing), React 18.3 (existing); **new devDep** `sharp` (offline raster resize + WebP encode in `scripts/optimize-figure.mjs`, never at build/render) - no runtime dependency added. New `<Figure>` component (`src/components/Figure.tsx`, registered in `src/theme/MDXComponents.tsx`); `scripts/check-figures.mjs` rewritten column-aware + `<Figure>`-carrier-aware; `.claude/skills/generate-figures/` skill (009-figure-rendering)
+- Filesystem / Git only - **no database**. New committed tree `static/img/figures/<course-lowercase>/unit-NN/` (`<figId>.svg` diagrams, `<figId>.ur.svg` translated-label variants, `<figId>.webp` illustrations); git-ignored `specs/content/**/figures/.staging/`; figure manifest → v2 (`| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |`, lifecycle `prompt-only → generated → placed`); `style-guide.md` → `version: "3.1"`; no Constitution amendment (009-figure-rendering)
 
 ## Recent Changes
-- 001-content-platform: Planned — Docusaurus v3 static site; `@easyops-cn/docusaurus-search-local` for bilingual offline search; `gray-matter`+`ajv` validation with an EN↔UR structural parity gate; client-side print-stylesheet A4 handouts (no PDF pipeline); missing-Urdu fallback to EN with an "untranslated" banner; self-hosted Noto Nastaliq Urdu webfont
+- 001-content-platform: Planned - Docusaurus v3 static site; `@easyops-cn/docusaurus-search-local` for bilingual offline search; `gray-matter`+`ajv` validation with an EN↔UR structural parity gate; client-side print-stylesheet A4 handouts (no PDF pipeline); missing-Urdu fallback to EN with an "untranslated" banner; self-hosted Noto Nastaliq Urdu webfont

@@ -1,4 +1,41 @@
 <!--
+SYNC IMPACT REPORT (v2.7.0)
+===========================
+Version change: 2.6.0 -> 2.7.0
+Bump rationale: MINOR - Article III (Content Quality Standards) gains a new sub-point III.9
+  (Punctuation): authored student-facing content contains zero em dash characters. This is a
+  new, materially expanded content requirement; no existing principle is removed or redefined,
+  and no approved spec is invalidated (Specs 001-009 stay valid; the rule is additive and its
+  one-time content cleanup changes only punctuation). Source: owner instruction, this session.
+
+Modified:
+  - Article III - new sub-point III.9 (Punctuation) added. Items III.1-III.8 are unchanged and
+    NOT renumbered.
+
+Downstream artifacts reviewed this amendment (2026-09-03):
+  ✅ specs/content/style-guide.md - bumped v3.1 -> v3.2; the no-em-dash rule is added to
+     `## EN readability rules` and `## UR register rules`. Bumping `version` re-freezes
+     terminology.csv as a pair (Spec 006 FR-007 mechanism); no term changed.
+  ✅ scripts/check-no-em-dash.mjs (new) + `npm run check:no-em-dash` + a CI `build`-job step +
+     tests/unit/no-em-dash-gate.test.mjs - the enforcement mechanism. Scans docs/, guides/,
+     i18n/, specs/content/ for the em-dash class (U+2014/U+2015/U+2E3A/U+2E3B); U+2013 en dash
+     is not flagged.
+  ✅ One-time cleanup pass in the same change: every em dash in docs/, guides/, i18n/,
+     specs/content/ rewritten (restructure, else a spaced hyphen). history/ is exempt as an
+     immutable record. .claude/skills/, src/, README.md, CLAUDE.md fixed in the same pass but
+     not gated.
+  ✅ .specify/templates/{plan,spec,tasks}-template.md - no hardcoded article numbers; no edit
+     needed (III.1-III.8 unchanged).
+  ℹ SDD/constitution.md - stale legacy draft ("Ratification pending"); not the authority, left
+     as-is.
+
+Follow-up TODOs:
+  - Spec 010 (curriculum-owner console, structured feedback, interactive self-assessment) is
+    authored after this amendment lands; its `.claude/skills/revise-topic` gate list includes
+    `check:no-em-dash`.
+
+--- prior report (v2.6.0) retained below ---
+
 SYNC IMPACT REPORT (v2.6.0)
 ===========================
 Version change: 2.5.0 → 2.6.0
@@ -320,42 +357,42 @@ written rationale (Article XI).
 
 ---
 
-## Article I — Purpose
+## Article I - Purpose
 
 Build a bilingual (English + Urdu) digital textbook and learning platform for the B.Ed
 (4-Year) programme (UGE Policy 2023 v1.1, aligned with HEC's 2025 Proposed Curriculum for
 Education, applicable from 2026; 8 semesters, 132 credit hours), serving:
 
-1. **Students** — as a primary or teacher-guided secondary learning resource.
-2. **Teachers** — as a teaching companion (activities, handouts, formative/summative
+1. **Students** - as a primary or teacher-guided secondary learning resource.
+2. **Teachers** - as a teaching companion (activities, handouts, formative/summative
    assessments) and a virtual class manager (assignments, grading, progress tracking).
 
-## Article II — Guiding Document Supremacy
+## Article II - Guiding Document Supremacy
 
 1. The **approved Scheme of Study** (`Scheme-and-Course-guides/B.Ed 4 Year board.docx`) and
    the **official course guides** (local folder `Scheme-and-Course-guides/`, covering all 8
-   semesters — Sem I–II as PDF, Sem III–VIII as DOCX) are the sole source of truth for WHAT
+   semesters - Sem I–II as PDF, Sem III–VIII as DOCX) are the sole source of truth for WHAT
    is taught.
 2. No unit, SLO/CLO, activity, or assessment ships unless it traces to a course-guide item.
    Traceability MUST be recorded in each unit's front-matter (`clo_refs:` field).
 3. If a course guide is ambiguous or missing, the gap MUST be logged in `specs/gaps.md` and
-   escalated to the curriculum owner (Yousif) — never invented. All 8 semesters' guides are
+   escalated to the curriculum owner (Yousif) - never invented. All 8 semesters' guides are
    now text-extracted; open board-vs-guide discrepancies for Sems I/II (e.g. GNAS code,
    Pakistan Studies placement, Fehm-e-Quran code) are tracked in `specs/gaps.md`.
 
 **Rationale:** Content authority derives from the university/HEC curriculum, not from
 authors' preference; traceability makes accreditation review auditable.
 
-## Article III — Content Quality Standards (non-negotiable)
+## Article III - Content Quality Standards (non-negotiable)
 
 1. **Simple English**: student-facing prose targets an accessible register for a fresh
    HSC/intermediate graduate. No graduate-level jargon without a bilingual glossary entry. A
    richer unit *structure* (e.g. the Spec 008 per-topic learning cycle) does not raise the
-   *language* register — the plain-English ceiling is unchanged by it.
+   *language* register - the plain-English ceiling is unchanged by it.
 2. **Urdu parity**: every student-facing unit MUST have a complete, human-reviewed Urdu
    version before publish, **except units belonging to a course explicitly designated
    English-only** (e.g. GENG-300 Functional English, where the subject itself is the
-   English language) — such courses are flagged `bilingual: false` in their course-overview
+   English language) - such courses are flagged `bilingual: false` in their course-overview
    metadata and are exempt from the Urdu-parity gate. Machine translation MAY draft; a human
    quality pass is mandatory for every course that is not so exempted. Register: academic-plain
    (درسی مگر عام فہم), not literary/archaic.
@@ -368,8 +405,8 @@ authors' preference; traceability makes accreditation review auditable.
 4. **Pakistan-grounded examples**: case studies and examples use Pakistani/Sindh classroom
    contexts wherever the subject allows.
 5. **Citations**: definitions and claims cite the course guide, HEC document, or a named
-   academic source. Original prose only — no reproduction of copyrighted textbook passages.
-   Each course guide's recommended books/resources are a permitted starting point — used for
+   academic source. Original prose only - no reproduction of copyrighted textbook passages.
+   Each course guide's recommended books/resources are a permitted starting point - used for
    scoping and listed as bibliographic references only, never reproduced.
 6. **Guide-section fidelity**: where a course guide provides them, every course/unit MUST
    incorporate the guide's **Teaching/Instructional Strategies**, **Suggested Practical
@@ -379,7 +416,7 @@ authors' preference; traceability makes accreditation review auditable.
    the existing unit files and a per-course overview page (see Spec 006), **or** into the
    Spec 008 opt-in per-topic layout (`index.mdx` + `topic-NN.mdx` + `unit-assessment.mdx`
    [+ optional `unit-teacher-notes.mdx`], plus an optional course-level `course-review.mdx`) as
-   an alternative carrier of the same sections — Spec 006 FR-004's five-file folding rule is
+   an alternative carrier of the same sections - Spec 006 FR-004's five-file folding rule is
    superseded **in part**, not deleted, and still governs every unit that has not opted in.
    They MUST NOT be invented where the guide is silent.
 7. **Assessment weighting**: for the affiliated GECEs (colleges), assessment is **60%
@@ -387,8 +424,15 @@ authors' preference; traceability makes accreditation review auditable.
    this split; per-unit deviations MUST be justified in the unit spec.
 8. **Accessibility**: semantic heading hierarchy, alt text on all images/diagrams, no
    color-only meaning, and RTL-correct Urdu rendering are required on every page.
+9. **Punctuation**: authored student-facing content contains **zero em dash characters**
+   (U+2014, and the related U+2015 / U+2E3A / U+2E3B). Where a strong parenthetical break is
+   wanted, restructure the sentence (comma, colon, parentheses, or two sentences) or use a
+   spaced hyphen `" - "`. The en dash (U+2013) stays permitted for numeric ranges
+   (`5-8 items`). Enforced by the `check:no-em-dash` CI gate over `docs/`, `guides/`, `i18n/`,
+   and `specs/content/`; `history/` is exempt as an immutable record, and `.claude/skills/`,
+   `src/`, `README.md`, `CLAUDE.md` are kept clean by convention but not gated.
 
-## Article IV — Spec-Driven Development Law
+## Article IV - Spec-Driven Development Law
 
 1. **Order of work**: Constitution → Feature Spec → Plan → Tasks → Implementation → Review
    Gate. No implementation before its spec is approved.
@@ -399,7 +443,7 @@ authors' preference; traceability makes accreditation review auditable.
 4. Scope changes amend the spec first, then the code. "Spec drift" (code diverging from
    spec) is a defect and MUST be fixed by realigning code or amending the spec.
 
-## Article V — Architecture Principles
+## Article V - Architecture Principles
 
 1. **Content and application are separate concerns.**
    - Content (the textbook) = Markdown/MDX in a Git repository, rendered by **Docusaurus**.
@@ -410,16 +454,16 @@ authors' preference; traceability makes accreditation review auditable.
      trusted with secrets or access control. (Rationale and alternatives in ADR-0006.)
 2. **Security lives in the backend.** Graded-assessment answer keys, grades, and submissions
    are protected by database Row-Level Security, never by "hidden" static pages. Anything
-   shipped in the static bundle is public — treat it as such.
+   shipped in the static bundle is public - treat it as such.
 
    **Carve-out (Spec 008): self-study textbook answers.** A single bounded
    `## Answers and marking guidance` section that is the **final** section of a
    `unit-assessment.mdx` or `course-review.mdx` page MAY carry answer keys and marking rubrics
-   as **intentionally public** self-study content — the same role that answers printed at the
+   as **intentionally public** self-study content - the same role that answers printed at the
    back of a textbook serve for an independent learner. This is distinct from, and MUST NOT be
    confused with, the RLS-protected LMS quiz bank and answer-key store (Spec 003), which
    remains backend-only and gated by the `verified_teacher` capability (Art. V.3, IX.3). The
-   "anything in the static bundle is public" principle is unchanged — the carve-out makes the
+   "anything in the static bundle is public" principle is unchanged - the carve-out makes the
    answers section *knowingly* public, nothing more. Answer-key **front-matter fields**
    (`answer_key`/`answers`/`marking_scheme`/`rubric_answers`) remain forbidden on every file,
    and the answer-key content scan (`scripts/check-no-answer-keys.mjs`) still rejects
@@ -429,7 +473,7 @@ authors' preference; traceability makes accreditation review auditable.
    only** (default `student`) so a capable student MAY lead a peer study group. Once an
    account exists its role is **immutable to the account holder**: changing it is an admin
    action. This prevents a teacher from stranding an active class by self-downgrading. The
-   `admin` role is **never** self-selectable — it is seeded or assigned only by an existing
+   `admin` role is **never** self-selectable - it is seeded or assigned only by an existing
    admin. The teacher role grants **peer-teaching
    capabilities only** (create classes, assign, give feedback, view own students' work); it
    MUST NOT by itself grant access to answer keys or other restricted teaching material.
@@ -437,24 +481,24 @@ authors' preference; traceability makes accreditation review auditable.
    by an admin (default off), enforced at the backend per Article V.2. (This reverses the
    former "teacher requires admin approval" rule; rationale and alternatives in ADR-0005.)
 4. **One course = one content module.** Adding a course MUST NOT require changing platform
-   code — only adding content folders + metadata.
+   code - only adding content folders + metadata.
 5. **Offline-tolerant & low-bandwidth first**: the site MUST be usable on low-end mobile
    devices and unreliable connections common in Sindh. Budget: content pages usable at
    < 200 KB first load (excluding images); images lazy-loaded and compressed.
 6. **Cost-controlled infrastructure**: the platform runs on infrastructure the project already
-   owns or controls rather than a metered vendor tier — the static site and the self-hosted
+   owns or controls rather than a metered vendor tier - the static site and the self-hosted
    Supabase backend (Art. V.1) share the project's existing server. This trades a hosted
    provider's free-tier caps and pause-on-inactivity risk for direct operational ownership
    (backups, upgrades, uptime). A future move to a managed or additional-cost tier requires a
    new ADR.
 
-## Article VI — Scope Discipline
+## Article VI - Scope Discipline
 
 1. **Build once, scale by semester.** The platform is built once. **All 8 semesters MUST be
    scaffolded** (folders + metadata from the Scheme of Study and each guide's unit list).
    **Content-creation priority is Semesters 1–4** for the new 2026 scheme (Sem 1 → 2 → 3 → 4),
    then Semesters 5–8. The **golden unit** that sets the quality bar is EFMP-301
-   (Educational Psychology), Unit 1 — the canonical exemplar for unit structure, CLO/SLO
+   (Educational Psychology), Unit 1 - the canonical exemplar for unit structure, CLO/SLO
    traceability, and bilingual parity.
 
    **Standard versioning.** The content quality standard is versioned by the
@@ -471,7 +515,7 @@ authors' preference; traceability makes accreditation review auditable.
 3. Real-time features (live chat, video, notifications beyond email) are explicitly
    **Phase 3+** and require a new spec.
 
-## Article VII — Review Gates
+## Article VII - Review Gates
 
 Before any unit or feature is marked complete, all applicable gates MUST pass:
 
@@ -480,9 +524,9 @@ Before any unit or feature is marked complete, all applicable gates MUST pass:
 | Content gate | CLO traceability • simple-English readability • Urdu parity & register • Bloom's tags • citations • guide-section fidelity • accessibility | Curriculum owner |
 | Engineering gate | Spec compliance • RLS policies tested • responsive/RTL rendering verified • Lighthouse performance pass • figure-marker ↔ manifest consistency (Spec 008 `check:figures`) | Developer |
 | Teacher gate (per course, once) | One practicing teacher dry-runs the unit's activities & assessments | Pilot teacher |
-| Docs gate | A shipped spec that changes a student/teacher workflow or contributor setup updates the matching guide (Student Guide, Teacher Guide, or README — Article X) in the same branch | Feature author |
+| Docs gate | A shipped spec that changes a student/teacher workflow or contributor setup updates the matching guide (Student Guide, Teacher Guide, or README - Article X) in the same branch | Feature author |
 
-## Article VIII — Data Protection & Ethics
+## Article VIII - Data Protection & Ethics
 
 1. Student data (grades, submissions) is confidential: visible only to the student, their
    enrolled teacher(s), and admin. Enforced via RLS and verified by automated tests.
@@ -491,41 +535,41 @@ Before any unit or feature is marked complete, all applicable gates MUST pass:
 4. Students MAY request account deletion; deletion anonymizes submissions rather than
    destroying teacher gradebooks.
 
-## Article IX — Authentication & Access
+## Article IX - Authentication & Access
 
 1. Google OAuth and email/password are the **only** sign-in methods in v1; any additional
    provider requires a new spec.
 2. Every authenticated action MUST be authorized against the caller's role (Article V.3)
    at the database layer, not only in the UI.
-3. **Verified-teacher elevation** — granting the `verified_teacher` capability (access to
-   answer keys and other restricted material) — is an explicit admin action and MUST be
+3. **Verified-teacher elevation** - granting the `verified_teacher` capability (access to
+   answer keys and other restricted material) - is an explicit admin action and MUST be
    recorded (who granted, when). Self-selecting the `teacher` role is not an elevation and
    requires no approval.
 
-## Article X — Documentation for Multiple Audiences (non-negotiable)
+## Article X - Documentation for Multiple Audiences (non-negotiable)
 
 1. The project MUST maintain three distinct, purpose-built documentation surfaces. Each is
    written for one reader and MUST NOT be merged into a generic catch-all document:
-   - **README** (`README.md`, repo root) — for developers and contributors: what the project
+   - **README** (`README.md`, repo root) - for developers and contributors: what the project
      is, local setup, how to build/test, contribution flow, and links to `specs/`, ADRs, and
      the constitution. Technical register; assumes engineering literacy.
-   - **Student Guide** — for students: how to navigate the platform, join a class, submit
+   - **Student Guide** - for students: how to navigate the platform, join a class, submit
      work, read grades, and use the dashboard. Plain-English register per Article III.1,
      extended here from curriculum prose to app/workflow text; bilingual per Article III.2,
      since it is student-facing.
-   - **Teacher Guide** — for teachers: class, assignment, and grading workflows, the teacher
+   - **Teacher Guide** - for teachers: class, assignment, and grading workflows, the teacher
      dashboard, and what `verified_teacher`-gated features unlock. Written for a pedagogical,
      non-technical reader; describes role capabilities, never implementation.
 2. **Stay-in-sync obligation**: a spec that changes a student- or teacher-facing workflow MUST
    update the corresponding guide in the same feature branch; a spec that changes contributor-
    facing setup or process MUST update the README likewise. This extends the spec-drift rule
-   (Article IV.4) to these three surfaces — a stale guide is a defect, not a later cleanup task.
+   (Article IV.4) to these three surfaces - a stale guide is a defect, not a later cleanup task.
 3. **No substitution between surfaces**: a developer setting up the repo MUST NOT need to read
    the Student or Teacher Guide, and a student or teacher MUST NOT be pointed at the README or
    `specs/` to learn how to use the platform.
 4. **Location & format**: `README.md` is plain Markdown at repo root, GitHub-rendered. The
    Student Guide and Teacher Guide are bilingual Docusaurus-rendered pages (reusing the same
-   content pipeline as curriculum material, per Article V.1's content/app separation — these are
+   content pipeline as curriculum material, per Article V.1's content/app separation - these are
    platform-usage docs, not curriculum content) and are reachable from in-app navigation for the
    relevant signed-in role.
 
@@ -535,13 +579,13 @@ the internals they need. Article III's Simple English mandate governs curriculum
 article extends the same plain-language discipline to platform-usage docs for students and
 teachers specifically, while keeping the README technical and separate.
 
-## Article XI — Amendment Procedure & Versioning
+## Article XI - Amendment Procedure & Versioning
 
 1. **Procedure**: propose the change in writing → assess impact on existing specs, plans,
    and templates → bump this constitution's version → update affected specs before touching
    code.
 2. **Semantic versioning** of this document:
-   - **MAJOR**: backward-incompatible governance changes — a principle is removed or
+   - **MAJOR**: backward-incompatible governance changes - a principle is removed or
      redefined in a way that invalidates existing specs.
    - **MINOR**: a new principle/article or a materially expanded requirement is added.
    - **PATCH**: clarifications, wording, or typo fixes with no change to obligations.
@@ -551,4 +595,4 @@ teachers specifically, while keeping the README technical and separate.
 
 ---
 
-**Version**: 2.6.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-08-27
+**Version**: 2.7.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-09-03

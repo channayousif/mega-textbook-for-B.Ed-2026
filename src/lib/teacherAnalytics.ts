@@ -8,11 +8,11 @@ import type { Assignment } from '@site/src/lib/types';
  * Per-class Analytics (FR-009, FR-010) and per-student drill-down (FR-011).
  * Spec 005, T036/T040.
  *
- * COSMETIC CONVENIENCE ONLY (Constitution Art. IX.2) — real authorization is
+ * COSMETIC CONVENIENCE ONLY (Constitution Art. IX.2) - real authorization is
  * Spec 003's existing RLS on classes/enrollments/assignments/submissions/
  * grades/quiz_attempts; a teacher's queries here are already scoped to
  * classes they own. FR-011's unit coverage is computed independently of
- * Spec 004's `unit_progress` (research.md R3) — this file never reads that
+ * Spec 004's `unit_progress` (research.md R3) - this file never reads that
  * table.
  */
 
@@ -73,7 +73,7 @@ export type ClassAnalytics = {
 };
 
 /**
- * FR-009/FR-010 — reuses `fetchMarksByStudentForAssignments`'s
+ * FR-009/FR-010 - reuses `fetchMarksByStudentForAssignments`'s
  * grades+quiz_best_scores merge (research.md R4) to compute score
  * distribution per assignment, each student's chronological trend, the
  * unit-by-unit class average, and the at-risk flag (2026-07-24
@@ -125,7 +125,7 @@ export async function fetchClassAnalytics(classId: string): Promise<Result<Class
     };
   });
 
-  // Parallelized (was a sequential per-student await) — at 30-student "representative scale"
+  // Parallelized (was a sequential per-student await) - at 30-student "representative scale"
   // (T050's e2e perf check) the sequential version issued 30 serial round-trips before the
   // page could render, alone exceeding the 5s SC-005 budget. Each student's computation is
   // independent, so Promise.all is safe and preserves student order in the result.
@@ -161,7 +161,7 @@ export type StudentDrilldown = {
 };
 
 /**
- * FR-011 — one student's submissions/grades/quiz attempts within one class,
+ * FR-011 - one student's submissions/grades/quiz attempts within one class,
  * plus a unit-coverage fraction derived independently from `submissions`/
  * `quiz_attempts` (never Spec 004's `unit_progress`, research.md R3),
  * reusing Spec 004's existing `fetchTotalUnitsForCourse()` unmodified.

@@ -3,11 +3,11 @@
 > This is the authoring aid for the `author-unit` skill (Spec 008 per-topic layout). The
 > **human reference** is the `## Unit structure standard` + `## Answers and marking guidance
 > policy` + `## Figure markers and manifests` + `## What the depth gate checks vs. the human
-> Content gate` sections of `specs/content/style-guide.md`. **Keep the two in sync** — when
+> Content gate` sections of `specs/content/style-guide.md`. **Keep the two in sync** - when
 > either changes, update the other in the same branch, and bump `style-guide.md`'s `version`.
 >
 > Legacy five-file units are governed by the `## Unit depth standard` (Spec 007) section of the
-> style guide instead — unchanged, not covered here.
+> style guide instead - unchanged, not covered here.
 
 Draft to this standard, then self-check against it before emitting the coverage matrix.
 
@@ -15,31 +15,31 @@ Draft to this standard, then self-check against it before emitting the coverage 
 
 ```
 docs/semester-N/<course>/unit-NN/
-├── index.mdx              # opening: outcomes / prerequisites / "In this unit" / how-to-use — NO exposition
+├── index.mdx              # opening: outcomes / prerequisites / "In this unit" / how-to-use - NO exposition
 ├── topic-01.mdx … topic-NN.mdx   # one nine-part cycle each
 ├── unit-assessment.mdx    # ## Unit summary + 10/10/5 bank + final ## Answers and marking guidance
-└── unit-teacher-notes.mdx # OPTIONAL — strategies + practical work, no assessment items
+└── unit-teacher-notes.mdx # OPTIONAL - strategies + practical work, no assessment items
 docs/semester-N/<course>/course-review.mdx   # OPTIONAL, course-level (not authored by this skill unless asked)
 ```
 
-- `topic-NN.mdx` — zero-padded, contiguous from `01`. Front matter: unit schema **+**
+- `topic-NN.mdx` - zero-padded, contiguous from `01`. Front matter: unit schema **+**
   `topic_no` (== filename ordinal) **+** `topic_label` (the `### Topic list` label). No
   `sidebar_position` on any file except `course-review.mdx` (`900`).
 - Opt-in: a unit is on this standard only when **both** `topic-*.mdx` files exist **and** the
   content-spec `## Unit N` subsection has a `### Topic list` table. Exactly one → loud
   depth-gate failure.
 
-## The nine-part topic cycle — canonical `##` headings, checked for PRESENCE and ORDER
+## The nine-part topic cycle - canonical `##` headings, checked for PRESENCE and ORDER
 
 | # | Heading (exact) | Gate minimum |
 |---|---|---|
-| 1 | `## A real classroom situation` | — (a FIGURE marker usually sits here) |
-| 2 | `## Explanation` | — (misconception named + corrected here) |
-| 3 | `## Activity: <name>` | — (`## Activity:` is matched as a prefix) |
+| 1 | `## A real classroom situation` | - (a FIGURE marker usually sits here) |
+| 2 | `## Explanation` | - (misconception named + corrected here) |
+| 3 | `## Activity: <name>` | - (`## Activity:` is matched as a prefix) |
 | 4 | `## Check your understanding` | ≥ **3** top-level numbered items (`1.`, `2.`, …) |
-| 5 | `## Summary` | — |
+| 5 | `## Summary` | - |
 | 6 | `## Self-assessment checklist` | ≥ **3** `- [ ]` items |
-| 7 | `## Try this at your practicum school` | — |
+| 7 | `## Try this at your practicum school` | - |
 | 8 | `## Summative task` | mini-rubric present; human gate wants ≥ 1 Analyze-or-higher |
 | 9 | `## Further reading` | ≥ **1** citation/link line |
 
@@ -52,7 +52,7 @@ or out of order **and** the topic file.
 **`scripts/check-unit-depth.mjs` (new-shape path):**
 
 1. **Topic-file set** matches the `### Topic list` row count and is contiguous from `01`.
-2. **Partition** — the `### Topic list` `Sub-topic IDs` cells are a **total, disjoint**
+2. **Partition** - the `### Topic list` `Sub-topic IDs` cells are a **total, disjoint**
    partition of the `### Sub-topic checklist`. Any ID in zero or ≥ 2 topic rows → failure,
    naming the ID.
 3. **Nine cycle headings, in order**, per topic file (§ above).
@@ -71,7 +71,7 @@ or out of order **and** the topic file.
    otherwise, naming the ID + both files).
 8. **Coverage ↔ sources** mutually consistent (every cited `Source` key is in
    `sources/unit-NN.md`; every non-`no-external-source` key is used).
-9. **Reading-minutes** — `sum(est_reading_minutes)` across `index.mdx` + every `topic-*.mdx` +
+9. **Reading-minutes** - `sum(est_reading_minutes)` across `index.mdx` + every `topic-*.mdx` +
    `unit-assessment.mdx` (+ `unit-teacher-notes.mdx`) ∈ the `**Depth budget**` `A–B` band.
 
 **`scripts/check-figures.mjs`:** every `topic-*.mdx` has ≥ 1 FIGURE marker; ids match
@@ -93,17 +93,17 @@ folder; `topic_no` == filename ordinal and `topic_label` present on every topic 
 parity over the dynamic union of EN+UR unit-folder `.mdx` names when `translation_status:
 reviewed`.
 
-## Soft rules — the human Content gate judges these (do NOT pad to pass)
+## Soft rules - the human Content gate judges these (do NOT pad to pass)
 
 - **Length is precise, not padded.** No word floor. Say what the concept needs and stop.
-- **~One Pakistan-grounded example per sub-topic** (Art. III.4) — concrete, classroom-real.
+- **~One Pakistan-grounded example per sub-topic** (Art. III.4) - concrete, classroom-real.
 - **Register unchanged (Art. III.1).** Deeper *concepts*, not harder *words*. New term →
   `glossary.json` entry; never reach for graduate vocabulary to signal depth.
 - **Worked example before performance** in `## Explanation`; genuine collaboration in
   `## Activity`; retrieval (not recognition) in `## Check your understanding`; real "can I …"
   statements in `## Self-assessment checklist`; the `## Summative task` and its rubric aligned;
   the real-life hook in `## A real classroom situation` actually lands.
-- **Topic grouping** — the `### Topic list` partition groups sub-topics sensibly.
+- **Topic grouping** - the `### Topic list` partition groups sub-topics sensibly.
 
 ## Self-check before emitting `coverage/unit-NN.md`
 
@@ -115,6 +115,7 @@ reviewed`.
 - [ ] `unit-assessment.mdx`: `## Unit summary`; **exactly 10 / 10 / 5** per band; every item
       Bloom-tagged; `## Answers and marking guidance` is the final `##` section, ≤ 1
 - [ ] no answer-key front-matter key anywhere; prose answers only inside the bounded section
+- [ ] no em dash (U+2014) anywhere in EN or UR content - spaced hyphen or restructure (Art. III.9)
 - [ ] `est_reading_minutes` recomputed on every file; unit sum within the `**Depth budget**` band
 - [ ] `coverage/unit-NN.md`: every checklist ID mapped; every topic file referenced ≥ 1;
       each ID's coverage row(s) agree with its `### Topic list` topic assignment

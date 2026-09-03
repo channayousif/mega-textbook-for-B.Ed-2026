@@ -6,11 +6,11 @@ import { useClassRole, useQueryParam } from '@site/src/contexts/ClassContext';
 import { fetchStudentDrilldown, type StudentDrilldown } from '@site/src/lib/teacherAnalytics';
 
 /**
- * Student drill-down (Spec 005, T041, FR-011) — one student's submissions,
+ * Student drill-down (Spec 005, T041, FR-011) - one student's submissions,
  * grades, and unit-coverage fraction within one class the caller owns,
  * scoped via `useClassRole` (matching Spec 003's `roster.tsx`/`queue.tsx`
  * precedent). Unit coverage is computed independently of Spec 004's
- * `unit_progress` (research.md R3) — never read here.
+ * `unit_progress` (research.md R3) - never read here.
  */
 
 function useLocale(): 'en' | 'ur' {
@@ -73,7 +73,7 @@ function StudentDrilldownContent(): React.ReactElement {
         <ul>
           {drilldown.submissions.map((s) => (
             <li key={s.assignmentId} data-testid="drilldown-submission-row">
-              {s.assignmentTitle} — {new Date(s.submittedAt).toLocaleString()} {s.late ? '(late)' : ''}
+              {s.assignmentTitle} - {new Date(s.submittedAt).toLocaleString()} {s.late ? '(late)' : ''}
             </li>
           ))}
         </ul>
@@ -86,7 +86,7 @@ function StudentDrilldownContent(): React.ReactElement {
         <ul>
           {drilldown.grades.map((g) => (
             <li key={g.assignmentId} data-testid="drilldown-grade-row">
-              {g.assignmentTitle} — {g.mark}/{g.maxMark}
+              {g.assignmentTitle} - {g.mark}/{g.maxMark}
             </li>
           ))}
         </ul>
@@ -99,7 +99,7 @@ function StudentDrilldownContent(): React.ReactElement {
         <ul>
           {drilldown.quizAttempts.map((qa) => (
             <li key={qa.assignmentId} data-testid="drilldown-quiz-row">
-              {qa.assignmentTitle} — {qa.score} — {new Date(qa.attemptedAt).toLocaleString()}
+              {qa.assignmentTitle} - {qa.score} - {new Date(qa.attemptedAt).toLocaleString()}
             </li>
           ))}
         </ul>

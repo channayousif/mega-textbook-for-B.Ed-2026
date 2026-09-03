@@ -1,4 +1,4 @@
-# Coverage matrix (v2) — EFMP-302 Unit 1 (Understanding Teaching)
+# Coverage matrix (v2) - EFMP-302 Unit 1 (Understanding Teaching)
 
 Per `specs/008-rich-unit-pedagogy/contracts/coverage-matrix-v2.md` (supersedes the Spec 007 v1
 contract for this now per-topic unit). Every `U1-NN` row in the `### Sub-topic checklist` of
@@ -29,7 +29,7 @@ row, and every checklist ID has at least one row naming the exact `topic-NN.mdx`
 | U1-13 | topic-04.mdx | Reflection and self-awareness in teacher-identity formation | brookfield2017 |
 | U1-14 | topic-04.mdx | "Who am I becoming as a teacher?" | brookfield2017 |
 
-## Reinforcement (not required for the gate — recorded for the Content gate)
+## Reinforcement (not required for the gate - recorded for the Content gate)
 
 | Sub-topic ID | File | Section | Source |
 |---|---|---|---|
@@ -37,5 +37,5 @@ row, and every checklist ID has at least one row naming the exact `topic-NN.mdx`
 | U1-02 | topic-01.mdx | Activity: Profession or occupation? | carr2000 |
 | U1-06 | topic-02.mdx | Activity: The same lesson, two ways | hargreaves2000 |
 | U1-09 | topic-03.mdx | Activity: Balancing the three | hargreaves2000 |
-| U1-14 | topic-04.mdx | Activity: First reflection — who am I becoming as a teacher? | brookfield2017 |
-| U1-01 | unit-assessment.mdx | Summative assessment — MCQs / RRQs / ERQs | carr2000 |
+| U1-14 | topic-04.mdx | Activity: First reflection - who am I becoming as a teacher? | brookfield2017 |
+| U1-01 | unit-assessment.mdx | Summative assessment - MCQs / RRQs / ERQs | carr2000 |

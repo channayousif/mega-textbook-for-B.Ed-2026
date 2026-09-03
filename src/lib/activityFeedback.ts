@@ -3,10 +3,10 @@ import type { Result } from '@site/src/lib/classes';
 import type { ActivityFeedback, TeachingLogSourceKind } from '@site/src/lib/types';
 
 /**
- * Activity feedback — upsert-by-(teacher,course,unit,source_kind), own-record
+ * Activity feedback - upsert-by-(teacher,course,unit,source_kind), own-record
  * read, admin aggregate read (FR-007, FR-008). Spec 005, T028.
  *
- * COSMETIC CONVENIENCE ONLY (Constitution Art. IX.2) — real authorization is
+ * COSMETIC CONVENIENCE ONLY (Constitution Art. IX.2) - real authorization is
  * RLS (supabase/migrations/0029); a repeat submission upserts via
  * `on conflict ... do update`, matching data-model.md's revisable design.
  */
@@ -28,7 +28,7 @@ export type SubmitFeedbackInput = {
   actualMinutes: number;
 };
 
-/** FR-007 — submit or revise feedback for an activity; a repeat submission updates the existing record in place. */
+/** FR-007 - submit or revise feedback for an activity; a repeat submission updates the existing record in place. */
 export async function submitFeedback(input: SubmitFeedbackInput): Promise<Result<ActivityFeedback>> {
   const supabase = await client();
   const { data, error } = await supabase
@@ -51,7 +51,7 @@ export async function submitFeedback(input: SubmitFeedbackInput): Promise<Result
   return { data: (data as ActivityFeedback) ?? null, error };
 }
 
-/** FR-007 — the signed-in teacher's own rating for one activity, if any (drives "invited to give feedback" vs. showing the existing rating). */
+/** FR-007 - the signed-in teacher's own rating for one activity, if any (drives "invited to give feedback" vs. showing the existing rating). */
 export async function fetchOwnFeedback(
   courseCode: string,
   unitNo: number,
@@ -68,7 +68,7 @@ export async function fetchOwnFeedback(
   return { data: (data as ActivityFeedback) ?? null, error };
 }
 
-/** The signed-in teacher's own filed feedback across every activity, most-recent-first — for the Feedback & Suggestions area's history section. */
+/** The signed-in teacher's own filed feedback across every activity, most-recent-first - for the Feedback & Suggestions area's history section. */
 export async function fetchOwnFeedbackHistory(): Promise<Result<ActivityFeedback[]>> {
   const supabase = await client();
   const { data, error } = await supabase
@@ -87,7 +87,7 @@ export type ActivityAggregateSummary = {
   whatDidntNotes: string[];
 };
 
-/** FR-008 — admin: every activity that has at least one rating, with its average and notes, for the aggregated feedback view. */
+/** FR-008 - admin: every activity that has at least one rating, with its average and notes, for the aggregated feedback view. */
 export async function fetchAllAggregatedFeedback(): Promise<Result<ActivityAggregateSummary[]>> {
   const supabase = await client();
   const { data, error } = await supabase
@@ -125,7 +125,7 @@ export type AggregatedFeedback = {
   responseCount: number;
 };
 
-/** FR-008 — admin: average rating and every recorded what_didnt note across every teacher who has rated this activity. */
+/** FR-008 - admin: average rating and every recorded what_didnt note across every teacher who has rated this activity. */
 export async function fetchAggregatedFeedback(
   courseCode: string,
   unitNo: number,
