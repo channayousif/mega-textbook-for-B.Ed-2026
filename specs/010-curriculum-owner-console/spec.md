@@ -16,6 +16,13 @@ After Spec 009 shipped, the curriculum owner reported four gaps that this featur
 
 Every part is **additive**. No existing table, database trigger, access-control policy, content gate, or Spec 005 surface changes.
 
+## Clarifications
+
+### Session 2026-09-05
+
+- Q: Should general + passage feedback be available only on the nine-part topic files (`topic-NN.mdx`), or on every content page in a unit? → A: Every content page in a unit - topic files, the unit opening, the unit-assessment page, the optional unit-teacher-notes page, and a course-level review page - matching the reach of the existing teacher "suggest improvement" flow. The topic-specific fields are recorded only when the page is a topic file.
+- Q: When a visitor who ticked self-assessment items while signed out then signs in, should those local ticks be merged into the account, or discarded so the account's own (empty) history is authoritative from that point on? → A: Merge on first sign-in - local ticks for items the account has no record of are written to the account once; after that, local storage for that account is no longer authoritative and the account's own record governs.
+
 ## User Scenarios & Testing *(mandatory)*
 
 ### User Story 1 - A self-assessment checklist that sticks (Priority: P1)
@@ -31,8 +38,9 @@ A student working through a topic reaches the "Self-assessment checklist" sectio
 1. **Given** a signed-in student on a topic page, **When** they tick a checklist item, **Then** the item stays ticked after a full page reload and on another device signed into the same account.
 2. **Given** a signed-in student who has ticked items across several topics, **When** they open their progress area, **Then** they see a self-assessment completion figure per topic, per unit, and per course, shown separately from unit-coverage figures.
 3. **Given** a signed-out visitor on a topic page, **When** they tick an item, **Then** the item stays ticked for that browser and a hint explains that signing in syncs it across devices.
-4. **Given** a student who has ticked every checklist item across every topic of a unit, **When** they view that unit in their progress area, **Then** they see a non-blocking prompt suggesting they mark the unit as studied, and marking it studied is still their explicit action.
-5. **Given** a teacher account, **When** they use any part of the platform, **Then** they cannot see any student's self-assessment data.
+4. **Given** a signed-out visitor who ticked items on this browser, **When** they sign in for the first time, **Then** those ticks are merged into their account for any item the account had no record of, and reloading shows the merged state.
+5. **Given** a student who has ticked every checklist item across every topic of a unit, **When** they view that unit in their progress area, **Then** they see a non-blocking prompt suggesting they mark the unit as studied, and marking it studied is still their explicit action.
+6. **Given** a teacher account, **When** they use any part of the platform, **Then** they cannot see any student's self-assessment data.
 
 ---
 
@@ -47,12 +55,13 @@ A student (or a teacher) reading a topic spots a confusing sentence. They select
 **Acceptance Scenarios**:
 
 1. **Given** a signed-in reader on a topic page, **When** they select a sentence and submit a comment, **Then** the feedback is recorded against that topic, unit, course, language, and nearest section, with the exact selected text and enough surrounding context to find it again.
-2. **Given** a signed-in reader on a topic page, **When** they submit general feedback without selecting text, **Then** the feedback is recorded as whole-topic feedback.
-3. **Given** a signed-out visitor, **When** they view a topic page, **Then** no feedback control is shown and they cannot submit feedback.
-4. **Given** feedback exists, **When** the curriculum owner opens the feedback queue, **Then** every item is listed with its quoted passage in context and can be filtered by course, unit, topic, status, scope, and language.
-5. **Given** an open feedback item, **When** the curriculum owner moves it to planned, then resolved with a note and a reference to the change, **Then** the new status and note are saved and shown to the item's author.
-6. **Given** a feedback item, **When** a non-owner attempts to change its status, or anyone attempts an out-of-sequence change, **Then** the change is rejected.
-7. **Given** the existing teacher "suggest improvement" flow, **When** this feature ships, **Then** that flow and its moderation queue behave exactly as before.
+2. **Given** a signed-in reader on a topic page, **When** they submit general feedback without selecting text, **Then** the feedback is recorded as whole-page feedback.
+3. **Given** a signed-out visitor, **When** they view any content page in a unit, **Then** no feedback control is shown and they cannot submit feedback.
+4. **Given** a signed-in reader on a unit opening, unit-assessment, unit-teacher-notes, or course-level review page (not a topic file), **When** they submit feedback, **Then** it is recorded against that page's unit and course, without a topic value.
+5. **Given** feedback exists, **When** the curriculum owner opens the feedback queue, **Then** every item is listed with its quoted passage in context and can be filtered by course, unit, topic, status, scope, and language.
+6. **Given** an open feedback item, **When** the curriculum owner moves it to planned, then resolved with a note and a reference to the change, **Then** the new status and note are saved and shown to the item's author.
+7. **Given** a feedback item, **When** a non-owner attempts to change its status, or anyone attempts an out-of-sequence change, **Then** the change is rejected.
+8. **Given** the existing teacher "suggest improvement" flow, **When** this feature ships, **Then** that flow and its moderation queue behave exactly as before.
 
 ---
 
@@ -93,7 +102,7 @@ Anyone maintaining the project runs one command and gets a per-course, per-unit 
 
 ### User Story 5 - Feedback becomes a proposed revision (Priority: P3)
 
-For one unit, the curriculum owner exports all open and planned feedback as a single document listing the affected topic files by path, each quoted passage, and each comment. They hand it to the project's assistant tooling, which proposes a minimal revision of those topic files and their translations as a reviewable change set that maps every edit back to the feedback item it addresses. After the owner accepts and merges the change, they mark the corresponding items resolved or declined in the queue.
+For one unit, the curriculum owner exports all open and planned feedback as a single document listing the affected content files by path, each quoted passage, and each comment. They hand it to the project's assistant tooling, which proposes a minimal revision of those files and their translations as a reviewable change set that maps every edit back to the feedback item it addresses. After the owner accepts and merges the change, they mark the corresponding items resolved or declined in the queue.
 
 **Why this priority**: It is the highest-leverage part of the loop but depends on Story 2's queue and export, and it introduces the most process. It can ship after the queue is in use.
 
@@ -101,8 +110,8 @@ For one unit, the curriculum owner exports all open and planned feedback as a si
 
 **Acceptance Scenarios**:
 
-1. **Given** open and planned feedback on a unit, **When** the owner exports it, **Then** they get one self-contained document with the affected topic files as repository-relative paths, each quoted passage, and each comment, and no topic body text is copied in.
-2. **Given** an export, **When** the documented revision procedure is followed, **Then** it yields a reviewable change set that changes only what the feedback calls for, preserves topic structure, front matter, figure markers, glossary usage, checklist numbering, and reading level, and passes every content check.
+1. **Given** open and planned feedback on a unit, **When** the owner exports it, **Then** they get one self-contained document with the affected content files as repository-relative paths, each quoted passage, and each comment, and no page body text is copied in.
+2. **Given** an export, **When** the documented revision procedure is followed, **Then** it yields a reviewable change set that changes only what the feedback calls for, preserves each file's structure, front matter, figure markers, glossary usage, checklist numbering, and reading level, and passes every content check.
 3. **Given** a merged revision, **When** the owner returns to the queue, **Then** the items are still "planned" until the owner explicitly resolves or declines each one.
 4. **Given** a quoted passage whose text no longer exists in the topic, **When** the revision procedure reaches it, **Then** it is reported as stale and skipped rather than guessed at.
 
@@ -126,7 +135,7 @@ From the overview page the curriculum owner triages a feedback item without leav
 
 ### Edge Cases
 
-- **Sign-in after local ticks**: a visitor ticks items while signed out, then signs in. Local ticks for the current topic are adopted into the account where the account has no record for that item; nothing is silently lost.
+- **Sign-in after local ticks**: a visitor ticks items while signed out, then signs in for the first time on that browser. Local ticks for items the account has no record of are merged into the account once; from then on the account's own record governs and local storage is no longer consulted for that account.
 - **Checklist item removed or reordered by an author**: stored ticks that point at a position that no longer exists are ignored; remaining ticks align to the current items by position.
 - **Concurrent ticks**: the same item ticked on two devices at once resolves to "ticked" with no error.
 - **Selection spans a figure, a heading, and body text**: the platform stores the plain text of the selection; if it cannot form a usable anchor it falls back to general (whole-topic) feedback.
@@ -143,7 +152,7 @@ From the overview page the curriculum owner triages a feedback item without leav
 
 - **FR-001**: A signed-in student MUST be able to tick and un-tick each item of a topic's self-assessment checklist, and that state MUST persist for that student across reloads, sessions, and devices.
 - **FR-002**: The checklist MUST remain fully readable, with every item visibly rendered, for every visitor - including signed-out visitors and when account services are unavailable.
-- **FR-003**: For a signed-out visitor, or when account services are unavailable, tick state MUST persist for the current browser on that device, and the interface MUST indicate that signing in enables cross-device sync.
+- **FR-003**: For a signed-out visitor, or when account services are unavailable, tick state MUST persist for the current browser on that device, and the interface MUST indicate that signing in enables cross-device sync. The first time that browser's visitor signs in, any locally-stored ticks for items the account has no record of MUST be written to the account once; after that first merge, the account's own record is authoritative and local storage is no longer consulted for that account.
 - **FR-004**: The platform MUST show the student a roll-up of their self-assessment completion per topic, per unit, and per course, in their progress area, presented separately from existing unit-coverage figures.
 - **FR-005**: Ticking self-assessment items MUST NOT change the student's unit-coverage / "studied" record. When every checklist item across all of a unit's topics is ticked, the progress area MAY show a non-blocking prompt to mark the unit as studied, but the student MUST still take that action explicitly.
 - **FR-006**: The curriculum owner MUST be able to view an aggregate of self-assessment completion across students (for example, per course and unit). Teachers MUST NOT have access to any student's self-assessment data.
@@ -153,8 +162,8 @@ From the overview page the curriculum owner triages a feedback item without leav
 
 ### Functional Requirements - Reader feedback capture (1B)
 
-- **FR-010**: Any signed-in reader (student or teacher) MUST be able to submit feedback on a topic page, either as general feedback on the whole topic or as feedback attached to a specific passage they select.
-- **FR-011**: For passage feedback, the platform MUST capture the exact selected text plus enough surrounding context to locate it later, and MUST record the topic, unit, course, language, and nearest section the selection belongs to.
+- **FR-010**: Any signed-in reader (student or teacher) MUST be able to submit feedback on any content page within a unit - a topic file, the unit opening, the unit-assessment page, the optional unit-teacher-notes page, or a course-level review page - either as general feedback on the whole page or as feedback attached to a specific passage they select.
+- **FR-011**: For passage feedback, the platform MUST capture the exact selected text plus enough surrounding context to locate it later, and MUST record the unit, course, language, and nearest section the selection belongs to, plus the topic (when the page is a topic file).
 - **FR-012**: The feedback controls MUST work in both languages and right-to-left layout and MUST be usable on a small screen.
 - **FR-013**: A signed-out visitor MUST NOT see the feedback controls and MUST NOT be able to submit feedback.
 - **FR-014**: The platform MUST record the submitter and their role with each feedback item and MUST set both the submitter identity/role and the initial status server-side, so a client cannot forge them.
@@ -171,10 +180,10 @@ From the overview page the curriculum owner triages a feedback item without leav
 
 ### Functional Requirements - Revision loop (1B)
 
-- **FR-022**: The curriculum owner MUST be able to export, for one unit, all currently open and planned feedback as one self-contained document listing the affected topic files by repository-relative path, each quoted passage, and each comment, without copying topic body text into the export.
-- **FR-023**: The platform MUST provide a repeatable, documented procedure that turns that export into a proposed minimal revision of the affected topic files and their translations, delivered as a reviewable change set in which each edit is traceable to the feedback item it addresses.
+- **FR-022**: The curriculum owner MUST be able to export, for one unit, all currently open and planned feedback as one self-contained document listing the affected content files by repository-relative path, each quoted passage, and each comment, without copying page body text into the export.
+- **FR-023**: The platform MUST provide a repeatable, documented procedure that turns that export into a proposed minimal revision of the affected content files and their translations, delivered as a reviewable change set in which each edit is traceable to the feedback item it addresses.
 - **FR-024**: Closing the loop MUST be an explicit owner action in the triage queue after the change set is accepted; the revision procedure MUST NOT change feedback status by itself.
-- **FR-025**: The revision procedure MUST preserve topic structure, front matter, figure markers, glossary usage, checklist item numbering, and reading level, and MUST run the full content-check set (including the em-dash check) before proposing the change.
+- **FR-025**: The revision procedure MUST preserve each file's structure, front matter, figure markers, glossary usage, checklist item numbering, and reading level (whichever of these apply to that file type), and MUST run the full content-check set (including the em-dash check) before proposing the change.
 
 ### Functional Requirements - Curriculum-owner console (1C)
 
@@ -193,8 +202,8 @@ From the overview page the curriculum owner triages a feedback item without leav
 ### Key Entities
 
 - **Self-assessment check**: one student's tick against one checklist item of one topic in one language. Holds which student, the topic location (course, unit, topic, page, language), the item's position and a snapshot of its wording, whether it is currently ticked, and when it last changed. A student owns their own; the curriculum owner may read aggregates; teachers may not read any.
-- **Content feedback item**: one piece of reader feedback on a topic. Holds the author and their role, the topic location (course, unit, topic, page, language, nearest section), the scope (whole topic or a passage), the quoted passage and its surrounding context when scoped to a passage, the comment, a lifecycle status (open, planned, resolved, declined), an owner note, and a reference to the change that resolved it. The author may read their own; the curriculum owner may read all and is the only one who changes status.
-- **Feedback export bundle**: a generated document for one unit listing the affected topic files by repository-relative path, each open/planned quoted passage, and each comment. Transient; not stored; carries no topic body text.
+- **Content feedback item**: one piece of reader feedback on a content page within a unit (a topic file, the unit opening, the unit-assessment page, the optional unit-teacher-notes page, or a course-level review page). Holds the author and their role, the page location (course, unit, language, nearest section, and topic when the page is a topic file), the scope (whole page or a passage), the quoted passage and its surrounding context when scoped to a passage, the comment, a lifecycle status (open, planned, resolved, declined), an owner note, and a reference to the change that resolved it. The author may read their own; the curriculum owner may read all and is the only one who changes status.
+- **Feedback export bundle**: a generated document for one unit listing the affected content files by repository-relative path, each open/planned quoted passage, and each comment. Transient; not stored; carries no page body text.
 - **Content-status snapshot**: a generated per-course/per-unit inventory of authored-vs-planned, language-completion, depth-check state, and figure counts by production state, plus the list of figures not yet produced. Generated from content and manifests; not a database record.
 - **Catalog entry**: an existing course listing (code, title, semester, language flag, and similar metadata). Editable by the owner through the console; its content stays under version control.
 
