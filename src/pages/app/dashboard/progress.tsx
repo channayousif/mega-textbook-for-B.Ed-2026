@@ -8,6 +8,8 @@ import {
   fetchOwnUnitProgress, fetchTotalUnitsForCourses, fetchUnitNumbersForCourse, markUnitStudied,
 } from '@site/src/lib/unitProgress';
 import { checkFullCoverageAchievement } from '@site/src/lib/achievements';
+import { fetchContentIndex } from '@site/src/lib/assignments';
+import { fetchOwnChecksForCourses } from '@site/src/lib/selfAssessment';
 
 /**
  * Progress area (Spec 004, T020/T024/T041, FR-005/FR-006). Per-course
@@ -37,6 +39,15 @@ const MESSAGES = {
   unit: { en: 'Unit', ur: 'یونٹ' },
   studied: { en: 'Studied', ur: 'پڑھا ہوا' },
   markStudied: { en: 'Mark as studied', ur: 'پڑھا ہوا نشان زد کریں' },
+  selfAssessmentTitle: { en: 'Self-assessment checklists', ur: 'خود جانچ کی فہرستیں' },
+  selfAssessmentEmpty: {
+    en: 'No self-assessment checklists ticked yet.',
+    ur: 'ابھی تک کوئی خود جانچ کی فہرست نشان زد نہیں کی گئی۔',
+  },
+  selfAssessmentComplete: {
+    en: 'Every checklist item in this unit is ticked.',
+    ur: 'اس یونٹ کی تمام فہرست کی اشیاء نشان زد ہیں۔',
+  },
 } as const;
 
 export type CourseCoverage = { courseCode: string; covered: Set<number>; total: number; unitNumbers: number[] };
@@ -113,6 +124,117 @@ function CourseRow({
         })}
       </ul>
     </li>
+  );
+}
+
+type UnitFraction = { courseCode: string; unitNo: number; ticked: number; total: number };
+
+/**
+ * FR-004 - self-assessment roll-up, visually SEPARATE from the unit-coverage panel above
+ * (a topic's checklist completion is independent of unit_progress - FR-005, `/sp.analyze`
+ * finding G2). Derives each topic's item count from content-index.json's
+ * self_assessment_count (research.md R5), never hand-maintained here.
+ */
+function SelfAssessmentPanel({
+  courseCodes, locale, studentId, onMarked,
+}: {
+  courseCodes: string[];
+  locale: 'en' | 'ur';
+  studentId: string;
+  onMarked: (courseCode: string, unitNo: number) => void;
+}): React.ReactElement | null {
+  const [units, setUnits] = useState<UnitFraction[] | null>(null);
+  const [dismissed, setDismissed] = useState<Set<string>>(new Set());
+  const [pendingUnit, setPendingUnit] = useState<string | null>(null);
+
+  const load = useCallback(async () => {
+    if (courseCodes.length === 0) {
+      setUnits([]);
+      return;
+    }
+    const [entries, checksRes] = await Promise.all([
+      fetchContentIndex(),
+      fetchOwnChecksForCourses(courseCodes),
+    ]);
+    const checks = checksRes.data ?? [];
+    const tickedPositions = new Map<string, Set<number>>(); // "course|unit|topic" -> ticked positions
+    for (const c of checks) {
+      if (c.locale !== locale || !c.checked) continue;
+      const key = `${c.course_code}|${c.unit_no}|${c.topic_no}`;
+      if (!tickedPositions.has(key)) tickedPositions.set(key, new Set());
+      tickedPositions.get(key)!.add(c.item_position);
+    }
+
+    const byUnit = new Map<string, { ticked: number; total: number }>();
+    for (const entry of entries) {
+      if (entry.kind !== 'topic' || !courseCodes.includes(entry.course_code)) continue;
+      const count = entry.self_assessment_count ?? 0;
+      if (count === 0) continue;
+      const key = `${entry.course_code}|${entry.unit_no}|${entry.topic_no}`;
+      const ticked = Math.min(tickedPositions.get(key)?.size ?? 0, count);
+      const unitKey = `${entry.course_code}|${entry.unit_no}`;
+      const prev = byUnit.get(unitKey) ?? { ticked: 0, total: 0 };
+      byUnit.set(unitKey, { ticked: prev.ticked + ticked, total: prev.total + count });
+    }
+
+    const result: UnitFraction[] = Array.from(byUnit.entries()).map(([key, v]) => {
+      const [courseCode, unitNo] = key.split('|');
+      return { courseCode, unitNo: Number(unitNo), ticked: v.ticked, total: v.total };
+    });
+    setUnits(result);
+  }, [courseCodes, locale]);
+
+  useEffect(() => {
+    load();
+  }, [load]);
+
+  async function handleMark(courseCode: string, unitNo: number): Promise<void> {
+    const key = `${courseCode}|${unitNo}`;
+    setPendingUnit(key);
+    const { error } = await markUnitStudied(studentId, courseCode, unitNo);
+    setPendingUnit(null);
+    if (!error) {
+      setDismissed((prev) => new Set(prev).add(key));
+      onMarked(courseCode, unitNo);
+    }
+  }
+
+  if (units === null) return null;
+  const withProgress = units.filter((u) => u.total > 0 && u.ticked > 0);
+
+  return (
+    <section className="margin-top--lg" data-testid="self-assessment-progress-panel">
+      <h3>{MESSAGES.selfAssessmentTitle[locale]}</h3>
+      {withProgress.length === 0 ? (
+        <p>{MESSAGES.selfAssessmentEmpty[locale]}</p>
+      ) : (
+        <ul style={{ listStyle: 'none', padding: 0 }}>
+          {withProgress.map((u) => {
+            const key = `${u.courseCode}|${u.unitNo}`;
+            const complete = u.ticked >= u.total && u.total > 0;
+            return (
+              <li key={key} data-testid="self-assessment-unit-fraction" style={{ marginBottom: '1rem' }}>
+                <div>{u.courseCode} - {MESSAGES.unit[locale]} {u.unitNo}: {u.ticked} / {u.total}</div>
+                <CoverageBar covered={u.ticked} total={u.total} />
+                {complete && !dismissed.has(key) && (
+                  <div className="margin-top--sm">
+                    <p>{MESSAGES.selfAssessmentComplete[locale]}</p>
+                    <button
+                      type="button"
+                      className="button button--sm button--secondary"
+                      disabled={pendingUnit === key}
+                      onClick={() => handleMark(u.courseCode, u.unitNo)}
+                    >
+                      {MESSAGES.markStudied[locale]}
+                    </button>
+                  </div>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </section>
   );
 }
 
@@ -193,6 +315,12 @@ function ProgressContent(): React.ReactElement {
           <CourseRow key={c.courseCode} course={c} locale={locale} studentId={profile.id} onMarked={handleMarked} />
         ))}
       </ul>
+      <SelfAssessmentPanel
+        courseCodes={coverage.map((c) => c.courseCode)}
+        locale={locale}
+        studentId={profile.id}
+        onMarked={handleMarked}
+      />
     </div>
   );
 }

@@ -13,6 +13,11 @@ build/
 # not source of truth, no need to track drift in git.
 static/content-index.json
 
+# Generated content-status report (Spec 010, T027) — same convention as
+# content-index.json above: rebuilt by prestart/prebuild, not source of truth.
+static/content-status.json
+static/catalog-courses.json
+
 # Playwright
 test-results/
 playwright-report/

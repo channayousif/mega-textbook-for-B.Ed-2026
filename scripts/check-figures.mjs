@@ -39,6 +39,7 @@ import { readdirSync, statSync, readFileSync, existsSync } from 'node:fs';
 import { join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
+import { parseManifest, STATUS_ENUM, KIND_ENUM } from './lib/figure-manifest.mjs';
 
 const REPO = resolve(fileURLToPath(new URL('..', import.meta.url)));
 const ROOT = process.env.CONTENT_ROOT ? resolve(process.env.CONTENT_ROOT) : REPO;
@@ -47,8 +48,6 @@ const STATIC_DIR = join(ROOT, 'static');
 const UR_BASE = join(ROOT, 'i18n', 'ur', 'docusaurus-plugin-content-docs', 'current');
 const CONTENT_SPEC_DIR = join(ROOT, 'specs', 'content');
 
-const STATUS_ENUM = new Set(['prompt-only', 'generated', 'placed']);
-const KIND_ENUM = new Set(['diagram', 'illustration']);
 // contract: figures-manifest.md — global, non-greedy prompt/alt capture.
 const MARKER_RE = /\{\/\*\s*FIGURE\[(fig-U\d+-\d+)\]:\s*([\s\S]+?);\s*alt:\s*([\s\S]+?)\s*\*\/\}/g;
 // Spec 009 — a rendered <Figure ... /> (self-closing or not). Capture the whole open tag.
@@ -107,47 +106,6 @@ function figureIdsInFile(file) {
     if (c.form === 'figure') ids.add(c.id);
   }
   return ids;
-}
-
-// ---- column-aware manifest table parse -------------------------------------
-function parseManifest(text) {
-  const lines = text.split(/\r?\n/).filter((l) => l.trim().startsWith('|'));
-  let header = null;
-  const rows = [];
-  for (const line of lines) {
-    const cells = line.split('|').slice(1, -1).map((c) => c.trim());
-    if (cells.every((c) => /^:?-{2,}:?$/.test(c) || c === '')) continue; // separator
-    if (!header) {
-      if (/^figure id$/i.test(cells[0])) { header = cells.map((c) => c.toLowerCase()); }
-      continue;
-    }
-    rows.push(cells);
-  }
-  if (!header) return null;
-  const ix = (name) => header.indexOf(name);
-  const iId = ix('figure id');
-  const iTopic = ix('topic');
-  const iKind = ix('kind'); // -1 for v1
-  const iPrompt = ix('prompt');
-  const iAlt = ix('alt text');
-  const iSrc = ix('src'); // -1 for v1
-  const iStatus = ix('status');
-  const out = [];
-  for (const cells of rows) {
-    if (cells.length < header.length - 1) continue; // malformed short row
-    out.push({
-      id: cells[iId] ?? '',
-      topic: cells[iTopic] ?? '',
-      kind: iKind >= 0 ? (cells[iKind] ?? '') : '',
-      prompt: cells[iPrompt] ?? '',
-      alt: cells[iAlt] ?? '',
-      src: iSrc >= 0 ? (cells[iSrc] ?? '') : '',
-      status: cells[iStatus] ?? '',
-      hasKindCol: iKind >= 0,
-      hasSrcCol: iSrc >= 0,
-    });
-  }
-  return out;
 }
 
 function isBilingualCourse(courseDir) {

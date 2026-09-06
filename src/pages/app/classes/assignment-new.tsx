@@ -67,7 +67,10 @@ function AssignmentNewContent({ classId }: { classId: string }): React.ReactElem
   }, [classRow?.course_code]);
 
   const unitItems = useMemo(
-    () => contentIndex.filter((entry) => entry.course_code === classRow?.course_code),
+    () => contentIndex.filter(
+      (entry): entry is ContentIndexEntry & { kind: AssignmentSourceKind } => entry.course_code === classRow?.course_code
+        && (entry.kind === 'activity' || entry.kind === 'formative' || entry.kind === 'summative'),
+    ),
     [contentIndex, classRow],
   );
 
