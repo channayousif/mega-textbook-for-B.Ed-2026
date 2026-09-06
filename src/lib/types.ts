@@ -205,3 +205,54 @@ export type ImprovementSuggestion = {
   created_at: string;
   updated_at: string;
 };
+
+/**
+ * Curriculum-owner-console-domain types (Spec 010) mirroring data-model.md's
+ * `self_assessment_checks`/`content_feedback` columns.
+ */
+
+export type SelfAssessmentCheck = {
+  id: string;
+  student_id: string;
+  course_code: string;
+  unit_no: number;
+  topic_no: number;
+  locale: 'en' | 'ur';
+  item_position: number;
+  item_text_snapshot: string;
+  checked: boolean;
+  created_at: string;
+  updated_at: string;
+};
+
+export type ContentFeedbackPageKind =
+  | 'topic'
+  | 'unit_opening'
+  | 'unit_assessment'
+  | 'unit_teacher_notes'
+  | 'course_review';
+
+export type ContentFeedbackScope = 'whole_page' | 'passage';
+
+export type ContentFeedbackStatus = 'open' | 'planned' | 'resolved' | 'declined';
+
+export type ContentFeedback = {
+  id: string;
+  author_id: string;
+  author_role: string;
+  page_kind: ContentFeedbackPageKind;
+  course_code: string;
+  unit_no: number | null;
+  topic_no: number | null;
+  locale: 'en' | 'ur';
+  section_anchor: string | null;
+  scope: ContentFeedbackScope;
+  quoted_passage: string | null;
+  passage_context: string | null;
+  comment: string;
+  status: ContentFeedbackStatus;
+  owner_note: string | null;
+  resolution_ref: string | null;
+  created_at: string;
+  updated_at: string;
+};

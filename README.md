@@ -147,6 +147,15 @@ committed, accessible, lazy-loaded images that render in both locales.
 - The `.claude/skills/author-unit/` skill authors a whole unit to this standard and emits the
   coverage / sources / figures artefacts.
 
+## Admin tooling
+
+- **Curriculum-owner console** (`/app/admin/overview`, admin-only): content/figure status
+  (reused from `npm run check:content-status`, never re-derived), reader-feedback counts
+  with inline triage, the self-assessment aggregate, and platform-wide progress - plus a
+  catalog-edit form that only ever produces a downloadable `courses.json`, never a database
+  write. The full triage queue and passage-anchored feedback context live at
+  `/app/admin/feedback-queue`. See `specs/010-curriculum-owner-console/quickstart.md`.
+
 ## Contribution flow
 
 1. Branch from `main` (`NNN-feature-name`, matching the `specs/` directory it implements).

@@ -39,6 +39,12 @@ jobs:
       - name: Figure marker gate
         run: npm run check:figures
 
+      # Content/figure status report (Spec 010, FR-032) - informational only, never
+      # blocking: reuses the depth-gate and figure-manifest logic above via shared
+      # modules (scripts/lib/), so it cannot drift from either gate.
+      - name: Content status report
+        run: npm run check:content-status || echo "::warning::content-status report failed"
+
       # Zero em dash in authored content (Constitution Art. III.9) - docs/, guides/,
       # i18n/, specs/content/. history/ is exempt as an immutable record.
       - name: No em dash in content
