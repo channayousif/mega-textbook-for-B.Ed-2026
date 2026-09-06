@@ -7,12 +7,15 @@ import { useAuth } from '@site/src/contexts/AuthContext';
 import { markUnitStudied } from '@site/src/lib/unitProgress';
 import { fileSuggestion } from '@site/src/lib/suggestions';
 import { submitFeedback, fetchOwnFeedback } from '@site/src/lib/activityFeedback';
-import type { SuggestionCategory, TeachingLogSourceKind } from '@site/src/lib/types';
+import { findNearestSectionAnchor, type TocEntry } from '@site/src/lib/docPosition';
+import { submitFeedback as submitContentFeedback } from '@site/src/lib/contentFeedback';
+import { fetchContentIndex } from '@site/src/lib/assignments';
+import type { SuggestionCategory, TeachingLogSourceKind, ContentFeedbackPageKind, ContentFeedbackScope } from '@site/src/lib/types';
 
 /**
- * Swizzled DocItem/Footer (Spec 004 T025, Spec 005 T014/T029).
+ * Swizzled DocItem/Footer (Spec 004 T025, Spec 005 T014/T029, Spec 010 T021).
  *
- * Renders three role-scoped controls on doc content pages:
+ * Renders role-scoped controls on doc content pages:
  * - Student-only "Mark as studied" (Spec 004, unchanged) - unit pages only.
  * - Teacher-only "Suggest improvement" (Spec 005, FR-003) - any page
  *   carrying `course_code` in front matter, including course-overview pages
@@ -20,6 +23,9 @@ import type { SuggestionCategory, TeachingLogSourceKind } from '@site/src/lib/ty
  * - Teacher-only "Give feedback on this activity" (Spec 005, FR-007, T029)
  *   - unit pages only (`course_code` AND `unit_no` both required), since
  *   feedback is inherently about one specific activity.
+ * - Any-signed-in-reader "Give feedback" (Spec 010, FR-010-013) - the five
+ *   page kinds research.md R6 names (topic, unit opening, unit-assessment,
+ *   unit-teacher-notes, course-level review), whole-page or passage-anchored.
  */
 
 function useLocale(): 'en' | 'ur' {
@@ -53,7 +59,28 @@ const MESSAGES = {
   feedbackSubmitting: { en: 'Submitting…', ur: 'جمع ہو رہا ہے…' },
   feedbackSubmitted: { en: 'Feedback submitted ✓', ur: 'رائے جمع ہو گئی ✓' },
   feedbackError: { en: 'Could not submit feedback.', ur: 'رائے جمع نہیں ہو سکی۔' },
+  giveContentFeedback: { en: 'Give feedback', ur: 'رائے دیں' },
+  contentFeedbackPassageHint: {
+    en: 'You selected a passage - your feedback will quote it.',
+    ur: 'آپ نے ایک اقتباس منتخب کیا ہے - آپ کی رائے اسے نقل کرے گی۔',
+  },
+  contentFeedbackWholePageHint: {
+    en: 'Select some text first to comment on a specific passage, or leave it as general feedback on this page.',
+    ur: 'کسی خاص اقتباس پر رائے دینے کے لیے پہلے کچھ متن منتخب کریں، یا اسے اس صفحے پر عمومی رائے کے طور پر چھوڑ دیں۔',
+  },
+  contentFeedbackSelectionTooLong: {
+    en: 'Your selection is too long (max 2,000 characters). Please select a shorter passage.',
+    ur: 'آپ کا انتخاب بہت طویل ہے (زیادہ سے زیادہ 2000 حروف)۔ براہ کرم مختصر اقتباس منتخب کریں۔',
+  },
+  contentFeedbackCommentPlaceholder: { en: 'Your feedback…', ur: 'آپ کی رائے…' },
+  contentFeedbackSubmit: { en: 'Submit feedback', ur: 'رائے جمع کرائیں' },
+  contentFeedbackSubmitting: { en: 'Submitting…', ur: 'جمع ہو رہا ہے…' },
+  contentFeedbackSubmitted: { en: 'Feedback submitted ✓', ur: 'رائے جمع ہو گئی ✓' },
+  contentFeedbackError: { en: 'Could not submit feedback.', ur: 'رائے جمع نہیں ہو سکی۔' },
 } as const;
+
+const CONTENT_FEEDBACK_PASSAGE_LIMIT = 2000;
+const CONTENT_FEEDBACK_CONTEXT_CHARS = 100;
 
 /**
  * No front-matter field distinguishes activities.mdx/formative.mdx/
@@ -78,6 +105,179 @@ function deriveSourceKindFromPath(pathname: string): TeachingLogSourceKind | nul
   return null;
 }
 
+/**
+ * research.md R6 - the five page kinds a reader's content-feedback control
+ * reaches: topic-NN, unit-assessment, unit-teacher-notes, and course-review
+ * are unambiguous from the URL's own last segment (the same "read from the
+ * URL" idiom as deriveSourceKindFromPath). A bare `unit-NN` segment is
+ * index.mdx - which is a per-topic unit's OPENING page (in scope) on some
+ * courses and a legacy unit's opening page (out of scope) on others, with no
+ * front-matter field distinguishing the two. `topicLayoutUnitKeys` (this
+ * unit's own membership in content-index.json's `kind: 'topic'` records,
+ * fetched once by the wrapper) is what resolves that one ambiguous case.
+ */
+function deriveContentFeedbackPageKind(
+  pathname: string,
+  courseCode: string | null,
+  unitNo: number | null,
+  topicLayoutUnitKeys: Set<string> | null,
+): ContentFeedbackPageKind | null {
+  const trimmed = pathname.replace(/\/+$/, '');
+  const last = trimmed.split('/').pop() ?? '';
+  if (/^topic-\d+$/.test(last)) return 'topic';
+  if (last === 'unit-assessment') return 'unit_assessment';
+  if (last === 'unit-teacher-notes') return 'unit_teacher_notes';
+  if (last === 'course-review') return 'course_review';
+  if (/^unit-\d+$/.test(last) && courseCode && unitNo !== null) {
+    if (topicLayoutUnitKeys?.has(`${courseCode}|${unitNo}`)) return 'unit_opening';
+  }
+  return null;
+}
+
+/**
+ * research.md R7 - best-effort re-location material: up to 100 characters of
+ * the selection's own containing block's text immediately before and after
+ * it. Never itself displayed to the owner - only used to attempt to re-find
+ * a stale passage (contract: console-operations.md table B).
+ */
+function capturePassageContext(selection: Selection): string | null {
+  if (selection.rangeCount === 0) return null;
+  const range = selection.getRangeAt(0);
+  let block: HTMLElement | null = range.commonAncestorContainer.parentElement;
+  while (block && !/^(P|LI|BLOCKQUOTE|TD|TH|DIV|FIGCAPTION)$/.test(block.tagName)) {
+    block = block.parentElement;
+  }
+  if (!block) return null;
+  const blockText = block.textContent ?? '';
+  const selected = selection.toString();
+  const idx = blockText.indexOf(selected);
+  if (idx === -1) return null;
+  const before = blockText.slice(Math.max(0, idx - CONTENT_FEEDBACK_CONTEXT_CHARS), idx);
+  const after = blockText.slice(idx + selected.length, idx + selected.length + CONTENT_FEEDBACK_CONTEXT_CHARS);
+  const context = `${before}${after}`.trim();
+  return context || null;
+}
+
+function ContentFeedbackControl({
+  courseCode,
+  unitNo,
+  topicNo,
+  pageKind,
+}: {
+  courseCode: string;
+  unitNo: number | null;
+  topicNo: number | null;
+  pageKind: ContentFeedbackPageKind;
+}): React.ReactElement {
+  const locale = useLocale();
+  const { toc } = useDoc() as unknown as { toc: readonly TocEntry[] };
+  const { profile } = useAuth();
+  const [open, setOpen] = useState(false);
+  const [scope, setScope] = useState<ContentFeedbackScope>('whole_page');
+  const [quotedPassage, setQuotedPassage] = useState<string | null>(null);
+  const [passageContext, setPassageContext] = useState<string | null>(null);
+  const [comment, setComment] = useState('');
+  const [pending, setPending] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  function handleOpen(): void {
+    setError(null);
+    const selectionText = typeof window !== 'undefined' ? window.getSelection()?.toString() ?? '' : '';
+    if (selectionText.trim().length > 0) {
+      if (selectionText.length > CONTENT_FEEDBACK_PASSAGE_LIMIT) {
+        setError(MESSAGES.contentFeedbackSelectionTooLong[locale]);
+        return;
+      }
+      const selectionObj = window.getSelection();
+      setScope('passage');
+      setQuotedPassage(selectionText);
+      setPassageContext(selectionObj ? capturePassageContext(selectionObj) : null);
+    } else {
+      setScope('whole_page');
+      setQuotedPassage(null);
+      setPassageContext(null);
+    }
+    setOpen(true);
+  }
+
+  async function handleSubmit(e: React.FormEvent): Promise<void> {
+    e.preventDefault();
+    if (!profile) return;
+    setPending(true);
+    setError(null);
+    const { error: submitError } = await submitContentFeedback({
+      authorId: profile.id,
+      pageKind,
+      courseCode,
+      unitNo,
+      topicNo,
+      locale,
+      sectionAnchor: findNearestSectionAnchor(toc),
+      scope,
+      quotedPassage,
+      passageContext,
+      comment,
+    });
+    setPending(false);
+    if (submitError) {
+      setError(MESSAGES.contentFeedbackError[locale]);
+      return;
+    }
+    setSubmitted(true);
+  }
+
+  if (submitted) {
+    return <p data-testid="content-feedback-submitted">{MESSAGES.contentFeedbackSubmitted[locale]}</p>;
+  }
+
+  if (!open) {
+    return (
+      <>
+        {error && <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>}
+        <button
+          type="button"
+          className="button button--secondary button--sm"
+          data-testid="content-feedback-button"
+          onClick={handleOpen}
+        >
+          {MESSAGES.giveContentFeedback[locale]}
+        </button>
+      </>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="margin-top--sm">
+      {error && <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>}
+      <p data-testid="content-feedback-scope-hint">
+        {scope === 'passage' ? MESSAGES.contentFeedbackPassageHint[locale] : MESSAGES.contentFeedbackWholePageHint[locale]}
+      </p>
+      {scope === 'passage' && quotedPassage && (
+        <blockquote data-testid="content-feedback-quoted-passage">{quotedPassage}</blockquote>
+      )}
+      <div className="margin-bottom--sm">
+        <textarea
+          data-testid="content-feedback-comment-textarea"
+          className="input"
+          value={comment}
+          onChange={(e) => setComment(e.target.value)}
+          placeholder={MESSAGES.contentFeedbackCommentPlaceholder[locale]}
+          required
+        />
+      </div>
+      <button
+        type="submit"
+        className="button button--primary button--sm"
+        data-testid="content-feedback-submit-button"
+        disabled={pending}
+      >
+        {pending ? MESSAGES.contentFeedbackSubmitting[locale] : MESSAGES.contentFeedbackSubmit[locale]}
+      </button>
+    </form>
+  );
+}
+
 const CATEGORY_OPTIONS: { value: SuggestionCategory; label: keyof typeof MESSAGES }[] = [
   { value: 'typo', label: 'categoryTypo' },
   { value: 'clarity', label: 'categoryClarity' },
@@ -86,28 +286,6 @@ const CATEGORY_OPTIONS: { value: SuggestionCategory; label: keyof typeof MESSAGE
   { value: 'translation', label: 'categoryTranslation' },
   { value: 'other', label: 'categoryOther' },
 ];
-
-type TocEntry = { value: string; id: string; level: number };
-
-/**
- * research.md R1 - the last toc heading whose element has already scrolled
- * to or above a small "reading position" threshold; `null` if the reader is
- * above the first heading (top of page). Computed once, on click, not via a
- * continuous scroll listener.
- */
-function findNearestSectionAnchor(toc: readonly TocEntry[]): string | null {
-  if (typeof document === 'undefined') return null;
-  const THRESHOLD_PX = 100;
-  let nearest: string | null = null;
-  for (const entry of toc) {
-    const el = document.getElementById(entry.id);
-    if (!el) continue;
-    if (el.getBoundingClientRect().top <= THRESHOLD_PX) {
-      nearest = entry.id;
-    }
-  }
-  return nearest;
-}
 
 function SuggestImprovementControl({
   courseCode,
@@ -363,7 +541,23 @@ export default function DocItemFooterWrapper(): React.ReactElement {
   const location = useLocation();
   const courseCode = typeof frontMatter?.course_code === 'string' ? frontMatter.course_code : null;
   const unitNo = typeof frontMatter?.unit_no === 'number' ? frontMatter.unit_no : null;
+  const topicNo = typeof frontMatter?.topic_no === 'number' ? frontMatter.topic_no : null;
   const sourceKind = deriveSourceKindFromPath(location.pathname);
+
+  // Spec 010, research.md R6 — resolves the one ambiguous page kind (a bare
+  // unit-NN URL — index.mdx — could be either layout's opening page).
+  const [topicLayoutUnitKeys, setTopicLayoutUnitKeys] = useState<Set<string> | null>(null);
+  React.useEffect(() => {
+    let cancelled = false;
+    fetchContentIndex().then((entries) => {
+      if (cancelled) return;
+      setTopicLayoutUnitKeys(new Set(
+        entries.filter((e) => e.kind === 'topic').map((e) => `${e.course_code}|${e.unit_no}`),
+      ));
+    });
+    return () => { cancelled = true; };
+  }, []);
+  const contentFeedbackPageKind = deriveContentFeedbackPageKind(location.pathname, courseCode, unitNo, topicLayoutUnitKeys);
 
   async function handleMark(): Promise<void> {
     if (!profile || !courseCode || unitNo === null) return;
@@ -404,6 +598,16 @@ export default function DocItemFooterWrapper(): React.ReactElement {
       {role === 'teacher' && courseCode && unitNo !== null && sourceKind && (
         <div className="margin-top--md">
           <FeedbackControl courseCode={courseCode} unitNo={unitNo} sourceKind={sourceKind} />
+        </div>
+      )}
+      {(role === 'student' || role === 'teacher') && courseCode && contentFeedbackPageKind && (
+        <div className="margin-top--md">
+          <ContentFeedbackControl
+            courseCode={courseCode}
+            unitNo={unitNo}
+            topicNo={topicNo}
+            pageKind={contentFeedbackPageKind}
+          />
         </div>
       )}
       <FooterOriginal />

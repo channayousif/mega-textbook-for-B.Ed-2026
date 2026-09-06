@@ -18,11 +18,22 @@
  * Spec 008 per-topic units (T023) instead contribute each `topic-NN.mdx`
  * (`kind: 'topic'`) and `unit-assessment.mdx` (`kind: 'assessment'`); at course
  * level, an optional `course-review.mdx` is indexed (`kind: 'course-review'`).
+ *
+ * Spec 010 (research.md R5): every `kind: 'topic'` record additionally carries
+ * `self_assessment_count`, the number of `- [ ]` items under that topic's own
+ * `## Self-assessment checklist` section - computed via the SHARED
+ * `countChecklistInSection()` helper (scripts/lib/mdx-sections.mjs), the same
+ * function `check-unit-depth.mjs` calls, so this can never drift from the gate's
+ * own count (FR-033's "never re-derive" posture, applied here too). The Progress
+ * area (Spec 010 FR-004) divides a student's distinct ticked positions by this
+ * number to get a topic's completion fraction - it is not hand-maintained in
+ * Postgres (Art. V.1). `null` for every non-topic record.
  */
 import { readFileSync, readdirSync, existsSync, statSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
+import { countChecklistInSection } from './lib/mdx-sections.mjs';
 
 const REPO = resolve(fileURLToPath(new URL('..', import.meta.url)));
 const DOCS_DIR = join(REPO, 'docs');
@@ -40,15 +51,24 @@ const topicFilesIn = (p) =>
 const records = [];
 
 function push(semester, semesterDir, courseDir, unitDir, filename, kind, filePath) {
-  const { data } = matter(readFileSync(filePath, 'utf8'));
+  const parsed = matter(readFileSync(filePath, 'utf8'));
+  const { data } = parsed;
+  const self_assessment_count = kind === 'topic'
+    ? (countChecklistInSection(
+        parsed.content.split(/\r?\n/),
+        /^##\s+Self-assessment checklist\s*$/,
+      ) ?? 0)
+    : null;
   records.push({
     semester,
     course_code: data.course_code,
     unit_no: data.unit_no,
+    topic_no: kind === 'topic' ? (data.topic_no ?? null) : null,
     kind,
     title: data.title,
     coming_soon: Boolean(data.coming_soon),
     permalink: `/${semesterDir}/${courseDir}/${unitDir}/${filename.replace('.mdx', '')}`,
+    self_assessment_count,
   });
 }
 
@@ -69,10 +89,12 @@ for (const semesterDir of dirs(DOCS_DIR)) {
         semester,
         course_code: data.course_code,
         unit_no: null,
+        topic_no: null,
         kind: 'course-review',
         title: data.title,
         coming_soon: Boolean(data.coming_soon),
         permalink: `/${semesterDir}/${courseDir}/course-review`,
+        self_assessment_count: null,
       });
     }
 
@@ -107,3 +129,14 @@ for (const semesterDir of dirs(DOCS_DIR)) {
 mkdirSync(join(REPO, 'static'), { recursive: true });
 writeFileSync(OUT_FILE, JSON.stringify(records, null, 2));
 console.log(`✓ Wrote ${records.length} content-index records to static/content-index.json`);
+
+// Spec 010, T038 (FR-029) - a public, read-only copy of the catalog, the same
+// static/*.json convention as content-index.json above. The curriculum-owner
+// console's catalog-edit form reads this copy and only ever produces a
+// downloadable replacement file - it never writes catalog content to Postgres.
+const CATALOG_FILE = join(REPO, 'catalog', 'courses.json');
+if (existsSync(CATALOG_FILE)) {
+  const CATALOG_OUT_FILE = join(REPO, 'static', 'catalog-courses.json');
+  writeFileSync(CATALOG_OUT_FILE, readFileSync(CATALOG_FILE, 'utf8'));
+  console.log('✓ Copied catalog/courses.json to static/catalog-courses.json');
+}

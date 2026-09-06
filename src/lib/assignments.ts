@@ -108,10 +108,14 @@ export type ContentIndexEntry = {
   semester: number;
   course_code: string;
   unit_no: number;
-  kind: 'activity' | 'formative' | 'summative';
+  /** Spec 010 - set only on a `kind: 'topic'` record (front matter's own `topic_no`). */
+  topic_no: number | null;
+  kind: 'activity' | 'formative' | 'summative' | 'topic' | 'assessment' | 'course-review';
   title: string;
   coming_soon: boolean;
   permalink: string;
+  /** Spec 010, research.md R5 - `- [ ]` count under a topic's own checklist section; `null` for every non-topic record. */
+  self_assessment_count: number | null;
 };
 
 /**
