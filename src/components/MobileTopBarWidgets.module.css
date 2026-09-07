@@ -1,16 +1,10 @@
-/* Hidden by default (desktop) - the existing localeDropdown/authWidget
-   navbar items already cover this width. See MobileTopBarWidgets.tsx's
-   docblock for why. */
+/* No media query needed here - MobileTopBarWidgets.tsx only ever mounts
+   this at all once `useWindowSize()` confirms a mobile viewport client-side
+   (see its docblock), so there's no desktop render to hide. */
 .widgetGroup {
-  display: none;
-}
-
-@media (max-width: 996px) {
-  .widgetGroup {
-    display: flex;
-    align-items: center;
-    gap: 0.35rem;
-  }
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
 }
 
 .pill {

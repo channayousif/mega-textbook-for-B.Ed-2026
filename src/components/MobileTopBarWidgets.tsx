@@ -2,6 +2,7 @@ import React from 'react';
 import { useLocation } from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useAlternatePageUtils } from '@docusaurus/theme-common/internal';
+import { useWindowSize } from '@docusaurus/theme-common';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import { loginUrlWithReturnTo } from '@site/src/lib/authRedirect';
 import styles from './MobileTopBarWidgets.module.css';
@@ -26,8 +27,16 @@ import styles from './MobileTopBarWidgets.module.css';
  * (`.navbar__item { display: none }`) - exactly why the plain
  * localeDropdown/authWidget items vanish from the *collapsed* bar (they
  * still work once the drawer is open, where Docusaurus swaps their markup).
- * CSS-hidden at >996px in the sibling stylesheet so desktop never shows a
- * duplicate control.
+ *
+ * Gated by `useWindowSize()` (Docusaurus's own public hook, same 996px
+ * breakpoint as Infima) to render `null` outright at desktop widths, not
+ * merely CSS-hidden - a CSS-only version still put a second copy of the
+ * signed-in display name into the DOM, and pre-existing e2e specs doing a
+ * bare `.navbar.getByText(email)` (auth-session, auth-signout) started
+ * failing Playwright's strict-mode "resolved to 2 elements" check against
+ * that hidden duplicate. Found via CI, not the local run (`gh pr checks`
+ * reported `e2e fail` after this had looked clean locally against a
+ * narrower regression set).
  *
  * Registered as `custom-mobileTopBar` (docusaurus.config.ts), positioned
  * first among the right-side items so its content sits left of the
@@ -55,13 +64,19 @@ export default function MobileTopBarWidgets({
   const location = useLocation();
   const other = useOtherLocale();
   const { loading, session, displayName, isConfigured } = useAuth();
+  const windowSize = useWindowSize();
 
   // Docusaurus renders every navbar item a second time, with `mobile: true`,
   // inside the hamburger drawer's own primary menu - where the (now-fixed)
   // localeDropdown/authWidget items already cover this job with proper
   // `menu__link` list items. Render nothing there; this component exists
   // only to fill the gap in the *collapsed* bar.
-  if (mobile) return null;
+  //
+  // `windowSize` starts as `'ssr'` (Docusaurus's documented server/pre-
+  // hydration value) and only becomes `'mobile'` once a `resize` listener
+  // confirms it client-side - never render on `'ssr'` or `'desktop'`, so
+  // desktop never carries a second, CSS-only-hidden copy of this content.
+  if (mobile || windowSize !== 'mobile') return null;
 
   return (
     <div className={styles.widgetGroup}>
