@@ -1,0 +1,29 @@
+/* Hidden by default (desktop) - the existing localeDropdown/authWidget
+   navbar items already cover this width. See MobileTopBarWidgets.tsx's
+   docblock for why. */
+.widgetGroup {
+  display: none;
+}
+
+@media (max-width: 996px) {
+  .widgetGroup {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+}
+
+.pill {
+  display: inline-block;
+  max-width: 4.75rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: 0.3rem 0.5rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: var(--ifm-font-weight-semibold);
+  line-height: 1;
+  color: var(--ifm-navbar-link-color);
+  background: var(--ifm-color-emphasis-200);
+}
