@@ -271,3 +271,25 @@ html[dir='rtl'] div:has(> .theme-doc-sidebar-container) > main {
     right: var(--ifm-navbar-padding-horizontal);
   }
 }
+
+/*
+ * Reserve room, in the collapsed mobile bar, for the search icon the rule
+ * above (and Docusaurus's own equivalent for `ltr`) pulls out of normal flow
+ * via `position: absolute; right: ...`. MobileTopBarWidgets.tsx's locale/
+ * sign-in pills are the only `.navbar__items--right` content still visible
+ * at this breakpoint (Infima hides every plain `.navbar__item`) - without
+ * this padding they render right up against the edge and the search icon
+ * sits on top of them instead of beside them (Spec 010 follow-up,
+ * 2026-09-07).
+ */
+@media (max-width: 996px) {
+  .navbar__items--right {
+    padding-right: 2.75rem;
+  }
+
+  /*rtl:ignore*/
+  html[dir='rtl'] .navbar__items--right {
+    padding-right: 0;
+    padding-left: 2.75rem;
+  }
+}
