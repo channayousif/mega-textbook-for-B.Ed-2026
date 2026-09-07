@@ -109,6 +109,11 @@ const config: Config = {
     navbar: {
       title: 'B.Ed Textbook',
       items: [
+        // Spec 010 follow-up, 2026-09-07 - registers
+        // src/components/MobileTopBarWidgets.tsx; renders nothing at
+        // desktop widths, a compact locale-switch + sign-in-status pair at
+        // <=996px, placed first so it sits left of the mobile search icon.
+        { type: 'custom-mobileTopBar', position: 'right' },
         { type: 'localeDropdown', position: 'right' },
         { type: 'search', position: 'right' },
         // Spec 004, T007 - registers src/components/DashboardNavLink.tsx;
