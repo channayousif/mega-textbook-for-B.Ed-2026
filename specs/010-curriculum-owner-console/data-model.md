@@ -75,11 +75,20 @@ create type public.content_feedback_scope as enum ('whole_page', 'passage');
 create type public.content_feedback_status as enum ('open', 'planned', 'resolved', 'declined');
 ```
 
+**Guest access (migration `0037`, 2026-09-07 follow-up)**: `author_id` is nullable and a row may
+instead carry `guest_email` + `guest_confirmation_token` - a signed-out reader identified only
+by a self-reported email, submitted via `guest-feedback-submit` (an Edge Function using the
+service role, since an unauthenticated insert needs its own server-side validation this table's
+RLS can't express) and confirmed via `confirm_guest_feedback(token)`, a `SECURITY DEFINER` RPC
+`anon` may call directly - the token itself is the credential. See "Guest columns" and
+"Guest RLS/RPC" below; the original `author_id not null` shape (student/teacher/admin) is
+otherwise unchanged.
+
 | Column | Type | Notes |
 |---|---|---|
 | `id` | `uuid` | PK |
-| `author_id` | `uuid not null references profiles(id)` | |
-| `author_role` | `text not null` | **stamped server-side** by trigger from `profiles.role`, never client-supplied (FR-014) |
+| `author_id` | `uuid references profiles(id)` | **nullable since `0037`** - null on a guest row (`guest_email` set instead); exactly one of the two is ever set |
+| `author_role` | `text not null` | **stamped server-side** by trigger from `profiles.role`, or `'guest'` when `author_id is null` - never client-supplied (FR-014) |
 | `page_kind` | `content_feedback_page_kind not null` | derived client-side from the page's own path (research.md R6), sent as-is - not itself sensitive, no server stamping needed |
 | `course_code` | `text not null` | |
 | `unit_no` | `integer` | null only when `page_kind = 'course_review'` |
@@ -95,6 +104,9 @@ create type public.content_feedback_status as enum ('open', 'planned', 'resolved
 | `resolution_ref` | `text` | a change reference (commit/PR), set only when resolving |
 | `created_at` | `timestamptz not null default now()` | |
 | `updated_at` | `timestamptz not null default now()` | |
+| `guest_email` | `text` | **`0037`** - set only when `author_id is null`; format-checked, never verified beyond that plus the confirmation click |
+| `guest_confirmation_token` | `uuid` | **`0037`** - set only when `guest_email is not null`; unique; the sole credential `confirm_guest_feedback()` checks |
+| `guest_confirmed_at` | `timestamptz` | **`0037`** - null until the guest clicks the emailed link; a triage signal, not a visibility gate (the admin queue shows the row either way) |
 
 Check constraints:
 
@@ -105,6 +117,11 @@ check (
 )
 check ((page_kind = 'topic') = (topic_no is not null))
 check ((page_kind = 'course_review') = (unit_no is null))
+-- 0037:
+check ((author_id is not null) <> (guest_email is not null))          -- exactly one identity
+check ((guest_email is not null) = (guest_confirmation_token is not null))
+check (guest_confirmed_at is null or guest_email is not null)
+check (guest_email is null or guest_email ~* '^[^@[:space:]]+@[^@[:space:]]+\.[^@[:space:]]+$')
 ```
 
 **RLS** (enabled):
@@ -117,13 +134,26 @@ check ((page_kind = 'course_review') = (unit_no is null))
 - `content_feedback_update` - `using (is_admin())`, `with check (is_admin())` - only the owner
   may ever update a row (FR-019); a guard trigger (below) narrows this further.
 - No `DELETE` policy.
+- **No `anon` policy of any kind on this table** (`0037`) - a guest submission never touches
+  `content_feedback` directly; see "Guest RLS/RPC" below.
 
 `grant select, insert, update on content_feedback to authenticated`.
+
+**Guest RLS/RPC (`0037`)**: `confirm_guest_feedback(p_token uuid) returns boolean`, `SECURITY
+DEFINER`, `grant execute ... to anon, authenticated`. Updates `guest_confirmed_at = now()` on the
+one row matching `p_token` where it is still null; returns `true` on success, `false` for an
+unknown or already-used token (never raises - a confirm page can't usefully distinguish "invalid"
+from "already used" from a boolean either, which is a documented simplification, not a gap). This
+is the *only* way an `anon` caller can affect this table at all - there is deliberately no `anon`
+INSERT policy, since the actual guest submission needs server-side validation and an email send
+that RLS cannot express (hence `guest-feedback-submit`, an Edge Function using the service role,
+covered in contracts/console-operations.md).
 
 **Trigger 1** `stamp_content_feedback_author_role()` (`BEFORE INSERT`, `SECURITY DEFINER`) -
 overwrites `new.author_role` with the inserting user's `profiles.role`, unconditionally, so a
 crafted `author_role` value in the client payload is discarded regardless of what was sent
-(FR-014).
+(FR-014). **`0037`**: when `new.author_id is null` (a guest row), sets `'guest'` directly rather
+than looking up a profile that doesn't exist for this insert.
 
 **Trigger 2** `enforce_content_feedback_status_transition()` (`BEFORE UPDATE`) - same shape as
 Spec 005's `enforce_suggestion_status_transition()` (`0031`), adapted to this lifecycle:
@@ -140,11 +170,11 @@ Spec 005's `enforce_suggestion_status_transition()` (`0031`), adapted to this li
 
 | Actor | `self_assessment_checks` | `content_feedback` |
 |---|---|---|
-| Signed-out visitor | no access (no `anon` grant) | no access |
+| Signed-out visitor | no access (no `anon` grant) | **`0037`**: no direct table access (still no `anon` grant) - submits via `guest-feedback-submit` (own row only, always `author_id null`) and confirms via `confirm_guest_feedback(token)`; cannot select any row back, including their own |
 | Student, own rows | select/insert/update own | select/insert own; no update |
 | Student, another student's rows | none | none |
 | Teacher | **none** (Art. VIII.1, FR-006) | select/insert own (as an author, same as a student); no update; cannot see another reader's rows |
-| Admin (curriculum owner) | select all (aggregate); no insert/update of another student's row | select all; update (status/note/ref) on any row |
+| Admin (curriculum owner) | select all (aggregate); no insert/update of another student's row | select all (guest rows included, confirmed or not); update (status/note/ref) on any row |
 
 ## File-based entities (no database)
 

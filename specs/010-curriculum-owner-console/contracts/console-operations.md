@@ -41,8 +41,12 @@ distinguishable "forbidden" signal that would itself leak that the table has row
 | Submit with a forged `author_role` or non-`open` `status` | same shape, explicit `author_role`/`status` in the payload | any reader | `author_role` **silently overwritten** by the stamping trigger; a non-`open` `status` is **denied** (RLS `WITH CHECK`) - FR-014 |
 | Submit a passage feedback item with `quoted_passage` null, or a whole-page item with `quoted_passage` set | any shape | any reader | **denied** (check constraint) |
 | Submit `comment` over 4,000 characters, or `quoted_passage`/`passage_context` over 2,000 characters each | any shape | any reader | **denied** (length-cap check constraint) - FR-017 |
-| Submit as a signed-out visitor | any shape | signed-out | **denied** - no `anon` grant exists on the table at all (FR-013) |
+| A signed-out visitor `insert`s directly into `content_feedback` | any shape | signed-out | **denied** - still no `anon` grant on the table at all, unchanged since `0033` |
+| **`0037` follow-up (2026-09-07)**: a signed-out visitor submits guest feedback | `supabase.functions.invoke('guest-feedback-submit', { body: { email, ...same fields as above } })` | signed-out (any caller) | 1 row, `author_id=null`, `author_role='guest'`, `guest_email` set, `guest_confirmation_token` generated, `status='open'` - inserted by the function's own service-role client (RLS bypassed, the function itself is the validation layer), then a confirmation email is sent; if sending fails the row is deleted and an error returned (all-or-nothing, no orphaned unconfirmable row) |
+| Guest submission with a hidden `website` field filled in (a bot, not a real reader) | same shape + `website: "<anything>"` | signed-out | function returns `{ ok: true }` **without** inserting or emailing anything - a honeypot, never revealed as such |
+| Guest clicks the emailed confirmation link | `supabase.rpc('confirm_guest_feedback', { p_token })` | signed-out (the token is the only credential) | `guest_confirmed_at` set on that one row, function returns `true`; a stale/reused/unknown token returns `false` (never raises) |
 | Read own feedback items | `select * from content_feedback where author_id = current_profile_id()` | signed-in reader | own rows only, every status/note visible - FR-015 |
+| A guest reads their own feedback back | any `select` | signed-out | **denied** - no `anon` SELECT policy exists; a guest's only trace of their submission is the confirmation email itself |
 | Read another reader's feedback item | any shape | any non-admin reader | **denied** |
 | Edit own already-submitted comment | any `UPDATE` shape | filing reader | **denied** - no reader `UPDATE` policy exists at all (Out of scope) |
 | Admin: filter the triage queue | `select * from content_feedback where status=... and course_code=... and unit_no=... and topic_no=... and scope=... and locale=...` (any subset) | admin only | matching rows across every reader, quoted passage included - FR-018 |
@@ -81,8 +85,11 @@ can surface *why* an out-of-sequence action failed.
    own enrolled-as-a-student account if they have one, under any filter.
 5. An admin can `SELECT` and aggregate `self_assessment_checks` across every student; a
    non-admin, non-owning caller cannot.
-6. A signed-out request against `content_feedback` (no JWT / `anon` role) is rejected outright -
-   no row is ever returned or inserted.
+6. A signed-out request *directly against* `content_feedback` (no JWT / `anon` role) is rejected
+   outright - no row is ever returned or inserted. **`0037` follow-up**: a signed-out visitor can
+   still submit feedback, but only through `guest-feedback-submit` (a service-role Edge Function,
+   not a direct table write) and only ever their own `author_id=null` row via that path; direct
+   `anon` access to the table itself remains fully denied, in both directions.
 7. A signed-in reader can insert a `content_feedback` row only with `status='submitted'`
    equivalent (`'open'`); any other explicit `status` on insert is rejected.
 8. A forged `author_role` in an insert payload is silently replaced by the trigger-computed value

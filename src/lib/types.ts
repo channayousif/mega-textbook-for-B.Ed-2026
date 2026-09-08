@@ -238,7 +238,9 @@ export type ContentFeedbackStatus = 'open' | 'planned' | 'resolved' | 'declined'
 
 export type ContentFeedback = {
   id: string;
-  author_id: string;
+  // Null for a guest submission (Spec 010 follow-up, 2026-09-07) - exactly
+  // one of author_id/guest_email is ever set (0037's pairing constraint).
+  author_id: string | null;
   author_role: string;
   page_kind: ContentFeedbackPageKind;
   course_code: string;
@@ -255,4 +257,7 @@ export type ContentFeedback = {
   resolution_ref: string | null;
   created_at: string;
   updated_at: string;
+  // Guest-only fields (all null on an author_id row).
+  guest_email: string | null;
+  guest_confirmed_at: string | null;
 };
