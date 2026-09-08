@@ -69,18 +69,25 @@ test('confirm-feedback: a real token confirms once and shows success; a bogus to
   if (insertError) throw new Error(`fixture insert: ${insertError.message}`);
 
   try {
+    // The trailing slash BEFORE the query string is load-bearing, not style: this
+    // site's `trailingSlash: true` build 301s `/app/confirm-feedback?...` (no slash)
+    // to `/app/confirm-feedback/` with the query string dropped entirely - verified
+    // directly against a served build (`Location: /app/confirm-feedback/`, no
+    // `?token=...`). guest-feedback-submit's own emailed link already includes it;
+    // this test has to reach the same URL its own way.
+
     // Real token - confirms and shows success.
-    await page.goto(`/app/confirm-feedback?token=${token}&locale=en`);
+    await page.goto(`/app/confirm-feedback/?token=${token}&locale=en`);
     await expect(page.getByTestId('confirm-feedback-message')).toContainText('confirmed');
     const { data: afterConfirm } = await svc.from('content_feedback').select('guest_confirmed_at').eq('id', row.id).single();
     expect(afterConfirm?.guest_confirmed_at).not.toBeNull();
 
     // Same token again - already used.
-    await page.goto(`/app/confirm-feedback?token=${token}&locale=en`);
+    await page.goto(`/app/confirm-feedback/?token=${token}&locale=en`);
     await expect(page.getByTestId('confirm-feedback-message')).toContainText(/invalid|already/);
 
     // A bogus token - also invalid, not an error.
-    await page.goto(`/app/confirm-feedback?token=${randomUUID()}&locale=en`);
+    await page.goto(`/app/confirm-feedback/?token=${randomUUID()}&locale=en`);
     await expect(page.getByTestId('confirm-feedback-message')).toContainText(/invalid|already/);
   } finally {
     await svc.from('content_feedback').delete().eq('id', row.id);

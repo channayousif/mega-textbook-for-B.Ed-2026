@@ -71,7 +71,15 @@ async function sendConfirmationEmail(email: string, token: string, locale: strin
   if (!apiKey || !from) return false;
 
   const siteUrl = Deno.env.get('SITE_URL') ?? 'https://www.a2ahs.com';
-  const confirmUrl = `${siteUrl}/app/confirm-feedback?token=${token}&locale=${locale}`;
+  // Trailing slash BEFORE the query string is load-bearing, not style: this site's
+  // `trailingSlash: true` build makes `/app/confirm-feedback` (no slash) 301 to
+  // `/app/confirm-feedback/` with the query string dropped entirely (verified directly
+  // against a served build - `Location: /app/confirm-feedback/`, no `?token=...`).
+  // Every other query-param link in this app (`loginUrlWithReturnTo`) has the same
+  // shape but is only ever reached via in-app client-side navigation, which never hits
+  // the server and so never triggers this redirect - this confirmation link is the
+  // first one meant to be opened fresh, from an email, so it has to get this right.
+  const confirmUrl = `${siteUrl}/app/confirm-feedback/?token=${token}&locale=${locale}`;
 
   const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',
