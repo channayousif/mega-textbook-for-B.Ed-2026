@@ -46,7 +46,7 @@ Content repo (Git) ── CI ──> validate front-matter ──> build EN+UR �
 
 ## Decisions Locked In (change requires spec amendment)
 1. **Docusaurus + Supabase** stack; dashboards embedded as Docusaurus custom pages. Both the
-   static site and Supabase are **self-hosted on the existing a2ahs.com VPS** — not Vercel/Netlify
+   static site and Supabase are **self-hosted on the existing VPS** — not Vercel/Netlify
    and not Supabase Cloud. *(Backend hosting amended 2026-07-18 — see Constitution v2.2.0 Art.
    V.1/V.6 and ADR-0006; the site itself has run self-hosted since its original deploy.)*
 2. **All 8 semesters scaffolded; content priority Semesters 1–4** (new 2026 scheme). Source of truth = the local `Scheme-and-Course-guides/` folder (board scheme + all 8 semester guides).
@@ -55,7 +55,7 @@ Content repo (Git) ── CI ──> validate front-matter ──> build EN+UR �
 5. **Golden unit** = EFMP-301 Educational Psychology, Unit 1 — sets the quality bar for all 3,000+ future documents.
 
 ## Decisions Still Needed From You
-1. ~~**Domain & hosting**: do you have a domain in mind, and is Vercel acceptable for the site host?~~ **Resolved**: `a2ahs.com`, self-hosted on the project's own VPS for both the site and the backend (Decision #1 above; ADR-0006).
+1. ~~**Domain & hosting**: do you have a domain in mind, and is Vercel acceptable for the site host?~~ **Resolved**: `textbook.com.pk`, self-hosted on the project's own VPS for both the site and the backend (Decision #1 above; ADR-0006).
 2. **Urdu review**: will you personally review Urdu drafts, or should the pipeline plan for a second reviewer?
 3. **Institution branding**: should the site carry University of Sindh / Faculty of Education branding (needs permission), or launch as an independent companion resource?
 4. **Suggestion access**: teachers only (as specced), or may students also file book suggestions?
