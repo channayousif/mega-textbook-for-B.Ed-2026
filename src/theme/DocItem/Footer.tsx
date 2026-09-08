@@ -4,7 +4,7 @@ import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import { useLocation } from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useAuth } from '@site/src/contexts/AuthContext';
-import { markUnitStudied } from '@site/src/lib/unitProgress';
+import { markUnitStudied, fetchOwnUnitProgress } from '@site/src/lib/unitProgress';
 import { fileSuggestion } from '@site/src/lib/suggestions';
 import { submitFeedback, fetchOwnFeedback } from '@site/src/lib/activityFeedback';
 import { findNearestSectionAnchor, type TocEntry } from '@site/src/lib/docPosition';
@@ -626,6 +626,11 @@ export default function DocItemFooterWrapper(): React.ReactElement {
   const { frontMatter } = useDoc() as { frontMatter: Record<string, unknown> };
   const { role, profile, loading, session } = useAuth();
   const [marked, setMarked] = useState(false);
+  // Whether the initial `unit_progress` read-back has resolved. Until it has,
+  // the "Mark as studied" button is withheld so a unit the student already
+  // marked never flashes as unmarked on load (the bug this mirrors the sibling
+  // FeedbackControl's `loaded` gate to fix).
+  const [markedHydrated, setMarkedHydrated] = useState(false);
   const [pending, setPending] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -650,6 +655,29 @@ export default function DocItemFooterWrapper(): React.ReactElement {
   }, []);
   const contentFeedbackPageKind = deriveContentFeedbackPageKind(location.pathname, courseCode, unitNo, topicLayoutUnitKeys);
 
+  // Spec 004 FR-006 read-back: a student who already marked this unit studied
+  // must see it as studied on every subsequent load, not just within the
+  // session that clicked. `unit_progress` is written correctly (RLS permits the
+  // self-mark, the row persists) - what was missing here is this hydrating read,
+  // the equivalent of FeedbackControl's own `fetchOwnFeedback` effect above.
+  React.useEffect(() => {
+    if (role !== 'student' || !profile || !courseCode || unitNo === null) {
+      setMarkedHydrated(true);
+      return;
+    }
+    let cancelled = false;
+    setMarkedHydrated(false);
+    (async () => {
+      const { data } = await fetchOwnUnitProgress();
+      if (cancelled) return;
+      if (data?.some((row) => row.course_code === courseCode && row.unit_no === unitNo)) {
+        setMarked(true);
+      }
+      setMarkedHydrated(true);
+    })();
+    return () => { cancelled = true; };
+  }, [role, profile, courseCode, unitNo]);
+
   async function handleMark(): Promise<void> {
     if (!profile || !courseCode || unitNo === null) return;
     setPending(true);
@@ -664,7 +692,7 @@ export default function DocItemFooterWrapper(): React.ReactElement {
 
   return (
     <>
-      {role === 'student' && courseCode && unitNo !== null && (
+      {role === 'student' && courseCode && unitNo !== null && (markedHydrated || marked) && (
         <div className="margin-top--md">
           {error && <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>}
           {marked ? (
