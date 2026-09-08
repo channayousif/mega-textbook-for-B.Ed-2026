@@ -22,7 +22,7 @@ authoring; US3 P2 = the proving unit; US4 P3 = the governance record).
 
 ## Phase 1: Setup
 
-- [ ] T001 Confirm the working branch is `012-visual-density-standard` and `npm test` is green at
+- [x] T001 Confirm the working branch is `012-visual-density-standard` and `npm test` is green at
   baseline (136 tests) before any change, so regressions are attributable.
 
 ---
@@ -32,11 +32,11 @@ authoring; US3 P2 = the proving unit; US4 P3 = the governance record).
 **⚠️ CRITICAL**: the archetype vocabulary must exist in the manifest library before the gate (US1)
 or the retrofit (US3) can use it.
 
-- [ ] T002 In `scripts/lib/figure-manifest.mjs`: replace `KIND_ENUM` (`['diagram','illustration']`)
+- [x] T002 In `scripts/lib/figure-manifest.mjs`: replace `KIND_ENUM` (`['diagram','illustration']`)
   with the six archetypes `['table','concept-map','flowchart','timeline','diagram','illustration']`;
   add `export const SCHEMATIC_ARCHETYPES = new Set(['concept-map','flowchart','timeline'])`. Keep
   the v1 (5-col) and v2 (7-col) header acceptance and every existing parse/validate path unchanged.
-- [ ] T003 [P] In `specs/009-figure-rendering/contracts/figure-manifest-v2.md`: add a short "v3
+- [x] T003 [P] In `specs/009-figure-rendering/contracts/figure-manifest-v2.md`: add a short "v3
   note" - the `Kind` column vocabulary widened from 2 to 6 values (the column name and the 7-col
   header are unchanged); `diagram`/`illustration` remain valid.
 
@@ -54,29 +54,29 @@ name says; the existing `figures-gate.test.mjs` cases stay green.
 
 ### Tests for User Story 1 (write first, expect FAIL against the current gate)
 
-- [ ] T004 [P] [US1] In `tests/unit/figures-gate.test.mjs`: fixture + case "passes a unit with
+- [x] T004 [P] [US1] In `tests/unit/figures-gate.test.mjs`: fixture + case "passes a unit with
   >= 2 carriers in every topic and >= 1 timeline" (extends the existing fixture harness /
   throwaway `CONTENT_ROOT` pattern).
-- [ ] T005 [P] [US1] Same file: case "fails when a `topic-NN.mdx` has only one carrier" - asserts
+- [x] T005 [P] [US1] Same file: case "fails when a `topic-NN.mdx` has only one carrier" - asserts
   the message names the file and the minimum of two.
-- [ ] T006 [P] [US1] Same file: case "fails when every topic has >= 2 carriers but no figure is a
+- [x] T006 [P] [US1] Same file: case "fails when every topic has >= 2 carriers but no figure is a
   concept-map / flowchart / timeline" - asserts the message names the unit and the schematic rule.
-- [ ] T007 [P] [US1] Same file: case "fails when a manifest row's archetype is blank or an unknown
+- [x] T007 [P] [US1] Same file: case "fails when a manifest row's archetype is blank or an unknown
   word" - asserts the message names the figure ID and lists the allowed values.
-- [ ] T008 [P] [US1] Same file: case "skips a legacy five-file unit (no `topic-*.mdx`)" - the
+- [x] T008 [P] [US1] Same file: case "skips a legacy five-file unit (no `topic-*.mdx`)" - the
   visual-density checks do not run; exit 0.
 
 ### Implementation for User Story 1
 
-- [ ] T009 [US1] In `scripts/check-figures.mjs`: change the per-topic carrier check from `>= 1` to
+- [x] T009 [US1] In `scripts/check-figures.mjs`: change the per-topic carrier check from `>= 1` to
   `>= 2` (the count near the current `:131-133`); message: `<file>: <n> figure(s), need at least 2`.
-- [ ] T010 [US1] In `scripts/check-figures.mjs`: add a per-unit pass - collect the unit's figure
+- [x] T010 [US1] In `scripts/check-figures.mjs`: add a per-unit pass - collect the unit's figure
   archetypes (from manifest rows, cross-checked against carriers) and fail if none is in
   `SCHEMATIC_ARCHETYPES`; message names the unit.
-- [ ] T011 [US1] In `scripts/check-figures.mjs`: for every carrier/row, require a resolved archetype
+- [x] T011 [US1] In `scripts/check-figures.mjs`: for every carrier/row, require a resolved archetype
   in `KIND_ENUM`; blank or unknown fails naming the figure ID. Keep this scoped to new-shape units
   (the existing `topic-*.mdx` guard); legacy units and coming-soon stubs still short-circuit.
-- [ ] T012 [US1] Run `npm test` - T004-T008 now pass and all pre-existing `figures-gate` and other
+- [x] T012 [US1] Run `npm test` - T004-T008 now pass and all pre-existing `figures-gate` and other
   unit tests stay green (the count rises from 136 by the 5 new cases).
 
 **Checkpoint**: the gate enforces FR-001/FR-002/FR-003; legacy/stub regression floor intact.
@@ -91,29 +91,29 @@ figures per topic and >= 1 schematic per unit; the content-spec Figure plan shap
 **Independent Test**: read the style guide and both skill copies - the rule text matches and the
 `version` is bumped; draft-plan a unit per the skill and confirm the figures gate passes first run.
 
-- [ ] T013 [US2] In `specs/content/style-guide.md`: rewrite the quantity rule in
+- [x] T013 [US2] In `specs/content/style-guide.md`: rewrite the quantity rule in
   `## Figure markers and manifests` (the "at least one figure per `topic-*.mdx`" line) and
   `## Diagram conventions` to state FR-001 (>= 2/topic), FR-002 (>= 1 concept-map/flowchart/
   timeline per unit), and FR-003 (the six-value archetype recorded on the manifest). Update the
   depth-gate-vs-human table row that summarises the automated figure checks.
-- [ ] T014 [US2] In `specs/content/style-guide.md`: bump front-matter `version` `"3.2"` -> `"3.3"`.
-- [ ] T015 [US2] Re-attest `specs/content/terminology.csv` against `version 3.3` (Spec 006 FR-007):
+- [x] T014 [US2] In `specs/content/style-guide.md`: bump front-matter `version` `"3.2"` -> `"3.3"`.
+- [x] T015 [US2] Re-attest `specs/content/terminology.csv` against `version 3.3` (Spec 006 FR-007):
   confirm `git diff` shows zero term rows changed; if a retrofit figure label needs a term not in
   the bank, add it here and note it, then re-run `check:pipeline-gate`.
-- [ ] T016 [P] [US2] In `.claude/skills/author-unit/references/structure-standard.md` (the
+- [x] T016 [P] [US2] In `.claude/skills/author-unit/references/structure-standard.md` (the
   style-guide twin): mirror the T013 rule text verbatim in this branch.
-- [ ] T017 [P] [US2] In `.claude/skills/author-unit/SKILL.md`: Step 3.1 - "plan 2-3
+- [x] T017 [P] [US2] In `.claude/skills/author-unit/SKILL.md`: Step 3.1 - "plan 2-3
   archetype-tagged figures per topic; ensure the unit has >= 1 concept-map/flowchart/timeline";
   Step 4 - each emitted manifest row carries an archetype in the `Kind` column.
-- [ ] T018 [P] [US2] In `.claude/skills/author-unit/references/figure-prompts.md`: replace the
+- [x] T018 [P] [US2] In `.claude/skills/author-unit/references/figure-prompts.md`: replace the
   ">= 1 marker per topic; more is fine" line with ">= 2 markers per topic, each tagged with an
   archetype; >= 1 concept-map/flowchart/timeline per unit"; add the archetype list + a one-line
   description of each.
-- [ ] T019 [P] [US2] In `.claude/skills/generate-figures/SKILL.md` (Step 1.3 classify) and
+- [x] T019 [P] [US2] In `.claude/skills/generate-figures/SKILL.md` (Step 1.3 classify) and
   `references/svg-authoring.md`: name the six archetypes and map each to an existing render route
   (table/concept-map/flowchart/timeline/diagram -> hand-authored SVG; illustration -> raster).
   The skill records the archetype on the manifest row it advances to `generated`/`placed`.
-- [ ] T020 [US2] Update the per-course content-spec Figure-plan shape: in
+- [x] T020 [US2] Update the per-course content-spec Figure-plan shape: in
   `specs/content/efmp-302/content-spec.md` `**Figure plan**` and the `### Topic list` `Figures`
   column, allow >= 2 figure IDs per topic each with an archetype; document the shape in the
   Spec 008 content-spec contract note if one exists.
