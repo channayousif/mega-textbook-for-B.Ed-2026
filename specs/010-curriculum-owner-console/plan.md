@@ -57,7 +57,7 @@ document (generated on demand, never stored).
 R9) are verified behavior-preserving by re-running the existing `figures-gate.test.mjs` and
 depth-gate fixture suites unchanged before the new report script is written (`quickstart.md`
 step 2).
-**Target Platform**: Same self-hosted VPS as Specs 001-009 (`www.a2ahs.com` + `api.a2ahs.com` ->
+**Target Platform**: Same self-hosted VPS as Specs 001-009 (`textbook.com.pk` + `api.textbook.com.pk` ->
 Kong -> self-hosted Supabase, ADR-0006/ADR-0007). No new infrastructure - the "refresh"
 control re-reads a build-time artifact rather than triggering a live rebuild (research.md R10),
 so no new deploy-trigger surface is added.
