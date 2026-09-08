@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Pull-based production deployer for www.a2ahs.com (this machine).
+# Pull-based production deployer for textbook.com.pk (this machine).
 #
 # Runs from cron every 5 minutes: if origin/main has a new commit AND its
 # ci.yml workflow run succeeded (build + e2e jobs both green), build it in
@@ -29,7 +29,7 @@ set -euo pipefail
 
 OWNER_REPO="channayousif/mega-textbook-for-B.Ed-2026"
 REPO="/home/a2ahs/deploy/mega_book"
-DOCROOT="/home/a2ahs/web/a2ahs.com/public_html"
+DOCROOT="/home/a2ahs/web/textbook.com.pk/public_html"
 STATE="/home/a2ahs/deploy/deployed-sha"
 LOG="/home/a2ahs/deploy/deploy.log"
 LOCK="/home/a2ahs/deploy/deploy.lock"

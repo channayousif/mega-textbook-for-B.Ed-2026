@@ -39,7 +39,7 @@ site_url = "http://localhost:3000"
 # the Vercel preview and production domains in the hosted project (quickstart.md §1.4).
 additional_redirect_urls = [
   "http://localhost:3000",
-  "https://www.a2ahs.com",
+  "https://textbook.com.pk",
 ]
 # FR-011a — long-lived, auto-refreshing sessions that survive browser restarts.
 jwt_expiry = 3600
