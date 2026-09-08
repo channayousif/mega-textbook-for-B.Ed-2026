@@ -61,6 +61,58 @@ export async function submitFeedback(input: SubmitFeedbackInput): Promise<Result
   return { data: (data as ContentFeedback) ?? null, error };
 }
 
+export type SubmitGuestFeedbackInput = Omit<SubmitFeedbackInput, 'authorId'> & {
+  email: string;
+  /** Honeypot - always empty for a real reader; never rendered visibly by the form. */
+  website?: string;
+};
+
+/**
+ * Spec 010 follow-up (2026-09-07) - a signed-out reader's feedback, identified only by an
+ * email address. Goes through guest-feedback-submit (an Edge Function using the service
+ * role) rather than a direct table insert: content_feedback has no anon INSERT policy at
+ * all (0037_content_feedback_guest_access.sql's file comment explains why), so this is the
+ * only way a signed-out visitor can create a row here. The function itself re-validates
+ * everything server-side (never trust a payload with no RLS behind it) and sends a
+ * confirmation email before the item is treated as confirmed - see confirm-feedback.tsx.
+ */
+export async function submitGuestFeedback(input: SubmitGuestFeedbackInput): Promise<Result<{ ok: true }>> {
+  const supabase = await client();
+  const { data, error } = await supabase.functions.invoke('guest-feedback-submit', {
+    body: {
+      email: input.email,
+      pageKind: input.pageKind,
+      courseCode: input.courseCode,
+      unitNo: input.unitNo,
+      topicNo: input.topicNo,
+      locale: input.locale,
+      sectionAnchor: input.sectionAnchor,
+      scope: input.scope,
+      quotedPassage: input.quotedPassage,
+      passageContext: input.passageContext,
+      comment: input.comment,
+      website: input.website,
+    },
+  });
+  if (error) return { data: null, error };
+  return { data: data as { ok: true }, error: null };
+}
+
+/**
+ * Spec 010 follow-up (2026-09-07) - confirms a guest's emailed link. SECURITY DEFINER RPC
+ * (0037); the token itself is the credential, so this works for a fully signed-out caller.
+ * Returns `true` only the first time a given token is confirmed (idempotent-safe: a second
+ * click, or a stale/forged token, returns `false` rather than erroring - confirm-feedback.tsx
+ * treats that as "invalid or already used", not distinguishing the two, since the RPC itself
+ * can't tell them apart from a boolean).
+ */
+export async function confirmGuestFeedback(token: string): Promise<Result<boolean>> {
+  const supabase = await client();
+  const { data, error } = await supabase.rpc('confirm_guest_feedback', { p_token: token });
+  if (error) return { data: null, error };
+  return { data: Boolean(data), error: null };
+}
+
 /** FR-015 - every feedback item the signed-in reader has filed, most-recent-first. */
 export async function fetchOwnFeedback(): Promise<Result<ContentFeedback[]>> {
   const supabase = await client();
