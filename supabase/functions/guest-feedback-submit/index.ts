@@ -70,7 +70,7 @@ async function sendConfirmationEmail(email: string, token: string, locale: strin
   const from = Deno.env.get('RESEND_FROM_EMAIL');
   if (!apiKey || !from) return false;
 
-  const siteUrl = Deno.env.get('SITE_URL') ?? 'https://www.a2ahs.com';
+  const siteUrl = Deno.env.get('SITE_URL') ?? 'https://textbook.com.pk';
   // Trailing slash BEFORE the query string is load-bearing, not style: this site's
   // `trailingSlash: true` build makes `/app/confirm-feedback` (no slash) 301 to
   // `/app/confirm-feedback/` with the query string dropped entirely (verified directly
