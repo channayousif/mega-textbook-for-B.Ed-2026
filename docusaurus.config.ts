@@ -23,7 +23,7 @@ const config: Config = {
   title: 'B.Ed Mega Textbook',
   tagline: 'Bilingual digital textbook for the B.Ed (4-Year) programme',
   favicon: 'img/favicon.ico',
-  url: 'https://www.a2ahs.com',
+  url: 'https://textbook.com.pk',
   baseUrl: '/',
   trailingSlash: true, // emit /path/index.html so plain static file servers (nginx/Apache) serve directory URLs
   onBrokenLinks: 'warn',
