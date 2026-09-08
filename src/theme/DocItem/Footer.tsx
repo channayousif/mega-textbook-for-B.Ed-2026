@@ -8,7 +8,10 @@ import { markUnitStudied } from '@site/src/lib/unitProgress';
 import { fileSuggestion } from '@site/src/lib/suggestions';
 import { submitFeedback, fetchOwnFeedback } from '@site/src/lib/activityFeedback';
 import { findNearestSectionAnchor, type TocEntry } from '@site/src/lib/docPosition';
-import { submitFeedback as submitContentFeedback } from '@site/src/lib/contentFeedback';
+import {
+  submitFeedback as submitContentFeedback,
+  submitGuestFeedback,
+} from '@site/src/lib/contentFeedback';
 import { fetchContentIndex } from '@site/src/lib/assignments';
 import type { SuggestionCategory, TeachingLogSourceKind, ContentFeedbackPageKind, ContentFeedbackScope } from '@site/src/lib/types';
 
@@ -77,6 +80,25 @@ const MESSAGES = {
   contentFeedbackSubmitting: { en: 'Submitting…', ur: 'جمع ہو رہا ہے…' },
   contentFeedbackSubmitted: { en: 'Feedback submitted ✓', ur: 'رائے جمع ہو گئی ✓' },
   contentFeedbackError: { en: 'Could not submit feedback.', ur: 'رائے جمع نہیں ہو سکی۔' },
+  // Spec 010 follow-up (2026-09-07) - a curriculum owner report that (a) nothing hinted
+  // text selection triggers passage-specific feedback until AFTER opening the form, (b)
+  // the control silently disappeared once given once per page (never actually limited
+  // server-side - a dead-end "submitted" state with no way back), and (c) only a signed-in
+  // student/teacher could give feedback at all, with no path for a guest reader.
+  contentFeedbackSelectionTip: {
+    en: 'Tip: select any text on this page first to comment on that specific passage - or leave nothing selected for general feedback.',
+    ur: 'تجویز: کسی خاص اقتباس پر رائے دینے کے لیے پہلے اس صفحے پر کوئی متن منتخب کریں - یا عمومی رائے کے لیے کچھ منتخب نہ کریں۔',
+  },
+  contentFeedbackGiveMore: { en: 'Give more feedback', ur: 'مزید رائے دیں' },
+  contentFeedbackEmailLabel: { en: 'Your email', ur: 'آپ کا ای میل' },
+  contentFeedbackGuestExplain: {
+    en: 'You\'re not signed in, so we\'ll email you a link to confirm this is really you - your feedback only reaches the curriculum owner once you click it.',
+    ur: 'آپ سائن ان نہیں ہیں، اس لیے ہم آپ کو ایک تصدیقی لنک ای میل کریں گے - آپ کی رائے نصاب کے ذمہ دار تک تب ہی پہنچے گی جب آپ اس لنک پر کلک کریں گے۔',
+  },
+  contentFeedbackGuestPending: {
+    en: 'Feedback recorded - check your email and click the confirmation link to send it.',
+    ur: 'رائے محفوظ ہو گئی - اپنا ای میل چیک کریں اور اسے بھیجنے کے لیے تصدیقی لنک پر کلک کریں۔',
+  },
 } as const;
 
 const CONTENT_FEEDBACK_PASSAGE_LIMIT = 2000;
@@ -177,9 +199,26 @@ function ContentFeedbackControl({
   const [quotedPassage, setQuotedPassage] = useState<string | null>(null);
   const [passageContext, setPassageContext] = useState<string | null>(null);
   const [comment, setComment] = useState('');
+  const [email, setEmail] = useState('');
+  // Honeypot (Spec 010 follow-up) - a real reader never sees or fills this
+  // (visually hidden, tabIndex=-1); a bot filling in every field usually
+  // does. Filled -> the Edge Function silently pretends success.
+  const [website, setWebsite] = useState('');
   const [pending, setPending] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  function resetForm(): void {
+    setOpen(false);
+    setScope('whole_page');
+    setQuotedPassage(null);
+    setPassageContext(null);
+    setComment('');
+    setEmail('');
+    setWebsite('');
+    setSubmitted(false);
+    setError(null);
+  }
 
   function handleOpen(): void {
     setError(null);
@@ -203,11 +242,9 @@ function ContentFeedbackControl({
 
   async function handleSubmit(e: React.FormEvent): Promise<void> {
     e.preventDefault();
-    if (!profile) return;
     setPending(true);
     setError(null);
-    const { error: submitError } = await submitContentFeedback({
-      authorId: profile.id,
+    const shared = {
       pageKind,
       courseCode,
       unitNo,
@@ -218,7 +255,10 @@ function ContentFeedbackControl({
       quotedPassage,
       passageContext,
       comment,
-    });
+    };
+    const { error: submitError } = profile
+      ? await submitContentFeedback({ authorId: profile.id, ...shared })
+      : await submitGuestFeedback({ email, website, ...shared });
     setPending(false);
     if (submitError) {
       setError(MESSAGES.contentFeedbackError[locale]);
@@ -228,13 +268,36 @@ function ContentFeedbackControl({
   }
 
   if (submitted) {
-    return <p data-testid="content-feedback-submitted">{MESSAGES.contentFeedbackSubmitted[locale]}</p>;
+    return (
+      <div>
+        <p data-testid="content-feedback-submitted">
+          {profile ? MESSAGES.contentFeedbackSubmitted[locale] : MESSAGES.contentFeedbackGuestPending[locale]}
+        </p>
+        {/* FR: feedback was never actually limited to once per page server-side - this was
+            a dead-end UI state with no way back short of a reload. A reader (of any kind)
+            may leave as many separate items as they like in one visit. */}
+        <button
+          type="button"
+          className="button button--link button--sm"
+          data-testid="content-feedback-again"
+          onClick={resetForm}
+        >
+          {MESSAGES.contentFeedbackGiveMore[locale]}
+        </button>
+      </div>
+    );
   }
 
   if (!open) {
     return (
       <>
         {error && <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>}
+        {/* Upfront guidance (Spec 010 follow-up) - previously the only hint about text
+            selection triggering passage-specific feedback appeared AFTER opening the form,
+            i.e. only once a reader had already found the mechanism by accident. */}
+        <p data-testid="content-feedback-selection-hint" className="margin-bottom--sm">
+          {MESSAGES.contentFeedbackSelectionTip[locale]}
+        </p>
         <button
           type="button"
           className="button button--secondary button--sm"
@@ -256,6 +319,34 @@ function ContentFeedbackControl({
       {scope === 'passage' && quotedPassage && (
         <blockquote data-testid="content-feedback-quoted-passage">{quotedPassage}</blockquote>
       )}
+      {!profile && (
+        <div className="margin-bottom--sm">
+          <label htmlFor="content-feedback-email">{MESSAGES.contentFeedbackEmailLabel[locale]}</label>
+          <input
+            id="content-feedback-email"
+            type="email"
+            className="input"
+            data-testid="content-feedback-email-input"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <p data-testid="content-feedback-guest-explain">{MESSAGES.contentFeedbackGuestExplain[locale]}</p>
+        </div>
+      )}
+      {/* Honeypot field - off-screen, unreachable by keyboard (tabIndex=-1), and never
+          labelled as anything a real reader would want to fill in. */}
+      <div style={{ position: 'absolute', left: '-9999px', top: 'auto' }} aria-hidden="true">
+        <label htmlFor="content-feedback-website">Website</label>
+        <input
+          id="content-feedback-website"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          value={website}
+          onChange={(e) => setWebsite(e.target.value)}
+        />
+      </div>
       <div className="margin-bottom--sm">
         <textarea
           data-testid="content-feedback-comment-textarea"
@@ -533,7 +624,7 @@ function FeedbackControl({
 export default function DocItemFooterWrapper(): React.ReactElement {
   const locale = useLocale();
   const { frontMatter } = useDoc() as { frontMatter: Record<string, unknown> };
-  const { role, profile } = useAuth();
+  const { role, profile, loading, session } = useAuth();
   const [marked, setMarked] = useState(false);
   const [pending, setPending] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -600,7 +691,18 @@ export default function DocItemFooterWrapper(): React.ReactElement {
           <FeedbackControl courseCode={courseCode} unitNo={unitNo} sourceKind={sourceKind} />
         </div>
       )}
-      {(role === 'student' || role === 'teacher') && courseCode && contentFeedbackPageKind && (
+      {/*
+        Spec 010 follow-up (2026-09-07) - was `role === 'student' || role === 'teacher'`
+        only, silently excluding every signed-out reader and admin. Opened to any
+        signed-out visitor too (as a guest, ContentFeedbackControl's own email path) -
+        `!loading && !session` rather than a bare `!session`, so this doesn't flash into
+        guest mode for an instant while a real student/teacher's session is still
+        resolving (same `loading`-gated pattern as Content.tsx's self-assessment
+        checklist and NavbarAuthWidget). Admin stays excluded on purpose: admin already
+        has the owner console to act on every item directly, not a reason to give
+        feedback to themselves.
+      */}
+      {!loading && (role === 'student' || role === 'teacher' || !session) && courseCode && contentFeedbackPageKind && (
         <div className="margin-top--md">
           <ContentFeedbackControl
             courseCode={courseCode}

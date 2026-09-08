@@ -6,8 +6,16 @@ import { createClient } from '@supabase/supabase-js';
  * whole-page feedback and, separately, selects a sentence and submits
  * passage feedback, in both `en` and `ur`, and on a small viewport - each
  * submission timed under 30 seconds by the test clock (SC-003;
- * `/sp.analyze` finding G3); confirms a signed-out visitor sees no feedback
- * control at all on the same page (FR-010-013; US2 AS1-3).
+ * `/sp.analyze` finding G3); confirms the upfront text-selection guidance is
+ * visible before the form is even opened, and that submitting does not dead-
+ * end the control - "Give more feedback" resets it for another item on the
+ * same page (Spec 010 follow-up, 2026-09-07; feedback was never actually
+ * limited to once per page server-side, only by a UI with no way back).
+ *
+ * A signed-out visitor's own path (the guest-email + confirmation-email
+ * flow this same follow-up opened up) is covered separately in
+ * guest-feedback-submission.spec.ts - a signed-out visitor is no longer
+ * denied the control at all, so this file no longer asserts that.
  */
 const SUPABASE_URL = process.env.DOCUSAURUS_SUPABASE_URL;
 const ANON_KEY = process.env.DOCUSAURUS_SUPABASE_ANON_KEY;
@@ -46,7 +54,7 @@ async function selectFirstParagraphAndOpenFeedback(page: import('@playwright/tes
   });
 }
 
-test('a reader submits whole-page and passage feedback in both locales and on a small viewport; a signed-out visitor sees no control', async ({ browser }) => {
+test('a reader submits whole-page and passage feedback in both locales and on a small viewport, with upfront guidance and a "give more feedback" path', async ({ browser }) => {
   const svc = createClient(SUPABASE_URL!, SERVICE_KEY!, { auth: { persistSession: false } });
   const tag = Date.now();
   const email = `e2e-content-feedback-${tag}@example.test`;
@@ -58,20 +66,27 @@ test('a reader submits whole-page and passage feedback in both locales and on a 
   const page = await context.newPage();
 
   try {
-    // Signed-out visitor sees no feedback control at all.
-    await page.goto(TOPIC_PATH);
-    await expect(page.getByTestId('content-feedback-button')).toHaveCount(0);
-
     await signIn(page, email);
 
-    // Whole-page feedback, EN, default viewport.
+    // Whole-page feedback, EN, default viewport - the selection-tip is visible
+    // BEFORE the form opens (previously only shown after, inside the opened form).
     await page.goto(TOPIC_PATH);
     let start = Date.now();
+    await expect(page.getByTestId('content-feedback-selection-hint')).toBeVisible();
     await page.getByTestId('content-feedback-button').click();
     await page.getByTestId('content-feedback-comment-textarea').fill('This page could use a clearer example.');
     await page.getByTestId('content-feedback-submit-button').click();
     await expect(page.getByTestId('content-feedback-submitted')).toBeVisible();
     expect(Date.now() - start).toBeLessThan(30_000);
+
+    // "Give more feedback" resets the control for a second item on the same
+    // page, in the same visit - no reload, no once-per-page dead end.
+    await page.getByTestId('content-feedback-again').click();
+    await expect(page.getByTestId('content-feedback-button')).toBeVisible();
+    await page.getByTestId('content-feedback-button').click();
+    await page.getByTestId('content-feedback-comment-textarea').fill('A second, separate piece of feedback on the same page.');
+    await page.getByTestId('content-feedback-submit-button').click();
+    await expect(page.getByTestId('content-feedback-submitted')).toBeVisible();
 
     // Passage feedback, EN, small viewport (360px).
     await page.setViewportSize({ width: 360, height: 800 });
@@ -97,7 +112,7 @@ test('a reader submits whole-page and passage feedback in both locales and on a 
 
     const { data: profile } = await svc.from('profiles').select('id').eq('auth_user_id', user.user!.id).single();
     const { data: filed } = await svc.from('content_feedback').select('*').eq('author_id', profile!.id);
-    expect(filed).toHaveLength(3);
+    expect(filed).toHaveLength(4);
   } finally {
     const { data: profile } = await svc.from('profiles').select('id').eq('auth_user_id', user.user!.id).single();
     if (profile) await svc.from('content_feedback').delete().eq('author_id', profile.id);

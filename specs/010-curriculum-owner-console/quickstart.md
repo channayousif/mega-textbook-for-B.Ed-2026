@@ -10,6 +10,7 @@ supabase/migrations/0033_content_feedback.sql
 supabase/migrations/0034_content_feedback_author_role_trigger.sql
 supabase/migrations/0035_content_feedback_status_transitions.sql
 supabase/migrations/0036_self_assessment_checks_student_role_guard.sql
+supabase/migrations/0037_content_feedback_guest_access.sql
 ```
 
 `0036` is a post-implementation addition (not in the original plan): RLS regression testing
@@ -18,6 +19,12 @@ check says nothing about the caller's *role*, so a teacher could insert a row na
 profile id and read it straight back - `0036` adds an `is_student()` helper (mirrors
 `is_admin()`) and requires it in both policies' `WITH CHECK`, closing the gap at the database
 layer to match `DocItem/Content.tsx`'s client-side role gate (Constitution Art. IX.2).
+
+`0037` is a second post-implementation follow-up (2026-09-07, curriculum-owner request): opens
+`content_feedback` to a signed-out guest, nullable `author_id` + `guest_email`/
+`guest_confirmation_token`/`guest_confirmed_at`, plus `confirm_guest_feedback()` (`SECURITY
+DEFINER`, `anon`-executable). See "6. Guest feedback (Edge Function + Resend)" below for the
+non-SQL half of this change - it does not work from the migration alone.
 
 `0032` includes its own `enforce_self_assessment_immutable_identity()` guard trigger and RLS in
 one file (mirrors the single-file precedent of `0024_unit_progress.sql`); `content_feedback`'s
@@ -88,7 +95,55 @@ re-derive any of this logic itself).
    explicitly resolve (or decline) each addressed item, optionally citing the merge commit/PR as
    `resolution_ref` (FR-024 - the skill itself never touches `status`).
 
-## 6. Verification checklist
+## 6. Guest feedback (Edge Function + Resend) — 2026-09-07 follow-up
+
+`0037`'s schema half is not enough on its own — a signed-out submission needs its own
+server-side validation and a confirmation email, which is exactly what
+`supabase/functions/guest-feedback-submit/` exists for (self-hosted Edge Functions, same
+deploy mechanism as `admin-suspend`/`admin-list-users` — see `specs/002-authentication/
+quickstart.md` §7, "Edge Functions — admin user list, suspension & deletion").
+
+1. Deploy the function code (hot-loaded, no restart):
+   ```bash
+   cp -r supabase/functions/* supabase-project/volumes/functions/
+   ```
+2. Wire the Resend credential into the `functions` service in `supabase-project/docker-compose.yml`
+   (the SAME account/key already verified for GoTrue's SMTP relay, ADR-0006 — called over
+   Resend's HTTP API here instead of SMTP, no new external secret):
+   ```yaml
+   environment:
+     RESEND_API_KEY: ${SMTP_PASS}
+     RESEND_FROM_EMAIL: ${SMTP_ADMIN_EMAIL}
+     SITE_URL: https://www.a2ahs.com
+   ```
+   Unlike a function-code change, an environment change needs the container recreated:
+   ```bash
+   docker compose up -d functions
+   ```
+3. Verify directly (no browser needed) — a real request should insert a row, stamp
+   `author_role='guest'`, and get a `200` back only once Resend actually accepts the send:
+   ```bash
+   curl -X POST "$DOCUSAURUS_SUPABASE_URL/functions/v1/guest-feedback-submit" \
+     -H "Content-Type: application/json" -H "apikey: $DOCUSAURUS_SUPABASE_ANON_KEY" \
+     -d '{"email":"you@example.com","pageKind":"topic","courseCode":"EFMP-302","topicNo":1,
+          "unitNo":1,"locale":"en","scope":"whole_page","comment":"test"}'
+   ```
+   Then confirm with the token the row got (`select guest_confirmation_token from
+   content_feedback order by created_at desc limit 1`):
+   ```bash
+   curl -X POST "$DOCUSAURUS_SUPABASE_URL/rest/v1/rpc/confirm_guest_feedback" \
+     -H "Content-Type: application/json" -H "apikey: $DOCUSAURUS_SUPABASE_ANON_KEY" \
+     -d '{"p_token":"<token>"}'   # -> true, once; -> false on a second call
+   ```
+4. This function is deliberately **not** covered by the automated RLS/e2e suites — a real call
+   sends a real email through the production relay every time, which repeated CI runs would turn
+   into a steady stream of bounces to necessarily-fake addresses (a sending-domain reputation
+   risk ADR-0006 already treats as a real concern). Verify it by hand, the same way
+   `admin-suspend`/`admin-list-users`/`delete-account` already are (that same §7's own "Common
+   failure modes" table). `tests/rls/content-feedback-guest-access.test.mjs` covers everything
+   the schema/RPC can be tested for without touching the function or Resend at all.
+
+## 7. Verification checklist
 
 - [ ] A student ticks two items on one topic in EN; reload, and on a second signed-in browser,
       both show ticked (SC-001).
@@ -122,6 +177,13 @@ re-derive any of this logic itself).
       change" guarantee (`/sp.analyze` finding I1).
 - [ ] The existing "suggest improvement" flow (`SuggestImprovementControl`) and unit-coverage
       self-marking (`markUnitStudied`) behave exactly as before (SC-009, regression floor).
+- [ ] **2026-09-07 follow-up**: a signed-out visitor sees the same feedback control as a signed-in
+      reader, with upfront text-selection guidance visible before the form opens (FR-010a); after
+      submitting, "Give more feedback" resets the control for a second item on the same page
+      without a reload (FR-012a); a guest's submission requires an email, and the confirmation
+      page (`/app/confirm-feedback`) correctly reports success for a real token, and "invalid or
+      already used" for a stale or unknown one (FR-013); the triage queue's Author column shows
+      a signed-in reader's role or a guest's email + confirmation status (FR-018a).
 
 ## Failure modes most likely to bite
 
