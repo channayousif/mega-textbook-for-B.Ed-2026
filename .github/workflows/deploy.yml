@@ -1,6 +1,6 @@
 name: Deploy (GitHub Pages fallback)
 
-# Production is the self-hosted origin (www.a2ahs.com on the project's own
+# Production is the self-hosted origin (textbook.com.pk on the project's own
 # server, deployed by scripts/deploy-prod.sh via cron — pull-based, CI-gated).
 # This workflow is only the never-enabled GitHub Pages fallback (research R9);
 # it 404s on every run because Pages was never turned on in repo settings, so
