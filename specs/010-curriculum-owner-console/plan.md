@@ -11,7 +11,14 @@ owner triage queue feeding a documented, assistant-driven revision loop (1B); a 
 curriculum-owner overview at `/app/admin/overview` (1C); and a content/figure status report
 reused by that overview and by CI (1D). Two new Supabase Postgres tables
 (`self_assessment_checks`, `content_feedback`) extend Specs 002-005's schema with RLS as the sole
-authorization layer - no application server, no new Edge Function. The checklist becomes
+authorization layer - no application server. **Amended 2026-09-07** (spec.md Clarifications):
+this originally read "no new Edge Function" too, true for the feature as it shipped; opening
+reader feedback to a signed-out guest (a follow-up the curriculum owner asked for after using the
+feature) is a public, unauthenticated write with its own server-side validation and a
+confirmation email RLS cannot express - `guest-feedback-submit`, one new Edge Function using the
+service role, the same escape hatch Spec 002's `admin-suspend`/`admin-list-users` already
+established for exactly this class of problem (a privileged or validation-heavy action RLS alone
+can't gate). The checklist becomes
 interactive **without editing a single topic file** (FR-008) by hydrating Spec 008's existing
 disabled checkboxes client-side, keyed by position, not text (research.md R1-R3). Reader feedback
 reuses `window.getSelection()` for passage capture (no new dependency, research.md R7) and is a
@@ -54,12 +61,16 @@ step 2).
 Kong -> self-hosted Supabase, ADR-0006/ADR-0007). No new infrastructure - the "refresh"
 control re-reads a build-time artifact rather than triggering a live rebuild (research.md R10),
 so no new deploy-trigger surface is added.
-**Project Type**: Web - static frontend + self-hosted backend; no application server. Zero Edge
-Functions, zero new client-writable RPCs - two guard triggers
+**Project Type**: Web - static frontend + self-hosted backend; no application server. Zero
+client-writable RPCs beyond `confirm_guest_feedback()` (2026-09-07 addition, `SECURITY DEFINER`,
+callable by `anon` - the emailed token is itself the sole credential, the same "the secret IS the
+authorization" shape as any confirm-by-link flow) - two guard triggers
 (`enforce_self_assessment_immutable_identity()`,
 `enforce_content_feedback_status_transition()`) plus one stamping trigger
-(`stamp_content_feedback_author_role()`), all reached via ordinary RLS-authorized PostgREST
-calls, same pattern as Spec 005's `enforce_suggestion_status_transition()`.
+(`stamp_content_feedback_author_role()`, extended 2026-09-07 to stamp `'guest'` when there is no
+profile to look a role up from), all reached via ordinary RLS-authorized PostgREST calls, same
+pattern as Spec 005's `enforce_suggestion_status_transition()`. One Edge Function
+(`guest-feedback-submit`, 2026-09-07) - see Summary above.
 **Performance Goals**: No new performance budget - reuses the existing < 200 KB first-load budget
 (Art. V.5) and Spec 003 SC-005's 5-second p95 for class-scale actions as the reference point for
 the console's own queries, which run at admin-single-user scale, not per-class-of-200.
@@ -157,13 +168,14 @@ src/
 ├── theme/
 │   └── DocItem/
 │       └── Content.tsx              # NEW SWIZZLE - checklist hydration (contracts/self-assessment-hydration.md); passes through unmodified for every non-topic page
-│       # Footer.tsx (EDITED, not new) - adds the reader ContentFeedbackControl (any signed-in reader, 5 page kinds, research.md R6) alongside the existing student/teacher controls; resolves the one page-kind ambiguity (a bare unit-NN URL could be either layout's index.mdx) via a one-time content-index.json fetch for topic-layout unit membership
+│       # Footer.tsx (EDITED, not new) - adds the reader ContentFeedbackControl (any reader - signed-in OR a signed-out guest since the 2026-09-07 follow-up, 5 page kinds, research.md R6) alongside the existing student/teacher controls; resolves the one page-kind ambiguity (a bare unit-NN URL could be either layout's index.mdx) via a one-time content-index.json fetch for topic-layout unit membership; 2026-09-07 additions: upfront selection guidance (previously shown only after opening the form), a "give more feedback" reset (submission was never actually limited to once per page, only the UI dead-ended there), a guest email field + honeypot when signed out
 ├── components/
 │   └── OwnerConsoleGuard.tsx        # NEW - owner-only gate for /app/admin/overview AND /app/admin/feedback-queue (both routes use this guard in the final implementation, not the generic AuthGuard), mirrors StudentDashboardGuard's dedicated-message pattern
 └── pages/app/
+    ├── confirm-feedback.tsx         # NEW (2026-09-07 follow-up) - the guest confirmation landing page; outside every auth guard on purpose, reached only via the emailed link
     ├── admin/
     │   ├── overview.tsx             # NEW - the console (Story 3): content-status panel (+ refresh, T037), feedback summary + inline triage (T036), self-assessment aggregate, progress aggregates (reuses fetchOwnUnitProgress()/fetchEarnedAchievements() unmodified - under an admin session, is_admin()'s own RLS branch already returns every student's rows), catalog-edit form (T038)
-    │   └── feedback-queue.tsx       # NEW - the full triage queue (Story 2): filter, quoted-passage-in-context, transitions, export (T033)
+    │   └── feedback-queue.tsx       # NEW - the full triage queue (Story 2): filter, quoted-passage-in-context, transitions, export (T033); 2026-09-07 - + an Author column (role, or a guest's email + confirmation status)
     └── dashboard/
         └── progress.tsx             # EDITED - + self-assessment roll-up panel (FR-004), kept visually separate from the existing unit-coverage panel
 
@@ -190,7 +202,12 @@ supabase/migrations/
 ├── 0032_self_assessment_checks.sql            # table + RLS + enforce_self_assessment_immutable_identity() + touch_updated_at trigger
 ├── 0033_content_feedback.sql                  # table + 3 enums + RLS
 ├── 0034_content_feedback_author_role_trigger.sql   # stamp_content_feedback_author_role()
-└── 0035_content_feedback_status_transitions.sql    # enforce_content_feedback_status_transition() + touch_updated_at trigger
+├── 0035_content_feedback_status_transitions.sql    # enforce_content_feedback_status_transition() + touch_updated_at trigger
+├── 0036_self_assessment_checks_student_role_guard.sql  # is_student() guard on self_assessment_checks INSERT/UPDATE (drift, found during post-implementation verification - see quickstart.md)
+└── 0037_content_feedback_guest_access.sql     # NEW (2026-09-07 follow-up) - nullable author_id + guest_email/guest_confirmation_token/guest_confirmed_at columns, the exclusive-or/format/pairing check constraints, stamp_content_feedback_author_role() extended for a guest insert, confirm_guest_feedback() RPC (anon-executable)
+
+supabase/functions/
+└── guest-feedback-submit/           # NEW (2026-09-07 follow-up) - the only way an anon caller can create a content_feedback row; service-role insert + Resend confirmation email (reuses the same credential already verified for GoTrue's SMTP relay, ADR-0006, called over Resend's HTTP API instead); verified manually (curl, both the happy path and every rejection shape) per quickstart.md's own precedent for admin-suspend/admin-list-users - not covered by the automated RLS/e2e suites, since those would otherwise send a real email on every run
 
 guides/
 ├── student-guide/                    # EDITED (existing tree, Spec 004) - + a section on the self-assessment checklist and giving feedback

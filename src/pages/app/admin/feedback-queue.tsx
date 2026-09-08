@@ -27,6 +27,23 @@ const NEXT_STATUSES: Record<ContentFeedbackStatus, ContentFeedbackStatus[]> = {
   declined: ['open'],
 };
 
+/**
+ * Spec 010 follow-up (2026-09-07) - the queue previously showed no author
+ * information at all, for anyone. Now that a row can also come from a
+ * signed-out guest (0037_content_feedback_guest_access.sql), "graceful"
+ * means: a signed-in reader shows their role (all this table stores -
+ * `content_feedback` deliberately carries no name/email for a signed-in
+ * author, Art. VIII.2, same reasoning as `profiles` having none); a guest
+ * shows their self-reported email plus whether they've actually clicked the
+ * confirmation link yet, since an unconfirmed item is still real feedback
+ * (visible here either way) but not yet reader-verified.
+ */
+function formatAuthor(row: ContentFeedback): string {
+  if (row.author_id) return row.author_role;
+  const confirmed = row.guest_confirmed_at ? 'confirmed' : 'unconfirmed';
+  return `Guest (${row.guest_email}) - ${confirmed}`;
+}
+
 function ExportUnitFeedbackControl(): React.ReactElement {
   const [courseCode, setCourseCode] = useState('');
   const [unitNo, setUnitNo] = useState('');
@@ -241,6 +258,7 @@ function AdminFeedbackQueueContent(): React.ReactElement {
           <thead>
             <tr>
               <th>Page</th>
+              <th>Author</th>
               <th>Scope / quoted passage</th>
               <th>Comment</th>
               <th>Status</th>
@@ -256,6 +274,7 @@ function AdminFeedbackQueueContent(): React.ReactElement {
                   {row.course_code} / Unit {row.unit_no ?? '-'}
                   {row.topic_no ? ` / Topic ${row.topic_no}` : ''} ({row.page_kind}, {row.locale})
                 </td>
+                <td data-testid="feedback-author">{formatAuthor(row)}</td>
                 <td>
                   {row.scope === 'passage' && row.quoted_passage ? (
                     <blockquote data-testid="feedback-quoted-passage">{row.quoted_passage}</blockquote>
