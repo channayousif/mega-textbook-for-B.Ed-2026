@@ -1,4 +1,48 @@
 <!--
+SYNC IMPACT REPORT (v2.8.0)
+===========================
+Version change: 2.7.0 -> 2.8.0
+Bump rationale: MINOR - Article III (Content Quality Standards) gains a new sub-point III.10
+  (Visual density): every new-shape unit topic file carries at least two figures, and every
+  new-shape unit includes at least one concept map, flowchart, or timeline; every figure is
+  classified by a closed six-value archetype. This is a new, materially expanded content
+  requirement; no existing principle is removed or redefined, and no approved spec is invalidated
+  (Specs 001-011 stay valid; legacy five-file units and non-topic pages are exempt, exactly as
+  from III's per-topic structure rules). Source: owner instruction, this session (message item 4);
+  AskUserQuestion decisions 2026-09-08 (hard enforcement, its own spec, retrofit EFMP-302 Unit 1).
+  See Spec 012 and ADR-0017.
+
+Modified:
+  - Article III - new sub-point III.10 (Visual density) added. Items III.1-III.9 are unchanged and
+    NOT renumbered.
+  - Article VII - Engineering-gate row: the figure-marker <-> manifest consistency entry is
+    extended with the visual-density floor (>= 2 figures per topic, >= 1
+    concept-map/flowchart/timeline per unit, Spec 012 check:figures).
+
+Downstream artifacts reviewed this amendment (2026-09-08):
+  ✅ specs/content/style-guide.md - bumped v3.2 -> v3.3; `## Figure markers and manifests` quantity
+     rule and `## Diagram conventions` rewritten to state the two-per-topic floor, the
+     schematic-per-unit rule, and the six-value archetype. Bumping `version` re-freezes
+     terminology.csv as a pair (Spec 006 FR-007 mechanism); no term changed.
+  ✅ .claude/skills/author-unit/references/structure-standard.md (the style-guide twin) + SKILL.md
+     Step 3.1 / Step 4 + references/figure-prompts.md - mirrored in the same branch.
+  ✅ scripts/check-figures.mjs + scripts/lib/figure-manifest.mjs (Kind enum widened 2 -> 6) +
+     tests/unit/figures-gate.test.mjs (+5 fixtures) - the enforcement mechanism.
+  ✅ src/components/Figure.tsx `kind` prop union + `.figure--*` classes in src/css/custom.css.
+  ✅ specs/009-figure-rendering/contracts/figure-manifest-v2.md - v3 note (Kind vocabulary widened).
+  ✅ .claude/skills/generate-figures/ SKILL.md + references/svg-authoring.md - six archetype names
+     mapped to existing render routes.
+  ✅ specs/content/efmp-302/content-spec.md Figure plan + figures/unit-01.md manifest + the
+     EFMP-302 Unit 1 retrofit (proving unit, Art. VI.1).
+  ✅ .specify/templates/{plan,spec,tasks}-template.md - no hardcoded article numbers; no edit
+     needed (III.1-III.9 unchanged).
+
+Follow-up TODOs:
+  - Article VI.1: EFMP-301 Unit 1 (the golden unit) is owed a re-proof to style-guide v3.3 as the
+    immediate-next content task. Recorded in specs/backlog.md; NOT done in Spec 012.
+
+--- prior report (v2.7.0) retained below ---
+
 SYNC IMPACT REPORT (v2.7.0)
 ===========================
 Version change: 2.6.0 -> 2.7.0
@@ -431,6 +475,13 @@ authors' preference; traceability makes accreditation review auditable.
    (`5-8 items`). Enforced by the `check:no-em-dash` CI gate over `docs/`, `guides/`, `i18n/`,
    and `specs/content/`; `history/` is exempt as an immutable record, and `.claude/skills/`,
    `src/`, `README.md`, `CLAUDE.md` are kept clean by convention but not gated.
+10. **Visual density**: every new-shape unit topic file (`topic-*.mdx`) MUST carry **at least
+   two figures** (a `{/* FIGURE[...] */}` marker or a rendered `<Figure>`), and every new-shape
+   unit MUST include **at least one concept map, flowchart, or timeline**. Every figure is
+   classified by one archetype - `table`, `concept-map`, `flowchart`, `timeline`, `diagram`, or
+   `illustration` - recorded on the unit's figure manifest. Legacy five-file units and non-topic
+   pages are exempt, as they are from III's per-topic structure rules. Enforced by the
+   `check:figures` CI gate. Accessibility (III.8) applies to every figure.
 
 ## Article IV - Spec-Driven Development Law
 
@@ -522,7 +573,7 @@ Before any unit or feature is marked complete, all applicable gates MUST pass:
 | Gate | Checks | Owner |
 |---|---|---|
 | Content gate | CLO traceability • simple-English readability • Urdu parity & register • Bloom's tags • citations • guide-section fidelity • accessibility | Curriculum owner |
-| Engineering gate | Spec compliance • RLS policies tested • responsive/RTL rendering verified • Lighthouse performance pass • figure-marker ↔ manifest consistency (Spec 008 `check:figures`) | Developer |
+| Engineering gate | Spec compliance • RLS policies tested • responsive/RTL rendering verified • Lighthouse performance pass • figure-marker ↔ manifest consistency + visual-density floor: ≥ 2 figures per topic, ≥ 1 concept-map/flowchart/timeline per unit (Spec 008 + Spec 012 `check:figures`) | Developer |
 | Teacher gate (per course, once) | One practicing teacher dry-runs the unit's activities & assessments | Pilot teacher |
 | Docs gate | A shipped spec that changes a student/teacher workflow or contributor setup updates the matching guide (Student Guide, Teacher Guide, or README - Article X) in the same branch | Feature author |
 
@@ -595,4 +646,4 @@ teachers specifically, while keeping the README technical and separate.
 
 ---
 
-**Version**: 2.7.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-09-03
+**Version**: 2.8.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-09-08
