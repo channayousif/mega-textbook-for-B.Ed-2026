@@ -38,7 +38,7 @@ No database.
 form, the placed-asset-existence check, the `Kind` enum, the bilingual `.ur.svg` check, and the
 `prompt-only`/legacy regression floor). Same `spawn`-the-script-against-`CONTENT_ROOT` pattern.
 Playwright a11y/RTL checks (existing suite) cover the rendered `<figure>`.
-**Target Platform**: Same static site (`www.a2ahs.com`) and CI (GitHub Actions). No new CI
+**Target Platform**: Same static site (`textbook.com.pk`) and CI (GitHub Actions). No new CI
 step — `check:figures` already runs; its checks widen. The build copies `static/img/` verbatim.
 **Project Type**: Single Docusaurus-rooted project (Specs 001–008). No frontend/backend split.
 Zero Supabase / Edge Function change.
