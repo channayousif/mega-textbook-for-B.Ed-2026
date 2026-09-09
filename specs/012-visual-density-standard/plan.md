@@ -199,4 +199,42 @@ manifest contract v2→v3; EFMP-302 Unit 1 retrofit; EFMP-301 Unit 1 backlog fol
 
 ## Implementation notes (post-build reconciliation - Constitution Art. IV.4)
 
-_(filled after implementation)_
+Landed 2026-09-08/09 on `012-visual-density-standard` in three commits (`f70ee25` foundations,
+`9e11a85` US1+US2, `<US3 commit>` retrofit).
+
+**Deviations / discoveries vs. the plan:**
+
+- **`prompt-only` Kind rule relaxed, not just widened.** Spec 009 forbade a `Kind` on a
+  `prompt-only` row. Keeping that would have made the per-unit schematic rule uncheckable before
+  render and would have blocked authors from recording a *planned* archetype. Resolution: a
+  `prompt-only` row MAY carry its planned archetype (must be valid if present); `Src` still must
+  be blank. `generated`/`placed` rows must carry a valid archetype.
+- **Density rules are conditional on classification, not unconditional.** The `>= 2 carriers per
+  topic` rule is unconditional for new-shape units. The **per-unit schematic** rule and the
+  **every-rendered-row-needs-a-Kind** rule apply only once *any* manifest row carries a `Kind`
+  (`kindedRows.length > 0`). A fully unplanned all-`prompt-only` manifest with blank `Kind` cells
+  keeps the Spec 008/009 behaviour byte-for-byte - this preserved every existing
+  `figures-gate.test.mjs` regression-floor case without a fixture rewrite for those.
+- **Fixture harness rewritten.** Both `makeFiguresFixture` (v1) and `makeV2Fixture` (v2) build
+  **two carriers per topic** now (a primary + a mirrored filler), with matching manifest rows;
+  `makeV2Fixture` defaults `fig-U1-1` to `flowchart` so any rendered fixture satisfies the
+  schematic rule. 30 cases pass (was 24); full unit suite 142/142.
+- **EFMP-302 Unit 1 retrofit kept existing ids.** Rather than renumber, the four new figures are
+  `fig-U1-5`..`fig-U1-8` (ids are unit-scoped, not required contiguous). `fig-U1-1` reclassified
+  `diagram -> table`, `fig-U1-4` `diagram -> concept-map`; `fig-U1-2`/`fig-U1-3` stay `diagram`.
+  New schematics: `fig-U1-5` concept-map (1.1), `fig-U1-6` flowchart (1.2), `fig-U1-7` timeline
+  (1.3, the unit's required schematic), `fig-U1-8` flowchart (1.4). All hand-authored SVG
+  2.7-3.6 KB, + `.ur.svg` label variants. The UR mirror is `translation_status: draft`, so its
+  `<Figure>`s and `.ur.svg`s are written and wired but not yet gate-enforced (Workstream D's
+  re-translation reviews the Urdu labels).
+- `Figure.tsx` `kind` prop widened to a `FigureKind` union of the six values; `.figure--table` /
+  `--concept-map` / `--flowchart` / `--timeline` added to `src/css/custom.css`.
+
+**Verification (all green):** `check:figures`, `check:depth-gate`, `validate:content`,
+`check:no-em-dash`, `check:pipeline-gate`, `check:no-answer-keys`; `npx tsc --noEmit`;
+`npm test` 142/142; `npm run build` en + ur - built EN and UR topic pages render both figures
+with the archetype class (`figure--table`, `figure--concept-map`, ...) and the `.ur.svg` on the
+`/ur/` route.
+
+**Follow-up (backlog):** EFMP-301 Unit 1 golden re-proof to style-guide v3.3 (Art. VI.1);
+EFMP-302 Units 2-6 meet Art. III.10 when they move to the per-topic layout.

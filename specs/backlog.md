@@ -52,3 +52,18 @@ lost, without blocking delivery of the feature that surfaced them.
 - **`fig-U1-2` raster re-do (optional).** EFMP-302 Unit 1's `fig-U1-2` shipped as a flat-vector
   SVG (`Kind: diagram`) per its own "clean flat vector" prompt; re-run via HF MCP as a
   `Kind: illustration` only if the owner wants a pictorial version.
+
+## From 012-visual-density-standard (2026-09-09)
+
+- **EFMP-301 Unit 1 golden re-proof to style-guide v3.3.** Constitution Art. VI.1 ("Standard
+  versioning", re-run for the v2.8.0 / Article III.10 amendment) makes bringing the golden unit
+  to the new visual-density bar the immediate-next content task after Spec 012's proving unit
+  (EFMP-302 Unit 1, retrofitted 2026-09-09 to >= 2 figures/topic + a timeline). EFMP-301 Unit 1
+  is still a ~490-word scaffold stub, so this is a full `author-unit` authoring pass, now against
+  the v3.3 figure floor: >= 2 archetype-tagged figures per topic and >= 1
+  concept-map/flowchart/timeline for the unit, each row in `figures/unit-01.md` carrying a `Kind`.
+  Not a blocker on the v3.3 freeze; the freeze is proven by EFMP-302 Unit 1.
+- **EFMP-302 Units 2-6: visual-density on re-draft.** When each unit moves to the per-topic
+  layout (see the Spec 007 backlog item), it must meet Art. III.10 at G2 - `check:figures` now
+  enforces it for every new-shape unit. No action while they stay in the legacy five-file layout
+  (exempt).
