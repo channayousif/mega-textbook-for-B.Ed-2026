@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import StudentDashboardGuard from '@site/src/components/StudentDashboardGuard';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import {
   fetchCurrentSemesterClasses, fetchDueSoon, fetchRecentGrades,
@@ -150,11 +150,9 @@ function HomeContent(): React.ReactElement {
 export default function DashboardHomePage(): React.ReactElement {
   return (
     <Layout title="Dashboard">
-      <StudentDashboardGuard>
-        <main className="container auth-page margin-vert--lg">
+      <AppDashboardShell role="student">
           <HomeContent />
-        </main>
-      </StudentDashboardGuard>
+      </AppDashboardShell>
     </Layout>
   );
 }

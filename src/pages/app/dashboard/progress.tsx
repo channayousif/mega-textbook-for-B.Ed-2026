@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import StudentDashboardGuard from '@site/src/components/StudentDashboardGuard';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import { fetchCurrentSemesterClasses } from '@site/src/lib/dashboardQueries';
 import {
@@ -328,11 +328,9 @@ function ProgressContent(): React.ReactElement {
 export default function DashboardProgressPage(): React.ReactElement {
   return (
     <Layout title="Progress">
-      <StudentDashboardGuard>
-        <main className="container auth-page margin-vert--lg">
+      <AppDashboardShell role="student">
           <ProgressContent />
-        </main>
-      </StudentDashboardGuard>
+      </AppDashboardShell>
     </Layout>
   );
 }
