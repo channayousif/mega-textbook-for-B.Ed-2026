@@ -33,9 +33,10 @@ lost, without blocking delivery of the feature that surfaced them.
 - **EFMP-302 Units 2–6 re-draft.** Same pipeline, per unit, tracked through
   `specs/content/efmp-302/tasks.md` — subsequent execution, not a Spec 007/008 condition (FR-016 /
   FR-029). Whether each moves to the per-topic layout is decided at G1 per unit.
-- **EFMP-302 Unit 1 Urdu re-translation + re-review (G4/G5).** The Spec 008 EN re-restructure
-  reset `translation_status` to `draft` and replaced the UR file set with per-topic skeleton
-  stubs; the `ur` route falls back to EN behind the Spec 001 FR-003 banner until re-reviewed.
+- ~~**EFMP-302 Unit 1 Urdu re-translation + re-review (G4/G5).**~~ **Done 2026-09-09.** All 7
+  UR files fully re-translated to the v3.0 per-topic layout + the Spec 012 figure retrofit;
+  `translation_status: reviewed`; G4/G5 `✅` in `specs/content/efmp-302/tasks.md`; the `ur` route
+  now serves the reviewed Urdu unit (no EN fallback).
 - **EFMP-302 `course-review.mdx`.** Spec 008 seeded the `## Course review plan` in the
   content-spec (T028); the actual page is authored when EFMP-302 is fully restructured (FR-029).
 
