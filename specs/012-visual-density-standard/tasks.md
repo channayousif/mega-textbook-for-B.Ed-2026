@@ -130,27 +130,27 @@ figures per topic and >= 1 schematic per unit; the content-spec Figure plan shap
 timeline; `check:figures`, `check:depth-gate`, `validate:content`, `check:no-em-dash`,
 `check:pipeline-gate`, `npm test`, `npm run build` (en + ur) all pass.
 
-- [ ] T021 [US3] Decide the added figure per topic (research.md R4): topic 1.1 -> a `concept-map`
+- [x] T021 [US3] Decide the added figure per topic (research.md R4): topic 1.1 -> a `concept-map`
   linking "profession" to its four features and to the near-synonyms it is not (occupation,
   vocation, semi-profession); topic 1.2 -> a `flowchart` of how a question travels in an inquiry
   lesson vs an industrial one; topic 1.3 -> a `timeline` of the professionalization arc of teaching
   in Pakistan (the unit-level schematic); topic 1.4 -> reclassify `fig-U1-4` as `concept-map` and
   add a `flowchart` of the reflective cycle (experience -> reflection -> adjustment -> next lesson).
   Record the choices in `specs/012-visual-density-standard/research.md`.
-- [ ] T022 [US3] Add a `{/* FIGURE[fig-U1-5..8]: ...; alt: ... */}` marker to each
+- [x] T022 [US3] Add a `{/* FIGURE[fig-U1-5..8]: ...; alt: ... */}` marker to each
   `docs/semester-1/efmp-302/unit-01/topic-01..04.mdx` per T021 so each topic has 2 carriers.
-- [ ] T023 [US3] Update `specs/content/efmp-302/figures/unit-01.md`: add a row per new figure with
+- [x] T023 [US3] Update `specs/content/efmp-302/figures/unit-01.md`: add a row per new figure with
   its archetype in the `Kind` column, `Status: prompt-only`; set `fig-U1-1` archetype to `table`,
   `fig-U1-2`/`fig-U1-3` to `diagram` (or `concept-map` for U1-3 if reframed), `fig-U1-4` to
   `concept-map`. Update the manifest header note for the v3 `Kind` vocabulary.
-- [ ] T024 [US3] Run the `generate-figures` skill for EFMP-302 Unit 1: hand-author each new SVG
+- [x] T024 [US3] Run the `generate-figures` skill for EFMP-302 Unit 1: hand-author each new SVG
   under `static/img/figures/efmp-302/unit-01/`, replace each marker with a `<Figure>` element,
   advance the manifest rows to `placed` with `Kind` + `Src`.
-- [ ] T025 [US3] Urdu mirror: for each new figure add the matching `<Figure>` (pointing at
+- [x] T025 [US3] Urdu mirror: for each new figure add the matching `<Figure>` (pointing at
   `<figId>.ur.svg`) into `i18n/ur/.../efmp-302/unit-01/topic-0N.mdx` and write a translated-label
   `<figId>.ur.svg`. Per plan.md R3 the EN unit is `translation_status: draft`, so these are
   written and wired but not yet gate-enforced; the Workstream D re-translation reviews the labels.
-- [ ] T026 [US3] Run `npm run check:figures`, `npm run check:depth-gate`, `npm run validate:content`,
+- [x] T026 [US3] Run `npm run check:figures`, `npm run check:depth-gate`, `npm run validate:content`,
   `npm run check:no-em-dash`, `npm run check:pipeline-gate`, `npm test`, `npm run build` - all green.
 
 **Checkpoint**: the proving unit satisfies the new standard; Art. VI.1's proving-unit obligation met.
@@ -166,11 +166,11 @@ timeline; `check:figures`, `check:depth-gate`, `validate:content`, `check:no-em-
   (v2.8.0)` block. *(Done at the checkpoint - PHR `history/prompts/constitution/0009`.)*
 - [x] T028 [US4] Record ADR-0017 (visual-density standard + archetype taxonomy). *(Done -
   `history/adr/0017-visual-density-standard-and-figure-archetype-taxonomy.md`.)*
-- [ ] T029 [US4] In `specs/backlog.md`: add an entry under a 2026-09-08 / Spec 012 heading -
+- [x] T029 [US4] In `specs/backlog.md`: add an entry under a 2026-09-08 / Spec 012 heading -
   "EFMP-301 Unit 1 golden re-proof to style-guide v3.3" is the immediate-next content task under
   Article VI.1; not started; EFMP-301 U1 is still a scaffold stub so it needs full `author-unit`
   authoring, now against the v3.3 figure floor.
-- [ ] T030 [US4] Cross-check: `grep` the constitution and style guide for the old "at least one
+- [x] T030 [US4] Cross-check: `grep` the constitution and style guide for the old "at least one
   figure" wording - none remains; the `check:figures` reference in Article VII names Spec 012.
 
 **Checkpoint**: governance, standard, and follow-up are all on record and consistent.
@@ -179,17 +179,17 @@ timeline; `check:figures`, `check:depth-gate`, `validate:content`, `check:no-em-
 
 ## Phase 7: Polish & cross-cutting
 
-- [ ] T031 [P] In `src/components/Figure.tsx`: widen the `kind` prop union to the six archetype
+- [x] T031 [P] In `src/components/Figure.tsx`: widen the `kind` prop union to the six archetype
   values; keep the default rendering. Add `.figure--table`, `.figure--concept-map`,
   `.figure--flowchart`, `.figure--timeline` to `src/css/custom.css` (minimal treatment - a class
   hook + any needed caption spacing, not a redesign).
-- [ ] T032 [P] Update `CLAUDE.md` "Active Technologies" / "Recent Changes" lines for Spec 012 and
+- [x] T032 [P] Update `CLAUDE.md` "Active Technologies" / "Recent Changes" lines for Spec 012 and
   correct the stale "style-guide v3.1" / "manifests v2" notes to v3.3 / v3 `Kind` vocabulary.
-- [ ] T033 Run the full gate set once more from a clean tree
+- [x] T033 Run the full gate set once more from a clean tree
   (`npm test && npm run check:figures && npm run check:depth-gate && npm run validate:content &&
   npm run check:no-em-dash && npm run check:pipeline-gate && npm run build`) and paste results
   into `plan.md` "Implementation notes (post-build reconciliation)".
-- [ ] T034 PHR for the implementation (stage `green`) under
+- [x] T034 PHR for the implementation (stage `green`) under
   `history/prompts/012-visual-density-standard/`.
 
 ---
