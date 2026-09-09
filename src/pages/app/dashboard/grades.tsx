@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import StudentDashboardGuard from '@site/src/components/StudentDashboardGuard';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import { fetchAllGrades, type GradeItem } from '@site/src/lib/dashboardQueries';
 
@@ -84,11 +84,9 @@ function GradesContent(): React.ReactElement {
 export default function DashboardGradesPage(): React.ReactElement {
   return (
     <Layout title="Grades">
-      <StudentDashboardGuard>
-        <main className="container auth-page margin-vert--lg">
+      <AppDashboardShell role="student">
           <GradesContent />
-        </main>
-      </StudentDashboardGuard>
+      </AppDashboardShell>
     </Layout>
   );
 }

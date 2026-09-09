@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import TeacherDashboardGuard from '@site/src/components/TeacherDashboardGuard';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import { listOwnClasses } from '@site/src/lib/classes';
 import { fetchContentIndex, type ContentIndexEntry } from '@site/src/lib/assignments';
@@ -347,11 +347,9 @@ function TeachingLogContent(): React.ReactElement {
 export default function TeachingLogPage(): React.ReactElement {
   return (
     <Layout title="My Teaching Log">
-      <TeacherDashboardGuard>
-        <main className="container auth-page margin-vert--lg">
+      <AppDashboardShell role="teacher">
           <TeachingLogContent />
-        </main>
-      </TeacherDashboardGuard>
+      </AppDashboardShell>
     </Layout>
   );
 }

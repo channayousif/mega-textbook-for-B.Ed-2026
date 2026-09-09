@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import TeacherDashboardGuard from '@site/src/components/TeacherDashboardGuard';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 import {
   fetchUngradedCountsByClass, fetchSoonestDueAssignments, fetchRecentActivity,
   type UngradedCount, type SoonestDueAssignment, type RecentActivityItem,
@@ -128,11 +128,9 @@ function OverviewContent(): React.ReactElement {
 export default function TeacherOverviewPage(): React.ReactElement {
   return (
     <Layout title="Teacher Dashboard">
-      <TeacherDashboardGuard>
-        <main className="container auth-page margin-vert--lg">
+      <AppDashboardShell role="teacher">
           <OverviewContent />
-        </main>
-      </TeacherDashboardGuard>
+      </AppDashboardShell>
     </Layout>
   );
 }
