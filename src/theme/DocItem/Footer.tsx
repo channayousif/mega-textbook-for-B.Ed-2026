@@ -5,6 +5,7 @@ import { useLocation } from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import { markUnitStudied } from '@site/src/lib/unitProgress';
+import { createNote } from '@site/src/lib/studentNotes';
 import { fileSuggestion } from '@site/src/lib/suggestions';
 import { submitFeedback, fetchOwnFeedback } from '@site/src/lib/activityFeedback';
 import { findNearestSectionAnchor, type TocEntry } from '@site/src/lib/docPosition';
@@ -40,6 +41,13 @@ const MESSAGES = {
   markStudied: { en: 'Mark as studied', ur: 'پڑھا ہوا نشان زد کریں' },
   studied: { en: 'Marked as studied ✓', ur: 'پڑھا ہوا نشان زد ✓' },
   markError: { en: 'Could not mark this unit studied.', ur: 'اس یونٹ کو پڑھا ہوا نشان زد نہیں کیا جا سکا۔' },
+  addNote: { en: 'Add a note about this page', ur: 'اس صفحے کے بارے میں نوٹ شامل کریں' },
+  notePlaceholder: { en: 'Your note…', ur: 'آپ کا نوٹ…' },
+  noteSave: { en: 'Save note', ur: 'نوٹ محفوظ کریں' },
+  noteSaving: { en: 'Saving…', ur: 'محفوظ ہو رہا ہے…' },
+  noteSaved: { en: 'Note saved - see it in your dashboard Notes.', ur: 'نوٹ محفوظ ہو گیا - اسے اپنے ڈیش بورڈ کے نوٹس میں دیکھیں۔' },
+  noteError: { en: 'Could not save the note.', ur: 'نوٹ محفوظ نہیں ہو سکا۔' },
+  noteSignIn: { en: 'Sign in as a student to keep notes on this page.', ur: 'اس صفحے پر نوٹس رکھنے کے لیے بطور طالب علم سائن ان کریں۔' },
   suggestImprovement: { en: 'Suggest improvement', ur: 'بہتری تجویز کریں' },
   category: { en: 'Category', ur: 'قسم' },
   categoryTypo: { en: 'Typo', ur: 'ٹائپو' },
@@ -621,6 +629,89 @@ function FeedbackControl({
   );
 }
 
+/**
+ * Spec 011 US3 - a signed-in student adds a personal note tagged to this
+ * course/unit/topic; it shows up in the dashboard Notes area. RLS keeps it
+ * private to the student.
+ */
+function AddNoteControl({
+  courseCode,
+  unitNo,
+  topicNo,
+}: {
+  courseCode: string;
+  unitNo: number | null;
+  topicNo: number | null;
+}): React.ReactElement {
+  const locale = useLocale();
+  const { profile } = useAuth();
+  const [open, setOpen] = useState(false);
+  const [body, setBody] = useState('');
+  const [pending, setPending] = useState(false);
+  const [saved, setSaved] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  async function handleSave(e: React.FormEvent): Promise<void> {
+    e.preventDefault();
+    if (!profile || !body.trim()) return;
+    setPending(true);
+    setError(null);
+    const { error: err } = await createNote(profile.id, {
+      body: body.trim(),
+      courseCode,
+      unitNo,
+      topicNo,
+    });
+    setPending(false);
+    if (err) {
+      setError(MESSAGES.noteError[locale]);
+      return;
+    }
+    setBody('');
+    setOpen(false);
+    setSaved(true);
+  }
+
+  if (saved) return <p data-testid="note-saved">{MESSAGES.noteSaved[locale]}</p>;
+
+  if (!open) {
+    return (
+      <button
+        type="button"
+        className="button button--secondary button--sm"
+        data-testid="add-note-button"
+        onClick={() => setOpen(true)}
+      >
+        {MESSAGES.addNote[locale]}
+      </button>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSave} className="margin-top--sm">
+      {error && <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>}
+      <textarea
+        className="input"
+        rows={3}
+        required
+        placeholder={MESSAGES.notePlaceholder[locale]}
+        aria-label={MESSAGES.addNote[locale]}
+        data-testid="note-body-textarea"
+        value={body}
+        onChange={(e) => setBody(e.target.value)}
+      />
+      <button
+        type="submit"
+        className="button button--primary button--sm margin-top--sm"
+        data-testid="note-save-button"
+        disabled={pending || !body.trim()}
+      >
+        {pending ? MESSAGES.noteSaving[locale] : MESSAGES.noteSave[locale]}
+      </button>
+    </form>
+  );
+}
+
 export default function DocItemFooterWrapper(): React.ReactElement {
   const locale = useLocale();
   const { frontMatter } = useDoc() as { frontMatter: Record<string, unknown> };
@@ -679,6 +770,11 @@ export default function DocItemFooterWrapper(): React.ReactElement {
               {MESSAGES.markStudied[locale]}
             </button>
           )}
+        </div>
+      )}
+      {role === 'student' && courseCode && (
+        <div className="margin-top--md">
+          <AddNoteControl courseCode={courseCode} unitNo={unitNo} topicNo={topicNo} />
         </div>
       )}
       {role === 'teacher' && courseCode && (

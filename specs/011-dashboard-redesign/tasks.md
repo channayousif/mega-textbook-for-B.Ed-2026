@@ -72,14 +72,14 @@ description: "Task list for 011-dashboard-redesign"
 
 ## Phase 4: US2 - Join-in-dashboard + course-wise Progress (P2)
 
-- [ ] T014 [US2] `src/pages/app/dashboard/classes.tsx` - student join-by-code (reuse
+- [x] T014 [US2] `src/pages/app/dashboard/classes.tsx` - student join-by-code (reuse
   `joinClassByCode` + `classifyJoinError` from `src/lib/classes.ts`) + current-class list, in
   the shell; add the menu item (T007 already lists it).
-- [ ] T015 [US2] Rewrite `src/pages/app/dashboard/progress.tsx` - group by `course_code` from
+- [x] T015 [US2] Rewrite `src/pages/app/dashboard/progress.tsx` - group by `course_code` from
   `fetchOwnUnitProgress()` (drop the `enrolledCourseCodes` filter, FR-007); union
   `fetchOwnChecksForCourses` for topic-level completion; totals from `content-index.json`;
   keep the CSS coverage bars.
-- [ ] T016 [P] [US2] `tests/e2e/dashboard-join-and-progress.spec.ts` - join a class from the
+- [x] T016 [P] [US2] `tests/e2e/dashboard-join-and-progress.spec.ts` - join a class from the
   dashboard menu; mark a unit studied on a non-enrolled course; Progress shows both courses
   grouped, non-enrolled not hidden.
 
@@ -87,32 +87,32 @@ description: "Task list for 011-dashboard-redesign"
 
 ## Phase 5: US3 - Personal notes (P2)
 
-- [ ] T017 [US3] `src/lib/studentNotes.ts` - `listOwnNotes`, `createNote`, `updateNote`,
+- [x] T017 [US3] `src/lib/studentNotes.ts` - `listOwnNotes`, `createNote`, `updateNote`,
   `deleteNote` (Result-typed).
-- [ ] T018 [US3] `src/pages/app/dashboard/notes.tsx` - list (newest first, course filter from
+- [x] T018 [US3] `src/pages/app/dashboard/notes.tsx` - list (newest first, course filter from
   `fetchContentIndex()`), create/edit/delete, in the shell.
-- [ ] T019 [US3] `src/theme/DocItem/Footer.tsx` - "add a note about this page" control for a
+- [x] T019 [US3] `src/theme/DocItem/Footer.tsx` - "add a note about this page" control for a
   signed-in student, keyed to `course_code`/`unit_no`/`topic_no` (same gating pattern as the
   existing controls); signed-out reader gets a sign-in hint, no note created.
-- [ ] T020 [P] [US3] `tests/rls/student-notes.test.mjs` - a student reaches only their own
+- [x] T020 [P] [US3] `tests/rls/student-notes.test.mjs` - a student reaches only their own
   notes; a second student cannot read/update/delete the first's; a teacher/admin cannot; an
   over-length body is rejected.
-- [ ] T021 [P] [US3] `tests/e2e/student-notes.spec.ts` - create from the Notes page + from two
+- [x] T021 [P] [US3] `tests/e2e/student-notes.spec.ts` - create from the Notes page + from two
   content pages, edit one, delete one, filter by course; second student sees none.
 
 ---
 
 ## Phase 6: US4 - Teacher shell + course dropdown + reachable analytics (P2)
 
-- [ ] T022 [US4] `src/lib/courseOptions.ts` - `fetchCourseOptions()` = `fetchCatalog()` filtered
+- [x] T022 [US4] `src/lib/courseOptions.ts` - `fetchCourseOptions()` = `fetchCatalog()` filtered
   to distinct `course_code`s in `fetchContentIndex()`, semester-grouped, bilingual names.
-- [ ] T023 [US4] `src/pages/app/classes/index.tsx` (`TeacherClassesView`) - replace the free-text
+- [x] T023 [US4] `src/pages/app/classes/index.tsx` (`TeacherClassesView`) - replace the free-text
   `course_code` `<input>` with a `<select>` + `<optgroup label="Semester N">` from T022; a
   course with no content is absent/disabled.
-- [ ] T024 [US4] `src/pages/app/teacher/index.tsx` - each class row links to
+- [x] T024 [US4] `src/pages/app/teacher/index.tsx` - each class row links to
   `/app/teacher/analytics?classId=` and its roster; recent-activity rows link to
   `/app/teacher/student?classId=&studentId=`. (Menu links added in T007.)
-- [ ] T025 [P] [US4] `tests/e2e/teacher-course-dropdown-and-nav.spec.ts` - create a class picking
+- [x] T025 [P] [US4] `tests/e2e/teacher-course-dropdown-and-nav.spec.ts` - create a class picking
   a course from the dropdown (no text box); reach Analytics + a student drill-down by link only.
 
 ---

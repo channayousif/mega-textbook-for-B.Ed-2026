@@ -38,6 +38,9 @@ const MESSAGES = {
     ur: 'ابھی تک آپ کی کوئی کلاس نہیں ہے۔ شروع کرنے کے لیے ایک کلاس بنائیں۔',
   },
   manageClasses: { en: 'Manage your classes', ur: 'اپنی کلاسیں منظم کریں' },
+  analyticsLink: { en: 'Analytics', ur: 'تجزیات' },
+  rosterLink: { en: 'Roster', ur: 'فہرست' },
+  gradingLink: { en: 'Grading', ur: 'گریڈنگ' },
 } as const;
 
 function OverviewContent(): React.ReactElement {
@@ -96,6 +99,12 @@ function OverviewContent(): React.ReactElement {
             {ungraded.map((c) => (
               <li key={c.classId} data-testid="ungraded-count-row">
                 {c.className} - {c.ungradedCount} {MESSAGES.ungradedCount[locale]}
+                {' · '}
+                <Link to={`/app/teacher/analytics?classId=${c.classId}`}>{MESSAGES.analyticsLink[locale]}</Link>
+                {' · '}
+                <Link to={`/app/classes/roster?classId=${c.classId}`}>{MESSAGES.rosterLink[locale]}</Link>
+                {' · '}
+                <Link to={`/app/classes/queue?classId=${c.classId}`}>{MESSAGES.gradingLink[locale]}</Link>
               </li>
             ))}
           </ul>
@@ -105,6 +114,8 @@ function OverviewContent(): React.ReactElement {
             {soonestDue.map((item) => (
               <li key={item.id} data-testid="soonest-due-item">
                 {item.title} - {item.className} - {new Date(item.dueAt).toLocaleString()}
+                {' · '}
+                <Link to={`/app/teacher/analytics?classId=${item.classId}`}>{MESSAGES.analyticsLink[locale]}</Link>
               </li>
             ))}
           </ul>
