@@ -261,3 +261,28 @@ export type ContentFeedback = {
   guest_email: string | null;
   guest_confirmed_at: string | null;
 };
+
+/** Spec 011 FR-008 - a private per-student note (student_notes). */
+export type StudentNote = {
+  id: string;
+  student_id: string;
+  course_code: string | null;
+  unit_no: number | null;
+  topic_no: number | null;
+  title: string | null;
+  body: string;
+  created_at: string;
+  updated_at: string;
+};
+
+/** Spec 011 FR-016 - a teacher-owned reusable assignment configuration. */
+export type AssignmentTemplate = {
+  id: string;
+  teacher_id: string;
+  name: string;
+  title_pattern: string;
+  instructions: string;
+  max_mark: number;
+  allow_late: boolean;
+  created_at: string;
+};

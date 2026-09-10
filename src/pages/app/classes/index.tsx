@@ -8,6 +8,7 @@ import {
   createClass, listOwnClasses, listJoinedClasses, joinClassByCode, classifyJoinError,
 } from '@site/src/lib/classes';
 import type { Class, Enrollment } from '@site/src/lib/types';
+import { fetchCourseOptions, type CourseOptionGroup } from '@site/src/lib/courseOptions';
 
 /**
  * Class list + create (teacher) / join-by-code + joined list (student) -
@@ -55,6 +56,7 @@ function TeacherClassesView(): React.ReactElement {
   const [courseCode, setCourseCode] = useState('');
   const [name, setName] = useState('');
   const [termLabel, setTermLabel] = useState('');
+  const [courseOpts, setCourseOpts] = useState<CourseOptionGroup[]>([]);
 
   const load = useCallback(async () => {
     if (!profile) return;
@@ -66,6 +68,12 @@ function TeacherClassesView(): React.ReactElement {
   useEffect(() => {
     load();
   }, [load]);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetchCourseOptions().then((g) => { if (!cancelled) setCourseOpts(g); });
+    return () => { cancelled = true; };
+  }, []);
 
   async function handleCreate(e: React.FormEvent): Promise<void> {
     e.preventDefault();
@@ -99,15 +107,26 @@ function TeacherClassesView(): React.ReactElement {
       <form onSubmit={handleCreate} className="margin-bottom--lg">
         <h3>Create a class</h3>
         <div className="margin-bottom--sm">
-          <label htmlFor="courseCode">Course code</label>
-          <input
+          <label htmlFor="courseCode">Course</label>
+          <select
             id="courseCode"
             className="input"
             value={courseCode}
             onChange={(e) => setCourseCode(e.target.value)}
-            placeholder="EFMP-301"
             required
-          />
+          >
+            <option value="" disabled>{locale === 'ur' ? 'کورس منتخب کریں…' : 'Select a course…'}</option>
+            {courseOpts.map((g) => (
+              <optgroup key={g.semester} label={`${locale === 'ur' ? 'سمسٹر' : 'Semester'} ${g.semester}`}>
+                {g.courses.map((c) => (
+                  <option key={c.code} value={c.code} disabled={!c.hasContent}>
+                    {c.code} - {locale === 'ur' ? c.title_ur : c.title_en}
+                    {c.hasContent ? '' : (locale === 'ur' ? ' (کوئی مواد نہیں)' : ' (no content)')}
+                  </option>
+                ))}
+              </optgroup>
+            ))}
+          </select>
         </div>
         <div className="margin-bottom--sm">
           <label htmlFor="className">Class name</label>

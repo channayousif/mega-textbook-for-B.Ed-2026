@@ -254,10 +254,15 @@ function ProgressContent(): React.ReactElement {
       setError(MESSAGES.loadError[locale]);
       return;
     }
-    const enrolledCourseCodes = Array.from(new Set(classesRes.data!.classes.map((c) => c.classes.course_code)));
+    // Spec 011 FR-007 - the course-wise view MUST include every course the student
+    // has any studied-mark in, not only the ones they are class-enrolled in. Union
+    // the enrolled set with the distinct course_codes present in unit_progress.
+    const enrolledCourseCodes = classesRes.data!.classes.map((c) => c.classes.course_code);
+    const progressedCourseCodes = (progressRes.data ?? []).map((r) => r.course_code);
+    const courseCodes = Array.from(new Set([...enrolledCourseCodes, ...progressedCourseCodes]));
     const [totals, unitNumbersByCoourse] = await Promise.all([
-      fetchTotalUnitsForCourses(enrolledCourseCodes),
-      Promise.all(enrolledCourseCodes.map((code) => fetchUnitNumbersForCourse(code))),
+      fetchTotalUnitsForCourses(courseCodes),
+      Promise.all(courseCodes.map((code) => fetchUnitNumbersForCourse(code))),
     ]);
     const coveredByCoourse = new Map<string, Set<number>>();
     for (const row of progressRes.data ?? []) {
@@ -265,7 +270,7 @@ function ProgressContent(): React.ReactElement {
       set.add(row.unit_no);
       coveredByCoourse.set(row.course_code, set);
     }
-    const result: CourseCoverage[] = enrolledCourseCodes.map((code, i) => ({
+    const result: CourseCoverage[] = courseCodes.map((code, i) => ({
       courseCode: code,
       covered: coveredByCoourse.get(code) ?? new Set<number>(),
       total: totals[code] ?? 0,
