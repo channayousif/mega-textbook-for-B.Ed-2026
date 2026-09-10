@@ -163,7 +163,7 @@ description: "Task list for 011-dashboard-redesign"
   returns one submission per action.) `src/pages/app/classes/assignments.tsx` - multi-select + bulk publish /
   unpublish / close (per-item outcome, no rollback of successes); `src/pages/app/classes/queue.tsx`
   - multi-select "return selected" for already-marked submissions.
-- [ ] T039 [P] [US7] `tests/rls/assignment-templates.test.mjs` - a teacher reaches only their own
+- [x] T039 [P] [US7] `tests/rls/assignment-templates.test.mjs` - a teacher reaches only their own
   templates. `tests/e2e/teacher-command-centre-bulk.spec.ts` - command centre panels; save +
   reuse a template; bulk unpublish 3; bulk return 2.
 
@@ -171,14 +171,14 @@ description: "Task list for 011-dashboard-redesign"
 
 ## Phase 10: Docs + cross-cutting
 
-- [ ] T040 [P] `guides/student-guide/*` - navigation (the left menu), Notes, join-a-class flow,
+- [x] T040 [P] `guides/student-guide/*` - navigation (the left menu), Notes, join-a-class flow,
   course-wise Progress (FR-020, both locales).
-- [ ] T041 [P] `guides/teacher-guide/*` - navigation, the course dropdown, assignment + class
+- [x] T041 [P] `guides/teacher-guide/*` - navigation, the course dropdown, assignment + class
   management, quiz authoring, the command centre, templates, bulk actions.
-- [ ] T042 `CLAUDE.md` Active Technologies / Recent Changes for Spec 011 (new tables, no new dep).
+- [x] T042 `CLAUDE.md` Active Technologies / Recent Changes for Spec 011 (new tables, no new dep).
 - [ ] T043 Full gate run: `npx tsc --noEmit`, `npm test`, `npm run test:e2e`, `npm run build`
   (both locales); a11y check on the shell + the new pages. Paste results into `plan.md`.
-- [ ] T044 PHR (stage `green`) under `history/prompts/011-dashboard-redesign/`.
+- [x] T044 PHR (stage `green`) under `history/prompts/011-dashboard-redesign/`.
 
 ---
 
