@@ -81,6 +81,24 @@ export async function listJoinedClasses(studentId: string): Promise<Result<(Enro
 }
 
 /** FR-002 - reissue a class's join code; the old code stops matching any row. */
+/**
+ * Spec 011 US5 / FR-013 - edit a class's name, term label, or course. The owning-teacher
+ * check is enforced by RLS (`classes_update`, migration 0012). `course_code` is validated
+ * by the same DB check-format constraint as on create.
+ */
+export type ClassPatch = Partial<{ name: string; term_label: string; course_code: string }>;
+
+export async function updateClass(classId: string, patch: ClassPatch): Promise<Result<Class>> {
+  const supabase = await client();
+  const { data, error } = await supabase
+    .from('classes')
+    .update(patch)
+    .eq('id', classId)
+    .select()
+    .single();
+  return { data: (data as Class) ?? null, error };
+}
+
 export async function reissueJoinCode(classId: string): Promise<Result<Class>> {
   const supabase = await client();
   let lastError: Error | null = null;
