@@ -79,7 +79,7 @@ description: "Task list for 011-dashboard-redesign"
   `fetchOwnUnitProgress()` (drop the `enrolledCourseCodes` filter, FR-007); union
   `fetchOwnChecksForCourses` for topic-level completion; totals from `content-index.json`;
   keep the CSS coverage bars.
-- [x] T016 [P] [US2] `tests/e2e/dashboard-join-and-progress.spec.ts` - join a class from the
+- [ ] T016 [P] [US2] `tests/e2e/dashboard-join-and-progress.spec.ts` - join a class from the
   dashboard menu; mark a unit studied on a non-enrolled course; Progress shows both courses
   grouped, non-enrolled not hidden.
 
@@ -97,7 +97,7 @@ description: "Task list for 011-dashboard-redesign"
 - [x] T020 [P] [US3] `tests/rls/student-notes.test.mjs` - a student reaches only their own
   notes; a second student cannot read/update/delete the first's; a teacher/admin cannot; an
   over-length body is rejected.
-- [x] T021 [P] [US3] `tests/e2e/student-notes.spec.ts` - create from the Notes page + from two
+- [ ] T021 [P] [US3] `tests/e2e/student-notes.spec.ts` - create from the Notes page + from two
   content pages, edit one, delete one, filter by course; second student sees none.
 
 ---
@@ -112,7 +112,7 @@ description: "Task list for 011-dashboard-redesign"
 - [x] T024 [US4] `src/pages/app/teacher/index.tsx` - each class row links to
   `/app/teacher/analytics?classId=` and its roster; recent-activity rows link to
   `/app/teacher/student?classId=&studentId=`. (Menu links added in T007.)
-- [x] T025 [P] [US4] `tests/e2e/teacher-course-dropdown-and-nav.spec.ts` - create a class picking
+- [ ] T025 [P] [US4] `tests/e2e/teacher-course-dropdown-and-nav.spec.ts` - create a class picking
   a course from the dropdown (no text box); reach Analytics + a student drill-down by link only.
 
 ---
@@ -121,7 +121,7 @@ description: "Task list for 011-dashboard-redesign"
 
 - [x] T026 [US5] `src/lib/assignments.ts` - `updateAssignment(id, patch)`, `deleteAssignment(id)`
   (Result-typed); `src/lib/classes.ts` - `updateClass(id, patch)`.
-- [x] T027 [US5] `src/pages/app/classes/assignment-edit.tsx` - edit route reusing the
+- [x] T027 [US5] (delivered as an INLINE edit form in classes/assignments.tsx, not a separate route) `src/pages/app/classes/assignment-edit.tsx` - edit route reusing the
   `assignment-new.tsx` form shape (title/instructions/due/max-mark/allow-late); a delete button
   disabled when the assignment has submissions.
 - [x] T028 [US5] `src/pages/app/classes/assignments.tsx` - "Edit" + "Delete" per row (link to
@@ -129,7 +129,7 @@ description: "Task list for 011-dashboard-redesign"
 - [x] T029 [P] [US5] `tests/rls/assignment-delete.test.mjs` - owning teacher deletes an empty
   assignment; deletion refused when submissions exist; non-owner refused. `tests/rls/class-edit`
   covered by the existing `classes_update` (add a case if none).
-- [x] T030 [P] [US5] `tests/e2e/teacher-manage-assignments-classes.spec.ts` - edit an
+- [ ] T030 [P] [US5] `tests/e2e/teacher-manage-assignments-classes.spec.ts` - edit an
   assignment's due/max-mark (student sees the change); delete an empty one; edit a class name.
 
 ---
@@ -144,7 +144,7 @@ description: "Task list for 011-dashboard-redesign"
 - [x] T033 [P] [US6] `tests/rls/quiz-authoring.test.mjs` - a verified teacher can
   insert/update/delete `quiz_items` + `answer_keys`; an unverified teacher and a student are
   refused every verb; `quiz_items_public` still hides `correct_option`.
-- [x] T034 [P] [US6] `tests/e2e/quiz-authoring.spec.ts` - verified teacher adds/edits/deletes an
+- [ ] T034 [P] [US6] `tests/e2e/quiz-authoring.spec.ts` - verified teacher adds/edits/deletes an
   item + key, then it is assignable; unverified teacher + student see the gated notice.
 - [x] T035 [US6] Update `specs/backlog.md` - strike the Spec 003 "Quiz item / answer-key
   authoring UI" item as delivered by Spec 011.
@@ -176,8 +176,10 @@ description: "Task list for 011-dashboard-redesign"
 - [x] T041 [P] `guides/teacher-guide/*` - navigation, the course dropdown, assignment + class
   management, quiz authoring, the command centre, templates, bulk actions.
 - [x] T042 `CLAUDE.md` Active Technologies / Recent Changes for Spec 011 (new tables, no new dep).
-- [ ] T043 Full gate run: `npx tsc --noEmit`, `npm test`, `npm run test:e2e`, `npm run build`
-  (both locales); a11y check on the shell + the new pages. Paste results into `plan.md`.
+- [~] T043 Gate run: `npx tsc --noEmit` ✅, `npm test` ✅ 136/136, `npm run build` (en + ur) ✅,
+  `npm run check:no-em-dash` ✅. **Deferred:** `npm run test:e2e` (needs a running server +
+  Supabase) and the shell a11y pass - to run against a deployed preview with 0038-0041 applied.
+  The 4 new RLS suites collect cleanly and run in CI.
 - [x] T044 PHR (stage `green`) under `history/prompts/011-dashboard-redesign/`.
 
 ---
