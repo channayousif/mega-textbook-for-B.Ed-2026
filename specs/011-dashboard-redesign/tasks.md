@@ -119,46 +119,48 @@ description: "Task list for 011-dashboard-redesign"
 
 ## Phase 7: US5 - Assignment + class management (P3)
 
-- [ ] T026 [US5] `src/lib/assignments.ts` - `updateAssignment(id, patch)`, `deleteAssignment(id)`
+- [x] T026 [US5] `src/lib/assignments.ts` - `updateAssignment(id, patch)`, `deleteAssignment(id)`
   (Result-typed); `src/lib/classes.ts` - `updateClass(id, patch)`.
-- [ ] T027 [US5] `src/pages/app/classes/assignment-edit.tsx` - edit route reusing the
+- [x] T027 [US5] `src/pages/app/classes/assignment-edit.tsx` - edit route reusing the
   `assignment-new.tsx` form shape (title/instructions/due/max-mark/allow-late); a delete button
   disabled when the assignment has submissions.
-- [ ] T028 [US5] `src/pages/app/classes/assignments.tsx` - "Edit" + "Delete" per row (link to
+- [x] T028 [US5] `src/pages/app/classes/assignments.tsx` - "Edit" + "Delete" per row (link to
   T027); `src/pages/app/classes/roster.tsx` - an edit-class form (name/term/course via T022).
-- [ ] T029 [P] [US5] `tests/rls/assignment-delete.test.mjs` - owning teacher deletes an empty
+- [x] T029 [P] [US5] `tests/rls/assignment-delete.test.mjs` - owning teacher deletes an empty
   assignment; deletion refused when submissions exist; non-owner refused. `tests/rls/class-edit`
   covered by the existing `classes_update` (add a case if none).
-- [ ] T030 [P] [US5] `tests/e2e/teacher-manage-assignments-classes.spec.ts` - edit an
+- [x] T030 [P] [US5] `tests/e2e/teacher-manage-assignments-classes.spec.ts` - edit an
   assignment's due/max-mark (student sees the change); delete an empty one; edit a class name.
 
 ---
 
 ## Phase 8: US6 - Verified-teacher quiz authoring (P3)
 
-- [ ] T031 [US6] `src/lib/quizAuthoring.ts` - CRUD for `quiz_items` (stem, options, correct
+- [x] T031 [US6] `src/lib/quizAuthoring.ts` - CRUD for `quiz_items` (stem, options, correct
   option, Bloom tag) and `answer_keys` for a course + unit (Result-typed).
-- [ ] T032 [US6] `src/pages/app/teacher/quiz-authoring.tsx` - gated on `verifiedTeacher` from
+- [x] T032 [US6] `src/pages/app/teacher/quiz-authoring.tsx` - gated on `verifiedTeacher` from
   `useAuth()`; course + unit pickers (T022 + content-index units); item-bank editor + answer-key
   editor; in the shell.
-- [ ] T033 [P] [US6] `tests/rls/quiz-authoring.test.mjs` - a verified teacher can
+- [x] T033 [P] [US6] `tests/rls/quiz-authoring.test.mjs` - a verified teacher can
   insert/update/delete `quiz_items` + `answer_keys`; an unverified teacher and a student are
   refused every verb; `quiz_items_public` still hides `correct_option`.
-- [ ] T034 [P] [US6] `tests/e2e/quiz-authoring.spec.ts` - verified teacher adds/edits/deletes an
+- [x] T034 [P] [US6] `tests/e2e/quiz-authoring.spec.ts` - verified teacher adds/edits/deletes an
   item + key, then it is assignable; unverified teacher + student see the gated notice.
-- [ ] T035 [US6] Update `specs/backlog.md` - strike the Spec 003 "Quiz item / answer-key
+- [x] T035 [US6] Update `specs/backlog.md` - strike the Spec 003 "Quiz item / answer-key
   authoring UI" item as delivered by Spec 011.
 
 ---
 
 ## Phase 9: US7 - Command centre, templates, bulk actions (P3)
 
-- [ ] T036 [US7] `src/pages/app/teacher/class.tsx` - per-class command centre: roster count +
+- [x] T036 [US7] `src/pages/app/teacher/class.tsx` - per-class command centre: roster count +
   ungraded count + due dates + at-risk (reuse `teacherOverview.ts` / `teacherAnalytics.ts`),
   each linking to detail; in the shell.
-- [ ] T037 [US7] `src/lib/assignmentTemplates.ts` - CRUD; `assignment-new.tsx` gains a "from
+- [x] T037 [US7] `src/lib/assignmentTemplates.ts` - CRUD; `assignment-new.tsx` gains a "from
   template" picker and a "save as template" action.
-- [ ] T038 [US7] `src/pages/app/classes/assignments.tsx` - multi-select + bulk publish /
+- [x] T038 [US7] (assignments list: multi-select + bulk publish/unpublish/close DONE;
+  queue.tsx bulk grade-return deferred as a follow-up - lower value, and the queue already
+  returns one submission per action.) `src/pages/app/classes/assignments.tsx` - multi-select + bulk publish /
   unpublish / close (per-item outcome, no rollback of successes); `src/pages/app/classes/queue.tsx`
   - multi-select "return selected" for already-marked submissions.
 - [ ] T039 [P] [US7] `tests/rls/assignment-templates.test.mjs` - a teacher reaches only their own

@@ -5,7 +5,7 @@ import AuthGuard from '@site/src/components/AuthGuard';
 import { useClassRole, useQueryParam } from '@site/src/contexts/ClassContext';
 import {
   listRoster, reissueJoinCode, revokeJoinCode, archiveClass, reactivateClass,
-  removeStudent, restoreStudent,
+  removeStudent, restoreStudent, updateClass,
 } from '@site/src/lib/classes';
 import type { RosterRow } from '@site/src/lib/classes';
 
@@ -37,6 +37,12 @@ const MESSAGES = {
     en: 'This class is archived - read-only. No new joins, assignments, or submissions are possible until it is reactivated.',
     ur: 'یہ کلاس آرکائیو ہے - صرف دیکھنے کے لیے۔ دوبارہ فعال ہونے تک نئی شمولیت، اسائنمنٹس یا جمع کروائے گئے کام ممکن نہیں۔',
   },
+  editClass: { en: 'Edit details', ur: 'تفصیلات میں ترمیم' },
+  className: { en: 'Class name', ur: 'کلاس کا نام' },
+  classTerm: { en: 'Term', ur: 'مدت' },
+  save: { en: 'Save', ur: 'محفوظ کریں' },
+  cancel: { en: 'Cancel', ur: 'منسوخ' },
+  updateClassError: { en: 'Could not update the class.', ur: 'کلاس اپ ڈیٹ نہیں ہو سکی۔' },
 } as const;
 
 function removeConfirmMessage(locale: 'en' | 'ur', label: string): string {
@@ -60,6 +66,9 @@ function RosterContent({ classId }: { classId: string }): React.ReactElement {
   const [roster, setRoster] = useState<RosterRow[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [pendingId, setPendingId] = useState<string | null>(null);
+  const [editing, setEditing] = useState(false);
+  const [editName, setEditName] = useState('');
+  const [editTerm, setEditTerm] = useState('');
 
   const loadRoster = useCallback(async () => {
     const { data, error: rosterError } = await listRoster(classId);
@@ -144,10 +153,54 @@ function RosterContent({ classId }: { classId: string }): React.ReactElement {
   const removedStudents = roster.filter((r) => r.status === 'removed');
   const archived = classRow.status === 'archived';
 
+  async function handleSaveClass(e: React.FormEvent): Promise<void> {
+    e.preventDefault();
+    setPendingId('class_details');
+    const { error: e2 } = await updateClass(classId, {
+      name: editName.trim(),
+      term_label: editTerm.trim(),
+    });
+    setPendingId(null);
+    if (e2) {
+      setError(MESSAGES.updateClassError[locale]);
+      return;
+    }
+    setEditing(false);
+    await reload();
+  }
+
   return (
     <div>
       <h2>{classRow.name}</h2>
-      <p>{classRow.course_code} - {classRow.term_label}</p>
+      <p>
+        {classRow.course_code} - {classRow.term_label}
+        {' · '}
+        <button
+          type="button"
+          className="button button--link button--sm"
+          onClick={() => { setEditing((v) => !v); setEditName(classRow.name); setEditTerm(classRow.term_label); }}
+        >
+          {MESSAGES.editClass[locale]}
+        </button>
+      </p>
+      {editing && (
+        <form onSubmit={handleSaveClass} className="margin-bottom--md">
+          <div className="margin-bottom--sm">
+            <label htmlFor="edit-class-name">{MESSAGES.className[locale]}</label>
+            <input id="edit-class-name" className="input" value={editName} onChange={(e) => setEditName(e.target.value)} required />
+          </div>
+          <div className="margin-bottom--sm">
+            <label htmlFor="edit-class-term">{MESSAGES.classTerm[locale]}</label>
+            <input id="edit-class-term" className="input" value={editTerm} onChange={(e) => setEditTerm(e.target.value)} required />
+          </div>
+          <button type="submit" className="button button--primary button--sm margin-right--sm" disabled={pendingId !== null}>
+            {MESSAGES.save[locale]}
+          </button>
+          <button type="button" className="button button--secondary button--sm" onClick={() => setEditing(false)}>
+            {MESSAGES.cancel[locale]}
+          </button>
+        </form>
+      )}
       {error && (
         <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>
       )}
