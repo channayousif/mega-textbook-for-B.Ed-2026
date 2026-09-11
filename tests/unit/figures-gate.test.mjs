@@ -13,6 +13,7 @@
  */
 import { describe, it, expect, afterEach } from 'vitest';
 import { mkdtempSync, mkdirSync, writeFileSync, readFileSync, rmSync } from 'node:fs';
+import { LIGHT_TOKENS, DARK_TOKENS, rootBlock, WORDMARK_TEXT } from '../../scripts/lib/figure-palette.mjs';
 import { tmpdir } from 'node:os';
 import { join, dirname } from 'node:path';
 import { spawnSync } from 'node:child_process';
@@ -265,6 +266,29 @@ const SRC = (id, ext = 'svg') => `/img/figures/efmp-302/unit-01/${id}.${ext}`;
  *   urSvg                   - [relPathUnderStatic, ...] .ur.svg assets to create
  *   headerOverride          - full manifest header (default V2_HEADER)
  */
+
+/**
+ * A minimal SVG that satisfies the Spec 013 asset lint: viewBox-only sizing,
+ * role/title/desc, the published :root token block, and exactly one
+ * aria-hidden wordmark. Fixtures build assets the same way the real generator
+ * does, so a test failing here means the CONTRACT changed, not the stub.
+ */
+function validSvg({ dark = false } = {}) {
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">`
+    + `<title id="t">A title</title><desc id="d">A description.</desc>`
+    + `<style>${rootBlock(dark ? DARK_TOKENS : LIGHT_TOKENS)} .bg{fill:var(--bg)} .wm{fill:var(--wm);font-size:11px}</style>`
+    + `<rect class="bg" x="0" y="0" width="400" height="300"/>`
+    + `<text class="wm" x="388" y="290" text-anchor="end" aria-hidden="true">${WORDMARK_TEXT}</text></svg>`;
+}
+
+/** Write a figure asset plus, for an SVG, its derived dark variant. */
+function writeAsset(absPath) {
+  mkdirSync(dirname(absPath), { recursive: true });
+  if (!absPath.endsWith('.svg')) { writeFileSync(absPath, 'RIFF....WEBP'); return; }
+  writeFileSync(absPath, validSvg());
+  writeFileSync(absPath.replace(/\.svg$/, '.dark.svg'), validSvg({ dark: true }));
+}
+
 function makeV2Fixture(opts = {}) {
   const root = mkdtempSync(join(tmpdir(), 'bed-fig2-'));
   const unitDir = join(root, 'docs', 'semester-1', 'efmp-302', 'unit-01');
@@ -304,16 +328,8 @@ function makeV2Fixture(opts = {}) {
   mkdirSync(figDir, { recursive: true });
   writeFileSync(join(figDir, 'unit-01.md'), `# Figures — Unit 1\n\n${opts.headerOverride ?? V2_HEADER}\n${rows.join('\n')}\n`);
 
-  for (const rel of opts.assets ?? []) {
-    const p = join(root, 'static', rel);
-    mkdirSync(dirname(p), { recursive: true });
-    writeFileSync(p, rel.endsWith('.svg') ? '<svg xmlns="http://www.w3.org/2000/svg"><title>x</title></svg>' : 'RIFF....WEBP');
-  }
-  for (const rel of opts.urSvg ?? []) {
-    const p = join(root, 'static', rel);
-    mkdirSync(dirname(p), { recursive: true });
-    writeFileSync(p, '<svg xmlns="http://www.w3.org/2000/svg"><title>x</title></svg>');
-  }
+  for (const rel of opts.assets ?? []) writeAsset(join(root, 'static', rel));
+  for (const rel of opts.urSvg ?? []) writeAsset(join(root, 'static', rel));
 
   if (opts.reviewed) {
     const urDir = join(root, 'i18n', 'ur', 'docusaurus-plugin-content-docs', 'current', 'semester-1', 'efmp-302', 'unit-01');
@@ -589,5 +605,113 @@ describe('check-figures.mjs — Spec 009 rendered figures + Spec 012 density', (
   it('[US1] skips the density rules for a legacy five-file unit', () => {
     root = makeFiguresFixture({ legacy: true });
     expect(runGate(root).code).toBe(0);
+  });
+});
+
+// --- Spec 013: the gate now reads the committed SVG bytes -------------------
+describe('check-figures.mjs - Spec 013 asset lint and bilingual parity', () => {
+  let root;
+  afterEach(() => { if (root) rmSync(root, { recursive: true, force: true }); root = undefined; });
+
+  const PLACED = {
+    reviewed: true,
+    t1Carrier: 'figure', t1Status: 'placed', t1Kind: 'flowchart',
+    t2Carrier: 'figure', t2Status: 'placed', t2Kind: 'diagram',
+    assets: [
+      'img/figures/efmp-302/unit-01/fig-U1-1.svg',
+      'img/figures/efmp-302/unit-01/fig-U1-2.svg',
+      'img/figures/efmp-302/unit-01/fig-U1-3.svg',
+      'img/figures/efmp-302/unit-01/fig-U1-4.svg',
+    ],
+    urSvg: [
+      'img/figures/efmp-302/unit-01/fig-U1-1.ur.svg',
+      'img/figures/efmp-302/unit-01/fig-U1-2.ur.svg',
+      'img/figures/efmp-302/unit-01/fig-U1-3.ur.svg',
+      'img/figures/efmp-302/unit-01/fig-U1-4.ur.svg',
+    ],
+  };
+  const asset = (r, name) => join(r, 'static', 'img', 'figures', 'efmp-302', 'unit-01', name);
+  const edit = (file, fn) => writeFileSync(file, fn(readFileSync(file, 'utf8')));
+
+  it('passes when every asset carries the published tokens and the wordmark', () => {
+    root = makeV2Fixture(PLACED);
+    expect(runGate(root).code).toBe(0);
+  });
+
+  it('rejects a colour literal outside the :root token block', () => {
+    root = makeV2Fixture(PLACED);
+    edit(asset(root, 'fig-U1-1.svg'), (t) => t.replace('class="bg"', 'class="bg" stroke="#ff00ff"'));
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/colour literal\(s\) outside the :root block/);
+  });
+
+  it('rejects an asset whose :root block is not the published palette', () => {
+    root = makeV2Fixture(PLACED);
+    edit(asset(root, 'fig-U1-1.svg'), (t) => t.replace('--ink:', '--ink:#123456;--nope:'));
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/does not carry the published light :root token block/);
+  });
+
+  it('rejects a figure with no wordmark', () => {
+    root = makeV2Fixture(PLACED);
+    edit(asset(root, 'fig-U1-2.svg'), (t) => t.replace(/<text class="wm"[\s\S]*?<\/text>/, ''));
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/must carry exactly one "textbook\.com\.pk" wordmark/);
+  });
+
+  it('rejects a wordmark that is exposed to assistive technology', () => {
+    root = makeV2Fixture(PLACED);
+    edit(asset(root, 'fig-U1-2.svg'), (t) => t.replace(' aria-hidden="true"', ''));
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/wordmark must be aria-hidden/);
+  });
+
+  it('rejects an em dash in a text node (Art. III.9, which no other gate scans in static/)', () => {
+    root = makeV2Fixture(PLACED);
+    edit(asset(root, 'fig-U1-3.svg'), (t) => t.replace('A description.', 'A description \u2014 with a dash.'));
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/em dash in a text node/);
+  });
+
+  it('rejects a missing dark variant', () => {
+    root = makeV2Fixture(PLACED);
+    rmSync(asset(root, 'fig-U1-1.dark.svg'));
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/has no dark variant/);
+  });
+
+  it('rejects a stale dark variant', () => {
+    root = makeV2Fixture(PLACED);
+    edit(asset(root, 'fig-U1-1.dark.svg'), (t) => t.replace('A description.', 'Drifted description.'));
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/is stale - run: npm run figures:variants/);
+  });
+
+  it('rejects an external reference', () => {
+    root = makeV2Fixture(PLACED);
+    edit(asset(root, 'fig-U1-4.svg'), (t) => t.replace('<rect', '<image href="https://example.test/x.png"/><rect'));
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/must not reference anything external/);
+  });
+
+  // THE Bug B regression. The predicate used to be `kind === 'diagram'`, so a
+  // table, concept map, flowchart or timeline could lose its Urdu variant and
+  // CI stayed green. fig-U1-1 here is a `flowchart`, which the old gate
+  // ignored entirely.
+  it('requires an .ur.svg for a NON-diagram schematic in a reviewed unit', () => {
+    root = makeV2Fixture(PLACED);
+    rmSync(asset(root, 'fig-U1-1.ur.svg'));
+    rmSync(asset(root, 'fig-U1-1.ur.dark.svg'));
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/fig-U1-1.*placed SVG in a reviewed unit but the translated/);
   });
 });
