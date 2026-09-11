@@ -16,7 +16,8 @@
  * The parse is column-aware (reads the header row).
  *
  * Always checked (both specs):
- *   - every `topic-*.mdx` carries ≥ 1 figure (marker or <Figure>);
+ *   - every `topic-*.mdx` carries ≥ 2 figures (marker or <Figure>) — Constitution III.10
+ *     (Spec 012); was ≥ 1 under Specs 008/009;
  *   - every carrier id matches `^fig-U<folderUnitNo>-\d+$` and is unique within the unit;
  *   - a comment marker's prompt ≥ 10 non-space chars; every carrier's alt is non-empty;
  *   - the manifest exists;
@@ -26,9 +27,15 @@
  *   - for a `translation_status: reviewed` bilingual unit, every EN carrier id also has an
  *     Urdu carrier.
  *
- * Additionally, per manifest row (Spec 009):
- *   - `prompt-only` — `Src` cell blank; `Kind` cell blank; exactly the Spec 008 behaviour.
- *   - `generated` / `placed` — `Kind ∈ {diagram, illustration}`; `Src` non-blank.
+ * Spec 012 (visual density, Constitution III.10) — once any manifest row in the unit carries a
+ * `Kind` (i.e. archetypes have been assigned; a fully unplanned all-`prompt-only` manifest keeps
+ * the Spec 008/009 behaviour byte-for-byte):
+ *   - every manifest row has a `Kind` in the six-value archetype set;
+ *   - at least one row's `Kind` is a schematic — `concept-map`, `flowchart`, or `timeline`.
+ *
+ * Additionally, per manifest row (Spec 009, Kind vocabulary widened by Spec 012):
+ *   - `prompt-only` — `Src` cell blank; `Kind` cell blank OR a valid planned archetype.
+ *   - `generated` / `placed` — `Kind ∈ {table, concept-map, flowchart, timeline, diagram, illustration}`; `Src` non-blank.
  *   - `placed` — the `Src` file exists under `static/`; the EN carrier is a `<Figure>` (not a
  *     bare comment); for a `reviewed` bilingual unit the UR topic file has a `<Figure>` for the
  *     id and, when `Kind: diagram`, `<figId>.ur.svg` exists under `static/`.
@@ -39,7 +46,9 @@ import { readdirSync, statSync, readFileSync, existsSync } from 'node:fs';
 import { join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
-import { parseManifest, STATUS_ENUM, KIND_ENUM } from './lib/figure-manifest.mjs';
+import { parseManifest, STATUS_ENUM, KIND_ENUM, SCHEMATIC_ARCHETYPES } from './lib/figure-manifest.mjs';
+
+const KIND_LIST = [...KIND_ENUM].join(', ');
 
 const REPO = resolve(fileURLToPath(new URL('..', import.meta.url)));
 const ROOT = process.env.CONTENT_ROOT ? resolve(process.env.CONTENT_ROOT) : REPO;
@@ -131,8 +140,8 @@ function checkUnit({ unitDir, courseFolder, courseCode, semester, unitNo }) {
     const parsed = matter(readFileSync(join(unitDir, tf), 'utf8'));
     labelByFile.set(tf, parsed.data.topic_label ?? null);
     const found = carriersIn(parsed.content);
-    if (found.length === 0) {
-      err(label, `topic file ${tf} carries no figure — a FIGURE marker or a <Figure> is required`);
+    if (found.length < 2) {
+      err(label, `topic file ${tf} carries ${found.length} figure(s) — Constitution III.10 requires at least 2 (a FIGURE marker or a <Figure>)`);
     }
     for (const c of found) {
       const mUnit = /^fig-U(\d+)-\d+$/.exec(c.id);
@@ -182,15 +191,18 @@ function checkUnit({ unitDir, courseFolder, courseCode, semester, unitNo }) {
     }
     manifestById.set(r.id, r);
 
-    // --- Spec 009 per-Status cells ---
+    // --- Spec 009 per-Status cells (Kind vocabulary widened by Spec 012) ---
     if (r.status === 'prompt-only') {
       if (r.hasSrcCol && r.src) err(label, `figure "${r.id}" is prompt-only but its Src cell is not blank ("${r.src}")`);
-      if (r.hasKindCol && r.kind) err(label, `figure "${r.id}" is prompt-only but its Kind cell is not blank ("${r.kind}")`);
+      // Spec 012: a prompt-only row MAY carry its planned archetype; if present it must be valid.
+      if (r.hasKindCol && r.kind && !KIND_ENUM.has(r.kind)) {
+        err(label, `figure "${r.id}" Kind "${r.kind}" not in {${KIND_LIST}}`);
+      }
     } else if (r.status === 'generated' || r.status === 'placed') {
       if (!r.hasKindCol) {
         err(label, `figure "${r.id}" is ${r.status} but the manifest has no Kind column (needs the v2 header)`);
       } else if (!KIND_ENUM.has(r.kind)) {
-        err(label, `figure "${r.id}" Kind "${r.kind || '(blank)'}" not in {diagram, illustration}`);
+        err(label, `figure "${r.id}" Kind "${r.kind || '(blank)'}" not in {${KIND_LIST}}`);
       }
       if (!r.hasSrcCol || !r.src) {
         err(label, `figure "${r.id}" is ${r.status} but its Src cell is blank`);
@@ -215,6 +227,24 @@ function checkUnit({ unitDir, courseFolder, courseCode, semester, unitNo }) {
       err(label, `topic file ${file} has no topic_label front matter — cannot verify manifest Topic for "${id}"`);
     } else if (String(r.topic) !== String(expected)) {
       err(label, `figure "${id}" manifest Topic "${r.topic}" != topic_label "${expected}" of ${file}`);
+    }
+  }
+
+  // --- Spec 012 (Constitution III.10): archetype completeness + a schematic per unit ---
+  // Applies once archetypes have been assigned (any row carries a Kind). A fully unplanned
+  // all-prompt-only manifest with no Kind cells keeps the Spec 008/009 behaviour unchanged.
+  const kindedRows = [...manifestById.values()].filter((r) => r.kind);
+  if (kindedRows.length > 0) {
+    // Once any figure is classified, every rendered figure (generated/placed) needs an
+    // archetype too; a row still at prompt-only MAY leave Kind blank (it is still just a plan).
+    for (const [id, r] of manifestById) {
+      if (!r.kind && r.status !== 'prompt-only') {
+        err(label, `figure "${id}" is ${r.status} but has no Kind/archetype — one of {${KIND_LIST}}`);
+      }
+    }
+    const kinds = kindedRows.map((r) => r.kind);
+    if (!kinds.some((k) => SCHEMATIC_ARCHETYPES.has(k))) {
+      err(label, `unit has no concept-map / flowchart / timeline figure — Constitution III.10 requires at least one schematic per unit (archetypes found: ${[...new Set(kinds)].join(', ')})`);
     }
   }
 
@@ -302,5 +332,5 @@ if (errors.length) {
   console.error('');
   process.exit(1);
 } else {
-  console.log('✓ Figure gate passed (carriers present, well-formed, unique; manifest consistent; placed assets exist).');
+  console.log('✓ Figure gate passed (≥ 2 carriers per topic, schematic per unit, well-formed, unique; manifest consistent; placed assets exist).');
 }

@@ -1,10 +1,15 @@
 /**
- * Fixture tests for scripts/check-figures.mjs (Spec 008: T015 red-first, T018 implementation).
+ * Fixture tests for scripts/check-figures.mjs.
  * Same spawn-a-script-against-a-CONTENT_ROOT-temp-dir pattern as depth-gate.test.mjs.
  *
- * Contract: specs/008-rich-unit-pedagogy/contracts/figures-manifest.md. In scope IFF the unit
- * folder has ≥ 1 `topic-NN.mdx`. Fails unless every topic file has ≥ 1 well-formed unique marker,
- * the manifest exists, and marker-set == manifest-set with matching Topic labels.
+ * Contracts: specs/008-rich-unit-pedagogy/contracts/figures-manifest.md (markers),
+ * specs/009-figure-rendering/contracts/figure-manifest-v2.md (rendering + v3 Kind note).
+ * In scope IFF the unit folder has >= 1 `topic-NN.mdx`.
+ *
+ * Spec 012 (Constitution III.10): every topic file carries >= 2 figure carriers; once any
+ * manifest row carries a Kind, every rendered row needs one and the unit needs >= 1 schematic
+ * (`concept-map` / `flowchart` / `timeline`). A fully unplanned all-prompt-only manifest with no
+ * Kind cells keeps the Spec 008/009 behaviour byte-for-byte.
  */
 import { describe, it, expect, afterEach } from 'vitest';
 import { mkdtempSync, mkdirSync, writeFileSync, readFileSync, rmSync } from 'node:fs';
@@ -50,11 +55,13 @@ function fm(extra = {}) {
 const marker = (id, prompt = 'clean flat vector diagram, labelled, high contrast', alt = 'A labelled diagram.') =>
   `{/* FIGURE[${id}]: ${prompt}; alt: ${alt} */}`;
 
-function topicBody(markerLine) {
+/** A topic body carrying an arbitrary number of figure carriers (marker lines or <Figure> tags). */
+function topicBody(carriers) {
+  const block = (carriers ?? []).join('\n');
   return `# Topic
 
 ## A real classroom situation
-${markerLine}
+${block}
 > vignette
 
 ## Explanation
@@ -62,15 +69,21 @@ text
 `;
 }
 
-const MANIFEST_HEADER = '| Figure ID | Topic | Prompt | Alt text | Status |\n|---|---|---|---|---|';
+const V1_HEADER = '| Figure ID | Topic | Prompt | Alt text | Status |\n|---|---|---|---|---|';
+const v1Row = (id, topic, status = 'prompt-only') =>
+  `| ${id} | ${topic} | clean flat vector diagram, labelled, high contrast | A labelled diagram. | ${status} |`;
 
 /**
+ * A v1 (Spec 008, 5-column manifest, comment markers) fixture. Two topics, TWO markers each by
+ * default (Constitution III.10). No Kind column, so the Spec 012 archetype/schematic rules do
+ * not apply.
+ *
  * opts:
- *   legacy         - build a 5-file legacy unit (no topic files) instead
- *   topic1Marker   - marker line for topic-01 (default a valid fig-U1-1); '' => no marker
- *   topic2Marker   - marker line for topic-02 (default a valid fig-U1-2)
- *   topic1Label / topic2Label - topic_label front matter
- *   manifestRows   - override the manifest body rows (array of '| ... |' strings); null => omit file
+ *   legacy            - build a 5-file legacy unit (no topic files) instead
+ *   topic1Carriers    - array of marker lines for topic-01 (default [fig-U1-1, fig-U1-2])
+ *   topic2Carriers    - array of marker lines for topic-02 (default [fig-U1-3, fig-U1-4])
+ *   topic1Label / topic2Label
+ *   manifestRows      - override the manifest body rows; null => omit the manifest file
  */
 function makeFiguresFixture(opts = {}) {
   const root = mkdtempSync(join(tmpdir(), 'bed-fig-'));
@@ -85,19 +98,19 @@ function makeFiguresFixture(opts = {}) {
   }
 
   writeFileSync(join(unitDir, 'index.mdx'), fm() + '\n# Unit\n\n## In this unit\n\n1. [t1](./topic-01)\n2. [t2](./topic-02)\n');
-  const t1 = opts.topic1Marker === undefined ? marker('fig-U1-1') : opts.topic1Marker;
-  const t2 = opts.topic2Marker === undefined ? marker('fig-U1-2') : opts.topic2Marker;
+  const t1 = opts.topic1Carriers ?? [marker('fig-U1-1'), marker('fig-U1-2')];
+  const t2 = opts.topic2Carriers ?? [marker('fig-U1-3'), marker('fig-U1-4')];
   writeFileSync(join(unitDir, 'topic-01.mdx'), fm({ topic_no: 1, topic_label: opts.topic1Label ?? '1.1' }) + topicBody(t1));
   writeFileSync(join(unitDir, 'topic-02.mdx'), fm({ topic_no: 2, topic_label: opts.topic2Label ?? '1.2' }) + topicBody(t2));
 
   const rows = opts.manifestRows ?? [
-    '| fig-U1-1 | 1.1 | clean flat vector diagram, labelled, high contrast | A labelled diagram. | prompt-only |',
-    '| fig-U1-2 | 1.2 | clean flat vector diagram, labelled, high contrast | A labelled diagram. | prompt-only |',
+    v1Row('fig-U1-1', '1.1'), v1Row('fig-U1-2', '1.1'),
+    v1Row('fig-U1-3', '1.2'), v1Row('fig-U1-4', '1.2'),
   ];
   if (opts.manifestRows !== null) {
     const figDir = join(root, 'specs', 'content', 'efmp-302', 'figures');
     mkdirSync(figDir, { recursive: true });
-    writeFileSync(join(figDir, 'unit-01.md'), `# Figures — Unit 1\n\n${MANIFEST_HEADER}\n${rows.join('\n')}\n`);
+    writeFileSync(join(figDir, 'unit-01.md'), `# Figures — Unit 1\n\n${V1_HEADER}\n${rows.join('\n')}\n`);
   }
   return root;
 }
@@ -114,29 +127,43 @@ describe('check-figures.mjs', () => {
     expect(runGate(root).code).toBe(0);
   });
 
-  it('passes the happy new-shape path', () => {
+  it('passes the happy new-shape path (>= 2 markers per topic)', () => {
     root = makeFiguresFixture();
     const { code, out } = runGate(root);
     expect(code).toBe(0);
     expect(out).toMatch(/passed/i);
   });
 
-  it('fails and names a topic file with no marker', () => {
-    root = makeFiguresFixture({ topic2Marker: '' });
+  it('fails and names a topic file with fewer than two figures', () => {
+    root = makeFiguresFixture({
+      topic2Carriers: [marker('fig-U1-3')],
+      manifestRows: [v1Row('fig-U1-1', '1.1'), v1Row('fig-U1-2', '1.1'), v1Row('fig-U1-3', '1.2')],
+    });
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/topic-02\.mdx/);
+    expect(out).toMatch(/at least 2|III\.10/);
+  });
+
+  it('fails a topic file with no marker at all', () => {
+    root = makeFiguresFixture({
+      topic2Carriers: [],
+      manifestRows: [v1Row('fig-U1-1', '1.1'), v1Row('fig-U1-2', '1.1')],
+    });
     const { code, out } = runGate(root);
     expect(code).toBe(1);
     expect(out).toMatch(/topic-02\.mdx/);
   });
 
   it('fails on a malformed figure id', () => {
-    root = makeFiguresFixture({ topic1Marker: marker('fig-1-2') });
+    root = makeFiguresFixture({ topic1Carriers: [marker('fig-1-2'), marker('fig-U1-1')] });
     const { code, out } = runGate(root);
     expect(code).toBe(1);
     expect(out).toMatch(/fig-1-2|malformed|fig-U1/);
   });
 
   it('fails on a duplicate id across two topics', () => {
-    root = makeFiguresFixture({ topic2Marker: marker('fig-U1-1') });
+    root = makeFiguresFixture({ topic2Carriers: [marker('fig-U1-1'), marker('fig-U1-4')] });
     const { code, out } = runGate(root);
     expect(code).toBe(1);
     expect(out).toMatch(/fig-U1-1/);
@@ -145,28 +172,31 @@ describe('check-figures.mjs', () => {
 
   it('fails when a marker is absent from the manifest', () => {
     root = makeFiguresFixture({
-      manifestRows: ['| fig-U1-1 | 1.1 | clean flat vector diagram, labelled | A labelled diagram. | prompt-only |'],
-    });
-    const { code, out } = runGate(root);
-    expect(code).toBe(1);
-    expect(out).toMatch(/fig-U1-2/);
-  });
-
-  it('fails when the manifest has a row with no matching marker', () => {
-    root = makeFiguresFixture({
-      manifestRows: [
-        '| fig-U1-1 | 1.1 | clean flat vector diagram, labelled | A labelled diagram. | prompt-only |',
-        '| fig-U1-2 | 1.2 | clean flat vector diagram, labelled | A labelled diagram. | prompt-only |',
-        '| fig-U1-3 | 1.2 | orphan manifest row, nothing points here | An orphan. | prompt-only |',
-      ],
+      manifestRows: [v1Row('fig-U1-1', '1.1'), v1Row('fig-U1-2', '1.1'), v1Row('fig-U1-4', '1.2')],
     });
     const { code, out } = runGate(root);
     expect(code).toBe(1);
     expect(out).toMatch(/fig-U1-3/);
   });
 
+  it('fails when the manifest has a row with no matching marker', () => {
+    root = makeFiguresFixture({
+      manifestRows: [
+        v1Row('fig-U1-1', '1.1'), v1Row('fig-U1-2', '1.1'),
+        v1Row('fig-U1-3', '1.2'), v1Row('fig-U1-4', '1.2'),
+        v1Row('fig-U1-9', '1.2'), // orphan manifest row
+      ],
+    });
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/fig-U1-9/);
+  });
+
   it('fails on empty alt text in a marker', () => {
-    root = makeFiguresFixture({ topic1Marker: '{/* FIGURE[fig-U1-1]: clean flat vector diagram, labelled; alt:  */}' });
+    root = makeFiguresFixture({
+      // the empty-alt marker is placed last so the marker regex is not lured across a later `*/}`
+      topic1Carriers: [marker('fig-U1-1'), '{/* FIGURE[fig-U1-2]: clean flat vector diagram, labelled; alt:  */}'],
+    });
     const { code, out } = runGate(root);
     expect(code).toBe(1);
     expect(out).toMatch(/alt/i);
@@ -175,8 +205,8 @@ describe('check-figures.mjs', () => {
   it('fails on a Topic mismatch between manifest and topic file', () => {
     root = makeFiguresFixture({
       manifestRows: [
-        '| fig-U1-1 | 1.9 | clean flat vector diagram, labelled | A labelled diagram. | prompt-only |',
-        '| fig-U1-2 | 1.2 | clean flat vector diagram, labelled | A labelled diagram. | prompt-only |',
+        v1Row('fig-U1-1', '1.9'), v1Row('fig-U1-2', '1.1'),
+        v1Row('fig-U1-3', '1.2'), v1Row('fig-U1-4', '1.2'),
       ],
     });
     const { code, out } = runGate(root);
@@ -188,8 +218,8 @@ describe('check-figures.mjs', () => {
   it('fails on a bad Status value', () => {
     root = makeFiguresFixture({
       manifestRows: [
-        '| fig-U1-1 | 1.1 | clean flat vector diagram, labelled | A labelled diagram. | draft |',
-        '| fig-U1-2 | 1.2 | clean flat vector diagram, labelled | A labelled diagram. | prompt-only |',
+        v1Row('fig-U1-1', '1.1', 'draft'), v1Row('fig-U1-2', '1.1'),
+        v1Row('fig-U1-3', '1.2'), v1Row('fig-U1-4', '1.2'),
       ],
     });
     const { code, out } = runGate(root);
@@ -206,7 +236,8 @@ describe('check-figures.mjs', () => {
 });
 
 // ---------------------------------------------------------------------------
-// Spec 009 — rendered figures: <Figure> carrier, v2 manifest, Status lifecycle
+// Spec 009 / 012 — rendered figures: <Figure> carrier, v2 manifest, Status lifecycle,
+// six-value Kind archetype, per-unit schematic rule.
 // ---------------------------------------------------------------------------
 
 const V2_HEADER =
@@ -215,15 +246,21 @@ const V2_HEADER =
 const figureEl = (id, src, alt = 'A labelled diagram.') =>
   `<Figure id="${id}" src="${src}" alt="${alt}" />`;
 
+const SRC = (id, ext = 'svg') => `/img/figures/efmp-302/unit-01/${id}.${ext}`;
+
 /**
- * A rendered-unit fixture. Two topics; each carries either a comment marker or a <Figure>.
+ * A rendered-unit fixture. Two topics; each carries a PRIMARY figure (fig-U1-1 / fig-U1-3,
+ * driven by the t1 / t2 opts) plus a FILLER figure (fig-U1-2 / fig-U1-4) that mirrors its
+ * topic's primary carrier form + status so the topic always has >= 2 carriers.
+ *
  * opts:
- *   t1Carrier / t2Carrier   - 'comment' (default) | 'figure'
- *   t1Src / t2Src           - src for the <Figure> and the manifest row
+ *   t1Carrier / t2Carrier   - 'comment' (default) | 'figure'   (applies to the primary + filler)
+ *   t1Src / t2Src           - src for the primary <Figure> and its manifest row
  *   t1Status / t2Status     - prompt-only (default) | generated | placed
- *   t1Kind / t2Kind         - diagram (default) | illustration | '' (omit)
+ *   t1Kind / t2Kind         - primary archetype; defaults: t1 'flowchart' (schematic), t2 'diagram'
+ *   fillerKind              - archetype for the filler rows when rendered (default 'diagram')
  *   assets                  - [relPathUnderStatic, ...] files to create under root/static/
- *   reviewed                - set index.mdx translation_status: reviewed + build UR mirror
+ *   reviewed                - index.mdx translation_status: reviewed + build the UR mirror
  *   urCarriers              - { 'topic-01.mdx': 'figure'|'comment'|'none', ... } for the UR mirror
  *   urSvg                   - [relPathUnderStatic, ...] .ur.svg assets to create
  *   headerOverride          - full manifest header (default V2_HEADER)
@@ -236,19 +273,29 @@ function makeV2Fixture(opts = {}) {
   const idxExtra = opts.reviewed ? { translation_status: 'reviewed' } : {};
   writeFileSync(join(unitDir, 'index.mdx'), fm(idxExtra) + '\n# Unit\n\n## In this unit\n\n1. a\n2. b\n');
 
-  const specs = [
-    { n: 1, label: '1.1', id: 'fig-U1-1', carrier: opts.t1Carrier ?? 'comment', src: opts.t1Src ?? '/img/figures/efmp-302/unit-01/fig-U1-1.svg', status: opts.t1Status ?? 'prompt-only', kind: opts.t1Kind ?? 'diagram' },
-    { n: 2, label: '1.2', id: 'fig-U1-2', carrier: opts.t2Carrier ?? 'comment', src: opts.t2Src ?? '/img/figures/efmp-302/unit-01/fig-U1-2.svg', status: opts.t2Status ?? 'prompt-only', kind: opts.t2Kind ?? 'diagram' },
+  const fillerKind = opts.fillerKind ?? 'diagram';
+  const primaries = [
+    { n: 1, label: '1.1', id: 'fig-U1-1', carrier: opts.t1Carrier ?? 'comment', src: opts.t1Src ?? SRC('fig-U1-1'), status: opts.t1Status ?? 'prompt-only', kind: opts.t1Kind ?? 'flowchart' },
+    { n: 2, label: '1.2', id: 'fig-U1-3', carrier: opts.t2Carrier ?? 'comment', src: opts.t2Src ?? SRC('fig-U1-3'), status: opts.t2Status ?? 'prompt-only', kind: opts.t2Kind ?? 'diagram' },
   ];
+  const specs = [];
+  for (const p of primaries) {
+    specs.push(p);
+    specs.push({
+      n: p.n, label: p.label, id: p.n === 1 ? 'fig-U1-2' : 'fig-U1-4',
+      carrier: p.carrier, src: SRC(p.n === 1 ? 'fig-U1-2' : 'fig-U1-4'),
+      status: p.status, kind: p.status === 'prompt-only' ? '' : fillerKind,
+    });
+  }
 
   const rows = [];
+  for (const n of [1, 2]) {
+    const carriers = specs.filter((s) => s.n === n).map((s) => (s.carrier === 'figure' ? figureEl(s.id, s.src) : marker(s.id)));
+    writeFileSync(join(unitDir, `topic-0${n}.mdx`), fm({ topic_no: n, topic_label: `1.${n}` }) + topicBody(carriers));
+  }
   for (const s of specs) {
-    const body =
-      s.carrier === 'figure'
-        ? topicBody(figureEl(s.id, s.src))
-        : topicBody(marker(s.id));
-    writeFileSync(join(unitDir, `topic-0${s.n}.mdx`), fm({ topic_no: s.n, topic_label: s.label }) + body);
     const srcCell = s.status === 'prompt-only' ? '' : s.src;
+    // A prompt-only row leaves Kind blank (still just a plan); once rendered it carries its archetype.
     const kindCell = s.status === 'prompt-only' ? '' : (s.kind ?? '');
     rows.push(`| ${s.id} | ${s.label} | ${kindCell} | clean flat vector diagram, labelled | A labelled diagram. | ${srcCell} | ${s.status} |`);
   }
@@ -273,23 +320,26 @@ function makeV2Fixture(opts = {}) {
     mkdirSync(urDir, { recursive: true });
     writeFileSync(join(urDir, 'index.mdx'), fm({ translation_status: 'reviewed' }) + '\n# ی\n');
     const urc = opts.urCarriers ?? {};
-    for (const s of specs) {
-      const mode = urc[`topic-0${s.n}.mdx`] ?? 'figure';
-      let body = topicBody('');
+    for (const n of [1, 2]) {
+      const mode = urc[`topic-0${n}.mdx`] ?? 'figure';
+      const tSpecs = specs.filter((s) => s.n === n);
+      let carriers = [];
       if (mode === 'figure') {
-        const urSrc = s.kind === 'diagram' ? s.src.replace(/\.svg$/, '.ur.svg') : s.src;
-        body = topicBody(figureEl(s.id, urSrc, 'ایک عنوان'));
+        carriers = tSpecs.map((s) => {
+          const urSrc = s.kind === 'diagram' || s.kind === '' ? s.src.replace(/\.svg$/, '.ur.svg') : s.src.replace(/\.svg$/, '.ur.svg');
+          return figureEl(s.id, urSrc, 'ایک عنوان');
+        });
       } else if (mode === 'comment') {
-        body = topicBody(marker(s.id));
-      }
-      writeFileSync(join(urDir, `topic-0${s.n}.mdx`), fm({ topic_no: s.n, topic_label: s.label, translation_status: 'reviewed' }) + body);
+        carriers = tSpecs.map((s) => marker(s.id));
+      } // 'none' => no carriers
+      writeFileSync(join(urDir, `topic-0${n}.mdx`), fm({ topic_no: n, topic_label: `1.${n}`, translation_status: 'reviewed' }) + topicBody(carriers));
     }
   }
 
   return root;
 }
 
-describe('check-figures.mjs — Spec 009 rendered figures', () => {
+describe('check-figures.mjs — Spec 009 rendered figures + Spec 012 density', () => {
   let root;
   afterEach(() => {
     if (root) rmSync(root, { recursive: true, force: true });
@@ -312,13 +362,15 @@ describe('check-figures.mjs — Spec 009 rendered figures', () => {
     expect(runGate(root).code).toBe(0);
   });
 
-  it('accepts a <Figure> element as the carrier for a placed figure', () => {
+  it('accepts <Figure> elements as carriers for a fully placed unit', () => {
     root = makeV2Fixture({
       t1Carrier: 'figure', t1Status: 'placed',
       t2Carrier: 'figure', t2Status: 'placed',
       assets: [
         'img/figures/efmp-302/unit-01/fig-U1-1.svg',
         'img/figures/efmp-302/unit-01/fig-U1-2.svg',
+        'img/figures/efmp-302/unit-01/fig-U1-3.svg',
+        'img/figures/efmp-302/unit-01/fig-U1-4.svg',
       ],
     });
     const { code, out } = runGate(root);
@@ -337,10 +389,10 @@ describe('check-figures.mjs — Spec 009 rendered figures', () => {
     expect(out).toMatch(/fig-U1-1\.svg|does not exist|missing/i);
   });
 
-  it('fails a generated/placed row with a Kind not in the enum', () => {
+  it('fails a generated/placed row with a Kind not in the archetype set', () => {
     root = makeV2Fixture({
       t1Carrier: 'figure', t1Status: 'placed', t1Kind: 'sketch',
-      assets: ['img/figures/efmp-302/unit-01/fig-U1-1.svg'],
+      assets: ['img/figures/efmp-302/unit-01/fig-U1-1.svg', 'img/figures/efmp-302/unit-01/fig-U1-2.svg'],
     });
     const { code, out } = runGate(root);
     expect(code).toBe(1);
@@ -350,26 +402,23 @@ describe('check-figures.mjs — Spec 009 rendered figures', () => {
   it('fails a placed row whose EN topic file still has only the comment marker', () => {
     root = makeV2Fixture({
       t1Carrier: 'comment', t1Status: 'placed',
-      assets: ['img/figures/efmp-302/unit-01/fig-U1-1.svg'],
+      assets: ['img/figures/efmp-302/unit-01/fig-U1-1.svg', 'img/figures/efmp-302/unit-01/fig-U1-2.svg'],
     });
     const { code, out } = runGate(root);
     expect(code).toBe(1);
     expect(out).toMatch(/fig-U1-1/);
-    expect(out).toMatch(/<Figure>|Figure element|not rendered/i);
+    expect(out).toMatch(/<Figure>|Figure element|not rendered|comment marker/i);
   });
 
   it('fails when Src is non-blank on a prompt-only row', () => {
-    root = makeV2Fixture({
-      headerOverride: V2_HEADER,
-      t1Status: 'prompt-only', t1Src: '/img/figures/efmp-302/unit-01/fig-U1-1.svg',
-    });
-    // force a non-blank src cell on a prompt-only row
+    root = makeV2Fixture();
     const figFile = join(root, 'specs', 'content', 'efmp-302', 'figures', 'unit-01.md');
     let md = readFileSync(figFile, 'utf8');
     md = md.replace(
       '| fig-U1-1 | 1.1 |  | clean flat vector diagram, labelled | A labelled diagram. |  | prompt-only |',
-      '| fig-U1-1 | 1.1 |  | clean flat vector diagram, labelled | A labelled diagram. | /img/figures/efmp-302/unit-01/fig-U1-1.svg | prompt-only |',
+      '| fig-U1-1 | 1.1 |  | clean flat vector diagram, labelled | A labelled diagram. | ' + SRC('fig-U1-1') + ' | prompt-only |',
     );
+    expect(md).toContain(SRC('fig-U1-1') + ' | prompt-only |'); // guard: the replace actually fired
     writeFileSync(figFile, md);
     const { code, out } = runGate(root);
     expect(code).toBe(1);
@@ -380,10 +429,9 @@ describe('check-figures.mjs — Spec 009 rendered figures', () => {
     root = makeV2Fixture({ t1Status: 'generated', t2Status: 'generated' });
     const figFile = join(root, 'specs', 'content', 'efmp-302', 'figures', 'unit-01.md');
     let md = readFileSync(figFile, 'utf8');
-    // blank the Src cell of the fig-U1-1 generated row
     md = md.replace(
-      '| fig-U1-1 | 1.1 | diagram | clean flat vector diagram, labelled | A labelled diagram. | /img/figures/efmp-302/unit-01/fig-U1-1.svg | generated |',
-      '| fig-U1-1 | 1.1 | diagram | clean flat vector diagram, labelled | A labelled diagram. |  | generated |',
+      '| fig-U1-1 | 1.1 | flowchart | clean flat vector diagram, labelled | A labelled diagram. | /img/figures/efmp-302/unit-01/fig-U1-1.svg | generated |',
+      '| fig-U1-1 | 1.1 | flowchart | clean flat vector diagram, labelled | A labelled diagram. |  | generated |',
     );
     writeFileSync(figFile, md);
     const { code, out } = runGate(root);
@@ -394,32 +442,43 @@ describe('check-figures.mjs — Spec 009 rendered figures', () => {
   it('fails a reviewed unit: placed diagram with no .ur.svg', () => {
     root = makeV2Fixture({
       reviewed: true,
-      t1Carrier: 'figure', t1Status: 'placed', t1Kind: 'diagram',
+      t1Carrier: 'figure', t1Status: 'placed', t1Kind: 'flowchart',
       t2Carrier: 'figure', t2Status: 'placed', t2Kind: 'diagram',
       assets: [
         'img/figures/efmp-302/unit-01/fig-U1-1.svg',
         'img/figures/efmp-302/unit-01/fig-U1-2.svg',
+        'img/figures/efmp-302/unit-01/fig-U1-3.svg',
+        'img/figures/efmp-302/unit-01/fig-U1-4.svg',
       ],
-      urSvg: ['img/figures/efmp-302/unit-01/fig-U1-2.ur.svg'], // fig-U1-1.ur.svg missing
+      urSvg: [
+        'img/figures/efmp-302/unit-01/fig-U1-1.ur.svg',
+        'img/figures/efmp-302/unit-01/fig-U1-2.ur.svg',
+        'img/figures/efmp-302/unit-01/fig-U1-4.ur.svg',
+        // fig-U1-3.ur.svg missing
+      ],
     });
     const { code, out } = runGate(root);
     expect(code).toBe(1);
-    expect(out).toMatch(/fig-U1-1/);
+    expect(out).toMatch(/fig-U1-3/);
     expect(out).toMatch(/ur\.svg/i);
   });
 
   it('fails a reviewed unit: placed figure with no UR <Figure>', () => {
     root = makeV2Fixture({
       reviewed: true,
-      t1Carrier: 'figure', t1Status: 'placed', t1Kind: 'diagram',
+      t1Carrier: 'figure', t1Status: 'placed', t1Kind: 'flowchart',
       t2Carrier: 'figure', t2Status: 'placed', t2Kind: 'diagram',
       assets: [
         'img/figures/efmp-302/unit-01/fig-U1-1.svg',
         'img/figures/efmp-302/unit-01/fig-U1-2.svg',
+        'img/figures/efmp-302/unit-01/fig-U1-3.svg',
+        'img/figures/efmp-302/unit-01/fig-U1-4.svg',
       ],
       urSvg: [
         'img/figures/efmp-302/unit-01/fig-U1-1.ur.svg',
         'img/figures/efmp-302/unit-01/fig-U1-2.ur.svg',
+        'img/figures/efmp-302/unit-01/fig-U1-3.ur.svg',
+        'img/figures/efmp-302/unit-01/fig-U1-4.ur.svg',
       ],
       urCarriers: { 'topic-01.mdx': 'none', 'topic-02.mdx': 'figure' },
     });
@@ -432,15 +491,19 @@ describe('check-figures.mjs — Spec 009 rendered figures', () => {
   it('passes a fully rendered reviewed bilingual unit', () => {
     root = makeV2Fixture({
       reviewed: true,
-      t1Carrier: 'figure', t1Status: 'placed', t1Kind: 'diagram',
+      t1Carrier: 'figure', t1Status: 'placed', t1Kind: 'flowchart',
       t2Carrier: 'figure', t2Status: 'placed', t2Kind: 'diagram',
       assets: [
         'img/figures/efmp-302/unit-01/fig-U1-1.svg',
         'img/figures/efmp-302/unit-01/fig-U1-2.svg',
+        'img/figures/efmp-302/unit-01/fig-U1-3.svg',
+        'img/figures/efmp-302/unit-01/fig-U1-4.svg',
       ],
       urSvg: [
         'img/figures/efmp-302/unit-01/fig-U1-1.ur.svg',
         'img/figures/efmp-302/unit-01/fig-U1-2.ur.svg',
+        'img/figures/efmp-302/unit-01/fig-U1-3.ur.svg',
+        'img/figures/efmp-302/unit-01/fig-U1-4.ur.svg',
       ],
     });
     const { code, out } = runGate(root);
@@ -448,12 +511,83 @@ describe('check-figures.mjs — Spec 009 rendered figures', () => {
     expect(out).toMatch(/passed/i);
   });
 
-  it('accepts an incremental unit: one placed, one still prompt-only', () => {
+  it('accepts an incremental unit: one topic placed, one still prompt-only', () => {
     root = makeV2Fixture({
-      t1Carrier: 'figure', t1Status: 'placed',
+      t1Carrier: 'figure', t1Status: 'placed', t1Kind: 'flowchart',
       t2Carrier: 'comment', t2Status: 'prompt-only',
-      assets: ['img/figures/efmp-302/unit-01/fig-U1-1.svg'],
+      assets: [
+        'img/figures/efmp-302/unit-01/fig-U1-1.svg',
+        'img/figures/efmp-302/unit-01/fig-U1-2.svg',
+      ],
     });
+    expect(runGate(root).code).toBe(0);
+  });
+
+  // --- Spec 012 (Constitution III.10) new rules ------------------------------
+
+  it('[US1] passes a unit with >= 2 carriers per topic and a timeline somewhere', () => {
+    root = makeV2Fixture({
+      t1Carrier: 'figure', t1Status: 'placed', t1Kind: 'timeline',
+      t2Carrier: 'figure', t2Status: 'placed', t2Kind: 'diagram',
+      assets: [
+        'img/figures/efmp-302/unit-01/fig-U1-1.svg',
+        'img/figures/efmp-302/unit-01/fig-U1-2.svg',
+        'img/figures/efmp-302/unit-01/fig-U1-3.svg',
+        'img/figures/efmp-302/unit-01/fig-U1-4.svg',
+      ],
+    });
+    const { code, out } = runGate(root);
+    expect(code).toBe(0);
+    expect(out).toMatch(/passed/i);
+  });
+
+  it('[US1] fails when a topic-NN.mdx has only one carrier', () => {
+    root = makeFiguresFixture({
+      topic1Carriers: [marker('fig-U1-1')],
+      manifestRows: [v1Row('fig-U1-1', '1.1'), v1Row('fig-U1-3', '1.2'), v1Row('fig-U1-4', '1.2')],
+    });
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/topic-01\.mdx/);
+    expect(out).toMatch(/1 figure\(s\)|at least 2/);
+  });
+
+  it('[US1] fails when every topic has >= 2 carriers but no figure is a concept-map / flowchart / timeline', () => {
+    root = makeV2Fixture({
+      t1Carrier: 'figure', t1Status: 'placed', t1Kind: 'table',
+      t2Carrier: 'figure', t2Status: 'placed', t2Kind: 'diagram',
+      fillerKind: 'diagram',
+      assets: [
+        'img/figures/efmp-302/unit-01/fig-U1-1.svg',
+        'img/figures/efmp-302/unit-01/fig-U1-2.svg',
+        'img/figures/efmp-302/unit-01/fig-U1-3.svg',
+        'img/figures/efmp-302/unit-01/fig-U1-4.svg',
+      ],
+    });
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/concept-map \/ flowchart \/ timeline|schematic/i);
+  });
+
+  it('[US1] fails when a manifest row archetype is blank or unknown once the unit is classified', () => {
+    root = makeV2Fixture({
+      t1Carrier: 'figure', t1Status: 'placed', t1Kind: 'timeline',
+      t2Carrier: 'figure', t2Status: 'placed', t2Kind: 'wibble',
+      assets: [
+        'img/figures/efmp-302/unit-01/fig-U1-1.svg',
+        'img/figures/efmp-302/unit-01/fig-U1-2.svg',
+        'img/figures/efmp-302/unit-01/fig-U1-3.svg',
+        'img/figures/efmp-302/unit-01/fig-U1-4.svg',
+      ],
+    });
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/fig-U1-3/);
+    expect(out).toMatch(/kind|archetype/i);
+  });
+
+  it('[US1] skips the density rules for a legacy five-file unit', () => {
+    root = makeFiguresFixture({ legacy: true });
     expect(runGate(root).code).toBe(0);
   });
 });

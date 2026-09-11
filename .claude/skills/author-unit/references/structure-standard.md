@@ -33,7 +33,7 @@ docs/semester-N/<course>/course-review.mdx   # OPTIONAL, course-level (not autho
 
 | # | Heading (exact) | Gate minimum |
 |---|---|---|
-| 1 | `## A real classroom situation` | - (a FIGURE marker usually sits here) |
+| 1 | `## A real classroom situation` | - (a FIGURE marker usually sits here; the topic needs ≥ 2 figures total, see below) |
 | 2 | `## Explanation` | - (misconception named + corrected here) |
 | 3 | `## Activity: <name>` | - (`## Activity:` is matched as a prefix) |
 | 4 | `## Check your understanding` | ≥ **3** top-level numbered items (`1.`, `2.`, …) |
@@ -74,11 +74,14 @@ or out of order **and** the topic file.
 9. **Reading-minutes** - `sum(est_reading_minutes)` across `index.mdx` + every `topic-*.mdx` +
    `unit-assessment.mdx` (+ `unit-teacher-notes.mdx`) ∈ the `**Depth budget**` `A–B` band.
 
-**`scripts/check-figures.mjs`:** every `topic-*.mdx` has ≥ 1 FIGURE marker; ids match
-`^fig-U<folderUnitNo>-\d+$` and are unique in the unit; prompt ≥ 10 non-space chars, alt
-non-empty; `figures/unit-NN.md` exists; marker-id set **==** manifest-id set both ways; each
-manifest row's `Topic` **==** the marker file's `topic_label`; `Status ∈ {prompt-only,
-generated, placed}`; for `reviewed` bilingual units the UR topic files carry the same ids.
+**`scripts/check-figures.mjs`:** every `topic-*.mdx` has **≥ 2** FIGURE carriers (marker or
+`<Figure>`) and every unit has **≥ 1 `concept-map` / `flowchart` / `timeline`** (Constitution
+Art. III.10); ids match `^fig-U<folderUnitNo>-\d+$` and are unique in the unit; prompt ≥ 10
+non-space chars, alt non-empty; `figures/unit-NN.md` exists; carrier-id set **==** manifest-id
+set both ways; each manifest row's `Topic` **==** the carrier file's `topic_label`; `Status ∈
+{prompt-only, generated, placed}`; every rendered row's `Kind` ∈ `{table, concept-map,
+flowchart, timeline, diagram, illustration}`; for `reviewed` bilingual units the UR topic files
+carry the same ids.
 
 **`scripts/check-no-answer-keys.mjs`:** the prose patterns (`answer key`, `marking scheme`,
 `correct answer`) are allowed **only** below one exact `## Answers and marking guidance`
@@ -111,7 +114,9 @@ reviewed`.
 - [ ] every `topic-NN.mdx` has all nine headings in order; `topic_no` / `topic_label` set
 - [ ] per topic: `## Check your understanding` ≥ 3 numbered; `## Self-assessment checklist` ≥ 3;
       `## Further reading` ≥ 1; `## Summative task` has a rubric with ≥ 1 Analyze-or-higher
-- [ ] each `topic-NN.mdx` has ≥ 1 well-formed unique `fig-U<n>-<seq>` marker with alt text
+- [ ] each `topic-NN.mdx` has **≥ 2** well-formed unique `fig-U<n>-<seq>` markers with alt text,
+      each tagged with an archetype in the content-spec `**Figure plan**`; the unit has **≥ 1
+      `concept-map` / `flowchart` / `timeline`** (Art. III.10)
 - [ ] `unit-assessment.mdx`: `## Unit summary`; **exactly 10 / 10 / 5** per band; every item
       Bloom-tagged; `## Answers and marking guidance` is the final `##` section, ≤ 1
 - [ ] no answer-key front-matter key anywhere; prose answers only inside the bounded section
@@ -120,8 +125,9 @@ reviewed`.
 - [ ] `coverage/unit-NN.md`: every checklist ID mapped; every topic file referenced ≥ 1;
       each ID's coverage row(s) agree with its `### Topic list` topic assignment
 - [ ] every coverage `Source` has a `sources/unit-NN.md` row; no orphan source keys
-- [ ] `figures/unit-NN.md`: one row per marker; `Topic` == the marker file's `topic_label`;
-      marker-set == manifest-set both ways; all `Status: prompt-only`
+- [ ] `figures/unit-NN.md`: one row per marker (≥ 2 per topic); `Topic` == the marker file's
+      `topic_label`; marker-set == manifest-set both ways; each row's `Kind` is the planned
+      archetype; ≥ 1 row is `concept-map` / `flowchart` / `timeline`; all `Status: prompt-only`
 - [ ] register spot-check: no undefined graduate-level term
 - [ ] re-restructure only: UR orphans deleted, UR skeleton stubs added with matching marker ids,
       `translation_status: draft`, `tasks.md` G2/G3 re-opened

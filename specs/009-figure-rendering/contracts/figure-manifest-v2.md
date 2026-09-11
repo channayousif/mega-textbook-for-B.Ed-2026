@@ -1,5 +1,13 @@
 # Contract: Figure Manifest v2
 
+> **v3 note (Spec 012, ADR-0017)**: the `Kind` column vocabulary widened from two values
+> (`diagram`, `illustration`) to six - `table`, `concept-map`, `flowchart`, `timeline`,
+> `diagram`, `illustration`. The column name, position, and the seven-column header are
+> unchanged; `diagram` and `illustration` remain valid, so every v2 row still parses. Spec 012
+> also adds two `check:figures` rules that read this column: **>= 2 figure carriers per
+> `topic-*.mdx`**, and **>= 1 figure whose `Kind` is `concept-map`, `flowchart`, or `timeline`
+> per unit**. See `scripts/lib/figure-manifest.mjs` (`KIND_ENUM`, `SCHEMATIC_ARCHETYPES`).
+
 **Supersedes**: `specs/008-rich-unit-pedagogy/contracts/figures-manifest.md` for any unit whose
 figures have begun rendering. A unit still entirely at `Status: prompt-only` is byte-for-byte
 valid under both contracts.
@@ -20,7 +28,7 @@ valid under both contracts.
 |---|---|---|
 | `Figure ID` | `^fig-U\d+-\d+$`, unique in the table, `U<n>` == the unit-folder number | malformed / duplicate / wrong unit |
 | `Topic` | the `topic_label` front-matter of the topic file that carries the figure | ≠ the carrier file's `topic_label` |
-| `Kind` | `diagram` \| `illustration` | not in the set, **when `Status ∈ {generated, placed}`** |
+| `Kind` | `table` \| `concept-map` \| `flowchart` \| `timeline` \| `diagram` \| `illustration` (Spec 012 archetype) | not in the set, **when `Status ∈ {generated, placed}`**; also: no row's `Kind` is a schematic (`concept-map`/`flowchart`/`timeline`) anywhere in the unit |
 | `Prompt` | the generation prompt (retained from Spec 008 for regeneration + the human gate); ≥ 10 non-space chars | blank / too short |
 | `Alt text` | the accessible description; SHOULD equal the `<Figure alt>` (human gate reconciles) | blank |
 | `Src` | the site path `/img/figures/<course-lowercase>/unit-NN/<figId>[.ur].<ext>`. **Blank iff `Status: prompt-only`** | blank while not `prompt-only`; non-blank while `prompt-only`; for `placed`, the file does not exist under `static/` |

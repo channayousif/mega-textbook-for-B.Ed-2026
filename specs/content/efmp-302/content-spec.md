@@ -194,12 +194,12 @@ The opt-in per-topic partition for `docs/semester-1/efmp-302/unit-01/` (Spec 008
 Its presence, together with `topic-*.mdx` files on disk, puts Unit 1 on the new-shape gates.
 The `Sub-topic IDs` cells form a **total, disjoint partition** of the `### Sub-topic checklist`.
 
-| Topic | Title | Sub-topic IDs | Reading-min | Figures |
+| Topic | Title | Sub-topic IDs | Reading-min | Figures (id: archetype) |
 |---|---|---|---|---|
-| 1.1 | What makes teaching a profession | U1-01, U1-02, U1-03, U1-04 | 15–21 | fig-U1-1 |
-| 1.2 | From an industrial model to inquiry-based teaching | U1-05, U1-06 | 11–17 | fig-U1-2 |
-| 1.3 | The four dimensions of teacher professionalism | U1-07, U1-08, U1-09, U1-10 | 16–22 | fig-U1-3 |
-| 1.4 | Becoming a teacher: developing your identity | U1-11, U1-12, U1-13, U1-14 | 13–19 | fig-U1-4 |
+| 1.1 | What makes teaching a profession | U1-01, U1-02, U1-03, U1-04 | 15–21 | fig-U1-1: table, fig-U1-5: concept-map |
+| 1.2 | From an industrial model to inquiry-based teaching | U1-05, U1-06 | 11–17 | fig-U1-2: diagram, fig-U1-6: flowchart |
+| 1.3 | The four dimensions of teacher professionalism | U1-07, U1-08, U1-09, U1-10 | 16–22 | fig-U1-3: diagram, fig-U1-7: timeline |
+| 1.4 | Becoming a teacher: developing your identity | U1-11, U1-12, U1-13, U1-14 | 13–19 | fig-U1-4: concept-map, fig-U1-8: flowchart |
 
 **Depth budget**: 14 sub-topics; 4 topics; 90–120 reading-min (per-topic re-baseline; sums
 `index.mdx` (4) + `topic-01…04.mdx` (18 + 14 + 19 + 16) + `unit-assessment.mdx` (24) +
@@ -228,15 +228,25 @@ professionalism" (industrial → autonomous → collegial → post-modern) so th
 shift is not presented as a simple before/after; use the OECD/`suarez2022` identity model
 (identity as ongoing, relational, context-shaped) rather than a fixed-traits view.
 
-**Figure plan** (one per topic - seeds `specs/content/efmp-302/figures/unit-01.md`):
-  - fig-U1-1 - four-features comparison table: teacher vs shopkeeper vs doctor against specialised
-    knowledge / formal training / code of conduct / public accountability (Topic 1.1)
-  - fig-U1-2 - "one lesson, two ways" split panel: the same lesson taught in an industrial
-    (scripted, compliance) frame and an inquiry-based (reflective) frame (Topic 1.2)
-  - fig-U1-3 - accountability / autonomy / collegiality triangle, with the specialised-knowledge
-    base underneath (Topic 1.3)
-  - fig-U1-4 - identity-shaping influences web: schooling history, family, community, policy,
-    beliefs and values feeding into "who am I becoming as a teacher?" (Topic 1.4)
+**Figure plan** (>= 2 per topic, each with an archetype; >= 1 concept-map / flowchart / timeline
+in the unit - Constitution Art. III.10; seeds `specs/content/efmp-302/figures/unit-01.md`):
+  - fig-U1-1 - `table` - four-features comparison: teacher vs shopkeeper vs doctor against
+    specialised knowledge / formal training / code of conduct / public accountability (Topic 1.1)
+  - fig-U1-5 - `concept-map` - "profession" at the centre linked to its four features and to the
+    near-terms it is not (occupation, vocation, semi-profession), each link labelled (Topic 1.1)
+  - fig-U1-2 - `diagram` - "one lesson, two ways" split panel: the same lesson taught in an
+    industrial (scripted, compliance) frame and an inquiry-based (reflective) frame (Topic 1.2)
+  - fig-U1-6 - `flowchart` - how a pupil's question travels through an industrial lesson (closed
+    down, redirected to the script) vs an inquiry lesson (taken up, investigated) (Topic 1.2)
+  - fig-U1-3 - `diagram` - accountability / autonomy / collegiality triangle, with the
+    specialised-knowledge base underneath (Topic 1.3)
+  - fig-U1-7 - `timeline` - the professionalization arc of teaching in Pakistan: an occupation ->
+    training institutions -> a certification requirement -> a written code and national
+    professional standards (Topic 1.3; this is the unit's required schematic)
+  - fig-U1-4 - `concept-map` - identity-shaping influences web: schooling history, family,
+    community, policy, beliefs and values feeding into "who am I becoming as a teacher?" (Topic 1.4)
+  - fig-U1-8 - `flowchart` - the reflective-practice cycle: teach -> notice -> ask why ->
+    read / discuss -> adjust -> teach again (Topic 1.4)
 
 **Unit-end assessment blueprint** (`unit-assessment.mdx` - Spec 008 fixed 10/10/5 bank):
   - MCQs (10): Remember → Apply; ≥ 2 per topic - 1.1 (U1-01…U1-04), 1.2 (U1-05…U1-06),
