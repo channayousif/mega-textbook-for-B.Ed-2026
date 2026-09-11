@@ -3,9 +3,9 @@ import { createClient } from '@supabase/supabase-js';
 
 /**
  * T022 [US4] — marks a unit studied from its content page, confirms it
- * appears in Progress without a reload race (SC-002); marks the same unit
- * again and confirms the coverage count doesn't change; marks a unit already
- * covered via a graded assignment and confirms no double count (US4 AS3).
+ * appears in Progress without a reload race (SC-002); revisits the page and
+ * confirms the read-back shows it already studied (Spec 004 FR-006) with no
+ * duplicate unit_progress row (US4 AS3).
  */
 const SUPABASE_URL = process.env.DOCUSAURUS_SUPABASE_URL;
 const ANON_KEY = process.env.DOCUSAURUS_SUPABASE_ANON_KEY;
@@ -54,18 +54,23 @@ test('marking a unit studied from its content page reflects in Progress without 
     const markButton = page.getByRole('button', { name: /mark as studied/i });
     await expect(markButton).toBeVisible();
     await markButton.click();
-    await expect(page.getByText(/studied/i)).toBeVisible();
+    // Wait for the SUCCESS state, not /studied/i - that also matches the
+    // button's own "Mark as studied" label, so it resolved before the upsert
+    // had even been sent and the next page.goto() aborted the in-flight POST
+    // (CI trace, run 34332093212: `POST /rest/v1/unit_progress -1
+    // net::ERR_ABORTED`). "Marked as studied" only renders once
+    // markUnitStudied() has resolved, so this waits for the write to land.
+    await expect(page.getByText(/marked as studied/i)).toBeVisible();
 
     await page.goto('/app/dashboard/progress');
     await expect(page.getByText('EFMP-301')).toBeVisible();
 
-    // Marking again (the button reappears since DocItemFooter tracks
-    // "marked" as local component state, not a database read) is a no-op —
-    // no error, no duplicate row (enforced by unit_progress's unique
-    // constraint + ON CONFLICT DO NOTHING in markUnitStudied()).
+    // Returning to the page in a later navigation: DocItemFooter now reads
+    // unit_progress back on mount (Spec 004 FR-006), so the unit shows as
+    // already studied and the "Mark as studied" button is not offered again.
     await page.goto('/semester-1/efmp-301/unit-01/');
-    await page.getByRole('button', { name: /mark as studied/i }).click();
-    await expect(page.getByText(/studied/i)).toBeVisible();
+    await expect(page.getByText(/marked as studied/i)).toBeVisible();
+    await expect(page.getByRole('button', { name: /mark as studied/i })).toHaveCount(0);
 
     const { data: rows } = await svc
       .from('unit_progress')
