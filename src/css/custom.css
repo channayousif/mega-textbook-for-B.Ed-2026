@@ -139,19 +139,41 @@ html[data-theme='dark'] .bloom-tag {
   border-radius: 6px;
 }
 /* Schematics are hand-authored SVG (Spec 012 archetypes) - cap their width so labels
-   stay legible. `illustration` (raster) keeps the full 100% max-width above. */
+   stay legible. `illustration` (raster) keeps the full 100% max-width above.
+
+   `min(100%, …)` is load-bearing, not decoration. These selectors have the SAME
+   specificity as `.figure img` above and come later, so a bare `max-width: 640px`
+   REPLACES the 100% cap rather than tightening it: below 640px the image could no
+   longer shrink to its column, rendered at a fixed 640px on a 390px phone, and
+   pushed the whole document to a 656px scrollWidth. Every unit with a schematic
+   scrolled sideways on a phone. Keep both bounds in one value so the archetype cap
+   and the container cap always apply together. */
 .figure--table img,
 .figure--concept-map img,
 .figure--flowchart img,
 .figure--timeline img,
 .figure--diagram img {
-  max-width: 640px;
+  max-width: min(100%, 640px);
 }
 /* A flow / timeline reads better a little wider. */
 .figure--flowchart img,
 .figure--timeline img {
-  max-width: 760px;
+  max-width: min(100%, 760px);
 }
+/* Content tables (the mini-rubrics and mark schemes every topic carries) are
+   authored 3-5 columns wide and cannot reflow below roughly 440px, so on a phone
+   they were widening the document rather than scrolling within it. Give each its
+   own scroll container instead: the page body never scrolls horizontally, and the
+   table stays readable by swiping. `display: block` is what makes overflow apply
+   to a table at all. */
+.markdown > table,
+.markdown table {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
 .figure__caption {
   margin-top: 0.5rem;
   font-size: 0.875rem;
