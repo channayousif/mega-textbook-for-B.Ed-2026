@@ -29,7 +29,12 @@
     "test:watch": "vitest",
     "test:e2e": "playwright test",
     "test:rls": "vitest run --config vitest.rls.config.ts",
-    "check:no-service-key": "node scripts/check-no-service-key.mjs"
+    "check:no-service-key": "node scripts/check-no-service-key.mjs",
+    "check:docs-sync": "node scripts/check-docs-sync.mjs",
+    "check:content": "node scripts/run-gates.mjs content",
+    "check:all": "node scripts/run-gates.mjs full",
+    "figures:variants": "node scripts/build-figure-variants.mjs",
+    "figures:variants:check": "node scripts/build-figure-variants.mjs --check"
   },
   "dependencies": {
     "@docusaurus/core": "^3.10.2",

@@ -4,7 +4,8 @@
       "staticDistDir": "./build",
       "url": [
         "http://localhost/",
-        "http://localhost/semester-1/efmp-301/unit-01/"
+        "http://localhost/semester-1/efmp-301/unit-01/",
+        "http://localhost/semester-1/efmp-302/unit-01/topic-01/"
       ],
       "settings": {
         "throttlingMethod": "simulate",
@@ -18,9 +19,30 @@
     },
     "assert": {
       "assertions": {
-        "categories:accessibility": ["error", { "minScore": 0.9 }],
-        "first-contentful-paint": ["warn", { "maxNumericValue": 2500 }],
-        "total-byte-weight": ["warn", { "maxNumericValue": 512000 }]
+        "categories:accessibility": [
+          "error",
+          {
+            "minScore": 0.9
+          }
+        ],
+        "first-contentful-paint": [
+          "warn",
+          {
+            "maxNumericValue": 2500
+          }
+        ],
+        "total-byte-weight": [
+          "warn",
+          {
+            "maxNumericValue": 512000
+          }
+        ],
+        "cumulative-layout-shift": [
+          "error",
+          {
+            "maxNumericValue": 0.1
+          }
+        ]
       }
     }
   }
