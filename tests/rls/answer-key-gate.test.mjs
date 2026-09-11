@@ -56,16 +56,30 @@ describe.skipIf(!rlsConfigured)('answer_keys gated by is_verified_teacher()', ()
     expect(studentRead).toHaveLength(0);
   });
 
-  test('a verified teacher cannot INSERT/UPDATE an answer key (no client write policy)', async () => {
-    const verifiedTeacher = await createSignedInUser({ role: 'teacher' });
-    createdUsers.push(verifiedTeacher.authUserId);
-    await adminSet(verifiedTeacher.authUserId, { verified_teacher: true });
-
-    const { data: insertData, error: insertError } = await verifiedTeacher.client
+  // SUPERSEDED BY 0040 (Spec 011 US6 / FR-014). This assertion used to read "a verified
+  // teacher cannot INSERT/UPDATE an answer key (no client write policy)" - the Spec 003
+  // admin-only-seeding posture. The curriculum owner's Spec 011 decision deliberately
+  // reverses that and gives verified teachers an authoring UI, so the write path is now
+  // covered positively in tests/rls/quiz-authoring.test.mjs. What is still worth asserting
+  // here, and what 0040 did NOT change, is that the gate is is_verified_teacher(): an
+  // UNVERIFIED teacher and a student remain locked out of writes, not just reads.
+  test('an unverified teacher and a student still cannot INSERT an answer key', async () => {
+    const unverifiedTeacher = await createSignedInUser({ role: 'teacher' });
+    createdUsers.push(unverifiedTeacher.authUserId);
+    const { data: unverifiedInsert, error: unverifiedError } = await unverifiedTeacher.client
       .from('answer_keys')
       .insert({ course_code: 'EFMP-301', unit_no: 2, kind: 'summative', content: 'attempted client write' })
       .select();
-    expect(insertError).toBeTruthy();
-    expect(insertData ?? []).toHaveLength(0);
+    expect(unverifiedError).toBeTruthy();
+    expect(unverifiedInsert ?? []).toHaveLength(0);
+
+    const student = await createSignedInUser({ role: 'student' });
+    createdUsers.push(student.authUserId);
+    const { data: studentInsert, error: studentError } = await student.client
+      .from('answer_keys')
+      .insert({ course_code: 'EFMP-301', unit_no: 2, kind: 'summative', content: 'attempted client write' })
+      .select();
+    expect(studentError).toBeTruthy();
+    expect(studentInsert ?? []).toHaveLength(0);
   });
 });

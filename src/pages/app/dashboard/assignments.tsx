@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import StudentDashboardGuard from '@site/src/components/StudentDashboardGuard';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import { fetchDueSoon, type DueSoonItem } from '@site/src/lib/dashboardQueries';
 
@@ -97,11 +97,9 @@ function AssignmentsContent(): React.ReactElement {
 export default function DashboardAssignmentsPage(): React.ReactElement {
   return (
     <Layout title="Assignments">
-      <StudentDashboardGuard>
-        <main className="container auth-page margin-vert--lg">
+      <AppDashboardShell role="student">
           <AssignmentsContent />
-        </main>
-      </StudentDashboardGuard>
+      </AppDashboardShell>
     </Layout>
   );
 }

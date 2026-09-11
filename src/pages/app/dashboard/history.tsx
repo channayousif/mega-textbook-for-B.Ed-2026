@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import StudentDashboardGuard from '@site/src/components/StudentDashboardGuard';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import { fetchPastSemesters, type PastSemesterGroup } from '@site/src/lib/dashboardQueries';
 
@@ -83,11 +83,9 @@ function HistoryContent(): React.ReactElement {
 export default function DashboardHistoryPage(): React.ReactElement {
   return (
     <Layout title="History">
-      <StudentDashboardGuard>
-        <main className="container auth-page margin-vert--lg">
+      <AppDashboardShell role="student">
           <HistoryContent />
-        </main>
-      </StudentDashboardGuard>
+      </AppDashboardShell>
     </Layout>
   );
 }

@@ -8,7 +8,9 @@ import {
   createAssignment, publishAssignment, fetchContentIndex, type ContentIndexEntry,
 } from '@site/src/lib/assignments';
 import { fetchQuizUnitsForCourse } from '@site/src/lib/quiz';
-import type { AssignmentSourceKind } from '@site/src/lib/types';
+import { useAuth } from '@site/src/contexts/AuthContext';
+import { listOwnTemplates, createTemplate } from '@site/src/lib/assignmentTemplates';
+import type { AssignmentSourceKind, AssignmentTemplate } from '@site/src/lib/types';
 
 /**
  * Assignment creation - unit-item picker, quiz picker, or custom (Spec 003,
@@ -43,6 +45,9 @@ function AssignmentNewContent({ classId }: { classId: string }): React.ReactElem
   const { i18n } = useDocusaurusContext();
   const locale = i18n.currentLocale === 'ur' ? 'ur' : 'en';
   const { loading: classLoading, classRow, role } = useClassRole(classId);
+  const { profile } = useAuth();
+  const [templates, setTemplates] = useState<AssignmentTemplate[]>([]);
+  const [templateMsg, setTemplateMsg] = useState<string | null>(null);
   const [contentIndex, setContentIndex] = useState<ContentIndexEntry[]>([]);
   const [quizUnits, setQuizUnits] = useState<number[]>([]);
   const [mode, setMode] = useState<PickerMode>('unit');
@@ -59,7 +64,38 @@ function AssignmentNewContent({ classId }: { classId: string }): React.ReactElem
 
   useEffect(() => {
     fetchContentIndex().then(setContentIndex);
+    listOwnTemplates().then(({ data }) => setTemplates(data ?? []));
   }, []);
+
+  function applyTemplate(id: string): void {
+    const t = templates.find((x) => x.id === id);
+    if (!t) return;
+    setTitle(t.title_pattern);
+    setInstructions(t.instructions);
+    setMaxMark(String(t.max_mark));
+    setAllowLate(t.allow_late);
+  }
+
+  async function saveAsTemplate(): Promise<void> {
+    if (!profile) return;
+    const name = typeof window !== 'undefined'
+      ? window.prompt(locale === 'ur' ? 'ٹیمپلیٹ کا نام:' : 'Template name:')
+      : null;
+    if (!name) return;
+    const { data, error: e } = await createTemplate(profile.id, {
+      name,
+      titlePattern: title,
+      instructions,
+      maxMark: Number(maxMark) || 100,
+      allowLate,
+    });
+    if (e || !data) {
+      setTemplateMsg(locale === 'ur' ? 'ٹیمپلیٹ محفوظ نہیں ہوا۔' : 'Could not save the template.');
+      return;
+    }
+    setTemplates((prev) => [data, ...prev]);
+    setTemplateMsg(locale === 'ur' ? 'ٹیمپلیٹ محفوظ ہو گیا ✓' : 'Template saved ✓');
+  }
 
   useEffect(() => {
     if (!classRow?.course_code) return;
@@ -160,6 +196,16 @@ function AssignmentNewContent({ classId }: { classId: string }): React.ReactElem
       <h2>New assignment - {classRow.name}</h2>
       {error && (
         <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>
+      )}
+
+      {templates.length > 0 && (
+        <div className="margin-bottom--md">
+          <label htmlFor="an-template">{locale === 'ur' ? 'ٹیمپلیٹ سے' : 'From a template'} </label>
+          <select id="an-template" className="input" defaultValue="" onChange={(e) => applyTemplate(e.target.value)}>
+            <option value="">{locale === 'ur' ? 'کوئی نہیں' : 'None'}</option>
+            {templates.map((t) => <option key={t.id} value={t.id}>{t.name}</option>)}
+          </select>
+        </div>
       )}
 
       <form onSubmit={handleSubmit}>
@@ -269,6 +315,11 @@ function AssignmentNewContent({ classId }: { classId: string }): React.ReactElem
         <button type="submit" className="button button--primary" disabled={submitting}>
           {submitting ? MESSAGES.publishing[locale] : 'Publish assignment'}
         </button>
+        {' '}
+        <button type="button" className="button button--secondary" onClick={saveAsTemplate} disabled={!title.trim()}>
+          {locale === 'ur' ? 'ٹیمپلیٹ کے طور پر محفوظ کریں' : 'Save as template'}
+        </button>
+        {templateMsg && <p role="status">{templateMsg}</p>}
       </form>
     </div>
   );

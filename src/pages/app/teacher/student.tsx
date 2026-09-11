@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import TeacherDashboardGuard from '@site/src/components/TeacherDashboardGuard';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 import { useClassRole, useQueryParam } from '@site/src/contexts/ClassContext';
 import { fetchStudentDrilldown, type StudentDrilldown } from '@site/src/lib/teacherAnalytics';
 
@@ -111,11 +111,9 @@ function StudentDrilldownContent(): React.ReactElement {
 export default function StudentDrilldownPage(): React.ReactElement {
   return (
     <Layout title="Student record">
-      <TeacherDashboardGuard>
-        <main className="container auth-page margin-vert--lg">
+      <AppDashboardShell role="teacher">
           <StudentDrilldownContent />
-        </main>
-      </TeacherDashboardGuard>
+      </AppDashboardShell>
     </Layout>
   );
 }

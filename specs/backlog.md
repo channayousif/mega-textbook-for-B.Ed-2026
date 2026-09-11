@@ -8,10 +8,12 @@ lost, without blocking delivery of the feature that surfaced them.
 
 ## From 003-classes-assignments (2026-07-19)
 
-- **Quiz item / answer-key authoring UI.** Who writes `quiz_items`/`answer_keys` rows, and how,
-  is explicitly out of this feature's UI scope — content work under Constitution Art. II, seeded
-  administratively for now (service role / Studio, not the app's client-facing RLS surface). A
-  future spec may add a teacher/admin authoring UI if manual seeding becomes a bottleneck.
+- ~~**Quiz item / answer-key authoring UI.**~~ **Delivered by Spec 011 (US6, 2026-09-10).**
+  Migration `0040_quiz_authoring_rls` opens `quiz_items` + `answer_keys` INSERT/UPDATE/DELETE to
+  verified teachers (same `is_verified_teacher()` gate that already guards reads); the UI is
+  `src/pages/app/teacher/quiz-authoring.tsx` (verified-only) + `src/lib/quizAuthoring.ts`.
+  `quiz_items_public` (correct-option hidden) is unchanged, so the student quiz-taking path is
+  untouched.
 - **Rejoin-after-removal semantics.** Reactivating vs. duplicating an `enrollments` row on
   rejoin is an implementation choice documented in data-model.md, not a spec-clarified
   requirement — revisit if a future story needs to distinguish "rejoined" from "never left."
