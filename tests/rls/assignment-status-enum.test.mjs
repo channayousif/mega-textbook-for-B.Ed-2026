@@ -25,7 +25,7 @@ describe.skipIf(!rlsConfigured)('FR-006 student-facing assignment status sequenc
   test('not-yet-submitted -> submitted (on-time)', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'SEQ001' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
 
     const student = await createSignedInUser({ role: 'student' });
@@ -58,7 +58,7 @@ describe.skipIf(!rlsConfigured)('FR-006 student-facing assignment status sequenc
   test('not-yet-submitted -> late (submitted after the due date, allowed)', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'SEQ002' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
 
     const student = await createSignedInUser({ role: 'student' });

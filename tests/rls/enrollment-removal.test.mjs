@@ -11,7 +11,7 @@
  */
 import { describe, test, expect, afterAll } from 'vitest';
 import { rlsConfigured, createSignedInUser, serviceClient, cleanupUsers } from './_helpers.mjs';
-import { createClassFixture, createEnrollmentFixture, cleanupClasses } from './_classFixtures.mjs';
+import { createClassFixture, createEnrollmentFixture, cleanupClasses, randomJoinCode } from './_classFixtures.mjs';
 
 describe.skipIf(!rlsConfigured)('student removal from a class', () => {
   const createdUsers = [];
@@ -25,7 +25,7 @@ describe.skipIf(!rlsConfigured)('student removal from a class', () => {
   test('owning teacher removes a student; student immediately loses class access', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'REM001' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
 
     const student = await createSignedInUser({ role: 'student' });
@@ -45,7 +45,7 @@ describe.skipIf(!rlsConfigured)('student removal from a class', () => {
   test("a teacher cannot remove a student from another teacher's class", async () => {
     const owner = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(owner.authUserId);
-    const klass = await createClassFixture(owner.authUserId, { join_code: 'REM002' });
+    const klass = await createClassFixture(owner.authUserId);
     createdClasses.push(klass.id);
 
     const student = await createSignedInUser({ role: 'student' });
@@ -71,7 +71,8 @@ describe.skipIf(!rlsConfigured)('student removal from a class', () => {
   test('removed student re-entering the join code is rejected, not reactivated', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'REM003' });
+    const joinCode = randomJoinCode();
+    const klass = await createClassFixture(teacher.authUserId, { join_code: joinCode });
     createdClasses.push(klass.id);
 
     const student = await createSignedInUser({ role: 'student' });
@@ -82,7 +83,7 @@ describe.skipIf(!rlsConfigured)('student removal from a class', () => {
       .update({ status: 'removed', removed_at: new Date().toISOString() })
       .eq('id', enrollment.id);
 
-    const { error } = await student.client.rpc('join_class_by_code', { p_code: 'REM003' });
+    const { error } = await student.client.rpc('join_class_by_code', { p_code: joinCode });
     expect(error).toBeTruthy();
     expect(error.message).toContain('removed_from_class');
 

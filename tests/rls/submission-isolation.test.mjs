@@ -21,7 +21,7 @@ describe.skipIf(!rlsConfigured)('submission isolation', () => {
   test("a student cannot read or write another student's submission", async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'ISOS01' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
     const assignment = await createAssignmentFixture(klass.id, {
       published: true,
@@ -59,7 +59,7 @@ describe.skipIf(!rlsConfigured)('submission isolation', () => {
   test("a teacher can only read submissions for their own class's assignments", async () => {
     const owner = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(owner.authUserId);
-    const klass = await createClassFixture(owner.authUserId, { join_code: 'ISOS02' });
+    const klass = await createClassFixture(owner.authUserId);
     createdClasses.push(klass.id);
     const assignment = await createAssignmentFixture(klass.id, {
       published: true,

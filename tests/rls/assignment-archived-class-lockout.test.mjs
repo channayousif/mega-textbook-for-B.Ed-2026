@@ -18,7 +18,7 @@ describe.skipIf(!rlsConfigured)('assignments locked once the parent class is arc
   test('cannot create an assignment in an archived class', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'ARL001', status: 'archived' });
+    const klass = await createClassFixture(teacher.authUserId, { status: 'archived' });
     createdClasses.push(klass.id);
 
     const { error } = await teacher.client.from('assignments').insert({
@@ -34,7 +34,7 @@ describe.skipIf(!rlsConfigured)('assignments locked once the parent class is arc
   test('cannot update an assignment after its class is archived', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'ARL002' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
 
     const assignment = await createAssignmentFixture(klass.id, { published: true });

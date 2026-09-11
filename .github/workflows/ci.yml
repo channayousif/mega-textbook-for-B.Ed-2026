@@ -5,6 +5,21 @@ on:
     branches: [main]
   pull_request:
 
+# Every run of this workflow talks to the SAME Supabase project: `test:rls` and
+# `test:e2e` both create real users, classes and submissions there. Two runs in
+# flight at once therefore race on shared rows - which is exactly how three
+# overlapping runs (two `main` pushes plus a PR) collided on the RLS suite's
+# fixture join codes and left stranded classes behind, taking `main` red until
+# they were purged by hand.
+#
+# Serialize on one group so a second run queues instead of racing.
+# `cancel-in-progress: false` matters: cancelling mid-suite is what strands
+# fixture rows in the first place, so a queued run waits rather than killing
+# the one holding the database.
+concurrency:
+  group: shared-supabase
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
