@@ -1,19 +1,31 @@
 {
-  "_note": "Machine-readable 8-semester catalog (FR-014). Seed for scripts/scaffold-catalog.mjs. Semester 1 is fully listed from specs/gaps.md; Semesters 2-8 are placeholders to be filled from the board scheme (specs/gaps.md tracks open code discrepancies).",
+  "_note": "Machine-readable 8-semester catalog (FR-014). Seed for scripts/scaffold-catalog.mjs. Semesters 1-2 are reconciled against the FINAL-AUTHORITY scheme 'Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx' (2026-09-10); every code/credit-hour decision is recorded in specs/gaps.md (G-2026-01..05, all resolved). Semesters 3-8 are placeholders pending G0 course intake; log any new discrepancy in specs/gaps.md before filling them.",
   "semesters": [
     {
       "number": 1,
       "priority": 1,
       "courses": [
         { "code": "GENG-300", "title_en": "Functional English", "title_ur": "فنکشنل انگریزی", "credit_hours": "3 (3-0)", "category": "General Education", "bilingual": false },
-        { "code": "GNAS-301", "title_en": "Environmental Science", "title_ur": "ماحولیاتی سائنس", "credit_hours": "3 (3-0)", "category": "General Education" },
+        { "code": "GNAS-301", "title_en": "Environmental Science", "title_ur": "ماحولیاتی سائنس", "credit_hours": "3 (2-1)", "category": "General Education" },
         { "code": "GICT-300", "title_en": "Application of ICT", "title_ur": "آئی سی ٹی کا اطلاق", "credit_hours": "3 (2-1)", "category": "General Education" },
         { "code": "GQUR-300", "title_en": "Quantitative Reasoning-I", "title_ur": "مقداری استدلال-1", "credit_hours": "3 (3-0)", "category": "General Education" },
         { "code": "EFMP-301", "title_en": "Educational Psychology", "title_ur": "تعلیمی نفسیات", "credit_hours": "3 (3-0)", "category": "Major: Professional" },
         { "code": "EFMP-302", "title_en": "Teaching Profession", "title_ur": "پیشہ تدریس", "credit_hours": "3 (3-0)", "category": "Major: Professional" }
       ]
     },
-    { "number": 2, "priority": 2, "courses": [] },
+    {
+      "number": 2,
+      "priority": 2,
+      "courses": [
+        { "code": "GQUR-301", "title_en": "Quantitative Reasoning-II (Statistics)", "title_ur": "مقداری استدلال-2 (شماریات)", "credit_hours": "3 (3-0)", "category": "General Education" },
+        { "code": "GSOS-301", "title_en": "Social Science (Sociology)", "title_ur": "سماجی علوم (عمرانیات)", "credit_hours": "2 (2-0)", "category": "General Education" },
+        { "code": "GENG-301", "title_en": "Expository Writing", "title_ur": "تشریحی تحریر", "credit_hours": "3 (3-0)", "category": "General Education", "bilingual": false },
+        { "code": "EFMP-303", "title_en": "Educational Policies and Plans of Pakistan", "title_ur": "پاکستان کی تعلیمی پالیسیاں اور منصوبے", "credit_hours": "3 (3-0)", "category": "Major: Professional" },
+        { "code": "EFMP-304", "title_en": "Critical Thinking and Reflective Practices", "title_ur": "تنقیدی سوچ اور غور و فکر کی مشقیں", "credit_hours": "3 (3-0)", "category": "Major: Professional" },
+        { "code": "EFMP-305", "title_en": "Inclusive Education", "title_ur": "شمولیتی تعلیم", "credit_hours": "3 (3-0)", "category": "Major: Professional" },
+        { "code": "GPKS-402", "title_en": "Pakistan Studies", "title_ur": "مطالعہ پاکستان", "credit_hours": "2 (2-0)", "category": "General Education" }
+      ]
+    },
     { "number": 3, "priority": 3, "courses": [] },
     { "number": 4, "priority": 4, "courses": [] },
     { "number": 5, "priority": 5, "courses": [] },
