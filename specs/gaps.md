@@ -55,8 +55,23 @@ Status: `open` (awaiting owner decision) · `resolved` (decision recorded).
 
 ---
 
-## No open gaps
+## G-2026-06 - EFMP-301 U1: no open-access source for "what education gives back to psychology"
 
-All five logged discrepancies are resolved. New ambiguities found during G0 course intake for
+- **Status:** open (awaiting owner decision)
+- **Detail:** The EFMP-301 course guide's Chapter 1 lists "Relationship between psychology and
+  education" as a bullet. The direction *psychology -> education* is well served by open-access
+  material (Seifert & Sutton 2009). The reverse direction - what school practice contributes back
+  to psychology - has no introductory-level open-access treatment I could verify. It is covered in
+  `topic-02.mdx` from the guide bullet plus general knowledge, kept short and uncontroversial, and
+  logged as a `no-external-source` row in `specs/content/efmp-301/sources/unit-01.md`
+  (`author-unit` Step 1.4, Constitution Art. II.3).
+- **Owner decision needed:** accept the general-knowledge treatment, supply a preferred source, or
+  narrow the sub-topic (U1-6) at G1.
+
+---
+
+## Previously logged gaps
+
+All five earlier discrepancies are resolved. New ambiguities found during G0 course intake for
 Semesters III-VIII should be appended here as `G-2026-06` onward and escalated before any catalog
 or content change (Art. II.3).
