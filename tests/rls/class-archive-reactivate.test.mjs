@@ -5,7 +5,7 @@
  */
 import { describe, test, expect, afterAll } from 'vitest';
 import { rlsConfigured, createSignedInUser, adminSet, cleanupUsers } from './_helpers.mjs';
-import { createClassFixture, cleanupClasses } from './_classFixtures.mjs';
+import { createClassFixture, cleanupClasses, randomJoinCode } from './_classFixtures.mjs';
 
 describe.skipIf(!rlsConfigured)('class archive and reactivate', () => {
   const createdUsers = [];
@@ -19,7 +19,8 @@ describe.skipIf(!rlsConfigured)('class archive and reactivate', () => {
   test('owning teacher archives then reactivates their own class', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'ARC001' });
+    const joinCode = randomJoinCode();
+    const klass = await createClassFixture(teacher.authUserId, { join_code: joinCode });
     createdClasses.push(klass.id);
 
     const { data: archived, error: archiveError } = await teacher.client
@@ -44,7 +45,7 @@ describe.skipIf(!rlsConfigured)('class archive and reactivate', () => {
     // New joins are blocked while archived.
     const student = await createSignedInUser({ role: 'student' });
     createdUsers.push(student.authUserId);
-    const { error: joinError } = await student.client.rpc('join_class_by_code', { p_code: 'ARC001' });
+    const { error: joinError } = await student.client.rpc('join_class_by_code', { p_code: joinCode });
     expect(joinError).toBeTruthy();
 
     const { data: reactivated, error: reactivateError } = await teacher.client
@@ -56,14 +57,14 @@ describe.skipIf(!rlsConfigured)('class archive and reactivate', () => {
     expect(reactivateError).toBeNull();
     expect(reactivated.status).toBe('active');
 
-    const { error: joinAgainError } = await student.client.rpc('join_class_by_code', { p_code: 'ARC001' });
+    const { error: joinAgainError } = await student.client.rpc('join_class_by_code', { p_code: joinCode });
     expect(joinAgainError).toBeNull();
   });
 
   test('an admin can archive and reactivate any class', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'ARC002' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
 
     const admin = await createSignedInUser({ role: 'student' });

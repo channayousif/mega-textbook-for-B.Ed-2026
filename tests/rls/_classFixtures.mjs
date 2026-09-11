@@ -89,10 +89,47 @@ export async function createAssignmentFixture(classId, overrides = {}) {
   return data;
 }
 
-/** Delete fixture classes. enrollments.class_id cascades (0015); assignments will too once US2 lands. */
+/**
+ * Delete fixture classes and anything that does not cascade with them.
+ *
+ * `enrollments.class_id` (0015) and `assignments.class_id` (0017) both declare
+ * `on delete cascade`, and submissions/grades/quiz_attempts cascade from
+ * assignments in turn - so those all go on their own.
+ *
+ * `teaching_log_entries.class_id` (0028) deliberately does NOT cascade: a log
+ * entry is immutable by design, with no DELETE policy at all. That is the right
+ * production posture and is not something a test helper should change, but it
+ * means a bare `delete from classes` raises a foreign-key violation for any
+ * class the teaching-log tests touched. Under the old `Promise.allSettled` that
+ * rejection was discarded silently, so every such class survived cleanup and
+ * accumulated in the database indefinitely - two per CI run, and the stranded
+ * rows eventually collided with the suite's own fixture join codes and took
+ * `main` red. Delete the log entries first (service role bypasses RLS for
+ * fixture teardown, exactly as elsewhere in this file), then the class.
+ *
+ * Errors are collected and thrown rather than swallowed: cleanup that fails
+ * quietly is what let this go unnoticed for as long as it did.
+ */
 export async function cleanupClasses(classIds = []) {
   const svc = serviceClient();
-  await Promise.allSettled(
-    classIds.filter(Boolean).map((id) => svc.from('classes').delete().eq('id', id)),
+  const ids = classIds.filter(Boolean);
+  if (ids.length === 0) return;
+
+  const failures = [];
+
+  // Non-cascading dependents first.
+  const { error: logError } = await svc.from('teaching_log_entries').delete().in('class_id', ids);
+  if (logError) failures.push(`teaching_log_entries: ${logError.message}`);
+
+  const results = await Promise.all(
+    ids.map(async (id) => {
+      const { error } = await svc.from('classes').delete().eq('id', id);
+      return error ? `classes(${id}): ${error.message}` : null;
+    }),
   );
+  failures.push(...results.filter(Boolean));
+
+  if (failures.length > 0) {
+    throw new Error(`cleanupClasses left rows behind:\n  ${failures.join('\n  ')}`);
+  }
 }

@@ -23,7 +23,7 @@ describe.skipIf(!rlsConfigured)('submission resubmission and due-date lock', () 
   test('resubmission before the due date overwrites in place (still one row)', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'RSL001' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
 
     const student = await createSignedInUser({ role: 'student' });
@@ -64,7 +64,7 @@ describe.skipIf(!rlsConfigured)('submission resubmission and due-date lock', () 
   test('resubmission after the due date is rejected, regardless of on-time/late origin', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'RSL002' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
 
     const student = await createSignedInUser({ role: 'student' });
@@ -101,7 +101,7 @@ describe.skipIf(!rlsConfigured)('submission resubmission and due-date lock', () 
   test('guard_submission_updates rejects reassigning assignment_id/student_id/late on resubmission', async () => {
     const teacherA = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacherA.authUserId);
-    const classA = await createClassFixture(teacherA.authUserId, { join_code: 'RSL003' });
+    const classA = await createClassFixture(teacherA.authUserId);
     createdClasses.push(classA.id);
     const assignmentA = await createAssignmentFixture(classA.id, {
       published: true,
