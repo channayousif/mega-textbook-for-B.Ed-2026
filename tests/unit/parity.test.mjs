@@ -54,7 +54,10 @@ describe('EN<->UR parity gate — per-topic layout', () => {
   function fm(extra = {}) {
     const base = {
       title: 'x', course_code: 'EFMP-302', unit_no: 1, clo_refs: ['SLO:EFMP-302-1-1'],
-      blooms_summary: 'x', est_reading_minutes: 10, translation_status: 'reviewed', ...extra,
+      blooms_summary: 'x', est_reading_minutes: 10, translation_status: 'reviewed',
+      // Spec 013 FR-014 requires a description on every non-coming_soon page.
+      description: 'A fixture unit used to exercise the parity gate end to end, long enough to clear the length bound.',
+      ...extra,
     };
     const lines = ['---'];
     for (const [k, v] of Object.entries(base)) {
