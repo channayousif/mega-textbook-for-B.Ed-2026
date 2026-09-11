@@ -19,7 +19,7 @@ describe.skipIf(!rlsConfigured)('achievement — first submission', () => {
   test('first-ever submission grants first_submission exactly once', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'ACH001' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
     const assignmentA = await createAssignmentFixture(klass.id, { published: true, title: 'First' });
     const assignmentB = await createAssignmentFixture(klass.id, { published: true, title: 'Second' });

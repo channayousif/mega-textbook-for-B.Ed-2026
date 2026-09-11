@@ -33,7 +33,7 @@ describe.skipIf(!rlsConfigured)('quiz retake — best score is the record', () =
 
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'QUIZ002' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
     const { data: assignment } = await svc
       .from('assignments')
@@ -80,7 +80,7 @@ describe.skipIf(!rlsConfigured)('quiz retake — best score is the record', () =
 
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'QUIZ003' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
     const { data: assignment } = await svc
       .from('assignments')
