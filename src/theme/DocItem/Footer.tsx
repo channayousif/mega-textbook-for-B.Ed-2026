@@ -668,12 +668,20 @@ export default function DocItemFooterWrapper(): React.ReactElement {
     let cancelled = false;
     setMarkedHydrated(false);
     (async () => {
-      const { data } = await fetchOwnUnitProgress();
-      if (cancelled) return;
-      if (data?.some((row) => row.course_code === courseCode && row.unit_no === unitNo)) {
-        setMarked(true);
+      try {
+        const { data } = await fetchOwnUnitProgress();
+        if (cancelled) return;
+        if (data?.some((row) => row.course_code === courseCode && row.unit_no === unitNo)) {
+          setMarked(true);
+        }
+      } catch {
+        // Unconfigured or unreachable Supabase: fall back to offering the
+        // button rather than withholding the control forever. Never rethrow -
+        // an unhandled rejection here would leave `markedHydrated` false and
+        // the whole block unrendered.
+      } finally {
+        if (!cancelled) setMarkedHydrated(true);
       }
-      setMarkedHydrated(true);
     })();
     return () => { cancelled = true; };
   }, [role, profile, courseCode, unitNo]);

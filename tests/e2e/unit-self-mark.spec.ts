@@ -54,7 +54,13 @@ test('marking a unit studied from its content page reflects in Progress without 
     const markButton = page.getByRole('button', { name: /mark as studied/i });
     await expect(markButton).toBeVisible();
     await markButton.click();
-    await expect(page.getByText(/studied/i)).toBeVisible();
+    // Wait for the SUCCESS state, not /studied/i - that also matches the
+    // button's own "Mark as studied" label, so it resolved before the upsert
+    // had even been sent and the next page.goto() aborted the in-flight POST
+    // (CI trace, run 34332093212: `POST /rest/v1/unit_progress -1
+    // net::ERR_ABORTED`). "Marked as studied" only renders once
+    // markUnitStudied() has resolved, so this waits for the write to land.
+    await expect(page.getByText(/marked as studied/i)).toBeVisible();
 
     await page.goto('/app/dashboard/progress');
     await expect(page.getByText('EFMP-301')).toBeVisible();
