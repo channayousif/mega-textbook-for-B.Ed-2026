@@ -23,7 +23,7 @@ describe.skipIf(!rlsConfigured)('unit_progress sync triggers', () => {
   test('grading a unit-linked submission auto-inserts a unit_progress row with method=assignment', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'UPS001' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
     const assignment = await createAssignmentFixture(klass.id, {
       published: true, max_mark: 100, source_kind: 'activity', course_code: 'EFMP-301', unit_no: 3,
@@ -50,7 +50,7 @@ describe.skipIf(!rlsConfigured)('unit_progress sync triggers', () => {
   test('grading a custom-source assignment inserts nothing (no unit to attach to)', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'UPS002' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
     const assignment = await createAssignmentFixture(klass.id, { published: true, max_mark: 100, source_kind: 'custom' });
 
@@ -69,7 +69,7 @@ describe.skipIf(!rlsConfigured)('unit_progress sync triggers', () => {
   test('a quiz attempt auto-inserts a unit_progress row with method=quiz, and a retake stays a single row', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'UPS003' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
     const assignment = await createAssignmentFixture(klass.id, {
       published: true, max_mark: 100, source_kind: 'quiz', course_code: 'EFMP-301', unit_no: 5,

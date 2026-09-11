@@ -21,7 +21,7 @@ describe.skipIf(!rlsConfigured)('dashboard history — archived semesters are re
   test('an archived class still shows its frozen grade to the student, but nothing can be written', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'HIST01', term_label: 'Spring 2025' });
+    const klass = await createClassFixture(teacher.authUserId, { term_label: 'Spring 2025' });
     createdClasses.push(klass.id);
     const assignment = await createAssignmentFixture(klass.id, { published: true, max_mark: 100 });
 

@@ -24,7 +24,7 @@ describe.skipIf(!rlsConfigured)('grading queue — missing students once due dat
   test('submitter appears via submissions; non-submitter is derivable as missing', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'QUE001' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
     const assignment = await createAssignmentFixture(klass.id, {
       published: true,

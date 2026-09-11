@@ -5,7 +5,7 @@
  */
 import { describe, test, expect, afterAll } from 'vitest';
 import { rlsConfigured, createSignedInUser, getProfileByAuthId, cleanupUsers } from './_helpers.mjs';
-import { cleanupClasses } from './_classFixtures.mjs';
+import { cleanupClasses, randomJoinCode } from './_classFixtures.mjs';
 
 describe.skipIf(!rlsConfigured)('class creation and join-by-code roster', () => {
   const createdUsers = [];
@@ -20,6 +20,7 @@ describe.skipIf(!rlsConfigured)('class creation and join-by-code roster', () => 
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
     const teacherProfile = await getProfileByAuthId(teacher.authUserId);
+    const joinCode = randomJoinCode();
 
     const { data, error } = await teacher.client
       .from('classes')
@@ -28,14 +29,14 @@ describe.skipIf(!rlsConfigured)('class creation and join-by-code roster', () => 
         course_code: 'EFMP-301',
         name: 'Section A',
         term_label: 'Fall 2026',
-        join_code: 'TEST01',
+        join_code: joinCode,
       })
       .select()
       .single();
 
     expect(error).toBeNull();
     createdClasses.push(data.id);
-    expect(data.join_code).toBe('TEST01');
+    expect(data.join_code).toBe(joinCode);
     expect(data.status).toBe('active');
   });
 
@@ -43,6 +44,7 @@ describe.skipIf(!rlsConfigured)('class creation and join-by-code roster', () => 
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
     const teacherProfile = await getProfileByAuthId(teacher.authUserId);
+    const joinCode = randomJoinCode();
     const { data: klass } = await teacher.client
       .from('classes')
       .insert({
@@ -50,7 +52,7 @@ describe.skipIf(!rlsConfigured)('class creation and join-by-code roster', () => 
         course_code: 'EFMP-301',
         name: 'Section B',
         term_label: 'Fall 2026',
-        join_code: 'TEST02',
+        join_code: joinCode,
       })
       .select()
       .single();
@@ -61,7 +63,7 @@ describe.skipIf(!rlsConfigured)('class creation and join-by-code roster', () => 
     const studentProfile = await getProfileByAuthId(student.authUserId);
 
     const { data: joinResult, error: joinError } = await student.client.rpc('join_class_by_code', {
-      p_code: 'TEST02',
+      p_code: joinCode,
     });
     expect(joinError).toBeNull();
     expect(joinResult.already_enrolled).toBe(false);
@@ -80,6 +82,7 @@ describe.skipIf(!rlsConfigured)('class creation and join-by-code roster', () => 
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
     const teacherProfile = await getProfileByAuthId(teacher.authUserId);
+    const joinCode = randomJoinCode();
     const { data: klass } = await teacher.client
       .from('classes')
       .insert({
@@ -87,7 +90,7 @@ describe.skipIf(!rlsConfigured)('class creation and join-by-code roster', () => 
         course_code: 'EFMP-301',
         name: 'Section C',
         term_label: 'Fall 2026',
-        join_code: 'TEST03',
+        join_code: joinCode,
       })
       .select()
       .single();
@@ -95,8 +98,8 @@ describe.skipIf(!rlsConfigured)('class creation and join-by-code roster', () => 
 
     const student = await createSignedInUser({ role: 'student' });
     createdUsers.push(student.authUserId);
-    await student.client.rpc('join_class_by_code', { p_code: 'TEST03' });
-    const { data: second, error } = await student.client.rpc('join_class_by_code', { p_code: 'TEST03' });
+    await student.client.rpc('join_class_by_code', { p_code: joinCode });
+    const { data: second, error } = await student.client.rpc('join_class_by_code', { p_code: joinCode });
     expect(error).toBeNull();
     expect(second.already_enrolled).toBe(true);
   });

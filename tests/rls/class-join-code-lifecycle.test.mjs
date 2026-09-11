@@ -5,7 +5,7 @@
  */
 import { describe, test, expect, afterAll } from 'vitest';
 import { rlsConfigured, createSignedInUser, getProfileByAuthId, cleanupUsers } from './_helpers.mjs';
-import { createClassFixture, createEnrollmentFixture, cleanupClasses } from './_classFixtures.mjs';
+import { createClassFixture, createEnrollmentFixture, cleanupClasses, randomJoinCode } from './_classFixtures.mjs';
 
 describe.skipIf(!rlsConfigured)('join code reissue and revoke', () => {
   const createdUsers = [];
@@ -19,7 +19,9 @@ describe.skipIf(!rlsConfigured)('join code reissue and revoke', () => {
   test('reissuing the code fails the old one; existing roster unaffected', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'OLD001' });
+    const oldCode = randomJoinCode();
+    const newCode = randomJoinCode();
+    const klass = await createClassFixture(teacher.authUserId, { join_code: oldCode });
     createdClasses.push(klass.id);
 
     const existingStudent = await createSignedInUser({ role: 'student' });
@@ -28,19 +30,19 @@ describe.skipIf(!rlsConfigured)('join code reissue and revoke', () => {
 
     const { error: reissueError } = await teacher.client
       .from('classes')
-      .update({ join_code: 'NEW001' })
+      .update({ join_code: newCode })
       .eq('id', klass.id);
     expect(reissueError).toBeNull();
 
     const lateStudent = await createSignedInUser({ role: 'student' });
     createdUsers.push(lateStudent.authUserId);
-    const { error: oldCodeError } = await lateStudent.client.rpc('join_class_by_code', { p_code: 'OLD001' });
+    const { error: oldCodeError } = await lateStudent.client.rpc('join_class_by_code', { p_code: oldCode });
     expect(oldCodeError).toBeTruthy();
     expect(oldCodeError.message).toContain('invalid_or_expired_join_code');
 
     const newCodeStudent = await createSignedInUser({ role: 'student' });
     createdUsers.push(newCodeStudent.authUserId);
-    const { error: newCodeError } = await newCodeStudent.client.rpc('join_class_by_code', { p_code: 'NEW001' });
+    const { error: newCodeError } = await newCodeStudent.client.rpc('join_class_by_code', { p_code: newCode });
     expect(newCodeError).toBeNull();
 
     const existingProfile = await getProfileByAuthId(existingStudent.authUserId);
@@ -56,7 +58,8 @@ describe.skipIf(!rlsConfigured)('join code reissue and revoke', () => {
   test('revoking the code blocks new joins; existing roster unaffected', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'REV001' });
+    const revokedCode = randomJoinCode();
+    const klass = await createClassFixture(teacher.authUserId, { join_code: revokedCode });
     createdClasses.push(klass.id);
 
     const existingStudent = await createSignedInUser({ role: 'student' });
@@ -71,7 +74,7 @@ describe.skipIf(!rlsConfigured)('join code reissue and revoke', () => {
 
     const newStudent = await createSignedInUser({ role: 'student' });
     createdUsers.push(newStudent.authUserId);
-    const { error: joinError } = await newStudent.client.rpc('join_class_by_code', { p_code: 'REV001' });
+    const { error: joinError } = await newStudent.client.rpc('join_class_by_code', { p_code: revokedCode });
     expect(joinError).toBeTruthy();
 
     const existingProfile = await getProfileByAuthId(existingStudent.authUserId);

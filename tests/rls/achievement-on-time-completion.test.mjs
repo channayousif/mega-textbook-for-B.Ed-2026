@@ -21,7 +21,7 @@ describe.skipIf(!rlsConfigured)('achievement — on-time class completion', () =
   test('completing every published assignment on time grants the achievement', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'ACH002' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
     const a1 = await createAssignmentFixture(klass.id, { published: true, title: 'A1' });
     const a2 = await createAssignmentFixture(klass.id, { published: true, title: 'A2' });
@@ -48,7 +48,7 @@ describe.skipIf(!rlsConfigured)('achievement — on-time class completion', () =
   test('a late submission in an otherwise-complete class does not grant it', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'ACH003' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
     // a1's due_at is in the past (with allow_late) so a submission created
     // "now" is genuinely late — Spec 003's compute_submission_late() trigger
@@ -83,7 +83,7 @@ describe.skipIf(!rlsConfigured)('achievement — on-time class completion', () =
   test('a class with zero published assignments never grants it', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'ACH004' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
     // No assignments created at all — nothing to grade, nothing to trigger.
     const student = await createSignedInUser({ role: 'student' });
