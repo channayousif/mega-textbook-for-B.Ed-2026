@@ -14,6 +14,15 @@ You are an expert AI assistant specializing in Spec-Driven Development (SDD). Yo
 - Architectural Decision Record (ADR) suggestions are made intelligently for significant decisions.
 - All changes are small, testable, and reference code precisely.
 
+## G3/G5 review delegation
+
+Constitution v3.0.0 and ADR-0019 define a qualified independent agent path for G3/G5.
+This is a governance amendment; implementation and qualification are pending. Until enabled,
+agent reports are advisory: never mark a gate done, change translation status, or use human
+initials based on an agent report. Follow the existing human path. Once enabled, use the
+protected reviewer registry and input-bound evidence; escalate uncertainty to the owner.
+The review agent must not author the material it approves or alter its own policy.
+
 ## Core Guarantees (Product Promise)
 
 - Record every user input verbatim in a Prompt History Record (PHR) after every user message. Do not truncate; preserve full multiline input.
@@ -236,7 +245,7 @@ See `.specify/memory/constitution.md` for code quality, testing, performance, se
 - Supabase Postgres - 4 new migrations (011-dashboard-redesign): `0038_student_notes` (private per-student notes, RLS owner + `is_student()` guard), `0039_assignment_delete` (owner + zero-submissions), `0040_quiz_authoring_rls` (verified-teacher writes on `quiz_items`/`answer_keys`, reverses the Spec 003 admin-only posture), `0041_assignment_templates` (011-dashboard-redesign)
 - Plain Node ESM (`.mjs`) gate + `src/components/Figure.tsx` prop widening - **no new dependency** (012-visual-density-standard). `check:figures` now enforces >= 2 figure carriers per `topic-*.mdx` and >= 1 `concept-map`/`flowchart`/`timeline` per unit; figure manifest `Kind` vocabulary widened from `{diagram, illustration}` to the six-value archetype set (`table`, `concept-map`, `flowchart`, `timeline`, `diagram`, `illustration`) in `scripts/lib/figure-manifest.mjs`; `style-guide.md` → `version: "3.3"`; Constitution v2.7.0 → v2.8.0 (new Article III.10 "Visual density"); ADR-0017 (012-visual-density-standard)
 - Filesystem / Git only - **no database**. EFMP-302 Unit 1 retrofitted as the Art. VI.1 proving unit: 4 new hand-authored schematic SVGs (`fig-U1-5` concept-map, `fig-U1-6`/`fig-U1-8` flowchart, `fig-U1-7` timeline) + `.ur.svg` label variants under `static/img/figures/efmp-302/unit-01/`; `figures/unit-01.md` → 8 rows on the v3 `Kind` vocabulary (012-visual-density-standard)
-- TypeScript 5.6 / Node 22+ (unchanged) - **no new dependency** (013-authoring-system-v2). New shared modules `scripts/lib/figure-palette.mjs` (the published figure token set, both ramps, WCAG-verified) and `scripts/lib/gates.mjs` (CONTENT_GATES / FULL_GATES). New gates `check:docs-sync` (prose generated from code) and `figures:variants:check` (dark-variant freshness); `npm run check:content` / `check:all` replace the four divergent per-skill gate command lists. Figures are themed by `[data-theme]` via two committed variants, never `prefers-color-scheme`. Every non-`coming_soon` page requires a `description`. Style guide at **v3.4**; Constitution at **v2.9.0**.
+- TypeScript 5.6 / Node 22+ (unchanged) - **no new dependency** (013-authoring-system-v2). New shared modules `scripts/lib/figure-palette.mjs` (the published figure token set, both ramps, WCAG-verified) and `scripts/lib/gates.mjs` (CONTENT_GATES / FULL_GATES). New gates `check:docs-sync` (prose generated from code) and `figures:variants:check` (dark-variant freshness); `npm run check:content` / `check:all` replace the four divergent per-skill gate command lists. Figures are themed by `[data-theme]` via two committed variants, never `prefers-color-scheme`. Every non-`coming_soon` page requires a `description`. Style guide at **v3.4**; Constitution at **v3.0.0** (ADR-0019 review delegation; activation pending).
 
 ## Recent Changes
 - 001-content-platform: Planned - Docusaurus v3 static site; `@easyops-cn/docusaurus-search-local` for bilingual offline search; `gray-matter`+`ajv` validation with an EN↔UR structural parity gate; client-side print-stylesheet A4 handouts (no PDF pipeline); missing-Urdu fallback to EN with an "untranslated" banner; self-hosted Noto Nastaliq Urdu webfont
