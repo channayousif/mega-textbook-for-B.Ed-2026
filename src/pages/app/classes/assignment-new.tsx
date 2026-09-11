@@ -5,7 +5,8 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import AuthGuard from '@site/src/components/AuthGuard';
 import { useClassRole, useQueryParam } from '@site/src/contexts/ClassContext';
 import {
-  createAssignment, publishAssignment, fetchContentIndex, type ContentIndexEntry,
+  createAssignment, publishAssignment, fetchContentIndex, isLoggableContent,
+  type ContentIndexEntry, type LoggableContentKind,
 } from '@site/src/lib/assignments';
 import { fetchQuizUnitsForCourse } from '@site/src/lib/quiz';
 import { useAuth } from '@site/src/contexts/AuthContext';
@@ -104,8 +105,8 @@ function AssignmentNewContent({ classId }: { classId: string }): React.ReactElem
 
   const unitItems = useMemo(
     () => contentIndex.filter(
-      (entry): entry is ContentIndexEntry & { kind: AssignmentSourceKind } => entry.course_code === classRow?.course_code
-        && (entry.kind === 'activity' || entry.kind === 'formative' || entry.kind === 'summative'),
+      (entry): entry is ContentIndexEntry & { kind: LoggableContentKind } =>
+        entry.course_code === classRow?.course_code && isLoggableContent(entry),
     ),
     [contentIndex, classRow],
   );
