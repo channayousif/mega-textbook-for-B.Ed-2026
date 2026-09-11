@@ -47,6 +47,9 @@ import { join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
 import { parseManifest, STATUS_ENUM, KIND_ENUM, SCHEMATIC_ARCHETYPES } from './lib/figure-manifest.mjs';
+import {
+  LIGHT_TOKENS, DARK_TOKENS, rootBlock, WORDMARK_TEXT, SVG_BUDGET, PALETTE_EXEMPT,
+} from './lib/figure-palette.mjs';
 
 const KIND_LIST = [...KIND_ENUM].join(', ');
 
@@ -266,9 +269,26 @@ function checkUnit({ unitDir, courseFolder, courseCode, semester, unitNo }) {
       err(label, `figure "${id}" is placed but ${enFile} still carries the comment marker, not a rendered <Figure>`);
     }
     if (r.hasSrcCol && r.src) {
-      const assetPath = join(STATIC_DIR, r.src.replace(/^\/+/, ''));
+      const rel = r.src.replace(/^\/+/, '');
+      const assetPath = join(STATIC_DIR, rel);
       if (!existsSync(assetPath)) {
         err(label, `figure "${id}" is placed but its Src file does not exist: static${r.src}`);
+      } else if (rel.endsWith('.svg')) {
+        lintSvg(label, id, assetPath, `static/${rel}`, { dark: false });
+        // Spec 013 D3: the dark variant is derived, so a stale one is a real
+        // defect - it would render yesterday's figure to every dark-mode reader.
+        const darkRel = rel.replace(/\.svg$/, '.dark.svg');
+        const darkPath = join(STATIC_DIR, darkRel);
+        if (!existsSync(darkPath)) {
+          err(label, `figure "${id}" has no dark variant static/${darkRel} - run: npm run figures:variants`);
+        } else {
+          lintSvg(label, id, darkPath, `static/${darkRel}`, { dark: true });
+          const light = readFileSync(assetPath, 'utf8');
+          const expectedDark = light.split(rootBlock(LIGHT_TOKENS)).join(rootBlock(DARK_TOKENS));
+          if (readFileSync(darkPath, 'utf8') !== expectedDark) {
+            err(label, `figure "${id}": static/${darkRel} is stale - run: npm run figures:variants`);
+          }
+        }
       }
     }
     if (reviewedBilingual && enFile) {
@@ -276,10 +296,16 @@ function checkUnit({ unitDir, courseFolder, courseCode, semester, unitNo }) {
       if (!figureIdsInFile(urFile).has(id)) {
         err(label, `figure "${id}" is placed but the Urdu topic file ${relative(ROOT, urFile)} has no <Figure id="${id}">`);
       }
-      if (r.kind === 'diagram' && r.hasSrcCol && r.src) {
+      // Spec 013 D5. This used to read `r.kind === 'diagram'`, so the check
+      // fired for only 2 of the 8 placed figures - a table, concept map,
+      // flowchart or timeline could lose its Urdu variant and CI stayed green
+      // (Art. III.2 parity hole). The real invariant is the asset: an SVG
+      // carries text labels and must be localised; a raster is reused with a
+      // translated alt.
+      if (r.hasSrcCol && r.src && r.src.endsWith('.svg')) {
         const urSvg = join(STATIC_DIR, r.src.replace(/^\/+/, '').replace(/\.svg$/, '.ur.svg'));
         if (!existsSync(urSvg)) {
-          err(label, `figure "${id}" is a placed diagram in a reviewed unit but the translated static/${relative(STATIC_DIR, urSvg)} does not exist`);
+          err(label, `figure "${id}" is a placed SVG in a reviewed unit but the translated static/${relative(STATIC_DIR, urSvg)} does not exist`);
         }
       }
     }
@@ -292,6 +318,86 @@ function checkUnit({ unitDir, courseFolder, courseCode, semester, unitNo }) {
       if (duplicates.has(id)) continue;
       if (!urIds.has(id)) err(label, `reviewed bilingual unit: figure "${id}" is missing from the Urdu topic files`);
     }
+  }
+}
+
+
+// ---- Spec 013: read the committed SVG bytes --------------------------------
+/**
+ * Until Spec 013 this gate never opened a figure - its only contact with the
+ * asset was existsSync(), so it could not tell a real diagram from a zero-byte
+ * file with the right name. Every rule below is therefore a rule that was
+ * previously "documented" and unenforced.
+ */
+const EM_DASHES = /[—―⸺⸻]/;
+const COLOUR_LITERAL = /#[0-9a-fA-F]{3,8}\b|\brgba?\(|\bhsla?\(/g;
+
+function lintSvg(label, id, absPath, relPath, { dark }) {
+  const svg = readFileSync(absPath, 'utf8');
+  const bytes = Buffer.byteLength(svg);
+
+  if (bytes > SVG_BUDGET) {
+    err(label, `figure "${id}": ${relPath} is ${(bytes / 1024).toFixed(1)} KB, over the ${SVG_BUDGET / 1024} KB budget`);
+  }
+
+  const root = /<svg\b[^>]*>/.exec(svg);
+  if (!root) { err(label, `figure "${id}": ${relPath} has no <svg> root`); return; }
+  if (!/viewBox="0 0 \d+(?:\.\d+)? \d+(?:\.\d+)?"/.test(root[0])) {
+    err(label, `figure "${id}": ${relPath} needs viewBox="0 0 W H"`);
+  }
+  if (/\swidth="/.test(root[0]) || /\sheight="/.test(root[0])) {
+    err(label, `figure "${id}": ${relPath} must not set width/height on <svg> (the page scales it)`);
+  }
+  if (!/role="img"/.test(root[0])) err(label, `figure "${id}": ${relPath} is missing role="img"`);
+
+  const title = /<title\b[^>]*>([\s\S]*?)<\/title>/.exec(svg);
+  const desc = /<desc\b[^>]*>([\s\S]*?)<\/desc>/.exec(svg);
+  if (!title || !title[1].trim()) err(label, `figure "${id}": ${relPath} needs a non-empty <title>`);
+  if (!desc || !desc[1].trim()) err(label, `figure "${id}": ${relPath} needs a non-empty <desc>`);
+
+  // Art. III.9 - check-no-em-dash.mjs scans docs/guides/i18n/specs, never
+  // static/, so figure labels were the one authored surface with no em-dash
+  // gate. Scoped to text nodes so a path `d` attribute can never trip it.
+  for (const m of svg.matchAll(/<(?:text|tspan|title|desc)\b[^>]*>([\s\S]*?)<\/(?:text|tspan|title|desc)>/g)) {
+    if (EM_DASHES.test(m[1])) {
+      err(label, `figure "${id}": ${relPath} has an em dash in a text node (Art. III.9) - use " - "`);
+      break;
+    }
+  }
+
+  if (/<script\b/i.test(svg) || /<foreignObject\b/i.test(svg)) {
+    err(label, `figure "${id}": ${relPath} must not contain <script> or <foreignObject>`);
+  }
+  if (/(?:href|src)\s*=\s*["']https?:/i.test(svg) || /url\(\s*['"]?https?:/i.test(svg) || /@import/.test(svg)) {
+    err(label, `figure "${id}": ${relPath} must not reference anything external (figures are self-contained)`);
+  }
+
+  // Branding (FR-007). The wordmark is decoration: aria-hidden, and never in
+  // <desc>, which must describe the teaching content alone.
+  const marks = [...svg.matchAll(new RegExp(`<text\\b[^>]*>\\s*${WORDMARK_TEXT.replace(/\./g, '\\.')}\\s*</text>`, 'g'))];
+  if (marks.length !== 1) {
+    err(label, `figure "${id}": ${relPath} must carry exactly one "${WORDMARK_TEXT}" wordmark (found ${marks.length})`);
+  } else if (!/aria-hidden="true"/.test(marks[0][0])) {
+    err(label, `figure "${id}": ${relPath} wordmark must be aria-hidden="true"`);
+  }
+  if (desc && desc[1].includes(WORDMARK_TEXT)) {
+    err(label, `figure "${id}": ${relPath} must not name the wordmark in <desc>`);
+  }
+
+  // Palette (FR-004). Colour lives in ONE :root{} block that must match the
+  // published tokens byte for byte; everywhere else uses var(). That makes this
+  // an exact compare rather than a colour-distance guess, so it cannot
+  // false-positive on a legitimate shade.
+  if (PALETTE_EXEMPT.has(id)) return;
+  const expected = rootBlock(dark ? DARK_TOKENS : LIGHT_TOKENS);
+  if (!svg.includes(expected)) {
+    err(label, `figure "${id}": ${relPath} does not carry the published ${dark ? 'dark' : 'light'} :root token block (regenerate or re-author against scripts/lib/figure-palette.mjs)`);
+    return;
+  }
+  const outside = svg.split(expected).join('');
+  const stray = [...outside.matchAll(COLOUR_LITERAL)].map((m) => m[0]);
+  if (stray.length) {
+    err(label, `figure "${id}": ${relPath} has colour literal(s) outside the :root block: ${[...new Set(stray)].slice(0, 4).join(', ')} - use var(--token)`);
   }
 }
 
