@@ -140,6 +140,13 @@ and derives totals from `content-index.json`. The `enrolledCourseCodes` filter i
   - `0039_assignment_delete.sql` - DELETE grant + `assignments_delete` policy (owner + no submissions).
   - `0040_quiz_authoring_rls.sql` - `quiz_items` + `answer_keys` INSERT/UPDATE/DELETE policies + grants, `is_verified_teacher(auth.uid())`.
   - `0041_assignment_templates.sql` - table + RLS (`for all`, owner) + grants.
+  - `0042_assignment_delete_no_recursion.sql` - **post-deploy fix to 0039** (2026-09-11).
+    0039's inline `not exists (select 1 from public.submissions ...)` re-entered
+    `assignments` through `submissions_select` (0018); Postgres detects policy recursion per
+    relation, so every delete failed with `42P17`. Both predicates moved into a
+    `SECURITY DEFINER` `can_delete_assignment()` that bypasses RLS on the probe. Found only
+    once the migrations were applied to the live database - the RLS suite cannot exercise a
+    policy that does not exist yet.
 - **Component** `src/components/AppDashboardShell.tsx` + `src/lib/dashboardNav.ts` +
   a `.dashboard-shell` block in `src/css/custom.css` (grid: sidebar + main; RTL-aware; drawer
   at `<= 768px`; 44px targets). Consider the `frontend-design` skill for the visual pass.
