@@ -48,7 +48,7 @@ test('teacher publishes a custom assignment, student submits, sees on-time confi
     await expect(teacherPage).not.toHaveURL(/\/app\/login/);
 
     await teacherPage.goto('/app/classes');
-    await teacherPage.getByLabel(/course code/i).fill('EFMP-301');
+    await teacherPage.getByLabel(/^course$/i).selectOption('EFMP-301');
     await teacherPage.getByLabel(/class name/i).fill('E2E Assign Section');
     await teacherPage.getByLabel(/term/i).fill('Fall 2026');
     await teacherPage.getByRole('button', { name: /create class/i }).click();

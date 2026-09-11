@@ -70,7 +70,7 @@ test('student takes a quiz, retakes it and improves, teacher sees the best score
     await expect(teacherPage).not.toHaveURL(/\/app\/login/);
 
     await teacherPage.goto('/app/classes');
-    await teacherPage.getByLabel(/course code/i).fill('EFMP-301');
+    await teacherPage.getByLabel(/^course$/i).selectOption('EFMP-301');
     await teacherPage.getByLabel(/class name/i).fill('E2E Quiz Section');
     await teacherPage.getByLabel(/term/i).fill('Fall 2026');
     await teacherPage.getByRole('button', { name: /create class/i }).click();
