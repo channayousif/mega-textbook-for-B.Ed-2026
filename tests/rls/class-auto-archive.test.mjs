@@ -22,7 +22,7 @@ describe.skipIf(!rlsConfigured)('auto-archive on teacher ineligibility', () => {
   test('admin changing role away from teacher auto-archives their active classes', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'AUT001' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
 
     const admin = await createSignedInUser({ role: 'student' });
@@ -60,7 +60,7 @@ describe.skipIf(!rlsConfigured)('auto-archive on teacher ineligibility', () => {
   test('admin suspending a teacher auto-archives their active classes', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'AUT002' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
 
     const admin = await createSignedInUser({ role: 'student' });

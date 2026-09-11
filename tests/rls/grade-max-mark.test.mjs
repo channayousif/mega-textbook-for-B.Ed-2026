@@ -22,7 +22,7 @@ describe.skipIf(!rlsConfigured)('grade mark cannot exceed the assignment max_mar
   test('mark > max_mark is rejected; mark <= max_mark is accepted', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'MAXM01' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
     const assignment = await createAssignmentFixture(klass.id, { published: true, max_mark: 50 });
 

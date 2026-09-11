@@ -25,7 +25,7 @@ describe.skipIf(!rlsConfigured)('assignment publish visibility and due-date edit
   test('unpublished assignment: 0 rows for student, visible to owning teacher', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'PUB001' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
 
     const student = await createSignedInUser({ role: 'student' });
@@ -44,7 +44,7 @@ describe.skipIf(!rlsConfigured)('assignment publish visibility and due-date edit
   test('unpublishing after submissions exist hides it from the student without touching the submission', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'PUB002' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
 
     const student = await createSignedInUser({ role: 'student' });
@@ -88,7 +88,7 @@ describe.skipIf(!rlsConfigured)('assignment publish visibility and due-date edit
   test('editing the due date after a submission exists leaves the submission unaltered (U1)', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'PUB003' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
 
     const student = await createSignedInUser({ role: 'student' });

@@ -19,7 +19,7 @@ describe.skipIf(!rlsConfigured)('student restoration after removal', () => {
   test('owning teacher restores a removed student; access returns', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'RES001' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
 
     const student = await createSignedInUser({ role: 'student' });
@@ -42,7 +42,7 @@ describe.skipIf(!rlsConfigured)('student restoration after removal', () => {
   test("a teacher cannot restore a student removed from another teacher's class", async () => {
     const owner = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(owner.authUserId);
-    const klass = await createClassFixture(owner.authUserId, { join_code: 'RES002' });
+    const klass = await createClassFixture(owner.authUserId);
     createdClasses.push(klass.id);
 
     const student = await createSignedInUser({ role: 'student' });

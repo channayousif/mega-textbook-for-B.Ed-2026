@@ -23,7 +23,7 @@ describe.skipIf(!rlsConfigured)('editing a returned grade', () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
     const teacherProfile = await getProfileByAuthId(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'EDIT01' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
     const assignment = await createAssignmentFixture(klass.id, { published: true, max_mark: 100 });
 
