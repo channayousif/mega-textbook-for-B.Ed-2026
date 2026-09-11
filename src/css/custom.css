@@ -139,19 +139,79 @@ html[data-theme='dark'] .bloom-tag {
   border-radius: 6px;
 }
 /* Schematics are hand-authored SVG (Spec 012 archetypes) - cap their width so labels
-   stay legible. `illustration` (raster) keeps the full 100% max-width above. */
+   stay legible. `illustration` (raster) keeps the full 100% max-width above.
+
+   `min(100%, …)` is load-bearing, not decoration. These selectors have the SAME
+   specificity as `.figure img` above and come later, so a bare `max-width: 640px`
+   REPLACES the 100% cap rather than tightening it: below 640px the image could no
+   longer shrink to its column, rendered at a fixed 640px on a 390px phone, and
+   pushed the whole document to a 656px scrollWidth. Every unit with a schematic
+   scrolled sideways on a phone. Keep both bounds in one value so the archetype cap
+   and the container cap always apply together. */
 .figure--table img,
 .figure--concept-map img,
 .figure--flowchart img,
 .figure--timeline img,
 .figure--diagram img {
-  max-width: 640px;
+  max-width: min(100%, 640px);
 }
 /* A flow / timeline reads better a little wider. */
 .figure--flowchart img,
 .figure--timeline img {
-  max-width: 760px;
+  max-width: min(100%, 760px);
 }
+
+/* --- Schematics on a phone: scroll rather than scale past legibility -------
+   Fitting a schematic to a phone and keeping it readable are in direct tension.
+   These are authored 640-900px wide with 11px as their smallest label, so
+   shrinking one to a 358px column scales it to about 0.4x and lands the labels
+   near 4.5px. The image fits and nobody can read it.
+
+   Below tablet width, stop scaling and let the figure scroll inside its own box
+   at the size it was drawn for, where 11px is 11px. The page itself still never
+   scrolls sideways - `overflow-x` is on the <figure>, whose width is the content
+   column - which is what the 390/360/320px regression tests assert.
+
+   Only schematics get this. `illustration` is raster artwork with no fine labels
+   to lose, so it keeps scaling down to 100% as before.
+
+   `text-align: start` (not `left`) so the resting scroll position is correct in
+   the Urdu RTL build; the centring on `.figure` would otherwise strand an
+   overflowing figure mid-scroll on first paint. */
+@media (max-width: 768px) {
+  .figure--table,
+  .figure--concept-map,
+  .figure--flowchart,
+  .figure--timeline,
+  .figure--diagram {
+    overflow-x: auto;
+    text-align: start;
+    /* Momentum scrolling on iOS, and a scrollbar that does not overlay labels. */
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+  .figure--table img,
+  .figure--concept-map img,
+  .figure--flowchart img,
+  .figure--timeline img,
+  .figure--diagram img {
+    max-width: none;
+  }
+}
+/* Content tables (the mini-rubrics and mark schemes every topic carries) are
+   authored 3-5 columns wide and cannot reflow below roughly 440px, so on a phone
+   they were widening the document rather than scrolling within it. Give each its
+   own scroll container instead: the page body never scrolls horizontally, and the
+   table stays readable by swiping. `display: block` is what makes overflow apply
+   to a table at all. */
+.markdown > table,
+.markdown table {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
 .figure__caption {
   margin-top: 0.5rem;
   font-size: 0.875rem;

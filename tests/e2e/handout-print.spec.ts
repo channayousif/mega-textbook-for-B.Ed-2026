@@ -30,3 +30,47 @@ for (const path of HANDOUTS) {
     await expect(page.locator('article')).toBeVisible();
   });
 }
+
+/**
+ * Regression - no horizontal scroll on a phone (Art. V.5 / Spec 001 FR-016).
+ *
+ * The Spec 012 archetype rules set `max-width: 640px` on a schematic's <img>.
+ * They share the specificity of the `.figure img { max-width: 100% }` above them
+ * and come later, so they REPLACED the container cap instead of tightening it:
+ * below 640px the figure could not shrink, rendered at a fixed 640px on a 390px
+ * phone, and pushed the document to a 656px scrollWidth. Every unit carrying a
+ * schematic scrolled sideways. Fixed with `min(100%, …)`; content tables get
+ * their own scroll container for the same reason.
+ */
+for (const width of [390, 360, 320]) {
+  test(`unit page with figures does not scroll horizontally at ${width}px`, async ({ page }) => {
+    await page.setViewportSize({ width, height: 844 });
+    await page.goto('/semester-1/efmp-302/unit-01/topic-01');
+    await expect(page.locator('figure.figure img').first()).toBeVisible();
+
+    const { scrollWidth, clientWidth } = await page.evaluate(() => ({
+      scrollWidth: document.documentElement.scrollWidth,
+      clientWidth: document.documentElement.clientWidth,
+    }));
+    expect(scrollWidth).toBeLessThanOrEqual(clientWidth);
+
+    // The <figure> box stays inside the column; the schematic inside it is
+    // deliberately allowed to be wider and to scroll, because scaling a
+    // 640-900px diagram down to a phone column renders its 11px labels at
+    // roughly 4.5px. Legibility is bought with an internal scroll, never with
+    // a document that scrolls sideways.
+    const figureBox = await page.locator('figure.figure').first()
+      .evaluate((el) => el.getBoundingClientRect().width);
+    expect(figureBox).toBeLessThanOrEqual(clientWidth);
+
+    const schematic = page.locator('figure.figure--concept-map, figure.figure--timeline, figure.figure--flowchart').first();
+    if (await schematic.count()) {
+      const scrolls = await schematic.evaluate((el) => el.scrollWidth > el.clientWidth);
+      const imgWidth = await schematic.locator('img:visible').first()
+        .evaluate((el) => el.getBoundingClientRect().width);
+      // Rendered at its authored width, not squeezed into the column.
+      expect(scrolls).toBe(true);
+      expect(imgWidth).toBeGreaterThan(clientWidth);
+    }
+  });
+}
