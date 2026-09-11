@@ -7,10 +7,10 @@ carries a `timeline` (`fig-U1-7`), two `concept-map`s (`fig-U1-4`, `fig-U1-5`) a
 `flowchart`s (`fig-U1-6`, `fig-U1-8`) as its schematics. Every figure is a hand-authored
 self-contained SVG under `static/img/figures/efmp-302/unit-01/` and `Status: placed` - the
 `{/* FIGURE[…] */}` comment in each EN `topic-0N.mdx` has been replaced by a `<Figure>` element
-and the asset is committed. The UR mirror carries the same `<Figure>` ids pointing at
-translated-label `.ur.svg` variants; the unit is `translation_status: draft`, so the `.ur.svg`
-files are written and wired but not yet gate-enforced. Carrier-ID set == this table's ID set both
-ways (`scripts/check-figures.mjs`).
+and the asset is committed. The unit is `translation_status: reviewed`, so the UR mirror is
+gate-enforced: each UR `topic-0N.mdx` carries the same `<Figure>` ids pointing at translated-label
+`.ur.svg` variants, and a `<figId>.ur.svg` exists for every schematic. Carrier-ID set == this
+table's ID set both ways (`scripts/check-figures.mjs`).
 
 | Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
 |---|---|---|---|---|---|---|
