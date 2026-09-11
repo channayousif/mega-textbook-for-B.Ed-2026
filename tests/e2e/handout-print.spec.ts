@@ -54,9 +54,23 @@ for (const width of [390, 360, 320]) {
     }));
     expect(scrollWidth).toBeLessThanOrEqual(clientWidth);
 
-    // And the figure actually shrank to its column rather than being clipped.
-    const figureWidth = await page.locator('figure.figure img:visible').first()
+    // The <figure> box stays inside the column; the schematic inside it is
+    // deliberately allowed to be wider and to scroll, because scaling a
+    // 640-900px diagram down to a phone column renders its 11px labels at
+    // roughly 4.5px. Legibility is bought with an internal scroll, never with
+    // a document that scrolls sideways.
+    const figureBox = await page.locator('figure.figure').first()
       .evaluate((el) => el.getBoundingClientRect().width);
-    expect(figureWidth).toBeLessThanOrEqual(clientWidth);
+    expect(figureBox).toBeLessThanOrEqual(clientWidth);
+
+    const schematic = page.locator('figure.figure--concept-map, figure.figure--timeline, figure.figure--flowchart').first();
+    if (await schematic.count()) {
+      const scrolls = await schematic.evaluate((el) => el.scrollWidth > el.clientWidth);
+      const imgWidth = await schematic.locator('img:visible').first()
+        .evaluate((el) => el.getBoundingClientRect().width);
+      // Rendered at its authored width, not squeezed into the column.
+      expect(scrolls).toBe(true);
+      expect(imgWidth).toBeGreaterThan(clientWidth);
+    }
   });
 }
