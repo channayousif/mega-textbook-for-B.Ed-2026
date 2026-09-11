@@ -51,7 +51,7 @@ test('classes pages render RTL under /ur/ and fit a 360px viewport without horiz
     await page.goto('/ur/app/classes');
     await expect(page.locator('html')).toHaveAttribute('dir', 'rtl');
 
-    await page.getByLabel(/course code/i).fill('EFMP-301');
+    await page.getByLabel(/^course$/i).selectOption('EFMP-301');
     await page.getByLabel(/class name/i).fill('E2E RTL Section');
     await page.getByLabel(/term/i).fill('Fall 2026');
     await page.getByRole('button', { name: /create class/i }).click();
