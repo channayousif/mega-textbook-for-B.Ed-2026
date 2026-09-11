@@ -9,7 +9,23 @@
 import { readFileSync, existsSync } from 'node:fs';
 
 export const STATUS_ENUM = new Set(['prompt-only', 'generated', 'placed']);
-export const KIND_ENUM = new Set(['diagram', 'illustration']);
+
+/**
+ * Figure archetype vocabulary (Spec 012, ADR-0017). Widened from the Spec 009 pair
+ * {diagram, illustration} to six values, stored in the same manifest `Kind` column - the
+ * column name and the v2 seven-column header are unchanged, and `diagram`/`illustration`
+ * stay valid so every existing v2 row still parses.
+ *   table       - a comparison / matrix table
+ *   concept-map - a node-and-arrow web of related ideas
+ *   flowchart   - a decision or process flow
+ *   timeline    - an ordered sequence along time
+ *   diagram     - any other schematic (triangle, Venn, quadrant, labelled illustration-as-schematic)
+ *   illustration- a pictorial raster scene
+ */
+export const KIND_ENUM = new Set(['table', 'concept-map', 'flowchart', 'timeline', 'diagram', 'illustration']);
+
+/** The archetypes that satisfy Constitution III.10's "at least one concept map, flowchart, or timeline per unit". */
+export const SCHEMATIC_ARCHETYPES = new Set(['concept-map', 'flowchart', 'timeline']);
 
 /** Column-aware manifest table parse — supports both the Spec 008 v1 and Spec 009 v2 header shapes. */
 export function parseManifest(text) {
