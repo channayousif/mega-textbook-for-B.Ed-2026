@@ -21,7 +21,7 @@ describe.skipIf(!rlsConfigured)('dashboard grades — no average, corrected valu
   test('a student reads their own grade with mark/max, and the query never carries an average column', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'GRD001' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
     const assignment = await createAssignmentFixture(klass.id, { published: true, max_mark: 100, title: 'Grades Fixture' });
 
@@ -45,7 +45,7 @@ describe.skipIf(!rlsConfigured)('dashboard grades — no average, corrected valu
   test('a corrected grade always shows the corrected value, never the original', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'GRD002' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
     const assignment = await createAssignmentFixture(klass.id, { published: true, max_mark: 100 });
 

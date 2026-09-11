@@ -16,7 +16,7 @@ import { describe, test, expect, afterAll } from 'vitest';
 import {
   rlsConfigured, createSignedInUser, adminSet, getProfileByAuthId, serviceClient, cleanupUsers,
 } from './_helpers.mjs';
-import { createClassFixture, cleanupClasses } from './_classFixtures.mjs';
+import { createClassFixture, cleanupClasses, randomJoinCode } from './_classFixtures.mjs';
 
 describe.skipIf(!rlsConfigured)('classes guard trigger — column and ownership authorization', () => {
   const createdUsers = [];
@@ -30,7 +30,7 @@ describe.skipIf(!rlsConfigured)('classes guard trigger — column and ownership 
   test('non-admin cannot change immutable columns', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'GRD001' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
 
     const { error } = await teacher.client
@@ -44,12 +44,13 @@ describe.skipIf(!rlsConfigured)('classes guard trigger — column and ownership 
   test('owning teacher can change join_code and status on their own class', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'GRD002' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
+    const reissuedCode = randomJoinCode();
 
     const { error: codeError } = await teacher.client
       .from('classes')
-      .update({ join_code: 'GRD002B' })
+      .update({ join_code: reissuedCode })
       .eq('id', klass.id);
     expect(codeError).toBeNull();
 
@@ -63,7 +64,8 @@ describe.skipIf(!rlsConfigured)('classes guard trigger — column and ownership 
   test("a non-owning teacher cannot change join_code or status on another teacher's class", async () => {
     const owner = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(owner.authUserId);
-    const klass = await createClassFixture(owner.authUserId, { join_code: 'GRD003' });
+    const joinCode = randomJoinCode();
+    const klass = await createClassFixture(owner.authUserId, { join_code: joinCode });
     createdClasses.push(klass.id);
 
     const otherTeacher = await createSignedInUser({ role: 'teacher' });
@@ -77,7 +79,7 @@ describe.skipIf(!rlsConfigured)('classes guard trigger — column and ownership 
       .eq('id', klass.id);
     expect(codeError).toBeNull(); // row invisible to non-owner — silent 0-row filter, not a raise
     const { data: unchangedCode } = await svc.from('classes').select('join_code').eq('id', klass.id).single();
-    expect(unchangedCode.join_code).toBe('GRD003');
+    expect(unchangedCode.join_code).toBe(joinCode);
 
     const { error: statusError } = await otherTeacher.client
       .from('classes')
@@ -91,7 +93,8 @@ describe.skipIf(!rlsConfigured)('classes guard trigger — column and ownership 
   test('a suspended owning teacher cannot reissue their own join_code (raises, not a silent no-op)', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'GRD004' });
+    const joinCode = randomJoinCode();
+    const klass = await createClassFixture(teacher.authUserId, { join_code: joinCode });
     createdClasses.push(klass.id);
 
     const admin = await createSignedInUser({ role: 'student' });
@@ -109,6 +112,6 @@ describe.skipIf(!rlsConfigured)('classes guard trigger — column and ownership 
 
     const svc = serviceClient();
     const { data: unchanged } = await svc.from('classes').select('join_code').eq('id', klass.id).single();
-    expect(unchanged.join_code).toBe('GRD004');
+    expect(unchanged.join_code).toBe(joinCode);
   });
 });

@@ -32,7 +32,7 @@ describe.skipIf(!rlsConfigured)('quiz attempt scoring', () => {
 
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'QUIZ001' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
     const { data: assignment } = await svc
       .from('assignments')

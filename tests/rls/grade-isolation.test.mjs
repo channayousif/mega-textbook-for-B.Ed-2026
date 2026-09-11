@@ -22,7 +22,7 @@ describe.skipIf(!rlsConfigured)('grade isolation', () => {
   test("a teacher cannot grade another teacher's class's submissions", async () => {
     const owner = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(owner.authUserId);
-    const klass = await createClassFixture(owner.authUserId, { join_code: 'ISOG01' });
+    const klass = await createClassFixture(owner.authUserId);
     createdClasses.push(klass.id);
     const assignment = await createAssignmentFixture(klass.id, { published: true, max_mark: 100 });
 
@@ -60,7 +60,7 @@ describe.skipIf(!rlsConfigured)('grade isolation', () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
     const teacherProfile = await getProfileByAuthId(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'ISOG02' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
     const assignment = await createAssignmentFixture(klass.id, { published: true, max_mark: 100 });
 

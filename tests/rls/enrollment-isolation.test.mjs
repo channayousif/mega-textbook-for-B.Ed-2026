@@ -19,7 +19,7 @@ describe.skipIf(!rlsConfigured)('enrollment and roster isolation', () => {
   test("a teacher cannot see or manage another teacher's roster", async () => {
     const owner = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(owner.authUserId);
-    const klass = await createClassFixture(owner.authUserId, { join_code: 'ISO001' });
+    const klass = await createClassFixture(owner.authUserId);
     createdClasses.push(klass.id);
 
     const enrolledStudent = await createSignedInUser({ role: 'student' });
@@ -43,7 +43,7 @@ describe.skipIf(!rlsConfigured)('enrollment and roster isolation', () => {
   test('a student has no standing SELECT access to a class they have not joined', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'ISO002' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
 
     const outsider = await createSignedInUser({ role: 'student' });

@@ -21,7 +21,7 @@ describe.skipIf(!rlsConfigured)('quiz assignments carry no automatic low-stakes 
   test('a quiz-sourced assignment with a high (summative-weight) max_mark is created and published without error', async () => {
     const teacher = await createSignedInUser({ role: 'teacher' });
     createdUsers.push(teacher.authUserId);
-    const klass = await createClassFixture(teacher.authUserId, { join_code: 'QUIZ004' });
+    const klass = await createClassFixture(teacher.authUserId);
     createdClasses.push(klass.id);
 
     const { data, error } = await teacher.client
