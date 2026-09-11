@@ -5,6 +5,25 @@
 **Status**: Draft
 **Input**: User description: "after teacher dashboard, go for @SDD/006-content-pipeline.md, refine the feature further after evaluating the file"
 
+## G3/G5 review delegation (2026-09-11 amendment)
+
+Constitution v3.0.0 Article III.2/VII and
+[ADR-0019](../../history/adr/0019-independent-agents-for-g3-g5-review.md) supersede the
+human-only execution requirements in this document **only after delegated review is enabled**.
+G0 course-intake approval and unresolved guide/terminology decisions remain with the curriculum
+owner. Existing three-state trackers and latest-row-wins behavior remain.
+
+A qualified independent agent may then satisfy G3/G5 without per-unit human countersignature,
+using authenticated, input-bound evidence and an enabled reviewer identity. A non-empty
+reviewer field alone is insufficient. G5 requires a complete translation and accepted G3
+evidence for the identical English inputs. `translation_status: reviewed` cannot be set
+on an advisory report.
+
+**Current runtime:** reviewer implementation and qualification are not delivered by this
+amendment. Existing human sign-off remains operative. References below to human reviewers
+and initials describe that current path. The follow-on feature must update the data model,
+gate, author/reviewer handoffs and CI evidence validation before activating the delegated path.
+
 ## Clarifications
 
 ### Session 2026-08-24
