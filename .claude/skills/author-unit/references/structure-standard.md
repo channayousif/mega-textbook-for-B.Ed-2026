@@ -8,6 +8,13 @@
 >
 > Legacy five-file units are governed by the `## Unit depth standard` (Spec 007) section of the
 > style guide instead - unchanged, not covered here.
+>
+> **Spec 013 (style-guide v3.4).** Figure colour now comes from a published token set; figures
+> are themed by the site's own `[data-theme]`, never `prefers-color-scheme`; the dark variant is
+> derived by `npm run figures:variants` rather than authored; every figure carries a
+> `textbook.com.pk` wordmark; and `check:figures` reads the committed SVG bytes, so all of that
+> is enforced rather than advised. Every non-`coming_soon` page also requires a `description` in
+> its front matter. See `.claude/skills/generate-figures/references/svg-authoring.md`.
 
 Draft to this standard, then self-check against it before emitting the coverage matrix.
 
