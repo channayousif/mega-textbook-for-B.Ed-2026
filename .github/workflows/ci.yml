@@ -39,6 +39,13 @@ jobs:
       - name: Figure marker gate
         run: npm run check:figures
 
+      - name: Docs/code sync gate (shared constants, style-guide freeze marker, CI coverage)
+        run: npm run check:docs-sync
+
+      - name: Figure dark-variant freshness
+        run: npm run figures:variants:check
+
+
       # Content/figure status report (Spec 010, FR-032) - informational only, never
       # blocking: reuses the depth-gate and figure-manifest logic above via shared
       # modules (scripts/lib/), so it cannot drift from either gate.

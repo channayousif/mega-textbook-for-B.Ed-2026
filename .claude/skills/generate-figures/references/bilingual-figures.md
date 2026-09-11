@@ -3,9 +3,18 @@
 A rendered figure must work on the Urdu page too. An English comparison table sitting on the
 Urdu topic page is an Art. III.2 parity break. How it is localised depends on `Kind`.
 
-## `Kind: diagram` - translate the SVG labels
+## Any SVG schematic - translate the labels
 
-A diagram's meaning lives in its **labels**, so the SVG itself is localised.
+A schematic's meaning lives in its **labels**, so the SVG itself is localised. This applies to
+EVERY SVG archetype, not just `diagram`:
+
+<!-- BEGIN GENERATED figure-kinds -->
+`table`, `concept-map`, `flowchart`, `timeline`, `diagram`, `illustration`
+<!-- END GENERATED figure-kinds -->
+
+(The gate used to key this rule on `Kind: diagram`, so a table, concept map, flowchart or
+timeline could lose its Urdu variant and CI stayed green. It now keys on the asset being an
+`.svg`, which is the real invariant.)
 
 1. **Copy** `static/img/figures/<course-lowercase>/unit-NN/<figId>.svg` →
    `static/img/figures/<course-lowercase>/unit-NN/<figId>.ur.svg`. Same shapes, same geometry,
@@ -57,7 +66,7 @@ A drawn scene has little or no text. Do **not** make a second raster.
 
 | EN `index.mdx` | UR `.ur.svg` + UR `<Figure>` |
 |---|---|
-| `reviewed` | **gate-enforced.** A placed `diagram` MUST have `<figId>.ur.svg` under `static/`; the UR `topic-NN.mdx` MUST have a `<Figure id>` for the figure. Missing → gate fails. |
+| `reviewed` | **gate-enforced.** A placed **SVG of any archetype** MUST have `<figId>.ur.svg` under `static/`; the UR `topic-NN.mdx` MUST have a `<Figure id>` for the figure. Missing → gate fails. |
 | `draft` (skeleton-stub UR mirror) | **authored and wired now, but not gate-blocked** - same posture as Spec 008 not enforcing UR marker-ID parity for `draft`. Still do it: it saves the downstream G4/G5 translator a step, and the `.ur.svg` is ready when the unit reaches `reviewed`. |
 
 So for a `draft` unit (e.g. EFMP-302 Unit 1 today): write all four `.ur.svg`, wire all four UR
