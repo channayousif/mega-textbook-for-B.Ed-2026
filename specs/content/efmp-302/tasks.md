@@ -35,17 +35,27 @@ verified - 4 DOIs resolve, 3 books catalogue-confirmed); the four-topic grouping
 pedagogically coherent; the FIGURE prompts describe usable teaching aids; the per-topic and
 unit-end rubrics are sound with Analyze-or-higher demands where required. **G1 re-affirmed** for
 the v3.0 `### Topic list` / blueprint expansion (Spec 008 T029). **G2 en-draft / G3 en-review
-restored to `✅` (YM).** `G4 ur-translation` / `G5 ur-review` remain `▢` - scope changed to the
-per-topic layout; the `ur` route falls back to EN behind the Spec 001 FR-003 banner until
-re-review. **Merge freeze lifted** - `check:pipeline-gate` is green for EFMP-302 Unit 1 again.
+restored to `✅` (YM).**
+
+**Unit 1 - Spec 012 figure retrofit + Urdu re-translation (2026-09-09, COMPLETE):** the
+`**Figure plan**` was expanded to `fig-U1-1…fig-U1-8` (two per topic, each with an archetype;
+`fig-U1-7` is the unit timeline) for Constitution Art. III.10, and four new SVG schematics
+(+ `.ur.svg` variants) were placed. **G4 ur-translation `✅` (YM)**: all seven Urdu files fully
+re-translated to the per-topic layout, consulting `terminology.csv` for every key term, heading
+vectors matched position-by-position, zero em-dash. **G5 ur-review `✅` (YM)**: academic-plain
+register pass; `translation_status: reviewed` on all EN and UR unit-01 files;
+`<TranslationStatusBadge status="reviewed" />`. The `ur` route now serves the reviewed Urdu unit
+(no EN fallback). `validate:content` (EN↔UR parity now active), `check:figures` (UR `<Figure>` +
+`.ur.svg` per id enforced), `check:no-em-dash`, `check:no-answer-keys`, `check:depth-gate`,
+`check:pipeline-gate`, `npm test`, and `npm run build` (en + ur) all green.
 
 | Unit | Stage | Status | Reviewer | Suggestion |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ✅ | YM | |
 | Unit 1 | G2 en-draft | ✅ | YM | S008 v3.0 per-topic re-restructure - Content gate passed 2026-08-30 |
 | Unit 1 | G3 en-review | ✅ | YM | S008 v3.0 per-topic re-restructure - Content gate passed 2026-08-30 |
-| Unit 1 | G4 ur-translation | ▢ | | S008 scope change to per-topic layout |
-| Unit 1 | G5 ur-review | ▢ | | S008 scope change to per-topic layout |
+| Unit 1 | G4 ur-translation | ✅ | YM | Full UR re-translation of all 7 files to the v3.0 per-topic layout + the Spec 012 figure retrofit (fig-U1-1..8); terminology-bank-driven, heading-parity exact, zero em-dash |
+| Unit 1 | G5 ur-review | ✅ | YM | Register / terminology pass (academic-plain, درسی مگر عام فہم); `Professionalism` / `Professionalization` bank terms confirmed at G5; `translation_status: reviewed`, `ur` route no longer falls back to EN |
 | Unit 1 | G6 assets | ✅ | YM | |
 | Unit 1 | G7 publish | ✅ | YM | |
 | Unit 2 | G1 unit-spec | ✅ | YM | |
