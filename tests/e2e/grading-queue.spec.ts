@@ -44,7 +44,7 @@ test('teacher grades and returns a submission; student sees it, then sees a corr
     await expect(teacherPage).not.toHaveURL(/\/app\/login/);
 
     await teacherPage.goto('/app/classes');
-    await teacherPage.getByLabel(/course code/i).fill('EFMP-301');
+    await teacherPage.getByLabel(/^course$/i).selectOption('EFMP-301');
     await teacherPage.getByLabel(/class name/i).fill('E2E Grading Section');
     await teacherPage.getByLabel(/term/i).fill('Fall 2026');
     await teacherPage.getByRole('button', { name: /create class/i }).click();

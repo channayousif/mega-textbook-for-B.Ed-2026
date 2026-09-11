@@ -303,3 +303,99 @@ html[dir='rtl'] div:has(> .theme-doc-sidebar-container) > main {
     padding-left: 2.75rem;
   }
 }
+
+/* --- Dashboard app shell (Spec 011, AppDashboardShell) --------------------
+   A persistent left sidebar beside the existing `.container.auth-page` main
+   frame on wide screens; a keyboard-operable drawer below 768px. No new
+   stylesheet - the project keeps one global CSS file (Spec 002 precedent). */
+.dashboard-shell {
+  display: grid;
+  grid-template-columns: 15rem minmax(0, 1fr);
+  gap: 0;
+  align-items: start;
+}
+.dashboard-shell__main {
+  /* keep the pre-shell page width/spacing; the grid already constrains it */
+  margin-left: auto;
+  margin-right: auto;
+}
+.dashboard-shell__sidebar {
+  position: sticky;
+  top: var(--ifm-navbar-height, 60px);
+  align-self: start;
+  padding: 1.5rem 0.75rem;
+  border-right: 1px solid var(--ifm-color-emphasis-200);
+}
+html[dir='rtl'] .dashboard-shell__sidebar {
+  border-right: 0;
+  border-left: 1px solid var(--ifm-color-emphasis-200);
+}
+.dashboard-shell__sidebar-heading {
+  margin: 0 0 0.5rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ifm-color-emphasis-600);
+}
+.dashboard-shell__navlist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.dashboard-shell__navlink {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 0.75rem;
+  border-radius: 6px;
+  color: var(--ifm-font-color-base);
+  text-decoration: none;
+}
+.dashboard-shell__navlink:hover {
+  background: var(--ifm-color-emphasis-100);
+  text-decoration: none;
+}
+.dashboard-shell__navlink--active {
+  background: var(--ifm-color-primary);
+  color: #fff;
+  font-weight: 600;
+}
+.dashboard-shell__topbar {
+  display: none;
+  padding: 1rem 1rem 0;
+}
+.dashboard-shell__toggle {
+  min-height: 44px;
+}
+.dashboard-shell__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 200;
+}
+.dashboard-shell__drawer {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-start: 0;
+  width: min(18rem, 85vw);
+  background: var(--ifm-background-color);
+  border-inline-end: 1px solid var(--ifm-color-emphasis-200);
+  padding: 1rem 0.75rem;
+  z-index: 201;
+  overflow-y: auto;
+}
+.dashboard-shell__drawer-close {
+  margin-bottom: 0.75rem;
+}
+@media (max-width: 768px) {
+  .dashboard-shell {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .dashboard-shell__sidebar {
+    display: none;
+  }
+  .dashboard-shell__topbar {
+    display: block;
+  }
+}

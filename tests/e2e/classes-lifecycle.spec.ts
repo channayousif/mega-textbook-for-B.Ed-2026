@@ -47,7 +47,7 @@ test('teacher creates a class, student joins by code, roster updates immediately
 
     // SC-001 spot-check: a few clicks/fields to create a class.
     await teacherPage.goto('/app/classes');
-    await teacherPage.getByLabel(/course code/i).fill('EFMP-301');
+    await teacherPage.getByLabel(/^course$/i).selectOption('EFMP-301');
     await teacherPage.getByLabel(/class name/i).fill('E2E Section');
     await teacherPage.getByLabel(/term/i).fill('Fall 2026');
     await teacherPage.getByRole('button', { name: /create class/i }).click();

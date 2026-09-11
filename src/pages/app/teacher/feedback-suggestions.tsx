@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import TeacherDashboardGuard from '@site/src/components/TeacherDashboardGuard';
+import AppDashboardShell from '@site/src/components/AppDashboardShell';
 import { fetchOwnSuggestions } from '@site/src/lib/suggestions';
 import { fetchOwnFeedbackHistory } from '@site/src/lib/activityFeedback';
 import type { ImprovementSuggestion, ActivityFeedback } from '@site/src/lib/types';
@@ -114,11 +114,9 @@ function FeedbackSuggestionsContent(): React.ReactElement {
 export default function FeedbackSuggestionsPage(): React.ReactElement {
   return (
     <Layout title="Feedback & Suggestions">
-      <TeacherDashboardGuard>
-        <main className="container auth-page margin-vert--lg">
+      <AppDashboardShell role="teacher">
           <FeedbackSuggestionsContent />
-        </main>
-      </TeacherDashboardGuard>
+      </AppDashboardShell>
     </Layout>
   );
 }
