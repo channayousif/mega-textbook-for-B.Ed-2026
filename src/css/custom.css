@@ -11,9 +11,34 @@
   unicode-range: U+0600-06FF, U+0750-077F, U+FB50-FDFF, U+FE70-FEFF;
 }
 
+/* --- Brand palette (Spec 013) ---------------------------------------------
+   Before Spec 013 this block was two declarations. Infima needs all SEVEN
+   shades - the other five silently fell back to its stock green, so hover and
+   link tints were off-brand - and there was no dark ramp at all, leaving a
+   low-luminance teal on a near-black surface in dark mode.
+
+   `--ifm-color-primary` is also `--a1` in the figure token set
+   (scripts/lib/figure-palette.mjs), so figures and site chrome share one hue.
+   Contrast against the mode's own ground is noted per shade; anything used for
+   body text or a button ground clears WCAG AA. */
 :root {
-  --ifm-color-primary: #1f6f5c;
-  --ifm-color-primary-dark: #1c6453;
+  --ifm-color-primary-darkest: #154b3e;  /* 9.96:1 on white */
+  --ifm-color-primary-darker: #195b4b;   /* 7.96:1 */
+  --ifm-color-primary-dark: #1c6554;     /* 6.91:1 */
+  --ifm-color-primary: #1f6f5c;          /* 6.02:1 */
+  --ifm-color-primary-light: #227b66;    /* 5.13:1 */
+  --ifm-color-primary-lighter: #268770;  /* 4.39:1 - decorative only */
+  --ifm-color-primary-lightest: #2c9f84; /* 3.28:1 - borders/accents only */
+}
+
+html[data-theme='dark'] {
+  --ifm-color-primary-darkest: #2b967c;  /* 4.71:1 on #1b1b1d */
+  --ifm-color-primary-darker: #31ae90;   /* 6.21:1 */
+  --ifm-color-primary-dark: #35ba9a;     /* 7.08:1 */
+  --ifm-color-primary: #38c6a4;          /* 8.01:1 */
+  --ifm-color-primary-light: #47cbac;    /* 8.52:1 */
+  --ifm-color-primary-lighter: #57d0b3;  /* 9.07:1 */
+  --ifm-color-primary-lightest: #73d7bf; /* 9.99:1 */
 }
 
 /* --- RTL / Nastaliq rendering (FR-002, FR-013, T019) ----------------------- */
@@ -57,6 +82,19 @@ html[dir='rtl'] code {
   border-color: #6366f1;
   color: #3730a3;
 }
+/* These three chips were authored light-only, so in dark mode they rendered a
+   pale amber/indigo card against a near-black page. Dark equivalents keep the
+   same hue family and clear AA on #1b1b1d. */
+html[data-theme='dark'] .translation-badge--draft {
+  background: #3a2c12;
+  border-color: #a9791d;
+  color: #f4d69a;
+}
+html[data-theme='dark'] .translation-badge--untranslated {
+  background: #23264a;
+  border-color: #6366f1;
+  color: #c3c7f7;
+}
 
 /* --- Print handout button + Bloom/activity styling ------------------------- */
 .print-handout {
@@ -75,6 +113,10 @@ html[dir='rtl'] code {
   border-radius: 999px;
   background: #e2e8f0;
   color: #1e293b;
+}
+html[data-theme='dark'] .bloom-tag {
+  background: #2f3742;
+  color: #dbe3ec;
 }
 .activity-card {
   border: 1px solid var(--ifm-color-emphasis-300);

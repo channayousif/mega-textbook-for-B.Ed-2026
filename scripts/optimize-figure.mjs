@@ -16,10 +16,11 @@
  */
 import { readFileSync, writeFileSync, existsSync, statSync, mkdirSync } from 'node:fs';
 import { dirname, extname } from 'node:path';
+import { MAX_EDGE, RASTER_BUDGET, SVG_BUDGET } from './lib/figure-palette.mjs';
 
-const MAX_EDGE = 1600;
-const RASTER_BUDGET = 150 * 1024; // 150 KB
-const SVG_BUDGET = 20 * 1024; // 20 KB
+// Budgets moved to the shared lib in Spec 013 so `check:figures` enforces the
+// same numbers on committed bytes. They used to live here privately, where the
+// only thing running them was an author remembering to.
 
 const args = process.argv.slice(2);
 const svgMode = args[0] === '--svg';
