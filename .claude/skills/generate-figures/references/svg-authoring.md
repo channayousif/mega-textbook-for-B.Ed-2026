@@ -1,24 +1,28 @@
-# SVG authoring - hand-authored diagram figures (generate-figures)
+# SVG authoring - hand-authored schematic figures (generate-figures)
 
-A `Kind: diagram` figure is a **self-contained SVG file** you write by hand and commit under
+A **schematic** figure (`Kind` ∈ `{table, concept-map, flowchart, timeline, diagram}`) is a
+**self-contained SVG file** you write by hand and commit under
 `static/img/figures/<course-lowercase>/unit-NN/<figId>.svg`. No dependency, no build step, no
 external asset. It renders behind a plain `<img src="/img/…">` (the `<Figure>` component).
 
-## Diagram or illustration?
+## Schematic or illustration?
 
-| Choose `diagram` (SVG, this file) when the figure is… | Choose `illustration` (raster, `raster-hf-mcp.md`) when it… |
-|---|---|
-| a comparison table, matrix, or checklist grid | needs a photograph-like scene, a real place, faces |
-| a relationship diagram - triangle, Venn, cycle, quadrant | needs texture, depth, lighting |
-| a node-and-arrow web / concept map | cannot be carried by flat shapes + labels |
-| a two-panel or side-by-side contrast | - |
-| a left-to-right process flow, a timeline | - |
-| an annotated cross-section or labelled schematic | - |
+| Choose a schematic `Kind` (SVG, this file) when the figure is… | archetype | Choose `illustration` (raster, `raster-hf-mcp.md`) when it… |
+|---|---|---|
+| a comparison table, matrix, or checklist grid | `table` | needs a photograph-like scene, a real place, faces |
+| a node-and-arrow web of related ideas | `concept-map` | needs texture, depth, lighting |
+| a decision or process flow with branches | `flowchart` | cannot be carried by flat shapes + labels |
+| an ordered sequence along time (dates, stages) | `timeline` | - |
+| a relationship diagram (triangle, Venn, cycle, quadrant), a two-panel contrast, an annotated cross-section, or any other labelled schematic | `diagram` | - |
 
-**Default to `diagram`.** A textbook figure set is overwhelmingly labelled schematics. A prompt
-that says "clean flat vector, labelled" is a `diagram` even when it depicts a classroom scene -
+**Default to a schematic.** A textbook figure set is overwhelmingly labelled schematics. A prompt
+that says "clean flat vector, labelled" is a schematic even when it depicts a classroom scene -
 draw it as flat labelled panels, not a raster. AI raster garbles label text, weighs 50–150 KB,
 ignores dark mode, and can't be localised without a full re-generation.
+
+**Constitution III.10**: the unit needs **≥ 1 `concept-map` / `flowchart` / `timeline`** (a
+`table` or a plain `diagram` does not satisfy it) and **≥ 2 figures per topic**. The content-spec
+`**Figure plan**` should already have set the archetype for each id.
 
 ## The boilerplate
 
@@ -75,7 +79,10 @@ Every diagram SVG starts from this shape:
   2–8 KB; if you're near the limit you have too many nodes or over-long labels.
 - **No `<script>`, no `<foreignObject>`, no external `<image>`/`<use href="http…">`.**
 
-## The five archetypes
+## The five layout patterns
+
+These are drawing recipes; each maps to a manifest `Kind`: 1 → `table`, 2 → `diagram`,
+3 → `concept-map`, 4 → `diagram`, 5 → `flowchart` or `timeline`.
 
 ### 1. Comparison table / matrix
 

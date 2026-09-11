@@ -95,9 +95,19 @@ html[dir='rtl'] code {
   border: 1px solid var(--ifm-color-emphasis-300);
   border-radius: 6px;
 }
-/* Schematic diagrams are hand-authored SVG - cap their width so labels stay legible. */
+/* Schematics are hand-authored SVG (Spec 012 archetypes) - cap their width so labels
+   stay legible. `illustration` (raster) keeps the full 100% max-width above. */
+.figure--table img,
+.figure--concept-map img,
+.figure--flowchart img,
+.figure--timeline img,
 .figure--diagram img {
   max-width: 640px;
+}
+/* A flow / timeline reads better a little wider. */
+.figure--flowchart img,
+.figure--timeline img {
+  max-width: 760px;
 }
 .figure figcaption {
   margin-top: 0.5rem;

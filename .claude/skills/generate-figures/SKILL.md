@@ -60,20 +60,28 @@ figures for a unit that has no per-topic markers yet.
 2. Cross-check against `specs/content/<course-lowercase>/figures/unit-NN.md` - the marker-id set
    and the manifest-id set MUST already match both ways. If they don't, stop: the manifest is an
    `author-unit` artefact; fixing it is a G1/Spec 008 action, not this skill's job.
-3. **Classify `Kind` for each figure** (`references/svg-authoring.md` §"Diagram or illustration"):
-   - `diagram` (the default) - a labelled schematic: a comparison table, a relationship diagram
-     (triangle / Venn / cycle), a node-and-arrow web, a two-panel contrast, a left-to-right flow,
-     a timeline, an annotated cross-section. Anything whose meaning is **shape + label**.
+3. **Classify the `Kind` archetype for each figure** (six values, Spec 012;
+   `references/svg-authoring.md` §"Diagram or illustration"). The content-spec `**Figure plan**`
+   usually already names it - carry that through unless it is plainly wrong.
+   - **Schematics** (hand-authored SVG): `table` (comparison / matrix), `concept-map`
+     (node-and-arrow web of related ideas), `flowchart` (decision / process flow), `timeline`
+     (ordered sequence along time), `diagram` (any other schematic - triangle / Venn / cycle /
+     quadrant / annotated cross-section / a two-panel contrast). Anything whose meaning is
+     **shape + label**.
    - `illustration` - a scene that needs pictorial depth: people, a classroom, a place, a
      photograph-like image. Rare in a textbook figure set.
-   - A prompt that says "clean flat vector" is a `diagram`, even if it depicts a scene
-     (e.g. a two-panel "industrial vs inquiry" classroom drawn as flat labelled panels).
+   - A prompt that says "clean flat vector" is a schematic, even if it depicts a scene
+     (e.g. a two-panel "industrial vs inquiry" classroom drawn as flat labelled panels →
+     `diagram`).
+   - Spec 012 / Constitution III.10: the unit needs **≥ 1 `concept-map` / `flowchart` /
+     `timeline`**. If the plan has none, that is an `author-unit` gap - stop and flag it.
 4. Read `specs/content/<course-lowercase>/figures/unit-NN.brief.md` if it exists - it lists
    illustration figures whose rasters the owner was asked to drop into `figures/.staging/`.
 
-## Step 2 - Diagrams: author a self-contained SVG
+## Step 2 - Schematics: author a self-contained SVG
 
-Per `references/svg-authoring.md`, for each `Kind: diagram` figure:
+Per `references/svg-authoring.md`, for each schematic figure (`Kind` ∈ `{table, concept-map,
+flowchart, timeline, diagram}`):
 
 1. Pick the closest archetype; lay out the shapes and labels to match the marker `prompt`.
 2. Use the boilerplate: `viewBox`, `role="img"`, `<title>` = the alt's first clause, `<desc>` =
@@ -124,10 +132,12 @@ Per `references/placement.md`, for each figure whose asset now exists under `sta
    <Figure id="<id>" src="/img/figures/<course-lowercase>/unit-NN/<figId>.<ext>" alt="<the marker's alt, verbatim, whitespace-normalised>" />
    ```
    The comment is **not** kept. `<Figure>` is registered globally - no import line needed.
-2. Rewrite the manifest to the v2 columns if it is still v1:
+2. Rewrite the manifest to the v2/v3 columns if it is still v1:
    `| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |`. For this figure's row set
-   `Kind`, `Src` (`/img/figures/…`), and `Status: placed`. `Prompt` and `Alt text` stay verbatim
-   from the marker. A figure whose asset does not yet exist stays `prompt-only` (blank `Kind`/`Src`).
+   `Kind` (the six-value archetype - `table` \| `concept-map` \| `flowchart` \| `timeline` \|
+   `diagram` \| `illustration`), `Src` (`/img/figures/…`), and `Status: placed`. `Prompt` and
+   `Alt text` stay verbatim from the marker. A figure whose asset does not yet exist stays
+   `prompt-only` (`Src` blank; `Kind` blank or its planned archetype).
 3. Update the manifest's header prose to point at
    `specs/009-figure-rendering/contracts/figure-manifest-v2.md`.
 
@@ -135,9 +145,10 @@ Per `references/placement.md`, for each figure whose asset now exists under `sta
 
 Per `references/bilingual-figures.md`:
 
-- `Kind: diagram` - copy `<figId>.svg` → `<figId>.ur.svg`; translate every **visible** label to
-  Urdu; set `text-anchor` / `direction: rtl` for the Urdu text; use the Nastaliq-first font
-  stack. Optimise it (`--svg`, ≤ 20 KB). In the UR `topic-NN.mdx`, replace the marker with
+- **Any schematic `Kind`** (`table` / `concept-map` / `flowchart` / `timeline` / `diagram`) -
+  copy `<figId>.svg` → `<figId>.ur.svg`; translate every **visible** label to Urdu; set
+  `text-anchor` / `direction: rtl` for the Urdu text; use the Nastaliq-first font stack.
+  Optimise it (`--svg`, ≤ 20 KB). In the UR `topic-NN.mdx`, replace the marker with
   `<Figure id="<id>" src="/img/figures/<course>/unit-NN/<figId>.ur.svg" alt="<Urdu alt>" />`.
 - `Kind: illustration` - reuse the one `<figId>.webp`; in the UR `topic-NN.mdx` replace the
   marker with `<Figure id="<id>" src="/img/figures/<course>/unit-NN/<figId>.webp" alt="<Urdu alt>" />`.
