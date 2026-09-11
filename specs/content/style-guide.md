@@ -1,5 +1,5 @@
 ---
-version: "3.2"
+version: "3.3"
 ---
 
 # Content Style Guide
@@ -69,6 +69,16 @@ cleanup pass removed every existing em dash from those trees. No section is adde
 
 ## Diagram conventions
 
+- **Visual density (Constitution Art. III.10)**: every `topic-*.mdx` carries **at least two
+  figures**, and every unit carries **at least one concept map, flowchart, or timeline**. A
+  visual is worth a thousand words - prefer a figure over another paragraph whenever the prose
+  describes a process, a sequence, a set of relationships, or a comparison.
+- Every figure is classified by one **archetype**: `table` (comparison / matrix), `concept-map`
+  (node-and-arrow web of related ideas), `flowchart` (decision or process flow), `timeline`
+  (ordered sequence along time), `diagram` (any other schematic - triangle, Venn, quadrant,
+  labelled illustration-as-schematic), `illustration` (a pictorial scene). The archetype is
+  recorded in the manifest `Kind` column. Only `concept-map` / `flowchart` / `timeline` satisfy
+  the per-unit schematic rule; a `table` or a plain `diagram` does not.
 - Diagrams/images carry descriptive alt text (Constitution Art. III.8).
 - No color-only meaning; semantic heading hierarchy throughout.
 
@@ -218,7 +228,7 @@ new-shape branch) adds these **automated** checks:
 | `unit-assessment.mdx`: `## Unit summary` present; MCQ/RRQ/ERQ counts **exactly 10 / 10 / 5 per `###` band**; `## Answers and marking guidance` present, ≤1, and the file's **last** `##` section | Whether questions are well-constructed and the rubrics sound; whether the bank samples the whole unit |
 | Coverage matrix v2: `File` ∈ the new-shape set; every `topic-NN.mdx` referenced by ≥1 row; for every checklist ID ≥1 coverage row names the exact `topic-NN.mdx` its `### Topic list` row assigns it to | Whether `Section` names a heading that genuinely covers the sub-topic; whether the cited source is apt |
 | Reading-minutes sum across `index.mdx` + every `topic-*.mdx` + `unit-assessment.mdx` (+ `unit-teacher-notes.mdx`) ∈ the re-baselined `**Depth budget**` band | Whether the prose is padded |
-| Figure marker ↔ manifest consistency (`check:figures`) - every topic ≥1 marker; well-formed unique `fig-U<n>-<seq>` IDs; non-empty prompt + alt; marker set == manifest set both ways; each row's `Topic` == the marker file's `topic_label` | Whether the figure prompt would produce a useful teaching aid; whether the alt text is a good description; whether a figure is needed there |
+| Figure marker ↔ manifest consistency + visual density (`check:figures`) - every topic **≥ 2** carriers; **≥ 1 concept-map / flowchart / timeline per unit**; every rendered row has a valid archetype `Kind`; well-formed unique `fig-U<n>-<seq>` IDs; non-empty prompt + alt; carrier set == manifest set both ways; each row's `Topic` == the carrier file's `topic_label` | Whether each figure prompt would produce a useful teaching aid; whether the alt text is a good description; whether the chosen archetype is the right one for the idea |
 | Answer prose (`answer key` / `marking scheme` / `correct answer`) appears **only** below the `## Answers and marking guidance` line in `unit-assessment.mdx` / `course-review.mdx`; front-matter answer-key keys nowhere | Whether the model answers and rubrics are correct and sufficient |
 
 ## Unit structure standard (Spec 008 - per-topic layout)
@@ -356,7 +366,9 @@ Extraction regex:
 - **`<prompt>`** ≥ 10 non-space chars - subject; style ("clean flat vector, labelled, high
   contrast, no colour-only meaning"); aspect.
 - **`<alt>`** non-empty - the accessible description that becomes the image `alt` (Art. III.8).
-- **At least one figure per `topic-*.mdx`.**
+- **At least two figures per `topic-*.mdx`, and at least one `concept-map` / `flowchart` /
+  `timeline` per unit** (Constitution Art. III.10). Plan two to three per topic; name the
+  archetype for each in the content-spec `**Figure plan**`.
 
 ### Rendering - the `<Figure>` end-state (Spec 009)
 
@@ -373,11 +385,15 @@ When a figure is rendered, its comment marker is **replaced** at the same positi
 - A **carrier** for figure `X` is a `{/* FIGURE[X] */}` comment **or** a `<Figure id="X" />`. The
   invariants below count carriers of either form.
 
-**Kinds.** `diagram` - a labelled schematic, hand-authored as a self-contained SVG
-(`<title>` + `role="img"`, system-font stack, a `@media (prefers-color-scheme: dark)` block,
-meaning by shape+label never colour, ≤ 20 KB). `illustration` - a scene, generated via the
+**Archetypes (the `Kind` column, Spec 012).** Six values. The first five are **schematics** -
+hand-authored as a self-contained SVG (`<title>` + `role="img"`, system-font stack, a
+`@media (prefers-color-scheme: dark)` block, meaning by shape+label never colour, ≤ 20 KB):
+`table` (comparison / matrix), `concept-map` (node-and-arrow web), `flowchart` (decision /
+process flow), `timeline` (ordered sequence along time), `diagram` (any other schematic -
+triangle, Venn, quadrant). The sixth, `illustration`, is a pictorial scene - generated via the
 Hugging Face MCP image tool (or a generation brief + `figures/.staging/` when no tool is
-connected), optimised to WebP ≤ 150 KB, longest edge ≤ 1600 px. `diagram` is the default.
+connected), optimised to WebP ≤ 150 KB, longest edge ≤ 1600 px. Only `concept-map` /
+`flowchart` / `timeline` satisfy the per-unit schematic rule.
 
 **Bilingual.** A placed `diagram` also has `<figId>.ur.svg` with the labels translated; the UR
 `topic-*.mdx` `<Figure src>` points at it. A placed `illustration` reuses the one `.webp` with a
@@ -392,19 +408,26 @@ written-and-wired but not gate-blocked while `draft`.
 | Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
 ```
 
-- `Kind ∈ {diagram, illustration}`; `Src` is the `/img/…` path, **blank iff `Status: prompt-only`**.
+- `Kind ∈ {table, concept-map, flowchart, timeline, diagram, illustration}` (Spec 012 widened
+  this from the Spec 009 pair; the column name and 7-col header are unchanged). A `prompt-only`
+  row MAY leave `Kind` blank or carry its **planned** archetype; a `generated` / `placed` row
+  MUST carry a valid archetype. `Src` is the `/img/…` path, **blank iff `Status: prompt-only`**.
 - `Status`: `prompt-only` (comment only, no asset) → `generated` (asset exists, still a comment)
   → `placed` (comment replaced by `<Figure>`, asset committed).
 - Carrier-id set **==** manifest-id set both ways; each row's `Topic` **==** the carrier file's
-  `topic_label`. Parser is column-aware (a 5-column Spec 008 manifest still parses).
+  `topic_label`; **≥ 2 carriers per topic**; **≥ 1 `concept-map` / `flowchart` / `timeline`
+  per unit** once any row is classified. Parser is column-aware (a 5-column Spec 008 manifest
+  still parses).
 - Full contract: `specs/009-figure-rendering/contracts/figure-manifest-v2.md` (supersedes the
   Spec 008 `figures-manifest.md`).
 
 ### Gate + tooling
 
-- `npm run check:figures` (`scripts/check-figures.mjs`) - CI step in the `build` job. `prompt-only`
-  units and legacy units take the exact Spec 008 path; the new checks (carrier is a `<Figure>`;
-  `Src` file exists; `Kind` enum; UR `<Figure>` + `.ur.svg`) apply only from `generated`/`placed`.
+- `npm run check:figures` (`scripts/check-figures.mjs`) - CI step in the `build` job. Legacy
+  five-file units and non-topic pages are skipped. The ≥ 2 carriers/topic rule applies to every
+  new-shape unit; the schematic-per-unit and archetype-validity rules apply once any manifest
+  row carries a `Kind`. The Spec 009 rendering checks (carrier is a `<Figure>`; `Src` file
+  exists; UR `<Figure>` + `.ur.svg`) apply from `generated`/`placed`.
 - `npm run optimize:figure -- [--svg] <in> <out>` (`scripts/optimize-figure.mjs`) - offline
   raster resize + WebP encode, or SVG whitespace strip; hard-fails over budget.
 - The `generate-figures` skill (`.claude/skills/generate-figures/`) runs the render loop.

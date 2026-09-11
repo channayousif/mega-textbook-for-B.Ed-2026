@@ -12,23 +12,22 @@ import { createClient } from '@supabase/supabase-js';
  * change on one item's stored snapshot renders that item unticked on the next
  * load while the topic's other, unchanged ticked items stay ticked (FR-009,
  * research.md R3; `/sp.analyze` finding G1); and that switching locale to `ur`
- * renders the page correctly right-to-left and degrades this specific topic's
- * still-draft Urdu checklist section gracefully (contract:
- * self-assessment-hydration.md's "hit the next heading before finding a `<ul>`
- * means no items - render unmodified" fallback) rather than crashing or
- * showing broken interactivity (Art. III.8/X convention; `/sp.analyze` finding
- * G4).
+ * renders the page correctly right-to-left and that this topic's Urdu checklist
+ * hydrates into the same interactive control (Art. III.8/X convention;
+ * `/sp.analyze` finding G4).
  *
- * NOTE: no course's Urdu translation has a completed per-topic self-assessment
- * checklist yet (every `## خود جائزہ فہرست` section in this repo is still a
- * `<!-- TODO -->` placeholder with zero real `- [ ]` items) - this is a content
- * gap tracked separately from Spec 010, not something this test fabricates
- * fake content to work around. The bilingual/RTL claim for the HYDRATED,
- * interactive checklist itself rests on the mechanism being locale-agnostic
- * by construction (position-keyed, never heading text or item wording -
- * research.md R2/R3, verified in `en` above); this UR section instead verifies
- * the graceful-fallback path real, currently-incomplete Urdu content actually
- * exercises today.
+ * NOTE (updated - EFMP-302 U1 Urdu re-translation): this topic's
+ * `## خود جائزہ فہرست` section used to be a `<!-- TODO -->` placeholder with
+ * zero real `- [ ]` items, so the UR section below asserted the
+ * graceful-fallback path instead (contract: self-assessment-hydration.md's
+ * "hit the next heading before finding a `<ul>` means no items - render
+ * unmodified"). EFMP-302 Unit 1 is now `translation_status: reviewed` with
+ * four real translated checklist items, so the UR section now asserts the
+ * HYDRATED, interactive path directly - the bilingual claim that previously
+ * rested only on the mechanism being locale-agnostic by construction
+ * (position-keyed, never heading text or item wording - research.md R2/R3).
+ * The fallback path itself stays covered by the unit fixtures in
+ * `tests/unit/`, which do not depend on any course's translation state.
  */
 const SUPABASE_URL = process.env.DOCUSAURUS_SUPABASE_URL;
 const ANON_KEY = process.env.DOCUSAURUS_SUPABASE_ANON_KEY;
@@ -131,9 +130,8 @@ test('self-assessment checklist persists across reloads/devices, syncs on sign-i
     await expect(pageA.getByTestId('self-assessment-checkbox-1')).not.toBeChecked();
     await expect(pageA.getByTestId('self-assessment-checkbox-2')).toBeChecked();
 
-    // ur/RTL: the page itself renders right-to-left, and this topic's still-draft Urdu
-    // checklist section (no real `- [ ]` items yet - see the file-level NOTE above)
-    // degrades gracefully rather than crashing or showing broken interactivity.
+    // ur/RTL: the page itself renders right-to-left, and this topic's now-reviewed
+    // Urdu checklist hydrates into the same interactive control the `en` side uses.
     await pageA.getByRole('button', { name: /sign out/i }).click();
     // Wait for sign-out to visibly complete before navigating - signOut() itself is
     // async (a network call to revoke the session), and navigating away immediately
@@ -142,8 +140,16 @@ test('self-assessment checklist persists across reloads/devices, syncs on sign-i
     await pageA.goto(TOPIC_PATH_UR);
     await expect(pageA.locator('html')).toHaveAttribute('dir', 'rtl');
     await expect(pageA.getByRole('heading', { name: 'خود جائزہ فہرست' })).toBeVisible();
-    await expect(pageA.getByTestId('self-assessment-checkbox-1')).toHaveCount(0);
-    await expect(pageA.getByTestId('self-assessment-sync-hint')).toHaveCount(0);
+    // The checklist hydrates and stays interactive in Urdu exactly as it does
+    // in English: the mechanism is position-keyed, never heading text or item
+    // wording (research.md R2/R3), so the translated items carry the same
+    // `self-assessment-checkbox-N` handles. Signed out, the localStorage
+    // fallback drives them and the sync hint is offered, same as `en` above.
+    // Checked STATE is deliberately not asserted here - localStorage is shared
+    // across locales on one origin, so it carries over from the `en` steps.
+    await expect(pageA.getByTestId('self-assessment-checkbox-1')).toBeEnabled();
+    await expect(pageA.getByTestId('self-assessment-checkbox-4')).toBeEnabled();
+    await expect(pageA.getByTestId('self-assessment-sync-hint')).toBeVisible();
   } finally {
     await svc.auth.admin.deleteUser(user.user!.id);
     await contextA.close();

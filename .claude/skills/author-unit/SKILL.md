@@ -106,8 +106,10 @@ Front matter = the unit schema **plus** `topic_no` (== the filename ordinal) and
 The nine canonical `##` headings, **in this exact order** (contract: `contracts/topic-cycle.md`):
 
 1. `## A real classroom situation` - a short, concrete, Pakistan/Sindh-grounded vignette that
-   sets up the topic. Put a `{/* FIGURE[fig-U<n>-<seq>]: …; alt: … */}` marker here or in
-   `## Explanation` (≥ 1 marker per topic file - see `references/figure-prompts.md`).
+   sets up the topic. Put `{/* FIGURE[fig-U<n>-<seq>]: …; alt: … */}` markers here and in
+   `## Explanation` - **≥ 2 markers per topic file**, and the unit as a whole needs **≥ 1
+   `concept-map` / `flowchart` / `timeline`** (Constitution Art. III.10). Name the archetype for
+   each in the content-spec `**Figure plan**` - see `references/figure-prompts.md`.
 2. `## Explanation` - the teaching. A `### …` sub-heading per sub-topic ID in this topic's
    slice; ~one concrete Pakistan-grounded example per sub-topic; paraphrase-and-cite the mapped
    readings; **name and correct this topic's misconception here**. Define new terms on first
@@ -167,10 +169,13 @@ Run the checklist in `references/structure-standard.md`. Then write:
 - **`specs/content/<course-code>/sources/unit-NN.md`** - per
   `contracts/sources-consulted.md`: `| Key | Citation | URL/DOI | Supports | Kind |`. Every key
   cited in the coverage matrix appears here; no unused non-`no-external-source` keys.
-- **`specs/content/<course-code>/figures/unit-NN.md`** - per `contracts/figures-manifest.md`:
-  `| Figure ID | Topic | Prompt | Alt text | Status |`. One row per FIGURE marker; `Topic` =
-  the marker file's `topic_label`; `Prompt` / `Alt text` match the marker; `Status` =
-  `prompt-only`. Marker-ID set **==** manifest-ID set, both ways.
+- **`specs/content/<course-code>/figures/unit-NN.md`** - per
+  `specs/009-figure-rendering/contracts/figure-manifest-v2.md` (v3 `Kind` vocabulary):
+  `| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |`. One row per FIGURE marker
+  (**≥ 2 per topic**); `Topic` = the marker file's `topic_label`; `Kind` = the planned archetype
+  (`table` \| `concept-map` \| `flowchart` \| `timeline` \| `diagram` \| `illustration`), with
+  **≥ 1 `concept-map` / `flowchart` / `timeline` in the unit**; `Prompt` / `Alt text` match the
+  marker; `Src` blank; `Status` = `prompt-only`. Marker-ID set **==** manifest-ID set, both ways.
 
 Then run, and fix every finding:
 
