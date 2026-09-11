@@ -47,6 +47,18 @@ test('student takes a quiz, retakes it and improves, teacher sees the best score
   const studentPage = await studentContext.newPage();
 
   try {
+    // Purge any `E2E ` items this spec leaked on an earlier run before seeding
+    // its own. Playwright cuts a timed-out test off mid-`finally`, so the
+    // cleanup below is NOT guaranteed to run - and a leftover item is fatal
+    // rather than cosmetic: the quiz page renders every item for the unit,
+    // `allAnswered` requires all of them, and this test only answers the two
+    // it seeded, so "Submit quiz" stays disabled and the next run times out
+    // too. One leak therefore poisons every subsequent run until cleared by
+    // hand. Scoped to this spec's own `E2E ` rows so it can never touch real
+    // authored content.
+    await svc.from('quiz_items')
+      .delete().eq('course_code', 'EFMP-301').eq('unit_no', 5).like('question_text', 'E2E %');
+
     const { data: item1 } = await svc
       .from('quiz_items')
       .insert({
@@ -103,6 +115,11 @@ test('student takes a quiz, retakes it and improves, teacher sees the best score
     await studentPage.goto(`/app/classes/assignments/?classId=${classId}`);
     await studentPage.getByRole('link', { name: /quiz - unit 5/i }).click();
     await expect(studentPage).toHaveURL(/\/app\/classes\/quiz\/?\?/);
+
+    // Exactly the two seeded items must be on the page. Asserted explicitly so
+    // unexpected pollution fails here, loudly and in one line, instead of as an
+    // opaque 30s timeout on a "Submit quiz" button that never enables.
+    await expect(studentPage.getByRole('radio', { name: 'Right', exact: true })).toHaveCount(2);
 
     // Attempt 1: both correct -> instant score 10/10 (AS1).
     await studentPage.getByRole('radio', { name: 'Right', exact: true }).first().check();
