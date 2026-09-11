@@ -58,7 +58,7 @@ test('teacher submits feedback from a log entry, revises it from the activity pa
   try {
     const { data: teacherProfile } = await svc.from('profiles').select('id').eq('auth_user_id', teacher.user!.id).single();
     const { data: klass } = await svc.from('classes').insert({
-      teacher_id: teacherProfile.id, course_code: 'EFMP-301', name: 'Feedback Fixture Class',
+      teacher_id: teacherProfile.id, course_code: 'EFMP-302', name: 'Feedback Fixture Class',
       term_label: 'Fall 2026', join_code: `${tag.toString(36)}F`.slice(-6),
     }).select().single();
     classId = klass.id;
@@ -78,7 +78,7 @@ test('teacher submits feedback from a log entry, revises it from the activity pa
     await expect(teacherPage.getByTestId('log-feedback-submitted')).toBeVisible();
 
     // Revise the same feedback from the activity's own content page.
-    await teacherPage.goto('/semester-1/efmp-301/unit-01/activities');
+    await teacherPage.goto('/semester-1/efmp-302/unit-02/activities');
     const giveFeedbackButton = teacherPage.getByTestId('give-feedback-button');
     await expect(giveFeedbackButton).toContainText('3/5');
     await giveFeedbackButton.click();
@@ -91,15 +91,15 @@ test('teacher submits feedback from a log entry, revises it from the activity pa
       .from('activity_feedback')
       .select('*')
       .eq('teacher_id', teacherProfile.id)
-      .eq('course_code', 'EFMP-301')
-      .eq('unit_no', 1)
+      .eq('course_code', 'EFMP-302')
+      .eq('unit_no', 2)
       .eq('source_kind', 'activity');
     expect(rows).toHaveLength(1);
     expect(rows![0].rating).toBe(5);
 
     await signIn(adminPage, adminEmail);
     await adminPage.goto('/app/admin/feedback');
-    const row = adminPage.getByTestId('aggregate-feedback-row').filter({ hasText: 'EFMP-301' });
+    const row = adminPage.getByTestId('aggregate-feedback-row').filter({ hasText: 'EFMP-302' });
     await expect(row).toBeVisible();
     await expect(row).toContainText('Ran a bit long.');
   } finally {

@@ -4,7 +4,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import { listOwnClasses } from '@site/src/lib/classes';
-import { fetchContentIndex, type ContentIndexEntry } from '@site/src/lib/assignments';
+import { fetchContentIndex, isLoggableContent, type ContentIndexEntry } from '@site/src/lib/assignments';
 import { logActivity, fetchOwnLog } from '@site/src/lib/teachingLog';
 import { submitFeedback, fetchOwnFeedback } from '@site/src/lib/activityFeedback';
 import type { Class, TeachingLogEntry } from '@site/src/lib/types';
@@ -42,6 +42,10 @@ const MESSAGES = {
   noClasses: {
     en: 'You have no classes yet. Create one before logging an activity.',
     ur: 'ابھی تک آپ کی کوئی کلاس نہیں ہے۔ سرگرمی لاگ کرنے سے پہلے ایک کلاس بنائیں۔',
+  },
+  noLoggableActivities: {
+    en: 'This course has no loggable activities yet. Its units are lesson-based, which the teaching log does not cover.',
+    ur: 'اس کورس میں ابھی کوئی قابلِ اندراج سرگرمی نہیں ہے۔ اس کے یونٹ سبق پر مبنی ہیں، جنہیں تدریسی لاگ شامل نہیں کرتا۔',
   },
   giveFeedback: { en: 'Give feedback', ur: 'رائے دیں' },
   rating: { en: 'Rating (1-5)', ur: 'ریٹنگ (1-5)' },
@@ -200,9 +204,14 @@ function TeachingLogContent(): React.ReactElement {
 
   const selectedClass = classes?.find((c) => c.id === classId) ?? null;
 
+  // Only the three FR-004 activity kinds are loggable - a per-topic unit's
+  // `topic`/`assessment` records are whole lessons, and 0028's CHECK refuses
+  // them, so offering one here produced a save that could only ever fail.
   const contentOptions: ContentOption[] = useMemo(() => {
     if (!contentIndex || !selectedClass) return [];
-    return contentIndex.filter((e) => e.course_code === selectedClass.course_code);
+    return contentIndex.filter(
+      (e) => e.course_code === selectedClass.course_code && isLoggableContent(e),
+    );
   }, [contentIndex, selectedClass]);
 
   useEffect(() => {
@@ -265,22 +274,28 @@ function TeachingLogContent(): React.ReactElement {
               {classes.map((c) => <option key={c.id} value={c.id}>{c.name}</option>)}
             </select>
           </div>
-          <div className="margin-bottom--sm">
-            <label htmlFor="log-activity">{MESSAGES.activity[locale]}</label>
-            <select
-              id="log-activity"
-              className="input"
-              data-testid="log-activity-select"
-              value={contentKey}
-              onChange={(e) => setContentKey(e.target.value)}
-            >
-              {contentOptions.map((opt) => (
-                <option key={`${opt.unit_no}::${opt.kind}`} value={`${opt.unit_no}::${opt.kind}`}>
-                  Unit {opt.unit_no} - {opt.title} ({opt.kind})
-                </option>
-              ))}
-            </select>
-          </div>
+          {contentIndex && contentOptions.length === 0 ? (
+            <p className="alert alert--warning" data-testid="log-no-activities">
+              {MESSAGES.noLoggableActivities[locale]}
+            </p>
+          ) : (
+            <div className="margin-bottom--sm">
+              <label htmlFor="log-activity">{MESSAGES.activity[locale]}</label>
+              <select
+                id="log-activity"
+                className="input"
+                data-testid="log-activity-select"
+                value={contentKey}
+                onChange={(e) => setContentKey(e.target.value)}
+              >
+                {contentOptions.map((opt) => (
+                  <option key={`${opt.unit_no}::${opt.kind}`} value={`${opt.unit_no}::${opt.kind}`}>
+                    Unit {opt.unit_no} - {opt.title} ({opt.kind})
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
           <div className="margin-bottom--sm">
             <label htmlFor="log-date">{MESSAGES.date[locale]}</label>
             <input
@@ -317,7 +332,7 @@ function TeachingLogContent(): React.ReactElement {
               required
             />
           </div>
-          <button type="submit" className="button button--primary button--sm" data-testid="log-save-button" disabled={saving}>
+          <button type="submit" className="button button--primary button--sm" data-testid="log-save-button" disabled={saving || contentOptions.length === 0}>
             {saving ? MESSAGES.saving[locale] : MESSAGES.save[locale]}
           </button>
         </form>
