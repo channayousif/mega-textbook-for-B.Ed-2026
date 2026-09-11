@@ -65,21 +65,21 @@ Content repo (Git) ── CI ──> validate front-matter ──> build EN+UR �
 2. On approval of 001: I scaffold the Docusaurus repo (i18n, fonts, components, CI, all-8-semester folder structure from the board scheme + guides).
 3. In parallel: G0 content-spec for EFMP-301 from its course guide, then Semester 1 courses, then Semesters 2–4.
 
-## Appendix — Full Course Catalog (from `Scheme-and-Course-guides/B.Ed 4 Year board.docx`)
+## Appendix — Full Course Catalog (from `Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx`)
 
-Grand total: **132 credit hours across 8 semesters**. Content priority: **Semesters 1–4** (2026 scheme). Codes shown as printed in the board scheme (some elective/practical/pedagogy codes are placeholders pending department allocation).
+Grand total: **132 credit hours across 8 semesters**. Content priority: **Semesters 1–4** (2026 scheme). Codes shown as printed in the **revised** scheme of studies, which the curriculum owner designated final authority on 2026-09-10 (some elective/practical/pedagogy codes are placeholders pending department allocation). The one deliberate departure is **GNAS-301** in Semester I, taken from the Sem I course guide over the scheme's `GNAS-401` (specs/gaps.md G-2026-02).
 
 ### Semester I — First Year (18 CH)
 | Code | Course | CH | Category |
 |---|---|---|---|
 | GQUR-300 | Quantitative Reasoning-I (Math) | 3 (3-0) | General Education |
-| GNAS-401 | Natural Science (Environmental Sciences) | 3 (2-1) | General Education |
+| GNAS-301 | Natural Science (Environmental Sciences) | 3 (2-1) | General Education |
 | GENG-300 | Functional English | 3 (3-0) | General Education |
 | GICT-300 | Application of ICT | 3 (2-1) | General Education |
 | EFMP-301 | Educational Psychology | 3 (3-0) | Major: Professional |
 | EFMP-302 | Teaching Profession | 3 (3-0) | Major: Professional |
 
-### Semester II — First Year (18 CH)
+### Semester II — First Year (19 CH)
 | Code | Course | CH | Category |
 |---|---|---|---|
 | GQUR-301 | Quantitative Reasoning-II (Statistics) | 3 (3-0) | General Education |
@@ -88,7 +88,7 @@ Grand total: **132 credit hours across 8 semesters**. Content priority: **Semest
 | EFMP-303 | Educational Policies and Plans of Pakistan | 3 (3-0) | Major: Professional |
 | EFMP-304 | Critical Thinking and Reflective Practices | 3 (3-0) | Major: Professional |
 | EFMP-305 | Inclusive Education | 3 (3-0) | Major: Professional |
-| GUHQ-301 | Fehm-e-Quran – I | 1 (0-1) | General Education |
+| GPKS-402 | Pakistan Studies | 2 (2-0) | General Education |
 
 ### Semester III — Second Year (16 CH)
 | Code | Course | CH | Category |
@@ -99,18 +99,18 @@ Grand total: **132 credit hours across 8 semesters**. Content priority: **Semest
 | EFMP-406 | Contemporary Literacies | 3 (3-0) | Major: Professional |
 | EFMP-407 | Education for Sustainable Development | 3 (3-0) | Major: Professional |
 | EFPG-401 | Teaching of English | 3 (3-0) | Major: Pedagogy |
-| GUHQ-400 | Fehm-e-Quran – II | 1 (0-1) | General Education |
+| GUHQ-301 | Fehm-e-Quran – I | 1 (0-1) | General Education |
 
-### Semester IV — Second Year (17 CH)
+### Semester IV — Second Year (16 CH)
 | Code | Course | CH | Category |
 |---|---|---|---|
-| GPKS-402 | Pakistan Studies | 2 (2-0) | General Education |
 | GCCE-400 | Civics and Community Engagement | 2 (1-1) | General Education |
 | GENT-401 | Entrepreneurship | 2 (2-0) | General Education |
 | EFMP-408 | Educational Assessment and Evaluation | 3 (3-0) | Major: Professional |
 | EFMP-409 | Foundations of Education | 3 (3-0) | Major: Professional |
 | EFPC-4-- | School Observation | 2 (0-2) | Major: Practical |
 | MFPG-402 | Teaching of Science | 3 (3-0) | Major: Pedagogy |
+| GUHQ-400 | Fehm-e-Quran – II | 1 (0-1) | General Education |
 
 ### Semester V — Third Year (18 CH)
 | Code | Course | CH | Category |
@@ -149,4 +149,4 @@ Grand total: **132 credit hours across 8 semesters**. Content priority: **Semest
 | EFSP-6-- | Specialization Elective Course (Elective VI) | 3 (3-0) | Major: Elective |
 | CPPR-650 | Capstone Project | 3 | Capstone Project |
 
-> **Sem I/II note:** the PDF guides (`1st 2026.pdf`, `2nd 2026.pdf`) are now text-extracted and follow the enriched 2026 structure. Their guides show a few **board-vs-guide discrepancies** — GNAS code (301 vs 401), Pakistan Studies placement (guide Sem II / GPKS-302 vs board Sem IV / GPKS-402), Fehm-e-Quran code (GUHQ-301 vs GUHQ-401), and GSOS-301 credit hours — all logged in `specs/gaps.md` for the curriculum owner to resolve; the tables above follow the board scheme pending that decision. Teaching Practice / Practice Teaching (EFPC) courses focus on teaching all core subjects across Grades I–VIII.
+> **Sem I/II note (updated 2026-09-10):** the PDF guides (`1st 2026.pdf`, `2nd 2026.pdf`) are text-extracted and follow the enriched 2026 structure. The **revised scheme of studies** (`B.Ed 4 Year 2026 revised after board.docx`) is now the final authority and moves three courses: Pakistan Studies (GPKS-402) Sem IV → Sem II, Fehm-e-Quran I (GUHQ-301) Sem II → Sem III, Fehm-e-Quran II (GUHQ-400) Sem III → Sem IV; Sem II 18 → 19 CH, Sem IV 17 → 16 CH, Semester I unchanged. All five board-vs-guide discrepancies in `specs/gaps.md` (G-2026-01…05) are now **resolved**: GNAS-301 (guide code kept, scheme's 3 (2-1) split), GPKS-402 in Sem II, GUHQ-301 in Sem III / GUHQ-400 in Sem IV, and GSOS-301 at 2 (2-0). Teaching Practice / Practice Teaching (EFPC) courses focus on teaching all core subjects across Grades I–VIII.
