@@ -1,5 +1,5 @@
 ---
-version: "3.3"
+version: "3.4"
 ---
 
 # Content Style Guide
@@ -26,6 +26,21 @@ pass: the `<Figure>` end-state, the `Kind` (`diagram`/`illustration`) split, the
 columns (`+Kind`, `+Src`) and the `prompt-only → generated → placed` lifecycle, the `.ur.svg`
 bilingual-diagram rule, and the widened `check:figures` - proven by rendering EFMP-302 Unit 1's
 four figures.
+
+**v3.3** (2026-09-09, Spec 012, Constitution v2.8.0 amendment) raises the figure floor to
+**>= 2 carriers per `topic-*.mdx`** and **>= 1 concept-map / flowchart / timeline per unit**, and
+widens the manifest `Kind` vocabulary from `{diagram, illustration}` to the six archetypes,
+proven on the EFMP-302 Unit 1 proving unit. *(Recorded retrospectively on 2026-09-11: the v3.3
+bump shipped without its changelog paragraph. `check:docs-sync` now fails when the `version`
+field and this record disagree, so a freeze cannot again be applied without being written down.)*
+
+**v3.4** (2026-09-11, Spec 013) puts figure colour under a published token set. Figures are
+themed by the site's own `[data-theme]`, never `prefers-color-scheme`, and the dark variant is
+derived rather than authored; colour is drawn only from the token block and must stay redundant
+with shape or label (Art. III.8); every figure carries a `textbook.com.pk` wordmark and a caption
+credit. `check:figures` now reads the committed SVG bytes, so these are enforced rather than
+advised. Proven on the EFMP-302 Unit 1 proving unit. `terminology.csv` is unchanged; the bump
+re-freezes the pair per Spec 006 FR-007.
 
 **v3.2** (2026-09-03, Constitution v2.7.0 amendment) adds the no-em-dash rule to
 `## EN readability rules` and `## UR register rules` (Constitution Art. III.9), enforced by the
@@ -73,7 +88,13 @@ cleanup pass removed every existing em dash from those trees. No section is adde
   figures**, and every unit carries **at least one concept map, flowchart, or timeline**. A
   visual is worth a thousand words - prefer a figure over another paragraph whenever the prose
   describes a process, a sequence, a set of relationships, or a comparison.
-- Every figure is classified by one **archetype**: `table` (comparison / matrix), `concept-map`
+- Every figure is classified by one **archetype**:
+
+<!-- BEGIN GENERATED figure-kinds -->
+`table`, `concept-map`, `flowchart`, `timeline`, `diagram`, `illustration`
+<!-- END GENERATED figure-kinds -->
+
+  `table` (comparison / matrix), `concept-map`
   (node-and-arrow web of related ideas), `flowchart` (decision or process flow), `timeline`
   (ordered sequence along time), `diagram` (any other schematic - triangle, Venn, quadrant,
   labelled illustration-as-schematic), `illustration` (a pictorial scene). The archetype is

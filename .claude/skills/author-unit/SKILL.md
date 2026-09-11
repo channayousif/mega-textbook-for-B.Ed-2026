@@ -179,10 +179,17 @@ Run the checklist in `references/structure-standard.md`. Then write:
 
 Then run, and fix every finding:
 
+<!-- BEGIN GENERATED gate-commands -->
+```bash
+# after every edit (fast)
+npm run check:content
+
+# before opening a PR (adds check:add-course, tests and a full build)
+npm run check:all
 ```
-npm run validate:content && npm run check:depth-gate && npm run check:figures && \
-  npm run check:no-answer-keys && npm run check:no-em-dash && npm test
-```
+
+`check:content` runs, in order: `validate:content` -> `check:pipeline-gate` -> `check:depth-gate` -> `check:figures` -> `check:no-em-dash` -> `check:no-answer-keys` -> `check:docs-sync`.
+<!-- END GENERATED gate-commands -->
 
 `check:pipeline-gate` may be **red** for this unit until its `tasks.md` G2/G3 rows re-clear the
 human Content gate - that is expected during a re-restructure, not a defect. A green

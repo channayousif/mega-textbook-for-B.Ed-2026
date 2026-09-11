@@ -74,7 +74,13 @@ One table, one row per marker (**≥ 2 per topic**), on the v3 seven-column head
 
 - `Topic` = the **`topic_label`** of the topic file the marker sits in (`1.1`, not
   `topic-01.mdx`).
-- `Kind` = the planned archetype. At least one row in the unit is `concept-map` / `flowchart` /
+- `Kind` = the planned archetype, one of:
+
+<!-- BEGIN GENERATED figure-kinds -->
+`table`, `concept-map`, `flowchart`, `timeline`, `diagram`, `illustration`
+<!-- END GENERATED figure-kinds -->
+
+  At least one row in the unit is `concept-map` / `flowchart` /
   `timeline` (Art. III.10).
 - `Prompt` / `Alt text` = the marker's, whitespace-normalised (the gate compares them).
 - `Src` blank; `Status` = **`prompt-only`** for every row in this feature.
