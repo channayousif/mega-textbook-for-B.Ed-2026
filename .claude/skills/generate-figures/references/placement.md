@@ -49,7 +49,7 @@ shape, rewrite the whole table header + rows to v2:
 |---|---|
 | `Figure ID` | unchanged; `^fig-U\d+-\d+$`, unique, `U<n>` == unit-folder number |
 | `Topic` | unchanged; the `topic_label` of the carrier `topic-NN.mdx` |
-| `Kind` | `diagram` or `illustration` - must match the asset extension (`.svg` / `.webp`) |
+| `Kind` | one of the archetypes below - `illustration` iff the asset is `.webp`, every other value iff it is `.svg` |
 | `Prompt` | **verbatim from the marker**, whitespace-normalised (retained for regeneration + the human gate) |
 | `Alt text` | verbatim from the marker; SHOULD equal the `<Figure alt>` |
 | `Src` | `/img/figures/<course-lowercase>/unit-NN/<figId>.<ext>` - the same string as `<Figure src>` |
@@ -76,7 +76,7 @@ Also update the manifest's header prose to reference
 ## 4. Re-run the gate set
 
 ```
-npm run validate:content && npm run check:figures && npm run check:no-answer-keys && npm test && npm run build
+npm run check:all
 ```
 
 `check:figures` failures name the unit + the exact condition. Common ones:
@@ -84,7 +84,12 @@ npm run validate:content && npm run check:figures && npm run check:no-answer-key
 - *"placed but … still carries the comment marker"* - step 1 not done for that id.
 - *"placed but its Src file does not exist"* - `Src` path typo, or the asset isn't under
   `static/` (check the leading `/img/…` maps to `static/img/…`).
-- *"Kind … not in {diagram, illustration}"* - blank or misspelled `Kind` cell.
+- *"Kind … not in …"* - blank or misspelled `Kind` cell. The permitted values:
+
+<!-- BEGIN GENERATED figure-kinds -->
+`table`, `concept-map`, `flowchart`, `timeline`, `diagram`, `illustration`
+<!-- END GENERATED figure-kinds -->
+
 - *"manifest Topic … != topic_label"* - the `Topic` cell doesn't match the carrier file's
   front-matter `topic_label`.
 - *"prompt-only but its Src/Kind cell is not blank"* - a half-filled row; either finish placing

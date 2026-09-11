@@ -242,3 +242,13 @@ See `.specify/memory/constitution.md` for code quality, testing, performance, se
 
 ## Recent Changes
 - 001-content-platform: Planned - Docusaurus v3 static site; `@easyops-cn/docusaurus-search-local` for bilingual offline search; `gray-matter`+`ajv` validation with an EN↔UR structural parity gate; client-side print-stylesheet A4 handouts (no PDF pipeline); missing-Urdu fallback to EN with an "untranslated" banner; self-hosted Noto Nastaliq Urdu webfont
+
+- TypeScript 5.6 / Node 22+ (unchanged) - **no new dependency** (013-authoring-system-v2).
+  New shared modules `scripts/lib/figure-palette.mjs` (the published figure token set, both
+  ramps, WCAG-verified) and `scripts/lib/gates.mjs` (CONTENT_GATES / FULL_GATES). New gates
+  `check:docs-sync` (prose generated from code) and `figures:variants:check` (dark-variant
+  freshness); `npm run check:content` / `check:all` replace the four divergent per-skill gate
+  command lists. Figures are themed by `[data-theme]` via two committed variants, never
+  `prefers-color-scheme`. Every non-`coming_soon` page requires a `description`.
+  Style guide at **v3.4**; Constitution at **v2.9.0**.
+

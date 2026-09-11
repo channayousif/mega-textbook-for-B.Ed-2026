@@ -70,3 +70,20 @@ lost, without blocking delivery of the feature that surfaced them.
   layout (see the Spec 007 backlog item), it must meet Art. III.10 at G2 - `check:figures` now
   enforces it for every new-shape unit. No action while they stay in the legacy five-file layout
   (exempt).
+
+## From 013-authoring-system-v2 (2026-09-11)
+
+- **Title and H1 rewrite for search intent.** Spec 013 Phase G, owner-approved but not started.
+  Page titles lead with a positional label ("Topic 1.1 - ...") and carry no course code or
+  discipline terms. Verified safe: the parity gate compares heading LEVELS only
+  (`validate-content.mjs:61-69`) and URLs come from file paths, so retitling changes no URL and
+  breaks no gate. Do it course by course, running `validate:content` after each.
+- **`description` for the `guides/` tree.** The Student and Teacher Guides are a separate docs
+  plugin (~12 pages per locale) and were left out of the Spec 013 description pass; the
+  validator requires one only for the textbook tree.
+- **Alt-vs-manifest consistency check.** `placement.md` documented this check for a long time
+  and it never existed. Add it report-only first, reconcile whitespace, then make it blocking.
+- **`fig-U1-2` accent pass.** Left deliberately neutral: its two classroom panels share one CSS
+  class, so the contrast is positional, and colouring "rows" against "groups" would editorialise
+  a judgement the figure does not make. Revisit only if the owner wants that contrast stated.
+

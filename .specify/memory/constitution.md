@@ -1,4 +1,40 @@
 <!--
+SYNC IMPACT REPORT (v2.9.0)
+===========================
+Version change: 2.8.0 -> 2.9.0
+Bump rationale: MINOR - two materially expanded requirements.
+  (1) Article III gains III.9a (Figure rendering and colour): figures are themed by the site's
+      own theme attribute rather than the OS preference, all figure colour comes from a
+      published token set with AA-verified text tokens in both themes, colour stays redundant
+      with shape or label, and every figure carries a wordmark plus a caption attribution.
+  (2) A new Article X-bis (Discoverability): every student-facing page carries its own
+      description in its own language, and the site publishes a favicon, social card,
+      robots.txt, a multi-locale sitemap index and structured data.
+  Article VII's Engineering-gate row is extended with the figure asset lint and check:docs-sync.
+
+Why III.9a is an amendment and not a style note: the previous behaviour was a DEFECT, not a
+  preference. Every figure themed itself with @media (prefers-color-scheme: dark), which follows
+  the operating system; Docusaurus toggles [data-theme] on <html>, and an SVG behind an <img>
+  cannot observe it. A light-OS reader who clicked the site's dark toggle saw white plates on a
+  dark page. Writing the rule down is what stops it recurring.
+
+Note on III.8: unchanged and NOT weakened. "No colour-only meaning" always forbade colour as the
+  SOLE carrier while permitting colour redundant with shape or label; it had been read as
+  forbidding colour outright, which is how the figure set became eight greys and no hue.
+
+Templates/artifacts requiring updates:
+  - specs/content/style-guide.md            -> v3.4 (re-freezes terminology.csv, Spec 006 FR-007)
+  - .claude/skills/author-unit/references/structure-standard.md (twin) -> updated
+  - .claude/skills/generate-figures/references/svg-authoring.md        -> boilerplate rewritten
+  - scripts/check-figures.mjs, scripts/check-docs-sync.mjs             -> enforce III.9a
+  - history/adr/0018-figure-theming-palette-and-generated-standard-prose.md
+
+Proving unit (Art. VI.1): EFMP-302 Unit 1, retrofitted in this branch.
+Golden unit (Art. VI.1): EFMP-301 Unit 1, already owed at style-guide v3.3; the single
+  outstanding author-unit pass now discharges both debts at v3.4.
+-->
+
+<!--
 SYNC IMPACT REPORT (v2.8.0)
 ===========================
 Version change: 2.7.0 -> 2.8.0
@@ -475,6 +511,17 @@ authors' preference; traceability makes accreditation review auditable.
    (`5-8 items`). Enforced by the `check:no-em-dash` CI gate over `docs/`, `guides/`, `i18n/`,
    and `specs/content/`; `history/` is exempt as an immutable record, and `.claude/skills/`,
    `src/`, `README.md`, `CLAUDE.md` are kept clean by convention but not gated.
+9a. **Figure rendering and colour** (Spec 013): a figure MUST be themed by the site's own
+   theme attribute, never by the reader's operating-system preference; an SVG behind an
+   `<img>` cannot observe the page's theme, so a self-contained `prefers-color-scheme` block
+   is a defect, not a style. All figure colour MUST be drawn from the published token set
+   (`scripts/lib/figure-palette.mjs`), declared once per file, with every text token clearing
+   WCAG AA against its ground in both themes. Colour is always **redundant** with shape, dash
+   pattern or label - the test is "delete every colour; does the figure still read?" Every
+   figure carries one `textbook.com.pk` wordmark, hidden from assistive technology and absent
+   from the figure's description, plus a visible attribution in its caption. Enforced by
+   `check:figures`, which reads the committed SVG bytes.
+
 10. **Visual density**: every new-shape unit topic file (`topic-*.mdx`) MUST carry **at least
    two figures** (a `{/* FIGURE[...] */}` marker or a rendered `<Figure>`), and every new-shape
    unit MUST include **at least one concept map, flowchart, or timeline**. Every figure is
@@ -573,7 +620,7 @@ Before any unit or feature is marked complete, all applicable gates MUST pass:
 | Gate | Checks | Owner |
 |---|---|---|
 | Content gate | CLO traceability • simple-English readability • Urdu parity & register • Bloom's tags • citations • guide-section fidelity • accessibility | Curriculum owner |
-| Engineering gate | Spec compliance • RLS policies tested • responsive/RTL rendering verified • Lighthouse performance pass • figure-marker ↔ manifest consistency + visual-density floor: ≥ 2 figures per topic, ≥ 1 concept-map/flowchart/timeline per unit (Spec 008 + Spec 012 `check:figures`) | Developer |
+| Engineering gate | Spec compliance • RLS policies tested • responsive/RTL rendering verified • Lighthouse performance pass • figure asset lint (palette, wordmark, dark-variant freshness, Urdu parity) + docs/code sync (`check:docs-sync`) + figure-marker ↔ manifest consistency + visual-density floor: ≥ 2 figures per topic, ≥ 1 concept-map/flowchart/timeline per unit (Spec 008 + Spec 012 `check:figures`) | Developer |
 | Teacher gate (per course, once) | One practicing teacher dry-runs the unit's activities & assessments | Pilot teacher |
 | Docs gate | A shipped spec that changes a student/teacher workflow or contributor setup updates the matching guide (Student Guide, Teacher Guide, or README - Article X) in the same branch | Feature author |
 
@@ -630,6 +677,15 @@ the internals they need. Article III's Simple English mandate governs curriculum
 article extends the same plain-language discipline to platform-usage docs for students and
 teachers specifically, while keeping the README technical and separate.
 
+## Article X-bis - Discoverability (Spec 013)
+
+The textbook is public and free; a unit nobody can find serves nobody. Every student-facing
+page MUST carry its own `description` in its own language - never a fallback shared with
+other pages - and the site MUST publish a favicon, a social card, `robots.txt`, a sitemap
+index covering every locale, and schema.org structured data. Signed-in application pages are
+excluded from the sitemap. Enforced by `validate:content` (description) and reviewed at the
+Engineering gate (the rest).
+
 ## Article XI - Amendment Procedure & Versioning
 
 1. **Procedure**: propose the change in writing → assess impact on existing specs, plans,
@@ -646,4 +702,4 @@ teachers specifically, while keeping the README technical and separate.
 
 ---
 
-**Version**: 2.8.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-09-08
+**Version**: 2.9.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-09-11

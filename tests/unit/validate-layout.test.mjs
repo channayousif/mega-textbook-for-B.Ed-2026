@@ -30,6 +30,8 @@ function fm(extra = {}) {
     clo_refs: ['SLO:EFMP-302-1-1'],
     blooms_summary: 'x',
     est_reading_minutes: 10,
+    // Spec 013 FR-014 requires a description on every non-coming_soon page.
+    description: 'A fixture unit used to exercise the content gates end to end, long enough to clear the length bound.',
     translation_status: 'draft',
     ...extra,
   };

@@ -60,7 +60,13 @@ figures for a unit that has no per-topic markers yet.
 2. Cross-check against `specs/content/<course-lowercase>/figures/unit-NN.md` - the marker-id set
    and the manifest-id set MUST already match both ways. If they don't, stop: the manifest is an
    `author-unit` artefact; fixing it is a G1/Spec 008 action, not this skill's job.
-3. **Classify the `Kind` archetype for each figure** (six values, Spec 012;
+3. **Classify the `Kind` archetype for each figure**:
+
+<!-- BEGIN GENERATED figure-kinds -->
+`table`, `concept-map`, `flowchart`, `timeline`, `diagram`, `illustration`
+<!-- END GENERATED figure-kinds -->
+
+   (Spec 012;
    `references/svg-authoring.md` §"Diagram or illustration"). The content-spec `**Figure plan**`
    usually already names it - carry that through unless it is plainly wrong.
    - **Schematics** (hand-authored SVG): `table` (comparison / matrix), `concept-map`
@@ -85,10 +91,11 @@ flowchart, timeline, diagram}`):
 
 1. Pick the closest archetype; lay out the shapes and labels to match the marker `prompt`.
 2. Use the boilerplate: `viewBox`, `role="img"`, `<title>` = the alt's first clause, `<desc>` =
-   the full alt, an inline `<style>` with a light palette **and** a
-   `@media (prefers-color-scheme: dark)` block, a system-font `font-family` stack. **No** external
-   font, **no** external image, **no** raster `<image>`. Meaning via shape + label, never colour
-   alone.
+   the full alt, an inline `<style>` opening with the published `:root` token block pasted
+   verbatim, then `var(--token)` everywhere, a system-font `font-family` stack, and one
+   `aria-hidden` wordmark. Write the **light** file only - the dark twin is derived by
+   `npm run figures:variants`, never authored. **No** external font, **no** external image,
+   **no** raster `<image>`. Meaning via shape + label, never colour alone.
 3. Write it to `static/img/figures/<course-lowercase>/unit-NN/<figId>.svg`.
 4. Optimise + budget-check:
    ```
@@ -160,10 +167,17 @@ Per `references/bilingual-figures.md`:
 
 Run, and fix every finding before reporting done:
 
+<!-- BEGIN GENERATED gate-commands -->
+```bash
+# after every edit (fast)
+npm run check:content
+
+# before opening a PR (adds check:add-course, tests and a full build)
+npm run check:all
 ```
-npm run validate:content && npm run check:figures && npm run check:no-answer-keys && \
-  npm run check:no-em-dash && npm test
-```
+
+`check:content` runs, in order: `validate:content` -> `check:pipeline-gate` -> `check:depth-gate` -> `check:figures` -> `check:no-em-dash` -> `check:no-answer-keys` -> `check:docs-sync`.
+<!-- END GENERATED gate-commands -->
 
 Then a full build to confirm the pages render:
 
