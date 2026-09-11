@@ -132,6 +132,7 @@ html[data-theme='dark'] .bloom-tag {
   text-align: center;
 }
 .figure img {
+  /* applies to both the light and dark copies */
   max-width: 100%;
   height: auto;
   border: 1px solid var(--ifm-color-emphasis-300);
@@ -151,10 +152,44 @@ html[data-theme='dark'] .bloom-tag {
 .figure--timeline img {
   max-width: 760px;
 }
-.figure figcaption {
+.figure__caption {
   margin-top: 0.5rem;
   font-size: 0.875rem;
   color: var(--ifm-color-emphasis-600);
+}
+/* The attribution travels with the figure wherever it is screenshotted or
+   re-shared. Quiet by default - it is a credit, not a watermark shouting over
+   the teaching content. */
+.figure__credit {
+  display: inline-block;
+  margin-inline-start: 0.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  color: var(--ifm-color-emphasis-500);
+}
+.figure__caption-text + .figure__credit::before {
+  content: '·';
+  margin-inline-end: 0.5rem;
+}
+
+/* --- Figure theming (Spec 013, D1) ----------------------------------------
+   A schematic ships as two committed files and both are rendered; exactly one
+   is shown per theme. This is driven by Docusaurus's own `data-theme`
+   attribute, NOT by `prefers-color-scheme`: an SVG behind an <img> cannot see
+   the page's theme, so the previous in-SVG media query followed the operating
+   system and left dark-mode readers with white plates on a dark page.
+
+   `display: none` (rather than opacity/visibility) is deliberate - it also
+   removes the hidden copy from the accessibility tree, so a screen reader
+   announces the figure exactly once. */
+.figure__img--dark {
+  display: none;
+}
+html[data-theme='dark'] .figure__img--light {
+  display: none;
+}
+html[data-theme='dark'] .figure__img--dark {
+  display: inline-block;
 }
 
 /* --- Auth form controls (Spec 002, T061) -----------------------------------
@@ -268,6 +303,16 @@ html[data-theme='dark'] .bloom-tag {
   /* never split a figure across an A4 page boundary (Spec 009) */
   .figure {
     break-inside: avoid;
+  }
+  /* Paper is white whatever the screen was set to, so always print the light
+     variant - a dark-mode reader used to get dark plates on white A4. */
+  .figure__img--light,
+  html[data-theme='dark'] .figure__img--light {
+    display: inline-block;
+  }
+  .figure__img--dark,
+  html[data-theme='dark'] .figure__img--dark {
+    display: none;
   }
 }
 
