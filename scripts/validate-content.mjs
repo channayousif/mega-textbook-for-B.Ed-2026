@@ -159,6 +159,20 @@ function checkUnitFileFm(file, courseCode, unitNo) {
   if (fm.unit_no != null && Number(fm.unit_no) !== unitNo) {
     err(file, `unit_no ${fm.unit_no} != folder unit-${String(unitNo).padStart(2, '0')}`);
   }
+  // Spec 013 FR-014. Without an explicit description Docusaurus falls back to
+  // the page's first text node, and every Spec 008 topic file opens with the
+  // same "A real classroom situation" heading - so the whole book shipped one
+  // identical meta description, in both locales. A `coming_soon` page is
+  // noindex and exempt.
+  if (!fm.coming_soon) {
+    const d = typeof fm.description === 'string' ? fm.description.trim() : '';
+    if (!d) {
+      err(file, 'missing `description` front matter (Spec 013 FR-014) - one sentence, ~120-160 characters, distinct from every other page');
+    } else if (d.length < 60 || d.length > 200) {
+      err(file, `description is ${d.length} characters; aim for ~120-160 so search engines show it whole`);
+    }
+  }
+
   if (fm.assessment_weighting) {
     const { summative, formative } = fm.assessment_weighting;
     if (Number(summative) + Number(formative) !== 100) {

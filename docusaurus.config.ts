@@ -22,12 +22,19 @@ loadEnv({ path: '.env.local' });
 const config: Config = {
   title: 'B.Ed Mega Textbook',
   tagline: 'Bilingual digital textbook for the B.Ed (4-Year) programme',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
   url: 'https://textbook.com.pk',
   baseUrl: '/',
   trailingSlash: true, // emit /path/index.html so plain static file servers (nginx/Apache) serve directory URLs
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
+
+  // The declared favicon had no file behind it, so every page requested a 404.
+  // An SVG icon plus a PNG fallback covers everything current.
+  headTags: [
+    { tagName: 'link', attributes: { rel: 'icon', type: 'image/png', sizes: '48x48', href: '/img/favicon.png' } },
+    { tagName: 'link', attributes: { rel: 'apple-touch-icon', sizes: '180x180', href: '/img/apple-touch-icon.png' } },
+  ],
 
   i18n: {
     defaultLocale: 'en',
@@ -64,6 +71,19 @@ const config: Config = {
         blog: false,
         theme: {
           customCss: './src/css/custom.css',
+        },
+        // The sitemap shipped on pure defaults: 88 URLs at a uniform
+        // weekly/0.5, including 35 auth-gated /app/* pages and /search/, all
+        // of which render empty behind a guard for a crawler. Excluding them
+        // is the single biggest crawl-budget win available here.
+        sitemap: {
+          // Both the default-locale paths AND the /ur/-prefixed ones: the
+          // Urdu sitemap is generated with the locale baseUrl, so '/app/**'
+          // alone left all 35 auth-gated pages in build/ur/sitemap.xml.
+          ignorePatterns: ['/app/**', '/search', '/search/**', '/ur/app/**', '/ur/search', '/ur/search/**'],
+          changefreq: 'weekly',
+          priority: 0.5,
+          filename: 'sitemap.xml',
         },
       } satisfies Preset.Options,
     ],
@@ -106,7 +126,18 @@ const config: Config = {
   ],
 
   themeConfig: {
+    // Without this there is no og:image at all, while twitter:card is
+    // summary_large_image - so every WhatsApp/social share rendered a blank
+    // card. WhatsApp matters a great deal for this audience.
+    image: 'img/social-card.png',
+    metadata: [
+      { name: 'keywords', content: 'B.Ed, B.Ed 4 year, teacher education, University of Sindh, Pakistan, Sindh, bilingual textbook, Urdu, EFMP, GECE' },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { property: 'og:site_name', content: 'B.Ed Mega Textbook' },
+      { property: 'og:type', content: 'website' },
+    ],
     navbar: {
+      logo: { alt: 'B.Ed Mega Textbook', src: 'img/logo.svg', width: 28, height: 28 },
       title: 'B.Ed Textbook',
       items: [
         // Spec 010 follow-up, 2026-09-07 - registers
