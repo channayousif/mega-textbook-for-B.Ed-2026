@@ -1,4 +1,20 @@
 <!--
+SYNC IMPACT REPORT (v3.0.0)
+Version change: 2.9.0 -> 3.0.0
+Bump rationale: MAJOR - redefines mandatory human Urdu review and exclusive human G3/G5
+execution as qualified human-or-agent review. See ADR-0019 (Proposed in this branch).
+Modified: Article III.2 and Article VII (owner row plus delegated-review provisions).
+Added: evidence, independence, freshness, qualification, audit and transition obligations.
+Removed: mandatory human countersignature for every G5 after delegated review is enabled.
+Updated: README.md, CLAUDE.md, Spec 006 spec.md and quickstart.md transition guidance.
+Reviewed: plan/spec/tasks templates; generic constitution checks need no changes.
+No .specify/templates/commands directory exists. Prior ADRs and SDD/constitution.md retained.
+Follow-on work: reviewer skill, approved implementation spec, evidence validator, trusted CI
+provenance, registry, qualification and audit tooling. No agent sign-off is activated here.
+Style-guide remains v3.4. Existing content, tracker rows and translation statuses unchanged.
+-->
+
+<!--
 SYNC IMPACT REPORT (v2.9.0)
 ===========================
 Version change: 2.8.0 -> 2.9.0
@@ -469,13 +485,13 @@ authors' preference; traceability makes accreditation review auditable.
    HSC/intermediate graduate. No graduate-level jargon without a bilingual glossary entry. A
    richer unit *structure* (e.g. the Spec 008 per-topic learning cycle) does not raise the
    *language* register - the plain-English ceiling is unchanged by it.
-2. **Urdu parity**: every student-facing unit MUST have a complete, human-reviewed Urdu
-   version before publish, **except units belonging to a course explicitly designated
-   English-only** (e.g. GENG-300 Functional English, where the subject itself is the
-   English language) - such courses are flagged `bilingual: false` in their course-overview
-   metadata and are exempt from the Urdu-parity gate. Machine translation MAY draft; a human
-   quality pass is mandatory for every course that is not so exempted. Register: academic-plain
-   (درسی مگر عام فہم), not literary/archaic.
+2. **Urdu parity**: every student-facing unit MUST have a complete Urdu version accepted
+   through G5 before publish, **except units belonging to a course explicitly designated
+   English-only** (e.g. GENG-300 Functional English), flagged `bilingual: false` in
+   course-overview metadata. Machine translation MAY draft. G5 MUST be performed by a
+   qualified human reviewer or an independently qualified review agent under Article VII.
+   A translation cannot approve itself. Register: academic-plain (درسی مگر عام فہم),
+   not literary/archaic. Structural parity alone is insufficient evidence of semantic parity.
 3. **Bloom's tagging**: every assessment item MUST carry a Bloom's-level tag. Formative sets
    skew Remember→Apply; summative sets MUST include Analyze or above. A Spec 008 new-shape unit
    additionally carries a per-topic formative + summative cycle **and** a unit-end bank of
@@ -619,10 +635,41 @@ Before any unit or feature is marked complete, all applicable gates MUST pass:
 
 | Gate | Checks | Owner |
 |---|---|---|
-| Content gate | CLO traceability • simple-English readability • Urdu parity & register • Bloom's tags • citations • guide-section fidelity • accessibility | Curriculum owner |
+| Content gate | CLO traceability • simple-English readability • Urdu parity & register • Bloom's tags • citations • guide-section fidelity • accessibility | Curriculum owner accountable; qualified human or enabled independent agent executes G3/G5 |
 | Engineering gate | Spec compliance • RLS policies tested • responsive/RTL rendering verified • Lighthouse performance pass • figure asset lint (palette, wordmark, dark-variant freshness, Urdu parity) + docs/code sync (`check:docs-sync`) + figure-marker ↔ manifest consistency + visual-density floor: ≥ 2 figures per topic, ≥ 1 concept-map/flowchart/timeline per unit (Spec 008 + Spec 012 `check:figures`) | Developer |
 | Teacher gate (per course, once) | One practicing teacher dry-runs the unit's activities & assessments | Pilot teacher |
 | Docs gate | A shipped spec that changes a student/teacher workflow or contributor setup updates the matching guide (Student Guide, Teacher Guide, or README - Article X) in the same branch | Feature author |
+
+### Delegated G3/G5 review (ADR-0019)
+
+1. **Scope and accountability.** G3 English review and G5 Urdu review MAY be completed by
+   an independently qualified agent without per-unit human countersignature. The curriculum
+   owner owns review policy, qualification and escalations. Course-intake approval, unresolved
+   guide/scope decisions (Article II.3), the practicing-teacher gate, engineering controls and
+   publication authority are not delegated by this provision.
+2. **Independence.** The reviewer MUST run separately from the author/translator of the
+   reviewed version. It MUST NOT modify its review inputs or approval policy. Repairs go
+   through authoring and a fresh review; at most two repair cycles precede escalation.
+3. **Evidence.** Acceptance MUST identify the reviewer, configuration, rubric, exact input
+   digests and actual per-criterion evidence. Agent identity MUST NOT impersonate human
+   initials. All applicable criteria and mandatory deterministic checks MUST pass, with no
+   unresolved blocking or uncertain findings. Missing tools or unverifiable evidence require
+   escalation. Historical human reviews MUST NOT be relabelled as agent reviews.
+4. **Freshness.** Input or dependency changes invalidate affected acceptance. G5 MUST bind
+   to accepted G3 evidence for the same English version. Review attempts and supersession
+   links MUST remain auditable. Reports and completion metadata MUST NOT hide content edits.
+5. **Qualification and revocation.** Before agent sign-off is enabled, a protected registry
+   MUST record owner-approved qualification of the exact reviewer configuration and scope,
+   supported by held-out clean and defective cases, provenance checks and stale-evidence
+   mutation tests as specified by ADR-0019. Candidate content or reviewer output cannot
+   authorize itself. Pilot audits MUST cover every fifth agent-approved unit and all
+   escalations. A missed blocking defect disables the affected stage and requires affected
+   content review and requalification. Model, skill or rubric changes require requalification.
+6. **Transition.** Until evidence enforcement and reviewer qualification are implemented,
+   agent reviews are advisory and human sign-off remains the operative path. ADR-0019 and
+   this version bump alone MUST NOT mark G3/G5 done or change `translation_status`.
+   This governance amendment does not alter the content quality standard's version or
+   remove existing Article VI.1 obligations.
 
 ## Article VIII - Data Protection & Ethics
 
@@ -702,4 +749,4 @@ Engineering gate (the rest).
 
 ---
 
-**Version**: 2.9.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-09-11
+**Version**: 3.0.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-09-11

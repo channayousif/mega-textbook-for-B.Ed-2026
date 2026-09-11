@@ -6,6 +6,25 @@ How to stand up the pipeline's shared artifacts, wire its new CI gate, and prove
 the EFMP-301 golden unit. No new npm dependency; no new database. Package manager: `npm` (Node
 22+, matching Specs 002–005).
 
+## G3/G5 review delegation (2026-09-11 amendment)
+
+Constitution v3.0.0 Article III.2/VII and
+[ADR-0019](../../history/adr/0019-independent-agents-for-g3-g5-review.md) supersede the
+human-only execution requirements in this document **only after delegated review is enabled**.
+G0 course-intake approval and unresolved guide/terminology decisions remain with the curriculum
+owner. Existing three-state trackers and latest-row-wins behavior remain.
+
+A qualified independent agent may then satisfy G3/G5 without per-unit human countersignature,
+using authenticated, input-bound evidence and an enabled reviewer identity. A non-empty
+reviewer field alone is insufficient. G5 requires a complete translation and accepted G3
+evidence for the identical English inputs. `translation_status: reviewed` cannot be set
+on an advisory report.
+
+**Current runtime:** reviewer implementation and qualification are not delivered by this
+amendment. Existing human sign-off remains operative. References below to human reviewers
+and initials describe that current path. The follow-on feature must update the data model,
+gate, author/reviewer handoffs and CI evidence validation before activating the delegated path.
+
 ## 1. Seed the shared reference documents (FR-006, FR-007, R7, R8)
 
 ```bash

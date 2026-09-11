@@ -58,6 +58,18 @@ worksheet under `specs/content/<course-code>/.staging/` and entered manually int
 Supabase Studio. See [`specs/006-content-pipeline/quickstart.md`](specs/006-content-pipeline/quickstart.md)
 for the full walkthrough.
 
+## Agent-led content review: governance for planned implementation
+
+[ADR-0019](history/adr/0019-independent-agents-for-g3-g5-review.md) and Constitution v3.0.0
+define independent review agents for G3 (English) and G5 (Urdu). Delegated sign-off will
+require versioned evidence, input digests, reviewer qualification and a trusted CI check.
+Routine qualified passes will not require human countersignature; uncertain cases escalate.
+
+**Not active yet:** this amendment does not install a reviewer or change pipeline behavior.
+Keep current human sign-off until the approved follow-on implementation meets ADR-0019's
+activation criteria. Do not put agent names in tracker rows as a substitute for evidence.
+Existing content reviews and translation statuses are unchanged.
+
 ## Content depth standard
 
 [`specs/007-content-depth-standard/`](specs/007-content-depth-standard/) adds a **concept-coverage
