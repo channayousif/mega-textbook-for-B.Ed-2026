@@ -58,17 +58,33 @@ worksheet under `specs/content/<course-code>/.staging/` and entered manually int
 Supabase Studio. See [`specs/006-content-pipeline/quickstart.md`](specs/006-content-pipeline/quickstart.md)
 for the full walkthrough.
 
-## Agent-led content review: governance for planned implementation
+## Independent G3/G5 reviewers
 
-[ADR-0019](history/adr/0019-independent-agents-for-g3-g5-review.md) and Constitution v3.0.0
-define independent review agents for G3 (English) and G5 (Urdu). Delegated sign-off will
-require versioned evidence, input digests, reviewer qualification and a trusted CI check.
-Routine qualified passes will not require human countersignature; uncertain cases escalate.
+The repository now includes `g3-reviewer` and `g5-reviewer` Claude agent definitions, backed
+by `.claude/skills/review-unit/SKILL.md`. Invoke the appropriate agent in a fresh session
+against a frozen unit checkout. Other hosts can load the same skill explicitly.
 
-**Not active yet:** this amendment does not install a reviewer or change pipeline behavior.
-Keep current human sign-off until the approved follow-on implementation meets ADR-0019's
-activation criteria. Do not put agent names in tracker rows as a substitute for evidence.
-Existing content reviews and translation statuses are unchanged.
+```bash
+npm run review:evidence -- prepare EFMP-302 1 G3 /tmp/g3-review-run
+npm run review:evidence -- validate path/to/report.json
+npm run test:review
+```
+
+Preparation creates a manifest, not a frozen copy. The parent host must preserve the reviewed
+checkout. Reviewers produce findings and evidence without changing content or tracker rows.
+See [the review contract](specs/014-agent-review-governance/contracts/review-evidence.md).
+
+**Activation state:** review execution is available; automatic G3/G5 certification is not yet
+qualified. The registry starts empty. Synthetic evidence tests and excerpt exercises are not
+academic qualification. Provision `CONTENT_REVIEW_PUBLIC_KEY` in CI and a separate protected
+Ed25519 signing host, then record real owner-approved held-out qualification before enabling
+an entry. Never commit or expose the private key to authors, reviewers or PR jobs.
+
+`accept` verifies signatures, reviewer scope and current evidence without writing tracker rows.
+A trusted host may then append `agent:<id>` and `review:<report-path>` to the existing tracker.
+The pipeline rejects unsigned, stale, unqualified or revoked agent evidence. Existing human
+reviews remain valid. [ADR-0019](history/adr/0019-independent-agents-for-g3-g5-review.md)
+and Constitution v3.0.0 define the delegation and audit requirements.
 
 ## Content depth standard
 

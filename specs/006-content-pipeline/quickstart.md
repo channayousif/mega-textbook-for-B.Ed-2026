@@ -20,10 +20,12 @@ reviewer field alone is insufficient. G5 requires a complete translation and acc
 evidence for the identical English inputs. `translation_status: reviewed` cannot be set
 on an advisory report.
 
-**Current runtime:** reviewer implementation and qualification are not delivered by this
-amendment. Existing human sign-off remains operative. References below to human reviewers
-and initials describe that current path. The follow-on feature must update the data model,
-gate, author/reviewer handoffs and CI evidence validation before activating the delegated path.
+**Current runtime:** Feature 014 installs callable reviewers, manifest/report tooling and
+pipeline enforcement for signed agent evidence. The registry is empty pending actual reviewer
+qualification and protected signing-host provisioning. Human sign-off remains operative;
+reviewers can emit advisory reports now. See the [Feature 014 contract](../014-agent-review-governance/contracts/review-evidence.md)
+for qualification, signatures and tracker references. References below to human review describe
+the retained human path; a non-empty reviewer string no longer authorizes an agent pass.
 
 ## 1. Seed the shared reference documents (FR-006, FR-007, R7, R8)
 

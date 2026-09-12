@@ -38,6 +38,8 @@ jobs:
       # Pipeline gate: tracker completeness, content-spec approval, terminology conformance
       # (Spec 006 FR-016a/b/c, SC-007) — runs after content-shape validation, before build.
       - name: Pipeline gate (tracker, content-spec, terminology)
+        env:
+          CONTENT_REVIEW_PUBLIC_KEY: ${{ secrets.CONTENT_REVIEW_PUBLIC_KEY }}
         run: npm run check:pipeline-gate
 
       # Depth gate: for every unit whose content-spec subsection carries a `### Sub-topic
@@ -83,6 +85,9 @@ jobs:
       # Validator fixture tests (T013/T014/T032/T033)
       - name: Unit tests
         run: npm test
+
+      - name: Agent review evidence tests
+        run: npm run test:review
 
       # Static build for both locales (FR-001)
       - name: Build (en + ur)

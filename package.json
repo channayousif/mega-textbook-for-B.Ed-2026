@@ -27,6 +27,8 @@
     "scaffold": "node scripts/scaffold-catalog.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:review": "node --test tests/review/*.test.mjs",
+    "review:evidence": "node scripts/review-evidence.mjs",
     "test:e2e": "playwright test",
     "test:rls": "vitest run --config vitest.rls.config.ts",
     "check:no-service-key": "node scripts/check-no-service-key.mjs",
