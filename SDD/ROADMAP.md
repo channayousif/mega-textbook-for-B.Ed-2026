@@ -276,10 +276,16 @@ candidate is actually buying, and it is what makes the dual-outcome claim audita
 
 ### First sellable artefact
 
-An **item bank** for the 50% pedagogy slice, built from the 10/10/5 assessment banks the pipeline
-already emits for `EFMP-301` U1 and `EFMP-302` U1. Cheapest artefact per rupee of revenue, reuses
-content already through every gate, adds almost no review load, and matches the format this market
-already buys in print. Completing a course is the right second move, not the first.
+An **item bank for the 75% constructed-response block** (CRQ 50 + ERQ 25), built from the RRQ and
+ERQ items with rubrics that the pipeline already emits for `EFMP-301` U1 and `EFMP-302` U1.
+Cheapest artefact per rupee of revenue, reuses content already through every gate, and adds almost
+no review load. Completing a course is the right second move, not the first.
+
+The blueprint sharpens this. The licence paper is only 25% MCQ; the rest is rubric-marked
+constructed response, which is the format a printed MCQ guide serves worst and the pipeline
+already produces. **Lead the product with rubric-marked practice, not an MCQ drill** - the MCQ
+block is both the smaller share and the part assessed from the school curriculum the corpus does
+not cover.
 
 ## The bilingual review pipeline (two stages)
 
@@ -428,7 +434,8 @@ that will ever exist, and that the concept graph is load-bearing for everything 
 3. **Measure.** Author five units back to back at the frozen v4.0 standard, logging hours. Set the
    Phase 5 target from the result.
 4. **Spec the `reviewer` role** and the two-stage review pipeline, including the Art. VII amendment.
-5. **Item bank** for the 50% pedagogy slice from the two built units - the first sellable artefact.
+5. **Item bank** for the 75% constructed-response block from the two built units - the first
+   sellable artefact, led by rubric-marked practice rather than MCQ drill.
 6. **Payment rail**: JazzCash / Easypaisa / Raast / challan, one-time, **no auto-renew**. Never
    card-only.
 
