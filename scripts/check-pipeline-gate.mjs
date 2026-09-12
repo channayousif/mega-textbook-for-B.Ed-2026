@@ -21,6 +21,7 @@ import { readdirSync, statSync, readFileSync, existsSync } from 'node:fs';
 import { join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
+import { validateAgentTrackerRow } from './lib/review-evidence.mjs';
 
 const REPO = resolve(fileURLToPath(new URL('..', import.meta.url)));
 const ROOT = process.env.CONTENT_ROOT ? resolve(process.env.CONTENT_ROOT) : REPO;
@@ -107,7 +108,7 @@ function loadContentSpecStatus(courseCode) {
  * not the first: an in-progress revision row must re-block the gate even though an earlier,
  * already-done row for that same stage still exists above it.
  */
-function stageDone(rows, unitLabel, stagePrefix) {
+function stageDone(rows, unitLabel, stagePrefix, courseCode, unitNo) {
   const matches = rows.filter((r) => r.unit === unitLabel && r.stage.startsWith(stagePrefix));
   const row = matches[matches.length - 1];
   if (!row) return { ok: false, reason: `no '${stagePrefix}' row found for ${unitLabel}` };
@@ -116,6 +117,11 @@ function stageDone(rows, unitLabel, stagePrefix) {
   }
   if (!row.reviewer) {
     return { ok: false, reason: `'${stagePrefix}' row for ${unitLabel} is done but has no reviewer initials` };
+  }
+  try {
+    validateAgentTrackerRow(ROOT, row, courseCode, unitNo, stagePrefix.slice(0, 2));
+  } catch (error) {
+    return { ok: false, reason: `${stagePrefix}: ${error.message}` };
   }
   return { ok: true };
 }
@@ -145,7 +151,7 @@ function checkUnit({ unitDir, semester, courseFolder, courseCode, unitNo }) {
     return;
   }
   for (const stagePrefix of ['G2 en-draft', 'G3 en-review']) {
-    const r = stageDone(tracker, unitLabel, stagePrefix);
+    const r = stageDone(tracker, unitLabel, stagePrefix, courseCode, unitNo);
     if (!r.ok) err(label, r.reason);
   }
 
@@ -156,7 +162,7 @@ function checkUnit({ unitDir, semester, courseFolder, courseCode, unitNo }) {
 
   if (urFm && urFm.translation_status === 'reviewed') {
     for (const stagePrefix of ['G4 ur-translation', 'G5 ur-review']) {
-      const r = stageDone(tracker, unitLabel, stagePrefix);
+      const r = stageDone(tracker, unitLabel, stagePrefix, courseCode, unitNo);
       if (!r.ok) err(label, r.reason);
     }
 

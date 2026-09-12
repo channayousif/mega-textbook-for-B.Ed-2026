@@ -1,8 +1,8 @@
 # ADR-0019: Independent agents for G3 and G5 content review
 
-- **Status**: Proposed
+- **Status**: Accepted (owner instruction 2026-09-11: "enable the agents and merge")
 - **Date**: 2026-09-11
-- **Scope**: Content-review governance; implementation is a subsequent approved feature.
+- **Scope**: Content-review governance; initial implementation in Feature 014.
 - **Constitution**: 2.9.0 -> 3.0.0 (MAJOR)
 - **Supersedes in part**: Article III.2's mandatory human Urdu pass and Article VII's
   exclusive curriculum-owner execution of G3/G5; Spec 006's human-only review requirements.
@@ -27,10 +27,19 @@ unit forever. Course-guide authority, quality criteria and unresolved-gap escala
 
 ## Decision
 
+### Implementation state (2026-09-11)
+
+Feature 014 installs the two callable reviewer agents, shared skill, input manifests,
+signed-evidence validation and pipeline checks. These implement review execution and the
+acceptance boundary. The qualification registry is deliberately empty: no real held-out
+academic qualification or production signing-host provisioning has occurred. The trusted
+host's signing, tracker transitions and audit scheduling remain operational integration work.
+The activation criteria below are still binding and are not satisfied by synthetic tests.
+
 ### 1. One review capability with separate G3 and G5 modes
 
-The future reviewer skill will have two entry modes and distinct rubrics. These are required
-capabilities, not claims that skill files or execution infrastructure already exist.
+The review-unit skill has two entry modes and distinct rubrics. These are required
+capabilities; installation alone does not establish reviewer qualification.
 
 | Mode | Required skills and checks | Evidence |
 |---|---|---|
