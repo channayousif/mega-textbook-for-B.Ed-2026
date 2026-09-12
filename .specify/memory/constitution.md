@@ -2,15 +2,16 @@
 SYNC IMPACT REPORT (v3.0.0)
 Version change: 2.9.0 -> 3.0.0
 Bump rationale: MAJOR - redefines mandatory human Urdu review and exclusive human G3/G5
-execution as qualified human-or-agent review. See ADR-0019 (Proposed in this branch).
+execution as qualified human-or-agent review. See ADR-0019 (accepted by the owner on 2026-09-11).
 Modified: Article III.2 and Article VII (owner row plus delegated-review provisions).
 Added: evidence, independence, freshness, qualification, audit and transition obligations.
 Removed: mandatory human countersignature for every G5 after delegated review is enabled.
 Updated: README.md, CLAUDE.md, Spec 006 spec.md and quickstart.md transition guidance.
 Reviewed: plan/spec/tasks templates; generic constitution checks need no changes.
 No .specify/templates/commands directory exists. Prior ADRs and SDD/constitution.md retained.
-Follow-on work: reviewer skill, approved implementation spec, evidence validator, trusted CI
-provenance, registry, qualification and audit tooling. No agent sign-off is activated here.
+Feature 014 supplies reviewer skills, an approved spec, evidence validation and registry.
+Remaining activation work: protected signer/trust-root provisioning, real qualification and
+audit operation. No agent certification is activated without these requirements.
 Style-guide remains v3.4. Existing content, tracker rows and translation statuses unchanged.
 -->
 

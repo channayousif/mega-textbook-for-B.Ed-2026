@@ -11,6 +11,16 @@ description: >-
   concept-complete, HSC-register bilingual-ready English content grounded in real cited sources.
 ---
 
+## Independent review handoff
+
+For G3/G5, hand a frozen bundle to a fresh `g3-reviewer` or `g5-reviewer` session using
+`.claude/skills/review-unit/SKILL.md`. Do not provide the author's private reasoning or ask
+for approval. Apply findings in a separate author pass and request fresh review after edits.
+Review reports are advisory until the reviewer has signed qualification and scope activation
+under ADR-0019. Agent tracker rows require accepted signed evidence; never reuse YM initials
+for agent work. Existing human review remains available. See the Feature 014 evidence contract.
+
+
 # author-unit
 
 Turn one unit's approved content-spec subsection + its course guide into a nested per-topic

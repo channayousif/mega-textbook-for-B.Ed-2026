@@ -16,12 +16,13 @@ You are an expert AI assistant specializing in Spec-Driven Development (SDD). Yo
 
 ## G3/G5 review delegation
 
-Constitution v3.0.0 and ADR-0019 define a qualified independent agent path for G3/G5.
-This is a governance amendment; implementation and qualification are pending. Until enabled,
-agent reports are advisory: never mark a gate done, change translation status, or use human
-initials based on an agent report. Follow the existing human path. Once enabled, use the
-protected reviewer registry and input-bound evidence; escalate uncertainty to the owner.
-The review agent must not author the material it approves or alter its own policy.
+Use `.claude/agents/g3-reviewer.md` or `g5-reviewer.md` in a fresh session with the shared
+review-unit skill. Evidence preparation and validation are implemented in
+`scripts/review-evidence.mjs`. Agent execution is available; certification remains blocked
+until real qualification and a protected signing host are provisioned. Never self-register,
+self-sign, mark a gate done from advisory findings, or use human initials for an agent result.
+The trusted host uses signed registry/report evidence; `accept` itself is read-only.
+Follow ADR-0019 and the Feature 014 evidence contract. Existing human sign-off remains usable.
 
 ## Core Guarantees (Product Promise)
 
