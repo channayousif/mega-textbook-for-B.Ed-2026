@@ -6,6 +6,7 @@
 - [x] T004 Integrate pipeline identity/evidence checks and CI test command.
 - [x] T005 Run negative fixtures and independent skill behavior exercise.
 - [x] T006 Update documentation and submit implementation for CI and authorized merge.
+- [x] T007a Harden input manifest reproducibility, script binding scope and gate-tier drift.
 - [ ] T007 Provision protected signing host and CI trust root.
 - [ ] T008 Record real qualification results and activate eligible stage/scope.
 

@@ -5,7 +5,7 @@ description: Independently review a frozen B.Ed unit at G3 English or G5 Urdu, p
 
 # Review a unit
 
-Skill version: 1.0.0. Follow ADR-0019 and
+Skill version: 1.1.0. Follow ADR-0019 and
 `specs/014-agent-review-governance/contracts/review-evidence.md` (the report contract).
 This skill enables review execution. Skill installation and syntactic validation do not
 qualify a reviewer or enable delegated sign-off.
@@ -20,11 +20,12 @@ The parent prepares the input bundle before launching a fresh reviewer session:
 node scripts/review-evidence.mjs prepare <course> <unit> <G3|G5> <output-dir>
 ```
 
-`prepare` produces `manifest.json`; it does not copy or lock source files. The parent must
-retain a frozen checkout of the bound files for the attempt. Pass the manifest, those files,
-the gate, author/translator run identities,
-reviewer run identity and actual model/version, and previous findings. Do not pass the
-author's private reasoning or instructions to approve. Use a new session for each attempt;
+`prepare` produces `manifest.json`; it does not copy or lock source files. It enumerates git's
+index, so it refuses to run while any bound input is modified, staged or untracked: commit the
+reviewed state first. The parent must retain a frozen checkout of the bound files for the
+attempt. Pass the manifest, those files, the gate, author/translator run identities, reviewer
+run identity and actual model/version, and previous findings. Do not pass the author's private
+reasoning or instructions to approve. Use a new session for each attempt;
 the reviewer must not have drafted or translated these bytes. Different model names alone
 do not establish independence. Never fabricate identities or a model version.
 

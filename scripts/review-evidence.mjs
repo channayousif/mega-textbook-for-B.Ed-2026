@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { mkdirSync, writeFileSync, readFileSync } from 'node:fs';
 import { resolve, join } from 'node:path';
-import { inputManifest, skillDigest, CRITERIA, validateReport, acceptReport } from './lib/review-evidence.mjs';
+import { inputManifest, dirtyInputs, skillDigest, CRITERIA, validateReport, acceptReport } from './lib/review-evidence.mjs';
 
 const root = resolve(process.env.CONTENT_ROOT || '.');
 const [command, ...args] = process.argv.slice(2);
@@ -9,6 +9,13 @@ try {
   if (command === 'prepare') {
     const [course, unit, stage, output] = args;
     if (!output) throw new Error('prepare needs course unit G3|G5 output-dir');
+    // A manifest describes a commit. Preparing one over a dirty tree produces a
+    // bundle no other host - CI included - can reproduce, so refuse it here
+    // rather than let the reviewer discover it at acceptance time.
+    const dirty = dirtyInputs(root, course, Number(unit), stage);
+    if (dirty.length) {
+      throw new Error(`bound inputs are not committed; commit, stash or ignore them first:\n  ${dirty.join('\n  ')}`);
+    }
     const manifest = inputManifest(root, course, Number(unit), stage);
     mkdirSync(resolve(output), { recursive: true });
     writeFileSync(join(resolve(output), 'manifest.json'), JSON.stringify({schema_version: 1, course_code: course, unit_no: Number(unit), stage, skill_digest: skillDigest(root, stage), input_manifest: manifest, required_criteria: CRITERIA[stage]}, null, 2) + '\n', { flag: 'wx' });
