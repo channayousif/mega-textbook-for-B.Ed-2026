@@ -51,16 +51,52 @@ Measured from the working tree, not from the site's own claims.
 | Specification documents | 21,540 lines |
 | Reviewed Urdu mirrors | **1** (`EFMP-302` U1) |
 
-**The corpus is smaller than 48 courses.** Of the 48 rows in the appendix, five are practicum with
-no textbook to write (`EFPC-4--` School Observation, `FDEX-560` Internship, `EFPC-6--` Teaching
-Practice I and II, `CPPR-650` Capstone) and six are specialization electives whose codes are
-placeholders pending department allocation. **37 courses are authorable**, roughly 222 units at
-six units each; the Semesters I-IV priority window is 26 courses, about 156 units.
+### Corpus size, settled from the course guides *(2026-09-12)*
 
-**[open] Course-count reconciliation.** This appendix lists 48 rows; the 2026-09-11 repositioning
-plan states the scheme carries ~57 codes. Both may be right depending on how either/or variants
-(`GISS-401 / GETH-401`, `EFPG-503` Urdu/Sindhi) and repeated elective placeholders are counted.
-Settle this before any figure derived from it enters a pricing model.
+The board scheme's summary table abbreviates the electives as repeated placeholders
+(`EFSP-5--` twice, `EFSP-6--` four times), which made the corpus look smaller than it is. **The
+eight semester course guides name and fully specify them.** `EFSP-664`, for example, carries a
+complete syllabus with description and learning outcomes. They are not pending allocation.
+
+Counted from the guides in `Scheme-and-Course-guides/extracted-text/`:
+
+| | Count |
+|---|---|
+| Distinct course codes across the 8 semester guides | **74** |
+| Non-elective courses | 40 |
+| `EFSP-` specialization electives | 34 |
+| Practicum with no textbook to write | 5 |
+
+The five practicum courses are `EFPC-411` School Observation, `FDEX-560` Internship, `ETPC-612`
+Teaching Practice I, `EFPC-628` Practice Teaching II and `CPPR-650` Capstone Project. The guides
+give these the concrete codes the scheme table left as `--` placeholders.
+
+**Three authorable-corpus figures, depending on elective policy:**
+
+| Scope | Courses | Units at 6/course |
+|---|---|---|
+| Core only (no electives) | **35** | ~210 |
+| Core + one specialization track | **41** | ~246 |
+| Complete, every elective offered | **69** | ~414 |
+
+A student takes six electives from one track; an institution offering every track needs all 34.
+**[open] Elective policy** is therefore a real content decision, not a counting artefact: it moves
+the corpus by 34 courses. The Semesters I-IV priority window is unaffected either way, since the
+electives all fall in Semesters V-VIII: **27 courses, about 162 units**, less `EFPC-411`.
+
+This closes the 48-vs-57 question. Neither figure was the corpus. 48 is rows in the scheme's
+summary table, ~57 was a looser scan, and 74 is what the guides actually specify. The scheme
+document's codes are not machine-countable in any case: it writes `GNAS- 401`, `GENG 300`,
+`GICT - 300`, `GUHQ - 301` and bare `EFSP-` in the same table, so every automated count of that
+file differs. **Count from the guides, not from the scheme summary.**
+
+**[open] Ten guide codes are absent from the appendix**, beyond the five discrepancies already
+closed in `specs/gaps.md`: `EFPC-411`, `EFPC-628`, `ETPC-612`, `EFPG-402`, `EFPG-504`, `GETH-401`,
+`GNAS-401`, `GPKS-302`, `GUHQ-401`, `GUHQ-402`. Some are the guide-side spelling of an
+already-resolved gap (`GNAS-401` vs `GNAS-301`, `GPKS-302` vs `GPKS-402`, `GUHQ-401/402` vs
+`GUHQ-301/400`); `EFPG-402` and `EFPG-504` appear to be genuinely missing from the summary table;
+and `ETPC-612` carries a prefix used nowhere else, which is probably a typo for `EFPC-612`.
+Raise these as new `specs/gaps.md` entries and resolve them the same way the first five were.
 
 ## Build Order & Phases
 
@@ -104,16 +140,47 @@ At that rate Semester I (36 units) would have been complete by week 8. Two units
 The estimate was never re-checked because **Phase 5 had no gate that could fail**. Every
 engineering phase had a spec, a task list, CI and a merge review. Content had a footnote.
 
+### Why 0.25 understates the achievable rate *(owner note, 2026-09-12)*
+
+The 0.25 figure covers a period in which content authoring and platform engineering ran as one
+combined effort, so it measures a shared capacity rather than a content-only rate. It is the
+right number for what Phase 5 actually delivered and the wrong number to plan the next phase
+from. **Target rate: 15 units per week** once authoring runs as a dedicated track.
+
+| Scope | Units | Weeks at 15/week |
+|---|---|---|
+| Semesters I-IV priority window | ~162 | ~11 |
+| Core corpus, no electives | ~210 | ~14 |
+| Complete corpus, every elective | ~414 | ~28 |
+
+At that rate the corpus is a two-quarter problem rather than a multi-year one, which changes the
+funding question and the institutional pitch entirely. It also sets a hard requirement on the
+review side, which is where the target has to be proven.
+
+### What 15 units per week requires
+
+Authoring is agent-bound and plausibly scales. Certification does not scale the same way, and
+after the 2026-09-12 decision it is a **single human `reviewer`** holding the G5 gate:
+
+- 15 units/week is **3 bilingual certifications per working day**.
+- Each unit is roughly 10,000 English words plus its Urdu mirror, so certification at 15/week
+  means reading and judging around 300,000 words of paired bilingual text per week.
+- At 1 hour per unit that is 15 hours/week and works. At 3 hours per unit it is 45 hours/week and
+  does not. **The whole target turns on a number nobody has measured.**
+
 ### The structural fix
 
 1. **Phase 5 gets a failing gate like any other phase.** A named per-semester unit target with a
-   review date. Missing it triggers a re-plan, not a silent slip.
-2. **Measure before planning.** The next five units are authored back to back against a frozen
-   standard, with hours logged end to end including Urdu and figures. The repositioning plan
-   asserts ~1 day of agent authoring per unit; two units after eight weeks implies review costs
-   roughly 27 days per unit on top. **Neither figure is measured.** Until they are, every
-   downstream number - pricing, funding need, corpus target - is a guess.
-3. **Cost per mastered outcome** is the metric that says whether the authoring standard is
+   review date. Missing it triggers a re-plan, not a silent slip. The 15/week target is the
+   hypothesis this gate tests.
+2. **Measure certification, not authoring.** The five-unit measurement's primary output is
+   **hours per certification** through the new two-stage pipeline, not hours per draft. Authoring
+   throughput is the easy half and the repositioning plan already puts it near one day per unit;
+   review is the half that has never been timed and the half that binds.
+3. **Run the measurement through the new pipeline.** It needs the `reviewer` role to exist and
+   v4.0 to have landed, or it measures the old bottleneck at the old standard and misleads.
+   Sequence: v4.0 → freeze → `reviewer` role → measure five units → set the Phase 5 target.
+4. **Cost per mastered outcome** is the metric that says whether the authoring standard is
    economically survivable. Adopted as the north-star cost metric.
 
 ## Content priority: the licence overlay
@@ -276,9 +343,14 @@ that will ever exist, and that the concept graph is load-bearing for everything 
    qualification, G3 before G5.
 6. ~~**Anonymous vs authenticated feedback.**~~ **Resolved 2026-09-12**: authenticated only, all
    roles.
-7. **[open] Course-count reconciliation** - 48 rows or ~57 codes.
-8. **[open] Phase 5 unit target** - the number and date that make Phase 5 a gate that can fail.
-   Cannot be set responsibly until the five-unit measurement is done.
+7. ~~**Course-count reconciliation.**~~ **Resolved 2026-09-12** from the course guides: 74
+   distinct codes, 40 non-elective and 34 electives, 5 of them practicum. See the corpus section.
+8. **[open] Elective policy** - core only (35 courses), core plus one specialization track (41),
+   or every elective offered (69). Moves the corpus by 34 courses. Semesters I-IV are unaffected.
+9. **[open] Ten guide codes absent from the scheme appendix** - raise as `specs/gaps.md` entries.
+10. **[open] Phase 5 unit target** - the 15/week rate is the working hypothesis; the gate date and
+    per-semester number are set once the five-unit certification measurement confirms or refutes
+    the review side of it.
 
 ## Immediate Next Steps
 
