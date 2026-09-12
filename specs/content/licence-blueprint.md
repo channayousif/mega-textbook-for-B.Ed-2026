@@ -15,6 +15,7 @@ recording that no course covers it.
 | S1 | Syllabus, Teaching License Test 2024 (SIBA Testing Services) | `steda.gos.pk/Downloads/Teaching_Licence_Test_2024.pdf` | 2026-09-12 | Part I / Part II structure and the **complete Part II topic list** |
 | S2 | Sample Paper for Teacher Licensing Test **with Specification** | `steda.gos.pk/Downloads/model_papers_iba.pdf` | 2026-09-12 | The **Summary of Test Division**: sections, item counts, marks, weightage, time; per-item subject-matter tags |
 | S3 | Teaching License Policy, Sindh 2023 | `steda.gos.pk/tlicense.aspx` | 2026-09-12 | Eligibility tiers, 5-year validity, CPD renewal |
+| S4 | B.Ed (4-Year) 2025 scheme of studies (`EED-` codes) | `Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx` | 2026-09-12 | The scheme the licence test was built against; 55 course rows |
 
 S2 is a scanned document with no text layer; figures below were read from page renders at 150 dpi
 and transcribed by hand. **Re-verify against the PDF before any figure is published or priced.**
@@ -77,9 +78,49 @@ mapping. Covering Part I requires a separate content line built on the DCAR scho
 The dual-outcome claim is therefore precise only for Part II. Stated honestly: **the B.Ed corpus
 can serve 75% of the licence paper; the remaining 25% is a distinct product decision.**
 
+## The 2025 scheme is the test's actual basis *(owner clarification, 2026-09-12)*
+
+S1's five Part II headings are not topic groupings. They are **course titles**, and S1 says so:
+Part II is assessed *"from the curriculum developed by the Higher Education Commission for
+different courses offered in the B.Ed (2.5 years) and B.Ed Hons (4 years) degree programs"*.
+
+The pre-2026 Sindh scheme (`B.Ed (4-Year) 2025-2.docx`, `EED-` codes) implements those HEC
+courses almost one to one:
+
+| STEDA Part II heading (S1) | 2025 scheme course | 2026 scheme successor |
+|---|---|---|
+| Methods of Teaching | `EED-312` General Methods of Teaching | `EFPG-*` pedagogy courses (dispersed) |
+| Foundations of Education | `EED-511` Foundations of Education | `EFMP-409` Foundations of Education |
+| Child Development | `EED-311` Child Development | `EFID-501` Human Growth & Development |
+| Education Psychology | `EED-513` Educational Psychology | `EFMP-301` Educational Psychology |
+| **Classroom Management** | **`EED-313` Classroom Management** | **none** |
+| Classroom Assessment | `EED-411` Classroom Assessment | `EFMP-408` Educational Assessment and Evaluation |
+| Test Development and Evaluation | `EED-624` Test Development and Evaluation | `EFMP-408` (merged) |
+| School Community and Teacher | no `EED-` equivalent; HEC ADE/B.Ed(Hons) course title | `GCCE-400` + `GSOS-301` (partial) |
+
+**This closes the Classroom Management gap as a mystery.** It was never missing from the
+curriculum; it was a standalone Foundation course, `EED-313`, that the 2026 revision restructured
+away. The licence still tests it at the weight of two sampled CRQ items. The owner holds detailed
+course guides for the 2025 courses, which are the authority the test was built against.
+
+### What this changes
+
+1. **The gap is real but now sourceable.** Classroom Management needs authored content and has no
+   2026 course to host it. Author it from the `EED-313` guide as a licence-track module that sits
+   outside the degree corpus.
+2. **`EFMP-408` absorbs two 2025 courses** (`EED-411` Classroom Assessment and `EED-624` Test
+   Development and Evaluation), which is why it carries 16 objectives - the highest count in the
+   mapping. Its content-spec should be scoped against both guides, not one.
+3. **The dual-outcome claim survives, at topic level rather than course level.** The 2026 courses
+   still cover most 2025 material; only the packaging changed. A unit authored for `EFMP-301`
+   serves `EED-513` topics. The exception is Classroom Management, which needs its own module.
+4. **[open] The 2025 course guides are not in the repository.** Only the scheme table
+   (`B.Ed (4-Year) 2025-2.docx`) is present. The per-course guides are needed before any
+   licence-track content is authored, on the same footing as the 2026 guides.
+
 ## Part II - Pedagogical Content Knowledge (75% weightage, CRQ + ERQ)
 
-S1 names five B.Ed course areas and their sub-topics. Mapping to the scheme:
+S1 names five B.Ed course areas and their sub-topics. Mapping to the 2026 scheme:
 
 ### A. Methods of Teaching and Foundations of Education
 
@@ -129,11 +170,12 @@ S1 names five B.Ed course areas and their sub-topics. Mapping to the scheme:
 | Strategies for classroom management | - | **uncovered** |
 | Differentiated Learning | `EFMP-305` Inclusive Education | course-level |
 
-**Classroom Management is the largest coverage gap.** No core course in the scheme is dedicated to
-it, and it carries at least two sampled CRQ items (Classroom Challenges, Instruction
-Differentiation). The 34 `EFSP-` specialization electives have not been title-enumerated; one may
-cover it. **Action:** enumerate elective titles from the semester guides before concluding this is
-a true gap, then decide whether to author a licence-specific module.
+**Classroom Management is the largest coverage gap, and its origin is now known.** It was
+`EED-313` Classroom Management, a standalone Foundation course in the 2025 scheme, which the 2026
+revision restructured away with no successor. It carries at least two sampled CRQ items (Classroom
+Challenges, Instruction Differentiation). **Action:** author it as a licence-track module from the
+`EED-313` course guide rather than hunting for a 2026 host course. Enumerating the 34 `EFSP-`
+elective titles is still worth doing, but is no longer the primary route to closing this.
 
 ### D. Classroom Assessment and Test Development and Evaluation
 
