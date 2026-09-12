@@ -97,7 +97,9 @@ function normalized(path, bytes) {
 
 /** The bound input roots for one unit and stage. Shared by hashing and cleanliness. */
 function manifestRoots(root, course, unit, stage) {
-  requireValue(/^[A-Z]{2,4}-\d{3}$/.test(course) && Number.isInteger(unit) && unit > 0 && CRITERIA[stage], 'invalid unit or stage');
+  // Mirrors contracts/unit-frontmatter.schema.json, which permits the approved
+  // scheme's pending placeholder codes (EFPC-4--, EFSP-5--) alongside final ones.
+  requireValue(/^[A-Z]{2,4}-\d{3}(--)?$/.test(course) && Number.isInteger(unit) && unit > 0 && CRITERIA[stage], 'invalid unit or stage');
   const code = course.toLowerCase();
   const folder = `unit-${String(unit).padStart(2, '0')}`;
   const semesters = existsSync(join(root, 'docs')) ? readdirSync(join(root, 'docs')).filter((p) => /^semester-\d+$/.test(p)) : [];
