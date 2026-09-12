@@ -25,7 +25,7 @@
  */
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { KIND_ENUM } from './lib/figure-manifest.mjs';
-import { CONTENT_GATES, FULL_GATES } from './lib/gates.mjs';
+import { CONTENT_GATES, FULL_GATES, CI_ONLY } from './lib/gates.mjs';
 import { LIGHT_TOKENS, DARK_TOKENS, rootBlock } from './lib/figure-palette.mjs';
 
 const FIX = process.argv.includes('--fix');
@@ -168,16 +168,38 @@ function checkStyleGuideChangelog() {
   }
 }
 
-/** A gate added to gates.mjs but forgotten in CI would silently never run. */
+/**
+ * FULL_GATES and CI must agree in BOTH directions.
+ *
+ * A gate in gates.mjs but not in CI silently never runs there. A step in CI but
+ * in neither tier nor CI_ONLY means `npm run check:all` no longer matches CI,
+ * so a contributor goes green locally and red in the workflow - the exact drift
+ * gates.mjs exists to prevent. Anything CI must run alone is declared, with its
+ * reason, in CI_ONLY.
+ */
 function checkCiCoverage() {
   const file = '.github/workflows/ci.yml';
   if (!existsSync(file)) return;
   const text = readFileSync(file, 'utf8');
+  const runs = (gate) => new RegExp(`npm run (?:-s )?${gate.replace(/[.:*+?^${}()|[\]\\]/g, '\\$&')}(?![\\w:.-])`).test(text)
+    || (gate === 'test' && /npm test(?![\w-])/.test(text));
+
   for (const gate of FULL_GATES) {
-    if (gate === 'build' || gate === 'test') continue;
-    if (!text.includes(`npm run ${gate}`) && !text.includes(`run: npm run -s ${gate}`)) {
-      errors.push(`${file}: FULL_GATES lists "${gate}" but CI never runs it`);
+    if (gate === 'build') continue; // run via `npm run build` in two jobs, matched below anyway
+    if (!runs(gate)) errors.push(`${file}: FULL_GATES lists "${gate}" but CI never runs it`);
+  }
+
+  const declared = new Set([...FULL_GATES, ...Object.keys(CI_ONLY)]);
+  const invoked = new Set([...text.matchAll(/npm run (?:-s )?([A-Za-z0-9:._-]+)/g)].map((m) => m[1]));
+  if (/npm test(?![\w-])/.test(text)) invoked.add('test');
+  for (const script of [...invoked].sort()) {
+    if (!declared.has(script)) {
+      errors.push(`${file}: CI runs "${script}" but no gate tier lists it - add it to FULL_GATES, or to CI_ONLY in scripts/lib/gates.mjs with the reason it cannot run locally`);
     }
+  }
+  for (const [script, reason] of Object.entries(CI_ONLY)) {
+    if (!reason?.trim()) errors.push(`scripts/lib/gates.mjs: CI_ONLY["${script}"] needs a reason`);
+    if (!invoked.has(script)) errors.push(`scripts/lib/gates.mjs: CI_ONLY lists "${script}" but CI no longer runs it - drop the exception`);
   }
 }
 

@@ -31,6 +31,33 @@ This exercise demonstrates useful defect detection and truthful limits. It does 
 ADR-0019's owner-labelled held-out qualification or model/configuration approval requirement.
 The registry remains empty; live agent certification is blocked.
 
+## Post-merge hardening (2026-09-12)
+
+Three defects found while reviewing the merged implementation, all fixed and covered by tests.
+None could have produced a false pass; the first two blocked activation, the third reopened a
+Spec 013 drift path.
+
+1. **Manifest was not reproducible.** `inputManifest` walked the working tree, so any untracked
+   file under a bound root entered the digest. Reproduced against the live repo: an untracked
+   PDF under `Scheme-and-Course-guides/` made a local manifest 116 inputs where a clean
+   checkout gives 115, so a locally prepared report could never validate in CI. Enumeration now
+   reads git's index; `prepare` refuses a modified, staged or untracked bound input by name;
+   a non-git checkout is rejected. Two consecutive `prepare` runs now produce byte-identical
+   manifests, and the digest set is down to the 105 committed inputs.
+2. **Script binding was too wide.** All 23 files under `scripts/` were hashed, so an unrelated
+   edit invalidated every accepted report and re-blocked the pipeline gate for every certified
+   unit. The manifest now binds the cited validators plus their transitive relative imports
+   (13 files); a missing entry point is a hard error rather than a silent shrink.
+3. **`test:review` ran only in CI.** `check-docs-sync.mjs` asserted FULL_GATES subset-of CI in
+   one direction only, so the new step passed silently and `npm run check:all` no longer matched
+   CI. The assertion is now bidirectional against an explicit `CI_ONLY` allowlist, which also
+   caught `figures:variants:check`, `check:no-service-key` and `serve` as pre-existing drift.
+   FULL_GATES is 13 gates and `npm run check:all` passes end to end.
+
+`node --test tests/review/*.test.mjs`: 21 passed, 0 failed. Fixtures are now real git
+repositories, and four new cases cover manifest reproducibility, committed-file coverage,
+the narrowed script closure and the non-git rejection. Review skill at v1.1.0.
+
 ## Remaining activation work
 
 Provision a protected signing host and CI public-key trust root; conduct and record actual

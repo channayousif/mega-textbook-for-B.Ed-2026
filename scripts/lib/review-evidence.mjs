@@ -1,12 +1,29 @@
+import { execFileSync } from 'node:child_process';
 import { createHash, createPublicKey, verify } from 'node:crypto';
 import { readFileSync, readdirSync, existsSync, lstatSync } from 'node:fs';
-import { resolve, relative, join, isAbsolute } from 'node:path';
+import { resolve, relative, join, dirname, isAbsolute } from 'node:path';
 
 export const CRITERIA = {
   G3: ['authority', 'sources', 'coverage', 'assessment', 'accessibility', 'readability', 'pedagogy'],
   G5: ['authority', 'sources', 'coverage', 'assessment', 'accessibility', 'completeness', 'semantics', 'terminology', 'register', 'rtl'],
 };
 export const COMMANDS = ['validate:content', 'check:depth-gate', 'check:figures', 'check:no-em-dash', 'check:no-answer-keys', 'check:docs-sync', 'render-review'];
+
+/**
+ * The validators whose results a report cites, as entry points. Their local
+ * import closure is walked and hashed; everything else under `scripts/` is not.
+ *
+ * WHY. Hashing all of `scripts/` bound every accepted report to files the
+ * review never touches - a figure optimiser, a Supabase helper - so one
+ * unrelated edit invalidated every outstanding report and re-blocked the
+ * pipeline gate for every agent-certified unit. The closure keeps the binding
+ * honest (a validator change still invalidates) without that blast radius.
+ * A renamed or deleted entry point fails loudly rather than silently shrinking
+ * the digest set.
+ */
+const REVIEW_ENTRY_SCRIPTS = ['scripts/validate-content.mjs', 'scripts/check-pipeline-gate.mjs', 'scripts/check-unit-depth.mjs',
+  'scripts/check-figures.mjs', 'scripts/check-no-em-dash.mjs', 'scripts/check-no-answer-keys.mjs', 'scripts/check-docs-sync.mjs'];
+
 const requireValue = (condition, message) => { if (!condition) throw new Error(message); };
 export const digest = (bytes) => createHash('sha256').update(bytes).digest('hex');
 const sorted = (object) => JSON.stringify(Object.fromEntries(Object.entries(object).sort(([a], [b]) => a.localeCompare(b))));
@@ -24,11 +41,47 @@ export function safeFile(root, path) {
   return file;
 }
 
-function walk(root, path) {
-  const full = safeFile(root, path);
-  if (!existsSync(full)) return [];
-  if (lstatSync(full).isDirectory()) return readdirSync(full).sort().flatMap((name) => walk(root, `${path}/${name}`));
-  return [path];
+const git = (root, args, failure) => {
+  try {
+    return execFileSync('git', ['-C', resolve(root), ...args], { encoding: 'utf8', maxBuffer: 256 * 1024 * 1024, stdio: ['ignore', 'pipe', 'ignore'] });
+  } catch {
+    throw new Error(failure);
+  }
+};
+
+/**
+ * Committed paths only. The traversal used to read the working tree, so any
+ * untracked file under a bound root entered the digest set and a report
+ * prepared on one machine could never validate on another. Enumerating the
+ * index makes the manifest a function of the commit, which is the only state
+ * CI - the host that actually accepts evidence - ever sees. Contents are still
+ * read from disk, so a local edit to a tracked file still fails validation.
+ */
+function tracked(root) {
+  const out = git(root, ['ls-files', '-z', '--cached', '--full-name'], 'input manifest requires a git checkout: reviewed inputs must be committed');
+  return out.split('\0').filter(Boolean).sort();
+}
+
+function walk(root, path, index) {
+  safeFile(root, path);
+  return index.filter((p) => p === path || p.startsWith(`${path}/`));
+}
+
+/** Entry validators plus every relative module they import, transitively. */
+function reviewScripts(root) {
+  const seen = new Set();
+  const queue = [...REVIEW_ENTRY_SCRIPTS];
+  while (queue.length) {
+    const path = queue.shift();
+    if (seen.has(path)) continue;
+    const file = safeFile(root, path);
+    requireValue(existsSync(file), `missing review script: ${path}`);
+    seen.add(path);
+    for (const [, spec] of readFileSync(file, 'utf8').matchAll(/(?:from|import)\s*\(?\s*['"](\.[^'"]+)['"]/g)) {
+      queue.push(relative(resolve(root), resolve(dirname(file), spec)));
+    }
+  }
+  return [...seen].sort();
 }
 
 // Only exact YAML frontmatter lifecycle lines are normalized. No body, prose or
@@ -42,8 +95,9 @@ function normalized(path, bytes) {
   return Buffer.from(match[1] + front + match[3] + text.slice(match[0].length));
 }
 
-export function inputManifest(root, course, unit, stage) {
-  requireValue(/^[A-Z]{2,4}-\d{3}(--)?$/.test(course) && Number.isInteger(unit) && unit > 0 && CRITERIA[stage], 'invalid unit or stage');
+/** The bound input roots for one unit and stage. Shared by hashing and cleanliness. */
+function manifestRoots(root, course, unit, stage) {
+  requireValue(/^[A-Z]{2,4}-\d{3}$/.test(course) && Number.isInteger(unit) && unit > 0 && CRITERIA[stage], 'invalid unit or stage');
   const code = course.toLowerCase();
   const folder = `unit-${String(unit).padStart(2, '0')}`;
   const semesters = existsSync(join(root, 'docs')) ? readdirSync(join(root, 'docs')).filter((p) => /^semester-\d+$/.test(p)) : [];
@@ -56,16 +110,44 @@ export function inputManifest(root, course, unit, stage) {
     requireValue(!/^bilingual:\s*false\s*$/m.test(readFileSync(join(root, coursePath, 'course-overview.mdx'), 'utf8')), 'G5 inapplicable for English-only course');
     requireValue(existsSync(join(root, ur, 'index.mdx')), 'Urdu unit missing');
   }
-  const roots = [en, `${coursePath}/course-overview.mdx`, `specs/content/${code}`,
-    'specs/content/style-guide.md', 'specs/content/terminology.csv', '.specify/memory/constitution.md',
-    'catalog/courses.json', 'contracts', 'specs/014-agent-review-governance/contracts', 'scripts', '.claude/skills/review-unit', '.claude/agents',
-    'Scheme-and-Course-guides', `.specify/Course_guides_and_Scheme`,
-    `static/img/figures/${code}/${folder}`, ...(stage === 'G5' ? [ur] : [])];
   for (const required of ['specs/content/style-guide.md', 'specs/content/terminology.csv',
     '.specify/memory/constitution.md', `specs/content/${code}/content-spec.md`, `${coursePath}/course-overview.mdx`,
     '.claude/skills/review-unit/SKILL.md']) requireValue(existsSync(safeFile(root, required)), `missing required input: ${required}`);
-  const paths = [...new Set(roots.flatMap((p) => walk(root, p)))].filter((p) => !p.includes('/reviews/') && !p.endsWith('/tasks.md') && !p.includes('/.staging/'));
-  return Object.fromEntries(paths.sort().map((p) => [p, digest(normalized(p, readFileSync(safeFile(root, p))))]));
+  return [en, `${coursePath}/course-overview.mdx`, `specs/content/${code}`,
+    'specs/content/style-guide.md', 'specs/content/terminology.csv', '.specify/memory/constitution.md',
+    'catalog/courses.json', 'contracts', 'specs/014-agent-review-governance/contracts', ...reviewScripts(root),
+    '.claude/skills/review-unit', '.claude/agents',
+    'Scheme-and-Course-guides', `.specify/Course_guides_and_Scheme`,
+    `static/img/figures/${code}/${folder}`, ...(stage === 'G5' ? [ur] : [])];
+}
+
+const bound = (root, paths, index) => [...new Set(paths.flatMap((p) => walk(root, p, index)))]
+  .filter((p) => !p.includes('/reviews/') && !p.endsWith('/tasks.md') && !p.includes('/.staging/'))
+  .sort();
+
+export function inputManifest(root, course, unit, stage) {
+  const roots = manifestRoots(root, course, unit, stage);
+  const paths = bound(root, roots, tracked(root));
+  return Object.fromEntries(paths.map((p) => [p, digest(normalized(p, readFileSync(safeFile(root, p))))]));
+}
+
+/**
+ * Working-tree changes under the bound roots. `prepare` refuses them: a
+ * reviewer must be handed a committed state, because that is the state the
+ * manifest describes and the only one another host can reproduce.
+ */
+export function dirtyInputs(root, course, unit, stage) {
+  const roots = manifestRoots(root, course, unit, stage);
+  const fields = git(root, ['status', '--porcelain', '-z', '--untracked-files=all'], 'cannot read git status for the bound inputs').split('\0');
+  const changed = [];
+  for (let i = 0; i < fields.length; i += 1) {
+    const entry = fields[i];
+    if (!entry) continue;
+    const status = entry.slice(0, 2);
+    changed.push(entry.slice(3));
+    if (status[0] === 'R' || status[0] === 'C') i += 1; // rename/copy source follows in its own field
+  }
+  return bound(root, roots, changed.sort());
 }
 
 export function skillDigest(root, stage) {

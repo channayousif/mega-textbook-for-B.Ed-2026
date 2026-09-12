@@ -74,11 +74,21 @@ Preparation creates a manifest, not a frozen copy. The parent host must preserve
 checkout. Reviewers produce findings and evidence without changing content or tracker rows.
 See [the review contract](specs/014-agent-review-governance/contracts/review-evidence.md).
 
+**Commit before you prepare.** The manifest is built from git's index, so it describes a
+commit rather than one machine's working tree. `prepare` refuses to run while any bound input
+is modified, staged or untracked, and names the offending paths: a bundle built over local
+scratch files is one no other host, CI included, can reproduce.
+
 **Activation state:** review execution is available; automatic G3/G5 certification is not yet
 qualified. The registry starts empty. Synthetic evidence tests and excerpt exercises are not
 academic qualification. Provision `CONTENT_REVIEW_PUBLIC_KEY` in CI and a separate protected
 Ed25519 signing host, then record real owner-approved held-out qualification before enabling
 an entry. Never commit or expose the private key to authors, reviewers or PR jobs.
+
+The trust root is a CI secret rather than a committed file, so that a pull request cannot
+swap it. The cost is local: once the first `agent:` tracker row exists, `check:pipeline-gate`
+fails closed off CI with `CONTENT_REVIEW_PUBLIC_KEY is not provisioned`. Export the public key
+locally to reproduce the CI result; without it, trust CI's run of that gate.
 
 `accept` verifies signatures, reviewer scope and current evidence without writing tracker rows.
 A trusted host may then append `agent:<id>` and `review:<report-path>` to the existing tracker.
