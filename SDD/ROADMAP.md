@@ -188,21 +188,83 @@ after the 2026-09-12 decision it is a **single human `reviewer`** holding the G5
 **Owner decision, 2026-09-11:** sequence content by the intersection of the B.Ed scheme and the
 Sindh teaching-licence / PST-JEST syllabus, not by semester order.
 
-Rationale: the licence test weights **Pedagogical Content 50% · Content Knowledge 30% ·
-Psychometric and Analytical Reasoning 20%**, and the two units already built to standard
-(`EFMP-301`, `EFMP-302`) sit inside the 50% slice. This makes "one curriculum, two outcomes -
-your degree and your licence" a checkable claim rather than a marketing line.
+Rationale: "one curriculum, two outcomes - your degree and your licence" should be a checkable
+claim rather than a marketing line. `specs/content/licence-blueprint.md` is what makes it
+checkable, and building it changed the tiers below.
 
-**Tier 1 - Pedagogical Content (50%):** `EFMP-301` *(U1 built)* · `EFMP-302` *(U1 built)* ·
-`EFMP-303` · `EFMP-304` · `EFMP-305`
+### Reconciled against the blueprint *(2026-09-12)*
 
-**Tier 2 - Content Knowledge (30%) + Reasoning (20%):** `GQUR-300` / `GQUR-301` (serves
-Mathematics *and* the reasoning section) · `GENG-300` / `GENG-301` · `GPKS-402` · `GNAS-301` ·
-`GSOS-301` · `GICT-300`
+The tiers first recorded here were derived from a weighting of **Pedagogical Content 50% ·
+Content Knowledge 30% · Psychometric and Analytical Reasoning 20%**. That specification is **not
+supported by any primary source**. STEDA's published sample paper gives:
 
-`GENG-300` and `GENG-301` are `bilingual: false` in `catalog/courses.json` and therefore exempt
-from the Urdu mirror. They are materially cheaper per unit and should be sequenced early for
-that reason alone, independent of licence weight.
+| Type | Questions | Marks | Weightage |
+|---|---|---|---|
+| Extended Response (ERQ), case study | 1 | 100 | 25 |
+| Constructed Response (CRQ) | 10 | 150 | 50 |
+| Multiple Choice (MCQ) | 50 | 50 | 25 |
+
+There is no psychometric or analytical-reasoning section at any weight. Two consequences follow,
+and both change the ordering.
+
+**Part I is not served by the B.Ed corpus at all.** The 25% MCQ block is assessed from the
+*School Curriculum of Class one to eight*, not from the B.Ed scheme. `GQUR-*`, `GENG-*`,
+`GNAS-301`, `GPKS-402` and `GICT-300` are university-level courses and do not cover it. **The old
+Tier 2 rationale is void.** Covering Part I is a separate content line against the DCAR school
+curriculum and a positioning decision, not something authoring B.Ed courses faster can fix.
+
+**The corpus serves 75% of the paper, via constructed response.** Every CRQ and the ERQ carries a
+published points rubric. The pipeline's existing 10 RRQ + 5 ERQ with rubrics is exactly that
+format, and it is the part a printed MCQ guide serves worst.
+
+### Tier 1 - highest licence-objective density
+
+Ranked by Part II objectives carried, from the blueprint's mapping tables:
+
+| Rank | Course | Semester | Licence load |
+|---|---|---|---|
+| 1 | `EFMP-408` Educational Assessment and Evaluation | IV | **16 objectives**, the largest single block |
+| 2 | `EFMP-409` Foundations of Education | IV | 5 objectives + CRQ 2 + CRQ 8 |
+| 3 | `EFMP-305` Inclusive Education | II | ERQ + CRQ 1 + CRQ 7, 3 objectives |
+| 4 | `EFID-501` Human Growth & Development | V | 5 objectives, the whole Child Development block |
+| 5 | `EFMP-303` Educational Policies and Plans of Pakistan | II | CRQ 5 + policy objectives |
+| 6 | `EFMP-301` *(U1 built)* · `EFMP-302` *(U1 built)* | I | 5 authored-unit mappings, incl. CRQ 6 and CRQ 8 |
+
+### Tier 2 - carries some Part II objectives
+
+`GSOS-301` Social Science (5 objectives in School Community and Teacher) · `GCCE-400` Civics and
+Community Engagement (CRQ 10) · `GICT-300` Application of ICT and `EFMP-406` Contemporary
+Literacies (CRQ 9) · the `EFPG-*` pedagogy courses (instructional approaches, questioning,
+cooperative learning, instructional planning / CRQ 3).
+
+### The tension this creates, and how to resolve it
+
+`EFMP-408` and `EFMP-409` are **Semester IV**; `EFID-501` is **Semester V**, outside the locked
+Semesters I-IV priority window entirely. Meanwhile `EFMP-301` and `EFMP-302`, the courses already
+under way, rank sixth. Pure licence ordering and the degree audience now point in opposite
+directions:
+
+- **Licence-first** serves candidates who are graduating or already graduated, and monetises
+  soonest, but starts at the far end of the programme.
+- **Degree-first** serves Semester I students, who are the users actually arriving on the site
+  today, and completes the courses already begun.
+
+**Recommended resolution: finish `EFMP-302` and `EFMP-301` first, then take Tier 1 from the top.**
+Both are one unit into six, carry sunk content-spec, coverage-matrix, figure and terminology
+setup, and already supply the authored coverage the blueprint records. Abandoning them mid-course
+to start `EFMP-408` would leave two half-courses, which no institution can adopt and no candidate
+can rely on, and would discard the only licence coverage that exists today.
+
+After those two: `EFMP-408`, `EFMP-409`, `EFMP-305`, `EFMP-303`, then `EFID-501` - which requires
+extending the priority window into Semester V, or accepting that one Tier 1 course waits.
+
+**[open] Semester-window amendment.** Locked decision 3 restricts content priority to Semesters
+I-IV. `EFID-501` is Semester V. Either amend the decision to "Semesters I-IV plus licence-ranked
+courses beyond it", or drop `EFID-501` from Tier 1 and accept the Child Development gap.
+
+`GENG-300` and `GENG-301` remain `bilingual: false` in `catalog/courses.json` and therefore exempt
+from the Urdu mirror, so they stay materially cheaper per unit. That is now their **only**
+argument for early sequencing, since they serve no licence objective.
 
 ### Prerequisite artefact: the licence blueprint
 
@@ -348,7 +410,11 @@ that will ever exist, and that the concept graph is load-bearing for everything 
 8. **[open] Elective policy** - core only (35 courses), core plus one specialization track (41),
    or every elective offered (69). Moves the corpus by 34 courses. Semesters I-IV are unaffected.
 9. **[open] Ten guide codes absent from the scheme appendix** - raise as `specs/gaps.md` entries.
-10. **[open] Phase 5 unit target** - the 15/week rate is the working hypothesis; the gate date and
+10. **[open] Semester-window amendment** - `EFID-501` ranks Tier 1 on the licence axis but sits
+    in Semester V, outside locked decision 3's Semesters I-IV window. Widen the window or drop it.
+11. **[open] Part I positioning** - cover the Class 1-8 school curriculum as a separate content
+    line, or state publicly that the product serves Part II (75% of the paper) only.
+12. **[open] Phase 5 unit target** - the 15/week rate is the working hypothesis; the gate date and
     per-semester number are set once the five-unit certification measurement confirms or refutes
     the review side of it.
 

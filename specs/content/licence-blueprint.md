@@ -219,10 +219,15 @@ Derived from objective counts and sampled-item coverage, not from semester order
 | 6 | `EFMP-301`, `EFMP-302` | **already started**; finish remaining units |
 | 7 | `GSOS-301` Social Science (Sociology) | 5 objectives in School Community and Teacher |
 
-Note this ranking differs from the repositioning plan's Tier 1, which listed `EFMP-301`-`305` on
-the assumption of a 50% pedagogy slice. `EFMP-408` and `EFMP-409` are Semester IV courses and do
-not appear in that Tier 1 at all, yet they carry more licence objectives than any Semester I-II
-course. **Reconcile the Tier 1 list against this table before sequencing content.**
+This ranking differs from the tiers first recorded in the roadmap, which were derived from the
+unsupported 50% pedagogy figure. **Reconciled into `SDD/ROADMAP.md` on 2026-09-12**: Tier 1 is now
+this table, the old Tier 2 rationale is recorded as void because Part I is not served by the B.Ed
+corpus, and the resolution adopted is to finish `EFMP-302` and `EFMP-301` before taking Tier 1
+from the top - they are one unit into six, carry the sunk pipeline setup, and hold the only
+authored licence coverage that exists.
+
+Two questions the reconciliation raised are open in the roadmap: `EFID-501` ranks Tier 1 but sits
+in Semester V, outside the locked Semesters I-IV window; and Part I positioning needs a decision.
 
 ## Open items
 
