@@ -65,10 +65,28 @@ identity then fail until reviewed under the ADR's recovery procedure. Keep repor
 Audit every fifth approved unit and all escalations as required by the constitution. Scheduling
 those audits is an owner/host duty; this initial library does not claim to automate it.
 
-## Lifecycle digest exclusions
+## What the input manifest binds
 
-Exclude only course `tasks.md`, `reviews/` and `.staging/` from the dependency traversal.
-Within MDX frontmatter normalize an exact top-level `translation_status: draft|reviewed`
-line. Prose, badge props, similarly named fields and all other bytes remain hashed. Changing
-rendered badge props therefore requires a new review. Source documents, rubric, agent configs,
-contracts and validator scripts are included; adding a file changes the manifest.
+Paths are enumerated from git's index (`ls-files --cached`), so the manifest is a function of
+the commit, not of one machine's working tree. Contents are still read from disk, so editing a
+tracked file after review still fails validation; an uncommitted scratch file no longer enters
+the digest and no longer makes a bundle unreproducible on another host. `prepare` refuses to
+build a manifest while any bound path is modified, staged or untracked, and a checkout git
+cannot enumerate is rejected outright.
+
+Bound: the unit's English directory (plus Urdu at G5), course overview, the course's
+`specs/content/` tree, style guide, terminology, constitution, course catalogue, contracts,
+course guides, the unit's figure assets, the review skill and agent configs.
+
+Validator scripts are bound as a closure, not as a directory. The entry points are the six
+validators a passing report must cite - `validate-content`, `check-unit-depth`,
+`check-figures`, `check-no-em-dash`, `check-no-answer-keys`, `check-docs-sync` - plus
+`check-pipeline-gate`, which consumes the evidence, and every relative module any of them
+imports, transitively. A change to those invalidates outstanding reports; a change to a script
+the review never runs does not. Renaming or deleting an entry point is a hard error, so the
+digest set cannot shrink silently.
+
+Exclude only course `tasks.md`, `reviews/` and `.staging/` from the traversal. Within MDX
+frontmatter normalize an exact top-level `translation_status: draft|reviewed` line. Prose,
+badge props, similarly named fields and all other bytes remain hashed. Changing rendered badge
+props therefore requires a new review. Committing a new file changes the manifest.

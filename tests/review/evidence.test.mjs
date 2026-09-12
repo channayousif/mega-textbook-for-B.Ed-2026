@@ -4,7 +4,12 @@ import { mkdtempSync, mkdirSync, writeFileSync, readFileSync, rmSync } from 'nod
 import { join, dirname } from 'node:path';
 import { tmpdir } from 'node:os';
 import { generateKeyPairSync, sign } from 'node:crypto';
-import { CRITERIA, COMMANDS, inputManifest, skillDigest, digest, validateReport, acceptReport, validateAgentTrackerRow } from '../../scripts/lib/review-evidence.mjs';
+import { execFileSync } from 'node:child_process';
+import { CRITERIA, COMMANDS, inputManifest, dirtyInputs, skillDigest, digest, validateReport, acceptReport, validateAgentTrackerRow } from '../../scripts/lib/review-evidence.mjs';
+
+/** Entry validators the manifest binds, mirroring REVIEW_ENTRY_SCRIPTS. */
+const REVIEW_SCRIPTS = ['scripts/validate-content.mjs', 'scripts/check-pipeline-gate.mjs', 'scripts/check-unit-depth.mjs',
+  'scripts/check-figures.mjs', 'scripts/check-no-em-dash.mjs', 'scripts/check-no-answer-keys.mjs', 'scripts/check-docs-sync.mjs'];
 
 function fixture(t) {
   const root = mkdtempSync(join(tmpdir(), 'review-evidence-'));
@@ -20,6 +25,17 @@ function fixture(t) {
   write('docs/semester-1/efmp-301/course-overview.mdx', '---\nbilingual: true\n---\n');
   for (const path of ['specs/content/style-guide.md', 'specs/content/terminology.csv', '.specify/memory/constitution.md', 'specs/content/efmp-301/content-spec.md', '.claude/skills/review-unit/SKILL.md', '.claude/skills/review-unit/references/g3.md', '.claude/skills/review-unit/references/g5.md', '.claude/agents/g3-reviewer.md', '.claude/agents/g5-reviewer.md']) write(path, `Synthetic test input ${path}\n`);
   write('specs/reviewers/qualification.json', '{"synthetic_fixture_only":true}\n');
+  // Bound validators (each pulling one shared lib) plus a script the review never
+  // cites, so the digest's narrowed scope is actually exercised.
+  for (const path of REVIEW_SCRIPTS) write(path, `// synthetic ${path}\nimport { shared } from './lib/shared.mjs';\n`);
+  write('scripts/lib/shared.mjs', 'export const shared = 1;\n');
+  write('scripts/optimize-figure.mjs', '// unrelated to content review\n');
+  // Commit, not just stage: `dirtyInputs` treats a staged-but-uncommitted change
+  // as dirty, which is the whole point of the check.
+  const git = (...args) => execFileSync('git', ['-C', root, '-c', 'user.email=fixture@example.invalid', '-c', 'user.name=fixture', ...args], {stdio:'ignore'});
+  const track = () => { git('add', '-A'); git('commit', '-q', '--allow-empty', '-m', 'fixture'); };
+  git('init', '-q');
+  track();
   const registry = {schema_version:1, reviewers:[]};
   const reports = {};
   const make = (stage) => {
@@ -39,7 +55,7 @@ function fixture(t) {
     return reports[stage];
   };
   const g3 = make('G3');
-  return {root,key,write,signed,registry,make,en,ur,...g3};
+  return {root,key,write,signed,track,registry,make,en,ur,...g3};
 }
 
 test('complete signed synthetic report can pass', (t) => {
@@ -49,9 +65,32 @@ test('content changes and added inputs invalidate evidence', (t) => {
   const f=fixture(t); f.write(f.en,'Changed content');
   assert.throws(()=>acceptReport(f.root,f.path,{},f.key),/manifest/);
 });
-test('new file cannot escape manifest coverage', (t) => {
-  const f=fixture(t); f.write('docs/semester-1/efmp-301/unit-01/topic-02.mdx','New prose');
+test('committed new file cannot escape manifest coverage', (t) => {
+  const f=fixture(t); f.write('docs/semester-1/efmp-301/unit-01/topic-02.mdx','New prose'); f.track();
   assert.throws(()=>acceptReport(f.root,f.path,{},f.key),/manifest/);
+});
+test('uncommitted working-tree file leaves the manifest reproducible', (t) => {
+  const f=fixture(t); f.write('Scheme-and-Course-guides/unrelated-local.pdf','local scratch bytes');
+  assert.doesNotThrow(()=>acceptReport(f.root,f.path,{},f.key));
+  assert.deepEqual(dirtyInputs(f.root,'EFMP-301',1,'G3'),['Scheme-and-Course-guides/unrelated-local.pdf']);
+  f.track();
+  assert.deepEqual(dirtyInputs(f.root,'EFMP-301',1,'G3'),[]);
+  assert.throws(()=>acceptReport(f.root,f.path,{},f.key),/manifest/);
+});
+test('digest binds the cited validators and their imports, not all of scripts/', (t) => {
+  const f=fixture(t);
+  f.write('scripts/optimize-figure.mjs','// edited, still unrelated to review\n'); f.track();
+  assert.doesNotThrow(()=>acceptReport(f.root,f.path,{},f.key));
+  f.write('scripts/lib/shared.mjs','export const shared = 2;\n'); f.track();
+  assert.throws(()=>acceptReport(f.root,f.path,{},f.key),/manifest/);
+});
+test('a bound validator cannot be renamed out of the digest', (t) => {
+  const f=fixture(t); rmSync(join(f.root,'scripts/check-figures.mjs')); f.track();
+  assert.throws(()=>inputManifest(f.root,'EFMP-301',1,'G3'),/missing review script/);
+});
+test('manifest refuses a checkout git cannot enumerate', (t) => {
+  const f=fixture(t); rmSync(join(f.root,'.git'),{recursive:true,force:true});
+  assert.throws(()=>inputManifest(f.root,'EFMP-301',1,'G3'),/git checkout/);
 });
 test('exact lifecycle field is excluded but prose with same key is not', (t) => {
   const f=fixture(t); f.write(f.en,'---\ntranslation_status: reviewed\n---\nEnglish fixture.\n');
