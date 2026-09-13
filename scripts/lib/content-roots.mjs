@@ -47,6 +47,20 @@ export const TRACKS = Object.freeze([
     urBase: urBaseFor(null),
     routeBasePath: '/',
   }),
+  Object.freeze({
+    id: 'licence',
+    contentRoot: 'licence',
+    /**
+     * No grouping directory: courses sit at the track root. The licence corpus is
+     * not a programme and has no semesters, so it has no ordinal (FR-008) - and
+     * nothing may ask it for one.
+     */
+    dirPattern: null,
+    hasOrdinal: false,
+    pluginId: 'licence',
+    urBase: urBaseFor('licence'),
+    routeBasePath: '/licence',
+  }),
 ]);
 
 /** Flat list of every track's content directory, for the pattern-scanning gates (FR-014). */
@@ -133,7 +147,11 @@ export function walkUnits(root, options = {}) {
       }));
     }
   }
+  // Track order first: a track without a grouping directory has an empty
+  // trackDir, which would otherwise sort ahead of `semester-1`.
+  const order = new Map(TRACKS.map((t, i) => [t.id, i]));
   return out.sort((a, b) =>
+    order.get(a.track.id) - order.get(b.track.id) ||
     a.trackDir.localeCompare(b.trackDir) ||
     a.courseFolder.localeCompare(b.courseFolder) ||
     a.unitNo - b.unitNo);

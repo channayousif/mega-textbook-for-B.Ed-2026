@@ -115,3 +115,35 @@ describe('urPathFor', () => {
     expect(urPathFor(u, 'topic-01.mdx')).toMatch(/unit-01\/topic-01\.mdx$/);
   });
 });
+
+describe('the licence track', () => {
+  it('has no ordinal, and never reports one (FR-008)', () => {
+    const root = fixture(['licence/eed-313/unit-01']);
+    const [u] = walkUnits(root);
+    expect(u.track.id).toBe('licence');
+    expect(u.track.hasOrdinal).toBe(false);
+    expect(u.ordinal).toBeNull();
+    expect(u.trackDir).toBe('');
+  });
+
+  it('holds courses at the track root, with no grouping directory', () => {
+    const root = fixture(['licence/eed-313/unit-01', 'licence/eed-411/unit-02']);
+    expect(walkUnits(root).map((u) => u.courseCode)).toEqual(['EED-313', 'EED-411']);
+  });
+
+  it('resolves its Urdu mirror to the -licence instance, not the default (FR-006)', () => {
+    const root = fixture(['licence/eed-313/unit-01']);
+    const [u] = walkUnits(root);
+    expect(urPathFor(u)).toContain('docusaurus-plugin-content-docs-licence');
+    expect(urPathFor(u)).not.toMatch(/content-docs\/current/);
+  });
+
+  it('is walked alongside the pre-service track, pre-service first', () => {
+    const root = fixture(['licence/eed-313/unit-01', 'docs/semester-1/efmp-301/unit-01']);
+    expect(walkUnits(root).map((u) => u.track.id)).toEqual(['pre-service', 'licence']);
+  });
+
+  it('contributes its content root to CONTENT_ROOTS for the pattern gates (FR-014)', () => {
+    expect(CONTENT_ROOTS).toContain('licence');
+  });
+});
