@@ -13,10 +13,10 @@ labels: ["adr-0020", "spec-015", "content-tier", "adr-0002", "adr-0009"]
 links:
   spec: specs/015-licence-content-tree/spec.md
   ticket: null
-  adr: history/adr/0020-licence-content-tier.md
+  adr: history/adr/0020-content-tracks.md
   pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/46
 files:
- - history/adr/0020-licence-content-tier.md
+ - history/adr/0020-content-tracks.md
  - history/prompts/015-licence-content-tree/0003-adr-licence-content-tier.misc.prompt.md
 tests:
  - npm run check:content (7/7)

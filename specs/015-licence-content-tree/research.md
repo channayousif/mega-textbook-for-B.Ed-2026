@@ -3,7 +3,7 @@
 Resolves the three NEEDS CLARIFICATION items carried by `spec.md`. Each records a decision, its
 rationale, and the alternatives weighed.
 
-## R1 - Catalogue tier key
+## R1 - Catalogue track key
 
 **Decision**: add a `tracks` array beside `semesters` in `catalog/courses.json`, sharing the
 existing course shape. Introduce `allCourses(catalog)` in `src/lib/catalog.ts` and have every
@@ -19,7 +19,7 @@ type level rather than quietly returning degree courses only.
 
 **Alternatives considered**:
 
-- *Flat `courses: []` with a `tier` field per course.* One list, no missed-consumer class of bug.
+- *Flat `courses: []` with a `track` field per course.* One list, no missed-consumer class of bug.
   Rejected: it is a breaking migration of the catalogue file and all six consumers at once, in the
   same change that refactors five gate scripts. Two simultaneous migrations make FR-009
   unfalsifiable, because a degree-corpus regression could originate in either.
@@ -36,11 +36,11 @@ establishes that the first and only planned occupant is content aligned to the S
 Licence syllabus, whose authority is the HEC pre-service guides. ADR-0009 set the precedent of
 naming an instance for what it holds (`/guides`) rather than for a category it might one day hold.
 
-The usual argument for a generic name is future cost, and the tier abstraction removes it. Once
-FR-001's walker exists, adding a third tier is a config entry plus a content folder, not a
+The usual argument for a generic name is future cost, and the track abstraction removes it. Once
+FR-001's walker exists, adding a third track is a config entry plus a content folder, not a
 restructure. Being specific now therefore costs nothing later.
 
-A future SSC or HSC exam track would in any case want its own tier rather than sharing this one:
+A future SSC or HSC exam track would in any case want its own track rather than sharing this one:
 its authority is the DCAR school curriculum, not the HEC guides, and the licence blueprint's Part
 I finding shows those corpora do not overlap.
 
@@ -53,9 +53,9 @@ I finding shows those corpora do not overlap.
 - *`/track/`.* Fully generic. Rejected: meaningless to the reader, which works against Article
   X-bis discoverability.
 
-## R3 - Licence tier in degree navigation
+## R3 - Licence track in degree navigation
 
-**Decision**: no. The licence tier gets its own sidebar (`sidebars-licence.ts`) and a navbar
+**Decision**: no. The licence track gets its own sidebar (`sidebars-licence.ts`) and a navbar
 entry, and is indexed by offline search through `docsRouteBasePath`. It does not appear in the
 semester sidebar.
 
@@ -88,11 +88,11 @@ in CI or locally.
 
 **Decision**: satisfy Article V.4 in substance, not just by the gate passing. Extend
 `check-add-course.mjs` to add a throwaway licence course as well as a throwaway semester course,
-so the "adding a course is content-only" guarantee provably holds for the new tier. Without this,
-015 would leave a tier whose second course might silently require platform edits.
+so the "adding a course is content-only" guarantee provably holds for the new track. Without this,
+015 would leave a track whose second course might silently require platform edits.
 
 **Alternatives considered**:
 
-- *Leave the gate as is.* Rejected: it would pass while proving nothing about the tier this
+- *Leave the gate as is.* Rejected: it would pass while proving nothing about the track this
   feature exists to add, which is precisely the one-directional-assertion failure mode Spec 013's
   docs-sync check was rewritten to close.

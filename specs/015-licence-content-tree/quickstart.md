@@ -46,7 +46,7 @@ All seven apply to licence content exactly as to degree content.
 npm run review:evidence -- prepare EED-411 1 G3 /tmp/g3-run
 ```
 
-Works because `resolveUnit` searches every tier (FR-003). Commit first: `prepare` refuses a dirty
+Works because `resolveUnit` searches every track (FR-003). Commit first: `prepare` refuses a dirty
 tree.
 
 ## What you must not need to do

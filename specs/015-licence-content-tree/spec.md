@@ -20,37 +20,61 @@ A directory that is not a semester is invisible to all of them.
 
 ## Scope
 
-Make the content pipeline able to host more than one content tier, then add the licence tier.
+Make the content pipeline able to host more than one content track, then add the licence track.
 Degree content keeps its paths, routes and behaviour unchanged.
+
+## Clarifications
+
+### Session 2026-09-13
+
+- Q: Can the same `course_code` exist in two tracks, given `EFMP-408` is both a degree course and a licence-objective carrier? → A: No. Course codes are globally unique across all tracks; a duplicate is a gate failure.
+- Q: "Track" for the catalogue key but "tier" for the code concept - which is canonical? → A: **Track**, everywhere; "tier" is dropped. Further tracks are anticipated (pre-service, CPD / in-service, licence), so the degree corpus is the `pre-service` track rather than a peer of `licence`.
+- Q: `CourseOptionGroup` is semester-keyed but a licence course has no semester. How does the teacher course picker group an ordinal-free track? → A: Generalise the group to track-keyed, `{ trackId, label, ordinal: number | null, courses }`; `semester` becomes `ordinal`.
 
 ## Requirements
 
 - FR-001: A shared content-root walker (`scripts/lib/content-roots.mjs`) yields every unit as
-  `{ tier, tierDir, courseFolder, courseCode, unitNo, unitDir, urUnitDir }`. It is the single
+  `{ track, trackDir, courseFolder, courseCode, unitNo, unitDir, urUnitDir }`. It is the single
   definition of where content lives and what its Urdu mirror path is.
 - FR-002: `validate-content.mjs`, `check-unit-depth.mjs`, `check-figures.mjs`,
   `check-pipeline-gate.mjs` and `build-content-index.mjs` consume FR-001's walker instead of each
   re-deriving the semester regex and `UR_BASE` join. Five copies become one.
 - FR-003: `review-evidence.mjs`'s `inputManifest` resolves a unit through the same walker, so a
   licence unit can be prepared for review exactly as a degree unit is.
-- FR-004: Two tiers ship: `semester` (`docs/semester-N/<course>/unit-NN/`, unchanged) and
-  `licence` (`licence/<course>/unit-NN/`). The tier vocabulary lives in code, not in prose.
-- FR-005: The licence tier renders as a third `@docusaurus/plugin-content-docs` instance with
+- FR-004: Two tracks ship: **`pre-service`** (`docs/semester-N/<course>/unit-NN/`, unchanged -
+  the degree corpus, which groups by semester) and **`licence`**
+  (`licence/<course>/unit-NN/`, no semester grouping). Semester grouping is a property of the
+  pre-service track, not of the content model. The track vocabulary lives in code, not in prose.
+- FR-013: The model must accommodate further tracks without another refactor. **CPD / in-service**
+  is the anticipated next one (the Sindh licence requires five CPD credit hours for renewal).
+  Adding it must be a `TRACKS` entry, a content root and a plugin instance - no change to the
+  walker's contract or to any consumer.
+- FR-005: The licence track renders as a third `@docusaurus/plugin-content-docs` instance with
   `id: 'licence'`, `routeBasePath: 'licence'` and `sidebars-licence.ts`, following ADR-0009.
   It joins `docsRouteBasePath` so offline search indexes it.
-- FR-006: The licence tier's Urdu mirror is
+- FR-006: The licence track's Urdu mirror is
   `i18n/ur/docusaurus-plugin-content-docs-licence/current/<course>/unit-NN/`. Docusaurus derives
   that directory from the plugin id; the EN/UR structural parity gate must compare against it and
   not against the default instance's tree.
-- FR-007: `catalog/courses.json` gains a sibling to `semesters` for tier-scoped courses, with the
+- FR-007: `catalog/courses.json` gains a sibling to `semesters` for track-scoped courses, with the
   same course shape (`code`, `title_en`, `title_ur`, `credit_hours`, `category`, `bilingual`).
   `src/lib/catalog.ts` and the teacher course picker read both without special-casing either.
+- FR-012: `CourseOptionGroup` becomes track-keyed - `{ trackId, label, ordinal: number | null,
+  courses }` - replacing its `semester: number` key, so a track without an ordinal cannot be asked
+  for one. `src/pages/app/classes/index.tsx` and `src/pages/app/teacher/quiz-authoring.tsx`
+  migrate to the new shape. The per-course `semester` field becomes `ordinal` for the same reason.
 - FR-008: A licence course is exempt from semester-derived ordering and numbering. Nothing may
   require a licence course to declare a semester, and nothing may place it in semester navigation.
 - FR-009: Every existing gate stays green on the degree corpus with byte-identical results. The
-  refactor is behaviour-preserving for `docs/`; the only new behaviour is that a second tier is
+  refactor is behaviour-preserving for `docs/`; the only new behaviour is that a second track is
   now visible.
-- FR-010: `EED-313` is catalogued in the licence tier as the tier's proving course, with
+- FR-011: A `course_code` identifies exactly one course across all tracks. The same code must not
+  appear in two tracks, and `check:pipeline-gate` fails on a duplicate. `resolveUnit(root, code,
+  unitNo)` therefore needs no track argument, and CLI commands such as
+  `review:evidence prepare EED-313 1 G3` stay unambiguous. Licence-relevant degree material is
+  reached by cross-link, as `specs/content/licence-blueprint.md` already does, never by
+  duplicating a course into a second track.
+- FR-010: `EED-313` is catalogued in the licence track as the track's proving course, with
   `bilingual: true` and the Urdu mirror deferred (owner decision, 2026-09-13). No unit content is
   authored by this feature.
 
@@ -82,11 +106,19 @@ URLs, no new gate. Authoring `EED-313` waits for v4.0 and the standard freeze
   `docusaurus-plugin-content-docs-guides`, so the default `UR_BASE` would silently pass a licence
   unit with no Urdu mirror at all.
 
-## Open questions
+## Resolved during planning
 
-1. **Tier key in `catalog/courses.json`** - a `tracks` array beside `semesters`, or a `tier` field
-   on each course with one flat list. The second is a wider migration; the first is additive.
-2. **Route naming** - `/licence/` is accurate for Sindh but narrow if other credential tracks
-   follow. `/track/` or `/exam/` generalise at the cost of clarity today.
-3. **Whether the licence tier belongs in the degree sidebar at all**, or only in its own
-   navigation plus search.
+All three questions this spec originally carried were decided in Phase 0
+([research.md](./research.md)) and are recorded in ADR-0020:
+
+1. **Catalogue key** - an additive `tracks[]` beside `semesters[]`, read through `allCourses()`,
+   rather than a flat list with a per-course field. R1.
+2. **Route naming** - `/licence/`, following ADR-0009's precedent of naming an instance for what
+   it holds. The track abstraction makes a later `/cpd/` cheap, so being specific costs nothing. R2.
+3. **Degree navigation** - the licence track gets its own sidebar, a navbar entry and search
+   indexing, but does not appear in the semester sidebar. R3.
+
+A fourth question the spec had not asked was found and answered in R4: Article V.4 is satisfied in
+substance by extending `check-add-course.mjs` to add a throwaway licence course, not merely by the
+gate continuing to pass. `sidebars-licence.ts` joins that gate's guarded-path list, so adding a
+licence course cannot silently edit the track's own sidebar.

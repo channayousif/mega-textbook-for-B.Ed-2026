@@ -2,14 +2,21 @@
 
 No database. These are filesystem and JSON shapes.
 
-## ContentTier
+**Track vocabulary (clarification, 2026-09-13).** "Track" is the canonical term for a content
+grouping; "tier" is not used. The degree corpus is the **`pre-service`** track, one that happens to
+group its courses by semester, rather than a peer of `licence`. The owner anticipates further
+tracks - **CPD / in-service** is the named next one, which the STEDA policy's five-credit-hour
+renewal requirement makes concrete. A track's semester grouping is therefore an optional property
+of one track, not a property of the content model.
+
+## ContentTrack
 
 The feature's central new entity. Two instances ship; the vocabulary lives in
 `scripts/lib/content-roots.mjs`, never in prose.
 
-| Field | Type | `semester` | `licence` |
+| Field | Type | `pre-service` | `licence` |
 |---|---|---|---|
-| `id` | string | `semester` | `licence` |
+| `id` | string | `pre-service` | `licence` |
 | `contentRoot` | path | `docs` | `licence` |
 | `dirPattern` | RegExp | `/^semester-(\d+)$/` | n/a - courses sit directly under the root |
 | `hasOrdinal` | boolean | `true` (the semester number) | `false` |
@@ -22,8 +29,8 @@ directories after the plugin instance. `i18n/ur/docusaurus-plugin-content-docs-g
 exists as proof of the rule. This is the field FR-006 exists to protect: the default `urBase` would
 silently pass a licence unit with no Urdu mirror at all.
 
-**Invariant**: a tier with `hasOrdinal: false` must never be asked for a semester number. Consumers
-that order or label by semester skip such tiers rather than defaulting to `0`.
+**Invariant**: a track with `hasOrdinal: false` must never be asked for a semester number. Consumers
+that order or label by semester skip such tracks rather than defaulting to `0`.
 
 ## UnitRecord
 
@@ -32,13 +39,13 @@ unitNo }` shapes.
 
 | Field | Type | Notes |
 |---|---|---|
-| `tier` | `ContentTier` | the owning tier |
-| `tierDir` | string | `semester-1`, or `''` for a tier without a grouping directory |
+| `track` | `ContentTrack` | the owning track |
+| `trackDir` | string | `semester-1`, or `''` for a track without a grouping directory |
 | `courseFolder` | string | lowercase, e.g. `eed-313` |
 | `courseCode` | string | uppercase, e.g. `EED-313`; matches the front-matter pattern including the scheme's `--` placeholders |
 | `unitNo` | number | from `unit-NN` |
 | `unitDir` | absolute path | the English unit directory |
-| `urUnitDir` | absolute path | the Urdu mirror, computed from `tier.urBase` |
+| `urUnitDir` | absolute path | the Urdu mirror, computed from `track.urBase` |
 | `ordinal` | number or null | semester number, or `null` where `hasOrdinal` is false |
 
 ## CatalogTrack
@@ -67,9 +74,28 @@ type Catalog = {
 of iterating `catalog.semesters`, so a consumer that should see licence courses cannot silently
 miss them.
 
+## CourseOptionGroup
+
+The UI grouping `src/lib/courseOptions.ts` returns, generalised from semester-keyed to track-keyed
+so the no-ordinal-leakage invariant is carried by the type (clarification, 2026-09-13).
+
+```ts
+type CourseOptionGroup = {
+  trackId: string;            // 'pre-service' | 'licence'
+  label: string;             // 'Semester 1' | 'Licence track'
+  ordinal: number | null;    // was `semester: number`; null for ordinal-free tracks
+  courses: CourseOption[];   // each course's `semester` field likewise becomes `ordinal`
+};
+```
+
+Consumers to migrate: `src/pages/app/classes/index.tsx`,
+`src/pages/app/teacher/quiz-authoring.tsx`. `hasContent` semantics are unchanged - a course with
+no authored units is marked rather than dropped, which is how the seven catalogued-but-unauthored
+degree courses already behave.
+
 ## EED-313 catalogue entry
 
-The tier's only occupant after this feature. No units are authored here.
+The track's only occupant after this feature. No units are authored here.
 
 ```json
 {
