@@ -48,6 +48,13 @@ The `status` and `deleted_at` tests live **here**, not in each policy, for the r
 `0004_is_admin.sql` gives for `is_admin`: a suspension then takes effect everywhere at once, and a
 policy written later cannot forget it.
 
+**Who calls it.** No policy does, and that is not an oversight: this feature creates no policy,
+because certifying produces a file rather than a row. The caller is the review surface, over RPC,
+so that a suspended holder is refused by the database rather than by a cached column in the
+browser. The helper is also the point any future policy would attach to, which is why the status
+test belongs in it now rather than later. spec.md's **Enforcement posture** section says what the
+capability does and does not control.
+
 ## 4. Queue state - ephemeral, and the only thing Postgres owns here
 
 Which units await review, and which a reviewer currently has open. Safe to lose: it can be rebuilt

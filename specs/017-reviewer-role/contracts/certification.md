@@ -27,6 +27,18 @@ Matching `scripts/lib/review-evidence.mjs`'s report shape where they correspond:
 | `disposition` | `pass`, `revise` or `escalate` |
 | `started_at`, `completed_at` | ISO timestamps |
 | `supersedes` | the `run-id` of a prior attempt, or absent |
+| `g3_report` | **required when `stage` is `G5`**, absent otherwise: the repository-relative path of the accepted G3 certification for the same English version. Art. VII §4 requires G5 to bind to accepted G3 evidence, and `review-evidence.mjs` already refuses an agent G5 report without it |
+
+## The G5 binding
+
+A G5 certification is refused at build time unless its `g3_report` resolves to a file under
+`specs/content/<course-lowercase>/reviews/unit-NN/G3/` for the same course and unit, and that file's
+`disposition` is `pass`. The check is deliberately the same shape the agent path applies through
+`acceptReport`, minus the signature: a person's G5 is no more entitled to skip its G3 than an
+agent's is.
+
+This is the one place the human artefact is checked against another artefact rather than against
+itself, which is why it is stated here as a contract rather than left to the page.
 
 **No signature.** The agent path signs because an agent identity is forgeable; a named person's
 commit in Git history is the equivalent assurance, and demanding a key of a GCET faculty member

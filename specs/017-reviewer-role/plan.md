@@ -30,15 +30,24 @@ function, RLS, one admin page, an export following ADR-0015, tests, and a govern
 | Article | Requirement | Verdict |
 |---|---|---|
 | **V.3 - closed role set** | Roles are `student`, `teacher`, `admin`; restricted access is a separate admin-granted capability | **PASS, and load-bearing** - a fourth role would violate the enumeration; the capability design is what the article prescribes |
-| V.2 - security in the backend | Enforcement is RLS, not UI | **PASS** - `is_reviewer()` gates every policy; the page is a view over what RLS already permits |
+| V.2 - security in the backend | Enforcement is RLS, not UI | **NOT ENGAGED, and said so explicitly** - V.2 protects answer keys, grades and submissions; a certification is none of those. There is no server-side certification action, so `is_reviewer()` gates no policy. It gates the review surface over RPC, so suspension is the database's answer rather than the browser's. spec.md's **Enforcement posture** states plainly that `reviewer` is an authorization record and the pull request is the control |
 | V.1 - content in version control | Gate outcomes stay in Git | **PASS** - certifications are Git artefacts; Postgres holds ephemeral queue state only (R3) |
 | VII - review gates | G3/G5 execution | **PASS** - exercises the existing "qualified human" permission; no amendment (R5) |
 | VIII - data protection | Certifications name people | **PASS** - reviewer identity is already public in tracker rows by design; no new personal data beyond initials |
 | IX - authentication and access | Capability granted only by admin | **PASS** - `guard_privileged_columns` blocks self-grant; `privilege_audit` records both directions |
+| **X - documentation surfaces** | A teacher-facing capability updates the Teacher Guide in the same branch | **REQUIRES WORK, added after analysis** - X.1 makes the Teacher Guide the home for "what capability-gated features unlock", and `guides/teacher-guide/verified-teacher-material.mdx` is the precedent. FR-011 and tasks T036/T037 cover it, in both locales |
+| **VII - Docs gate** | Feature author updates the matching guide | **REQUIRES WORK, added after analysis** - the Docs gate row was missed in the first pass of this table; it is a named gate with the feature author as its owner |
 | IV - SDD law | Approved spec precedes implementation | **PASS** - spec at PR #51 |
 | VI - scope discipline | No standard change | **PASS** - v4.0 is frozen and untouched |
 
-Post-Phase-1 re-check: unchanged. No article is in tension, and V.3 actively prescribes the design.
+Post-Phase-1 re-check: unchanged. V.3 actively prescribes the design.
+
+**Post-`/sp.analyze` re-check (2026-09-13)**: two rows were missing and one was wrong. Art. X and the
+Art. VII Docs gate were absent from this table, which is how the feature reached `/sp.tasks` with no
+guide task at all for a teacher-facing capability. The V.2 row asserted that `is_reviewer()` gates
+every policy, which is false: the feature creates no policy, because certifying is client-side
+artefact generation. Both are corrected above, and spec.md now carries an **Enforcement posture**
+section rather than leaving a reader to infer an RLS guarantee that was never built.
 
 ## Project Structure
 
@@ -72,6 +81,12 @@ tests/rls/
 
 specs/reviewers/
 └── human-reviewers.md              # NEW - the qualification record (R5: governance, not a gate input)
+
+guides/teacher-guide/
+└── review-and-certify.mdx          # NEW - Art. X.2 / the Docs gate (FR-011)
+
+i18n/ur/docusaurus-plugin-content-docs-guides/current/teacher-guide/
+└── review-and-certify.mdx          # NEW - the Urdu mirror, since the guides are bilingual
 ```
 
 **Structure Decision**: single project, following the existing app-page-over-Supabase shape. The
@@ -105,8 +120,9 @@ No HTTP API contracts: the feature adds no endpoint. Supabase RLS is the contrac
    be held but does nothing.
 3. **The review surface** - queue, side-by-side EN/UR for G5, and the three actions.
 4. **The export** - certification artefact plus tracker row, following `feedback-queue.tsx`.
-5. **The governance record** - `specs/reviewers/human-reviewers.md`, and the owner's own entry, so
-   the path is exercised end to end before anyone external holds the capability.
+5. **The governance record** - `specs/reviewers/human-reviewers.md`, the owner's own entry, and the
+   Teacher Guide page in both locales, so the path is exercised end to end and documented for the
+   reader it is aimed at before anyone external holds the capability.
 
 Step 5 is deliberately last and deliberately included: the spec's own objection is that a
 capability nobody holds relieves no bottleneck.

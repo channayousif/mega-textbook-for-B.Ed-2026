@@ -23,6 +23,11 @@ English source sits beside the Urdu mirror. Three actions: **certify**, **reques
 **escalate**. Escalation routes to the curriculum owner, who keeps policy and escalation ownership
 under Art. VII §1.
 
+A unit whose G3 is still open offers G3 only. G5 binds to accepted G3 evidence for the same English
+version (Art. VII §4), so a G5 certification carries the path of that G3 certification in its
+`g3_report` field and cannot be produced without one. If the queue will not offer you a G5, its G3
+is what is missing.
+
 Certifying produces two downloads: the certification artefact and the tracker row line.
 
 ## 4. Apply it
@@ -38,6 +43,18 @@ npm run check:content
 ```
 
 `check:pipeline-gate` reads the tracker row and, for a human reviewer, needs only valid initials.
+
+## What the capability does and does not control
+
+`reviewer` is an authorization record, not an enforcement point. There is no server-side
+certification action, so nothing in the database refuses a certification: what the capability gives
+you is an audited, admin-only, revocable statement that you were trusted to certify, plus a
+server-checked gate on reaching the queue at all. What actually stops an unauthorized certification
+is the pull request, since `check:pipeline-gate` accepts any valid-looking initials by design. See
+spec.md's **Enforcement posture**.
+
+The practical consequence: a suspended reviewer cannot open the queue, but a certification already
+downloaded is just a file. Revoking the capability is a statement about future work, not a recall.
 
 ## What you must not need to do
 

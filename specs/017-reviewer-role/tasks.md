@@ -56,7 +56,30 @@ derived from a build-time JSON report, so neither is a Postgres row anybody coul
 tests against tables that do not exist would be worse than saying so. They are covered instead as
 what they actually are: a **structural** assertion that the capability grants no new write anywhere
 (T013), and Git history's append-only property (contracts/certification.md). The remaining three
-assertions are real RLS tests: T010, T011, T012.
+assertions are real RLS tests: T010, T011, T012. spec.md's success criterion 5 has since been
+reworded to say this directly rather than leaving tasks.md to reconcile it.
+
+## Three more, from `/sp.analyze`
+
+**4. The G5 binding was missing everywhere.** Art. VII §4 requires G5 to bind to accepted G3
+evidence for the same English version, and success criterion 3 says so, but the certification
+contract had no `g3_report` field and no task enforced the precondition. The agent path enforces it
+(`review-evidence.mjs` refuses a G5 report without `g3_report` and recursively accepts it); the
+human path would have let a G5 certify past a G3 that was never accepted, with `check:pipeline-gate`
+returning early for human initials and catching nothing. T020, T028 and T030 close it.
+
+**5. The Docs gate had no task.** Art. X is non-negotiable and X.1 makes the Teacher Guide the home
+for what a capability unlocks; Art. VII's Docs gate names the feature author as owner. A reviewer is
+typically already a teacher, so this is a teacher-facing capability, and the guide is bilingual.
+T035 and T036 close it, and plan.md's Constitution Check has gained the two rows it was missing.
+
+**6. `is_reviewer()` gates no policy, and the spec now says so.** The feature creates no policy,
+because certifying produces a file rather than a row, so the helper would have been dead code and
+success criterion 2 ("a suspended reviewer's certification attempt fails") was unsatisfiable as
+worded. Owner decision, 2026-09-13: keep the posture and state it. spec.md gained an **Enforcement
+posture** section; the helper is called by the review surface over RPC (T021), so suspension is the
+database's answer rather than a cached column's, and T012 tests that rather than a policy that does
+not exist.
 
 ---
 
@@ -81,7 +104,7 @@ unforgeable and revocable.
 - [ ] T009 Plumb the capability into `src/contexts/AuthContext.tsx`: add `reviewer: boolean` to the `Profile` type (line 29), add `reviewer` to the profile column list (line 54), and expose `reviewer` on the context value beside `verifiedTeacher` (lines 43 and 157)
 - [ ] T010 RLS test in `tests/rls/reviewer-capability.test.mjs`: an admin grants then revokes `reviewer` on another profile and both directions appear in `privilege_audit` with `change_type = 'reviewer'`, correct `actor_id`, and `old_value`/`new_value` of `'false'`/`'true'` then `'true'`/`'false'` (SC1, FR-001)
 - [ ] T011 RLS test in `tests/rls/reviewer-capability.test.mjs`: a non-admin setting `reviewer` on their **own** profile is rejected with an error containing `requires admin: reviewer` (not a silent no-op, per `0008`'s stated contract), and on **another** profile is a 0-row no-op because the row is invisible at the row level first (SC1, FR-001)
-- [ ] T012 RLS test in `tests/rls/reviewer-capability.test.mjs`: `is_reviewer()` returns false for a holder whose `status` is `suspended` and for one whose `deleted_at` is set, called through `serviceClient().rpc`; assert as well that `supabase/migrations/0044_reviewer_capability.sql` contains no `create policy` naming `status`, which is what makes SC2's "without any policy naming `status`" falsifiable rather than rhetorical (SC2, FR-002)
+- [ ] T012 RLS test in `tests/rls/reviewer-capability.test.mjs`: calling `is_reviewer()` over RPC **as the holder's own signed-in client** returns true while active and false once `status` is `suspended` or `deleted_at` is set, so the refusal is the database's answer and not a cached profile column's; assert as well that no code added by this feature reads `status` alongside `reviewer`, which is what makes SC2's "without any dependent code naming `status`" falsifiable rather than rhetorical (SC2, FR-002)
 - [ ] T013 RLS test in `tests/rls/reviewer-capability.test.mjs`: holding `reviewer` grants **no new write anywhere** - the holder still cannot update another profile, cannot insert into `privilege_audit`, and cannot write `quiz_items` or `answer_keys` any more than the same account could before the grant (FR-003, and finding 3's structural stand-in for two of SC5's five)
 - [ ] T014 RLS test in `tests/rls/reviewer-capability.test.mjs`: a reviewer's `content_feedback` insert succeeds exactly as any other authenticated account's does, confirming FR-008 needs no policy of its own (owner decision 2026-09-13: feedback is authenticated, all roles)
 
@@ -123,8 +146,8 @@ is derived at build time and Postgres never learns anything about a gate outcome
 - [ ] T017 [US2] Extract `CRITERIA` from `scripts/lib/review-evidence.mjs` into a new `scripts/lib/review-criteria.mjs` and import it back, so the browser certify form (T022) and the evidence validator read one definition and cannot drift; no behaviour change, and `npm run check:content` must be byte-identical after
 - [ ] T018 [US2] Extend `scripts/report-content-status.mjs` to emit a per-unit `gates: { G3: 'open' | 'done', G5: 'open' | 'done' }` derived from the unit's tracker rows, reusing `check-pipeline-gate.mjs`'s row parser rather than a second one, so `static/content-status.json` carries everything the queue needs
 - [ ] T019 [US2] Extend `ContentStatusUnit` in `src/lib/contentStatus.ts` with the `gates` field, matching T018's emitted shape
-- [ ] T020 [US2] Implement `buildReviewQueue(report)` in `src/lib/reviewQueue.ts` returning units with an open G3 or G5, ordered by course then unit, with G5 rows carrying both the `/docs/...` and `/ur/docs/...` routes; add its assertions to `tests/unit/reviewQueue.test.mjs`, including that a `coming_soon` unit never enters the queue
-- [ ] T021 [US2] Create `src/components/ReviewerGuard.tsx` admitting an account that `is_admin` **or** holds `reviewer`, mirroring `src/components/OwnerConsoleGuard.tsx` including its Art. IX.2 "cosmetic only" disclaimer and its bilingual EN/UR message pair
+- [ ] T020 [US2] Implement `buildReviewQueue(report)` in `src/lib/reviewQueue.ts` returning units with an open G3 or G5, ordered by course then unit, with G5 rows carrying both the `/docs/...` and `/ur/docs/...` routes; **a unit whose G3 is still open offers G3 only, never G5** (Art. VII §4, SC3 - the first of three places the binding is enforced); add its assertions to `tests/unit/reviewQueue.test.mjs`, including that a `coming_soon` unit never enters the queue and that a G3-open unit yields no G5 row
+- [ ] T021 [US2] Create `src/components/ReviewerGuard.tsx` admitting an account that `is_admin` **or** passes `is_reviewer()` **called over RPC**, not read from the cached profile column, so a suspension is honoured by the database (SC2); mirror `src/components/OwnerConsoleGuard.tsx` including its Art. IX.2 "cosmetic only" disclaimer and its bilingual EN/UR message pair
 - [ ] T022 [US2] Create `src/pages/app/admin/review-queue.tsx` inside `ReviewerGuard`: the queue table, a per-criterion form built from `CRITERIA[stage]` (T017), a findings list with the three severities, and the three actions **certify**, **request revision** and **escalate** mapping to dispositions `pass`, `revise` and `escalate` (FR-004)
 - [ ] T023 [US2] Add the side-by-side pane for a G5 row in `src/pages/app/admin/review-queue.tsx`: the English route and the Urdu route in adjacent same-origin frames, each with a plain link beside it so the comparison still works where frames are blocked (FR-004)
 - [ ] T024 [US2] Make **escalate** name the curriculum owner as the destination in `src/pages/app/admin/review-queue.tsx`, citing Art. VII §1's reservation of policy and escalation to the owner, so the action is unambiguous about who it reaches
@@ -142,40 +165,46 @@ the tracker row line - offered as downloads. The app writes nothing to Git, chan
 **Independent test**: certify a G5 in the browser, commit the two downloads unedited, and
 `npm run check:content` passes with the new reviewer's initials on the tracker row.
 
-- [ ] T025 [US3] Implement `buildCertification(input)` in `src/lib/reviewQueue.ts` emitting `contracts/certification.md`'s shape (`schema_version: 1`, `course_code`, `unit_no`, `stage`, `reviewer_id`, `input_manifest`, `criteria`, `findings`, `disposition`, `started_at`, `completed_at`, optional `supersedes`), taking `input_manifest` as the repository-relative path the reviewer produced with `npm run review:evidence prepare` rather than computing digests in a browser that cannot see the bytes
+- [ ] T025 [US3] Implement `buildCertification(input)` in `src/lib/reviewQueue.ts` emitting `contracts/certification.md`'s shape (`schema_version: 1`, `course_code`, `unit_no`, `stage`, `reviewer_id`, `input_manifest`, `criteria`, `findings`, `disposition`, `started_at`, `completed_at`, optional `supersedes`, and `g3_report` when the stage is G5), taking `input_manifest` as the repository-relative path the reviewer produced with `npm run review:evidence prepare` rather than computing digests in a browser that cannot see the bytes
 - [ ] T026 [US3] Reject invalid identity in `buildCertification`: `reviewer_id` must match `/^[A-Z]{1,5}$/` and must **not** start with `agent:`, because Art. VII §3 forbids an agent identity wearing human initials and the converse would mislead `validateAgentTrackerRow` into a signature check that cannot pass (contracts/certification.md)
 - [ ] T027 [US3] Enforce the pass invariant in `buildCertification`: a `pass` disposition with any non-`advisory` unresolved finding, or with any criterion not `pass`, throws at build time - the same two rules `scripts/lib/review-evidence.mjs:193-195` applies to agent reports, so a human certification cannot be weaker evidence than an agent one
-- [ ] T028 [US3] Implement `buildTrackerRow(certification, reportPath)` in `src/lib/reviewQueue.ts` producing the pipe row `| Unit N | <stage> | ✅ | <initials> | review:<path> |` with the path under `specs/content/<course-lowercase>/reviews/unit-NN/<stage>/`
-- [ ] T029 [US3] Add the export assertions to `tests/unit/reviewQueue.test.mjs`: the emitted JSON round-trips, an `agent:` identity is rejected, a `pass` with an unresolved blocking finding throws, `supersedes` is carried when present and absent otherwise, and the tracker row's path prefix matches the unit and stage
-- [ ] T030 [US3] Wire the certify action in `src/pages/app/admin/review-queue.tsx` to download both artefacts, following `src/lib/feedbackExport.ts`'s Blob-and-anchor shape, with on-screen text stating that applying them is a commit the reviewer makes (ADR-0015, FR-009)
+- [ ] T028 [US3] Enforce the **G5 binding** in `buildCertification` in `src/lib/reviewQueue.ts`: a `G5` certification without a `g3_report`, or whose `g3_report` does not sit under `specs/content/<course-lowercase>/reviews/unit-NN/G3/` for the same course and unit, throws at build time (Art. VII §4, SC3, contracts/certification.md "The G5 binding" - the second of three places the binding is enforced; the third is the reviewer's own commit, which is where the referenced file's `disposition` becomes readable)
+- [ ] T029 [US3] Implement `buildTrackerRow(certification, reportPath)` in `src/lib/reviewQueue.ts` producing the pipe row `| Unit N | <stage> | ✅ | <initials> | review:<path> |` with the path under `specs/content/<course-lowercase>/reviews/unit-NN/<stage>/`
+- [ ] T030 [US3] Add the export assertions to `tests/unit/reviewQueue.test.mjs`: the emitted JSON round-trips, an `agent:` identity is rejected, a `pass` with an unresolved blocking finding throws, a `G5` with no `g3_report` throws and one whose `g3_report` names the wrong unit or stage throws, `supersedes` is carried when present and absent otherwise, and the tracker row's path prefix matches the unit and stage
+- [ ] T031 [US3] Wire the certify action in `src/pages/app/admin/review-queue.tsx` to download both artefacts, following `src/lib/feedbackExport.ts`'s Blob-and-anchor shape, with on-screen text stating that applying them is a commit the reviewer makes (ADR-0015, FR-009)
 
 **Checkpoint**: FR-005, FR-006 and FR-009 are complete. Success criteria 3 and 4 are met - 4 by
 Git history rather than by any code, which is the point of the design.
 
 ---
 
-## Phase 6: US4 - The governance record (someone actually holds it)
+## Phase 6: US4 - The governance record (someone actually holds it, and the reader is told)
 
-**Goal**: the capability is held from day one, and the path is exercised end to end before anyone
-external holds it. The spec's own objection is that a capability nobody holds relieves no
-bottleneck.
+**Goal**: the capability is held from day one, the path is exercised end to end before anyone
+external holds it, and the Teacher Guide describes it for the reader it is aimed at. The spec's own
+objection is that a capability nobody holds relieves no bottleneck; Art. X's is that a capability
+nobody has documented is a stale guide, which is a defect rather than a later cleanup task.
 
 **Independent test**: `specs/reviewers/human-reviewers.md` names at least one qualified reviewer
-with scope and evidence, and that reviewer holds the capability in production.
+with scope and evidence, that reviewer holds the capability in production, and the Teacher Guide
+page renders in both locales.
 
-- [ ] T031 [US4] Create `specs/reviewers/human-reviewers.md` with the entry table (initials, scope as courses and stages, qualification evidence, date, status) and the qualification protocol from quickstart.md §1 - blind review of two or three already-reviewed units, compared on agreement over blocking findings and decisively on false passes (FR-010)
-- [ ] T032 [US4] Add the curriculum owner's own entry to `specs/reviewers/human-reviewers.md`, with scope "all courses, G3 and G5" and the existing tracker history as its evidence, and state plainly that this entry changes nothing operationally and exists to exercise the path
-- [ ] T033 [US4] Grant `reviewer` to the owner's production account through `/app/admin/users` and record the resulting `privilege_audit` row id in the entry, so the record and the database agree from the first day
+- [ ] T032 [US4] Create `specs/reviewers/human-reviewers.md` with the entry table (initials, scope as courses and stages, qualification evidence, date, status) and the qualification protocol from quickstart.md §1 - blind review of two or three already-reviewed units, compared on agreement over blocking findings and decisively on false passes (FR-010); open it with one sentence distinguishing it from `specs/reviewers/registry.json`, the signed **agent** registry beside it, which answers a forgeable-identity threat a named person does not pose
+- [ ] T033 [US4] Add the curriculum owner's own entry to `specs/reviewers/human-reviewers.md`, with scope "all courses, G3 and G5" and the existing tracker history as its evidence, and state plainly that this entry changes nothing operationally and exists to exercise the path
+- [ ] T034 [US4] Grant `reviewer` to the owner's production account through `/app/admin/users` and record the resulting `privilege_audit` row id in the entry, so the record and the database agree from the first day
+- [ ] T035 [US4] Create `guides/teacher-guide/review-and-certify.mdx` (`sidebar_position: 7`, after `verified-teacher-material.mdx`): what the `reviewer` capability unlocks, how a G3 or G5 review is certified, that a G5 needs its unit's G3 accepted first, and what the capability does **not** grant - no authoring right, no capability granting, no content editing. Pedagogical register, role capabilities not implementation, per Art. X.1 (FR-011)
+- [ ] T036 [US4] Create the Urdu mirror at `i18n/ur/docusaurus-plugin-content-docs-guides/current/teacher-guide/review-and-certify.mdx`, structurally parallel to T035, since the guides are bilingual Docusaurus pages under Art. X.4 and every other teacher-guide page already has one (FR-011)
 
-**Checkpoint**: FR-010 is complete, and the first external reviewer joins a path known to work.
+**Checkpoint**: FR-010 and FR-011 are complete, the Docs gate passes, and the first external
+reviewer joins a path that is both known to work and written down.
 
 ---
 
 ## Phase 7: Polish and cross-cutting
 
-- [ ] T034 [P] Add two entries to `specs/backlog.md`: (a) `validateAgentTrackerRow` returns early for human initials, so a human row's `review:<path>` reference is never resolved and a dangling certification path passes the gate unnoticed - out of scope here because FR-010 commits to no gate change, but worth closing once several human certifications exist; (b) the deferred CI-applies-the-export idea, which the spec parks deliberately because automating a content-gate write deserves its own decision
-- [ ] T035 [P] Run `npm run check:all` and `npx vitest run --config vitest.rls.config.ts` and record both outcomes in the PR body
-- [ ] T036 Walk `quickstart.md` end to end on one real unit - `EFMP-302` Unit 1's open G5 - and correct any step the walk proves wrong; the quickstart is the only artefact here that claims the whole path works
+- [ ] T037 [P] Add two entries to `specs/backlog.md`: (a) `validateAgentTrackerRow` returns early for human initials, so a human row's `review:<path>` reference is never resolved and a dangling certification path passes the gate unnoticed - out of scope here because FR-010 commits to no gate change, but worth closing once several human certifications exist, and it is also where the G5 binding could be enforced deterministically rather than at build time; (b) the deferred CI-applies-the-export idea, which the spec parks deliberately because automating a content-gate write deserves its own decision
+- [ ] T038 [P] Run `npm run check:all` and `npx vitest run --config vitest.rls.config.ts` and record both outcomes in the PR body
+- [ ] T039 Walk `quickstart.md` end to end on one real unit - `EFMP-302` Unit 1's open G5 - and correct any step the walk proves wrong; the quickstart is the only artefact here that claims the whole path works
 
 ---
 
@@ -193,12 +222,16 @@ Phase 4 (US2, T017-T024) -> needs Phase 2 (the guard) and T009 (the context flag
   T017 -> T022        (one criteria definition)
   T018 -> T019 -> T020 -> T022
   T021 -> T022 -> T023, T024
-Phase 5 (US3, T025-T030) -> needs T022 (the form supplies the certification's inputs)
-  T025 -> T026, T027 -> T029
-  T025 -> T028 -> T029
-  T025-T029 -> T030
-Phase 6 (US4, T031-T033) -> needs Phase 3 (T033 is a real grant through the real page)
-Phase 7 (T034-T036)  -> last; T036 needs every phase
+Phase 5 (US3, T025-T031) -> needs T022 (the form supplies the certification's inputs)
+  T025 -> T026, T027, T028 -> T030
+  T025 -> T029 -> T030
+  T025-T030 -> T031
+  T020, T028 are the two halves of the G5 binding and must agree on the stage vocabulary
+Phase 6 (US4, T032-T036) -> T034 needs Phase 3 (a real grant through the real page)
+  T032 -> T033 -> T034
+  T035 -> T036        (the Urdu mirror follows the English page it mirrors)
+  T035, T036 need Phase 4 and Phase 5 settled, since the guide describes what the page does
+Phase 7 (T037-T039)  -> last; T039 needs every phase
 ```
 
 ## Parallel opportunities
@@ -208,7 +241,9 @@ Phase 7 (T034-T036)  -> last; T036 needs every phase
   written in order but each is independently runnable once T006-T008 land.
 - **Phase 4**: T017 and T018 touch different scripts and may run together; T021 is a new component
   and may be written while either is in progress.
-- **Phase 7**: T034 and T035 are independent.
+- **Phase 6**: T032 and T035 touch unrelated trees and may run together, though T035 reads better
+  once the page it describes exists.
+- **Phase 7**: T037 and T038 are independent.
 
 ## Implementation strategy
 
@@ -217,10 +252,11 @@ dies with a suspension, and can be granted through the real admin page. That is 
 shippable: it changes nothing for anyone who does not hold it, and it is the half of the feature
 that carries all the security risk.
 
-Phases 4 and 5 are the half that relieves the bottleneck, and Phase 6 is what makes the relief
-real rather than theoretical. Phase 6 is deliberately last and deliberately included.
+Phases 4 and 5 are the half that relieves the bottleneck. Phase 6 is what makes the relief real
+rather than theoretical, and it now also carries the Docs gate, so the phase is not optional in the
+way a "governance record" phase might read.
 
 ## Task count
 
-36 tasks: 3 setup, 11 foundational (5 migration and plumbing, 5 RLS tests, 1 feedback-permission
-test), 2 in US1, 8 in US2, 6 in US3, 3 in US4, 3 polish.
+39 tasks: 3 setup, 11 foundational (5 migration and plumbing, 5 RLS tests, 1 feedback-permission
+test), 2 in US1, 8 in US2, 7 in US3, 5 in US4, 3 polish.

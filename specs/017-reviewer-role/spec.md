@@ -45,8 +45,11 @@ gate.
   mirroring `verified_teacher`. `guard_privileged_columns` blocks self-grant, and
   `privilege_audit`'s `audit_change` enum gains `'reviewer'` so every grant and revocation is
   recorded with actor, subject and timestamp.
-- FR-002: `public.is_reviewer(uid)` mirrors `is_admin` - active, non-deleted, capability held. A
-  suspended reviewer loses certification rights immediately without touching dependent policies.
+- FR-002: `public.is_reviewer(uid)` mirrors `is_admin` - active, non-deleted, capability held. It
+  is the single point at which suspension is checked, so a policy written later cannot forget it.
+  The review surface reads it over RPC rather than trusting the cached profile column, so a
+  suspended holder is refused by the database rather than by the browser. See **Enforcement
+  posture** below for what this does and does not control.
 - FR-003: A reviewer may read any unit's content and its review queue. A reviewer may **not** grant
   capabilities, change roles, edit content, or alter their own certifications.
 - FR-004: An admin-panel review surface at `/app/admin/review-queue`: units awaiting G3 or G5, the
@@ -55,7 +58,12 @@ gate.
   escalation ownership under Art. VII §1.
 - FR-005: A certification records reviewer identity, stage, course, unit, the exact input digests
   it was made against, per-criterion findings, disposition and timestamps - in the shape the agent
-  path already writes to `specs/content/<course>/reviews/unit-NN/<stage>/`. It is **append-only**,
+  path already writes to `specs/content/<course>/reviews/unit-NN/<stage>/`. A **G5 certification
+  additionally carries `g3_report`**, the path of the accepted G3 certification for the same
+  English version, and cannot be produced without one: Art. VII §4 requires G5 to bind to accepted
+  G3 evidence, and the agent path already enforces this (`review-evidence.mjs` refuses a G5 report
+  with no `g3_report`). The human path is not exempt from a freshness rule merely because its
+  reviewer is a person. It is **append-only**,
   which Git history gives for free. This is the first time a person other than the owner holds a
   content gate, so the trail is the control. See proposal 1.
 - FR-006: Tracker rows record the **certifying reviewer's initials**, not the owner's. Existing
@@ -73,18 +81,59 @@ gate.
   pipeline gate already accepts human initials with no registry lookup, so this feature adds **no
   gate change** - only the record of who was qualified, for what scope, on what evidence. See
   proposal 2.
+- FR-011: The Teacher Guide gains a page describing the `reviewer` capability - what it unlocks,
+  how certifying works, and what it does not grant - in both locales, mirroring
+  `guides/teacher-guide/verified-teacher-material.mdx`. A reviewer is typically already a teacher,
+  so this is a teacher-facing capability, and Art. X.2 requires the guide updated in the same
+  feature branch. Art. VII's Docs gate names the feature author as its owner.
+
+## Enforcement posture
+
+`reviewer` is an **authorization record, not an enforcement point**, and the spec says so rather
+than implying otherwise.
+
+A certification is a file the browser generates and a person commits. There is no server-side
+certification action, so there is no policy for RLS to deny. What the capability actually provides
+is: a recorded, admin-only, audited statement of who was trusted to certify (FR-001), a
+server-checked gate on reaching the review surface at all (FR-002, over RPC so suspension is
+honoured by the database), and a name in a tracker row that a reader can trace back to
+`specs/reviewers/human-reviewers.md` (FR-006, FR-010).
+
+What actually stops an unauthorized certification is the pull request. `check:pipeline-gate`
+accepts any reviewer matching `/^[A-Z]{1,5}$/` with no registry lookup, deliberately (FR-010), so a
+certification's authority rests on the commit being reviewed and the initials being traceable, not
+on a database permission. This is the same control that has governed every review in the repository
+to date; the capability makes the trust explicit and revocable rather than tacit.
+
+Art. V.2 is not engaged: it protects answer keys, grades and submissions, and a certification is
+none of those. Art. IX.2 is not engaged either, because certifying is not an authenticated database
+action. Recording this plainly is what keeps a later reader from assuming an RLS guarantee that was
+never built.
+
+*Deliberately not chosen:* persisting the certification draft under an `is_reviewer()` policy, which
+would make certifying a real database action but would put a gate outcome in Postgres against
+Art. V.1; and having the pipeline gate resolve initials against `human-reviewers.md`, which would
+move enforcement to CI where it is genuinely checkable, but is a gate change FR-010 excludes. The
+second is the stronger candidate if this posture ever proves insufficient.
 
 ## Success criteria
 
 1. An admin can grant and revoke `reviewer`; a non-admin cannot, including on their own profile,
    and both directions appear in `privilege_audit`.
-2. A suspended reviewer's certification attempt fails, without any policy naming `status`
-   explicitly - `is_reviewer` carries it, as `is_admin` does.
-3. A reviewer can certify a G5 for a unit whose G3 is accepted, and cannot for one whose G3 is not.
+2. A suspended reviewer's `is_reviewer()` returns false and the review surface refuses to load,
+   without any dependent code naming `status` explicitly - `is_reviewer` carries it, as `is_admin`
+   does. The check is the database's answer over RPC, not the browser's reading of a cached column.
+3. A reviewer can certify a G5 for a unit whose G3 is accepted, and cannot for one whose G3 is not:
+   the queue does not offer G5 on a unit with an open G3, and the certification builder refuses a
+   G5 whose `g3_report` is missing, unreadable, or not a `pass`.
 4. A superseded certification is still readable after a newer one exists for the same unit and
    stage.
-5. RLS tests cover: reviewer reads queue, reviewer cannot grant capability, reviewer cannot edit
-   content, reviewer cannot alter another reviewer's certification, suspended reviewer denied.
+5. RLS tests cover the three assertions that have a database surface: reviewer cannot grant a
+   capability, suspended reviewer denied, and holding `reviewer` grants no new write anywhere. The
+   other two originally listed here - "reviewer reads queue" and "reviewer cannot alter another
+   reviewer's certification" - have no database surface, because the queue is derived from a
+   build-time report and certifications are Git artefacts; they are covered by that structural
+   assertion and by Git history's append-only property instead.
 
 ## Out of scope
 
