@@ -259,7 +259,7 @@ function AuthoringContent(): React.ReactElement {
         >
           <option value="">{MESSAGES.pickCourse[locale]}</option>
           {courseOpts.map((g) => (
-            <optgroup key={g.semester} label={`${locale === 'ur' ? 'سمسٹر' : 'Semester'} ${g.semester}`}>
+            <optgroup key={g.trackId + (g.ordinal ?? '')} label={locale === 'ur' ? g.label_ur : g.label_en}>
               {g.courses.filter((c) => c.hasContent).map((c) => (
                 <option key={c.code} value={c.code}>{c.code} - {locale === 'ur' ? c.title_ur : c.title_en}</option>
               ))}

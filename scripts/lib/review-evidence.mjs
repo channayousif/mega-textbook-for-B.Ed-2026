@@ -1,7 +1,8 @@
 import { execFileSync } from 'node:child_process';
+import { resolveUnit } from './content-roots.mjs';
 import { createHash, createPublicKey, verify } from 'node:crypto';
 import { readFileSync, readdirSync, existsSync, lstatSync } from 'node:fs';
-import { resolve, relative, join, dirname, isAbsolute } from 'node:path';
+import { resolve, relative, join, dirname, sep, isAbsolute } from 'node:path';
 
 export const CRITERIA = {
   G3: ['authority', 'sources', 'coverage', 'assessment', 'accessibility', 'readability', 'pedagogy'],
@@ -102,12 +103,19 @@ function manifestRoots(root, course, unit, stage) {
   requireValue(/^[A-Z]{2,4}-\d{3}(--)?$/.test(course) && Number.isInteger(unit) && unit > 0 && CRITERIA[stage], 'invalid unit or stage');
   const code = course.toLowerCase();
   const folder = `unit-${String(unit).padStart(2, '0')}`;
-  const semesters = existsSync(join(root, 'docs')) ? readdirSync(join(root, 'docs')).filter((p) => /^semester-\d+$/.test(p)) : [];
-  const matches = semesters.filter((p) => existsSync(join(root, 'docs', p, code, folder, 'index.mdx')));
-  requireValue(matches.length === 1, 'unit must resolve to exactly one English directory');
-  const coursePath = `docs/${matches[0]}/${code}`;
-  const en = `${coursePath}/${folder}`;
-  const ur = `i18n/ur/docusaurus-plugin-content-docs/current/${matches[0]}/${code}/${folder}`;
+  // Feature 015 FR-003: resolve through content-roots so a unit in any track can
+  // be prepared for review. Paths stay repository-relative, as the manifest needs.
+  let record;
+  try {
+    record = resolveUnit(root, course, unit);
+  } catch {
+    requireValue(false, 'unit must resolve to exactly one English directory');
+  }
+  requireValue(existsSync(join(record.unitDir, 'index.mdx')), 'unit must resolve to exactly one English directory');
+  const rel = (abs) => relative(resolve(root), abs).split(sep).join('/');
+  const coursePath = rel(join(record.unitDir, '..'));
+  const en = rel(record.unitDir);
+  const ur = rel(record.urUnitDir);
   if (stage === 'G5') {
     requireValue(!/^bilingual:\s*false\s*$/m.test(readFileSync(join(root, coursePath, 'course-overview.mdx'), 'utf8')), 'G5 inapplicable for English-only course');
     requireValue(existsSync(join(root, ur, 'index.mdx')), 'Urdu unit missing');

@@ -66,3 +66,7 @@ specs/content/**/figures/.staging/
 # Owner decision 2026-09-13, recorded in specs/content/licence-blueprint.md.
 Scheme-and-Course-guides/course-guides-2025/*.pdf
 Scheme-and-Course-guides/course-guides-2025/*.rtf
+
+# Feature 015 T001: pre-refactor gate output, captured so FR-009's byte-identical
+# comparison is mechanical rather than remembered. Local only, never committed.
+specs/015-licence-content-tree/baseline/

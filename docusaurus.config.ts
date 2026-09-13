@@ -107,6 +107,29 @@ const config: Config = {
         sidebarPath: './sidebars-guides.ts',
       },
     ],
+    /**
+     * Third docs instance: the licence content track (Feature 015, ADR-0020).
+     *
+     * EED-313 Classroom Management is assessed by the Sindh Teaching Licence
+     * test but was restructured out of the 2026 scheme, so it has no degree
+     * course to live in. Keeping it in its own instance rather than a semester
+     * folder avoids recording a false fact about the approved programme in the
+     * URL and the sidebar.
+     *
+     * `id` is load-bearing: omit it and the instance silently merges into the
+     * first one (the failure mode Spec 004's quickstart records). It also fixes
+     * the Urdu tree at i18n/ur/docusaurus-plugin-content-docs-licence/, which
+     * scripts/lib/content-roots.mjs derives rather than assumes.
+     */
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'licence',
+        path: 'licence',
+        routeBasePath: 'licence',
+        sidebarPath: './sidebars-licence.ts',
+      },
+    ],
   ],
 
   themes: [
@@ -114,13 +137,15 @@ const config: Config = {
       '@easyops-cn/docusaurus-search-local',
       /** Bilingual offline search (FR-006, SC-004). 'ur' added to `language` once
        *  the Urdu tokenizer is verified against SC-004 (research R5 / T025).
-       *  `docsRouteBasePath` now also indexes the `guides` instance (Spec 004,
-       *  T001) alongside the curriculum instance at `/`. */
+       *  `docsRouteBasePath` indexes the `guides` instance (Spec 004, T001) and
+       *  the `licence` track (Feature 015, T025) alongside the curriculum
+       *  instance at `/`. Article X-bis discoverability for the licence track is
+       *  met by search plus its own navbar entry, not by the semester sidebar. */
       {
         hashed: true,
         language: ['en'],
         indexBlog: false,
-        docsRouteBasePath: ['/', '/guides'],
+        docsRouteBasePath: ['/', '/guides', '/licence'],
       },
     ],
   ],
@@ -140,6 +165,11 @@ const config: Config = {
       logo: { alt: 'B.Ed Mega Textbook', src: 'img/logo.svg', width: 28, height: 28 },
       title: 'B.Ed Textbook',
       items: [
+        // Feature 015, T027 - the licence track's only navigation entry.
+        // Article X-bis discoverability is met here plus offline search; the
+        // track is deliberately absent from the semester sidebar, because
+        // EED-313 is not part of the approved 2026 scheme (research R3).
+        { to: '/licence/', label: 'Licence track', position: 'left' },
         // Spec 010 follow-up, 2026-09-07 - registers
         // src/components/MobileTopBarWidgets.tsx; renders nothing at
         // desktop widths, a compact locale-switch + sign-in-status pair at
