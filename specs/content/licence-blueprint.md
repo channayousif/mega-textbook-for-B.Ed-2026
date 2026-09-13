@@ -16,6 +16,7 @@ recording that no course covers it.
 | S2 | Sample Paper for Teacher Licensing Test **with Specification** | `steda.gos.pk/Downloads/model_papers_iba.pdf` | 2026-09-12 | The **Summary of Test Division**: sections, item counts, marks, weightage, time; per-item subject-matter tags |
 | S3 | Teaching License Policy, Sindh 2023 | `steda.gos.pk/tlicense.aspx` | 2026-09-12 | Eligibility tiers, 5-year validity, CPD renewal |
 | S4 | B.Ed (4-Year) 2025 scheme of studies (`EED-` codes) | `Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx` | 2026-09-12 | The scheme the licence test was built against; 55 course rows |
+| S5 | 2025 per-course guides (HEC pre-service series) | `Scheme-and-Course-guides/extracted-text/course-guides-2025/`; originals published by HEC at `hec.gov.pk/english/services/universities/RevisedCurricula/Pages/Education.aspx` | 2026-09-13 | The unit-by-unit source the syllabus was written from; 8 Part II guides, 1,142 pages |
 
 S2 is a scanned document with no text layer; figures below were read from page renders at 150 dpi
 and transcribed by hand. **Re-verify against the PDF before any figure is published or priced.**
@@ -114,9 +115,74 @@ course guides for the 2025 courses, which are the authority the test was built a
 3. **The dual-outcome claim survives, at topic level rather than course level.** The 2026 courses
    still cover most 2025 material; only the packaging changed. A unit authored for `EFMP-301`
    serves `EED-513` topics. The exception is Classroom Management, which needs its own module.
-4. **[open] The 2025 course guides are not in the repository.** Only the scheme table
-   (`B.Ed (4-Year) 2025-2.docx`) is present. The per-course guides are needed before any
-   licence-track content is authored, on the same footing as the 2026 guides.
+4. ~~The 2025 course guides are not in the repository.~~ **Resolved 2026-09-13**: supplied at
+   `Scheme-and-Course-guides/course-guides-2025/` (25 files, 108 MB). All eight Part II guides are
+   present and text-extractable. See S5 and the guide-anchored mapping below.
+
+## The syllabus is these guides' unit lists, verbatim *(2026-09-13)*
+
+With S5 in hand the mapping stops being inference. **STEDA's Part II sub-topic lists are the unit
+headings of the 2025 course guides, copied in order.** Two checks:
+
+| STEDA sub-topic (S1) | `ClassroomMgmt_Sept13.pdf` unit |
+|---|---|
+| Learning theories and classroom management | UNIT 1: Learning theories and classroom management |
+| Curriculum and classroom management | UNIT 2: Curriculum and classroom management |
+| Routines, schedules, and time management in diverse classrooms | UNIT 3: Routines, schedules, and time management in diverse classrooms |
+| Creating shared values and community | UNIT 4: Creating shared values and community |
+
+| STEDA sub-topic (S1) | `FoundationsEd_Sept13.pdf` unit |
+|---|---|
+| The ideological foundations of education | UNIT 1: The ideological foundations of education |
+| The philosophical foundations of education | UNIT 2: The philosophical foundations of education |
+| The sociological foundations of education | UNIT 3: The sociological foundations of education |
+| The psychological foundations of education | UNIT 4: The psychological foundations of education |
+| The historical foundations of education | UNIT 5: The historical foundations of education |
+
+The same holds for `SchoolCommTeacher`, `ChildDevpt`, `EduPsy`, `MethodsTeaching`,
+`ClassroomAssess` and `TestDevEval`. **The licence syllabus is a table of contents.**
+
+### Consequences
+
+1. **Coverage is now auditable per unit, not per course.** Each STEDA objective resolves to a
+   named unit in a named guide, and either has a 2026 host or does not.
+2. **Authoring has a direct source.** Licence-track content is written from the guide unit the
+   syllabus points at, under the usual Art. II.3 sourcing discipline - these guides are the
+   authority the examiner used.
+3. **The eight Part II guides are the whole Part II corpus.** 1,142 pages across Methods of
+   Teaching (95), Foundations of Education (106), Child Development (156), Educational Psychology
+   (133), Classroom Management (56), Classroom Assessment (308), Test Development and Evaluation
+   (120) and School, Community and Teacher (168).
+
+## Part II - guide-anchored mapping
+
+| STEDA heading | 2025 guide (S5) | Units | 2026 host | Gap |
+|---|---|---|---|---|
+| Methods of Teaching | `MethodsTeaching_Sept13.pdf` | 7 | `EFPG-*`, dispersed | partial |
+| Foundations of Education | `FoundationsEd_Sept13.pdf` | 5 | `EFMP-409` | none |
+| Child Development | `ChildDevpt_Sept13-1.pdf` | 6 | `EFID-501` (Sem V) | window |
+| Education Psychology | `EduPsy_Sept13.pdf` | 4+ | `EFMP-301` *(U1 built)* | none |
+| **Classroom Management** | **`ClassroomMgmt_Sept13.pdf`** | **5** | **none** | **full** |
+| Classroom Assessment | `ClassroomAssess_Sept13.pdf` | 5 | `EFMP-408` | none |
+| Test Development and Evaluation | `TestDevEval_Sept13.pdf` | 5 | `EFMP-408` (merged) | none |
+| School Community and Teacher | `SchoolCommTeacher_Sept13.pdf` | 7 | `GCCE-400` + `GSOS-301`, partial | partial |
+
+### Classroom Management: the gap, fully specified
+
+`EED-313` has no 2026 successor and the licence tests it at the weight of two sampled CRQ items.
+Its five units are now known and sourced:
+
+| Unit | Title |
+|---|---|
+| 1 | Learning theories and classroom management |
+| 2 | Curriculum and classroom management |
+| 3 | Routines, schedules, and time management in diverse classrooms |
+| 4 | Creating shared values and community |
+| 5 | Course review |
+
+**Recommendation:** author it as a four-unit licence-track module (Unit 5 is a course review, not
+content) from `ClassroomMgmt_Sept13.pdf`. At 56 pages it is the smallest of the eight guides and
+the highest licence value per unit authored, because nothing else in the corpus covers it.
 
 ## Part II - Pedagogical Content Knowledge (75% weightage, CRQ + ERQ)
 
@@ -173,9 +239,9 @@ S1 names five B.Ed course areas and their sub-topics. Mapping to the 2026 scheme
 **Classroom Management is the largest coverage gap, and its origin is now known.** It was
 `EED-313` Classroom Management, a standalone Foundation course in the 2025 scheme, which the 2026
 revision restructured away with no successor. It carries at least two sampled CRQ items (Classroom
-Challenges, Instruction Differentiation). **Action:** author it as a licence-track module from the
-`EED-313` course guide rather than hunting for a 2026 host course. Enumerating the 34 `EFSP-`
-elective titles is still worth doing, but is no longer the primary route to closing this.
+Challenges, Instruction Differentiation). **Action:** author it as a four-unit licence-track module from
+`ClassroomMgmt_Sept13.pdf`, whose unit list is given above. Enumerating the 34 `EFSP-` elective
+titles is still worth doing, but is no longer the route to closing this.
 
 ### D. Classroom Assessment and Test Development and Evaluation
 
@@ -274,8 +340,12 @@ in Semester V, outside the locked Semesters I-IV window; and Part I positioning 
 ## Open items
 
 1. **Re-verify S2 figures** against the scanned PDF. Transcribed by hand from page renders.
-2. **Enumerate the 34 `EFSP-` elective titles** from the semester guides, then re-run the
-   Classroom Management gap - it may already be covered by an elective.
+2. ~~Whether to commit the 108 MB of 2025 guides.~~ **Decided 2026-09-13: extracted text only.**
+   The binaries are the HEC pre-service course guides, published at
+   `hec.gov.pk/english/services/universities/RevisedCurricula/Pages/Education.aspx` - the same
+   source S1 cites as the authority for Part II. Ignoring them loses nothing recoverable, and
+   spares a 27 MB history a permanent 108 MB. The committed text is a derivative; HEC holds the
+   record of record. Reversible via two lines in `.gitignore`.
 3. **Decide Part I.** Cover the Class 1-8 school curriculum as a separate line, or state publicly
    that the product serves Part II only. This is a positioning decision, not a content one.
 4. **Unit-level mapping** is possible only for `EFMP-301` U1 and `EFMP-302` U1-U6, the only
