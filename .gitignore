@@ -50,3 +50,11 @@ specs/content/**/.staging/
 
 # Spec 009: figure generation staging (raster drops awaiting optimise) — never committed (FR-004)
 specs/content/**/figures/.staging/
+
+# 2025 course guides: 108 MB of source PDFs/RTFs, against a 27 MB repo history.
+# The extracted text under Scheme-and-Course-guides/extracted-text/course-guides-2025/
+# is committed instead - it is what the pipeline reads and what makes the licence
+# blueprint auditable. Reversible: drop these two lines to track the binaries.
+# Decision is open in specs/content/licence-blueprint.md.
+Scheme-and-Course-guides/course-guides-2025/*.pdf
+Scheme-and-Course-guides/course-guides-2025/*.rtf
