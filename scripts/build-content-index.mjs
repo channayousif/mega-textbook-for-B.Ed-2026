@@ -33,6 +33,7 @@ import { readFileSync, readdirSync, existsSync, statSync, writeFileSync, mkdirSy
 import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
+import { walkCourses } from './lib/content-roots.mjs';
 import { countChecklistInSection } from './lib/mdx-sections.mjs';
 
 const REPO = resolve(fileURLToPath(new URL('..', import.meta.url)));
@@ -50,7 +51,7 @@ const topicFilesIn = (p) =>
 
 const records = [];
 
-function push(semester, semesterDir, courseDir, unitDir, filename, kind, filePath) {
+function push(semester, routePrefix, unitDir, filename, kind, filePath) {
   const parsed = matter(readFileSync(filePath, 'utf8'));
   const { data } = parsed;
   const self_assessment_count = kind === 'topic'
@@ -67,61 +68,58 @@ function push(semester, semesterDir, courseDir, unitDir, filename, kind, filePat
     kind,
     title: data.title,
     coming_soon: Boolean(data.coming_soon),
-    permalink: `/${semesterDir}/${courseDir}/${unitDir}/${filename.replace('.mdx', '')}`,
+    permalink: `${routePrefix}/${unitDir}/${filename.replace('.mdx', '')}`,
     self_assessment_count,
   });
 }
 
-for (const semesterDir of dirs(DOCS_DIR)) {
-  const semesterMatch = /^semester-(\d+)$/.exec(semesterDir);
-  if (!semesterMatch) continue;
-  const semester = Number(semesterMatch[1]);
-  const semesterPath = join(DOCS_DIR, semesterDir);
+// Feature 015 FR-002: content-roots.mjs is the single definition of where content
+// lives. `routePrefix` comes from the course record rather than a literal
+// semester directory, so a track with its own routeBasePath indexes correctly.
+for (const course of walkCourses(REPO)) {
+  const { ordinal: semester, trackDir, courseFolder, courseDir: coursePath } = course;
+  const routePrefix = `/${[trackDir, courseFolder].filter(Boolean).join('/')}`;
 
-  for (const courseDir of dirs(semesterPath)) {
-    const coursePath = join(semesterPath, courseDir);
+  // course-level: optional course-review.mdx (Spec 008)
+  const crPath = join(coursePath, 'course-review.mdx');
+  if (existsSync(crPath)) {
+    const { data } = matter(readFileSync(crPath, 'utf8'));
+    records.push({
+      semester,
+      course_code: data.course_code,
+      unit_no: null,
+      topic_no: null,
+      kind: 'course-review',
+      title: data.title,
+      coming_soon: Boolean(data.coming_soon),
+      permalink: `${routePrefix}/course-review`,
+      self_assessment_count: null,
+    });
+  }
 
-    // course-level: optional course-review.mdx (Spec 008)
-    const crPath = join(coursePath, 'course-review.mdx');
-    if (existsSync(crPath)) {
-      const { data } = matter(readFileSync(crPath, 'utf8'));
-      records.push({
-        semester,
-        course_code: data.course_code,
-        unit_no: null,
-        topic_no: null,
-        kind: 'course-review',
-        title: data.title,
-        coming_soon: Boolean(data.coming_soon),
-        permalink: `/${semesterDir}/${courseDir}/course-review`,
-        self_assessment_count: null,
-      });
+  for (const unitDir of dirs(coursePath)) {
+    const unitMatch = /^unit-(\d+)$/.exec(unitDir);
+    if (!unitMatch) continue;
+    const unitPath = join(coursePath, unitDir);
+    const topicFiles = topicFilesIn(unitPath);
+
+    if (topicFiles.length > 0) {
+      // Spec 008 per-topic layout
+      for (const tf of topicFiles) {
+        push(semester, routePrefix, unitDir, tf, 'topic', join(unitPath, tf));
+      }
+      const uaPath = join(unitPath, 'unit-assessment.mdx');
+      if (existsSync(uaPath)) {
+        push(semester, routePrefix, unitDir, 'unit-assessment.mdx', 'assessment', uaPath);
+      }
+      continue;
     }
 
-    for (const unitDir of dirs(coursePath)) {
-      const unitMatch = /^unit-(\d+)$/.exec(unitDir);
-      if (!unitMatch) continue;
-      const unitPath = join(coursePath, unitDir);
-      const topicFiles = topicFilesIn(unitPath);
-
-      if (topicFiles.length > 0) {
-        // Spec 008 per-topic layout
-        for (const tf of topicFiles) {
-          push(semester, semesterDir, courseDir, unitDir, tf, 'topic', join(unitPath, tf));
-        }
-        const uaPath = join(unitPath, 'unit-assessment.mdx');
-        if (existsSync(uaPath)) {
-          push(semester, semesterDir, courseDir, unitDir, 'unit-assessment.mdx', 'assessment', uaPath);
-        }
-        continue;
-      }
-
-      // legacy layout
-      for (const [kind, filename] of Object.entries(KIND_FILES)) {
-        const filePath = join(unitPath, filename);
-        if (!existsSync(filePath)) continue;
-        push(semester, semesterDir, courseDir, unitDir, filename, kind, filePath);
-      }
+    // legacy layout
+    for (const [kind, filename] of Object.entries(KIND_FILES)) {
+      const filePath = join(unitPath, filename);
+      if (!existsSync(filePath)) continue;
+      push(semester, routePrefix, unitDir, filename, kind, filePath);
     }
   }
 }

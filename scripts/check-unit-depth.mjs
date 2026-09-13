@@ -29,6 +29,7 @@ import { readdirSync, statSync, existsSync } from 'node:fs';
 import { join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { checkUnitVerdict } from './lib/unit-depth.mjs';
+import { walkUnits } from './lib/content-roots.mjs';
 
 const REPO = resolve(fileURLToPath(new URL('..', import.meta.url)));
 const ROOT = process.env.CONTENT_ROOT ? resolve(process.env.CONTENT_ROOT) : REPO;
@@ -50,24 +51,17 @@ function checkUnit({ unitDir, courseCode, unitNo }) {
   for (const msg of verdict.errors) err(label, msg);
 }
 
-// ---- walk docs/ (mirrors check-pipeline-gate.mjs) ---------------------------
+// ---- walk every content track (Feature 015 FR-002) --------------------------
+// Was a local docs/ walk with its own grouping-directory pattern; content-roots.mjs
+// is now the single
+// definition of where content lives, so a new track is covered automatically.
 function walk() {
   if (!existsSync(DOCS_DIR)) {
     console.error('check-unit-depth: docs/ not found — nothing to check.');
     return;
   }
-  for (const sem of dirs(DOCS_DIR)) {
-    if (!/^semester-\d+$/.test(sem)) continue;
-    const semDir = join(DOCS_DIR, sem);
-    for (const course of dirs(semDir)) {
-      const courseDir = join(semDir, course);
-      const courseCode = course.toUpperCase();
-      for (const unit of dirs(courseDir)) {
-        const m = /^unit-(\d+)$/.exec(unit);
-        if (!m) continue;
-        checkUnit({ unitDir: join(courseDir, unit), courseCode, unitNo: Number(m[1]) });
-      }
-    }
+  for (const { unitDir, courseCode, unitNo } of walkUnits(ROOT)) {
+    checkUnit({ unitDir, courseCode, unitNo });
   }
 }
 

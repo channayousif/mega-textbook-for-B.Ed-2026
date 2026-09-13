@@ -16,9 +16,16 @@ import { readdirSync, statSync, readFileSync, existsSync } from 'node:fs';
 import { join, resolve, extname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { CONTENT_ROOTS } from './lib/content-roots.mjs';
+
 const REPO = resolve(fileURLToPath(new URL('..', import.meta.url)));
 const ROOT = process.env.CONTENT_ROOT ? resolve(process.env.CONTENT_ROOT) : REPO;
-const TARGETS = ['docs', 'i18n', 'build', 'specs/content'].map((d) => join(ROOT, d)).filter(existsSync);
+// Track content roots come from content-roots.mjs so a new track is scanned
+// automatically (Feature 015 FR-014). Without this a licence unit's answer keys
+// would be caught only via `build/`, which does not exist before a build runs.
+// `i18n`, `build` and `specs/content` are this gate's own non-track roots.
+const TARGETS = [...CONTENT_ROOTS, 'i18n', 'build', 'specs/content']
+  .map((d) => join(ROOT, d)).filter(existsSync);
 
 // Forbidden front-matter keys — the schema also rejects these; never relaxed, not even inside
 // the Spec 008 bounded section.

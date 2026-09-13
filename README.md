@@ -96,6 +96,26 @@ The pipeline rejects unsigned, stale, unqualified or revoked agent evidence. Exi
 reviews remain valid. [ADR-0019](history/adr/0019-independent-agents-for-g3-g5-review.md)
 and Constitution v3.0.0 define the delegation and audit requirements.
 
+## Licence track
+
+Most content is the B.Ed degree corpus, under `docs/semester-N/<course>/unit-NN/`. A second
+content track holds material the Sindh Teaching Licence test assesses but the 2026 scheme does
+not teach - `EED-313` Classroom Management was a Foundation course in the 2025 scheme and was
+restructured away with no successor, while the licence still tests it.
+
+Licence content lives in `licence/<course>/unit-NN/` and renders at `/licence/`, with its Urdu
+mirror under `i18n/ur/docusaurus-plugin-content-docs-licence/`. It is deliberately absent from the
+semester sidebar: showing a non-scheme course there would imply it is part of the approved
+programme. It is reachable from its own navbar entry and from offline search.
+
+Both tracks face the same gates. `scripts/lib/content-roots.mjs` is the single definition of where
+content lives, so adding a course to either track stays a content-only change, which
+`npm run check:add-course` proves on every CI run.
+
+See [ADR-0020](history/adr/0020-content-tracks.md),
+[`specs/015-licence-content-tree/`](specs/015-licence-content-tree/) and
+[`specs/content/licence-blueprint.md`](specs/content/licence-blueprint.md).
+
 ## Content depth standard
 
 [`specs/007-content-depth-standard/`](specs/007-content-depth-standard/) adds a **concept-coverage
