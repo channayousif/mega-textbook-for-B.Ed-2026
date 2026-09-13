@@ -28,7 +28,19 @@ unit (Spec 008): `index.mdx` (opening) + `topic-01.mdx … topic-NN.mdx` (one ni
 cycle each) + `unit-assessment.mdx` (chapter summary + 10 MCQ / 10 RRQ / 5 ERQ + a bounded
 `## Answers and marking guidance` section) + an optional `unit-teacher-notes.mdx` - plus the
 governance artefacts the gates read: `coverage/unit-NN.md` (v2), `sources/unit-NN.md`,
-`figures/unit-NN.md`.
+`figures/unit-NN.md`, `concepts/unit-NN.md` (v4.0).
+
+**The concept graph (v4.0)** records what a learner must understand and in what order, where the
+other three record what the unit covers, what grounds it and what it shows. See
+`## Concept graph (v4.0)` in the style guide and
+`specs/016-concept-graph-v4/contracts/concept-graph.md`. Two rules matter while authoring:
+
+- `Label UR` comes from `terminology.csv` where the term is banked. Authored labels go in a list at
+  the foot of the concepts file for G5 review, because a governance file never passes the parity
+  gate and nothing else would catch a poor one.
+- Assessment item IDs are **derived** from the existing 10/10/5 numbering (`MCQ-01`, `RRQ-07`,
+  `ERQ-03`). Never add IDs to prose: leaving `unit-assessment.mdx` untouched is what keeps the
+  parity gate green and every unit's `translation_status` where it was.
 
 **One skill, no sub-agent.** The research → design → draft → self-review → run-gates loop needs
 the harness's own `WebSearch`/`WebFetch` and the "run a gate, read the failure, fix, re-run"
@@ -198,7 +210,7 @@ npm run check:content
 npm run check:all
 ```
 
-`check:content` runs, in order: `validate:content` -> `check:pipeline-gate` -> `check:depth-gate` -> `check:figures` -> `check:no-em-dash` -> `check:no-answer-keys` -> `check:docs-sync`.
+`check:content` runs, in order: `validate:content` -> `check:pipeline-gate` -> `check:depth-gate` -> `check:figures` -> `check:no-em-dash` -> `check:no-answer-keys` -> `check:concept-graph` -> `check:docs-sync`.
 <!-- END GENERATED gate-commands -->
 
 `check:pipeline-gate` may be **red** for this unit until its `tasks.md` G2/G3 rows re-clear the
