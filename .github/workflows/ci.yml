@@ -78,6 +78,11 @@ jobs:
       - name: Answer-key safety check
         run: npm run check:no-answer-keys
 
+      # Concept-graph gate: coverage, orphans, prerequisite cycles, assessment
+      # linkage (Feature 016, style guide v4.0). Opt-in per unit.
+      - name: Concept-graph gate
+        run: npm run check:concept-graph
+
       # Adding a course is content-only — zero platform-code change (FR-005, SC-006, T034)
       - name: Add-course content-only check
         run: npm run check:add-course
