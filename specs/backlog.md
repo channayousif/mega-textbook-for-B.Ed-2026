@@ -87,3 +87,25 @@ lost, without blocking delivery of the feature that surfaced them.
   class, so the contrast is positional, and colouring "rows" against "groups" would editorialise
   a judgement the figure does not make. Revisit only if the owner wants that contrast stated.
 
+
+
+## Deferred from Feature 016 (style guide v4.0), 2026-09-13
+
+The standard is frozen from v4.0 until 50 units exist. These are the improvements that would
+otherwise have been a tenth revision; apply them in one batch when the freeze lifts.
+
+- **Widen `contracts/unit-frontmatter.schema.json`'s `course_code` and `clo_refs` patterns.**
+  Feature 016 FR-008, deferred by owner decision. Both are `^[A-Z]{2,4}-[0-9]{3}(--)?$`-shaped,
+  which correctly validates every code in the B.Ed scheme and the licence track. The reason to
+  widen is SSC/HSC fit, but that scheme is not in the repository, so widening now would trade real
+  typo-catching for a guess at a format nobody has seen. Do it when an SSC/HSC scheme lands, which
+  is also when the cheapest-moment argument actually applies.
+- **Cross-unit and cross-course prerequisite edges in the concept graph.** v4.0 restricts
+  `Prerequisites` to concepts within the same unit, deliberately, so the freeze could begin. The
+  sequencing value of the graph grows considerably once edges cross units.
+- **`EFMP-301`'s content-spec has no `## Unit 1` heading**, so `unitSectionLines` returns null and
+  the **golden unit is silently skipped by `check:depth-gate`**. Found while building the concept
+  gate, which now handles both spec shapes by falling back to document level. Adding the heading
+  would bring the golden unit under the depth gate for the first time - worth doing, but it may
+  surface depth findings that have been hidden since Spec 007, so it is a task with unknown size
+  rather than a one-line fix.

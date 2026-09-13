@@ -1,5 +1,5 @@
 ---
-version: "3.4"
+version: "4.0"
 ---
 
 # Content Style Guide
@@ -33,6 +33,24 @@ widens the manifest `Kind` vocabulary from `{diagram, illustration}` to the six 
 proven on the EFMP-302 Unit 1 proving unit. *(Recorded retrospectively on 2026-09-11: the v3.3
 bump shipped without its changelog paragraph. `check:docs-sync` now fails when the `version`
 field and this record disagree, so a freeze cannot again be applied without being written down.)*
+
+**v4.0** (2026-09-13, Feature 016) adds the **concept graph**, a fourth per-unit governance table
+at `specs/content/<course>/concepts/unit-NN.md`, beside `coverage/`, `sources/` and `figures/`.
+Those three record what a unit covers, what grounds it and what it shows; this records what a
+learner must understand and in what order, which is the substrate any later sequencing or
+diagnosis needs. See `## Concept graph (v4.0)` below and
+`specs/016-concept-graph-v4/contracts/concept-graph.md`.
+
+The layer is **additive by construction**: it adds no heading to any `topic-*.mdx` or
+`unit-assessment.mdx`, so the EN/UR parity gate is untouched and no unit's `translation_status`
+changes. Assessment item IDs are derived from the existing 10/10/5 numbering rather than authored
+into prose. Proven on the EFMP-302 Unit 1 proving unit, then the EFMP-301 Unit 1 golden unit, both
+of which kept their translation status exactly.
+
+**This is the last standard revision before the freeze.** Nine revisions in, each one has
+invalidated finished work; `EFMP-301` Unit 1 has been authored three times. From here the standard
+is frozen until 50 units exist, and improvements are recorded in `specs/backlog.md` and applied in
+one batch. `terminology.csv` is unchanged; the bump re-freezes the pair per Spec 006 FR-007.
 
 **v3.4** (2026-09-11, Spec 013) puts figure colour under a published token set. Figures are
 themed by the site's own `[data-theme]`, never `prefers-color-scheme`, and the dark variant is
@@ -363,6 +381,35 @@ suppressed, and only for routes whose last path segment before `index.html` is
 This is a bounded, reversible carve-out (Constitution Art. V.2, amended v2.6.0). It is
 **distinct** from the RLS-protected Spec 003 LMS quiz/answer-key store, which stays
 backend-only and `verified_teacher`-gated.
+
+## Concept graph (v4.0)
+
+Every unit authored at v4.0 or later carries `specs/content/<course>/concepts/unit-NN.md`, the
+fourth governance table. Enforced by `check:concept-graph`; the full contract is
+`specs/016-concept-graph-v4/contracts/concept-graph.md`.
+
+| Column | Rule |
+|---|---|
+| `Concept ID` | `CON:<COURSE>-<unit>-<n>`, unique in the unit, stable once assigned |
+| `Label EN` | A short noun phrase naming the thing to be understood. Not a sentence |
+| `Label UR` | The same in Urdu, from `terminology.csv` where the term is banked; authored labels are listed at the foot of the file for G5 review |
+| `Prerequisites` | Comma-separated concept IDs from the same unit, or `-` |
+| `Topic` | The `### Topic list` label the concept belongs to |
+| `SLO refs` | As in the unit's front-matter `clo_refs` |
+| `Assessment item IDs` | Derived IDs, or `-` |
+
+**Granularity.** One concept is one thing a learner can be said to understand or not. The two
+proving units landed at 15 and 17 concepts for 14 sub-topics, so roughly one per sub-topic with a
+few splits where a sub-topic carries two genuinely separable ideas. A unit of 40 concepts is too
+fine to maintain; a unit of 5 says nothing useful about order.
+
+**Assessment item IDs are derived, never authored.** `unit-assessment.mdx` already numbers its
+items beneath three named headings, so `MCQ-01 … MCQ-10`, `RRQ-01 … RRQ-10` and `ERQ-01 … ERQ-05`
+read straight off the page. Nothing is added to prose, which is what keeps the parity gate and every
+unit's `translation_status` untouched.
+
+**Prerequisites are within-unit only** at v4.0. Cross-unit and cross-course edges are a later
+revision, deliberately deferred so the freeze can begin.
 
 ## Figure markers and manifests (Spec 008 authoring, Spec 009 rendering)
 
