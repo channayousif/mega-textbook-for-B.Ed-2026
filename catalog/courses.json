@@ -114,7 +114,15 @@
     {
       "number": 4,
       "priority": 4,
-      "courses": []
+      "courses": [
+        {
+          "code": "EFMP-408",
+          "title_en": "Educational Assessment and Evaluation",
+          "title_ur": "تعلیمی جانچ اور تشخیص",
+          "credit_hours": "3 (3-0)",
+          "category": "Major: Professional"
+        }
+      ]
     },
     {
       "number": 5,
