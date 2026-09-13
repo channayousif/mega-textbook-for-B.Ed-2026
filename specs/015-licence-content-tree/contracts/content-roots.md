@@ -10,6 +10,14 @@ hardcoded `UR_BASE` join appear exactly once in the repository, and this module 
 
 Frozen array of `ContentTrack` (see data-model.md). Order is stable and defines gate-report order.
 
+### `CONTENT_ROOTS`
+
+Frozen flat list of every directory that holds track content, derived from `TRACKS`. For the
+pattern-scanning gates, which walk whole trees rather than units: `check-no-em-dash.mjs` and
+`check-no-answer-keys.mjs` consume this instead of their own arrays (FR-014). Those gates also
+scan non-track roots of their own (`guides`, `specs/content`, `build`); `CONTENT_ROOTS` replaces
+only the track-derived part of their list.
+
 ### `walkUnits(root, options?) -> UnitRecord[]`
 
 Every unit across every track, sorted by track order, then `trackDir`, then `courseFolder`, then
@@ -41,8 +49,11 @@ Joins under the record's track `urBase`. The only sanctioned way to build an Urd
 
 ## Consumers
 
-`validate-content.mjs`, `check-unit-depth.mjs`, `check-figures.mjs`, `check-pipeline-gate.mjs`,
-`build-content-index.mjs`, `lib/review-evidence.mjs`.
+Unit-walking: `validate-content.mjs`, `check-unit-depth.mjs`, `check-figures.mjs`,
+`check-pipeline-gate.mjs`, `build-content-index.mjs`, `lib/review-evidence.mjs`.
+
+Roots-only: `check-no-em-dash.mjs`, `check-no-answer-keys.mjs` - they consume `CONTENT_ROOTS`
+and never call `walkUnits`.
 
 ## Non-goals
 

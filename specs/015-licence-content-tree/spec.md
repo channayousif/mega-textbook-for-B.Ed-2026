@@ -29,6 +29,7 @@ Degree content keeps its paths, routes and behaviour unchanged.
 
 - Q: Can the same `course_code` exist in two tracks, given `EFMP-408` is both a degree course and a licence-objective carrier? → A: No. Course codes are globally unique across all tracks; a duplicate is a gate failure.
 - Q: "Track" for the catalogue key but "tier" for the code concept - which is canonical? → A: **Track**, everywhere; "tier" is dropped. Further tracks are anticipated (pre-service, CPD / in-service, licence), so the degree corpus is the `pre-service` track rather than a peer of `licence`.
+- Q: `check-no-em-dash` and `check-no-answer-keys` scan hardcoded directory lists, not the walker, so licence content would bypass both. How are they covered? → A: Export `CONTENT_ROOTS` from `content-roots.mjs` and have both gates consume it, so one definition serves unit-walking and pattern-scanning gates alike.
 - Q: `CourseOptionGroup` is semester-keyed but a licence course has no semester. How does the teacher course picker group an ordinal-free track? → A: Generalise the group to track-keyed, `{ trackId, label, ordinal: number | null, courses }`; `semester` becomes `ordinal`.
 
 ## Requirements
@@ -41,6 +42,13 @@ Degree content keeps its paths, routes and behaviour unchanged.
   re-deriving the semester regex and `UR_BASE` join. Five copies become one.
 - FR-003: `review-evidence.mjs`'s `inputManifest` resolves a unit through the same walker, so a
   licence unit can be prepared for review exactly as a degree unit is.
+- FR-014: `content-roots.mjs` also exports `CONTENT_ROOTS`, the flat list of directories that hold
+  content for any track. `check-no-em-dash.mjs` and `check-no-answer-keys.mjs` consume it instead
+  of their own hardcoded arrays. These two scan whole trees for text patterns rather than units,
+  so they need the roots list, not `walkUnits()`. Without this a licence unit bypasses Article
+  III.9's zero-em-dash rule entirely, and bypasses answer-key leakage detection at source - the
+  answer-key gate would catch it only through `build/`, which does not exist before a build runs.
+  Adding a third track must extend both gates automatically.
 - FR-004: Two tracks ship: **`pre-service`** (`docs/semester-N/<course>/unit-NN/`, unchanged -
   the degree corpus, which groups by semester) and **`licence`**
   (`licence/<course>/unit-NN/`, no semester grouping). Semester grouping is a property of the
@@ -81,12 +89,15 @@ Degree content keeps its paths, routes and behaviour unchanged.
 ## Success criteria
 
 1. `npm run check:all` is green before and after, with no change in findings on `docs/`.
-2. A scaffolded `licence/eed-313/unit-01/` with a placeholder unit is seen by
-   `validate:content`, `check:depth-gate`, `check:figures` and `check:pipeline-gate`, and fails
-   each of them for the right reason when deliberately broken.
+2. A scaffolded `licence/eed-313/unit-01/` with a placeholder unit is seen by every content gate -
+   `validate:content`, `check:depth-gate`, `check:figures`, `check:pipeline-gate`,
+   `check:no-em-dash` and `check:no-answer-keys` - and fails each of them for the right reason when
+   deliberately broken. The last two are the ones that would silently skip the track today.
 3. `review:evidence prepare EED-313 1 G3` produces a manifest, proving FR-003.
 4. `/licence/eed-313/` renders in both locales and appears in offline search.
-5. The semester regex and the hardcoded `UR_BASE` join appear exactly once in the repository.
+5. The semester regex, the hardcoded `UR_BASE` join, and any hardcoded content-root list each
+   appear exactly once in the repository - in `content-roots.mjs`. No gate carries its own idea of
+   where content lives, whether it walks units or scans trees.
 
 ## Out of scope
 

@@ -74,7 +74,9 @@ scripts/
 ├── check-figures.mjs            # MODIFIED
 ├── check-pipeline-gate.mjs      # MODIFIED
 ├── build-content-index.mjs      # MODIFIED
-└── check-add-course.mjs         # MODIFIED - also prove a licence course is content-only (R4)
+├── check-add-course.mjs         # MODIFIED - also prove a licence course is content-only (R4)
+├── check-no-em-dash.mjs         # MODIFIED - consume CONTENT_ROOTS (FR-014)
+└── check-no-answer-keys.mjs     # MODIFIED - consume CONTENT_ROOTS (FR-014)
 
 src/lib/
 └── catalog.ts                   # MODIFIED - CatalogTrack type + allCourses() (R1)
