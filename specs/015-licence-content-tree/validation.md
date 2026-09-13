@@ -111,7 +111,60 @@ probe's `category: "Licence track"` against the schema enum. US3's T032 must wid
 `scanned: docs, licence, guides, ...`. Findings are unchanged; only the scan list grew. This is why
 the tasks carried an explicit constraint that T021 must not precede T019.
 
+## US3 - licence courses are first-class *(complete, 2026-09-13)*
+
+T034-T041.
+
+`contracts/course-overview.schema.json` gained `"Licence track"` as a category, the blocker US2
+found. `catalog/courses.json` gained an additive `tracks[]` with `EED-313`, catalogued with no
+units and therefore no route - the same state as the seven catalogued-but-unauthored degree
+courses, which have no `docs/` directory either.
+
+`allCourses(catalog)` is now how a reader asks for every course. `CourseOptionGroup` became
+track-keyed, `{ trackId, label_en, label_ur, ordinal: number | null, courses }`. The type change
+surfaced both consumers at compile time rather than leaving them to be found by hand, which is the
+argument for the additive key plus a shared reader over a silent per-consumer migration.
+
+Group headings needed both locales: the old shape hardcoded "Semester N" in English and Urdu, so a
+track could not name itself. `label_en` / `label_ur` replace it.
+
+**Article V.4 now proven for the new track.** `check-add-course.mjs` scaffolds a throwaway licence
+course alongside its throwaway semester course and asserts neither changes guarded platform files;
+`sidebars-licence.ts` joined the guarded list, so adding a licence course cannot silently edit the
+track's own sidebar.
+
+**Independent test**: `EED-313` appears in the course picker under "Licence track" with
+`ordinal: null` and `hasContent: false`.
+
+## Findings during US3
+
+**7. The duplicate-code detector belongs in the library, not the gate.** T039 specified the check
+in `check-pipeline-gate.mjs` and T040 put its test in `content-roots.test.mjs` - the mismatch the
+analysis recorded as F2. Resolved by exporting `findDuplicateCourseCodes` from `content-roots.mjs`
+and calling it from the gate, so the check is unit-testable where T040 expected and F2 is closed
+rather than deferred.
+
+## Findings during polish
+
+**8. A docs-plugin instance cannot be empty, and the catalogued-but-unauthored precedent does not
+extend to a track's first course.** With the probe deleted and `EED-313` catalogued but
+directory-less, `npm run build` failed: `Docs version "current" has no docs! At least one doc
+should exist at "licence"`. The degree precedent works only because `docs/` holds other courses.
+
+This falsified success criterion 4 as remediated during `/sp.analyze`, which asserted `EED-313`
+would have no route. Corrected: the course ships a `coming_soon` `course-overview.mdx` and no
+units. That is content rather than platform, uses the convention seven degree courses already use,
+and states honestly that the units are specified and unwritten.
+
+Worth noting the failure surfaced only in `check:all`, not `check:content` - the build is the one
+gate that exercises the plugin wiring, and it is the slow one a content author is least likely to
+run.
+
+## Result
+
+`npm run check:all` - **13/13 gates pass**, including `build` and `check:add-course`'s new
+licence-track probe.
+
 ## Not yet done
 
-US2 (T021-T033) and US3 (T034-T042), then Polish (T043-T046). The licence track does not exist
-yet; nothing user-visible has changed.
+T045 only: flip ADR-0020 from Proposed to Accepted, which waits on owner approval of PR #46.

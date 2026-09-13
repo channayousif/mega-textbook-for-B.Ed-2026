@@ -173,6 +173,26 @@ export function resolveUnit(root, courseCode, unitNo) {
   return matches[0];
 }
 
+/**
+ * Course codes that appear in more than one track (FR-011).
+ *
+ * A code identifies exactly one course everywhere, which is what lets
+ * `resolveUnit` take no track argument and keeps `review:evidence prepare
+ * EED-313 1 G3` unambiguous. `resolveUnit` throws when it trips over a
+ * duplicate, but only if something happens to ask for that course - the gate
+ * needs to catch it whether or not anyone looks.
+ */
+export function findDuplicateCourseCodes(root) {
+  const byCode = new Map();
+  for (const { courseCode, track } of walkCourses(root)) {
+    if (!byCode.has(courseCode)) byCode.set(courseCode, new Set());
+    byCode.get(courseCode).add(track.id);
+  }
+  return [...byCode.entries()]
+    .filter(([, tracks]) => tracks.size > 1)
+    .map(([code, tracks]) => ({ courseCode: code, tracks: [...tracks].sort() }));
+}
+
 /** The only sanctioned way to build an Urdu path. Never join a UR base yourself. */
 export function urPathFor(record, ...segments) {
   return join(record.urUnitDir, ...segments);

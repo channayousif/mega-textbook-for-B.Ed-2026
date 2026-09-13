@@ -8,7 +8,7 @@ import { describe, it, expect, afterEach } from 'vitest';
 import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
-import { TRACKS, CONTENT_ROOTS, walkUnits, resolveUnit, urPathFor } from '../../scripts/lib/content-roots.mjs';
+import { TRACKS, CONTENT_ROOTS, walkUnits, resolveUnit, urPathFor, findDuplicateCourseCodes } from '../../scripts/lib/content-roots.mjs';
 
 const made = [];
 afterEach(() => { for (const d of made.splice(0)) rmSync(d, { recursive: true, force: true }); });
@@ -145,5 +145,24 @@ describe('the licence track', () => {
 
   it('contributes its content root to CONTENT_ROOTS for the pattern gates (FR-014)', () => {
     expect(CONTENT_ROOTS).toContain('licence');
+  });
+});
+
+describe('findDuplicateCourseCodes (FR-011)', () => {
+  it('reports nothing when every code lives in one track', () => {
+    const root = fixture(['docs/semester-1/efmp-301/unit-01', 'licence/eed-313/unit-01']);
+    expect(findDuplicateCourseCodes(root)).toEqual([]);
+  });
+
+  it('reports a code that appears in two tracks, naming both', () => {
+    const root = fixture(['docs/semester-4/efmp-408/unit-01', 'licence/efmp-408/unit-01']);
+    expect(findDuplicateCourseCodes(root)).toEqual([
+      { courseCode: 'EFMP-408', tracks: ['licence', 'pre-service'] },
+    ]);
+  });
+
+  it('does not flag one course appearing twice within the same track', () => {
+    const root = fixture(['docs/semester-1/efmp-301/unit-01', 'docs/semester-1/efmp-301/unit-02']);
+    expect(findDuplicateCourseCodes(root)).toEqual([]);
   });
 });

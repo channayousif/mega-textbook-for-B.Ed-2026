@@ -107,14 +107,14 @@ locales and appears in the offline search index.
 **Independent test**: `EED-313` appears in the teacher course picker marked `hasContent: false`,
 and adding a second licence course requires no platform edit.
 
-- [ ] T034 [US3] Add the `tracks` key to `catalog/courses.json` with a `licence` entry, and add `EED-313` to it (`title_ur: کلاس روم مینجمنٹ`, `category: 'Licence track'`, `bilingual: true`) per FR-010 and data-model.md
-- [ ] T035 [P] [US3] Add `CatalogTrack` to `src/lib/catalog.ts`, widen `Catalog` with the optional `tracks` key, and implement `allCourses(catalog)` returning every course across both keys (FR-007)
-- [ ] T036 [US3] Change `CourseOptionGroup` in `src/lib/courseOptions.ts` to `{ trackId, label, ordinal: number | null, courses }`, rename each course's `semester` field to `ordinal`, and build groups from `allCourses()` rather than `catalog.semesters` (FR-012)
-- [ ] T037 [P] [US3] Migrate `src/pages/app/classes/index.tsx` to the track-keyed group shape
-- [ ] T038 [P] [US3] Migrate `src/pages/app/teacher/quiz-authoring.tsx` to the track-keyed group shape
-- [ ] T039 [US3] Add the FR-011 duplicate-code check to `scripts/check-pipeline-gate.mjs`: fail when one `course_code` appears in more than one track
-- [ ] T040 [P] [US3] Add a unit test in `tests/unit/content-roots.test.mjs` asserting a duplicate course code across tracks is rejected
-- [ ] T041 [US3] Extend `scripts/check-add-course.mjs` to add a throwaway licence course alongside its throwaway semester course, and add `sidebars-licence.ts` to its `guarded` path list (research R4, Article V.4)
+- [X] T034 [US3] Add the `tracks` key to `catalog/courses.json` with a `licence` entry, and add `EED-313` to it (`title_ur: کلاس روم مینجمنٹ`, `category: 'Licence track'`, `bilingual: true`) per FR-010 and data-model.md
+- [X] T035 [P] [US3] Add `CatalogTrack` to `src/lib/catalog.ts`, widen `Catalog` with the optional `tracks` key, and implement `allCourses(catalog)` returning every course across both keys (FR-007)
+- [X] T036 [US3] Change `CourseOptionGroup` in `src/lib/courseOptions.ts` to `{ trackId, label, ordinal: number | null, courses }`, rename each course's `semester` field to `ordinal`, and build groups from `allCourses()` rather than `catalog.semesters` (FR-012)
+- [X] T037 [P] [US3] Migrate `src/pages/app/classes/index.tsx` to the track-keyed group shape
+- [X] T038 [P] [US3] Migrate `src/pages/app/teacher/quiz-authoring.tsx` to the track-keyed group shape
+- [X] T039 [US3] Add the FR-011 duplicate-code check to `scripts/check-pipeline-gate.mjs`: fail when one `course_code` appears in more than one track
+- [X] T040 [P] [US3] Add a unit test in `tests/unit/content-roots.test.mjs` asserting a duplicate course code across tracks is rejected
+- [X] T041 [US3] Extend `scripts/check-add-course.mjs` to add a throwaway licence course alongside its throwaway semester course, and add `sidebars-licence.ts` to its `guarded` path list (research R4, Article V.4)
 - [X] T042 [US3] Delete the `licence/zzz-998/` scaffold and its Urdu mirror created in T028 *(run early, at the end of US2: the probe had served its T029-T033 proofs and left the gates red by design)*
 
 **Checkpoint**: the feature is complete. `EED-313` is catalogued with no units, matching the seven catalogued-but-unauthored degree courses.
@@ -123,10 +123,10 @@ and adding a second licence course requires no platform edit.
 
 ## Phase 6: Polish & Cross-Cutting Concerns
 
-- [ ] T043 [P] Update `README.md` with the licence track: what it is, why it exists outside the scheme, and where its content lives
-- [ ] T044 [P] Record the run in `specs/015-licence-content-tree/validation.md`: FR-009 diff result, the six-gate positive and negative proofs, and the rendered-route check
+- [X] T043 [P] Update `README.md` with the licence track: what it is, why it exists outside the scheme, and where its content lives
+- [X] T044 [P] Record the run in `specs/015-licence-content-tree/validation.md`: FR-009 diff result, the six-gate positive and negative proofs, and the rendered-route check
 - [ ] T045 [P] Flip ADR-0020 from Proposed to Accepted in `history/adr/0020-content-tracks.md` once the owner approves PR #46
-- [ ] T046 Run `npm run check:all` and confirm 13/13 gates green, then open the implementation PR
+- [X] T046 Run `npm run check:all` and confirm 13/13 gates green, then open the implementation PR
 
 ---
 

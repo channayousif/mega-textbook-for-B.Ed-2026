@@ -22,7 +22,7 @@ import { join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
 import { validateAgentTrackerRow } from './lib/review-evidence.mjs';
-import { walkUnits } from './lib/content-roots.mjs';
+import { walkUnits, findDuplicateCourseCodes } from './lib/content-roots.mjs';
 
 const REPO = resolve(fileURLToPath(new URL('..', import.meta.url)));
 const ROOT = process.env.CONTENT_ROOT ? resolve(process.env.CONTENT_ROOT) : REPO;
@@ -185,6 +185,13 @@ function walk() {
     console.error('check-pipeline-gate: docs/ not found — nothing to check.');
     return;
   }
+  // Feature 015 FR-011: a course code identifies exactly one course across every
+  // track. Checked here rather than only in resolveUnit, which trips over a
+  // duplicate only when something happens to ask for that course.
+  for (const { courseCode, tracks } of findDuplicateCourseCodes(ROOT)) {
+    err(courseCode, `course code appears in more than one track (${tracks.join(', ')}) - codes must be globally unique`);
+  }
+
   // Feature 015 FR-002: one definition of where content lives. urUnitDir comes
   // from the record's track, never a rebuilt `semester-N` join.
   for (const record of walkUnits(ROOT)) {

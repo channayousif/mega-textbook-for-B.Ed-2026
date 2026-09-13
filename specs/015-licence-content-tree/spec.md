@@ -94,11 +94,15 @@ Degree content keeps its paths, routes and behaviour unchanged.
    `check:no-em-dash` and `check:no-answer-keys` - and fails each of them for the right reason when
    deliberately broken. The last two are the ones that would silently skip the track today.
 3. `review:evidence prepare EED-313 1 G3` produces a manifest, proving FR-003.
-4. The scaffolded licence course renders at its `/licence/...` route in both locales, falling back
-   to English with the untranslated banner per Spec 001 FR-003, and appears in the offline search
-   index. Verified while the scaffold exists, before it is removed. `EED-313` itself is catalogued
-   with no units and therefore has no route - the same state as the seven catalogued-but-unauthored
-   degree courses, which have no `docs/` directory either.
+4. The licence track renders at `/licence/` in both locales, falling back to English per Spec 001
+   FR-003, and appears in the offline search index.
+
+   **A track's first course cannot be directory-less.** Docusaurus fails the build with
+   `Docs version "current" has no docs!` when a plugin instance has no content, so the
+   catalogued-but-unauthored precedent - the seven degree courses with no `docs/` directory - does
+   not extend to the course that establishes a track. `EED-313` therefore ships a `coming_soon`
+   `course-overview.mdx` and no units, which is content rather than platform and states honestly
+   that the units are specified and unwritten.
 5. The semester regex, the hardcoded `UR_BASE` join, and any hardcoded content-root list each
    appear exactly once in the repository - in `content-roots.mjs`. No gate carries its own idea of
    where content lives, whether it walks units or scans trees.

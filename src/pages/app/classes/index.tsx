@@ -117,7 +117,7 @@ function TeacherClassesView(): React.ReactElement {
           >
             <option value="" disabled>{locale === 'ur' ? 'کورس منتخب کریں…' : 'Select a course…'}</option>
             {courseOpts.map((g) => (
-              <optgroup key={g.semester} label={`${locale === 'ur' ? 'سمسٹر' : 'Semester'} ${g.semester}`}>
+              <optgroup key={g.trackId + (g.ordinal ?? '')} label={locale === 'ur' ? g.label_ur : g.label_en}>
                 {g.courses.map((c) => (
                   <option key={c.code} value={c.code} disabled={!c.hasContent}>
                     {c.code} - {locale === 'ur' ? c.title_ur : c.title_en}
