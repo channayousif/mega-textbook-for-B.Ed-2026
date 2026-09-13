@@ -21,7 +21,7 @@ files:
 tests:
  - npm run check:content (7/7)
  - topic partitions total and disjoint across all 6 units (PASS)
- - 52 sub-topics, 16 licence objectives mapped, zero em dash
+ - 55 sub-topics, 16/16 licence objectives mapped to units, zero em dash
 ---
 
 ## Prompt
@@ -46,13 +46,23 @@ Both guides are in the repository and are named at the top of the spec as requir
 authoring, because the licence examiner wrote its syllabus from them. Every one of the 16
 objectives is mapped to a unit in a table.
 
-**One genuine gap found, and left open rather than papered over.** Licence objective 5, "assessment
-policies and practices in Pakistani schools", appears in the licence syllabus and the `EED-411`
-guide but **not** in the 2026 `EFMP-408` outline. Authoring strictly to the degree guide would
-leave one of the sixteen uncovered. Two options are recorded for decision before Unit 6 is
-authored: carry it as an enrichment sub-topic sourced from the `EED-411` guide and cited as such,
-or map it to `EFMP-303` and record the objective as served there. It must not be invented into
-Unit 6 without a source (Art. II.3).
+**One genuine gap found, surfaced, and resolved in the same exchange.** Licence objective 5,
+"assessment policies and practices in Pakistani schools", appears in the licence syllabus and the
+`EED-411` guide but **not** in the 2026 `EFMP-408` outline. Owner chose to carry it in Unit 6
+rather than map it away to `EFMP-303`, so this course covers all sixteen.
+
+Before writing it I checked the `EED-411` guide had real material rather than assuming a plausible
+title, since Art. II.3 forbids inventing one. It does: an explicit section "Assessment policy and
+practice in government and private schools in Pakistan"; Standard 5, the assessment standard, of
+the National Professional Standards for Teachers in Pakistan (Ministry of Education, 2009); and the
+guide's contrast between test-based and assessment-based evaluation cultures. That supported a
+full topic 6.4 with three sub-topics rather than a bolted-on bullet, and Unit 6 grew from 9
+sub-topics and 3 topics to 12 and 4.
+
+Topic 6.4 is marked **enrichment** in the spec, because it goes beyond the approved degree guide.
+A reader preparing only for the degree examination should be able to tell core from extension, and
+authors are told to cite the guide and the NPSTP by reference and not to extend past what those
+sources support.
 
 Also catalogued `EFMP-408` in Semester 4, which had been empty.
 
@@ -61,7 +71,7 @@ Also catalogued `EFMP-408` in Semester 4, which had been empty.
 - ✅ Impact: the highest-value course on the licence axis has an approved-shape G1 spec with all 16 objectives mapped, ready to author the moment the standard freezes.
 - 🧪 Tests: check:content 7/7; partitions PASS; zero em dash.
 - 📁 Files: content-spec (353 lines), catalogue entry, this PHR.
-- 🔁 Next prompts: decide licence objective 5's home; land v4.0 and freeze; then author Unit 1.
+- 🔁 Next prompts: land v4.0 and freeze, then author Unit 1. Objective 5 is settled.
 - 🧠 Reflection: the merge of two 2025 courses is not incidental trivia - it is the reason this course outranks every Semester I and II course on the licence axis, so it belongs in the spec where an author will see it.
 
 ## Evaluation notes (flywheel)

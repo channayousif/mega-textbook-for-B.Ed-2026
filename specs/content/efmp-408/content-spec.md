@@ -52,7 +52,7 @@ The reason this course is sequenced first. Every objective below is from the lic
 | 2 | Difference between assessment and evaluation | EED-411 | 1 |
 | 3 | Two key types of classroom assessment | EED-411 | 1 |
 | 4 | Feedback, its characteristics and benefits | EED-411 | 4 |
-| 5 | Assessment policies and practices in Pakistani schools | EED-411 | **see gap below** |
+| 5 | Assessment policies and practices in Pakistani schools | EED-411 | 6 (topic 6.4) |
 | 6 | Developing assessment-embedded lesson plans | EED-411 | 2 |
 | 7 | Types of test questions | EED-411 | 3 |
 | 8 | Performance-based assessments | EED-411 | 4 |
@@ -65,17 +65,25 @@ The reason this course is sequenced first. Every objective below is from the lic
 | 15 | Validity, reliability and characteristics of tests | EED-624 | 2 |
 | 16 | Test development and review | EED-624 | 3, 5 |
 
-### [gap] Objective 5 is not in the 2026 guide
+### Objective 5 is carried in Unit 6 as enrichment *(owner decision, 2026-09-13)*
 
-"Assessment policies and practices in Pakistani schools" appears in the licence syllabus and in the
-`EED-411` guide, but the 2026 `EFMP-408` outline does not cover it. Authoring strictly to the
-degree guide would leave one of the sixteen objectives uncovered.
+"Assessment policies and practices in Pakistani schools" is in the licence syllabus and the
+`EED-411` guide but **not** in the 2026 `EFMP-408` outline. It is carried here as topic 6.4 rather
+than mapped away to `EFMP-303`, so this course covers all sixteen objectives.
 
-Two honest options, to be decided before Unit 6 is authored: carry it as an enrichment sub-topic in
-Unit 6 alongside standardized testing and ethics, sourced from the `EED-411` guide and cited as
-such; or map it to `EFMP-303` Educational Policies and Plans of Pakistan and record the licence
-objective as served by that course instead. It must not be silently invented into Unit 6 without a
-source (Constitution Art. II.3).
+It is enrichment beyond the approved degree guide, so it is flagged as such and sourced, never
+invented (Constitution Art. II.3). `ClassroomAssess_Sept13.txt` supplies all three sub-topics:
+
+- an explicit section, *"Assessment policy and practice in government and private schools in
+  Pakistan"*, built around information gathered from teachers, peers and parents;
+- Standard 5, the assessment standard, of the **National Professional Standards for Teachers in
+  Pakistan** (Ministry of Education, 2009), which the guide introduces directly and which the
+  Policy and Planning Wing endorsed as the national model of effective teaching;
+- the guide's contrast between a **test-based** and an **assessment-based** evaluation culture.
+
+Authors must cite the guide and the NPSTP by reference (Art. III.5) and must not extend beyond
+what those sources support - in particular, no claims about current provincial policy that the
+2025 guide does not make.
 
 ## Unit 1: Understanding Assessment and Evaluation
 
@@ -304,9 +312,9 @@ for an item analysis with a keep/revise/drop decision and justification.
 
 Weeks 13-15. Unit Spec (G1) for `docs/semester-4/efmp-408/unit-06/`.
 
-- **CLO refs**: 2, 5. **Licence objectives**: 11, and objective 5 if the gap above is resolved here.
+- **CLO refs**: 2, 5. **Licence objectives**: 5 (topic 6.4, enrichment), 11.
 - **Key terms**: Standardized test, Norming, Academic integrity, Confidentiality, Digital
-  assessment, Competency-based assessment.
+  assessment, Competency-based assessment, NPSTP, Test-based culture, Assessment-based culture.
 - **Common misconceptions**: "standardized means the same paper for everyone"; "digital assessment
   is automatically more objective"; "continuous assessment means more tests".
 
@@ -323,6 +331,9 @@ Weeks 13-15. Unit Spec (G1) for `docs/semester-4/efmp-408/unit-06/`.
 | U6-07 | W15 | 6.3 | Digital assessment tools |
 | U6-08 | W15 | 6.3 | Online testing platforms |
 | U6-09 | W15 | 6.3 | Continuous and competency-based assessment |
+| U6-10 | EED-411 | 6.4 | Assessment policy and practice in Pakistani government and private schools |
+| U6-11 | EED-411 | 6.4 | NPSTP Standard 5: the national assessment standard for teachers |
+| U6-12 | EED-411 | 6.4 | Test-based versus assessment-based evaluation cultures |
 
 ### Topic list
 
@@ -331,8 +342,13 @@ Weeks 13-15. Unit Spec (G1) for `docs/semester-4/efmp-408/unit-06/`.
 | 6.1 | Standardized testing | U6-01, U6-02, U6-03 | 15-20 | fig-U6-1: table, fig-U6-4: timeline |
 | 6.2 | Ethics in assessment | U6-04, U6-05, U6-06 | 14-19 | fig-U6-2: concept-map, fig-U6-5: table |
 | 6.3 | Where assessment is heading | U6-07, U6-08, U6-09 | 14-19 | fig-U6-3: table, fig-U6-6: diagram |
+| 6.4 | Assessment policy and practice in Pakistan | U6-10, U6-11, U6-12 | 15-20 | fig-U6-7: table, fig-U6-8: concept-map |
 
-**Depth budget**: 9 sub-topics; 3 topics; 70-95 reading-min.
+**Depth budget**: 12 sub-topics; 4 topics; 85-115 reading-min.
+
+**Enrichment note**: topic 6.4 is sourced from the `EED-411` guide rather than the 2026 `EFMP-408`
+outline, to cover licence objective 5. Mark it as enrichment in the unit text so a reader
+preparing only for the degree examination knows what is core and what is extension.
 
 **Figure plan**: fig-U6-1 `table` teacher-made vs standardized tests on purpose, norming and what
 each can claim; fig-U6-4 `timeline` the arc of standardized assessment in Pakistan, from board
@@ -340,7 +356,9 @@ examinations to national and international participation (6.1; required schemati
 `concept-map` the ethical obligations attaching to assessment data; fig-U6-5 `table` integrity
 breaches and proportionate responses; fig-U6-3 `table` digital tools against what each is good and
 poor at in a low-bandwidth school; fig-U6-6 `diagram` one competency assessed continuously versus
-by a single terminal test.
+by a single terminal test; fig-U6-7 `table` a test-based culture against an assessment-based
+culture, on what each rewards and what each makes invisible (6.4); fig-U6-8 `concept-map` NPSTP
+Standard 5 linked to the classroom practices it asks of a teacher (6.4).
 
 **Unit-end assessment blueprint**: 10/10/5; the integrative ERQ asks the reader to judge whether a
 described assessment decision was ethically defensible and to propose an alternative.
