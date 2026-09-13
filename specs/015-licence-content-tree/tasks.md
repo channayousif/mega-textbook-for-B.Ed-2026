@@ -125,7 +125,7 @@ and adding a second licence course requires no platform edit.
 
 - [X] T043 [P] Update `README.md` with the licence track: what it is, why it exists outside the scheme, and where its content lives
 - [X] T044 [P] Record the run in `specs/015-licence-content-tree/validation.md`: FR-009 diff result, the six-gate positive and negative proofs, and the rendered-route check
-- [ ] T045 [P] Flip ADR-0020 from Proposed to Accepted in `history/adr/0020-content-tracks.md` once the owner approves PR #46
+- [X] T045 [P] Flip ADR-0020 from Proposed to Accepted in `history/adr/0020-content-tracks.md` once the owner approves PR #46
 - [X] T046 Run `npm run check:all` and confirm 13/13 gates green, then open the implementation PR
 
 ---
