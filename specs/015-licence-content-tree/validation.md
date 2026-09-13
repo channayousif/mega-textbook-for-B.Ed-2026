@@ -165,6 +165,12 @@ run.
 `npm run check:all` - **13/13 gates pass**, including `build` and `check:add-course`'s new
 licence-track probe.
 
-## Not yet done
+## Complete
 
-T045 only: flip ADR-0020 from Proposed to Accepted, which waits on owner approval of PR #46.
+**47 of 47 tasks.** ADR-0020 accepted by owner instruction on 2026-09-13; PR #47 merged as
+`23e5293`. The licence track is live: `EED-313` catalogued and routed at `/licence/eed-313/` in
+both locales, indexed by offline search, absent from degree navigation, and adding a course to
+either track is provably content-only.
+
+Content authoring for `EED-313`'s four units remains gated on v4.0 and the standard freeze, per the
+owner's 2026-09-13 sequencing.

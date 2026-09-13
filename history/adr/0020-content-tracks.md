@@ -2,9 +2,9 @@
 
 > **Scope**: Document decision clusters, not individual technology choices. Group related decisions that work together (e.g., "Frontend Stack" not separate ADRs for framework, styling, deployment).
 
-- **Status:** Proposed
+- **Status:** Accepted (owner instruction 2026-09-13: "merge 47 and accept the ADR")
 - **Date:** 2026-09-13
-- **Feature:** 015-licence-content-tree
+- **Feature:** 015-licence-content-tree (implemented and merged in PR #47, 2026-09-13)
 - **Context:** `specs/content/licence-blueprint.md` established that the Sindh Teaching Licence test assesses Classroom Management, which the 2026 scheme restructured away with no successor. `EED-313` therefore has content to write and no course in the degree corpus to hold it. Folding it into an unrelated degree course was rejected by the owner on 2026-09-13 because it records a false fact about the approved programme.
 
 Nothing can be authored outside `docs/semester-N/` today, and not by design. Five gate scripts plus `review-evidence.mjs` each independently re-derive the same rule: walk `docs/` for `^semester-\d+$`, thread a numeric semester through the check function, then rebuild the Urdu path as `semester-${semester}` under a hardcoded `UR_BASE`. Nobody chose "one content hierarchy" as an architecture; it became load-bearing because six places copied it. A directory that is not a semester is invisible to all of them.
