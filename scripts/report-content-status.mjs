@@ -22,6 +22,7 @@ import {
 import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { checkUnitVerdict } from './lib/unit-depth.mjs';
+import { walkCourses } from './lib/content-roots.mjs';
 import { readManifest, figureStatusFor } from './lib/figure-manifest.mjs';
 
 const REPO = resolve(fileURLToPath(new URL('..', import.meta.url)));
@@ -57,13 +58,10 @@ function buildReport() {
     return { generated_at: new Date().toISOString(), courses };
   }
 
-  for (const sem of dirs(DOCS_DIR)) {
-    if (!/^semester-\d+$/.test(sem)) continue;
-    const semDir = join(DOCS_DIR, sem);
-    for (const courseFolder of dirs(semDir)) {
-      const courseDir = join(semDir, courseFolder);
-      const courseCode = courseFolder.toUpperCase();
-      const units = [];
+  // Feature 015 FR-002: content-roots.mjs is the single definition of where
+  // content lives, so this report covers every track rather than docs/ only.
+  for (const { courseCode, courseDir } of walkCourses(ROOT)) {
+    const units = [];
 
       for (const unit of dirs(courseDir)) {
         const m = /^unit-(\d+)$/.exec(unit);
@@ -86,10 +84,9 @@ function buildReport() {
         });
       }
 
-      units.sort((a, b) => a.unit_no - b.unit_no);
-      if (units.length > 0) {
-        courses.push({ course_code: courseCode, units });
-      }
+    units.sort((a, b) => a.unit_no - b.unit_no);
+    if (units.length > 0) {
+      courses.push({ course_code: courseCode, units });
     }
   }
 

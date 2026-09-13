@@ -30,9 +30,9 @@ Repository root. Gate scripts are plain Node ESM under `scripts/`; shared module
 
 ## Phase 1: Setup (Shared Infrastructure)
 
-- [ ] T001 Capture the FR-009 baseline: run each of the seven content gates and save stdout+exit code to `specs/015-licence-content-tree/baseline/<gate>.txt` (git-ignored), so the post-refactor comparison is mechanical rather than remembered
-- [ ] T002 [P] Add `specs/015-licence-content-tree/baseline/` to `.gitignore` with a comment naming T001 as its purpose
-- [ ] T003 [P] Create the test file `tests/unit/content-roots.test.mjs` with the vitest scaffold and no assertions yet
+- [X] T001 Capture the FR-009 baseline: run each of the seven content gates and save stdout+exit code to `specs/015-licence-content-tree/baseline/<gate>.txt` (git-ignored), so the post-refactor comparison is mechanical rather than remembered
+- [X] T002 [P] Add `specs/015-licence-content-tree/baseline/` to `.gitignore` with a comment naming T001 as its purpose
+- [X] T003 [P] Create the test file `tests/unit/content-roots.test.mjs` with the vitest scaffold and no assertions yet
 
 ---
 
@@ -40,12 +40,12 @@ Repository root. Gate scripts are plain Node ESM under `scripts/`; shared module
 
 **Blocks every story below.** The module must exist and be correct before any consumer ports to it.
 
-- [ ] T004 Create `scripts/lib/content-roots.mjs` exporting `TRACKS` with the `pre-service` track only (`id`, `contentRoot: 'docs'`, `dirPattern: /^semester-(\d+)$/`, `hasOrdinal: true`, `urBase`, `routeBasePath`, `pluginId`) per data-model.md
-- [ ] T005 Implement `walkUnits(root, options?)` in `scripts/lib/content-roots.mjs` returning `UnitRecord[]` sorted by track order, `trackDir`, `courseFolder`, `unitNo`; returns `[]` for an absent content root and throws only on a malformed unit directory name
-- [ ] T006 Implement `resolveUnit(root, courseCode, unitNo)` in `scripts/lib/content-roots.mjs`, throwing on zero or more than one match (FR-011 global code uniqueness means no track argument)
-- [ ] T007 Implement `urPathFor(record, ...segments)` in `scripts/lib/content-roots.mjs`, joining under the record's `track.urBase` so no consumer ever joins `UR_BASE` itself
-- [ ] T008 Implement `CONTENT_ROOTS` in `scripts/lib/content-roots.mjs` as the flat, frozen list of track content directories derived from `TRACKS` (FR-014)
-- [ ] T009 [P] Write unit tests in `tests/unit/content-roots.test.mjs` covering: absent content root returns `[]`, malformed unit dir throws, `resolveUnit` throws on zero and on duplicate matches, `ordinal` is a number for `pre-service`, and `urPathFor` derives from `track.urBase`
+- [X] T004 Create `scripts/lib/content-roots.mjs` exporting `TRACKS` with the `pre-service` track only (`id`, `contentRoot: 'docs'`, `dirPattern: /^semester-(\d+)$/`, `hasOrdinal: true`, `urBase`, `routeBasePath`, `pluginId`) per data-model.md
+- [X] T005 Implement `walkUnits(root, options?)` in `scripts/lib/content-roots.mjs` returning `UnitRecord[]` sorted by track order, `trackDir`, `courseFolder`, `unitNo`; returns `[]` for an absent content root and throws only on a malformed unit directory name
+- [X] T006 Implement `resolveUnit(root, courseCode, unitNo)` in `scripts/lib/content-roots.mjs`, throwing on zero or more than one match (FR-011 global code uniqueness means no track argument)
+- [X] T007 Implement `urPathFor(record, ...segments)` in `scripts/lib/content-roots.mjs`, joining under the record's `track.urBase` so no consumer ever joins `UR_BASE` itself
+- [X] T008 Implement `CONTENT_ROOTS` in `scripts/lib/content-roots.mjs` as the flat, frozen list of track content directories derived from `TRACKS` (FR-014)
+- [X] T009 [P] Write unit tests in `tests/unit/content-roots.test.mjs` covering: absent content root returns `[]`, malformed unit dir throws, `resolveUnit` throws on zero and on duplicate matches, `ordinal` is a number for `pre-service`, and `urPathFor` derives from `track.urBase`
 
 ---
 
@@ -57,17 +57,18 @@ corpus.
 **Independent test**: `npm run check:all` produces findings byte-identical to the T001 baseline,
 and `grep -rn "semester-(\\\\d+)" scripts/` returns exactly one hit, in `content-roots.mjs`.
 
-- [ ] T010 [US1] Port `scripts/validate-content.mjs` (FR-001, FR-002) to consume `walkUnits` and `urPathFor`, deleting its own semester regex and `UR_BASE` join
-- [ ] T011 [P] [US1] Port `scripts/check-unit-depth.mjs` to consume `walkUnits`, deleting its `^semester-\d+$` filter
-- [ ] T012 [P] [US1] Port `scripts/check-figures.mjs` to consume `walkUnits` and `urPathFor`, deleting its semester regex and both `UR_BASE` joins
-- [ ] T013 [P] [US1] Port `scripts/check-pipeline-gate.mjs` to consume `walkUnits` and `urPathFor`, deleting its semester regex and `UR_BASE` join
-- [ ] T014 [P] [US1] Port `scripts/build-content-index.mjs` to consume `walkUnits`, deriving `permalink` from the record's track `routeBasePath` rather than a literal semester directory
-- [ ] T015 [US1] Port `scripts/lib/review-evidence.mjs`'s `inputManifest` to call `resolveUnit` instead of its own `readdirSync(docs).filter(/^semester-\d+$/)` (FR-003)
-- [ ] T016 [P] [US1] Port `scripts/check-no-em-dash.mjs` to build `DEFAULT_SCAN_DIRS` from `CONTENT_ROOTS` plus its own non-track roots (`guides`, `i18n`, `specs/content`) (FR-014)
-- [ ] T017 [P] [US1] Port `scripts/check-no-answer-keys.mjs` to build `TARGETS` from `CONTENT_ROOTS` plus its own non-track roots (`i18n`, `build`, `specs/content`) (FR-014)
-- [ ] T018 [US1] Run `npm run test:review` and confirm 21/21 still pass after the `review-evidence.mjs` port
-- [ ] T019 [US1] Verify FR-009 and success criterion 1: diff every gate's output against `specs/015-licence-content-tree/baseline/` and confirm byte-identical findings; record the result in `specs/015-licence-content-tree/validation.md`
-- [ ] T020 [US1] Verify success criterion 5: confirm the semester regex, the `UR_BASE` join and every hardcoded content-root list each appear exactly once across `scripts/`, in `content-roots.mjs`
+- [X] T010 [US1] Port `scripts/validate-content.mjs` (FR-001, FR-002) to consume `walkUnits` and `urPathFor`, deleting its own semester regex and `UR_BASE` join
+- [X] T011 [P] [US1] Port `scripts/check-unit-depth.mjs` to consume `walkUnits`, deleting its `^semester-\d+$` filter
+- [X] T012 [P] [US1] Port `scripts/check-figures.mjs` to consume `walkUnits` and `urPathFor`, deleting its semester regex and both `UR_BASE` joins
+- [X] T013 [P] [US1] Port `scripts/check-pipeline-gate.mjs` to consume `walkUnits` and `urPathFor`, deleting its semester regex and `UR_BASE` join
+- [X] T014 [P] [US1] Port `scripts/build-content-index.mjs` to consume `walkUnits`, deriving `permalink` from the record's track `routeBasePath` rather than a literal semester directory
+- [X] T015 [US1] Port `scripts/lib/review-evidence.mjs`'s `inputManifest` to call `resolveUnit` instead of its own `readdirSync(docs).filter(/^semester-\d+$/)` (FR-003)
+- [X] T016 [P] [US1] Port `scripts/check-no-em-dash.mjs` to build `DEFAULT_SCAN_DIRS` from `CONTENT_ROOTS` plus its own non-track roots (`guides`, `i18n`, `specs/content`) (FR-014)
+- [X] T017a [P] [US1] Port `scripts/report-content-status.mjs` to consume `walkCourses` - a ninth consumer found during implementation, listed in neither plan.md nor tasks.md, which would have under-reported licence content in the status report
+- [X] T017 [P] [US1] Port `scripts/check-no-answer-keys.mjs` to build `TARGETS` from `CONTENT_ROOTS` plus its own non-track roots (`i18n`, `build`, `specs/content`) (FR-014)
+- [X] T018 [US1] Run `npm run test:review` and confirm 21/21 still pass after the `review-evidence.mjs` port
+- [X] T019 [US1] Verify FR-009 and success criterion 1: diff every gate's output against `specs/015-licence-content-tree/baseline/` and confirm byte-identical findings; record the result in `specs/015-licence-content-tree/validation.md`
+- [X] T020 [US1] Verify success criterion 5: confirm the semester regex, the `UR_BASE` join and every hardcoded content-root list each appear exactly once across `scripts/`, in `content-roots.mjs`
 
 **Checkpoint**: the refactor is complete and provably inert. Safe to stop here and ship.
 

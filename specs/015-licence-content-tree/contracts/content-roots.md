@@ -18,6 +18,17 @@ pattern-scanning gates, which walk whole trees rather than units: `check-no-em-d
 scan non-track roots of their own (`guides`, `specs/content`, `build`); `CONTENT_ROOTS` replaces
 only the track-derived part of their list.
 
+### `walkCourses(root, options?) -> CourseRecord[]`
+
+Every course across every track, same ordering as `walkUnits`, yielding
+`{ track, trackDir, groupDir, ordinal, courseFolder, courseCode, courseDir, urCourseDir }`.
+
+**Added during implementation.** The contract originally exposed units only, but three consumers
+emit or check at course level - `build-content-index` writes `course-review.mdx` records,
+`validate-content` runs category/overview/bilingual checks per course, and
+`report-content-status` aggregates per course. Without this they would each have kept their own
+grouping-directory walk, defeating success criterion 5.
+
 ### `walkUnits(root, options?) -> UnitRecord[]`
 
 Every unit across every track, sorted by track order, then `trackDir`, then `courseFolder`, then

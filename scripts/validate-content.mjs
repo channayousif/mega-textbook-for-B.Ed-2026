@@ -16,6 +16,7 @@ import { readFileSync, readdirSync, existsSync, statSync } from 'node:fs';
 import { join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
+import { walkCourses, walkUnits } from './lib/content-roots.mjs';
 import Ajv from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 
@@ -214,7 +215,7 @@ function checkParity(unitDir, urUnitDir, fileList) {
 }
 
 // ---- LEGACY five-file layout (unchanged) ----------------------------------
-function checkUnitLegacy(unitDir, semester, courseFolder, courseCode, unitNo, bilingual) {
+function checkUnitLegacy(unitDir, urUnitDir, courseCode, unitNo, bilingual) {
   for (const f of UNIT_FILES) {
     if (!existsSync(join(unitDir, f))) err(join(unitDir, f), `missing required unit file '${f}'`);
   }
@@ -230,14 +231,13 @@ function checkUnitLegacy(unitDir, semester, courseFolder, courseCode, unitNo, bi
     if (f === 'index.mdx') translationStatus = fm.translation_status;
   }
 
-  const urUnitDir = join(UR_BASE, `semester-${semester}`, courseFolder, `unit-${String(unitNo).padStart(2, '0')}`);
   if (bilingual && !comingSoon && translationStatus === 'reviewed') {
     checkParity(unitDir, urUnitDir, UNIT_FILES);
   }
 }
 
 // ---- Spec 008 per-topic layout ------------------------------------------------
-function checkUnitTopic(unitDir, semester, courseFolder, courseCode, unitNo, bilingual, topicFiles) {
+function checkUnitTopic(unitDir, urUnitDir, courseCode, unitNo, bilingual, topicFiles) {
   // required files
   for (const f of ['index.mdx', 'unit-assessment.mdx']) {
     if (!existsSync(join(unitDir, f))) err(join(unitDir, f), `per-topic unit missing required file '${f}'`);
@@ -286,19 +286,18 @@ function checkUnitTopic(unitDir, semester, courseFolder, courseCode, unitNo, bil
   }
 
   // EN<->UR parity over the dynamic union of EN + UR unit-folder .mdx names
-  const urUnitDir = join(UR_BASE, `semester-${semester}`, courseFolder, `unit-${String(unitNo).padStart(2, '0')}`);
   if (bilingual && !comingSoon && translationStatus === 'reviewed') {
     const union = [...new Set([...mdxFilesIn(unitDir), ...mdxFilesIn(urUnitDir)])].sort();
     checkParity(unitDir, urUnitDir, union);
   }
 }
 
-function checkUnit(unitDir, semester, courseFolder, courseCode, unitNo, bilingual) {
+function checkUnit(unitDir, urUnitDir, courseCode, unitNo, bilingual) {
   const topicFiles = topicFilesIn(unitDir);
   if (topicFiles.length === 0) {
-    checkUnitLegacy(unitDir, semester, courseFolder, courseCode, unitNo, bilingual);
+    checkUnitLegacy(unitDir, urUnitDir, courseCode, unitNo, bilingual);
   } else {
-    checkUnitTopic(unitDir, semester, courseFolder, courseCode, unitNo, bilingual, topicFiles);
+    checkUnitTopic(unitDir, urUnitDir, courseCode, unitNo, bilingual, topicFiles);
   }
 }
 
@@ -308,28 +307,24 @@ function walk() {
     console.error('validate-content: docs/ not found — nothing to validate.');
     return;
   }
-  for (const sem of dirs(DOCS_DIR)) {
-    const semMatch = /^semester-(\d+)$/.exec(sem);
-    if (!semMatch) continue;
-    const semester = Number(semMatch[1]);
-    const semDir = join(DOCS_DIR, sem);
-    checkCategory(semDir);
-
-    for (const course of dirs(semDir)) {
-      const courseDir = join(semDir, course);
-      const courseCode = course.toUpperCase();
-      checkCategory(courseDir);
-      checkOverview(courseDir, courseCode);
-      checkCourseReview(courseDir, courseCode);
-      const bilingual = isBilingualCourse(courseDir);
-
-      for (const unit of dirs(courseDir)) {
-        const unitMatch = /^unit-(\d+)$/.exec(unit);
-        if (!unitMatch) continue;
-        checkCategory(join(courseDir, unit));
-        checkUnit(join(courseDir, unit), semester, course, courseCode, Number(unitMatch[1]), bilingual);
-      }
+  // Feature 015 FR-002: content-roots.mjs is the single definition of where
+  // content lives, and urUnitDir comes from the record's track rather than a
+  // rebuilt `semester-N` join (FR-006).
+  const seenGroups = new Set();
+  for (const course of walkCourses(ROOT)) {
+    if (!seenGroups.has(course.groupDir)) {
+      seenGroups.add(course.groupDir);
+      if (course.trackDir) checkCategory(course.groupDir);
     }
+    checkCategory(course.courseDir);
+    checkOverview(course.courseDir, course.courseCode);
+    checkCourseReview(course.courseDir, course.courseCode);
+  }
+
+  for (const record of walkUnits(ROOT)) {
+    const bilingual = isBilingualCourse(join(record.unitDir, '..'));
+    checkCategory(record.unitDir);
+    checkUnit(record.unitDir, record.urUnitDir, record.courseCode, record.unitNo, bilingual);
   }
 }
 

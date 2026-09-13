@@ -22,6 +22,7 @@ import { join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
 import { validateAgentTrackerRow } from './lib/review-evidence.mjs';
+import { walkUnits } from './lib/content-roots.mjs';
 
 const REPO = resolve(fileURLToPath(new URL('..', import.meta.url)));
 const ROOT = process.env.CONTENT_ROOT ? resolve(process.env.CONTENT_ROOT) : REPO;
@@ -127,7 +128,7 @@ function stageDone(rows, unitLabel, stagePrefix, courseCode, unitNo) {
 }
 
 // ---- per-unit checks -----------------------------------------------------------
-function checkUnit({ unitDir, semester, courseFolder, courseCode, unitNo }) {
+function checkUnit({ unitDir, urUnitDir, courseCode, unitNo }) {
   const enIndex = join(unitDir, 'index.mdx');
   if (!existsSync(enIndex)) return; // structural issues are validate-content.mjs's concern
   const enFm = matter(readFileSync(enIndex, 'utf8')).data;
@@ -156,7 +157,6 @@ function checkUnit({ unitDir, semester, courseFolder, courseCode, unitNo }) {
   }
 
   // UR stages + terminology check only apply when the UR mirror exists and is reviewed
-  const urUnitDir = join(UR_BASE, `semester-${semester}`, courseFolder, `unit-${String(unitNo).padStart(2, '0')}`);
   const urIndex = join(urUnitDir, 'index.mdx');
   const urFm = existsSync(urIndex) ? matter(readFileSync(urIndex, 'utf8')).data : null;
 
@@ -185,28 +185,10 @@ function walk() {
     console.error('check-pipeline-gate: docs/ not found — nothing to check.');
     return;
   }
-  for (const sem of dirs(DOCS_DIR)) {
-    const semMatch = /^semester-(\d+)$/.exec(sem);
-    if (!semMatch) continue;
-    const semester = Number(semMatch[1]);
-    const semDir = join(DOCS_DIR, sem);
-
-    for (const course of dirs(semDir)) {
-      const courseDir = join(semDir, course);
-      const courseCode = course.toUpperCase();
-
-      for (const unit of dirs(courseDir)) {
-        const unitMatch = /^unit-(\d+)$/.exec(unit);
-        if (!unitMatch) continue;
-        checkUnit({
-          unitDir: join(courseDir, unit),
-          semester,
-          courseFolder: course,
-          courseCode,
-          unitNo: Number(unitMatch[1]),
-        });
-      }
-    }
+  // Feature 015 FR-002: one definition of where content lives. urUnitDir comes
+  // from the record's track, never a rebuilt `semester-N` join.
+  for (const record of walkUnits(ROOT)) {
+    checkUnit(record);
   }
 }
 

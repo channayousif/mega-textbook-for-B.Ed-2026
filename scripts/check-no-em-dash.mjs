@@ -28,8 +28,13 @@
 
 import { readdirSync, readFileSync, statSync, existsSync } from 'node:fs';
 import { join, extname } from 'node:path';
+import { CONTENT_ROOTS } from './lib/content-roots.mjs';
 
-const DEFAULT_SCAN_DIRS = ['docs', 'guides', 'i18n', 'specs/content'];
+// Track content roots come from content-roots.mjs so a new track is scanned
+// automatically (Feature 015 FR-014). Without this a licence unit would bypass
+// Article III.9 entirely. `guides`, `i18n` and `specs/content` are this gate's
+// own non-track roots and stay listed here.
+const DEFAULT_SCAN_DIRS = [...CONTENT_ROOTS, 'guides', 'i18n', 'specs/content'];
 // Individual authored-content files that live outside the scanned trees.
 const DEFAULT_SCAN_FILES = ['glossary.json'];
 const SCAN_EXTENSIONS = new Set(['.md', '.mdx', '.csv']);

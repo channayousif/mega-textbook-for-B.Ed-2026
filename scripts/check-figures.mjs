@@ -50,6 +50,7 @@ import { parseManifest, STATUS_ENUM, KIND_ENUM, SCHEMATIC_ARCHETYPES } from './l
 import {
   LIGHT_TOKENS, DARK_TOKENS, rootBlock, WORDMARK_TEXT, SVG_BUDGET, PALETTE_EXEMPT,
 } from './lib/figure-palette.mjs';
+import { walkUnits } from './lib/content-roots.mjs';
 
 const KIND_LIST = [...KIND_ENUM].join(', ');
 
@@ -127,7 +128,7 @@ function isBilingualCourse(courseDir) {
 }
 
 // ---- per-unit check ----------------------------------------------------------
-function checkUnit({ unitDir, courseFolder, courseCode, semester, unitNo }) {
+function checkUnit({ unitDir, urUnitDir, courseDir, courseFolder, courseCode, unitNo }) {
   const enTopics = topicFilesIn(unitDir);
   if (enTopics.length === 0) return; // legacy unit → skip
 
@@ -252,13 +253,12 @@ function checkUnit({ unitDir, courseFolder, courseCode, semester, unitNo }) {
   }
 
   // --- Spec 009: placed-row asset + carrier-form + bilingual checks ---
-  const courseDir = join(DOCS_DIR, `semester-${semester}`, courseFolder);
   const enIndex = join(unitDir, 'index.mdx');
   const translationStatus = existsSync(enIndex)
     ? matter(readFileSync(enIndex, 'utf8')).data.translation_status
     : null;
   const reviewedBilingual = isBilingualCourse(courseDir) && translationStatus === 'reviewed';
-  const urDir = join(UR_BASE, `semester-${semester}`, courseFolder, `unit-${pad}`);
+  const urDir = urUnitDir;
 
   for (const [id, r] of manifestById) {
     if (r.status !== 'placed') continue;
@@ -407,26 +407,10 @@ function walk() {
     console.error('check-figures: docs/ not found — nothing to check.');
     return;
   }
-  for (const sem of dirs(DOCS_DIR)) {
-    const semMatch = /^semester-(\d+)$/.exec(sem);
-    if (!semMatch) continue;
-    const semester = Number(semMatch[1]);
-    const semDir = join(DOCS_DIR, sem);
-    for (const course of dirs(semDir)) {
-      const courseDir = join(semDir, course);
-      const courseCode = course.toUpperCase();
-      for (const unit of dirs(courseDir)) {
-        const m = /^unit-(\d+)$/.exec(unit);
-        if (!m) continue;
-        checkUnit({
-          unitDir: join(courseDir, unit),
-          courseFolder: course,
-          courseCode,
-          semester,
-          unitNo: Number(m[1]),
-        });
-      }
-    }
+  // Feature 015 FR-002: one definition of where content lives. courseDir and
+  // urUnitDir come from the record's track rather than rebuilt semester joins.
+  for (const record of walkUnits(ROOT)) {
+    checkUnit({ ...record, courseDir: join(record.unitDir, '..') });
   }
 }
 
