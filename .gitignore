@@ -54,7 +54,15 @@ specs/content/**/figures/.staging/
 # 2025 course guides: 108 MB of source PDFs/RTFs, against a 27 MB repo history.
 # The extracted text under Scheme-and-Course-guides/extracted-text/course-guides-2025/
 # is committed instead - it is what the pipeline reads and what makes the licence
-# blueprint auditable. Reversible: drop these two lines to track the binaries.
-# Decision is open in specs/content/licence-blueprint.md.
+# blueprint auditable.
+#
+# The originals are not lost by ignoring them. They are the HEC pre-service
+# course guides, published at
+# https://www.hec.gov.pk/english/services/universities/RevisedCurricula/Pages/Education.aspx
+# which is also the source STEDA's own syllabus cites for Part II. Anyone can
+# re-download them; the committed text is a derivative, not the record of record.
+#
+# Reversible: drop the two patterns below to track the binaries.
+# Owner decision 2026-09-13, recorded in specs/content/licence-blueprint.md.
 Scheme-and-Course-guides/course-guides-2025/*.pdf
 Scheme-and-Course-guides/course-guides-2025/*.rtf

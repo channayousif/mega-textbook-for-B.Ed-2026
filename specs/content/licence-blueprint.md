@@ -16,7 +16,7 @@ recording that no course covers it.
 | S2 | Sample Paper for Teacher Licensing Test **with Specification** | `steda.gos.pk/Downloads/model_papers_iba.pdf` | 2026-09-12 | The **Summary of Test Division**: sections, item counts, marks, weightage, time; per-item subject-matter tags |
 | S3 | Teaching License Policy, Sindh 2023 | `steda.gos.pk/tlicense.aspx` | 2026-09-12 | Eligibility tiers, 5-year validity, CPD renewal |
 | S4 | B.Ed (4-Year) 2025 scheme of studies (`EED-` codes) | `Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx` | 2026-09-12 | The scheme the licence test was built against; 55 course rows |
-| S5 | 2025 per-course guides (HEC/USAID pre-service series) | `Scheme-and-Course-guides/course-guides-2025/` | 2026-09-13 | The unit-by-unit source the syllabus was written from; 8 Part II guides, 1,142 pages |
+| S5 | 2025 per-course guides (HEC pre-service series) | `Scheme-and-Course-guides/extracted-text/course-guides-2025/`; originals published by HEC at `hec.gov.pk/english/services/universities/RevisedCurricula/Pages/Education.aspx` | 2026-09-13 | The unit-by-unit source the syllabus was written from; 8 Part II guides, 1,142 pages |
 
 S2 is a scanned document with no text layer; figures below were read from page renders at 150 dpi
 and transcribed by hand. **Re-verify against the PDF before any figure is published or priced.**
@@ -340,10 +340,12 @@ in Semester V, outside the locked Semesters I-IV window; and Part I positioning 
 ## Open items
 
 1. **Re-verify S2 figures** against the scanned PDF. Transcribed by hand from page renders.
-2. **[decide] Whether to commit the 108 MB of 2025 guides.** The 2026 guides are tracked, so
-   consistency argues for it; 108 MB in git history argues against. The extracted text is small
-   and is what the pipeline actually reads. Options: commit both, commit text only and keep PDFs
-   local, or move both guide sets to external storage and track only extracted text.
+2. ~~Whether to commit the 108 MB of 2025 guides.~~ **Decided 2026-09-13: extracted text only.**
+   The binaries are the HEC pre-service course guides, published at
+   `hec.gov.pk/english/services/universities/RevisedCurricula/Pages/Education.aspx` - the same
+   source S1 cites as the authority for Part II. Ignoring them loses nothing recoverable, and
+   spares a 27 MB history a permanent 108 MB. The committed text is a derivative; HEC holds the
+   record of record. Reversible via two lines in `.gitignore`.
 3. **Decide Part I.** Cover the Class 1-8 school curriculum as a separate line, or state publicly
    that the product serves Part II only. This is a positioning decision, not a content one.
 4. **Unit-level mapping** is possible only for `EFMP-301` U1 and `EFMP-302` U1-U6, the only
