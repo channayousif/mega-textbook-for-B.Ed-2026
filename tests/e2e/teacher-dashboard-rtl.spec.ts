@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T043 [Polish] — switches locale to Urdu and confirms every area
@@ -90,8 +91,6 @@ test('every teacher-dashboard and admin area renders RTL under /ur/ with no hori
     await teacherContext.close();
     await adminContext.close();
     if (classId) await svc.from('classes').delete().eq('id', classId);
-    await svc.auth.admin.deleteUser(teacher.user!.id);
-    await svc.auth.admin.deleteUser(admin.user!.id);
-    await svc.auth.admin.deleteUser(student.user!.id);
+    await deleteUsers(svc, teacher.user!.id, admin.user!.id, student.user!.id);
   }
 });

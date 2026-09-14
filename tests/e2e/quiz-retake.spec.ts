@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T056 [US6] — a student takes a multiple-choice quiz and sees an instant
@@ -146,7 +147,6 @@ test('student takes a quiz, retakes it and improves, teacher sees the best score
     await Promise.allSettled(quizItemIds.map((id) => svc.from('quiz_items').delete().eq('id', id)));
     await teacherContext.close();
     await studentContext.close();
-    await svc.auth.admin.deleteUser(teacher.user!.id);
-    await svc.auth.admin.deleteUser(student.user!.id);
+    await deleteUsers(svc, teacher.user!.id, student.user!.id);
   }
 });

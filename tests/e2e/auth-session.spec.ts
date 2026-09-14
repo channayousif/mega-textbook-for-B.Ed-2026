@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T046 [US4] — session persists across docs<->app navigation and across a
@@ -60,6 +61,6 @@ test('session persists navigating docs <-> app pages, and across a simulated bro
       await restartedContext.close();
     }
   } finally {
-    await svc.auth.admin.deleteUser(created.user!.id);
+    await deleteUsers(svc, created.user!.id);
   }
 });

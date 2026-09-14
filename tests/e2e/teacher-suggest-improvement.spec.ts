@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T010 [US2] — from any unit page, using "Suggest improvement" files a
@@ -54,7 +55,7 @@ test('teacher files a suggestion from a unit page with slug/locale captured auto
   } finally {
     const { data: profile } = await svc.from('profiles').select('id').eq('auth_user_id', teacher.user!.id).single();
     await svc.from('improvement_suggestions').delete().eq('teacher_id', profile!.id);
-    await svc.auth.admin.deleteUser(teacher.user!.id);
+    await deleteUsers(svc, teacher.user!.id);
   }
 });
 
@@ -87,6 +88,6 @@ test('teacher files a suggestion from a course-overview page and it is accepted 
   } finally {
     const { data: profile } = await svc.from('profiles').select('id').eq('auth_user_id', teacher.user!.id).single();
     await svc.from('improvement_suggestions').delete().eq('teacher_id', profile!.id);
-    await svc.auth.admin.deleteUser(teacher.user!.id);
+    await deleteUsers(svc, teacher.user!.id);
   }
 });

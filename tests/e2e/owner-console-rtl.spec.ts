@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T023 [US3] — as the curriculum owner, opens `/app/admin/overview` and
@@ -131,9 +132,7 @@ test('owner console renders accurate panels with empty states, denies a non-owne
     await svc.from('content_feedback').delete().eq('author_id', readerProfile!.id);
     await svc.from('self_assessment_checks').delete().eq('student_id', readerProfile!.id);
     await svc.from('unit_progress').delete().eq('student_id', readerProfile!.id);
-    await svc.auth.admin.deleteUser(reader.user!.id);
-    await svc.auth.admin.deleteUser(admin.user!.id);
-    await svc.auth.admin.deleteUser(nonOwner.user!.id);
+    await deleteUsers(svc, reader.user!.id, admin.user!.id, nonOwner.user!.id);
     await adminContext.close();
     await nonOwnerContext.close();
   }
@@ -233,8 +232,7 @@ test('owner acts from the console: inline triage, content-status refresh, and a 
     expect(postgrestRequests).toHaveLength(0);
   } finally {
     if (item?.id) await svc.from('content_feedback').delete().eq('id', item.id);
-    await svc.auth.admin.deleteUser(reader.user!.id);
-    await svc.auth.admin.deleteUser(admin.user!.id);
+    await deleteUsers(svc, reader.user!.id, admin.user!.id);
     await adminContext.close();
   }
 });

@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T041 [US3] — non-admin reaching `/app/admin/users` is denied (FR-015).
@@ -44,7 +45,7 @@ test('a signed-in non-admin (student) reaching /app/admin/users is denied, not s
     await expect(page.getByText(/don't have access/i)).toBeVisible();
     await expect(page.locator('table')).toHaveCount(0);
   } finally {
-    await svc.auth.admin.deleteUser(created.user!.id);
+    await deleteUsers(svc, created.user!.id);
   }
 });
 
@@ -65,7 +66,7 @@ test('a self-selected teacher (not admin) is also denied /app/admin/users', asyn
     await page.goto('/app/admin/users');
     await expect(page.getByText(/don't have access/i)).toBeVisible();
   } finally {
-    await svc.auth.admin.deleteUser(created.user!.id);
+    await deleteUsers(svc, created.user!.id);
   }
 });
 
@@ -87,6 +88,6 @@ test('an admin CAN reach /app/admin/users and sees the user table', async ({ pag
     // Scoped to the table — the navbar also shows the admin's own email.
     await expect(page.locator('table').getByText(email)).toBeVisible();
   } finally {
-    await svc.auth.admin.deleteUser(created.user!.id);
+    await deleteUsers(svc, created.user!.id);
   }
 });

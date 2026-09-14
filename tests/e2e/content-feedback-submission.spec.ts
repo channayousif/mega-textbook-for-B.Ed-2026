@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T017 [US2] — as a signed-in reader on a topic-NN.mdx page, submits
@@ -116,7 +117,7 @@ test('a reader submits whole-page and passage feedback in both locales and on a 
   } finally {
     const { data: profile } = await svc.from('profiles').select('id').eq('auth_user_id', user.user!.id).single();
     if (profile) await svc.from('content_feedback').delete().eq('author_id', profile.id);
-    await svc.auth.admin.deleteUser(user.user!.id);
+    await deleteUsers(svc, user.user!.id);
     await context.close();
   }
 });

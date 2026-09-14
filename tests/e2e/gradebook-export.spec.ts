@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
 import ExcelJS from 'exceljs';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T050 [US5] — the exported `.xlsx` for a class with an Urdu-named student
@@ -90,7 +91,6 @@ test('exported gradebook .xlsx has the Urdu student name and mark intact', async
     expect(cellValues.some((v) => v === '17')).toBe(true);
   } finally {
     await svc.from('classes').delete().eq('name', 'E2E Gradebook Section').eq('course_code', 'EFMP-301');
-    await svc.auth.admin.deleteUser(teacher.user!.id);
-    await svc.auth.admin.deleteUser(student.user!.id);
+    await deleteUsers(svc, teacher.user!.id, student.user!.id);
   }
 });

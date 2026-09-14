@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T050 [Polish] — measures the dashboard home area's load time against
@@ -77,7 +78,6 @@ test('dashboard home loads within the SC-008 budget at 8-semester/6-class scale'
     expect(elapsedMs, `dashboard home took ${elapsedMs}ms, budget is ${SC008_BUDGET_MS}ms`).toBeLessThan(SC008_BUDGET_MS);
   } finally {
     for (const id of classIds) await svc.from('classes').delete().eq('id', id);
-    await svc.auth.admin.deleteUser(teacher.user!.id);
-    await svc.auth.admin.deleteUser(student.user!.id);
+    await deleteUsers(svc, teacher.user!.id, student.user!.id);
   }
 });

@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T051 [Polish] — a signed-in student reaching `/app/teacher/` sees
@@ -43,6 +44,6 @@ test('a signed-in student is denied access to every teacher-dashboard and admin 
     await expect(page.getByText(/don.t have access/i)).toBeVisible();
     await expect(page.getByTestId('aggregate-feedback-row')).toHaveCount(0);
   } finally {
-    await svc.auth.admin.deleteUser(student.user!.id);
+    await deleteUsers(svc, student.user!.id);
   }
 });

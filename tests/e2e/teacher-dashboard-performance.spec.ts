@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T050 [Polish] — measures Overview's and Analytics' load time against Spec
@@ -80,7 +81,7 @@ test('overview and analytics load within the SC-005 budget at representative sca
     expect(analyticsElapsedMs, `Analytics took ${analyticsElapsedMs}ms, budget is ${SC005_BUDGET_MS}ms`).toBeLessThan(SC005_BUDGET_MS);
   } finally {
     if (classId) await svc.from('classes').delete().eq('id', classId);
-    await svc.auth.admin.deleteUser(teacher.user!.id);
-    for (const id of studentAuthIds) await svc.auth.admin.deleteUser(id);
+    await deleteUsers(svc, teacher.user!.id);
+    for (const id of studentAuthIds) await deleteUsers(svc, id);
   }
 });

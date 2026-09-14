@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T010 [US1] — items due within 48h appear first; a student with nothing
@@ -77,8 +78,7 @@ test('dashboard home orders due-soon items 48h-first and fits a 360px viewport',
     expect(overflow).toBe(false);
   } finally {
     if (classId) await svc.from('classes').delete().eq('id', classId);
-    await svc.auth.admin.deleteUser(teacher.user!.id);
-    await svc.auth.admin.deleteUser(student.user!.id);
+    await deleteUsers(svc, teacher.user!.id, student.user!.id);
   }
 });
 
@@ -95,6 +95,6 @@ test('a student with nothing pending sees an "all caught up" state, not an empty
     await page.goto('/app/dashboard/');
     await expect(page.getByText(/all caught up/i)).toBeVisible();
   } finally {
-    await svc.auth.admin.deleteUser(student.user!.id);
+    await deleteUsers(svc, student.user!.id);
   }
 });

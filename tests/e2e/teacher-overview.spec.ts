@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T006 [US1] — two classes each show their own ungraded count (not
@@ -108,8 +109,7 @@ test('overview shows separate per-class ungraded counts, cross-class soonest-due
     await expect(recentActivity).toContainText(['B1 Quiz']);
   } finally {
     for (const id of classIds) await svc.from('classes').delete().eq('id', id);
-    await svc.auth.admin.deleteUser(teacher.user!.id);
-    await svc.auth.admin.deleteUser(student.user!.id);
+    await deleteUsers(svc, teacher.user!.id, student.user!.id);
   }
 });
 
@@ -135,6 +135,6 @@ test('a teacher with nothing pending sees an explicit "caught up" state, not a b
     await expect(page.getByText(/caught up/i)).toBeVisible();
   } finally {
     if (classId) await svc.from('classes').delete().eq('id', classId);
-    await svc.auth.admin.deleteUser(teacher.user!.id);
+    await deleteUsers(svc, teacher.user!.id);
   }
 });
