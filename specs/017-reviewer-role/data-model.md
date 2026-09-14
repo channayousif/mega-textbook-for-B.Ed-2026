@@ -55,11 +55,19 @@ browser. The helper is also the point any future policy would attach to, which i
 test belongs in it now rather than later. spec.md's **Enforcement posture** section says what the
 capability does and does not control.
 
-## 4. Queue state - ephemeral, and the only thing Postgres owns here
+## 4. Queue state - derived, and therefore not in Postgres at all
 
-Which units await review, and which a reviewer currently has open. Safe to lose: it can be rebuilt
-from the tracker files and the content index. Nothing about a **gate outcome** is stored in
-Postgres.
+Which units await review. An earlier draft of this section said Postgres owned this as "ephemeral"
+state while giving it no schema, and the plan's Technical Context budgeted no table to put it in.
+Resolved in favour of deriving it: `scripts/report-content-status.mjs` already reduces the tracker
+files to a per-unit fact table in `static/content-status.json`, so it emits per-unit G3/G5 gate
+state alongside everything else it emits, and the queue is built from that in the browser.
+
+This is not a smaller table, it is the absence of one. There is no row to go stale, no claim to
+reconcile, and nothing about a **gate outcome** in Postgres, which is what Art. V.1 asks for.
+"Which unit a reviewer currently has open" is simply not tracked: two reviewers opening the same
+unit produce two certifications, and a later one names the earlier in `supersedes`. That is a
+better outcome than a lock, because the second review is evidence rather than a collision.
 
 ## The certification artefact - Git, not Postgres
 

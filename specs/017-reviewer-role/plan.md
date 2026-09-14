@@ -8,20 +8,21 @@
 Grant, audit and exercise a `reviewer` capability so a qualified person other than the curriculum
 owner can certify G3 and G5. The feature is smaller than the roadmap implied: Art. VII already
 permits a qualified human executor, and the pipeline gate already accepts human initials, so no
-constitutional amendment and no gate change are needed. What remains is one migration, one helper
-function, RLS, one admin page, an export following ADR-0015, tests, and a governance record.
+constitutional amendment and no gate change are needed. What remains is two migration files (the enum
+value must commit before the function that writes it), one helper function, one admin page, an
+export following ADR-0015, tests, a governance record, and the Teacher Guide page Art. X requires.
 
 ## Technical Context
 
 **Language/Version**: TypeScript 5.6 on Node 22+; migrations are SQL; gate scripts unchanged
 **Primary Dependencies**: Docusaurus 3.10, React 18.3, `@supabase/supabase-js` ^2 - **no new dependency**
-**Storage**: Supabase Postgres - one column, one enum value, one function, RLS. Certification evidence is **not** stored here; it is a Git artefact (research R3)
+**Storage**: Supabase Postgres - one column, one enum value, one function. **No new table and no new policy**: certification evidence is a Git artefact (research R3), and the review queue is derived at build time from the tracker files into `static/content-status.json`, so Postgres holds nothing about a gate outcome or a queue
 **Testing**: `vitest.rls.config.ts` for RLS policy tests, `vitest` for unit tests, Playwright for the page
 **Target Platform**: the existing self-hosted site and Supabase instance
 **Project Type**: single project - a Docusaurus site with embedded app pages over Supabase
 **Performance Goals**: none specific; the review queue is a small admin-only list
 **Constraints**: Art. V.1 keeps gate outcomes in Git; Art. V.2 puts enforcement in the backend, never the UI; Art. V.3 closes the role set, so the capability pattern is mandatory
-**Scale/Scope**: 1 migration, 1 page, 1 export, ~5 RLS tests, 1 governance record. No new prose, no gate change.
+**Scale/Scope**: 2 migration files, 1 page, 1 export, 5 RLS tests, 1 governance record, 1 bilingual guide page. No gate change.
 
 ## Constitution Check
 
@@ -68,7 +69,8 @@ specs/017-reviewer-role/
 
 ```text
 supabase/migrations/
-└── 0043_reviewer_capability.sql   # NEW - column, audit enum value, is_reviewer(), RLS
+├── 0043_reviewer_audit_change_enum.sql  # NEW - the audit_change enum value, alone (research R6)
+└── 0044_reviewer_capability.sql         # NEW - column, is_reviewer(), guard and audit branches
 
 src/
 ├── lib/reviewQueue.ts              # NEW - queue reads, certification builder, export

@@ -42,23 +42,44 @@ gate.
 ## Requirements
 
 - FR-001: `profiles` gains `reviewer boolean not null default false`, granted only by an admin,
-  mirroring `verified_teacher`. `guard_privileged_columns` blocks self-grant, and
-  `privilege_audit`'s `audit_change` enum gains `'reviewer'` so every grant and revocation is
-  recorded with actor, subject and timestamp.
+  mirroring `verified_teacher`. `guard_privileged_columns` **must be extended** to block
+  self-grant: it enumerates protected columns by name (`role`, `verified_teacher`, `status`,
+  `deleted_at`, `auth_user_id`), so a new column is unprotected until a branch names it, and a
+  holder could otherwise grant it to themselves under the own-row update policy. The same is true
+  of `write_privilege_audit`, which also enumerates by name. `privilege_audit`'s `audit_change` enum
+  gains `'reviewer'` so every grant and revocation is recorded with actor, subject and timestamp.
 - FR-002: `public.is_reviewer(uid)` mirrors `is_admin` - active, non-deleted, capability held. It
   is the single point at which suspension is checked, so a policy written later cannot forget it.
   The review surface reads it over RPC rather than trusting the cached profile column, so a
   suspended holder is refused by the database rather than by the browser. See **Enforcement
   posture** below for what this does and does not control.
-- FR-003: A reviewer may read any unit's content and its review queue. A reviewer may **not** grant
-  capabilities, change roles, edit content, or alter their own certifications.
+- FR-003: A reviewer may read any unit's content and its review queue. Both are already public
+  static files, so this half of the requirement needs no code and no policy - it is stated to make
+  clear that reviewing requires no privileged read. A reviewer may **not** grant capabilities,
+  change roles, edit content, or alter their own certifications; that half is what needs proving,
+  and it is proven structurally, by showing the capability adds no write grant anywhere.
 - FR-004: An admin-panel review surface at `/app/admin/review-queue`: units awaiting G3 or G5, the
   English source beside the Urdu mirror for G5, and three actions - **certify**, **request
-  revision**, **escalate**. Escalation routes to the curriculum owner, who retains policy and
-  escalation ownership under Art. VII §1.
+  revision**, **escalate**. Each action sets the certification's `disposition` to `pass`, `revise`
+  or `escalate` respectively, and **all three produce the same two artefacts** - there is no
+  separate notification channel and no escalation inbox. An escalation reaches the curriculum owner
+  the way everything else in this feature does: as a committed certification whose disposition is
+  `escalate` and a tracker row that consequently leaves the gate open, which the owner sees at the
+  next gate run. "Routes to the owner" means exactly that and nothing more; naming a mechanism the
+  feature does not build would be the worse error. The owner retains policy and escalation
+  ownership under Art. VII §1.
 - FR-005: A certification records reviewer identity, stage, course, unit, the exact input digests
-  it was made against, per-criterion findings, disposition and timestamps - in the shape the agent
-  path already writes to `specs/content/<course>/reviews/unit-NN/<stage>/`. A **G5 certification
+  it was made against, the deterministic checks that were run, per-criterion findings, disposition
+  and timestamps - in the shape the agent path already writes to
+  `specs/content/<course>/reviews/unit-NN/<stage>/`. `input_manifest` carries the **digest map
+  itself**, not a path to it, exactly as an agent report does: a path cannot be compared against a
+  freshly computed manifest, so a path would make Art. VII §4's freshness rule uncheckable and
+  would make the two formats undiffable. The reviewer already holds that map - `review:evidence
+  prepare` writes it to `manifest.json` - so the page takes the file rather than recomputing digests
+  in a browser that cannot see the bytes. `commands` records the deterministic gate runs and their
+  exit codes, since Art. VII §3 counts those among the evidence. Agent-specific fields
+  (`skill_digest`, `model`, `author_run_id`, `reviewer_run_id`) are deliberately absent and
+  enumerated as absent in the contract, so a comparator can tell an omission from an oversight. A **G5 certification
   additionally carries `g3_report`**, the path of the accepted G3 certification for the same
   English version, and cannot be produced without one: Art. VII §4 requires G5 to bind to accepted
   G3 evidence, and the agent path already enforces this (`review-evidence.mjs` refuses a G5 report
@@ -75,7 +96,8 @@ gate.
 - FR-008: The `reviewer` capability inherits the same `content_feedback` insert permission every
   other authenticated role has (owner decision, 2026-09-13: feedback is authenticated, all roles).
 - FR-009: Nothing in this feature changes a `translation_status`, a gate outcome or a tracker row
-  automatically. A certification is evidence a human produced; applying it stays an explicit act,
+  automatically, and this is **asserted by a test** rather than promised in on-screen text: the
+  certify action issues no database mutation and writes no file. A certification is evidence a human produced; applying it stays an explicit act,
   through the ordinary PR flow (ADR-0015's accepted manual step).
 - FR-010: Qualification is recorded in `specs/reviewers/human-reviewers.md`, owner-maintained. The
   pipeline gate already accepts human initials with no registry lookup, so this feature adds **no
@@ -203,3 +225,17 @@ joins a path that is known to work, rather than discovering its faults.
 That also answers the objection in this spec's own **Why**: without a named person the feature
 ships a capability nobody holds. Granting it to the owner means it is held from day one, and the
 external recruitment stops being a blocker on shipping.
+
+**What it does not do.** It does not lift the ceiling. The stated problem is that every tracker row
+carries the same initials and exactly one person can close a G5; granting that person the
+capability leaves both facts intact. Phase 6 proves the path works and produces comparators in the
+new format; only a second qualified person produces throughput. The exit criterion for this feature
+is therefore not "the capability is held" but **one external reviewer qualified and holding it**,
+and that should be tracked as the next piece of work rather than counted as delivered here.
+
+There is also an independence question worth naming rather than leaving implicit. The owner
+authored or translated nearly all the content they would certify, and Art. III.2 says a translation
+cannot approve itself. Art. VII §2's independence requirement sits under the ADR-0019 heading and
+so governs the agent path, not this one, and the owner certifying their own units is the status quo
+this feature exists to end rather than something it introduces. It is accepted deliberately for the
+proving run, and it is one more reason the owner entry is a rehearsal rather than the destination.
