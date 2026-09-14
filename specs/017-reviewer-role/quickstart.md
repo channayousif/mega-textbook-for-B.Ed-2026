@@ -18,7 +18,25 @@ Nobody can grant it to themselves: `guard_privileged_columns` rejects the write.
 
 ## 3. Certify
 
-The reviewer opens `/app/admin/review-queue`, which lists units awaiting G3 or G5. For G5 the
+**First, prepare the evidence bundle.** The browser cannot see the repository, so the digests of
+what you reviewed have to come from the repository itself:
+
+```bash
+npm run review:evidence prepare <COURSE> <UNIT> <G3|G5> <output-dir>
+# e.g. npm run review:evidence prepare EFMP-301 1 G5 /tmp/efmp-301-u1-g5
+```
+
+It writes `manifest.json`, which the review page takes as a file. Two things the walk of
+2026-09-13 turned up, both of which will stop you dead otherwise:
+
+- **It refuses to run over a dirty working tree**, by design: a manifest describes a commit, and a
+  commit is the only state another host can reproduce.
+- **`Scheme-and-Course-guides/` is a bound input for every review.** So a single uncommitted or
+  untracked file anywhere in that directory blocks `prepare` for *every* unit in the repository,
+  with a message that names the file but not the consequence. Commit it, ignore it, or move it
+  aside first.
+
+Then the reviewer opens `/app/admin/review-queue`, which lists units awaiting G3 or G5. For G5 the
 English source sits beside the Urdu mirror. Three actions: **certify**, **request revision**,
 **escalate**. Escalation routes to the curriculum owner, who keeps policy and escalation ownership
 under Art. VII §1.
@@ -35,6 +53,10 @@ Certifying produces two downloads: the certification artefact and the tracker ro
 Commit both through the ordinary PR flow. The certification lands at
 `specs/content/<course>/reviews/unit-NN/<stage>/<run-id>.json`; the tracker row goes into
 `specs/content/<course>/tasks.md`.
+
+A `revise` or an `escalate` also produces both files, but its tracker row carries `⏳` rather than
+`✅`, so the gate stays closed. That is the whole of the escalation mechanism: the owner sees it at
+the next gate run because the gate still fails.
 
 Then run the gates:
 

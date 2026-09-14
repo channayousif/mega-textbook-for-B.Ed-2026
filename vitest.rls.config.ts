@@ -21,6 +21,11 @@ export default defineConfig({
   test: {
     include: ['tests/rls/**/*.test.mjs'],
     exclude: ['tests/e2e/**', 'tests/unit/**', 'node_modules/**'],
+    // Loads .env.local and REFUSES to run unconfigured. Before this, a local
+    // `npm run test:rls` with no credentials skipped every file and exited 0 -
+    // a suite of negative assertions reporting success while asserting nothing.
+    // See tests/rls/_setup.mjs.
+    setupFiles: ['./tests/rls/_setup.mjs'],
     // Policy failures surface as network/DB round-trips; the default 5s is tight
     // when the suite runs against a hosted project rather than a local stack.
     testTimeout: 30_000,

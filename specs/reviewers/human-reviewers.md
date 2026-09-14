@@ -37,6 +37,20 @@ default: certifying G5 needs Urdu register judgement that certifying G3 does not
 |---|---|---|---|---|
 | YM | All courses, G3 and G5 | Curriculum owner. Every G1-G7 row in `specs/content/*/tasks.md` to date, including EFMP-301 Unit 1 and EFMP-302 Unit 1 at v3.0 and the v4.0 concept-graph retrofit. | 2026-09-13 | active |
 
+**Grant record.** `privilege_audit` row **6936**, `false -> true`, 2026-09-14 03:47 UTC, on profile
+`45e8770e-d9e2-43fa-92c1-eef2b76b89bc`.
+
+That row's `actor_id` is **NULL**, and the reason belongs here rather than in anyone's memory. The
+grant was applied directly against the database at the owner's instruction while Feature 017 was
+being landed, not clicked through `/app/admin/users`. `write_privilege_audit` reads the actor from
+`current_profile_id()`, which resolves to null outside a session, so the trail records accurately
+that **no signed-in user performed this write**. That is the truthful entry: the alternative -
+minting a session for the owner so the row would name them - would have put a false statement in
+the first audit row of the first delegation of a content gate.
+
+Every subsequent grant and revocation must go through the admin page, where the actor resolves. A
+second NULL-actor row in this table is a defect, not a precedent.
+
 ### YM - the curriculum owner
 
 Granted first, before anyone external holds the capability. **Operationally this changes nothing**:
