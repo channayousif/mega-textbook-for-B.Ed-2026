@@ -1,4 +1,27 @@
 <!--
+SYNC IMPACT REPORT (v4.0.0)
+Version change: 3.0.0 -> 4.0.0
+Bump rationale: MAJOR - Article III.2's Urdu-parity obligation is redefined. Parity was a
+per-unit PUBLISH gate; it is now a CORPUS COMPLETION requirement. Existing specs that assumed
+no unit may go live without an accepted Urdu version are invalidated by this change, which is
+what makes it MAJOR rather than MINOR. See ADR-0022.
+Modified: Article III.2 only. The exemption, the reviewer-qualification requirements, the
+self-approval prohibition and the register rule are carried over verbatim.
+Added: the mandatory untranslated-banner obligation for English-only publication, and the
+explicit statement that this relaxes WHEN parity is owed and never WHETHER.
+Removed: nothing. No obligation is dropped; one is rescheduled.
+Reviewed and unchanged: Article VII's Content-gate row ("Urdu parity & register") still holds,
+since the gate checks parity wherever an Urdu version exists. Spec 001 FR-003 needs no
+amendment: it already specifies the English fallback and the "Urdu translation not yet
+available" banner this article now relies on. No .specify/templates file references parity.
+Updated: specs/content/style-guide.md (restates the publish rule; style guide -> v4.4).
+Follow-up: ADR-0022 is Proposed, not Accepted. If the owner rejects it, revert this amendment.
+Risk recorded in ADR-0022: Urdu debt accrues at corpus scale, carrying the single-reviewer G5
+bottleneck that Feature 017 has not yet lifted. One unit is translated early as a rate probe
+(specs/content/measurement-run-001.md) so the terminal phase is planned from measurement.
+-->
+
+<!--
 SYNC IMPACT REPORT (v3.0.0)
 Version change: 2.9.0 -> 3.0.0
 Bump rationale: MAJOR - redefines mandatory human Urdu review and exclusive human G3/G5
@@ -487,9 +510,19 @@ authors' preference; traceability makes accreditation review auditable.
    richer unit *structure* (e.g. the Spec 008 per-topic learning cycle) does not raise the
    *language* register - the plain-English ceiling is unchanged by it.
 2. **Urdu parity**: every student-facing unit MUST have a complete Urdu version accepted
-   through G5 before publish, **except units belonging to a course explicitly designated
-   English-only** (e.g. GENG-300 Functional English), flagged `bilingual: false` in
-   course-overview metadata. Machine translation MAY draft. G5 MUST be performed by a
+   through G5 **before the corpus is complete**, **except units belonging to a course
+   explicitly designated English-only** (e.g. GENG-300 Functional English), flagged
+   `bilingual: false` in course-overview metadata.
+
+   Parity is a **corpus completion requirement, not a per-unit publish gate** (ADR-0022). A
+   unit MAY publish English-only; when it does, the `ur` route MUST render the "Urdu
+   translation not yet available" banner already required by Spec 001 FR-003, so the gap is
+   stated to the reader rather than hidden. English-only publication is an acknowledged
+   interim state and MUST NOT be presented, in the product or its metadata, as a finished
+   bilingual unit. This relaxes *when* parity is owed, never *whether*: a corpus that ships
+   complete in English and incomplete in Urdu does not satisfy this article.
+
+   Machine translation MAY draft. G5 MUST be performed by a
    qualified human reviewer or an independently qualified review agent under Article VII.
    A translation cannot approve itself. Register: academic-plain (درسی مگر عام فہم),
    not literary/archaic. Structural parity alone is insufficient evidence of semantic parity.
@@ -750,4 +783,4 @@ Engineering gate (the rest).
 
 ---
 
-**Version**: 3.0.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-09-11
+**Version**: 4.0.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-09-14
