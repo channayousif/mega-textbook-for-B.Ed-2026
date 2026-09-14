@@ -1,5 +1,5 @@
 ---
-version: "4.1"
+version: "4.2"
 ---
 
 # Content Style Guide
@@ -53,6 +53,18 @@ during the freeze, for the reason recorded beside the rule: the cost of the gap 
 every unit authored, and at 2 units it was 17 files. `terminology.csv` is unchanged; the bump
 re-freezes the pair per Spec 006 FR-007. **The freeze otherwise stands** - the v4.0 note below
 still governs, and `specs/backlog.md` remains where improvements wait.
+
+**v4.2** (2026-09-14) is a `terminology.csv` change only; this document's rules are unchanged.
+The EFMP-301 Unit 1 G5 register pass found five terms where the unit's prose and the bank
+disagreed. Four are recorded as **accepted pairs** (`term_ur` holds both, separated by ` / `)
+rather than resolved to one term, because both readings are already live in reviewed content:
+`جامع تشخیص` and `خود جائزہ` each appear in five EFMP-302 Unit 1 files that are signed at G5 and
+carry `translation_status: reviewed`, so replacing either would have made signed content
+non-conformant. `Readiness` is a pair for the same reason in reverse - the prose uses `تیاری`
+while `fig-U1-1/6/7` display `آمادگی`. Only `Rubric` resolved to a single term, the prose's
+`معیارِ جانچ`, because no figure and no other course used the former `معیارِ تشخیص`. No unit
+prose, figure or `translation_status` changed. Per Spec 006 FR-007 the bump re-freezes the pair;
+**the v4.0 freeze otherwise stands.**
 
 **v4.0's freeze note, which still governs. This was the last standard revision before the freeze.** Nine revisions in, each one has
 invalidated finished work; `EFMP-301` Unit 1 has been authored three times. From here the standard
