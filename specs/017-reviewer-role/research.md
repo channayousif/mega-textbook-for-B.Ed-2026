@@ -55,6 +55,17 @@ it makes Postgres authoritative for a gate outcome, and because human certificat
 need an export step before they could serve as comparators, which is the export this design avoids
 by writing the artefact directly.
 
+**Correction, 2026-09-13 (`/sp.analyze` finding A2).** "One evidence format" was stated more
+strongly than the contract delivered. `validateReport` also requires `skill_digest`, `model`,
+`author_run_id`, `reviewer_run_id`, `evidence_manifest` and `commands`, and it types
+`input_manifest` as the digest map rather than a path - so as first drafted, a human certification
+shared a directory with an agent report and very little else. The claim is now narrowed and the
+contract is brought up to it: every field that is not agent-specific carries the same name and the
+same type, `input_manifest` carries the map, `commands` is present, and the four genuinely
+agent-specific fields are enumerated as absent. What a comparator gets is a field-for-field diff,
+not an artefact `validateReport` would accept - that function is agent-only by construction, since
+it demands an `agent:` identity and a signature.
+
 ## R4 - Both UI patterns already exist in the codebase
 
 **Decision**: reuse rather than invent. The capability toggle follows
@@ -79,4 +90,13 @@ and one governance record. That is a materially smaller feature than the roadmap
 
 ## R6 - Migration number
 
-**Decision**: `0043_reviewer_capability.sql`. The last applied is `0042_assignment_delete_no_recursion.sql`.
+**Decision**: two files, `0043_reviewer_audit_change_enum.sql` and `0044_reviewer_capability.sql`.
+The last applied is `0042_assignment_delete_no_recursion.sql`.
+
+**Why two, revised 2026-09-13.** This originally read as one file. PostgreSQL permits
+`alter type ... add value` inside a transaction but forbids **using** the new value in that same
+transaction, and the Supabase CLI runs each migration file in one transaction. `0044` defines
+`write_privilege_audit()` with a body that writes `'reviewer'` and is exercised by tests
+immediately afterwards, so the enum value has to land and commit first. The split is a constraint
+of the database, not a matter of taste, which is why it is recorded here rather than left to
+whoever writes the migration to rediscover.

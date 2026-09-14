@@ -8,20 +8,21 @@
 Grant, audit and exercise a `reviewer` capability so a qualified person other than the curriculum
 owner can certify G3 and G5. The feature is smaller than the roadmap implied: Art. VII already
 permits a qualified human executor, and the pipeline gate already accepts human initials, so no
-constitutional amendment and no gate change are needed. What remains is one migration, one helper
-function, RLS, one admin page, an export following ADR-0015, tests, and a governance record.
+constitutional amendment and no gate change are needed. What remains is two migration files (the enum
+value must commit before the function that writes it), one helper function, one admin page, an
+export following ADR-0015, tests, a governance record, and the Teacher Guide page Art. X requires.
 
 ## Technical Context
 
 **Language/Version**: TypeScript 5.6 on Node 22+; migrations are SQL; gate scripts unchanged
 **Primary Dependencies**: Docusaurus 3.10, React 18.3, `@supabase/supabase-js` ^2 - **no new dependency**
-**Storage**: Supabase Postgres - one column, one enum value, one function, RLS. Certification evidence is **not** stored here; it is a Git artefact (research R3)
+**Storage**: Supabase Postgres - one column, one enum value, one function. **No new table and no new policy**: certification evidence is a Git artefact (research R3), and the review queue is derived at build time from the tracker files into `static/content-status.json`, so Postgres holds nothing about a gate outcome or a queue
 **Testing**: `vitest.rls.config.ts` for RLS policy tests, `vitest` for unit tests, Playwright for the page
 **Target Platform**: the existing self-hosted site and Supabase instance
 **Project Type**: single project - a Docusaurus site with embedded app pages over Supabase
 **Performance Goals**: none specific; the review queue is a small admin-only list
 **Constraints**: Art. V.1 keeps gate outcomes in Git; Art. V.2 puts enforcement in the backend, never the UI; Art. V.3 closes the role set, so the capability pattern is mandatory
-**Scale/Scope**: 1 migration, 1 page, 1 export, ~5 RLS tests, 1 governance record. No new prose, no gate change.
+**Scale/Scope**: 2 migration files, 1 page, 1 export, 5 RLS tests, 1 governance record, 1 bilingual guide page. No gate change.
 
 ## Constitution Check
 
@@ -30,15 +31,24 @@ function, RLS, one admin page, an export following ADR-0015, tests, and a govern
 | Article | Requirement | Verdict |
 |---|---|---|
 | **V.3 - closed role set** | Roles are `student`, `teacher`, `admin`; restricted access is a separate admin-granted capability | **PASS, and load-bearing** - a fourth role would violate the enumeration; the capability design is what the article prescribes |
-| V.2 - security in the backend | Enforcement is RLS, not UI | **PASS** - `is_reviewer()` gates every policy; the page is a view over what RLS already permits |
+| V.2 - security in the backend | Enforcement is RLS, not UI | **NOT ENGAGED, and said so explicitly** - V.2 protects answer keys, grades and submissions; a certification is none of those. There is no server-side certification action, so `is_reviewer()` gates no policy. It gates the review surface over RPC, so suspension is the database's answer rather than the browser's. spec.md's **Enforcement posture** states plainly that `reviewer` is an authorization record and the pull request is the control |
 | V.1 - content in version control | Gate outcomes stay in Git | **PASS** - certifications are Git artefacts; Postgres holds ephemeral queue state only (R3) |
 | VII - review gates | G3/G5 execution | **PASS** - exercises the existing "qualified human" permission; no amendment (R5) |
 | VIII - data protection | Certifications name people | **PASS** - reviewer identity is already public in tracker rows by design; no new personal data beyond initials |
 | IX - authentication and access | Capability granted only by admin | **PASS** - `guard_privileged_columns` blocks self-grant; `privilege_audit` records both directions |
+| **X - documentation surfaces** | A teacher-facing capability updates the Teacher Guide in the same branch | **REQUIRES WORK, added after analysis** - X.1 makes the Teacher Guide the home for "what capability-gated features unlock", and `guides/teacher-guide/verified-teacher-material.mdx` is the precedent. FR-011 and tasks T036/T037 cover it, in both locales |
+| **VII - Docs gate** | Feature author updates the matching guide | **REQUIRES WORK, added after analysis** - the Docs gate row was missed in the first pass of this table; it is a named gate with the feature author as its owner |
 | IV - SDD law | Approved spec precedes implementation | **PASS** - spec at PR #51 |
 | VI - scope discipline | No standard change | **PASS** - v4.0 is frozen and untouched |
 
-Post-Phase-1 re-check: unchanged. No article is in tension, and V.3 actively prescribes the design.
+Post-Phase-1 re-check: unchanged. V.3 actively prescribes the design.
+
+**Post-`/sp.analyze` re-check (2026-09-13)**: two rows were missing and one was wrong. Art. X and the
+Art. VII Docs gate were absent from this table, which is how the feature reached `/sp.tasks` with no
+guide task at all for a teacher-facing capability. The V.2 row asserted that `is_reviewer()` gates
+every policy, which is false: the feature creates no policy, because certifying is client-side
+artefact generation. Both are corrected above, and spec.md now carries an **Enforcement posture**
+section rather than leaving a reader to infer an RLS guarantee that was never built.
 
 ## Project Structure
 
@@ -59,7 +69,8 @@ specs/017-reviewer-role/
 
 ```text
 supabase/migrations/
-└── 0043_reviewer_capability.sql   # NEW - column, audit enum value, is_reviewer(), RLS
+├── 0043_reviewer_audit_change_enum.sql  # NEW - the audit_change enum value, alone (research R6)
+└── 0044_reviewer_capability.sql         # NEW - column, is_reviewer(), guard and audit branches
 
 src/
 ├── lib/reviewQueue.ts              # NEW - queue reads, certification builder, export
@@ -72,6 +83,12 @@ tests/rls/
 
 specs/reviewers/
 └── human-reviewers.md              # NEW - the qualification record (R5: governance, not a gate input)
+
+guides/teacher-guide/
+└── review-and-certify.mdx          # NEW - Art. X.2 / the Docs gate (FR-011)
+
+i18n/ur/docusaurus-plugin-content-docs-guides/current/teacher-guide/
+└── review-and-certify.mdx          # NEW - the Urdu mirror, since the guides are bilingual
 ```
 
 **Structure Decision**: single project, following the existing app-page-over-Supabase shape. The
@@ -105,8 +122,9 @@ No HTTP API contracts: the feature adds no endpoint. Supabase RLS is the contrac
    be held but does nothing.
 3. **The review surface** - queue, side-by-side EN/UR for G5, and the three actions.
 4. **The export** - certification artefact plus tracker row, following `feedback-queue.tsx`.
-5. **The governance record** - `specs/reviewers/human-reviewers.md`, and the owner's own entry, so
-   the path is exercised end to end before anyone external holds the capability.
+5. **The governance record** - `specs/reviewers/human-reviewers.md`, the owner's own entry, and the
+   Teacher Guide page in both locales, so the path is exercised end to end and documented for the
+   reader it is aimed at before anyone external holds the capability.
 
 Step 5 is deliberately last and deliberately included: the spec's own objection is that a
 capability nobody holds relieves no bottleneck.
