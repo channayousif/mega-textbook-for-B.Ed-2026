@@ -66,12 +66,41 @@ function parseCsv(text) {
   });
 }
 
+/**
+ * The bank is data, not standard (ADR-0021): it versions by its own Git history rather than
+ * under the style guide's freeze marker, so the shape checks that used to ride along with a
+ * version bump have to live here instead.
+ *
+ * `term_ur` may hold a PAIR - two accepted Urdu terms separated by ` / ` - when both readings
+ * are already live in reviewed content and picking one would make signed content
+ * non-conformant. Style guide v4.2 banked four such pairs. Every accepted term is returned, so
+ * a key term matching either side conforms.
+ */
+function acceptedTerms(termUr) {
+  return String(termUr ?? '')
+    .split('/')
+    .map((t) => t.trim())
+    .filter(Boolean);
+}
+
 function loadTerminology() {
   const file = join(CONTENT_SPEC_DIR, 'terminology.csv');
   const map = new Map();
   if (!existsSync(file)) return map;
   for (const r of parseCsv(readFileSync(file, 'utf8'))) {
-    if (r.term_en) map.set(r.term_en, r.term_ur);
+    if (!r.term_en) continue;
+    // A duplicate used to be silently shadowed by `map.set`, which is exactly the rot the
+    // freeze was incidentally preventing. Name it instead.
+    if (map.has(r.term_en)) {
+      err('terminology.csv', `duplicate term_en '${r.term_en}' - the bank must have one row per English term`);
+      continue;
+    }
+    const accepted = acceptedTerms(r.term_ur);
+    if (!accepted.length) {
+      err('terminology.csv', `term_en '${r.term_en}' has an empty term_ur`);
+      continue;
+    }
+    map.set(r.term_en, accepted);
   }
   return map;
 }
@@ -159,9 +188,14 @@ function checkUnit({ unitDir, urUnitDir, courseCode, unitNo }) {
     const keyTerms = Array.isArray(urFm.key_terms) ? urFm.key_terms : [];
     for (const { en, ur } of keyTerms) {
       if (!bank.has(en)) {
-        err(label, `key term '${en}' is not in terminology.csv — add it to the bank`);
-      } else if (bank.get(en) !== ur) {
-        err(label, `key term '${en}' declares ur:'${ur}' but terminology.csv has '${bank.get(en)}'`);
+        err(label, `key term '${en}' is not in terminology.csv - add it to the bank`);
+      } else if (!bank.get(en).includes(ur)) {
+        const accepted = bank.get(en);
+        err(
+          label,
+          `key term '${en}' declares ur:'${ur}' but terminology.csv accepts ` +
+            `${accepted.map((t) => `'${t}'`).join(' or ')}`,
+        );
       }
     }
   }
