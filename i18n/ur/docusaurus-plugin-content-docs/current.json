@@ -1,0 +1,78 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.textbook.category.Semester 1": {
+    "message": "سمسٹر 1",
+    "description": "The label for category 'Semester 1' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.GENG-300 · Functional English": {
+    "message": "GENG-300 · Functional English",
+    "description": "The label for category 'GENG-300 · Functional English' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.GENG-300 · Unit 1 (coming soon)": {
+    "message": "GENG-300 · یونٹ 1 (جلد آ رہا ہے)",
+    "description": "The label for category 'GENG-300 · Unit 1 (coming soon)' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.GNAS-301 · Environmental Science": {
+    "message": "GNAS-301 · Environmental Science",
+    "description": "The label for category 'GNAS-301 · Environmental Science' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.GNAS-301 · Unit 1 (coming soon)": {
+    "message": "GNAS-301 · یونٹ 1 (جلد آ رہا ہے)",
+    "description": "The label for category 'GNAS-301 · Unit 1 (coming soon)' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.GICT-300 · Application of ICT": {
+    "message": "GICT-300 · Application of ICT",
+    "description": "The label for category 'GICT-300 · Application of ICT' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.GICT-300 · Unit 1 (coming soon)": {
+    "message": "GICT-300 · یونٹ 1 (جلد آ رہا ہے)",
+    "description": "The label for category 'GICT-300 · Unit 1 (coming soon)' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.GQUR-300 · Quantitative Reasoning-I": {
+    "message": "GQUR-300 · Quantitative Reasoning-I",
+    "description": "The label for category 'GQUR-300 · Quantitative Reasoning-I' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.GQUR-300 · Unit 1 (coming soon)": {
+    "message": "GQUR-300 · یونٹ 1 (جلد آ رہا ہے)",
+    "description": "The label for category 'GQUR-300 · Unit 1 (coming soon)' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.EFMP-301 · Educational Psychology": {
+    "message": "EFMP-301 · تعلیمی نفسیات",
+    "description": "The label for category 'EFMP-301 · Educational Psychology' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 1 · Introduction to Educational Psychology": {
+    "message": "یونٹ 1 · تعلیمی نفسیات کا تعارف",
+    "description": "The label for category 'Unit 1 · Introduction to Educational Psychology' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.EFMP-302 · Teaching Profession": {
+    "message": "EFMP-302 · تدریسی پیشہ",
+    "description": "The label for category 'EFMP-302 · Teaching Profession' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 1 · Understanding Teaching": {
+    "message": "یونٹ 1 · تدریس کو سمجھنا",
+    "description": "The label for category 'Unit 1 · Understanding Teaching' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 2 · Models and Frameworks of Professional Ethics and Behaviors": {
+    "message": "یونٹ 2 · پیشہ ورانہ اخلاقیات اور طرزِ عمل کے نمونے اور فریم ورک",
+    "description": "The label for category 'Unit 2 · Models and Frameworks of Professional Ethics and Behaviors' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 3 · Becoming an Effective Teacher": {
+    "message": "یونٹ 3 · ایک مؤثر استاد بننا",
+    "description": "The label for category 'Unit 3 · Becoming an Effective Teacher' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 4 · The Professional Standards and Competencies for Teachers": {
+    "message": "یونٹ 4 · اساتذہ کے لیے پیشہ ورانہ معیارات اور اہلیتیں",
+    "description": "The label for category 'Unit 4 · The Professional Standards and Competencies for Teachers' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 5 · Issues and Challenges in Teaching Profession": {
+    "message": "یونٹ 5 · تدریسی پیشے میں مسائل اور چیلنجز",
+    "description": "The label for category 'Unit 5 · Issues and Challenges in Teaching Profession' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 6 · Sustaining Professionalism through Continuous Learning": {
+    "message": "یونٹ 6 · مسلسل تعلم کے ذریعے پیشہ واریت کو برقرار رکھنا",
+    "description": "The label for category 'Unit 6 · Sustaining Professionalism through Continuous Learning' in sidebar 'textbook'"
+  }
+}
