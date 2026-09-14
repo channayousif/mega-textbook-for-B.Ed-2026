@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T027 [US5] — two archived semesters appear grouped separately with no
@@ -33,7 +34,7 @@ test('a student with no past semesters sees a plain explanation', async ({ page 
     await page.goto('/app/dashboard/history');
     await expect(page.getByText(/will appear here/i)).toBeVisible();
   } finally {
-    await svc.auth.admin.deleteUser(student.user!.id);
+    await deleteUsers(svc, student.user!.id);
   }
 });
 
@@ -88,7 +89,6 @@ test('two archived semesters appear grouped separately with no edit controls, an
     expect(overflow).toBe(false);
   } finally {
     for (const id of classIds) await svc.from('classes').delete().eq('id', id);
-    await svc.auth.admin.deleteUser(teacher.user!.id);
-    await svc.auth.admin.deleteUser(student.user!.id);
+    await deleteUsers(svc, teacher.user!.id, student.user!.id);
   }
 });

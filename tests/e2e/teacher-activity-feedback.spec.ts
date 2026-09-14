@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T026 [US5] — submits feedback for one activity from a teaching-log entry;
@@ -111,7 +112,6 @@ test('teacher submits feedback from a log entry, revises it from the activity pa
       await svc.from('teaching_log_entries').delete().eq('class_id', classId);
       await svc.from('classes').delete().eq('id', classId);
     }
-    await svc.auth.admin.deleteUser(teacher.user!.id);
-    await svc.auth.admin.deleteUser(admin.user!.id);
+    await deleteUsers(svc, teacher.user!.id, admin.user!.id);
   }
 });

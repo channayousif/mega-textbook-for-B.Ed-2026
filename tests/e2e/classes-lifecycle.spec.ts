@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T012 [US1] — a teacher creates a class, shares the join code, a student
@@ -78,7 +79,6 @@ test('teacher creates a class, student joins by code, roster updates immediately
     await svc.from('classes').delete().eq('name', 'E2E Section').eq('course_code', 'EFMP-301');
     await teacherContext.close();
     await studentContext.close();
-    await svc.auth.admin.deleteUser(teacher.user!.id);
-    await svc.auth.admin.deleteUser(student.user!.id);
+    await deleteUsers(svc, teacher.user!.id, student.user!.id);
   }
 });

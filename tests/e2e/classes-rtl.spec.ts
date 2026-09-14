@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T063 [Polish] — RTL layout verification for the new classes/assignments/
@@ -79,6 +80,6 @@ test('classes pages render RTL under /ur/ and fit a 360px viewport without horiz
     await expectNoHorizontalOverflow(page);
   } finally {
     await svc.from('classes').delete().eq('name', 'E2E RTL Section').eq('course_code', 'EFMP-301');
-    await svc.auth.admin.deleteUser(teacher.user!.id);
+    await deleteUsers(svc, teacher.user!.id);
   }
 });

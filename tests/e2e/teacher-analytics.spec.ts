@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T034 [US6] — with a seeded fixture, confirms score distribution,
@@ -94,9 +95,6 @@ test('analytics shows correct distribution/unit average and flags only at-risk s
     await expect(atRiskRows.filter({ hasText: 'Student Z' })).toHaveCount(0);
   } finally {
     if (classId) await svc.from('classes').delete().eq('id', classId);
-    await svc.auth.admin.deleteUser(teacher.user!.id);
-    await svc.auth.admin.deleteUser(studentX.user!.id);
-    await svc.auth.admin.deleteUser(studentY.user!.id);
-    await svc.auth.admin.deleteUser(studentZ.user!.id);
+    await deleteUsers(svc, teacher.user!.id, studentX.user!.id, studentY.user!.id, studentZ.user!.id);
   }
 });

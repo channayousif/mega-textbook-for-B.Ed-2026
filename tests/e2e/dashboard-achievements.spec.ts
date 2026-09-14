@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T037 [US6] — a newly earned badge appears as a Home preview and on the
@@ -43,7 +44,7 @@ test('a student with no achievements sees the full catalog and how to reach each
     );
     expect(overflow).toBe(false);
   } finally {
-    await svc.auth.admin.deleteUser(student.user!.id);
+    await deleteUsers(svc, student.user!.id);
   }
 });
 
@@ -88,7 +89,6 @@ test('an earned achievement is previewed on Home and shown as earned on the Achi
     await expect(earnedRow.getByText(/earned/i)).toBeVisible();
   } finally {
     if (classId) await svc.from('classes').delete().eq('id', classId);
-    await svc.auth.admin.deleteUser(teacher.user!.id);
-    await svc.auth.admin.deleteUser(student.user!.id);
+    await deleteUsers(svc, teacher.user!.id, student.user!.id);
   }
 });

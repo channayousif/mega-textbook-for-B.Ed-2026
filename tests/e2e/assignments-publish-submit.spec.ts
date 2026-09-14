@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T028 [US2] — a teacher publishes a custom assignment, a student sees it
@@ -95,7 +96,6 @@ test('teacher publishes a custom assignment, student submits, sees on-time confi
     await svc.from('classes').delete().eq('name', 'E2E Assign Section').eq('course_code', 'EFMP-301');
     await teacherContext.close();
     await studentContext.close();
-    await svc.auth.admin.deleteUser(teacher.user!.id);
-    await svc.auth.admin.deleteUser(student.user!.id);
+    await deleteUsers(svc, teacher.user!.id, student.user!.id);
   }
 });
