@@ -13,6 +13,7 @@
  */
 
 import { createClient } from '@supabase/supabase-js';
+import { PROFILE_DEPENDENTS } from '../profile-dependents.mjs';
 import { randomUUID } from 'node:crypto';
 
 const URL = process.env.DOCUSAURUS_SUPABASE_URL;
@@ -138,31 +139,11 @@ export async function cleanupUsers(authUserIds = []) {
   // whole statement aborts - which is how the first version of this fix still
   // leaked 104 rows per suite run while looking correct.
   //
-  // ⚠️ ADD A ROW HERE when you add a table referencing profiles(id). The
-  // alternative, ON DELETE CASCADE, is wrong: FR-021 deliberately anonymizes a
-  // real deleted account rather than destroying the teacher gradebooks that
-  // reference it, and loosening the FK for test convenience would take that
-  // guarantee with it. privilege_audit is absent on purpose - its subject_id is
-  // already ON DELETE CASCADE, by the same FR-021 reasoning.
-  const DEPENDENTS = [
-    ['unit_progress', 'student_id'],
-    ['student_achievements', 'student_id'],
-    ['self_assessment_checks', 'student_id'],
-    ['quiz_attempts', 'student_id'],
-    ['student_notes', 'student_id'],
-    ['submissions', 'student_id'],
-    ['enrollments', 'student_id'],
-    ['grades', 'graded_by'],
-    ['teaching_log_entries', 'teacher_id'],
-    ['activity_feedback', 'teacher_id'],
-    ['improvement_suggestions', 'teacher_id'],
-    ['assignment_templates', 'teacher_id'],
-    ['content_feedback', 'author_id'],
-    ['quiz_items', 'created_by'],
-    ['answer_keys', 'created_by'],
-    ['classes', 'teacher_id'],
-  ];
-  for (const [table, column] of DEPENDENTS) {
+  // The list lives in tests/profile-dependents.mjs and is checked for
+  // completeness against the migrations by tests/unit/profile-dependents.test.mjs,
+  // so adding a table that references profiles(id) without updating it fails
+  // `npm test` rather than silently stranding rows.
+  for (const [table, column] of PROFILE_DEPENDENTS) {
     await svc.from(table).delete().in(column, profileIds);
   }
 

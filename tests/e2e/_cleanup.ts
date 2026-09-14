@@ -1,4 +1,6 @@
 import type { SupabaseClient } from '@supabase/supabase-js';
+// @ts-expect-error - plain ESM data module shared with the RLS harness, no types needed
+import { PROFILE_DEPENDENTS } from '../profile-dependents.mjs';
 
 /**
  * Delete e2e fixture users AND their profile rows.
@@ -27,28 +29,10 @@ export async function deleteUsers(svc: SupabaseClient, ...authUserIds: (string |
   if (profileIds.length === 0) return;
 
   // Dependents first: almost every table referencing profiles(id) is NO ACTION,
-  // so one unit_progress row is enough to abort the profile delete. Kept in
-  // step with the same list in tests/rls/_helpers.mjs - add a row in both when
-  // a new table references profiles(id).
-  const DEPENDENTS: [string, string][] = [
-    ['unit_progress', 'student_id'],
-    ['student_achievements', 'student_id'],
-    ['self_assessment_checks', 'student_id'],
-    ['quiz_attempts', 'student_id'],
-    ['student_notes', 'student_id'],
-    ['submissions', 'student_id'],
-    ['enrollments', 'student_id'],
-    ['grades', 'graded_by'],
-    ['teaching_log_entries', 'teacher_id'],
-    ['activity_feedback', 'teacher_id'],
-    ['improvement_suggestions', 'teacher_id'],
-    ['assignment_templates', 'teacher_id'],
-    ['content_feedback', 'author_id'],
-    ['quiz_items', 'created_by'],
-    ['answer_keys', 'created_by'],
-    ['classes', 'teacher_id'],
-  ];
-  for (const [table, column] of DEPENDENTS) {
+  // so one unit_progress row is enough to abort the profile delete. The list is
+  // shared with tests/rls/_helpers.mjs and checked against the migrations by
+  // tests/unit/profile-dependents.test.mjs, so it cannot quietly go stale.
+  for (const [table, column] of PROFILE_DEPENDENTS) {
     await svc.from(table).delete().in(column, profileIds);
   }
 
