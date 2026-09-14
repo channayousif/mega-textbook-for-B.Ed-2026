@@ -12,13 +12,21 @@ on:
 # fixture join codes and left stranded classes behind, taking `main` red until
 # they were purged by hand.
 #
-# Serialize on one group so a second run queues instead of racing.
-# `cancel-in-progress: false` matters: cancelling mid-suite is what strands
-# fixture rows in the first place, so a queued run waits rather than killing
-# the one holding the database.
+# Serialize on one group so a second run queues instead of racing - and use
+# `queue: max` so that it genuinely queues. The default, `queue: single`, holds
+# at most ONE pending run and cancels it the moment a third run joins the
+# group. On 2026-09-14 that silently dropped main's run for 18adacc when a PR
+# push landed behind it, leaving a merge commit with no CI verdict at all and
+# scripts/deploy-prod.sh holding that SHA forever. `queue: max` keeps up to 100
+# runs waiting in FIFO order instead, so nothing is dropped.
+#
+# `cancel-in-progress` is deliberately absent, not merely false: it cannot be
+# combined with queueing, and cancelling mid-suite is what strands fixture rows
+# in the first place. A queued run waits rather than killing the one holding
+# the database.
 concurrency:
   group: shared-supabase
-  cancel-in-progress: false
+  queue: max
 
 jobs:
   build:
