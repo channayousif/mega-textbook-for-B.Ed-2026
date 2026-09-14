@@ -7,7 +7,8 @@ const REPO = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const RLS_DIR = join(REPO, 'tests', 'rls');
 
 /**
- * Guards the two defects that took `main` red on 2026-09-11.
+ * Guards the two defects that took `main` red on 2026-09-11, and the third that
+ * silently dropped CI runs on 2026-09-14.
  *
  * The RLS suite runs against a SHARED Supabase project, so its fixtures must be
  * safe to create concurrently and must always be removable afterwards. They
@@ -21,6 +22,9 @@ const RLS_DIR = join(REPO, 'tests', 'rls');
  *     the delete raised a foreign-key violation that allSettled discarded in
  *     silence. Those classes then sat in the database forever, and the ones
  *     holding hardcoded codes poisoned every later run.
+ *  3. The serializing concurrency group relied on the default `queue: single`,
+ *     which keeps at most ONE pending run and cancels it the moment a third
+ *     joins the group. Serialization that drops runs is not serialization.
  */
 
 const rlsFiles = () =>
@@ -63,6 +67,20 @@ describe('RLS fixture isolation', () => {
   it('serializes CI runs so they cannot race on the shared database', () => {
     const ci = readFileSync(join(REPO, '.github', 'workflows', 'ci.yml'), 'utf8');
     expect(ci).toMatch(/^concurrency:/m);
-    expect(ci).toMatch(/cancel-in-progress:\s*false/);
+    // Cancelling a run mid-suite is what strands fixture rows, so an ENABLED
+    // cancel-in-progress is the thing to forbid. `false` is the default, and it
+    // cannot be spelled out at all alongside `queue`, so asserting its presence
+    // would forbid the queueing fix below rather than guard anything.
+    expect(ci).not.toMatch(/cancel-in-progress:\s*true/);
+  });
+
+  it('queues serialized runs instead of dropping them', () => {
+    const ci = readFileSync(join(REPO, '.github', 'workflows', 'ci.yml'), 'utf8');
+    // The default `queue: single` holds one pending run and cancels it when a
+    // third joins the group. On 2026-09-14 that evicted main's run for 18adacc,
+    // leaving the merge commit for PR #57 with no CI verdict at all - and
+    // scripts/deploy-prod.sh gates on a success run for the exact head_sha, so
+    // that SHA would never have deployed. `queue: max` waits, FIFO, instead.
+    expect(ci).toMatch(/^\s*queue:\s*max\s*$/m);
   });
 });
