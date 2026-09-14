@@ -26,12 +26,12 @@ no prose was changed to create them.
 | CON:EFMP-301-1-8 | Applied rather than pure: the distinction from general psychology | اطلاقی بمقابلہ خالص: عام نفسیات سے فرق | CON:EFMP-301-1-6 | 1.2 | SLO:EFMP-301-1-1 | MCQ-06, RRQ-06 |
 | CON:EFMP-301-1-9 | Individual differences between learners | سیکھنے والوں کے انفرادی فرق | CON:EFMP-301-1-3 | 1.3 | SLO:EFMP-301-1-2 | MCQ-07, RRQ-07 |
 | CON:EFMP-301-1-10 | Readiness and prior knowledge | آمادگی اور سابقہ علم | CON:EFMP-301-1-9 | 1.3 | SLO:EFMP-301-1-2 | MCQ-07, RRQ-07, ERQ-03 |
-| CON:EFMP-301-1-11 | Motivation and interest | ترغیب اور دلچسپی | CON:EFMP-301-1-9 | 1.3 | SLO:EFMP-301-1-2 | MCQ-08, ERQ-03 |
+| CON:EFMP-301-1-11 | Motivation and interest | محرک اور دلچسپی | CON:EFMP-301-1-9 | 1.3 | SLO:EFMP-301-1-2 | MCQ-08, ERQ-03 |
 | CON:EFMP-301-1-12 | Language, home background and support | زبان، گھریلو پس منظر اور معاونت | CON:EFMP-301-1-9 | 1.3 | SLO:EFMP-301-1-2 | RRQ-08, ERQ-03 |
 | CON:EFMP-301-1-13 | Cognition | اِدراک | CON:EFMP-301-1-10 | 1.3 | SLO:EFMP-301-1-2 | MCQ-08 |
 | CON:EFMP-301-1-14 | Planning: method, sequence and pace | منصوبہ بندی: طریقہ، ترتیب اور رفتار | CON:EFMP-301-1-10 | 1.4 | SLO:EFMP-301-1-2 | MCQ-09, RRQ-09, ERQ-04 |
 | CON:EFMP-301-1-15 | Classroom management as a psychological task | کلاس روم انتظام بطور نفسیاتی کام | CON:EFMP-301-1-11 | 1.4 | SLO:EFMP-301-1-2 | RRQ-09, ERQ-04 |
-| CON:EFMP-301-1-16 | Assessment and feedback informed by psychology | نفسیات پر مبنی جانچ اور رائے | CON:EFMP-301-1-14 | 1.4 | SLO:EFMP-301-1-2 | MCQ-10, RRQ-10, ERQ-04 |
+| CON:EFMP-301-1-16 | Assessment and feedback informed by psychology | نفسیات پر مبنی تشخیص اور رائے | CON:EFMP-301-1-14 | 1.4 | SLO:EFMP-301-1-2 | MCQ-10, RRQ-10, ERQ-04 |
 | CON:EFMP-301-1-17 | The reflective teacher | غور و فکر کرنے والا استاد | CON:EFMP-301-1-16 | 1.4 | SLO:EFMP-301-1-2 | RRQ-10, ERQ-05 |
 
 ## Urdu labels needing G5 review
