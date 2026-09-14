@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T047 [US4] — sign-out from a docs page ends the session on app pages too
@@ -40,6 +41,6 @@ test('sign-out from a docs page ends the session on app pages too', async ({ pag
     await page.goto('/app/profile');
     await expect(page).toHaveURL(/\/app\/login/);
   } finally {
-    await svc.auth.admin.deleteUser(created.user!.id);
+    await deleteUsers(svc, created.user!.id);
   }
 });

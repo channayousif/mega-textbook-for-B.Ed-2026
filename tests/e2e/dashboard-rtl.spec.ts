@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T049 [Polish] — switches locale to Urdu and confirms all six dashboard
@@ -43,6 +44,6 @@ test('every dashboard area renders RTL under /ur/ with no horizontal overflow', 
       await page.setViewportSize({ width: 1280, height: 800 });
     }
   } finally {
-    await svc.auth.admin.deleteUser(student.user!.id);
+    await deleteUsers(svc, student.user!.id);
   }
 });

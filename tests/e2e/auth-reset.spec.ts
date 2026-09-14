@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T032 [US2] — full reset journey: request -> link -> new password -> sign-in
@@ -62,7 +63,7 @@ test('reset request: real UI submission reports uniform success (FR-004, no enum
     await page.getByRole('button', { name: /send reset link/i }).click();
     await expect(page.getByText(/we've sent a link/i)).toBeVisible();
   } finally {
-    await svc.auth.admin.deleteUser(created.user!.id);
+    await deleteUsers(svc, created.user!.id);
   }
 });
 
@@ -120,6 +121,6 @@ test('reset mechanics: recovery session set-password + sign-in swap (FR-004, SC-
     await page.getByRole('button', { name: /^sign in$/i }).click();
     await expect(page).not.toHaveURL(/\/app\/login/);
   } finally {
-    await svc.auth.admin.deleteUser(created.user!.id);
+    await deleteUsers(svc, created.user!.id);
   }
 });

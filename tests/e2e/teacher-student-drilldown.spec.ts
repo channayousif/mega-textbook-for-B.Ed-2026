@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T039 [US7] — opens a student's drill-down within one class; submissions,
@@ -64,7 +65,6 @@ test('student drill-down shows exactly that student\'s submissions, grades, and 
     await expect(page.getByTestId('unit-coverage-fraction')).toContainText('%');
   } finally {
     if (classId) await svc.from('classes').delete().eq('id', classId);
-    await svc.auth.admin.deleteUser(teacher.user!.id);
-    await svc.auth.admin.deleteUser(student.user!.id);
+    await deleteUsers(svc, teacher.user!.id, student.user!.id);
   }
 });

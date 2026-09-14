@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T051 [US1] — the full Assignments area (FR-003) distinguishes overdue from
@@ -89,7 +90,6 @@ test('assignments area distinguishes overdue/closed states and fits a 360px view
     expect(overflow).toBe(false);
   } finally {
     if (classId) await svc.from('classes').delete().eq('id', classId);
-    await svc.auth.admin.deleteUser(teacher.user!.id);
-    await svc.auth.admin.deleteUser(student.user!.id);
+    await deleteUsers(svc, teacher.user!.id, student.user!.id);
   }
 });

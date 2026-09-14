@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T021 [US4] — logs one activity in a single flow, timed under 30 seconds;
@@ -64,7 +65,7 @@ test('teacher logs a teaching activity in under 30 seconds and sees it most-rece
       await svc.from('teaching_log_entries').delete().eq('class_id', classId);
       await svc.from('classes').delete().eq('id', classId);
     }
-    await svc.auth.admin.deleteUser(teacher.user!.id);
+    await deleteUsers(svc, teacher.user!.id);
   }
 });
 
@@ -118,6 +119,6 @@ test('per-topic units are not offered as loggable activities', async ({ page }) 
       await svc.from('teaching_log_entries').delete().eq('class_id', classId);
       await svc.from('classes').delete().eq('id', classId);
     }
-    await svc.auth.admin.deleteUser(teacher.user!.id);
+    await deleteUsers(svc, teacher.user!.id);
   }
 });

@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T018 [US2] — as the curriculum owner, opens the queue, confirms both seeded
@@ -162,9 +163,7 @@ test('owner triages the feedback queue: filters, transitions, and passage stabil
   } finally {
     const idsToDelete = [itemA?.id, itemB?.id].filter((id): id is string => Boolean(id));
     if (idsToDelete.length) await svc.from('content_feedback').delete().in('id', idsToDelete);
-    await svc.auth.admin.deleteUser(reader.user!.id);
-    await svc.auth.admin.deleteUser(admin.user!.id);
-    await svc.auth.admin.deleteUser(nonOwner.user!.id);
+    await deleteUsers(svc, reader.user!.id, admin.user!.id, nonOwner.user!.id);
     await adminContext.close();
     await nonOwnerContext.close();
   }

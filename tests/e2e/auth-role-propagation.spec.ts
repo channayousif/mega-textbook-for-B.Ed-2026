@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T041a [US3] — an admin changes a signed-in user's role and grants
@@ -93,7 +94,6 @@ test('role + verified_teacher changes apply on next load without re-authenticati
   } finally {
     await targetContext.close();
     await adminContext.close();
-    await svc.auth.admin.deleteUser(target.user!.id);
-    await svc.auth.admin.deleteUser(admin.user!.id);
+    await deleteUsers(svc, target.user!.id, admin.user!.id);
   }
 });

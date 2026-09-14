@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T019 [US3] — with a 4-of-8/0-of-8 fixture, confirms both courses' fractions
@@ -70,7 +71,6 @@ test('progress area shows a coverage fraction per course and fits 360px', async 
   } finally {
     if (classId) await svc.from('classes').delete().eq('id', classId);
     await svc.from('unit_progress').delete().eq('student_id', (await svc.from('profiles').select('id').eq('auth_user_id', student.user!.id).single()).data!.id);
-    await svc.auth.admin.deleteUser(teacher.user!.id);
-    await svc.auth.admin.deleteUser(student.user!.id);
+    await deleteUsers(svc, teacher.user!.id, student.user!.id);
   }
 });

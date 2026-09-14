@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T015 [US2] — opens Grades, confirms every mark across both classes is
@@ -70,7 +71,6 @@ test('grades area shows every mark across classes with no average, and fits 360p
     expect(overflow).toBe(false);
   } finally {
     for (const id of classIds) await svc.from('classes').delete().eq('id', id);
-    await svc.auth.admin.deleteUser(teacher.user!.id);
-    await svc.auth.admin.deleteUser(student.user!.id);
+    await deleteUsers(svc, teacher.user!.id, student.user!.id);
   }
 });

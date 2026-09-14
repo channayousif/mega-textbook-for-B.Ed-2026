@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T022 [US4] — marks a unit studied from its content page, confirms it
@@ -83,7 +84,6 @@ test('marking a unit studied from its content page reflects in Progress without 
     if (classId) await svc.from('classes').delete().eq('id', classId);
     const { data: profile } = await svc.from('profiles').select('id').eq('auth_user_id', student.user!.id).single();
     await svc.from('unit_progress').delete().eq('student_id', profile!.id);
-    await svc.auth.admin.deleteUser(teacher.user!.id);
-    await svc.auth.admin.deleteUser(student.user!.id);
+    await deleteUsers(svc, teacher.user!.id, student.user!.id);
   }
 });

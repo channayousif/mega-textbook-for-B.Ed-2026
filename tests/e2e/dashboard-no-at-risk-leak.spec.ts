@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T035 [US6] — the flagged student's own dashboard (`/app/dashboard/`, Spec
@@ -78,7 +79,6 @@ test('a student meeting the at-risk criteria sees no at-risk flag anywhere on th
     await teacherContext.close();
     await studentContext.close();
     if (classId) await svc.from('classes').delete().eq('id', classId);
-    await svc.auth.admin.deleteUser(teacher.user!.id);
-    await svc.auth.admin.deleteUser(student.user!.id);
+    await deleteUsers(svc, teacher.user!.id, student.user!.id);
   }
 });

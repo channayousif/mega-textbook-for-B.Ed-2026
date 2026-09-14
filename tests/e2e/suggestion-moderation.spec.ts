@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T017 [US3] — as an admin, filter the queue by status, category, and
@@ -103,7 +104,6 @@ test('admin filters the queue and transitions a suggestion through its full life
     await adminContext.close();
     await teacherContext.close();
     for (const id of suggestionIds) await svc.from('improvement_suggestions').delete().eq('id', id);
-    await svc.auth.admin.deleteUser(teacher.user!.id);
-    await svc.auth.admin.deleteUser(admin.user!.id);
+    await deleteUsers(svc, teacher.user!.id, admin.user!.id);
   }
 });

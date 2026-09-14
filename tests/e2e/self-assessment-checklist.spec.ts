@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
+import { deleteUsers } from './_cleanup';
 
 /**
  * T010 [US1] — ticks two items on a topic-NN.mdx page, reloads, confirms both
@@ -151,7 +152,7 @@ test('self-assessment checklist persists across reloads/devices, syncs on sign-i
     await expect(pageA.getByTestId('self-assessment-checkbox-4')).toBeEnabled();
     await expect(pageA.getByTestId('self-assessment-sync-hint')).toBeVisible();
   } finally {
-    await svc.auth.admin.deleteUser(user.user!.id);
+    await deleteUsers(svc, user.user!.id);
     await contextA.close();
   }
 });
