@@ -4,11 +4,11 @@ import { createHash, createPublicKey, verify } from 'node:crypto';
 import { readFileSync, readdirSync, existsSync, lstatSync } from 'node:fs';
 import { resolve, relative, join, dirname, sep, isAbsolute } from 'node:path';
 
-export const CRITERIA = {
-  G3: ['authority', 'sources', 'coverage', 'assessment', 'accessibility', 'readability', 'pedagogy'],
-  G5: ['authority', 'sources', 'coverage', 'assessment', 'accessibility', 'completeness', 'semantics', 'terminology', 'register', 'rtl'],
-};
-export const COMMANDS = ['validate:content', 'check:depth-gate', 'check:figures', 'check:no-em-dash', 'check:no-answer-keys', 'check:docs-sync', 'render-review'];
+// Spec 017 T017: the rubric moved to its own module so the browser certify
+// form and this validator read one definition. Re-exported here because
+// several scripts already import CRITERIA/COMMANDS from this file.
+import { CRITERIA, COMMANDS } from './review-criteria.mjs';
+export { CRITERIA, COMMANDS };
 
 /**
  * The validators whose results a report cites, as entry points. Their local

@@ -10,6 +10,7 @@ type AdminUserRow = {
   full_name: string | null;
   role: UserRole;
   verified_teacher: boolean;
+  reviewer: boolean;
   status: AccountStatus;
   role_chosen_at: string | null;
   created_at: string;
@@ -18,7 +19,13 @@ type AdminUserRow = {
 };
 
 /**
- * Admin user list (Spec 002, T043) - role editing + verified_teacher toggle.
+ * Admin user list (Spec 002, T043) - role editing + verified_teacher toggle,
+ * plus the Spec 017 `reviewer` capability toggle (FR-001).
+ *
+ * Both capability toggles write a plain column and rely entirely on the
+ * database to refuse an unauthorised write: the 0044 guard raises 42501 for a
+ * non-admin, and the 0009/0044 audit trigger records the change either way.
+ * Neither is checked here, deliberately (Art. IX.2).
  * Wrapped in AuthGuard requiring admin (FR-007, FR-015); the actual writes are
  * enforced by RLS + the 0008 guard trigger regardless of this page's UI, and
  * the row list (including email - see supabase/functions/admin-list-users)
@@ -77,6 +84,22 @@ function AdminUsersContent(): React.ReactElement {
     await load();
   }
 
+  async function toggleReviewer(row: AdminUserRow): Promise<void> {
+    const supabase = await getSupabase();
+    if (!supabase) return;
+    setPendingId(row.id);
+    const { error: updateError } = await supabase
+      .from('profiles')
+      .update({ reviewer: !row.reviewer })
+      .eq('id', row.id);
+    setPendingId(null);
+    if (updateError) {
+      setError(`Could not change reviewer capability for ${row.email ?? row.id}.`);
+      return;
+    }
+    await load();
+  }
+
   async function toggleSuspend(row: AdminUserRow): Promise<void> {
     const supabase = await getSupabase();
     if (!supabase) return;
@@ -120,6 +143,7 @@ function AdminUsersContent(): React.ReactElement {
               <th>Name</th>
               <th>Role</th>
               <th>Verified teacher</th>
+              <th>Reviewer</th>
               <th>Status</th>
               <th />
             </tr>
@@ -150,6 +174,17 @@ function AdminUsersContent(): React.ReactElement {
                       checked={row.verified_teacher}
                       disabled={pendingId === row.id || Boolean(row.deleted_at)}
                       onChange={() => toggleVerifiedTeacher(row)}
+                    />
+                  </label>
+                </td>
+                <td>
+                  <label className="auth-tap-target">
+                    <input
+                      type="checkbox"
+                      aria-label={`Reviewer capability for ${row.email ?? row.id}`}
+                      checked={row.reviewer}
+                      disabled={pendingId === row.id || Boolean(row.deleted_at)}
+                      onChange={() => toggleReviewer(row)}
                     />
                   </label>
                 </td>

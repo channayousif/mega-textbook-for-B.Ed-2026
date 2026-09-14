@@ -24,6 +24,7 @@ import { fileURLToPath } from 'node:url';
 import { checkUnitVerdict } from './lib/unit-depth.mjs';
 import { walkCourses } from './lib/content-roots.mjs';
 import { readManifest, figureStatusFor } from './lib/figure-manifest.mjs';
+import { loadTracker, stageState } from './lib/tracker-rows.mjs';
 
 const REPO = resolve(fileURLToPath(new URL('..', import.meta.url)));
 const ROOT = process.env.CONTENT_ROOT ? resolve(process.env.CONTENT_ROOT) : REPO;
@@ -52,6 +53,24 @@ function figuresForUnit(courseCode, unitNo) {
   };
 }
 
+/**
+ * Spec 017 T018 - per-unit G3/G5 state, read from the course tracker.
+ *
+ * This is what lets the review queue exist with NO database table behind it:
+ * data-model.md §4 says queue state is derived, and this is where it is
+ * derived. A course with no tracker file yields 'open' for both stages, which
+ * is the safe direction - an un-tracked unit shows up as work to do rather
+ * than silently disappearing from a reviewer's queue.
+ */
+function gatesForUnit(tracker, unitNo) {
+  const unitLabel = `Unit ${unitNo}`;
+  if (!tracker) return { G3: 'open', G5: 'open' };
+  return {
+    G3: stageState(tracker, unitLabel, 'G3'),
+    G5: stageState(tracker, unitLabel, 'G5'),
+  };
+}
+
 function buildReport() {
   const courses = [];
   if (!existsSync(DOCS_DIR)) {
@@ -62,6 +81,7 @@ function buildReport() {
   // content lives, so this report covers every track rather than docs/ only.
   for (const { courseCode, courseDir } of walkCourses(ROOT)) {
     const units = [];
+    const tracker = loadTracker(ROOT, courseCode);
 
       for (const unit of dirs(courseDir)) {
         const m = /^unit-(\d+)$/.exec(unit);
@@ -79,6 +99,7 @@ function buildReport() {
           authored: verdict.authored,
           translation_status: verdict.translationStatus,
           depth_check: verdict.depthCheck,
+          gates: gatesForUnit(tracker, unitNo),
           figures,
           figures_pending,
         });

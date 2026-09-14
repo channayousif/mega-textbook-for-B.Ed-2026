@@ -37,7 +37,7 @@ Deno.serve(async (req: Request) => {
 
   const { data: profiles, error: profilesError } = await service
     .from('profiles')
-    .select('id, auth_user_id, full_name, role, verified_teacher, status, role_chosen_at, created_at, deleted_at')
+    .select('id, auth_user_id, full_name, role, verified_teacher, reviewer, status, role_chosen_at, created_at, deleted_at')
     .order('created_at', { ascending: false });
   if (profilesError) {
     return new Response(JSON.stringify({ error: profilesError.message }), { status: 500 });
