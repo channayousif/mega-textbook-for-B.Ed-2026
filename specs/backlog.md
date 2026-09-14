@@ -128,3 +128,23 @@ otherwise have been a tenth revision; apply them in one batch when the freeze li
   every tracker row still carries the same initials, and one person still closes every G5. The
   feature is not finished in the sense that matters until a second entry appears in
   `specs/reviewers/human-reviewers.md`.
+
+## Deferred from the EFMP-301 Unit 1 G5 review, 2026-09-14
+
+- **Wide figures are illegible on a phone (F-11).** At 360px, `fig-U1-7` (880px wide) lays out at
+  328 CSS px, putting four columns of Nastaliq at roughly 4-5 CSS px; same for `fig-U1-3`,
+  `fig-U1-8`, `fig-U1-9`. **This affects English equally**, so it is a responsive-figure problem
+  rather than a translation one, and Art. V.5 makes it more than cosmetic: the site MUST be usable
+  on low-end mobile, and text at 4 px is not. Likely fixes: a horizontal-scroll wrapper for wide
+  schematics, or a narrow-viewport stacked variant. Needs a design decision before a gate.
+- **Theme UI strings and course names are still untranslated (F-12, partial).** The category
+  labels are now translated in `i18n/ur/docusaurus-plugin-content-docs*/current.json`, but
+  `code.json` (92 theme strings), the navbar and the footer were deliberately not generated:
+  committing 96 English values as "translations" would imply work that had not been done. The four
+  `coming_soon` course names and `EED-313 · Classroom Management` also stay in English, because no
+  approved Urdu exists for them and Art. II.3 forbids inventing one.
+- **The prose noun uses of `جانچ` (F-04, remainder).** The concept/figure/bank divergence is fixed.
+  A handful of prose sites still use `جانچ` as the noun for the assessment concept where the bank
+  says `تشخیص`, e.g. "یونٹ کی سطح کی جانچ". The other 40 occurrences are the ordinary verb
+  ("اپنی سمجھ جانچیں") and must not change, so this needs reading in context rather than a
+  replace - a task for the owner's register pass.

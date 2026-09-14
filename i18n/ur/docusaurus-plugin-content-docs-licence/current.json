@@ -1,0 +1,10 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.licenceSidebar.category.EED-313 · Classroom Management": {
+    "message": "EED-313 · Classroom Management",
+    "description": "The label for category 'EED-313 · Classroom Management' in sidebar 'licenceSidebar'"
+  }
+}

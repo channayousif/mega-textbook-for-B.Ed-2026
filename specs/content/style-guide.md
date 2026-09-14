@@ -1,5 +1,5 @@
 ---
-version: "4.0"
+version: "4.1"
 ---
 
 # Content Style Guide
@@ -47,7 +47,14 @@ changes. Assessment item IDs are derived from the existing 10/10/5 numbering rat
 into prose. Proven on the EFMP-302 Unit 1 proving unit, then the EFMP-301 Unit 1 golden unit, both
 of which kept their translation status exactly.
 
-**This is the last standard revision before the freeze.** Nine revisions in, each one has
+**v4.1** (2026-09-14) requires a `.ur.svg` to mirror its horizontal layout, not merely translate
+its labels, and ships `scripts/mirror-figure-rtl.mjs` to do it. It is the one revision taken
+during the freeze, for the reason recorded beside the rule: the cost of the gap compounds with
+every unit authored, and at 2 units it was 17 files. `terminology.csv` is unchanged; the bump
+re-freezes the pair per Spec 006 FR-007. **The freeze otherwise stands** - the v4.0 note below
+still governs, and `specs/backlog.md` remains where improvements wait.
+
+**v4.0's freeze note, which still governs. This was the last standard revision before the freeze.** Nine revisions in, each one has
 invalidated finished work; `EFMP-301` Unit 1 has been authored three times. From here the standard
 is frozen until 50 units exist, and improvements are recorded in `specs/backlog.md` and applied in
 one batch. `terminology.csv` is unchanged; the bump re-freezes the pair per Spec 006 FR-007.
@@ -467,6 +474,31 @@ connected), optimised to WebP ≤ 150 KB, longest edge ≤ 1600 px. Only `concep
 `topic-*.mdx` `<Figure src>` points at it. A placed `illustration` reuses the one `.webp` with a
 translated `alt`. Enforced when the EN `index.mdx` is `translation_status: reviewed`;
 written-and-wired but not gate-blocked while `draft`.
+
+**Bilingual, part two: the layout is mirrored, not only the labels (v4.1).** A `.ur.svg` whose
+labels are translated but whose geometry is untouched still reads left to right, and an Urdu
+reader reads right to left. That is not a polish issue: a timeline drawn left to right tells them
+the last stage happened first, and a table whose row-label column sits leftmost contradicts the
+HTML table beside it on the same page, which mirrors correctly for free.
+
+So a `.ur.svg` mirrors its **horizontal** layout: x coordinates reflect about the viewBox centre,
+`text-anchor` `start` and `end` swap (an absent attribute means `start`, so it becomes `end`),
+arrowheads follow their reversed path, and a `translate()` carries its x across too. Vertical
+order is unchanged, because RTL does not invert top and bottom. Glyphs are never mirrored: the
+coordinates are rewritten rather than a `scale(-1,1)` transform applied, which would produce
+back-to-front Urdu.
+
+Run `node scripts/mirror-figure-rtl.mjs <file>.ur.svg` rather than hand-editing; it is idempotent
+only in the sense that running it twice returns the original, so mirror once from the English
+geometry. Any `<desc>` or `alt` describing direction must be updated with it - several said
+"بائیں سے دائیں" while the figure now reads the other way.
+
+*Why this broke the freeze.* v4.0 was meant to be the last revision before the standard froze
+until 50 units. This rule was added at 2 units, on 2026-09-14, because the exposure was 17 files
+and growing: the same gap at 50 units is several hundred figures, each one already translated and
+signed off. A defect that gets more expensive to fix the longer the freeze holds is the case the
+freeze should yield to. Found by the advisory G5 agent review of EFMP-301 Unit 1 (finding F-24),
+which is also the first evidence the freeze was holding a known defect in place.
 
 ### Manifest (v2)
 
