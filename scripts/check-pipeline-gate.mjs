@@ -22,6 +22,7 @@ import { join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
 import { validateAgentTrackerRow } from './lib/review-evidence.mjs';
+import { loadTracker as loadTrackerRows } from './lib/tracker-rows.mjs';
 import { walkUnits, findDuplicateCourseCodes } from './lib/content-roots.mjs';
 
 const REPO = resolve(fileURLToPath(new URL('..', import.meta.url)));
@@ -75,24 +76,11 @@ function loadTerminology() {
   return map;
 }
 
-// ---- tasks.md tracker parser (data-model.md's `| Unit | Stage | Status | Reviewer | Suggestion |`) ----
-function parseTasksTable(text) {
-  const rows = [];
-  for (const line of text.split(/\r?\n/)) {
-    if (!line.trim().startsWith('|')) continue;
-    const cells = line.split('|').slice(1, -1).map((c) => c.trim());
-    if (cells.length < 4) continue;
-    const [unit, stage, status, reviewer, suggestion] = cells;
-    if (unit === 'Unit' || /^-+$/.test(unit)) continue; // header/separator rows
-    rows.push({ unit, stage, status, reviewer: reviewer || '', suggestion: suggestion || '' });
-  }
-  return rows;
-}
-
+// ---- tasks.md tracker parser ----
+// Moved to scripts/lib/tracker-rows.mjs (Spec 017 T018) so report-content-status.mjs
+// reads the tracker through the same definition of a row that this gate does.
 function loadTracker(courseCode) {
-  const file = join(CONTENT_SPEC_DIR, courseCode.toLowerCase(), 'tasks.md');
-  if (!existsSync(file)) return null;
-  return parseTasksTable(readFileSync(file, 'utf8'));
+  return loadTrackerRows(ROOT, courseCode);
 }
 
 function loadContentSpecStatus(courseCode) {

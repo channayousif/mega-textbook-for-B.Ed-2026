@@ -109,3 +109,22 @@ otherwise have been a tenth revision; apply them in one batch when the freeze li
   would bring the golden unit under the depth gate for the first time - worth doing, but it may
   surface depth findings that have been hidden since Spec 007, so it is a task with unknown size
   rather than a one-line fix.
+
+## Deferred from Feature 017 (the reviewer role), 2026-09-13
+
+- **`validateAgentTrackerRow` returns early for human initials**, so a human row's
+  `review:<path>` reference is never resolved: a dangling certification path, or one pointing at a
+  file whose `disposition` is not `pass`, passes `check:pipeline-gate` unnoticed. Out of scope in
+  Feature 017 because FR-010 commits to no gate change, and the control there is the pull request.
+  Worth closing once several human certifications exist, and it is also the natural place to
+  enforce the G5-to-G3 binding and the `input_manifest` freshness check **deterministically** rather
+  than at build time in a browser the reviewer controls.
+- **CI applies an approved export.** Feature 017 parks this deliberately: the manual commit is what
+  ADR-0015 accepted, and automating a content-gate write deserves its own decision rather than
+  arriving as a convenience.
+- **Qualify and grant one external reviewer.** This is the work that actually lifts the ceiling.
+  Feature 017 grants the capability to the curriculum owner, which proves the path end to end and
+  produces comparators in the new format, but leaves both facts in the spec's own *Why* intact:
+  every tracker row still carries the same initials, and one person still closes every G5. The
+  feature is not finished in the sense that matters until a second entry appears in
+  `specs/reviewers/human-reviewers.md`.

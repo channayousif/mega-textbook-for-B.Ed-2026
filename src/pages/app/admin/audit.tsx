@@ -7,7 +7,7 @@ type AuditRow = {
   id: number;
   subject_id: string;
   actor_id: string;
-  change_type: 'role' | 'verified_teacher' | 'status';
+  change_type: 'role' | 'verified_teacher' | 'reviewer' | 'status';
   old_value: string | null;
   new_value: string;
   created_at: string;

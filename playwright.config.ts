@@ -1,4 +1,22 @@
 import { defineConfig, devices } from '@playwright/test';
+import { config as loadEnv } from 'dotenv';
+
+/**
+ * Load `.env.local` for local runs, same pattern and same reason as
+ * `docusaurus.config.ts` and `tests/rls/_setup.mjs`: without it every
+ * Supabase-backed spec hits its own `test.skip(!configured)` and the run
+ * reports "skipped" with exit 0. That is how a strict-mode locator regression
+ * in `auth-role-propagation.spec.ts` reached CI on 2026-09-14 - `check:all`
+ * does not include e2e, and a local `npx playwright test` skipped the very
+ * spec that would have caught it.
+ *
+ * Unlike the RLS harness this does NOT hard-fail when unconfigured: several
+ * e2e specs (render, RTL, print, search) need no database at all, so a skip is
+ * the correct outcome for them on a machine with no credentials. CI is
+ * unaffected either way - it sets these through the workflow's `env:` block,
+ * and dotenv no-ops when the file is absent.
+ */
+loadEnv({ path: '.env.local', quiet: true });
 
 /**
  * E2E config for render/RTL/print/nav/search checks (T012, T022, T023, T027).

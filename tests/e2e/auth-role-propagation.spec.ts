@@ -67,12 +67,22 @@ test('role + verified_teacher changes apply on next load without re-authenticati
     // Let the optimistic re-fetch settle before the checkbox click, since both
     // trigger a `load()` and a race would make the second overwrite the first.
     await expect(targetRow.getByRole('combobox')).toHaveValue('teacher');
+    // Name the checkbox. The row carried exactly one until Spec 017 added the
+    // `reviewer` capability toggle beside `verified_teacher`, at which point a
+    // bare getByRole('checkbox') became a strict-mode violation. This test is
+    // about verified_teacher propagation specifically, so it says so.
+    const verifiedTeacherToggle = targetRow.getByRole('checkbox', { name: /^Verified teacher for / });
     // .click() rather than .check(): the checkbox is a controlled component
     // that briefly reverts to its old value between the native click and the
     // async update+reload resolving, and .check()'s strict "did it change"
     // sampling can land in that flicker window. toBeChecked() below retries.
-    await targetRow.getByRole('checkbox').click();
-    await expect(targetRow.getByRole('checkbox')).toBeChecked();
+    await verifiedTeacherToggle.click();
+    await expect(verifiedTeacherToggle).toBeChecked();
+
+    // The reviewer toggle beside it must be untouched by that click: the two
+    // capabilities are orthogonal (Art. V.3, ADR-0005), and a UI that granted
+    // both from one click would be a real defect rather than a test artefact.
+    await expect(targetRow.getByRole('checkbox', { name: /^Reviewer capability for / })).not.toBeChecked();
 
     // Target user's session is untouched — reload only, no sign-in call.
     await targetPage.reload();

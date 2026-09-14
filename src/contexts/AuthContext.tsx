@@ -27,6 +27,8 @@ export type Profile = {
   full_name: string | null;
   role: UserRole;
   verified_teacher: boolean;
+  /** Spec 017 FR-001 - the review capability. Admin-granted, default off. */
+  reviewer: boolean;
   status: AccountStatus;
   role_chosen_at: string | null;
   created_at: string;
@@ -41,6 +43,13 @@ export type AuthState = {
   role: UserRole | null;
   /** FR-005a - the answer-key gate. Never inferred from role. */
   verifiedTeacher: boolean;
+  /**
+   * Spec 017 FR-002 - the review capability as the cached profile reports it.
+   * Good enough to decide whether to OFFER the review surface; never good
+   * enough to decide whether someone may USE it, because a suspension does not
+   * invalidate this cache. `ReviewerGuard` asks the database over RPC instead.
+   */
+  reviewer: boolean;
   /** FR-010b - display name, falling back to the account email. */
   displayName: string | null;
   isConfigured: boolean;
@@ -51,7 +60,7 @@ export type AuthState = {
 const AuthContext = createContext<AuthState | null>(null);
 
 const PROFILE_COLUMNS =
-  'id, full_name, role, verified_teacher, status, role_chosen_at, created_at';
+  'id, full_name, role, verified_teacher, reviewer, status, role_chosen_at, created_at';
 
 export function AuthProvider({ children }: { children: React.ReactNode }): React.ReactElement {
   const { siteConfig } = useDocusaurusContext();
@@ -155,6 +164,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }): React
     role: profile?.role ?? null,
     // Defaults to false whenever the profile is missing - fail closed.
     verifiedTeacher: profile?.verified_teacher ?? false,
+    reviewer: profile?.reviewer ?? false,
     // FR-010b - name when set, otherwise the account email.
     displayName: profile?.full_name?.trim() || session?.user?.email || null,
     isConfigured: configured,

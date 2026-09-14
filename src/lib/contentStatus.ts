@@ -14,11 +14,19 @@ export type ContentStatusFigurePending = {
   figure_id: string;
 };
 
+/**
+ * Spec 017 T018/T019 - per-unit review-gate state, derived from the course
+ * tracker at build time. The review queue is built from this, which is why
+ * Postgres needs no queue table and learns nothing about a gate outcome.
+ */
+export type ContentStatusGates = { G3: 'open' | 'done'; G5: 'open' | 'done' };
+
 export type ContentStatusUnit = {
   unit_no: number;
   authored: boolean;
   translation_status: string | null;
   depth_check: 'pass' | 'fail' | 'not_applicable';
+  gates: ContentStatusGates;
   figures: ContentStatusFigureCounts;
   figures_pending: ContentStatusFigurePending[];
 };
