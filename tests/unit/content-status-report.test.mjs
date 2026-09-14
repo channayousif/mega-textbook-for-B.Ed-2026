@@ -190,9 +190,69 @@ describe('report-content-status.mjs', () => {
       authored: true,
       translation_status: 'reviewed',
       depth_check: 'pass',
+      // Spec 017 T018 - both open, because this fixture has no tracker file.
+      // Open is the safe direction: an untracked unit is work to do, not a
+      // unit that quietly vanishes from a reviewer's queue.
+      gates: { G3: 'open', G5: 'open' },
       figures: { prompt_only: 0, generated: 0, placed: 0 },
       figures_pending: [],
     });
+  });
+
+  // Spec 017 T018 - the queue's whole data source. A tracker row is 'done' only
+  // when it is ticked AND attributed; an unattributed tick is not evidence that
+  // anyone reviewed anything.
+  it('derives per-unit G3/G5 gate state from the course tracker', () => {
+    root = mkdtempSync(join(tmpdir(), 'bed-status-'));
+    makeLegacyUnit(root, 'EFMP-302', 1);
+    const specDir = join(root, 'specs', 'content', 'efmp-302');
+    mkdirSync(specDir, { recursive: true });
+    writeFileSync(join(specDir, 'tasks.md'), [
+      '| Unit | Stage | Status | Reviewer | Suggestion |',
+      '|---|---|---|---|---|',
+      '| Unit 1 | G3 en-review | \u2705 | MY | - |',
+      '| Unit 1 | G5 ur-review | \u23f3 | | - |',
+      '',
+    ].join('\n'));
+
+    const { report } = runReport(root);
+    const unit = report.courses.find((c) => c.course_code === 'EFMP-302').units.find((u) => u.unit_no === 1);
+    expect(unit.gates).toEqual({ G3: 'done', G5: 'open' });
+  });
+
+  it('treats a ticked but unattributed tracker row as still open', () => {
+    root = mkdtempSync(join(tmpdir(), 'bed-status-'));
+    makeLegacyUnit(root, 'EFMP-302', 1);
+    const specDir = join(root, 'specs', 'content', 'efmp-302');
+    mkdirSync(specDir, { recursive: true });
+    writeFileSync(join(specDir, 'tasks.md'), [
+      '| Unit | Stage | Status | Reviewer | Suggestion |',
+      '|---|---|---|---|---|',
+      '| Unit 1 | G3 en-review | \u2705 | | - |',
+      '',
+    ].join('\n'));
+
+    const { report } = runReport(root);
+    const unit = report.courses.find((c) => c.course_code === 'EFMP-302').units.find((u) => u.unit_no === 1);
+    expect(unit.gates.G3).toBe('open');
+  });
+
+  it('takes the LAST row for a stage, so a revision row re-opens a done gate', () => {
+    root = mkdtempSync(join(tmpdir(), 'bed-status-'));
+    makeLegacyUnit(root, 'EFMP-302', 1);
+    const specDir = join(root, 'specs', 'content', 'efmp-302');
+    mkdirSync(specDir, { recursive: true });
+    writeFileSync(join(specDir, 'tasks.md'), [
+      '| Unit | Stage | Status | Reviewer | Suggestion |',
+      '|---|---|---|---|---|',
+      '| Unit 1 | G3 en-review | \u2705 | MY | - |',
+      '| Unit 1 | G3 en-review (revision) | \u23f3 | | rework topic 1.2 |',
+      '',
+    ].join('\n'));
+
+    const { report } = runReport(root);
+    const unit = report.courses.find((c) => c.course_code === 'EFMP-302').units.find((u) => u.unit_no === 1);
+    expect(unit.gates.G3).toBe('open');
   });
 
   it('marks a coming_soon unit as not authored, with depth_check not_applicable', () => {
