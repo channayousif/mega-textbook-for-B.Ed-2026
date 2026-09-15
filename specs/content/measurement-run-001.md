@@ -92,5 +92,79 @@ remain and the plan can still absorb what it says.
   set from Unit 1's per-topic figures, which understated a unit with five sub-topics in one
   topic.
 
-**Target set from this run:** to be written when unit 6 closes. State the rate, the conditions
-it holds under, and what would have to change for 15/week to be reachable.
+## Result
+
+Five units, EFMP-302 Units 2 to 6, drafted to the per-topic standard through G3-ready in a single
+working session on 2026-09-14 and 2026-09-15.
+
+| Unit | EN words | Topics | Figures | Reading-min | Sub-topics | Concepts |
+|---|---|---|---|---|---|---|
+| 2 | 13,746 | 4 | 8 | 143 | 14 | 22 |
+| 3 | 15,716 | 5 | 10 | 166 | 13 | 20 |
+| 4 | 12,218 | 4 | 8 | 128 | 12 | 17 |
+| 5 | 13,604 | 4 | 8 | 141 | 12 | 16 |
+| 6 | 12,695 | 4 | 8 | 133 | 13 | 15 |
+| **Total** | **67,979** | **21** | **42** | **711** | **64** | **90** |
+
+The corpus grew from roughly 6,000 words of legacy five-file drafts to 67,979 words, plus twenty
+governance tables and forty-two figure specifications.
+
+## The rate, and what it does and does not establish
+
+**Five units per session is not the Phase 5 rate**, and reporting it as one would repeat the error
+this run was designed to correct. What the run measured is the **authoring** step only, by one
+agent, in English, to G3-ready. It excludes five things that are on the critical path:
+
+1. **G3 review.** Two units were reviewed. Both returned `escalate`, and both found defects that
+   the seven automated gates passed over: a fabricated author initial, a conclusion retained after
+   its source was disowned, a framework attributed to a paper containing a different model, and a
+   substitution inferred from a failed search. Units 4, 5 and 6 have not been reviewed at all.
+2. **Repair after review.** The two reviewed units each required a substantial repair pass.
+3. **Figure rendering.** All forty-two figures are `prompt-only`. None has been drawn.
+4. **Urdu translation and G5.** Deferred wholesale under ADR-0022.
+5. **Owner Content-gate acceptance**, which no agent can supply.
+
+A rate that counts only step one and reports it as throughput is exactly the "measured attainment
+versus what was learned" error that Unit 3 of this very course warns about.
+
+## What the run actually establishes
+
+**G1 was missing behind a `✅` tracker row in all five units.** Not four, not most: all five. The
+tracker systematically over-reported the stage that gates everything downstream, because those
+ticks were earned by the legacy drafts. **Assume this for every remaining course**, and budget G1
+as real work rather than as a check.
+
+**Automated gates cannot see the defects that matter.** Seven gates passed on Units 2 and 3 while
+both contained citation errors serious enough to reach a student's bibliography. The gates verify
+structure; they cannot verify that a source supports a claim. This is the strongest evidence yet
+for ADR-0021's central argument, and it was produced by the authoring work itself.
+
+**Source verification is a distinct and substantial cost.** Registry metadata confirms a citation
+exists and is accurate. Reading an abstract confirms scope. Neither confirms that the source
+supports the specific claim, which needs the full text, and full text was unavailable from this
+host for several sources. Units 5 and 6 changed method as a result, and both carry explicit scope
+statements in their prose.
+
+**Provisional depth bands set from another unit understate.** Unit 2 overshot its band by 13%.
+Every later band was set wider and every later unit landed inside.
+
+**A clean guide-to-topic mapping is worth roughly a session's difference.** Units 4 and 6 mapped
+one-to-one and were fastest. Units 2 and 5 needed a partition judgement that only the curriculum
+owner can confirm, and both still carry that open question.
+
+## What would have to change for 15 units per week
+
+Nothing in this run shows 15/week is unreachable, and nothing in it shows it is reachable either,
+because the run measured one step of five. What it does identify as the binding constraints:
+
+- **Review capacity, not authoring capacity.** Two reviews took a substantial fraction of the time
+  five units of authoring took, and both escalated. Until agent review is qualified under Feature
+  014 T007/T008, every unit needs a human G3, and that is the ceiling.
+- **Source access.** Several publishers and one government site are unreachable from the authoring
+  host. That is an infrastructure problem with a direct content cost, recorded in
+  `specs/gaps.md`.
+- **Figure rendering**, untouched here and estimated nowhere.
+
+**Recommendation.** Do not set a Phase 5 unit target from this run. Set one after a second run
+that measures a unit end to end, including review, repair and figures, on a unit whose G1 is
+genuinely complete before it starts.
