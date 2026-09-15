@@ -75,3 +75,28 @@ Status: `open` (awaiting owner decision) · `resolved` (decision recorded).
 All five earlier discrepancies are resolved. New ambiguities found during G0 course intake for
 Semesters III-VIII should be appended here as `G-2026-06` onward and escalated before any catalog
 or content change (Art. II.3).
+
+## EFMP-302 Unit 2 - two unresolved source references (2026-09-15, from the G3 review)
+
+**1. "NACTE guidelines" (sub-topic U2-09).** The course guide names these under Unit 2's codes of
+conduct with no reference. A drafting note claimed they resolve to the *National Professional
+Standards for Teachers* on the grounds that NACTE publishes no separate code of ethics. **That
+claim was wrong and unsupported**: it was inferred from a search that returned nothing, not from a
+document. G3 review evidence indicates NACTE publishes its own accreditation standards for teacher
+education programmes, in which the national standards appear as a single indicator. That finding
+could not be re-verified from the authoring host, which returns 404 for every `nacte.org.pk` path
+tried, so it is recorded here rather than asserted in the unit.
+
+**Needed**: the curriculum owner or a reviewer with access should identify which NACTE document
+the guide means, confirm whether it contains conduct or ethics provisions, and either add it to
+the course reading list or record that the guide's reference is unresolvable. The unit currently
+tells the learner plainly that the reference is unverified and directs them to ask their tutor.
+
+**2. The four-step Empathy, Context, Reflect, Action framework (sub-topic U2-11).** Named in the
+guide's Unit 2 outline with no reference. It was mistakenly mapped to `ehrich2011` at drafting;
+that paper contains a different five-part critical-incident model. No verifiable source has been
+found. It is taught as guide-given and carries a `no-external-source` row in
+`specs/content/efmp-302/sources/unit-02.md`.
+
+**Needed**: identify the framework's origin, or confirm that it is the course guide's own
+construction, so the unit can attribute it correctly.
