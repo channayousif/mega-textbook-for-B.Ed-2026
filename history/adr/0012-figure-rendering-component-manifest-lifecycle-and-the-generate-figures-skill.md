@@ -5,6 +5,8 @@
 - **Status:** Accepted
 - **Date:** 2026-09-01
 - **Feature:** 009-figure-rendering
+- **Superseded in part by:** ADR-0024 for raster provider and agent ownership only. The component,
+  manifest lifecycle, SVG-first architecture, asset formats and budgets remain accepted.
 - **Context:** Spec 008 (ADR-0011, component 4) stopped at figure **markers**: an inline
   `{/* FIGURE[fig-U<n>-<seq>]: <prompt>; alt: <alt> */}` MDX comment per topic plus a per-unit
   manifest (`| Figure ID | Topic | Prompt | Alt text | Status |`), every row `Status: prompt-only`,

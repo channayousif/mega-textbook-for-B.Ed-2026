@@ -1,0 +1,33 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "commands": {
+    "sp.plan": {
+      "description": "Create an implementation plan for a feature",
+      "file": ".opencode/commands/sp.plan.md"
+    },
+    "sp.tasks": {
+      "description": "Create a task list from the implementation plan",
+      "file": ".opencode/commands/sp.tasks.md"
+    },
+    "sp.phr": {
+      "description": "Create a Prompt History Record for the current interaction",
+      "file": ".opencode/commands/sp.phr.md"
+    },
+    "sp.adr": {
+      "description": "Suggest creating an Architecture Decision Record",
+      "file": ".opencode/commands/sp.adr.md"
+    },
+    "sp.clarify": {
+      "description": "Clarify ambiguous requirements before proceeding",
+      "file": ".opencode/commands/sp.clarify.md"
+    },
+    "sp.analyze": {
+      "description": "Analyze feature scope, dependencies, and risks",
+      "file": ".opencode/commands/sp.analyze.md"
+    },
+    "sp.checklist": {
+      "description": "Create a checklist for a feature or task",
+      "file": ".opencode/commands/sp.checklist.md"
+    }
+  }
+}

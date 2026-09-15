@@ -1,5 +1,5 @@
 ---
-version: "4.4"
+version: "4.5"
 ---
 
 # Content Style Guide
@@ -86,6 +86,12 @@ publish gate to a corpus completion requirement. A unit may publish English-only
 "Urdu translation not yet available" banner. Nothing else in `## UR register rules` changes, and
 the parity gate still applies wherever an Urdu version exists - what changed is when the Urdu
 version is owed, not whether it is.
+
+**v4.5** (2026-09-15, ADR-0024) assigns generated raster illustrations and raster edits to
+Codex, whose built-in image-generation tool was verified against the existing WebP optimiser and
+150 KB budget. Claude continues to own figure meaning, prompts, alt text and deterministic SVG
+schematics. The marker and manifest row are the handoff contract. Asset formats, budgets,
+bilingual reuse and figure-density rules are unchanged.
 
 **v4.0's freeze note, which still governs. This was the last standard revision before the freeze.** Nine revisions in, each one has
 invalidated finished work; `EFMP-301` Unit 1 has been authored three times. From here the standard
@@ -508,9 +514,10 @@ hand-authored as a self-contained SVG (`<title>` + `role="img"`, system-font sta
 `@media (prefers-color-scheme: dark)` block, meaning by shape+label never colour, ≤ 20 KB):
 `table` (comparison / matrix), `concept-map` (node-and-arrow web), `flowchart` (decision /
 process flow), `timeline` (ordered sequence along time), `diagram` (any other schematic -
-triangle, Venn, quadrant). The sixth, `illustration`, is a pictorial scene - generated via the
-Hugging Face MCP image tool (or a generation brief + `figures/.staging/` when no tool is
-connected), optimised to WebP ≤ 150 KB, longest edge ≤ 1600 px. Only `concept-map` /
+triangle, Venn, quadrant). The sixth, `illustration`, is a pictorial scene. Claude prepares its
+prompt, alt text and `prompt-only` manifest handoff; Codex generates or edits it with its built-in
+image-generation tool, inspects it and optimises it to WebP ≤ 150 KB with longest edge ≤ 1600 px.
+Only `concept-map` /
 `flowchart` / `timeline` satisfy the per-unit schematic rule.
 
 **Bilingual.** A placed `diagram` also has `<figId>.ur.svg` with the labels translated; the UR
