@@ -65,11 +65,11 @@ register pass; `translation_status: reviewed` on all EN and UR unit-01 files;
 | Unit 2 | G5 ur-review | ▢ | | scope changed to the per-topic layout; 18 authored Urdu concept labels in concepts/unit-02.md need review |
 | Unit 2 | G6 assets | ▢ | | |
 | Unit 2 | G7 publish | ▢ | | |
-| Unit 3 | G1 unit-spec | ✅ | YM | |
-| Unit 3 | G2 en-draft | ✅ | YM | |
-| Unit 3 | G3 en-review | ✅ | YM | |
-| Unit 3 | G4 ur-translation | ▢ | | |
-| Unit 3 | G5 ur-review | ▢ | | |
+| Unit 3 | G1 unit-spec | ▣ | | re-opened 2026-09-14: per-topic G1 blocks added. Five guide sections map one-to-one onto five topics, so no partition judgement was required |
+| Unit 3 | G2 en-draft | ▣ | | re-opened 2026-09-14: re-drafted from the legacy five-file layout to the per-topic standard (style guide v4.4); 156 reading-min across 9 files; 10 figure markers at prompt-only |
+| Unit 3 | G3 en-review | ▣ | | re-opened 2026-09-14: the previous ✅ certified the legacy draft, which no longer exists. Awaiting a Content-gate pass on the new draft |
+| Unit 3 | G4 ur-translation | ▢ | | scope changed to the per-topic layout. Legacy UR drafts removed as orphans; under ADR-0022 the Urdu mirror arrives in the corpus-wide translation phase |
+| Unit 3 | G5 ur-review | ▢ | | scope changed to the per-topic layout; 17 authored Urdu concept labels in concepts/unit-03.md need review |
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
 | Unit 4 | G1 unit-spec | ✅ | YM | |
