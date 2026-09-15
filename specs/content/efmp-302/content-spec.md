@@ -81,9 +81,9 @@ Spec 006 FR-010).
 | unesco-teacher-ethics | UNESCO / International Task Force on Teachers (2019). *Global framework of professional teaching standards*. | https://unesdoc.unesco.org/ark:/48223/pf0000372167 | 2, 4 | a global reference point for professional and ethical teaching standards |
 | bebeau1999 | Bebeau, M. J., Rest, J. R., & Narvaez, D. (1999). Beyond the promise: A perspective on research in moral education. *Educational Researcher, 28*(4), 18-26. | https://doi.org/10.3102/0013189X028004018 | 2 | the Four Component Model (moral sensitivity, judgement, motivation, character); metadata verified against the Crossref registry 2026-09-14 |
 | goe2008 | Goe, L., Bell, C., & Little, O. (2008). *Approaches to evaluating teacher effectiveness: A research synthesis*. National Comprehensive Center for Teacher Quality. | https://files.eric.ed.gov/fulltext/ED521228.pdf (ERIC ED521228) | 3 | what "teacher effectiveness" is taken to mean and the components used to evaluate it; verified against the ERIC registry 2026-09-14 |
-| taylor2023 | Taylor, R., & Thion, S. (2023). How has teaching effectiveness been conceptualized? Questioning the consistency between definition and measure. *Frontiers in Education, 8*. | https://doi.org/10.3389/feduc.2023.1253622 | 3 | competing conceptions of effective teaching, and the gap between how it is defined and how it is measured; Crossref-verified |
-| keelson2024 | Abekah Keelson, S., Odei Addo, F., & Dodor, A. (2024). The influence of lecturer non-verbal cues on student perceptions of teaching quality. *Cogent Education, 11*(1). | https://doi.org/10.1080/2331186X.2024.2325788 | 3 | non-verbal cues and how learners read them as evidence of teaching quality; Crossref-verified |
-| furlich2016 | Furlich, S. A. (2016). Understanding instructor nonverbal immediacy, verbal immediacy, and student motivation. *Journal of the Scholarship of Teaching and Learning, 16*(3), 11-22. | https://doi.org/10.14434/josotl.v16i3.19284 | 3 | verbal and non-verbal immediacy behaviours and their link to learner motivation; Crossref-verified |
+| taylor2023 | Taylor, S., & Thion, S. (2023). How has teaching effectiveness been conceptualized? Questioning the consistency between definition and measure. *Frontiers in Education, 8*. | https://doi.org/10.3389/feduc.2023.1253622 | 3 | competing conceptions of effective teaching, and the gap between how it is defined and how it is measured; Crossref-verified |
+| keelson2024 | Abekah Keelson, S., Odei Addo, J., & Dodor, A. (2024). The influence of lecturer non-verbal cues on student perceptions of teaching quality: The role of gender and age. *Cogent Education, 11*(1). | https://doi.org/10.1080/2331186X.2024.2325788 | 3 | non-verbal cues and how learners read them as evidence of teaching quality; Crossref-verified |
+| furlich2016 | Furlich, S. A. (2016). Understanding instructor nonverbal immediacy, verbal immediacy, and student motivation at a small liberal arts university. *Journal of the Scholarship of Teaching and Learning, 16*(3), 11-22. | https://doi.org/10.14434/josotl.v16i3.19284 | 3 | verbal and non-verbal immediacy behaviours and their link to learner motivation; Crossref-verified |
 | isore2009 | Isoré, M. (2009). *Teacher evaluation: Current practices in OECD countries and a literature review* (OECD Education Working Papers No. 23). OECD Publishing. | https://files.eric.ed.gov/fulltext/ED530786.pdf (ERIC ED530786) | 4 | how teacher evaluation and appraisal systems are built, and the formative-versus-summative purpose split; verified against the ERIC registry 2026-09-14 |
 
 ## Week schedule
@@ -466,8 +466,8 @@ cells form a **total, disjoint partition** of the `### Sub-topic checklist`.
 | 3.1 | What "an effective teacher" actually means | U3-01, U3-02 | 18-24 | fig-U3-1: table, fig-U3-2: concept-map |
 | 3.2 | The qualities an effective teacher brings | U3-03, U3-04, U3-05, U3-06 | 20-26 | fig-U3-3: table, fig-U3-4: diagram |
 | 3.3 | Relationships, and what to do when they go wrong | U3-07, U3-08 | 17-23 | fig-U3-5: concept-map, fig-U3-6: flowchart |
-| 3.4 | Saying it so it lands: verbal and non-verbal communication | U3-09, U3-10 | 18-24 | fig-U3-7: table, fig-U3-8: diagram |
-| 3.5 | The roles a teacher now has to play | U3-11, U3-12, U3-13 | 15-21 | fig-U3-9: timeline, fig-U3-10: concept-map |
+| 3.4 | Saying it so it lands: verbal and non-verbal communication | U3-09, U3-10 | 18-28 | fig-U3-7: table, fig-U3-8: diagram |
+| 3.5 | The roles a teacher now has to play | U3-11, U3-12, U3-13 | 15-23 | fig-U3-9: timeline, fig-U3-10: concept-map |
 
 **Depth budget**: 13 sub-topics; 5 topics; 130-175 reading-min (**provisional**, from the
 per-topic estimates above plus `index.mdx` (7) + `unit-assessment.mdx` (28) +
@@ -526,7 +526,7 @@ in folk claims about percentages of communication being non-verbal, which are no
 
 **Unit-end assessment blueprint** (`unit-assessment.mdx` - fixed 10/10/5 bank):
   - MCQs (10): Remember to Apply; **2 per topic** across 3.1 to 3.5
-  - RRQs (10): Understand to Analyze; **2 per topic**; each with a model answer and a
+  - RRQs (10): Remember to Analyze; **2 per topic**; each with a model answer and a
     point-by-point mark scheme in `## Answers and marking guidance`
   - ERQs (5): Analyze to Evaluate/Create; **one per topic**, with the 3.1 item carrying the
     integrative load by requiring a described teacher to be judged against the components from
