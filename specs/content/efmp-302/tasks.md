@@ -72,11 +72,11 @@ register pass; `translation_status: reviewed` on all EN and UR unit-01 files;
 | Unit 3 | G5 ur-review | ▢ | | scope changed to the per-topic layout; 17 authored Urdu concept labels in concepts/unit-03.md need review |
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
-| Unit 4 | G1 unit-spec | ✅ | YM | |
-| Unit 4 | G2 en-draft | ✅ | YM | |
-| Unit 4 | G3 en-review | ✅ | YM | |
-| Unit 4 | G4 ur-translation | ▢ | | |
-| Unit 4 | G5 ur-review | ▢ | | |
+| Unit 4 | G1 unit-spec | ▣ | | re-opened 2026-09-14: per-topic G1 blocks added. Four guide sections map one-to-one onto four topics. Carries a source-verification limitation for G3: the NPST primary document was unreachable from the authoring host |
+| Unit 4 | G2 en-draft | ▣ | | re-opened 2026-09-14: re-drafted to the per-topic standard (style guide v4.4); 128 reading-min across 8 files; 8 figure markers at prompt-only |
+| Unit 4 | G3 en-review | ▣ | | re-opened 2026-09-14. **Reviewer action required**: confirm the ten standard names in topic-02.mdx against a copy of the primary document; they were corroborated from secondary sources only |
+| Unit 4 | G4 ur-translation | ▢ | | scope changed to the per-topic layout. Legacy UR drafts removed as orphans; Urdu mirror arrives in the corpus-wide translation phase (ADR-0022) |
+| Unit 4 | G5 ur-review | ▢ | | scope changed to the per-topic layout; 13 authored Urdu concept labels in concepts/unit-04.md need review |
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
 | Unit 5 | G1 unit-spec | ✅ | YM | |
