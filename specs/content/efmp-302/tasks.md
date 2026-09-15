@@ -58,11 +58,11 @@ register pass; `translation_status: reviewed` on all EN and UR unit-01 files;
 | Unit 1 | G5 ur-review | ✅ | YM | Register / terminology pass (academic-plain, درسی مگر عام فہم); `Professionalism` / `Professionalization` bank terms confirmed at G5; `translation_status: reviewed`, `ur` route no longer falls back to EN |
 | Unit 1 | G6 assets | ✅ | YM | |
 | Unit 1 | G7 publish | ✅ | YM | |
-| Unit 2 | G1 unit-spec | ✅ | YM | |
-| Unit 2 | G2 en-draft | ✅ | YM | |
-| Unit 2 | G3 en-review | ✅ | YM | |
-| Unit 2 | G4 ur-translation | ▢ | | |
-| Unit 2 | G5 ur-review | ▢ | | |
+| Unit 2 | G1 unit-spec | ▣ | | re-opened 2026-09-14: per-topic G1 blocks added (sub-topic checklist, topic list, depth budget, figure plan, assessment blueprint). The 2.3-into-2.3+2.4 topic split needs owner confirmation |
+| Unit 2 | G2 en-draft | ▣ | | re-opened 2026-09-14: re-drafted from the legacy five-file layout to the per-topic standard (style guide v4.4); 141 reading-min across 7 files; 8 figure markers at prompt-only |
+| Unit 2 | G3 en-review | ▣ | | re-opened 2026-09-14: the previous ✅ certified the legacy draft, which no longer exists. Awaiting a Content-gate pass on the new draft |
+| Unit 2 | G4 ur-translation | ▢ | | scope changed to the per-topic layout. The legacy UR drafts were removed as orphans; under ADR-0022 the Urdu mirror arrives in the corpus-wide translation phase, and this unit is the designated Urdu rate probe |
+| Unit 2 | G5 ur-review | ▢ | | scope changed to the per-topic layout; 18 authored Urdu concept labels in concepts/unit-02.md need review |
 | Unit 2 | G6 assets | ▢ | | |
 | Unit 2 | G7 publish | ▢ | | |
 | Unit 3 | G1 unit-spec | ✅ | YM | |
