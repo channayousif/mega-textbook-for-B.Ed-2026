@@ -79,11 +79,11 @@ register pass; `translation_status: reviewed` on all EN and UR unit-01 files;
 | Unit 4 | G5 ur-review | ▢ | | scope changed to the per-topic layout; 13 authored Urdu concept labels in concepts/unit-04.md need review |
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
-| Unit 5 | G1 unit-spec | ✅ | YM | |
-| Unit 5 | G2 en-draft | ✅ | YM | |
-| Unit 5 | G3 en-review | ✅ | YM | |
-| Unit 5 | G4 ur-translation | ▢ | | |
-| Unit 5 | G5 ur-review | ▢ | | |
+| Unit 5 | G1 unit-spec | ▣ | | re-opened 2026-09-15: per-topic G1 blocks added. **Owner confirmation needed**: guide section 5.1 carries six leaf bullets and is split across topics 5.1 and 5.2, as Unit 2's 2.3 was |
+| Unit 5 | G2 en-draft | ▣ | | re-opened 2026-09-15: re-drafted to the per-topic standard (style guide v4.4); 141 reading-min across 8 files; 8 figure markers at prompt-only. Six of twelve sub-topics carry `no-external-source` by design |
+| Unit 5 | G3 en-review | ▣ | | re-opened 2026-09-15. Sources verified by reading abstracts, not registry metadata alone, after the Unit 2 and 3 reviews; three carry scope limits stated in the prose |
+| Unit 5 | G4 ur-translation | ▢ | | scope changed to the per-topic layout. Legacy UR drafts removed as orphans; Urdu mirror arrives in the corpus-wide translation phase (ADR-0022) |
+| Unit 5 | G5 ur-review | ▢ | | **14 of 16 concept labels are authored**, the largest authored set in the course; approved labels should be promoted into terminology.csv before Unit 6 is translated |
 | Unit 5 | G6 assets | ▢ | | |
 | Unit 5 | G7 publish | ▢ | | |
 | Unit 6 | G1 unit-spec | ✅ | YM | |

@@ -85,6 +85,11 @@ Spec 006 FR-010).
 | keelson2024 | Abekah Keelson, S., Odei Addo, J., & Dodor, A. (2024). The influence of lecturer non-verbal cues on student perceptions of teaching quality: The role of gender and age. *Cogent Education, 11*(1). | https://doi.org/10.1080/2331186X.2024.2325788 | 3 | non-verbal cues and how learners read them as evidence of teaching quality; Crossref-verified |
 | furlich2016 | Furlich, S. A. (2016). Understanding instructor nonverbal immediacy, verbal immediacy, and student motivation at a small liberal arts university. *Journal of the Scholarship of Teaching and Learning, 16*(3), 11-22. | https://doi.org/10.14434/josotl.v16i3.19284 | 3 | verbal and non-verbal immediacy behaviours and their link to learner motivation; Crossref-verified |
 | isore2009 | Isoré, M. (2009). *Teacher evaluation: Current practices in OECD countries and a literature review* (OECD Education Working Papers No. 23). OECD Publishing. | https://files.eric.ed.gov/fulltext/ED530786.pdf (ERIC ED530786) | 4 | how teacher evaluation and appraisal systems are built, and the formative-versus-summative purpose split; verified against the ERIC registry 2026-09-14 |
+| maslach2016 | Maslach, C., & Leiter, M. P. (2016). Understanding the burnout experience: Recent research and its implications for psychiatry. *World Psychiatry, 15*(2), 103-111. | https://doi.org/10.1002/wps.20311 | 5 | the burnout construct and its dimensions. **Scope: human-service occupations broadly, not teachers**; cite for the construct only. Abstract read 2026-09-15 |
+| skaalvik2020 | Skaalvik, E. M., & Skaalvik, S. (2020). Teacher burnout: Relations between dimensions of burnout, perceived school context, job satisfaction and motivation for teaching. A longitudinal study. *Teachers and Teaching, 26*(7-8), 602-616. | https://doi.org/10.1080/13540602.2021.1913404 | 5 | job demands (time pressure, low student motivation, dissonant value context) and resources (autonomy, supervisory support) against burnout and intention to quit. **Scope: 262 Norwegian high-school teachers, longitudinal.** Abstract read 2026-09-15 |
+| little2001 | Little, A. W. (2001). Multigrade teaching: Towards an international research and policy agenda. *International Journal of Educational Development, 21*(6), 481-497. | https://doi.org/10.1016/S0738-0593(01)00011-6 | 5 | multigrade teaching as an international phenomenon and policy problem. **No abstract available; cited for the agenda-setting claim its title supports, not for findings** |
+| naparan2021 | Naparan, G. B., & Alinsug, V. G. (2021). Classroom strategies of multigrade teachers. *Social Sciences & Humanities Open, 3*(1), 100109. | https://doi.org/10.1016/j.ssaho.2021.100109 | 5 | strategies multigrade teachers actually use. **Scope: ten teachers in Zamboanga del Sur, Philippines, interview study**; illustrative, not generalisable. Abstract read 2026-09-15 |
+| hennessy2022 | Hennessy, S., D'Angelo, S., McIntyre, N., Koomar, S., Kreimeia, A., Cao, L., Brugha, M., & Zubairi, A. (2022). Technology use for teacher professional development in low- and middle-income countries: A systematic review. *Computers and Education Open, 3*, 100080. | https://doi.org/10.1016/j.caeo.2022.100080 | 5 | what technology does and does not deliver for teacher development in low- and middle-income countries. **Scope: teacher professional development, not classroom technology integration generally.** Abstract read 2026-09-15 |
 
 ## Week schedule
 
@@ -682,6 +687,105 @@ Weeks 12–13. Unit Spec (G1) for `docs/semester-1/efmp-302/unit-05/`.
 - **Assessment blueprint**: formative 5–8 items (Remember/Understand) on the named challenge
   categories; summative includes an Analyze-or-higher item proposing and justifying a response to
   a described challenge scenario. Weighting: 60/40 default.
+
+### Sub-topic checklist
+
+The authoritative list the depth gate grades `specs/content/efmp-302/coverage/unit-05.md`
+against. IDs are stable once assigned.
+
+**This table is an expansion, not a transcription.** The guide's Unit 5 outline carries ten leaf
+bullets across three headings, and section 5.3 is a bare heading with none. The rows below
+decompose those headings into teachable sub-topics; `Guide ref` shows which heading each derives
+from. Rows U5-11 and U5-12 in particular are authored, since the guide gives 5.3 no bullets.
+
+| ID | Guide ref | Topic | Sub-topic |
+|---|---|---|---|
+| U5-01 | 5.1 | 5.1 | Workload, and what actually consumes a teacher's week |
+| U5-02 | 5.1 | 5.1 | Stress and burnout, and how the two differ |
+| U5-03 | 5.1 | 5.1 | Lack of support and resources |
+| U5-04 | 5.1 | 5.1 | The multilingual classroom |
+| U5-05 | 5.1 | 5.1 | The multi-grade classroom |
+| U5-06 | 5.1 | 5.2 | The increased focus on teacher accountability |
+| U5-07 | 5.1 | 5.2 | High expectations from many stakeholders at once |
+| U5-08 | 5.1 | 5.2 | Socio-economic status and public recognition |
+| U5-09 | 5.2 | 5.3 | Pressure to integrate technology |
+| U5-10 | 5.2 | 5.3 | Responsible use of digital platforms and resources |
+| U5-11 | 5.3 | 5.4 | Separating what is within a teacher's control from what is not |
+| U5-12 | 5.3 | 5.4 | Growth and development as a response rather than endurance |
+
+### Topic list
+
+The opt-in per-topic partition for `docs/semester-1/efmp-302/unit-05/`.
+
+**G1 decision requiring owner confirmation.** The guide gives Unit 5 three sections, and 5.1
+carries six leaf bullets, more than any other section in this course. The partition below splits
+guide 5.1 across **two** topics: 5.1 for the conditions a teacher works in, and 5.2 for the
+demands placed on them from outside, with `Guide ref` still reading 5.1 for both. Topics 5.3 and
+5.4 are guide 5.2 and 5.3 respectively. Nothing is added or dropped; only the file boundary moves,
+and `index.mdx` tells the learner this directly. This mirrors the split made in Unit 2 and is
+subject to the same confirmation.
+
+| Topic | Title | Sub-topic IDs | Reading-min | Figures (id: archetype) |
+|---|---|---|---|---|
+| 5.1 | The conditions you will actually teach in | U5-01, U5-02, U5-03, U5-04, U5-05 | 22-30 | fig-U5-1: table, fig-U5-2: flowchart |
+| 5.2 | What is asked of you, and by whom | U5-06, U5-07, U5-08 | 18-25 | fig-U5-3: concept-map, fig-U5-4: table |
+| 5.3 | Professionalism in the digital age | U5-09, U5-10 | 16-23 | fig-U5-5: table, fig-U5-6: diagram |
+| 5.4 | Responding: growth rather than endurance | U5-11, U5-12 | 15-24 | fig-U5-7: diagram, fig-U5-8: flowchart |
+
+**Depth budget**: 12 sub-topics; 4 topics; 115-165 reading-min (**provisional**; re-baseline from
+the drafted total per T049, and do not trim prose to hit it).
+
+**Prerequisite knowledge**: Units 1 to 4. Unit 4's accountability material is assumed by topic
+5.2, and Unit 2's obligations are assumed by topic 5.3's treatment of digital conduct.
+
+**Common misconceptions**: "burnout is just being very tired"; "a multilingual classroom is a
+problem to be solved by banning the home language"; "integrating technology means using it in
+every lesson"; "a teacher's status is fixed by society and nothing a teacher does affects it";
+"the answer to difficult conditions is resilience".
+
+**Mapped readings**: maslach2016, skaalvik2020, little2001, naparan2021, hennessy2022,
+hargreaves2000, isore2009.
+
+**Source scope discipline for this unit.** Every source above was verified by reading its
+abstract and bibliographic record, not only its registry metadata, after two G3 reviews found
+citation defects in Units 2 and 3 that metadata checks could not have caught. Three carry scope
+limits that the prose must state rather than hide: `maslach2016` is about human-service
+occupations and not teachers; `skaalvik2020` is 262 Norwegian high-school teachers;
+`naparan2021` is ten teachers in the Philippines. Pakistani conditions are described from the
+course guide and general knowledge, and where no source supports a claim the unit says so.
+
+**Worked-examples plan**: a week in the life of a government primary teacher, itemised (U5-01 to
+U5-03); one classroom with four home languages and one with three grades in a room (U5-04,
+U5-05); the same teacher facing a head, a parent body, a district officer and a newspaper
+(U5-06 to U5-08); a school given tablets and no electricity budget (U5-09, U5-10); a teacher who
+changed one thing that was within reach (U5-11, U5-12).
+
+**Figure plan** (>= 2 per topic; >= 1 concept-map / flowchart / timeline; seeds
+`specs/content/efmp-302/figures/unit-05.md`):
+  - fig-U5-1 - `table` - a teacher's working week itemised: teaching, preparation, marking,
+    administration, cover, community duties, with what is visible to outsiders (Topic 5.1)
+  - fig-U5-2 - `flowchart` - the path from sustainable demand to burnout, with the three burnout
+    dimensions as stages and the points where a resource interrupts the path (Topic 5.1)
+  - fig-U5-3 - `concept-map` - one teacher at the centre with the parties making demands, each
+    link labelled with what that party wants and what it measures (Topic 5.2)
+  - fig-U5-4 - `table` - occupational status compared across professions on pay, entry
+    requirement, autonomy and public recognition, with teaching placed among them (Topic 5.2)
+  - fig-U5-5 - `table` - classroom technology decisions against what the technology adds, what it
+    costs, and what it replaces that was working (Topic 5.3)
+  - fig-U5-6 - `diagram` - the boundary between a teacher's professional and personal digital
+    presence, with the cases that cross it marked (Topic 5.3)
+  - fig-U5-7 - `diagram` - two concentric circles, what a teacher controls inside and what they do
+    not outside, with the band between them labelled "what you can influence" (Topic 5.4)
+  - fig-U5-8 - `flowchart` - turning a named challenge into one change that is within reach, and
+    the check that it was worth making (Topic 5.4)
+
+**Unit-end assessment blueprint** (`unit-assessment.mdx` - fixed 10/10/5 bank):
+  - MCQs (10): Remember to Apply; **at least 2 per topic** across 5.1 to 5.4
+  - RRQs (10): Understand to Analyze; **at least 2 per topic**; each with a model answer and a
+    point-by-point mark scheme
+  - ERQs (5): Analyze to Evaluate/Create; one per topic plus one integrative item requiring a
+    described teacher's situation to be analysed across conditions, demands and response; each
+    carries an analytic rubric, >= 1 demanding Analyze-or-higher
 
 ## Unit 6: Sustaining Professionalism through Continuous Learning
 
