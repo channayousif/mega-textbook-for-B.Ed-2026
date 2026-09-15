@@ -77,7 +77,7 @@ Spec 006 FR-010).
 
 | Key | Citation | DOI/URL | Units | Note |
 |---|---|---|---|---|
-| npst-pakistan-2009 | Government of Pakistan, Ministry of Education, Policy & Planning Wing (2009). *National Professional Standards for Teachers in Pakistan*. | https://itacec.org/document/2015/7/National_Professional_Standards_for_Teachers.pdf | 2, 4 | the 10 standards, their domains and indicators - Unit 4's core text. Also Unit 2's **local code**: NACTE, which the guide names, publishes and accredits against this document rather than a separate code of ethics |
+| npst-pakistan-2009 | Government of Pakistan, Ministry of Education, Policy & Planning Wing (2009). *National Professional Standards for Teachers in Pakistan*. | https://itacec.org/document/2015/7/National_Professional_Standards_for_Teachers.pdf | 2, 4 | the 10 standards, their domains and indicators - Unit 4's core text. Also Unit 2's **local code**, via Standard 9, which pairs the code of conduct with continuing professional development. This entry makes no claim about what NACTE accredits against; see `specs/gaps.md` |
 | unesco-teacher-ethics | UNESCO / International Task Force on Teachers (2019). *Global framework of professional teaching standards*. | https://unesdoc.unesco.org/ark:/48223/pf0000372167 | 2, 4 | a global reference point for professional and ethical teaching standards |
 | bebeau1999 | Bebeau, M. J., Rest, J. R., & Narvaez, D. (1999). Beyond the promise: A perspective on research in moral education. *Educational Researcher, 28*(4), 18-26. | https://doi.org/10.3102/0013189X028004018 | 2 | the Four Component Model (moral sensitivity, judgement, motivation, character); metadata verified against the Crossref registry 2026-09-14 |
 | goe2008 | Goe, L., Bell, C., & Little, O. (2008). *Approaches to evaluating teacher effectiveness: A research synthesis*. National Comprehensive Center for Teacher Quality. | https://files.eric.ed.gov/fulltext/ED521228.pdf (ERIC ED521228) | 3 | what "teacher effectiveness" is taken to mean and the components used to evaluate it; verified against the ERIC registry 2026-09-14 |
@@ -288,8 +288,14 @@ Weeks 4–5. Unit Spec (G1) for `docs/semester-1/efmp-302/unit-02/`.
 ### Sub-topic checklist
 
 The authoritative list the depth gate (`scripts/check-unit-depth.mjs`) grades
-`specs/content/efmp-302/coverage/unit-02.md` against (Spec 007 FR-009a). One row per leaf
-bullet of course-guide sections 2.1-2.3. IDs are stable once assigned.
+`specs/content/efmp-302/coverage/unit-02.md` against (Spec 007 FR-009a). IDs are stable once
+assigned.
+
+**This table is an expansion, not a transcription.** The guide's Unit 2 outline carries six leaf
+bullets in total, and section 2.1 has none at all: it is a bare heading. The fourteen rows below
+decompose those headings into teachable sub-topics. Nothing in the guide is dropped, and the
+`Guide ref` column shows which heading each row derives from, but rows U2-01 to U2-04 in
+particular are authored rather than taken from the guide's own bullets.
 
 | ID | Guide ref | Topic | Sub-topic |
 |---|---|---|---|
@@ -355,10 +361,15 @@ npst-pakistan-2009 (all tagged `2` in `## Reading list`).
     authors Bebeau, Rest and Narvaez. Direct fetch of the publisher page is blocked from this
     host (SAGE returns 403, as do UNESCO and Taylor & Francis), so verification went through the
     DOI registry rather than the landing page.
-  - **NACTE guidelines** (U2-09) resolve to `npst-pakistan-2009`, now tagged `2, 4`. NACTE
-    publishes and accredits against the National Professional Standards rather than a separate
-    code of ethics, so the guide's "NACTE guidelines" and that document are the same artefact.
-    No invented NACTE code is cited.
+  - **NACTE guidelines** (U2-09) are **unresolved**, corrected after the G3 review. The drafting
+    note claimed they resolve to `npst-pakistan-2009` because NACTE publishes no separate code of
+    ethics; that was inferred from a failed search rather than from a document, and review
+    evidence indicates NACTE does publish its own accreditation standards. The unsupported
+    sentence is removed from the unit, and the reference is escalated in `specs/gaps.md`.
+  - **The four-step Empathy, Context, Reflect, Action framework** (U2-11) has **no source**, a
+    gap missed at drafting and found at G3. It was wrongly mapped to `ehrich2011`, which contains
+    a different five-part model. Taught as guide-given, with a `no-external-source` row and a
+    `specs/gaps.md` entry.
 
 **Worked-examples plan** (approximately one Pakistan-grounded example per sub-topic group):
 ethics-vs-law - a teacher who breaks no rule and still wrongs a pupil (U2-01 to U2-04); the four

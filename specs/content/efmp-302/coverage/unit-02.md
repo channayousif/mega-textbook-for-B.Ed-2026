@@ -23,7 +23,7 @@ row, and every checklist ID has at least one row naming the exact `topic-NN.mdx`
 | U2-08 | topic-02.mdx | Ethical conduct toward colleagues and the profession | npst-pakistan-2009 |
 | U2-09 | topic-02.mdx | Local and international codes, and what a written code cannot settle | unesco-teacher-ethics |
 | U2-10 | topic-03.mdx | Rest's four-component model of moral behaviour | bebeau1999 |
-| U2-11 | topic-03.mdx | The four-step ethical decision-making framework: Empathy, Context, Reflect, Action | ehrich2011 |
+| U2-11 | topic-03.mdx | The four-step ethical decision-making framework: Empathy, Context, Reflect, Action | no-external-source |
 | U2-12 | topic-03.mdx | Reflective decision making as a standing habit | ehrich2011 |
 | U2-13 | topic-04.mdx | Grading fairness and assessment integrity | ehrich2011 |
 | U2-14 | topic-04.mdx | Confidentiality, social media and equity | unesco-teacher-ethics |

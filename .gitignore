@@ -36,6 +36,10 @@ supabase/.branches/
 
 # Logs
 *.log
+# ...except review-evidence command logs, which the Feature 014 contract requires to be
+# committed alongside a report. Without this carve-out a report validates locally and fails on a
+# fresh CI checkout, because its evidence_manifest names files git refused to track.
+!specs/content/**/reviews/**/*.log
 npm-debug.log*
 
 # OS / editor
