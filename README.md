@@ -173,11 +173,12 @@ units are unchanged and are not required to migrate.
 [`specs/009-figure-rendering/`](specs/009-figure-rendering/) turns those prompt-markers into
 committed, accessible, lazy-loaded images that render in both locales.
 
-- The **`.claude/skills/generate-figures/`** skill runs the pass: classify each marker →
+- The **`.claude/skills/generate-figures/`** skill handles classification and SVG schematics,
+  while Codex handles generated raster illustrations under ADR-0024: classify each marker →
   `diagram` (hand-authored self-contained SVG, `<title>`/`role="img"`, a
-  `prefers-color-scheme` block, ≤ 20 KB) or `illustration` (a raster via the owner's Hugging
-  Face MCP image tool, or a generation brief + git-ignored `figures/.staging/` when none is
-  connected; optimised to WebP ≤ 150 KB) → **replace** the comment with `<Figure id=… src=… alt=… />`
+  `prefers-color-scheme` block, ≤ 20 KB) or `illustration` (Claude prepares the prompt-only
+  handoff; Codex generates, inspects and optimises the raster to WebP ≤ 150 KB) → **replace** the
+  comment with `<Figure id=… src=… alt=… />`
   → mirror into the Urdu topic file with a translated-label `<figId>.ur.svg` → move the manifest
   row `prompt-only → generated → placed`.
 - `<Figure>` (`src/components/Figure.tsx`, registered globally) renders

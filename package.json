@@ -2,7 +2,7 @@
   "name": "bed-mega-textbook",
   "version": "0.1.0",
   "private": true,
-  "description": "Bilingual (English + Urdu) digital textbook for the B.Ed (4-Year) programme \u2014 Docusaurus content platform.",
+  "description": "Bilingual (English + Urdu) digital textbook for the B.Ed (4-Year) programme — Docusaurus content platform.",
   "engines": {
     "node": ">=22"
   },
@@ -55,6 +55,7 @@
     "@docusaurus/module-type-aliases": "^3.10.2",
     "@docusaurus/tsconfig": "^3.10.2",
     "@docusaurus/types": "^3.10.2",
+    "@huggingface/inference": "^4.13.28",
     "@playwright/test": "^1.48.0",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
