@@ -86,10 +86,10 @@ register pass; `translation_status: reviewed` on all EN and UR unit-01 files;
 | Unit 5 | G5 ur-review | ▢ | | **14 of 16 concept labels are authored**, the largest authored set in the course; approved labels should be promoted into terminology.csv before Unit 6 is translated |
 | Unit 5 | G6 assets | ▢ | | |
 | Unit 5 | G7 publish | ▢ | | |
-| Unit 6 | G1 unit-spec | ✅ | YM | |
-| Unit 6 | G2 en-draft | ✅ | YM | |
-| Unit 6 | G3 en-review | ✅ | YM | |
-| Unit 6 | G4 ur-translation | ▢ | | |
-| Unit 6 | G5 ur-review | ▢ | | |
+| Unit 6 | G1 unit-spec | ▣ | | re-opened 2026-09-15: per-topic G1 blocks added. Four guide sections map one-to-one onto four topics; no partition judgement required |
+| Unit 6 | G2 en-draft | ▣ | | re-opened 2026-09-15: re-drafted to the per-topic standard (style guide v4.4); 133 reading-min across 8 files; 8 figure markers at prompt-only, all deterministic schematics (no Codex raster handoff under ADR-0024) |
+| Unit 6 | G3 en-review | ▣ | | re-opened 2026-09-15. One source (kwakman2003) has no available abstract and is cited for its question only; the prose says so and a reviewer with full-text access should extend or remove it |
+| Unit 6 | G4 ur-translation | ▢ | | scope changed to the per-topic layout. Legacy UR drafts removed as orphans; Urdu mirror arrives in the corpus-wide translation phase (ADR-0022) |
+| Unit 6 | G5 ur-review | ▢ | | 13 of 15 concept labels authored. Note the `Reflective practice` / `Reflective Decision Making` relationship flagged in concepts/unit-06.md |
 | Unit 6 | G6 assets | ▢ | | |
 | Unit 6 | G7 publish | ▢ | | |
