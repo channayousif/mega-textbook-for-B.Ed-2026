@@ -77,8 +77,9 @@ Spec 006 FR-010).
 
 | Key | Citation | DOI/URL | Units | Note |
 |---|---|---|---|---|
-| npst-pakistan-2009 | Government of Pakistan, Ministry of Education, Policy & Planning Wing (2009). *National Professional Standards for Teachers in Pakistan*. | https://itacec.org/document/2015/7/National_Professional_Standards_for_Teachers.pdf | 4 | the 10 standards, their domains and indicators - Unit 4's core text |
+| npst-pakistan-2009 | Government of Pakistan, Ministry of Education, Policy & Planning Wing (2009). *National Professional Standards for Teachers in Pakistan*. | https://itacec.org/document/2015/7/National_Professional_Standards_for_Teachers.pdf | 2, 4 | the 10 standards, their domains and indicators - Unit 4's core text. Also Unit 2's **local code**: NACTE, which the guide names, publishes and accredits against this document rather than a separate code of ethics |
 | unesco-teacher-ethics | UNESCO / International Task Force on Teachers (2019). *Global framework of professional teaching standards*. | https://unesdoc.unesco.org/ark:/48223/pf0000372167 | 2, 4 | a global reference point for professional and ethical teaching standards |
+| bebeau1999 | Bebeau, M. J., Rest, J. R., & Narvaez, D. (1999). Beyond the promise: A perspective on research in moral education. *Educational Researcher, 28*(4), 18-26. | https://doi.org/10.3102/0013189X028004018 | 2 | the Four Component Model (moral sensitivity, judgement, motivation, character); metadata verified against the Crossref registry 2026-09-14 |
 
 ## Week schedule
 
@@ -278,6 +279,130 @@ Weeks 4–5. Unit Spec (G1) for `docs/semester-1/efmp-302/unit-02/`.
 - **Assessment blueprint**: formative 5–8 items (Remember/Understand) on the codes-of-conduct
   categories and Rest's four components; summative includes an Analyze-or-higher item applying the
   four-step framework to a new ethical-dilemma scenario. Weighting: 60/40 default.
+
+### Sub-topic checklist
+
+The authoritative list the depth gate (`scripts/check-unit-depth.mjs`) grades
+`specs/content/efmp-302/coverage/unit-02.md` against (Spec 007 FR-009a). One row per leaf
+bullet of course-guide sections 2.1-2.3. IDs are stable once assigned.
+
+| ID | Guide ref | Topic | Sub-topic |
+|---|---|---|---|
+| U2-01 | 2.1 | 2.1 | What "professional ethics" means, and how it differs from personal morality and from law |
+| U2-02 | 2.1 | 2.1 | Why teaching needs a shared ethic: the power asymmetry between teacher and pupil |
+| U2-03 | 2.1 | 2.1 | Trust as the working capital of a teacher's authority |
+| U2-04 | 2.1 | 2.1 | Significance in practice: the everyday decisions that are ethical decisions |
+| U2-05 | 2.2 | 2.2 | Ethical conduct toward students |
+| U2-06 | 2.2 | 2.2 | Ethical conduct in practice and performance (competence, preparation, assessment integrity) |
+| U2-07 | 2.2 | 2.2 | Ethical conduct toward parents and the community |
+| U2-08 | 2.2 | 2.2 | Ethical conduct toward colleagues and the profession |
+| U2-09 | 2.2 | 2.2 | Local and international codes (UNESCO, NACTE), and what a written code can and cannot settle |
+| U2-10 | 2.3 | 2.3 | Rest's four-component model of moral behaviour: sensitivity, judgement, motivation, character |
+| U2-11 | 2.3 | 2.3 | The four-step ethical decision-making framework: Empathy, Context, Reflect, Action |
+| U2-12 | 2.3 | 2.3 | Reflective decision making as a standing habit rather than a one-off procedure |
+| U2-13 | 2.3 | 2.4 | Classroom dilemmas: grading fairness and assessment integrity |
+| U2-14 | 2.3 | 2.4 | Classroom dilemmas: confidentiality, social media, and equity |
+
+The `Topic` column declares the per-topic partition (Spec 008, `contracts/content-spec-v3.md`);
+the depth gate checks it against the `### Topic list` cells below.
+
+**G1 decision requiring owner confirmation.** The guide gives Unit 2 three sections, and Unit 1's
+topics mapped one-to-one onto its four. Here 2.3 carries four leaf bullets and would make a
+single topic file roughly half again the size of the largest in Unit 1. The partition below
+therefore splits guide 2.3 across **two** topics: 2.3 for the three model/framework bullets and a
+new 2.4 for the dilemma bullet, whose `Guide ref` column still reads 2.3. Nothing is added or
+dropped relative to the guide; only the file boundary moves. Confirm or reject at G1.
+
+### Topic list
+
+The opt-in per-topic partition for `docs/semester-1/efmp-302/unit-02/` (Spec 008 FR-015/FR-016).
+The `Sub-topic IDs` cells form a **total, disjoint partition** of the `### Sub-topic checklist`.
+
+| Topic | Title | Sub-topic IDs | Reading-min | Figures (id: archetype) |
+|---|---|---|---|---|
+| 2.1 | What professional ethics are, and why teaching needs them | U2-01, U2-02, U2-03, U2-04 | 16-22 | fig-U2-1: table, fig-U2-2: concept-map |
+| 2.2 | Codes of conduct, and the four people a teacher owes them to | U2-05, U2-06, U2-07, U2-08, U2-09 | 18-24 | fig-U2-3: table, fig-U2-4: diagram |
+| 2.3 | Models for deciding: Rest, and the four-step framework | U2-10, U2-11, U2-12 | 15-21 | fig-U2-5: flowchart, fig-U2-6: flowchart |
+| 2.4 | Dilemmas in your own classroom | U2-13, U2-14 | 13-19 | fig-U2-7: table, fig-U2-8: diagram |
+
+**Depth budget**: 14 sub-topics; 4 topics; 120-160 reading-min (re-baselined 2026-09-14 from the
+drafted total per T049, replacing the provisional 95-125 set before the unit existed). The draft
+sums `index.mdx` (7) + `topic-01…04.mdx` (26 + 23 + 24 + 23) + `unit-assessment.mdx` (28) +
+`unit-teacher-notes.mdx` (10) = **141**, with the band set at roughly +/-14% around it. The draft
+landed above the provisional band and the prose was **not** trimmed to fit, per the authoring
+rule; the band moved instead. The five legacy files' band no longer applies.
+
+**Prerequisite knowledge**: Unit 1, specifically the code-of-conduct dimension (U1-08) and the
+accountability/autonomy/collegiality triad (U1-09). This unit is where that dimension is opened
+up, so Unit 1 is assumed and not re-taught.
+
+**Common misconceptions**: "ethics is just being a good person, so it cannot be taught";
+"if it is not in the code, it is allowed"; "an ethical dilemma is a choice between right and
+wrong" (it is characteristically a choice between two goods or two harms); "confidentiality means
+never telling anyone anything"; "what I post on my personal social media is nobody's business".
+
+**Mapped readings**: carr2000, ehrich2011, icka2024, unesco-teacher-ethics, bebeau1999,
+npst-pakistan-2009 (all tagged `2` in `## Reading list`).
+
+**Source gaps, resolved at authoring Step 1** (2026-09-14):
+  - **Rest's four-component model** (U2-10) now maps to `bebeau1999`, verified against the
+    Crossref registry: Educational Researcher 28(4), 18-26, DOI 10.3102/0013189X028004018,
+    authors Bebeau, Rest and Narvaez. Direct fetch of the publisher page is blocked from this
+    host (SAGE returns 403, as do UNESCO and Taylor & Francis), so verification went through the
+    DOI registry rather than the landing page.
+  - **NACTE guidelines** (U2-09) resolve to `npst-pakistan-2009`, now tagged `2, 4`. NACTE
+    publishes and accredits against the National Professional Standards rather than a separate
+    code of ethics, so the guide's "NACTE guidelines" and that document are the same artefact.
+    No invented NACTE code is cited.
+
+**Worked-examples plan** (approximately one Pakistan-grounded example per sub-topic group):
+ethics-vs-law - a teacher who breaks no rule and still wrongs a pupil (U2-01 to U2-04); the four
+audiences - one incident (a pupil's failing result) traced through what is owed to the pupil, to
+assessment integrity, to the parents, and to a colleague who taught the same class (U2-05 to
+U2-09); the models - a government-school grading-fairness case walked through Rest's four
+components and then through Empathy/Context/Reflect/Action, showing where each stalls (U2-10 to
+U2-12); dilemmas - a WhatsApp class group where a parent asks for another pupil's marks (U2-13,
+U2-14).
+
+**International best-practice notes**: use `unesco-teacher-ethics` as the global reference point
+and set the local code beside it rather than under it, so learners see a code as a professional
+instrument rather than an employer's rulebook. Use `ehrich2011` for the dilemma model, since it
+was written for teacher practice specifically and frames dilemmas as competing goods, which is
+what defeats the "right versus wrong" misconception above.
+
+**Figure plan** (>= 2 per topic, each with an archetype; >= 1 concept-map / flowchart / timeline
+in the unit - Constitution Art. III.10; seeds `specs/content/efmp-302/figures/unit-02.md`):
+  - fig-U2-1 - `table` - personal morality vs law vs professional ethics: what each governs, who
+    enforces it, and what it cannot reach, with one teaching example per column (Topic 2.1)
+  - fig-U2-2 - `concept-map` - trust at the centre, linked to what each party entrusts to a
+    teacher: pupils their learning and safety, parents their children, the state its curriculum,
+    colleagues their shared standing (Topic 2.1)
+  - fig-U2-3 - `table` - the four audiences of a code (students, practice and performance,
+    parents and community, colleagues) against one obligation and one recognisable breach
+    each (Topic 2.2)
+  - fig-U2-4 - `diagram` - nested circles: personal values inside school policy inside the
+    national code inside the international framework, with the gaps between them labelled as
+    where judgement is required (Topic 2.2)
+  - fig-U2-5 - `flowchart` - Rest's four components in sequence, with the failure point named at
+    each step: not noticing, judging wrongly, being outweighed, lacking follow-through
+    (Topic 2.3; this is the unit's required schematic)
+  - fig-U2-6 - `flowchart` - the Empathy, Context, Reflect, Action loop, drawn as a loop rather
+    than a line, with the return arrow labelled "what did this teach me for next time"
+    (Topic 2.3)
+  - fig-U2-7 - `table` - four dilemma types (grading, confidentiality, social media, equity)
+    against what makes each genuinely hard and a defensible first move (Topic 2.4)
+  - fig-U2-8 - `diagram` - one grading-fairness dilemma mapped onto the four-step framework,
+    showing the same case at each station (Topic 2.4)
+
+**Unit-end assessment blueprint** (`unit-assessment.mdx` - Spec 008 fixed 10/10/5 bank):
+  - MCQs (10): Remember to Apply; >= 2 per topic - 2.1 (U2-01 to U2-04), 2.2 (U2-05 to U2-09),
+    2.3 (U2-10 to U2-12), 2.4 (U2-13, U2-14)
+  - RRQs (10): Understand to Analyze; >= 2 per topic; each with a model answer and a
+    point-by-point mark scheme in `## Answers and marking guidance`
+  - ERQs (5): Analyze to Evaluate/Create; one per topic (2.1 to 2.4) plus one integrative item
+    giving a fresh dilemma and requiring the learner to work it through both Rest's model and the
+    four-step framework and then to say which produced the better decision and why; each ERQ
+    carries an analytic rubric, >= 1 demanding Analyze-or-higher
 
 ## Unit 3: Becoming an Effective Teacher
 

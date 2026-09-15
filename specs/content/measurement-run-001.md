@@ -64,7 +64,7 @@ remain and the plan can still absorb what it says.
 
 | Unit | Elapsed | Gate reruns | Findings (blocking/advisory) | Figures | Notes |
 |---|---|---|---|---|---|
-| 2 | - | - | - | - | not started |
+| 2 | one session (2026-09-14) | 4 | pending G3 | 8 carriers, all prompt-only | G1 had to be written first: the tracker's `✅` was earned by the legacy draft, so the per-topic checklist, topic list, depth budget, figure plan and blueprint did not exist. Two source gaps (Rest, NACTE) resolved at Step 1. Gate reruns were all mechanical: two over-long `description` fields, a wrong fourth column in the Reinforcement table, and the depth gate correctly refusing a `### Topic list` with no topic files yet on disk |
 | 3 | - | - | - | - | not started |
 | 4 | - | - | - | - | not started |
 | 5 | - | - | - | - | not started |
@@ -76,6 +76,21 @@ remain and the plan can still absorb what it says.
 |---|---|---|---|---|
 | 2 | G4 ur-translation | - | - | not started |
 | 2 | G5 ur-review | - | - | not started |
+
+### Observations so far
+
+- **G1 is not free, and the tracker over-reported it.** Unit 2's `G1 unit-spec` row read `✅`,
+  but that certified the legacy five-file spec. The per-topic G1 artefacts had to be authored
+  before the `author-unit` skill would run at all. Expect the same for units 3 to 6, and expect
+  the tracker to claim otherwise in each case.
+- **Source resolution is real work and is not optional.** The guide names Rest's four-component
+  model and NACTE guidelines with no references. One resolved to a verifiable DOI; the other
+  turned out not to exist as a separate artefact at all. Both took search, and neither could be
+  faked.
+- **The draft ran 13% over the provisional depth band** (141 against 95-125). The band was
+  re-baselined rather than the prose trimmed, per the authoring rule. The provisional band was
+  set from Unit 1's per-topic figures, which understated a unit with five sub-topics in one
+  topic.
 
 **Target set from this run:** to be written when unit 6 closes. State the rate, the conditions
 it holds under, and what would have to change for 15/week to be reachable.
