@@ -80,6 +80,10 @@ Spec 006 FR-010).
 | npst-pakistan-2009 | Government of Pakistan, Ministry of Education, Policy & Planning Wing (2009). *National Professional Standards for Teachers in Pakistan*. | https://itacec.org/document/2015/7/National_Professional_Standards_for_Teachers.pdf | 2, 4 | the 10 standards, their domains and indicators - Unit 4's core text. Also Unit 2's **local code**: NACTE, which the guide names, publishes and accredits against this document rather than a separate code of ethics |
 | unesco-teacher-ethics | UNESCO / International Task Force on Teachers (2019). *Global framework of professional teaching standards*. | https://unesdoc.unesco.org/ark:/48223/pf0000372167 | 2, 4 | a global reference point for professional and ethical teaching standards |
 | bebeau1999 | Bebeau, M. J., Rest, J. R., & Narvaez, D. (1999). Beyond the promise: A perspective on research in moral education. *Educational Researcher, 28*(4), 18-26. | https://doi.org/10.3102/0013189X028004018 | 2 | the Four Component Model (moral sensitivity, judgement, motivation, character); metadata verified against the Crossref registry 2026-09-14 |
+| goe2008 | Goe, L., Bell, C., & Little, O. (2008). *Approaches to evaluating teacher effectiveness: A research synthesis*. National Comprehensive Center for Teacher Quality. | https://files.eric.ed.gov/fulltext/ED521228.pdf (ERIC ED521228) | 3 | what "teacher effectiveness" is taken to mean and the components used to evaluate it; verified against the ERIC registry 2026-09-14 |
+| taylor2023 | Taylor, R., & Thion, S. (2023). How has teaching effectiveness been conceptualized? Questioning the consistency between definition and measure. *Frontiers in Education, 8*. | https://doi.org/10.3389/feduc.2023.1253622 | 3 | competing conceptions of effective teaching, and the gap between how it is defined and how it is measured; Crossref-verified |
+| keelson2024 | Abekah Keelson, S., Odei Addo, F., & Dodor, A. (2024). The influence of lecturer non-verbal cues on student perceptions of teaching quality. *Cogent Education, 11*(1). | https://doi.org/10.1080/2331186X.2024.2325788 | 3 | non-verbal cues and how learners read them as evidence of teaching quality; Crossref-verified |
+| furlich2016 | Furlich, S. A. (2016). Understanding instructor nonverbal immediacy, verbal immediacy, and student motivation. *Journal of the Scholarship of Teaching and Learning, 16*(3), 11-22. | https://doi.org/10.14434/josotl.v16i3.19284 | 3 | verbal and non-verbal immediacy behaviours and their link to learner motivation; Crossref-verified |
 
 ## Week schedule
 
@@ -424,6 +428,109 @@ Weeks 6–8. Unit Spec (G1) for `docs/semester-1/efmp-302/unit-03/`.
 - **Assessment blueprint**: formative 5–8 items (Remember/Understand/Apply) on the qualities and
   communication types; summative includes an Analyze-or-higher item evaluating a described
   teacher's effectiveness against the unit's components. Weighting: 60/40 default.
+
+### Sub-topic checklist
+
+The authoritative list the depth gate grades `specs/content/efmp-302/coverage/unit-03.md`
+against (Spec 007 FR-009a). One row per leaf bullet of course-guide sections 3.1-3.5. IDs are
+stable once assigned.
+
+| ID | Guide ref | Topic | Sub-topic |
+|---|---|---|---|
+| U3-01 | 3.1 | 3.1 | Redefining effective teaching and the effective teacher |
+| U3-02 | 3.1 | 3.1 | The components of teacher effectiveness, and what each can and cannot show |
+| U3-03 | 3.2 | 3.2 | A teacher's attitude toward the teaching profession |
+| U3-04 | 3.2 | 3.2 | Dressing and grooming as dimensions of professional image |
+| U3-05 | 3.2 | 3.2 | Personality traits of effective teachers: empathy, patience, self-control, optimism, humour, resilience, adaptability |
+| U3-06 | 3.2 | 3.2 | The influence of personality traits on teacher effectiveness |
+| U3-07 | 3.3 | 3.3 | Building positive relationships with pupils, parents, colleagues and the wider community |
+| U3-08 | 3.3 | 3.3 | Managing conflict while maintaining professionalism in a relationship |
+| U3-09 | 3.4 | 3.4 | Verbal communication in the classroom |
+| U3-10 | 3.4 | 3.4 | Non-verbal communication: its types and their classroom use |
+| U3-11 | 3.5 | 3.5 | The teacher as facilitator and as researcher |
+| U3-12 | 3.5 | 3.5 | The teacher as change agent and as moral agent |
+| U3-13 | 3.5 | 3.5 | The teacher as life-long learner |
+
+The `Topic` column declares the per-topic partition; the depth gate checks it against the
+`### Topic list` below. Unit 3's five guide sections map one-to-one onto five topics, so no
+partition judgement was required here (contrast Unit 2, where guide 2.3 was split).
+
+### Topic list
+
+The opt-in per-topic partition for `docs/semester-1/efmp-302/unit-03/`. The `Sub-topic IDs`
+cells form a **total, disjoint partition** of the `### Sub-topic checklist`.
+
+| Topic | Title | Sub-topic IDs | Reading-min | Figures (id: archetype) |
+|---|---|---|---|---|
+| 3.1 | What "an effective teacher" actually means | U3-01, U3-02 | 18-24 | fig-U3-1: table, fig-U3-2: concept-map |
+| 3.2 | The qualities an effective teacher brings | U3-03, U3-04, U3-05, U3-06 | 20-26 | fig-U3-3: table, fig-U3-4: diagram |
+| 3.3 | Relationships, and what to do when they go wrong | U3-07, U3-08 | 17-23 | fig-U3-5: concept-map, fig-U3-6: flowchart |
+| 3.4 | Saying it so it lands: verbal and non-verbal communication | U3-09, U3-10 | 18-24 | fig-U3-7: table, fig-U3-8: diagram |
+| 3.5 | The roles a teacher now has to play | U3-11, U3-12, U3-13 | 15-21 | fig-U3-9: timeline, fig-U3-10: concept-map |
+
+**Depth budget**: 13 sub-topics; 5 topics; 130-175 reading-min (**provisional**, from the
+per-topic estimates above plus `index.mdx` (7) + `unit-assessment.mdx` (28) +
+`unit-teacher-notes.mdx` (10). Re-baseline from the drafted total per T049; do not pad or trim
+prose to hit this band. Unit 2's provisional band proved 13% low, so this one is set wider.)
+
+**Prerequisite knowledge**: Units 1 and 2. Unit 1 supplies professionalism and its dimensions;
+Unit 2 supplies the ethical obligations that constrain what "effective" is allowed to mean. The
+distinction between effective and ethical is a recurring thread of this unit and assumes Unit 2.
+
+**Common misconceptions**: "an effective teacher is one whose class gets high marks"; "personality
+is fixed, so either you have it or you do not"; "professional image means expensive clothes";
+"a good relationship with pupils means being liked"; "non-verbal communication is body language
+you can fake".
+
+**Mapped readings**: goe2008, taylor2023, hurst2009, brookfield2017, keelson2024, furlich2016,
+suarez2022.
+
+**Worked-examples plan** (approximately one Pakistan-grounded example per sub-topic group): two
+teachers with identical board results and opposite classrooms (U3-01, U3-02); a trainee
+preparing for a first practicum day, worrying about the wrong things (U3-03 to U3-06); a parent
+arriving angry about a mark (U3-07, U3-08); one instruction delivered four ways, with the
+non-verbal channel contradicting the words (U3-09, U3-10); a teacher who introduced group work,
+measured it, and changed it (U3-11 to U3-13).
+
+**International best-practice notes**: use `goe2008` to show that effectiveness is defined
+differently depending on what the definer wants to measure, and `taylor2023` for the gap between
+definition and measure, so learners do not leave with a single tidy definition the literature
+does not support. Ground the communication topic in `furlich2016` and `keelson2024` rather than
+in folk claims about percentages of communication being non-verbal, which are not supportable.
+
+**Figure plan** (>= 2 per topic; >= 1 concept-map / flowchart / timeline in the unit; seeds
+`specs/content/efmp-302/figures/unit-03.md`):
+  - fig-U3-1 - `table` - three competing definitions of teacher effectiveness (achievement gain,
+    observed practice, learner outcome breadth) against what each captures and what each misses
+    (Topic 3.1)
+  - fig-U3-2 - `concept-map` - the components of teacher effectiveness radiating from a centre,
+    grouped into within-classroom processes and factors beyond the classroom (Topic 3.1)
+  - fig-U3-3 - `table` - the seven named traits against how each shows in a classroom and the
+    failure mode of each when overdone (Topic 3.2)
+  - fig-U3-4 - `diagram` - professional image as layers: appearance outermost, conduct beneath,
+    reliability beneath that, and competence at the core, sized to show which carries most weight
+    (Topic 3.2)
+  - fig-U3-5 - `concept-map` - the stakeholder web around one teacher: pupils, parents,
+    colleagues, head, community, each link labelled with what that relationship is for (Topic 3.3)
+  - fig-U3-6 - `flowchart` - a conflict de-escalation sequence from an angry first contact to a
+    resolved or escalated outcome, with the decision points named (Topic 3.3)
+  - fig-U3-7 - `table` - verbal against non-verbal channels: what each carries best, how each
+    fails, and what happens when they contradict each other (Topic 3.4)
+  - fig-U3-8 - `diagram` - a classroom seen from above with the non-verbal channels marked in
+    place: proximity, orientation, gaze, gesture, vocal variety (Topic 3.4)
+  - fig-U3-9 - `timeline` - how the expected role of a teacher has shifted, from transmitter of
+    content to facilitator, researcher, change agent and life-long learner (Topic 3.5)
+  - fig-U3-10 - `concept-map` - the five roles around a single teacher, each linked to one
+    concrete Monday-morning act that expresses it (Topic 3.5)
+
+**Unit-end assessment blueprint** (`unit-assessment.mdx` - fixed 10/10/5 bank):
+  - MCQs (10): Remember to Apply; **2 per topic** across 3.1 to 3.5
+  - RRQs (10): Understand to Analyze; **2 per topic**; each with a model answer and a
+    point-by-point mark scheme in `## Answers and marking guidance`
+  - ERQs (5): Analyze to Evaluate/Create; **one per topic**, with the 3.1 item carrying the
+    integrative load by requiring a described teacher to be judged against the components from
+    3.1 using evidence drawn from 3.2 to 3.5; each ERQ carries an analytic rubric, >= 1 demanding
+    Analyze-or-higher
 
 ## Unit 4: The Professional Standards and Competencies for Teachers
 

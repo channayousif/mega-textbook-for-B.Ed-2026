@@ -1,0 +1,30 @@
+# Sources consulted - EFMP-302 Unit 3 (Becoming an Effective Teacher)
+
+Per `specs/007-content-depth-standard/contracts/sources-consulted.md`. Every key cited in
+`specs/content/efmp-302/coverage/unit-03.md` appears here, and every key here is cited both in
+prose and in a per-topic `## Further reading` section.
+
+Verified 2026-09-14. Four keys are new to the course reading list for this unit and were
+confirmed against the registries rather than publisher pages, because several publishers return
+HTTP 403 to this host while other DOIs resolve from the same machine: `taylor2023`,
+`keelson2024` and `furlich2016` against **Crossref**, and `goe2008` against the **ERIC API**
+(record ED521228, authors Goe, Bell and Little, 2008, National Comprehensive Center for Teacher
+Quality). The remaining three keys were already on the course list and verified when added.
+
+One deliberate exclusion. The claim that a fixed large share of communication (commonly given as
+93%) is non-verbal is widespread in teacher-training material and is **not** cited here, because
+it is a distortion of a narrow experiment on conveying attitudes and does not support a general
+claim about classroom talk. Topic 3.4 names it as a misconception instead, and grounds the
+non-verbal material in `furlich2016` and `keelson2024`.
+
+No `no-external-source` row was needed for this unit.
+
+| Key | Citation | URL/DOI | Supports | Kind |
+|---|---|---|---|---|
+| goe2008 | Goe, L., Bell, C., & Little, O. (2008). *Approaches to evaluating teacher effectiveness: A research synthesis*. National Comprehensive Center for Teacher Quality. | https://files.eric.ed.gov/fulltext/ED521228.pdf (ERIC ED521228) | topic-01.mdx U3-01 (families of definition in actual use); topic-03.mdx U3-08 (relationships beyond the classroom as a component) | curated-supplementary |
+| taylor2023 | Taylor, R., & Thion, S. (2023). How has teaching effectiveness been conceptualized? Questioning the consistency between definition and measure. *Frontiers in Education, 8*. | https://doi.org/10.3389/feduc.2023.1253622 | topic-01.mdx U3-02 (the components, and the gap between stated definition and applied measure) | curated-supplementary |
+| hurst2009 | Hurst, B., & Reding, G. (2009). *Professionalism in teaching*. Pearson Education. | (print) | topic-02.mdx U3-03, U3-04, U3-05 (daily markers of professional attitude, image and conduct); topic-03.mdx U3-07 (working relationships) | guide-required |
+| brookfield2017 | Brookfield, S. D. (2017). *Becoming a critically reflective teacher* (2nd ed.). Jossey-Bass. | (print) | topic-02.mdx U3-06 (habitual practice is examinable and therefore changeable); topic-05.mdx U3-11 (the researcher role), U3-13 (development as examination rather than course collection) | guide-required |
+| keelson2024 | Abekah Keelson, S., Odei Addo, F., & Dodor, A. (2024). The influence of lecturer non-verbal cues on student perceptions of teaching quality. *Cogent Education, 11*(1). | https://doi.org/10.1080/2331186X.2024.2325788 | topic-04.mdx U3-10 (learners read non-verbal cues as evidence about teaching quality, not only mood) | curated-supplementary |
+| furlich2016 | Furlich, S. A. (2016). Understanding instructor nonverbal immediacy, verbal immediacy, and student motivation. *Journal of the Scholarship of Teaching and Learning, 16*(3), 11-22. | https://doi.org/10.14434/josotl.v16i3.19284 | topic-04.mdx U3-09 (verbal immediacy behaviours and learner motivation) | curated-supplementary |
+| suarez2022 | Suarez, V., & McGrath, J. (2022). *Teacher professional identity: How to develop and support it in times of change* (OECD Education Working Paper No. 267). OECD Publishing. | https://doi.org/10.1787/b19f5af7-en | topic-05.mdx U3-12, U3-13 (professional identity as continuing rather than fixed at qualification, and its support during change) | guide-required |

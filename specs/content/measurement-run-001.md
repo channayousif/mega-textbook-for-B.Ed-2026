@@ -65,7 +65,7 @@ remain and the plan can still absorb what it says.
 | Unit | Elapsed | Gate reruns | Findings (blocking/advisory) | Figures | Notes |
 |---|---|---|---|---|---|
 | 2 | one session (2026-09-14) | 4 | pending G3 | 8 carriers, all prompt-only | G1 had to be written first: the tracker's `✅` was earned by the legacy draft, so the per-topic checklist, topic list, depth budget, figure plan and blueprint did not exist. Two source gaps (Rest, NACTE) resolved at Step 1. Gate reruns were all mechanical: two over-long `description` fields, a wrong fourth column in the Reinforcement table, and the depth gate correctly refusing a `### Topic list` with no topic files yet on disk |
-| 3 | - | - | - | - | not started |
+| 3 | one session (2026-09-14) | 2 | pending G3 | 10 carriers, all prompt-only | G1 again absent despite a `✅` row. Five guide sections mapped one-to-one onto five topics, so no partition judgement was needed. Four new sources located and registry-verified (three Crossref, one ERIC). Landed at 156 reading-min, inside the band this time, because the provisional band was set wider after Unit 2 |
 | 4 | - | - | - | - | not started |
 | 5 | - | - | - | - | not started |
 | 6 | - | - | - | - | not started |
