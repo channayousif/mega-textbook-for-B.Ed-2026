@@ -84,6 +84,7 @@ Spec 006 FR-010).
 | taylor2023 | Taylor, R., & Thion, S. (2023). How has teaching effectiveness been conceptualized? Questioning the consistency between definition and measure. *Frontiers in Education, 8*. | https://doi.org/10.3389/feduc.2023.1253622 | 3 | competing conceptions of effective teaching, and the gap between how it is defined and how it is measured; Crossref-verified |
 | keelson2024 | Abekah Keelson, S., Odei Addo, F., & Dodor, A. (2024). The influence of lecturer non-verbal cues on student perceptions of teaching quality. *Cogent Education, 11*(1). | https://doi.org/10.1080/2331186X.2024.2325788 | 3 | non-verbal cues and how learners read them as evidence of teaching quality; Crossref-verified |
 | furlich2016 | Furlich, S. A. (2016). Understanding instructor nonverbal immediacy, verbal immediacy, and student motivation. *Journal of the Scholarship of Teaching and Learning, 16*(3), 11-22. | https://doi.org/10.14434/josotl.v16i3.19284 | 3 | verbal and non-verbal immediacy behaviours and their link to learner motivation; Crossref-verified |
+| isore2009 | Isoré, M. (2009). *Teacher evaluation: Current practices in OECD countries and a literature review* (OECD Education Working Papers No. 23). OECD Publishing. | https://files.eric.ed.gov/fulltext/ED530786.pdf (ERIC ED530786) | 4 | how teacher evaluation and appraisal systems are built, and the formative-versus-summative purpose split; verified against the ERIC registry 2026-09-14 |
 
 ## Week schedule
 
@@ -549,6 +550,107 @@ Weeks 9–11. Unit Spec (G1) for `docs/semester-1/efmp-302/unit-04/`.
 - **Assessment blueprint**: formative 5–8 items (Remember/Understand) on the standards'
   structure/domains; summative includes an Analyze-or-higher item linking a teacher's described
   practice to specific standard domains and appraisal implications. Weighting: 60/40 default.
+
+### Sub-topic checklist
+
+The authoritative list the depth gate grades `specs/content/efmp-302/coverage/unit-04.md`
+against. One row per leaf bullet of course-guide sections 4.1-4.4. IDs are stable once assigned.
+
+| ID | Guide ref | Topic | Sub-topic |
+|---|---|---|---|
+| U4-01 | 4.1 | 4.1 | The concept of a professional standard, and what it is for |
+| U4-02 | 4.1 | 4.1 | Global perspectives on teacher standards |
+| U4-03 | 4.1 | 4.1 | National perspectives on teacher standards |
+| U4-04 | 4.1 | 4.1 | Using standards to ensure teacher quality and accountability |
+| U4-05 | 4.2 | 4.2 | The structure of Pakistan's National Professional Standards for Teachers |
+| U4-06 | 4.2 | 4.2 | The domains the standards cover |
+| U4-07 | 4.2 | 4.2 | Indicators, and how a domain is evidenced in practice |
+| U4-08 | 4.3 | 4.3 | Using a standard to evaluate your own practice |
+| U4-09 | 4.3 | 4.3 | Building evidence against an indicator |
+| U4-10 | 4.4 | 4.4 | Teacher licensing and certification |
+| U4-11 | 4.4 | 4.4 | Appraisal, and the difference between formative and summative purposes |
+| U4-12 | 4.4 | 4.4 | What happens when a standard is used for a purpose it was not designed for |
+
+The `Topic` column declares the per-topic partition. Unit 4's four guide sections map one-to-one
+onto four topics; no partition judgement was required.
+
+### Topic list
+
+The opt-in per-topic partition for `docs/semester-1/efmp-302/unit-04/`. The `Sub-topic IDs`
+cells form a **total, disjoint partition** of the `### Sub-topic checklist`.
+
+| Topic | Title | Sub-topic IDs | Reading-min | Figures (id: archetype) |
+|---|---|---|---|---|
+| 4.1 | What professional standards are for | U4-01, U4-02, U4-03, U4-04 | 20-26 | fig-U4-1: table, fig-U4-2: concept-map |
+| 4.2 | Pakistan's National Professional Standards for Teachers | U4-05, U4-06, U4-07 | 18-24 | fig-U4-3: diagram, fig-U4-4: table |
+| 4.3 | Using a standard on yourself | U4-08, U4-09 | 15-21 | fig-U4-5: flowchart, fig-U4-6: table |
+| 4.4 | Licensing, certification and appraisal | U4-10, U4-11, U4-12 | 17-23 | fig-U4-7: timeline, fig-U4-8: diagram |
+
+**Depth budget**: 12 sub-topics; 4 topics; 110-150 reading-min (**provisional**, from the
+per-topic estimates plus `index.mdx` (8) + `unit-assessment.mdx` (26) +
+`unit-teacher-notes.mdx` (10). Re-baseline from the drafted total per T049; do not pad or trim
+prose to hit this band.)
+
+**Prerequisite knowledge**: Units 1 to 3. Unit 1 supplies professionalism and accreditation
+bodies; Unit 2 supplies codes of conduct, which standards are frequently confused with; Unit 3
+supplies the components of effectiveness, which is what a standard is an attempt to write down.
+
+**Common misconceptions**: "standards and a code of conduct are the same thing"; "a standard tells
+you how to teach"; "meeting the indicators is the goal"; "appraisal and professional development
+are the same process"; "standards are a bureaucratic import with no bearing on a real classroom".
+
+**Mapped readings**: npst-pakistan-2009, unesco-teacher-ethics, isore2009, goe2008, hurst2009.
+
+**Source-verification limitation to carry into G3.** The primary document, `npst-pakistan-2009`,
+could not be fetched from the authoring host: `itacec.org`, `nacte.org.pk` and
+`teachertaskforce.org` all return HTTP 403 or 404 to it, while other sources resolve from the
+same machine. The names of the ten standards used in Topic 4.2 are therefore corroborated from
+multiple independent secondary sources rather than read off the primary document. **The reviewer
+and the curriculum owner should confirm them against a physical or downloaded copy.** Following
+the legacy Unit 4 draft and Constitution Art. III.5, the unit teaches the standards' *structure*
+and *use* and cites the document by reference; it does not reproduce the standards' text.
+
+**Worked-examples plan**: a district deciding whether to renew a teacher's contract, with and
+without a written standard to appeal to (U4-01 to U4-04); one classroom practice traced from
+standard to domain to indicator (U4-05 to U4-07); a teacher assembling evidence against a single
+indicator over a term (U4-08, U4-09); the same appraisal used first for development and then for
+a promotion decision, and what changes (U4-10 to U4-12).
+
+**International best-practice notes**: use `isore2009` for the formative-versus-summative purpose
+split, which is the analytical spine of Topic 4.4, and `unesco-teacher-ethics` for the global
+reference point in Topic 4.1 so Pakistan's standards are set beside an international frame rather
+than under it.
+
+**Figure plan** (>= 2 per topic; >= 1 concept-map / flowchart / timeline; seeds
+`specs/content/efmp-302/figures/unit-04.md`):
+  - fig-U4-1 - `table` - professional standard against code of conduct against curriculum: what
+    each governs, what question each answers, who enforces it (Topic 4.1)
+  - fig-U4-2 - `concept-map` - the four purposes a standard serves, radiating from a centre:
+    guiding initial training, guiding development, informing appraisal, and giving the public an
+    accountability claim (Topic 4.1)
+  - fig-U4-3 - `diagram` - the nesting of Pakistan's standards: standard, then its three internal
+    parts (knowledge, dispositions, performance), then the indicators that evidence them
+    (Topic 4.2)
+  - fig-U4-4 - `table` - the ten standards named, each with the one-line focus and the kind of
+    classroom evidence that would show it (Topic 4.2)
+  - fig-U4-5 - `flowchart` - a self-evaluation cycle against one indicator: choose an indicator,
+    collect evidence, judge the gap, plan one change, re-collect (Topic 4.3)
+  - fig-U4-6 - `table` - kinds of evidence against a single indicator: pupil work, observation,
+    planning documents, pupil voice, with the strength and weakness of each (Topic 4.3)
+  - fig-U4-7 - `timeline` - a teacher's career against the points where standards are applied:
+    admission to training, certification, licensing where it applies, probation, periodic
+    appraisal, promotion (Topic 4.4)
+  - fig-U4-8 - `diagram` - the same appraisal instrument split by purpose, formative on one side
+    and summative on the other, with the behaviours each purpose produces in the person being
+    appraised (Topic 4.4)
+
+**Unit-end assessment blueprint** (`unit-assessment.mdx` - fixed 10/10/5 bank):
+  - MCQs (10): Remember to Apply; >= 2 per topic across 4.1 to 4.4
+  - RRQs (10): Understand to Analyze; >= 2 per topic; each with a model answer and a
+    point-by-point mark scheme
+  - ERQs (5): Analyze to Evaluate/Create; one per topic plus one integrative item requiring a
+    described teacher's practice to be mapped to domains and the appraisal consequence argued;
+    each ERQ carries an analytic rubric, >= 1 demanding Analyze-or-higher
 
 ## Unit 5: Issues and Challenges in Teaching Profession
 
