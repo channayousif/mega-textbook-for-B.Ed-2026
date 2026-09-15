@@ -68,6 +68,7 @@ Spec 006 FR-010).
 | ehrich2011 | Ehrich, L. C., Kimber, M., Millwater, J., & Cranston, N. (2011). Ethical dilemmas: A model to understand teacher practice. *Teachers and Teaching: Theory and Practice, 17*(2), 173–185. | https://doi.org/10.1080/13540602.2011.539794 | 2 | a model for working through classroom ethical dilemmas |
 | guskey2000 | Guskey, T. R. (2000). *Evaluating professional development*. Corwin Press. | (print) | 6 | evaluating whether professional development actually works |
 | hargreaves2000 | Hargreaves, A. (2000). Four ages of professionalism and professional learning. *Teachers and Teaching, 6*(2), 151–182. | https://doi.org/10.1080/713698714 | 1, 5 | the historical shift from an "industrial" model of teaching toward inquiry-based professionalism |
+| kwakman2003 | Kwakman, K. (2003). Factors affecting teachers' participation in professional learning activities. *Teaching and Teacher Education, 19*(2), 149-170. | https://doi.org/10.1016/S0742-051X(02)00101-4 | 6 | what makes teachers take part in professional learning, or not. **No abstract was available; cited only for the question its title and record support, not for findings.** Bibliographic record verified via OpenAlex 2026-09-15 |
 | hurst2009 | Hurst, B., & Reding, G. (2009). *Professionalism in teaching*. Pearson Education. | (print) | 1, 3 | day-to-day markers of professional conduct for teachers |
 | icka2024 | Icka, E., & Kochoska, J. (2024). The influence of teachers as an ethical model on students' development. *International Journal of Education Teacher, 27*, 99–107. | (open access - journal site) | 2 | the teacher as an ethical model for students |
 | suarez2022 | Suarez, V., & McGrath, J. (2022). *Teacher professional identity: How to develop and support it in times of change* (OECD Education Working Paper No. 267). OECD Publishing. | https://doi.org/10.1787/b19f5af7-en | 1 | how teacher identity develops and can be supported during change |
@@ -89,7 +90,7 @@ Spec 006 FR-010).
 | skaalvik2020 | Skaalvik, E. M., & Skaalvik, S. (2020). Teacher burnout: Relations between dimensions of burnout, perceived school context, job satisfaction and motivation for teaching. A longitudinal study. *Teachers and Teaching, 26*(7-8), 602-616. | https://doi.org/10.1080/13540602.2021.1913404 | 5 | job demands (time pressure, low student motivation, dissonant value context) and resources (autonomy, supervisory support) against burnout and intention to quit. **Scope: 262 Norwegian high-school teachers, longitudinal.** Abstract read 2026-09-15 |
 | little2001 | Little, A. W. (2001). Multigrade teaching: Towards an international research and policy agenda. *International Journal of Educational Development, 21*(6), 481-497. | https://doi.org/10.1016/S0738-0593(01)00011-6 | 5 | multigrade teaching as an international phenomenon and policy problem. **No abstract available; cited for the agenda-setting claim its title supports, not for findings** |
 | naparan2021 | Naparan, G. B., & Alinsug, V. G. (2021). Classroom strategies of multigrade teachers. *Social Sciences & Humanities Open, 3*(1), 100109. | https://doi.org/10.1016/j.ssaho.2021.100109 | 5 | strategies multigrade teachers actually use. **Scope: ten teachers in Zamboanga del Sur, Philippines, interview study**; illustrative, not generalisable. Abstract read 2026-09-15 |
-| hennessy2022 | Hennessy, S., D'Angelo, S., McIntyre, N., Koomar, S., Kreimeia, A., Cao, L., Brugha, M., & Zubairi, A. (2022). Technology use for teacher professional development in low- and middle-income countries: A systematic review. *Computers and Education Open, 3*, 100080. | https://doi.org/10.1016/j.caeo.2022.100080 | 5 | what technology does and does not deliver for teacher development in low- and middle-income countries. **Scope: teacher professional development, not classroom technology integration generally.** Abstract read 2026-09-15 |
+| hennessy2022 | Hennessy, S., D'Angelo, S., McIntyre, N., Koomar, S., Kreimeia, A., Cao, L., Brugha, M., & Zubairi, A. (2022). Technology use for teacher professional development in low- and middle-income countries: A systematic review. *Computers and Education Open, 3*, 100080. | https://doi.org/10.1016/j.caeo.2022.100080 | 5, 6 | what technology does and does not deliver for teacher development in low- and middle-income countries. **Scope: teacher professional development, not classroom technology integration generally.** Abstract read 2026-09-15 |
 
 ## Week schedule
 
@@ -804,3 +805,93 @@ Weeks 14–16. Unit Spec (G1) for `docs/semester-1/efmp-302/unit-06/`.
 - **Assessment blueprint**: formative 5–8 items (Remember/Understand) on the CPD stages and
   development-activity categories; summative includes an Analyze-or-higher item critiquing a
   sample professional development plan against the unit's principles. Weighting: 60/40 default.
+
+### Sub-topic checklist
+
+The authoritative list the depth gate grades `specs/content/efmp-302/coverage/unit-06.md`
+against. IDs are stable once assigned. One row per leaf bullet of course-guide sections 6.1-6.3,
+plus two authored rows decomposing 6.4, which the guide gives as a bare heading with no bullets.
+
+| ID | Guide ref | Topic | Sub-topic |
+|---|---|---|---|
+| U6-01 | 6.1 | 6.1 | What continuous professional development means |
+| U6-02 | 6.1 | 6.1 | The need for continuous professional learning and development |
+| U6-03 | 6.1 | 6.1 | Principles of professional development |
+| U6-04 | 6.2 | 6.2 | The preservice stage |
+| U6-05 | 6.2 | 6.2 | The new teacher stage |
+| U6-06 | 6.2 | 6.2 | The experienced teacher stage |
+| U6-07 | 6.3 | 6.3 | Conferences |
+| U6-08 | 6.3 | 6.3 | Workshops |
+| U6-09 | 6.3 | 6.3 | Online professional development platforms |
+| U6-10 | 6.3 | 6.3 | Professional learning communities |
+| U6-11 | 6.3 | 6.3 | Reflective practice and self-evaluation tools: journals, portfolios, peer feedback and lesson study |
+| U6-12 | 6.4 | 6.4 | What a personal professional development plan contains |
+| U6-13 | 6.4 | 6.4 | Making a plan that survives a school year |
+
+### Topic list
+
+The opt-in per-topic partition for `docs/semester-1/efmp-302/unit-06/`. Unit 6's four guide
+sections map **one-to-one** onto four topics; no partition judgement was required, unlike Units 2
+and 5.
+
+| Topic | Title | Sub-topic IDs | Reading-min | Figures (id: archetype) |
+|---|---|---|---|---|
+| 6.1 | What continuing development is, and why it is not optional | U6-01, U6-02, U6-03 | 18-25 | fig-U6-1: table, fig-U6-2: concept-map |
+| 6.2 | The stages of a teaching career | U6-04, U6-05, U6-06 | 17-24 | fig-U6-3: timeline, fig-U6-4: table |
+| 6.3 | The ways teachers actually develop | U6-07, U6-08, U6-09, U6-10, U6-11 | 22-30 | fig-U6-5: table, fig-U6-6: flowchart |
+| 6.4 | Building a plan that survives the year | U6-12, U6-13 | 16-23 | fig-U6-7: diagram, fig-U6-8: flowchart |
+
+**Depth budget**: 13 sub-topics; 4 topics; 120-170 reading-min (**provisional**; re-baseline from
+the drafted total per T049, and do not trim prose to hit it).
+
+**Prerequisite knowledge**: Units 1 to 5, and this unit closes the course. It assumes Unit 3's
+researcher role, Unit 4's self-evaluation cycle, and Unit 5's control-and-influence distinction,
+and it is where those three converge into something a teacher does deliberately over a career.
+
+**Common misconceptions**: "professional development means attending a workshop"; "development is
+what a system provides, so if none is provided none happens"; "experienced teachers have finished
+developing"; "a development plan is a document you write for an appraiser"; "reflective practice
+means keeping a diary".
+
+**Mapped readings**: day1999, guskey2000, villegas2003, brookfield2017, kwakman2003, hennessy2022.
+
+**Source scope discipline.** Continuing the method adopted in Unit 5 after the Unit 2 and 3 G3
+reviews. Two of the six carry limits that must be stated where used: `kwakman2003` has no
+available abstract and is cited only for the question its title supports; `hennessy2022` is about
+technology for professional development in low- and middle-income countries, which makes it a
+good fit for U6-09 and not a general claim about online learning. Four are print books and
+reports already on the course reading list and verified when added.
+
+**Worked-examples plan**: a teacher five years in who has attended eleven workshops and changed
+nothing (U6-01 to U6-03); the same teacher at three career points, with what each needed (U6-04 to
+U6-06); five development activities costed against what each actually delivers (U6-07 to U6-11); a
+one-page plan built in twenty minutes and reviewed in March (U6-12, U6-13).
+
+**Figure plan** (>= 2 per topic; >= 1 concept-map / flowchart / timeline; seeds
+`specs/content/efmp-302/figures/unit-06.md`):
+  - fig-U6-1 - `table` - continuing professional development set against a training course, a
+    qualification and an appraisal requirement: what each is for, who drives it, and what counts
+    as success (Topic 6.1)
+  - fig-U6-2 - `concept-map` - the principles of effective professional development radiating from
+    a centre, each linked to what it rules out (Topic 6.1)
+  - fig-U6-3 - `timeline` - a teaching career across the three stages, marking what changes at each
+    transition and what each stage most needs (Topic 6.2)
+  - fig-U6-4 - `table` - the three stages against the characteristic difficulty of each, the
+    support that helps, and the support usually offered instead (Topic 6.2)
+  - fig-U6-5 - `table` - five development routes (conference, workshop, online platform,
+    professional learning community, reflective tools) against cost, reach, what each suits, and
+    what each cannot do (Topic 6.3)
+  - fig-U6-6 - `flowchart` - the lesson study cycle: plan together, one teaches while others
+    observe the pupils, examine the evidence, revise, re-teach (Topic 6.3)
+  - fig-U6-7 - `diagram` - the anatomy of a one-page development plan: the gap, the evidence for
+    it, one goal, the activity, the evidence of change, the review date (Topic 6.4)
+  - fig-U6-8 - `flowchart` - building the plan and revising it mid-year, with the decision point
+    that asks whether the goal survived contact with the school year (Topic 6.4)
+
+**Unit-end assessment blueprint** (`unit-assessment.mdx` - fixed 10/10/5 bank):
+  - MCQs (10): Remember to Apply; **at least 2 per topic** across 6.1 to 6.4
+  - RRQs (10): Understand to Analyze; **at least 2 per topic**; each with a model answer and a
+    point-by-point mark scheme
+  - ERQs (5): Analyze to Evaluate/Create; one per topic plus one integrative item requiring the
+    learner to build and defend a personal development plan drawing on the whole course; each
+    carries an analytic rubric, >= 1 demanding Analyze-or-higher
