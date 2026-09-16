@@ -74,3 +74,8 @@ Scheme-and-Course-guides/course-guides-2025/*.rtf
 # Feature 015 T001: pre-refactor gate output, captured so FR-009's byte-identical
 # comparison is mechanical rather than remembered. Local only, never committed.
 specs/015-licence-content-tree/baseline/
+
+# Frozen reference checkouts used to prepare review evidence. `review-evidence.mjs prepare`
+# needs an immutable copy of the repo to compute input digests against; it is 45 MB and 1,170
+# files, and a `git add -A` during a review run would commit a duplicate of the whole repository.
+review-ref/
