@@ -323,12 +323,17 @@ particular are authored rather than taken from the guide's own bullets.
 The `Topic` column declares the per-topic partition (Spec 008, `contracts/content-spec-v3.md`);
 the depth gate checks it against the `### Topic list` cells below.
 
-**G1 decision requiring owner confirmation.** The guide gives Unit 2 three sections, and Unit 1's
-topics mapped one-to-one onto its four. Here 2.3 carries four leaf bullets and would make a
-single topic file roughly half again the size of the largest in Unit 1. The partition below
-therefore splits guide 2.3 across **two** topics: 2.3 for the three model/framework bullets and a
-new 2.4 for the dilemma bullet, whose `Guide ref` column still reads 2.3. Nothing is added or
-dropped relative to the guide; only the file boundary moves. Confirm or reject at G1.
+**G1 decision, confirmed by the curriculum owner 2026-09-15.** The guide gives Unit 2 three
+sections, and Unit 1's topics mapped one-to-one onto its four. Here 2.3 carries four leaf bullets
+and would make a single topic file roughly half again the size of the largest in Unit 1. The
+partition below therefore splits guide 2.3 across **two** topics: 2.3 for the three
+model/framework bullets and a new 2.4 for the dilemma bullet, whose `Guide ref` column still reads
+2.3. Nothing is added or dropped relative to the guide; only the file boundary moves, and
+`index.mdx` states it to the learner so nobody infers a guide section 2.4 that does not exist.
+
+The G3 reviewer judged the split defensible on the merits: it falls exactly on the bullet
+boundary, and the dilemma bullet is the application of the other three, which makes it a natural
+seam.
 
 ### Topic list
 
@@ -718,13 +723,16 @@ from. Rows U5-11 and U5-12 in particular are authored, since the guide gives 5.3
 
 The opt-in per-topic partition for `docs/semester-1/efmp-302/unit-05/`.
 
-**G1 decision requiring owner confirmation.** The guide gives Unit 5 three sections, and 5.1
-carries six leaf bullets, more than any other section in this course. The partition below splits
-guide 5.1 across **two** topics: 5.1 for the conditions a teacher works in, and 5.2 for the
-demands placed on them from outside, with `Guide ref` still reading 5.1 for both. Topics 5.3 and
-5.4 are guide 5.2 and 5.3 respectively. Nothing is added or dropped; only the file boundary moves,
-and `index.mdx` tells the learner this directly. This mirrors the split made in Unit 2 and is
-subject to the same confirmation.
+**G1 decision, confirmed by the curriculum owner 2026-09-18.** The guide gives Unit 5 three
+sections, and 5.1 carries six leaf bullets, more than any other section in this course. The
+partition below splits guide 5.1 across **two** topics: 5.1 for the conditions a teacher works in,
+and 5.2 for the demands placed on them from outside, with `Guide ref` still reading 5.1 for both.
+Topics 5.3 and 5.4 are guide 5.2 and 5.3 respectively. Nothing is added or dropped; only the file
+boundary moves, and `index.mdx` tells the learner this directly.
+
+The seam is the same kind as Unit 2's: the first three bullets describe conditions a teacher is
+placed in, the last three describe demands other parties make of them, and those are different
+enough to read as separate sittings.
 
 | Topic | Title | Sub-topic IDs | Reading-min | Figures (id: archetype) |
 |---|---|---|---|---|
