@@ -1,0 +1,71 @@
+Source retrieval attempts - G3 EFMP-302 Unit 4 - run agent-g3-efmp302-u4-run001
+UTC 2026-09-18T20:55:55Z
+
+--- https://itacec.org/document/2015/7/National_Professional_Standards_for_Teachers.pdf
+http_code=401 size=5434 type=text/html; charset=UTF-8
+   sha256=8db163ca13912249c3e5a6d538180f9a910a325703c43c449ef451d7b99d80be
+<!DOCTYPE html> <html lang="en" data-bs-theme="light">     <head>         <meta charset="UTF-8">             <meta name=
+
+--- http://www.nacte.org.pk/downloads/National%20Professional%20Standards%20for%20Teachers%20in%20Pakistan.pdf
+http_code=404 size=31822 type=text/html; charset=utf-8
+   sha256=41fad0058e231d1d86708e9278e91841c8493b31287df6974d053a690a645ab6
+<!DOCTYPE html> <html lang="en"> <head>     <meta charset="utf-8" />     <meta name="viewport" content="width=device-wid
+
+--- https://unesdoc.unesco.org/ark:/48223/pf0000372167
+http_code=403 size=5435 type=text/html; charset=UTF-8
+   sha256=eb7da8475fa9f64ee30253c0cf31bc94a3c97b3f73558bfd8e943dff01a3e589
+<!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Type" content="text/htm
+
+--- https://files.eric.ed.gov/fulltext/ED530786.pdf
+http_code=200 size=320727 type=application/pdf
+   sha256=b3d834dc829a65c4c68521fa90d55a9a1249554280cb4b39a9596dad8a129f92
+%PDF-1.5%‚„œ” 145 0 obj<</Linearized 1/L 320727/O 147/E 68420/N 49/T 320154/H [ 521 399]>>endobj              169 
+
+--- https://files.eric.ed.gov/fulltext/ED521228.pdf
+http_code=200 size=481714 type=application/pdf
+   sha256=dbb7456aae426696568a628edbe28e517b306a94e7bcac1f5377498d387dfac9
+%PDF-1.5%‚„œ” 3693 0 obj<</Linearized 1/L 481714/O 3695/E 39860/N 103/T 480746/H [ 492 818]>>endobj           3707
+
+--- https://api.crossref.org/works?query.bibliographic=teacher+evaluation+OECD+Isore&rows=1
+http_code=200 size=1407 type=application/json
+   sha256=ef1cee7e000628697350e53205f202a9908b5163727094267965b4c08dfda9e0
+{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-results":2437408,"item
+
+
+=== Round 2: alternate routes ===
+UTC 2026-09-18T20:56:40Z
+--- https://unesdoc.unesco.org/in/rest/annotationSVC/DownloadWatermarkedAttachment/attach_import_9a0b3d15-9f5e-4a0e-9c3e-000000372167
+http_code=403 size=5800 type=text/html; charset=UTF-8
+/tmp/dl2.bin: HTML document, ASCII text, with very long lines (5800), with no line terminators
+<!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Typ
+
+--- https://unesdoc.unesco.org/ark:/48223/pf0000372167/PDF/372167eng.pdf.multi
+http_code=403 size=5571 type=text/html; charset=UTF-8
+/tmp/dl2.bin: HTML document, ASCII text, with very long lines (5571), with no line terminators
+<!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Typ
+
+--- https://teachertaskforce.org/knowledge-hub/global-framework-professional-teaching-standards
+http_code=403 size=5533 type=text/html; charset=UTF-8
+/tmp/dl2.bin: HTML document, ASCII text, with very long lines (5533), with no line terminators
+<!DOCTYPE html><html lang="en-US"><head><title>Just a moment...</title><meta http-equiv="Content-Typ
+
+--- https://itacec.org/document/2015/7/National_Professional_Standards_for_Teachers.pdf
+http_code=401 size=5434 type=text/html; charset=UTF-8
+/tmp/dl2.bin: HTML document, ASCII text, with very long lines (430)
+<!DOCTYPE html> <html lang="en" data-bs-theme="light">     <head>         <meta charset="UTF-8">    
+
+--- https://www.nacte.org.pk/
+http_code=200 size=69500 type=text/html; charset=utf-8
+/tmp/dl2.bin: HTML document, Unicode text, UTF-8 text, with very long lines (3903), with CRLF, LF line terminators
+<!DOCTYPE html> <html lang="en"> <head>     <meta charset="utf-8" />     <meta name="viewport" conte
+
+--- http://itacec.org/document/nps/National%20Professional%20Standards%20for%20Teachers%20in%20Pakistan.pdf
+http_code=401 size=5434 type=text/html; charset=UTF-8
+/tmp/dl2.bin: HTML document, ASCII text, with very long lines (430)
+<!DOCTYPE html> <html lang="en" data-bs-theme="light">     <head>         <meta charset="UTF-8">    
+
+--- https://api.crossref.org/works?query.bibliographic=Global+framework+of+professional+teaching+standards+UNESCO&rows=2&select=title,author,issued,publisher
+http_code=200 size=746 type=application/json
+/tmp/dl2.bin: JSON text data
+{"status":"ok","message-type":"work-list","message-version":"1.0.0","message":{"facets":{},"total-re
+
