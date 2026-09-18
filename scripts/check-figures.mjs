@@ -16,7 +16,8 @@
  * The parse is column-aware (reads the header row).
  *
  * Always checked (both specs):
- *   - every `topic-*.mdx` carries ≥ 2 figures (marker or <Figure>) — Constitution III.10
+ *   - every `topic-*.mdx` RENDERS ≥ 2 `<Figure>` elements — Constitution III.10. A prompt-only
+ *     comment marker is authoring scaffolding and does NOT count toward this floor;
  *     (Spec 012); was ≥ 1 under Specs 008/009;
  *   - every carrier id matches `^fig-U<folderUnitNo>-\d+$` and is unique within the unit;
  *   - a comment marker's prompt ≥ 10 non-space chars; every carrier's alt is non-empty;
@@ -144,8 +145,22 @@ function checkUnit({ unitDir, urUnitDir, courseDir, courseFolder, courseCode, un
     const parsed = matter(readFileSync(join(unitDir, tf), 'utf8'));
     labelByFile.set(tf, parsed.data.topic_label ?? null);
     const found = carriersIn(parsed.content);
-    if (found.length < 2) {
-      err(label, `topic file ${tf} carries ${found.length} figure(s) — Constitution III.10 requires at least 2 (a FIGURE marker or a <Figure>)`);
+    // Art. III.10 is a floor on what the LEARNER SEES, so only a rendered <Figure>
+    // counts toward it. A comment marker is authoring scaffolding: it emits no DOM,
+    // its alt text never reaches the accessibility tree, and prose that says "the
+    // figure above" points at nothing.
+    //
+    // Counting markers here let a unit with zero images satisfy the visual-density
+    // standard. All four G3 reviews of EFMP-302 Units 3-6 (2026-09-18) found the
+    // same thing independently: 34 prompt-only figures, no figure directories, zero
+    // <img> on any page, and this gate green over all of it, while ~30 deictic prose
+    // references and three activities depended on figures that did not exist.
+    const rendered = found.filter((c) => c.form === 'figure');
+    if (rendered.length < 2) {
+      const pending = found.length - rendered.length;
+      err(label, `topic file ${tf} renders ${rendered.length} figure(s)`
+        + (pending ? ` (${pending} still a prompt-only marker, which renders nothing)` : '')
+        + ' — Constitution III.10 requires at least 2 rendered <Figure> elements');
     }
     for (const c of found) {
       const mUnit = /^fig-U(\d+)-\d+$/.exec(c.id);
@@ -249,6 +264,11 @@ function checkUnit({ unitDir, urUnitDir, courseDir, courseFolder, courseCode, un
     const kinds = kindedRows.map((r) => r.kind);
     if (!kinds.some((k) => SCHEMATIC_ARCHETYPES.has(k))) {
       err(label, `unit has no concept-map / flowchart / timeline figure — Constitution III.10 requires at least one schematic per unit (archetypes found: ${[...new Set(kinds)].join(', ')})`);
+    }
+    // Same reasoning as the per-topic floor: a PLANNED schematic is not a schematic.
+    const placedSchematics = kindedRows.filter((r) => SCHEMATIC_ARCHETYPES.has(r.kind) && r.status === 'placed');
+    if (kinds.some((k) => SCHEMATIC_ARCHETYPES.has(k)) && placedSchematics.length === 0) {
+      err(label, 'unit has a concept-map / flowchart / timeline planned but none placed - Art. III.10 schematic requirement is a floor on rendered output, not on intent');
     }
   }
 
@@ -422,5 +442,5 @@ if (errors.length) {
   console.error('');
   process.exit(1);
 } else {
-  console.log('✓ Figure gate passed (≥ 2 carriers per topic, schematic per unit, well-formed, unique; manifest consistent; placed assets exist).');
+  console.log('✓ Figure gate passed (≥ 2 RENDERED figures per topic, a placed schematic per unit, well-formed, unique; manifest consistent; placed assets exist).');
 }

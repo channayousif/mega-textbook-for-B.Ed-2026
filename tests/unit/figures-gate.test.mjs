@@ -128,11 +128,16 @@ describe('check-figures.mjs', () => {
     expect(runGate(root).code).toBe(0);
   });
 
-  it('passes the happy new-shape path (>= 2 markers per topic)', () => {
+  // SUPERSEDED 2026-09-18. Markers alone used to satisfy the Art. III.10 density
+  // floor; they no longer do, because that floor is about what the learner sees.
+  // See the block comment in scripts/check-figures.mjs for the evidence that forced
+  // the change. A fully placed unit passing is covered at
+  // 'accepts <Figure> elements as carriers for a fully placed unit'.
+  it('refuses the marker-only path: prompt-only carriers render nothing', () => {
     root = makeFiguresFixture();
     const { code, out } = runGate(root);
-    expect(code).toBe(0);
-    expect(out).toMatch(/passed/i);
+    expect(code).toBe(1);
+    expect(out).toMatch(/renders 0 figure\(s\).*prompt-only marker/);
   });
 
   it('fails and names a topic file with fewer than two figures', () => {
@@ -362,15 +367,24 @@ describe('check-figures.mjs — Spec 009 rendered figures + Spec 012 density', (
     root = undefined;
   });
 
-  it('regression floor: an all-prompt-only unit under the v2 header still passes', () => {
+  // SUPERSEDED 2026-09-18. This guard protected the Spec 009/012 staged rollout, so
+  // that adding the gate would not turn existing content red. The staging is done,
+  // and the guard's side effect was that EFMP-302 Units 3-6 carried 34 prompt-only
+  // figures, no figure directories and zero rendered images while this gate stayed
+  // green and the prose said "the figure above" ~30 times.
+  it('an all-prompt-only unit under the v2 header now fails the density floor', () => {
     root = makeV2Fixture();
-    const { code } = runGate(root);
-    expect(code).toBe(0);
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/requires at least 2 rendered <Figure> elements/);
   });
 
-  it('regression floor: the Spec 008 five-column manifest + comment markers still passes', () => {
+  // SUPERSEDED 2026-09-18, same reason as above. The five-column Spec 008 manifest
+  // is still parsed and still valid; what changed is that its comment markers no
+  // longer count toward the rendered-figure floor.
+  it('the Spec 008 five-column manifest + comment markers now fails the density floor', () => {
     root = makeFiguresFixture();
-    expect(runGate(root).code).toBe(0);
+    expect(runGate(root).code).toBe(1);
   });
 
   it('regression floor: a legacy unit still passes', () => {
@@ -527,7 +541,7 @@ describe('check-figures.mjs — Spec 009 rendered figures + Spec 012 density', (
     expect(out).toMatch(/passed/i);
   });
 
-  it('accepts an incremental unit: one topic placed, one still prompt-only', () => {
+  it('an incremental unit still fails while any topic renders nothing', () => {
     root = makeV2Fixture({
       t1Carrier: 'figure', t1Status: 'placed', t1Kind: 'flowchart',
       t2Carrier: 'comment', t2Status: 'prompt-only',
@@ -536,7 +550,13 @@ describe('check-figures.mjs — Spec 009 rendered figures + Spec 012 density', (
         'img/figures/efmp-302/unit-01/fig-U1-2.svg',
       ],
     });
-    expect(runGate(root).code).toBe(0);
+    // SUPERSEDED 2026-09-18: the still-prompt-only topic renders nothing, so it does
+    // not meet the floor. Partial progress is real progress, but it is not a unit
+    // that satisfies Art. III.10 yet, and the gate should say so rather than imply
+    // the standard is met.
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/topic-02\.mdx renders 0 figure/);
   });
 
   // --- Spec 012 (Constitution III.10) new rules ------------------------------
