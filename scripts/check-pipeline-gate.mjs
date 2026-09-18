@@ -22,7 +22,7 @@ import { join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
 import { validateAgentTrackerRow } from './lib/review-evidence.mjs';
-import { loadTracker as loadTrackerRows } from './lib/tracker-rows.mjs';
+import { loadTracker as loadTrackerRows, PROVISIONAL } from './lib/tracker-rows.mjs';
 import { walkUnits, findDuplicateCourseCodes } from './lib/content-roots.mjs';
 
 const REPO = resolve(fileURLToPath(new URL('..', import.meta.url)));
@@ -33,6 +33,14 @@ const CONTENT_SPEC_DIR = join(ROOT, 'specs', 'content');
 
 const errors = [];
 const err = (unitLabel, msg) => errors.push(`${unitLabel}: ${msg}`);
+/**
+ * Units resting at Art. VII.7 provisional: agent-reviewed, published under a
+ * "Final Review Pending" notice, not certified. The gate passes on them, so it
+ * must name them - a green gate that silently conflates provisional with
+ * certified is exactly the signal loss ADR-0023 warned about.
+ */
+const provisional = new Set();
+const certified = new Set();
 
 const dirs = (p) =>
   existsSync(p) ? readdirSync(p).filter((n) => statSync(join(p, n)).isDirectory()) : [];
@@ -130,7 +138,8 @@ function stageDone(rows, unitLabel, stagePrefix, courseCode, unitNo) {
   const matches = rows.filter((r) => r.unit === unitLabel && r.stage.startsWith(stagePrefix));
   const row = matches[matches.length - 1];
   if (!row) return { ok: false, reason: `no '${stagePrefix}' row found for ${unitLabel}` };
-  if (row.status !== '✅') {
+  const provisional = row.status === PROVISIONAL;
+  if (row.status !== '✅' && !provisional) {
     return { ok: false, reason: `'${stagePrefix}' row for ${unitLabel} is not done (status: '${row.status}')` };
   }
   if (!row.reviewer) {
@@ -141,7 +150,7 @@ function stageDone(rows, unitLabel, stagePrefix, courseCode, unitNo) {
   } catch (error) {
     return { ok: false, reason: `${stagePrefix}: ${error.message}` };
   }
-  return { ok: true };
+  return { ok: true, provisional };
 }
 
 // ---- per-unit checks -----------------------------------------------------------
@@ -153,6 +162,7 @@ function checkUnit({ unitDir, urUnitDir, courseCode, unitNo }) {
 
   const unitLabel = `Unit ${unitNo}`;
   const label = `${courseCode} ${unitLabel} (${relative(ROOT, unitDir)})`;
+  certified.add(`${courseCode} ${unitLabel}`);
 
   // (b) Approval check (FR-016b)
   const spec = loadContentSpecStatus(courseCode);
@@ -171,6 +181,7 @@ function checkUnit({ unitDir, urUnitDir, courseCode, unitNo }) {
   for (const stagePrefix of ['G2 en-draft', 'G3 en-review']) {
     const r = stageDone(tracker, unitLabel, stagePrefix, courseCode, unitNo);
     if (!r.ok) err(label, r.reason);
+    else if (r.provisional) provisional.add(`${courseCode} ${unitLabel}`);
   }
 
   // UR stages + terminology check only apply when the UR mirror exists and is reviewed
@@ -181,6 +192,7 @@ function checkUnit({ unitDir, urUnitDir, courseCode, unitNo }) {
     for (const stagePrefix of ['G4 ur-translation', 'G5 ur-review']) {
       const r = stageDone(tracker, unitLabel, stagePrefix, courseCode, unitNo);
       if (!r.ok) err(label, r.reason);
+      else if (r.provisional) provisional.add(`${courseCode} ${unitLabel}`);
     }
 
     // (c) Terminology conformance check (FR-016c, research.md R4)
@@ -229,5 +241,10 @@ if (errors.length) {
   console.error('');
   process.exit(1);
 } else {
-  console.log('✓ Pipeline gate passed (content-spec approval, tracker completeness, terminology conformance).');
+  for (const unit of provisional) certified.delete(unit);
+  const detail = provisional.size
+    ? `${certified.size} certified, ${provisional.size} provisional - final review pending`
+    : 'content-spec approval, tracker completeness, terminology conformance';
+  console.log(`✓ Pipeline gate passed (${detail}).`);
+  if (provisional.size) console.log(`  provisional: ${[...provisional].sort().join(', ')}`);
 }

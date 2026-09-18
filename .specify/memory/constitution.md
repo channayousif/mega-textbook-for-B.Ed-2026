@@ -1,4 +1,26 @@
 <!--
+SYNC IMPACT REPORT (v4.1.0)
+Version change: 4.0.0 -> 4.1.0
+Bump rationale: MINOR - a new Article VII section 7 adds a publication state that did not
+exist before. Nothing is redefined and no obligation is relaxed, which is what keeps this
+below a MAJOR. See ADR-0025.
+Added: Article VII.7 "Provisional publication". The owner may authorise publishing a unit on
+an independent agent's passing review, under a mandatory visible "Final Review Pending"
+notice, with a distinct tracker status that is explicitly not a done mark.
+Modified: nothing. Sections 1-6 are carried over verbatim.
+Removed: nothing.
+Reviewed and unchanged: section 5's qualification requirements and the self-approval
+prohibition still bind in full - provisional publication explicitly does NOT satisfy them,
+does not qualify a reviewer and does not certify anything. Section 6's transition rule is
+untouched: agent reviews remain advisory for CERTIFICATION, and section 7 governs only
+PUBLICATION, which section 1 already reserved to the owner and which the owner now delegates
+under notice. Article III.2's untranslated-banner obligation is the direct precedent for
+publishing with a disclosure rather than withholding content.
+Follow-ups: Feature 014 T007 (signing host) and T008 (qualification) remain the path to
+certification and are unaffected by this amendment.
+-->
+
+<!--
 SYNC IMPACT REPORT (v4.0.0)
 Version change: 3.0.0 -> 4.0.0
 Bump rationale: MAJOR - Article III.2's Urdu-parity obligation is redefined. Parity was a
@@ -704,6 +726,19 @@ Before any unit or feature is marked complete, all applicable gates MUST pass:
    this version bump alone MUST NOT mark G3/G5 done or change `translation_status`.
    This governance amendment does not alter the content quality standard's version or
    remove existing Article VI.1 obligations.
+7. **Provisional publication (ADR-0025).** The curriculum owner MAY authorise publication of a
+   unit whose G3 (or G5) review passed an independent agent but carries no signed, qualified
+   certification, provided every reader-facing page of that unit displays a visible
+   "Final Review Pending" notice. Such a unit's tracker row MUST record the distinct provisional
+   status, never a done mark, and its evidence reference MUST identify a validated report whose
+   disposition is `pass` and whose input manifest still matches the published bytes.
+   Provisional publication confers no certification: it does not satisfy section 5, does not
+   qualify a reviewer, does not change `translation_status`, and does not discharge the
+   practicing-teacher gate or any Article VI.1 obligation. A provisional unit remains
+   outstanding work and MUST continue to appear in the review queue until a qualified human or
+   an enabled agent certifies it. Any change to the unit's inputs revokes the provisional state
+   by invalidating its evidence, exactly as section 4 requires of acceptance. The owner MAY
+   withdraw provisional publication at any time without requalifying anything.
 
 ## Article VIII - Data Protection & Ethics
 
@@ -783,4 +818,4 @@ Engineering gate (the rest).
 
 ---
 
-**Version**: 4.0.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-09-14
+**Version**: 4.1.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-09-18

@@ -252,4 +252,47 @@ describe('check-pipeline-gate.mjs', () => {
       expect(out).toMatch(/'Readiness' has an empty term_ur/);
     });
   });
+
+  // ---- Art. VII.7 provisional publication (ADR-0025) ----
+  //
+  // The gate previously conflated "certified complete" with "may be visible".
+  // A provisional row is a valid resting state: the unit is published under a
+  // "Final Review Pending" notice and the gate passes, but it must SAY SO -
+  // a green gate that silently reads provisional as certified is the signal
+  // loss ADR-0023 warned about.
+  describe('provisional rows (Art. VII.7)', () => {
+    const provisionalRows = [
+      '| Unit | Stage | Status | Reviewer | Suggestion |',
+      '|---|---|---|---|---|',
+      '| Unit 1 | G2 en-draft | ✅ | YM | |',
+      '| Unit 1 | G3 en-review | 🟡 | YM | |',
+    ];
+
+    it('passes on a provisional G3 row and names the unit as provisional', () => {
+      ({ root } = makeFixture({ omitUr: true }));
+      writePipelineFixtures(root, { trackerRows: provisionalRows });
+      const { code, out } = runGate(root);
+      expect(code).toBe(0);
+      expect(out).toMatch(/provisional/);
+      expect(out).toMatch(/EFMP-301 Unit 1/);
+    });
+
+    it('still refuses a provisional row with no reviewer at all', () => {
+      ({ root } = makeFixture({ omitUr: true }));
+      writePipelineFixtures(root, {
+        trackerRows: [...provisionalRows.slice(0, 3), '| Unit 1 | G3 en-review | 🟡 | | |'],
+      });
+      const { code, out } = runGate(root);
+      expect(code).toBe(1);
+      expect(out).toMatch(/no reviewer initials/);
+    });
+
+    it('reports a fully certified course without the provisional wording', () => {
+      ({ root } = makeFixture({ omitUr: true }));
+      writePipelineFixtures(root);
+      const { code, out } = runGate(root);
+      expect(code).toBe(0);
+      expect(out).not.toMatch(/provisional/);
+    });
+  });
 });

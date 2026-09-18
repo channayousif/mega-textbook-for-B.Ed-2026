@@ -7,8 +7,8 @@ import { resolve, relative, join, dirname, sep, isAbsolute } from 'node:path';
 // Spec 017 T017: the rubric moved to its own module so the browser certify
 // form and this validator read one definition. Re-exported here because
 // several scripts already import CRITERIA/COMMANDS from this file.
-import { CRITERIA, COMMANDS } from './review-criteria.mjs';
-export { CRITERIA, COMMANDS };
+import { CRITERIA, COMMANDS, DRAFT_COMMANDS } from './review-criteria.mjs';
+export { CRITERIA, COMMANDS, DRAFT_COMMANDS };
 
 /**
  * The validators whose results a report cites, as entry points. Their local
@@ -230,15 +230,97 @@ export function acceptReport(root, path, expected = {}, publicKey = process.env.
   return report;
 }
 
+/**
+ * Art. VII.7 provisional acceptance: everything the signed path demands EXCEPT
+ * the trust root. Deliberately a separate function rather than a flag on
+ * `acceptReport`, so the signed path keeps its exact strictness and the
+ * `missing trust root fails closed` mutation test still binds.
+ *
+ * What it still requires: full schema validation, a `pass` disposition (which
+ * transitively forces every criterion passed, no unresolved blocking or
+ * uncertain finding, all seven COMMANDS at exit 0 and a real render), a fresh
+ * input manifest and a matching skill digest.
+ *
+ * What it drops: the detached signature, the registry entry and the
+ * qualification record. That gap IS the difference between provisional and
+ * certified, and the "Final Review Pending" banner is what discloses it.
+ */
+export function acceptProvisionalReport(root, path, expected = {}) {
+  const report = validateReport(root, JSON.parse(readFileSync(safeFile(root, path))));
+  requireValue(report.disposition === 'pass', 'report does not pass');
+  for (const key of ['course_code', 'unit_no', 'stage', 'reviewer_id']) if (expected[key] !== undefined) requireValue(report[key] === expected[key], `report ${key} mismatch`);
+  // Independence is the whole basis for trusting a reviewer that no registry has
+  // qualified. `validateReport` only checks these are non-empty and differ, which
+  // a placeholder satisfies - the reports on disk today carry
+  // "UNSUPPLIED-parent-did-not-provide-author-run-identity". A stub where the
+  // author identity belongs means nobody established independence, so it cannot
+  // carry a provisional publication.
+  for (const key of ['author_run_id', 'reviewer_run_id']) {
+    requireValue(!/UNSUPPLIED|UNKNOWN|TODO|PLACEHOLDER|^n\/a$/i.test(report[key]), `${key} is a placeholder, not a real run identity`);
+  }
+  if (report.stage === 'G5') {
+    requireValue(typeof report.g3_report === 'string', 'G5 requires G3 report');
+    acceptProvisionalReport(root, report.g3_report, { course_code: report.course_code, unit_no: report.unit_no, stage: 'G3' });
+  }
+  return report;
+}
+
+/**
+ * G2 draft-stage evidence: deterministic gate exit codes, no reviewer identity.
+ *
+ * "Does a draft exist at standard" is machine-checkable, so it is answered by
+ * `DRAFT_COMMANDS` all exiting 0 over a manifest bound to the unit's current
+ * bytes. Any edit to the unit changes the manifest and re-opens G2 by itself,
+ * which is the same freshness property Art. VII.4 requires of review acceptance.
+ */
+export function acceptGateEvidence(root, path, course, unit) {
+  const evidence = JSON.parse(readFileSync(safeFile(root, path)));
+  requireValue(evidence?.schema_version === 1 && evidence.stage === 'G2', 'unsupported gate evidence schema/stage');
+  requireValue(evidence.course_code === course && evidence.unit_no === unit, 'gate evidence unit mismatch');
+  // Bound with the G3 input set on purpose. G2 and G3 review the same English
+  // bytes, and `manifestRoots` keys its validation off CRITERIA, which has no
+  // G2 entry - a stage of its own would mean a second definition of the same
+  // bound set, free to drift from the one a review actually uses.
+  requireValue(sorted(evidence.input_manifest ?? {}) === sorted(inputManifest(root, course, unit, 'G3')), 'stale or incomplete input manifest');
+  requireValue(evidence.evidence_manifest && typeof evidence.evidence_manifest === 'object' && !Array.isArray(evidence.evidence_manifest), 'missing evidence manifest');
+  const prefix = `specs/content/${course.toLowerCase()}/reviews/unit-${String(unit).padStart(2, '0')}/`;
+  for (const [p, hash] of Object.entries(evidence.evidence_manifest)) {
+    requireValue(p.startsWith(prefix), 'evidence outside unit review directory');
+    requireValue(digest(readFileSync(safeFile(root, p))) === hash, 'evidence file changed');
+  }
+  requireValue(Array.isArray(evidence.commands) && evidence.commands.every((c) => typeof c.name === 'string' && Number.isInteger(c.exit_code) && typeof c.log_path === 'string'), 'invalid command records');
+  requireValue(new Set(evidence.commands.map((c) => c.name)).size === evidence.commands.length, 'duplicate commands');
+  for (const name of DRAFT_COMMANDS) {
+    const command = evidence.commands.find((c) => c.name === name);
+    requireValue(command && command.exit_code === 0 && evidence.evidence_manifest[command.log_path], `missing successful command/log: ${name}`);
+  }
+  return evidence;
+}
+
 export function validateAgentTrackerRow(root, row, course, unit, stage) {
+  // `auto:` MUST be tested before the initials branch. A bare token like `GATES`
+  // is five uppercase letters, so it would satisfy /^[A-Z]{1,5}$/ and be waved
+  // through as a human reviewer with no evidence checked at all.
+  if (row.reviewer.startsWith('auto:')) {
+    requireValue(row.reviewer === 'auto:gates', 'unknown automated reviewer token');
+    requireValue(!['G3', 'G5'].includes(stage), 'a review stage needs a reviewer, not gate evidence');
+    const match = /^gates:([^\s]+\.json)$/.exec(row.suggestion);
+    requireValue(match, 'automated row needs gates:<manifest.json> evidence reference');
+    const prefix = `specs/content/${course.toLowerCase()}/reviews/unit-${String(unit).padStart(2, '0')}/G2/`;
+    requireValue(match[1].startsWith(prefix), 'gate evidence path must match unit and stage');
+    acceptGateEvidence(root, match[1], course, unit);
+    return;
+  }
   if (!row.reviewer.startsWith('agent:')) {
     requireValue(/^[A-Z]{1,5}$/.test(row.reviewer), 'reviewer must be human initials or explicit agent identity');
     return;
   }
   requireValue(['G3', 'G5'].includes(stage), 'agent review identity cannot certify a draft stage');
-  const match = /^review:([^\s]+\.json)$/.exec(row.suggestion);
+  const match = /^(review|provisional):([^\s]+\.json)$/.exec(row.suggestion);
   requireValue(match, 'agent row needs review:<report.json> evidence reference');
   const prefix = `specs/content/${course.toLowerCase()}/reviews/unit-${String(unit).padStart(2, '0')}/${stage}/`;
-  requireValue(match[1].startsWith(prefix), 'report path must match unit and stage');
-  acceptReport(root, match[1], { course_code: course, unit_no: unit, stage, reviewer_id: row.reviewer });
+  requireValue(match[2].startsWith(prefix), 'report path must match unit and stage');
+  const expected = { course_code: course, unit_no: unit, stage, reviewer_id: row.reviewer };
+  if (match[1] === 'provisional') acceptProvisionalReport(root, match[2], expected);
+  else acceptReport(root, match[2], expected);
 }

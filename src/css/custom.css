@@ -96,6 +96,37 @@ html[data-theme='dark'] .translation-badge--untranslated {
   color: #c3c7f7;
 }
 
+/* --- Provisional review banner (Art. VII.7, ADR-0025) ----------------------
+   Amber, like the draft-translation chip, because both say the same kind of
+   thing: usable, published, not yet finished. Deliberately not red - the unit
+   passed a real review and is fit to read, it simply is not certified. */
+.review-banner {
+  border-radius: 6px;
+  padding: 0.6rem 0.9rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.review-banner--provisional {
+  background: #fff4e5;
+  border-color: #f0b429;
+  color: #7a4d00;
+}
+.review-banner__label {
+  font-weight: 700;
+}
+.review-banner__body {
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+html[data-theme='dark'] .review-banner--provisional {
+  background: #3a2c12;
+  border-color: #a9791d;
+  color: #f4d69a;
+}
+
 /* --- Print handout button + Bloom/activity styling ------------------------- */
 .print-handout {
   border: 1px solid var(--ifm-color-primary);
