@@ -19,6 +19,16 @@ non-verbal material in `furlich2016` and `keelson2024`.
 
 No `no-external-source` row was needed for this unit.
 
+
+## Unverifiable sources
+
+Bound excerpts could not be committed for these keys. Recorded here so `check:depth-gate`
+and any G3 reviewer see the limitation explicitly rather than inferring it from silence.
+
+- hurst2009: Print-only book, no URL or DOI in the sources list and no text bound. The Unit 3 G3 review (2026-09-18) confirmed the work is real via OpenLibrary but could not read the cited passages. Leaves U3-03, U3-04, U3-05 and part of U3-13 supported at bibliographic level only.
+- brookfield2017: Print-only book, same position as hurst2009. Confirmed real via OpenLibrary; cited passages unread. Leaves U3-06, U3-07 and part of U3-13 unverified.
+- suarez2022: OECD full text returned HTTP 403 to the reviewing host. The U3-12 mapping could not be settled: Suarez and McGrath are cited only in topic-05's life-long-learner section, while the change-agent section carries no citation.
+
 | Key | Citation | URL/DOI | Supports | Kind |
 |---|---|---|---|---|
 | goe2008 | Goe, L., Bell, C., & Little, O. (2008). *Approaches to evaluating teacher effectiveness: A research synthesis*. National Comprehensive Center for Teacher Quality. | https://files.eric.ed.gov/fulltext/ED521228.pdf (ERIC ED521228) | topic-01.mdx U3-01 (families of definition in actual use); topic-03.mdx U3-08 (relationships beyond the classroom as a component) | curated-supplementary |

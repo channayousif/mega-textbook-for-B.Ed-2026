@@ -33,6 +33,15 @@ The limitation is about verification depth on one key, not about the absence of 
 Working Papers No. 23, 2009), and `goe2008` against the same registry (ED521228). The remaining
 two keys were already on the course reading list.
 
+
+## Unverifiable sources
+
+Bound excerpts could not be committed for these keys. Recorded here so `check:depth-gate`
+and any G3 reviewer see the limitation explicitly rather than inferring it from silence.
+
+- npst-pakistan-2009: The unit's primary document. Every route returned an error to both the authoring and the reviewing host: itacec.org HTTP 401/403, nacte.org.pk HTTP 404. ERIC and Crossref answered normally in the same sessions, so this is per-host access rather than absence. Leaves the ten standard names, the three-part division and the 2009 MoE/UNESCO/USAID origin corroborated only across secondary sources.
+- unesco-teacher-ethics: Cloudflare HTTP 403 from unesdoc, its PDF path and teachertaskforce.org. Leaves topic-01's international-framework claims (U4-01, U4-02) unchecked against the source.
+
 | Key | Citation | URL/DOI | Supports | Kind |
 |---|---|---|---|---|
 | npst-pakistan-2009 | Government of Pakistan, Ministry of Education, Policy & Planning Wing (2009). *National Professional Standards for Teachers in Pakistan*. | https://itacec.org/document/2015/7/National_Professional_Standards_for_Teachers.pdf | topic-01.mdx U4-03 (the national framework and its origin); topic-02.mdx U4-05, U4-06 (three-level architecture and the areas the ten standards cover) | curated-supplementary |

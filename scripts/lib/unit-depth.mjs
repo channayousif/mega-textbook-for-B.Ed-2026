@@ -38,6 +38,50 @@ export const CYCLE = [
 ];
 
 /** LEGACY path (Spec 007 — byte-for-byte). Returns `{ errors: string[] }`. */
+/**
+ * (e2) Every external source key is either VERIFIABLE or DECLARED UNVERIFIABLE.
+ *
+ * A G3 reviewer can confirm from a registry that a citation EXISTS, but cannot
+ * confirm the source SUPPORTS the claim without its text. The review bundle
+ * already binds `specs/content/<course>/sources/`, so a committed excerpt at
+ * `sources/texts/<key>.md` travels with the unit and makes support checkable
+ * offline and reproducibly.
+ *
+ * All four EFMP-302 Unit 3-6 G3 reviews (2026-09-18) returned `sources` as fail
+ * or unverified for exactly this reason. Where a source WAS independently
+ * retrievable they found real defects - Isore (2009) inverted, `goe2008` not
+ * containing the sequence it was cited for - so an unverified source is not safe
+ * by default.
+ *
+ * Declaring a key unverifiable is a legitimate outcome. Silence is not, and that
+ * is what this catches. The declaration is machine-readable on purpose: a first
+ * attempt matched any key MENTIONED under a limitation heading and swept in
+ * `isore2009`, which had been verified against ERIC and was named there only in
+ * passing. Prose cannot distinguish "we could not read this" from "we read this".
+ *
+ *   ## Unverifiable sources
+ *   - some-key: what was attempted, and what it leaves unchecked
+ */
+function checkSourceVerifiability({ root, courseDir, sourcesFile, keyKind, errors }) {
+  const sourcesText = readFileSync(sourcesFile, 'utf8');
+  const declared = new Set();
+  for (const section of sourcesText.split(/^##\s+/m).slice(1)) {
+    if (!/^unverifiable sources\s*$/i.test(section.split('\n', 1)[0].trim())) continue;
+    for (const line of section.split('\n')) {
+      const m = /^-\s+`?([a-z0-9][a-z0-9-]*)`?\s*:/i.exec(line.trim());
+      if (m) declared.add(m[1]);
+    }
+  }
+  const courseRel = relative(join(root, 'specs', 'content'), courseDir);
+  for (const [key, kind] of keyKind) {
+    if (kind === 'no-external-source' || declared.has(key)) continue;
+    if (!existsSync(join(courseDir, 'sources', 'texts', `${key}.md`))) {
+      errors.push(`source "${key}" has no bound excerpt at specs/content/${courseRel}/sources/texts/${key}.md `
+        + 'and is not listed under an `## Unverifiable sources` heading - a reviewer cannot check that it supports the claims citing it');
+    }
+  }
+}
+
 export function checkLegacy({ root, unitDir, courseDir, unitNo, enIndexRaw, checklistIds, sectionLines }) {
   const errors = [];
 
@@ -99,6 +143,7 @@ export function checkLegacy({ root, unitDir, courseDir, unitNo, enIndexRaw, chec
       if (kind === 'no-external-source') continue;
       if (!citedSources.has(key)) errors.push(`sources-consulted Key "${key}" is not referenced by any coverage row`);
     }
+    checkSourceVerifiability({ root, courseDir, sourcesFile, keyKind, errors });
   }
 
   // --- required blocks in index.mdx (b) ---
@@ -318,7 +363,7 @@ export function checkTopic({ root, unitDir, courseDir, unitNo, checklistIds, sec
     for (const [key, kind] of keyKind) {
       if (kind === 'no-external-source') continue;
       if (!citedSources.has(key)) errors.push(`sources-consulted Key "${key}" is not referenced by any coverage row`);
-    }
+    }    checkSourceVerifiability({ root, courseDir, sourcesFile, keyKind, errors });
   }
 
   // (9) reading-minutes band across the new-shape file set

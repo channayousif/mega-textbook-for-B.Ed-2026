@@ -143,7 +143,17 @@ function makeDepthFixture(opts = {}) {
     }
     if (opts.sourcesTable !== null) {
       mkdirSync(join(courseDir, 'sources'), { recursive: true });
-      writeFileSync(join(courseDir, 'sources', 'unit-01.md'), `# Sources — Unit 1\n\n${opts.sourcesTable ?? DEFAULT_SOURCES}`);
+      // Every external key needs a bound excerpt or an explicit unverifiable
+      // declaration (unit-depth.mjs checkSourceVerifiability). Fixtures declare,
+      // which keeps them independent of any excerpt file on disk.
+      const keys = (opts.sourcesTable ?? DEFAULT_SOURCES)
+        .split('\n')
+        .map((l) => l.split('|')[1]?.trim())
+        .filter((k) => k && !/^key$/i.test(k) && !/^-+$/.test(k));
+      const declaration = keys.length
+        ? `\n\n## Unverifiable sources\n\n${keys.map((k) => `- ${k}: synthetic test fixture, no source text bound.`).join('\n')}\n`
+        : '';
+      writeFileSync(join(courseDir, 'sources', 'unit-01.md'), `# Sources — Unit 1\n${declaration}\n${opts.sourcesTable ?? DEFAULT_SOURCES}`);
     }
   }
   return root;
@@ -469,7 +479,15 @@ function makeTopicFixture(opts = {}) {
   }
   if (opts.sourcesTable !== null) {
     mkdirSync(join(courseDir, 'sources'), { recursive: true });
-    writeFileSync(join(courseDir, 'sources', 'unit-01.md'), `# Sources — Unit 1\n\n${opts.sourcesTable ?? TOPIC_SOURCES}`);
+    // Same declaration requirement as the legacy fixture above.
+    const topicKeys = (opts.sourcesTable ?? TOPIC_SOURCES)
+      .split('\n')
+      .map((l) => l.split('|')[1]?.trim())
+      .filter((k) => k && !/^key$/i.test(k) && !/^-+$/.test(k));
+    const topicDecl = topicKeys.length
+      ? `\n\n## Unverifiable sources\n\n${topicKeys.map((k) => `- ${k}: synthetic test fixture, no source text bound.`).join('\n')}\n`
+      : '';
+    writeFileSync(join(courseDir, 'sources', 'unit-01.md'), `# Sources — Unit 1\n${topicDecl}\n${opts.sourcesTable ?? TOPIC_SOURCES}`);
   }
   return root;
 }
