@@ -58,7 +58,7 @@ register pass; `translation_status: reviewed` on all EN and UR unit-01 files;
 | Unit 1 | G5 ur-review | ✅ | YM | Register / terminology pass (academic-plain, درسی مگر عام فہم); `Professionalism` / `Professionalization` bank terms confirmed at G5; `translation_status: reviewed`, `ur` route no longer falls back to EN |
 | Unit 1 | G6 assets | ✅ | YM | |
 | Unit 1 | G7 publish | ✅ | YM | |
-| Unit 2 | G1 unit-spec | ▣ | | re-opened 2026-09-14: per-topic G1 blocks added (sub-topic checklist, topic list, depth budget, figure plan, assessment blueprint). The 2.3-into-2.3+2.4 topic split needs owner confirmation |
+| Unit 2 | G1 unit-spec | ✅ | YM | per-topic G1 blocks added 2026-09-14; the guide-2.3 split across topics 2.3 and 2.4 was confirmed by the curriculum owner 2026-09-15 |
 | Unit 2 | G2 en-draft | ▣ | | re-opened 2026-09-14: re-drafted from the legacy five-file layout to the per-topic standard (style guide v4.4); 141 reading-min across 7 files; 8 figure markers at prompt-only |
 | Unit 2 | G3 en-review | ▣ | | re-opened 2026-09-14: the previous ✅ certified the legacy draft, which no longer exists. Awaiting a Content-gate pass on the new draft |
 | Unit 2 | G4 ur-translation | ▢ | | scope changed to the per-topic layout. The legacy UR drafts were removed as orphans; under ADR-0022 the Urdu mirror arrives in the corpus-wide translation phase, and this unit is the designated Urdu rate probe |
@@ -79,7 +79,7 @@ register pass; `translation_status: reviewed` on all EN and UR unit-01 files;
 | Unit 4 | G5 ur-review | ▢ | | scope changed to the per-topic layout; 13 authored Urdu concept labels in concepts/unit-04.md need review |
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
-| Unit 5 | G1 unit-spec | ▣ | | re-opened 2026-09-15: per-topic G1 blocks added. **Owner confirmation needed**: guide section 5.1 carries six leaf bullets and is split across topics 5.1 and 5.2, as Unit 2's 2.3 was |
+| Unit 5 | G1 unit-spec | ✅ | YM | per-topic G1 blocks added 2026-09-15; the guide-5.1 split across topics 5.1 and 5.2 was confirmed by the curriculum owner 2026-09-18 |
 | Unit 5 | G2 en-draft | ▣ | | re-opened 2026-09-15: re-drafted to the per-topic standard (style guide v4.4); 141 reading-min across 8 files; 8 figure markers at prompt-only. Six of twelve sub-topics carry `no-external-source` by design |
 | Unit 5 | G3 en-review | ▣ | | re-opened 2026-09-15. Sources verified by reading abstracts, not registry metadata alone, after the Unit 2 and 3 reviews; three carry scope limits stated in the prose |
 | Unit 5 | G4 ur-translation | ▢ | | scope changed to the per-topic layout. Legacy UR drafts removed as orphans; Urdu mirror arrives in the corpus-wide translation phase (ADR-0022) |
