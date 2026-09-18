@@ -128,6 +128,10 @@ function checkUnit({ unitDir, courseFolder, courseCode, unitNo }) {
   const edges = new Map();
   const topicsSeen = new Set();
 
+  // item ID -> the set of topics whose concepts claim it. See the restricted-item
+  // check below the loop.
+  const topicsByItem = new Map();
+
   for (const [id, , , prereqs, topic, , itemRefs] of rows) {
     if (!/^CON:[A-Z]{2,4}-\d{3}(--)?-\d+-\d+$/.test(id)) err(label, `malformed concept ID "${id}"`);
     if (ids.has(id)) err(label, `duplicate concept ID "${id}"`);
@@ -143,8 +147,29 @@ function checkUnit({ unitDir, courseFolder, courseCode, unitNo }) {
     if (items && itemRefs !== '-') {
       for (const ref of itemRefs.split(',').map((x) => x.trim()).filter(Boolean)) {
         if (!items.has(ref)) err(label, `concept ${id} cites assessment item "${ref}", which the unit does not contain`);
+        if (!topicsByItem.has(ref)) topicsByItem.set(ref, new Set());
+        topicsByItem.get(ref).add(topic);
       }
     }
+  }
+
+  // 6. a RESTRICTED item cannot be the assessment evidence for two different topics.
+  //
+  // This gate can never verify that an item actually assesses the concept citing it -
+  // that is a semantic judgement and belongs to G3. What it CAN catch is a claim that
+  // is structurally impossible: an MCQ or RRQ is scoped to one thing by definition, so
+  // a single one standing as evidence for concepts in two different topics means at
+  // least one of those mappings is wrong, and a wrong mapping MASKS a sub-topic that
+  // nothing actually assesses.
+  //
+  // ERQs are exempt on purpose: they are integrative by design and legitimately span
+  // topics. EFMP-302 Unit 1, human-certified, has ERQ-05 spanning 1.1/1.3/1.4, and a
+  // rule that flagged that would be wrong. The 2026-09-18 G3 review of Unit 4 found the
+  // real case this catches: RRQ-04 claimed by both a 4.1 and a 4.4 concept, next to a
+  // taught sub-topic (U4-02) that no item assesses.
+  for (const [ref, topics] of topicsByItem) {
+    if (ref.startsWith('ERQ') || topics.size < 2) continue;
+    err(label, `restricted item "${ref}" is cited as assessment evidence by concepts in ${topics.size} different topics (${[...topics].sort().join(', ')}) - an MCQ or RRQ assesses one topic, so at least one of these mappings is wrong`);
   }
 
   // 4. resolvable prerequisites
