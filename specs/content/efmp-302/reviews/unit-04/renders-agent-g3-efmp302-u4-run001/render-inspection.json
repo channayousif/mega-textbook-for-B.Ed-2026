@@ -1,0 +1,331 @@
+{
+  "base": "http://localhost:3104/semester-1/efmp-302/unit-04",
+  "capturedAt": "2026-09-18T20:54:00.886Z",
+  "browser": "chromium 149.0.7827.0",
+  "pages": {
+    "index": {
+      "url": "http://localhost:3104/semester-1/efmp-302/unit-04/",
+      "checks": {
+        "desktop": {
+          "imgs": [],
+          "figureEls": 0,
+          "headingCount": 5,
+          "headings": [
+            "H1:The Professional Standards and Competencies for Teachers",
+            "H2:Unit learning outcomes​",
+            "H2:Prerequisite knowledge​",
+            "H2:In this unit​",
+            "H2:How to use this unit​"
+          ],
+          "tables": 0,
+          "vagueLinks": [],
+          "docWidth": 1280
+        },
+        "narrow360": {
+          "horizontalOverflowPx": 0,
+          "clientWidth": 360,
+          "scrollWidth": 360,
+          "tables": []
+        },
+        "print": {
+          "hiddenBlockCount": 0,
+          "answerHeadingsVisibleInPrint": []
+        }
+      }
+    },
+    "topic-01": {
+      "url": "http://localhost:3104/semester-1/efmp-302/unit-04/topic-01",
+      "checks": {
+        "desktop": {
+          "imgs": [],
+          "figureEls": 0,
+          "headingCount": 14,
+          "headings": [
+            "H1:Topic 4.1 - What professional standards are for",
+            "H2:A real classroom situation​",
+            "H2:Explanation​",
+            "H3:The concept of a professional standard, and what it is for​",
+            "H3:Global perspectives on teacher standards​",
+            "H3:National perspectives on teacher standards​",
+            "H3:Using standards to ensure teacher quality and accountability​",
+            "H2:Activity: Which use is this?​",
+            "H2:Check your understanding​",
+            "H2:Summary​",
+            "H2:Self-assessment checklist​",
+            "H2:Try this at your practicum school​",
+            "H2:Summative task​",
+            "H2:Further reading​"
+          ],
+          "tables": 1,
+          "vagueLinks": [],
+          "docWidth": 1280
+        },
+        "narrow360": {
+          "horizontalOverflowPx": 0,
+          "clientWidth": 360,
+          "scrollWidth": 360,
+          "tables": [
+            {
+              "i": 0,
+              "tableWidth": 328,
+              "containerWidth": 328,
+              "scrollable": false,
+              "clipped": false
+            }
+          ]
+        },
+        "print": {
+          "hiddenBlockCount": 0,
+          "answerHeadingsVisibleInPrint": []
+        }
+      }
+    },
+    "topic-02": {
+      "url": "http://localhost:3104/semester-1/efmp-302/unit-04/topic-02",
+      "checks": {
+        "desktop": {
+          "imgs": [],
+          "figureEls": 0,
+          "headingCount": 13,
+          "headings": [
+            "H1:Topic 4.2 - Pakistan's National Professional Standards for Teachers",
+            "H2:A real classroom situation​",
+            "H2:Explanation​",
+            "H3:The structure of Pakistan's National Professional Standards for Teache",
+            "H3:The domains the standards cover​",
+            "H3:Indicators, and how a domain is evidenced in practice​",
+            "H2:Activity: Writing an indicator​",
+            "H2:Check your understanding​",
+            "H2:Summary​",
+            "H2:Self-assessment checklist​",
+            "H2:Try this at your practicum school​",
+            "H2:Summative task​",
+            "H2:Further reading​"
+          ],
+          "tables": 1,
+          "vagueLinks": [],
+          "docWidth": 1280
+        },
+        "narrow360": {
+          "horizontalOverflowPx": 0,
+          "clientWidth": 360,
+          "scrollWidth": 360,
+          "tables": [
+            {
+              "i": 0,
+              "tableWidth": 328,
+              "containerWidth": 328,
+              "scrollable": false,
+              "clipped": false
+            }
+          ]
+        },
+        "print": {
+          "hiddenBlockCount": 0,
+          "answerHeadingsVisibleInPrint": []
+        }
+      }
+    },
+    "topic-03": {
+      "url": "http://localhost:3104/semester-1/efmp-302/unit-04/topic-03",
+      "checks": {
+        "desktop": {
+          "imgs": [],
+          "figureEls": 0,
+          "headingCount": 12,
+          "headings": [
+            "H1:Topic 4.3 - Using a standard on yourself",
+            "H2:A real classroom situation​",
+            "H2:Explanation​",
+            "H3:Using a standard to evaluate your own practice​",
+            "H3:Building evidence against an indicator​",
+            "H2:Activity: One indicator, two kinds of evidence​",
+            "H2:Check your understanding​",
+            "H2:Summary​",
+            "H2:Self-assessment checklist​",
+            "H2:Try this at your practicum school​",
+            "H2:Summative task​",
+            "H2:Further reading​"
+          ],
+          "tables": 1,
+          "vagueLinks": [],
+          "docWidth": 1280
+        },
+        "narrow360": {
+          "horizontalOverflowPx": 0,
+          "clientWidth": 360,
+          "scrollWidth": 360,
+          "tables": [
+            {
+              "i": 0,
+              "tableWidth": 328,
+              "containerWidth": 328,
+              "scrollable": false,
+              "clipped": false
+            }
+          ]
+        },
+        "print": {
+          "hiddenBlockCount": 0,
+          "answerHeadingsVisibleInPrint": []
+        }
+      }
+    },
+    "topic-04": {
+      "url": "http://localhost:3104/semester-1/efmp-302/unit-04/topic-04",
+      "checks": {
+        "desktop": {
+          "imgs": [],
+          "figureEls": 0,
+          "headingCount": 13,
+          "headings": [
+            "H1:Topic 4.4 - Licensing, certification and appraisal",
+            "H2:A real classroom situation​",
+            "H2:Explanation​",
+            "H3:Teacher licensing and certification​",
+            "H3:Appraisal, and the difference between formative and summative purposes",
+            "H3:What happens when a standard is used for a purpose it was not designed",
+            "H2:Activity: Redesign the province's reform​",
+            "H2:Check your understanding​",
+            "H2:Summary​",
+            "H2:Self-assessment checklist​",
+            "H2:Try this at your practicum school​",
+            "H2:Summative task​",
+            "H2:Further reading​"
+          ],
+          "tables": 1,
+          "vagueLinks": [],
+          "docWidth": 1280
+        },
+        "narrow360": {
+          "horizontalOverflowPx": 0,
+          "clientWidth": 360,
+          "scrollWidth": 360,
+          "tables": [
+            {
+              "i": 0,
+              "tableWidth": 328,
+              "containerWidth": 328,
+              "scrollable": false,
+              "clipped": false
+            }
+          ]
+        },
+        "print": {
+          "hiddenBlockCount": 0,
+          "answerHeadingsVisibleInPrint": []
+        }
+      }
+    },
+    "unit-assessment": {
+      "url": "http://localhost:3104/semester-1/efmp-302/unit-04/unit-assessment",
+      "checks": {
+        "desktop": {
+          "imgs": [],
+          "figureEls": 0,
+          "headingCount": 10,
+          "headings": [
+            "H1:Unit 4 assessment",
+            "H2:Unit summary​",
+            "H2:Summative assessment​",
+            "H3:Multiple-choice questions (MCQs)​",
+            "H3:Restricted-response questions (RRQs)​",
+            "H3:Extended-response questions (ERQs)​",
+            "H2:Answers and marking guidance​",
+            "H3:MCQ answer key​",
+            "H3:RRQ model answers and mark schemes​",
+            "H3:ERQ rubrics​"
+          ],
+          "tables": 5,
+          "vagueLinks": [],
+          "docWidth": 1280
+        },
+        "narrow360": {
+          "horizontalOverflowPx": 0,
+          "clientWidth": 360,
+          "scrollWidth": 360,
+          "tables": [
+            {
+              "i": 0,
+              "tableWidth": 328,
+              "containerWidth": 328,
+              "scrollable": false,
+              "clipped": false
+            },
+            {
+              "i": 1,
+              "tableWidth": 328,
+              "containerWidth": 328,
+              "scrollable": false,
+              "clipped": false
+            },
+            {
+              "i": 2,
+              "tableWidth": 328,
+              "containerWidth": 328,
+              "scrollable": false,
+              "clipped": false
+            },
+            {
+              "i": 3,
+              "tableWidth": 328,
+              "containerWidth": 328,
+              "scrollable": false,
+              "clipped": false
+            },
+            {
+              "i": 4,
+              "tableWidth": 328,
+              "containerWidth": 328,
+              "scrollable": false,
+              "clipped": false
+            }
+          ]
+        },
+        "print": {
+          "hiddenBlockCount": 0,
+          "answerHeadingsVisibleInPrint": [
+            "Answers and marking guidance​",
+            "MCQ answer key​",
+            "RRQ model answers and mark schemes​",
+            "ERQ rubrics​"
+          ]
+        }
+      }
+    },
+    "unit-teacher-notes": {
+      "url": "http://localhost:3104/semester-1/efmp-302/unit-04/unit-teacher-notes",
+      "checks": {
+        "desktop": {
+          "imgs": [],
+          "figureEls": 0,
+          "headingCount": 7,
+          "headings": [
+            "H1:Unit 4 teacher notes",
+            "H2:Before you teach: obtain the primary document​",
+            "H2:Sequencing across the three-week block​",
+            "H2:The misconceptions that recur​",
+            "H2:The activity that most often goes wrong​",
+            "H2:Practical work​",
+            "H2:Marking the unit assessment​"
+          ],
+          "tables": 0,
+          "vagueLinks": [],
+          "docWidth": 1280
+        },
+        "narrow360": {
+          "horizontalOverflowPx": 0,
+          "clientWidth": 360,
+          "scrollWidth": 360,
+          "tables": []
+        },
+        "print": {
+          "hiddenBlockCount": 0,
+          "answerHeadingsVisibleInPrint": [
+            "Marking the unit assessment​"
+          ]
+        }
+      }
+    }
+  }
+}

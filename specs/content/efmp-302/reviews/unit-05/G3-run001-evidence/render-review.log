@@ -1,0 +1,634 @@
+# render-review: Playwright chromium driving the built site served at http://localhost:3105
+# server: npx docusaurus serve --port 3105 --no-open (static build/ produced before this review; not rebuilt)
+# harness script: specs/content/efmp-302/reviews/unit-05/G3-run001-evidence/render-review.mjs
+# setups: desktop viewport 1280x900 (fullPage PNG); narrow viewport 360x740 (fullPage PNG + clipping/overflow probe); print: emulateMedia('print') fullPage PNG + A4 PDF at 15mm margins
+# git HEAD: ac13c5c3ca603ed07c649dc0e82c619189279265
+# started_at: 2026-09-18T20:55:35Z
+# ---
+browser: 149.0.7827.0 | engine: chromium (playwright 1.61.1, headless)
+rendered index: http 200
+rendered topic-01: http 200
+rendered topic-02: http 200
+rendered topic-03: http 200
+rendered topic-04: http 200
+rendered unit-assessment: http 200
+rendered unit-teacher-notes: http 200
+
+===== AUDIT JSON =====
+{
+ "index": {
+  "status": 200,
+  "title": "Issues and Challenges in the Teaching Profession | B.Ed Mega Textbook",
+  "h1": 1,
+  "headings": [
+   {
+    "lvl": 1,
+    "text": "Issues and Challenges in the Teaching Profession"
+   },
+   {
+    "lvl": 2,
+    "text": "A note on the evidence in this unit"
+   },
+   {
+    "lvl": 2,
+    "text": "Unit learning outcomes"
+   },
+   {
+    "lvl": 2,
+    "text": "Prerequisite knowledge"
+   },
+   {
+    "lvl": 2,
+    "text": "In this unit"
+   },
+   {
+    "lvl": 2,
+    "text": "A note on how this unit is divided"
+   },
+   {
+    "lvl": 2,
+    "text": "How to use this unit"
+   }
+  ],
+  "imgs": [],
+  "figs": [],
+  "linkCount": 19,
+  "vagueLinks": [],
+  "bareUrlLinks": 0,
+  "tables": [],
+  "hasSkipLink": true,
+  "headingOrderViolations": [],
+  "narrow": {
+   "docScrollW": 360,
+   "innerW": 360,
+   "horizontalPageScroll": false,
+   "clipped": []
+  },
+  "print": {
+   "hiddenInPrint": [
+    {
+     "tag": "UL",
+     "text": "A note on the evidence in this unitUnit learning outcomesPre"
+    }
+   ],
+   "widerThanA4": []
+  },
+  "consoleErrors": []
+ },
+ "topic-01": {
+  "status": 200,
+  "title": "Topic 5.1 - The conditions you will actually teach in | B.Ed Mega Textbook",
+  "h1": 1,
+  "headings": [
+   {
+    "lvl": 1,
+    "text": "Topic 5.1 - The conditions you will actually teach in"
+   },
+   {
+    "lvl": 2,
+    "text": "A real classroom situation"
+   },
+   {
+    "lvl": 2,
+    "text": "Explanation"
+   },
+   {
+    "lvl": 3,
+    "text": "Workload, and what actually consumes a teacher's week"
+   },
+   {
+    "lvl": 3,
+    "text": "Stress and burnout, and how the two differ"
+   },
+   {
+    "lvl": 3,
+    "text": "Lack of support and resources"
+   },
+   {
+    "lvl": 3,
+    "text": "The multilingual classroom"
+   },
+   {
+    "lvl": 3,
+    "text": "The multi-grade classroom"
+   },
+   {
+    "lvl": 2,
+    "text": "Activity: Itemise the week"
+   },
+   {
+    "lvl": 2,
+    "text": "Check your understanding"
+   },
+   {
+    "lvl": 2,
+    "text": "Summary"
+   },
+   {
+    "lvl": 2,
+    "text": "Self-assessment checklist"
+   },
+   {
+    "lvl": 2,
+    "text": "Try this at your practicum school"
+   },
+   {
+    "lvl": 2,
+    "text": "Summative task"
+   },
+   {
+    "lvl": 2,
+    "text": "Further reading"
+   }
+  ],
+  "imgs": [],
+  "figs": [],
+  "linkCount": 36,
+  "vagueLinks": [],
+  "bareUrlLinks": 4,
+  "tables": [
+   {
+    "hasTh": true,
+    "cols": 2
+   }
+  ],
+  "hasSkipLink": true,
+  "headingOrderViolations": [],
+  "narrow": {
+   "docScrollW": 360,
+   "innerW": 360,
+   "horizontalPageScroll": false,
+   "clipped": []
+  },
+  "print": {
+   "hiddenInPrint": [
+    {
+     "tag": "UL",
+     "text": "A real classroom situationExplanationWorkload, and what actu"
+    }
+   ],
+   "widerThanA4": [
+    {
+     "tag": "TABLE",
+     "w": 823,
+     "text": "CriterionWhat a strong response doesUse of the model (Apply)"
+    }
+   ]
+  },
+  "consoleErrors": []
+ },
+ "topic-02": {
+  "status": 200,
+  "title": "Topic 5.2 - What is asked of you, and by whom | B.Ed Mega Textbook",
+  "h1": 1,
+  "headings": [
+   {
+    "lvl": 1,
+    "text": "Topic 5.2 - What is asked of you, and by whom"
+   },
+   {
+    "lvl": 2,
+    "text": "A real classroom situation"
+   },
+   {
+    "lvl": 2,
+    "text": "Explanation"
+   },
+   {
+    "lvl": 3,
+    "text": "The increased focus on teacher accountability"
+   },
+   {
+    "lvl": 3,
+    "text": "High expectations from many stakeholders at once"
+   },
+   {
+    "lvl": 3,
+    "text": "Socio-economic status and public recognition"
+   },
+   {
+    "lvl": 2,
+    "text": "Activity: Four demands, one week"
+   },
+   {
+    "lvl": 2,
+    "text": "Check your understanding"
+   },
+   {
+    "lvl": 2,
+    "text": "Summary"
+   },
+   {
+    "lvl": 2,
+    "text": "Self-assessment checklist"
+   },
+   {
+    "lvl": 2,
+    "text": "Try this at your practicum school"
+   },
+   {
+    "lvl": 2,
+    "text": "Summative task"
+   },
+   {
+    "lvl": 2,
+    "text": "Further reading"
+   }
+  ],
+  "imgs": [],
+  "figs": [],
+  "linkCount": 30,
+  "vagueLinks": [],
+  "bareUrlLinks": 2,
+  "tables": [
+   {
+    "hasTh": true,
+    "cols": 2
+   }
+  ],
+  "hasSkipLink": true,
+  "headingOrderViolations": [],
+  "narrow": {
+   "docScrollW": 360,
+   "innerW": 360,
+   "horizontalPageScroll": false,
+   "clipped": []
+  },
+  "print": {
+   "hiddenInPrint": [
+    {
+     "tag": "UL",
+     "text": "A real classroom situationExplanationThe increased focus on "
+    }
+   ],
+   "widerThanA4": [
+    {
+     "tag": "TABLE",
+     "w": 823,
+     "text": "CriterionWhat a strong response doesAnalysis of demands (App"
+    }
+   ]
+  },
+  "consoleErrors": []
+ },
+ "topic-03": {
+  "status": 200,
+  "title": "Topic 5.3 - Professionalism in the digital age | B.Ed Mega Textbook",
+  "h1": 1,
+  "headings": [
+   {
+    "lvl": 1,
+    "text": "Topic 5.3 - Professionalism in the digital age"
+   },
+   {
+    "lvl": 2,
+    "text": "A real classroom situation"
+   },
+   {
+    "lvl": 2,
+    "text": "Explanation"
+   },
+   {
+    "lvl": 3,
+    "text": "Pressure to integrate technology"
+   },
+   {
+    "lvl": 3,
+    "text": "Responsible use of digital platforms and resources"
+   },
+   {
+    "lvl": 2,
+    "text": "Activity: Judge four uses"
+   },
+   {
+    "lvl": 2,
+    "text": "Check your understanding"
+   },
+   {
+    "lvl": 2,
+    "text": "Summary"
+   },
+   {
+    "lvl": 2,
+    "text": "Self-assessment checklist"
+   },
+   {
+    "lvl": 2,
+    "text": "Try this at your practicum school"
+   },
+   {
+    "lvl": 2,
+    "text": "Summative task"
+   },
+   {
+    "lvl": 2,
+    "text": "Further reading"
+   }
+  ],
+  "imgs": [],
+  "figs": [],
+  "linkCount": 27,
+  "vagueLinks": [],
+  "bareUrlLinks": 1,
+  "tables": [
+   {
+    "hasTh": true,
+    "cols": 2
+   }
+  ],
+  "hasSkipLink": true,
+  "headingOrderViolations": [],
+  "narrow": {
+   "docScrollW": 360,
+   "innerW": 360,
+   "horizontalPageScroll": false,
+   "clipped": []
+  },
+  "print": {
+   "hiddenInPrint": [
+    {
+     "tag": "UL",
+     "text": "A real classroom situationExplanationPressure to integrate t"
+    }
+   ],
+   "widerThanA4": [
+    {
+     "tag": "TABLE",
+     "w": 823,
+     "text": "CriterionWhat a strong response doesUse of the three questio"
+    }
+   ]
+  },
+  "consoleErrors": []
+ },
+ "topic-04": {
+  "status": 200,
+  "title": "Topic 5.4 - Responding: growth rather than endurance | B.Ed Mega Textbook",
+  "h1": 1,
+  "headings": [
+   {
+    "lvl": 1,
+    "text": "Topic 5.4 - Responding: growth rather than endurance"
+   },
+   {
+    "lvl": 2,
+    "text": "A real classroom situation"
+   },
+   {
+    "lvl": 2,
+    "text": "Explanation"
+   },
+   {
+    "lvl": 3,
+    "text": "Separating what is within a teacher's control from what is not"
+   },
+   {
+    "lvl": 3,
+    "text": "Growth and development as a response rather than endurance"
+   },
+   {
+    "lvl": 2,
+    "text": "Activity: Place it, then change it"
+   },
+   {
+    "lvl": 2,
+    "text": "Check your understanding"
+   },
+   {
+    "lvl": 2,
+    "text": "Summary"
+   },
+   {
+    "lvl": 2,
+    "text": "Self-assessment checklist"
+   },
+   {
+    "lvl": 2,
+    "text": "Try this at your practicum school"
+   },
+   {
+    "lvl": 2,
+    "text": "Summative task"
+   },
+   {
+    "lvl": 2,
+    "text": "Further reading"
+   }
+  ],
+  "imgs": [],
+  "figs": [],
+  "linkCount": 28,
+  "vagueLinks": [],
+  "bareUrlLinks": 2,
+  "tables": [
+   {
+    "hasTh": true,
+    "cols": 2
+   }
+  ],
+  "hasSkipLink": true,
+  "headingOrderViolations": [],
+  "narrow": {
+   "docScrollW": 360,
+   "innerW": 360,
+   "horizontalPageScroll": false,
+   "clipped": []
+  },
+  "print": {
+   "hiddenInPrint": [
+    {
+     "tag": "UL",
+     "text": "A real classroom situationExplanationSeparating what is with"
+    }
+   ],
+   "widerThanA4": [
+    {
+     "tag": "TABLE",
+     "w": 823,
+     "text": "CriterionWhat a strong response doesUse of the regions (Appl"
+    }
+   ]
+  },
+  "consoleErrors": []
+ },
+ "unit-assessment": {
+  "status": 200,
+  "title": "Unit 5 assessment | B.Ed Mega Textbook",
+  "h1": 1,
+  "headings": [
+   {
+    "lvl": 1,
+    "text": "Unit 5 assessment"
+   },
+   {
+    "lvl": 2,
+    "text": "Unit summary"
+   },
+   {
+    "lvl": 2,
+    "text": "Summative assessment"
+   },
+   {
+    "lvl": 3,
+    "text": "Multiple-choice questions (MCQs)"
+   },
+   {
+    "lvl": 3,
+    "text": "Restricted-response questions (RRQs)"
+   },
+   {
+    "lvl": 3,
+    "text": "Extended-response questions (ERQs)"
+   },
+   {
+    "lvl": 2,
+    "text": "Answers and marking guidance"
+   },
+   {
+    "lvl": 3,
+    "text": "MCQ answer key"
+   },
+   {
+    "lvl": 3,
+    "text": "RRQ model answers and mark schemes"
+   },
+   {
+    "lvl": 3,
+    "text": "ERQ rubrics"
+   }
+  ],
+  "imgs": [],
+  "figs": [],
+  "linkCount": 22,
+  "vagueLinks": [],
+  "bareUrlLinks": 0,
+  "tables": [
+   {
+    "hasTh": true,
+    "cols": 4
+   },
+   {
+    "hasTh": true,
+    "cols": 4
+   },
+   {
+    "hasTh": true,
+    "cols": 4
+   },
+   {
+    "hasTh": true,
+    "cols": 4
+   },
+   {
+    "hasTh": true,
+    "cols": 4
+   }
+  ],
+  "hasSkipLink": true,
+  "headingOrderViolations": [],
+  "narrow": {
+   "docScrollW": 360,
+   "innerW": 360,
+   "horizontalPageScroll": false,
+   "clipped": []
+  },
+  "print": {
+   "hiddenInPrint": [
+    {
+     "tag": "UL",
+     "text": "Unit summarySummative assessmentMultiple-choice questions (M"
+    }
+   ],
+   "widerThanA4": [
+    {
+     "tag": "TABLE",
+     "w": 823,
+     "text": "CriterionLimited (1-2)Adequate (3)Strong (4-5)Use of the mod"
+    },
+    {
+     "tag": "TABLE",
+     "w": 823,
+     "text": "CriterionLimited (1-2)Adequate (3)Strong (4-5)Analysis of de"
+    },
+    {
+     "tag": "TABLE",
+     "w": 823,
+     "text": "CriterionLimited (1-2)Adequate (3)Strong (4-5)Use of the thr"
+    },
+    {
+     "tag": "TABLE",
+     "w": 823,
+     "text": "CriterionLimited (1-2)Adequate (3)Strong (4-5)PlacementRegio"
+    },
+    {
+     "tag": "TABLE",
+     "w": 823,
+     "text": "CriterionLimited (1-2)Adequate (3)Strong (4-5)BreadthDraws o"
+    }
+   ]
+  },
+  "consoleErrors": []
+ },
+ "unit-teacher-notes": {
+  "status": 200,
+  "title": "Unit 5 teacher notes | B.Ed Mega Textbook",
+  "h1": 1,
+  "headings": [
+   {
+    "lvl": 1,
+    "text": "Unit 5 teacher notes"
+   },
+   {
+    "lvl": 2,
+    "text": "The thing to get right in this unit"
+   },
+   {
+    "lvl": 2,
+    "text": "Sequencing across the two-week block"
+   },
+   {
+    "lvl": 2,
+    "text": "The misconceptions that recur"
+   },
+   {
+    "lvl": 2,
+    "text": "Handling what this unit surfaces about the profession"
+   },
+   {
+    "lvl": 2,
+    "text": "Practical work"
+   },
+   {
+    "lvl": 2,
+    "text": "Marking the unit assessment"
+   }
+  ],
+  "imgs": [],
+  "figs": [],
+  "linkCount": 16,
+  "vagueLinks": [],
+  "bareUrlLinks": 0,
+  "tables": [],
+  "hasSkipLink": true,
+  "headingOrderViolations": [],
+  "narrow": {
+   "docScrollW": 360,
+   "innerW": 360,
+   "horizontalPageScroll": false,
+   "clipped": []
+  },
+  "print": {
+   "hiddenInPrint": [
+    {
+     "tag": "UL",
+     "text": "The thing to get right in this unitSequencing across the two"
+    }
+   ],
+   "widerThanA4": []
+  },
+  "consoleErrors": []
+ }
+}
+# ---
+# exit_code: 0
+# finished_at: 2026-09-18T20:56:06Z

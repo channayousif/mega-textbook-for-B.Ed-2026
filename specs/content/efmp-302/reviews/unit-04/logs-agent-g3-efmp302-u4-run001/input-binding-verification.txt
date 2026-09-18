@@ -1,0 +1,34 @@
+Input binding verification - G3 EFMP-302 Unit 4 - run agent-g3-efmp302-u4-run001
+UTC 2026-09-18T20:57:43Z
+
+HEAD: ac13c5c3ca603ed07c649dc0e82c619189279265
+
+git status --short (content tree):
+  (no tracked-file changes)
+
+Untracked review-evidence directories present (this run and concurrent reviewers):
+?? specs/content/efmp-302/reviews/unit-03/logs-agent-g3-efmp302-u3-run001/
+?? specs/content/efmp-302/reviews/unit-03/render-agent-g3-efmp302-u3-run001/
+?? specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run001/
+?? specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run001/
+?? specs/content/efmp-302/reviews/unit-04/sources-agent-g3-efmp302-u4-run001/
+?? specs/content/efmp-302/reviews/unit-05/G3-run001-evidence/
+?? specs/content/efmp-302/reviews/unit-06/G3-run001/logs/
+?? specs/content/efmp-302/reviews/unit-06/G3-run001/render/
+
+Prepared manifest: specs/content/efmp-302/reviews/unit-04/G3-run001/manifest.json
+  prepared paths: 107  recomputed paths: 107
+  only in prepared: []
+  only in recomputed: []
+  digest mismatches: 0 []
+  prepared skill_digest: ecc109748e21917715f7903dfe419bf6c731a9f835561badb1bcbbb1268ed7c0
+  recomputed skillDigest(G3): ecc109748e21917715f7903dfe419bf6c731a9f835561badb1bcbbb1268ed7c0
+  required_criteria: ["authority","sources","coverage","assessment","accessibility","readability","pedagogy"]
+  RESULT: ALL 107 BOUND INPUTS VERIFIED - manifest matches the frozen checkout
+
+Figure assets on disk for this unit:
+ls: cannot access 'static/img/figures/efmp-302/unit-04/': No such file or directory
+
+Figure asset directories that DO exist for this course:
+unit-01
+unit-02

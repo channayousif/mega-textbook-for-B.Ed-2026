@@ -1,0 +1,102 @@
+### record: render-review (host browser / print inspection)
+### run_id: agent-g3-efmp302-u6-run001
+### reviewer_id: agent:g3-reviewer
+### note: this is NOT an npm script. It is the record of an actual headless-browser
+###       inspection of the served, pre-built site, driven from this session.
+
+## Rendered input identity
+repo_root         : /home/a2ahs/mega_book_for_B.Ed
+git_head          : ac13c5c3ca603ed07c649dc0e82c619189279265
+git_head_committed: 2026-09-18T15:50:47-05:00
+working_tree      : clean for all bound inputs (only untracked reviews/ evidence dirs present)
+build_artifact    : build/ (pre-built by parent; NOT rebuilt by this reviewer)
+build_mtime       : 2026-09-18 15:51:09 -0500  (postdates HEAD and all unit-06 source mtimes)
+unit_src_mtimes   : docs/semester-1/efmp-302/unit-06/*.mdx all 2026-09-15 06:23-06:24 -0500
+=> the served bytes correspond to the frozen manifest state.
+
+built page sha256 (English unit-06):
+26c690f7b76059a06da613d7ce5580f2c5c3660fd720e39cc069ecc8f5e8e5b6  build/semester-1/efmp-302/unit-06/index.html
+1f77b9cd6276c86db4b0c7bf3522e2606ef7172eb8daea1b6722b0ef198f03ff  build/semester-1/efmp-302/unit-06/topic-01/index.html
+51943cd15d07c8827229d084599e226fad5d1d38f47ad901a79750b085422e0d  build/semester-1/efmp-302/unit-06/topic-02/index.html
+3b4e25a72bd6868cd050ac77e20c76052de5d938eff384aa890d30abd9501d75  build/semester-1/efmp-302/unit-06/topic-03/index.html
+bbc54fef2bdaac7b712551b6a0b65bd395543d0fb6e1b7d484fe760a9fc635d2  build/semester-1/efmp-302/unit-06/topic-04/index.html
+9f7df1177e3bf6cfed22899a43e5ded226ec8a261a96455fad7a40c5b318f95a  build/semester-1/efmp-302/unit-06/unit-assessment/index.html
+51d028e415426b5805a84aaf547e091d6eed378a8622c1b50b8fa89178d355c1  build/semester-1/efmp-302/unit-06/unit-teacher-notes/index.html
+
+## Host / browser
+server   : npx docusaurus serve --port 3106 --no-open  (reserved port; no rebuild)
+           "[SUCCESS] Serving \"build\" directory at: http://localhost:3106/"
+browser  : Chromium 149.0.7827.0, headless, via the repository's own playwright 1.61.1
+driver   : node script executed from this session (playwright MCP was unusable:
+           "Chromium distribution 'chrome' is not found at /opt/google/chrome/chrome")
+pages    : /semester-1/efmp-302/unit-06/{,topic-01,topic-02,topic-03,topic-04,
+           unit-assessment,unit-teacher-notes}/
+
+## Viewport / print setup
+desktop : 1280x900,  media=screen, deviceScaleFactor=1, fullPage PNG
+narrow  : 360x780,   media=screen, deviceScaleFactor=1, fullPage PNG
+          (supplementary confirmation pass also at 414x896)
+print   : 794x1123 (A4 @96dpi), page.emulateMedia({media:'print'}),
+          fullPage PNG + page.pdf({format:'A4', printBackground:true})
+per-page audit recorded in render/agent-g3-efmp302-u6-run001.audit.json:
+  heading count + level order, <img> alt/naturalSize, <figure>/<figcaption>,
+  vague link text, document horizontal overflow, elements wider than the
+  viewport, table geometry, page/console errors, rendered text length.
+
+## Observations
+
+[OK] Heading structure: exactly one h1 per page; no skipped heading levels on any
+     page in any of the three views. Reading order follows the source order.
+[OK] Link text: no vague link text ("here", "click here", "read more") on any page.
+     The index "In this unit" links name their topic and subject.
+[OK] No page errors and no console errors on any page in any view.
+[OK] Print (A4) view: no element exceeds the 794px page box on any of the seven
+     pages. No clipped answers, rubrics or checklists in the print emulation; the
+     seven A4 PDFs were generated and retained.
+[OK] Topic pages at 360px: no element wider than the viewport; the 2-column
+     mini-rubric tables reflow correctly.
+
+[DEFECT-1] ZERO figures render on any page of this unit.
+     imgs=0 and figures=0 on all seven pages in all three views. All eight
+     figures (fig-U6-1 .. fig-U6-8) are still Spec 008 `{/* FIGURE[...] */}`
+     comment markers at `Status: prompt-only`, and MDX strips comments, so
+     nothing reaches the DOM. static/img/figures/efmp-302/unit-06/ does not
+     exist. Confirmed visually in
+     render/agent-g3-efmp302-u6-run001.topic-01.figure-region.desktop.png:
+     under "## A real classroom situation" there is no image, and the next
+     paragraph reads "The figure above sets it beside three things ...".
+     Six such dangling deictic references were found in the prose
+     (topic-01:44, topic-01:111, topic-03:39, topic-03:163, topic-04:44,
+     topic-04:92). A learner on the rendered page is pointed at content that
+     is not there. `check:figures` passes because a comment marker counts as a
+     carrier, which is exactly why this needs a rendered-page check.
+
+[DEFECT-2] ERQ rubric tables are CLIPPED and UNREACHABLE at phone widths.
+     Page: /semester-1/efmp-302/unit-06/unit-assessment/ ("### ERQ rubrics").
+     At viewport 360px: table box = 328px, but the header row lays out at
+     481px wide, right edge x=498.
+       "Criterion"     left  17 right 136  visible
+       "Limited (1-2)" left 136 right 249  visible
+       "Adequate (3)"  left 249 right 376  NOT visible
+       "Strong (4-5)"  left 376 right 498  NOT visible
+     At viewport 414px the "Strong (4-5)" column is still off-screen (x=376..498).
+     There is no recovery path: window.scrollTo(3000,y) leaves scrollX=0,
+     html/body overflow-x are both `visible`, and no ancestor of the table has
+     overflow-x auto/scroll with scrollWidth > clientWidth. The top performance
+     band of all five ERQ rubrics is therefore unreadable on a phone.
+     Visual evidence: render/agent-g3-efmp302-u6-run001.unit-assessment.rubric-clip.narrow360.png
+                      render/agent-g3-efmp302-u6-run001.unit-assessment.rubric-table.narrow.png
+     SCOPE CHECK (diagnostic, at 360px): the same overflow occurs on every
+     4-column ERQ rubric table in this course's other assessment pages -
+     unit-02 (5 tables, right edges 519-567), unit-05 (5 tables, 475-558),
+     unit-06 (5 tables, 492-539). unit-01 has no such table. This is therefore a
+     site-wide theme/CSS defect, not something Unit 6 introduced, and it is NOT
+     repairable by editing Unit 6 prose. Recorded as an accessibility failure on
+     the rendered page AND escalated as out-of-unit ownership.
+
+## Artifacts retained (all under specs/content/efmp-302/reviews/unit-06/G3-run001/render/)
+21 PNG  : 7 pages x {desktop, narrow, print}
+ 7 PDF  : 7 pages, A4 print
+ 2 PNG  : focused crops (topic-01 figure region; unit-assessment rubric table at 360px)
+ 2 PNG  : rubric clip confirmation at 360px and 414px
+ 1 JSON : full per-page machine audit
