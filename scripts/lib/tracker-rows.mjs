@@ -15,6 +15,14 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
+/**
+ * The tracker status meaning "agent-reviewed, published, final review pending"
+ * (Constitution Art. VII.7). Held here beside the parser so the gate, the
+ * status report and the tests all read one definition rather than three copies
+ * of an emoji literal.
+ */
+export const PROVISIONAL = '🟡';
+
 export function parseTasksTable(text) {
   const rows = [];
   for (const line of text.split(/\r?\n/)) {
@@ -50,6 +58,18 @@ export function latestRow(rows, unitLabel, stagePrefix) {
  * empty Reviewer cell - is `'open'`, because an unattributed tick is not
  * evidence that anyone reviewed anything.
  *
+ * `'provisional'` is the middle state: an agent review passed and the unit is
+ * published under a "Final Review Pending" notice, but nothing is certified.
+ * It is NOT done - Constitution Art. VII.6 forbids an agent review marking
+ * G3/G5 done before qualification, and Art. VII.7 permits exactly this
+ * published-but-uncertified state instead.
+ *
+ * Callers asking "is this finished" must test `=== 'done'`, never `!== 'open'`.
+ * Callers asking "does this still need a human" must test `!== 'done'`, never
+ * `=== 'open'` - a provisional unit is precisely the one most needing final
+ * review, so reading it as anything but outstanding work drops it out of the
+ * queue that exists to clear it.
+ *
  * Deliberately coarser than `check-pipeline-gate.mjs`'s `stageDone`, which
  * additionally validates agent evidence. This answers "should this unit appear
  * in a reviewer's queue", which is a question about work remaining, not a gate.
@@ -57,5 +77,6 @@ export function latestRow(rows, unitLabel, stagePrefix) {
 export function stageState(rows, unitLabel, stagePrefix) {
   const row = latestRow(rows, unitLabel, stagePrefix);
   if (!row) return 'open';
+  if (row.status === PROVISIONAL && row.reviewer) return 'provisional';
   return row.status === '✅' && row.reviewer ? 'done' : 'open';
 }

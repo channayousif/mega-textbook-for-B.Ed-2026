@@ -19,7 +19,15 @@ export type ContentStatusFigurePending = {
  * tracker at build time. The review queue is built from this, which is why
  * Postgres needs no queue table and learns nothing about a gate outcome.
  */
-export type ContentStatusGates = { G3: 'open' | 'done'; G5: 'open' | 'done' };
+export type ContentStatusGateState = 'open' | 'provisional' | 'done';
+
+/**
+ * `provisional` (Constitution Art. VII.7) is agent-reviewed and published under
+ * a "Final Review Pending" notice, but NOT certified. Ask `=== 'done'` for
+ * "is this finished" and `!== 'done'` for "does a human still owe this a pass".
+ * Reading provisional as either extreme is a bug in both directions.
+ */
+export type ContentStatusGates = { G3: ContentStatusGateState; G5: ContentStatusGateState };
 
 export type ContentStatusUnit = {
   unit_no: number;

@@ -3,6 +3,7 @@ import ContentOriginal from '@theme-original/DocItem/Content';
 import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useAuth } from '@site/src/contexts/AuthContext';
+import ReviewStatusBanner from '@site/src/components/ReviewStatusBanner';
 import { fetchOwnChecks, upsertCheck, mergeLocalChecks } from '@site/src/lib/selfAssessment';
 
 /**
@@ -351,5 +352,13 @@ export default function DocItemContentWrapper(props: Props): React.ReactElement 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [courseCode, unitNo, topicNo, locale, role, loading]);
 
-  return <ContentOriginal {...props} />;
+  // Rendered here rather than in MDX so every file of a provisional unit carries
+  // the notice - index, each topic, the assessment and the teacher notes, in both
+  // locales - with zero content edits and no manifest invalidation.
+  return (
+    <>
+      <ReviewStatusBanner courseCode={courseCode} unitNo={unitNo} />
+      <ContentOriginal {...props} />
+    </>
+  );
 }

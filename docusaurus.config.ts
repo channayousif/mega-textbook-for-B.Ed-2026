@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs';
 import { config as loadEnv } from 'dotenv';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
@@ -19,6 +20,37 @@ loadEnv({ path: '.env.local' });
  * - Offline bilingual local search via @easyops-cn/docusaurus-search-local.
  * Verify version-sensitive keys against current Docusaurus v3 docs (Context7).
  */
+/**
+ * Units resting at Constitution Art. VII.7 provisional review, as `COURSE:unit`
+ * keys, read at config time from the report `prebuild`/`prestart` just wrote.
+ *
+ * Read here rather than fetched in the browser so the "Final Review Pending"
+ * notice is server-rendered: a disclosure that appears only after hydration is
+ * invisible to crawlers and flashes in late for readers, which is exactly the
+ * wrong behaviour for a notice about content trustworthiness. (Footer.tsx's
+ * runtime `fetchContentIndex` is fine for a "mark as studied" button; this is
+ * not that.)
+ *
+ * Fails soft: a missing or malformed report means no banners, never a broken
+ * build - `docusaurus start` can run before the report exists.
+ */
+function provisionalUnits(): string[] {
+  try {
+    const report = JSON.parse(readFileSync('./static/content-status.json', 'utf8'));
+    const keys: string[] = [];
+    for (const course of report.courses ?? []) {
+      for (const unit of course.units ?? []) {
+        if (unit.gates?.G3 === 'provisional' || unit.gates?.G5 === 'provisional') {
+          keys.push(`${course.course_code}:${unit.unit_no}`);
+        }
+      }
+    }
+    return keys.sort();
+  } catch {
+    return [];
+  }
+}
+
 const config: Config = {
   title: 'B.Ed Mega Textbook',
   tagline: 'Bilingual digital textbook for the B.Ed (4-Year) programme',
@@ -58,6 +90,7 @@ const config: Config = {
   customFields: {
     supabaseUrl: process.env.DOCUSAURUS_SUPABASE_URL ?? '',
     supabaseAnonKey: process.env.DOCUSAURUS_SUPABASE_ANON_KEY ?? '',
+    provisionalUnits: provisionalUnits(),
   },
 
   presets: [
