@@ -59,7 +59,7 @@ register pass; `translation_status: reviewed` on all EN and UR unit-01 files;
 | Unit 1 | G6 assets | ✅ | YM | |
 | Unit 1 | G7 publish | ✅ | YM | |
 | Unit 2 | G1 unit-spec | ✅ | YM | per-topic G1 blocks added 2026-09-14; the guide-2.3 split across topics 2.3 and 2.4 was confirmed by the curriculum owner 2026-09-15 |
-| Unit 2 | G2 en-draft | ▣ | | re-opened 2026-09-14: re-drafted from the legacy five-file layout to the per-topic standard (style guide v4.4); 141 reading-min across 7 files; 8 figure markers at prompt-only |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-302/reviews/unit-02/G2/20260918T202032441Z-gates.json |
 | Unit 2 | G3 en-review | ▣ | | re-opened 2026-09-14: the previous ✅ certified the legacy draft, which no longer exists. Awaiting a Content-gate pass on the new draft |
 | Unit 2 | G4 ur-translation | ▢ | | scope changed to the per-topic layout. The legacy UR drafts were removed as orphans; under ADR-0022 the Urdu mirror arrives in the corpus-wide translation phase, and this unit is the designated Urdu rate probe |
 | Unit 2 | G5 ur-review | ▢ | | scope changed to the per-topic layout; 18 authored Urdu concept labels in concepts/unit-02.md need review |
