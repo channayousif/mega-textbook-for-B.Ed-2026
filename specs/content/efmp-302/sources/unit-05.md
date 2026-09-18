@@ -31,6 +31,14 @@ standing note on the evidence.
 The alternative would have been to attach a plausible-looking citation to a claim it does not
 support, which is precisely the defect the Unit 2 and Unit 3 reviews found.
 
+
+## Unverifiable sources
+
+Bound excerpts could not be committed for these keys. Recorded here so `check:depth-gate`
+and any G3 reviewer see the limitation explicitly rather than inferring it from silence.
+
+- little2001: Crossref record exact, but OpenAlex carries no abstract and Semantic Scholar reports the abstract elided with access CLOSED. Support for topic-01's multi-grade classroom material rests on title and bibliographic level only. The unit discloses this and marks the following inference as its own.
+
 | Key | Citation | URL/DOI | Supports | Kind |
 |---|---|---|---|---|
 | maslach2016 | Maslach, C., & Leiter, M. P. (2016). Understanding the burnout experience: Recent research and its implications for psychiatry. *World Psychiatry, 15*(2), 103-111. | https://doi.org/10.1002/wps.20311 | topic-01.mdx U5-02 (the burnout construct and its three dimensions). **Scope: human-service occupations, health care in particular; not a study of teachers.** The application to classrooms is an extension, and the topic says so | curated-supplementary |

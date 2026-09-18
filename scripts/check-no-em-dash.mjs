@@ -27,7 +27,7 @@
  */
 
 import { readdirSync, readFileSync, statSync, existsSync } from 'node:fs';
-import { join, extname } from 'node:path';
+import { join, extname, sep } from 'node:path';
 import { CONTENT_ROOTS } from './lib/content-roots.mjs';
 
 // Track content roots come from content-roots.mjs so a new track is scanned
@@ -58,6 +58,11 @@ function* walk(dir) {
   for (const entry of entries) {
     if (entry === 'node_modules' || entry.startsWith('.')) continue;
     const full = join(dir, entry);
+    // `sources/texts/` holds VERBATIM third-party excerpts bound into the review
+    // manifest so a G3 reviewer can check that a source supports the claim citing
+    // it. Normalising a quotation to house style would falsify the evidence, which
+    // defeats the only reason the file exists. The rule governs authored prose.
+    if (full.endsWith(`${sep}sources${sep}texts`)) continue;
     if (statSync(full).isDirectory()) yield* walk(full);
     else if (SCAN_EXTENSIONS.has(extname(full))) yield full;
   }

@@ -26,6 +26,19 @@ No `no-external-source` row was needed for this unit, unlike Unit 5: the guide's
 the international professional-development literature, which is well served by the sources already
 on the course list.
 
+
+## Unverifiable sources
+
+Bound excerpts could not be committed for these keys. Recorded here so `check:depth-gate`
+and any G3 reviewer see the limitation explicitly rather than inferring it from silence.
+
+- guskey2000: Print-only book, no text bound and not retrievable by the reviewing host.
+- day1999: Print-only book, not retrievable. The Unit 6 G3 review also questioned the coverage mapping: U6-04/05/06 are grounded in day1999 but topic-02 cites Day once and only for preservice.
+- villegas2003: Print-only book, not retrievable by the reviewing host.
+- brookfield2017: Print-only book, not retrievable. Same key as Unit 3.
+- hennessy2022: Not retrievable by the reviewing host. The review also flagged topic-03's 'completion rates for self-directed online courses are notoriously low' as outside this source's recorded scope.
+- kwakman2003: Not retrievable by the reviewing host.
+
 | Key | Citation | URL/DOI | Supports | Kind |
 |---|---|---|---|---|
 | guskey2000 | Guskey, T. R. (2000). *Evaluating professional development*. Corwin Press. | (print) | topic-01.mdx U6-01 (why evaluation must reach past attendance and satisfaction to changed practice and pupil outcomes); topic-04.mdx U6-12, U6-13 (what a plan must contain to be evaluable) | guide-required |

@@ -95,7 +95,8 @@ function makeLegacyUnit(root, courseCode, unitNo) {
   mkdirSync(join(courseDir, 'sources'), { recursive: true });
   writeFileSync(
     join(courseDir, 'sources', `unit-${String(unitNo).padStart(2, '0')}.md`),
-    '| Key | Citation | URL/DOI | Supports | Kind |\n|---|---|---|---|---|\n| src1 | A source. | (print) | U1-01 | guide-required |\n',
+    '## Unverifiable sources\n\n- src1: synthetic test fixture, no source text bound.\n\n'
+      + '| Key | Citation | URL/DOI | Supports | Kind |\n|---|---|---|---|---|\n| src1 | A source. | (print) | U1-01 | guide-required |\n',
   );
   return unitDir;
 }
