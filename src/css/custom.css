@@ -261,6 +261,7 @@ html[data-theme='dark'] .bloom-tag {
   background-size: 34px 100%, 34px 100%, 14px 100%, 14px 100%;
   background-attachment: local, local, scroll, scroll;
 }
+.markdown figure[data-scrollable='true']:focus-visible,
 .markdown table[data-scrollable='true']:focus-visible {
   outline: 3px solid var(--ifm-color-primary);
   outline-offset: 2px;
