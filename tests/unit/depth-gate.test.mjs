@@ -238,6 +238,38 @@ describe('check-unit-depth.mjs', () => {
     expect(out).toMatch(/hargreaves2000/);
   });
 
+  // (e3) sources scope vs coverage - added after the EFMP-302 Unit 3 G3 run-004 review
+  // found the Supports cell, the unverifiable declaration and the coverage matrix all
+  // disagreeing at once, leaving a sub-topic resting on an unread source that nothing
+  // disclosed. Three earlier review cycles missed it; a mechanical check does not.
+  it('fails when a Supports cell omits a sub-topic the coverage matrix grounds in that key', () => {
+    root = makeDepthFixture({
+      sourcesTable: '| Key | Citation | URL/DOI | Supports | Kind |\n|---|---|---|---|---|\n'
+        + '| carr2000 | Carr, D. (2000). | (print) | U1-01 | guide-required |\n',
+    });
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/omits U1-02.*hides an unverified dependency/);
+  });
+
+  it('fails when a Supports cell claims a sub-topic the coverage matrix does not ground in it', () => {
+    root = makeDepthFixture({
+      sourcesTable: '| Key | Citation | URL/DOI | Supports | Kind |\n|---|---|---|---|---|\n'
+        + '| carr2000 | Carr, D. (2000). | (print) | U1-01, U1-02, U1-09 | guide-required |\n',
+    });
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/claims U1-09, which the coverage matrix does not ground/);
+  });
+
+  it('reads a slash-joined run as every ID in it, not just the first', () => {
+    root = makeDepthFixture({
+      sourcesTable: '| Key | Citation | URL/DOI | Supports | Kind |\n|---|---|---|---|---|\n'
+        + '| carr2000 | Carr, D. (2000). | (print) | U1-01/02 | guide-required |\n',
+    });
+    expect(runGate(root).code).toBe(0);
+  });
+
   // (g) orphan sources Key
   it('fails when a non-no-external-source sources Key is unreferenced by the coverage matrix', () => {
     root = makeDepthFixture({

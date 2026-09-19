@@ -1,0 +1,167 @@
+# render-review, EFMP-302 Unit 4, G3 run 004
+host: http://localhost:3104 (npm run serve -- --port 3104, prebuilt build/ at commit 70233c4)
+browser: 149.0.7827.0 (playwright chromium)
+started: 2026-09-19T08:52:05.789Z
+
+## DESKTOP 1280x900
+
+### http://localhost:3104/semester-1/efmp-302/unit-04  HTTP 200
+ h1: The Professional Standards and Competencies for Teachers
+ headings: 5 (H1,H2,H2,H2,H2)
+ figures: 0 []
+ imgs without alt: 0; non-descriptive link texts: []
+ page horizontal overflow: 0px
+
+### http://localhost:3104/semester-1/efmp-302/unit-04/topic-01  HTTP 200
+ h1: Topic 4.1 - What professional standards are for
+ headings: 14 (H1,H2,H2,H3,H3,H3,H3,H2,H2,H2,H2,H2,H2,H2)
+ figures: 2 ["fig-U4-1","fig-U4-2"]
+ imgs without alt: 0; non-descriptive link texts: []
+ page horizontal overflow: 0px
+  img /img/figures/efmp-302/unit-04/fig-U4-1.svg naturalWidth=300 display=inline alt="Table comparing a professional standard, a code of conduct and a curriculum by the question each answers, what"
+  img /img/figures/efmp-302/unit-04/fig-U4-1.dark.svg naturalWidth=0 display=none alt="Table comparing a professional standard, a code of conduct and a curriculum by the question each answers, what"
+  img /img/figures/efmp-302/unit-04/fig-U4-2.svg naturalWidth=293 display=inline alt="Concept map of a professional standard at the centre with four branches - initial training, continuing develop"
+  img /img/figures/efmp-302/unit-04/fig-U4-2.dark.svg naturalWidth=0 display=none alt="Concept map of a professional standard at the centre with four branches - initial training, continuing develop"
+
+### http://localhost:3104/semester-1/efmp-302/unit-04/topic-02  HTTP 200
+ h1: Topic 4.2 - Pakistan's National Professional Standards for Teachers
+ headings: 13 (H1,H2,H2,H3,H3,H3,H2,H2,H2,H2,H2,H2,H2)
+ figures: 2 ["fig-U4-3","fig-U4-4"]
+ imgs without alt: 0; non-descriptive link texts: []
+ page horizontal overflow: 0px
+  img /img/figures/efmp-302/unit-04/fig-U4-3.svg naturalWidth=281 display=inline alt="Nesting diagram of a professional standard containing knowledge, dispositions and performance bands, with indi"
+  img /img/figures/efmp-302/unit-04/fig-U4-3.dark.svg naturalWidth=0 display=none alt="Nesting diagram of a professional standard containing knowledge, dispositions and performance bands, with indi"
+  img /img/figures/efmp-302/unit-04/fig-U4-4.svg naturalWidth=252 display=inline alt="Table listing the ten National Professional Standards for Teachers in Pakistan, each with its focus and an exa"
+  img /img/figures/efmp-302/unit-04/fig-U4-4.dark.svg naturalWidth=0 display=none alt="Table listing the ten National Professional Standards for Teachers in Pakistan, each with its focus and an exa"
+
+### http://localhost:3104/semester-1/efmp-302/unit-04/topic-03  HTTP 200
+ h1: Topic 4.3 - Using a standard on yourself
+ headings: 12 (H1,H2,H2,H3,H3,H2,H2,H2,H2,H2,H2,H2)
+ figures: 2 ["fig-U4-5","fig-U4-6"]
+ imgs without alt: 0; non-descriptive link texts: []
+ page horizontal overflow: 0px
+  img /img/figures/efmp-302/unit-04/fig-U4-5.svg naturalWidth=275 display=inline alt="Flowchart of a five-station self-evaluation loop - choose an indicator, collect evidence, judge the gap, plan "
+  img /img/figures/efmp-302/unit-04/fig-U4-5.dark.svg naturalWidth=0 display=none alt="Flowchart of a five-station self-evaluation loop - choose an indicator, collect evidence, judge the gap, plan "
+  img /img/figures/efmp-302/unit-04/fig-U4-6.svg naturalWidth=300 display=inline alt="Table of evidence types against an indicator - pupil work, observation, planning documents, pupil voice and th"
+  img /img/figures/efmp-302/unit-04/fig-U4-6.dark.svg naturalWidth=0 display=none alt="Table of evidence types against an indicator - pupil work, observation, planning documents, pupil voice and th"
+
+### http://localhost:3104/semester-1/efmp-302/unit-04/topic-04  HTTP 200
+ h1: Topic 4.4 - Licensing, certification and appraisal
+ headings: 13 (H1,H2,H2,H3,H3,H3,H2,H2,H2,H2,H2,H2,H2)
+ figures: 2 ["fig-U4-7","fig-U4-8"]
+ imgs without alt: 0; non-descriptive link texts: []
+ page horizontal overflow: 0px
+  img /img/figures/efmp-302/unit-04/fig-U4-7.svg naturalWidth=300 display=inline alt="Timeline of a teaching career marking where standards are applied - admission, certification, licensing, proba"
+  img /img/figures/efmp-302/unit-04/fig-U4-7.dark.svg naturalWidth=0 display=none alt="Timeline of a teaching career marking where standards are applied - admission, certification, licensing, proba"
+  img /img/figures/efmp-302/unit-04/fig-U4-8.svg naturalWidth=281 display=inline alt="Diagram splitting an appraisal instrument into formative and summative halves, each with its purpose, requirem"
+  img /img/figures/efmp-302/unit-04/fig-U4-8.dark.svg naturalWidth=0 display=none alt="Diagram splitting an appraisal instrument into formative and summative halves, each with its purpose, requirem"
+
+### http://localhost:3104/semester-1/efmp-302/unit-04/unit-assessment  HTTP 200
+ h1: Unit 4 assessment
+ headings: 10 (H1,H2,H2,H3,H3,H3,H2,H3,H3,H3)
+ figures: 0 []
+ imgs without alt: 0; non-descriptive link texts: []
+ page horizontal overflow: 0px
+
+### http://localhost:3104/semester-1/efmp-302/unit-04/unit-teacher-notes  HTTP 200
+ h1: Unit 4 teacher notes
+ headings: 7 (H1,H2,H2,H2,H2,H2,H2)
+ figures: 0 []
+ imgs without alt: 0; non-descriptive link texts: []
+ page horizontal overflow: 0px
+
+## MCQ list structure in built DOM (unit-assessment)
+ ordered-list items: 10
+  MCQ-01 nestedOptionList=true opts=4 ["a) How should I behave?","b) What does competent practice look like, in a checkable ","c) What should pupils learn?","d) Which teaching method is correct?"]
+  MCQ-02 nestedOptionList=true opts=4 ["a) written down","b) shared across schools","c) approved by a ministry","d) specific enough to be evidenced"]
+  MCQ-03 nestedOptionList=true opts=4 ["a) applying a standard for a use it was not designed for","b) efficient reuse of an existing instrument","c) a breach of the code of conduct","d) summative appraisal working as intended"]
+  MCQ-04 nestedOptionList=true opts=4 ["a) 1999 by the Higher Education Commission","b) 2015 by NACTE","c) 2009 by the Ministry of Education","d) 2009 by UNESCO alone"]
+  MCQ-05 nestedOptionList=true opts=4 ["a) aims, methods and outcomes","b) knowledge and understanding, dispositions, and performa","c) novice, proficient and expert levels","d) primary, elementary and secondary bands"]
+  MCQ-06 nestedOptionList=true opts=4 ["a) Maintains a positive classroom climate","b) Displays pupils' work on the classroom walls","c) Keeps an up-to-date seating plan","d) Pupils volunteer answers, including incorrect ones, wit"]
+  MCQ-07 nestedOptionList=true opts=4 ["a) it is quicker","b) the appraiser requires it in that order","c) a judgement formed first selects the evidence that conf","d) evidence is harder to collect afterwards"]
+  MCQ-08 nestedOptionList=true opts=4 ["a) Planning documents","b) Pupil voice","c) Pupil work","d) Observation by a colleague"]
+  MCQ-09 nestedOptionList=true opts=4 ["a) was this person prepared?","b) is this person currently fit to practise?","c) how is this person doing this year?","d) which subject may this person teach?"]
+  MCQ-10 nestedOptionList=true opts=4 ["a) formative, because development matters more","b) neither, because it will be ignored","c) summative, because that is the version with consequence","d) both equally"]
+ RRQ ordered-list items: 10
+ saved renders-.../unit-assessment-mcq-desktop.png
+ saved renders-.../topic-04-desktop-full.png (full page)
+
+## NARROW 360x740 (Pixel-class, dsf 2, isMobile)
+
+### /index  page horizontal overflow: 0px
+
+### /topic-01  page horizontal overflow: 0px
+  figure fig-U4-1.svg: box=328 content=900 img=900 overflow-x=auto tabindex=null role=null aria-label=null
+  figure fig-U4-2.svg: box=328 content=900 img=900 overflow-x=auto tabindex=null role=null aria-label=null
+  table[0]: scrollW=328 clientW=328 overflow-x=visible tabindex=null role=null aria=null
+
+### /topic-02  page horizontal overflow: 0px
+  figure fig-U4-3.svg: box=328 content=880 img=880 overflow-x=auto tabindex=null role=null aria-label=null
+  figure fig-U4-4.svg: box=328 content=940 img=940 overflow-x=auto tabindex=null role=null aria-label=null
+  table[0]: scrollW=328 clientW=328 overflow-x=visible tabindex=null role=null aria=null
+
+### /topic-03  page horizontal overflow: 0px
+  figure fig-U4-5.svg: box=328 content=880 img=880 overflow-x=auto tabindex=null role=null aria-label=null
+  figure fig-U4-6.svg: box=328 content=900 img=900 overflow-x=auto tabindex=null role=null aria-label=null
+  table[0]: scrollW=328 clientW=328 overflow-x=visible tabindex=null role=null aria=null
+
+### /topic-04  page horizontal overflow: 0px
+  figure fig-U4-7.svg: box=328 content=920 img=920 overflow-x=auto tabindex=null role=null aria-label=null
+  figure fig-U4-8.svg: box=328 content=880 img=880 overflow-x=auto tabindex=null role=null aria-label=null
+  table[0]: scrollW=328 clientW=328 overflow-x=visible tabindex=null role=null aria=null
+
+### /unit-assessment  page horizontal overflow: 0px
+  table[0]: scrollW=328 clientW=328 overflow-x=visible tabindex=null role=null aria=null
+  table[1]: scrollW=328 clientW=328 overflow-x=visible tabindex=null role=null aria=null
+  table[2]: scrollW=328 clientW=328 overflow-x=visible tabindex=null role=null aria=null
+  table[3]: scrollW=328 clientW=328 overflow-x=visible tabindex=null role=null aria=null
+  table[4]: scrollW=328 clientW=328 overflow-x=visible tabindex=null role=null aria=null
+
+### /unit-teacher-notes  page horizontal overflow: 0px
+
+ saved renders-.../topic-04-narrow-360.png
+ saved renders-.../unit-assessment-narrow-360.png
+
+## A4 PRINT EMULATION (794x1123 CSS px, media=print)
+
+### /index print: overflow=0px textLen=3645
+  tables: 0, clipped: 0 []
+
+### /topic-01 print: overflow=0px textLen=12606
+  figure fig-U4-1.svg: 640x286 clipped=false display=block
+  figure fig-U4-2.svg: 640x328 clipped=false display=block
+  tables: 1, clipped: 0 []
+
+### /topic-02 print: overflow=0px textLen=11712
+  figure fig-U4-3.svg: 640x343 clipped=false display=block
+  figure fig-U4-4.svg: 640x382 clipped=false display=block
+  tables: 1, clipped: 0 []
+
+### /topic-03 print: overflow=0px textLen=10375
+  figure fig-U4-5.svg: 760x415 clipped=false display=block
+  figure fig-U4-6.svg: 640x300 clipped=false display=block
+  tables: 1, clipped: 0 []
+
+### /topic-04 print: overflow=0px textLen=12387
+  figure fig-U4-7.svg: 760x356 clipped=false display=block
+  figure fig-U4-8.svg: 640x343 clipped=false display=block
+  tables: 1, clipped: 0 []
+
+### /unit-assessment print: overflow=0px textLen=14445
+  tables: 5, clipped: 0 []
+  'Answers and marking guidance' heading display in print: ["block"]
+
+### /unit-teacher-notes print: overflow=0px textLen=5378
+  tables: 0, clipped: 0 []
+
+ saved renders-.../unit-assessment-print-a4.png
+ saved renders-.../topic-04-print-a4.png
+
+## DARK THEME 1280x900
+  fig-U4-7.svg display=none naturalWidth=300
+  fig-U4-7.dark.svg display=inline-block naturalWidth=300
+  fig-U4-8.svg display=none naturalWidth=281
+  fig-U4-8.dark.svg display=inline-block naturalWidth=281
+ saved renders-.../topic-04-dark-desktop.png
+
+completed: 2026-09-19T08:52:39.394Z
