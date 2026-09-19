@@ -1,0 +1,138 @@
+### render-review  EFMP-302 Unit 5  run agent-g3-efmp302-u5-run007
+### host: docusaurus serve (fresh build) at http://127.0.0.1:4599
+### browser: chromium 149.0.7827.0
+### started: 2026-09-19T17:04:45.613Z
+
+===== A. DESKTOP 1280x900 (light) =====
+
+-- index: headings=7 imgs=0 brokenImgs=0 missingAlt=0 bareUrlLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+-- topic-01: headings=15 imgs=4 brokenImgs=2 missingAlt=0 bareUrlLinks=4 hOverflow=false
+   heading order: no skipped levels
+   img /img/figures/efmp-302/unit-05/fig-U5-1.svg natural=287x150 shown=true alt="Table itemising a teacher's working week by activity, showing rough hours, whether each ac"
+   img /img/figures/efmp-302/unit-05/fig-U5-1.dark.svg natural=0x0 shown=false alt="Table itemising a teacher's working week by activity, showing rough hours, whether each ac"
+   img /img/figures/efmp-302/unit-05/fig-U5-2.svg natural=300x140 shown=true alt="Flowchart from sustainable demand through episodic stress and chronic unresolved demand to"
+   img /img/figures/efmp-302/unit-05/fig-U5-2.dark.svg natural=0x0 shown=false alt="Flowchart from sustainable demand through episodic stress and chronic unresolved demand to"
+   BROKEN: /img/figures/efmp-302/unit-05/fig-U5-1.dark.svg, /img/figures/efmp-302/unit-05/fig-U5-2.dark.svg
+
+-- topic-02: headings=13 imgs=4 brokenImgs=2 missingAlt=0 bareUrlLinks=3 hOverflow=false
+   heading order: no skipped levels
+   img /img/figures/efmp-302/unit-05/fig-U5-3.svg natural=294x150 shown=true alt="Concept map of a teacher surrounded by six parties making demands - pupils, parents, head,"
+   img /img/figures/efmp-302/unit-05/fig-U5-3.dark.svg natural=0x0 shown=false alt="Concept map of a teacher surrounded by six parties making demands - pupils, parents, head,"
+   img /img/figures/efmp-302/unit-05/fig-U5-4.svg natural=300x137 shown=true alt="Table comparing teaching with medicine, law, engineering and nursing on pay, entry selecti"
+   img /img/figures/efmp-302/unit-05/fig-U5-4.dark.svg natural=0x0 shown=false alt="Table comparing teaching with medicine, law, engineering and nursing on pay, entry selecti"
+   BROKEN: /img/figures/efmp-302/unit-05/fig-U5-3.dark.svg, /img/figures/efmp-302/unit-05/fig-U5-4.dark.svg
+
+-- topic-03: headings=12 imgs=4 brokenImgs=2 missingAlt=0 bareUrlLinks=1 hOverflow=false
+   heading order: no skipped levels
+   img /img/figures/efmp-302/unit-05/fig-U5-5.svg natural=300x133 shown=true alt="Table judging four proposed classroom technology uses by what each adds, what it costs, wh"
+   img /img/figures/efmp-302/unit-05/fig-U5-5.dark.svg natural=0x0 shown=false alt="Table judging four proposed classroom technology uses by what each adds, what it costs, wh"
+   img /img/figures/efmp-302/unit-05/fig-U5-6.svg natural=281x150 shown=true alt="Diagram of overlapping professional and personal digital regions, with the crossing cases "
+   img /img/figures/efmp-302/unit-05/fig-U5-6.dark.svg natural=0x0 shown=false alt="Diagram of overlapping professional and personal digital regions, with the crossing cases "
+   BROKEN: /img/figures/efmp-302/unit-05/fig-U5-5.dark.svg, /img/figures/efmp-302/unit-05/fig-U5-6.dark.svg
+
+-- topic-04: headings=12 imgs=4 brokenImgs=2 missingAlt=0 bareUrlLinks=2 hOverflow=false
+   heading order: no skipped levels
+   img /img/figures/efmp-302/unit-05/fig-U5-7.svg natural=281x150 shown=true alt="Concentric circles diagram showing what a teacher controls, what they can influence, and t"
+   img /img/figures/efmp-302/unit-05/fig-U5-7.dark.svg natural=0x0 shown=false alt="Concentric circles diagram showing what a teacher controls, what they can influence, and t"
+   img /img/figures/efmp-302/unit-05/fig-U5-8.svg natural=287x150 shown=true alt="Flowchart turning a named challenge into one change - name it, place it in control or infl"
+   img /img/figures/efmp-302/unit-05/fig-U5-8.dark.svg natural=0x0 shown=false alt="Flowchart turning a named challenge into one change - name it, place it in control or infl"
+   BROKEN: /img/figures/efmp-302/unit-05/fig-U5-7.dark.svg, /img/figures/efmp-302/unit-05/fig-U5-8.dark.svg
+
+-- unit-assessment: headings=10 imgs=0 brokenImgs=0 missingAlt=0 bareUrlLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+-- unit-teacher-notes: headings=7 imgs=0 brokenImgs=0 missingAlt=0 bareUrlLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+===== B. NARROW 360x780 (small screen) =====
+
+-- index: documentHorizontalOverflow=0px  figures=0  tables=0  spillElems=0
+
+-- topic-01: documentHorizontalOverflow=0px  figures=2  tables=1  spillElems=2
+   fig[0] figure figure--table overflowX=auto client=328 scroll=880 scrollable=true tabindex=0 role=region aria-label=Scrollable figure, scroll sideways to see the whole diagram
+   fig[1] figure figure--flowchart overflowX=auto client=328 scroll=1030 scrollable=true tabindex=0 role=region aria-label=Scrollable figure, scroll sideways to see the whole diagram
+   table[0] client=328 scroll=328 overflowX=visible scrollable=false tabindex=null aria-label=null lastHeader="What a strong response d"
+   SPILL past viewport: IMG.figure__img, IMG.figure__img
+
+-- topic-02: documentHorizontalOverflow=0px  figures=2  tables=1  spillElems=2
+   fig[0] figure figure--concept-map overflowX=auto client=328 scroll=920 scrollable=true tabindex=0 role=region aria-label=Scrollable figure, scroll sideways to see the whole diagram
+   fig[1] figure figure--table overflowX=auto client=328 scroll=900 scrollable=true tabindex=0 role=region aria-label=Scrollable figure, scroll sideways to see the whole diagram
+   table[0] client=328 scroll=328 overflowX=visible scrollable=false tabindex=null aria-label=null lastHeader="What a strong response d"
+   SPILL past viewport: IMG.figure__img, IMG.figure__img
+
+-- topic-03: documentHorizontalOverflow=0px  figures=2  tables=1  spillElems=2
+   fig[0] figure figure--table overflowX=auto client=328 scroll=900 scrollable=true tabindex=0 role=region aria-label=Scrollable figure, scroll sideways to see the whole diagram
+   fig[1] figure figure--diagram overflowX=auto client=328 scroll=880 scrollable=true tabindex=0 role=region aria-label=Scrollable figure, scroll sideways to see the whole diagram
+   table[0] client=328 scroll=328 overflowX=visible scrollable=false tabindex=null aria-label=null lastHeader="What a strong response d"
+   SPILL past viewport: IMG.figure__img, IMG.figure__img
+
+-- topic-04: documentHorizontalOverflow=0px  figures=2  tables=1  spillElems=2
+   fig[0] figure figure--diagram overflowX=auto client=328 scroll=880 scrollable=true tabindex=0 role=region aria-label=Scrollable figure, scroll sideways to see the whole diagram
+   fig[1] figure figure--flowchart overflowX=auto client=328 scroll=900 scrollable=true tabindex=0 role=region aria-label=Scrollable figure, scroll sideways to see the whole diagram
+   table[0] client=328 scroll=328 overflowX=visible scrollable=false tabindex=null aria-label=null lastHeader="What a strong response d"
+   SPILL past viewport: IMG.figure__img, IMG.figure__img
+
+-- unit-assessment: documentHorizontalOverflow=0px  figures=0  tables=5  spillElems=8
+   table[0] client=328 scroll=328 overflowX=visible scrollable=false tabindex=null aria-label=null lastHeader="Strong (4-5)"
+   table[1] client=328 scroll=328 overflowX=visible scrollable=false tabindex=null aria-label=null lastHeader="Strong (4-5)"
+   table[2] client=328 scroll=328 overflowX=visible scrollable=false tabindex=null aria-label=null lastHeader="Strong (4-5)"
+   table[3] client=328 scroll=328 overflowX=visible scrollable=false tabindex=null aria-label=null lastHeader="Strong (4-5)"
+   table[4] client=328 scroll=328 overflowX=visible scrollable=false tabindex=null aria-label=null lastHeader="Strong (4-5)"
+   SPILL past viewport: THEAD., TR., TH., TH., TBODY., TR., TD., TD.
+
+-- unit-teacher-notes: documentHorizontalOverflow=0px  figures=0  tables=0  spillElems=0
+
+===== C. A4 PRINT EMULATION =====
+
+-- index @print(794px): overflowingElems=0 figureImgs=0 answerHeadings=[]
+
+-- topic-01 @print(794px): overflowingElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/efmp-302/unit-05/fig-U5-1.svg w=640 right=717 fits
+   printfig /img/figures/efmp-302/unit-05/fig-U5-1.dark.svg w=0 right=0 fits
+   printfig /img/figures/efmp-302/unit-05/fig-U5-2.svg w=760 right=777 fits
+   printfig /img/figures/efmp-302/unit-05/fig-U5-2.dark.svg w=0 right=0 fits
+
+-- topic-02 @print(794px): overflowingElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/efmp-302/unit-05/fig-U5-3.svg w=640 right=717 fits
+   printfig /img/figures/efmp-302/unit-05/fig-U5-3.dark.svg w=0 right=0 fits
+   printfig /img/figures/efmp-302/unit-05/fig-U5-4.svg w=640 right=717 fits
+   printfig /img/figures/efmp-302/unit-05/fig-U5-4.dark.svg w=0 right=0 fits
+
+-- topic-03 @print(794px): overflowingElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/efmp-302/unit-05/fig-U5-5.svg w=640 right=717 fits
+   printfig /img/figures/efmp-302/unit-05/fig-U5-5.dark.svg w=0 right=0 fits
+   printfig /img/figures/efmp-302/unit-05/fig-U5-6.svg w=640 right=717 fits
+   printfig /img/figures/efmp-302/unit-05/fig-U5-6.dark.svg w=0 right=0 fits
+
+-- topic-04 @print(794px): overflowingElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/efmp-302/unit-05/fig-U5-7.svg w=640 right=717 fits
+   printfig /img/figures/efmp-302/unit-05/fig-U5-7.dark.svg w=0 right=0 fits
+   printfig /img/figures/efmp-302/unit-05/fig-U5-8.svg w=760 right=777 fits
+   printfig /img/figures/efmp-302/unit-05/fig-U5-8.dark.svg w=0 right=0 fits
+
+-- unit-assessment @print(794px): overflowingElems=0 figureImgs=0 answerHeadings=["Answers and marking guidance​","MCQ answer key​","RRQ model answers and mark schemes​","ERQ rubrics​"]
+
+-- unit-teacher-notes @print(794px): overflowingElems=0 figureImgs=0 answerHeadings=["Marking the unit assessment​"]
+
+===== D. SVG TEXT GEOMETRY, measured in-browser =====
+   fig-U5-1.light  viewBox=880x460 texts=41 wordmark@x=775.6 -> clean
+   fig-U5-1.dark  viewBox=880x460 texts=41 wordmark@x=775.6 -> clean
+   fig-U5-2.light  viewBox=1030x480 texts=27 wordmark@x=925.8 -> clean
+   fig-U5-2.dark  viewBox=1030x480 texts=27 wordmark@x=925.8 -> clean
+   fig-U5-3.light  viewBox=920x470 texts=24 wordmark@x=815.8 -> clean
+   fig-U5-3.dark  viewBox=920x470 texts=24 wordmark@x=815.8 -> clean
+   fig-U5-4.light  viewBox=900x410 texts=36 wordmark@x=795.7 -> clean
+   fig-U5-4.dark  viewBox=900x410 texts=36 wordmark@x=795.7 -> clean
+   fig-U5-5.light  viewBox=900x400 texts=46 wordmark@x=795.7 -> clean
+   fig-U5-5.dark  viewBox=900x400 texts=46 wordmark@x=795.7 -> clean
+   fig-U5-6.light  viewBox=880x470 texts=22 wordmark@x=775.6 -> clean
+   fig-U5-6.dark  viewBox=880x470 texts=22 wordmark@x=775.6 -> clean
+   fig-U5-7.light  viewBox=880x470 texts=24 wordmark@x=775.6 -> clean
+   fig-U5-7.dark  viewBox=880x470 texts=24 wordmark@x=775.6 -> clean
+   fig-U5-8.light  viewBox=900x470 texts=19 wordmark@x=795.7 -> clean
+   fig-U5-8.dark  viewBox=900x470 texts=19 wordmark@x=795.7 -> clean
+
+### finished: 2026-09-19T17:05:27.840Z
+### exit_code: 0
