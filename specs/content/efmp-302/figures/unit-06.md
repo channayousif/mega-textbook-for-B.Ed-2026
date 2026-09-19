@@ -6,7 +6,7 @@ file the carrier sits in. **Two figures per topic** across four topics, and the 
 `concept-map` (`fig-U6-2`), one `timeline` (`fig-U6-3`) and two `flowchart`s (`fig-U6-6`,
 `fig-U6-8`) as its schematics.
 
-Every row is `Status: prompt-only` with an empty `Src`, and every `Kind` is a deterministic
+Every row is `Status: placed` with a committed `Src`, and every `Kind` is a deterministic
 schematic. Under ADR-0024 these are Claude's to author as self-contained SVG; no row here is a
 raster `illustration`, so nothing in this unit is a Codex handoff.
 

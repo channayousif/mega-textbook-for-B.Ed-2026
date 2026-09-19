@@ -6,8 +6,9 @@ file the carrier sits in. **Two figures per topic** across five topics, and the 
 `concept-map`s (`fig-U3-2`, `fig-U3-5`, `fig-U3-10`), one `flowchart` (`fig-U3-6`) and one
 `timeline` (`fig-U3-9`) as its schematics.
 
-Every row is `Status: prompt-only` with an empty `Src`: the unit is at G2/G3 and image generation
-is a later pass. Carrier-ID set == this table's ID set both ways
+Every row is `Status: placed` with a committed `Src`: the schematics were authored and placed in
+the Spec 009 figure pass, and each carrier in the topic files is a rendered `<Figure>` rather than
+a comment marker. Carrier-ID set == this table's ID set both ways
 (`scripts/check-figures.mjs`). The unit is `translation_status: draft` with no Urdu mirror on
 disk, so the bilingual figure rule does not apply yet; under ADR-0022 the mirror arrives in the
 corpus-wide translation phase.

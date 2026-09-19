@@ -1,0 +1,12 @@
+$ npm run validate:content
+host: hcp.textbook.com.pk node: v22.22.1
+date: 2026-09-19T02:00:29Z
+commit: 4ae095247187523cfd9e31df94749543a7d88e53
+--- output ---
+
+> bed-mega-textbook@0.1.0 validate:content
+> node scripts/validate-content.mjs
+
+✓ Content validation passed.
+--- end output ---
+exit_code: 0
