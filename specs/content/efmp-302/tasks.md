@@ -66,7 +66,7 @@ register pass; `translation_status: reviewed` on all EN and UR unit-01 files;
 | Unit 2 | G6 assets | ▢ | | |
 | Unit 2 | G7 publish | ▢ | | |
 | Unit 3 | G1 unit-spec | ▣ | | re-opened 2026-09-14: per-topic G1 blocks added. Five guide sections map one-to-one onto five topics, so no partition judgement was required |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-302/reviews/unit-03/G2/20260919T172112115Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-302/reviews/unit-03/G2/20260919T173255128Z-gates.json |
 | Unit 3 | G3 en-review | 🟡 | agent:g3-reviewer | provisional:specs/content/efmp-302/reviews/unit-03/G3/agent-g3-efmp302-u3-run005.json |
 | Unit 3 | G4 ur-translation | ▢ | | scope changed to the per-topic layout. Legacy UR drafts removed as orphans; under ADR-0022 the Urdu mirror arrives in the corpus-wide translation phase |
 | Unit 3 | G5 ur-review | ▢ | | scope changed to the per-topic layout; 17 authored Urdu concept labels in concepts/unit-03.md need review |
@@ -93,3 +93,28 @@ register pass; `translation_status: reviewed` on all EN and UR unit-01 files;
 | Unit 6 | G5 ur-review | ▢ | | 13 of 15 concept labels authored. Note the `Reflective practice` / `Reflective Decision Making` relationship flagged in concepts/unit-06.md |
 | Unit 6 | G6 assets | ▢ | | |
 | Unit 6 | G7 publish | ▢ | | |
+
+## Note - Unit 3 run 007, the confirming review of published content
+
+The evidence cell above is a machine-readable reference and carries no prose, so the standing
+state of the only published unit is recorded here.
+
+Unit 3 passed at **run 005** and publishes provisionally on that pass. **Run 007** re-reviewed it
+because `.claude/skills/review-unit/references/g3.md` changed, which ADR-0019 s5 treats as
+requiring requalification of the changed reviewer configuration.
+
+Run 007 returned `escalate`. It passed `authority`, `coverage`, `assessment`, `accessibility` and
+`readability`, and matched all ten MCQ keys from a blind derivation. It failed `sources` and
+`pedagogy` on **two blocking defects in `fig-U3-7` that were live to learners**:
+
+- an `N=77` for Furlich (2016) that the abstract does not state and that `topic-04.mdx:120`
+  explicitly disclaims to the reader;
+- the non-verbal-channel claim asserted as a research finding, against two paragraphs of
+  `topic-04.mdx:128-140` and against MCQ 8's key, whose distractor (a) is exactly that reading.
+
+Both are fixed in `38d8e7f`. **The fixes are unverified by a reviewer.**
+
+Run 007 does **not** supersede run 005 into a pass, and the provisional row is not upgraded on the
+strength of it. Publication continues because the defects are repaired and the page banner already
+states that final review is pending. This is the sixth G3 cycle against ADR-0019's limit of two,
+and 14 advisories remain open in the run-007 report.
