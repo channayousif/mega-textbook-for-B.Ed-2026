@@ -120,8 +120,19 @@ function walk(dir) {
     const p = join(dir, name);
     if (EXCLUDE.has(p)) continue;
     const st = statSync(p);
-    if (st.isDirectory()) walk(p);
-    else if (SCAN_EXT.has(extname(p))) scanFile(p);
+    // `specs/content/<course>/reviews/` holds G3/G5 evidence: reports, gate logs and
+    // readable summaries. None of it is published - `find build -path '*reviews*'`
+    // returns nothing - and a review that discusses an answer key has to use the
+    // words. Scanning it made the gate read governance artefacts as learner-facing
+    // content, and a passing Unit 3 review broke the Unit 4 review by landing a
+    // summary containing the phrase.
+    //
+    // `bound()` in scripts/lib/review-evidence.mjs already excludes `/reviews/` from
+    // the input manifest for the same reason. This applies the same rule here.
+    if (st.isDirectory()) {
+      if (name === 'reviews') continue;
+      walk(p);
+    } else if (SCAN_EXT.has(extname(p))) scanFile(p);
   }
 }
 

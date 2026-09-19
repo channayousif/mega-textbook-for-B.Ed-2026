@@ -1,0 +1,98 @@
+G3 run005 render-review - host browser and print inspection record
+EFMP-302 Unit 4 (English). Reviewer run agent-g3-efmp302-u4-run005.
+
+This is the actual host inspection record, not an npm script log.
+
+HOST / TOOLING
+  node v22.22.1
+  @playwright/test 1.61.1
+  Chromium 149.0.7827.0 (headless)
+  server: npm run serve -- --port 3104  (docusaurus serve over the PRE-BUILT build/ tree;
+          the site was NOT rebuilt for this review)
+  base URL: http://localhost:3104/semester-1/efmp-302/unit-04
+
+RENDERED INPUT IDENTITY
+  HEAD 62257a35837ce62e40d8d8f45131c6ba4f4bd47b, working tree clean of tracked modifications.
+  build/semester-1/efmp-302/unit-04/topic-04/index.html mtime 2026-09-19 06:58:44,
+  source docs/semester-1/efmp-302/unit-04/topic-04.mdx mtime 2026-09-19 03:55:23.
+  Confirmed the served bytes are the reviewed bytes:
+    - built topic-04 contains "pure form of either, that a single framework &quot;can serve both
+      summative and formative" (the current paraphrase)
+    - built topic-04 contains ZERO occurrences of "separate them in practice"
+      (the run-004 blocking clause, which the source no longer carries either)
+  All 7 pages returned HTTP 200.
+
+VIEWPORTS AND MEDIA INSPECTED
+  desktop  1280x900,  media=screen,  full-page PNG per page
+  narrow    360x780,  deviceScaleFactor 2, media=screen, full-page PNG per page
+  print    1280x900 then emulateMedia({media:'print'}), A4 PDF + full-page PNG per page
+  A4 probe  794x1123 (A4 at 96dpi), media=print, unit-assessment table measurement
+
+SCRIPTS (in this log directory, hashed in the report evidence manifest)
+  render-inspect-run005.mjs  - the 7-page sweep; machine record at
+                               renders-agent-g3-efmp302-u4-run005/inspection-run005.json
+  render-crops-run005.mjs    - targeted re-measurement of the run-004 fig-U4-4 crop finding
+                               and keyboard operation of the figure scroll region
+
+RESULTS
+
+1. Figure scroll affordance at 360 CSS px - RUN-004 FINDING RE-MEASURED, NOW SATISFIED.
+   All eight figure carriers are now focusable named scroll regions, matching the rubric-table
+   treatment the same unit already used:
+     element FIGURE, role="region", tabindex="0",
+     aria-label="Scrollable figure, scroll sideways to see the whole diagram",
+     computed overflow-x: auto.
+   scrollWidth vs clientWidth (clientWidth 328 on every one):
+     fig-U4-1 900, fig-U4-2 900, fig-U4-3 880, fig-U4-4 940,
+     fig-U4-5 880, fig-U4-6 900, fig-U4-7 920, fig-U4-8 880.
+   Keyboard operation verified, not assumed: focusing fig-U4-4's region put
+   document.activeElement on the FIGURE (role=region, the aria-label above); three ArrowRight
+   presses moved scrollLeft 0 -> 120. The End key does not move a horizontal scroller and is
+   recorded as such. Measurement: renders-agent-g3-efmp302-u4-run005/fig-crop-measurement-run005.json.
+
+2. fig-U4-4 caveat crop - RE-MEASURED.
+   At scrollLeft 0 on a 360px viewport the orange caveat box is still cut mid-sentence
+   ("...not the standards the" / "...before using it to jud"): screenshot
+   renders-agent-g3-efmp302-u4-run005/fig-U4-4-narrow-360-scroll0.png.
+   That is inherent to a 940px table in a 328px box and is not itself a defect now that the
+   content is recoverable. Recovery verified three ways:
+     - pointer/touch scroll and ArrowRight both reveal the remainder
+       (renders-agent-g3-efmp302-u4-run005/fig-U4-4-narrow-360-scrolled-end.png)
+     - the img alt and the SVG <desc> both state the table is "marked as a summary that directs
+       the reader to the primary document"
+     - A4 print lays the whole figure out at 823px wide with scrollWidth == clientWidth.
+   Residual: the alt conveys that the table is a summary pointing to the primary document but
+   not the sterner clause "before using it to judge anyone, including yourself". Advisory only.
+
+3. Print / A4.
+   media=print, every figure on every topic page: overflow-x visible, scrollWidth == clientWidth,
+   clipped false, laid out 823px wide at heights 325-455. Zero clipping.
+   unit-assessment at 794x1123 media=print: all five ERQ rubric tables 762px wide inside a 762px
+   box, clipped false; the "Answers and marking guidance" heading is display:block,
+   visibility:visible. No answer or rubric is clipped in the A4 view.
+   A4 PDFs written per page as <page>-a4.pdf.
+
+4. Small-screen layout.
+   document.scrollWidth == document.clientWidth == 360 on all seven pages: no page-level
+   horizontal overflow anywhere in the unit.
+
+5. Headings, links, alt text.
+   Heading sequences on all seven pages step without skipping a level.
+   Zero non-descriptive link texts ("here", "click here", "read more", "this", "link") in main.
+   16 <img> carriers across the four topic pages (8 light + 8 lazy dark variants), every one with
+   non-empty descriptive alt, lengths 166-255 characters. Zero images without alt.
+   index.mdx, unit-assessment.mdx and unit-teacher-notes.mdx carry no figures, as designed.
+
+6. Mini-rubric tables on topic pages at 360px fit their 328px box (scrollWidth == clientWidth),
+   so they need no scroll region; the five assessment rubric tables do get one
+   (role="region", tabindex="0", aria-label "Scrollable table, scroll sideways to see all
+   columns", scrollWidth 476/532/476/579/540 against clientWidth 328).
+
+EXIT 0 - inspection completed; all planned artifacts written.
+
+POST-CAPTURE NOTE
+  After capture, every PNG in renders-agent-g3-efmp302-u4-run005/ was re-encoded once with
+  sharp (png compressionLevel 9, palette true, quality 90, effort 10) to bring the artifact set
+  from 34 MB to 13 MB, in line with earlier runs. Pixel geometry is unchanged; only the PNG
+  encoding differs. The hashes in the report's evidence_manifest are of the re-encoded bytes,
+  which are the bytes on disk.

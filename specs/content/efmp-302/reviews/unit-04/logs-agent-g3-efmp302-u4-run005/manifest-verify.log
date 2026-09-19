@@ -1,0 +1,21 @@
+$ node --input-type=module -e "<inputManifest/skillDigest/dirtyInputs recomputation>"
+declared entries: 137
+live entries    : 137
+missing from live: 0
+extra in live    : 0
+digest mismatches: 0
+skillDigest(G3)  : afded48dc524cf73584575bb010a9d6f826f117ee55a2da29c7a038033ca1554
+manifest digest  : afded48dc524cf73584575bb010a9d6f826f117ee55a2da29c7a038033ca1554
+skill digest match: true
+dirtyInputs      : []
+required_criteria: ["authority","sources","coverage","assessment","accessibility","readability","pedagogy"]
+
+$ git status --short (tracked modifications only)
+(none)
+
+$ git rev-parse HEAD
+62257a35837ce62e40d8d8f45131c6ba4f4bd47b
+
+$ git diff --name-only 957e130 HEAD | grep -v -e /reviews/ -e tasks.md
+(no bound input changed between manifest preparation at 957e130 and HEAD 62257a3)
+[exit] 0
