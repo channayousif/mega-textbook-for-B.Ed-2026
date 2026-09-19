@@ -1,4 +1,30 @@
 <!--
+SYNC IMPACT REPORT (v4.2.0)
+Version change: 4.1.0 -> 4.2.0
+Bump rationale: MINOR - a new Article VII section 8 delegates two gates that were previously
+undelegated. Nothing is redefined and no obligation is relaxed. Section 1 withholds
+course-intake approval "by this provision", i.e. from the G3/G5 review delegation; section 8
+grants it separately, on its own terms and with its own record. That is an addition, not a
+redefinition, which is what keeps this below a MAJOR.
+Added: Article VII.8 "Delegated gate evaluation (G0 intake and G1 unit-spec)". An evaluator
+agent may approve course intake and unit-spec where the course guide determines the answer,
+recording each approval in specs/decisions/log.md under a D-YYYY-NNNN code at
+pending-owner-review, for the owner to confirm or reverse in batches.
+Modified: nothing. Sections 1-7 are carried over verbatim.
+Removed: nothing.
+Reviewed and unchanged: section 5's qualification requirements and the self-approval
+prohibition bind the evaluator too - 8c restates them for this delegation rather than
+weakening them. Section 7's provisional publication is untouched and remains the only
+delegation of publication. The practicing-teacher gate and engineering controls stay
+undelegated entirely; no agent can dry-run a lesson with children. Article II.3 escalation is
+explicitly preserved in 8b: which external document is authoritative is a question about the
+world, and no evaluator may settle it.
+Follow-ups: the evaluator's qualification is NOT established by this amendment. Its approvals
+are recorded decisions awaiting owner confirmation, not certifications, and the registry and
+signing-host work in Feature 014 T007/T008 is unaffected.
+-->
+
+<!--
 SYNC IMPACT REPORT (v4.1.0)
 Version change: 4.0.0 -> 4.1.0
 Bump rationale: MINOR - a new Article VII section 7 adds a publication state that did not
@@ -740,6 +766,30 @@ Before any unit or feature is marked complete, all applicable gates MUST pass:
    by invalidating its evidence, exactly as section 4 requires of acceptance. The owner MAY
    withdraw provisional publication at any time without requalifying anything.
 
+8. **Delegated gate evaluation (G0 intake and G1 unit-spec).** An evaluator agent MAY approve
+   G0 course intake and G1 unit-spec for a course whose guide determines the answer, without
+   per-course human countersignature. Section 1 withholds course-intake approval from the
+   *review* delegation; this section grants it separately and on different terms.
+   1. **Recorded decisions.** Every approval MUST be recorded in `specs/decisions/log.md` under
+      a stable `D-YYYY-NNNN` code carrying the gate, the scope, the basis it rested on, the
+      digests of the inputs it was bound to, and a status of `pending-owner-review`. The owner
+      confirms or reverses in batches. An approval that is not recorded is void.
+   2. **Guide-determined only.** The evaluator MAY approve only what the course guide settles.
+      Anything the guide does not determine - an Article II.3 scheme/guide conflict, an absent
+      or unusable reading list, a unit partition the guide does not support - MUST be escalated
+      to `specs/gaps.md` and MUST NOT be decided.
+   3. **Independence and self-approval.** The evaluator MUST run separately from the session
+      that drafted the artefact it evaluates. It MUST NOT modify its inputs, the course guide,
+      the non-delegated boundary recorded in the decision log, or its own permissions, and it
+      MUST NOT approve a specification it wrote. Candidate output cannot authorize itself.
+   4. **Boundaries unchanged.** This section delegates G0 and G1 only. G3 and G5 remain governed
+      by sections 1 to 6; publication authority by sections 1 and 7; the practicing-teacher gate
+      and engineering controls are not delegated at all. An evaluator approval is not a review,
+      certifies no content, and qualifies no reviewer.
+   5. **Freshness and reversal.** An approval binds to the input digests it recorded. A change to
+      a bound input voids it, exactly as section 4 requires of review acceptance. A reversal
+      reopens the gate and never rewrites the original entry.
+
 ## Article VIII - Data Protection & Ethics
 
 1. Student data (grades, submissions) is confidential: visible only to the student, their
@@ -818,4 +868,4 @@ Engineering gate (the rest).
 
 ---
 
-**Version**: 4.1.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-09-18
+**Version**: 4.2.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-09-19
