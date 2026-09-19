@@ -47,3 +47,26 @@ Recorded here so the boundary stays visible as the log grows:
 - **Limits:** The source remains unverified; the declaration is not a substitute for reading it.
   A reviewer still fails `sources` where prose relies on such a source for a claim it does not
   disclose as uncorroborated, or states more than the declaration supports.
+
+## D-2026-0002 - EFMP-302 Unit 6 activity design: the one-page plan
+
+- **Status:** confirmed
+- **Gate:** G1 (unit-spec)
+- **Scope:** EFMP-302, Unit 6
+- **Decided by:** curriculum owner, 2026-09-19
+- **Decision:** Unit 6's worked-example activity is the **one-page** development plan, built in
+  about twenty minutes and reviewed at a named date, carrying the six blocks of Topic 6.4. The
+  competing one-term design, which named one activity from each "ways to continue developing"
+  category, is superseded.
+- **Basis:** The G3 run-003 review of Unit 6 found `content-spec.md` "## Unit 6" stating both
+  designs in the same subsection with no amendment note, which is a contradiction in the G1
+  authority itself rather than a defect the author could resolve. `topic-04.mdx:131-143` follows
+  the one-page design and `:77-79` argues directly against building a plan from one activity per
+  category, so the authored unit already embodies the decision. Escalated because a reviewer
+  cannot choose between two readings of an approved spec; that is a scope decision under
+  Constitution Art. II.3 and Art. VII.1.
+- **Applied in:** `specs/content/efmp-302/content-spec.md` "## Unit 6", both the
+  `**Worked-example / activity concepts**` bullet and the `**Worked-examples plan**` paragraph,
+  the superseded wording recorded rather than silently deleted.
+- **Limits:** Settles Unit 6 only. It does not change the assessment blueprint, the sub-topic
+  checklist, or any other unit's activity design.
