@@ -1,0 +1,3 @@
+$ npm run check:concept-graph --silent
+✓ Concept graph is consistent (coverage, no orphans, acyclic, resolvable prerequisites, assessment linkage).
+[exit] 0
