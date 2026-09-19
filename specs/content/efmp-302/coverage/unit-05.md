@@ -18,8 +18,9 @@ content-spec and disclosed to the learner in `index.mdx`. `Guide ref` in the che
 | U5-04 | topic-01.mdx | The multilingual classroom | no-external-source |
 | U5-05 | topic-01.mdx | The multi-grade classroom | little2001 |
 | U5-06 | topic-02.mdx | The increased focus on teacher accountability | isore2009 |
-| U5-07 | topic-02.mdx | High expectations from many stakeholders at once | hargreaves2000 |
-| U5-08 | topic-02.mdx | Socio-economic status and public recognition | hargreaves2000 |
+| U5-06 | topic-02.mdx | The increased focus on teacher accountability | hargreaves2000 |
+| U5-07 | topic-02.mdx | High expectations from many stakeholders at once | demirkasimoglu2010 |
+| U5-08 | topic-02.mdx | Socio-economic status and public recognition | demirkasimoglu2010 |
 | U5-09 | topic-03.mdx | Pressure to integrate technology | hennessy2022 |
 | U5-10 | topic-03.mdx | Responsible use of digital platforms and resources | no-external-source |
 | U5-11 | topic-04.mdx | Separating what is within a teacher's control from what is not | no-external-source |
