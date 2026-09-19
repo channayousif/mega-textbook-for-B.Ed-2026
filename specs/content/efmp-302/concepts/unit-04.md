@@ -27,8 +27,8 @@ The remaining thirteen are authored here and **carry a G5 flag** (see below).
 | CON:EFMP-302-4-12 | The self-evaluation cycle | خود تشخیصی کا دائرہ | CON:EFMP-302-4-10 | 4.3 | SLO:EFMP-302-4-2 | MCQ-07, RRQ-08, ERQ-04 |
 | CON:EFMP-302-4-13 | Kinds of evidence against an indicator | اشاریے کے لیے شہادت کی اقسام | CON:EFMP-302-4-12 | 4.3 | SLO:EFMP-302-4-2 | MCQ-08, RRQ-09, ERQ-03 |
 | CON:EFMP-302-4-14 | Teacher certification | اساتذہ کی سند بندی | CON:EFMP-302-4-7 | 4.4 | SLO:EFMP-302-4-2 | MCQ-09, ERQ-05 |
-| CON:EFMP-302-4-17 | Teacher licensing | اساتذہ کا لائسنس | CON:EFMP-302-4-14 | 4.4 | SLO:EFMP-302-4-2 | MCQ-09, RRQ-10 |
-| CON:EFMP-302-4-15 | Formative and summative appraisal purposes | تشکیلی اور جامع جائزے کے مقاصد | CON:EFMP-302-4-14 | 4.4 | SLO:EFMP-302-4-2 | MCQ-10, RRQ-04, ERQ-05 |
+| CON:EFMP-302-4-17 | Teacher licensing | اساتذہ کا لائسنس | CON:EFMP-302-4-14 | 4.4 | SLO:EFMP-302-4-2 | MCQ-09 |
+| CON:EFMP-302-4-15 | Formative and summative appraisal purposes | تشکیلی اور جامع جائزے کے مقاصد | CON:EFMP-302-4-14 | 4.4 | SLO:EFMP-302-4-2 | MCQ-10, ERQ-05 |
 | CON:EFMP-302-4-16 | Degradation when purposes are mixed | مقاصد کے اختلاط سے ریکارڈ کی خرابی | CON:EFMP-302-4-15 | 4.4 | SLO:EFMP-302-4-2 | RRQ-10, ERQ-04, ERQ-05 |
 
 ## Urdu labels needing G5 review
