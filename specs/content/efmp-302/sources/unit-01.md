@@ -12,6 +12,18 @@ Verified 2026-08-30: the four sources with DOIs resolve (hargreaves2000, demirka
 beijaard2004, suarez2022); the three books (carr2000, hurst2009, brookfield2017) are confirmed
 in library catalogues. Bibliographic form follows the course guide's Suggested-Readings list.
 
+
+## Unverifiable sources
+
+Bound excerpts could not be committed for these keys. Recorded here so `check:depth-gate`
+and any G3 reviewer see the limitation explicitly rather than inferring it from silence.
+
+- carr2000: Print-only book (Routledge), no URL or DOI. Not retrievable by this host; no excerpt bound. The unit's use of it is at the level of the professional-ethics argument, which no retrieved source corroborates independently.
+- beijaard2004: Elsevier, Teaching and Teacher Education. OpenAlex reports green OA via the Leiden institutional repository (hdl.handle.net/1887/11190), but that record serves metadata only and the publisher full text returned HTTP 403 to this host. Existence and bibliographic detail confirmed; the cited passages on professional identity are unread.
+- icka2024: Ucitel/Teacher 27: 99-107, DOI 10.20544/teacher.27.12. Confirmed to exist via third-party citation (a 2026 Sage systematic review cites it with these exact page numbers), but no abstract or full text was reachable. Supports nothing beyond its own existence until read.
+- brookfield2017: Print-only book (Jossey-Bass), not retrievable by this host. Same key as Units 3 and 6.
+- hurst2009: Print-only book (Pearson), not retrievable by this host. Confirmed real via OpenLibrary by the Unit 3 reviewer; cited passages unread. Same key as Unit 3.
+
 | Key | Citation | URL/DOI | Supports | Kind |
 |---|---|---|---|---|
 | carr2000 | Carr, D. (2000). *Professionalism and ethics in teaching*. Routledge. | (print) | topic-01.mdx U1-01, U1-02 (what makes teaching a profession); topic-03.mdx U1-08 (teaching as an ethical practice) | guide-required |
