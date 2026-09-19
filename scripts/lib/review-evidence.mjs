@@ -120,11 +120,18 @@ function manifestRoots(root, course, unit, stage) {
     requireValue(!/^bilingual:\s*false\s*$/m.test(readFileSync(join(root, coursePath, 'course-overview.mdx'), 'utf8')), 'G5 inapplicable for English-only course');
     requireValue(existsSync(join(root, ur, 'index.mdx')), 'Urdu unit missing');
   }
+  // `specs/decisions/log.md` is bound because owner rulings decide review outcomes:
+  // D-2026-0001 governs when an unretrievable source fails `sources`, and D-2026-0002
+  // settled an `authority` contradiction in EFMP-302 Unit 6. A reviewer citing either was
+  // resting on a file the bundle did not bind, so a later edit to a ruling could not
+  // invalidate the acceptance that relied on it.
   for (const required of ['specs/content/style-guide.md', 'specs/content/terminology.csv',
     '.specify/memory/constitution.md', `specs/content/${code}/content-spec.md`, `${coursePath}/course-overview.mdx`,
+    'specs/decisions/log.md',
     '.claude/skills/review-unit/SKILL.md']) requireValue(existsSync(safeFile(root, required)), `missing required input: ${required}`);
   return [en, `${coursePath}/course-overview.mdx`, `specs/content/${code}`,
     'specs/content/style-guide.md', 'specs/content/terminology.csv', '.specify/memory/constitution.md',
+    'specs/decisions/log.md',
     'catalog/courses.json', 'contracts', 'specs/014-agent-review-governance/contracts', ...reviewScripts(root),
     '.claude/skills/review-unit', '.claude/agents',
     'Scheme-and-Course-guides', `.specify/Course_guides_and_Scheme`,

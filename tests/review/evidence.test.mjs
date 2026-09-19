@@ -23,7 +23,7 @@ function fixture(t) {
   write(en, '---\ntranslation_status: draft\n---\nEnglish fixture.\n');
   write(ur, '---\ntranslation_status: draft\n---\nUrdu fixture.\n');
   write('docs/semester-1/efmp-301/course-overview.mdx', '---\nbilingual: true\n---\n');
-  for (const path of ['specs/content/style-guide.md', 'specs/content/terminology.csv', '.specify/memory/constitution.md', 'specs/content/efmp-301/content-spec.md', '.claude/skills/review-unit/SKILL.md', '.claude/skills/review-unit/references/g3.md', '.claude/skills/review-unit/references/g5.md', '.claude/agents/g3-reviewer.md', '.claude/agents/g5-reviewer.md']) write(path, `Synthetic test input ${path}\n`);
+  for (const path of ['specs/content/style-guide.md', 'specs/content/terminology.csv', '.specify/memory/constitution.md', 'specs/decisions/log.md', 'specs/content/efmp-301/content-spec.md', '.claude/skills/review-unit/SKILL.md', '.claude/skills/review-unit/references/g3.md', '.claude/skills/review-unit/references/g5.md', '.claude/agents/g3-reviewer.md', '.claude/agents/g5-reviewer.md']) write(path, `Synthetic test input ${path}\n`);
   write('specs/reviewers/qualification.json', '{"synthetic_fixture_only":true}\n');
   // Bound validators (each pulling one shared lib) plus a script the review never
   // cites, so the digest's narrowed scope is actually exercised.
