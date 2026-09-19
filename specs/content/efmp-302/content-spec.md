@@ -808,8 +808,14 @@ Weeks 14–16. Unit Spec (G1) for `docs/semester-1/efmp-302/unit-06/`.
   (conferences, workshops, online PD platforms, Professional Learning Communities, reflective
   practice/self-evaluation tools - journals, portfolios, peer feedback, lesson study); building a
   personal professional development plan.
-- **Worked-example / activity concepts**: draft a short, one-term personal professional
-  development plan naming one activity from each "ways to continue developing" category.
+- **Worked-example / activity concepts**: draft a **one-page** personal professional development
+  plan built in about twenty minutes and reviewed at a named date, carrying the six blocks of
+  Topic 6.4 (the gap, the evidence for it, one goal, the activity, the evidence of change, the
+  review date). *(Owner decision 2026-09-19, `D-2026-0002`: this subsection previously also
+  specified a one-term plan naming one activity from each "ways to continue developing" category.
+  The two designs were incompatible, `topic-04.mdx` argues explicitly against the one-activity-per-
+  category form, and the one-page design is the one the unit teaches and assesses. The one-term
+  wording is superseded, not merely dropped.)*
 - **Assessment blueprint**: formative 5–8 items (Remember/Understand) on the CPD stages and
   development-activity categories; summative includes an Analyze-or-higher item critiquing a
   sample professional development plan against the unit's principles. Weighting: 60/40 default.
@@ -873,7 +879,8 @@ reports already on the course reading list and verified when added.
 **Worked-examples plan**: a teacher five years in who has attended eleven workshops and changed
 nothing (U6-01 to U6-03); the same teacher at three career points, with what each needed (U6-04 to
 U6-06); five development activities costed against what each actually delivers (U6-07 to U6-11); a
-one-page plan built in twenty minutes and reviewed in March (U6-12, U6-13).
+one-page plan built in twenty minutes and reviewed in March (U6-12, U6-13). This is the
+authoritative activity design for Unit 6 per `D-2026-0002`.
 
 **Figure plan** (>= 2 per topic; >= 1 concept-map / flowchart / timeline; seeds
 `specs/content/efmp-302/figures/unit-06.md`):
