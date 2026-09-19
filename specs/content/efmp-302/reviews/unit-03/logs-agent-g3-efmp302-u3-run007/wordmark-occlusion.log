@@ -1,0 +1,48 @@
+# Wordmark occlusion check: ALL painted elements vs the .wm text box.
+# measure-figure-text.mjs compares <text> against <text> only, so a <rect>/<path>
+# painted over the wordmark passes it. This measures shapes too.
+#
+HIT  static/img/figures/efmp-302/unit-03/fig-U3-1.dark.svg wordmark box [795.7,378,888,390.8]
+       rect.bg box=[0,0,900,400] overlap=92.3x12.8px fill=rgb(27, 27, 29) stroke=none paintedAfterWordmark=false
+HIT  static/img/figures/efmp-302/unit-03/fig-U3-1.svg wordmark box [795.7,378,888,390.8]
+       rect.bg box=[0,0,900,400] overlap=92.3x12.8px fill=rgb(255, 255, 255) stroke=none paintedAfterWordmark=false
+HIT  static/img/figures/efmp-302/unit-03/fig-U3-10.dark.svg wordmark box [795.7,442,888,454.8]
+       rect.bg box=[0,0,900,470] overlap=92.3x12.8px fill=rgb(27, 27, 29) stroke=none paintedAfterWordmark=false
+HIT  static/img/figures/efmp-302/unit-03/fig-U3-10.svg wordmark box [795.7,442,888,454.8]
+       rect.bg box=[0,0,900,470] overlap=92.3x12.8px fill=rgb(255, 255, 255) stroke=none paintedAfterWordmark=false
+HIT  static/img/figures/efmp-302/unit-03/fig-U3-2.dark.svg wordmark box [795.7,430,888,442.8]
+       rect.bg box=[0,0,900,460] overlap=92.3x12.8px fill=rgb(27, 27, 29) stroke=none paintedAfterWordmark=false
+HIT  static/img/figures/efmp-302/unit-03/fig-U3-2.svg wordmark box [795.7,430,888,442.8]
+       rect.bg box=[0,0,900,460] overlap=92.3x12.8px fill=rgb(255, 255, 255) stroke=none paintedAfterWordmark=false
+HIT  static/img/figures/efmp-302/unit-03/fig-U3-3.dark.svg wordmark box [795.7,446,888,458.8]
+       rect.bg box=[0,0,900,470] overlap=92.3x12.8px fill=rgb(27, 27, 29) stroke=none paintedAfterWordmark=false
+HIT  static/img/figures/efmp-302/unit-03/fig-U3-3.svg wordmark box [795.7,446,888,458.8]
+       rect.bg box=[0,0,900,470] overlap=92.3x12.8px fill=rgb(255, 255, 255) stroke=none paintedAfterWordmark=false
+HIT  static/img/figures/efmp-302/unit-03/fig-U3-4.dark.svg wordmark box [695.7,445.9,788,458.5]
+       rect.bg box=[0,0,800,470] overlap=92.3x12.7px fill=rgb(27, 27, 29) stroke=none paintedAfterWordmark=false
+HIT  static/img/figures/efmp-302/unit-03/fig-U3-4.svg wordmark box [695.7,445.9,788,458.5]
+       rect.bg box=[0,0,800,470] overlap=92.3x12.7px fill=rgb(255, 255, 255) stroke=none paintedAfterWordmark=false
+HIT  static/img/figures/efmp-302/unit-03/fig-U3-5.dark.svg wordmark box [775.7,441.6,868.6,454.8]
+       rect.bg box=[0,0,880,470] overlap=92.9x13.2px fill=rgb(27, 27, 29) stroke=none paintedAfterWordmark=false
+HIT  static/img/figures/efmp-302/unit-03/fig-U3-5.svg wordmark box [775.7,441.6,868.6,454.8]
+       rect.bg box=[0,0,880,470] overlap=92.9x13.2px fill=rgb(255, 255, 255) stroke=none paintedAfterWordmark=false
+HIT  static/img/figures/efmp-302/unit-03/fig-U3-6.dark.svg wordmark box [775.7,493.6,868.6,506.8]
+       rect.bg box=[0,0,880,520] overlap=92.9x13.2px fill=rgb(27, 27, 29) stroke=none paintedAfterWordmark=false
+       rect.o2 box=[640,440,850,504] overlap=74.3x10.4px fill=rgb(36, 40, 42) stroke=rgb(231, 236, 233) paintedAfterWordmark=false
+HIT  static/img/figures/efmp-302/unit-03/fig-U3-6.svg wordmark box [775.7,493.6,868.6,506.8]
+       rect.bg box=[0,0,880,520] overlap=92.9x13.2px fill=rgb(255, 255, 255) stroke=none paintedAfterWordmark=false
+       rect.o2 box=[640,440,850,504] overlap=74.3x10.4px fill=rgb(238, 243, 241) stroke=rgb(19, 42, 36) paintedAfterWordmark=false
+HIT  static/img/figures/efmp-302/unit-03/fig-U3-7.dark.svg wordmark box [755.7,375.8,848.4,388.7]
+       rect.bg box=[0,0,860,400] overlap=92.7x12.9px fill=rgb(27, 27, 29) stroke=none paintedAfterWordmark=false
+HIT  static/img/figures/efmp-302/unit-03/fig-U3-7.svg wordmark box [755.7,375.8,848.4,388.7]
+       rect.bg box=[0,0,860,400] overlap=92.7x12.9px fill=rgb(255, 255, 255) stroke=none paintedAfterWordmark=false
+HIT  static/img/figures/efmp-302/unit-03/fig-U3-8.dark.svg wordmark box [755.7,461.8,848.4,474.7]
+       rect.bg box=[0,0,860,490] overlap=92.7x12.9px fill=rgb(27, 27, 29) stroke=none paintedAfterWordmark=false
+HIT  static/img/figures/efmp-302/unit-03/fig-U3-8.svg wordmark box [755.7,461.8,848.4,474.7]
+       rect.bg box=[0,0,860,490] overlap=92.7x12.9px fill=rgb(255, 255, 255) stroke=none paintedAfterWordmark=false
+HIT  static/img/figures/efmp-302/unit-03/fig-U3-9.dark.svg wordmark box [795.7,394,888,406.8]
+       rect.bg box=[0,0,900,420] overlap=92.3x12.8px fill=rgb(27, 27, 29) stroke=none paintedAfterWordmark=false
+HIT  static/img/figures/efmp-302/unit-03/fig-U3-9.svg wordmark box [795.7,394,888,406.8]
+       rect.bg box=[0,0,900,420] overlap=92.3x12.8px fill=rgb(255, 255, 255) stroke=none paintedAfterWordmark=false
+#
+# files with an element intersecting the wordmark: 20

@@ -1,0 +1,27 @@
+# command: node scripts/measure-figure-text.mjs static/img/figures/efmp-302/unit-03/*.svg
+# commit: f710924ee09348640029eb51b72d7d000f426a7b
+# started_at: 2026-09-19T12:23:35-05:00
+----
+✓ static/img/figures/efmp-302/unit-03/fig-U3-1.dark.svg (900x400, widest text ends at 888, wordmark at 795.7)
+✓ static/img/figures/efmp-302/unit-03/fig-U3-1.svg (900x400, widest text ends at 888, wordmark at 795.7)
+✓ static/img/figures/efmp-302/unit-03/fig-U3-10.dark.svg (900x470, widest text ends at 888, wordmark at 795.7)
+✓ static/img/figures/efmp-302/unit-03/fig-U3-10.svg (900x470, widest text ends at 888, wordmark at 795.7)
+✓ static/img/figures/efmp-302/unit-03/fig-U3-2.dark.svg (900x460, widest text ends at 888.5, wordmark at 795.7)
+✓ static/img/figures/efmp-302/unit-03/fig-U3-2.svg (900x460, widest text ends at 888.5, wordmark at 795.7)
+✓ static/img/figures/efmp-302/unit-03/fig-U3-3.dark.svg (900x470, widest text ends at 888, wordmark at 795.7)
+✓ static/img/figures/efmp-302/unit-03/fig-U3-3.svg (900x470, widest text ends at 888, wordmark at 795.7)
+✓ static/img/figures/efmp-302/unit-03/fig-U3-4.dark.svg (800x470, widest text ends at 788, wordmark at 695.7)
+✓ static/img/figures/efmp-302/unit-03/fig-U3-4.svg (800x470, widest text ends at 788, wordmark at 695.7)
+✓ static/img/figures/efmp-302/unit-03/fig-U3-5.dark.svg (880x470, widest text ends at 868.6, wordmark at 775.7)
+✓ static/img/figures/efmp-302/unit-03/fig-U3-5.svg (880x470, widest text ends at 868.6, wordmark at 775.7)
+✓ static/img/figures/efmp-302/unit-03/fig-U3-6.dark.svg (880x520, widest text ends at 868.6, wordmark at 775.7)
+✓ static/img/figures/efmp-302/unit-03/fig-U3-6.svg (880x520, widest text ends at 868.6, wordmark at 775.7)
+✓ static/img/figures/efmp-302/unit-03/fig-U3-7.dark.svg (860x400, widest text ends at 848.4, wordmark at 755.7)
+✓ static/img/figures/efmp-302/unit-03/fig-U3-7.svg (860x400, widest text ends at 848.4, wordmark at 755.7)
+✓ static/img/figures/efmp-302/unit-03/fig-U3-8.dark.svg (860x490, widest text ends at 848.4, wordmark at 755.7)
+✓ static/img/figures/efmp-302/unit-03/fig-U3-8.svg (860x490, widest text ends at 848.4, wordmark at 755.7)
+✓ static/img/figures/efmp-302/unit-03/fig-U3-9.dark.svg (900x420, widest text ends at 888, wordmark at 795.7)
+✓ static/img/figures/efmp-302/unit-03/fig-U3-9.svg (900x420, widest text ends at 888, wordmark at 795.7)
+----
+# exit_code: 0
+# finished_at: 2026-09-19T12:23:36-05:00

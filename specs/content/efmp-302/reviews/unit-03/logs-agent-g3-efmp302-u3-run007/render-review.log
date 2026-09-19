@@ -1,0 +1,98 @@
+# render-review - EFMP-302 Unit 3 - run agent-g3-efmp302-u3-run007
+# This is the host's actual browser/print inspection record, not an npm script.
+
+commit:            f710924ee09348640029eb51b72d7d000f426a7b
+working tree:      clean (git status --porcelain empty); dirtyInputs() for EFMP-302/3/G3 = []
+rendered input:    the build produced by `npm run build` in this session (site-build.log,
+                   exit 0). build/ mtime before the rebuild was 2026-09-19 12:15:05 and after
+                   2026-09-19 12:24:00, so the inspected bytes are this session's, not the
+                   stale tree the G3 reference warns about.
+host:              served locally with `npx docusaurus serve --port 3111 --no-open`
+                   (build/, static output; all inspected paths returned HTTP 200)
+browser:           Chromium 149.0.7827.0 via playwright-core (headless)
+user agent:        Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko)
+                   HeadlessChrome/149.0.7827.0 Safari/537.36
+driver script:     an inline Playwright script written for this run; the raw per-page numbers it
+                   produced are committed beside this file as render-measurements.json
+
+pages inspected (all 8 files of the unit):
+  /semester-1/efmp-302/unit-03/                    index
+  /semester-1/efmp-302/unit-03/topic-01/ .. /topic-05/
+  /semester-1/efmp-302/unit-03/unit-assessment/
+  /semester-1/efmp-302/unit-03/unit-teacher-notes/
+
+setups per page:
+  narrow   viewport 360x780, dSF 2, isMobile, hasTouch; lazy images forced eager and the page
+           scrolled to the foot and back so every `loading="lazy"` figure had loaded before
+           measurement; full-page screenshot <name>-narrow-360.png
+  desktop  viewport 1280x900; full-page screenshot <name>-desktop-1280.png
+  print    emulateMedia({media:'print'}) on the same page; full-page screenshot
+           <name>-print-A4.png plus a real A4 pdf() at 12mm margins, <name>-print-A4.pdf
+
+## Narrow view - scroll containers measured on the element itself, per the G3 reference
+
+The reference's warning was followed exactly: each <table> and each <figure> was measured
+directly, not the wrapping div.theme-doc-markdown, and each was then driven to
+el.scrollLeft = el.scrollWidth and re-measured.
+
+On every one of the 8 pages the wrapper div.theme-doc-markdown reports
+scrollWidth 328 == clientWidth 328 and computed overflow-x: visible, which is the correct,
+non-defective reading the reference describes. documentElement and body horizontal overflow
+were 0 on all 8 pages in all 3 setups.
+
+Figures at 360px (10 of 10, two per topic file):
+  fig-U3-1  scrollWidth 900 / clientWidth 328   fig-U3-2  900/328
+  fig-U3-3  900/328                             fig-U3-4  800/328
+  fig-U3-5  880/328                             fig-U3-6  880/328
+  fig-U3-7  860/328                             fig-U3-8  860/328
+  fig-U3-9  900/328                             fig-U3-10 900/328
+  all: computed overflow-x auto; scrollLeft accepted; after scrollLeft = scrollWidth the
+  right edge was reached (scrollLeft + clientWidth == scrollWidth); tabindex="0",
+  role="region" and a non-empty aria-label all present from DocItem/Content hydration.
+  => reachable by swipe AND from a keyboard. Not a defect.
+
+Tables at 360px:
+  topic-01..topic-05 mini-rubrics: scrollWidth 328 == clientWidth 328, no overflow, and the
+  hydration correctly REMOVED tabindex/role/aria-label (they are not scroll regions).
+  unit-assessment ERQ rubrics, 5 tables: scrollWidth 527, 473, 471, 488, 499 inside
+  clientWidth 328; all scrolled to their right edge; all carry tabindex="0", role="region"
+  and an aria-label. Not a defect.
+
+## Print view (A4)
+
+No horizontal overflow on any page. Every figure and table renders at 823px inside an 823px
+box, i.e. nothing is cut. Per topic, 4 <img> nodes exist and exactly 2 are visible: that is
+the intended Figure light/dark pair, one hidden per [data-theme]. Both carry the identical
+alt, so exactly one is exposed to the accessibility tree. The unit-assessment print view
+carries the full question bank AND the whole "Answers and marking guidance" section,
+including all five ERQ rubric tables, with nothing clipped.
+
+## Structural accessibility
+
+Exactly one <h1> per page. No heading-level skips on any of the 8 pages in any setup.
+20 <img> nodes across the unit, every one with a non-empty alt; the shortest is 150
+characters and each matches its row in specs/content/efmp-302/figures/unit-03.md verbatim.
+No vague link text ("here", "click here", "read more", ...) on any page.
+
+## Glyph geometry
+
+node scripts/measure-figure-text.mjs over all 20 committed Unit 3 SVGs: exit 0, no viewBox
+overflow and no text-on-wordmark overprint (measure-figure-text.log).
+
+That tool compares <text> against <text> only. A separate pass measuring EVERY painted
+element against the .wm wordmark box (wordmark-occlusion.log) found one real collision that
+both check:figures and measure-figure-text.mjs pass silently:
+  fig-U3-6.svg and fig-U3-6.dark.svg - rect.o2 (the "Escalated to the head" outcome box,
+  box [640,440,850,504]) intersects the wordmark box [775.7,493.6,868.6,506.8] by
+  74.3 x 10.4 px. The wordmark is later in document order, so it paints ON TOP of the box
+  and the box's bottom stroke runs through the glyphs.
+  Captured at 3x in renders-.../fig-U3-6-wordmark-collision-3x.png.
+  The instructional labels are unaffected and fully legible, and the wordmark is
+  aria-hidden="true" branding, so a learner loses no instructional meaning. Advisory.
+
+## Figure content inspected as content, not only as pixels
+
+All 10 schematics were rendered standalone at 2x (fig-U3-N-render-2x.png) and their text
+nodes extracted from the committed SVG bytes and compared against the prose of the topic
+that carries them. Two contradictions between a figure and its own topic were found and are
+recorded as blocking findings in the report; see B-01 and B-02 on fig-U3-7.
