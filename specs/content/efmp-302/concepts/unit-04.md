@@ -13,9 +13,9 @@ The remaining thirteen are authored here and **carry a G5 flag** (see below).
 
 | Concept ID | Label EN | Label UR | Prerequisites | Topic | SLO refs | Assessment item IDs |
 |---|---|---|---|---|---|---|
-| CON:EFMP-302-4-1 | Professional standard | پیشہ ورانہ معیارات | - | 4.1 | SLO:EFMP-302-4-1 | MCQ-01, RRQ-01, ERQ-01 |
+| CON:EFMP-302-4-1 | Professional standard | پیشہ ورانہ معیارات | - | 4.1 | SLO:EFMP-302-4-1 | MCQ-01, ERQ-01 |
 | CON:EFMP-302-4-2 | Standard distinguished from code and curriculum | معیار، ضابطہ اور نصاب کا فرق | CON:EFMP-302-4-1 | 4.1 | SLO:EFMP-302-4-1 | MCQ-01, RRQ-02 |
-| CON:EFMP-302-4-3 | Evidence-specificity of a standard | معیار کا قابلِ شہادت ہونا | CON:EFMP-302-4-1 | 4.1 | SLO:EFMP-302-4-1 | MCQ-02, RRQ-01 |
+| CON:EFMP-302-4-3 | Evidence-specificity of a standard | معیار کا قابلِ شہادت ہونا | CON:EFMP-302-4-1 | 4.1 | SLO:EFMP-302-4-1 | MCQ-02 |
 | CON:EFMP-302-4-4 | Global perspectives on teacher standards | اساتذہ کے معیارات پر عالمی نقطہ نظر | CON:EFMP-302-4-1 | 4.1 | SLO:EFMP-302-4-1 | RRQ-02 |
 | CON:EFMP-302-4-5 | The four uses of a standard | معیار کے چار استعمال | CON:EFMP-302-4-3 | 4.1 | SLO:EFMP-302-4-1 | MCQ-03, RRQ-03, ERQ-01 |
 | CON:EFMP-302-4-6 | Conflict between the four uses | چار استعمالات کا باہمی تضاد | CON:EFMP-302-4-5 | 4.1 | SLO:EFMP-302-4-1 | RRQ-04, ERQ-05 |
@@ -26,8 +26,8 @@ The remaining thirteen are authored here and **carry a G5 flag** (see below).
 | CON:EFMP-302-4-11 | The proxy trade-off in indicator design | اشاریہ سازی میں متبادل پیمانے کا خطرہ | CON:EFMP-302-4-10 | 4.2 | SLO:EFMP-302-4-2 | MCQ-06, RRQ-07, ERQ-03 |
 | CON:EFMP-302-4-12 | The self-evaluation cycle | خود تشخیصی کا دائرہ | CON:EFMP-302-4-10 | 4.3 | SLO:EFMP-302-4-2 | MCQ-07, RRQ-08, ERQ-04 |
 | CON:EFMP-302-4-13 | Kinds of evidence against an indicator | اشاریے کے لیے شہادت کی اقسام | CON:EFMP-302-4-12 | 4.3 | SLO:EFMP-302-4-2 | MCQ-08, RRQ-09, ERQ-03 |
-| CON:EFMP-302-4-14 | Teacher certification | اساتذہ کی سند بندی | CON:EFMP-302-4-7 | 4.4 | SLO:EFMP-302-4-2 | MCQ-09, ERQ-05 |
-| CON:EFMP-302-4-17 | Teacher licensing | اساتذہ کا لائسنس | CON:EFMP-302-4-14 | 4.4 | SLO:EFMP-302-4-2 | MCQ-09 |
+| CON:EFMP-302-4-14 | Teacher certification | اساتذہ کی سند بندی | CON:EFMP-302-4-7 | 4.4 | SLO:EFMP-302-4-2 | RRQ-01, MCQ-09, ERQ-05 |
+| CON:EFMP-302-4-17 | Teacher licensing | اساتذہ کا لائسنس | CON:EFMP-302-4-14 | 4.4 | SLO:EFMP-302-4-2 | RRQ-01, MCQ-09 |
 | CON:EFMP-302-4-15 | Formative and summative appraisal purposes | تشکیلی اور جامع جائزے کے مقاصد | CON:EFMP-302-4-14 | 4.4 | SLO:EFMP-302-4-2 | MCQ-10, ERQ-05 |
 | CON:EFMP-302-4-16 | Degradation when purposes are mixed | مقاصد کے اختلاط سے ریکارڈ کی خرابی | CON:EFMP-302-4-15 | 4.4 | SLO:EFMP-302-4-2 | RRQ-10, ERQ-04, ERQ-05 |
 

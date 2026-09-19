@@ -65,6 +65,10 @@ const MESSAGES = {
     en: 'Scrollable table, scroll sideways to see all columns',
     ur: 'قابلِ اسکرول جدول، تمام کالم دیکھنے کے لیے دائیں بائیں اسکرول کریں',
   },
+  scrollableFigure: {
+    en: 'Scrollable figure, scroll sideways to see the whole diagram',
+    ur: 'قابلِ اسکرول خاکہ، پورا خاکہ دیکھنے کے لیے دائیں بائیں اسکرول کریں',
+  },
 } as const;
 
 function normalize(text: string): string {
@@ -221,23 +225,27 @@ function insertErrorContainer(list: HTMLUListElement): HTMLDivElement {
  * overflow, so a table that fits does not become a spurious tab stop, and re-runs
  * on resize because overflow depends on the viewport.
  */
-function markScrollableTables(label: string): () => void {
+function markScrollableRegions(labels: { table: string; figure: string }): () => void {
   if (typeof document === 'undefined') return () => {};
-  const apply = () => {
-    for (const table of Array.from(document.querySelectorAll<HTMLTableElement>('.markdown table'))) {
-      const overflows = table.scrollWidth > table.clientWidth + 1;
-      if (overflows) {
-        table.setAttribute('data-scrollable', 'true');
-        table.setAttribute('tabindex', '0');
-        table.setAttribute('role', 'region');
-        table.setAttribute('aria-label', label);
-      } else {
-        table.removeAttribute('data-scrollable');
-        table.removeAttribute('tabindex');
-        table.removeAttribute('role');
-        table.removeAttribute('aria-label');
-      }
+  const mark = (el: HTMLElement, label: string) => {
+    if (el.scrollWidth > el.clientWidth + 1) {
+      el.setAttribute('data-scrollable', 'true');
+      el.setAttribute('tabindex', '0');
+      el.setAttribute('role', 'region');
+      el.setAttribute('aria-label', label);
+    } else {
+      for (const a of ['data-scrollable', 'tabindex', 'role', 'aria-label']) el.removeAttribute(a);
     }
+  };
+  const apply = () => {
+    for (const t of Array.from(document.querySelectorAll<HTMLElement>('.markdown table'))) mark(t, labels.table);
+    // Figures need this as much as tables do. Measured at 360px, every schematic renders at its
+    // full intrinsic width (880-1030px) inside a 328px box and scrolls, so the columns were always
+    // reachable by touch and never from a keyboard. Three separate G3 reviews raised it, and one
+    // added the detail that settles it: the crop hides MITIGATING content, cutting fig-U4-4's
+    // "read the primary document" caveat mid-sentence. A reader who cannot scroll sees the claim
+    // and not the warning attached to it.
+    for (const f of Array.from(document.querySelectorAll<HTMLElement>('.markdown figure'))) mark(f, labels.figure);
   };
   apply();
   window.addEventListener('resize', apply);
@@ -393,7 +401,10 @@ export default function DocItemContentWrapper(props: Props): React.ReactElement 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [courseCode, unitNo, topicNo, locale, role, loading]);
 
-  useEffect(() => markScrollableTables(MESSAGES.scrollableTable[locale]), [locale]);
+  useEffect(() => markScrollableRegions({
+    table: MESSAGES.scrollableTable[locale],
+    figure: MESSAGES.scrollableFigure[locale],
+  }), [locale]);
 
   // Rendered here rather than in MDX so every file of a provisional unit carries
   // the notice - index, each topic, the assessment and the teacher notes, in both

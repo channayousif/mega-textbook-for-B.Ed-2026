@@ -621,7 +621,11 @@ supplies the components of effectiveness, which is what a standard is an attempt
 you how to teach"; "meeting the indicators is the goal"; "appraisal and professional development
 are the same process"; "standards are a bureaucratic import with no bearing on a real classroom".
 
-**Mapped readings**: npst-pakistan-2009, unesco-teacher-ethics, isore2009, goe2008, hurst2009.
+**Mapped readings**: npst-pakistan-2009, unesco-teacher-ethics, isore2009, goe2008.
+*(`hurst2009` was listed here and used nowhere in Unit 4: absent from `coverage/unit-04.md`,
+from `sources/unit-04.md` and from every page. The course-level reading list at the top of
+this file scopes it to Units 1 and 3, which is where it is actually used, so the Unit 4
+listing was the error. Carried unresolved from G3 run 001 through run 004.)*
 
 **Source-verification limitation to carry into G3.** The primary document, `npst-pakistan-2009`,
 could not be fetched from the authoring host: `itacec.org`, `nacte.org.pk` and
