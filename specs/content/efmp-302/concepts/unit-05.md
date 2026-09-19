@@ -17,8 +17,8 @@ Units 2 to 4, and approved labels should be promoted into the bank so Unit 6 inh
 |---|---|---|---|---|---|---|
 | CON:EFMP-302-5-1 | Visible and invisible workload | ظاہر اور پوشیدہ کام کا بوجھ | - | 5.1 | SLO:EFMP-302-5-1 | MCQ-01, RRQ-01, ERQ-01 |
 | CON:EFMP-302-5-2 | Elastic work and who absorbs it | لچکدار کام اور اسے کون اٹھاتا ہے | CON:EFMP-302-5-1 | 5.1 | SLO:EFMP-302-5-1 | MCQ-01, RRQ-01 |
-| CON:EFMP-302-5-3 | Stress | دباؤ | - | 5.1 | SLO:EFMP-302-5-1 | MCQ-03, RRQ-02 |
-| CON:EFMP-302-5-4 | Burnout | پیشہ ورانہ تھکن | CON:EFMP-302-5-3 | 5.1 | SLO:EFMP-302-5-1 | MCQ-02, MCQ-03, RRQ-02, ERQ-05 |
+| CON:EFMP-302-5-3 | Stress | دباؤ | - | 5.1 | SLO:EFMP-302-5-1 | RRQ-02 |
+| CON:EFMP-302-5-4 | Burnout | پیشہ ورانہ تھکن | CON:EFMP-302-5-3 | 5.1 | SLO:EFMP-302-5-1 | MCQ-02, RRQ-02, ERQ-05 |
 | CON:EFMP-302-5-5 | The three dimensions of burnout | پیشہ ورانہ تھکن کے تین پہلو | CON:EFMP-302-5-4 | 5.1 | SLO:EFMP-302-5-1 | MCQ-02, RRQ-02, ERQ-05 |
 | CON:EFMP-302-5-6 | Demands and resources as the mechanism | تقاضے اور وسائل بطور سبب | CON:EFMP-302-5-4 | 5.1 | SLO:EFMP-302-5-1 | ERQ-01, ERQ-05 |
 | CON:EFMP-302-5-7 | Categories of missing resource | ناپید وسائل کی اقسام | CON:EFMP-302-5-6 | 5.1 | SLO:EFMP-302-5-1 | RRQ-03, ERQ-01 |
@@ -29,7 +29,7 @@ Units 2 to 4, and approved labels should be promoted into the bank so Unit 6 inh
 | CON:EFMP-302-5-12 | Occupational status | پیشے کا سماجی مقام | CON:EFMP-302-5-11 | 5.2 | SLO:EFMP-302-5-1 | MCQ-07, RRQ-06 |
 | CON:EFMP-302-5-13 | Status distinguished from recognition | مقام اور پذیرائی کا فرق | CON:EFMP-302-5-12 | 5.2 | SLO:EFMP-302-5-1 | MCQ-07, RRQ-06 |
 | CON:EFMP-302-5-14 | Judging a use of technology | ٹیکنالوجی کے استعمال کو پرکھنا | CON:EFMP-302-5-7 | 5.3 | SLO:EFMP-302-5-2 | MCQ-08, RRQ-07, ERQ-03 |
-| CON:EFMP-302-5-15 | Obligations unchanged by the medium | ذریعے کی تبدیلی سے ذمہ داریاں نہیں بدلتیں | CON:EFMP-302-5-14 | 5.3 | SLO:EFMP-302-5-2 | RRQ-08, ERQ-03 |
+| CON:EFMP-302-5-15 | Obligations unchanged by the medium | ذریعے کی تبدیلی سے ذمہ داریاں نہیں بدلتیں | CON:EFMP-302-5-14 | 5.3 | SLO:EFMP-302-5-2 | MCQ-03, RRQ-08, ERQ-03 |
 | CON:EFMP-302-5-16 | Control, influence and neither | اختیار، اثر، اور دونوں سے باہر | CON:EFMP-302-5-6 | 5.4 | SLO:EFMP-302-5-2 | MCQ-09, MCQ-10, RRQ-09, RRQ-10, ERQ-04 |
 
 ## Urdu labels needing G5 review

@@ -1,0 +1,6 @@
+
+> bed-mega-textbook@0.1.0 check:docs-sync
+> node scripts/check-docs-sync.mjs
+
+✓ docs are in sync with the code constants
+exit=0
