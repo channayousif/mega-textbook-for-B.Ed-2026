@@ -47,10 +47,10 @@ misstated, including placing the pupil at a centre occupied by the decision make
 Bound excerpts could not be committed for these keys. Recorded here so `check:depth-gate`
 and any G3 reviewer see the limitation explicitly rather than inferring it from silence.
 
-- npst-pakistan-2009: Government of Pakistan primary document. Every route failed to this host and to both reviewing sessions: itacec.org HTTP 401/403, nacte.org.pk HTTP 404. ERIC and Crossref answered normally in the same sessions, so this is per-host access rather than absence.
-- unesco-teacher-ethics: UNESCO / International Task Force on Teachers (2019). Cloudflare HTTP 403 from unesdoc, its PDF path and teachertaskforce.org. Same key and same failure as Unit 4.
-- carr2000: Print-only book (Routledge), no URL or DOI, not retrievable by this host. Same key as Units 1 and 4.
-- icka2024: Ucitel/Teacher 27: 99-107. Existence confirmed via third-party citation only; no abstract or full text reachable. Same key as Unit 1.
+- npst-pakistan-2009: Government of Pakistan primary document. Every route failed to this host and to both reviewing sessions: itacec.org HTTP 401/403, nacte.org.pk HTTP 404. ERIC and Crossref answered normally in the same sessions, so this is per-host access rather than absence. Could not be retrieved on 2026-09-19. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.
+- unesco-teacher-ethics: UNESCO / International Task Force on Teachers (2019). Cloudflare HTTP 403 from unesdoc, its PDF path and teachertaskforce.org. Same key and same failure as Unit 4. Could not be retrieved on 2026-09-19. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.
+- carr2000: Print-only book (Routledge), no URL or DOI, not retrievable by this host. Same key as Units 1 and 4. Could not be retrieved on 2026-09-19. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.
+- icka2024: Ucitel/Teacher 27: 99-107. Existence confirmed via third-party citation only; no abstract or full text reachable. Same key as Unit 1. Could not be retrieved on 2026-09-19. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.
 
 | Key | Citation | URL/DOI | Supports | Kind |
 |---|---|---|---|---|

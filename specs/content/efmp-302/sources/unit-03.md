@@ -25,9 +25,9 @@ No `no-external-source` row was needed for this unit.
 Bound excerpts could not be committed for these keys. Recorded here so `check:depth-gate`
 and any G3 reviewer see the limitation explicitly rather than inferring it from silence.
 
-- hurst2009: Print-only book, no URL or DOI in the sources list and no text bound. The Unit 3 G3 review (2026-09-18) confirmed the work is real via OpenLibrary but could not read the cited passages. Leaves U3-03, U3-04, U3-05 and part of U3-13 supported at bibliographic level only.
-- brookfield2017: Print-only book, same position as hurst2009. Confirmed real via OpenLibrary; cited passages unread. Leaves U3-06, U3-07 and part of U3-13 unverified.
-- suarez2022: OECD full text returned HTTP 403 to the reviewing host. The U3-12 mapping could not be settled: Suarez and McGrath are cited only in topic-05's life-long-learner section, while the change-agent section carries no citation.
+- hurst2009: Print-only book, no URL or DOI in the sources list and no text bound. The Unit 3 G3 review (2026-09-18) confirmed the work is real via OpenLibrary but could not read the cited passages. Leaves U3-03, U3-04, U3-05 and part of U3-13 supported at bibliographic level only. Could not be retrieved on 2026-09-19. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.
+- brookfield2017: Print-only book, same position as hurst2009. Confirmed real via OpenLibrary; cited passages unread. Leaves U3-06, U3-07 and part of U3-13 unverified. Could not be retrieved on 2026-09-19. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.
+- suarez2022: OECD full text returned HTTP 403 to the reviewing host. The U3-12 mapping could not be settled: Suarez and McGrath are cited only in topic-05's life-long-learner section, while the change-agent section carries no citation. Could not be retrieved on 2026-09-19. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.
 
 | Key | Citation | URL/DOI | Supports | Kind |
 |---|---|---|---|---|

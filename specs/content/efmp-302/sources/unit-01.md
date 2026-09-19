@@ -18,11 +18,11 @@ in library catalogues. Bibliographic form follows the course guide's Suggested-R
 Bound excerpts could not be committed for these keys. Recorded here so `check:depth-gate`
 and any G3 reviewer see the limitation explicitly rather than inferring it from silence.
 
-- carr2000: Print-only book (Routledge), no URL or DOI. Not retrievable by this host; no excerpt bound. The unit's use of it is at the level of the professional-ethics argument, which no retrieved source corroborates independently.
-- beijaard2004: Elsevier, Teaching and Teacher Education. OpenAlex reports green OA via the Leiden institutional repository (hdl.handle.net/1887/11190), but that record serves metadata only and the publisher full text returned HTTP 403 to this host. Existence and bibliographic detail confirmed; the cited passages on professional identity are unread.
-- icka2024: Ucitel/Teacher 27: 99-107, DOI 10.20544/teacher.27.12. Confirmed to exist via third-party citation (a 2026 Sage systematic review cites it with these exact page numbers), but no abstract or full text was reachable. Supports nothing beyond its own existence until read.
-- brookfield2017: Print-only book (Jossey-Bass), not retrievable by this host. Same key as Units 3 and 6.
-- hurst2009: Print-only book (Pearson), not retrievable by this host. Confirmed real via OpenLibrary by the Unit 3 reviewer; cited passages unread. Same key as Unit 3.
+- carr2000: Print-only book (Routledge), no URL or DOI. Not retrievable by this host; no excerpt bound. The unit's use of it is at the level of the professional-ethics argument, which no retrieved source corroborates independently. Could not be retrieved on 2026-09-19. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.
+- beijaard2004: Elsevier, Teaching and Teacher Education. OpenAlex reports green OA via the Leiden institutional repository (hdl.handle.net/1887/11190), but that record serves metadata only and the publisher full text returned HTTP 403 to this host. Existence and bibliographic detail confirmed; the cited passages on professional identity are unread. Could not be retrieved on 2026-09-19. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.
+- icka2024: Ucitel/Teacher 27: 99-107, DOI 10.20544/teacher.27.12. Confirmed to exist via third-party citation (a 2026 Sage systematic review cites it with these exact page numbers), but no abstract or full text was reachable. Supports nothing beyond its own existence until read. Could not be retrieved on 2026-09-19. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.
+- brookfield2017: Print-only book (Jossey-Bass), not retrievable by this host. Same key as Units 3 and 6. Could not be retrieved on 2026-09-19. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.
+- hurst2009: Print-only book (Pearson), not retrievable by this host. Confirmed real via OpenLibrary by the Unit 3 reviewer; cited passages unread. Same key as Unit 3. Could not be retrieved on 2026-09-19. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.
 
 | Key | Citation | URL/DOI | Supports | Kind |
 |---|---|---|---|---|

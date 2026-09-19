@@ -32,13 +32,13 @@ on the course list.
 Bound excerpts could not be committed for these keys. Recorded here so `check:depth-gate`
 and any G3 reviewer see the limitation explicitly rather than inferring it from silence.
 
-- guskey2000: Print-only book, no text bound and not retrievable by the reviewing host.
-- day1999: Print-only book, not retrievable. The Unit 6 G3 review also questioned the coverage mapping: U6-04/05/06 are grounded in day1999 but topic-02 cites Day once and only for preservice.
-- villegas2003: Print-only book, not retrievable by the reviewing host.
-- brookfield2017: Print-only book, not retrievable. Same key as Unit 3.
-- hennessy2022: Not retrievable by the reviewing host. The review also flagged topic-03's 'completion rates for self-directed online courses are notoriously low' as outside this source's recorded scope.
-- kwakman2003: Not retrievable by the reviewing host.
-- hennessy2022: Computers and Education Open, open access in principle. Both routes failed to this host: ScienceDirect HTTP 403, and the EdTech Hub companion record (DOI 10.53832/edtechhub.0080) serves metadata with the findings only inside a downloadable PDF. Leaves topic-03's claim that 'completion rates for self-directed online courses are notoriously low' unverified - the Unit 6 G3 review flagged that claim as outside this source's recorded scope, and nothing here settles it.
+- guskey2000: Print-only book, no text bound and not retrievable by the reviewing host. Could not be retrieved on 2026-09-19. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.
+- day1999: Print-only book, not retrievable. The Unit 6 G3 review also questioned the coverage mapping: U6-04/05/06 are grounded in day1999 but topic-02 cites Day once and only for preservice. Could not be retrieved on 2026-09-19. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.
+- villegas2003: Print-only book, not retrievable by the reviewing host. Could not be retrieved on 2026-09-19. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.
+- brookfield2017: Print-only book, not retrievable. Same key as Unit 3. Could not be retrieved on 2026-09-19. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.
+- hennessy2022: Not retrievable by the reviewing host. The review also flagged topic-03's 'completion rates for self-directed online courses are notoriously low' as outside this source's recorded scope. Could not be retrieved on 2026-09-19. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.
+- kwakman2003: Not retrievable by the reviewing host. Could not be retrieved on 2026-09-19. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.
+- hennessy2022: Computers and Education Open, open access in principle. Both routes failed to this host: ScienceDirect HTTP 403, and the EdTech Hub companion record (DOI 10.53832/edtechhub.0080) serves metadata with the findings only inside a downloadable PDF. Leaves topic-03's claim that 'completion rates for self-directed online courses are notoriously low' unverified - the Unit 6 G3 review flagged that claim as outside this source's recorded scope, and nothing here settles it. Could not be retrieved on 2026-09-19. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.
 
 | Key | Citation | URL/DOI | Supports | Kind |
 |---|---|---|---|---|
