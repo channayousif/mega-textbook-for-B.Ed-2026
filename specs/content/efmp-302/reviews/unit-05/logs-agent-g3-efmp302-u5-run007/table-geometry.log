@@ -1,0 +1,86 @@
+{
+ "rows": [
+  [
+   {
+    "txt": "Criterion",
+    "l": 17,
+    "r": 162
+   },
+   {
+    "txt": "Limited (1-2)",
+    "l": 162,
+    "r": 276
+   },
+   {
+    "txt": "Adequate (3)",
+    "l": 276,
+    "r": 408
+   },
+   {
+    "txt": "Strong (4-5)",
+    "l": 408,
+    "r": 541
+   }
+  ],
+  [
+   {
+    "txt": "Use of the model",
+    "l": 17,
+    "r": 162
+   },
+   {
+    "txt": "Demands and resour",
+    "l": 162,
+    "r": 276
+   },
+   {
+    "txt": "Separated accurate",
+    "l": 276,
+    "r": 408
+   },
+   {
+    "txt": "Applied to the spe",
+    "l": 408,
+    "r": 541
+   }
+  ],
+  [
+   {
+    "txt": "Realism about cons",
+    "l": 17,
+    "r": 162
+   },
+   {
+    "txt": "Treats all demands",
+    "l": 162,
+    "r": 276
+   },
+   {
+    "txt": "Distinguishes remo",
+    "l": 276,
+    "r": 408
+   },
+   {
+    "txt": "Distinguishes what",
+    "l": 408,
+    "r": 541
+   }
+  ]
+ ],
+ "tableBox": {
+  "x": 16,
+  "y": 11678.046875,
+  "width": 328,
+  "height": 918.71875,
+  "top": 11678.046875,
+  "right": 344,
+  "bottom": 12596.765625,
+  "left": 16
+ },
+ "layout": "auto",
+ "width": "328px",
+ "minW": "0px",
+ "display": "block",
+ "parentOX": "visible",
+ "parentCls": "theme-doc-markdown markdown"
+}
