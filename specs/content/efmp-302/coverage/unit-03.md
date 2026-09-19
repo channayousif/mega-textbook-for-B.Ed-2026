@@ -18,11 +18,11 @@ the topic its `### Topic list` row assigns it to with no partition judgement inv
 | U3-05 | topic-02.mdx | Personality traits of effective teachers | hurst2009 |
 | U3-06 | topic-02.mdx | The influence of personality traits on teacher effectiveness | brookfield2017 |
 | U3-07 | topic-03.mdx | Building positive relationships with pupils, parents, colleagues and the community | hurst2009 |
-| U3-08 | topic-03.mdx | Managing conflict while maintaining professionalism | goe2008 |
+| U3-08 | topic-03.mdx | Managing conflict while maintaining professionalism | no-external-source |
 | U3-09 | topic-04.mdx | Verbal communication in the classroom | furlich2016 |
 | U3-10 | topic-04.mdx | Non-verbal communication: its types and their classroom use | keelson2024 |
 | U3-11 | topic-05.mdx | The teacher as facilitator and as researcher | brookfield2017 |
-| U3-12 | topic-05.mdx | The teacher as change agent and as moral agent | suarez2022 |
+| U3-12 | topic-05.mdx | The teacher as change agent and as moral agent | no-external-source |
 | U3-13 | topic-05.mdx | The teacher as life-long learner | suarez2022 |
 
 ## Reinforcement (not required for the gate - recorded for the Content gate)
@@ -31,7 +31,7 @@ the topic its `### Topic list` row assigns it to with no partition judgement inv
 |---|---|---|---|
 | U3-02 | topic-01.mdx | Activity: What did you count? | taylor2023 |
 | U3-05 | topic-02.mdx | Activity: The trait at excess | hurst2009 |
-| U3-08 | topic-03.mdx | Activity: The thirty seconds | goe2008 |
+| U3-08 | topic-03.mdx | Activity: The thirty seconds | no-external-source |
 | U3-10 | topic-04.mdx | Activity: One instruction, four ways | keelson2024 |
 | U3-11 | topic-05.mdx | Activity: One act per role | brookfield2017 |
 | U3-02 | unit-assessment.mdx | Unit summary | taylor2023 |

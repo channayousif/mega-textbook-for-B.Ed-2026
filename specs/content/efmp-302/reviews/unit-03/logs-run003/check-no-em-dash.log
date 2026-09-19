@@ -1,0 +1,6 @@
+# command: npm run check:no-em-dash
+# cwd: /home/a2ahs/mega_book_for_B.Ed
+# started: 2026-09-19T01:52:19-05:00
+# commit: cf1357030db5ee2a0c58874a79a2c24593ff3444
+✓ no em dash in authored content (scanned: docs, licence, guides, i18n, specs/content, glossary.json)
+EXIT check:no-em-dash = 0
