@@ -100,3 +100,6 @@ found. It is taught as guide-given and carries a `no-external-source` row in
 
 **Needed**: identify the framework's origin, or confirm that it is the course guide's own
 construction, so the unit can attribute it correctly.
+
+
+**Unit 4 carried the same conflation (2026-09-19, from the G3 run-003 review).** Seven passages in Unit 4 asserted that Pakistani teacher education is *accredited against* the National Professional Standards. That states more than the `npst-pakistan-2009` declaration supports, which covers the ten standard names, the three-part division and the 2009 origin, and it collides with the finding recorded above that NACTE publishes its own accreditation standards. All seven now say the standards are what teacher education is *built to*, which the declaration does support. The underlying question is unchanged and still needs the decision described above.
