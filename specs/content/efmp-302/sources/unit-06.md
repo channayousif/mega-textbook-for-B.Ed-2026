@@ -22,10 +22,12 @@ studying. `topic-01.mdx` states this to the reader directly: "this unit cites th
 the question it asks ... no finding from it is claimed here." A reviewer with access to the full
 text should either extend or remove the citation.
 
-No `no-external-source` row was needed for this unit, unlike Unit 5: the guide's Unit 6 content is
-the international professional-development literature, which is well served by the sources already
-on the course list.
-
+The guide's Unit 6 content is the international professional-development literature, which is well
+served by the sources already on the course list. Two claims nonetheless rest on no source and
+carry a `no-external-source` row below: the Pakistani-provision description in `topic-01.mdx` and
+the doctor/teacher supervision comparison in `topic-02.mdx`. Both sit inside sub-topics that are
+themselves grounded, so the row is passage-level and claims no sub-topic ID. The second is
+load-bearing, since MCQ 5 keys on it.
 
 ## Unverifiable sources
 
@@ -36,9 +38,8 @@ and any G3 reviewer see the limitation explicitly rather than inferring it from 
 - day1999: Print-only book, not retrievable. The Unit 6 G3 review also questioned the coverage mapping: U6-04/05/06 are grounded in day1999 but topic-02 cites Day once and only for preservice. Could not be retrieved on 2026-09-19. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.
 - villegas2003: Print-only book, not retrievable by the reviewing host. Could not be retrieved on 2026-09-19. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.
 - brookfield2017: Print-only book, not retrievable. Same key as Unit 3. Could not be retrieved on 2026-09-19. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.
-- hennessy2022: Not retrievable by the reviewing host. The review also flagged topic-03's 'completion rates for self-directed online courses are notoriously low' as outside this source's recorded scope. Could not be retrieved on 2026-09-19. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.
+- hennessy2022: Could not be retrieved on 2026-09-19 in full text (ScienceDirect HTTP 403 to this host; the EdTech Hub companion record serves metadata only, with the findings inside a PDF the host would not serve). Owner ruling 2026-09-19 (D-2026-0001): flag and proceed. **Level of support: abstract only.** The abstract was read for Unit 5 on 2026-09-15 and is retagged here, so claims attributed to this work are supported at abstract level and no further. topic-03's statement about completion rates for self-directed online courses is outside even that scope, and the prose now says so at the point of use.
 - kwakman2003: Not retrievable by the reviewing host. Could not be retrieved on 2026-09-19. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.
-- hennessy2022: Computers and Education Open, open access in principle. Both routes failed to this host: ScienceDirect HTTP 403, and the EdTech Hub companion record (DOI 10.53832/edtechhub.0080) serves metadata with the findings only inside a downloadable PDF. Leaves topic-03's claim that 'completion rates for self-directed online courses are notoriously low' unverified - the Unit 6 G3 review flagged that claim as outside this source's recorded scope, and nothing here settles it. Could not be retrieved on 2026-09-19. Owner ruling 2026-09-19 (D-2026-0001): flag and proceed.
 
 | Key | Citation | URL/DOI | Supports | Kind |
 |---|---|---|---|---|
@@ -48,3 +49,4 @@ and any G3 reviewer see the limitation explicitly rather than inferring it from 
 | brookfield2017 | Brookfield, S. D. (2017). *Becoming a critically reflective teacher* (2nd ed.). Jossey-Bass. | (print) | topic-03.mdx U6-11 (reflection as a professional method seen through more than one's own eyes) | guide-required |
 | hennessy2022 | Hennessy, S., D'Angelo, S., McIntyre, N., Koomar, S., Kreimeia, A., Cao, L., Brugha, M., & Zubairi, A. (2022). Technology use for teacher professional development in low- and middle-income countries: A systematic review. *Computers and Education Open, 3*, 100080. | https://doi.org/10.1016/j.caeo.2022.100080 | topic-03.mdx U6-09 (limited and often unsustained provision; technology's potential and its mixed outcomes). **Scope: exactly this sub-topic**, teacher development rather than classroom technology. Abstract read 2026-09-15 | curated-supplementary |
 | kwakman2003 | Kwakman, K. (2003). Factors affecting teachers' participation in professional learning activities. *Teaching and Teacher Education, 19*(2), 149-170. | https://doi.org/10.1016/S0742-051X(02)00101-4 | topic-01.mdx U6-02 (that participation is not automatic and its determinants are worth studying). **No abstract available; cited for the question only, and the prose says so.** Record verified via OpenAlex 2026-09-15 | curated-supplementary |
+| no-external-source | Two PASSAGES rest on no source, within sub-topics that are themselves grounded elsewhere: the description of Pakistani in-service provision in `topic-01.mdx` (inside U6-02, which coverage grounds in kwakman2003) and the doctor/teacher supervision comparison in `topic-02.mdx` (inside U6-05, grounded in day1999). Both are stated from the course guide, from the conditions established in Unit 5, and from ordinary observation, and the prose now discloses this at each point of use. MCQ 5 keys on the second, so it is load-bearing in the summative bank. | (none) | (passage-level; claims no sub-topic ID) | no-external-source |
