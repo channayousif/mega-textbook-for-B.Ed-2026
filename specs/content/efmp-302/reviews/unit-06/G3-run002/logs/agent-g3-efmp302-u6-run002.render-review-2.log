@@ -1,0 +1,63 @@
+===== A. ERQ RUBRIC COLUMN REACHABILITY @360px =====
+  table[0] lastHeader="Strong (4-5)" maxScrollLeft=154 -> scrolled=154; overhang before=154px after=0px; fullyVisibleAfterScroll=true (col 222-344 in container 16-344)
+  table[1] lastHeader="Strong (4-5)" maxScrollLeft=155 -> scrolled=155; overhang before=155px after=0px; fullyVisibleAfterScroll=true (col 228-344 in container 16-344)
+  table[2] lastHeader="Strong (4-5)" maxScrollLeft=160 -> scrolled=160; overhang before=160px after=0px; fullyVisibleAfterScroll=true (col 202-344 in container 16-344)
+  table[3] lastHeader="Strong (4-5)" maxScrollLeft=111 -> scrolled=111; overhang before=111px after=0px; fullyVisibleAfterScroll=true (col 230-344 in container 16-344)
+  table[4] lastHeader="Strong (4-5)" maxScrollLeft=196 -> scrolled=196; overhang before=195px after=-1px; fullyVisibleAfterScroll=true (col 196-343 in container 16-344)
+  keyboard: table focusable=true activeElement=TABLE scrollLeft=0
+  keyboard: after End -> scrollLeft=0 / max 154
+
+===== B. FIGURE RENDERED SIZE / LEGIBILITY =====
+
+-- viewport 1280px
+   topic-01 fig-U6-1: rendered 703x314 natural 300x133 link=false figcaption="textbook.com.pk"
+   topic-01 fig-U6-2: rendered 703x368 natural 287x150 link=false figcaption="textbook.com.pk"
+   topic-02 fig-U6-3: rendered 703x314 natural 300x133 link=false figcaption="textbook.com.pk"
+   topic-02 fig-U6-4: rendered 703x275 natural 300x117 link=false figcaption="textbook.com.pk"
+   topic-03 fig-U6-5: rendered 703x314 natural 300x133 link=false figcaption="textbook.com.pk"
+   topic-03 fig-U6-6: rendered 703x345 natural 300x147 link=false figcaption="textbook.com.pk"
+   topic-04 fig-U6-7: rendered 703x376 natural 281x150 link=false figcaption="textbook.com.pk"
+   topic-04 fig-U6-8: rendered 703x360 natural 293x150 link=false figcaption="textbook.com.pk"
+
+-- viewport 360px
+   topic-01 fig-U6-1: rendered 328x147 natural 300x133 link=false figcaption="textbook.com.pk"
+   topic-01 fig-U6-2: rendered 2x2 natural 0x0 link=false figcaption="textbook.com.pk"
+   topic-02 fig-U6-3: rendered 328x147 natural 300x133 link=false figcaption="textbook.com.pk"
+   topic-02 fig-U6-4: rendered 328x129 natural 300x117 link=false figcaption="textbook.com.pk"
+   topic-03 fig-U6-5: rendered 328x147 natural 300x133 link=false figcaption="textbook.com.pk"
+   topic-03 fig-U6-6: rendered 2x2 natural 0x0 link=false figcaption="textbook.com.pk"
+   topic-04 fig-U6-7: rendered 328x176 natural 281x150 link=false figcaption="textbook.com.pk"
+   topic-04 fig-U6-8: rendered 328x169 natural 293x150 link=false figcaption="textbook.com.pk"
+
+===== C. SVG viewBox =====
+   fig-U6-1: viewBox=0 0 900 400 width=ABSENT height=ABSENT
+   fig-U6-2: viewBox=0 0 900 470 width=ABSENT height=ABSENT
+   fig-U6-3: viewBox=0 0 900 400 width=ABSENT height=ABSENT
+   fig-U6-4: viewBox=0 0 900 350 width=ABSENT height=ABSENT
+   fig-U6-5: viewBox=0 0 900 400 width=ABSENT height=ABSENT
+   fig-U6-6: viewBox=0 0 880 430 width=ABSENT height=ABSENT
+   fig-U6-7: viewBox=0 0 880 470 width=ABSENT height=ABSENT
+   fig-U6-8: viewBox=0 0 900 460 width=ABSENT height=ABSENT
+
+===== D. A4 PRINT EMULATION =====
+
+-- print topic-01: pageOverflowX=0px
+     {"kind":"figure","id":"fig-U6-1","w":762,"h":340,"visible":true}
+     {"kind":"figure","id":"fig-U6-2","w":762,"h":399,"visible":true}
+
+-- print topic-03: pageOverflowX=0px
+     {"kind":"figure","id":"fig-U6-5","w":762,"h":340,"visible":true}
+     {"kind":"figure","id":"fig-U6-6","w":762,"h":373,"visible":true}
+
+-- print topic-04: pageOverflowX=0px
+     {"kind":"figure","id":"fig-U6-7","w":762,"h":408,"visible":true}
+     {"kind":"figure","id":"fig-U6-8","w":762,"h":390,"visible":true}
+
+-- print unit-assessment: pageOverflowX=0px
+     answerHeadings=[{"t":"Answers and marking guidance​","display":"block","vis":"visible"},{"t":"MCQ answer key​","display":"block","vis":"visible"},{"t":"RRQ model answers and mark schemes​","display":"block","vis":"visible"},{"t":"ERQ rubrics​","display":"block","vis":"visible"}]
+
+===== E. DARK THEME =====
+   fig-U6-5: visible=1 src=["/img/figures/efmp-302/unit-06/fig-U6-5.dark.svg"] loaded=true hasAlt=true
+   fig-U6-6: visible=1 src=["/img/figures/efmp-302/unit-06/fig-U6-6.dark.svg"] loaded=true hasAlt=true
+
+# done

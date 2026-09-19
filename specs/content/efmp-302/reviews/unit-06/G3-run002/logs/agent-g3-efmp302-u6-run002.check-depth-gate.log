@@ -1,0 +1,12 @@
+# command: npm run check:depth-gate
+# cwd: /home/a2ahs/mega_book_for_B.Ed
+# commit: 4ae095247187523cfd9e31df94749543a7d88e53
+# started_at: 2026-09-19T01:55:01Z
+---
+
+> bed-mega-textbook@0.1.0 check:depth-gate
+> node scripts/check-unit-depth.mjs
+
+✓ Depth gate passed (concept coverage, required blocks, formative floor, reading-minutes band, coverage↔sources consistency).
+---
+# exit_code: 0

@@ -1,0 +1,12 @@
+$ npm run check:figures
+host: hcp.textbook.com.pk node: v22.22.1
+date: 2026-09-19T02:00:30Z
+commit: 4ae095247187523cfd9e31df94749543a7d88e53
+--- output ---
+
+> bed-mega-textbook@0.1.0 check:figures
+> node scripts/check-figures.mjs
+
+✓ Figure gate passed (≥ 2 RENDERED figures per topic, a placed schematic per unit, well-formed, unique; manifest consistent; placed assets exist).
+--- end output ---
+exit_code: 0

@@ -1,0 +1,106 @@
+--- dual light/dark img exposure (light theme, 360px) ---
+[
+ {
+  "cls": "figure__img figure__img--light",
+  "display": "inline",
+  "visibility": "visible",
+  "ariaHidden": null,
+  "w": 328
+ },
+ {
+  "cls": "figure__img figure__img--dark",
+  "display": "none",
+  "visibility": "visible",
+  "ariaHidden": null,
+  "w": 0
+ },
+ {
+  "cls": "figure__img figure__img--light",
+  "display": "inline",
+  "visibility": "visible",
+  "ariaHidden": null,
+  "w": 2
+ },
+ {
+  "cls": "figure__img figure__img--dark",
+  "display": "none",
+  "visibility": "visible",
+  "ariaHidden": null,
+  "w": 0
+ }
+]
+--- accessibility tree img nodes on topic-01 ---
+[
+ {
+  "role": "img",
+  "name": "Table comparing three definitions of teacher effectiveness -"
+ },
+ {
+  "role": "img",
+  "name": "Concept map of teacher effectiveness branching into within-c"
+ }
+]
+--- table containers at 360px (unit-assessment) ---
+[
+ {
+  "parent": "DIV.theme-doc-markdown markdown",
+  "overflowX": "visible",
+  "tabindex": null,
+  "role": null,
+  "ariaLabel": null,
+  "scrollW": 328,
+  "clientW": 328,
+  "scrollable": false
+ },
+ {
+  "parent": "DIV.theme-doc-markdown markdown",
+  "overflowX": "visible",
+  "tabindex": null,
+  "role": null,
+  "ariaLabel": null,
+  "scrollW": 328,
+  "clientW": 328,
+  "scrollable": false
+ },
+ {
+  "parent": "DIV.theme-doc-markdown markdown",
+  "overflowX": "visible",
+  "tabindex": null,
+  "role": null,
+  "ariaLabel": null,
+  "scrollW": 328,
+  "clientW": 328,
+  "scrollable": false
+ },
+ {
+  "parent": "DIV.theme-doc-markdown markdown",
+  "overflowX": "visible",
+  "tabindex": null,
+  "role": null,
+  "ariaLabel": null,
+  "scrollW": 328,
+  "clientW": 328,
+  "scrollable": false
+ },
+ {
+  "parent": "DIV.theme-doc-markdown markdown",
+  "overflowX": "visible",
+  "tabindex": null,
+  "role": null,
+  "ariaLabel": null,
+  "scrollW": 328,
+  "clientW": 328,
+  "scrollable": false
+ }
+]
+--- MCQ item 1 inner HTML at 360px ---
+
+<p>A teacher raises examination marks by narrowing teaching to past papers. On which definition of
+effectiveness does this look best, and which does it damage? <em>(Understand)</em>
+a) Best on observed practice; damages achievement gain
+b) Best on breadth of outcomes; damages observed practice
+c) Best on achievement gain; damages breadth of learner outcomes
+d) It looks equally good on all three</p>
+
+--- heading level sequence, unit-assessment ---
+["H1:Unit 3 assessment","H2:Unit summary","H2:Summative assessment","H3:Multiple-choice questions (MCQs)","H3:Restricted-response questions (RRQs)","H3:Extended-response questions (ERQs)","H2:Answers and marking guidance","H3:MCQ answer key","H3:RRQ model answers and mark schemes","H3:ERQ rubrics"]

@@ -5,7 +5,8 @@ One row per figure carrier in the unit's `topic-*.mdx` files; `Topic` is the `to
 file the carrier sits in. **Two figures per topic** across four topics, and the unit carries three
 `flowchart`s (`fig-U5-2`, `fig-U5-8`) and one `concept-map` (`fig-U5-3`) as its schematics.
 
-Every row is `Status: prompt-only` with an empty `Src`. The unit is `translation_status: draft`
+Every row is `Status: placed` with a committed `Src`, carried in the topic files as a rendered
+`<Figure>`. The unit is `translation_status: draft`
 with no Urdu mirror on disk, so the bilingual figure rule does not apply yet.
 
 | Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |

@@ -1,0 +1,71 @@
+### render-review - EFMP-302 Unit 5, G3 run 002
+### This is the host's actual browser/print inspection record, not an npm script.
+
+HOST
+  Server:        npx docusaurus serve --port 3105 --no-open
+  Serving:       /home/a2ahs/mega_book_for_B.Ed/build (PREBUILT; not rebuilt by this review)
+  Repo commit:   4ae095247187523cfd9e31df94749543a7d88e53 (working tree clean before and after)
+  Build freshness verified: build/semester-1/efmp-302/unit-05/topic-04/index.html mtime
+                 2026-09-18 20:52:29 -0500 is NEWER than every reviewed .mdx source
+                 (latest source mtime 2026-09-18 19:36). Built HTML carries the frozen
+                 wording: "third region" x6 in topic-04; "outside all three" x0 in both
+                 topic-04 and unit-assessment.
+  HTTP probes:   /semester-1/efmp-302/unit-05/ 200, .../topic-04/ 200,
+                 .../unit-assessment/ 200, /img/figures/efmp-302/unit-05/fig-U5-7.svg 200
+
+BROWSER
+  Playwright Chromium 149.0.7827.0
+  executablePath /home/a2ahs/.cache/ms-playwright/chromium-1228/chrome-linux/chrome
+  NOTE: the Playwright MCP server's default 'chrome' channel is not installed on this
+  host (/opt/google/chrome/chrome absent). Inspection was therefore driven directly
+  against Playwright's bundled Chromium. This is a real browser render, not a build log.
+
+VIEWPORTS / MEDIA INSPECTED
+  desktop   1280 x 900,  media screen
+  narrow     360 x 740,  media screen
+  print      794 x 1123 css px (A4 @96dpi), page.emulateMedia({media:'print'}),
+             page.pdf({format:'A4', printBackground:true})
+
+PAGES INSPECTED
+  index, topic-01, topic-02, topic-03, topic-04, unit-assessment, unit-teacher-notes
+  (print media: topic-01..04 and unit-assessment)
+
+METHOD NOTE THAT CHANGED A FINDING
+  A first pass measured the second <figure> on every topic page at a 2x2 px box.
+  That was a LAZY-LOADING artifact: all figure <img> carry loading="lazy" and the
+  second figure sits below the fold. After scrolling the full page height and
+  settling, all eight figures lay out at full width. The corrected measurement is
+  what this review relies on.
+
+OBSERVED
+  Figures (after full-page scroll), all complete=true, none overflowing the viewport:
+    desktop 1280: fig-U5-1..8 each 703 px wide (heights 314-376)
+    narrow   360: fig-U5-1..8 each 328 px wide (heights 147-176)
+    print A4    : fig-U5-1..8 each 762 px wide (heights 340-408), clipped=false
+    Each <figure> carries a light .svg (rendered) and a .dark.svg variant held at
+    display:none; both carry identical, meaningful alt text.
+  Alt text:      0 images with a missing alt attribute; 0 with alt="" on any page.
+  Headings:      one <h1> per page; no skipped heading levels on any of the 7 pages.
+  Narrow tables: the five ERQ rubric tables on unit-assessment are themselves the
+                 scroll container - computed display:block, overflow-x:auto,
+                 tabindex="0", clientWidth 328 vs scrollWidth 459. The "Strong (4-5)"
+                 column sits off-screen at 360 px but the region is horizontally
+                 scrollable AND keyboard-focusable, and the document itself does not
+                 scroll horizontally (documentElement.scrollWidth == 360). Reachable.
+                 The scroll region carries no role/aria-label (advisory only).
+  Print A4:      no clipped figures, no clipped tables, no display:none headings, and
+                 the MCQ answer key + RRQ mark schemes + all five ERQ rubrics are
+                 present in the print view of unit-assessment.
+  Link text:     bare DOI/PDF URLs used as link text in Further reading -
+                 topic-01 x4, topic-02 x2, topic-03 x1, topic-04 x2 (advisory).
+
+ARTIFACTS WRITTEN (hashed in the report's evidence_manifest)
+  render/render-inspection-run002.json        first pass, desktop+narrow, 7 pages
+  render/render-figures-tables-run002.json    corrected post-scroll figure geometry
+  render/narrow-table-clipping-run002.json    ERQ5 rubric scroll-container analysis
+  render/print-inspection-run002.json         A4 print-media measurements
+  render/desktop-*.png, render/narrow-*.png, render/desktop-scrolled-*.png,
+  render/narrow-scrolled-*.png, render/narrow-erq5-rubric-clipping.png,
+  render/print-a4-*.png, render/print-a4-*.pdf
+
+### exit_code: 0

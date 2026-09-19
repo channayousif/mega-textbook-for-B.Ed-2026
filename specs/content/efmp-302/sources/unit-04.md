@@ -1,8 +1,8 @@
 # Sources consulted - EFMP-302 Unit 4 (The Professional Standards and Competencies for Teachers)
 
 Per `specs/007-content-depth-standard/contracts/sources-consulted.md`. Every key cited in
-`specs/content/efmp-302/coverage/unit-04.md` appears here, and every key here is cited in prose
-and in a per-topic `## Further reading` section.
+`specs/content/efmp-302/coverage/unit-04.md` appears here. Each key is cited in the prose of
+the topic that relies on it, and listed in that topic's `## Further reading` section.
 
 ## Verification limitation, carried into G3
 

@@ -1,0 +1,919 @@
+{
+  "rendered_at": "2026-09-19T01:55:37.369Z",
+  "host": "http://localhost:3105 (docusaurus serve, prebuilt build/)",
+  "browser": "playwright chromium 149.0.7827.0",
+  "views": {
+    "desktop": {
+      "index": {
+        "vw": 1280,
+        "scrollW": 1280,
+        "figureCount": 0,
+        "figures": [],
+        "headings": [
+          "H1 Issues and Challenges in the Teaching Profession",
+          "H2 A note on the evidence in this unit​",
+          "H2 Unit learning outcomes​",
+          "H2 Prerequisite knowledge​",
+          "H2 In this unit​",
+          "H2 A note on how this unit is divided​",
+          "H2 How to use this unit​"
+        ],
+        "nonDescriptive": [],
+        "imgsNoAlt": 0,
+        "imgsEmptyAlt": 0,
+        "overflow": []
+      },
+      "topic-01": {
+        "vw": 1280,
+        "scrollW": 1280,
+        "figureCount": 2,
+        "figures": [
+          {
+            "w": 703,
+            "overflowsViewport": false,
+            "caption": "textbook.com.pk",
+            "imgs": [
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-1.svg",
+                "alt": "Table itemising a teacher's working week by activity, showing rough hours, whether each activity is visible from outside the school, and whether it counts in the official workload.",
+                "w": 703,
+                "h": 368,
+                "display": "inline",
+                "visible": true
+              },
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-1.dark.svg",
+                "alt": "Table itemising a teacher's working week by activity, showing rough hours, whether each activity is visible from outside the school, and whether it counts in the official workload.",
+                "w": 0,
+                "h": 0,
+                "display": "none",
+                "visible": false
+              }
+            ]
+          },
+          {
+            "w": 703,
+            "overflowsViewport": false,
+            "caption": "textbook.com.pk",
+            "imgs": [
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-2.svg",
+                "alt": "Flowchart from sustainable demand through episodic stress and chronic unresolved demand to the three burnout dimensions, with side branches showing where added resources interrupt the path.",
+                "w": 2,
+                "h": 2,
+                "display": "inline",
+                "visible": true
+              },
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-2.dark.svg",
+                "alt": "Flowchart from sustainable demand through episodic stress and chronic unresolved demand to the three burnout dimensions, with side branches showing where added resources interrupt the path.",
+                "w": 0,
+                "h": 0,
+                "display": "none",
+                "visible": false
+              }
+            ]
+          }
+        ],
+        "headings": [
+          "H1 Topic 5.1 - The conditions you will actually teach in",
+          "H2 A real classroom situation​",
+          "H2 Explanation​",
+          "H3 Workload, and what actually consumes a teacher's week​",
+          "H3 Stress and burnout, and how the two differ​",
+          "H3 Lack of support and resources​",
+          "H3 The multilingual classroom​",
+          "H3 The multi-grade classroom​",
+          "H2 Activity: Itemise the week​",
+          "H2 Check your understanding​",
+          "H2 Summary​",
+          "H2 Self-assessment checklist​",
+          "H2 Try this at your practicum school​",
+          "H2 Summative task​",
+          "H2 Further reading​"
+        ],
+        "nonDescriptive": [
+          "https://doi.org/10.1002/wps.20311",
+          "https://doi.org/10.1080/13540602.2021.1913404",
+          "https://doi.org/10.1016/S0738-0593(01)00011-6",
+          "https://doi.org/10.1016/j.ssaho.2021.100109"
+        ],
+        "imgsNoAlt": 0,
+        "imgsEmptyAlt": 0,
+        "overflow": []
+      },
+      "topic-02": {
+        "vw": 1280,
+        "scrollW": 1280,
+        "figureCount": 2,
+        "figures": [
+          {
+            "w": 703,
+            "overflowsViewport": false,
+            "caption": "textbook.com.pk",
+            "imgs": [
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-3.svg",
+                "alt": "Concept map of a teacher surrounded by six parties making demands - pupils, parents, head, district, examination system and the public - each link labelled with what that party wants and what it actually measures.",
+                "w": 703,
+                "h": 368,
+                "display": "inline",
+                "visible": true
+              },
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-3.dark.svg",
+                "alt": "Concept map of a teacher surrounded by six parties making demands - pupils, parents, head, district, examination system and the public - each link labelled with what that party wants and what it actually measures.",
+                "w": 0,
+                "h": 0,
+                "display": "none",
+                "visible": false
+              }
+            ]
+          },
+          {
+            "w": 703,
+            "overflowsViewport": false,
+            "caption": "textbook.com.pk",
+            "imgs": [
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-4.svg",
+                "alt": "Table comparing teaching with medicine, law, engineering and nursing on pay, entry selectivity, autonomy and public recognition, noting that the markers do not move together.",
+                "w": 2,
+                "h": 2,
+                "display": "inline",
+                "visible": true
+              },
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-4.dark.svg",
+                "alt": "Table comparing teaching with medicine, law, engineering and nursing on pay, entry selectivity, autonomy and public recognition, noting that the markers do not move together.",
+                "w": 0,
+                "h": 0,
+                "display": "none",
+                "visible": false
+              }
+            ]
+          }
+        ],
+        "headings": [
+          "H1 Topic 5.2 - What is asked of you, and by whom",
+          "H2 A real classroom situation​",
+          "H2 Explanation​",
+          "H3 The increased focus on teacher accountability​",
+          "H3 High expectations from many stakeholders at once​",
+          "H3 Socio-economic status and public recognition​",
+          "H2 Activity: Four demands, one week​",
+          "H2 Check your understanding​",
+          "H2 Summary​",
+          "H2 Self-assessment checklist​",
+          "H2 Try this at your practicum school​",
+          "H2 Summative task​",
+          "H2 Further reading​"
+        ],
+        "nonDescriptive": [
+          "https://files.eric.ed.gov/fulltext/ED530786.pdf",
+          "https://doi.org/10.1080/713698714"
+        ],
+        "imgsNoAlt": 0,
+        "imgsEmptyAlt": 0,
+        "overflow": []
+      },
+      "topic-03": {
+        "vw": 1280,
+        "scrollW": 1280,
+        "figureCount": 2,
+        "figures": [
+          {
+            "w": 703,
+            "overflowsViewport": false,
+            "caption": "textbook.com.pk",
+            "imgs": [
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-5.svg",
+                "alt": "Table judging four proposed classroom technology uses by what each adds, what it costs, what it replaces that was working, and a verdict.",
+                "w": 703,
+                "h": 314,
+                "display": "inline",
+                "visible": true
+              },
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-5.dark.svg",
+                "alt": "Table judging four proposed classroom technology uses by what each adds, what it costs, what it replaces that was working, and a verdict.",
+                "w": 0,
+                "h": 0,
+                "display": "none",
+                "visible": false
+              }
+            ]
+          },
+          {
+            "w": 703,
+            "overflowsViewport": false,
+            "caption": "textbook.com.pk",
+            "imgs": [
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-6.svg",
+                "alt": "Diagram of overlapping professional and personal digital regions, with the crossing cases labelled - private messages from pupils, parents on personal accounts, personal posts visible to the school, and after-hours class groups.",
+                "w": 2,
+                "h": 2,
+                "display": "inline",
+                "visible": true
+              },
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-6.dark.svg",
+                "alt": "Diagram of overlapping professional and personal digital regions, with the crossing cases labelled - private messages from pupils, parents on personal accounts, personal posts visible to the school, and after-hours class groups.",
+                "w": 0,
+                "h": 0,
+                "display": "none",
+                "visible": false
+              }
+            ]
+          }
+        ],
+        "headings": [
+          "H1 Topic 5.3 - Professionalism in the digital age",
+          "H2 A real classroom situation​",
+          "H2 Explanation​",
+          "H3 Pressure to integrate technology​",
+          "H3 Responsible use of digital platforms and resources​",
+          "H2 Activity: Judge four uses​",
+          "H2 Check your understanding​",
+          "H2 Summary​",
+          "H2 Self-assessment checklist​",
+          "H2 Try this at your practicum school​",
+          "H2 Summative task​",
+          "H2 Further reading​"
+        ],
+        "nonDescriptive": [
+          "https://doi.org/10.1016/j.caeo.2022.100080"
+        ],
+        "imgsNoAlt": 0,
+        "imgsEmptyAlt": 0,
+        "overflow": []
+      },
+      "topic-04": {
+        "vw": 1280,
+        "scrollW": 1280,
+        "figureCount": 2,
+        "figures": [
+          {
+            "w": 703,
+            "overflowsViewport": false,
+            "caption": "textbook.com.pk",
+            "imgs": [
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-7.svg",
+                "alt": "Concentric circles diagram showing what a teacher controls, what they can influence, and the third region of what they do not control, with a note that most frustration comes from effort spent in that third region.",
+                "w": 703,
+                "h": 376,
+                "display": "inline",
+                "visible": true
+              },
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-7.dark.svg",
+                "alt": "Concentric circles diagram showing what a teacher controls, what they can influence, and the third region of what they do not control, with a note that most frustration comes from effort spent in that third region.",
+                "w": 0,
+                "h": 0,
+                "display": "none",
+                "visible": false
+              }
+            ]
+          },
+          {
+            "w": 703,
+            "overflowsViewport": false,
+            "caption": "textbook.com.pk",
+            "imgs": [
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-8.svg",
+                "alt": "Flowchart turning a named challenge into one change - name it, place it in control or influence, choose the smallest change, decide the evidence in advance, act and check - looping back with one more success behind you.",
+                "w": 2,
+                "h": 2,
+                "display": "inline",
+                "visible": true
+              },
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-8.dark.svg",
+                "alt": "Flowchart turning a named challenge into one change - name it, place it in control or influence, choose the smallest change, decide the evidence in advance, act and check - looping back with one more success behind you.",
+                "w": 0,
+                "h": 0,
+                "display": "none",
+                "visible": false
+              }
+            ]
+          }
+        ],
+        "headings": [
+          "H1 Topic 5.4 - Responding: growth rather than endurance",
+          "H2 A real classroom situation​",
+          "H2 Explanation​",
+          "H3 Separating what is within a teacher's control from what is not​",
+          "H3 Growth and development as a response rather than endurance​",
+          "H2 Activity: Place it, then change it​",
+          "H2 Check your understanding​",
+          "H2 Summary​",
+          "H2 Self-assessment checklist​",
+          "H2 Try this at your practicum school​",
+          "H2 Summative task​",
+          "H2 Further reading​"
+        ],
+        "nonDescriptive": [
+          "https://doi.org/10.1080/13540602.2021.1913404",
+          "https://doi.org/10.1080/713698714"
+        ],
+        "imgsNoAlt": 0,
+        "imgsEmptyAlt": 0,
+        "overflow": []
+      },
+      "unit-assessment": {
+        "vw": 1280,
+        "scrollW": 1280,
+        "figureCount": 0,
+        "figures": [],
+        "headings": [
+          "H1 Unit 5 assessment",
+          "H2 Unit summary​",
+          "H2 Summative assessment​",
+          "H3 Multiple-choice questions (MCQs)​",
+          "H3 Restricted-response questions (RRQs)​",
+          "H3 Extended-response questions (ERQs)​",
+          "H2 Answers and marking guidance​",
+          "H3 MCQ answer key​",
+          "H3 RRQ model answers and mark schemes​",
+          "H3 ERQ rubrics​"
+        ],
+        "nonDescriptive": [],
+        "imgsNoAlt": 0,
+        "imgsEmptyAlt": 0,
+        "overflow": []
+      },
+      "unit-teacher-notes": {
+        "vw": 1280,
+        "scrollW": 1280,
+        "figureCount": 0,
+        "figures": [],
+        "headings": [
+          "H1 Unit 5 teacher notes",
+          "H2 The thing to get right in this unit​",
+          "H2 Sequencing across the two-week block​",
+          "H2 The misconceptions that recur​",
+          "H2 Handling what this unit surfaces about the profession​",
+          "H2 Practical work​",
+          "H2 Marking the unit assessment​"
+        ],
+        "nonDescriptive": [],
+        "imgsNoAlt": 0,
+        "imgsEmptyAlt": 0,
+        "overflow": []
+      }
+    },
+    "narrow": {
+      "index": {
+        "vw": 360,
+        "scrollW": 360,
+        "figureCount": 0,
+        "figures": [],
+        "headings": [
+          "H1 Issues and Challenges in the Teaching Profession",
+          "H2 A note on the evidence in this unit​",
+          "H2 Unit learning outcomes​",
+          "H2 Prerequisite knowledge​",
+          "H2 In this unit​",
+          "H2 A note on how this unit is divided​",
+          "H2 How to use this unit​"
+        ],
+        "nonDescriptive": [],
+        "imgsNoAlt": 0,
+        "imgsEmptyAlt": 0,
+        "overflow": []
+      },
+      "topic-01": {
+        "vw": 360,
+        "scrollW": 360,
+        "figureCount": 2,
+        "figures": [
+          {
+            "w": 328,
+            "overflowsViewport": false,
+            "caption": "textbook.com.pk",
+            "imgs": [
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-1.svg",
+                "alt": "Table itemising a teacher's working week by activity, showing rough hours, whether each activity is visible from outside the school, and whether it counts in the official workload.",
+                "w": 328,
+                "h": 172,
+                "display": "inline",
+                "visible": true
+              },
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-1.dark.svg",
+                "alt": "Table itemising a teacher's working week by activity, showing rough hours, whether each activity is visible from outside the school, and whether it counts in the official workload.",
+                "w": 0,
+                "h": 0,
+                "display": "none",
+                "visible": false
+              }
+            ]
+          },
+          {
+            "w": 328,
+            "overflowsViewport": false,
+            "caption": "textbook.com.pk",
+            "imgs": [
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-2.svg",
+                "alt": "Flowchart from sustainable demand through episodic stress and chronic unresolved demand to the three burnout dimensions, with side branches showing where added resources interrupt the path.",
+                "w": 2,
+                "h": 2,
+                "display": "inline",
+                "visible": true
+              },
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-2.dark.svg",
+                "alt": "Flowchart from sustainable demand through episodic stress and chronic unresolved demand to the three burnout dimensions, with side branches showing where added resources interrupt the path.",
+                "w": 0,
+                "h": 0,
+                "display": "none",
+                "visible": false
+              }
+            ]
+          }
+        ],
+        "headings": [
+          "H1 Topic 5.1 - The conditions you will actually teach in",
+          "H2 A real classroom situation​",
+          "H2 Explanation​",
+          "H3 Workload, and what actually consumes a teacher's week​",
+          "H3 Stress and burnout, and how the two differ​",
+          "H3 Lack of support and resources​",
+          "H3 The multilingual classroom​",
+          "H3 The multi-grade classroom​",
+          "H2 Activity: Itemise the week​",
+          "H2 Check your understanding​",
+          "H2 Summary​",
+          "H2 Self-assessment checklist​",
+          "H2 Try this at your practicum school​",
+          "H2 Summative task​",
+          "H2 Further reading​"
+        ],
+        "nonDescriptive": [
+          "https://doi.org/10.1002/wps.20311",
+          "https://doi.org/10.1080/13540602.2021.1913404",
+          "https://doi.org/10.1016/S0738-0593(01)00011-6",
+          "https://doi.org/10.1016/j.ssaho.2021.100109"
+        ],
+        "imgsNoAlt": 0,
+        "imgsEmptyAlt": 0,
+        "overflow": []
+      },
+      "topic-02": {
+        "vw": 360,
+        "scrollW": 360,
+        "figureCount": 2,
+        "figures": [
+          {
+            "w": 328,
+            "overflowsViewport": false,
+            "caption": "textbook.com.pk",
+            "imgs": [
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-3.svg",
+                "alt": "Concept map of a teacher surrounded by six parties making demands - pupils, parents, head, district, examination system and the public - each link labelled with what that party wants and what it actually measures.",
+                "w": 328,
+                "h": 172,
+                "display": "inline",
+                "visible": true
+              },
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-3.dark.svg",
+                "alt": "Concept map of a teacher surrounded by six parties making demands - pupils, parents, head, district, examination system and the public - each link labelled with what that party wants and what it actually measures.",
+                "w": 0,
+                "h": 0,
+                "display": "none",
+                "visible": false
+              }
+            ]
+          },
+          {
+            "w": 328,
+            "overflowsViewport": false,
+            "caption": "textbook.com.pk",
+            "imgs": [
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-4.svg",
+                "alt": "Table comparing teaching with medicine, law, engineering and nursing on pay, entry selectivity, autonomy and public recognition, noting that the markers do not move together.",
+                "w": 2,
+                "h": 2,
+                "display": "inline",
+                "visible": true
+              },
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-4.dark.svg",
+                "alt": "Table comparing teaching with medicine, law, engineering and nursing on pay, entry selectivity, autonomy and public recognition, noting that the markers do not move together.",
+                "w": 0,
+                "h": 0,
+                "display": "none",
+                "visible": false
+              }
+            ]
+          }
+        ],
+        "headings": [
+          "H1 Topic 5.2 - What is asked of you, and by whom",
+          "H2 A real classroom situation​",
+          "H2 Explanation​",
+          "H3 The increased focus on teacher accountability​",
+          "H3 High expectations from many stakeholders at once​",
+          "H3 Socio-economic status and public recognition​",
+          "H2 Activity: Four demands, one week​",
+          "H2 Check your understanding​",
+          "H2 Summary​",
+          "H2 Self-assessment checklist​",
+          "H2 Try this at your practicum school​",
+          "H2 Summative task​",
+          "H2 Further reading​"
+        ],
+        "nonDescriptive": [
+          "https://files.eric.ed.gov/fulltext/ED530786.pdf",
+          "https://doi.org/10.1080/713698714"
+        ],
+        "imgsNoAlt": 0,
+        "imgsEmptyAlt": 0,
+        "overflow": []
+      },
+      "topic-03": {
+        "vw": 360,
+        "scrollW": 360,
+        "figureCount": 2,
+        "figures": [
+          {
+            "w": 328,
+            "overflowsViewport": false,
+            "caption": "textbook.com.pk",
+            "imgs": [
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-5.svg",
+                "alt": "Table judging four proposed classroom technology uses by what each adds, what it costs, what it replaces that was working, and a verdict.",
+                "w": 328,
+                "h": 147,
+                "display": "inline",
+                "visible": true
+              },
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-5.dark.svg",
+                "alt": "Table judging four proposed classroom technology uses by what each adds, what it costs, what it replaces that was working, and a verdict.",
+                "w": 0,
+                "h": 0,
+                "display": "none",
+                "visible": false
+              }
+            ]
+          },
+          {
+            "w": 328,
+            "overflowsViewport": false,
+            "caption": "textbook.com.pk",
+            "imgs": [
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-6.svg",
+                "alt": "Diagram of overlapping professional and personal digital regions, with the crossing cases labelled - private messages from pupils, parents on personal accounts, personal posts visible to the school, and after-hours class groups.",
+                "w": 2,
+                "h": 2,
+                "display": "inline",
+                "visible": true
+              },
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-6.dark.svg",
+                "alt": "Diagram of overlapping professional and personal digital regions, with the crossing cases labelled - private messages from pupils, parents on personal accounts, personal posts visible to the school, and after-hours class groups.",
+                "w": 0,
+                "h": 0,
+                "display": "none",
+                "visible": false
+              }
+            ]
+          }
+        ],
+        "headings": [
+          "H1 Topic 5.3 - Professionalism in the digital age",
+          "H2 A real classroom situation​",
+          "H2 Explanation​",
+          "H3 Pressure to integrate technology​",
+          "H3 Responsible use of digital platforms and resources​",
+          "H2 Activity: Judge four uses​",
+          "H2 Check your understanding​",
+          "H2 Summary​",
+          "H2 Self-assessment checklist​",
+          "H2 Try this at your practicum school​",
+          "H2 Summative task​",
+          "H2 Further reading​"
+        ],
+        "nonDescriptive": [
+          "https://doi.org/10.1016/j.caeo.2022.100080"
+        ],
+        "imgsNoAlt": 0,
+        "imgsEmptyAlt": 0,
+        "overflow": []
+      },
+      "topic-04": {
+        "vw": 360,
+        "scrollW": 360,
+        "figureCount": 2,
+        "figures": [
+          {
+            "w": 328,
+            "overflowsViewport": false,
+            "caption": "textbook.com.pk",
+            "imgs": [
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-7.svg",
+                "alt": "Concentric circles diagram showing what a teacher controls, what they can influence, and the third region of what they do not control, with a note that most frustration comes from effort spent in that third region.",
+                "w": 328,
+                "h": 176,
+                "display": "inline",
+                "visible": true
+              },
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-7.dark.svg",
+                "alt": "Concentric circles diagram showing what a teacher controls, what they can influence, and the third region of what they do not control, with a note that most frustration comes from effort spent in that third region.",
+                "w": 0,
+                "h": 0,
+                "display": "none",
+                "visible": false
+              }
+            ]
+          },
+          {
+            "w": 328,
+            "overflowsViewport": false,
+            "caption": "textbook.com.pk",
+            "imgs": [
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-8.svg",
+                "alt": "Flowchart turning a named challenge into one change - name it, place it in control or influence, choose the smallest change, decide the evidence in advance, act and check - looping back with one more success behind you.",
+                "w": 2,
+                "h": 2,
+                "display": "inline",
+                "visible": true
+              },
+              {
+                "src": "/img/figures/efmp-302/unit-05/fig-U5-8.dark.svg",
+                "alt": "Flowchart turning a named challenge into one change - name it, place it in control or influence, choose the smallest change, decide the evidence in advance, act and check - looping back with one more success behind you.",
+                "w": 0,
+                "h": 0,
+                "display": "none",
+                "visible": false
+              }
+            ]
+          }
+        ],
+        "headings": [
+          "H1 Topic 5.4 - Responding: growth rather than endurance",
+          "H2 A real classroom situation​",
+          "H2 Explanation​",
+          "H3 Separating what is within a teacher's control from what is not​",
+          "H3 Growth and development as a response rather than endurance​",
+          "H2 Activity: Place it, then change it​",
+          "H2 Check your understanding​",
+          "H2 Summary​",
+          "H2 Self-assessment checklist​",
+          "H2 Try this at your practicum school​",
+          "H2 Summative task​",
+          "H2 Further reading​"
+        ],
+        "nonDescriptive": [
+          "https://doi.org/10.1080/13540602.2021.1913404",
+          "https://doi.org/10.1080/713698714"
+        ],
+        "imgsNoAlt": 0,
+        "imgsEmptyAlt": 0,
+        "overflow": []
+      },
+      "unit-assessment": {
+        "vw": 360,
+        "scrollW": 360,
+        "figureCount": 0,
+        "figures": [],
+        "headings": [
+          "H1 Unit 5 assessment",
+          "H2 Unit summary​",
+          "H2 Summative assessment​",
+          "H3 Multiple-choice questions (MCQs)​",
+          "H3 Restricted-response questions (RRQs)​",
+          "H3 Extended-response questions (ERQs)​",
+          "H2 Answers and marking guidance​",
+          "H3 MCQ answer key​",
+          "H3 RRQ model answers and mark schemes​",
+          "H3 ERQ rubrics​"
+        ],
+        "nonDescriptive": [],
+        "imgsNoAlt": 0,
+        "imgsEmptyAlt": 0,
+        "overflow": [
+          "THEAD right=541",
+          "TR right=541",
+          "TH right=408",
+          "TH right=541",
+          "TBODY right=541",
+          "TR right=541",
+          "TD right=408",
+          "TD right=541"
+        ]
+      },
+      "unit-teacher-notes": {
+        "vw": 360,
+        "scrollW": 360,
+        "figureCount": 0,
+        "figures": [],
+        "headings": [
+          "H1 Unit 5 teacher notes",
+          "H2 The thing to get right in this unit​",
+          "H2 Sequencing across the two-week block​",
+          "H2 The misconceptions that recur​",
+          "H2 Handling what this unit surfaces about the profession​",
+          "H2 Practical work​",
+          "H2 Marking the unit assessment​"
+        ],
+        "nonDescriptive": [],
+        "imgsNoAlt": 0,
+        "imgsEmptyAlt": 0,
+        "overflow": []
+      }
+    }
+  },
+  "print": {
+    "topic-01": {
+      "vw": 1280,
+      "scrollW": 1280,
+      "figureCount": 2,
+      "figures": [
+        {
+          "w": 823,
+          "overflowsViewport": false,
+          "caption": "textbook.com.pk",
+          "imgs": [
+            {
+              "src": "/img/figures/efmp-302/unit-05/fig-U5-1.svg",
+              "alt": "Table itemising a teacher's working week by activity, showing rough hours, whether each activity is visible from outside the school, and whether it counts in the official workload.",
+              "w": 823,
+              "h": 431,
+              "display": "inline-block",
+              "visible": true
+            },
+            {
+              "src": "/img/figures/efmp-302/unit-05/fig-U5-1.dark.svg",
+              "alt": "Table itemising a teacher's working week by activity, showing rough hours, whether each activity is visible from outside the school, and whether it counts in the official workload.",
+              "w": 0,
+              "h": 0,
+              "display": "none",
+              "visible": false
+            }
+          ]
+        },
+        {
+          "w": 823,
+          "overflowsViewport": false,
+          "caption": "textbook.com.pk",
+          "imgs": [
+            {
+              "src": "/img/figures/efmp-302/unit-05/fig-U5-2.svg",
+              "alt": "Flowchart from sustainable demand through episodic stress and chronic unresolved demand to the three burnout dimensions, with side branches showing where added resources interrupt the path.",
+              "w": 2,
+              "h": 2,
+              "display": "inline-block",
+              "visible": true
+            },
+            {
+              "src": "/img/figures/efmp-302/unit-05/fig-U5-2.dark.svg",
+              "alt": "Flowchart from sustainable demand through episodic stress and chronic unresolved demand to the three burnout dimensions, with side branches showing where added resources interrupt the path.",
+              "w": 0,
+              "h": 0,
+              "display": "none",
+              "visible": false
+            }
+          ]
+        }
+      ],
+      "headings": [
+        "H1 Topic 5.1 - The conditions you will actually teach in",
+        "H2 A real classroom situation​",
+        "H2 Explanation​",
+        "H3 Workload, and what actually consumes a teacher's week​",
+        "H3 Stress and burnout, and how the two differ​",
+        "H3 Lack of support and resources​",
+        "H3 The multilingual classroom​",
+        "H3 The multi-grade classroom​",
+        "H2 Activity: Itemise the week​",
+        "H2 Check your understanding​",
+        "H2 Summary​",
+        "H2 Self-assessment checklist​",
+        "H2 Try this at your practicum school​",
+        "H2 Summative task​",
+        "H2 Further reading​"
+      ],
+      "nonDescriptive": [
+        "https://doi.org/10.1002/wps.20311",
+        "https://doi.org/10.1080/13540602.2021.1913404",
+        "https://doi.org/10.1016/S0738-0593(01)00011-6",
+        "https://doi.org/10.1016/j.ssaho.2021.100109"
+      ],
+      "imgsNoAlt": 0,
+      "imgsEmptyAlt": 0,
+      "overflow": []
+    },
+    "topic-04": {
+      "vw": 1280,
+      "scrollW": 1280,
+      "figureCount": 2,
+      "figures": [
+        {
+          "w": 823,
+          "overflowsViewport": false,
+          "caption": "textbook.com.pk",
+          "imgs": [
+            {
+              "src": "/img/figures/efmp-302/unit-05/fig-U5-7.svg",
+              "alt": "Concentric circles diagram showing what a teacher controls, what they can influence, and the third region of what they do not control, with a note that most frustration comes from effort spent in that third region.",
+              "w": 823,
+              "h": 440,
+              "display": "inline-block",
+              "visible": true
+            },
+            {
+              "src": "/img/figures/efmp-302/unit-05/fig-U5-7.dark.svg",
+              "alt": "Concentric circles diagram showing what a teacher controls, what they can influence, and the third region of what they do not control, with a note that most frustration comes from effort spent in that third region.",
+              "w": 0,
+              "h": 0,
+              "display": "none",
+              "visible": false
+            }
+          ]
+        },
+        {
+          "w": 823,
+          "overflowsViewport": false,
+          "caption": "textbook.com.pk",
+          "imgs": [
+            {
+              "src": "/img/figures/efmp-302/unit-05/fig-U5-8.svg",
+              "alt": "Flowchart turning a named challenge into one change - name it, place it in control or influence, choose the smallest change, decide the evidence in advance, act and check - looping back with one more success behind you.",
+              "w": 2,
+              "h": 2,
+              "display": "inline-block",
+              "visible": true
+            },
+            {
+              "src": "/img/figures/efmp-302/unit-05/fig-U5-8.dark.svg",
+              "alt": "Flowchart turning a named challenge into one change - name it, place it in control or influence, choose the smallest change, decide the evidence in advance, act and check - looping back with one more success behind you.",
+              "w": 0,
+              "h": 0,
+              "display": "none",
+              "visible": false
+            }
+          ]
+        }
+      ],
+      "headings": [
+        "H1 Topic 5.4 - Responding: growth rather than endurance",
+        "H2 A real classroom situation​",
+        "H2 Explanation​",
+        "H3 Separating what is within a teacher's control from what is not​",
+        "H3 Growth and development as a response rather than endurance​",
+        "H2 Activity: Place it, then change it​",
+        "H2 Check your understanding​",
+        "H2 Summary​",
+        "H2 Self-assessment checklist​",
+        "H2 Try this at your practicum school​",
+        "H2 Summative task​",
+        "H2 Further reading​"
+      ],
+      "nonDescriptive": [
+        "https://doi.org/10.1080/13540602.2021.1913404",
+        "https://doi.org/10.1080/713698714"
+      ],
+      "imgsNoAlt": 0,
+      "imgsEmptyAlt": 0,
+      "overflow": []
+    },
+    "unit-assessment": {
+      "vw": 1280,
+      "scrollW": 1280,
+      "figureCount": 0,
+      "figures": [],
+      "headings": [
+        "H1 Unit 5 assessment",
+        "H2 Unit summary​",
+        "H2 Summative assessment​",
+        "H3 Multiple-choice questions (MCQs)​",
+        "H3 Restricted-response questions (RRQs)​",
+        "H3 Extended-response questions (ERQs)​",
+        "H2 Answers and marking guidance​",
+        "H3 MCQ answer key​",
+        "H3 RRQ model answers and mark schemes​",
+        "H3 ERQ rubrics​"
+      ],
+      "nonDescriptive": [],
+      "imgsNoAlt": 0,
+      "imgsEmptyAlt": 0,
+      "overflow": []
+    }
+  }
+}

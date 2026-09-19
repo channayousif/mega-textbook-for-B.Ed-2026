@@ -1,0 +1,12 @@
+$ npm run check:docs-sync
+host: hcp.textbook.com.pk node: v22.22.1
+date: 2026-09-19T02:00:32Z
+commit: 4ae095247187523cfd9e31df94749543a7d88e53
+--- output ---
+
+> bed-mega-textbook@0.1.0 check:docs-sync
+> node scripts/check-docs-sync.mjs
+
+✓ docs are in sync with the code constants
+--- end output ---
+exit_code: 0
