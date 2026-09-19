@@ -74,6 +74,23 @@ you could not check is `unverified` and cannot contribute to an approval.
    it is cheap.
 7. **`structure`** - the spec satisfies the current style guide's required sections and the
    contracts in `contracts/`. Run the deterministic checks and record real exit codes.
+8. **`decision-residue`** - for every `confirmed` entry in `specs/decisions/log.md` whose scope
+   touches this course, search the **whole specification** for the superseded design, not only
+   the section the entry's "Applied in" field names. A narrowly scoped decision is exactly where
+   residue hides, because the scope line tells whoever applied it where to stop looking. The
+   first shadow run found `D-2026-0002`'s superseded Unit 6 activity alive in the course review
+   plan, one section away, outside the decision's declared scope. Where you find residue, say
+   whether extending the decision is guide-determined (approve) or a scope judgement (escalate).
+
+## Briefing a calibration run
+
+If a run is being scored against defects that are already known, the answers MUST arrive in a
+**separate message, after** the verdicts are recorded. The first shadow run was briefed with the
+task and the answers in one message, so there was no moment at which the evaluator held the task
+without the answers, and its score is uninterpretable as a result. That was the parent's defect,
+not the evaluator's. An evaluator handed both at once should say so plainly and score itself on a
+test priming cannot fake: does a criterion, as written, have a locator into the bound inputs that
+reaches this defect?
 
 ## Recording the decision
 
