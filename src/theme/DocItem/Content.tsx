@@ -61,6 +61,10 @@ const MESSAGES = {
     en: 'Could not save this tick. Please try again.',
     ur: 'یہ نشان محفوظ نہیں ہو سکا۔ براہ کرم دوبارہ کوشش کریں۔',
   },
+  scrollableTable: {
+    en: 'Scrollable table, scroll sideways to see all columns',
+    ur: 'قابلِ اسکرول جدول، تمام کالم دیکھنے کے لیے دائیں بائیں اسکرول کریں',
+  },
 } as const;
 
 function normalize(text: string): string {
@@ -201,6 +205,43 @@ function insertErrorContainer(list: HTMLUListElement): HTMLDivElement {
   div.setAttribute('aria-live', 'assertive');
   div.hidden = true;
   return div;
+}
+
+/**
+ * A content table that overflows its box is already its own scroll container -
+ * `.markdown table` is `display: block; overflow-x: auto` in custom.css, and
+ * measurement at 360px confirms every ERQ rubric is scrollWidth 482 inside
+ * clientWidth 328 with page overflow 0. So the columns were always reachable by
+ * swiping, which is why one G3 reviewer called this recoverable and another called
+ * it unreachable. The measured answer is that both were half right: reachable by
+ * touch, and not reachable at all from a keyboard.
+ *
+ * A scrollable region must be keyboard operable (WCAG 2.1.1) and needs an
+ * accessible name to be announced as one. This marks only the tables that actually
+ * overflow, so a table that fits does not become a spurious tab stop, and re-runs
+ * on resize because overflow depends on the viewport.
+ */
+function markScrollableTables(label: string): () => void {
+  if (typeof document === 'undefined') return () => {};
+  const apply = () => {
+    for (const table of Array.from(document.querySelectorAll<HTMLTableElement>('.markdown table'))) {
+      const overflows = table.scrollWidth > table.clientWidth + 1;
+      if (overflows) {
+        table.setAttribute('data-scrollable', 'true');
+        table.setAttribute('tabindex', '0');
+        table.setAttribute('role', 'region');
+        table.setAttribute('aria-label', label);
+      } else {
+        table.removeAttribute('data-scrollable');
+        table.removeAttribute('tabindex');
+        table.removeAttribute('role');
+        table.removeAttribute('aria-label');
+      }
+    }
+  };
+  apply();
+  window.addEventListener('resize', apply);
+  return () => window.removeEventListener('resize', apply);
 }
 
 export default function DocItemContentWrapper(props: Props): React.ReactElement {
@@ -351,6 +392,8 @@ export default function DocItemContentWrapper(props: Props): React.ReactElement 
     // Deliberately NOT depending on `profile`/`profile?.id` - see the file-level comment.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [courseCode, unitNo, topicNo, locale, role, loading]);
+
+  useEffect(() => markScrollableTables(MESSAGES.scrollableTable[locale]), [locale]);
 
   // Rendered here rather than in MDX so every file of a provisional unit carries
   // the notice - index, each topic, the assessment and the teacher notes, in both
