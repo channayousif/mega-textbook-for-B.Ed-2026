@@ -1,0 +1,15 @@
+# command: npx vitest run tests/unit/no-answer-keys.test.mjs
+# commit: 482eb52a70a162629433f4e6c0b07dcd42116add
+# started: 2026-09-19T11:52:26-05:00
+[33mThe CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-cjs-node-api-deprecated for more details.[39m
+
+ RUN  v2.1.9 /home/a2ahs/mega_book_for_B.Ed
+
+ ✓ tests/unit/no-answer-keys.test.mjs (10 tests) 440ms
+
+ Test Files  1 passed (1)
+      Tests  10 passed (10)
+   Start at  11:52:27
+   Duration  826ms (transform 62ms, setup 0ms, collect 39ms, tests 440ms, environment 0ms, prepare 118ms)
+
+# exit_code: 0

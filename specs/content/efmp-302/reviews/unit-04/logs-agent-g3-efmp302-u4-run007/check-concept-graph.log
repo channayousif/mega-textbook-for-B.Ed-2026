@@ -1,0 +1,8 @@
+# command: npm run check:concept-graph
+# commit: 482eb52a70a162629433f4e6c0b07dcd42116add
+
+> bed-mega-textbook@0.1.0 check:concept-graph
+> node scripts/check-concept-graph.mjs
+
+✓ Concept graph is consistent (coverage, no orphans, acyclic, resolvable prerequisites, assessment linkage).
+# exit_code: 0
