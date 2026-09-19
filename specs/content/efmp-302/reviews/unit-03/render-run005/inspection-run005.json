@@ -1,0 +1,1610 @@
+{
+  "started_at": "2026-09-19T11:54:24.539Z",
+  "base": "http://localhost:3103",
+  "host": "npm run serve -- --port 3103 (prebuilt build/, not rebuilt)",
+  "viewports": {
+    "desktop": {
+      "index": {
+        "url": "/semester-1/efmp-302/unit-03/",
+        "title": "Becoming an Effective Teacher | B.Ed Mega Textbook",
+        "headings": [
+          "H1 Becoming an Effective Teacher",
+          "H2 Unit learning outcomes​",
+          "H2 Prerequisite knowledge​",
+          "H2 In this unit​",
+          "H2 How to use this unit​"
+        ],
+        "images": [],
+        "scrollers": [],
+        "pageOverflow": {
+          "docScrollWidth": 1280,
+          "docClientWidth": 1280,
+          "overflows": false
+        },
+        "tooWide": [],
+        "links": [],
+        "tables": 0,
+        "checkboxItems": 0
+      },
+      "topic-01": {
+        "url": "/semester-1/efmp-302/unit-03/topic-01/",
+        "title": "Topic 3.1 - What \"an effective teacher\" actually means | B.Ed Mega Textbook",
+        "headings": [
+          "H1 Topic 3.1 - What \"an effective teacher\" actually means",
+          "H2 A real classroom situation​",
+          "H2 Explanation​",
+          "H3 Redefining effective teaching and the effective teacher​",
+          "H3 The components of teacher effectiveness, and what each can and cannot show​",
+          "H2 Activity: What did you count?​",
+          "H2 Check your understanding​",
+          "H2 Summary​",
+          "H2 Self-assessment checklist​",
+          "H2 Try this at your practicum school​",
+          "H2 Summative task​",
+          "H2 Further reading​"
+        ],
+        "images": [
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-1.svg",
+            "alt": "Table comparing three definitions of teacher effectiveness - achievement gain, observed practice and breadth of learner outcomes - by what each counts, captures, misses, and who uses it.",
+            "altLen": 186,
+            "loading": "lazy",
+            "natural": "300x133",
+            "rendered": "640x286",
+            "complete": true
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-1.dark.svg",
+            "alt": "Table comparing three definitions of teacher effectiveness - achievement gain, observed practice and breadth of learner outcomes - by what each counts, captures, misses, and who uses it.",
+            "altLen": 186,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-2.svg",
+            "alt": "Concept map of teacher effectiveness branching into within-classroom processes and factors beyond the classroom, each leaf noting how it is evidenced.",
+            "altLen": 150,
+            "loading": "lazy",
+            "natural": "293x150",
+            "rendered": "640x328",
+            "complete": true
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-2.dark.svg",
+            "alt": "Concept map of teacher effectiveness branching into within-classroom processes and factors beyond the classroom, each leaf noting how it is evidenced.",
+            "altLen": 150,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          }
+        ],
+        "scrollers": [],
+        "pageOverflow": {
+          "docScrollWidth": 1280,
+          "docClientWidth": 1280,
+          "overflows": false
+        },
+        "tooWide": [],
+        "links": [],
+        "tables": 1,
+        "checkboxItems": 0
+      },
+      "topic-02": {
+        "url": "/semester-1/efmp-302/unit-03/topic-02/",
+        "title": "Topic 3.2 - The qualities an effective teacher brings | B.Ed Mega Textbook",
+        "headings": [
+          "H1 Topic 3.2 - The qualities an effective teacher brings",
+          "H2 A real classroom situation​",
+          "H2 Explanation​",
+          "H3 A teacher's attitude toward the teaching profession​",
+          "H3 Dressing and grooming as dimensions of professional image​",
+          "H3 Personality traits of effective teachers​",
+          "H3 The influence of personality traits on teacher effectiveness​",
+          "H2 Activity: The trait at excess​",
+          "H2 Check your understanding​",
+          "H2 Summary​",
+          "H2 Self-assessment checklist​",
+          "H2 Try this at your practicum school​",
+          "H2 Summative task​",
+          "H2 Further reading​"
+        ],
+        "images": [
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-3.svg",
+            "alt": "Table of seven teacher personality traits - empathy, patience, self-control, optimism, humour, resilience and adaptability - showing how each appears in a classroom, what it makes possible, and how each fails when overdone.",
+            "altLen": 223,
+            "loading": "lazy",
+            "natural": "287x150",
+            "rendered": "640x335",
+            "complete": true
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-3.dark.svg",
+            "alt": "Table of seven teacher personality traits - empathy, patience, self-control, optimism, humour, resilience and adaptability - showing how each appears in a classroom, what it makes possible, and how each fails when overdone.",
+            "altLen": 223,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-4.svg",
+            "alt": "Layered diagram of professional image with appearance as a thin outer band, then conduct, then reliability, and competence as the large core, each labelled with what it signals.",
+            "altLen": 177,
+            "loading": "lazy",
+            "natural": "255x150",
+            "rendered": "640x377",
+            "complete": true
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-4.dark.svg",
+            "alt": "Layered diagram of professional image with appearance as a thin outer band, then conduct, then reliability, and competence as the large core, each labelled with what it signals.",
+            "altLen": 177,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          }
+        ],
+        "scrollers": [],
+        "pageOverflow": {
+          "docScrollWidth": 1280,
+          "docClientWidth": 1280,
+          "overflows": false
+        },
+        "tooWide": [],
+        "links": [],
+        "tables": 1,
+        "checkboxItems": 0
+      },
+      "topic-03": {
+        "url": "/semester-1/efmp-302/unit-03/topic-03/",
+        "title": "Topic 3.3 - Relationships, and what to do when they go wrong | B.Ed Mega Textbook",
+        "headings": [
+          "H1 Topic 3.3 - Relationships, and what to do when they go wrong",
+          "H2 A real classroom situation​",
+          "H2 Explanation​",
+          "H3 Building positive relationships with pupils, parents, colleagues and the community​",
+          "H3 Managing conflict while maintaining professionalism​",
+          "H2 Activity: The thirty seconds​",
+          "H2 Check your understanding​",
+          "H2 Summary​",
+          "H2 Self-assessment checklist​",
+          "H2 Try this at your practicum school​",
+          "H2 Summative task​",
+          "H2 Further reading​"
+        ],
+        "images": [
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-5.svg",
+            "alt": "Concept map with a teacher at the centre linked to pupils, parents, colleagues, the head and the community, each link labelled with what that relationship is for.",
+            "altLen": 162,
+            "loading": "lazy",
+            "natural": "281x150",
+            "rendered": "640x343",
+            "complete": true
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-5.dark.svg",
+            "alt": "Concept map with a teacher at the centre linked to pupils, parents, colleagues, the head and the community, each link labelled with what that relationship is for.",
+            "altLen": 162,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-6.svg",
+            "alt": "Flowchart of a conflict de-escalation sequence from an angry first contact through decision points about place, readiness, facts and authority, to outcomes of resolved now, resolved after checking, or escalated.",
+            "altLen": 211,
+            "loading": "lazy",
+            "natural": "254x150",
+            "rendered": "703x416",
+            "complete": true
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-6.dark.svg",
+            "alt": "Flowchart of a conflict de-escalation sequence from an angry first contact through decision points about place, readiness, facts and authority, to outcomes of resolved now, resolved after checking, or escalated.",
+            "altLen": 211,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          }
+        ],
+        "scrollers": [],
+        "pageOverflow": {
+          "docScrollWidth": 1280,
+          "docClientWidth": 1280,
+          "overflows": false
+        },
+        "tooWide": [],
+        "links": [],
+        "tables": 1,
+        "checkboxItems": 0
+      },
+      "topic-04": {
+        "url": "/semester-1/efmp-302/unit-03/topic-04/",
+        "title": "Topic 3.4 - Saying it so it lands | B.Ed Mega Textbook",
+        "headings": [
+          "H1 Topic 3.4 - Saying it so it lands",
+          "H2 A real classroom situation​",
+          "H2 Explanation​",
+          "H3 Verbal communication in the classroom​",
+          "H3 Non-verbal communication: its types and their classroom use​",
+          "H3 When the channels contradict​",
+          "H2 Activity: One instruction, four ways​",
+          "H2 Check your understanding​",
+          "H2 Summary​",
+          "H2 Self-assessment checklist​",
+          "H2 Try this at your practicum school​",
+          "H2 Summative task​",
+          "H2 Further reading​"
+        ],
+        "images": [
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-7.svg",
+            "alt": "Table comparing verbal and non-verbal communication channels by what each carries best, how each fails, how fast each is read, and what happens when the two contradict each other.",
+            "altLen": 179,
+            "loading": "lazy",
+            "natural": "300x140",
+            "rendered": "640x299",
+            "complete": true
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-7.dark.svg",
+            "alt": "Table comparing verbal and non-verbal communication channels by what each carries best, how each fails, how fast each is read, and what happens when the two contradict each other.",
+            "altLen": 179,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-8.svg",
+            "alt": "Overhead schematic of a classroom marking the teacher's non-verbal channels in place - proximity, body orientation, gaze, gesture and vocal variety - each labelled with its classroom use.",
+            "altLen": 187,
+            "loading": "lazy",
+            "natural": "263x150",
+            "rendered": "640x366",
+            "complete": true
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-8.dark.svg",
+            "alt": "Overhead schematic of a classroom marking the teacher's non-verbal channels in place - proximity, body orientation, gaze, gesture and vocal variety - each labelled with its classroom use.",
+            "altLen": 187,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          }
+        ],
+        "scrollers": [],
+        "pageOverflow": {
+          "docScrollWidth": 1280,
+          "docClientWidth": 1280,
+          "overflows": false
+        },
+        "tooWide": [],
+        "links": [],
+        "tables": 1,
+        "checkboxItems": 0
+      },
+      "topic-05": {
+        "url": "/semester-1/efmp-302/unit-03/topic-05/",
+        "title": "Topic 3.5 - The roles a teacher now has to play | B.Ed Mega Textbook",
+        "headings": [
+          "H1 Topic 3.5 - The roles a teacher now has to play",
+          "H2 A real classroom situation​",
+          "H2 Explanation​",
+          "H3 The teacher as facilitator and as researcher​",
+          "H3 The teacher as change agent and as moral agent​",
+          "H3 The teacher as life-long learner​",
+          "H3 Why these are additions, not replacements​",
+          "H2 Activity: One act per role​",
+          "H2 Check your understanding​",
+          "H2 Summary​",
+          "H2 Self-assessment checklist​",
+          "H2 Try this at your practicum school​",
+          "H2 Summative task​",
+          "H2 Further reading​"
+        ],
+        "images": [
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-9.svg",
+            "alt": "Timeline of the shifting expected role of a teacher from transmitter of content through instructor and facilitator to the present combination of researcher, change agent, moral agent and life-long learner, noting that later roles were added rather than replacing earlier ones.",
+            "altLen": 276,
+            "loading": "lazy",
+            "natural": "300x140",
+            "rendered": "703x329",
+            "complete": true
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-9.dark.svg",
+            "alt": "Timeline of the shifting expected role of a teacher from transmitter of content through instructor and facilitator to the present combination of researcher, change agent, moral agent and life-long learner, noting that later roles were added rather than replacing earlier ones.",
+            "altLen": 276,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-10.svg",
+            "alt": "Concept map of a teacher at the centre with five branches - facilitator, researcher, change agent, moral agent and life-long learner - each ending in one concrete classroom act that expresses that role.",
+            "altLen": 202,
+            "loading": "lazy",
+            "natural": "287x150",
+            "rendered": "640x335",
+            "complete": true
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-10.dark.svg",
+            "alt": "Concept map of a teacher at the centre with five branches - facilitator, researcher, change agent, moral agent and life-long learner - each ending in one concrete classroom act that expresses that role.",
+            "altLen": 202,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          }
+        ],
+        "scrollers": [],
+        "pageOverflow": {
+          "docScrollWidth": 1280,
+          "docClientWidth": 1280,
+          "overflows": false
+        },
+        "tooWide": [],
+        "links": [],
+        "tables": 1,
+        "checkboxItems": 0
+      },
+      "unit-assessment": {
+        "url": "/semester-1/efmp-302/unit-03/unit-assessment/",
+        "title": "Unit 3 assessment | B.Ed Mega Textbook",
+        "headings": [
+          "H1 Unit 3 assessment",
+          "H2 Unit summary​",
+          "H2 Summative assessment​",
+          "H3 Multiple-choice questions (MCQs)​",
+          "H3 Restricted-response questions (RRQs)​",
+          "H3 Extended-response questions (ERQs)​",
+          "H2 Answers and marking guidance​",
+          "H3 MCQ answer key​",
+          "H3 RRQ model answers and mark schemes​",
+          "H3 ERQ rubrics​"
+        ],
+        "images": [],
+        "scrollers": [],
+        "pageOverflow": {
+          "docScrollWidth": 1280,
+          "docClientWidth": 1280,
+          "overflows": false
+        },
+        "tooWide": [],
+        "links": [],
+        "tables": 5,
+        "checkboxItems": 0
+      },
+      "unit-teacher-notes": {
+        "url": "/semester-1/efmp-302/unit-03/unit-teacher-notes/",
+        "title": "Unit 3 teacher notes | B.Ed Mega Textbook",
+        "headings": [
+          "H1 Unit 3 teacher notes",
+          "H2 Sequencing across the three-week block​",
+          "H2 The misconceptions that recur​",
+          "H2 Running the observation tasks​",
+          "H2 The activity that most often goes wrong​",
+          "H2 Practical work​",
+          "H2 Marking the unit assessment​"
+        ],
+        "images": [],
+        "scrollers": [],
+        "pageOverflow": {
+          "docScrollWidth": 1280,
+          "docClientWidth": 1280,
+          "overflows": false
+        },
+        "tooWide": [],
+        "links": [],
+        "tables": 0,
+        "checkboxItems": 0
+      }
+    },
+    "narrow-360": {
+      "index": {
+        "url": "/semester-1/efmp-302/unit-03/",
+        "title": "Becoming an Effective Teacher | B.Ed Mega Textbook",
+        "headings": [
+          "H1 Becoming an Effective Teacher",
+          "H2 Unit learning outcomes​",
+          "H2 Prerequisite knowledge​",
+          "H2 In this unit​",
+          "H2 How to use this unit​"
+        ],
+        "images": [],
+        "scrollers": [],
+        "pageOverflow": {
+          "docScrollWidth": 360,
+          "docClientWidth": 360,
+          "overflows": false
+        },
+        "tooWide": [],
+        "links": [],
+        "tables": 0,
+        "checkboxItems": 0,
+        "focusableScrollers": []
+      },
+      "topic-01": {
+        "url": "/semester-1/efmp-302/unit-03/topic-01/",
+        "title": "Topic 3.1 - What \"an effective teacher\" actually means | B.Ed Mega Textbook",
+        "headings": [
+          "H1 Topic 3.1 - What \"an effective teacher\" actually means",
+          "H2 A real classroom situation​",
+          "H2 Explanation​",
+          "H3 Redefining effective teaching and the effective teacher​",
+          "H3 The components of teacher effectiveness, and what each can and cannot show​",
+          "H2 Activity: What did you count?​",
+          "H2 Check your understanding​",
+          "H2 Summary​",
+          "H2 Self-assessment checklist​",
+          "H2 Try this at your practicum school​",
+          "H2 Summative task​",
+          "H2 Further reading​"
+        ],
+        "images": [
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-1.svg",
+            "alt": "Table comparing three definitions of teacher effectiveness - achievement gain, observed practice and breadth of learner outcomes - by what each counts, captures, misses, and who uses it.",
+            "altLen": 186,
+            "loading": "lazy",
+            "natural": "300x133",
+            "rendered": "900x401",
+            "complete": true
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-1.dark.svg",
+            "alt": "Table comparing three definitions of teacher effectiveness - achievement gain, observed practice and breadth of learner outcomes - by what each counts, captures, misses, and who uses it.",
+            "altLen": 186,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-2.svg",
+            "alt": "Concept map of teacher effectiveness branching into within-classroom processes and factors beyond the classroom, each leaf noting how it is evidenced.",
+            "altLen": 150,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "900x461",
+            "complete": false
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-2.dark.svg",
+            "alt": "Concept map of teacher effectiveness branching into within-classroom processes and factors beyond the classroom, each leaf noting how it is evidenced.",
+            "altLen": 150,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          }
+        ],
+        "scrollers": [
+          {
+            "tag": "FIGURE",
+            "cls": "figure figure--table",
+            "role": "region",
+            "tabindex": "0",
+            "ariaLabel": "Scrollable figure, scroll sideways to see the whole diagram",
+            "ariaLabelledby": null,
+            "overflowX": "auto",
+            "scrollWidth": 900,
+            "clientWidth": 328,
+            "containsImg": true,
+            "containsTable": false
+          },
+          {
+            "tag": "FIGURE",
+            "cls": "figure figure--concept-map",
+            "role": "region",
+            "tabindex": "0",
+            "ariaLabel": "Scrollable figure, scroll sideways to see the whole diagram",
+            "ariaLabelledby": null,
+            "overflowX": "auto",
+            "scrollWidth": 900,
+            "clientWidth": 328,
+            "containsImg": true,
+            "containsTable": false
+          }
+        ],
+        "pageOverflow": {
+          "docScrollWidth": 360,
+          "docClientWidth": 360,
+          "overflows": false
+        },
+        "tooWide": [
+          "IMG.figure__img w=900",
+          "IMG.figure__img w=900"
+        ],
+        "links": [],
+        "tables": 1,
+        "checkboxItems": 0,
+        "focusableScrollers": [
+          {
+            "tag": "FIGURE",
+            "focused": true,
+            "tabindex": "0",
+            "role": "region",
+            "label": "Scrollable figure, scroll sideways to see the whole diagram"
+          },
+          {
+            "tag": "FIGURE",
+            "focused": true,
+            "tabindex": "0",
+            "role": "region",
+            "label": "Scrollable figure, scroll sideways to see the whole diagram"
+          }
+        ]
+      },
+      "topic-02": {
+        "url": "/semester-1/efmp-302/unit-03/topic-02/",
+        "title": "Topic 3.2 - The qualities an effective teacher brings | B.Ed Mega Textbook",
+        "headings": [
+          "H1 Topic 3.2 - The qualities an effective teacher brings",
+          "H2 A real classroom situation​",
+          "H2 Explanation​",
+          "H3 A teacher's attitude toward the teaching profession​",
+          "H3 Dressing and grooming as dimensions of professional image​",
+          "H3 Personality traits of effective teachers​",
+          "H3 The influence of personality traits on teacher effectiveness​",
+          "H2 Activity: The trait at excess​",
+          "H2 Check your understanding​",
+          "H2 Summary​",
+          "H2 Self-assessment checklist​",
+          "H2 Try this at your practicum school​",
+          "H2 Summative task​",
+          "H2 Further reading​"
+        ],
+        "images": [
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-3.svg",
+            "alt": "Table of seven teacher personality traits - empathy, patience, self-control, optimism, humour, resilience and adaptability - showing how each appears in a classroom, what it makes possible, and how each fails when overdone.",
+            "altLen": 223,
+            "loading": "lazy",
+            "natural": "287x150",
+            "rendered": "900x471",
+            "complete": true
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-3.dark.svg",
+            "alt": "Table of seven teacher personality traits - empathy, patience, self-control, optimism, humour, resilience and adaptability - showing how each appears in a classroom, what it makes possible, and how each fails when overdone.",
+            "altLen": 223,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-4.svg",
+            "alt": "Layered diagram of professional image with appearance as a thin outer band, then conduct, then reliability, and competence as the large core, each labelled with what it signals.",
+            "altLen": 177,
+            "loading": "lazy",
+            "natural": "255x150",
+            "rendered": "800x471",
+            "complete": true
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-4.dark.svg",
+            "alt": "Layered diagram of professional image with appearance as a thin outer band, then conduct, then reliability, and competence as the large core, each labelled with what it signals.",
+            "altLen": 177,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          }
+        ],
+        "scrollers": [
+          {
+            "tag": "FIGURE",
+            "cls": "figure figure--table",
+            "role": "region",
+            "tabindex": "0",
+            "ariaLabel": "Scrollable figure, scroll sideways to see the whole diagram",
+            "ariaLabelledby": null,
+            "overflowX": "auto",
+            "scrollWidth": 900,
+            "clientWidth": 328,
+            "containsImg": true,
+            "containsTable": false
+          },
+          {
+            "tag": "FIGURE",
+            "cls": "figure figure--diagram",
+            "role": "region",
+            "tabindex": "0",
+            "ariaLabel": "Scrollable figure, scroll sideways to see the whole diagram",
+            "ariaLabelledby": null,
+            "overflowX": "auto",
+            "scrollWidth": 800,
+            "clientWidth": 328,
+            "containsImg": true,
+            "containsTable": false
+          }
+        ],
+        "pageOverflow": {
+          "docScrollWidth": 360,
+          "docClientWidth": 360,
+          "overflows": false
+        },
+        "tooWide": [
+          "IMG.figure__img w=900",
+          "IMG.figure__img w=800"
+        ],
+        "links": [],
+        "tables": 1,
+        "checkboxItems": 0,
+        "focusableScrollers": [
+          {
+            "tag": "FIGURE",
+            "focused": true,
+            "tabindex": "0",
+            "role": "region",
+            "label": "Scrollable figure, scroll sideways to see the whole diagram"
+          },
+          {
+            "tag": "FIGURE",
+            "focused": true,
+            "tabindex": "0",
+            "role": "region",
+            "label": "Scrollable figure, scroll sideways to see the whole diagram"
+          }
+        ]
+      },
+      "topic-03": {
+        "url": "/semester-1/efmp-302/unit-03/topic-03/",
+        "title": "Topic 3.3 - Relationships, and what to do when they go wrong | B.Ed Mega Textbook",
+        "headings": [
+          "H1 Topic 3.3 - Relationships, and what to do when they go wrong",
+          "H2 A real classroom situation​",
+          "H2 Explanation​",
+          "H3 Building positive relationships with pupils, parents, colleagues and the community​",
+          "H3 Managing conflict while maintaining professionalism​",
+          "H2 Activity: The thirty seconds​",
+          "H2 Check your understanding​",
+          "H2 Summary​",
+          "H2 Self-assessment checklist​",
+          "H2 Try this at your practicum school​",
+          "H2 Summative task​",
+          "H2 Further reading​"
+        ],
+        "images": [
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-5.svg",
+            "alt": "Concept map with a teacher at the centre linked to pupils, parents, colleagues, the head and the community, each link labelled with what that relationship is for.",
+            "altLen": 162,
+            "loading": "lazy",
+            "natural": "281x150",
+            "rendered": "880x471",
+            "complete": true
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-5.dark.svg",
+            "alt": "Concept map with a teacher at the centre linked to pupils, parents, colleagues, the head and the community, each link labelled with what that relationship is for.",
+            "altLen": 162,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-6.svg",
+            "alt": "Flowchart of a conflict de-escalation sequence from an angry first contact through decision points about place, readiness, facts and authority, to outcomes of resolved now, resolved after checking, or escalated.",
+            "altLen": 211,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "880x521",
+            "complete": false
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-6.dark.svg",
+            "alt": "Flowchart of a conflict de-escalation sequence from an angry first contact through decision points about place, readiness, facts and authority, to outcomes of resolved now, resolved after checking, or escalated.",
+            "altLen": 211,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          }
+        ],
+        "scrollers": [
+          {
+            "tag": "FIGURE",
+            "cls": "figure figure--concept-map",
+            "role": "region",
+            "tabindex": "0",
+            "ariaLabel": "Scrollable figure, scroll sideways to see the whole diagram",
+            "ariaLabelledby": null,
+            "overflowX": "auto",
+            "scrollWidth": 880,
+            "clientWidth": 328,
+            "containsImg": true,
+            "containsTable": false
+          },
+          {
+            "tag": "FIGURE",
+            "cls": "figure figure--flowchart",
+            "role": "region",
+            "tabindex": "0",
+            "ariaLabel": "Scrollable figure, scroll sideways to see the whole diagram",
+            "ariaLabelledby": null,
+            "overflowX": "auto",
+            "scrollWidth": 880,
+            "clientWidth": 328,
+            "containsImg": true,
+            "containsTable": false
+          }
+        ],
+        "pageOverflow": {
+          "docScrollWidth": 360,
+          "docClientWidth": 360,
+          "overflows": false
+        },
+        "tooWide": [
+          "IMG.figure__img w=880",
+          "IMG.figure__img w=880"
+        ],
+        "links": [],
+        "tables": 1,
+        "checkboxItems": 0,
+        "focusableScrollers": [
+          {
+            "tag": "FIGURE",
+            "focused": true,
+            "tabindex": "0",
+            "role": "region",
+            "label": "Scrollable figure, scroll sideways to see the whole diagram"
+          },
+          {
+            "tag": "FIGURE",
+            "focused": true,
+            "tabindex": "0",
+            "role": "region",
+            "label": "Scrollable figure, scroll sideways to see the whole diagram"
+          }
+        ]
+      },
+      "topic-04": {
+        "url": "/semester-1/efmp-302/unit-03/topic-04/",
+        "title": "Topic 3.4 - Saying it so it lands | B.Ed Mega Textbook",
+        "headings": [
+          "H1 Topic 3.4 - Saying it so it lands",
+          "H2 A real classroom situation​",
+          "H2 Explanation​",
+          "H3 Verbal communication in the classroom​",
+          "H3 Non-verbal communication: its types and their classroom use​",
+          "H3 When the channels contradict​",
+          "H2 Activity: One instruction, four ways​",
+          "H2 Check your understanding​",
+          "H2 Summary​",
+          "H2 Self-assessment checklist​",
+          "H2 Try this at your practicum school​",
+          "H2 Summative task​",
+          "H2 Further reading​"
+        ],
+        "images": [
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-7.svg",
+            "alt": "Table comparing verbal and non-verbal communication channels by what each carries best, how each fails, how fast each is read, and what happens when the two contradict each other.",
+            "altLen": 179,
+            "loading": "lazy",
+            "natural": "300x140",
+            "rendered": "860x401",
+            "complete": true
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-7.dark.svg",
+            "alt": "Table comparing verbal and non-verbal communication channels by what each carries best, how each fails, how fast each is read, and what happens when the two contradict each other.",
+            "altLen": 179,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-8.svg",
+            "alt": "Overhead schematic of a classroom marking the teacher's non-verbal channels in place - proximity, body orientation, gaze, gesture and vocal variety - each labelled with its classroom use.",
+            "altLen": 187,
+            "loading": "lazy",
+            "natural": "263x150",
+            "rendered": "860x491",
+            "complete": true
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-8.dark.svg",
+            "alt": "Overhead schematic of a classroom marking the teacher's non-verbal channels in place - proximity, body orientation, gaze, gesture and vocal variety - each labelled with its classroom use.",
+            "altLen": 187,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          }
+        ],
+        "scrollers": [
+          {
+            "tag": "FIGURE",
+            "cls": "figure figure--table",
+            "role": "region",
+            "tabindex": "0",
+            "ariaLabel": "Scrollable figure, scroll sideways to see the whole diagram",
+            "ariaLabelledby": null,
+            "overflowX": "auto",
+            "scrollWidth": 860,
+            "clientWidth": 328,
+            "containsImg": true,
+            "containsTable": false
+          },
+          {
+            "tag": "FIGURE",
+            "cls": "figure figure--diagram",
+            "role": "region",
+            "tabindex": "0",
+            "ariaLabel": "Scrollable figure, scroll sideways to see the whole diagram",
+            "ariaLabelledby": null,
+            "overflowX": "auto",
+            "scrollWidth": 860,
+            "clientWidth": 328,
+            "containsImg": true,
+            "containsTable": false
+          }
+        ],
+        "pageOverflow": {
+          "docScrollWidth": 360,
+          "docClientWidth": 360,
+          "overflows": false
+        },
+        "tooWide": [
+          "IMG.figure__img w=860",
+          "IMG.figure__img w=860"
+        ],
+        "links": [],
+        "tables": 1,
+        "checkboxItems": 0,
+        "focusableScrollers": [
+          {
+            "tag": "FIGURE",
+            "focused": true,
+            "tabindex": "0",
+            "role": "region",
+            "label": "Scrollable figure, scroll sideways to see the whole diagram"
+          },
+          {
+            "tag": "FIGURE",
+            "focused": true,
+            "tabindex": "0",
+            "role": "region",
+            "label": "Scrollable figure, scroll sideways to see the whole diagram"
+          }
+        ]
+      },
+      "topic-05": {
+        "url": "/semester-1/efmp-302/unit-03/topic-05/",
+        "title": "Topic 3.5 - The roles a teacher now has to play | B.Ed Mega Textbook",
+        "headings": [
+          "H1 Topic 3.5 - The roles a teacher now has to play",
+          "H2 A real classroom situation​",
+          "H2 Explanation​",
+          "H3 The teacher as facilitator and as researcher​",
+          "H3 The teacher as change agent and as moral agent​",
+          "H3 The teacher as life-long learner​",
+          "H3 Why these are additions, not replacements​",
+          "H2 Activity: One act per role​",
+          "H2 Check your understanding​",
+          "H2 Summary​",
+          "H2 Self-assessment checklist​",
+          "H2 Try this at your practicum school​",
+          "H2 Summative task​",
+          "H2 Further reading​"
+        ],
+        "images": [
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-9.svg",
+            "alt": "Timeline of the shifting expected role of a teacher from transmitter of content through instructor and facilitator to the present combination of researcher, change agent, moral agent and life-long learner, noting that later roles were added rather than replacing earlier ones.",
+            "altLen": 276,
+            "loading": "lazy",
+            "natural": "300x140",
+            "rendered": "900x421",
+            "complete": true
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-9.dark.svg",
+            "alt": "Timeline of the shifting expected role of a teacher from transmitter of content through instructor and facilitator to the present combination of researcher, change agent, moral agent and life-long learner, noting that later roles were added rather than replacing earlier ones.",
+            "altLen": 276,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-10.svg",
+            "alt": "Concept map of a teacher at the centre with five branches - facilitator, researcher, change agent, moral agent and life-long learner - each ending in one concrete classroom act that expresses that role.",
+            "altLen": 202,
+            "loading": "lazy",
+            "natural": "287x150",
+            "rendered": "900x471",
+            "complete": true
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-10.dark.svg",
+            "alt": "Concept map of a teacher at the centre with five branches - facilitator, researcher, change agent, moral agent and life-long learner - each ending in one concrete classroom act that expresses that role.",
+            "altLen": 202,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          }
+        ],
+        "scrollers": [
+          {
+            "tag": "FIGURE",
+            "cls": "figure figure--timeline",
+            "role": "region",
+            "tabindex": "0",
+            "ariaLabel": "Scrollable figure, scroll sideways to see the whole diagram",
+            "ariaLabelledby": null,
+            "overflowX": "auto",
+            "scrollWidth": 900,
+            "clientWidth": 328,
+            "containsImg": true,
+            "containsTable": false
+          },
+          {
+            "tag": "FIGURE",
+            "cls": "figure figure--concept-map",
+            "role": "region",
+            "tabindex": "0",
+            "ariaLabel": "Scrollable figure, scroll sideways to see the whole diagram",
+            "ariaLabelledby": null,
+            "overflowX": "auto",
+            "scrollWidth": 900,
+            "clientWidth": 328,
+            "containsImg": true,
+            "containsTable": false
+          }
+        ],
+        "pageOverflow": {
+          "docScrollWidth": 360,
+          "docClientWidth": 360,
+          "overflows": false
+        },
+        "tooWide": [
+          "IMG.figure__img w=900",
+          "IMG.figure__img w=900"
+        ],
+        "links": [],
+        "tables": 1,
+        "checkboxItems": 0,
+        "focusableScrollers": [
+          {
+            "tag": "FIGURE",
+            "focused": true,
+            "tabindex": "0",
+            "role": "region",
+            "label": "Scrollable figure, scroll sideways to see the whole diagram"
+          },
+          {
+            "tag": "FIGURE",
+            "focused": true,
+            "tabindex": "0",
+            "role": "region",
+            "label": "Scrollable figure, scroll sideways to see the whole diagram"
+          }
+        ]
+      },
+      "unit-assessment": {
+        "url": "/semester-1/efmp-302/unit-03/unit-assessment/",
+        "title": "Unit 3 assessment | B.Ed Mega Textbook",
+        "headings": [
+          "H1 Unit 3 assessment",
+          "H2 Unit summary​",
+          "H2 Summative assessment​",
+          "H3 Multiple-choice questions (MCQs)​",
+          "H3 Restricted-response questions (RRQs)​",
+          "H3 Extended-response questions (ERQs)​",
+          "H2 Answers and marking guidance​",
+          "H3 MCQ answer key​",
+          "H3 RRQ model answers and mark schemes​",
+          "H3 ERQ rubrics​"
+        ],
+        "images": [],
+        "scrollers": [
+          {
+            "tag": "TABLE",
+            "cls": "",
+            "role": "region",
+            "tabindex": "0",
+            "ariaLabel": "Scrollable table, scroll sideways to see all columns",
+            "ariaLabelledby": null,
+            "overflowX": "auto",
+            "scrollWidth": 527,
+            "clientWidth": 328,
+            "containsImg": false,
+            "containsTable": false
+          },
+          {
+            "tag": "TABLE",
+            "cls": "",
+            "role": "region",
+            "tabindex": "0",
+            "ariaLabel": "Scrollable table, scroll sideways to see all columns",
+            "ariaLabelledby": null,
+            "overflowX": "auto",
+            "scrollWidth": 473,
+            "clientWidth": 328,
+            "containsImg": false,
+            "containsTable": false
+          },
+          {
+            "tag": "TABLE",
+            "cls": "",
+            "role": "region",
+            "tabindex": "0",
+            "ariaLabel": "Scrollable table, scroll sideways to see all columns",
+            "ariaLabelledby": null,
+            "overflowX": "auto",
+            "scrollWidth": 471,
+            "clientWidth": 328,
+            "containsImg": false,
+            "containsTable": false
+          },
+          {
+            "tag": "TABLE",
+            "cls": "",
+            "role": "region",
+            "tabindex": "0",
+            "ariaLabel": "Scrollable table, scroll sideways to see all columns",
+            "ariaLabelledby": null,
+            "overflowX": "auto",
+            "scrollWidth": 488,
+            "clientWidth": 328,
+            "containsImg": false,
+            "containsTable": false
+          },
+          {
+            "tag": "TABLE",
+            "cls": "",
+            "role": "region",
+            "tabindex": "0",
+            "ariaLabel": "Scrollable table, scroll sideways to see all columns",
+            "ariaLabelledby": null,
+            "overflowX": "auto",
+            "scrollWidth": 499,
+            "clientWidth": 328,
+            "containsImg": false,
+            "containsTable": false
+          }
+        ],
+        "pageOverflow": {
+          "docScrollWidth": 360,
+          "docClientWidth": 360,
+          "overflows": false
+        },
+        "tooWide": [
+          "THEAD. w=526",
+          "TR. w=526",
+          "TBODY. w=526",
+          "TR. w=526",
+          "TR. w=526",
+          "TR. w=526",
+          "TR. w=526",
+          "THEAD. w=472",
+          "TR. w=472",
+          "TBODY. w=472",
+          "TR. w=472",
+          "TR. w=472"
+        ],
+        "links": [],
+        "tables": 5,
+        "checkboxItems": 0,
+        "focusableScrollers": [
+          {
+            "tag": "TABLE",
+            "focused": true,
+            "tabindex": "0",
+            "role": "region",
+            "label": "Scrollable table, scroll sideways to see all columns"
+          },
+          {
+            "tag": "TABLE",
+            "focused": true,
+            "tabindex": "0",
+            "role": "region",
+            "label": "Scrollable table, scroll sideways to see all columns"
+          },
+          {
+            "tag": "TABLE",
+            "focused": true,
+            "tabindex": "0",
+            "role": "region",
+            "label": "Scrollable table, scroll sideways to see all columns"
+          },
+          {
+            "tag": "TABLE",
+            "focused": true,
+            "tabindex": "0",
+            "role": "region",
+            "label": "Scrollable table, scroll sideways to see all columns"
+          },
+          {
+            "tag": "TABLE",
+            "focused": true,
+            "tabindex": "0",
+            "role": "region",
+            "label": "Scrollable table, scroll sideways to see all columns"
+          }
+        ]
+      },
+      "unit-teacher-notes": {
+        "url": "/semester-1/efmp-302/unit-03/unit-teacher-notes/",
+        "title": "Unit 3 teacher notes | B.Ed Mega Textbook",
+        "headings": [
+          "H1 Unit 3 teacher notes",
+          "H2 Sequencing across the three-week block​",
+          "H2 The misconceptions that recur​",
+          "H2 Running the observation tasks​",
+          "H2 The activity that most often goes wrong​",
+          "H2 Practical work​",
+          "H2 Marking the unit assessment​"
+        ],
+        "images": [],
+        "scrollers": [],
+        "pageOverflow": {
+          "docScrollWidth": 360,
+          "docClientWidth": 360,
+          "overflows": false
+        },
+        "tooWide": [],
+        "links": [],
+        "tables": 0,
+        "checkboxItems": 0,
+        "focusableScrollers": []
+      }
+    },
+    "print_a4": {
+      "index": {
+        "url": "/semester-1/efmp-302/unit-03/",
+        "title": "Becoming an Effective Teacher | B.Ed Mega Textbook",
+        "headings": [
+          "H1 Becoming an Effective Teacher",
+          "H2 Unit learning outcomes​",
+          "H2 Prerequisite knowledge​",
+          "H2 In this unit​",
+          "H2 How to use this unit​"
+        ],
+        "images": [],
+        "scrollers": [],
+        "pageOverflow": {
+          "docScrollWidth": 794,
+          "docClientWidth": 794,
+          "overflows": false
+        },
+        "tooWide": [],
+        "links": [],
+        "tables": 0,
+        "checkboxItems": 0,
+        "hiddenInPrint": []
+      },
+      "topic-01": {
+        "url": "/semester-1/efmp-302/unit-03/topic-01/",
+        "title": "Topic 3.1 - What \"an effective teacher\" actually means | B.Ed Mega Textbook",
+        "headings": [
+          "H1 Topic 3.1 - What \"an effective teacher\" actually means",
+          "H2 A real classroom situation​",
+          "H2 Explanation​",
+          "H3 Redefining effective teaching and the effective teacher​",
+          "H3 The components of teacher effectiveness, and what each can and cannot show​",
+          "H2 Activity: What did you count?​",
+          "H2 Check your understanding​",
+          "H2 Summary​",
+          "H2 Self-assessment checklist​",
+          "H2 Try this at your practicum school​",
+          "H2 Summative task​",
+          "H2 Further reading​"
+        ],
+        "images": [
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-1.svg",
+            "alt": "Table comparing three definitions of teacher effectiveness - achievement gain, observed practice and breadth of learner outcomes - by what each counts, captures, misses, and who uses it.",
+            "altLen": 186,
+            "loading": "lazy",
+            "natural": "300x133",
+            "rendered": "640x286",
+            "complete": true
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-1.dark.svg",
+            "alt": "Table comparing three definitions of teacher effectiveness - achievement gain, observed practice and breadth of learner outcomes - by what each counts, captures, misses, and who uses it.",
+            "altLen": 186,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-2.svg",
+            "alt": "Concept map of teacher effectiveness branching into within-classroom processes and factors beyond the classroom, each leaf noting how it is evidenced.",
+            "altLen": 150,
+            "loading": "lazy",
+            "natural": "293x150",
+            "rendered": "640x328",
+            "complete": true
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-2.dark.svg",
+            "alt": "Concept map of teacher effectiveness branching into within-classroom processes and factors beyond the classroom, each leaf noting how it is evidenced.",
+            "altLen": 150,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          }
+        ],
+        "scrollers": [],
+        "pageOverflow": {
+          "docScrollWidth": 794,
+          "docClientWidth": 794,
+          "overflows": false
+        },
+        "tooWide": [],
+        "links": [],
+        "tables": 1,
+        "checkboxItems": 0,
+        "hiddenInPrint": [
+          "IMG Table comparing three definitions of teacher effectiveness -",
+          "IMG Concept map of teacher effectiveness branching into within-c"
+        ]
+      },
+      "topic-02": {
+        "url": "/semester-1/efmp-302/unit-03/topic-02/",
+        "title": "Topic 3.2 - The qualities an effective teacher brings | B.Ed Mega Textbook",
+        "headings": [
+          "H1 Topic 3.2 - The qualities an effective teacher brings",
+          "H2 A real classroom situation​",
+          "H2 Explanation​",
+          "H3 A teacher's attitude toward the teaching profession​",
+          "H3 Dressing and grooming as dimensions of professional image​",
+          "H3 Personality traits of effective teachers​",
+          "H3 The influence of personality traits on teacher effectiveness​",
+          "H2 Activity: The trait at excess​",
+          "H2 Check your understanding​",
+          "H2 Summary​",
+          "H2 Self-assessment checklist​",
+          "H2 Try this at your practicum school​",
+          "H2 Summative task​",
+          "H2 Further reading​"
+        ],
+        "images": [
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-3.svg",
+            "alt": "Table of seven teacher personality traits - empathy, patience, self-control, optimism, humour, resilience and adaptability - showing how each appears in a classroom, what it makes possible, and how each fails when overdone.",
+            "altLen": 223,
+            "loading": "lazy",
+            "natural": "287x150",
+            "rendered": "640x335",
+            "complete": true
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-3.dark.svg",
+            "alt": "Table of seven teacher personality traits - empathy, patience, self-control, optimism, humour, resilience and adaptability - showing how each appears in a classroom, what it makes possible, and how each fails when overdone.",
+            "altLen": 223,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-4.svg",
+            "alt": "Layered diagram of professional image with appearance as a thin outer band, then conduct, then reliability, and competence as the large core, each labelled with what it signals.",
+            "altLen": 177,
+            "loading": "lazy",
+            "natural": "255x150",
+            "rendered": "640x377",
+            "complete": true
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-4.dark.svg",
+            "alt": "Layered diagram of professional image with appearance as a thin outer band, then conduct, then reliability, and competence as the large core, each labelled with what it signals.",
+            "altLen": 177,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          }
+        ],
+        "scrollers": [],
+        "pageOverflow": {
+          "docScrollWidth": 794,
+          "docClientWidth": 794,
+          "overflows": false
+        },
+        "tooWide": [],
+        "links": [],
+        "tables": 1,
+        "checkboxItems": 0,
+        "hiddenInPrint": [
+          "IMG Table of seven teacher personality traits - empathy, patienc",
+          "IMG Layered diagram of professional image with appearance as a t"
+        ]
+      },
+      "topic-03": {
+        "url": "/semester-1/efmp-302/unit-03/topic-03/",
+        "title": "Topic 3.3 - Relationships, and what to do when they go wrong | B.Ed Mega Textbook",
+        "headings": [
+          "H1 Topic 3.3 - Relationships, and what to do when they go wrong",
+          "H2 A real classroom situation​",
+          "H2 Explanation​",
+          "H3 Building positive relationships with pupils, parents, colleagues and the community​",
+          "H3 Managing conflict while maintaining professionalism​",
+          "H2 Activity: The thirty seconds​",
+          "H2 Check your understanding​",
+          "H2 Summary​",
+          "H2 Self-assessment checklist​",
+          "H2 Try this at your practicum school​",
+          "H2 Summative task​",
+          "H2 Further reading​"
+        ],
+        "images": [
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-5.svg",
+            "alt": "Concept map with a teacher at the centre linked to pupils, parents, colleagues, the head and the community, each link labelled with what that relationship is for.",
+            "altLen": 162,
+            "loading": "lazy",
+            "natural": "281x150",
+            "rendered": "640x343",
+            "complete": true
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-5.dark.svg",
+            "alt": "Concept map with a teacher at the centre linked to pupils, parents, colleagues, the head and the community, each link labelled with what that relationship is for.",
+            "altLen": 162,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-6.svg",
+            "alt": "Flowchart of a conflict de-escalation sequence from an angry first contact through decision points about place, readiness, facts and authority, to outcomes of resolved now, resolved after checking, or escalated.",
+            "altLen": 211,
+            "loading": "lazy",
+            "natural": "254x150",
+            "rendered": "760x450",
+            "complete": true
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-6.dark.svg",
+            "alt": "Flowchart of a conflict de-escalation sequence from an angry first contact through decision points about place, readiness, facts and authority, to outcomes of resolved now, resolved after checking, or escalated.",
+            "altLen": 211,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          }
+        ],
+        "scrollers": [],
+        "pageOverflow": {
+          "docScrollWidth": 794,
+          "docClientWidth": 794,
+          "overflows": false
+        },
+        "tooWide": [],
+        "links": [],
+        "tables": 1,
+        "checkboxItems": 0,
+        "hiddenInPrint": [
+          "IMG Concept map with a teacher at the centre linked to pupils, p",
+          "IMG Flowchart of a conflict de-escalation sequence from an angry"
+        ]
+      },
+      "topic-04": {
+        "url": "/semester-1/efmp-302/unit-03/topic-04/",
+        "title": "Topic 3.4 - Saying it so it lands | B.Ed Mega Textbook",
+        "headings": [
+          "H1 Topic 3.4 - Saying it so it lands",
+          "H2 A real classroom situation​",
+          "H2 Explanation​",
+          "H3 Verbal communication in the classroom​",
+          "H3 Non-verbal communication: its types and their classroom use​",
+          "H3 When the channels contradict​",
+          "H2 Activity: One instruction, four ways​",
+          "H2 Check your understanding​",
+          "H2 Summary​",
+          "H2 Self-assessment checklist​",
+          "H2 Try this at your practicum school​",
+          "H2 Summative task​",
+          "H2 Further reading​"
+        ],
+        "images": [
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-7.svg",
+            "alt": "Table comparing verbal and non-verbal communication channels by what each carries best, how each fails, how fast each is read, and what happens when the two contradict each other.",
+            "altLen": 179,
+            "loading": "lazy",
+            "natural": "300x140",
+            "rendered": "640x299",
+            "complete": true
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-7.dark.svg",
+            "alt": "Table comparing verbal and non-verbal communication channels by what each carries best, how each fails, how fast each is read, and what happens when the two contradict each other.",
+            "altLen": 179,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-8.svg",
+            "alt": "Overhead schematic of a classroom marking the teacher's non-verbal channels in place - proximity, body orientation, gaze, gesture and vocal variety - each labelled with its classroom use.",
+            "altLen": 187,
+            "loading": "lazy",
+            "natural": "263x150",
+            "rendered": "640x366",
+            "complete": true
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-8.dark.svg",
+            "alt": "Overhead schematic of a classroom marking the teacher's non-verbal channels in place - proximity, body orientation, gaze, gesture and vocal variety - each labelled with its classroom use.",
+            "altLen": 187,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          }
+        ],
+        "scrollers": [],
+        "pageOverflow": {
+          "docScrollWidth": 794,
+          "docClientWidth": 794,
+          "overflows": false
+        },
+        "tooWide": [],
+        "links": [],
+        "tables": 1,
+        "checkboxItems": 0,
+        "hiddenInPrint": [
+          "IMG Table comparing verbal and non-verbal communication channels",
+          "IMG Overhead schematic of a classroom marking the teacher's non-"
+        ]
+      },
+      "topic-05": {
+        "url": "/semester-1/efmp-302/unit-03/topic-05/",
+        "title": "Topic 3.5 - The roles a teacher now has to play | B.Ed Mega Textbook",
+        "headings": [
+          "H1 Topic 3.5 - The roles a teacher now has to play",
+          "H2 A real classroom situation​",
+          "H2 Explanation​",
+          "H3 The teacher as facilitator and as researcher​",
+          "H3 The teacher as change agent and as moral agent​",
+          "H3 The teacher as life-long learner​",
+          "H3 Why these are additions, not replacements​",
+          "H2 Activity: One act per role​",
+          "H2 Check your understanding​",
+          "H2 Summary​",
+          "H2 Self-assessment checklist​",
+          "H2 Try this at your practicum school​",
+          "H2 Summative task​",
+          "H2 Further reading​"
+        ],
+        "images": [
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-9.svg",
+            "alt": "Timeline of the shifting expected role of a teacher from transmitter of content through instructor and facilitator to the present combination of researcher, change agent, moral agent and life-long learner, noting that later roles were added rather than replacing earlier ones.",
+            "altLen": 276,
+            "loading": "lazy",
+            "natural": "300x140",
+            "rendered": "760x356",
+            "complete": true
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-9.dark.svg",
+            "alt": "Timeline of the shifting expected role of a teacher from transmitter of content through instructor and facilitator to the present combination of researcher, change agent, moral agent and life-long learner, noting that later roles were added rather than replacing earlier ones.",
+            "altLen": 276,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-10.svg",
+            "alt": "Concept map of a teacher at the centre with five branches - facilitator, researcher, change agent, moral agent and life-long learner - each ending in one concrete classroom act that expresses that role.",
+            "altLen": 202,
+            "loading": "lazy",
+            "natural": "287x150",
+            "rendered": "640x335",
+            "complete": true
+          },
+          {
+            "src": "/img/figures/efmp-302/unit-03/fig-U3-10.dark.svg",
+            "alt": "Concept map of a teacher at the centre with five branches - facilitator, researcher, change agent, moral agent and life-long learner - each ending in one concrete classroom act that expresses that role.",
+            "altLen": 202,
+            "loading": "lazy",
+            "natural": "0x0",
+            "rendered": "0x0",
+            "complete": false
+          }
+        ],
+        "scrollers": [],
+        "pageOverflow": {
+          "docScrollWidth": 794,
+          "docClientWidth": 794,
+          "overflows": false
+        },
+        "tooWide": [],
+        "links": [],
+        "tables": 1,
+        "checkboxItems": 0,
+        "hiddenInPrint": [
+          "IMG Timeline of the shifting expected role of a teacher from tra",
+          "IMG Concept map of a teacher at the centre with five branches - "
+        ]
+      },
+      "unit-assessment": {
+        "url": "/semester-1/efmp-302/unit-03/unit-assessment/",
+        "title": "Unit 3 assessment | B.Ed Mega Textbook",
+        "headings": [
+          "H1 Unit 3 assessment",
+          "H2 Unit summary​",
+          "H2 Summative assessment​",
+          "H3 Multiple-choice questions (MCQs)​",
+          "H3 Restricted-response questions (RRQs)​",
+          "H3 Extended-response questions (ERQs)​",
+          "H2 Answers and marking guidance​",
+          "H3 MCQ answer key​",
+          "H3 RRQ model answers and mark schemes​",
+          "H3 ERQ rubrics​"
+        ],
+        "images": [],
+        "scrollers": [],
+        "pageOverflow": {
+          "docScrollWidth": 794,
+          "docClientWidth": 794,
+          "overflows": false
+        },
+        "tooWide": [],
+        "links": [],
+        "tables": 5,
+        "checkboxItems": 0,
+        "hiddenInPrint": []
+      },
+      "unit-teacher-notes": {
+        "url": "/semester-1/efmp-302/unit-03/unit-teacher-notes/",
+        "title": "Unit 3 teacher notes | B.Ed Mega Textbook",
+        "headings": [
+          "H1 Unit 3 teacher notes",
+          "H2 Sequencing across the three-week block​",
+          "H2 The misconceptions that recur​",
+          "H2 Running the observation tasks​",
+          "H2 The activity that most often goes wrong​",
+          "H2 Practical work​",
+          "H2 Marking the unit assessment​"
+        ],
+        "images": [],
+        "scrollers": [],
+        "pageOverflow": {
+          "docScrollWidth": 794,
+          "docClientWidth": 794,
+          "overflows": false
+        },
+        "tooWide": [],
+        "links": [],
+        "tables": 0,
+        "checkboxItems": 0,
+        "hiddenInPrint": []
+      }
+    }
+  },
+  "browser": "chromium 149.0.7827.0",
+  "completed_at": "2026-09-19T11:55:10.463Z"
+}
