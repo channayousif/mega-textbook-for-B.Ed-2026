@@ -38,6 +38,7 @@ Bound excerpts could not be committed for these keys. Recorded here so `check:de
 and any G3 reviewer see the limitation explicitly rather than inferring it from silence.
 
 - little2001: Crossref record exact, but OpenAlex carries no abstract and Semantic Scholar reports the abstract elided with access CLOSED. Support for topic-01's multi-grade classroom material rests on title and bibliographic level only. The unit discloses this and marks the following inference as its own.
+- hennessy2022: Computers and Education Open, open access in principle. ScienceDirect HTTP 403 to this host; the EdTech Hub companion record serves metadata only. Same key and same failure as Unit 6.
 
 | Key | Citation | URL/DOI | Supports | Kind |
 |---|---|---|---|---|

@@ -41,6 +41,7 @@ and any G3 reviewer see the limitation explicitly rather than inferring it from 
 
 - npst-pakistan-2009: The unit's primary document. Every route returned an error to both the authoring and the reviewing host: itacec.org HTTP 401/403, nacte.org.pk HTTP 404. ERIC and Crossref answered normally in the same sessions, so this is per-host access rather than absence. Leaves the ten standard names, the three-part division and the 2009 MoE/UNESCO/USAID origin corroborated only across secondary sources.
 - unesco-teacher-ethics: Cloudflare HTTP 403 from unesdoc, its PDF path and teachertaskforce.org. Leaves topic-01's international-framework claims (U4-01, U4-02) unchecked against the source.
+- carr2000: Print-only book (Routledge), no URL or DOI, not retrievable by this host. Same key as Unit 1.
 
 | Key | Citation | URL/DOI | Supports | Kind |
 |---|---|---|---|---|

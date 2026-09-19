@@ -41,6 +41,17 @@ having *found* that teachers weigh institutional against pupil interests, when t
 conceptual and illustrated by constructed scenarios; and its model's competing forces were
 misstated, including placing the pupil at a centre occupied by the decision maker.
 
+
+## Unverifiable sources
+
+Bound excerpts could not be committed for these keys. Recorded here so `check:depth-gate`
+and any G3 reviewer see the limitation explicitly rather than inferring it from silence.
+
+- npst-pakistan-2009: Government of Pakistan primary document. Every route failed to this host and to both reviewing sessions: itacec.org HTTP 401/403, nacte.org.pk HTTP 404. ERIC and Crossref answered normally in the same sessions, so this is per-host access rather than absence.
+- unesco-teacher-ethics: UNESCO / International Task Force on Teachers (2019). Cloudflare HTTP 403 from unesdoc, its PDF path and teachertaskforce.org. Same key and same failure as Unit 4.
+- carr2000: Print-only book (Routledge), no URL or DOI, not retrievable by this host. Same key as Units 1 and 4.
+- icka2024: Ucitel/Teacher 27: 99-107. Existence confirmed via third-party citation only; no abstract or full text reachable. Same key as Unit 1.
+
 | Key | Citation | URL/DOI | Supports | Kind |
 |---|---|---|---|---|
 | carr2000 | Carr, D. (2000). *Professionalism and ethics in teaching*. Routledge. | (print) | topic-01.mdx U2-01 (professional ethics as role-attached standards), U2-02 (the teacher-pupil relationship as the ground of teaching's ethical claim) | guide-required |

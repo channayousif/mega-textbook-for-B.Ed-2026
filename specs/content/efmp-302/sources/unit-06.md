@@ -38,6 +38,7 @@ and any G3 reviewer see the limitation explicitly rather than inferring it from 
 - brookfield2017: Print-only book, not retrievable. Same key as Unit 3.
 - hennessy2022: Not retrievable by the reviewing host. The review also flagged topic-03's 'completion rates for self-directed online courses are notoriously low' as outside this source's recorded scope.
 - kwakman2003: Not retrievable by the reviewing host.
+- hennessy2022: Computers and Education Open, open access in principle. Both routes failed to this host: ScienceDirect HTTP 403, and the EdTech Hub companion record (DOI 10.53832/edtechhub.0080) serves metadata with the findings only inside a downloadable PDF. Leaves topic-03's claim that 'completion rates for self-directed online courses are notoriously low' unverified - the Unit 6 G3 review flagged that claim as outside this source's recorded scope, and nothing here settles it.
 
 | Key | Citation | URL/DOI | Supports | Kind |
 |---|---|---|---|---|
