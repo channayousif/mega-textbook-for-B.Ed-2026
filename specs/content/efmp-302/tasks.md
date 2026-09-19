@@ -66,28 +66,28 @@ register pass; `translation_status: reviewed` on all EN and UR unit-01 files;
 | Unit 2 | G6 assets | ▢ | | |
 | Unit 2 | G7 publish | ▢ | | |
 | Unit 3 | G1 unit-spec | ▣ | | re-opened 2026-09-14: per-topic G1 blocks added. Five guide sections map one-to-one onto five topics, so no partition judgement was required |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-302/reviews/unit-03/G2/20260919T163958580Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-302/reviews/unit-03/G2/20260919T164931066Z-gates.json |
 | Unit 3 | G3 en-review | 🟡 | agent:g3-reviewer | provisional:specs/content/efmp-302/reviews/unit-03/G3/agent-g3-efmp302-u3-run005.json |
 | Unit 3 | G4 ur-translation | ▢ | | scope changed to the per-topic layout. Legacy UR drafts removed as orphans; under ADR-0022 the Urdu mirror arrives in the corpus-wide translation phase |
 | Unit 3 | G5 ur-review | ▢ | | scope changed to the per-topic layout; 17 authored Urdu concept labels in concepts/unit-03.md need review |
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
 | Unit 4 | G1 unit-spec | ▣ | | re-opened 2026-09-14: per-topic G1 blocks added. Four guide sections map one-to-one onto four topics. Carries a source-verification limitation for G3: the NPST primary document was unreachable from the authoring host |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-302/reviews/unit-04/G2/20260919T164000753Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-302/reviews/unit-04/G2/20260919T164933472Z-gates.json |
 | Unit 4 | G3 en-review | ▣ | | re-opened 2026-09-14. **Reviewer action required**: confirm the ten standard names in topic-02.mdx against a copy of the primary document; they were corroborated from secondary sources only |
 | Unit 4 | G4 ur-translation | ▢ | | scope changed to the per-topic layout. Legacy UR drafts removed as orphans; Urdu mirror arrives in the corpus-wide translation phase (ADR-0022) |
 | Unit 4 | G5 ur-review | ▢ | | scope changed to the per-topic layout; 13 authored Urdu concept labels in concepts/unit-04.md need review |
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
 | Unit 5 | G1 unit-spec | ✅ | YM | per-topic G1 blocks added 2026-09-15; the guide-5.1 split across topics 5.1 and 5.2 was confirmed by the curriculum owner 2026-09-18 |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-302/reviews/unit-05/G2/20260919T164003774Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-302/reviews/unit-05/G2/20260919T164935678Z-gates.json |
 | Unit 5 | G3 en-review | ▣ | | re-opened 2026-09-15. Sources verified by reading abstracts, not registry metadata alone, after the Unit 2 and 3 reviews; three carry scope limits stated in the prose |
 | Unit 5 | G4 ur-translation | ▢ | | scope changed to the per-topic layout. Legacy UR drafts removed as orphans; Urdu mirror arrives in the corpus-wide translation phase (ADR-0022) |
 | Unit 5 | G5 ur-review | ▢ | | **14 of 16 concept labels are authored**, the largest authored set in the course; approved labels should be promoted into terminology.csv before Unit 6 is translated |
 | Unit 5 | G6 assets | ▢ | | |
 | Unit 5 | G7 publish | ▢ | | |
 | Unit 6 | G1 unit-spec | ▣ | | re-opened 2026-09-15: per-topic G1 blocks added. Four guide sections map one-to-one onto four topics; no partition judgement required |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-302/reviews/unit-06/G2/20260919T164006260Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-302/reviews/unit-06/G2/20260919T164938038Z-gates.json |
 | Unit 6 | G3 en-review | ▣ | | re-opened 2026-09-15. One source (kwakman2003) has no available abstract and is cited for its question only; the prose says so and a reviewer with full-text access should extend or remove it |
 | Unit 6 | G4 ur-translation | ▢ | | scope changed to the per-topic layout. Legacy UR drafts removed as orphans; Urdu mirror arrives in the corpus-wide translation phase (ADR-0022) |
 | Unit 6 | G5 ur-review | ▢ | | 13 of 15 concept labels authored. Note the `Reflective practice` / `Reflective Decision Making` relationship flagged in concepts/unit-06.md |
