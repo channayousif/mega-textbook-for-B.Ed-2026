@@ -1,0 +1,783 @@
+$ node render.mjs  (playwright-core chromium; build/ from commit 7d5a918635dd314fbd7bd23de6ff88e312db4396 served at http://127.0.0.1:8099)
+# viewports: 1280x900 desktop, 360x740 narrow, 794x1123 print/A4 (emulateMedia print)
+# date=2026-09-19T17:15:42Z
+browser: 149.0.7827.0
+{
+ "index@desktop": {
+  "headings": 5,
+  "headingSkips": [],
+  "imgs": [],
+  "tables": [],
+  "docScroll": {
+   "sw": 1280,
+   "cw": 1280
+  },
+  "vagueLinks": []
+ },
+ "index@narrow360": {
+  "headings": 5,
+  "headingSkips": [],
+  "imgs": [],
+  "tables": [],
+  "docScroll": {
+   "sw": 360,
+   "cw": 360
+  },
+  "vagueLinks": []
+ },
+ "index@print-a4": {
+  "overWide": [],
+  "docSW": 794,
+  "docCW": 794,
+  "hiddenCount": 2
+ },
+ "topic-01@desktop": {
+  "headings": 13,
+  "headingSkips": [],
+  "imgs": [
+   {
+    "src": "fig-U6-1.svg",
+    "alt": "Table comparing continuing professional development with a training course, a qualification and an appraisal requirement by purpose, who drives it, duration, what counts as success, and what each cannot do.",
+    "w": 640,
+    "h": 286,
+    "natural": "300x133",
+    "loading": "lazy"
+   },
+   {
+    "src": "fig-U6-1.dark.svg",
+    "alt": "Table comparing continuing professional development with a training course, a qualification and an appraisal requirement by purpose, who drives it, duration, what counts as success, and what each cannot do.",
+    "w": 0,
+    "h": 0,
+    "natural": "0x0",
+    "loading": "lazy"
+   },
+   {
+    "src": "fig-U6-2.svg",
+    "alt": "Concept map of development that changes practice with six branches - sustained, embedded, content-focused, collaborative, feedback-supported and teacher-chosen - each noting what it rules out.",
+    "w": 640,
+    "h": 327,
+    "natural": "295x150",
+    "loading": "lazy"
+   },
+   {
+    "src": "fig-U6-2.dark.svg",
+    "alt": "Concept map of development that changes practice with six branches - sustained, embedded, content-focused, collaborative, feedback-supported and teacher-chosen - each noting what it rules out.",
+    "w": 0,
+    "h": 0,
+    "natural": "0x0",
+    "loading": "lazy"
+   }
+  ],
+  "tables": [
+   {
+    "ix": 0,
+    "display": "block",
+    "overflowX": "auto",
+    "scrollWidth": 703,
+    "clientWidth": 703,
+    "scrollable": false,
+    "scrollLeftReached": 0,
+    "lastColRightBefore": 1019,
+    "lastColRightAfter": 1019,
+    "tabindex": null,
+    "role": null,
+    "ariaLabel": null,
+    "wrapperOverflowX": "visible",
+    "wrapperScrolls": false,
+    "firstCell": "Criterion"
+   }
+  ],
+  "docScroll": {
+   "sw": 1280,
+   "cw": 1280
+  },
+  "vagueLinks": []
+ },
+ "topic-01@narrow360": {
+  "headings": 13,
+  "headingSkips": [],
+  "imgs": [
+   {
+    "src": "fig-U6-1.svg",
+    "alt": "Table comparing continuing professional development with a training course, a qualification and an appraisal requirement by purpose, who drives it, duration, what counts as success, and what each cannot do.",
+    "w": 900,
+    "h": 401,
+    "natural": "300x133",
+    "loading": "lazy"
+   },
+   {
+    "src": "fig-U6-1.dark.svg",
+    "alt": "Table comparing continuing professional development with a training course, a qualification and an appraisal requirement by purpose, who drives it, duration, what counts as success, and what each cannot do.",
+    "w": 0,
+    "h": 0,
+    "natural": "0x0",
+    "loading": "lazy"
+   },
+   {
+    "src": "fig-U6-2.svg",
+    "alt": "Concept map of development that changes practice with six branches - sustained, embedded, content-focused, collaborative, feedback-supported and teacher-chosen - each noting what it rules out.",
+    "w": 924,
+    "h": 471,
+    "natural": "0x0",
+    "loading": "lazy"
+   },
+   {
+    "src": "fig-U6-2.dark.svg",
+    "alt": "Concept map of development that changes practice with six branches - sustained, embedded, content-focused, collaborative, feedback-supported and teacher-chosen - each noting what it rules out.",
+    "w": 0,
+    "h": 0,
+    "natural": "0x0",
+    "loading": "lazy"
+   }
+  ],
+  "tables": [
+   {
+    "ix": 0,
+    "display": "block",
+    "overflowX": "auto",
+    "scrollWidth": 328,
+    "clientWidth": 328,
+    "scrollable": false,
+    "scrollLeftReached": 0,
+    "lastColRightBefore": 344,
+    "lastColRightAfter": 344,
+    "tabindex": null,
+    "role": null,
+    "ariaLabel": null,
+    "wrapperOverflowX": "visible",
+    "wrapperScrolls": false,
+    "firstCell": "Criterion"
+   }
+  ],
+  "docScroll": {
+   "sw": 360,
+   "cw": 360
+  },
+  "vagueLinks": []
+ },
+ "topic-01@print-a4": {
+  "overWide": [],
+  "docSW": 794,
+  "docCW": 794,
+  "hiddenCount": 6
+ },
+ "topic-02@desktop": {
+  "headings": 13,
+  "headingSkips": [],
+  "imgs": [
+   {
+    "src": "fig-U6-3.svg",
+    "alt": "Timeline of a teaching career across the preservice, new teacher and experienced teacher stages, with each transition labelled by what changes and each stage labelled with what it most needs.",
+    "w": 703,
+    "h": 314,
+    "natural": "300x133",
+    "loading": "lazy"
+   },
+   {
+    "src": "fig-U6-3.dark.svg",
+    "alt": "Timeline of a teaching career across the preservice, new teacher and experienced teacher stages, with each transition labelled by what changes and each stage labelled with what it most needs.",
+    "w": 0,
+    "h": 0,
+    "natural": "0x0",
+    "loading": "lazy"
+   },
+   {
+    "src": "fig-U6-4.svg",
+    "alt": "Table of the preservice, new teacher and experienced teacher stages showing the characteristic difficulty of each, the support that helps, and the support usually offered instead.",
+    "w": 640,
+    "h": 250,
+    "natural": "300x117",
+    "loading": "lazy"
+   },
+   {
+    "src": "fig-U6-4.dark.svg",
+    "alt": "Table of the preservice, new teacher and experienced teacher stages showing the characteristic difficulty of each, the support that helps, and the support usually offered instead.",
+    "w": 0,
+    "h": 0,
+    "natural": "0x0",
+    "loading": "lazy"
+   }
+  ],
+  "tables": [
+   {
+    "ix": 0,
+    "display": "block",
+    "overflowX": "auto",
+    "scrollWidth": 703,
+    "clientWidth": 703,
+    "scrollable": false,
+    "scrollLeftReached": 0,
+    "lastColRightBefore": 1019,
+    "lastColRightAfter": 1019,
+    "tabindex": null,
+    "role": null,
+    "ariaLabel": null,
+    "wrapperOverflowX": "visible",
+    "wrapperScrolls": false,
+    "firstCell": "Criterion"
+   }
+  ],
+  "docScroll": {
+   "sw": 1280,
+   "cw": 1280
+  },
+  "vagueLinks": []
+ },
+ "topic-02@narrow360": {
+  "headings": 13,
+  "headingSkips": [],
+  "imgs": [
+   {
+    "src": "fig-U6-3.svg",
+    "alt": "Timeline of a teaching career across the preservice, new teacher and experienced teacher stages, with each transition labelled by what changes and each stage labelled with what it most needs.",
+    "w": 900,
+    "h": 401,
+    "natural": "300x133",
+    "loading": "lazy"
+   },
+   {
+    "src": "fig-U6-3.dark.svg",
+    "alt": "Timeline of a teaching career across the preservice, new teacher and experienced teacher stages, with each transition labelled by what changes and each stage labelled with what it most needs.",
+    "w": 0,
+    "h": 0,
+    "natural": "0x0",
+    "loading": "lazy"
+   },
+   {
+    "src": "fig-U6-4.svg",
+    "alt": "Table of the preservice, new teacher and experienced teacher stages showing the characteristic difficulty of each, the support that helps, and the support usually offered instead.",
+    "w": 900,
+    "h": 351,
+    "natural": "0x0",
+    "loading": "lazy"
+   },
+   {
+    "src": "fig-U6-4.dark.svg",
+    "alt": "Table of the preservice, new teacher and experienced teacher stages showing the characteristic difficulty of each, the support that helps, and the support usually offered instead.",
+    "w": 0,
+    "h": 0,
+    "natural": "0x0",
+    "loading": "lazy"
+   }
+  ],
+  "tables": [
+   {
+    "ix": 0,
+    "display": "block",
+    "overflowX": "auto",
+    "scrollWidth": 328,
+    "clientWidth": 328,
+    "scrollable": false,
+    "scrollLeftReached": 0,
+    "lastColRightBefore": 344,
+    "lastColRightAfter": 344,
+    "tabindex": null,
+    "role": null,
+    "ariaLabel": null,
+    "wrapperOverflowX": "visible",
+    "wrapperScrolls": false,
+    "firstCell": "Criterion"
+   }
+  ],
+  "docScroll": {
+   "sw": 360,
+   "cw": 360
+  },
+  "vagueLinks": []
+ },
+ "topic-02@print-a4": {
+  "overWide": [],
+  "docSW": 794,
+  "docCW": 794,
+  "hiddenCount": 6
+ },
+ "topic-03@desktop": {
+  "headings": 15,
+  "headingSkips": [],
+  "imgs": [
+   {
+    "src": "fig-U6-5.svg",
+    "alt": "Table comparing conferences, workshops, online platforms, professional learning communities and reflective tools by cost, reach, which principles each satisfies, what each suits, and what each cannot do.",
+    "w": 640,
+    "h": 275,
+    "natural": "300x128",
+    "loading": "lazy"
+   },
+   {
+    "src": "fig-U6-5.dark.svg",
+    "alt": "Table comparing conferences, workshops, online platforms, professional learning communities and reflective tools by cost, reach, which principles each satisfies, what each suits, and what each cannot do.",
+    "w": 0,
+    "h": 0,
+    "natural": "0x0",
+    "loading": "lazy"
+   },
+   {
+    "src": "fig-U6-6.svg",
+    "alt": "Flowchart of the lesson study cycle - plan together, one teaches while others observe the pupils, examine the evidence, revise, re-teach - with the observation station annotated to watch the pupils rather than the teacher.",
+    "w": 703,
+    "h": 345,
+    "natural": "300x147",
+    "loading": "lazy"
+   },
+   {
+    "src": "fig-U6-6.dark.svg",
+    "alt": "Flowchart of the lesson study cycle - plan together, one teaches while others observe the pupils, examine the evidence, revise, re-teach - with the observation station annotated to watch the pupils rather than the teacher.",
+    "w": 0,
+    "h": 0,
+    "natural": "0x0",
+    "loading": "lazy"
+   }
+  ],
+  "tables": [
+   {
+    "ix": 0,
+    "display": "block",
+    "overflowX": "auto",
+    "scrollWidth": 703,
+    "clientWidth": 703,
+    "scrollable": false,
+    "scrollLeftReached": 0,
+    "lastColRightBefore": 1019,
+    "lastColRightAfter": 1019,
+    "tabindex": null,
+    "role": null,
+    "ariaLabel": null,
+    "wrapperOverflowX": "visible",
+    "wrapperScrolls": false,
+    "firstCell": "Criterion"
+   }
+  ],
+  "docScroll": {
+   "sw": 1280,
+   "cw": 1280
+  },
+  "vagueLinks": []
+ },
+ "topic-03@narrow360": {
+  "headings": 15,
+  "headingSkips": [],
+  "imgs": [
+   {
+    "src": "fig-U6-5.svg",
+    "alt": "Table comparing conferences, workshops, online platforms, professional learning communities and reflective tools by cost, reach, which principles each satisfies, what each suits, and what each cannot do.",
+    "w": 936,
+    "h": 401,
+    "natural": "300x128",
+    "loading": "lazy"
+   },
+   {
+    "src": "fig-U6-5.dark.svg",
+    "alt": "Table comparing conferences, workshops, online platforms, professional learning communities and reflective tools by cost, reach, which principles each satisfies, what each suits, and what each cannot do.",
+    "w": 0,
+    "h": 0,
+    "natural": "0x0",
+    "loading": "lazy"
+   },
+   {
+    "src": "fig-U6-6.svg",
+    "alt": "Flowchart of the lesson study cycle - plan together, one teaches while others observe the pupils, examine the evidence, revise, re-teach - with the observation station annotated to watch the pupils rather than the teacher.",
+    "w": 880,
+    "h": 431,
+    "natural": "0x0",
+    "loading": "lazy"
+   },
+   {
+    "src": "fig-U6-6.dark.svg",
+    "alt": "Flowchart of the lesson study cycle - plan together, one teaches while others observe the pupils, examine the evidence, revise, re-teach - with the observation station annotated to watch the pupils rather than the teacher.",
+    "w": 0,
+    "h": 0,
+    "natural": "0x0",
+    "loading": "lazy"
+   }
+  ],
+  "tables": [
+   {
+    "ix": 0,
+    "display": "block",
+    "overflowX": "auto",
+    "scrollWidth": 328,
+    "clientWidth": 328,
+    "scrollable": false,
+    "scrollLeftReached": 0,
+    "lastColRightBefore": 344,
+    "lastColRightAfter": 344,
+    "tabindex": null,
+    "role": null,
+    "ariaLabel": null,
+    "wrapperOverflowX": "visible",
+    "wrapperScrolls": false,
+    "firstCell": "Criterion"
+   }
+  ],
+  "docScroll": {
+   "sw": 360,
+   "cw": 360
+  },
+  "vagueLinks": []
+ },
+ "topic-03@print-a4": {
+  "overWide": [],
+  "docSW": 794,
+  "docCW": 794,
+  "hiddenCount": 6
+ },
+ "topic-04@desktop": {
+  "headings": 13,
+  "headingSkips": [],
+  "imgs": [
+   {
+    "src": "fig-U6-7.svg",
+    "alt": "Diagram of a one-page development plan with six blocks - the gap, the evidence for it, one goal, the activity, the evidence of change, and the review date - annotated one goal not five, and evidence decided now.",
+    "w": 640,
+    "h": 343,
+    "natural": "281x150",
+    "loading": "lazy"
+   },
+   {
+    "src": "fig-U6-7.dark.svg",
+    "alt": "Diagram of a one-page development plan with six blocks - the gap, the evidence for it, one goal, the activity, the evidence of change, and the review date - annotated one goal not five, and evidence decided now.",
+    "w": 0,
+    "h": 0,
+    "natural": "0x0",
+    "loading": "lazy"
+   },
+   {
+    "src": "fig-U6-8.svg",
+    "alt": "Flowchart of building and revising a development plan, ending at a mid-year decision point asking whether the goal survived the year, branching to continue, narrow, or replace the goal.",
+    "w": 703,
+    "h": 360,
+    "natural": "293x150",
+    "loading": "lazy"
+   },
+   {
+    "src": "fig-U6-8.dark.svg",
+    "alt": "Flowchart of building and revising a development plan, ending at a mid-year decision point asking whether the goal survived the year, branching to continue, narrow, or replace the goal.",
+    "w": 0,
+    "h": 0,
+    "natural": "0x0",
+    "loading": "lazy"
+   }
+  ],
+  "tables": [
+   {
+    "ix": 0,
+    "display": "block",
+    "overflowX": "auto",
+    "scrollWidth": 703,
+    "clientWidth": 703,
+    "scrollable": false,
+    "scrollLeftReached": 0,
+    "lastColRightBefore": 1019,
+    "lastColRightAfter": 1019,
+    "tabindex": null,
+    "role": null,
+    "ariaLabel": null,
+    "wrapperOverflowX": "visible",
+    "wrapperScrolls": false,
+    "firstCell": "Criterion"
+   }
+  ],
+  "docScroll": {
+   "sw": 1280,
+   "cw": 1280
+  },
+  "vagueLinks": []
+ },
+ "topic-04@narrow360": {
+  "headings": 13,
+  "headingSkips": [],
+  "imgs": [
+   {
+    "src": "fig-U6-7.svg",
+    "alt": "Diagram of a one-page development plan with six blocks - the gap, the evidence for it, one goal, the activity, the evidence of change, and the review date - annotated one goal not five, and evidence decided now.",
+    "w": 880,
+    "h": 471,
+    "natural": "281x150",
+    "loading": "lazy"
+   },
+   {
+    "src": "fig-U6-7.dark.svg",
+    "alt": "Diagram of a one-page development plan with six blocks - the gap, the evidence for it, one goal, the activity, the evidence of change, and the review date - annotated one goal not five, and evidence decided now.",
+    "w": 0,
+    "h": 0,
+    "natural": "0x0",
+    "loading": "lazy"
+   },
+   {
+    "src": "fig-U6-8.svg",
+    "alt": "Flowchart of building and revising a development plan, ending at a mid-year decision point asking whether the goal survived the year, branching to continue, narrow, or replace the goal.",
+    "w": 900,
+    "h": 461,
+    "natural": "293x150",
+    "loading": "lazy"
+   },
+   {
+    "src": "fig-U6-8.dark.svg",
+    "alt": "Flowchart of building and revising a development plan, ending at a mid-year decision point asking whether the goal survived the year, branching to continue, narrow, or replace the goal.",
+    "w": 0,
+    "h": 0,
+    "natural": "0x0",
+    "loading": "lazy"
+   }
+  ],
+  "tables": [
+   {
+    "ix": 0,
+    "display": "block",
+    "overflowX": "auto",
+    "scrollWidth": 328,
+    "clientWidth": 328,
+    "scrollable": false,
+    "scrollLeftReached": 0,
+    "lastColRightBefore": 344,
+    "lastColRightAfter": 344,
+    "tabindex": null,
+    "role": null,
+    "ariaLabel": null,
+    "wrapperOverflowX": "visible",
+    "wrapperScrolls": false,
+    "firstCell": "Criterion"
+   }
+  ],
+  "docScroll": {
+   "sw": 360,
+   "cw": 360
+  },
+  "vagueLinks": []
+ },
+ "topic-04@print-a4": {
+  "overWide": [],
+  "docSW": 794,
+  "docCW": 794,
+  "hiddenCount": 6
+ },
+ "unit-assessment@desktop": {
+  "headings": 10,
+  "headingSkips": [],
+  "imgs": [],
+  "tables": [
+   {
+    "ix": 0,
+    "display": "block",
+    "overflowX": "auto",
+    "scrollWidth": 703,
+    "clientWidth": 703,
+    "scrollable": false,
+    "scrollLeftReached": 0,
+    "lastColRightBefore": 1019,
+    "lastColRightAfter": 1019,
+    "tabindex": null,
+    "role": null,
+    "ariaLabel": null,
+    "wrapperOverflowX": "visible",
+    "wrapperScrolls": false,
+    "firstCell": "Criterion"
+   },
+   {
+    "ix": 1,
+    "display": "block",
+    "overflowX": "auto",
+    "scrollWidth": 703,
+    "clientWidth": 703,
+    "scrollable": false,
+    "scrollLeftReached": 0,
+    "lastColRightBefore": 1019,
+    "lastColRightAfter": 1019,
+    "tabindex": null,
+    "role": null,
+    "ariaLabel": null,
+    "wrapperOverflowX": "visible",
+    "wrapperScrolls": false,
+    "firstCell": "Criterion"
+   },
+   {
+    "ix": 2,
+    "display": "block",
+    "overflowX": "auto",
+    "scrollWidth": 703,
+    "clientWidth": 703,
+    "scrollable": false,
+    "scrollLeftReached": 0,
+    "lastColRightBefore": 1019,
+    "lastColRightAfter": 1019,
+    "tabindex": null,
+    "role": null,
+    "ariaLabel": null,
+    "wrapperOverflowX": "visible",
+    "wrapperScrolls": false,
+    "firstCell": "Criterion"
+   },
+   {
+    "ix": 3,
+    "display": "block",
+    "overflowX": "auto",
+    "scrollWidth": 703,
+    "clientWidth": 703,
+    "scrollable": false,
+    "scrollLeftReached": 0,
+    "lastColRightBefore": 1019,
+    "lastColRightAfter": 1019,
+    "tabindex": null,
+    "role": null,
+    "ariaLabel": null,
+    "wrapperOverflowX": "visible",
+    "wrapperScrolls": false,
+    "firstCell": "Criterion"
+   },
+   {
+    "ix": 4,
+    "display": "block",
+    "overflowX": "auto",
+    "scrollWidth": 703,
+    "clientWidth": 703,
+    "scrollable": false,
+    "scrollLeftReached": 0,
+    "lastColRightBefore": 1019,
+    "lastColRightAfter": 1019,
+    "tabindex": null,
+    "role": null,
+    "ariaLabel": null,
+    "wrapperOverflowX": "visible",
+    "wrapperScrolls": false,
+    "firstCell": "Criterion"
+   }
+  ],
+  "docScroll": {
+   "sw": 1280,
+   "cw": 1280
+  },
+  "vagueLinks": []
+ },
+ "unit-assessment@narrow360": {
+  "headings": 10,
+  "headingSkips": [],
+  "imgs": [],
+  "tables": [
+   {
+    "ix": 0,
+    "display": "block",
+    "overflowX": "auto",
+    "scrollWidth": 482,
+    "clientWidth": 328,
+    "scrollable": true,
+    "scrollLeftReached": 154,
+    "lastColRightBefore": 498,
+    "lastColRightAfter": 344,
+    "tabindex": "0",
+    "role": "region",
+    "ariaLabel": "Scrollable table, scroll sideways to see all columns",
+    "wrapperOverflowX": "visible",
+    "wrapperScrolls": false,
+    "firstCell": "Criterion"
+   },
+   {
+    "ix": 1,
+    "display": "block",
+    "overflowX": "auto",
+    "scrollWidth": 483,
+    "clientWidth": 328,
+    "scrollable": true,
+    "scrollLeftReached": 155,
+    "lastColRightBefore": 499,
+    "lastColRightAfter": 344,
+    "tabindex": "0",
+    "role": "region",
+    "ariaLabel": "Scrollable table, scroll sideways to see all columns",
+    "wrapperOverflowX": "visible",
+    "wrapperScrolls": false,
+    "firstCell": "Criterion"
+   },
+   {
+    "ix": 2,
+    "display": "block",
+    "overflowX": "auto",
+    "scrollWidth": 488,
+    "clientWidth": 328,
+    "scrollable": true,
+    "scrollLeftReached": 160,
+    "lastColRightBefore": 504,
+    "lastColRightAfter": 344,
+    "tabindex": "0",
+    "role": "region",
+    "ariaLabel": "Scrollable table, scroll sideways to see all columns",
+    "wrapperOverflowX": "visible",
+    "wrapperScrolls": false,
+    "firstCell": "Criterion"
+   },
+   {
+    "ix": 3,
+    "display": "block",
+    "overflowX": "auto",
+    "scrollWidth": 439,
+    "clientWidth": 328,
+    "scrollable": true,
+    "scrollLeftReached": 111,
+    "lastColRightBefore": 455,
+    "lastColRightAfter": 344,
+    "tabindex": "0",
+    "role": "region",
+    "ariaLabel": "Scrollable table, scroll sideways to see all columns",
+    "wrapperOverflowX": "visible",
+    "wrapperScrolls": false,
+    "firstCell": "Criterion"
+   },
+   {
+    "ix": 4,
+    "display": "block",
+    "overflowX": "auto",
+    "scrollWidth": 524,
+    "clientWidth": 328,
+    "scrollable": true,
+    "scrollLeftReached": 196,
+    "lastColRightBefore": 539,
+    "lastColRightAfter": 343,
+    "tabindex": "0",
+    "role": "region",
+    "ariaLabel": "Scrollable table, scroll sideways to see all columns",
+    "wrapperOverflowX": "visible",
+    "wrapperScrolls": false,
+    "firstCell": "Criterion"
+   }
+  ],
+  "docScroll": {
+   "sw": 360,
+   "cw": 360
+  },
+  "vagueLinks": []
+ },
+ "unit-assessment@print-a4": {
+  "overWide": [],
+  "docSW": 794,
+  "docCW": 794,
+  "hiddenCount": 3
+ },
+ "unit-teacher-notes@desktop": {
+  "headings": 7,
+  "headingSkips": [],
+  "imgs": [],
+  "tables": [],
+  "docScroll": {
+   "sw": 1280,
+   "cw": 1280
+  },
+  "vagueLinks": []
+ },
+ "unit-teacher-notes@narrow360": {
+  "headings": 7,
+  "headingSkips": [],
+  "imgs": [],
+  "tables": [],
+  "docScroll": {
+   "sw": 360,
+   "cw": 360
+  },
+  "vagueLinks": []
+ },
+ "unit-teacher-notes@print-a4": {
+  "overWide": [],
+  "docSW": 794,
+  "docCW": 794,
+  "hiddenCount": 3
+ }
+}
+# exit_code=0

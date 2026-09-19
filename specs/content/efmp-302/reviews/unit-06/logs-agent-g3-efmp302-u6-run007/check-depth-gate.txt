@@ -1,0 +1,4 @@
+$ npm run -s check:depth-gate
+# cwd=/home/a2ahs/mega_book_for_B.Ed commit=7d5a918635dd314fbd7bd23de6ff88e312db4396 date=2026-09-19T17:14:25Z
+✓ Depth gate passed (concept coverage, required blocks, formative floor, reading-minutes band, coverage↔sources consistency).
+# exit_code=0
