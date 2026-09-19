@@ -243,6 +243,39 @@ html[data-theme='dark'] .bloom-tag {
   overflow-x: auto;
 }
 
+/* The scroll container above works, but at rest it gave no sign that anything was
+   off-screen, and it could not be reached from a keyboard at all. Measured at 360px:
+   every ERQ rubric is scrollWidth 482 inside clientWidth 328, page overflow 0, so the
+   content was always swipeable and never tabbable (WCAG 2.1.1).
+
+   `DocItem/Content.tsx` marks an overflowing table with `data-scrollable="true"` and
+   makes it a focusable region. These rules give it the affordance: a right-edge fade
+   that disappears once scrolled to the end, and a visible focus ring. */
+.markdown table[data-scrollable='true'] {
+  background:
+    linear-gradient(to right, var(--ifm-background-color) 30%, transparent),
+    linear-gradient(to left, var(--ifm-background-color) 30%, transparent) 100% 0,
+    linear-gradient(to right, rgba(19, 42, 36, 0.18), transparent 12px),
+    linear-gradient(to left, rgba(19, 42, 36, 0.18), transparent 12px) 100% 0;
+  background-repeat: no-repeat;
+  background-size: 34px 100%, 34px 100%, 14px 100%, 14px 100%;
+  background-attachment: local, local, scroll, scroll;
+}
+.markdown table[data-scrollable='true']:focus-visible {
+  outline: 3px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+html[data-theme='dark'] .markdown table[data-scrollable='true'] {
+  background:
+    linear-gradient(to right, var(--ifm-background-color) 30%, transparent),
+    linear-gradient(to left, var(--ifm-background-color) 30%, transparent) 100% 0,
+    linear-gradient(to right, rgba(244, 214, 154, 0.22), transparent 12px),
+    linear-gradient(to left, rgba(244, 214, 154, 0.22), transparent 12px) 100% 0;
+  background-repeat: no-repeat;
+  background-size: 34px 100%, 34px 100%, 14px 100%, 14px 100%;
+  background-attachment: local, local, scroll, scroll;
+}
+
 .figure__caption {
   margin-top: 0.5rem;
   font-size: 0.875rem;
