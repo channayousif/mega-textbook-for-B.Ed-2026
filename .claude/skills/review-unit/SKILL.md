@@ -44,7 +44,9 @@ accepted decision: request a new bundle that binds the necessary source or evide
 
 For every required criterion, record concrete file/section or passage locators, inspected
 source passages, findings and their severity. Verify source support, not merely that a URL
-resolves. Missing source text is unverified. Independently solve assessments before reading
+resolves. Missing source text is unverified, but a source declared under `## Unverifiable
+sources` with its attempts, date and owner authorisation does not by itself block a pass -
+see the G3 reference on unavailable source text. Independently solve assessments before reading
 the supplied answers, then compare and record discrepancies without rewriting the bank.
 
 Run the mandatory commands specified by the trusted review contract, recording the actual
