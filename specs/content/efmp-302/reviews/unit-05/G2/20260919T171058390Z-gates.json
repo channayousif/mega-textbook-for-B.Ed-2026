@@ -1,9 +1,10 @@
 {
   "schema_version": 1,
   "course_code": "EFMP-302",
-  "unit_no": 6,
-  "stage": "G3",
-  "skill_digest": "eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b",
+  "unit_no": 5,
+  "stage": "G2",
+  "reviewed_commit": "44bc1d7",
+  "generated_at": "2026-09-19T17:11:00.740Z",
   "input_manifest": {
     ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
     ".claude/agents/g5-reviewer.md": "b63596b668dd8814fc7b34d59326171f7c789b8dc4e631e30c2c19fe05f2c68a",
@@ -59,14 +60,14 @@
     "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
     "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
     "docs/semester-1/efmp-302/course-overview.mdx": "7dcacdcd8198a7f6f0feda4f29023a3dbe145722ad0a8413d5de5d4e5dfaf450",
-    "docs/semester-1/efmp-302/unit-06/_category_.json": "4cdf7a9b455a0caedb51f9c267d55cd63fa569461643088825570f560ae58cae",
-    "docs/semester-1/efmp-302/unit-06/index.mdx": "25e74dd38083a5330e3a4304436ec0f3d45798f4253acdf82f1ce3a68320592e",
-    "docs/semester-1/efmp-302/unit-06/topic-01.mdx": "bbcca284f027b7c9c8c8b6c3aa6351d0f623198ac7985d08f7a92055591e0258",
-    "docs/semester-1/efmp-302/unit-06/topic-02.mdx": "8f9702bbe74d759cb066ad50983daf8079c3cdb5ccae85665db97cd9656a2001",
-    "docs/semester-1/efmp-302/unit-06/topic-03.mdx": "2fe8ef1909c040381d23d2c3b9df66f2787e158a78b5d449bff9228ec4842f35",
-    "docs/semester-1/efmp-302/unit-06/topic-04.mdx": "782cdf49d7efc28979711b0bcfceffd26f98f2faefa88cdcede613632d410bc5",
-    "docs/semester-1/efmp-302/unit-06/unit-assessment.mdx": "36cacbc6b071275ec8e327470a8f4fdfca328af0f9d22b6b1567c1aaea6b75f2",
-    "docs/semester-1/efmp-302/unit-06/unit-teacher-notes.mdx": "1f3e241269ed0927b6d8cf269341de80a30821d08c06a4c09fad373c8a2c5748",
+    "docs/semester-1/efmp-302/unit-05/_category_.json": "30d600605bba5d317aa7e3e4d1b9f46087416cd9f3106622f28fb8423a3e4eb3",
+    "docs/semester-1/efmp-302/unit-05/index.mdx": "0c3171cb777a134d35d4475ab9fec1444d3e9be23c682bad20ac56e11a7c1ac2",
+    "docs/semester-1/efmp-302/unit-05/topic-01.mdx": "9441d537bdcf64bd4d067aa8794ea6971b321cfe49baa9be18259e1eb8ede70b",
+    "docs/semester-1/efmp-302/unit-05/topic-02.mdx": "cc48cbf3133dc7242b9347df9df5d045fecb67edcd62ea0fc3e08437a43ff412",
+    "docs/semester-1/efmp-302/unit-05/topic-03.mdx": "7ce7abd8da09701bab813f164bddb65db9bf57a79003c6a3d60bce3a94d4fad0",
+    "docs/semester-1/efmp-302/unit-05/topic-04.mdx": "7d0f2bbf71ed9c483ac68f9dd9067defd28f0d82fad496493d9718fcedd43eda",
+    "docs/semester-1/efmp-302/unit-05/unit-assessment.mdx": "380cf1136926f198cd12e127c5dbbdf99465ba8af5488f81f18962089a29daaf",
+    "docs/semester-1/efmp-302/unit-05/unit-teacher-notes.mdx": "6f66972350577125e855ece2b60158656be8c5a88e3ccf483c673d37d1f27971",
     "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
     "scripts/check-figures.mjs": "41b698f8cbbb12f4030d6893083a5c36e4a19848b5ddb86206e5ba72847b8b13",
     "scripts/check-no-answer-keys.mjs": "f38d60e5360e0c29f2dae02001195690f3b95e0ad2d7ae1a3c03a0d09c053f0d",
@@ -126,30 +127,67 @@
     "specs/content/efmp-302/sources/unit-06.md": "1b5e98938af0bf90f72d64b8c482b1d9f15e0f897198defb26c2f4336213c99b",
     "specs/content/style-guide.md": "db96c9b33b0fb9522986462a0b519620c3c1d7602a046d7b90e638f643da4610",
     "specs/content/terminology.csv": "ad917e28cde688eb72bd92226c2326e2d23da3da80fc53ea8c812b1a47f73337",
-    "static/img/figures/efmp-302/unit-06/fig-U6-1.dark.svg": "58941e867674bc72a228594243a41a56ecbcf2a7d8e109ed0d32f253c5584b6d",
-    "static/img/figures/efmp-302/unit-06/fig-U6-1.svg": "16840f87ec6d3ee7b4f4abf0eade3bbdaeb56529017c6342c36705c9d89a76de",
-    "static/img/figures/efmp-302/unit-06/fig-U6-2.dark.svg": "00cc9659c9df0142aa120f2bc57d335d8ca703d911f14fc328fb4ab4436026ad",
-    "static/img/figures/efmp-302/unit-06/fig-U6-2.svg": "2931938b4697661d4ac2e9e98bfaa0ce0947a2952823c59bd365240b708a6fb3",
-    "static/img/figures/efmp-302/unit-06/fig-U6-3.dark.svg": "d9165cbfd02e402ba166ab2a86b65418e36991d3e2c9fe8d87df812d19cb40e5",
-    "static/img/figures/efmp-302/unit-06/fig-U6-3.svg": "68ca3fb9b58b69048a300f98afc03cd3ab1a7e8bd1342fdd16c9d39e886025f1",
-    "static/img/figures/efmp-302/unit-06/fig-U6-4.dark.svg": "05e5d94b8188d26606a727683541dec491ec4cd833d23383a7237c7248481810",
-    "static/img/figures/efmp-302/unit-06/fig-U6-4.svg": "11484371afd94c236b050cd3ac1eaa3a5f447579af91138c435f87e35c4f74e9",
-    "static/img/figures/efmp-302/unit-06/fig-U6-5.dark.svg": "548ee4882bfd60572d1c62622b46dcdb39de82b80eb2cd2fbb7152f17f0b2968",
-    "static/img/figures/efmp-302/unit-06/fig-U6-5.svg": "87c6669d02d95539d077bf096d38a6ee5f33123ca2c15960336eeedebdaebe21",
-    "static/img/figures/efmp-302/unit-06/fig-U6-6.dark.svg": "92dcddc65b1b3981ab5c8ef0aed6314230194ef1d9c47ec555877d43c30a4fe4",
-    "static/img/figures/efmp-302/unit-06/fig-U6-6.svg": "b8d5e03b7b62a4629b17515608f6847752a232e144ab59333d446b5571169b2c",
-    "static/img/figures/efmp-302/unit-06/fig-U6-7.dark.svg": "495b7cfea89b9a19cafd1398f06384b10fe4da2044b5901c9b5996bd1c9ab1a7",
-    "static/img/figures/efmp-302/unit-06/fig-U6-7.svg": "f9b1d3f33680f48c50cbc3d51db23e5c854e8eee1e559b6d7190cc34d3e5e993",
-    "static/img/figures/efmp-302/unit-06/fig-U6-8.dark.svg": "70d63382e547d1fd370638de5799476e442a4bd7b7ca79ba8295010e25a04a41",
-    "static/img/figures/efmp-302/unit-06/fig-U6-8.svg": "31afadf64958c63fcf3a3ca29a73f2fda21929652b139ab470b668d974ad609f"
+    "static/img/figures/efmp-302/unit-05/fig-U5-1.dark.svg": "1f8e0443f93830e5337b8326c9feb254281c3de71e84d0a604c55f2456b88e73",
+    "static/img/figures/efmp-302/unit-05/fig-U5-1.svg": "80928cc76cca0bb2bffda60225f025f1631d9a18916d39092ffa44d8a5448690",
+    "static/img/figures/efmp-302/unit-05/fig-U5-2.dark.svg": "4aa7e64b86c3af637bd21ee51e6b77ecaac842977375a0cd21336bb303b9d7ce",
+    "static/img/figures/efmp-302/unit-05/fig-U5-2.svg": "8076e0a8e9182389e09a4892e82ac747f22e18372fc45e6f47c045c8e7a78dd7",
+    "static/img/figures/efmp-302/unit-05/fig-U5-3.dark.svg": "65aa7c717a49b392314a9b1cc3dad1c43898d30f3f78a568703d4aa4cc554be8",
+    "static/img/figures/efmp-302/unit-05/fig-U5-3.svg": "be468e305ea89f8d384e5bb2f1b479840ee9ef5170f27b5a1ed665ba1bf700c8",
+    "static/img/figures/efmp-302/unit-05/fig-U5-4.dark.svg": "99acdff0f3789557a073d44d793db45b290f0fb226aa6b5a7c94724f082d396e",
+    "static/img/figures/efmp-302/unit-05/fig-U5-4.svg": "b6daac8e04cd1dea22f366bfda3354bf3ab5aecf8a629963a337dc06d3f6ea61",
+    "static/img/figures/efmp-302/unit-05/fig-U5-5.dark.svg": "111f5956c7baf0e2c40b6c2a58ac2880b9aa48a39ff5e84982611a2c9bc89b8e",
+    "static/img/figures/efmp-302/unit-05/fig-U5-5.svg": "f6ed713dab459cf6e1c018b1e116e314acb67cb1ef1f7843e615e224665eebd4",
+    "static/img/figures/efmp-302/unit-05/fig-U5-6.dark.svg": "3e1056411faa7613ba1cd558e04e129650b4403ddb955925f8c2406c2e4b56f9",
+    "static/img/figures/efmp-302/unit-05/fig-U5-6.svg": "aa4b679fc6bc05d655a0b8b5b4f3e6459106a8122699961670ffffab68edc1e7",
+    "static/img/figures/efmp-302/unit-05/fig-U5-7.dark.svg": "fd2f811e89b736c493845ee08d86dfc624592305ea9da93a33246b9f7ec3fd3f",
+    "static/img/figures/efmp-302/unit-05/fig-U5-7.svg": "f7f49280bb21c323c550b6d94d7ef3723d5aecea1952743618f81f20fdf94ade",
+    "static/img/figures/efmp-302/unit-05/fig-U5-8.dark.svg": "673e81d1db4ad2eebfb1d9ec45add0c01e9aba74a49abc50cf8b0bb807f7814a",
+    "static/img/figures/efmp-302/unit-05/fig-U5-8.svg": "15272507b8342db384f5453801e6d2737b7d60c53fa167df7f981bdf6829ac59"
   },
-  "required_criteria": [
-    "authority",
-    "sources",
-    "coverage",
-    "assessment",
-    "accessibility",
-    "readability",
-    "pedagogy"
-  ]
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-05/G2/logs-20260919T171058390Z/validate-content.txt"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-05/G2/logs-20260919T171058390Z/check-depth-gate.txt"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-05/G2/logs-20260919T171058390Z/check-figures.txt"
+    },
+    {
+      "name": "check:concept-graph",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-05/G2/logs-20260919T171058390Z/check-concept-graph.txt"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-05/G2/logs-20260919T171058390Z/check-no-em-dash.txt"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-05/G2/logs-20260919T171058390Z/check-no-answer-keys.txt"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-05/G2/logs-20260919T171058390Z/check-docs-sync.txt"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/efmp-302/reviews/unit-05/G2/logs-20260919T171058390Z/validate-content.txt": "cbc502b77b35106c6869eafd46b09014a2e8b23ce8252d5134ab938783a798a0",
+    "specs/content/efmp-302/reviews/unit-05/G2/logs-20260919T171058390Z/check-depth-gate.txt": "753f53588325a861bad6c29a985391aa8ee77f8994755eefc80f8a6a0c3f6d88",
+    "specs/content/efmp-302/reviews/unit-05/G2/logs-20260919T171058390Z/check-figures.txt": "446e1a945099dc2fe95305d093b1e749056b2be204eab4636ea929c8b77cea8a",
+    "specs/content/efmp-302/reviews/unit-05/G2/logs-20260919T171058390Z/check-concept-graph.txt": "bfd893cad1df5d0a61903f34b792ad390fcc4e55747cb96712fafa4c3383de2e",
+    "specs/content/efmp-302/reviews/unit-05/G2/logs-20260919T171058390Z/check-no-em-dash.txt": "0c8e59df7e6ce4d716116580c11c21c6635f82219a34a00afee03bc87947a97f",
+    "specs/content/efmp-302/reviews/unit-05/G2/logs-20260919T171058390Z/check-no-answer-keys.txt": "3ab67e4e6e2e64e8af7bbe1551f10c2f032f0beb72f7f5d354dce98d14f20a83",
+    "specs/content/efmp-302/reviews/unit-05/G2/logs-20260919T171058390Z/check-docs-sync.txt": "39df35c00a40d46c0398ee55e3fe96f19c61a3c911c052fe7225f0970e134de8"
+  }
 }
