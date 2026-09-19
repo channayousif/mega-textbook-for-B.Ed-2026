@@ -142,10 +142,19 @@ const bound = (root, paths, index) => [...new Set(paths.flatMap((p) => walk(root
   .filter((p) => !p.includes('/reviews/') && !p.endsWith('/tasks.md') && !p.includes('/.staging/'))
   .sort();
 
-export function inputManifest(root, course, unit, stage) {
-  const roots = manifestRoots(root, course, unit, stage);
+/**
+ * Digest map for an arbitrary set of committed roots. `inputManifest` is this with
+ * the G3/G5 root set; the intake evaluator (Article VII.8) passes its own. One
+ * implementation, so an evaluator bundle cannot drift from a review bundle in how
+ * it hashes, filters or normalizes.
+ */
+export function manifestFor(root, roots) {
   const paths = bound(root, roots, tracked(root));
   return Object.fromEntries(paths.map((p) => [p, digest(normalized(p, readFileSync(safeFile(root, p))))]));
+}
+
+export function inputManifest(root, course, unit, stage) {
+  return manifestFor(root, manifestRoots(root, course, unit, stage));
 }
 
 /**
