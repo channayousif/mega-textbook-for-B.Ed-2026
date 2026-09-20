@@ -4,7 +4,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import { listOwnClasses } from '@site/src/lib/classes';
-import { fetchContentIndex, isLoggableContent, type ContentIndexEntry } from '@site/src/lib/assignments';
+import { fetchContentIndex, loggableOptions, type ContentIndexEntry } from '@site/src/lib/assignments';
 import { logActivity, fetchOwnLog } from '@site/src/lib/teachingLog';
 import { submitFeedback, fetchOwnFeedback } from '@site/src/lib/activityFeedback';
 import type { Class, TeachingLogEntry } from '@site/src/lib/types';
@@ -57,7 +57,7 @@ const MESSAGES = {
   feedbackError: { en: 'Could not submit feedback.', ur: 'رائے جمع نہیں ہو سکی۔' },
 } as const;
 
-type ContentOption = ContentIndexEntry;
+type ContentOption = ContentIndexEntry & { pageCount?: number };
 
 /** T030 - inline feedback form wired to a specific log entry's activity. */
 function LogEntryFeedback({ entry, locale }: { entry: TeachingLogEntry; locale: 'en' | 'ur' }): React.ReactElement {
@@ -204,14 +204,12 @@ function TeachingLogContent(): React.ReactElement {
 
   const selectedClass = classes?.find((c) => c.id === classId) ?? null;
 
-  // Only the three FR-004 activity kinds are loggable - a per-topic unit's
-  // `topic`/`assessment` records are whole lessons, and 0028's CHECK refuses
-  // them, so offering one here produced a save that could only ever fail.
+  // One option per (unit_no, kind), which is the grain the tables store - see
+  // loggableOptions. Migration 0045 made `topic`/`assessment` loggable, and
+  // without this a four-topic unit rendered four options with identical values.
   const contentOptions: ContentOption[] = useMemo(() => {
     if (!contentIndex || !selectedClass) return [];
-    return contentIndex.filter(
-      (e) => e.course_code === selectedClass.course_code && isLoggableContent(e),
-    );
+    return loggableOptions(contentIndex, selectedClass.course_code);
   }, [contentIndex, selectedClass]);
 
   useEffect(() => {
@@ -290,7 +288,9 @@ function TeachingLogContent(): React.ReactElement {
               >
                 {contentOptions.map((opt) => (
                   <option key={`${opt.unit_no}::${opt.kind}`} value={`${opt.unit_no}::${opt.kind}`}>
-                    Unit {opt.unit_no} - {opt.title} ({opt.kind})
+                    Unit {opt.unit_no} - {opt.pageCount && opt.pageCount > 1
+                      ? `${opt.kind} (${opt.pageCount} pages)`
+                      : `${opt.title} (${opt.kind})`}
                   </option>
                 ))}
               </select>

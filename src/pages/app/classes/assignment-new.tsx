@@ -5,7 +5,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import AuthGuard from '@site/src/components/AuthGuard';
 import { useClassRole, useQueryParam } from '@site/src/contexts/ClassContext';
 import {
-  createAssignment, publishAssignment, fetchContentIndex, isLoggableContent,
+  createAssignment, publishAssignment, fetchContentIndex, isLoggableContent, loggableOptions,
   type ContentIndexEntry, type LoggableContentKind,
 } from '@site/src/lib/assignments';
 import { fetchQuizUnitsForCourse } from '@site/src/lib/quiz';
@@ -103,10 +103,13 @@ function AssignmentNewContent({ classId }: { classId: string }): React.ReactElem
     fetchQuizUnitsForCourse(classRow.course_code).then(({ data }) => setQuizUnits(data ?? []));
   }, [classRow?.course_code]);
 
+  // Same grain as the teaching log: `assignments` keys on
+  // (course_code, unit_no, source_kind) with no topic_no, so a four-topic unit
+  // must offer one item, not four indistinguishable ones (see loggableOptions).
   const unitItems = useMemo(
-    () => contentIndex.filter(
-      (entry): entry is ContentIndexEntry & { kind: LoggableContentKind } =>
-        entry.course_code === classRow?.course_code && isLoggableContent(entry),
+    () => loggableOptions(contentIndex, classRow?.course_code ?? '').filter(
+      (entry): entry is ContentIndexEntry & { kind: LoggableContentKind; pageCount: number } =>
+        isLoggableContent(entry),
     ),
     [contentIndex, classRow],
   );

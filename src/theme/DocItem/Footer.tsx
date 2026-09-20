@@ -128,7 +128,11 @@ const CONTENT_FEEDBACK_CONTEXT_CHARS = 100;
 function deriveSourceKindFromPath(pathname: string): TeachingLogSourceKind | null {
   const trimmed = pathname.replace(/\/+$/, '');
   const last = trimmed.split('/').pop() ?? '';
-  if (/^topic-\d+$/.test(last) || last === 'unit-assessment' || last === 'course-review') return null;
+  // `course-review` stays null: it is a whole-course page and the teaching log
+  // keys on (course_code, unit_no), so there is no unit for it to belong to.
+  if (last === 'course-review') return null;
+  if (/^topic-\d+$/.test(last)) return 'topic';
+  if (last === 'unit-assessment') return 'assessment';
   if (last === 'activities') return 'activity';
   if (last === 'formative') return 'formative';
   if (last === 'summative') return 'summative';
