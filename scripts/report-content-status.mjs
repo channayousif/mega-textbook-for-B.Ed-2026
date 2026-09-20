@@ -159,7 +159,15 @@ if (process.argv.includes('--check')) {
     process.exit(1);
   }
   const onDisk = readFileSync(OUT_FILE, 'utf8');
-  const strip = (text) => JSON.stringify({ ...JSON.parse(text), generated_at: null });
+  // `generated_at` and `commit` are PROVENANCE, not freshness. Comparing `commit`
+  // made the report stale after every commit, including ones that touch no content
+  // at all - which would have meant regenerating on each one and would quickly have
+  // trained everybody to ignore the gate. What actually determines the publication
+  // tiers is the tracker digests and the derived records, and those are compared.
+  const strip = (text) => {
+    const { generated_at, commit, ...rest } = JSON.parse(text);
+    return JSON.stringify(rest);
+  };
   if (strip(onDisk) !== strip(serialized)) {
     console.error('✗ static/content-status.json is stale - it no longer describes the working tree.');
     console.error('  Every publication banner is derived from this file, so a stale report');
