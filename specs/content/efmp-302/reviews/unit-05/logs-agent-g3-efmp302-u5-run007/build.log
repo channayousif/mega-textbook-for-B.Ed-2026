@@ -1,0 +1,45 @@
+### command: npm run build
+### commit: 203d716a47d628f7b9b58e12621edb7dea8f761c
+### started: 2026-09-19T17:03:43Z
+   -> linking to /ur/licence/
+- Broken link on source page path = /ur/semester-1/gict-300/unit-01/:
+   -> linking to /ur/licence/
+- Broken link on source page path = /ur/semester-1/gict-300/unit-01/activities/:
+   -> linking to /ur/licence/
+- Broken link on source page path = /ur/semester-1/gict-300/unit-01/formative/:
+   -> linking to /ur/licence/
+- Broken link on source page path = /ur/semester-1/gict-300/unit-01/summative/:
+   -> linking to /ur/licence/
+- Broken link on source page path = /ur/semester-1/gict-300/unit-01/teacher-notes/:
+   -> linking to /ur/licence/
+- Broken link on source page path = /ur/semester-1/gnas-301/course-overview/:
+   -> linking to /ur/licence/
+- Broken link on source page path = /ur/semester-1/gnas-301/unit-01/:
+   -> linking to /ur/licence/
+- Broken link on source page path = /ur/semester-1/gnas-301/unit-01/activities/:
+   -> linking to /ur/licence/
+- Broken link on source page path = /ur/semester-1/gnas-301/unit-01/formative/:
+   -> linking to /ur/licence/
+- Broken link on source page path = /ur/semester-1/gnas-301/unit-01/summative/:
+   -> linking to /ur/licence/
+- Broken link on source page path = /ur/semester-1/gnas-301/unit-01/teacher-notes/:
+   -> linking to /ur/licence/
+- Broken link on source page path = /ur/semester-1/gqur-300/course-overview/:
+   -> linking to /ur/licence/
+- Broken link on source page path = /ur/semester-1/gqur-300/unit-01/:
+   -> linking to /ur/licence/
+- Broken link on source page path = /ur/semester-1/gqur-300/unit-01/activities/:
+   -> linking to /ur/licence/
+- Broken link on source page path = /ur/semester-1/gqur-300/unit-01/formative/:
+   -> linking to /ur/licence/
+- Broken link on source page path = /ur/semester-1/gqur-300/unit-01/summative/:
+   -> linking to /ur/licence/
+- Broken link on source page path = /ur/semester-1/gqur-300/unit-01/teacher-notes/:
+   -> linking to /ur/licence/
+- Broken link on source page path = /ur/:
+   -> linking to /ur/licence/
+
+[SUCCESS] Generated static files in "build/ur".
+[INFO] Use `npm run serve` command to test your build locally.
+### exit_code: 0
+### finished: 2026-09-19T17:04:03Z

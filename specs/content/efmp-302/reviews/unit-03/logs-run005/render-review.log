@@ -1,0 +1,13 @@
+# render-review: actual browser and print inspection of the served prebuilt site
+# host: npm run serve -- --port 3103 (serves the committed build/ directory; NOT rebuilt)
+# driver: node specs/content/efmp-302/reviews/unit-03/logs-run005/render-inspect-run005.mjs
+# engine: playwright chromium (@playwright/test 1.61.1)
+# viewports: desktop 1280x900 | narrow 360x740 | print A4 794x1123 with media=print
+# rendered input identity: commit 957e1306c3aa44c2cd1f95027b4dacb4409108ae, build/ as served
+# artifacts: specs/content/efmp-302/reviews/unit-03/render-run005/
+# started_at: 2026-09-19T11:54:24Z
+---
+done
+---
+# exit_code: 0
+# finished_at: 2026-09-19T11:55:10Z

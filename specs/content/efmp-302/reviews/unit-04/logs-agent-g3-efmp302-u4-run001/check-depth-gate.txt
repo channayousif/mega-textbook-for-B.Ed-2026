@@ -1,0 +1,3 @@
+$ npm run --silent check:depth-gate
+✓ Depth gate passed (concept coverage, required blocks, formative floor, reading-minutes band, coverage↔sources consistency).
+EXIT_CODE=0

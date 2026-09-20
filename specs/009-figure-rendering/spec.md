@@ -1,5 +1,10 @@
 # Feature Specification: Figure Rendering — turn FIGURE markers into real images
 
+> **Current raster authority:** ADR-0024 supersedes this specification's Hugging Face and Claude
+> raster-provider clauses. Claude prepares `prompt-only` illustration briefs; Codex generates,
+> edits, optimises and places raster illustrations. Formats, limits and manifest contracts below
+> remain authoritative.
+
 **Feature Branch**: `009-figure-rendering`
 **Created**: 2026-08-30
 **Status**: Draft

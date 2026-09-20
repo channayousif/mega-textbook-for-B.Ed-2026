@@ -176,7 +176,7 @@ describe('check-pipeline-gate.mjs', () => {
       writePipelineFixtures(root, { trackerRows: UR_REVIEWED_TRACKER_ROWS });
       const { code, out } = runGate(root);
       expect(code).toBe(1);
-      expect(out).toMatch(/'Educational Psychology' declares ur:'غلط ترجمہ' but terminology\.csv has/);
+      expect(out).toMatch(/'Educational Psychology' declares ur:'غلط ترجمہ' but terminology\.csv accepts/);
     });
 
     it('passes with a fully matching key_terms pair', () => {
@@ -185,6 +185,114 @@ describe('check-pipeline-gate.mjs', () => {
       }));
       writePipelineFixtures(root, { trackerRows: UR_REVIEWED_TRACKER_ROWS });
       expect(runGate(root).code).toBe(0);
+    });
+  });
+
+  /**
+   * The bank may hold a PAIR - two accepted Urdu terms separated by ` / ` - for a term whose
+   * two readings are both live in reviewed content (style guide v4.2 banked four). Before this,
+   * the check compared `bank.get(en) !== ur` exactly, so a unit declaring either side of a pair
+   * failed against the pair it conforms to.
+   *
+   * The duplicate and empty checks moved here from the style guide's freeze: once the bank
+   * versions as data (ADR-0021), nothing else notices a second row silently shadowing the first.
+   */
+  describe('bank shape and accepted-term pairs', () => {
+    const PAIR_ROW = 'Readiness,تیاری / آمادگی,"pair: both accepted"\n';
+
+    it('accepts a key term matching the first side of a banked pair', () => {
+      ({ root } = makeFixture({
+        overrides: { 'index.mdx': { key_terms: [{ en: 'Readiness', ur: 'تیاری' }] } },
+      }));
+      writePipelineFixtures(root, { trackerRows: UR_REVIEWED_TRACKER_ROWS, terminologyRow: PAIR_ROW });
+      expect(runGate(root).code).toBe(0);
+    });
+
+    it('accepts a key term matching the second side of a banked pair', () => {
+      ({ root } = makeFixture({
+        overrides: { 'index.mdx': { key_terms: [{ en: 'Readiness', ur: 'آمادگی' }] } },
+      }));
+      writePipelineFixtures(root, { trackerRows: UR_REVIEWED_TRACKER_ROWS, terminologyRow: PAIR_ROW });
+      expect(runGate(root).code).toBe(0);
+    });
+
+    it('still rejects a key term matching neither side of a pair', () => {
+      ({ root } = makeFixture({
+        overrides: { 'index.mdx': { key_terms: [{ en: 'Readiness', ur: 'غلط' }] } },
+      }));
+      writePipelineFixtures(root, { trackerRows: UR_REVIEWED_TRACKER_ROWS, terminologyRow: PAIR_ROW });
+      const { code, out } = runGate(root);
+      expect(code).toBe(1);
+      expect(out).toMatch(/accepts 'تیاری' or 'آمادگی'/);
+    });
+
+    it('flags a duplicate term_en instead of silently shadowing it', () => {
+      ({ root } = makeFixture({
+        overrides: { 'index.mdx': { key_terms: [{ en: 'Readiness', ur: 'تیاری' }] } },
+      }));
+      writePipelineFixtures(root, {
+        trackerRows: UR_REVIEWED_TRACKER_ROWS,
+        terminologyRow: 'Readiness,تیاری,\nReadiness,آمادگی,\n',
+      });
+      const { code, out } = runGate(root);
+      expect(code).toBe(1);
+      expect(out).toMatch(/duplicate term_en 'Readiness'/);
+    });
+
+    it('flags an empty term_ur', () => {
+      ({ root } = makeFixture({
+        overrides: { 'index.mdx': { key_terms: [{ en: 'Readiness', ur: 'تیاری' }] } },
+      }));
+      writePipelineFixtures(root, {
+        trackerRows: UR_REVIEWED_TRACKER_ROWS,
+        terminologyRow: 'Readiness,,\n',
+      });
+      const { code, out } = runGate(root);
+      expect(code).toBe(1);
+      expect(out).toMatch(/'Readiness' has an empty term_ur/);
+    });
+  });
+
+  // ---- Art. VII.7 provisional publication (ADR-0025) ----
+  //
+  // The gate previously conflated "certified complete" with "may be visible".
+  // A provisional row is a valid resting state: the unit is published under a
+  // "Final Review Pending" notice and the gate passes, but it must SAY SO -
+  // a green gate that silently reads provisional as certified is the signal
+  // loss ADR-0023 warned about.
+  describe('provisional rows (Art. VII.7)', () => {
+    const provisionalRows = [
+      '| Unit | Stage | Status | Reviewer | Suggestion |',
+      '|---|---|---|---|---|',
+      '| Unit 1 | G2 en-draft | ✅ | YM | |',
+      '| Unit 1 | G3 en-review | 🟡 | YM | |',
+    ];
+
+    it('passes on a provisional G3 row and names the unit as provisional', () => {
+      ({ root } = makeFixture({ omitUr: true }));
+      writePipelineFixtures(root, { trackerRows: provisionalRows });
+      const { code, out } = runGate(root);
+      expect(code).toBe(0);
+      expect(out).toMatch(/provisional/);
+      expect(out).toMatch(/EFMP-301 Unit 1/);
+    });
+
+    it('still refuses a provisional row with no reviewer at all', () => {
+      ({ root } = makeFixture({ omitUr: true }));
+      writePipelineFixtures(root, {
+        trackerRows: [...provisionalRows.slice(0, 3), '| Unit 1 | G3 en-review | 🟡 | | |'],
+      });
+      const { code, out } = runGate(root);
+      expect(code).toBe(1);
+      expect(out).toMatch(/no reviewer initials/);
+    });
+
+    it('reports a fully certified course without the provisional wording', () => {
+      ({ root } = makeFixture({ omitUr: true }));
+      writePipelineFixtures(root);
+      const { code, out } = runGate(root);
+      expect(code).toBe(0);
+      expect(out).not.toMatch(/provisional/);
     });
   });
 });

@@ -13,7 +13,7 @@
  * FRONT-MATTER key patterns everywhere (including inside that section), the scan is unchanged.
  */
 import { readdirSync, statSync, readFileSync, existsSync } from 'node:fs';
-import { join, resolve, extname } from 'node:path';
+import { join, resolve, extname, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { CONTENT_ROOTS } from './lib/content-roots.mjs';
@@ -52,6 +52,9 @@ const BOUNDED_HTML_RE = /(?:^|\/)(unit-assessment|course-review)(?:\/index)?\.ht
 const SCAN_EXT = new Set(['.md', '.mdx', '.html']);
 // Spec 006: style-guide.md is the documented home for these exact marker phrases.
 const EXCLUDE = new Set([join(ROOT, 'specs', 'content', 'style-guide.md')]);
+
+/** Only `specs/content/<course>/reviews/` holds G3/G5 evidence. */
+const REVIEW_EVIDENCE_DIR = /^specs[/\\]content[/\\][^/\\]+[/\\]reviews$/;
 const hits = [];
 
 const hit = (p, re, m) =>
@@ -120,8 +123,22 @@ function walk(dir) {
     const p = join(dir, name);
     if (EXCLUDE.has(p)) continue;
     const st = statSync(p);
-    if (st.isDirectory()) walk(p);
-    else if (SCAN_EXT.has(extname(p))) scanFile(p);
+    // `specs/content/<course>/reviews/` holds G3/G5 evidence: reports, gate logs and
+    // readable summaries. None of it is published - `find build -path '*reviews*'`
+    // returns nothing - and a review that discusses an answer key has to use the
+    // words. Scanning it made the gate read governance artefacts as learner-facing
+    // content, and a passing Unit 3 review broke the Unit 4 review by landing a
+    // summary containing the phrase.
+    //
+    // `bound()` in scripts/lib/review-evidence.mjs already excludes `/reviews/` from
+    // the input manifest for the same reason. This applies the same rule here.
+    //
+    // Scoped to exactly that location: a `reviews/` directory appearing anywhere under
+    // a published content root is learner-facing and must still be scanned.
+    if (st.isDirectory()) {
+      if (name === 'reviews' && REVIEW_EVIDENCE_DIR.test(relative(ROOT, p))) continue;
+      walk(p);
+    } else if (SCAN_EXT.has(extname(p))) scanFile(p);
   }
 }
 

@@ -7,7 +7,7 @@ external asset. It renders behind a plain `<img src="/img/…">` (the `<Figure>`
 
 ## Schematic or illustration?
 
-| Choose a schematic `Kind` (SVG, this file) when the figure is… | archetype | Choose `illustration` (raster, `raster-hf-mcp.md`) when it… |
+| Choose a schematic `Kind` (SVG, this file) when the figure is… | archetype | Choose `illustration` (raster, `raster-codex-handoff.md`) when it… |
 |---|---|---|
 | a comparison table, matrix, or checklist grid | `table` | needs a photograph-like scene, a real place, faces |
 | a node-and-arrow web of related ideas | `concept-map` | needs texture, depth, lighting |

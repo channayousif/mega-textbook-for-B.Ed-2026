@@ -1,15 +1,20 @@
 ---
-version: "4.2"
+version: "4.5"
 ---
 
 # Content Style Guide
 
 Shared reference for every course/unit produced through the content authoring pipeline
 (Spec 006, extended by Spec 007). The Content gate (Constitution Art. VII) checks every
-drafted unit against this document. `version` (front matter above) is the single freeze marker
-for **both** this document and `terminology.csv` (Spec 006 FR-007, research.md R8) - the two
-are always versioned/frozen together; `terminology.csv` carries no version field of its own,
-and any further edit to either document requires bumping this field.
+drafted unit against this document. `version` (front matter above) is the freeze marker for
+**this document's rules**, and any further edit to them requires bumping the field.
+
+`terminology.csv` is **data, not standard**, and versions by its own Git history (ADR-0021,
+amending Spec 006 FR-007 / research.md R8, which froze the two together). Adding a term, or
+widening one to an accepted pair, is a vocabulary edit and does **not** bump this field. A
+change to how the bank is *used* is a rule and does. The shape checks that used to ride along
+with a version bump now live in `scripts/check-pipeline-gate.mjs`, which rejects a duplicate
+`term_en` and an empty `term_ur` rather than letting the second row silently shadow the first.
 
 **v2.0** (2026-08-27, Spec 007) adds the `## Unit depth standard` and
 `## What the depth gate checks vs. what the human Content gate checks` sections, proven on the
@@ -66,6 +71,28 @@ while `fig-U1-1/6/7` display `آمادگی`. Only `Rubric` resolved to a single 
 prose, figure or `translation_status` changed. Per Spec 006 FR-007 the bump re-freezes the pair;
 **the v4.0 freeze otherwise stands.**
 
+**v4.3** (2026-09-14, ADR-0021) decouples `terminology.csv` from this document's freeze marker.
+The bank is data: it grows whenever a translator meets a word, and coupling it to the standard
+made every vocabulary edit a standard revision. v4.2, one day earlier, is the case in point - a
+five-cell data edit forced a version bump, a changelog entry, and a gate that verifies the
+changelog. The rules in this document are unchanged by that decoupling; what changed is that the
+bank no longer drags them along. The shape checks the freeze was incidentally providing moved
+into `check:pipeline-gate` (duplicate `term_en`, empty `term_ur`), and the accepted-pair syntax
+v4.2 introduced is now documented under `## Terminology bank` and honoured by that gate, which
+previously compared the bank value exactly and would have rejected either side of a pair.
+
+**v4.4** (2026-09-14, ADR-0022) tracks Constitution 4.0.0: Urdu parity moves from a per-unit
+publish gate to a corpus completion requirement. A unit may publish English-only under the
+"Urdu translation not yet available" banner. Nothing else in `## UR register rules` changes, and
+the parity gate still applies wherever an Urdu version exists - what changed is when the Urdu
+version is owed, not whether it is.
+
+**v4.5** (2026-09-15, ADR-0024) assigns generated raster illustrations and raster edits to
+Codex, whose built-in image-generation tool was verified against the existing WebP optimiser and
+150 KB budget. Claude continues to own figure meaning, prompts, alt text and deterministic SVG
+schematics. The marker and manifest row are the handoff contract. Asset formats, budgets,
+bilingual reuse and figure-density rules are unchanged.
+
 **v4.0's freeze note, which still governs. This was the last standard revision before the freeze.** Nine revisions in, each one has
 invalidated finished work; `EFMP-301` Unit 1 has been authored three times. From here the standard
 is frozen until 50 units exist, and improvements are recorded in `specs/backlog.md` and applied in
@@ -100,8 +127,12 @@ cleanup pass removed every existing em dash from those trees. No section is adde
 ## UR register rules
 
 - Register: academic-plain (درسی مگر عام فہم) - not literary/archaic (Constitution Art. III.2).
-- Every student-facing unit MUST have a complete, human-reviewed Urdu version before publish,
-  except units belonging to a course flagged `bilingual: false`.
+- Every student-facing unit MUST have a complete, human-reviewed Urdu version **before the
+  corpus is complete**, except units belonging to a course flagged `bilingual: false`. Parity
+  is a corpus completion requirement, not a per-unit publish gate (Constitution Art. III.2 as
+  amended at 4.0.0, ADR-0022). A unit MAY publish English-only; the `ur` route then renders the
+  "Urdu translation not yet available" banner (Spec 001 FR-003), and the unit MUST NOT be
+  presented anywhere as a finished bilingual unit.
 - Machine translation MAY draft; a human quality pass is mandatory before a unit is marked
   `translation_status: reviewed`.
 - **No em dash** in Urdu prose either (Constitution Art. III.9). Use a comma, a full stop, or
@@ -146,6 +177,12 @@ cleanup pass removed every existing em dash from those trees. No section is adde
 translator consults (FR-006). A conflict between a translator's term choice and the bank is
 resolved by the curriculum owner, and the resolution updates the bank so later translators see
 it (research.md R4).
+
+`term_ur` may hold an **accepted pair**: two Urdu terms separated by ` / `, both conformant.
+Use one only when both readings are already live in reviewed content and picking a single term
+would make signed content non-conformant. `check:pipeline-gate` accepts a `key_terms` entry
+matching either side. The `notes` column records which surface uses which, so a pair documents a
+real split rather than hiding an unresolved decision.
 
 ## Answer-key marker patterns (FR-016d)
 
@@ -477,9 +514,10 @@ hand-authored as a self-contained SVG (`<title>` + `role="img"`, system-font sta
 `@media (prefers-color-scheme: dark)` block, meaning by shape+label never colour, ≤ 20 KB):
 `table` (comparison / matrix), `concept-map` (node-and-arrow web), `flowchart` (decision /
 process flow), `timeline` (ordered sequence along time), `diagram` (any other schematic -
-triangle, Venn, quadrant). The sixth, `illustration`, is a pictorial scene - generated via the
-Hugging Face MCP image tool (or a generation brief + `figures/.staging/` when no tool is
-connected), optimised to WebP ≤ 150 KB, longest edge ≤ 1600 px. Only `concept-map` /
+triangle, Venn, quadrant). The sixth, `illustration`, is a pictorial scene. Claude prepares its
+prompt, alt text and `prompt-only` manifest handoff; Codex generates or edits it with its built-in
+image-generation tool, inspects it and optimises it to WebP ≤ 150 KB with longest edge ≤ 1600 px.
+Only `concept-map` /
 `flowchart` / `timeline` satisfy the per-unit schematic rule.
 
 **Bilingual.** A placed `diagram` also has `<figId>.ur.svg` with the labels translated; the UR

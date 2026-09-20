@@ -126,8 +126,12 @@ export function buildReviewQueue(
       if (!unit.authored) continue;
       const gates = unit.gates;
       if (!gates) continue;
+      // `!== 'done'`, never `=== 'open'`. A provisional unit is agent-reviewed
+      // and already published under a "Final Review Pending" notice, which makes
+      // it the unit MOST needing a human pass - testing for 'open' would drop it
+      // out of the very queue that exists to clear it.
       const stage: ReviewStage | null =
-        gates.G3 === 'open' ? 'G3' : gates.G5 === 'open' ? 'G5' : null;
+        gates.G3 !== 'done' ? 'G3' : gates.G5 !== 'done' ? 'G5' : null;
       if (!stage) continue;
       const en = unitRoute(index, course.course_code, unit.unit_no);
       items.push({

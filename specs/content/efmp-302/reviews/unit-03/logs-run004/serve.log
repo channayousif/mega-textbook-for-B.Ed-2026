@@ -1,0 +1,8 @@
+
+> bed-mega-textbook@0.1.0 serve
+> docusaurus serve --port 3104
+
+◇ injected env (3) from .env.local // tip: ◈ secrets for agents [www.dotenvx.com]
+[WARNING] The `siteConfig.onBrokenMarkdownLinks` config option is deprecated and will be removed in Docusaurus v4.
+Please migrate and move this option to `siteConfig.markdown.hooks.onBrokenMarkdownLinks` instead.
+[SUCCESS] Serving "build" directory at: http://localhost:3104/

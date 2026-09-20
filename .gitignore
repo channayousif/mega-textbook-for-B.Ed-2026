@@ -36,6 +36,10 @@ supabase/.branches/
 
 # Logs
 *.log
+# ...except review-evidence command logs, which the Feature 014 contract requires to be
+# committed alongside a report. Without this carve-out a report validates locally and fails on a
+# fresh CI checkout, because its evidence_manifest names files git refused to track.
+!specs/content/**/reviews/**/*.log
 npm-debug.log*
 
 # OS / editor
@@ -70,3 +74,14 @@ Scheme-and-Course-guides/course-guides-2025/*.rtf
 # Feature 015 T001: pre-refactor gate output, captured so FR-009's byte-identical
 # comparison is mechanical rather than remembered. Local only, never committed.
 specs/015-licence-content-tree/baseline/
+
+# NOTE: `review-ref/` was removed on 2026-09-20 and is deliberately NOT ignored any more.
+# The comment here used to say `review-evidence.mjs prepare` needed an immutable copy of the
+# repo to compute digests against. That has not been true since `prepare` started hashing git's
+# index directly (`tracked()` in scripts/lib/review-evidence.mjs), and no script references the
+# path. Meanwhile the ignore rule was doing active harm: EFMP-302 Unit 3's run-007 review found
+# the snapshot shadowed 108 bound paths with older bytes, 36 of them differing, and because it
+# was ignored it never entered a manifest and `prepare` never reported it dirty - so a reviewer
+# could open superseded content and still validate cleanly. Leaving the path unignored means any
+# future snapshot shows up as untracked, which `dirtyInputs()` scans with
+# `--untracked-files=all` and will refuse to prepare against.

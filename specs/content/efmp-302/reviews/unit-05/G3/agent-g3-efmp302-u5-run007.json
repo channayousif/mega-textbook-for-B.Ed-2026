@@ -1,0 +1,555 @@
+{
+  "schema_version": 1,
+  "course_code": "EFMP-302",
+  "unit_no": 5,
+  "stage": "G3",
+  "disposition": "escalate",
+  "reviewer_id": "agent:g3-reviewer",
+  "author_run_id": "commit:ded73ec",
+  "reviewer_run_id": "agent-g3-efmp302-u5-run007",
+  "model": "claude-opus-5",
+  "started_at": "2026-09-19T16:58:40Z",
+  "completed_at": "2026-09-19T17:08:59Z",
+  "skill_digest": "afded48dc524cf73584575bb010a9d6f826f117ee55a2da29c7a038033ca1554",
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
+    ".claude/agents/g5-reviewer.md": "b63596b668dd8814fc7b34d59326171f7c789b8dc4e631e30c2c19fe05f2c68a",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g3.md": "53f6213fd4c2f99f0f5066a97fe11459706686e44df6a972e87bc0ebad8507e6",
+    ".claude/skills/review-unit/references/g5.md": "7cbdf9929e6073b71663ec8951a9a42d1e8e683af479434f8409c81002d33159",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/memory/constitution.md": "2c0a5a4dddd6fcca686fdecc4b1a2a958ab378ff02e8ef95b5dce2f831ea3531",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "f1d7f063cc2c826693a3d8428fb5d3ee45455fdb7906ebc5adadee8b9a434d47",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-1/efmp-302/course-overview.mdx": "7dcacdcd8198a7f6f0feda4f29023a3dbe145722ad0a8413d5de5d4e5dfaf450",
+    "docs/semester-1/efmp-302/unit-05/_category_.json": "30d600605bba5d317aa7e3e4d1b9f46087416cd9f3106622f28fb8423a3e4eb3",
+    "docs/semester-1/efmp-302/unit-05/index.mdx": "0c3171cb777a134d35d4475ab9fec1444d3e9be23c682bad20ac56e11a7c1ac2",
+    "docs/semester-1/efmp-302/unit-05/topic-01.mdx": "9441d537bdcf64bd4d067aa8794ea6971b321cfe49baa9be18259e1eb8ede70b",
+    "docs/semester-1/efmp-302/unit-05/topic-02.mdx": "cc48cbf3133dc7242b9347df9df5d045fecb67edcd62ea0fc3e08437a43ff412",
+    "docs/semester-1/efmp-302/unit-05/topic-03.mdx": "7ce7abd8da09701bab813f164bddb65db9bf57a79003c6a3d60bce3a94d4fad0",
+    "docs/semester-1/efmp-302/unit-05/topic-04.mdx": "7d0f2bbf71ed9c483ac68f9dd9067defd28f0d82fad496493d9718fcedd43eda",
+    "docs/semester-1/efmp-302/unit-05/unit-assessment.mdx": "118ab8f9a56a9dbcf7355876f972ed0551953adf6481067ee54fe06ac5f7a8ca",
+    "docs/semester-1/efmp-302/unit-05/unit-teacher-notes.mdx": "6f66972350577125e855ece2b60158656be8c5a88e3ccf483c673d37d1f27971",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "41b698f8cbbb12f4030d6893083a5c36e4a19848b5ddb86206e5ba72847b8b13",
+    "scripts/check-no-answer-keys.mjs": "f38d60e5360e0c29f2dae02001195690f3b95e0ad2d7ae1a3c03a0d09c053f0d",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "a748d1eedff125daa05dd704016cda13b8e05c889782509b10983916e7ddc2f8",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "bb614c625f7bf397ce51a317bdb8901711c00fa009d4ad0a506c5096e5b9ddd2",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "37dc0675e977cbb25421bb4d442d0994549b3acc9dbf3c44613fea9a3c532508",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "5fedb959ce39a29775158338afed506db73697426e5b23d2d8421068210bac3d",
+    "scripts/lib/review-evidence.mjs": "976d3e112b2cc38367e902988630b3be6ba03094097cb0c9acf46fdeb884a850",
+    "scripts/lib/tracker-rows.mjs": "a7dd0f00e30b707181f9072718eaa7531cd3dc175869689259a87beb9a6c42bc",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/efmp-302/concepts/unit-01.md": "2b75df95fa4b2650ceee0246da4ed8ed1b18604028ea759285d02819625761b3",
+    "specs/content/efmp-302/concepts/unit-02.md": "71ebc57a51ff8f74df8f1fe01226c254af807ec55257b5e4649c5aabdea3e1b3",
+    "specs/content/efmp-302/concepts/unit-03.md": "f41a214572d92c9e1214309a39a139b7c45bb0e282c819fa4acd1e09993d6255",
+    "specs/content/efmp-302/concepts/unit-04.md": "638066b6f8a78a65e66b3f2db3b6f5dd772763bbfe015c4ccb9d29d241ef878a",
+    "specs/content/efmp-302/concepts/unit-05.md": "e5ee76ac724222f2e729a364f8d6dcaebf0f532f5dc896ea1461948912fc0c0d",
+    "specs/content/efmp-302/concepts/unit-06.md": "6058265f27dcfa92eb700e33317e4ba96bf6ab1ae9ecbf3d97473aef7394a949",
+    "specs/content/efmp-302/content-spec.md": "b439851f34b681971569af0f82acdab6ead420a2d4ce4f5d02d7edb0ffed5f95",
+    "specs/content/efmp-302/coverage/unit-01.md": "d52a7736874715a345d9d8843ac8298c49816627884a62212dfcdef13a38438c",
+    "specs/content/efmp-302/coverage/unit-02.md": "8fdccc0c61b77dbf515b8b81d6338b6e6bd5ec06c1a28d2f1c35bea2f1745541",
+    "specs/content/efmp-302/coverage/unit-03.md": "29648b8fa1992dd9e3ad84b9f31f2d69ba29adf1f7dff25173ceebd9cf54672e",
+    "specs/content/efmp-302/coverage/unit-04.md": "2c85006b9cc4b7b897dca2fe7c4efb58718c2c940fcc07dbdaf3e8cc7c3b25d5",
+    "specs/content/efmp-302/coverage/unit-05.md": "b341543ce1e583f018a6db97878fd846bbef1464fbb6c585b1b93c5cfd42be70",
+    "specs/content/efmp-302/coverage/unit-06.md": "395b28c6fced1d9164043f4412ded936f51484c4decfc9307b34c420283ea276",
+    "specs/content/efmp-302/figures/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "specs/content/efmp-302/figures/unit-01.md": "3fa2b8de8519fcd8800c04b05282fc42b1527fbb28be26d66383b0423eba0ded",
+    "specs/content/efmp-302/figures/unit-02.md": "11de90923a2eacdb90fa137903d6b3ee3f637db9fb64dcf7d65eddf92ff05db8",
+    "specs/content/efmp-302/figures/unit-03.md": "6b3ea0c60274bba7c72fff74f64f9a4714454df65ab60aa6a96373e283b41466",
+    "specs/content/efmp-302/figures/unit-04.md": "93a27c484b209c8b57078af939cce348096880ea4baf66f3d260321d7a4f2c01",
+    "specs/content/efmp-302/figures/unit-05.md": "a673d313c2ceee3097f32409bd66b6c686b7ef6d74a7f7e1edf226056eb6af1c",
+    "specs/content/efmp-302/figures/unit-06.md": "32b0086ea7221c865f9ec1a48cf40339bf9341c1fddec09a77c351e9a4cf23d0",
+    "specs/content/efmp-302/sources/texts/README.md": "5007d1d58fdc98fb7a6669c4ebe9e9fd95d8950803215ba54f07788c1d4608f3",
+    "specs/content/efmp-302/sources/texts/bebeau1999.md": "c7c78e4287fb9ecdc165d71455c9555bad30caf99dea5689e848d69bbc056565",
+    "specs/content/efmp-302/sources/texts/demirkasimoglu2010.md": "3b5f67f6981ae0987aa73601d681778b44e3987692a2ec365b4e1271fd73fd8f",
+    "specs/content/efmp-302/sources/texts/ehrich2011.md": "3fbd0aebcea4b10aec9e8607882346c2f4cce32affac16ca8d319c12a0ddee26",
+    "specs/content/efmp-302/sources/texts/furlich2016.md": "21cc51c8077ed340a972787a8c67f8350eaadd16c9879069f931e89c4a51541c",
+    "specs/content/efmp-302/sources/texts/goe2008.md": "388cfb823b621e2c423eef36231a655bffece69adb0cc6d1de14dd44681e3524",
+    "specs/content/efmp-302/sources/texts/hargreaves2000.md": "2eacf00357068486649801fae8588fd863631b24983147e727d66431478160ee",
+    "specs/content/efmp-302/sources/texts/isore2009.md": "ba81be4e0e6e49cce388f9f48e1e224e7b3e3f847c4fcc9ee183bbfc863ae807",
+    "specs/content/efmp-302/sources/texts/keelson2024.md": "9b352bfc8520a366d4fb51c79fac7d6a17bd3b3d24e645166f41084981c7361a",
+    "specs/content/efmp-302/sources/texts/maslach2016.md": "5e520e6d14aa5768b7d4e4ea9b2601adba808cd6be9a21c439eec1376f5d4458",
+    "specs/content/efmp-302/sources/texts/naparan2021.md": "23add5b5bd287160396fb4682400294db45d6830848731c5ba53d1cdf69c0729",
+    "specs/content/efmp-302/sources/texts/skaalvik2020.md": "a3c8532c249ebc83365b01a0ea60e0e659a03587d1a575646a0c96660554e6c2",
+    "specs/content/efmp-302/sources/texts/suarez2022.md": "087030ea5418db5446200ba57a105f36097ee7e1ed08547fb0b10b8b17b799b3",
+    "specs/content/efmp-302/sources/texts/taylor2023.md": "3ee551c2e1f0989ac74bc64da43bf4841e354f5ff9d35742aec56ffc6ad458f3",
+    "specs/content/efmp-302/sources/unit-01.md": "37f680be0d8651745879b9cb326504ece8192bdf90bbbfd7c8682ad3932ad2cd",
+    "specs/content/efmp-302/sources/unit-02.md": "fcacc221f4f98c912c1c63699d0c65c7631c218c0a17132af098a6cc4de0d442",
+    "specs/content/efmp-302/sources/unit-03.md": "a165155a046c0183cdb8b92ccac4f413117c7ed6e44e86e429d781cfaea1a670",
+    "specs/content/efmp-302/sources/unit-04.md": "4282f41764b2a56cbf4bf618484005214120fbbbf3fb422fba970771d229262c",
+    "specs/content/efmp-302/sources/unit-05.md": "d54efd97c5f0c94d1e8465479a1e63445234c60160280ed5f3f8c51406bd58ab",
+    "specs/content/efmp-302/sources/unit-06.md": "1b5e98938af0bf90f72d64b8c482b1d9f15e0f897198defb26c2f4336213c99b",
+    "specs/content/style-guide.md": "db96c9b33b0fb9522986462a0b519620c3c1d7602a046d7b90e638f643da4610",
+    "specs/content/terminology.csv": "ad917e28cde688eb72bd92226c2326e2d23da3da80fc53ea8c812b1a47f73337",
+    "static/img/figures/efmp-302/unit-05/fig-U5-1.dark.svg": "1f8e0443f93830e5337b8326c9feb254281c3de71e84d0a604c55f2456b88e73",
+    "static/img/figures/efmp-302/unit-05/fig-U5-1.svg": "80928cc76cca0bb2bffda60225f025f1631d9a18916d39092ffa44d8a5448690",
+    "static/img/figures/efmp-302/unit-05/fig-U5-2.dark.svg": "4aa7e64b86c3af637bd21ee51e6b77ecaac842977375a0cd21336bb303b9d7ce",
+    "static/img/figures/efmp-302/unit-05/fig-U5-2.svg": "8076e0a8e9182389e09a4892e82ac747f22e18372fc45e6f47c045c8e7a78dd7",
+    "static/img/figures/efmp-302/unit-05/fig-U5-3.dark.svg": "65aa7c717a49b392314a9b1cc3dad1c43898d30f3f78a568703d4aa4cc554be8",
+    "static/img/figures/efmp-302/unit-05/fig-U5-3.svg": "be468e305ea89f8d384e5bb2f1b479840ee9ef5170f27b5a1ed665ba1bf700c8",
+    "static/img/figures/efmp-302/unit-05/fig-U5-4.dark.svg": "99acdff0f3789557a073d44d793db45b290f0fb226aa6b5a7c94724f082d396e",
+    "static/img/figures/efmp-302/unit-05/fig-U5-4.svg": "b6daac8e04cd1dea22f366bfda3354bf3ab5aecf8a629963a337dc06d3f6ea61",
+    "static/img/figures/efmp-302/unit-05/fig-U5-5.dark.svg": "111f5956c7baf0e2c40b6c2a58ac2880b9aa48a39ff5e84982611a2c9bc89b8e",
+    "static/img/figures/efmp-302/unit-05/fig-U5-5.svg": "f6ed713dab459cf6e1c018b1e116e314acb67cb1ef1f7843e615e224665eebd4",
+    "static/img/figures/efmp-302/unit-05/fig-U5-6.dark.svg": "3e1056411faa7613ba1cd558e04e129650b4403ddb955925f8c2406c2e4b56f9",
+    "static/img/figures/efmp-302/unit-05/fig-U5-6.svg": "aa4b679fc6bc05d655a0b8b5b4f3e6459106a8122699961670ffffab68edc1e7",
+    "static/img/figures/efmp-302/unit-05/fig-U5-7.dark.svg": "fd2f811e89b736c493845ee08d86dfc624592305ea9da93a33246b9f7ec3fd3f",
+    "static/img/figures/efmp-302/unit-05/fig-U5-7.svg": "f7f49280bb21c323c550b6d94d7ef3723d5aecea1952743618f81f20fdf94ade",
+    "static/img/figures/efmp-302/unit-05/fig-U5-8.dark.svg": "673e81d1db4ad2eebfb1d9ec45add0c01e9aba74a49abc50cf8b0bb807f7814a",
+    "static/img/figures/efmp-302/unit-05/fig-U5-8.svg": "15272507b8342db384f5453801e6d2737b7d60c53fa167df7f981bdf6829ac59"
+  },
+  "supersedes": [
+    "specs/content/efmp-302/reviews/unit-05/G3/agent-g3-efmp302-u5-run001.json",
+    "specs/content/efmp-302/reviews/unit-05/G3/agent-g3-efmp302-u5-run002.json",
+    "specs/content/efmp-302/reviews/unit-05/G3/agent-g3-efmp302-u5-run003.json"
+  ],
+  "summary": "Fourth executed G3 review of EFMP-302 Unit 5, first look at the state repaired after run 003. The assessment bank was solved blind before any key or prior report was read; all ten derived MCQ answers agree with the published key. Four of the six run-002 findings the briefing described as carried were already closed by run 003 and are re-verified closed here; run002-f5-mcq-blueprint and run002-f9-status-comparison, the two that were genuinely still open, are both now repaired and verified. Three blocking findings remain or are newly opened: hennessy2022's unverifiable-source declaration still does not support the findings-level claims topic-03 draws from it; RRQ 9 sits below the approved blueprint's RRQ floor; and every ERQ rubric table on unit-assessment.mdx renders its top two bands off-screen at 360px with no horizontal scroll, which run 003 recorded as moot on a measurement of the table box rather than of its cells. Disposition is escalate rather than revise because the rubric-table defect is in the shared presentation layer and reproduces in every EFMP-302 unit including Unit 3, which has already published provisionally; because this is the fourth review cycle against a two-cycle limit; and because the bound manifest was hand-edited in the working tree rather than regenerated by `prepare`.",
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        "specs/content/efmp-302/content-spec.md \"## Unit 5: Issues and Challenges in Teaching Profession\" lines 681-802: 12 sub-topics U5-01..U5-12 with Guide ref 5.1/5.2/5.3.",
+        "content-spec.md lines 730-736 \"G1 decision, confirmed by the curriculum owner 2026-09-18\": guide section 5.1 split across topic files 5.1 and 5.2; Guide ref still reads 5.1 for both.",
+        "docs/semester-1/efmp-302/unit-05/index.mdx \"## A note on how this unit is divided\" discloses the four-topic-for-three-section split to the learner.",
+        "content-spec.md lines 795-801 approved unit-end blueprint (10/10/5; MCQ Remember-to-Apply >=2 per topic; RRQ Understand-to-Analyze >=2 per topic; ERQ one per topic plus an integrative item).",
+        "Advisory only: the seam gloss at content-spec.md line 712 misdescribes the partition (see finding run002-f13); the checklist and topic table, which are authoritative, are correct."
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "fail",
+      "evidence": [
+        "BLOCKING: specs/content/efmp-302/sources/unit-05.md line 41 (hennessy2022 under \"## Unverifiable sources\") against docs/semester-1/efmp-302/unit-05/topic-03.mdx \"### Pressure to integrate technology\" - see finding hennessy2022-support.",
+        "Verified supported: maslach2016 - specs/content/efmp-302/sources/texts/maslach2016.md quotes the publisher text \"an overwhelming exhaustion, feelings of cynicism and detachment from the job, and a sense of ineffectiveness and lack of accomplishment\"; topic-01.mdx \"### Stress and burnout, and how the two differ\" names the same three and discloses the human-service scope.",
+        "Verified supported: maslach2016 JD-R quotation supports topic-01.mdx and fig-U5-2 on burnout as a demand-resource imbalance rather than a quantity of work.",
+        "Verified supported: skaalvik2020 - sources/texts/skaalvik2020.md record summary confirms n=262 Norwegian high-school teachers, September and April, time pressure, dissonant value context, autonomy and supervisory support; topic-01.mdx and topic-04.mdx cite it for the structure of the model and say so.",
+        "Verified supported: demirkasimoglu2010 - sources/texts/demirkasimoglu2010.md record summary opens on the profession/semi-profession debate given limits on teacher autonomy; topic-02.mdx \"### Socio-economic status and public recognition\" paraphrases exactly that and claims nothing more from it.",
+        "Verified supported and correctly scoped: hargreaves2000 - sources/texts/hargreaves2000.md is a four-phase historical taxonomy; coverage/unit-05.md line 21 grounds it in U5-06 only, and the single prose citation (topic-02.mdx \"### The increased focus on teacher accountability\") sits in that section. run002-f3 confirmed closed.",
+        "Verified closed: U5-07 is grounded no-external-source at coverage/unit-05.md line 22 and topic-02.mdx \"### High expectations from many stakeholders at once\" carries no citation. run002-f2 confirmed closed.",
+        "Verified closed: little2001 declaration at sources/unit-05.md line 40 states attempts, date, owner authorisation AND the support level (\"rests on title and bibliographic level only\"); topic-01.mdx keeps the claim at that level. Closed under D-2026-0001.",
+        "Verified closed: the unsourced status comparison at topic-02.mdx now carries its disclosure paragraph, and static/img/figures/efmp-302/unit-05/fig-U5-4.svg carries \"Indicative patterns for discussion, not measured national figures\" on its face. run002-f9 confirmed closed."
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "All 12 required rows of specs/content/efmp-302/coverage/unit-05.md resolve to a real \"###\" heading under \"## Explanation\" in the named topic file; mechanically verified, see logs-agent-g3-efmp302-u5-run007/blind-assessment-derivation.log for the item side and the criterion notes here for the heading side.",
+        "U5-01..U5-05 -> topic-01.mdx; U5-06..U5-08 -> topic-02.mdx; U5-09, U5-10 -> topic-03.mdx; U5-11, U5-12 -> topic-04.mdx. No unmapped sub-topic, no heading without a row.",
+        "specs/content/efmp-302/concepts/unit-05.md CON:EFMP-302-5-15 now derives MCQ-03 alongside RRQ-08 and ERQ-03, consistent with the repaired MCQ 3; CON:EFMP-302-5-3 and -5-4 were updated to drop the retired MCQ-03 mapping.",
+        "Each outcome in index.mdx \"## Unit learning outcomes\" has both a taught passage and at least one bank item: e.g. the status/recognition outcome -> topic-02.mdx \"### Socio-economic status and public recognition\" -> MCQ 7 and RRQ 6.",
+        "logs-agent-g3-efmp302-u5-run007/check-depth-gate.log exit 0."
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "fail",
+      "evidence": [
+        "BLOCKING: unit-assessment.mdx \"### Restricted-response questions (RRQs)\" item 9 is tagged (Remember), below the approved floor at content-spec.md line 797 - see finding rrq9-blueprint-floor.",
+        "Blind derivation recorded BEFORE the key or any prior report was read: logs-agent-g3-efmp302-u5-run007/blind-assessment-derivation.log. Derived MCQ key 1d 2c 3a 4b 5d 6b 7a 8c 9d 10a, each anchored to a prose locator.",
+        "Comparison with unit-assessment.mdx \"### MCQ answer key\": 10 of 10 agree. No discrepancy.",
+        "Verified closed: the approved \"at least 2 per topic\" MCQ rule is now met - topic 5.1 items 1,2,4; topic 5.2 items 5,6,7; topic 5.3 items 3,8; topic 5.4 items 9,10. The new item 3 (private message from a pupil) carries sub-topic U5-10, which previously had no MCQ. run002-f5-mcq-blueprint confirmed closed.",
+        "Verified closed: ERQ 5 \"Diagnosis\" Strong band now requires the candidate to distinguish the burnout-cynicism reading (Topic 5.1) from the third-region-misuse reading (Topic 5.4) and argue from the text, so neither reading is privileged and the criteria no longer conflict; unit-teacher-notes.mdx \"## Marking the unit assessment\" forbids awarding Strong for naming cynicism alone. run002-f7-erq5-conflict confirmed closed.",
+        "RRQ mark schemes are internally consistent: stated totals equal the sum of their award points for all ten items (4,6,5,4,6,5,5,4,9,4).",
+        "ERQ rubrics: five analytic rubrics, four criteria each, bands Limited 1-2 / Adequate 3 / Strong 4-5 summing to the stated 20; every ERQ carries at least one Analyze-or-higher criterion as the blueprint requires.",
+        "Bloom demand classified from the thinking required, not the label: MCQ 3 and MCQ 9 are genuine Apply; MCQ 4 and MCQ 8 require only recognition of a verbatim sentence (topic-01.mdx multilingual section; topic-03.mdx replacement question) and are Understand at most - carried as run002-f10."
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "fail",
+      "evidence": [
+        "BLOCKING: all five ERQ rubric tables in unit-assessment.mdx render columns \"Adequate (3)\" and \"Strong (4-5)\" partly or wholly outside a 360px viewport with no horizontal scroll - see finding erq-rubric-360-unreachable. Measured in logs-agent-g3-efmp302-u5-run007/table-clip-sweep.log and logs-agent-g3-efmp302-u5-run007/table-geometry.log; visible in renders-agent-g3-efmp302-u5-run007/narrow360-erq1-rubric-VIEWPORT.png.",
+        "Rendered input identity: fresh production build of commit 203d716 (logs-agent-g3-efmp302-u5-run007/build.log, exit 0, started 17:03:43Z), served by `docusaurus serve` at 127.0.0.1:4599; Chromium 149.0.7827.0. The pre-existing build/ dated 11:53 predated HEAD and was deleted before rebuilding.",
+        "Verified: all eight figures carry non-empty alt text and each SVG carries <title> and <desc>; heading order has no skipped levels on any of the seven pages (logs-agent-g3-efmp302-u5-run007/render-review.log section A).",
+        "Verified: at 360px no page scrolls horizontally, and every figure carrier is now an announced, keyboard-reachable pannable region - tabindex=\"0\", role=\"region\", aria-label=\"Scrollable figure, scroll sideways to see the whole diagram\", pan confirmed programmatically (logs-agent-g3-efmp302-u5-run007/spot-inspect.log section 3). This closes run 003 finding new-figure-scroller-unlabelled.",
+        "Verified: A4 print emulation at 794px clips nothing on any of the seven pages; all eight figures fit (max right edge 777px). PDFs and PNGs under renders-agent-g3-efmp302-u5-run007/print-a4-*.",
+        "Verified: the dark-theme variants load and display for all eight figures under [data-theme=dark], with the light variant hidden (logs-agent-g3-efmp302-u5-run007/spot-inspect.log section 1, renders-agent-g3-efmp302-u5-run007/dark-topic-0*.png).",
+        "Verified: fig-U5-3 caption reflow (commit ded73ec) is correct. In-browser getBBox measurement of all 16 SVG variants found no text past the viewBox and no text overlapping the wordmark (logs-agent-g3-efmp302-u5-run007/render-review.log section D)."
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "Each specialist term is defined at first substantive use before it is relied on: \"burnout\" (topic-01.mdx, <Glossary> carrier plus a contrast with stress), \"multi-grade classroom\" (topic-01.mdx), \"occupational status\" (topic-02.mdx).",
+        "The prose assumes no specialist background: the Skaalvik model is introduced through Miss Shahnaz's Tuesday rather than through JD-R terminology, and every study is given with where it was done and with whom.",
+        "Sentence and paragraph length stay within the style guide's EN readability rules; logs-agent-g3-efmp302-u5-run007/check-no-em-dash.log exit 0 and logs-agent-g3-efmp302-u5-run007/validate-content.log exit 0.",
+        "Terminology is used consistently across the unit: the three regions are named identically in topic-04.mdx, unit-assessment.mdx, the fig-U5-7 alt text and figures/unit-05.md (the run-001 defect is confirmed still closed).",
+        "Advisory only, not a readability failure: bibliography links use bare DOIs as their accessible text (finding run002-f15)."
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": [
+        "Every topic runs the full cycle: a named Pakistani classroom situation, explanation, a figure, an activity with group size and a time box, \"Check your understanding\", a summary, a self-assessment checklist, a practicum transfer task and a summative task with a mini-rubric.",
+        "Each of the five misconceptions listed at content-spec.md \"Common misconceptions\" is named and defeated in the prose: burnout-as-tiredness (topic-01.mdx), home language as the problem (topic-01.mdx), technology in every lesson (topic-03.mdx), status as fixed (topic-02.mdx), resilience as the whole answer (topic-04.mdx).",
+        "Activities are feasible as written in a Pakistani classroom: \"Itemise the week\" needs only groups of three or four and 30 minutes; \"Four demands, one week\" assigns one party per member of a group of four; \"Judge four uses\" is pairs and 25 minutes. None requires materials the unit has just described as absent.",
+        "Progression is real rather than nominal: topics 5.1-5.3 describe conditions and index.mdx \"## How to use this unit\" explains why topic 5.4 must be read last, which topic-04.mdx then discharges with the control/influence/neither method and a worked contrast (Mr Bilal and Miss Ayesha).",
+        "Conceptual depth: the unit repeatedly separates an accurate judgement from the use made of it (topic-04.mdx on Mr Bilal), and marks its own evidential limits to the learner (index.mdx \"## A note on the evidence in this unit\"; topic-01.mdx on the multilingual practices)."
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "hennessy2022-support",
+      "severity": "blocking",
+      "resolved": false,
+      "message": "Carried from run 003 as 'new-hennessy2022-declaration' (uncertain) and raised to blocking, because it is unrepaired and the rubric resolves it. specs/content/efmp-302/sources/unit-05.md line 41 declares hennessy2022 unretrievable with attempts, the date and the D-2026-0001 authorisation, but states the held evidence as 'the EdTech Hub companion record serves metadata only' and, unlike little2001 at line 40, states no level of support. docs/semester-1/efmp-302/unit-05/topic-03.mdx '### Pressure to integrate technology' then writes 'What it does establish is' and attributes three findings-level claims to it: that teacher development opportunities in such countries are limited and often not informed by research evidence, that technology offers real potential to extend both formal programmes and informal peer learning, and that outcomes so far are mixed. Metadata cannot establish any of the three, and there is no bound excerpt (specs/content/efmp-302/sources/texts/ holds no hennessy2022.md), so nothing in the bundle verifies them. The bundle also contradicts itself about what was read: specs/content/efmp-302/content-spec.md line 93 records 'Abstract read 2026-09-15' for this key. Per the G3 reference and D-2026-0001's stated limit, a declared-unretrievable source still fails `sources` where the prose states more than the declaration supports. Repair: state the support level in the line-41 declaration and reconcile it with content-spec.md line 93; if the basis is abstract-level, say so and the three claims stand as written, and add the uncorroborated marker to topic-03.mdx that topic-01.mdx already applies to its multilingual practices."
+    },
+    {
+      "id": "rrq9-blueprint-floor",
+      "severity": "blocking",
+      "resolved": false,
+      "message": "New this run; not raised by runs 001-003, which recorded only the mark weighting. The approved blueprint at specs/content/efmp-302/content-spec.md line 797 requires 'RRQs (10): Understand to Analyze'. unit-assessment.mdx '### Restricted-response questions (RRQs)' item 9, 'Name the three regions into which a teacher's situation divides, with two examples in each', is tagged (Remember), and the tag is honest: classified on the thinking actually required it is pure recall of three names and of examples given verbatim in topic-04.mdx '### Separating what is within a teacher's control from what is not'. It therefore sits below the floor this unit's blueprint sets. The deviation is unit-specific and deliberate elsewhere: Unit 3's blueprint at content-spec.md line 551 reads 'Remember to Analyze', so the Understand floor in Unit 5 is a choice, not boilerplate. The defect compounds with finding run002-f11, since this is also the most heavily weighted item in the bank. Repair: either raise the item to the floor (for example, ask what distinguishes the second region from the third and why the distinction matters), or amend the approved blueprint and record the amendment as a G1 decision."
+    },
+    {
+      "id": "erq-rubric-360-unreachable",
+      "severity": "blocking",
+      "resolved": false,
+      "message": "Reopens run002-f18, which run 003 recorded as 'MOOT on this render'. Run 003 measured the <table> box (328px inside a 360px viewport) and the presence of 'Strong (4-5)' in the DOM; it did not measure the cells. Measured this run at 360x780 on a fresh build of 203d716: in ERQ rubric 1 the four columns occupy x=17-162, 162-276, 276-408 and 408-541, so 'Adequate (3)' is cut mid-word and the whole of 'Strong (4-5)' is off-screen. The wrapper computes overflow-x: visible with scrollWidth equal to clientWidth, and document.documentElement.scrollWidth is 360, so there is no horizontal scroll anywhere: the content is not merely unlabelled, it is unreachable. All five ERQ rubrics are affected (5 cells fully off-screen and 5 cut midway in rubrics 1-4; 5 cut midway in rubric 5). Evidence: logs-agent-g3-efmp302-u5-run007/table-geometry.log, logs-agent-g3-efmp302-u5-run007/table-clip-sweep.log, and renders-agent-g3-efmp302-u5-run007/narrow360-erq1-rubric-VIEWPORT.png, in which the Strong column is absent from the screen. What the learner loses is the descriptor that defines the top band of every extended-response rubric. The four two-column mini-rubrics in the topic files are unaffected (max cell right edge 344px), and A4 print is unaffected. Scope: this is the shared table presentation layer, not Unit 5 authoring - the same measurement reproduces on the unit-assessment page of EFMP-302 Units 2, 3, 4 and 6 (logs-agent-g3-efmp302-u5-run007/scope-probe.log), including Unit 3, which has already published provisionally. Repair belongs in the shared component or stylesheet, in the same place the figure carrier received role=\"region\", tabindex=\"0\" and an aria-label; it is not within this unit's authoring scope, which is part of why this report escalates."
+    },
+    {
+      "id": "bundle-manifest-hand-edited",
+      "severity": "uncertain",
+      "resolved": false,
+      "message": "Process finding about the handoff, not about the content. specs/content/efmp-302/reviews/unit-05/G3-run007/manifest.json is modified in the working tree and not committed. The committed version (from 482eb52) binds the pre-repair digests of fig-U5-3.svg and fig-U5-3.dark.svg; the working-tree version binds the post-ded73ec digests. The skill directs a reviewer to verify digests against the prepared manifest and not to silently refresh it, and `prepare` refuses to run while a bound input is dirty, so this manifest cannot have come from `prepare` in its current state. I did not refresh it. I verified it instead: recomputing the bound set with the contract's own inputManifest(), including its translation_status normalisation, gives 137 paths matching 137, zero digest mismatches, zero paths added or dropped, and a matching skill_digest, and every bound content file is clean at HEAD 203d716. The binding is therefore truthful and reproducible, and the two edited digests are exactly those of the committed post-repair figure. What cannot be established from inside this session is that the bundle was produced by the trusted preparation path rather than by hand. Recorded as uncertain rather than blocking for that reason; it contributes to the escalate disposition and should be resolved by committing the reviewed state and regenerating the manifest with `prepare`."
+    },
+    {
+      "id": "repair-cycle-limit-exhausted",
+      "severity": "uncertain",
+      "resolved": false,
+      "message": "Governance finding. The skill allows at most two repair/review cycles per stage per submission. Unit 5 at G3 already carries three executed reviews - agent-g3-efmp302-u5-run001 (escalate), run002 (escalate) and run003 (revise) - each followed by an authoring repair, and this is the fourth executed review. Input bundles were additionally prepared at G3-run004, -run005 and -run006 with no report written against them. The inputs have genuinely changed since run 003, so this is not a prohibited unchanged-input retry, and the remaining content defects are few and precisely located; but the cycle budget for this stage is spent, which is an escalation condition in its own right and which the owner should rule on before a fifth cycle is commissioned."
+    },
+    {
+      "id": "run002-f10",
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Carried from run 002 and run 003, still open, and made worse by the run-003 repair. unit-assessment.mdx frontmatter blooms_summary declares 'MCQs at Remember and Understand with two at Apply; RRQs at Understand and Analyze'. The bank now contradicts it in three ways: FOUR MCQs carry (Apply) - items 3, 4, 8 and 9, up from three, because the item added to fix run002-f5-mcq-blueprint is tagged (Apply); RRQ 5 is tagged (Apply); and RRQ 9 is tagged (Remember). Independently of the count, the demand claim is also wrong: MCQ 4 and MCQ 8 require only recognition of a sentence stated verbatim in the prose. Counted blind from the printed labels before any prior report was read (logs-agent-g3-efmp302-u5-run007/blind-assessment-derivation.log). Repair: restate blooms_summary to match the bank, and reclassify MCQ 4 and MCQ 8 or raise their demand."
+    },
+    {
+      "id": "run002-f11",
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Carried from run 002 and run 003, still open, unchanged. unit-assessment.mdx '### RRQ model answers and mark schemes' gives RRQ 9 - the (Remember) item - 9 marks, the largest allocation in the bank, while the three (Analyze) items RRQ 3, RRQ 6 and RRQ 10 carry 5, 5 and 4. The weighting inverts cognitive demand. Now compounded by finding rrq9-blueprint-floor, which shows the same item also sits below the approved RRQ floor; both are best repaired together."
+    },
+    {
+      "id": "run002-f12",
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Carried residue from run 002, still open, unchanged. specs/content/efmp-302/figures/unit-05.md line 5 still reads 'the unit carries three `flowchart`s (`fig-U5-2`, `fig-U5-8`)' while naming two, and the table below it has exactly two flowchart rows (fig-U5-2 at topic 5.1, fig-U5-8 at topic 5.4). The worse half of the original finding, the Status/Src assertion, was fixed and remains fixed. Repair: change 'three' to 'two'."
+    },
+    {
+      "id": "run002-f13",
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Carried from run 002 and run 003, still open, unchanged; the run-003 repair to content-spec.md touched only Units 4 and 6. content-spec.md line 712 glosses the confirmed G1 seam as 'the first three bullets describe conditions a teacher is placed in, the last three describe demands other parties make of them'. The guide bullet order recorded in the same file is workload/stress/burnout; multilingual and multi-grade; increased accountability; lack of support and resources; stakeholder expectations; status and recognition, and the authoritative sub-topic table assigns bullets 1, 2 and 4 to topic 5.1 and bullets 3, 5 and 6 to topic 5.2. The partition is sound and owner-confirmed; only the gloss misdescribes it, and a later reviewer could read it as a different partition."
+    },
+    {
+      "id": "run002-f14",
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Carried from run 002 and run 003, still open, unchanged. specs/content/efmp-302/concepts/unit-05.md states that only 'Stress' and 'Multi-grade Classroom' come from the terminology bank, that the remaining fourteen Urdu labels are authored, and that approved labels should be promoted into terminology.csv 'before Unit 6 is translated, since `Burnout` will recur there'. specs/content/terminology.csv line 118 already banks 'Teacher Burnout,پیشہ ورانہ تھکن,EFMP-302 Unit 5', which is the identical Urdu form the concept graph uses for CON:EFMP-302-5-4. At least one of the fourteen is therefore already banked, and the note misdirects a G5 reviewer about how much is unbanked."
+    },
+    {
+      "id": "run002-f15",
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Carried from run 002 and run 003, still open, unchanged. Links whose accessible text is a bare URL, counted in the rendered DOM of the fresh build rather than in source: topic-01 4, topic-02 3, topic-03 1, topic-04 2 (logs-agent-g3-efmp302-u5-run007/render-review.log section A). Identical to the run-003 count, so the figure has not moved. Conventional in a bibliography, but not descriptive link text; linking the article title would be better."
+    },
+    {
+      "id": "run002-f19",
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Carried from run 002 and run 003, still open, unchanged. static/img/figures/efmp-302/unit-05/fig-U5-7.svg carries as its footer 'The regions are not fixed. A teacher who builds standing over a term moves items from the third region into the second.' No prose in topic-04.mdx states this, and it sits in mild tension with the same topic's 'no amount of individual effort moves them'. The claim is defensible and is the reading that would reconcile finding run002-f1b, but a figure should not be the only place a substantive claim is made. Either state it in the prose or drop it from the figure."
+    },
+    {
+      "id": "run002-f1b",
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Carried from run 001, run 002 and run 003, still open, unchanged. docs/semester-1/efmp-302/unit-05/unit-teacher-notes.mdx line 78 reads \"Unit 1's professional associations and Topic 5.4's second region, what you can influence, are where collective pressure belongs\", while topic-04.mdx places class size, pay scales and the examination system in the THIRD region and aims collective pressure at exactly those third-region matters. A coherent reading exists - organising is how a third-region matter becomes influenceable - and the fig-U5-7 footer states it, but no prose does. Advisory because the defect is confined to a teacher-facing ancillary file and no learner-facing item depends on it."
+    },
+    {
+      "id": "sources-no-external-row-omits-u5-07",
+      "severity": "advisory",
+      "resolved": false,
+      "message": "New this run. specs/content/efmp-302/sources/unit-05.md line 23 states '**Six of twelve sub-topics carry `no-external-source`.**', which is correct against coverage/unit-05.md (U5-01, U5-03, U5-04, U5-07, U5-10, U5-11). But the no-external-source row at line 53 enumerates only five, both in its description ('Pakistani working conditions (U5-01, U5-03), the multilingual classroom (U5-04), responsible digital conduct (U5-10) and the control-and-influence distinction (U5-11)') and in its Supports column ('topic-01.mdx U5-01, U5-03, U5-04; topic-03.mdx U5-10; topic-04.mdx U5-11'). U5-07, the stakeholder sub-topic, is missing from both although coverage/unit-05.md line 22 grounds it there. Not a regression: the row is byte-identical to its state at run 003's commit 44e92ec, so run 003's statement that line 53 lists U5-07 was inaccurate. Advisory rather than blocking because the headline count is the honest larger number and nothing is overstated; the enumeration is simply incomplete. Repair: add topic-02.mdx U5-07 to the row."
+    },
+    {
+      "id": "isore2009-u5-07-reinforcement-thin",
+      "severity": "advisory",
+      "resolved": false,
+      "message": "New this run. specs/content/efmp-302/sources/unit-05.md line 50 now claims isore2009 supports 'topic-02.mdx U5-07 (the activity on four demands in one week)', matching the reinforcement row at coverage/unit-05.md line 36. The bound excerpt specs/content/efmp-302/sources/texts/isore2009.md is an OECD review of teacher EVALUATION systems; its Annex 1 lists evaluation stakeholders (governments, unions, decentralised authorities, parents/students, school leaders) and its conclusion speaks of conciliating the demands for quality, development and recognition. Three of the activity's four parties overlap that annex, but the activity is about conflicting demands on a teacher's working week, which the excerpt does not address, and the activity carries no Isore citation in prose. Advisory rather than blocking because this is a reinforcement row that coverage/unit-05.md itself marks 'not required for the gate', the required grounding for U5-07 is correctly no-external-source, and no learner-facing claim rests on it. Repair: drop the reinforcement mapping, or narrow its gloss to the stakeholder enumeration the annex actually supplies."
+    },
+    {
+      "id": "skaalvik-third-demand-uncorroborated",
+      "severity": "advisory",
+      "resolved": false,
+      "message": "New this run, minor. topic-01.mdx '### Stress and burnout, and how the two differ' states that the demands Skaalvik and Skaalvik measured were 'time pressure, low student motivation and a dissonant value context'. The bound excerpt specs/content/efmp-302/sources/texts/skaalvik2020.md, an OpenAlex record summary, names only time pressure and dissonant value context; 'low student motivation' does not appear in it. specs/content/efmp-302/content-spec.md line 90 does record all three from an abstract read on 2026-09-15, so the claim is not unsupported, but it is not corroborated by anything bound into this review. Repair: extend the bound excerpt to cover the third demand, or attribute the three-demand list to the abstract."
+    },
+    {
+      "id": "rrq2-stem-presupposition",
+      "severity": "advisory",
+      "resolved": false,
+      "message": "New this run, derived blind before the key was read (logs-agent-g3-efmp302-u5-run007/blind-assessment-derivation.log). unit-assessment.mdx RRQ 2 asks the candidate to 'state where each of this unit's two burnout sources was conducted'. Only one of the two has a conduct location: Skaalvik and Skaalvik is 262 Norwegian high-school teachers, whereas topic-01.mdx describes Maslach and Leiter expressly as a review across human-service occupations that 'is not about teachers', and a review has no site. The mark scheme resolves it sensibly by asking for a population rather than a place ('names Maslach and Leiter as human-service occupations generally'), so the item is answerable and the key is right, but the stem presupposes something of one source that the unit does not supply. Repair: reword to 'state the scope of each of this unit's two burnout sources'."
+    },
+    {
+      "id": "hargreaves2000-excerpt-note-stale",
+      "severity": "advisory",
+      "resolved": false,
+      "message": "New this run, housekeeping. specs/content/efmp-302/sources/texts/hargreaves2000.md closes with 'This corroborates the EFMP-302 Unit 5 G3 blocking finding: coverage/unit-05.md grounds U5-07 and U5-08 in this key'. That was true when the excerpt was written; coverage/unit-05.md now grounds hargreaves2000 in U5-06 only, and the finding it refers to (run002-f3) is closed. A bound evidence file carrying a stale statement about a live review finding can mislead a later reviewer. Repair: update or date-stamp the note."
+    },
+    {
+      "id": "run002-f2",
+      "severity": "blocking",
+      "resolved": true,
+      "message": "RESOLVED, re-verified independently this run rather than accepted from run 003's report. coverage/unit-05.md line 22 grounds U5-07 in no-external-source, topic-02.mdx '### High expectations from many stakeholders at once' carries no citation, and demirkasimoglu2010 is confined to U5-08 where the bound record summary supports the profession/semi-profession framing that topic-02.mdx actually paraphrases. One residue is recorded separately as 'sources-no-external-row-omits-u5-07'."
+    },
+    {
+      "id": "run002-f3",
+      "severity": "blocking",
+      "resolved": true,
+      "message": "RESOLVED, re-verified against the bound excerpt. sources/unit-05.md line 52 records hargreaves2000 as supporting topic-02.mdx U5-06, agreeing with coverage/unit-05.md line 21; the single prose citation sits in the accountability section; and sources/texts/hargreaves2000.md, a four-phase historical taxonomy, supports that use and no other."
+    },
+    {
+      "id": "run002-f4",
+      "severity": "blocking",
+      "resolved": true,
+      "message": "RESOLVED, re-verified in the rendered DOM of the fresh build. topic-02.mdx '## Further reading' lists Demirkasimoglu (2010) alongside Isore (2009) and Hargreaves (2000), so the in-text citation resolves to a work for a learner on the page (logs-agent-g3-efmp302-u5-run007/render-review.log section A). The side effect on bare-DOI link text continues as run002-f15."
+    },
+    {
+      "id": "run002-f5-mcq-blueprint",
+      "severity": "blocking",
+      "resolved": true,
+      "message": "RESOLVED. This was one of the two findings genuinely still open at run 003, and the repair is real rather than cosmetic. The former MCQ 3, a second (Remember) item on burnout belonging to topic 5.1, has been replaced by an (Apply) item on the professional default for a private message from a pupil, which belongs to topic 5.3 and to sub-topic U5-10. Verified independently by mapping every item to its topic before reading run 003 (logs-agent-g3-efmp302-u5-run007/blind-assessment-derivation.log): topic 5.1 now has items 1, 2, 4; topic 5.2 items 5, 6, 7; topic 5.3 items 3, 8; topic 5.4 items 9, 10, so the approved 'at least 2 per topic' rule at content-spec.md line 796 is met. concepts/unit-05.md was updated consistently: CON:EFMP-302-5-15 now derives MCQ-03, and the retired mapping was removed from CON:EFMP-302-5-3 and -5-4. The new item's key (a) and its distractors are sound; I derived (a) blind from topic-03.mdx before reading the key. One side effect is recorded as run002-f10: the Apply count rose from three to four while blooms_summary still says two."
+    },
+    {
+      "id": "run002-f7-erq5-conflict",
+      "severity": "blocking",
+      "resolved": true,
+      "message": "RESOLVED, re-verified this run and confirmed present in the rendered and printed page. unit-assessment.mdx '### ERQ rubrics', ERQ 5 'Diagnosis' Strong band now reads 'Distinguishes the two readings of the group-work remark - burnout cynicism (Topic 5.1) or an accurate third-region judgement being used to excuse first-region inaction (Topic 5.4) - and argues from the text which the evidence supports', and unit-teacher-notes.mdx '## Marking the unit assessment' forbids awarding Strong for naming cynicism alone and forbids withholding it from the Topic 5.4 reading. Both readings are taught in the unit and the vignette is deliberately poised between them, so assessing the discrimination itself is the right resolution and the conflict of criteria is gone."
+    },
+    {
+      "id": "run002-f9-status-comparison",
+      "severity": "blocking",
+      "resolved": true,
+      "message": "RESOLVED. This was the other finding genuinely still open at run 003, and it is now repaired at both places the finding named. topic-02.mdx '### Socio-economic status and public recognition' gained the disclosure paragraph 'This unit cites no research for that comparison, because none was verified while it was written', which applies the same convention the unit already applied at topic-01.mdx's multilingual practices. I verified the second half of the claim rather than taking it on trust: static/img/figures/efmp-302/unit-05/fig-U5-4.svg does carry the caveat on its face, as the footer line 'Indicative patterns for discussion, not measured national figures. Compare them against your own system before using them.' MCQ 7 and RRQ 6, which assess this material, test the unevenness of the markers rather than any specific comparative figure, so they are unaffected."
+    },
+    {
+      "id": "run002-f8",
+      "severity": "uncertain",
+      "resolved": true,
+      "message": "RESOLVED for little2001, re-verified under owner ruling D-2026-0001 (specs/decisions/log.md, status confirmed). sources/unit-05.md line 40 declares the retrieval attempts, the date, the authorisation AND the level of support, and topic-01.mdx keeps the multigrade claim at exactly the title and record level the declaration supports while marking the consequence as the unit's own inference. Judged on whether the declaration is honest and complete, it is both. hennessy2022, the other key in the original run-002 finding, does not close on the same basis and continues as finding 'hennessy2022-support'."
+    },
+    {
+      "id": "new-figure-scroller-unlabelled",
+      "severity": "advisory",
+      "resolved": true,
+      "message": "RESOLVED since run 003, verified by measurement. At 360px every figure carrier is still its own horizontal scroll container, but it is now announced and operable: <figure> carries tabindex=\"0\", role=\"region\" and aria-label=\"Scrollable figure, scroll sideways to see the whole diagram\", it takes focus programmatically, and setting scrollLeft pans it (logs-agent-g3-efmp302-u5-run007/spot-inspect.log section 3). The repair was made in the shared Figure component as run 003 recommended. The analogous defect in the rubric TABLES is not fixed and is finding erq-rubric-360-unreachable."
+    },
+    {
+      "id": "run002-f18",
+      "severity": "advisory",
+      "resolved": true,
+      "message": "Superseded rather than resolved. Run 003 closed this as moot on a measurement that did not look at cell geometry. The underlying defect is live and worse than first recorded, and is carried forward as blocking finding erq-rubric-360-unreachable. Marked resolved here only so that the finding is tracked under one identifier; see that entry for the evidence and the repair."
+    },
+    {
+      "id": "fig-u5-3-caption-reflow",
+      "severity": "advisory",
+      "resolved": true,
+      "message": "RESOLVED, verified independently. The fig-U5-3 caption over-run repaired in commit ded73ec is genuinely fixed: the single long footer line is now two lines at y=434 and y=452 in both the light and dark variants. Verified not by reading the diff but by loading all sixteen unit-05 SVG variants in Chromium and calling getBBox() on every <text> node: no text extends past the viewBox and no text overlaps the wordmark in any variant (logs-agent-g3-efmp302-u5-run007/render-review.log section D). The pre-existing build/ directory was stale (11:53, older than HEAD at 12:00) and was deleted and rebuilt before any render was inspected, so nothing here was measured against the pre-repair figure."
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/validate-content.log"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/check-depth-gate.log"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/check-figures.log"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/check-no-em-dash.log"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/check-no-answer-keys.log"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/check-docs-sync.log"
+    },
+    {
+      "name": "check:concept-graph",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/check-concept-graph.log"
+    },
+    {
+      "name": "check:pipeline-gate",
+      "exit_code": 1,
+      "log_path": "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/check-pipeline-gate.log"
+    },
+    {
+      "name": "build",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/build.log"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/render-review.log"
+    },
+    {
+      "name": "render-review-narrow-and-dark",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/spot-inspect.log"
+    },
+    {
+      "name": "render-review-table-geometry",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/table-geometry.log"
+    },
+    {
+      "name": "render-review-table-clip-sweep",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/table-clip-sweep.log"
+    },
+    {
+      "name": "render-review-scope-probe",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/scope-probe.log"
+    },
+    {
+      "name": "assessment-blind-derivation",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/blind-assessment-derivation.log"
+    }
+  ],
+  "command_notes": {
+    "check:pipeline-gate": "Exit 1, and expected at this point in the cycle. All six findings are tracker-state findings ('G3 en-review' row not done for Units 2, 4, 5 and 6; stale G2/G3 manifests for Units 2 and 3), none of them a Unit 5 content defect. The evidence contract excludes this gate from the set a passing report must cite, because it runs after the evidence-backed tracker transition. Recorded with its real exit code rather than omitted.",
+    "render-review": "The host's own browser inspection, not an npm script: a fresh production build of commit 203d716 served by `docusaurus serve` on 127.0.0.1:4599 and driven by Chromium 149.0.7827.0 through Playwright. Three viewport setups - desktop 1280x900, narrow 360x780 at dsf 2 with touch, and A4 print emulation at 794x1123 with emulateMedia('print') - across all seven unit-05 pages, plus direct loads of all sixteen SVG variants for text-geometry measurement. Driver scripts are committed beside their logs."
+  },
+  "evidence_manifest": {
+    "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/blind-assessment-derivation.log": "3e8c977470f1ab663ac733ca57c3dbfc75aa25e854140e3a154dae57cdbbc193",
+    "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/build.log": "7a59db46208ee034d04dc9df3888a3207223626f890e5407e35d6e8481783dab",
+    "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/check-concept-graph.log": "9752e534367db0431c919ff66b2c717bcbfe7fb35bb5ccebdbd10e22b323b1f7",
+    "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/check-depth-gate.log": "24a5e950cf57d4bd3eb71cafed79f7752f9a46d0094e363043c0c958645f4c42",
+    "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/check-docs-sync.log": "026811cda0df6eefeb75f2ff916daabd04e87387fed99634cb61725f245e4c09",
+    "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/check-figures.log": "24a4da43cc542f94be030de517b54f1bfcff23cb06c13f43116c85013b3d0451",
+    "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/check-no-answer-keys.log": "210aa7518ab1558bafb1b1b856cc6d84e054538ea562dc6a9d7c183b268fb4bb",
+    "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/check-no-em-dash.log": "2bbcebb2baadec84cdadfab72ca1b7c43a88c28f5772587912132346909091c7",
+    "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/check-pipeline-gate.log": "af985ff94f7430070bd149f2dab0413de19cd860b5801471cb18132562134c91",
+    "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/render-review.log": "56e00a2f0151031473f88390126928f8a16dcc76316d7463097952332a9bbb73",
+    "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/render-review.mjs": "d19d86cfc1c2cc1e9fdcaf2aa40bd54722fbed88e23f196c6e3fa8aec43d0e0f",
+    "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/scope-probe.log": "a65e99a97c28c66dbe823169a4e069f557a0190062a81d1c8eca9fc2f41e92b5",
+    "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/scope-probe.mjs": "a379d7c2f500e9fb0487ee887011e12a62d401769548197b3f2ae6ff14fdc7ca",
+    "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/spot-inspect.log": "efa6102afb2abc3e99fee996ad3c90067796b0d693efcae835709d6cf2e28e22",
+    "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/spot-inspect.mjs": "8b2e5fbe035922c1d60e510443014a392c5703dd41c441f56d9c322a4c69e288",
+    "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/table-clip-sweep.log": "d8f28c3baee1e17024962cf4d2b4553ae6d07da093c7796d9b921699e27a4ec2",
+    "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/table-clip-sweep.mjs": "e99927a9104d683942fa4aea237834cbf8a093b44f875c6eabb0e3aef32a49a2",
+    "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/table-geometry.log": "3b3d4340ae062334199d273734629fda8a93e21cff3f39e6acde8139228fa1a7",
+    "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/table-geometry.mjs": "a59fb95195bfad059b9c811cd7dc74262d07ac6fcf00b2db3632d18f82422cbf",
+    "specs/content/efmp-302/reviews/unit-05/logs-agent-g3-efmp302-u5-run007/validate-content.log": "93aad412b744e452fe65a5add72738d225ec7ccfa90d3dd15308b9c0f6f043ba",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/dark-topic-01.png": "2684a52b5613a35f4e448d799d0b756cbba2a04001afaf1cf78f7b429411af5d",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/dark-topic-02.png": "c111ac520f9b017e16091bf00404811e507174f443c80fa38f373ed8aa1796c2",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/dark-topic-03.png": "154c4ffbc63307b298ff000f6080ae41d76426ee5c7d8b48881d2c8983d0af69",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/dark-topic-04.png": "d6221899c2a0cc069599e775ef929fdf93d377628a34dcc2f6589c4ee56eebf3",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/desktop-index.png": "9d3b85bdefbffc26f9d37b8b64f9783d3ef6a2f8f6e25d82920e2e4d0b5c3c3a",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/desktop-topic-01.png": "386c389790daa23fd99ff6a9680691a4177886df77a9530a41a21fd9f2033e6d",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/desktop-topic-02.png": "f79df3ef558d2d2fd14f2addb7b772705be41bf87b81d4d4985a2690e11aa37c",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/desktop-topic-03.png": "3350082769436fff6bcf4d7f8a10a7fcfe2e64e6ec0ac98d58b843a725eeb601",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/desktop-topic-04.png": "846b6215980337de5a9088eb64e8b2d420542e1ed3aa11b46e05b0419eab2d44",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/desktop-unit-assessment.png": "20560d95413c4f11f4a518f4a2c99faf90b8df35fd7ddb00dcec564616f5babe",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/desktop-unit-teacher-notes.png": "c7c994f58f61ff1a6a1c92683c33ee7a738316b3b3b345467b6204a0910ee79e",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/narrow360-erq1-rubric-ELEMENT.png": "d03e5f94a79d673a8371bf6d1684c4985ae51bf758b37f6e53a02b97e65fe6db",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/narrow360-erq1-rubric-VIEWPORT.png": "e37229a3359cec27fb47991c8cdb408e0acdb4f4dbfc3e942606ce44e77d3a40",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/narrow360-index.png": "414fbfd62047df1010716ed0ac263da56d4d41eac1c7bce4d48b8fc880c95f03",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/narrow360-topic-01.png": "b1ef3d70c1e8c62e10edb2ba3354560f3798b5aeed44aaa04a0475caf28b7812",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/narrow360-topic-02.png": "b9def556d908130c4364afb56a68a7052f4258dcbd60d779d110da34dc3d3fc3",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/narrow360-topic-03.png": "f0ece2e9c10c23e32e05803955976074723e04aac95066be774f45d42d732741",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/narrow360-topic-04.png": "e217f874346c4591c1837ed70dcc204fb70b37e8e89f11f54df9ff427d581ce2",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/narrow360-unit-assessment-rubrics.png": "16baf0eb93f0ce5282d3bad538e943e619cda0d5847d00f380de05228f3a5293",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/narrow360-unit-assessment.png": "16baf0eb93f0ce5282d3bad538e943e619cda0d5847d00f380de05228f3a5293",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/narrow360-unit-teacher-notes.png": "636a4c65c0a430c0c8afaef51dbe0f0441c10e3efb015bba83d18574dedf46c0",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/print-a4-index.pdf": "ac1784ca1547118ce656c4c2beaaa351924e5d1a9b1abf8e54e835cedfef0240",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/print-a4-index.png": "7f76b2c8ee017bf8e7e55c475c522560c6dfa1cb1eced7c6b933a2e618d49920",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/print-a4-topic-01.pdf": "48133614bb81ebde35e7be82187482900b9df28e7fa07b6cddae70491b05590c",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/print-a4-topic-01.png": "f8f73e6db51c13ede8e9b2ac5dc8ea87151697c083801b7f9e243ace0143c661",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/print-a4-topic-02.pdf": "e14193ecfadbd747d1ea1cd24200f2bf471766077c4871ad0db3ac2201c8786d",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/print-a4-topic-02.png": "80f762aea14b3d67ecf4cb34ee577d0140908f2978c35e5cf767b77cc08f778c",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/print-a4-topic-03.pdf": "1337307e16b6cd3ff6cc4cca0bd6f9a6f481d5229c034b7ba5cb5ee24a1dbd89",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/print-a4-topic-03.png": "f371f055016c5e3e24665193afdea3ea2ad49f9779b00ab599a5242ceff7a082",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/print-a4-topic-04.pdf": "adc8f65c1f1fdd8e27399096da628255646d21a653e7e975de4467728dbe62ab",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/print-a4-topic-04.png": "869eab22de38f9045d785ba2d57d0cbc1cd27857080a8cdbfd4c19776a09f824",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/print-a4-unit-assessment.pdf": "082efebe4a1496dcb090537e9f3829a3b04f1f299ea487e98b997bffee37204a",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/print-a4-unit-assessment.png": "6bc83fb615bce02395542938729651dac68ef0e474bdd5b37347e0bf062e58ea",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/print-a4-unit-teacher-notes.pdf": "43c0060b60458fe7b0daa7ee58932e2650d885e1e444c096a99892f9b4758100",
+    "specs/content/efmp-302/reviews/unit-05/renders-agent-g3-efmp302-u5-run007/print-a4-unit-teacher-notes.png": "9262382a219bde0e895daeb229dfb378d7c483fb6893fd37016c410d52ff099e"
+  }
+}

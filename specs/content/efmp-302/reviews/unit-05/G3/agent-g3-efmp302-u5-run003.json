@@ -1,0 +1,486 @@
+{
+  "schema_version": 1,
+  "course_code": "EFMP-302",
+  "unit_no": 5,
+  "stage": "G3",
+  "disposition": "revise",
+  "reviewer_id": "agent:g3-reviewer",
+  "author_run_id": "commit:44e92ec",
+  "reviewer_run_id": "agent-g3-efmp302-u5-run003",
+  "model": "claude-opus-5",
+  "started_at": "2026-09-19T00:00:00.000Z",
+  "completed_at": "2026-09-19T07:04:45.000Z",
+  "supersedes": [
+    "specs/content/efmp-302/reviews/unit-05/G3/agent-g3-efmp302-u5-run002.json"
+  ],
+  "rubric_version": "1.0.0 (G3 reference amended for unavailable source text under owner ruling D-2026-0001, 2026-09-19)",
+  "summary": "Third independent G3 English review of EFMP-302 Unit 5, against the frozen bundle at commit 0cb98a9 and the manifest at specs/content/efmp-302/reviews/unit-05/G3-run003b/manifest.json (137 inputs, verified byte-for-byte with inputManifest(): zero missing, zero extra, zero digest mismatches, zero dirty inputs; skill_digest matched). Disposition: REVISE. Five of the nine unresolved run-002 findings are now verified closed, one is superseded by owner ruling D-2026-0001, and one (the rubric-table scroll region) is moot because the rendered geometry changed. Two blocking defects remain, both actionable with precise repairs and neither requiring an owner decision, which is why this run returns revise rather than the escalate of run 002. (1) The approved MCQ blueprint is still violated: topic 5.3 carries one MCQ of ten where content-spec.md requires at least two per topic, and sub-topic U5-10 carries none. Option order and markdown indentation were repaired; no item's topic assignment changed. (2) The occupational-status comparison in topic-02 remains an unsupported factual generalisation, rendered to the learner as a comparative table in fig-U5-4 and assessed by MCQ 7 and RRQ 6, while carrying none of the disclosure the unit applies to its other unsourced claims. One new uncertain finding concerns the hennessy2022 declaration, which under the amended rubric is judged on honesty and completeness rather than on retrieval: it records the retrieval failure but not the level of support, and is in tension with content-spec.md's own record of what was read, while topic-03 attributes three findings-level claims to the source with the word 'establish'. All six mandatory deterministic checks passed at exit 0 and real browser inspection was performed at 1280x900, 360x780 and A4 print media across all seven rendered pages.",
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        "specs/content/efmp-302/content-spec.md '## Unit 5' (line 677 onward): status: approved; SLO:EFMP-302-5-1, key terms, guide-derived topic list and the 12-row '### Sub-topic checklist' (U5-01..U5-12) are all present and internally consistent with coverage/unit-05.md.",
+        "content-spec.md '### Topic list' lines 50-55: the four-topic partition of a three-section guide unit is a recorded G1 decision, 'confirmed by the curriculum owner 2026-09-18', and is disclosed to the learner at docs/semester-1/efmp-302/unit-05/index.mdx lines 74-80 ('Topics 5.1 and 5.2 are both guide section 5.1'). No scope was silently revised.",
+        ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf is bound in the manifest and its unit-5 coverage is reproduced in content-spec.md 'Topics' lines 8-13; the sub-topic checklist declares itself 'an expansion, not a transcription' and names U5-11/U5-12 as authored because guide 5.3 carries no bullets, so the authored rows are disclosed rather than presented as guide text.",
+        "Each of the 12 sub-topic IDs resolves to a real '###' heading under a '## Explanation' in the named topic file, verified by reading all four topic files (see the coverage criterion). No heading-only mapping was found.",
+        "Advisory defect recorded as finding 'run002-f13': content-spec.md line 57 glosses the seam as 'the first three bullets ... the last three', which does not match the partition its own lines 33-40 define. The partition itself is sound; only the gloss misdescribes it, so this does not amount to contradictory authority."
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "fail",
+      "evidence": [
+        "BLOCKING, finding 'run002-f9-status-comparison'. docs/semester-1/efmp-302/unit-05/topic-02.mdx lines 118-122 asserts, of Pakistan specifically, that teaching 'typically has lower pay, a less selective entry route and less day-to-day autonomy' than medicine or law and 'greater security, substantial social respect in some communities' than many other occupations. specs/content/efmp-302/coverage/unit-05.md line 23 grounds U5-08 in demirkasimoglu2010 alone. The bound excerpt specs/content/efmp-302/sources/texts/demirkasimoglu2010.md is a record summary of a paper defining teacher professionalism through three interpretive approaches (ideological control, positive attitude, integrative framework); it supports only topic-02.mdx lines 107-110, which paraphrase its opening faithfully. It says nothing about pay, entry selectivity, autonomy as a measured marker, or recognition. No other key is mapped to U5-08.",
+        "The same comparison is rendered to the learner as established fact: the <Figure id=\"fig-U5-4\"> carrier at topic-02.mdx line 112 resolves to /img/figures/efmp-302/unit-05/fig-U5-4.svg, whose manifest row (specs/content/efmp-302/figures/unit-05.md line 17) describes 'A table comparing occupations on the markers of professional status ... Rows include teaching alongside medicine, law, engineering and nursing.' Verified rendered at 640px wide on the 1280px viewport and reachable at 360px (render-probe-run003.json, desktop-1280 and narrow-360 /topic-02).",
+        "The claim is then assessed. unit-assessment.mdx MCQ 7 (lines 93-97, key 'a' at line 189, 'teaching scores differently on pay, entry selectivity, autonomy and recognition') and RRQ 6 (line 135, mark scheme line 217) both require the learner to reproduce it.",
+        "The omission is determinate rather than ambiguous, because the unit applies the disclosure elsewhere and claims to apply it everywhere: topic-01.mdx lines 152-154 ('This unit cites no research for those practices, because none was verified while it was written ... offered as reasoned practice ... not as findings'), topic-01.mdx lines 79-81 and 90-94 (maslach2016 and skaalvik2020 scope), topic-01.mdx lines 178-180 (naparan2021 scope), index.mdx lines 32-39 ('Where no research supports a claim about Pakistani conditions, the unit says that too'), and specs/content/efmp-302/sources/unit-05.md lines 15-19 ('the scope of each is recorded below and restated in the prose wherever the source is used'). Repair: either source the comparison, or add at topic-02.mdx lines 118-122 the same one-sentence disclosure used at topic-01.mdx lines 152-154, and mark fig-U5-4 accordingly.",
+        "UNCERTAIN, finding 'new-hennessy2022-declaration'. Judged under the amended rubric on declaration honesty and completeness, not on retrieval. specs/content/efmp-302/sources/unit-05.md line 41 declares hennessy2022 under '## Unverifiable sources' with the attempt (ScienceDirect HTTP 403 to this host; EdTech Hub companion record 'serves metadata only'), the date ('Could not be retrieved on 2026-09-19') and the authorisation ('Owner ruling 2026-09-19 (D-2026-0001)'). It does not state the level of support, which is the one thing little2001's row at line 40 does state ('rests on title and bibliographic level only'). topic-03.mdx lines 49-58 then writes 'What it does establish is that teacher development opportunities in such countries are limited and often not informed by research evidence, that technology offers real potential to extend both formal programmes and informal peer learning, and that outcomes so far are mixed' - three findings-level claims from a source declared unretrievable, with no bound excerpt in specs/content/efmp-302/sources/texts/ (13 excerpts present; hennessy2022 and little2001 absent).",
+        "The tension is internal to the bound bundle: content-spec.md line 93 records 'Abstract read 2026-09-15' for hennessy2022 and summarises it as 'what technology does and does not deliver for teacher development in low- and middle-income countries', which would support the three claims at abstract level, while the unit's own declaration says metadata only. A reviewer cannot determine from the declaration whether 'What it does establish' is within what was actually read. Repair: state the support level in the '## Unverifiable sources' entry as little2001's entry does, reconciling it with content-spec.md line 93. Recorded as uncertain rather than blocking because the likeliest reading is an incomplete declaration of an abstract-level basis, not an overstated claim; it is not resolved on the evidence bound to this attempt.",
+        "PASSING under the amended rubric, finding 'run002-f8' superseded for little2001. sources/unit-05.md line 40 declares the attempts (Crossref record exact; OpenAlex no abstract; Semantic Scholar abstract elided, access CLOSED), the date and the owner authorisation. topic-01.mdx lines 163-165 keeps the claim at exactly that level - 'Little (2001) argued that multigrade teaching deserved an international research and policy agenda of its own', which is the agenda-setting claim the title and record support - and marks the consequence as the unit's own inference ('which tells you something about its status'). Nothing is stated beyond the declaration. Under the G3 reference 'Unavailable source text' paragraph and D-2026-0001 this no longer blocks, and the run-002 escalation on this key is closed.",
+        "RESOLVED, finding 'run002-f2'. coverage/unit-05.md line 22 now grounds U5-07 in 'no-external-source', and sources/unit-05.md line 53 lists topic-02.mdx U5-07 among the no-external-source rows. The stakeholder section at topic-02.mdx lines 76-103 carries no citation, which is now correct rather than a mis-grounding.",
+        "RESOLVED, finding 'run002-f3'. sources/unit-05.md line 52 now reads 'topic-02.mdx U5-06 (the accountability turn as part of a long historical movement in how societies relate to teachers; the four ages of professionalism)', agreeing with coverage/unit-05.md line 21 and with the sole Hargreaves citation in prose at topic-02.mdx lines 67-69, which sits in the U5-06 section. The bound excerpt sources/texts/hargreaves2000.md (four historical phases of professionalism) supports exactly that use.",
+        "RESOLVED, finding 'run002-f4'. topic-02.mdx '## Further reading' lines 228-237 now carries the Demirkasimoglu (2010) entry alongside Isore (2009) and Hargreaves (2000), so the in-text citation at line 107 resolves for a learner on the rendered page. Verified in the rendered DOM (render-probe-run003.json, desktop-1280 /topic-02 headings and links)."
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "All 12 required rows of specs/content/efmp-302/coverage/unit-05.md resolve to a real '###' heading under '## Explanation' carrying a taught passage, verified by reading all four topic files in full rather than by matching headings: topic-01.mdx 'Workload, and what actually consumes a teacher's week' (U5-01, lines 41-63), 'Stress and burnout, and how the two differ' (U5-02, 65-108), 'Lack of support and resources' (U5-03, 110-131), 'The multilingual classroom' (U5-04, 133-154), 'The multi-grade classroom' (U5-05, 156-180).",
+        "topic-02.mdx 'The increased focus on teacher accountability' (U5-06, lines 39-74), 'High expectations from many stakeholders at once' (U5-07, 76-103), 'Socio-economic status and public recognition' (U5-08, 105-145).",
+        "topic-03.mdx 'Pressure to integrate technology' (U5-09, lines 38-82), 'Responsible use of digital platforms and resources' (U5-10, 84-118).",
+        "topic-04.mdx 'Separating what is within a teacher's control from what is not' (U5-11, lines 42-78), 'Growth and development as a response rather than endurance' (U5-12, 80-120).",
+        "Each of the six index.mdx unit learning outcomes (lines 45-56) is traceable to a taught passage and to at least one assessment item: outcome 1 -> topic-01 U5-01/U5-02 -> MCQ 1-3, RRQ 1-2; outcome 2 -> topic-01 U5-04/U5-05 -> MCQ 4, ERQ 5; outcome 3 -> topic-02 U5-06/U5-07 -> MCQ 5-6, RRQ 4-5, ERQ 2; outcome 4 -> topic-02 U5-08 -> MCQ 7, RRQ 6; outcome 5 -> topic-03 U5-09/U5-10 -> MCQ 8, RRQ 7-8, ERQ 3; outcome 6 -> topic-04 U5-11/U5-12 -> MCQ 9-10, RRQ 9-10, ERQ 4. The per-topic distribution of MCQs nonetheless violates the blueprint; that defect is recorded under the assessment criterion, not here.",
+        "npm run check:depth-gate exit 0 (specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/logs/check-depth-gate-run003.log) confirms the deterministic half of the mapping; it does not substitute for the reading above."
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "fail",
+      "evidence": [
+        "BLOCKING, finding 'run002-f5-mcq-blueprint'. specs/content/efmp-302/content-spec.md line 116 ('## Unit 5' > '**Unit-end assessment blueprint**') requires 'MCQs (10): Remember to Apply; **at least 2 per topic** across 5.1 to 5.4'. Mapping each item of unit-assessment.mdx '### Multiple-choice questions (MCQs)' to the topic that teaches it: items 1 (invisible workload, topic-01 lines 43-47), 2 (cynicism looks like competence, topic-01 96-100), 3 (burnout vs stress, topic-01 70-77) and 4 (home language, topic-01 144-147) are all topic 5.1; items 5 (topic-02 50-54), 6 (topic-02 78-80) and 7 (topic-02 118) are topic 5.2; item 8 alone (topic-03 68-70) is topic 5.3; items 9 (topic-04 60-64) and 10 (topic-04 73-78) are topic 5.4. Topic 5.3 therefore carries ONE MCQ, and sub-topic U5-10 (responsible use of digital platforms) carries none. Corroborated independently by specs/content/efmp-302/concepts/unit-05.md line 32, where CON:EFMP-302-5-15 derives only RRQ-08 and ERQ-03 and no MCQ. Unchanged in substance from run 002. Repair: convert one of the four topic 5.1 items into a topic 5.3 item on U5-10 (topic-03.mdx lines 96-118 supplies ready material, e.g. the three quiet problems of a class messaging group).",
+        "Answer key verified item by item against an independent prose locator, all ten agreeing with the published key at unit-assessment.mdx lines 181-193: 1d (topic-01 43-47), 2c (topic-01 96-100), 3a (topic-01 70-77), 4b (topic-01 144-147), 5d (topic-02 50-54 and 71-74), 6b (topic-02 78-80), 7a (topic-02 118 and the fig-U5-4 'markers do not move together' note), 8c (topic-03 68-70), 9d (topic-04 60-64), 10a (topic-04 73-78). No conflicting key or ambiguous distractor was found. LIMITATION recorded honestly: in this run unit-assessment.mdx was read in a single pass, so the key was visible before these derivations were written; each is anchored to a prose locator that is independent of the key, and run 002 records a blind pre-key derivation reaching the same ten answers.",
+        "RESOLVED, finding 'run002-f7-erq5-conflict'. The ERQ 5 Diagnosis criterion at unit-assessment.mdx line 281 now makes the Strong band 'Distinguishes the two readings of the group-work remark - burnout cynicism (Topic 5.1) or an accurate third-region judgement being used to excuse first-region inaction (Topic 5.4) - and argues from the text which the evidence supports', and unit-teacher-notes.mdx lines 109-119 hardens it in the same direction: 'Do not award the Strong band for naming cynicism alone, and do not withhold it from a candidate who argues for the Topic 5.4 reading.' The conflict run 002 identified - that a candidate applying Topic 5.4 to the ERQ 5 stem (lines 172-173) produced a text-supported diagnosis the rubric would not credit - is genuinely dissolved, because the criterion no longer privileges either reading and both are taught (topic-01.mdx 96-100 for cynicism; topic-04.mdx 29-31 and 60-64 for Mr Bilal's region misuse). Judged afresh rather than accepted from the commit message. Verified present in the rendered page (print-a4-unit-assessment-erq5-run003.png; the probe confirms the string 'Distinguishes the two readings of the group-work remark' is in the rendered text).",
+        "VERIFIED REPAIR, MCQ 10 option nesting. In the built DOM at build/ served on port 3105, the MCQ list is a single <ol> of exactly 10 <li>, every one of which contains a nested option list, totalling 40 options at 4 per item including item 10 (render-review-run003.log, '--- MCQ list shape ---' line, and the focused probe 'MCQ items: 10 total options: 40'). The markdown indentation defect is fixed on the page, not only in source.",
+        "STILL OPEN, advisory finding 'run002-f10'. unit-assessment.mdx line 9 declares 'MCQs at Remember and Understand with two at Apply' while three items carry the (Apply) tag: 4 (line 75), 8 (line 99), 9 (line 105). Classified by the thinking actually required rather than by the label, MCQ 4 and MCQ 8 need only recognition of a sentence stated verbatim in the prose (topic-01 lines 144-147 and topic-03 lines 68-70, 'This is the question nobody asks and it is the most important', which MCQ 8 asks straight back), so only MCQ 9 genuinely applies a model to an unseen case. Both the count and the demand claim are wrong.",
+        "STILL OPEN, advisory finding 'run002-f11'. unit-assessment.mdx line 229: RRQ 9, tagged (Remember) at line 144 and asking only for the three region names with two examples each, carries 9 marks, the largest allocation in the bank, while the three (Analyze) items RRQ 3, RRQ 6 and RRQ 10 carry 5, 5 and 4 marks (lines 206, 217, 231). The weighting inverts cognitive demand.",
+        "The five ERQ rubrics (lines 240-283) distinguish performance across Limited/Adequate/Strong on every criterion, and the cap at line 237-238 ('A response not reaching \"Adequate\" on the analysis, evaluation or creation criterion cannot exceed 10 overall') does support the higher-order work. ERQ 5's stem does not signpost the two-reading discrimination its Strong band requires, but the rubric is published on the same learner-facing page, so this is not a hidden criterion.",
+        "npm run check:no-answer-keys exit 0 (logs/check-no-answer-keys-run003.log)."
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "pass",
+      "evidence": [
+        "Real browser inspection, not a build: headless Chromium via the repository's playwright 1.61.1 against http://localhost:3105 ('npm run serve -- --port 3105' over the prebuilt build/ at commit 0cb98a9), all seven rendered pages at three setups - 1280x900 screen, 360x780 screen, and 794x1123 with CSS media emulated to 'print'. Lazy images were forced to load by scrolling each page before measuring. Command record 'render-review', log logs/render-review-run003.log, raw measurements render/render-probe-run003.json, 20 PNG captures under render/.",
+        "All eight figures render as committed SVGs with non-empty alt text on every page and setup: zero images missing or empty alt across 21 page-setup combinations (render-probe-run003.json, 'noAlt=0' on every line of the log summary). Measured widths 640-703px at 1280px and 640-760px under A4 print media, with zero images whose right edge exceeds the print page width and zero horizontal document scroll anywhere (scrollW == clientW on all 21 combinations).",
+        "The two entries per figure with width 0 are the dark-theme variants: e.g. on topic-04 the pair is fig-U5-7.svg (display:inline, visible, 880px intrinsic) and fig-U5-7.dark.svg (display:none). That is the committed two-variant [data-theme] mechanism, not a broken image.",
+        "Narrow view, 360px: each <figure class=\"figure figure--diagram\"> is its own horizontal scroll container (computed overflow-x: auto, clientWidth 328, scrollWidth 880-1030), so the full figure is reachable by touch and pointer and the document itself never scrolls horizontally. Nothing is clipped away. Recorded as advisory finding 'new-figure-scroller-unlabelled' because those containers carry no tabindex, role or aria-label.",
+        "A learner can recover each figure's instructional meaning without the image: every <Figure> alt text is a full sentence describing the content (verified in the rendered DOM), and each SVG carries role=\"img\" with <title> and <desc> - e.g. static/img/figures/efmp-302/unit-05/fig-U5-7.svg, title 'Three regions: control, influence, and neither'.",
+        "MOOT, run-002 advisory finding 'run002-f18'. At 360px the five ERQ rubric tables on unit-assessment no longer form a focusable scroll container: measured table width 328px inside a 360px viewport, parent overflow-x 'visible', not scrollable, and the last header cell 'Strong (4-5)' is present and on screen in all five. The unlabelled-scroll-region concern run 002 raised for these tables does not arise on this render.",
+        "Print/A4: under emulated print media at 794x1123 no table, ordered list or unordered list on unit-assessment overflows the page width, and both the answer key and the amended ERQ 5 Diagnosis criterion are present in the printed text. Answers and rubrics are not clipped (render/print-a4-unit-assessment-run003.png, render/print-a4-unit-assessment-erq5-run003.png).",
+        "Heading structure inspected in the rendered DOM on all seven pages: a single h1 per page followed by h2/h3 in order, with no level skipped (render-probe-run003.json 'headings').",
+        "STILL OPEN, advisory finding 'run002-f15'. Links whose accessible text is a bare URL, counted in the rendered DOM: topic-01 4, topic-02 3, topic-03 1, topic-04 2. topic-02 rose from 2 to 3 because the repair that resolved the dangling Demirkasimoglu citation added another bare-DOI Further reading link.",
+        "npm run check:figures exit 0 (logs/check-figures-run003.log). A passing figure gate is recorded as deterministic evidence only; the visual findings above rest on the inspected renders."
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "Read end to end as an HSC/intermediate graduate with no specialist background: docs/semester-1/efmp-302/unit-05/index.mdx and topic-01.mdx through topic-04.mdx. Every technical term is defined at first use in ordinary language before it is used to do work - burnout at topic-01.mdx lines 67-78 (with the three dimensions named and glossed), multi-grade classroom at topic-01.mdx lines 158-160, occupational status at topic-02.mdx lines 114-116 (a <Glossary> carrier), the three regions at topic-04.mdx lines 47-58. No term is assumed.",
+        "Sentence and paragraph length are consistently within intermediate reach; the abstract material is always anchored to a concrete Pakistani instance before it is generalised - Miss Shahnaz's Tuesday (topic-01.mdx lines 26-38), Mr Rafiq's four demands (topic-02.mdx 26-35), Ms Sundas's forty tablets (topic-03.mdx 26-34), Mr Bilal and Miss Ayesha (topic-04.mdx 26-38).",
+        "Prior-unit dependencies are named where they are used rather than assumed silently (topic-02.mdx lines 42 and 100-101; topic-03.mdx line 69; topic-04.mdx lines 53 and 100), and index.mdx lines 58-61 states the prerequisite explicitly.",
+        "Research is reported with its scope in plain words a trainee can act on rather than in methodological jargon: topic-01.mdx lines 79-81 and 90-94, topic-01.mdx lines 178-180, topic-03.mdx lines 49-52.",
+        "npm run check:no-em-dash exit 0 (logs/check-no-em-dash-run003.log); npm run validate:content exit 0 (logs/validate-content-run003.log). Every page carries a description and the front-matter blooms_summary fields are present; the one blooms_summary accuracy defect is recorded under assessment, not here."
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": [
+        "The nine-part cycle is complete and genuine in all four topic files, not merely headed: situation, explanation, activity, check-your-understanding, summary, self-assessment checklist, practicum transfer task, summative task with a mini-rubric, further reading. Progression from classroom situation to explanation is real in each - e.g. topic-04.mdx opens on two teachers leaving the same meeting (26-38) and the explanation at 60-64 returns to Mr Bilal by name to diagnose him.",
+        "Misconceptions are named and attacked rather than listed: 'burnout is just being very tired' (topic-01.mdx 67-68 and 96-100), 'the home language is the problem' (topic-01.mdx 145-154), 'integrating technology means using it in every lesson' (topic-03.mdx 79-82), 'a teacher's status is fixed' (topic-02.mdx 135-145), 'the answer to difficult conditions is resilience' (topic-04.mdx 73-78). All five match the content-spec 'Common misconceptions' list, and the teacher notes give each a handling strategy (unit-teacher-notes.mdx 45-65).",
+        "Activities are feasible in the stated Pakistani/Sindhi context, with group size, materials and timing: topic-02.mdx 147-159 (groups of four, 30 minutes, no materials beyond the case), topic-03.mdx 101-111 (pairs, four supplied cases), topic-04.mdx 122-137 (ten minutes individual then pairs, 30 minutes, a single challenge-attack question). None requires equipment a government school lacks. The teacher notes anticipate the two places the context bites - unit-teacher-notes.mdx 92-99 gives a fallback when parent access is hard and when a practicum school has no technology at all, and 89-90 protects the host teacher from being audited.",
+        "Conceptual depth rather than word count: the want-versus-measure distinction (topic-02.mdx 78-97), the demands-and-resources mechanism that yields two levers rather than one (topic-01.mdx 100-108 and topic-04.mdx 84-88), and the three-region analysis whose payoff is the discrimination between an accurate judgement and an excuse (topic-04.mdx 60-64) are each carried through to an activity and an assessment item.",
+        "The unit refuses the two easy moves a unit on hard conditions invites: topic-01.mdx 128-131 declines to claim a resourceful teacher can substitute for missing resources, and topic-04.mdx 66-71 refuses to let the control distinction become an argument for quiet endurance. unit-teacher-notes.mdx 20-36 makes both an explicit teaching instruction.",
+        "npm run check:docs-sync exit 0 (logs/check-docs-sync-run003.log).",
+        "Advisory defects recorded and not affecting this status: 'run002-f1b' (the teacher-notes gloss on where collective pressure belongs is still not reconciled with topic-04's placement of class size) and 'run002-f19' (fig-U5-7 is the only place a substantive claim is made). Both sit in ancillary or figure text and no learner-facing item depends on either."
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "run002-f5-mcq-blueprint",
+      "severity": "blocking",
+      "resolved": false,
+      "message": "STILL OPEN, unchanged in substance from run 002 and run 001. The approved MCQ blueprint is violated. specs/content/efmp-302/content-spec.md line 116 requires 'at least 2 per topic' across 5.1 to 5.4, and unit-assessment.mdx '### Multiple-choice questions (MCQs)' gives topic 5.1 four items (1-4), topic 5.2 three (5-7), topic 5.3 ONE (item 8, lines 99-103), topic 5.4 two (9-10). Sub-topic U5-10, responsible use of digital platforms and resources, carries no MCQ at all, corroborated by specs/content/efmp-302/concepts/unit-05.md line 32 where CON:EFMP-302-5-15 derives only RRQ-08 and ERQ-03. This run verified that the repair between run 002 and run 003 changed markdown indentation and option order only: the built DOM now shows ten items with forty nested options, but no item's topic assignment moved. Repair: convert one topic 5.1 item into a topic 5.3 item on U5-10; topic-03.mdx lines 96-118 (the three quiet problems of a class messaging group, or pupil images) supplies material at the right level."
+    },
+    {
+      "id": "run002-f9-status-comparison",
+      "severity": "blocking",
+      "resolved": false,
+      "message": "STILL OPEN, and raised from run 002's 'uncertain' to blocking. topic-02.mdx lines 118-122 makes comparative empirical claims about Pakistan - teaching has 'lower pay, a less selective entry route and less day-to-day autonomy' than medicine or law, and 'greater security, substantial social respect in some communities' than many other occupations - with no source and none of the disclosure the unit applies to its other unsourced claims. coverage/unit-05.md line 23 grounds U5-08 in demirkasimoglu2010, whose bound excerpt (sources/texts/demirkasimoglu2010.md) is a record summary of a paper on how teacher professionalism is DEFINED and supports only the framing sentence at topic-02.mdx lines 107-110. The comparison is additionally rendered to the learner as a five-occupation table (fig-U5-4, carrier at topic-02.mdx line 112, verified rendered) and assessed by MCQ 7 and RRQ 6. Severity raised because this is not an open question: the unit states a disclosure convention (index.mdx 32-39, sources/unit-05.md 15-19) and applies it at topic-01.mdx 152-154 for exactly this kind of claim, so the omission is a determinate defect with a precise repair - source the comparison, or add the one-sentence disclosure at topic-02.mdx 118-122 and mark fig-U5-4 accordingly."
+    },
+    {
+      "id": "new-hennessy2022-declaration",
+      "severity": "uncertain",
+      "resolved": false,
+      "message": "NEW this run, and specific to the amended rubric. The hennessy2022 entry under '## Unverifiable sources' (sources/unit-05.md line 41) is honest about the retrieval failure, the date and the owner authorisation, but is incomplete in the one way the amended G3 reference names: it does not state the level of support, which little2001's entry at line 40 does state ('rests on title and bibliographic level only'). topic-03.mdx lines 49-58 meanwhile writes 'What it does establish is ...' and attributes three findings-level claims to the source (development opportunities limited and often not research-informed; real potential to extend formal programmes and informal peer learning; outcomes so far mixed), with no bound excerpt in sources/texts/. The bundle is internally inconsistent about what was read: content-spec.md line 93 records 'Abstract read 2026-09-15' for this key while the unit's declaration says the companion record 'serves metadata only'. A reviewer cannot determine from the declaration whether 'establish' is within the evidence actually held. Recorded as uncertain rather than blocking because the likeliest explanation is an under-stated abstract-level basis rather than an overstated claim. Repair: state the support level in the declaration and reconcile it with content-spec.md line 93; if it is abstract-level, say so and the claims stand."
+    },
+    {
+      "id": "run002-f8",
+      "severity": "uncertain",
+      "resolved": true,
+      "message": "SUPERSEDED for little2001 by owner ruling D-2026-0001 (specs/decisions/log.md, status confirmed, decided by the curriculum owner 2026-09-19) and the matching amendment to the G3 reference. Run 002 escalated because two required coverage rows rested on sources whose text could not be obtained. sources/unit-05.md line 40 now declares little2001 with the retrieval attempts (Crossref exact; OpenAlex no abstract; Semantic Scholar elided, access CLOSED), the date and the authorisation, and topic-01.mdx lines 163-165 keeps the claim at exactly the title/record level the declaration supports while marking the consequence as the unit's own inference. Judged on whether the declaration is honest and complete, not on whether the text was obtained: for little2001 it is both, and this no longer blocks. hennessy2022, the second key in that run-002 finding, is not closed on the same basis and continues as finding 'new-hennessy2022-declaration'."
+    },
+    {
+      "id": "run002-f2",
+      "severity": "blocking",
+      "resolved": true,
+      "message": "RESOLVED, verified independently against the bound excerpt rather than from the commit message. Run 002 found U5-07 grounded in demirkasimoglu2010, a review of how teacher professionalism is defined, which says nothing about stakeholder demand. coverage/unit-05.md line 22 now reads 'no-external-source' for U5-07, and sources/unit-05.md line 53 lists topic-02.mdx U5-07 among the no-external-source rows. The stakeholder section at topic-02.mdx lines 76-103 carries no citation, which is now the correct state. demirkasimoglu2010 is narrowed to U5-08 (coverage line 23), where topic-02.mdx lines 107-110 is a faithful paraphrase of the bound record summary's opening on the profession/semi-profession debate."
+    },
+    {
+      "id": "run002-f3",
+      "severity": "blocking",
+      "resolved": true,
+      "message": "RESOLVED. The contradiction between governance files is gone: sources/unit-05.md line 52 now records hargreaves2000 as supporting 'topic-02.mdx U5-06 (the accountability turn as part of a long historical movement in how societies relate to teachers; the four ages of professionalism)', which agrees with coverage/unit-05.md line 21 and with the row's own Supports gloss. The single Hargreaves citation in prose (topic-02.mdx lines 67-69) sits in the U5-06 section, and the bound excerpt sources/texts/hargreaves2000.md - a four-phase historical taxonomy - supports that use and no other. The excerpt's own scope note, which flagged the mis-grounding, is now satisfied."
+    },
+    {
+      "id": "run002-f4",
+      "severity": "blocking",
+      "resolved": true,
+      "message": "RESOLVED. topic-02.mdx '## Further reading' (lines 228-237) now lists Demirkasimoglu, N. (2010) alongside Isore (2009) and Hargreaves (2000), so the in-text citation at line 107 resolves to a work for a learner on the rendered page, and the assertion at sources/unit-05.md lines 4-5 that every key is cited in prose and in a per-topic Further reading section is no longer falsified. Verified in the rendered DOM. One side effect is recorded under finding 'run002-f15': the new entry adds a third bare-DOI link text on topic-02."
+    },
+    {
+      "id": "run002-f7-erq5-conflict",
+      "severity": "blocking",
+      "resolved": true,
+      "message": "RESOLVED, and judged afresh rather than accepted on report. Run 002 found that ERQ 5's Strong band required the cynicism reading of the group-work remark while topic-04.mdx diagnoses a near-identical remark by Mr Bilal as region misuse rather than cynicism, so a candidate who applied Topic 5.4 as index.mdx line 84 instructs produced a text-supported answer the rubric would not award. unit-assessment.mdx line 281 now makes the Strong band 'Distinguishes the two readings of the group-work remark - burnout cynicism (Topic 5.1) or an accurate third-region judgement being used to excuse first-region inaction (Topic 5.4) - and argues from the text which the evidence supports', and unit-teacher-notes.mdx lines 115-119 forbids awarding Strong for naming cynicism alone and forbids withholding it from the Topic 5.4 reading. Neither reading is privileged, both are taught in the unit, and the criterion now assesses the discrimination itself. This is a better resolution than either repair run 002 proposed, and the conflict of criteria is gone. Verified present in the rendered and printed page."
+    },
+    {
+      "id": "run002-f18",
+      "severity": "advisory",
+      "resolved": true,
+      "message": "MOOT on this render. Run 002 recorded the unit-assessment rubric tables as unlabelled focusable scroll containers at 360px (computed overflow-x auto, tabindex 0, no role or aria-label). Measured again at 360x780 on the same built site, all five ERQ rubric tables now fit: table width 328px inside a 360px viewport, parent overflow-x 'visible', not scrollable, and the last header cell 'Strong (4-5)' present and on screen in every one. Nothing is off-screen and no unlabelled scroll region arises from these tables. The equivalent concern now applies to the figure carriers instead and is recorded as 'new-figure-scroller-unlabelled'."
+    },
+    {
+      "id": "new-figure-scroller-unlabelled",
+      "severity": "advisory",
+      "resolved": false,
+      "message": "NEW this run, minor, and not specific to this unit. At 360px every figure carrier is its own horizontal scroll container: <figure class=\"figure figure--diagram\"> computes overflow-x auto with clientWidth 328 against scrollWidth 880 to 1030. The full figure is therefore reachable by touch and pointer and the document never scrolls horizontally, which is why the accessibility criterion passes. The container carries no tabindex, no role=\"region\" and no aria-label, so a keyboard-only user at that width has no reliable way to pan the figure and a screen-reader user reaching it gets no announcement of what they have landed in. Mitigated in practice because each figure's alt text and each SVG's <title>/<desc> carry the instructional meaning in full. Worth addressing in the shared Figure component rather than in this unit."
+    },
+    {
+      "id": "run002-f1b",
+      "severity": "advisory",
+      "resolved": false,
+      "message": "STILL OPEN, unchanged. unit-teacher-notes.mdx line 78 still reads 'Unit 1's professional associations and Topic 5.4's second region, what you can influence, are where collective pressure belongs', while topic-04.mdx lines 56-58 place class size, pay scales and the examination system in the THIRD region and lines 68-70 aim collective pressure at exactly those third-region matters ('Class sizes of sixty-two are an institutional failure. Teachers collectively ... are exactly who should be pressing on that'). The note then offers 'what to endure, what to change and what to organise about' as a third partition again. A coherent reading exists - organising is how a third-region matter becomes influenceable - and fig-U5-7's footer states it, but no prose anywhere does, so the reconciliation run 001 asked for is still not performed. Advisory: the defect is confined to a teacher-facing ancillary file and no learner-facing item depends on it."
+    },
+    {
+      "id": "run002-f10",
+      "severity": "advisory",
+      "resolved": false,
+      "message": "STILL OPEN, unchanged. unit-assessment.mdx line 9 declares 'MCQs at Remember and Understand with two at Apply' while three items carry the (Apply) tag: 4 (line 75), 8 (line 99), 9 (line 105). Classified on the thinking actually required rather than the label, MCQ 4 and MCQ 8 need only recognition of a sentence stated verbatim in the prose (topic-01.mdx 144-147; topic-03.mdx 68-70), so only MCQ 9 genuinely applies a model to an unseen case. Both the count and the demand claim in blooms_summary are wrong."
+    },
+    {
+      "id": "run002-f11",
+      "severity": "advisory",
+      "resolved": false,
+      "message": "STILL OPEN, unchanged. unit-assessment.mdx line 229 gives RRQ 9 - tagged (Remember) at line 144, asking only for the three region names with two examples each - 9 marks, the largest allocation in the bank, while the three (Analyze) items RRQ 3, RRQ 6 and RRQ 10 carry 5, 5 and 4 marks (lines 206, 217, 231). The mark weighting inverts cognitive demand."
+    },
+    {
+      "id": "run002-f12",
+      "severity": "advisory",
+      "resolved": false,
+      "message": "PARTIALLY RESOLVED, residue still open. The worse of the two errors is fixed: specs/content/efmp-302/figures/unit-05.md lines 8-9 now read 'Every row is `Status: placed` with a committed `Src`', which matches all eight rows. The original miscount survives at line 6, which still reads 'the unit carries three `flowchart`s (`fig-U5-2`, `fig-U5-8`) and one `concept-map` (`fig-U5-3`)' while naming two flowcharts; the table has exactly two flowchart rows (fig-U5-2 line 15, fig-U5-8 line 21). Repair: change 'three' to 'two'."
+    },
+    {
+      "id": "run002-f13",
+      "severity": "advisory",
+      "resolved": false,
+      "message": "STILL OPEN, unchanged. specs/content/efmp-302/content-spec.md line 57 glosses the confirmed G1 seam as 'the first three bullets describe conditions a teacher is placed in, the last three describe demands other parties make of them'. The guide bullet order recorded at lines 8-13 of the same file is workload/stress/burnout; multilingual/multi-grade; increased accountability; lack of support and resources; stakeholder expectations; status and recognition, and the authoritative sub-topic table at lines 33-40 assigns bullets 1, 2 and 4 to topic 5.1 and bullets 3, 5 and 6 to topic 5.2. The partition is sound and matches the owner-confirmed decision; only the gloss misdescribes it, and it should be corrected so a later reviewer does not read it as a different partition."
+    },
+    {
+      "id": "run002-f14",
+      "severity": "advisory",
+      "resolved": false,
+      "message": "STILL OPEN, unchanged. specs/content/efmp-302/concepts/unit-05.md lines 10-14 state that only 'Stress' and 'Multi-grade Classroom' are drawn from terminology.csv and that the remaining fourteen Urdu labels are authored and carry a G5 flag, and lines 37-40 ask that approved labels be promoted into terminology.csv 'before Unit 6 is translated, since `Burnout` will recur there'. specs/content/terminology.csv line 118 already banks 'Teacher Burnout,پیشہ ورانہ تھکن,EFMP-302 Unit 5' - the identical Urdu form used for CON:EFMP-302-5-4 at line 21 of the concept graph. At least one of the fourteen is already banked, so the note misdirects a G5 reviewer about how much is unbanked."
+    },
+    {
+      "id": "run002-f15",
+      "severity": "advisory",
+      "resolved": false,
+      "message": "STILL OPEN, and marginally worse. Links whose accessible text is a bare URL, counted in the rendered DOM rather than in source: topic-01 4, topic-02 3, topic-03 1, topic-04 2. topic-02 rose from 2 to 3 because the repair that resolved the dangling Demirkasimoglu citation added another bare-DOI Further reading entry. Conventional in a bibliography, but not descriptive link text; consider linking the article title instead."
+    },
+    {
+      "id": "run002-f19",
+      "severity": "advisory",
+      "resolved": false,
+      "message": "STILL OPEN, unchanged. static/img/figures/efmp-302/unit-05/fig-U5-7.svg carries, as its footer line, 'The regions are not fixed. A teacher who builds standing over a term moves items from the third region into the second.' No prose in topic-04.mdx states this, and it sits in mild tension with line 58, 'no amount of individual effort moves them'. The claim is defensible and is the reading that would reconcile finding 'run002-f1b', but a figure should not be the only place a substantive claim is made. Either state it in the prose or drop it from the figure."
+    },
+    {
+      "id": "run002-f0",
+      "severity": "advisory",
+      "resolved": true,
+      "message": "Run-002 findings recorded there as already resolved were re-checked and remain resolved at this commit: the three regions are stated consistently across topic-04.mdx, unit-assessment.mdx, the fig-U5-7 alt text and figures/unit-05.md (run-001 finding 1, first clause); the MCQ key positions are d,c,a,b,d,b,a,c,d,a with no position carrying more than three of ten (run-001 finding 4); all eight figures are placed and render (run-001 finding 6); and the question of whether G3 may close on a prompt-only figure set is moot because the figures are placed (run-001 finding 8)."
+    },
+    {
+      "id": "assessment-derivation-limitation",
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Recorded as an honest limitation of this attempt rather than a content defect. The G3 reference asks that assessment items be solved independently before the supplied answers are read. In this run unit-assessment.mdx was read in a single pass for budget reasons, so the published key was visible before this reviewer's derivations were written down. Each of the ten derivations recorded under the assessment criterion is nevertheless anchored to a prose locator independent of the key, all ten agree with it, and run 002 records a genuinely blind pre-key derivation reaching the same ten answers. No discrepancy was found by either route."
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/logs/validate-content-run003.log"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/logs/check-depth-gate-run003.log"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/logs/check-figures-run003.log"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/logs/check-no-em-dash-run003.log"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/logs/check-no-answer-keys-run003.log"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/logs/check-docs-sync-run003.log"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/logs/render-review-run003.log"
+    }
+  ],
+  "render_inspection": {
+    "host": "http://localhost:3105 (npm run serve -- --port 3105, prebuilt build/ directory, no rebuild)",
+    "input_identity": "commit 0cb98a9bd5f32a7b6661c6c00aad60210a2d23f2, working tree clean of tracked changes before and after the attempt",
+    "browser": "headless Chromium driven by the repository devDependency playwright 1.61.1 (node_modules/playwright), ~/.cache/ms-playwright/chromium-1243",
+    "setups": [
+      "1280x900, media screen",
+      "360x780, media screen (narrow view)",
+      "794x1123, CSS media emulated to print (A4)"
+    ],
+    "pages": [
+      "/semester-1/efmp-302/unit-05/",
+      "/semester-1/efmp-302/unit-05/topic-01",
+      "/semester-1/efmp-302/unit-05/topic-02",
+      "/semester-1/efmp-302/unit-05/topic-03",
+      "/semester-1/efmp-302/unit-05/topic-04",
+      "/semester-1/efmp-302/unit-05/unit-assessment",
+      "/semester-1/efmp-302/unit-05/unit-teacher-notes"
+    ],
+    "method": "each page scrolled top to bottom to force lazy images before measuring; geometry, alt text, heading order, link text, list structure and table/figure overflow read from the live DOM",
+    "measurements": "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/render/render-probe-run003.json",
+    "captures": "20 PNG files under specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/render/"
+  },
+  "manifest_verification": {
+    "manifest_path": "specs/content/efmp-302/reviews/unit-05/G3-run003b/manifest.json",
+    "method": "inputManifest(root, 'EFMP-302', 5, 'G3') from scripts/lib/review-evidence.mjs compared entry by entry against the prepared manifest; skillDigest(root, 'G3') compared against manifest.skill_digest; dirtyInputs() run for modified/staged/untracked bound paths",
+    "entries": 137,
+    "missing": 0,
+    "extra": 0,
+    "digest_mismatches": 0,
+    "dirty_inputs": 0,
+    "skill_digest_match": true,
+    "manifest_refreshed": false,
+    "git_head_before": "0cb98a9bd5f32a7b6661c6c00aad60210a2d23f2",
+    "git_head_after": "0cb98a9bd5f32a7b6661c6c00aad60210a2d23f2",
+    "tracked_changes_during_attempt": "none; the only untracked paths at the end are this attempt's own evidence directory and a pre-existing unit-06 run003 evidence directory"
+  },
+  "independence": {
+    "session": "fresh session; this reviewer neither authored nor translated any bound byte",
+    "author_run_id": "commit:44e92ec",
+    "prior_reports_read": [
+      "specs/content/efmp-302/reviews/unit-05/G3/agent-g3-efmp302-u5-run002.json"
+    ],
+    "note": "Every run-002 finding was re-judged against the frozen inputs. No finding was closed on the strength of a commit message or of the parent's description of a repair."
+  },
+  "acceptance_boundary": "Advisory only. This report is unsigned. It does not certify the unit, does not enable or register this reviewer, does not write a tracker row and does not constitute delegated sign-off. Acceptance additionally requires owner-labelled held-out qualification recorded in the protected registry and a trusted detached Ed25519 signature from a server-controlled key, neither of which exists for this identity.",
+  "skill_digest": "afded48dc524cf73584575bb010a9d6f826f117ee55a2da29c7a038033ca1554",
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
+    ".claude/agents/g5-reviewer.md": "b63596b668dd8814fc7b34d59326171f7c789b8dc4e631e30c2c19fe05f2c68a",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g3.md": "53f6213fd4c2f99f0f5066a97fe11459706686e44df6a972e87bc0ebad8507e6",
+    ".claude/skills/review-unit/references/g5.md": "7cbdf9929e6073b71663ec8951a9a42d1e8e683af479434f8409c81002d33159",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/memory/constitution.md": "2c0a5a4dddd6fcca686fdecc4b1a2a958ab378ff02e8ef95b5dce2f831ea3531",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "f1d7f063cc2c826693a3d8428fb5d3ee45455fdb7906ebc5adadee8b9a434d47",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-1/efmp-302/course-overview.mdx": "7dcacdcd8198a7f6f0feda4f29023a3dbe145722ad0a8413d5de5d4e5dfaf450",
+    "docs/semester-1/efmp-302/unit-05/_category_.json": "30d600605bba5d317aa7e3e4d1b9f46087416cd9f3106622f28fb8423a3e4eb3",
+    "docs/semester-1/efmp-302/unit-05/index.mdx": "0c3171cb777a134d35d4475ab9fec1444d3e9be23c682bad20ac56e11a7c1ac2",
+    "docs/semester-1/efmp-302/unit-05/topic-01.mdx": "9441d537bdcf64bd4d067aa8794ea6971b321cfe49baa9be18259e1eb8ede70b",
+    "docs/semester-1/efmp-302/unit-05/topic-02.mdx": "aee586827c5e113e608324245b82555f28ba3655822080d5081a27a47e655a87",
+    "docs/semester-1/efmp-302/unit-05/topic-03.mdx": "7ce7abd8da09701bab813f164bddb65db9bf57a79003c6a3d60bce3a94d4fad0",
+    "docs/semester-1/efmp-302/unit-05/topic-04.mdx": "7d0f2bbf71ed9c483ac68f9dd9067defd28f0d82fad496493d9718fcedd43eda",
+    "docs/semester-1/efmp-302/unit-05/unit-assessment.mdx": "344553443dabdf4236215951af8f7dac87bd06b62da30fbc5f797996a0c4cceb",
+    "docs/semester-1/efmp-302/unit-05/unit-teacher-notes.mdx": "6f66972350577125e855ece2b60158656be8c5a88e3ccf483c673d37d1f27971",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "41b698f8cbbb12f4030d6893083a5c36e4a19848b5ddb86206e5ba72847b8b13",
+    "scripts/check-no-answer-keys.mjs": "a5a50ea1971522ca1d65e2c0f5091c0b8b46cd716e10ce3171bdb6cb74f5e355",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "a748d1eedff125daa05dd704016cda13b8e05c889782509b10983916e7ddc2f8",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "bb614c625f7bf397ce51a317bdb8901711c00fa009d4ad0a506c5096e5b9ddd2",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "37dc0675e977cbb25421bb4d442d0994549b3acc9dbf3c44613fea9a3c532508",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "5fedb959ce39a29775158338afed506db73697426e5b23d2d8421068210bac3d",
+    "scripts/lib/review-evidence.mjs": "976d3e112b2cc38367e902988630b3be6ba03094097cb0c9acf46fdeb884a850",
+    "scripts/lib/tracker-rows.mjs": "a7dd0f00e30b707181f9072718eaa7531cd3dc175869689259a87beb9a6c42bc",
+    "scripts/lib/unit-depth.mjs": "aa62df80052f1b41099a09f771c0812cc43b82af49ae35909bc0bd2192c08521",
+    "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/efmp-302/concepts/unit-01.md": "2b75df95fa4b2650ceee0246da4ed8ed1b18604028ea759285d02819625761b3",
+    "specs/content/efmp-302/concepts/unit-02.md": "71ebc57a51ff8f74df8f1fe01226c254af807ec55257b5e4649c5aabdea3e1b3",
+    "specs/content/efmp-302/concepts/unit-03.md": "f41a214572d92c9e1214309a39a139b7c45bb0e282c819fa4acd1e09993d6255",
+    "specs/content/efmp-302/concepts/unit-04.md": "6edd650392100ba325986e787dbbcf1f398e520320ac4b321c97fdcabe2ac956",
+    "specs/content/efmp-302/concepts/unit-05.md": "c43f556282e3151ce845b648fa4fedc248f0d998ec0ccb4d6c8527f3e5130f69",
+    "specs/content/efmp-302/concepts/unit-06.md": "6058265f27dcfa92eb700e33317e4ba96bf6ab1ae9ecbf3d97473aef7394a949",
+    "specs/content/efmp-302/content-spec.md": "dc9a1c165d1ac7b0a5d27aa105f2ffb3339501d2e977004592712cce3e7fa8c5",
+    "specs/content/efmp-302/coverage/unit-01.md": "d52a7736874715a345d9d8843ac8298c49816627884a62212dfcdef13a38438c",
+    "specs/content/efmp-302/coverage/unit-02.md": "8fdccc0c61b77dbf515b8b81d6338b6e6bd5ec06c1a28d2f1c35bea2f1745541",
+    "specs/content/efmp-302/coverage/unit-03.md": "29648b8fa1992dd9e3ad84b9f31f2d69ba29adf1f7dff25173ceebd9cf54672e",
+    "specs/content/efmp-302/coverage/unit-04.md": "2c85006b9cc4b7b897dca2fe7c4efb58718c2c940fcc07dbdaf3e8cc7c3b25d5",
+    "specs/content/efmp-302/coverage/unit-05.md": "b341543ce1e583f018a6db97878fd846bbef1464fbb6c585b1b93c5cfd42be70",
+    "specs/content/efmp-302/coverage/unit-06.md": "395b28c6fced1d9164043f4412ded936f51484c4decfc9307b34c420283ea276",
+    "specs/content/efmp-302/figures/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "specs/content/efmp-302/figures/unit-01.md": "3fa2b8de8519fcd8800c04b05282fc42b1527fbb28be26d66383b0423eba0ded",
+    "specs/content/efmp-302/figures/unit-02.md": "11de90923a2eacdb90fa137903d6b3ee3f637db9fb64dcf7d65eddf92ff05db8",
+    "specs/content/efmp-302/figures/unit-03.md": "6b3ea0c60274bba7c72fff74f64f9a4714454df65ab60aa6a96373e283b41466",
+    "specs/content/efmp-302/figures/unit-04.md": "68c9d2fe10c35f665fd6b04c4c0d7c4d3f82b2a3dcd634c8bfa5eb89a36e84eb",
+    "specs/content/efmp-302/figures/unit-05.md": "a673d313c2ceee3097f32409bd66b6c686b7ef6d74a7f7e1edf226056eb6af1c",
+    "specs/content/efmp-302/figures/unit-06.md": "32b0086ea7221c865f9ec1a48cf40339bf9341c1fddec09a77c351e9a4cf23d0",
+    "specs/content/efmp-302/sources/texts/README.md": "5007d1d58fdc98fb7a6669c4ebe9e9fd95d8950803215ba54f07788c1d4608f3",
+    "specs/content/efmp-302/sources/texts/bebeau1999.md": "c7c78e4287fb9ecdc165d71455c9555bad30caf99dea5689e848d69bbc056565",
+    "specs/content/efmp-302/sources/texts/demirkasimoglu2010.md": "3b5f67f6981ae0987aa73601d681778b44e3987692a2ec365b4e1271fd73fd8f",
+    "specs/content/efmp-302/sources/texts/ehrich2011.md": "3fbd0aebcea4b10aec9e8607882346c2f4cce32affac16ca8d319c12a0ddee26",
+    "specs/content/efmp-302/sources/texts/furlich2016.md": "21cc51c8077ed340a972787a8c67f8350eaadd16c9879069f931e89c4a51541c",
+    "specs/content/efmp-302/sources/texts/goe2008.md": "388cfb823b621e2c423eef36231a655bffece69adb0cc6d1de14dd44681e3524",
+    "specs/content/efmp-302/sources/texts/hargreaves2000.md": "2eacf00357068486649801fae8588fd863631b24983147e727d66431478160ee",
+    "specs/content/efmp-302/sources/texts/isore2009.md": "ba81be4e0e6e49cce388f9f48e1e224e7b3e3f847c4fcc9ee183bbfc863ae807",
+    "specs/content/efmp-302/sources/texts/keelson2024.md": "9b352bfc8520a366d4fb51c79fac7d6a17bd3b3d24e645166f41084981c7361a",
+    "specs/content/efmp-302/sources/texts/maslach2016.md": "5e520e6d14aa5768b7d4e4ea9b2601adba808cd6be9a21c439eec1376f5d4458",
+    "specs/content/efmp-302/sources/texts/naparan2021.md": "23add5b5bd287160396fb4682400294db45d6830848731c5ba53d1cdf69c0729",
+    "specs/content/efmp-302/sources/texts/skaalvik2020.md": "a3c8532c249ebc83365b01a0ea60e0e659a03587d1a575646a0c96660554e6c2",
+    "specs/content/efmp-302/sources/texts/suarez2022.md": "087030ea5418db5446200ba57a105f36097ee7e1ed08547fb0b10b8b17b799b3",
+    "specs/content/efmp-302/sources/texts/taylor2023.md": "3ee551c2e1f0989ac74bc64da43bf4841e354f5ff9d35742aec56ffc6ad458f3",
+    "specs/content/efmp-302/sources/unit-01.md": "37f680be0d8651745879b9cb326504ece8192bdf90bbbfd7c8682ad3932ad2cd",
+    "specs/content/efmp-302/sources/unit-02.md": "4c2a160660d81208861548007fed52b0966a3e71a894c6f0ae9e3b158ae232b3",
+    "specs/content/efmp-302/sources/unit-03.md": "a3ca0a3dd649ce07df3c5fc15b9e382de44b577cca6f5aa7e9e7ba21512f4433",
+    "specs/content/efmp-302/sources/unit-04.md": "4282f41764b2a56cbf4bf618484005214120fbbbf3fb422fba970771d229262c",
+    "specs/content/efmp-302/sources/unit-05.md": "1424fc82a3a262306a70ccbf53191e6b7ee053a2fcd968bc9acc86eaa3876cee",
+    "specs/content/efmp-302/sources/unit-06.md": "e087c80cf73ff76d26598d20bbf10aae57a783f75a42b40006f0d9f88378bf44",
+    "specs/content/style-guide.md": "db96c9b33b0fb9522986462a0b519620c3c1d7602a046d7b90e638f643da4610",
+    "specs/content/terminology.csv": "ad917e28cde688eb72bd92226c2326e2d23da3da80fc53ea8c812b1a47f73337",
+    "static/img/figures/efmp-302/unit-05/fig-U5-1.dark.svg": "1f8e0443f93830e5337b8326c9feb254281c3de71e84d0a604c55f2456b88e73",
+    "static/img/figures/efmp-302/unit-05/fig-U5-1.svg": "80928cc76cca0bb2bffda60225f025f1631d9a18916d39092ffa44d8a5448690",
+    "static/img/figures/efmp-302/unit-05/fig-U5-2.dark.svg": "4aa7e64b86c3af637bd21ee51e6b77ecaac842977375a0cd21336bb303b9d7ce",
+    "static/img/figures/efmp-302/unit-05/fig-U5-2.svg": "8076e0a8e9182389e09a4892e82ac747f22e18372fc45e6f47c045c8e7a78dd7",
+    "static/img/figures/efmp-302/unit-05/fig-U5-3.dark.svg": "caa6bda908bdd6635acfc397c8d6b6a677e2588ff75f2540b57e708f794c6d8e",
+    "static/img/figures/efmp-302/unit-05/fig-U5-3.svg": "faee86befd1f2173102c6f37454bc94ee9dad349aeec362afd006be538647a67",
+    "static/img/figures/efmp-302/unit-05/fig-U5-4.dark.svg": "99acdff0f3789557a073d44d793db45b290f0fb226aa6b5a7c94724f082d396e",
+    "static/img/figures/efmp-302/unit-05/fig-U5-4.svg": "b6daac8e04cd1dea22f366bfda3354bf3ab5aecf8a629963a337dc06d3f6ea61",
+    "static/img/figures/efmp-302/unit-05/fig-U5-5.dark.svg": "111f5956c7baf0e2c40b6c2a58ac2880b9aa48a39ff5e84982611a2c9bc89b8e",
+    "static/img/figures/efmp-302/unit-05/fig-U5-5.svg": "f6ed713dab459cf6e1c018b1e116e314acb67cb1ef1f7843e615e224665eebd4",
+    "static/img/figures/efmp-302/unit-05/fig-U5-6.dark.svg": "3e1056411faa7613ba1cd558e04e129650b4403ddb955925f8c2406c2e4b56f9",
+    "static/img/figures/efmp-302/unit-05/fig-U5-6.svg": "aa4b679fc6bc05d655a0b8b5b4f3e6459106a8122699961670ffffab68edc1e7",
+    "static/img/figures/efmp-302/unit-05/fig-U5-7.dark.svg": "fd2f811e89b736c493845ee08d86dfc624592305ea9da93a33246b9f7ec3fd3f",
+    "static/img/figures/efmp-302/unit-05/fig-U5-7.svg": "f7f49280bb21c323c550b6d94d7ef3723d5aecea1952743618f81f20fdf94ade",
+    "static/img/figures/efmp-302/unit-05/fig-U5-8.dark.svg": "673e81d1db4ad2eebfb1d9ec45add0c01e9aba74a49abc50cf8b0bb807f7814a",
+    "static/img/figures/efmp-302/unit-05/fig-U5-8.svg": "15272507b8342db384f5453801e6d2737b7d60c53fa167df7f981bdf6829ac59"
+  },
+  "evidence_manifest": {
+    "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/logs/check-depth-gate-run003.log": "2ac2039c65662b5e9baed9626451ad03e542bfb347e1c9f796f6341a5f9bfc19",
+    "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/logs/check-docs-sync-run003.log": "102d910fe5760273c8e2517cb820f6f427acb1035e14734228ec3cf0e9b2e8e0",
+    "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/logs/check-figures-run003.log": "ee83c4d0ee0d20dbf4d8921f539b22cf3360919d794611ec6e47d405ccd99cc4",
+    "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/logs/check-no-answer-keys-run003.log": "34f7823f16e407855b50ee74179a45c8901aa1059bc810f1c8b6e3aff3900dfa",
+    "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/logs/check-no-em-dash-run003.log": "022974f4ec644ec056907ae50c1a940add2ce23b62c06819fb43136e2e86aa5e",
+    "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/logs/render-review-run003.log": "ea7c4c7b579bc432ddb03040043f1da252a93937e5ab8dd56fb97204bbb96092",
+    "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/logs/validate-content-run003.log": "29629a6724bb0dafc050c25a669224949798ae552734b31725cbf21321c4952a",
+    "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/render/desktop-1280-index-run003.png": "503310579d2df9abb86104c6b231043d52dfd6afec57dc58d927e997187fc9c3",
+    "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/render/desktop-1280-topic-02-run003.png": "fb53447de722859ad5f7153e9e4d1e29a0c551df738bfcc6b183114790b9d4fb",
+    "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/render/desktop-1280-topic-04-run003.png": "2772aaa66aa1db34ba922c5cee0dc07a855a5b0788976c0287159b67507cc4a4",
+    "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/render/desktop-1280-unit-assessment-run003.png": "350fb3b2ac4887e0e5db9508f9d8931875acdb821750a2165a1f7912ae004f0f",
+    "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/render/narrow-360-index-run003.png": "75dce9a072dc13737e05db245ec8c087d75e4e38e525571989e6a13ec099f27f",
+    "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/render/narrow-360-topic-01-run003.png": "17e6aa9d8f17444d22f6eccb7314a3f5e4f54c8e8314d8be497a21b523903cc1",
+    "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/render/narrow-360-topic-02-run003.png": "aca9630befcd9107edbb0e2df0beb2c31f37c57ac659e003e692f294b154f7a5",
+    "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/render/narrow-360-topic-03-run003.png": "c7404f7978b4a8be9a98044be695a8bc23745693f963d245706f40f0382bf8b7",
+    "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/render/narrow-360-topic-04-run003.png": "f46e157f5e2f404afd123db1622fae742c1cc30576eaa4d40f2186569d75dc49",
+    "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/render/narrow-360-unit-assessment-run003.png": "846bb729d5035de138363ada928c6a596d3a3fea73a4baaaa2babaffa288583e",
+    "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/render/narrow-360-unit-teacher-notes-run003.png": "e244c7d8e0984cf95b516bdf0ec27d34fc9982db76c04f205d185391c0e3e1b5",
+    "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/render/print-a4-index-run003.png": "c6c69947ee517d0aaa4c9572960e5ffc7b696dee8187291217e9bd6fd6fcfa35",
+    "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/render/print-a4-topic-01-run003.png": "6c823eaed114e9241a13c578163586bc594a9ec9436eaeac6e339284c977e014",
+    "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/render/print-a4-topic-02-run003.png": "ac0b995c1db2eabcb4c08ccb2a9544ec7c0545149f04070ddfe48487b9bdc48c",
+    "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/render/print-a4-topic-03-run003.png": "c75ca055119f586fb47040c02070b3f1d443d6a09e71628f2031fb1c5a373aad",
+    "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/render/print-a4-topic-04-run003.png": "a11080480dccdc140cd6f7bcb1710d60d45624acc68cd6727bb30211f9ec7fce",
+    "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/render/print-a4-unit-assessment-erq5-run003.png": "0829dd195bab4c2f854ffbd1f1bbf3788f07f125f09954c77b1b9b76144f7052",
+    "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/render/print-a4-unit-assessment-run003.png": "0829dd195bab4c2f854ffbd1f1bbf3788f07f125f09954c77b1b9b76144f7052",
+    "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/render/print-a4-unit-teacher-notes-run003.png": "06603fef0b8a26abddf4ee2e9e1f74021648d3f776af144b19ffdb531c83d1ef",
+    "specs/content/efmp-302/reviews/unit-05/G3-run003-evidence/render/render-probe-run003.json": "2aa01cbfaca272a94c80a1a225a4c816547a8bcb823def8383dc49e031a80af6"
+  }
+}

@@ -1,0 +1,6 @@
+$ npm run check:no-answer-keys --silent
+
+✗ Answer-key / private material found in public content (1):
+
+  - specs/content/efmp-302/reviews/unit-03/logs-run005/summary-run005.md: matched /\banswer\s*key\b/ ("answer key")
+[exit] 1

@@ -1,0 +1,25 @@
+== unit-assessment: pageOverflow=0 tabbables=5
+   t0 block/auto 527>328=true data-scrollable=true tabindex=0 role=region aria-label="Scrollable table, scroll sideways to see all columns"
+   t1 block/auto 473>328=true data-scrollable=true tabindex=0 role=region aria-label="Scrollable table, scroll sideways to see all columns"
+   t2 block/auto 471>328=true data-scrollable=true tabindex=0 role=region aria-label="Scrollable table, scroll sideways to see all columns"
+   t3 block/auto 488>328=true data-scrollable=true tabindex=0 role=region aria-label="Scrollable table, scroll sideways to see all columns"
+   t4 block/auto 499>328=true data-scrollable=true tabindex=0 role=region aria-label="Scrollable table, scroll sideways to see all columns"
+   KEYBOARD: focused=true scrollLeft 0->0 cellsOutOfViewAfterEnd=10
+== topic-01: pageOverflow=0 tabbables=1
+   t0 block/auto 328>328=false data-scrollable=null tabindex=null role=null aria-label=null
+== topic-02: pageOverflow=0 tabbables=0
+   t0 block/auto 328>328=false data-scrollable=null tabindex=null role=null aria-label=null
+== topic-03: pageOverflow=0 tabbables=0
+   t0 block/auto 328>328=false data-scrollable=null tabindex=null role=null aria-label=null
+== topic-04: pageOverflow=0 tabbables=2
+   t0 block/auto 328>328=false data-scrollable=null tabindex=null role=null aria-label=null
+== topic-05: pageOverflow=0 tabbables=0
+   t0 block/auto 328>328=false data-scrollable=null tabindex=null role=null aria-label=null
+key=End         scrollLeft 0 -> 0  (max 199)
+key=ArrowRight  scrollLeft 0 -> 40  (max 199)
+key=ArrowRight  scrollLeft 40 -> 80  (max 199)
+key=ArrowRight  scrollLeft 80 -> 120  (max 199)
+key=PageDown    scrollLeft 120 -> 120  (max 199)
+key=Space       scrollLeft 120 -> 120  (max 199)
+tab presses to reach first scrollable table: 1
+after programmatic scroll-to-end, cells outside view: 10

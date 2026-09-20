@@ -1,0 +1,33 @@
+# Independent assessment analysis, EFMP-302 Unit 5 unit-assessment.mdx
+# Reviewer solved every MCQ from the topic prose BEFORE reading '## Answers and marking guidance'.
+
+Item  reviewer  published key   agree   basis
+MCQ-01b         b               yes     topic-01 'Workload...': 'the parts of the job that are invisible from outside are the parts that expand'
+MCQ-02b         b               yes     topic-01 'Stress and burnout...': 'cynicism looks like competence, because the teacher has stopped investing'
+MCQ-03b         b               yes     topic-01: 'Burnout is what chronic, unresolved demand produces over time' vs stress 'episodic... resolves'
+MCQ-04b         b               yes     topic-01 'The multilingual classroom': excluding home language 'removes the one resource they have'
+MCQ-05b         b               yes     topic-02 'increased focus...': 'it will change your behaviour without improving your teaching'
+MCQ-06b         b               yes     topic-02 'High expectations...': 'Those two are different for almost every party, and the gap is where most of a teacher's difficulty lives'
+MCQ-07b         b               yes     topic-02 'Socio-economic status...': 'Teaching's status is uneven rather than simply low'
+MCQ-08c         c               yes     topic-03 'Pressure to integrate technology': 'This is the question nobody asks and it is the most important'
+MCQ-09b         b               yes     topic-04: 'an accurate judgement about the third region to justify inaction in the first'
+MCQ-10b         b               yes     topic-04: resilience as whole answer 'becomes a way of relocating a system's failure into an individual's character'
+
+Agreement: 10/10. No key disagreements: every published key is the answer the prose supports.
+
+KEY-POSITION DISTRIBUTION: {'b': 9, 'c': 1}
+  -> a candidate who selects option (b) for every item without reading scores 9/10.
+
+MCQ ITEMS PER TOPIC: {'5.1': 4, '5.2': 3, '5.3': 1, '5.4': 2}
+  content-spec.md '## Unit 5 > Unit-end assessment blueprint' requires: 'MCQs (10) ... at least 2 per topic across 5.1 to 5.4'
+   topic 5.1: 4 item(s) OK
+   topic 5.2: 3 item(s) OK
+   topic 5.3: 1 item(s) <-- BELOW THE APPROVED BLUEPRINT MINIMUM OF 2
+   topic 5.4: 2 item(s) OK
+
+RRQ ITEMS PER TOPIC: {'5.1': 3, '5.2': 3, '5.3': 2, '5.4': 2}  (blueprint: >= 2 per topic) -> OK
+ERQ: 1->5.1, 2->5.2, 3->5.3, 4->5.4, 5->integrative  (blueprint: one per topic + one integrative) -> OK
+
+RRQ MARK ALLOCATION (item, marks): [('1', '4'), ('2', '6'), ('3', '5'), ('4', '4'), ('5', '6'), ('6', '5'), ('7', '5'), ('8', '4'), ('9', '9'), ('10', '4')]
+  Declared Bloom: RRQ-9 (Remember) carries 9 marks - the largest allocation in the bank -
+  while RRQ-10 (Analyze) carries 4 and RRQ-3/RRQ-6 (Analyze) carry 5 each.

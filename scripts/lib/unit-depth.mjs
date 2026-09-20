@@ -38,6 +38,139 @@ export const CYCLE = [
 ];
 
 /** LEGACY path (Spec 007 — byte-for-byte). Returns `{ errors: string[] }`. */
+/**
+ * (e2) Every external source key is either VERIFIABLE or DECLARED UNVERIFIABLE.
+ *
+ * A G3 reviewer can confirm from a registry that a citation EXISTS, but cannot
+ * confirm the source SUPPORTS the claim without its text. The review bundle
+ * already binds `specs/content/<course>/sources/`, so a committed excerpt at
+ * `sources/texts/<key>.md` travels with the unit and makes support checkable
+ * offline and reproducibly.
+ *
+ * All four EFMP-302 Unit 3-6 G3 reviews (2026-09-18) returned `sources` as fail
+ * or unverified for exactly this reason. Where a source WAS independently
+ * retrievable they found real defects - Isore (2009) inverted, `goe2008` not
+ * containing the sequence it was cited for - so an unverified source is not safe
+ * by default.
+ *
+ * Declaring a key unverifiable is a legitimate outcome. Silence is not, and that
+ * is what this catches. The declaration is machine-readable on purpose: a first
+ * attempt matched any key MENTIONED under a limitation heading and swept in
+ * `isore2009`, which had been verified against ERIC and was named there only in
+ * passing. Prose cannot distinguish "we could not read this" from "we read this".
+ *
+ *   ## Unverifiable sources
+ *   - some-key: what was attempted, and what it leaves unchecked
+ */
+/**
+ * (e3) The sub-topic IDs a source file CLAIMS must match the ones the coverage
+ * matrix actually grounds in that key.
+ *
+ * `sources/unit-NN.md` states each key's scope twice: in the table's `Supports`
+ * cell, and again in any `## Unverifiable sources` bullet. `coverage/unit-NN.md`
+ * is the authority. Nothing checked that the three agreed, and they drifted
+ * every time a mapping was repaired in one file and not the others.
+ *
+ * The EFMP-302 Unit 3 G3 run-004 review found all three disagreeing at once:
+ * a Supports cell still claiming a sub-topic its own bound excerpt refuted, a
+ * declaration omitting a sub-topic it did ground, and a declaration claiming one
+ * it did not. The net effect was that U3-11 rested on an unread print source
+ * that no declaration disclosed, which is the rubric's named failure - a
+ * declaration understating what it leaves unchecked. Three prior review cycles
+ * missed it, and the reviewer's own advisory was that a mechanical cross-check
+ * would have caught every instance.
+ *
+ * Claiming FEWER IDs than coverage grounds is the dangerous direction, because
+ * it hides an unverified dependency from the reader. Claiming MORE is also an
+ * error, but a visible one.
+ */
+function checkSourceScopeAgreement({ sourcesFile, sourcesRows, coverageByKey, errors }) {
+  const text = readFileSync(sourcesFile, 'utf8');
+  // Authors write runs as `U6-04/05/06` as well as `U6-04, U6-05, U6-06`.
+  // Only `/` joins a run. A dash is NOT treated as a range separator on purpose: reading
+  // `U3-03-05` as {03, 05} would silently drop U3-04, whereas reading it as {03} makes the
+  // check complain that 04 and 05 are omitted, which is the safe direction to fail in.
+  // A regex that only caught the long form would report the rest as omitted, which
+  // is a false positive on a perfectly clear declaration.
+  const idsIn = (text) => {
+    const out = new Set();
+    // `U1-01..U1-04` and `U1-01..04` are inclusive ranges.
+    for (const m of text.matchAll(/\bU(\d+)-(\d+)\.\.(?:U\1-)?(\d+)\b/g)) {
+      const [, unit, from, to] = m;
+      const width = m[2].length;
+      for (let i = Number(from); i <= Number(to); i += 1) {
+        out.add(`U${unit}-${String(i).padStart(width, '0')}`);
+      }
+    }
+    for (const m of text.matchAll(/\bU(\d+)-(\d+)((?:\/\d+)*)\b/g)) {
+      const [, unit, first, rest] = m;
+      out.add(`U${unit}-${first}`);
+      for (const part of rest.matchAll(/\/(\d+)/g)) out.add(`U${unit}-${part[1]}`);
+    }
+    return out;
+  };
+  const report = (key, claimed, grounded, where) => {
+    const missing = [...grounded].filter((id) => !claimed.has(id)).sort();
+    const extra = [...claimed].filter((id) => !grounded.has(id)).sort();
+    if (missing.length) {
+      errors.push(`source "${key}" ${where} omits ${missing.join(', ')}, which the coverage matrix grounds in it `
+        + '- a scope that understates what the source carries hides an unverified dependency');
+    }
+    if (extra.length) {
+      errors.push(`source "${key}" ${where} claims ${extra.join(', ')}, which the coverage matrix does not ground in it`);
+    }
+  };
+
+  for (const cells of sourcesRows) {
+    const key = cells[0];
+    if (!key || /^key$/i.test(key) || (cells[4] || '').toLowerCase() === 'no-external-source') continue;
+    const grounded = coverageByKey.get(key);
+    if (!grounded || grounded.size === 0) continue; // the unreferenced-key check already covers this
+    const claimed = idsIn(cells[3] || '');
+    if (claimed.size === 0) continue; // a prose Supports cell naming no ID is not a scope claim
+    report(key, claimed, grounded, 'Supports cell');
+  }
+
+  const seen = new Set();
+  for (const section of text.split(/^##\s+/m).slice(1)) {
+    if (!/^unverifiable sources\s*$/i.test(section.split('\n', 1)[0].trim())) continue;
+    // Stop at the first table row. A `## Unverifiable sources` section runs to the
+    // next `##`, and the sources table usually follows it with no heading between,
+    // so reading to the section end scoops every ID in the table into the bullet.
+    const body = section.split(/^\|/m)[0];
+    for (const bullet of body.split(/\n(?=-\s)/)) {
+      const m = /^-\s+`?([a-z0-9][a-z0-9-]*)`?\s*:/i.exec(bullet.trim());
+      if (!m || seen.has(m[1])) continue;
+      seen.add(m[1]);
+      const grounded = coverageByKey.get(m[1]);
+      if (!grounded || grounded.size === 0) continue;
+      const claimed = idsIn(bullet);
+      if (claimed.size === 0) continue;
+      report(m[1], claimed, grounded, 'unverifiable-sources declaration');
+    }
+  }
+}
+
+function checkSourceVerifiability({ root, courseDir, sourcesFile, keyKind, errors }) {
+  const sourcesText = readFileSync(sourcesFile, 'utf8');
+  const declared = new Set();
+  for (const section of sourcesText.split(/^##\s+/m).slice(1)) {
+    if (!/^unverifiable sources\s*$/i.test(section.split('\n', 1)[0].trim())) continue;
+    for (const line of section.split('\n')) {
+      const m = /^-\s+`?([a-z0-9][a-z0-9-]*)`?\s*:/i.exec(line.trim());
+      if (m) declared.add(m[1]);
+    }
+  }
+  const courseRel = relative(join(root, 'specs', 'content'), courseDir);
+  for (const [key, kind] of keyKind) {
+    if (kind === 'no-external-source' || declared.has(key)) continue;
+    if (!existsSync(join(courseDir, 'sources', 'texts', `${key}.md`))) {
+      errors.push(`source "${key}" has no bound excerpt at specs/content/${courseRel}/sources/texts/${key}.md `
+        + 'and is not listed under an `## Unverifiable sources` heading - a reviewer cannot check that it supports the claims citing it');
+    }
+  }
+}
+
 export function checkLegacy({ root, unitDir, courseDir, unitNo, enIndexRaw, checklistIds, sectionLines }) {
   const errors = [];
 
@@ -57,6 +190,7 @@ export function checkLegacy({ root, unitDir, courseDir, unitNo, enIndexRaw, chec
   const coverageRows = readTable(coverageFile);
   const coveredIds = new Set();
   const citedSources = new Set();
+  const coverageByKey = new Map();
   if (!coverageRows) {
     errors.push(`no coverage matrix at ${relative(root, coverageFile)}`);
   } else {
@@ -73,6 +207,8 @@ export function checkLegacy({ root, unitDir, courseDir, unitNo, enIndexRaw, chec
         errors.push(`coverage row for ${id} names File "${file}" — must be one of ${UNIT_FILES.join(', ')}`);
       }
       citedSources.add(source);
+      if (!coverageByKey.has(source)) coverageByKey.set(source, new Set());
+      if (id) coverageByKey.get(source).add(id);
     }
     for (const id of checklistIds) {
       if (!coveredIds.has(id)) errors.push(`checklist sub-topic ${id} has no row in the coverage matrix`);
@@ -99,6 +235,8 @@ export function checkLegacy({ root, unitDir, courseDir, unitNo, enIndexRaw, chec
       if (kind === 'no-external-source') continue;
       if (!citedSources.has(key)) errors.push(`sources-consulted Key "${key}" is not referenced by any coverage row`);
     }
+    checkSourceVerifiability({ root, courseDir, sourcesFile, keyKind, errors });
+    checkSourceScopeAgreement({ sourcesFile, sourcesRows, coverageByKey, errors });
   }
 
   // --- required blocks in index.mdx (b) ---
@@ -264,6 +402,7 @@ export function checkTopic({ root, unitDir, courseDir, unitNo, checklistIds, sec
     ...topicFilesOnDisk,
   ]);
   const citedSources = new Set();
+  const coverageByKey = new Map();
   const filesReferenced = new Set();
   const topicFilesForId = new Map(); // id -> Set(files)
   if (!coverageRows) {
@@ -285,6 +424,8 @@ export function checkTopic({ root, unitDir, courseDir, unitNo, checklistIds, sec
       if (!topicFilesForId.has(id)) topicFilesForId.set(id, new Set());
       topicFilesForId.get(id).add(file);
       citedSources.add(source);
+      if (!coverageByKey.has(source)) coverageByKey.set(source, new Set());
+      if (id) coverageByKey.get(source).add(id);
     }
     for (const id of checklistIds) {
       if (!topicFilesForId.has(id)) errors.push(`checklist sub-topic ${id} has no row in the coverage matrix`);
@@ -319,6 +460,8 @@ export function checkTopic({ root, unitDir, courseDir, unitNo, checklistIds, sec
       if (kind === 'no-external-source') continue;
       if (!citedSources.has(key)) errors.push(`sources-consulted Key "${key}" is not referenced by any coverage row`);
     }
+    checkSourceVerifiability({ root, courseDir, sourcesFile, keyKind, errors });
+    checkSourceScopeAgreement({ sourcesFile, sourcesRows, coverageByKey, errors });
   }
 
   // (9) reading-minutes band across the new-shape file set

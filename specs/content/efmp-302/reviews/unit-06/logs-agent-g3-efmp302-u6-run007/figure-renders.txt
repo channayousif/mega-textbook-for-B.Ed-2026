@@ -1,0 +1,11 @@
+$ node figs.mjs  # per-figure element renders at 1280x900, deviceScaleFactor 2
+# date=2026-09-19T17:17:28Z
+fig-U6-1 {"rendered":640,"viewBox":900,"scale":0.711,"effectiveBodyPx":7.82,"caption":"textbook.com.pk"}
+fig-U6-2 {"rendered":640,"viewBox":924,"scale":0.693,"effectiveBodyPx":7.62,"caption":"textbook.com.pk"}
+fig-U6-3 {"rendered":703,"viewBox":900,"scale":0.781,"effectiveBodyPx":8.59,"caption":"textbook.com.pk"}
+fig-U6-4 {"rendered":640,"viewBox":900,"scale":0.711,"effectiveBodyPx":7.82,"caption":"textbook.com.pk"}
+fig-U6-5 {"rendered":640,"viewBox":936,"scale":0.684,"effectiveBodyPx":7.52,"caption":"textbook.com.pk"}
+fig-U6-6 {"rendered":703,"viewBox":880,"scale":0.799,"effectiveBodyPx":8.79,"caption":"textbook.com.pk"}
+fig-U6-7 {"rendered":640,"viewBox":880,"scale":0.727,"effectiveBodyPx":8,"caption":"textbook.com.pk"}
+fig-U6-8 {"rendered":703,"viewBox":900,"scale":0.781,"effectiveBodyPx":8.59,"caption":"textbook.com.pk"}
+# exit_code=0

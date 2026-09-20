@@ -76,7 +76,7 @@ test('teacher logs a teaching activity in under 30 seconds and sees it most-rece
  * 0028's `source_kind` CHECK refuses them, so an auto-selected `topic` made
  * the very first save fail with the generic error banner and no row.
  */
-test('per-topic units are not offered as loggable activities', async ({ page }) => {
+test('per-topic units ARE offered, once each per unit and kind', async ({ page }) => {
   const svc = createClient(SUPABASE_URL!, SERVICE_KEY!, { auth: { persistSession: false } });
   const tag = Date.now();
   const teacherEmail = `e2e-per-topic-log-${tag}@example.test`;
@@ -105,9 +105,17 @@ test('per-topic units are not offered as loggable activities', async ({ page }) 
     const optionValues = await options.evaluateAll(
       (opts) => opts.map((o) => (o as HTMLOptionElement).value),
     );
+    // Migration 0045 made the per-topic kinds loggable. This asserted the
+    // opposite until 2026-09-20, which is what kept the defect invisible: every
+    // migrated course offered a teacher nothing, and the test called that correct.
     for (const value of optionValues) {
-      expect(value.split('::')[1]).toMatch(/^(activity|formative|summative)$/);
+      expect(value.split('::')[1]).toMatch(/^(activity|formative|summative|topic|assessment)$/);
     }
+
+    // And each value appears ONCE. The tables key on (course_code, unit_no,
+    // source_kind) with no topic_no, so a four-topic unit offering four
+    // identical values would be four options saving to one row.
+    expect(optionValues.length).toBe(new Set(optionValues).size);
 
     // And the default selection therefore saves rather than erroring.
     await page.getByTestId('log-duration-input').fill('15');

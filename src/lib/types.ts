@@ -9,7 +9,10 @@
 export type ClassStatus = 'active' | 'archived';
 export type ArchivedReason = 'manual' | 'role_change' | null;
 export type EnrollmentStatus = 'active' | 'removed';
-export type AssignmentSourceKind = 'activity' | 'formative' | 'summative' | 'custom' | 'quiz';
+// `topic`/`assessment` are the Spec 008 per-topic kinds; migration 0045 widened
+// the database CHECK to match, after the legacy-only list left every migrated
+// course with nothing a teacher could assign.
+export type AssignmentSourceKind = 'activity' | 'formative' | 'summative' | 'topic' | 'assessment' | 'custom' | 'quiz';
 export type SubmissionQuizItemKind = 'formative' | 'summative';
 
 export type Class = {
@@ -146,7 +149,9 @@ export type StudentAchievement = {
  * `teaching_log_entries`/`activity_feedback`/`improvement_suggestions` columns.
  */
 
-export type TeachingLogSourceKind = 'activity' | 'formative' | 'summative';
+// See AssignmentSourceKind. `course-review` is deliberately absent: the table
+// keys on (course_code, unit_no), and a course review belongs to no unit.
+export type TeachingLogSourceKind = 'activity' | 'formative' | 'summative' | 'topic' | 'assessment';
 
 export type TeachingLogEntry = {
   id: string;

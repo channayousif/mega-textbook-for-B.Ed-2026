@@ -1,3 +1,5 @@
+import { createHash } from 'node:crypto';
+import { readFileSync } from 'node:fs';
 import { config as loadEnv } from 'dotenv';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
@@ -19,6 +21,82 @@ loadEnv({ path: '.env.local' });
  * - Offline bilingual local search via @easyops-cn/docusaurus-search-local.
  * Verify version-sensitive keys against current Docusaurus v3 docs (Context7).
  */
+/**
+ * Units resting at Constitution Art. VII.7 provisional review, as `COURSE:unit`
+ * keys, read at config time from the report `prebuild`/`prestart` just wrote.
+ *
+ * Read here rather than fetched in the browser so the "Final Review Pending"
+ * notice is server-rendered: a disclosure that appears only after hydration is
+ * invisible to crawlers and flashes in late for readers, which is exactly the
+ * wrong behaviour for a notice about content trustworthiness. (Footer.tsx's
+ * runtime `fetchContentIndex` is fine for a "mark as studied" button; this is
+ * not that.)
+ *
+ * FAILS LOUD, deliberately (ADR-0026). This used to `catch { return [] }` on the
+ * grounds that a missing report should not break `docusaurus start`. That was
+ * defensible while a banner meant "reviewed but uncertified". It is not
+ * defensible now: since publication no longer waits on review, a unit with no
+ * banner is a unit claiming to be certified. A swallowed read error therefore
+ * publishes the whole corpus as certified, silently, on a green build - the
+ * exact failure the notice exists to prevent.
+ *
+ * So a missing, malformed or STALE report is a build failure. Staleness is
+ * checked against the tracker digests the report recorded when it was written;
+ * `prebuild`/`prestart` regenerate it, so the happy path is unchanged.
+ */
+type PublicationTier = 'certified' | 'provisional' | 'gated' | 'unpublished';
+const NOTICE_TIERS: PublicationTier[] = ['provisional', 'gated'];
+
+function reviewNotices(): Record<string, PublicationTier> {
+  let raw: string;
+  try {
+    raw = readFileSync('./static/content-status.json', 'utf8');
+  } catch {
+    throw new Error(
+      'static/content-status.json is missing. Every publication notice is derived from it, '
+      + 'so building without it would publish unreviewed units with no notice. '
+      + 'Run: npm run build:content-status',
+    );
+  }
+
+  const report = JSON.parse(raw);
+  if (!Array.isArray(report.courses)) {
+    throw new Error('static/content-status.json has no `courses` array; it is malformed.');
+  }
+
+  for (const [path, digest] of Object.entries(report.trackers ?? {})) {
+    const actual = createHash('sha256').update(readFileSync(path)).digest('hex');
+    if (actual !== digest) {
+      throw new Error(
+        `static/content-status.json is stale: ${path} has changed since it was generated. `
+        + 'Publication tiers would be wrong. Run: npm run build:content-status',
+      );
+    }
+  }
+
+  const notices: Record<string, PublicationTier> = {};
+  for (const course of report.courses) {
+    for (const unit of course.units ?? []) {
+      if (!unit.authored) continue;
+      const tier = unit.publication as PublicationTier | undefined;
+      if (tier === undefined) {
+        throw new Error(
+          `${course.course_code} unit ${unit.unit_no} has no \`publication\` field. `
+          + 'Regenerate the report: npm run build:content-status',
+        );
+      }
+      // An unrecognised tier must not silently mean "no notice". Anything the
+      // build does not understand is disclosed at the strongest level.
+      if (!['certified', 'provisional', 'gated', 'unpublished'].includes(tier)) {
+        notices[`${course.course_code}:${unit.unit_no}`] = 'gated';
+        continue;
+      }
+      if (NOTICE_TIERS.includes(tier)) notices[`${course.course_code}:${unit.unit_no}`] = tier;
+    }
+  }
+  return notices;
+}
+
 const config: Config = {
   title: 'B.Ed Mega Textbook',
   tagline: 'Bilingual digital textbook for the B.Ed (4-Year) programme',
@@ -58,6 +136,7 @@ const config: Config = {
   customFields: {
     supabaseUrl: process.env.DOCUSAURUS_SUPABASE_URL ?? '',
     supabaseAnonKey: process.env.DOCUSAURUS_SUPABASE_ANON_KEY ?? '',
+    reviewNotices: reviewNotices(),
   },
 
   presets: [

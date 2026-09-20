@@ -1,0 +1,126 @@
+=== narrow 360px ===
+[
+ {
+  "i": 0,
+  "tableW": 328,
+  "tableRight": 344,
+  "parentW": 328,
+  "parentRight": 344,
+  "parentOverflowX": "visible",
+  "tableLayout": "auto",
+  "clippedCells": 10,
+  "totalCells": 20,
+  "maxCellRight": 542
+ },
+ {
+  "i": 1,
+  "tableW": 328,
+  "tableRight": 344,
+  "parentW": 328,
+  "parentRight": 344,
+  "parentOverflowX": "visible",
+  "tableLayout": "auto",
+  "clippedCells": 10,
+  "totalCells": 20,
+  "maxCellRight": 488
+ },
+ {
+  "i": 2,
+  "tableW": 328,
+  "tableRight": 344,
+  "parentW": 328,
+  "parentRight": 344,
+  "parentOverflowX": "visible",
+  "tableLayout": "auto",
+  "clippedCells": 10,
+  "totalCells": 20,
+  "maxCellRight": 487
+ },
+ {
+  "i": 3,
+  "tableW": 328,
+  "tableRight": 344,
+  "parentW": 328,
+  "parentRight": 344,
+  "parentOverflowX": "visible",
+  "tableLayout": "auto",
+  "clippedCells": 10,
+  "totalCells": 20,
+  "maxCellRight": 504
+ },
+ {
+  "i": 4,
+  "tableW": 328,
+  "tableRight": 344,
+  "parentW": 328,
+  "parentRight": 344,
+  "parentOverflowX": "visible",
+  "tableLayout": "auto",
+  "clippedCells": 10,
+  "totalCells": 20,
+  "maxCellRight": 514
+ }
+]
+=== desktop 1280px ===
+[
+ {
+  "i": 0,
+  "tableW": 703,
+  "tableRight": 1019,
+  "parentW": 703,
+  "parentRight": 1019,
+  "parentOverflowX": "visible",
+  "tableLayout": "auto",
+  "clippedCells": 0,
+  "totalCells": 20,
+  "maxCellRight": 1019
+ },
+ {
+  "i": 1,
+  "tableW": 703,
+  "tableRight": 1019,
+  "parentW": 703,
+  "parentRight": 1019,
+  "parentOverflowX": "visible",
+  "tableLayout": "auto",
+  "clippedCells": 0,
+  "totalCells": 20,
+  "maxCellRight": 1019
+ },
+ {
+  "i": 2,
+  "tableW": 703,
+  "tableRight": 1019,
+  "parentW": 703,
+  "parentRight": 1019,
+  "parentOverflowX": "visible",
+  "tableLayout": "auto",
+  "clippedCells": 0,
+  "totalCells": 20,
+  "maxCellRight": 1019
+ },
+ {
+  "i": 3,
+  "tableW": 703,
+  "tableRight": 1019,
+  "parentW": 703,
+  "parentRight": 1019,
+  "parentOverflowX": "visible",
+  "tableLayout": "auto",
+  "clippedCells": 0,
+  "totalCells": 20,
+  "maxCellRight": 1019
+ },
+ {
+  "i": 4,
+  "tableW": 703,
+  "tableRight": 1019,
+  "parentW": 703,
+  "parentRight": 1019,
+  "parentOverflowX": "visible",
+  "tableLayout": "auto",
+  "clippedCells": 0,
+  "totalCells": 20,
+  "maxCellRight": 1019
+ }
+]

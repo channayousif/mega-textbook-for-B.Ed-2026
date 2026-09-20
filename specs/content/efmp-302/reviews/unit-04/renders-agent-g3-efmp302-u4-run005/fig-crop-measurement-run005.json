@@ -1,0 +1,25 @@
+{
+  "before": {
+    "scrollLeft": 0,
+    "scrollWidth": 940,
+    "clientWidth": 328
+  },
+  "focused": {
+    "tag": "FIGURE",
+    "role": "region",
+    "label": "Scrollable figure, scroll sideways to see the whole diagram"
+  },
+  "afterArrows": 120,
+  "after": {
+    "scrollLeft": 120,
+    "scrollWidth": 940,
+    "clientWidth": 328
+  },
+  "caveat": {
+    "imgW": 940,
+    "imgH": 561,
+    "alt": "Table listing the ten National Professional Standards for Teachers in Pakistan, each with its focus and an example of classroom evidence, marked as a summary that directs the reader to the primary document."
+  },
+  "keyboard_scroll_worked": true,
+  "note": "ArrowRight scrolls the focused region; End does not move a horizontal scroller."
+}

@@ -1,0 +1,122 @@
+G3 run005 - independent assessment derivation, EFMP-302 Unit 4
+Reviewer run agent-g3-efmp302-u4-run005.
+
+METHOD. Per the parent's explicit instruction and the review skill, the ten MCQ stems were
+solved from the unit prose BEFORE any part of unit-assessment.mdx after line 176 was read, and
+before any prior G3 report for this unit was opened. Reading order of this session:
+  1. .claude/skills/review-unit/SKILL.md and references/g3.md
+  2. manifest verification (inputManifest recomputation)
+  3. index.mdx, topic-01..topic-04.mdx  (prose only)
+  4. unit-assessment.mdx lines 1-176  (stems and options only; the file's "## Answers and
+     marking guidance" section begins at line 177 and was NOT read at this point)
+  5. derivation below, written out with per-item locators
+  6. only then unit-assessment.mdx lines 177-320, then concepts/coverage/sources, then the
+     run-004 report.
+
+DERIVED MCQ KEYS, with the locator each was derived from.
+
+MCQ-01  b   "What does competent practice look like, in a checkable form?"
+        topic-01.mdx, "The concept of a professional standard, and what it is for":
+        "A **professional standard** answers *what does competent teaching look like, in a form
+        that can be checked?* It governs practice". Options a and c are the same passage's code
+        of conduct and curriculum.
+
+MCQ-02  d   "specific enough to be evidenced"
+        topic-01.mdx, same section, third feature: "**It is specific enough to be evidenced.**
+        'Be a good teacher' is not a standard." Options a and b are the other two features,
+        which the phrase does satisfy.
+
+MCQ-03  a   "applying a standard for a use it was not designed for"
+        topic-04.mdx, "What happens when a standard is used for a purpose it was not designed
+        for": "a framework and an instrument built for continuing development were repurposed
+        for accountability", tied back to topic-01's four uses.
+
+MCQ-04  c   "2009 by the Ministry of Education"
+        topic-02.mdx: "issued by the Ministry of Education, Government of Pakistan, in 2009,
+        developed with support from UNESCO and USAID". Distractor d ("2009 by UNESCO alone")
+        is excluded by "with support from"; a and b name wrong bodies and years.
+
+MCQ-05  b   "knowledge and understanding, dispositions, and performance and skills"
+        topic-02.mdx, "The three internal parts".
+
+MCQ-06  d   "Pupils volunteer answers, including incorrect ones, without prompting"
+        topic-02.mdx, the three attempted indicators: a is "not observable", b is named "a poor
+        indicator ... it measures a proxy", d is "observable, genuinely difficult to fake, and
+        closely tied to what the standard is about". Option c (seating plan) is new to the item
+        and is a document, not an observation of climate.
+
+MCQ-07  c   "a judgement formed first selects the evidence that confirms it"
+        topic-03.mdx, "Collect evidence of current practice. Before judging. ... because a
+        judgement formed first will select the evidence that confirms it."
+
+MCQ-08  a   "Planning documents"
+        topic-03.mdx: "**Planning documents.** Show intention and structure, and are the easiest
+        of all to produce without the underlying competence."
+
+MCQ-09  b   "is this person currently fit to practise?"
+        topic-04.mdx: "Certification asks *was this person prepared?* Licensing asks *is this
+        person currently fit to practise?* Appraisal asks *how is this person doing, and what
+        next?*" Options a and c are certification's and appraisal's questions.
+
+MCQ-10  c   "summative, because that is the version with consequences"
+        topic-04.mdx: "A teacher facing one document serving both will resolve the conflict
+        rationally, by treating it as summative, because that is the version with consequences."
+
+DERIVED SEQUENCE: b, d, a, c, b, d, c, a, b, c
+
+COMPARISON WITH THE SUPPLIED KEY (unit-assessment.mdx:179-196, read only after the above):
+  supplied: b, d, a, c, b, d, c, a, b, c
+  AGREEMENT 10 / 10. No discrepancy. No stem admits a second defensible answer; every
+  distractor is wrong for a reason the unit teaches explicitly.
+
+RRQ / ERQ CHECKS (derived, then compared with the schemes at :198-244 and the rubrics at :245+)
+
+  RRQ topic distribution, derived by mapping each stem to the topic that teaches it and
+  independently by joining the Topic and Assessment-item-IDs columns of
+  specs/content/efmp-302/concepts/unit-04.md. The two methods agree:
+      4.1  RRQ-02, RRQ-03, RRQ-04                = 3
+      4.2  RRQ-05, RRQ-06, RRQ-07                = 3
+      4.3  RRQ-08, RRQ-09                        = 2
+      4.4  RRQ-01, RRQ-10                        = 2
+    Total 10; >= 2 per topic, which is what content-spec.md:671 requires. The run-004 Topic 4.4
+    shortfall (1 item) is closed: RRQ-01 now asks what question certification, licensing and
+    periodic appraisal each ask, which is topic-04.mdx material, and the concept graph maps it
+    to CON:EFMP-302-4-14 and CON:EFMP-302-4-17, both Topic 4.4.
+
+  No concept lost its only assessor in the move. Every row of concepts/unit-04.md still carries
+  at least one item ID, and every cited ID resolves to a real item in the bank:
+    CON-4-14 keeps MCQ-09 and ERQ-05 beside RRQ-01; CON-4-17 keeps MCQ-09 beside RRQ-01.
+    The Topic 4.1 concepts RRQ-01 used to serve are all still assessed:
+    4-1 (MCQ-01, ERQ-01), 4-2 (MCQ-01, RRQ-02), 4-3 (MCQ-02), 4-4 (RRQ-02),
+    4-5 (MCQ-03, RRQ-03, ERQ-01), 4-6 (RRQ-04, ERQ-05).
+
+  MCQ topic distribution 4.1:3 (01,02,03), 4.2:3 (04,05,06), 4.3:2 (07,08), 4.4:2 (09,10):
+    >= 2 per topic, satisfied.
+  ERQ distribution: ERQ-01 4.1, ERQ-02 integrative (4.2), ERQ-03 4.2, ERQ-04 4.3, ERQ-05 4.4:
+    one per topic plus the integrative item, satisfied. ERQ-02 is the Analyze-or-higher item
+    the blueprint requires (described practice mapped to domains, appraisal consequence argued).
+
+  BLOOM DEMAND, classified from the thinking required rather than the printed verb.
+    Blueprint (content-spec.md, "Unit-end assessment blueprint"): MCQs Remember to Apply;
+    RRQs Understand to Analyze; ERQs Analyze to Evaluate/Create.
+    MCQs: printed labels are 3 Remember, 5 Understand, 2 Apply, which matches the file's own
+    blooms_summary. MCQ-06 is labelled Apply but the three options it discriminates are
+    evaluated verbatim in topic-02, so for a reader of that topic it is recall; MCQ-08 is
+    labelled Understand and is likewise a single-sentence recall. Both sit inside the
+    blueprint's Remember-to-Apply band either way, so this is descriptive, not a defect.
+    RRQs: RRQ-03 ("Name the four uses and state what each use requires"), RRQ-05 ("Describe the
+    three-level architecture") and RRQ-08 ("Name the five stations ... and identify the two
+    places it commonly breaks") are labelled *(Remember)* and are each answered by reciting a
+    list the unit prints verbatim. Three of ten therefore sit BELOW the blueprint's Understand
+    floor, and below the assessment file's own frontmatter claim "RRQs at Understand and
+    Analyze". Run 004 recorded four such items (RRQ-01, RRQ-03, RRQ-05, RRQ-08); RRQ-01 has
+    been raised, the other three have not. Carried as an unresolved uncertain finding.
+
+  RRQ-01's mark scheme (4 marks) matches its rewritten stem: three questions plus the
+  certification-does-not-expire / licensing-can-lapse contrast, which topic-04.mdx supports
+  ("usually awarded once" versus "time-limited and renewable").
+  RRQ-04's scheme still carries the protective instruction not to award a conclusion that one
+  document cannot hold both, which is consistent with the repaired topic-04 misconception box.
+  No conflicting key or criterion was found anywhere in the bank.
+  The five ERQ rubrics each give three populated performance bands, a bolded higher-order
+  criterion, and the "cannot exceed 10 overall" floor rule.

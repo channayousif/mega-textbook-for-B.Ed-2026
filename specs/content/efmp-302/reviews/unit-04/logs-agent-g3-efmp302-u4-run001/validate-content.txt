@@ -1,0 +1,3 @@
+$ npm run --silent validate:content
+✓ Content validation passed.
+EXIT_CODE=0

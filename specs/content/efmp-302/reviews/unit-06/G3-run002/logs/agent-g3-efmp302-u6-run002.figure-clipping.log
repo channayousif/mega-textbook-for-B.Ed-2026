@@ -1,0 +1,19 @@
+# Text-extent vs viewBox check (SVG inlined, measured with getBBox)
+
+fig-U6-1: viewBox 900x400 -> 0 text run(s) outside the viewBox
+
+fig-U6-2: viewBox 900x470 -> 1 text run(s) outside the viewBox
+   OVERFLOW right=905px (vb 900) bottom=93px (vb 470) :: "rules out: training away from the pupils you teach"
+
+fig-U6-3: viewBox 900x400 -> 0 text run(s) outside the viewBox
+
+fig-U6-4: viewBox 900x350 -> 0 text run(s) outside the viewBox
+
+fig-U6-5: viewBox 900x400 -> 1 text run(s) outside the viewBox
+   OVERFLOW right=917px (vb 900) bottom=381px (vb 400) :: "The highlighted row satisfies four of the six principles by its struct"
+
+fig-U6-6: viewBox 880x430 -> 0 text run(s) outside the viewBox
+
+fig-U6-7: viewBox 880x470 -> 0 text run(s) outside the viewBox
+
+fig-U6-8: viewBox 900x460 -> 0 text run(s) outside the viewBox

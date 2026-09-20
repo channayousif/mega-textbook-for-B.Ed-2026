@@ -1,4 +1,105 @@
 <!--
+SYNC IMPACT REPORT (v5.0.0)
+Version change: 4.2.0 -> 5.0.0
+Bump rationale: MAJOR, deliberately, and the choice is stated rather than left to be inferred.
+ADR-0025 was MINOR because it ADDED a publication state without relaxing anything. This
+REMOVES A PRECONDITION from an existing obligation: section 7 required "a validated report
+whose disposition is `pass`" before a unit could publish, and it no longer does. Art. XI.2
+defines MAJOR as a principle "removed or redefined in a way that invalidates existing specs",
+and Spec 006 FR-016a plus the tracker legend both encode review-before-publish. A MINOR bump
+on a relaxation of the publication bar would read badly later, so this is MAJOR.
+Modified: Article VII.7, rewritten to define two non-certified publication tiers - a new
+gate-checked tier that publishes on deterministic gate evidence alone under a "no reviewer has
+read this" notice, and the existing provisional tier, carried over unchanged in substance.
+Added: the requirement that gate-checked publication rests on a standing owner authorisation
+recorded in specs/decisions/log.md (Art. VII.1 does not delegate publication authority, so
+without this the tooling would authorise its own publications); the fail-loud requirement on
+the notice mechanism; the status/evidence-kind agreement rule; and an explicit exit condition
+tying the provision to the build-out of the 15 catalogued courses.
+Removed: the precondition that an agent review must have returned `pass` before publication.
+Reviewed and unchanged: sections 1-6 and 8 are carried over verbatim. Section 5's
+qualification requirements and the self-approval prohibition are untouched and still bind -
+neither tier certifies anything. Section 4's freshness rule still revokes both tiers on any
+input change. Article III.2's untranslated-banner obligation remains the standing precedent
+that a gap is disclosed to the reader rather than hidden. The practicing-teacher gate in the
+Article VII table is not discharged by either tier.
+Follow-ups: the unreviewed backlog has no age measure and no deadline; ADR-0026 records that
+as a known gap rather than solving it. Feature 014 T007/T008 remain the only path to
+certification.
+-->
+
+<!--
+SYNC IMPACT REPORT (v4.2.0)
+Version change: 4.1.0 -> 4.2.0
+Bump rationale: MINOR - a new Article VII section 8 delegates two gates that were previously
+undelegated. Nothing is redefined and no obligation is relaxed. Section 1 withholds
+course-intake approval "by this provision", i.e. from the G3/G5 review delegation; section 8
+grants it separately, on its own terms and with its own record. That is an addition, not a
+redefinition, which is what keeps this below a MAJOR.
+Added: Article VII.8 "Delegated gate evaluation (G0 intake and G1 unit-spec)". An evaluator
+agent may approve course intake and unit-spec where the course guide determines the answer,
+recording each approval in specs/decisions/log.md under a D-YYYY-NNNN code at
+pending-owner-review, for the owner to confirm or reverse in batches.
+Modified: nothing. Sections 1-7 are carried over verbatim.
+Removed: nothing.
+Reviewed and unchanged: section 5's qualification requirements and the self-approval
+prohibition bind the evaluator too - 8c restates them for this delegation rather than
+weakening them. Section 7's provisional publication is untouched and remains the only
+delegation of publication. The practicing-teacher gate and engineering controls stay
+undelegated entirely; no agent can dry-run a lesson with children. Article II.3 escalation is
+explicitly preserved in 8b: which external document is authoritative is a question about the
+world, and no evaluator may settle it.
+Follow-ups: the evaluator's qualification is NOT established by this amendment. Its approvals
+are recorded decisions awaiting owner confirmation, not certifications, and the registry and
+signing-host work in Feature 014 T007/T008 is unaffected.
+-->
+
+<!--
+SYNC IMPACT REPORT (v4.1.0)
+Version change: 4.0.0 -> 4.1.0
+Bump rationale: MINOR - a new Article VII section 7 adds a publication state that did not
+exist before. Nothing is redefined and no obligation is relaxed, which is what keeps this
+below a MAJOR. See ADR-0025.
+Added: Article VII.7 "Provisional publication". The owner may authorise publishing a unit on
+an independent agent's passing review, under a mandatory visible "Final Review Pending"
+notice, with a distinct tracker status that is explicitly not a done mark.
+Modified: nothing. Sections 1-6 are carried over verbatim.
+Removed: nothing.
+Reviewed and unchanged: section 5's qualification requirements and the self-approval
+prohibition still bind in full - provisional publication explicitly does NOT satisfy them,
+does not qualify a reviewer and does not certify anything. Section 6's transition rule is
+untouched: agent reviews remain advisory for CERTIFICATION, and section 7 governs only
+PUBLICATION, which section 1 already reserved to the owner and which the owner now delegates
+under notice. Article III.2's untranslated-banner obligation is the direct precedent for
+publishing with a disclosure rather than withholding content.
+Follow-ups: Feature 014 T007 (signing host) and T008 (qualification) remain the path to
+certification and are unaffected by this amendment.
+-->
+
+<!--
+SYNC IMPACT REPORT (v4.0.0)
+Version change: 3.0.0 -> 4.0.0
+Bump rationale: MAJOR - Article III.2's Urdu-parity obligation is redefined. Parity was a
+per-unit PUBLISH gate; it is now a CORPUS COMPLETION requirement. Existing specs that assumed
+no unit may go live without an accepted Urdu version are invalidated by this change, which is
+what makes it MAJOR rather than MINOR. See ADR-0022.
+Modified: Article III.2 only. The exemption, the reviewer-qualification requirements, the
+self-approval prohibition and the register rule are carried over verbatim.
+Added: the mandatory untranslated-banner obligation for English-only publication, and the
+explicit statement that this relaxes WHEN parity is owed and never WHETHER.
+Removed: nothing. No obligation is dropped; one is rescheduled.
+Reviewed and unchanged: Article VII's Content-gate row ("Urdu parity & register") still holds,
+since the gate checks parity wherever an Urdu version exists. Spec 001 FR-003 needs no
+amendment: it already specifies the English fallback and the "Urdu translation not yet
+available" banner this article now relies on. No .specify/templates file references parity.
+Updated: specs/content/style-guide.md (restates the publish rule; style guide -> v4.4).
+Follow-up: ADR-0022 is Proposed, not Accepted. If the owner rejects it, revert this amendment.
+Risk recorded in ADR-0022: Urdu debt accrues at corpus scale, carrying the single-reviewer G5
+bottleneck that Feature 017 has not yet lifted. One unit is translated early as a rate probe
+(specs/content/measurement-run-001.md) so the terminal phase is planned from measurement.
+-->
+
+<!--
 SYNC IMPACT REPORT (v3.0.0)
 Version change: 2.9.0 -> 3.0.0
 Bump rationale: MAJOR - redefines mandatory human Urdu review and exclusive human G3/G5
@@ -487,9 +588,19 @@ authors' preference; traceability makes accreditation review auditable.
    richer unit *structure* (e.g. the Spec 008 per-topic learning cycle) does not raise the
    *language* register - the plain-English ceiling is unchanged by it.
 2. **Urdu parity**: every student-facing unit MUST have a complete Urdu version accepted
-   through G5 before publish, **except units belonging to a course explicitly designated
-   English-only** (e.g. GENG-300 Functional English), flagged `bilingual: false` in
-   course-overview metadata. Machine translation MAY draft. G5 MUST be performed by a
+   through G5 **before the corpus is complete**, **except units belonging to a course
+   explicitly designated English-only** (e.g. GENG-300 Functional English), flagged
+   `bilingual: false` in course-overview metadata.
+
+   Parity is a **corpus completion requirement, not a per-unit publish gate** (ADR-0022). A
+   unit MAY publish English-only; when it does, the `ur` route MUST render the "Urdu
+   translation not yet available" banner already required by Spec 001 FR-003, so the gap is
+   stated to the reader rather than hidden. English-only publication is an acknowledged
+   interim state and MUST NOT be presented, in the product or its metadata, as a finished
+   bilingual unit. This relaxes *when* parity is owed, never *whether*: a corpus that ships
+   complete in English and incomplete in Urdu does not satisfy this article.
+
+   Machine translation MAY draft. G5 MUST be performed by a
    qualified human reviewer or an independently qualified review agent under Article VII.
    A translation cannot approve itself. Register: academic-plain (درسی مگر عام فہم),
    not literary/archaic. Structural parity alone is insufficient evidence of semantic parity.
@@ -671,6 +782,63 @@ Before any unit or feature is marked complete, all applicable gates MUST pass:
    this version bump alone MUST NOT mark G3/G5 done or change `translation_status`.
    This governance amendment does not alter the content quality standard's version or
    remove existing Article VI.1 obligations.
+7. **Publication without certification (ADR-0025, ADR-0026).** A unit MAY be published before it
+   is certified, in one of exactly two tiers, provided every reader-facing page of that unit
+   displays the notice its tier requires. Neither tier is certification.
+   1. **Gate-checked.** The unit's deterministic draft gates pass, evidenced by a valid G2
+      record whose input manifest still matches the published bytes, and **no reviewer has read
+      it**. Notice: **"Draft - expert review pending"**. Publishing in this tier requires a
+      standing authorisation from the curriculum owner, recorded in `specs/decisions/log.md`
+      under a decision code naming the courses it covers; section 1 does not delegate
+      publication authority, and an unrecorded authorisation is void.
+   2. **Provisional.** An independent agent review returned `pass` but carries no signed,
+      qualified certification. Notice: **"Final Review Pending"**. Its evidence reference MUST
+      identify a validated report whose disposition is `pass` and whose input manifest still
+      matches the published bytes.
+   The tracker row MUST record the tier's distinct status, never a done mark, and **the status
+   MUST agree with the kind of evidence referenced** - gate evidence with the done mark for a
+   draft stage, provisional evidence with the provisional mark, signed evidence with the done
+   mark. A mismatch is a defect, not a formatting preference: it is how an uncertified unit
+   silently presents as certified.
+   The absence of a review is permitted; **a broken claim of review is not.** A review row that
+   is present but whose evidence does not validate remains a gate failure.
+   The notice mechanism MUST fail loudly. A missing, malformed or stale publication-state record
+   MUST fail the build rather than resolve to no notice, and a tier the build does not recognise
+   MUST render the strongest notice rather than none. Where the notice is the only disclosure
+   that content is unreviewed, silently omitting it is the most consequential failure available.
+   Neither tier satisfies section 5, qualifies a reviewer, changes `translation_status`, or
+   discharges the practicing-teacher gate or any Article VI.1 obligation. A unit in either tier
+   remains outstanding work and MUST continue to appear in the review queue until certified. Any
+   change to the unit's inputs revokes its tier by invalidating its evidence, exactly as section
+   4 requires. The owner MAY withdraw a publication at any time without requalifying anything.
+   **Exit condition.** Tier (a) exists for the build-out of the currently catalogued courses.
+   When they are authored the owner MUST decide explicitly whether to keep, narrow or withdraw
+   it; a unit still in tier (a) at that point is reviewed or withdrawn. It does not become
+   permanent by default.
+
+8. **Delegated gate evaluation (G0 intake and G1 unit-spec).** An evaluator agent MAY approve
+   G0 course intake and G1 unit-spec for a course whose guide determines the answer, without
+   per-course human countersignature. Section 1 withholds course-intake approval from the
+   *review* delegation; this section grants it separately and on different terms.
+   1. **Recorded decisions.** Every approval MUST be recorded in `specs/decisions/log.md` under
+      a stable `D-YYYY-NNNN` code carrying the gate, the scope, the basis it rested on, the
+      digests of the inputs it was bound to, and a status of `pending-owner-review`. The owner
+      confirms or reverses in batches. An approval that is not recorded is void.
+   2. **Guide-determined only.** The evaluator MAY approve only what the course guide settles.
+      Anything the guide does not determine - an Article II.3 scheme/guide conflict, an absent
+      or unusable reading list, a unit partition the guide does not support - MUST be escalated
+      to `specs/gaps.md` and MUST NOT be decided.
+   3. **Independence and self-approval.** The evaluator MUST run separately from the session
+      that drafted the artefact it evaluates. It MUST NOT modify its inputs, the course guide,
+      the non-delegated boundary recorded in the decision log, or its own permissions, and it
+      MUST NOT approve a specification it wrote. Candidate output cannot authorize itself.
+   4. **Boundaries unchanged.** This section delegates G0 and G1 only. G3 and G5 remain governed
+      by sections 1 to 6; publication authority by sections 1 and 7; the practicing-teacher gate
+      and engineering controls are not delegated at all. An evaluator approval is not a review,
+      certifies no content, and qualifies no reviewer.
+   5. **Freshness and reversal.** An approval binds to the input digests it recorded. A change to
+      a bound input voids it, exactly as section 4 requires of review acceptance. A reversal
+      reopens the gate and never rewrites the original entry.
 
 ## Article VIII - Data Protection & Ethics
 
@@ -750,4 +918,4 @@ Engineering gate (the rest).
 
 ---
 
-**Version**: 3.0.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-09-11
+**Version**: 5.0.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-09-20

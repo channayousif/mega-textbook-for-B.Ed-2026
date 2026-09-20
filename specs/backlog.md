@@ -148,3 +148,28 @@ otherwise have been a tenth revision; apply them in one batch when the freeze li
   says `تشخیص`, e.g. "یونٹ کی سطح کی جانچ". The other 40 occurrences are the ordinary verb
   ("اپنی سمجھ جانچیں") and must not change, so this needs reading in context rather than a
   replace - a task for the owner's register pass.
+
+## Deferred from the EFMP-302 Units 4-6 G3 reviews, 2026-09-19
+
+- **Overflowing figures have keyboard access but no at-rest affordance.** Three reviewers raised
+  the ERQ-rubric and figure scroll question. Measuring at 360px settled it: the rubric tables were
+  already their own scroll containers, so the real defect was narrower than reported - no keyboard
+  access and no visual sign that content was off-screen. `markScrollableRegions` in
+  `src/theme/DocItem/Content.tsx` now marks both overflowing tables and figures as focusable named
+  regions, which closes the WCAG 2.1.1 half for both. The right-edge fade closes the affordance
+  half for tables only.
+
+  It was not extended to figures because the fade is a `background-attachment: local` gradient,
+  which paints *behind* the element's content. A table's cells are largely transparent so it shows
+  through; a figure holds an SVG with an opaque background rect that would cover it completely. A
+  pseudo-element overlay is the usual answer, but positioning one inside a horizontally scrolling
+  `<figure>` needs either a wrapper element injected after hydration or a `display: grid` change to
+  every figure on the site. Both are layout changes to shared components, and neither belongs in
+  the middle of a review cycle. Needs a design decision, then one change covering all figures.
+
+  Note the asymmetry that makes this advisory rather than blocking: a clipped diagram usually looks
+  clipped, whereas a clipped table can look like a complete table.
+- **RRQ mark weighting is recall-heavy in places.** Run 006 on Unit 4 noted that where an RRQ was
+  rewritten to add an Understand- or Analyze-level clause, the added clause often carries 1 mark of
+  6 to 8, so the score is still dominated by recall. Rebalancing the schemes is a bank-wide pass
+  across all reviewed units, not a per-unit repair, and belongs in the content-improvement loop.

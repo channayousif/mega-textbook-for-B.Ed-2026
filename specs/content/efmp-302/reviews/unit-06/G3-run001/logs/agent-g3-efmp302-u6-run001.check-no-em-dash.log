@@ -1,0 +1,14 @@
+### command: npm run check:no-em-dash
+### run_id: agent-g3-efmp302-u6-run001
+### cwd: /home/a2ahs/mega_book_for_B.Ed
+### git_head: ac13c5c3ca603ed07c649dc0e82c619189279265
+### started_at: 2026-09-18T20:53:17Z
+---
+
+> bed-mega-textbook@0.1.0 check:no-em-dash
+> node scripts/check-no-em-dash.mjs
+
+✓ no em dash in authored content (scanned: docs, licence, guides, i18n, specs/content, glossary.json)
+---
+### exit_code: 0
+### finished_at: 2026-09-18T20:53:17Z
