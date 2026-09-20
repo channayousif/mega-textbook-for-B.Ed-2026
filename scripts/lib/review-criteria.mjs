@@ -36,4 +36,5 @@ export const COMMANDS = ['validate:content', 'check:depth-gate', 'check:figures'
  * satisfies; requiring it here would be circular.
  */
 export const DRAFT_COMMANDS = ['validate:content', 'check:depth-gate', 'check:figures',
-  'check:concept-graph', 'check:no-em-dash', 'check:no-answer-keys', 'check:docs-sync'];
+  'check:concept-graph', 'check:bloom-bands', 'check:no-em-dash', 'check:no-answer-keys',
+  'check:docs-sync'];

@@ -85,8 +85,12 @@ function parseCsv(text) {
  * a key term matching either side conforms.
  */
 function acceptedTerms(termUr) {
+  // Split on the documented ` / ` separator, not a bare slash. A single term whose correct
+  // Urdu rendering contains a slash (a unit like m/s, a slash-joined compound) would
+  // otherwise be torn into two spurious "accepted" fragments and quietly widen what
+  // conforms, instead of failing loudly.
   return String(termUr ?? '')
-    .split('/')
+    .split(/\s+\/\s+/)
     .map((t) => t.trim())
     .filter(Boolean);
 }

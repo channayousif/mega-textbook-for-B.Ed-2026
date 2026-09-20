@@ -249,10 +249,16 @@ test('tracker routes each reference form to the matching evidence check', (t) =>
 
   // provisional: on G3 accepts the unsigned report
   assert.doesNotThrow(() => validateAgentTrackerRow(f.root, row('agent:g3-fixture', `provisional:${provisionalPath}`), 'EFMP-301', 1, 'G3'));
-  // auto:gates closes a draft stage, and ONLY a draft stage
+  // auto:gates closes a draft stage, and ONLY a draft stage. G4 is the one that mattered:
+  // acceptGateEvidence proves the ENGLISH draft gates passed and binds the G3 English input
+  // manifest, so a `G4 ur-translation` row pointing at the unit's existing G2 file would have
+  // certified a translation with evidence that never looked at any Urdu. check-pipeline-gate
+  // validates G4 (stagePrefix.slice(0,2)), so this was reachable, not theoretical.
   assert.doesNotThrow(() => validateAgentTrackerRow(f.root, row('auto:gates', `gates:${gatesPath}`), 'EFMP-301', 1, 'G2'));
-  assert.throws(() => validateAgentTrackerRow(f.root, row('auto:gates', `gates:${gatesPath}`), 'EFMP-301', 1, 'G3'),
-    /needs a reviewer/);
+  for (const stage of ['G3', 'G4', 'G5']) {
+    assert.throws(() => validateAgentTrackerRow(f.root, row('auto:gates', `gates:${gatesPath}`), 'EFMP-301', 1, stage),
+      /certifies G2 only/, `gate evidence must not close ${stage}`);
+  }
   // an agent identity still cannot certify a draft stage
   assert.throws(() => validateAgentTrackerRow(f.root, row('agent:g3-fixture', `provisional:${provisionalPath}`), 'EFMP-301', 1, 'G2'),
     /draft stage/);
