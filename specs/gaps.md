@@ -703,4 +703,25 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   would benefit from the rule change, and re-validating one's own just-invalidated review by
   editing the evidence layer is the move the independence rules exist to prevent. Restoring green
   was done the rules-following way instead: G2 evidence regenerated, G3 tier revoked.
+- **Independent assessment, 2026-09-20** (Antigravity, gemini-3.1-pro-high, agy conversation
+  `4601a7a4`, asked adversarially and explicitly told that "do not narrow" was an acceptable
+  answer). It **rejected option (a)** and proposed a better fix. All four of its load-bearing
+  claims were checked against the repository and hold:
+  - **The proposal's central factual claim is false.** `CRITERIA.G3` *does* contain a criterion
+    that can rest on an Urdu figure: `g3.md:49-51` requires the reviewer to "check that a learner
+    can recover each figure's instructional meaning" and to "record inspected render artifacts".
+    Nothing in `check-figures.mjs` forbids an English carrier from pointing its `src` at a
+    `.ur.svg`, so if one ever did, option (a) would unbind the very asset the G3 accessibility
+    review inspected. That is a blind spot, not a saving.
+  - **The ADR-0027 analogy is stretched.** `terminology.csv` was narrowed largely because one
+    shared file invalidated ~90 units across the corpus. Figure assets are already unit-scoped,
+    so the blast radius here is one unit and the precedent's main justification does not carry.
+  - **Better option (d), with its own precedent in the same ADR.** ADR-0027 line 44 already
+    establishes "`sources/texts/<key>.md` binds to a unit iff that unit cites `<key>`", and the
+    machinery exists: `inScope()` takes `citedKeys` and `citedKeysFor()` is wired at
+    `review-evidence.mjs:275`. Apply the identical rule to figures: **bind a figure asset iff the
+    unit actually references it.** An unreferenced `.ur.svg` then stops invalidating the English
+    review, while any figure a unit does render stays bound at every stage. This fixes the cycle
+    cost without opening the blind spot.
+- **Recommended:** option (d), not (a). Option (a) as originally written should not be adopted.
 - **Blocks:** Unit 2's provisional tier, and the same for every unit translated hereafter.
