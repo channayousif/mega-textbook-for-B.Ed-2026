@@ -6,7 +6,7 @@
     "G0",
     "G1"
   ],
-  "commit": "778b76e77c50627d2c655aa98d308feb2ed4b8d5",
+  "commit": "9378a24202e5324296d22490663ac64541988de1",
   "constitution": "Article VII.8",
   "input_manifest": {
     ".claude/agents/evaluator.md": "81a714fe4521bdb16089f2e8bfea2ef5153a92b284c92fa584b1bb22de4cc1f6",
@@ -60,11 +60,13 @@
     "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
     "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
     "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
-    "specs/content/efmp-304/content-spec.md": "08d0aa5fa81345d3a85a7ebe936e49bfab682d70fba4d427324ecdd0df547004",
+    "specs/content/efmp-304/content-spec.md": "b55112847688a61d260a2d085a504472753b94dd68d133036c44b0dc08a56305",
     "specs/content/style-guide.md": "db96c9b33b0fb9522986462a0b519620c3c1d7602a046d7b90e638f643da4610",
-    "specs/content/terminology.csv": "ad917e28cde688eb72bd92226c2326e2d23da3da80fc53ea8c812b1a47f73337",
-    "specs/decisions/log.md": "f274758326c7599f3650f4298fdd31c6b433d44538ee462cfa58cf364941aa01",
-    "specs/gaps.md": "32a4956a95bbe056993382e5781995694c65d4251990c2d8a91724a0e1f06f0b"
+    "specs/content/terminology.csv": "ad917e28cde688eb72bd92226c2326e2d23da3da80fc53ea8c812b1a47f73337"
   },
-  "manifest_digest": "94eee898b92dc0c1bc9845fc06afe60629456bd35c0ff667ac04bfb142efd769"
+  "manifest_digest": "e840bbfffec5bf0da9995785244f65df1e913315cd8f803492147234026b62d4",
+  "registers": {
+    "specs/decisions/log.md": "20d68b34d784458976e623d719b11a81d25644a194e6b344c712df1d0dca9106",
+    "specs/gaps.md": "6925fc64e484ddecf9dee74fd4f6833d7eadc4b590603c419dcb031c72cf9ebe"
+  }
 }

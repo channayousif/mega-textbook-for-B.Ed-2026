@@ -343,3 +343,158 @@ which is the correct outcome: none is determined by the course guide.
 - **Note:** this is recorded rather than silently fixed because it is the class of defect that
   matters most in a governance tool - a criterion that cannot reach its own evidence still
   reports a verdict.
+
+---
+
+## Intake evaluation, EFMP-304 (2026-09-20)
+
+Raised by the intake evaluator (Constitution Art. VII.8) against the frozen bundle at commit
+`778b76e`, manifest `specs/content/efmp-304/intake/manifest.json`, manifest digest
+`94eee898b92dc0c1bc9845fc06afe60629456bd35c0ff667ac04bfb142efd769` (56 inputs, recomputed with
+`manifestFor()` and matching the bundle exactly). The evaluator's record is at
+`specs/content/efmp-304/intake/evaluation.md`. Both items below are recorded rather than decided:
+neither is determined by the course guide, and Art. VII.8.2 names both classes explicitly.
+
+## G-2026-13 - EFMP-304 has no guide week schedule, but the content-spec contract requires the section
+
+- **Status:** open (awaiting owner decision)
+- **Criterion:** `partition` (G0 intake / G1 unit-spec).
+- **Detail:** The EFMP-304 guide block
+  (`Scheme-and-Course-guides/extracted-text/2nd 2026.txt:609-756`) carries a course description,
+  six course outcomes, a six-unit topic outline, a reading list and a marks table. It carries
+  **no week table of any kind**. `specs/007-content-depth-standard/contracts/content-spec-v2.md:43`
+  nonetheless makes `## Week schedule` a required course-level section, and
+  `specs/008-rich-unit-pedagogy/contracts/content-spec-v3.md:115` carries it forward as a section
+  the human Content gate reads.
+
+  `specs/content/efmp-304/content-spec.md:130-147` supplies one, marked "Derived, not guide-given"
+  and described as proportional to sub-topic count and technical density. It allocates a
+  **16-week** term as 3/2/3/3/2/3 weeks across Units 1 to 6, and each `## Unit N` subsection
+  repeats its band on its first line (`:201`, `:324`, `:418`, `:517`, `:611`, `:711`).
+
+  Two things are undetermined, not one. First, the **term length**: nothing in the bundle states
+  that an EFMP-304 term is 16 weeks. Second, the **distribution**: Unit 3 is given three weeks for
+  four sub-topics while Unit 5 is given two weeks for five, on a density judgement the guide gives
+  no basis for. The spec is candid that this is a judgement and asks for it to be escalated if the
+  evaluator agrees; the evaluator does agree. The unit partition itself is guide-determined and is
+  approved separately under `D-2026-0006`; only the calendar is at issue here.
+
+- **Needed, and from whom:** the curriculum owner, to state the term length EFMP-304 is taught
+  over and either to confirm the proposed 3/2/3/3/2/3 distribution or to supply another; or,
+  alternatively, to direct that `## Week schedule` be recorded as guide-silent for this course in
+  the manner Art. III.6 uses for the optional enrichment sections, in which case the contract's
+  requirement needs amending rather than filling.
+- **Blocks:** `## Week schedule` and the "Weeks N-M" line opening each of the six `## Unit N`
+  subsections. Nothing else: `D-2026-0006` and `D-2026-0007` are written to exclude the calendar.
+
+## G-2026-14 - EFMP-304's entire guide reading list is print-only, and Units 1 to 3 rest on one unopenable book
+
+- **Status:** open (awaiting owner decision)
+- **Criterion:** `readings` (G0 intake).
+- **Detail:** The guide lists seven works at
+  `Scheme-and-Course-guides/extracted-text/2nd 2026.txt:720-741`. All seven are **monographs**.
+  None carries a DOI, none is open access, and none served its text to this host. Every one of the
+  seven nonetheless **resolves to a real work**, which the evaluator checked against Open Library
+  on 2026-09-20 (an external registry, not a bound input):
+
+  | Key | Resolves | Guide's record | Correction in the spec |
+  |---|---|---|---|
+  | bassham2010 | Bassham, Irwin, Nardone & Wallace, McGraw-Hill, 4th ed. 2010 | correct | edition added |
+  | jasper2003 | Jasper, Nelson Thornes, 2003 | correct | none |
+  | boud2013 | Boud, Keogh & Walker, Routledge 2013 (orig. Kogan Page 1985) | correct | editors and 1985 origin added |
+  | pendrey2022 | Pendrey, Routledge / Taylor & Francis, 2022 | correct | none |
+  | brookfield2017 | Brookfield, Jossey-Bass / Wiley, 2017 (2nd ed.; 1st 1995) | correct | edition and imprint added |
+  | osterman2004 | Osterman & Kottkamp, **Corwin Press**, 2004 | "Thousand Oaks, CA: Crown" | publisher corrected |
+  | taggart2005 | Taggart & Wilson, **Corwin Press**, 2005 | "Thousand Oaks, CA: Crown" | publisher corrected |
+
+  The spec's claim at `specs/content/efmp-304/content-spec.md:101-102` and `:826-828` that the
+  guide's "Crown" is a slip for Corwin Press is therefore **confirmed**, for both entries. That is
+  recorded here for the owner's information and needs no decision: no bibliographic fact is in
+  dispute.
+
+  What needs a decision is **usability**. Article VII.8.2 requires an evaluator to escalate "an
+  absent or unusable reading list" rather than decide it, and three findings bear on usability:
+
+  1. **Units 1 to 3 are single-sourced on a book the host cannot open.**
+     `content-spec.md:271`, `:375` and `:470` each map their whole unit to `bassham2010` alone.
+     `D-2026-0001` permits an unretrievable source to be flagged and passed, but its Limits bind
+     the author to what the declaration supports. The spec states the consequence itself at
+     `:104-109`: title-level support "is not enough to carry the specific claims Units 1 to 3
+     need (a named list of critical-thinking standards, named deductive patterns, a
+     validity/strength distinction)". Those are the load-bearing claims of three of the six units.
+  2. **`pendrey2022` is scoped against the guide's own stated audience.** The guide states twice
+     that the course is for secondary teachers (`:632-633` "prospective secondary school
+     teachers"; `:665` "at the secondary school level") and then requires a reading whose subtitle
+     is "A practical guide to the early years" (`:730`). The spec confines it to method only
+     (`:99`, `:567`, `:765`), which is a sound authoring discipline, but whether a guide-required
+     reading may be used against the audience the same guide names is a question the guide does
+     not answer, because the guide is where the tension sits.
+  3. **The spec's remedy is a rule the guide does not contain.** `:118-128` sets a binding G2
+     floor: Units 1 to 3 must each bind at least two verifiable open-access sources before
+     authoring, Units 4 to 6 at least one, resolved through Crossref, OpenAlex, ERIC or DOAJ. The
+     evaluator judges the floor **well designed and insufficient as a substitute for a decision**.
+     It is well designed because it refuses to pre-write citations, which is what produced
+     EFMP-302's `sources` failures. It is not a substitute because it converts a guide-level
+     problem into an authoring obligation that no gate enforces, and because `D-2026-0005`
+     (confirmed 2026-09-20) now holds ADR-0019's two-cycle repair limit with no blanket waiver.
+     The spec's own risk note at `:109` says this is "the same failure mode that cost EFMP-302
+     seven G3 cycles". Under `D-2026-0005` those seven cycles are no longer available, so a unit
+     that reaches G3 under-sourced has two cycles and then routes to the content-improvement loop.
+
+- **Needed, and from whom:** the curriculum owner, to decide (a) whether the seven print
+  monographs constitute a usable basis for authoring EFMP-304 as they stand, or whether copies of
+  `bassham2010` in particular must be obtained before Units 1 to 3 are drafted; (b) whether the
+  proposed G2 open-access floor is adopted as a binding requirement, adopted with different
+  numbers, or declined; and (c) whether `pendrey2022` is used method-only as the spec proposes, is
+  set aside for this course, or is replaced.
+- **Blocks:** `## Reading list` in full, and the `**Mapped readings**` line of every unit.
+  Criterion 5 is **not approved**, and `D-2026-0007` is written to exclude it.
+
+## G-2026-15 - Recording an intake decision invalidates the manifest that decision binds to
+
+- **Status:** **resolved** (developer fix, 2026-09-20)
+- **Fix:** `intakeRoots()` no longer binds `specs/decisions/log.md` or `specs/gaps.md`. They move
+  to a separate `registers` field on the manifest, which records their digests at read time so an
+  auditor can still see exactly what the evaluator read, but which does not bear on freshness.
+  The principle is **bind what you do not write**: an evaluator reads those registers *and*
+  records its result in them, so binding them made every approval void its own manifest the
+  moment it was written. G3 review is the opposite case and keeps them bound in `manifestRoots()`,
+  because a reviewer reads those rulings and never writes to them - that binding was added for a
+  real reason (Unit 6's run-007 finding A1) and is unaffected.
+- **Note:** this is the second bundle defect found by an evaluator on its own inputs, after
+  G-2026-12. Both were found only by running the thing for real, which is the argument for the
+  shadow-then-live sequence rather than either alone.
+- **Criterion:** none. This is a defect in the intake bundle, raised against the tool, in the
+  manner `G-2026-12` was.
+- **Detail:** `intakeRoots()` in `scripts/prepare-intake-evidence.mjs:38-53` binds
+  `specs/decisions/log.md` and `specs/gaps.md`. `bound()` in `scripts/lib/review-evidence.mjs`
+  excludes `/reviews/`, `/intake/`, `tasks.md` and `/.staging/` so that "recording a result does
+  not invalidate the evidence it rests on", and commit `778b76e` added `/intake/` for exactly that
+  reason. **It does not exclude the two registers.**
+
+  For G3/G5 that is correct: a reviewer reads `specs/decisions/log.md` and never writes to it. For
+  intake evaluation it is not, because `.claude/skills/evaluate-intake/SKILL.md` **requires** the
+  evaluator to append its approval to `specs/decisions/log.md` and its escalations to
+  `specs/gaps.md`. The required act therefore voids the digests the approval binds to. Measured on
+  this run, immediately after recording `D-2026-0006`, `D-2026-0007`, `G-2026-13` and `G-2026-14`:
+
+  ```
+  bound inputs whose digest now differs from the frozen manifest:
+    [ 'specs/decisions/log.md', 'specs/gaps.md' ]
+  newly bound paths not in the frozen manifest: (none)
+  ```
+
+  The other 54 of 56 inputs are unchanged. This did not surface on the EFMP-302 run because that
+  run was shadow and wrote nothing; this is the first live run.
+
+  The consequence is not cosmetic. Art. VII.8.5 makes an approval void when a bound input changes,
+  so as it stands every intake approval is void the instant it is recorded, and a later reader
+  cannot distinguish "the spec's guide was edited under this approval" from "the evaluator wrote
+  the approval down".
+- **Suggested fix:** exclude `specs/decisions/log.md` and `specs/gaps.md` from the intake bundle's
+  bound set, or, better, bind them by the commit they were read at rather than by content digest,
+  so that an owner ruling landing after the evaluation still visibly invalidates it while the
+  evaluator's own record does not. The two exclusion lists in `review-evidence.mjs` and
+  `prepare-intake-evidence.mjs` must stay identical, which is what `778b76e` established.
+- **Blocks:** nothing substantive. `D-2026-0006` and `D-2026-0007` each carry a note pointing here
+  so a reader checking their digests knows why two of 56 differ.

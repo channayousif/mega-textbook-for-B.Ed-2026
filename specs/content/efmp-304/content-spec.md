@@ -29,7 +29,7 @@ them, so there is no Art. II.3 conflict to escalate.
 
 ## Course-wide items
 
-- **Course Learning Outcomes** (guide lines 646-663, paraphrased for the spec record only, never
+- **Course Learning Outcomes** (guide lines 651-675, paraphrased for the spec record only, never
   reproduced into learner-facing content):
   1. Demonstrate the attributes of critical thinkers and reflective practitioners in professional
      teaching contexts.
@@ -85,7 +85,7 @@ Two consequences for authoring, both load-bearing:
 
 ## Reading list
 
-Full references for the guide's "Text Books and References" (lines 724-741). `Key` is the citation
+Full references for the guide's "Text Books and References" (lines 720-741). `Key` is the citation
 key used in each unit's `sources/unit-NN.md`. `Units` tags which unit(s) each source supports.
 Cited by reference only - never reproduced (Constitution Art. III.5, Spec 006 FR-010).
 
@@ -108,7 +108,7 @@ the specific claims Units 1 to 3 need (a named list of critical-thinking standar
 deductive patterns, a validity/strength distinction). This is the single biggest risk on this
 course and it is the same failure mode that cost EFMP-302 seven G3 cycles.
 
-### Curated-supplementary - to be bound at G2, not asserted here
+### Curated-supplementary (open access) - to be bound at G2, not asserted here
 
 **Deliberately empty.** No citation is listed in this section because none has been verified from
 this host, and inventing DOIs is exactly what produced EFMP-302's `sources` failures. Recording a
@@ -222,8 +222,11 @@ Weeks 1-3. Unit Spec (G1) for `docs/semester-2/efmp-304/unit-01/`.
 ### Sub-topic checklist
 
 The authoritative list the depth gate (`scripts/check-unit-depth.mjs`) grades
-`specs/content/efmp-304/coverage/unit-01.md` against (Spec 007 FR-009a). One row per leaf bullet
-of course-guide sections 1.1-1.8. IDs are stable once assigned.
+`specs/content/efmp-304/coverage/unit-01.md` against (Spec 007 FR-009a). One row per leaf item
+of course-guide sections 1.1-1.8. Several guide bullets name more than one thing (1.1 names
+thinking as a skill *and* the functions of thought; 1.4 names three settings; 1.6 names four
+terms), so this is a **documented decomposition** of 32 guide items into 44 rows, not a
+transcription. IDs are stable once assigned.
 
 | ID | Guide ref | Topic | Sub-topic |
 |---|---|---|---|
@@ -314,10 +317,15 @@ in the unit - Constitution Art. III.10; seeds `specs/content/efmp-304/figures/un
   - MCQs (10): Remember to Apply; >= 2 per topic across 1.1 to 1.5
   - RRQs (10): Understand to Analyze; >= 2 per topic; each with a model answer and a
     point-by-point mark scheme in `## Answers and marking guidance`
-  - ERQs (5): Analyze to Evaluate/Create; one per topic plus one integrative item asking the
-    learner to take a single piece of staffroom reasoning and evaluate it against the standards,
-    name the barrier it shows, and separate its claims from its arguments; each ERQ carries an
-    analytic rubric, >= 1 demanding Analyze-or-higher
+  - ERQs (5): Analyze to Evaluate/Create; **exactly one per topic across 1.1 to 1.5**, and the
+    Topic 1.5 item doubles as the integrative one - taking a single piece of staffroom reasoning
+    and evaluating it against the standards, naming the barrier it shows, and separating its
+    claims from its arguments. This unit has five topics, so there is no room for a sixth
+    integrative item against a bank of exactly five (`style-guide.md` "exactly 5"); Units 2 to 6
+    have four topics and carry the integrative item separately. Each ERQ carries an analytic
+    rubric, >= 1 demanding Analyze-or-higher.
+    Note the MCQ and RRQ floors are exactly saturated here too: five topics at two per topic is
+    ten, so every item is spoken for and none may be spent on a topic twice.
 
 ## Unit 2: Recognizing and Analyzing Arguments
 
@@ -341,7 +349,7 @@ Weeks 4-5. Unit Spec (G1) for `docs/semester-2/efmp-304/unit-02/`.
 
 ### Sub-topic checklist
 
-One row per leaf bullet of course-guide sections 2.1-2.5.
+One row per leaf item of course-guide sections 2.1-2.5.
 
 | ID | Guide ref | Topic | Sub-topic |
 |---|---|---|---|
@@ -434,7 +442,7 @@ Weeks 6-8. Unit Spec (G1) for `docs/semester-2/efmp-304/unit-03/`.
 
 ### Sub-topic checklist
 
-One row per leaf bullet of course-guide sections 3.1-3.4. This unit has the fewest bullets and the
+One row per leaf item of course-guide sections 3.1-3.4. This unit has the fewest bullets and the
 densest content per bullet, which the week allocation reflects.
 
 | ID | Guide ref | Topic | Sub-topic |
@@ -534,7 +542,7 @@ Weeks 9-11. Unit Spec (G1) for `docs/semester-2/efmp-304/unit-04/`.
 
 ### Sub-topic checklist
 
-One row per leaf bullet of course-guide sections 4.1-4.5.
+One row per leaf item of course-guide sections 4.1-4.5.
 
 | ID | Guide ref | Topic | Sub-topic |
 |---|---|---|---|
@@ -620,7 +628,7 @@ Weeks 12-13. Unit Spec (G1) for `docs/semester-2/efmp-304/unit-05/`.
   and the frameworks and models available.
 
   **Flagged for the evaluator - a within-guide numbering slip.** The guide numbers **5.4 twice**
-  (lines 714 and 716): "Knowing ourselves as a practitioner" and "Frameworks/Models for
+  (lines 709 and 710): "Knowing ourselves as a practitioner" and "Frameworks/Models for
   Reflection". No second document conflicts, so this is an internal slip rather than an Art. II.3
   discrepancy. This spec carries the second as a distinct sub-topic (`U5-05`) under guide ref
   `5.4b`, changing nothing about scope. Under the evaluator skill's `partition` criterion this is
@@ -636,7 +644,7 @@ Weeks 12-13. Unit Spec (G1) for `docs/semester-2/efmp-304/unit-05/`.
 
 ### Sub-topic checklist
 
-One row per leaf bullet of course-guide sections 5.1-5.4, including the repeated 5.4.
+One row per leaf item of course-guide sections 5.1-5.4, including the repeated 5.4.
 
 | ID | Guide ref | Topic | Sub-topic |
 |---|---|---|---|
@@ -732,7 +740,7 @@ Weeks 14-16. Unit Spec (G1) for `docs/semester-2/efmp-304/unit-06/`.
 
 ### Sub-topic checklist
 
-One row per leaf bullet of course-guide sections 6.1-6.5.
+One row per leaf item of course-guide sections 6.1-6.5.
 
 | ID | Guide ref | Topic | Sub-topic |
 |---|---|---|---|
@@ -814,7 +822,7 @@ Three items, recorded rather than decided, per Constitution Art. VII.8.2:
 1. **The week schedule is derived, not guide-given.** The guide carries no week table. The
    distribution in `## Week schedule` is proportional to sub-topic count and technical density.
    If that is a judgement the guide does not determine, escalate it.
-2. **The guide numbers 5.4 twice** (lines 714 and 716). This spec carries the second as `U5-05`
+2. **The guide numbers 5.4 twice** (lines 709 and 710). This spec carries the second as `U5-05`
    under guide ref `5.4b`, with no change of scope. It is a within-guide slip with no second
    document in conflict, which the `partition` criterion permits an evaluator to resolve under a
    `D-` code.
