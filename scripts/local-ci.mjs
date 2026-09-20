@@ -26,7 +26,7 @@
  * deploy-prod.sh's fallback, which is itself hard-expired - see EXPIRES below.
  */
 import { spawnSync, execFileSync } from 'node:child_process';
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { readFileSync, readdirSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { homedir } from 'node:os';
 import { createHash } from 'node:crypto';
@@ -81,6 +81,33 @@ function loadDotEnv() {
   }
 }
 
+/**
+ * Steps that PROVISION the runner rather than check the repository.
+ *
+ * `playwright install --with-deps` installs OS packages and needs root, which a
+ * non-interactive local run does not have. The browsers it would install are
+ * already present here, which is why the e2e suite runs at all.
+ *
+ * This is the one place where local CI does less than CI, so it is narrow, named,
+ * and RECORDED IN THE ATTESTATION as exempt rather than passed. A runner that
+ * silently skipped steps would produce the same green tick with less behind it,
+ * which is the failure this whole script exists to avoid - so the attestation
+ * says 25 executed and 1 exempt, never 26 passed.
+ *
+ * The guard is not blind: an exemption only applies if its precondition actually
+ * holds. If the browsers are missing, the step runs and is allowed to fail.
+ */
+const PROVISIONING_EXEMPTIONS = [
+  {
+    match: /playwright install/,
+    reason: 'installs OS packages as root; chromium already present in ~/.cache/ms-playwright',
+    satisfied: () => existsSync(join(homedir(), '.cache', 'ms-playwright'))
+      && readdirSync(join(homedir(), '.cache', 'ms-playwright')).some((d) => d.startsWith('chromium-')),
+  },
+];
+
+const exemptionFor = (step) => PROVISIONING_EXEMPTIONS.find((e) => e.match.test(step.run) && e.satisfied());
+
 const steps = ciSteps();
 if (listOnly) {
   console.log(`${steps.length} step(s) from .github/workflows/ci.yml:\n`);
@@ -108,6 +135,15 @@ let failed = 0;
 for (const [i, step] of steps.entries()) {
   const label = `${String(i + 1).padStart(2)}/${steps.length}  [${step.job}] ${step.name}`;
   process.stdout.write(`${label.padEnd(72).slice(0, 72)} `);
+
+  const exempt = exemptionFor(step);
+  if (exempt) {
+    console.log('EXEMPT');
+    console.log(`        ${exempt.reason}`);
+    results.push({ job: step.job, name: step.name, exempt: true, reason: exempt.reason });
+    continue;
+  }
+
   const started = Date.now();
   const res = spawnSync('bash', ['-lc', step.run], {
     cwd: ROOT,
@@ -133,7 +169,9 @@ if (failed) {
   process.exit(1);
 }
 
-console.log(`\n✓ All ${steps.length} steps passed.`);
+const exemptCount = results.filter((r) => r.exempt).length;
+console.log(`\n✓ ${steps.length - exemptCount} step(s) passed`
+  + (exemptCount ? `, ${exemptCount} exempt (provisioning already satisfied on this host).` : '.'));
 if (noAttest) process.exit(0);
 
 if (new Date().toISOString().slice(0, 10) >= EXPIRES) {
