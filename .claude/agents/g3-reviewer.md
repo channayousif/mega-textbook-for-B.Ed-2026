@@ -1,7 +1,6 @@
 ---
 name: g3-reviewer
 description: Independently review frozen English B.Ed unit inputs at G3 and return evidence-backed findings.
-tools: Read, Glob, Grep, Bash, Write
 skills:
   - review-unit
 ---

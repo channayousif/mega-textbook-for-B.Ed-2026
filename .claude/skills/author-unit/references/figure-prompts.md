@@ -2,8 +2,9 @@
 
 Teaching figures are planned now as **inline MDX comments** and tracked in a per-unit manifest.
 **Nothing renders yet** - the `generate-figures` skill (Spec 009) is the separate rendering pass:
-it classifies each marker by archetype, hand-authors the schematic ones as SVG (and routes an
-`illustration` through the Hugging Face MCP raster tool), optimises the asset, **replaces** the
+it classifies each marker by archetype and hand-authors the schematic ones as SVG. Under
+ADR-0024, Claude leaves an `illustration` as a complete prompt-only handoff for Codex, which
+generates, inspects, optimises and places the raster. The rendering workflow **replaces** the
 marker with a `<Figure>` element, mirrors it into the Urdu topic file, and moves the manifest
 row `prompt-only → generated → placed`. That is **not this skill's job** - author-unit stops at
 **≥ 2 good markers per topic** (with a planned archetype each) + matching `Status: prompt-only`
@@ -43,7 +44,9 @@ A concrete image-generation instruction, in this order:
 2. **Subject** - exactly what the figure shows. Prefer the topic's contrast pair: "comparison
    table, three columns (government-school teacher, shopkeeper, doctor) × four rows (specialised
    knowledge, formal training, code of conduct, public accountability), ticks and crosses".
-3. **Style** - always: `clean flat vector, labelled, high contrast, no colour-only meaning`.
+3. **Style** - for schematics: `clean flat vector, labelled, high contrast, no colour-only
+   meaning`. For an `illustration`, specify the medium, composition, cultural setting and
+   teaching action; avoid readable text, logos and watermarks unless exact text is essential.
 4. **Aspect** - `landscape` / `portrait` / `square` as fits a handout.
 
 Good: `two-panel split illustration, landscape: left panel a row of silent pupils copying from

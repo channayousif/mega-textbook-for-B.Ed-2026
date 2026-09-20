@@ -5,7 +5,7 @@ import { join, dirname } from 'node:path';
 import { tmpdir } from 'node:os';
 import { generateKeyPairSync, sign } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
-import { CRITERIA, COMMANDS, inputManifest, dirtyInputs, skillDigest, digest, validateReport, acceptReport, validateAgentTrackerRow } from '../../scripts/lib/review-evidence.mjs';
+import { CRITERIA, COMMANDS, DRAFT_COMMANDS, inputManifest, dirtyInputs, skillDigest, digest, validateReport, acceptReport, acceptProvisionalReport, acceptGateEvidence, validateAgentTrackerRow } from '../../scripts/lib/review-evidence.mjs';
 
 /** Entry validators the manifest binds, mirroring REVIEW_ENTRY_SCRIPTS. */
 const REVIEW_SCRIPTS = ['scripts/validate-content.mjs', 'scripts/check-pipeline-gate.mjs', 'scripts/check-unit-depth.mjs',
@@ -23,7 +23,7 @@ function fixture(t) {
   write(en, '---\ntranslation_status: draft\n---\nEnglish fixture.\n');
   write(ur, '---\ntranslation_status: draft\n---\nUrdu fixture.\n');
   write('docs/semester-1/efmp-301/course-overview.mdx', '---\nbilingual: true\n---\n');
-  for (const path of ['specs/content/style-guide.md', 'specs/content/terminology.csv', '.specify/memory/constitution.md', 'specs/content/efmp-301/content-spec.md', '.claude/skills/review-unit/SKILL.md', '.claude/skills/review-unit/references/g3.md', '.claude/skills/review-unit/references/g5.md', '.claude/agents/g3-reviewer.md', '.claude/agents/g5-reviewer.md']) write(path, `Synthetic test input ${path}\n`);
+  for (const path of ['specs/content/style-guide.md', 'specs/content/terminology.csv', '.specify/memory/constitution.md', 'specs/decisions/log.md', 'specs/content/efmp-301/content-spec.md', '.claude/skills/review-unit/SKILL.md', '.claude/skills/review-unit/references/g3.md', '.claude/skills/review-unit/references/g5.md', '.claude/agents/g3-reviewer.md', '.claude/agents/g5-reviewer.md']) write(path, `Synthetic test input ${path}\n`);
   write('specs/reviewers/qualification.json', '{"synthetic_fixture_only":true}\n');
   // Bound validators (each pulling one shared lib) plus a script the review never
   // cites, so the digest's narrowed scope is actually exercised.
@@ -160,4 +160,105 @@ test('arbitrary reviewer strings and agent draft certification are rejected', (t
   assert.throws(()=>validateAgentTrackerRow(f.root,{reviewer:'a bot',suggestion:''},'EFMP-301',1,'G3'),/initials/);
   assert.throws(()=>validateAgentTrackerRow(f.root,{reviewer:'agent:g3-fixture',suggestion:''},'EFMP-301',1,'G2'),/draft stage/);
   assert.throws(()=>validateAgentTrackerRow(f.root,{reviewer:'agent:g3-fixture',suggestion:''},'EFMP-301',1,'G3'),/evidence reference/);
+});
+
+// ---- Art. VII.7 provisional publication + G2 gate evidence (ADR-0025) ----
+//
+// The whole point of this tier is that it drops the trust root and NOTHING else.
+// These cases exist to keep that honest: every check `acceptReport` makes that is
+// not the signature must still bite here, or "provisional" quietly becomes
+// "unchecked".
+
+/** An unsigned copy of the fixture's passing G3 report, with optional overrides. */
+function unsigned(f, overrides = {}, path = 'specs/content/efmp-301/reviews/unit-01/G3/unsigned.json') {
+  const report = { ...f.report, ...overrides };
+  f.write(path, `${JSON.stringify(report, null, 2)}\n`);
+  f.track();
+  return path;
+}
+
+test('provisional acceptance takes an unsigned passing report', (t) => {
+  const f = fixture(t);
+  const path = unsigned(f);
+  const got = acceptProvisionalReport(f.root, path, { course_code: 'EFMP-301', unit_no: 1, stage: 'G3' });
+  assert.equal(got.disposition, 'pass');
+  // and the signed path still refuses it, because there is no signature
+  assert.throws(() => acceptReport(f.root, path, {}, f.key), /signature|ENOENT/);
+});
+
+test('provisional acceptance refuses a verdict that is not a pass', (t) => {
+  const f = fixture(t);
+  for (const disposition of ['revise', 'escalate']) {
+    const path = unsigned(f, { disposition }, `specs/content/efmp-301/reviews/unit-01/G3/u-${disposition}.json`);
+    assert.throws(() => acceptProvisionalReport(f.root, path), /does not pass/);
+  }
+});
+
+test('provisional acceptance refuses placeholder run identities', (t) => {
+  const f = fixture(t);
+  const path = unsigned(f, { author_run_id: 'UNSUPPLIED-parent-did-not-provide-author-run-identity' });
+  // `validateReport` is happy - it only checks non-empty and distinct - so this
+  // case is the reason the extra check exists. Independence is the entire basis
+  // for trusting a reviewer no registry has qualified.
+  assert.doesNotThrow(() => validateReport(f.root, JSON.parse(readFileSync(join(f.root, path)))));
+  assert.throws(() => acceptProvisionalReport(f.root, path), /placeholder/);
+});
+
+test('provisional acceptance goes stale when the reviewed content changes', (t) => {
+  const f = fixture(t);
+  const path = unsigned(f);
+  f.write(f.en, '---\ntranslation_status: draft\n---\nEnglish fixture, edited after review.\n');
+  f.track();
+  assert.throws(() => acceptProvisionalReport(f.root, path), /manifest/);
+});
+
+/** Deterministic G2 evidence over DRAFT_COMMANDS, with optional damage. */
+function gateEvidence(f, { drop = null, tamper = false } = {}) {
+  const evidence = {};
+  const commands = [];
+  for (const name of DRAFT_COMMANDS) {
+    if (name === drop) continue;
+    const log_path = `specs/content/efmp-301/reviews/unit-01/G2/${name.replace(/:/g, '-')}.txt`;
+    const data = `$ npm run ${name}\nexit_code=0\n`;
+    f.write(log_path, data);
+    evidence[log_path] = digest(data);
+    commands.push({ name, exit_code: 0, log_path });
+  }
+  const path = 'specs/content/efmp-301/reviews/unit-01/G2/gates.json';
+  f.write(path, `${JSON.stringify({ schema_version: 1, course_code: 'EFMP-301', unit_no: 1, stage: 'G2',
+    input_manifest: inputManifest(f.root, 'EFMP-301', 1, 'G3'), commands, evidence_manifest: evidence }, null, 2)}\n`);
+  if (tamper) f.write(commands[0].log_path, 'rewritten after the manifest was built\n');
+  f.track();
+  return path;
+}
+
+test('G2 gate evidence needs every draft command to have actually passed', (t) => {
+  const f = fixture(t);
+  assert.doesNotThrow(() => acceptGateEvidence(f.root, gateEvidence(f), 'EFMP-301', 1));
+  assert.throws(() => acceptGateEvidence(f.root, gateEvidence(f, { drop: 'check:depth-gate' }), 'EFMP-301', 1),
+    /missing successful command\/log: check:depth-gate/);
+  assert.throws(() => acceptGateEvidence(f.root, gateEvidence(f, { tamper: true }), 'EFMP-301', 1),
+    /evidence file changed/);
+});
+
+test('tracker routes each reference form to the matching evidence check', (t) => {
+  const f = fixture(t);
+  const provisionalPath = unsigned(f);
+  const gatesPath = gateEvidence(f);
+  const row = (reviewer, suggestion) => ({ reviewer, suggestion });
+
+  // provisional: on G3 accepts the unsigned report
+  assert.doesNotThrow(() => validateAgentTrackerRow(f.root, row('agent:g3-fixture', `provisional:${provisionalPath}`), 'EFMP-301', 1, 'G3'));
+  // auto:gates closes a draft stage, and ONLY a draft stage
+  assert.doesNotThrow(() => validateAgentTrackerRow(f.root, row('auto:gates', `gates:${gatesPath}`), 'EFMP-301', 1, 'G2'));
+  assert.throws(() => validateAgentTrackerRow(f.root, row('auto:gates', `gates:${gatesPath}`), 'EFMP-301', 1, 'G3'),
+    /needs a reviewer/);
+  // an agent identity still cannot certify a draft stage
+  assert.throws(() => validateAgentTrackerRow(f.root, row('agent:g3-fixture', `provisional:${provisionalPath}`), 'EFMP-301', 1, 'G2'),
+    /draft stage/);
+  // a bare token is not the automated identity; only the explicit `auto:` form is
+  assert.throws(() => validateAgentTrackerRow(f.root, row('gates', `gates:${gatesPath}`), 'EFMP-301', 1, 'G2'), /initials/);
+  assert.throws(() => validateAgentTrackerRow(f.root, row('auto:anything', `gates:${gatesPath}`), 'EFMP-301', 1, 'G2'), /unknown automated/);
+  // and a provisional reference still may not point outside the unit and stage
+  assert.throws(() => validateAgentTrackerRow(f.root, row('agent:g3-fixture', `provisional:${provisionalPath}`), 'EFMP-301', 2, 'G3'), /path must match/);
 });

@@ -27,6 +27,7 @@ export const CONTENT_GATES = [
   'check:no-em-dash',
   'check:no-answer-keys',
   'check:concept-graph',
+  'check:bloom-bands',
   'check:docs-sync',
 ];
 

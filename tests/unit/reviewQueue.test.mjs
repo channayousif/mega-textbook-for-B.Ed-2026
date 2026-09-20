@@ -72,6 +72,20 @@ describe('buildReviewQueue', () => {
     expect(queue.map((i) => i.stage)).toEqual(['G5']);
   });
 
+  // Art. VII.7: a provisional unit is agent-reviewed and ALREADY PUBLISHED under
+  // a "Final Review Pending" notice, which makes it the unit most needing a human
+  // pass. The predicate is `!== 'done'` precisely so this cannot fall out of the
+  // queue that exists to clear it.
+  it('keeps a provisional unit queued, at the stage still awaiting a human', () => {
+    const q3 = buildReviewQueue(report([unit({ gates: { G3: 'provisional', G5: 'open' } })]), index);
+    expect(q3).toHaveLength(1);
+    expect(q3[0].stage).toBe('G3');
+
+    const q5 = buildReviewQueue(report([unit({ gates: { G3: 'done', G5: 'provisional' } })]), index);
+    expect(q5).toHaveLength(1);
+    expect(q5[0].stage).toBe('G5');
+  });
+
   it('queues nothing when both gates are done', () => {
     expect(buildReviewQueue(report([unit({ gates: { G3: 'done', G5: 'done' } })]), index)).toEqual([]);
   });

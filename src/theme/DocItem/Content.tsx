@@ -3,6 +3,7 @@ import ContentOriginal from '@theme-original/DocItem/Content';
 import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useAuth } from '@site/src/contexts/AuthContext';
+import ReviewStatusBanner from '@site/src/components/ReviewStatusBanner';
 import { fetchOwnChecks, upsertCheck, mergeLocalChecks } from '@site/src/lib/selfAssessment';
 
 /**
@@ -59,6 +60,14 @@ const MESSAGES = {
   saveError: {
     en: 'Could not save this tick. Please try again.',
     ur: 'یہ نشان محفوظ نہیں ہو سکا۔ براہ کرم دوبارہ کوشش کریں۔',
+  },
+  scrollableTable: {
+    en: 'Scrollable table, scroll sideways to see all columns',
+    ur: 'قابلِ اسکرول جدول، تمام کالم دیکھنے کے لیے دائیں بائیں اسکرول کریں',
+  },
+  scrollableFigure: {
+    en: 'Scrollable figure, scroll sideways to see the whole diagram',
+    ur: 'قابلِ اسکرول خاکہ، پورا خاکہ دیکھنے کے لیے دائیں بائیں اسکرول کریں',
   },
 } as const;
 
@@ -200,6 +209,47 @@ function insertErrorContainer(list: HTMLUListElement): HTMLDivElement {
   div.setAttribute('aria-live', 'assertive');
   div.hidden = true;
   return div;
+}
+
+/**
+ * A content table that overflows its box is already its own scroll container -
+ * `.markdown table` is `display: block; overflow-x: auto` in custom.css, and
+ * measurement at 360px confirms every ERQ rubric is scrollWidth 482 inside
+ * clientWidth 328 with page overflow 0. So the columns were always reachable by
+ * swiping, which is why one G3 reviewer called this recoverable and another called
+ * it unreachable. The measured answer is that both were half right: reachable by
+ * touch, and not reachable at all from a keyboard.
+ *
+ * A scrollable region must be keyboard operable (WCAG 2.1.1) and needs an
+ * accessible name to be announced as one. This marks only the tables that actually
+ * overflow, so a table that fits does not become a spurious tab stop, and re-runs
+ * on resize because overflow depends on the viewport.
+ */
+function markScrollableRegions(labels: { table: string; figure: string }): () => void {
+  if (typeof document === 'undefined') return () => {};
+  const mark = (el: HTMLElement, label: string) => {
+    if (el.scrollWidth > el.clientWidth + 1) {
+      el.setAttribute('data-scrollable', 'true');
+      el.setAttribute('tabindex', '0');
+      el.setAttribute('role', 'region');
+      el.setAttribute('aria-label', label);
+    } else {
+      for (const a of ['data-scrollable', 'tabindex', 'role', 'aria-label']) el.removeAttribute(a);
+    }
+  };
+  const apply = () => {
+    for (const t of Array.from(document.querySelectorAll<HTMLElement>('.markdown table'))) mark(t, labels.table);
+    // Figures need this as much as tables do. Measured at 360px, every schematic renders at its
+    // full intrinsic width (880-1030px) inside a 328px box and scrolls, so the columns were always
+    // reachable by touch and never from a keyboard. Three separate G3 reviews raised it, and one
+    // added the detail that settles it: the crop hides MITIGATING content, cutting fig-U4-4's
+    // "read the primary document" caveat mid-sentence. A reader who cannot scroll sees the claim
+    // and not the warning attached to it.
+    for (const f of Array.from(document.querySelectorAll<HTMLElement>('.markdown figure'))) mark(f, labels.figure);
+  };
+  apply();
+  window.addEventListener('resize', apply);
+  return () => window.removeEventListener('resize', apply);
 }
 
 export default function DocItemContentWrapper(props: Props): React.ReactElement {
@@ -351,5 +401,18 @@ export default function DocItemContentWrapper(props: Props): React.ReactElement 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [courseCode, unitNo, topicNo, locale, role, loading]);
 
-  return <ContentOriginal {...props} />;
+  useEffect(() => markScrollableRegions({
+    table: MESSAGES.scrollableTable[locale],
+    figure: MESSAGES.scrollableFigure[locale],
+  }), [locale]);
+
+  // Rendered here rather than in MDX so every file of a provisional unit carries
+  // the notice - index, each topic, the assessment and the teacher notes, in both
+  // locales - with zero content edits and no manifest invalidation.
+  return (
+    <>
+      <ReviewStatusBanner courseCode={courseCode} unitNo={unitNo} />
+      <ContentOriginal {...props} />
+    </>
+  );
 }

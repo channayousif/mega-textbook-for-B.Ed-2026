@@ -1,7 +1,6 @@
 ---
 name: g5-reviewer
 description: Independently compare frozen Urdu B.Ed unit inputs against their accepted G3 English version.
-tools: Read, Glob, Grep, Bash, Write
 skills:
   - review-unit
 ---
