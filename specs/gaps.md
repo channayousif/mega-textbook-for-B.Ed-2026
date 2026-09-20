@@ -724,4 +724,20 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
     review, while any figure a unit does render stays bound at every stage. This fixes the cycle
     cost without opening the blind spot.
 - **Recommended:** option (d), not (a). Option (a) as originally written should not be adopted.
+- **Resolved 2026-09-20** in `fac210b`, as option (d) **narrowed**. An Urdu figure variant now
+  binds iff the stage's own locale renders it: G3 reads the English unit, G4/G5 read English and
+  Urdu, and a rendered `x.svg` also binds the `x.dark.svg` that `Figure.tsx` derives. The
+  assessment's general form ("bind a figure iff the unit cites it") was deliberately restricted to
+  Urdu variants, because the error directions are not symmetric - over-binding costs a review
+  cycle, under-binding is a blind spot, and a reference-extraction regex that misses a carrier
+  under-binds silently. A stray or unreferenced **English** asset therefore still invalidates.
+  The assessment's own objection is closed by construction: a `.ur.svg` an English carrier renders
+  is bound at G3. Five tests; two fail against the old code and pin the change, three guard
+  behaviour that must not move.
+- **Known consequence, not worked around.** `review-evidence.mjs` is itself a bound input via
+  `reviewScripts()`, so the fix invalidated every manifest computed under the old rule (Art. VI.1).
+  EFMP-302 Units 2-6 had their deterministic G2 evidence regenerated. **Unit 2's cycle-2 G3 report
+  is also invalidated** and cannot simply be re-accepted: its bound file set now matches exactly
+  (0 added, 0 removed) and only this script's digest differs, but restoring the provisional tier
+  needs a third review cycle, which ADR-0019 reserves to the owner. Unit 2 stays `gated`.
 - **Blocks:** Unit 2's provisional tier, and the same for every unit translated hereafter.
