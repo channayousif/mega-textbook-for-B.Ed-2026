@@ -12,6 +12,14 @@
  * manifest describes a commit; write with `wx`, so evidence is never silently
  * overwritten.
  *
+ * BIND WHAT YOU DO NOT WRITE. `specs/decisions/log.md` and `specs/gaps.md` are
+ * decision inputs an evaluator must read, but they are also where it records its
+ * result, so binding them made every approval void its own manifest the moment it
+ * was written - found on the first live run (G-2026-15). They are recorded in a
+ * separate `registers` field instead: their digests at read time are auditable, but
+ * they do not bear on freshness. G3 review is the opposite case and keeps them bound
+ * in `manifestRoots()`, because a reviewer reads those rulings and never writes them.
+ *
  *   node scripts/prepare-intake-evidence.mjs EFMP-304 <out-dir>
  */
 import { execFileSync } from 'node:child_process';
@@ -43,8 +51,6 @@ function intakeRoots(code) {
     'specs/content/style-guide.md',
     'specs/content/terminology.csv',
     '.specify/memory/constitution.md',
-    'specs/decisions/log.md',
-    'specs/gaps.md',
     'Scheme-and-Course-guides',
     '.specify/Course_guides_and_Scheme',
     '.claude/skills/evaluate-intake',
@@ -63,7 +69,8 @@ try {
   }
 
   const roots = intakeRoots(code);
-  for (const path of roots) {
+  const REGISTERS = ['specs/decisions/log.md', 'specs/gaps.md'];
+  for (const path of [...roots, ...REGISTERS]) {
     if (!existsSync(safeFile(root, path))) throw new Error(`missing required intake input: ${path}`);
   }
 
@@ -81,6 +88,7 @@ try {
   }
 
   const input_manifest = manifestFor(root, roots);
+  const registers = manifestFor(root, REGISTERS);
   const commit = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim();
   const manifest = {
     schema_version: 1,
@@ -91,6 +99,8 @@ try {
     constitution: 'Article VII.8',
     input_manifest,
     manifest_digest: digest(JSON.stringify(input_manifest)),
+    // Read, recorded, and deliberately not freshness-bearing - see the header.
+    registers,
   };
 
   mkdirSync(resolve(root, outDir), { recursive: true });
