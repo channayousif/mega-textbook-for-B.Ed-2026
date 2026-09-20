@@ -91,6 +91,11 @@ jobs:
       - name: Concept-graph gate
         run: npm run check:concept-graph
 
+      # Bloom band gate: every authored `*(Level)*` tag sits inside the band its unit
+      # spec declares. Nothing compared the two until three breaches had reached G3.
+      - name: Bloom band gate
+        run: npm run check:bloom-bands
+
       # Adding a course is content-only — zero platform-code change (FR-005, SC-006, T034)
       - name: Add-course content-only check
         run: npm run check:add-course
