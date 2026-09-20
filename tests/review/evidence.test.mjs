@@ -5,7 +5,7 @@ import { join, dirname } from 'node:path';
 import { tmpdir } from 'node:os';
 import { generateKeyPairSync, sign } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
-import { CRITERIA, COMMANDS, inputManifest, dirtyInputs, skillDigest, digest, validateReport, acceptReport, validateAgentTrackerRow } from '../../scripts/lib/review-evidence.mjs';
+import { CRITERIA, COMMANDS, DRAFT_COMMANDS, rulingDigest, inputManifest, dirtyInputs, skillDigest, digest, validateReport, acceptReport, acceptProvisionalReport, acceptGateEvidence, validateAgentTrackerRow } from '../../scripts/lib/review-evidence.mjs';
 
 /** Entry validators the manifest binds, mirroring REVIEW_ENTRY_SCRIPTS. */
 const REVIEW_SCRIPTS = ['scripts/validate-content.mjs', 'scripts/check-pipeline-gate.mjs', 'scripts/check-unit-depth.mjs',
@@ -23,7 +23,7 @@ function fixture(t) {
   write(en, '---\ntranslation_status: draft\n---\nEnglish fixture.\n');
   write(ur, '---\ntranslation_status: draft\n---\nUrdu fixture.\n');
   write('docs/semester-1/efmp-301/course-overview.mdx', '---\nbilingual: true\n---\n');
-  for (const path of ['specs/content/style-guide.md', 'specs/content/terminology.csv', '.specify/memory/constitution.md', 'specs/content/efmp-301/content-spec.md', '.claude/skills/review-unit/SKILL.md', '.claude/skills/review-unit/references/g3.md', '.claude/skills/review-unit/references/g5.md', '.claude/agents/g3-reviewer.md', '.claude/agents/g5-reviewer.md']) write(path, `Synthetic test input ${path}\n`);
+  for (const path of ['specs/content/style-guide.md', 'specs/content/terminology.csv', '.specify/memory/constitution.md', 'specs/decisions/log.md', 'specs/content/efmp-301/content-spec.md', '.claude/skills/review-unit/SKILL.md', '.claude/skills/review-unit/references/g3.md', '.claude/skills/review-unit/references/g5.md', '.claude/agents/g3-reviewer.md', '.claude/agents/g5-reviewer.md']) write(path, `Synthetic test input ${path}\n`);
   write('specs/reviewers/qualification.json', '{"synthetic_fixture_only":true}\n');
   // Bound validators (each pulling one shared lib) plus a script the review never
   // cites, so the digest's narrowed scope is actually exercised.
@@ -161,3 +161,268 @@ test('arbitrary reviewer strings and agent draft certification are rejected', (t
   assert.throws(()=>validateAgentTrackerRow(f.root,{reviewer:'agent:g3-fixture',suggestion:''},'EFMP-301',1,'G2'),/draft stage/);
   assert.throws(()=>validateAgentTrackerRow(f.root,{reviewer:'agent:g3-fixture',suggestion:''},'EFMP-301',1,'G3'),/evidence reference/);
 });
+
+// ---- Art. VII.7 provisional publication + G2 gate evidence (ADR-0025) ----
+//
+// The whole point of this tier is that it drops the trust root and NOTHING else.
+// These cases exist to keep that honest: every check `acceptReport` makes that is
+// not the signature must still bite here, or "provisional" quietly becomes
+// "unchecked".
+
+/** An unsigned copy of the fixture's passing G3 report, with optional overrides. */
+function unsigned(f, overrides = {}, path = 'specs/content/efmp-301/reviews/unit-01/G3/unsigned.json') {
+  const report = { ...f.report, ...overrides };
+  f.write(path, `${JSON.stringify(report, null, 2)}\n`);
+  f.track();
+  return path;
+}
+
+test('provisional acceptance takes an unsigned passing report', (t) => {
+  const f = fixture(t);
+  const path = unsigned(f);
+  const got = acceptProvisionalReport(f.root, path, { course_code: 'EFMP-301', unit_no: 1, stage: 'G3' });
+  assert.equal(got.disposition, 'pass');
+  // and the signed path still refuses it, because there is no signature
+  assert.throws(() => acceptReport(f.root, path, {}, f.key), /signature|ENOENT/);
+});
+
+test('provisional acceptance refuses a verdict that is not a pass', (t) => {
+  const f = fixture(t);
+  for (const disposition of ['revise', 'escalate']) {
+    const path = unsigned(f, { disposition }, `specs/content/efmp-301/reviews/unit-01/G3/u-${disposition}.json`);
+    assert.throws(() => acceptProvisionalReport(f.root, path), /does not pass/);
+  }
+});
+
+test('provisional acceptance refuses placeholder run identities', (t) => {
+  const f = fixture(t);
+  const path = unsigned(f, { author_run_id: 'UNSUPPLIED-parent-did-not-provide-author-run-identity' });
+  // `validateReport` is happy - it only checks non-empty and distinct - so this
+  // case is the reason the extra check exists. Independence is the entire basis
+  // for trusting a reviewer no registry has qualified.
+  assert.doesNotThrow(() => validateReport(f.root, JSON.parse(readFileSync(join(f.root, path)))));
+  assert.throws(() => acceptProvisionalReport(f.root, path), /placeholder/);
+});
+
+test('provisional acceptance goes stale when the reviewed content changes', (t) => {
+  const f = fixture(t);
+  const path = unsigned(f);
+  f.write(f.en, '---\ntranslation_status: draft\n---\nEnglish fixture, edited after review.\n');
+  f.track();
+  assert.throws(() => acceptProvisionalReport(f.root, path), /manifest/);
+});
+
+/** Deterministic G2 evidence over DRAFT_COMMANDS, with optional damage. */
+function gateEvidence(f, { drop = null, tamper = false } = {}) {
+  const evidence = {};
+  const commands = [];
+  for (const name of DRAFT_COMMANDS) {
+    if (name === drop) continue;
+    const log_path = `specs/content/efmp-301/reviews/unit-01/G2/${name.replace(/:/g, '-')}.txt`;
+    const data = `$ npm run ${name}\nexit_code=0\n`;
+    f.write(log_path, data);
+    evidence[log_path] = digest(data);
+    commands.push({ name, exit_code: 0, log_path });
+  }
+  const path = 'specs/content/efmp-301/reviews/unit-01/G2/gates.json';
+  f.write(path, `${JSON.stringify({ schema_version: 1, course_code: 'EFMP-301', unit_no: 1, stage: 'G2',
+    input_manifest: inputManifest(f.root, 'EFMP-301', 1, 'G3'), commands, evidence_manifest: evidence }, null, 2)}\n`);
+  if (tamper) f.write(commands[0].log_path, 'rewritten after the manifest was built\n');
+  f.track();
+  return path;
+}
+
+test('G2 gate evidence needs every draft command to have actually passed', (t) => {
+  const f = fixture(t);
+  assert.doesNotThrow(() => acceptGateEvidence(f.root, gateEvidence(f), 'EFMP-301', 1));
+  assert.throws(() => acceptGateEvidence(f.root, gateEvidence(f, { drop: 'check:depth-gate' }), 'EFMP-301', 1),
+    /missing successful command\/log: check:depth-gate/);
+  assert.throws(() => acceptGateEvidence(f.root, gateEvidence(f, { tamper: true }), 'EFMP-301', 1),
+    /evidence file changed/);
+});
+
+test('tracker routes each reference form to the matching evidence check', (t) => {
+  const f = fixture(t);
+  const provisionalPath = unsigned(f);
+  const gatesPath = gateEvidence(f);
+  // `status` is required since ADR-0026: it must agree with the kind of evidence
+  // referenced, so the helper derives the correct one and the pairing rules are
+  // asserted explicitly below.
+  const statusFor = (suggestion) => (suggestion.startsWith('provisional:') ? '🟡' : '✅');
+  const row = (reviewer, suggestion, status = statusFor(suggestion)) => ({ reviewer, suggestion, status });
+
+  // provisional: on G3 accepts the unsigned report
+  assert.doesNotThrow(() => validateAgentTrackerRow(f.root, row('agent:g3-fixture', `provisional:${provisionalPath}`), 'EFMP-301', 1, 'G3'));
+  // auto:gates closes a draft stage, and ONLY a draft stage. G4 is the one that mattered:
+  // acceptGateEvidence proves the ENGLISH draft gates passed and binds the G3 English input
+  // manifest, so a `G4 ur-translation` row pointing at the unit's existing G2 file would have
+  // certified a translation with evidence that never looked at any Urdu. check-pipeline-gate
+  // validates G4 (stagePrefix.slice(0,2)), so this was reachable, not theoretical.
+  assert.doesNotThrow(() => validateAgentTrackerRow(f.root, row('auto:gates', `gates:${gatesPath}`), 'EFMP-301', 1, 'G2'));
+  for (const stage of ['G3', 'G4', 'G5']) {
+    assert.throws(() => validateAgentTrackerRow(f.root, row('auto:gates', `gates:${gatesPath}`), 'EFMP-301', 1, stage),
+      /certifies G2 only/, `gate evidence must not close ${stage}`);
+  }
+  // Status must agree with the reference kind. Before ADR-0026 this function never
+  // read `row.status`, so a `✅` beside a `provisional:` reference validated, the
+  // unit counted as certified and the banner vanished - Art. VII.7 says "never a
+  // done mark", and it was one character away.
+  assert.throws(() => validateAgentTrackerRow(f.root, row('agent:g3-fixture', `provisional:${provisionalPath}`, '✅'), 'EFMP-301', 1, 'G3'),
+    /provisional evidence requires status/);
+  assert.throws(() => validateAgentTrackerRow(f.root, row('agent:g3-fixture', `review:${f.path}`, '🟡'), 'EFMP-301', 1, 'G3'),
+    /review evidence requires status/);
+  assert.throws(() => validateAgentTrackerRow(f.root, row('auto:gates', `gates:${gatesPath}`, '🟡'), 'EFMP-301', 1, 'G2'),
+    /gate evidence requires status/);
+
+  // an agent identity still cannot certify a draft stage
+  assert.throws(() => validateAgentTrackerRow(f.root, row('agent:g3-fixture', `provisional:${provisionalPath}`), 'EFMP-301', 1, 'G2'),
+    /draft stage/);
+  // a bare token is not the automated identity; only the explicit `auto:` form is
+  assert.throws(() => validateAgentTrackerRow(f.root, row('gates', `gates:${gatesPath}`), 'EFMP-301', 1, 'G2'), /initials/);
+  assert.throws(() => validateAgentTrackerRow(f.root, row('auto:anything', `gates:${gatesPath}`), 'EFMP-301', 1, 'G2'), /unknown automated/);
+  // and a provisional reference still may not point outside the unit and stage
+  assert.throws(() => validateAgentTrackerRow(f.root, row('agent:g3-fixture', `provisional:${provisionalPath}`), 'EFMP-301', 2, 'G3'), /path must match/);
+});
+
+/**
+ * ADR-0027 boundary tests.
+ *
+ * The 27 mutation tests above prove that a change INSIDE the bound set is caught.
+ * They are structurally blind to a NARROWING of that set, because they contain no
+ * fixture for the files being removed - so they would pass just as happily if the
+ * binding were narrowed to nothing. These pin the boundary itself: what must still
+ * invalidate, and what must now stop invalidating.
+ */
+test('unit-scoped binding: a sibling unit does not invalidate this unit', (t) => {
+  const f = fixture(t);
+  const spec = 'specs/content/efmp-301/content-spec.md';
+  f.write(spec, [
+    '# EFMP-301', '', 'Shared preamble.', '',
+    '## Reading list', '', '| Key | Citation |', '|---|---|', '| alpha2020 | A |', '',
+    '## Unit 1: One', '', 'Unit 1 body.', '',
+    '## Unit 2: Two', '', 'Unit 2 body.', '',
+  ].join('\n'));
+  f.write('specs/content/efmp-301/coverage/unit-01.md', 'U1-01 alpha2020\n');
+  f.write('specs/content/efmp-301/coverage/unit-02.md', 'U2-01 beta2021\n');
+  f.write('specs/content/efmp-301/sources/texts/alpha2020.md', 'excerpt A\n');
+  f.write('specs/content/efmp-301/sources/texts/beta2021.md', 'excerpt B\n');
+  f.track();
+
+  const base = JSON.stringify(inputManifest(f.root, 'EFMP-301', 1, 'G3'));
+  const at = (p) => JSON.stringify(inputManifest(f.root, 'EFMP-301', 1, 'G3')) !== base;
+
+  // (1) a sibling unit's own governance file
+  f.write('specs/content/efmp-301/coverage/unit-02.md', 'U2-01 beta2021 edited\n');
+  f.track();
+  assert.equal(at(), false, "a sibling unit's coverage file must not invalidate this unit");
+
+  // (2) a sibling unit's section of the shared spec
+  f.write(spec, readFileSync(join(f.root, spec), 'utf8').replace('Unit 2 body.', 'Unit 2 body, edited.'));
+  f.track();
+  assert.equal(at(), false, "a sibling unit's spec section must not invalidate this unit");
+
+  // (3) an excerpt this unit does NOT cite
+  f.write('specs/content/efmp-301/sources/texts/beta2021.md', 'excerpt B edited\n');
+  f.track();
+  assert.equal(at(), false, 'an uncited excerpt must not invalidate this unit');
+
+  // (4) a SHARED part of the spec still must
+  f.write(spec, readFileSync(join(f.root, spec), 'utf8').replace('Shared preamble.', 'Shared preamble, edited.'));
+  f.track();
+  assert.equal(at(), true, 'a shared spec section MUST invalidate every unit');
+});
+
+test('unit-scoped binding: this unit\'s own inputs still invalidate', (t) => {
+  const f = fixture(t);
+  const spec = 'specs/content/efmp-301/content-spec.md';
+  f.write(spec, ['# EFMP-301', '', 'Preamble.', '', '## Unit 1: One', '', 'Body.', '', '## Unit 2: Two', '', 'Two.', ''].join('\n'));
+  f.write('specs/content/efmp-301/coverage/unit-01.md', 'U1-01 alpha2020\n');
+  f.write('specs/content/efmp-301/sources/texts/alpha2020.md', 'excerpt A\n');
+  f.track();
+  const base = JSON.stringify(inputManifest(f.root, 'EFMP-301', 1, 'G3'));
+  const changed = () => JSON.stringify(inputManifest(f.root, 'EFMP-301', 1, 'G3')) !== base;
+
+  f.write('specs/content/efmp-301/coverage/unit-01.md', 'U1-01 alpha2020 edited\n');
+  f.track();
+  assert.equal(changed(), true, "this unit's own coverage file MUST invalidate it");
+
+  f.write(spec, readFileSync(join(f.root, spec), 'utf8').replace('Body.', 'Body, edited.'));
+  f.track();
+  assert.equal(changed(), true, "this unit's own spec section MUST invalidate it");
+
+  f.write('specs/content/efmp-301/sources/texts/alpha2020.md', 'excerpt A edited\n');
+  f.track();
+  assert.equal(changed(), true, 'an excerpt this unit cites MUST invalidate it');
+});
+
+test('unit-scoped binding: a spec with no recognisable unit heading binds whole', (t) => {
+  const f = fixture(t);
+  const spec = 'specs/content/efmp-301/content-spec.md';
+  // EFMP-301's real spec has no `## Unit 1` heading. Unknown structure must fail
+  // toward binding MORE, never less.
+  f.write(spec, ['# EFMP-301', '', '> a blockquote, then straight to sub-headings', '', '### Sub-topic checklist', '', 'rows', ''].join('\n'));
+  f.track();
+  const base = JSON.stringify(inputManifest(f.root, 'EFMP-301', 1, 'G3'));
+  f.write(spec, readFileSync(join(f.root, spec), 'utf8') + '\nappended anywhere\n');
+  f.track();
+  assert.notEqual(JSON.stringify(inputManifest(f.root, 'EFMP-301', 1, 'G3')), base,
+    'with no unit heading the whole spec must be bound');
+});
+
+test('unit-scoped binding: a course file naming no unit stays bound to every unit', (t) => {
+  const f = fixture(t);
+  f.write('specs/content/efmp-301/content-spec.md', ['# EFMP-301', '', '## Unit 1: One', '', 'Body.', ''].join('\n'));
+  // The escape-hatch case: prose must not be able to hide by living somewhere
+  // unenumerated under the course directory.
+  f.write('specs/content/efmp-301/style-notes.md', 'shared guidance\n');
+  f.track();
+  const base = JSON.stringify(inputManifest(f.root, 'EFMP-301', 1, 'G3'));
+  f.write('specs/content/efmp-301/style-notes.md', 'shared guidance, edited\n');
+  f.track();
+  assert.notEqual(JSON.stringify(inputManifest(f.root, 'EFMP-301', 1, 'G3')), base,
+    'an unenumerated course file must still be bound');
+});
+
+/**
+ * The decision register is cited per-ruling rather than bound whole (G-2026-18).
+ * Both halves must hold or the change is a weakening: a cited ruling that changes
+ * MUST invalidate, and an unrelated entry MUST NOT.
+ */
+test('rulings: a cited decision that changes invalidates the report that cited it', (t) => {
+  const f = fixture(t);
+  f.write('specs/decisions/log.md', [
+    '# Gate Decision Log', '',
+    '## D-2026-0001 - first', '', '- **Status:** confirmed', '- Body one.', '',
+    '## D-2026-0002 - second', '', '- **Status:** confirmed', '- Body two.', '',
+  ].join('\n'));
+  f.track();
+
+  const cited = rulingDigest(f.root, 'D-2026-0001');
+  const report = { ...f.report, rulings: { 'D-2026-0001': cited } };
+  assert.doesNotThrow(() => validateReport(f.root, report), 'an unchanged cited ruling must validate');
+
+  // An UNRELATED entry is appended - the case that turned CI red.
+  f.write('specs/decisions/log.md', readFileSync(join(f.root, 'specs/decisions/log.md'), 'utf8')
+    + '\n## D-2026-0003 - unrelated\n\n- **Status:** confirmed\n- Body three.\n');
+  f.track();
+  assert.doesNotThrow(() => validateReport(f.root, report),
+    'an unrelated new decision must NOT invalidate a report that never cited it');
+
+  // The CITED entry changes.
+  f.write('specs/decisions/log.md', readFileSync(join(f.root, 'specs/decisions/log.md'), 'utf8')
+    .replace('- Body one.', '- Body one, materially revised.'));
+  f.track();
+  assert.throws(() => validateReport(f.root, report), /D-2026-0001 has changed/,
+    'a changed cited ruling MUST invalidate the report that rested on it');
+});
+
+test('rulings: citing a decision that is not in the register is rejected', (t) => {
+  const f = fixture(t);
+  f.write('specs/decisions/log.md', '# Gate Decision Log\n\n## D-2026-0001 - only\n\n- Body.\n');
+  f.track();
+  assert.throws(() => validateReport(f.root, { ...f.report, rulings: { 'D-2026-0099': 'x'.repeat(64) } }),
+    /cited but not in the register/);
+  assert.throws(() => validateReport(f.root, { ...f.report, rulings: { 'not-a-code': 'x'.repeat(64) } }),
+    /invalid decision code/);
+});
+

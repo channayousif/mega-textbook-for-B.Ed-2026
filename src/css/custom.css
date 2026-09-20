@@ -96,6 +96,51 @@ html[data-theme='dark'] .translation-badge--untranslated {
   color: #c3c7f7;
 }
 
+/* --- Provisional review banner (Art. VII.7, ADR-0025) ----------------------
+   Amber, like the draft-translation chip, because both say the same kind of
+   thing: usable, published, not yet finished. Deliberately not red - the unit
+   passed a real review and is fit to read, it simply is not certified. */
+.review-banner {
+  border-radius: 6px;
+  padding: 0.6rem 0.9rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.review-banner--provisional {
+  background: #fff4e5;
+  border-color: #f0b429;
+  color: #7a4d00;
+}
+.review-banner__label {
+  font-weight: 700;
+}
+.review-banner__body {
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+html[data-theme='dark'] .review-banner--provisional {
+  background: #3a2c12;
+  border-color: #a9791d;
+  color: #f4d69a;
+}
+
+/* `gated` is the weaker claim of the two - nobody has read the unit - so it reads
+   as the stronger warning. Provisional keeps amber; gated takes red, and both pass
+   WCAG AA against their own background in each theme. */
+.review-banner--gated {
+  background: #fdecea;
+  border-color: #d93025;
+  color: #7f1d16;
+}
+html[data-theme='dark'] .review-banner--gated {
+  background: #3b1a17;
+  border-color: #c5382c;
+  color: #f5b7b1;
+}
+
 /* --- Print handout button + Bloom/activity styling ------------------------- */
 .print-handout {
   border: 1px solid var(--ifm-color-primary);
@@ -210,6 +255,40 @@ html[data-theme='dark'] .bloom-tag {
   width: fit-content;
   max-width: 100%;
   overflow-x: auto;
+}
+
+/* The scroll container above works, but at rest it gave no sign that anything was
+   off-screen, and it could not be reached from a keyboard at all. Measured at 360px:
+   every ERQ rubric is scrollWidth 482 inside clientWidth 328, page overflow 0, so the
+   content was always swipeable and never tabbable (WCAG 2.1.1).
+
+   `DocItem/Content.tsx` marks an overflowing table with `data-scrollable="true"` and
+   makes it a focusable region. These rules give it the affordance: a right-edge fade
+   that disappears once scrolled to the end, and a visible focus ring. */
+.markdown table[data-scrollable='true'] {
+  background:
+    linear-gradient(to right, var(--ifm-background-color) 30%, transparent),
+    linear-gradient(to left, var(--ifm-background-color) 30%, transparent) 100% 0,
+    linear-gradient(to right, rgba(19, 42, 36, 0.18), transparent 12px),
+    linear-gradient(to left, rgba(19, 42, 36, 0.18), transparent 12px) 100% 0;
+  background-repeat: no-repeat;
+  background-size: 34px 100%, 34px 100%, 14px 100%, 14px 100%;
+  background-attachment: local, local, scroll, scroll;
+}
+.markdown figure[data-scrollable='true']:focus-visible,
+.markdown table[data-scrollable='true']:focus-visible {
+  outline: 3px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+html[data-theme='dark'] .markdown table[data-scrollable='true'] {
+  background:
+    linear-gradient(to right, var(--ifm-background-color) 30%, transparent),
+    linear-gradient(to left, var(--ifm-background-color) 30%, transparent) 100% 0,
+    linear-gradient(to right, rgba(244, 214, 154, 0.22), transparent 12px),
+    linear-gradient(to left, rgba(244, 214, 154, 0.22), transparent 12px) 100% 0;
+  background-repeat: no-repeat;
+  background-size: 34px 100%, 34px 100%, 14px 100%, 14px 100%;
+  background-attachment: local, local, scroll, scroll;
 }
 
 .figure__caption {

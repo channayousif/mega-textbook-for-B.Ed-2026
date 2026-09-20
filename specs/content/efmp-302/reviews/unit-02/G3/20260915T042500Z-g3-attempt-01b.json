@@ -1,0 +1,441 @@
+{
+  "schema_version": 1,
+  "course_code": "EFMP-302",
+  "unit_no": 2,
+  "stage": "G3",
+  "disposition": "escalate",
+  "reviewer_id": "agent:g3-reviewer",
+  "author_run_id": "UNSUPPLIED-parent-did-not-provide-author-run-identity",
+  "reviewer_run_id": "claude-code-subagent-thread:b074d6de-65c5-4a64-9fe5-1fcc3adac012",
+  "model": "claude-opus-5",
+  "started_at": "2026-09-15T04:02:33Z",
+  "completed_at": "2026-09-15T04:11:45Z",
+  "skill_digest": "4114d2b8e58c54257d6ee0d581097cc4fa6a99fac39d281ff10b3ea237cd24ab",
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "089b1c505198587061a093382ba7f4efddb77cd2997254456e05050e2a19c508",
+    ".claude/agents/g5-reviewer.md": "15c9a44140d4bb05ab8527dc343c4278232b466359df907b73ccf45c98c519d4",
+    ".claude/skills/review-unit/SKILL.md": "813d0624a49d08e7576a90cbf15a7181b21405a0d1f255c855f05a2f07011689",
+    ".claude/skills/review-unit/references/g3.md": "11405dbfe24157691d9838b7a41c9ba9a3db71bc551ff040c2144deb3646e070",
+    ".claude/skills/review-unit/references/g5.md": "7cbdf9929e6073b71663ec8951a9a42d1e8e683af479434f8409c81002d33159",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/memory/constitution.md": "52cef306506915c335bab2de73bd989887f1bc454b9de25c0876adbb35217065",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "f1d7f063cc2c826693a3d8428fb5d3ee45455fdb7906ebc5adadee8b9a434d47",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-1/efmp-302/course-overview.mdx": "7dcacdcd8198a7f6f0feda4f29023a3dbe145722ad0a8413d5de5d4e5dfaf450",
+    "docs/semester-1/efmp-302/unit-02/_category_.json": "3cde24393475772a479c9654c8ea2316f1354102765fac07f513c60249476670",
+    "docs/semester-1/efmp-302/unit-02/index.mdx": "f31b52daa6141684cb81893152f6306c0636134690f5a3b10392d29b78a45846",
+    "docs/semester-1/efmp-302/unit-02/topic-01.mdx": "143265c2200695a9d2f704f889606a00cfc72074e5e02ce7bf25580be0dda8b7",
+    "docs/semester-1/efmp-302/unit-02/topic-02.mdx": "7a2aa3bf76098e2963c6529adb15eb60fceab81a73660952ca47dfa24c91d70f",
+    "docs/semester-1/efmp-302/unit-02/topic-03.mdx": "1614df583f31ab3d9b25d8c243d571d4cfeae73a4c88a438ccb651b026105893",
+    "docs/semester-1/efmp-302/unit-02/topic-04.mdx": "5b5183c262ac2e5fd077624535754939cd7fbec3ab4f5fa767382558b1e48731",
+    "docs/semester-1/efmp-302/unit-02/unit-assessment.mdx": "ef05f1b473fd88130aa883f20466e2ddb6e1cee4c9bfc6ceac561acb0aaf3bce",
+    "docs/semester-1/efmp-302/unit-02/unit-teacher-notes.mdx": "663b5471e8c4ad323fffa73ddd3d1f00279e5cef49c63865786790f5258ca8c4",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "281bd64357751aaeeb2356f8f97290551e1478b9752ed32fc66607978455db0d",
+    "scripts/check-no-answer-keys.mjs": "a5a50ea1971522ca1d65e2c0f5091c0b8b46cd716e10ce3171bdb6cb74f5e355",
+    "scripts/check-no-em-dash.mjs": "722f346ab59e7d4f3aba5f15889d28d4121203999e4dbb4e47dab91eb4021a83",
+    "scripts/check-pipeline-gate.mjs": "72db41ba988da785d4aeddf13af587af03dcf1128456f8f0a2a52bbec965d480",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "bb614c625f7bf397ce51a317bdb8901711c00fa009d4ad0a506c5096e5b9ddd2",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "37dc0675e977cbb25421bb4d442d0994549b3acc9dbf3c44613fea9a3c532508",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "b89415d51bd6468e3326495dcea153bb74882241709e60a2d8102ffe2f72bb7d",
+    "scripts/lib/review-evidence.mjs": "ec585106efb0c77ec981f45f904742982ee859195620cea6906c700856d89153",
+    "scripts/lib/tracker-rows.mjs": "fd6090a4f1a47e3251daea6d42ce11b036f59eb092caed11b0be43b9c4ddc383",
+    "scripts/lib/unit-depth.mjs": "42f6972bac7956e50a5033d3b32f7b522ffaec442b2b4cb590b6b12f1d0dc540",
+    "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "59c6e5b7d7e7a18a8cee0a559436fa3b4e4c9806150ef6e95e29ea41aae93c1d",
+    "specs/content/efmp-302/concepts/unit-01.md": "2b75df95fa4b2650ceee0246da4ed8ed1b18604028ea759285d02819625761b3",
+    "specs/content/efmp-302/concepts/unit-02.md": "71ebc57a51ff8f74df8f1fe01226c254af807ec55257b5e4649c5aabdea3e1b3",
+    "specs/content/efmp-302/concepts/unit-03.md": "f41a214572d92c9e1214309a39a139b7c45bb0e282c819fa4acd1e09993d6255",
+    "specs/content/efmp-302/concepts/unit-04.md": "bd706182d2c2f8a64de9e7036b29b88c48925be562ad1f67961930baf399903e",
+    "specs/content/efmp-302/content-spec.md": "a297fbbcd342a3bd401a79ca757302e8958b68164c89783fa265b156f9e8dc4a",
+    "specs/content/efmp-302/coverage/unit-01.md": "d52a7736874715a345d9d8843ac8298c49816627884a62212dfcdef13a38438c",
+    "specs/content/efmp-302/coverage/unit-02.md": "3a65cf87374960ed61917fcda910f4ba4ad7ee60f99bb3b1be43d3443e29305b",
+    "specs/content/efmp-302/coverage/unit-03.md": "167d60597bb42af543930cf39ad5800e7d931e4833b14ea9e63ff120d8d2c98e",
+    "specs/content/efmp-302/coverage/unit-04.md": "2c85006b9cc4b7b897dca2fe7c4efb58718c2c940fcc07dbdaf3e8cc7c3b25d5",
+    "specs/content/efmp-302/figures/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "specs/content/efmp-302/figures/unit-01.md": "3fa2b8de8519fcd8800c04b05282fc42b1527fbb28be26d66383b0423eba0ded",
+    "specs/content/efmp-302/figures/unit-02.md": "babaf86a47f151e9d9c67b6b9b32c778bfe4c31f557df72531bd512e65d4250e",
+    "specs/content/efmp-302/figures/unit-03.md": "ed53af1403963a0f73e4bffacc8083d314544f507478b339855531cfeb40f5cc",
+    "specs/content/efmp-302/figures/unit-04.md": "b5641e6623f38dd7b345187e2bd1ec10b104481d6766ec80462f979f9bff6757",
+    "specs/content/efmp-302/sources/unit-01.md": "7a22330d6f8a4204f56d4a4fb9db05a277d560f6e64b3b54ffaaf48a1d0e7c3a",
+    "specs/content/efmp-302/sources/unit-02.md": "933e7003a9e3105ecdbcbc1b3da69adcac98371680ec09669088f13b8783c4d3",
+    "specs/content/efmp-302/sources/unit-03.md": "60023a0f07e05787f07abe926c345f839a40b39bea4dd86df0bd79829c58db48",
+    "specs/content/efmp-302/sources/unit-04.md": "f5aad6be4f96497988d0b3d7afa839bd0e269049a5db76357b05348a757faef9",
+    "specs/content/style-guide.md": "ab88530f6d361961fb7e2038b649ddade0013bd600c268c15e8180d253eb42ab",
+    "specs/content/terminology.csv": "ad917e28cde688eb72bd92226c2326e2d23da3da80fc53ea8c812b1a47f73337"
+  },
+  "reviewed_commit": "ed780ea (Unit 2 inputs byte-identical at the later HEAD this report binds)",
+  "supersedes": "specs/content/efmp-302/reviews/unit-02/G3/20260915T040938Z-g3-attempt-01.json",
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "unverified",
+      "evidence": [
+        ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf (Unit 2 block, extracted to specs/content/efmp-302/reviews/unit-02/sources-20260914-g3a1/course-guide-unit-02-extract.txt): guide Unit 2 has three sections; 2.1 carries no leaf bullets, 2.2 carries two, 2.3 carries four",
+        "specs/content/efmp-302/content-spec.md \"## Unit 2\" > \"### Sub-topic checklist\" preamble: claims \"One row per leaf bullet of course-guide sections 2.1-2.3\" while listing 14 rows against 6 guide leaf bullets",
+        "specs/content/efmp-302/content-spec.md \"## Unit 2\" > \"**G1 decision requiring owner confirmation.**\": partition of guide 2.3 into topics 2.3 and 2.4, marked \"Confirm or reject at G1\"",
+        "specs/content/efmp-302/tasks.md row \"| Unit 2 | G1 unit-spec | ▣ |\": status is in-progress, note reads \"The 2.3-into-2.3+2.4 topic split needs owner confirmation\"; no owner confirmation row exists",
+        "docs/semester-1/efmp-302/unit-02/index.mdx \"## In this unit\" list items 1-4 and topic-04.mdx frontmatter topic_label: \"2.4\": the learner-facing artefact presents a \"Topic 2.4\" with no statement anywhere that the course guide has only 2.1-2.3"
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "fail",
+      "evidence": [
+        "docs/semester-1/efmp-302/unit-02/topic-04.mdx \"### What makes a dilemma a dilemma\", paragraph beginning \"A dilemma is a situation in which two or more things\": attributes to Ehrich et al. (2011) a model built on \"the individual pupil's interest, the other pupils' interest, the institution's interest and the wider public interest\"",
+        "Ehrich, Kimber, Millwater & Cranston (2011), accepted version, QUT ePrints 41927, p.12-13 (saved excerpt: specs/content/efmp-302/reviews/unit-02/sources-20260914-g3a1/ehrich2011-model-five-parts-excerpt.txt): the model has five parts; the competing forces are \"professional ethics; legal issues or policies; organisational culture; the institutional context; the public interest; society and community; the global context; the political framework; economic and financial contexts; and ?\"; the \"individual\" is the decision maker, and implications fall on \"the individual, the organisation, and the community\"",
+        "docs/semester-1/efmp-302/unit-02/topic-03.mdx \"### The four-step ethical decision-making framework\", **Reflect** paragraph: \"Ehrich and colleagues (2011) found that teachers facing dilemmas routinely weigh the institution's interests against the pupil's, and that naming that tension explicitly is what separates a reasoned decision from a drift\"",
+        "Ehrich et al. (2011) strategies list, accepted version p.19 (saved excerpt: .../sources-20260914-g3a1/ehrich2011-strategies-excerpt.txt): the paper offers \"Recognising an ethical dilemma and the multiple forces at play in it\" as a recommended strategy; it is a conceptual model paper illustrated by three constructed scenarios and reports no such empirical finding",
+        "specs/content/efmp-302/coverage/unit-02.md row \"| U2-11 | topic-03.mdx | The four-step ethical decision-making framework: Empathy, Context, Reflect, Action | ehrich2011 |\": ehrich2011 does not contain the Empathy/Context/Reflect/Action framework; U2-11 is in fact ungrounded and the gap is not declared in specs/content/efmp-302/sources/unit-02.md",
+        "docs/semester-1/efmp-302/unit-02/topic-02.mdx \"### Local and international codes, and what a written code cannot settle\": \"the National Accreditation Council for Teacher Education accredits programmes against that document rather than publishing a separate code of ethics\"",
+        "NACTE, Revised Accreditation Standards, Elements and Indicators, to be implemented from 1 January 2026 (https://www.nacte.org.pk/Documents/Download/5, retrieved 2026-09-14; saved excerpt .../sources-20260914-g3a1/nacte-accreditation-standards-p1-excerpt.txt): NACTE accredits against its own eight standards; NPST alignment is one indicator (1.1.2) inside standard 1",
+        "NACTE published-documents list (https://www.nacte.org.pk/Documents, retrieved 2026-09-14; saved: .../sources-20260914-g3a1/nacte-published-documents-list.txt): NACTE publishes \"National Standards for Accreditation of Teacher Education Programs\" and \"Accreditation Standards and Procedures for Quality Assurance in Teacher Education\", contradicting sources/unit-02.md's statement that no separate NACTE artefact \"was found to exist\"",
+        "bebeau1999: Crossref record verified (saved: .../sources-20260914-g3a1/crossref-bebeau1999.json) - Bebeau, Rest & Narvaez, Educational Researcher 28(4), 18-26, DOI 10.3102/0013189X028004018. Full text NOT obtainable from this host (SAGE 403; www3.nd.edu OA copy 403; Unpaywall reports is_oa false; CORE full text withheld from public API). Substantive support for topic-03.mdx \"### Rest's four-component model of moral behaviour\" is therefore UNVERIFIED",
+        "carr2000: print-only, no copy available to this host; support for topic-01.mdx U2-01/U2-02 is UNVERIFIED",
+        "icka2024: verified via Crossref DOI 10.20544/teacher.27.12 (saved: .../sources-20260914-g3a1/crossref-icka2024.json); abstract supports topic-01.mdx \"### Trust as the working capital of a teacher's authority\". Citation defects: specs/content/efmp-302/sources/unit-02.md records \"(open access - journal site)\" although a resolvable DOI exists, and 27 is the issue number, not a volume",
+        "unesco-teacher-ethics: unesdoc.unesco.org returned HTTP 403 to this host; the 2019 Global framework of professional teaching standards was not read, so support for U2-05, U2-06, U2-09 and U2-14 is UNVERIFIED"
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "Every U2-NN row in specs/content/efmp-302/coverage/unit-02.md names a \"### \" heading that exists verbatim in the stated file: topic-01.mdx lines 45, 83, 110, 135; topic-02.mdx lines 47, 62, 79, 94, 108; topic-03.mdx lines 44, 88, 119; topic-04.mdx lines 62, 100",
+        "Guide leaf bullets all land somewhere: 2.2 bullet 1 -> U2-05..U2-08, 2.2 bullet 2 -> U2-09, 2.3 bullets 1-3 -> U2-10..U2-12, 2.3 bullet 4 -> U2-13 + U2-14. Nothing in the guide is dropped and nothing out of scope is added",
+        "npm run check:depth-gate exit 0 (log specs/content/efmp-302/reviews/unit-02/logs-20260915-g3a2/check-depth-gate.txt)",
+        "npm run check:concept-graph exit 0 (log .../logs-20260915-g3a2/check-concept-graph.txt)",
+        "Caveat recorded under `sources`: the Source column of the U2-11 row is wrong, and under `authority`: U2-01..U2-04 have no guide leaf bullet behind them"
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "fail",
+      "evidence": [
+        "docs/semester-1/efmp-302/unit-02/unit-assessment.mdx \"### Multiple-choice questions (MCQs)\": items 1-3 test topic 2.1, items 4-6 topic 2.2, items 7-9 topic 2.3, item 10 alone tests topic 2.4. The approved blueprint in specs/content/efmp-302/content-spec.md (\"**Unit-end assessment blueprint**\") requires \">= 2 per topic\"",
+        "unit-assessment.mdx MCQ 6 and \"### MCQ answer key\" item 6: keys \"accrediting programmes against the National Professional Standards for Teachers\" as the correct account of NACTE; contradicted by NACTE's own current standards document (see `sources` evidence)",
+        "unit-assessment.mdx RRQ 4 and RRQ 7 carry *(Remember)*; the same page's frontmatter blooms_summary states \"RRQs at Understand and Analyze\", and the blueprint band for RRQs is \"Understand to Analyze\"",
+        "unit-assessment.mdx MCQ 8 options a-d omit \"moral motivation\", the one distractor that makes the character/motivation discrimination real; the stem is also near-verbatim item 2 of topic-03.mdx \"## Activity: Locating the failure\", so the labelled *(Apply)* demand is in practice recall",
+        "unit-assessment.mdx MCQ 4 labelled *(Remember)* in fact requires classifying the topic-02.mdx vignette into a domain (Understand/Apply); MCQ 2 labelled *(Apply)* restates the topic-01.mdx vignette rather than transferring to a new case",
+        "Independent solution before reading the key: I derived 1b 2c 3b 4b 5c 6b 7a 8c 9b 10b; the supplied key matches on all ten. RRQ model answers and the five ERQ analytic rubrics were solved and compared independently and are internally consistent, with the analysis criterion bolded and an explicit cap (\"cannot be awarded more than 10 overall\") that does discriminate performance",
+        "Blueprint items that are met: 10/10/5 counts; RRQ >= 2 per topic (2.1: 1-3, 2.2: 4-6, 2.3: 7-8, 2.4: 9-10); ERQ one per topic plus the integrative item 5; >= 1 ERQ at Analyze-or-higher",
+        "npm run check:no-answer-keys exit 0 (log .../logs-20260915-g3a2/check-no-answer-keys.txt)"
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "fail",
+      "evidence": [
+        "Rendered inspection of http://localhost:3210/semester-1/efmp-302/unit-02/* (Docusaurus 3.10 dev server at commit ed780ea, Playwright 1.61.1 chromium; record: .../logs-20260915-g3a2/render-review.txt and .../renders-20260914-g3a1/render-inspection.json)",
+        "Narrow viewport 360x740: topic-03.mdx remedy table measures width 328 / scrollWidth 368 inside a wrapper div with overflow-x: visible, and the document does not scroll horizontally (scrollWidth 360 == clientWidth 360). The \"What actually helps\" column is cut mid-word. Artifact: .../renders-20260914-g3a1/topic-03-rest-narrow-table.png",
+        "Narrow viewport 360x740: every four-column ERQ rubric on unit-assessment.mdx has its last cell right edge at 502-550 px against a 360 px viewport with no scroll affordance, so the \"Strong (4-5)\" band is unreachable on a phone. Artifact: .../renders-20260914-g3a1/unit-assessment-erq1-narrow-table.png",
+        "A4 print emulation at 680 px content width (15 mm margins): no table clipped (all five rubric tables width 648 == scrollWidth 648), navbar/sidebar/TOC/footer hidden, \"## Answers and marking guidance\" present. Artifacts: .../renders-20260914-g3a1/unit-assessment-print-a4-680.png, unit-assessment-a4.pdf, topic-03-a4.pdf",
+        "Figures: all seven pages render zero <img> and zero <figure> elements. The eight fig-U2-* carriers are MDX comments and are stripped at render, so no alt text reaches the page, while each of the four topic pages carries a prose reference to a figure that is not there. Artifact: .../renders-20260914-g3a1/topic-04-figure-reference-gap.png shows \"The figure above works the case through.\" with no figure above it",
+        "Headings: no level skips on any of the seven pages; exactly one h1 per page (render-inspection.json screen.headingSkips == [] throughout)",
+        "Link text: topic-02.mdx, topic-03.mdx and topic-04.mdx \"## Further reading\" render bare URLs as link text (https://unesdoc.unesco.org/ark:/48223/pf0000372167, https://doi.org/10.3102/0013189X028004018, https://doi.org/10.1080/13540602.2011.539794) rather than descriptive text; no vague \"click here\" text found"
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "topic-01.mdx \"### What \\\"professional ethics\\\" means...\": the three-way distinction is built from a concrete case (Miss Rabia, lines 30-42) before any abstraction, and each of personal morality, law and professional ethics is defined in one short paragraph",
+        "Every key term is defined at first use and carries a <Glossary> element: Professional Ethics (topic-01.mdx line ~47), Code of Ethical Conduct (topic-02.mdx line ~43), Reflective Decision Making (topic-03.mdx line ~119), Ethical Dilemma (topic-04.mdx line ~43); no synonym drift within the unit",
+        "No specialist prerequisite is assumed: index.mdx \"## Prerequisite knowledge\" states \"No prior study of philosophy or ethics is assumed\"",
+        "Sentences are short and active; one idea per paragraph; npm run check:no-em-dash exit 0 (log .../logs-20260915-g3a2/check-no-em-dash.txt)",
+        "npm run validate:content exit 0 (log .../logs-20260915-g3a2/validate-content.txt); every page carries a description and the frontmatter schema passes"
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": [
+        "Full cycle present in each topic file: situation -> explanation -> activity -> check your understanding -> summary -> self-assessment checklist -> practicum task -> summative task with a mini-rubric -> further reading",
+        "All five misconceptions named in content-spec.md are addressed in prose: topic-01.mdx (\"ethics is just being a good person\", \"if it is not in the code, it is allowed\"), topic-03.mdx (\"if a teacher knows the right thing, they will do it\"), topic-04.mdx (\"confidentiality means never telling anyone anything\", the personal-social-media claim)",
+        "Activities are feasible in a Pakistani/Sindhi classroom with no materials beyond paper and a group: topic-01.mdx \"## Activity: Sorting the three columns\" (8 items, 20 min), topic-02.mdx \"## Activity: Four domains, one incident\" (25 min), topic-03.mdx \"## Activity: Locating the failure\" (25 min), topic-04.mdx \"## Activity: The dilemma exchange\" (30 min)",
+        "Worked examples are locally grounded and specific: Miss Rabia (Karachi government girls' school), Mr Aslam (Class 9 biology), Miss Nadia and the school management committee, Miss Farah (Hyderabad private school, board examination, guide book sold at the gate)",
+        "unit-teacher-notes.mdx \"## Running the activities safely\" gives an explicit opt-out for trainees whose own schooling involved humiliation and a safeguarding instruction (\"that is not a teaching moment. Follow your institution's procedure\")",
+        "topic-03.mdx remedy table converts Rest's model into a diagnostic a trainee can actually use, and the unit-assessment ERQ 3 then requires measures matched to the failure mode; conceptual depth, not word padding",
+        "Advisory recorded separately: topic-03.mdx's remedy table and the four named failure modes are author constructions carrying no attribution, presented adjacent to the Rest citation"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "topic-04.mdx, \"### What makes a dilemma a dilemma\": the four \"competing legitimate claims\" attributed to Ehrich et al. (2011) - the individual pupil's interest, the other pupils' interest, the institution's interest, the public interest - are not the model's components. The paper's competing forces are professional ethics, legal issues/policies, organisational culture, institutional context, the public interest, society and community, the global context, the political framework, economic and financial contexts and an untitled force; its \"individual\" is the decision maker, not the pupil, and its implications triad is individual/organisation/community. Repair: restate the model as the source has it, or drop the attribution and present the quartet as the unit's own teaching simplification."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "topic-03.mdx, \"### The four-step ethical decision-making framework\", Reflect paragraph: \"Ehrich and colleagues (2011) found that teachers facing dilemmas routinely weigh the institution's interests against the pupil's, and that naming that tension explicitly is what separates a reasoned decision from a drift.\" Ehrich et al. (2011) is a conceptual model paper illustrated by three constructed scenarios; it reports no empirical frequency finding and makes no claim about what separates a reasoned decision from a drift. It does recommend \"Recognising an ethical dilemma and the multiple forces at play in it\". Repair: downgrade \"found that\" to what the paper actually argues and recommends."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "Undeclared source gap: the Empathy/Context/Reflect/Action framework (U2-11, the guide's own second 2.3 bullet) has no source. coverage/unit-02.md grounds U2-11 in ehrich2011, but ehrich2011 contains a five-part critical-incident model, not ECRA. The two gaps declared in sources/unit-02.md do not include this one. Repair or escalate: find a real source for ECRA, or declare it as a guide-named framework with no traceable reference and mark it accordingly."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "topic-02.mdx, \"### Local and international codes, and what a written code cannot settle\": \"the National Accreditation Council for Teacher Education accredits programmes against that document [NPST 2009] rather than publishing a separate code of ethics\" is inaccurate, and no bound source supports it. NACTE publishes its own \"National Standards for Accreditation of Teacher Education Programs\" (revised set effective 1 January 2026, eight standards); NPST alignment is a single indicator (1.1.2) inside standard 1, and indicator 6.1.5 treats a \"professional code of ethics\" as something the institution adheres to. Repair: state that NACTE accredits programmes against its own published accreditation standards, which require alignment with the NPSTs, and that NACTE does not itself publish a teachers' code of ethics."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "unit-assessment.mdx MCQ 6 and its answer key teach the same inaccurate institutional fact as the prose above. Option (b) remains the least wrong of the four offered, so the key is not internally contradictory, but the item and its rationale must be rewritten with the prose. Repair: rewrite the stem against NACTE's actual function, or replace the item (which would also help the MCQ blueprint shortfall below)."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "unit-assessment.mdx: only one MCQ (item 10) tests topic 2.4, against the approved blueprint requirement of \">= 2 per topic\" for the 10-item MCQ bank. Topics 2.1, 2.2 and 2.3 each carry three. Repair: convert one item to a topic 2.4 item, or rebalance to 3/3/2/2."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "Small-screen presentation, observed at 360x740: the four-column ERQ rubric tables on unit-assessment.mdx and the three-column remedy table in topic-03.mdx overflow their wrapper (overflow-x: visible) without any horizontal scroll, so the highest band of every ERQ rubric and the right-hand column of the Rest remedy table are unreachable on a phone. This is a theme/CSS defect rather than an authoring defect and should be routed to the site owner, not repaired by editing unit prose."
+    },
+    {
+      "severity": "uncertain",
+      "resolved": false,
+      "message": "Independence is unverifiable. The launching agent supplied no prepared manifest, no output directory, no author or translator run identity and no reviewer run identity. I verified the reviewed bytes against commit ed780ea and generated a manifest myself for digest comparison; that establishes what was reviewed but it does not establish that the reviewer did not author these bytes. The report records author_run_id as UNSUPPLIED rather than inventing one."
+    },
+    {
+      "severity": "uncertain",
+      "resolved": false,
+      "message": "The reviewed checkout was not frozen. The task named commit ed780ea as the frozen state, but a concurrent writer advanced the branch twice during this review: e9d5ea2 \"content(efmp-302): re-draft Unit 4 to the per-topic standard, English through G3\" and 3bdedbf \"content(efmp-302): apply the Unit 3 G3 findings, including a citation fabrication\". Six bound paths changed (content-spec.md, sources/unit-03.md, and four new unit-04 governance files), which is why the first attempt of this report, bound to the ed780ea manifest, was rejected by node scripts/review-evidence.mjs validate with \"stale or incomplete input manifest\" (log logs-20260915-g3a2/validate-report.txt). Every EFMP-302 Unit 2 bound path is byte-identical across ed780ea, the current HEAD and the working tree, and the \"## Unit 2\" subsection of content-spec.md hashes to c237cf46096b1ac46422719d429cd0792fa3807e8241b24943743a7a4947a6a9 at all three, so the substantive review stands. This report is re-bound to the current manifest with that drift disclosed rather than silently refreshed."
+    },
+    {
+      "severity": "uncertain",
+      "resolved": false,
+      "message": "The same concurrent commit 3bdedbf swept this reviewer’s in-progress evidence directory (specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/ and the superseded attempt-01 report) into the repository without the reviewer’s involvement. No reviewer action created those commits, and the reviewer has not altered or deleted them. A review evidence tree that a third party can commit mid-attempt weakens the append-only guarantee the contract relies on."
+    },
+    {
+      "severity": "uncertain",
+      "resolved": false,
+      "message": "G1 authority for the topic partition is not confirmed. content-spec.md labels the 2.3-into-2.3+2.4 split \"**G1 decision requiring owner confirmation** ... Confirm or reject at G1\", and specs/content/efmp-302/tasks.md still shows \"Unit 2 | G1 unit-spec | ▣\" with the note that the split needs owner confirmation. G3 cannot certify content whose scope authority is still open. On the merits the partition is defensible (see the summary), but the confirmation is an owner act, not a reviewer act."
+    },
+    {
+      "severity": "uncertain",
+      "resolved": false,
+      "message": "Substantive support for bebeau1999 is unverified. The Crossref record matches the citation exactly, but the full text could not be obtained from this host: SAGE returns 403, the www3.nd.edu open-access copy returns 403, Unpaywall reports is_oa false with no OA locations, and CORE withholds full text from public API users. I could not read the paper and confirm that it sets out all four components and their failure modes as topic-03.mdx and sources/unit-02.md assert. carr2000 (print only) and unesco-teacher-ethics (unesdoc 403) are unverified for the same reason."
+    },
+    {
+      "severity": "uncertain",
+      "resolved": false,
+      "message": "sources/unit-02.md states of NACTE that \"No separate NACTE code is cited, because none was found to exist.\" The absence conclusion was drawn without reaching NACTE's own site, which publishes a documents page listing its accreditation standards, manuals and guidelines. The narrow conclusion (NACTE publishes no teachers' code of ethics) survives; the inference that \"NACTE guidelines\" in the guide therefore means npst-pakistan-2009 does not, because NACTE guidelines exist as a distinct, downloadable artefact."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "content-spec.md \"### Sub-topic checklist\" preamble says \"One row per leaf bullet of course-guide sections 2.1-2.3\", but the guide has six leaf bullets and the table has fourteen rows. Section 2.1 has no bullets at all, so U2-01 to U2-04 are author-authored subtopics. The expansion is in scope and pedagogically sound; the self-description is not accurate and the depth gate treats this table as authority."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Nothing in the learner-facing unit tells a reader that the course guide has only sections 2.1 to 2.3. index.mdx \"## In this unit\" lists four topics numbered 2.1 to 2.4 and topic-04.mdx carries topic_label \"2.4\", so a learner or external examiner can reasonably infer a guide section 2.4 exists. A one-line note in index.mdx or in the topic-04 opening would remove the inference at no cost."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "unit-assessment.mdx RRQ 4 and RRQ 7 are labelled *(Remember)*, below the blueprint band \"Understand to Analyze\" for RRQs and contradicting the same page's blooms_summary (\"RRQs at Understand and Analyze\"). Both items in fact demand more than recall (an example breach per domain; a matched remedy per component), so the cheapest repair is relabelling rather than rewriting."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "unit-assessment.mdx MCQ 8 omits \"moral motivation\" from its options, removing the only distractor that makes the motivation/character discrimination real, and its stem restates item 2 of the topic-03.mdx activity almost verbatim. MCQ 4 is labelled *(Remember)* but requires classification, and MCQ 2 is labelled *(Apply)* while restating the topic-01 vignette."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "topic-03.mdx: the remedy table (\"Sensitivity / Judgement / Motivation / Character\" against \"The failure\" and \"What actually helps\") and the four failure labels are author constructions sitting immediately under the Bebeau, Rest and Narvaez citation with no attribution of their own. A reader will take them for the source's. One sentence marking them as this unit's diagnostic gloss would settle it."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "sources/unit-02.md records icka2024 as \"(open access - journal site)\" although DOI 10.20544/teacher.27.12 resolves; and cites \"*International Journal of Education Teacher, 27*, 99-107\" where Crossref gives container \"Teacher\" (short title IJET), ISSN 1857-8888, publisher University St. Kliment Ohridski - Bitola, with 27 as the issue, not a volume. The same citation appears in topic-01.mdx \"## Further reading\"."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "concepts/unit-02.md says \"The remaining fifteen are authored here and carry a G5 flag\" but the \"## Urdu labels needing G5 review\" list holds eighteen IDs, which is also the figure the tasks.md G5 row uses. Governance-file arithmetic only; no published prose is affected."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "concepts/unit-02.md maps CON:EFMP-302-2-20 (\"The mark and the response\", topic 2.4) to ERQ-02, which is the four-domain Mr Aslam item and belongs to topic 2.2. check:concept-graph passes, so the derivation rule does not catch it."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "topic-02.mdx, topic-03.mdx and topic-04.mdx render bare URLs as the visible link text in \"## Further reading\". Descriptive link text would read better in a screen reader and in the A4 handout; topic-01.mdx already does this correctly by omitting the URL."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Figures are all at Status prompt-only with empty Src, which figures/unit-02.md declares and check:figures accepts at this stage, but the consequence in the rendered artefact is that four topic pages each contain a dangling \"the figure above\" reference. Either the G6 asset pass should precede publication, or the prose references should be softened until the assets land."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Repository configuration blocks the contract’s own evidence rule: .gitignore line 38 ignores *.log, so command logs written with a .log extension can never be committed, and node scripts/review-evidence.mjs validate reads evidence bytes from disk. On a fresh CI checkout such a report would fail with ENOENT. This attempt works around it by writing every command log as .txt; the owner should either carve out specs/content/**/reviews/ in .gitignore or fix the extension in the contract."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Provenance note, not a defect in this unit: the concurrent commit 3bdedbf is titled \"apply the Unit 3 G3 findings, including a citation fabrication\". A fabricated citation was therefore found in the sibling unit drafted in the same pass. That raises the prior on the citation defects recorded above for Unit 2 and argues for re-checking every EFMP-302 source key drafted in this batch against primary text rather than registry metadata alone."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Timestamp correction against the superseded attempt-01 report: its started_at (2026-09-15T03:25:00Z) was an estimate and is wrong. The first bound action of this review was the manifest prepare recorded at 2026-09-15T04:02:33Z, which this report uses. attempt-01 was committed by a third party (3bdedbf) before it could be corrected, so it is left untouched rather than rewritten."
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-02/logs-20260915-g3a2/validate-content.txt"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-02/logs-20260915-g3a2/check-depth-gate.txt"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-02/logs-20260915-g3a2/check-figures.txt"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-02/logs-20260915-g3a2/check-no-em-dash.txt"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-02/logs-20260915-g3a2/check-no-answer-keys.txt"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-02/logs-20260915-g3a2/check-docs-sync.txt"
+    },
+    {
+      "name": "check:concept-graph",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-02/logs-20260915-g3a2/check-concept-graph.txt"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-02/logs-20260915-g3a2/render-review.txt"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/efmp-302/reviews/unit-02/logs-20260915-g3a2/check-concept-graph.txt": "76611abe837b6f12329d2490cc0e361d6fed8c7180da083207fc7ba7283fdcd6",
+    "specs/content/efmp-302/reviews/unit-02/logs-20260915-g3a2/check-depth-gate.txt": "90251a849eda5882707675506f6145b4e9e3c2960c3a1a8aade6cd0326a43b27",
+    "specs/content/efmp-302/reviews/unit-02/logs-20260915-g3a2/check-docs-sync.txt": "9dffd4526bf223e08053a20787cb9c86dc26d7bcca2be43ac1289d12cd2ad406",
+    "specs/content/efmp-302/reviews/unit-02/logs-20260915-g3a2/check-figures.txt": "2162fa677cc204d072a41a1b22df89824e3d955698ed4c1769f0a3f9392c1fa5",
+    "specs/content/efmp-302/reviews/unit-02/logs-20260915-g3a2/check-no-answer-keys.txt": "e197df9fef0052f370d8576cd5f13016d673bfdf4a836251106ca303abe305b8",
+    "specs/content/efmp-302/reviews/unit-02/logs-20260915-g3a2/check-no-em-dash.txt": "acbe4aeaaf192f0d7fa0dad3260f02eaa068c6cb900a986ff9e73d037683df71",
+    "specs/content/efmp-302/reviews/unit-02/logs-20260915-g3a2/concurrent-commits-during-review.txt": "6df740709be071988168e324fa52a37c36663fa85c2f22c165b99d48769c1fcb",
+    "specs/content/efmp-302/reviews/unit-02/logs-20260915-g3a2/prepared-manifest-at-ed780ea.json": "fe84478b64d5a11bcaae3400c98ee1ae739eda518b871843655557cb491583d3",
+    "specs/content/efmp-302/reviews/unit-02/logs-20260915-g3a2/render-review.txt": "82bd39f2db20021dbf3dd4e8be3f6f320ebc9906bc8ceef2d76f0795996c2bad",
+    "specs/content/efmp-302/reviews/unit-02/logs-20260915-g3a2/validate-content.txt": "72ca1f10b37d55e90e03287101bc1103ba80194cc2e5f76bcc63d05b2f530ad4",
+    "specs/content/efmp-302/reviews/unit-02/logs-20260915-g3a2/validate-report.txt": "6b4a083c8cceaf3244b1b01a558b15a0a86a31d68d9254cfbd7dc874c83d7f82",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/index-a4.pdf": "ff0960eb25f998ff55e1d482268861d1b329fdf14501c43ba6ded06f429f9bbe",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/index-desktop-1280.png": "520ab6a5e862c71b104a44f42b14b60d50bbaddf3107d8e7d13753140a04303e",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/index-narrow-360.png": "c0ecd5a10413002c449e5943d020cc61b9292d7ac4ae3e909deff92d8e65dfe2",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/index-print-emulated.png": "958a55bbbf94bf303b577d45596a1471c89e688e5647e8a4732ff4c6bd05e171",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/render-inspection.json": "149f016c8ed8150deedfbfdd4ffd84d06f85144034a828db7891b1c8b802c225",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/topic-01-a4.pdf": "1cdceafd44395a67b45057329ecc1482a090a5b4e95c8c9afee055723c9a62a9",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/topic-01-desktop-1280.png": "136c7d8955430c83bbf964ae4acac5d1d1546f8a565ce6326f9a03625315b86b",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/topic-01-narrow-360.png": "b781fae020c4d65aa0f725ade0d7b5da25860443e853d51fcf90afc882340381",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/topic-01-print-emulated.png": "0045c725a6f0688e950507f0f71252808028a47b4d3821711dd1c917f6accaa0",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/topic-02-a4.pdf": "9aee9d7dda26bb243a22e01581b718dd317c00a23d95ef990670ffaf54d8f3a1",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/topic-02-desktop-1280.png": "fbe438130b58f110f97ab542639d350520a0210b7fa9f0e289492e59e2f257db",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/topic-02-narrow-360.png": "e833e3e67251bd8addba6e372e7b82c47ef85daa12d73cbfb950e76d9169390d",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/topic-02-print-emulated.png": "2b5a938c0e2f7829643a7fc49a2e5a4f05a6a4e0e122ba45f8a354fd87c6bb3e",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/topic-03-a4.pdf": "60b3485a328ee7426aeca53dff001115ed41dc5b0322a1aacded06be44a56c21",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/topic-03-desktop-1280.png": "0def6ae0dd90283caceb665d3046d18980c7b2ab1717a76ac8598de945834899",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/topic-03-narrow-360.png": "9510ea7d8870b8335ab7b302800a8e763492298add0091c9b8684a37f40d485b",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/topic-03-print-a4-680.png": "46f717c09ad329f8401968901eca0fdf070318ae038b32a516e243cc79c167ca",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/topic-03-print-emulated.png": "3fa25ec92860fb0b701b17ca026bf1db65751665af2075827b386a39810c7999",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/topic-03-rest-narrow-table.png": "5ac8202e2cf6b0c44aa442405f06d750469407f04e5226409dd4c97f02e4183c",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/topic-04-a4.pdf": "9aaba0b98988391252433cad13c3cdba0c73106c58f16e9f2948582d09f766d5",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/topic-04-desktop-1280.png": "d181ed9564cea611eca45122329c12920f246d483f2c9cb32727e7378351151c",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/topic-04-figure-reference-gap.png": "9304b89e73b2036de87ca436c07ced049bc593ea955ff1eaa40bd7e351d275c0",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/topic-04-narrow-360.png": "6ede670fd3eba92b09190d8c53935c9907e0c5e85dbb060027d60ab539e7da44",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/topic-04-print-emulated.png": "c30b3a00d913b513acd46471ca4acafdb3c56d1a32830bbf01ef6596a581fa6f",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/unit-assessment-a4.pdf": "0b51f79f812c4a519a4b4526404d73be54d70fd45aa1cd654b0e062521d4474b",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/unit-assessment-desktop-1280.png": "c01edec909018cd4ab98076b211f05a6ffa56e490f43e4442873f7783c1090ce",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/unit-assessment-erq1-narrow-table.png": "81c84be0a65f196a2cd24dc0e33a951473b30368d03fd3f53f89a2a7d7fb8b5e",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/unit-assessment-narrow-360.png": "7b3619f956d0d6a4d28a53dc0aa879359241e91f966234746218421ed7dc0bb7",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/unit-assessment-print-a4-680.png": "8b9c811362db342de01f1671b411681c0902c1bb4c91a79bcbd834a5ff241ce3",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/unit-assessment-print-emulated.png": "fc9ac8787d3ff0c9155e31f3512a25594eb9f3bb960672211a2b4804e53473ce",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/unit-teacher-notes-a4.pdf": "11b8be0bab2cf6e10c8f5c2a0765bb80375f8917b613b9f249d6b8e0a471b9fb",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/unit-teacher-notes-desktop-1280.png": "9cdf8afe8babf98e31d4c65dcae44c956d932f53dd3bca45f44b054ab71d83dd",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/unit-teacher-notes-narrow-360.png": "013e2ef4a6546b91dae41490404501fd0ae76a8455d0d9192a78255076f7894b",
+    "specs/content/efmp-302/reviews/unit-02/renders-20260914-g3a1/unit-teacher-notes-print-emulated.png": "aaba13fcb38d15cbe7cb3f11d446791a9f58a320e8a71c6afb0bc240bac08523",
+    "specs/content/efmp-302/reviews/unit-02/sources-20260914-g3a1/course-guide-unit-02-extract.txt": "35fef40b8a91b295158f00595d308037871a8cb8da871010a165d0f5d8333d77",
+    "specs/content/efmp-302/reviews/unit-02/sources-20260914-g3a1/crossref-bebeau1999.json": "b725c9444783ecaaf18a20b105fb57ab28a53f28fee231fb2cabd7133152fabe",
+    "specs/content/efmp-302/reviews/unit-02/sources-20260914-g3a1/crossref-ehrich2011.json": "d507eab4dbee417c8602547dcd4dcede462c9f9062a21d7f8bc9fe0044268b69",
+    "specs/content/efmp-302/reviews/unit-02/sources-20260914-g3a1/crossref-icka2024.json": "a00615b316fb841db04eef82d6017fa326074904376a15c058231222c735fb87",
+    "specs/content/efmp-302/reviews/unit-02/sources-20260914-g3a1/ehrich2011-model-five-parts-excerpt.txt": "90a7f6d9e79af401b38ab2e60100acea7db5c449d997e5d4717c56fedcf11e44",
+    "specs/content/efmp-302/reviews/unit-02/sources-20260914-g3a1/ehrich2011-strategies-excerpt.txt": "2a7027ec2f7b9a05690e34726a5972c48b00c511c6969aad3081158934e610b5",
+    "specs/content/efmp-302/reviews/unit-02/sources-20260914-g3a1/git-status-at-review-time.txt": "516cbb1d95ee673974ef0abdbf6d2b66da6ad1a8a96934ca2ff14f62b10cc644",
+    "specs/content/efmp-302/reviews/unit-02/sources-20260914-g3a1/nacte-accreditation-standards-code-of-ethics-indicator.txt": "7e48bf44dbe67d53cf062de65dde6b27f9561b7b70e316abdaa659b262b8d1df",
+    "specs/content/efmp-302/reviews/unit-02/sources-20260914-g3a1/nacte-accreditation-standards-p1-excerpt.txt": "3d7a5225ba1eecb39c9291b93c7f17701de71014b6055bbac9223432d45d7620",
+    "specs/content/efmp-302/reviews/unit-02/sources-20260914-g3a1/nacte-published-documents-list.txt": "37a4939e9019571696f71608ef9ff13c5ec73d9bb43ec6fcf2b51d5f10d7e6b2"
+  }
+}

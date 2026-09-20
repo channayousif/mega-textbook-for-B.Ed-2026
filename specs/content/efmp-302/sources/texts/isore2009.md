@@ -1,0 +1,42 @@
+# isore2009 - verification excerpt
+
+Bound for G3 source-support checking. Retrieved and extracted during the EFMP-302 Unit 4
+G3 review (2026-09-18), report `agent-g3-efmp302-u4-run001`.
+
+```text
+Isore, M. (2009) Teacher Evaluation: Current Practices in OECD Countries and a Literature Review.
+OECD Education Working Paper No. 23, EDU/WKP(2009)2, 20-Oct-2009.
+Retrieved https://files.eric.ed.gov/fulltext/ED530786.pdf (HTTP 200), sha256 b3d834dc829a65c4c68521fa90d55a9a1249554280cb4b39a9596dad8a129f92
+Text extracted from the PDF content streams by this reviewer. Whitespace normalised; PDF octal escapes left as-is.
+
+===== Para 6 - the two major purposes
+EVALUATION SCHEMES 5. This section describes the key dimensions of teacher evaluation schemes found in the literature and within the education systems of the OECD area. 2.1 Purposes of evaluation 6. Teacher evaluation has two major purposes. One the one hand, it is aimed at ensuring that teachers perform at their best to enhance student learning. On the other hand, it seeks to improve the teacher own practice by identifying strengths and weaknesses for further professional development. These two approaches refer to assessments of different nature, respectively summative and formative. 2.1.1 Summative assessment and quality assurance 7. If the ultimate goal of education systems is to provide improved learning for all students, and if teacher performance and practice is the most important factor in this, then teacher evaluation may be considered as a quality assurance mechanism (Danielson
+
+===== Para 17 - 'often conflicting - but not necessarily incompatible'
+In its formative form, evaluation can be considered as a basis for teaching improvement and lifelong professional development opportunities. Summative and formative aspects of teacher evaluation are often conflicting \226 but not necessarily incompatible \226 purposes. In practice, countries rarely use a pure form of teacher evaluation model but rather a unique combination that integrates multiple purposes and methodologies (Stronge and Tucker, 2003). 2.2 Key elements of teacher evaluation schemes 18. This section summarises the aspects involved in teacher evaluation systems, such as the actors engaged in designing and implementing the process, the scope of evaluation, the data gathering instruments and methods, and the criteria and standards used to assess teachers. 2.2.1 Actors involved in the conception an d implementation of evaluation systems 19. Governments. Governments play a maj
+
+===== Para 35 - one framework can serve both purposes
+but can also be employed to help with self-assessment or to support mentoring or coaching relationships, to inform a professional discussion and suggest areas for further growth. Thus, the Framework can serve both summative and formative purposes. Danielson also cautions against potential misuses of the components, arguing that, if the components are generic and designed to apply to any teaching situation, their actual manifestations however differ in various contexts. Therefore, evaluators need to examine the applicability and weighing of each component as well as to translate the elements into specific, observable examples in particular contexts. 36. Kleinhenz and Invargson (2004) caution against \223the absence of standards that adequately explicate the work of teaching \226 what it is that teachers can be expected to know and be able to do in specific domains of practice\224, which
+
+===== Annex 2 section 3 heading - conciliating the two purposes
+://www.tda.gov.uk/teachers/professionalstandards.aspx and http://www.tda.gov.uk/teachers/continuingprofessionaldevelopment.aspx Office for Standards in Education (Ofsted): http://www.ofsted.gov.uk 3. Conciliating the summative and formative purposes in a comprehensive approach: Avalos Context : The historical context of the Chilean educational system has doubtlessly played a critical role in understanding the necessity for a comprehensive and conciliating teacher evaluation scheme. In 1980, the which also implied a change of status of teachers from public servants to salaries employees of EDU/WKP(2009)2 36 municipalities. At the end of the dictatorial regime, a major concern was that teachers\222 conditions did not evolve in line with those for public servants, which had an enormous impact on how teachers perceived and valued themselves, as well as on public opinion. In the 1990s the tea
+
+===== Conclusion - a comprehensive approach conciliates the demands
+aluation process. An effective, fair and reliable evaluation scheme requires teachers\222 overall acceptance an d appropriation of the system. Developing a comprehensive approach may be costly but is critical to conciliate the demands for educational quality, the enhancement of teaching practices through professional development, and the recognition of teacher knowledge, skills and competencies. EDU/WKP(2009)2 32 ANNEX 1: CONCEPTUAL FRAMEWORK FOR TEACHER EVALUATION Key agencies or organisationsinvolved / Stakeholders: - National governments (Ministries / Departments of Education) - Teachers and Teacher Unions - Decentralised authorities in charge of educational policies (districts, municipalities) - Parents / Students - School leaders Scope of evaluation / Teachers evaluated: - Whole country vs. procedures on a regional basis - School type: public schools, private schools - Periodicity o
+
+===== Para on evaluation without a development link
+a link to professional deve lopment opportunities, the evaluation process is not sufficient to improve teacher performance, and as a result, often become a meaningless exercise that EDU/WKP(2009)2 17 encounters mistrust \226 or at best apathy \226 on the part of teachers being evaluated (Danielson, 2001; Milanowski and Kimball, 2003; Margo et al. 2008; Pochard, 2008). As regards the French system, Pochard (2008) deplores that the professional development programmes are not shaped to constitute a response to the training needs clearly identified by both the teacher and the institution. It is argued that evaluation alone is not sufficient to implement the necessary changes to favour improvements in the efficacy and equity of the educational system. Also, it is argued that any evaluation highlighting dysfunctions in a school should result in the designing of a new educational plan supported
+
+===== Distortion evidence is specific to high-stakes test-based schemes
+their performance. Third, using student tests scores to evaluate teachers may induce unexpected distortions and constrictions in teacher behaviour towards the sole achievement on standardised tests. High-stakes incentive schemes based on standardised tests can incite teachers to concentrate exclusively on teaching areas assessed in the tests \226 therefore reducing the curriculum to the basic skills generally tested \226 (Jacob and Lefgren, 2005, Weingarten, 2007), incite teachers to concentrate on the specific students who are close to passing mark at the expense of children who are behind or ahead (Weingarten, 2007), and even provoke serious cases of teacher cheating on standardised tests (Jacob and Levitt, 2003; Jacob, 2005). Furthermore, test results may identify teachers who are ineffective or should professionally develop but do neither permit to fairly discriminate between the wi
+
+```
+
+## What this settles
+
+Unit 4 `topic-04.mdx:85` asserted the formative and summative purposes are "incompatible
+in a single document", framed as what Isore identifies. Para 17 says the opposite:
+"often conflicting - but not necessarily incompatible", para 35 that one framework "can
+serve both", and Annex 2 section 3 is headed "Conciliating the summative and formative
+purposes". The distortion evidence is specific to high-stakes test-based schemes, so
+`topic-03.mdx:111-113`'s "reliably degrade" is also unsupported.

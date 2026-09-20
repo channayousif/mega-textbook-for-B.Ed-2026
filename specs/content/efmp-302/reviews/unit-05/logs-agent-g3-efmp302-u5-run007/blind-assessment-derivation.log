@@ -1,0 +1,109 @@
+G3 run007 - EFMP-302 Unit 5 - INDEPENDENT (BLIND) ASSESSMENT DERIVATION
+Reviewer: agent:g3-reviewer   Run: agent-g3-efmp302-u5-run007
+Derived from docs/semester-1/efmp-302/unit-05/{index,topic-01..04}.mdx and
+unit-assessment.mdx lines 1-177 ONLY (answers section, lines 178-288, NOT yet read).
+Prior G3 reports (runs 001-003) NOT yet read at the time of this derivation.
+
+=== MCQ: my derived key, with the passage each rests on ===
+Q1 = d (work invisible from outside)
+    topic-01 "the parts of the job that are invisible from outside are the parts that expand"
+Q2 = c (cynicism or distancing)
+    topic-01 "Exhaustion is visible; cynicism looks like competence"
+    NOTE: distractor (d) "time pressure" is a job DEMAND in Skaalvik, not a burnout dimension.
+    Not misleading, but it is the only option that is not a dimension-or-dimension-name.
+Q3 = a (reply on a channel a parent or colleague can see)
+    topic-03 "The default is not to. Where contact is necessary, use a group rather than a
+    private thread, or a channel a parent or colleague can see."
+    NOTE: (c) "not reply at all, in any form" is a live misread of "the default is not to",
+    but the same sentence supplies the visible-channel route, so (a) is the taught default.
+Q4 = b (removes the pupil's best resource)
+    topic-01 "it removes the one resource they have for understanding a difficult idea"
+Q5 = d (change behaviour without improving teaching)
+    topic-02 "it will change your behaviour without improving your teaching"
+Q6 = b (differ, and the gap is where much of the difficulty lives)
+    topic-02 "different for almost every party, and the gap is where most of a teacher's
+    difficulty lives"
+Q7 = a (uneven across markers)
+    topic-02 "Teaching's status is uneven rather than simply low" / "the markers move
+    independently"
+Q8 = c (what does it replace that was already working)
+    topic-03 "This is the question nobody asks and it is the most important."
+Q9 = d (used a true judgement about one region to excuse inaction in another)
+    topic-04 "Mr Bilal's conclusion about class size is accurate, and it is being used to
+    justify inaction in the first region"
+    NOTE: distractor (b) "correctly identified what is outside their control" is LITERALLY
+    TRUE of the teacher described. Single-best-answer still resolves to (d), but (b) is a
+    true statement offered as a wrong option. Recorded as a quality observation.
+Q10 = a (relocates a system's failure into an individual's character)
+    topic-04 "it becomes a way of relocating a system's failure into an individual's character"
+
+DERIVED MCQ KEY: 1d 2c 3a 4b 5d 6b 7a 8c 9d 10a
+
+=== Bloom labels as printed on the items (counted before reading any key) ===
+MCQ  : 1 Und, 2 Und, 3 App, 4 App, 5 Und, 6 Rem, 7 Und, 8 App, 9 App, 10 Und
+       -> Remember 1, Understand 5, APPLY 4
+RRQ  : 1 Und, 2 Und, 3 Ana, 4 Und, 5 App, 6 Ana, 7 Und, 8 Und, 9 Rem, 10 Ana
+       -> Remember 1, Understand 5, Apply 1, Analyze 3
+ERQ  : 1 Ana, 2 Eva, 3 Eva, 4 Cre, 5 Eva  -> matches declaration
+
+Declared blueprint, unit-assessment.mdx frontmatter blooms_summary:
+  "MCQs at Remember and Understand with two at Apply; RRQs at Understand and Analyze"
+OBSERVED CONFLICT (derived independently, before reading any prior report):
+  - MCQ: FOUR items carry (Apply) - Q3, Q4, Q8, Q9 - not "two at Apply".
+  - RRQ: the set is not confined to "Understand and Analyze": RRQ5 is (Apply) and
+    RRQ9 is (Remember).
+
+=== Per-topic item spread (checked against "at least two MCQs and two RRQs per topic") ===
+MCQ  T5.1: Q1,Q2,Q4 (3) | T5.2: Q5,Q6,Q7 (3) | T5.3: Q3,Q8 (2) | T5.4: Q9,Q10 (2)  OK
+RRQ  T5.1: 1,2,3 (3)    | T5.2: 4,5,6 (3)    | T5.3: 7,8 (2)   | T5.4: 9,10 (2)     OK
+
+=== RRQ: my derived expected content ===
+RRQ1 Invisible/elastic parts of the job land on whoever absorbs them; a conscientious
+     teacher absorbs more than a disengaged one. topic-01.
+RRQ2 Stress = response to demands exceeding resources in the moment; episodic; resolves.
+     Burnout = product of chronic unresolved demand; three dimensions = exhaustion,
+     cynicism/depersonalisation, reduced personal accomplishment/efficacy.
+     "Where each of this unit's two burnout sources was conducted":
+       Skaalvik & Skaalvik 2020 = Norway, high schools, 262 teachers. ANSWERABLE.
+       Maslach & Leiter 2016 = the unit describes it as a REVIEW across human-service
+       occupations, health care in particular, expressly "not about teachers". A review
+       has no conduct site, and the unit supplies none.
+     >>> The item's stem presupposes a location for BOTH sources. The unit supports a
+         location for one. Flagged as an item defect, derived blind.
+RRQ3 Physical, Human, Instructional, Structural; last two (instructional, structural)
+     underestimated because the absence of e.g. anyone to ask about a non-decoding Class 4
+     pupil is not discussed and converts a solvable problem into a permanent one. topic-01.
+RRQ4 Any two of: what is measured becomes what is done; effort moves from the work to the
+     record of the work; compliance/managed exposure rather than improvement. topic-02.
+RRQ5 Any three of pupils/parents/head/district/examination system/public, wants vs measures
+     as bulleted in topic-02.
+RRQ6 Status = society's standing for the occupation (pay, entry, autonomy, how spoken of);
+     recognition = what a particular community extends to the teachers it deals with.
+     Follows: the belief is false of recognition even where true of structural status.
+RRQ7 Three questions: what does it add that was not possible before; what does it cost
+     (money, time, set-up, failure, training, attention); what does it replace that was
+     already working.
+     >>> The stem asks why the third is "the hardest to answer HONESTLY". The unit says it
+         is the question "nobody asks" / "most often missed". Not the same property; the
+         honesty framing must be inferred. Minor stem/text drift, recorded.
+RRQ8 Two of: pupils without a phone are excluded from what is announced there; the group
+     runs at all hours so expected availability expands without anyone deciding it;
+     a message sent in haste is permanent and forwardable.
+RRQ9 Control / influence / do not control, with topic-04's examples.
+RRQ10 Without deciding evidence in advance "you will conclude whatever you hoped".
+     Unit asserts it is most often skipped but does not state WHY; the why must be reasoned
+     (it costs effort up front and forecloses a comfortable verdict). Analyze label is apt.
+
+=== ERQ: my derived expectations ===
+ERQ1 Miss Shahnaz - mirrors topic-01 summative task incl. the research/reasoned split.
+ERQ2 Mr Rafiq - mirrors topic-02 summative task incl. the confirmation-depends-on-head
+     objection.
+ERQ3 Ms Sundas - mirrors topic-03 summative task incl. the ungrateful-donor objection.
+ERQ4 One challenge in three regions - mirrors topic-04 summative task incl. the
+     lets-the-system-off-the-hook charge.
+ERQ5 Integrative: multi-grade Class 4+5, 51 pupils, three home languages, no cover, monthly
+     returns, head wanting results, and "telling trainees not to bother with group work"
+     (the cynicism dimension, deliberately mirroring Mr Bilal). Spans T5.1 conditions,
+     T5.2 demands, T5.4 response. Well constructed as an integrative item.
+     Derived expectation: "what is happening to her" = burnout, specifically the cynicism /
+     distancing dimension, on a demands-vs-resources reading.

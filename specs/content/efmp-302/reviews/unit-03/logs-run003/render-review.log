@@ -1,0 +1,16 @@
+# render-review: host browser + print inspection
+# script: specs/content/efmp-302/reviews/unit-03/logs-run003/render-inspect.cjs
+# host: npm run serve -- --port 3103 (serves build/ at commit cf13570)
+# engine: playwright chromium, viewports 1280x900 and 360x740, emulateMedia print + A4 pdf
+# base: http://localhost:3103/semester-1/efmp-302/unit-03/
+# started: 2026-09-19T01:52:59-05:00
+done index 200
+done topic-01 200
+done topic-02 200
+done topic-03 200
+done topic-04 200
+done topic-05 200
+done unit-assessment 200
+done unit-teacher-notes 200
+WROTE inspection.json
+EXIT=0

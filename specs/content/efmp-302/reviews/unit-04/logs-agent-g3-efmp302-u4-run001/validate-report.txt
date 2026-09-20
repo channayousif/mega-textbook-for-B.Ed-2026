@@ -1,0 +1,6 @@
+$ node scripts/review-evidence.mjs validate specs/content/efmp-302/reviews/unit-04/G3/agent-g3-efmp302-u4-run001.json
+Report structurally valid: escalate. This does not authorize gate completion.
+EXIT_CODE=0
+
+NOTE: this log is written after the report and is deliberately NOT listed in evidence_manifest,
+which would otherwise be self-referential. All 50 manifest entries were hashed before validation.

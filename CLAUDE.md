@@ -24,6 +24,25 @@ self-sign, mark a gate done from advisory findings, or use human initials for an
 The trusted host uses signed registry/report evidence; `accept` itself is read-only.
 Follow ADR-0019 and the Feature 014 evidence contract. Existing human sign-off remains usable.
 
+## Claude and Codex visual roles
+
+ADR-0024 defines the cross-agent boundary for course visuals.
+
+- **Claude owns meaning and deterministic schematics:** course research and prose, pedagogy,
+  citations, figure planning, generation prompts, alt text, figure manifests at `prompt-only`,
+  and hand-authored SVG tables, concept maps, flowcharts, timelines and diagrams.
+- **Codex owns raster production:** generated raster illustrations, edits to raster images,
+  visual inspection, WebP optimisation, placement in course files, raster manifest transitions,
+  and the relevant repository gates. Codex uses its built-in image-generation tool by default.
+- When a figure is `Kind: illustration`, Claude MUST NOT invoke an image generator, edit or
+  optimise a raster, or mark it `generated` or `placed`. Claude records a complete prompt, alt
+  text, aspect and target path, leaves it `prompt-only`, and hands it to Codex.
+- Either agent may identify a conceptual or accessibility problem. Claude remains responsible
+  for judging pedagogical meaning; a generated image is never accepted only because it rendered
+  successfully. G3/G5 independence and human escalation rules remain unchanged.
+- The figure marker and `specs/content/<course>/figures/unit-NN.md` row are the handoff contract.
+  Both agents preserve the figure ID, prompt and alt text unless a content correction is recorded.
+
 ## Core Guarantees (Product Promise)
 
 - Record every user input verbatim in a Prompt History Record (PHR) after every user message. Do not truncate; preserve full multiline input.

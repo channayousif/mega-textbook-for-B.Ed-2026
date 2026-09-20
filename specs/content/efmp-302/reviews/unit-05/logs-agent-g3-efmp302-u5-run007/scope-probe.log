@@ -1,0 +1,12 @@
+### scope probe: is the 4-column rubric clip Unit-5-specific? @360px
+### run agent-g3-efmp302-u5-run007  2026-09-19T17:06:39.900Z
+### Recorded only to scope the repair. Other units are NOT under review here.
+  unit-01: tables=0 tablesWithOffscreenCells=0 maxCellRight=0px docHorizScroll=false
+  unit-02: tables=5 tablesWithOffscreenCells=5 maxCellRight=567px docHorizScroll=false
+  unit-03: tables=5 tablesWithOffscreenCells=5 maxCellRight=542px docHorizScroll=false
+  unit-04: tables=5 tablesWithOffscreenCells=5 maxCellRight=595px docHorizScroll=false
+  unit-05: tables=5 tablesWithOffscreenCells=5 maxCellRight=558px docHorizScroll=false
+  unit-06: tables=5 tablesWithOffscreenCells=5 maxCellRight=539px docHorizScroll=false
+
+### finished 2026-09-19T17:06:44.878Z
+### exit_code: 0

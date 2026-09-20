@@ -1,0 +1,65 @@
+G3 run 003 - EFMP-302 Unit 4 - independent assessment derivation
+Reviewer run: agent-g3-efmp302-u4-run003. Items solved from docs/semester-1/efmp-302/unit-04/
+topic-01..04.mdx BEFORE reading unit-assessment.mdx "## Answers and marking guidance" (file read
+was split: questions at lines 50-145, answers at 145-235, read in that order).
+
+MCQ  derived  reasoning
+1    b        A standard answers "what does competent practice look like, in a checkable form"
+              (topic-01.mdx:71-74). (a) is the code of conduct, (c) the curriculum, (d) is the
+              misconception topic-01.mdx:77 names.
+2    d        topic-01.mdx:59-61: "Be a good teacher" is not a standard because it is not
+              specific enough to be evidenced. It could be written (a) and shared (b).
+3    a        topic-04.mdx:117-120 / topic-01.mdx four uses: a development instrument repurposed
+              for accountability is a use it was not designed for.
+4    c        topic-02.mdx:41-43: Ministry of Education, 2009, UNESCO and USAID support.
+              NOTE: this key rests on a claim corroborated only from secondary sources - see
+              the sources declaration; recorded, not treated as a key error.
+5    b        topic-02.mdx:54-56 knowledge and understanding / dispositions / performance and
+              skills.
+6    d        topic-02.mdx:117-124: "Pupils volunteer answers, including incorrect ones" is the
+              observable, hard-to-fake indicator. (b) is the named proxy trap.
+7    c        topic-03 self-evaluation cycle: evidence before judgement guards against selecting
+              confirming evidence.
+8    a        topic-03 evidence table / fig-U4-6: planning documents are producible without the
+              underlying competence.
+9    b        topic-04.mdx:59-61: licensing asks "is this person currently fit to practise?"
+10   c        topic-04.mdx:106-108: the teacher treats a dual-purpose document as summative,
+              because that is the version with consequences.
+
+Derived key: b d a c b d c a b c   (distribution a:2 b:3 c:3 d:2)
+Published key (unit-assessment.mdx:180-198): b d a c b d c a b c
+DISCREPANCIES: none. 10/10 agreement.
+
+MCQ rationale check (run-002 finding: MCQ-1 and MCQ-6 rationales named option letters that had
+not been re-mapped after the options were permuted):
+  MCQ-1 rationale (:180-182) now names the questions, not letters. OK.
+  MCQ-6 rationale (:190-192) now names "Displaying pupils' work on the walls" descriptively. OK.
+  No rationale in the key names an option letter other than its own answer letter. OK.
+
+RRQ mark-scheme checks
+  RRQ-02 stem (:120-123) requires three instruments PLUS one way national frameworks differ.
+    Mark scheme (:199-203) is now 7 marks: 2 per instrument (6) + 1 for a real difference.
+    Stem and scheme agree. Run-002 finding [4a] resolved.
+  RRQ-04 stem (:127-130) asks what a system must decide in advance if it wants one document to
+    serve both. Mark scheme (:211-216) awards the 4th mark for that decision and explicitly
+    instructs: "Do not award an answer whose conclusion is that one document cannot hold both:
+    topic-04 teaches, from Isore's own wording, that the purposes are conflicting but not
+    incompatible." Stem and scheme agree. Run-002 finding [4b] resolved.
+    CONFLICT FOUND ELSEWHERE: topic-04.mdx:110-111 teaches, as a corrected misconception, that
+    appraisal and professional development "cannot be the same instrument". A candidate who
+    applies the unit's own misconception box to RRQ-04 is denied the mark by this scheme.
+
+Bloom demand, classified from the thinking required rather than the printed label
+  RRQ-01 (:117) recite a definition + three features the unit prints as a bulleted list  -> Remember
+  RRQ-03 (:124) name the four uses + a requirement each, all printed verbatim              -> Remember
+  RRQ-05 (:132) recite the three-level architecture, printed verbatim                      -> Remember
+  RRQ-08 (:140) name the five stations + the two break points, printed verbatim            -> Remember
+  All four are labelled *(Remember)* in the file. content-spec.md Unit 4 blueprint requires
+  "RRQs (10): Understand to Analyze". Four of ten sit below the floor.
+
+RRQ topic distribution, derived from specs/content/efmp-302/concepts/unit-04.md "Topic" column
+  4.1: RRQ-01, RRQ-02, RRQ-03, RRQ-04   (RRQ-04 via CON:EFMP-302-4-6, a Topic 4.1 concept)
+  4.2: RRQ-05, RRQ-06, RRQ-07
+  4.3: RRQ-08, RRQ-09
+  4.4: RRQ-10                            (via CON:EFMP-302-4-16 only)
+  Blueprint requires >= 2 RRQs per topic. Topic 4.4 has 1.

@@ -1,0 +1,14 @@
+# command: npm run check:no-answer-keys
+# cwd: /home/a2ahs/mega_book_for_B.Ed
+# commit: 957e1306c3aa44c2cd1f95027b4dacb4409108ae
+# run: agent-g3-efmp302-u3-run005
+# started_at: 2026-09-19T11:53:46Z
+---
+
+> bed-mega-textbook@0.1.0 check:no-answer-keys
+> node scripts/check-no-answer-keys.mjs
+
+✓ No answer keys / private marking material found (scanned: docs, licence, i18n, build, specs/content).
+---
+# exit_code: 0
+# finished_at: 2026-09-19T11:53:46Z

@@ -1,0 +1,121 @@
+$ node print.mjs  # A4 print-media inspection of unit-assessment (794x1123, emulateMedia print)
+# date=2026-09-19T17:18:07Z
+{
+ "tabs": [
+  {
+   "i": 0,
+   "w": 762,
+   "right": 778,
+   "vw": 794,
+   "sw": 762,
+   "cw": 762,
+   "clipped": false,
+   "overflowX": "auto",
+   "cols": 4
+  },
+  {
+   "i": 1,
+   "w": 762,
+   "right": 778,
+   "vw": 794,
+   "sw": 762,
+   "cw": 762,
+   "clipped": false,
+   "overflowX": "auto",
+   "cols": 4
+  },
+  {
+   "i": 2,
+   "w": 762,
+   "right": 778,
+   "vw": 794,
+   "sw": 762,
+   "cw": 762,
+   "clipped": false,
+   "overflowX": "auto",
+   "cols": 4
+  },
+  {
+   "i": 3,
+   "w": 762,
+   "right": 778,
+   "vw": 794,
+   "sw": 762,
+   "cw": 762,
+   "clipped": false,
+   "overflowX": "auto",
+   "cols": 4
+  },
+  {
+   "i": 4,
+   "w": 762,
+   "right": 778,
+   "vw": 794,
+   "sw": 762,
+   "cw": 762,
+   "clipped": false,
+   "overflowX": "auto",
+   "cols": 4
+  }
+ ],
+ "hs": [
+  {
+   "t": "Unit summary​",
+   "disp": "block",
+   "vis": "visible",
+   "h": 40
+  },
+  {
+   "t": "Summative assessment​",
+   "disp": "block",
+   "vis": "visible",
+   "h": 40
+  },
+  {
+   "t": "Multiple-choice questions (MCQs)​",
+   "disp": "block",
+   "vis": "visible",
+   "h": 30
+  },
+  {
+   "t": "Restricted-response questions (RRQs)​",
+   "disp": "block",
+   "vis": "visible",
+   "h": 30
+  },
+  {
+   "t": "Extended-response questions (ERQs)​",
+   "disp": "block",
+   "vis": "visible",
+   "h": 30
+  },
+  {
+   "t": "Answers and marking guidance​",
+   "disp": "block",
+   "vis": "visible",
+   "h": 40
+  },
+  {
+   "t": "MCQ answer key​",
+   "disp": "block",
+   "vis": "visible",
+   "h": 30
+  },
+  {
+   "t": "RRQ model answers and mark schemes​",
+   "disp": "block",
+   "vis": "visible",
+   "h": 30
+  },
+  {
+   "t": "ERQ rubrics​",
+   "disp": "block",
+   "vis": "visible",
+   "h": 30
+  }
+ ],
+ "hiddenBlocks": 0,
+ "docSW": 794,
+ "vw": 794
+}
+# exit_code=0

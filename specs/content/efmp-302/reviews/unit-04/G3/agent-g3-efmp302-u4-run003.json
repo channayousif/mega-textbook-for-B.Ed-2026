@@ -1,0 +1,468 @@
+{
+  "schema_version": 1,
+  "course_code": "EFMP-302",
+  "unit_no": 4,
+  "stage": "G3",
+  "disposition": "escalate",
+  "reviewer_id": "agent:g3-reviewer",
+  "author_run_id": "commit:2b4dd11",
+  "reviewer_run_id": "agent-g3-efmp302-u4-run003",
+  "model": "claude-opus-5",
+  "started_at": "2026-09-19T00:00:00Z",
+  "completed_at": "2026-09-19T06:56:34.794Z",
+  "skill_digest": "afded48dc524cf73584575bb010a9d6f826f117ee55a2da29c7a038033ca1554",
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
+    ".claude/agents/g5-reviewer.md": "b63596b668dd8814fc7b34d59326171f7c789b8dc4e631e30c2c19fe05f2c68a",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g3.md": "53f6213fd4c2f99f0f5066a97fe11459706686e44df6a972e87bc0ebad8507e6",
+    ".claude/skills/review-unit/references/g5.md": "7cbdf9929e6073b71663ec8951a9a42d1e8e683af479434f8409c81002d33159",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/memory/constitution.md": "2c0a5a4dddd6fcca686fdecc4b1a2a958ab378ff02e8ef95b5dce2f831ea3531",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "f1d7f063cc2c826693a3d8428fb5d3ee45455fdb7906ebc5adadee8b9a434d47",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-1/efmp-302/course-overview.mdx": "7dcacdcd8198a7f6f0feda4f29023a3dbe145722ad0a8413d5de5d4e5dfaf450",
+    "docs/semester-1/efmp-302/unit-04/_category_.json": "15a026b0720a7893bca6efb34b1f921ea14bba525fcf91523cd28fd9048056bf",
+    "docs/semester-1/efmp-302/unit-04/index.mdx": "7952c9c5ba1fba93aaaefac933600b09dcec4f9a9e3055ec55b91a02fee035f2",
+    "docs/semester-1/efmp-302/unit-04/topic-01.mdx": "0fce62787e80fae7615499767445b55b98a0760f40da175d5826ed7ba9b16bfc",
+    "docs/semester-1/efmp-302/unit-04/topic-02.mdx": "d2f588a57a8c013c7472bd520df2dfc74f8ab2cf272b7bb4dd4417219dc3d22a",
+    "docs/semester-1/efmp-302/unit-04/topic-03.mdx": "96bc02b355d8d2d44444cb718182e22d4a24a51288e4f76a92d1231d8c1bd0a8",
+    "docs/semester-1/efmp-302/unit-04/topic-04.mdx": "e4ae68dc0ff0e14d275aa04f9601b50a20822a657d9a022c2998eff90c53506e",
+    "docs/semester-1/efmp-302/unit-04/unit-assessment.mdx": "52107d91490a5d813cd74b792319f162873055a6fd8b7127e017469c85ff0e11",
+    "docs/semester-1/efmp-302/unit-04/unit-teacher-notes.mdx": "0fccfad7e5d75414632fde550853eeaf855f422a8b8581b5aa47dcc0aeff93b5",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "41b698f8cbbb12f4030d6893083a5c36e4a19848b5ddb86206e5ba72847b8b13",
+    "scripts/check-no-answer-keys.mjs": "a5a50ea1971522ca1d65e2c0f5091c0b8b46cd716e10ce3171bdb6cb74f5e355",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "a748d1eedff125daa05dd704016cda13b8e05c889782509b10983916e7ddc2f8",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "bb614c625f7bf397ce51a317bdb8901711c00fa009d4ad0a506c5096e5b9ddd2",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "37dc0675e977cbb25421bb4d442d0994549b3acc9dbf3c44613fea9a3c532508",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "5fedb959ce39a29775158338afed506db73697426e5b23d2d8421068210bac3d",
+    "scripts/lib/review-evidence.mjs": "976d3e112b2cc38367e902988630b3be6ba03094097cb0c9acf46fdeb884a850",
+    "scripts/lib/tracker-rows.mjs": "a7dd0f00e30b707181f9072718eaa7531cd3dc175869689259a87beb9a6c42bc",
+    "scripts/lib/unit-depth.mjs": "aa62df80052f1b41099a09f771c0812cc43b82af49ae35909bc0bd2192c08521",
+    "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/efmp-302/concepts/unit-01.md": "2b75df95fa4b2650ceee0246da4ed8ed1b18604028ea759285d02819625761b3",
+    "specs/content/efmp-302/concepts/unit-02.md": "71ebc57a51ff8f74df8f1fe01226c254af807ec55257b5e4649c5aabdea3e1b3",
+    "specs/content/efmp-302/concepts/unit-03.md": "f41a214572d92c9e1214309a39a139b7c45bb0e282c819fa4acd1e09993d6255",
+    "specs/content/efmp-302/concepts/unit-04.md": "6edd650392100ba325986e787dbbcf1f398e520320ac4b321c97fdcabe2ac956",
+    "specs/content/efmp-302/concepts/unit-05.md": "c43f556282e3151ce845b648fa4fedc248f0d998ec0ccb4d6c8527f3e5130f69",
+    "specs/content/efmp-302/concepts/unit-06.md": "6058265f27dcfa92eb700e33317e4ba96bf6ab1ae9ecbf3d97473aef7394a949",
+    "specs/content/efmp-302/content-spec.md": "dc9a1c165d1ac7b0a5d27aa105f2ffb3339501d2e977004592712cce3e7fa8c5",
+    "specs/content/efmp-302/coverage/unit-01.md": "d52a7736874715a345d9d8843ac8298c49816627884a62212dfcdef13a38438c",
+    "specs/content/efmp-302/coverage/unit-02.md": "8fdccc0c61b77dbf515b8b81d6338b6e6bd5ec06c1a28d2f1c35bea2f1745541",
+    "specs/content/efmp-302/coverage/unit-03.md": "167d60597bb42af543930cf39ad5800e7d931e4833b14ea9e63ff120d8d2c98e",
+    "specs/content/efmp-302/coverage/unit-04.md": "2c85006b9cc4b7b897dca2fe7c4efb58718c2c940fcc07dbdaf3e8cc7c3b25d5",
+    "specs/content/efmp-302/coverage/unit-05.md": "b341543ce1e583f018a6db97878fd846bbef1464fbb6c585b1b93c5cfd42be70",
+    "specs/content/efmp-302/coverage/unit-06.md": "395b28c6fced1d9164043f4412ded936f51484c4decfc9307b34c420283ea276",
+    "specs/content/efmp-302/figures/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "specs/content/efmp-302/figures/unit-01.md": "3fa2b8de8519fcd8800c04b05282fc42b1527fbb28be26d66383b0423eba0ded",
+    "specs/content/efmp-302/figures/unit-02.md": "11de90923a2eacdb90fa137903d6b3ee3f637db9fb64dcf7d65eddf92ff05db8",
+    "specs/content/efmp-302/figures/unit-03.md": "6b3ea0c60274bba7c72fff74f64f9a4714454df65ab60aa6a96373e283b41466",
+    "specs/content/efmp-302/figures/unit-04.md": "68c9d2fe10c35f665fd6b04c4c0d7c4d3f82b2a3dcd634c8bfa5eb89a36e84eb",
+    "specs/content/efmp-302/figures/unit-05.md": "a673d313c2ceee3097f32409bd66b6c686b7ef6d74a7f7e1edf226056eb6af1c",
+    "specs/content/efmp-302/figures/unit-06.md": "32b0086ea7221c865f9ec1a48cf40339bf9341c1fddec09a77c351e9a4cf23d0",
+    "specs/content/efmp-302/sources/texts/README.md": "5007d1d58fdc98fb7a6669c4ebe9e9fd95d8950803215ba54f07788c1d4608f3",
+    "specs/content/efmp-302/sources/texts/bebeau1999.md": "c7c78e4287fb9ecdc165d71455c9555bad30caf99dea5689e848d69bbc056565",
+    "specs/content/efmp-302/sources/texts/demirkasimoglu2010.md": "3b5f67f6981ae0987aa73601d681778b44e3987692a2ec365b4e1271fd73fd8f",
+    "specs/content/efmp-302/sources/texts/ehrich2011.md": "3fbd0aebcea4b10aec9e8607882346c2f4cce32affac16ca8d319c12a0ddee26",
+    "specs/content/efmp-302/sources/texts/furlich2016.md": "21cc51c8077ed340a972787a8c67f8350eaadd16c9879069f931e89c4a51541c",
+    "specs/content/efmp-302/sources/texts/goe2008.md": "388cfb823b621e2c423eef36231a655bffece69adb0cc6d1de14dd44681e3524",
+    "specs/content/efmp-302/sources/texts/hargreaves2000.md": "2eacf00357068486649801fae8588fd863631b24983147e727d66431478160ee",
+    "specs/content/efmp-302/sources/texts/isore2009.md": "ba81be4e0e6e49cce388f9f48e1e224e7b3e3f847c4fcc9ee183bbfc863ae807",
+    "specs/content/efmp-302/sources/texts/keelson2024.md": "9b352bfc8520a366d4fb51c79fac7d6a17bd3b3d24e645166f41084981c7361a",
+    "specs/content/efmp-302/sources/texts/maslach2016.md": "5e520e6d14aa5768b7d4e4ea9b2601adba808cd6be9a21c439eec1376f5d4458",
+    "specs/content/efmp-302/sources/texts/naparan2021.md": "23add5b5bd287160396fb4682400294db45d6830848731c5ba53d1cdf69c0729",
+    "specs/content/efmp-302/sources/texts/skaalvik2020.md": "a3c8532c249ebc83365b01a0ea60e0e659a03587d1a575646a0c96660554e6c2",
+    "specs/content/efmp-302/sources/texts/suarez2022.md": "087030ea5418db5446200ba57a105f36097ee7e1ed08547fb0b10b8b17b799b3",
+    "specs/content/efmp-302/sources/texts/taylor2023.md": "3ee551c2e1f0989ac74bc64da43bf4841e354f5ff9d35742aec56ffc6ad458f3",
+    "specs/content/efmp-302/sources/unit-01.md": "37f680be0d8651745879b9cb326504ece8192bdf90bbbfd7c8682ad3932ad2cd",
+    "specs/content/efmp-302/sources/unit-02.md": "4c2a160660d81208861548007fed52b0966a3e71a894c6f0ae9e3b158ae232b3",
+    "specs/content/efmp-302/sources/unit-03.md": "78f704a6c22e3168022cef74f703978ccad18b3e41bbe7a44888499af49c8c6e",
+    "specs/content/efmp-302/sources/unit-04.md": "4282f41764b2a56cbf4bf618484005214120fbbbf3fb422fba970771d229262c",
+    "specs/content/efmp-302/sources/unit-05.md": "1424fc82a3a262306a70ccbf53191e6b7ee053a2fcd968bc9acc86eaa3876cee",
+    "specs/content/efmp-302/sources/unit-06.md": "e087c80cf73ff76d26598d20bbf10aae57a783f75a42b40006f0d9f88378bf44",
+    "specs/content/style-guide.md": "db96c9b33b0fb9522986462a0b519620c3c1d7602a046d7b90e638f643da4610",
+    "specs/content/terminology.csv": "ad917e28cde688eb72bd92226c2326e2d23da3da80fc53ea8c812b1a47f73337",
+    "static/img/figures/efmp-302/unit-04/fig-U4-1.dark.svg": "9bffe1e18c0e02b426289eba83d5462c6bb0796198100e862af14a2f3d2379bd",
+    "static/img/figures/efmp-302/unit-04/fig-U4-1.svg": "77a15317b37374dafbdd49800aaccd4a541c788f2c010a539c45f3fabfeec72b",
+    "static/img/figures/efmp-302/unit-04/fig-U4-2.dark.svg": "860fb2cd6a6e7c8996a13a6ad05423cf7579a3eb33341410c9e91bb7642faf18",
+    "static/img/figures/efmp-302/unit-04/fig-U4-2.svg": "00d1058fc5eb5feacc96539bfa8ccadae2e4d7ce6976b2e47bd64c354e215fb6",
+    "static/img/figures/efmp-302/unit-04/fig-U4-3.dark.svg": "8122469ef18c700ab08251167782ff79de909a090a4e634c700eba9fd63650cd",
+    "static/img/figures/efmp-302/unit-04/fig-U4-3.svg": "89fe29df824b5700fc432b759ede49d460dd3956e8c40872d6a6e4f48302985b",
+    "static/img/figures/efmp-302/unit-04/fig-U4-4.dark.svg": "a5f95cc2f3dc61c9d7da675e3c6e67a46f682df508f164f0c4c90f261eabea33",
+    "static/img/figures/efmp-302/unit-04/fig-U4-4.svg": "433b26c9138960c7f868ad8e0da59245755b70e60602233c4a9c84b20fb70971",
+    "static/img/figures/efmp-302/unit-04/fig-U4-5.dark.svg": "90e2cfee495311dc46cd855ade9682acdd5e21523e913a8e2a77d70d4ef33d27",
+    "static/img/figures/efmp-302/unit-04/fig-U4-5.svg": "f40f27b2c98c24e68618088f33b59ecb1241c4d76ab6b96085d0edc213a24e05",
+    "static/img/figures/efmp-302/unit-04/fig-U4-6.dark.svg": "bae5dd985f68fe231de397e1df64d176bc5b2138ea5630009d0a962b850e2e82",
+    "static/img/figures/efmp-302/unit-04/fig-U4-6.svg": "9220292a3ea0f65d7a8c1dc8e928a7f994de1f018f0a60cf0ad189b8ea3870d7",
+    "static/img/figures/efmp-302/unit-04/fig-U4-7.dark.svg": "6381a926041c0d25e08a5a3ee12aec83affe5491610234c89b8eb99c7ee4be04",
+    "static/img/figures/efmp-302/unit-04/fig-U4-7.svg": "0bb6cfd5110809ce5a7cf340aebe1ec8f9a1cd19362b987f235472b290773143",
+    "static/img/figures/efmp-302/unit-04/fig-U4-8.dark.svg": "703951f90b611dcdb6ec009aedf33c7674b72a453c08496a25825f7200369527",
+    "static/img/figures/efmp-302/unit-04/fig-U4-8.svg": "f78c11a03dfdfe125be2c652d0ffaf71cc9ac7eabf394e373989b2d1bed7828a"
+  },
+  "rubric_version": "1.0.0",
+  "skill_version": "1.1.0",
+  "reviewed_commit": "cf1357030db5ee2a0c58874a79a2c24593ff3444",
+  "superseded_reports": [
+    "specs/content/efmp-302/reviews/unit-04/G3/agent-g3-efmp302-u4-run001.json",
+    "specs/content/efmp-302/reviews/unit-04/G3/agent-g3-efmp302-u4-run002.json"
+  ],
+  "summary": "G3 English review of EFMP-302 Unit 4 at commit cf13570, run 003. Independent session; this\nreviewer neither drafted nor translated these bytes. All 137 manifest inputs re-hashed and\nmatched with no missing, extra or changed entry; skill digest matched; git working tree carried\nno modification to any bound path before or after the review (log: specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/manifest-verify.log).\n\nThe amended \"Unavailable source text\" rule (owner ruling D-2026-0001, confirmed) was applied as\nwritten: the three declarations in sources/unit-04.md carry retrieval attempts, the 2026-09-19\ndate and the owner authorisation, so npst-pakistan-2009, unesco-teacher-ethics and carr2000 no\nlonger block on unavailability alone. Run-002 findings [1] and [2] are therefore superseded by\nthe ruling rather than repaired, and are recorded as such. The rubric change closed exactly that\none route and nothing else.\n\nSix of the seven deterministic gates plus check:concept-graph ran clean. The Isore repair that\nrun 002 found half-propagated is now correct at all seven sites it named, and both figure\ngeometry defects are gone: fig-U4-4 (viewBox widened 900 -> 940) and fig-U4-8 both measure zero\nout-of-bounds text nodes and zero overlapping text boxes in-browser. goe2008 is now cited in\ntopic-02 and topic-03 prose and in both Further reading lists, and its two relied-on claims are\nverbatim-supported by the bound excerpt. RRQ-02 and RRQ-04 mark schemes now match their stems.\nAll ten MCQ keys were re-derived independently before the key was read and all ten agree.\n\nDisposition is escalate, not pass and not revise. Two blocking content defects survive, one of\nthem a site of the same Isore defect class that run 002 did not enumerate; and three items\ncannot be closed by authoring at all - the Topic 4.4 RRQ shortfall and the four sub-floor\nRemember RRQs need an owner decision or a blueprint amendment, the hurst2009 discrepancy needs\nthe owner to say which record is wrong, and the accreditation claim collides with an escalation\nthe repository already holds open in specs/gaps.md. This is also the third review cycle on this\nsubmission, past the two-cycle limit the skill sets.\n\nThis report is advisory. No qualification record, registry entry or trusted signature exists for\nthis reviewer identity; nothing here constitutes sign-off, certification or a tracker transition.",
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf - Unit 4 \"The Professional Standards and Competencies for Teachers\", weeks 9-11, extracted from the bound PDF this run: 4.1 Understanding Professional Standards (concept and purpose; global and national perspectives on teacher standards; using of standards for ensuring teacher quality and accountability); 4.2 Overview of the National Professional Standards for Teachers in Pakistan (structure, domains and indicators); 4.3 Applying standards in Practice to guide self-evaluation; 4.4 Linking standards to the teacher licensing, certification, and appraisal",
+        "specs/content/efmp-302/content-spec.md \"## Unit 4\" topic-partition table - topics 4.1/4.2/4.3/4.4 carry U4-01..U4-04 / U4-05..U4-07 / U4-08,U4-09 / U4-10..U4-12, a total and disjoint partition mapping one-to-one onto the four guide sections",
+        "specs/content/efmp-302/content-spec.md \"Unit-end assessment blueprint\" (##Unit 4) - MCQs Remember to Apply >=2 per topic; RRQs Understand to Analyze >=2 per topic; ERQs one per topic plus one integrative, >=1 Analyze-or-higher",
+        "docs/semester-1/efmp-302/unit-04/topic-04.mdx:44-61 - guide section 4.4 \"licensing, certification, and appraisal\" taught as three distinct terms with the question each answers",
+        "No contradiction found between the guide, the Scheme-derived week block and the content spec; no silent scope revision. The CLO-6 trace at content-spec.md:562 remains an approved G1 decision and is not reopened (carried advisory)."
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "fail",
+      "evidence": [
+        "specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/source-verification.txt - full record of what was read and what was tested against the declarations",
+        "specs/content/efmp-302/sources/unit-04.md:36-45 \"## Unverifiable sources\" - npst-pakistan-2009, unesco-teacher-ethics and carr2000 each carry the retrieval attempts, \"Could not be retrieved on 2026-09-19\" and \"Owner ruling 2026-09-19 (D-2026-0001): flag and proceed\". Form of the declaration is complete; assessed under the amended rubric, not on retrievability",
+        "specs/decisions/log.md D-2026-0001 - status confirmed, scope corpus-wide, G3 sources criterion; its \"Limits\" clause is the test applied below",
+        "specs/content/efmp-302/sources/texts/isore2009.md para 17 - \"often conflicting \\226 but not necessarily incompatible\"; para 35 - \"the Framework can serve both summative and formative purposes\"; Annex 2 s.3 - \"Conciliating the summative and formative purposes\"; the distortion passage scoped to \"High-stakes incentive schemes based on standardised tests\"",
+        "SUPPORTED: docs/semester-1/efmp-302/unit-04/topic-01.mdx:142-146; topic-04.mdx:94-99; topic-03.mdx:114-118 - all three now state the Isore position at the strength the excerpt carries, including the explicit downgrade of the distortion evidence to \"a well-founded risk to design against, not ... a measured law about every mixed system\"",
+        "SUPPORTED: specs/content/efmp-302/sources/texts/goe2008.md \"Multiple measures ... must be employed\" and \"Consider the purpose for the evaluation ... before deciding on the appropriate measure\" against topic-02.mdx:111-113 and topic-03.mdx:76-79; both topics now carry goe2008 in \"## Further reading\" (topic-02.mdx:236, topic-03.mdx:207)",
+        "FAIL: docs/semester-1/efmp-302/unit-04/topic-01.mdx:105-106, :127, :197; topic-02.mdx:43-45, :179; topic-04.mdx:47-49; unit-assessment.mdx:31 - the claim that Pakistan teacher education is accredited against the NPST states more than the npst-pakistan-2009 declaration supports, and the declaration does not disclose it",
+        "FAIL: docs/semester-1/efmp-302/unit-04/topic-04.mdx:110-111 - \"they cannot be the same instrument\", unhedged, twelve lines after the same file rules that formulation out"
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "specs/content/efmp-302/coverage/unit-04.md - all 12 required rows U4-01..U4-12 resolve to a real \"###\" heading under \"## Explanation\" in the named topic file; each heading confirmed present this run",
+        "U4-07 -> topic-02.mdx \"### Indicators, and how a domain is evidenced in practice\" and U4-09 -> topic-03.mdx \"### Building evidence against an indicator\" are now traceable to goe2008 from the taught passage itself (topic-02.mdx:111, topic-03.mdx:76), closing run-002 finding [3]",
+        "U4-02 \"Global perspectives on teacher standards\" is taught at topic-01.mdx:82-100 and is now assessed and rewarded (RRQ-02 stem :120-123, mark scheme :199-203)",
+        "specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/check-depth-gate.txt - npm run check:depth-gate exit 0",
+        "specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/validate-content.txt - npm run validate:content exit 0",
+        "Reinforcement rows in coverage/unit-04.md all resolve; the unit-teacher-notes row \"Before you teach: obtain the primary document\" is present at unit-teacher-notes.mdx and is the mitigation the sources declaration relies on"
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "fail",
+      "evidence": [
+        "specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/assessment-derivation.txt - all ten MCQs solved from the topic files with reasoning recorded before unit-assessment.mdx:145-235 was read",
+        "Derived key b d a c b d c a b c; published key (unit-assessment.mdx:180-198) b d a c b d c a b c; 10/10 agreement, distribution a:2 b:3 c:3 d:2. No ambiguous stem and no defensible second-best distractor found",
+        "MCQ-1 (:180-182) and MCQ-6 (:190-192) rationales no longer name a mis-mapped option letter; no rationale in the key names a letter other than its own answer. Run-002 finding resolved",
+        "RRQ-02 stem :120-123 and mark scheme :199-203 agree at 7 marks (2 per instrument + 1 for a named difference between national frameworks). RRQ-04 stem :127-130 and mark scheme :211-216 agree, and the scheme now explicitly forbids the pre-repair conclusion",
+        "FAIL: specs/content/efmp-302/content-spec.md \"## Unit 4\" blueprint requires >= 2 RRQs per topic. Derived from specs/content/efmp-302/concepts/unit-04.md Topic column: 4.1 has 4, 4.2 has 3, 4.3 has 2, 4.4 has 1 (RRQ-10 via CON:EFMP-302-4-16 only; RRQ-04 maps to CON:EFMP-302-4-6, a Topic 4.1 concept)",
+        "FAIL: the same blueprint sets an Understand floor for RRQs. RRQ-01 (:117), RRQ-03 (:124), RRQ-05 (:132) and RRQ-08 (:140) are labelled *(Remember)* and are each answered by reciting a list the unit prints verbatim; classified from the thinking required, not the label, all four sit at Remember",
+        "FAIL: unit-assessment.mdx:215-216 instructs the marker not to award an answer concluding that one document cannot hold both purposes, while topic-04.mdx:110-111 teaches that conclusion as a corrected misconception; the unit penalises a candidate who learned it",
+        "ERQ rubrics inspected (unit-assessment.mdx ERQ-1..5): four analytic columns each, criteria distinguish performance levels, and ERQ-2/3/4/5 demand Analyze or higher. No conflicting rubric criteria found"
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "unverified",
+      "evidence": [
+        "specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/render-review.txt - Chromium 149.0.7827.0 headless via Playwright against http://localhost:3104 serving the pre-existing build/ (npm run serve, no rebuild). Rendered input identity: build/semester-1/efmp-302/unit-04/, routeBasePath \"/\"",
+        "specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/render-narrow-figures.txt - focused 360 CSS px figure-geometry pass, viewport 360x740 dsf 2 isMobile",
+        "VERIFIED PASS - desktop 1280x900, all 7 pages HTTP 200: exactly one h1 per page; heading order H1>H2>H3 with no skipped level; 8 figure carriers, 2 on each topic page; 0 images with empty or missing alt across all 7 pages; 0 vague link texts; 0px document horizontal overflow",
+        "VERIFIED PASS - figure geometry measured in-browser with getBBox() over the live SVG DOM: fig-U4-4 viewBox 0 0 940 560, 40 text nodes, 0 out-of-bounds, 0 overlapping text boxes (run-002 [5a] clipping gone, viewBox widened from 900); fig-U4-8 viewBox 0 0 880 470, 26 text nodes, 0 out-of-bounds, 0 overlaps (run-002 [5b] 2.6px line collision gone); fig-U4-3 and fig-U4-7 likewise clean",
+        "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/fig-U4-4-element-desktop.png, specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/fig-U4-8-element-desktop.png - element renders of the two previously defective figures",
+        "VERIFIED PASS - dark theme, documentElement[data-theme=dark] on /topic-04: fig-U4-7.dark.svg and fig-U4-8.dark.svg visible, light variants width 0. Evidence specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/dark-topic-04.png. The .dark.svg entries reported as \"broken\" in the desktop pass are display:none lazy images in light theme, not missing files",
+        "VERIFIED PASS - A4 print emulation at 794x1123, media=print, on index, topic-01..04 and unit-assessment: 0px horizontal overflow, 0 hidden or zero-width figures, 0 figures wider than the page (figures lay out 640-760px), 0 clipped tables. PDFs and PNGs under specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/",
+        "VERIFIED PASS - narrow 360 CSS px, all 7 pages: 0px document horizontal overflow. The five ERQ rubric tables in unit-assessment.mdx are each their own scroll container with overflow-x auto, tabindex=\"0\" and role=\"region\" (scrollWidth 476/532/476/579/540 against clientWidth 328), so the rightmost rubric column stays keyboard-reachable and announced",
+        "NOT VERIFIED - at 360 CSS px every one of the eight figures renders at its full intrinsic width (880-940px) inside a <figure> with overflow-x:auto, so 37-39% of each figure is visible and the rest requires horizontal scrolling. That <figure> carries no tabindex, no role and no aria-label, unlike the rubric tables in the same unit. Whether that is a defect could not be settled from the bound inputs and single-browser evidence - see finding"
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "docs/semester-1/efmp-302/unit-04/topic-01.mdx:46-61 - \"professional standard\" defined in plain language, then three named features (written, shared, specific enough to be evidenced) each with a reason, and a contrasting non-example (\"Be a good teacher\") before any technical use",
+        "docs/semester-1/efmp-302/unit-04/topic-01.mdx:66-74 - the standard / code of conduct / curriculum confusion resolved by the question each answers, which is the same organiser the figure and the assessment use",
+        "docs/semester-1/efmp-302/unit-04/topic-02.mdx:50-66 - the three-part division introduced through Sadia's photocopied form and justified by a concrete three-way case (knows the theory, values it, cannot write a test item); no prior specialist knowledge assumed",
+        "docs/semester-1/efmp-302/unit-04/topic-04.mdx:44-63 - certification, licensing and appraisal separated by the question each answers and by time horizon; an HSC/intermediate graduate can follow it without outside reading",
+        "Every topic opens on a named Pakistani situation (the district office; Sadia; Nadia and Kashif; the province) and returns to it in the activity and the summative task. No undefined jargon found; specialist terms are glossed at first substantive use with the one exception recorded as advisory",
+        "specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/check-no-em-dash.txt - npm run check:no-em-dash exit 0"
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "fail",
+      "evidence": [
+        "Each topic runs the full cycle: situation -> explanation -> activity -> check your understanding -> summary -> self-assessment checklist -> practicum task -> summative task with a mini-rubric",
+        "Activities are feasible in the stated Pakistani/Sindhi context: groups of 3-4 or pairs, 25-30 minutes, no materials beyond paper. The one activity needing the primary document is flagged in unit-teacher-notes.mdx with an explicit fallback, and the Topic 4.3 activity that run 001 found unperformable is executable now that fig-U4-6 renders (topic-03.mdx:74, activity at :119-131)",
+        "Progression across the unit is real: 4.1 establishes what a standard is and the four uses, 4.2 the architecture, 4.3 applies it to the learner's own practice, 4.4 to the system-level consequence, and the ERQ bank integrates them",
+        "Misconceptions are named and corrected rather than asserted at topic-01.mdx:77-80 (\"a standard tells you how to teach\") and topic-02.mdx:143-147 (\"meeting the indicators is the goal\")",
+        "FAIL: docs/semester-1/efmp-302/unit-04/topic-04.mdx:109-113 - the third misconception box corrects a misconception by asserting something the same file refutes at :94-99 and the mark scheme penalises at unit-assessment.mdx:215-216. A learner who studies the box and answers RRQ-04 with it is marked down by their own textbook",
+        "FAIL: the Topic 4.4 practice/assessment link is thin in a way the blueprint already forbids - one RRQ against a topic carrying three sub-topics (U4-10, U4-11, U4-12) and the unit's hardest analytical content"
+      ]
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/validate-content.txt"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/check-depth-gate.txt"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/check-figures.txt"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/check-no-em-dash.txt"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/check-no-answer-keys.txt"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/check-docs-sync.txt"
+    },
+    {
+      "name": "check:concept-graph",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/check-concept-graph.txt"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/render-review.txt"
+    },
+    {
+      "name": "render-review-narrow-figures",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/render-narrow-figures.txt"
+    },
+    {
+      "name": "input-manifest-verify",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/manifest-verify.log"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/assessment-derivation.txt": "4a837d19d02ffbcbff36a5e65cad67e3b2658bec4062a8b3128ad6c4af94ad17",
+    "specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/check-concept-graph.txt": "9d9131fe71396ea63aedc5340af03e7cd42e1919d3379b87d9c865c0a6317017",
+    "specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/check-depth-gate.txt": "59b48937b45ce88543884e3ec065bb8a896a11344d0588d5691ec3eaef512b80",
+    "specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/check-docs-sync.txt": "2b26bc5336b027525445a8362d2f95259dcb7dd35109378a49ecac8b9e9fd8a4",
+    "specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/check-figures.txt": "70a9b701a65ae1d0c9704845ff09ea9d92468f33b8637f376ae4bb60c3b5d512",
+    "specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/check-no-answer-keys.txt": "45c6845444635ff65ef0ae8ec21bdd16a4f700619c1b3f059078e723dd260006",
+    "specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/check-no-em-dash.txt": "d7f4988dab243b387cb851d6dceeb9ef7c31f96d91c0ecad1e3aa87fff7c0c47",
+    "specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/manifest-verify.log": "3f13447b9105008ef9834c67275df08c59f6affb907ab068419938fd7ddc08f2",
+    "specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/render-narrow-figures.txt": "eb6974273e9b3c25c26775487c253c229b7eda5683f417a5a401dfa108c28187",
+    "specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/render-review.txt": "7a924b11a33a74ce4e86cd2f4bd9fca52759635d43a899a7eee9e281d8e3f763",
+    "specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/source-verification.txt": "bf7cdf49c9ffa53ac16ad7e9dd357c4b1d7ebac913fc629de306024dc3f53edd",
+    "specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/validate-content.txt": "760fccc1317693993a83b7ce5ccd1f3f68b7d384cc6fa6e88f34425574cbaf6c",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/dark-topic-04.png": "3b7abccfb0d7f60dd82c4f4eee032b9e2086d808203a3ba7cf8f838e72b2d94a",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/desktop-index.png": "d5ec5f0bb84103e07892d988f5625514c1693401d646fb9ee7bf8b5ed7b30ed5",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/desktop-topic-01.png": "b2b4fc12e669e713686e1faa9502dd49174dcc25acc58066c121cf24be3ef3d5",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/desktop-topic-02.png": "4261fdae7d58ce4448f16222ffad54af1d1289891adeda4bc13be0f1ff492016",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/desktop-topic-03.png": "d66c83e2780d8ad638391de223dbaa0c4d17f593e9e557eaf0b5526ccc8b8d30",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/desktop-topic-04.png": "ddef0a2ba7e09e95ff8540603ac106a6508df52477dd7383776aa56f0336ae08",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/desktop-unit-assessment.png": "ce94279db310b1074fcdeedc7935bc44a4ad8187bbe219f7d02db1ebbd8686d2",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/desktop-unit-teacher-notes.png": "675954c4332ae3bc0a603b926ff2b63ec5a2a1680cf93eb32aecc9a1759d0fc9",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/fig-U4-3-element-desktop.png": "eda81cdd22e9aaf2a8a57ace2b3672c2c813302efe94d1aadc158a81671d1811",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/fig-U4-4-element-desktop.png": "e0d4d765759d738b086026fdbf34d75e5447d4817fd4a647e23fd9cc29524021",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/fig-U4-7-element-desktop.png": "06dacbc3bbbf61908ffc1a50541630c1ba211856ac913b8fa631810cf62ccabd",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/fig-U4-8-element-desktop.png": "0191a3221d37918a3917c03248e87e8237c9b9443678db0e032c20a5a6ab2e1b",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/narrow360-figure1-topic-01.png": "a0f51eb0d3a992a5122aafc6285bb0b7e638d8920fbc5d48983bb42a5c00e9b0",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/narrow360-figure1-topic-02.png": "043f4256e98ed045f649daa85f735ee7cdfb01ab9fb146ca9f2baf13b3d58aa2",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/narrow360-figure1-topic-03.png": "59c46ef6e5f483e41bec40563adc9bed14e29e40e0bf5d0acaf3f41e1754ea4c",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/narrow360-figure1-topic-04.png": "eda4d3a611cf6bd48ddf6f8afafaaca27f75a08bb282d8d3a6cc757330ca4b89",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/narrow360-index.png": "c4527d4facad7bd8bd2173cfc59737e41c9cca6da77843f091df9b68b0264174",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/narrow360-topic-01.png": "2097452a1c12830079a40b645206dc0f107d246b50fd643233c86e109131c375",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/narrow360-topic-02.png": "c1d1eab9d47851e7ea4e1d45b23f2f384b486979bf192fcf9a8307c61af00171",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/narrow360-topic-03.png": "d10dfe4afd679a5895749d73cc1f0ec5360babeaeeef8257acd1dbafd6a09a32",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/narrow360-topic-04.png": "03a682ea579e003561c0c181369556b5efdcc739028ad6606c783ca689dc033a",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/narrow360-unit-assessment.png": "cc7e84b946f59da754a888ee5f86cb39c97b98e02db41519be577fc6b35680aa",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/narrow360-unit-teacher-notes.png": "ae49f5981c986757d11e1f91f17346599c8424915da759a78b050c5acca12e2d",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/printA4-index.png": "1a0a3cd635d8102082b06f8b162a182816dbe4a066bca10687466174d467ec10",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/printA4-topic-01.png": "cc367aa43a3577719d097088ebbe9fd7531f54956b0019f99650270ff3e3c97f",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/printA4-topic-02.pdf": "760ad39bfcb09b634573cc456a6c471aa9036109ae6b9b0955bc2232e92e54bb",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/printA4-topic-02.png": "bc6bd8ffb6a7c92646bdcb4ff6c11a14d8bc3c9065ae4d011bbce7299ecda788",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/printA4-topic-03.png": "7e82d4e124f5b263c61093f622a264af7cab8ed9aa7c1cbfb9f38a1998eaf69e",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/printA4-topic-04.pdf": "1323aea5d6f8f310c140b75771faaef56c733c0f0bbc8d02e1e63e8e6a004af3",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/printA4-topic-04.png": "c32fd4f98dc6e9f4a237183a37302831b30c19c45d8c49b4e3a0e37d65070d4e",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/printA4-unit-assessment.pdf": "7c1c222a856c3c4f8b06476deb28b001051e98f41b95c821900695e617e6422d",
+    "specs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/printA4-unit-assessment.png": "8042605db8ad1792bcc207708fc5259cb8d77b739b1b6464d3c74387df25160a"
+  },
+  "findings": [
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "Isore repair reached the seven sites run 002 named and missed an eighth of the same class.\ndocs/semester-1/efmp-302/unit-04/topic-04.mdx:109-111 reads: \"**A misconception this corrects:**\n*appraisal and professional development are the same process.* They are related and must be\nconnected, and they cannot be the same instrument.\" That is the pre-repair claim, unhedged, in a\nbox whose format tells the learner it is the corrected truth.\nIt contradicts three things in the bound inputs:\n  (a) the same file twelve lines earlier, topic-04.mdx:94-99: \"Be careful how strongly you state\n      this ... Isore calls the two purposes \\\"often conflicting\\\", and then immediately adds\n      \\\"but not necessarily incompatible\\\" ... It is not a proof that one document can never do\n      both.\";\n  (b) the bound excerpt specs/content/efmp-302/sources/texts/isore2009.md, para 17 verbatim\n      \"often conflicting \\226 but not necessarily incompatible\", para 35 \"the Framework can serve\n      both summative and formative purposes\", Annex 2 s.3 \"Conciliating the summative and\n      formative purposes in a comprehensive approach\";\n  (c) the RRQ-04 mark scheme at unit-assessment.mdx:215-216, which instructs the marker: \"Do not\n      award an answer whose conclusion is that one document cannot hold both\".\nThe practical consequence is the sharpest form of the defect: a candidate who learns the\nmisconception box and applies it to RRQ-04 is denied a mark by the same document.\nREPAIR: bring topic-04.mdx:111 to the strength the body and the source carry - the two are\nconflicting and a combined instrument will be read as summative unless the system decides the\nseparation in advance - or drop the absolute clause. One-line change; do not weaken :94-99 to\nmatch it instead.\nDistinguish from run-002 [0]: that finding listed seven sites and all seven are repaired. This is\na newly located eighth site, not a carried-forward one."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "Unsupported claim about the learner's own qualification, asserted seven times, and it collides\nwith an escalation this repository already holds open.\nThe unit states that Pakistan's teacher education programmes are accredited against the National\nProfessional Standards for Teachers:\n  docs/semester-1/efmp-302/unit-04/topic-01.mdx:105-106 \"they are the framework this country's\n    teacher education is accredited against\"\n  topic-01.mdx:127 \"This is why your own degree is accredited against it.\"\n  topic-01.mdx:197 (topic summary, same claim)\n  topic-02.mdx:43-45 \"They are the framework against which teacher education programmes in\n    Pakistan are accredited, which is why they govern your own degree as well as your later\n    practice.\"\n  topic-02.mdx:179 (topic summary, same claim)\n  topic-04.mdx:47-49 \"Your B.Ed, accredited against the National Professional Standards, is the\n    mechanism by which you will be certified.\"\n  unit-assessment.mdx:31 (unit summary, same claim)\nWhy this fails under the amended rubric rather than being covered by D-2026-0001: the claim is\ngrounded on npst-pakistan-2009 (coverage/unit-04.md rows U4-03, U4-05), which is declared\nunretrievable. The declaration at sources/unit-04.md:40 discloses exactly three things as\ncorroborated-only - the ten standard names, the three-part division, and the 2009 MoE/UNESCO/USAID\norigin - and the Supports column scopes it to \"the national framework and its origin\". Accredit-\nation status is neither. So prose states more than the declaration supports, which is the failure\nmode D-2026-0001 explicitly preserved in its \"Limits\" clause.\nIt is not merely undeclared, it is contradicted inside the bundle. specs/content/efmp-302/\ncontent-spec.md:376-379, in Unit 2's resolved-gaps record, states: \"The drafting note claimed they\nresolve to npst-pakistan-2009 because NACTE publishes no separate code of ethics; that was\ninferred from a failed search rather than from a document, and review evidence indicates NACTE\ndoes publish its own accreditation standards. The unsupported sentence is removed from the unit,\nand the reference is escalated in specs/gaps.md.\" specs/gaps.md:81-90 carries that open\nescalation. Unit 2 removed the conflation of the NPST with NACTE's accreditation standards; Unit 4\nasserts it seven times, including to tell the learner what their own degree is accredited against.\nREPAIR/ESCALATION: an author can hedge or remove the claim now, but the correct replacement\ndepends on the NACTE question already escalated in specs/gaps.md, which that entry says needs\n\"the curriculum owner or a reviewer with access\". This finding should be routed there rather than\nguessed at. Do not close it by adding the claim to the Unverifiable-sources declaration: the\ndeclaration records what could not be read, not a licence to assert more."
+    },
+    {
+      "severity": "uncertain",
+      "resolved": false,
+      "message": "Blueprint shortfall on Topic 4.4, carried from run-002 [6] and independently re-derived. It needs\nan owner decision; no authoring repair closes it cleanly.\nspecs/content/efmp-302/content-spec.md \"## Unit 4\" -> \"Unit-end assessment blueprint\" requires\n\"RRQs (10): Understand to Analyze; >= 2 per topic\". Deriving the per-topic assignment from the\nTopic column of specs/content/efmp-302/concepts/unit-04.md gives 4.1:4, 4.2:3, 4.3:2, 4.4:1.\nTopic 4.4 carries only RRQ-10 (via CON:EFMP-302-4-16). RRQ-04, whose stem at unit-assessment.mdx:\n127-130 is substantively Topic 4.4 material, maps solely to CON:EFMP-302-4-6 \"Conflict between\nthe four uses\", a Topic 4.1 concept.\nTopic 4.4 covers three sub-topics (U4-10, U4-11, U4-12) and the unit's hardest analytical\ncontent, so the shortfall is not cosmetic.\nEither add a second Topic 4.4 RRQ, or record an approved decision that RRQ-04 counts toward 4.4\nand remap it in the concept graph. Run 001 recorded this as arguable; runs 002 and 003 both\nresolve it against 4.4 on the concept graph as committed.\nSeparately and in the same criterion: RRQ-01 (:117), RRQ-03 (:124), RRQ-05 (:132) and RRQ-08\n(:140) are labelled *(Remember)* and, classified from the thinking actually required rather than\nthe verb, each is answered by reciting a list the unit prints verbatim. Four of ten RRQs sit below\nthe blueprint's Understand floor. Raise their demand or record an approved amendment to the\nblueprint; do not relabel them without changing what they ask."
+    },
+    {
+      "severity": "uncertain",
+      "resolved": false,
+      "message": "Unexplained dropped reading, carried unresolved from run-001 [11] and run-002 [7]. No change at\ncf13570.\nspecs/content/efmp-302/content-spec.md:624 lists hurst2009 (Hurst, B., & Reding, G., 2009,\nProfessionalism in teaching) among Unit 4's \"Mapped readings\", and content-spec.md:72 records it\nas a guide-required source tagged for units 1 and 3. It appears nowhere in\nspecs/content/efmp-302/sources/unit-04.md - neither in the table nor in the \"## Unverifiable\nsources\" list - nowhere in specs/content/efmp-302/coverage/unit-04.md, and nowhere in any Unit 4\npage. Either the content spec's mapped-readings line or the unit's source record is wrong.\nThis review cannot tell which was intended; the book is print-only and unreadable from this host,\nso even resolving the record would not produce a verified citation. Note that the D-2026-0001\ndeclaration route was applied to carr2000 in this unit but not to hurst2009, which is what makes\nthe omission look like an oversight rather than a decision.\nOWNER DECISION NEEDED: strike hurst2009 from Unit 4's mapped readings, or add it to\nsources/unit-04.md with a declaration and a coverage row."
+    },
+    {
+      "severity": "uncertain",
+      "resolved": false,
+      "message": "Narrow-viewport figure affordance - a defect I could not settle, and a correction to the run-002\nrecord rather than a repeat of it.\nMeasured at 360 CSS px (viewport 360x740, dsf 2, isMobile, Chromium 149.0.7827.0; log\nspecs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/render-narrow-figures.txt):\nevery one of the eight figures renders at its full intrinsic width inside a <figure> whose\ncomputed overflow-x is auto - fig-U4-1 900px, fig-U4-2 900px, fig-U4-3 880px, fig-U4-4 940px,\nfig-U4-5 880px, fig-U4-6 900px, fig-U4-7 920px, fig-U4-8 880px - against a 328px content box. The\nvisible fraction is 0.37 to 0.39; the rest is reachable only by horizontal scrolling inside the\nfigure. The figure element carries no tabindex, no role and no aria-label.\nThis corrects run-002's accessibility record, which states \"figures lay out at 328px\". They do\nnot; the page has no horizontal overflow because the figure scrolls, not because the image is\nscaled down.\nWhy it is uncertain rather than blocking: the same unit already treats the five ERQ rubric tables\nthe other way - tabindex=\"0\", role=\"region\", aria-label \"Scrollable table, scroll sideways to see\nall columns\" - so the inconsistency is real. But nothing in the bound inputs states a rule for\nfigure scroll containers (specs/content/style-guide.md has no scroll-container clause;\nsrc/components/Figure.tsx is not a bound input in this manifest), and Chromium 149 makes\nscrollers keyboard-focusable by default, so my single-browser evidence cannot establish the\nWCAG 2.1.1 failure that other engines would show. The instructional meaning is separately\nrecoverable: all eight alt texts are present and descriptive, and A4 print emulation lays every\nfigure out whole at 640-760px with no clipping.\nPLATFORM DECISION NEEDED: either apply the table treatment to the figure carrier in\nsrc/components/Figure.tsx, or record that scaled-to-fit figures are the intended narrow-viewport\nbehaviour. This is a component-level question, not a Unit 4 authoring defect, and should not be\npushed back to the unit author."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Inaccurate cross-reference, unchanged from run-001 [12] and run-002 [8]. Re-verified at cf13570.\ndocs/semester-1/efmp-302/unit-04/topic-02.mdx:136 describes the evidence for its worked trace as\n\"a seating map with contributions marked, which is precisely the Topic 3.4 practicum task\".\ndocs/semester-1/efmp-302/unit-03/topic-04.mdx:218-222 asks the observer to record \"where you\nstood, minute by minute, and which pupils you made eye contact with\", mapped onto a seating plan\nafterwards - teacher position and gaze, not pupil contributions, which is the datum the Topic 4.2\nindicator needs. A trainee who follows the reference collects the wrong evidence."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Key term not glossed, unchanged from run-001 [14] and run-002 [9]. Re-verified at cf13570.\nspecs/content/efmp-302/content-spec.md:563-564 declares \"Teacher Certification\" a Unit 4 key term\nand specs/content/terminology.csv carries the row, but docs/semester-1/efmp-302/unit-04/\ntopic-04.mdx:46 introduces **Certification** in plain bold with no <Glossary term=\"Teacher\nCertification\"> wrapper - unlike Teacher Licensing in the very next paragraph (topic-04.mdx:51),\nProfessional Standards (topic-01.mdx:46, topic-03.mdx:79) and National Professional Standards for\nTeachers (topic-02.mdx:41)."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Declaration lists a key the unit does not use. specs/content/efmp-302/sources/unit-04.md:44\ndeclares carr2000 under \"## Unverifiable sources\", but carr2000 appears nowhere in the unit's\nsource table, nowhere in specs/content/efmp-302/coverage/unit-04.md, and in no Unit 4 page;\ncontent-spec.md:624 does not list it among Unit 4's mapped readings either. Harmless in itself -\nit understates nothing - but it is the inverse of the hurst2009 omission and the two together\nsuggest the declaration block was copied across units rather than derived from this unit's keys."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Minor internal inconsistency in the sources record. specs/content/efmp-302/sources/unit-04.md:10\nrecords the npst-pakistan-2009 attempt as \"itacec.org HTTP 403\" while the declaration at line 40\nrecords \"itacec.org HTTP 401/403\", and line 10 additionally lists teachertaskforce.org under the\nnpst key where line 40 does not. Both are plausibly true across sessions; recorded so a later\nreviewer does not read the divergence as a fabricated attempt log."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Weak CLO trace, recorded not adjudicated, unchanged from run-001 [15] and run-002 [11].\nspecs/content/efmp-302/content-spec.md:562 traces Unit 4's SLOs to guide CLOs 3 and 6. CLO 3 fits\ndirectly; CLO 6, on demonstrating professional ethics, is a weaker fit for a unit about standards\nrather than ethics. This is an approved G1 decision and is not reopened here."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Expected non-content command state, recorded so it is not mistaken for a defect or for a gate I\nfailed to run. npm run check:pipeline-gate is not one of the seven commands the evidence contract\nrequires of a G3 report, and the contract states it runs after the evidence-backed tracker\ntransition, so it was not executed this run. The seven required commands plus check:concept-graph\nwere all run and all exited 0; logs are in the evidence manifest.\nAlso benign: the desktop render pass reports the eight *.dark.svg carriers as \"broken\" images.\nThey are display:none lazy-loaded variants in light theme; the dark-theme pass confirms\nfig-U4-7.dark.svg and fig-U4-8.dark.svg load and display under documentElement[data-theme=dark]."
+    },
+    {
+      "severity": "blocking",
+      "resolved": true,
+      "message": "RESOLVED from run-002 [0]: the Isore repair has propagated to all seven sites that finding named,\nchecked individually against the bound excerpt specs/content/efmp-302/sources/texts/isore2009.md.\n(1) topic-01.mdx:211 CYU/checklist item now \"what has to be decided in advance for one document to\nserve both\"; (2) topic-01.mdx:210-211 checklist, same; (3) topic-04.mdx:160-162 CYU Q2 now \"what a\nsystem must decide in advance if one document is to serve both\"; (4) topic-04.mdx:176-181 Summary\nnow \"whose requirements pull against each other\"; (5) unit-assessment.mdx:42-45 unit summary, same\nwording; (6) unit-assessment.mdx:211-216 RRQ-04 mark scheme now awards the fourth mark for the\nadvance decision and explicitly forbids the old conclusion; (7) specs/content/efmp-302/figures/\nunit-04.md fig-U4-8 row - Prompt and Alt columns now read \"pull against each other, so a system\nserving both must reconcile them deliberately\", and the Alt column is byte-identical to the alt=\nattribute on topic-04.mdx:70. A corpus grep over the unit for \"incompatib\", \"cannot be the same\",\n\"cannot hold both\" and \"cannot be well served\" returns only correctly-hedged occurrences plus the\none new site carried as an unresolved blocking finding above."
+    },
+    {
+      "severity": "blocking",
+      "resolved": true,
+      "message": "SUPERSEDED, not repaired - run-002 [1] (npst-pakistan-2009 unavailable and unbound). Owner ruling\nD-2026-0001 (specs/decisions/log.md, status confirmed, scope corpus-wide) and the amended\n\"Unavailable source text\" paragraph of .claude/skills/review-unit/references/g3.md remove\nunavailability as a blocker where the source is declared with its attempts, date and the owner's\nauthorisation. specs/content/efmp-302/sources/unit-04.md:40 carries all three. The source remains\nUNVERIFIED and the declaration is not a substitute for reading it; the three claims it covers -\nthe ten standard names (topic-02.mdx:74-83, fig-U4-4), the knowledge/dispositions/performance\ndivision (topic-02.mdx:54-56, fig-U4-3) and the 2009 MoE/UNESCO/USAID origin (topic-02.mdx:41-43,\ntopic-01.mdx:104-106, MCQ-04's key) - are corroborated only across secondary sources and are\nrecorded as such. The mitigations run 002 credited are still in place: fig-U4-4 renders a visible\n\"navigational summary ... Read it in the primary document\" caveat and unit-teacher-notes.mdx\ninstructs the tutor to check the names. What this ruling does NOT cover is the accreditation\nclaim, which is carried as a separate unresolved blocking finding above."
+    },
+    {
+      "severity": "blocking",
+      "resolved": true,
+      "message": "SUPERSEDED, not repaired - run-002 [2] (unesco-teacher-ethics unavailable). Same ruling. The\ndeclaration at specs/content/efmp-302/sources/unit-04.md:42 carries the attempts (unsdoc 403, its\nPDF path, teachertaskforce.org 403), the 2026-09-19 date and the D-2026-0001 authorisation, and it\nis blanket-scoped to \"topic-01's international-framework claims (U4-01, U4-02)\". Every claim run\n002 listed as unverified falls inside that scope: topic-01.mdx:85-88 (the framework published to\ngive countries a common reference point) and topic-01.mdx:90-100 (the scope / granularity / stakes\naxes, which RRQ-02's widened clause now assesses). Nothing in topic-01 relies on this source for\nmore than the declaration admits. The source remains unverified."
+    },
+    {
+      "severity": "blocking",
+      "resolved": true,
+      "message": "RESOLVED from run-002 [3]: goe2008 citation traceability. \"Goe\" now appears in the prose of both\ntopics the coverage matrix grounds in it - topic-02.mdx:111-113 for U4-07 and topic-03.mdx:76-79\nfor U4-09 - and in both Further reading sections (topic-02.mdx:236, topic-03.mdx:207), alongside\nthe pre-existing topic-04.mdx:233. Both relied-on claims are supported verbatim by the bound\nexcerpt specs/content/efmp-302/sources/texts/goe2008.md: \"Multiple measures - each designed to\nmeasure different aspects of teacher effectiveness - must be employed\" for the multiple-measures\npoint, and \"Consider the purpose for the evaluation of teacher effectiveness before deciding on\nthe appropriate measure to employ\" for the match-the-measure-to-the-purpose point. Attribution,\ndates and authors are accurate. The preamble claim at sources/unit-04.md:4-5 is now true for this\nkey."
+    },
+    {
+      "severity": "blocking",
+      "resolved": true,
+      "message": "RESOLVED from run-002 [4]: both mark schemes now match their repaired stems. (a) RRQ-02\n(unit-assessment.mdx:120-123) requires the three instruments plus \"one way national standards\nframeworks differ from one another\"; its scheme at :199-203 is now 7 marks - two per instrument\nplus \"One further mark for naming a real way national frameworks differ, for example in scope, in\ngranularity, or in whether they carry licensing consequences\". U4-02 is now both assessed and\nrewarded, and the CON:EFMP-302-4-4 -> RRQ-02 concept link is true. (b) RRQ-04 (:127-130) asks what\na system must decide in advance if it wants one document to serve both; its scheme at :211-216\nawards the fourth mark for exactly that and adds \"Do not award an answer whose conclusion is that\none document cannot hold both: topic-04 teaches, from Isore's own wording, that the purposes are\nconflicting but not incompatible.\" No candidate is now penalised for answering the question as\nasked. This is also what makes the surviving topic-04.mdx:111 defect consequential rather than\ncosmetic."
+    },
+    {
+      "severity": "blocking",
+      "resolved": true,
+      "message": "RESOLVED from run-002 [5]: both figure geometry defects are gone, measured in-browser with\ngetBBox() over the live SVG DOM at Chromium 149.0.7827.0. (a) fig-U4-4 - viewBox widened from\n0 0 900 400 to 0 0 940 560; 40 text nodes, 0 extending beyond the viewBox, 0 overlapping text\nboxes. The row-10 evidence cell that previously ran to x=919.6 against a 900 frame is inside the\nframe. (b) fig-U4-8 - viewBox 0 0 880 470; 26 text nodes, 0 out-of-bounds, 0 overlaps, so the\n2.6px collision on the two lines carrying the corrected Isore qualification is resolved. Evidence:\nspecs/content/efmp-302/reviews/unit-04/renders-agent-g3-efmp302-u4-run003/fig-U4-4-element-desktop.png\nand fig-U4-8-element-desktop.png, geometry in logs-agent-g3-efmp302-u4-run003/render-review.txt.\nfig-U4-3 and fig-U4-7 were measured the same way and are also clean. check:figures still cannot\ndetect this class of defect, which is why it was measured rather than inferred from exit 0."
+    },
+    {
+      "severity": "advisory",
+      "resolved": true,
+      "message": "RESOLVED from run-002 [10]: the figure manifest preamble is now true.\nspecs/content/efmp-302/figures/unit-04.md now states \"Every row is `Status: placed` with a\ncommitted `Src`, carried in the topic files as a rendered `<Figure>`\", which matches all eight\nrows. The translation_status: draft / no-Urdu-mirror sentence is still accurate (all four topic\nfiles carry translation_status: draft and no i18n mirror exists for this unit)."
+    },
+    {
+      "severity": "advisory",
+      "resolved": true,
+      "message": "CONFIRMED STILL RESOLVED from run-001 [13] / run-002 [16]: narrow-viewport rubric legibility. At\n360 CSS px each of the five ERQ rubric tables in unit-assessment.mdx is its own scroll container -\ncomputed overflow-x auto, tabindex=\"0\", role=\"region\" - with scrollWidth 476/532/476/579/540\nagainst clientWidth 328. Page-level horizontal overflow is 0px, and in A4 print emulation no\nrubric table is clipped. Re-measured this run rather than carried forward."
+    },
+    {
+      "severity": "advisory",
+      "resolved": true,
+      "message": "CONFIRMED STILL RESOLVED from run-001 [5] and [6] / run-002 [13] and [14]: all eight figures exist,\nare placed and render, and no prose reference dangles. Desktop inspection of all seven pages finds\n2 <figure> elements with a loaded <img> carrier and non-empty alt on each topic page, 0 images\nwithout alt across the unit, and all eight manifest rows Status placed with a populated Src. Dark\nvariants swap correctly under documentElement[data-theme=dark]."
+    },
+    {
+      "severity": "advisory",
+      "resolved": true,
+      "message": "CONFIRMED STILL RESOLVED from run-001 [8] / run-002 [15]: the false licensing linkage remains gone.\nspecs/content/efmp-302/concepts/unit-04.md maps CON:EFMP-302-4-17 \"Teacher licensing\" to MCQ-09\nalone, and MCQ-09 (unit-assessment.mdx:103-108) does assess licensing. RRQ-10 is listed only\nagainst CON:EFMP-302-4-16, which it genuinely assesses."
+    },
+    {
+      "severity": "advisory",
+      "resolved": true,
+      "message": "RESOLVED from run-002 [17] and run-001 [7]: sub-topic U4-02 \"Global perspectives on teacher\nstandards\" is now both taught (topic-01.mdx:82-100) and rewarded. The residue run 002 carried - the\nmark scheme not matching the widened stem - is closed; see the RRQ-02 verdict above."
+    },
+    {
+      "severity": "advisory",
+      "resolved": true,
+      "message": "Independence and input binding, recorded as a positive check rather than a defect. This session\nneither authored nor translated any bound byte; author_run_id commit:2b4dd11 and reviewer_run_id\nagent-g3-efmp302-u4-run003 are distinct. All 137 entries of the prepared manifest at\nspecs/content/efmp-302/reviews/unit-04/G3-run003/manifest.json were recomputed with inputManifest()\nfrom scripts/lib/review-evidence.mjs: 0 missing, 0 extra, 0 digest mismatches, skill digest\nafded48d... matching, dirtyInputs() empty. The manifest was not refreshed. git status --short was\nclean of tracked modifications before and after the review and HEAD stayed at cf13570; the only\nuntracked paths at the end are this run's own evidence directories (plus a concurrent unit-03\nrun003 evidence directory, which is outside this unit and outside the manifest, since the manifest\nenumerates git's index and excludes reviews/). Log: specs/content/efmp-302/reviews/unit-04/logs-agent-g3-efmp302-u4-run003/manifest-verify.log."
+    }
+  ]
+}

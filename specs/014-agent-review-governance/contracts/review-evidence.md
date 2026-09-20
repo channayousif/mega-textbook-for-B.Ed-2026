@@ -2,7 +2,13 @@
 
 The executable contract is `scripts/lib/review-evidence.mjs`. Reports are JSON; detached
 `.sig` files contain base64 Ed25519 signatures over exact JSON bytes, not reserialized data.
-Unsigned reports support review and validation, but cannot satisfy a pipeline gate.
+Unsigned reports support review and validation. They cannot CERTIFY a unit, and cannot satisfy a
+pipeline gate on their own. Since Constitution Art. VII.7 (ADR-0025) an unsigned report whose
+disposition is `pass` may instead support *provisional publication*: `acceptProvisionalReport`
+applies every check `acceptReport` does except the signature, registry entry and qualification
+record, plus a rejection of placeholder run identities, and the tracker row carries the distinct
+provisional status with a `provisional:<report-path>` reference rather than `review:`. That is
+publication under a visible "Final Review Pending" notice, never certification.
 
 ## Report
 
@@ -38,7 +44,13 @@ current English inputs. Historical human G3 records remain valid for the ordinar
 automatic G5 currently requires a fresh signed G3 report for verifiable dependency binding.
 
 Report path: `specs/content/<course>/reviews/unit-NN/<G3|G5>/<run-id>.json`.
-Tracker Reviewer: exact `agent:<name>` identity. Suggestion: `review:<report-path>` only.
+Tracker Reviewer: exact `agent:<name>` identity. Suggestion: `review:<report-path>` for a
+certified row, or `provisional:<report-path>` for an Art. VII.7 provisional one. A `G2` draft row
+instead carries the reviewer token `auto:gates` and a `gates:<manifest-path>` reference to
+deterministic gate evidence under `reviews/unit-NN/G2/`, validated by `acceptGateEvidence` against
+`DRAFT_COMMANDS`. It has no reviewer identity because nothing about it is a judgement. The token
+must be `auto:gates`, not a bare word: an all-caps token such as `GATES` would match the
+human-initials pattern and be waved through with no evidence checked at all.
 The existing last matching row remains authoritative. Draft-stage identities stay human.
 
 ## Trusted activation

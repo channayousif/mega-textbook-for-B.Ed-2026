@@ -1,0 +1,40 @@
+# narrow-viewport scroll-container audit, 360x740 dsf2 isMobile, chromium 149.0.7827.0
+
+## /unit-assessment
+  table wrapper=theme-doc-markdown markdown scroller=false scrollW=328 clientW=328 overflow-x=visible tabindex=null role=null aria=null firstTh="Criterion"
+  table wrapper=theme-doc-markdown markdown scroller=false scrollW=328 clientW=328 overflow-x=visible tabindex=null role=null aria=null firstTh="Criterion"
+  table wrapper=theme-doc-markdown markdown scroller=false scrollW=328 clientW=328 overflow-x=visible tabindex=null role=null aria=null firstTh="Criterion"
+  table wrapper=theme-doc-markdown markdown scroller=false scrollW=328 clientW=328 overflow-x=visible tabindex=null role=null aria=null firstTh="Criterion"
+  table wrapper=theme-doc-markdown markdown scroller=false scrollW=328 clientW=328 overflow-x=visible tabindex=null role=null aria=null firstTh="Criterion"
+
+## /topic-01
+  table wrapper=theme-doc-markdown markdown scroller=false scrollW=328 clientW=328 overflow-x=visible tabindex=null role=null aria=null firstTh="Criterion"
+  figure fig-U4-1.svg clientW=328 scrollW=900 visible=0.364 tabindex=null role=null aria=null figcaption="textbook.com.pk"
+  figure fig-U4-2.svg clientW=328 scrollW=900 visible=0.364 tabindex=null role=null aria=null figcaption="textbook.com.pk"
+
+## /topic-02
+  table wrapper=theme-doc-markdown markdown scroller=false scrollW=328 clientW=328 overflow-x=visible tabindex=null role=null aria=null firstTh="Criterion"
+  figure fig-U4-3.svg clientW=328 scrollW=880 visible=0.373 tabindex=null role=null aria=null figcaption="textbook.com.pk"
+  figure fig-U4-4.svg clientW=328 scrollW=940 visible=0.349 tabindex=null role=null aria=null figcaption="textbook.com.pk"
+
+## /topic-03
+  table wrapper=theme-doc-markdown markdown scroller=false scrollW=328 clientW=328 overflow-x=visible tabindex=null role=null aria=null firstTh="Criterion"
+  figure fig-U4-5.svg clientW=328 scrollW=880 visible=0.373 tabindex=null role=null aria=null figcaption="textbook.com.pk"
+  figure fig-U4-6.svg clientW=328 scrollW=900 visible=0.364 tabindex=null role=null aria=null figcaption="textbook.com.pk"
+
+## /topic-04
+  table wrapper=theme-doc-markdown markdown scroller=false scrollW=328 clientW=328 overflow-x=visible tabindex=null role=null aria=null firstTh="Criterion"
+  figure fig-U4-7.svg clientW=328 scrollW=920 visible=0.357 tabindex=null role=null aria=null figcaption="textbook.com.pk"
+  figure fig-U4-8.svg clientW=328 scrollW=880 visible=0.373 tabindex=null role=null aria=null figcaption="textbook.com.pk"
+
+saved fig-U4-4-narrow-360-element.png (figure element as the learner first sees it at 360px)
+
+# table ELEMENT measured directly (the table itself is the scroller)
+## /unit-assessment
+  table th="Criterion" display=block overflow-x=auto scrollW=476 clientW=328 tabindex=0 role=region aria="Scrollable table, scroll sideways to see all columns"
+  table th="Criterion" display=block overflow-x=auto scrollW=532 clientW=328 tabindex=0 role=region aria="Scrollable table, scroll sideways to see all columns"
+  table th="Criterion" display=block overflow-x=auto scrollW=476 clientW=328 tabindex=0 role=region aria="Scrollable table, scroll sideways to see all columns"
+  table th="Criterion" display=block overflow-x=auto scrollW=579 clientW=328 tabindex=0 role=region aria="Scrollable table, scroll sideways to see all columns"
+  table th="Criterion" display=block overflow-x=auto scrollW=540 clientW=328 tabindex=0 role=region aria="Scrollable table, scroll sideways to see all columns"
+## /topic-01
+  table th="Criterion" display=block overflow-x=auto scrollW=328 clientW=328 tabindex=null role=null aria=null

@@ -1,0 +1,12 @@
+$ npm run check:no-em-dash
+host: hcp.textbook.com.pk node: v22.22.1
+date: 2026-09-19T02:00:31Z
+commit: 4ae095247187523cfd9e31df94749543a7d88e53
+--- output ---
+
+> bed-mega-textbook@0.1.0 check:no-em-dash
+> node scripts/check-no-em-dash.mjs
+
+✓ no em dash in authored content (scanned: docs, licence, guides, i18n, specs/content, glossary.json)
+--- end output ---
+exit_code: 0

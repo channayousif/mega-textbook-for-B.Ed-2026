@@ -112,4 +112,27 @@ describe('check-no-answer-keys.mjs — bounded answers exception', () => {
     expect(code).toBe(1);
     expect(out).toMatch(/summative\.mdx/);
   });
+
+  // The review-evidence exclusion is scoped to `specs/content/<course>/reviews/`, which is
+  // unpublished G3/G5 evidence that necessarily quotes the forbidden phrases. A directory
+  // that merely shares the name `reviews` elsewhere is ordinary content and stays scanned.
+  it('skips specs/content/<course>/reviews/, which holds unpublished review evidence', () => {
+    const rootDir = mkdtempSync(join(tmpdir(), 'bed-nak-'));
+    const evidenceDir = join(rootDir, 'specs', 'content', 'efmp-302', 'reviews', 'unit-01');
+    mkdirSync(evidenceDir, { recursive: true });
+    writeFileSync(join(evidenceDir, 'summary.md'), '# G3\n\nThe answer key lists B as correct.\n');
+    root = rootDir;
+    expect(run(root).code).toBe(0);
+  });
+
+  it('still scans a reviews/ directory under a published content root', () => {
+    const rootDir = mkdtempSync(join(tmpdir(), 'bed-nak-'));
+    const dir = join(rootDir, 'docs', 'semester-1', 'efmp-302', 'reviews');
+    mkdirSync(dir, { recursive: true });
+    writeFileSync(join(dir, 'notes.mdx'), FM + '\n# Notes\n\nThe correct answer is B.\n');
+    root = rootDir;
+    const { code, out } = run(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/notes\.mdx/);
+  });
 });
