@@ -28,6 +28,7 @@ export const CONTENT_GATES = [
   'check:no-answer-keys',
   'check:concept-graph',
   'check:bloom-bands',
+  'check:content-status',
   'check:docs-sync',
 ];
 
@@ -54,7 +55,6 @@ export const FULL_GATES = [
  * runs both ways, and an intentional exception has to be declared here.
  */
 export const CI_ONLY = {
-  'check:content-status': 'advisory report; CI runs it with `|| echo ::warning::` and never blocks on it',
   'test:rls': 'needs live Supabase service credentials that only CI holds',
   'test:e2e': 'needs Playwright browsers and a served build; runs as its own CI job',
   serve: 'not a check; the static server Playwright drives via PW_WEBSERVER',

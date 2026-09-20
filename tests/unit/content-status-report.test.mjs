@@ -191,10 +191,12 @@ describe('report-content-status.mjs', () => {
       authored: true,
       translation_status: 'reviewed',
       depth_check: 'pass',
-      // Spec 017 T018 - both open, because this fixture has no tracker file.
+      // Spec 017 T018 - all open, because this fixture has no tracker file.
       // Open is the safe direction: an untracked unit is work to do, not a
-      // unit that quietly vanishes from a reviewer's queue.
-      gates: { G3: 'open', G5: 'open' },
+      // unit that quietly vanishes from a reviewer's queue. `publication` follows:
+      // with no tracker there is no G2 evidence, so nothing is published (ADR-0026).
+      gates: { G2: 'open', G3: 'open', G5: 'open' },
+      publication: 'unpublished',
       figures: { prompt_only: 0, generated: 0, placed: 0 },
       figures_pending: [],
     });
@@ -218,7 +220,10 @@ describe('report-content-status.mjs', () => {
 
     const { report } = runReport(root);
     const unit = report.courses.find((c) => c.course_code === 'EFMP-302').units.find((u) => u.unit_no === 1);
-    expect(unit.gates).toEqual({ G3: 'done', G5: 'open' });
+    // G2 is reported now that publication rests on it rather than on G3 (ADR-0026).
+    expect(unit.gates).toEqual({ G2: 'open', G3: 'done', G5: 'open' });
+    // A certified G3 outranks a missing G2: the unit is certified, not unpublished.
+    expect(unit.publication).toBe('certified');
   });
 
   it('treats a ticked but unattributed tracker row as still open', () => {

@@ -80,3 +80,31 @@ export function stageState(rows, unitLabel, stagePrefix) {
   if (row.status === PROVISIONAL && row.reviewer) return 'provisional';
   return row.status === '✅' && row.reviewer ? 'done' : 'open';
 }
+
+/**
+ * The unit's PUBLICATION tier, derived from its stage states (Art. VII.7 as
+ * amended by ADR-0026).
+ *
+ * Deliberately a separate function rather than a fourth `stageState` value.
+ * `stageState`'s three values are load-bearing - `reviewQueue.ts` reads
+ * `!== 'done'` and `check-pipeline-gate.mjs` reads `=== 'done'` - and adding a
+ * value to its domain would silently reclassify every one of those callers.
+ * Publication is a question about the unit, not about a stage, so it gets its
+ * own function and leaves `stageState` alone.
+ *
+ *   'certified'   G3 passed a qualified review. Nothing to disclose.
+ *   'provisional' an agent review passed, unsigned. "Final Review Pending".
+ *   'gated'       the deterministic gates passed; NO reviewer has read it.
+ *                 "Draft - expert review pending".
+ *   'unpublished' not even that.
+ *
+ * The ordering matters: a unit that is both gate-checked and agent-reviewed
+ * reports the stronger tier, because the banner should name the best claim
+ * that is actually true.
+ */
+export function publicationState(rows, unitLabel) {
+  const g3 = stageState(rows, unitLabel, 'G3');
+  if (g3 === 'done') return 'certified';
+  if (g3 === 'provisional') return 'provisional';
+  return stageState(rows, unitLabel, 'G2') === 'done' ? 'gated' : 'unpublished';
+}

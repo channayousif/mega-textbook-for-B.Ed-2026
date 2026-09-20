@@ -17,14 +17,16 @@
  * CONTENT_ROOT lets fixture tests point it at a temp dir.
  */
 import {
-  readdirSync, statSync, existsSync, writeFileSync, mkdirSync,
+  readdirSync, statSync, existsSync, readFileSync, writeFileSync, mkdirSync,
 } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { checkUnitVerdict } from './lib/unit-depth.mjs';
+import { execFileSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import { walkCourses } from './lib/content-roots.mjs';
 import { readManifest, figureStatusFor } from './lib/figure-manifest.mjs';
-import { loadTracker, stageState } from './lib/tracker-rows.mjs';
+import { loadTracker, stageState, publicationState } from './lib/tracker-rows.mjs';
 
 const REPO = resolve(fileURLToPath(new URL('..', import.meta.url)));
 const ROOT = process.env.CONTENT_ROOT ? resolve(process.env.CONTENT_ROOT) : REPO;
@@ -64,8 +66,11 @@ function figuresForUnit(courseCode, unitNo) {
  */
 function gatesForUnit(tracker, unitNo) {
   const unitLabel = `Unit ${unitNo}`;
-  if (!tracker) return { G3: 'open', G5: 'open' };
+  // G2 is reported because publication no longer waits on review (ADR-0026), so a
+  // consumer must be able to see "the gates passed and nobody has reviewed it".
+  if (!tracker) return { G2: 'open', G3: 'open', G5: 'open' };
   return {
+    G2: stageState(tracker, unitLabel, 'G2'),
     G3: stageState(tracker, unitLabel, 'G3'),
     G5: stageState(tracker, unitLabel, 'G5'),
   };
@@ -100,6 +105,7 @@ function buildReport() {
           translation_status: verdict.translationStatus,
           depth_check: verdict.depthCheck,
           gates: gatesForUnit(tracker, unitNo),
+          publication: tracker ? publicationState(tracker, `Unit ${unitNo}`) : 'unpublished',
           figures,
           figures_pending,
         });
@@ -115,7 +121,54 @@ function buildReport() {
   return { generated_at: new Date().toISOString(), courses };
 }
 
-const report = buildReport();
-mkdirSync(join(ROOT, 'static'), { recursive: true });
-writeFileSync(OUT_FILE, JSON.stringify(report, null, 2));
-console.log(`✓ Wrote content status for ${report.courses.length} course(s) to static/content-status.json`);
+/**
+ * Freshness fields (ADR-0026). The banner is now the only disclosure that a unit
+ * is unreviewed, and `docusaurus.config.ts` reads THIS FILE to decide which
+ * banners to render. A report generated two commits ago would therefore publish
+ * today's units under yesterday's tiers, silently and with a green build.
+ *
+ * So the report records what it was generated from: the commit, and a digest of
+ * every tracker it read. The config asserts those digests still match the files
+ * on disk and refuses to build otherwise.
+ */
+function freshness() {
+  let commit = null;
+  try {
+    commit = execFileSync('git', ['rev-parse', 'HEAD'], { cwd: ROOT, encoding: 'utf8' }).trim();
+  } catch {
+    // Not a git checkout (the unit-test fixtures are not). Digests still bind.
+  }
+  const trackers = {};
+  for (const course of walkCourses(ROOT)) {
+    const path = join('specs', 'content', course.courseCode.toLowerCase(), 'tasks.md');
+    if (!existsSync(join(ROOT, path))) continue;
+    trackers[path] = createHash('sha256').update(readFileSync(join(ROOT, path))).digest('hex');
+  }
+  return { commit, trackers };
+}
+
+const report = { ...buildReport(), ...freshness() };
+const serialized = `${JSON.stringify(report, null, 2)}\n`;
+
+if (process.argv.includes('--check')) {
+  // Recompute in memory and compare; write nothing. Same shape as
+  // `figures:variants:check`. This is what makes the gate meaningful: a
+  // committed report that no longer describes the tree fails CI.
+  if (!existsSync(OUT_FILE)) {
+    console.error('✗ static/content-status.json is missing. Run: npm run build:content-status');
+    process.exit(1);
+  }
+  const onDisk = readFileSync(OUT_FILE, 'utf8');
+  const strip = (text) => JSON.stringify({ ...JSON.parse(text), generated_at: null });
+  if (strip(onDisk) !== strip(serialized)) {
+    console.error('✗ static/content-status.json is stale - it no longer describes the working tree.');
+    console.error('  Every publication banner is derived from this file, so a stale report');
+    console.error('  publishes units under the wrong tier. Run: npm run build:content-status');
+    process.exit(1);
+  }
+  console.log(`✓ Content status is current (${report.courses.length} course(s)).`);
+} else {
+  mkdirSync(join(ROOT, 'static'), { recursive: true });
+  writeFileSync(OUT_FILE, serialized);
+  console.log(`✓ Wrote content status for ${report.courses.length} course(s) to static/content-status.json`);
+}
