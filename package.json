@@ -2,7 +2,7 @@
   "name": "bed-mega-textbook",
   "version": "0.1.0",
   "private": true,
-  "description": "Bilingual (English + Urdu) digital textbook for the B.Ed (4-Year) programme — Docusaurus content platform.",
+  "description": "Bilingual (English + Urdu) digital textbook for the B.Ed (4-Year) programme \u2014 Docusaurus content platform.",
   "engines": {
     "node": ">=22"
   },
@@ -18,6 +18,7 @@
     "validate:content": "node scripts/validate-content.mjs",
     "check:no-answer-keys": "node scripts/check-no-answer-keys.mjs",
     "check:concept-graph": "node scripts/check-concept-graph.mjs",
+    "check:bloom-bands": "node scripts/check-bloom-bands.mjs",
     "check:pipeline-gate": "node scripts/check-pipeline-gate.mjs",
     "check:depth-gate": "node scripts/check-unit-depth.mjs",
     "check:figures": "node scripts/check-figures.mjs",
