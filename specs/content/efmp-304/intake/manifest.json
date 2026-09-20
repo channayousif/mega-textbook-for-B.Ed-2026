@@ -6,7 +6,7 @@
     "G0",
     "G1"
   ],
-  "commit": "9378a24202e5324296d22490663ac64541988de1",
+  "commit": "df6e6d3f100b473ef4e75878387485f88ecf974c",
   "constitution": "Article VII.8",
   "input_manifest": {
     ".claude/agents/evaluator.md": "81a714fe4521bdb16089f2e8bfea2ef5153a92b284c92fa584b1bb22de4cc1f6",
@@ -20,7 +20,7 @@
     ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
     ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
     ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
-    ".specify/memory/constitution.md": "eb43aa7e1e23e79ca19acacde89a5a7a7eee6b3de652cda49d60302fab86a394",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
     "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
     "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
     "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
@@ -60,13 +60,13 @@
     "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
     "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
     "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
-    "specs/content/efmp-304/content-spec.md": "b55112847688a61d260a2d085a504472753b94dd68d133036c44b0dc08a56305",
+    "specs/content/efmp-304/content-spec.md": "46a86e14e1e8383ade864e29b6388e71e8d05f31f5825c063b19d582236be0a6",
     "specs/content/style-guide.md": "db96c9b33b0fb9522986462a0b519620c3c1d7602a046d7b90e638f643da4610",
     "specs/content/terminology.csv": "ad917e28cde688eb72bd92226c2326e2d23da3da80fc53ea8c812b1a47f73337"
   },
-  "manifest_digest": "e840bbfffec5bf0da9995785244f65df1e913315cd8f803492147234026b62d4",
+  "manifest_digest": "95b496c8e70cba5742cde60143dcf103b8a52dc8bd67e83b5ee7bb7bf5e7f32f",
   "registers": {
-    "specs/decisions/log.md": "20d68b34d784458976e623d719b11a81d25644a194e6b344c712df1d0dca9106",
-    "specs/gaps.md": "6925fc64e484ddecf9dee74fd4f6833d7eadc4b590603c419dcb031c72cf9ebe"
+    "specs/decisions/log.md": "ccd62c017ca2926ee0e9874be174b073a6be25ff2d42ad7dede800f68f791ac8",
+    "specs/gaps.md": "4c30f6e89460039818afaea7c6341f2ec03f0ba2f322f4a98b5d62b0c98e053c"
   }
 }
