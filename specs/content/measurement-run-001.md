@@ -74,8 +74,8 @@ remain and the plan can still absorb what it says.
 
 | Unit | Stage | Elapsed | Findings | Notes |
 |---|---|---|---|---|
-| 2 | G4 ur-translation | - | - | not started |
-| 2 | G5 ur-review | - | - | not started |
+| 2 | G4 ur-translation | 11 min 47 s wall clock, one session (2026-09-20) | 0 blocking | **First use of the new `translate-unit` skill.** 7 files, 17,227 Urdu words from 13,718 English (Urdu sets ~26% longer, which matters for figure labels), plus 8 hand-authored `.ur.svg` and 8 derived `.ur.dark.svg`. Zero proposed terms: `terminology.csv` already banked all four Glossary terms and the unit's core vocabulary. Structural parity verified file by file rather than at the end. Two real findings, both from measurement rather than reading: `bilingual-figures.md` rule 3 tells you to add `direction="rtl"`, which inverts `text-anchor="end"` and pushed text past the viewBox on every RTL label (14 overflows on the first two figures); the accepted unit-01 variant omits it entirely, and stripping it fixed all of them. `render-inspect --locale ur` then reported 0 defects across all 7 pages at 1280px, 360px and A4 print |
+| 2 | G5 ur-review | - | - | not started - G5 is never the translating session |
 
 ### Observations so far
 

@@ -1,10 +1,22 @@
 # ROADMAP & ARCHITECTURE OVERVIEW
 
-> **Revision 2026-09-12.** Phases 1-4 are delivered. Phase 5 (content) is the live phase and
-> is far behind its original estimate; the estimate itself was wrong and has been replaced with
-> a measurement task. Owner decisions of 2026-09-11/12 add a licence-overlap content priority,
-> a two-stage bilingual review pipeline, an independent (non-endorsed) market posture, and
-> style guide v4.0. Sections marked **[open]** need an answer before the work they describe starts.
+> **Revision 2026-09-20.** Phases 1-4 are delivered. Phase 5 (content) is live and has changed
+> shape: the measurement this roadmap asked for was run, it **refuted the plan it was meant to
+> calibrate**, and the publication model was rebuilt around the result. Publication no longer
+> waits on certification (ADR-0026, Constitution **v5.0.0**). Content went from 2 publishable
+> units to 7 and from 29k to 91k English words. Sections marked **[open]** still need an answer.
+>
+> **What the measurement found.** Six EFMP-302 units were authored and taken through agent
+> review. **One** reached a passing review, after four to seven cycles each against ADR-0019's
+> limit of two. The binding constraint was never authoring throughput and never certification
+> hours - it was that review kept finding real defects, and repairs kept introducing new ones.
+> The sections below that assumed a 15-units-per-week pipeline gated on certification are
+> superseded; they are kept, struck through in prose, because the reasoning that produced them
+> is what the correction has to answer to.
+>
+> **Previous revision: 2026-09-12.** Licence-overlap content priority, two-stage bilingual review
+> pipeline, independent market posture, style guide v4.0. Those decisions still stand except
+> where ADR-0026 supersedes them.
 
 ## System Architecture (one picture in words)
 
@@ -13,6 +25,7 @@
 │  Docusaurus site  (static, self-hosted: nginx → apache2)      │
 │  ├── /docs/...            textbook EN                         │
 │  ├── /ur/docs/...         textbook UR (RTL)                   │
+│  ├── /licence/...         licence track, 3rd docs instance    │
 │  ├── /app/login|signup    auth pages (React, Spec 002)        │
 │  ├── /app/dashboard/*     student dashboard (Specs 004, 011)  │
 │  ├── /app/classes/*       classes, assignments, gradebook     │
@@ -26,30 +39,53 @@
 │  nginx → Kong:8000 - Docker Compose, not Supabase Cloud)       │
 │  ├── Auth: Google OAuth + email/password (mail via a           │
 │  │         transactional relay - Resend/SES, not local exim)   │
-│  ├── Postgres + Row-Level Security (42 migrations)             │
+│  ├── Postgres + Row-Level Security (45 migrations)             │
 │  ├── Storage: submissions/ bucket                              │
 │  └── Edge functions: achievements, exports                     │
 └───────────────────────────────────────────────────────────────┘
 
-Content repo (Git) ── CI ──> validate front-matter ──> build EN+UR ──> deploy
+Content repo (Git) ── CI ──> 11 content gates ──> build EN+UR ──> deploy
                         └──> unit-sync script ──> upsert `units` table
+
+  Deploy is PULL-based: a cron on the VPS polls origin/main and deploys only a
+  CI-green SHA (scripts/deploy-prod.sh). While Actions minutes are exhausted it
+  accepts a local-CI attestation instead - see the operational note below.
 ```
 
 **Why this shape:** the book stays a fast, free, version-controlled static site (Constitution Art. V); everything private or personal sits behind database RLS. One domain, one product feel, two cleanly separated concerns. If dashboards ever outgrow embedded pages, they can move to a standalone app without touching the book.
 
-## Where the project actually stands (2026-09-12)
+## Where the project actually stands (2026-09-20)
 
 Measured from the working tree, not from the site's own claims.
 
-| | |
-|---|---|
-| Units at publishable standard | **2** (`EFMP-301` U1, `EFMP-302` U1) |
-| Thin legacy units | 5 (`EFMP-302` U2-U6, ~1,200 words each) |
-| Courses in `catalog/courses.json` | 13 of 37 authorable |
-| Textbook content | 29,314 EN words · 38,059 UR words |
-| App pages · migrations · tests | 34 · 42 · 13,181 lines |
-| Specification documents | 21,540 lines |
-| Reviewed Urdu mirrors | **1** (`EFMP-302` U1) |
+| | 2026-09-12 | **2026-09-20** |
+|---|---|---|
+| Units published | 2 | **7** - 2 certified, 5 gate-checked |
+| Thin legacy units | 5 (`EFMP-302` U2-U6, ~1,200 words) | **0** - all re-authored, 12.5k-15.3k words each |
+| Textbook content | 29,314 EN words | **91,021 EN words** · 31,364 UR |
+| Courses in `catalog/courses.json` | 13 | 15 (incl. the licence track) |
+| Migrations · specs · ADRs | 42 · 14 · 24 | **45 · 17 · 27** |
+| Content gates | 8 | **11** (17 in the full tier) |
+| Reviewed Urdu mirrors | 1 | 1 (`EFMP-302` U1) - unchanged, see ADR-0022 |
+
+**Publication tiers** (Constitution Art. VII.7 as amended by ADR-0026):
+
+| Tier | Units | Reader-facing notice |
+|---|---|---|
+| `certified` | 2 - `EFMP-301` U1, `EFMP-302` U1 | none |
+| `gated` | 5 - `EFMP-302` U2-U6 | "Draft - expert review pending" |
+| `provisional` | 0 | "Final Review Pending" |
+
+`EFMP-302` U3 briefly held `provisional`, then lost it to Art. VII.4 when the reviewer rubric
+changed - the freshness rule working as designed, not a regression.
+
+### Governance artefacts added since the last revision
+
+- **`specs/decisions/log.md`** - 16 decisions under stable `D-YYYY-NNNN` codes, 12 confirmed and
+  **6 pending owner review**. The counterpart to `specs/gaps.md`: that log records questions
+  escalated *to* the owner, this one records decisions taken *on their behalf*.
+- **`specs/gaps.md`** - 18 entries, **1 open** (`G-2026-16`).
+- **Constitution v5.0.0** (was v4.0.0). Art. VII.7 rewritten, Art. VII.8 added.
 
 ### Corpus size, settled from the course guides *(2026-09-12)*
 
@@ -107,7 +143,7 @@ Raise these as new `specs/gaps.md` entries and resolve them the same way the fir
 | 2 | 002 | Auth, self-selectable roles, verified-teacher gate | ✅ done |
 | 3 | 003 | Classes, assignments, submissions, grading | ✅ done |
 | 4 | 004 + 005 | Both dashboards + suggestion loop | ✅ done |
-| **5** | **006 + content** | **Semesters I-IV content through the pipeline** | **▣ live - 2 of ~156 units** |
+| **5** | **006 + content** | **Semesters I-IV content through the pipeline** | **▣ live - 7 of ~156 units** |
 | 6 | Backlog | Notifications, Sindhi locale, offline PWA, transcripts, parent view | future |
 
 ### Specs delivered outside this plan
@@ -125,6 +161,14 @@ Recording them so the next revision of this roadmap is not surprised by them aga
 | 012 | Visual density standard, figure archetypes | authoring standard |
 | 013 | Authoring system v2, colour/branding, generated standard prose | authoring standard |
 | 014 | Agent review governance, signed evidence, reviewer registry | authoring standard |
+| 015 | Licence content tree, third docs instance, `content-roots.mjs` | authoring standard |
+| 016 | Concept graph v4, per-unit concept tables, `check:concept-graph` | authoring standard |
+| 017 | The `reviewer` capability and its console surface | app |
+
+Three more have landed since. That makes **nine of seventeen specs** authoring-standard work -
+the pattern this roadmap flagged in its last revision, and it has not stopped. Style guide v4.0
+was declared the last revision before a freeze; the standard is now at **v4.5**, and the freeze
+condition (50 units) is still 43 units away.
 
 ## Phase 5 is the whole business, and it had no gate
 
@@ -157,16 +201,63 @@ At that rate the corpus is a two-quarter problem rather than a multi-year one, w
 funding question and the institutional pitch entirely. It also sets a hard requirement on the
 review side, which is where the target has to be proven.
 
-### What 15 units per week requires
+### What 15 units per week requires ~~(superseded 2026-09-20)~~
 
-Authoring is agent-bound and plausibly scales. Certification does not scale the same way, and
-after the 2026-09-12 decision it is a **single human `reviewer`** holding the G5 gate:
+The analysis below assumed certification was the binding constraint. **It was not**, and the
+measurement is now in. Kept because the reasoning is what the correction has to answer to.
 
-- 15 units/week is **3 bilingual certifications per working day**.
-- Each unit is roughly 10,000 English words plus its Urdu mirror, so certification at 15/week
-  means reading and judging around 300,000 words of paired bilingual text per week.
-- At 1 hour per unit that is 15 hours/week and works. At 3 hours per unit it is 45 hours/week and
-  does not. **The whole target turns on a number nobody has measured.**
+~~Authoring is agent-bound and plausibly scales. Certification does not scale the same way, and
+after the 2026-09-12 decision it is a **single human `reviewer`** holding the G5 gate: 15
+units/week is 3 bilingual certifications per working day, around 300,000 words of paired
+bilingual text. At 1 hour per unit that works; at 3 hours it does not. **The whole target turns
+on a number nobody has measured.**~~
+
+### What the measurement actually found *(2026-09-20)*
+
+Six `EFMP-302` units were authored and taken through agent review at G3. The result:
+
+| | |
+|---|---|
+| Units authored | 6 |
+| Units reaching a **passing** review | **1** |
+| Review cycles spent | 6, 7, 4, 4 on Units 3, 4, 5, 6 - against ADR-0019's limit of **two** |
+| Units parked with open findings | 3 |
+
+**Certification hours were never the constraint.** Nobody ran out of reviewing time. What
+happened is that review kept finding real defects, and repairs kept introducing new ones -
+cycles five through seven on Unit 4 each surfaced *new* problems, several created by the
+preceding repair. The loop was not converging, so more reviewer capacity would not have helped.
+
+The defects were also not the kind a faster reviewer catches. Across the course, review found a
+fabricated author attribution, a false accreditation claim, a fabricated `N=77` sample size, and
+a figure teaching the wrong answer to its own MCQ. **All four passed every deterministic gate.**
+
+Two conclusions, and they point opposite ways:
+
+1. **Review is worth more than the plan assumed** - it is the only thing catching that class of
+   defect, and the gates provably cannot.
+2. **Review cannot sit on the publication path** - at one unit in six, gating publication on a
+   passing review produces review debt, not a corpus.
+
+ADR-0026 resolves the tension by separating them: publication rests on the deterministic gates,
+review runs asynchronously and upgrades the reader-facing notice. **This is a real trade, not a
+free one** - unreviewed content reaches students, and the banner is the entire mitigation.
+
+### The rate question, reopened honestly
+
+The 15-units-per-week target was never tested, because the pipeline never got far enough to test
+it. What is now known:
+
+- **Authoring** one unit at the v4.5 standard is roughly one session: 12.5k-15.3k words, four to
+  five topics, eight to ten figure specs.
+- **Figures are the unmeasured cost and they gate publication.** Art. III.10 requires >= 2
+  rendered figures per topic; `check:figures` is inside `DRAFT_COMMANDS`, so figures block G2 and
+  G2 now blocks publication. Roughly 700+ hand-authored SVGs across the corpus, main-session
+  only. Measurement run 001 wrote 42 figure specs and rendered **zero** of them.
+- **Review throughput is no longer on the critical path**, so it no longer sets the rate.
+
+**[open] Phase 5 unit target** stays open, but the number to measure has changed: it is
+**hours per authored-and-figured unit**, not hours per certification.
 
 ### The structural fix
 
@@ -365,7 +456,20 @@ role inherits the same insert permission as every other authenticated role.
    an independent companion resource. No University of Sindh or Faculty of Education branding is
    sought, and no STEDA endorsement is pursued. See the consequence note below.
 8. **Style guide advances to v4.0** with the concept-graph layer. *(Owner decision, 2026-09-12,
-   made against the advice recorded below.)*
+   made against the advice recorded below.)* Now at **v4.5**; the freeze at 50 units has not
+   been reached, and four further revisions have landed since it was called the last one.
+9. **Publication rests on the deterministic gates, not on review.** *(Owner decision 2026-09-20,
+   ADR-0026, Constitution v4.2.0 -> **v5.0.0** MAJOR.)* Three tiers - `gated`, `provisional`,
+   `certified` - each with its own reader-facing notice, none of them certification. Standing
+   authorisation for the 15 catalogued courses is `D-2026-0014`; it carries an exit condition.
+10. **Evidence binds per unit, not per course.** *(ADR-0027.)* Authoring unit 6 no longer
+    invalidates units 1-5. `EFMP-302` U3's manifest went from 145 bound paths to 112.
+11. **An evaluator agent may approve G0/G1 where the course guide determines the answer.**
+    *(Constitution Art. VII.8.)* Anything the guide does not settle escalates to `specs/gaps.md`
+    instead. Every approval is a recorded `D-` code at `pending-owner-review`.
+12. **Urdu parity is a corpus-completion requirement, not a per-unit publish gate.**
+    *(ADR-0022, Constitution Art. III.2.)* English-only publication is permitted where the `ur`
+    route states the gap.
 
 ### Consequence note on decision 7
 
@@ -420,24 +524,58 @@ that will ever exist, and that the concept graph is load-bearing for everything 
     in Semester V, outside locked decision 3's Semesters I-IV window. Widen the window or drop it.
 11. **[open] Part I positioning** - cover the Class 1-8 school curriculum as a separate content
     line, or state publicly that the product serves Part II (75% of the paper) only.
-12. **[open] Phase 5 unit target** - the 15/week rate is the working hypothesis; the gate date and
-    per-semester number are set once the five-unit certification measurement confirms or refutes
-    the review side of it.
+12. **[open] Phase 5 unit target** - the five-unit measurement was run and **refuted** the
+    hypothesis: certification was never the constraint. The number still to measure is hours per
+    authored-and-figured unit, with figures the unmeasured half.
+13. **[open] Six decisions await confirmation** in `specs/decisions/log.md` - `D-2026-0006`,
+    `0007`, `0015`, `0016` (EFMP-304 intake) sit at `pending-owner-review`. Recorded, so
+    authoring is not blocked, but unconfirmed.
+14. **[open] `G-2026-16`** - EFMP-304's guide gives no week table, term length or contact hours,
+    and the same guide file lays EFMP-305 out week by week, so the silence looks deliberate. The
+    3/2/3/3/2/3 split in the spec is a construction. Blocks only `## Week schedule`.
+15. **[open] Per-topic logging** - `assignments`, `teaching_log_entries` and `activity_feedback`
+    key on `(course_code, unit_no)` with no `topic_no`, so a four-topic unit is one loggable
+    item. Migration 0045 widened the kinds; going finer is a schema change and a product call.
+16. **[open] Certification has no drain.** Feature 014's qualification work (T007/T008) is
+    unstarted, so every unit terminates at `gated` or `provisional`. ADR-0026 records that the
+    asynchronous review loop has **no deadline, owner or counter** - the stable state of an
+    unbounded loop is that it never runs. If it is to be real it needs a number.
 
-## Immediate Next Steps
+## Immediate Next Steps *(revised 2026-09-20)*
 
-1. **Land v4.0** (owner decision 8): concept schema, `check:concept-graph` gate, skill step,
-   widened front-matter patterns, retrofit `EFMP-302` U1 then `EFMP-301` U1, verify the reviewed
-   Urdu mirror survives. **Then freeze the standard.**
-2. **Licence blueprint** from STEDA/STS primary sources. Cheap, no review queue, and it gates the
-   content ordering everything else now depends on.
-3. **Measure.** Author five units back to back at the frozen v4.0 standard, logging hours. Set the
-   Phase 5 target from the result.
-4. **Spec the `reviewer` role** and the two-stage review pipeline, including the Art. VII amendment.
-5. **Item bank** for the 75% constructed-response block from the two built units - the first
-   sellable artefact, led by rubric-marked practice rather than MCQ drill.
-6. **Payment rail**: JazzCash / Easypaisa / Raast / challan, one-time, **no auto-renew**. Never
+Four of the six previous steps are done. Struck items are recorded so the next reader can see
+what closed rather than wonder.
+
+1. ~~**Land v4.0.**~~ Done, and four revisions past it - the standard is at v4.5. The freeze
+   condition (50 units) is 43 units away.
+2. ~~**Spec the `reviewer` role.**~~ Done as Spec 017 (capability, migration 0044, console
+   surface). The Art. VII amendment landed and went further than planned: v5.0.0 now also
+   carries delegated intake evaluation (VII.8) and the publication tiers (VII.7).
+3. ~~**Measure.**~~ Done, and it refuted the plan - see the measurement section above. The
+   number still worth measuring is hours per authored-and-figured unit.
+4. **Author EFMP-304** (spec approved at G0/G1 by the intake evaluator). Six units. This is the
+   first course through the full pipeline under the new publication model, so it is also the
+   test of whether the model holds at course scale.
+5. **Licence blueprint** from STEDA/STS primary sources. Unchanged and still cheap; it gates the
+   content ordering everything else depends on.
+6. **Item bank** for the 75% constructed-response block. Now buildable from **seven** units
+   rather than two, which changes it from a sample to a product.
+7. **Payment rail**: JazzCash / Easypaisa / Raast / challan, one-time, **no auto-renew**. Never
    card-only.
+
+### Operational constraint until 2026-10-01
+
+**GitHub Actions minutes are exhausted** (2,000/2,000). Every push still creates a run that
+completes with `conclusion=failure`, so `deploy-prod.sh`'s CI gate can never be satisfied and
+production would have frozen silently at the next merge.
+
+`npm run ci:local` runs the same steps on the deploy host - it **parses `ci.yml`** rather than
+copying the step list, so it cannot check less than CI - and writes a SHA-bound attestation that
+the deploy gate accepts. The fallback logs a WARNING on every use and is bounded three ways: a
+hard date in the script, an `expires` field in each attestation, and a digest of `ci.yml` that
+voids every attestation if the workflow changes. **It expires 2026-10-02.**
+
+Per merge until then: `npm run ci:local` on the merged SHA (~20 min) before the cron will deploy.
 
 ## Appendix - Full Course Catalog (from `Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx`)
 

@@ -1,0 +1,8 @@
+{
+  "entries": [
+    {
+      "path": ".claude/skills",
+      "include_only": ["review-unit"]
+    }
+  ]
+}
