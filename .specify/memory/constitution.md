@@ -1,4 +1,34 @@
 <!--
+SYNC IMPACT REPORT (v5.0.0)
+Version change: 4.2.0 -> 5.0.0
+Bump rationale: MAJOR, deliberately, and the choice is stated rather than left to be inferred.
+ADR-0025 was MINOR because it ADDED a publication state without relaxing anything. This
+REMOVES A PRECONDITION from an existing obligation: section 7 required "a validated report
+whose disposition is `pass`" before a unit could publish, and it no longer does. Art. XI.2
+defines MAJOR as a principle "removed or redefined in a way that invalidates existing specs",
+and Spec 006 FR-016a plus the tracker legend both encode review-before-publish. A MINOR bump
+on a relaxation of the publication bar would read badly later, so this is MAJOR.
+Modified: Article VII.7, rewritten to define two non-certified publication tiers - a new
+gate-checked tier that publishes on deterministic gate evidence alone under a "no reviewer has
+read this" notice, and the existing provisional tier, carried over unchanged in substance.
+Added: the requirement that gate-checked publication rests on a standing owner authorisation
+recorded in specs/decisions/log.md (Art. VII.1 does not delegate publication authority, so
+without this the tooling would authorise its own publications); the fail-loud requirement on
+the notice mechanism; the status/evidence-kind agreement rule; and an explicit exit condition
+tying the provision to the build-out of the 15 catalogued courses.
+Removed: the precondition that an agent review must have returned `pass` before publication.
+Reviewed and unchanged: sections 1-6 and 8 are carried over verbatim. Section 5's
+qualification requirements and the self-approval prohibition are untouched and still bind -
+neither tier certifies anything. Section 4's freshness rule still revokes both tiers on any
+input change. Article III.2's untranslated-banner obligation remains the standing precedent
+that a gap is disclosed to the reader rather than hidden. The practicing-teacher gate in the
+Article VII table is not discharged by either tier.
+Follow-ups: the unreviewed backlog has no age measure and no deadline; ADR-0026 records that
+as a known gap rather than solving it. Feature 014 T007/T008 remain the only path to
+certification.
+-->
+
+<!--
 SYNC IMPACT REPORT (v4.2.0)
 Version change: 4.1.0 -> 4.2.0
 Bump rationale: MINOR - a new Article VII section 8 delegates two gates that were previously
@@ -752,19 +782,39 @@ Before any unit or feature is marked complete, all applicable gates MUST pass:
    this version bump alone MUST NOT mark G3/G5 done or change `translation_status`.
    This governance amendment does not alter the content quality standard's version or
    remove existing Article VI.1 obligations.
-7. **Provisional publication (ADR-0025).** The curriculum owner MAY authorise publication of a
-   unit whose G3 (or G5) review passed an independent agent but carries no signed, qualified
-   certification, provided every reader-facing page of that unit displays a visible
-   "Final Review Pending" notice. Such a unit's tracker row MUST record the distinct provisional
-   status, never a done mark, and its evidence reference MUST identify a validated report whose
-   disposition is `pass` and whose input manifest still matches the published bytes.
-   Provisional publication confers no certification: it does not satisfy section 5, does not
-   qualify a reviewer, does not change `translation_status`, and does not discharge the
-   practicing-teacher gate or any Article VI.1 obligation. A provisional unit remains
-   outstanding work and MUST continue to appear in the review queue until a qualified human or
-   an enabled agent certifies it. Any change to the unit's inputs revokes the provisional state
-   by invalidating its evidence, exactly as section 4 requires of acceptance. The owner MAY
-   withdraw provisional publication at any time without requalifying anything.
+7. **Publication without certification (ADR-0025, ADR-0026).** A unit MAY be published before it
+   is certified, in one of exactly two tiers, provided every reader-facing page of that unit
+   displays the notice its tier requires. Neither tier is certification.
+   1. **Gate-checked.** The unit's deterministic draft gates pass, evidenced by a valid G2
+      record whose input manifest still matches the published bytes, and **no reviewer has read
+      it**. Notice: **"Draft - expert review pending"**. Publishing in this tier requires a
+      standing authorisation from the curriculum owner, recorded in `specs/decisions/log.md`
+      under a decision code naming the courses it covers; section 1 does not delegate
+      publication authority, and an unrecorded authorisation is void.
+   2. **Provisional.** An independent agent review returned `pass` but carries no signed,
+      qualified certification. Notice: **"Final Review Pending"**. Its evidence reference MUST
+      identify a validated report whose disposition is `pass` and whose input manifest still
+      matches the published bytes.
+   The tracker row MUST record the tier's distinct status, never a done mark, and **the status
+   MUST agree with the kind of evidence referenced** - gate evidence with the done mark for a
+   draft stage, provisional evidence with the provisional mark, signed evidence with the done
+   mark. A mismatch is a defect, not a formatting preference: it is how an uncertified unit
+   silently presents as certified.
+   The absence of a review is permitted; **a broken claim of review is not.** A review row that
+   is present but whose evidence does not validate remains a gate failure.
+   The notice mechanism MUST fail loudly. A missing, malformed or stale publication-state record
+   MUST fail the build rather than resolve to no notice, and a tier the build does not recognise
+   MUST render the strongest notice rather than none. Where the notice is the only disclosure
+   that content is unreviewed, silently omitting it is the most consequential failure available.
+   Neither tier satisfies section 5, qualifies a reviewer, changes `translation_status`, or
+   discharges the practicing-teacher gate or any Article VI.1 obligation. A unit in either tier
+   remains outstanding work and MUST continue to appear in the review queue until certified. Any
+   change to the unit's inputs revokes its tier by invalidating its evidence, exactly as section
+   4 requires. The owner MAY withdraw a publication at any time without requalifying anything.
+   **Exit condition.** Tier (a) exists for the build-out of the currently catalogued courses.
+   When they are authored the owner MUST decide explicitly whether to keep, narrow or withdraw
+   it; a unit still in tier (a) at that point is reviewed or withdrawn. It does not become
+   permanent by default.
 
 8. **Delegated gate evaluation (G0 intake and G1 unit-spec).** An evaluator agent MAY approve
    G0 course intake and G1 unit-spec for a course whose guide determines the answer, without
@@ -868,4 +918,4 @@ Engineering gate (the rest).
 
 ---
 
-**Version**: 4.2.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-09-19
+**Version**: 5.0.0 | **Ratified**: 2026-07-17 | **Last Amended**: 2026-09-20
