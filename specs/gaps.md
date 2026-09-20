@@ -116,7 +116,13 @@ which is the correct outcome: none is determined by the course guide.
 
 ## G-2026-07 - EFMP-302 credit hours: two guide documents disagree with each other and one disagrees with the Scheme
 
-- **Status:** open (awaiting owner decision)
+- **Status:** **resolved** (owner decision `D-2026-0003`, 2026-09-20)
+- **Decision:** `.specify/Course_guides_and_Scheme/` is a **superseded departmental variant set**,
+  retained for provenance only. Credit hours for EFMP-301 and EFMP-302 stand at `3 (3-0)`, which
+  `catalog/courses.json` already carries, so no content or catalog change follows. The Faculty
+  guides' CLO numbering governs both courses' SLO traces, so those traces are unaffected too. A
+  provenance README now sits in the folder, which is what stops this recurring for the six other
+  courses with a file there.
 - **Criterion:** `identity` (G0 intake). Constitution Art. II.3.
 - **Detail:** The bundle binds two documents that both present themselves as the EFMP-302 course
   guide, and they are not the same document.
@@ -288,7 +294,10 @@ which is the correct outcome: none is determined by the course guide.
 
 ## G-2026-11 - `D-2026-0002`'s superseded Unit 6 design survives in EFMP-302's course review plan
 
-- **Status:** open (awaiting owner decision)
+- **Status:** **resolved** (owner decision `D-2026-0004`, 2026-09-20)
+- **Decision:** `D-2026-0002` extends beyond Unit 6 for this course. The *One-term PD plan*
+  practicum item in `content-spec.md` "## Course review plan" is corrected to the one-page design,
+  with the superseded wording recorded rather than deleted.
 - **Criterion:** `blueprint` (G1 unit-spec), and a scope question about an existing decision.
 - **Detail:** `D-2026-0002` (confirmed, curriculum owner, 2026-09-19) settles Unit 6's activity
   design as the **one-page** development plan and records the competing **one-term** design,
