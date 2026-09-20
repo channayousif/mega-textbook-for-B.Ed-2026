@@ -148,8 +148,10 @@ fully restructured to the per-topic layout.
   - *Challenge case study* - pick one challenge your placement school actually faces
     (multi-grade, resourcing, workload); document it and one growth-oriented response the staff
     use; bring back the write-up.
-  - *One-term PD plan* - build a personal professional-development plan naming one activity from
-    each "ways to continue developing" category; bring back the plan for peer review.
+  - *One-page PD plan* - build a one-page personal professional-development plan carrying the six
+    blocks of Topic 6.4, in about twenty minutes, with a named review date; bring back the plan
+    for peer review. (Superseded wording, recorded rather than deleted: "naming one activity from
+    each 'ways to continue developing' category" - see `D-2026-0002` and `D-2026-0004`.)
 
 ## Unit 1: Understanding Teaching
 

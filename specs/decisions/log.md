@@ -70,3 +70,62 @@ Recorded here so the boundary stays visible as the log grows:
   the superseded wording recorded rather than silently deleted.
 - **Limits:** Settles Unit 6 only. It does not change the assessment blueprint, the sub-topic
   checklist, or any other unit's activity design.
+
+---
+
+## D-2026-0003 - `.specify/Course_guides_and_Scheme/` is a superseded departmental variant set
+
+- **Status:** confirmed
+- **Gate:** G0 (course intake), `identity` criterion
+- **Scope:** corpus-wide, all eight files in that folder
+- **Decided by:** curriculum owner, 2026-09-20
+- **Decision:** the guides in `.specify/Course_guides_and_Scheme/` are a **superseded departmental
+  variant set** issued by the Department of Early Childhood and Elementary Education, Elsa Qazi
+  Campus. They are retained for provenance only. Where one conflicts with a Faculty course guide
+  or with the revised board Scheme, it does **not** govern. Credit hours for EFMP-301 and
+  EFMP-302 stand at **`3 (3-0)`**, as `catalog/courses.json` already records, and the CLO
+  numbering of the Faculty guides governs the SLO traces in both courses' specs.
+- **Basis:** the first intake evaluation (Art. VII.8) found that two documents both present as the
+  EFMP-302 course guide and disagree on credit hours, the `Major:` line and the order of CLOs 1
+  and 2. Tracing the pattern found EFMP-301 in the same position. Where a file exists in that
+  folder it states `(0-3)`; the Faculty guides and the revised Scheme state `(3-0)`. G-2026-05
+  already held that credit-hour values are a property of the degree-awarding scheme.
+- **Limits:** settles precedence for that folder. It does not revise any unit's content, and it
+  does not pre-decide a future conflict on something other than credit hours or CLO order; those
+  are still decided on their merits under Art. II.3.
+- **Applied in:** `specs/gaps.md` G-2026-07 resolved; a provenance README added to the folder so
+  the question cannot recur silently.
+
+## D-2026-0004 - `D-2026-0002` extends beyond Unit 6
+
+- **Status:** confirmed
+- **Gate:** G1 (unit-spec)
+- **Scope:** EFMP-302, course-wide
+- **Decided by:** curriculum owner, 2026-09-20
+- **Decision:** the one-page development plan settled by `D-2026-0002` is the course's design
+  wherever that activity appears, not only in Unit 6. The *One-term PD plan* practicum item in
+  `content-spec.md` "## Course review plan" is corrected to the one-page design, with the
+  superseded wording recorded rather than deleted.
+- **Basis:** Unit 6's G3 run-007 review found the superseded design alive one section outside
+  `D-2026-0002`'s declared "Unit 6 only" scope, and the first intake evaluation found it
+  independently. Same design, same course, same reasoning; a student following the practicum
+  would have built the plan Topic 6.4 argues against.
+- **Limits:** settles EFMP-302 only. It does not change the assessment blueprint or any other
+  course's activity design.
+
+## D-2026-0005 - No blanket waiver of ADR-0019's two-cycle repair limit
+
+- **Status:** confirmed
+- **Gate:** G3 (English review)
+- **Scope:** corpus-wide
+- **Decided by:** curriculum owner, 2026-09-20
+- **Decision:** ADR-0019 section 2's limit of two repair-and-review cycles per stage stands. The
+  EFMP-302 units that exceeded it (Unit 3 at six cycles, Unit 4 at seven, Units 5 and 6 at four)
+  are **not** granted a retrospective waiver and are **not** authorised for further cycles. Their
+  open findings route to the content-improvement loop.
+- **Basis:** cycles five through seven on this course did not converge. They were not one defect
+  resisting repair; each surfaced new defects, several introduced by the preceding repair. Raising
+  the limit would have bought more of the same. The provisional publication tier already lets a
+  unit be visible and honest with open findings recorded, which is the intended relief.
+- **Limits:** a specific unit may still be granted a specific additional cycle by the owner. This
+  refuses the blanket waiver, not every future exception.
