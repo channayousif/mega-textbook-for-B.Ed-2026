@@ -5,16 +5,24 @@ import { test, expect } from '@playwright/test';
  * Verifies the PrintHandout control exists and that print media hides site chrome so the
  * handout paginates cleanly. Runs against a served site (dev or built).
  *
- * Points at a unit still on the LEGACY activities/formative/summative layout.
- * A unit re-authored to the Spec 008 per-topic standard has no such pages at
- * all - they fold into unit-assessment.mdx - so pinning these routes to a unit
- * queued for re-authoring turns a content migration into three 404s here.
- * EFMP-302 Unit 2 is legacy and is not in the re-authoring queue.
+ * Points at the Spec 008 PER-TOPIC layout, which is now the only published shape.
+ *
+ * This previously pinned EFMP-302 Unit 2's legacy activities/formative/summative
+ * routes, with a comment reasoning that Unit 2 "is legacy and is not in the
+ * re-authoring queue". It was re-authored, those three pages folded into
+ * unit-assessment.mdx, and the tests became three 404s - the exact failure the
+ * comment set out to avoid, caused by the assumption behind it rather than by the
+ * routes. The remaining legacy files in the repo are all `coming_soon: true`
+ * scaffolds that render no print control at all, so there is nothing legacy left
+ * worth pinning to.
+ *
+ * These three cover the layout's distinct page kinds - a topic, the assessment and
+ * the teacher notes - so a regression in any one of them is visible.
  */
 const HANDOUTS = [
-  '/semester-1/efmp-302/unit-02/activities',
-  '/semester-1/efmp-302/unit-02/formative',
-  '/semester-1/efmp-302/unit-02/summative',
+  '/semester-1/efmp-302/unit-02/topic-01',
+  '/semester-1/efmp-302/unit-02/unit-assessment',
+  '/semester-1/efmp-302/unit-02/unit-teacher-notes',
 ];
 
 for (const path of HANDOUTS) {
