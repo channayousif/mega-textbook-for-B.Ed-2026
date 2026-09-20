@@ -504,3 +504,169 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   `prepare-intake-evidence.mjs` must stay identical, which is what `778b76e` established.
 - **Blocks:** nothing substantive. `D-2026-0006` and `D-2026-0007` each carry a note pointing here
   so a reader checking their digests knows why two of 56 differ.
+
+## G-2026-16 - EFMP-304's term length and week distribution are the spec's construction, not the guide's
+
+- **Status:** open
+- **Criterion:** `partition` (G0 intake / G1 unit-spec), calendar only. The unit partition itself
+  **is** guide-determined and is approved separately under `D-2026-0015.2`; only the calendar is
+  at issue here, exactly as `G-2026-13` was written.
+- **Why this is not `G-2026-13` reopened.** `G-2026-13` asked whether a contract may require a
+  section a guide cannot supply. The owner answered that in `D-2026-0012` by amending the
+  contract, and that question is closed. But `D-2026-0012`'s own Decision text ends "**for an
+  evaluator to approve or escalate**", and its Applied-in line says the schedule "conforms"
+  without change, which settles the **form** and expressly leaves the **substance** to this gate.
+  This entry is the second of the two dispositions that ruling reserved. Approving it would have
+  meant asserting that the guide determines a sixteen-week term, and it does not.
+- **Detail:** the EFMP-304 guide block
+  (`Scheme-and-Course-guides/extracted-text/2nd 2026.txt:609-756`) carries a course description,
+  six course outcomes, a six-unit topic outline, a reading list and a marks table. It carries
+  **no week table of any kind**, and no statement of term length or contact hours. The revised
+  board Scheme contains the word "week" **nowhere at all**.
+
+  This silence is deliberate, not an extraction artefact. **The same guide file carries week
+  tables for other courses**: EFMP-305 Inclusive Education is laid out week by week from
+  `2nd 2026.txt:225` ("UNIT 1: Foundations of Inclusive Education(2 Weeks)", "Week-1 ...",
+  "Week-2 ..."). The guide is able to express a calendar and does not do so for EFMP-304.
+
+  `specs/content/efmp-304/content-spec.md:130-147` supplies one, correctly marked "Derived, not
+  guide-given" and described as proportional to sub-topic count and technical density. It
+  allocates a **16-week** term as 3/2/3/3/2/3 across Units 1 to 6, and each `## Unit N` subsection
+  repeats its band on its first line (`:201`, `:332`, `:426`, `:525`, `:619`, `:719`).
+
+  Two things are undetermined, not one. First, the **term length**: nothing in the 54 bound inputs
+  states that an EFMP-304 term is sixteen weeks. Second, the **distribution**: the stated basis is
+  "proportional to sub-topic count", but the allocation is not proportional to sub-topic count and
+  the spec says so itself at `:146-147` - Unit 3 receives three weeks for four sub-topics while
+  Unit 5 receives two for five. The work is therefore being done by "technical density", which is
+  a pedagogical judgement, and the guide supplies no basis for it. The spec is candid that this is
+  a judgement and asks for it to be escalated if the evaluator agrees. The evaluator agrees.
+- **Needed, and from whom:** the curriculum owner, to state the term length EFMP-304 is taught
+  over and either to confirm the proposed 3/2/3/3/2/3 distribution or supply another; or to direct
+  that `## Week schedule` be recorded as guide-silent for this course, which `D-2026-0012` now
+  expressly permits as the alternative.
+- **Blocks:** `## Week schedule` and the "Weeks N-M" line opening each of the six `## Unit N`
+  subsections. **Nothing else.** `D-2026-0015` and `D-2026-0016` are written to exclude the
+  calendar, no gate parses it, and authoring does not depend on it. This does **not** hold
+  `status: approved`.
+
+## G-2026-17 - `D-2026-0013`'s open-access floor is binding on paper and enforced by nothing
+
+- **Status:** **resolved** (developer fix, 2026-09-20)
+- **Fix:** `scripts/check-source-floor.mjs`, wired into `CONTENT_GATES` and CI. A course declares
+  `open_access_floor` in its content-spec front matter; the gate counts rows in each unit's
+  `sources/unit-NN.md` that name a registry (Crossref, OpenAlex, ERIC, DOAJ, ...) **and** carry an
+  ISO date in the same row, and fails below the floor. EFMP-304 now declares `D-2026-0013`'s
+  numbers: 2 for Units 1-3, 1 for Units 4-6. Opt-in, so courses with adequate guide reading lists
+  are unaffected.
+- **Both halves of the token are required, deliberately.** A registry name with no date is
+  unfalsifiable; a date with no registry says nothing about what was checked. Seven fixture tests
+  pin that, plus the missing-file and no-floor cases - without them "the gate passes" would prove
+  nothing, since it is vacuous on the real tree until EFMP-304 has authored units.
+- **What it does not do:** it proves an author looked something up, not that the source supports
+  the sentence citing it. Only a reviewer establishes that. This is a floor, not a substitute for
+  G3 - which matters more now that Art. VII.7(a) publishes before review.
+- **Criterion:** `readings` (enforcement, not presence). The criterion itself **passes**: the
+  guide's list is present at `2nd 2026.txt:720-741` and all seven entries resolve to real works.
+  Whether that list is *usable* was escalated as `G-2026-14` and settled by the owner in
+  `D-2026-0013`. **This entry does not reopen that ruling.** It reports that the mitigation the
+  ruling rests on has no mechanism behind it.
+- **Detail:** `D-2026-0013` accepted a print-only reading list on an explicit condition: at least
+  two verified open-access sources bound per unit for Units 1 to 3 and at least one for Units 4 to
+  6, "resolved through a named registry and recorded with the date of verification". Its own Basis
+  says Units 1 to 3 need "a named list of critical-thinking standards and a formal definition of
+  validity, which title-level support cannot carry". The floor is therefore the whole reason the
+  ruling is safe. Three findings, each verified against the bound inputs:
+
+  1. **No gate counts open-access sources.** `grep -rn "open-access-substitute" scripts/` returns
+     **zero matches**. The `Kind` vocabulary is defined in
+     `specs/007-content-depth-standard/contracts/sources-consulted.md` and parsed into `keyKind` at
+     `scripts/lib/unit-depth.mjs:224-229` and `:451-454`, but only the value
+     `no-external-source` is ever branched on. Nothing anywhere counts rows per unit, so
+     "at least two" and "at least one" are enforced by no deterministic check.
+  2. **The record the floor demands has nowhere to go.** `content-spec.md:119-121` requires the
+     registry and the date of verification to be recorded in `sources/unit-NN.md`. That file's
+     contract defines exactly five columns, `Key | Citation | URL/DOI | Supports | Kind`, and has
+     **no column for a registry and none for a verification date**. A search of the depth-gate
+     scripts and both content-spec contracts for "verification date", "date of verification",
+     "verified on" or "registry" returns nothing. An author complying in full has no conformant
+     place to put the evidence, and an auditor has no field to read it from.
+  3. **The reader who would have caught it has been removed.** Constitution v5.0.0 Art. VII.7(a)
+     publishes a unit on deterministic gates with **no reviewer having read it**, and
+     `D-2026-0014` supplies the standing authorisation naming the 15 catalogued courses. EFMP-304
+     is one of them (14 semester courses plus 1 track course in `catalog/courses.json`). The
+     style guide is explicit that whether an `open-access-substitute` is genuinely on-topic is
+     **human Content gate only**. On this course's actual publication path there is no human
+     Content gate before readers.
+
+  Taken together: a unit could be authored from the seven unopened monographs alone, bind zero
+  open-access sources, pass every deterministic gate, and publish under the "Draft - expert review
+  pending" notice, with the breach of `D-2026-0013` invisible to every mechanism in the
+  repository. `D-2026-0014` already records the owner accepting that gates prove shape and not
+  truth; this entry reports that for **this** course the accepted residual risk is larger than the
+  ruling that created it assumed, because the compensating control does not exist.
+- **Needed, and from whom:** the curriculum owner, to choose one of:
+  (a) instrument the floor - add a per-unit minimum count of `open-access-substitute` rows to
+  `scripts/check-unit-depth.mjs`, and add registry and verification-date columns to the
+  sources-consulted contract, so `D-2026-0013` becomes checkable;
+  (b) require a human read of EFMP-304 Units 1 to 3 before they leave the gate-checked tier,
+  narrowing `D-2026-0014` for this course only; or
+  (c) record that the floor is advisory, which would mean `D-2026-0013`'s Basis no longer holds
+  and `G-2026-14` needs deciding again on different grounds.
+- **Blocks:** **nothing at G0/G1, and not authoring.** The spec faithfully expresses the ruling it
+  was given; the defect is in the instrumentation, not the derivation, so it is not a reason to
+  withhold `status: approved`. It is recorded as a condition the owner should close **before any
+  EFMP-304 unit is published** under `D-2026-0014`.
+
+## G-2026-18 - An EFMP-304 decision entry invalidates EFMP-302's review evidence
+
+- **Status:** **resolved** (developer fix, 2026-09-20)
+- **Fix:** `specs/decisions/log.md` leaves the freshness-bearing manifest, and reports bind the
+  **entries they cite** instead, through a new optional `rulings: {code: digest}` field that
+  `validateReport` verifies with `rulingDigest()`.
+- **Strictly stronger than what it replaces.** The whole-file digest proved a reviewer held *some*
+  version of the register but never that the ruling it relied on was the one it read. Now a
+  changed cited ruling invalidates the reports that rested on it, and an unrelated new entry
+  touches nothing. Verified both directions in `tests/review/evidence.test.mjs`, and against the
+  live case: appending a decision no longer moves EFMP-302's five gate-checked units.
+- **Note:** this is the second half of the change `G-2026-15` began. The plan recorded that the
+  two halves had to ship together or not at all; they were split, and this gap is what that cost -
+  an EFMP-304 intake decision turned CI red across a different course.
+- **Criterion:** none. This is a defect in the evidence-binding machinery, raised against the
+  tool, in the manner `G-2026-12` and `G-2026-15` were. It does not affect any verdict in
+  `D-2026-0015` or `D-2026-0016`.
+- **Detail:** measured on this run. Before recording anything, `npm run check:pipeline-gate`
+  exited **0** ("2 certified, 5 gate-checked"). Immediately after appending `D-2026-0015` and
+  `D-2026-0016` to `specs/decisions/log.md`, the same command exits **1** with five findings:
+
+  ```
+  - EFMP-302 Unit 2 .. Unit 6: G2 en-draft: stale or incomplete input manifest
+  ```
+
+  The cause is `manifestRoots()` in `scripts/lib/review-evidence.mjs`, which binds
+  `specs/decisions/log.md` for G3/G5 by **whole-file content digest**. That binding is deliberate
+  and the comment beside it gives good reasons: owner rulings decide review outcomes, so a new
+  ruling should re-open a review that rested on the old state. `G-2026-15` unbound the two
+  registers for the **intake** bundle only, so that an evaluator's approval no longer voids its
+  own manifest. It did not, and was not meant to, address the cross-course case.
+
+  The consequence is that an EFMP-304-scoped entry invalidates the evidence of five **EFMP-302**
+  units that are already published in the Art. VII.7(a) gate-checked tier, for a ruling that
+  cannot possibly bear on them. This is the same blast-radius problem ADR-0027 already solved once
+  for `content-spec.md`, where `sliceSpec()` replaces other units' sections with a placeholder so
+  that editing Unit 6 does not invalidate Unit 3. The decision log has no equivalent slicing, so
+  every entry is global.
+
+  Left unaddressed, the effect is that CI goes red after every recorded decision and the five
+  EFMP-302 units need their G2 evidence regenerated each time, which trains whoever is on the
+  other end to regenerate evidence reflexively rather than ask what changed. That is the exact
+  habit the binding exists to prevent.
+- **Needed, and from whom:** a developer, to narrow the binding rather than remove it. Options,
+  in preference order: (a) bind the decision log by the **commit** it was read at rather than by
+  content digest, which is the fix `G-2026-15` already suggested and which keeps a later ruling
+  visibly invalidating an earlier acceptance; (b) slice the log the way `sliceSpec()` slices the
+  content-spec, so a review binds only the entries whose Scope names its course plus every
+  corpus-wide entry; (c) leave it and accept the churn, recorded as a deliberate choice.
+- **Blocks:** nothing in this evaluation. Reported because `check:pipeline-gate` is now red on
+  `provisional-review-publication-tier` as a direct and expected result of recording these two
+  decisions, and a reader who does not know why would reasonably read it as an EFMP-302 defect.

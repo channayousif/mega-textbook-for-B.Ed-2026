@@ -106,6 +106,13 @@ jobs:
       - name: Bloom band gate
         run: npm run check:bloom-bands
 
+      # Open-access source floor (D-2026-0013, G-2026-17). Opt-in per course via
+      # `open_access_floor` in its content-spec. This is the control the owner's
+      # ruling assumed existed when it accepted authoring EFMP-304 against seven
+      # print-only monographs.
+      - name: Open-access source floor
+        run: npm run check:source-floor
+
       # Adding a course is content-only — zero platform-code change (FR-005, SC-006, T034)
       - name: Add-course content-only check
         run: npm run check:add-course

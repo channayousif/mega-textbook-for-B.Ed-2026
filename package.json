@@ -19,6 +19,7 @@
     "check:no-answer-keys": "node scripts/check-no-answer-keys.mjs",
     "check:concept-graph": "node scripts/check-concept-graph.mjs",
     "check:bloom-bands": "node scripts/check-bloom-bands.mjs",
+    "check:source-floor": "node scripts/check-source-floor.mjs",
     "check:pipeline-gate": "node scripts/check-pipeline-gate.mjs",
     "check:depth-gate": "node scripts/check-unit-depth.mjs",
     "check:figures": "node scripts/check-figures.mjs",
