@@ -44,7 +44,7 @@ CI runs against a live shared Supabase instance with concurrency serialization (
 
 ## Content work
 
-Read `specs/content/style-guide.md` and the course's content spec and tracker before editing units. Authoring/review/revision skills live in `.claude/skills/`.
+Read `specs/content/style-guide.md` and the course's content spec and tracker before editing units. Authoring, translation, review and revision skills live in `.claude/skills/` (`author-unit`, `translate-unit`, `generate-figures`, `review-unit`, `revise-topic`, `evaluate-intake`).
 
 Unit structure (Spec 008 per-topic standard): `unit-NN/index.mdx`, `topic-NN.mdx`, `unit-assessment.mdx` (+ optional `unit-teacher-notes.mdx`); optional course-level `course-review.mdx`. Legacy five-file units are exempt from per-topic rules.
 
@@ -63,3 +63,43 @@ Record user requests via `.specify/templates/phr-template.prompt.md` (routing in
 ## Visuals
 
 ADR-0024 governs the Claude/Codex boundary. Claude owns prose, figure briefs, alt text, SVG schematics, and `prompt-only` manifest rows. Codex owns raster generation, WebP optimization, placement, and raster manifest transitions. Don't silently rewrite authored inputs during raster production.
+
+## Antigravity (`agy`) reviewer role
+
+Antigravity runs here as an **independent reviewer only**, on a different vendor, model family
+and quota pool from the authoring session. Its skills are the repository's own: `.agents/skills/`
+holds symlinks to `.claude/skills/`, so there is one standard with two consumers.
+
+Scope, in force for every `agy` run in this repository:
+
+- **Write only** under `specs/content/<course>/reviews/`. Never write to `docs/`, `licence/`,
+  `i18n/`, `static/img/`, `catalog/`, `src/`, `supabase/`, or any `specs/content/**/tasks.md`.
+- **Never** append a tracker row, mark a gate done, sign evidence, self-register in
+  `specs/reviewers/registry.json`, merge, publish, or use human initials for an agent result.
+- **Never author or revise content.** Authoring, figure generation and topic revision stay in the
+  main Claude session; those skills state "one skill, no sub-agent" and are not exposed here.
+- Record a real `reviewer_run_id` (the `agy` conversation ID). A placeholder such as `UNSUPPLIED`
+  or `TODO` is rejected by `acceptProvisionalReport` and voids the review.
+- Independence is the basis for trusting an unregistered reviewer: do not review material this
+  session drafted, and do not run a cycle beyond ADR-0019's limit of two without owner
+  authorisation recorded in `specs/decisions/log.md`.
+
+Invocation, verified 2026-09-20 against `agy` 1.2.7:
+
+```bash
+agy -p "<task>" --add-dir /home/a2ahs/mega_book_for_B.Ed \
+    --model gemini-3.1-pro-high --effort high \
+    --output-format json --print-timeout 55m
+```
+
+`--add-dir` is required and there is no `--cwd`: without it the workspace is unset, and neither
+`AGENTS.md` nor `.agents/skills.json` is loaded. Headless runs cannot prompt for a tool
+permission, so a denied command aborts the turn while still reporting `status: SUCCESS` with an
+empty response; the cause is printed on stderr. `permissions.allow` does not fix this, because
+project scope clears it ("no grants for project ... cleared project permissions"). Set
+`toolPermission: "always-proceed"` in `~/.gemini/antigravity-cli/settings.json` instead, which
+is narrower than `--dangerously-skip-permissions`. Do not pass `--disable-slash-commands`, which
+switches off skill expansion. `--mode plan` cannot be used for review, because the reviewer must
+write its report. See `history/adr/0019-*` and the Feature 014 evidence contract.
+
+Raster illustration production stays with Codex under ADR-0024, not with Antigravity.
