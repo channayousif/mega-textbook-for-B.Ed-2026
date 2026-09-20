@@ -79,7 +79,14 @@ test('teacher submits feedback from a log entry, revises it from the activity pa
     await expect(teacherPage.getByTestId('log-feedback-submitted')).toBeVisible();
 
     // Revise the same feedback from the activity's own content page.
-    await teacherPage.goto('/semester-1/efmp-302/unit-02/activities');
+    // Must be the page the LOGGED activity resolves to, not merely a page of the
+    // same course: the feedback row keys on (course_code, unit_no, source_kind),
+    // so a different unit or kind is a different row and shows no prior rating.
+    // The picker defaults to its first option, and loggableOptions sorts by
+    // unit_no then kind - so for EFMP-302 that is unit 1, `assessment`, whose
+    // page is unit-assessment. (`activities` here was a legacy route that 404s
+    // since Unit 2 moved to the per-topic layout.)
+    await teacherPage.goto('/semester-1/efmp-302/unit-01/unit-assessment');
     const giveFeedbackButton = teacherPage.getByTestId('give-feedback-button');
     await expect(giveFeedbackButton).toContainText('3/5');
     await giveFeedbackButton.click();
@@ -93,8 +100,11 @@ test('teacher submits feedback from a log entry, revises it from the activity pa
       .select('*')
       .eq('teacher_id', teacherProfile.id)
       .eq('course_code', 'EFMP-302')
-      .eq('unit_no', 2)
-      .eq('source_kind', 'activity');
+      // Matches the logged activity, which is the picker's first option: unit 1,
+      // `assessment`. Was (2, 'activity') for the legacy layout that no longer
+      // exists - and it passed only because the earlier assertions failed first.
+      .eq('unit_no', 1)
+      .eq('source_kind', 'assessment');
     expect(rows).toHaveLength(1);
     expect(rows![0].rating).toBe(5);
 

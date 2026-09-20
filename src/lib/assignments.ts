@@ -154,19 +154,70 @@ export type ContentIndexEntry = {
 };
 
 /**
- * The three FR-004 unit-item kinds a teacher can assign, log, or rate.
+ * The unit-item kinds a teacher can assign, log, or rate (FR-004).
  *
- * Spec 008's per-topic layout added `topic`/`assessment`/`course-review` to
- * the index, but those are whole lessons, not activity kinds: the DB rejects
- * them (`assignments`, `teaching_log_entries` and `activity_feedback` all
- * CHECK against exactly these three), and DocItem/Footer's
- * deriveSourceKindFromPath returns null for those pages by the same reasoning.
+ * This list used to hold only the legacy trio, on the reasoning that Spec 008's
+ * `topic`/`assessment` pages "are whole lessons, not activity kinds". That was
+ * defensible while most content was legacy. It stopped being defensible as the
+ * corpus migrated: by 2026-09-20 EFMP-301 offered 0 loggable items of 5 indexed
+ * and EFMP-302 0 of 31, so every course with real authored content offered a
+ * teacher nothing at all, and the only loggable items left were `coming_soon`
+ * scaffolds. A constraint that admits only placeholder content is not
+ * protecting a distinction; it is disabling a feature. Migration 0045 widened
+ * the database CHECKs to match.
+ *
+ * `course-review` is still excluded, and for a reason that has not changed: it
+ * is a whole-COURSE page, while both tables key on (course_code, unit_no) with
+ * unit_no NOT NULL. There is no unit for it to belong to.
+ *
  * Every consumer that turns index records into a pickable activity MUST filter
  * through this, or it offers a value the schema will refuse on save.
  */
-export const LOGGABLE_CONTENT_KINDS = ['activity', 'formative', 'summative'] as const;
+export const LOGGABLE_CONTENT_KINDS = ['activity', 'formative', 'summative', 'topic', 'assessment'] as const;
 
 export type LoggableContentKind = (typeof LOGGABLE_CONTENT_KINDS)[number];
+
+/**
+ * One pickable item per (unit_no, kind) - the grain the DATABASE actually stores.
+ *
+ * The three tables key on (course_code, unit_no, source_kind) and carry no
+ * topic_no; `activity_feedback` is even UNIQUE on
+ * (teacher_id, course_code, unit_no, source_kind). So "Unit 2, topic" is one
+ * row however many topic pages a unit has.
+ *
+ * Before migration 0045 this never showed, because `topic` was not loggable at
+ * all. Widening the kinds exposed it immediately: EFMP-302 alone produced 31
+ * options collapsing to 12 distinct values, with `3::topic` appearing five
+ * times - nineteen entries a user could not tell apart, all saving to the same
+ * row, and duplicate React keys besides.
+ *
+ * Deduplicating here rather than adding topic_no to three tables is the smaller
+ * claim, and the honest one: a unit-grained log is what the schema was designed
+ * for. If per-topic logging is wanted, that is a schema change and a product
+ * decision, not a picker fix.
+ */
+export function loggableOptions(
+  index: readonly ContentIndexEntry[],
+  courseCode: string,
+): (ContentIndexEntry & { pageCount: number })[] {
+  const byKey = new Map<string, ContentIndexEntry & { pageCount: number }>();
+  for (const entry of index) {
+    if (entry.course_code !== courseCode || !isLoggableContent(entry)) continue;
+    const key = `${entry.unit_no}::${entry.kind}`;
+    const seen = byKey.get(key);
+    if (seen) seen.pageCount++;
+    else byKey.set(key, { ...entry, pageCount: 1 });
+  }
+  // `Array.from`, NOT `[...byKey.values()]`. This project's browserslist target
+  // makes Babel transpile an array-literal spread to `[].concat(iterable)`, and
+  // `concat` does not spread a Map iterator - it appends the iterator OBJECT as
+  // one element. The picker rendered exactly one option reading
+  // `undefined::undefined`, in the built bundle only; the source and the unit
+  // tests were both fine, because node spreads iterators correctly.
+  return Array.from(byKey.values()).sort(
+    (a, b) => a.unit_no - b.unit_no || a.kind.localeCompare(b.kind),
+  );
+}
 
 /** Narrows an index record to one of the three assignable/loggable kinds. */
 export function isLoggableContent(
