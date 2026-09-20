@@ -22,10 +22,23 @@ import { manifestFor, digest, safeFile } from './lib/review-evidence.mjs';
 const root = resolve(process.env.CONTENT_ROOT || '.');
 const [course, outDir] = process.argv.slice(2);
 
-/** The evaluator judges a spec against its guide, so both are bound, with the rules. */
+/**
+ * The evaluator judges a spec against its guide, so both are bound, with the rules.
+ *
+ * The whole `specs/content/<code>/` tree is bound, not just `content-spec.md`. The first
+ * shadow run found the narrower set self-defeating: the `coverage` criterion could not see
+ * `coverage/unit-NN.md`, which the spec points at in six places, and the `structure`
+ * criterion could never fully pass because `contracts/` was unbound. A criterion that cannot
+ * reach its own evidence is worse than absent, because it reports a verdict anyway.
+ *
+ * `bound()` already drops `reviews/`, `tasks.md` and `.staging/`, so this picks up
+ * coverage, sources, figures and concepts without pulling in review evidence or the tracker.
+ * A new course has only `content-spec.md` here, which is correct: there is nothing else yet.
+ */
 function intakeRoots(code) {
   return [
-    `specs/content/${code}/content-spec.md`,
+    `specs/content/${code}`,
+    'contracts',
     'catalog/courses.json',
     'specs/content/style-guide.md',
     'specs/content/terminology.csv',

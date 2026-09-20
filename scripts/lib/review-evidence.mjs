@@ -138,8 +138,15 @@ function manifestRoots(root, course, unit, stage) {
     `static/img/figures/${code}/${folder}`, ...(stage === 'G5' ? [ur] : [])];
 }
 
+// Excluded so that recording a result does not invalidate the evidence it rests on
+// (ADR-0019 s3): `reviews/` holds G3/G5 reports, `intake/` holds evaluator records, and
+// `tasks.md` is the tracker whose row the result writes. `.staging/` is git-ignored working
+// material. Nothing else is excluded, so authored prose cannot hide from a manifest: every
+// one of these is generated evidence or lifecycle state, never learner-facing content, and
+// `check:no-answer-keys` scans `docs/` and `licence/` independently of this list.
 const bound = (root, paths, index) => [...new Set(paths.flatMap((p) => walk(root, p, index)))]
-  .filter((p) => !p.includes('/reviews/') && !p.endsWith('/tasks.md') && !p.includes('/.staging/'))
+  .filter((p) => !p.includes('/reviews/') && !p.includes('/intake/')
+    && !p.endsWith('/tasks.md') && !p.includes('/.staging/'))
   .sort();
 
 /**
