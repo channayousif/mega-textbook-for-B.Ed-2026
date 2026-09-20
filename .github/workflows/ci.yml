@@ -71,11 +71,21 @@ jobs:
         run: npm run figures:variants:check
 
 
-      # Content/figure status report (Spec 010, FR-032) - informational only, never
-      # blocking: reuses the depth-gate and figure-manifest logic above via shared
-      # modules (scripts/lib/), so it cannot drift from either gate.
+      # Publication-state report (Spec 010 FR-032; ADR-0026). Now BLOCKING, because
+      # every publication notice is derived from it and docusaurus.config.ts refuses
+      # to build without a current one.
+      #
+      # It is generated first because `static/content-status.json` is gitignored, so
+      # a fresh checkout has none. That means the CI run of `--check` proves the
+      # generator runs cleanly against this tree and that every tracker row it reads
+      # is well formed - it does NOT prove a committed report is current, because
+      # there is no committed report. The staleness protection that matters lives in
+      # two other places: `--check` locally, inside the CONTENT_GATES tier, catches
+      # a stale working-tree report before commit; and the config's own tracker-digest
+      # assertion catches one at build time, which is the case that could actually
+      # mislead a reader.
       - name: Content status report
-        run: npm run check:content-status
+        run: node scripts/report-content-status.mjs && npm run check:content-status
 
       # Zero em dash in authored content (Constitution Art. III.9) - docs/, guides/,
       # i18n/, specs/content/. history/ is exempt as an immutable record.
