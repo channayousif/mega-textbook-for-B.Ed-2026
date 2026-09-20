@@ -617,3 +617,30 @@ Recorded here so the boundary stays visible as the log grows:
     to 44 rows) inside Unit 1's section, whose own figures are 8 to 14. Both numbers are correct;
     the scoping of the sentence is loose.
   - Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
+
+---
+
+## D-2026-0017 - EFMP-302 Unit 2 is granted one additional G3 cycle
+
+- **Status:** confirmed
+- **Gate:** G3 (English review)
+- **Scope:** EFMP-302 Unit 2 only
+- **Decided by:** curriculum owner, 2026-09-20
+- **Decision:** Unit 2 is authorised for a third G3 review cycle, under the exception
+  `D-2026-0005` reserves ("a specific unit may still be granted a specific additional cycle by
+  the owner"). This is a single-unit exception and grants nothing to Units 3 to 6, whose refusal
+  of further cycles stands.
+- **Basis:** this cycle is not needed because the content is defective, which is what separates
+  it from the cycles `D-2026-0005` refused. Cycle 2 passed all seven criteria on 2026-09-20.
+  What invalidated it was `fac210b`, the `G-2026-19` fix to `review-evidence.mjs`: that script is
+  itself a bound input via `reviewScripts()`, so changing the binding rule changed every manifest
+  computed under the old one. The bound **file set** for Unit 2's G3 is identical to the one the
+  cycle-2 reviewer inspected (0 added, 0 removed); the only differing digest is the evidence
+  script's own. Cycles 5 to 7 elsewhere on this course kept surfacing new defects, several
+  introduced by the preceding repair. This cycle re-confirms an unchanged unit against a corrected
+  rule, which is the opposite situation.
+- **Limits:** the cycle must be run by a reviewer independent of the sessions that authored the
+  content, performed the repair, and wrote the `G-2026-19` fix. A `pass` restores the provisional
+  tier only; it does not certify, because `acceptProvisionalReport` still skips the signed
+  reviewer registry. An `escalate` sends Unit 2 to the content-improvement loop with no further
+  cycle.
