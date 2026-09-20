@@ -23,9 +23,23 @@ timeline could lose its Urdu variant and CI stayed green. It now keys on the ass
    (match the UR `topic-NN.mdx` prose and `glossary.json` where a term exists). The `<title>` and
    `<desc>` are translated too (they are the standalone description).
 3. **RTL text.** For each Urdu label set an appropriate `text-anchor` (`end` where the English
-   used `start`, and vice-versa, for labels that hang off a shape) and add `direction="rtl"` on
-   the `<text>` (or a wrapping `<g direction="rtl">`). Numerals stay as they are unless the unit
-   uses Eastern Arabic digits.
+   used `start`, and vice-versa, for labels that hang off a shape), and move its `x` to the
+   opposite edge of the cell or panel. Numerals stay as they are unless the unit uses Eastern
+   Arabic digits.
+
+   **Do NOT add `direction="rtl"` to the `<text>`.** This instruction previously said to, and it
+   is wrong: `direction: rtl` inverts what `text-anchor="end"` means, so an end-anchored label
+   runs rightward from its `x` instead of leftward and overflows the viewBox. Authoring
+   EFMP-302 Unit 2 produced 14 such overflows on the first two figures, up to 123.7px past the
+   edge, and `scripts/measure-figure-text.mjs` caught every one. The accepted
+   `fig-U1-1.ur.svg` carries no `direction` attribute at all and measures clean; the browser's
+   bidi algorithm orders the Arabic glyphs without help. Follow that precedent.
+
+   **Mirror the reading order, not just the anchors.** For a table, reassign the columns so the
+   row-label column sits on the right and the sequence runs right to left; for a flowchart,
+   reverse the step positions and flip the arrow directions. `fig-U1-1.ur.svg` does this, and a
+   left-to-right RTL table is a real usability defect even though no gate measures it. The
+   `viewBox` and the shape geometry stay identical; what moves is which content sits where.
 4. **Font stack** - put a Nastaliq face first so Urdu renders correctly, then keep the Latin
    fallback for any untranslated token:
    ```
