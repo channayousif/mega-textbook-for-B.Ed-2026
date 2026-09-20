@@ -159,6 +159,30 @@ which is the correct outcome: none is determined by the course guide.
   six unit sections; proposed `D-2026-0004` is written to exclude the credit-hour split for this
   reason.
 
+- **Generalised after the evaluation (2026-09-20).** EFMP-302 is not the only case, and the
+  pattern is cleaner than one course suggests. `.specify/Course_guides_and_Scheme/` holds a
+  **departmental variant set** of guides, and where one exists it states `(0-3)`:
+
+  | Course | `.specify/` departmental guide | Faculty guide (`1st 2026`) | Revised Scheme (authority) | `catalog/courses.json` |
+  |---|---|---|---|---|
+  | EFMP-301 | `03 (0-3)` | `03`, no split stated | `3 (3-0)` | `3 (3-0)` |
+  | EFMP-302 | `03 (0-3)` | `3 (3-0)` | `3 (3-0)` | `3 (3-0)` |
+
+  So for EFMP-302 two of the three authorities already agree on `(3-0)` and only the departmental
+  guide dissents; for EFMP-301 the Faculty guide states no split at all, so the only conflict is
+  the departmental `(0-3)` against the Scheme's `(3-0)`. **EFMP-301 Unit 1 is certified and
+  published**, which is why this is recorded rather than left for whenever that course is next
+  opened.
+
+  This makes the question one decision rather than fourteen: **is
+  `.specify/Course_guides_and_Scheme/` a superseded departmental variant set, or an authority?**
+  One answer settles both courses and the six other files in that folder. The folder has no
+  README, no extracted text and no provenance note, which is why nothing had noticed it.
+
+  Still not decided here. G-2026-05 held that credit-hour values are a property of the
+  degree-awarding scheme, which points at `(3-0)`, and the register's header records that each
+  conflict is decided on its merits by the owner.
+
 ## G-2026-08 - EFMP-302 Unit 4: five sub-topics authored under bare guide headings, undisclosed
 
 - **Status:** open (awaiting owner decision)
