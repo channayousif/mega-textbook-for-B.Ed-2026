@@ -426,3 +426,74 @@ test('rulings: citing a decision that is not in the register is rejected', (t) =
     /invalid decision code/);
 });
 
+
+// --- G-2026-19: Urdu figure variants bind by what the stage's locale renders ---
+//
+// Translating a unit used to invalidate its ENGLISH review, because
+// `manifestRoots` binds the whole figure directory at every stage. These pin
+// both halves of the fix: the Urdu variants stop invalidating G3, and the
+// blind spot that narrowing could have opened stays closed.
+
+const FIGDIR = 'static/img/figures/efmp-301/unit-01';
+
+test('an unreferenced .ur.svg does not bind to the English G3', (t) => {
+  const f = fixture(t);
+  const before = Object.keys(inputManifest(f.root, 'EFMP-301', 1, 'G3')).length;
+  f.write(`${FIGDIR}/fig-U1-1.ur.svg`, '<svg/>');
+  f.write(`${FIGDIR}/fig-U1-1.ur.dark.svg`, '<svg/>');
+  f.track();
+  const after = inputManifest(f.root, 'EFMP-301', 1, 'G3');
+  assert.equal(Object.keys(after).length, before, 'translating must not enlarge the English manifest');
+  assert.ok(!Object.keys(after).some((k) => k.includes('.ur.')), 'no Urdu asset may be bound at G3');
+});
+
+test('an English .svg binds at G3 even when nothing references it', (t) => {
+  // The conservative direction. Over-binding costs a cycle; under-binding is a
+  // blind spot, so a stray English asset still invalidates.
+  const f = fixture(t);
+  f.write(`${FIGDIR}/fig-U1-9.svg`, '<svg/>');
+  f.track();
+  assert.ok(Object.keys(inputManifest(f.root, 'EFMP-301', 1, 'G3')).includes(`${FIGDIR}/fig-U1-9.svg`));
+});
+
+test('a .ur.svg an ENGLISH page renders does bind at G3', (t) => {
+  // The independent assessment's objection to the cruder fix: nothing stops an
+  // English carrier pointing src at a .ur.svg, and if one does, the English
+  // review inspected it, so it must stay bound.
+  const f = fixture(t);
+  f.write('docs/semester-1/efmp-301/unit-01/index.mdx',
+    '---\ntranslation_status: draft\n---\n<Figure id="fig-U1-2" src="/img/figures/efmp-301/unit-01/fig-U1-2.ur.svg" alt="x" />\n');
+  f.write(`${FIGDIR}/fig-U1-2.ur.svg`, '<svg/>');
+  f.track();
+  assert.ok(Object.keys(inputManifest(f.root, 'EFMP-301', 1, 'G3')).includes(`${FIGDIR}/fig-U1-2.ur.svg`),
+    'a rendered Urdu asset must bind to the locale that renders it');
+});
+
+test('G5 binds the .ur.svg its Urdu page renders, plus the derived dark twin', (t) => {
+  // Figure.tsx derives x.dark.svg from x.svg and the browser fetches it, so it
+  // is rendered without appearing in the MDX and must be bound with it.
+  const f = fixture(t);
+  f.write('i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-01/index.mdx',
+    '---\ntranslation_status: draft\n---\n<Figure id="fig-U1-3" src="/img/figures/efmp-301/unit-01/fig-U1-3.ur.svg" alt="x" />\n');
+  f.write(`${FIGDIR}/fig-U1-3.ur.svg`, '<svg/>');
+  f.write(`${FIGDIR}/fig-U1-3.ur.dark.svg`, '<svg/>');
+  f.track();
+  const g5 = Object.keys(inputManifest(f.root, 'EFMP-301', 1, 'G5'));
+  assert.ok(g5.includes(`${FIGDIR}/fig-U1-3.ur.svg`), 'G5 binds what the Urdu page renders');
+  assert.ok(g5.includes(`${FIGDIR}/fig-U1-3.ur.dark.svg`), 'and the dark twin it derives');
+  assert.ok(!Object.keys(inputManifest(f.root, 'EFMP-301', 1, 'G3')).includes(`${FIGDIR}/fig-U1-3.ur.svg`),
+    'while G3, which does not read the Urdu page, does not');
+});
+
+test('editing a bound .ur.svg still invalidates the G5 that inspected it', (t) => {
+  const f = fixture(t);
+  f.write('i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-01/index.mdx',
+    '---\ntranslation_status: draft\n---\n<Figure id="fig-U1-4" src="/img/figures/efmp-301/unit-01/fig-U1-4.ur.svg" alt="x" />\n');
+  f.write(`${FIGDIR}/fig-U1-4.ur.svg`, '<svg>original</svg>');
+  f.track();
+  const before = inputManifest(f.root, 'EFMP-301', 1, 'G5')[`${FIGDIR}/fig-U1-4.ur.svg`];
+  f.write(`${FIGDIR}/fig-U1-4.ur.svg`, '<svg>tampered</svg>');
+  f.track();
+  assert.notEqual(inputManifest(f.root, 'EFMP-301', 1, 'G5')[`${FIGDIR}/fig-U1-4.ur.svg`], before,
+    'a bound asset changing must change the manifest');
+});
