@@ -69,9 +69,13 @@ try {
 
   // A manifest describes a commit. Refuse anything uncommitted under the bound roots.
   const status = execFileSync('git', ['status', '--porcelain', '-z', '--untracked-files=all'], { cwd: root, encoding: 'utf8' });
+  // Mirror `bound()`'s exclusions: evidence directories and the tracker are not bound
+  // inputs, so an evaluator's own record must not block the bundle it is recorded against.
+  const excluded = (path) => path.includes('/reviews/') || path.includes('/intake/')
+    || path.endsWith('/tasks.md') || path.includes('/.staging/');
   const dirty = status.split('\0').filter(Boolean)
     .map((entry) => entry.slice(3))
-    .filter((path) => roots.some((r) => path === r || path.startsWith(`${r}/`)));
+    .filter((path) => !excluded(path) && roots.some((r) => path === r || path.startsWith(`${r}/`)));
   if (dirty.length) {
     throw new Error(`bound inputs are not committed; commit or stash them first:\n  ${[...new Set(dirty)].join('\n  ')}`);
   }
