@@ -8,6 +8,7 @@ import { resolve, relative, join, dirname, sep, isAbsolute } from 'node:path';
 // form and this validator read one definition. Re-exported here because
 // several scripts already import CRITERIA/COMMANDS from this file.
 import { CRITERIA, COMMANDS, DRAFT_COMMANDS } from './review-criteria.mjs';
+import { unitSectionLines } from './unit-depth.mjs';
 export { CRITERIA, COMMANDS, DRAFT_COMMANDS };
 
 /**
@@ -87,9 +88,43 @@ function reviewScripts(root) {
   return [...seen].sort();
 }
 
+/**
+ * Other units' `## Unit K` sections are replaced with a placeholder, so editing
+ * unit 6's section does not invalidate unit 3's evidence (ADR-0027).
+ *
+ * The shared parts of the spec - preamble, reading list, week schedule, course
+ * review plan - are NOT sliced out, and correctly still invalidate every unit.
+ *
+ * If this unit's own heading is not found the WHOLE file is bound, unsliced.
+ * That is not hypothetical: `specs/content/efmp-301/content-spec.md` has no
+ * `## Unit 1` heading at all. Unknown structure must fail toward binding more,
+ * never less.
+ */
+function sliceSpec(text, unitNo) {
+  const mine = unitSectionLines(text, unitNo);
+  if (!mine) return text;
+  const lines = text.split(/\r?\n/);
+  const out = [];
+  for (let i = 0; i < lines.length; i++) {
+    const other = /^##\s+Unit\s+(\d+)\b/.exec(lines[i]);
+    if (other && Number(other[1]) !== unitNo) {
+      out.push(`## Unit ${other[1]} (not bound to this unit's evidence - ADR-0027)`);
+      i++;
+      while (i < lines.length && !(/^##\s+/.test(lines[i]) && !/^###/.test(lines[i]))) i++;
+      i--;
+      continue;
+    }
+    out.push(lines[i]);
+  }
+  return out.join('\n');
+}
+
 // Only exact YAML frontmatter lifecycle lines are normalized. No body, prose or
 // similarly named nested field is excluded. Tracker and report files are separate.
-function normalized(path, bytes) {
+function normalized(path, bytes, scope = null) {
+  if (scope && path === `${scope.coursePrefix}/content-spec.md`) {
+    return Buffer.from(sliceSpec(bytes.toString('utf8'), scope.unitNo));
+  }
   if (!path.endsWith('.mdx')) return bytes;
   const text = bytes.toString('utf8');
   const match = /^(---\r?\n)([\s\S]*?)(\r?\n---(?:\r?\n|$))/.exec(text);
@@ -131,11 +166,33 @@ function manifestRoots(root, course, unit, stage) {
     '.specify/memory/constitution.md', `specs/content/${code}/content-spec.md`, `${coursePath}/course-overview.mdx`,
     'specs/decisions/log.md',
     '.claude/skills/review-unit/SKILL.md']) requireValue(existsSync(safeFile(root, required)), `missing required input: ${required}`);
+  // NARROWED under ADR-0027. Three of these used to be whole directories, and each
+  // one made a routine edit invalidate every unit in the repository:
+  //
+  //   `.claude/skills/review-unit` bound g3.md AND g5.md AND every reference file,
+  //   so editing the G5 rubric invalidated every G3 manifest. That is not
+  //   hypothetical - it happened, and `check:pipeline-gate` still reports
+  //   "reviewer skill changed" on a unit because of it. Narrowed to exactly
+  //   `skillDigest`'s set: the skill and this stage's own rubric.
+  //
+  //   `.claude/agents` bound the evaluator and any future agent alongside the two
+  //   reviewers. An evaluator edit is not a review input.
+  //
+  //   `terminology.csv` is bound for G4/G5 only. `CRITERIA.G3` has no terminology
+  //   criterion, so banking one Urdu term invalidated ~90 English units for a
+  //   criterion their reviews never evaluated.
+  //
+  // Deliberately still whole and still freshness-bearing: the style guide, the
+  // constitution and `contracts/`. Those ARE the standard the content is judged
+  // against, so an amendment re-opening the corpus is Article VI.1 working.
+  const urdu = stage === 'G5' || stage === 'G4';
   return [en, `${coursePath}/course-overview.mdx`, `specs/content/${code}`,
-    'specs/content/style-guide.md', 'specs/content/terminology.csv', '.specify/memory/constitution.md',
+    'specs/content/style-guide.md', '.specify/memory/constitution.md',
+    ...(urdu ? ['specs/content/terminology.csv'] : []),
     'specs/decisions/log.md',
     'catalog/courses.json', 'contracts', 'specs/014-agent-review-governance/contracts', ...reviewScripts(root),
-    '.claude/skills/review-unit', '.claude/agents',
+    '.claude/skills/review-unit/SKILL.md', `.claude/skills/review-unit/references/${stage.toLowerCase()}.md`,
+    `.claude/agents/${stage.toLowerCase()}-reviewer.md`,
     'Scheme-and-Course-guides', `.specify/Course_guides_and_Scheme`,
     `static/img/figures/${code}/${folder}`, ...(stage === 'G5' ? [ur] : [])];
 }
@@ -146,10 +203,57 @@ function manifestRoots(root, course, unit, stage) {
 // material. Nothing else is excluded, so authored prose cannot hide from a manifest: every
 // one of these is generated evidence or lifecycle state, never learner-facing content, and
 // `check:no-answer-keys` scans `docs/` and `licence/` independently of this list.
-const bound = (root, paths, index) => [...new Set(paths.flatMap((p) => walk(root, p, index)))]
+const bound = (root, paths, index, scope = null) => [...new Set(paths.flatMap((p) => walk(root, p, index)))]
   .filter((p) => !p.includes('/reviews/') && !p.includes('/intake/')
     && !p.endsWith('/tasks.md') && !p.includes('/.staging/'))
+  .filter((p) => !scope || inScope(p, scope))
   .sort();
+
+/**
+ * Does this path belong to the unit under review? (ADR-0027.)
+ *
+ * The problem: `manifestRoots` binds the whole `specs/content/<code>/` tree, so
+ * authoring unit 6 invalidated the accepted evidence of units 1 to 5. At six
+ * units that was an irritation; at ninety it means a course's units can never be
+ * finished independently.
+ *
+ * The rule is a three-way partition, and the middle case is what stops the
+ * narrowing becoming an escape hatch:
+ *
+ *   1. a path NAMING a unit binds to that unit only. Derived from the name, so a
+ *      per-unit artefact type added later is scoped automatically.
+ *   2. a path under the course directory naming NO unit stays bound to every
+ *      unit. Prose cannot hide by living somewhere unenumerated - only by being
+ *      named after a different unit, which is a visible, checkable thing.
+ *   3. `sources/texts/<key>.md` binds to a unit iff that unit cites <key>. The
+ *      depth gate already enforces coverage/sources consistency, so the
+ *      derivation is sound. Without this, authoring unit 6 adds four or five new
+ *      excerpts and re-invalidates units 1 to 5 anyway.
+ */
+function inScope(path, { coursePrefix, unitNo, citedKeys }) {
+  if (!path.startsWith(`${coursePrefix}/`)) return true;
+
+  const excerpt = /\/sources\/texts\/([^/]+)\.md$/.exec(path);
+  if (excerpt) return citedKeys.has(excerpt[1]);
+
+  const named = /(?:^|\/)unit-(\d+)(?:\.|\/|$)/.exec(path.slice(coursePrefix.length));
+  if (!named) return true;
+  return Number(named[1]) === unitNo;
+}
+
+/** Citation keys this unit's own coverage and sources tables name. */
+function citedKeysFor(root, coursePrefix, unitNo, index) {
+  const folder = `unit-${String(unitNo).padStart(2, '0')}.md`;
+  const keys = new Set();
+  for (const name of ['coverage', 'sources']) {
+    const path = `${coursePrefix}/${name}/${folder}`;
+    if (!index.includes(path)) continue;
+    const text = readFileSync(safeFile(root, path), 'utf8');
+    for (const [, key] of text.matchAll(/\b([a-z][a-z-]*\d{4}[a-z]?)\b/g)) keys.add(key);
+    for (const [, key] of text.matchAll(/\b([a-z][a-z0-9-]*-\d{4})\b/g)) keys.add(key);
+  }
+  return keys;
+}
 
 /**
  * Digest map for an arbitrary set of committed roots. `inputManifest` is this with
@@ -157,13 +261,24 @@ const bound = (root, paths, index) => [...new Set(paths.flatMap((p) => walk(root
  * implementation, so an evaluator bundle cannot drift from a review bundle in how
  * it hashes, filters or normalizes.
  */
-export function manifestFor(root, roots) {
-  const paths = bound(root, roots, tracked(root));
-  return Object.fromEntries(paths.map((p) => [p, digest(normalized(p, readFileSync(safeFile(root, p))))]));
+export function manifestFor(root, roots, scope = null) {
+  const index = tracked(root);
+  const paths = bound(root, roots, index, scope);
+  return Object.fromEntries(paths.map((p) => [p, digest(normalized(p, readFileSync(safeFile(root, p)), scope))]));
+}
+
+/** What a unit's evidence is bound to, as opposed to what its course contains. */
+function unitScope(root, course, unit) {
+  const coursePrefix = `specs/content/${course.toLowerCase()}`;
+  return {
+    coursePrefix,
+    unitNo: Number(unit),
+    citedKeys: citedKeysFor(root, coursePrefix, Number(unit), tracked(root)),
+  };
 }
 
 export function inputManifest(root, course, unit, stage) {
-  return manifestFor(root, manifestRoots(root, course, unit, stage));
+  return manifestFor(root, manifestRoots(root, course, unit, stage), unitScope(root, course, unit));
 }
 
 /**
