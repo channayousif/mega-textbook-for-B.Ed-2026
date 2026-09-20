@@ -283,3 +283,103 @@ test('tracker routes each reference form to the matching evidence check', (t) =>
   // and a provisional reference still may not point outside the unit and stage
   assert.throws(() => validateAgentTrackerRow(f.root, row('agent:g3-fixture', `provisional:${provisionalPath}`), 'EFMP-301', 2, 'G3'), /path must match/);
 });
+
+/**
+ * ADR-0027 boundary tests.
+ *
+ * The 27 mutation tests above prove that a change INSIDE the bound set is caught.
+ * They are structurally blind to a NARROWING of that set, because they contain no
+ * fixture for the files being removed - so they would pass just as happily if the
+ * binding were narrowed to nothing. These pin the boundary itself: what must still
+ * invalidate, and what must now stop invalidating.
+ */
+test('unit-scoped binding: a sibling unit does not invalidate this unit', (t) => {
+  const f = fixture(t);
+  const spec = 'specs/content/efmp-301/content-spec.md';
+  f.write(spec, [
+    '# EFMP-301', '', 'Shared preamble.', '',
+    '## Reading list', '', '| Key | Citation |', '|---|---|', '| alpha2020 | A |', '',
+    '## Unit 1: One', '', 'Unit 1 body.', '',
+    '## Unit 2: Two', '', 'Unit 2 body.', '',
+  ].join('\n'));
+  f.write('specs/content/efmp-301/coverage/unit-01.md', 'U1-01 alpha2020\n');
+  f.write('specs/content/efmp-301/coverage/unit-02.md', 'U2-01 beta2021\n');
+  f.write('specs/content/efmp-301/sources/texts/alpha2020.md', 'excerpt A\n');
+  f.write('specs/content/efmp-301/sources/texts/beta2021.md', 'excerpt B\n');
+  f.track();
+
+  const base = JSON.stringify(inputManifest(f.root, 'EFMP-301', 1, 'G3'));
+  const at = (p) => JSON.stringify(inputManifest(f.root, 'EFMP-301', 1, 'G3')) !== base;
+
+  // (1) a sibling unit's own governance file
+  f.write('specs/content/efmp-301/coverage/unit-02.md', 'U2-01 beta2021 edited\n');
+  f.track();
+  assert.equal(at(), false, "a sibling unit's coverage file must not invalidate this unit");
+
+  // (2) a sibling unit's section of the shared spec
+  f.write(spec, readFileSync(join(f.root, spec), 'utf8').replace('Unit 2 body.', 'Unit 2 body, edited.'));
+  f.track();
+  assert.equal(at(), false, "a sibling unit's spec section must not invalidate this unit");
+
+  // (3) an excerpt this unit does NOT cite
+  f.write('specs/content/efmp-301/sources/texts/beta2021.md', 'excerpt B edited\n');
+  f.track();
+  assert.equal(at(), false, 'an uncited excerpt must not invalidate this unit');
+
+  // (4) a SHARED part of the spec still must
+  f.write(spec, readFileSync(join(f.root, spec), 'utf8').replace('Shared preamble.', 'Shared preamble, edited.'));
+  f.track();
+  assert.equal(at(), true, 'a shared spec section MUST invalidate every unit');
+});
+
+test('unit-scoped binding: this unit\'s own inputs still invalidate', (t) => {
+  const f = fixture(t);
+  const spec = 'specs/content/efmp-301/content-spec.md';
+  f.write(spec, ['# EFMP-301', '', 'Preamble.', '', '## Unit 1: One', '', 'Body.', '', '## Unit 2: Two', '', 'Two.', ''].join('\n'));
+  f.write('specs/content/efmp-301/coverage/unit-01.md', 'U1-01 alpha2020\n');
+  f.write('specs/content/efmp-301/sources/texts/alpha2020.md', 'excerpt A\n');
+  f.track();
+  const base = JSON.stringify(inputManifest(f.root, 'EFMP-301', 1, 'G3'));
+  const changed = () => JSON.stringify(inputManifest(f.root, 'EFMP-301', 1, 'G3')) !== base;
+
+  f.write('specs/content/efmp-301/coverage/unit-01.md', 'U1-01 alpha2020 edited\n');
+  f.track();
+  assert.equal(changed(), true, "this unit's own coverage file MUST invalidate it");
+
+  f.write(spec, readFileSync(join(f.root, spec), 'utf8').replace('Body.', 'Body, edited.'));
+  f.track();
+  assert.equal(changed(), true, "this unit's own spec section MUST invalidate it");
+
+  f.write('specs/content/efmp-301/sources/texts/alpha2020.md', 'excerpt A edited\n');
+  f.track();
+  assert.equal(changed(), true, 'an excerpt this unit cites MUST invalidate it');
+});
+
+test('unit-scoped binding: a spec with no recognisable unit heading binds whole', (t) => {
+  const f = fixture(t);
+  const spec = 'specs/content/efmp-301/content-spec.md';
+  // EFMP-301's real spec has no `## Unit 1` heading. Unknown structure must fail
+  // toward binding MORE, never less.
+  f.write(spec, ['# EFMP-301', '', '> a blockquote, then straight to sub-headings', '', '### Sub-topic checklist', '', 'rows', ''].join('\n'));
+  f.track();
+  const base = JSON.stringify(inputManifest(f.root, 'EFMP-301', 1, 'G3'));
+  f.write(spec, readFileSync(join(f.root, spec), 'utf8') + '\nappended anywhere\n');
+  f.track();
+  assert.notEqual(JSON.stringify(inputManifest(f.root, 'EFMP-301', 1, 'G3')), base,
+    'with no unit heading the whole spec must be bound');
+});
+
+test('unit-scoped binding: a course file naming no unit stays bound to every unit', (t) => {
+  const f = fixture(t);
+  f.write('specs/content/efmp-301/content-spec.md', ['# EFMP-301', '', '## Unit 1: One', '', 'Body.', ''].join('\n'));
+  // The escape-hatch case: prose must not be able to hide by living somewhere
+  // unenumerated under the course directory.
+  f.write('specs/content/efmp-301/style-notes.md', 'shared guidance\n');
+  f.track();
+  const base = JSON.stringify(inputManifest(f.root, 'EFMP-301', 1, 'G3'));
+  f.write('specs/content/efmp-301/style-notes.md', 'shared guidance, edited\n');
+  f.track();
+  assert.notEqual(JSON.stringify(inputManifest(f.root, 'EFMP-301', 1, 'G3')), base,
+    'an unenumerated course file must still be bound');
+});
+
