@@ -24,6 +24,11 @@ updated for this course.
   2. Define and explain the role and responsibilities of teachers in education.
   3. Analyze the importance of teacher professionalism and accountability.
   4. Develop skills to plan, implement, and evaluate teaching strategies for diverse learners.
+     **No unit delivers this CLO** (`D-2026-0011`). The guide's own unit outline lists no
+     topic that teaches planning, implementing or evaluating teaching strategies, so this is
+     recorded as a **drafting artefact in the guide** and no content is invented for it.
+     Units 5 and 6 trace to CLO 4 by number; those traces are **not** evidence that CLO 4 is
+     covered. If the outcome is owed, it is discharged by a methods course, not here.
   5. Evaluate the impact of teacher effectiveness on student learning outcomes.
   6. Demonstrate professional ethics in teaching, learning, and assessment.
   7. Engage in professional learning and collegial collaboration to enhance continuous growth.
@@ -68,9 +73,8 @@ Spec 006 FR-010).
 | ehrich2011 | Ehrich, L. C., Kimber, M., Millwater, J., & Cranston, N. (2011). Ethical dilemmas: A model to understand teacher practice. *Teachers and Teaching: Theory and Practice, 17*(2), 173–185. | https://doi.org/10.1080/13540602.2011.539794 | 2 | a model for working through classroom ethical dilemmas |
 | guskey2000 | Guskey, T. R. (2000). *Evaluating professional development*. Corwin Press. | (print) | 6 | evaluating whether professional development actually works |
 | hargreaves2000 | Hargreaves, A. (2000). Four ages of professionalism and professional learning. *Teachers and Teaching, 6*(2), 151–182. | https://doi.org/10.1080/713698714 | 1, 5 | the historical shift from an "industrial" model of teaching toward inquiry-based professionalism |
-| kwakman2003 | Kwakman, K. (2003). Factors affecting teachers' participation in professional learning activities. *Teaching and Teacher Education, 19*(2), 149-170. | https://doi.org/10.1016/S0742-051X(02)00101-4 | 6 | what makes teachers take part in professional learning, or not. **No abstract was available; cited only for the question its title and record support, not for findings.** Bibliographic record verified via OpenAlex 2026-09-15 |
 | hurst2009 | Hurst, B., & Reding, G. (2009). *Professionalism in teaching*. Pearson Education. | (print) | 1, 3 | day-to-day markers of professional conduct for teachers |
-| icka2024 | Icka, E., & Kochoska, J. (2024). The influence of teachers as an ethical model on students' development. *International Journal of Education Teacher, 27*, 99–107. | (open access - journal site) | 2 | the teacher as an ethical model for students |
+| icka2024 | Icka, E., & Kochoska, J. (2024). The influence of teachers as an ethical model on students' development. *International Journal of Education Teacher, 27*, 99–107. | (open access - journal site) | 2 | the teacher as an ethical model for students. **Locator unresolvable** (`D-2026-0010`): the guide lists this work but no DOI or stable URL resolves from this host. Recorded in the manner G-2026-06 uses rather than dropped; cite at bibliographic level only and disclose the limit at the point of use |
 | suarez2022 | Suarez, V., & McGrath, J. (2022). *Teacher professional identity: How to develop and support it in times of change* (OECD Education Working Paper No. 267). OECD Publishing. | https://doi.org/10.1787/b19f5af7-en | 1 | how teacher identity develops and can be supported during change |
 | villegas2003 | Villegas-Reimers, E. (2003). *Teacher professional development: An international review of the literature*. UNESCO IIEP. | https://unesdoc.unesco.org/ark:/48223/pf0000133010 | 6 | international overview of teacher professional development models |
 
@@ -78,6 +82,7 @@ Spec 006 FR-010).
 
 | Key | Citation | DOI/URL | Units | Note |
 |---|---|---|---|---|
+| kwakman2003 | Kwakman, K. (2003). Factors affecting teachers' participation in professional learning activities. *Teaching and Teacher Education, 19*(2), 149-170. | https://doi.org/10.1016/S0742-051X(02)00101-4 | 6 | what makes teachers take part in professional learning, or not. **No abstract was available; cited only for the question its title and record support, not for findings.** Bibliographic record verified via OpenAlex 2026-09-15. **Re-filed from `### Guide-required` under `D-2026-0010`**: it appears in neither the Faculty guide nor the departmental variant, so it was never guide-required |
 | npst-pakistan-2009 | Government of Pakistan, Ministry of Education, Policy & Planning Wing (2009). *National Professional Standards for Teachers in Pakistan*. | https://itacec.org/document/2015/7/National_Professional_Standards_for_Teachers.pdf | 2, 4 | the 10 standards, their domains and indicators - Unit 4's core text. Also Unit 2's **local code**, via Standard 9, which pairs the code of conduct with continuing professional development. This entry makes no claim about what NACTE accredits against; see `specs/gaps.md` |
 | unesco-teacher-ethics | UNESCO / International Task Force on Teachers (2019). *Global framework of professional teaching standards*. | https://unesdoc.unesco.org/ark:/48223/pf0000372167 | 2, 4 | a global reference point for professional and ethical teaching standards |
 | bebeau1999 | Bebeau, M. J., Rest, J. R., & Narvaez, D. (1999). Beyond the promise: A perspective on research in moral education. *Educational Researcher, 28*(4), 18-26. | https://doi.org/10.3102/0013189X028004018 | 2 | the Four Component Model (moral sensitivity, judgement, motivation, character); metadata verified against the Crossref registry 2026-09-14 |
@@ -179,8 +184,8 @@ Weeks 1–3. Unit Spec (G1) for `docs/semester-1/efmp-302/unit-01/`.
 ### Sub-topic checklist
 
 The authoritative list the depth gate (`scripts/check-unit-depth.mjs`) grades
-`specs/content/efmp-302/coverage/unit-01.md` against (Spec 007 FR-009a). One row per leaf
-bullet of course-guide sections 1.1–1.4. IDs are stable once assigned.
+`specs/content/efmp-302/coverage/unit-01.md` against (Spec 007 FR-009a). Rows derive from
+course-guide sections 1.1–1.4. Where a guide bullet names more than one thing, or a heading carries no bullets at all, the row is a **decomposition rather than a transcription**; `Guide ref` shows which heading each row derives from. IDs are stable once assigned.
 
 | ID | Guide ref | Topic | Sub-topic |
 |---|---|---|---|
@@ -457,8 +462,8 @@ Weeks 6–8. Unit Spec (G1) for `docs/semester-1/efmp-302/unit-03/`.
 ### Sub-topic checklist
 
 The authoritative list the depth gate grades `specs/content/efmp-302/coverage/unit-03.md`
-against (Spec 007 FR-009a). One row per leaf bullet of course-guide sections 3.1-3.5. IDs are
-stable once assigned.
+against (Spec 007 FR-009a). Rows derive from course-guide sections 3.1-3.5. Where a guide bullet names more than one thing, or a heading carries no bullets at all, the row is a **decomposition rather than a transcription**; `Guide ref` shows which heading each row derives from.
+IDs are stable once assigned.
 
 | ID | Guide ref | Topic | Sub-topic |
 |---|---|---|---|
@@ -578,7 +583,14 @@ Weeks 9–11. Unit Spec (G1) for `docs/semester-1/efmp-302/unit-04/`.
 ### Sub-topic checklist
 
 The authoritative list the depth gate grades `specs/content/efmp-302/coverage/unit-04.md`
-against. One row per leaf bullet of course-guide sections 4.1-4.4. IDs are stable once assigned.
+against. IDs are stable once assigned.
+
+**This table is an expansion, not a transcription.** The guide's Unit 4 outline carries four leaf
+bullets across two headings, and sections **4.3 and 4.4 are bare headings with no bullets at all**.
+The rows below decompose those headings into teachable sub-topics; `Guide ref` shows which heading
+each derives from. Rows **U4-08 to U4-12 are authored**, since the guide gives 4.3 and 4.4 nothing
+to transcribe. Confirmed by the curriculum owner under `D-2026-0009`, on the same footing as the
+confirmations already recorded for Units 2 and 5.
 
 | ID | Guide ref | Topic | Sub-topic |
 |---|---|---|---|
@@ -829,8 +841,8 @@ Weeks 14–16. Unit Spec (G1) for `docs/semester-1/efmp-302/unit-06/`.
 ### Sub-topic checklist
 
 The authoritative list the depth gate grades `specs/content/efmp-302/coverage/unit-06.md`
-against. IDs are stable once assigned. One row per leaf bullet of course-guide sections 6.1-6.3,
-plus two authored rows decomposing 6.4, which the guide gives as a bare heading with no bullets.
+against. IDs are stable once assigned. Rows derive from course-guide sections 6.1-6.3, plus two
+authored rows decomposing 6.4, which the guide gives as a bare heading with no bullets. Where a guide bullet names more than one thing, or a heading carries no bullets at all, the row is a **decomposition rather than a transcription**; `Guide ref` shows which heading each row derives from.
 
 | ID | Guide ref | Topic | Sub-topic |
 |---|---|---|---|

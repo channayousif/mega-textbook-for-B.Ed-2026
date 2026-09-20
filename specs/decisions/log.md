@@ -285,3 +285,113 @@ Recorded here so the boundary stays visible as the log grows:
     `specs/007-content-depth-standard/contracts/content-spec-v2.md:32` specifies.
   - `status` stays **`draft`**. Authoring remains blocked under Spec 006 FR-002. This decision
     certifies no content, qualifies no reviewer and authorises no publication (Art. VII.8.4).
+
+---
+
+## D-2026-0008 - EFMP-301 Unit 1's one-directional source gap is accepted as disclosed
+
+- **Status:** confirmed
+- **Gate:** G3 (English review), `sources` criterion
+- **Scope:** EFMP-301 Unit 1, topic-02
+- **Decided by:** curriculum owner, 2026-09-20
+- **Decision:** the absence of an open-access source for what school practice contributes *back* to
+  psychology is **accepted as disclosed**. The prose already states the limit, keeps the claim
+  short and uncontroversial, and attributes it to the guide bullet rather than to a source.
+- **Basis:** the direction psychology to education is well served (Seifert & Sutton 2009); the
+  reverse has no introductory-level open-access treatment that could be verified from this host.
+  Inventing a citation is the failure mode this pipeline exists to prevent, and dropping the guide
+  bullet would silently narrow approved scope.
+- **Limits:** settles this passage only. If an open-access treatment is found, the improvement loop
+  should cite it. Resolves `G-2026-06`.
+
+## D-2026-0009 - EFMP-302 Unit 4's five authored sub-topics are confirmed
+
+- **Status:** confirmed
+- **Gate:** G1 (unit-spec)
+- **Scope:** EFMP-302 Unit 4
+- **Decided by:** curriculum owner, 2026-09-20
+- **Decision:** rows `U4-08` to `U4-12` are confirmed as **authored decompositions** of guide
+  sections 4.3 and 4.4, on the same footing as the confirmations already recorded for Units 2 and
+  5. Unit 4's checklist preamble now carries the same "expansion, not a transcription" disclosure.
+- **Basis:** the guide gives 4.3 ("Applying standards in Practice to guide self-evaluation") and
+  4.4 ("Linking standards to the teacher licensing, certification, and appraisal") as **bare
+  headings with no bullets at all**, so there was nothing to transcribe. The unit could not be
+  authored without decomposing them.
+- **Applied in:** `content-spec.md` Unit 4 `### Sub-topic checklist` preamble. The same false
+  "one row per leaf bullet" claim was corrected in Units 1, 3 and 6, which are decompositions too;
+  those are authoring corrections and needed no decision.
+- **Limits:** settles Unit 4's five rows. Resolves `G-2026-08`.
+
+## D-2026-0010 - EFMP-302 reading list: `kwakman2003` re-filed, `icka2024` recorded unresolvable
+
+- **Status:** confirmed
+- **Gate:** G0/G1, `readings`
+- **Scope:** EFMP-302 course reading list
+- **Decided by:** curriculum owner, 2026-09-20
+- **Decision:** `kwakman2003` moves from `### Guide-required` to `### Curated-supplementary`,
+  because it appears in neither the Faculty guide nor the departmental variant and was therefore
+  never guide-required. `icka2024` stays guide-required, with its **locator recorded as
+  unresolvable** in the manner `G-2026-06` uses: cited at bibliographic level only, with the limit
+  stated at the point of use.
+- **Basis:** a source filed as guide-required that no guide lists misrepresents the approved
+  reading list. A guide-listed source with no resolvable locator is the D-2026-0001 situation and
+  is handled the same way: flag and proceed.
+- **Limits:** settles these two keys. Resolves `G-2026-09`.
+
+## D-2026-0011 - EFMP-302 CLO 4 is a guide drafting artefact
+
+- **Status:** confirmed
+- **Gate:** G0 (course intake), `outcomes`
+- **Scope:** EFMP-302
+- **Decided by:** curriculum owner, 2026-09-20
+- **Decision:** CLO 4 ("Develop skills to plan, implement, and evaluate teaching strategies for
+  diverse learners") is recorded as a **drafting artefact in the guide**. **No content is invented
+  for it.** The CLO list now says so, and states that Units 5 and 6 tracing to CLO 4 by number is
+  **not** evidence the outcome is covered.
+- **Basis:** the guide's own unit outline lists no topic that teaches planning, implementing or
+  evaluating teaching strategies. Authoring content the guide does not list would silently widen
+  approved scope; leaving the numeric traces unannotated would let a reader infer coverage that
+  does not exist. If the outcome is owed to the programme, a methods course discharges it.
+- **Limits:** settles EFMP-302 only. Resolves `G-2026-10`.
+
+## D-2026-0012 - A guide-silent course may record `## Week schedule` as guide-silent
+
+- **Status:** confirmed
+- **Gate:** G0/G1 contract
+- **Scope:** corpus-wide
+- **Decided by:** curriculum owner, 2026-09-20
+- **Decision:** the **contract is amended, not the spec**.
+  `specs/007-content-depth-standard/contracts/content-spec-v2.md` now permits a course whose guide
+  carries no week table to record the section as guide-silent, or to record a derived distribution
+  **clearly labelled as derived with its basis stated**, for an evaluator to approve or escalate.
+  What a spec must not do is present an invented calendar as though the guide supplied it.
+- **Basis:** requiring a section the guide cannot supply forces invention, which is the failure the
+  contract exists to prevent. EFMP-304's guide has no week table; neither do GENG-300's or
+  GENG-301's, which give numbered syllabus sections and no calendar at all. So this is a contract
+  defect affecting at least three courses, not a defect in any one spec.
+- **Applied in:** the contract; EFMP-304's existing derived-and-labelled schedule now conforms
+  without change. Resolves `G-2026-13`.
+- **Limits:** relaxes *how* the section may be satisfied, never *whether* a course's teaching
+  sequence is recorded.
+
+## D-2026-0013 - EFMP-304 authors against a binding open-access floor
+
+- **Status:** confirmed
+- **Gate:** G0 (course intake), `readings`
+- **Scope:** EFMP-304
+- **Decided by:** curriculum owner, 2026-09-20
+- **Decision:** the G2 open-access floor written into EFMP-304's spec is **binding**: at least two
+  verifiable open-access sources bound per unit for Units 1 to 3, at least one for Units 4 to 6,
+  resolved through a named registry and recorded with the date of verification. The seven guide
+  monographs are cited at **title and bibliographic level only**, with that limit stated at the
+  point of use. `pendrey2022` is used **method-only**, since it is explicitly early-years against a
+  guide that twice states the course is for secondary teachers. Failure to meet a unit's floor is
+  an escalation, never a reason to lean harder on an unopened book.
+- **Basis:** all seven readings are print-only with no DOI, and Units 1 to 3 need a named list of
+  critical-thinking standards and a formal definition of validity, which title-level support cannot
+  carry. This is the exact condition that cost EFMP-302 seven review cycles. The owner has elected
+  to author now rather than block on obtaining texts; if copies are obtained, the improvement loop
+  deepens the sourcing.
+- **Limits:** settles EFMP-304. It does not set a corpus-wide floor, though it is the obvious
+  precedent for any other course whose guide list is print-only. Resolves `G-2026-14`.
+

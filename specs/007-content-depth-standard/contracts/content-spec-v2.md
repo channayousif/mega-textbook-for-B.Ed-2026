@@ -48,6 +48,22 @@ Two subheadings, each a table:
 | 1–3 | Unit 1 | profession vs occupation; industrial→inquiry; dimensions; teacher identity |
 ```
 
+**Guide-silent courses** (`D-2026-0012`). Not every course guide carries a week table. EFMP-304's
+does not, and neither do GENG-300's or GENG-301's, which give numbered syllabus sections and no
+calendar at all. Where the guide is silent, this section is recorded as guide-silent in the manner
+Constitution Art. III.6 already uses for the optional enrichment sections:
+
+```markdown
+## Week schedule
+
+**Guide-silent.** This course's guide carries no week table, and none is invented here.
+```
+
+A course MAY instead record a derived distribution, clearly labelled as derived and with its basis
+stated, for an evaluator to approve or escalate under Art. VII.8. What it MUST NOT do is present an
+invented calendar as though the guide supplied it. Requiring a section the guide cannot supply
+forces invention, which is the failure this whole contract exists to prevent.
+
 ### `## Standards & frameworks anchors`
 
 Bullets naming each framework and what it anchors (e.g. "National Professional Standards for

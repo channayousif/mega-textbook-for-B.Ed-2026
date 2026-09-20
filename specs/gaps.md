@@ -57,7 +57,8 @@ Status: `open` (awaiting owner decision) · `resolved` (decision recorded).
 
 ## G-2026-06 - EFMP-301 U1: no open-access source for "what education gives back to psychology"
 
-- **Status:** open (awaiting owner decision)
+- **Status:** **resolved** (owner decision `D-2026-0008`, 2026-09-20)
+- **Decision:** accepted as disclosed. The prose already states the limit and attributes the claim to the guide bullet rather than to a source. If an open-access treatment is found, the improvement loop cites it.
 - **Detail:** The EFMP-301 course guide's Chapter 1 lists "Relationship between psychology and
   education" as a bullet. The direction *psychology -> education* is well served by open-access
   material (Seifert & Sutton 2009). The reverse direction - what school practice contributes back
@@ -191,7 +192,8 @@ which is the correct outcome: none is determined by the course guide.
 
 ## G-2026-08 - EFMP-302 Unit 4: five sub-topics authored under bare guide headings, undisclosed
 
-- **Status:** open (awaiting owner decision)
+- **Status:** **resolved** (owner decision `D-2026-0009`, 2026-09-20)
+- **Decision:** `U4-08` to `U4-12` confirmed as authored decompositions of bare guide headings 4.3 and 4.4, on the same footing as Units 2 and 5. Unit 4's preamble now carries the "expansion, not a transcription" disclosure; the same false claim was corrected in Units 1, 3 and 6.
 - **Criterion:** `coverage` (G1 unit-spec).
 - **Detail:** The spec's six `### Sub-topic checklist` tables carry 78 rows against 53 guide leaf
   bullets. No guide bullet is dropped, and most of the excess is legitimate decomposition of
@@ -233,7 +235,8 @@ which is the correct outcome: none is determined by the course guide.
 
 ## G-2026-09 - EFMP-302 reading list: one entry filed as guide-required is not in either guide, and one guide entry has no locator
 
-- **Status:** open (awaiting owner decision)
+- **Status:** **resolved** (owner decision `D-2026-0010`, 2026-09-20)
+- **Decision:** `kwakman2003` re-filed to `### Curated-supplementary` (no guide lists it); `icka2024` stays guide-required with its locator recorded unresolvable, cited at bibliographic level only.
 - **Criterion:** `readings` (G0 intake).
 - **Detail:** Both bound guide documents list exactly **12** Suggested Readings
   (`Scheme-and-Course-guides/extracted-text/1st 2026.txt:923-990`, and the identical list in the
@@ -267,7 +270,8 @@ which is the correct outcome: none is determined by the course guide.
 
 ## G-2026-10 - EFMP-302 CLO 4 has no unit whose guide topics deliver it
 
-- **Status:** open (awaiting owner decision)
+- **Status:** **resolved** (owner decision `D-2026-0011`, 2026-09-20)
+- **Decision:** recorded as a guide drafting artefact. No content is invented for it, and the CLO list now states that Units 5 and 6 tracing to CLO 4 by number is not evidence of coverage.
 - **Criterion:** `outcomes` (G1 unit-spec).
 - **Detail:** Guide CLO 4 is "Develop skills to plan, implement, and evaluate teaching strategies
   for diverse learners" (`Scheme-and-Course-guides/extracted-text/1st 2026.txt:752-754`;
@@ -357,7 +361,8 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 
 ## G-2026-13 - EFMP-304 has no guide week schedule, but the content-spec contract requires the section
 
-- **Status:** open (awaiting owner decision)
+- **Status:** **resolved** (owner decision `D-2026-0012`, 2026-09-20)
+- **Decision:** the contract is amended, not the spec. A guide-silent course may record the section as guide-silent, or record a derived distribution clearly labelled as derived with its basis stated. EFMP-304's existing schedule conforms without change.
 - **Criterion:** `partition` (G0 intake / G1 unit-spec).
 - **Detail:** The EFMP-304 guide block
   (`Scheme-and-Course-guides/extracted-text/2nd 2026.txt:609-756`) carries a course description,
@@ -389,7 +394,8 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 
 ## G-2026-14 - EFMP-304's entire guide reading list is print-only, and Units 1 to 3 rest on one unopenable book
 
-- **Status:** open (awaiting owner decision)
+- **Status:** **resolved** (owner decision `D-2026-0013`, 2026-09-20)
+- **Decision:** the G2 open-access floor is binding (2 sources per unit for Units 1-3, 1 for Units 4-6). Monographs cited at title level with the limit stated at point of use; `pendrey2022` method-only. Author now; deepen sourcing if texts are obtained.
 - **Criterion:** `readings` (G0 intake).
 - **Detail:** The guide lists seven works at
   `Scheme-and-Course-guides/extracted-text/2nd 2026.txt:720-741`. All seven are **monographs**.
