@@ -395,3 +395,30 @@ Recorded here so the boundary stays visible as the log grows:
 - **Limits:** settles EFMP-304. It does not set a corpus-wide floor, though it is the obvious
   precedent for any other course whose guide list is print-only. Resolves `G-2026-14`.
 
+## D-2026-0014 - Standing authorisation to publish gate-checked units
+
+- **Status:** confirmed
+- **Gate:** G7 (publish)
+- **Scope:** the **15 catalogued courses** in `catalog/courses.json` as of 2026-09-20. Courses
+  added later, including any from semesters 3, 5, 6, 7 and 8, are **not** covered and need their
+  own authorisation.
+- **Decided by:** curriculum owner, 2026-09-20
+- **Decision:** units of these courses MAY be published in the **gate-checked** tier of
+  Constitution Art. VII.7(a) - deterministic gates passed, no reviewer has read them - under the
+  "Draft - expert review pending" notice, without a further per-unit decision from the owner.
+- **Basis:** Art. VII.1 reserves publication authority to the owner and Art. VII.7(a) requires a
+  standing authorisation naming its courses, precisely so the tooling cannot authorise its own
+  publications. This supplies it once for the build-out rather than ~90 times. The reasoning is
+  ADR-0026's: on the measured EFMP-302 record one unit in six reached a passing review, at four
+  to seven cycles each, so the old bar produced review debt rather than a corpus.
+- **Limits.** This authorises publication, nothing else. It does not certify content, qualify a
+  reviewer, discharge the practicing-teacher gate, or waive any Article VI.1 obligation. It does
+  not authorise publishing a unit whose G2 evidence is stale or whose review row is present but
+  invalid. It lapses with Art. VII.7's exit condition: when these 15 courses are authored, the
+  owner decides again.
+- **Known cost, accepted:** G2 proves shape, not truth. Reviews of this course caught a
+  fabricated attribution, a false accreditation claim, a fabricated sample size and a figure
+  teaching the wrong answer to its own question, and **all four passed the gates**. Publishing
+  before review means defects of that class reach readers first, with the notice as the only
+  mitigation.
+
