@@ -670,3 +670,37 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 - **Blocks:** nothing in this evaluation. Reported because `check:pipeline-gate` is now red on
   `provisional-review-publication-tier` as a direct and expected result of recording these two
   decisions, and a reader who does not know why would reasonably read it as an EFMP-302 defect.
+
+## G-2026-19 - Translating a unit invalidates its English review evidence
+
+- **Found:** 2026-09-20, translating EFMP-302 Unit 2 into Urdu (the ADR-0022 rate probe).
+- **What happened:** the G4 translation added 16 `.ur.svg` / `.ur.dark.svg` files. `manifestRoots`
+  in `scripts/lib/review-evidence.mjs` binds `static/img/figures/<course>/<unit>` as a whole
+  directory at **every** stage, so Unit 2's English G3 input manifest went from 103 bound files to
+  119. Nothing changed and nothing was removed: 16 were added, and not one of them is an input an
+  English review evaluates. `check:pipeline-gate` correctly reported both the G2 gate evidence and
+  the G3 review report as stale, and Unit 2's provisional tier was revoked under Art. VII.4 hours
+  after it was granted.
+- **Why it matters beyond this unit:** this is not review history, it is scope. Under the current
+  binding, **English review and Urdu translation are mutually exclusive for every unit in the
+  corpus**: any unit that is translated loses its English certification at that moment, and
+  re-review costs a cycle against ADR-0019's limit of two. Roughly 200 units are due translation
+  under ADR-0022, so the corpus cannot reach a state where both hold. It is also the second
+  revocation by a scope mechanism in one day (Unit 3 was the first, via an amended `g3.md`), which
+  is the pattern ADR-0027 was written to stop.
+- **Direct precedent for the fix:** ADR-0027 already narrowed three roots in this same function
+  for this same reason, and the closest one is exact. `terminology.csv` is now bound for G4/G5
+  only, and the recorded reason is that "`CRITERIA.G3` has no terminology criterion, so banking one
+  Urdu term invalidated ~90 English units for a criterion their reviews never evaluated." The
+  identical argument applies here: `CRITERIA.G3` has no Urdu-figure criterion.
+- **Needed, and from whom:** a developer, to narrow rather than remove. Options in preference
+  order: (a) bind `<figId>.svg` and `<figId>.dark.svg` at all stages but `<figId>.ur.svg` and
+  `<figId>.ur.dark.svg` at G4/G5 only, mirroring the `terminology.csv` treatment exactly;
+  (b) slice the figure directory the way `sliceSpec()` slices the content-spec; (c) leave it and
+  accept that a translated unit must always be re-reviewed in English, recorded as a deliberate
+  choice with its cycle cost acknowledged.
+- **Deliberately not fixed here.** The session that produced the translation is the session that
+  would benefit from the rule change, and re-validating one's own just-invalidated review by
+  editing the evidence layer is the move the independence rules exist to prevent. Restoring green
+  was done the rules-following way instead: G2 evidence regenerated, G3 tier revoked.
+- **Blocks:** Unit 2's provisional tier, and the same for every unit translated hereafter.
