@@ -817,6 +817,24 @@ warns about.
 
 ## For the evaluator - what this spec does not settle
 
+**All three items below now carry owner rulings (2026-09-20).** They are kept here with their
+rulings attached, rather than deleted, so a reader can see what was open and how it was closed.
+
+- **Item 1, the week schedule** - settled by `D-2026-0012`. The contract
+  (`specs/007-content-depth-standard/contracts/content-spec-v2.md`) now permits a guide-silent
+  course to record the section as guide-silent, or to record a derived distribution clearly
+  labelled as derived with its basis stated. This spec does the latter, which the contract now
+  explicitly allows. **No longer an escalation.**
+- **Item 2, the repeated 5.4** - already resolved by the evaluator under `D-2026-0006` as a
+  within-guide slip with no second document in conflict. Note the locator: the duplication is at
+  guide lines **709 and 710**, not 714-716 as this spec first said.
+- **Item 3, the print-only reading list** - settled by `D-2026-0013`. The G2 open-access floor
+  below is **binding**, `pendrey2022` is method-only, and the monographs are cited at title level
+  with that limit stated at the point of use. If copies are obtained later, the improvement loop
+  deepens the sourcing.
+
+The original text of the three items follows.
+
 Three items, recorded rather than decided, per Constitution Art. VII.8.2:
 
 1. **The week schedule is derived, not guide-given.** The guide carries no week table. The
