@@ -69,14 +69,22 @@ function authoredTags(assessmentPath) {
     const kind = { 'Multiple-choice': 'MCQ', 'Restricted-response': 'RRQ', 'Extended-response': 'ERQ' }[head[1]];
     if (!kind) continue; // the `Answers ...` heading is a terminator, not a bank section
     const body = text.slice(head.index, i + 1 < heads.length ? heads[i + 1].index : text.length);
-    // Item number at the start of a line, then the first Bloom tag before the next item.
-    const items = [...body.matchAll(/^(\d+)\.[\s\S]*?(?=^\d+\.|\Z)/gm)];
+    // Slice between item starts rather than matching each item with a lookahead. The first
+    // version terminated on `(?=^\d+\.|\Z)`, but JavaScript has no `\Z` anchor: it is an
+    // Annex-B identity escape matching a literal capital Z, so the last item of every section
+    // never satisfied the lookahead and was silently dropped. The gate reported a pass while
+    // never checking MCQ 10, RRQ 10 or ERQ 5 in any unit.
+    const starts = [...body.matchAll(/^(\d+)\./gm)];
+    const items = starts.map((m, k) => ({
+      n: Number(m[1]),
+      text: body.slice(m.index, k + 1 < starts.length ? starts[k + 1].index : body.length),
+    }));
     out[kind] = items.map((item) => {
       // A tag may name more than one level, e.g. `*(Analyze / Create)*` for an item that
       // genuinely spans two. Every level it names must sit inside the band.
-      const tag = /\*\(([A-Za-z/ ]+)\)\*/.exec(item[0]);
+      const tag = /\*\(([A-Za-z/ ]+)\)\*/.exec(item.text);
       const levels = tag ? tag[1].split('/').map((p) => p.trim()).filter((p) => LEVELS.includes(p)) : [];
-      return { n: Number(item[1]), levels };
+      return { n: item.n, levels };
     });
   }
   return out;

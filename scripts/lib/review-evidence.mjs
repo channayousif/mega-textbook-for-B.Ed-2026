@@ -326,7 +326,12 @@ export function validateAgentTrackerRow(root, row, course, unit, stage) {
   // through as a human reviewer with no evidence checked at all.
   if (row.reviewer.startsWith('auto:')) {
     requireValue(row.reviewer === 'auto:gates', 'unknown automated reviewer token');
-    requireValue(!['G3', 'G5'].includes(stage), 'a review stage needs a reviewer, not gate evidence');
+    // `=== 'G2'`, not `not G3/G5`. acceptGateEvidence only ever proves the ENGLISH draft
+    // gates passed: it hardcodes `evidence.stage === 'G2'` and binds the G3 English input
+    // manifest. Excluding only the two review stages left G4 ur-translation reachable, so a
+    // G4 row could be marked done by pointing at the unit's existing G2 file - certifying a
+    // translation with evidence that never looked at any Urdu. G4 needs its own evidence.
+    requireValue(stage === 'G2', 'gate evidence certifies G2 only; every other stage needs a reviewer');
     const match = /^gates:([^\s]+\.json)$/.exec(row.suggestion);
     requireValue(match, 'automated row needs gates:<manifest.json> evidence reference');
     const prefix = `specs/content/${course.toLowerCase()}/reviews/unit-${String(unit).padStart(2, '0')}/G2/`;
