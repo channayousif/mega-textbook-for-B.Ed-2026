@@ -229,7 +229,32 @@ const bound = (root, paths, index, scope = null) => [...new Set(paths.flatMap((p
  *      derivation is sound. Without this, authoring unit 6 adds four or five new
  *      excerpts and re-invalidates units 1 to 5 anyway.
  */
-function inScope(path, { coursePrefix, unitNo, citedKeys }) {
+function inScope(path, { coursePrefix, unitNo, citedKeys, renderedFigures }) {
+  // G-2026-19. An Urdu figure variant binds to a review iff that review's own
+  // locale actually renders it. Everything else under the unit's figure
+  // directory stays bound at every stage, unconditionally.
+  //
+  // WHY THIS EXISTS. `manifestRoots` binds the whole figure directory, so
+  // translating a unit added 16 `.ur.svg` files and invalidated that unit's
+  // ENGLISH G3 - inputs no English review evaluates. Left alone, English review
+  // and Urdu translation are mutually exclusive for every unit in the corpus.
+  //
+  // WHY IT IS NARROWER THAN THE PROPOSAL IT CAME FROM. The independent
+  // assessment (gaps.md G-2026-19) proposed the general rule "bind a figure iff
+  // the unit cites it", mirroring `sources/texts/<key>.md`. That is more elegant
+  // and it is less safe here, because the two error directions are not
+  // symmetric: over-binding costs a review cycle, under-binding is a blind spot
+  // where rendered bytes change without invalidating the review that inspected
+  // them. A reference-extraction regex that misses a carrier under-binds
+  // silently. So only the assets that actually caused the defect - Urdu variants
+  // - are subject to the citation test, and a stray or unreferenced ENGLISH
+  // asset still invalidates, which is the conservative direction.
+  //
+  // This also answers the assessment's own objection to the cruder fix: nothing
+  // stops an English carrier pointing `src` at a `.ur.svg`, and if one does, it
+  // IS rendered by the English locale, so it is bound and the blind spot the
+  // assessment described cannot open.
+  if (URDU_FIGURE_RE.test(path)) return renderedFigures.has(path);
   if (!path.startsWith(`${coursePrefix}/`)) return true;
 
   const excerpt = /\/sources\/texts\/([^/]+)\.md$/.exec(path);
@@ -238,6 +263,37 @@ function inScope(path, { coursePrefix, unitNo, citedKeys }) {
   const named = /(?:^|\/)unit-(\d+)(?:\.|\/|$)/.exec(path.slice(coursePrefix.length));
   if (!named) return true;
   return Number(named[1]) === unitNo;
+}
+
+/** `static/img/figures/<course>/unit-NN/<id>.ur.svg` and its derived dark twin. */
+const URDU_FIGURE_RE = /^static\/img\/figures\/[^/]+\/unit-\d+\/[^/]+\.ur(?:\.dark)?\.svg$/;
+
+/**
+ * Figure assets the locales in scope for `stage` actually render.
+ *
+ * G3 reads the English unit only. G4/G5 read English and Urdu, because a G5
+ * reviewer inspects both sides. A `<Figure src="...x.svg">` also renders
+ * `x.dark.svg`: `Figure.tsx` derives the dark twin and the browser fetches it,
+ * so it is rendered without ever appearing in the MDX and must be bound with it.
+ */
+function renderedFiguresFor(root, course, unit, stage) {
+  const rendered = new Set();
+  let record;
+  try { record = resolveUnit(root, course, unit); } catch { return rendered; }
+  const dirs = [record.unitDir, ...(stage === 'G4' || stage === 'G5' ? [record.urUnitDir] : [])];
+  for (const dir of dirs) {
+    if (!existsSync(dir)) continue;
+    for (const name of readdirSync(dir)) {
+      if (!name.endsWith('.mdx')) continue;
+      const text = readFileSync(join(dir, name), 'utf8');
+      for (const [, src] of text.matchAll(/src\s*=\s*["'](\/img\/figures\/[^"']+)["']/g)) {
+        const rel = `static${src}`;
+        rendered.add(rel);
+        if (rel.endsWith('.svg') && !rel.endsWith('.dark.svg')) rendered.add(rel.replace(/\.svg$/, '.dark.svg'));
+      }
+    }
+  }
+  return rendered;
 }
 
 /** Citation keys this unit's own coverage and sources tables name. */
@@ -267,17 +323,18 @@ export function manifestFor(root, roots, scope = null) {
 }
 
 /** What a unit's evidence is bound to, as opposed to what its course contains. */
-function unitScope(root, course, unit) {
+function unitScope(root, course, unit, stage) {
   const coursePrefix = `specs/content/${course.toLowerCase()}`;
   return {
     coursePrefix,
     unitNo: Number(unit),
     citedKeys: citedKeysFor(root, coursePrefix, Number(unit), tracked(root)),
+    renderedFigures: renderedFiguresFor(root, course, Number(unit), stage),
   };
 }
 
 export function inputManifest(root, course, unit, stage) {
-  return manifestFor(root, manifestRoots(root, course, unit, stage), unitScope(root, course, unit));
+  return manifestFor(root, manifestRoots(root, course, unit, stage), unitScope(root, course, unit, stage));
 }
 
 /**
