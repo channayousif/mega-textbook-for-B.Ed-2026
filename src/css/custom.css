@@ -127,6 +127,20 @@ html[data-theme='dark'] .review-banner--provisional {
   color: #f4d69a;
 }
 
+/* `gated` is the weaker claim of the two - nobody has read the unit - so it reads
+   as the stronger warning. Provisional keeps amber; gated takes red, and both pass
+   WCAG AA against their own background in each theme. */
+.review-banner--gated {
+  background: #fdecea;
+  border-color: #d93025;
+  color: #7f1d16;
+}
+html[data-theme='dark'] .review-banner--gated {
+  background: #3b1a17;
+  border-color: #c5382c;
+  color: #f5b7b1;
+}
+
 /* --- Print handout button + Bloom/activity styling ------------------------- */
 .print-handout {
   border: 1px solid var(--ifm-color-primary);

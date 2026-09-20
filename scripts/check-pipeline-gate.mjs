@@ -22,7 +22,7 @@ import { join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import matter from 'gray-matter';
 import { validateAgentTrackerRow } from './lib/review-evidence.mjs';
-import { loadTracker as loadTrackerRows, PROVISIONAL } from './lib/tracker-rows.mjs';
+import { loadTracker as loadTrackerRows, latestRow, PROVISIONAL } from './lib/tracker-rows.mjs';
 import { walkUnits, findDuplicateCourseCodes } from './lib/content-roots.mjs';
 
 const REPO = resolve(fileURLToPath(new URL('..', import.meta.url)));
@@ -41,6 +41,7 @@ const err = (unitLabel, msg) => errors.push(`${unitLabel}: ${msg}`);
  */
 const provisional = new Set();
 const certified = new Set();
+const gateChecked = new Set();
 
 const dirs = (p) =>
   existsSync(p) ? readdirSync(p).filter((n) => statSync(join(p, n)).isDirectory()) : [];
@@ -182,10 +183,23 @@ function checkUnit({ unitDir, urUnitDir, courseCode, unitNo }) {
     err(label, `no tasks.md found at specs/content/${courseCode.toLowerCase()}/tasks.md`);
     return;
   }
-  for (const stagePrefix of ['G2 en-draft', 'G3 en-review']) {
-    const r = stageDone(tracker, unitLabel, stagePrefix, courseCode, unitNo);
+  // G2 is what publication now rests on (ADR-0026): the deterministic gates passed
+  // and their evidence still matches the published bytes. G3 is no longer blocking -
+  // a unit publishes unreviewed under the "Draft - expert review pending" notice, and
+  // review upgrades the notice rather than unlocking publication. So a missing or
+  // in-progress G3 row is reported as a tier, not as a failure; a G3 row that is
+  // PRESENT but whose evidence does not validate is still an error, because a broken
+  // claim of review is worse than no claim.
+  const g2 = stageDone(tracker, unitLabel, 'G2 en-draft', courseCode, unitNo);
+  if (!g2.ok) err(label, g2.reason);
+  else gateChecked.add(`${courseCode} ${unitLabel}`);
+
+  const g3Row = latestRow(tracker, unitLabel, 'G3 en-review');
+  if (g3Row && (g3Row.status === '✅' || g3Row.status === PROVISIONAL)) {
+    const r = stageDone(tracker, unitLabel, 'G3 en-review', courseCode, unitNo);
     if (!r.ok) err(label, r.reason);
     else if (r.provisional) provisional.add(`${courseCode} ${unitLabel}`);
+    else certified.add(`${courseCode} ${unitLabel}`);
   }
 
   // UR stages + terminology check only apply when the UR mirror exists and is reviewed
@@ -245,10 +259,14 @@ if (errors.length) {
   console.error('');
   process.exit(1);
 } else {
-  for (const unit of provisional) certified.delete(unit);
-  const detail = provisional.size
-    ? `${certified.size} certified, ${provisional.size} provisional - final review pending`
-    : 'content-spec approval, tracker completeness, terminology conformance';
-  console.log(`✓ Pipeline gate passed (${detail}).`);
+  for (const unit of provisional) { certified.delete(unit); gateChecked.delete(unit); }
+  for (const unit of certified) gateChecked.delete(unit);
+  const tiers = [
+    certified.size && `${certified.size} certified`,
+    provisional.size && `${provisional.size} provisional - final review pending`,
+    gateChecked.size && `${gateChecked.size} gate-checked - not yet reviewed`,
+  ].filter(Boolean);
+  console.log(`✓ Pipeline gate passed (${tiers.join(', ') || 'no authored units'}).`);
   if (provisional.size) console.log(`  provisional: ${[...provisional].sort().join(', ')}`);
+  if (gateChecked.size) console.log(`  gate-checked: ${[...gateChecked].sort().join(', ')}`);
 }

@@ -27,7 +27,22 @@ export type ContentStatusGateState = 'open' | 'provisional' | 'done';
  * "is this finished" and `!== 'done'` for "does a human still owe this a pass".
  * Reading provisional as either extreme is a bug in both directions.
  */
-export type ContentStatusGates = { G3: ContentStatusGateState; G5: ContentStatusGateState };
+export type ContentStatusGates = {
+  G2: ContentStatusGateState;
+  G3: ContentStatusGateState;
+  G5: ContentStatusGateState;
+};
+
+/**
+ * The unit's PUBLICATION tier (Art. VII.7 as amended by ADR-0026), derived from
+ * the gate states by `publicationState` in `scripts/lib/tracker-rows.mjs`.
+ *
+ * The same discipline as `ContentStatusGateState` applies: ask the exact value.
+ * `gated` means published with NO reviewer having read it, which is weaker than
+ * `provisional`, not stronger - testing `!== 'unpublished'` to mean "trustworthy"
+ * gets it exactly backwards.
+ */
+export type ContentStatusPublication = 'unpublished' | 'gated' | 'provisional' | 'certified';
 
 export type ContentStatusUnit = {
   unit_no: number;
@@ -35,6 +50,7 @@ export type ContentStatusUnit = {
   translation_status: string | null;
   depth_check: 'pass' | 'fail' | 'not_applicable';
   gates: ContentStatusGates;
+  publication: ContentStatusPublication;
   figures: ContentStatusFigureCounts;
   figures_pending: ContentStatusFigurePending[];
 };

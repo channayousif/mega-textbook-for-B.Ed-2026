@@ -75,7 +75,7 @@ jobs:
       # blocking: reuses the depth-gate and figure-manifest logic above via shared
       # modules (scripts/lib/), so it cannot drift from either gate.
       - name: Content status report
-        run: npm run check:content-status || echo "::warning::content-status report failed"
+        run: npm run check:content-status
 
       # Zero em dash in authored content (Constitution Art. III.9) - docs/, guides/,
       # i18n/, specs/content/. history/ is exempt as an immutable record.

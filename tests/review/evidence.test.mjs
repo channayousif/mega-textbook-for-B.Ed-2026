@@ -245,7 +245,11 @@ test('tracker routes each reference form to the matching evidence check', (t) =>
   const f = fixture(t);
   const provisionalPath = unsigned(f);
   const gatesPath = gateEvidence(f);
-  const row = (reviewer, suggestion) => ({ reviewer, suggestion });
+  // `status` is required since ADR-0026: it must agree with the kind of evidence
+  // referenced, so the helper derives the correct one and the pairing rules are
+  // asserted explicitly below.
+  const statusFor = (suggestion) => (suggestion.startsWith('provisional:') ? '🟡' : '✅');
+  const row = (reviewer, suggestion, status = statusFor(suggestion)) => ({ reviewer, suggestion, status });
 
   // provisional: on G3 accepts the unsigned report
   assert.doesNotThrow(() => validateAgentTrackerRow(f.root, row('agent:g3-fixture', `provisional:${provisionalPath}`), 'EFMP-301', 1, 'G3'));
@@ -259,6 +263,17 @@ test('tracker routes each reference form to the matching evidence check', (t) =>
     assert.throws(() => validateAgentTrackerRow(f.root, row('auto:gates', `gates:${gatesPath}`), 'EFMP-301', 1, stage),
       /certifies G2 only/, `gate evidence must not close ${stage}`);
   }
+  // Status must agree with the reference kind. Before ADR-0026 this function never
+  // read `row.status`, so a `✅` beside a `provisional:` reference validated, the
+  // unit counted as certified and the banner vanished - Art. VII.7 says "never a
+  // done mark", and it was one character away.
+  assert.throws(() => validateAgentTrackerRow(f.root, row('agent:g3-fixture', `provisional:${provisionalPath}`, '✅'), 'EFMP-301', 1, 'G3'),
+    /provisional evidence requires status/);
+  assert.throws(() => validateAgentTrackerRow(f.root, row('agent:g3-fixture', `review:${f.path}`, '🟡'), 'EFMP-301', 1, 'G3'),
+    /review evidence requires status/);
+  assert.throws(() => validateAgentTrackerRow(f.root, row('auto:gates', `gates:${gatesPath}`, '🟡'), 'EFMP-301', 1, 'G2'),
+    /gate evidence requires status/);
+
   // an agent identity still cannot certify a draft stage
   assert.throws(() => validateAgentTrackerRow(f.root, row('agent:g3-fixture', `provisional:${provisionalPath}`), 'EFMP-301', 1, 'G2'),
     /draft stage/);

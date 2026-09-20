@@ -25,6 +25,8 @@ export { CRITERIA, COMMANDS, DRAFT_COMMANDS };
 const REVIEW_ENTRY_SCRIPTS = ['scripts/validate-content.mjs', 'scripts/check-pipeline-gate.mjs', 'scripts/check-unit-depth.mjs',
   'scripts/check-figures.mjs', 'scripts/check-no-em-dash.mjs', 'scripts/check-no-answer-keys.mjs', 'scripts/check-docs-sync.mjs'];
 
+import { PROVISIONAL } from './tracker-rows.mjs';
+
 const requireValue = (condition, message) => { if (!condition) throw new Error(message); };
 export const digest = (bytes) => createHash('sha256').update(bytes).digest('hex');
 const sorted = (object) => JSON.stringify(Object.fromEntries(Object.entries(object).sort(([a], [b]) => a.localeCompare(b))));
@@ -324,8 +326,19 @@ export function validateAgentTrackerRow(root, row, course, unit, stage) {
   // `auto:` MUST be tested before the initials branch. A bare token like `GATES`
   // is five uppercase letters, so it would satisfy /^[A-Z]{1,5}$/ and be waved
   // through as a human reviewer with no evidence checked at all.
+  // The STATUS must agree with the kind of evidence referenced. Until ADR-0026 this
+  // function received `row` and never read `row.status`, so a `✅` paired with a
+  // `provisional:` reference validated, `stageState` returned 'done', the banner
+  // disappeared and the unit counted as certified - a direct breach of Art. VII.7's
+  // "never a done mark", reachable by editing one character.
+  const requireStatus = (expected, kind) => requireValue(
+    row.status === expected,
+    `${kind} evidence requires status '${expected}', found '${row.status ?? '(none)'}'`,
+  );
+
   if (row.reviewer.startsWith('auto:')) {
     requireValue(row.reviewer === 'auto:gates', 'unknown automated reviewer token');
+    requireStatus('✅', 'gate');
     // `=== 'G2'`, not `not G3/G5`. acceptGateEvidence only ever proves the ENGLISH draft
     // gates passed: it hardcodes `evidence.stage === 'G2'` and binds the G3 English input
     // manifest. Excluding only the two review stages left G4 ur-translation reachable, so a
@@ -346,6 +359,7 @@ export function validateAgentTrackerRow(root, row, course, unit, stage) {
   requireValue(['G3', 'G5'].includes(stage), 'agent review identity cannot certify a draft stage');
   const match = /^(review|provisional):([^\s]+\.json)$/.exec(row.suggestion);
   requireValue(match, 'agent row needs review:<report.json> evidence reference');
+  requireStatus(match[1] === 'provisional' ? PROVISIONAL : '✅', match[1]);
   const prefix = `specs/content/${course.toLowerCase()}/reviews/unit-${String(unit).padStart(2, '0')}/${stage}/`;
   requireValue(match[2].startsWith(prefix), 'report path must match unit and stage');
   const expected = { course_code: course, unit_no: unit, stage, reviewer_id: row.reviewer };
