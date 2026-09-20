@@ -39,6 +39,7 @@
     "check:docs-sync": "node scripts/check-docs-sync.mjs",
     "check:content": "node scripts/run-gates.mjs content",
     "check:all": "node scripts/run-gates.mjs full",
+    "ci:local": "node scripts/local-ci.mjs",
     "figures:variants": "node scripts/build-figure-variants.mjs",
     "figures:variants:check": "node scripts/build-figure-variants.mjs --check",
     "gates:evidence": "node scripts/prepare-gate-evidence.mjs"
