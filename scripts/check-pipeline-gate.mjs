@@ -167,7 +167,9 @@ function checkUnit({ unitDir, urUnitDir, courseCode, unitNo }) {
 
   const unitLabel = `Unit ${unitNo}`;
   const label = `${courseCode} ${unitLabel} (${relative(ROOT, unitDir)})`;
-  certified.add(`${courseCode} ${unitLabel}`);
+  // Tiers are now EARNED, not assumed-then-demoted. The two-tier version added every
+  // unit to `certified` here and subtracted the provisional ones at the end, which
+  // silently reported gate-checked units as certified once a third tier existed.
 
   // (b) Approval check (FR-016b)
   const spec = loadContentSpecStatus(courseCode);
@@ -259,8 +261,9 @@ if (errors.length) {
   console.error('');
   process.exit(1);
 } else {
-  for (const unit of provisional) { certified.delete(unit); gateChecked.delete(unit); }
-  for (const unit of certified) gateChecked.delete(unit);
+  // A unit earns exactly one tier: the strongest claim that is actually true.
+  for (const unit of provisional) gateChecked.delete(unit);
+  for (const unit of certified) { gateChecked.delete(unit); provisional.delete(unit); }
   const tiers = [
     certified.size && `${certified.size} certified`,
     provisional.size && `${provisional.size} provisional - final review pending`,
