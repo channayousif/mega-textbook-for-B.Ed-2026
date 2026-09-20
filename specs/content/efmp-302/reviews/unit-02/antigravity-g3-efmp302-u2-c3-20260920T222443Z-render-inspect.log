@@ -1,0 +1,58 @@
+### starting: npm run serve -- --port 4640
+### render-inspect  EFMP-302 Unit 2
+### route: /semester-1/efmp-302/unit-02  pages: 7  placed figures: 8
+### host: http://127.0.0.1:4640   browser: chromium 149.0.7827.0
+### started: 2026-09-20T22:25:24.304Z
+
+===== A. DESKTOP 1280x900 =====
+
+-- index: headings=6 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+-- topic-01: headings=14 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   img /img/figures/efmp-302/unit-02/fig-U2-1.svg natural=249x150 shown=true loading=lazy alt="Table comparing personal morality, the law and professional ethics by what each governs, w"
+   img /img/figures/efmp-302/unit-02/fig-U2-1.dark.svg natural=0x0 shown=false loading=lazy alt="Table comparing personal morality, the law and professional ethics by what each governs, w"
+   img /img/figures/efmp-302/unit-02/fig-U2-2.svg natural=249x150 shown=true loading=lazy alt="Concept map with trust at the centre and four branches showing what pupils, parents, the s"
+   img /img/figures/efmp-302/unit-02/fig-U2-2.dark.svg natural=0x0 shown=false loading=lazy alt="Concept map with trust at the centre and four branches showing what pupils, parents, the s"
+   heading order: no skipped levels
+
+-- topic-02: headings=15 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   img /img/figures/efmp-302/unit-02/fig-U2-3.svg natural=272x150 shown=true loading=lazy alt="Table of the four domains of a teacher's code of conduct - students, practice and performa"
+   img /img/figures/efmp-302/unit-02/fig-U2-3.dark.svg natural=0x0 shown=false loading=lazy alt="Table of the four domains of a teacher's code of conduct - students, practice and performa"
+   img /img/figures/efmp-302/unit-02/fig-U2-4.svg natural=249x150 shown=true loading=lazy alt="Four nested circles showing personal values inside school policy inside the national code "
+   img /img/figures/efmp-302/unit-02/fig-U2-4.dark.svg natural=0x0 shown=false loading=lazy alt="Four nested circles showing personal values inside school policy inside the national code "
+   heading order: no skipped levels
+
+-- topic-03: headings=13 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   img /img/figures/efmp-302/unit-02/fig-U2-5.svg natural=272x150 shown=true loading=lazy alt="Flowchart of Rest's four components - sensitivity, judgement, motivation and character - i"
+   img /img/figures/efmp-302/unit-02/fig-U2-5.dark.svg natural=0x0 shown=false loading=lazy alt="Flowchart of Rest's four components - sensitivity, judgement, motivation and character - i"
+   img /img/figures/efmp-302/unit-02/fig-U2-6.svg natural=272x150 shown=true loading=lazy alt="Flowchart of the four-step ethical decision framework drawn as a loop - Empathy, Context, "
+   img /img/figures/efmp-302/unit-02/fig-U2-6.dark.svg natural=0x0 shown=false loading=lazy alt="Flowchart of the four-step ethical decision framework drawn as a loop - Empathy, Context, "
+   heading order: no skipped levels
+
+-- topic-04: headings=13 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   img /img/figures/efmp-302/unit-02/fig-U2-7.svg natural=279x150 shown=true loading=lazy alt="Table of four classroom dilemma types - grading fairness, confidentiality, social media an"
+   img /img/figures/efmp-302/unit-02/fig-U2-7.dark.svg natural=0x0 shown=false loading=lazy alt="Table of four classroom dilemma types - grading fairness, confidentiality, social media an"
+   img /img/figures/efmp-302/unit-02/fig-U2-8.svg natural=272x150 shown=true loading=lazy alt="Diagram of one plagiarism dilemma worked through the four steps - Empathy, Context, Reflec"
+   img /img/figures/efmp-302/unit-02/fig-U2-8.dark.svg natural=0x0 shown=false loading=lazy alt="Diagram of one plagiarism dilemma worked through the four steps - Empathy, Context, Reflec"
+   heading order: no skipped levels
+
+-- unit-assessment: headings=10 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+-- unit-teacher-notes: headings=7 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+===== B. NARROW 360x780 =====
+
+-- index: docHorizontalOverflow=0px tables=0 figures=0 spill=0
+
+-- topic-01: docHorizontalOverflow=0px tables=1 figures=2 spill=2
+   table[0] client=328 scroll=328 fits=true lastHeader="What a strong response d" scroller=NONE
+   figure[0] .figure client=328 scroll=780 scroller=FIGURE.figure
+   figure[1] .figure client=328 scroll=780 scroller=FIGURE.figure
+
+-- topic-02: docHorizontalOverflow=0px tables=1 figures=2 spill=2
+   table[0] client=328 scroll=328 fits=true lastHeader="What a strong response d" scroller=NONE
+   figure[0] .figure client=328 scroll=780 scroller=FIGURE.figure
+   figure[1] .figure client=328 scroll=780 scroller=FIGURE.figure
