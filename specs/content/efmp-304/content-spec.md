@@ -1,6 +1,15 @@
 ---
 course_code: EFMP-304
-status: draft
+status: approved
+# D-2026-0013's binding floor, in the form `check:source-floor` enforces. Units 1-3
+# are the logic half and rest otherwise on one unopenable monograph, so they carry
+# the higher floor. G-2026-17 recorded that this control did not exist when the
+# ruling was made; this is it.
+open_access_floor:
+  "1": 2
+  "2": 2
+  "3": 2
+  default: 1
 ---
 
 # EFMP-304 - Critical Thinking and Reflective Practices - Content Spec

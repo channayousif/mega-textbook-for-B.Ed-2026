@@ -189,7 +189,6 @@ function manifestRoots(root, course, unit, stage) {
   return [en, `${coursePath}/course-overview.mdx`, `specs/content/${code}`,
     'specs/content/style-guide.md', '.specify/memory/constitution.md',
     ...(urdu ? ['specs/content/terminology.csv'] : []),
-    'specs/decisions/log.md',
     'catalog/courses.json', 'contracts', 'specs/014-agent-review-governance/contracts', ...reviewScripts(root),
     '.claude/skills/review-unit/SKILL.md', `.claude/skills/review-unit/references/${stage.toLowerCase()}.md`,
     `.claude/agents/${stage.toLowerCase()}-reviewer.md`,
@@ -305,6 +304,36 @@ export function skillDigest(root, stage) {
   return digest(paths.map((p) => `${p}\n${digest(readFileSync(safeFile(root, p)))}`).join('\n'));
 }
 
+/**
+ * The text of one `## D-YYYY-NNNN` entry in the decision register.
+ *
+ * WHY THIS EXISTS. `specs/decisions/log.md` used to be bound whole, because Unit 6's
+ * run-007 review found that rulings decide review outcomes and a reviewer citing one
+ * was resting on a file the bundle did not bind. That was right, and the remedy was
+ * too blunt: the register is append-only and shared by every course, so recording an
+ * EFMP-304 intake decision invalidated five already-published EFMP-302 units and
+ * turned CI red (G-2026-18). At ninety units every evaluator run would do that to
+ * every other course.
+ *
+ * So the file leaves the manifest and reports bind the ENTRIES THEY CITE instead.
+ * That is strictly stronger than what it replaces: the whole-file digest proved a
+ * reviewer had *some* version of the register, but never that the ruling it relied
+ * on is the one it read. A changed ruling still invalidates the reports that rested
+ * on it; an unrelated new entry no longer touches anything.
+ */
+export function rulingDigest(root, code) {
+  requireValue(/^D-\d{4}-\d{4}$/.test(code), `invalid decision code: ${code}`);
+  const text = readFileSync(safeFile(root, 'specs/decisions/log.md'), 'utf8');
+  const lines = text.split(/\r?\n/);
+  const start = lines.findIndex((l) => new RegExp(`^##\\s+${code}\\b`).test(l));
+  requireValue(start !== -1, `decision ${code} is cited but not in the register`);
+  let end = lines.length;
+  for (let i = start + 1; i < lines.length; i++) {
+    if (/^##\s+/.test(lines[i]) && !/^###/.test(lines[i])) { end = i; break; }
+  }
+  return digest(lines.slice(start, end).join('\n').trimEnd());
+}
+
 export function validateReport(root, report) {
   requireValue(report?.schema_version === 1 && CRITERIA[report.stage], 'unsupported report schema/stage');
   requireValue(['pass', 'revise', 'escalate'].includes(report.disposition), 'invalid disposition');
@@ -315,6 +344,13 @@ export function validateReport(root, report) {
   requireValue(Number.isFinite(started) && Number.isFinite(completed) && completed >= started && completed <= Date.now() + 300000, 'invalid report timestamps');
   requireValue(report.skill_digest === skillDigest(root, report.stage), 'reviewer skill changed');
   requireValue(sorted(report.input_manifest ?? {}) === sorted(inputManifest(root, report.course_code, report.unit_no, report.stage)), 'stale or incomplete input manifest');
+  // Optional, because a review need not rest on any ruling. Where it does, the cited
+  // entry must still read as it did - see `rulingDigest`.
+  const rulings = report.rulings ?? {};
+  requireValue(rulings && typeof rulings === 'object' && !Array.isArray(rulings), 'rulings must be a map of code to digest');
+  for (const [code, recorded] of Object.entries(rulings)) {
+    requireValue(recorded === rulingDigest(root, code), `decision ${code} has changed since this report cited it`);
+  }
   requireValue(Array.isArray(report.criteria) && report.criteria.length === CRITERIA[report.stage].length, 'missing or extra criteria');
   const ids = report.criteria.map((c) => c.id);
   requireValue(new Set(ids).size === ids.length && CRITERIA[report.stage].every((id) => ids.includes(id)), 'duplicate or unknown criteria');

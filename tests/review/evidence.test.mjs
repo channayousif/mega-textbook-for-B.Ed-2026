@@ -5,7 +5,7 @@ import { join, dirname } from 'node:path';
 import { tmpdir } from 'node:os';
 import { generateKeyPairSync, sign } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
-import { CRITERIA, COMMANDS, DRAFT_COMMANDS, inputManifest, dirtyInputs, skillDigest, digest, validateReport, acceptReport, acceptProvisionalReport, acceptGateEvidence, validateAgentTrackerRow } from '../../scripts/lib/review-evidence.mjs';
+import { CRITERIA, COMMANDS, DRAFT_COMMANDS, rulingDigest, inputManifest, dirtyInputs, skillDigest, digest, validateReport, acceptReport, acceptProvisionalReport, acceptGateEvidence, validateAgentTrackerRow } from '../../scripts/lib/review-evidence.mjs';
 
 /** Entry validators the manifest binds, mirroring REVIEW_ENTRY_SCRIPTS. */
 const REVIEW_SCRIPTS = ['scripts/validate-content.mjs', 'scripts/check-pipeline-gate.mjs', 'scripts/check-unit-depth.mjs',
@@ -381,5 +381,48 @@ test('unit-scoped binding: a course file naming no unit stays bound to every uni
   f.track();
   assert.notEqual(JSON.stringify(inputManifest(f.root, 'EFMP-301', 1, 'G3')), base,
     'an unenumerated course file must still be bound');
+});
+
+/**
+ * The decision register is cited per-ruling rather than bound whole (G-2026-18).
+ * Both halves must hold or the change is a weakening: a cited ruling that changes
+ * MUST invalidate, and an unrelated entry MUST NOT.
+ */
+test('rulings: a cited decision that changes invalidates the report that cited it', (t) => {
+  const f = fixture(t);
+  f.write('specs/decisions/log.md', [
+    '# Gate Decision Log', '',
+    '## D-2026-0001 - first', '', '- **Status:** confirmed', '- Body one.', '',
+    '## D-2026-0002 - second', '', '- **Status:** confirmed', '- Body two.', '',
+  ].join('\n'));
+  f.track();
+
+  const cited = rulingDigest(f.root, 'D-2026-0001');
+  const report = { ...f.report, rulings: { 'D-2026-0001': cited } };
+  assert.doesNotThrow(() => validateReport(f.root, report), 'an unchanged cited ruling must validate');
+
+  // An UNRELATED entry is appended - the case that turned CI red.
+  f.write('specs/decisions/log.md', readFileSync(join(f.root, 'specs/decisions/log.md'), 'utf8')
+    + '\n## D-2026-0003 - unrelated\n\n- **Status:** confirmed\n- Body three.\n');
+  f.track();
+  assert.doesNotThrow(() => validateReport(f.root, report),
+    'an unrelated new decision must NOT invalidate a report that never cited it');
+
+  // The CITED entry changes.
+  f.write('specs/decisions/log.md', readFileSync(join(f.root, 'specs/decisions/log.md'), 'utf8')
+    .replace('- Body one.', '- Body one, materially revised.'));
+  f.track();
+  assert.throws(() => validateReport(f.root, report), /D-2026-0001 has changed/,
+    'a changed cited ruling MUST invalidate the report that rested on it');
+});
+
+test('rulings: citing a decision that is not in the register is rejected', (t) => {
+  const f = fixture(t);
+  f.write('specs/decisions/log.md', '# Gate Decision Log\n\n## D-2026-0001 - only\n\n- Body.\n');
+  f.track();
+  assert.throws(() => validateReport(f.root, { ...f.report, rulings: { 'D-2026-0099': 'x'.repeat(64) } }),
+    /cited but not in the register/);
+  assert.throws(() => validateReport(f.root, { ...f.report, rulings: { 'not-a-code': 'x'.repeat(64) } }),
+    /invalid decision code/);
 });
 
