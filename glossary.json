@@ -103,5 +103,60 @@
     "term": "Professional Development Plan",
     "definition_en": "A short written statement, ideally one page, of what a teacher intends to get better at, how, and how they will know: the gap, the evidence for it, one goal, the activity, the evidence of change, and a review date.",
     "definition_ur": "ایک مختصر تحریری بیان، بہتر ہے کہ ایک صفحے کا، کہ استاد کس چیز میں بہتری چاہتا ہے، کیسے، اور کیسے جانے گا: کمی، اس کی شہادت، ایک ہدف، سرگرمی، تبدیلی کی شہادت، اور جائزے کی تاریخ۔"
+  },
+  {
+    "term": "Behaviourism",
+    "definition_en": "The theory that learning is a change in observable behaviour shaped by the interaction between a stimulus and a response, and by the reinforcement that follows.",
+    "definition_ur": "وہ نظریہ جس کے مطابق سیکھنا مشاہدہ ہونے والے رویے میں تبدیلی ہے جو محرک اور ردعمل کے باہم تعامل اور اس کے بعد آنے والی تقویت سے شکل لیتا ہے۔"
+  },
+  {
+    "term": "Cognitivism",
+    "definition_en": "The theory that learning is the reorganisation of mental structures: the mind processes new information against what it already knows and reshapes its internal understanding.",
+    "definition_ur": "وہ نظریہ جس کے مطابق سیکھنا ذہنی ڈھانچوں کی نئی ترتیب ہے: ذہن نئی معلومات کا معاملہ اس کے پہلے سے موجود علم کے خلاف کرتا ہے اور اپنی اندرونی سمجھ کو نئی شکل دیتا ہے۔"
+  },
+  {
+    "term": "Constructivism",
+    "definition_en": "The theory that learning is the active construction of personal meaning by the learner, rather than the transfer of intact knowledge from teacher to pupil.",
+    "definition_ur": "وہ نظریہ جس کے مطابق سیکھنا سیکھنے والے کی طرف سے ذاتی معنی کی فعال تعمیر ہے، نہ کہ استاد سے شاگرد تک مکمل علم منتقل ہونا۔"
+  },
+  {
+    "term": "Classroom management",
+    "definition_en": "The set of proactive teacher actions whose purpose is to create and maintain the conditions in which student learning can happen.",
+    "definition_ur": "استاد کی ایسی فعال کارروائیوں کا مجموعہ جس کا مقصد ایسی صورتحال پیدا کرنا اور برقرار رکھنا ہے جس میں شاگرد سیکھ سکیں۔"
+  },
+  {
+    "term": "Discipline",
+    "definition_en": "The reactive teacher response after a pupil has breached a classroom norm: the reminder, the consequence, or the conversation that restores the norm.",
+    "definition_ur": "شاگرد کے کلاس کے اصول توڑنے کے بعد استاد کی ردعملی کارروائی: یاد دہانی، نتیجہ، یا وہ گفتگو جو اصول بحال کرے۔"
+  },
+  {
+    "term": "Physical environment",
+    "definition_en": "The material features of a classroom a teacher can arrange or influence: furniture, displays, resources, lighting, and the use of wall and floor space.",
+    "definition_ur": "کلاس کی وہ مادی خصوصیات جو استاد ترتیب دے سکتا ہے یا پر اثر ہو سکتا ہے: فرنیچر، نمائشیں، وسائل، روشنی، اور دیوار اور فرش کا استعمال۔"
+  },
+  {
+    "term": "Social environment",
+    "definition_en": "The relationships and norms that govern how people in a classroom treat each other: between teacher and pupils, among pupils, and between the class and any outsider.",
+    "definition_ur": "وہ رشتے اور اصول جو کلاس میں لوگوں کے ایک دوسرے کے ساتھ سلوک کا تعین کرتے ہیں: استاد اور شاگرد کے درمیان، شاگردوں کے باہم، اور جماعت اور کسی بیرونی شخص کے درمیان۔"
+  },
+  {
+    "term": "Classroom observation",
+    "definition_en": "The structured act of watching a classroom with a specific focus, recording what is seen in a consistent format, and keeping a clear line between what was observed and what is inferred.",
+    "definition_ur": "کلاس کی باقاعدہ نگرانی جس میں مخصوص توجہ کے ساتھ مشاہدہ کیا جائے، دیکھی گیی چیزوں کو بااصول شکل میں ریکارڈ کیا جائے، اور مشاہدے اور اس سے نکلنے والے نتیجے کے درمیان واضح حد برقرار رکھی جائے۔"
+  },
+  {
+    "term": "Well-managed classroom",
+    "definition_en": "A classroom marked by practised routines, high intellectual demand, teacher withitness, and a physical and social environment that supports the intended learning.",
+    "definition_ur": "ایسی کلاس جس کی نشاندہی کرنے والی خصوصیات یہ ہیں: پرکھی گئی مشقیں، ادرکی اعلی سطح کا تقاضہ، استاد کی چوکسی، اور ایسا مادی اور معاشرتی ماحول جس سے مطلوبہ سیکھنے کو مدد ملے۔"
+  },
+  {
+    "term": "Learning resources",
+    "definition_en": "Anything in a classroom a pupil can use to support learning: textbooks, exercise books, the blackboard, posters, real objects, the floor, the wall, and other pupils.",
+    "definition_ur": "کلاس میں موجود وہ کوئی بھی چیز جو شاگرد سیکھنے میں مدد کے لیے استعمال کر سکے: درسی کتابیں، مشقیں، بورڈ، پوسٹر، حقیقی اشیاء، فرش، دیوار، اور دوسرے شاگرد۔"
+  },
+  {
+    "term": "Classroom challenges",
+    "definition_en": "The recurring frictions that make classroom management harder than textbook routines suggest, including multigrade or overcrowded rooms, resource scarcity, diverse pupil preparation, and unpredictable events.",
+    "definition_ur": "وہ بار بار آنے والی مشکلات جو کلاس کے انتظام کو کتابی ہدایات سے زیادہ مشکل بناتی ہیں، جن میں ملٹی گریڈ یا بھرے ہوئے کمرے، وسائل کی کمی، شاگردوں کی متنوع تیاری، اور غیر متوقع واقعات شامل ہیں۔"
   }
 ]
