@@ -16,10 +16,10 @@ authored here and **carry a G5 flag** (see below).
 |---|---|---|---|---|---|---|
 | CON:EED-313-5-1 | Classroom management plan | کلاس روم انتظام منصوبہ | - | 5.1 | SLO:EED-313-1-1 | ERQ-03 |
 | CON:EED-313-5-2 | The four-layer synthesis | چار پرتی ترکیب | CON:EED-313-5-1 | 5.1 | SLO:EED-313-1-1 | MCQ-01, RRQ-01 |
-| CON:EED-313-5-3 | Peer-critique protocol | ہم عمر تنقید کا طریقہ کار | - | 5.2 | SLO:EED-313-1-1 | MCQ-01, MCQ-02, RRQ-02 |
-| CON:EED-313-5-4 | Clarity (criterion) | وضاحت | CON:EED-313-5-3 | 5.2 | SLO:EED-313-1-1 | MCQ-01, RRQ-01 |
-| CON:EED-313-5-5 | Consistency (criterion) | ہم آہنگی | CON:EED-313-5-3 | 5.2 | SLO:EED-313-1-1 | MCQ-01, MCQ-02, RRQ-01 |
-| CON:EED-313-5-6 | Coverage (criterion) | تحفظ | CON:EED-313-5-3 | 5.2 | SLO:EED-313-1-1 | MCQ-01, RRQ-01 |
+| CON:EED-313-5-3 | Peer-critique protocol | ہم عمر تنقید کا طریقہ کار | - | 5.2 | SLO:EED-313-1-1 | MCQ-02, RRQ-02 |
+| CON:EED-313-5-4 | Clarity (criterion) | وضاحت | CON:EED-313-5-3 | 5.2 | SLO:EED-313-1-1 | MCQ-02, RRQ-02 |
+| CON:EED-313-5-5 | Consistency (criterion) | ہم آہنگی | CON:EED-313-5-3 | 5.2 | SLO:EED-313-1-1 | MCQ-02, RRQ-02 |
+| CON:EED-313-5-6 | Coverage (criterion) | تحفظ | CON:EED-313-5-3 | 5.2 | SLO:EED-313-1-1 | MCQ-02, RRQ-02 |
 | CON:EED-313-5-7 | Presenting and improving the plan | منصوبہ پیش کرنا اور بہتر بنانا | CON:EED-313-5-3 | 5.3 | SLO:EED-313-1-1 | MCQ-04, RRQ-03 |
 | CON:EED-313-5-8 | The seven closing misconceptions | سات اختتامی غلط فہمیاں | - | 5.4 | SLO:EED-313-1-1 | MCQ-03, RRQ-04 |
 | CON:EED-313-5-9 | The closing synthesis | اختتامی ترکیب | CON:EED-313-5-2, CON:EED-313-5-8 | 5.4 | SLO:EED-313-1-1 | MCQ-05, RRQ-05 |
