@@ -1,6 +1,6 @@
 ---
 course_code: EED-313
-status: draft
+status: approved
 ---
 
 # EED-313 - Classroom Management - Content Spec
@@ -336,12 +336,105 @@ unexpected-event decision aid for a teacher alone in a classroom (4.4).
 integrative ERQ asking the reader to write the community-and-care section of their own classroom
 management plan - the artefact the guide's own course review asks for.
 
+## Unit 5: Course review
+
+Week 16 (3 hours). Unit Spec (G1) for `licence/eed-313/unit-05/`.
+
+- **CLO refs**: course outcomes 1, 2, 3, 4, 5 and 6 (the unit is the course synthesis and draws on
+  every outcome).
+- **Key terms**: Classroom management plan, Peer critique, Summary and close.
+- **Topics**: pulling the four preceding units into one usable philosophy; peer critique and review
+  of final classroom management plans; summary and close of the course.
+- **Worked-example / activity concepts**: each student teacher presents the classroom management
+  plan they have built across Units 1 to 4; peers use a structured protocol to critique it, and the
+  author revises in light of the feedback, then the course closes with a whole-group synthesis.
+- **Assessment blueprint**: formative on reading another's plan against the five earlier units'
+  principles; summative is the **classroom management plan** itself, the course's culminating
+  artefact, assessed against the sample assignment the guide specifies.
+
+### Sub-topic checklist
+
+One row per leaf item of the guide's Unit 5 outline (`ClassroomMgmt_Sept13.txt:244-249`,
+`:256-306`).
+
+| ID | Guide ref | Topic | Sub-topic |
+|---|---|---|---|
+| U5-01 | W16 | 5.1 | Pulling the four units into one classroom-management philosophy |
+| U5-02 | W16 | 5.2 | Peer critique and review of final projects |
+| U5-03 | W16 | 5.3 | Presenting the classroom management plan |
+| U5-04 | W16 | 5.3 | Giving and receiving structured peer feedback |
+| U5-05 | W16 | 5.3 | Revising the plan in light of critique |
+| U5-06 | W16 | 5.4 | Summary and close of the course |
+
+### Topic list
+
+| Topic | Title | Sub-topic IDs | Reading-min | Figures (id: archetype) |
+|---|---|---|---|---|
+| 5.1 | One philosophy from four units | U5-01 | 8-12 | fig-U5-1: concept-map |
+| 5.2 | Peer critique of final projects | U5-02 | 6-10 | fig-U5-2: table |
+| 5.3 | Presenting and improving the plan | U5-03, U5-04, U5-05 | 10-15 | fig-U5-3: flowchart |
+| 5.4 | Summary and close | U5-06 | 4-8 | fig-U5-4: table |
+
+**Depth budget**: 6 sub-topics; 4 topics; 40-55 reading-min. Reading load is deliberately the
+lightest in the course: the work here is synthesis and application of material already covered in
+Units 1 to 4, not new content.
+
+**Prerequisite knowledge**: the full content of Units 1, 2, 3 and 4. Unit 5 is the capstone that
+assumes the reader has worked through the theories, the curriculum and differentiation, the
+routines, and the community and care units.
+
+**Common misconceptions**: these are the guide's own closing misconceptions
+(`ClassroomMgmt_Sept13.txt:286-306`); they are re-stated here because the review unit is where a
+teacher examines and corrects the beliefs they held at the start of the course:
+- the best-managed classroom is one where the teacher, not the student, is in control of learning
+- the quietest classrooms are the best managed
+- the goal of classroom management is peace and discipline
+- classroom management relies on threats and punishment
+- classrooms are homogeneous
+- each class has fixed content that must be taught
+- the same content must be taught to every student in one class
+
+**Figure plan** (>= 2 per topic; >= 1 concept-map / flowchart / timeline in the unit -
+Constitution Art. III.10; seeds `specs/content/eed-313/figures/unit-05.md`):
+  - fig-U5-1 - `concept-map` - the five units of the course as inputs into one classroom-management
+    philosophy, with the through-line from theory to plan labelled (Topic 5.1; the unit's required
+    schematic)
+  - fig-U5-2 - `table` - a peer-critique protocol: what to look for, what to ask, what to suggest,
+    and what is out of scope (Topic 5.2)
+  - fig-U5-3 - `flowchart` - the critique-and-receive cycle: present -> peers probe -> author
+    clarifies -> author revises -> final plan submitted (Topic 5.3)
+  - fig-U5-4 - `table` - the classroom management plan rubric distilled from the guide's sample
+    assignment: philosophy, physical layout, rules and responsibilities, routines and procedures,
+    community and caring activities, disruption methods (Topic 5.4)
+
+**Unit-end assessment blueprint** (`unit-assessment.mdx` - Spec 008 fixed 10/10/5 bank):
+  - MCQs (10): Remember to Apply; >= 2 per topic
+  - RRQs (10): Understand to Analyze; >= 2 per topic
+  - ERQs (5): Analyze to Evaluate/Create; the integrative item is the **classroom management
+    plan** - the course's culminating artefact, assessed against the sample assignment the guide
+    specifies (`ClassroomMgmt_Sept13.txt:315-324`). Each ERQ carries an analytic rubric.
+
+**Licence note**: the classroom management plan is the artefact the guide's own course review asks
+for (`ClassroomMgmt_Sept13.txt:315-318`); it is also the natural response to the sampled CRQ items
+at this level, so it serves both the degree module and the licence test.
+
 ## Reading list
 
-Cited by reference only (Constitution Art. III.5). Guide-required:
+Cited by reference only (Constitution Art. III.5). Guide-required (all six suggested
+resources, `ClassroomMgmt_Sept13.txt:250-274`). Under `D-2026-0001`, unretrievable print
+monographs bind the author to title-level support at point of use; a DOI/URL is recorded
+where the guide supplies one.
 
 - L. Canter, "Assertive Discipline: More than Names on the Board and Marbles in a Jar".
 - C. Evertson and I. Poole, *Norms and Expectations*, IRIS Center, Vanderbilt.
+- C. M. Evertson and E. T. Emmer, *Classroom Management for Elementary Teachers*, 8th edn.,
+  Upper Saddle River, NJ: Pearson, 2009.
+- M. R. Henley, "Introduction to Proactive Classroom Management", in *Classroom Management: A
+  Proactive Approach*, Upper Saddle River, NJ: Pearson, 2009.
+- R. J. Marzano, J. S. Marzano, and D. Pickering, *Classroom Management That Works:
+  Research-Based Strategies for Every Teacher*, Alexandria, VA: ASCD, 2003.
+- S. Vincent, *The Multigrade Classroom: A Resource Handbook for Small, Rural Schools, Book 3:
+  Classroom Management and Discipline*, Portland, OR: Northwest Regional Educational Laboratory.
 - H. K. Wong and R. T. Wong, "The Well-Managed Classroom", in *The First Days of School: How to Be
   an Effective Teacher*, rev. edn., Mountain View, CA: Harry K. Wong Publications, 1998.
 
