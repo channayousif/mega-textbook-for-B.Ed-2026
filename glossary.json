@@ -193,5 +193,50 @@
     "term": "Argument",
     "definition_en": "A claim plus at least one reason offered to support it - the claim is the conclusion and the reasons are the premises. In critical thinking this is not a quarrel but a supported case.",
     "definition_ur": "ایک دعوی کے ساتھ کم از کم ایک وجوہات اس کی حمایت کے لیے پیش کی گئی - دعوی نتیجہ ہے اور وجوہات مقدمات۔ تنقیدی سوچ میں یہ جھگڑا نہیں بلکہ ایک معاون مقدمہ ہے۔"
+  },
+  {
+    "term": "Curriculum",
+    "definition_en": "The teacher's answer to four questions: what to teach, in what order, at what pace, and for whom. In this course each of these is treated as a management act that shapes the classroom before the lesson begins.",
+    "definition_ur": "استاد کے چار سوالوں کے جوابات: کیا پڑھانا ہے، کس ترتیب میں، کس رفتار سے، اور کس کے لیے۔ اس کورس میں ان میں سے ہر ایک کو ایک انتظامی عمل کے طور پر لیا جاتا ہے جو سبق سے پہلے ہی کلاس کی شکل بناتا ہے۔"
+  },
+  {
+    "term": "Lesson planning",
+    "definition_en": "The stage in which the teacher decides the learning target, the activities, the materials, and the time each part of the lesson will take. The management decision at this stage is clarity of target.",
+    "definition_ur": "وہ مرحلہ جس میں استاد سیکھنے کا مقصد، سرگرمیاں، مواد، اور سبق کے ہر حصے کا وقت طے کرتا ہے۔ اس مرحلے کا انتظامی فیصلہ مقصد کی وضاحت ہے۔"
+  },
+  {
+    "term": "Motivation",
+    "definition_en": "The stage in which the teacher creates the want to learn before the teaching begins. The management decision at this stage is relevance: pupils who can see why the lesson matters to them are easier to teach.",
+    "definition_ur": "وہ مرحلہ جس میں استاد تدریس سے پہلے سیکھنے کی خواہش پیدا کرتا ہے۔ اس مرحلے کا انتظامی فیصلہ مطابقت ہے: وہ شاگرد جو دیکھ سکتے ہیں کہ سبق ان کے لیے کیوں اہم ہے، ان کی تدریس آسان ہوتی ہے۔"
+  },
+  {
+    "term": "Assessment",
+    "definition_en": "The stage in which the teacher checks whether the learning target has been met. The management decision at this stage is evidence: a teacher who ends the lesson without checking is managing on hope.",
+    "definition_ur": "وہ مرحلہ جس میں استاد یہ دیکھتا ہے کہ سیکھنے کا مقصد پورا ہوا یا نہیں۔ اس مرحلے کا انتظامی فیصلہ ثبوت ہے: جو استاد بغیر جانچے سبق ختم کرتا ہے، وہ امید پر انتظام کر رہا ہے۔"
+  },
+  {
+    "term": "Differentiation",
+    "definition_en": "Adjusting the content, the process, or the product of a lesson so that every pupil works at the edge of their current ability while reaching the same target. It does not mean making some children do easier work.",
+    "definition_ur": "سبق کے مواد، عمل، یا نتیجے کو اس طرح ایڈجسٹ کرنا کہ ہر شاگرد اپنی موجودا صلاحیت کی حد تک کام کرے اور ساتھ ہی ایک جیسے مقصد کو پہنچے۔ اس سے مراد یہ نہیں کہ کچھ بچوں کو آسان کام دیا جائے۔"
+  },
+  {
+    "term": "Multigrade classroom",
+    "definition_en": "A classroom in which a single teacher is responsible for pupils of two or more grade levels at the same time, in the same room. It requires management tactics, such as anchor activities and peer tutoring, that a single-grade classroom does not.",
+    "definition_ur": "ایسا کلاس روم جس میں ایک ہی استاد ایک ہی وقت اور ایک ہی کمرے میں دو یا زیادہ درجات کے شاگردوں کا ذمہ دار ہوتا ہے۔ اس کے لیے انتظامی حکمت عملی درکار ہوتی ہے، جیسے لنگر سرگرمیاں اور ہم عمر تدریس، جو واحد درجے کے کلاس روم میں نہیں چاہیں۔"
+  },
+  {
+    "term": "Overcrowded classroom",
+    "definition_en": "A classroom in which the number of pupils far exceeds the room's designed capacity. The management problem is not just space but the near-impossibility of individual attention at that scale.",
+    "definition_ur": "ایسا کلاس روم جس میں شاگردوں کی تعداد کمرے کی ڈیزائن شدہ گنجائش سے بہت زیادہ ہو۔ انتظامی مسئلہ صرف جگہ نہیں بلکہ اس پیمانے پر انفرادی توجہ دینے کی تقریباً ناممکنیت ہے۔"
+  },
+  {
+    "term": "Anchor activity",
+    "definition_en": "A task that one group of pupils can do independently while the teacher works with another group. A good anchor activity is self-checking, connected to the current topic, and familiar enough to start without the teacher.",
+    "definition_ur": "ایسی سرگرمی جو ایک گروہ آسکتا ہے۔"
+  },
+  {
+    "term": "Peer tutoring",
+    "definition_en": "A structured arrangement in which a pupil who has mastered an explanation teaches it to a peer. It must be structured - the tutor needs a clear role, the tutee a clear task, and the teacher must check that the explanation is correct.",
+    "definition_ur": "ایک منظم انتظام جس میں وہ شاگرد جس نے کوئی وضاحت سیکھ لی ہے، اسے اپنے ہم عمر کو سکھاتا ہے۔ اسے منظم ہونا چاہیے - اتدریس کو کوئی واضح کردار چاہیے، متربیٹ کو کوئی واضح کام چاہیے، اور استاد کو یہ جانچنا چاہیے کہ وضاحت درست ہے۔"
   }
 ]
