@@ -1,0 +1,14 @@
+# Figure manifest - EED-313 Unit 5 (Course review)
+
+Per `specs/009-figure-rendering/contracts/figure-manifest-v2.md` (v3 `Kind` vocabulary, Spec 012).
+One row per figure carrier in the unit's `topic-*.mdx` files; `Topic` is the `topic_label` of the
+file the carrier sits in. **Two figures per topic** (Constitution Art. III.10), and the unit
+carries a `flowchart` (`fig-U5-3`) and a `concept-map` (`fig-U5-1`) as its required schematics.
+Every figure is **Status: placed**.
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U5-1 | 5.1 | concept-map | clean flat vector concept map, landscape; "my classroom management philosophy" in a central ellipse; four labelled branches radiating out to "Unit 1: theories", "Unit 2: curriculum and differentiation", "Unit 3: routines and time", "Unit 4: community and care"; high contrast, labelled, no colour-only meaning | Concept map connecting the four units: Unit 1 theories and definition at the centre, with branches to Unit 2 curriculum and differentiation, Unit 3 routines and time, Unit 4 community and care, all converging on 'my classroom management philosophy'. | /img/figures/eed-313/unit-05/fig-U5-1.svg | placed |
+| fig-U5-2 | 5.2 | table | clean flat vector comparison table, landscape; four rows (attending a meeting, helping design a fair, contributing money, sitting on a committee) by three columns headed "practice", "participation or involvement", "why"; cells use short plain phrases; high contrast, labelled, no colour-only meaning | Table showing the peer-critique protocol: three columns headed 'clarity', 'consistency', and 'coverage', each with two guiding questions a reviewer asks of the plan. | /img/figures/eed-313/unit-05/fig-U5-2.svg | placed |
+| fig-U5-3 | 5.3 | flowchart | clean flat vector flowchart, landscape; five boxes joined by arrows: "present the plan" => "peers give structured feedback" => "identify the most useful feedback" => "revise the plan" => "present the revision"; high contrast, labelled, no colour-only meaning | Flowchart of the presenting-and-improving cycle: present the plan, peers give structured feedback using the protocol, the author identifies the most useful feedback, revises the plan, and presents the revision. | /img/figures/eed-313/unit-05/fig-U5-3.svg | placed |
+| fig-U5-4 | 5.4 | table | clean flat vector table, landscape; seven rows listing the closing misconceptions by two columns headed "the misconception", "the evidence against it"; cells use short plain phrases; high contrast, labelled, no colour-only meaning | Table listing the seven closing misconceptions and the evidence against each: the best-managed classroom is teacher-controlled vs the evidence that pupil engagement matters more; the quietest classrooms are best managed vs the evidence that intellectual demand matters more; and so on. | /img/figures/eed-313/unit-05/fig-U5-4.svg | placed |
