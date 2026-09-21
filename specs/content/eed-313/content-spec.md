@@ -16,13 +16,13 @@ Sindh Teaching Licence (Elementary) Test still assesses it - at the weight of tw
 items. See `specs/content/licence-blueprint.md`. This is the only STEDA Part II area with no host
 course in the degree corpus, which makes it the highest licence value per unit in the project.
 
-**Placement (owner decision, 2026-09-13):** a new top-level licence tree,
-`docs/licence/eed-313/unit-NN/`, keeping the licence corpus separate from the degree corpus.
-
-> **[blocked] The licence tree does not exist yet.** `validate-content.mjs`, `check-unit-depth.mjs`,
-> `build-content-index.mjs`, the sidebar generator, `catalog/courses.json`'s schema and
-> `review-evidence.mjs`'s `inputManifest` all assume `docs/semester-N/<course>/unit-NN/`.
-> Authoring cannot begin until that tree is supported. Scope it as its own spec alongside v4.0.
+**Placement (owner decision, 2026-09-13):** a top-level licence tree,
+`licence/eed-313/unit-NN/` (content root `licence/`, Docusaurus plugin `id: licence`,
+`routeBasePath: /licence`), keeping the licence corpus separate from the degree corpus. This is
+supported by Spec 015 (`scripts/lib/content-roots.mjs`, ADR-0020): `walkUnits`/`walkCourses`
+already traverse both the `pre-service` and `licence` tracks, all twelve gate scripts consume
+them, and `sidebars-licence.ts` + the Urdu i18n dir are in place. The blocker this note
+predicted is therefore **resolved**; the tree exists and only the authored content is missing.
 
 **Bilingual (owner decision, 2026-09-13):** English first, Urdu later. The catalogue entry carries
 `bilingual: true`; the Urdu mirror is authored once the `reviewer` role exists, so the module does
@@ -75,7 +75,7 @@ the module exists to make good:
 
 ## Unit 1: Learning theories and classroom management
 
-Weeks 1-4 (12 hours). Unit Spec (G1) for `docs/licence/eed-313/unit-01/`.
+Weeks 1-4 (12 hours). Unit Spec (G1) for `licence/eed-313/unit-01/`.
 
 - **CLO refs**: course outcomes 1 and 2.
 - **Key terms**: Behaviourism, Cognitivism, Constructivism, Classroom management, Discipline,
@@ -173,7 +173,7 @@ as recall prompts.
 
 ## Unit 2: Curriculum and classroom management
 
-Weeks 5-8 (12 hours). Unit Spec (G1) for `docs/licence/eed-313/unit-02/`.
+Weeks 5-8 (12 hours). Unit Spec (G1) for `licence/eed-313/unit-02/`.
 
 - **CLO refs**: course outcomes 3 and 4.
 - **Key terms**: Differentiation, Multigrade classroom, Overcrowded classroom, Lesson planning.
@@ -226,7 +226,7 @@ ERQ per topic plus an integrative item asking for a differentiated plan in a nam
 
 ## Unit 3: Routines, schedules, and time management in diverse classrooms
 
-Weeks 9-11 (9 hours). Unit Spec (G1) for `docs/licence/eed-313/unit-03/`.
+Weeks 9-11 (9 hours). Unit Spec (G1) for `licence/eed-313/unit-03/`.
 
 - **CLO refs**: course outcome 5.
 - **Key terms**: Routine, Structure, Transition, Collaborative learning.
@@ -279,7 +279,7 @@ integrative ERQ asking for a full routine set for a named multigrade or overcrow
 
 ## Unit 4: Creating shared values and community
 
-Weeks 12-15 (12 hours). Unit Spec (G1) for `docs/licence/eed-313/unit-04/`.
+Weeks 12-15 (12 hours). Unit Spec (G1) for `licence/eed-313/unit-04/`.
 
 - **CLO refs**: course outcome 6.
 - **Key terms**: Community, Community participation, Ethic of care, Personal accountability.
