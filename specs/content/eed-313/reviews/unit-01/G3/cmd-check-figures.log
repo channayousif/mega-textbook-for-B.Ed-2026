@@ -1,0 +1,6 @@
+
+✗ Figure gate failed with 1 finding(s):
+
+  - EED-313 Unit 2 (licence/eed-313/unit-02): no figure manifest at specs/content/eed-313/figures/unit-02.md
+
+exit=1
