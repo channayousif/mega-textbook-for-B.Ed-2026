@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "course_code": "EED-313",
-  "unit_no": 4,
+  "unit_no": 3,
   "stage": "G2",
-  "reviewed_commit": "70a20c9",
-  "generated_at": "2026-09-21T10:28:55.548Z",
+  "reviewed_commit": "5bc0047",
+  "generated_at": "2026-09-21T11:16:25.469Z",
   "input_manifest": {
     ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
     ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
@@ -59,13 +59,13 @@
     "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
     "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
     "licence/eed-313/course-overview.mdx": "1938170ac5e41a962446ca35cadebaa862ac32bc8a38c42a8b57c9f96a6faa0b",
-    "licence/eed-313/unit-04/index.mdx": "a62225c1b671fa6c6929ebfc74e6f5158c9ee355b7f846ee352b96e0a7f7ebbc",
-    "licence/eed-313/unit-04/topic-01.mdx": "5dafdcc5374dd1aca843910afb53e7ec58af927f5ecc60ae5b05970422274aa0",
-    "licence/eed-313/unit-04/topic-02.mdx": "ef7e92422977d477fb06f897eca3959ebfe07c8b5b3cc59f51c962dfcb45223f",
-    "licence/eed-313/unit-04/topic-03.mdx": "7fddbe3f6766861b1563bb7b5bb498a7691c2cfb282c10f12c5f4233d1f21a74",
-    "licence/eed-313/unit-04/topic-04.mdx": "7d6a4a0667f055417e0f7543524f6ec71bf8c5206b56d651b392bd2ae80b8f64",
-    "licence/eed-313/unit-04/unit-assessment.mdx": "a3c450e3a5d001bba986de2260ed0cb269d984e72a396d19d1f4fea148905a44",
-    "licence/eed-313/unit-04/unit-teacher-notes.mdx": "726e83e95d1b516df9d242176458d0206f8b1d0c9ddddd394ee1c927c64718bc",
+    "licence/eed-313/unit-03/index.mdx": "fd4f872c99b6aba405df8d689e89eb5e9bb735471f911145a5492e08b0a35383",
+    "licence/eed-313/unit-03/topic-01.mdx": "1a8dcdcf8b89e09013ad72ed40051733dd0048cf5707289c6d79d9c06c8ae65f",
+    "licence/eed-313/unit-03/topic-02.mdx": "641e4765af1c51eb19f7563992038797788d6c12258bf64f59aa01a8aec7dac0",
+    "licence/eed-313/unit-03/topic-03.mdx": "cf5a338fe56d9e43918cc914d25a4034a0eda02133ae6015ce374bd49e79b857",
+    "licence/eed-313/unit-03/topic-04.mdx": "a46b69d6702d81a3ea04f78bd7bb7bb2d36e8dc9344fbd779b4faaf9e11f225a",
+    "licence/eed-313/unit-03/unit-assessment.mdx": "0ac95639b6b1ccb8f6aba7c086b848f93fbaee181d48142de9b3384c12ad5367",
+    "licence/eed-313/unit-03/unit-teacher-notes.mdx": "14977acf4d89be51d387914d999e9a6c5c564b99a56acd35721f9ee67e29f41d",
     "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
     "scripts/check-figures.mjs": "41b698f8cbbb12f4030d6893083a5c36e4a19848b5ddb86206e5ba72847b8b13",
     "scripts/check-no-answer-keys.mjs": "f38d60e5360e0c29f2dae02001195690f3b95e0ad2d7ae1a3c03a0d09c053f0d",
@@ -83,63 +83,63 @@
     "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
     "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
     "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
-    "specs/content/eed-313/concepts/unit-04.md": "3aa74fbaa0d86066ebc4639fd46b7c3a6b0bc1a0cccee8e513be633b5454ca12",
-    "specs/content/eed-313/content-spec.md": "84ea945da68c6d3691994d8c00d9ee8a943ee6c6f44cb0bd5eac0599f8afaeaa",
-    "specs/content/eed-313/coverage/unit-04.md": "287d942ec42e59a6ca0de95fe77049c9895b7b029e629e12ccaeabc43ee08ae9",
-    "specs/content/eed-313/figures/unit-04.md": "04decb56b7ecb4646f14ad2191475c88471404115a41a08956f455947eea425e",
-    "specs/content/eed-313/sources/unit-04.md": "80964a44c63bec709e44c66b03ac5351164360d9b8334da7e143169612e42de4",
+    "specs/content/eed-313/concepts/unit-03.md": "f8a7f9d044a5e02deef4bf8642dd7cc4e1547e80435aca1af17a93c24dcb7455",
+    "specs/content/eed-313/content-spec.md": "21f4bba727c0ecbde635a9651ee8e395af15b736746ce000bef4440be8590b9f",
+    "specs/content/eed-313/coverage/unit-03.md": "c3cc8c57b8b476a131381f938402a7084f98fdd6eca8a229f08a78897734c821",
+    "specs/content/eed-313/figures/unit-03.md": "0b5948f81c947484aa40e7119a8d8978c0b8020ce0cfea8427cd21fec1734990",
+    "specs/content/eed-313/sources/unit-03.md": "14b72e908caa23ecad936322ff211f3d2dec8c3d673a8ba11cb80ae30b524325",
     "specs/content/style-guide.md": "db96c9b33b0fb9522986462a0b519620c3c1d7602a046d7b90e638f643da4610"
   },
   "evidence_manifest": {
-    "specs/content/eed-313/reviews/unit-04/G2/validate-content.log": "de6681b89b8da75714d1ff55ef5fd292b478e229f9f2b77b812e54d65ec5b003",
-    "specs/content/eed-313/reviews/unit-04/G2/check-depth-gate.log": "fed66f768e088e7281849e276db2a1a5bc547ecc657e4eb97fa91f507d42e7cd",
-    "specs/content/eed-313/reviews/unit-04/G2/check-figures.log": "5fa099a65fa05d45fb85cbbe54ca7617e1ace3a5d919271c15d7a840f8026c34",
-    "specs/content/eed-313/reviews/unit-04/G2/check-concept-graph.log": "d3476a1bb0853953a5cee981bd124541effba0ddf599a8ed9c3a82e4101385f3",
-    "specs/content/eed-313/reviews/unit-04/G2/check-bloom-bands.log": "8a8a21c5995a69b94e6c0a66be2fdaf0ac7651776804ed61b9442043664cadd0",
-    "specs/content/eed-313/reviews/unit-04/G2/check-no-em-dash.log": "c75db360e2f1a266180010997aa0e67825816fe4f73aeabb037f7d6f408e6b4f",
-    "specs/content/eed-313/reviews/unit-04/G2/check-no-answer-keys.log": "01163dc094dd5115e7bcfd16436ca35f1f60a24b4c9d5bf94393fe13752b5391",
-    "specs/content/eed-313/reviews/unit-04/G2/check-docs-sync.log": "b75f030184b2c57f6cf6cba7e5f2a794ca1e0f4ddeaba1352bc2463ecc6130cb"
+    "specs/content/eed-313/reviews/unit-03/G2/validate-content.log": "de6681b89b8da75714d1ff55ef5fd292b478e229f9f2b77b812e54d65ec5b003",
+    "specs/content/eed-313/reviews/unit-03/G2/check-depth-gate.log": "fed66f768e088e7281849e276db2a1a5bc547ecc657e4eb97fa91f507d42e7cd",
+    "specs/content/eed-313/reviews/unit-03/G2/check-figures.log": "5fa099a65fa05d45fb85cbbe54ca7617e1ace3a5d919271c15d7a840f8026c34",
+    "specs/content/eed-313/reviews/unit-03/G2/check-concept-graph.log": "d3476a1bb0853953a5cee981bd124541effba0ddf599a8ed9c3a82e4101385f3",
+    "specs/content/eed-313/reviews/unit-03/G2/check-bloom-bands.log": "8a8a21c5995a69b94e6c0a66be2fdaf0ac7651776804ed61b9442043664cadd0",
+    "specs/content/eed-313/reviews/unit-03/G2/check-no-em-dash.log": "c75db360e2f1a266180010997aa0e67825816fe4f73aeabb037f7d6f408e6b4f",
+    "specs/content/eed-313/reviews/unit-03/G2/check-no-answer-keys.log": "01163dc094dd5115e7bcfd16436ca35f1f60a24b4c9d5bf94393fe13752b5391",
+    "specs/content/eed-313/reviews/unit-03/G2/check-docs-sync.log": "b75f030184b2c57f6cf6cba7e5f2a794ca1e0f4ddeaba1352bc2463ecc6130cb"
   },
   "commands": [
     {
       "name": "validate:content",
       "exit_code": 0,
-      "log_path": "specs/content/eed-313/reviews/unit-04/G2/validate-content.log"
+      "log_path": "specs/content/eed-313/reviews/unit-03/G2/validate-content.log"
     },
     {
       "name": "check:depth-gate",
       "exit_code": 0,
-      "log_path": "specs/content/eed-313/reviews/unit-04/G2/check-depth-gate.log"
+      "log_path": "specs/content/eed-313/reviews/unit-03/G2/check-depth-gate.log"
     },
     {
       "name": "check:figures",
       "exit_code": 0,
-      "log_path": "specs/content/eed-313/reviews/unit-04/G2/check-figures.log"
+      "log_path": "specs/content/eed-313/reviews/unit-03/G2/check-figures.log"
     },
     {
       "name": "check:concept-graph",
       "exit_code": 0,
-      "log_path": "specs/content/eed-313/reviews/unit-04/G2/check-concept-graph.log"
+      "log_path": "specs/content/eed-313/reviews/unit-03/G2/check-concept-graph.log"
     },
     {
       "name": "check:bloom-bands",
       "exit_code": 0,
-      "log_path": "specs/content/eed-313/reviews/unit-04/G2/check-bloom-bands.log"
+      "log_path": "specs/content/eed-313/reviews/unit-03/G2/check-bloom-bands.log"
     },
     {
       "name": "check:no-em-dash",
       "exit_code": 0,
-      "log_path": "specs/content/eed-313/reviews/unit-04/G2/check-no-em-dash.log"
+      "log_path": "specs/content/eed-313/reviews/unit-03/G2/check-no-em-dash.log"
     },
     {
       "name": "check:no-answer-keys",
       "exit_code": 0,
-      "log_path": "specs/content/eed-313/reviews/unit-04/G2/check-no-answer-keys.log"
+      "log_path": "specs/content/eed-313/reviews/unit-03/G2/check-no-answer-keys.log"
     },
     {
       "name": "check:docs-sync",
       "exit_code": 0,
-      "log_path": "specs/content/eed-313/reviews/unit-04/G2/check-docs-sync.log"
+      "log_path": "specs/content/eed-313/reviews/unit-03/G2/check-docs-sync.log"
     }
   ]
 }
