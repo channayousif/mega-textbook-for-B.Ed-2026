@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "course_code": "EED-313",
-  "unit_no": 2,
+  "course_code": "EFMP-304",
+  "unit_no": 1,
   "stage": "G2",
   "reviewed_commit": "9cd14c2",
-  "generated_at": "2026-09-21T08:25:42.967Z",
+  "generated_at": "2026-09-21T08:51:54.023Z",
   "input_manifest": {
     ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
     ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
@@ -58,13 +58,14 @@
     "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
     "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
     "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
-    "licence/eed-313/course-overview.mdx": "1938170ac5e41a962446ca35cadebaa862ac32bc8a38c42a8b57c9f96a6faa0b",
-    "licence/eed-313/unit-02/index.mdx": "0ca40e16a07b7eeee521726c0de38b671d6f30e4f2f2bddd47d82d1321d185d2",
-    "licence/eed-313/unit-02/topic-01.mdx": "e147df381b8e9af760d761bf6cdcbc84e379b6594aa75122f7868db5c495b6b3",
-    "licence/eed-313/unit-02/topic-02.mdx": "5c92dda5ca26e47f9bb9fe540723baeea315a74796f027a269e7bf985faca15c",
-    "licence/eed-313/unit-02/topic-03.mdx": "510ec6d5c675f2e145194023e6fb5416c289bde1c5317e348da70099c900ad74",
-    "licence/eed-313/unit-02/unit-assessment.mdx": "a371d00b5406fccf16c956e97b38cca35b3d4326ca4046a39e7ab21ddd71fa04",
-    "licence/eed-313/unit-02/unit-teacher-notes.mdx": "f97c827fef28ef6cab14f0ebe5314e152f844e94c06d67bccc20613357521acc",
+    "docs/semester-2/efmp-304/course-overview.mdx": "72501a06a1e346704adf848564ab53f3a08600a3d6a15bec2b37588bd18ed6bf",
+    "docs/semester-2/efmp-304/unit-01/index.mdx": "380f44ae300eede111871a1c20d42172995bf115f21143253b01fb44458ad1b7",
+    "docs/semester-2/efmp-304/unit-01/topic-01.mdx": "22d29389b10448f6f0105ae558d1bd2afd219521d905244d4f30a754ab29a97f",
+    "docs/semester-2/efmp-304/unit-01/topic-02.mdx": "0135b97f2099911f95643de8c758405e6988f52634442d1bb76663d6eb9aa54c",
+    "docs/semester-2/efmp-304/unit-01/topic-03.mdx": "ed7fc05fb4dcd6b0cd1291d39a874ac90fa07490ea5d738865a98d30fe8ea5d1",
+    "docs/semester-2/efmp-304/unit-01/topic-04.mdx": "ad58e93104a0393a5ee39517c4ab380cf79d60ad48fb0deacd3b86eff0e30a02",
+    "docs/semester-2/efmp-304/unit-01/topic-05.mdx": "10f959da2d18443d2da8ee71257953801ae53562faf720efc4037c81e27a1a46",
+    "docs/semester-2/efmp-304/unit-01/unit-assessment.mdx": "90348db77d3d5f74d4992ad2732fb37e029d78864c7156ee02908db8784e5f16",
     "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
     "scripts/check-figures.mjs": "41b698f8cbbb12f4030d6893083a5c36e4a19848b5ddb86206e5ba72847b8b13",
     "scripts/check-no-answer-keys.mjs": "f38d60e5360e0c29f2dae02001195690f3b95e0ad2d7ae1a3c03a0d09c053f0d",
@@ -82,75 +83,85 @@
     "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
     "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
     "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
-    "specs/content/eed-313/concepts/unit-02.md": "0feeb200c4bb34cce4c639b8cabc0af7617d0e604c43797d51e9a1bc3b49911f",
-    "specs/content/eed-313/content-spec.md": "0687b772d812f8fbfa239321f701f80e7353baf486d58750d275ee2c167c0a5d",
-    "specs/content/eed-313/coverage/unit-02.md": "8f868c10cc517f95d2a0269a1fd6f01b6727bb239b3ae5e55cbe9569c2c03bdb",
-    "specs/content/eed-313/figures/unit-02.md": "35ca3785759e4f36d14744f155f3c6447dafd9cae7c5f366e21ea135bae6b6dc",
-    "specs/content/eed-313/sources/unit-02.md": "529dcc12678544b7e76e48c90a448fd308fbac3213f27ec746d59a79ea3b4af6",
+    "specs/content/efmp-304/concepts/unit-01.md": "9a6014e46e42737f2c4c7f4a241caaa094e093b947257233429a697c0517c49e",
+    "specs/content/efmp-304/content-spec.md": "b53dd0580a933657c7686a626e6bf9117b472ac1b3363a608942f1b767a08905",
+    "specs/content/efmp-304/coverage/unit-01.md": "a7070ce065834985dd289e0d04a7ae3d338e37f206a15ce811b0edeafbdff370",
+    "specs/content/efmp-304/figures/unit-01.md": "6dc98fe0db8aac18725c76be6f01d64516b660054d2520e8d57a179f96c6ce0c",
+    "specs/content/efmp-304/sources/texts/aston2023.md": "3c4585d80ae251db800ff815566dba41878086e034fdc658b459b57431b5a6ea",
+    "specs/content/efmp-304/sources/texts/zeybek2025.md": "af0aed248afa4a46e78e4948f9f30b7a99f09b429a937fb1ee48280ef795d3e3",
+    "specs/content/efmp-304/sources/unit-01.md": "68bac8c1ffa2c300d4d30499adf6afeae524d1e74f59579ce270bfb688c66175",
     "specs/content/style-guide.md": "db96c9b33b0fb9522986462a0b519620c3c1d7602a046d7b90e638f643da4610",
-    "static/img/figures/eed-313/unit-02/fig-U2-1.dark.svg": "2aa2fa72bbd3136d92a3a43554c9a70c530eafa35ed5b109d33b4aee8c16c2a1",
-    "static/img/figures/eed-313/unit-02/fig-U2-1.svg": "39a50300c0dcbc9607e71e1d166687915d5977b148ab717cddd02a5f9a557e61",
-    "static/img/figures/eed-313/unit-02/fig-U2-2.dark.svg": "2a95163608039a1ab088bf49573c320d8b0f6415022bd9ca8da15426dd262a07",
-    "static/img/figures/eed-313/unit-02/fig-U2-2.svg": "f28d04ecac84c22267ba7dc0231c65b683cc56909ffa900812130824ec56094e",
-    "static/img/figures/eed-313/unit-02/fig-U2-3.dark.svg": "c2d3a5333712154637b2e33f8bce97b6f99d90ce0a9de6b214c91d35c2848e02",
-    "static/img/figures/eed-313/unit-02/fig-U2-3.svg": "d936876f7c29cade28bc295df4386bba2c4c4eb15a1cb51fd211ff141942c4b3",
-    "static/img/figures/eed-313/unit-02/fig-U2-4.dark.svg": "6084805668ab86d8d19518e72bf36e093915e0a8e7f16b0845e56986af71c7d7",
-    "static/img/figures/eed-313/unit-02/fig-U2-4.svg": "64aa57408b5a673982521b67ffdcbfeadf3ec31b5fb7cf4659635c9c818b6020",
-    "static/img/figures/eed-313/unit-02/fig-U2-5.dark.svg": "5473cd9a398413ba1de547acd0978f0a6a68ecd7250a6108415225d877aace6a",
-    "static/img/figures/eed-313/unit-02/fig-U2-5.svg": "d2e1fc222443129d9f5a323ed613b17f5846c505ce7cf02e17dddf18e11f206c",
-    "static/img/figures/eed-313/unit-02/fig-U2-6.dark.svg": "68cfafea1b105cbad79c92bb4ac061efd61844fd7c77af9bd73acf04767561ff",
-    "static/img/figures/eed-313/unit-02/fig-U2-6.svg": "6c379eddd282054780d53d93eeb8b72a7ada3d33ec172478979c9e0e5359f250"
+    "static/img/figures/efmp-304/unit-01/fig-U1-1.dark.svg": "260f25f9b63c5262e19967ec3f4668e47902166048dc9edce13cef83be19bb07",
+    "static/img/figures/efmp-304/unit-01/fig-U1-1.svg": "1ec71fe181971da6f7469d4b4b13c6648387a489441b4201ed953b3739e0869b",
+    "static/img/figures/efmp-304/unit-01/fig-U1-10.dark.svg": "bd06e67b0948315dd05641483bd39bb2e25e0e503a10ab4082a4766d11515c4e",
+    "static/img/figures/efmp-304/unit-01/fig-U1-10.svg": "fa1da60ade97b438c47c279a92b1755408448395d549e81a53dd1c1b9919ece8",
+    "static/img/figures/efmp-304/unit-01/fig-U1-2.dark.svg": "315c7e2fcb72dfef81c479304d56c47318e373d1241bf807e3e42513405e28ef",
+    "static/img/figures/efmp-304/unit-01/fig-U1-2.svg": "da80bf355a5de553026e6c8f5c0242ba52395b8ec3b5b5fcd03bddddfd06b4f3",
+    "static/img/figures/efmp-304/unit-01/fig-U1-3.dark.svg": "30c5c57e2242662d6c83d4322032199a1e46acd20c15c14eac2f88a4ec1a349f",
+    "static/img/figures/efmp-304/unit-01/fig-U1-3.svg": "43cfd70dc390236878a8ca066c9e22015df38e41deb46d2d7b3be6e67205f833",
+    "static/img/figures/efmp-304/unit-01/fig-U1-4.dark.svg": "080ae71246ff9eb80e9f4d133af4d528219f936e5945cee88698615076737ffe",
+    "static/img/figures/efmp-304/unit-01/fig-U1-4.svg": "5400bfc3b6b208e5fe2bf049d0f9fb5bd3bd29cc31e89428cfaa03be3f32e852",
+    "static/img/figures/efmp-304/unit-01/fig-U1-5.dark.svg": "dda3300eb03a28aaeeb663ce764f9f5e2fa1fe41ed7e333bfc75f1638d414b25",
+    "static/img/figures/efmp-304/unit-01/fig-U1-5.svg": "222960737178107fcdb5a6917d983498db768ed25f2c3074aeb6fa2c7fb76681",
+    "static/img/figures/efmp-304/unit-01/fig-U1-6.dark.svg": "9fc558f1e40fc4ba7acd17fbcbf9bbcb5dc767872acb0eb70e6aa9bb54206c6b",
+    "static/img/figures/efmp-304/unit-01/fig-U1-6.svg": "634a4f664dabcf955f731f859cd0ba77b4d8a504cdef58a3ef1c0218838e5c00",
+    "static/img/figures/efmp-304/unit-01/fig-U1-7.dark.svg": "cfe1e6a93ec40513dbb9617bf39c736bb4ac6ccf4d79127c14e41865a19e8ef7",
+    "static/img/figures/efmp-304/unit-01/fig-U1-7.svg": "3b0c3b698452f736d3a4e3411cd282517a54019052774d6a9e1c9ef609f42806",
+    "static/img/figures/efmp-304/unit-01/fig-U1-8.dark.svg": "e792d4f76ef2d1c96e0c732260679e55e1e49359d68fc58704478d6a0cdc7427",
+    "static/img/figures/efmp-304/unit-01/fig-U1-8.svg": "f498ad9cf86616e2520e853c8c17ad4fdbf5badc3b8aea36efe2fffc63985fc7",
+    "static/img/figures/efmp-304/unit-01/fig-U1-9.dark.svg": "e5d1a66b6408386cc88416eafb68f856804bdf1224d5225c346c6a72ff103d7f",
+    "static/img/figures/efmp-304/unit-01/fig-U1-9.svg": "c74fb936024915034a319e503aabbfbb905ddef8be598c088fb35e7ee00c797d"
   },
   "evidence_manifest": {
-    "specs/content/eed-313/reviews/unit-02/G2/validate-content.log": "de6681b89b8da75714d1ff55ef5fd292b478e229f9f2b77b812e54d65ec5b003",
-    "specs/content/eed-313/reviews/unit-02/G2/check-depth-gate.log": "fed66f768e088e7281849e276db2a1a5bc547ecc657e4eb97fa91f507d42e7cd",
-    "specs/content/eed-313/reviews/unit-02/G2/check-figures.log": "5fa099a65fa05d45fb85cbbe54ca7617e1ace3a5d919271c15d7a840f8026c34",
-    "specs/content/eed-313/reviews/unit-02/G2/check-concept-graph.log": "d3476a1bb0853953a5cee981bd124541effba0ddf599a8ed9c3a82e4101385f3",
-    "specs/content/eed-313/reviews/unit-02/G2/check-bloom-bands.log": "8a8a21c5995a69b94e6c0a66be2fdaf0ac7651776804ed61b9442043664cadd0",
-    "specs/content/eed-313/reviews/unit-02/G2/check-no-em-dash.log": "c75db360e2f1a266180010997aa0e67825816fe4f73aeabb037f7d6f408e6b4f",
-    "specs/content/eed-313/reviews/unit-02/G2/check-no-answer-keys.log": "01163dc094dd5115e7bcfd16436ca35f1f60a24b4c9d5bf94393fe13752b5391",
-    "specs/content/eed-313/reviews/unit-02/G2/check-docs-sync.log": "b75f030184b2c57f6cf6cba7e5f2a794ca1e0f4ddeaba1352bc2463ecc6130cb"
+    "specs/content/efmp-304/reviews/unit-01/G2/validate-content.log": "de6681b89b8da75714d1ff55ef5fd292b478e229f9f2b77b812e54d65ec5b003",
+    "specs/content/efmp-304/reviews/unit-01/G2/check-depth-gate.log": "fed66f768e088e7281849e276db2a1a5bc547ecc657e4eb97fa91f507d42e7cd",
+    "specs/content/efmp-304/reviews/unit-01/G2/check-figures.log": "5fa099a65fa05d45fb85cbbe54ca7617e1ace3a5d919271c15d7a840f8026c34",
+    "specs/content/efmp-304/reviews/unit-01/G2/check-concept-graph.log": "d3476a1bb0853953a5cee981bd124541effba0ddf599a8ed9c3a82e4101385f3",
+    "specs/content/efmp-304/reviews/unit-01/G2/check-bloom-bands.log": "8a8a21c5995a69b94e6c0a66be2fdaf0ac7651776804ed61b9442043664cadd0",
+    "specs/content/efmp-304/reviews/unit-01/G2/check-no-em-dash.log": "c75db360e2f1a266180010997aa0e67825816fe4f73aeabb037f7d6f408e6b4f",
+    "specs/content/efmp-304/reviews/unit-01/G2/check-no-answer-keys.log": "01163dc094dd5115e7bcfd16436ca35f1f60a24b4c9d5bf94393fe13752b5391",
+    "specs/content/efmp-304/reviews/unit-01/G2/check-docs-sync.log": "b75f030184b2c57f6cf6cba7e5f2a794ca1e0f4ddeaba1352bc2463ecc6130cb"
   },
   "commands": [
     {
       "name": "validate:content",
       "exit_code": 0,
-      "log_path": "specs/content/eed-313/reviews/unit-02/G2/validate-content.log"
+      "log_path": "specs/content/efmp-304/reviews/unit-01/G2/validate-content.log"
     },
     {
       "name": "check:depth-gate",
       "exit_code": 0,
-      "log_path": "specs/content/eed-313/reviews/unit-02/G2/check-depth-gate.log"
+      "log_path": "specs/content/efmp-304/reviews/unit-01/G2/check-depth-gate.log"
     },
     {
       "name": "check:figures",
       "exit_code": 0,
-      "log_path": "specs/content/eed-313/reviews/unit-02/G2/check-figures.log"
+      "log_path": "specs/content/efmp-304/reviews/unit-01/G2/check-figures.log"
     },
     {
       "name": "check:concept-graph",
       "exit_code": 0,
-      "log_path": "specs/content/eed-313/reviews/unit-02/G2/check-concept-graph.log"
+      "log_path": "specs/content/efmp-304/reviews/unit-01/G2/check-concept-graph.log"
     },
     {
       "name": "check:bloom-bands",
       "exit_code": 0,
-      "log_path": "specs/content/eed-313/reviews/unit-02/G2/check-bloom-bands.log"
+      "log_path": "specs/content/efmp-304/reviews/unit-01/G2/check-bloom-bands.log"
     },
     {
       "name": "check:no-em-dash",
       "exit_code": 0,
-      "log_path": "specs/content/eed-313/reviews/unit-02/G2/check-no-em-dash.log"
+      "log_path": "specs/content/efmp-304/reviews/unit-01/G2/check-no-em-dash.log"
     },
     {
       "name": "check:no-answer-keys",
       "exit_code": 0,
-      "log_path": "specs/content/eed-313/reviews/unit-02/G2/check-no-answer-keys.log"
+      "log_path": "specs/content/efmp-304/reviews/unit-01/G2/check-no-answer-keys.log"
     },
     {
       "name": "check:docs-sync",
       "exit_code": 0,
-      "log_path": "specs/content/eed-313/reviews/unit-02/G2/check-docs-sync.log"
+      "log_path": "specs/content/efmp-304/reviews/unit-01/G2/check-docs-sync.log"
     }
   ]
 }
