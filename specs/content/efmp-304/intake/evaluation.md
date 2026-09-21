@@ -127,15 +127,19 @@ Both at `pending-owner-review`, both bound to manifest digest
 
 | Code | What the guide does not determine |
 |---|---|
-| `G-2026-16` | EFMP-304's term length and its 3/2/3/3/2/3 week distribution. The guide carries no week table, no term length and no contact hours, and the Scheme contains the word "week" nowhere. The silence is deliberate: the **same guide file** lays EFMP-305 out week by week from `2nd 2026.txt:225`. `D-2026-0012` settled the contract question and expressly left this one to the evaluator. Blocks `## Week schedule` and the six "Weeks N-M" lines. Blocks nothing else. |
 | `G-2026-17` | Whether an unenforceable floor is a sufficient mitigation. `D-2026-0013`'s open-access floor is binding on paper and enforced by nothing: `grep -rn "open-access-substitute" scripts/` returns zero matches, the sources-consulted contract has no column for a registry or a verification date, and Art. VII.7(a) with `D-2026-0014` removes the human Content gate that was the only thing that could have judged it. Blocks nothing at G0/G1; recorded as a condition to close before any EFMP-304 unit is **published**. |
 | `G-2026-18` | (tool defect, no criterion) Recording these decisions turned `check:pipeline-gate` from exit 0 to exit 1, invalidating the G2 evidence of five already-published EFMP-302 units. `manifestRoots()` binds `specs/decisions/log.md` by whole-file digest for G3/G5, so an EFMP-304 entry re-opens EFMP-302. Same blast-radius problem ADR-0027 solved for `content-spec.md` via `sliceSpec()`. Blocks nothing here. |
 
-Neither substantive escalation is a criterion failure. `G-2026-16` sits beside the `partition`
-criterion, which passes on its own terms; `G-2026-17` sits beside `readings`, which passes on its
-own terms. Both are things the guide does not settle, which is why they are escalated rather than
-decided. `G-2026-18` is a tool defect against no criterion, found by running this evaluation for
-real, as `G-2026-12` and `G-2026-15` were.
+## Resolved after escalation
+
+| Code | Resolution |
+|---|---|
+| `G-2026-16` | **Owner decision 2026-09-20:** confirmed the spec as written. EFMP-304 is taught over a **16-week** term, distributed **3/2/3/3/2/3** across Units 1 to 6. The `## Week schedule` table and the six "Weeks N-M" lines are unblocked. `G-2026-16` sat beside the `partition` criterion, which passed on its own terms; the escalation was the calendar substance the guide does not determine, now confirmed by the owner. |
+
+`G-2026-17` sits beside `readings`, which passes on its own terms; it is a condition to close
+before any EFMP-304 unit is **published**, not a criterion failure. `G-2026-18` is a tool defect
+against no criterion, found by running this evaluation for real, as `G-2026-12` and `G-2026-15`
+were.
 
 ## Why `status: approved`, given what it releases
 

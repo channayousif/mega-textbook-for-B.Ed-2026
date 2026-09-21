@@ -507,7 +507,7 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 
 ## G-2026-16 - EFMP-304's term length and week distribution are the spec's construction, not the guide's
 
-- **Status:** open
+- **Status:** **resolved** (owner decision, 2026-09-20)
 - **Criterion:** `partition` (G0 intake / G1 unit-spec), calendar only. The unit partition itself
   **is** guide-determined and is approved separately under `D-2026-0015.2`; only the calendar is
   at issue here, exactly as `G-2026-13` was written.
@@ -545,10 +545,17 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   over and either to confirm the proposed 3/2/3/3/2/3 distribution or supply another; or to direct
   that `## Week schedule` be recorded as guide-silent for this course, which `D-2026-0012` now
   expressly permits as the alternative.
-- **Blocks:** `## Week schedule` and the "Weeks N-M" line opening each of the six `## Unit N`
-  subsections. **Nothing else.** `D-2026-0015` and `D-2026-0016` are written to exclude the
-  calendar, no gate parses it, and authoring does not depend on it. This does **not** hold
-  `status: approved`.
+- **Decision (2026-09-20):** the owner confirmed the spec as written. EFMP-304 is taught over a
+  **16-week** term, distributed **3/2/3/3/2/3** across Units 1 to 6. The "Weeks N-M" line opening
+  each `## Unit N` subsection and the `## Week schedule` table are therefore confirmed, not
+  guide-given, and the derivation basis the spec itself states ("proportional to sub-topic count
+  and technical density") stands as the pedagogical judgement. The distribution is retained as
+  authored: Unit 3 carries the fewest sub-topics and the most weeks on purpose (four guide
+  bullets on deductive and inductive form are denser per bullet than anything else in the
+  course), and Unit 3's band was the very disproportion the evaluator flagged - it is confirmed
+  deliberately, not in error.
+- **Blocks:** ~~`## Week schedule` and the "Weeks N-M" line opening each of the six `## Unit N`
+  subsections.~~ **Unblocked by the decision above.**
 
 ## G-2026-17 - `D-2026-0013`'s open-access floor is binding on paper and enforced by nothing
 
