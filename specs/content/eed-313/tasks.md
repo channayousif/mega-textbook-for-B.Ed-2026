@@ -24,7 +24,7 @@ deterministic gates.
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ✅ | auto:gates | intake G-2026-16; content-spec status: approved |
 | Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/eed-313/reviews/unit-01/G2/20260921T085153000Z-gates.json |
-| Unit 1 | G3 en-review | ▢ | | |
+| Unit 1 | G3 en-review | 🟡 | agent:g3-reviewer | provisional: pass (advisory); report specs/content/eed-313/reviews/unit-01/G3/g3-review-20260921.json |
 | Unit 1 | G4 ur-translation | ▢ | | |
 | Unit 1 | G5 ur-review | ▢ | | |
 | Unit 1 | G6 assets | ▢ | | |

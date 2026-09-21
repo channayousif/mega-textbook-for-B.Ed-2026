@@ -1,0 +1,16 @@
+render-review: host browser/print inspection (Playwright chromium, headless)
+date: 2026-09-21
+base: http://localhost:3001 (python3 -m http.server against fresh `npm run build`, exit 0)
+pages inspected (all returned HTTP 200):
+  index, topic-01, topic-02, topic-03, topic-04, unit-assessment, unit-teacher-notes
+viewports: desktop 1280x900; narrow 360x740 (small-screen); print 794x1123 @media print (A4)
+findings:
+  - All pages render at all three viewports (status 200).
+  - Heading hierarchy present and correctly nested (H1>H2>H3, no skipped levels) on every page.
+  - All <img> elements across all pages/viewports carry non-empty alt text (0 missing-alt).
+  - All 8 unit figures render (light + dark SVG variants present); fig-U1-1 table, fig-U1-5 concept-map,
+    fig-U1-2 table, fig-U1-6 concept-map, fig-U1-3 floor-plan, fig-U1-7 flowchart, fig-U1-4 seating, fig-U1-8 audit table.
+  - Narrow (360px): text readable, figures scale responsively, no horizontal overflow in prose.
+  - Print (A4): figures render with themed contrast; text clear; answers section present and not clipped.
+  - measure-figure-text.mjs: 1 cosmetic wordmark collision (panel/wordmark 0.5px overlap in fig-U1-1.svg); reported, not failed.
+exit=0

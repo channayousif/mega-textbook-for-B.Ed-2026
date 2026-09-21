@@ -644,3 +644,94 @@ Recorded here so the boundary stays visible as the log grows:
   tier only; it does not certify, because `acceptProvisionalReport` still skips the signed
   reviewer registry. An `escalate` sends Unit 2 to the content-improvement loop with no further
   cycle.
+
+---
+
+## D-2026-0018 - EED-313 intake: identity, coverage, outcome traces, blueprint, structure, no decision residue
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** EED-313 only. Settles identity, the sub-topic coverage of all four checklists, the
+  CLO traces, the assessment blueprints, structural conformance, and the absence of decision
+  residue. Does **not** settle the four-unit partition (`G-2026-20`) or the reading list (`G-2026-21`).
+- **Decided by:** agent:evaluator, 2026-09-20
+- **Decision:**
+  1. **Identity.** EED-313, "Classroom Management", **3 (3-0)** credit hours, in the licence track
+     (`catalog/courses.json:148-164`, `tracks[0]`). The guide gives the title as "CLASSROOM
+     MANAGEMENT" (`ClassroomMgmt_Sept13.txt:107-108`) and the credit total as "3 credits"
+     (`:115`). The `(3-0)` split is the catalogue expression of the same total; the guide states no
+     split, so there is **no Article II.3 conflict**. The 2026 revision restructured the course away
+     with no successor (`licence-blueprint.md:97`), which is why it is authored from the licence
+     track; that placement context is consistent with the catalogue and the licence-blueprint.
+  2. **Coverage is complete and adds nothing.** Verified against the guide's unit outlines
+     (`ClassroomMgmt_Sept13.txt:168-189`, `:193-201`, `:207-216`, `:219-238`):
+     - **Unit 1** (weeks 1-4) → 19 rows `U1-01..U1-19` (`content-spec.md:103-121`): the opening
+       question, the three learning theories, management-as-maximising-learning, the philosophy
+       question, the well-managed-classroom question, the observation week (W2), the physical and
+       social features, the discipline/management distinction, the environment-choice question, and
+       the four W4 design bullets each appear once. The two W4 bullets "Employ physical
+       facilities..." and "Build the social environment" are merged into `U1-19`, a faithful
+       reading of a single design act rather than an omission.
+     - **Unit 2** (weeks 5-8) → 9 rows `U2-01..U2-09` (`:191-200`): curriculum-as-management, the
+       philosophy-consistent plan, the four-stage cycle (split into `U2-03..U2-06`), and
+       differentiation / multigrade / overcrowding each once.
+     - **Unit 3** (weeks 9-11) → 9 rows `U3-01..U3-09` (`:245-253`): routines defined, time bought,
+       multigrade and special-needs routines, the three subject-specific routines, and
+       co-operation/collaboration each once.
+     - **Unit 4** (weeks 12-15) → 12 rows `U4-01..U4-12` (`:299-310`): community defined,
+       participation and its practices, involvement (including the multigrade variant), the ethic
+       of care with its two sub-bullets, and accountability / breakdown / unexpected events each
+       once.
+     **No row sits under a heading with no guide ancestor**, and every guide weekly theme appears
+     exactly once.
+  3. **The outcome traces hold.** The guide's six course outcomes at
+     `ClassroomMgmt_Sept13.txt:148-155` are reproduced verbatim at `content-spec.md:39-44`. Each has
+     at least one unit whose guide topics deliver it (Unit 1 → outcomes 1, 2; Unit 2 → 3, 4;
+     Unit 3 → 5; Unit 4 → 6, at `:80`, `:178`, `:231`, `:284`). No outcome is orphaned and no
+     outcome lacks a guide ancestor.
+  4. **All four assessment blueprints are internally consistent and consistent with the style
+     guide.** `specs/content/style-guide.md` fixes the bank at exactly 10 MCQs, 10 RRQs and 5 ERQs
+     per unit. Every unit uses that bank (`:161-167`, `:224-225`, `:277-278`, `:335-336`), with
+     MCQ Remember-to-Apply, RRQ Understand-to-Analyze, ERQ Analyze-to-Evaluate/Create, and an
+     Analyze-or-higher integrative ERQ. Per-topic MCQ/RRQ floors (two per topic) are saturated
+     where the topic count makes them exact and leave headroom where it does not. The guide gives
+     no course-specific weighting, so the fallback to the Constitution Art. III.7 default
+     (60/40) at `:48-49` is correct.
+  5. **Structure conforms.** Front matter (`course_code: EED-313`, `status: draft`) validates
+     against `contracts/content-spec-frontmatter.schema.json`. Each of the four unit subsections
+     carries the full contract-required block set. The spec-side invariants were replayed directly
+     (the deterministic gates walk `docs/`, which has no authored EED-313 unit yet, so they are
+     vacuous for this spec): for every unit the `Sub-topic IDs` cells form a total, disjoint
+     partition of the checklist (no unassigned ID, no ID in two rows, no ID assigned that is not
+     in the checklist); every checklist `Topic` cell equals its `### Topic list` row label; every
+     `**Depth budget**` sub-topic and topic count matches its own tables; every topic carries two
+     figure IDs and every unit at least one concept-map, flowchart or timeline (Art. III.10).
+     Zero failures across all four units.
+  6. **No decision residue.** The spec was swept for superseded designs: no EFMP-302/304 activity
+     patterns, no `D-2026-0002`/`D-2026-0004` superseded practicum design, no `D-2026-0003`
+     inapplicability (the spec cites the extracted-text guide, not the `.specify/` tree). The only
+     cross-course mention is the licence-blueprint reference (`:17`), which names a project
+     document, not a superseded design. `D-2026-0013` is EFMP-304-specific and does not apply.
+- **Basis:**
+  `Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt`: title
+  `:107-108`, credits `:115`, prerequisites `:117`, outcomes `:148-155`, unit outlines
+  `:168-238`, suggested resources `:250-274`, Unit 5 `:244-248`. `catalog/courses.json:148-164`
+  for code/title/track. `specs/content/licence-blueprint.md:97` for the 2026 absence. Items 1 and 3
+  are determined by the guide directly; items 2, 4, 5, 6 rest on the guide for content and on the
+  bound style guide and contracts for form.
+- **Bound to:** `specs/content/eed-313/intake/manifest.json`, manifest digest
+  `f72884a17c9228d448a945e478caa2ca53bd5f3ea5e6fc909076ab6c0180de25`, **54 inputs** at commit
+  `45fafa8c72ae14b920ed35d685e884ffceaf7b10`. Recomputed independently with `manifestFor()` from
+  `scripts/lib/review-evidence.mjs` over the same `intakeRoots('eed-313')` root set the prepare
+  script uses (root `.`, repo-relative paths): every path and every digest matched, with no extra
+  and no missing entry, and the recorded `manifest_digest` reproduced. The `registers` field also
+  matched. **Any change to a bound input voids this approval** (Art. VII.8.5). The two registers
+  are in `registers`, not `input_manifest`, so recording this decision does not void it.
+- **Limits and what remains open:**
+  - **The four-unit partition is not approved.** The guide numbers **five** units; the spec drops
+    Unit 5 "Course review" (`G-2026-20`). The partition criterion is therefore blocked.
+  - **The reading list is not approved.** The guide lists six suggested resources; the spec lists
+    three and omits Evertson & Emmer 2009, Henley 2009, Marzano 2003 and Vincent (`G-2026-21`).
+    `D-2026-0001` governs unretrievable sources.
+  - Does not approve any unit's English review (G3) or Urdu translation (G5). Certifies no content,
+    qualifies no reviewer, authorises no publication (Art. VII.8.4).
