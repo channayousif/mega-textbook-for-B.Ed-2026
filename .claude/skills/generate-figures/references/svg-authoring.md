@@ -42,21 +42,40 @@ Every diagram SVG starts from this shape:
   <desc id="d"><!-- the full marker alt text, verbatim --></desc>
   <style>
     <!-- the published :root token block, pasted verbatim - see below -->
-    .bg     { fill: var(--bg); }
-    .ink    { fill: var(--ink); }          /* text + solid fills */
-    .stroke { stroke: var(--ink); stroke-width: 2; fill: none; }
-    .muted  { fill: var(--muted); }
-    .panel  { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
-    .yes    { fill: var(--ink); }          /* tick glyph - a shape, never a colour */
-    text    { font-size: 15px; }
-    .h      { font-size: 16px; font-weight: 700; }
-    .wm     { fill: var(--wm); font-size: 11px; }
+    .bg      { fill: var(--bg); }
+    .ink     { fill: var(--ink); }          /* text + solid fills */
+    .stroke  { stroke: var(--ink); stroke-width: 2.5; fill: none; }   /* thicker stroke for crisper lines */
+    .stroke-a{ stroke: var(--a1); stroke-width: 2; fill: none; }       /* accent-coloured line */
+    .muted   { fill: var(--muted); }
+    .panel   { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }  /* tinted accent panel */
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    .panel-c { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+    .panel-d { fill: var(--a4-fill); stroke: var(--a4); stroke-width: 2; }
+    .yes     { fill: var(--ink); }          /* tick glyph - a shape, never a colour */
+    .no      { fill: var(--muted); }        /* cross glyph - muted, never red */
+    text     { font-size: 15px; fill: var(--ink); }   /* explicit fill so text is never inherited-transparent */
+    .h       { font-size: 16px; font-weight: 700; fill: var(--ink); }
+    .sh      { font-size: 14px; font-weight: 600; fill: var(--ink); }    /* sub-head: a touch smaller than .h */
+    .body    { font-size: 14px; fill: var(--ink); }   /* body label: readable at 14 */
+    .small   { font-size: 13px; fill: var(--muted); } /* secondary/caption text */
+    .wm      { fill: var(--wm); font-size: 11px; }
+    .ah      { fill: var(--ink); }          /* arrowhead fill matches line stroke */
+    .grid    { stroke: var(--ink); stroke-width: 1.5; fill: none; opacity: 0.25; }   /* faint grid: guides the eye, not a hard rule */
   </style>
   <rect class="bg" x="0" y="0" width="<W>" height="<H>"/>
   <!-- shapes + <text> here -->
   <text class="wm" x="<W - 12>" y="<H - 10>" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
 </svg>
 ```
+
+**Readability enhancements over the earlier boilerplate.** The shared look and feel comes from a few deliberate changes:
+- **Thicker strokes** (`stroke-width: 2.5` vs 2) for crisper grid lines and borders at small sizes.
+- **Explicit `fill: var(--ink)` on every text class** so label colour is never lost to inheritance or a missing class.
+- **Four tinted panel classes** (`.panel-a` … `.panel-d`) that pair each accent with its matching fill, so a highlighted region reads by both hue and background tint - and stays separable in greyscale because the fills are staggered in luminance.
+- **A faint `.grid` class** (25% opacity) for table rules and alignment guides: it leads the eye without competing with the data.
+- **A `.no` class** distinct from `.yes` - both ink-coloured, distinguished by glyph shape, never by red/green.
+- **A `.sh` sub-head and `.body` class** so a figure can carry a clear visual hierarchy (head → sub-head → body → caption) without inventing ad-hoc font sizes.
 
 ### Colour: paste the token block, then use `var(--token)`
 
