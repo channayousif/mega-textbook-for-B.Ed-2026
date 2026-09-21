@@ -3,14 +3,15 @@ name: generate-figures
 description: >-
   Render a unit's Spec 008 figure prompt-markers into committed, accessible, lazy-loaded images
   that show on the page in both locales (Spec 009). For each `{/* FIGURE[...] */}` marker:
-  classify it as a diagram (hand-authored self-contained SVG) or an illustration (a complete
-  prompt-only handoff to Codex under ADR-0024). Optimise and place each SVG figure, replace its
-  marker with a `<Figure>` element, mirror it into the Urdu topic file with a translated-label
-  `.ur.svg`, and move its manifest row through `prompt-only → generated → placed`. Leave each
-  raster marker and row ready for Codex,
-  and run the gate set. Use when asked to "generate figures", "render the figure markers",
-  "create the images for <course> unit N", "turn the figure prompts into images", or to bring a
-  unit's figures up to the Spec 009 rendered state.
+  classify it as a schematic (self-contained SVG) or an illustration (a complete prompt-only
+  handoff to Codex under ADR-0024). For schematics, Codex is the PRIMARY SVG author and Claude is
+  the secondary fallback (invoked only when Codex is unavailable). Optimise and place each SVG
+  figure, replace its marker with a `<Figure>` element, mirror it into the Urdu topic file with a
+  translated-label `.ur.svg`, and move its manifest row through `prompt-only → generated →
+  placed`. Leave each raster marker and row ready for Codex, and run the gate set. Use when asked
+  to "generate figures", "render the figure markers", "create the images for <course> unit N",
+  "turn the figure prompts into images", or to bring a unit's figures up to the Spec 009 rendered
+  state.
 ---
 
 # generate-figures
@@ -21,12 +22,15 @@ by `author-unit` (Spec 008) and tracked in `specs/content/<course>/figures/unit-
 
 - For a schematic: a committed SVG under `static/img/figures/<course-lowercase>/unit-NN/`, the
   marker replaced by `<Figure>`, the translated Urdu SVG and a `Status: placed` manifest row.
+  **Codex authors the SVG first; Claude falls back to direct authoring only when Codex is
+  unavailable** (see `references/svg-codex-handoff.md`).
 - For an illustration: a complete brief for Codex while the marker and `Status: prompt-only` row
   remain unchanged.
 
-**One skill, no sub-agent.** The classify → author SVG or prepare raster handoff → place SVG →
-mirror SVG → flip SVG status → run-gates loop stays in the main session. Raster generation is a
-separate Codex responsibility under ADR-0024, not a Claude sub-agent task.
+**One skill, no sub-agent for authoring.** The classify → prepare handoff → invoke Codex
+(fallback: Claude authors directly) → place SVG → mirror SVG → flip SVG status → run-gates loop
+stays in the main session. Raster generation is a separate Codex responsibility under ADR-0024,
+not a Claude sub-agent task.
 
 **Boundary.** `author-unit` writes the markers + a `prompt-only` manifest and stops there. This
 skill renders them. This is the "later, out-of-scope image pass" the Spec 008
@@ -39,6 +43,7 @@ skill renders them. This is the "later, out-of-scope image pass" the Spec 008
   and its manifest `specs/content/<course-lowercase>/figures/unit-NN.md` (all rows `prompt-only`,
   or a mix if rendering incrementally).
 - References: `references/svg-authoring.md` (the diagram archetypes + the SVG boilerplate),
+  `references/svg-codex-handoff.md` (Codex-primary schematic authoring + Claude fallback),
   `references/raster-codex-handoff.md` (the required Codex raster handoff),
   `references/placement.md` (marker → `<Figure>` + the manifest v2 row + the Status lifecycle),
   `references/bilingual-figures.md` (`.ur.svg` + the UR mirror + draft-vs-reviewed gate posture).
@@ -83,10 +88,36 @@ figures for a unit that has no per-topic markers yet.
 4. Read `specs/content/<course-lowercase>/figures/unit-NN.brief.md` if it exists - it lists
    illustration figures whose rasters the owner was asked to drop into `figures/.staging/`.
 
-## Step 2 - Schematics: author a self-contained SVG
+## Step 2 - Schematics: Codex authors the SVG, Claude falls back
 
-Per `references/svg-authoring.md`, for each schematic figure (`Kind` ∈ `{table, concept-map,
-flowchart, timeline, diagram}`):
+Per `references/svg-codex-handoff.md`: **Codex is the primary author** of every schematic figure
+(`Kind` ∈ `{table, concept-map, flowchart, timeline, diagram}`); **Claude is the secondary
+fallback** and authors directly only when Codex is unavailable. The post-authoring (optimise,
+place, mirror, gates) is identical either way.
+
+### 2a - Primary: invoke Codex
+
+For each schematic figure, build a self-contained prompt (see
+`references/svg-codex-handoff.md` §"Claude's responsibility (handoff preparation)") and run:
+
+```
+codex exec "<prompt>" 2>&1
+```
+
+The prompt gives Codex the figure identity, the marker prompt + alt, the hard rules, and the
+instruction to read `references/svg-authoring.md` first and write the SVG to the exact target
+path `static/img/figures/<course-lowercase>/unit-NN/<figId>.svg`.
+
+Codex reports the file size on success. Leave the marker in place, `Src` blank and
+`Status: prompt-only` for now.
+
+### 2b - Fallback: Claude authors directly
+
+When Codex is unavailable, author the SVG yourself. Detect unavailability when: `codex` is not on
+PATH, `codex exec` exits non-zero, or the call times out. Log "Codex unavailable, falling back
+to direct authoring" and proceed.
+
+Per `references/svg-authoring.md`, for each schematic figure:
 
 1. Pick the closest archetype; lay out the shapes and labels to match the marker `prompt`.
 2. Use the boilerplate: `viewBox`, `role="img"`, `<title>` = the alt's first clause, `<desc>` =
@@ -96,15 +127,22 @@ flowchart, timeline, diagram}`):
    `npm run figures:variants`, never authored. **No** external font, **no** external image,
    **no** raster `<image>`. Meaning via shape + label, never colour alone.
 3. Write it to `static/img/figures/<course-lowercase>/unit-NN/<figId>.svg`.
-4. Optimise + budget-check:
+
+### 2c - Post-authoring (shared)
+
+After the SVG exists at the target path (Codex or Claude), for each figure:
+
+1. Optimise + budget-check:
    ```
    npm run optimize:figure -- --svg static/img/figures/<course>/unit-NN/<figId>.svg \
      static/img/figures/<course>/unit-NN/<figId>.svg
    ```
    It strips comments/whitespace and **hard-fails if the result is > 20 KB**. If it fails,
    simplify the SVG (fewer nodes, shorter labels) - do not raise the budget.
-5. Self-check: open the file mentally in both themes - every label legible on both grounds; the
-   `<title>` present; no colour-only distinction; labels in the unit's plain register.
+2. Self-check: every label legible on both themes; the `<title>` present; no colour-only
+   distinction (a relationship the figure encodes MUST also be carried by shape, label or dash
+   pattern - Constitution Art. III.8); labels in the unit's plain register; no em dash in
+   `<text>`.
 
 ## Step 3 - Illustrations: prepare the Codex handoff
 
