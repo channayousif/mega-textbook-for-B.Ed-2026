@@ -748,3 +748,41 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   (0 added, 0 removed) and only this script's digest differs, but restoring the provisional tier
   needs a third review cycle, which ADR-0019 reserves to the owner. Unit 2 stays `gated`.
 - **Blocks:** Unit 2's provisional tier, and the same for every unit translated hereafter.
+
+---
+
+## G-2026-20 - EED-313 intake: the four-unit partition drops the guide's Unit 5
+
+- **Status:** **resolved** (owner decision, 2026-09-20)
+- **Gate:** G0 intake (partition criterion)
+- **Source:** `D-2026-0018`
+- **Question:** The course guide numbers **five** units
+  (`ClassroomMgmt_Sept13.txt:94-102` TOC, `:167`/`:192`/`:206`/`:218`/`:244` body): Unit 1
+  Learning theories and classroom management; Unit 2 Curriculum and classroom management; Unit 3
+  Routines, schedules, and time management in diverse classrooms; Unit 4 Creating shared values and
+  community; **Unit 5 Course review** (`:244-248`, "How can I use what I have learnt to create the
+  classroom I want?", peer critique and review of final projects, summary and close). The spec
+  originally partitioned into **four** units (`content-spec.md:76-337`), dropping Unit 5.
+- **Decision (2026-09-20):** add Unit 5 back and follow the guide's five numbered units. Unit 5 is
+  carried as a review/synthesis capstone (Week 16): peer critique and review of the classroom
+  management plans built across Units 1 to 4, plus summary and close. This makes the partition
+  guide-determined. The course is now 16 weeks as 4/4/3/4/1 across Units 1 to 5.
+- **Blocks:** ~~the `partition` criterion of `D-2026-0018`~~ **unblocked**.
+
+---
+
+## G-2026-21 - EED-313 intake: four of six guide-suggested resources are missing from the reading list
+
+- **Status:** **resolved** (owner decision, 2026-09-20)
+- **Gate:** G0 intake (readings criterion)
+- **Source:** `D-2026-0018`
+- **Question:** The guide lists **six** suggested resources
+  (`ClassroomMgmt_Sept13.txt:250-274`): Canter; Evertson & Poole; Evertson & Emmer 2009; Henley
+  2009; Marzano, Marzano & Pickering 2003; Vincent. The spec's reading list originally carried
+  three (Canter, Evertson & Poole, Wong & Wong) and omitted Evertson & Emmer, Henley, Marzano and
+  Vincent.
+- **Decision (2026-09-20):** add all four omitted sources. The spec's reading list now carries all
+  six guide-suggested resources plus Wong & Wong (drawn from the guide's in-session reading).
+  Unretrievable print monographs bind the author to title-level support at point of use under
+  `D-2026-0001`; no full-text access is required at G1.
+- **Blocks:** ~~the `readings` criterion of `D-2026-0018`~~ **unblocked**.
