@@ -4,7 +4,7 @@
   "unit_no": 1,
   "stage": "G2",
   "reviewed_commit": "9cd14c2",
-  "generated_at": "2026-09-21T08:25:42.828Z",
+  "generated_at": "2026-09-21T08:51:53.484Z",
   "input_manifest": {
     ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
     ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
