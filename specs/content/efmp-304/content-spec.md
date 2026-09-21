@@ -138,10 +138,10 @@ Instead, this spec sets a **binding requirement on G2 source-binding** for each 
 
 ## Week schedule
 
-**Derived, not guide-given.** The guide carries no week table. The distribution below is
-proportional to sub-topic count and technical density, and is **flagged for the evaluator**: if
-it judges the derivation a decision the guide does not determine, it should escalate rather than
-approve it.
+**Derived, not guide-given; confirmed by the curriculum owner 2026-09-20** (gap `G-2026-16`,
+now resolved). The guide carries no week table. The distribution below is proportional to
+sub-topic count and technical density. A 16-week term is confirmed, distributed 3/2/3/3/2/3
+across Units 1 to 6.
 
 | Week(s) | Unit | Sub-topics |
 |---|---|---|
