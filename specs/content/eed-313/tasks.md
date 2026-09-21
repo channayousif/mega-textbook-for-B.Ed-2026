@@ -34,6 +34,11 @@ artefacts (coverage, sources, figures, concepts). `validate:content`, `check:con
 `check:bloom-bands`, `check:no-em-dash`, `check:docs-sync` all green. G1 unit-spec affirmed at
 intake. G2 en-draft cleared by deterministic gates.
 
+**Unit 5 - Course review (2026-09-21):** the English content was authored to the Spec 008 v3.0
+per-topic layout: `index.mdx` + `topic-01…04.mdx` + `unit-assessment.mdx` (shorter 5/5/3 bank) +
+`unit-teacher-notes.mdx`; governance artefacts (coverage, sources, figures, concepts). All content
+gates green. G1 unit-spec affirmed at intake. G2 en-draft cleared by deterministic gates.
+
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ✅ | auto:gates | intake G-2026-16; content-spec status: approved |
@@ -58,9 +63,16 @@ intake. G2 en-draft cleared by deterministic gates.
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
 | Unit 4 | G1 unit-spec | ✅ | auto:gates | intake G-2026-16; content-spec status: approved |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/eed-313/reviews/unit-04/G2/20260921T102120000Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/eed-313/reviews/unit-04/G2/20260921T102855000Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | |
 | Unit 4 | G4 ur-translation | ▢ | | |
 | Unit 4 | G5 ur-review | ▢ | | |
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
+| Unit 5 | G1 unit-spec | ✅ | auto:gates | intake G-2026-16; content-spec status: approved |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/eed-313/reviews/unit-05/G2/20260921T102855000Z-gates.json |
+| Unit 5 | G3 en-review | ▢ | | |
+| Unit 5 | G4 ur-translation | ▢ | | |
+| Unit 5 | G5 ur-review | ▢ | | |
+| Unit 5 | G6 assets | ▢ | | |
+| Unit 5 | G7 publish | ▢ | | |

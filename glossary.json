@@ -323,5 +323,20 @@
     "term": "Unexpected-event decision aid",
     "definition_en": "A decision framework for when something unplanned happens: the priority order is safety first, then learning, then relationship.",
     "definition_ur": "غیر متوقع واقعات کے لیے فیصلے کا ڈھانچہ: ترتیب کا حکم پہلے تحفظ، پھر سیکھنا، پھر رشتہ ہے۔"
+  },
+  {
+    "term": "Classroom management plan",
+    "definition_en": "The course's culminating artefact: a document that states a philosophy of learning, describes curriculum decisions, proposes a routine set, and explains how the plan builds care and accountability, all justified by reference to a described classroom.",
+    "definition_ur": "کورس کی اختتامی تخلیق: ایستاد دستاویز جو سیکھنے کا فلسفہ بیان کرتی ہے، نصابی فیصلے بیان کرتی ہے، دستور العمل کا مجموعہ تجویز کرتی ہے، اور بتاتی ہے کہ منصوبہ دیکھ بھال اور جوابدہی کیسے بناتا ہے۔"
+  },
+  {
+    "term": "Peer critique",
+    "definition_en": "A structured protocol for evaluating a classroom management plan against three criteria: clarity, consistency and coverage. The reviewer names the gap; the author decides how to revise.",
+    "definition_ur": "کلاس روم انتظام منصوبے کا جائزہ لینے کا ایک منظم طریقہ کار: وضاحت، ہم آہنگی اور تحفظ۔ جائزہ لینے والا کمی بتاتا ہے؛ مصحح فیصلہ کرتا ہے کہ کیسے ترمیم کی جائے۔"
+  },
+  {
+    "term": "Summary and close",
+    "definition_en": "The course's closing synthesis: a whole-group event in which each trainee states a belief that changed across the course and cites the evidence for the change.",
+    "definition_ur": "کورس کی اختتامی ترکیب: ایک پورے گروہ کی تقریب جس میں ہر تربیت یافتہ شخص ایک عقیدہ بیان کرتا ہے جو کورس کے دوران بدل گیا اور تبدیلی کا ثبوت پیش کرتا ہے۔"
   }
 ]
