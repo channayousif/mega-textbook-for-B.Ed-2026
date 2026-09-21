@@ -60,7 +60,7 @@ register pass; `translation_status: reviewed` on all EN and UR unit-01 files;
 | Unit 1 | G7 publish | ✅ | YM | |
 | Unit 2 | G1 unit-spec | ✅ | YM | per-topic G1 blocks added 2026-09-14; the guide-2.3 split across topics 2.3 and 2.4 was confirmed by the curriculum owner 2026-09-15 |
 | Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-302/reviews/unit-02/G2/20260921T121314000Z-gates.json |
-| Unit 2 | G3 en-review | 🟡 | agent:g3-antigravity-gemini-31-pro | provisional:specs/content/efmp-302/reviews/unit-02/G3/antigravity-g3-efmp302-u2-c3-20260920T222443Z.json |
+| Unit 2 | G3 en-review | ▢ | | |
 | Unit 2 | G4 ur-translation | ▢ | | scope changed to the per-topic layout. The legacy UR drafts were removed as orphans; under ADR-0022 the Urdu mirror arrives in the corpus-wide translation phase, and this unit is the designated Urdu rate probe |
 | Unit 2 | G5 ur-review | ▢ | | scope changed to the per-topic layout; 18 authored Urdu concept labels in concepts/unit-02.md need review |
 | Unit 2 | G6 assets | ▢ | | |
