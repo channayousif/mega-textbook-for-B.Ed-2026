@@ -4,7 +4,7 @@
   "unit_no": 1,
   "stage": "G2",
   "reviewed_commit": "8903e82",
-  "generated_at": "2026-09-22T19:36:03.136Z",
+  "generated_at": "2026-09-22T19:39:49.480Z",
   "input_manifest": {
     ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
     ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
@@ -83,7 +83,11 @@
     "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
     "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
     "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
-    "specs/content/geng-300/content-spec.md": "4c0ddd7fc8e3671c905521b513e311f2f8a86d9697e8bcb5f31741da21987467",
+    "specs/content/geng-300/concepts/unit-01.md": "4357ad3fbad21781952bfc4187b448279ff04b445a640d456c91e17bae4eae61",
+    "specs/content/geng-300/content-spec.md": "6a6a516148201bf673e5196b97bc23c8c4de598a236027c6b34c82858b506c1d",
+    "specs/content/geng-300/coverage/unit-01.md": "063f969360daec41a6412a2c2ccc62903de642f978577bede3d2b9d5606fd8be",
+    "specs/content/geng-300/figures/unit-01.md": "bc2a5393468e6d06055ba41820b09d5fb6bfb5fdf0578d9970a1925a58812faa",
+    "specs/content/geng-300/sources/unit-01.md": "28d6d68a2aa19bbb0d1d6a63c5f18d000c9ecec29ebe9212198dc5112a251186",
     "specs/content/style-guide.md": "db96c9b33b0fb9522986462a0b519620c3c1d7602a046d7b90e638f643da4610"
   },
   "evidence_manifest": {
