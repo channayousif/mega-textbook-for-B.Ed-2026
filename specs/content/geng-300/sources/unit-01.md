@@ -33,3 +33,4 @@ and any G3 reviewer see the limitation explicitly rather than inferring it from 
 | Murphy2019 | Murphy, R. (2019). *English Grammar in Use* (5th edn.). Cambridge University Press. | (print) | topic-04.mdx U1-06 (pronunciation) | guide-required |
 | Swan2006 | Swan, M. (2006). *Practical English Usage* (3rd edn.). Oxford University Press. | (print) | topic-01.mdx U1-01 (vocabulary building); topic-03.mdx U1-04 (word formation) | guide-required |
 | Straus2014 | Straus, J. (2014). *The Blue Book of Grammar and Punctuation* (11th edn.). Jossey-Bass. | (print) | topic-04.mdx U1-07 (editing) | guide-required |
+| Johns2016 | Johns, J. & Lenski, S. (2016). *Improving Reading: Strategies, Resources, and Common Core Connections*. Kendall Hunt. | https://www.kendallhunt.com/product/improving-reading-strategies-resources-and-common-core-connections-6th-edition | topic-01.mdx U1-01 (vocabulary building); topic-04.mdx U1-07 (editing) | guide-required |
