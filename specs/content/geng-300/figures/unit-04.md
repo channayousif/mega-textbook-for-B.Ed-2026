@@ -4,7 +4,7 @@ Per `specs/009-figure-rendering/contracts/figure-manifest-v2.md` (v3 `Kind` voca
 One row per figure carrier in the unit's `topic-*.mdx` files; `Topic` is the `topic_label` of the
 file the carrier sits in. **Two figures per topic** (Constitution Art. III.10), and the unit
 carries a `concept-map` (`fig-U4-2`) and a `flowchart` (`fig-U4-3`) as its required schematics.
-Every figure is **Status: prompt-only** - the rendering pass is a separate skill (Spec 009).
+Every figure is **Status: placed** (rendered SVG committed).
 
 | Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
 |---|---|---|---|---|---|---|
