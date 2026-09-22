@@ -165,8 +165,8 @@ Weeks 9 to 12 (derived). Unit Spec (G1) for `licence/geng-300/unit-03/`.
 | U3-04 | W10 | 3.2 | Public speaking: overcoming stage fright, voice modulation and body language |
 | U3-05 | W11 | 3.3 | Presentation skills: organizing content, visual aids and engaging the audience |
 | U3-05 | W11 | 3.3 | Presentation skills: handling Q&A, managing time |
-| U3-06 | W12 | 3.4 | Informal communication: small talk, networking and conversational skills |
-| U3-06 | W12 | 3.4 | Informal communication: turn-taking, conversational repair, politeness strategies |
+| U3-06 | W12 | 3.3 | Informal communication: small talk, networking and conversational skills |
+| U3-06 | W12 | 3.3 | Informal communication: turn-taking, conversational repair, politeness strategies |
 
 ### Topic list
 
@@ -223,7 +223,7 @@ Weeks 13 to 16 (derived). Unit Spec (G1) for `licence/geng-300/unit-04/`.
 |---|---|---|---|---|
 | 4.1 | Professional writing in practice | U4-01, U4-02 | 18-22 | fig-U4-1: table, fig-U4-4: diagram |
 | 4.2 | Intercultural communication | U4-03 | 16-20 | fig-U4-2: concept-map, fig-U4-5: table |
-| 4.3 | Adapting communication for your context | U4-03, U4-04 | 14-18 | fig-U4-3: flowchart, fig-U4-6: table |
+| 4.3 | Adapting communication for your context | U4-04 | 14-18 | fig-U4-3: flowchart, fig-U4-6: table |
 
 **Depth budget**: 6 sub-topics; 3 topics; 50-60 reading-min.
 
