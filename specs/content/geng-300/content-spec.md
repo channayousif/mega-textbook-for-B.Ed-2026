@@ -89,8 +89,8 @@ Weeks 1-5 (15 hours). Unit Spec (G1) for `docs/semester-1/geng-300/unit-01/`.
 | U1-03 | W2 | 1.2 | Communicative grammar: fragments, run-ons, modifiers, articles, word classes |
 | U1-04 | W3 | 1.3 | Word formation: affixation, compounding, clipping, back formation |
 | U1-05 | W3 | 1.4 | Sentence structure: simple, compound, complex, compound-complex |
-| U1-06 | W4 | 1.5 | Sound production and pronunciation |
-| U1-07 | W5 | 1.6 | Integrating foundations: editing a short text for grammar, vocabulary and structure |
+| U1-06 | W4 | 1.4 | Sound production and pronunciation |
+| U1-07 | W5 | 1.4 | Integrating foundations: editing a short text for grammar, vocabulary and structure |
 
 ### Topic list
 
