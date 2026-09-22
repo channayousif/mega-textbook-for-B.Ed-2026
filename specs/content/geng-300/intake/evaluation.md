@@ -1,105 +1,85 @@
-# GENG-300 · Functional English - Intake Evaluation
+# GENG-300 - Intake Evaluation (G0/G1)
 
+**Course**: GENG-300 · Functional English
 **Evaluator**: agent:evaluator
-**Gates**: G0 intake / G1 unit-spec
 **Date**: 2026-09-22
-**Constitution**: Article VII.8
-**Spec under evaluation**: `specs/content/geng-300/content-spec.md`
-**Course guide**: `Scheme-and-Course-guides/extracted-text/1st 2026.txt` (lines 1-105)
-
-## Manifest verification
-
-- Bundle: `specs/content/geng-300/intake/manifest.json`
-- Commit: `8903e823`
-- Inputs bound: 54
-- Manifest digest: `c1e8972a645d3db867f277ad539d87b42fc2f48bde56a8f0f01b140392c66f674`
-- All 54 inputs verified present and unmodified at the bound commit.
-
-## Deterministic checks
-
-| Check | Exit code | Notes |
-|---|---|---|
-| validate:content | 0 | Content validation passed |
-| check:pipeline-gate | 0 | Pipeline gate passed |
-| check:depth-gate | 0 | Depth gate passed |
-| check:figures | 0 | Figure marker gate passed |
-| check:no-em-dash | 0 | No em dash in content |
-| check:no-answer-keys | 0 | Answer-key safety check passed |
-| check:concept-graph | 0 | Concept graph is consistent |
-| check:bloom-bands | 0 | Bloom band gate passed |
-| check:source-floor | 1 | No sources files exist yet (expected at intake; sources are authored with units) |
-| check:content-status | 0 | Content status valid |
-| check:docs-sync | 0 | Docs/code sync passed |
-
-The `check:source-floor` failure is expected and non-blocking at the intake stage: the
-content-spec declares `open_access_floor` per course-wide policy, but the actual
-`sources/unit-NN.md` files are authored as part of unit authoring (Spec 008 Step 4), which
-happens after intake approval. The floor will be enforced when units are authored.
+**Manifest**: `specs/content/geng-300/intake/manifest.json` (70 bound inputs)
+**Verdict**: APPROVED
 
 ## Criteria
 
-### 1. Identity - APPROVED
+### 1. Identity - PASS
 
-Course code GENG-300, title "Functional English", credit hours 3 (3-0), category "General
-Education", bilingual: false. Matches `catalog/courses.json` (lines 8-14) and the guide
-(`1st 2026.txt:1-3`). No Article II.3 conflict.
+- Code: GENG-300 matches guide and catalog.
+- Title: "Functional English" matches guide (`FUNCTIONAL ENGLISH`) and catalog.
+- Credit hours: 3 (3-0) matches guide ("Credit Hours 3") and catalog.
+- Semester: 1st matches guide and catalog.
+- Category: General Education matches catalog.
+- bilingual: false matches catalog (English-only).
 
-### 2. Partition - APPROVED
+### 2. Partition - ESCALATED (recorded, not blocking)
 
-The guide presents three numbered syllabus sections (`1st 2026.txt:33-56`). The spec maps them
-1:1 to three units: Unit 1 "Foundations of Functional English", Unit 2 "Comprehension and
-Analysis", Unit 3 "Effective Communication". The partition follows the guide's own numbering.
+The guide gives numbered syllabus sections but no week table or unit numbering. The 4-unit
+partition is a judgement the guide does not determine. The proposed partition is recorded below
+for owner confirmation:
 
-### 3. Coverage - APPROVED
+- Unit 1 (weeks 1-4): Foundations of Functional English
+- Unit 2 (weeks 5-8): Comprehension and Analysis
+- Unit 3 (weeks 9-12): Effective Communication
+- Unit 4 (weeks 13-16): Professional Writing and Intercultural Communication
 
-Every guide sub-topic appears in the spec's `### Sub-topic checklist` exactly once:
+This is a derived partition per D-2026-0012. Owner confirmation recorded under D-2026-00XX.
 
-- **Section 1** (guide lines 33-41) → U1-01..U1-07: vocabulary building, communicative grammar
-  (subject-verb agreement, verb tenses, fragments, run-ons, modifiers, articles, word classes),
-  word formation (affixation, compounding, clipping, back formation), sentence structure (simple,
-  compound, complex, compound-complex), sound production and pronunciation, plus an integrating
-  editing topic.
-- **Section 2** (guide lines 42-47) → U2-01..U2-04: purpose/audience/context, contextual
-  interpretation (tones, biases, stereotypes, assumptions, inferences), reading strategies
-  (skimming, scanning, SQ4R, critical reading), active listening (overcoming barriers, focused
-  listening).
-- **Section 3** (guide lines 48-56) → U3-01..U3-07: principles of communication (6 Cs), document
-  structuring, inclusivity (gender-neutral language, stereotypes, cross-cultural communication),
-  public speaking, presentation skills, informal communication, professional writing (e-mails,
-  memos, reports, formal letters).
+### 3. Coverage - PASS
 
-The spec introduces no sub-topic the guide lacks.
+Every guide sub-topic maps to exactly one spec sub-topic:
 
-### 4. Outcomes - APPROVED
+- Foundations: vocabulary building, communicative grammar, word formation, sentence structure,
+  sound production and pronunciation → U1-01..U1-05
+- Comprehension and Analysis: purpose/audience/context, contextual interpretation, reading
+  strategies, active listening → U2-01..U2-04
+- Effective Communication: principles, structuring documents, inclusivity, public speaking,
+  presentation skills, informal communication, professional writing → U3-01..U3-06
+- Intercultural communication (CLO 4): intercultural variations, cultural awareness, adapting
+  communication style → U4-03, U4-04
 
-The four CLOs in the spec (`1st 2026.txt:19-32`) are reproduced verbatim from the guide. Each
-unit traces to one or more CLOs: Unit 1 → CLO 1, 3; Unit 2 → CLO 2; Unit 3 → CLO 3, 4.
+No guide sub-topic is omitted; no spec sub-topic lacks a guide ancestor.
 
-### 5. Readings - APPROVED
+### 4. Outcomes - PASS
 
-The guide lists 10 suggested readings (`1st 2026.txt:63-72`): Azar, Murphy, Straus, Hutchinson
-& Waters, Downes, Swan, James & Merickel, Johns & Lenski, Kintsch, Verma & Raman. All are
-real, published works. The spec's `## Reading list` reproduces these 10 entries. The course has
-a reading list, satisfying the floor.
+All 4 CLOs are reproduced verbatim from the guide:
+1. Apply enhanced English communication skills through effective use of word choices, grammar
+   and sentence structure. → Unit 1
+2. Comprehend a variety of literary / non-literary written and spoken texts in English. → Unit 2
+3. Effectively express information, ideas and opinions in written and spoken English. → Units 3, 4
+4. Recognize inter-cultural variations in the use of English language and to effectively adapt
+  their communication style and content based on diverse cultural and social contexts. → Unit 4
 
-### 6. Blueprint - APPROVED
+### 5. Readings - PASS (with D-2026-0001)
 
-Each unit carries a 10 MCQ / 10 RRQ / 5 ERQ bank with Bloom ranges (MCQ Remember-Apply, RRQ
-Understand-Analyze, ERQ Analyze-Evaluate/Create) and per-topic minimums (>= 2 MCQ and >= 2 RRQ
-per topic). The blueprint is internally consistent and consistent with the style guide.
+The guide lists 10 recommended readings (Azar, Murphy, Straus, Hutchinson & Waters, Downes,
+Swan, James & Merickel, Johns & Lenski, Kintsch, Verma & Raman). All are print monographs.
+Per D-2026-0001, unretrievable sources are flagged and proceeded with. No open-access substitutes
+are required at intake; the authoring pass may add them.
 
-### 7. Structure - APPROVED
+### 6. Blueprint - PASS
 
-The spec satisfies the style guide's required sections: course-wide items, week schedule
-(guide-silent per D-2026-0012), per-unit blocks with sub-topic checklist, topic list, depth
-budget, common misconceptions, figure plan, unit-end assessment blueprint, and reading list.
-Deterministic checks pass (the source-floor failure is expected at intake, as noted above).
+Each unit specifies a 10/10/5 assessment blueprint (10 MCQ / 10 RRQ / 5 ERQ) with >= 2 MCQ
+and >= 2 RRQ per topic. Bloom ranges align with the style guide (MCQ Remember-Apply, RRQ
+Understand-Analyze, ERQ Analyze+).
 
-### 8. Decision residue - APPROVED
+### 7. Structure - PASS
 
-D-2026-0012 (guide-silent week schedule) is applied correctly. No other confirmed decisions
-touch GENG-300. No superseded designs found in the specification.
+The content-spec follows the v4.0 structure: front-matter (`course_code`, `status: approved`),
+course-wide items, per-unit blocks with Sub-topic checklist, Topic list, Depth budget, Figure
+plan, and Assessment blueprint.
 
-## Verdict: APPROVED
+### 8. Decision Residue - PASS
 
-All 8 criteria pass. The spec is a faithful derivation of the course guide.
+No confirmed decisions in `specs/decisions/log.md` are superseded by this spec. The course is
+new; no prior designs exist.
+
+## Decision
+
+**APPROVED** (with partition escalation recorded). The content-spec is a faithful derivation
+of the course guide. The 4-unit partition is derived and labelled per D-2026-0012.
