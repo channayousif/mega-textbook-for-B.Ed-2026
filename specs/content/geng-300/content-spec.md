@@ -1,6 +1,7 @@
 ---
 course_code: GENG-300
 status: approved
+# D-2026-0019: intake passes G0/G1 (agent:evaluator, 2026-09-22)
 bilingual: false
 open_access_floor:
   "1": 1

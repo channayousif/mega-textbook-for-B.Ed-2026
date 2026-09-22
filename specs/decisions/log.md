@@ -735,3 +735,46 @@ Recorded here so the boundary stays visible as the log grows:
     `D-2026-0001` governs unretrievable sources.
   - Does not approve any unit's English review (G3) or Urdu translation (G5). Certifies no content,
     qualifies no reviewer, authorises no publication (Art. VII.8.4).
+
+---
+
+## D-2026-0019 - GENG-300 intake: identity, partition, coverage, outcomes, readings, blueprint, structure, no decision residue
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** GENG-300 only. Settles identity, the three-unit partition, the sub-topic coverage of all
+  three checklists, the CLO traces, the reading list, the assessment blueprints, structural
+  conformance, and the absence of decision residue.
+- **Decided by:** agent:evaluator, 2026-09-22
+- **Decision:**
+  1. **Identity.** GENG-300, "Functional English", **3 (3-0)** credit hours, General Education,
+     bilingual: false. Matches `catalog/courses.json:8-14` and `1st 2026.txt:1-3`. No Article II.3
+     conflict.
+  2. **Partition follows the guide.** The guide numbers three syllabus sections (`1st 2026.txt:33-56`);
+     the spec maps them 1:1 to three units (Foundations; Comprehension and Analysis; Effective
+     Communication).
+  3. **Coverage is complete and adds nothing.** Verified against the guide's three sections
+     (`1st 2026.txt:33-56`): Section 1 → U1-01..U1-07, Section 2 → U2-01..U2-04, Section 3 →
+     U3-01..U3-07. Every guide sub-topic appears exactly once; the spec introduces no sub-topic the
+     guide lacks.
+  4. **Outcomes traced.** The four CLOs are reproduced verbatim from the guide (`1st 2026.txt:19-32`).
+     Unit 1 → CLO 1, 3; Unit 2 → CLO 2; Unit 3 → CLO 3, 4.
+  5. **Readings present.** The guide lists 10 suggested readings (`1st 2026.txt:63-72`); the spec
+     reproduces all 10. All are real, published works.
+  6. **Blueprints consistent.** Each unit carries a 10/10/5 bank with MCQ Remember-Apply, RRQ
+     Understand-Analyze, ERQ Analyze-Evaluate/Create, and per-topic minimums. Consistent with the
+     style guide.
+  7. **Structure conforms.** The spec carries the full contract-required block set. Deterministic
+     checks pass. The `check:source-floor` failure is expected at intake (sources are authored with
+     units, not at intake); non-blocking.
+  8. **No decision residue.** D-2026-0012 (guide-silent week schedule) is applied correctly. No
+     other confirmed decisions touch GENG-300.
+- **Basis:**
+  `Scheme-and-Course-guides/extracted-text/1st 2026.txt`: title `:1-3`, CLOs `:19-32`, syllabus
+  `:33-56`, readings `:63-72`. `catalog/courses.json:8-14` for code/title/credits/track.
+  `specs/content/geng-300/content-spec.md` for the full unit breakdown, checklists, topic lists,
+  depth budgets, figure plans, and assessment blueprints.
+- **Bound to:** `specs/content/geng-300/intake/manifest.json`, manifest digest
+  `c1e8972a645d3db867f277ad539d87b42fc2f48bde56a8f0f01b140392c66f674`
+- **Limits:** does not approve any unit's English review (G3) or Urdu translation (G5). Certifies no
+  content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
