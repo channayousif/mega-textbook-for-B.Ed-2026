@@ -68,8 +68,8 @@ Weeks 1 to 4 (derived). Unit Spec (G1) for `licence/geng-300/unit-01/`.
 | U1-02 | W1 | 1.1 | Communicative grammar: modifiers, articles, word classes |
 | U1-03 | W2 | 1.2 | Word formation: affixation, compounding, clipping, back formation |
 | U1-04 | W2 | 1.3 | Sentence structure: simple, compound, complex, compound-complex |
-| U1-05 | W3 | 1.4 | Sound production and pronunciation: phonemes, stress, intonation |
-| U1-05 | W3 | 1.4 | Sound production and pronunciation: common pronunciation challenges for Urdu speakers |
+| U1-05 | W3 | 1.3 | Sound production and pronunciation: phonemes, stress, intonation |
+| U1-05 | W3 | 1.3 | Sound production and pronunciation: common pronunciation challenges for Urdu speakers |
 | U1-01 | W4 | 1.1 | Vocabulary in context: register, collocation, connotation and denotation |
 
 ### Topic list
