@@ -493,5 +493,80 @@
     "term": "Minimal pair",
     "definition_en": "A pair of words that differ by only one sound.",
     "definition_ur": "دو الفاظ کا ایک جوڑا جو صرف ایک آواز سے مختلف ہو۔"
+  },
+  {
+    "term": "Purpose",
+    "definition_en": "Why a text was written.",
+    "definition_ur": "متن کیوں لکھا گیا۔"
+  },
+  {
+    "term": "Audience",
+    "definition_en": "Who the text is written for.",
+    "definition_ur": "متن کس کے لیے لکھا گیا۔"
+  },
+  {
+    "term": "Context",
+    "definition_en": "The situation in which the text was produced and is being read.",
+    "definition_ur": "وہ صورتحال جس میں تحریر پیدا ہوئی اور پڑھی جا رہی ہے۔"
+  },
+  {
+    "term": "Tone",
+    "definition_en": "The writer's attitude toward the subject or the audience.",
+    "definition_ur": "مصنف کا موضوع یا سامعین کے تعلق کا رویہ۔"
+  },
+  {
+    "term": "Bias",
+    "definition_en": "A tendency to favour one perspective over others.",
+    "definition_ur": "ایک نقطہ نظر کو دوسرے پر ترجیح دینے کا رجحان۔"
+  },
+  {
+    "term": "Stereotype",
+    "definition_en": "A fixed, oversimplified belief about a group of people.",
+    "definition_ur": "کسی گروہ کے بارے میں ایک مقررہ، حد سے زیادہ سادہ عقیدہ۔"
+  },
+  {
+    "term": "Assumption",
+    "definition_en": "Something the writer takes for granted without stating it explicitly.",
+    "definition_ur": "وہ چیز جسے مصنف بغیر واضح طور پر بیان کیے عام سمجھتا ہے۔"
+  },
+  {
+    "term": "Inference",
+    "definition_en": "A conclusion the reader draws from evidence in the text.",
+    "definition_ur": "وہ نتیجہ جو قاری متن کے شواہد سے اخذ کرتا ہے۔"
+  },
+  {
+    "term": "Active listening",
+    "definition_en": "Listening with the intention to understand, not just to hear.",
+    "definition_ur": "سمجھنے کی نیت سے سننا، صرف سننا نہیں۔"
+  },
+  {
+    "term": "Critical reading",
+    "definition_en": "Reading to evaluate a text, not just understand it.",
+    "definition_ur": "متن کو صرف سمجھنے کے بجائہ جائزہ لینے کے لیے پڑھنا۔"
+  },
+  {
+    "term": "Reading strategies",
+    "definition_en": "Deliberate approaches to reading that match the reader's purpose.",
+    "definition_ur": "پڑھنے کے جان بوجھ کر اپنائے گئے طریقے جو قاری کے مقصد سے مماثلت رکھتے ہیں۔"
+  },
+  {
+    "term": "Skimming",
+    "definition_en": "Reading quickly to get the main idea of a text.",
+    "definition_ur": "متن کا بنیادی خیال حاصل کرنے کے لیے جلدی سے پڑھنا۔"
+  },
+  {
+    "term": "Scanning",
+    "definition_en": "Reading quickly to find specific information.",
+    "definition_ur": "مخصوص معلومات تلاش کرنے کے لیے جلدی سے پڑھنا۔"
+  },
+  {
+    "term": "SQ4R",
+    "definition_en": "A structured reading strategy: survey, question, read, recite, review, reflect.",
+    "definition_ur": "ایک منظم پڑھنے کی حکمت عملی: سروے، سوال، پڑھنا، دہرانا، جائزہ، غور۔"
+  },
+  {
+    "term": "Note-taking",
+    "definition_en": "Recording what you hear or read in a way that helps you remember.",
+    "definition_ur": "جو سنیں یا پڑھیں اسے یاد رکھنے میں مدد دینے کے لیے ریکارڈ کرنا۔"
   }
 ]

@@ -114,18 +114,18 @@ Weeks 5 to 8 (derived). Unit Spec (G1) for `licence/geng-300/unit-02/`.
 | U2-01 | W5 | 2.1 | Understanding purpose, audience and context |
 | U2-02 | W5 | 2.1 | Contextual interpretation: tones, biases, stereotypes, assumptions, inferences |
 | U2-03 | W6 | 2.2 | Reading strategies: skimming, scanning, SQ4R, critical reading |
-| U2-03 | W6 | 2.2 | Reading strategies: making predictions, summarising, questioning |
-| U2-04 | W7 | 2.3 | Active listening: overcoming listening barriers, focused listening |
-| U2-04 | W7 | 2.3 | Active listening: note-taking strategies, listening for main ideas and detail |
-| U2-01 | W8 | 2.1 | Purpose and audience in Pakistani English media |
+| U2-05 | W6 | 2.2 | Reading strategies: making predictions, summarising, questioning |
+| U2-04 | W7 | 2.2 | Active listening: overcoming listening barriers, focused listening |
+| U2-06 | W7 | 2.2 | Active listening: note-taking strategies, listening for main ideas and detail |
+| U2-07 | W8 | 2.3 | Purpose and audience in Pakistani English media |
 
 ### Topic list
 
 | Topic | Title | Sub-topic IDs | Reading-min | Figures (id: archetype) |
 |---|---|---|---|---|
 | 2.1 | Reading for purpose, audience and context | U2-01, U2-02 | 18-22 | fig-U2-1: concept-map, fig-U2-4: table |
-| 2.2 | Strategies for reading and listening | U2-03, U2-04 | 18-22 | fig-U2-2: flowchart, fig-U2-5: table |
-| 2.3 | Critical reading and listening in practice | U2-02, U2-04 | 16-20 | fig-U2-3: diagram, fig-U2-6: table |
+| 2.2 | Strategies for reading and listening | U2-03, U2-05, U2-04, U2-06 | 18-22 | fig-U2-2: flowchart, fig-U2-5: table |
+| 2.3 | Critical reading and listening in practice | U2-07 | 16-20 | fig-U2-3: diagram, fig-U2-6: table |
 
 **Depth budget**: 7 sub-topics; 3 topics; 55-65 reading-min.
 
