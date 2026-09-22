@@ -117,7 +117,7 @@ publication. Verify that unretrievable monographs are flagged per D-2026-0001.
 
 ### Measurable Outcomes
 
-- **SC-001**: All 4 units are authored with complete nine-part topic cycles (36 topics total
+- **SC-001**: All 4 units are authored with complete nine-part topic cycles (31 topics total
   across 4 units)
 - **SC-002**: All 11 content gates pass when `npm run check:content` is run
 - **SC-003**: Every topic has at least 2 rendered figure SVGs (≥ 72 figures total)

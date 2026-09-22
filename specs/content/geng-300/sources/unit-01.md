@@ -1,36 +1,33 @@
 # Sources consulted - GENG-300 Unit 1 (Foundations of Functional English)
 
 Per `specs/007-content-depth-standard/contracts/sources-consulted.md`. Every key cited in
-`specs/content/geng-300/coverage/unit-01.md` appears here, and every key here is cited both in prose
-and in a per-topic `## Further reading` section.
+`specs/content/geng-300/coverage/unit-01.md` appears here, and every key here is cited both in
+prose and in a per-topic `## Further reading` section.
 
-Verified 2026-09-22: the three cited books (Azar 1999, Murphy 2019, Swan 2006) are confirmed in
-library catalogues but are print monographs not retrievable by this host. Straus 2014 is likewise a
-print monograph. All are governed by D-2026-0001.
+Verified 2026-09-22: the two primary sources (azar2005, murphy2012) are confirmed in library
+catalogues but are print monographs not retrievable by this host. The supplementary source
+(swan2016) is also a print monograph. The South Asian English source (kachru2006) is a
+scholarly work on World Englishes. All are flagged per D-2026-0001.
 
 ## Unverifiable sources
 
 Bound excerpts could not be committed for these keys. Recorded here so `check:depth-gate`
 and any G3 reviewer see the limitation explicitly rather than inferring it from silence.
 
-- Azar1999: Print-only book (Pearson), no URL or DOI. Not retrievable by this host; no excerpt
-  bound. The unit's use of it is at the level of subject-verb agreement and verb tense patterns,
-  which no retrieved source corroborates independently. Could not be retrieved on 2026-09-22.
-  Owner ruling (D-2026-0001): flag and proceed.
-- Murphy2019: Print-only book (Cambridge University Press), not retrievable by this host. The
-  cited pronunciation and grammar patterns are unread. Could not be retrieved on 2026-09-22.
-  Owner ruling (D-2026-0001): flag and proceed.
-- Swan2006: Print-only book (Oxford University Press), not retrievable by this host. The cited
-  word-formation and vocabulary patterns are unread. Could not be retrieved on 2026-09-22.
-  Owner ruling (D-2026-0001): flag and proceed.
-- Straus2014: Print-only book (Jossey-Bass), not retrievable by this host. The cited editing
-  conventions are unread. Could not be retrieved on 2026-09-22. Owner ruling (D-2026-0001): flag
-  and proceed.
+- azar2005: Print-only book (Pearson). Not retrievable by this host; no excerpt bound. The
+  unit's use of it is at the level of grammatical frameworks and terminology, which no
+  retrieved source corroborates independently. Could not be retrieved on 2026-09-22. Owner
+  ruling (D-2026-0001): flag and proceed.
+- murphy2012: Print-only book (Cambridge University Press). Not retrievable by this host.
+  Could not be retrieved on 2026-09-22. Owner ruling (D-2026-0001): flag and proceed.
+- swan2016: Print-only book (Oxford University Press). Not retrievable by this host.
+  Could not be retrieved on 2026-09-22. Owner ruling (D-2026-0001): flag and proceed.
+- kachru2006: Print-only scholarly work. Not retrievable by this host. Could not be retrieved
+  on 2026-09-22. Owner ruling (D-2026-0001): flag and proceed.
 
 | Key | Citation | URL/DOI | Supports | Kind |
 |---|---|---|---|---|
-| Azar1999 | Azar, B. S. (1999). *Understanding and Using English Grammar* (3rd edn.). Pearson. | (print) | topic-02.mdx U1-02, U1-03 (subject-verb agreement, verb tenses); topic-03.mdx U1-05 (sentence structure) | guide-required |
-| Murphy2019 | Murphy, R. (2019). *English Grammar in Use* (5th edn.). Cambridge University Press. | (print) | topic-04.mdx U1-06 (pronunciation) | guide-required |
-| Swan2006 | Swan, M. (2006). *Practical English Usage* (3rd edn.). Oxford University Press. | (print) | topic-01.mdx U1-01 (vocabulary building); topic-03.mdx U1-04 (word formation) | guide-required |
-| Straus2014 | Straus, J. (2014). *The Blue Book of Grammar and Punctuation* (11th edn.). Jossey-Bass. | (print) | topic-04.mdx U1-07 (editing) | guide-required |
-| Johns2016 | Johns, J. & Lenski, S. (2016). *Improving Reading: Strategies, Resources, and Common Core Connections*. Kendall Hunt. | https://www.kendallhunt.com/product/improving-reading-strategies-resources-and-common-core-connections-6th-edition | topic-01.mdx U1-01 (vocabulary building); topic-04.mdx U1-07 (editing) | guide-required |
+| azar2005 | Azar, B. S. (2005). *Understanding and Using English Grammar* (3rd edn.). Pearson. | (print) | topic-01.mdx U1-01 (vocabulary in context); topic-01.mdx U1-02 (communicative grammar); topic-02.mdx U1-04 (sentence structures) | guide-required |
+| murphy2012 | Murphy, R. (2012). *English Grammar in Use* (4th edn.). Cambridge University Press. | (print) | topic-01.mdx U1-02 (communicative grammar) | guide-required |
+| swan2016 | Swan, M. (2016). *Practical English Usage* (4th edn.). Oxford University Press. | (print) | topic-01.mdx U1-01 (vocabulary in context); topic-02.mdx U1-03 (word formation); topic-03.mdx U1-05 (sound system) | guide-required |
+| kachru2006 | Kachru, B. B., Kachru, Y., & Nelson, C. L. (2006). *The Handbook of World Englishes*. Blackwell. | (print) | topic-03.mdx U1-05 (challenges for Urdu speakers) | guide-required |

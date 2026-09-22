@@ -443,5 +443,55 @@
     "term": "Pronunciation",
     "definition_en": "The way in which spoken words are sounded. Clear pronunciation supports clear writing.",
     "definition_ur": "بولے جانے والے الفاظ کی آواز۔ صاف تلفظ صاف تحریر کی حمایت کرتا ہے۔"
+  },
+  {
+    "term": "Register",
+    "definition_en": "The level of formality that a situation demands in language use.",
+    "definition_ur": "زبان کے استعمال کا وہ سطح جسے صورتحال میں ضرورت ہوتی ہے۔"
+  },
+  {
+    "term": "Collocation",
+    "definition_en": "The tendency of certain words to appear together.",
+    "definition_ur": "بعض الفاظ کا ایک دوسرے کے ساتھ آنے کا رجحان۔"
+  },
+  {
+    "term": "Connotation",
+    "definition_en": "The feeling or association a word carries beyond its literal meaning.",
+    "definition_ur": "کسی لفظ کا وہ احساس یا تعلق جو اس کے اصل معنی سے آگے جاتا ہے۔"
+  },
+  {
+    "term": "Communicative grammar",
+    "definition_en": "The study of how grammar creates meaning in real communication.",
+    "definition_ur": "اس بات کا مطالعہ کہ گرامر حقیقی رابطے میں معنی کیسے پیدا کرتا ہے۔"
+  },
+  {
+    "term": "Word formation",
+    "definition_en": "The processes by which new words are built from existing parts.",
+    "definition_ur": "وہ عمل جس کے ذریعے نئے الفاظ موجودہ حصوں سے بناتے ہیں۔"
+  },
+  {
+    "term": "Sentence structure",
+    "definition_en": "The way clauses are combined to form sentences.",
+    "definition_ur": "وہ طریقہ جس سے جملوں کو ملکر جملے بناتے ہیں۔"
+  },
+  {
+    "term": "Stress",
+    "definition_en": "The relative emphasis placed on a syllable within a word.",
+    "definition_ur": "کسی لفظ میں ایک شداد پر دی گئی نسبی توجہ۔"
+  },
+  {
+    "term": "Intonation",
+    "definition_en": "The rise and fall of the voice across a phrase or sentence.",
+    "definition_ur": "کسی جملے یا جملے میں آواز کا چڑھنا اور اترنا۔"
+  },
+  {
+    "term": "Phoneme",
+    "definition_en": "The smallest unit of sound that can change meaning.",
+    "definition_ur": "آواز کا چھوٹا ترین یونٹ جو معنی بدل سکتا ہے۔"
+  },
+  {
+    "term": "Minimal pair",
+    "definition_en": "A pair of words that differ by only one sound.",
+    "definition_ur": "دو الفاظ کا ایک جوڑا جو صرف ایک آواز سے مختلف ہو۔"
   }
 ]

@@ -7,10 +7,11 @@ key it is grounded in.
 
 | Sub-topic ID | File | Section | Source |
 |---|---|---|---|
-| U1-01 | topic-01.mdx | Vocabulary building: contextual usage, synonyms, antonyms and idiomatic expressions | Swan2006 |
-| U1-02 | topic-02.mdx | Subject-verb agreement | Azar1999 |
-| U1-03 | topic-02.mdx | Verb tenses | Azar1999 |
-| U1-04 | topic-03.mdx | Word formation: affixation, compounding, clipping, back formation | Swan2006 |
-| U1-05 | topic-03.mdx | Sentence structure: simple, compound, complex, compound-complex | Azar1999 |
-| U1-06 | topic-04.mdx | Sound production and pronunciation | Murphy2019 |
-| U1-07 | topic-04.mdx | Integrating foundations: editing a short text for grammar, vocabulary and structure | Straus2014 |
+| U1-01 | topic-01.mdx | Vocabulary in context | azar2005 |
+| U1-02 | topic-01.mdx | Communicative grammar | azar2005 |
+| U1-02 | topic-01.mdx | Communicative grammar | murphy2012 |
+| U1-03 | topic-02.mdx | Word-formation processes | swan2016 |
+| U1-04 | topic-02.mdx | Sentence structures | azar2005 |
+| U1-05 | topic-03.mdx | The English sound system | swan2016 |
+| U1-05 | topic-03.mdx | Common challenges for Urdu speakers | kachru2006 |
+| U1-01 | topic-01.mdx | Vocabulary in context | swan2016 |
