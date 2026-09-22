@@ -338,5 +338,110 @@
     "term": "Summary and close",
     "definition_en": "The course's closing synthesis: a whole-group event in which each trainee states a belief that changed across the course and cites the evidence for the change.",
     "definition_ur": "کورس کی اختتامی ترکیب: ایک پورے گروہ کی تقریب جس میں ہر تربیت یافتہ شخص ایک عقیدہ بیان کرتا ہے جو کورس کے دوران بدل گیا اور تبدیلی کا ثبوت پیش کرتا ہے۔"
+  },
+  {
+    "term": "Vocabulary building",
+    "definition_en": "The deliberate process of expanding the words you can use accurately, most effectively through contextual usage rather than memorising word lists.",
+    "definition_ur": "الفاظ کو درست طریقے سے استعمال کرنے کی صلاحیت کو بڑھانے کا ایک منظم عمل، جس میں الفاظ کو سیاق و سباق میں سیکھنا ان کی فہست یاد کرنے سے زیادہ مؤثر ہے۔"
+  },
+  {
+    "term": "Synonym",
+    "definition_en": "A word with a similar meaning to another word. Synonyms are not interchangeable: they differ in shade of meaning, register and collocation.",
+    "definition_ur": "کسی دوسرے لفظ کے مشترکے معنی والا لفظ۔ مترادفات ایک دوسرے کی جگہ استعمال نہیں ہو سکتے: ان میں معنی کا درجہ، سطح اور استعمال مختلف ہوتا ہے۔"
+  },
+  {
+    "term": "Antonym",
+    "definition_en": "A word with the opposite meaning of another word. Knowing antonyms helps you understand a word more precisely and gives you tools for contrast in writing.",
+    "definition_ur": "کسی دوسرے لفظ کے متضاد معنی والا لفظ۔ متضاد جاننے سے آپ کسی لفظ کو زیادہ درست سمجھتے ہیں اور تحریر میں تضاد کے لیے وسائل ملتے ہیں۔"
+  },
+  {
+    "term": "Idiomatic expression",
+    "definition_en": "A phrase whose meaning cannot be worked out from the individual words. Idioms must be learned as whole units because their meaning is figurative, not literal.",
+    "definition_ur": "ایک ایسا فقرہ جس کا معنی انفرادی الفاظ سے نہیں سمجھا جا سکتا۔ محاوروں کو مکطوروں کے طور پر سیکھنا ضروری ہے کیونکہ ان کے معانی علامتی ہوتے ہیں، لفظی نہیں۔"
+  },
+  {
+    "term": "Affixation",
+    "definition_en": "Adding a prefix (at the beginning) or a suffix (at the end) to a root word to create a new word. The most productive word-formation process in English.",
+    "definition_ur": "کسی بنیادی لفظ میں سابقہ (شروع میں) یا لاحقہ (آخر میں) شامل کرکے نیا لفظ بنانا۔ انگریزی میں الفاظ کی تشکیل کا سب سے زیادہ مؤثر عمل۔"
+  },
+  {
+    "term": "Compounding",
+    "definition_en": "Joining two complete words to make a new one. The meaning of the compound is often more than the sum of its parts.",
+    "definition_ur": "دو مکمل الفاظ کو ملانے سے ایک نیا لفظ بنانا۔ مرکب لفظ کا معنی اکثر اس کے حصوں کے مجموعے سے زیادہ ہوتا ہے۔"
+  },
+  {
+    "term": "Clipping",
+    "definition_en": "Shortening a longer word to create an informal variant. Common in informal English.",
+    "definition_ur": "کسی طویل لفظ کو چھوٹا کرکے ایک غیر رسمی صورت بنانا۔ غیر رسمی انگریزی میں عام ہے۔"
+  },
+  {
+    "term": "Back formation",
+    "definition_en": "Creating a new word by removing what looks like an affix from an existing word.",
+    "definition_ur": "کسی موجودہ لفظ سے ایک ایسا حصہ ہٹانے سے نیا لفظ بنانا جو لاحقہ یا سابقہ دکھتا ہے۔"
+  },
+  {
+    "term": "Subject-verb agreement",
+    "definition_en": "The rule that a verb must match its subject in number: singular subjects take singular verbs, plural subjects take plural verbs.",
+    "definition_ur": "وہ اصول جس کے مطابق فعل کا فاعل کے ساتھ تعداد میں ہم آہنگ ہونا ضروری ہے: واحد فاعل کے ساتھ واحد فعل، جمع فاعل کے ساتھ جمع فعل۔"
+  },
+  {
+    "term": "Verb tense",
+    "definition_en": "The form of a verb that tells the reader when an action happens: past, present or future.",
+    "definition_ur": "فعل کی وہ صورت جو قاری کو بتاتی ہے کہ کوئی عمل کب ہوا: ماضی، حال یا مستقبل۔"
+  },
+  {
+    "term": "Fragment",
+    "definition_en": "An incomplete sentence missing a subject, a verb, or both.",
+    "definition_ur": "ایک نامکمل جملہ جس میں فاعل، فعل یا دونوں غائب ہوں۔"
+  },
+  {
+    "term": "Run-on sentence",
+    "definition_en": "Two complete sentences joined without proper punctuation or a conjunction.",
+    "definition_ur": "دو مکمل جملوں کو مناسب رماکان یا حرف عطف کے بغیر جوڑنے سے بننے والا جملہ۔"
+  },
+  {
+    "term": "Misplaced modifier",
+    "definition_en": "A word or phrase that describes another word but is positioned so that it creates confusion about what is being described.",
+    "definition_ur": "ایک لفظ یا فقرہ جو کسی دوسرے لفظ کی وضاحت کرتا ہے لیکن ایسی جگہ رکھا جاتا ہے کہ یہ الجہان پیدا کرتا ہے۔"
+  },
+  {
+    "term": "Article",
+    "definition_en": "A word that signals whether a noun is specific or general.",
+    "definition_ur": "ایک لفظ جو اس بات کی نشاندہی کرتا ہے کہ کوئی اسم مخصوص ہے یا عام۔"
+  },
+  {
+    "term": "Word class",
+    "definition_en": "The category a word falls into based on its function in a sentence: noun, verb, adjective, adverb, preposition, conjunction, pronoun or article.",
+    "definition_ur": "وہ زمرہ جس میں کوئی لفظ جملے میں اپنے کام کے اعتبار سے آتا ہے: اسم، فعل، صفت، ظرف، حرف ربط، حرف عطف، ضمیر یا حرف تعریف۔"
+  },
+  {
+    "term": "Simple sentence",
+    "definition_en": "A sentence with one independent clause.",
+    "definition_ur": "ایک جملہ جس میں ایک آزاد فقرہ ہو۔"
+  },
+  {
+    "term": "Compound sentence",
+    "definition_en": "A sentence with two independent clauses joined by a coordinating conjunction.",
+    "definition_ur": "ایک جملہ جس میں دو آزاد فقرے دو حرف ربط سے جوڑے گئے ہوں۔"
+  },
+  {
+    "term": "Complex sentence",
+    "definition_en": "A sentence with one independent clause and one or more dependent clauses.",
+    "definition_ur": "ایک جملہ جس میں ایک آزاد فقرہ اور ایک یا زیادہ وابستہ فقرے ہوں۔"
+  },
+  {
+    "term": "Compound-complex sentence",
+    "definition_en": "A sentence with two independent clauses and one or more dependent clauses.",
+    "definition_ur": "ایک جملہ جس میں دو آزاد فقرے اور ایک یا زیادہ وابستہ فقرے ہوں۔"
+  },
+  {
+    "term": "Editing",
+    "definition_en": "The process of improving a text at every level by reading, identifying errors, correcting, reading aloud and repeating until the text is clean.",
+    "definition_ur": "ہر سطح پر متن کو بہتر بنانے کا عمل - پڑھ کر، غلطیوں کی نشاندہی کر کے، درست کر کے، بلند آواز سے پڑھ کر اور تکرار کر کے۔"
+  },
+  {
+    "term": "Pronunciation",
+    "definition_en": "The way in which spoken words are sounded. Clear pronunciation supports clear writing.",
+    "definition_ur": "بولے جانے والے الفاظ کی آواز۔ صاف تلفظ صاف تحریر کی حمایت کرتا ہے۔"
   }
 ]
