@@ -733,5 +733,45 @@
     "term": "Square root",
     "definition_en": "The side length of the square with a given area; the square root of 64 is 8 because an 8-by-8 square holds exactly 64 unit tiles.",
     "definition_ur": "کسی دیے گئے رقبے والے مربع کے ضلع کی لمبائی؛ 64 کا جذر 8 ہے کیونکہ 8 بہ 8 کا مربع بالکل 64 ٹائل سمیٹتا ہے۔"
+  },
+  {
+    "term": "Variable",
+    "definition_en": "A named quantity that can change, such as t for the number of triangles or k for kilometres travelled; the rule holds for every value it takes.",
+    "definition_ur": "کوئی نامزد مقدار جو بدل سکتی ہے، جیسے t مثلثوں کی تعداد یا k طے شدہ کلومیٹر؛ قاعدہ اس کی ہر قیمت پر لاگو رہتا ہے۔"
+  },
+  {
+    "term": "Algebraic expression",
+    "definition_en": "A rule written with variables and numbers, such as 2t + 1; a machine that turns each input into its output, not a puzzle to solve.",
+    "definition_ur": "متغیروں اور اعداد سے لکھا گیا قاعدہ، جیسے 2t + 1؛ ایک مشین جو ہر داخل کی گئی قیمت کا نتیجہ دیتی ہے، حل کرنے کی پہیلی نہیں۔"
+  },
+  {
+    "term": "Coefficient",
+    "definition_en": "The number multiplying a variable in a term; in 2t the coefficient is 2, and in 500 + 30k it is 30.",
+    "definition_ur": "کسی رکن میں متغیر کے ساتھ ضرب دیا گیا عدد؛ 2t میں عددِ ضرب 2 ہے اور 500 + 30k میں 30۔"
+  },
+  {
+    "term": "Pattern",
+    "definition_en": "A rule that repeats or grows, such as a matchstick pattern that adds 2 sticks for every new triangle.",
+    "definition_ur": "کوئی قاعدہ جو دہرایا یا بڑھتا جائے، جیسے تیلیوں کا نمونہ جو ہر نئے مثلث پر 2 تیلیاں جوڑتا ہے۔"
+  },
+  {
+    "term": "Sequence",
+    "definition_en": "The list of outputs a pattern produces, such as 3, 5, 7, 9 for the growing matchstick triangles.",
+    "definition_ur": "کسی نمونے سے نکلنے والے نتیجوں کی فہرست، جیسے بڑھتے تیلیوں کے مثلثوں کے لیے 3، 5، 7، 9۔"
+  },
+  {
+    "term": "Linear equation",
+    "definition_en": "A claim that two expressions are equal for some value of the variable, such as 60 + 15k = 195; solved by doing the same fair move to both sides.",
+    "definition_ur": "اس دعویٰ کہ کسی متغیر کی ایک قیمت پر دو اثر برابر ہیں، جیسے 60 + 15k = 195؛ دونوں طرف ایک جیسا منصفانہ قدم اٹھا کر حل کی جاتی ہے۔"
+  },
+  {
+    "term": "Linear inequality",
+    "definition_en": "A claim about a range rather than a point, such as 45b <= 1,700; multiplying or dividing by a negative number flips the sign.",
+    "definition_ur": "کسی ایک نکتے کے بجائے حد کا دعویٰ، جیسے 45b <= 1,700؛ منفی عدد سے ضرب یا تقسیم دیے جانے پر علامت پلٹ جاتی ہے۔"
+  },
+  {
+    "term": "Balance model",
+    "definition_en": "The picture of an equation as a balance scale: whatever is done must be done to both pans, or the balance lies.",
+    "definition_ur": "مساوات کی تصویر بطور ترازو: جو کچھ کیا جائے، دونوں پلڑوں پر کیا جائے، ورنہ ترازو جھوٹ بولتا ہے۔"
   }
 ]
