@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "course_code": "GNAS-301",
+  "unit_no": 4,
+  "locale": "en",
+  "base": "http://127.0.0.1:4173",
+  "route": "/semester-1/gnas-301/unit-04",
+  "pages": [
+    "index",
+    "topic-01",
+    "topic-02",
+    "topic-03",
+    "topic-04",
+    "topic-05",
+    "topic-06",
+    "topic-07",
+    "unit-assessment",
+    "unit-teacher-notes"
+  ],
+  "figures": [
+    "fig-U4-1",
+    "fig-U4-2",
+    "fig-U4-3",
+    "fig-U4-4",
+    "fig-U4-6",
+    "fig-U4-5",
+    "fig-U4-7",
+    "fig-U4-8",
+    "fig-U4-9",
+    "fig-U4-10",
+    "fig-U4-12",
+    "fig-U4-11",
+    "fig-U4-13",
+    "fig-U4-14"
+  ],
+  "viewports": [
+    "1280x900",
+    "360x780",
+    "A4 794x1123 print"
+  ],
+  "defects": [],
+  "exit_code": 0,
+  "generated_at": "2026-09-23T22:34:50.993Z"
+}

@@ -823,5 +823,40 @@
     "term": "HSE plan",
     "definition_en": "The document that turns statutes and the PDCA cycle into a named, dated commitment for one workplace.",
     "definition_ur": "وہ دستاویز جو قوانین اور پی ڈی سی اے چکر کو کسی ایک کام کی جگہ کے نامزد، تاریخ والے وعدے میں بدلتی ہے۔"
+  },
+  {
+    "term": "Toxic agent",
+    "definition_en": "A substance that harms a living organism when it reaches a sensitive site in enough amount.",
+    "definition_ur": "وہ مادہ جو کافی مقدار میں کسی حساس جگہ پر پہنچ کر جاندار کو نقصان دیتا ہے۔"
+  },
+  {
+    "term": "Xenobiotic",
+    "definition_en": "Any chemical foreign to the body: pesticides, drugs, industrial solvents, pollutants.",
+    "definition_ur": "جسم کے لیے غیر ملکی کوئی بھی کیمیکل: کیڑے مار ادویات، دوائیں، صنعتی سالوینٹ، آلودگیاں۔"
+  },
+  {
+    "term": "Biotransformation",
+    "definition_en": "The liver chemical reworking of a xenobiotic that prepares it for export.",
+    "definition_ur": "جگر کی وہ کیمیائی تبدیلی جو زینو بائیوٹک کو اخراج کے لیے تیار کرتی ہے۔"
+  },
+  {
+    "term": "Detoxification",
+    "definition_en": "A biotransformation outcome in which the product is less harmful and exportable.",
+    "definition_ur": "حیاتیاتی تبدیلی کا وہ نتیجہ جس میں مصنوع کم نقصان دہ اور نکلنے کے قابل ہو۔"
+  },
+  {
+    "term": "Bioactivation",
+    "definition_en": "A biotransformation outcome in which the product is more poisonous than the original.",
+    "definition_ur": "حیاتیاتی تبدیلی کا وہ نتیجہ جس میں مصنوع اصل سے زیادہ زہریلا ہو۔"
+  },
+  {
+    "term": "Multilateral environmental agreement",
+    "definition_en": "A treaty among many states that commits them to manage a shared environmental problem, through ratification and reporting cycles.",
+    "definition_ur": "کئی ریاستوں کا وہ معاہدہ جو انہیں مشترکہ ماحولیاتی مسئلے سنبھالنے کا پابند کرتا ہے، توثیق اور رپورٹنگ کے چکر کے ذریعے۔"
+  },
+  {
+    "term": "Sustainable Development Goals",
+    "definition_en": "Seventeen goals for 2030 adopted by all United Nations member states in 2015, each with targets and indicators.",
+    "definition_ur": "سترہ اہداف برائے 2030، تمام اقوام متحدہ رکن ریاستوں نے 2015 میں اپنائے، ہر ایک میں نشان اور پیمانے۔"
   }
 ]
