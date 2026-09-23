@@ -48,9 +48,9 @@ and any G3 reviewer see the limitation explicitly rather than inferring it from 
 - purdueOwl: the Avoiding Plagiarism section page was fetched and read directly on
   2026-09-23 (definition of plagiarism as using another's ideas or words without proper
   credit, and the best-practices pages confirmed), but the multi-page section's text was
-  not committed as an excerpt file; the two-part habit it supports is the same habit the
-  bound bourgeois2019 chapter 12 excerpt carries. Owner ruling (D-2026-0001): flag and
-  proceed.
+  not committed as an excerpt file; the two-part honest-use habit (make clear what is
+  borrowed, and from where) rests on this read page and on the unit's own workflow, not on
+  any bound excerpt. Owner ruling (D-2026-0001): flag and proceed.
 - commonsenseDC: the curriculum page was fetched and read directly on 2026-09-23 (its six
   topic areas, including digital footprint and identity, relationships and communication,
   confirmed); the topic-area names it supports are corroborated by the fetched page

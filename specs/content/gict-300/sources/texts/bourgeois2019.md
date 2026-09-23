@@ -111,7 +111,7 @@ On threats: pretexting, where an attacker "calls a helpdesk or security administ
 pretends to be a particular authorized user" for a password reset; phishing, which
 "occurs when a user receives an e-mail that looks as if it is from a trusted source";
 malware via attachments (the I Love You virus of May 2000 spread through an email
-attachment); theft and loss; unintentional damage; and risky connections (public Wi-Fi
+attachment and hit roughly 50,000 computers); theft and loss; unintentional damage; and risky connections (public Wi-Fi
 snooping, unfamiliar USB drives). The chapter notes disasters often destroy backups stored
 in the same location as originals.
 
