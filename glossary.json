@@ -858,5 +858,80 @@
     "term": "Sustainable Development Goals",
     "definition_en": "Seventeen goals for 2030 adopted by all United Nations member states in 2015, each with targets and indicators.",
     "definition_ur": "سترہ اہداف برائے 2030، تمام اقوام متحدہ رکن ریاستوں نے 2015 میں اپنائے، ہر ایک میں نشان اور پیمانے۔"
+  },
+  {
+    "term": "Toxicology",
+    "definition_en": "The study of the adverse effects of chemicals on living organisms.",
+    "definition_ur": "کیمیکلز کے جانداروں پر نقصان دہ اثرات کا علم۔"
+  },
+  {
+    "term": "Dose",
+    "definition_en": "The amount of a substance that reaches a sensitive site; the founding question of toxicology.",
+    "definition_ur": "کسی مادے کی وہ مقدار جو حساس جگہ تک پہنچے؛ زہریلی مادوں کے علم کا بنیادی سوال۔"
+  },
+  {
+    "term": "Acute effect",
+    "definition_en": "An effect appearing quickly after a single or short exposure.",
+    "definition_ur": "ایک یا مختصر رابطے کے بعد جلد ظاہر ہونے والا اثر۔"
+  },
+  {
+    "term": "Chronic effect",
+    "definition_en": "An effect developing slowly over long, often low-level exposure.",
+    "definition_ur": "طویل، اکثر کم سطح رابطے پر آہستہ آہستہ پیدا ہونے والا اثر۔"
+  },
+  {
+    "term": "Genotoxic agent",
+    "definition_en": "An agent that damages DNA, the cell instruction manual.",
+    "definition_ur": "وہ عنصر جو ڈی این اے، خلیے کی ہدایت نامہ، کو نقصان پہنچائے۔"
+  },
+  {
+    "term": "Mutagen",
+    "definition_en": "An agent that causes changes in the DNA sequence.",
+    "definition_ur": "وہ عنصر جو ڈی این اے کی ترتیب میں تبدیلی پیدا کرے۔"
+  },
+  {
+    "term": "Teratogen",
+    "definition_en": "An agent that harms the developing unborn child, with timing as decisive as dose.",
+    "definition_ur": "وہ عنصر جو بڑھتے ہوئے ناجائز بچے کو نقصان دے؛ وقت خوراک جیسا ہی فیصلہ کن۔"
+  },
+  {
+    "term": "Carcinogen",
+    "definition_en": "An agent that causes cancer.",
+    "definition_ur": "وہ عنصر جو سرطان پیدا کرے۔"
+  },
+  {
+    "term": "Sensitizer",
+    "definition_en": "An agent that trains the immune system to overreact to later exposures.",
+    "definition_ur": "وہ عنصر جو مدافعت کو بعد کے رابطوں پر حد سے زیادہ ردعمل سکھا دے۔"
+  },
+  {
+    "term": "Essentiality",
+    "definition_en": "The property of being required for life, with toxicity waiting higher up the same ladder.",
+    "definition_ur": "زندگی کے لیے ضروری ہونے کی صفت؛ اسی زینے پر اوپر زہریلی ہونا رکھا ہے۔"
+  },
+  {
+    "term": "Bioaccumulation",
+    "definition_en": "The build-up of a substance within one organism when entry outpaces exit.",
+    "definition_ur": "جب کوئی مادہ اندر آنا باہر جانے سے تیز ہو تو ایک جاندار میں جمع ہونا۔"
+  },
+  {
+    "term": "Smog",
+    "definition_en": "A visible mixture of pollutants held near the ground: sulfurous in winter, photochemical in summer.",
+    "definition_ur": "زمین کے قریب قید آلودگیوں کا دکھائی دینے والا مرکب: سردیوں میں سلفری، گرمیوں میں فوٹو کیمیکل۔"
+  },
+  {
+    "term": "Mitigation",
+    "definition_en": "Reducing the causes of climate change, emissions and deforestation, for the shared future.",
+    "definition_ur": "موسمیاتی تبدیلی کے اسباب گھٹانا، اخراج اور جنگلات کٹائی، مشترکہ مستقبل کے لیے۔"
+  },
+  {
+    "term": "Adaptation",
+    "definition_en": "Softening the harms of the climate impacts already arriving: heat plans, flood-proofing, early warning.",
+    "definition_ur": "پہنچ چلے موسمی اثرات کے نقصان کو نرم کرنا: گرمی منصوبے، سیل سے بچاؤ، ابتدائی اطلاع۔"
+  },
+  {
+    "term": "Bio-magnification",
+    "definition_en": "The rise in concentration of a substance up the food chain as each predator eats many prey.",
+    "definition_ur": "غذائی زنجیر پر چڑھتے ہوئے کسی مادے کی حراستی بڑھنا، جب ہر شکاری بہت شکار کھاتا ہے۔"
   }
 ]
