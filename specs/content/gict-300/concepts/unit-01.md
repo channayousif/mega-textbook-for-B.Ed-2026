@@ -19,7 +19,7 @@ flag** (see the list at the foot of this file).
 | CON:GICT-300-1-1 | Computer literacy | کمپیوٹر خواندگی | - | 1.1 | SLO:GICT-300-1-1 | MCQ-01, MCQ-02, RRQ-01, RRQ-02, RRQ-03, ERQ-01 |
 | CON:GICT-300-1-2 | Information and Communication Technology | معلومات و مواصلات کی ٹیکنالوجی (آئی سی ٹی) | - | 1.1 | SLO:GICT-300-1-1 | MCQ-02, RRQ-02 |
 | CON:GICT-300-1-3 | Areas of digital competence | ڈیجیٹل صلاحیتوں کے شعبے | CON:GICT-300-1-1 | 1.1 | SLO:GICT-300-1-1 | MCQ-03, RRQ-03 |
-| CON:GICT-300-1-4 | Evolution of computers | کمپیوٹر کی ارتقائي تاریخ | - | 1.2 | SLO:GICT-300-1-1 | MCQ-05, RRQ-04, ERQ-02 |
+| CON:GICT-300-1-4 | Evolution of computers | کمپیوٹر کی ارتقائی تاریخ | - | 1.2 | SLO:GICT-300-1-1 | MCQ-05, RRQ-04, ERQ-02 |
 | CON:GICT-300-1-5 | Stored-program concept | محفوظ پروگرام کا تصور | CON:GICT-300-1-4 | 1.2 | SLO:GICT-300-1-1 | RRQ-04 |
 | CON:GICT-300-1-6 | Five generations of computers | کمپیوٹر کی پانچ نسلیں | CON:GICT-300-1-4 | 1.2 | SLO:GICT-300-1-1 | MCQ-04, MCQ-06, RRQ-05, RRQ-06, ERQ-02 |
 | CON:GICT-300-1-7 | Classification by functionality | افادیت کے لحاظ سے درجہ بندی | CON:GICT-300-1-2 | 1.3 | SLO:GICT-300-1-2 | MCQ-07, RRQ-07, ERQ-03 |
