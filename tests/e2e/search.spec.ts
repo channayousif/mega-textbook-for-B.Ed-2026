@@ -21,11 +21,11 @@ test('searching an English term returns a result linking to the unit', async ({ 
   await expect(page).toHaveURL(/efmp-301/);
 });
 
-test('coming_soon placeholder units are excluded from the search index', async ({ page }) => {
-  // GENG-300's only unit is a coming_soon placeholder (noindex, T026). Searching its title
-  // must return no link to that unit — if the noindex exclusion regressed, it would appear.
+test('published units appear in the search index', async ({ page }) => {
+  // GENG-300 is now published (no longer coming_soon). Searching its title must return
+  // at least one link to a GENG-300 unit.
   await page.goto('/search/?q=Functional%20English');
   // Let the client-side search render.
   await page.waitForTimeout(2_000);
-  await expect(page.locator('article a[href*="geng-300"]')).toHaveCount(0);
+  await expect(page.locator('article a[href*="geng-300"]').first()).toBeVisible({ timeout: 15_000 });
 });
