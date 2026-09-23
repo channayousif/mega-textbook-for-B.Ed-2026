@@ -1,0 +1,423 @@
+{
+  "schema_version": 1,
+  "course_code": "GICT-300",
+  "unit_no": 1,
+  "stage": "G5",
+  "disposition": "escalate",
+  "reviewer_id": "agent:g5-reviewer",
+  "author_run_id": "commit:a7200d2",
+  "reviewer_run_id": "agent-g5-gict300-u1-run001",
+  "model": "LongCat-2.0",
+  "started_at": "2026-09-23T22:01:30Z",
+  "completed_at": "2026-09-23T22:46:15Z",
+  "skill_digest": "02797f90adddd8f4bc50c6e80c6e68d8f6f0219d68d297aabcc8b5443bace5a8",
+  "g3_report": "specs/content/gict-300/reviews/unit-01/G3/agent-g3-gict300-u1-run001.json",
+  "rulings": {
+    "D-2026-0001": "8ff79df9af668329f6d0094a2257654f45fc545122a753b4888fb9936f402f1f",
+    "D-2026-0030": "65125e3e97b98f811b0d77cff19ee15423263dfe4e37520a46451efb7d17b294"
+  },
+  "input_manifest": {
+    ".claude/agents/g5-reviewer.md": "b63596b668dd8814fc7b34d59326171f7c789b8dc4e631e30c2c19fe05f2c68a",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g5.md": "7cbdf9929e6073b71663ec8951a9a42d1e8e683af479434f8409c81002d33159",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "f1d7f063cc2c826693a3d8428fb5d3ee45455fdb7906ebc5adadee8b9a434d47",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-1/gict-300/course-overview.mdx": "5c615399c4c49a6fbc249b9a7794a72d71747c874351e447bd42d5a7c843e81d",
+    "docs/semester-1/gict-300/unit-01/_category_.json": "09e8794850d27d1601ee938fac2d160e7ede4380d1677e5102489a08a66ea546",
+    "docs/semester-1/gict-300/unit-01/index.mdx": "223384d670d5cd89bda737ee23484feaf5189f35b66ff4b5b05cce62ed6ca160",
+    "docs/semester-1/gict-300/unit-01/topic-01.mdx": "a5d72b4fe112b3cd57e151b1b9ebfa2a9dcd43822e9de0214f8ef3dfbbb47d21",
+    "docs/semester-1/gict-300/unit-01/topic-02.mdx": "43072c5dae55dd78605c4d5103edb5efa76481c7ae3324f79c98a1add48abc3f",
+    "docs/semester-1/gict-300/unit-01/topic-03.mdx": "1306a489c7ee88b172f68ec304c0b3a90277e556e8f8fc7e2c213d92671d8370",
+    "docs/semester-1/gict-300/unit-01/topic-04.mdx": "bf4216c024ef2b544b5014145420ea93589cfdcaf929250aef42986f161db92e",
+    "docs/semester-1/gict-300/unit-01/unit-assessment.mdx": "975b490bad970d61a0a3fe62b6253e96fc2c1549ace7e6c45f509bf5c9b26ed7",
+    "docs/semester-1/gict-300/unit-01/unit-teacher-notes.mdx": "a1341c9c4fbe9fddec95a561755884645f3b6af3196182dfbefa91ad12a444af",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gict-300/unit-01/index.mdx": "e82d74803938cd5cb08d4fc581b509de9dceba0c53706e8a5ecbca592daf8505",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gict-300/unit-01/topic-01.mdx": "1988d3615ed18c200efaa191e2c04c612f2918583e5622590a2bb47517ac2117",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gict-300/unit-01/topic-02.mdx": "7dd7dbc044faaeb837a7d8b16141427f45cb738aa051705439d6605afee6209b",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gict-300/unit-01/topic-03.mdx": "3c03b532d1a77dc51cdad835fb8eb931e54ea893c2eda0909fdf0a4babbcaabc",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gict-300/unit-01/topic-04.mdx": "1ab1542f76ead5a3ae69527c942b45851c95630f40f6ce259ab48c87de472140",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gict-300/unit-01/unit-assessment.mdx": "d4a46d6d57461b28b0aad6dac6345c55082f49ae70cdb4bdbebaac5dfc219586",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gict-300/unit-01/unit-teacher-notes.mdx": "8f502dfad71bb12d6bc0d96b7465c52428334f0f669fb439e2ad8120fcade014",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "41b698f8cbbb12f4030d6893083a5c36e4a19848b5ddb86206e5ba72847b8b13",
+    "scripts/check-no-answer-keys.mjs": "f38d60e5360e0c29f2dae02001195690f3b95e0ad2d7ae1a3c03a0d09c053f0d",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "bb614c625f7bf397ce51a317bdb8901711c00fa009d4ad0a506c5096e5b9ddd2",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "77f03816f68663621059f17745109fdde9b103c555f707e0c62d5ff56d2a4cd9",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "973496faae3366d13e8cdd3ba8d68edf7bd3745bdc6928311ee03c55f24b18b2",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/gict-300/concepts/unit-01.md": "13272b6927affcdaa09ec05bce6e66a840703b26790d43df99bc2d42ba3d05b6",
+    "specs/content/gict-300/content-spec.md": "098d4102c1113e223903fb40b3f7d9d0286183d089199c2faeed7bacdcccaf98",
+    "specs/content/gict-300/coverage/unit-01.md": "54a0b9e26ed14a2fd5b686409f4e58cae57ad6cec7a25111eee73395f5c20988",
+    "specs/content/gict-300/figures/unit-01.md": "7ebf320babb6a21ea960949db2950b8cd8268b96b99a5106330835791bf86b54",
+    "specs/content/gict-300/sources/texts/bourgeois2019.md": "8df2facfa7db7f263afb336717bd812936edc19c63de78fdd5955b09912e5751",
+    "specs/content/gict-300/sources/unit-01.md": "02f1d2c7a08c9b58453bff3514f17280f7adf21adb96e4366f773436c0def27b",
+    "specs/content/style-guide.md": "db96c9b33b0fb9522986462a0b519620c3c1d7602a046d7b90e638f643da4610",
+    "specs/content/terminology.csv": "ad917e28cde688eb72bd92226c2326e2d23da3da80fc53ea8c812b1a47f73337",
+    "static/img/figures/gict-300/unit-01/fig-U1-1.dark.svg": "332de7a32f218cccebb9184244dd2c128192b83b1b342ffc74c86849fe90eb5c",
+    "static/img/figures/gict-300/unit-01/fig-U1-1.svg": "a508c831b6c5442f73047badeb44f479367b97f55129766ed2a773d74bcea03a",
+    "static/img/figures/gict-300/unit-01/fig-U1-1.ur.dark.svg": "7f28a82d602357b833574e1fb2c33bee77b3f52b507a2fb6f5f3980b337d9157",
+    "static/img/figures/gict-300/unit-01/fig-U1-1.ur.svg": "7fb58ae9cfb05698d7beb6b4329cd3c6224c2506cd1fe06c009a7b77dae6b8bc",
+    "static/img/figures/gict-300/unit-01/fig-U1-2.dark.svg": "f5362e5b284ea1e65d88c63157cccf54d5c8fef57fc2dc8447794f2a458dfc9d",
+    "static/img/figures/gict-300/unit-01/fig-U1-2.svg": "e35debcdd4e8a9c4d5e03321d52fccf1ada8d76e324cdf696a17c5c8d611ad79",
+    "static/img/figures/gict-300/unit-01/fig-U1-2.ur.dark.svg": "ad3cf34cf74056787bd3db6e4ef60c46434da83e44a825cad414de168568b752",
+    "static/img/figures/gict-300/unit-01/fig-U1-2.ur.svg": "e0ad5c33550131de6a4b0f4ed05d6587ef008d88cbdb6805d33067241bf94032",
+    "static/img/figures/gict-300/unit-01/fig-U1-3.dark.svg": "b468572528824a8034bb42611662de2aae779fec843242c976d88afa2d6e7fe3",
+    "static/img/figures/gict-300/unit-01/fig-U1-3.svg": "b9e19d27281fa4a4a7c0e89241a816fc712a2c1110ef58779d8ae53fd8c1d4ad",
+    "static/img/figures/gict-300/unit-01/fig-U1-3.ur.dark.svg": "ab919feaa2b840990be2a9ff12194613ba1b4e60f65a21b2f6ef25ff3da83190",
+    "static/img/figures/gict-300/unit-01/fig-U1-3.ur.svg": "279bd0c37284b5252c49fca6e9255be9a8ebe6f1b9a39f43527f453d1dc9e6b5",
+    "static/img/figures/gict-300/unit-01/fig-U1-4.dark.svg": "9fcd2cc964930f6fe772f6f383923b50ee4e05f3137efb34f9aeecd537dc6ca8",
+    "static/img/figures/gict-300/unit-01/fig-U1-4.svg": "b90ff5397a6206b13441db0d4d4bfe4cb495d5d870a268ae87ea63d102632747",
+    "static/img/figures/gict-300/unit-01/fig-U1-4.ur.dark.svg": "8a347bc21a0ba01e1326097c09036c8a0d208b5bb0ff22d1b3be2c492da75c4f",
+    "static/img/figures/gict-300/unit-01/fig-U1-4.ur.svg": "f18ea4211eba011bf4450d1c80cd5eee88e44b39002f033f3d732f54bdbb98d7",
+    "static/img/figures/gict-300/unit-01/fig-U1-5.dark.svg": "35015680e3844b3808e54809b0c2ba536cc21bab3c9b9863f1d03e06e59d4b80",
+    "static/img/figures/gict-300/unit-01/fig-U1-5.svg": "ca9f6f5124380614f28fdabf41803b38e827af7d18d2c04e7f4b155164bc9157",
+    "static/img/figures/gict-300/unit-01/fig-U1-5.ur.dark.svg": "e747f5debeb03d532248045cd951cf876a12aaca091bb66b0f7b103c7cd1e36c",
+    "static/img/figures/gict-300/unit-01/fig-U1-5.ur.svg": "9b6967c30a213079171e77ad5cebc00f9f4103eeb952782b691c66a3e0c783f4",
+    "static/img/figures/gict-300/unit-01/fig-U1-6.dark.svg": "3fb03f3c1219d95dcbeaae95f6004eeb01e37930c765e4ca1c92925d1b801495",
+    "static/img/figures/gict-300/unit-01/fig-U1-6.svg": "64e57ad4a9f2367530b84584044e52ec29030070919b2d6d62d3b3e6533cbd93",
+    "static/img/figures/gict-300/unit-01/fig-U1-6.ur.dark.svg": "e49ebfa23534dbe113db74e9be3a7936ae7c87994556c0c4bf82ea599fb3c427",
+    "static/img/figures/gict-300/unit-01/fig-U1-6.ur.svg": "67f87d042cf427807afdd9d45c87c0d7d5527089aa8dc6478f0950de4e98d3a5",
+    "static/img/figures/gict-300/unit-01/fig-U1-7.dark.svg": "fb36c1d30c895f9a74b55667308b6187f855c3828385b79057a6cb02d1731fd2",
+    "static/img/figures/gict-300/unit-01/fig-U1-7.svg": "24f1b68b27458788c4cfbbb210ef1223b58417be08e519947972b088aa24b33a",
+    "static/img/figures/gict-300/unit-01/fig-U1-7.ur.dark.svg": "a6a444b003543d246fe12cc8a9f7d9d60b4c24115eb2669dad77600ac7794e13",
+    "static/img/figures/gict-300/unit-01/fig-U1-7.ur.svg": "4514fe23c080459afc05453edeca40c1923a122fa7e0631ea3d9239db88f7a6f",
+    "static/img/figures/gict-300/unit-01/fig-U1-8.dark.svg": "01a49c44631bafe56de9b77b4f073df2fdff8f441de519f0b3d2c2f020dea091",
+    "static/img/figures/gict-300/unit-01/fig-U1-8.svg": "ac244e8f3304a0fd919dd50c88461940f523e87ff825daa6f949bfdb41d0e8cb",
+    "static/img/figures/gict-300/unit-01/fig-U1-8.ur.dark.svg": "23f25ed87282a379a60892cb8f176f776b9b60ea3acad6af4277e46b21586e98",
+    "static/img/figures/gict-300/unit-01/fig-U1-8.ur.svg": "1976f0eddf2d98f5479c6c9dce69b2371b84f12abae9690ee41cf395e1419d38"
+  },
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "fail",
+      "evidence": [
+        "Guide authority verified for the Urdu: the unit teaches exactly the guide Unit 1 sub-topics (Scheme-and-Course-guides/extracted-text/1st 2026.txt:416-428) through the D-2026-0030-approved four-topic structure; UR clo_refs match the English on all 7 files (SLO:GICT-300-1-1/1-2); both unit outcomes are taught (i18n/ur/.../unit-01/index.mdx ## یونٹ کے تعلیمی نتائج) and assessed in the UR bank.",
+        "FAIL: the required accepted G3 evidence for the exact English inputs bound here does not exist. The only G3 report (specs/content/gict-300/reviews/unit-01/G3/agent-g3-gict300-u1-run001.json) has disposition revise and binds pre-repair English digests on 8 files (topic-01, topic-04, course-overview, coverage/unit-01, sources/unit-01, sources/texts/bourgeois2019, fig-U1-6.svg, fig-U1-6.dark.svg); the English changed at 140dd8a and 6361ad6 after that report and no fresh G3 review exists (G3 directory holds only run001; tracker G3 row open). Per the G5 rubric English-dependency rule and the review-evidence contract this invalidates the dependency (finding F1)."
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "pass",
+      "evidence": [
+        "All English citations retain supporting meaning in the Urdu: DigComp five areas (Vuorikari, Kluzer, and Punie, 2022) at i18n/ur/.../topic-01.mdx ## وضاحت; Bourgeois people-process-technology (topic-01) and digital-divide framing (topic-04) with the post-repair income/geography/education/age list mirrored exactly (no gender - the G3 F1 repair is carried into the Urdu); UNESCO ICT-CFT three levels (topic-01, topic-04); HEC (n.d.) at policy-priority level (topic-01); PTA 2025 figures with the reported/roughly hedges preserved (اطلاع دی، تقریباً) and the >190M cellular / ~140M broadband quantities exact (topic-01, topic-04, unit summary).",
+        "Further reading lists identical to the English (Latin citations and URLs unchanged); the bibliographic-level disclosures are preserved verbatim (topic-02 and topic-03: صرف کتاب شناسی کی سطح پر حوالہ دیا گیا ہے).",
+        "The D-2026-0001 unverifiable-source declarations in specs/content/gict-300/sources/unit-01.md are unchanged and remain applicable; no Urdu claim exceeds its English source support."
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "All 8 checklist sub-topics (U1-01..U1-08, specs/content/gict-300/coverage/unit-01.md) are taught in Urdu: verified by reading all four UR topic files against the coverage section map; every mapped section heading exists and covers its sub-topic.",
+        "Heading structure identical on all 7 file pairs (logs-raw/heading-parity.txt: same heading counts and levels, e.g. topic files 12/12 at [1,2,2,3,3,2,2,2,2,2,2,2]); no heading-only stubs.",
+        "Every required outcome is taught (UR index outcomes) and assessed (the UR 10/10/5 bank spans all four topics, MCQ 3/3/2/2 and RRQ 3/3/2/2 as in the English); est_reading_minutes identical on all 7 files; the only structural addition is the UR key_terms block required by the G4 standard."
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "pass",
+      "evidence": [
+        "Reviewer independently answered all 10 MCQs from the Urdu alone before reading the key: 1-ب, 2-ب, 3-د, 4-ب, 5-ج, 6-ب, 7-ج, 8-ب, 9-ب, 10-ج, matching the English key (1-b..10-c) item by item; option order preserved (الف/ب/ج/د sequences identical to EN a/b/c/d); no translation-revealed answer; distractor meaning intact (e.g. MCQ-8 pocket-size vs single-chip distinction).",
+        "Cognitive demand preserved: Bloom tags match the English item-for-item using the corpus convention (یاد رکھنا/سمجھنا/لاگو کرنا/تجزیہ/جانچنا) across all 25 items (i18n/ur/.../unit-assessment.mdx).",
+        "RRQ model answers and mark schemes numerically identical (2/6/3/2/5/3/3/4/3/3), including the RRQ-06 fourth-generation-construction/fifth-generation-use nuance and the RRQ-10 shared-device divide analysis; ERQ rubric criteria and totals identical (10 each) with every Analyse sub-criterion preserved.",
+        "Minor (advisory F8): RRQ-8 English \"in one clause\" rendered \"ایک جملے میں\" (one sentence); not scoring-relevant."
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "pass",
+      "evidence": [
+        "Rendered inspection of all 7 /ur pages over the production build (render-inspect-ur/render-inspect.log): desktop 1280x900 all HTTP 200, no skipped heading levels, every figure loads (natural 249x150) with non-empty Urdu alt text; narrow 360x780 docHorizontalOverflow=0px on all pages with figures client=328/scroll=328; A4 print 794px clippedElems=0 on all pages, every print figure fits (w=762 right=778), and the Urdu answers section with all sub-headings renders in print.",
+        "All 16 Urdu SVG variants measured in section D: 14 clean; the 2 fig-U1-2.ur flags are a tool false positive resolved by exact getBBox measurement (logs-raw/fig-u1-2-ur-bbox-measurement.txt: caption x=420.4..764 vs wordmark x=12..104.5, horizontally disjoint) - finding F9.",
+        "Limitation recorded (finding F13): the reviewer session could not inline-view PNG artifacts; inspection rests on the render tool in-browser measurements plus computed-style/getBBox probes; all PNGs and print PDFs saved unchanged under render-inspect-ur/ for human audit."
+      ]
+    },
+    {
+      "id": "completeness",
+      "status": "pass",
+      "evidence": [
+        "Full passage-level comparison of all 7 file pairs (index, topic-01..04, unit-assessment, unit-teacher-notes): every English section, paragraph, activity step, CYU item, self-assessment checklist item, summative task, marking-guide line, Further reading entry and figure carrier is present in the Urdu; no omissions or unauthorized additions beyond the standard key_terms block.",
+        "Front-matter parity verified on all 7 UR files: title and description present, clo_refs, topic_no/topic_label and est_reading_minutes identical to the English, translation_status draft everywhere (correct: G5 has not accepted; no status was changed by this review).",
+        "One compression noted (advisory F7): the teacher-notes misconception-3 instruction \"Let the paradox resolve into ...\" is reduced to the bare target phrase; the three probe questions survive."
+      ]
+    },
+    {
+      "id": "semantics",
+      "status": "fail",
+      "evidence": [
+        "Passage-level comparison of negation, modal force, quantities, dates, comparisons and causal claims across all 7 file pairs: preserved (examples: \"can widen existing inequalities\" -> بڑھا بھی سکتا ہے keeps the modal; roughly 140 million -> تقریباً 140 ملین; ENIAC 1946 / about 27 tonnes / von Neumann 1945 / 1890 census / 2007 smartphone exact; \"a million times over\" -> ایک ملین گنا; the digital-divide definition and first-order framing match the English).",
+        "FAIL (F2): meaningless word \"ایل\" in i18n/ur/.../unit-01/unit-teacher-notes.mdx ## عملی کام اور پریکٹیکم سے ربط first bullet (\"نگرانی میں ایل کوشش کا موقع دیں\"); the English \"one supervised attempt\" requires \"ایک کوشش\".",
+        "FAIL (F3): \"سلائی رول\" (reads \"sewing roll\") for \"slide rule\" in topic-03.mdx Explanation, unit-assessment.mdx RRQ-7 model answer, and the fig-U1-5.ur.svg/.ur.dark.svg table label; standard transliteration is \"سلائیڈ رول\"."
+      ]
+    },
+    {
+      "id": "terminology",
+      "status": "fail",
+      "evidence": [
+        "The frozen bank (specs/content/terminology.csv) holds no GICT-300 terms (verified); per the review brief this is not a translation defect - banking is the owner action. The UR key_terms block (12 entries, i18n/ur/.../unit-01/index.mdx) mirrors the concept file G5-flag list (specs/content/gict-300/concepts/unit-01.md) exactly, pair for pair.",
+        "Label quality: 10 of 12 proposals confirmed as accurate, natural and consistently used across prose, assessment and figures (کمپیوٹر خواندگی، معلومات و مواصلات کی ٹیکنالوجی (آئی سی ٹی)، ڈیجیٹل صلاحیتوں کے شعبے، محفوظ پروگرام کا تصور، کمپیوٹر کی پانچ نسلیں، حجم اور طاقت کے لحاظ سے درجہ بندی، اندرونی جڑا ہوا کمپیوٹر، ڈیجیٹل خلا، مختلف شعبوں میں آئی سی ٹی کے استعمالات، آئی سی ٹی کے اثرات پر متوازن نقطہ نظر); گنتارا (abacus) and ڈیجیٹل خلا (digital divide) are sound Pakistani-textbook choices; no drift between files.",
+        "FAIL (F4): \"ارتقائي\" spelled with Arabic yeh U+064A (dotted final form) instead of Urdu ی U+06CC (dotless) in 11 locations (index.mdx x5, topic-02.mdx x4, unit-assessment.mdx x1, concepts/unit-01.md label x1) - a visible misspelling of the key term; the translation reproduced the concept file codepoints, so the fix must be paired.",
+        "FAIL (F5, uncertain): \"افادیت کے لحاظ سے درجہ بندی\" for \"Classification by functionality\" is disputed (افادیت = utility, not signal-processing function); owner ruling requested before banking."
+      ]
+    },
+    {
+      "id": "register",
+      "status": "pass",
+      "evidence": [
+        "Academic-plain Urdu (درسی مگر عام فہم, style guide ## UR register rules) maintained across all 7 files: short sentences, natural Urdu word order, gender-inclusive forms (سکتا/سکتی) throughout, consistent transliteration of English technical terms (اسپریڈ شیٹ، ویکیوم ٹیوبیں، مائیکرو پروسیسر), Latin kept for author-year citations and brand names as the G4 handoff notes record.",
+        "Minor register notes recorded as advisory (F8): the \"چل کر\" calque in the index intro; \"کونڑا\" for \"corner\" (ERQ-2); \"کے خلاف\" for \"against their lists\"; decade-vs-century phrasing for the 1600s/1700s; none change meaning."
+      ]
+    },
+    {
+      "id": "rtl",
+      "status": "pass",
+      "evidence": [
+        "Production build of both locales (logs-raw/build.log, exit 0), then rendered inspection of the /ur route over docusaurus serve: html dir=\"rtl\" lang=\"ur\" on every page; the self-hosted Noto Nastaliq Urdu webfont loads (document.fonts.check true) and body/paragraph text computes to the Nastaliq stack with the 2.2 line-height rule (logs-raw/rtl-font-probe.txt, font-family-probe.txt).",
+        "Bidi and numerals: embedded Latin citations render as intact LTR islands with correct punctuation placement (logs-raw/bidi-latin-citation-probe.txt: e.g. مسئلہ حل کرنا (Vuorikari, Kluzer, and Punie, 2022)۔ and (HEC, n.d.)۔); Western digits inside RTL prose keep their order; no overflow or clipping at 360px or A4 print.",
+        "Urdu figure variants: all 8 .ur.svg (+ 8 .ur.dark) carry Urdu labels in the Nastaliq font family with mirrored geometry; 14 measured clean, 2 flags resolved as a tool false positive (F9); heading-font theme property noted as out-of-scope advisory (F10)."
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "blocking",
+      "resolved": false,
+      "message": "English dependency unsatisfied (escalation driver). The only G3 report, specs/content/gict-300/reviews/unit-01/G3/agent-g3-gict300-u1-run001.json, has disposition revise (not accepted) and binds pre-repair English: topic-01.mdx 33fbee50 (now a5d72b4f), topic-04.mdx 78605a01 (now bf4216c0), course-overview.mdx bffad37c (now 5c615399), coverage/unit-01.md 46b62c53 (now 54a0b9e2), sources/unit-01.md 1460ce37 (now 02f1d2c7), sources/texts/bourgeois2019.md 13a66671 (now 8df2facf), fig-U1-6.svg b0a8c4fa (now 64e57ad4), fig-U1-6.dark.svg 4fd5245c (now 3fb03f3c). The G3 findings F1-F4 were repaired at 140dd8a and the course overview rewritten at 6361ad6, but no fresh G3 review of the repaired English exists (tracker G3 row open). Per the G5 rubric (\"Require accepted G3 evidence for the exact English inputs bound to this review. A changed English digest invalidates the dependency\") and the review-evidence contract (G5 needs an accepted G3 report for the same unit and current English inputs), this review cannot treat the English baseline as accepted. Repair: run a fresh G3 review over a newly prepared manifest at the current English commit, then re-run G5.",
+      "location": "specs/content/gict-300/reviews/unit-01/G3/agent-g3-gict300-u1-run001.json (input_manifest) vs specs/content/gict-300/reviews/unit-01/G5/manifest.json (input_manifest)"
+    },
+    {
+      "id": "F2",
+      "severity": "blocking",
+      "resolved": false,
+      "message": "Urdu typo: meaningless word \"ایل\" in the teacher notes. i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gict-300/unit-01/unit-teacher-notes.mdx, section ## عملی کام اور پریکٹیکم سے ربط, first bullet (hands-on computer exercises): \"ہر کام پر نگرانی میں ایل کوشش کا موقع دیں\" should read \"ہر کام پر نگرانی میں ایک کوشش کا موقع دیں\" - the English source is \"give every trainee one supervised attempt at each by the end of Topic 1.1\".",
+      "location": "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gict-300/unit-01/unit-teacher-notes.mdx#عملی-کام-اور-پریکٹیکم-سے-ربط"
+    },
+    {
+      "id": "F3",
+      "severity": "blocking",
+      "resolved": false,
+      "message": "Misleading transliteration \"سلائی رول\" for \"slide rule\" (reads as \"sewing roll\", a different object). Occurrences: topic-03.mdx Explanation analog paragraph (\"ایک کلاسیکی مثال سلائی رول ہے\"), unit-assessment.mdx RRQ-7 model answer (\"(سلائی رول)\"), and the fig-U1-5.ur.svg and fig-U1-5.ur.dark.svg table labels. Repair: \"سلائیڈ رول\" in all three prose locations and both figure variants.",
+      "location": "i18n/ur/.../unit-01/topic-03.mdx (Explanation, analog paragraph); i18n/ur/.../unit-01/unit-assessment.mdx (RRQ-7 model answer); static/img/figures/gict-300/unit-01/fig-U1-5.ur.svg and fig-U1-5.ur.dark.svg"
+    },
+    {
+      "id": "F4",
+      "severity": "blocking",
+      "resolved": false,
+      "message": "Orthographic defect in the key term \"evolution\": \"ارتقائي\" is spelled with Arabic yeh U+064A (final form renders with two dots below) instead of Urdu ی U+06CC (dotless final), a visible misspelling. 11 occurrences: index.mdx x5 (description, blooms_summary, outcomes bullet, In-this-unit entries), topic-02.mdx x4 (description, blooms_summary, h3 heading, self-assessment checklist), unit-assessment.mdx x1 (description), plus the proposed label in specs/content/gict-300/concepts/unit-01.md (CON:GICT-300-1-4) whose exact codepoints the translation reproduced per the G4 handoff. Repair: correct to \"ارتقائی\" (U+06CC) in BOTH the concept-file label and the Urdu files, as one paired change, before the label is banked.",
+      "location": "i18n/ur/.../unit-01/index.mdx, topic-02.mdx, unit-assessment.mdx; specs/content/gict-300/concepts/unit-01.md (Label UR column)"
+    },
+    {
+      "id": "F5",
+      "severity": "uncertain",
+      "resolved": false,
+      "message": "Disputed terminology proposal: \"افادیت کے لحاظ سے درجہ بندی\" for \"Classification by functionality\" (key_terms block, concept file CON:GICT-300-1-7, topic-03 headings/activity/CYU, assessment summary). \"افادیت\" denotes utility/usefulness, while the axis distinguishes computers by the kind of signals they process (analog/digital/hybrid); the topic body disambiguates (\"اس قسم کے سگنلز کے لحاظ سے\") but as a banked heading term the label is disputable - \"فنکشن کے لحاظ سے درجہ بندی\" or \"عمل کے لحاظ سے درجہ بندی\" would track the English more closely. The concept file asks G5 to confirm each authored label: 10 of 12 are confirmed; this one is referred to the owner. Banking any of the 12 remains the owner action either way.",
+      "location": "i18n/ur/.../unit-01/index.mdx (key_terms); specs/content/gict-300/concepts/unit-01.md (CON:GICT-300-1-7); i18n/ur/.../unit-01/topic-03.mdx (headings, activity, summary)"
+    },
+    {
+      "id": "F6",
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Inconsistent shorthand: the embedded-computer class appears as the bare adjective \"اندرونی\" in list positions (topic-03.mdx description front-matter, activity step 2, summary; unit-assessment.mdx unit summary) while the full label \"اندرونی جڑا ہوا کمپیوٹر\" is used at first definition and in the key_terms block. The bare adjective (\"internal\") is weaker; prefer the full label (or \"ایمبیڈڈ کمپیوٹر\") in the enumerations.",
+      "location": "i18n/ur/.../unit-01/topic-03.mdx (description, activity step 2, summary); i18n/ur/.../unit-01/unit-assessment.mdx (unit summary)"
+    },
+    {
+      "id": "F7",
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Teacher-notes compression: misconception 3 renders \"Let the paradox resolve into 'smaller, cheaper, more reliable, and faster'\" as the bare target phrase (\"چھوٹا، سستا، زیادہ قابلِ اعتماد اور تیز۔\"), dropping the instructional cue to let trainees reach the resolution themselves; the three probe questions are preserved so the intent remains recoverable.",
+      "location": "i18n/ur/.../unit-01/unit-teacher-notes.mdx ## جن عام غلط فہمیوں کی چھان بین کرنی ہے (item 3)"
+    },
+    {
+      "id": "F8",
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Register minors, none meaning-changing: (a) index intro \"کمپیوٹر حسابی اوزاروں سے چل کر آپ کی جیب کی مشین تک کیسے پہنچا\" is a stiff calque of \"developed from calculating tools into the machines in your pocket\"; (b) ERQ-2 \"کونڑا\" for \"corner\" (usual transliteration \"کارنر\"); (c) teacher-notes \"فہرستوں کے خلاف\" for \"against their lists\" (\"کے مقابل\" fits better); (d) \"1600 اور 1700 کی دہائیوں میں\" renders \"the 1600s and 1700s\" loosely (decade vs century phrasing; the timeline figure carries the exact years); (e) RRQ-8 \"in one clause\" loosened to \"ایک جملے میں\" (one sentence); (f) MCQ-5 option a \"ہاتھ کی مشینوں\" for \"hand looms\" (\"ہاتھ کے کھڈوں\" is exact).",
+      "location": "i18n/ur/.../unit-01/index.mdx (intro); unit-assessment.mdx (ERQ-2, RRQ-8, MCQ-5); unit-teacher-notes.mdx (misconception 1); topic-02.mdx (history paragraph)"
+    },
+    {
+      "id": "F9",
+      "severity": "advisory",
+      "resolved": true,
+      "message": "render-inspect section D flagged fig-U1-2.ur and fig-U1-2.ur.dark \"caption overlaps the wordmark\". Reviewer re-measurement with exact getBBox (logs-raw/fig-u1-2-ur-bbox-measurement.txt): wordmark x=12.0..104.5 top=449.6, caption x=420.4..764.0 bottom=452.3 - horizontally disjoint, no visual overlap possible. The heuristic at scripts/render-inspect.mjs:323 checks rec.r > wmB.x - 2 plus vertical intersection but no horizontal intersection with the wordmark right edge, so any text right of the wordmark that vertically abuts its band is flagged. Resolved as a tool false positive; no content repair. Element screenshots saved (render-inspect-ur/fig-U1-2-ur-full.png, fig-U1-2-ur-bottomband.png).",
+      "location": "static/img/figures/gict-300/unit-01/fig-U1-2.ur.svg and fig-U1-2.ur.dark.svg (no defect); scripts/render-inspect.mjs:323 (heuristic gap)"
+    },
+    {
+      "id": "F10",
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Theme observation (out of unit scope): Urdu h1-h3 headings compute to the theme sans stack (system-ui/Segoe/Roboto...) so Urdu heading glyphs render through the OS Arabic-script fallback (Naskh) rather than the self-hosted Noto Nastaliq Urdu, while body paragraphs correctly compute to the Nastaliq stack. Identical behaviour on the published EFMP-302 Unit 1 Urdu reference page (logs-raw/font-family-probe-efmp302-reference.txt), so this is a corpus-wide theme property (Infima heading font vs the html[dir=rtl] rule in src/css/custom.css:45), not a GICT-300 translation defect. Surfaced for the owner/theme maintainers.",
+      "location": "src/css/custom.css:44-52 (corpus-wide); observed on /ur/semester-1/gict-300/unit-01/* and /ur/semester-1/efmp-302/unit-01/"
+    },
+    {
+      "id": "F11",
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Bare-URL link text in the four Urdu Further reading sections, mirroring the English exactly (G3 run001 F5, deliberately left open there). Same advisory status as the English side; descriptive link text would serve screen-reader users better.",
+      "location": "i18n/ur/.../unit-01/topic-01..04.mdx ## مزید مطالعہ"
+    },
+    {
+      "id": "F12",
+      "severity": "advisory",
+      "resolved": true,
+      "message": "Process note (resolved, no content impact): the reviewer's first gate-overlay attempt used hardlinked copies (cp -al) and a shell redirect into the overlay glossary.json, which wrote through the hardlink and briefly overwrote the worktree's tracked glossary.json (2026-09-23T22:17Z). Detected within minutes and restored from HEAD (git diff HEAD empty afterwards; the \"Computer literacy\" entry verified present again). glossary.json is not part of the bound input set; every recorded gate run executed either before the incident (repo-wide runs, pristine tree) or in the rebuilt no-hardlink overlay; the final worktree state is clean (git status shows only this review's untracked evidence).",
+      "location": "worktree state (glossary.json; not a bound input)"
+    },
+    {
+      "id": "F13",
+      "severity": "advisory",
+      "resolved": true,
+      "message": "Render-inspection limitation (compensated): the reviewer session could not inline-view PNG artifacts (harness image rendering unavailable), so Nastaliq legibility was not judged by eye. Inspection instead rests on the render-inspect tool's in-browser measurements (heading order, alt text, figure loading, 360px overflow, A4 clipping, SVG glyph geometry) plus targeted computed-style and getBBox probes (fonts loaded, dir=rtl, bidi punctuation, figure text extents). All PNGs and print PDFs are saved unchanged under render-inspect-ur/ for any human auditor to view. Render access itself was available: one production build plus two serve passes, load average at or below 4.37 on 2 cores, within the capacity directive.",
+      "location": "specs/content/gict-300/reviews/unit-01/G5/render-inspect-ur/ (artifacts); logs-raw/*probe*.txt"
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-01/G5/cmd-logs/cmd-validate-content.log"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-01/G5/cmd-logs/cmd-check-unit-depth.log"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-01/G5/cmd-logs/cmd-check-figures.log"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-01/G5/cmd-logs/cmd-check-no-em-dash.log"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-01/G5/cmd-logs/cmd-check-no-answer-keys.log"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-01/G5/cmd-logs/cmd-check-docs-sync.log"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 1,
+      "log_path": "specs/content/gict-300/reviews/unit-01/G5/cmd-logs/cmd-render-review.log"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/gict-300/reviews/unit-01/G5/cmd-logs/cmd-check-docs-sync.log": "6ecf23e748dec706b99979fd200efb3fce71f2f6cfd4f9cfa0c6be83805080ad",
+    "specs/content/gict-300/reviews/unit-01/G5/cmd-logs/cmd-check-figures.log": "3af3bfc269cf4cdb16ea940bc8480757e6fb60443a3e4df83c2d5cd58af22f0d",
+    "specs/content/gict-300/reviews/unit-01/G5/cmd-logs/cmd-check-no-answer-keys.log": "f8164e0b94ea289fd2631e9e1a0fbaedac3349d51873ae3aa56ae625c2d196b2",
+    "specs/content/gict-300/reviews/unit-01/G5/cmd-logs/cmd-check-no-em-dash.log": "0a8fd3496e02217dcf7b74cc714fcc4ee14bae686cb8f52c15a4d5126a22b7f4",
+    "specs/content/gict-300/reviews/unit-01/G5/cmd-logs/cmd-check-unit-depth.log": "d92da8931aa9d0a9421bfb24371f32673c801d24508b1057b9b7993a9f9df7b7",
+    "specs/content/gict-300/reviews/unit-01/G5/cmd-logs/cmd-render-review.log": "a7d9814c8adebfa5e5412848734c670d701f4914ffdebcf5b690813c8f9b3411",
+    "specs/content/gict-300/reviews/unit-01/G5/cmd-logs/cmd-validate-content.log": "6074d9b33dc69a3a7add67d6ea148b2cbf5d182c1ce16d9253577ce23db0aa2f",
+    "specs/content/gict-300/reviews/unit-01/G5/logs-raw/bidi-latin-citation-probe.txt": "1382832bf58cb00f4f23a531b29c7c55dd0ba0eaf07e2a0764d3a24da7b50e7e",
+    "specs/content/gict-300/reviews/unit-01/G5/logs-raw/build.log": "b289f53259dbd505581dd4e361f2c8d903358ca024746de29289e2f6ed435904",
+    "specs/content/gict-300/reviews/unit-01/G5/logs-raw/check-depth-gate.txt": "912c64025f1850096714a5ca065658d9ef211db81c9ed990568456032a2fffaa",
+    "specs/content/gict-300/reviews/unit-01/G5/logs-raw/check-docs-sync.txt": "cbc9f6e4b0b674cb49e2d9b795d81ed78f23dc431cba1130e4d64cf6d0bed749",
+    "specs/content/gict-300/reviews/unit-01/G5/logs-raw/check-figures.txt": "0247598654ff82e5f3219e558243c0a96918eea4827512342cec18651a1c3d48",
+    "specs/content/gict-300/reviews/unit-01/G5/logs-raw/check-no-answer-keys.txt": "0571c9754c5a0af16002a95a47ebae7dab51d74c60bba1fcee2a166c571345f1",
+    "specs/content/gict-300/reviews/unit-01/G5/logs-raw/check-no-em-dash.txt": "51970c44cd1ffa6de096bd5212030743f385233525d945cf9a5563e5d41a24e5",
+    "specs/content/gict-300/reviews/unit-01/G5/logs-raw/fig-u1-2-ur-bbox-measurement.txt": "d008cab1e291eca8d95d2fb979422a7b30af7c08e58eb15005b7fe0b7e482591",
+    "specs/content/gict-300/reviews/unit-01/G5/logs-raw/font-family-probe-efmp302-reference.txt": "15146ba5d06708cb1f89d32abcddea58b80ab78530d9a66348a38c89682a95c5",
+    "specs/content/gict-300/reviews/unit-01/G5/logs-raw/font-family-probe.txt": "75ff603f8f2762e94bc699808e44f76d0a9b00295257563227c99ac94459e582",
+    "specs/content/gict-300/reviews/unit-01/G5/logs-raw/heading-parity.txt": "7e89d7ea8bc105933d1b1d1a8680abd2f7f5d9039f739c99289872c1fa700f55",
+    "specs/content/gict-300/reviews/unit-01/G5/logs-raw/overlay-check-depth-gate.txt": "15021f8f88122b596e67cfd48c2ff282fde912e1b86bb03c2137bcf9d8e062fd",
+    "specs/content/gict-300/reviews/unit-01/G5/logs-raw/overlay-check-docs-sync.txt": "cbc9f6e4b0b674cb49e2d9b795d81ed78f23dc431cba1130e4d64cf6d0bed749",
+    "specs/content/gict-300/reviews/unit-01/G5/logs-raw/overlay-check-figures.txt": "54a388cb9954b9d2f07f84e5385ac0003b94a6a54023abb188e864346958b04f",
+    "specs/content/gict-300/reviews/unit-01/G5/logs-raw/overlay-check-no-answer-keys.txt": "539ba62183931f332c562e346956452b9cf751e100de762601b786b497a7d612",
+    "specs/content/gict-300/reviews/unit-01/G5/logs-raw/overlay-check-no-em-dash.txt": "00405490c649d998b589b23505029de9134497966b02ff9ccefb1075aa414dd3",
+    "specs/content/gict-300/reviews/unit-01/G5/logs-raw/overlay-validate-content.txt": "5b3153a9d41a11051bff1d2f0396cf26eaaf00ae79e3b894c202823645c0e6a6",
+    "specs/content/gict-300/reviews/unit-01/G5/logs-raw/rtl-font-probe.txt": "92baac5ede51aa930a0d55cd2d2e1b862a4cdc2e1af7b77475ac7606ec6a42e6",
+    "specs/content/gict-300/reviews/unit-01/G5/logs-raw/validate-content.txt": "d48e0856bd8a37eede28b71dc6be923095fb1667cd5eabf4bc5bf4b26d7a40d2",
+    "specs/content/gict-300/reviews/unit-01/G5/manifest.json": "d78dea7b78a6e036d3ca18fcde5fe48bf51e40b4df23a681906b6b0cba91230a",
+    "specs/content/gict-300/reviews/unit-01/G5/render-inspect-ur/desktop-index.png": "d16742cad65abb18a1ed44be643759d4d049005be32d295d3cb7993d31535709",
+    "specs/content/gict-300/reviews/unit-01/G5/render-inspect-ur/desktop-topic-01.png": "6748b8483c05d9468eade0dd1960859037647e7583d8c49942baa8955986d026",
+    "specs/content/gict-300/reviews/unit-01/G5/render-inspect-ur/desktop-topic-02.png": "ea9f6f8dc294cc6115f2d1c50c6c74b17beb123fa4fc7c36b94d7f514c8359fe",
+    "specs/content/gict-300/reviews/unit-01/G5/render-inspect-ur/desktop-topic-03.png": "61c06fbad1c5a91c2b23a8d62b8135eee216c809f48539b53ae3e00857be914d",
+    "specs/content/gict-300/reviews/unit-01/G5/render-inspect-ur/desktop-topic-04.png": "c30fe5e2cb71d10f2be5889087dd2d9a4091ff7274997740ab02d006c1fc428e",
+    "specs/content/gict-300/reviews/unit-01/G5/render-inspect-ur/desktop-unit-assessment.png": "211892a40cd8d3054bc249e862a35575a443d70f5d8636d37735be6e622fc2a8",
+    "specs/content/gict-300/reviews/unit-01/G5/render-inspect-ur/desktop-unit-teacher-notes.png": "3e51655fd25ac693320044e7c31d5a978434fed84ce4f3d75c6c94f38d6374dd",
+    "specs/content/gict-300/reviews/unit-01/G5/render-inspect-ur/fig-U1-2-ur-bottomband.png": "e015bee21b1fcdf282c6bd1c0fc50666a66a43fb65a54a0aba1abdfe54f158d8",
+    "specs/content/gict-300/reviews/unit-01/G5/render-inspect-ur/fig-U1-2-ur-full.png": "3b853245d94e8b57e95bcf0672575ab9bd288240b642bbf82d7b00e7f212a4e6",
+    "specs/content/gict-300/reviews/unit-01/G5/render-inspect-ur/narrow360-index.png": "88570f255e7d20cadf63ad4021a09b717eee6baa6f9f80595538b21284c17b55",
+    "specs/content/gict-300/reviews/unit-01/G5/render-inspect-ur/narrow360-topic-01.png": "8fc71321f062f26f15c6d99a2702c3d40c7708e872e6565de5d39e0d5d5dfbaa",
+    "specs/content/gict-300/reviews/unit-01/G5/render-inspect-ur/narrow360-topic-02.png": "3219c38f79d5b9b609fdb2b37e3d5a0a4f0fd31c594aec655810a3675fcf77e9",
+    "specs/content/gict-300/reviews/unit-01/G5/render-inspect-ur/narrow360-topic-03.png": "a54b358710a2fa5b0d1695d22333ee4067e9c8f2ab44ee91f5ad3df8d8cc12ed",
+    "specs/content/gict-300/reviews/unit-01/G5/render-inspect-ur/narrow360-topic-04.png": "27ad549cb7c31cf1026031f4f5162d77fa621e0b5a0a2022d946d9553cca96f7",
+    "specs/content/gict-300/reviews/unit-01/G5/render-inspect-ur/narrow360-unit-assessment.png": "e0c119953d6d400121fd60a381c8b4e2d442eec13db568204eb89f1a985471f3",
+    "specs/content/gict-300/reviews/unit-01/G5/render-inspect-ur/narrow360-unit-teacher-notes.png": "3e1afe360f1c28af936a652dc990b6adf126be35d4425b553ba0d2bcc57feabd",
+    "specs/content/gict-300/reviews/unit-01/G5/render-inspect-ur/print-a4-index.pdf": "4da63c6e897c4e81d7b571f095990a4f75de315701458f0cf7ab51a77cc93d29",
+    "specs/content/gict-300/reviews/unit-01/G5/render-inspect-ur/print-a4-topic-01.pdf": "73d45befb48f4ea1c2fc4809d5ecc733b936f0e2c4fbc3f9813358ade42d399b",
+    "specs/content/gict-300/reviews/unit-01/G5/render-inspect-ur/print-a4-topic-02.pdf": "2f581d5de103946fc70da12045797c9b217638213e22838fe074d000630d3f2a",
+    "specs/content/gict-300/reviews/unit-01/G5/render-inspect-ur/print-a4-topic-03.pdf": "533a13273d1e7a2f233f213ddc182178f90e43424c3a10c3437842081914db92",
+    "specs/content/gict-300/reviews/unit-01/G5/render-inspect-ur/print-a4-topic-04.pdf": "853131df2bd5153d4b9adf8ad8bef53c4d779e6f967ede1e21bbd12de7069070",
+    "specs/content/gict-300/reviews/unit-01/G5/render-inspect-ur/print-a4-unit-assessment.pdf": "f7b4ffe55f68fa492d34f6122281fa24c023e995a2ca2e9436359b8742fee3b7",
+    "specs/content/gict-300/reviews/unit-01/G5/render-inspect-ur/print-a4-unit-teacher-notes.pdf": "e933bdea874278b2f52c60830401c50d96537363545ff7744abfcbae72a37711",
+    "specs/content/gict-300/reviews/unit-01/G5/render-inspect-ur/render-inspect.json": "6122ae7549105dd1ece14befee1678c764e283f527264eb58d62df5e8b8c2d71",
+    "specs/content/gict-300/reviews/unit-01/G5/render-inspect-ur/render-inspect.log": "8898833c4419be489ee1a0d19c25288fba6a0e122e8a96cf2e0a99f7b2d60978",
+    "specs/content/gict-300/reviews/unit-01/G5/summary-run001.txt": "2a801bec88774693b2595a24b35ce603d9dfd2d0d9eaf63106000d1d6daa014e"
+  }
+}

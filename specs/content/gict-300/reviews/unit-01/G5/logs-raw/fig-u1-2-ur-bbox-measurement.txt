@@ -1,0 +1,15 @@
+fig-U1-2.ur.svg
+  wordmark: x=12.0 right=104.5 top=449.6 bottom=462.6
+  caption : x=420.4 right=764.0 top=437.9 bottom=452.3
+  caption text: ہر قطار پڑھ کر بتائیں کہ ایک کام کے لیے 
+  ACTUAL bbox overlap: [33mfalse[39m
+fig-U1-2.svg
+  wordmark: x=675.7 right=768.2 top=449.6 bottom=462.6
+  caption : x=16.0 right=396.4 top=437.9 bottom=451.6
+  caption text: Read each row across to identify the ski
+  ACTUAL bbox overlap: [33mfalse[39m
+fig-U1-2.ur.dark.svg
+  wordmark: x=12.0 right=104.5 top=449.6 bottom=462.6
+  caption : x=420.4 right=764.0 top=437.9 bottom=452.3
+  caption text: ہر قطار پڑھ کر بتائیں کہ ایک کام کے لیے 
+  ACTUAL bbox overlap: [33mfalse[39m

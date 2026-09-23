@@ -1,0 +1,22 @@
+[
+  {
+    "name": "DigComp citation",
+    "found": true,
+    "around": "یق، حفاظت، اور مسئلہ حل کرنا (Vuorikari, Kluzer, and Punie, 2022)۔ جو شخص ٹائپ ک"
+  },
+  {
+    "name": "HEC citation",
+    "found": true,
+    "around": "ایک بیان کردہ ترجیح بنایا ہے (HEC, n.d.)۔"
+  },
+  {
+    "name": "PTA citation",
+    "found": true,
+    "around": "براڈ بینڈ کنکشنز کی اطلاع دی (Pakistan Telecommunication Authority, 2025)۔ اس رس"
+  },
+  {
+    "name": "Easypaisa brand",
+    "found": true,
+    "around": " لائن فارم قبول کرتے ہیں، اور Easypaisa اور JazzCash جیسے موبائل والٹس بینک بران"
+  }
+]
