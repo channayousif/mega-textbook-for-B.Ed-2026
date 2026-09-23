@@ -1,6 +1,7 @@
 ---
 course_code: GICT-300
-status: draft
+# D-2026-0030: intake passes G0/G1 (agent:evaluator, 2026-09-23); week calendar escalated as G-2026-25
+status: approved
 bilingual: true
 open_access_floor:
   default: 2
@@ -114,12 +115,12 @@ Weeks 1-3 (derived). Unit Spec (G1) for `docs/semester-1/gict-300/unit-01/`.
 
 | Topic | Title | Sub-topic IDs | Reading-min | Figures (id: archetype) |
 |---|---|---|---|---|
-| 1.1 | Computer literacy and why it matters | U1-01, U1-02 | 10-14 | fig-U1-1: concept-map, fig-U1-2: table |
-| 1.2 | From calculating tools to modern computers | U1-03, U1-04 | 10-14 | fig-U1-3: timeline, fig-U1-4: table |
-| 1.3 | Kinds of computers | U1-05, U1-06 | 8-12 | fig-U1-5: table, fig-U1-6: diagram |
-| 1.4 | Computers, the internet, and society | U1-07, U1-08 | 10-14 | fig-U1-7: concept-map, fig-U1-8: table |
+| 1.1 | Computer literacy and why it matters | U1-01, U1-02 | 12-16 | fig-U1-1: concept-map, fig-U1-2: table |
+| 1.2 | From calculating tools to modern computers | U1-03, U1-04 | 12-16 | fig-U1-3: timeline, fig-U1-4: table |
+| 1.3 | Kinds of computers | U1-05, U1-06 | 10-14 | fig-U1-5: table, fig-U1-6: diagram |
+| 1.4 | Computers, the internet, and society | U1-07, U1-08 | 12-16 | fig-U1-7: concept-map, fig-U1-8: table |
 
-**Depth budget**: 8 sub-topics; 4 topics; 55-75 reading-min.
+**Depth budget**: 8 sub-topics; 4 topics; 65-95 reading-min.
 
 **Common misconceptions**: "computer literacy means knowing how to type"; "a computer is only
 the desktop machine on a desk"; "each new generation of computers is simply bigger and faster
@@ -138,9 +139,11 @@ classification by functionality: analog, digital, hybrid with examples (1.3); fi
 (1.4); fig-U1-8 `table` ICT applications by field: education, health, agriculture, banking
 (1.4).
 
-**Unit-end assessment blueprint**: 10 MCQ / 10 RRQ / 5 ERQ, >= 2 MCQ and >= 2 RRQ per topic,
-one ERQ per topic plus an integrative item requiring the learner to analyse ICT's impact on a
-named school or workplace.
+**Unit-end assessment blueprint**:
+  - MCQs (10): Remember to Apply; >= 2 per topic
+  - RRQs (10): Understand to Analyze; >= 2 per topic
+  - ERQs (5): Analyze to Evaluate/Create; one per topic plus one integrative item requiring
+    the learner to analyse ICT's impact on a named school or workplace
 
 ## Unit 2: Computer Hardware and Software Fundamentals
 
@@ -181,7 +184,7 @@ Weeks 4-6 (derived). Unit Spec (G1) for `docs/semester-1/gict-300/unit-02/`.
 | 2.3 | System software and application software | U2-06, U2-07 | 10-14 | fig-U2-5: table, fig-U2-6: flowchart |
 | 2.4 | Communication hardware and software | U2-08 | 8-12 | fig-U2-7: diagram, fig-U2-8: table |
 
-**Depth budget**: 8 sub-topics; 4 topics; 55-75 reading-min.
+**Depth budget**: 8 sub-topics; 4 topics; 65-95 reading-min.
 
 **Common misconceptions**: "the monitor is the computer"; "memory and storage are the same
 thing"; "software means only the programs you buy"; "a faster processor always makes the whole
@@ -199,9 +202,11 @@ fig-U2-6 `flowchart` what happens from pressing the power button to the desktop 
 fig-U2-7 `diagram` how a school lab's computers connect: client, switch, router, internet
 (2.4); fig-U2-8 `table` communication hardware and software with its purpose (2.4).
 
-**Unit-end assessment blueprint**: 10 MCQ / 10 RRQ / 5 ERQ, >= 2 MCQ and >= 2 RRQ per topic,
-one ERQ per topic plus an integrative item requiring a hardware/software plan for a described
-school need.
+**Unit-end assessment blueprint**:
+  - MCQs (10): Remember to Apply; >= 2 per topic
+  - RRQs (10): Understand to Analyze; >= 2 per topic
+  - ERQs (5): Analyze to Evaluate/Create; one per topic plus one integrative item requiring a
+    hardware/software plan for a described school need
 
 ## Unit 3: Operating System Concepts
 
@@ -239,7 +244,7 @@ Weeks 7-8 (derived). Unit Spec (G1) for `docs/semester-1/gict-300/unit-03/`.
 | 3.3 | Managing input and output | U3-05 | 8-12 | fig-U3-5: diagram, fig-U3-6: table |
 | 3.4 | The kernel: the core of the system | U3-06 | 8-12 | fig-U3-7: diagram, fig-U3-8: table |
 
-**Depth budget**: 6 sub-topics; 4 topics; 50-70 reading-min.
+**Depth budget**: 6 sub-topics; 4 topics; 60-90 reading-min.
 
 **Common misconceptions**: "the operating system is just the desktop picture and the taskbar";
 "closing a window always stops the program"; "deleting a file removes it immediately and
@@ -258,9 +263,11 @@ common input/output requests and what the OS does for each (3.3); fig-U3-7 `diag
 kernel at the centre: applications, shell, kernel, hardware (3.4); fig-U3-8 `table` kernel
 functions with a plain-language description of each (3.4).
 
-**Unit-end assessment blueprint**: 10 MCQ / 10 RRQ / 5 ERQ, >= 2 MCQ and >= 2 RRQ per topic,
-one ERQ per topic plus an integrative item on how the OS serves a whole lesson's worth of
-classroom tasks.
+**Unit-end assessment blueprint**:
+  - MCQs (10): Remember to Apply; >= 2 per topic
+  - RRQs (10): Understand to Analyze; >= 2 per topic
+  - ERQs (5): Analyze to Evaluate/Create; one per topic plus one integrative item on how the
+    OS serves a whole lesson's worth of classroom tasks
 
 ## Unit 4: Cyber security and Data Protection
 
@@ -299,7 +306,7 @@ Weeks 9-11 (derived). Unit Spec (G1) for `docs/semester-1/gict-300/unit-04/`.
 | 4.3 | Passwords, authentication, and the cloud | U4-04, U4-05 | 10-14 | fig-U4-5: flowchart, fig-U4-6: table |
 | 4.4 | Privacy and data protection | U4-06 | 8-12 | fig-U4-7: diagram, fig-U4-8: table |
 
-**Depth budget**: 6 sub-topics; 4 topics; 50-70 reading-min.
+**Depth budget**: 6 sub-topics; 4 topics; 65-95 reading-min.
 
 **Common misconceptions**: "my data is not worth stealing"; "antivirus software alone keeps me
 safe"; "one strong password reused everywhere is enough"; "the cloud is a place in the sky
@@ -317,8 +324,11 @@ passwords and what makes the difference (4.3); fig-U4-7 `diagram` where your fil
 you save it to the cloud (4.3); fig-U4-8 `table` personal data types and who may legitimately
 ask for each (4.4).
 
-**Unit-end assessment blueprint**: 10 MCQ / 10 RRQ / 5 ERQ, >= 2 MCQ and >= 2 RRQ per topic,
-one ERQ per topic plus an integrative item producing a data-protection plan for a school.
+**Unit-end assessment blueprint**:
+  - MCQs (10): Remember to Apply; >= 2 per topic
+  - RRQs (10): Understand to Analyze; >= 2 per topic
+  - ERQs (5): Analyze to Evaluate/Create; one per topic plus one integrative item producing a
+    data-protection plan for a school
 
 ## Unit 5: Ethical and Responsible Use of ICT
 
@@ -353,7 +363,7 @@ Weeks 12-13 (derived). Unit Spec (G1) for `docs/semester-1/gict-300/unit-05/`.
 | 5.2 | Online etiquette (netiquette) | U5-02 | 8-12 | fig-U5-3: table, fig-U5-4: diagram |
 | 5.3 | Intellectual property and avoiding plagiarism | U5-03, U5-04 | 12-16 | fig-U5-5: flowchart, fig-U5-6: table |
 
-**Depth budget**: 4 sub-topics; 3 topics; 40-55 reading-min.
+**Depth budget**: 4 sub-topics; 3 topics; 55-80 reading-min.
 
 **Common misconceptions**: "if it is on the internet, it is free to use"; "plagiarism is only
 copying whole paragraphs word for word"; "netiquette is just politeness, not a skill";
@@ -369,8 +379,11 @@ fig-U5-4 `diagram` the tone triangle: reader, purpose, context (5.2); fig-U5-5 `
 the safe-assignment workflow: note, paraphrase, compare, cite (5.3); fig-U5-6 `table` what
 counts as plagiarism vs proper use, with examples (5.3).
 
-**Unit-end assessment blueprint**: 10 MCQ / 10 RRQ / 5 ERQ, >= 2 MCQ and >= 2 RRQ per topic,
->= 1 ERQ per topic plus an integrative item designing a class code of responsible ICT use.
+**Unit-end assessment blueprint**:
+  - MCQs (10): Remember to Apply; >= 2 per topic
+  - RRQs (10): Understand to Analyze; >= 2 per topic
+  - ERQs (5): Analyze to Evaluate/Create; >= 1 per topic plus integrative items, one of which
+    designs a class code of responsible ICT use
 
 ## Unit 6: Internet Applications and Emerging Technologies
 
@@ -411,7 +424,7 @@ Weeks 14-16 (derived). Unit Spec (G1) for `docs/semester-1/gict-300/unit-06/`.
 | 6.3 | Artificial Intelligence and the Internet of Things | U6-05, U6-07 | 12-16 | fig-U6-5: concept-map, fig-U6-6: table |
 | 6.4 | Blockchain, Virtual Reality, and Augmented Reality | U6-06, U6-08 | 12-16 | fig-U6-7: diagram, fig-U6-8: table |
 
-**Depth budget**: 8 sub-topics; 4 topics; 55-75 reading-min.
+**Depth budget**: 8 sub-topics; 4 topics; 70-100 reading-min.
 
 **Common misconceptions**: "the browser and the search engine are the same thing"; "the first
 search result is the most reliable one"; "AI thinks and feels like a human"; "blockchain and
@@ -429,9 +442,11 @@ video meeting, forum (6.1); fig-U6-3 `flowchart` evaluating a website before tru
 a blockchain as linked blocks of records (6.4); fig-U6-8 `table` VR vs AR: what each does,
 one classroom use for each (6.4).
 
-**Unit-end assessment blueprint**: 10 MCQ / 10 RRQ / 5 ERQ, >= 2 MCQ and >= 2 RRQ per topic,
-one ERQ per topic plus an integrative item assessing an emerging technology's fit for a
-Pakistani school.
+**Unit-end assessment blueprint**:
+  - MCQs (10): Remember to Apply; >= 2 per topic
+  - RRQs (10): Understand to Analyze; >= 2 per topic
+  - ERQs (5): Analyze to Evaluate/Create; one per topic plus one integrative item assessing an
+    emerging technology's fit for a Pakistani school
 
 ## Reading list
 

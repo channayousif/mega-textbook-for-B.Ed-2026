@@ -778,3 +778,175 @@ Recorded here so the boundary stays visible as the log grows:
   `c1e8972a645d3db867f277ad539d87b42fc2f48bde56a8f0f01b140392c66f674`
 - **Limits:** does not approve any unit's English review (G3) or Urdu translation (G5). Certifies no
   content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
+
+---
+
+## D-2026-0030 - GICT-300 intake: identity, partition, coverage, outcomes, readings, blueprint, structure, no decision residue
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** GICT-300 only. Settles identity, the six-unit partition, the sub-topic coverage of all
+  six checklists, the CLO traces, the reading list including the proposed open-access floor, the
+  assessment blueprints, structural conformance, and the absence of decision residue. Does **not**
+  settle the week schedule's term length or distribution (`G-2026-25`).
+- **Decided by:** agent:evaluator, 2026-09-23
+- **Decision:**
+  1. **Identity.** GICT-300, "Application of ICT", **3 (2-1)** credit hours, Semester 1, General
+     Education, bilingual (catalog default). `catalog/courses.json:24-28` matches the guide
+     (`1st 2026.txt:374`, `:381-382`, `:384-387`: Credit Hours 3, Semester 1st) and the revised
+     board Scheme (`B.Ed 4 Year 2026 revised after board.txt:54-60`: 3 (2-1)). A credit total and
+     a split of that total do not contradict each other, so there is **no Article II.3 conflict
+     to escalate** - the posture G-2026-02, G-2026-05 and `D-2026-0015.1` established. The title
+     variants (guide "Applications of Information and Communication Technology (ICT)", scheme
+     "Application of Information Communication & Technologies(ICT)", catalog "Application of
+     ICT") are one course name at different levels of abbreviation; the catalog title is the name
+     the owner confirmed in the G-2026-01 Sem I inventory, which binds. `D-2026-0003` (confirmed,
+     corpus-wide) covers this course's file in `.specify/Course_guides_and_Scheme/`: a superseded
+     departmental variant set, never authoritative; the spec records this correctly at
+     `content-spec.md:31-32`.
+  2. **Partition follows the guide.** The guide numbers six units (`1st 2026.txt:416`, `:447`,
+     `:459`, `:469`, `:481`, `:491`); the spec follows them 1:1 under the guide's own verbatim
+     titles (`content-spec.md:84`, `:145`, `:206`, `:265`, `:323`, `:375`). The guide gives
+     numbered units, not a week table, so the partition is guide-determined and approved as such.
+     The calendar is not guide-determined and is escalated as `G-2026-25`, following the
+     `G-2026-16` precedent for EFMP-304.
+  3. **Coverage is complete and adds nothing.** The guide enumerates **31** sub-topic bullets
+     (6 + 5 + 4 + 5 + 4 + 7, at `:418-428`, `:449-457`, `:461-467`, `:471-479`, `:483-489`,
+     `:493-505`). The spec's six checklists carry **40** rows (8 + 8 + 6 + 6 + 4 + 8). Every
+     guide bullet appears, none dropped; the 9 extra rows decompose compound bullets whose
+     components the guide's own text names: U1 b3 "Evolution and generations" (`:422`) to 2 rows;
+     U1 b4 "Classification of computers" (`:424`) to 2 rows on the two axes the guide's own CLO 2
+     names at `:400` ("functionality and size"); U2 b1 "Input, output, and storage devices"
+     (`:449`) to 3; U2 b2 "Primary and secondary memory" (`:451`) to 2; U3 b1 "Functions and
+     types" (`:461`) to 2; U3 b2 "File and process management" (`:463`) to 2; U4 b1 "Cyber threats
+     and online security" (`:471`) to 2; U6 b1 "Web browsers and search engines" (`:493`) to 2.
+     That is 9 exactly. **No row sits under a bare guide heading with no textual ancestor** (the
+     G-2026-08 failure mode is absent), and the spec's own count claim ("31 guide sub-topic
+     bullets", `content-spec.md:72`) is accurate. Verified mechanically: 31 distinct guide refs
+     across the six checklists, 40 rows, no addition.
+  4. **The outcome traces hold.** The guide's eight Learning Outcomes (`:398-412`) are reproduced
+     verbatim at `content-spec.md:48-55`. Each has a unit whose guide topics deliver it: CLOs 1, 2
+     to Unit 1; CLO 3 to Unit 2; CLO 4 to Unit 3; CLO 5 to Unit 4; CLO 6 to Unit 5; CLOs 7, 8 to
+     Unit 6. No SLO lacks a guide ancestor and no CLO is orphaned, so the G-2026-10 failure mode
+     is absent. Unit 1's parenthetical CLO 8 "societal-impact thread" (`:88-89`) is a disclosed
+     secondary hedge whose primary delivery is Unit 6; recorded, not blocking.
+  5. **The reading list is present and every entry resolves to a real work** (guide `:530-538`,
+     five entries, all reproduced in the spec's `### Guide-required` table at `:448-452` with
+     citations matching the guide). Four are canonical textbooks (Shelly & Vermaat; Norton; Stair
+     & Reynolds; Laudon & Laudon); the fifth, the HEC ICT and Digital Literacy Guidelines,
+     resolves to HEC's published ICT and Digital Literacy Policy/Guidelines line at hec.gov.pk
+     (checked externally on 2026-09-23, an external registry rather than a bound input, the same
+     footing as the EFMP-304 run's Open Library check). All five are print/official with no
+     open-access text: monographs noted, each binding the author to **title-level support** under
+     `D-2026-0001` (confirmed, corpus-wide), which the spec states at `:439-452` and in every
+     unit's `**Mapped readings**` line. The spec's mitigation - a 13-entry curated open-access
+     list (`:454-471`) plus a declared `open_access_floor: default: 2` (`:5-6`, `:473-476`) - is
+     **approved as an application of `D-2026-0013`'s confirmed pattern** to the exact condition
+     that ruling names (a print-only guide list), at numbers at or above every confirmed
+     precedent (EFMP-304's owner-ruled 2/2/2/1/1/1; GENG-300's evaluator-approved 1/1/1 under
+     `D-2026-0019`), and mechanically enforced at G2 by `scripts/check-source-floor.mjs` (the
+     G-2026-17 fix). Every unit maps at least two open-access candidates, so the floor is
+     satisfiable from the spec's own mapping. `D-2026-0013` expressly did not set a corpus-wide
+     floor; this adoption is flagged for the owner within this pending-owner-review entry, and a
+     reversal of it strikes the floor without touching the rest of this approval.
+  6. **All six assessment blueprints are internally consistent and consistent with the style
+     guide.** `specs/content/style-guide.md:227-230` fixes the bank at exactly 10 MCQs, 10 RRQs
+     and 5 ERQs; every unit uses that bank (`content-spec.md:141-143`, `:202-204`, `:261-263`,
+     `:320-321`, `:372-373`, `:432-434`). Per-topic floors of >= 2 MCQ and >= 2 RRQ resolve to 8
+     of 10 on the five four-topic units and 6 of 10 on Unit 5's three topics; "one ERQ per topic
+     plus an integrative item" resolves to exactly 5 on four-topic units and floors at 4 of 5 on
+     Unit 5. No floor the spec sets would be breached by its own items in any unit. Every unit
+     carries an Analyze-or-higher integrative ERQ. The Bloom bands are not stated in the spec;
+     the style guide's defaults govern, the posture `D-2026-0019` approved for GENG-300 (see
+     repair item (a) for the enforcement consequence). The guide carries no assessment-criteria
+     table, so the Constitution Art. III.7 default 60/40 at `:63-65` is the correct fallback. The
+     course review plan's 24/18/12 mix (`:498-499`) is permitted: `style-guide.md:234-235` fixes
+     no count for `course-review.mdx`.
+  7. **Structure conforms.** Front matter (`course_code: GICT-300`, `status: draft`) validates
+     against `contracts/content-spec-frontmatter.schema.json`. Every required course-level
+     section is present - `## Course-wide items`, `## Course Description`, `## Reading list` with
+     both subheadings, `## Week schedule` (conforming to `D-2026-0012` as to form: derived,
+     clearly labelled, basis stated at `:69-73`), `## Standards & frameworks anchors`, `##
+     Course review plan` - and each unit subsection carries the full block set. Section order
+     follows the GENG-300/EED-313 family; no gate parses course-level order. The spec-side
+     invariants were replayed directly with the depth gate's own parsers (the docs-walking gates
+     are vacuous for this course: no unit is authored, and `docs/semester-1/gict-300/unit-01/`
+     holds only the `coming_soon` navigation scaffold from the initial platform commit): for all
+     six units the `Sub-topic IDs` cells form a **total, disjoint partition** of the checklist;
+     every checklist `Topic` cell equals its `### Topic list` row label; every `**Depth budget**`
+     count matches its own tables; every topic plans two figure IDs and every unit at least one
+     concept-map, flowchart or timeline (Art. III.10); figure IDs are consistent between topic
+     lists and figure plans (46 figures). Zero failures across all six units.
+  8. **No decision residue.** All `confirmed` entries were swept against the **whole** spec, not
+     only the sections their scope lines name. `D-2026-0001` is invoked within its Limits
+     (title-level, disclosed). `D-2026-0002`/`D-2026-0004`'s superseded EFMP-302 activity design
+     appears nowhere; the spec's only "one-page" wording (`:509`) is its own
+     emerging-technology briefing practicum, an unrelated activity, and all five practicum briefs
+     (`:500-510`) are GICT-300's own. `D-2026-0003` is correctly applied to this course's file in
+     the superseded folder. `D-2026-0005` is not evaded. `D-2026-0012` is applied in the body.
+     `D-2026-0013` is applied as disclosed precedent (`:473-476`), not copied beyond what fits
+     this course. `D-2026-0014` introduces no superseded design, and this decision authorises no
+     publication.
+- **Basis:**
+  `Scheme-and-Course-guides/extracted-text/1st 2026.txt`, the GICT-300 block at `:374-538`: code
+  `:374`, title `:381-382`, credit hours `:384-387`, description `:389-395`, outcomes `:398-412`,
+  unit outline `:416-505`, strategies and practical work `:507-527`, readings `:530-538`. The
+  revised board Scheme at `B.Ed 4 Year 2026 revised after board.txt:54-60`. `catalog/courses.json:24-28`
+  for code/title/credits/category. `specs/content/style-guide.md` (v4.5) for the bank, Bloom bands
+  and visual density; `specs/007-content-depth-standard/contracts/content-spec-v2.md` and
+  `specs/008-rich-unit-pedagogy/contracts/content-spec-v3.md` for the section set and per-unit
+  tables; `contracts/content-spec-frontmatter.schema.json` for the front matter;
+  `specs/decisions/log.md` for the residue sweep. Items 1 to 4 are determined by the guide
+  directly, because each is a reading of the guide's own enumerated text against the spec's
+  tables. Item 5 rests on the guide for presence and on the owner's confirmed `D-2026-0001` and
+  `D-2026-0013` for the print-only posture and its mitigation. Items 6 to 8 rest on the guide for
+  content and on the bound style guide and contracts for form, as the `structure` criterion
+  contemplates.
+- **Deterministic checks actually run at HEAD `73001c11`, with real exit codes:**
+  `npm run validate:content` **1** (13 errors, all in `docs/semester-1/geng-300/unit-01/`, another
+  course, pre-existing; zero GICT-300 findings); `npm run check:no-em-dash` **1** (9 occurrences,
+  all in `specs/content/geng-300/intake/evaluation.md`, the previous evaluator's own record; the
+  GICT-300 spec is clean); `npm run check:source-floor` **1** (one GICT-300 finding, "Unit 1
+  declares a floor of 2 but has no sources/unit-01.md" - the expected intake state, since
+  per-unit sources are authored with units and the walked unit-01 is the coming-soon scaffold);
+  `npm run check:depth-gate` **1**, `npm run check:figures` **1**, `npm run check:no-answer-keys`
+  **1**, `npm run check:pipeline-gate` **1** (every finding GENG-300 Unit 1; vacuous for
+  GICT-300); `npm run check:docs-sync` **0**; `npm run check:bloom-bands` **0** (vacuous for
+  GICT-300 - the spec declares no bands in the format the gate parses, repair item (a));
+  `npm run check:concept-graph` **0**. The GICT-300-relevant invariants were therefore replayed
+  directly against the bound spec with the gate's own parsers; zero failures (decision item 7).
+- **Bound to:** `specs/content/gict-300/intake/manifest.json`, manifest digest
+  `50960500ee7effa5b56c57be3c52a4816ee4c5f21fda29ded8ecaf66c39e901f`, **54 inputs** at commit
+  `73001c11e29e4f7cd1733091f976d31aaaf9081d`. Recomputed independently with `manifestFor()` from
+  `scripts/lib/review-evidence.mjs` over the same `intakeRoots('gict-300')` root set the prepare
+  script uses: every path and every digest matched, with no extra and no missing entry, and the
+  recorded `manifest_digest` reproduced from both the file's map and a fresh read from disk. The
+  `registers` field also matched. **Any change to a bound input voids this approval**
+  (Art. VII.8.5). Per the `G-2026-15` fix, `specs/decisions/log.md` and `specs/gaps.md` are
+  recorded in `registers` and are deliberately **not** freshness-bearing, so recording this
+  decision does not void it.
+- **Effect on `status`:** with the calendar excluded (`G-2026-25`), all eight criteria pass on
+  their guide-determined substance, so `specs/content/gict-300/content-spec.md` is set to
+  **`status: approved`** - the transition the spec itself assigns to this gate at `:15-17`. That
+  releases authoring under Spec 006 FR-002. **This is not an authorisation to publish.**
+  Publication authority is the owner's and was given in `D-2026-0014`; Art. VII.8.4 withholds it
+  from an evaluator.
+- **Repair items, reported for repair, needing no owner decision, none blocking:**
+  (a) the six unit-end blueprint lines use condensed prose that `scripts/check-bloom-bands.mjs`
+  cannot parse and state no Bloom bands, so the deterministic Bloom-band gate will be vacuous for
+  GICT-300 once units are authored; rewrite them in the contract's bullet format with the style
+  guide's default bands **before any unit is authored** - this matters more than usual because
+  GICT-300 is `D-2026-0014`-covered and can publish gate-checked with no reviewer (the same
+  defect is live for GENG-300's authored Unit 1 and EED-313 Units 2-4, reported to the parent);
+  (b) Unit 1's topic Reading-min bands sum to 38-54, whose ceiling is one minute below the unit
+  band floor of 55 (`:117-120` vs the topic list at `:115-120`); the gated sum includes index and
+  assessment minutes so the budget is satisfiable, but the topic guidance and the unit band are
+  inconsistent at the boundary - align one of them before authoring Unit 1.
+- **Limits and what remains open:**
+  - **The week schedule is approved as to form only.** The 16-week term and the 3/3/2/3/2/3
+    distribution are **not** approved: `G-2026-25`. The `## Week schedule` table and the "Weeks
+    N-M (derived)" line opening each of the six unit subsections (`:86`, `:147`, `:208`, `:267`,
+    `:325`, `:377`) are blocked with it. Nothing else is: authoring does not depend on them and
+    no gate reads them.
+  - Does not approve any unit's English review (G3) or Urdu translation (G5). Certifies no
+    content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
