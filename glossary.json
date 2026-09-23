@@ -773,5 +773,65 @@
     "term": "Balance model",
     "definition_en": "The picture of an equation as a balance scale: whatever is done must be done to both pans, or the balance lies.",
     "definition_ur": "مساوات کی تصویر بطور ترازو: جو کچھ کیا جائے، دونوں پلڑوں پر کیا جائے، ورنہ ترازو جھوٹ بولتا ہے۔"
+  },
+  {
+    "term": "Unit of measurement",
+    "definition_en": "A fixed amount that other amounts are counted in, such as the metre for length; every measurement is a number-unit pair.",
+    "definition_ur": "کوئی مقررہ مقدار جس میں دوسری مقداریں گنی جاتی ہیں، جیسے لمبائی کے لیے میٹر؛ ہر پیمائش عدد اور اکائی کا جوڑا ہوتی ہے۔"
+  },
+  {
+    "term": "Kilogram",
+    "definition_en": "The base metric unit of mass; the prefix kilo- means a thousand, so 1 kilogram = 1,000 grams.",
+    "definition_ur": "کمیت کی بنیادی میٹری اکائی؛ لاحقہ کلو- کا مطلب ہے ایک ہزار، پس 1 کلوگرام = 1,000 گرام۔"
+  },
+  {
+    "term": "Centimetre",
+    "definition_en": "One hundredth of a metre; the prefix centi- means a hundredth, so 1 metre = 100 centimetres.",
+    "definition_ur": "ایک میٹر کا سو واں حصہ؛ لاحقہ سینٹی- کا مطلب ہے سو واں حصہ، پس 1 میٹر = 100 سینٹی میٹر۔"
+  },
+  {
+    "term": "Millilitre",
+    "definition_en": "One thousandth of a litre; the prefix milli- means a thousandth, so 1 litre = 1,000 millilitres.",
+    "definition_ur": "ایک لیٹر کا ہزار واں حصہ؛ لاحقہ ملی- کا مطلب ہے ہزار واں حصہ، پس 1 لیٹر = 1,000 ملی لیٹر۔"
+  },
+  {
+    "term": "Perimeter",
+    "definition_en": "The distance around a shape - the fence line; measured in metres, and what skirting or border tasks buy.",
+    "definition_ur": "کسی شکل کے گرد کا فاصلہ، یعنی باڑ کی لکیر؛ میٹر میں ناپی جاتی ہے، اور اطراف یا بارڈر کے کام یہی خریدتے ہیں۔"
+  },
+  {
+    "term": "Area",
+    "definition_en": "The amount of surface a shape covers - the carpet; measured in square metres, and what tiling or painting tasks buy.",
+    "definition_ur": "کسی شکل کا ڈھکا ہوا سطحی رقبہ، یعنی قالین؛ مربع میٹر میں ناپی جاتی ہے، اور ٹائل یا پینٹ کے کام یہی خریدتے ہیں۔"
+  },
+  {
+    "term": "Volume",
+    "definition_en": "The amount of space a solid fills - the water in the tank; measured in cubic metres or litres.",
+    "definition_ur": "کسی ٹھوس چیز کا بھرا ہوا خانہ، یعنی ٹینک میں پانی؛ مکعب میٹر یا لیٹر میں ناپا جاتا ہے۔"
+  },
+  {
+    "term": "Rectangle",
+    "definition_en": "A shape with four right angles and opposite sides equal; its area is length x width.",
+    "definition_ur": "ایسی شکل جس کے چار زاویے قائمہ ہوں اور سامنے کی باتیں برابر ہوں؛ اس کا رقبہ لمبائی ضرب چوڑائی ہے۔"
+  },
+  {
+    "term": "Square",
+    "definition_en": "A rectangle with all four sides equal; a special rectangle, so every square fact is also a rectangle fact.",
+    "definition_ur": "ایسا مستطیل جس کے چاروں طرف برابر ہوں؛ ایک خاص مستطیل، پس مربع کی ہر بات مستطیل کی بات بھی ہے۔"
+  },
+  {
+    "term": "Triangle",
+    "definition_en": "A shape with three sides whose angles sum to 180 degrees; its area is half the enclosing rectangle with the same base and height.",
+    "definition_ur": "تین طرفوں والی شکل جس کے زاویوں کا مجموعہ 180 ڈگری ہے؛ اس کا رقبہ اسی اساس اور اونچائی والے مستطیل کا آدھا ہے۔"
+  },
+  {
+    "term": "Circle",
+    "definition_en": "The set of every point at one fixed distance from a centre; its circumference is pi times the diameter and its area is pi times the radius squared.",
+    "definition_ur": "کسی مرکز سے ایک مقررہ فاصلے پر واقع تمام نقطوں کا مجموعہ؛ اس کا محیط پای ضرب قطر اور رقبہ پای ضرب نصف قطر کا مربع ہے۔"
+  },
+  {
+    "term": "Radius",
+    "definition_en": "The fixed distance from a circle's centre to its edge; half the diameter, and the length a circle computation needs.",
+    "definition_ur": "دائرے کے مرکز سے کنارے تک مقررہ فاصلہ؛ قطر کا آدھا، اور دائرے کے حساب کے لیے درکار لمبائی۔"
   }
 ]
