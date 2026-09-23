@@ -786,3 +786,46 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   Unretrievable print monographs bind the author to title-level support at point of use under
   `D-2026-0001`; no full-text access is required at G1.
 - **Blocks:** ~~the `readings` criterion of `D-2026-0018`~~ **unblocked**.
+
+---
+
+## G-2026-25 - GICT-300's term length and week distribution are the spec's construction, not the guide's
+
+- **Status:** open
+- **Gate:** G0 intake / G1 unit-spec (partition criterion, calendar only)
+- **Source:** `D-2026-0030`
+- **Question:** The GICT-300 guide block (`Scheme-and-Course-guides/extracted-text/1st 2026.txt:374-538`)
+  carries a course description, eight learning outcomes, an explicit six-unit course outline, a
+  "Teaching / Instructional Strategies" list, a "Practical Work" list and a "Recommended Books /
+  References" list. It carries **no week table of any kind**, and no statement of term length or
+  of how contact hours distribute across the term. The revised board Scheme contains the word
+  "week" nowhere at all (verified: 0 matches in `B.Ed 4 Year 2026 revised after board.txt`). The
+  same guide file carries no week table for the other Semester I courses either (GENG-300,
+  `D-2026-0012`'s basis), so the silence is the guide's posture, not an extraction artefact.
+
+  `specs/content/gict-300/content-spec.md:67-82` supplies a schedule, correctly marked "Derived,
+  not guide-given" with its basis stated (the 3 (2-1) credit-hour split, a 16-week semester, and
+  the relative weight of each guide unit "as judged by sub-topic count and cognitive demand") -
+  the form `D-2026-0012` permits and reserves to this gate. It allocates a **16-week** term as
+  **3/3/2/3/2/3** across Units 1 to 6, and each `## Unit N` subsection repeats its band on its
+  first line (`:86`, `:147`, `:208`, `:267`, `:325`, `:377`).
+
+  Two things are undetermined, not one. First, the **term length**: nothing in the 54 bound
+  inputs states that a GICT-300 term is sixteen weeks. Second, the **distribution**: the stated
+  basis is sub-topic count and cognitive demand, but the allocation is not proportional to
+  sub-topic count (Unit 6 carries 7 sub-topics in 3 weeks while Unit 3 carries 4 in 2 and Unit 5
+  carries 4 in 2; per-sub-topic weight varies from 0.43 to 0.6), so the work is done by a
+  pedagogical judgement the guide supplies no basis for. The spec is candid that this is a
+  judgement, and `D-2026-0012` expressly leaves the disposition to the evaluator; the evaluator
+  escalates, exactly as `G-2026-16` did for EFMP-304.
+
+  The owner has confirmed 16-week calendars for two courses individually (EFMP-304 in the
+  `G-2026-16` decision; EED-313 in `G-2026-20`), but neither ruling sets a corpus-wide term
+  length, so GICT-300's calendar still needs its own confirmation.
+- **Needed, and from whom:** the curriculum owner, to state the term length GICT-300 is taught
+  over and either to confirm the proposed 3/3/2/3/2/3 distribution or supply another; or to
+  direct that `## Week schedule` be recorded as guide-silent for this course, which
+  `D-2026-0012` expressly permits as the alternative.
+- **Blocks:** the `## Week schedule` table and the "Weeks N-M (derived)" line opening each of the
+  six `## Unit N` subsections. Nothing else: `D-2026-0030` is written to exclude the calendar,
+  authoring does not depend on it, and no gate reads it.
