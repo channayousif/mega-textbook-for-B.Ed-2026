@@ -1,0 +1,341 @@
+{
+  "schema_version": 1,
+  "course_code": "GNAS-301",
+  "unit_no": 2,
+  "stage": "G3",
+  "disposition": "pass",
+  "reviewer_id": "agent:g3-reviewer",
+  "author_run_id": "commit:2230d11",
+  "reviewer_run_id": "agent-g3-gnas301-u2-run002",
+  "model": "LongCat-2.0",
+  "started_at": "2026-09-23T21:22:00Z",
+  "completed_at": "2026-09-23T22:06:16.939Z",
+  "skill_digest": "eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b",
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g3.md": "074c8464b4bc0f2f2b76bbb19707c50b54cb907920407873a4e5d193e866f53f",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "f1d7f063cc2c826693a3d8428fb5d3ee45455fdb7906ebc5adadee8b9a434d47",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-1/gnas-301/course-overview.mdx": "905fecf4beea458a11bd94c393c0ba932a25a20b3dc9585e98972e5ff99f7271",
+    "docs/semester-1/gnas-301/unit-02/index.mdx": "f4fa594eacedfbae03bdb9fa33f441d03aa6867327c20f38462ae486740fc656",
+    "docs/semester-1/gnas-301/unit-02/topic-01.mdx": "798fda43130e04cb15cc2f0759328e4cadb95c32f81f3390946abc5cdbd322a0",
+    "docs/semester-1/gnas-301/unit-02/topic-02.mdx": "d57a78dd997d61887083477346421da0df9f1f46210cec2df25a4e5d645ea192",
+    "docs/semester-1/gnas-301/unit-02/topic-03.mdx": "8401b8c38fb8ce9e564e4e3cff973040663bc64f03c8e6adaa621953768629c7",
+    "docs/semester-1/gnas-301/unit-02/unit-assessment.mdx": "d2e74a805ec84c5fd835b705e8a9bf61aa35893b778b6c74bffc63a56ca09a4c",
+    "docs/semester-1/gnas-301/unit-02/unit-teacher-notes.mdx": "5971daae83604e228e0cdfb7e176e28bb191b581fa0a496fc341c1c91a22a9fc",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "41b698f8cbbb12f4030d6893083a5c36e4a19848b5ddb86206e5ba72847b8b13",
+    "scripts/check-no-answer-keys.mjs": "f38d60e5360e0c29f2dae02001195690f3b95e0ad2d7ae1a3c03a0d09c053f0d",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "bb614c625f7bf397ce51a317bdb8901711c00fa009d4ad0a506c5096e5b9ddd2",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "77f03816f68663621059f17745109fdde9b103c555f707e0c62d5ff56d2a4cd9",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "973496faae3366d13e8cdd3ba8d68edf7bd3745bdc6928311ee03c55f24b18b2",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/gnas-301/concepts/unit-02.md": "bdba0246414956278106ae67a2ba8fa45c66278adc62c68f9904681459804b40",
+    "specs/content/gnas-301/content-spec.md": "3b97f2f1d913a917b8e49777a1e7f10ab7f46b7826ba83004709e335039d38c1",
+    "specs/content/gnas-301/coverage/unit-02.md": "b8b7553395d55759a11c24d017f8cfe391f8a9b168ee4411b188cb821d93a4a9",
+    "specs/content/gnas-301/figures/unit-02.md": "36199d11d11ccdb5e0400cdd58232297062aaf4bcdff0c76f41ff69f094a33c5",
+    "specs/content/gnas-301/sources/texts/archer2010.md": "be2393d4e25c083dfcf4bc568e20be4fe0b8013e1c2a574dd5a6594a25367a58",
+    "specs/content/gnas-301/sources/texts/ilmas2026.md": "cd256182773e73727bf1f6858b8dc7ddf4f8d9aa5113a1ef2d0db32ade2a579a",
+    "specs/content/gnas-301/sources/texts/samtio2022.md": "feea15bdcda0080bc302061396339075840ae2ed43a5613a728798181f4313a8",
+    "specs/content/gnas-301/sources/texts/usgs-water-2019.md": "cf37f4cceaf18e6cde19572f0626ef5fde143cdcdb789d96a6131fb235590702",
+    "specs/content/gnas-301/sources/texts/who-healthcare-waste-2024.md": "b26fa5fd879f3dbde4babf2dfcd15b890b9103691f120d99bf2af3a55b38c8d6",
+    "specs/content/gnas-301/sources/texts/who-sanitation-2024.md": "82f79b61c82da80d4add1d0399b3db3d6f5767e152e0bda04e48fc95a2cca779",
+    "specs/content/gnas-301/sources/texts/who-water-2023.md": "40333d29fcf90adb66a9305e18a6f3355dbd15f506e3c38682f2c420eb7013ff",
+    "specs/content/gnas-301/sources/unit-02.md": "e25ae86c1673423e5214e40a83501ad70d775ab1bf17d8d58596544fceb6e551",
+    "specs/content/style-guide.md": "db96c9b33b0fb9522986462a0b519620c3c1d7602a046d7b90e638f643da4610",
+    "static/img/figures/gnas-301/unit-02/fig-U2-1.dark.svg": "689b868bfcefd78692da73ce9aa39c99e42cd15f1953438f9ed2cc583894291f",
+    "static/img/figures/gnas-301/unit-02/fig-U2-1.svg": "b1fc602d69ce095d00921fddd0a43e50804110e5025a3ed7f98a3aa1da16f0bb",
+    "static/img/figures/gnas-301/unit-02/fig-U2-2.dark.svg": "3a7ad92a772464af1734fc318155d7d0be126e8cfda3b9c42ad385fe919c1399",
+    "static/img/figures/gnas-301/unit-02/fig-U2-2.svg": "82c6610350e42908670b9dfc15aed1300f7e9c1e11a46a0c84a68d503cb63e83",
+    "static/img/figures/gnas-301/unit-02/fig-U2-3.dark.svg": "b497f84e2dc721cf922d18fc7c54fd746a51ca69bd46c4f5e00d84f93588ae66",
+    "static/img/figures/gnas-301/unit-02/fig-U2-3.svg": "17a59edf46f9cedd73cfe3e66bfe2207864d10541821c99a9b45771f38e50202",
+    "static/img/figures/gnas-301/unit-02/fig-U2-4.dark.svg": "1695d562a300c44d193a2583c80b1245ed1511303fe32027fbd6327cdc5b039f",
+    "static/img/figures/gnas-301/unit-02/fig-U2-4.svg": "cc6550a9ed5e9316ff8e0aea3d4dd17e8791f39d361cf992a512475232ba8ce9",
+    "static/img/figures/gnas-301/unit-02/fig-U2-5.dark.svg": "09c612b1ef58f6bcb878392b4f2d8281f8c0365d08e78695795c402819ff3e48",
+    "static/img/figures/gnas-301/unit-02/fig-U2-5.svg": "8e417f3fbd2ee5e62fdc80b98a729883179b667c2fd9128db171f718643421c4",
+    "static/img/figures/gnas-301/unit-02/fig-U2-6.dark.svg": "cf57e984f29e7aad09ca879e69ef77b8e210e0b788e1a4c0ae8e4400e5b74c55",
+    "static/img/figures/gnas-301/unit-02/fig-U2-6.svg": "c473ba88b059ce11a80e7f1b7acbf7165ccf47ca3952d06a23411bdef4220d1f"
+  },
+  "rulings": {
+    "D-2026-0001": "8ff79df9af668329f6d0094a2257654f45fc545122a753b4888fb9936f402f1f",
+    "D-2026-0020": "84634da46e3d983ace09ce20d2ed5ea5e1588f30e1f405e44b62c967585925e7",
+    "D-2026-0021": "6004630196719c12ca61d4ed45ed09a2da427c431d666434b6a0221bda078268"
+  },
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        "Guide leaf subtopics 3.1-3.3 (Scheme-and-Course-guides/extracted-text/1st 2026.txt:229-231) and 4.1-4.2 (:235-236) map one-to-one to U2-01..U2-05 in the approved content-spec Unit 2 subsection (specs/content/gnas-301/content-spec.md:410-420); spec status approved (D-2026-0020, owner resolutions G-2026-22/G-2026-23, open-access floor D-2026-0021)",
+        "Taught sections verified: docs/semester-1/gnas-301/unit-02/topic-01.mdx ## Explanation ### Global water distribution, Pakistan's water resources, and water security (3.1); topic-02.mdx ### Water pollution: sources, types, impacts and remedies (3.2) and ### Industrial effluents: sources, impacts, treatment and recycling (3.3); topic-03.mdx ### The principles of municipal solid waste management (4.1) and ### Hazardous waste management: hospital and industrial waste (4.2)",
+        "SLO refs match the spec mapping (topic-01/02 -> SLO:GNAS-301-2-1, topic-03 -> SLO:GNAS-301-2-2; content-spec.md:390-393); index clo_refs list both; teaching strategies and recommended books in the teacher notes match the guide (1st 2026.txt:320-338, 352-366)",
+        "Round-1 authority findings re-verified unchanged at the repaired commit; this report supersedes specs/content/gnas-301/reviews/unit-02/G3/agent-g3-gnas301-u2-run001.json"
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "pass",
+      "evidence": [
+        "Open-access floor 2 (D-2026-0021) exceeded: samtio2022, ilmas2026 and archer2010 Crossref-verified 2026-09-23; who-water-2023, who-sanitation-2024, usgs-water-2019 and who-healthcare-waste-2024 verified by direct fetch 2026-09-23 (specs/content/gnas-301/sources/unit-02.md:7-20)",
+        "Every in-text figure claim verified against its bound excerpt: oceans about 96.5 per cent (sources/texts/usgs-water-2019.md:13 vs topic-01.mdx:39-45); over 2 billion people in water-stressed countries (who-water-2023.md:14 vs topic-01.mdx:69-70); about 505,000 diarrhoeal deaths a year (who-water-2023.md:16 vs topic-02.mdx:48-50); 1.4 million WASH deaths a year (who-sanitation-2024.md:15-16 vs topic-02.mdx:65-67); 44 per cent of household wastewater untreated (who-sanitation-2024.md:14 vs topic-03.mdx:64-65); Lahore about 108 Mt CO2-eq (ilmas2026.md:17-19 vs topic-03.mdx:61-64); Chachro 32 samples with physicochemical parameters including TDS exceeding WHO drinking-water guidelines (samtio2022.md:13-20 vs topic-01.mdx:72-75); Indus basin already highly stressed by withdrawals-to-runoff and per-capita availability (archer2010.md:16-18 vs topic-01.mdx:59-61 and 68-69); about 85 per cent of health-care waste general versus 15 per cent hazardous (who-healthcare-waste-2024.md:13-15 vs topic-03.mdx:76-79)",
+        "Round-1 advisory repairs verified: the 97/3 salt-fresh split and the ice/groundwater shares are now USGS-sourced with a bound excerpt, and the unsourced 1,700/1,000 thresholds were removed and reworked onto Archer et al.'s sourced stress framing (topic-01.mdx:39-45, 65-70); the WHO Health-care waste fact sheet is bound for U2-05",
+        "holland-oxford and park-park remain declared under ## Unverifiable sources with retrieval attempts, date 2026-09-23 and owner authorisation (D-2026-0001, confirmed G-2026-23/D-2026-0021; sources/unit-02.md:24-40); neither is cited for a specific prose claim",
+        "Residuals recorded as advisory findings, not failures: the specific U2-05 handling rules (colour-coded containers, non-reopenable sharps boxes, labelling, secured storage, licensed handlers, manifests; topic-03.mdx:83-92) and the NEQS yardstick sentence (topic-02.mdx:90-92, spec-directed at content-spec.md:460) still rest on general knowledge; the park-park declaration text is now partially stale (see findings)"
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "specs/content/gnas-301/coverage/unit-02.md maps all five sub-topics U2-01..U2-05 to exact topic-file ### headings, including the new usgs-water-2019 row for U2-01 and who-healthcare-waste-2024 row for U2-05; each mapping verified against the taught sections",
+        "All five guide leaf subtopics are taught and assessed: 3.1 -> topic-01 + MCQ 1/2/3/10, RRQ 1/2/3, ERQ 1; 3.2 -> topic-02 + MCQ 4, RRQ 4/6, ERQ 2; 3.3 -> topic-02 + MCQ 5/6, RRQ 5/7, ERQ 4; 4.1 -> topic-03 + MCQ 7/8, RRQ 8/10, ERQ 5; 4.2 -> topic-03 + MCQ 9, RRQ 9, ERQ 3 (the reworked household-vs-clinic comparison)",
+        "specs/content/gnas-301/concepts/unit-02.md covers 8 concepts with derived assessment IDs that match the reworked bank (ERQ-03 remains under CON:GNAS-301-2-8 Hazardous waste segregation); Urdu labels correctly flagged for G5"
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "pass",
+      "evidence": [
+        "Independent solve before reading the supplied answers: derived MCQ key 1-b, 2-d, 3-a, 4-c, 5-b, 6-d, 7-b, 8-a, 9-b, 10-c matches the supplied key exactly (unit-assessment.mdx:137-151); RRQ model answers and ERQ rubric bands match independent derivations",
+        "Round-1 blocking repair 1 verified: ERQ 3 (unit-assessment.mdx:126-128) now performs the blueprint's required Analyze-or-higher comparison of two waste streams for hazards and handling (content-spec.md:406-408): it demands both streams' contents, the hazardous share with reasons, and handling differences at segregation, storage and disposal; its analytic rubric (:197-200) mirrors the stem and totals 10 (2+3+3+2). The blueprint's household-vs-hospital comparison is realised as household-vs-clinic, the unit's established equivalence (topic-03.mdx:76: Hospital, or clinical, waste)",
+        "Round-1 blocking repair 2 verified: RRQ 2's mark scheme (unit-assessment.mdx:161) now reads Marks (5): 1 per resource (4); 1 for at least two correct challenges, which allocates exactly 5 marks against the 5-mark total and can be applied consistently",
+        "Bank shape satisfies the unit-end blueprint (content-spec.md:479-482): 10/10/5; >=3 MCQ and >=3 RRQ per topic (2.1: 4/3, 2.2: 3/4, 2.3: 3/3); one ERQ per topic (ERQ 1, 2, 3) plus two integrative items (ERQ 4 links effluent treatment to water security, ERQ 5 designs a school waste plan against the hierarchy); every ERQ carries an analytic rubric totalling 10 with at least one Analyze-or-higher band",
+        "Bloom labels re-audited from the thinking actually required: MCQ 3 now (Understand) and the reworked ERQ 3 (Analyze) are accurate; the remaining labels match actual demand; MCQ key de-skew verified in source and built HTML (distribution a:2, b:4, c:2, d:2)"
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "pass",
+      "evidence": [
+        "Verified-fresh build (build/ completed 2026-09-23T16:21:33-05:00, after the last unit-02 source change 16:16:23; repaired content confirmed in the built HTML: reworked ERQ 3, Marks (5), USGS sentence, WHO 85 per cent sentence, Sanitation glossary link, full de-skewed MCQ key) served by docusaurus serve at http://127.0.0.1:4614; inspection in headless chromium 149.0.7827.0 at desktop 1280x900, narrow 360x780, and A4 print emulation (renders/render-inspect.log, renders/render-inspect.json)",
+        "All 6 pages: no broken images, no missing alt text, no skipped heading levels, no document horizontal overflow at 360px or 1280px, no console errors; 6 figures lazy-loaded with identical light/dark alt text, dark twins correctly hidden in light mode",
+        "Content tables measured on the table element itself per the G3 rubric: at 360px clientWidth=328, scrollWidth=328, fits=true, so no swipe scrolling or hydration keyboard attrs are required; figures fit their boxes (scroller=visible, fits=true)",
+        "A4 print: 6 PDFs generated (valid %PDF header and %%EOF, 2-7 page objects each); nav and footer hidden in print media; per-figure print-emulated element captures show all 6 figures render with captions, palette and wordmark (renders/print-figure-*.png); the answers section renders unclipped at 360px (renders/narrow360-unit-assessment-answers.png) and in print view (renders/print-view-answers.png)",
+        "node scripts/measure-figure-text.mjs over all unit-02 SVGs (EN light+dark and Urdu variants): no text overflow of the 780x470 viewBox, no wordmark collision (logs/measure-figure-text.log, EXIT_CODE=0)",
+        "Method note: harness image viewing was unavailable this session (Read-tool image rendering returned no output; poppler not installed), so visual verification used sharp raw-pixel analysis of every PNG, per-figure print-emulated element captures, PDF structural checks and direct SVG source inspection; recorded in renders/render-inspect.log section D"
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "HSC-register prose, short sentences, one idea per paragraph; all ten spec key terms glossary-linked at first use and present in glossary.json, including the newly added Sanitation with English and Urdu definitions (round-1 advisory repair verified; topic-02.mdx:65)",
+        "Reading minutes inside the spec budget: topics 15+16+16 within per-topic ranges 12-16/14-18/14-18; learner-facing unit total 63 (index 5 + topics 47 + assessment 11) within the 55-75 depth budget (content-spec.md:432)",
+        "Each topic runs classroom situation -> explanation with worked example and named misconception -> activity -> retrieval -> summary -> self-assessment -> practicum -> summative task with mini-rubric"
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": [
+        "Nine-part topic cycle present and correctly ordered in all three topic files (check:depth-gate EXIT_CODE=0; heading order confirmed in render inspection)",
+        "Activities feasible in their stated Pakistani/Sindhi contexts with ordinary materials: 100 counters (2.1), teacher-supplied sketch map (2.2), and the bin audit carries explicit safety handling (tongs or gloved hands, spread sheet, no clinical or sharp material, handwashing, photographic fallback if the school waste is unsafe) (topic-03.mdx:108-115, unit-teacher-notes.mdx:58-61)",
+        "Spec-listed misconceptions addressed: floods-mean-no-scarcity and climate fatalism (topic-01.mdx:84-87), clear-water-is-safe (topic-02.mdx:99-102), collection-is-all, hospital-waste-like-household and recycling-first (topic-03.mdx:103-106, unit-teacher-notes.mdx:33-45); sea-is-huge answered by the 100-droplet figure",
+        "Teacher notes follow the guide teaching-strategy list (case studies, guided reading, home study; 1st 2026.txt:320-338), sequence the two-week guide window, and link practicum work to Unit 1 and forward to Units 3 and 5"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "blocking",
+      "resolved": true,
+      "message": "Round-1 blocking finding 1 (specs/content/gnas-301/reviews/unit-02/G3/agent-g3-gnas301-u2-run001.json) is repaired and verified: the approved blueprint required one Analyze-or-higher summative item comparing two waste streams (household vs hospital) for hazards and handling (content-spec.md:406-408). ERQ 3 (unit-assessment.mdx:126-128) now compares a household's waste stream with a clinic's for hazards and handling at Analyze - contents of both streams, hazardous share with reasons, handling differences at segregation, storage and disposal - and its analytic rubric (:197-200) mirrors the stem and totals 10. The blueprint's 'hospital' is realised as 'clinic', the unit's established equivalence (topic-03.mdx:76)."
+    },
+    {
+      "severity": "blocking",
+      "resolved": true,
+      "message": "Round-1 blocking finding 2 is repaired and verified: RRQ 2's mark scheme (unit-assessment.mdx:161) now reads Marks (5): 1 per resource (4); 1 for at least two correct challenges, which allocates exactly 5 marks against the 5-mark total, so a marker can apply it consistently."
+    },
+    {
+      "severity": "advisory",
+      "resolved": true,
+      "message": "Round-1 advisory (MCQ key skew) is repaired and verified: the key is now b,d,a,c,b,d,b,a,b,c (distribution a:2, b:4, c:2, d:2), confirmed independently and in the built HTML."
+    },
+    {
+      "severity": "advisory",
+      "resolved": true,
+      "message": "Round-1 advisory (Bloom labels versus actual demand) is repaired and verified: MCQ 3 is labelled (Understand) and its recall-level demand now matches; ERQ 3 was reworked and relabelled (Analyze) with a stem that genuinely demands comparison."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Round-1 advisory (bare URLs as link text) remains unresolved: Further reading still uses bare URLs as link text - topic-01.mdx:150-161 (4 links, including the newly added USGS entry), topic-02.mdx:165-168 (2 links), topic-03.mdx:171-177 (3 links, including the newly added WHO Health-care waste entry). Repair request: use descriptive link text (for example the DOI string or the fact-sheet title) at the next unit revision."
+    },
+    {
+      "severity": "advisory",
+      "resolved": true,
+      "message": "Round-1 advisory (unsourced water figures) is repaired and verified: the 97/3 salt-fresh split and the ice/groundwater shares are now sourced to the USGS Water Science School with a bound excerpt (usgs-water-2019; topic-01.mdx:39-45), and the unsourced 1,700/1,000 cubic-metre thresholds were removed and reworked onto Archer et al.'s sourced stress framing (topic-01.mdx:65-70)."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Round-1 advisory (U2-05 handling rules uncorroborated) is partially repaired: the WHO Health-care waste fact sheet is now bound with an excerpt (who-healthcare-waste-2024) carrying the 85/15 split, the risk-waste categories, the segregation recommendation and the treatment routes. However, the specific handling rules in topic-03.mdx:83-92 - colour-coded containers, a sharps container that cannot be reopened, labelling and dating, secured storage, licensed handlers, and the industrial manifest chain - are still not carried by any bound excerpt and rest on general knowledge. The park-park declaration remains honest about this, so sources does not fail. Repair request at next revision: bind an open-access source that carries the segregation-container and licensed-handler rules (for example WHO safe management of health-care waste guidance)."
+    },
+    {
+      "severity": "advisory",
+      "resolved": true,
+      "message": "Round-1 advisory (Sanitation glossary) is repaired and verified: Sanitation is in glossary.json with English and Urdu definitions and is glossary-linked at its first prose use (topic-02.mdx:65)."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "New finding (documentation accuracy): the park-park declaration in specs/content/gnas-301/sources/unit-02.md:38-39 still states that the U2-05 hazardous-waste principles are ones 'which the unit's WHO- and registry-verified sources do not carry', but the newly bound who-healthcare-waste-2024 now carries the 85/15 split, the risk-waste categories, the segregation recommendation and the treatment routes; the statement remains true only for the handling-rule specifics. The error is in the conservative direction (it claims less verification than now exists) and the declaration is still honest about park-park's non-retrievability, so this does not fail sources. Repair request: update the declaration text at the next sources-table revision so it names exactly what remains uncorroborated."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "New finding (residual qualitative claims): topic-01.mdx:65-68 states that Pakistan 'has crossed from stress toward scarcity' and that the same river system 'now serves more than twice the people it served a generation ago'. Neither claim is carried by the bound Archer excerpt, which states the resources are 'already highly stressed' and 'will become increasingly so'; the population-doubling figure is general knowledge. Both claims are standard, approximately true and stated without thresholds, so this does not fail sources. Repair request at next revision: soften to Archer's language or bind a demographic source for the population claim."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "New finding (process, bundle integrity): the frozen round-02 bundle (manifest.json prepared at commit c7bac5c and verified digest-complete at review start, 2026-09-23T21:25Z) moved mid-review through concurrent commits on this shared worktree branch: bee775c (Unit 1 G3 round-2 repairs, 2026-09-23T21:50:52Z) appended a Unit 1 re-binding note to the shared excerpt specs/content/gnas-301/sources/texts/who-water-2023.md, and c88cda3 refreshed G2 evidence; Unit 3 was authored (6a12597) and Unit 4 figure assets were already in flight untracked at report time. Impact verified nil for this review: docs/semester-1/gnas-301/unit-02/ is byte-identical between c7bac5c and HEAD (empty diff), the recomputed manifest differs from the prepared one in exactly that one file, and the excerpt's WHO key facts and Unit 2 support sentences are byte-identical (the changed lines only document Unit 1's use of the same source). Every unit-02 finding was made against the manifest-verified bytes and is unaffected. This report's input_manifest therefore records the recomputed manifest at HEAD so validation binds current bytes; the refresh is documented here rather than silent. Repair request (orchestrator, not content): serialise review sessions against a quiescent checkout or a per-review worktree so a frozen bundle cannot move mid-review."
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-02/G3/round-02/logs/validate-content.log"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-02/G3/round-02/logs/check-depth-gate.log"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-02/G3/round-02/logs/check-figures.log"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-02/G3/round-02/logs/check-no-em-dash.log"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-02/G3/round-02/logs/check-no-answer-keys.log"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-02/G3/round-02/logs/check-docs-sync.log"
+    },
+    {
+      "name": "check:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-02/G3/round-02/logs/check-content.log"
+    },
+    {
+      "name": "measure-figure-text",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-02/G3/round-02/logs/measure-figure-text.log"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/render-inspect.log"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/logs/validate-content.log": "375322da0f7e4a418758f2d59294ce33d55d0f1af55978fd511caa177fcb9e14",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/logs/check-depth-gate.log": "1883919f559098eb43ffaacb9cf70a74b8b653332a14b7231ad6aee143e8be85",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/logs/check-figures.log": "8cdf82869d33f36630adb508eee0af837912c0ef9f2e9357192290267c1a071c",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/logs/check-no-em-dash.log": "14fb192d7e15959801fb31796939cd0ccd1b28bcb384a094e59600420489a9ac",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/logs/check-no-answer-keys.log": "1e5f1c258fe298a3d2ef6b574ab6d1b1e53bbcc560c636632e302858aa393dde",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/logs/check-docs-sync.log": "def8c24b8dcbe0e3f269eb2812085cb571eeb033987c02fbd55b09546f8b9215",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/logs/check-content.log": "5a569544d7074ce9ff203dbc7d51bdda4894d6a0a73e2558e8216dd7946878c5",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/logs/measure-figure-text.log": "6c1a154a9d6167a74f71c26f95da32fce84539450cd192ba0d56400d90fe6514",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/logs/serve.log": "b2fc3a6d4ed064ca7c9ca84fad746ebe2fa18096bc3858bdb6d2eaa03db06b24",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/render-inspect.log": "14d45ffd986e3f18e73c67a3ad181c8f6aec0683690314a2d3fc4bde43279293",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/render-inspect.json": "40acbc37e5c5bef7fb6c76f4fd5ff635d2c9e4148901abbce948f04b3a1a69da",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/render-inspect.mjs": "4a79ff3431bf18ff54066b69fd849f2e9fe4672ab82eae0145d8bbf1809bd7a5",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/desktop-index.png": "afa8c8bc037c5e49af0a91be8d91ce5c7dab38724ef663aa44b467e63364bf1b",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/desktop-topic-01.png": "bd21c84dede29d13d73890fd32600ad87d902bc047f4cfecdeb5b7028b044057",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/desktop-topic-02.png": "ec532fc224875f881aa9efe43336c1fc93d3b61d0f8335df15d2b4d66f9cfacf",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/desktop-topic-03.png": "582f42373c780572bcd3a70d0397b67a36bc2e77713a8d64fcea84d668252975",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/desktop-unit-assessment.png": "13f4a2f55b176fe1d136bdac1ca4b6c68b8c64739a3e7028cf9ce338d38d468b",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/desktop-unit-teacher-notes.png": "0d0499e9c65e7a85e73213b5df3c333f7a6f303ee5398c4d1259cf28d3facba4",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/narrow360-index.png": "b5796ebb18d9fd0fb3f111c242310391a1ef4c5c9d47ee53f1c47b8794027cdd",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/narrow360-topic-01.png": "a6309d59b2a1f1b1bedc19e238c713b7b7078b87de5817cd7c7346cb2055f387",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/narrow360-topic-02.png": "4302721d3ea9882612e69858d5600a0e7b0d9a42546a23b55d064eefbfc30313",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/narrow360-topic-03.png": "299bddc11d17880240403ccb726362ec2d29251b2bfadb035b01a1e5d37d1d59",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/narrow360-unit-assessment.png": "d6fafbed096b94435050aa5c615a24709c5ad572a99bbe212bfd5499e0308a77",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/narrow360-unit-assessment-answers.png": "12389efc716ec3e3ddb44ccd1b3b5271d9e0272d2eb2c62e2ef728a60fbc8939",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/narrow360-unit-teacher-notes.png": "2c36a6ae5594ed38ea67cf23f1fb9b2bd031d4beed782cca0a0edc43f26eebde",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/print-figure-topic-01-1.png": "bdb6ad9b0f429348a2a579c4e6de0a9ecf31712d38e65db2efcd248ffc2dae60",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/print-figure-topic-01-2.png": "997f4f1ea7f3df39588efcb0c5304ab96de1d7fbc6dcdc5fcebafaa707934d62",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/print-figure-topic-02-1.png": "16db19bf8814ab15635767180d34a32c7ac73e15f6b688ce8315bc50fe690aa3",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/print-figure-topic-02-2.png": "dbf0bb1f4f1b481883bb9529c4b6b0ce27338f34938fcb220fdb4d1f6b1e7b78",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/print-figure-topic-03-1.png": "afe4dc2e1fab5ed89c9d7c88dc48286df75f88e3b49b80ad3416d8749713b001",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/print-figure-topic-03-2.png": "27ab194766fcdcca035ea0e3a7f994d59a514c8347c996b88b6ce634a0a512b0",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/print-view-topic-01.png": "f4bb5754e87964d22523ad284a3d9b32bfde4c170e5c849b3d203c2c93d7d9c4",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/print-view-answers.png": "2cb5e84db778da34b9b11aa063c7bbab44776608801e73529ad1eadfbcbdcd36",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/print-a4-index.pdf": "d504e058f6f2a75de305db411a1dc865640b2fd67fdfcc18fae81321e1e3009e",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/print-a4-topic-01.pdf": "3ee3ec02c5f623e5ad0ddd83b08390753fa9525d2bea5c6d917acad88b43f7fc",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/print-a4-topic-02.pdf": "66bb03fb77d7f32964bf0046f4ef519f092bc28afb2661f8b1dff9297255deb9",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/print-a4-topic-03.pdf": "df66218cb2d9d1d5e8b9b09667a1d80a0f1a3047c2da13720313aaa86840194f",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/print-a4-unit-assessment.pdf": "5f4f765fd478ff9f71a01f9571fc5e624064f886e750f313131dbc08a8af4651",
+    "specs/content/gnas-301/reviews/unit-02/G3/round-02/renders/print-a4-unit-teacher-notes.pdf": "f32a1199d30ab521ba3fb84687b5dc387779efc93651ad64f1b50b4c7f68d40c"
+  }
+}
