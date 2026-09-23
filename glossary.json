@@ -623,5 +623,55 @@
     "term": "Plagiarism",
     "definition_en": "Presenting someone else's words, ideas or work as your own; wider than word-for-word copying, it includes synonym-swapping, uncited paraphrase, uncredited images and self-plagiarism.",
     "definition_ur": "کسی اور کے الفاظ، خیال یا کام کو اپنا بتانا؛ لفظ بہ لفظ نقل سے وسیع، اس میں ہم معنی الفاظ بدلنا، بغیر حوالہ paraphrase، بغیر سہرے کی تصویر اور خود سرقہ شامل ہے۔"
+  },
+  {
+    "term": "Web browser",
+    "definition_en": "The application that asks for, receives and displays web pages, such as Chrome, Firefox, Safari or Edge.",
+    "definition_ur": "وہ ایپلیکیشن جو ویب صفحات مانگتی، واپس لاتی اور دکھاتی ہے، جیسے کروم، فائر فاکس، سفاری یا ایج۔"
+  },
+  {
+    "term": "Search engine",
+    "definition_en": "A website that keeps an index of the web and offers matching pages when you type words; its ranking mixes relevance, popularity and payment.",
+    "definition_ur": "وہ ویب سائٹ جو ویب کا اشاریہ رکھتی ہے اور الفاظ لکھنے پر مطابق صفحات تجویز کرتی ہے؛ اس کی ترتیب میں مطابقت، مقبولیت اور ادائیگی ملے ہوتے ہیں۔"
+  },
+  {
+    "term": "Online communication tool",
+    "definition_en": "Any application that carries communication over the internet - email, chat, video meetings, forums, learning platforms - each fitting different purposes.",
+    "definition_ur": "وہ ایپلیکیشن جو انٹرنیٹ پر مواصلت لیتی ہے - ای میل، چیٹ، ویڈیو میٹنگ، فورم، لرننگ پلیٹ فارم - ہر ایک الگ مقصد کے لیے۔"
+  },
+  {
+    "term": "Safe browsing",
+    "definition_en": "The practice of judging a website before trusting it: reading the domain, checking the padlock, judging the page's demands, and reaching account pages by a known address.",
+    "definition_ur": "ویب سائٹ پر بھروسے سے پہلے اس کی جانچ: ڈومین پڑھنا، پیڈ لاک دیکھنا، صفحے کی مانگ جانچنا، اور اکاؤنٹ کے صفحات تک جانا ہوا پتہ استعمال کرنا۔"
+  },
+  {
+    "term": "Domain name",
+    "definition_en": "The part of a web address before the first single slash that identifies the site's owner - the one part an attacker cannot fake cheaply.",
+    "definition_ur": "ویب پتے کا وہ حصہ جو پہلے واحد سلیش سے پہلے آتا ہے اور سائٹ کے مالک کی شناخت کرتا ہے - وہ واحد حصہ جو حملہ آور سستے میں جعلی نہیں بنا سکتا۔"
+  },
+  {
+    "term": "Artificial Intelligence",
+    "definition_en": "The field of building systems that perform tasks normally needing human intelligence, mostly by learning patterns from very large amounts of example data; it predicts rather than understands.",
+    "definition_ur": "وہ شعبہ جس میں ایسے نظام بنائے جاتے ہیں جو عام طور پر انسانی ذہانت والے کام کریں، زیادہ تر بہت زیادہ مثالوں سے نمونے سیکھ کر؛ یہ سمجھنے کے بجائے پیش گوئی کرتے ہیں۔"
+  },
+  {
+    "term": "Blockchain",
+    "definition_en": "A record-keeping design in which blocks of entries each carry a seal derived from the previous block, so old entries cannot be silently changed without breaking every later seal.",
+    "definition_ur": "ریکارڈ رکھنے کا وہ ڈیزائن جس میں ہر بلاک پچھلے بلاک سے نکلی مہر اٹھاتا ہے، تاکہ پرانے اندراج خاموشی سے بدلے تو ہر بعد کی مہر ٹوٹ جائے۔"
+  },
+  {
+    "term": "Internet of Things",
+    "definition_en": "The family of ordinary objects given sensors, small processors and a network connection, so they measure and report without a human typing anything.",
+    "definition_ur": "عام چیزوں کا وہ خاندان جنہیں سینسر، چھوٹے پروسیسر اور نیٹ ورک کنکشن دیا گیا ہے، تاکہ وہ بغیر کسی انسانی ٹائپنگ کے ناپ اور اطلاع دیں۔"
+  },
+  {
+    "term": "Virtual reality",
+    "definition_en": "Technology that replaces the world: a headset covers the eyes and ears and the wearer stands inside a computer-generated environment.",
+    "definition_ur": "وہ ٹیکنالوجی جو دنیا کو بدل دیتی ہے: ہیڈ سیٹ آنکھوں کانوں پر رکھتا ہے اور پہننے والا کمپیوٹر کی بنی دنیا کے اندر کھڑا ہوتا ہے۔"
+  },
+  {
+    "term": "Augmented reality",
+    "definition_en": "Technology that adds to the world: looking through a phone or glasses at the real classroom, digital objects appear within it.",
+    "definition_ur": "وہ ٹیکنالوجی جو دنیا میں اضافہ کرتی ہے: فون یا چشمے سے حقیقی کلاس روم دیکھیں تو اس کے اندر ڈیجیٹل چیزیں نظر آنے لگتی ہیں۔"
   }
 ]
