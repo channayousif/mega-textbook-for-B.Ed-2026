@@ -21,8 +21,6 @@ source key it is grounded in.
 | U4-01 | topic-01.mdx | Common cyber threats: malware, phishing, social engineering | erendorYildirim2022 |
 | U4-02 | topic-01.mdx | Online security practices and defences | ncaStaysafe |
 | U4-02 | topic-01.mdx | Online security practices and defences | ncsp2021 |
-| U4-03 | topic-02.mdx | Digital footprints | bourgeois2019 |
 | U4-03 | topic-02.mdx | Digital footprints | laudonLaudon |
 | U4-04 | topic-03.mdx | Password management and authentication | ncaStaysafe |
-| U4-06 | topic-04.mdx | Privacy and data protection | bourgeois2019 |
 | U4-06 | topic-04.mdx | Privacy and data protection | stairReynolds |

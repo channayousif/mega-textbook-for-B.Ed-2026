@@ -8,18 +8,18 @@ source key it is grounded in.
 | Sub-topic ID | File | Section | Source |
 |---|---|---|---|
 | U3-01 | topic-01.mdx | Functions of an operating system | ostep |
-| U3-02 | topic-01.mdx | Types of operating systems | bourgeois2019 |
-| U3-03 | topic-02.mdx | File management | bourgeois2019 |
+| U3-02 | topic-01.mdx | Types of operating systems | norton |
+| U3-03 | topic-02.mdx | File management | ostep |
 | U3-04 | topic-02.mdx | Process management | ostep |
-| U3-05 | topic-03.mdx | Managing input and output | bourgeois2019 |
-| U3-06 | topic-04.mdx | Kernel functions | ostep |
+| U3-05 | topic-03.mdx | Managing input and output | ostep |
+| U3-06 | topic-04.mdx | Kernel functions | shellyVermaat |
 
 ## Reinforcement
 
 | Sub-topic ID | File | Section | Source |
 |---|---|---|---|
 | U3-01 | topic-01.mdx | Functions of an operating system | bourgeois2019 |
-| U3-02 | topic-01.mdx | Types of operating systems | norton |
+| U3-02 | topic-01.mdx | Types of operating systems | bourgeois2019 |
 | U3-03 | topic-02.mdx | File management | shellyVermaat |
-| U3-05 | topic-03.mdx | Managing input and output | ostep |
-| U3-06 | topic-04.mdx | Kernel functions | shellyVermaat |
+| U3-04 | topic-02.mdx | Process management | norton |
+| U3-06 | topic-04.mdx | Kernel functions | ostep |

@@ -19,16 +19,16 @@ numbering under its three bank headings - no prose was changed to create them.
 | CON:GICT-300-4-3 | Social engineering | سوشل انجینئرنگ | CON:GICT-300-4-2 | 4.1 | SLO:GICT-300-4-5 | RRQ-02, ERQ-01 |
 | CON:GICT-300-4-4 | CIA triad | سی آئی اے تینی | - | 4.1 | SLO:GICT-300-4-5 | MCQ-04, RRQ-03 |
 | CON:GICT-300-4-5 | Security habits as defence | دفاع کے طور پر عادات | CON:GICT-300-4-1, CON:GICT-300-4-2 | 4.1 | SLO:GICT-300-4-5 | ERQ-01, ERQ-05 |
-| CON:GICT-300-4-6 | Digital footprint | ڈیجیٹل فوٹ پرنٹ | - | 4.2 | SLO:GICT-300-4-5 | MCQ-05, MCQ-06, RRQ-05 |
+| CON:GICT-300-4-6 | Digital footprint | ڈیجیٹل فوٹ پرنٹ | - | 4.2 | SLO:GICT-300-4-5 | MCQ-05, MCQ-06, RRQ-04, RRQ-05 |
 | CON:GICT-300-4-7 | Active versus passive traces | فعال بمقابلہ غیر فعال نشانیاں | CON:GICT-300-4-6 | 4.2 | SLO:GICT-300-4-5 | RRQ-05, ERQ-02 |
 | CON:GICT-300-4-8 | Footprint audit | فوٹ پرنٹ جائزہ | CON:GICT-300-4-7 | 4.2 | SLO:GICT-300-4-5 | RRQ-04, ERQ-02 |
 | CON:GICT-300-4-9 | Password strength | پاس ورڈ کی طاقت | CON:GICT-300-4-4 | 4.3 | SLO:GICT-300-4-5 | MCQ-03, RRQ-06 |
 | CON:GICT-300-4-10 | Authentication factors | تصدیق کے فیکٹر | CON:GICT-300-4-9 | 4.3 | SLO:GICT-300-4-5 | MCQ-07, RRQ-07, RRQ-08 |
 | CON:GICT-300-4-11 | Multi-factor authentication | ملٹی فیکٹر تصدیق | CON:GICT-300-4-10 | 4.3 | SLO:GICT-300-4-5 | MCQ-07, RRQ-07, ERQ-03 |
-| CON:GICT-300-4-12 | Cloud computing (NIST definition) | کلاؤڈ کمپیوٹنگ | - | 4.3 | SLO:GICT-300-4-5 | MCQ-08, RRQ-09 |
+| CON:GICT-300-4-12 | Cloud computing (NIST definition) | کلاؤڈ کمپیوٹنگ | - | 4.3 | SLO:GICT-300-4-5 | MCQ-08, RRQ-08 |
 | CON:GICT-300-4-13 | Personal data and sensitivity | ذاتی ڈیٹا اور حساسیت | - | 4.4 | SLO:GICT-300-4-5 | MCQ-10, RRQ-10 |
-| CON:GICT-300-4-14 | The four data questions | ڈیٹا کے چار سوال | CON:GICT-300-4-13 | 4.4 | SLO:GICT-300-4-5 | MCQ-09, ERQ-04 |
-| CON:GICT-300-4-15 | Collect-the-minimum | کم سے کم اکٹھا کریں | CON:GICT-300-4-14 | 4.4 | SLO:GICT-300-4-5 | MCQ-09, ERQ-04, ERQ-05 |
+| CON:GICT-300-4-14 | The four data questions | ڈیٹا کے چار سوال | CON:GICT-300-4-13 | 4.4 | SLO:GICT-300-4-5 | MCQ-09, RRQ-09, ERQ-04 |
+| CON:GICT-300-4-15 | Collect-the-minimum | کم سے کم اکٹھا کریں | CON:GICT-300-4-14 | 4.4 | SLO:GICT-300-4-5 | MCQ-09, RRQ-10, ERQ-04, ERQ-05 |
 
 ## Urdu labels needing G5 review
 
