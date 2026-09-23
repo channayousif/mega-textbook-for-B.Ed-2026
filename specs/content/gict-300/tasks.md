@@ -13,7 +13,7 @@ before any unit was authored. The course is bilingual: G4/G5 are in scope for ev
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0030; content-spec status: approved |
-| Unit 1 | G2 en-draft | ▢ | | |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-01/G2/20260923T142523067Z-gates.json - run via a CONTENT_ROOT overlay tree that adds the sibling 018 branch's geng-300 fixes (pre-existing main reds, out of this course's scope); all 8 GICT-300-relevant draft gates pass, input manifest binds this course's bytes at 8473dcc |
 | Unit 1 | G3 en-review | ▢ | | |
 | Unit 1 | G4 ur-translation | ▢ | | |
 | Unit 1 | G5 ur-review | ▢ | | |
