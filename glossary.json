@@ -338,5 +338,315 @@
     "term": "Summary and close",
     "definition_en": "The course's closing synthesis: a whole-group event in which each trainee states a belief that changed across the course and cites the evidence for the change.",
     "definition_ur": "کورس کی اختتامی ترکیب: ایک پورے گروہ کی تقریب جس میں ہر تربیت یافتہ شخص ایک عقیدہ بیان کرتا ہے جو کورس کے دوران بدل گیا اور تبدیلی کا ثبوت پیش کرتا ہے۔"
+  },
+  {
+    "term": "Vocabulary building",
+    "definition_en": "The deliberate process of expanding the words you can use accurately, most effectively through contextual usage rather than memorising word lists.",
+    "definition_ur": "الفاظ کو درست طریقے سے استعمال کرنے کی صلاحیت کو بڑھانے کا ایک منظم عمل، جس میں الفاظ کو سیاق و سباق میں سیکھنا ان کی فہست یاد کرنے سے زیادہ مؤثر ہے۔"
+  },
+  {
+    "term": "Synonym",
+    "definition_en": "A word with a similar meaning to another word. Synonyms are not interchangeable: they differ in shade of meaning, register and collocation.",
+    "definition_ur": "کسی دوسرے لفظ کے مشترکے معنی والا لفظ۔ مترادفات ایک دوسرے کی جگہ استعمال نہیں ہو سکتے: ان میں معنی کا درجہ، سطح اور استعمال مختلف ہوتا ہے۔"
+  },
+  {
+    "term": "Antonym",
+    "definition_en": "A word with the opposite meaning of another word. Knowing antonyms helps you understand a word more precisely and gives you tools for contrast in writing.",
+    "definition_ur": "کسی دوسرے لفظ کے متضاد معنی والا لفظ۔ متضاد جاننے سے آپ کسی لفظ کو زیادہ درست سمجھتے ہیں اور تحریر میں تضاد کے لیے وسائل ملتے ہیں۔"
+  },
+  {
+    "term": "Idiomatic expression",
+    "definition_en": "A phrase whose meaning cannot be worked out from the individual words. Idioms must be learned as whole units because their meaning is figurative, not literal.",
+    "definition_ur": "ایک ایسا فقرہ جس کا معنی انفرادی الفاظ سے نہیں سمجھا جا سکتا۔ محاوروں کو مکطوروں کے طور پر سیکھنا ضروری ہے کیونکہ ان کے معانی علامتی ہوتے ہیں، لفظی نہیں۔"
+  },
+  {
+    "term": "Affixation",
+    "definition_en": "Adding a prefix (at the beginning) or a suffix (at the end) to a root word to create a new word. The most productive word-formation process in English.",
+    "definition_ur": "کسی بنیادی لفظ میں سابقہ (شروع میں) یا لاحقہ (آخر میں) شامل کرکے نیا لفظ بنانا۔ انگریزی میں الفاظ کی تشکیل کا سب سے زیادہ مؤثر عمل۔"
+  },
+  {
+    "term": "Compounding",
+    "definition_en": "Joining two complete words to make a new one. The meaning of the compound is often more than the sum of its parts.",
+    "definition_ur": "دو مکمل الفاظ کو ملانے سے ایک نیا لفظ بنانا۔ مرکب لفظ کا معنی اکثر اس کے حصوں کے مجموعے سے زیادہ ہوتا ہے۔"
+  },
+  {
+    "term": "Clipping",
+    "definition_en": "Shortening a longer word to create an informal variant. Common in informal English.",
+    "definition_ur": "کسی طویل لفظ کو چھوٹا کرکے ایک غیر رسمی صورت بنانا۔ غیر رسمی انگریزی میں عام ہے۔"
+  },
+  {
+    "term": "Back formation",
+    "definition_en": "Creating a new word by removing what looks like an affix from an existing word.",
+    "definition_ur": "کسی موجودہ لفظ سے ایک ایسا حصہ ہٹانے سے نیا لفظ بنانا جو لاحقہ یا سابقہ دکھتا ہے۔"
+  },
+  {
+    "term": "Subject-verb agreement",
+    "definition_en": "The rule that a verb must match its subject in number: singular subjects take singular verbs, plural subjects take plural verbs.",
+    "definition_ur": "وہ اصول جس کے مطابق فعل کا فاعل کے ساتھ تعداد میں ہم آہنگ ہونا ضروری ہے: واحد فاعل کے ساتھ واحد فعل، جمع فاعل کے ساتھ جمع فعل۔"
+  },
+  {
+    "term": "Verb tense",
+    "definition_en": "The form of a verb that tells the reader when an action happens: past, present or future.",
+    "definition_ur": "فعل کی وہ صورت جو قاری کو بتاتی ہے کہ کوئی عمل کب ہوا: ماضی، حال یا مستقبل۔"
+  },
+  {
+    "term": "Fragment",
+    "definition_en": "An incomplete sentence missing a subject, a verb, or both.",
+    "definition_ur": "ایک نامکمل جملہ جس میں فاعل، فعل یا دونوں غائب ہوں۔"
+  },
+  {
+    "term": "Run-on sentence",
+    "definition_en": "Two complete sentences joined without proper punctuation or a conjunction.",
+    "definition_ur": "دو مکمل جملوں کو مناسب رماکان یا حرف عطف کے بغیر جوڑنے سے بننے والا جملہ۔"
+  },
+  {
+    "term": "Misplaced modifier",
+    "definition_en": "A word or phrase that describes another word but is positioned so that it creates confusion about what is being described.",
+    "definition_ur": "ایک لفظ یا فقرہ جو کسی دوسرے لفظ کی وضاحت کرتا ہے لیکن ایسی جگہ رکھا جاتا ہے کہ یہ الجہان پیدا کرتا ہے۔"
+  },
+  {
+    "term": "Article",
+    "definition_en": "A word that signals whether a noun is specific or general.",
+    "definition_ur": "ایک لفظ جو اس بات کی نشاندہی کرتا ہے کہ کوئی اسم مخصوص ہے یا عام۔"
+  },
+  {
+    "term": "Word class",
+    "definition_en": "The category a word falls into based on its function in a sentence: noun, verb, adjective, adverb, preposition, conjunction, pronoun or article.",
+    "definition_ur": "وہ زمرہ جس میں کوئی لفظ جملے میں اپنے کام کے اعتبار سے آتا ہے: اسم، فعل، صفت، ظرف، حرف ربط، حرف عطف، ضمیر یا حرف تعریف۔"
+  },
+  {
+    "term": "Simple sentence",
+    "definition_en": "A sentence with one independent clause.",
+    "definition_ur": "ایک جملہ جس میں ایک آزاد فقرہ ہو۔"
+  },
+  {
+    "term": "Compound sentence",
+    "definition_en": "A sentence with two independent clauses joined by a coordinating conjunction.",
+    "definition_ur": "ایک جملہ جس میں دو آزاد فقرے دو حرف ربط سے جوڑے گئے ہوں۔"
+  },
+  {
+    "term": "Complex sentence",
+    "definition_en": "A sentence with one independent clause and one or more dependent clauses.",
+    "definition_ur": "ایک جملہ جس میں ایک آزاد فقرہ اور ایک یا زیادہ وابستہ فقرے ہوں۔"
+  },
+  {
+    "term": "Compound-complex sentence",
+    "definition_en": "A sentence with two independent clauses and one or more dependent clauses.",
+    "definition_ur": "ایک جملہ جس میں دو آزاد فقرے اور ایک یا زیادہ وابستہ فقرے ہوں۔"
+  },
+  {
+    "term": "Editing",
+    "definition_en": "The process of improving a text at every level by reading, identifying errors, correcting, reading aloud and repeating until the text is clean.",
+    "definition_ur": "ہر سطح پر متن کو بہتر بنانے کا عمل - پڑھ کر، غلطیوں کی نشاندہی کر کے، درست کر کے، بلند آواز سے پڑھ کر اور تکرار کر کے۔"
+  },
+  {
+    "term": "Pronunciation",
+    "definition_en": "The way in which spoken words are sounded. Clear pronunciation supports clear writing.",
+    "definition_ur": "بولے جانے والے الفاظ کی آواز۔ صاف تلفظ صاف تحریر کی حمایت کرتا ہے۔"
+  },
+  {
+    "term": "Register",
+    "definition_en": "The level of formality that a situation demands in language use.",
+    "definition_ur": "زبان کے استعمال کا وہ سطح جسے صورتحال میں ضرورت ہوتی ہے۔"
+  },
+  {
+    "term": "Collocation",
+    "definition_en": "The tendency of certain words to appear together.",
+    "definition_ur": "بعض الفاظ کا ایک دوسرے کے ساتھ آنے کا رجحان۔"
+  },
+  {
+    "term": "Connotation",
+    "definition_en": "The feeling or association a word carries beyond its literal meaning.",
+    "definition_ur": "کسی لفظ کا وہ احساس یا تعلق جو اس کے اصل معنی سے آگے جاتا ہے۔"
+  },
+  {
+    "term": "Communicative grammar",
+    "definition_en": "The study of how grammar creates meaning in real communication.",
+    "definition_ur": "اس بات کا مطالعہ کہ گرامر حقیقی رابطے میں معنی کیسے پیدا کرتا ہے۔"
+  },
+  {
+    "term": "Word formation",
+    "definition_en": "The processes by which new words are built from existing parts.",
+    "definition_ur": "وہ عمل جس کے ذریعے نئے الفاظ موجودہ حصوں سے بناتے ہیں۔"
+  },
+  {
+    "term": "Sentence structure",
+    "definition_en": "The way clauses are combined to form sentences.",
+    "definition_ur": "وہ طریقہ جس سے جملوں کو ملکر جملے بناتے ہیں۔"
+  },
+  {
+    "term": "Stress",
+    "definition_en": "The relative emphasis placed on a syllable within a word.",
+    "definition_ur": "کسی لفظ میں ایک شداد پر دی گئی نسبی توجہ۔"
+  },
+  {
+    "term": "Intonation",
+    "definition_en": "The rise and fall of the voice across a phrase or sentence.",
+    "definition_ur": "کسی جملے یا جملے میں آواز کا چڑھنا اور اترنا۔"
+  },
+  {
+    "term": "Phoneme",
+    "definition_en": "The smallest unit of sound that can change meaning.",
+    "definition_ur": "آواز کا چھوٹا ترین یونٹ جو معنی بدل سکتا ہے۔"
+  },
+  {
+    "term": "Minimal pair",
+    "definition_en": "A pair of words that differ by only one sound.",
+    "definition_ur": "دو الفاظ کا ایک جوڑا جو صرف ایک آواز سے مختلف ہو۔"
+  },
+  {
+    "term": "Purpose",
+    "definition_en": "Why a text was written.",
+    "definition_ur": "متن کیوں لکھا گیا۔"
+  },
+  {
+    "term": "Audience",
+    "definition_en": "Who the text is written for.",
+    "definition_ur": "متن کس کے لیے لکھا گیا۔"
+  },
+  {
+    "term": "Context",
+    "definition_en": "The situation in which the text was produced and is being read.",
+    "definition_ur": "وہ صورتحال جس میں تحریر پیدا ہوئی اور پڑھی جا رہی ہے۔"
+  },
+  {
+    "term": "Tone",
+    "definition_en": "The writer's attitude toward the subject or the audience.",
+    "definition_ur": "مصنف کا موضوع یا سامعین کے تعلق کا رویہ۔"
+  },
+  {
+    "term": "Bias",
+    "definition_en": "A tendency to favour one perspective over others.",
+    "definition_ur": "ایک نقطہ نظر کو دوسرے پر ترجیح دینے کا رجحان۔"
+  },
+  {
+    "term": "Stereotype",
+    "definition_en": "A fixed, oversimplified belief about a group of people.",
+    "definition_ur": "کسی گروہ کے بارے میں ایک مقررہ، حد سے زیادہ سادہ عقیدہ۔"
+  },
+  {
+    "term": "Assumption",
+    "definition_en": "Something the writer takes for granted without stating it explicitly.",
+    "definition_ur": "وہ چیز جسے مصنف بغیر واضح طور پر بیان کیے عام سمجھتا ہے۔"
+  },
+  {
+    "term": "Inference",
+    "definition_en": "A conclusion the reader draws from evidence in the text.",
+    "definition_ur": "وہ نتیجہ جو قاری متن کے شواہد سے اخذ کرتا ہے۔"
+  },
+  {
+    "term": "Active listening",
+    "definition_en": "Listening with the intention to understand, not just to hear.",
+    "definition_ur": "سمجھنے کی نیت سے سننا، صرف سننا نہیں۔"
+  },
+  {
+    "term": "Critical reading",
+    "definition_en": "Reading to evaluate a text, not just understand it.",
+    "definition_ur": "متن کو صرف سمجھنے کے بجائہ جائزہ لینے کے لیے پڑھنا۔"
+  },
+  {
+    "term": "Reading strategies",
+    "definition_en": "Deliberate approaches to reading that match the reader's purpose.",
+    "definition_ur": "پڑھنے کے جان بوجھ کر اپنائے گئے طریقے جو قاری کے مقصد سے مماثلت رکھتے ہیں۔"
+  },
+  {
+    "term": "Skimming",
+    "definition_en": "Reading quickly to get the main idea of a text.",
+    "definition_ur": "متن کا بنیادی خیال حاصل کرنے کے لیے جلدی سے پڑھنا۔"
+  },
+  {
+    "term": "Scanning",
+    "definition_en": "Reading quickly to find specific information.",
+    "definition_ur": "مخصوص معلومات تلاش کرنے کے لیے جلدی سے پڑھنا۔"
+  },
+  {
+    "term": "SQ4R",
+    "definition_en": "A structured reading strategy: survey, question, read, recite, review, reflect.",
+    "definition_ur": "ایک منظم پڑھنے کی حکمت عملی: سروے، سوال، پڑھنا، دہرانا، جائزہ، غور۔"
+  },
+  {
+    "term": "Note-taking",
+    "definition_en": "Recording what you hear or read in a way that helps you remember.",
+    "definition_ur": "جو سنیں یا پڑھیں اسے یاد رکھنے میں مدد دینے کے لیے ریکارڈ کرنا۔"
+  },
+  {
+    "term": "Inclusive language",
+    "definition_en": "Language that avoids stereotypes, assumptions and gendered terms, and addresses everyone on equal terms.",
+    "definition_ur": "وہ زبان جو تصوریات، فرضیات اور صنفی الفاظ سے پرہیز کرے اور ہر شخص کو برابری کے ساتں خطاب کرے۔"
+  },
+  {
+    "term": "Cross-cultural communication",
+    "definition_en": "Communication between people from different cultural backgrounds, requiring adaptation, listening and suspension of judgement.",
+    "definition_ur": "مختلف ثقافتی پس منظر کے لوگوں کے درمیان رابطہ، جس میں موافقت، سننا اور رائے معطل کرنا شامل ہے۔"
+  },
+  {
+    "term": "Public speaking",
+    "definition_en": "Speaking to a group with a purpose: to inform, persuade or explain.",
+    "definition_ur": "کسی مقصد کے ساتھ گروہ سے گفتگو کرنا: آگاہ کرنا، قائل کرنا یا وضاحت کرنا۔"
+  },
+  {
+    "term": "Stage fright",
+    "definition_en": "The intense fear of speaking in front of others, which can be managed through preparation, rehearsal and breathing techniques.",
+    "definition_ur": "دوسرے لوگوں کے سامنے بولنے کا شدید خوف، جو تیاری، مشق اور سانس لینے کی تکنیک سے قابو کیا جا سکتا ہے۔"
+  },
+  {
+    "term": "Voice modulation",
+    "definition_en": "The deliberate variation of volume, pace and pitch to hold attention and convey meaning.",
+    "definition_ur": "توجہ اکٹھی کرنے اور ممنی پہنچانے کے لیے آواز کا حجم، رفتار اور لہجے جان بوجھ کر بدلنا۔"
+  },
+  {
+    "term": "Presentation skills",
+    "definition_en": "The abilities that let you plan and deliver a clear, engaging talk to a group, from defining purpose to handling questions.",
+    "definition_ur": "وہ صلاحیتیں جو آپ کو مقصد متعین کرنے سے لے کر سوالات کو سنبھالنے تک گروہ کو واضح اور دلکش گفتگو پیش کرنے دیتی ہیں۔"
+  },
+  {
+    "term": "Handling Q&A",
+    "definition_en": "Responding to audience questions confidently, including admitting when you do not know the answer and offering to follow up.",
+    "definition_ur": "سامعین کے سوالات پر اعتماد سے جواب دینا، بشمول اس بات کی تسلیم کرنا کہ آپ کو جواب نہیں معلوم اور بعد میں بتانے کی پیشکش کرنا۔"
+  },
+  {
+    "term": "Managing time",
+    "definition_en": "Planning how long each section of a presentation will take and sticking to the plan so the talk finishes on time.",
+    "definition_ur": "پیشکش کے ہر حصے کا وقت طے کرنا اور منصوبے پر قائم رہنا تاکہ گفتگو وقت پر ختم ہو۔"
+  },
+  {
+    "term": "Informal communication",
+    "definition_en": "Unplanned, everyday talk that builds professional relationships, such as small talk, networking and staffroom conversation.",
+    "definition_ur": "غیر منظم، روزمرہ گفتگو جو پیشہ ورانہ رشتے بناتی ہے، جیسے ہلکی پھلکی بات چیت، جالت اور اساتذہ کے کمرے کی گفتگو۔"
+  },
+  {
+    "term": "Small talk",
+    "definition_en": "Brief, light conversation about non-controversial topics, used to build rapport rather than exchange information.",
+    "definition_ur": "غیر متنوع موضوعات پر مختصر، ہلکی گفتگو، جو معلومات کے تبادلے کے بجائے تعلق بنانے کے لیے ہوتی ہے۔"
+  },
+  {
+    "term": "Networking",
+    "definition_en": "Building and maintaining professional relationships through genuine short exchanges that lead to concrete next steps.",
+    "definition_ur": "حقیقی مختصر گفتگو کے ذریعے پیشہ ورانہ رشتے بنانا اور برقرار رکھنا، جو ملموس اگلے قدموں کی طرف لے جائے۔"
+  },
+  {
+    "term": "Turn-taking",
+    "definition_en": "The convention by which speakers alternate in a conversation, using cues such as pauses and intonation.",
+    "definition_ur": "وہ اصول جس کے تحت گفتگو میں بولنے والے باری باری بولتے ہیں، وقفوں اور لہجے کی تبدیلی جیسی اشاروں کے ساتھ۔"
+  },
+  {
+    "term": "Conversational repair",
+    "definition_en": "What speakers do when something goes wrong in a conversation, such as rephrasing, asking for clarification or checking understanding.",
+    "definition_ur": "گفتگو میں کچھ غلط ہونے پر بولنے والا کیا کرتا ہے، جیسے دوبارہ بیان کرنا، وضاحت مانگنا یا سمجھ کی تصدیق کرنا۔"
+  },
+  {
+    "term": "Politeness strategies",
+    "definition_en": "Ways speakers protect each other's dignity in interaction, such as indirectness, hedging and showing appreciation.",
+    "definition_ur": "وہ طریقے جن سے بولنے والے گفتگو میں ایک دوسرے کے وقار کا تحفظ کرتے ہیں، جیسے بالواسطہ پن، احتیاط اور تعریف دکھانا۔"
+  },
+  {
+    "term": "Business email",
+    "definition_en": "A professional writing format used to request, inform, confirm or follow up within or between organisations, following a clear structure: subject line, salutation, opening, body, closing and signature.",
+    "definition_ur": "پیشہ ورانہ تحریر کا ایک فارمیٹ جو تنظیم کے اندر یا تنظیموں کے درمیان درخواست دینے، مطلع کرنے، تصدیق کرنے یا بعد میں رابطہ کرنے کے لیے استعمال ہوتا ہے، جس کی واضح ساخت ہوتی ہے: عنوان، ابتدائیہ، اغاز، متن، اختتام اور دستخط۔"
+  },
+  {
+    "term": "Intercultural communication",
+    "definition_en": "The study of how people from different cultural backgrounds communicate with one another, and how cultural assumptions shape the way messages are sent, received and interpreted.",
+    "definition_ur": "اس بات کا مطالعہ کہ مختلف ثقافی پس منظر کے لوگ ایک دوسرے کے ساتھ کیسے رابطہ کرتے ہیں، اور ثقافی مفروضے پیغامات کے بھیجنے، وصول کرنے اور ان کی تفسیر کو کیسے شکل دیتے ہیں۔"
   }
 ]

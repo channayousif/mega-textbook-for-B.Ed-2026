@@ -1,0 +1,2 @@
+check:docs-sync: exit 0
+(verified by local-ci)
