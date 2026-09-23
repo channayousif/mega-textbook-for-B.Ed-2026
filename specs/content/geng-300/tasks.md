@@ -13,23 +13,30 @@ G1 unit-spec affirmed at intake (D-2026-0019). G2 en-draft cleared by determinis
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0019; content-spec status: approved |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-300/reviews/unit-01/G2/20260922T193949000Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-300/reviews/unit-01/G2/20260923T110847000Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | |
 | Unit 1 | G4 ur-translation | ▢ | | English-only course (bilingual: false); no Urdu mirror required |
 | Unit 1 | G5 ur-review | ▢ | | English-only course |
 | Unit 1 | G6 assets | ▢ | | |
 | Unit 1 | G7 publish | ▢ | | |
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0019; content-spec status: approved |
-| Unit 2 | G2 en-draft | ▢ | | |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-300/reviews/unit-02/G2/20260923T110847000Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | |
 | Unit 2 | G4 ur-translation | ▢ | | English-only course |
 | Unit 2 | G5 ur-review | ▢ | | English-only course |
 | Unit 2 | G6 assets | ▢ | | |
 | Unit 2 | G7 publish | ▢ | | |
 | Unit 3 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0019; content-spec status: approved |
-| Unit 3 | G2 en-draft | ▢ | | |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-300/reviews/unit-03/G2/20260923T110847000Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | |
 | Unit 3 | G4 ur-translation | ▢ | | English-only course |
 | Unit 3 | G5 ur-review | ▢ | | English-only course |
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
+| Unit 4 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0019; content-spec status: approved |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-300/reviews/unit-04/G2/20260923T110847000Z-gates.json |
+| Unit 4 | G3 en-review | ▢ | | |
+| Unit 4 | G4 ur-translation | ▢ | | English-only course |
+| Unit 4 | G5 ur-review | ▢ | | English-only course |
+| Unit 4 | G6 assets | ▢ | | |
+| Unit 4 | G7 publish | ▢ | | |
