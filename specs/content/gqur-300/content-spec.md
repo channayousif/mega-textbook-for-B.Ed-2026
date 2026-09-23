@@ -1,6 +1,6 @@
 ---
 course_code: GQUR-300
-status: draft
+status: approved
 # D-2026-0013's floor pattern, in the form `check:source-floor` enforces: every
 # unit binds at least one verified open-access source, because one guide-required
 # reading is a print monograph (steen2001, controlled-lending text) and one is
