@@ -6,7 +6,7 @@
     "G0",
     "G1"
   ],
-  "commit": "8903e8236ef83a8ad29e2d59e5e24aa66f7f8280",
+  "commit": "9b3c0e444477ed8189966265fd55426b23642c16",
   "constitution": "Article VII.8",
   "input_manifest": {
     ".claude/agents/evaluator.md": "81a714fe4521bdb16089f2e8bfea2ef5153a92b284c92fa584b1bb22de4cc1f6",
@@ -60,13 +60,29 @@
     "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
     "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
     "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
-    "specs/content/geng-300/content-spec.md": "953b801d212088bfbe8ad174a6900675756b8849fc4816b626a316eb3be3b2ad",
+    "specs/content/geng-300/concepts/unit-01.md": "4357ad3fbad21781952bfc4187b448279ff04b445a640d456c91e17bae4eae61",
+    "specs/content/geng-300/concepts/unit-02.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "specs/content/geng-300/concepts/unit-03.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "specs/content/geng-300/concepts/unit-04.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "specs/content/geng-300/content-spec.md": "346bd85f023ea18b2f10eee8f1d9edcbbcada0ec5a9c176b30d9998238162d05",
+    "specs/content/geng-300/coverage/unit-01.md": "063f969360daec41a6412a2c2ccc62903de642f978577bede3d2b9d5606fd8be",
+    "specs/content/geng-300/coverage/unit-02.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "specs/content/geng-300/coverage/unit-03.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "specs/content/geng-300/coverage/unit-04.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "specs/content/geng-300/figures/unit-01.md": "c2fe47fd38f774876fe09d1e03e7cff4cf60ee6ce73194393072c97a32e0f94c",
+    "specs/content/geng-300/figures/unit-02.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "specs/content/geng-300/figures/unit-03.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "specs/content/geng-300/figures/unit-04.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "specs/content/geng-300/sources/unit-01.md": "9a083ebd9ac3107e0a939ded76d5f86fe77fbcd3cb3a711d6f900dbad9248311",
+    "specs/content/geng-300/sources/unit-02.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "specs/content/geng-300/sources/unit-03.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "specs/content/geng-300/sources/unit-04.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "specs/content/style-guide.md": "db96c9b33b0fb9522986462a0b519620c3c1d7602a046d7b90e638f643da4610",
     "specs/content/terminology.csv": "ad917e28cde688eb72bd92226c2326e2d23da3da80fc53ea8c812b1a47f73337"
   },
-  "manifest_digest": "c1e8972a645d3db867f277ad539d87b42fc2f48bde56a8f0f01b140392c6f674",
+  "manifest_digest": "64b072c75649424f7493e095797235c6b5e51dbfee9247672e2bc9cd2730f2f9",
   "registers": {
-    "specs/decisions/log.md": "55723c11ee38b1968fe14181e2fb60823609f77570bb89dbf0fadb300117d3bf",
+    "specs/decisions/log.md": "f4939b2df8ec85327ef59c8aafa350abbe709371d0a9d0803707d7b810b637c1",
     "specs/gaps.md": "c54f060b8380ffadb876d7f5e72d4e559c49f10c0981e72d8c6fdd581e68fa43"
   }
 }

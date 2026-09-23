@@ -781,6 +781,34 @@ Recorded here so the boundary stays visible as the log grows:
 
 ---
 
+## D-2026-0019 - GENG-300 intake: identity, coverage, outcomes, blueprint, structure, partition derived
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** GENG-300 only. Settles identity, the sub-topic coverage of all four checklists, the
+  CLO traces, the assessment blueprints, structural conformance, and the absence of decision
+  residue. Does NOT settle the four-unit partition (escalated, recorded below).
+- **Decided by:** agent:evaluator, 2026-09-22
+- **Decision:**
+  1. **Identity.** GENG-300, "Functional English", 3 (3-0) credit hours, Semester 1, General
+     Education, bilingual: false. Matches guide and catalog.
+  2. **Partition (derived, not guide-determined).** The guide gives numbered syllabus sections
+     but no week table or unit numbering. The 4-unit partition (Foundations; Comprehension and
+     Analysis; Effective Communication; Professional Writing and Intercultural Communication) is
+     derived and recorded per D-2026-0012. Owner confirmation required.
+  3. **Coverage.** All guide sub-topics map to exactly one spec sub-topic. No omissions, no
+     additions.
+  4. **Outcomes.** All 4 CLOs reproduced verbatim and traced to units.
+  5. **Readings.** 10 guide-recommended print monographs. Flagged per D-2026-0001.
+  6. **Blueprint.** 10/10/5 pattern per unit, Bloom-banded per style guide.
+  7. **Structure.** v4.0 structure conformance confirmed.
+  8. **Decision residue.** None found.
+- **Bound to:** `specs/content/geng-300/intake/manifest.json`, manifest digest 64b072c75649424f
+- **Limits:** Does not certify authored content. Does not settle the four-unit partition
+  (escalated, recorded).
+
+---
+
 ## D-2026-0040 - GQUR-300 intake: identity, partition, coverage, outcomes, blueprint, structure, residue approved; readings escalated
 
 - **Status:** pending-owner-review
