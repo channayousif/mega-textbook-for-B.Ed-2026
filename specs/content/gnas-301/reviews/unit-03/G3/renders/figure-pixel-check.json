@@ -1,0 +1,234 @@
+{
+  "figures": [
+    {
+      "page": "topic-01",
+      "index": 1,
+      "file": "fig-topic-01-1.png",
+      "pixelStdev": "43.6/40.6/41.3",
+      "uniqueChannelValues": "//",
+      "caption": "textbook.com.pk"
+    },
+    {
+      "page": "topic-01",
+      "index": 2,
+      "file": "fig-topic-01-2.png",
+      "pixelStdev": "48.9/44.8/44.7",
+      "uniqueChannelValues": "//",
+      "caption": "textbook.com.pk"
+    },
+    {
+      "page": "topic-02",
+      "index": 1,
+      "file": "fig-topic-02-1.png",
+      "pixelStdev": "41.6/39.8/41.4",
+      "uniqueChannelValues": "//",
+      "caption": "textbook.com.pk"
+    },
+    {
+      "page": "topic-02",
+      "index": 2,
+      "file": "fig-topic-02-2.png",
+      "pixelStdev": "50.5/44.5/45.8",
+      "uniqueChannelValues": "//",
+      "caption": "textbook.com.pk"
+    },
+    {
+      "page": "topic-03",
+      "index": 1,
+      "file": "fig-topic-03-1.png",
+      "pixelStdev": "35.8/33.7/34.9",
+      "uniqueChannelValues": "//",
+      "caption": "textbook.com.pk"
+    },
+    {
+      "page": "topic-03",
+      "index": 2,
+      "file": "fig-topic-03-2.png",
+      "pixelStdev": "48.0/45.6/46.5",
+      "uniqueChannelValues": "//",
+      "caption": "textbook.com.pk"
+    },
+    {
+      "page": "topic-04",
+      "index": 1,
+      "file": "fig-topic-04-1.png",
+      "pixelStdev": "34.7/32.0/32.3",
+      "uniqueChannelValues": "//",
+      "caption": "textbook.com.pk"
+    },
+    {
+      "page": "topic-04",
+      "index": 2,
+      "file": "fig-topic-04-2.png",
+      "pixelStdev": "45.3/42.7/42.6",
+      "uniqueChannelValues": "//",
+      "caption": "textbook.com.pk"
+    }
+  ],
+  "printShots": [
+    {
+      "page": "unit-assessment",
+      "file": "printview-unit-assessment.png",
+      "width": 794,
+      "height": 4666
+    },
+    {
+      "page": "topic-03",
+      "file": "printview-topic-03.png",
+      "width": 794,
+      "height": 5347
+    }
+  ],
+  "generated": "2026-09-23T22:28:43.550Z",
+  "svgLabels": {
+    "fig-U3-1": {
+      "labelCount": 21,
+      "labels": [
+        "The air pollution chain, and where controls act",
+        "sources",
+        "vehicles, brick kilns,",
+        "industry, waste burning,",
+        "crop-residue burning",
+        "the air (pathway)",
+        "dispersion, or a winter",
+        "inversion that traps",
+        "it over the city",
+        "receptors",
+        "a child breathing, a",
+        "school, crops, the",
+        "person at the window",
+        "Control at the source (strongest)"
+      ]
+    },
+    "fig-U3-2": {
+      "labelCount": 31,
+      "labels": [
+        "The six pollutants that matter",
+        "Pollutant",
+        "Main source",
+        "Health effect",
+        "One control",
+        "PM2.5 and PM10",
+        "combustion, dust, burning",
+        "deep-lung and heart disease",
+        "end open burning",
+        "Nitrogen dioxide",
+        "engines, furnaces",
+        "airway inflammation, asthma",
+        "engine standards",
+        "Sulfur dioxide"
+      ]
+    },
+    "fig-U3-3": {
+      "labelCount": 11,
+      "labels": [
+        "The decibel ladder: how loud is it?",
+        "quiet library: 30 dB",
+        "normal conversation: 60 dB",
+        "hearing-damage zone begins near 85 dB (sustained exposure)",
+        "busy road: 85 to 95 dB",
+        "generator: about 95 dB",
+        "pressure horn: 110+ dB",
+        "Every 10 dB is a tenfold increase in sound energy.",
+        "70 dB at the corridor and 90 dB at the gate is not \"a bit louder\": it is about",
+        "a hundred times the energy. The eye adjusts; the ear is injured.",
+        "textbook.com.pk"
+      ]
+    },
+    "fig-U3-4": {
+      "labelCount": 42,
+      "labels": [
+        "Noise sources: impact, exposure, control",
+        "Source",
+        "Health impact in one line",
+        "Who is exposed",
+        "One control",
+        "Road traffic",
+        "stress, blood pressure,",
+        "disturbed sleep",
+        "everyone on the",
+        "street and beside it",
+        "enforced horn bans;",
+        "smooth traffic flow",
+        "Construction",
+        "hearing loss for workers;"
+      ]
+    },
+    "fig-U3-5": {
+      "labelCount": 20,
+      "labels": [
+        "The five hazard classes",
+        "hazard",
+        "the potential to harm",
+        "physical",
+        "heat, noise, vibration,",
+        "electricity: a 45-degree class",
+        "mechanical",
+        "moving parts, falls,",
+        "vehicles: the site next door",
+        "biological",
+        "germs, mould, animals:",
+        "disease in flood water",
+        "chemical",
+        "fumes, pesticides, cleaners:"
+      ]
+    },
+    "fig-U3-6": {
+      "labelCount": 42,
+      "labels": [
+        "The five hazard classes, with controls",
+        "Class",
+        "One example",
+        "Health effect",
+        "One safety measure",
+        "Physical",
+        "a 45-degree classroom;",
+        "generator exhaust beside it",
+        "heat exhaustion;",
+        "carbon monoxide",
+        "shade, water, breaks;",
+        "exhaust routed away",
+        "Mechanical",
+        "a collapsing wall;"
+      ]
+    },
+    "fig-U3-7": {
+      "labelCount": 20,
+      "labels": [
+        "The risk management cycle",
+        "1. identify",
+        "walk, list, check the",
+        "register, ask the",
+        "people who work there",
+        "2. assess",
+        "likelihood times",
+        "severity, on the",
+        "grid: rank, then fix",
+        "3. control",
+        "hierarchy: remove,",
+        "replace, guard,",
+        "procedures, protect",
+        "4. monitor and review"
+      ]
+    },
+    "fig-U3-8": {
+      "labelCount": 27,
+      "labels": [
+        "Hazard identification tools",
+        "Tool",
+        "What it finds",
+        "Its blind spot",
+        "Walk-around inspection",
+        "what is visible now: the broken",
+        "window, the open tank, the wire",
+        "what only appears at night,",
+        "in rush hour, or in the rain",
+        "Checklists",
+        "the known hazards, reliably:",
+        "nothing on the list is missed",
+        "anything not on the list,",
+        "including the new and unusual"
+      ]
+    }
+  }
+}
