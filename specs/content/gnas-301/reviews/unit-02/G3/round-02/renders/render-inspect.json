@@ -1,0 +1,354 @@
+{
+  "host": "http://127.0.0.1:4614/semester-1/gnas-301/unit-02",
+  "browser": "149.0.7827.0",
+  "startedAt": "2026-09-23T21:41:49.050Z",
+  "desktop": {
+    "index": {
+      "headings": 5,
+      "skippedHeadingLevels": 0,
+      "imgs": [
+        {
+          "src": "/img/logo.svg",
+          "natural": "150x150",
+          "shown": true,
+          "loading": null,
+          "alt": "B.Ed Mega Textbook"
+        },
+        {
+          "src": "/img/logo.svg",
+          "natural": "150x150",
+          "shown": false,
+          "loading": null,
+          "alt": "B.Ed Mega Textbook"
+        }
+      ],
+      "visibleBroken": 0,
+      "missingAlt": 0,
+      "bareUrlLinks": [],
+      "docHOverflow": 0
+    },
+    "topic-01": {
+      "headings": 11,
+      "skippedHeadingLevels": 0,
+      "imgs": [
+        {
+          "src": "/img/logo.svg",
+          "natural": "150x150",
+          "shown": true,
+          "loading": null,
+          "alt": "B.Ed Mega Textbook"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-02/fig-U2-1.svg",
+          "natural": "249x150",
+          "shown": true,
+          "loading": "lazy",
+          "alt": "Diagram of global water distribution as 100 droplets, 97 sal"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-02/fig-U2-1.dark.svg",
+          "natural": "0x0",
+          "shown": false,
+          "loading": "lazy",
+          "alt": "Diagram of global water distribution as 100 droplets, 97 sal"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-02/fig-U2-2.svg",
+          "natural": "249x150",
+          "shown": true,
+          "loading": "lazy",
+          "alt": "Table of Pakistan's four water resources, the Indus system, "
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-02/fig-U2-2.dark.svg",
+          "natural": "0x0",
+          "shown": false,
+          "loading": "lazy",
+          "alt": "Table of Pakistan's four water resources, the Indus system, "
+        }
+      ],
+      "visibleBroken": 0,
+      "missingAlt": 0,
+      "bareUrlLinks": [
+        "https://www.usgs.gov/special-topics/water-science-school/science/how-much-water-there-earth",
+        "https://doi.org/10.5194/hess-14-1669-2010",
+        "https://doi.org/10.46660/ijeeg.Vol13.Iss2.2022.705",
+        "https://www.who.int/news-room/fact-sheets/detail/drinking-water"
+      ],
+      "docHOverflow": 0
+    },
+    "topic-02": {
+      "headings": 12,
+      "skippedHeadingLevels": 0,
+      "imgs": [
+        {
+          "src": "/img/logo.svg",
+          "natural": "150x150",
+          "shown": true,
+          "loading": null,
+          "alt": "B.Ed Mega Textbook"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-02/fig-U2-3.svg",
+          "natural": "249x150",
+          "shown": true,
+          "loading": "lazy",
+          "alt": "Flowchart of the water pollution pathway from source through"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-02/fig-U2-3.dark.svg",
+          "natural": "0x0",
+          "shown": false,
+          "loading": "lazy",
+          "alt": "Flowchart of the water pollution pathway from source through"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-02/fig-U2-4.svg",
+          "natural": "249x150",
+          "shown": true,
+          "loading": "lazy",
+          "alt": "Table of five water pollutant types with usual source, impac"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-02/fig-U2-4.dark.svg",
+          "natural": "0x0",
+          "shown": false,
+          "loading": "lazy",
+          "alt": "Table of five water pollutant types with usual source, impac"
+        }
+      ],
+      "visibleBroken": 0,
+      "missingAlt": 0,
+      "bareUrlLinks": [
+        "https://www.who.int/news-room/fact-sheets/detail/drinking-water",
+        "https://www.who.int/news-room/fact-sheets/detail/sanitation"
+      ],
+      "docHOverflow": 0
+    },
+    "topic-03": {
+      "headings": 12,
+      "skippedHeadingLevels": 0,
+      "imgs": [
+        {
+          "src": "/img/logo.svg",
+          "natural": "150x150",
+          "shown": true,
+          "loading": null,
+          "alt": "B.Ed Mega Textbook"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-02/fig-U2-5.svg",
+          "natural": "249x150",
+          "shown": true,
+          "loading": "lazy",
+          "alt": "Flowchart of the waste hierarchy as a descending staircase, "
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-02/fig-U2-5.dark.svg",
+          "natural": "0x0",
+          "shown": false,
+          "loading": "lazy",
+          "alt": "Flowchart of the waste hierarchy as a descending staircase, "
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-02/fig-U2-6.svg",
+          "natural": "249x150",
+          "shown": true,
+          "loading": "lazy",
+          "alt": "Table comparing hospital clinical waste and industrial hazar"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-02/fig-U2-6.dark.svg",
+          "natural": "0x0",
+          "shown": false,
+          "loading": "lazy",
+          "alt": "Table comparing hospital clinical waste and industrial hazar"
+        }
+      ],
+      "visibleBroken": 0,
+      "missingAlt": 0,
+      "bareUrlLinks": [
+        "https://doi.org/10.1186/s13021-026-00403-x",
+        "https://www.who.int/news-room/fact-sheets/detail/sanitation",
+        "https://www.who.int/news-room/fact-sheets/detail/health-care-waste"
+      ],
+      "docHOverflow": 0
+    },
+    "unit-assessment": {
+      "headings": 10,
+      "skippedHeadingLevels": 0,
+      "imgs": [
+        {
+          "src": "/img/logo.svg",
+          "natural": "150x150",
+          "shown": true,
+          "loading": null,
+          "alt": "B.Ed Mega Textbook"
+        }
+      ],
+      "visibleBroken": 0,
+      "missingAlt": 0,
+      "bareUrlLinks": [],
+      "docHOverflow": 0
+    },
+    "unit-teacher-notes": {
+      "headings": 6,
+      "skippedHeadingLevels": 0,
+      "imgs": [
+        {
+          "src": "/img/logo.svg",
+          "natural": "150x150",
+          "shown": true,
+          "loading": null,
+          "alt": "B.Ed Mega Textbook"
+        }
+      ],
+      "visibleBroken": 0,
+      "missingAlt": 0,
+      "bareUrlLinks": [],
+      "docHOverflow": 0
+    }
+  },
+  "narrow": {
+    "index": {
+      "docHOverflow": 0,
+      "tables": [],
+      "figures": []
+    },
+    "topic-01": {
+      "docHOverflow": 0,
+      "tables": [
+        {
+          "client": 328,
+          "scroll": 328,
+          "fits": true,
+          "overflowX": "auto",
+          "display": "block",
+          "tabindex": null,
+          "role": null,
+          "ariaLabel": null,
+          "scrollReach": null
+        }
+      ],
+      "figures": [
+        {
+          "client": 328,
+          "scroll": 328,
+          "scroller": "visible",
+          "fits": true
+        },
+        {
+          "client": 328,
+          "scroll": 328,
+          "scroller": "visible",
+          "fits": true
+        }
+      ]
+    },
+    "topic-02": {
+      "docHOverflow": 0,
+      "tables": [
+        {
+          "client": 328,
+          "scroll": 328,
+          "fits": true,
+          "overflowX": "auto",
+          "display": "block",
+          "tabindex": null,
+          "role": null,
+          "ariaLabel": null,
+          "scrollReach": null
+        }
+      ],
+      "figures": [
+        {
+          "client": 328,
+          "scroll": 328,
+          "scroller": "visible",
+          "fits": true
+        },
+        {
+          "client": 328,
+          "scroll": 328,
+          "scroller": "visible",
+          "fits": true
+        }
+      ]
+    },
+    "topic-03": {
+      "docHOverflow": 0,
+      "tables": [
+        {
+          "client": 328,
+          "scroll": 328,
+          "fits": true,
+          "overflowX": "auto",
+          "display": "block",
+          "tabindex": null,
+          "role": null,
+          "ariaLabel": null,
+          "scrollReach": null
+        }
+      ],
+      "figures": [
+        {
+          "client": 328,
+          "scroll": 328,
+          "scroller": "visible",
+          "fits": true
+        },
+        {
+          "client": 328,
+          "scroll": 328,
+          "scroller": "visible",
+          "fits": true
+        }
+      ]
+    },
+    "unit-assessment": {
+      "docHOverflow": 0,
+      "tables": [],
+      "figures": []
+    },
+    "unit-teacher-notes": {
+      "docHOverflow": 0,
+      "tables": [],
+      "figures": []
+    }
+  },
+  "print": {
+    "index": {
+      "navVisible": false,
+      "footerVisible": false,
+      "docTitle": "Water and Waste Management | B.Ed Mega Textbook"
+    },
+    "topic-01": {
+      "navVisible": false,
+      "footerVisible": false,
+      "docTitle": "Topic 2.1 - Water on Earth, and in Pakistan | B.Ed Mega Textbook"
+    },
+    "topic-02": {
+      "navVisible": false,
+      "footerVisible": false,
+      "docTitle": "Topic 2.2 - Water pollution and industrial effluents | B.Ed Mega Textbook"
+    },
+    "topic-03": {
+      "navVisible": false,
+      "footerVisible": false,
+      "docTitle": "Topic 2.3 - Solid and hazardous waste | B.Ed Mega Textbook"
+    },
+    "unit-assessment": {
+      "navVisible": false,
+      "footerVisible": false,
+      "docTitle": "Unit 2 assessment | B.Ed Mega Textbook"
+    },
+    "unit-teacher-notes": {
+      "navVisible": false,
+      "footerVisible": false,
+      "docTitle": "Unit 2 teacher notes | B.Ed Mega Textbook"
+    }
+  },
+  "consoleErrors": [],
+  "answersSectionFound": true,
+  "completedAt": "2026-09-23T21:42:26.190Z"
+}
