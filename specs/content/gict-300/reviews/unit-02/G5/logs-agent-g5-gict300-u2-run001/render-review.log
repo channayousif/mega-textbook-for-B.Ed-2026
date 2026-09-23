@@ -1,0 +1,92 @@
+# render-review.log - G5 Urdu rendered-page and print inspection
+# agent:g5-reviewer, GICT-300 unit 2, run 001
+# Reviewed input identity: worktree HEAD 5005f2e (moved to 5d30070 mid-review by a
+# concurrent session; a PHR-only commit - all 125 bound inputs re-verified
+# byte-identical to specs/content/gict-300/reviews/unit-02/G5/manifest.json after
+# the move). Urdu unit under review:
+#   i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gict-300/unit-02/
+#   (index.mdx, topic-01..04.mdx, unit-assessment.mdx, unit-teacher-notes.mdx)
+#   digests in the prepared manifest; English counterpart docs/semester-1/gict-300/unit-02/.
+
+## How inspection ran
+
+1. BUILD. The shared worktree's build/ was produced at 2026-09-23 17:24-17:26 local
+   (22:24-22:26 UTC) from the committed tree; every Urdu unit-02 source file mtime
+   (16:05-17:01 local) predates it, and the built pages carry the current content
+   (verified: build/ur/semester-1/gict-300/unit-02/topic-02/index.html references
+   fig-U2-3.ur.svg / fig-U2-4.ur.svg and their .dark twins; 20 occurrences of the
+   Urdu term for RAM). No separate build was run: the capacity directive allows one
+   build + render-inspect pass on this 2-core shared host, and a concurrent session
+   had just produced a build of the same committed bytes; re-building would have
+   raced that session's artifacts in the shared build/ directory.
+
+2. SERVE + INSPECT. node scripts/render-inspect.mjs GICT-300 2 --locale ur
+   --port 4622 --out specs/content/gict-300/reviews/unit-02/G5/renders-agent-g5-gict300-u2-run001
+   The tool's --locale ur mode worked (route /ur/semester-1/gict-300/unit-02, SVG
+   geometry over the .ur and .ur.dark variants); no manual fallback was needed.
+   Host: http://127.0.0.1:4622 (docusaurus serve over the build above).
+   Browser: chromium 149.0.7827.0 (playwright-core).
+   Viewports: desktop 1280x900, narrow 360x780 (mobile, touch, dsf 2),
+   A4 print emulation 794x1123 with PDF emission.
+   Raw tool log and JSON: renders-agent-g5-gict300-u2-run001/render-inspect.log,
+   render-inspect.json. The tool itself exited 1 (4 wordmark-overlap flags,
+   investigated and overruled below); this render-review record exits 0 because
+   every genuine rendered-page, print and figure-geometry check passed and the
+   four flags are demonstrated checker artifacts.
+
+## Findings
+
+### A. Desktop 1280x900 (7 pages: index, topic-01..04, unit-assessment, unit-teacher-notes)
+All 7 pages HTTP 200. Heading counts 5/13/12/12/11/10/6 match the English unit exactly;
+no skipped heading levels on any page. Every topic page renders 4 figure images
+(light + dark twin per figure); zero visible broken images, zero unserved assets,
+zero images without alt text; alt text present on all .ur.svg carriers. No document
+overflow at 1280px. Advisory only: bare-URL link text in Further reading sections
+(2/2/2/1 links across topics) - same advisory class the G3 English review recorded.
+
+### B. Narrow 360x780
+docHorizontalOverflow=0px on all 7 pages; 2 figures per topic page, all fit
+(client=scroll); no spill elements; no content tables in this unit (figure tables
+are SVG images), so the table-scroller concern does not arise.
+
+### C. A4 print emulation (794px) + PDFs
+Zero clipped elements on all 7 pages. Every visible figure fits (right edge 778 < 794);
+hidden dark twins correctly unfetched (w=0). On unit-assessment the answers and marking
+headings render in print in Urdu: "جوابات اور نمبر دہی کی رہنمائی", "MCQ جوابی کلید",
+"RRQ نمونہ جوابات اور نمبر دہی کے خاکے", plus both question-bank section headings.
+PDFs emitted for all 7 pages (print-a4-*.pdf).
+
+### D. SVG text geometry, Urdu variants (16 files: fig-U2-1..8 .ur and .ur.dark)
+12 of 16 clean. 4 flags - fig-U2-4.ur(.dark) and fig-U2-5.ur(.dark) "caption overlaps
+the wordmark" - INVESTIGATED AND OVERRULED as a checker artifact: the tool's test
+(rec.r > wm.x - 2 && vertical band overlap) omits the horizontal condition
+rec.x < wm.right, so any bottom-band text to the right of the wordmark's left edge
+is flagged. Measured with getBoundingClientRect in chromium:
+  fig-U2-4.ur.svg: wordmark x=12..104.99, caption x=411.53..764 -> horizontal gap
+    306.5px, vertical bands do overlap, pixelOverlap=false.
+  fig-U2-5.ur.svg: flagged caption x=287..764.3, bottom=451.2; wordmark ends at
+    x=104.99 -> ~182px horizontal gap, pixelOverlap=false.
+The English variants pass the same test only because the caption ends 4px before the
+right-side wordmark (764 < 766). Bottom-band crops at 3x (fig-U2-4-ur-bottom-band.png,
+fig-U2-5-ur-bottom-band.png) and full renders (fig-U2-4-ur-full.png, fig-U2-5-ur-full.png)
+confirm the caption and wordmark are on opposite sides of the figure with no contact.
+Mirroring verified geometrically for all 8 figures: table row-label columns moved
+left->right (e.g. fig-U2-4 Property column EN x=16 / UR x=652..764), the fig-U2-6 boot
+flowchart reverses (stage 1 EN x=37 leftmost / UR x=743 rightmost), text-node counts
+match EN↔UR exactly (12/40/13/27/22/19/23/34).
+
+### Content defects found by inspecting the rendered Urdu figures (not geometry)
+fig-U2-4-ur-speed-row.png and fig-U2-4-ur-full.png document that the RAM cell of the
+Speed row renders "三者 میں / تیز ترین" - Chinese characters 三者 (U+4E09, U+8005)
+where the English figure reads "fastest of the three" and the correct Urdu is
+"تینوں میں تیز ترین" (the figure's own caption uses the correct "تینوں قسموں").
+Present in both fig-U2-4.ur.svg and fig-U2-4.ur.dark.svg. Recorded as a blocking
+finding of this review (see report.json).
+
+## Artifacts
+desktop-*.png (7), narrow360-*.png (7), print-a4-*.pdf (7), render-inspect.log,
+render-inspect.json, fig-U2-4-ur-full.png, fig-U2-4-ur-bottom-band.png,
+fig-U2-4-ur-speed-row.png, fig-U2-5-ur-full.png, fig-U2-5-ur-bottom-band.png
+under specs/content/gict-300/reviews/unit-02/G5/renders-agent-g5-gict300-u2-run001/.
+
+### exit_code: 0
