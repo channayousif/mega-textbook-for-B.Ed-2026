@@ -786,3 +786,51 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   Unretrievable print monographs bind the author to title-level support at point of use under
   `D-2026-0001`; no full-text access is required at G1.
 - **Blocks:** ~~the `readings` criterion of `D-2026-0018`~~ **unblocked**.
+
+---
+
+## G-2026-28 - GQUR-300 reading list: one guide-required entry unresolvable, one deferred with unverified additions, one false locator
+
+- **Status:** open
+- **Gate:** G0 intake (readings criterion)
+- **Source:** `D-2026-0040`
+- **Criterion:** `readings` (G0 intake).
+- **Detail:** The guide lists four readings at `Scheme-and-Course-guides/extracted-text/1st
+  2026.txt:651-656`: Steen; Grawe; National Curriculum for Mathematics (Pakistan); HEC National
+  Professional Standards for Teachers. The spec reproduces all four in `### Guide-required`
+  (`specs/content/gqur-300/content-spec.md:70-77`). Presence is not in question; resolvability is:
+
+  1. **`grawe` does not resolve from this host.** "Grawe, N. *Quantitative Literacy: Reasoning
+     about Data.* Cognella Academic Publishing." Nathan D. Grawe is a real quantitative-literacy
+     author (ERIC EJ981327, 2012, *Liberal Education*/AAC&U), but the specific title is absent
+     from every registry reachable on 2026-09-23: Open Library's author search returns eight
+     Grawe works and not this one; the Internet Archive has no record; ERIC has none; Cognella's
+     own site answers HTTP 403 to this host. The spec marks it "to verify at unit authoring" and
+     applies `D-2026-0001`, but `D-2026-0001` governs a source whose **text** cannot be obtained,
+     not a work that cannot be shown to exist; the `G-2026-09`/`D-2026-0010` precedent (icka2024)
+     is the matching case. The spec's added publisher detail is itself unverified.
+  2. **`ncm2006` is deferred with unverified additions.** The guide names only "National
+     Curriculum for Mathematics (Pakistan)". The spec expands it to "Government of Pakistan,
+     Ministry of Education. (2006). *National Curriculum for Mathematics (Grades I-XII).*
+     Islamabad." with "to verify at unit authoring". Nothing in the bound inputs verifies the
+     year, the grade range or the imprint.
+  3. **`steen2001`'s locator is false (repair, no ruling needed).** The work is real and verified
+     (Open Library: Steen 2001, with a borrowable Internet Archive ebook), but the spec's added
+     "ERIC ED459269, https://eric.ed.gov/?id=ED459269" points to "State Summary of West Virginia.
+     Ed Watch Online." (Education Trust, 2001), verified against eric.ed.gov and the ERIC API.
+     *Mathematics and Democracy* is not findable in ERIC at all. Recorded here for the owner's
+     information because the intake briefing repeated the false number; the fix is mechanical and
+     is listed as a repair in `D-2026-0040`.
+  4. `npst2009` resolves (in-corpus: EFMP-302's `npst-pakistan-2009`, with the itacec.org
+     retrieval limit already recorded under `D-2026-0001`).
+
+- **Needed, and from whom:** the curriculum owner, to (a) supply a resolvable locator for Grawe's
+  *Quantitative Literacy: Reasoning about Data* (or confirm the Cognella bibliographic record), or
+  direct that it be recorded unresolvable in the `D-2026-0010` manner: guide-required, cited at
+  bibliographic level only, limit stated at point of use; and (b) confirm or correct the 2006
+  National Curriculum for Mathematics record, or direct the same unresolvable recording.
+  `D-2026-0001` governs whatever texts cannot then be obtained.
+- **Blocks:** the `### Guide-required` rows for `grawe` and `ncm2006`, and those two keys within
+  the `**Mapped readings**` lines of Units 2-6. Criterion 5 of `D-2026-0040` is not approved.
+  Nothing else is blocked; the spec stays at `status: draft` pending this decision and the
+  `steen2001` locator repair.
