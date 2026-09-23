@@ -683,5 +683,55 @@
     "term": "Problem-solving strategy",
     "definition_en": "An ordered way through a problem you have not met before; the classic four steps are understand the problem, make a plan, carry out the plan, and look back.",
     "definition_ur": "کسی نئے مسئلے کو حل کرنے کا ترتیب وار طریقہ؛ مشہور چار مراحل ہیں: مسئلہ سمجھنا، منصوبہ بنانا، منصوبہ عمل میں لانا، اور نظرِ ثانی کرنا۔"
+  },
+  {
+    "term": "Whole number",
+    "definition_en": "The counting numbers together with zero: 0, 1, 2, 3, and so on; they answer how many when the answer cannot be negative.",
+    "definition_ur": "گنتی کے اعداد اور صفر: 0، 1، 2، 3، اور آگے؛ یہ بتاتے ہیں کہ کتنے ہیں جب جواب منفی نہیں ہو سکتا۔"
+  },
+  {
+    "term": "Integer",
+    "definition_en": "A whole number or its negative: ..., -3, -2, -1, 0, 1, 2, 3, ...; the negative side records debts, deductions and falls.",
+    "definition_ur": "کوئی تمام عدد یا اس کا منفی: ...، منفی 3، منفی 2، منفی 1، 0، 1، 2، 3، ...؛ منفی طرف قرضے، کٹوتیاں اور کمی کو ریکارڈ کرتا ہے۔"
+  },
+  {
+    "term": "Fraction",
+    "definition_en": "A number naming a part of a whole or a share of a group; the denominator counts the equal parts and the numerator counts the parts taken.",
+    "definition_ur": "کوئی عدد جو کسی پورے کا حصہ یا گروہ کا حصہ بتاتا ہے؛ نِچلا عدد (نسب نما) برابر حصوں کی تعداد بتاتا ہے اور اوپر والا عدد (شمار کنندہ) لیے گئے حصوں کی تعداد۔"
+  },
+  {
+    "term": "Decimal",
+    "definition_en": "A fraction written in place value: 0.75 means 7 tenths and 5 hundredths; every fraction has a decimal name.",
+    "definition_ur": "مقامی قیمت میں لکھی ہوئی کسر: 0.75 کا مطلب ہے 7 دسویں اور 5 سویں؛ ہر کسر کا ایک اعشاری نام ہوتا ہے۔"
+  },
+  {
+    "term": "Ratio",
+    "definition_en": "A comparison of two quantities of the same kind, such as 6 spoons of sugar to 4 spoons of tea leaves; it simplifies like a fraction.",
+    "definition_ur": "ایک جیسی دو مقداروں کا موازنہ، جیسے 6 چمچ چینی اور 4 چمچ پتی؛ یہ کسر کی طرح سادہ کی جا سکتی ہے۔"
+  },
+  {
+    "term": "Proportion",
+    "definition_en": "A statement that two ratios are equal, such as 6 to 4 equals 18 to 12; the cross-products of a true proportion are equal.",
+    "definition_ur": "اس بیان کہ دو نسبتیں برابر ہیں، جیسے 6 بہ 4 برابر ہے 18 بہ 12؛ درست تناسب میں ضربدری آپس میں برابر ہوتی ہے۔"
+  },
+  {
+    "term": "Percentage",
+    "definition_en": "A ratio expressed out of 100; per cent means by the hundred, so 80 percent means 80 out of every 100.",
+    "definition_ur": "سو میں سے ظاہر کی گئی نسبت؛ فیصد کا مطلب ہے سو میں سے، پس 80 فیصد کا مطلب ہے ہر 100 میں سے 80۔"
+  },
+  {
+    "term": "Power",
+    "definition_en": "Repeated multiplication of a base: 8 to the power 2 (8 squared) means 8 x 8; the exponent counts the multiplications.",
+    "definition_ur": " اساس کی بار بار ضرب: 8 کی طاقت 2 (8 کا مربع) کا مطلب ہے 8 ضرب 8؛ وسیع (exponent) ضربوں کی تعداد بتاتا ہے۔"
+  },
+  {
+    "term": "Exponent",
+    "definition_en": "The small raised number in a power that counts how many times the base is multiplied by itself; in 8 squared the exponent is 2.",
+    "definition_ur": "طاقت میں اوپر لکھا چھوٹا عدد جو بتاتا ہے کہ اساس کو کتنی بار ضرب دی گئی ہے؛ 8 کے مربع میں وسیع (exponent) 2 ہے۔"
+  },
+  {
+    "term": "Square root",
+    "definition_en": "The side length of the square with a given area; the square root of 64 is 8 because an 8-by-8 square holds exactly 64 unit tiles.",
+    "definition_ur": "کسی دیے گئے رقبے والے مربع کے ضلع کی لمبائی؛ 64 کا جذر 8 ہے کیونکہ 8 بہ 8 کا مربع بالکل 64 ٹائل سمیٹتا ہے۔"
   }
 ]
