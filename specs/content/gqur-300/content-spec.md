@@ -6,7 +6,7 @@ status: draft
 # GQUR-300 - Quantitative Reasoning-I - Content Spec
 
 Degree track, Semester 1, 3 (3-0) credit hours, 16 weeks. Source:
-`Scheme-and-Course-guides/extracted-text/1st 2026.txt` lines 549-715 ("Quantitative
+`Scheme-and-Course-guides/extracted-text/1st 2026.txt` lines 546-680 ("Quantitative
 Reasoning-1(Maths)", University of Sindh, Faculty of Education). Original PDF:
 `Scheme-and-Course-guides/1st 2026.pdf`.
 
@@ -58,7 +58,7 @@ this split.
 The guide describes the course as developing "quantitative reasoning skills required for
 academic study, professional practice, and everyday problem solving", with an emphasis on
 "logical thinking, numerical sense, data interpretation, and the application of
-mathematical concepts in real-life contexts" (`1st 2026.txt:555-561`). The course
+mathematical concepts in real-life contexts" (`1st 2026.txt:558-563`). The course
 strengthens foundational mathematical understanding and prepares future teachers to model
 quantitative reasoning skills for their students.
 
@@ -67,22 +67,34 @@ quantitative reasoning skills for their students.
 Cited by reference only (Constitution Art. III.5). Per-unit open-access substitutes are
 added in each unit's `sources/unit-NN.md` at authoring time.
 
+**Open-access floor (D-2026-0013 precedent).** Two of the four guide-required readings are
+print monographs and one is a government document whose locator does not resolve from this
+host; those three are cited at **title and bibliographic level only**, with that limit
+stated at the point of use, and every unit maps at least one **verified open-access
+source** (below) that carries its retrievable content. Where a monograph's text cannot be
+obtained, D-2026-0001 applies (flag and proceed).
+
 ### Guide-required
 
 | Key | Citation | DOI/URL | Units | Note |
 |---|---|---|---|---|
-| steen2001 | Steen, L. A. (Ed.). (2001). *Mathematics and Democracy: The Case for Quantitative Literacy.* National Council on Education and the Disciplines, Woodrow Wilson National Fellowship Foundation. | ERIC ED459269, https://eric.ed.gov/?id=ED459269 | 1, 6 | the founding quantitative-literacy argument; essays on numeracy for citizenship |
-| grawe | Grawe, N. *Quantitative Literacy: Reasoning about Data.* Cognella Academic Publishing. | to verify at unit authoring | 5, 6 | print monograph, commercial textbook; D-2026-0001 applies if no copy is obtainable (title-level support only) |
-| ncm2006 | Government of Pakistan, Ministry of Education. (2006). *National Curriculum for Mathematics (Grades I-XII).* Islamabad. | to verify at unit authoring | 2, 3, 4 | the school mathematics strands this course re-grounds for teachers |
-| npst2009 | Higher Education Commission, Pakistan. (2009). *National Professional Standards for Teachers.* Policy and Planning Wing, Ministry of Education. | https://itacec.org/document/2015/7/National_Professional_Standards_for_Teachers.pdf | 1, 6 | teacher-professionalism framing for why teachers need quantitative reasoning |
+| steen2001 | Steen, L. A. (Ed.). (2001). *Mathematics and Democracy: The Case for Quantitative Literacy.* National Council on Education and the Disciplines, Princeton, NJ. ISBN 0970954700. | https://archive.org/details/mathematicsdemoc0000unse | 1, 6 | verified via Open Library (work OL18229070W) and the Internet Archive on 2026-09-23; the scan is controlled-lending, so the text is not openly downloadable - cited at bibliographic level, D-2026-0001 for text |
+| grawe | Grawe, N. *Quantitative Literacy: Reasoning about Data.* Cognella Academic Publishing. | unresolvable | 5, 6 | guide-required at `1st 2026.txt:652`; the title is absent from Open Library, the Internet Archive and ERIC, and Cognella answers 403 to this host (checked 2026-09-23) - locator recorded unresolvable in the D-2026-0010 manner: cited at bibliographic level only, limit stated at point of use; the same author's verified open-access article (grawe2012) carries the retrievable content |
+| ncm | National Curriculum for Mathematics (Pakistan). | unresolvable | 2, 3, 4 | guide-required at `1st 2026.txt:653`; the guide names no year, grade range or imprint, and none is added here; the record could not be resolved from this host on 2026-09-23 - cited at bibliographic level only, limit stated at point of use (D-2026-0010 manner) |
+| npst2009 | Higher Education Commission, Pakistan. (2009). *National Professional Standards for Teachers.* Policy and Planning Wing, Ministry of Education. | https://itacec.org/document/2015/7/National_Professional_Standards_for_Teachers.pdf | 1, 6 | resolves (in-corpus precedent: EFMP-302 npst-pakistan-2009); retrieval limit already recorded under D-2026-0001 |
 
 ### Curated-supplementary (open access)
 
 | Key | Citation | DOI/URL | Units | Note |
 |---|---|---|---|---|
+| grawe2012 | Grawe, N. D. (2012). Achieving a quantitatively literate citizenry: Resources and community to support national change. *Liberal Education, 98*(2), 30-35. | ERIC EJ981327, https://eric.ed.gov/?id=EJ981327 | 1, 5, 6 | verified 2026-09-23; the same author's open-access case for quantitative literacy |
+| sikko2023 | Sikko, S. A. (2023). What can we learn from the different understandings of mathematical literacy? *Numeracy, 16*(1). | ERIC EJ1450768, https://eric.ed.gov/?id=EJ1450768 | 1 | verified 2026-09-23; mathematical literacy as reasoning in context |
+| gula2025 | Gula, T., & Lovric, M. (2025). Promoting mathematical thinking of university students: The case of a numeracy course. *Canadian Journal of Science, Mathematics and Technology Education.* | ERIC EJ1489427, https://eric.ed.gov/?id=EJ1489427 | 1, 2 | verified 2026-09-23; a university numeracy course design |
+| mcclure2020 | McClure, C. P. (2020). Development and assessment of a continuing education unit in quantitative literacy for high school STEM teachers. *Numeracy, 13*(2). | ERIC EJ1480153, https://eric.ed.gov/?id=EJ1480153 | 6 | verified 2026-09-23; quantitative-literacy professional development for teachers |
+| tout2020 | Tout, D. (2020). Evolution of adult numeracy from quantitative literacy to numeracy: Lessons learned from international assessments. *International Review of Education, 66*, 583-605. | ERIC EJ1266633, https://eric.ed.gov/?id=EJ1266633 | 5, 6 | verified 2026-09-23; numeracy in international assessments |
 | oecd-pisa | OECD. *PISA Mathematics Framework.* OECD Publishing, Paris. | https://www.oecd.org/pisa/ | 1, 5 | international framing of mathematical literacy as real-world reasoning |
-| pbs | Pakistan Bureau of Statistics. Government of Pakistan. | https://www.pbs.gov.pk/ | 5, 6 | Sindh/Pakistan census and survey figures for data units |
-| openstax-math | OpenStax. *Developmental Math / Prealgebra* (open textbooks). Rice University. | https://openstax.org/subjects/math | 2, 3, 4 | open-access worked examples for numbers, algebra, measurement |
+| pbs | Pakistan Bureau of Statistics. Government of Pakistan. | https://www.pbs.gov.pk/ | 5, 6 | verified 2026-09-23; Sindh/Pakistan census and survey figures for data units |
+| openstax-prealgebra | Marecek, L., Anthony-Smith, M., & Mathis, M. H. (2020). *Prealgebra 2e.* OpenStax, Rice University. | https://openstax.org/details/books/prealgebra-2e | 2, 3, 4 | verified 2026-09-23; open-access worked examples for numbers, algebra, measurement (CC BY) |
 
 ## Week schedule
 
@@ -100,8 +112,9 @@ distribution is the spec's construction for a 16-week semester and is labelled a
 
 ## Standards & frameworks anchors
 
-- National Curriculum for Mathematics, Pakistan (2006) - the school strands (number,
-  algebra, measurement, data) this course re-grounds for prospective teachers (Units 2-4).
+- National Curriculum for Mathematics, Pakistan - the school strands (number, algebra,
+  measurement, data) this course re-grounds for prospective teachers (Units 2-4); cited at
+  bibliographic level only (see Reading list).
 - National Professional Standards for Teachers, HEC Pakistan (2009) - teacher competence
   framing for quantitative reasoning as professional practice (Units 1, 6).
 - OECD PISA Mathematics Framework - mathematical literacy as reasoning in real contexts
@@ -172,7 +185,8 @@ skills and everyday arithmetic.
 **Common misconceptions**: "quantitative reasoning means doing hard calculations";
 "estimation is just guessing"; "there is one correct method for every problem".
 
-**Mapped readings**: steen2001, npst2009, oecd-pisa.
+**Mapped readings**: steen2001 (bibliographic level only), npst2009, grawe2012, sikko2023,
+oecd-pisa.
 
 **Worked-examples plan**: roughly one Pakistan-grounded vignette per sub-topic (assembly
 head-count, market prices, timetable puzzle) - see coverage/unit-01.md.
@@ -238,7 +252,7 @@ Weeks 4-6 (derived). Unit Spec (G1) for `docs/semester-1/gqur-300/unit-02/`.
 **Common misconceptions**: "multiplying always makes bigger"; "a percentage is a separate
 kind of number, not a fraction"; "division of fractions has no meaning".
 
-**Mapped readings**: ncm2006, openstax-math, steen2001.
+**Mapped readings**: ncm (bibliographic level only), openstax-prealgebra, gula2025.
 
 **Worked-examples plan**: roughly one Pakistan-grounded vignette per sub-topic (bazaar
 prices, recipe scaling, marksheet percentages, floor tiles) - see coverage/unit-02.md.
@@ -304,7 +318,7 @@ vocabulary refreshed in Topic 3.1.
 "the equals sign means the answer comes next"; "inequalities behave exactly like
 equations under every operation".
 
-**Mapped readings**: ncm2006, openstax-math.
+**Mapped readings**: ncm (bibliographic level only), openstax-prealgebra.
 
 **Worked-examples plan**: roughly one Pakistan-grounded vignette per sub-topic
 (matchstick patterns, rickshaw fares, stationery budget, fare notice) - see
@@ -333,7 +347,9 @@ demands Analyze-or-higher.
 
 Weeks 10-11 (derived). Unit Spec (G1) for `docs/semester-1/gqur-300/unit-04/`.
 
-- **CLO refs**: course outcomes 2 and 4.
+- **CLO refs**: course outcomes 2 and 4 (outcome 4 through communicating measurements and
+  geometric results precisely: reading a real measure, stating a unit, and reporting a
+  computation so another teacher can check it).
 - **Key terms**: Unit of measurement, Length, Mass, Capacity, Perimeter, Area, Volume,
   Rectangle, Triangle, Circle.
 - **Topics**: units of measurement; perimeter, area, volume and basic shapes;
@@ -370,7 +386,7 @@ rupee prices and shop measures.
 **Common misconceptions**: "area and perimeter grow together"; "a bigger number always
 means a bigger measurement" (unit confusion); "volume is just area times any number".
 
-**Mapped readings**: ncm2006, openstax-math.
+**Mapped readings**: ncm (bibliographic level only), openstax-prealgebra.
 
 **Worked-examples plan**: roughly one Pakistan-grounded vignette per sub-topic (fabric
 shop, classroom floor, donation boxes, courtyard survey) - see coverage/unit-04.md.
@@ -436,7 +452,8 @@ sanity-checking averages).
 **Common misconceptions**: "the mean is the only average"; "a graph's impression is the
 data"; "a bigger-looking bar always means a bigger value" (truncated or scaled axes).
 
-**Mapped readings**: grawe, pbs, oecd-pisa.
+**Mapped readings**: grawe (bibliographic level only), grawe2012, tout2020, pbs,
+oecd-pisa.
 
 **Worked-examples plan**: roughly one Pakistan-grounded vignette per sub-topic
 (travel-to-school survey, class marks, marksheet averages, Sindh literacy figures from
@@ -505,7 +522,8 @@ Weeks 15-16 (derived). Unit Spec (G1) for `docs/semester-1/gqur-300/unit-06/`.
 the saver"; "a budget is a restriction, not a plan"; "numbers in an advertisement must be
 true".
 
-**Mapped readings**: steen2001, grawe, npst2009, pbs.
+**Mapped readings**: steen2001 (bibliographic level only), grawe (bibliographic level
+only), mcclure2020, npst2009, pbs.
 
 **Worked-examples plan**: roughly one Pakistan-grounded vignette per sub-topic (school
 fair stall, bank saving offer, household budget, newspaper advertisement, school choice)
