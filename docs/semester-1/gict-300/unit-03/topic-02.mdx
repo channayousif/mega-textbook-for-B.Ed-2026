@@ -1,0 +1,163 @@
+---
+title: "Topic 3.2 - Files and processes"
+description: "File management (names, folders, paths, metadata) and process management (what a process is, its states and its lifecycle)."
+course_code: GICT-300
+unit_no: 3
+topic_no: 2
+topic_label: "3.2"
+clo_refs:
+  - "SLO:GICT-300-3-4"
+blooms_summary: "Remember, understand and apply file management and process management: design a folder scheme and narrate a process's states through a described scenario."
+est_reading_minutes: 14
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+import Glossary from '@site/src/components/Glossary';
+
+<PrintHandout />
+
+# Topic 3.2 - Files and processes
+
+## A real classroom situation
+
+Two scenes from the same staffroom. In the first, the clerk searches for "that letter"
+among four hundred files named "doc1", "doc2", "new final", and "new final FINAL" - the
+digital equivalent of a cupboard with no shelves. In the second, a trainee teacher
+complains that the computer "froze" when she opened her lesson file, the browser and a
+video call together; the clerk glances at the machine, closes one program, and everything
+moves again. Both scenes are about the same two jobs the operating system does for us all
+day: keeping files findable, and sharing the processor among running programs. The first
+scene is file management gone wrong. The second is process management at its limit.
+
+<Figure id="fig-U3-3" src="/img/figures/gict-300/unit-03/fig-U3-3.svg" alt="Diagram of a file shown with its three identifying features: the name with extension, the folder path, and the metadata of size and dates." />
+
+## Explanation
+
+### File management
+
+A <Glossary term="File">file</Glossary> is a named collection of data stored by the
+operating system - a document, a photo, a spreadsheet, a program. Three things identify a
+file. Its **name and extension** tell you what it is called and usually what kind of
+thing it is: "results-2026.xlsx" is a spreadsheet, ".jpg" an image, ".pdf" a document
+ready to print. Its **folder path** tells you where it lives: in "Records", inside
+"Exams", inside "Term-1". Folders (also called directories) nest inside one another,
+which is what turns a flat pile into a tree you can climb. And its **metadata** is the
+information the operating system keeps about the file: its size, when it was created,
+when it was last changed, who may open it.
+
+The operating system's <Glossary term="File management">file management</Glossary> is the
+set of services built on those three things: creating, naming, renaming, moving, copying
+and deleting files; keeping the folder tree; and tracking where each file's actual bytes
+sit on the disk. When you delete a file, the OS typically removes its record from the
+index and marks its space as reusable - which is why a deleted file sometimes can be
+recovered, and why "deleted" is not the same as "erased".
+
+The clerk in the first scene does not have a file problem; he has a naming and folder
+problem. A workable school scheme is three levels deep at most (year, then kind, then
+file), a date-first naming pattern ("2026-03-15-term1-results"), and no file sitting
+loose on the desktop. The scheme is not decoration: it is the difference between finding
+a record in five seconds and reconstructing a term's paperwork from memory.
+
+### Process management
+
+A <Glossary term="Process">process</Glossary> is a program in execution - a running
+program. Arpaci-Dusseau and Arpaci-Dusseau (2023) describe what makes one up: its
+address space, the memory it can use, holding its instructions, its data, and its stack;
+its registers, including the program counter that says which instruction comes next; and
+the list of files it currently has open.
+
+Here is the part that changes how you see a "frozen" computer. One processor can run only
+one process at an instant, yet dozens appear to run together. The operating system
+creates that illusion by time sharing: run one process briefly, stop it, run another,
+and switch so fast that every program seems continuous. Arpaci-Dusseau and
+Arpaci-Dusseau (2023) give the simplified three states of a process. **Running**: the
+process is executing instructions on the processor. **Ready**: the process could run,
+but the OS has chosen someone else for the moment. **Blocked**: the process has started
+an operation - say, reading from a disk - and cannot usefully continue until it
+finishes. A process moves from ready to running when it is scheduled, back from running
+to ready when it is descheduled, and into blocked when it must wait; when its work ends,
+it terminates. Add the beginning (new) and the end (terminated) and you have the process
+lifecycle.
+
+<Figure id="fig-U3-4" src="/img/figures/gict-300/unit-03/fig-U3-4.svg" alt="Flowchart of process states: a new process becomes ready, is scheduled into running, may be descheduled back to ready, or blocked into waiting until input or output completes, and eventually terminates." />
+
+Now the trainee's "frozen" computer reads differently. Too many processes want turns;
+each gets a smaller slice; everything crawls. The fix is not mysterious: close
+processes, and the remaining ones get bigger slices. When a program's window closes but
+its process stays alive in the background (which happens), the machine still feels the
+load - and the operating system's process list is where you can see and end it.
+
+## Activity: The naming rescue and the process list
+
+Work in pairs. About 20 minutes.
+
+1. Your teacher gives you a list of fifteen badly named files in a jumble ("doc1",
+   "untitled", "final2", "scan001", "asdf") with their real contents described (term
+   results, a parent notice, a photo of the science fair, and so on).
+2. Design a folder scheme (at most three levels) and rename every file with a date-first
+   pattern. Write the full path of five of them.
+3. Then open the running-programs or task view on the classroom machine (or your phone's
+   app switcher). List what you find, mark which are visible applications and which are
+   background processes, and identify one you could safely close on a slow machine.
+4. Swap with another pair: can they find any file in your scheme in under ten seconds
+   just from its description?
+
+## Check your understanding
+
+1. Define a file and a process in one sentence each. *(Remember)*
+2. Name the three things that identify a file, with one example of each. *(Remember)*
+3. Narrate the states a process passes through from "the user double-clicks the icon" to
+   "the program is closed", using scheduled, descheduled and blocked at least once.
+   *(Apply)*
+4. Explain why closing a window does not always end a process, and how that relates to a
+   slow machine. *(Understand)*
+
+## Summary
+
+File management rests on three identifiers - name and extension, folder path, metadata -
+and the operating system's services for creating, moving and tracking files; a
+disciplined three-level scheme with date-first names turns a pile into a tree. Process
+management rests on the process, a program in execution with its address space,
+registers and open files; one processor runs one process at an instant, and the OS
+creates the illusion of many by rapid switching through the states running, ready and
+blocked. A slow machine is usually a crowded turn.
+
+## Self-assessment checklist
+
+- [ ] I can name the three identifiers of a file and design a workable folder scheme.
+- [ ] I can define a process and name its states with their transitions.
+- [ ] I can explain a slow or "frozen" computer in terms of process management.
+
+## Try this at your practicum school
+
+Ask the office for permission to look at the school's document store (or the desktop of
+the office computer). Sketch its current folder scheme and propose, on paper, a
+three-level replacement with a naming pattern. Show the proposal to the clerk and note
+one objection and one approval.
+
+## Summative task
+
+Write a one-page "office rescue plan" for a school whose computer has two problems: no
+one can find last term's letters, and the machine slows every afternoon. Address the
+first with a file scheme (structure, naming pattern, where new files go) and the second
+with process management (what to check, what to close, what the states tell you).
+
+**Marking guide (10 marks):**
+
+- File scheme is workable: at most three levels, a naming pattern, and a rule for new
+  files: 3 marks.
+- The slowness diagnosis uses process states and the time-sharing idea rather than
+  "it is old" (Analyse): 4 marks.
+- Both problems connected to the OS functions from Topic 3.1: 2 marks.
+- Clear, one-page plan: 1 mark.
+
+## Further reading
+
+- Arpaci-Dusseau, R. H., & Arpaci-Dusseau, A. C. (2023). *Operating Systems: Three Easy
+  Pieces* (version 1.10), chapter 4. https://pages.cs.wisc.edu/~remzi/OSTEP/
+- Bourgeois, D. T., Smith, J. L., Wang, S., & Mortati, J. (2019). *Information Systems for
+  Business and Beyond* (2nd ed.), chapters 2 and 3. Open Textbook Library.
+  https://open.umn.edu/opentextbooks/textbooks/information-systems-for-business-and-beyond
+- Shelly, G. B., & Vermaat, M. E. *Discovering Computers*. Cengage Learning. (Course
+  guide reading; print monograph, cited at bibliographic level.)

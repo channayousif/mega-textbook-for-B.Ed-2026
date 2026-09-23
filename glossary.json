@@ -373,5 +373,125 @@
     "term": "Embedded computer",
     "definition_en": "A small computer fixed inside another device to run that one device, such as a washing machine's controller or a car's engine management unit.",
     "definition_ur": "کسی دوسری مشین کے اندر لگا چھوٹا کمپیوٹر جو صرف اسی ایک مشین کا کام سنبھالتا ہے، جیسے واشنگ مشین کا کنٹرولر یا گاڑی کے انجن کا انتظامی یونٹ۔"
+  },
+  {
+    "term": "Input device",
+    "definition_en": "A device that puts data into the computer, such as a keyboard, mouse, scanner, microphone or webcam.",
+    "definition_ur": "وہ ڈیوائس جو کمپیوٹر میں ڈیٹا داخل کرتی ہے، جیسے کی بورڈ، ماؤس، اسکینر، مائیکروفون یا ویب کیم۔"
+  },
+  {
+    "term": "Output device",
+    "definition_en": "A device that brings results out of the computer in a form a person can use, such as a monitor, projector, speakers or printer.",
+    "definition_ur": "وہ ڈیوائس جو کمپیوٹر کے نتائج کو انسان کے استعمال کے قابل شکل میں باہر لاتی ہے، جیسے مانیٹر، پروجیکٹر، اسپیکر یا پرنٹر۔"
+  },
+  {
+    "term": "Storage device",
+    "definition_en": "A device that keeps data whether or not the power is on, such as a hard disk, solid state drive, flash drive or DVD.",
+    "definition_ur": "وہ ڈیوائس جو بجلی بند ہونے کے باوجود ڈیٹا محفوظ رکھتی ہے، جیسے ہارڈ ڈسک، سولڈ اسٹیٹ ڈرائیو، فلیش ڈرائیو یا ڈی وی ڈی۔"
+  },
+  {
+    "term": "RAM",
+    "definition_en": "Random Access Memory: the computer's fast, volatile working memory, which holds programs and data while in use and loses them at power off.",
+    "definition_ur": "رینڈم ایکسیس میموری: کمپیوٹر کی تیز اور متغیر ورکنگ میموری، جو استعمال کے وقت پروگرام اور ڈیٹا رکھتی ہے اور بجلی بند ہوتے ہی مٹ جاتی ہے۔"
+  },
+  {
+    "term": "Random Access Memory",
+    "definition_en": "See RAM: the working memory into which programs and data load while you use them; volatile, so unsaved work is lost at power off.",
+    "definition_ur": "ریم دیکھیں: وہ ورکنگ میموری جس میں استعمال کے وقت پروگرام اور ڈیٹا لوڈ ہوتے ہیں؛ متغیر ہونے کی وجہ سے محفوظ کیا گیا کام بجلی بند ہونے پر ضائع ہو جاتا ہے۔"
+  },
+  {
+    "term": "Read Only Memory",
+    "definition_en": "ROM: the small, permanent memory that holds the instructions a computer needs to start itself; non-volatile and not normally rewritten in everyday use.",
+    "definition_ur": "روم: وہ چھوٹی مستقل میموری جس میں کمپیوٹر کے چالو ہونے کی ہدایات ہوتی ہیں؛ بجلی بند ہونے پر بھی قائم رہتی ہے اور عام استعمال میں بدلی نہیں جاتی۔"
+  },
+  {
+    "term": "Secondary storage",
+    "definition_en": "Memory that keeps data across power cuts: the hard disk, solid state drive, flash drive, DVD or memory card where saved files live.",
+    "definition_ur": "وہ میموری جو بجلی بند ہونے کے باوجود ڈیٹا رکھتی ہے: ہارڈ ڈسک، سولڈ اسٹیٹ ڈرائیو، فلیش ڈرائیو، ڈی وی ڈی یا میموری کارڈ، جہاں محفوظ فائلیں رہتی ہیں۔"
+  },
+  {
+    "term": "System software",
+    "definition_en": "The software that runs the machine itself: the operating system plus utilities such as antivirus and backup tools.",
+    "definition_ur": "وہ سافٹ ویئر جو مشین خود کو چلاتا ہے: آپریٹنگ سسٹم اور اس کے ساتھ یوٹیلیٹیز جیسے اینٹی وائرس اور بیک اپ ٹولز۔"
+  },
+  {
+    "term": "Operating system",
+    "definition_en": "The system software that manages the computer's hardware resources, provides the user interface, and hosts every application, such as Windows, Linux or Android.",
+    "definition_ur": "وہ سسٹم سافٹ ویئر جو کمپیوٹر کے ہارڈ ویئر وسائل سنبھالتا ہے، صارف کو انٹرفیس فراہم کرتا ہے اور ہر ایپلیکیشن کو جگہ دیتا ہے، جیسے ونڈوز، لینکس یا اینڈرائیڈ۔"
+  },
+  {
+    "term": "Utility software",
+    "definition_en": "Small system programs that fix, check or tune the machine, such as the antivirus scanner, disk cleanup tool or backup program.",
+    "definition_ur": "چھوٹے سسٹم پروگرام جو مشین کو درست، جانچنے یا بہتر کرتے ہیں، جیسے اینٹی وائرس، ڈسک صفائی ٹول یا بیک اپ پروگرام۔"
+  },
+  {
+    "term": "Application software",
+    "definition_en": "The software you run to get tasks done, such as a word processor, spreadsheet, browser or photo editor.",
+    "definition_ur": "وہ سافٹ ویئر جو آپ کاموں کے لیے چلاتے ہیں، جیسے ورڈ پروسیسر، اسپریڈ شیٹ، براؤزر یا فوٹو ایڈیٹر۔"
+  },
+  {
+    "term": "Computer network",
+    "definition_en": "A set of computers and devices connected so they can share resources such as files, a printer or an internet connection.",
+    "definition_ur": "کمپیوٹروں اور ڈیوائسوں کا ایسا مجموعہ جو آپس میں جڑ کر فائلیں، پرنٹر یا انٹرنیٹ جیسے وسائل شیئر کر سکے۔"
+  },
+  {
+    "term": "Network interface card",
+    "definition_en": "The built-in hardware that is each machine's doorway onto a network.",
+    "definition_ur": "وہ اندرونی ہارڈ ویئر جو ہر مشین کا نیٹ ورک میں داخل ہونے کا دروازہ ہے۔"
+  },
+  {
+    "term": "Switch",
+    "definition_en": "A network device that connects machines in one place and forwards each message only to the machine it is addressed to.",
+    "definition_ur": "نیٹ ورک ڈیوائس جو ایک جگہ کی مشینوں کو جوڑتی ہے اور ہر پیغام صرف اس مشین تک بھیجتی ہے جس کے نام کا ہے۔"
+  },
+  {
+    "term": "Router",
+    "definition_en": "The network device that connects one network to another, such as a school network to the internet line.",
+    "definition_ur": "نیٹ ورک ڈیوائس جو ایک نیٹ ورک کو دوسرے سے جوڑتی ہے، جیسے اسکول کے نیٹ ورک کو انٹرنیٹ لائن سے۔"
+  },
+  {
+    "term": "Wi-Fi",
+    "definition_en": "Wireless networking that takes an internet signal and converts it into radio waves, letting devices connect without cables.",
+    "definition_ur": "وائرلیس نیٹ ورکنگ جو انٹرنیٹ سگنل کو ریڈیو لہروں میں بدل دیتی ہے، جس سے ڈیوائسیں بغیر کیبل جڑ سکتی ہیں۔"
+  },
+  {
+    "term": "Protocol",
+    "definition_en": "A set of rules that governs how communication takes place on a network; machines can only talk when both follow the same rules.",
+    "definition_ur": "قواعد کا مجموعہ جو نیٹ ورک پر مواصلت کے طریقے کو متعین کرتا ہے؛ مشینیں صرف ایک ہی قواعد ماننے پر بات کر سکتی ہیں۔"
+  },
+  {
+    "term": "Buffer",
+    "definition_en": "A small holding area in memory where the operating system parks data in transit between a program and a device.",
+    "definition_ur": "میموری کا چھوٹا انتظار گاہ جہاں آپریٹنگ سسٹم پروگرام اور ڈیوائس کے درمیان سفر کرتا ڈیٹا رکھتا ہے۔"
+  },
+  {
+    "term": "Spooling",
+    "definition_en": "Queueing input/output jobs one after another, as print jobs do, so several requests can be made at once and completed in order.",
+    "definition_ur": "ان پٹ آؤٹ پٹ کے کاموں کو باری باری قطار میں لگانا، جیسے پرنٹ کے کام، تاکہ کئی درخواستیں ایک ساتھ دی جائیں اور ترتیب سے مکمل ہوں۔"
+  },
+  {
+    "term": "Device driver",
+    "definition_en": "A small piece of system software written for one specific device, translating the operating system's requests into that device's own commands.",
+    "definition_ur": "کسی ایک مخصوص ڈیوائس کے لیے لکھا گیا چھوٹا سسٹم سافٹ ویئر، جو آپریٹنگ سسٹم کی درخواستوں کو اسی ڈیوائس کے احکام میں بدلتا ہے۔"
+  },
+  {
+    "term": "File",
+    "definition_en": "A named collection of data stored by the operating system, identified by its name and extension, its folder path, and its metadata.",
+    "definition_ur": "آپریٹنگ سسٹم کے محفوظ کردہ ڈیٹا کا نام رکھا مجموعہ، جس کی شناخت نام و ایکسٹینشن، فولڈر کا راستہ اور میٹا ڈیٹا سے ہوتی ہے۔"
+  },
+  {
+    "term": "Process",
+    "definition_en": "A program in execution, with its address space, its registers and the files it has open; the unit the operating system schedules.",
+    "definition_ur": "چلتا ہوا پروگرام، اپنے ایڈریس اسپیس، رجسٹرز اور کھلی فائلوں کے ساتھ؛ یہی اکائی ہے جسے آپریٹنگ سسٹم باری دیتا ہے۔"
+  },
+  {
+    "term": "Kernel",
+    "definition_en": "The core of the operating system: the always-running layer that schedules processes, manages memory, controls devices through drivers, and exposes system calls.",
+    "definition_ur": "آپریٹنگ سسٹم کا مرکزی حصہ: ہمیشہ چلنے والی تہہ جو پروسیسز کو باری دیتی ہے، میموری سنبھالتی ہے، ڈرائیوروں کے ذریعے ڈیوائسیں کنٹرول کرتی ہے، اور سسٹم کالز فراہم کرتی ہے۔"
+  },
+  {
+    "term": "File management",
+    "definition_en": "The operating system's services over files: creating, naming, renaming, moving, copying and deleting them, keeping the folder tree, and tracking where each file's bytes sit on the disk.",
+    "definition_ur": "آپریٹنگ سسٹم کی فائلوں پر خدمات: بنانا، نام دینا، نام بدلنا، منتقل کرنا، کاپی کرنا اور ڈیلیٹ کرنا، فولڈر ٹری برقرار رکھنا، اور ہر فائل کے بائٹس کی جگہ کا ریکارڈ رکھنا۔"
   }
 ]
