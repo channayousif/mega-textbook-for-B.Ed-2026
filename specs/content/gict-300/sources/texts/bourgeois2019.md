@@ -117,3 +117,24 @@ in the same location as originals.
 
 Used for: the CIA triad, password guidance, and the threat families (U4-01, U4-02, U4-04,
 U4-06).
+
+## Chapter 12 - The Ethical and Legal Implications of Information Systems (verified)
+
+The chapter defines ethics as "a set of moral principles" or "the principles of conduct
+governing an individual or a group," and notes that "A code of ethics outlines a set of
+acceptable behaviors for a professional or social group," citing the ACM's code. It defines
+intellectual property as "property (as an idea, invention, or process) that derives from
+the work of the mind or intellect," noting that laws protect the tangible results of ideas
+rather than ideas themselves. "Copyright is the protection given to songs, computer
+programs, books, and other creative works," lasting the author's life plus seventy years
+in the United States, and it is obtained automatically upon creation. "When something is
+in the public domain, it has absolutely no restrictions on its use or distribution." Of
+fair use: "Fair use is a limitation on copyright law that allows for the use of protected
+works without prior authorization," weighed by four factors: the purpose of the use
+(commercial vs. educational), the nature of the work, how much was used, and the effect on
+the work's market value. Patents protect inventions for about twenty years; trademarks -
+"a word, phrase, logo, shape, or sound identifying the source of goods or services" - do
+not expire while used and defended. Creative Commons licences are presented as a middle
+option between full copyright and the public domain; the book itself is CC licensed.
+
+Used for: the IP instruments, fair use and the public domain (U5-03).
