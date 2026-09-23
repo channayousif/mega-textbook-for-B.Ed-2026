@@ -22,7 +22,7 @@ units may be authored.
 | Unit 1 | G6 assets | ▢ | | |
 | Unit 1 | G7 publish | ▢ | | gate-checked tier pre-authorised by D-2026-0014 |
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0020 + owner resolutions G-2026-22/G-2026-23 + floor D-2026-0021; content-spec status: approved |
-| Unit 2 | G2 en-draft | ▢ | | |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-02/G2/20260923T204310583Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | advisory only |
 | Unit 2 | G4 ur-translation | ▢ | | |
 | Unit 2 | G5 ur-review | ▢ | | |
