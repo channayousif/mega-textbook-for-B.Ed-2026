@@ -92,3 +92,28 @@ of websites on the Internet"; a domain name is "a human-friendly name, convenien
 remembering a website."
 
 Used for: communication hardware and software (U2-08).
+
+## Chapter 6 - Information Systems Security (verified)
+
+The chapter's triad: confidentiality limits access to authorised people (the "Need to
+Know" principle); "Integrity is the assurance that the information being accessed has not
+been altered and truly represents what it intended"; "Availability means information can
+be accessed and modified by anyone authorized to do so in an appropriate timeframe."
+
+On passwords: the chapter treats single-factor user ID/password logins as highly
+vulnerable, recommending complexity (minimum eight characters with uppercase, special
+character and digit; avoid dictionary words), regular changes, and training staff not to
+reveal passwords. A cited study found the most common passwords were *password*,
+*123456*, and *12345678*. For individuals: at least 12 random characters, unique
+passwords per account, and two-factor authentication.
+
+On threats: pretexting, where an attacker "calls a helpdesk or security administrator and
+pretends to be a particular authorized user" for a password reset; phishing, which
+"occurs when a user receives an e-mail that looks as if it is from a trusted source";
+malware via attachments (the I Love You virus of May 2000 spread through an email
+attachment); theft and loss; unintentional damage; and risky connections (public Wi-Fi
+snooping, unfamiliar USB drives). The chapter notes disasters often destroy backups stored
+in the same location as originals.
+
+Used for: the CIA triad, password guidance, and the threat families (U4-01, U4-02, U4-04,
+U4-06).
