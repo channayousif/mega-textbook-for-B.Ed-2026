@@ -20,7 +20,7 @@ on every unit).
 | Unit 1 | G6 assets | ▢ | | |
 | Unit 1 | G7 publish | ▢ | | |
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0042; content-spec status: approved |
-| Unit 2 | G2 en-draft | ▢ | | blocked on G1 |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-02/G2/20260923T210034689Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | advisory |
 | Unit 2 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 2 | G5 ur-review | ▢ | | advisory |
