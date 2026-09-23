@@ -753,5 +753,35 @@
     "term": "Sanitation",
     "definition_en": "The provision of facilities and services for the safe disposal of human waste, including latrines, sewerage and treatment.",
     "definition_ur": "انسانی فضلے کے محفوظ اخراج کی سہولیات اور خدمات، بشمول بیت الخلا، گندے پانی کا نظام اور اس کا علاج۔"
+  },
+  {
+    "term": "Air pollution",
+    "definition_en": "The presence of substances in the air at levels that harm people, other living things or materials.",
+    "definition_ur": "ہوا میں ایسے مادوں کی موجودگی جو انسانوں، دوسرے جانداروں یا چیزوں کو نقصان پہنچائے۔"
+  },
+  {
+    "term": "Noise pollution",
+    "definition_en": "Sound loud or persistent enough to harm health or wellbeing.",
+    "definition_ur": "ایسی آواز جو اتنی بلند یا مسلسل ہو کہ صحت یا سکون کو نقصان پہنچائے۔"
+  },
+  {
+    "term": "Hazard",
+    "definition_en": "Anything with the potential to cause harm; the condition itself, not the event.",
+    "definition_ur": "وہ ہر چیز جس میں نقصان کی صلاحیت ہو؛ حالت خود، واقعہ نہیں۔"
+  },
+  {
+    "term": "Health, safety and environment",
+    "definition_en": "The field that studies hazards to people and the environment together, often abbreviated HSE.",
+    "definition_ur": "وہ علم جو انسانوں اور ماحول کے خطرات کو ایک ساتھ پڑھتا ہے، عام طور پر ایچ ایس ای۔"
+  },
+  {
+    "term": "Environmental safety",
+    "definition_en": "Managing the surroundings, a school, worksite, water or air, so that they do not injure the people inside them.",
+    "definition_ur": "ماحول کو ایسی حالت میں رکھنا، اسکول، کام کی جگہ، پانی یا ہوا، کہ وہ اندر موجود انسانوں کو نقصان نہ پہنچائے۔"
+  },
+  {
+    "term": "Risk",
+    "definition_en": "The chance and the seriousness of harm actually occurring, in real conditions.",
+    "definition_ur": "حقیقی حالات میں نقصان کے واقع ہونے کا امکان اور اس کی شدت۔"
   }
 ]
