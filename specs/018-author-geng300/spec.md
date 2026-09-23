@@ -121,7 +121,7 @@ publication. Verify that unretrievable monographs are flagged per D-2026-0001.
   across 4 units)
 - **SC-002**: All 11 content gates pass when `npm run check:content` is run
 - **SC-003**: Every topic has at least 2 rendered figure SVGs (≥ 72 figures total)
-- **SC-004**: The course renders correctly at textbook.com.pk/licence/geng-300/ with all
+- **SC-004**: The course renders correctly at textbook.com.pk/docs/semester-1/geng-300/ with all
   pages returning HTTP 200
 - **SC-005**: All cited sources appear in the sources-consulted list with valid bibliographic
   detail
