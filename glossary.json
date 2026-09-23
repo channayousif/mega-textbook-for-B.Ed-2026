@@ -338,5 +338,40 @@
     "term": "Summary and close",
     "definition_en": "The course's closing synthesis: a whole-group event in which each trainee states a belief that changed across the course and cites the evidence for the change.",
     "definition_ur": "کورس کی اختتامی ترکیب: ایک پورے گروہ کی تقریب جس میں ہر تربیت یافتہ شخص ایک عقیدہ بیان کرتا ہے جو کورس کے دوران بدل گیا اور تبدیلی کا ثبوت پیش کرتا ہے۔"
+  },
+  {
+    "term": "Computer literacy",
+    "definition_en": "The knowledge and skill needed to use computers and related technology effectively: operating devices, handling files, creating documents, finding and judging information, and communicating safely.",
+    "definition_ur": "کمپیوٹر اور متعلقہ ٹیکنالوجی کو مؤثر طریقے سے استعمال کرنے کے لیے درکار علم اور مہارت: ڈیوائس چلانا، فائلوں کا انتظام، دستاویزات بنانا، معلومات ڈھونڈنا اور جانچنا، اور محفوظ طریقے سے رابطہ کرنا۔"
+  },
+  {
+    "term": "Information and Communication Technology",
+    "definition_en": "The family of technologies that handle information and communication together: computers, phones, networks, the internet, and the software that runs on them.",
+    "definition_ur": "معلومات اور مواصلات کو ایک ساتھ سنبھالنے والی ٹیکنالوجیوں کا خاندان: کمپیوٹر، موبائل فون، نیٹ ورکس، انٹرنیٹ، اور ان پر چلنے والا سافٹ ویئر۔"
+  },
+  {
+    "term": "Abacus",
+    "definition_en": "An ancient calculating tool in which beads are slid along rods to add and subtract quickly.",
+    "definition_ur": "قدیم حسابی آلہ جس میں تیلیوں کو سلائیوں پر حرکت دے کر جلد سے جلد جمع اور تفریق کی جاتی ہے۔"
+  },
+  {
+    "term": "Digital computer",
+    "definition_en": "A computer that works with discrete values, in practice the 0s and 1s of the binary system; laptops, phones and desktops are digital computers.",
+    "definition_ur": "ایسا کمپیوٹر جو الگ الگ قدروں پر کام کرتا ہے، عملی طور پر بائنری نظام کی صفر اور ایک پر؛ لیپ ٹاپ، موبائل فون اور ڈیسک ٹاپ ڈیجیٹل کمپیوٹر ہیں۔"
+  },
+  {
+    "term": "Analog computer",
+    "definition_en": "A computer that works with continuous physical quantities, such as voltage, that change smoothly; it measures rather than counts.",
+    "definition_ur": "ایسا کمپیوٹر جو مسلسل بدلتی طبیعی مقداروں، جیسے وولٹیج، پر کام کرتا ہے؛ یہ گنتی کے بجائے پیمائش کرتا ہے۔"
+  },
+  {
+    "term": "Hybrid computer",
+    "definition_en": "A computer that measures an analog quantity, converts it into digital form, and then processes it digitally, such as a hospital patient monitor.",
+    "definition_ur": "ایسا کمپیوٹر جو پہلے اینالاگ مقدار ناپتا ہے، پھر اسے ڈیجیٹل شکل میں بدل کر ڈیجیٹل طریقے سے پراسیس کرتا ہے، جیسے ہسپتال کی مریض نگرانی کی مشین۔"
+  },
+  {
+    "term": "Embedded computer",
+    "definition_en": "A small computer fixed inside another device to run that one device, such as a washing machine's controller or a car's engine management unit.",
+    "definition_ur": "کسی دوسری مشین کے اندر لگا چھوٹا کمپیوٹر جو صرف اسی ایک مشین کا کام سنبھالتا ہے، جیسے واشنگ مشین کا کنٹرولر یا گاڑی کے انجن کا انتظامی یونٹ۔"
   }
 ]
