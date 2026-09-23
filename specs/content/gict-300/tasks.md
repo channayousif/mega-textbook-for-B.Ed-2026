@@ -10,10 +10,18 @@ The derived 16-week calendar is escalated as **G-2026-25** (open) and blocks onl
 items (a) blueprint bullet format and (b) depth-budget recalibration were applied at 708d85c
 before any unit was authored. The course is bilingual: G4/G5 are in scope for every unit.
 
+**G2 evidence scoping note (all units):** `prepare-gate-evidence` runs its eight draft gates
+repo-wide, and this branch's base (origin/main 39c9a95) carries pre-existing red gates from
+the stale geng-300 tree (already fixed on the unmerged sibling branch 018-author-geng300, out
+of this course's scope). Each unit's G2 gates were therefore run through a CONTENT_ROOT
+overlay tree at the unit's commit plus the sibling branch's geng-300 fixes; all eight gates
+pass for GICT-300's own bytes, and each evidence file's input manifest binds this course's
+files at that commit. The geng-300 reds are recorded as known-stale-on-main in the PR.
+
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0030; content-spec status: approved |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-01/G2/20260923T142523067Z-gates.json - run via a CONTENT_ROOT overlay tree that adds the sibling 018 branch's geng-300 fixes (pre-existing main reds, out of this course's scope); all 8 GICT-300-relevant draft gates pass, input manifest binds this course's bytes at 8473dcc |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-01/G2/20260923T142523067Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | |
 | Unit 1 | G4 ur-translation | ▢ | | |
 | Unit 1 | G5 ur-review | ▢ | | |
