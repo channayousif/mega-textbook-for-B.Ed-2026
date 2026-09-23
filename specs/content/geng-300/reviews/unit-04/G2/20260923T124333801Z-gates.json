@@ -3,8 +3,8 @@
   "course_code": "GENG-300",
   "unit_no": 4,
   "stage": "G2",
-  "reviewed_commit": "9800030",
-  "generated_at": "2026-09-23T11:27:21.102Z",
+  "reviewed_commit": "eda832a",
+  "generated_at": "2026-09-23T12:43:36.320Z",
   "input_manifest": {
     ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
     ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
@@ -85,7 +85,7 @@
     "specs/content/geng-300/concepts/unit-04.md": "eb060e826700ddac09e7e31289b8a59ce59bd126523f6a47eebb339f20fe83ad",
     "specs/content/geng-300/content-spec.md": "2b887bb30121e4d2e3f9ddab3851b0c4393a70a54f84881e70ad9e40f9069d2d",
     "specs/content/geng-300/coverage/unit-04.md": "7e4891ad008c0314467b8e354af28f15456ec655c165b65e66cb4720762adeb9",
-    "specs/content/geng-300/figures/unit-04.md": "1265c4c2eb5ecbd75f489c31d55eb84ddf71264d95db4f71f31d39f4c1d12b66",
+    "specs/content/geng-300/figures/unit-04.md": "be36e3745116f34be90c5ac327325fd3e8e671840697b4198991aef7e3ab26ea",
     "specs/content/geng-300/sources/unit-04.md": "63584334bd5f10a390f6c7f52ff7258fbaf2bf0a428d1bfadddc11eb329a70aa",
     "specs/content/style-guide.md": "db96c9b33b0fb9522986462a0b519620c3c1d7602a046d7b90e638f643da4610",
     "static/img/figures/geng-300/unit-04/fig-U4-1.dark.svg": "748bb1391d00d2c66ca96b6b8350fa4c1a25c17f511530b2741411e041389170",
@@ -101,56 +101,56 @@
     "static/img/figures/geng-300/unit-04/fig-U4-6.dark.svg": "5d73e2e3283b61bc5d8acb75048b800ea3d1e2f162cae1e86e0a003086e6e9f0",
     "static/img/figures/geng-300/unit-04/fig-U4-6.svg": "92612baad45478bebbb340be1f5e3562942b73c38a9266592b0623c0970ec312"
   },
-  "evidence_manifest": {
-    "specs/content/geng-300/reviews/unit-04/G2/validate-content.log": "de6681b89b8da75714d1ff55ef5fd292b478e229f9f2b77b812e54d65ec5b003",
-    "specs/content/geng-300/reviews/unit-04/G2/check-depth-gate.log": "fed66f768e088e7281849e276db2a1a5bc547ecc657e4eb97fa91f507d42e7cd",
-    "specs/content/geng-300/reviews/unit-04/G2/check-figures.log": "5fa099a65fa05d45fb85cbbe54ca7617e1ace3a5d919271c15d7a840f8026c34",
-    "specs/content/geng-300/reviews/unit-04/G2/check-concept-graph.log": "d3476a1bb0853953a5cee981bd124541effba0ddf599a8ed9c3a82e4101385f3",
-    "specs/content/geng-300/reviews/unit-04/G2/check-bloom-bands.log": "8a8a21c5995a69b94e6c0a66be2fdaf0ac7651776804ed61b9442043664cadd0",
-    "specs/content/geng-300/reviews/unit-04/G2/check-no-em-dash.log": "c75db360e2f1a266180010997aa0e67825816fe4f73aeabb037f7d6f408e6b4f",
-    "specs/content/geng-300/reviews/unit-04/G2/check-no-answer-keys.log": "01163dc094dd5115e7bcfd16436ca35f1f60a24b4c9d5bf94393fe13752b5391",
-    "specs/content/geng-300/reviews/unit-04/G2/check-docs-sync.log": "b75f030184b2c57f6cf6cba7e5f2a794ca1e0f4ddeaba1352bc2463ecc6130cb"
-  },
   "commands": [
     {
       "name": "validate:content",
       "exit_code": 0,
-      "log_path": "specs/content/geng-300/reviews/unit-04/G2/validate-content.log"
+      "log_path": "specs/content/geng-300/reviews/unit-04/G2/logs-20260923T124333801Z/validate-content.txt"
     },
     {
       "name": "check:depth-gate",
       "exit_code": 0,
-      "log_path": "specs/content/geng-300/reviews/unit-04/G2/check-depth-gate.log"
+      "log_path": "specs/content/geng-300/reviews/unit-04/G2/logs-20260923T124333801Z/check-depth-gate.txt"
     },
     {
       "name": "check:figures",
       "exit_code": 0,
-      "log_path": "specs/content/geng-300/reviews/unit-04/G2/check-figures.log"
+      "log_path": "specs/content/geng-300/reviews/unit-04/G2/logs-20260923T124333801Z/check-figures.txt"
     },
     {
       "name": "check:concept-graph",
       "exit_code": 0,
-      "log_path": "specs/content/geng-300/reviews/unit-04/G2/check-concept-graph.log"
+      "log_path": "specs/content/geng-300/reviews/unit-04/G2/logs-20260923T124333801Z/check-concept-graph.txt"
     },
     {
       "name": "check:bloom-bands",
       "exit_code": 0,
-      "log_path": "specs/content/geng-300/reviews/unit-04/G2/check-bloom-bands.log"
+      "log_path": "specs/content/geng-300/reviews/unit-04/G2/logs-20260923T124333801Z/check-bloom-bands.txt"
     },
     {
       "name": "check:no-em-dash",
       "exit_code": 0,
-      "log_path": "specs/content/geng-300/reviews/unit-04/G2/check-no-em-dash.log"
+      "log_path": "specs/content/geng-300/reviews/unit-04/G2/logs-20260923T124333801Z/check-no-em-dash.txt"
     },
     {
       "name": "check:no-answer-keys",
       "exit_code": 0,
-      "log_path": "specs/content/geng-300/reviews/unit-04/G2/check-no-answer-keys.log"
+      "log_path": "specs/content/geng-300/reviews/unit-04/G2/logs-20260923T124333801Z/check-no-answer-keys.txt"
     },
     {
       "name": "check:docs-sync",
       "exit_code": 0,
-      "log_path": "specs/content/geng-300/reviews/unit-04/G2/check-docs-sync.log"
+      "log_path": "specs/content/geng-300/reviews/unit-04/G2/logs-20260923T124333801Z/check-docs-sync.txt"
     }
-  ]
+  ],
+  "evidence_manifest": {
+    "specs/content/geng-300/reviews/unit-04/G2/logs-20260923T124333801Z/validate-content.txt": "23d238887ae7e7fae2ed7e9a829326010a445e8e7766f60dc0db0835753188c9",
+    "specs/content/geng-300/reviews/unit-04/G2/logs-20260923T124333801Z/check-depth-gate.txt": "145db5e27e283b6b49d926f540c4d68330cdf3c08d78158c2ae7fc83a030e372",
+    "specs/content/geng-300/reviews/unit-04/G2/logs-20260923T124333801Z/check-figures.txt": "9ff12e8aca10549ad4c74a4c073332e359a35cba70f543c6393d0b534aa063bf",
+    "specs/content/geng-300/reviews/unit-04/G2/logs-20260923T124333801Z/check-concept-graph.txt": "36500f92f3ef0e80829102bdb0ce1d48294dd80459eb8e8d14c111373bcec1fc",
+    "specs/content/geng-300/reviews/unit-04/G2/logs-20260923T124333801Z/check-bloom-bands.txt": "c6351273d00f9403795eb9159ea9e9862928524f347bf52856852942d2b75efe",
+    "specs/content/geng-300/reviews/unit-04/G2/logs-20260923T124333801Z/check-no-em-dash.txt": "10d97a237c917e126497501e87266c8c2a961009a40d9129b155ba4f4190e793",
+    "specs/content/geng-300/reviews/unit-04/G2/logs-20260923T124333801Z/check-no-answer-keys.txt": "1aefc0f3989a4d6b0e20081b9345c801e7642c5ee47388a074e0325af35a97d5",
+    "specs/content/geng-300/reviews/unit-04/G2/logs-20260923T124333801Z/check-docs-sync.txt": "50d9b7a8ed18dfa4c3e3e3c29cdf580ea4183bda9007b167a5cc05c1273ad13e"
+  }
 }

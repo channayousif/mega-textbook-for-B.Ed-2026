@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "course_code": "GENG-300",
-  "unit_no": 2,
+  "unit_no": 3,
   "stage": "G2",
-  "reviewed_commit": "9800030",
-  "generated_at": "2026-09-23T11:27:20.810Z",
+  "reviewed_commit": "eda832a",
+  "generated_at": "2026-09-23T12:43:33.515Z",
   "input_manifest": {
     ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
     ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
@@ -59,12 +59,12 @@
     "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
     "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
     "licence/geng-300/course-overview.mdx": "48871799ea8ae7d9f857087ea0146b0c0e2edb69f7175dbde23c441bcfe53119",
-    "licence/geng-300/unit-02/index.mdx": "4b5ae2fc830768aa6be205caf8aed5d53c19f0f546c4039c8ea6928fee1c6cd2",
-    "licence/geng-300/unit-02/topic-01.mdx": "86cb8303c8711c1a272caf9fcbc4bb2394ebdfa009f0c3682c785e6328595099",
-    "licence/geng-300/unit-02/topic-02.mdx": "e811daffabfe0add339a8d5b04d399247512be7eecc864a796eb4ee74a623821",
-    "licence/geng-300/unit-02/topic-03.mdx": "b50203f4075af12759c5139899caed374957064ef1653a1f84616ac8b6fcba54",
-    "licence/geng-300/unit-02/unit-assessment.mdx": "de7cbc098a5a4440f036821f171e2b17699f75754bdf82f22d2882b804c22687",
-    "licence/geng-300/unit-02/unit-teacher-notes.mdx": "e84697b2847c8a29e6bdb60ca9017e96a51546b4503f8c81879b714e68647c0e",
+    "licence/geng-300/unit-03/index.mdx": "f3788ee62493ca5119ab293441864fce87768e3c9c1dbb47a944a5e017f7c57b",
+    "licence/geng-300/unit-03/topic-01.mdx": "176495ffeef3f16b3ea0f59cfd6b5a2e85bd7baf98ced0a53c12ffa0bed6e9d0",
+    "licence/geng-300/unit-03/topic-02.mdx": "c9e4a05e0dbb44335b7329d060cd8fa94e10e86ed01fc9217d3731d29d5678cd",
+    "licence/geng-300/unit-03/topic-03.mdx": "bcb32e082dbd036cca7a3e437caf97966d02f3e6df102090152058b28c00f902",
+    "licence/geng-300/unit-03/unit-assessment.mdx": "c9e5f001e7e8a1999dc7dd0edfff7872ceb3830aafb420d9355164f449696097",
+    "licence/geng-300/unit-03/unit-teacher-notes.mdx": "6207d2f841b208545c6cc2b95322b621a4fbd5805fe0ad72b2acacf9bba7b61f",
     "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
     "scripts/check-figures.mjs": "41b698f8cbbb12f4030d6893083a5c36e4a19848b5ddb86206e5ba72847b8b13",
     "scripts/check-no-answer-keys.mjs": "f38d60e5360e0c29f2dae02001195690f3b95e0ad2d7ae1a3c03a0d09c053f0d",
@@ -82,75 +82,75 @@
     "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
     "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
     "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
-    "specs/content/geng-300/concepts/unit-02.md": "3a8469e0e5b41349934bdf796d4b493b97d487c0a387bd5d44da1919d85be439",
-    "specs/content/geng-300/content-spec.md": "8023cb9fb092b76b3e17b18956fe197ad90b7fbd471bcd22d8dcd206dca4fd4b",
-    "specs/content/geng-300/coverage/unit-02.md": "ff33b698050489fb847dfd7a60bb774357bea16c9d592974187c23b21ec681b2",
-    "specs/content/geng-300/figures/unit-02.md": "e84a1e6820179a71780690caeb4abb01abb46acd4e1d0fd67ddda0a836c0e503",
-    "specs/content/geng-300/sources/unit-02.md": "f23ee05b11ecd9e3a9d1ce6720a7cd300ac4b25b048fc11c3d6b2e5ad6901fab",
+    "specs/content/geng-300/concepts/unit-03.md": "79019acb7075b8a05e09143ab9d82e3d7518cda05f01b3d9b261d1278436fdc8",
+    "specs/content/geng-300/content-spec.md": "b2788a3695ec3d5d0e60c2c329f2a6fa9967ae81e9550451b8b4ebc44065b63c",
+    "specs/content/geng-300/coverage/unit-03.md": "a31ab12e1b8bbc7444d870b7d563841921d6d0c9692a213c55028f5897a0cd2e",
+    "specs/content/geng-300/figures/unit-03.md": "60028a3b2d138dc6af4e76a75603c69d48e013ce4cc34fb029714eee45fa47a6",
+    "specs/content/geng-300/sources/unit-03.md": "e55c27948a578c25d5295d2b6e0dbf8d2e5f18ba1acb0617b55e2701fc8780a4",
     "specs/content/style-guide.md": "db96c9b33b0fb9522986462a0b519620c3c1d7602a046d7b90e638f643da4610",
-    "static/img/figures/geng-300/unit-02/fig-U2-1.dark.svg": "82cbb232c41b8a72337f8932f40de3a833156a067803e7dfe28066ad03baab12",
-    "static/img/figures/geng-300/unit-02/fig-U2-1.svg": "54147b70cb5d3ddbe183a216e1bcd1d8b64a6750249dd0cdf7b6a2a82b4533f4",
-    "static/img/figures/geng-300/unit-02/fig-U2-2.dark.svg": "181c32cdcd33867d21b514106f4e8e8f89548ae1a1f805f6db673e888a31408b",
-    "static/img/figures/geng-300/unit-02/fig-U2-2.svg": "770a105d6086296f81a14c352c31f034351c9c744b00e8e4bdfdd64391a6a7fe",
-    "static/img/figures/geng-300/unit-02/fig-U2-3.dark.svg": "caf6e3a0af4977d76fd264fe4450b1a7f0f878593f12b42a514f983c706d4f0c",
-    "static/img/figures/geng-300/unit-02/fig-U2-3.svg": "9c60df653de28146b4116dde42154257ea3355408436bd19a5d25e8871a6a47a",
-    "static/img/figures/geng-300/unit-02/fig-U2-4.dark.svg": "c60165d1b1a4cbdf913be178cc95acf2f029fff7635433d3836e1ba7dd99341d",
-    "static/img/figures/geng-300/unit-02/fig-U2-4.svg": "6f0709139dfd8d9d648ffa2bf3810112c6822fe776cca65867afa7f3dc7b70a3",
-    "static/img/figures/geng-300/unit-02/fig-U2-5.dark.svg": "30ba1a6d80f476dc6eb4f173233bef54a0d5083dce57e2996868fdd4ee4f0886",
-    "static/img/figures/geng-300/unit-02/fig-U2-5.svg": "a8aa32aba0d0e93f9cc8b6a1f11070cb62c98b99e235282ce0590f5de8695fe3",
-    "static/img/figures/geng-300/unit-02/fig-U2-6.dark.svg": "37810e4ede8e1f68f823107313aa2d6547ce35ad7d9fce34dd373771ce91597c",
-    "static/img/figures/geng-300/unit-02/fig-U2-6.svg": "d8c5c214930311a1636ca6cbf527518578b978f2a19942380568cd168559b11f"
-  },
-  "evidence_manifest": {
-    "specs/content/geng-300/reviews/unit-02/G2/validate-content.log": "de6681b89b8da75714d1ff55ef5fd292b478e229f9f2b77b812e54d65ec5b003",
-    "specs/content/geng-300/reviews/unit-02/G2/check-depth-gate.log": "fed66f768e088e7281849e276db2a1a5bc547ecc657e4eb97fa91f507d42e7cd",
-    "specs/content/geng-300/reviews/unit-02/G2/check-figures.log": "5fa099a65fa05d45fb85cbbe54ca7617e1ace3a5d919271c15d7a840f8026c34",
-    "specs/content/geng-300/reviews/unit-02/G2/check-concept-graph.log": "d3476a1bb0853953a5cee981bd124541effba0ddf599a8ed9c3a82e4101385f3",
-    "specs/content/geng-300/reviews/unit-02/G2/check-bloom-bands.log": "8a8a21c5995a69b94e6c0a66be2fdaf0ac7651776804ed61b9442043664cadd0",
-    "specs/content/geng-300/reviews/unit-02/G2/check-no-em-dash.log": "c75db360e2f1a266180010997aa0e67825816fe4f73aeabb037f7d6f408e6b4f",
-    "specs/content/geng-300/reviews/unit-02/G2/check-no-answer-keys.log": "01163dc094dd5115e7bcfd16436ca35f1f60a24b4c9d5bf94393fe13752b5391",
-    "specs/content/geng-300/reviews/unit-02/G2/check-docs-sync.log": "b75f030184b2c57f6cf6cba7e5f2a794ca1e0f4ddeaba1352bc2463ecc6130cb"
+    "static/img/figures/geng-300/unit-03/fig-U3-1.dark.svg": "667f052910e64d68848a5f09bbf2edcd0b18bdec0f1f0afe706ff638a8ca8060",
+    "static/img/figures/geng-300/unit-03/fig-U3-1.svg": "02f18cf41b3a4fadc72b6c0585e4f71ed3dd6ac144bf1e54297d4af680ddc2ac",
+    "static/img/figures/geng-300/unit-03/fig-U3-2.dark.svg": "96a9434863ef34909577c561835bb27adecfec14d436ceea05ef4b3e6a773640",
+    "static/img/figures/geng-300/unit-03/fig-U3-2.svg": "2bb95579254a8ec92f5c0cedd1d26366bb027a464d940d202c8d6e37714105cc",
+    "static/img/figures/geng-300/unit-03/fig-U3-3.dark.svg": "ce80b3fdf070dca8fa451e9f0fbba20f0172eb7631927c88a29db48cf29a4e82",
+    "static/img/figures/geng-300/unit-03/fig-U3-3.svg": "abcbbb0d45e086596394d4bb340c116784a583199a698b9405a4873b71c92930",
+    "static/img/figures/geng-300/unit-03/fig-U3-5.dark.svg": "6c3e96ddc72626c645ffb0f21c13dc5e65b3c8bb16c429001d71e7694f1dfeba",
+    "static/img/figures/geng-300/unit-03/fig-U3-5.svg": "b338ff5a480b9e95edf39a88013d0325ec56264ea1fabc7fab903f686820fc4c",
+    "static/img/figures/geng-300/unit-03/fig-U3-6.dark.svg": "88ff11f88cdd988642e38a3a2166875a7db0c39af053aa6bda8cc8d48278d944",
+    "static/img/figures/geng-300/unit-03/fig-U3-6.svg": "0ef97b42eb6840cc0f40c38acc567270ae62d5d9a03e8f48cb4418d15c73801c",
+    "static/img/figures/geng-300/unit-03/fig-U3-7.dark.svg": "89c45142822c489e2bce73407f0dd15c1efeb81d3f59183be84e79bac3abe147",
+    "static/img/figures/geng-300/unit-03/fig-U3-7.svg": "270932d2e4c96ad3625e1cb0a9a4faf35fb3d0c5d3f9006500ddb303ca9c402d"
   },
   "commands": [
     {
       "name": "validate:content",
       "exit_code": 0,
-      "log_path": "specs/content/geng-300/reviews/unit-02/G2/validate-content.log"
+      "log_path": "specs/content/geng-300/reviews/unit-03/G2/logs-20260923T124330946Z/validate-content.txt"
     },
     {
       "name": "check:depth-gate",
       "exit_code": 0,
-      "log_path": "specs/content/geng-300/reviews/unit-02/G2/check-depth-gate.log"
+      "log_path": "specs/content/geng-300/reviews/unit-03/G2/logs-20260923T124330946Z/check-depth-gate.txt"
     },
     {
       "name": "check:figures",
       "exit_code": 0,
-      "log_path": "specs/content/geng-300/reviews/unit-02/G2/check-figures.log"
+      "log_path": "specs/content/geng-300/reviews/unit-03/G2/logs-20260923T124330946Z/check-figures.txt"
     },
     {
       "name": "check:concept-graph",
       "exit_code": 0,
-      "log_path": "specs/content/geng-300/reviews/unit-02/G2/check-concept-graph.log"
+      "log_path": "specs/content/geng-300/reviews/unit-03/G2/logs-20260923T124330946Z/check-concept-graph.txt"
     },
     {
       "name": "check:bloom-bands",
       "exit_code": 0,
-      "log_path": "specs/content/geng-300/reviews/unit-02/G2/check-bloom-bands.log"
+      "log_path": "specs/content/geng-300/reviews/unit-03/G2/logs-20260923T124330946Z/check-bloom-bands.txt"
     },
     {
       "name": "check:no-em-dash",
       "exit_code": 0,
-      "log_path": "specs/content/geng-300/reviews/unit-02/G2/check-no-em-dash.log"
+      "log_path": "specs/content/geng-300/reviews/unit-03/G2/logs-20260923T124330946Z/check-no-em-dash.txt"
     },
     {
       "name": "check:no-answer-keys",
       "exit_code": 0,
-      "log_path": "specs/content/geng-300/reviews/unit-02/G2/check-no-answer-keys.log"
+      "log_path": "specs/content/geng-300/reviews/unit-03/G2/logs-20260923T124330946Z/check-no-answer-keys.txt"
     },
     {
       "name": "check:docs-sync",
       "exit_code": 0,
-      "log_path": "specs/content/geng-300/reviews/unit-02/G2/check-docs-sync.log"
+      "log_path": "specs/content/geng-300/reviews/unit-03/G2/logs-20260923T124330946Z/check-docs-sync.txt"
     }
-  ]
+  ],
+  "evidence_manifest": {
+    "specs/content/geng-300/reviews/unit-03/G2/logs-20260923T124330946Z/validate-content.txt": "5fae27096a4c7d0b781f050d725dbdd7cf6e8dc32b435f2f1490c6ca4e365cea",
+    "specs/content/geng-300/reviews/unit-03/G2/logs-20260923T124330946Z/check-depth-gate.txt": "723df2fb4a21f3e2463849ed9cbd9d72c4b4455fb03879fdafbb242053fd9307",
+    "specs/content/geng-300/reviews/unit-03/G2/logs-20260923T124330946Z/check-figures.txt": "7b9935a9ae923e15612f996773e76a00edca71ffa4685d86c98eb73ba415ffd2",
+    "specs/content/geng-300/reviews/unit-03/G2/logs-20260923T124330946Z/check-concept-graph.txt": "16a05c66169781d9523cf540cbbc1d55c624dd2f744606281cb9ba0b9de36f90",
+    "specs/content/geng-300/reviews/unit-03/G2/logs-20260923T124330946Z/check-bloom-bands.txt": "56b93089c01615d87340f5b915d620050c11f04c0a7b722ee981c5ff71d06bd1",
+    "specs/content/geng-300/reviews/unit-03/G2/logs-20260923T124330946Z/check-no-em-dash.txt": "001967921c29e70faff7af8546073de042229d395bf0c427cfb88e3fbac4d3cc",
+    "specs/content/geng-300/reviews/unit-03/G2/logs-20260923T124330946Z/check-no-answer-keys.txt": "e99fe6949498ddfa3d21171b46ca202c280ba330943500997b315e55167d4d3b",
+    "specs/content/geng-300/reviews/unit-03/G2/logs-20260923T124330946Z/check-docs-sync.txt": "ae6695e7e66ced53c62cd0ca39cf811a24430a971c267501504014415f1f29d4"
+  }
 }
