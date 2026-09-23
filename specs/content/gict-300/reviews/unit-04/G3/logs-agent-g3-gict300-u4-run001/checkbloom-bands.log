@@ -1,0 +1,6 @@
+
+> bed-mega-textbook@0.1.0 check:bloom-bands
+> node scripts/check-bloom-bands.mjs
+
+✓ Bloom tags honour their unit spec's blueprint bands (375 items checked).
+EXIT:0
