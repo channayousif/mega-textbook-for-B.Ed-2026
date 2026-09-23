@@ -23,6 +23,5 @@ source key it is grounded in.
 | U1-01 | topic-01.mdx | Concept and scope of computer literacy | bourgeois2019 |
 | U1-02 | topic-01.mdx | Importance of ICT in education, work and society | hecICT |
 | U1-02 | topic-01.mdx | Importance of ICT in education, work and society | ptaIndicators2025 |
-| U1-03 | topic-02.mdx | Evolution of computers: from early calculating devices to the modern computer | bourgeois2019 |
 | U1-07 | topic-04.mdx | Impact of computers and the internet on society | ptaIndicators2025 |
 | U1-08 | topic-04.mdx | Applications of ICT in various fields | bourgeois2019 |
