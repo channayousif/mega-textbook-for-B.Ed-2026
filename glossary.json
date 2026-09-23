@@ -833,5 +833,85 @@
     "term": "Radius",
     "definition_en": "The fixed distance from a circle's centre to its edge; half the diameter, and the length a circle computation needs.",
     "definition_ur": "دائرے کے مرکز سے کنارے تک مقررہ فاصلہ؛ قطر کا آدھا، اور دائرے کے حساب کے لیے درکار لمبائی۔"
+  },
+  {
+    "term": "Data",
+    "definition_en": "The raw facts collected for a question - counts, words, register marks - which become numbers only when summarized.",
+    "definition_ur": "کسی سوال کے لیے جمع کیے گئے خام حقائق - گنتی، الفاظ، رجسٹر کے نشان - جو خلاصہ کرنے پر اعداد بنتے ہیں۔"
+  },
+  {
+    "term": "Frequency table",
+    "definition_en": "A table counting how often each answer or value occurs; its total should close at the sample size, and a gap names a collection problem.",
+    "definition_ur": "ایسا جدول جو بتاتا ہے ہر جواب کتنی بار آیا؛ اس کا کل نمونے کے حجم کے برابر ہونا چاہیے، اور کمی جمع کاری کی خرابی بتاتی ہے۔"
+  },
+  {
+    "term": "Tally",
+    "definition_en": "Counting strokes grouped in fives (four vertical, the fifth across) used to build a frequency table by hand.",
+    "definition_ur": "پانچ پانچ کے گروہوں میں گنتی کے نشان (چار عمودی، پانچواں ترچھا) جو تعدد جدول ہاتھ سے بنانے کے کام آتے ہیں۔"
+  },
+  {
+    "term": "Bar chart",
+    "definition_en": "A display comparing categories with bars whose heights are the values; the one rule is that bars start at zero.",
+    "definition_ur": "ایسا ڈسپلے جو اقسام کو باروں کی اونچائی سے موازنہ کرتا ہے؛ اصول یہ ہے کہ بار صفر سے شروع ہوں۔"
+  },
+  {
+    "term": "Pie chart",
+    "definition_en": "A display showing parts of one whole as slices of a circle, each slice's angle equal to its share of 360 degrees.",
+    "definition_ur": "ایسا ڈسپلے جو ایک پورے کے حصے دائرے کے ٹکڑوں میں دکھاتا ہے، ہر ٹکڑے کا زاویہ اس کے 360 میں سے حصے کے برابر ہوتا ہے۔"
+  },
+  {
+    "term": "Line graph",
+    "definition_en": "A display tracking change over time, one point per period joined so the trend is visible; the default whenever the horizontal axis is time.",
+    "definition_ur": "وقت کے ساتھ تبدیلی دکھانے والا ڈسپلے، ہر دور کا ایک نقطہ ملا ہوا تاکہ رجحان نظر آئے؛ جب افقی محور وقت ہو تو یہی پہلا انتخاب ہے۔"
+  },
+  {
+    "term": "Pictograph",
+    "definition_en": "A display using repeated icons, each standing for a fixed count stated in its key; suits young readers and public notices.",
+    "definition_ur": "بار بار دہرائی گئی تصویروں والا ڈسپلے، ہر تصویر ایک مقررہ گنتی کی علامت جو کلید میں لکھی ہوتی ہے؛ چھوٹے قاری اور عام اعلانات کے لیے موزوں۔"
+  },
+  {
+    "term": "Measures of central tendency",
+    "definition_en": "The three averages - mean, median and mode - each answering \"what is typical?\" in a different way.",
+    "definition_ur": "تین اوسط - حسابی اوسط، درمیانی قدر اور عاد - جو \"عام طور پر کیا ہے؟\" کا الگ الگ جواب دیتے ہیں۔"
+  },
+  {
+    "term": "Mean",
+    "definition_en": "The fair-share average: all values added, divided by how many; sensitive to outliers, which can drag it far from the typical value.",
+    "definition_ur": "منصفانہ حصے والی اوسط: تمام قیمتیں جمع کر کے تعداد پر تقسیم؛ انتہائی قیمتوں سے متاثر ہوتی ہے جو اسے عام قدر سے دور کھینچ سکتی ہیں۔"
+  },
+  {
+    "term": "Median",
+    "definition_en": "The middle value when data are sorted: half the values sit at or below it, half at or above; resistant to outliers.",
+    "definition_ur": "ترتیب دیے گئے معطیات کی درمیانی قیمت: آدھی قیمتیں اس کے برابر یا نیچے، آدھی برابر یا اوپر؛ انتہائی قیمتوں سے محفوظ۔"
+  },
+  {
+    "term": "Mode",
+    "definition_en": "The most frequent value; the only average that also works for categories, such as the most common travel mode.",
+    "definition_ur": "سب سے زیادہ دہرائی جانے والی قیمت؛ واحد اوسط جو اقسام کے لیے بھی چلتی ہے، جیسے سب سے عام سفر کا طریقہ۔"
+  },
+  {
+    "term": "Profit",
+    "definition_en": "Takings minus total costs; its percentage is always computed against costs, which is what lets stalls of different sizes compare themselves.",
+    "definition_ur": "کل آمدنی منہا کل لاگت؛ اس کا فیصد ہمیشہ لاگت کے حساب سے لگایا جاتا ہے، اسی سے مختلف سائز کے کاروبار آپس میں موازنہ کر سکتے ہیں۔"
+  },
+  {
+    "term": "Loss",
+    "definition_en": "Costs above takings - profit's negative twin; its percentage is also computed against costs.",
+    "definition_ur": "لاگت آمدنی سے زیادہ ہونا، یعنی منافع کی منفی صورت؛ اس کا فیصد بھی لاگت کے حساب سے لگایا جاتا ہے۔"
+  },
+  {
+    "term": "Interest",
+    "definition_en": "The price of money over time - the saver's reward or the borrower's cost, stated as a percent per year.",
+    "definition_ur": "وقت کے ساتھ پیسے کی قیمت - بچت کرنے والے کا صلہ یا قرض لینے والے کی لاگت، فیصد فی سال کے طور پر۔"
+  },
+  {
+    "term": "Simple interest",
+    "definition_en": "Interest paying a fixed percentage of the original amount each year: principal x rate x time; it grows in a straight line.",
+    "definition_ur": "ایسا سود جو ہر سال اصل رقم کا مقررہ فیصد دیتا ہے: اصل ضرب شرح ضرب مدت؛ یہ سیدھی لکیر میں بڑھتا ہے۔"
+  },
+  {
+    "term": "Budget",
+    "definition_en": "A plan for money before it arrives: income, fixed costs, variable costs, savings (before spending) and a month-end review.",
+    "definition_ur": "پیسہ آنے سے پہلے اس کا منصوبہ: آمدنی، مقررہ اخراجات، بدلنے والے اخراجات، بچت (خرچ سے پہلے) اور مہینے کے آخر میں جائزہ۔"
   }
 ]
