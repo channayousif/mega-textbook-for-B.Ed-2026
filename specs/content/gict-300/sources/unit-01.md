@@ -15,7 +15,7 @@ declared open-access floor of 2 per unit (D-2026-0030).
 | Key | Citation | URL/DOI | Supports | Kind |
 |---|---|---|---|---|
 | digcomp2022 | Vuorikari, R., Kluzer, S., & Punie, Y. (2022). DigComp 2.2: The Digital Competence Framework for Citizens. Publications Office of the European Union. | https://doi.org/10.2760/115376 | the five areas of digital competence (U1-01) | open-access-substitute, Crossref-verified 2026-09-23 |
-| bourgeois2019 | Bourgeois, D. T., Smith, J. L., Wang, S., & Mortati, J. (2019). Information Systems for Business and Beyond (2nd ed.). Saylor Foundation / Open Textbook Library. | https://open.umn.edu/opentextbooks/textbooks/information-systems-for-business-and-beyond | technology-people-process view (U1-01); computing history context (U1-03); digital divide (U1-07); ICT across fields (U1-08) | open-access-substitute, OpenAlex-verified 2026-09-23 (OpenAlex W2561598203); bound excerpt in sources/texts/bourgeois2019.md |
+| bourgeois2019 | Bourgeois, D. T., Smith, J. L., Wang, S., & Mortati, J. (2019). Information Systems for Business and Beyond (2nd ed.). Saylor Foundation / Open Textbook Library. | https://open.umn.edu/opentextbooks/textbooks/information-systems-for-business-and-beyond | technology-people-process view (U1-01); digital divide (U1-07); ICT across fields (U1-08) | open-access-substitute, OpenAlex-verified 2026-09-23 (OpenAlex W2561598203); bound excerpt in sources/texts/bourgeois2019.md |
 
 ## Other open-access sources
 
@@ -49,9 +49,11 @@ and any G3 reviewer see the limitation explicitly rather than inferring it from 
 - khanacademyCIT: the course pages are JavaScript-rendered and could not be fetched as text
   by this host on 2026-09-23; the course's existence, provider and topic coverage (how
   computers work, bits and binary, data storage, the internet) were corroborated through a
-  web search of Khan Academy's catalogue on 2026-09-23. Used as a beginner-level
-  corroborating account of the standard history and hardware story that the bound
-  bourgeois2019 excerpt independently supports. Owner ruling (D-2026-0001): flag and
+  web search of Khan Academy's catalogue on 2026-09-23. Used as a beginner-level account of
+  the standard history story (the abacus to the smartphone), which the guide's print
+  monographs also cover at bibliographic level; no bound excerpt carries the history
+  account, so a reviewer should treat the history prose as resting on the guide's own
+  outline and general knowledge disclosed here. Owner ruling (D-2026-0001): flag and
   proceed.
 - shellyVermaat: print-only monograph (Cengage), no open-access text retrievable by this
   host. The unit's use is at the level of the standard generations and classification

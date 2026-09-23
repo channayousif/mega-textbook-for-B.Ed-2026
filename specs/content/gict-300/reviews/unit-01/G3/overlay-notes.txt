@@ -1,0 +1,48 @@
+G3 command-run environment notes (GICT-300 Unit 1, review at HEAD 5aeadd5)
+=========================================================================
+
+Why an overlay was needed
+-------------------------
+Running the six gates unmodified in this worktree fails on trees that are NOT
+this review's subject:
+
+1. Pre-existing geng-300 reds on this base (origin/main 39c9a95, ancestor of
+   5aeadd5): a stale docs/semester-1/geng-300/ legacy-layout tree and em dashes
+   in specs/content/geng-300/intake/evaluation.md. Both are already fixed on the
+   unmerged sibling branch 018-author-geng300 (2bf47e6) and are out of scope for
+   this GICT-300 review. Raw un-overlaid outputs are preserved in logs-raw/.
+2. An untracked docs/semester-1/gict-300/unit-02/ tree appeared in the worktree
+   DURING this review (files written 2026-09-23T14:36-14:38Z by a concurrent
+   authoring session). It is not committed, not part of the prepared input
+   manifest (which enumerates git's index), and not part of this review's
+   subject. The overlay, built from the committed tree, excludes it.
+
+Overlay construction (/tmp/gict300-g3-overlay)
+----------------------------------------------
+- Base: `git archive HEAD` (full committed tree at 5aeadd5). GICT-300 Unit 1
+  and every other bound input are byte-identical to the reviewed state.
+- Removed: docs/semester-1/geng-300 (the stale placement).
+- Replaced with branch 018-author-geng300 (2bf47e6) versions:
+  licence/geng-300, specs/content/geng-300, static/img/figures/geng-300.
+- glossary.json merged: HEAD's 75 terms (incl. the 7 GICT-300 Unit 1 terms) +
+  62 geng-300 terms from 018 = 137 terms, so both courses' <Glossary>
+  references resolve.
+- catalog/courses.json is identical between HEAD and 018 (verified by diff);
+  no overlay change needed.
+
+How each gate was pointed at the overlay
+----------------------------------------
+- validate:content, check:depth-gate, check:figures, check:no-answer-keys:
+  CONTENT_ROOT=/tmp/gict300-g3-overlay (the scripts' supported env override).
+- check:no-em-dash: the script scans CWD-relative trees and does not read
+  CONTENT_ROOT, so it was run with the overlay as CWD:
+  `cd /tmp/gict300-g3-overlay && node <worktree>/scripts/check-no-em-dash.mjs`.
+- check:docs-sync: reads repo-root standard files (.claude/skills, style-guide,
+  CLAUDE.md, constitution), all committed and unchanged; run unmodified in the
+  worktree.
+
+GICT-300 attribution
+--------------------
+Every gate failure in the raw (un-overlaid) logs is attributable to geng-300
+(out-of-scope pre-existing) or the untracked unit-02 tree (concurrent, not
+bound). Zero findings in any log are attributable to GICT-300 Unit 1 bytes.
