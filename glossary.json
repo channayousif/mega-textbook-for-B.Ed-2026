@@ -698,5 +698,55 @@
     "term": "Sustainability",
     "definition_en": "The test of whether an action can continue, as it is, without exhausting what it depends on.",
     "definition_ur": "اس بات کا امتحان کہ کوئی عمل اسی طرح جاری رہ سکتا ہے یا نہیں، بغیر اس چیز کو ختم کیے جس پر وہ منحصر ہے۔"
+  },
+  {
+    "term": "Water security",
+    "definition_en": "Reliable access to water of acceptable quality and quantity for health and livelihoods.",
+    "definition_ur": "صحت اور روزگار کے لیے قابلِ قبول معیار اور مقدار کے پانی تک قابلِ بھروسہ رسائی۔"
+  },
+  {
+    "term": "Water scarcity",
+    "definition_en": "A situation where per-person water availability falls below the level a population needs, usually measured per year.",
+    "definition_ur": "وہ صورتحال جہاں فی فرد پانی کی دستیابی آبادی کی ضرورت سے کم ہو جائے، عموماً سالانہ ماپی جاتی ہے۔"
+  },
+  {
+    "term": "Water pollution",
+    "definition_en": "The addition of substances or heat to water at a level that harms its use by people or by living things.",
+    "definition_ur": "پانی میں ایسے مادوں یا حرارت کا اضافہ جو اس کے انسانی یا حیاتی استعمال کو نقصان پہنچائے۔"
+  },
+  {
+    "term": "Pathogen",
+    "definition_en": "An organism, such as a bacterium or virus, that causes disease.",
+    "definition_ur": "کوئی جاندار، جیسے بیکٹیریا یا وائرس، جو بیماری پیدا کرتا ہے۔"
+  },
+  {
+    "term": "Eutrophication",
+    "definition_en": "The over-fertilisation of a water body by nutrients, causing an algal bloom followed by a collapse in oxygen.",
+    "definition_ur": "غذائی مادوں سے کسی آبی جسم کی زیادہ کھاد پڑنا، جس سے الگی پھیلتی ہے اور پھر آکسیجن شدید کم ہو جاتی ہے۔"
+  },
+  {
+    "term": "Effluent",
+    "definition_en": "The liquid waste a facility or household discharges.",
+    "definition_ur": "کسی ادارے یا گھر سے خارج ہونے والا مائع فضلہ۔"
+  },
+  {
+    "term": "Municipal solid waste",
+    "definition_en": "The everyday waste of households, shops, schools and offices.",
+    "definition_ur": "گھروں، دکانوں، اسکولوں اور دفتروں کا روزمرہ کا کچرا۔"
+  },
+  {
+    "term": "Waste hierarchy",
+    "definition_en": "The ordering of waste options from best to worst: reduce, reuse, recycle, recover, dispose.",
+    "definition_ur": "کچرے کے انتظام کے طریقوں کی بہترین سے بدترین ترتیب: کم کریں، دوبارہ استعمال، ری سائیکل، بحالی، اخراج۔"
+  },
+  {
+    "term": "Recycling",
+    "definition_en": "Turning used material into new material, which depends on clean, separated collection.",
+    "definition_ur": "استعمال شدہ مادے کو نیا مواد بنانا، جو صاف اور الگ کیے گئے کچرے پر منحصر ہے۔"
+  },
+  {
+    "term": "Hazardous waste",
+    "definition_en": "Waste whose properties, infectious, toxic, flammable or corrosive, make it dangerous to people or the environment.",
+    "definition_ur": "وہ کچرا جس کی خصوصیات، عدوی، زہریلی، آتش گیر یا کارآمد، اسے انسانوں یا ماحول کے لیے خطرناک بناتی ہیں۔"
   }
 ]
