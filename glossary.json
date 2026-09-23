@@ -573,5 +573,55 @@
     "term": "Consent",
     "definition_en": "A freely given, informed agreement to the collection or use of one's data; a child cannot weigh consequences the way an adult can, so the duty on the school is heavier.",
     "definition_ur": "اپنے ڈیٹا کے اکٹھے کرنے یا استعمال کے لیے آزادانہ اور باخبر اجازت؛ بچہ بالغ کی طرح نتائج نہیں تول سکتا، اس لیے اسکول کی ذمہ داری بھاری ہے۔"
+  },
+  {
+    "term": "Digital citizenship",
+    "definition_en": "The ability to participate in digital society safely, ethically and constructively, carrying rights and responsibilities that arrive together.",
+    "definition_ur": "ڈیجیٹل معاشرے میں محفوظ، اخلاقی اور تعمیری طور پر حصہ لینے کی صلاحیت، جس کے ساتھ حقوق اور ذمہ داریاں ساتھ ساتھ آتی ہیں۔"
+  },
+  {
+    "term": "Netiquette",
+    "definition_en": "The set of conventions for behaving well in written digital communication such as email, chat and forums, needed because text carries no tone.",
+    "definition_ur": "ای میل، چیٹ اور فورم جیسی تحریری مواصلت میں اچھے رویے کے اصول، ضروری اس لیے کہ تحریر لہجہ نہیں اٹھاتی۔"
+  },
+  {
+    "term": "Intellectual property",
+    "definition_en": "Property that derives from the work of the mind or intellect - ideas, inventions, processes and creative works - protectable through copyright, patents and trademarks.",
+    "definition_ur": "وہ ملکیت جو ذہن کے کام سے پیدا ہو - خیال، ایجاد، طریقہ کار اور تخلیقی کام - جو کاپی رائٹ، پیٹنٹ اور ٹریڈ مارک سے محفوظ ہوتی ہے۔"
+  },
+  {
+    "term": "Copyright",
+    "definition_en": "The protection given to songs, computer programs, books and other creative works, arriving automatically when the work is created and lasting a long time.",
+    "definition_ur": "گانوں، کمپیوٹر پروگراموں، کتابوں اور دیگر تخلیقی کاموں کو دیا جانے والا تحفظ، جو کام بننے پر خود بخود لگ جاتا ہے اور طویل عرصے تک رہتا ہے۔"
+  },
+  {
+    "term": "Patent",
+    "definition_en": "Legal protection for an invention, lasting about twenty years, requiring the invention to be original, non-obvious and useful.",
+    "definition_ur": "کسی ایجاد کا قانونی تحفظ، تقریبا بیس سال کے لیے، بشرطیکہ ایجاد نئی، غیر معمولی اور مفید ہو۔"
+  },
+  {
+    "term": "Trademark",
+    "definition_en": "A word, phrase, logo, shape or sound identifying the source of goods or services; it does not expire while it is used and defended.",
+    "definition_ur": "کوئی لفظ، جملہ، لوگو، شکل یا آواز جو سامان یا خدمات کے ذریعے کی شناخت کرے؛ استعمال اور دفاع جاری رہے تو اس کی میعاد ختم نہیں ہوتی۔"
+  },
+  {
+    "term": "Public domain",
+    "definition_en": "The state of a work whose copyright has expired or never applied: no restrictions at all on its use or distribution.",
+    "definition_ur": "وہ حالت جب کسی کام کا کاپی رائٹ ختم ہو چکا ہو یا کبھی لگا ہی نہ ہو: اس کے استعمال یا پھیلاؤ پر کوئی پابندی نہیں۔"
+  },
+  {
+    "term": "Fair use",
+    "definition_en": "A limitation on copyright law that allows the use of protected works without prior authorization in specific cases, weighed by four factors including purpose and market effect.",
+    "definition_ur": "کاپی رائٹ قانون کی وہ حد جو مخصوص صورتوں میں پہلے اجازت کے بغیر محفوظ کام کے استعمال کی اجازت دیتی ہے، چار عوامل کے موازنے سے، بشمول مقصد اور منڈی پر اثر۔"
+  },
+  {
+    "term": "Creative Commons",
+    "definition_en": "A family of licences under which creators permit reuse of their work in advance on stated conditions, sitting between full copyright and the public domain.",
+    "definition_ur": "اجازت ناموں کا خاندان جس میں تخلیق کار اپنے کام کے دوبارہ استعمال کی پہلے سے، بتائی گئی شرائط پر اجازت دیتے ہیں؛ یہ مکمل کاپی رائٹ اور پبلک ڈومین کے درمیان ہے۔"
+  },
+  {
+    "term": "Plagiarism",
+    "definition_en": "Presenting someone else's words, ideas or work as your own; wider than word-for-word copying, it includes synonym-swapping, uncited paraphrase, uncredited images and self-plagiarism.",
+    "definition_ur": "کسی اور کے الفاظ، خیال یا کام کو اپنا بتانا؛ لفظ بہ لفظ نقل سے وسیع، اس میں ہم معنی الفاظ بدلنا، بغیر حوالہ paraphrase، بغیر سہرے کی تصویر اور خود سرقہ شامل ہے۔"
   }
 ]
