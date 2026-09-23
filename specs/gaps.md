@@ -791,7 +791,7 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 
 ## G-2026-28 - GQUR-300 reading list: one guide-required entry unresolvable, one deferred with unverified additions, one false locator
 
-- **Status:** open
+- **Status:** **resolved** (owner ruling, relayed via the orchestrator session, 2026-09-23)
 - **Gate:** G0 intake (readings criterion)
 - **Source:** `D-2026-0040`
 - **Criterion:** `readings` (G0 intake).
@@ -830,7 +830,24 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   bibliographic level only, limit stated at point of use; and (b) confirm or correct the 2006
   National Curriculum for Mathematics record, or direct the same unresolvable recording.
   `D-2026-0001` governs whatever texts cannot then be obtained.
-- **Blocks:** the `### Guide-required` rows for `grawe` and `ncm2006`, and those two keys within
-  the `**Mapped readings**` lines of Units 2-6. Criterion 5 of `D-2026-0040` is not approved.
-  Nothing else is blocked; the spec stays at `status: draft` pending this decision and the
-  `steen2001` locator repair.
+- **Owner ruling (2026-09-23, relayed verbatim via the orchestrator session):**
+  1. **(a) `grawe`: RECORD UNRESOLVABLE.** The owner confirms the `D-2026-0010` manner: keep the
+     guide citation at title level flagged unresolvable, REMOVE the unverifiable "Cognella
+     Academic Publishing" imprint, and cite the verified open-access replacements.
+  2. **(b) `ncm`: CHECK THE NATIONAL CURRICULUM COUNCIL WEBSITE.** The owner directed a check of
+     the National Curriculum Council (Pakistan) website (ncc.gov.pk) for the "National Curriculum
+     for Mathematics" record; if a resolvable record is found there, cite it as the guide-required
+     source; if nothing citable resolves, record exactly what was checked and re-escalate.
+     **Check performed 2026-09-23:** the NCC Mathematics page
+     (https://ncc.gov.pk/Detail/ZjgzYzg2MmMtZDc0Zi00NjEzLTk5ZmYtZGJiNjc5ODljOGUx, reached via
+     ncc.gov.pk > Compulsory Subjects > Mathematics) lists and serves the national mathematics
+     curriculum documents as open PDFs: "NCP - Math Progression Grid Grade (1-12)"
+     (4_ NCP Mathematics PG 1-12.pdf, 15.9 MB, HTTP 200), "Math Suggested Guidlines Grade (1-8)"
+     (Mathematics 1-8 - Suggested Guidelines.pdf, 5.2 MB, HTTP 200), "Math Suggested Guidlines
+     Grade (9-12)" and "Functional Mathematics Grade (9-10)". PDF file modification dates are
+     2023-11 and 2023-03; the listing page asserts no publication year, so none is cited. A
+     resolvable record WAS found; it is cited as the guide-required source.
+- **Blocks:** ~~the `### Guide-required` rows for `grawe` and `ncm2006`, and those two keys within
+  the `**Mapped readings**` lines of Units 2-6~~ **unblocked** by the owner ruling of 2026-09-23
+  and the NCC check. The `steen2001` locator repair landed at commit 139876c; the remaining
+  mechanical repairs from `D-2026-0041` landed at c72199e.
