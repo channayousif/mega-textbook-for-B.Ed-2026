@@ -1,0 +1,164 @@
+---
+title: "Topic 4.1 - Cyber threats and how to stay safe"
+description: "Common cyber threats (malware, phishing, social engineering) and the online security practices that defend against them."
+course_code: GICT-300
+unit_no: 4
+topic_no: 1
+topic_label: "4.1"
+clo_refs:
+  - "SLO:GICT-300-4-5"
+blooms_summary: "Remember, understand and apply the threat landscape and its defences: identify threats in described scenarios and match each to the practice that stops it."
+est_reading_minutes: 14
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+import Glossary from '@site/src/components/Glossary';
+
+<PrintHandout />
+
+# Topic 4.1 - Cyber threats and how to stay safe
+
+## A real classroom situation
+
+During exam season, the head teacher of a Karachi primary school receives a message that
+looks exactly like the education department's: the logo, the official tone, a link to "view
+your school's revised exam schedule". She taps the link, types the portal password, and the
+page shows an error. Nothing else happens - visibly. Two days later the school's portal
+account is locked and a message arrives asking for money to unlock it. She had been
+phished: the page she typed her password into belonged to nobody in the department. The
+teachers who later examined the message found three small tells - the sender's address was
+wrong by one letter, the greeting was generic, and the link's address, read carefully, was
+not the department's at all. This topic teaches you to see those tells before you tap.
+
+<Figure id="fig-U4-1" src="/img/figures/gict-300/unit-04/fig-U4-1.svg" alt="Concept map with cyber threats at the centre and three branches: malware including viruses, ransomware and spyware; phishing with fake messages and sites; and social engineering, meaning talking or tricking you." />
+
+## Explanation
+
+### Common cyber threats: malware, phishing, social engineering
+
+The threats that reach ordinary users come in three families. <Glossary term="Malware">Malware</Glossary>
+is harmful software that gets onto a device to do damage or steal: a <Glossary term="Virus">virus</Glossary>
+spreads by attaching itself to files and programs; <Glossary term="Ransomware">ransomware</Glossary>
+locks your files and demands money to unlock them, exactly as in the head teacher's story;
+<Glossary term="Spyware">spyware</Glossary> sits quietly and reports what you type, including
+passwords. Malware usually arrives as an attachment or a download from a site you did not
+mean to visit - the famous "I Love You" virus of May 2000 spread purely through an email
+attachment and hit tens of thousands of computers (Bourgeois et al., 2019).
+
+<Glossary term="Phishing">Phishing</Glossary> is a message - email, SMS, or chat - that
+looks like it is from a trusted source but leads you to a fake page or a harmful link. The
+message is the bait; your password or your tap is the catch. Bourgeois and colleagues (2019)
+describe it plainly: phishing "occurs when a user receives an e-mail that looks as if it is
+from a trusted source", drawing them to a site that captures their credentials.
+
+<Glossary term="Social engineering">Social engineering</Glossary> is the family that needs
+no software at all: the attacker simply talks or tricks. Bourgeois and colleagues (2019)
+give the classic case, <Glossary term="Pretexting">pretexting</Glossary>: an attacker "calls
+a helpdesk or security administrator and pretends to be a particular authorized user" to
+get a password reset. A caller claiming to be "from the bank's head office, verifying your
+account" is the same move on a phone. The defence is not technical; it is a habit: verify
+who is asking before you answer.
+
+<Figure id="fig-U4-2" src="/img/figures/gict-300/unit-04/fig-U4-2.svg" alt="Table of five threats with how each reaches you and the practice that stops each one." />
+
+### Online security practices and defences
+
+The good news is that a small set of habits stops most attacks, because most attacks are
+not targeted at you personally - they are cast wide, like nets, and catch only the
+careless. The <Glossary term="CIA triad">CIA triad</Glossary> names what you are
+protecting: confidentiality, keeping information accessible only to those allowed
+(Bourgeois et al., 2019); integrity, "the assurance that the information being accessed
+has not been altered and truly represents what it intended"; and availability, information
+being reachable when authorised people need it.
+
+The habits follow from the triad. **Update** your devices and apps: most updates close
+holes attackers already know about. **Verify before you tap**: read the sender's full
+address, be suspicious of urgency ("your account will be closed today!"), and reach
+officials through a channel you already trust rather than a link in a message. **Install
+only from official stores**, and be equally careful of unknown USB drives. **Back up**
+what matters, and keep one backup away from the device itself - Bourgeois and colleagues
+(2019) note that disasters often destroy backups stored in the same place as the
+originals. **Use antivirus**, but do not lean on it alone: it recognises known malware,
+not new tricks or old-fashioned talking. Pakistan's National Cyber Security Policy names
+this awareness layer explicitly, treating user awareness as part of the country's
+defence (Ministry of IT and Telecommunication, 2021), and the National Cybersecurity
+Alliance's guidance for everyday users is built on exactly these habits (National
+Cybersecurity Alliance, n.d.).
+
+A caution against two common misconceptions. "My data is not worth stealing" is false: a
+school marks sheet, a parent-contact list, or simply your account itself (useful for
+sending more phishing in your name) is worth an attacker's while. And "antivirus software
+alone keeps me safe" is the more dangerous half-truth: the head teacher's portal was
+phished, and no antivirus stops a person typing a real password into a real-looking fake
+page. People, not only software, are the defence.
+
+## Activity: Spot the phish
+
+Work in pairs. About 20 minutes.
+
+1. Your teacher shows four messages (printed or projected), each supposedly from a school,
+   a bank, a courier company, or the education department. One is genuine; three are
+   phishing.
+2. For each message, list every tell you can find: the sender's address, the greeting, the
+   urgency, the link's real destination (described by the teacher), the request it makes.
+3. Mark each message genuine or phishing, and write the single strongest piece of evidence
+   for your verdict.
+4. For one phishing message, write the reply you would actually send - or better, the
+   action you would take instead of replying.
+
+## Check your understanding
+
+1. Name the three families of cyber threats from this topic, with one example of each.
+   *(Remember)*
+2. Explain the difference between phishing and social engineering in two sentences. *(Understand)*
+3. A message says: "Your account will be closed in 2 hours, click here to verify." List
+   three tells that suggest phishing and the action you would take instead. *(Apply)*
+4. Name the three parts of the CIA triad and say what each protects. *(Remember)*
+
+## Summary
+
+The threats that reach ordinary users are malware (virus, ransomware, spyware), phishing,
+and social engineering - and most are cast wide, catching the careless rather than the
+chosen. The defences are habits, not gadgets: update, verify before you tap, install from
+official sources, back up away from the device, and treat unexpected human asks with the
+same suspicion as unexpected attachments. The CIA triad - confidentiality, integrity,
+availability - names what all of it protects.
+
+## Self-assessment checklist
+
+- [ ] I can name the three threat families with an example of each.
+- [ ] I can list at least three tells of a phishing message and the safe alternative to
+  tapping.
+- [ ] I can name the CIA triad and the habits that defend each part.
+
+## Try this at your practicum school
+
+Ask the office how they receive official notices from the department (email, WhatsApp,
+portal). Write three sentences: which channel a phishing message could imitate, what the
+office currently checks before trusting a message, and one habit you would recommend.
+
+## Summative task
+
+The head teacher asks you to prepare a one-page "safe messages" guide for the school's
+staff room: the three threat families in plain words, five tells of a phishing message,
+and the school's rule for what to do when a message asks for a password or money. Use one
+real-sounding example (invented by you) and mark its tells.
+
+**Marking guide (10 marks):**
+
+- The three threat families explained accurately and plainly: 3 marks.
+- Five tells chosen well, each with a one-line explanation: 3 marks.
+- The rule is actionable and the example's tells are marked correctly (Analyse): 3 marks.
+- Fits one page, plain language for staff: 1 mark.
+
+## Further reading
+
+- Bourgeois, D. T., Smith, J. L., Wang, S., & Mortati, J. (2019). *Information Systems for
+  Business and Beyond* (2nd ed.), chapter 6. Open Textbook Library.
+  https://open.umn.edu/opentextbooks/textbooks/information-systems-for-business-and-beyond
+- Erendor, M. E., & Yildirim, M. (2022). Cybersecurity awareness in online education: A
+  case study analysis. *IEEE Access, 10*, 52319-52335. https://doi.org/10.1109/ACCESS.2022.3171829
+- National Cybersecurity Alliance. *Stay Safe Online*. https://staysafeonline.org/
+- Ministry of Information Technology and Telecommunication. (2021). *National Cyber
+  Security Policy*. Government of Pakistan. https://moitt.gov.pk/
