@@ -2,9 +2,9 @@
 course_code: GQUR-300
 status: draft
 # D-2026-0013's floor pattern, in the form `check:source-floor` enforces: every
-# unit binds at least one verified open-access source, because two of the four
-# guide-required readings are print monographs and one is a government document
-# whose locator does not resolve from this host (G-2026-28).
+# unit binds at least one verified open-access source, because one guide-required
+# reading is a print monograph (steen2001, controlled-lending text) and one is
+# recorded unresolvable by owner ruling (grawe, G-2026-28(a), 2026-09-23).
 open_access_floor:
   default: 1
 ---
@@ -73,20 +73,20 @@ quantitative reasoning skills for their students.
 Cited by reference only (Constitution Art. III.5). Per-unit open-access substitutes are
 added in each unit's `sources/unit-NN.md` at authoring time.
 
-**Open-access floor (D-2026-0013 precedent).** Two of the four guide-required readings are
-print monographs and one is a government document whose locator does not resolve from this
-host; those three are cited at **title and bibliographic level only**, with that limit
-stated at the point of use, and every unit maps at least one **verified open-access
-source** (below) that carries its retrievable content. Where a monograph's text cannot be
-obtained, D-2026-0001 applies (flag and proceed).
+**Open-access floor (D-2026-0013 precedent).** One guide-required reading is a print
+monograph (steen2001: verified locator, controlled-lending text) and one is recorded
+unresolvable by owner ruling (grawe, G-2026-28(a)); both are cited at **title and
+bibliographic level only**, with that limit stated at the point of use, and every unit maps
+at least one **verified open-access source** (below) that carries its retrievable content.
+Where a monograph's text cannot be obtained, D-2026-0001 applies (flag and proceed).
 
 ### Guide-required
 
 | Key | Citation | DOI/URL | Units | Note |
 |---|---|---|---|---|
 | steen2001 | Steen, L. A. (Ed.). (2001). *Mathematics and Democracy: The Case for Quantitative Literacy.* National Council on Education and the Disciplines, Princeton, NJ. ISBN 0970954700. | https://archive.org/details/mathematicsdemoc0000unse | 1, 6 | verified via Open Library (work OL18229070W) and the Internet Archive on 2026-09-23; the scan is controlled-lending, so the text is not openly downloadable - cited at bibliographic level, D-2026-0001 for text |
-| grawe | Grawe, N. *Quantitative Literacy: Reasoning about Data.* Cognella Academic Publishing. | unresolvable | 5, 6 | guide-required at `1st 2026.txt:654`; the title is absent from Open Library, the Internet Archive and ERIC, and Cognella answers 403 to this host (checked 2026-09-23) - locator recorded unresolvable in the D-2026-0010 manner: cited at bibliographic level only, limit stated at point of use; the same author's verified open-access article (grawe2012) carries the retrievable content; disposition pending the owner's G-2026-28 ruling (if the unresolvable recording is directed, the Cognella imprint goes with it) |
-| ncm | National Curriculum for Mathematics (Pakistan). | unresolvable | 2, 3, 4 | guide-required at `1st 2026.txt:655`; the guide names no year, grade range or imprint, and none is added here; the record could not be resolved from this host on 2026-09-23 - cited at bibliographic level only, limit stated at point of use (D-2026-0010 manner); disposition pending the owner's G-2026-28 ruling |
+| grawe | Grawe, N. *Quantitative Literacy: Reasoning about Data.* | unresolvable | 5, 6 | guide-required at `1st 2026.txt:654`; recorded unresolvable per the owner's G-2026-28(a) ruling of 2026-09-23: the title is absent from Open Library, the Internet Archive, ERIC and Cognella's own catalog (checked 2026-09-23), so the citation stays at title level with no imprint and the limit stated at point of use (D-2026-0010 manner); the same author's verified open-access article (grawe2012) is the cited replacement for retrievable content |
+| ncm | National Curriculum Council, Ministry of Federal Education and Professional Training, Government of Pakistan. *Mathematics: Suggested Guidelines (Grades 1-8)* and *NCP Mathematics Progression Grid (Grades 1-12).* | https://ncc.gov.pk/Detail/ZjgzYzg2MmMtZDc0Zi00NjEzLTk5ZmYtZGJiNjc5ODljOGUx | 2, 3, 4 | guide-required at `1st 2026.txt:655` ("National Curriculum for Mathematics (Pakistan)"); resolved via the owner-directed NCC website check (G-2026-28(b), 2026-09-23): the NCC Mathematics page serves the national mathematics curriculum documents as open PDFs (Progression Grid 1-12, 15.9 MB; Suggested Guidelines 1-8, 5.2 MB; both HTTP 200; PDF file dates 2023; the page asserts no publication year, so none is cited); the school mathematics strands this course re-grounds for teachers |
 | npst2009 | Higher Education Commission, Pakistan. (2009). *National Professional Standards for Teachers.* Policy and Planning Wing, Ministry of Education. | https://itacec.org/document/2015/7/National_Professional_Standards_for_Teachers.pdf | 1, 6 | resolves (in-corpus precedent: EFMP-302 npst-pakistan-2009); retrieval limit already recorded under D-2026-0001 |
 
 ### Curated-supplementary (open access)
@@ -118,9 +118,9 @@ distribution is the spec's construction for a 16-week semester and is labelled a
 
 ## Standards & frameworks anchors
 
-- National Curriculum for Mathematics, Pakistan - the school strands (number, algebra,
-  measurement, data) this course re-grounds for prospective teachers (Units 2-4); cited at
-  bibliographic level only (see Reading list).
+- National Curriculum Council mathematics documents, Pakistan - the school strands (number,
+  algebra, measurement, data) this course re-grounds for prospective teachers (Units 2-4);
+  resolvable via ncc.gov.pk (see Reading list).
 - National Professional Standards for Teachers, HEC Pakistan (2009) - teacher competence
   framing for quantitative reasoning as professional practice (Units 1, 6).
 - OECD PISA Mathematics Framework - mathematical literacy as reasoning in real contexts
@@ -258,7 +258,7 @@ Weeks 4-6 (derived). Unit Spec (G1) for `docs/semester-1/gqur-300/unit-02/`.
 **Common misconceptions**: "multiplying always makes bigger"; "a percentage is a separate
 kind of number, not a fraction"; "division of fractions has no meaning".
 
-**Mapped readings**: ncm (bibliographic level only), openstax-prealgebra, gula2025.
+**Mapped readings**: ncm, openstax-prealgebra, gula2025.
 
 **Worked-examples plan**: roughly one Pakistan-grounded vignette per sub-topic (bazaar
 prices, recipe scaling, marksheet percentages, floor tiles) - see coverage/unit-02.md.
@@ -324,7 +324,7 @@ vocabulary refreshed in Topic 3.1.
 "the equals sign means the answer comes next"; "inequalities behave exactly like
 equations under every operation".
 
-**Mapped readings**: ncm (bibliographic level only), openstax-prealgebra.
+**Mapped readings**: ncm, openstax-prealgebra.
 
 **Worked-examples plan**: roughly one Pakistan-grounded vignette per sub-topic
 (matchstick patterns, rickshaw fares, stationery budget, fare notice) - see
@@ -392,7 +392,7 @@ rupee prices and shop measures.
 **Common misconceptions**: "area and perimeter grow together"; "a bigger number always
 means a bigger measurement" (unit confusion); "volume is just area times any number".
 
-**Mapped readings**: ncm (bibliographic level only), openstax-prealgebra.
+**Mapped readings**: ncm, openstax-prealgebra.
 
 **Worked-examples plan**: roughly one Pakistan-grounded vignette per sub-topic (fabric
 shop, classroom floor, donation boxes, courtyard survey) - see coverage/unit-04.md.
