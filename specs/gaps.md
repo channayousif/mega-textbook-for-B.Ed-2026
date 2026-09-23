@@ -891,3 +891,24 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 - **Blocks:** ~~the `readings` criterion of `D-2026-0020`; the `### Curated-supplementary`
   section's empty-with-floor posture~~ **unblocked**. The `**Mapped readings**` lines of all six
   units stand on the adopted floor.
+
+---
+
+## G-2026-24 - GNAS-301 Unit 1 G3: two advisory cycles consumed; the third is owner-gated
+
+- **Status:** open
+- **Gate:** G3 (English review), ADR-0019 two-cycle limit
+- **Source:** GNAS-301 authoring session, 2026-09-23
+- **Question:** Unit 1's G3 review has run two advisory cycles. Round 1
+  (reviews/unit-01/G3/20260923T205300Z-g3-attempt-01.json) returned revise with 4 blocking
+  findings; all were repaired. Round 2
+  (reviews/unit-01/G3/round-02/20260923T214406Z-g3-attempt-02.json) verified all four
+  repairs and returned revise with a single blocking finding, an excerpt-completeness gap
+  in sources/texts/abbas2012.md, which the author repaired immediately after the report
+  (commit "apply Unit 1 G3 round-2 repairs"). ADR-0019 reserves further review cycles to
+  the owner after two.
+- **Needed, and from whom:** the curriculum owner, to either accept the repaired state on
+  the existing two advisory reports or authorise a third G3 cycle for Unit 1. The unit's
+  G2 gates are green at the current commit; the G3 tracker row remains open either way.
+- **Blocks:** a third G3 cycle for Unit 1; nothing else. G4 translation of Unit 1 may
+  proceed on the gate-checked English (the G5 reviewer binds to the latest G3 report).

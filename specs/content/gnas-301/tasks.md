@@ -15,14 +15,14 @@ units may be authored.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0020 + owner resolutions G-2026-22/G-2026-23 + floor D-2026-0021; content-spec status: approved |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-01/G2/20260923T210514530Z-gates.json |
-| Unit 1 | G3 en-review | ▢ | | advisory round 1: revise; report reviews/unit-01/G3/20260923T205300Z-g3-attempt-01.json; repairs applied 2026-09-23, fresh review pending |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-01/G2/20260923T215053103Z-gates.json |
+| Unit 1 | G3 en-review | ▢ | | advisory rounds 1-2: revise; reports reviews/unit-01/G3/20260923T205300Z-g3-attempt-01.json + round-02/20260923T214406Z-g3-attempt-02.json; round-2 blocking finding repaired post-report; two-cycle limit reached, third cycle owner-gated (G-2026-24) |
 | Unit 1 | G4 ur-translation | ▢ | | bilingual course: full Urdu mirror owed |
 | Unit 1 | G5 ur-review | ▢ | | advisory only; binds to accepted G3 evidence |
 | Unit 1 | G6 assets | ▢ | | |
 | Unit 1 | G7 publish | ▢ | | gate-checked tier pre-authorised by D-2026-0014 |
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0020 + owner resolutions G-2026-22/G-2026-23 + floor D-2026-0021; content-spec status: approved |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-02/G2/20260923T211828577Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-02/G2/20260923T215110061Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | advisory round 1: revise; report reviews/unit-02/G3/agent-g3-gnas301-u2-run001.json; repairs applied 2026-09-23, fresh review pending |
 | Unit 2 | G4 ur-translation | ▢ | | |
 | Unit 2 | G5 ur-review | ▢ | | |
