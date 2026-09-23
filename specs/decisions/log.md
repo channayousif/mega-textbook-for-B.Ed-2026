@@ -913,3 +913,32 @@ Recorded here so the boundary stays visible as the log grows:
     all.
   - Does not approve any unit's English review (G3) or Urdu translation (G5). Certifies no
     content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
+
+## D-2026-0021 - GNAS-301 adopts a binding open-access floor and authors against the confirmed reading list
+
+- **Status:** confirmed
+- **Gate:** G0 (course intake), `readings`
+- **Scope:** GNAS-301
+- **Decided by:** curriculum owner, 2026-09-23 (relayed by the orchestrator session)
+- **Decision:** the G2 open-access floor written into GNAS-301's spec is **binding**: at least
+  two verifiable open-access sources bound per unit, for **all six units**, resolved through the
+  publisher or a named registry and recorded with the date of verification. Following the
+  `D-2026-0013` precedent, the floor is declared in the content-spec's `open_access_floor` front
+  matter (`"1"` through `"6"`, each 2) so `check:source-floor` enforces it, closing the
+  enforcement gap `G-2026-23` recorded. The five `D-2026-0001` flags and closest-real-work
+  identifications in the spec's `### Guide-required` table are **confirmed**, and use of the
+  verified open-access replacement source set (12 sources, listed in the spec's
+  `### Curated-supplementary` table) is confirmed. Failure to meet a unit's floor is an
+  escalation, never a reason to lean harder on an unopened book.
+- **Basis:** five of the seven guide monographs do not resolve as printed (`D-2026-0020`'s
+  independent verification), and the owner has elected to author against the confirmed flags and
+  the verified replacement set rather than block on obtaining texts. The front-matter
+  declaration is the author's action the owner directed, and is the `G-2026-17` mechanism built
+  for exactly this.
+- **Limits:** settles GNAS-301 only. The floor numbers are this course's (2 per unit for all six
+  units, stronger than EFMP-304's 2/2/2/1/1/1 under `D-2026-0013`); it does not set a
+  corpus-wide floor. Together with the owner's partition confirmation recorded in `G-2026-22`'s
+  resolution (2026-09-23), this unblocks the two open criteria of `D-2026-0020`, and the
+  content-spec is set to `status: approved` on that combined authority. Does not approve any
+  unit's English review (G3) or Urdu translation (G5). Certifies no content, qualifies no
+  reviewer, authorises no publication (Art. VII.8.4).

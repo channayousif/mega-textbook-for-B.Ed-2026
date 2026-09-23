@@ -1,7 +1,15 @@
 ---
 course_code: GNAS-301
-status: draft
+status: approved
+# D-2026-0020 + owner resolutions G-2026-22/G-2026-23 + D-2026-0021: intake passes G0/G1 (2026-09-23)
 bilingual: true
+open_access_floor:
+  "1": 2
+  "2": 2
+  "3": 2
+  "4": 2
+  "5": 2
+  "6": 2
 ---
 
 # GNAS-301 · Environmental Science - Content Spec
@@ -9,22 +17,28 @@ bilingual: true
 Semester 1, General Education, 3 (2-1) credit hours, bilingual (English + Urdu). Degree
 track: `docs/semester-1/gnas-301/unit-NN/` (the legacy placeholder tree already sits there and
 is replaced by this feature). Source: `Scheme-and-Course-guides/extracted-text/1st 2026.txt`
-lines 143-364 (the GNAS-301 block; original PDF: `Scheme-and-Course-guides/1st 2026.pdf`).
+lines 143-366 (the GNAS-301 block; original PDF: `Scheme-and-Course-guides/1st 2026.pdf`).
 
-**Status is `draft`, deliberately.** Under Constitution Art. VII.8 this spec is submitted to an
-intake evaluator for G0/G1, which sets `status: approved`. No unit may be authored until that
-happens.
+**Status is `approved`.** The G0/G1 intake evaluation is `D-2026-0020` (agent:evaluator,
+2026-09-23): identity, coverage, outcome traces, blueprints, structure and decision residue
+approved. Its two open criteria are settled by the curriculum owner (2026-09-23): the six-unit
+partition confirmed exactly as derived (`G-2026-22` resolved), and the reading list's five
+`D-2026-0001` flags, the verified replacement source set and the two-per-unit open-access floor
+confirmed and adopted (`G-2026-23` resolved; the floor recorded as `D-2026-0021` and declared
+in the `open_access_floor` front matter above so `check:source-floor` enforces it). Units may
+now be authored under this spec.
 
 **Guide note (Constitution Art. III.6, D-2026-0012).** This course's guide supplies a Course
-Description (`:152-163`), five Course Learning Outcomes (`:169-183`), a topical outline numbered
-1.1 to 16.2 arranged under an explicit 16-week calendar (`:193-317`; mid-term at Week 7, final
+Description (`:152-167`), five Course Learning Outcomes (`:171-191`), a topical outline numbered
+1.1 to 16.2 arranged under an explicit 16-week calendar (`:193-318`; mid-term at Week 7, final
 term at Week 16), a Teaching Strategy list (`:320-338`), an Assessment Criteria table
-(`:341-350`), and seven recommended books (`:352-364`). It carries **no unit headings**. The
+(`:341-350`), and seven recommended books (`:352-366`). It carries **no unit headings**. The
 week calendar below is therefore guide-given; the **unit partition is derived**, clearly
 labelled as derived with its basis stated, per D-2026-0012: the guide's contiguous teaching
 weeks are merged into six blocks, with the pre-mid weeks (1-6) forming Units 1-3 and the
 post-mid teaching weeks (8-15, plus 16.1 taught alongside the Week 16 final examination)
-forming Units 4-6. No week is split across units and no guide topic is reordered.
+forming Units 4-6. No week is split across units and no guide topic is reordered. The owner
+confirmed this partition as derived on 2026-09-23 (`G-2026-22`).
 
 **Precedence note.** `catalog/courses.json` carries `3 (2-1)`; the guide states `Credit Hours 3`
 with no split. The two agree on the total of 3, and the catalogue carries the theory/practical
@@ -39,7 +53,7 @@ only, so it is transcribed below as a plain hyphen. Wording is otherwise verbati
 
 ## Course-wide items
 
-- **Course Learning Outcomes** (guide `:169-183`, verbatim; recorded for the spec record only,
+- **Course Learning Outcomes** (guide `:171-191`, verbatim; recorded for the spec record only,
   never reproduced into learner-facing content as a copy-paste block): by the end of this
   course, students will be able to:
   1. Explain fundamental concepts of environmental science, including ecosystems, natural
@@ -82,7 +96,7 @@ only, so it is transcribed below as a plain hyphen. Wording is otherwise verbati
 The guide describes the course as building a comprehensive understanding of the interactions
 between humans and their environment, with particular focus on environmental challenges,
 climate change, and their implications for human health and sustainability
-(`1st 2026.txt:152-163`). It runs from the structure and functioning of ecosystems and natural
+(`1st 2026.txt:152-167`). It runs from the structure and functioning of ecosystems and natural
 resource management, through pollution (air, water, soil), waste management, occupational
 health and safety, and risk assessment, to toxicology, environmental laws, international
 agreements and the Sustainable Development Goals, at global, regional and local levels
@@ -106,7 +120,7 @@ Two consequences for authoring, both load-bearing:
 
 ## Reading list
 
-Full references for the guide's seven recommended books (`1st 2026.txt:352-364`). `Key` is the
+Full references for the guide's seven recommended books (`1st 2026.txt:352-366`). `Key` is the
 citation key used in each unit's `sources/unit-NN.md`. `Units` tags which unit(s) each source
 supports. Cited by reference only - never reproduced (Constitution Art. III.5, Spec 006
 FR-010).
@@ -124,35 +138,49 @@ FR-010).
 | park-park | Guide lists: *Textbook of Preventive of Pollution*, J. E. Park, K. Park. | (print) | 2, 5 | **Title as printed does not resolve** (it also reads as a mis-transcription). The closest real work is *Park's Textbook of Preventive and Social Medicine* (J. E. Park, later K. Park; Banarsidas Bhanot), a standard South Asian preventive-medicine text. Flagged per D-2026-0001: title-level support only |
 
 **Five of the seven are unverifiable as printed** (D-2026-0001), and all seven are print
-monographs: none carries a DOI reachable from the authoring host. Title-level support is not
-enough to carry specific factual claims in prose, so no unit may rest a cited claim on a
-flagged monograph. The binding open-access floor below is what actually grounds the course.
+monographs: none carries a DOI reachable from the authoring host. The owner confirmed the five
+flags and the closest-real-work identifications on 2026-09-23 (`G-2026-23` resolved).
+Title-level support is not enough to carry specific factual claims in prose, so no unit may
+rest a cited claim on a flagged monograph. The binding open-access floor below, adopted as
+`D-2026-0021`, is what actually grounds the course.
 
-### Curated-supplementary (open access) - to be bound at G2, not asserted here
+### Curated-supplementary (open access) - verified replacement set, owner-confirmed 2026-09-23
 
-**Deliberately empty.** No citation is listed in this section because none has been verified
-from this host, and inventing DOIs is exactly what produced EFMP-302's `sources` failures.
-Recording a plausible-looking reference in an approved spec makes it authoritative by accident.
+The owner confirmed use of this verified replacement source set (`G-2026-23(a)`,
+`D-2026-0021`). Every URL below was fetched and read from the authoring host on 2026-09-23;
+each unit's `sources/unit-NN.md` records the exact bindings it uses, with the verification
+date, and may add further verified sources on the same terms.
 
-Instead, this spec sets a **binding requirement on G2 source-binding** for each unit:
+| Key | Citation | DOI/URL | Units | Note |
+|---|---|---|---|---|
+| who-biodiversity-2025 | World Health Organization. (2025). *Biodiversity* (fact sheet, 18 Feb 2025). | https://www.who.int/news-room/fact-sheets/detail/biodiversity-and-health | 1 | ecosystems, biodiversity loss and health: ~1 million species at extinction risk, >75% of food crops depend on pollinators, 35% of wetlands lost since 1970 |
+| un-restoration | United Nations. *UN Decade on Ecosystem Restoration (2021-2030)*. | https://www.decadeonrestoration.org/ | 1 | ecosystem degradation and restoration framing for the ecosystems and conservation sub-topics |
+| who-water-2023 | World Health Organization. (2023). *Drinking-water* (fact sheet, 13 Sep 2023). | https://www.who.int/news-room/fact-sheets/detail/drinking-water | 2 | 2.2 billion people without safely managed drinking water (2022), >2 billion in water-stressed countries, health impacts |
+| who-sanitation-2024 | World Health Organization. (2024). *Sanitation* (fact sheet, 22 Mar 2024). | https://www.who.int/news-room/fact-sheets/detail/sanitation | 2 | 1.5 billion without basic sanitation, 44% of household wastewater discharged untreated, 1.4 million WASH deaths/year |
+| who-air-2024 | World Health Organization. (2024). *Ambient (outdoor) air pollution* (fact sheet, 24 Oct 2024). | https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health | 3, 6 | 4.2 million premature deaths (2019), 99% of the world above WHO guideline levels, named pollutants PM/CO/O3/NO2/SO2 |
+| who-aqg-2021 | World Health Organization. (2021). *WHO global air quality guidelines* (22 Sep 2021). | https://www.who.int/publications/i/item/9789240034228 | 3, 6 | the guideline levels for PM2.5, PM10, O3, NO2, SO2 and CO that the unit's yardsticks cite |
+| who-occupational-health | World Health Organization. *Occupational health* (health topic). | https://www.who.int/health-topics/occupational-health | 4 | the field's objectives, disciplines and national-policy framing; hazard list including heat stress and mental health |
+| who-mental-health-work | World Health Organization. (2026). *Mental health at work* (fact sheet, 15 Sep 2026). | https://www.who.int/news-room/fact-sheets/detail/mental-health-at-work | 4 | psychological hazards as occupational hazards: 12 billion working days lost yearly to depression and anxiety |
+| un-sdgs | United Nations. (2015). *The 17 Sustainable Development Goals*. | https://sdgs.un.org/goals | 5 | the SDG framework, targets and counts the governance sub-topics anchor to |
+| un-paris | United Nations. *The Paris Agreement*. | https://www.un.org/en/climatechange/paris-agreement | 5, 6 | adopted 12 Dec 2015, well below 2C / pursue 1.5C, in force 4 Nov 2016, NDC five-year cycles |
+| who-climate-2023 | World Health Organization. (2023). *Climate change* (fact sheet, 12 Oct 2023). | https://www.who.int/news-room/fact-sheets/detail/climate-change-and-health | 5, 6 | 3.6 billion people highly susceptible, ~250,000 additional deaths/year projected 2030-2050 |
+| nasa-climate-evidence | NASA Science. *Evidence* (climate change, updated Oct 2024). | https://science.nasa.gov/climate-change/evidence | 6 | observed warming evidence: ~1C since the late 19th century, CO2 rise ~250x faster than post-ice-age natural increases, ice-sheet and sea-level figures |
+
+**Binding requirement on G2 source-binding** (adopted as `D-2026-0021`, declared in this spec's
+`open_access_floor` front matter so `check:source-floor` enforces it):
 
 - Every unit (1 to 6) MUST bind **at least two** verifiable open-access sources while
   authoring, resolved through the publisher, Crossref, OpenAlex, ERIC or DOAJ (or a stable
-  institutional URL such as who.int, unep.org, ipcc.ch, ilo.org, mocc.gov.pk) and recorded in
-  `sources/unit-NN.md` with the registry and date of verification.
-- Search targets, not citations: WHO global air quality guidelines (2021); WHO drinking-water
-  quality guidelines; UNEP and IPCC assessment reports; the UN Sustainable Development Goals
-  framework; ILO conventions and encyclopaedia entries on occupational safety and health;
-  Pakistan's Environmental Protection Act 1997, National Environmental Quality Standards and
-  National Climate Change Policy; Pakistan Meteorological Department and SUPARCO public
-  bulletins; open textbooks and peer-reviewed reviews on toxicology and waste management.
-  Whoever binds them writes the reference; this spec does not pre-write it.
+  institutional URL such as who.int, un.org, sdgs.un.org, science.nasa.gov) and recorded in
+  `sources/unit-NN.md` with the registry and date of verification. The table above satisfies
+  the floor for every unit; units may bind additional verified sources (Pakistan-specific
+  documents, peer-reviewed reviews) on the same terms.
 - If a unit cannot meet its floor, that is an escalation to `specs/gaps.md`, not a reason to
   lean harder on an unopened book.
 
 ## Week schedule
 
-**The calendar is guide-given** (`1st 2026.txt:193-317`): the guide numbers its topical
+**The calendar is guide-given** (`1st 2026.txt:193-318`): the guide numbers its topical
 outline under explicit week headings, with the mid-term examination at Week 7 (`:250`) and the
 final term examination at Week 16 (`:315`). **The unit partition is derived** (D-2026-0012):
 the guide carries no unit headings, so its contiguous teaching weeks are merged into six
@@ -853,7 +881,7 @@ Unit Spec (G1) for `docs/semester-1/gnas-301/unit-06/`.
 ### Sub-topic checklist
 
 One row per leaf item of guide sections 13.1-13.5, 14.1-14.4, 15.1-15.2 and 16.1. The guide's
-"bio-magnificatio" (`:313`) is transcribed as "bio-magnification". IDs are stable once
+"bio-magnificatio" (`:308`) is transcribed as "bio-magnification". IDs are stable once
 assigned.
 
 | ID | Guide ref | Topic | Sub-topic |
@@ -968,15 +996,16 @@ adaptation or both). Each ERQ carries an analytic rubric, >= 1 demanding Analyze
 
 ## For the evaluator - what this spec does not settle
 
-- **Open-access citations.** The curated-supplementary list is deliberately empty; each unit's
-  two verifiable bindings are made at G2 and recorded in `sources/unit-NN.md`. Nothing in this
-  spec should be read as asserting a citation that is not in the guide-required table.
+- **Open-access citations.** The curated-supplementary table lists the owner-confirmed verified
+  replacement set (2026-09-23); each unit's bindings, with verification dates, are recorded in
+  `sources/unit-NN.md`. Nothing outside the two reading-list tables should be read as asserting
+  a citation.
 - **Figure prompt wording and SVG geometry.** The figure plan fixes IDs, archetypes and
   subject; the exact prompts and alt text are authored with the units.
 - **The Urdu terminology of the course.** Banked terms come from `terminology.csv`; new Urdu
   labels are authored at G4 and listed for G5 review. Nothing here pre-empts that.
 - **course-review.mdx.** The course review plan seeds it; authoring the file is follow-up
   work outside this feature.
-- **Partition alternatives.** The guide's own week grouping supports the six-block merge
-  recorded above; if the evaluator judges a different merge better serves the guide's
-  grouping, that is a G0/G1 finding to apply before authoring, not an authoring-time choice.
+- **Partition.** The six-block merge was derived from the guide's own week grouping and is
+  owner-confirmed as derived (`G-2026-22` resolved, 2026-09-23): teaching weeks 2/2/2/3/2/4
+  across Units 1 to 6.

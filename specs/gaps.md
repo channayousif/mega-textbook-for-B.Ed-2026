@@ -791,7 +791,7 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 
 ## G-2026-22 - GNAS-301 intake: the six-unit partition is the spec's construction over a guide that gives only a week table
 
-- **Status:** open
+- **Status:** **resolved** (owner decision, 2026-09-23)
 - **Gate:** G0 intake / G1 unit-spec (partition criterion)
 - **Source:** `D-2026-0020`
 - **Detail:** The GNAS-301 guide block (`Scheme-and-Course-guides/extracted-text/1st 2026.txt:143-366`)
@@ -822,12 +822,16 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 - **Needed, and from whom:** the curriculum owner, to confirm the six-block merge (2/2/2/3/2/4
   teaching weeks across Units 1 to 6) or supply another partition, in the manner `G-2026-16`
   settled EFMP-304's calendar. The week calendar itself needs no decision: it is guide-given.
-- **Blocks:** the `partition` criterion of `D-2026-0020`. The "Weeks N-M" line opening each of the
-  six `## Unit N` subsections stands only if the merge is confirmed.
+- **Decision (2026-09-23):** the owner **confirmed the six-unit partition exactly as derived**:
+  teaching weeks 2/2/2/3/2/4 across Units 1 to 6 (Weeks 1-2 -> Unit 1, 3-4 -> Unit 2, 5-6 ->
+  Unit 3, 8-10 -> Unit 4, 11-12 -> Unit 5, 13-16 -> Unit 6). The partition is now
+  owner-determined on the guide's week calendar, in the manner `G-2026-16` settled EFMP-304's.
+- **Blocks:** ~~the `partition` criterion of `D-2026-0020`~~ **unblocked**. The "Weeks N-M" line
+  opening each of the six `## Unit N` subsections stands as confirmed.
 
 ## G-2026-23 - GNAS-301's guide reading list: five of seven entries do not resolve as printed, and the spec's open-access floor is neither owner-adopted nor enforced
 
-- **Status:** open
+- **Status:** **resolved** (owner decision, 2026-09-23)
 - **Gate:** G0 intake (readings criterion)
 - **Source:** `D-2026-0020`
 - **Detail:** The guide lists seven recommended books (`1st 2026.txt:352-366`). The spec
@@ -877,6 +881,13 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   (b) adopt the two-per-unit open-access floor for GNAS-301, adopt it with different numbers, or
   decline it; and (c) direct that the adopted floor be declared in `open_access_floor` front
   matter so `check:source-floor` enforces it.
-- **Blocks:** the `readings` criterion of `D-2026-0020`; the `### Curated-supplementary`
-  section's empty-with-floor posture. The `**Mapped readings**` lines of all six units stand only
-  if the floor is adopted.
+- **Decision (2026-09-23):** the owner **confirmed all three items as the spec proposed them**:
+  (a) the five `D-2026-0001` flags and the closest-real-work identifications are confirmed, and
+  use of the verified open-access replacement source set (12 sources, listed in the spec's
+  `### Curated-supplementary` table) is confirmed; (b) the two-verifiable-open-access-sources-
+  per-unit floor is **adopted** for all six units, recorded as `D-2026-0021` on the
+  `D-2026-0013` precedent; and (c) the adopted floor is declared in the content-spec's
+  `open_access_floor` front matter so `check:source-floor` enforces it.
+- **Blocks:** ~~the `readings` criterion of `D-2026-0020`; the `### Curated-supplementary`
+  section's empty-with-floor posture~~ **unblocked**. The `**Mapped readings**` lines of all six
+  units stand on the adopted floor.
