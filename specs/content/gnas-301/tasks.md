@@ -29,14 +29,14 @@ units may be authored.
 | Unit 2 | G6 assets | ▢ | | |
 | Unit 2 | G7 publish | ▢ | | |
 | Unit 3 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0020 + owner resolutions G-2026-22/G-2026-23 + floor D-2026-0021; content-spec status: approved |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-03/G2/20260923T212952825Z-gates.json |
-| Unit 3 | G3 en-review | ▢ | | advisory only |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-03/G2/20260923T233237558Z-gates.json |
+| Unit 3 | G3 en-review | ▢ | | advisory round 1: revise; report reviews/unit-03/G3/agent-g3-gnas301-u3-run001.json; repairs applied 2026-09-23, round 2 pending |
 | Unit 3 | G4 ur-translation | ▢ | | |
 | Unit 3 | G5 ur-review | ▢ | | |
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
 | Unit 4 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0020 + owner resolutions G-2026-22/G-2026-23 + floor D-2026-0021; content-spec status: approved |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-04/G2/20260923T221310941Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-04/G2/20260923T233240686Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | advisory only |
 | Unit 4 | G4 ur-translation | ▢ | | |
 | Unit 4 | G5 ur-review | ▢ | | |
