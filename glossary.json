@@ -648,5 +648,40 @@
     "term": "Intercultural communication",
     "definition_en": "The study of how people from different cultural backgrounds communicate with one another, and how cultural assumptions shape the way messages are sent, received and interpreted.",
     "definition_ur": "اس بات کا مطالعہ کہ مختلف ثقافی پس منظر کے لوگ ایک دوسرے کے ساتھ کیسے رابطہ کرتے ہیں، اور ثقافی مفروضے پیغامات کے بھیجنے، وصول کرنے اور ان کی تفسیر کو کیسے شکل دیتے ہیں۔"
+  },
+  {
+    "term": "Quantitative reasoning",
+    "definition_en": "The habit of using numbers, data, and logical thinking to understand situations and make sound decisions; the reasoning lies in deciding what to calculate and what the result means, not in the calculation itself.",
+    "definition_ur": "اعداد، معطیات اور منطقی سوچ کا استعمال کرتے ہوئے صورتحالوں کو سمجھنے اور ٹھیک فیصلے کرنے کی عادت؛ اس میں اصل سوچ یہ طے کرنے میں ہے کہ کیا حساب کرنا ہے اور نتیجے کا کیا مطلب ہے، حساب خود نہیں۔"
+  },
+  {
+    "term": "Numeracy",
+    "definition_en": "The ability to use mathematics confidently in daily life, at work, and as a citizen.",
+    "definition_ur": "روزمرہ زندگی، کام اور بطور شہری اعتماد کے ساتھ ریاضی استعمال کرنے کی صلاحیت۔"
+  },
+  {
+    "term": "Number sense",
+    "definition_en": "A feel for what numbers mean, how big they are, and how they relate to each other; it powers the check that asks whether an answer could possibly be right.",
+    "definition_ur": "اعداد کے مطلب، ان کی مقدار اور آپس کے تعلق کا شعور؛ یہی شعور یہ جانچ کرتا ہے کہ کوئی جواب ممکن ہے یا نہیں۔"
+  },
+  {
+    "term": "Estimation",
+    "definition_en": "A deliberate, reasoned guess that is close enough for the purpose, built from a named method such as grouping, rounding, front-end digits, or compatible numbers.",
+    "definition_ur": "کسی مقصد کے لیے کافی قریب ہونے والا، سوچا سمجھا اور کسی بتائی گئی طریقے پر مبنی اندازہ، جیسے گروہ بندی، گول کرنا، یا آسان اعداد کا انتخاب۔"
+  },
+  {
+    "term": "Approximation",
+    "definition_en": "A value used in place of an exact one to make work easier, such as taking 398 as 400.",
+    "definition_ur": "کام آسان بنانے کے لیے کسی درست قیمت کے بدلے استعمال ہونے والی قیمت، جیسے 398 کو 400 سمجھنا۔"
+  },
+  {
+    "term": "Logical reasoning",
+    "definition_en": "Thinking in ordered, checkable steps so that each conclusion follows from what came before and another person can retrace the path.",
+    "definition_ur": "ایسے مرحلہ وار اور جانچے جا سکنے والے قدموں میں سوچنا کہ ہر نتیجہ پہلی باتوں سے نکلے اور دوسرا شخص اس کا پورا راستہ دوبارہ چیک کر سکے۔"
+  },
+  {
+    "term": "Problem-solving strategy",
+    "definition_en": "An ordered way through a problem you have not met before; the classic four steps are understand the problem, make a plan, carry out the plan, and look back.",
+    "definition_ur": "کسی نئے مسئلے کو حل کرنے کا ترتیب وار طریقہ؛ مشہور چار مراحل ہیں: مسئلہ سمجھنا، منصوبہ بنانا، منصوبہ عمل میں لانا، اور نظرِ ثانی کرنا۔"
   }
 ]
