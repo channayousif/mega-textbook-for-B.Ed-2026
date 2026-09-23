@@ -138,3 +138,22 @@ not expire while used and defended. Creative Commons licences are presented as a
 option between full copyright and the public domain; the book itself is CC licensed.
 
 Used for: the IP instruments, fair use and the public domain (U5-03).
+
+## Chapter 13 - Trends in Information Systems (verified)
+
+The chapter's "Findable" section covers the Internet of Things: "The 'Internet of Things'
+(IoT) refers to devices that have been embedded into a variety of objects" - appliances,
+lamps, vehicles, thermostats, jet engines - "which are then connected online via Wi-Fi,
+Bluetooth, or LTE." It offers the working test: "Think of IoT as devices that you wouldn't
+normally consider being connected to the Internet," with the connection operating
+independently of human intervention. Three enabling factors are cited: cheap processors,
+wireless connectivity, and the IPv6 addressing standard. Benefits listed include process
+optimization, component monitoring, home security, smart thermostats, and remote lighting
+control; security concerns include eavesdropping via hacked smart speakers, compromised
+smart watches used to track children, and owners failing to change default passwords. The
+chapter treats autonomous devices (self-driving cars, drones) as an extension of IoT, and
+names wearable devices and 3-D printing among its other trends. (Note: this chapter does
+not itself cover AI, blockchain, or VR/AR; those rest on the other bound excerpts.)
+
+Used for: the IoT definition, enabling factors, benefits and security concerns
+(U6-07).
