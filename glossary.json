@@ -338,5 +338,55 @@
     "term": "Summary and close",
     "definition_en": "The course's closing synthesis: a whole-group event in which each trainee states a belief that changed across the course and cites the evidence for the change.",
     "definition_ur": "کورس کی اختتامی ترکیب: ایک پورے گروہ کی تقریب جس میں ہر تربیت یافتہ شخص ایک عقیدہ بیان کرتا ہے جو کورس کے دوران بدل گیا اور تبدیلی کا ثبوت پیش کرتا ہے۔"
+  },
+  {
+    "term": "Environmental science",
+    "definition_en": "The study of the natural environment and the ways people interact with it.",
+    "definition_ur": "قدتی ماحول اور اس سے انسانی تعلق کا مطالعہ۔"
+  },
+  {
+    "term": "Natural environment",
+    "definition_en": "Everything around us that is not made by people: air, water, soil, rocks, living things and the climate.",
+    "definition_ur": "وہ سب کچھ جو ہمارے ارد گرد ہے اور انسانوں کا بنایا ہوا نہیں: ہوا، پانی، مٹی، چٹانیں، جاندار اور موسم۔"
+  },
+  {
+    "term": "Biosphere",
+    "definition_en": "The thin zone of the Earth where life exists, where the atmosphere, hydrosphere and lithosphere meet.",
+    "definition_ur": "زمین کا وہ پتلا حصہ جہاں زندگی پائی جاتی ہے، جہاں کرہ ہوا، کرہ آب اور کرہ خاک آپس میں ملتے ہیں۔"
+  },
+  {
+    "term": "Anthropogenic",
+    "definition_en": "Caused by people, especially of environmental change brought about by human activity.",
+    "definition_ur": "انسانوں کے سبب پیدا ہوا، خاص طور پر انسانی سرگرمی سے پیدا ہونے والی ماحولیاتی تبدیلی کے لیے۔"
+  },
+  {
+    "term": "Ecosystem",
+    "definition_en": "A living community together with its non-living surroundings, functioning as one system.",
+    "definition_ur": "جانداروں کی ایک برادری اور ان کے بے جان ماحول، جو ایک نظام کی طرح مل کر کام کرتے ہیں۔"
+  },
+  {
+    "term": "Ecosystem services",
+    "definition_en": "The benefits people receive from functioning ecosystems, such as clean water, food and protection from storms.",
+    "definition_ur": "کام کرنے والے ماحولیاتی نظاموں سے انسانوں کو ملنے والے فائدے، جیسے صاف پانی، خوراک اور طوفانوں سے حفاظت۔"
+  },
+  {
+    "term": "Natural resources",
+    "definition_en": "Anything from the environment that people use to meet their needs, such as water, soil, minerals and forests.",
+    "definition_ur": "ماحول سے ملنے والی وہ ہر چیز جو انسان اپنی ضروریات پوری کرنے کے لیے استعمال کرتا ہے، جیسے پانی، مٹی، معدنیات اور جنگلات۔"
+  },
+  {
+    "term": "Renewable resources",
+    "definition_en": "Resources that renew themselves on a human timescale if they are not overused.",
+    "definition_ur": "وہ وسائل جو مناسب استعمال میں انسانی دور میں دوبارہ پیدا ہو جاتے ہیں۔"
+  },
+  {
+    "term": "Non-renewable resources",
+    "definition_en": "Resources that exist as fixed stocks and cannot be rebuilt on a human timescale.",
+    "definition_ur": "وہ وسائل جو مقررہ مقدار میں موجود ہیں اور انسانی دور میں دوبارہ نہیں بن سکتے۔"
+  },
+  {
+    "term": "Sustainability",
+    "definition_en": "The test of whether an action can continue, as it is, without exhausting what it depends on.",
+    "definition_ur": "اس بات کا امتحان کہ کوئی عمل اسی طرح جاری رہ سکتا ہے یا نہیں، بغیر اس چیز کو ختم کیے جس پر وہ منحصر ہے۔"
   }
 ]
