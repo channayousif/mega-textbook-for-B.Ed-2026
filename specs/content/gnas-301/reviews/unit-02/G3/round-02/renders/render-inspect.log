@@ -67,3 +67,28 @@
 
 console errors: none
 ### completed: 2026-09-23T21:42:26.190Z
+
+===== D. POST-INSPECTION VISUAL VERIFICATION (method note) =====
+- session limitation: the review harness could not display PNG/PDF artifacts this session
+  (Read-tool image rendering returned no output; pdftoppm/poppler not installed), so visual
+  verification used three programmatic checks on the actual rendered bytes:
+  1. sharp raw-pixel analysis of every PNG (non-blank, color diversity, figure-palette
+     presence): all 15 PNGs contain real rendered content (stdev 43-61, 977-2733 sampled
+     colors, palette hits present on every page).
+  2. per-figure print-emulated element captures (print-figure-topic-0N-M.png, 6 files,
+     868x510 boxes): each contains ink pixels, paper background and figure-palette
+     strokes/fills - the figures render in the print view the PDFs capture, with captions.
+  3. PDF structural check: all 6 print-a4 PDFs are valid (%PDF header, %%EOF, 2-7 page
+     objects); print-view-answers.png confirms the answers section renders in print view.
+- SVG sources inspected directly for instructional meaning: all 6 figures carry title/desc
+  matching their alt text and labels matching the taught content (fig-U2-1 droplet split
+  97 / 2 ice / under 1 groundwater / fraction-of-a-droplet rivers; fig-U2-2 Indus already
+  highly stressed per Archer framing; fig-U2-3 chain with remedy points; fig-U2-5 hierarchy
+  staircase; fig-U2-6 hospital vs industrial rule sets).
+- build freshness: build/ completed 2026-09-23T16:21:33-05:00, after the last unit-02
+  source change (16:16:23); verified current by content markers in the built HTML (reworked
+  ERQ 3, Marks (5), USGS sentence, WHO 85 per cent sentence, Sanitation glossary link, full
+  de-skewed MCQ key b,d,a,c,b,d,b,a,b,c). No rebuild was run in this session (orchestrator
+  capacity note: at most one heavy process; the verified-fresh build was served instead).
+- defects found in render inspection: 0 (the bare-URL link-text advisory from round 1
+  remains and is recorded as an unresolved advisory finding).

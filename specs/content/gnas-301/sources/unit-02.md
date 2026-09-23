@@ -35,6 +35,7 @@ and any G3 reviewer see the limitation explicitly rather than inferring it from 
 - park-park: the guide's title ("Textbook of Preventive of Pollution") does not resolve; the
   closest real work is *Park's Textbook of Preventive and Social Medicine* (D-2026-0020's
   verification confirmed). Print monograph, not retrievable by this host; used for
-  title-level support of the U2-05 hazardous-waste principles, which the unit's WHO- and
-  registry-verified sources do not carry. Could not be retrieved on 2026-09-23. Owner ruling
+  title-level support of the U2-05 hazardous-waste principles, as a supplement to the
+  WHO Health-care waste fact sheet that now carries the split, categories and treatment
+  routes. Could not be retrieved on 2026-09-23. Owner ruling
   (D-2026-0001, confirmed in G-2026-23/D-2026-0021): flag and proceed.

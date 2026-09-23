@@ -783,5 +783,45 @@
     "term": "Risk",
     "definition_en": "The chance and the seriousness of harm actually occurring, in real conditions.",
     "definition_ur": "حقیقی حالات میں نقصان کے واقع ہونے کا امکان اور اس کی شدت۔"
+  },
+  {
+    "term": "OSH management system",
+    "definition_en": "The organised set of elements, policy, organisation, planning, procedures, checking and review, through which a workplace manages its hazards continuously.",
+    "definition_ur": "ادارے کے وہ منظم عناصر، پالیسی، تنظیم، منصوبہ بندی، طریقہ کار، جانچ اور جائزہ، جن کے ذریعے کام کی جگہ خطرات کو مسلسل سنبھالتی ہے۔"
+  },
+  {
+    "term": "Incident",
+    "definition_en": "Any unplanned event that did or could have caused harm; the injury, the fatality and the near-miss are its grades.",
+    "definition_ur": "کوئی بھی غیر منصوبہ بند واقعہ جس نے نقصان کیا ہو یا کر سکتا تھا؛ زخم، موت اور بچا واقعہ اس کے درجے ہیں۔"
+  },
+  {
+    "term": "Internal control",
+    "definition_en": "The measures an organisation uses to make sure its own rules are actually followed: authorisation, records, supervision and review.",
+    "definition_ur": "وہ اقدامات جو کوئی ادارہ اپنے قواعد کے اصل میں ماننے کے لیے استعمال کرتا ہے: اجازت، ریکارڈ، نگرانی اور جائزہ۔"
+  },
+  {
+    "term": "OHS professional",
+    "definition_en": "The person a workplace employs to make its safety work: adviser, trainer, inspector, investigator, record keeper and communicator.",
+    "definition_ur": "وہ شخص جسے کام کی جگہ حفاظت کا کام سونپتی ہے: مشیر، تربیت کار، معائنہ کار، تفتیش کار، ریکارڈ رکھنے والا اور رابطہ کار۔"
+  },
+  {
+    "term": "Incident pyramid",
+    "definition_en": "The model in which every serious injury sits on a much wider base of minor injuries, near-misses and unsafe acts sharing the same causes.",
+    "definition_ur": "وہ ماڈل جس میں ہر سنگین زخم کے نیچے چھوٹے زخموں، بچے واقعات اور غیر محفوظ عمل کی وسیع بنیاد ہوتی ہے، سب ایک ہی اسباب سے۔"
+  },
+  {
+    "term": "Swiss cheese model",
+    "definition_en": "The model of accident causation in which defences are slices with holes, and harm passes through when the holes line up.",
+    "definition_ur": "حادثے کے سبب کا وہ ماڈل جس میں دفاع سوراخ والی پنیر کی سلائیں ہیں، اور نقصان تب گزرتا ہے جب سوراخ ایک لائن میں آ جائیں۔"
+  },
+  {
+    "term": "Organizational environment",
+    "definition_en": "The workplace's own climate: how work is divided, how pressure is applied, and how bad news travels.",
+    "definition_ur": "کام کی جگہ کا اپنا ماحول: کام کی تقسیم، دباؤ کا انداز، اور بری خبر کا سفر۔"
+  },
+  {
+    "term": "HSE plan",
+    "definition_en": "The document that turns statutes and the PDCA cycle into a named, dated commitment for one workplace.",
+    "definition_ur": "وہ دستاویز جو قوانین اور پی ڈی سی اے چکر کو کسی ایک کام کی جگہ کے نامزد، تاریخ والے وعدے میں بدلتی ہے۔"
   }
 ]
