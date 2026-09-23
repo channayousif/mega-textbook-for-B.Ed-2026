@@ -20,5 +20,7 @@ page's "Key facts" section was read and is excerpted below.
 Topic 2.1 (U2-01) cites this source for the 2-billion-in-water-stressed-countries figure and
 the global access picture. Topic 2.2 (U2-02) cites it for the 505,000 annual diarrhoeal
 deaths from microbiologically contaminated drinking water, grounding the claim that
-pathogens are the heaviest water-pollution burden. The unit does not rely on this source for
-any figure it does not state here.
+pathogens are the heaviest water-pollution burden. Unit 1's Topic 1.3 (U1-06) also cites it
+for the over-2-billion water-stress figure, re-bound from the WHO Climate change fact sheet
+after the first G3 review found that page does not carry it. Neither unit relies on this
+source for any figure it does not state here.

@@ -19,14 +19,16 @@ Forest resources in Pakistan are being deteriorating both quantitatively and qua
 due to anthropogenic activities, climatic v[ariation] and loose institutional management.
 According to the FAO (2007), extent of forest cover of Pakistan in 2005 is 1,902,000 ha,
 which is 2.5% of its total land area. Annual change rate during 2000-2005 was -2.1% which is
-highest among all the countries in Asia. The Indus delta region contains the world's ...
+highest among all the countries in Asia. The Indus delta region contains the world's
+fifth-largest mangrove forest.
 
 ## What this supports in GNAS-301 Unit 1
 
-Topic 1.3 (U1-05) uses this source for one specific claim: that Pakistan's mangrove cover has
-been assessed nationally using satellite imagery, i.e. that mapping ecosystem change is a
-real, published activity of environmental science. The abstract's statements that mangroves
-are among the world's most threatened ecosystems, that Pakistan's forest cover has been
-deteriorating under anthropogenic pressure, and that the Indus delta is a major mangrove
-region also ground the unit's treatment of threats to ecosystems. The unit does not rely on
-this source for any figure it does not state here.
+Topic 1.3 (U1-05) uses this source for two specific claims: that Pakistan's mangrove cover
+has been assessed nationally using satellite imagery, i.e. that mapping ecosystem change is a
+real, published activity of environmental science; and that the Indus Delta contains the
+world's fifth-largest mangrove forest, the ranking the prose cites. The abstract's
+statements that mangroves are among the world's most threatened ecosystems, that Pakistan's
+forest cover has been deteriorating under anthropogenic pressure, and the FAO cover figures
+also ground the unit's treatment of threats to ecosystems. The unit does not rely on this
+source for any figure it does not state here.

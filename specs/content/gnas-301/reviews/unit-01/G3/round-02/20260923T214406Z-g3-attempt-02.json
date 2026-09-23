@@ -1,0 +1,388 @@
+{
+  "schema_version": 1,
+  "course_code": "GNAS-301",
+  "unit_no": 1,
+  "stage": "G3",
+  "disposition": "revise",
+  "reviewer_id": "agent:g3-reviewer",
+  "author_run_id": "claude-code:019-author-gnas-301:c77c070",
+  "reviewer_run_id": "g3-review:gnas-301-u1-r2:20260923",
+  "model": "LongCat-2.0",
+  "started_at": "2026-09-23T21:10:00Z",
+  "completed_at": "2026-09-23T21:44:06.561Z",
+  "skill_digest": "eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b",
+  "rulings": {
+    "D-2026-0001": "8ff79df9af668329f6d0094a2257654f45fc545122a753b4888fb9936f402f1f",
+    "D-2026-0020": "84634da46e3d983ace09ce20d2ed5ea5e1588f30e1f405e44b62c967585925e7",
+    "D-2026-0021": "6004630196719c12ca61d4ed45ed09a2da427c431d666434b6a0221bda078268"
+  },
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g3.md": "074c8464b4bc0f2f2b76bbb19707c50b54cb907920407873a4e5d193e866f53f",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "f1d7f063cc2c826693a3d8428fb5d3ee45455fdb7906ebc5adadee8b9a434d47",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-1/gnas-301/course-overview.mdx": "905fecf4beea458a11bd94c393c0ba932a25a20b3dc9585e98972e5ff99f7271",
+    "docs/semester-1/gnas-301/unit-01/_category_.json": "295ebdbd759ea80fb4730da37df425b38f2447ff3a39a9d83cedae9bf708bd00",
+    "docs/semester-1/gnas-301/unit-01/index.mdx": "28b159e65df07579f952315b87c3334b769f01518f7fc4b704e38be797f344c9",
+    "docs/semester-1/gnas-301/unit-01/topic-01.mdx": "54d7b6d0344d2a90f9e38a0540d4d6ce576d15c49d4c8035579fd63008cfff82",
+    "docs/semester-1/gnas-301/unit-01/topic-02.mdx": "b43ff8daaf098e0c937e8471ad7dee0921956a2282a224553ccb1d9be1729cb2",
+    "docs/semester-1/gnas-301/unit-01/topic-03.mdx": "986d142d51745df8fd978df75a6151d5c0a6e399e2041d82deb44d74b946774f",
+    "docs/semester-1/gnas-301/unit-01/topic-04.mdx": "51d424f4578206b20e58403d1d4346fef0d0c6e31ba05d00add80af52caacfd3",
+    "docs/semester-1/gnas-301/unit-01/unit-assessment.mdx": "03bd23d094b7c48e62bc9a8c8a4a91af2362187a82d24def0ffe720fb251be3d",
+    "docs/semester-1/gnas-301/unit-01/unit-teacher-notes.mdx": "cdddd01051a0897d79cb65049fdf1d2e9956f6bda949646c94a06036ad056424",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "41b698f8cbbb12f4030d6893083a5c36e4a19848b5ddb86206e5ba72847b8b13",
+    "scripts/check-no-answer-keys.mjs": "f38d60e5360e0c29f2dae02001195690f3b95e0ad2d7ae1a3c03a0d09c053f0d",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "bb614c625f7bf397ce51a317bdb8901711c00fa009d4ad0a506c5096e5b9ddd2",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "77f03816f68663621059f17745109fdde9b103c555f707e0c62d5ff56d2a4cd9",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "973496faae3366d13e8cdd3ba8d68edf7bd3745bdc6928311ee03c55f24b18b2",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/gnas-301/concepts/unit-01.md": "09d9b6c62b1452877d8d28c097dc1bcd26afa3224c76a2fb21efbcb1c9aa3c46",
+    "specs/content/gnas-301/content-spec.md": "616837fcfeab4e1127d557c1c8e6ce8325f84866f4605982ebd11642fc8dc2a8",
+    "specs/content/gnas-301/coverage/unit-01.md": "dc8400d2c958496defa3c85e2d5aa8a8a5380b38bf5cac39f59a4137fc2feb51",
+    "specs/content/gnas-301/figures/unit-01.md": "fa1215a87ea3b116330a1d0949c510a453c07f6a3ff04ee653033a6bf5698697",
+    "specs/content/gnas-301/sources/texts/abbas2012.md": "40ddf3ff1d15a3f5b1dfc3929df5cb476169183e448e61e352f154a7c0374b88",
+    "specs/content/gnas-301/sources/texts/archer2010.md": "be2393d4e25c083dfcf4bc568e20be4fe0b8013e1c2a574dd5a6594a25367a58",
+    "specs/content/gnas-301/sources/texts/un-restoration-2021.md": "3db54128d7e57ab4a1ad22aebe1a83a2a02aff9208a84b65940d59b34a3daa55",
+    "specs/content/gnas-301/sources/texts/who-air-2024.md": "8698e0efef2db62ec02d3b3e409f4b6d913ea7fae67494688c30990866eb4a9e",
+    "specs/content/gnas-301/sources/texts/who-biodiversity-2025.md": "a106d19c29d9dfe02c2d830b648c23f6a0f0c519b8dae2eab649ff653e57bad4",
+    "specs/content/gnas-301/sources/texts/who-climate-2023.md": "9e7ecd83e115ca7efa6930097fa7dd9910ddba2751d5fe4b48dd9bccd4bad610",
+    "specs/content/gnas-301/sources/texts/who-water-2023.md": "481c384d09fb1328f6c4ce8f86cf878f8954f316d6321cd516e0a2bec7400e7d",
+    "specs/content/gnas-301/sources/unit-01.md": "99239b4f189401f85e63df63b02ad46e943107a0dae9bfc1a704cbcdba8ad2f7",
+    "specs/content/style-guide.md": "db96c9b33b0fb9522986462a0b519620c3c1d7602a046d7b90e638f643da4610",
+    "static/img/figures/gnas-301/unit-01/fig-U1-1.dark.svg": "2d3fd01d2dfdcf704f193b764125c540ebcd4749e503fa24d257788d4a5080af",
+    "static/img/figures/gnas-301/unit-01/fig-U1-1.svg": "f9d925278bce6a64b50de5564a8933e4202333fa86d1ae9773810c05290eb2fc",
+    "static/img/figures/gnas-301/unit-01/fig-U1-2.dark.svg": "229af7226e17fb411715a171d39920bac8020f129f0336b5faf1ad609d2862a9",
+    "static/img/figures/gnas-301/unit-01/fig-U1-2.svg": "a81dfd98df15f0dabd7825cc6d775c0bb2a132bc85c791dec3c8d4d45d32364d",
+    "static/img/figures/gnas-301/unit-01/fig-U1-3.dark.svg": "3b3680f7a3d7ab045a193780b171a6bad4d2b726fec31ebbf63d1ab391851b9a",
+    "static/img/figures/gnas-301/unit-01/fig-U1-3.svg": "35cb6c48b3eb08693cf4a7d623ea678164689a5511c0d9f8f4d2146112283ec2",
+    "static/img/figures/gnas-301/unit-01/fig-U1-4.dark.svg": "d9b8f9a6f20ea904637cdfb9724d2a6308f56a5a079d1bf9423c94b0ab2245e1",
+    "static/img/figures/gnas-301/unit-01/fig-U1-4.svg": "533fb547991d49dd05aef19f49d568e80feb9e16b7a6e855cd3950086a51048b",
+    "static/img/figures/gnas-301/unit-01/fig-U1-5.dark.svg": "1d2629e6421f5d4418289b2b17e52de90a1082ece37d3cd4abcc0fee2528acfe",
+    "static/img/figures/gnas-301/unit-01/fig-U1-5.svg": "418db1cd37d8b521684f45f59a27bcfe6d85953655e72f61b08301966ffb5069",
+    "static/img/figures/gnas-301/unit-01/fig-U1-6.dark.svg": "efde0eb00574425de47416136392852af3951a957ed74c6025531383c1c13ad3",
+    "static/img/figures/gnas-301/unit-01/fig-U1-6.svg": "3901ff8ca9d2716b341cc34a46bd338593d0ef48e9a2ead1ad6b838265daa49a",
+    "static/img/figures/gnas-301/unit-01/fig-U1-7.dark.svg": "a37f36bc1314645f1f1013c078e5efd93bd8cee1980306b6a7ea7aa1d1a21251",
+    "static/img/figures/gnas-301/unit-01/fig-U1-7.svg": "7bb8a5709a7f249d25f2b309d3777e363bd7132f866a5f1e4f98b05cd3e40892",
+    "static/img/figures/gnas-301/unit-01/fig-U1-8.dark.svg": "b9a20a50b841f430b413cb9e05ae3754f5e65d9db4a5a0afa00a86069f185a93",
+    "static/img/figures/gnas-301/unit-01/fig-U1-8.svg": "e599afb0214d3acb1af9f9003cd42f07fc3081dfc90cca1e83f20e51d9a3c662"
+  },
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        "specs/content/gnas-301/content-spec.md:1-13 front matter status approved (D-2026-0020 intake + owner resolutions G-2026-22/G-2026-23 + open-access floor D-2026-0021, 2026-09-23); authority inputs byte-identical to round 1",
+        "Scheme-and-Course-guides/extracted-text/1st 2026.txt:193-231 guide Week 1-2 outline (1.1-1.4, 2.1-2.3) read in full and compared with the unit",
+        "specs/content/gnas-301/content-spec.md:294-308 sub-topic checklist U1-01..U1-07 is one-to-one with the guide leaf items; derived six-unit partition owner-confirmed (G-2026-22, content-spec.md:36-41)",
+        "specs/content/gnas-301/coverage/unit-01.md:8-22 every sub-topic row maps to a taught ### heading, verified line-by-line in the topic files (topic-01.mdx:38,64; topic-02.mdx:38,71; topic-03.mdx:38,81; topic-04.mdx:37)",
+        "docs/semester-1/gnas-301/unit-01/index.mdx:27-39 unit outcomes cover all seven sub-topics; CLO/SLO refs trace to guide CLOs 1, 2 and 5 (content-spec.md:272-275)",
+        "assessment weighting follows the course-specific 30/50/10/10 table (content-spec.md:73-86); no practical-work section invented where the guide is silent (content-spec.md:87-90)"
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "fail",
+      "evidence": [
+        "specs/content/gnas-301/sources/unit-01.md:12-22 bound source table read in full; who-air-2024 (row 17) and who-water-2023 (row 18) added by the round-1 repairs with coverage rows (coverage/unit-01.md:11,20)",
+        "all seven bound excerpts read in full (sources/texts/abbas2012.md, archer2010.md, un-restoration-2021.md, who-air-2024.md, who-biodiversity-2025.md, who-climate-2023.md, who-water-2023.md)",
+        "who-air-2024 verified faithful by direct fetch 2026-09-23 (who.int ambient air fact sheet, 24 Oct 2024: \"In 2019, 99% of the world's population was living in places where the WHO air quality guidelines levels were not met\"); topic-01.mdx:55-57 99-per-cent claim now bound - round-1 blocking finding 2 RESOLVED",
+        "who-water-2023 verified faithful by direct fetch 2026-09-23 (who.int drinking-water fact sheet, 13 Sep 2023: over 2 billion people in water-stressed countries as of 2021); topic-03.mdx:112-113 re-bound correctly - round-1 blocking finding 3 RESOLVED; who-climate-2023.md:23-25 correction note accurate, confirmed by fetch (climate fact sheet, 12 Oct 2023, carries no water-stress figure; its 3.6-billion susceptibility figure is correctly used at topic-02.mdx:76-78)",
+        "who-biodiversity-2025 verified by direct fetch 2026-09-23 (fact sheet dated 18 Feb 2025): approximately 1 million species at extinction risk, more than 75% of food crops rely on pollinators, 35% of wetlands lost since 1970, services list - correctly used at topic-02.mdx:78-79 and topic-03.mdx:60-62,70-72",
+        "un-restoration-2021 verified by direct fetch 2026-09-23 (decadeonrestoration.org): \"There has never been a more urgent need to revive damaged ecosystems than now\", prevent/halt/reverse aim, \"only succeed if everyone plays a part\" - used at topic-02.mdx:67-69, topic-03.mdx:77-78, topic-04.mdx:142-143; the key rename makes the excerpt digest-bound in this manifest - round-1 advisory RESOLVED",
+        "abbas2012: direct fetch of isprs-archives.copernicus.org/articles/XXXVIII-8-W20/187/2011/ on 2026-09-23 confirms the abstract states \"The Indus delta region contains the world's fifth-largest mangrove forest\"; the repaired prose (topic-03.mdx:50-53) makes exactly that sourced claim - but the bound excerpt sources/texts/abbas2012.md:22 truncates mid-sentence at \"The Indus delta region contains the world's ...\" and its support note (abbas2012.md:24-32) does not declare the ranking, so the unit relies on a figure the bound excerpt does not state (see blocking finding)",
+        "haines-frumkin and clark-henderson declared under ## Unverifiable sources with retrieval attempts, dates and owner authorisation (sources/unit-01.md:24-37, D-2026-0001); verified they appear only in ## Further reading at bibliographic level (topic-01.mdx:169-170, topic-02.mdx:167-168, topic-03.mdx:193-194, topic-04.mdx:144-145) - no prose claim rests on them"
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "coverage/unit-01.md:8-22 all seven sub-topic rows verified against the exact ### headings in the topic files; no heading-only coverage",
+        "reinforcement rows verified: unit-assessment.mdx:20-33 (Unit summary) and unit-teacher-notes.mdx:50-67 (Managing the activities)",
+        "assessment distribution per blueprint: MCQs 2/3/3/2 and RRQs 2/3/3/2 across topics 1.1-1.4 (>= 2 each), ERQs one per topic plus integrative ERQ-05 tracing a local issue to regional and global scales (unit-assessment.mdx:37-142)",
+        "est_reading_minutes unit total 81 (index 5 + topics 15+15+16+13 + assessment 11 + teacher notes 6) inside the 65-85 depth budget (content-spec.md:325); check:depth-gate exit 0",
+        "all five planned misconceptions from content-spec.md:331-334 addressed in prose (topic-01.mdx:98-103 and 117-118, topic-02.mdx:96-100, topic-03.mdx:111-115, topic-04.mdx:75-81)"
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "pass",
+      "evidence": [
+        "all 25 items solved independently before reading ## Answers and marking guidance; derived MCQ key 1-b, 2-c, 3-a, 4-d, 5-c, 6-b, 7-b, 8-d, 9-a, 10-a matches the supplied key exactly (unit-assessment.mdx:146-163); the round-1 de-skew (option rearrangement with the key updated consistently) introduced no ambiguity or double key; distribution now a=3, b=3, c=2, d=2 (was 7x b)",
+        "RRQ model answers and point-by-point mark schemes (unit-assessment.mdx:165-200) consistent with the taught material; RRQ-03 still tolerates either placement of the salt crust with a reason; no conflicting keys",
+        "ERQ rubrics are analytic, distinct and each totals 10 (unit-assessment.mdx:202-221); Bloom demand classified from the thinking required: ERQ-04 Create (design a change with failure condition), ERQ-05 Evaluate (actors per scale); MCQ-10 and RRQ-10 labels lowered to Understand per the round-1 advisory, matching the thinking actually required",
+        "check:bloom-bands exit 0 (250 items honour the spec bands); MCQ-6 producer/consumer distractor defused in the key note"
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "pass",
+      "evidence": [
+        "renders/render-inspect.log + renders/render-inspect.json: real browser inspection of all 7 pages at desktop 1280x900, narrow 360x780 and A4 794px print emulation (chromium 149.0.7827.0 via Playwright, host http://127.0.0.1:4611, served from a fresh npm run build at HEAD 2bc81b3), 0 defects",
+        "renders/desktop-*.png and renders/narrow360-*.png: all 8 figures served with full alt text; the Figure component display:none lazy dark twin correctly hidden in light mode and loading under data-theme=dark (renders/dark-topic-01.png, no visible broken images); no skipped heading levels; no document horizontal overflow at 360px",
+        "content tables measured on the table element itself at 360px: client 328 = scroll 328 on every topic (fits, so no tabindex/role/aria-label needed - only overflowing tables are marked, src/theme/DocItem/Content.tsx); figures fit at 360px",
+        "A4 print: clippedElems=0 on all pages (renders/print-a4-*.pdf); answers section prints unclipped as the teacher handout intends (renders/printview-unit-assessment.png)",
+        "SVG glyph geometry clean on all 8 figures x 4 committed variants (light/dark/ur/ur.dark): no text past the 780x470 viewBox, no wordmark overprint (logs/measure-figure-text.log, exit 0)",
+        "round-1 figure transposition repair verified in the rendered DOM: the figure following the scope prose in topic-01 is fig-U1-2 (render-inspect.json topic01FigureOrder.scopeNextFig; renders/desktop-topic-01.png)"
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "all nine in-glossary key terms glossed at first use via <Glossary>: Environmental science, Natural environment, Biosphere (topic-01.mdx:40,59,77), Anthropogenic (topic-02.mdx:40), Ecosystem, Ecosystem services, Natural resources, Renewable/Non-renewable resources (topic-03.mdx:31,55,83,86,89), Sustainability (topic-04.mdx:41); every wrapped term has a glossary.json entry (validate:content exit 0)",
+        "Biodiversity and Conservation (spec key terms with no glossary.json entry, so not wrappable) are used with context-supplied meaning at first occurrence (topic-02.mdx:78-79, topic-03.mdx:74-79); HSC-register words, no graduate jargon",
+        "prerequisite knowledge declared as none beyond HSC and none assumed (index.mdx:41-44; content-spec.md:327-329)",
+        "HSC-register prose verified across all four topics: short sentences, concrete nouns, every technical idea anchored to a Pakistani example before abstraction"
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": [
+        "nine-part learning cycle present and complete in all four topics (situation, explanation, activity, check your understanding, summary, self-assessment, practicum, summative task, further reading)",
+        "worked examples are concrete, Pakistan-grounded and repeatable by a trainee teacher: cup of tea through four spheres (topic-01.mdx:91-96), waterlogging chain (topic-02.mdx:55-62), mangrove services (topic-03.mdx:56-60), groundwater rate (topic-03.mdx:105-109), biscuit wrapper (topic-04.mdx:67-73)",
+        "activities are feasible in a Pakistani classroom with stated time and grouping (topic-01.mdx:105-111, topic-02.mdx:102-108, topic-03.mdx:117-123, topic-04.mdx:83-89) and the teacher notes give management guidance for each (unit-teacher-notes.mdx:50-67)",
+        "round-1 transposition repaired and verified: fig-U1-2 (scope table) follows the scope sentence at topic-01.mdx:47-50 and fig-U1-1 (four spheres) sits in the spheres section at :87, verified in source, built HTML and rendered page; the residual one-word deixis error on the newly added sentence at :89 is recorded as an advisory finding (figure adjacent, instructional meaning recoverable)"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "Bound excerpt does not state the repaired mangrove ranking claim (round-1 blocking finding 4 repaired in prose only). topic-03.mdx:50-53 now reads \"A national assessment using satellite imagery ranks the Indus Delta as the world's fifth-largest mangrove forest and has mapped how Pakistan's cover changed over time (Abbas et al., 2012)\". The reword itself is correct and source-supported: verified by direct fetch of the publisher page (isprs-archives.copernicus.org/articles/XXXVIII-8-W20/187/2011/, 2026-09-23), the abstract states \"The Indus delta region contains the world's fifth-largest mangrove forest\". But the bound excerpt specs/content/gnas-301/sources/texts/abbas2012.md:22 truncates mid-sentence at \"The Indus delta region contains the world's ...\" and does not contain the ranking, and its support note (abbas2012.md:24-32) still declares only the national-mapping claim and a \"major mangrove region\", not the ranking. The excerpt's closing declaration \"The unit does not rely on this source for any figure it does not state here\" is therefore inaccurate for the repaired prose: the unit now relies on abbas2012 for a specific world-ranking figure the bound excerpt does not state. This is the same excerpt-contract failure (D-2026-0021) round 1 blocked on for the 99-per-cent air claim. Repair: complete the excerpt's final abstract sentence to include \"fifth-largest mangrove forest\" and extend its support note to declare the ranking claim. No unit prose change is needed."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Teacher-notes cross-reference inaccuracy remains uncorrected although the repair commit message (c77c070) claims it was fixed. unit-teacher-notes.mdx:21-23 still reads \"the Keenjhar Lake from 1.3 returns as a resource rate in 1.3 and a practicum option in 1.4\": self-referential (Keenjhar is already in 1.3), and Topic 1.4's practicum is the two-bin classroom trial, not a Keenjhar option (Keenjhar appears in 1.4 only in the opening situation). The file is byte-identical to the round-1 bound state (digest cdddd01051a0897d79cb65049fdf1d2e9956f6bda949646c94a06036ad056424 in both manifests; no commit between the attempts touches it). Repair as round 1 suggested, e.g. \"...returns in 1.3's resource-rate debate and in 1.4's opening situation\"."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "UN Decade paraphrase still reads \"restore\" where the bound excerpt says \"revive\", although the repair commit message claims the paraphrase was aligned. topic-02.mdx:67-69: \"there has never been a more urgent need to restore damaged ecosystems (UN, 2021)\"; sources/texts/un-restoration-2021.md:11: \"There has never been a more urgent need to revive damaged ecosystems than now.\" topic-02.mdx is byte-identical to round 1 (no commit touches it). Still acceptable as an unquoted paraphrase (round 1's own judgment; \"restoration\" is the Decade's own term), so this stays advisory - but the parent should note that two of the six advisory repairs claimed in commit c77c070 (this and the teacher-notes cross-reference) were not actually applied to the bytes."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Bare-URL link text in all four topics' ## Further reading sections (topic-01.mdx:167-168, topic-02.mdx:163-168, topic-03.mdx:182-194, topic-04.mdx:140-145), unchanged from round 1: verified in the built HTML, the anchor text is the raw URL, so a screen-reader user hears the URL instead of a description. Consider descriptive link text at the next revision."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Course-level inconsistency (outside unit prose), unchanged from round 1: docs/semester-1/gnas-301/course-overview.mdx:5 carries credit_hours \"3 (3-0)\" while catalog/courses.json (GNAS-301 entry, re-verified this attempt) and the approved content-spec carry \"3 (2-1)\". The overview is an explicit \"Coming soon\" placeholder; flagged so the authoring pass uses the catalogue split."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "New residual deixis error introduced by the figure-swap repair. topic-01.mdx:89, added by commit c77c070 directly below the fig-U1-1 carrier at topic-01.mdx:87, reads \"The figure below gathers the four spheres around one Earth, with a school building standing in the biosphere.\" - but the figure is above the sentence, and render inspection confirms no figure follows it (render-inspect.json topic01FigureOrder.spheresNextFig = null; renders/crop-spheres-region.png shows the sentence directly beneath the diagram). A learner is directed to look below for a figure that sits above. The figure is adjacent and was just seen, so the instructional meaning is recoverable (advisory, not a return of the round-1 blocking transposition). Repair: change \"below\" to \"above\", or move the sentence above the carrier."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "who-water-2023 excerpt support note mislabels the supporting unit. sources/texts/who-water-2023.md:18-24 is headed \"What this supports in GNAS-301 Unit 2\" and describes only Topic 2.1/2.2 usage; it omits this unit's Topic 1.3 (U1-06) usage that sources/unit-01.md:18 and coverage/unit-01.md:20 bind it for. The excerpt's key facts do state the over-2-billion water-stress figure, so the Unit 1 binding chain is sound; the note is stale bookkeeping (the file was added by the Unit 1 repair commit but written from Unit 2's perspective). Related observation: the prose cites both WHO 2023 fact sheets as \"(WHO, 2023)\" (topic-02.mdx:77-78 climate, topic-03.mdx:112-113 drinking-water); each is disambiguated only through the governance chain, not in learner-facing text. Repair: extend the note to name Unit 1's U1-06 usage or make it unit-neutral."
+    },
+    {
+      "severity": "blocking",
+      "resolved": true,
+      "message": "ROUND-1 BLOCKING FINDING 1 RESOLVED: figure/prose transposition in topic-01.mdx. fig-U1-2 (scope table) now follows the scope-introducing prose at topic-01.mdx:47-50 and fig-U1-1 (four spheres) sits in the four-spheres section at :87. Verified in the MDX source, the built HTML (figure order fig-U1-2 then fig-U1-1) and the rendered page (renders/desktop-topic-01.png; render-inspect.json topic01FigureOrder.scopeNextFig = fig-U1-2.svg). The residual wording defect on the newly added sentence is recorded separately as an advisory finding."
+    },
+    {
+      "severity": "blocking",
+      "resolved": true,
+      "message": "ROUND-1 BLOCKING FINDING 2 RESOLVED: unbound citation for the 99-per-cent air-quality claim. who-air-2024 is now bound (sources/unit-01.md:17; coverage/unit-01.md:11) with a faithful excerpt (sources/texts/who-air-2024.md) whose key facts state the 99-per-cent figure. Excerpt faithfulness verified by direct fetch of the WHO fact sheet (24 Oct 2024) this attempt: \"In 2019, 99% of the world's population was living in places where the WHO air quality guidelines levels were not met.\""
+    },
+    {
+      "severity": "blocking",
+      "resolved": true,
+      "message": "ROUND-1 BLOCKING FINDING 3 RESOLVED: misattributed 2-billion water-stress figure. The claim (topic-03.mdx:112-113) is re-bound from who-climate-2023 to who-water-2023 (sources/unit-01.md:18; coverage/unit-01.md:20) with a faithful excerpt, and the who-climate-2023 excerpt note is corrected (sources/texts/who-climate-2023.md:23-25). Verified by direct fetch this attempt: the WHO Drinking-water fact sheet (13 Sep 2023) states the water-stress figure; the Climate change fact sheet (12 Oct 2023) contains no water-stress statement at all."
+    },
+    {
+      "severity": "advisory",
+      "resolved": true,
+      "message": "ROUND-1 ADVISORIES RESOLVED: (a) MCQ key de-skewed by option rearrangement with the answer key updated consistently (now 1-b, 2-c, 3-a, 4-d, 5-c, 6-b, 7-b, 8-d, 9-a, 10-a; distribution a=3, b=3, c=2, d=2, was 7x b; all ten items re-solved independently this attempt with no ambiguity introduced); (b) MCQ-10 label lowered Apply -> Understand and RRQ-10 Analyze -> Understand, matching the thinking actually required; (c) un-restoration key renamed un-restoration-2021 so the excerpt is digest-bound in this round's manifest (verified present in input_manifest)."
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-01/G3/round-02/logs/validate-content.log"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-01/G3/round-02/logs/check-depth-gate.log"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-01/G3/round-02/logs/check-figures.log"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-01/G3/round-02/logs/check-no-em-dash.log"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-01/G3/round-02/logs/check-no-answer-keys.log"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-01/G3/round-02/logs/check-docs-sync.log"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/render-inspect.log"
+    },
+    {
+      "name": "check:concept-graph",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-01/G3/round-02/logs/check-concept-graph.log"
+    },
+    {
+      "name": "check:bloom-bands",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-01/G3/round-02/logs/check-bloom-bands.log"
+    },
+    {
+      "name": "check:source-floor",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-01/G3/round-02/logs/check-source-floor.log"
+    },
+    {
+      "name": "check:content-status",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-01/G3/round-02/logs/check-content-status.log"
+    },
+    {
+      "name": "check:pipeline-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-01/G3/round-02/logs/check-pipeline-gate.log"
+    },
+    {
+      "name": "check:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-01/G3/round-02/logs/check-content.log"
+    },
+    {
+      "name": "build",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-01/G3/round-02/logs/build.log"
+    },
+    {
+      "name": "measure-figure-text",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-01/G3/round-02/logs/measure-figure-text.log"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/logs/build.log": "c9f09d8167951f622c5ae9046e21054a890dd53ed2761d38101a2ddb84ba245b",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/logs/check-bloom-bands.log": "a2006cfcfda496faed76c85d51c28f9bc3a29e585464d76bde18006faba06222",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/logs/check-concept-graph.log": "908560a9cfc2f48d67904d2616b4ef7c70c72eadfaeeca95ca11e429e38f09b3",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/logs/check-content-status.log": "ee4b9e35dd8ed3cbc1e892a6c59ca30147cde8cb57e056623d270fcf577483d9",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/logs/check-content.log": "30f9566acf38d49e35c0c379f1fecafb5c2578d19ba65a80317455ac1d2be81b",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/logs/check-depth-gate.log": "b0c4eeaa24613853bc7dd1124721c3576b9c2ea0d83d804bb98a47c646579f2f",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/logs/check-docs-sync.log": "388691a97d7539a857dafad859d26a639e67f09402e7f0c242b4a09e4b62049b",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/logs/check-figures.log": "3d8e7e0311cc402d8ef731bc62cfd8efd8bb72907261a2ec1da4ed2ea4db7c3a",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/logs/check-no-answer-keys.log": "3fa235456d5db64e830f726b03bd39a9f3388aa8239273fa8f1b6f549465fc39",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/logs/check-no-em-dash.log": "f94465f4c88bd3c3db4d995e7757fc7f08feae27e57c724a2eaafc8499ec2fe6",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/logs/check-pipeline-gate.log": "93048489b85a6dbd5e5eff1c2130e4d2336a169e17e6f34cfe6858b738e3e6f9",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/logs/check-source-floor.log": "d6391c01b1f81773ecd36191365f8bde9b9280bba36856e50fad47c636cf0694",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/logs/measure-figure-text.log": "3bfbdd13b5f3fb749fbc5b1fb0a2a4f1a704197150b1438ced601116793c1350",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/logs/validate-content.log": "0753463dcc4f70bfeed270f5eb8accdfb2113670791fc90775ea247c275de426",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/crop-spheres-region.png": "e39de535e50074a2b19d4f652c10224d27f29e30f031a47b625b23557e39de18",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/dark-topic-01.png": "c00b2439e58e9c72b07e9260935a498accce885aa4525a32bbde7dd733a06a13",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/desktop-index.png": "460f3887faab50bacc9d42b14f176c8b4219ca0147f0e12d0fb10b4c753aa9ca",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/desktop-topic-01.png": "c64a5937e40b6a2da219d37c2afd40f0dfe8a0d7bc9bc2337315c7da9f102e3e",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/desktop-topic-02.png": "bbe5277e78543b393ca942fc3633c8610949ae323a021e1e88b365c8faf7cdf8",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/desktop-topic-03.png": "5fa002bf52a13578ab5c775a53e5c1b5e8355874c2568ba5e4e46218a5eddc8d",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/desktop-topic-04.png": "a84ef8283b04f145bc479d2b99cc4e8db594b2fc7ab64a66e2fa712bc8218835",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/desktop-unit-assessment.png": "beddec399d5edb03a838f17421171e93ed780cbdb9e76173bf51a6a6f86e604d",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/desktop-unit-teacher-notes.png": "15a9a88a6f48f4223567db87730e30848e245a2ceb2deb1cf426a70ed2ca65eb",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/narrow360-index.png": "f5afc77920d95a4a823498bf81840a1f0ceeb07700e5d097fd1a538748a221c0",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/narrow360-topic-01.png": "246792726acb34d5eed11a6dadb73aae384eee89da0d670fa539a8d8717db459",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/narrow360-topic-02.png": "b4d64c48291fe13b59cd1ce3a0bcbb1b31ee6055113de3854569dc4e18617949",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/narrow360-topic-03.png": "227192dd814dde2a9bc910b59b87cd68adcc1f021b765a50188de3a84bf7dac0",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/narrow360-topic-04.png": "f5f933fde1bfd76f5f0c2129d80d21f8eec0ac4304486d4f9b2c7be7b5253e1a",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/narrow360-unit-assessment.png": "875c49c4cf23cff7b7fbfe87ff3945cf12af789593d1ce349addb58458fea482",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/narrow360-unit-teacher-notes.png": "246ddd9c2bb15847257524cc7914c9ab5f823adceb75ae7726ae5ff2aa4aaa5a",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/print-a4-index.pdf": "63ee6e0b3f3d87994dc74920efacdfde429ee877f4439c65a11c9d0043185cc3",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/print-a4-topic-01.pdf": "4e1e9cb2e6e7f71ee9f1df747514b6a395903a27b74167f066edae97c6e6ec27",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/print-a4-topic-02.pdf": "b30e71bea74a732e1b3e6599e31644cf8ba7b98b0490a1fb5d45c828aafb70b6",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/print-a4-topic-03.pdf": "411cd62652c6745947cdee0133a0ab0ed724f456a75d55b2cd0f624df8560757",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/print-a4-topic-04.pdf": "7b6161e1cb06809b8f868260e685c9880130c3155dc988af0cb58bff8d1851db",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/print-a4-unit-assessment.pdf": "f1736e8b3ae1317ae218d5b10c1295717bb3069f9d7fb838f303b551a8d8c16a",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/print-a4-unit-teacher-notes.pdf": "fd36ab9e88db66d243c9909b5afdb88d986268774ba4a799595843de3c40e9bb",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/print-shots.mjs": "560719967b6f82aa3a6f3e17d2aabfe3913f7f8fa4ebd54f21485ec2cb12c5c9",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/printview-topic-03.png": "7f0c7e4f4a00ad9cd66ed544744bdd04a5298d33fe26a458290a290b92a68f21",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/printview-unit-assessment.png": "135d65d36930dce4226961d9139208647f86fda1b0658cdde3619dff84de728e",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/render-inspect.json": "ee615d2ca1179df0fcb429ff58276056e66e789ce2e156c3ac26ced568041a4a",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/render-inspect.log": "8381ec0b12db9538a40ead7ac15476813bbf2b13e7631bdfcef3eeb9d44c1fc2",
+    "specs/content/gnas-301/reviews/unit-01/G3/round-02/renders/render-inspect.mjs": "0a9b98c83f8e1675cfdc63cf634cbfb9ddafbed696558d2a5492fef2b84df1df"
+  }
+}
