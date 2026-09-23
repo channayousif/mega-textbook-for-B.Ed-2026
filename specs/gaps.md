@@ -786,3 +786,97 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   Unretrievable print monographs bind the author to title-level support at point of use under
   `D-2026-0001`; no full-text access is required at G1.
 - **Blocks:** ~~the `readings` criterion of `D-2026-0018`~~ **unblocked**.
+
+---
+
+## G-2026-22 - GNAS-301 intake: the six-unit partition is the spec's construction over a guide that gives only a week table
+
+- **Status:** open
+- **Gate:** G0 intake / G1 unit-spec (partition criterion)
+- **Source:** `D-2026-0020`
+- **Detail:** The GNAS-301 guide block (`Scheme-and-Course-guides/extracted-text/1st 2026.txt:143-366`)
+  numbers its topical outline under explicit week headings only: Week 1 (`:195`) through Week 16
+  (`:315`), sub-topics 1.1 to 16.2, with the mid-term at 7.1 (`:252`) and the final term at 16.2
+  (`:318`). It carries **no unit headings of any kind**. The spec records the calendar as
+  guide-given and derives a six-unit partition (Weeks 1-2 -> Unit 1, 3-4 -> Unit 2, 5-6 -> Unit 3,
+  8-10 -> Unit 4, 11-12 -> Unit 5, 13-16 -> Unit 6), clearly labelled as derived per
+  `D-2026-0012` with its basis stated (contiguous whole weeks; the mid-term divides the pre- and
+  post-mid halves; boundaries where the guide's topics change character).
+
+  What the guide **does** determine, and what the evaluator verified mechanically: the 16-week
+  calendar, the mid-term and final placement, and the partition's structural properties -
+  contiguous whole weeks, no guide topic reordered, no week split across units, the mid-term week
+  excluded from teaching units, and 16.1 taught in the examination week per the guide's own
+  placement (it is a teaching sub-topic the guide lists under Week 16, before the final
+  examination entry).
+
+  What the guide does **not** determine: the number of units (six) and the block boundaries. The
+  guide gives no unit grouping, so any contiguous merge - three units, six, one per teaching week -
+  is equally consistent with it. The spec's stated basis ("block boundaries fall where the guide's
+  own topics change character") is a pedagogical judgement. `D-2026-0012` permits the section to
+  be recorded as derived and labelled; it expressly leaves the substance "for an evaluator to
+  approve or escalate", and the partition criterion's own text for week-table-only guides is that
+  the partition is a judgement the guide does not determine. The spec anticipates this and asks
+  for the finding ("if the evaluator judges a different merge better serves the guide's grouping,
+  that is a G0/G1 finding to apply before authoring").
+- **Needed, and from whom:** the curriculum owner, to confirm the six-block merge (2/2/2/3/2/4
+  teaching weeks across Units 1 to 6) or supply another partition, in the manner `G-2026-16`
+  settled EFMP-304's calendar. The week calendar itself needs no decision: it is guide-given.
+- **Blocks:** the `partition` criterion of `D-2026-0020`. The "Weeks N-M" line opening each of the
+  six `## Unit N` subsections stands only if the merge is confirmed.
+
+## G-2026-23 - GNAS-301's guide reading list: five of seven entries do not resolve as printed, and the spec's open-access floor is neither owner-adopted nor enforced
+
+- **Status:** open
+- **Gate:** G0 intake (readings criterion)
+- **Source:** `D-2026-0020`
+- **Detail:** The guide lists seven recommended books (`1st 2026.txt:352-366`). The spec
+  transcribes all seven and files each as verified real or flagged. The evaluator verified each
+  entry independently against Open Library on 2026-09-23 (an external registry, not a bound
+  input):
+
+  | Guide entry | Verification |
+  |---|---|
+  | *Planetary Health*, A. Haines and H. Frumkin | **resolves**: *Planetary Health*, Island Press; 1st ed. 2020 (Myers & Frumkin), 2nd ed. 2023 (Frumkin & Haines) - the guide's pair matches the second edition, as the spec records |
+  | *Occupational Health*, J. M. Harrington / F. S. Gill | **resolves**: *Occupational health*, Harrington & Gill, Blackwell Scientific, 1983 |
+  | *Oxford Textbook of Environmental Science, Vol. I & II*, W. W. Holland | does not resolve as printed; Holland's real multi-volume Oxford textbook is the *Oxford Textbook of Public Health* (with R. Detels, OUP, 1984-1997), confirming the spec's identification |
+  | *Textbook of Preventive of Pollution*, J. E. Park, K. Park | does not resolve as printed; the closest real work is *Park's Textbook of Preventive and Social Medicine* (J. E. Park, Banarsidas Bhanot, 1970 onward), confirming the spec's identification |
+  | *Environmental Science in South East Asia*, W. O. Phoon, P. C. Y. Chen | does not resolve as printed; W. O. Phoon is a real Singapore-based occupational-health author (*Occupational health in developing countries in Asia*, SEAMIC, 1985); the exact title with Chen is not locatable, confirming the spec's reading |
+  | *Environmental Health Practice*, R. S. F. Shilling | not resolvable from this host either way: Open Library holds no Shilling records at all and web search returned nothing; the spec's identification (his real standard work is *Occupational Health Practice*) is consistent with the claim but unverified from here |
+  | *Environmental Studies*, Clark and Henderson | does not resolve as printed: no Clark/Henderson environmental-studies textbook in Open Library's title matches set; a web-search candidate (*Environmental Studies: Critical Approaches*, Broadview Press) could not be verified on Open Library or at the publisher and is recorded here only as an unverified lead |
+
+  So the spec's reading of its reading list is confirmed in substance: **two of seven verified
+  real, five unresolvable as printed** and flagged per `D-2026-0001` with title-level support
+  only. All seven are print monographs; none carries a DOI. Units 2 and 3 map only flagged
+  sources, so some units have no verified-real guide reading at all.
+
+  Three things need an owner decision, none of which the guide determines:
+
+  1. **Usability.** This is the `G-2026-14` question again, on weaker ground: EFMP-304's seven
+     entries all resolved to real works and only access was the problem; here five of seven do
+     not resolve as printed. `D-2026-0013` settled EFMP-304's usability, and its Limits state it
+     "does not set a corpus-wide floor, though it is the obvious precedent for any other course
+     whose guide list is print-only". Whether GNAS-301 authors against this list as it stands is
+     the owner's call.
+  2. **The floor.** The spec sets a binding G2 requirement of at least two verifiable
+     open-access sources per unit for **all six units** (stronger than EFMP-304's 2/2/2/1/1/1),
+     resolved through a named registry and recorded with the date of verification, with an
+     escalation path if a unit cannot meet it. The design follows the EFMP-304 precedent and,
+     like that precedent, needs adoption: an evaluator approving it as binding would be
+     extending `D-2026-0013`'s scope, which Art. VII.8.2 reserves.
+  3. **Enforcement.** The floor is **not declared in `open_access_floor` front matter**, so
+     `check:source-floor` - the `G-2026-17` fix built for exactly this - does not check GNAS-301
+     at all. Verified on this run: the gate's only finding is GENG-300's; GNAS-301 is invisible
+     to it. The spec's "binding requirement" is currently enforced by nothing. The fix is known
+     and cheap (declare the floor in front matter in the form the gate reads, as EFMP-304 and
+     GENG-300 already do), but wiring it should follow the owner's adoption decision, and the
+     declaration is the author's action, not the evaluator's.
+- **Needed, and from whom:** the curriculum owner, to (a) confirm the five flags and the
+  closest-real-work identifications, or supply the real works the guide means (in particular for
+  "Environmental Studies - Clark and Henderson" and "Environmental Health Practice - Shilling");
+  (b) adopt the two-per-unit open-access floor for GNAS-301, adopt it with different numbers, or
+  decline it; and (c) direct that the adopted floor be declared in `open_access_floor` front
+  matter so `check:source-floor` enforces it.
+- **Blocks:** the `readings` criterion of `D-2026-0020`; the `### Curated-supplementary`
+  section's empty-with-floor posture. The `**Mapped readings**` lines of all six units stand only
+  if the floor is adopted.

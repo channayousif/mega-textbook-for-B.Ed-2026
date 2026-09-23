@@ -778,3 +778,138 @@ Recorded here so the boundary stays visible as the log grows:
   `c1e8972a645d3db867f277ad539d87b42fc2f48bde56a8f0f01b140392c66f674`
 - **Limits:** does not approve any unit's English review (G3) or Urdu translation (G5). Certifies no
   content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
+
+---
+
+## D-2026-0020 - GNAS-301 intake: identity, coverage, outcome traces, blueprint, structure, no decision residue
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** GNAS-301 only. Settles the identity fields, the sub-topic coverage of all six
+  checklists, the CLO traces, the assessment blueprints, structural conformance, and the absence
+  of decision residue. Does **not** settle the six-unit partition (`G-2026-22`) or the reading
+  list's usability and open-access floor (`G-2026-23`).
+- **Decided by:** agent:evaluator, 2026-09-23
+- **Decision:**
+  1. **Identity.** GNAS-301, "Environmental Science", **3 (2-1)** credit hours, Semester 1,
+     General Education, bilingual (the catalog carries no `bilingual` flag for this course; in
+     Semester 1 only GENG-300 carries `false`, so the bilingual default holds). Matches
+     `catalog/courses.json` (`semesters[0].courses[1]`) and the guide header
+     (`1st 2026.txt:143-150`: code `:143`, title `:146`, "Credit Hours 3" `:148`, "1st Semester"
+     `:149-150`; the dash inside the guide's "GNAS- 301" is typographic). **No Article II.3
+     conflict remains to adjudicate**: `G-2026-02` (resolved, owner, 2026-09-10) already settled
+     this course's code (GNAS-301 from the guide, over the scheme's GNAS-401) and credit
+     reconciliation (guide total 3, scheme split `3 (2-1)`, catalog resolved to `3 (2-1)`), and
+     that decision binds. A total and a split of that total do not contradict each other, the
+     posture `G-2026-02`/`G-2026-05` established. Unlike EFMP-304,
+     `.specify/Course_guides_and_Scheme/` **does** contain a file for this course
+     (`GNAS-401_Environmental_Science.docx`); `D-2026-0003` (confirmed, corpus-wide) governs it:
+     that folder is a superseded departmental variant set retained for provenance only. The
+     spec cites the Faculty guide only, so `D-2026-0003` is applied, not evaded, and the code
+     question it might raise is already `G-2026-02`'s settled ground.
+  2. **Coverage is complete and adds nothing.** The guide numbers its outline by week
+     (`1st 2026.txt:193-318`): 53 numbered items, of which `7.1 Mid Term Examination` (`:252`)
+     and `16.2 Final Term Examination` (`:318`) are examinations, leaving **52 teaching
+     sub-topics** (1.1 through 16.1). The spec's six checklists carry exactly **52 rows**
+     (7 + 5 + 6 + 15 + 7 + 12). Verified mechanically: every guide teaching ref appears in the
+     spec exactly once, no row lacks a guide ancestor, no ref is duplicated, and each unit's
+     refs are contiguous and ascending (no guide topic reordered, no week split across units).
+     The two examinations are carried as calendar rows in `## Week schedule`, not as
+     sub-topics, which is the correct reading of what they are. Transcription normalisations
+     are within-guide slips, disclosed by the spec: "responsivities" (`:225`) transcribed as
+     "responsibilities" (U1-07); "bio-magnificatio" (`:308`) transcribed as
+     "bio-magnification" (U6-09).
+  3. **The outcome traces hold.** The guide's five CLOs (`:171-191`) are transcribed verbatim at
+     `content-spec.md:42-54`, the single normalisation (CLO 1's "human-environment" en dash to a
+     plain hyphen) disclosed at `:36-38`. Every CLO is delivered by at least one unit whose
+     guide topics carry it: CLO 1 by Unit 1 (guide 1.1-2.2); CLO 2 by Units 1, 2, 3 and 6
+     (guide 1.4, 3.2, 5.1, 16.1); CLO 3 by Units 3, 4, 5 and 6 (guide 6.2, 8.1-8.2, 11.1,
+     13.1-13.5); CLO 4 by Units 2, 3, 4 and 5 (guide 3.3-4.2, 5.1, 6.4, 8.3-10.8, 11.4); CLO 5
+     by Units 1, 5 and 6 (guide 2.3, 12.2, 16.1). No SLO lacks a guide ancestor and no CLO is
+     orphaned, so the EFMP-302 `G-2026-10` failure mode is absent.
+  4. **All six assessment blueprints are internally consistent and consistent with the style
+     guide.** Every unit carries the fixed 10 MCQ / 10 RRQ / 5 ERQ bank with the style guide's
+     bands (MCQ Remember-Apply, RRQ Understand-Analyze, ERQ Analyze-Evaluate/Create, at least
+     one Analyze-or-higher ERQ rubric) and a formative 5-8 item set
+     (Remember-Understand-Apply). The per-topic minimums saturate without breach: 4 topics x
+     >= 2 = 8 <= 10 (Units 1, 3, 5); 3 x >= 3 = 9 <= 10 (Unit 2); 7 x >= 1 = 7 <= 10 (Unit 4);
+     6 x >= 1 = 6 <= 10 (Unit 6); ERQs one per topic plus integrative items, all topics
+     covered in every unit. The guide's course-specific marks table (`:341-350`) resolves
+     arithmetically to Mid 30 / Final 50 / Assignment-Presentation 10 / Attendance 10 = Total
+     100, the only arithmetically consistent reading of the scrambled extraction; the spec
+     follows it and justifies the deviation from the Constitution Art. III.7 60/40 default in
+     the spec itself, which is exactly what Art. III.7 requires ("per-unit deviations MUST be
+     justified in the unit spec"). The course-review practice mix (~18 MCQ / ~12 RRQ / ~6 ERQ)
+     has no fixed count under the style guide, which the human Content gate judges.
+  5. **Structure conforms.** Front matter (`course_code: GNAS-301`, `status: draft`,
+     `bilingual: true`) validates against `contracts/content-spec-frontmatter.schema.json`
+     (`bilingual` is an additional property, permitted). All course-level sections (`## Course
+     Description`, `## Reading list` with `### Guide-required` and
+     `### Curated-supplementary`, `## Week schedule`, `## Standards & frameworks anchors`,
+     `## Course review plan`) and all per-unit contract blocks (CLO/SLO refs, Key terms,
+     Topics, Worked-example / activity concepts, Assessment blueprint, `### Sub-topic
+     checklist` with the `Topic` column, `### Topic list`, Depth budget, Prerequisite
+     knowledge, Common misconceptions, Mapped readings, Worked-examples plan, International
+     best-practice notes, Figure plan, Unit-end assessment blueprint) are present in all six
+     units, verified mechanically. The spec-side invariants were replayed directly, because the
+     deterministic gates walk `docs/` and GNAS-301 has no authored unit yet: for every unit the
+     `Sub-topic IDs` cells form a total, disjoint partition of the checklist; every checklist
+     `Topic` cell equals its `### Topic list` row label; every `**Depth budget**` sub-topic and
+     topic count matches its own tables; every topic carries two figure IDs from the six-value
+     `Kind` vocabulary and every unit at least one concept-map / flowchart / timeline
+     (Constitution Art. III.10). Zero failures across all six units. Zero em dash characters
+     in the spec.
+  6. **No decision residue.** The whole specification was swept for superseded designs, not
+     only the sections confirmed decisions name: no one-term or one-page development plan
+     (`D-2026-0002`/`D-2026-0004`), no reliance on the `.specify/Course_guides_and_Scheme/`
+     tree (`D-2026-0003`), no review-cycle assumptions (`D-2026-0005`), no EFMP-304-specific
+     pattern misapplied. `D-2026-0001` is invoked within its Limits: the five unresolvable
+     monographs are flagged with the title-level limit stated at the point of use, in the
+     reading-list table and on every unit's `**Mapped readings**` line. `D-2026-0012` is
+     applied correctly: `## Week schedule` records the calendar as guide-given and the unit
+     partition as derived, clearly labelled, with its basis stated. The spec's single mention
+     of 60/40 correctly states that the default does not apply. The `D-2026-0013` pattern the
+     spec follows is the subject of `G-2026-23`, not residue.
+- **Basis:** `Scheme-and-Course-guides/extracted-text/1st 2026.txt`, the GNAS-301 block at
+  `:143-366`: code `:143`, title `:146`, credit hours `:148`, semester `:149-150`, description
+  `:152-167`, CLOs `:171-191`, week outline `:193-318` (Week 1 `:195`, mid-term `7.1` `:252`
+  under Week 7 `:250`, Week 16 `:315`, `16.1` `:317`, final `16.2` `:318`), teaching strategy
+  `:320-338`, assessment criteria `:341-350`, recommended books `:352-366` (book 7 at `:366`).
+  `catalog/courses.json` (`semesters[0].courses[1]`) for code, title, credit split, category
+  and the bilingual default. `specs/content/style-guide.md` (v4.0) and
+  `specs/008-rich-unit-pedagogy/contracts/content-spec-v3.md` for the blueprint and structure
+  clauses. Items 1 to 3 are determined by the guide directly; items 4 and 5 rest on the guide
+  for content and on the bound style guide and contracts for form; item 6 rests on the
+  confirmed decisions it names.
+
+  Note for the record: the spec's own guide citations read `:152-163` (description), `:169-183`
+  (CLOs), `:193-317` (outline), `:352-364` (books) and `:313` ("bio-magnificatio"). The
+  verified ranges are `:152-167`, `:171-191`, `:193-318`, `:352-366` and `:308`. Every
+  citation's target content is present in the guide and correctly transcribed in the spec; only
+  the line ranges are short or off. This decision rests on the verified lines, not on the
+  spec's citation of them, in the manner of `D-2026-0006`'s note on the EFMP-304 duplicate.
+- **Bound to:** `specs/content/gnas-301/intake/manifest.json`, manifest digest
+  `9050a3b7be854c41c20784294c7481008c23277997e0a71baaf572daeff4bea7`, **54 inputs** at commit
+  `34f36685231eeb2fefda164794e0723c72aaa93e`. Recomputed independently with `manifestFor()`
+  from `scripts/lib/review-evidence.mjs` over the same `intakeRoots('gnas-301')` root set
+  `prepare-intake-evidence.mjs` uses: every path and every digest matched, with no extra and no
+  missing entry, and the recorded `manifest_digest` reproduced from a fresh read from disk. The
+  `registers` field also matched. **Any change to a bound input voids this approval**
+  (Art. VII.8.5). The two registers are recorded in `registers`, not `input_manifest`, so
+  recording this decision does not void it.
+- **Limits and what remains open:**
+  - **The six-unit partition is not approved.** The guide numbers its outline by week and gives
+    no unit headings, so the partition is a judgement the guide does not determine; it is
+    recorded and escalated as `G-2026-22`. The week calendar itself (16 weeks, mid-term at
+    Week 7, final at Week 16) **is** guide-given and is approved as such, as are the merge's
+    mechanically verified properties (contiguous whole weeks, no reordering, no week split
+    across units, the mid-term week excluded, 16.1 taught in the examination week per the
+    guide's own placement).
+  - **The reading list's usability and the open-access floor are not approved.** Five of the
+    seven guide-required entries do not resolve as printed, and the spec's two-per-unit
+    open-access floor follows the EFMP-304 precedent (`D-2026-0013`) whose scope names that
+    course only; escalated as `G-2026-23`, which also records that the floor is not declared
+    in `open_access_floor` front matter, so `check:source-floor` does not check this course at
+    all.
+  - Does not approve any unit's English review (G3) or Urdu translation (G5). Certifies no
+    content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
