@@ -13,7 +13,7 @@ on every unit).
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0042; content-spec status: approved |
-| Unit 1 | G2 en-draft | ▢ | | blocked on G1 |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-01/G2/20260923T204443948Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | advisory (ADR-0019); fresh g3-reviewer per unit |
 | Unit 1 | G4 ur-translation | ▢ | | full Urdu mirror required (bilingual: true) |
 | Unit 1 | G5 ur-review | ▢ | | advisory; fresh g5-reviewer bound to accepted G3 |
