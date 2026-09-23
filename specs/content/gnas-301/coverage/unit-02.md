@@ -10,12 +10,14 @@ the source key it is grounded in.
 | U2-01 | topic-01.mdx | Global water distribution, Pakistan's water resources, and water security | samtio2022 |
 | U2-01 | topic-01.mdx | Global water distribution, Pakistan's water resources, and water security | archer2010 |
 | U2-01 | topic-01.mdx | Global water distribution, Pakistan's water resources, and water security | who-water-2023 |
+| U2-01 | topic-01.mdx | Global water distribution, Pakistan's water resources, and water security | usgs-water-2019 |
 | U2-01 | topic-01.mdx | Global water distribution, Pakistan's water resources, and water security | holland-oxford |
 | U2-02 | topic-02.mdx | Water pollution: sources, types, impacts and remedies | who-water-2023 |
 | U2-02 | topic-02.mdx | Water pollution: sources, types, impacts and remedies | who-sanitation-2024 |
 | U2-03 | topic-02.mdx | Industrial effluents: sources, impacts, treatment and recycling | who-sanitation-2024 |
 | U2-04 | topic-03.mdx | The principles of municipal solid waste management | ilmas2026 |
 | U2-04 | topic-03.mdx | The principles of municipal solid waste management | who-sanitation-2024 |
+| U2-05 | topic-03.mdx | Hazardous waste management: hospital and industrial waste | who-healthcare-waste-2024 |
 | U2-05 | topic-03.mdx | Hazardous waste management: hospital and industrial waste | park-park |
 
 ## Reinforcement
