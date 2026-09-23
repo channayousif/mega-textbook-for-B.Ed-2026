@@ -15,7 +15,7 @@ units may be authored.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0020 + owner resolutions G-2026-22/G-2026-23 + floor D-2026-0021; content-spec status: approved |
-| Unit 1 | G2 en-draft | ▢ | | |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-01/G2/20260923T170503133Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | advisory only (ADR-0019); never marked done from agent findings |
 | Unit 1 | G4 ur-translation | ▢ | | bilingual course: full Urdu mirror owed |
 | Unit 1 | G5 ur-review | ▢ | | advisory only; binds to accepted G3 evidence |
