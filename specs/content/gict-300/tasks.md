@@ -21,42 +21,42 @@ files at that commit. The geng-300 reds are recorded as known-stale-on-main in t
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0030; content-spec status: approved |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-01/G2/20260923T154459068Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-01/G2/20260923T214751666Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | advisory run 001 (disposition: revise) at reviews/unit-01/G3/agent-g3-gict300-u1-run001.json; blocking findings F1/F2 repaired at 140dd8a, advisory F3/F4 repaired, F5 (bare URLs) left; agent reviews are advisory under ADR-0019 |
 | Unit 1 | G4 ur-translation | ▢ | | |
 | Unit 1 | G5 ur-review | ▢ | | |
 | Unit 1 | G6 assets | ▢ | | |
 | Unit 1 | G7 publish | ▢ | | |
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0030; content-spec status: approved |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-02/G2/20260923T154518170Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-02/G2/20260923T214801085Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | advisory run 001 (disposition: pass, no blocking findings) at reviews/unit-02/G3/agent-g3-gict300-u2-run001.json; agent reviews advisory under ADR-0019 |
 | Unit 2 | G4 ur-translation | ▢ | | |
 | Unit 2 | G5 ur-review | ▢ | | |
 | Unit 2 | G6 assets | ▢ | | |
 | Unit 2 | G7 publish | ▢ | | |
 | Unit 3 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0030; content-spec status: approved |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-03/G2/20260923T154520624Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-03/G2/20260923T214810065Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | advisory run 001 (disposition: revise; blocking F1 sources-chain, F2 render unverified under capacity directive) at reviews/unit-03/G3/agent-g3-gict300-u3-run001.json; F1 repair in progress; agent reviews advisory under ADR-0019 |
 | Unit 3 | G4 ur-translation | ▢ | | |
 | Unit 3 | G5 ur-review | ▢ | | |
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
 | Unit 4 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0030; content-spec status: approved |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-04/G2/20260923T170527567Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-04/G2/20260923T214817844Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | advisory run 001 (disposition: revise; 5 blocking findings: RRQ topic spread, citation overreach, sources mapping, unused source, MCQ skew) at reviews/unit-04/G3/agent-g3-gict300-u4-run001.json; repairs in progress; agent reviews advisory under ADR-0019 |
 | Unit 4 | G4 ur-translation | ▢ | | |
 | Unit 4 | G5 ur-review | ▢ | | |
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
 | Unit 5 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0030; content-spec status: approved |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-05/G2/20260923T170530966Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-05/G2/20260923T214825990Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | advisory run 001 (disposition: pass; advisory F1-F8) at reviews/unit-05/G3/agent-g3-gict300-u5-run001.json; agent reviews advisory under ADR-0019 |
 | Unit 5 | G4 ur-translation | ▢ | | |
 | Unit 5 | G5 ur-review | ▢ | | |
 | Unit 5 | G6 assets | ▢ | | |
 | Unit 5 | G7 publish | ▢ | | |
 | Unit 6 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0030; content-spec status: approved |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-06/G2/20260923T170533981Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-06/G2/20260923T214836331Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | advisory run 001 (disposition: pass, no blocking findings) at reviews/unit-06/G3/agent-g3-gict300-u6-20260923T171945671Z.json; agent reviews advisory under ADR-0019 |
 | Unit 6 | G4 ur-translation | ▢ | | |
 | Unit 6 | G5 ur-review | ▢ | | |
