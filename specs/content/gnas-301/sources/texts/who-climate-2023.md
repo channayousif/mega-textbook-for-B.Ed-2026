@@ -19,7 +19,7 @@ page's "Key facts" section was read and is excerpted below.
 ## What this supports in GNAS-301 Unit 1
 
 Topic 1.2 (U1-04) cites this source for the status of climate change as a global issue and
-the 3.6-billion-susceptibility figure. Topic 1.3 (U1-06) cites it for the figure that over
-2 billion people lived in water-stressed countries as of 2021 (stated in the same fact
-sheet's water-stress key fact). The unit does not rely on this source for any figure it does
-not state here.
+the 3.6-billion-susceptibility figure. The unit does not rely on this source for any figure
+it does not state here. (Correction 2026-09-23, after the first G3 review: this fact sheet
+does not carry a water-stress figure; the over-2-billion water-stress claim in Topic 1.3 is
+bound to the WHO Drinking-water fact sheet, who-water-2023.)

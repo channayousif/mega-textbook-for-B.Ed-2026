@@ -1,11 +1,6 @@
-node:internal/modules/run_main:123
-    triggerUncaughtException(
-    ^
-
-browser.newPage: Target crashed 
-    at [90m/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-a8eefd2fc607a93b9/[39mg3-table-attrs.mjs:10:28 {
-  log: [],
-  name: [32m'Error'[39m
-}
-
-Node.js v22.22.1
+server up: [33mtrue[39m
+topic-01 [{"rows":5,"tabindex":null,"role":null,"ariaLabel":null,"clientWidth":328,"scrollWidth":328}]
+topic-02 [{"rows":5,"tabindex":null,"role":null,"ariaLabel":null,"clientWidth":328,"scrollWidth":328}]
+topic-03 [{"rows":5,"tabindex":null,"role":null,"ariaLabel":null,"clientWidth":328,"scrollWidth":328}]
+topic-04 [{"rows":5,"tabindex":null,"role":null,"ariaLabel":null,"clientWidth":328,"scrollWidth":328}]
+unit-assessment []
