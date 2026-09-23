@@ -1,6 +1,12 @@
 ---
 course_code: GQUR-300
 status: draft
+# D-2026-0013's floor pattern, in the form `check:source-floor` enforces: every
+# unit binds at least one verified open-access source, because two of the four
+# guide-required readings are print monographs and one is a government document
+# whose locator does not resolve from this host (G-2026-28).
+open_access_floor:
+  default: 1
 ---
 
 # GQUR-300 - Quantitative Reasoning-I - Content Spec
@@ -79,8 +85,8 @@ obtained, D-2026-0001 applies (flag and proceed).
 | Key | Citation | DOI/URL | Units | Note |
 |---|---|---|---|---|
 | steen2001 | Steen, L. A. (Ed.). (2001). *Mathematics and Democracy: The Case for Quantitative Literacy.* National Council on Education and the Disciplines, Princeton, NJ. ISBN 0970954700. | https://archive.org/details/mathematicsdemoc0000unse | 1, 6 | verified via Open Library (work OL18229070W) and the Internet Archive on 2026-09-23; the scan is controlled-lending, so the text is not openly downloadable - cited at bibliographic level, D-2026-0001 for text |
-| grawe | Grawe, N. *Quantitative Literacy: Reasoning about Data.* Cognella Academic Publishing. | unresolvable | 5, 6 | guide-required at `1st 2026.txt:652`; the title is absent from Open Library, the Internet Archive and ERIC, and Cognella answers 403 to this host (checked 2026-09-23) - locator recorded unresolvable in the D-2026-0010 manner: cited at bibliographic level only, limit stated at point of use; the same author's verified open-access article (grawe2012) carries the retrievable content |
-| ncm | National Curriculum for Mathematics (Pakistan). | unresolvable | 2, 3, 4 | guide-required at `1st 2026.txt:653`; the guide names no year, grade range or imprint, and none is added here; the record could not be resolved from this host on 2026-09-23 - cited at bibliographic level only, limit stated at point of use (D-2026-0010 manner) |
+| grawe | Grawe, N. *Quantitative Literacy: Reasoning about Data.* Cognella Academic Publishing. | unresolvable | 5, 6 | guide-required at `1st 2026.txt:654`; the title is absent from Open Library, the Internet Archive and ERIC, and Cognella answers 403 to this host (checked 2026-09-23) - locator recorded unresolvable in the D-2026-0010 manner: cited at bibliographic level only, limit stated at point of use; the same author's verified open-access article (grawe2012) carries the retrievable content; disposition pending the owner's G-2026-28 ruling (if the unresolvable recording is directed, the Cognella imprint goes with it) |
+| ncm | National Curriculum for Mathematics (Pakistan). | unresolvable | 2, 3, 4 | guide-required at `1st 2026.txt:655`; the guide names no year, grade range or imprint, and none is added here; the record could not be resolved from this host on 2026-09-23 - cited at bibliographic level only, limit stated at point of use (D-2026-0010 manner); disposition pending the owner's G-2026-28 ruling |
 | npst2009 | Higher Education Commission, Pakistan. (2009). *National Professional Standards for Teachers.* Policy and Planning Wing, Ministry of Education. | https://itacec.org/document/2015/7/National_Professional_Standards_for_Teachers.pdf | 1, 6 | resolves (in-corpus precedent: EFMP-302 npst-pakistan-2009); retrieval limit already recorded under D-2026-0001 |
 
 ### Curated-supplementary (open access)
@@ -91,7 +97,7 @@ obtained, D-2026-0001 applies (flag and proceed).
 | sikko2023 | Sikko, S. A. (2023). What can we learn from the different understandings of mathematical literacy? *Numeracy, 16*(1). | ERIC EJ1450768, https://eric.ed.gov/?id=EJ1450768 | 1 | verified 2026-09-23; mathematical literacy as reasoning in context |
 | gula2025 | Gula, T., & Lovric, M. (2025). Promoting mathematical thinking of university students: The case of a numeracy course. *Canadian Journal of Science, Mathematics and Technology Education.* | ERIC EJ1489427, https://eric.ed.gov/?id=EJ1489427 | 1, 2 | verified 2026-09-23; a university numeracy course design |
 | mcclure2020 | McClure, C. P. (2020). Development and assessment of a continuing education unit in quantitative literacy for high school STEM teachers. *Numeracy, 13*(2). | ERIC EJ1480153, https://eric.ed.gov/?id=EJ1480153 | 6 | verified 2026-09-23; quantitative-literacy professional development for teachers |
-| tout2020 | Tout, D. (2020). Evolution of adult numeracy from quantitative literacy to numeracy: Lessons learned from international assessments. *International Review of Education, 66*, 583-605. | ERIC EJ1266633, https://eric.ed.gov/?id=EJ1266633 | 5, 6 | verified 2026-09-23; numeracy in international assessments |
+| tout2020 | Tout, D. (2020). Evolution of adult numeracy from quantitative literacy to numeracy: Lessons learned from international assessments. *International Review of Education, 66*, 183-209. | ERIC EJ1266633, https://eric.ed.gov/?id=EJ1266633 | 5, 6 | verified 2026-09-23 (ERIC; Crossref 10.1007/s11159-020-09831-4); numeracy in international assessments |
 | oecd-pisa | OECD. *PISA Mathematics Framework.* OECD Publishing, Paris. | https://www.oecd.org/pisa/ | 1, 5 | international framing of mathematical literacy as real-world reasoning |
 | pbs | Pakistan Bureau of Statistics. Government of Pakistan. | https://www.pbs.gov.pk/ | 5, 6 | verified 2026-09-23; Sindh/Pakistan census and survey figures for data units |
 | openstax-prealgebra | Marecek, L., Anthony-Smith, M., & Mathis, M. H. (2020). *Prealgebra 2e.* OpenStax, Rice University. | https://openstax.org/details/books/prealgebra-2e | 2, 3, 4 | verified 2026-09-23; open-access worked examples for numbers, algebra, measurement (CC BY) |
