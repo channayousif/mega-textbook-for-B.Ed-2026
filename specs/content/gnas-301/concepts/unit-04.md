@@ -20,7 +20,7 @@ flag** (see the list at the foot of this file).
 | CON:GNAS-301-4-5 | Internal control layers | اندرونی کنٹرول کی تہیں | CON:GNAS-301-4-4 | 4.3 | SLO:GNAS-301-4-2 | RRQ-04, ERQ-02 |
 | CON:GNAS-301-4-6 | Duties triangle and rights | فرائض کا مثلث اور حقوق | - | 4.4 | SLO:GNAS-301-4-2 | MCQ-05, RRQ-05, ERQ-02 |
 | CON:GNAS-301-4-7 | OHS professional role web | پروفیشنل کا کردار جال | CON:GNAS-301-4-6 | 4.4 | SLO:GNAS-301-4-2 | ERQ-02 |
-| CON:GNAS-301-4-8 | Management functions in HSE | ایچ ایس ای میں انتظامی افعال | CON:GNAS-301-4-3 | 4.5 | SLO:GNAS-301-4-3 | RRQ-06 |
+| CON:GNAS-301-4-8 | Management functions in HSE | ایچ ایس ای میں انتظامی افعال | CON:GNAS-301-4-3 | 4.5 | SLO:GNAS-301-4-3 | - |
 | CON:GNAS-301-4-9 | Incident pyramid and Swiss cheese | واقعات کا ہرم اور سوئس پنیر | CON:GNAS-301-4-8 | 4.5 | SLO:GNAS-301-4-3 | MCQ-06, MCQ-07, RRQ-06, RRQ-07, ERQ-03 |
 | CON:GNAS-301-4-10 | Organizational environment | ادارے کا ماحول | CON:GNAS-301-4-9 | 4.5 | SLO:GNAS-301-4-3 | ERQ-03 |
 | CON:GNAS-301-4-11 | HSE plan steps | ایچ ایس ای پلان کے مرحلے | CON:GNAS-301-4-4 | 4.6 | SLO:GNAS-301-4-3 | MCQ-08, RRQ-08, ERQ-04, ERQ-05 |

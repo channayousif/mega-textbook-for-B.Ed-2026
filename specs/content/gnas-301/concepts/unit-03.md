@@ -14,9 +14,9 @@ flag** (see the list at the foot of this file).
 | Concept ID | Label EN | Label UR | Prerequisites | Topic | SLO refs | Assessment item IDs |
 |---|---|---|---|---|---|---|
 | CON:GNAS-301-3-1 | Air pollution chain | فضا کی آلودگی کی زنجیر | - | 3.1 | SLO:GNAS-301-3-1 | MCQ-03, RRQ-01, RRQ-02, ERQ-01 |
-| CON:GNAS-301-3-2 | Major air pollutants | چھ بڑی فضا آلودگیاں | CON:GNAS-301-3-1 | 3.1 | SLO:GNAS-301-3-1 | MCQ-01, MCQ-02, RRQ-04 |
+| CON:GNAS-301-3-2 | Major air pollutants | چھ بڑی فضا آلودگیاں | CON:GNAS-301-3-1 | 3.1 | SLO:GNAS-301-3-1 | MCQ-01, MCQ-02 |
 | CON:GNAS-301-3-3 | Decibel scale | ڈیسیبل پیمانہ | - | 3.2 | SLO:GNAS-301-3-1 | MCQ-04, MCQ-05 |
-| CON:GNAS-301-3-4 | Noise health effects | شور کے صحتی اثرات | CON:GNAS-301-3-3 | 3.2 | SLO:GNAS-301-3-1 | RRQ-03, ERQ-02 |
+| CON:GNAS-301-3-4 | Noise health effects | شور کے صحتی اثرات | CON:GNAS-301-3-3 | 3.2 | SLO:GNAS-301-3-1 | RRQ-03, RRQ-04, ERQ-02 |
 | CON:GNAS-301-3-5 | Hazard | خطرہ | - | 3.3 | SLO:GNAS-301-3-2 | RRQ-05 |
 | CON:GNAS-301-3-6 | Five hazard classes | خطرے کی پانچ اقسام | CON:GNAS-301-3-5 | 3.3 | SLO:GNAS-301-3-2 | MCQ-06, MCQ-07, RRQ-06, RRQ-07, ERQ-03 |
 | CON:GNAS-301-3-7 | Environmental safety | ماحولیاتی حفاظت | CON:GNAS-301-3-6 | 3.3 | SLO:GNAS-301-3-2 | ERQ-05 |
