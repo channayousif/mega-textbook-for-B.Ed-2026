@@ -1,0 +1,30 @@
+$ docusaurus build   (GICT-300 U5 G3 run 002, overlay tree /tmp/g3u5-overlay, 2026-09-24T02:09-02:13Z; fresh production build of the overlay described in overlay-basis.txt; static/content-status.json regenerated in-overlay first, its GICT-300 unit 5 entry identical to the worktree's; Docusaurus 3.10.2, Node v22.22.1; both locales built; the served render inspection ran against THIS build)
+
+◇ injected env (0) from .env.local // tip: ⌘ override existing { override: true }
+[33m[1m[WARNING][22m The [36m`siteConfig.onBrokenMarkdownLinks`[39m[33m config option is deprecated and will be removed in Docusaurus v4.[39m
+[33mPlease migrate and move this option to [36m`siteConfig.markdown.hooks.onBrokenMarkdownLinks`[39m[33m instead.[39m
+[36m[1m[INFO][22m[39m Website will be built for all these locales: 
+- en
+- ur
+[36m[1m[INFO][22m[39m [34m[1m[en][22m[39m Creating an optimized production build...
+◇ injected env (0) from .env.local // tip: ⌁ auth for agents [www.vestauth.com]
+[33m[1m[WARNING][22m The [36m`siteConfig.onBrokenMarkdownLinks`[39m[33m config option is deprecated and will be removed in Docusaurus v4.[39m
+[33mPlease migrate and move this option to [36m`siteConfig.markdown.hooks.onBrokenMarkdownLinks`[39m[33m instead.[39m
+[90m[[90mwebpackbar[90m][39m [36mℹ[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [36mℹ[39m Compiling Server
+[90m[[90mwebpackbar[90m][39m [32m✔[39m Server: Compiled successfully in 39.75s
+[90m[[90mwebpackbar[90m][39m [32m✔[39m Client: Compiled successfully in 1.48m
+[33m[1m[WARNING][22m {"moduleIdentifier":"javascript/dynamic|/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-aed74e6fa51c2d4d4/node_modules/@supabase/supabase-js/dist/index.cjs","moduleName":"../../home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-aed74e6fa51c2d4d4/node_modules/@supabase/supabase-js/dist/index.cjs","loc":"638:118-128","message":"Critical dependency: the request of a dependency is an expression","compilerPath":"server"}[39m
+[32m[1m[SUCCESS][22m[39m Generated static files in [36m[4m"build"[24m[39m.
+[36m[1m[INFO][22m[39m [34m[1m[ur][22m[39m Creating an optimized production build...
+◇ injected env (0) from .env.local // tip: ◈ secrets for agents [www.dotenvx.com]
+[33m[1m[WARNING][22m The [36m`siteConfig.onBrokenMarkdownLinks`[39m[33m config option is deprecated and will be removed in Docusaurus v4.[39m
+[33mPlease migrate and move this option to [36m`siteConfig.markdown.hooks.onBrokenMarkdownLinks`[39m[33m instead.[39m
+[90m[[90mwebpackbar[90m][39m [36mℹ[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [36mℹ[39m Compiling Server
+[90m[[90mwebpackbar[90m][39m [32m✔[39m Server: Compiled successfully in 32.44s
+[90m[[90mwebpackbar[90m][39m [32m✔[39m Client: Compiled successfully in 1.32m
+[33m[1m[WARNING][22m {"moduleIdentifier":"javascript/dynamic|/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-aed74e6fa51c2d4d4/node_modules/@supabase/supabase-js/dist/index.cjs","moduleName":"../../home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-aed74e6fa51c2d4d4/node_modules/@supabase/supabase-js/dist/index.cjs","loc":"638:118-128","message":"Critical dependency: the request of a dependency is an expression","compilerPath":"server"}[39m
+[32m[1m[SUCCESS][22m[39m Generated static files in [36m[4m"build/ur"[24m[39m.
+[36m[1m[INFO][22m[39m Use [36m`npm run serve`[39m command to test your build locally.
+exit_code=0

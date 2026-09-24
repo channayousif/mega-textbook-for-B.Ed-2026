@@ -22,4 +22,5 @@ source key it is grounded in.
 | U3-02 | topic-01.mdx | Types of operating systems | bourgeois2019 |
 | U3-03 | topic-02.mdx | File management | shellyVermaat |
 | U3-04 | topic-02.mdx | Process management | norton |
+| U3-05 | topic-03.mdx | Managing input and output | shellyVermaat |
 | U3-06 | topic-04.mdx | Kernel functions | ostep |

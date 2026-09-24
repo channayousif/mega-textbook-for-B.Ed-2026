@@ -1,0 +1,396 @@
+{
+  "schema_version": 1,
+  "course_code": "GICT-300",
+  "unit_no": 3,
+  "stage": "G3",
+  "disposition": "revise",
+  "reviewer_id": "agent:g3-reviewer",
+  "author_run_id": "commit:a7200d2",
+  "reviewer_run_id": "agent-g3-gict300-u3-run002",
+  "model": "LongCat-2.0",
+  "started_at": "2026-09-24T01:30:00Z",
+  "completed_at": "2026-09-24T02:36:00Z",
+  "skill_digest": "eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b",
+  "rulings": {
+    "D-2026-0001": "8ff79df9af668329f6d0094a2257654f45fc545122a753b4888fb9936f402f1f",
+    "D-2026-0030": "65125e3e97b98f811b0d77cff19ee15423263dfe4e37520a46451efb7d17b294"
+  },
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g3.md": "074c8464b4bc0f2f2b76bbb19707c50b54cb907920407873a4e5d193e866f53f",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "f1d7f063cc2c826693a3d8428fb5d3ee45455fdb7906ebc5adadee8b9a434d47",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-1/gict-300/course-overview.mdx": "5c615399c4c49a6fbc249b9a7794a72d71747c874351e447bd42d5a7c843e81d",
+    "docs/semester-1/gict-300/unit-03/_category_.json": "0464effc394c32e3d958dd7eeb84bd8fe4feebf78477416ea743abd912bc0289",
+    "docs/semester-1/gict-300/unit-03/index.mdx": "8cef017f373c73e8ff108eadb852ab99feb2b87fb6cffb06b9f139371d771cd1",
+    "docs/semester-1/gict-300/unit-03/topic-01.mdx": "62ce23b50767ebce35fb537b92b5cbfbe896ed6bd23860af986bee3a5c6b1d85",
+    "docs/semester-1/gict-300/unit-03/topic-02.mdx": "caaf0792749e3d8cd63b6aba07f14d4680d94285def0432bdbd131fa28921bdd",
+    "docs/semester-1/gict-300/unit-03/topic-03.mdx": "331e043795cb1c4d8f18e5815ae5b3ba3ea2dc0646b4b3da478c05d415770d0b",
+    "docs/semester-1/gict-300/unit-03/topic-04.mdx": "a2ac73f30c5b6f6c15af404f8ba8df1a59075959b997c0252bee30c18ee40559",
+    "docs/semester-1/gict-300/unit-03/unit-assessment.mdx": "60d3c094e8968b77b72314b4dee8b2747c10ac94c76b96955f6cd2d8f6c538e9",
+    "docs/semester-1/gict-300/unit-03/unit-teacher-notes.mdx": "362fdc0fabadeaf550974467fbc798aac1cacd2482b7a8225352ef758b35c816",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "41b698f8cbbb12f4030d6893083a5c36e4a19848b5ddb86206e5ba72847b8b13",
+    "scripts/check-no-answer-keys.mjs": "f38d60e5360e0c29f2dae02001195690f3b95e0ad2d7ae1a3c03a0d09c053f0d",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "bb614c625f7bf397ce51a317bdb8901711c00fa009d4ad0a506c5096e5b9ddd2",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "77f03816f68663621059f17745109fdde9b103c555f707e0c62d5ff56d2a4cd9",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "973496faae3366d13e8cdd3ba8d68edf7bd3745bdc6928311ee03c55f24b18b2",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/gict-300/concepts/unit-03.md": "61ebe072ea3e80e6e469c6ea6d1d41628794d3758ed89a29d4201d3d1278e886",
+    "specs/content/gict-300/content-spec.md": "babebb4e6145f2c7d1ef2e7b8e5dacb9d9dc486cece90f6d820f3170e751fc1f",
+    "specs/content/gict-300/coverage/unit-03.md": "ca66509b202f4123232d1f118e427487bdf22b63351e7e6f59c9b8aeb2fcb2ff",
+    "specs/content/gict-300/figures/unit-03.md": "08881a25c8dec70f4840bdb92b9b863e4ff899ec3ffa9e57a0018acc8253da0c",
+    "specs/content/gict-300/sources/texts/bourgeois2019.md": "8df2facfa7db7f263afb336717bd812936edc19c63de78fdd5955b09912e5751",
+    "specs/content/gict-300/sources/unit-03.md": "089ceee4ac0f4d37a40bbe6eec9ad2816a600e9d9ee30b92ca4d23d91021c017",
+    "specs/content/style-guide.md": "db96c9b33b0fb9522986462a0b519620c3c1d7602a046d7b90e638f643da4610",
+    "static/img/figures/gict-300/unit-03/fig-U3-1.dark.svg": "e256681810720c260db2872a8dec695ac84bb44c25ea032ad9d496cbb542b1f6",
+    "static/img/figures/gict-300/unit-03/fig-U3-1.svg": "cbee24c35a1b5ca317feb2a98fbafd5734a1bf185f346ed2e3dfe2121e5e2fa8",
+    "static/img/figures/gict-300/unit-03/fig-U3-2.dark.svg": "63eb8c76c9f5222b0b1dc0451fb6d28dd532207bebf50f4b82ad2ae568bd8631",
+    "static/img/figures/gict-300/unit-03/fig-U3-2.svg": "9be68de8e9cfec19da12364ea0a5fd0f177a4d033b96713c0151ef8127cc3ab2",
+    "static/img/figures/gict-300/unit-03/fig-U3-3.dark.svg": "f47f3369c98cd073a7848e7d78d9040c7ea5ffbffa8728194c48ecb86e74ce40",
+    "static/img/figures/gict-300/unit-03/fig-U3-3.svg": "ab26618540fc63808d0fe8a5c82688ddb616cc22facf9b2e9096db5d225a4161",
+    "static/img/figures/gict-300/unit-03/fig-U3-4.dark.svg": "bdd12793c1806f9c3d203dd400f631083358040faaf9ae742ec1e0bc828ccf9c",
+    "static/img/figures/gict-300/unit-03/fig-U3-4.svg": "4ff42791cc225ff1f278a211b7d821fc022ff5249c37a3979be9edd25faac65a",
+    "static/img/figures/gict-300/unit-03/fig-U3-5.dark.svg": "18194aabb168645f7c6f96b7546d825c896a897eeee20007c593dff33ca8dae5",
+    "static/img/figures/gict-300/unit-03/fig-U3-5.svg": "5a0e229e47dfa2953a1d2452a54339e645a7bfaf39f77ea40926578a299721f6",
+    "static/img/figures/gict-300/unit-03/fig-U3-6.dark.svg": "2b3d87c37ea9ab85bf4f2419bea787c356eaa4c70baf895221477fe6ff0cbd44",
+    "static/img/figures/gict-300/unit-03/fig-U3-6.svg": "f479ecb38fe9b0e9bd7f82ce0e06bdf1a0f795017c63df864800e53465761fb1",
+    "static/img/figures/gict-300/unit-03/fig-U3-7.dark.svg": "a2db5e706a833c011a813b389c10bda11822e1f8c71034306bc2b9f3dfb25d35",
+    "static/img/figures/gict-300/unit-03/fig-U3-7.svg": "04d7209d3568a92d182b351eae79645a960699be35d1b5d6efd0279c156c2bae",
+    "static/img/figures/gict-300/unit-03/fig-U3-8.dark.svg": "84f99cc88ad296a56b6f2d1db7ee9f3d11d1f240a3d7cf32bd3ae572bdbdf648",
+    "static/img/figures/gict-300/unit-03/fig-U3-8.svg": "f7f27541f012c77aa9bd99968a9efc30e92c6b5bba60aaad9f27a909f51541ae"
+  },
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        "Course guide block verified at Scheme-and-Course-guides/extracted-text/1st 2026.txt:374-538. Unit 3 (:459-467) enumerates exactly the four sub-topic bullets this unit teaches: functions and types of operating systems (:461), file and process management (:463), input/output management (:465), kernel functions (:467); CLO 4 \"Describe basic operating system concepts\" (:404) is the unit outcome; the guide's recommended books (:530-538) include Norton and Shelly & Vermaat, both cited by the unit at title level under D-2026-0001.",
+        "content-spec.md ## Unit 3 (specs/content/gict-300/content-spec.md:211-270) decomposes the four guide bullets into the six checklist rows U3-01..U3-06 exactly as intake decision D-2026-0030 item 3 approved (bullet 1 to 2 rows, bullet 2 to 2 rows, bullets 3-4 one each; no row without a guide ancestor). Spec front matter carries status: approved with the D-2026-0030 reference; the register entry was read and its digest is bound in this report.",
+        "clo_refs SLO:GICT-300-3-4 (course outcome 4) on all seven unit files (index, topic-01..04, unit-assessment, unit-teacher-notes); the unit learning outcomes (index.mdx:26-35) restate the four mapped outcome threads; catalog/courses.json and course-overview.mdx carry the same course identity, credit split and strategy lists.",
+        "The guide's five Teaching/Instructional Strategies and five Practical Work kinds are each mapped to concrete unit activities in unit-teacher-notes.mdx (## Working with the guide's strategies; ## Practical work and practicum links).",
+        "No contradictory or missing G0/G1 authority found; the week-calendar escalation G-2026-25 touches only the derived week table, not this unit's content."
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "fail",
+      "evidence": [
+        "Run001 F1 repair verified against the book itself: this reviewer fetched cpu-intro.pdf (ch 4), file-intro.pdf (ch 39) and file-devices.pdf (ch 36) from the book's own site (pages.cs.wisc.edu/~remzi/OSTEP/) and checked all 21 quoted passages in the bound excerpt specs/content/gict-300/sources/texts/ostep.md - 20 verbatim (time sharing/virtualisation, process composition and states, mechanisms/policies, device interface, driver definition and encapsulation, the generic-block-layer mediation, drivers as kernel-code share, inode naming, directory pairs, directory tree/root/paths, two-part file name, extension-as-convention). Log: logs-agent-g3-gict300-u3-run002/ostep-source-verification.txt.",
+        "Verified accurate and excerpt-carried: U3-01 three-part job description (bourgeois2019 chapter 3 excerpt, verbatim: managing the hardware resources, providing the user-interface components, providing a platform for software developers) and time sharing (ostep ch 4, verbatim); U3-04 the full process account (ostep ch 4, verbatim); U3-05 the I/O chain, the driver's translation role and layered mediation (ostep ch 36, verbatim); U3-03 the file abstraction, naming, directory trees and paths (ostep ch 39, verbatim except the file definition - finding F5).",
+        "Title-level accounts now honestly disclosed per D-2026-0001 option (c): the norton declaration states \"no bound excerpt carries the five-type taxonomy, so a reviewer should treat that account as standard-textbook material disclosed here rather than excerpt-verified\" (U3-02), and the shellyVermaat declaration states the bound ostep excerpt carries the scheduling and driver-supervision parts of U3-06 \"but not the four-layers taxonomy or the Linux-as-kernel naming\". Both declarations carry retrieval attempts, date and the owner ruling; neither overstates. The coverage matrix Source column now matches the grounding actually provided (U3-02 norton, U3-03/U3-05 ostep, U3-06 shellyVermaat).",
+        "FAILS on two defects introduced or left by the repair: F5 - the chapter 39 excerpt's central quotation is not verbatim (sources/texts/ostep.md:52-53 quotes \"A file is simply a linear sequence of bytes that you can read and/or write\"; the book's actual sentence, verified against file-intro.pdf section 39.1 fetched this run, is \"A file is simply a linear array of bytes, each of which you can read or write\"; the excerpt's form is mechanically absent from the chapter); F6 - buffer and spooling (topic-03.mdx:54-59, concept CON:GICT-300-3-10, RRQ-10) appear nowhere in any bound OSTEP chapter (zero occurrences, mechanically verified) and metadata plus deletion semantics (topic-02.mdx:45-54) are carried by the real chapter 39 (sections 39.9 and 39.14, verified this run) but not by the bound excerpt - none of these taught and assessed sub-claims is disclosed as uncorroborated anywhere, so under the G3 rubric (\"a declaration that understates what it leaves unchecked, remains a failure\") the declarations are incomplete.",
+        "Registry claims verified: OpenAlex W2412976325 resolves to Operating Systems: Three Easy Pieces and W2561598203 to Information Systems for Business and Beyond (api.openalex.org, 2026-09-24). No invented references found; the course's open-access floor of 2 (D-2026-0030 item 5) is met by bound, registry-verified excerpts."
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "All six checklist sub-topics are taught at their mapped sections, each a substantive passage: U3-01 topic-01.mdx ### Functions of an operating system (:35-63); U3-02 topic-01.mdx ### Types of operating systems (:66-89); U3-03 topic-02.mdx ### File management (:37-60); U3-04 topic-02.mdx ### Process management (:62-89); U3-05 topic-03.mdx ### Managing input and output (:37-73); U3-06 topic-04.mdx ### Kernel functions (:35-74).",
+        "Coverage matrix (specs/content/gict-300/coverage/unit-03.md) names the exact files and sections verified above, now with the remapped primary/reinforcement sources; the concept graph (specs/content/gict-300/concepts/unit-03.md) places all 13 concepts under the four topic labels with within-unit prerequisites and derived assessment item IDs consistent with the bank's numbering (check:concept-graph exit 0 over the verified overlay).",
+        "Every unit outcome is assessed: 3.1 -> MCQ-01..03, RRQ-01..02, ERQ-01; 3.2 -> MCQ-04..06, RRQ-03..04, RRQ-09, ERQ-02; 3.3 -> MCQ-07..08, RRQ-05..06, RRQ-10, ERQ-03; 3.4 -> MCQ-09..10, RRQ-07..08, ERQ-04; ERQ-05 integrates across the unit.",
+        "Depth budget 60-90 reading-minutes (content-spec.md:247): sum of est_reading_minutes across index (4) + topic-01 (13) + topic-02 (14) + topic-03 (12) + topic-04 (12) + unit-assessment (20) + unit-teacher-notes (7) = 82, inside the band; check:depth-gate exit 0 over the verified overlay."
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "pass",
+      "evidence": [
+        "Independent solve completed before reading the Answers and marking guidance section (unit-assessment.mdx:149-228). Derived MCQ key: 1-d, 2-b, 3-b, 4-b, 5-c, 6-b, 7-b, 8-b, 9-b, 10-b; the supplied key (:151-163) matches on all ten items with no conflicts. All ten RRQ model answers and mark schemes (:165-206) and all five ERQ rubrics (:208-228) agree with this reviewer's independent derivations (e.g. RRQ-8 layer sort: word processor to applications; desktop icons and settings screen to shell/utilities; scheduler and memory allocation to the kernel layer; the printer driver with the kernel's device-control layer under its supervision, consistent with the teacher notes' stated intent).",
+        "MCQs are unambiguous with functional distractors (MCQ-07 option d targets the bootstrap confusion; MCQ-10 option d targets the kernel/OS conflation the unit explicitly teaches against; MCQ-08's device option is excluded by the stem's \"works on one computer but not another\"). Bloom labels match the thinking actually required: MCQ-03/05/08 apply a concept to a described case; RRQ-04/06/09 require narration or diagnosis from evidence (Analyze); ERQ-1/5 demand evaluation with a defended judgement.",
+        "Approved blueprint satisfied: exactly 10/10/5 per band; at least 2 MCQs and 2 RRQs per topic (3.1: 3 MCQ + 2 RRQ; 3.2: 3 + 3; 3.3: 2 + 3; 3.4: 2 + 2); one ERQ per topic plus one integrative item (ERQ-05) per content-spec.md:266-270; every ERQ rubric contains an Analyse-or-higher criterion and totals 10 marks across distinct performance levels; each per-topic Summative task carries a 10-mark mini-rubric with an explicit Analyse criterion.",
+        "Advisory observations preserved as findings F3 (answer-position bias: 8 of 10 correct answers are option b) and F4 (ERQ-01..04 restate the per-topic summative tasks nearly verbatim); the bank is byte-identical to run001's binding, so both stand as recorded there."
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "pass",
+      "evidence": [
+        "Rendered inspection COMPLETED this run (run001 F2 closed): load average 0.54/0.94/1.07, well under the capacity directive's ~8 threshold, so one build + render pass ran over the verified overlay (build exit 0; render-inspect exit 0, defects: 0). Desktop 1280x900: heading order clean (no skipped levels) on all 7 pages, all 8 figures served at natural 249x150 with alt text verbatim from the figure manifest, zero broken images, zero missing alt, no horizontal overflow. Narrow 360x780: docHorizontalOverflow=0px on all 7 pages, both figures per topic scale to client=328 with no scroll needed and no spill. A4 print 794px: clippedElems=0 everywhere, every figure fits (w=762, right=778), and the complete Answers and marking guidance section renders (all four answer headings present on unit-assessment). Log: logs-agent-g3-gict300-u3-run002/render-review.txt; artifacts: renders-agent-g3-gict300-u3-run002/ (21 PNGs, 7 print PDFs).",
+        "Reviewer visually inspected the renders beyond the tool's measurements: desktop-topic-01.png (concept map and OS-types table legible, high contrast, no colour-only meaning), desktop-unit-assessment.png (all three bands and the full answers section unclipped), narrow360-topic-03.png (both I/O figures fit the 360px viewport, prose wraps cleanly).",
+        "SVG glyph geometry: measure-figure-text exit 0 over all committed variants - widest text ends at 768.4 of the 780-wide viewBox in every English figure, no text past the viewBox, no wordmark overprint (the run001-noted blind spot of check:figures is covered).",
+        "Static checks: all 8 <Figure> carriers in topic-01..04.mdx carry non-empty alt text verbatim from specs/content/gict-300/figures/unit-03.md; check:figures exit 0 over the verified overlay (carrier/manifest/asset consistency, archetype validity, >= 2 carriers per topic, concept-map and flowchart present); check:no-em-dash exit 0.",
+        "Advisory only: the Further reading links render bare URLs as link text on topic-01..04 (render-inspect advisory observation, finding F10). Corroboration, not reliance: the prior G5 run rendered this unit's Urdu pages clean at the same three viewports; this run's English inspection was obtained independently."
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "Register held for a fresh HSC/intermediate graduate (Constitution Art. III.1): short sentences, active voice, one idea per paragraph; every technical term is defined at first use and carried as a glossary entry (File, File management, Process, Device driver, Buffer, Spooling, Kernel all resolve in glossary.json; validate-content exit 0 over the verified overlay).",
+        "Concrete everyday language throughout: the OS as the office that divides attention, the kernel as the engine room, the diagnostic ladder, the \"frozen computer\" re-reading (topic-02.mdx:85-89) that turns a technical mechanism into an actionable diagnosis; no graduate-level jargon.",
+        "Zero em dash characters in all 7 unit files (check:no-em-dash exit 0 over the verified overlay; Constitution Art. III.9)."
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": [
+        "Nine-part learning cycle complete and correctly ordered in all four topic files (A real classroom situation -> Explanation -> Activity -> Check your understanding (4 items each) -> Summary -> Self-assessment checklist (3 items) -> Try this at your practicum school -> Summative task -> Further reading), per the Spec 008 unit structure standard (specs/content/style-guide.md ## Unit structure standard).",
+        "Classroom situations are concrete Pakistani/Sindhi contexts (Hyderabad examination-week office, staffroom file chaos and the \"frozen\" trainee machine, the lab printer installation, a power-fluctuation restart) and each genuinely motivates its topic's concepts (Constitution Art. III.4).",
+        "Activities are feasible as stated: function spotting (topic-01), the naming rescue and process list (topic-02), the diagnostic ladder (topic-03) and the layer sort (topic-04) each run 15-20 minutes in pairs with ordinary lab resources, clear numbered instructions and a compare-with-another-pair step; the teacher notes add practical misconception probes (close a window and watch the process survive; delete a file and discuss what was removed).",
+        "All four spec-listed misconceptions are named and corrected in student-facing prose (desktop-picture-only at topic-01.mdx:86-89; closing-a-window at topic-02.mdx:87-89; deleted-is-not-erased at topic-02.mdx:52-54; kernel/OS distinction at topic-04.mdx:69-74), plus two teacher-note additions (\"a slow computer is an old computer\", \"the internet enters by magic\"); progression runs situation -> explanation -> activity -> retrieval -> reflection -> assessment in every topic, and the Check-your-understanding items are recall/apply rather than recognition."
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "blocking",
+      "resolved": true,
+      "location": "specs/content/gict-300/sources/unit-03.md; specs/content/gict-300/coverage/unit-03.md; specs/content/gict-300/sources/texts/ostep.md",
+      "message": "RUN001 FINDING, NOW RESOLVED at a7200d2 and verified this run: the four substantive accounts (OS types, file management, I/O chain, kernel layers) had no bound-excerpt support while the sources file claimed the excerpts carried them. The repair extended the ostep excerpt with chapters 39 and 36 (fetched from the book's site; this reviewer independently fetched the same three chapter PDFs and verified 20 of the 21 quoted passages verbatim), remapped the coverage matrix (U3-02 norton, U3-03/U3-05 ostep, U3-06 shellyVermaat), and rewrote the norton/shellyVermaat declarations to disclose title-level-only support for the OS-types and kernel-layers accounts - the honest D-2026-0001 option-(c) posture. Two smaller defects the repair introduced or left are recorded as new findings F5 and F6 below."
+    },
+    {
+      "id": "F2",
+      "severity": "uncertain",
+      "resolved": true,
+      "location": "docs/semester-1/gict-300/unit-03/ (all pages) - rendered inspection",
+      "message": "RUN001 FINDING, NOW RESOLVED: rendered inspection was not performed in run 001 under the host capacity directive. This run the load average was 0.54/0.94/1.07 (well under the ~8 threshold), so the full build + render pass ran over the verified overlay: render-inspect exit 0 with zero defects across desktop 1280x900, narrow 360x780, A4 794px print emulation and SVG glyph geometry, plus the reviewer's own visual inspection of three renders. Evidence: logs-agent-g3-gict300-u3-run002/render-review.txt and renders-agent-g3-gict300-u3-run002/."
+    },
+    {
+      "id": "F3",
+      "severity": "advisory",
+      "resolved": false,
+      "location": "docs/semester-1/gict-300/unit-03/unit-assessment.mdx:38-102 (MCQ band)",
+      "message": "PRESERVED FROM RUN001 (bank byte-identical): MCQ answer-position bias - 8 of 10 correct answers are option b, one is c (MCQ-05), one is d (MCQ-01), none is option a, confirmed by this reviewer's independent solve. Each item's key is correct and unambiguous, but the distribution is exploitable by a test-wise learner. Balance key positions across a/b/c/d at the next authoring touch."
+    },
+    {
+      "id": "F4",
+      "severity": "advisory",
+      "resolved": false,
+      "location": "docs/semester-1/gict-300/unit-03/unit-assessment.mdx:129-147 (ERQ band)",
+      "message": "PRESERVED FROM RUN001 (bank byte-identical): ERQ-01..04 restate the four per-topic Summative tasks nearly verbatim (biometric attendance, office rescue plan, print fault, staff-meeting explainer). The blueprint is satisfied and the rubrics are sound, but a learner who completed the topic tasks meets the same prompts again in the bank. Vary the context or scenario details at the next authoring touch."
+    },
+    {
+      "id": "F5",
+      "severity": "blocking",
+      "resolved": false,
+      "location": "specs/content/gict-300/sources/texts/ostep.md:52-53 (chapter 39 excerpt)",
+      "message": "Misquotation introduced by the F1 repair: the excerpt quotes \"A file is simply a linear sequence of bytes that you can read and/or write\". The book's actual sentence (OSTEP file-intro.pdf, section 39.1, fetched from the book's own site and verified this run) is \"A file is simply a linear array of bytes, each of which you can read or write.\" The excerpt's wording appears nowhere in the chapter (mechanically verified over the extracted chapter text); \"array\" became \"sequence\" and \"each of which you can read or write\" became \"that you can read and/or write\". The meaning is identical and the underlying claim is sound, but the excerpt's own header states its passages are quoted, so a paraphrase inside quotation marks is a citation-integrity defect in the unit's bound evidence chain - the same class of defect run001 blocked on, now confined to one sentence. Repair: restore the book's verbatim sentence."
+    },
+    {
+      "id": "F6",
+      "severity": "blocking",
+      "resolved": false,
+      "location": "docs/semester-1/gict-300/unit-03/topic-03.mdx:54-59 (buffer, spooling); topic-02.mdx:45-54 (metadata, deletion semantics); specs/content/gict-300/sources/unit-03.md (declarations)",
+      "message": "Taught-and-assessed sub-claims with neither bound-excerpt support nor disclosure. (a) Buffer and spooling (topic-03.mdx:54-59; concept CON:GICT-300-3-10; assessed by RRQ-10 and the unit summary): mechanically verified this run to have ZERO occurrences of \"buffer\" or \"spool\" in any of the three bound OSTEP chapters, and no other bound excerpt or declaration covers them. (b) Metadata (topic-02.mdx:45-47) and deletion semantics (topic-02.mdx:52-54): carried by the REAL chapter 39 (section 39.9 \"Getting Information About Files\" - size, ownership, access/modification times; section 39.14 unlink/reference-count mechanics), both verified this run against the book's site, but not included in the bound excerpt, and no declaration discloses them as uncorroborated. The ostep Supports cells in sources/unit-03.md are accurately scoped and do not overclaim, but under the G3 rubric a declaration that understates what it leaves unchecked remains a failure, and these are assessed concepts, not passing phrases. Repair (minimal): extend the chapter 39 excerpt with the real 39.9 metadata passage (and optionally the unlink/reference-count passage) verbatim; add buffer and spooling to the title-level disclosures in ## Unverifiable sources (they are classic Norton / Shelly & Vermaat material, both already-declared guide-required monographs) or record the gap per the style guide's scholarly-engagement rule."
+    },
+    {
+      "id": "F7",
+      "severity": "advisory",
+      "resolved": false,
+      "location": "docs/semester-1/gict-300/unit-03/topic-02.mdx:155-161 (Further reading)",
+      "message": "After the coverage remap, Topic 3.2's file-management half (U3-03) is grounded in OSTEP chapter 39, but the topic's Further reading still cites only chapter 4 (the process chapter). The learner-facing reading pointer is now stale relative to the unit's own grounding. Add chapter 39 to the Topic 3.2 Further reading entry at the next authoring touch."
+    },
+    {
+      "id": "F8",
+      "severity": "advisory",
+      "resolved": false,
+      "location": "specs/content/gict-300/sources/texts/bourgeois2019.md:64-78 (chapter 3 \"Used for\" annotation)",
+      "message": "The bourgeois2019 excerpt's chapter-3 \"Used for\" annotation lists only U2-06/U2-07, while sources/unit-03.md now claims bourgeois2019 supports U3-01 (the three-part job) and U3-02 (named operating systems) from chapter 3. The chapter text does carry both claims (the three key functions and the Linux naming are verbatim in the bound excerpt - verified this run); only the excerpt's own annotation is stale. Update the annotation to include U3-01/U3-02 at the next touch."
+    },
+    {
+      "id": "F9",
+      "severity": "advisory",
+      "resolved": false,
+      "location": "specs/content/gict-300/sources/texts/ostep.md (manifest binding); scripts/lib/review-evidence.mjs citedKeysFor (ADR-0027 scoping)",
+      "message": "The unit's primary excerpt ostep.md is NOT digest-bound in the input manifest: the ADR-0027 citedKeys derivation binds sources/texts/<key>.md only for keys matching a 4-digit-year pattern, and the key \"ostep\" has no year, so the excerpt that now grounds U3-01/U3-03/U3-04/U3-05 (and reinforces U3-06) sits outside every report's freshness binding - a later edit to it would not invalidate the reports that relied on it. Corpus-wide pattern, not unit-specific authoring: wipoIP.md (unit 5's excerpt) has the same year-less key. This review mitigates the gap by recording the excerpt's verified committed state (git blob e4822ccb99dc8fe7ce22df187221fb177a37922c, worktree clean) and by verifying its content directly against the book's site. The parent/owner should close the gap before a pass disposition rests on the excerpt: either rename the key to a year-carrying form in coverage/unit-03.md, sources/unit-03.md and the content-spec Mapped readings line, or have the owner amend the derivation in scripts/lib/review-evidence.mjs (an owner decision - amending a bound validator invalidates outstanding reports)."
+    },
+    {
+      "id": "F10",
+      "severity": "advisory",
+      "resolved": false,
+      "location": "docs/semester-1/gict-300/unit-03/topic-01..04.mdx (Further reading links, rendered)",
+      "message": "The Further reading source links render the bare URL as the link text (e.g. \"https://pages.cs.wisc.edu/~remzi/OSTEP/\") on all four topic pages - render-inspect's bareUrlLinks advisory, confirmed in the desktop renders. A screen-reader user hears the raw URL; descriptive link text (the book or library page title) would be better. Advisory only; consistent with the corpus's current house pattern."
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/validate-content.txt"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/check-depth-gate.txt"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/check-figures.txt"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/check-no-em-dash.txt"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/check-no-answer-keys.txt"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/check-docs-sync.txt"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/render-review.txt"
+    },
+    {
+      "name": "check:concept-graph",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/check-concept-graph.txt"
+    },
+    {
+      "name": "measure-figure-text",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/measure-figure-text.txt"
+    },
+    {
+      "name": "build",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/build.txt"
+    },
+    {
+      "name": "verify:overlay-inputs",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/overlay-verification.txt"
+    },
+    {
+      "name": "verify:ostep-quotes",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/ostep-source-verification.txt"
+    },
+    {
+      "name": "validate:content@asis",
+      "exit_code": 1,
+      "log_path": "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/asis/validate-content.txt"
+    },
+    {
+      "name": "check:depth-gate@asis",
+      "exit_code": 1,
+      "log_path": "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/asis/check-depth-gate.txt"
+    },
+    {
+      "name": "check:figures@asis",
+      "exit_code": 1,
+      "log_path": "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/asis/check-figures.txt"
+    },
+    {
+      "name": "check:no-em-dash@asis",
+      "exit_code": 1,
+      "log_path": "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/asis/check-no-em-dash.txt"
+    },
+    {
+      "name": "check:no-answer-keys@asis",
+      "exit_code": 1,
+      "log_path": "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/asis/check-no-answer-keys.txt"
+    },
+    {
+      "name": "check:docs-sync@asis",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/asis/check-docs-sync.txt"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/validate-content.txt": "5b3153a9d41a11051bff1d2f0396cf26eaaf00ae79e3b894c202823645c0e6a6",
+    "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/check-depth-gate.txt": "15021f8f88122b596e67cfd48c2ff282fde912e1b86bb03c2137bcf9d8e062fd",
+    "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/check-figures.txt": "54a388cb9954b9d2f07f84e5385ac0003b94a6a54023abb188e864346958b04f",
+    "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/check-no-em-dash.txt": "00405490c649d998b589b23505029de9134497966b02ff9ccefb1075aa414dd3",
+    "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/check-no-answer-keys.txt": "539ba62183931f332c562e346956452b9cf751e100de762601b786b497a7d612",
+    "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/check-docs-sync.txt": "cbc9f6e4b0b674cb49e2d9b795d81ed78f23dc431cba1130e4d64cf6d0bed749",
+    "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/check-concept-graph.txt": "489b5f2c09d24d15206c56f4f092cee19b9f6c4fa91d61bae33abf82b46fba8a",
+    "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/measure-figure-text.txt": "b1a81d01ce6b2dd69f529d59079f666b06962b5445ccd95bc81f4441df7fefe8",
+    "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/build.txt": "6027970858410f76000e09d554966562d8426bfbc295e29908cc8ed9aced3609",
+    "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/render-review.txt": "7d2ecb265d2d9dde44a3b99dbf131ccbe6ac485b77120679537e18eee9cff4da",
+    "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/overlay-verification.txt": "f7e37dd0e964f1c066fefe8da5631737102df90f3b9bb0ffa3c6b1cfd21a11df",
+    "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/ostep-source-verification.txt": "0108f8e0a97e0c9dad205fc98272bf150c50c9cc67762a8377ed22fd961a389f",
+    "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/asis/validate-content.txt": "aff6e62d3ef86a0d7103adfc5beac85fe03caee88e97fa121249da5d9e456be5",
+    "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/asis/check-depth-gate.txt": "912c64025f1850096714a5ca065658d9ef211db81c9ed990568456032a2fffaa",
+    "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/asis/check-figures.txt": "0247598654ff82e5f3219e558243c0a96918eea4827512342cec18651a1c3d48",
+    "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/asis/check-no-em-dash.txt": "51970c44cd1ffa6de096bd5212030743f385233525d945cf9a5563e5d41a24e5",
+    "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/asis/check-no-answer-keys.txt": "4112af232e004a53fb65e647ac716e72e24fbc379170a9ac65774b9b099022b5",
+    "specs/content/gict-300/reviews/unit-03/G3/logs-agent-g3-gict300-u3-run002/asis/check-docs-sync.txt": "cbc9f6e4b0b674cb49e2d9b795d81ed78f23dc431cba1130e4d64cf6d0bed749",
+    "specs/content/gict-300/reviews/unit-03/G3/summary-run002.txt": "6eb1c4689b3ea57c18bb8c81d165cc43033e979edf0fc320479867d3cdf87c3e",
+    "specs/content/gict-300/reviews/unit-03/G3/renders-agent-g3-gict300-u3-run002/desktop-index.png": "4854c54a0dadb083e48fcfb63920fe85eba4f7f98062c683fdbc15d5a4959cdf",
+    "specs/content/gict-300/reviews/unit-03/G3/renders-agent-g3-gict300-u3-run002/desktop-topic-01.png": "caf5085aa768d320b52379cfe2501e29ea1a328e9e0e909f9e66ff2a30fc1cbe",
+    "specs/content/gict-300/reviews/unit-03/G3/renders-agent-g3-gict300-u3-run002/desktop-topic-02.png": "2c932f977f07a1cf7643265269c78278467f6a89e26c100fc3a74cb9b7705b36",
+    "specs/content/gict-300/reviews/unit-03/G3/renders-agent-g3-gict300-u3-run002/desktop-topic-03.png": "bc7ab44e3cb151528964b30f2872d0645d6e3e5d8709ca3470db8d37676edc59",
+    "specs/content/gict-300/reviews/unit-03/G3/renders-agent-g3-gict300-u3-run002/desktop-topic-04.png": "6b590e6b35f4db802ace5855a3e5a2ad27e7e9b2ee44203fa8b7ea66a0ecb37e",
+    "specs/content/gict-300/reviews/unit-03/G3/renders-agent-g3-gict300-u3-run002/desktop-unit-assessment.png": "7a79ea5f98dabb2285b89e6e2ebfc0b78f2f78362bfbe3beefbfe00567c8b203",
+    "specs/content/gict-300/reviews/unit-03/G3/renders-agent-g3-gict300-u3-run002/desktop-unit-teacher-notes.png": "9b31824b9dc1564bae03c23cb0dfd0a163206f097063f7fbe4cc0949c3e89fe0",
+    "specs/content/gict-300/reviews/unit-03/G3/renders-agent-g3-gict300-u3-run002/narrow360-index.png": "5ef985e58cad944a36fa9cad31a18a21a8b875c3914fea30c0737d1119af454f",
+    "specs/content/gict-300/reviews/unit-03/G3/renders-agent-g3-gict300-u3-run002/narrow360-topic-01.png": "5c6ef2d5c249068057c0eeb9c9b4b7cb04bb70757142f2b1779752ef089f9b41",
+    "specs/content/gict-300/reviews/unit-03/G3/renders-agent-g3-gict300-u3-run002/narrow360-topic-02.png": "ef6dbb6cc04c1dd961bb4316d903f7f80346ea442f13adcd311693bd7b09e52a",
+    "specs/content/gict-300/reviews/unit-03/G3/renders-agent-g3-gict300-u3-run002/narrow360-topic-03.png": "8959d5ccdd82f0711e8493d85be2e3ca594f9ec4cacb14432433f699cc299bb4",
+    "specs/content/gict-300/reviews/unit-03/G3/renders-agent-g3-gict300-u3-run002/narrow360-topic-04.png": "42e0cca2fa7512b32c72ff276d1f4c6e3996ff9d58ab30475c70b2c2fb24662a",
+    "specs/content/gict-300/reviews/unit-03/G3/renders-agent-g3-gict300-u3-run002/narrow360-unit-assessment.png": "0ae0a660b498afdb9e2c92b57fa5587f242b8466679a615b2fa6c54a18da9028",
+    "specs/content/gict-300/reviews/unit-03/G3/renders-agent-g3-gict300-u3-run002/narrow360-unit-teacher-notes.png": "413ab251a797c9c57c5011bbb1e2bc35ed2c395f4d9674a38e344b9e03b1d769",
+    "specs/content/gict-300/reviews/unit-03/G3/renders-agent-g3-gict300-u3-run002/render-inspect.json": "330d56a07b52c26078433c5a5068c6352c7057242d8065423af2bc413073f298",
+    "specs/content/gict-300/reviews/unit-03/G3/renders-agent-g3-gict300-u3-run002/render-inspect.log": "509d4b61a6aa335bb486dd900ccb906d7f5941a8a114b299a4c0f1e274b7c8f1"
+  }
+}

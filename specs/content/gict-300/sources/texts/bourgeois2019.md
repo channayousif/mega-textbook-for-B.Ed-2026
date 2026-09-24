@@ -75,7 +75,7 @@ device just to run that application", and for the PC that was the spreadsheet. P
 software programs "allow office employees to complete their daily work efficiently", covering
 word processing, spreadsheets and presentations.
 
-Used for: system versus application software and productivity tools (U2-06, U2-07).
+Used for: system versus application software and productivity tools (U2-06, U2-07); the OS's three-part job and named operating systems (U3-01, U3-02 reinforcement).
 
 ## Chapter 5 - Networking and Communication (verified)
 
