@@ -1,0 +1,67 @@
+# ur-figure-text-overlap - EFMP-302 unit-02, G5 feat023-r1 (Urdu variants)
+# started: 2026-09-24T19:30:01.296Z
+# base: http://127.0.0.1:4601   browser: chromium 149.0.7827.0
+# method: served bytes sha256-matched to committed bytes, inlined at viewBox size,
+#         getBBox per <text> in SVG user units (browser-shaped Nastaliq), pairwise
+#         bbox intersection, then canvas pixel ink-intersection per overlapping pair.
+fig-U2-1.ur.svg: texts=37 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=2 servedMatch=true
+   WORDMARK-SHAPE: vs rect.bg 93x13
+   WORDMARK-SHAPE: vs rect.grid 88.4x4
+fig-U2-1.ur.dark.svg: texts=37 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=2 servedMatch=true
+   WORDMARK-SHAPE: vs rect.bg 93x13
+   WORDMARK-SHAPE: vs rect.grid 88.4x4
+fig-U2-2.ur.svg: texts=16 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=1 servedMatch=true
+   WORDMARK-SHAPE: vs rect.bg 93x13
+fig-U2-2.ur.dark.svg: texts=16 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=1 servedMatch=true
+   WORDMARK-SHAPE: vs rect.bg 93x13
+fig-U2-3.ur.svg: texts=32 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=1 servedMatch=true
+   WORDMARK-SHAPE: vs rect.bg 93x13
+fig-U2-3.ur.dark.svg: texts=32 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=1 servedMatch=true
+   WORDMARK-SHAPE: vs rect.bg 93x13
+fig-U2-4.ur.svg: texts=15 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=1 servedMatch=true
+   WORDMARK-SHAPE: vs rect.bg 93x13
+fig-U2-4.ur.dark.svg: texts=15 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=1 servedMatch=true
+   WORDMARK-SHAPE: vs rect.bg 93x13
+fig-U2-5.ur.svg: texts=20 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=1 servedMatch=true
+   WORDMARK-SHAPE: vs rect.bg 93x13
+fig-U2-5.ur.dark.svg: texts=20 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=1 servedMatch=true
+   WORDMARK-SHAPE: vs rect.bg 93x13
+fig-U2-6.ur.svg: texts=16 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=1 servedMatch=true
+   WORDMARK-SHAPE: vs rect.bg 93x13
+fig-U2-6.ur.dark.svg: texts=16 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=1 servedMatch=true
+   WORDMARK-SHAPE: vs rect.bg 93x13
+fig-U2-7.ur.svg: texts=34 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=1 servedMatch=true
+   WORDMARK-SHAPE: vs rect.bg 93x13
+fig-U2-7.ur.dark.svg: texts=34 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=1 servedMatch=true
+   WORDMARK-SHAPE: vs rect.bg 93x13
+fig-U2-8.ur.svg: texts=27 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=1 servedMatch=true
+   WORDMARK-SHAPE: vs rect.bg 93x13
+fig-U2-8.ur.dark.svg: texts=27 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=1 servedMatch=true
+   WORDMARK-SHAPE: vs rect.bg 93x13
+
+# NEGATIVE CONTROL: same measurement over the b8f8ffe .ur.svg bytes (known bad, G-2026-62)
+fig-U2-1.b8f8ffe.ur.svg: texts=37 bboxOverlapPairs=5 inkCollisions=0
+   OVERLAP: "پیشہ ورانہ" vs "اخلاقیات" (76.8x3)
+   OVERLAP: "کس چیز پر حکم" vs "چلاتا ہے" (64.4x3)
+   OVERLAP: "اسے کون نافذ" vs "کرتا ہے" (59.5x3)
+   OVERLAP: "کہاں تک نہیں" vs "پہنچ سکتا" (81.6x3)
+   OVERLAP: "تدریس سے" vs "ایک مثال" (78.5x3)
+fig-U2-2.b8f8ffe.ur.svg: texts=16 bboxOverlapPairs=6 inkCollisions=2
+   OVERLAP: "اعتماد" vs "دیا جاتا ہے، بخشانہیں جاتا" (53.9x3)
+   OVERLAP: "شاگرد سپرد کرتے ہیں" vs "اپنا سیکھنا اور اپنیحفاظت" (125x8)
+   OVERLAP: "اپنا سیکھنا اور اپنیحفاظت" vs "خلاف ورزی: دہرایاگیا راز" (106.4x12)
+   OVERLAP: "اپنے بچے" vs "خلاف ورزی: گمراہکرنے والی اطلاع" (55.6x3)
+   OVERLAP: "اپنا نصاب اور نمبر" vs "خلاف ورزی: بغیرکمائے دیا گیا نمبر" (100.8x2)
+   OVERLAP: "پیشے کا اپنا مقام" vs "خلاف ورزی: ایک استادکی بدعنوانی" (112.4x2)
+fig-U2-5.b8f8ffe.ur.svg: texts=20 bboxOverlapPairs=7 inkCollisions=3
+   OVERLAP: "1 اخلاقی" vs "حساسیت" (81.6x3)
+   OVERLAP: "حساسیت" vs "محسوس کرنا کہ یہاخلاقی ہے" (82.2x9)
+   OVERLAP: "2 اخلاقی" vs "فیصلہ" (51.2x3)
+   OVERLAP: "فیصلہ" vs "طے کرنا کہ درست کیاہے" (51.2x9)
+   OVERLAP: "3 اخلاقی" vs "محرک" (53.8x3)
+   OVERLAP: "4 اخلاقی" vs "کردار" (49x3)
+   OVERLAP: "کوئی اخلاقی عمل نہیں" vs "وہی نتیجہ، چار مختلفراستوں سے" (126.3x5)
+control detects known-bad geometry: true
+
+SUMMARY {"filesChecked":16,"servedMismatch":0,"bboxOverlapPairsTotal":0,"inkCollisionsTotal":0,"nearMissTotal":0,"wmTextOverlapsTotal":0}
+# finished: 2026-09-24T19:30:05.370Z
