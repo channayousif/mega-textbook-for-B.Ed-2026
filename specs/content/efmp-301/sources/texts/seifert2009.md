@@ -136,3 +136,29 @@ behaviourism-constructivism contrast (U3-5); schemas, assimilation and accommoda
 learning, vicarious reinforcement and model strength (U3-8, U3-9); constructivism's
 claims and the ZPD-scaffolding pair (U3-10, U3-11); the four-lens choice (U3-12).
 
+## Chapter 5 - Students with special educational needs (verified; used by Unit 5)
+
+On giftedness and its widening meaning: "Traditionally, the term gifted referred only
+to students with unusually high verbal skills... More recently, however, the meaning of
+gifted has broadened to include unusual talents in a range of activities, such as
+music, creative writing, or the arts (G. Davis & Rimm, 2004). To indicate the change,
+educators often use the dual term gifted and talented."
+
+On the qualities of the gifted: "Generally they show some combination of the following
+qualities: They learn more quickly and independently than most students their own
+age... They often have well-developed vocabulary, as well as advanced reading and
+writing skills... They are very motivated, especially on tasks that are challenging or
+difficult... They hold themselves to higher than usual standards of achievement."
+
+On the stereotype and the range: "Contrary to a common impression, students who are
+gifted or talented are not necessarily awkward socially, less healthy, or narrow in
+their interests - in fact, quite the contrary (Steiner & Carr, 2003). They also come
+from all economic and cultural groups."
+
+On the need for accommodation: "Without accommodation to their unusual level of skill
+or knowledge, students who are gifted or talented can become bored by school, and
+eventually the boredom can even turn into behavior problems."
+
+Used for (Unit 5): giftedness recognised and supported (U5-5); the gifted stereotype
+corrected (U5-1's reinforcement row).
+

@@ -45,3 +45,30 @@ perception, active interpretation and the gorilla study (U4-2); the
 information-processing model and its systems (U4-3); encoding, storage, retrieval and
 the study-strategy evidence (U4-4); the working-memory constraint on problem-solving
 (U4-6).
+
+## Section 7.4 - What are intelligence and creativity? (verified; used by Unit 5)
+
+On Spearman: Spearman "believed intelligence consisted of one general factor, called g,
+which could be measured and compared among individuals." On Gardner: "In Gardner's
+theory, each person possesses at least eight intelligences" - linguistic,
+logical-mathematical, musical, bodily kinesthetic, spatial, interpersonal,
+intrapersonal, and naturalistic. The caution: "Among cognitive psychologists, Gardner's
+theory has been heavily criticized for lacking empirical evidence."
+
+On creativity: "Creativity is the ability to generate, create, or discover new ideas,
+solutions, and possibilities." Divergent thinking "allows an individual to arrive at
+unique, multiple solutions to a given problem"; "convergent thinking describes the
+ability to provide a correct or well-established answer or solution to a problem."
+
+## Section 7.5 - Measures of intelligence (verified; used by Unit 5)
+
+"IQ stands for intelligence quotient and describes a score earned on a test designed to
+measure intelligence." "On most IQ tests, the average (or mean) IQ score is 100"; "In
+modern IQ testing, one standard deviation is 15 points", with scores from 85 to 115
+counting as average. On limits: questions remain about "the degree to which any test
+can truly measure an individual's intelligence".
+
+Used for (Unit 5): the theories-of-intelligence axis and Spearman's g (U5-1);
+Gardner's multiple intelligences and the evidence caution (U5-2); IQ scores, the mean
+and deviation, and the measurement limits (U5-3); creativity, divergent and convergent
+thinking (U5-4).
