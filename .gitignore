@@ -85,3 +85,4 @@ specs/015-licence-content-tree/baseline/
 # could open superseded content and still validate cleanly. Leaving the path unignored means any
 # future snapshot shows up as untracked, which `dirtyInputs()` scans with
 # `--untracked-files=all` and will refuse to prepare against.
+build-*/

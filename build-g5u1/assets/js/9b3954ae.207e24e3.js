@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkbed_mega_textbook=self.webpackChunkbed_mega_textbook||[]).push([[1559],{2839(e){e.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"licence"}')}}]);
