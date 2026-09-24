@@ -36,7 +36,7 @@ units may be authored.
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
 | Unit 4 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0020 + owner resolutions G-2026-22/G-2026-23 + floor D-2026-0021; content-spec status: approved |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-04/G2/20260923T233918407Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-04/G2/20260924T015524885Z-gates.json|
 | Unit 4 | G3 en-review | ▢ | | advisory only |
 | Unit 4 | G4 ur-translation | ▢ | | |
 | Unit 4 | G5 ur-review | ▢ | | |
