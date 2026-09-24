@@ -1,0 +1,145 @@
+---
+title: "Topic 2.4 - Communication hardware and software"
+description: "How computers talk: the school lab's network, cables and wireless, routers and switches, and the software that carries messages."
+course_code: GICT-300
+unit_no: 2
+topic_no: 4
+topic_label: "2.4"
+clo_refs:
+  - "SLO:GICT-300-2-3"
+blooms_summary: "Remember, understand and apply communication hardware and software: identify the parts of a small network and match communication software to its purpose."
+est_reading_minutes: 11
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+import Glossary from '@site/src/components/Glossary';
+
+<PrintHandout />
+
+# Topic 2.4 - Communication hardware and software
+
+## A real classroom situation
+
+The new computer lab in a Sukkur school has twenty machines, one printer and one internet
+connection. On the first day, the technician connects everything, and the head teacher asks
+the obvious question: "So all twenty computers can print to the one printer and use the one
+internet line?" They can, and the reason is a small box on the shelf with blinking lights -
+plus the invisible rules that let machines take turns. A teacher who can name the parts and
+the rules can also diagnose the lab's most common complaint: "the internet is not working
+on computer 14 only."
+
+<Figure id="fig-U2-7" src="/img/figures/gict-300/unit-02/fig-U2-7.svg" alt="Diagram of a school lab network: client computers and a printer connect to a switch, the switch connects to a router, the router to the internet line, and a Wi-Fi access point serves wireless devices." />
+
+## Explanation
+
+### Communication hardware and software
+
+A <Glossary term="Computer network">computer network</Glossary> is a set of computers and
+devices connected so they can share resources: files, a printer, an internet connection.
+Bourgeois and colleagues (2019) describe the internet itself as an interconnected network of
+networks, and a school lab is a small working model of the same idea.
+
+The hardware of a small network divides into four jobs. The <Glossary term="Network interface card">network
+interface</Glossary> (built into every modern computer and phone) is each machine's doorway
+onto the network. The <Glossary term="Switch">switch</Glossary> connects multiple machines
+in one place and forwards each message only to the machine it is addressed to, which is why
+twenty computers can share one printer without shouting over each other. The
+<Glossary term="Router">router</Glossary> is the device that connects one network to
+another: it receives messages, analyses them, and routes them towards their destination
+(Bourgeois et al., 2019). In the lab, the router is the boundary between the school's
+network and the internet line. The medium carries the signal: a copper cable across the
+room, fibre for longer distances, or radio for <Glossary term="Wi-Fi">Wi-Fi</Glossary>,
+which takes an internet signal and converts it into radio waves (Bourgeois et al., 2019).
+
+Every device on a network is assigned a unique identifying number called an IP address, and
+a human-friendly name - a domain name - is translated to that number by the DNS system,
+which acts as the directory of the internet (Bourgeois et al., 2019). When the lab's
+internet "does not work", one of these named parts is usually at fault, and the names are
+what let you describe the fault to someone who can fix it.
+
+The software side of communication is everything that makes the hardware usable. A
+<Glossary term="Protocol">protocol</Glossary> is a set of rules that governs how
+communication takes place on a network (Bourgeois et al., 2019); machines can only talk
+when both follow the same rules, which is why standards matter so much. On top of the
+protocols run the tools you actually see: the browser that requests web pages, the email
+client, the messaging and video-meeting apps, the software that shares a folder or a
+printer across the lab. The operating system contributes too: it holds the network settings
+- the address, the password, the connection name - that let the machine join.
+
+<Figure id="fig-U2-8" src="/img/figures/gict-300/unit-02/fig-U2-8.svg" alt="Table of eight communication items sorted into hardware and software, each with what it does." />
+
+A note on the everyday Pakistan reality: in many schools the network is not a lab of cables
+but a phone hotspot and a data bundle, with the school's single router doubling as the
+Wi-Fi source for the head teacher's laptop. The parts are the same parts, just fewer of
+them. Naming them does not depend on scale.
+
+## Activity: Map the lab's network
+
+Work in pairs. About 20 minutes.
+
+1. If your classroom has a network (or your school has one), walk it and sketch what you
+   find: how many computers, where the printer is, what the boxes with lights are, what
+   connects to what. If no network is available, sketch the one in the figure from the
+   labels alone.
+2. Label each part in your sketch with its job: doorway, forwarder, boundary, medium.
+3. Add the software layer: write beside the sketch which tools carry the school's actual
+   communication (which browser, which email, which messaging app, and where the Wi-Fi
+   password lives).
+4. Finish with one diagnostic sentence in the form: "If the internet works on computer 5
+   but not on computer 14, the fault is more likely in ... than in ..., because ...".
+
+## Check your understanding
+
+1. Define a computer network in one sentence. *(Remember)*
+2. State the difference between a switch and a router in one sentence each. *(Understand)*
+3. In the sketch of a lab network, the printer works for every computer but no computer can
+   reach the internet. Name the part most likely at fault and justify your answer. *(Apply)*
+4. Name two communication tools that are software and one rule-set that is a protocol. *(Remember)*
+
+## Summary
+
+Communication hardware forms a chain: each machine's network interface, the switch that
+forwards messages inside the lab, the router that joins the lab to the internet, and the
+medium (cable, fibre or Wi-Fi radio) that carries the signal. The software side is the
+shared rules - protocols - plus the visible tools: browsers, email, messaging, and the
+network settings in the operating system. A teacher who can name these parts can describe
+any fault precisely, which is half of fixing it.
+
+## Self-assessment checklist
+
+- [ ] I can name the four hardware jobs in a small network and one device for each.
+- [ ] I can explain what a protocol is and why machines need shared rules.
+- [ ] I can sketch the lab network and say where the internet enters it.
+
+## Try this at your practicum school
+
+Sketch the practicum school's actual network (or its single-router setup). Label every part
+you can identify, and mark the one point where the internet enters the building. Ask the
+in-charge what usually breaks first.
+
+## Summative task
+
+A remote school gets a laptop, a printer, a Wi-Fi router and an internet connection, and
+the head teacher wants teachers to share the printer and the internet from their own
+devices. Draw the network (boxes and lines), label each part's job, and write four
+sentences: two on how the hardware must be arranged, and two on the software settings that
+must be right for it to work.
+
+**Marking guide (10 marks):**
+
+- All devices placed and connected correctly in the diagram: 3 marks.
+- Each part's job labelled accurately: 3 marks.
+- The software sentences name actual settings or tools, not vague "setup" (Analyse): 3
+  marks.
+- Diagram is clear and labelled: 1 mark.
+
+## Further reading
+
+- Bourgeois, D. T., Smith, J. L., Wang, S., & Mortati, J. (2019). *Information Systems for
+  Business and Beyond* (2nd ed.), chapter 5. Open Textbook Library.
+  https://open.umn.edu/opentextbooks/textbooks/information-systems-for-business-and-beyond
+- Laudon, K. C., & Laudon, J. P. *Management Information Systems*. Pearson. (Course guide
+  reading; print monograph, cited at bibliographic level.)
+- Stair, R., & Reynolds, G. *Principles of Information Systems*. Cengage Learning. (Course
+  guide reading; print monograph, cited at bibliographic level.)

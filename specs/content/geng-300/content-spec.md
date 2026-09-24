@@ -5,7 +5,7 @@ status: approved
 
 # GENG-300 - Functional English - Content Spec
 
-Licence track, 3 (3-0) credit hours, 16 weeks. Source:
+Semester 1 (pre-service track), 3 (3-0) credit hours, 16 weeks. Source:
 `.specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx` (departmental
 outline, 4807 chars).
 
@@ -14,9 +14,9 @@ outline, 4807 chars).
 effective communication in real-world scenarios: grammar, vocabulary, comprehension, professional
 writing, public speaking, and intercultural communication.
 
-**Placement (owner decision):** a top-level licence tree,
-`licence/geng-300/unit-NN/` (content root `licence/`, Docusaurus plugin `id: licence`,
-`routeBasePath: `/licence`), following the same pattern as EED-313.
+**Placement (owner decision):** inside the pre-service (B.Ed) textbook, in
+`docs/semester-1/geng-300/unit-NN/` (content root `docs/`, default docs plugin,
+`routeBasePath: `/`), grouped under Semester 1 alongside EFMP-301 and EFMP-302.
 
 **Bilingual:** English-only, per catalog entry (`bilingual: false`). No Urdu mirror is required,
 and bilingual diagram/glossary parity rules are waived.
@@ -47,7 +47,7 @@ partition of the guide's content across 16 weeks; the guide does not determine t
 
 ## Unit 1: Foundations of Functional English
 
-Weeks 1 to 4 (derived). Unit Spec (G1) for `licence/geng-300/unit-01/`.
+Weeks 1 to 4 (derived). Unit Spec (G1) for `docs/semester-1/geng-300/unit-01/`.
 
 - **CLO refs**: course outcome 1.
 - **Key terms**: Vocabulary building, Communicative grammar, Word formation, Sentence structure,
@@ -95,7 +95,7 @@ types compared with examples (1.2); fig-U1-3 `diagram` the English sound system 
 
 ## Unit 2: Comprehension and Analysis
 
-Weeks 5 to 8 (derived). Unit Spec (G1) for `licence/geng-300/unit-02/`.
+Weeks 5 to 8 (derived). Unit Spec (G1) for `docs/semester-1/geng-300/unit-02/`.
 
 - **CLO refs**: course outcome 2.
 - **Key terms**: Reading strategies, Skimming, Scanning, SQ4R, Critical reading, Active listening,
@@ -143,7 +143,7 @@ each (2.3).
 
 ## Unit 3: Effective Communication
 
-Weeks 9 to 12 (derived). Unit Spec (G1) for `licence/geng-300/unit-03/`.
+Weeks 9 to 12 (derived). Unit Spec (G1) for `docs/semester-1/geng-300/unit-03/`.
 
 - **CLO refs**: course outcome 3.
 - **Key terms**: Principles of communication, Clarity, Coherence, Conciseness, Public speaking,
@@ -192,7 +192,7 @@ fig-U3-6 `table` inclusive-language guidelines with examples and alternatives (3
 
 ## Unit 4: Professional Writing and Intercultural Communication
 
-Weeks 13 to 16 (derived). Unit Spec (G1) for `licence/geng-300/unit-04/`.
+Weeks 13 to 16 (derived). Unit Spec (G1) for `docs/semester-1/geng-300/unit-04/`.
 
 - **CLO refs**: course outcomes 3 and 4.
 - **Key terms**: Professional writing, Business email, Memo, Report, Formal letter, Intercultural

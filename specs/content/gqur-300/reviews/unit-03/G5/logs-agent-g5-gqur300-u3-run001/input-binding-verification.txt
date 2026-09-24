@@ -1,0 +1,24 @@
+G5 input binding verification - GQUR-300 Unit 3 (run agent-g5-gqur300-u3-run001)
+Worktree HEAD: 59faad3f68b3760c693379e66dfbc5273f28bd37 (branch 020-author-gqur-300), clean tree.
+Manifest: specs/content/gqur-300/reviews/unit-03/G5/manifest.json (115 inputs).
+
+Method: every bound path was read from disk and SHA-256 hashed with the exact
+normalization scripts/lib/review-evidence.mjs applies when building the manifest
+(normalized(): .mdx frontmatter lines "translation_status: draft|reviewed" are
+normalized to "translation_status: lifecycle"; specs/content/gqur-300/content-spec.md
+is bound as the ADR-0027 Unit-3 slice; all other bytes hashed raw).
+
+Result: 115/115 digests identical to the prepared manifest. No missing, changed
+or extra bound inputs. A raw-byte comparison (no normalization) differs on the
+13 .mdx/content-spec paths exactly as the contract's normalization explains.
+
+Independence: this session did not author or translate any reviewed byte. The
+unit was authored at commit fe83157, translated at fe16a05, G3-repaired at
+78f0366 and Urdu-swept at c61192e, all before this session started from a clean
+worktree at 59faad3.
+
+G2 gate context: the newest bound G2 evidence
+(specs/content/gqur-300/reviews/unit-03/G2/20260924T011726786Z-gates.json) was
+generated at commit 78f0366, i.e. before the course-wide Urdu sweep (c61192e)
+touched this unit's Urdu files. All deterministic gates were therefore re-run
+fresh at HEAD by this review (all exit 0; see the check-*.txt logs).

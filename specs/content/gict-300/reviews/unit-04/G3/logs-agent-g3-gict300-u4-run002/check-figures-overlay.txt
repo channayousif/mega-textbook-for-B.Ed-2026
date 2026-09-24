@@ -1,0 +1,4 @@
+Scoped overlay run: CONTENT_ROOT=/tmp/g3-run002-overlay (repo at e12079a minus the stale geng-300 course; GICT-300 inputs verified byte-identical to the bound manifest). Full-HEAD run in check-figures.txt fails only on geng-300 Unit 1.
+$ CONTENT_ROOT=/tmp/g3-run002-overlay node scripts/check-figures.mjs   (2026-09-24T01:04:02.820Z)
+✓ Figure gate passed (≥ 2 RENDERED figures per topic, a placed schematic per unit, well-formed, unique; manifest consistent; placed assets exist).
+exit=0

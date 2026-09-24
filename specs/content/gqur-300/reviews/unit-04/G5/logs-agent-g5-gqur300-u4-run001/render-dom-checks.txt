@@ -1,0 +1,25 @@
+index [desktop-1280] dir=rtl lang=ur h1=پیمائش اور جیومیٹری | nastaliq=true/true | overflow=false 1280x1280
+topic-01 [desktop-1280] dir=rtl lang=ur h1=موضوع 4.1 - پیمائش کی اکائیا | nastaliq=true/true | overflow=false 1280x1280
+topic-02 [desktop-1280] dir=rtl lang=ur h1=موضوع 4.2 - اطراف، رقبہ، حجم | nastaliq=true/true | overflow=false 1280x1280
+topic-03 [desktop-1280] dir=rtl lang=ur h1=موضوع 4.3 - حقیقی سیاق میں پ | nastaliq=true/true | overflow=false 1280x1280
+unit-assessment [desktop-1280] dir=rtl lang=ur h1=یونٹ 4 کا جائزہ | nastaliq=true/true | overflow=false 1280x1280
+unit-teacher-notes [desktop-1280] dir=rtl lang=ur h1=یونٹ 4 استاد کے نوٹس | nastaliq=true/true | overflow=false 1280x1280
+index [narrow-360] dir=undefined lang=undefined h1=? | nastaliq=undefined/undefined | overflow=false 360x360
+topic-01 [narrow-360] dir=undefined lang=undefined h1=? | nastaliq=undefined/undefined | overflow=false 360x360
+topic-02 [narrow-360] dir=undefined lang=undefined h1=? | nastaliq=undefined/undefined | overflow=false 360x360
+topic-03 [narrow-360] dir=undefined lang=undefined h1=? | nastaliq=undefined/undefined | overflow=false 360x360
+unit-assessment [narrow-360] dir=undefined lang=undefined h1=? | nastaliq=undefined/undefined | overflow=false 360x360
+unit-teacher-notes [narrow-360] dir=undefined lang=undefined h1=? | nastaliq=undefined/undefined | overflow=false 360x360
+index [print-emulated] dir=undefined lang=undefined h1=? | nastaliq=undefined/undefined | overflow=false 794x794
+topic-01 [print-emulated] dir=undefined lang=undefined h1=? | nastaliq=undefined/undefined | overflow=false 794x794
+topic-02 [print-emulated] dir=undefined lang=undefined h1=? | nastaliq=undefined/undefined | overflow=false 794x794
+topic-03 [print-emulated] dir=undefined lang=undefined h1=? | nastaliq=undefined/undefined | overflow=false 794x794
+unit-assessment [print-emulated] dir=undefined lang=undefined h1=? | nastaliq=undefined/undefined | overflow=false 794x794
+unit-teacher-notes [print-emulated] dir=undefined lang=undefined h1=? | nastaliq=undefined/undefined | overflow=false 794x794
+--- figures ---
+topic-01 /img/figures/gqur-300/unit-04/fig-U4-1.ur.svg box={"x":561,"y":475.359375,"width":702.984375,"height":424.390625}
+topic-01 /img/figures/gqur-300/unit-04/fig-U4-2.ur.svg box={"x":561,"y":237.859375,"width":702.984375,"height":424.390625}
+topic-02 /img/figures/gqur-300/unit-04/fig-U4-3.ur.svg box={"x":561,"y":475.359375,"width":702.984375,"height":424.390625}
+topic-02 /img/figures/gqur-300/unit-04/fig-U4-4.ur.svg box={"x":561,"y":238.234375,"width":702.984375,"height":424.390625}
+topic-03 /img/figures/gqur-300/unit-04/fig-U4-5.ur.svg box={"x":561,"y":475.359375,"width":702.984375,"height":424.390625}
+topic-03 /img/figures/gqur-300/unit-04/fig-U4-6.ur.svg box={"x":561,"y":238.046875,"width":702.984375,"height":424.390625}

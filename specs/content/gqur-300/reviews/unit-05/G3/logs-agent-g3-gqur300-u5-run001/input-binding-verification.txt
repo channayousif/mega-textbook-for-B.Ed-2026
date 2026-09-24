@@ -1,0 +1,11 @@
+prepared input count: [33m96[39m
+recomputed input count: [33m96[39m
+missing from recomputed: []
+extra in recomputed: []
+changed digests: []
+manifest verified: [33mtrue[39m
+skill_digest match: [33mtrue[39m
+dirty bound inputs: []
+reviewed HEAD (git rev-parse): ad0c4d1b8ffa0cefff605837e0f30309d9f1cf3b
+authoring commit for unit-05 content: 56f5b54 (feat(gqur-300): author Units 5 and 6)
+Note: commit ad0c4d1 landed after preparation and touches only specs/content/gqur-300/tasks.md, which the manifest excludes; recomputation above already reflects it.

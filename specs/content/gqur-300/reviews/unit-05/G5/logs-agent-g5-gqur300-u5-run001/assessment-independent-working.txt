@@ -1,0 +1,49 @@
+G5 assessment equivalence - independent working (Urdu items)
+Reviewer: agent:g5-reviewer (agent-g5-gqur300-u5-run001), 2026-09-24
+Method: each Urdu item was read and answered from the Urdu alone, before comparing
+with the English item and the supplied answer key. Arithmetic re-derived, not recalled.
+
+MCQs (i18n/ur/.../unit-05/unit-assessment.mdx)
+1. Data cycle order -> option b (سوال، جمع، تنظیم، خلاصہ، تشریح). Key: b. MATCH.
+2. Pupils arriving after the bell this week -> observation at the gate (b). Key: b. MATCH.
+3. Frequencies 12, 14, 9 of 40: 12+14+9=35; 40-35=5 unrecorded -> option b.
+   Distractors checked: mode 14 (c) wrong by design; "mean 35" (d) preserved as in EN.
+   Key: b. MATCH.
+4. Share of the class per travel mode -> pie chart (c). Key: c. MATCH.
+5. Attendance across a week -> line graph (b). Key: b. MATCH.
+6. 30 percent of the whole: 0.30 x 360 = 108 degrees -> option c. Key: c. MATCH.
+7. Vertical axis starting at 10 -> exaggerates small differences (b). Key: b. MATCH.
+8. Takings 4,000 + 4,200 + 4,100 + 4,300 + 39,000 = 55,600; 55,600/5 = 11,120 (mean).
+   Sorted: 4,000, 4,100, 4,200, 4,300, 39,000 -> median 4,200. Honest typical day =
+   median 4,200 -> option b. Key: b. MATCH.
+9. Only average for categories -> mode (c). Key: c. MATCH.
+10. 57.54 percent measured on base -> 10 years and above (b). Key: b. MATCH.
+
+RRQs
+1. Three methods + fitting school questions: observation/survey/records mapping intact.
+   NOTE: the Urdu model answer renders "which snack to stock" as
+   "کون سی نسٹاک رکھنی ہے" - "نسٹاک" is not an Urdu word (garbled snack/stock blend).
+   Finding raised (blocking): the model answer is not fully comprehensible.
+2. Total 35 vs sample 40 -> 5 unrecorded; next move find/rerun, not summarize. MATCH.
+3. 20+45+50+55+60+62+62+70+70+70+96 = 660; 660/11 = 60 (mean); 6th of 11 sorted = 62
+   (median); 70 appears three times (mode). MATCH (mean 60, median 62, mode 70).
+4. 3 icons x 10 = 30 (Class A); 5 x 10 = 50 (Class B); without key a 3-to-5 reading
+   (20-pupil error). MATCH.
+5. Sorted 35, 38, 40, 42, 45 -> median 40; no repeated value -> no mode. MATCH.
+6. Truncated axis exaggerates differences; mechanism = visible bar heights start at 10. MATCH.
+7. 22.5% x 360 = 81 degrees. MATCH.
+8. High outliers drag the mean; median resistant. MATCH.
+9. 64.23 - 50.21 = 14.02 percentage points; headline hides the gender gap (and the
+   46.29 percent out-of-school rate). MATCH.
+10. Five questions: who collected, how, compared to what, base, missing. MATCH.
+
+ERQs 1-5: task demands, figures (57.54 / 64.23 / 50.21 / 54.57 / 46.29), rubric values
+(14.02; 2.97 vs 14.02 "more than four times"; totals 6/6/6/7/10) and Bloom tags all
+correspond to the English. ERQ-4's ordering explanation (mean below median below mode
+reveals a low tail) preserved. No Urdu item leaks its answer; option order preserved;
+cognitive demand unchanged (no analysis item lowered to recall).
+
+Independent census-figure check against the English inputs (authoritative base) and the
+PBS record summary: literacy 10+ 57.54 (male 64.23, female 50.21), 2017 comparison 54.57,
+rise 2.97, gap 14.02, out-of-school 5-16 46.29 - all identical in the Urdu prose, the
+Urdu fig-U5-6 labels, and the English. No numeric drift found.

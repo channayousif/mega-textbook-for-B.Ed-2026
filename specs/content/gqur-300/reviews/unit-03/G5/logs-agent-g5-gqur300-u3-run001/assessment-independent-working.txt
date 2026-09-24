@@ -1,0 +1,63 @@
+G5 assessment equivalence - independent working - GQUR-300 Unit 3
+(run agent-g5-gqur300-u3-run001)
+
+Method: every Urdu item was answered independently BEFORE the supplied answer
+key was consulted, then compared with the English item, its key, options,
+marking weights and cognitive demand. The English answer key was itself
+re-derived independently and found correct for all 25 items.
+
+MCQ (Urdu options are in the same a-d order as English; keys identical):
+1. 7 + 4k: 7, 11, 15, 19, 23 -> a. Matches key a. Equivalent to EN.
+2. 2t + 1 at t = 12 -> 25 -> b. Matches.
+3. Coefficient of 500 + 30k -> 30 -> b. Matches.
+4. 2t + 1 is a rule/machine -> b. Matches. Urdu option b "ایسا قاعدہ جو مثلثوں
+   کی ہر تعداد کو اس کی تیلیوں سے بدل دے" preserves the machine sense; no
+   option leaks the key.
+5. 30 + 12m = 150 -> m = 10 -> b. Matches.
+6. 5x - 7 > 18 -> x > 5 -> a. Matches.
+7. -3y <= 21 -> y >= -7 (sign flip on dividing by -3) -> b. Matches.
+8. 30 + 8 x 25 = 230 -> b. Matches.
+9. 500 + 30k = 300 + 40k -> 200 = 10k -> k = 20 -> b. Matches.
+10. translate, solve, interpret, decide -> b. Matches. Urdu option order
+    identical to EN; distractors equally plausible in both locales.
+Key concentration (8 of 10 = b) is the same advisory condition G3 run001
+recorded for the English bank (F4); not a translation defect.
+
+RRQ (all ten answered independently; models and mark schemes equivalent):
+1. 12, 17, 22, 27, 32. Marks (2) same split. Equivalent.
+2. 25 sticks; the + 1 is the first triangle's starting stick that no later
+   triangle shares. Equivalent.
+3. g variable, 45 coefficient, 20 fixed box charge. Marks (3) same 1/1/1. Equivalent.
+4. 15k = 135, k = 9, check 60 + 15 x 9 = 195. Equivalent.
+5. 250 + 400s = 2,650 -> s = 6. Equivalent.
+6. -4p > 24 -> p < -6 with the number-line explanation. Equivalent. The Urdu
+   model keeps both mark points.
+7. Equals-sign-as-"answer-next" misconception. Equivalent.
+8. translate, solve, interpret, decide; the substitution check belongs to
+   decide (step 4). The Urdu model matches the G3-REPAIRED English (the
+   pre-repair English wrongly said "solve move"; commit 78f0366 fixed it and
+   the Urdu tracks the repaired text). Marks (3) same 1/1/1.
+9. 2,000 + 15n = 1,200 + 25n -> 800 = 10n -> n = 80. Equivalent.
+10. Compression idea + rate-card example. Equivalent.
+
+ERQ (rubric weights and Analyze tags preserved):
+1. Bunting: 2n + 11; 41 m for n = 15; n <= 29.5 -> 29 with 2(29) + 11 = 69 <= 70.
+   Urdu rubric identical (7 marks). Urdu stem compresses "largest whole number
+   of triangles a 70-metre ribbon can carry" to "70 میٹر ربن کی سب سے بڑی پوری
+   تعداد" (referent recoverable from context; advisory).
+2. Bus: 8,000 + 120p <= 20,000 -> p <= 100; 100 pupils exactly 20,000; 101 ->
+   20,120 exceeds. Urdu identical (7 marks).
+3. Printers: A = 2,000 + 15n, B = 1,200 + 25n; 4,250 vs 4,950 (A cheaper by
+   700); break-even n = 80; recommendation weighs a smaller run. Urdu identical
+   (7 marks).
+4. Geometry boxes: Urdu stem omits "costing 45 rupees each" -> the item is
+   UNSOLVABLE from the Urdu text although the rubric (45b <= 1,700; 37 boxes;
+   37 x 45 = 1,665; leftover 1,700 - 45b = 35) is fully preserved (8 marks).
+   This is the review's blocking assessment finding.
+5. Practicum rate card: expression, three quantities, break-even vs flat rate,
+   recommendation, clarity (10 marks). Equivalent.
+
+Cognitive demand: no item is lowered to recall by the translation and no item
+leaks its answer. Bloom tags are kept in English in both locales. The only
+demand-changing defect is ERQ-4's missing datum, which breaks the item rather
+than lowering it.

@@ -1,0 +1,65 @@
+G3 run 002 command-run environment notes (GICT-300 Unit 1, review at HEAD e12079a)
+==================================================================================
+
+Reviewed state
+--------------
+- Worktree: .claude/worktrees/agent-aed74e6fa51c2d4d4, branch 020-author-gict-300,
+  HEAD e12079a ("chore(gict-300): clear stale G3 manifests for run002 preparation").
+- Prepared manifest: specs/content/gict-300/reviews/unit-01/G3/manifest.json
+  (untracked, excluded from the bound set like every reviews/ path).
+- All 101 input digests and the skill digest were recomputed with manifestFor()/
+  skillDigest() from scripts/lib/review-evidence.mjs and match the manifest exactly.
+- The unit's English bytes were last touched by commit 140dd8a (run 001 repairs);
+  the G2 gates manifest at 684e916 (20260923T232055686Z-gates.json) carries an
+  input_manifest byte-identical to this run's, so G2 and G3 run 002 review the
+  same English bytes.
+
+Why an overlay was needed (same condition as run 001 and the G2 evidence)
+------------------------------------------------------------------------
+Running the gates unmodified in this worktree fails on trees that are NOT this
+review's subject:
+
+1. Pre-existing geng-300 reds at this HEAD: a stale docs/semester-1/geng-300/
+   legacy-layout tree (front-matter, depth, figure and answer-key failures) and
+   9 em dashes in specs/content/geng-300/intake/evaluation.md. Both are already
+   fixed on the unmerged sibling branch 018-author-geng300 (tip 2bf47e6, not an
+   ancestor of e12079a) and are out of scope for this GICT-300 review.
+   Raw un-overlaid outputs are preserved in logs-raw-run002/.
+2. Attribution was checked line by line: zero failure lines in any raw log
+   mention gict-300. Every failure line references geng-300 paths.
+
+Overlay construction (/tmp/gict300-g3-overlay-run002)
+-----------------------------------------------------
+- Base: `git archive HEAD` (full committed tree at e12079a). GICT-300 Unit 1 and
+  every other bound input are byte-identical to the reviewed state (verified by
+  diff of the unit directory, governance files and fig-U1-6).
+- Removed: docs/semester-1/geng-300 (the stale placement).
+- Replaced with branch 018-author-geng300 (2bf47e6) versions:
+  licence/geng-300, specs/content/geng-300, static/img/figures/geng-300.
+- glossary.json merged: HEAD's 135 terms (incl. the GICT-300 terms) + 62
+  geng-300 terms from 018 = 197 terms, so both courses' <Glossary> references
+  resolve.
+- catalog/courses.json verified identical between HEAD and 2bf47e6 (empty diff).
+- node_modules symlinked from the worktree for the build/serve steps.
+
+How each gate was pointed at the overlay
+----------------------------------------
+- validate:content, check:depth-gate, check:figures, check:no-answer-keys:
+  CONTENT_ROOT=/tmp/gict300-g3-overlay-run002 (the scripts' supported env override).
+- check:no-em-dash: the script scans CWD-relative trees and does not read
+  CONTENT_ROOT, so it was run with the overlay as CWD.
+- check:docs-sync: reads repo-root standard files (.claude/skills, style-guide,
+  CLAUDE.md, constitution), all committed and unchanged; run unmodified in the
+  worktree (exit 0 both raw and as recorded).
+- Build: npm run build in the overlay (exit 0, log cmd-logs-run002/build.txt).
+- Render inspection: node scripts/render-inspect.mjs GICT-300 1 with
+  CONTENT_ROOT pointed at the overlay, artifacts under render-inspect-run002/
+  (exit 0, 0 defects). Element close-ups captured by
+  render-inspect-run002/element-capture-run002.mjs.
+
+GICT-300 attribution
+--------------------
+Every gate failure in the raw (un-overlaid) logs is attributable to geng-300
+(out-of-scope pre-existing). Zero findings in any log are attributable to
+GICT-300 Unit 1 bytes. All six gates and the render inspection pass against the
+overlay, whose GICT-300 Unit 1 inputs are byte-identical to the reviewed state.

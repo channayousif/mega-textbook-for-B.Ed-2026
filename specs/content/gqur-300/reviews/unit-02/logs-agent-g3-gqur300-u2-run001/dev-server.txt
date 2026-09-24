@@ -1,0 +1,94 @@
+
+> bed-mega-textbook@0.1.0 prestart
+> node scripts/build-content-index.mjs && node scripts/report-content-status.mjs
+
+✓ Wrote 112 content-index records to static/content-index.json
+✓ Copied catalog/courses.json to static/catalog-courses.json
+✓ Wrote content status for 8 course(s) to static/content-status.json
+
+> bed-mega-textbook@0.1.0 start
+> docusaurus start --port 3212 --no-open
+
+[36m[1m[INFO][22m[39m Starting the development server...
+◇ injected env (3) from .env.local // tip: ◈ secrets for agents [www.dotenvx.com]
+[33m[1m[WARNING][22m The [36m`siteConfig.onBrokenMarkdownLinks`[39m[33m config option is deprecated and will be removed in Docusaurus v4.[39m
+[33mPlease migrate and move this option to [36m`siteConfig.markdown.hooks.onBrokenMarkdownLinks`[39m[33m instead.[39m
+[32m[1m[SUCCESS][22m[39m Docusaurus website is running at: [36m[4mhttp://localhost:3212/[24m[39m
+[90m[[90mwebpackbar[90m][39m [36mℹ[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m✔[39m Client: Compiled with some errors in 12.60s
+[31mError: MDX compilation failed for file [36m[4m"/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/docs/semester-1/gqur-300/unit-03/topic-01.mdx"[24m[39m[31m[39m
+[31mCause: Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`[39m
+[31mDetails:[39m
+[31m{[39m
+[31m  "column": 36,[39m
+[31m  "file": "",[39m
+[31m  "message": "Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`",[39m
+[31m  "line": 141,[39m
+[31m  "name": "141:36",[39m
+[31m  "place": {[39m
+[31m    "_bufferIndex": 33,[39m
+[31m    "_index": 0,[39m
+[31m    "line": 141,[39m
+[31m    "column": 36,[39m
+[31m    "offset": 7642[39m
+[31m  },[39m
+[31m  "reason": "Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`",[39m
+[31m  "ruleId": "unexpected-character",[39m
+[31m  "source": "micromark-extension-mdx-jsx",[39m
+[31m  "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect"[39m
+[31m}[39m
+
+[33m--------------------------[39m
+
+[31mError: MDX compilation failed for file [36m[4m"/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/docs/semester-1/gqur-300/unit-03/topic-02.mdx"[24m[39m[31m[39m
+[31mCause: Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`[39m
+[31mDetails:[39m
+[31m{[39m
+[31m  "column": 76,[39m
+[31m  "file": "",[39m
+[31m  "message": "Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`",[39m
+[31m  "line": 70,[39m
+[31m  "name": "70:76",[39m
+[31m  "place": {[39m
+[31m    "_bufferIndex": 75,[39m
+[31m    "_index": 2,[39m
+[31m    "line": 70,[39m
+[31m    "column": 76,[39m
+[31m    "offset": 3729[39m
+[31m  },[39m
+[31m  "reason": "Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`",[39m
+[31m  "ruleId": "unexpected-character",[39m
+[31m  "source": "micromark-extension-mdx-jsx",[39m
+[31m  "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect"[39m
+[31m}[39m
+
+[33m--------------------------[39m
+
+[31mError: MDX compilation failed for file [36m[4m"/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/docs/semester-1/gqur-300/unit-03/unit-assessment.mdx"[24m[39m[31m[39m
+[31mCause: Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`[39m
+[31mDetails:[39m
+[31m{[39m
+[31m  "column": 17,[39m
+[31m  "file": "",[39m
+[31m  "message": "Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`",[39m
+[31m  "line": 72,[39m
+[31m  "name": "72:17",[39m
+[31m  "place": {[39m
+[31m    "_bufferIndex": 13,[39m
+[31m    "_index": 0,[39m
+[31m    "line": 72,[39m
+[31m    "column": 17,[39m
+[31m    "offset": 2408[39m
+[31m  },[39m
+[31m  "reason": "Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`",[39m
+[31m  "ruleId": "unexpected-character",[39m
+[31m  "source": "micromark-extension-mdx-jsx",[39m
+[31m  "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect"[39m
+[31m}[39m
+[1mclient[39m[22m (webpack 5.108.4) compiled with [1m[31m3 errors[39m[22m
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/node_modules/@docusaurus/mdx-loader/lib/index.js??ruleSet[1].rules[8].use[0]!/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/docs/semester-1/gqur-300/unit-03/topic-01.mdx': No serializer registered for VFileMessage
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/javascript/JavascriptModule -> webpack/lib/errors/ModuleBuildError -> Error -> VFileMessage
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/node_modules/@docusaurus/mdx-loader/lib/index.js??ruleSet[1].rules[8].use[0]!/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/docs/semester-1/gqur-300/unit-03/topic-02.mdx': No serializer registered for VFileMessage
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/javascript/JavascriptModule -> webpack/lib/errors/ModuleBuildError -> Error -> VFileMessage
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/node_modules/@docusaurus/mdx-loader/lib/index.js??ruleSet[1].rules[8].use[0]!/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/docs/semester-1/gqur-300/unit-03/unit-assessment.mdx': No serializer registered for VFileMessage
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/javascript/JavascriptModule -> webpack/lib/errors/ModuleBuildError -> Error -> VFileMessage
