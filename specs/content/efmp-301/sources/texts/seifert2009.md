@@ -225,3 +225,33 @@ supports in the zone-of-proximal-development framing (U7-3); giftedness recognis
 and supported (U7-4); the inclusion principle, its benefits for everyone, and the
 ambiguity caution (U7-5); the reinforcement rows (U7-2, U7-4).
 
+## Chapter 7 - Classroom management and the learning environment (verified; used by Unit 8)
+
+On prevention: "The easiest management problems to solve are ones that do not happen
+in the first place! Even before the school year begins, you can minimize behavior
+problems by arranging classroom furniture and materials in ways that encourage a
+focus on learning as much as possible."
+
+On space: "Whatever the arrangement that you choose, it should help students to focus
+on learning tasks as much" as possible - with visibility of and interaction with
+students as organizing concerns.
+
+On rules: "Unlike procedures or routines, rules express standards of behavior for
+which individual students need to take responsibility... they are really about
+encouraging students to be responsible for learning and showing respect for each
+other." And on number: "the rules are not numerous; the table lists only five."
+
+On consequences: "natural consequences happen 'naturally', without deliberate
+intention by anyone... Logical consequences are ones that happen because of the
+responses of or decisions by others, but that also have an obvious or 'logical'
+relationship to the original action." The chapter's headings carry the response
+repertoire: "Responding to student misbehavior", "Ignoring misbehaviors", "Gesturing
+nonverbally", "Natural and logical consequences", "Conflict resolution and problem
+solving", and "Keeping management issues in perspective".
+
+Used for (Unit 8): the definition and what management serves (U8-1); the principles,
+prevention first (U8-2); the environment's parts - space, procedures and routines,
+the importance of learning communicated (U8-3); rules and natural-logical
+consequences (U8-4); the response repertoire and escalation (U8-5); the reinforcement
+rows (U8-2, U8-3).
+
