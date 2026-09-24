@@ -7,7 +7,7 @@ bilingual: true
 # EFMP-301 - Educational Psychology - Content Spec
 
 Semester 1, Major: Professional, 3 (3-0) credit hours, bilingual (English + Urdu). Degree
-track: `docs/semester-1/efmp-301/` (Unit 1 exists, certified and published; Units 2-6 are
+track: `docs/semester-1/efmp-301/` (Unit 1 exists, certified and published; Units 2-12 are
 authored by Spec 022). Source: `Scheme-and-Course-guides/extracted-text/1st 2026.txt` lines
 1011-1204 (the EFMP-301 block; original PDF: `Scheme-and-Course-guides/1st 2026.pdf`).
 
@@ -20,18 +20,23 @@ unchanged). Nothing else in the Unit 1 block changes, and the unit's content, Ur
 and governance artefacts are frozen: any review finding that demands a Unit 1 change is
 escalated, never applied.
 
-**Guide note (Constitution Art. III.6, D-2026-0012).** This course's guide supplies a
-Course Description, six Course Learning Outcomes, a 16-week topical outline arranged as
-twelve chapters (Week 1 through Week 16, with a discussion and short assessment slot in
-Week 2, class activities in Week 9, application activities and review in Week 7, and a
-final revision and assessment slot in Week 16), a Teaching/Instruction Strategies list, a
-Practical Work list, and two recommended books (both open-access URLs). It carries **no
-unit headings** beyond the existing Unit 1. The week calendar below is therefore
-guide-given; the **units 2+ partition is derived**, clearly labelled as derived with its
-basis stated, per D-2026-0012: the guide's contiguous teaching weeks are merged into five
-further blocks after Unit 1 (Chapter 1, Weeks 1-2), with whole weeks only, no reordering
-and no chapter split across units. The partition requires evaluator approval and owner
-confirmation.
+**Guide note (Constitution Art. III.6, D-2026-0012, G-2026-52 ruling).** This course's
+guide supplies a Course Description, six Course Learning Outcomes, a 16-week topical
+outline arranged as twelve chapters (Week 1 through Week 16, with a discussion and short
+assessment slot in Week 2, class activities in Week 9, application activities and review
+in Week 7, and a final revision and assessment slot in Week 16), a Teaching/Instruction
+Strategies list, a Practical Work list, and two recommended books (both open-access
+URLs). It carries **no unit headings** beyond the existing Unit 1. The week calendar
+below is guide-given. The **units 2+ partition is owner-determined**: on 2026-09-24 the
+curriculum owner ruled "chapterwise is good, consider chapters as units. follow the
+course guide" (resolving `G-2026-52`), so **each guide chapter is one unit** and the
+course is **12 units** total. The guide's calendar combines Chapters 11 and 12 in Week
+16; they remain separate units per the chapter rule, and the Week 16 block's five
+substantive bullets are assigned by plain meaning: the title-matched bullets to their
+chapters (mental health and well-being to Unit 11, guidance and counseling to Unit 12),
+and the professional-ethics, application and technology bullets to Unit 12 as the
+course's closing material, with the "Final revision / assessment" slot seeding the course
+review. This assignment is a disclosure, not a claim about the guide.
 
 **Precedence note.** `catalog/courses.json` carries `3 (3-0)`; the guide states `Credit
 Hours 03` with no split. The two agree on the total of 3, and the catalogue carries the
@@ -88,9 +93,10 @@ Two consequences for authoring, both load-bearing:
    conversation.
 2. **The course is cumulative.** Unit 1's tools (the three-part scope, evidence over
    proverbs) are used by every later unit; the learning theories of Unit 3 reappear in
-   Unit 4's cognitive processes and Unit 5's motivation; Unit 6 closes the loop by
-   applying the whole course to assessment, teaching and well-being. Later units may
-   freely recall earlier material; earlier units must not depend on later ones.
+   Unit 4's cognitive processes and Unit 6's motivation; the closing units (9-12) apply
+   the whole course to assessment, teaching, well-being, guidance and ethics. Later
+   units may freely recall earlier material; earlier units must not depend on later
+   ones.
 
 ## Reading list
 
@@ -102,8 +108,8 @@ Cited by reference only - never reproduced (Constitution Art. III.5, Spec 006 FR
 
 | Key | Citation | DOI/URL | Units | Note |
 |---|---|---|---|---|
-| seifert2009 | Seifert, K., & Sutton, R. (2009). *Educational Psychology* (2nd ed.). CC BY 3.0. | https://home.cc.umanitoba.ca/~seifert/EdPsy2009.pdf | 1-6 | **Verified real and open access** (guide book 2; retrieved 2026-09-24, 376 pp). The same text is served by the Open Textbook Library at https://open.umn.edu/opentextbooks/textbooks/educational-psychology, the URL Unit 1's sources already bind. Its twelve chapters (the changing teaching profession and you; the learning process; student development; student diversity; students with special educational needs; student motivation; classroom management; the nature of classroom communication; facilitating complex thinking; planning instruction; teacher-made assessment strategies; standardized and other formal assessments) map directly onto this course's guide chapters, and it is the backbone source for Units 2-6 |
-| seifert-hk | Seifert, K. *Educational Psychology* (revised ed., Connexions col11302). CC BY-SA 4.0. Open Textbooks for Hong Kong. | https://www.opentextbooks.org.hk/system/files/export/6/6118/pdf/Educational_Psychology_6118.pdf | 2-6 | **Verified real and open access** (guide book 1; retrieved 2026-09-24, 455 pp). Kelvin Seifert's own revised edition of the same book via Connexions; used as the second binding wherever the 2009 edition needs a second view |
+| seifert2009 | Seifert, K., & Sutton, R. (2009). *Educational Psychology* (2nd ed.). CC BY 3.0. | https://home.cc.umanitoba.ca/~seifert/EdPsy2009.pdf | 1-12 | **Verified real and open access** (guide book 2; retrieved 2026-09-24, 376 pp). The same text is served by the Open Textbook Library at https://open.umn.edu/opentextbooks/textbooks/educational-psychology, the URL Unit 1's sources already bind. Its twelve chapters (the changing teaching profession and you; the learning process; student development; student diversity; students with special educational needs; student motivation; classroom management; the nature of classroom communication; facilitating complex thinking; planning instruction; teacher-made assessment strategies; standardized and other formal assessments) map directly onto this course's guide chapters, and it is the backbone source for Units 2-12 |
+| seifert-hk | Seifert, K. *Educational Psychology* (revised ed., Connexions col11302). CC BY-SA 4.0. Open Textbooks for Hong Kong. | https://www.opentextbooks.org.hk/system/files/export/6/6118/pdf/Educational_Psychology_6118.pdf | 2-12 | **Verified real and open access** (guide book 1; retrieved 2026-09-24, 455 pp). Kelvin Seifert's own revised edition of the same book via Connexions; used as the second binding wherever the 2009 edition needs a second view |
 
 **Both guide books are open-access and retrievable**, so the D-2026-0013 / D-2026-0021
 print-monograph situation does not arise and no `open_access_floor` is declared: every
@@ -127,14 +133,14 @@ briefly) are verified and bound per unit at authoring time.
 
 **The calendar is guide-given** (`1st 2026.txt:1042-1171`): the guide numbers its outline
 by week and chapter, with no mid-term week named (unlike GNAS-301) and the final revision
-and assessment slot inside Week 16. **The unit partition is derived** (D-2026-0012): the
-guide carries no unit headings, so its contiguous teaching weeks are merged into six
-blocks below. Basis: whole weeks only, no reordering, no chapter split across units; Unit
-1 is the existing Chapter 1 block (Weeks 1-2); block boundaries fall where the guide's
-own chapters change character (development; learning theories; cognition and
-intelligence; the learner in the classroom; the professional practice of teaching and
-well-being). At 3 (3-0) credit hours that is 6, 6, 9, 9, 9 and 9 contact hours for Units
-1 to 6 respectively.
+and assessment slot inside Week 16. **The unit partition is owner-determined** (the
+G-2026-52 ruling, 2026-09-24): each guide chapter is one unit, giving **12 units** -
+Unit 1 = Chapter 1 (the existing golden unit), Units 2-12 = Chapters 2-12. Every unit's
+teaching weeks are the guide's own placement of its chapter; no week is reordered and no
+chapter is split across units. At 3 (3-0) credit hours the contact hours are 6, 6, 9, 6,
+3, 3, 3, 3, 3, 3 and 3 for Units 1 to 11, with Week 16's 3 hours shared by Units 11 and
+12 (the guide combines Chapters 11-12 in that week; recorded honestly, they remain
+separate units per the chapter rule).
 
 | Week(s) | Chapter | Guide sub-topics | Unit |
 |---|---|---|---|
@@ -147,22 +153,21 @@ well-being). At 3 (3-0) credit hours that is 6, 6, 9, 9, 9 and 9 contact hours f
 | 7 | Ch 3 (Part 3) | constructivist approaches; application activities and review | Unit 3 |
 | 8 | Ch 4: Cognitive Processes in Learning | attention and perception; memory and information processing | Unit 4 |
 | 9 | Ch 4 (continued) | thinking, problem-solving, and reasoning; class activities | Unit 4 |
-| 10 | Ch 5: Intelligence and Creativity | theories of intelligence; multiple intelligences; measurement of intelligence; creativity and giftedness | Unit 4 |
-| 11 | Ch 6: Motivation and Emotion | theories of motivation (Abraham Maslow, Frederick Herzberg, Self-Determination Theory); achievement motivation; role of emotions in learning | Unit 5 |
-| 12 | Ch 7: Individual Differences and Special Needs | learning styles and abilities; slow learners and gifted learners; inclusive education | Unit 5 |
-| 13 | Ch 8: Classroom Management | principles of classroom management; creating positive learning environments; managing discipline and behavior | Unit 5 |
-| 14 | Ch 9: Assessment and Evaluation | types and purposes of assessment; psychological tests and measurement; formative and summative evaluation | Unit 6 |
-| 15 | Ch 10: Teaching-Learning Process | teaching methods and strategies; instructional design; teacher effectiveness | Unit 6 |
-| 16 | Ch 11 and 12 (combined) + course review | mental health and well-being in schools; guidance and counseling; application of educational psychology; technology and learning; professional ethics; final revision and assessment | Unit 6 |
+| 10 | Ch 5: Intelligence and Creativity | theories of intelligence; multiple intelligences; measurement of intelligence; creativity and giftedness | Unit 5 |
+| 11 | Ch 6: Motivation and Emotion | theories of motivation (Abraham Maslow, Frederick Herzberg, Self-Determination Theory); achievement motivation; role of emotions in learning | Unit 6 |
+| 12 | Ch 7: Individual Differences and Special Needs | learning styles and abilities; slow learners and gifted learners; inclusive education | Unit 7 |
+| 13 | Ch 8: Classroom Management | principles of classroom management; creating positive learning environments; managing discipline and behavior | Unit 8 |
+| 14 | Ch 9: Assessment and Evaluation | types and purposes of assessment; psychological tests and measurement; formative and summative evaluation | Unit 9 |
+| 15 | Ch 10: Teaching-Learning Process | teaching methods and strategies; instructional design; teacher effectiveness | Unit 10 |
+| 16 | Ch 11 and 12 (combined) + course review | mental health and well-being in schools; guidance and counseling; application of educational psychology; technology and learning; professional ethics; final revision and assessment | Units 11 and 12 (shared week) |
 
-Unit 4 spans Chapters 4 and 5 because the guide gives Chapter 4 only two teaching weeks
-(Weeks 8-9) while Chapter 5 is a single week (Week 10); both are the mind's work
-(cognitive processes, then intelligence and creativity) and neither alone carries enough
-sub-topics for a viable unit. Unit 5 spans Chapters 6-8 and Unit 6 spans Chapters 9-12 on
-the same reasoning: each chapter is one teaching week, and each trio forms one arc (the
-learner in the classroom; the professional practice of teaching and well-being). The
-Week 16 "final revision / assessment" slot is the course-review territory, carried by
-Unit 6's assessment and the eventual `course-review.mdx`, not a separate unit.
+Units 5-12 are one-week units (3 contact hours each) by the guide's own calendar, and
+their depth budgets stay proportionate to that. The Week 16 block's five substantive
+bullets are assigned by plain meaning, as the header guide note discloses: the
+title-matched bullets to their chapters, and the professional-ethics, application and
+technology bullets to Unit 12 as the course's closing material. The Week 16 "final
+revision / assessment" slot is the course-review territory, carried by Unit 12's
+assessment and the eventual `course-review.mdx`, not a separate unit.
 
 ## Course review plan
 
@@ -186,7 +191,7 @@ Authoring the file itself is follow-up work outside this feature.
   - Assessment, teaching methods and well-being close the loop: the course's ideas become
     decisions a teacher can justify, guided ethically and supported by technology where it
     helps (Unit 6).
-- **Practice-question mix**: `### MCQs` ~18 (all six units, Remember to Apply); `### RRQs`
+- **Practice-question mix**: `### MCQs` ~24 (all twelve units, Remember to Apply); `### RRQs`
   ~12 (Understand to Analyze, >= 1 per unit); `### ERQs` ~6 (Analyze to Evaluate/Create,
   each integrating two or more units).
 - **Practicum project ideas** (3-6 briefs a trainee carries into placement):
@@ -544,33 +549,29 @@ guide's own "Application activities & review" slot.
     teaching decision). Each ERQ carries an analytic rubric, >= 1 demanding
     Analyze-or-higher
 
-## Unit 4: Cognitive Processes, Intelligence and Creativity
+## Unit 4: Cognitive Processes in Learning
 
-Weeks 8-10 (9 contact hours; guide Chapters 4-5). Unit Spec (G1) for
+Weeks 8-9 (6 contact hours; guide Chapter 4). Unit Spec (G1) for
 `docs/semester-1/efmp-301/unit-04/`.
 
-- **CLO/SLO refs**: `SLO:EFMP-301-4-1` (attention, perception, memory and information
-  processing) - traces to guide CLOs 1 and 3; `SLO:EFMP-301-4-2` (thinking,
-  problem-solving and reasoning) - traces to guide CLOs 1 and 3; `SLO:EFMP-301-4-3`
-  (theories of intelligence, multiple intelligences, measurement of intelligence,
-  creativity and giftedness) - traces to guide CLO 4.
+- **CLO/SLO refs**: `SLO:EFMP-301-4-1` (attention and perception) - traces to guide CLOs 1
+  and 3; `SLO:EFMP-301-4-2` (memory and information processing) - traces to guide CLOs 1 and
+  3; `SLO:EFMP-301-4-3` (thinking, problem-solving and reasoning) - traces to guide CLOs 1
+  and 3.
 - **Key terms** (banked unless noted): Attention, Perception, Memory, Short-Term Memory,
   Long-Term Memory, Working Memory, Metacognition, Problem Solving, Critical Thinking,
-  Intelligence, Multiple Intelligences, Creativity, Gifted Learner, Standardized Test,
-  Validity, Reliability, Information Processing (authored: معلومات کی عملکاری, flag at
-  G4), Encoding (authored: رمز کاری / کوڈ کاری, flag at G4), Retrieval (authored:
-  واپسی / استحصال, flag at G4).
+  Information Processing (authored: معلومات کی عملکاری, flag at G4), Encoding (authored:
+  رمز کاری / کوڈ کاری, flag at G4), Retrieval (authored: واپسی / استحصال, flag at G4).
 - **Mapped readings**: seifert2009 Chapters 2 and 9 (The learning process; Facilitating
-  complex thinking); seifert-hk Chapters 2 and 9; vosniadou2001 for how children learn.
-  Supplements verified at authoring time (for example an open-access treatment of
-  Gardner's multiple intelligences and its critiques, and of IQ testing history).
+  complex thinking); seifert-hk matching chapters; vosniadou2001 (already verified) for how
+  children learn. Supplements verified at authoring time.
 
 ### Sub-topic checklist
 
-One row per leaf item of guide Chapters 4-5 (Weeks 8-10). The Week 8 bullets split into
-their two paired processes; the Week 9 "Class activities" slot becomes the classroom
-application sub-topic, the same way Unit 1 folded its discussion slot; Week 10's four
-bullets each stand as one row. IDs are stable once assigned.
+One row per leaf item of guide Chapter 4 (Weeks 8-9). The paired Week 8 bullets split into
+their two processes each; the Week 9 "Class activities" slot becomes the classroom
+application sub-topic, the same way Unit 1 folded its discussion slot into U1-14. IDs are
+stable once assigned.
 
 | ID | Sub-topic | Topic | Guide source |
 |---|---|---|---|
@@ -582,11 +583,6 @@ bullets each stand as one row. IDs are stable once assigned.
 | U4-6 | Problem-solving: strategies and obstacles | 4.3 | W9 "Thinking, problem-solving, and reasoning" |
 | U4-7 | Reasoning: inductive and deductive | 4.3 | W9 "Thinking, problem-solving, and reasoning" |
 | U4-8 | Class activities that work with attention and memory | 4.3 | W9 "Class activities" |
-| U4-9 | Theories of intelligence: one ability or many | 4.4 | W10 "Theories of intelligence" |
-| U4-10 | Multiple intelligences: the claim and its evidence | 4.4 | W10 "Multiple intelligences" |
-| U4-11 | Measurement of intelligence: what tests measure, and what they miss | 4.4 | W10 "Measurement of intelligence" |
-| U4-12 | Creativity: what it is and how classrooms grow it | 4.5 | W10 "Creativity and giftedness" |
-| U4-13 | Giftedness: recognizing and teaching gifted learners | 4.5 | W10 "Creativity and giftedness" |
 
 ### Topic list
 
@@ -595,143 +591,101 @@ checklist`. Row order is load-bearing: row N maps to `topic-0N.mdx`.
 
 | Topic | Title | Sub-topic IDs | Figures (id: archetype) | Reading-min |
 |---|---|---|---|---|
-| 4.1 | Attention and perception | U4-1, U4-2 | fig-U4-1: diagram, fig-U4-2: table | 16 |
-| 4.2 | Memory and information processing | U4-3, U4-4 | fig-U4-3: flowchart, fig-U4-4: table | 19 |
+| 4.1 | Attention and perception | U4-1, U4-2 | fig-U4-1: diagram, fig-U4-2: table | 17 |
+| 4.2 | Memory and information processing | U4-3, U4-4 | fig-U4-3: flowchart, fig-U4-4: table | 18 |
 | 4.3 | Thinking, problem-solving and reasoning | U4-5, U4-6, U4-7, U4-8 | fig-U4-5: concept-map, fig-U4-6: table | 19 |
-| 4.4 | Intelligence: theories and measurement | U4-9, U4-10, U4-11 | fig-U4-7: diagram, fig-U4-8: table | 19 |
-| 4.5 | Creativity and giftedness | U4-12, U4-13 | fig-U4-9: concept-map, fig-U4-10: table | 17 |
 
-**Depth budget**: 13 sub-topics; 110-140 reading-min (target 126: index 4 + topics 16 +
-19 + 19 + 19 + 17 + assessment 24 + teacher notes 8).
+**Depth budget**: 8 sub-topics; 82-105 reading-min (target 90: index 4 + topics 17 + 18 +
+19 + assessment 24 + teacher notes 8).
 
-**Prerequisite knowledge**: Units 1-3 (the learning process from Unit 3's cognitive
-turn; the development of thinking from Unit 2). Topic 4.4's measurement material
-connects forward to Unit 6's assessment unit.
+**Prerequisite knowledge**: Units 1-3 (the learning process from Unit 3's cognitive turn;
+the development of thinking from Unit 2). Unit 5's intelligence material builds on this
+unit's thinking sub-topics.
 
 **Common misconceptions**: "memory is a recorder - forgetting is malfunction";
-"intelligence is one fixed number you are born with"; "learning styles research proves
-multiple intelligences" (it does not - the two are different claims, and the
-learning-styles evidence is weak); "creativity is only for art lessons"; "gifted pupils
-do not need teaching"; "cramming the night before works as well as spaced study".
+"attention is a fixed quantity a pupil either has or lacks"; "perception is passive - the
+eye simply takes a picture"; "cramming the night before works as well as spaced study";
+"problem-solving is a gift, not a set of strategies".
 
 **Worked-examples plan** (one Pakistan-grounded example per sub-topic): attention - the
 lesson beside the main road in Nawabshah, and what a teacher changes first (U4-1);
 perception - a Class 4 pupil who reads "قل" as one shape until the letters are taught as
-parts, showing how interpretation completes sensation (U4-2); the model - a new
-pupil's name held just long enough to write it down, then gone, versus the school
-assembly routine kept for years (U4-3); forgetting - the Pakistan Studies chapter
-crammed in October and gone by December, read through decay, interference and
-retrieval failure (U4-4); concepts - how a Class 1 pupil builds the concept "sabzi"
-from market visits (U4-5); problem-solving - the mathematics word problem solved by
-means-ends analysis versus the pupil stuck in a set procedure (U4-6); reasoning - the
-everyday generalisation "this teacher always marks late" and the syllogism a pupil can
-check (U4-7); class activities - one real lesson redesigned around attention span and
-retrieval practice, tried and compared (U4-8); intelligence theories - two pupils, one
-quick with numbers and one quick with people, read through Spearman's g and through
-multiple abilities (U4-9); multiple intelligences - a Class 5 talent show used to see
-abilities the tests miss, held against the theory's evidential limits (U4-10);
-measurement - what an IQ-style score does and does not predict, with the history of
-testing in Pakistan and elsewhere stated carefully (U4-11); creativity - the Urdu
-essay that reuses memorised phrases versus the one that sees the topic freshly, and
-the classroom conditions that produced each (U4-12); giftedness - the pupil who
-finishes in five minutes and then disturbs the class, and what the research suggests
-besides more worksheets (U4-13).
+parts, showing how interpretation completes sensation (U4-2); the model - a new pupil's
+name held just long enough to write it down, then gone, versus the school assembly routine
+kept for years (U4-3); forgetting - the Pakistan Studies chapter crammed in October and
+gone by December, read through decay, interference and retrieval failure (U4-4); concepts -
+how a Class 1 pupil builds the concept "sabzi" from market visits (U4-5); problem-solving -
+the mathematics word problem solved by means-ends analysis versus the pupil stuck in a set
+procedure (U4-6); reasoning - the everyday generalisation "this teacher always marks late"
+and the syllogism a pupil can check (U4-7); class activities - one real lesson redesigned
+around attention span and retrieval practice, tried and compared (U4-8).
 
-**International best-practice notes**: teach memory as a system with jobs (hold,
-work, store, retrieve), not as a warehouse; state the learning-styles and
-multiple-intelligences evidence honestly - engaging the claim and its critiques is
-itself the guide's CLO 4 work of analysis; present testing history with its harms
-(early IQ misuse) as well as its uses; keep creativity observable (fluency,
-flexibility, originality, elaboration) rather than mystical; treat giftedness as an
-educational need, not a prize.
+**International best-practice notes**: teach memory as a system with jobs (hold, work,
+store, retrieve), not as a warehouse; keep attention factors concrete and classroom-bound;
+present perception as active interpretation with perceptual illusions as the evidence;
+state the spaced-retrieval evidence plainly against the cramming culture; teach
+problem-solving as strategies with names, not as intelligence in action.
 
 **Figure plan** (>= 2 per topic; >= 1 concept-map / flowchart / timeline in the unit):
   - fig-U4-1 - `diagram` - attention as a spotlight over a classroom scene: the task in
-    the beam, distractors outside it, with divided attention shown as a split beam and
-    its cost labelled (Topic 4.1)
+    the beam, distractors outside it, with divided attention shown as a split beam and its
+    cost labelled (Topic 4.1)
   - fig-U4-2 - `table` - attention factors (novelty, contrast, meaning, emotion, task
     demand) against one classroom move each; perception principles (figure-ground,
     closure, context) with one classroom instance (Topic 4.1)
   - fig-U4-3 - `flowchart` - the information-processing chain: sensory memory, working
     memory with its limits, encoding into long-term memory, storage, retrieval back
-    through working memory - with the three places forgetting cuts in (Topic 4.2; a
-    unit schematic)
+    through working memory - with the three places forgetting cuts in (Topic 4.2; a unit
+    schematic)
   - fig-U4-4 - `table` - study strategies compared (rereading, highlighting, spaced
     retrieval, elaboration, teaching it to someone) on: what memory job each does, how
     well evidence supports it, one school-scale way to use it (Topic 4.2)
   - fig-U4-5 - `concept-map` - thinking at the centre: concepts, problem-solving
     (strategies and obstacles) and reasoning (inductive, deductive) as branches, each
     with a classroom example (Topic 4.3; a unit schematic)
-  - fig-U4-6 - `table` - problem-solving strategies (algorithm, heuristic,
-    means-ends, working backwards, analogy) with an everyday Pakistani instance and one
-    obstacle each can hit (Topic 4.3)
-  - fig-U4-7 - `diagram` - intelligence theories on one axis: one general ability (g)
-    at one end, many relatively independent abilities at the other, with named
-    positions (Spearman, Thurstone, Cattell-Horn-Carroll briefly, Gardner) (Topic 4.4)
-  - fig-U4-8 - `table` - what an intelligence test does and does not measure: claims,
-    evidence, limits, and classroom do's and do-not's (Topic 4.4)
-  - fig-U4-9 - `concept-map` - creativity's observable parts (fluency, flexibility,
-    originality, elaboration) linked to the classroom conditions that grow them
-    (question time, safe wrong answers, real audiences) and to giftedness as a
-    neighbouring need (Topic 4.5; a unit schematic)
-  - fig-U4-10 - `table` - creativity vs giftedness: definition, how recognised, a
-    classroom risk each carries, one teaching response each (Topic 4.5)
+  - fig-U4-6 - `table` - problem-solving strategies (algorithm, heuristic, means-ends,
+    working backwards, analogy) with an everyday Pakistani instance and one obstacle each
+    can hit (Topic 4.3)
 
-**Unit-end assessment blueprint** (`unit-assessment.mdx` - fixed 10/10/5 bank):
-  - MCQs (10): Remember to Apply; spread 2/2/2/2/2 across topics 4.1 to 4.5
-  - RRQs (10): Understand to Analyze; spread 2/2/2/2/2; each with a model answer and a
-    point-by-point mark scheme
-  - ERQs (5): Analyze to Evaluate/Create; one per topic, the fifth integrative
-    (design a study-and-revision plan for one described class using the memory model
-    and justify it against the evidence). Each ERQ carries an analytic rubric, >= 1
-    demanding Analyze-or-higher
+**Unit-end assessment blueprint** (`unit-assessment.mdx` - Spec 008 fixed 10/10/5 bank):
+  - MCQs (10): Remember to Apply; spread 4/3/3 across topics 4.1 to 4.3
+  - RRQs (10): Understand to Analyze; spread 3/4/3; each with a model answer and a
+    point-by-point mark scheme in `## Answers and marking guidance`
+  - ERQs (5): Analyze to Evaluate/Create; one per topic plus two integrative (one linking
+    attention and memory to lesson design; one taking a described pupil's study habits
+    through the memory model into a justified revision plan). Each ERQ carries an
+    analytic rubric, >= 1 demanding Analyze-or-higher
 
-## Unit 5: Motivation, Individual Differences and Classroom Management
+## Unit 5: Intelligence and Creativity
 
-Weeks 11-13 (9 contact hours; guide Chapters 6-8). Unit Spec (G1) for
+Week 10 (3 contact hours; guide Chapter 5). Unit Spec (G1) for
 `docs/semester-1/efmp-301/unit-05/`.
 
-- **CLO/SLO refs**: `SLO:EFMP-301-5-1` (theories of motivation, achievement motivation,
-  emotions in learning) - traces to guide CLO 4; `SLO:EFMP-301-5-2` (learning styles and
-  abilities, slow and gifted learners, inclusive education) - traces to guide CLO 2;
-  `SLO:EFMP-301-5-3` (principles of classroom management, positive learning
-  environments, discipline and behavior) - traces to guide CLO 3.
-- **Key terms** (banked unless noted): Motivation, Intrinsic Motivation, Extrinsic
-  Motivation, Individual Differences, Learning Style, Inclusive Education, Gifted
-  Learner, Slow Learner, Classroom Management, Anxiety, Stress, Self-Esteem,
-  Self-Concept, Differentiated Instruction, Growth Mindset, Fixed Mindset,
-  Self-Regulation, Achievement Motivation (authored: کارکردگی کا محرک, flag at G4),
-  Hierarchy of Needs (authored: ضروریات کی ترتیب, flag at G4), Attribution (authored:
-  نسبت دہی / وجہ قرار دینا, flag at G4).
-- **Mapped readings**: seifert2009 Chapters 4-7 (Student diversity; Students with
-  special educational needs; Student motivation; Classroom management and the learning
-  environment); seifert-hk Chapters 4-7. Supplements verified at authoring time (for
-  example an open-access treatment of Herzberg's two-factor theory, which the guide
-  names and a general educational-psychology text may cover only briefly; UNICEF or
-  government material on inclusive education in Pakistan).
+- **CLO/SLO refs**: `SLO:EFMP-301-5-1` (theories of intelligence, multiple
+  intelligences, measurement of intelligence) - traces to guide CLO 4;
+  `SLO:EFMP-301-5-2` (creativity and giftedness) - traces to guide CLO 4.
+- **Key terms** (banked unless noted): Intelligence, Multiple Intelligences, Creativity,
+  Gifted Learner, Standardized Test, Validity, Reliability, Achievement Test, IQ
+  (authored: ذہانی وقفہ / آئی کیو, flag at G4).
+- **Mapped readings**: seifert2009 Chapter 9 (Facilitating complex thinking, which
+  carries the giftedness and creativity material); seifert-hk Chapter 9. Supplements
+  verified at authoring time (for example an open-access treatment of Gardner's multiple
+  intelligences and its critiques, and of intelligence-testing history).
 
 ### Sub-topic checklist
 
-One row per leaf item of guide Chapters 6-8 (Weeks 11-13). The Week 11 bullet naming
-three theories decomposes into the shared question plus each theory; Week 12 and Week 13
-bullets each stand as one row. IDs are stable once assigned.
+One row per leaf item of guide Chapter 10's four Week 10 bullets. "Theories of
+intelligence" decomposes into the shared question and the measurement bullet stands
+alone; the compound "Creativity and giftedness" bullet decomposes into its two named
+constituents. IDs are stable once assigned.
 
 | ID | Sub-topic | Topic | Guide source |
 |---|---|---|---|
-| U5-1 | What motivation is: intrinsic and extrinsic | 5.1 | W11 "Theories of motivation (Abraham Maslow, Frederick Herzberg, Self-Determination Theory)" |
-| U5-2 | Maslow: the hierarchy of needs | 5.1 | W11 "Theories of motivation (Abraham Maslow, Frederick Herzberg, Self-Determination Theory)" |
-| U5-3 | Herzberg: the two-factor theory | 5.1 | W11 "Theories of motivation (Abraham Maslow, Frederick Herzberg, Self-Determination Theory)" |
-| U5-4 | Self-Determination Theory: autonomy, competence, relatedness | 5.1 | W11 "Theories of motivation (Abraham Maslow, Frederick Herzberg, Self-Determination Theory)" |
-| U5-5 | Achievement motivation: why some pupils aim and some protect | 5.2 | W11 "Achievement motivation" |
-| U5-6 | Emotions in learning: anxiety, interest and curiosity | 5.2 | W11 "Role of emotions in learning" |
-| U5-7 | Learning styles and abilities: the claim and the evidence | 5.3 | W12 "Learning styles and abilities" |
-| U5-8 | Abilities: what differs, and what differences mean for teaching | 5.3 | W12 "Learning styles and abilities" |
-| U5-9 | Slow learners: recognizing and supporting | 5.4 | W12 "Slow learners and gifted learners" |
-| U5-10 | Gifted learners: recognizing and supporting | 5.4 | W12 "Slow learners and gifted learners" |
-| U5-11 | Inclusive education: what it means and why it matters | 5.4 | W12 "Inclusive education" |
-| U5-12 | Principles of classroom management | 5.5 | W13 "Principles of classroom management" |
-| U5-13 | Creating positive learning environments | 5.5 | W13 "Creating positive learning environments" |
-| U5-14 | Managing discipline and behavior | 5.5 | W13 "Managing discipline and behavior" |
+| U5-1 | Theories of intelligence: one ability or many | 5.1 | W10 "Theories of intelligence" |
+| U5-2 | Multiple intelligences: the claim and its evidence | 5.1 | W10 "Multiple intelligences" |
+| U5-3 | Measurement of intelligence: what tests measure, and what they miss | 5.1 | W10 "Measurement of intelligence" |
+| U5-4 | Creativity: what it is and how classrooms grow it | 5.2 | W10 "Creativity and giftedness" |
+| U5-5 | Giftedness: recognizing and teaching gifted learners | 5.2 | W10 "Creativity and giftedness" |
 
 ### Topic list
 
@@ -740,145 +694,554 @@ checklist`. Row order is load-bearing: row N maps to `topic-0N.mdx`.
 
 | Topic | Title | Sub-topic IDs | Figures (id: archetype) | Reading-min |
 |---|---|---|---|---|
-| 5.1 | Why learners try: theories of motivation | U5-1, U5-2, U5-3, U5-4 | fig-U5-1: diagram, fig-U5-2: table | 19 |
-| 5.2 | Achievement motivation and emotions in learning | U5-5, U5-6 | fig-U5-3: flowchart, fig-U5-4: table | 17 |
-| 5.3 | Learning styles and abilities | U5-7, U5-8 | fig-U5-5: table, fig-U5-6: diagram | 16 |
-| 5.4 | Slow learners, gifted learners and inclusive education | U5-9, U5-10, U5-11 | fig-U5-7: concept-map, fig-U5-8: table | 18 |
-| 5.5 | Classroom management: environments and discipline | U5-12, U5-13, U5-14 | fig-U5-9: flowchart, fig-U5-10: table | 18 |
+| 5.1 | Intelligence: theories and measurement | U5-1, U5-2, U5-3 | fig-U5-1: diagram, fig-U5-2: table | 19 |
+| 5.2 | Creativity and giftedness | U5-4, U5-5 | fig-U5-3: concept-map, fig-U5-4: table | 18 |
 
-**Depth budget**: 14 sub-topics; 110-140 reading-min (target 126: index 4 + topics 19 +
-17 + 16 + 18 + 18 + assessment 26 + teacher notes 8).
+**Depth budget**: 5 sub-topics; 66-90 reading-min (target 73: index 4 + topics 19 + 18 +
+assessment 24 + teacher notes 8).
 
-**Prerequisite knowledge**: Units 1-4 (learner differences from Unit 1; learning
-theories from Unit 3, especially reinforcement, which Topic 5.1's extrinsic motivation
-builds on; intelligence and giftedness from Unit 4, which Topic 5.4 deepens).
+**Prerequisite knowledge**: Units 1-4 (the learner-difference idea from Unit 1; the
+thinking sub-topics of Unit 4). This is a one-week unit by the guide's own calendar and
+stays proportionate.
 
-**Common misconceptions**: "punishment motivates"; "rewards always work and never
-backfire"; "a hungry pupil just needs discipline"; "unmotivated means lazy"; "teaching
-to a pupil's learning style improves learning" (the evidence does not support this);
-"slow learner means low intelligence"; "inclusive education is only about disability";
-"a well-managed class is a silent class".
+**Common misconceptions**: "intelligence is one fixed number you are born with";
+"learning styles research proves multiple intelligences" (it does not - the two are
+different claims, and the learning-styles evidence is weak); "an IQ score measures
+everything a person can do"; "creativity is only for art lessons"; "gifted pupils do not
+need teaching".
 
-**Worked-examples plan** (one Pakistan-grounded example per sub-topic): what motivation
-is - the pupil who practises cricket for hours unpaid and will not open a book, read
-through intrinsic and extrinsic motivation (U5-1); Maslow - the school where the
-midday meal quietly changed Class 3's afternoon results, and the pupil who cannot
-learn while afraid (U5-2); Herzberg - two schools compared: one with functioning
-fans and clean water, one without, and why removing the bad is not the same as adding
-the good (U5-3); Self-Determination Theory - the project where pupils chose their own
-topic and worked past the bell, read through autonomy, competence and relatedness
-(U5-4); achievement motivation - two pupils facing the same test, one aiming to win
-and one protecting against losing, and the attributions each makes afterwards (U5-5);
-emotions - the pupil who freezes at oral reading in English, and what lowered the
-fear (U5-6); learning styles - the popular claim tested against the evidence, with
-what a teacher should take from it honestly (U5-7); abilities - a Class 6 with a
-future tailor, debater and farmer, and what "ability" means for each (U5-8); slow
-learners - the pupil who needs three passes and a shorter list, and what actually
-changed his year (U5-9); gifted learners - the pupil who finishes early and then
-disrupts, given a real problem instead of another worksheet (U5-10); inclusive
-education - a Sindh school that kept a physically disabled pupil in class with one
-bench change, and what full inclusion would still need (U5-11); principles - the
-first ten days of a new teacher's class, where routines were built before content
-(U5-12); positive environments - the classroom where pupils answer wrong out loud
-safely, and the specific moves that made it safe (U5-13); discipline - the
-escalation ladder a head teacher actually uses, from proximity to parent meeting,
-with the theory named at each step (U5-14).
+**Worked-examples plan** (one Pakistan-grounded example per sub-topic): theories - two
+pupils, one quick with numbers and one quick with people, read through Spearman's g and
+through multiple abilities (U5-1); multiple intelligences - a Class 5 talent show used to
+see abilities the tests miss, held against the theory's evidential limits (U5-2);
+measurement - what an IQ-style score does and does not predict, with the history of
+testing in Pakistan and elsewhere stated carefully (U5-3); creativity - the Urdu essay
+that reuses memorised phrases versus the one that sees the topic freshly, and the
+classroom conditions that produced each (U5-4); giftedness - the pupil who finishes in
+five minutes and then disturbs the class, and what the research suggests besides more
+worksheets (U5-5).
 
-**International best-practice notes**: keep intrinsic and extrinsic distinct and teach
-the overjustification risk plainly; present Herzberg as a workplace theory the guide
-names, applied carefully to schools, not as settled classroom law; hold learning
-styles to its evidence - the honest conclusion is a G3-level analysis point, not a
-decoration; treat inclusion as the guide's CLO 6 outcome, with Pakistan's own policy
-context rather than only imported examples; teach discipline as teaching behaviour,
-with dignity kept at every step of the ladder.
+**International best-practice notes**: present intelligence theories on the
+one-ability-to-many-abilities axis with named positions (Spearman, Thurstone, brief
+Cattell-Horn-Carroll, Gardner); state the learning-styles and multiple-intelligences
+evidence honestly - engaging the claim and its critiques is itself the guide's CLO 4 work
+of analysis; present testing history with its harms (early IQ misuse) as well as its
+uses; keep creativity observable (fluency, flexibility, originality, elaboration) rather
+than mystical; treat giftedness as an educational need, not a prize.
 
 **Figure plan** (>= 2 per topic; >= 1 concept-map / flowchart / timeline in the unit):
-  - fig-U5-1 - `diagram` - Maslow's hierarchy drawn as five rising steps with a
-    classroom instance on each (roti, safety, belonging, respect, becoming) and the
-    teaching order it implies (Topic 5.1; a unit schematic)
-  - fig-U5-2 - `table` - the three named theories (Maslow, Herzberg, Self-Determination)
-    compared on: the question it asks, its key idea, a school instance, one limit
-    (Topic 5.1)
-  - fig-U5-3 - `flowchart` - the achievement-motivation loop: approach or protect,
-    outcome, attribution (effort, ability, luck, task), effect on the next attempt -
-    with the two loops labelled (Topic 5.2; a unit schematic)
-  - fig-U5-4 - `table` - classroom emotions (anxiety, boredom, interest, curiosity,
-    pride, shame) against what triggers each, what it does to learning, and one
-    teacher move (Topic 5.2)
-  - fig-U5-5 - `table` - the learning-styles claim vs the evidence: what is claimed,
-    what research finds, what is worth keeping (pupil variety, multimodal teaching)
-    (Topic 5.3)
-  - fig-U5-6 - `diagram` - abilities as a profile, not a point: one pupil's bars
-    across language, number, spatial, social and practical ability, with the teaching
-    implication drawn (Topic 5.3)
-  - fig-U5-7 - `concept-map` - the special-needs landscape: slow learner, gifted
-    learner, disability and inclusion as distinct needs around the inclusive
-    classroom, each with its recognition signs and supports (Topic 5.4; a unit
+  - fig-U5-1 - `diagram` - intelligence theories on one axis: one general ability (g) at
+    one end, many relatively independent abilities at the other, with named positions
+    (Spearman, Thurstone, Cattell-Horn-Carroll briefly, Gardner) (Topic 5.1; a unit
     schematic)
-  - fig-U5-8 - `table` - slow learner vs gifted learner vs pupil with disability:
-    how recognised, what does not help, what helps, one Sindh classroom example each
-    (Topic 5.4)
-  - fig-U5-9 - `flowchart` - the discipline escalation ladder: proximity, private
-    word, choice, consequence, parent meeting - each step with the principle it
-    serves and dignity kept (Topic 5.5; a unit schematic)
-  - fig-U5-10 - `table` - a positive learning environment's parts (physical space,
-    routines, relationships, participation norms, feedback) against what it looks
-    like and one first-week move to build it (Topic 5.5)
+  - fig-U5-2 - `table` - what an intelligence test does and does not measure: claims,
+    evidence, limits, and classroom do's and do-not's (Topic 5.1)
+  - fig-U5-3 - `concept-map` - creativity's observable parts (fluency, flexibility,
+    originality, elaboration) linked to the classroom conditions that grow them (question
+    time, safe wrong answers, real audiences) and to giftedness as a neighbouring need
+    (Topic 5.2; a unit schematic)
+  - fig-U5-4 - `table` - creativity vs giftedness: definition, how recognised, a
+    classroom risk each carries, one teaching response each (Topic 5.2)
 
 **Unit-end assessment blueprint** (`unit-assessment.mdx` - fixed 10/10/5 bank):
-  - MCQs (10): Remember to Apply; spread 2/2/2/2/2 across topics 5.1 to 5.5
-  - RRQs (10): Understand to Analyze; spread 2/2/2/2/2; each with a model answer and a
+  - MCQs (10): Remember to Apply; spread 5/5 across topics 5.1 to 5.2
+  - RRQs (10): Understand to Analyze; spread 5/5; each with a model answer and a
     point-by-point mark scheme
-  - ERQs (5): Analyze to Evaluate/Create; one per topic, the fifth integrative (a
-    described unmotivated and disruptive class analysed through motivation theory,
-    individual differences and management principles into a justified action plan).
-    Each ERQ carries an analytic rubric, >= 1 demanding Analyze-or-higher
+  - ERQs (5): Analyze to Evaluate/Create; two per topic plus one integrative (a described
+    pupil's profile read through the intelligence theories, the measurement limits and
+    the creativity material into a justified teaching response). Each ERQ carries an
+    analytic rubric, >= 1 demanding Analyze-or-higher
 
-## Unit 6: Assessment, the Teaching-Learning Process and Well-being
+## Unit 6: Motivation and Emotion
 
-Weeks 14-16 (9 contact hours; guide Chapters 9, 10, 11-12 combined plus course review).
-Unit Spec (G1) for `docs/semester-1/efmp-301/unit-06/`.
+Week 11 (3 contact hours; guide Chapter 6). Unit Spec (G1) for
+`docs/semester-1/efmp-301/unit-06/`.
 
-- **CLO/SLO refs**: `SLO:EFMP-301-6-1` (types and purposes of assessment, psychological
-  tests and measurement, formative and summative evaluation) - traces to guide CLO 5;
-  `SLO:EFMP-301-6-2` (teaching methods and strategies, instructional design, teacher
-  effectiveness) - traces to guide CLO 3; `SLO:EFMP-301-6-3` (mental health and
-  well-being in schools, guidance and counseling, application of educational
-  psychology, technology and learning, professional ethics) - traces to guide CLO 6.
-- **Key terms** (banked unless noted): Assessment, Formative Assessment, Summative
-  Assessment, Diagnostic Assessment, Formative Feedback, Achievement Test,
-  Standardized Test, Norm-Referenced Test, Criterion-Referenced Test, Validity,
-  Reliability, Portfolio Assessment, Peer Assessment, Self-Assessment, Classroom
-  Assessment, Guidance and Counseling, Professional Ethics, Teacher Effectiveness,
-  Lesson Plan, Teaching Strategy, Instructional Design (authored: تدریسی تصمیم نگاری /
-  ہدایتی خاکہ, flag at G4), Well-being (authored: فلاح و بہبود, flag at G4).
-- **Mapped readings**: seifert2009 Chapters 10-12 (Planning instruction; Teacher-made
-  assessment strategies; Standardized and other formal assessments) and Chapter 8 (The
-  nature of classroom communication) for the well-being and guidance material;
-  seifert-hk matching chapters. Supplements verified at authoring time (for example WHO
-  school well-being materials, and HEC or government teacher-ethics documents).
+- **CLO/SLO refs**: `SLO:EFMP-301-6-1` (theories of motivation: Maslow, Herzberg,
+  Self-Determination Theory) - traces to guide CLO 4; `SLO:EFMP-301-6-2` (achievement
+  motivation and the role of emotions in learning) - traces to guide CLO 4.
+- **Key terms** (banked unless noted): Motivation, Intrinsic Motivation, Extrinsic
+  Motivation, Anxiety, Stress, Self-Esteem, Self-Concept, Achievement Motivation
+  (authored: کارکردگی کا محرک, flag at G4), Hierarchy of Needs (authored: ضروریات کی
+  ترتیب, flag at G4), Attribution (authored: نسبت دہی / وجہ قرار دینا, flag at G4).
+- **Mapped readings**: seifert2009 Chapter 6 (Student motivation); seifert-hk Chapter 6.
+  Supplements verified at authoring time (for example an open-access treatment of
+  Herzberg's two-factor theory, which the guide names and a general
+  educational-psychology text may cover only briefly).
 
 ### Sub-topic checklist
 
-One row per leaf item of guide Chapters 9, 10 and 11-12 (Weeks 14-16). The Week 16
-block names five substantive bullets plus the final revision slot; the revision slot
-stays with the course review rather than becoming a sub-topic, and "Application of
-educational psychology" is the integrative look back over the whole course. IDs are
+One row per leaf item of guide Chapter 6's three Week 11 bullets. The theory bullet names
+three theories and decomposes into the shared question plus each theory; the other two
+bullets stand alone. IDs are stable once assigned.
+
+| ID | Sub-topic | Topic | Guide source |
+|---|---|---|---|
+| U6-1 | What motivation is: intrinsic and extrinsic | 6.1 | W11 "Theories of motivation (Abraham Maslow, Frederick Herzberg, Self-Determination Theory)" |
+| U6-2 | Maslow: the hierarchy of needs | 6.1 | W11 "Theories of motivation (Abraham Maslow, Frederick Herzberg, Self-Determination Theory)" |
+| U6-3 | Herzberg: the two-factor theory | 6.1 | W11 "Theories of motivation (Abraham Maslow, Frederick Herzberg, Self-Determination Theory)" |
+| U6-4 | Self-Determination Theory: autonomy, competence, relatedness | 6.1 | W11 "Theories of motivation (Abraham Maslow, Frederick Herzberg, Self-Determination Theory)" |
+| U6-5 | Achievement motivation: why some pupils aim and some protect | 6.2 | W11 "Achievement motivation" |
+| U6-6 | Emotions in learning: anxiety, interest and curiosity | 6.2 | W11 "Role of emotions in learning" |
+
+### Topic list
+
+The `Sub-topic IDs` cells form a **total, disjoint partition** of the `### Sub-topic
+checklist`. Row order is load-bearing: row N maps to `topic-0N.mdx`.
+
+| Topic | Title | Sub-topic IDs | Figures (id: archetype) | Reading-min |
+|---|---|---|---|---|
+| 6.1 | Why learners try: theories of motivation | U6-1, U6-2, U6-3, U6-4 | fig-U6-1: diagram, fig-U6-2: table | 20 |
+| 6.2 | Achievement motivation and emotions in learning | U6-5, U6-6 | fig-U6-3: flowchart, fig-U6-4: table | 18 |
+
+**Depth budget**: 6 sub-topics; 66-90 reading-min (target 74: index 4 + topics 20 + 18 +
+assessment 24 + teacher notes 8).
+
+**Prerequisite knowledge**: Units 1-5 (learner differences from Unit 1; reinforcement
+from Unit 3, which extrinsic motivation builds on; intelligence and giftedness from Unit
+5). Unit 7's individual-differences material deepens this unit's achievement-motivation
+ideas.
+
+**Common misconceptions**: "punishment motivates"; "rewards always work and never
+backfire"; "a hungry pupil just needs discipline"; "unmotivated means lazy"; "anxiety is
+always bad for learning" (a little sharpens it; a lot narrows it).
+
+**Worked-examples plan** (one Pakistan-grounded example per sub-topic): what motivation
+is - the pupil who practises cricket for hours unpaid and will not open a book, read
+through intrinsic and extrinsic motivation (U6-1); Maslow - the school where the midday
+meal quietly changed Class 3's afternoon results, and the pupil who cannot learn while
+afraid (U6-2); Herzberg - two schools compared: one with functioning fans and clean
+water, one without, and why removing the bad is not the same as adding the good (U6-3);
+Self-Determination Theory - the project where pupils chose their own topic and worked
+past the bell, read through autonomy, competence and relatedness (U6-4); achievement
+motivation - two pupils facing the same test, one aiming to win and one protecting
+against losing, and the attributions each makes afterwards (U6-5); emotions - the pupil
+who freezes at oral reading in English, and what lowered the fear (U6-6).
+
+**International best-practice notes**: keep intrinsic and extrinsic distinct and teach
+the overjustification risk plainly; present Herzberg as a workplace theory the guide
+names, applied carefully to schools, not as settled classroom law; hold attribution
+concrete (effort, ability, task, luck) before naming it; treat test anxiety as a
+manageable state with named levers (preparation structure, familiarity, calm framing),
+not as weakness.
+
+**Figure plan** (>= 2 per topic; >= 1 concept-map / flowchart / timeline in the unit):
+  - fig-U6-1 - `diagram` - Maslow's hierarchy drawn as five rising steps with a
+    classroom instance on each (roti, safety, belonging, respect, becoming) and the
+    teaching order it implies (Topic 6.1; a unit schematic)
+  - fig-U6-2 - `table` - the three named theories (Maslow, Herzberg, Self-Determination)
+    compared on: the question it asks, its key idea, a school instance, one limit (Topic
+    6.1)
+  - fig-U6-3 - `flowchart` - the achievement-motivation loop: approach or protect,
+    outcome, attribution (effort, ability, luck, task), effect on the next attempt -
+    with the two loops labelled (Topic 6.2; a unit schematic)
+  - fig-U6-4 - `table` - classroom emotions (anxiety, boredom, interest, curiosity,
+    pride, shame) against what triggers each, what it does to learning, and one teacher
+    move (Topic 6.2)
+
+**Unit-end assessment blueprint** (`unit-assessment.mdx` - fixed 10/10/5 bank):
+  - MCQs (10): Remember to Apply; spread 5/5 across topics 6.1 to 6.2
+  - RRQs (10): Understand to Analyze; spread 5/5; each with a model answer and a
+    point-by-point mark scheme
+  - ERQs (5): Analyze to Evaluate/Create; two per topic plus one integrative (a described
+    unmotivated class analysed through the three theories and the attribution loop into a
+    justified action plan). Each ERQ carries an analytic rubric, >= 1 demanding
+    Analyze-or-higher
+
+## Unit 7: Individual Differences and Special Needs
+
+Week 12 (3 contact hours; guide Chapter 7). Unit Spec (G1) for
+`docs/semester-1/efmp-301/unit-07/`.
+
+- **CLO/SLO refs**: `SLO:EFMP-301-7-1` (learning styles and abilities) - traces to guide
+  CLO 2; `SLO:EFMP-301-7-2` (slow learners, gifted learners, inclusive education) -
+  traces to guide CLOs 2 and 6.
+- **Key terms** (banked unless noted): Individual Differences, Learning Style, Inclusive
+  Education, Gifted Learner, Slow Learner, Differentiated Instruction, Special Needs
+  Education.
+- **Mapped readings**: seifert2009 Chapters 4-5 (Student diversity; Students with special
+  educational needs); seifert-hk Chapters 4-5. Supplements verified at authoring time
+  (for example UNICEF or government material on inclusive education in Pakistan).
+
+### Sub-topic checklist
+
+One row per leaf item of guide Chapter 7's three Week 12 bullets. "Learning styles and
+abilities" decomposes into its two named constituents; "Slow learners and gifted
+learners" into its two. IDs are stable once assigned.
+
+| ID | Sub-topic | Topic | Guide source |
+|---|---|---|---|
+| U7-1 | Learning styles: the claim and the evidence | 7.1 | W12 "Learning styles and abilities" |
+| U7-2 | Abilities: what differs, and what differences mean for teaching | 7.1 | W12 "Learning styles and abilities" |
+| U7-3 | Slow learners: recognizing and supporting | 7.2 | W12 "Slow learners and gifted learners" |
+| U7-4 | Gifted learners: recognizing and supporting | 7.2 | W12 "Slow learners and gifted learners" |
+| U7-5 | Inclusive education: what it means and why it matters | 7.2 | W12 "Inclusive education" |
+
+### Topic list
+
+The `Sub-topic IDs` cells form a **total, disjoint partition** of the `### Sub-topic
+checklist`. Row order is load-bearing: row N maps to `topic-0N.mdx`.
+
+| Topic | Title | Sub-topic IDs | Figures (id: archetype) | Reading-min |
+|---|---|---|---|---|
+| 7.1 | Learning styles and abilities | U7-1, U7-2 | fig-U7-1: table, fig-U7-2: diagram | 18 |
+| 7.2 | Slow learners, gifted learners and inclusive education | U7-3, U7-4, U7-5 | fig-U7-3: concept-map, fig-U7-4: table | 19 |
+
+**Depth budget**: 5 sub-topics; 66-90 reading-min (target 73: index 4 + topics 18 + 19 +
+assessment 24 + teacher notes 8).
+
+**Prerequisite knowledge**: Units 1-6 (learner differences from Unit 1; intelligence and
+giftedness from Unit 5; motivation from Unit 6). This unit turns those ideas toward the
+pupils a Sindh teacher actually meets.
+
+**Common misconceptions**: "teaching to a pupil's learning style improves learning" (the
+evidence does not support this); "slow learner means low intelligence"; "gifted pupils
+manage on their own"; "inclusive education is only about disability"; "difference means
+deficit".
+
+**Worked-examples plan** (one Pakistan-grounded example per sub-topic): learning styles -
+the popular claim tested against the evidence, with what a teacher should take from it
+honestly (U7-1); abilities - a Class 6 with a future tailor, debater and farmer, and
+what "ability" means for each (U7-2); slow learners - the pupil who needs three passes
+and a shorter list, and what actually changed his year (U7-3); gifted learners - the
+pupil who finishes early and then disrupts, given a real problem instead of another
+worksheet (U7-4); inclusive education - a Sindh school that kept a physically disabled
+pupil in class with one bench change, and what full inclusion would still need (U7-5).
+
+**International best-practice notes**: hold learning styles to its evidence - the honest
+conclusion is a G3-level analysis point, not a decoration; distinguish slow learning from
+slow pace from disability, and name what each calls for; treat inclusion as the guide's
+CLO 6 outcome, with Pakistan's own policy context rather than only imported examples;
+keep every label a starting point for teaching, never a ceiling.
+
+**Figure plan** (>= 2 per topic; >= 1 concept-map / flowchart / timeline in the unit):
+  - fig-U7-1 - `table` - the learning-styles claim vs the evidence: what is claimed,
+    what research finds, what is worth keeping (pupil variety, multimodal teaching)
+    (Topic 7.1)
+  - fig-U7-2 - `diagram` - abilities as a profile, not a point: one pupil's bars across
+    language, number, spatial, social and practical ability, with the teaching
+    implication drawn (Topic 7.1)
+  - fig-U7-3 - `concept-map` - the special-needs landscape: slow learner, gifted
+    learner, disability and inclusion as distinct needs around the inclusive classroom,
+    each with its recognition signs and supports (Topic 7.2; a unit schematic)
+  - fig-U7-4 - `table` - slow learner vs gifted learner vs pupil with disability: how
+    recognised, what does not help, what helps, one Sindh classroom example each (Topic
+    7.2)
+
+**Unit-end assessment blueprint** (`unit-assessment.mdx` - fixed 10/10/5 bank):
+  - MCQs (10): Remember to Apply; spread 5/5 across topics 7.1 to 7.2
+  - RRQs (10): Understand to Analyze; spread 5/5; each with a model answer and a
+    point-by-point mark scheme
+  - ERQs (5): Analyze to Evaluate/Create; two per topic plus one integrative (a described
+    mixed-ability class read through the evidence on styles, the ability profile and
+    inclusion into a justified differentiation plan). Each ERQ carries an analytic
+    rubric, >= 1 demanding Analyze-or-higher
+
+## Unit 8: Classroom Management
+
+Week 13 (3 contact hours; guide Chapter 8). Unit Spec (G1) for
+`docs/semester-1/efmp-301/unit-08/`.
+
+- **CLO/SLO refs**: `SLO:EFMP-301-8-1` (principles of classroom management, positive
+  learning environments) - traces to guide CLO 3; `SLO:EFMP-301-8-2` (managing
+  discipline and behavior) - traces to guide CLO 3.
+- **Key terms** (banked unless noted): Classroom Management, Group Work, Active
+  Learning, Self-Regulation, Positive Reinforcement (from Unit 3, recalled).
+- **Mapped readings**: seifert2009 Chapter 7 (Classroom management and the learning
+  environment); seifert-hk Chapter 7. Supplements verified at authoring time.
+
+### Sub-topic checklist
+
+One row per leaf item of guide Chapter 8's three Week 13 bullets. "Principles of
+classroom management" decomposes into what management is and the principles themselves;
+"Managing discipline and behavior" into the class-level and the individual-level
+response, following the decomposition pattern Unit 1's approved checklist established.
+IDs are stable once assigned.
+
+| ID | Sub-topic | Topic | Guide source |
+|---|---|---|---|
+| U8-1 | What classroom management is, and what it is for | 8.1 | W13 "Principles of classroom management" |
+| U8-2 | The principles: prevention, routine, engagement, consistency | 8.1 | W13 "Principles of classroom management" |
+| U8-3 | Creating positive learning environments | 8.2 | W13 "Creating positive learning environments" |
+| U8-4 | Managing discipline: rules, routines and consequences | 8.3 | W13 "Managing discipline and behavior" |
+| U8-5 | Managing individual behavior: responses and escalation | 8.3 | W13 "Managing discipline and behavior" |
+
+### Topic list
+
+The `Sub-topic IDs` cells form a **total, disjoint partition** of the `### Sub-topic
+checklist`. Row order is load-bearing: row N maps to `topic-0N.mdx`.
+
+| Topic | Title | Sub-topic IDs | Figures (id: archetype) | Reading-min |
+|---|---|---|---|---|
+| 8.1 | What classroom management is, and its principles | U8-1, U8-2 | fig-U8-1: concept-map, fig-U8-2: table | 17 |
+| 8.2 | Creating positive learning environments | U8-3 | fig-U8-3: diagram, fig-U8-4: table | 16 |
+| 8.3 | Managing discipline and behavior | U8-4, U8-5 | fig-U8-5: flowchart, fig-U8-6: table | 17 |
+
+**Depth budget**: 5 sub-topics; 78-105 reading-min (target 86: index 4 + topics 17 +
+16 + 17 + assessment 24 + teacher notes 8).
+
+**Prerequisite knowledge**: Units 1-7 (the learning situation from Unit 1; reinforcement
+from Unit 3; motivation from Unit 6; individual differences from Unit 7). Management is
+where those ideas become the daily running of a room.
+
+**Common misconceptions**: "a well-managed class is a silent class"; "management is
+control of pupils"; "discipline means punishment"; "rules announced once are rules
+learned"; "a positive environment is a soft environment".
+
+**Worked-examples plan** (one Pakistan-grounded example per sub-topic): what management
+is - two Class 5 rooms compared on what the teacher did in the first ten days (U8-1);
+principles - the first ten days of a new teacher's class, where routines were built
+before content (U8-2); positive environments - the classroom where pupils answer wrong
+out loud safely, and the specific moves that made it safe (U8-3); discipline - the class
+rules a Hyderabad teacher wrote with her pupils and what changed (U8-4); individual
+behavior - the escalation ladder a head teacher actually uses, from proximity to parent
+meeting, with the theory named at each step (U8-5).
+
+**International best-practice notes**: teach management as designing the learning
+situation (Unit 1's third scope part), not as controlling pupils; keep prevention ahead
+of correction in every example; present discipline as teaching behaviour, with dignity
+kept at every step of the ladder; distinguish class-level discipline from individual
+behavior response; never model a strategy that shames a pupil.
+
+**Figure plan** (>= 2 per topic; >= 1 concept-map / flowchart / timeline in the unit):
+  - fig-U8-1 - `concept-map` - classroom management at the centre, linked to what it
+    serves (learning time, safety, participation) and its inputs (routines, rules,
+    relationships, room layout) (Topic 8.1; a unit schematic)
+  - fig-U8-2 - `table` - the principles (prevention, routine, engagement, consistency)
+    against what each looks like in a Sindh classroom and what breaks it (Topic 8.1)
+  - fig-U8-3 - `diagram` - the positive learning environment as a floor plan: physical
+    space, routines, relationships and participation norms drawn as four zones of one
+    room (Topic 8.2)
+  - fig-U8-4 - `table` - a positive learning environment's parts (physical space,
+    routines, relationships, participation norms, feedback) against what it looks like
+    and one first-week move to build it (Topic 8.2)
+  - fig-U8-5 - `flowchart` - the discipline escalation ladder: proximity, private word,
+    choice, consequence, parent meeting - each step with the principle it serves and
+    dignity kept (Topic 8.3; a unit schematic)
+  - fig-U8-6 - `table` - common classroom behaviors (calling out, out-of-seat, work
+    refusal, fighting) against a likely function, a first response, and what to avoid
+    (Topic 8.3)
+
+**Unit-end assessment blueprint** (`unit-assessment.mdx` - fixed 10/10/5 bank):
+  - MCQs (10): Remember to Apply; spread 4/3/3 across topics 8.1 to 8.3
+  - RRQs (10): Understand to Analyze; spread 3/4/3; each with a model answer and a
+    point-by-point mark scheme
+  - ERQs (5): Analyze to Evaluate/Create; one per topic plus two integrative (one
+    designing a first-week management plan for a described class; one evaluating a
+    described discipline episode against the principles and the ladder). Each ERQ
+    carries an analytic rubric, >= 1 demanding Analyze-or-higher
+
+## Unit 9: Assessment and Evaluation
+
+Week 14 (3 contact hours; guide Chapter 9). Unit Spec (G1) for
+`docs/semester-1/efmp-301/unit-09/`.
+
+- **CLO/SLO refs**: `SLO:EFMP-301-9-1` (types and purposes of assessment, psychological
+  tests and measurement) - traces to guide CLO 5; `SLO:EFMP-301-9-2` (formative and
+  summative evaluation) - traces to guide CLO 5.
+- **Key terms** (banked unless noted): Assessment, Formative Assessment, Summative
+  Assessment, Diagnostic Assessment, Formative Feedback, Achievement Test, Standardized
+  Test, Norm-Referenced Test, Criterion-Referenced Test, Validity, Reliability,
+  Classroom Assessment, Portfolio Assessment, Peer Assessment, Self-Assessment.
+- **Mapped readings**: seifert2009 Chapters 11-12 (Teacher-made assessment strategies;
+  Standardized and other formal assessments); seifert-hk matching chapters. Supplements
+  verified at authoring time.
+
+### Sub-topic checklist
+
+One row per leaf item of guide Chapter 9's three Week 14 bullets. "Types and purposes of
+assessment" decomposes into types and purposes; "Psychological tests and measurement"
+into the tests themselves and the quality standard (validity, reliability); "Formative
+and summative evaluation" into its two named halves. IDs are stable once assigned.
+
+| ID | Sub-topic | Topic | Guide source |
+|---|---|---|---|
+| U9-1 | Types of assessment and the decisions they feed | 9.1 | W14 "Types and purposes of assessment" |
+| U9-2 | Purposes: why assess, and when each purpose fits | 9.1 | W14 "Types and purposes of assessment" |
+| U9-3 | Psychological tests: what they are and what they measure | 9.2 | W14 "Psychological tests and measurement" |
+| U9-4 | Measurement quality: validity and reliability | 9.2 | W14 "Psychological tests and measurement" |
+| U9-5 | Formative evaluation: assessment that teaches | 9.3 | W14 "Formative and summative evaluation" |
+| U9-6 | Summative evaluation: assessment that certifies | 9.3 | W14 "Formative and summative evaluation" |
+
+### Topic list
+
+The `Sub-topic IDs` cells form a **total, disjoint partition** of the `### Sub-topic
+checklist`. Row order is load-bearing: row N maps to `topic-0N.mdx`.
+
+| Topic | Title | Sub-topic IDs | Figures (id: archetype) | Reading-min |
+|---|---|---|---|---|
+| 9.1 | Types and purposes of assessment | U9-1, U9-2 | fig-U9-1: concept-map, fig-U9-2: table | 17 |
+| 9.2 | Psychological tests and measurement | U9-3, U9-4 | fig-U9-3: table, fig-U9-4: diagram | 16 |
+| 9.3 | Formative and summative evaluation | U9-5, U9-6 | fig-U9-5: flowchart, fig-U9-6: table | 17 |
+
+**Depth budget**: 6 sub-topics; 78-105 reading-min (target 86: index 4 + topics 17 +
+16 + 17 + assessment 24 + teacher notes 8).
+
+**Prerequisite knowledge**: Units 1-8 (the whole course to this point; especially Unit
+5's measurement-of-intelligence material, which this unit generalises). Assessment is
+where the course's evidence habit turns on the teacher's own instruments.
+
+**Common misconceptions**: "assessment means marks at the end"; "a reliable test is a
+valid test"; "formative assessment is just small tests"; "a difficult test is a good
+test"; "assessment is something done to pupils rather than with them".
+
+**Worked-examples plan** (one Pakistan-grounded example per sub-topic): types - the same
+Class 7 meeting three assessments (the diagnostic start-of-year check, the weekly quiz,
+the board exam) and the different decision each feeds (U9-1); purposes - the Tuesday
+five-minute exit question that changed Wednesday's lesson, versus the annual exam that
+ranked but never taught (U9-2); psychological tests - what a standardised achievement
+test standardises, read against a teacher-made test (U9-3); validity and reliability -
+the same quiz marked twice by the same teacher with different results, and what that
+proves (U9-4); formative - the exit question again, read as a cycle: ask, see, act
+(U9-5); summative - the board exam's purpose and its limits, stated fairly (U9-6).
+
+**International best-practice notes**: teach assessment as a decision tool (who decides
+what, on which evidence, when); keep validity and reliability distinct and concrete;
+present the formative/summative distinction as purpose, not timing; connect forward to
+the unit-end banks the learners themselves have been using all course.
+
+**Figure plan** (>= 2 per topic; >= 1 concept-map / flowchart / timeline in the unit):
+  - fig-U9-1 - `concept-map` - assessment at the centre with its purposes (diagnose,
+    form, sum, certify) branching to its types (diagnostic, formative, summative,
+    standardised, teacher-made) - each with the decision it feeds (Topic 9.1; a unit
+    schematic)
+  - fig-U9-2 - `table` - assessment types compared: when it happens, what it looks
+    like, the decision it feeds, one Sindh classroom instance (Topic 9.1)
+  - fig-U9-3 - `table` - teacher-made vs standardised tests: who writes them, what
+    varies, what stays fixed, what each is good for (Topic 9.2)
+  - fig-U9-4 - `diagram` - validity and reliability as a target diagram: four shots
+    (both, neither, reliable-not-valid, valid-not-reliable) with a classroom instance
+    of each (Topic 9.2; a unit schematic)
+  - fig-U9-5 - `flowchart` - the formative cycle: elicit evidence, interpret, act, then
+    check again - drawn as a loop with the timeline of a single week (Topic 9.3; a unit
+    schematic)
+  - fig-U9-6 - `table` - formative vs summative evaluation: purpose, timing, what it
+    looks like, what it must never be used for (Topic 9.3)
+
+**Unit-end assessment blueprint** (`unit-assessment.mdx` - fixed 10/10/5 bank):
+  - MCQs (10): Remember to Apply; spread 4/3/3 across topics 9.1 to 9.3
+  - RRQs (10): Understand to Analyze; spread 3/4/3; each with a model answer and a
+    point-by-point mark scheme
+  - ERQs (5): Analyze to Evaluate/Create; one per topic plus two integrative (one
+    evaluating a described test for validity and reliability with reasons; one designing
+    a formative cycle for a named topic and defending it). Each ERQ carries an analytic
+    rubric, >= 1 demanding Analyze-or-higher
+
+## Unit 10: Teaching-Learning Process
+
+Week 15 (3 contact hours; guide Chapter 10). Unit Spec (G1) for
+`docs/semester-1/efmp-301/unit-10/`.
+
+- **CLO/SLO refs**: `SLO:EFMP-301-10-1` (teaching methods and strategies) - traces to
+  guide CLO 3; `SLO:EFMP-301-10-2` (instructional design, teacher effectiveness) -
+  traces to guide CLO 3.
+- **Key terms** (banked unless noted): Teaching Strategy, Lesson Plan, Teacher
+  Effectiveness, Curriculum, Pedagogy, Active Learning, Group Work, Instructional Design
+  (authored: تدریسی تصمیم نگاری / ہدایتی خاکہ, flag at G4).
+- **Mapped readings**: seifert2009 Chapter 10 (Planning instruction) and Chapter 1 (The
+  changing teaching profession and you); seifert-hk matching chapters. Supplements
+  verified at authoring time.
+
+### Sub-topic checklist
+
+One row per leaf item of guide Chapter 10's three Week 15 bullets. "Teaching methods and
+strategies" decomposes into the methods and the choosing of them; the other two bullets
+stand alone. IDs are stable once assigned.
+
+| ID | Sub-topic | Topic | Guide source |
+|---|---|---|---|
+| U10-1 | Teaching methods: what each is good for | 10.1 | W15 "Teaching methods and strategies" |
+| U10-2 | Choosing strategies: matching method to purpose | 10.1 | W15 "Teaching methods and strategies" |
+| U10-3 | Instructional design: planning backward from outcomes | 10.2 | W15 "Instructional design" |
+| U10-4 | Teacher effectiveness: what it is and how it grows | 10.2 | W15 "Teacher effectiveness" |
+
+### Topic list
+
+The `Sub-topic IDs` cells form a **total, disjoint partition** of the `### Sub-topic
+checklist`. Row order is load-bearing: row N maps to `topic-0N.mdx`.
+
+| Topic | Title | Sub-topic IDs | Figures (id: archetype) | Reading-min |
+|---|---|---|---|---|
+| 10.1 | Teaching methods and strategies | U10-1, U10-2 | fig-U10-1: table, fig-U10-2: diagram | 18 |
+| 10.2 | Instructional design and teacher effectiveness | U10-3, U10-4 | fig-U10-3: flowchart, fig-U10-4: table | 18 |
+
+**Depth budget**: 4 sub-topics; 64-88 reading-min (target 72: index 4 + topics 18 + 18 +
+assessment 24 + teacher notes 8).
+
+**Prerequisite knowledge**: Units 1-9 (the whole course: the theories of Unit 3, the
+cognition of Unit 4, the motivation of Unit 6, the management of Unit 8, the assessment
+of Unit 9 all meet here in the design of teaching).
+
+**Common misconceptions**: "one teaching method is best"; "a lesson plan is a script to
+be followed"; "instructional design means filling in a form"; "teacher effectiveness is
+charisma"; "experience alone makes an effective teacher".
+
+**Worked-examples plan** (one Pakistan-grounded example per sub-topic): methods - one
+topic (the water cycle) taught by lecture, demonstration and group investigation in
+three sections, and what each achieved (U10-1); choosing - the same teacher choosing
+demonstration for a science concept and discussion for a poem, with the reasons named
+(U10-2); instructional design - a real lesson plan built backward from the outcome to
+the evidence to the activity (U10-3); teacher effectiveness - two remembered teachers
+compared against the research on what made the difference (U10-4).
+
+**International best-practice notes**: present methods as tools with affordances, never
+as ideologies; teach backward design as the guide's own instructional-design content
+(outcome, evidence, activity, in that order); connect teacher effectiveness to
+observable, growable practices (clarity, questioning, feedback, management) rather than
+personality; fold in the guide's own teaching-strategy list (lecture, interactive
+discussion, question-answer, demonstration, case study) as the named methods.
+
+**Figure plan** (>= 2 per topic; >= 1 concept-map / flowchart / timeline in the unit):
+  - fig-U10-1 - `table` - teaching methods (lecture, demonstration, discussion, group
+    work, case study, investigation) against what each is good for, what it demands, and
+    one guide-named strategy it matches (Topic 10.1)
+  - fig-U10-2 - `diagram` - the choosing frame: purpose (what must be learned) feeding
+    constraints (time, class size, resources, safety) feeding method, with two worked
+    choices traced through it (Topic 10.1)
+  - fig-U10-3 - `flowchart` - backward design as three arrows: outcome first, evidence
+    second, activity third, with a forward check from activity back to outcome (Topic
+    10.2; a unit schematic)
+  - fig-U10-4 - `table` - teacher effectiveness: the observable practices (clarity,
+    questioning, feedback, management, relationships) against what each looks like and
+    one way to grow it (Topic 10.2)
+
+**Unit-end assessment blueprint** (`unit-assessment.mdx` - fixed 10/10/5 bank):
+  - MCQs (10): Remember to Apply; spread 5/5 across topics 10.1 to 10.2
+  - RRQs (10): Understand to Analyze; spread 5/5; each with a model answer and a
+    point-by-point mark scheme
+  - ERQs (5): Analyze to Evaluate/Create; two per topic plus one integrative (one full
+    lesson designed backward for a named Sindh class, with the method choice justified
+    against the purpose). Each ERQ carries an analytic rubric, >= 1 demanding
+    Analyze-or-higher
+
+## Unit 11: Mental Health and Well-being in Schools
+
+Week 16 (3 contact hours in the week, shared with Unit 12; guide Chapter 11). Unit Spec
+(G1) for `docs/semester-1/efmp-301/unit-11/`.
+
+- **CLO/SLO refs**: `SLO:EFMP-301-11-1` (mental health and well-being in schools) -
+  traces to guide CLO 6.
+- **Key terms** (banked unless noted): Stress, Anxiety, Self-Esteem, Self-Concept,
+  Self-Regulation, Mental Health (authored: ذہنی صحت, flag at G4), Well-being (authored:
+  فلاح و بہبود, flag at G4), Resilience (authored: صبر و ضبط / لچک, flag at G4).
+- **Mapped readings**: seifert2009 Chapter 8 (The nature of classroom communication) for
+  the teacher-pupil relationship material; seifert-hk matching chapter. Supplements
+  verified at authoring time (for example WHO school well-being and mental-health
+  materials).
+
+### Sub-topic checklist
+
+The guide's Week 16 block lists Chapter 11's material as the single bullet "Mental
+health and well-being in schools"; it decomposes into four named constituents following
+the pattern Unit 1's approved checklist established for single broad bullets. IDs are
 stable once assigned.
 
 | ID | Sub-topic | Topic | Guide source |
 |---|---|---|---|
-| U6-1 | Types and purposes of assessment | 6.1 | W14 "Types and purposes of assessment" |
-| U6-2 | Psychological tests and measurement | 6.1 | W14 "Psychological tests and measurement" |
-| U6-3 | Formative and summative evaluation | 6.1 | W14 "Formative and summative evaluation" |
-| U6-4 | Teaching methods and strategies | 6.2 | W15 "Teaching methods and strategies" |
-| U6-5 | Instructional design | 6.2 | W15 "Instructional design" |
-| U6-6 | Teacher effectiveness | 6.2 | W15 "Teacher effectiveness" |
-| U6-7 | Mental health and well-being in schools | 6.3 | W16 "Mental health and well-being in schools" |
-| U6-8 | Guidance and counseling | 6.3 | W16 "Guidance and counseling" |
-| U6-9 | Application of educational psychology: the course whole | 6.4 | W16 "Application of educational psychology" |
-| U6-10 | Technology and learning | 6.4 | W16 "Technology and learning" |
-| U6-11 | Professional ethics | 6.4 | W16 "Professional ethics" |
+| U11-1 | What mental health and well-being mean | 11.1 | W16 "Mental health and well-being in schools" |
+| U11-2 | Common difficulties and their signs in school | 11.1 | W16 "Mental health and well-being in schools" |
+| U11-3 | The school environment and well-being: demands and supports | 11.2 | W16 "Mental health and well-being in schools" |
+| U11-4 | The teacher's role and its limits: notice, respond, refer | 11.2 | W16 "Mental health and well-being in schools" |
 
 ### Topic list
 
@@ -887,100 +1250,175 @@ checklist`. Row order is load-bearing: row N maps to `topic-0N.mdx`.
 
 | Topic | Title | Sub-topic IDs | Figures (id: archetype) | Reading-min |
 |---|---|---|---|---|
-| 6.1 | Assessment and evaluation | U6-1, U6-2, U6-3 | fig-U6-1: concept-map, fig-U6-2: table | 19 |
-| 6.2 | The teaching-learning process | U6-4, U6-5, U6-6 | fig-U6-3: flowchart, fig-U6-4: table | 18 |
-| 6.3 | Mental health, well-being, guidance and counseling | U6-7, U6-8 | fig-U6-5: diagram, fig-U6-6: table | 17 |
-| 6.4 | Educational psychology in practice: application, technology and ethics | U6-9, U6-10, U6-11 | fig-U6-7: concept-map, fig-U6-8: table, fig-U6-9: timeline | 18 |
+| 11.1 | What mental health and well-being are, and how they show in school | U11-1, U11-2 | fig-U11-1: diagram, fig-U11-2: table | 18 |
+| 11.2 | The school's and the teacher's role in well-being | U11-3, U11-4 | fig-U11-3: timeline, fig-U11-4: table | 17 |
 
-**Depth budget**: 11 sub-topics; 100-130 reading-min (target 108: index 4 + topics 19 +
-18 + 17 + 18 + assessment 24 + teacher notes 8).
+**Depth budget**: 4 sub-topics; 63-87 reading-min (target 71: index 4 + topics 18 + 17 +
+assessment 24 + teacher notes 8).
 
-**Prerequisite knowledge**: Units 1-5 (the whole course). This is the integrative
-closing unit: assessment applies the measurement ideas of Unit 4, the teaching process
-applies the theories of Units 2-3, and the well-being material applies the motivation
-and inclusion of Unit 5. It may freely recall earlier material.
+**Prerequisite knowledge**: Units 1-10 (the whole course; especially Unit 6's emotions
+material and Unit 8's positive learning environments). This unit reads the whole
+classroom through the well-being lens.
 
-**Common misconceptions**: "assessment means marks at the end"; "a reliable test is a
-valid test"; "formative assessment is just small tests"; "one teaching method is best";
-"teacher effectiveness is charisma"; "mental health is not a school's business";
-"counseling means giving advice"; "technology replaces the teacher"; "ethics means not
-breaking rules".
+**Common misconceptions**: "mental health is not a school's business"; "mental health
+means mental illness"; "a pupil who looks fine is fine"; "talking about suicide or
+sadness plants the idea"; "a teacher must solve a pupil's difficulties".
 
-**Worked-examples plan** (one Pakistan-grounded example per sub-topic): types and
-purposes - the same Class 7 meeting three assessments (the diagnostic start-of-year
-check, the weekly quiz, the board exam) and the different decision each feeds (U6-1);
-psychological tests - what a standardised achievement test standardises, read against
-a teacher-made test, with validity and reliability made concrete (U6-2); formative and
-summative - the Tuesday five-minute exit question that changed Wednesday's lesson,
-versus the annual exam that ranked but never taught (U6-3); teaching methods - one
-topic (the water cycle) taught by lecture, demonstration and group investigation in
-three sections, and what each achieved (U6-4); instructional design - a real lesson
-plan built backward from the outcome to the evidence to the activity (U6-5); teacher
-effectiveness - two remembered teachers compared against the research on what made
-the difference (U6-6); well-being - the exam-season signs a Class 8 teacher learned
-to read, and the small classroom responses that helped (U6-7); guidance and
-counseling - the pupil whose marks fell and whose story the tutor heard, with the
-referral line a teacher must not cross (U6-8); the course whole - one full classroom
-episode re-read through every unit of the course (U6-9); technology - the tablet
-project in a rural school and what it changed, held against what only a teacher
-could do (U6-10); ethics - the marks a teacher was pressured to change, and the
-professional line the guide's ethics bullet names (U6-11).
+**Worked-examples plan** (one Pakistan-grounded example per sub-topic): what well-being
+is - two Class 8 pupils, one with high marks and constant dread, one with middling marks
+and steady energy, and what well-being actually measures (U11-1); signs - the exam-season
+changes a Class 8 teacher learned to read (withdrawal, falling marks, irritability,
+absence) (U11-2); the environment - the school day read as a balance of demands and
+supports, from the morning assembly to the homework load (U11-3); the teacher's role -
+the pupil whose marks fell and whose story the tutor heard, with the referral line a
+teacher must not cross (U11-4).
 
-**International best-practice notes**: teach assessment as a decision tool (who
-decides what, on which evidence, when); keep validity and reliability distinct and
-concrete; present the formative/summative distinction as purpose, not timing;
-introduce backward design as the guide's own instructional-design content; treat
-teacher effectiveness as observable and growable, not innate; handle mental health
-with the seriousness and the referral boundaries a non-specialist teacher needs;
-present technology as a tool with affordances and costs, matching the guide's
-hands-on computer exercises; ground ethics in the teacher's actual dilemmas, with
-Pakistan's professional-standards context.
+**International best-practice notes**: use WHO's framing of mental health as more than
+the absence of illness; keep the teacher's role honest - notice, respond within the
+classroom, refer beyond it, never diagnose or counsel beyond training; handle the
+suicide-signs material with seriousness and the exact referral language a non-specialist
+needs; avoid pathology language for ordinary exam stress.
 
 **Figure plan** (>= 2 per topic; >= 1 concept-map / flowchart / timeline in the unit):
-  - fig-U6-1 - `concept-map` - assessment at the centre with its purposes (diagnose,
-    form, sum, certify) branching to its types (diagnostic, formative, summative,
-    standardised, teacher-made) - each with the decision it feeds (Topic 6.1; a unit
-    schematic)
-  - fig-U6-2 - `table` - formative vs summative vs diagnostic vs standardised: when it
-    happens, what it looks like, the decision it feeds, one Sindh classroom instance
-    (Topic 6.1)
-  - fig-U6-3 - `flowchart` - backward design as three arrows: outcome first, evidence
-    second, activity third, with a forward check from activity back to outcome
-    (Topic 6.2; a unit schematic)
-  - fig-U6-4 - `table` - teaching methods (lecture, demonstration, discussion, group
-    work, case study, investigation) against what each is good for, what it demands,
-    and one guide-named strategy it matches (Topic 6.2)
-  - fig-U6-5 - `diagram` - the well-being balance: demands and supports on two pans,
+  - fig-U11-1 - `diagram` - the well-being balance: demands and supports on two pans,
     with school-level supports (routine, belonging, feedback, safety, referral)
-    labelled (Topic 6.3)
-  - fig-U6-6 - `table` - signs a teacher can notice (withdrawal, falling marks,
-    irritability, absence, talk of hopelessness) against the response within a
-    teacher's role and the referral beyond it (Topic 6.3)
-  - fig-U6-7 - `concept-map` - the whole course on one map: the learner, development,
+    labelled (Topic 11.1; a unit schematic)
+  - fig-U11-2 - `table` - signs a teacher can notice (withdrawal, falling marks,
+    irritability, absence, talk of hopelessness) against a possible meaning and the
+    response within a teacher's role (Topic 11.1)
+  - fig-U11-3 - `timeline` - the school day as a demand-and-support timeline from
+    assembly to home time, each period marked with what it demands and what it gives
+    (Topic 11.2; a unit schematic)
+  - fig-U11-4 - `table` - the teacher's well-being moves (greet by name, predictable
+    routines, safe wrong answers, workload watch, parent contact) against what each
+    supports and its limit (Topic 11.2)
+
+**Unit-end assessment blueprint** (`unit-assessment.mdx` - fixed 10/10/5 bank):
+  - MCQs (10): Remember to Apply; spread 5/5 across topics 11.1 to 11.2
+  - RRQs (10): Understand to Analyze; spread 5/5; each with a model answer and a
+    point-by-point mark scheme
+  - ERQs (5): Analyze to Evaluate/Create; two per topic plus one integrative (a
+    described pupil's changed behaviour read through the signs, the environment and the
+    teacher's role limits into a justified response plan). Each ERQ carries an analytic
+    rubric, >= 1 demanding Analyze-or-higher
+
+## Unit 12: Guidance and Counseling
+
+Week 16 (3 contact hours in the week, shared with Unit 11; guide Chapter 12). Unit Spec
+(G1) for `docs/semester-1/efmp-301/unit-12/`. This is the course's closing unit: it
+carries the guide's remaining Week 16 bullets (professional ethics, the application of
+educational psychology, technology and learning) beside its own guidance-and-counseling
+material, as the partition note discloses.
+
+- **CLO/SLO refs**: `SLO:EFMP-301-12-1` (guidance and counseling) - traces to guide CLO
+  6; `SLO:EFMP-301-12-2` (professional ethics) - traces to guide CLO 6;
+  `SLO:EFMP-301-12-3` (application of educational psychology, technology and learning) -
+  traces to guide CLOs 3 and 6.
+- **Key terms** (banked unless noted): Guidance and Counseling, Professional Ethics,
+  Reflective Practice (authored: عکاس عمل / غور و فکر پر مبنی عمل, flag at G4),
+  Referral (authored: حوالہ دینا / متخصص کے پاس بھیجنا, flag at G4), Confidentiality
+  (authored: رازداری, flag at G4).
+- **Mapped readings**: seifert2009 Chapter 8 (The nature of classroom communication) and
+  Chapter 1; seifert-hk matching chapters; khizar2019 (already verified) for Pakistan's
+  professional-standards context. Supplements verified at authoring time.
+
+### Sub-topic checklist
+
+One row per leaf item of the guide's Week 16 bullets assigned to this unit: the
+title-matched "Guidance and counseling" bullet (decomposed into three constituents) plus
+the professional-ethics, application and technology bullets, which the guide places in
+the same combined Week 16 block. The assignment is disclosed in the partition note.
+IDs are stable once assigned.
+
+| ID | Sub-topic | Topic | Guide source |
+|---|---|---|---|
+| U12-1 | What guidance and counseling are | 12.1 | W16 "Guidance and counseling" |
+| U12-2 | Guidance in school: the counselor's work and the guidance program | 12.1 | W16 "Guidance and counseling" |
+| U12-3 | The teacher as first line of support: when to refer | 12.1 | W16 "Guidance and counseling" |
+| U12-4 | Professional ethics: the teacher's duties and boundaries | 12.2 | W16 "Professional ethics" |
+| U12-5 | Application of educational psychology: the course whole | 12.3 | W16 "Application of educational psychology" |
+| U12-6 | Technology and learning: what it changes, and what it cannot | 12.3 | W16 "Technology and learning" |
+
+### Topic list
+
+The `Sub-topic IDs` cells form a **total, disjoint partition** of the `### Sub-topic
+checklist`. Row order is load-bearing: row N maps to `topic-0N.mdx`.
+
+| Topic | Title | Sub-topic IDs | Figures (id: archetype) | Reading-min |
+|---|---|---|---|---|
+| 12.1 | Guidance and counseling | U12-1, U12-2, U12-3 | fig-U12-1: concept-map, fig-U12-2: table | 17 |
+| 12.2 | Professional ethics | U12-4 | fig-U12-3: table, fig-U12-4: diagram | 15 |
+| 12.3 | Educational psychology in practice: application and technology | U12-5, U12-6 | fig-U12-5: concept-map, fig-U12-6: timeline | 18 |
+
+**Depth budget**: 6 sub-topics; 78-105 reading-min (target 86: index 4 + topics 17 +
+15 + 18 + assessment 24 + teacher notes 8).
+
+**Prerequisite knowledge**: Units 1-11 (the whole course). This is the integrative
+closing unit: Topic 12.3 is the course's look back over every unit, and the guide's
+"Final revision / assessment" slot seeds the eventual course review from it.
+
+**Common misconceptions**: "counseling means giving advice"; "a counselor and a teacher
+do the same job"; "ethics means not breaking rules"; "technology replaces the teacher";
+"application is just revision".
+
+**Worked-examples plan** (one Pakistan-grounded example per sub-topic): what guidance is
+- the difference between the teacher who told a failing pupil to work harder and the
+  one who asked what had changed at home (U12-1); the program - what a school counselor
+  in a Hyderabad secondary school actually does in a week, and what a school without
+  one loses (U12-2); the teacher's part - the referral a Class 6 teacher made for a
+  pupil whose behaviour changed after the floods, and the line she did not cross
+  (U12-3); ethics - the marks a teacher was pressured to change, and the professional
+  line the guide's ethics bullet names (U12-4); the course whole - one full classroom
+  episode re-read through every unit of the course (U12-5); technology - the tablet
+  project in a rural school and what it changed, held against what only a teacher could
+  do (U12-6).
+
+**International best-practice notes**: keep guidance and counseling distinct (guidance
+is information and direction; counseling is a skilled relationship) and both distinct
+from teaching; present the teacher's role as first-line noticing and referral, never as
+therapy; ground ethics in the teacher's actual dilemmas with Pakistan's
+professional-standards context (khizar2019); present technology as a tool with
+affordances and costs, matching the guide's hands-on computer exercises and
+internet-research tasks; end the course on agency - what a teacher can actually do -
+not on a summary.
+
+**Figure plan** (>= 2 per topic; >= 1 concept-map / flowchart / timeline in the unit):
+  - fig-U12-1 - `concept-map` - guidance and counseling at the centre: what each is,
+    who does it, and the teacher's first-line role linked to referral and
+    confidentiality (Topic 12.1; a unit schematic)
+  - fig-U12-2 - `table` - guidance vs counseling vs teaching: purpose, who does it,
+    what it looks like, one school instance (Topic 12.1)
+  - fig-U12-3 - `table` - the teacher's ethical duties (fairness, confidentiality,
+    boundaries, honest reporting, pupil welfare first) against a dilemma each can raise
+    and the professional line (Topic 12.2)
+  - fig-U12-4 - `diagram` - the ethics decision path: whose interest, which duty, what
+    the standards say, what to do, what to record (Topic 12.2)
+  - fig-U12-5 - `concept-map` - the whole course on one map: the learner, development,
     learning theories, cognitive processes, intelligence and creativity, motivation,
     differences and inclusion, management, assessment, teaching and well-being - the
-    Unit 6.4 look back (Topic 6.4; a unit schematic)
-  - fig-U6-8 - `table` - technology's uses in learning (practice, access to
-    information, creation, connection, assessment) with what each affords, what it
-    costs, and one low-bandwidth instance (Topic 6.4)
-  - fig-U6-9 - `timeline` - the course's sixteen weeks as one left-to-right timeline
-    naming each unit's headline idea, for the final revision (Topic 6.4; a unit
+    Topic 12.3 look back (Topic 12.3; a unit schematic)
+  - fig-U12-6 - `timeline` - the course's sixteen weeks as one left-to-right timeline
+    naming each unit's headline idea, for the final revision (Topic 12.3; a unit
     schematic)
 
 **Unit-end assessment blueprint** (`unit-assessment.mdx` - fixed 10/10/5 bank):
-  - MCQs (10): Remember to Apply; spread 2/3/3/2 across topics 6.1 to 6.4
-  - RRQs (10): Understand to Analyze; spread 3/2/3/2; each with a model answer and a
+  - MCQs (10): Remember to Apply; spread 4/3/3 across topics 12.1 to 12.3
+  - RRQs (10): Understand to Analyze; spread 3/4/3; each with a model answer and a
     point-by-point mark scheme
-  - ERQs (5): Analyze to Evaluate/Create; 1/1/1/2, the fifth the course capstone
-    (one full classroom case analysed through the whole course and answered with a
-    justified plan). Each ERQ carries an analytic rubric, >= 1 demanding
-    Analyze-or-higher
+  - ERQs (5): Analyze to Evaluate/Create; one per topic plus two integrative, the fifth
+    the course capstone (one full classroom case analysed through the whole course and
+    answered with a justified plan). Each ERQ carries an analytic rubric, >= 1
+    demanding Analyze-or-higher
 
 ## For the evaluator - what this spec does not settle
 
-- **The units 2+ partition.** Derived from the guide's own week/chapter grouping per
-  D-2026-0012 and labelled as derived throughout. The evaluator approves or escalates;
-  owner confirmation is required before Units 2-6 are authored under it.
+- **The units 2+ partition.** Owner-determined chapter-wise per the G-2026-52 ruling
+  (2026-09-24): each guide chapter is one unit, 12 units total. The evaluator approves
+  the partition against that ruling. The one judgement left inside it is the Week 16
+  bullet assignment (which the header guide note and the week schedule disclose): the
+  title-matched bullets to their chapters, the professional-ethics, application and
+  technology bullets to Unit 12 as the closing material, and the final-revision slot to
+  the course review.
 - **Open-access bindings per unit.** The reading list records the two verified
   guide books; each unit's `sources/unit-NN.md` records its exact bindings with
   verification dates, including any supplements verified at authoring time. Nothing
@@ -990,7 +1428,7 @@ Pakistan's professional-standards context.
 - **The Urdu terminology of the course.** Banked terms come from `terminology.csv`;
   new Urdu labels are authored at G4 and listed for G5 review. The key-terms lists
   above flag which labels are expected to be authored rather than banked.
-- **course-review.mdx.** The Week 16 final-revision slot and the Unit 6 capstone seed
+- **course-review.mdx.** The Week 16 final-revision slot and the Unit 12 capstone seed
   an eventual course review file; authoring it is follow-up work outside this feature.
 - **Unit 1.** Frozen. The one restoration to its G1 blocks (the `### Sub-topic checklist`
   heading) is structural, not a content change; any further change is escalated, never
