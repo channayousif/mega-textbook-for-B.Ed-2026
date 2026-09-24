@@ -1,0 +1,152 @@
+"use strict";
+(self["webpackChunkbed_mega_textbook"] = self["webpackChunkbed_mega_textbook"] || []).push([[7206],{
+
+/***/ 2187
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  A: () => (/* binding */ AppDashboardShell)
+});
+
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(6540);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js
+var Link = __webpack_require__(8774);
+// EXTERNAL MODULE: ./node_modules/react-router/esm/react-router.js
+var react_router = __webpack_require__(6347);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useDocusaurusContext.js
+var useDocusaurusContext = __webpack_require__(4586);
+// EXTERNAL MODULE: ./src/contexts/AuthContext.tsx
+var AuthContext = __webpack_require__(9345);
+// EXTERNAL MODULE: ./src/lib/authRedirect.ts
+var authRedirect = __webpack_require__(7215);
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(4848);
+;// ./src/components/StudentDashboardGuard.tsx
+/**
+ * Client-side gate for `/app/dashboard/*` pages (Spec 004, T006, FR-012).
+ *
+ * ⚠️ COSMETIC ONLY (Constitution Art. IX.2) - same disclaimer as
+ * `src/components/AuthGuard.tsx`. Every dashboard query is still RLS-scoped
+ * to the caller's own rows regardless of what this component renders.
+ *
+ * Differs from AuthGuard in one deliberate way: FR-012 requires a signed-in
+ * teacher/admin who reaches the student dashboard to see a *specific* notice
+ * pointing them to their own tools, not AuthGuard's generic "you don't have
+ * access" text - this is a distinct, spec-mandated message, not a bug in the
+ * generic gate.
+ */function useLocale(){var _useDocusaurusContext=(0,useDocusaurusContext/* default */.A)(),i18n=_useDocusaurusContext.i18n;return i18n.currentLocale==='ur'?'ur':'en';}var MESSAGES={loading:{en:'Loading…',ur:'لوڈ ہو رہا ہے…'},redirecting:{en:'Redirecting to sign in…',ur:'سائن ان کی طرف بھیجا جا رہا ہے…'},studentOnlyTitle:{en:'This view is for students',ur:'یہ صفحہ طلبہ کے لیے ہے'},studentOnlyBody:{en:'The dashboard shows a student’s own classes, grades, and progress. Your own tools are available from the classes area.',ur:'یہ ڈیش بورڈ ایک طالب علم کی اپنی کلاسز، گریڈز اور پیش رفت دکھاتا ہے۔ آپ کے اپنے ٹولز کلاسز کے صفحے پر دستیاب ہیں۔'},goToYourTools:{en:'Go to your classes',ur:'اپنی کلاسز پر جائیں'}};function StudentDashboardGuard(_ref){var children=_ref.children;var location=(0,react_router/* useLocation */.zy)();var locale=useLocale();var _useAuth=(0,AuthContext/* useAuth */.A)(),loading=_useAuth.loading,session=_useAuth.session,role=_useAuth.role;if(loading)return/*#__PURE__*/(0,jsx_runtime.jsx)("p",{children:MESSAGES.loading[locale]});if(!session){if(typeof window!=='undefined'){window.location.assign((0,authRedirect/* loginUrlWithReturnTo */.M$)(location.pathname,'login'));}return/*#__PURE__*/(0,jsx_runtime.jsx)("p",{children:MESSAGES.redirecting[locale]});}if(role!=='student'){return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"alert alert--info",role:"alert",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("p",{children:/*#__PURE__*/(0,jsx_runtime.jsx)("strong",{children:MESSAGES.studentOnlyTitle[locale]})}),/*#__PURE__*/(0,jsx_runtime.jsx)("p",{children:MESSAGES.studentOnlyBody[locale]}),/*#__PURE__*/(0,jsx_runtime.jsx)("p",{children:/*#__PURE__*/(0,jsx_runtime.jsx)(Link/* default */.A,{to:"/app/classes",className:"button button--primary button--sm",children:MESSAGES.goToYourTools[locale]})})]});}return/*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment,{children:children});}
+;// ./src/components/TeacherDashboardGuard.tsx
+/**
+ * Client-side gate for `/app/teacher/*` pages (Spec 005, T002, FR-013).
+ *
+ * ⚠️ COSMETIC ONLY (Constitution Art. IX.2) - same disclaimer as
+ * `src/components/AuthGuard.tsx`/`StudentDashboardGuard.tsx`. Every teacher
+ * dashboard query is still RLS-scoped to the caller's own classes regardless
+ * of what this component renders.
+ *
+ * Mirrors StudentDashboardGuard's pattern in the opposite direction: a
+ * signed-in student reaching the teacher dashboard sees a pointer back to
+ * their own dashboard; any other non-teacher (admin, or no role) sees the
+ * same teacher-only notice without a specific "your tools" link, since no
+ * generic admin dashboard exists in this codebase.
+ */function TeacherDashboardGuard_useLocale(){var _useDocusaurusContext=(0,useDocusaurusContext/* default */.A)(),i18n=_useDocusaurusContext.i18n;return i18n.currentLocale==='ur'?'ur':'en';}var TeacherDashboardGuard_MESSAGES={loading:{en:'Loading…',ur:'لوڈ ہو رہا ہے…'},redirecting:{en:'Redirecting to sign in…',ur:'سائن ان کی طرف بھیجا جا رہا ہے…'},teacherOnlyTitle:{en:'This view is for teachers',ur:'یہ صفحہ اساتذہ کے لیے ہے'},teacherOnlyBody:{en:'The teacher dashboard shows a teacher’s own classes, grading queue, and analytics.',ur:'یہ ٹیچر ڈیش بورڈ ایک استاد کی اپنی کلاسز، گریڈنگ قطار، اور تجزیات دکھاتا ہے۔'},goToYourDashboard:{en:'Go to your dashboard',ur:'اپنے ڈیش بورڈ پر جائیں'}};function TeacherDashboardGuard(_ref){var children=_ref.children;var location=(0,react_router/* useLocation */.zy)();var locale=TeacherDashboardGuard_useLocale();var _useAuth=(0,AuthContext/* useAuth */.A)(),loading=_useAuth.loading,session=_useAuth.session,role=_useAuth.role;if(loading)return/*#__PURE__*/(0,jsx_runtime.jsx)("p",{children:TeacherDashboardGuard_MESSAGES.loading[locale]});if(!session){if(typeof window!=='undefined'){window.location.assign((0,authRedirect/* loginUrlWithReturnTo */.M$)(location.pathname,'login'));}return/*#__PURE__*/(0,jsx_runtime.jsx)("p",{children:TeacherDashboardGuard_MESSAGES.redirecting[locale]});}if(role!=='teacher'){return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"alert alert--info",role:"alert",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("p",{children:/*#__PURE__*/(0,jsx_runtime.jsx)("strong",{children:TeacherDashboardGuard_MESSAGES.teacherOnlyTitle[locale]})}),/*#__PURE__*/(0,jsx_runtime.jsx)("p",{children:TeacherDashboardGuard_MESSAGES.teacherOnlyBody[locale]}),role==='student'&&/*#__PURE__*/(0,jsx_runtime.jsx)("p",{children:/*#__PURE__*/(0,jsx_runtime.jsx)(Link/* default */.A,{to:"/app/dashboard",className:"button button--primary button--sm",children:TeacherDashboardGuard_MESSAGES.goToYourDashboard[locale]})})]});}return/*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment,{children:children});}
+;// ./src/lib/dashboardNav.ts
+/**
+ * Dashboard navigation model (Spec 011, US1 / FR-004, FR-005).
+ *
+ * The left-side menu is a fixed part of the product, so it lives in code, not a table or a
+ * config file. `AppDashboardShell` renders these lists and marks the active item with
+ * `aria-current` by testing `activeMatch` against the current pathname.
+ */var studentNav=[{key:'home',label:{en:'Home',ur:'ہوم'},to:'/app/dashboard',activeMatch:/^\/app\/dashboard\/?$/},{key:'progress',label:{en:'Progress',ur:'پیش رفت'},to:'/app/dashboard/progress',activeMatch:/^\/app\/dashboard\/progress/},{key:'assignments',label:{en:'Assignments',ur:'اسائنمنٹس'},to:'/app/dashboard/assignments',activeMatch:/^\/app\/dashboard\/assignments/},{key:'grades',label:{en:'Grades',ur:'گریڈز'},to:'/app/dashboard/grades',activeMatch:/^\/app\/dashboard\/grades/},{key:'achievements',label:{en:'Achievements',ur:'کامیابیاں'},to:'/app/dashboard/achievements',activeMatch:/^\/app\/dashboard\/achievements/},{key:'notes',label:{en:'Notes',ur:'نوٹس'},to:'/app/dashboard/notes',activeMatch:/^\/app\/dashboard\/notes/},{key:'classes',label:{en:'My classes',ur:'میری کلاسیں'},to:'/app/dashboard/classes',activeMatch:/^\/app\/dashboard\/classes/},{key:'history',label:{en:'History',ur:'ماضی'},to:'/app/dashboard/history',activeMatch:/^\/app\/dashboard\/history/}];var teacherNav=[{key:'overview',label:{en:'Overview',ur:'جائزہ'},to:'/app/teacher',activeMatch:/^\/app\/teacher\/?$/},{key:'classes',label:{en:'Classes',ur:'کلاسیں'},to:'/app/classes',activeMatch:/^\/app\/classes(\/(?!assignment).*)?$/},{key:'assignments',label:{en:'Assignments',ur:'اسائنمنٹس'},to:'/app/classes/assignments',activeMatch:/^\/app\/classes\/assignments?(-|\/|$)/},{key:'grading',label:{en:'Grading',ur:'گریڈنگ'},to:'/app/classes/queue',activeMatch:/^\/app\/classes\/queue/},{key:'analytics',label:{en:'Analytics',ur:'تجزیات'},to:'/app/teacher/analytics',activeMatch:/^\/app\/teacher\/(analytics|student|class)/},{key:'quiz-authoring',label:{en:'Quiz authoring',ur:'کوئز تیاری'},to:'/app/teacher/quiz-authoring',activeMatch:/^\/app\/teacher\/quiz-authoring/},{key:'teaching-log',label:{en:'Teaching log',ur:'تدریسی نوٹ بک'},to:'/app/teacher/teaching-log',activeMatch:/^\/app\/teacher\/teaching-log/},{key:'feedback',label:{en:'Feedback & suggestions',ur:'رائے اور تجاویز'},to:'/app/teacher/feedback-suggestions',activeMatch:/^\/app\/teacher\/feedback-suggestions/}];function activeKey(items,pathname){var _items$find$key,_items$find;// strip a leading `/ur` locale segment so activeMatch stays locale-agnostic
+var p=pathname.replace(/^\/ur(?=\/|$)/,'')||'/';return(_items$find$key=(_items$find=items.find(function(it){return it.activeMatch.test(p);}))==null?void 0:_items$find.key)!=null?_items$find$key:null;}
+;// ./src/components/AppDashboardShell.tsx
+/**
+ * Shared authenticated app shell (Spec 011, US1 / FR-001..FR-005).
+ *
+ * Wraps every `/app/dashboard/*` and `/app/teacher/*` page: the matching cosmetic role
+ * guard + a persistent left-side menu (drawer below 768px) + the existing
+ * `container auth-page` content frame. RLS is still the real enforcement (Art. IX.2); this
+ * component only changes navigation and layout.
+ *
+ * Docusaurus `src/pages/**` has no nested-layout hook, so each page opts in:
+ *   <Layout title="…"><AppDashboardShell role="student">{content}</AppDashboardShell></Layout>
+ */function AppDashboardShell_useLocale(){var _useDocusaurusContext=(0,useDocusaurusContext/* default */.A)(),i18n=_useDocusaurusContext.i18n;return i18n.currentLocale==='ur'?'ur':'en';}var AppDashboardShell_MESSAGES={menu:{en:'Menu',ur:'مینو'},openMenu:{en:'Open menu',ur:'مینو کھولیں'},closeMenu:{en:'Close menu',ur:'مینو بند کریں'},dashboardNav:{en:'Dashboard navigation',ur:'ڈیش بورڈ نیویگیشن'}};function NavList(_ref){var items=_ref.items,current=_ref.current,locale=_ref.locale,onNavigate=_ref.onNavigate;return/*#__PURE__*/(0,jsx_runtime.jsx)("ul",{className:"dashboard-shell__navlist",children:items.map(function(it){var isActive=it.key===current;return/*#__PURE__*/(0,jsx_runtime.jsx)("li",{children:/*#__PURE__*/(0,jsx_runtime.jsx)(Link/* default */.A,{to:it.to,className:"dashboard-shell__navlink"+(isActive?' dashboard-shell__navlink--active':''),"aria-current":isActive?'page':undefined,"data-nav-key":it.key,onClick:onNavigate,children:it.label[locale]})},it.key);})});}function AppDashboardShell(_ref2){var role=_ref2.role,children=_ref2.children;var locale=AppDashboardShell_useLocale();var location=(0,react_router/* useLocation */.zy)();var items=role==='teacher'?teacherNav:studentNav;var current=activeKey(items,location.pathname);var _useState=(0,react.useState)(false),drawerOpen=_useState[0],setDrawerOpen=_useState[1];var toggleRef=(0,react.useRef)(null);var drawerRef=(0,react.useRef)(null);var drawerId=(0,react.useId)();var closeDrawer=(0,react.useCallback)(function(){var _toggleRef$current;setDrawerOpen(false);(_toggleRef$current=toggleRef.current)==null||_toggleRef$current.focus();},[]);// Close on route change.
+(0,react.useEffect)(function(){setDrawerOpen(false);},[location.pathname]);// Focus trap + Escape while the drawer is open.
+(0,react.useEffect)(function(){var _focusables$;if(!drawerOpen)return undefined;var drawer=drawerRef.current;var focusables=drawer?Array.from(drawer.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')):[];(_focusables$=focusables[0])==null||_focusables$.focus();function onKeyDown(e){if(e.key==='Escape'){e.preventDefault();closeDrawer();return;}if(e.key!=='Tab'||focusables.length===0)return;var first=focusables[0];var last=focusables[focusables.length-1];if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}}document.addEventListener('keydown',onKeyDown);return function(){return document.removeEventListener('keydown',onKeyDown);};},[drawerOpen,closeDrawer]);var Guard=role==='teacher'?TeacherDashboardGuard:StudentDashboardGuard;return/*#__PURE__*/(0,jsx_runtime.jsx)(Guard,{children:/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{className:"dashboard-shell",children:[/*#__PURE__*/(0,jsx_runtime.jsxs)("nav",{className:"dashboard-shell__sidebar","aria-label":AppDashboardShell_MESSAGES.dashboardNav[locale],children:[/*#__PURE__*/(0,jsx_runtime.jsx)("p",{className:"dashboard-shell__sidebar-heading",children:AppDashboardShell_MESSAGES.menu[locale]}),/*#__PURE__*/(0,jsx_runtime.jsx)(NavList,{items:items,current:current,locale:locale})]}),/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"dashboard-shell__topbar",children:/*#__PURE__*/(0,jsx_runtime.jsx)("button",{ref:toggleRef,type:"button",className:"button button--secondary button--sm dashboard-shell__toggle","aria-expanded":drawerOpen,"aria-controls":drawerId,onClick:function onClick(){return setDrawerOpen(function(v){return!v;});},children:drawerOpen?AppDashboardShell_MESSAGES.closeMenu[locale]:AppDashboardShell_MESSAGES.openMenu[locale]})}),drawerOpen&&/*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"dashboard-shell__backdrop",onClick:closeDrawer,"aria-hidden":"true"}),/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{ref:drawerRef,id:drawerId,className:"dashboard-shell__drawer",role:"dialog","aria-modal":"true","aria-label":AppDashboardShell_MESSAGES.dashboardNav[locale],children:[/*#__PURE__*/(0,jsx_runtime.jsx)("button",{type:"button",className:"button button--secondary button--sm dashboard-shell__drawer-close",onClick:closeDrawer,children:AppDashboardShell_MESSAGES.closeMenu[locale]}),/*#__PURE__*/(0,jsx_runtime.jsx)(NavList,{items:items,current:current,locale:locale,onNavigate:closeDrawer})]})]}),/*#__PURE__*/(0,jsx_runtime.jsx)("main",{className:"container auth-page margin-vert--lg dashboard-shell__main",children:children})]})});}
+
+/***/ },
+
+/***/ 6184
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "default": () => (/* binding */ TeacherOverviewPage)
+});
+
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/regenerator.js
+var regenerator = __webpack_require__(2007);
+// EXTERNAL MODULE: ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js
+var asyncToGenerator = __webpack_require__(467);
+// EXTERNAL MODULE: ./node_modules/react/index.js
+var react = __webpack_require__(6540);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/theme-classic/lib/theme/Layout/index.js + 88 modules
+var Layout = __webpack_require__(4552);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/Link.js
+var Link = __webpack_require__(8774);
+// EXTERNAL MODULE: ./node_modules/@docusaurus/core/lib/client/exports/useDocusaurusContext.js
+var useDocusaurusContext = __webpack_require__(4586);
+// EXTERNAL MODULE: ./src/components/AppDashboardShell.tsx + 3 modules
+var AppDashboardShell = __webpack_require__(2187);
+// EXTERNAL MODULE: ./src/lib/supabase.ts
+var lib_supabase = __webpack_require__(3223);
+;// ./src/lib/teacherOverview.ts
+/**
+ * Teacher Overview queries (Spec 005, T007, FR-002).
+ *
+ * COSMETIC CONVENIENCE ONLY (Constitution Art. IX.2) - every function here is
+ * a thin wrapper around a PostgREST call; real authorization is Spec 003's
+ * existing RLS on `classes`/`assignments`/`submissions`/`quiz_attempts` (a
+ * teacher's queries are already scoped to their own classes by the database,
+ * not by anything in this file). No new RLS policy is introduced by this
+ * feature for these reads (data-model.md's "Read-only query shapes").
+ *
+ * Filtering happens client-side after a broad RLS-scoped fetch, matching the
+ * existing convention in `gradebookExport.ts`/`dashboardQueries.ts`, rather
+ * than relying on PostgREST embedded-resource filter syntax.
+ */function client(){return _client.apply(this,arguments);}function _client(){_client=(0,asyncToGenerator/* default */.A)(/*#__PURE__*/(0,regenerator/* default */.A)().m(function _callee(){var supabase;return (0,regenerator/* default */.A)().w(function(_context){while(1)switch(_context.n){case 0:_context.n=1;return (0,lib_supabase/* getSupabase */.b9)();case 1:supabase=_context.v;if(supabase){_context.n=2;break;}throw new Error('not_configured');case 2:return _context.a(2,supabase);}},_callee);}));return _client.apply(this,arguments);}/**
+ * FR-002 - an ungraded submission count per active class, never combined.
+ * Quiz-type assignments never populate `submissions` (they use
+ * `quiz_attempts`, auto-scored) and are therefore naturally excluded from
+ * "ungraded," consistent with Spec 003's `computeStudentStatus` precedent.
+ */function fetchUngradedCountsByClass(){return _fetchUngradedCountsByClass.apply(this,arguments);}function _fetchUngradedCountsByClass(){_fetchUngradedCountsByClass=(0,asyncToGenerator/* default */.A)(/*#__PURE__*/(0,regenerator/* default */.A)().m(function _callee2(){var supabase,_yield$supabase$from$,classes,classesError,activeClasses,_yield$supabase$from$2,submissions,submissionsError,ungradedCountByClassId,_i,_arr,_row$assignments,_ungradedCountByClass,row,gradeField,hasGrade,classId;return (0,regenerator/* default */.A)().w(function(_context2){while(1)switch(_context2.n){case 0:_context2.n=1;return client();case 1:supabase=_context2.v;_context2.n=2;return supabase.from('classes').select('id, name').eq('status','active');case 2:_yield$supabase$from$=_context2.v;classes=_yield$supabase$from$.data;classesError=_yield$supabase$from$.error;if(!classesError){_context2.n=3;break;}return _context2.a(2,{data:null,error:classesError});case 3:activeClasses=classes!=null?classes:[];if(!(activeClasses.length===0)){_context2.n=4;break;}return _context2.a(2,{data:[],error:null});case 4:_context2.n=5;return supabase.from('submissions').select('assignment_id, grades(id), assignments(class_id)');case 5:_yield$supabase$from$2=_context2.v;submissions=_yield$supabase$from$2.data;submissionsError=_yield$supabase$from$2.error;if(!submissionsError){_context2.n=6;break;}return _context2.a(2,{data:null,error:submissionsError});case 6:ungradedCountByClassId=new Map();_i=0,_arr=submissions!=null?submissions:[];case 7:if(!(_i<_arr.length)){_context2.n=11;break;}row=_arr[_i];gradeField=row.grades;hasGrade=Array.isArray(gradeField)?gradeField.length>0:Boolean(gradeField);if(!hasGrade){_context2.n=8;break;}return _context2.a(3,10);case 8:classId=(_row$assignments=row.assignments)==null?void 0:_row$assignments.class_id;if(classId){_context2.n=9;break;}return _context2.a(3,10);case 9:ungradedCountByClassId.set(classId,((_ungradedCountByClass=ungradedCountByClassId.get(classId))!=null?_ungradedCountByClass:0)+1);case 10:_i++;_context2.n=7;break;case 11:return _context2.a(2,{data:activeClasses.map(function(c){var _ungradedCountByClass2;return{classId:c.id,className:c.name,ungradedCount:(_ungradedCountByClass2=ungradedCountByClassId.get(c.id))!=null?_ungradedCountByClass2:0};}),error:null});}},_callee2);}));return _fetchUngradedCountsByClass.apply(this,arguments);}/**
+ * FR-002, 2026-07-24 clarification - the 5 soonest-due assignments across
+ * all of the teacher's own active classes combined, regardless of any
+ * individual student's submission state (this is the teacher's own upcoming
+ * deadline awareness, not a per-student due-soon list).
+ */function fetchSoonestDueAssignments(_x){return _fetchSoonestDueAssignments.apply(this,arguments);}function _fetchSoonestDueAssignments(){_fetchSoonestDueAssignments=(0,asyncToGenerator/* default */.A)(/*#__PURE__*/(0,regenerator/* default */.A)().m(function _callee3(limit){var supabase,nowIso,_yield$supabase$from$3,data,error,upcoming;return (0,regenerator/* default */.A)().w(function(_context3){while(1)switch(_context3.n){case 0:if(limit===void 0){limit=5;}_context3.n=1;return client();case 1:supabase=_context3.v;nowIso=new Date().toISOString();_context3.n=2;return supabase.from('assignments').select('id, title, due_at, class_id, classes(name, status)');case 2:_yield$supabase$from$3=_context3.v;data=_yield$supabase$from$3.data;error=_yield$supabase$from$3.error;if(!error){_context3.n=3;break;}return _context3.a(2,{data:null,error:error});case 3:upcoming=(data!=null?data:[]).filter(function(row){var _row$classes;return((_row$classes=row.classes)==null?void 0:_row$classes.status)==='active'&&row.due_at>=nowIso;}).sort(function(a,b){return a.due_at.localeCompare(b.due_at);}).slice(0,limit).map(function(row){var _row$classes$name,_row$classes2;return{id:row.id,classId:row.class_id,className:(_row$classes$name=(_row$classes2=row.classes)==null?void 0:_row$classes2.name)!=null?_row$classes$name:'',title:row.title,dueAt:row.due_at};});return _context3.a(2,{data:upcoming,error:null});}},_callee3);}));return _fetchSoonestDueAssignments.apply(this,arguments);}/**
+ * FR-002, 2026-07-24 clarification - a fixed 10-item feed merging assignment
+ * submissions and quiz attempts across all of the teacher's own classes,
+ * newest first.
+ */function fetchRecentActivity(_x2){return _fetchRecentActivity.apply(this,arguments);}function _fetchRecentActivity(){_fetchRecentActivity=(0,asyncToGenerator/* default */.A)(/*#__PURE__*/(0,regenerator/* default */.A)().m(function _callee4(limit){var _submissionsRes$data,_quizAttemptsRes$data;var supabase,_yield$Promise$all,submissionsRes,quizAttemptsRes,submissionItems,quizAttemptItems,merged;return (0,regenerator/* default */.A)().w(function(_context4){while(1)switch(_context4.n){case 0:if(limit===void 0){limit=10;}_context4.n=1;return client();case 1:supabase=_context4.v;_context4.n=2;return Promise.all([supabase.from('submissions').select('id, submitted_at, assignments(id, title, class_id, classes(name))').order('submitted_at',{ascending:false}).limit(limit),supabase.from('quiz_attempts').select('id, attempted_at, assignments(id, title, class_id, classes(name))').order('attempted_at',{ascending:false}).limit(limit)]);case 2:_yield$Promise$all=_context4.v;submissionsRes=_yield$Promise$all[0];quizAttemptsRes=_yield$Promise$all[1];if(!submissionsRes.error){_context4.n=3;break;}return _context4.a(2,{data:null,error:submissionsRes.error});case 3:if(!quizAttemptsRes.error){_context4.n=4;break;}return _context4.a(2,{data:null,error:quizAttemptsRes.error});case 4:submissionItems=((_submissionsRes$data=submissionsRes.data)!=null?_submissionsRes$data:[]).filter(function(row){return row.assignments;}).map(function(row){var _classes$name,_classes;return{id:row.id,kind:'submission',classId:row.assignments.class_id,className:(_classes$name=(_classes=row.assignments.classes)==null?void 0:_classes.name)!=null?_classes$name:'',assignmentTitle:row.assignments.title,occurredAt:row.submitted_at};});quizAttemptItems=((_quizAttemptsRes$data=quizAttemptsRes.data)!=null?_quizAttemptsRes$data:[]).filter(function(row){return row.assignments;}).map(function(row){var _classes$name2,_classes2;return{id:row.id,kind:'quiz_attempt',classId:row.assignments.class_id,className:(_classes$name2=(_classes2=row.assignments.classes)==null?void 0:_classes2.name)!=null?_classes$name2:'',assignmentTitle:row.assignments.title,occurredAt:row.attempted_at};});merged=[].concat(submissionItems,quizAttemptItems).sort(function(a,b){return b.occurredAt.localeCompare(a.occurredAt);}).slice(0,limit);return _context4.a(2,{data:merged,error:null});}},_callee4);}));return _fetchRecentActivity.apply(this,arguments);}
+// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
+var jsx_runtime = __webpack_require__(4848);
+;// ./src/pages/app/teacher/index.tsx
+/**
+ * Teacher Overview (Spec 005, T008) - FR-002: per-class ungraded submission
+ * count, the 5 soonest-due assignments across all classes, a 10-item
+ * recent-activity feed merging submissions and quiz attempts, and an
+ * explicit "caught up" state when nothing is pending. Links out to Spec
+ * 003's existing `/app/classes/*` pages for Classes/Grading management
+ * (plan.md's Structure Decision - those areas are reused, not rebuilt).
+ */function useLocale(){var _useDocusaurusContext=(0,useDocusaurusContext/* default */.A)(),i18n=_useDocusaurusContext.i18n;return i18n.currentLocale==='ur'?'ur':'en';}var MESSAGES={loading:{en:'Loading…',ur:'لوڈ ہو رہا ہے…'},loadError:{en:'Could not load your overview.',ur:'جائزہ لوڈ نہیں ہو سکا۔'},ungradedByClass:{en:'Ungraded submissions',ur:'غیر گریڈ شدہ جمع کرائے گئے کام'},ungradedCount:{en:'ungraded',ur:'غیر گریڈ شدہ'},soonestDue:{en:'Upcoming due dates',ur:'آنے والی آخری تاریخیں'},recentActivity:{en:'Recent student activity',ur:'حالیہ طلبہ کی سرگرمی'},caughtUp:{en:"You're all caught up - nothing ungraded and nothing due soon.",ur:'آپ بالکل اپ ٹو ڈیٹ ہیں - کچھ بھی غیر گریڈ شدہ یا جلد واجب نہیں۔'},noClasses:{en:'You have no classes yet. Create one to get started.',ur:'ابھی تک آپ کی کوئی کلاس نہیں ہے۔ شروع کرنے کے لیے ایک کلاس بنائیں۔'},manageClasses:{en:'Manage your classes',ur:'اپنی کلاسیں منظم کریں'},analyticsLink:{en:'Analytics',ur:'تجزیات'},rosterLink:{en:'Roster',ur:'فہرست'},gradingLink:{en:'Grading',ur:'گریڈنگ'}};function OverviewContent(){var locale=useLocale();var _useState=(0,react.useState)(null),ungraded=_useState[0],setUngraded=_useState[1];var _useState2=(0,react.useState)(null),soonestDue=_useState2[0],setSoonestDue=_useState2[1];var _useState3=(0,react.useState)(null),recentActivity=_useState3[0],setRecentActivity=_useState3[1];var _useState4=(0,react.useState)(null),error=_useState4[0],setError=_useState4[1];var load=(0,react.useCallback)(/*#__PURE__*/(0,asyncToGenerator/* default */.A)(/*#__PURE__*/(0,regenerator/* default */.A)().m(function _callee(){var _ungradedRes$data,_soonestDueRes$data,_recentActivityRes$da;var _yield$Promise$all,ungradedRes,soonestDueRes,recentActivityRes;return (0,regenerator/* default */.A)().w(function(_context){while(1)switch(_context.n){case 0:_context.n=1;return Promise.all([fetchUngradedCountsByClass(),fetchSoonestDueAssignments(5),fetchRecentActivity(10)]);case 1:_yield$Promise$all=_context.v;ungradedRes=_yield$Promise$all[0];soonestDueRes=_yield$Promise$all[1];recentActivityRes=_yield$Promise$all[2];if(!(ungradedRes.error||soonestDueRes.error||recentActivityRes.error)){_context.n=2;break;}setError(MESSAGES.loadError[locale]);return _context.a(2);case 2:setUngraded((_ungradedRes$data=ungradedRes.data)!=null?_ungradedRes$data:[]);setSoonestDue((_soonestDueRes$data=soonestDueRes.data)!=null?_soonestDueRes$data:[]);setRecentActivity((_recentActivityRes$da=recentActivityRes.data)!=null?_recentActivityRes$da:[]);case 3:return _context.a(2);}},_callee);})),[locale]);(0,react.useEffect)(function(){load();},[load]);if(!ungraded||!soonestDue||!recentActivity)return/*#__PURE__*/(0,jsx_runtime.jsx)("p",{children:MESSAGES.loading[locale]});if(ungraded.length===0){return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{children:[error&&/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"alert alert--danger",role:"alert","aria-live":"assertive",children:error}),/*#__PURE__*/(0,jsx_runtime.jsx)("p",{children:MESSAGES.noClasses[locale]}),/*#__PURE__*/(0,jsx_runtime.jsx)("p",{children:/*#__PURE__*/(0,jsx_runtime.jsx)(Link/* default */.A,{to:"/app/classes",className:"button button--primary button--sm",children:MESSAGES.manageClasses[locale]})})]});}var totalUngraded=ungraded.reduce(function(sum,c){return sum+c.ungradedCount;},0);var caughtUp=totalUngraded===0&&soonestDue.length===0;return/*#__PURE__*/(0,jsx_runtime.jsxs)("div",{children:[error&&/*#__PURE__*/(0,jsx_runtime.jsx)("div",{className:"alert alert--danger",role:"alert","aria-live":"assertive",children:error}),caughtUp?/*#__PURE__*/(0,jsx_runtime.jsx)("p",{children:MESSAGES.caughtUp[locale]}):/*#__PURE__*/(0,jsx_runtime.jsxs)(jsx_runtime.Fragment,{children:[/*#__PURE__*/(0,jsx_runtime.jsx)("h3",{children:MESSAGES.ungradedByClass[locale]}),/*#__PURE__*/(0,jsx_runtime.jsx)("ul",{children:ungraded.map(function(c){return/*#__PURE__*/(0,jsx_runtime.jsxs)("li",{"data-testid":"ungraded-count-row",children:[c.className," - ",c.ungradedCount," ",MESSAGES.ungradedCount[locale],' · ',/*#__PURE__*/(0,jsx_runtime.jsx)(Link/* default */.A,{to:"/app/teacher/analytics?classId="+c.classId,children:MESSAGES.analyticsLink[locale]}),' · ',/*#__PURE__*/(0,jsx_runtime.jsx)(Link/* default */.A,{to:"/app/classes/roster?classId="+c.classId,children:MESSAGES.rosterLink[locale]}),' · ',/*#__PURE__*/(0,jsx_runtime.jsx)(Link/* default */.A,{to:"/app/classes/queue?classId="+c.classId,children:MESSAGES.gradingLink[locale]})]},c.classId);})}),/*#__PURE__*/(0,jsx_runtime.jsx)("h3",{children:MESSAGES.soonestDue[locale]}),/*#__PURE__*/(0,jsx_runtime.jsx)("ul",{children:soonestDue.map(function(item){return/*#__PURE__*/(0,jsx_runtime.jsxs)("li",{"data-testid":"soonest-due-item",children:[item.title," - ",item.className," - ",new Date(item.dueAt).toLocaleString(),' · ',/*#__PURE__*/(0,jsx_runtime.jsx)(Link/* default */.A,{to:"/app/teacher/analytics?classId="+item.classId,children:MESSAGES.analyticsLink[locale]})]},item.id);})})]}),/*#__PURE__*/(0,jsx_runtime.jsx)("h3",{children:MESSAGES.recentActivity[locale]}),/*#__PURE__*/(0,jsx_runtime.jsx)("ul",{children:recentActivity.map(function(item){return/*#__PURE__*/(0,jsx_runtime.jsxs)("li",{"data-testid":"recent-activity-item",children:[item.assignmentTitle," - ",item.className," - ",new Date(item.occurredAt).toLocaleString()]},item.kind+"-"+item.id);})}),/*#__PURE__*/(0,jsx_runtime.jsx)("p",{children:/*#__PURE__*/(0,jsx_runtime.jsx)(Link/* default */.A,{to:"/app/classes",children:MESSAGES.manageClasses[locale]})})]});}function TeacherOverviewPage(){return/*#__PURE__*/(0,jsx_runtime.jsx)(Layout/* default */.A,{title:"Teacher Dashboard",children:/*#__PURE__*/(0,jsx_runtime.jsx)(AppDashboardShell/* default */.A,{role:"teacher",children:/*#__PURE__*/(0,jsx_runtime.jsx)(OverviewContent,{})})});}
+
+/***/ }
+
+}]);

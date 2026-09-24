@@ -1,0 +1,8 @@
+{
+ "navbar": "hidden",
+ "sidebar": "hidden",
+ "breadcrumbs": "hidden",
+ "toc": "absent",
+ "articleWidth": 762,
+ "bodyDir": "rtl"
+}
