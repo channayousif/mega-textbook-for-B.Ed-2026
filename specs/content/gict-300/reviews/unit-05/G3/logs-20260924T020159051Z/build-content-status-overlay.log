@@ -1,0 +1,5 @@
+$ npm run build:content-status   (GICT-300 U5 G3 run 002, CONTENT_ROOT overlay; the "fatal: not a git repository" line is expected: the overlay export has no .git, and the generator still wrote the status for all 8 courses; the GICT-300 unit 5 entry was diffed against the worktree's static/content-status.json and is identical)
+
+fatal: not a git repository (or any of the parent directories): .git
+✓ Wrote content status for 8 course(s) to static/content-status.json
+exit_code=0

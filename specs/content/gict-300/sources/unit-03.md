@@ -22,7 +22,7 @@ declared open-access floor of 2 per unit (D-2026-0030).
 | Key | Citation | URL/DOI | Supports | Kind |
 |---|---|---|---|---|
 | norton | Norton, P. Introduction to Computers. McGraw-Hill Education. | (print) | the OS-types account (U3-02); process-account framing (U3-04) | guide-required |
-| shellyVermaat | Shelly, G. B., & Vermaat, M. E. Discovering Computers. Cengage Learning. | (print) | the file-management account's framing (U3-03); the kernel-layers and system-calls account (U3-06) | guide-required |
+| shellyVermaat | Shelly, G. B., & Vermaat, M. E. Discovering Computers. Cengage Learning. | (print) | the file-management account's framing (U3-03); the buffer and spooling account (U3-05); the kernel-layers and system-calls account (U3-06) | guide-required |
 
 ## Unverifiable sources
 
@@ -37,9 +37,10 @@ and any G3 reviewer see the limitation explicitly rather than inferring it from 
   ruling (D-2026-0001): flag and proceed.
 - shellyVermaat: print-only monograph (Cengage), no open-access text retrievable by this
   host. The file-management framing (U3-03) is corroborated by the bound ostep chapter 39
-  excerpt; the kernel-layers and system-calls account (U3-06) rests on the guide's outline
-  plus this monograph at title level - the bound ostep excerpt carries the scheduling and
-  driver-supervision parts of that account but not the four-layers taxonomy or the
-  Linux-as-kernel naming, which a reviewer should treat as standard-textbook material
-  disclosed here. Could not be retrieved on 2026-09-23. Owner ruling (D-2026-0001): flag
-  and proceed.
+  excerpt; the buffer and spooling account (U3-05) rests on this monograph at title level
+  only - no bound excerpt carries those two terms, so a reviewer should treat them as
+  standard-textbook material disclosed here; the kernel-layers and system-calls account
+  (U3-06) likewise rests on the guide's outline plus this monograph at title level - the
+  bound ostep excerpt carries the scheduling and driver-supervision parts of that account
+  but not the four-layers taxonomy or the Linux-as-kernel naming. Could not be retrieved
+  on 2026-09-23. Owner ruling (D-2026-0001): flag and proceed.

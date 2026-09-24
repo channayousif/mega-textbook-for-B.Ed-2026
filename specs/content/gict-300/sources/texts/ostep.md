@@ -49,8 +49,9 @@ work (U3-06).
 
 ## Chapter 39 - Interlude: Files and Directories (verified)
 
-The chapter presents two abstractions: "A file is simply a linear sequence of bytes that
-you can read and/or write... For historical reasons, the low-level name of a file is often
+The chapter presents two abstractions: "A file is simply a linear array of bytes,
+each of which you can read or write. Each file has some kind of low-level name, usually a
+number of some kind... For historical reasons, the low-level name of a file is often
 referred to as its inode number (i-number)." On the OS's relationship to file contents:
 "In most systems, the OS does not know much about the structure of the file (e.g., whether
 it is a picture, or a text file, or C code); rather, the responsibility of the file system
@@ -68,8 +69,15 @@ pathname (e.g., /foo/bar.txt), and a file's name commonly has two parts, "the fi
 is an arbitrary name, whereas the second part of the file name is usually used to indicate
 the type of the file... However, this is usually just a convention."
 
-Used for: file management - the file abstraction, naming, directory trees and paths
-(U3-03).
+On metadata (section 39.9): "Beyond file access, we expect the file system to keep a fair
+amount of information about each file it is storing. We generally call such data about
+files metadata. To see the metadata for a certain file, we can use the stat() or fstat()
+system calls... there is a lot of information kept about each file, including its size (in
+bytes), its low-level name (i.e., inode number), some ownership information, and some
+information about when the file was accessed or modified, among other things."
+
+Used for: file management - the file abstraction, naming, directory trees, paths and
+metadata (U3-03).
 
 ## Chapter 36 - I/O Devices (verified)
 
