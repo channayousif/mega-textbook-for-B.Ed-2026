@@ -1,0 +1,30 @@
+commit 86ce1dde04b8e6f95a5480b79a556f5c1a1a68c6
+Author: M Yousif Channa <62856315+channayousif@users.noreply.github.com>
+Date:   Thu Sep 24 15:06:51 2026 -0500
+
+    content(efmp-302): carry the MCQ 6 caveat into the Urdu key (G5 repair)
+    
+    The G5 feat023-r1 review found the Urdu MCQ 6 answer key stating the
+    Standard 9 attribution as settled fact while the English key (repaired in
+    the G3 cycle-1 advisory) and the Urdu taught passage both carry the
+    uncorroborated disclosure. Appends the Urdu equivalent of the caveat
+    sentence so the key matches the English key and the unit's own teaching.
+    All content gates green after the change.
+    
+    Co-Authored-By: Claude Code <noreply@anthropic.com>
+
+diff --git a/i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-02/unit-assessment.mdx b/i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-02/unit-assessment.mdx
+index 24b8512..a966add 100644
+--- a/i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-02/unit-assessment.mdx
++++ b/i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-02/unit-assessment.mdx
+@@ -192,7 +192,9 @@ import PrintHandout from '@site/src/components/PrintHandout';
+ 5. **ج** - ناکامی بیان کے جھوٹ ہونے میں نہیں بلکہ اس کے بے کار ہونے میں ہے؛ یہ والدین کو عمل کے
+    لیے کچھ نہیں دیتا۔
+ 6. **ج** - معیار 9 مسلسل پیشہ ورانہ ترقی کو ضابطہ اخلاق کے ساتھ رکھتا ہے، اسی لیے یونٹ 2 کی
+-   ذمہ داریاں اور یونٹ 6 کی ترقی ایک ہی معیار کے تحت آتی ہیں۔
++   ذمہ داریاں اور یونٹ 6 کی ترقی ایک ہی معیار کے تحت آتی ہیں۔ جیسا کہ موضوع 2.2 بیان کرتا
++   ہے، بنیادی دستاویز کھولی نہیں جا سکی، چنانچہ یہ نسبت ثانوی بیانات پر چلتی ہے اور غیر مصدقہ
++   ہے۔
+ 7. **الف** - استاد نے کبھی کوئی اخلاقی صورتحال دیکھی ہی نہیں، لہٰذا فیصلہ حرکت میں آیا ہی نہیں۔
+ 8. **ج** - استاد نے عمل کا ارادہ کیا تھا، لہٰذا محرک موجود تھا؛ جو ناکام ہوا وہ تکمیل تھی، یعنی
+     کردار۔ محرک کی ناکامی (د) کا مطلب سرے سے عمل نہ کرنے کا انتخاب ہوتا۔
