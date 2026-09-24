@@ -73,3 +73,66 @@ height/weight averages and their spread, motor skills (U2-4); puberty and its cl
 unevenness (U2-5); cognitive development and Piaget's stage idea, conservation,
 reversibility, decentration (U2-6); the domains framing for emotional and social
 development (U2-7, U2-8); the stage reading and matched teaching (U2-9, U2-10).
+
+## Chapter 2 - The learning process (verified; used by Unit 3)
+
+On the two families: "consider two perspectives about learning, called behaviorism
+(learning as changes in overt behavior) and constructivism, (learning as changes in
+thinking). The second category can be further divided into psychological constructivism
+(changes in thinking resulting from individual experiences), and social constructivism,
+(changes in thinking due to assistance from others)."
+
+On behaviourism: "Behaviorism is a perspective on learning that focuses on changes in
+individuals' observable behaviors - changes in what people say or do."
+
+On operant conditioning: "operant conditioning focuses on how the effects of
+consequences on behaviors. The operant model of learning begins with the idea that
+certain consequences tend to make certain behaviors happen more frequently. If I
+compliment a student for a good comment during a discussion, there is more of a chance
+that I will hear comments from the student more often in the future." On Skinner: "One
+of the pioneers in the field was a Harvard professor named B. F. Skinner, who published
+numerous books and articles about the details of the process and who pointed out many
+parallels between operant conditioning in animals and operant conditioning in humans
+(1938, 1948, 1988)."
+
+On constructivism: "constructivism... is a perspective on learning focused on how
+students actively create (or 'construct') knowledge out of experiences." On
+psychological constructivism: "The main idea of psychological constructivism is that a
+person learns by mentally organizing and reorganizing new information or experiences.
+The organization happens partly by relating new experiences to prior knowledge that is
+already meaningful and well understood."
+
+On social constructivism and scaffolding: "some psychologists and educators have
+explicitly focused on the relationships and interactions between a learner and more
+knowledgeable and experienced individuals. One early expression of this viewpoint came
+from the American psychologist Jerome Bruner (1960, 1966, 1996)... He called such
+support instructional scaffolding - literally meaning a temporary framework, like one
+used in constructing a building, that allows a much stronger structure to be built
+within it." Bruner's widely quoted claim: "We [constructivist educators] begin with the
+hypothesis that any subject can be taught effectively in some intellectually honest
+form to any child at any stage of development." (1960, p. 33). The chapter's exhibit
+formula: "Learning According to Vygotsky: Novice -> Zone of Proximal Development <-
+Expert (ZPD)".
+
+## Chapter 10 - Planning instruction (verified; used by Unit 3)
+
+On modelling and observational learning: "Research repeatedly shows that modeling
+desired behaviors is an effective way to learn new behaviors, especially when the model
+is perceived as important (like the teacher), similar to the learner (like a student's
+best friend), or has a warm, positive relationship with the learner (like the teacher or
+the student's friend) (Bandura, 2002; Gibson, 2004). Modeling in this sense is sometimes
+also called observational learning. It has many of the same properties as the classic
+operant conditioning discussed in Chapter 2, except that reinforcement during
+observational learning is witnessed in others rather than experienced by the learner
+directly. Watching others being reinforced is sometimes called vicarious reinforcement."
+And on the reverse: "if the student observes that negative behaviors in others lead to
+positive consequences (like attention from peers), then the student may imitate the
+negative behaviors (Rebellon, 2006)."
+
+Used for: the behaviourist definition and its two mechanisms (U3-1, U3-2, U3-3);
+reinforcement and consequence precision (U3-4); the cognitive turn and the
+behaviourism-constructivism contrast (U3-5); schemas, assimilation and accommodation
+(U3-6); Bruner's modes, guided discovery and the spiral (U3-7); Bandura's observational
+learning, vicarious reinforcement and model strength (U3-8, U3-9); constructivism's
+claims and the ZPD-scaffolding pair (U3-10, U3-11); the four-lens choice (U3-12).
+
