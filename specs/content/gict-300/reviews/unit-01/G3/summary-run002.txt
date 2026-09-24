@@ -1,0 +1,98 @@
+G3 English review, run 002 - GICT-300 Unit 1 (Introduction to Computer Literacy and ICT)
+========================================================================================
+
+Review identity
+---------------
+- Reviewer: agent:g3-reviewer (fresh session; did not author or translate these bytes)
+- Model: LongCat-2.0
+- Reviewed state: HEAD e12079a, prepared manifest
+  specs/content/gict-300/reviews/unit-01/G3/manifest.json (all 101 input digests and
+  the skill digest recomputed and verified)
+- Author run: commit:140dd8a (run 001 repairs; last commit touching the unit's
+  English bytes)
+- Started 2026-09-24T00:30Z, completed 2026-09-24T00:55Z
+- Supersedes: agent-g3-gict300-u1-run001.json (disposition revise)
+
+DISPOSITION: PASS
+-----------------
+All seven required criteria pass. Run 001's two blocking findings (F1, F2) and two
+advisory findings (F3, F4) are verified repaired against the current bytes. One
+advisory finding (F5, bare-URL link text) is carried unresolved and does not block.
+
+Run 001 findings - resolution status
+------------------------------------
+- F1 (blocking, Bourgeois over-attribution "and gender"): RESOLVED. topic-04.mdx now
+  reads "the divide runs along income, geography, education and age lines", exactly
+  what the bound chapter 11 excerpt supports (economic/usability/empowerment
+  dimensions; ACM list: low-income households, senior citizens, single-parent
+  children, the undereducated, minorities, rural residents). The excerpt file's
+  change since run 001 is additive only (chapters 2/3/5/6/12/13 appended for Units
+  2-6); chapters 1 and 11 are byte-unchanged.
+- F2 (blocking, fig-U1-6 label clipping): RESOLVED. The "more specialised" label is
+  now x=768 text-anchor=end in both light and dark variants. Verified three ways:
+  measure-figure-text.mjs (widest text ends 768.4 inside the 780-unit viewBox, all
+  32 unit-01 SVG variants clean, exit 0), render-inspect section D (clean), and
+  element screenshots of both variants showing the label fully rendered.
+- F3 (advisory, hecICT missing from Further reading): RESOLVED. The HEC guidelines
+  line is now in topic-01's Further reading; all 8 source keys are cited both in
+  prose and in a Further reading section.
+- F4 (advisory, history declaration precision): RESOLVED. The sources file now
+  states honestly that no bound excerpt carries the history account and that the
+  history prose rests on the guide's outline and general knowledge, disclosed; the
+  contradictory coverage reinforcement row (U1-03 -> bourgeois2019) was removed
+  while U1-03 remains mapped in the primary table (khanacademyCIT).
+- F5 (advisory, bare-URL link text): CARRIED, UNRESOLVED. Further reading citation
+  links render as bare URLs on all four topic pages (render-inspect advisory
+  observation). Advisory per repo convention; does not block.
+
+Criteria results
+----------------
+- authority: PASS. Guide block (1st 2026.txt:374-538) six Unit 1 bullets decompose
+  into U1-01..U1-08 per approved intake decision D-2026-0030; the rewritten
+  course-overview (bound, changed since run 001) verified against the guide: 8 CLOs,
+  five strategies, five practical-work items, five recommended readings, credit
+  hours 3 (2-1); the 60/40 weighting claim is the style-guide default
+  (Constitution Art. III.7) and the guide sets no assessment table.
+- sources: PASS. F1 repair verified against the bound excerpt; all seven
+  unverifiable keys carry honest declarations (attempts, date 2026-09-23,
+  D-2026-0001); prose discloses citation levels; PTA figures hedged.
+- coverage: PASS. All 8 sub-topics mapped and taught; reading minutes 82 of 65-95;
+  check:depth-gate exit 0.
+- assessment: PASS. All 10 MCQs solved independently before reading the key
+  (derived 1-b, 2-b, 3-d, 4-b, 5-c, 6-b, 7-c, 8-b, 9-b, 10-c; matches the key
+  exactly); RRQ model answers and mark schemes match independent solutions; ERQ
+  rubrics each carry an explicit Analyze-or-higher criterion; blueprint spread
+  3/3/2/2 MCQ and RRQ per topic; Bloom labels match actual demand.
+- accessibility: PASS. Render inspection exit 0, 0 defects: 7 pages at desktop
+  1280x900 / narrow 360x780 / A4 print 794px; no skipped headings; all images have
+  alt text; 0px horizontal overflow at 360px; clippedElems=0 in print; the Answers
+  section renders unclipped; fig-U1-6 clean in both variants.
+- readability: PASS. HSC register, glossary terms defined at first use, all four
+  misconceptions corrected, Pakistan/Sindh grounding throughout.
+- pedagogy: PASS. Nine-part cycle in all four topics; 4 retrieval items and 3 "I
+  can" items per topic; feasible activities with grouping, time boxes and
+  materials; 2 figures per topic, 3 concept-map/timeline figures, all 8 placed.
+
+Commands (real exit codes; logs hashed in the report's evidence manifest)
+-------------------------------------------------------------------------
+- validate:content 0, check:depth-gate 0, check:figures 0, check:no-em-dash 0,
+  check:no-answer-keys 0, check:docs-sync 0, render-review 0 (all via the
+  documented CONTENT_ROOT overlay; see overlay-notes-run002.txt)
+- measure:figure-text 0, build 0, element-capture 0
+- Raw (un-overlaid) runs preserved: validate:content 1, check:depth-gate 1,
+  check:figures 1, check:no-em-dash 1, check:no-answer-keys 1 - every failure line
+  references geng-300 (stale tree, out of scope, fixed on unmerged 018 branch);
+  zero failure lines mention gict-300. check:docs-sync 0 raw.
+
+Environment notes
+-----------------
+Same overlay condition as run 001 and the G2 gates evidence: pre-existing geng-300
+reds in this worktree, fixed on the unmerged sibling branch 018-author-geng300
+(2bf47e6). The overlay's GICT-300 Unit 1 inputs are byte-identical to the reviewed
+state (verified by diff). Full method in overlay-notes-run002.txt.
+
+Acceptance boundary
+-------------------
+This report is advisory evidence. It is not certification: no protected
+qualification, registry entry or signature exists for this reviewer. Acceptance
+requires the trusted host and registry described in the review-evidence contract.

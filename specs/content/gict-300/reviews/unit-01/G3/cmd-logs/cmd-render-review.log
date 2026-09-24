@@ -1,0 +1,55 @@
+$ render-review (host browser/print inspection of the built site)
+  (repo HEAD 5aeadd5; build + serve from the CONTENT_ROOT overlay described in
+   overlay-notes.txt; see render-inspect/render-inspect.log for the full record)
+
+Environment
+-----------
+- Node v22.22.1; playwright-core chromium 149.0.7827.0 (headless).
+- Build: `cd /tmp/gict300-g3-overlay && npm run build` -> exit 0 (fresh build of
+  the reviewed committed tree; build log tail: "Generated static files in
+  build/ur", build_exit=0). The worktree's own build/ was NOT trusted (stale-
+  build hazard called out in the G3 rubric).
+- Serve: `docusaurus serve --port 4599` over the overlay build (the script
+  spawns and later stops its own server; a manual serve was also used for the
+  supplementary element screenshots below).
+
+Inspection run (actual)
+-----------------------
+2026-09-23T14:53:54Z  CONTENT_ROOT=/tmp/gict300-g3-overlay node scripts/render-inspect.mjs GICT-300 1 --out <G3>/render-inspect
+  (first attempt used --locale en, which wrongly prefixes /en to the default-
+   locale route and 404s every page; that attempt was discarded and rerun
+   without --locale. The English default locale carries no route prefix.)
+exit_code=1  (script exits 1 when a hard defect is found)
+
+Pages inspected: 7 (index, topic-01..04, unit-assessment, unit-teacher-notes)
+at /semester-1/gict-300/unit-01/, three viewports each:
+
+A. Desktop 1280x900 - all 7 pages HTTP 200; heading hierarchy has no skipped
+   levels on every page; every <img> has non-empty alt; every visible figure
+   loads (natural 249x150; the hidden .dark.svg twins are display:none by
+   design and not defects); no vague link text. Advisory only: bare-URL link
+   text in the per-topic Further reading citation lists.
+B. Narrow 360x780 - document horizontal overflow 0px on all 7 pages; figures
+   scale to client=328/scroll=328 (no spill, no scroller needed); no HTML
+   content tables on these pages (all comparison tables are SVG figures).
+C. A4 print 794px - clippedElems=0 on all 7 pages; every visible print figure
+   fits (w=762, right=778); the Answers and marking guidance section and all
+   four answer sub-headings render in print, not clipped.
+D. SVG text geometry (all 8 figures, light + dark) - 6 figures clean in both
+   variants; DEFECT in fig-U1-6 (light and dark): the axis label
+   "more specialised" at x=686 runs to x=795.8, past the 780-unit viewBox
+   right edge, so its tail is clipped when rendered.
+
+Supplementary direct visual inspection (playwright-core element/viewport shots,
+saved beside the render-inspect artifacts):
+- fig-U1-6-element.png / fig-U1-6-label-corner.png: the rendered figure shows
+  the label cut mid-word ("more specialis|") at the right edge, confirming the
+  geometric finding visually.
+- answers-narrow-360.png: the Answers and marking guidance section is legible
+  and unclipped at 360px.
+- mcq-narrow-360.png: the MCQ band renders options a-d fully at 360px with no
+  overflow.
+
+Verdict: rendering and accessibility checks pass on all 7 pages and all three
+viewports, with ONE figure defect (fig-U1-6 label clipping), recorded as a
+finding in the report. The script's exit_code=1 reflects that defect only.

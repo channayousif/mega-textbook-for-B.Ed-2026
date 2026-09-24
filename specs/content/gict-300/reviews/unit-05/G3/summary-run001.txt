@@ -1,0 +1,80 @@
+G3 English review summary - GICT-300 Unit 5 (Ethical and Responsible Use of ICT)
+===============================================================================
+
+Run: agent-g3-gict300-u5-run001 (reviewer agent:g3-reviewer, model LongCat-2.0), 2026-09-23.
+Report: specs/content/gict-300/reviews/unit-05/G3/agent-g3-gict300-u5-run001.json (validated).
+Subject: docs/semester-1/gict-300/unit-05/ (index, topic-01..03, unit-assessment,
+unit-teacher-notes) plus governance (coverage/, sources/, figures/, concepts/, approved
+content-spec under D-2026-0030). Author identity: commit:b33225f (no unit-05 file changed
+after that commit; the manifest binds HEAD 6361ad6).
+
+DISPOSITION: PASS (advisory findings only)
+------------------------------------------
+All seven criteria verified and satisfied: authority, sources, coverage, assessment,
+accessibility, readability, pedagogy. Eight advisory findings (F1-F8 in the report) are
+recorded for a later repair pass; none blocks, none is uncertain. This report is advisory
+under ADR-0019: it does not certify the unit or write the tracker row.
+
+INPUT VERIFICATION
+------------------
+All 97 manifest digests recomputed with manifestFor() and matched (verified twice, before
+and after a mid-review host directive); skill digest matched. Note: the parent handoff
+said the manifest was prepared at d7377ac, but the manifest binds HEAD 6361ad6's
+course-overview.mdx (rewritten by 6361ad6 after d7377ac); digests verify against the
+current committed state, so the reviewed subject is unambiguous (F8).
+
+WHAT WAS CHECKED AND FOUND
+--------------------------
+- Authority: the guide's four Unit 5 subtopics are all taught and assessed; CLO 6 mapped
+  via SLO:GICT-300-5-6 in every file; guide strategies and practical work mapped in the
+  teacher notes; spec approved under D-2026-0030.
+- Sources: every Bourgeois, WIPO and Jereb claim verified against the bound excerpts
+  (quotes exact, dates and qualifiers accurate). digcomp2022, purdueOwl, commonsenseDC,
+  ncaStaysafe, hecICT are declared under "## Unverifiable sources" with attempts, dates
+  and D-2026-0001 authorization; prose stays within each declaration's limits. One
+  declaration inaccuracy found (F1: the purdueOwl entry's bourgeois2019 corroboration
+  cross-reference - the bound chapter 12 excerpt carries no citation-habit material).
+- Coverage: 4/4 subtopics, all 25 bank items concept-linked, reading minutes inside the
+  spec bands, depth budget 68/55-80, all key terms in glossary.json.
+- Assessment: the 10/10/5 bank was solved independently BEFORE reading the answers; all
+  10 MCQ answers match the key (1-b, 2-b, 3-b, 4-b, 5-c, 6-a, 7-b, 8-c, 9-c, 10-b), all
+  10 RRQ model answers match my derivations, ERQ rubrics match the topic marking guides.
+  Bloom bands match the approved blueprint. Two marking-guidance weaknesses recorded
+  (F4 ERQ-2's Evaluate label vs topic-02's own Analyse label; F5 RRQ-10's
+  "mosaic/patchwork" term not taught in the unit).
+- Accessibility: real rendered inspection (build + render-inspect.mjs, chromium
+  149.0.7827.0): desktop 1280x900, narrow 360x780 and A4 print 794px all clean across
+  the six pages (no skipped headings, all figures with alt text, no overflow, nothing
+  clipped in print, answers section prints); all 12 SVG variants pass text-geometry
+  checks; four desktop PNGs and one narrow PNG visually inspected by the reviewer.
+  Advisory F7: bare-URL link texts in Further reading lists.
+- Readability/pedagogy: HSC register, Pakistani/Sindh contexts, nine-part cycle in all
+  three topics, misconceptions named and corrected in Explanation sections, feasible
+  low-resource activities, Analyse-or-higher criteria in every summative task.
+
+DETERMINISTIC GATES
+-------------------
+The six mandatory commands plus supplements were run twice: as-is in this worktree (real
+exit codes in logs-20260923T171801491Z/*; every failure is the pre-existing stale
+geng-300 tree, already fixed on the unmerged sibling branch 018-author-geng300, out of
+scope - zero GICT-300 findings anywhere), and in an overlay tree (worktree HEAD + the
+sibling branch's geng-300 relocation; the same overlay basis this unit's G2 evidence
+documents in specs/content/gict-300/tasks.md). Overlay results: validate:content,
+check:depth-gate, check:figures, check:no-em-dash, check:no-answer-keys, check:docs-sync,
+check:concept-graph, check:bloom-bands, check:source-floor, figures:variants:check all
+exit 0; render-review exit 0 with 0 defects. Every GICT-300 byte is identical between
+worktree and overlay.
+
+A capacity directive from the orchestrator arrived after the build and render inspection
+had already completed; no further build or render work was performed, and the render
+evidence is the real completed inspection rather than a limitation record.
+
+REPAIR QUEUE (advisory, for a separate author; no prose change is required for correctness)
+-------------------------------------------------------------------------------------------
+F1 correct the purdueOwl declaration in sources/unit-05.md (or bind a corroborating
+excerpt). F2 attribute the respect/educate/protect taxonomy in topic-01.mdx or bind a
+source. F3 attribute or drop the registration-to-sue parenthetical in topic-03.mdx.
+F4 relabel ERQ-2 (Evaluate -> Analyse) in unit-assessment.mdx. F5 make RRQ-10's mark
+scheme accept the unit's own vocabulary. F6 name the two remaining spec misconceptions
+in topic prose (currently teacher-notes/story only). F7 descriptive link text in Further
+reading. F8 parent traceability note only.
