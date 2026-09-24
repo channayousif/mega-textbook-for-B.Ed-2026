@@ -1301,3 +1301,33 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   review binds them as its comparison base.
 - **Blocks:** G3 closure for Unit 6 (row stays open); nothing else - the unit's deterministic
   gates are green and its Urdu mirror is unaffected.
+
+---
+
+## G-2026-65 - EFMP-302: no accepted G3 evidence can cover the current English inputs for G5 (course-wide)
+
+- **Status:** open
+- **Gate:** G5 Urdu review (authority criterion), advisory; affects Units 2-6
+- **Source:** EFMP-302 G5 feat023-r1, Unit 2 (2026-09-24,
+  `specs/content/efmp-302/reviews/unit-02/G5/agent-g5-efmp302-u2-feat023-r1.json`, uncertain
+  finding U-01), in the G-2026-30/G-2026-34 pattern; the same dependency is recorded by every
+  subsequent feat023 G5 report
+- **Criterion:** `authority` (G5); the G3 dependency clause of the review contract.
+- **Detail:** ADR-0019 blocks agent certification, so no accepted (signed) G3 evidence exists in
+  the reviewer registry. The best-available G3 evidence per unit is the feat023 advisory chain
+  (Unit 2: cycle-1 pass earned against the b8f8ffe-broken figures, cycle-2 revise with the
+  fig-U2-5 label collision repaired post-report at 8db9943; Unit 3: cycle-2 pass on the
+  reverted figures; Units 4-5: cycle-1 passes; Unit 6: cycle-1 escalate with owner-gated
+  sources findings, G-2026-64). The English bytes have in several cases changed after the
+  relevant G3 report (post-report repairs), so no single G3 verdict covers the exact English
+  bytes the G5 reviews compare against. The G5 reviewers therefore proceeded with the bound
+  English inputs as the authoritative comparison base and recorded the dependency as an
+  uncertain finding per the contract, rather than aborting. Unit 1 is excepted: its G5 row
+  carries accepted human sign-off (2026-09-09) and its mirror was untouched by feature 023.
+- **Needed, and from whom:** the curriculum owner, to either (a) accept the advisory chains
+  (feat023 G3 reports + verified repairs + rebound G2 gates) as sufficient for the G5 stage, or
+  (b) commission fresh G3 passes over the current English inputs before the G5 findings are
+  treated as more than advisory. Until then no G5 tracker row can be marked done from agent
+  findings, which is the designed ADR-0019 posture.
+- **Blocks:** the G5 tracker rows for Units 2-6 (all left open, advisory); nothing in the
+  automated gates. The Urdu content itself is complete and internally verified.
