@@ -915,7 +915,7 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 
 ---
 
-## G-2026-25 - GNAS-301 Unit 4 G3: two advisory cycles consumed; the third is owner-gated
+## G-2026-31 - GNAS-301 Unit 4 G3: two advisory cycles consumed; the third is owner-gated
 
 - **Status:** open
 - **Gate:** G3 (English review), ADR-0019 two-cycle limit
@@ -926,7 +926,7 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 
 ---
 
-## G-2026-26 - GNAS-301 Unit 5 G3: two advisory cycles consumed; the third is owner-gated
+## G-2026-32 - GNAS-301 Unit 5 G3: two advisory cycles consumed; the third is owner-gated
 
 - **Status:** open
 - **Gate:** G3 (English review), ADR-0019 two-cycle limit
@@ -937,7 +937,7 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 
 ---
 
-## G-2026-27 - GNAS-301 Unit 6 G3: two advisory cycles consumed; the third is owner-gated
+## G-2026-33 - GNAS-301 Unit 6 G3: two advisory cycles consumed; the third is owner-gated
 
 - **Status:** open
 - **Gate:** G3 (English review), ADR-0019 two-cycle limit
@@ -948,7 +948,7 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 
 ---
 
-## G-2026-28 - GNAS-301 Unit 2 G5: stale G3 dependency after post-pass advisory applications
+## G-2026-34 - GNAS-301 Unit 2 G5: stale G3 dependency after post-pass advisory applications
 
 - **Status:** open
 - **Gate:** G5 (Urdu review), English dependency rule (G5 rubric); ADR-0019 advisory regime
@@ -965,7 +965,7 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   English state (the delta is the G3 round-2 report's own advisory list, applied verbatim)
   or authorise a fresh G3 round binding the current bytes; a G5 round 2 then re-runs with
   working renders. The same dependency question applies to Units 1, 4, 5 and 6, whose
-  post-report repairs are already recorded as G-2026-24, G-2026-25, G-2026-26 and
-  G-2026-27.
+  post-report repairs are already recorded as G-2026-24, G-2026-31, G-2026-32 and
+  G-2026-33.
 - **Blocks:** G5 acceptance for Unit 2 (and, by the same rule, the other units); nothing
   else. G4 translation and the Urdu-side G5 findings stand on their own evidence.

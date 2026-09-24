@@ -37,21 +37,21 @@ units may be authored.
 | Unit 3 | G7 publish | ▢ | | |
 | Unit 4 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0020 + owner resolutions G-2026-22/G-2026-23 + floor D-2026-0021; content-spec status: approved |
 | Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-04/G2/20260924T015524885Z-gates.json|
-| Unit 4 | G3 en-review | ▢ | | advisory rounds 1-2: revise; reports reviews/unit-04/G3/agent-g3-gnas301-u4-run001.json + round-02/agent-g3-gnas301-u4-run002.json; round-2 blocking findings (phantom abbasi2022 U4-08/U4-09, phantom who-mental-health-work U4-10) repaired post-report; two-cycle limit reached, third cycle owner-gated (G-2026-25) |
+| Unit 4 | G3 en-review | ▢ | | advisory rounds 1-2: revise; reports reviews/unit-04/G3/agent-g3-gnas301-u4-run001.json + round-02/agent-g3-gnas301-u4-run002.json; round-2 blocking findings (phantom abbasi2022 U4-08/U4-09, phantom who-mental-health-work U4-10) repaired post-report; two-cycle limit reached, third cycle owner-gated (G-2026-31) |
 | Unit 4 | G4 ur-translation | ✅ | auto:g4 | all 10 Urdu mirror files at i18n/ur/.../gnas-301/unit-04/, 2026-09-24; heading parity exact, terminology-bank-driven, .ur.svg figure variants, zero em-dash; translation_status stays draft pending G5 |
 | Unit 4 | G5 ur-review | ▢ | | |
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
 | Unit 5 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0020 + owner resolutions G-2026-22/G-2026-23 + floor D-2026-0021; content-spec status: approved |
 | Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-05/G2/20260924T040958661Z-gates.json |
-| Unit 5 | G3 en-review | ▢ | | advisory rounds 1-2: revise; reports reviews/unit-05/G3/20260924T001055Z-g3-attempt-01.json + round-02/agent-g3-gnas301-u5-run002.json; round-2 blocking findings (5.1 RRQ deficit, PM2.5 claims, fig-U5-3 arrows, coverage cells, alibhatti authors) repaired post-report; two-cycle limit reached, third cycle owner-gated (G-2026-26) |
+| Unit 5 | G3 en-review | ▢ | | advisory rounds 1-2: revise; reports reviews/unit-05/G3/20260924T001055Z-g3-attempt-01.json + round-02/agent-g3-gnas301-u5-run002.json; round-2 blocking findings (5.1 RRQ deficit, PM2.5 claims, fig-U5-3 arrows, coverage cells, alibhatti authors) repaired post-report; two-cycle limit reached, third cycle owner-gated (G-2026-32) |
 | Unit 5 | G4 ur-translation | ✅ | auto:g4 | all 7 Urdu mirror files at i18n/ur/.../gnas-301/unit-05/, 2026-09-24; heading parity exact, terminology-bank-driven, .ur.svg figure variants, zero em-dash; translation_status stays draft pending G5 |
 | Unit 5 | G5 ur-review | ▢ | | |
 | Unit 5 | G6 assets | ▢ | | |
 | Unit 5 | G7 publish | ▢ | | |
 | Unit 6 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0020 + owner resolutions G-2026-22/G-2026-23 + floor D-2026-0021; content-spec status: approved |
 | Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-06/G2/20260924T041001628Z-gates.json |
-| Unit 6 | G3 en-review | ▢ | | advisory rounds 1-2: revise; reports reviews/unit-06/G3/agent-g3-gnas301-u6-run001.json + round-02/agent-g3-gnas301-u6-run002.json; round-2 blocking findings (ERQ-04 6.4+6.5 integration, RRQ/MCQ surplus, WHO framing, anwar2026 claim) repaired post-report; two-cycle limit reached, third cycle owner-gated (G-2026-27) |
+| Unit 6 | G3 en-review | ▢ | | advisory rounds 1-2: revise; reports reviews/unit-06/G3/agent-g3-gnas301-u6-run001.json + round-02/agent-g3-gnas301-u6-run002.json; round-2 blocking findings (ERQ-04 6.4+6.5 integration, RRQ/MCQ surplus, WHO framing, anwar2026 claim) repaired post-report; two-cycle limit reached, third cycle owner-gated (G-2026-33) |
 | Unit 6 | G4 ur-translation | ✅ | auto:g4 | all 9 Urdu mirror files at i18n/ur/.../gnas-301/unit-06/, 2026-09-24; heading parity exact, terminology-bank-driven, .ur.svg figure variants, zero em-dash; translation_status stays draft pending G5 |
 | Unit 6 | G5 ur-review | ▢ | | |
 | Unit 6 | G6 assets | ▢ | | |
