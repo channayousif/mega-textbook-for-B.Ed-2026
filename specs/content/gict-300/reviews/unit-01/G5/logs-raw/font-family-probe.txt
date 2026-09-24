@@ -1,0 +1,42 @@
+[
+  {
+    "sel": "html",
+    "ff": "\"Noto Nastaliq Urdu\", \"Noto Naskh Arabic\", \"Jameel Noori Nastaleeq\", serif",
+    "text": "موضوع 1.1 - کمپیوٹر خواندگی او"
+  },
+  {
+    "sel": "body",
+    "ff": "\"Noto Nastaliq Urdu\", \"Noto Naskh Arabic\", \"Jameel Noori Nastaleeq\", serif",
+    "text": "!function(){var t=function(){t"
+  },
+  {
+    "sel": "main h1",
+    "ff": "system-ui, -apple-system, \"Segoe UI\", Roboto, Ubuntu, Cantarell, \"Noto Sans\", sans-serif, ",
+    "text": "موضوع 1.1 - کمپیوٹر خواندگی او"
+  },
+  {
+    "sel": "main h2",
+    "ff": "system-ui, -apple-system, \"Segoe UI\", Roboto, Ubuntu, Cantarell, \"Noto Sans\", sans-serif, ",
+    "text": "ایک حقیقی جماعتی صورتحال​"
+  },
+  {
+    "sel": "main h3",
+    "ff": "system-ui, -apple-system, \"Segoe UI\", Roboto, Ubuntu, Cantarell, \"Noto Sans\", sans-serif, ",
+    "text": "کمپیوٹر خواندگی کا تصور اور اس"
+  },
+  {
+    "sel": "main article p",
+    "ff": "\"Noto Nastaliq Urdu\", \"Noto Naskh Arabic\", \"Jameel Noori Nastaleeq\", serif",
+    "text": "مس سائمہ حیدرآباد کے ایک سرکار"
+  },
+  {
+    "sel": "main li",
+    "ff": "\"Noto Nastaliq Urdu\", \"Noto Naskh Arabic\", \"Jameel Noori Nastaleeq\", serif",
+    "text": ""
+  },
+  {
+    "sel": "main strong",
+    "ff": "\"Noto Nastaliq Urdu\", \"Noto Naskh Arabic\", \"Jameel Noori Nastaleeq\", serif",
+    "text": "مسودہ - ماہرانہ نظرثانی باقی ہ"
+  }
+]

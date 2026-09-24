@@ -1,0 +1,109 @@
+G3 English review summary - GICT-300 Unit 3 (Operating System Concepts)
+Run: agent-g3-gict300-u3-run001 | Reviewer: agent:g3-reviewer | Model: LongCat-2.0
+Reviewed state: HEAD 07d7420 (prepared manifest verified: all 101 bound inputs
+digest-identical; the parent's "prepared at d7377ac" note is superseded by the
+digest check - d7377ac, 6361ad6 and 07d7420 share identical bound inputs for
+this unit). Disposition: REVISE.
+
+What was done
+-------------
+- Verified the prepared manifest (101 inputs, skill digest) by recomputation,
+  then re-verified after the parent's mid-session PHR commit moved HEAD to
+  07d7420 (no bound input changed; unit-03 files remain translation_status:
+  draft on disk throughout).
+- Read the guide block (1st 2026.txt:374-538), the approved content-spec Unit 3
+  section, coverage/sources/figures/concepts governance, all 7 unit files, the
+  style guide, the constitution's content articles, and both bound source
+  excerpts (ostep ch 4, bourgeois2019 ch 1/2/3/5/6/11/12/13).
+- Independently solved the 10/10/5 bank BEFORE reading the Answers and marking
+  guidance; then compared. My MCQ key (1-d, 2-b, 3-b, 4-b, 5-c, 6-b, 7-b, 8-b,
+  9-b, 10-b) matches the supplied key on all ten items; all RRQ model answers
+  and ERQ rubrics agree with my derivations. No conflicts.
+- Ran the six deterministic gates over a verified overlay (base HEAD 07d7420 +
+  018-author-geng300's geng-300 fixes + merged glossary; all 101 bound inputs
+  proven byte-identical before running): all six exit 0. As-is runs in the
+  worktree (stale geng-300 present) are preserved in asis/: five gates exit 1
+  with findings exclusively in the out-of-scope geng-300 tree, zero in
+  GICT-300. See overlay-notes-20260923T205030427Z.txt.
+
+Criterion results
+-----------------
+  authority    PASS   guide/spec/outcome trace verified; D-2026-0030 approved
+                     partition followed exactly; strategies and practical work
+                     mapped in the teacher notes.
+  sources      FAIL   finding F1 (blocking): see below.
+  coverage     PASS   all six sub-topics taught at their mapped sections; every
+                     outcome assessed; 82 reading-min inside the 60-90 budget.
+  assessment   PASS   independent solve matches the key and mark schemes;
+                     blueprint (10/10/5, >=2 MCQ/RRQ per topic, ERQ per topic +
+                     integrative, Analyse-or-higher in every rubric) satisfied;
+                     advisories F3/F4.
+  accessibility UNVERIFIED  finding F2: rendered inspection not obtained this
+                     run (host capacity directive; load average 134.73 on
+                     2 cores). Static checks done (alt text, heading order,
+                     figure gate, SVG coordinate sanity scan). render-inspect
+                     MUST run next cycle before any pass.
+  readability  PASS   HSC register held; all terms glossed; zero em dashes.
+  pedagogy     PASS   nine-part cycle complete in all four topics; Pakistani
+                     classroom situations; feasible activities; all four
+                     spec misconceptions corrected in prose.
+
+Blocking finding F1 (sources)
+-----------------------------
+The unit's inline citations are all accurate (three-part job, time sharing,
+process composition, states, blocked state, scheduling policy - all verbatim
+supported by the bound ostep/bourgeois2019 excerpts). But four substantive
+accounts have NO support in any bound excerpt:
+  1. OS types (topic-01.mdx:66-89: batch/time-sharing/real-time/distributed/
+     mobile),
+  2. file management (topic-02.mdx:37-60: identifiers, paths, metadata,
+     deletion semantics),
+  3. the I/O chain, buffer and spooling (topic-03.mdx:39-59),
+  4. most of the kernel account (topic-04.mdx:37-74: first program loaded, the
+     four layers, device control, system calls, Linux-as-kernel).
+sources/unit-03.md claims bourgeois2019 carries U3-02/U3-03/U3-05 support and
+its Unverifiable-sources declarations assert the bound excerpts "independently
+carry" the OS-types, file-management and kernel accounts - the bound excerpts
+do not (ostep is chapter 4 only; bourgeois2019's bound chapters contain none of
+these accounts, and its own chapter annotations claim no U3-02/03/05 use).
+Under D-2026-0001's Limits and the G3 rubric, a declaration that understates
+what it leaves unchecked fails sources. The content itself is standard and
+correct as far as this reviewer can judge; the defect is the evidence chain.
+
+Repairs (any one of a/b/c, plus d in every case):
+  a. Bind excerpt passages that actually carry the accounts (e.g. OSTEP ch 36
+     I/O devices and ch 39/40 files - ch 36 is already cited in topic-03's
+     Further reading but not bound - or another open-access source covering OS
+     types and file management), and correct the Supports cells.
+  b. Record no-external-source rows for the unsupported sub-topics and
+     escalate the gap in specs/gaps.md (style-guide scholarly-engagement rule).
+  c. Amend the norton/shellyVermaat declarations to state accurately that the
+     bound excerpts do NOT independently carry these accounts (title-level
+     print support only), and confirm that posture with the owner under
+     D-2026-0001.
+  d. Correct the coverage matrix primary-source column to match whichever
+     grounding is actually provided.
+
+Other findings
+--------------
+  F2 (uncertain): rendered inspection not performed - host capacity directive
+     (verified: load 1.56/21.20/134.73 on 2 cores; sibling review sessions
+     building/serving concurrently). Desktop/narrow/A4-print inspection and
+     measure-figure-text remain outstanding; see
+     logs-20260923T205030427Z/render-review-limitation.txt.
+  F3 (advisory): MCQ answer-position bias - 8 of 10 keys are option b, none is
+     option a. Balance key positions at the next authoring touch.
+  F4 (advisory): ERQ-01..04 restate the per-topic summative tasks nearly
+     verbatim; vary the context at next touch to reduce practice effect.
+
+Next cycle
+----------
+Repair F1 (author), then a fresh G3 session must: re-verify a new manifest,
+re-run the gates, and COMPLETE the rendered inspection (render-inspect +
+measure-figure-text) that this run could not perform. A pass additionally
+requires all seven commands at exit 0 including render-review, and no
+unresolved blocking/uncertain findings.
+
+This report is advisory under ADR-0019. It does not certify the unit, write a
+tracker row, or authorize publication. Validation of this report's structure:
+node scripts/review-evidence.mjs validate <this file's path>.

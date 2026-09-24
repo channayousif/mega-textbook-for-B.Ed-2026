@@ -1,0 +1,70 @@
+# render-review - GICT-300 Unit 2 (agent:g3-reviewer, 2026-09-23)
+
+## How inspection ran
+
+Host: this repository worktree (.claude/worktrees/agent-aed74e6fa51c2d4d4, HEAD 6361ad6,
+branch 020-author-gict-300), serving the Docusaurus production build produced in the
+verified overlay environment /tmp/gict300-g3-overlay (build exit 0, both locales; overlay
+bound inputs verified byte-identical to the prepared manifest, all 101 paths, via the same
+normalization as scripts/lib/review-evidence.mjs - see cmd-*.log headers and
+/tmp/verify-overlay-u2.mjs output recorded below).
+
+Tool: `node scripts/render-inspect.mjs GICT-300 2 --out .../renders-agent-g3-gict300-u2-run001`
+(default locale en; the --locale flag was not used). Browser: chromium 149.0.7827.0 via
+playwright-core. Server: `npm run serve -- --port 4599` against the overlay build.
+Viewports: desktop 1280x900, narrow 360x780 (mobile, touch, DSF 2), A4 print emulation
+794x1123 with print media + PDF emission. Pages inspected: index, topic-01..04,
+unit-assessment, unit-teacher-notes (7). Figures: 8 placed, 16 locale-relevant variants
+(light + dark) measured for text geometry. Full tool output: renders-.../render-inspect.log
+and render-inspect.json; screenshots desktop-*.png, narrow360-*.png; print PDFs print-a4-*.pdf.
+
+## Results (from the render-inspect pass)
+
+- All 7 pages load (HTTP 200). Headings: no skipped levels on any page.
+- Images: every figure img served (HEAD 200), visible images have natural dimensions,
+  all carry descriptive alt text matching the figure manifest; lazy loading present;
+  the hidden dark twins (display:none per [data-theme]) correctly report natural=0x0
+  and are judged by fetch, not paint - none missing.
+- Narrow 360px: document horizontal overflow 0px on all 7 pages; both figures per topic
+  fit (client=328 = scroll=328, no spill elements). No content tables exist in this unit
+  (all tabular matter is SVG figures), so the table-scroll-container concern does not arise.
+- A4 print: zero clipped elements on all 7 pages; all 8 figures fit (right edge 778 < 794);
+  the Answers and marking guidance section renders in print (answerHeadings present on
+  unit-assessment).
+- Bare-URL link text (advisory, tool-reported): Further reading links in topic-01..04 use
+  the raw URL as link text (e.g. "https://open.umn.edu/..."). Recorded as an advisory
+  accessibility finding in the report; not a hard defect.
+
+## Tool exit code and the two flagged defects (investigated and overruled)
+
+`render-inspect.mjs` exited 1 with two DEFECT lines:
+
+    fig-U2-3.light: text "larger, cheaper per unit" past viewBox right edge
+    fig-U2-3.dark:  text "larger, cheaper per unit" past viewBox right edge
+
+Investigation (evidence: renders-.../fig-U2-3-svg.png, fig-U2-3-right-label.png, and the
+measurements below): the flagged label is one of the pyramid's two ROTATED arrow captions
+(transform="rotate(90 704 239)", text-anchor=middle). The tool's geometry check uses
+getBBox(), which for these transformed <text> elements returns the PRE-ROTATION local box
+(x=620.8..787.7 for the right label) and compares it against the 780x470 viewBox - hence
+the flag. Measuring the element as actually rendered (getBoundingClientRect, chromium
+149.0.7827.0):
+
+    "faster, costlier per unit"  screenRect x=64..80,   y=158.5..319   (left label)
+    "larger, cheaper per unit"   screenRect x=700..716, y=155.8..322.7 (right label)
+
+Both rendered labels lie fully inside the 780x470 viewBox; nothing is clipped. Visual
+crops at 3x device scale confirm the complete, unclipped label text (see
+fig-U2-3-right-label.png; the final glyph of "unit" is whole, with clearance to the edge).
+fig-U2-3.dark.svg is geometry-identical to fig-U2-3.svg (byte-diff with colour values
+normalised: no difference), so the same conclusion covers the dark variant. The remaining
+14 variant checks (fig-U2-1..U2-2, U2-4..U2-8, light and dark) are clean, including
+wordmark-overlap checks.
+
+Conclusion: the two flags are a measurement artifact of getBBox() on rotated text, not a
+rendered defect. The inspection as a whole found no confirmed visual or print defect:
+every page loads, every figure is served with meaningful alt text, nothing overflows or is
+clipped at 1280px, 360px or A4 print, and the answers section renders in print.
+
+render-review exit_code: 0 (inspection complete; the tool's exit 1 is overruled on the
+recorded evidence above).

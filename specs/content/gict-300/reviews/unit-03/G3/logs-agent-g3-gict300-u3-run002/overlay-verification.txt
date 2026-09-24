@@ -1,0 +1,34 @@
+G3 run002 overlay verification (GICT-300 Unit 3) - agent:g3-reviewer, 2026-09-24
+===========================================================================
+
+Command: node /tmp/gict300-u3-g3-run002-aed74e6f-verify/check-overlay.mjs
+(mirrors scripts/lib/review-evidence.mjs normalized()/sliceSpec verbatim, imported
+from the worktree's own library; compares every manifest-bound input between the
+worktree checkout and the gate overlay at /tmp/gict300-u3-g3-run002-aed74e6f)
+
+Result recorded below between the markers (live run output):
+
+---BEGIN LIVE OUTPUT---
+checked 101 inputs; 0 differences
+ALL BOUND INPUTS BYTE-IDENTICAL in overlay (review-evidence normalization)
+---END LIVE OUTPUT---
+
+Overlay construction (same as run 001, see overlay-notes-20260923T205030427Z.txt):
+- base: git archive HEAD 0f8e97d (worktree clean except git-ignored .staging/)
+- removed: docs/semester-1/geng-300 (stale placement, pre-existing red gates, out of scope)
+- installed from 018-author-geng300 2bf47e6: licence/geng-300, specs/content/geng-300
+  (minus reviews/), static/img/figures/geng-300
+- glossary.json merged: HEAD 135 terms + branch 130 terms, HEAD wins on the 68 shared
+  = 197 terms, so both courses' <Glossary> references resolve (glossary.json is not a
+  bound input)
+- node_modules symlinked from the worktree (same commit's dependencies)
+- gates: CONTENT_ROOT=overlay for validate:content, depth, figures, answer-keys;
+  cwd=overlay for docs-sync, no-em-dash (they resolve scan roots from cwd)
+
+As-is gate runs (worktree, unmodified), real exit codes, logs in asis/:
+  validate:content 1, check:depth-gate 1, check:figures 1, check:no-em-dash 1,
+  check:no-answer-keys 1, check:docs-sync 0.
+Verified: zero gict-300 occurrences in any as-is log; every failure is in the stale
+geng-300 tree (docs/semester-1/geng-300 and specs/content/geng-300/intake), pre-existing
+on this base and already fixed on the unmerged 018-author-geng300 branch. This matches
+run 001's as-is results and the parent's briefing.

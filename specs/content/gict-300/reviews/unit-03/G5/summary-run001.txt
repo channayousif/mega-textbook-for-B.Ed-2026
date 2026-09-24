@@ -1,0 +1,86 @@
+G5 Urdu review summary - GICT-300 Unit 3 (Operating System Concepts)
+Run: agent-g5-gict300-u3-run001 | Reviewer: agent:g5-reviewer | Model: LongCat-2.0
+Reviewed at worktree HEAD bde5520 on 2026-09-23. Advisory report under ADR-0019; it does not
+certify, sign, or mark any gate done.
+
+DISPOSITION: revise
+=========================================================================
+
+What was reviewed
+-----------------
+The complete Urdu mirror (index with 13 key_terms, topic-01..04, unit-assessment with the
+10/10/5 bank and answers, unit-teacher-notes) against the English unit at
+docs/semester-1/gict-300/unit-03/, plus the 8 Urdu figure variants (.ur.svg/.ur.dark.svg),
+the bound governance files (coverage, sources, concepts, figures, content-spec Unit 3,
+style guide, terminology bank, course guide block 1st 2026.txt:374-538) and the G3 run001
+report. Manifest verified by recomputation: 125/125 inputs identical to the prepared
+manifest (prepared at 5005f2e; the four intervening commits touched no bound input for this
+unit - confirmed by digest, not commit label). A raw SHA-256 of the .mdx bytes will appear
+to mismatch because normalized() rewrites the translation_status line - expected.
+
+Overall judgement
+-----------------
+The Urdu translation is substantively faithful and complete. Structural parity is exact on
+all seven files (headings, lists, checkboxes, figure carriers, front matter). The
+assessment bank is equivalent: this reviewer independently solved the Urdu MCQs before
+reading the key and derived 1-د، 2-ب، 3-ب، 4-ب، 5-ج، 6-ب، 7-ب، 8-ب، 9-ب، 10-ب - matching the
+supplied key on all ten, with option order and mark schemes preserved and Bloom tags
+consistent (یاد رکھنا/سمجھنا/لاگو کرنا/تجزیہ/جانچنا). Quantities, negation, modal force and
+causal claims survive passage-level comparison. RTL rendering is clean end to end: dir=rtl
+with the Nastaliq webfont on all 7 pages, Latin citations as intact LTR islands, all 8
+figures correctly mirrored, no overflow at 360px, no clipping in A4 print. All six
+deterministic gates exit 0 over the verified overlay (the repo-wide red gates are the stale
+geng-300 tree, out of scope, repaired on origin/main).
+
+Why revise, not pass
+--------------------
+F1 (blocking, unresolved) - English dependency: no accepted G3 evidence exists for the
+current inputs. The only G3 report (advisory run 001, disposition revise) pre-dates the
+a7200d2 governance repairs, so its own manifest is stale. Mitigations verified this run:
+the English unit prose is byte-identical to what run001 reviewed; run001's blocking F1
+(sources chain) was repaired in files that are bound here at their repaired state and were
+independently re-verified against the Urdu claims by this review; run001's F2 render gap is
+now covered for this unit's pages by this run's own rendered inspection. What remains
+outstanding is a fresh G3 verification run over the repaired inputs (and, universally, no
+signed G3 can exist until the protected signing host is provisioned). Until then this G5
+report is advisory only and cannot support a certified or Art. VII.7 provisional pass.
+
+Actionable Urdu repairs (advisory; precise locators in the report)
+------------------------------------------------------------------
+F2  "کرنل بشمول شیل بشمول یوٹیلیٹیز" (topic-04 explanation + RRQ-7 model answer) can be
+    misparsed as "the kernel, including the shell" - the inverse of the taught distinction.
+    Repair to an unambiguous enumeration, e.g. "کرنل، شیل اور یوٹیلیٹیز مل کر".
+F3  The term ڈی شیڈول never appears: the topic-02 explanation paraphrases the transitions
+    and CYU item 3 requires only two of the English's three words ("شیڈول اور بلاک" vs
+    "scheduled, descheduled and blocked"). Introduce شیڈول/ڈی شیڈول in prose and restore
+    the third word. (The summative RRQ-4 matches the English exactly, so the bank holds.)
+F4  fig-U3-2.ur(.dark).svg subtitle "ایکے ہی کام" - archaic "ایکے"; should be "ایک ہی کام".
+    Same figure: "پرانا تنخواہ حساب" renders "early payroll processing" as "old payroll
+    accounting".
+F5  Minor phrasing: topic-04 summary's ambiguous agent ("...برا پروگرام... بچا رہا ہے");
+    ungrammatical compounds "ترجمہ خدمت"/"ترجمہ زنجیر"; MCQ-7 option د "starts" -> "چلاتا
+    ہے" (runs); key_terms label "محفوظ دروازے" vs prose's "پہرے والے دروازے".
+F6  Machinery note for the parent: sources/texts/ostep.md is not digest-bound (its key
+    lacks a year suffix), so the excerpt the repaired sources table leans on for U3-03/U3-05
+    sits outside the manifest closure.
+
+Terminology
+-----------
+The bank holds no GICT-300 terms; all 13 key_terms are the concepts file's G5-flagged
+proposals and match it exactly. All 13 are fit for promotion to terminology.csv after the
+F2-F5 phrasing repairs. Unbanked status is by design, not a defect.
+
+Evidence
+--------
+Report: agent-g5-gict300-u3-run001.json (this directory). Gate logs, as-is runs, overlay
+notes, build log, render-inspect artifacts (14 full-page PNGs, 6 targeted clips, 7 A4 print
+PDFs, geometry measurements, RTL/Nastaliq probes) under logs-agent-g5-gict300-u3-run001/
+and render-inspect-ur/, all hash-bound in the report's evidence_manifest.
+
+Next steps for the parent
+-------------------------
+1. Commission a fresh G3 run over the repaired inputs (a7200d2) to close F1.
+2. Have the author apply the F2-F5 Urdu repairs (small, precisely located).
+3. Prepare a new manifest and run a fresh G5 reviewer session for the recheck. Unresolved
+   findings here carry across attempts; unchanged-input retries seeking a pass are
+   prohibited.

@@ -1,0 +1,9 @@
+$ CONTENT_ROOT=/tmp/gict300-g3-overlay npm run check:depth-gate
+  (repo HEAD 5aeadd5; CONTENT_ROOT overlay = HEAD tree + 018-author-geng300 geng-300 fixes + merged glossary; see overlay-notes.txt)
+2026-09-23T14:45:57.695Z
+
+> bed-mega-textbook@0.1.0 check:depth-gate
+> node scripts/check-unit-depth.mjs
+
+✓ Depth gate passed (concept coverage, required blocks, formative floor, reading-minutes band, coverage↔sources consistency).
+exit_code=0
