@@ -1201,3 +1201,69 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   check fires only at translation_status: reviewed, and the key_terms blocks now
   present in every UR index will surface every unbanked term at that flip, which is
   the intended signal); the human quality pass before any reviewed flip.
+
+---
+
+## G-2026-52 - EFMP-301 extension: the units 2+ partition is the spec's construction over a guide that gives only a week/chapter table
+
+- **Status:** open
+- **Gate:** G0 intake / G1 unit-spec (partition criterion)
+- **Source:** `D-2026-0043`
+- **Detail:** The EFMP-301 guide block (`Scheme-and-Course-guides/extracted-text/1st 2026.txt:1011-1204`)
+  numbers its topical outline by week and chapter only: Week 1 (`:1042`) through Week 16 (`:1162`),
+  Chapters 1-12, with **no unit headings of any kind**. Unit 1 (Weeks 1-2, Chapter 1) is settled
+  already, by the approved Unit-1-only spec (commit `6158d25`) and the Art. VI.1 golden unit. The
+  extension derives five further blocks, clearly labelled as derived per `D-2026-0012` with its
+  basis stated (`content-spec.md:128-137`): Unit 2 = Weeks 3-4 (Chapter 2); Unit 3 = Weeks 5-7
+  (Chapter 3); Unit 4 = Weeks 8-10 (Chapters 4-5); Unit 5 = Weeks 11-13 (Chapters 6-8); Unit 6 =
+  Weeks 14-16 (Chapters 9-12 plus the course-review slot).
+
+  What the guide **does** determine, and what the evaluator verified mechanically: the 16-week
+  calendar and chapter sequence; contiguity (every week assigned to exactly one unit, in guide
+  order, no gaps or overlaps); whole weeks only; no chapter split across units; and the
+  contact-hour arithmetic (6+6+9+9+9+9 = 48 = 16 weeks x 3 credit hours).
+
+  What the guide does **not** determine: the number of units (six) and the merge boundaries. The
+  guide gives no chapter grouping, so a twelve-unit partition (one per chapter) or a three-unit
+  one is equally consistent with it. The spec's stated basis ("block boundaries fall where the
+  guide's own chapters change character", `content-spec.md:134-136`) is a pedagogical judgement.
+  `D-2026-0012` permits the derived-and-labelled recording and expressly leaves the substance
+  "for an evaluator to approve or escalate"; the partition criterion's own text for
+  week-table-only guides is that the partition is a judgement the guide does not determine. Same
+  posture as GNAS-301's `G-2026-22`, which the owner resolved (2026-09-23) by confirming the
+  derived partition exactly as proposed.
+- **Needed, and from whom:** the curriculum owner, to confirm the five derived blocks exactly as
+  proposed (teaching weeks 2/3/3/3/3 across Units 2-6, after Unit 1's 2) or supply another
+  partition, in the manner `G-2026-22` settled GNAS-301's.
+- **Blocks:** the `partition` criterion of `D-2026-0043`; authoring of Units 2-6 (the spec itself
+  requires owner confirmation before they are authored, `content-spec.md:942-944`). The week
+  calendar itself needs no decision: it is guide-given.
+
+---
+
+## G-2026-53 - EFMP-301 extension: flipping the content-spec to `status: draft` makes the published Unit 1 fail `check:pipeline-gate`
+
+- **Status:** open
+- **Gate:** G0 intake / G1 unit-spec (structure criterion, pipeline consequence)
+- **Source:** `D-2026-0043`
+- **Detail:** The Unit-1-only spec carried `status: approved` (commit `6158d25`); the extension
+  flips it to `status: draft` (`content-spec.md:3`), which is the honest state for an extension
+  awaiting evaluation and owner confirmation. But `check:pipeline-gate` (FR-016b) requires
+  `status: approved` for **every** unit under the course in `docs/`, with no grandfather rule for
+  a unit published under a previous approval of the same document. Verified on this run
+  (2026-09-24): exit **1**, single finding - "EFMP-301 Unit 1
+  (docs/semester-1/efmp-301/unit-01): course content-spec.md is not approved (status: 'draft')".
+  All ten other content gates exit 0. The extension branch (`022-author-efmp-301`, commit
+  `a104623`) is not yet on `main`, so CI has not failed yet; merging before resolution fails
+  `FULL_GATES`. Neither the evaluator nor the author can resolve it unilaterally: setting
+  `status: approved` is the curriculum owner's action under
+  `contracts/content-spec-frontmatter.schema.json` (Spec 006 FR-002), and keeping `draft` is the
+  correct honest state while the extension awaits confirmation. The spec nowhere acknowledges the
+  consequence.
+- **Needed, and from whom:** the curriculum owner, either (a) by confirming this extension
+  (`D-2026-0043` plus the `G-2026-52` partition ruling) and setting the content-spec back to
+  `status: approved`, which restores the gate; or (b) by directing a grandfather rule for units
+  published under a previous approval of the same course (a `check-pipeline-gate.mjs` policy
+  change, not a spec edit), if the extension is to merge before approval.
+- **Blocks:** merge of the extension branch to `main` (CI `check:pipeline-gate`); nothing in this
+  evaluation itself, and nothing in the other content gates.
