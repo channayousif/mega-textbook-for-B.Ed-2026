@@ -1,6 +1,7 @@
 ---
 course_code: EFMP-301
-status: draft
+status: approved
+# D-2026-0043 + D-2026-0044 + owner rulings G-2026-52/G-2026-53: intake passes G0/G1 (2026-09-24)
 bilingual: true
 ---
 
@@ -187,10 +188,10 @@ Authoring the file itself is follow-up work outside this feature.
   - Attention, memory, thinking, intelligence and creativity are systems with jobs;
     teaching that works with them beats teaching that works against them (Unit 4).
   - Motivation, individual differences and classroom management form one arc: why learners
-    try, how they differ, and how the room is run so all of them belong (Unit 5).
+    try, how they differ, and how the room is run so all of them belong (Units 6-8).
   - Assessment, teaching methods and well-being close the loop: the course's ideas become
     decisions a teacher can justify, guided ethically and supported by technology where it
-    helps (Unit 6).
+    helps (Units 9-12).
 - **Practice-question mix**: `### MCQs` ~24 (all twelve units, Remember to Apply); `### RRQs`
   ~12 (Understand to Analyze, >= 1 per unit); `### ERQs` ~6 (Analyze to Evaluate/Create,
   each integrating two or more units).
@@ -674,7 +675,7 @@ Week 10 (3 contact hours; guide Chapter 5). Unit Spec (G1) for
 
 ### Sub-topic checklist
 
-One row per leaf item of guide Chapter 10's four Week 10 bullets. "Theories of
+One row per leaf item of guide Chapter 5's four Week 10 bullets. "Theories of
 intelligence" decomposes into the shared question and the measurement bullet stands
 alone; the compound "Creativity and giftedness" bullet decomposes into its two named
 constituents. IDs are stable once assigned.
@@ -732,8 +733,7 @@ than mystical; treat giftedness as an educational need, not a prize.
 **Figure plan** (>= 2 per topic; >= 1 concept-map / flowchart / timeline in the unit):
   - fig-U5-1 - `diagram` - intelligence theories on one axis: one general ability (g) at
     one end, many relatively independent abilities at the other, with named positions
-    (Spearman, Thurstone, Cattell-Horn-Carroll briefly, Gardner) (Topic 5.1; a unit
-    schematic)
+    (Spearman, Thurstone, Cattell-Horn-Carroll briefly, Gardner) (Topic 5.1)
   - fig-U5-2 - `table` - what an intelligence test does and does not measure: claims,
     evidence, limits, and classroom do's and do-not's (Topic 5.1)
   - fig-U5-3 - `concept-map` - creativity's observable parts (fluency, flexibility,
@@ -828,7 +828,7 @@ not as weakness.
 **Figure plan** (>= 2 per topic; >= 1 concept-map / flowchart / timeline in the unit):
   - fig-U6-1 - `diagram` - Maslow's hierarchy drawn as five rising steps with a
     classroom instance on each (roti, safety, belonging, respect, becoming) and the
-    teaching order it implies (Topic 6.1; a unit schematic)
+    teaching order it implies (Topic 6.1)
   - fig-U6-2 - `table` - the three named theories (Maslow, Herzberg, Self-Determination)
     compared on: the question it asks, its key idea, a school instance, one limit (Topic
     6.1)
@@ -1111,7 +1111,7 @@ the unit-end banks the learners themselves have been using all course.
     varies, what stays fixed, what each is good for (Topic 9.2)
   - fig-U9-4 - `diagram` - validity and reliability as a target diagram: four shots
     (both, neither, reliable-not-valid, valid-not-reliable) with a classroom instance
-    of each (Topic 9.2; a unit schematic)
+    of each (Topic 9.2)
   - fig-U9-5 - `flowchart` - the formative cycle: elicit evidence, interpret, act, then
     check again - drawn as a loop with the timeline of a single week (Topic 9.3; a unit
     schematic)
@@ -1282,7 +1282,7 @@ needs; avoid pathology language for ordinary exam stress.
 **Figure plan** (>= 2 per topic; >= 1 concept-map / flowchart / timeline in the unit):
   - fig-U11-1 - `diagram` - the well-being balance: demands and supports on two pans,
     with school-level supports (routine, belonging, feedback, safety, referral)
-    labelled (Topic 11.1; a unit schematic)
+    labelled (Topic 11.1)
   - fig-U11-2 - `table` - signs a teacher can notice (withdrawal, falling marks,
     irritability, absence, talk of hopelessness) against a possible meaning and the
     response within a teacher's role (Topic 11.1)
