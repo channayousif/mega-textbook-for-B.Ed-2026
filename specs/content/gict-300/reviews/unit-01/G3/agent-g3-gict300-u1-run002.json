@@ -1,0 +1,378 @@
+{
+  "schema_version": 1,
+  "course_code": "GICT-300",
+  "unit_no": 1,
+  "stage": "G3",
+  "disposition": "pass",
+  "reviewer_id": "agent:g3-reviewer",
+  "author_run_id": "commit:140dd8a",
+  "reviewer_run_id": "agent-g3-gict300-u1-run002",
+  "model": "LongCat-2.0",
+  "started_at": "2026-09-24T00:30:00Z",
+  "completed_at": "2026-09-24T00:52:43.734Z",
+  "skill_digest": "eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b",
+  "rulings": {
+    "D-2026-0001": "8ff79df9af668329f6d0094a2257654f45fc545122a753b4888fb9936f402f1f",
+    "D-2026-0030": "65125e3e97b98f811b0d77cff19ee15423263dfe4e37520a46451efb7d17b294"
+  },
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g3.md": "074c8464b4bc0f2f2b76bbb19707c50b54cb907920407873a4e5d193e866f53f",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "f1d7f063cc2c826693a3d8428fb5d3ee45455fdb7906ebc5adadee8b9a434d47",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-1/gict-300/course-overview.mdx": "5c615399c4c49a6fbc249b9a7794a72d71747c874351e447bd42d5a7c843e81d",
+    "docs/semester-1/gict-300/unit-01/_category_.json": "09e8794850d27d1601ee938fac2d160e7ede4380d1677e5102489a08a66ea546",
+    "docs/semester-1/gict-300/unit-01/index.mdx": "223384d670d5cd89bda737ee23484feaf5189f35b66ff4b5b05cce62ed6ca160",
+    "docs/semester-1/gict-300/unit-01/topic-01.mdx": "a5d72b4fe112b3cd57e151b1b9ebfa2a9dcd43822e9de0214f8ef3dfbbb47d21",
+    "docs/semester-1/gict-300/unit-01/topic-02.mdx": "43072c5dae55dd78605c4d5103edb5efa76481c7ae3324f79c98a1add48abc3f",
+    "docs/semester-1/gict-300/unit-01/topic-03.mdx": "1306a489c7ee88b172f68ec304c0b3a90277e556e8f8fc7e2c213d92671d8370",
+    "docs/semester-1/gict-300/unit-01/topic-04.mdx": "bf4216c024ef2b544b5014145420ea93589cfdcaf929250aef42986f161db92e",
+    "docs/semester-1/gict-300/unit-01/unit-assessment.mdx": "975b490bad970d61a0a3fe62b6253e96fc2c1549ace7e6c45f509bf5c9b26ed7",
+    "docs/semester-1/gict-300/unit-01/unit-teacher-notes.mdx": "a1341c9c4fbe9fddec95a561755884645f3b6af3196182dfbefa91ad12a444af",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "41b698f8cbbb12f4030d6893083a5c36e4a19848b5ddb86206e5ba72847b8b13",
+    "scripts/check-no-answer-keys.mjs": "f38d60e5360e0c29f2dae02001195690f3b95e0ad2d7ae1a3c03a0d09c053f0d",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "bb614c625f7bf397ce51a317bdb8901711c00fa009d4ad0a506c5096e5b9ddd2",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "77f03816f68663621059f17745109fdde9b103c555f707e0c62d5ff56d2a4cd9",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "973496faae3366d13e8cdd3ba8d68edf7bd3745bdc6928311ee03c55f24b18b2",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/gict-300/concepts/unit-01.md": "4a8045ea202d2bcc5fa67a526b94875b748c1307edad078e08a2bdb95b480c00",
+    "specs/content/gict-300/content-spec.md": "098d4102c1113e223903fb40b3f7d9d0286183d089199c2faeed7bacdcccaf98",
+    "specs/content/gict-300/coverage/unit-01.md": "54a0b9e26ed14a2fd5b686409f4e58cae57ad6cec7a25111eee73395f5c20988",
+    "specs/content/gict-300/figures/unit-01.md": "7ebf320babb6a21ea960949db2950b8cd8268b96b99a5106330835791bf86b54",
+    "specs/content/gict-300/sources/texts/bourgeois2019.md": "8df2facfa7db7f263afb336717bd812936edc19c63de78fdd5955b09912e5751",
+    "specs/content/gict-300/sources/unit-01.md": "02f1d2c7a08c9b58453bff3514f17280f7adf21adb96e4366f773436c0def27b",
+    "specs/content/style-guide.md": "db96c9b33b0fb9522986462a0b519620c3c1d7602a046d7b90e638f643da4610",
+    "static/img/figures/gict-300/unit-01/fig-U1-1.dark.svg": "332de7a32f218cccebb9184244dd2c128192b83b1b342ffc74c86849fe90eb5c",
+    "static/img/figures/gict-300/unit-01/fig-U1-1.svg": "a508c831b6c5442f73047badeb44f479367b97f55129766ed2a773d74bcea03a",
+    "static/img/figures/gict-300/unit-01/fig-U1-2.dark.svg": "f5362e5b284ea1e65d88c63157cccf54d5c8fef57fc2dc8447794f2a458dfc9d",
+    "static/img/figures/gict-300/unit-01/fig-U1-2.svg": "e35debcdd4e8a9c4d5e03321d52fccf1ada8d76e324cdf696a17c5c8d611ad79",
+    "static/img/figures/gict-300/unit-01/fig-U1-3.dark.svg": "b468572528824a8034bb42611662de2aae779fec843242c976d88afa2d6e7fe3",
+    "static/img/figures/gict-300/unit-01/fig-U1-3.svg": "b9e19d27281fa4a4a7c0e89241a816fc712a2c1110ef58779d8ae53fd8c1d4ad",
+    "static/img/figures/gict-300/unit-01/fig-U1-4.dark.svg": "9fcd2cc964930f6fe772f6f383923b50ee4e05f3137efb34f9aeecd537dc6ca8",
+    "static/img/figures/gict-300/unit-01/fig-U1-4.svg": "b90ff5397a6206b13441db0d4d4bfe4cb495d5d870a268ae87ea63d102632747",
+    "static/img/figures/gict-300/unit-01/fig-U1-5.dark.svg": "35015680e3844b3808e54809b0c2ba536cc21bab3c9b9863f1d03e06e59d4b80",
+    "static/img/figures/gict-300/unit-01/fig-U1-5.svg": "ca9f6f5124380614f28fdabf41803b38e827af7d18d2c04e7f4b155164bc9157",
+    "static/img/figures/gict-300/unit-01/fig-U1-6.dark.svg": "3fb03f3c1219d95dcbeaae95f6004eeb01e37930c765e4ca1c92925d1b801495",
+    "static/img/figures/gict-300/unit-01/fig-U1-6.svg": "64e57ad4a9f2367530b84584044e52ec29030070919b2d6d62d3b3e6533cbd93",
+    "static/img/figures/gict-300/unit-01/fig-U1-7.dark.svg": "fb36c1d30c895f9a74b55667308b6187f855c3828385b79057a6cb02d1731fd2",
+    "static/img/figures/gict-300/unit-01/fig-U1-7.svg": "24f1b68b27458788c4cfbbb210ef1223b58417be08e519947972b088aa24b33a",
+    "static/img/figures/gict-300/unit-01/fig-U1-8.dark.svg": "01a49c44631bafe56de9b77b4f073df2fdff8f441de519f0b3d2c2f020dea091",
+    "static/img/figures/gict-300/unit-01/fig-U1-8.svg": "ac244e8f3304a0fd919dd50c88461940f523e87ff825daa6f949bfdb41d0e8cb"
+  },
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        "Course guide block verified at Scheme-and-Course-guides/extracted-text/1st 2026.txt:374-538; Unit 1 (lines 416-428) enumerates six sub-topic bullets; content-spec ## Unit 1 (specs/content/gict-300/content-spec.md:85-146) decomposes them into checklist rows U1-01..U1-08 exactly as intake decision D-2026-0030 approved (bullet 3 to U1-03/U1-04, bullet 4 to U1-05/U1-06 on the two axes CLO 2 names at guide line 400).",
+        "Bound content-spec front matter carries status: approved with the D-2026-0030 reference; decision register entry verified at specs/decisions/log.md:784 and digest-bound in this report.",
+        "Unit clo_refs (SLO:GICT-300-1-1, SLO:GICT-300-1-2) match the spec Unit 1 CLO refs; topic clo_refs are consistent subsets; both unit outcomes assessed in the bank (MCQ-07/08, RRQ-07/08, ERQ-03 serve outcome 2), re-confirmed by this run's independent solve.",
+        "Course overview rewritten since run 001 (docs/semester-1/gict-300/course-overview.mdx, bound) verified against the guide: 8 CLOs match guide lines 398-412 in substance; five teaching strategies and five practical-work items match guide lists; five recommended readings match; credit hours 3 (2-1) matches; the 60/40 summative/formative claim is the style-guide default (specs/content/style-guide.md:209, Constitution Art. III.7) and the guide block sets no assessment-criteria table.",
+        "Guide Teaching/Instructional Strategies and Practical Work lists (guide lines 507-527) mapped in unit-teacher-notes.mdx ## Working with the guide's strategies and ## Practical work and practicum links.",
+        "No contradictory or missing G0/G1 authority found; the derived week calendar escalation G-2026-25 touches only the spec week table, not this unit's content."
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "pass",
+      "evidence": [
+        "Run 001 F1 repair verified against the bound excerpt: docs/semester-1/gict-300/unit-01/topic-04.mdx (### Impact of computers and the internet on society) now attributes to Bourgeois and colleagues (2019) that the divide \"runs along income, geography, education and age lines\", exactly what specs/content/gict-300/sources/texts/bourgeois2019.md chapter 11 supports (economic/usability/empowerment dimensions; ACM list: low-income households, senior citizens, single-parent children, the undereducated, minorities, rural residents); no gender attribution remains.",
+        "The bourgeois2019.md excerpt change since run 001 is additive only (chapters 2, 3, 5, 6, 12, 13 appended for Units 2-6, each marked verified); the Unit 1-relevant chapters 1 and 11 are byte-unchanged (git diff 5aeadd5..e12079a).",
+        "digcomp2022 (declared unverifiable, D-2026-0001): the five-areas claim (topic-01) is accurate to the framework and within the declaration's corroborated scope.",
+        "unescoictcft2018 (declared unverifiable, D-2026-0001): the three-level teacher-development claim (topic-01, topic-04) is accurate and within the declaration's corroborated scope.",
+        "ptaIndicators2025 (declared unverifiable, D-2026-0001): the >190M cellular and ~140M broadband figures (topic-01, topic-04, unit summary) are stated with \"reported\"/\"roughly\" hedges as the declaration requires.",
+        "Run 001 F4 repair verified: specs/content/gict-300/sources/unit-01.md now states honestly that no bound excerpt carries the history account (U1-03) and that the history prose rests on the guide's outline and general knowledge, disclosed; the contradictory coverage reinforcement row (U1-03 -> bourgeois2019) was removed from specs/content/gict-300/coverage/unit-01.md while U1-03 remains mapped in the primary table (khanacademyCIT); topic-02/03 prose disclose the bibliographic level of the guide-required citations (Shelly/Vermaat, Norton).",
+        "Run 001 F3 repair verified: the HEC guidelines line is now in topic-01 ## Further reading; all 8 keys (digcomp2022, bourgeois2019, unescoictcft2018, khanacademyCIT, ptaIndicators2025, shellyVermaat, norton, hecICT) are cited both in prose and in a per-topic Further reading section (mechanically checked).",
+        "Declaration honesty: all seven unverifiable keys carry retrieval attempts, date 2026-09-23 and the D-2026-0001 ruling in sources/unit-01.md ## Unverifiable sources."
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "All 8 checklist IDs (U1-01..U1-08) mapped in specs/content/gict-300/coverage/unit-01.md to exact topic files and ### section headings; every named section exists in the mapped file and genuinely covers its sub-topic (verified by reading topic-01..04.mdx in full at the current bytes).",
+        "Partition is total and disjoint across topics 1.1-1.4 and matches the content-spec ### Topic list; every topic file is referenced by at least one row; U1-03 remains mapped after the F4 repair (primary row, khanacademyCIT).",
+        "Every coverage Source key resolves in sources/unit-01.md; no orphan keys.",
+        "Reading minutes: index 4 + topics 13+13+11+13 + assessment 21 + teacher notes 7 = 82, inside the 65-95 depth budget band.",
+        "check:depth-gate exit 0 (cmd-logs-run002/check-unit-depth.txt)."
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "pass",
+      "evidence": [
+        "10/10/5 bank confirmed per ### band; every item carries a Bloom tag; Answers and marking guidance is the single, final ## section; bank bytes unchanged since run 001 (digest 975b490b... identical in both manifests) and re-solved independently this run.",
+        "All 10 MCQ keys independently derived before reading the key: 1-b, 2-b, 3-d, 4-b, 5-c, 6-b, 7-c, 8-b, 9-b, 10-c; matches the supplied key exactly. Distractors plausible and misconception-based (e.g. MCQ-08a size-vs-definition, MCQ-01a typing); no all/none-of-the-above; no ambiguous stems.",
+        "RRQ model answers and point-by-point mark schemes (2/6/3/2/5/3/3/4/3/3 marks) match this reviewer's independent solutions, including the RRQ-06 nuance (tablet is fourth-generation construction running fifth-generation-style AI software) and the RRQ-10 shared-device divide analysis.",
+        "ERQ rubrics (10 marks each) each carry at least one explicit Analyze-or-higher criterion; criteria sum to 10 per item; ERQ-04 is the blueprint's integrative school/workplace impact item and ERQ-05 the whole-unit synthesis.",
+        "Blueprint satisfied: MCQ spread 3/3/2/2 and RRQ spread 3/3/2/2 across topics 1.1-1.4 (>= 2 each per topic); Bloom bands as specified; Bloom labels match the thinking actually required (Apply classifications checked item by item: MCQ-06/07/10, RRQ-08).",
+        "Concept graph specs/content/gict-300/concepts/unit-01.md assessment linkage covers all 25 derived item IDs consistently with the bank."
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "pass",
+      "evidence": [
+        "Render inspection (cmd-logs-run002/render-review.txt, exit 0, defects 0; artifacts under render-inspect-run002/; host http://127.0.0.1:4599, chromium 149.0.7827.0, fresh overlay build): all 7 pages HTTP 200 at desktop 1280x900, narrow 360x780 and A4 print 794px; heading hierarchy has no skipped levels on every page; every img carries non-empty alt text; every visible figure loads.",
+        "Narrow 360px: document horizontal overflow 0px on all 7 pages; figures scale to client=328/scroll=328 with no spill.",
+        "A4 print: clippedElems=0 on all 7 pages; every visible print figure fits (w=762, right=778); the Answers and marking guidance section and all four answer sub-headings render unclipped (render-inspect-run002/answers-narrow-360-run002.png confirms legibility at 360px).",
+        "Run 001 F2 repair verified three ways: scripts/measure-figure-text.mjs over all 32 unit-01 SVG variants exits 0 with fig-U1-6 light and dark widest text ending at 768.4 inside the 780-unit viewBox (cmd-logs-run002/measure-figure-text.txt); render-inspect section D reports both variants clean; element screenshots render-inspect-run002/fig-U1-6-element-run002.png and fig-U1-6-dark-element-run002.png show the \"more specialised\" label fully rendered (served SVG geometry x=768, y=425, text-anchor=end, recorded in cmd-logs-run002/element-capture.txt).",
+        "check:no-em-dash exit 0; check:figures exit 0 (structural checks; glyph geometry measured separately and clean)."
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "HSC/intermediate register maintained throughout (Constitution Art. III.1): short sentences, active voice, one idea per paragraph; no unexplained graduate-level jargon.",
+        "All 7 <Glossary> terms used at first definition exist in glossary.json (Computer literacy, Information and Communication Technology, Abacus, Digital computer, Analog computer, Hybrid computer, Embedded computer); digital divide defined in prose at first use (topic-04).",
+        "All four content-spec Common misconceptions named and corrected in the Explanation sections (typing = literacy in topic-01; desktop-only computer in topic-02; bigger-and-faster generations in topic-02; ICT = computers only in topic-01).",
+        "Pakistan/Sindh grounding throughout (Constitution Art. III.4): Hyderabad practicum, Karachi classrooms, Sukkur lab, Matiari village school, Easypaisa/JazzCash, PTA access figures, Sindh school office contexts."
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": [
+        "Nine-part topic cycle present and monotonically ordered in all four topic files (A real classroom situation, Explanation, Activity, Check your understanding, Summary, Self-assessment checklist, Try this at your practicum school, Summative task, Further reading).",
+        "Check your understanding carries 4 items per topic (>= 3), retrieval-based; self-assessment checklists carry 3 \"I can\" items per topic (>= 3).",
+        "Activities feasible in the stated Pakistani classroom context with grouping, time boxes and concrete materials (ICT skills audit pairs/20 min; generation gallery walk groups/20 min; device detective pairs/20 min; ICT-in-my-field jigsaw groups/25 min).",
+        "Worked modelling precedes performance: the task-skills table (fig-U1-2) models before the audit activity; the museum-label and device-classification Apply items model the classification rule; teacher notes give per-activity traps and probes.",
+        "Visual density (Constitution Art. III.10): 2 figures per topic file; 3 concept-map/timeline figures in the unit (fig-U1-1, fig-U1-3, fig-U1-7); all 8 manifest rows placed with valid archetypes (specs/content/gict-300/figures/unit-01.md)."
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "blocking",
+      "resolved": true,
+      "message": "Run 001 finding, verified repaired this run: topic-04.mdx over-attributed a \"gender\" dimension of the digital divide to Bourgeois and colleagues (2019), which the bound chapter 11 excerpt does not contain. The current bytes read \"the divide runs along income, geography, education and age lines\", exactly what the bound excerpt supports. Repair verified against specs/content/gict-300/sources/texts/bourgeois2019.md chapter 11; the excerpt file's change since run 001 is additive (chapters for Units 2-6) and chapters 1 and 11 are byte-unchanged.",
+      "location": "docs/semester-1/gict-300/unit-01/topic-04.mdx#impact-of-computers-and-the-internet-on-society"
+    },
+    {
+      "id": "F2",
+      "severity": "blocking",
+      "resolved": true,
+      "message": "Run 001 finding, verified repaired this run: fig-U1-6 light and dark variants clipped the bottom-right axis label \"more specialised\" past the 780-unit viewBox. The current bytes anchor the label at x=768 with text-anchor=end in both variants. Verified by measure-figure-text.mjs (widest text ends 768.4; all 32 unit-01 SVG variants clean; exit 0), render-inspect section D (clean), and element screenshots of both variants showing the label fully rendered.",
+      "location": "static/img/figures/gict-300/unit-01/fig-U1-6.svg and static/img/figures/gict-300/unit-01/fig-U1-6.dark.svg"
+    },
+    {
+      "id": "F3",
+      "severity": "advisory",
+      "resolved": true,
+      "message": "Run 001 finding, verified repaired this run: hecICT was cited in topic-01 prose but appeared in no Further reading list, contradicting the sources-file preamble. The HEC guidelines line is now in topic-01 ## Further reading; all 8 source keys are now cited both in prose and in a per-topic Further reading section.",
+      "location": "docs/semester-1/gict-300/unit-01/topic-01.mdx ## Further reading; specs/content/gict-300/sources/unit-01.md (preamble)"
+    },
+    {
+      "id": "F4",
+      "severity": "advisory",
+      "resolved": true,
+      "message": "Run 001 finding, verified repaired this run: the sources file overstated what the bound bourgeois2019 excerpt supports for the history sub-topics (U1-03). The current sources file states honestly that no bound excerpt carries the history account and that the history prose rests on the guide's outline and general knowledge, disclosed; the contradictory coverage reinforcement row (U1-03 -> bourgeois2019) was removed while U1-03 remains mapped in the primary table (khanacademyCIT). The history account itself remains the standard one (Pascal/Leibniz/Jacquard/Babbage/Hollerith/ENIAC 1946 ~27 tonnes/von Neumann 1945 stored-program/IBM PC and Apple II/iPhone 2007) and the prose discloses the bibliographic level of the guide-required citations.",
+      "location": "specs/content/gict-300/sources/unit-01.md (khanacademyCIT declaration; bourgeois2019 row); specs/content/gict-300/coverage/unit-01.md (Reinforcement)"
+    },
+    {
+      "id": "F5",
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Carried unresolved from run 001: Further reading citation links render as bare URLs as the link text on all four topic pages (render-inspect advisory observation this run; e.g. https://doi.org/10.2760/115376). Descriptive link text would serve screen-reader users better; the current repo convention for citation lists accepts bare URLs, so this remains advisory and does not block.",
+      "location": "docs/semester-1/gict-300/unit-01/topic-01..04.mdx ## Further reading"
+    },
+    {
+      "id": "F7",
+      "severity": "advisory",
+      "resolved": true,
+      "message": "Run 002 process note (resolved, no repair needed): the six content gates and the build/render pass were run against a documented CONTENT_ROOT overlay (/tmp/gict300-g3-overlay-run002) because this worktree at e12079a carries pre-existing geng-300 reds (stale docs/semester-1/geng-300 legacy tree; 9 em dashes in specs/content/geng-300/intake/evaluation.md) already fixed on the unmerged sibling branch 018-author-geng300 (2bf47e6). Raw un-overlaid gate outputs are preserved in logs-raw-run002/ with exit codes recorded in this report; every raw failure line references geng-300 and zero mention gict-300. The overlay's GICT-300 Unit 1 inputs are byte-identical to the reviewed state (verified by diff). Method recorded in overlay-notes-run002.txt.",
+      "location": "worktree environment; evidence in specs/content/gict-300/reviews/unit-01/G3/logs-raw-run002/ and overlay-notes-run002.txt"
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-01/G3/cmd-logs-run002/validate-content.txt"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-01/G3/cmd-logs-run002/check-unit-depth.txt"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-01/G3/cmd-logs-run002/check-figures.txt"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-01/G3/cmd-logs-run002/check-no-em-dash.txt"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-01/G3/cmd-logs-run002/check-no-answer-keys.txt"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-01/G3/cmd-logs-run002/check-docs-sync.txt"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-01/G3/cmd-logs-run002/render-review.txt"
+    },
+    {
+      "name": "measure:figure-text",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-01/G3/cmd-logs-run002/measure-figure-text.txt"
+    },
+    {
+      "name": "build",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-01/G3/cmd-logs-run002/build.txt"
+    },
+    {
+      "name": "element-capture",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-01/G3/cmd-logs-run002/element-capture.txt"
+    },
+    {
+      "name": "validate:content-raw",
+      "exit_code": 1,
+      "log_path": "specs/content/gict-300/reviews/unit-01/G3/logs-raw-run002/validate-content.txt"
+    },
+    {
+      "name": "check:depth-gate-raw",
+      "exit_code": 1,
+      "log_path": "specs/content/gict-300/reviews/unit-01/G3/logs-raw-run002/check-unit-depth.txt"
+    },
+    {
+      "name": "check:figures-raw",
+      "exit_code": 1,
+      "log_path": "specs/content/gict-300/reviews/unit-01/G3/logs-raw-run002/check-figures.txt"
+    },
+    {
+      "name": "check:no-em-dash-raw",
+      "exit_code": 1,
+      "log_path": "specs/content/gict-300/reviews/unit-01/G3/logs-raw-run002/check-no-em-dash.txt"
+    },
+    {
+      "name": "check:no-answer-keys-raw",
+      "exit_code": 1,
+      "log_path": "specs/content/gict-300/reviews/unit-01/G3/logs-raw-run002/check-no-answer-keys.txt"
+    },
+    {
+      "name": "check:docs-sync-raw",
+      "exit_code": 0,
+      "log_path": "specs/content/gict-300/reviews/unit-01/G3/logs-raw-run002/check-docs-sync.txt"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/gict-300/reviews/unit-01/G3/cmd-logs-run002/build.txt": "26b39bb6c38ca6d50f114487a67d6291b9dae452477362f94b3b7d5ea926ea67",
+    "specs/content/gict-300/reviews/unit-01/G3/cmd-logs-run002/check-docs-sync.txt": "cbc9f6e4b0b674cb49e2d9b795d81ed78f23dc431cba1130e4d64cf6d0bed749",
+    "specs/content/gict-300/reviews/unit-01/G3/cmd-logs-run002/check-figures.txt": "54a388cb9954b9d2f07f84e5385ac0003b94a6a54023abb188e864346958b04f",
+    "specs/content/gict-300/reviews/unit-01/G3/cmd-logs-run002/check-no-answer-keys.txt": "539ba62183931f332c562e346956452b9cf751e100de762601b786b497a7d612",
+    "specs/content/gict-300/reviews/unit-01/G3/cmd-logs-run002/check-no-em-dash.txt": "00405490c649d998b589b23505029de9134497966b02ff9ccefb1075aa414dd3",
+    "specs/content/gict-300/reviews/unit-01/G3/cmd-logs-run002/check-unit-depth.txt": "15021f8f88122b596e67cfd48c2ff282fde912e1b86bb03c2137bcf9d8e062fd",
+    "specs/content/gict-300/reviews/unit-01/G3/cmd-logs-run002/element-capture.txt": "d8f9f4ad07b542e24dc08fb3380a6b4dd7aea1b089f0fbc4ff124e7eac498237",
+    "specs/content/gict-300/reviews/unit-01/G3/cmd-logs-run002/measure-figure-text.txt": "e98af225b8783955c2bef8968c07f8a8a98ed7ef1c943a0c93e1d3bd9f00afd4",
+    "specs/content/gict-300/reviews/unit-01/G3/cmd-logs-run002/render-review.txt": "31dde4aac118c330a992eb76a85fbb0358b1411cf2eba802cbd308fd95215b56",
+    "specs/content/gict-300/reviews/unit-01/G3/cmd-logs-run002/validate-content.txt": "5b3153a9d41a11051bff1d2f0396cf26eaaf00ae79e3b894c202823645c0e6a6",
+    "specs/content/gict-300/reviews/unit-01/G3/logs-raw-run002/check-docs-sync.txt": "cbc9f6e4b0b674cb49e2d9b795d81ed78f23dc431cba1130e4d64cf6d0bed749",
+    "specs/content/gict-300/reviews/unit-01/G3/logs-raw-run002/check-figures.txt": "0247598654ff82e5f3219e558243c0a96918eea4827512342cec18651a1c3d48",
+    "specs/content/gict-300/reviews/unit-01/G3/logs-raw-run002/check-no-answer-keys.txt": "4112af232e004a53fb65e647ac716e72e24fbc379170a9ac65774b9b099022b5",
+    "specs/content/gict-300/reviews/unit-01/G3/logs-raw-run002/check-no-em-dash.txt": "51970c44cd1ffa6de096bd5212030743f385233525d945cf9a5563e5d41a24e5",
+    "specs/content/gict-300/reviews/unit-01/G3/logs-raw-run002/check-unit-depth.txt": "912c64025f1850096714a5ca065658d9ef211db81c9ed990568456032a2fffaa",
+    "specs/content/gict-300/reviews/unit-01/G3/logs-raw-run002/validate-content.txt": "aff6e62d3ef86a0d7103adfc5beac85fe03caee88e97fa121249da5d9e456be5",
+    "specs/content/gict-300/reviews/unit-01/G3/render-inspect-run002/answers-narrow-360-run002.png": "df93dd9fa3eb8bed93a41cf0b7259e1d0b7d730e1b071cb159e1460ea91ddaaa",
+    "specs/content/gict-300/reviews/unit-01/G3/render-inspect-run002/desktop-index.png": "cb7942093f21b200fe1c082cbc90d300f5c614ed4521fdbd08fce3ff46b52912",
+    "specs/content/gict-300/reviews/unit-01/G3/render-inspect-run002/desktop-topic-01.png": "01ef3f3a7312cccfcc55a38753f015fb69a6085b28fc1eb36b9e9744d0b6c363",
+    "specs/content/gict-300/reviews/unit-01/G3/render-inspect-run002/desktop-topic-02.png": "7fce94ff294143a57ba22c6ef9d653a97a4b50933a278aa0b35a3f96a52ff31b",
+    "specs/content/gict-300/reviews/unit-01/G3/render-inspect-run002/desktop-topic-03.png": "a97e9f609cf48bf9ed4cde9039cc36c67db4b8c3e83e14dae4a7a659be0e199f",
+    "specs/content/gict-300/reviews/unit-01/G3/render-inspect-run002/desktop-topic-04.png": "62934f2a595a053aa552164f05127612633553dc054c3b7c9a46fa097311f18f",
+    "specs/content/gict-300/reviews/unit-01/G3/render-inspect-run002/desktop-unit-assessment.png": "c604bd60d64e1a5ad21095ae2d2dbd3bc1d64f1dc6b7a5d93a0531c0663afdd5",
+    "specs/content/gict-300/reviews/unit-01/G3/render-inspect-run002/desktop-unit-teacher-notes.png": "b71726c9fce5e6e311e5f8eedcf814d9c83467ef76889a7bbc0d485ebcfe7144",
+    "specs/content/gict-300/reviews/unit-01/G3/render-inspect-run002/element-capture-run002.mjs": "3b990615758036120161caa3d60e4b7881d2edaac6b096949df99104eb019dea",
+    "specs/content/gict-300/reviews/unit-01/G3/render-inspect-run002/fig-U1-6-dark-element-run002.png": "ceba105826b5be1662193b7b0145e900b6e314281c9a39b491a6b93cf1df7b40",
+    "specs/content/gict-300/reviews/unit-01/G3/render-inspect-run002/fig-U1-6-element-run002.png": "6de9de6ffe265505a666f059e6834788ec8e7d7717fb0d2ea9007b814d01f5e6",
+    "specs/content/gict-300/reviews/unit-01/G3/render-inspect-run002/narrow360-index.png": "970e1f7b84f36d2bb17c70dd460b20b341d6ecd4df5402650db0e8fe0c74009c",
+    "specs/content/gict-300/reviews/unit-01/G3/render-inspect-run002/narrow360-topic-01.png": "21fdc67d9e97b20eefa5ddbc345b64f52fb71c01d3249d20e8c9dd5518e384d6",
+    "specs/content/gict-300/reviews/unit-01/G3/render-inspect-run002/narrow360-topic-02.png": "cd8cf29f1d190fc4859da8438e0929d07ec16c9ef790c5a57e64518acec4a01c",
+    "specs/content/gict-300/reviews/unit-01/G3/render-inspect-run002/narrow360-topic-03.png": "ae3d0c9e65ef8ac1d75e9b7dee871e8cb32fbdfa0f685e9fd62d57b17b6d7abc",
+    "specs/content/gict-300/reviews/unit-01/G3/render-inspect-run002/narrow360-topic-04.png": "9f0f35b855fcbd51a60361e5625e870a81732ba99cf304c599a902d1aebf02aa",
+    "specs/content/gict-300/reviews/unit-01/G3/render-inspect-run002/narrow360-unit-assessment.png": "81d55b3d1b83be408b1613be5d9388f6084d33366062fb6ba2f82b7f91d2909f",
+    "specs/content/gict-300/reviews/unit-01/G3/render-inspect-run002/narrow360-unit-teacher-notes.png": "29c64d4737f26389c2ce4513f09367de49ea81153a2b18c6de670eb18434a58b",
+    "specs/content/gict-300/reviews/unit-01/G3/render-inspect-run002/print-a4-index.pdf": "0b662b2141f2d22925c199b6a3c8e86b173c0d6239f245ae042a32de3b3c878a",
+    "specs/content/gict-300/reviews/unit-01/G3/render-inspect-run002/print-a4-topic-01.pdf": "d27d59aeac1fc81279ebbceae5fb139072f425fad48a3b1bdf9b529a293cfdf6",
+    "specs/content/gict-300/reviews/unit-01/G3/render-inspect-run002/print-a4-topic-02.pdf": "2965d2400fc74fa2c7570d31e5b3f075d43318d625b937dc863290db55656061",
+    "specs/content/gict-300/reviews/unit-01/G3/render-inspect-run002/print-a4-topic-03.pdf": "36609d66b62f422014704df8d042e36b09794e168a244800b7e0fe8b3215a69f",
+    "specs/content/gict-300/reviews/unit-01/G3/render-inspect-run002/print-a4-topic-04.pdf": "add9486549ea87268f75293a9f2271de8be6b1db370dc18ba92b0f8169c65df2",
+    "specs/content/gict-300/reviews/unit-01/G3/render-inspect-run002/print-a4-unit-assessment.pdf": "3a0e4ef3459c3c9acbd007e1a4b9dde297fe2400d83d0a2a51d8da5575b5055d",
+    "specs/content/gict-300/reviews/unit-01/G3/render-inspect-run002/print-a4-unit-teacher-notes.pdf": "92ef7a1de918240a286bcb04a62339692422b82a6f0662b25a0e0ec9302af1f0",
+    "specs/content/gict-300/reviews/unit-01/G3/render-inspect-run002/render-inspect.json": "5c7e60c4a661148bcda89a647ba61f2f7b4b73da9540a7b682121a3afcef020e",
+    "specs/content/gict-300/reviews/unit-01/G3/render-inspect-run002/render-inspect.log": "bfa4232c6f49b97cf9404b56c145aee586fe9c3478f961323848dc7d5217768e",
+    "specs/content/gict-300/reviews/unit-01/G3/overlay-notes-run002.txt": "8b44ff0a72e490a415b8c8cee829707a1796b0aea11297cca30a5f03a4afdba2",
+    "specs/content/gict-300/reviews/unit-01/G3/summary-run002.txt": "35d9f1cb12231f3b539fa4ec9fab39ab84c5a92f703a59606e538c686a908e35",
+    "specs/content/gict-300/reviews/unit-01/G3/manifest.json": "d41e943bc1eb972777e057248fb4b083800f7c931ce287d9803791880c2ddfd4"
+  }
+}
