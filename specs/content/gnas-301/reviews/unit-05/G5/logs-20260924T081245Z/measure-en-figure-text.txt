@@ -1,0 +1,26 @@
+fig-U5-1: 780x470, 24 texts, fonts=system-ui
+   clipped: 10 a generator, a kiln,(28,-12,124x16) | traffic, waste burning(21,-12,139x16) | breath carries it in;(178,-12,124x16) | concentration x time(172,-12,135x16) | it rides the bloodstream(312,-12,156x16) | to its parking place(327,-12,125x16) | lungs, blood, brain:(477,-12,125x16) | the organ it harms(480,-12,121x16) | headache to disease:(621,-12,139x16) | the harm arrives(636,-12,108x16)
+   overlaps: 5 [a generator, a kiln, ~ traffic, waste burning 124x15] [breath carries it in; ~ concentration x time 124x15] [it rides the bloodstream ~ to its parking place 126x15] [lungs, blood, brain: ~ the organ it harms 121x15] [headache to disease: ~ the harm arrives 108x15]
+fig-U5-2: 780x470, 39 texts, fonts=system-ui
+   clipped: 0 
+   overlaps: 0 
+fig-U5-3: 780x470, 22 texts, fonts=system-ui
+   clipped: 0 
+   overlaps: 2 [a less harmful, exportable product ~ The liver is a treatment plant with a qu 40x7] [a less harmful, exportable product ~ not a shield: the sprayer's pesticide be 46x3]
+fig-U5-4: 780x470, 19 texts, fonts=system-ui
+   clipped: 0 
+   overlaps: 3 [One worked example ~ The risk 40x18] [CO breathed back out ~ takes time 4x16] [an organophosphate turned ~ harm outruns the label 45x16]
+fig-U5-5: 780x470, 15 texts, fonts=system-ui
+   clipped: 0 
+   overlaps: 0 
+fig-U5-6: 780x470, 19 texts, fonts=system-ui
+   clipped: 0 
+   overlaps: 0 
+fig-U5-7: 780x470, 21 texts, fonts=system-ui
+   clipped: 1 world environment conference(-30,180,199x16)
+   overlaps: 0 
+fig-U5-8: 780x470, 30 texts, fonts=system-ui
+   clipped: 0 
+   overlaps: 0 
+page nastaliq webfont loaded: [33mtrue[39m
+page loaded font families: Noto Nastaliq Urdu

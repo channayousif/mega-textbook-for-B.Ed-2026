@@ -933,5 +933,30 @@
     "term": "Bio-magnification",
     "definition_en": "The rise in concentration of a substance up the food chain as each predator eats many prey.",
     "definition_ur": "غذائی زنجیر پر چڑھتے ہوئے کسی مادے کی حراستی بڑھنا، جب ہر شکاری بہت شکار کھاتا ہے۔"
+  },
+  {
+    "term": "Toxic substance",
+    "definition_en": "Any substance that can harm a living organism; the subject toxicology studies, classified by origin, use and effect.",
+    "definition_ur": "کوئی بھی مادہ جو جاندار کو نقصان دے سکتا ہے؛ زہریات کا موضوع، جو اصل، استعمال اور اثر سے درجہ بندی ہوتا ہے۔"
+  },
+  {
+    "term": "Dose-response",
+    "definition_en": "The relationship between the amount of a substance reaching the target and the harm it produces, usually drawn as a curve.",
+    "definition_ur": "ہدف تک پہنچنے والی مقدار اور پیدا ہونے والے نقصان کا رشتہ، جو عام طور پر منحنی کی شکل میں بنایا جاتا ہے۔"
+  },
+  {
+    "term": "Greenhouse effect",
+    "definition_en": "The natural warming of the lower atmosphere as greenhouse gases return part of the outgoing heat downward.",
+    "definition_ur": "گرین ہاؤس گیسوں کے باہر جانے والی حرارت کا حصہ نیچے لوٹانے سے نچلی فضا کی قدرتی گرمی۔"
+  },
+  {
+    "term": "Global warming",
+    "definition_en": "The observed rise in the Earth's average surface temperature driven by the enhanced greenhouse effect.",
+    "definition_ur": "بڑھی ہوئی گرین ہاؤس اثر کی وجہ سے زمین کی اوسط سطحی درجہ حرارت میں مشاہدہ شدہ اضافہ۔"
+  },
+  {
+    "term": "Climate change",
+    "definition_en": "Long-term shifts in temperature and weather patterns, driven in the current era by human enhancement of the greenhouse effect.",
+    "definition_ur": "درجہ حرارت اور موسم کے نمونوں میں طویل مدتی تبدیلیاں، اس دور میں انسانی بڑھائی ہوئی گرین ہاؤس اثر سے۔"
   }
 ]
