@@ -1201,3 +1201,41 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   check fires only at translation_status: reviewed, and the key_terms blocks now
   present in every UR index will surface every unbanked term at that flip, which is
   the intended signal); the human quality pass before any reviewed flip.
+---
+
+## G-2026-62 - EFMP-302: the b8f8ffe figure re-optimisation shipped overlapping text to production, and no gate can see text-on-text overlap inside a committed SVG
+
+- **Status:** open
+- **Gate:** G3 (English review), accessibility criterion; affects all six EFMP-302 units
+- **Source:** EFMP-302 Unit 3 G3 feat023-r1 (2026-09-24,
+  `specs/content/efmp-302/reviews/unit-03/G3/agent-g3-efmp302-u3-feat023-r1.json`, blocking
+  finding B-01), verified by feat023-r2
+  (`agent-g3-efmp302-u3-feat023-r2.json`)
+- **Question:** commit `b8f8ffe` (2026-09-21, "refresh G2 gate evidence manifests") silently
+  included a mass SVG "re-optimisation" of all 132 figure files under
+  `static/img/figures/efmp-302/`: a second CSS block enlarged every font (12.5-13px rules
+  overridden by 16-18px rules) and long labels were re-wrapped into tspan blocks whose stacked
+  baselines collide, so distinct strings printed on top of each other in nearly every figure
+  (Unit 3 alone measured 18 full superpositions; a course-wide sweep estimated ~1000
+  collisions). Every MDX carrier was also left 50px short of the enlarged viewBoxes. Because
+  `b8f8ffe` is on `main` and the site auto-deploys from `main`, learners saw overlapping figure
+  text in production from 2026-09-21 until the repair merges. The deterministic gates could not
+  catch it: `check:figures` reads no glyph geometry, and `measure-figure-text.mjs` checks only
+  viewBox overflow and the wordmark, not text-on-text overlap. Only a review that measures
+  rendered geometry found it - and the Unit 2 feat023-r1 review, which ran the same gates but
+  did not measure figure-internal geometry, passed the same broken figures on accessibility.
+- **Action taken (author, feature 023):** all 132 files reverted to their pre-b8f8ffe geometry
+  (commit `69bae9e`; no later commit had touched them, so nothing intentional was lost), and
+  the one repair b8f8ffe had incidentally absorbed was re-applied (run-007 A-01, the fig-U3-6
+  wordmark collision). Unit 3's cycle-2 review verified the repair four independent ways,
+  including a negative control that reproduces the superpositions on the b8f8ffe bytes.
+  `measure-figure-text` now reports fig-U3-6 clean; 10 pre-existing cosmetic shape-wordmark
+  grazes remain (the reported-not-failed class prior reviews accepted).
+- **Needed, and from whom:** the owner, to (a) extend `measure-figure-text.mjs` (or add a gate)
+  so text-on-text overlap inside committed SVGs fails CI, closing the blind spot for every
+  course; (b) note that a "cosmetic" asset-wide re-optimisation is a content change that needs
+  review, not a chore commit - the commit message here described only manifest refreshes; and
+  (c) confirm the production exposure window (2026-09-21 to merge) is acceptable to close by
+  merge rather than an out-of-band hotfix.
+- **Blocks:** nothing in the automated gates (all green on the repaired bytes); the Unit 2
+  feat023-r1 accessibility pass is superseded by a cycle-2 re-run against the repaired figures.
