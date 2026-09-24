@@ -1206,7 +1206,7 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 
 ## G-2026-52 - EFMP-301 extension: the units 2+ partition is the spec's construction over a guide that gives only a week/chapter table
 
-- **Status:** open
+- **Status:** **resolved** (owner decision, 2026-09-24)
 - **Gate:** G0 intake / G1 unit-spec (partition criterion)
 - **Source:** `D-2026-0043`
 - **Detail:** The EFMP-301 guide block (`Scheme-and-Course-guides/extracted-text/1st 2026.txt:1011-1204`)
@@ -1235,15 +1235,30 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 - **Needed, and from whom:** the curriculum owner, to confirm the five derived blocks exactly as
   proposed (teaching weeks 2/3/3/3/3 across Units 2-6, after Unit 1's 2) or supply another
   partition, in the manner `G-2026-22` settled GNAS-301's.
-- **Blocks:** the `partition` criterion of `D-2026-0043`; authoring of Units 2-6 (the spec itself
-  requires owner confirmation before they are authored, `content-spec.md:942-944`). The week
-  calendar itself needs no decision: it is guide-given.
+- **Decision (2026-09-24):** the owner ruled **chapter-wise**: "chapterwise is good, consider
+  chapters as units. follow the course guide". Each guide chapter is ONE unit; the course is
+  **12 units** total: Unit 1 = Ch 1 (the existing golden unit, Weeks 1-2, untouched); Unit 2 =
+  Ch 2 Human Growth and Development (W3-4); Unit 3 = Ch 3 Learning Theories (W5-7); Unit 4 =
+  Ch 4 Cognitive Processes in Learning (W8-9); Unit 5 = Ch 5 Intelligence and Creativity
+  (W10); Unit 6 = Ch 6 Motivation and Emotion (W11); Unit 7 = Ch 7 Individual Differences and
+  Special Needs (W12); Unit 8 = Ch 8 Classroom Management (W13); Unit 9 = Ch 9 Assessment and
+  Evaluation (W14); Unit 10 = Ch 10 Teaching-Learning Process (W15); Unit 11 = Ch 11 Mental
+  Health and Well-being in Schools (W16); Unit 12 = Ch 12 Guidance and Counseling (W16 - the
+  guide's calendar combines Chapters 11-12 in Week 16; recorded honestly in the partition
+  note, but they remain separate units per the chapter rule). The partition is now
+  **owner-determined** on the guide's chapter structure, superseding the five-block derived
+  merge. The extension's unit blocks are reworked to this partition and re-evaluated
+  (`D-2026-0044`).
+- **Blocks:** ~~the `partition` criterion of `D-2026-0043`; authoring of Units 2-6~~
+  **unblocked for the chapter-wise rework**: the spec must be reworked to the 12-unit
+  partition and pass G0/G1 re-intake before authoring begins. The week calendar itself needs
+  no decision: it is guide-given.
 
 ---
 
 ## G-2026-53 - EFMP-301 extension: flipping the content-spec to `status: draft` makes the published Unit 1 fail `check:pipeline-gate`
 
-- **Status:** open
+- **Status:** **resolved** (owner decision, 2026-09-24)
 - **Gate:** G0 intake / G1 unit-spec (structure criterion, pipeline consequence)
 - **Source:** `D-2026-0043`
 - **Detail:** The Unit-1-only spec carried `status: approved` (commit `6158d25`); the extension
@@ -1265,5 +1280,11 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   `status: approved`, which restores the gate; or (b) by directing a grandfather rule for units
   published under a previous approval of the same course (a `check-pipeline-gate.mjs` policy
   change, not a spec edit), if the extension is to merge before approval.
-- **Blocks:** merge of the extension branch to `main` (CI `check:pipeline-gate`); nothing in this
+- **Decision (2026-09-24):** the owner **confirms the extension** (option a): once the evaluator
+  approves the chapter-wise partition (`D-2026-0044`), the content-spec is set back to
+  `status: approved`, recording `D-2026-0043`, `D-2026-0044` and this ruling in its front-matter
+  note, which restores `check:pipeline-gate` for Unit 1. **No changes to gate code** (option b
+  declined).
+- **Blocks:** ~~merge of the extension branch to `main` (CI `check:pipeline-gate`)~~ **unblocked
+  once the reworked spec passes re-intake and `status: approved` is set**; nothing in this
   evaluation itself, and nothing in the other content gates.
