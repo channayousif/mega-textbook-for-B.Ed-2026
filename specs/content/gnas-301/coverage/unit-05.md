@@ -15,9 +15,9 @@ the source key it is grounded in.
 | U5-04 | topic-04.mdx | Risk management | alibhatti2017 |
 | U5-05 | topic-04.mdx | Multilateral environmental agreements | guardans2013 |
 | U5-05 | topic-04.mdx | Multilateral environmental agreements | un-paris |
-| U5-06 | topic-04.mdx | Multilateral environmental agreements | un-sdgs |
-| U5-06 | topic-04.mdx | Multilateral environmental agreements | guardans2013 |
-| U5-07 | topic-02.mdx | Fate of absorbed toxins and xenobiotics, including detoxification and bioactivation | park-park |
+| U5-06 | topic-04.mdx | Sustainable Development Goals (SDGs) | un-sdgs |
+| U5-06 | topic-04.mdx | Sustainable Development Goals (SDGs) | guardans2013 |
+| U5-07 | topic-04.mdx | Environmental laws, policies, guidelines and strategies related to public health | park-park |
 | U5-07 | topic-04.mdx | Multilateral environmental agreements | haines-frumkin |
 
 ## Reinforcement
@@ -25,4 +25,4 @@ the source key it is grounded in.
 | Sub-topic ID | File | Section | Source |
 |---|---|---|---|
 | U5-01 | unit-assessment.mdx | Unit summary | who-air-2024 |
-| U5-06 | unit-teacher-notes.mdx | Common misconceptions to probe | guardans2013 |
+| U5-05 | unit-teacher-notes.mdx | Common misconceptions to probe | guardans2013 |

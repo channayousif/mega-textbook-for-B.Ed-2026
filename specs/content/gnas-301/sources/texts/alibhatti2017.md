@@ -1,6 +1,6 @@
 # Bound excerpt - alibhatti2017
 
-Alibhatti, Z., Qureshi, K., Bhatti, I., & Unar, I. N. (2017). Determination of arsenic
+Alibhatti, Z., Qureshi, K., Bhatti, I., Khuhawar, M. Y., & Unar, I. N. (2017). Determination of arsenic
 and health risk assessment in the ground water of Sindh, Pakistan. *Mehran University
 Research Journal of Engineering and Technology, 36*(4). (No DOI; DOAJ-listed,
 eISSN 2413-7219.)
