@@ -52,13 +52,13 @@ files at that commit. The geng-300 reds are recorded as known-stale-on-main in t
 | Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-05/G2/20260924T031952784Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | advisory run 001 (disposition: pass; advisory F1-F8) at reviews/unit-05/G3/agent-g3-gict300-u5-run001.json; agent reviews advisory under ADR-0019 |
 | Unit 5 | G4 ur-translation | ▢ | | |
-| Unit 5 | G5 ur-review | ▢ | | |
+| Unit 5 | G5 ur-review | ▢ | | advisory run 001 (disposition: revise; F1 ERQ-2 Urdu tag repaired) at reviews/unit-05/G5/agent-g5-gict300-u5-run001.json; agent reviews advisory under ADR-0019 |
 | Unit 5 | G6 assets | ▢ | | |
 | Unit 5 | G7 publish | ▢ | | |
 | Unit 6 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0030; content-spec status: approved |
 | Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-06/G2/20260924T031955446Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | advisory run 001 (disposition: pass, no blocking findings) at reviews/unit-06/G3/agent-g3-gict300-u6-20260923T171945671Z.json; agent reviews advisory under ADR-0019 |
 | Unit 6 | G4 ur-translation | ▢ | | |
-| Unit 6 | G5 ur-review | ▢ | | |
+| Unit 6 | G5 ur-review | ▢ | | advisory run 001 (disposition: revise; F1-F2 figure labels repaired) at reviews/unit-06/G5/agent-g5-gict300-u6-run001.json; agent reviews advisory under ADR-0019 |
 | Unit 6 | G6 assets | ▢ | | |
 | Unit 6 | G7 publish | ▢ | | |
