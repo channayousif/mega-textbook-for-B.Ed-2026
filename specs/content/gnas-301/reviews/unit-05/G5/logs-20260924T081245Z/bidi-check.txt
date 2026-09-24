@@ -1,0 +1,115 @@
+{
+ "assessment": {
+  "easternDigits": 0,
+  "arabicIndicDigits": 0,
+  "westernDigits": 144,
+  "optionLettersPresent": [
+   "a)",
+   "b)",
+   "c)",
+   "d)"
+  ],
+  "tableHeaderVisualOrderRTL": null
+ },
+ "topic01": {
+  "listDirection": "rtl",
+  "textAlign": "left",
+  "latinEmbeds": [
+   "WHO"
+  ],
+  "easternDigits": 0
+ }
+}
+{
+ "article": {
+  "dir": "rtl",
+  "align": "start"
+ },
+ "ps": [
+  {
+   "dir": "rtl",
+   "align": "left",
+   "snippet": "کراچی کی ایک اپارٹمنٹ بلڈ",
+   "left": 561,
+   "right": 1264,
+   "width": 703
+  },
+  {
+   "dir": "rtl",
+   "align": "left",
+   "snippet": "یہ موضوع اسی سوال کا پیچھ",
+   "left": 561,
+   "right": 1264,
+   "width": 703
+  },
+  {
+   "dir": "rtl",
+   "align": "left",
+   "snippet": "زہری عنصر وہ مادہ ہے جو ک",
+   "left": 561,
+   "right": 1264,
+   "width": 703
+  },
+  {
+   "dir": "rtl",
+   "align": "left",
+   "snippet": "دو خیال پورے جدول کو ترتی",
+   "left": 561,
+   "right": 1264,
+   "width": 703
+  },
+  {
+   "dir": "rtl",
+   "align": "left",
+   "snippet": "ایک مکمل حل شدہ مثال۔ داد",
+   "left": 561,
+   "right": 1264,
+   "width": 703
+  },
+  {
+   "dir": "rtl",
+   "align": "left",
+   "snippet": "عام غلط فہمی۔ \"اگر اس کی ",
+   "left": 561,
+   "right": 1264,
+   "width": 703
+  }
+ ],
+ "h2": {
+  "dir": "rtl",
+  "align": "left",
+  "text": "ایک حقیقی جماعتی صور"
+ }
+}
+UR {"h2":{"text":"ایک حقیقی جماعتی ص","elemLeft":561,"elemRight":1264,"textLeft":561,"textRight":1068},"firstLi":{"text":"","elemLeft":1202,"elemRight":1264,"textLeft":1226,"textRight":1264}}
+EN {"h2":{"text":"A real classroom s","elemLeft":316,"elemRight":1019,"textLeft":316,"textRight":822},"firstLi":{"text":"","elemLeft":316,"elemRight":378,"textLeft":316,"textRight":354}}
+{
+ "chain": [
+  "H2.anchor anchorTargetStickyNavba",
+  "DIV.theme-doc-markdown markdown",
+  "ARTICLE.",
+  "DIV.docItemContainer_Djhp",
+  "DIV.col docItemCol_VOVn",
+  "DIV.row",
+  "DIV.container padding-top--md padd",
+  "MAIN.docMainContainer_TBSr",
+  "DIV.docRoot_UBD9",
+  "DIV.docsWrapper_hBAB",
+  "DIV.theme-layout-main main-wrapper",
+  "DIV."
+ ],
+ "markdownAlign": "left",
+ "markdownDir": "rtl",
+ "h2Align": "left",
+ "htmlDir": "rtl"
+}
+{
+ "probeAlign": "left",
+ "probeDir": "rtl",
+ "elemLeft": 561,
+ "elemRight": 1264,
+ "textLeft": 561,
+ "textRight": 622,
+ "mdInlineStyle": null,
+ "mdAlign": "left"
+}

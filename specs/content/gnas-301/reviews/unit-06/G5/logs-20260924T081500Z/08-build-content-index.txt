@@ -1,0 +1,2 @@
+✓ Wrote 122 content-index records to static/content-index.json
+✓ Copied catalog/courses.json to static/catalog-courses.json

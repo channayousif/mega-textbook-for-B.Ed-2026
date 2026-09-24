@@ -1,0 +1,467 @@
+{
+  "schema_version": 1,
+  "course_code": "GNAS-301",
+  "unit_no": 5,
+  "stage": "G5",
+  "disposition": "escalate",
+  "reviewer_id": "agent:g5-reviewer",
+  "author_run_id": "claude-code:019-author-gnas-301",
+  "reviewer_run_id": "agent:g5-reviewer:gnas301-u5-run001",
+  "model": "LongCat-2.0",
+  "started_at": "2026-09-24T08:12:45Z",
+  "completed_at": "2026-09-24T09:00:34Z",
+  "skill_digest": "02797f90adddd8f4bc50c6e80c6e68d8f6f0219d68d297aabcc8b5443bace5a8",
+  "input_manifest": {
+    ".claude/agents/g5-reviewer.md": "b63596b668dd8814fc7b34d59326171f7c789b8dc4e631e30c2c19fe05f2c68a",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g5.md": "7cbdf9929e6073b71663ec8951a9a42d1e8e683af479434f8409c81002d33159",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "f1d7f063cc2c826693a3d8428fb5d3ee45455fdb7906ebc5adadee8b9a434d47",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-1/gnas-301/course-overview.mdx": "41dce7cbd1847a767e780693e7375cb99e4a5e803caef0d7bb54c78b14fbf8ee",
+    "docs/semester-1/gnas-301/unit-05/index.mdx": "843bc42d12df31ceb84d13aa3abaf7c24d1fc43931430467ff7484b7fd90b7a6",
+    "docs/semester-1/gnas-301/unit-05/topic-01.mdx": "5b0dd379a7a9928cd4669ca30fd10fc9b9e244aa8d5225e716e1b353336d8a65",
+    "docs/semester-1/gnas-301/unit-05/topic-02.mdx": "0e874cf97bea80494038b945642223cd4a1db73d5e3aff3dbf75ceaa3140f341",
+    "docs/semester-1/gnas-301/unit-05/topic-03.mdx": "df4275e4075b990fc9d88e3068165ee5b89e51255c9938b4f103f45d25270c5c",
+    "docs/semester-1/gnas-301/unit-05/topic-04.mdx": "5ba8700726010225c9a85ea84a5df533b629130bd91a4edd2399f7e7d725d2cb",
+    "docs/semester-1/gnas-301/unit-05/unit-assessment.mdx": "b5693281d49f69bf12b4413f720a048868dfaa55d34d42ffda3556307ec09fae",
+    "docs/semester-1/gnas-301/unit-05/unit-teacher-notes.mdx": "62ea99dca01b0a66caeedd5ebd359a840abd9dacfd24c0a15df2b1076c129a86",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/index.mdx": "53130b29df18d982ba968dbdf03bdbfb708268639d52120e1e55aa1743f8320b",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-01.mdx": "55b02b5bed4cfa06ec795fb2d2ffb61bcbfacfab707292f466534666919adae1",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-02.mdx": "c66694cae6e9f910d65224dbaa4e22a1d81e8decbd1128310d56f593db1ad4c6",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-03.mdx": "14d8ab5a35b3869e097ef9087f6b34e34f315a58f2bbf001292b11c39cb9b7ef",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-04.mdx": "433e4238855ad6cdb98b10878bc7de89b589ab58b83a63ba0c999875fd26e17e",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/unit-assessment.mdx": "2c40b10323bcb1c82e09ddd43015c88671994fa39de68318593e45f636b5b946",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/unit-teacher-notes.mdx": "ce6c1f60c119b62024c1c822ed20e74ce107f9614fa53041b92ed5b66f6627e6",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "41b698f8cbbb12f4030d6893083a5c36e4a19848b5ddb86206e5ba72847b8b13",
+    "scripts/check-no-answer-keys.mjs": "f38d60e5360e0c29f2dae02001195690f3b95e0ad2d7ae1a3c03a0d09c053f0d",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "bb614c625f7bf397ce51a317bdb8901711c00fa009d4ad0a506c5096e5b9ddd2",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "77f03816f68663621059f17745109fdde9b103c555f707e0c62d5ff56d2a4cd9",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "973496faae3366d13e8cdd3ba8d68edf7bd3745bdc6928311ee03c55f24b18b2",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/gnas-301/concepts/unit-05.md": "cacb00e391c288c1cf27f9d4393442e90a28f04b2492c128d5d7a8eb203f7241",
+    "specs/content/gnas-301/content-spec.md": "e2b7b7b30af27baff40be1be9e60cd47ee657f98963c4a4fc7a8af65f46eaefc",
+    "specs/content/gnas-301/coverage/unit-05.md": "51cc2cd7dea218521090b6dcc69c9869a1779b3e9efd2d0d9d93f42cb392fe41",
+    "specs/content/gnas-301/figures/unit-05.md": "7a0ded655cd2a55573499df7faab42ff0119ace6c7cdd0a96f1e798f65080aaf",
+    "specs/content/gnas-301/sources/texts/alibhatti2017.md": "7390f51de2044c176f280826509ab605328d814da73aa86da690d428d842439f",
+    "specs/content/gnas-301/sources/texts/guardans2013.md": "971c266938703d1196db2c1e60b614710960984eb7f8a6fba86cb0edf2e4aec6",
+    "specs/content/gnas-301/sources/texts/who-air-2024.md": "8698e0efef2db62ec02d3b3e409f4b6d913ea7fae67494688c30990866eb4a9e",
+    "specs/content/gnas-301/sources/texts/who-aqg-2021.md": "60b887aff2c0545ec568cd8bda275c28f7d7437ade7fef3aeb39cdd60617384f",
+    "specs/content/gnas-301/sources/unit-05.md": "a1c82970fef5c885c68cd2a9ed42fabfa7b57217702d4f6186922da463a09864",
+    "specs/content/style-guide.md": "db96c9b33b0fb9522986462a0b519620c3c1d7602a046d7b90e638f643da4610",
+    "specs/content/terminology.csv": "ad917e28cde688eb72bd92226c2326e2d23da3da80fc53ea8c812b1a47f73337",
+    "static/img/figures/gnas-301/unit-05/fig-U5-1.dark.svg": "56d8ad06c70e278422b72c80463f866726cc137ea408a8ef854016f136631059",
+    "static/img/figures/gnas-301/unit-05/fig-U5-1.svg": "f852415a687202b54efd226485dbe877eae2ccbc6d220e58b03d33cd80bc7598",
+    "static/img/figures/gnas-301/unit-05/fig-U5-1.ur.dark.svg": "ebdf356e00c8a70012ad5b39e4f92c8b4726cec909348cf2ad7ff7080253741a",
+    "static/img/figures/gnas-301/unit-05/fig-U5-1.ur.svg": "ec4db62fcfe51222bf0266ab4f74aeb32fd96a8c4537408380ed4e6d166203be",
+    "static/img/figures/gnas-301/unit-05/fig-U5-2.dark.svg": "256aeb45c40cb8b276b101450ad073c8677de62530c91012031ea9bb3829d9a5",
+    "static/img/figures/gnas-301/unit-05/fig-U5-2.svg": "2ce98ea308ea4b4d284d1e6ea76c2470627b590372a956955d72ad952d53967f",
+    "static/img/figures/gnas-301/unit-05/fig-U5-2.ur.dark.svg": "21c038ea083fcbdb976617fd99233fd127510d577c532167ab14e0f57fbc8d93",
+    "static/img/figures/gnas-301/unit-05/fig-U5-2.ur.svg": "a810cb3c6ce3ec9826c313d6665adf27e709b35e5927986ed4f941c603f161fd",
+    "static/img/figures/gnas-301/unit-05/fig-U5-3.dark.svg": "8bdad5ea0bb7aeb5786b7af506fec8b15d688526bd6e3b33e5388cd0cf6559bc",
+    "static/img/figures/gnas-301/unit-05/fig-U5-3.svg": "e80daf74c3f12e61e16268def05c78d3a570d626dbc7ccb8ad194b1b0e0c7af3",
+    "static/img/figures/gnas-301/unit-05/fig-U5-3.ur.dark.svg": "d57467f3fd8e2948e441269a78f59679e880ea7f5ff966c280e6cb9f5f29c9a0",
+    "static/img/figures/gnas-301/unit-05/fig-U5-3.ur.svg": "f5c2a93dce18fc6e9df5f308974a910450d3e6a993633db2db4204f5fbc39ed8",
+    "static/img/figures/gnas-301/unit-05/fig-U5-4.dark.svg": "c1970d27d50f5374d36ecd46ab6be8a4382b6452ff816b5905c7792fb1b9b324",
+    "static/img/figures/gnas-301/unit-05/fig-U5-4.svg": "0659e6f6d85392d84af06a86b5ba5c22e427b2cf2eb50c1d43e3293ac0120f55",
+    "static/img/figures/gnas-301/unit-05/fig-U5-4.ur.dark.svg": "6ede9271bb2d636828c4c4b5f4c55bb01f50d5745ae39a5eecec994319f21f2a",
+    "static/img/figures/gnas-301/unit-05/fig-U5-4.ur.svg": "e7aee79a3902c5b66bdbfe520dadf37da6bbfc744cfcd9d1be13c65ec6a5a4d7",
+    "static/img/figures/gnas-301/unit-05/fig-U5-5.dark.svg": "52e8a16c08e0a62fd13bceb94e75d7203d1717eb91798c64f62bae22d25c4518",
+    "static/img/figures/gnas-301/unit-05/fig-U5-5.svg": "392fb4584c42c010ef992d118cc1735887688fc3f6041c3f451d7136a2b2ac3b",
+    "static/img/figures/gnas-301/unit-05/fig-U5-5.ur.dark.svg": "da250104f1d057acc22b8815d6748d225127c200e602d35369c54bdc067fcc19",
+    "static/img/figures/gnas-301/unit-05/fig-U5-5.ur.svg": "594bf0cc15887885252efd0d1c44b0b17faa24fc99996f040b24b6c008ee064b",
+    "static/img/figures/gnas-301/unit-05/fig-U5-6.dark.svg": "26b2b49c0123f590712e9039f557a907ecf06c63250adf0c70499e94c4ae996b",
+    "static/img/figures/gnas-301/unit-05/fig-U5-6.svg": "ecf7f850a5975f896ae45b8717cd05c44adcecb8c31c350ec5878ce84fead13f",
+    "static/img/figures/gnas-301/unit-05/fig-U5-6.ur.dark.svg": "51e7235b72578f16e3f5316127d2b30c2859cc72a93f3e9e8ad032b50fc51ca2",
+    "static/img/figures/gnas-301/unit-05/fig-U5-6.ur.svg": "e4b31b730f931424fe766fe281077056ca25a1d89616b523c6fbafefa46bb937",
+    "static/img/figures/gnas-301/unit-05/fig-U5-7.dark.svg": "5a3809bf5ea36f019388fbf8c8e31fa47f9c2ac557e23c4946c9ec455ab90f2a",
+    "static/img/figures/gnas-301/unit-05/fig-U5-7.svg": "b1058eae6ace638c076b458406e5634d1cd67b15163f2cdeeebe894d12e699ac",
+    "static/img/figures/gnas-301/unit-05/fig-U5-7.ur.dark.svg": "28ca4e25d064531c09c807a3ba5d161a4444962b54a3c6a5f901a8a2114985ab",
+    "static/img/figures/gnas-301/unit-05/fig-U5-7.ur.svg": "67024bc56c01dd0dbd04c350b506d11136fc521e66a4a89c89be86826e6e5ed9",
+    "static/img/figures/gnas-301/unit-05/fig-U5-8.dark.svg": "c78e2681bab2a620268cea1c8393724d13e1d2d19faf276b00f64009ce18cff2",
+    "static/img/figures/gnas-301/unit-05/fig-U5-8.svg": "84af2aaaef2a5a74e6dd64558db450fff29006f764a7eba03d17031466afb53e",
+    "static/img/figures/gnas-301/unit-05/fig-U5-8.ur.dark.svg": "ff71ea7aaace61c7df4c1a8879203f95ecea3bd7a42ee8a532c6f4d4f000b043",
+    "static/img/figures/gnas-301/unit-05/fig-U5-8.ur.svg": "bb275c31b6b25b5ce095f7409ec0464e2f6717083ae7289dce19082aaa681883"
+  },
+  "g3_report": "specs/content/gnas-301/reviews/unit-05/G3/round-02/agent-g3-gnas301-u5-run002.json (NOT accepted: disposition revise with 5 unresolved blocking findings; 5 of 7 English unit files in this G5 manifest differ from that report's bound inputs because the round-2 repairs were applied post-report - see blocking finding 1 and G-2026-32)",
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "fail",
+      "evidence": [
+        "Content-side authority verified: specs/content/gnas-301/content-spec.md ## Unit 5 (SLO:GNAS-301-5-1..5-2, sub-topics U5-01..U5-07) remains the approved authority; i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/index.mdx:22-32 carries all seven unit learning outcomes one-for-one against docs/semester-1/gnas-301/unit-05/index.mdx:26-38; clo_refs preserved verbatim in the frontmatter of all 7 Urdu files.",
+        "English dependency NOT satisfied (decisive for this criterion): G3 round 1 (reviews/unit-05/G3/20260924T001055Z-g3-attempt-01.json) and round 2 (reviews/unit-05/G3/round-02/agent-g3-gnas301-u5-run002.json) both ended disposition revise with unresolved blocking findings; 5 of 7 English unit files differ between the G3 round-2 manifest and this G5 manifest because the round-2 repairs were applied post-report; the third cycle is owner-gated (specs/gaps.md G-2026-32, open). See blocking finding 1.",
+        "Grading note: the Unit 4 G5 report graded authority pass with the same dependency failure carried as a blocking finding; this review grades fail because the G5 rubric makes accepted G3 evidence for the exact bound English inputs a hard requirement of the G5 authority check."
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "pass",
+      "evidence": [
+        "All in-text citation keys preserved with supporting meaning in the Urdu: (ڈبلیو ایچ او، 2021) topic-01:36; (ڈبلیو ایچ او، 2024) topic-01:39; (البھٹی وغیرہ، 2017) topic-01:44 and topic-04:58; (گوارڈنز اور کاسٹرو-جمیز، 2013) topic-04:44; (ڈبلیو ایچ او، بلا تاریخ) topic-02:43; (اقوام متحدہ، بلا تاریخ) topic-04:46; (اقوام متحدہ، 2015) topic-04:50.",
+        "specs/content/gnas-301/sources/unit-05.md verified: two registry-verified open-access sources (guardans2013 Crossref-verified, alibhatti2017 DOAJ-verified) plus publisher-fetched WHO/UN pages; the two print monographs (haines-frumkin, park-park) are declared under ## Unverifiable sources with attempts, dates and owner rulings (D-2026-0001, confirmed in G-2026-23/D-2026-0021), which per the G3 reference does not by itself block.",
+        "The 4.2 million premature-deaths figure is correctly localized as 42 لاکھ (topic-01:39); Further reading entries are kept in English with translated annotations in all four topics (topic-01:93-96; topic-02:93-95; topic-03:92-94; topic-04:106-110)."
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "All 7 sub-topics U5-01..U5-07 (specs/content/gnas-301/coverage/unit-05.md) are taught in Urdu under matching headings: topic-01 (فضا کے عوامل کے زہری اثرات), topic-02 (جذب شدہ زہروں اور زینو بائیوٹکس کی منزل، بشمول صاف کرنا اور بائیو ایکٹیویشن), topic-03 (قدرتی صاف کرنے کے عمل), topic-04 (رسک کا انتظام / کثیر الجہتی ماحولیاتی معاہدے / پائیدار ترقی کے مقاصد (ایس ڈی جی) / عوامی صحت سے متعلق ماحولیاتی قوانین...).",
+        "Every required outcome is assessed in Urdu: the 10/10/5 bank spans all four topics (MCQs 1-3 -> 5.1; 4-7 -> 5.2/5.3; 8 -> 5.3; 9-10 -> 5.4; RRQs 1-2 -> 5.1, 3-4 -> 5.2, 5-7 -> 5.3, 8-10 -> 5.4; ERQs 1-4 one per topic plus the integrative ERQ-5), and each topic carries its 4-item formative set (اپنی سمجھ جانچیں).",
+        "Full passage comparison across all 7 file pairs found no omissions or additions: every EN section has its UR counterpart and vice versa; no heading-only stubs."
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "fail",
+      "evidence": [
+        "Independently answered all 10 Urdu MCQs from the Urdu text alone before reading the key: 1-b, 2-c, 3-c, 4-a, 5-b, 6-b, 7-c, 8-b, 9-b, 10-b - identical to the EN key and the UR key (unit-assessment.mdx:124-133); option order a-d preserved item-for-item; no translation reveals an answer or lowers cognitive demand.",
+        "RRQ and ERQ task meaning, constraints (150-200 / 160-200 / 150-180 / 170-200 words), mark schemes (نمبر (2)/(4) allocations identical) and ERQ analytic rubric weights (0-3/0-2/0-1 bands, totals 10 each) are preserved (unit-assessment.mdx:135-172).",
+        "FAIL locus: the RRQ-10 model answer misnames the subject of two of the six year-subject pairs - \"ریو 1992 (موسم اور حیاتیاتی تنوع کنونشن)\" and \"پیرس 2015 (موسم)\" (unit-assessment.mdx:151-153) render \"climate\" as \"season\" (EN :180-181), so a marker checking \"1 per correct year-subject pair\" against this model would accept the wrong subject word. Covered by blocking finding 3."
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "pass",
+      "evidence": [
+        "All 8 Urdu figures carry translated, descriptive alt text (topic-01:34,42; topic-02:34,41; topic-03:34,43; topic-04:39,52) and render through the lazy-loading <Figure> component (loading=lazy; in-viewport images complete with naturalWidth>0; zero 4xx/5xx requests - render-inspect.json).",
+        "dir=rtl and lang=ur on all 7 pages; the Nastaliq webfont loads for page prose (document.fonts.check true, loaded family \"Noto Nastaliq Urdu\"); A4 print emulation shows 0 clipped article elements with dark figure variants hidden and light variants visible (printcheck-ur.json).",
+        "Figure-label rendering defects are recorded under the rtl criterion (fig-U5-1 clipped labels, fig-U5-4 overlap); the console hydration errors are recorded as advisory (the English pages share them)."
+      ]
+    },
+    {
+      "id": "completeness",
+      "status": "pass",
+      "evidence": [
+        "Heading- and passage-level parity verified across all 7 file pairs: index (intro, outcomes, prerequisite, in-this-unit, how-to-use), each topic (classroom situation, explanation, activity, check-your-understanding, summary, self-assessment checklist, practicum, summative task, mini-rubric, further reading), unit-assessment (unit summary, summative assessment with MCQ/RRQ/ERQ banks, answers and marking guidance with all three subsections), teacher-notes (all 5 sections).",
+        "All 8 figure IDs present in the Urdu files pointing at .ur.svg variants; word counts, activity timings (25/20/25/25 منٹ) and checklist item counts preserved; the 10/10/5 bank structure and blooms_summary descriptions match the English."
+      ]
+    },
+    {
+      "id": "semantics",
+      "status": "fail",
+      "evidence": [
+        "Material divergences: \"toothless talk shops\" negation reversed (topic-04:60, teacher-notes:29 - blocking finding 2); \"spill\" rendered as the stage term اخراج/excretion (topic-02:74 - blocking finding 7); \"climate\" rendered موسم/season in the RRQ-10 model answer and both governance figures (blocking finding 3); \"trainee teacher\" reversed to \"trained teacher\" (advisory finding 9); \"unglamorous\" rendered with the non-word \"بے نم والا\" (advisory 14 repair list).",
+        "Preserved correctly (spot-verified paired passages): the CO mechanism (binds the blood's oxygen seats hundreds of times more tightly; body suffocates with clean-looking lungs - topic-01:36); dose = concentration x time (topic-01:63); the four-stage journey with its two outcomes (topic-02:36-39); the phase-1/phase-2 balance and bioactivation risk (topic-03:36); the four risk management options with the school example (topic-04:33); the six MEAs with years and subjects (topic-04:41-46); the PEPA 1997 / NEQS / provincial-agency chain (topic-04:56); the 24-district arsenic finding (topic-01:44).",
+        "Epistemic force preserved: modal claims stay modal (بڑھا سکتا ہے / کر سکتا ہے for \"can raise\" / \"can be\"); no may-to-always shifts found; quantities and dates checked one-for-one (4.2 million -> 42 لاکھ; 195 parties; 2 degrees / 1.5; all six MEA years)."
+      ]
+    },
+    {
+      "id": "terminology",
+      "status": "fail",
+      "evidence": [
+        "Frozen bank compliance where banked terms apply: Rubric = معیارِ جانچ (all four mini-rubric headings and the ERQ معیارِ جانچ sections); Summative Assessment = مجموعی جائزہ (unit-assessment:24); Group Work = گروہی کام (teacher-notes:22); Teaching Strategies = حکمتِ تدریس (teacher-notes:20); Self-Assessment = خود جائزہ (checklist headings). The bank was not modified.",
+        "FAIL loci: detoxification prose/figure split صاف کرنا vs ڈی ٹاکسیفیکیشن (blocking finding 4); arsenic misspelled آرینک x12 against Unit 2's آرسینک (advisory 10); واقفیت for exposure with the figure using رابطہ (advisory 8); Bloom \"Evaluate\" split جانچیں/تشخیص colliding with the banked Assessment = تشخیص (advisory 11).",
+        "The ten authored Urdu concept labels flagged for G5 review in specs/content/gnas-301/concepts/unit-05.md:27-42 were each compared against the prose: نقصان تک راستہ, خوراک اور راستہ, زینو بائیوٹک کا سفر, ایس ڈی جی کا ڈھانچہ and پاکستان کا ماحولیاتی قانونی ڈھانچہ are consistent with the prose; ڈی ٹاکسیفیکیشن اور بایو ایکٹیویشن, قدری ڈی ٹاکسیفیکیشن نظام, خطرے کے انتظام کے اختیارات and کثیر الفریقی ماحولیاتی معاہدے drift from the prose students read (advisory 12)."
+      ]
+    },
+    {
+      "id": "register",
+      "status": "pass",
+      "evidence": [
+        "Overall academic-plain (درسی مگر عام فہم) per style-guide.md:129: natural sentence order, gender-inclusive first-person checklists (سکتا/سکتی ہوں), consistent transliteration conventions for technical loans (سی او، پی ایم 2.5، این ای کیو ایس، پی ای پی اے، اے کیو آئی), and the classroom narratives kept concrete and local (کراچی، لوڈشیڈنگ، روئی کے کھیت).",
+        "A repair list of coinages, calques and agreement errors is recorded as advisory finding 14 (بے نم والا، سطر، قطرے، حقیقی والا، طلبے، جماعتی صورتحال, and others); each is localized and does not block comprehension of the surrounding passages."
+      ]
+    },
+    {
+      "id": "rtl",
+      "status": "fail",
+      "evidence": [
+        "Programmatic checks passed on the rendered Urdu pages (render-inspect.json, bidi-check.json, printcheck-ur.json): dir=rtl and lang=ur on all 7 pages; computed direction rtl on article, h1 and lists; Nastaliq webfont loads for page prose; Western digits only (0 Eastern/Arabic-Indic digits, 144 Western digits in the assessment); Latin embeds (WHO, option letters a-d) correctly isolated; tables fit the 360px viewport (width 328, no document overflow on any page); A4 print emulation clean (0 clipped elements, light figure variants visible).",
+        "FAIL loci: (1) the platform RTL alignment defect - the Urdu build CSS flips text-align:right to left so Urdu headings and short/last lines anchor to the physical left edge on every Urdu page, production-confirmed (blocking finding 6; rtl-alignment-defect.txt); (2) fig-U5-1.ur.svg's 10 second-line stage labels clipped at y=0 from invalid y attributes (blocking finding 5; check-y-attr.txt, ur-figure-measurements.json); (3) fig-U5-4.ur.svg label overlap and duplicated fragment (advisory 13).",
+        "Limitation: no human-eye visual confirmation of Nastaliq legibility/shaping in this session (advisory 16); 20 PNGs (desktop 1280x800, narrow 360x640, A4 print 794x1123, and 8 Urdu figure renders) are saved under renders-20260924T081245Z for that confirmation."
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "No accepted G3 evidence exists for the English inputs bound to this review. Both G3 rounds ended in disposition revise (specs/content/gnas-301/reviews/unit-05/G3/20260924T001055Z-g3-attempt-01.json, 5 blocking findings; specs/content/gnas-301/reviews/unit-05/G3/round-02/agent-g3-gnas301-u5-run002.json, 5 blocking findings: the 5.1 RRQ deficit, the PM2.5 claims, the fig-U5-3 arrows, the coverage U5-07 cell, the alibhatti2017 author list). The author applied the full repair set post-report and this G5 manifest binds the repaired state at b80bcc9, where 5 of 7 English unit files (docs/semester-1/gnas-301/unit-05/topic-01.mdx..topic-04.mdx, unit-assessment.mdx) carry digests different from the G3 round-2 manifest. The G5 rubric requires accepted G3 evidence for the exact English inputs; a changed English digest invalidates the dependency. The third G3 cycle is owner-gated (specs/gaps.md G-2026-32, open; the same dependency question is already recorded for Units 1, 2, 4, 5, 6 in G-2026-24/31/32/33/34). The Urdu-side findings below stand on their own evidence and are preserved for the repair cycle; the dependency itself needs the curriculum owner to accept the repaired English state or authorise a third G3 cycle."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "Negation reversed in the quoted misconception. EN docs/semester-1/gnas-301/unit-05/topic-04.mdx:104 \"International agreements are toothless talk shops\" and EN docs/semester-1/gnas-301/unit-05/unit-teacher-notes.mdx:41 \"MEAs are toothless talk shops\" are rendered \"بین الاقوامی معاہدے دانت والی بات کرنے والی جگہیں ہیں\" (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-04.mdx:60) and \"ایم ای اے دانت والی بات کرنے والی جگہیں ہیں\" (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/unit-teacher-notes.mdx:29). \"دانت والی\" means \"possessing teeth\", the opposite of \"toothless\", so the quoted claim reads as \"agreements are toothed talk shops\"; the refutation that follows (\"An MEA has no police, which is a real limit...\") no longer answers the quoted claim coherently. Repair: \"بے دانت\" with a natural rendering of \"talk shops\" (e.g. \"بے دانت باتوں کی محفلیں\") in both files."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "\"Climate\" is rendered as موسم/موسمی (season/seasonal) in the marking guidance and both governance figures, misnaming the subject of two MEAs and SDG 13. i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/unit-assessment.mdx:152-153 gives the RRQ-10 model answers \"ریو 1992 (موسم اور حیاتیاتی تنوع کنونشن)\" and \"پیرس 2015 (موسم)\" (EN :180-181 \"climate and biodiversity conventions\" / \"climate\"); static/img/figures/gnas-301/unit-05/fig-U5-7.ur.svg labels Rio 1992 \"موسم + حیاتیاتی تنوع کنونشن\" and Paris 2015 \"موسمی معاہدہ\" (seasonal agreement); fig-U5-8.ur.svg labels \"ایس ڈی جی 13 موسم\" and \"فوری موسمی کارروائی\" (urgent seasonal action) for SDG 13 Climate Action. The unit prose itself uses the correct موسمیاتی (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-04.mdx:43,46,56), so a student meets two different words for climate, one of them wrong. Repair: موسمیاتی in all five loci."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "The unit core concept \"detoxification\" is rendered \"صاف کرنا\" (to clean) throughout the Urdu prose while the Urdu figure variants and the concept graph use the transliteration \"ڈی ٹاکسیفیکیشن\", with no bridge between them. Prose loci: i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/index.mdx:9,27,28; i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-02.mdx:2,3,30,38,43,45,63; i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-03.mdx (title, :30,41,45,47,62); i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/unit-assessment.mdx:22,70,100. Figure/concept loci: fig-U5-3.ur.svg (\"ڈی ٹاکسیفیکیشن (عام)\"), fig-U5-4.ur.svg (title), fig-U5-5.ur.svg, fig-U5-6.ur.svg; specs/content/gnas-301/concepts/unit-05.md:19-20,36-37. A reader who cannot read English cannot know the two are the same term; \"صاف کرنا\" also collides with the marketing \"cleanse\" vocabulary the topic argues against (\"جگر صاف\" tea, i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-03.mdx:24,47) and with waste treatment (فضلہ صاف کرنا, i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-02.mdx:26). Same defect class as Unit 4 G5 blocking finding 6. Repair: adopt one term (ڈی ٹاکسیفیکیشن or زہر ربائی) across prose, figures and the concept graph, or gloss the plain verb with the technical term at first use."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "fig-U5-1.ur.svg carries invalid y attributes: all 10 second-line stage labels use y=\"130+0\" or y=\"130+20\" (literal arithmetic strings, not SVG lengths). Chromium parses no y value for them (text.y.baseVal empty; see specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/check-y-attr.txt) and renders them at y=0, clipped at the figure top edge, so the five stage panels show only their headings (specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/ur-figure-measurements.json: 10 clipped texts at y=-12 and 5 overlapping pairs). The identical defect exists in all four variants (fig-U5-1.svg, .dark.svg, .ur.svg, .ur.dark.svg), so it originates in the English figure and was not caught by G3 rounds 1-2; the Urdu variant is equally unusable. Repair: y=\"130\" / y=\"150\" in all four files."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "Platform RTL alignment defect, production-confirmed. The Urdu build stylesheet contains \"html[dir=rtl] .markdown{line-height:2.2;text-align:left}\" (build/ur/assets/css/styles.161fd4ec.css; the same rule is live at textbook.com.pk, fetched 2026-09-24) because Docusaurus's RTL CSS pass flips the manually authored text-align:right in src/css/custom.css:49-52. Rendered Urdu headings and short/last lines anchor to the physical left edge (measured: first h2 text at elemLeft with ~196px empty to its right; synthetic probe left-anchored; CDP matched rules show the flipped declaration), inverting the intended RTL typography on every Urdu page site-wide. Not a translation defect of this unit; needs a platform fix (logical property text-align:start, or exclusion from the RTL flip) and a rebuild. Evidence: specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/rtl-alignment-defect.txt."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "EN docs/semester-1/gnas-301/unit-05/topic-02.mdx:111-112 \"note the door of absorption a spill would use\" is rendered \"وہ جذب کا دروازہ نوٹ کریں جو کوئی اخراج استعمال کرے گا\" (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-02.mdx:74): \"spill\" becomes \"اخراج\", which is this unit's own stage-4 term for \"excretion\" (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-02.mdx:39 \"اخراج یا ذخیرہ\"), so the practicum instruction reads \"note the absorption door that an excretion would use\" - a confusing technical statement that collides with the journey vocabulary the students just learned. Repair: render \"spill\" as \"انڈیلنے/بہنے والا کیمیکل\"."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "\"واقفیت\" (acquaintance/familiarity) is the prose term for \"exposure/exposed\" (e.g. \"کون واقف ہے\" for \"who is exposed\" and \"بار بار واقفیت\" for \"repeated exposure\": i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-03.mdx:41; i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-04.mdx:33,93; i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/unit-assessment.mdx:38,117,130,147). In standard Urdu it means familiarity, and fig-U5-5.ur.svg instead uses \"رابطہ\" for the same concept, so the term is both misleading and internally inconsistent. Same class as Unit 4 G5 advisory finding 7 (advisory there too). Owner term decision needed (e.g. تعریض or a glossed loanword); the bank is not edited from here."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "\"Trainee teacher\" is rendered \"تربیت یافتہ استاد\" (trained teacher), reversing the actor's status: i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-03.mdx:24 (with the internally contradictory \"تربیت یافتہ نے ابھی سیکھا ہے\" - a trained teacher who has just learned), i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-04.mdx:25,56,72 (\"تربیت یافتہ کے سوال\"). The B.Ed audience identification (a trainee applying fresh learning) is lost. Repair: \"زیرِ تربیت استاد\"."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Arsenic is misspelled \"آرینک\" 12 times in this unit (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-01.mdx:44,59,63; i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-04.mdx:33,58,93; i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/unit-assessment.mdx:40,117,126,171; i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/unit-teacher-notes.mdx:18). The standard spelling is \"آرسینک\", which GNAS-301 Unit 2 already uses (i18n/ur/.../unit-02/topic-02.mdx:41), so the course is internally inconsistent as well. Repair: \"آرسینک\" throughout."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Bloom tag \"Evaluate\" is split across the unit: item tags use \"جانچیں\" (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/unit-assessment.mdx:114-118; i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-03.mdx:58) but rubric rows use \"تشخیص\" (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-03.mdx:87; i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-04.mdx:100; i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/unit-assessment.mdx:165-172), and \"تشخیص\" is the banked term for Assessment (specs/content/terminology.csv:19), creating a vocabulary collision; the same split exists in Unit 4, so it is course-wide. Relatedly, bare \"Assessment\" in the page title \"یونٹ 5 کا جائزہ\" drifts from the banked تشخیص (جائزہ is accepted inside the banked summative compounds, which \"مجموعی جائزہ\" at :24 correctly is)."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Further prose/figure terminology drift on core terms (repair list for the owner): multilateral \"کثیر الجہتی\" (prose) vs \"کثیر الفریقی\" (fig-U5-7.ur.svg; concepts/unit-05.md:22,39); concentration \"ارتکاز\" (prose) vs \"حراستی\" (fig-U5-1.ur.svg); targets/indicators \"ہدف/اشاریے\" (prose) vs \"نشان/پیمانہ\" (fig-U5-8.ur.svg); organophosphate \"آرگنو فاسفیٹ\" (prose) vs \"نامیاتی فاسفیٹ\" (fig-U5-4.ur.svg); worked example \"حل شدہ مثال\" (prose) vs \"حلیہ مثال\" (fig-U5-1.ur.svg; حلیہ means disguise); handle \"ہینڈل\" (prose) vs \"دستہ\" (fig-U5-5.ur.svg); risk \"رسک\" (prose) vs \"خطرے\" (concepts/unit-05.md:21) while the prose reserves \"خطرہ\" for hazard; sprayer \"سپرے والا\" vs \"چھڑکنے والا\"; natural \"قدرتی\" (prose) vs \"قدری\" (fig-U5-5/6.ur.svg titles; concepts :20,37 - قدری is not the standard word for natural)."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "fig-U5-4.ur.svg geometry: the detoxification row's example cell \"CO صاف ہوا میں سانس سے باہر\" overlaps the risk label \"وقت لیتا ہے\" by 43x17px and the cell carries a duplicated leftover fragment \"صاف ہوا میں\" (EN has two lines \"CO breathed back out\" / \"in clean air\"); slight overlap also between \"ایک نامیاتی فاسفیٹ بدل کر\" and \"نقصان لیبل سے آگے\" (11x16). The EN variant has its own header overlap (\"One worked example\" over \"The risk\", 40x18px) - noted for the owner as an English-side defect. See specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/ur-figure-measurements.json and en-figure-measurements.json."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Register/calque repair list (localized and recoverable; none individually blocking): \"بے نم والا\" for \"unglamorous\" (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-03.mdx:41,62 - not an Urdu word; use غیر دلکش/سادہ); \"سطر\" for \"journey\" in the topic-02 activity (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-02.mdx:49 - سطر is a line of text; use سفر/نقشہ); \"قطرے\" for \"queue\" (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/unit-teacher-notes.mdx:27 - drops; use قطار); \"پابندی یا پابندی\" for \"bans or restricts\" (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-04.mdx:44 - \"ban or ban\"); garbled Minamata sentence (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-04.mdx:45 \"جس کا زہر دنیا کو یہ لفظ سکھا گیا\"); \"کے خلاف رپورٹ\" for \"report against commitments\" reads adversarially (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-04.mdx:37,56; i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/unit-assessment.mdx:149); MCQ-1 option c \"air sacs\" rendered \"ہوا کی نالیوں\" (airways) (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/unit-assessment.mdx:31 - distractor stays wrong, no key change); \"along the Indus\" dropped from the Alibhatti sentence (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-01.mdx:44); PM2.5 appositive grammar (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-01.mdx:39); \"بھرتا ہے\" for \"shuffles\" (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-04.mdx:64); \"حقیقی والا\" colloquialism (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-03.mdx:26); \"طلبے\" for طلبہ (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/unit-teacher-notes.mdx:18); \"جماعتی صورتحال\" for \"classroom situation\" (all topic files; consider کلاس روم کی صورتحال); \"زہری عنصر\" for \"toxic agent\" - عنصر primarily denotes a chemical element while CO/SO2 are compounds (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-01.mdx passim); \"فی ایک ایک جملہ\" (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-02.mdx:54; i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-03.mdx:55); \"دیرپان\" for دیرپا (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-04.mdx:44); figure-label grammar (fig-U5-1.ur.svg \"خون کی دریا\" -> کے دریا and \"بند سیڑھیاں میں\" -> بند سیڑھیوں میں; fig-U5-2.ur.svg \"دھوپ ... بناتا ہے\" -> بناتی ہے; i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/unit-assessment.mdx:94 \"کون سا مرحلے نے\" -> کس مرحلے نے)."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Platform figure-font limitation (carried from Unit 1/4 G5 reviews, reconfirmed here): .ur.svg labels are delivered via <img> and cannot load the page's self-hosted Noto Nastaliq Urdu webfont (src/css/custom.css:46); on hosts without a system Nastaliq font they render in a Naskh-style fallback (this host has only FreeSerif/Unifont for Arabic script per fc-list). Figure typography therefore cannot be Nastaliq-verified in this environment; page prose (non-img) does load the webfont correctly."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Visual inspection limitation: this reviewer session cannot display images (the Read tool returns no visual content for PNGs; both MCP browsers fail with \"Could not find Google Chrome executable\"). Render evidence is therefore programmatic (dir/lang, font loading, label geometry measurement, print emulation) plus 20 saved PNGs under specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z for human visual confirmation of Nastaliq legibility, shaping and bidi punctuation."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "React hydration errors #418/#423 appear on the Urdu pages' console (render-inspect.json desktopConsoleErrors); the same errors appear on the English pages (the G3 round-2 render baseline had the identical #418 set), so this is a platform issue, not a translation defect."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "glossary.json (repo root, 187 entries with Urdu definitions) is rendered into the Urdu pages' Glossary tooltips but is not bound in the G5 input manifest. Its Urdu definitions were observed during rendering and are consistent with the unit's usage (e.g. the Detoxification entry's Urdu definition matches the ڈی ٹاکسیفیکیشن rendering used by the figures, not the prose's صاف کرنا). Request the parent bind it in future G5 bundles so tooltip content is inside the reviewed closure."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Unresolved G3 advisories mirrored faithfully in the Urdu (English-side defects, preserved across attempts per the skill): MCQ key clusters on option b (6 of 10; the Urdu preserves identical keys and option order, i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/unit-assessment.mdx:124-133); \"this course lives inside half of them\" for 7 of 17 SDGs rendered \"ان میں سے آدھے کے اندر جیتا ہے\" (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-04.mdx:50); the summative/formative near-duplicate items and U5-06's single integrative summative item carry over unchanged."
+    }
+  ],
+  "commands": [
+    {
+      "name": "verify-manifest",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/verify-manifest.txt"
+    },
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/validate-content.txt"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/check-depth-gate.txt"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/check-figures.txt"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/check-no-em-dash.txt"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/check-no-answer-keys.txt"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/check-docs-sync.txt"
+    },
+    {
+      "name": "build",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/build.txt"
+    },
+    {
+      "name": "serve",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/serve.txt"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/render-review.log"
+    },
+    {
+      "name": "measure-ur-figure-text",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/measure-ur-figure-text.txt"
+    },
+    {
+      "name": "measure-en-figure-text",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/measure-en-figure-text.txt"
+    },
+    {
+      "name": "check-y-attr",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/check-y-attr.txt"
+    },
+    {
+      "name": "printcheck-ur",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/printcheck-ur.txt"
+    },
+    {
+      "name": "bidi-check",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/bidi-check.txt"
+    },
+    {
+      "name": "figure-label-extraction",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/figure-labels.txt"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/bidi-check.txt": "8393855a185e7eaebf93217af60c559bea1629559e9628089567f72afd563e3a",
+    "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/build.txt": "5cb9cb654f2b0193082f88426b33d510b6f9b80f82f7057ee30d69e11cbd7ca9",
+    "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/check-depth-gate.txt": "b0c4eeaa24613853bc7dd1124721c3576b9c2ea0d83d804bb98a47c646579f2f",
+    "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/check-docs-sync.txt": "388691a97d7539a857dafad859d26a639e67f09402e7f0c242b4a09e4b62049b",
+    "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/check-figures.txt": "3d8e7e0311cc402d8ef731bc62cfd8efd8bb72907261a2ec1da4ed2ea4db7c3a",
+    "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/check-no-answer-keys.txt": "3fa235456d5db64e830f726b03bd39a9f3388aa8239273fa8f1b6f549465fc39",
+    "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/check-no-em-dash.txt": "f94465f4c88bd3c3db4d995e7757fc7f08feae27e57c724a2eaafc8499ec2fe6",
+    "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/check-y-attr.txt": "33de52f33b12c11cadf97411aaf537326176c6cb0efc902c95463fbf91686e4f",
+    "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/extract-figure-text.mjs": "82563559e7ec3a090a8b4c20cacb36783c5a5baf4546ef4606dbfdef5b9c97a2",
+    "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/figure-labels.txt": "04edb53a2c199e0298d8881b898ba2882242da9badc1aebfccfa86064c17cd14",
+    "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/hash-evidence.mjs": "ff09067f19492f5f91399aa47aaac4d5703ee9776953bdef01a55112acbf168a",
+    "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/measure-en-figure-text.txt": "2c5d168d38493f26537d3da80c7b80c58a6d2fd7b350375697a6739d1eb690a2",
+    "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/measure-ur-figure-text.txt": "c607333fad9a4a01c71c9a0d50cbac99eff5fe5c0f1a9cdaa4096bbe58af891f",
+    "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/printcheck-ur.txt": "da4fac4c2cfe6a7cc4b945c37b228c990fdb237c8703a77dfc1c2d1dd2fb47e1",
+    "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/render-review.log": "65f4968ef549f72c6a2b8dc466d482866cfde4b4d30eecda1cbed5d64ccd10b3",
+    "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/serve.txt": "fc8fd24e69097b900a7828c914c6449d69554e60d8983b9ff0822f4a1611eaaa",
+    "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/validate-content.txt": "0753463dcc4f70bfeed270f5eb8accdfb2113670791fc90775ea247c275de426",
+    "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/verify-manifest.mjs": "d88fd8c426243576e6b8bb0c261b80c21a438856a6c3805e6e60094a1fa3ce00",
+    "specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z/verify-manifest.txt": "a44fdbbc39bf4a1201f23f85a60f833f06bab48946801382ec2fa20ce88adb5f",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/bidi-check.json": "37a006ef42151878d18b4377dbc04c88149c9512aa7bb9211df860199c572faf",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/bidi-check.mjs": "af103f7d504326ae82314b130495b9cd915121aeaf536ba134073c16d7c9d06b",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/check-y-attr.mjs": "3bca46db4af000a268ae045923ecf92cbd8072bb2488346f99bdab085de6eb79",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/desktop-index.png": "247450cf71bf21ced2567234980a81b968328f6cac1d8c2fed7ee6395251d403",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/desktop-topic-01.png": "ad0aef86eb7f8bd5e4d7e34e3304515676a9e4988192f8d169052ae21cb4086e",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/desktop-unit-assessment.png": "c432e9c108bb667a056f459db10f66715d9fbf87270fb37c92b4c21c28539169",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/en-figure-measurements.json": "88544b4205f2fcf49aa5944d68401373ba223d0b4734112ea76fa10c9abd2c50",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/figrender-fig-U5-1.ur.png": "a841c130448bb2e96704f616a7bafefce40562c49cadbfa437d9c2514fec7bd4",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/figrender-fig-U5-2.ur.png": "6a7ef1bd161e9da73475da1cbd7abbf2714b6f7b7e4fbae67c617e81cd8c47da",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/figrender-fig-U5-3.ur.png": "905a8f59e33047cb8483184eb77337f00f7f90604e9b5a91f9d8e24ffff5ca68",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/figrender-fig-U5-4.ur.png": "b02f6a0a8dbd51056ca5d97fec96ca572608d0e019ccceacb150d4e0a0cc6afa",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/figrender-fig-U5-5.ur.png": "ec25b6aed6a45bc5af31edda2c11ae5b55fb64d2de756c1c132911b9f718e9fa",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/figrender-fig-U5-6.ur.png": "09fc932cf4430a067d2fabb0cf1578e7b51d3687e4d5eb208be4d4af22396c9d",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/figrender-fig-U5-7.ur.png": "69670a920607545f666b4ef855ae03c9fe7f82fe15e4f13e963ff5f840451d27",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/figrender-fig-U5-8.ur.png": "9815c57d65d689e19b2c02febcb3fcd89365f163a36b33929e6dc650377d3082",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/inspect-narrow-followup.mjs": "32cddcc6f333f047fd839d97ec3f62eb9511785101d36f4acd27cb00ef5466bf",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/inspect-render.mjs": "eb2d8b694dd8b472ef986f5a693fb9784912f4907769040a9b6db73026c64c9c",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/measure-en-figure-text.mjs": "b3592daac8ab1347bf4878088f60aabb2ad634e8eb7247572ebcd5348d770d94",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/measure-ur-figure-text.mjs": "ff37d30146bf4ca9fac6b0917a2ea24c89242841ecdad2deff42fc6db2fb99f3",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/narrow-360-index.png": "f3d3d078b4bbe624b1b8e2801ecf91f48bdaa4567bd67e43e8b903b222c16491",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/narrow-360-topic-01.png": "60dafebcd9cc16d0c026b2c536f696e3f071cb5d6029e9ea35c08474a3132cc4",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/narrow-360-topic-02.png": "7ff56f03d3a5fd1e1c39dabcab35faa30f4e97dae7203fcb1e3b2b48f3aa8b20",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/narrow-360-topic-03.png": "7d693fd7a08bebcd078bda4d2ba298fc1da07143ff4f7c3a2b1075a3e4b0030e",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/narrow-360-topic-04.png": "e92daf5f6e68b9f3f1e1aac74897e6d7d93ae4bd1ca840be18e3209ff506743a",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/narrow-360-unit-assessment.png": "416b65c966facc42417a5d63d8c7301adb245426fac7b8ad4d1043b20da6bf19",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/print-a4-topic-01.png": "f7f6746d8b4379ed1cf8d5193d8cb1ccceeaecf492641c6e78352e6585e4ff17",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/print-a4-topic-04.png": "02d13a5ee291323b06078eb9c8d7ad3037c5c707c6942c8a17fe6e25406741d7",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/print-a4-unit-assessment.png": "a03bcc7df6207dd897a3a347da0b8965bc2e1f3e316e34ac778564f3f23c158d",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/printcheck-ur.json": "7aa057234cee84fae7325143a0aa77a09c360924952fd0564e96824ae0bfbdec",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/printcheck-ur.mjs": "82b59da26da82a427bc050c74402041ff68cd1fa1aa67abeb8007a15fd607a0c",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/render-inspect.json": "97228a73ef5d490d04015b950afafb85b4095ef7542c9dc6b1e2986f0dc4f2e5",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/rtl-alignment-defect.txt": "6119ec3d99bc7e89479449089e31b0a37ecf83bb9a11a72ee87e3f64e7f7c58e",
+    "specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z/ur-figure-measurements.json": "e510b989a53671f77f81c6d47c9b9c1499697b757e5ae37fc6a32ab4b218783e"
+  }
+}
