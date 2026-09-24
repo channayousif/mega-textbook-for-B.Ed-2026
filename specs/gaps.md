@@ -1331,3 +1331,29 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   findings, which is the designed ADR-0019 posture.
 - **Blocks:** the G5 tracker rows for Units 2-6 (all left open, advisory); nothing in the
   automated gates. The Urdu content itself is complete and internally verified.
+
+---
+
+## G-2026-66 - EFMP-302 Unit 4 G5: two cycles consumed; the post-report residual repairs are unverified
+
+- **Status:** open
+- **Gate:** G5 Urdu review, ADR-0019 two-cycle limit
+- **Source:** EFMP-302 Unit 4 G5 feat023-r2 (2026-09-24,
+  `specs/content/efmp-302/reviews/unit-04/G5/agent-g5-efmp302-u4-feat023-r2.json`), in the
+  G-2026-63 pattern
+- **Question:** Unit 4's feature-023 G5 review ran two advisory cycles. Cycle 1 (feat023-r1)
+  returned revise with 13 blocking Urdu-side findings; all were repaired at a483c9e. Cycle 2
+  (feat023-r2) verified 12 of the 13 repairs fully and found 4 residual defects of the same
+  classes at loci cycle 1 had not pinned: "integrative" still rendered مجموعی at three loci
+  (the blooms summary, the ERQ-2 rubric title, the teacher notes); fig-U4-8's Urdu captions
+  still weakening Isoré's "rarely" to "perhaps" (the repair commit touched no SVG); خلاصی for
+  "Abstract" in the ERQ-1 rubric; and the non-word ثبٹ for ثبوت twice. The author applied
+  these four repairs post-report (prose loci plus both fig-U4-8 Urdu variants regenerated with
+  شاذ و نادر); all content gates, figures:variants:check and measure-figure-text are green on
+  the repaired bytes, but the repairs are unverified by a reviewer. ADR-0019 reserves further
+  cycles to the owner after two.
+- **Needed, and from whom:** the curriculum owner, to either accept the repaired state on the
+  two advisory reports or authorise a third G5 cycle for Unit 4. Six advisories (register
+  garbles, minor semantic shifts, concept-label reworks for CON:4-12/CON:4-15) also carry.
+- **Blocks:** a third G5 cycle for Unit 4; nothing else. The G3 dependency (G-2026-65) blocks
+  G5 acceptance independently.
