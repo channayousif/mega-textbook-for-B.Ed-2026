@@ -50,9 +50,9 @@ units may be authored.
 | Unit 5 | G6 assets | ▢ | | |
 | Unit 5 | G7 publish | ▢ | | |
 | Unit 6 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0020 + owner resolutions G-2026-22/G-2026-23 + floor D-2026-0021; content-spec status: approved |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-06/G2/20260924T041001628Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-06/G2/20260924T090059226Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | advisory rounds 1-2: revise; reports reviews/unit-06/G3/agent-g3-gnas301-u6-run001.json + round-02/agent-g3-gnas301-u6-run002.json; round-2 blocking findings (ERQ-04 6.4+6.5 integration, RRQ/MCQ surplus, WHO framing, anwar2026 claim) repaired post-report; two-cycle limit reached, third cycle owner-gated (G-2026-33) |
 | Unit 6 | G4 ur-translation | ✅ | auto:g4 | all 9 Urdu mirror files at i18n/ur/.../gnas-301/unit-06/, 2026-09-24; heading parity exact, terminology-bank-driven, .ur.svg figure variants, zero em-dash; translation_status stays draft pending G5 |
-| Unit 6 | G5 ur-review | ▢ | | |
+| Unit 6 | G5 ur-review | ▢ | | advisory round 1: escalate (7 blocking, 9 advisory); report reviews/unit-06/G5/agent-g5-gnas301-u6-run001.json; 6 content blockings repaired post-report, dependency escalation folded into G-2026-34's owner question |
 | Unit 6 | G6 assets | ▢ | | |
 | Unit 6 | G7 publish | ▢ | | |
