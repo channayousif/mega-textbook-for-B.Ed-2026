@@ -72,3 +72,22 @@ Used for (Unit 5): the theories-of-intelligence axis and Spearman's g (U5-1);
 Gardner's multiple intelligences and the evidence caution (U5-2); IQ scores, the mean
 and deviation, and the measurement limits (U5-3); creativity, divergent and convergent
 thinking (U5-4).
+
+## Section 10.1 - Motivation (verified; used by Unit 6)
+
+On the definition: "Motivation describes the wants or needs that direct behavior
+toward a goal." On the two forms: "Intrinsically motivated behaviors are performed
+because of the sense of personal satisfaction that they bring", whereas
+"extrinsically motivated behaviors are performed in order to receive something from
+others." On the overjustification effect: "intrinsic motivation is diminished when
+extrinsic motivation is given", illustrated by the baker who loses her hobby passion
+once baking becomes her paid job.
+
+On Maslow: he "proposed a hierarchy of needs that spans the spectrum of motives
+ranging from the biological to the individual to the social" - physiological needs,
+safety, love and belonging, esteem, and at the apex self-actualization, "reaching
+one's full potential", attainable only once lower needs are met.
+
+Used for (Unit 6): the definition and the intrinsic-extrinsic distinction with the
+overjustification effect (U6-1); Maslow's hierarchy and its levels (U6-2); the
+anxiety-narrowing framing behind the emotions material (U6-6).
