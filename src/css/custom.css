@@ -48,7 +48,10 @@ html[dir='rtl'] {
 
 html[dir='rtl'] .markdown {
   line-height: 2.2; /* Nastaliq glyphs stack; needs generous leading */
-  text-align: right;
+  /* text-align uses the logical 'start' (right in RTL): a physical 'right'
+     here is flipped to 'left' by Docusaurus's RTL CSS pass, which inverted
+     Urdu heading alignment in production (GNAS-301 Unit 5 G5 round 1). */
+  text-align: start;
 }
 
 /* Mixed LTR terms/numerals inside RTL text stay correctly isolated */

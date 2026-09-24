@@ -1,10 +1,20 @@
 // Assemble the G5 review report for GNAS-301 Unit 5 (run agent-g5-gnas301-u5-run001).
 // Reads the prepared manifest (input digests, skill digest) and the computed
 // evidence hashes; findings and criteria evidence are the reviewer's own.
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, statSync } from 'node:fs';
+import { createHash } from 'node:crypto';
 
 const manifest = JSON.parse(readFileSync('specs/content/gnas-301/reviews/unit-05/G5/manifest.json', 'utf8'));
-const evidence = JSON.parse(readFileSync('/tmp/g5-evidence-manifest.json', 'utf8'));
+// Re-hash evidence here (excluding validate-report.txt, which records report-validation
+// attempts after the report bytes exist and is not a review command log).
+const evidence = {};
+for (const dir of ['specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z', 'specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z']) {
+  for (const f of readdirSync(dir)) {
+    const p = `${dir}/${f}`;
+    if (p.endsWith('validate-report.txt')) continue;
+    if (statSync(p).isFile()) evidence[p] = createHash('sha256').update(readFileSync(p)).digest('hex');
+  }
+}
 const L = 'specs/content/gnas-301/reviews/unit-05/G5/logs-20260924T081245Z';
 const R = 'specs/content/gnas-301/reviews/unit-05/G5/renders-20260924T081245Z';
 const UR = 'i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05';
@@ -25,6 +35,18 @@ const findings = [
       'G3 cycle is owner-gated (specs/gaps.md G-2026-32, open; the same dependency question is already recorded for Units 1, 2, 4, 5, 6 ' +
       'in G-2026-24/31/32/33/34). The Urdu-side findings below stand on their own evidence and are preserved for the repair cycle; ' +
       'the dependency itself needs the curriculum owner to accept the repaired English state or authorise a third G3 cycle.',
+  },
+  {
+    severity: 'blocking',
+    resolved: false,
+    message:
+      'Input drift during review: the bound Urdu inputs changed while this review was in progress, in two waves. (1) A sibling G5 session (Unit 6 round 1) committed f5da152 ("apply G5 Unit 6 round-1 Urdu repairs", 2026-09-24 04:00:59 -0500) in this shared worktree, which also applied the arsenic spelling fix ' +
+      `آرینک -> آرسینک to ${UR}/topic-01.mdx, topic-04.mdx, unit-assessment.mdx and unit-teacher-notes.mdx, moving HEAD from the bound commit b80bcc9 to 063a2fc. ` +
+      '(2) While this report was being finalized (~04:10 -0500 onward), additional UNCOMMITTED working-tree edits appeared, applying this report\'s own findings to unit-05 (fig-U5-1 y="130"/"150" in all four variants; موسم/موسمی -> موسمیاتی and کثیر الفریقی -> کثیر الجہتی in the .ur.svg labels; زیرِ تربیت for trainee; غیر دلکش for unglamorous; گرنے والا مادہ for spill; and others) plus sibling repairs in units 03/04; at 04:12 -0500 the recomputed manifest differed from the bound one in 22 digests (6 Urdu MDX + 16 figure SVGs) and the count was still growing. ' +
+      'Every piece of evidence in this report predates all of this ' +
+      '(manifest verified 03:13 -0500 with 0 problems; EN/UR passage reads 03:14-03:25; build 03:30; all renders and probes 03:31-03:55 against that build; the first edit landed 03:53:43), so all findings describe the bound b80bcc9 bytes and none of the new repairs is verified here. ' +
+      'Per the skill, a mismatched digest requires escalation and the manifest is not silently refreshed: report validation against the current tree correctly rejects with "stale or incomplete input manifest" (validate-report.txt; a labelled diagnostic confirming every other contract check passes is in validate-report-diagnostic.txt). ' +
+      'The parent must let the repairs land, prepare a fresh manifest at the repaired commit, and launch a fresh reviewer session to recheck; this drift does not change the validity of the other findings. Full timeline: logs-20260924T081245Z/input-drift.txt.',
   },
   {
     severity: 'blocking',
@@ -115,12 +137,14 @@ const findings = [
   },
   {
     severity: 'advisory',
-    resolved: false,
+    resolved: true,
     message:
-      'Arsenic is misspelled "آرینک" 12 times in this unit (' +
+      'Arsenic is misspelled "آرینک" 12 times in the bound bytes of this unit (' +
       `${UR}/topic-01.mdx:44,59,63; ${UR}/topic-04.mdx:33,58,93; ${UR}/unit-assessment.mdx:40,117,126,171; ${UR}/unit-teacher-notes.mdx:18). ` +
-      'The standard spelling is "آرسینک", which GNAS-301 Unit 2 already uses (i18n/ur/.../unit-02/topic-02.mdx:41), so the course is internally ' +
-      'inconsistent as well. Repair: "آرسینک" throughout.',
+      'The standard spelling is "آرسینک", which GNAS-301 Unit 2 already uses (i18n/ur/.../unit-02/topic-02.mdx:41), so the course was internally ' +
+      'inconsistent as well. RESOLVED OUTSIDE THIS REVIEW: the sibling session\'s commit f5da152 applied "آرسینک" to all 12 occurrences in the four ' +
+      'affected files mid-review (see blocking finding 2 / input-drift.txt); verified by grep (no آرینک remains in unit-05) and by the b80bcc9..HEAD diff, ' +
+      'which contains no other unit-05 change. To be re-verified in the next round\'s fresh bundle; the bound bytes this report reviews still carry the misspelling.',
   },
   {
     severity: 'advisory',
@@ -226,7 +250,7 @@ const criteria = [
       'English dependency NOT satisfied (decisive for this criterion): G3 round 1 (reviews/unit-05/G3/20260924T001055Z-g3-attempt-01.json) and round 2 ' +
         '(reviews/unit-05/G3/round-02/agent-g3-gnas301-u5-run002.json) both ended disposition revise with unresolved blocking findings; 5 of 7 English unit files ' +
         'differ between the G3 round-2 manifest and this G5 manifest because the round-2 repairs were applied post-report; the third cycle is owner-gated ' +
-        '(specs/gaps.md G-2026-32, open). See blocking finding 1.',
+        '(specs/gaps.md G-2026-32, open). See blocking finding 1. Additionally, the bound Urdu inputs drifted mid-review in two waves (sibling commit f5da152, then uncommitted repairs applying this report\'s findings; see blocking finding 2 and logs-20260924T081245Z/input-drift.txt), so the report no longer validates against the current tree.',
       'Grading note: the Unit 4 G5 report graded authority pass with the same dependency failure carried as a blocking finding; this review grades fail because ' +
         'the G5 rubric makes accepted G3 evidence for the exact bound English inputs a hard requirement of the G5 authority check.',
     ],
@@ -267,7 +291,7 @@ const criteria = [
         'weights (0-3/0-2/0-1 bands, totals 10 each) are preserved (unit-assessment.mdx:135-172).',
       'FAIL locus: the RRQ-10 model answer misnames the subject of two of the six year-subject pairs - "ریو 1992 (موسم اور حیاتیاتی تنوع کنونشن)" and "پیرس 2015 (موسم)" ' +
         '(unit-assessment.mdx:151-153) render "climate" as "season" (EN :180-181), so a marker checking "1 per correct year-subject pair" against this model would accept ' +
-        'the wrong subject word. Covered by blocking finding 3.',
+        'the wrong subject word. Covered by blocking finding 4.',
     ],
   },
   {
@@ -297,9 +321,9 @@ const criteria = [
     id: 'semantics',
     status: 'fail',
     evidence: [
-      'Material divergences: "toothless talk shops" negation reversed (topic-04:60, teacher-notes:29 - blocking finding 2); "spill" rendered as the stage term ' +
-        'اخراج/excretion (topic-02:74 - blocking finding 7); "climate" rendered موسم/season in the RRQ-10 model answer and both governance figures (blocking finding 3); ' +
-        '"trainee teacher" reversed to "trained teacher" (advisory finding 9); "unglamorous" rendered with the non-word "بے نم والا" (advisory 14 repair list).',
+      'Material divergences: "toothless talk shops" negation reversed (topic-04:60, teacher-notes:29 - blocking finding 3); "spill" rendered as the stage term ' +
+        'اخراج/excretion (topic-02:74 - blocking finding 8); "climate" rendered موسم/season in the RRQ-10 model answer and both governance figures (blocking finding 4); ' +
+        '"trainee teacher" reversed to "trained teacher" (advisory finding 10); "unglamorous" rendered with the non-word "بے نم والا" (advisory 15 repair list).',
       'Preserved correctly (spot-verified paired passages): the CO mechanism (binds the blood\'s oxygen seats hundreds of times more tightly; body suffocates with ' +
         'clean-looking lungs - topic-01:36); dose = concentration x time (topic-01:63); the four-stage journey with its two outcomes (topic-02:36-39); the phase-1/phase-2 ' +
         'balance and bioactivation risk (topic-03:36); the four risk management options with the school example (topic-04:33); the six MEAs with years and subjects ' +
@@ -315,11 +339,11 @@ const criteria = [
       'Frozen bank compliance where banked terms apply: Rubric = معیارِ جانچ (all four mini-rubric headings and the ERQ معیارِ جانچ sections); Summative Assessment = ' +
         'مجموعی جائزہ (unit-assessment:24); Group Work = گروہی کام (teacher-notes:22); Teaching Strategies = حکمتِ تدریس (teacher-notes:20); Self-Assessment = خود جائزہ ' +
         '(checklist headings). The bank was not modified.',
-      'FAIL loci: detoxification prose/figure split صاف کرنا vs ڈی ٹاکسیفیکیشن (blocking finding 4); arsenic misspelled آرینک x12 against Unit 2\'s آرسینک (advisory 10); ' +
-        'واقفیت for exposure with the figure using رابطہ (advisory 8); Bloom "Evaluate" split جانچیں/تشخیص colliding with the banked Assessment = تشخیص (advisory 11).',
+      'FAIL loci: detoxification prose/figure split صاف کرنا vs ڈی ٹاکسیفیکیشن (blocking finding 5); arsenic misspelled آرینک x12 against Unit 2\'s آرسینک in the bound bytes (advisory 11, resolved outside this review by the sibling commit f5da152); ' +
+        'واقفیت for exposure with the figure using رابطہ (advisory 9); Bloom "Evaluate" split جانچیں/تشخیص colliding with the banked Assessment = تشخیص (advisory 12).',
       'The ten authored Urdu concept labels flagged for G5 review in specs/content/gnas-301/concepts/unit-05.md:27-42 were each compared against the prose: نقصان تک راستہ, ' +
         'خوراک اور راستہ, زینو بائیوٹک کا سفر, ایس ڈی جی کا ڈھانچہ and پاکستان کا ماحولیاتی قانونی ڈھانچہ are consistent with the prose; ڈی ٹاکسیفیکیشن اور بایو ایکٹیویشن, ' +
-        'قدری ڈی ٹاکسیفیکیشن نظام, خطرے کے انتظام کے اختیارات and کثیر الفریقی ماحولیاتی معاہدے drift from the prose students read (advisory 12).',
+        'قدری ڈی ٹاکسیفیکیشن نظام, خطرے کے انتظام کے اختیارات and کثیر الفریقی ماحولیاتی معاہدے drift from the prose students read (advisory 13).',
     ],
   },
   {
@@ -342,9 +366,9 @@ const criteria = [
         'assessment); Latin embeds (WHO, option letters a-d) correctly isolated; tables fit the 360px viewport (width 328, no document overflow on any page); A4 print ' +
         'emulation clean (0 clipped elements, light figure variants visible).',
       'FAIL loci: (1) the platform RTL alignment defect - the Urdu build CSS flips text-align:right to left so Urdu headings and short/last lines anchor to the physical ' +
-        'left edge on every Urdu page, production-confirmed (blocking finding 6; rtl-alignment-defect.txt); (2) fig-U5-1.ur.svg\'s 10 second-line stage labels clipped at ' +
-        'y=0 from invalid y attributes (blocking finding 5; check-y-attr.txt, ur-figure-measurements.json); (3) fig-U5-4.ur.svg label overlap and duplicated fragment (advisory 13).',
-      'Limitation: no human-eye visual confirmation of Nastaliq legibility/shaping in this session (advisory 16); 20 PNGs (desktop 1280x800, narrow 360x640, A4 print ' +
+        'left edge on every Urdu page, production-confirmed (blocking finding 7; rtl-alignment-defect.txt); (2) fig-U5-1.ur.svg\'s 10 second-line stage labels clipped at ' +
+        'y=0 from invalid y attributes (blocking finding 6; check-y-attr.txt, ur-figure-measurements.json); (3) fig-U5-4.ur.svg label overlap and duplicated fragment (advisory 14).',
+      'Limitation: no human-eye visual confirmation of Nastaliq legibility/shaping in this session (advisory 17); 20 PNGs (desktop 1280x800, narrow 360x640, A4 print ' +
         '794x1123, and 8 Urdu figure renders) are saved under renders-20260924T081245Z for that confirmation.',
     ],
   },
