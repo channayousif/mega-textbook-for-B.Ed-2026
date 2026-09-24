@@ -1,0 +1,830 @@
+{
+ "base": "http://127.0.0.1:4617",
+ "locale": "ur",
+ "started": "2026-09-24T07:33:55.877Z",
+ "browser": "149.0.7827.0",
+ "commit": "d9a616f",
+ "pages": [
+  {
+   "name": "index",
+   "path": "/ur/semester-1/gnas-301/unit-03/",
+   "desktop": {
+    "title": "ہوا، شور اور ماحولیاتی خطرات | B.Ed Mega Textbook",
+    "htmlDir": "rtl",
+    "htmlLang": "ur",
+    "h1Count": 1,
+    "h1Text": "ہوا، شور اور ماحولیاتی خطرات",
+    "imgCount": 0,
+    "urSvgCount": 0,
+    "brokenImages": [],
+    "imagesWithoutAlt": [],
+    "bodyFont": "\"Noto Nastaliq Urdu\", \"Noto Naskh Arabic\", \"Jameel Noori Nastaleeq\", serif",
+    "sampleFont": "\"Noto Nastaliq Urdu\", \"Noto Naskh Arabic\", \"Jameel Noori Nastaleeq\", serif",
+    "nastaliqApplied": true,
+    "latinEmbeds": [
+     "GNAS",
+     "Environmental",
+     "Science",
+     "Draft",
+     "translation",
+     "not",
+     "yet",
+     "human",
+     "reviewed"
+    ],
+    "westernDigits": [
+     "1",
+     "3",
+     "0",
+     "2",
+     "4"
+    ],
+    "easternDigits": [],
+    "docScrollWidth": 1280,
+    "docClientWidth": 1280,
+    "docOverflowX": false,
+    "linksNoText": 0,
+    "consoleErrors": [],
+    "figures": []
+   },
+   "narrow": {
+    "docScrollWidth": 360,
+    "docClientWidth": 360,
+    "docOverflowX": false,
+    "tables": [],
+    "figures": []
+   },
+   "print": {
+    "docScrollWidth": 794,
+    "docOverflowX": false,
+    "clippedElems": [],
+    "navbarHidden": true,
+    "sidebarHidden": true,
+    "figures": [],
+    "allFiguresFit": true,
+    "answersHeadingY": null
+   }
+  },
+  {
+   "name": "topic-01",
+   "path": "/ur/semester-1/gnas-301/unit-03/topic-01",
+   "desktop": {
+    "title": "موضوع 3.1 - ہوا کی آلودگی | B.Ed Mega Textbook",
+    "htmlDir": "rtl",
+    "htmlLang": "ur",
+    "h1Count": 1,
+    "h1Text": "موضوع 3.1 - ہوا کی آلودگی",
+    "imgCount": 4,
+    "urSvgCount": 2,
+    "brokenImages": [],
+    "imagesWithoutAlt": [],
+    "bodyFont": "\"Noto Nastaliq Urdu\", \"Noto Naskh Arabic\", \"Jameel Noori Nastaleeq\", serif",
+    "sampleFont": "\"Noto Nastaliq Urdu\", \"Noto Naskh Arabic\", \"Jameel Noori Nastaleeq\", serif",
+    "nastaliqApplied": true,
+    "latinEmbeds": [
+     "GNAS",
+     "Environmental",
+     "Science",
+     "Print",
+     "Save",
+     "as",
+     "PDF",
+     "textbook.com.pk",
+     "World",
+     "Health",
+     "Organization.",
+     "Ambient",
+     "air",
+     "pollution",
+     "fact",
+     "sheet",
+     "WHO",
+     "global",
+     "quality",
+     "guidelines",
+     "Anwar",
+     "A.",
+     "Younes",
+     "I.",
+     "Afzal"
+    ],
+    "westernDigits": [
+     "1",
+     "3",
+     "0",
+     "2",
+     "5",
+     "9",
+     "4",
+     "6",
+     "8"
+    ],
+    "easternDigits": [],
+    "docScrollWidth": 1280,
+    "docClientWidth": 1280,
+    "docOverflowX": false,
+    "linksNoText": 0,
+    "consoleErrors": [],
+    "figures": [
+     {
+      "id": "fig-U3-1",
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-1.ur.svg",
+      "altStartsWithUrdu": true,
+      "altLen": 123,
+      "hasFigcaption": true,
+      "loaded": true,
+      "pixelStddev": 18.4
+     },
+     {
+      "id": "fig-U3-2",
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-2.ur.svg",
+      "altStartsWithUrdu": true,
+      "altLen": 70,
+      "hasFigcaption": true,
+      "loaded": true,
+      "pixelStddev": 23.5
+     }
+    ]
+   },
+   "narrow": {
+    "docScrollWidth": 360,
+    "docClientWidth": 360,
+    "docOverflowX": false,
+    "tables": [
+     {
+      "clientWidth": 328,
+      "scrollWidth": 328,
+      "fits": true,
+      "tableDirection": "rtl",
+      "lastColLeftBeforeScroll": 17,
+      "lastColLeftAfterScroll": 17,
+      "hydrationAttrs": {
+       "tabindex": null,
+       "role": null,
+       "ariaLabel": null
+      }
+     }
+    ],
+    "figures": [
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-1.ur.svg",
+      "left": 16,
+      "right": 344,
+      "fits": true
+     },
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-1.ur.dark.svg",
+      "left": 0,
+      "right": 0,
+      "fits": true
+     },
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-2.ur.svg",
+      "left": 16,
+      "right": 344,
+      "fits": true
+     },
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-2.ur.dark.svg",
+      "left": 0,
+      "right": 0,
+      "fits": true
+     }
+    ]
+   },
+   "print": {
+    "docScrollWidth": 794,
+    "docOverflowX": false,
+    "clippedElems": [],
+    "navbarHidden": true,
+    "sidebarHidden": true,
+    "figures": [
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-1.ur.svg",
+      "right": 778,
+      "loaded": true
+     },
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-1.ur.dark.svg",
+      "right": 0,
+      "loaded": false
+     },
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-2.ur.svg",
+      "right": 778,
+      "loaded": true
+     },
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-2.ur.dark.svg",
+      "right": 0,
+      "loaded": false
+     }
+    ],
+    "allFiguresFit": false,
+    "answersHeadingY": null
+   }
+  },
+  {
+   "name": "topic-02",
+   "path": "/ur/semester-1/gnas-301/unit-03/topic-02",
+   "desktop": {
+    "title": "موضوع 3.2 - شور کی آلودگی | B.Ed Mega Textbook",
+    "htmlDir": "rtl",
+    "htmlLang": "ur",
+    "h1Count": 1,
+    "h1Text": "موضوع 3.2 - شور کی آلودگی",
+    "imgCount": 4,
+    "urSvgCount": 2,
+    "brokenImages": [],
+    "imagesWithoutAlt": [],
+    "bodyFont": "\"Noto Nastaliq Urdu\", \"Noto Naskh Arabic\", \"Jameel Noori Nastaleeq\", serif",
+    "sampleFont": "\"Noto Nastaliq Urdu\", \"Noto Naskh Arabic\", \"Jameel Noori Nastaleeq\", serif",
+    "nastaliqApplied": true,
+    "latinEmbeds": [
+     "GNAS",
+     "Environmental",
+     "Science",
+     "Print",
+     "Save",
+     "as",
+     "PDF",
+     "dB",
+     "textbook.com.pk",
+     "World",
+     "Health",
+     "Organization.",
+     "Deafness",
+     "and",
+     "hearing",
+     "loss",
+     "fact",
+     "sheet",
+     "Phoon",
+     "W.",
+     "O.",
+     "Chen",
+     "P.",
+     "C.",
+     "Y."
+    ],
+    "westernDigits": [
+     "1",
+     "3",
+     "0",
+     "2",
+     "6",
+     "8",
+     "5",
+     "9",
+     "4",
+     "7"
+    ],
+    "easternDigits": [],
+    "docScrollWidth": 1280,
+    "docClientWidth": 1280,
+    "docOverflowX": false,
+    "linksNoText": 0,
+    "consoleErrors": [],
+    "figures": [
+     {
+      "id": "fig-U3-3",
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-3.ur.svg",
+      "altStartsWithUrdu": true,
+      "altLen": 117,
+      "hasFigcaption": true,
+      "loaded": true,
+      "pixelStddev": 18.4
+     },
+     {
+      "id": "fig-U3-4",
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-4.ur.svg",
+      "altStartsWithUrdu": true,
+      "altLen": 70,
+      "hasFigcaption": true,
+      "loaded": true,
+      "pixelStddev": 23.9
+     }
+    ]
+   },
+   "narrow": {
+    "docScrollWidth": 360,
+    "docClientWidth": 360,
+    "docOverflowX": false,
+    "tables": [
+     {
+      "clientWidth": 328,
+      "scrollWidth": 328,
+      "fits": true,
+      "tableDirection": "rtl",
+      "lastColLeftBeforeScroll": 17,
+      "lastColLeftAfterScroll": 17,
+      "hydrationAttrs": {
+       "tabindex": null,
+       "role": null,
+       "ariaLabel": null
+      }
+     }
+    ],
+    "figures": [
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-3.ur.svg",
+      "left": 16,
+      "right": 344,
+      "fits": true
+     },
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-3.ur.dark.svg",
+      "left": 0,
+      "right": 0,
+      "fits": true
+     },
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-4.ur.svg",
+      "left": 16,
+      "right": 344,
+      "fits": true
+     },
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-4.ur.dark.svg",
+      "left": 0,
+      "right": 0,
+      "fits": true
+     }
+    ]
+   },
+   "print": {
+    "docScrollWidth": 794,
+    "docOverflowX": false,
+    "clippedElems": [],
+    "navbarHidden": true,
+    "sidebarHidden": true,
+    "figures": [
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-3.ur.svg",
+      "right": 778,
+      "loaded": true
+     },
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-3.ur.dark.svg",
+      "right": 0,
+      "loaded": false
+     },
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-4.ur.svg",
+      "right": 778,
+      "loaded": true
+     },
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-4.ur.dark.svg",
+      "right": 0,
+      "loaded": false
+     }
+    ],
+    "allFiguresFit": false,
+    "answersHeadingY": null
+   }
+  },
+  {
+   "name": "topic-03",
+   "path": "/ur/semester-1/gnas-301/unit-03/topic-03",
+   "desktop": {
+    "title": "موضوع 3.3 - صحت، حفاظت اور ماحول میں خطرات | B.Ed Mega Textbook",
+    "htmlDir": "rtl",
+    "htmlLang": "ur",
+    "h1Count": 1,
+    "h1Text": "موضوع 3.3 - صحت، حفاظت اور ماحول میں خطرات",
+    "imgCount": 4,
+    "urSvgCount": 2,
+    "brokenImages": [],
+    "imagesWithoutAlt": [],
+    "bodyFont": "\"Noto Nastaliq Urdu\", \"Noto Naskh Arabic\", \"Jameel Noori Nastaleeq\", serif",
+    "sampleFont": "\"Noto Nastaliq Urdu\", \"Noto Naskh Arabic\", \"Jameel Noori Nastaleeq\", serif",
+    "nastaliqApplied": true,
+    "latinEmbeds": [
+     "GNAS",
+     "Environmental",
+     "Science",
+     "Print",
+     "Save",
+     "as",
+     "PDF",
+     "textbook.com.pk",
+     "World",
+     "Health",
+     "Organization.",
+     "Occupational",
+     "health",
+     "https",
+     "www.who.int",
+     "topics",
+     "occupational",
+     "Abbasi",
+     "H.",
+     "N.",
+     "Khan",
+     "R.",
+     "Nasir",
+     "I.",
+     "Ahmed"
+    ],
+    "westernDigits": [
+     "1",
+     "3",
+     "0",
+     "2",
+     "4",
+     "5",
+     "7",
+     "6"
+    ],
+    "easternDigits": [],
+    "docScrollWidth": 1280,
+    "docClientWidth": 1280,
+    "docOverflowX": false,
+    "linksNoText": 0,
+    "consoleErrors": [],
+    "figures": [
+     {
+      "id": "fig-U3-5",
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-5.ur.svg",
+      "altStartsWithUrdu": true,
+      "altLen": 151,
+      "hasFigcaption": true,
+      "loaded": true,
+      "pixelStddev": 17.1
+     },
+     {
+      "id": "fig-U3-6",
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-6.ur.svg",
+      "altStartsWithUrdu": true,
+      "altLen": 84,
+      "hasFigcaption": true,
+      "loaded": true,
+      "pixelStddev": 22.8
+     }
+    ]
+   },
+   "narrow": {
+    "docScrollWidth": 360,
+    "docClientWidth": 360,
+    "docOverflowX": false,
+    "tables": [
+     {
+      "clientWidth": 328,
+      "scrollWidth": 328,
+      "fits": true,
+      "tableDirection": "rtl",
+      "lastColLeftBeforeScroll": 17,
+      "lastColLeftAfterScroll": 17,
+      "hydrationAttrs": {
+       "tabindex": null,
+       "role": null,
+       "ariaLabel": null
+      }
+     }
+    ],
+    "figures": [
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-5.ur.svg",
+      "left": 16,
+      "right": 344,
+      "fits": true
+     },
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-5.ur.dark.svg",
+      "left": 0,
+      "right": 0,
+      "fits": true
+     },
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-6.ur.svg",
+      "left": 16,
+      "right": 344,
+      "fits": true
+     },
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-6.ur.dark.svg",
+      "left": 0,
+      "right": 0,
+      "fits": true
+     }
+    ]
+   },
+   "print": {
+    "docScrollWidth": 794,
+    "docOverflowX": false,
+    "clippedElems": [],
+    "navbarHidden": true,
+    "sidebarHidden": true,
+    "figures": [
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-5.ur.svg",
+      "right": 778,
+      "loaded": true
+     },
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-5.ur.dark.svg",
+      "right": 0,
+      "loaded": false
+     },
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-6.ur.svg",
+      "right": 778,
+      "loaded": true
+     },
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-6.ur.dark.svg",
+      "right": 0,
+      "loaded": false
+     }
+    ],
+    "allFiguresFit": false,
+    "answersHeadingY": null
+   }
+  },
+  {
+   "name": "topic-04",
+   "path": "/ur/semester-1/gnas-301/unit-03/topic-04",
+   "desktop": {
+    "title": "موضوع 3.4 - خطرے کا اندازہ اور انتظام | B.Ed Mega Textbook",
+    "htmlDir": "rtl",
+    "htmlLang": "ur",
+    "h1Count": 1,
+    "h1Text": "موضوع 3.4 - خطرے کا اندازہ اور انتظام",
+    "imgCount": 4,
+    "urSvgCount": 2,
+    "brokenImages": [],
+    "imagesWithoutAlt": [],
+    "bodyFont": "\"Noto Nastaliq Urdu\", \"Noto Naskh Arabic\", \"Jameel Noori Nastaleeq\", serif",
+    "sampleFont": "\"Noto Nastaliq Urdu\", \"Noto Naskh Arabic\", \"Jameel Noori Nastaleeq\", serif",
+    "nastaliqApplied": true,
+    "latinEmbeds": [
+     "GNAS",
+     "Environmental",
+     "Science",
+     "Print",
+     "Save",
+     "as",
+     "PDF",
+     "textbook.com.pk",
+     "Abbasi",
+     "H.",
+     "N.",
+     "Khan",
+     "R.",
+     "Nasir",
+     "I.",
+     "Ahmed",
+     "W.",
+     "A",
+     "case",
+     "study",
+     "of",
+     "Tariq",
+     "Road",
+     "Underpass",
+     "Karachi"
+    ],
+    "westernDigits": [
+     "1",
+     "3",
+     "0",
+     "4",
+     "2",
+     "5",
+     "7",
+     "6"
+    ],
+    "easternDigits": [],
+    "docScrollWidth": 1280,
+    "docClientWidth": 1280,
+    "docOverflowX": false,
+    "linksNoText": 0,
+    "consoleErrors": [],
+    "figures": [
+     {
+      "id": "fig-U3-7",
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-7.ur.svg",
+      "altStartsWithUrdu": true,
+      "altLen": 117,
+      "hasFigcaption": true,
+      "loaded": true,
+      "pixelStddev": 17.5
+     },
+     {
+      "id": "fig-U3-8",
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-8.ur.svg",
+      "altStartsWithUrdu": true,
+      "altLen": 86,
+      "hasFigcaption": true,
+      "loaded": true,
+      "pixelStddev": 22
+     }
+    ]
+   },
+   "narrow": {
+    "docScrollWidth": 360,
+    "docClientWidth": 360,
+    "docOverflowX": false,
+    "tables": [
+     {
+      "clientWidth": 328,
+      "scrollWidth": 328,
+      "fits": true,
+      "tableDirection": "rtl",
+      "lastColLeftBeforeScroll": 17,
+      "lastColLeftAfterScroll": 17,
+      "hydrationAttrs": {
+       "tabindex": null,
+       "role": null,
+       "ariaLabel": null
+      }
+     }
+    ],
+    "figures": [
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-7.ur.svg",
+      "left": 16,
+      "right": 344,
+      "fits": true
+     },
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-7.ur.dark.svg",
+      "left": 0,
+      "right": 0,
+      "fits": true
+     },
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-8.ur.svg",
+      "left": 16,
+      "right": 344,
+      "fits": true
+     },
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-8.ur.dark.svg",
+      "left": 0,
+      "right": 0,
+      "fits": true
+     }
+    ]
+   },
+   "print": {
+    "docScrollWidth": 794,
+    "docOverflowX": false,
+    "clippedElems": [],
+    "navbarHidden": true,
+    "sidebarHidden": true,
+    "figures": [
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-7.ur.svg",
+      "right": 778,
+      "loaded": true
+     },
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-7.ur.dark.svg",
+      "right": 0,
+      "loaded": false
+     },
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-8.ur.svg",
+      "right": 778,
+      "loaded": true
+     },
+     {
+      "src": "/img/figures/gnas-301/unit-03/fig-U3-8.ur.dark.svg",
+      "right": 0,
+      "loaded": false
+     }
+    ],
+    "allFiguresFit": false,
+    "answersHeadingY": null
+   }
+  },
+  {
+   "name": "unit-assessment",
+   "path": "/ur/semester-1/gnas-301/unit-03/unit-assessment",
+   "desktop": {
+    "title": "یونٹ 3 کا جائزہ | B.Ed Mega Textbook",
+    "htmlDir": "rtl",
+    "htmlLang": "ur",
+    "h1Count": 1,
+    "h1Text": "یونٹ 3 کا جائزہ",
+    "imgCount": 0,
+    "urSvgCount": 0,
+    "brokenImages": [],
+    "imagesWithoutAlt": [],
+    "bodyFont": "\"Noto Nastaliq Urdu\", \"Noto Naskh Arabic\", \"Jameel Noori Nastaleeq\", serif",
+    "sampleFont": "\"Noto Nastaliq Urdu\", \"Noto Naskh Arabic\", \"Jameel Noori Nastaleeq\", serif",
+    "nastaliqApplied": true,
+    "latinEmbeds": [
+     "GNAS",
+     "Environmental",
+     "Science",
+     "Print",
+     "Save",
+     "as",
+     "PDF",
+     "dB",
+     "MCQs",
+     "a",
+     "b",
+     "c",
+     "d",
+     "RRQs",
+     "ERQs"
+    ],
+    "westernDigits": [
+     "1",
+     "3",
+     "0",
+     "4",
+     "2",
+     "8",
+     "5",
+     "7",
+     "9"
+    ],
+    "easternDigits": [],
+    "docScrollWidth": 1280,
+    "docClientWidth": 1280,
+    "docOverflowX": false,
+    "linksNoText": 0,
+    "consoleErrors": [],
+    "figures": []
+   },
+   "narrow": {
+    "docScrollWidth": 360,
+    "docClientWidth": 360,
+    "docOverflowX": false,
+    "tables": [],
+    "figures": []
+   },
+   "print": {
+    "docScrollWidth": 794,
+    "docOverflowX": false,
+    "clippedElems": [],
+    "navbarHidden": true,
+    "sidebarHidden": true,
+    "figures": [],
+    "allFiguresFit": true,
+    "answersHeadingY": 675
+   }
+  },
+  {
+   "name": "unit-teacher-notes",
+   "path": "/ur/semester-1/gnas-301/unit-03/unit-teacher-notes",
+   "desktop": {
+    "title": "یونٹ 3 اساتذہ کے نوٹس | B.Ed Mega Textbook",
+    "htmlDir": "rtl",
+    "htmlLang": "ur",
+    "h1Count": 1,
+    "h1Text": "یونٹ 3 اساتذہ کے نوٹس",
+    "imgCount": 0,
+    "urSvgCount": 0,
+    "brokenImages": [],
+    "imagesWithoutAlt": [],
+    "bodyFont": "\"Noto Nastaliq Urdu\", \"Noto Naskh Arabic\", \"Jameel Noori Nastaleeq\", serif",
+    "sampleFont": "\"Noto Nastaliq Urdu\", \"Noto Naskh Arabic\", \"Jameel Noori Nastaleeq\", serif",
+    "nastaliqApplied": true,
+    "latinEmbeds": [
+     "GNAS",
+     "Environmental",
+     "Science"
+    ],
+    "westernDigits": [
+     "1",
+     "3",
+     "0",
+     "2",
+     "4",
+     "5"
+    ],
+    "easternDigits": [],
+    "docScrollWidth": 1280,
+    "docClientWidth": 1280,
+    "docOverflowX": false,
+    "linksNoText": 0,
+    "consoleErrors": [],
+    "figures": []
+   },
+   "narrow": {
+    "docScrollWidth": 360,
+    "docClientWidth": 360,
+    "docOverflowX": false,
+    "tables": [],
+    "figures": []
+   },
+   "print": {
+    "docScrollWidth": 794,
+    "docOverflowX": false,
+    "clippedElems": [],
+    "navbarHidden": true,
+    "sidebarHidden": true,
+    "figures": [],
+    "allFiguresFit": true,
+    "answersHeadingY": null
+   }
+  }
+ ],
+ "completed": "2026-09-24T07:34:34.904Z"
+}
