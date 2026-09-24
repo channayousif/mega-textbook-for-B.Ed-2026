@@ -983,5 +983,270 @@
     "term": "Intercultural communication",
     "definition_en": "The study of how people from different cultural backgrounds communicate with one another, and how cultural assumptions shape the way messages are sent, received and interpreted.",
     "definition_ur": "اس بات کا مطالعہ کہ مختلف ثقافی پس منظر کے لوگ ایک دوسرے کے ساتھ کیسے رابطہ کرتے ہیں، اور ثقافی مفروضے پیغامات کے بھیجنے، وصول کرنے اور ان کی تفسیر کو کیسے شکل دیتے ہیں۔"
+  },
+  {
+    "term": "Quantitative reasoning",
+    "definition_en": "The habit of using numbers, data, and logical thinking to understand situations and make sound decisions; the reasoning lies in deciding what to calculate and what the result means, not in the calculation itself.",
+    "definition_ur": "اعداد، معطیات اور منطقی سوچ کا استعمال کرتے ہوئے صورتحالوں کو سمجھنے اور ٹھیک فیصلے کرنے کی عادت؛ اس میں اصل سوچ یہ طے کرنے میں ہے کہ کیا حساب کرنا ہے اور نتیجے کا کیا مطلب ہے، حساب خود نہیں۔"
+  },
+  {
+    "term": "Numeracy",
+    "definition_en": "The ability to use mathematics confidently in daily life, at work, and as a citizen.",
+    "definition_ur": "روزمرہ زندگی، کام اور بطور شہری اعتماد کے ساتھ ریاضی استعمال کرنے کی صلاحیت۔"
+  },
+  {
+    "term": "Number sense",
+    "definition_en": "A feel for what numbers mean, how big they are, and how they relate to each other; it powers the check that asks whether an answer could possibly be right.",
+    "definition_ur": "اعداد کے مطلب، ان کی مقدار اور آپس کے تعلق کا شعور؛ یہی شعور یہ جانچ کرتا ہے کہ کوئی جواب ممکن ہے یا نہیں۔"
+  },
+  {
+    "term": "Estimation",
+    "definition_en": "A deliberate, reasoned guess that is close enough for the purpose, built from a named method such as grouping, rounding, front-end digits, or compatible numbers.",
+    "definition_ur": "کسی مقصد کے لیے کافی قریب ہونے والا، سوچا سمجھا اور کسی بتائی گئی طریقے پر مبنی اندازہ، جیسے گروہ بندی، گول کرنا، یا آسان اعداد کا انتخاب۔"
+  },
+  {
+    "term": "Approximation",
+    "definition_en": "A value used in place of an exact one to make work easier, such as taking 398 as 400.",
+    "definition_ur": "کام آسان بنانے کے لیے کسی درست قیمت کے بدلے استعمال ہونے والی قیمت، جیسے 398 کو 400 سمجھنا۔"
+  },
+  {
+    "term": "Logical reasoning",
+    "definition_en": "Thinking in ordered, checkable steps so that each conclusion follows from what came before and another person can retrace the path.",
+    "definition_ur": "ایسے مرحلہ وار اور جانچے جا سکنے والے قدموں میں سوچنا کہ ہر نتیجہ پہلی باتوں سے نکلے اور دوسرا شخص اس کا پورا راستہ دوبارہ چیک کر سکے۔"
+  },
+  {
+    "term": "Problem-solving strategy",
+    "definition_en": "An ordered way through a problem you have not met before; the classic four steps are understand the problem, make a plan, carry out the plan, and look back.",
+    "definition_ur": "کسی نئے مسئلے کو حل کرنے کا ترتیب وار طریقہ؛ مشہور چار مراحل ہیں: مسئلہ سمجھنا، منصوبہ بنانا، منصوبہ عمل میں لانا، اور نظرِ ثانی کرنا۔"
+  },
+  {
+    "term": "Whole number",
+    "definition_en": "The counting numbers together with zero: 0, 1, 2, 3, and so on; they answer how many when the answer cannot be negative.",
+    "definition_ur": "گنتی کے اعداد اور صفر: 0، 1، 2، 3، اور آگے؛ یہ بتاتے ہیں کہ کتنے ہیں جب جواب منفی نہیں ہو سکتا۔"
+  },
+  {
+    "term": "Integer",
+    "definition_en": "A whole number or its negative: ..., -3, -2, -1, 0, 1, 2, 3, ...; the negative side records debts, deductions and falls.",
+    "definition_ur": "کوئی تمام عدد یا اس کا منفی: ...، منفی 3، منفی 2، منفی 1، 0، 1، 2، 3، ...؛ منفی طرف قرضے، کٹوتیاں اور کمی کو ریکارڈ کرتا ہے۔"
+  },
+  {
+    "term": "Fraction",
+    "definition_en": "A number naming a part of a whole or a share of a group; the denominator counts the equal parts and the numerator counts the parts taken.",
+    "definition_ur": "کوئی عدد جو کسی پورے کا حصہ یا گروہ کا حصہ بتاتا ہے؛ نِچلا عدد (نسب نما) برابر حصوں کی تعداد بتاتا ہے اور اوپر والا عدد (شمار کنندہ) لیے گئے حصوں کی تعداد۔"
+  },
+  {
+    "term": "Decimal",
+    "definition_en": "A fraction written in place value: 0.75 means 7 tenths and 5 hundredths; every fraction has a decimal name.",
+    "definition_ur": "مقامی قیمت میں لکھی ہوئی کسر: 0.75 کا مطلب ہے 7 دسویں اور 5 سویں؛ ہر کسر کا ایک اعشاری نام ہوتا ہے۔"
+  },
+  {
+    "term": "Ratio",
+    "definition_en": "A comparison of two quantities of the same kind, such as 6 spoons of sugar to 4 spoons of tea leaves; it simplifies like a fraction.",
+    "definition_ur": "ایک جیسی دو مقداروں کا موازنہ، جیسے 6 چمچ چینی اور 4 چمچ پتی؛ یہ کسر کی طرح سادہ کی جا سکتی ہے۔"
+  },
+  {
+    "term": "Proportion",
+    "definition_en": "A statement that two ratios are equal, such as 6 to 4 equals 18 to 12; the cross-products of a true proportion are equal.",
+    "definition_ur": "اس بیان کہ دو نسبتیں برابر ہیں، جیسے 6 بہ 4 برابر ہے 18 بہ 12؛ درست تناسب میں ضربدری آپس میں برابر ہوتی ہے۔"
+  },
+  {
+    "term": "Percentage",
+    "definition_en": "A ratio expressed out of 100; per cent means by the hundred, so 80 percent means 80 out of every 100.",
+    "definition_ur": "سو میں سے ظاہر کی گئی نسبت؛ فیصد کا مطلب ہے سو میں سے، پس 80 فیصد کا مطلب ہے ہر 100 میں سے 80۔"
+  },
+  {
+    "term": "Power",
+    "definition_en": "Repeated multiplication of a base: 8 to the power 2 (8 squared) means 8 x 8; the exponent counts the multiplications.",
+    "definition_ur": " اساس کی بار بار ضرب: 8 کی طاقت 2 (8 کا مربع) کا مطلب ہے 8 ضرب 8؛ وسیع (exponent) ضربوں کی تعداد بتاتا ہے۔"
+  },
+  {
+    "term": "Exponent",
+    "definition_en": "The small raised number in a power that counts how many times the base is multiplied by itself; in 8 squared the exponent is 2.",
+    "definition_ur": "طاقت میں اوپر لکھا چھوٹا عدد جو بتاتا ہے کہ اساس کو کتنی بار ضرب دی گئی ہے؛ 8 کے مربع میں وسیع (exponent) 2 ہے۔"
+  },
+  {
+    "term": "Square root",
+    "definition_en": "The side length of the square with a given area; the square root of 64 is 8 because an 8-by-8 square holds exactly 64 unit tiles.",
+    "definition_ur": "کسی دیے گئے رقبے والے مربع کے ضلع کی لمبائی؛ 64 کا جذر 8 ہے کیونکہ 8 بہ 8 کا مربع بالکل 64 ٹائل سمیٹتا ہے۔"
+  },
+  {
+    "term": "Variable",
+    "definition_en": "A named quantity that can change, such as t for the number of triangles or k for kilometres travelled; the rule holds for every value it takes.",
+    "definition_ur": "کوئی نامزد مقدار جو بدل سکتی ہے، جیسے t مثلثوں کی تعداد یا k طے شدہ کلومیٹر؛ قاعدہ اس کی ہر قیمت پر لاگو رہتا ہے۔"
+  },
+  {
+    "term": "Algebraic expression",
+    "definition_en": "A rule written with variables and numbers, such as 2t + 1; a machine that turns each input into its output, not a puzzle to solve.",
+    "definition_ur": "متغیروں اور اعداد سے لکھا گیا قاعدہ، جیسے 2t + 1؛ ایک مشین جو ہر داخل کی گئی قیمت کا نتیجہ دیتی ہے، حل کرنے کی پہیلی نہیں۔"
+  },
+  {
+    "term": "Coefficient",
+    "definition_en": "The number multiplying a variable in a term; in 2t the coefficient is 2, and in 500 + 30k it is 30.",
+    "definition_ur": "کسی رکن میں متغیر کے ساتھ ضرب دیا گیا عدد؛ 2t میں عددِ ضرب 2 ہے اور 500 + 30k میں 30۔"
+  },
+  {
+    "term": "Pattern",
+    "definition_en": "A rule that repeats or grows, such as a matchstick pattern that adds 2 sticks for every new triangle.",
+    "definition_ur": "کوئی قاعدہ جو دہرایا یا بڑھتا جائے، جیسے تیلیوں کا نمونہ جو ہر نئے مثلث پر 2 تیلیاں جوڑتا ہے۔"
+  },
+  {
+    "term": "Sequence",
+    "definition_en": "The list of outputs a pattern produces, such as 3, 5, 7, 9 for the growing matchstick triangles.",
+    "definition_ur": "کسی نمونے سے نکلنے والے نتیجوں کی فہرست، جیسے بڑھتے تیلیوں کے مثلثوں کے لیے 3، 5، 7، 9۔"
+  },
+  {
+    "term": "Linear equation",
+    "definition_en": "A claim that two expressions are equal for some value of the variable, such as 60 + 15k = 195; solved by doing the same fair move to both sides.",
+    "definition_ur": "اس دعویٰ کہ کسی متغیر کی ایک قیمت پر دو اثر برابر ہیں، جیسے 60 + 15k = 195؛ دونوں طرف ایک جیسا منصفانہ قدم اٹھا کر حل کی جاتی ہے۔"
+  },
+  {
+    "term": "Linear inequality",
+    "definition_en": "A claim about a range rather than a point, such as 45b <= 1,700; multiplying or dividing by a negative number flips the sign.",
+    "definition_ur": "کسی ایک نکتے کے بجائے حد کا دعویٰ، جیسے 45b <= 1,700؛ منفی عدد سے ضرب یا تقسیم دیے جانے پر علامت پلٹ جاتی ہے۔"
+  },
+  {
+    "term": "Balance model",
+    "definition_en": "The picture of an equation as a balance scale: whatever is done must be done to both pans, or the balance lies.",
+    "definition_ur": "مساوات کی تصویر بطور ترازو: جو کچھ کیا جائے، دونوں پلڑوں پر کیا جائے، ورنہ ترازو جھوٹ بولتا ہے۔"
+  },
+  {
+    "term": "Unit of measurement",
+    "definition_en": "A fixed amount that other amounts are counted in, such as the metre for length; every measurement is a number-unit pair.",
+    "definition_ur": "کوئی مقررہ مقدار جس میں دوسری مقداریں گنی جاتی ہیں، جیسے لمبائی کے لیے میٹر؛ ہر پیمائش عدد اور اکائی کا جوڑا ہوتی ہے۔"
+  },
+  {
+    "term": "Kilogram",
+    "definition_en": "The base metric unit of mass; the prefix kilo- means a thousand, so 1 kilogram = 1,000 grams.",
+    "definition_ur": "کمیت کی بنیادی میٹری اکائی؛ لاحقہ کلو- کا مطلب ہے ایک ہزار، پس 1 کلوگرام = 1,000 گرام۔"
+  },
+  {
+    "term": "Centimetre",
+    "definition_en": "One hundredth of a metre; the prefix centi- means a hundredth, so 1 metre = 100 centimetres.",
+    "definition_ur": "ایک میٹر کا سو واں حصہ؛ لاحقہ سینٹی- کا مطلب ہے سو واں حصہ، پس 1 میٹر = 100 سینٹی میٹر۔"
+  },
+  {
+    "term": "Millilitre",
+    "definition_en": "One thousandth of a litre; the prefix milli- means a thousandth, so 1 litre = 1,000 millilitres.",
+    "definition_ur": "ایک لیٹر کا ہزار واں حصہ؛ لاحقہ ملی- کا مطلب ہے ہزار واں حصہ، پس 1 لیٹر = 1,000 ملی لیٹر۔"
+  },
+  {
+    "term": "Perimeter",
+    "definition_en": "The distance around a shape - the fence line; measured in metres, and what skirting or border tasks buy.",
+    "definition_ur": "کسی شکل کے گرد کا فاصلہ، یعنی باڑ کی لکیر؛ میٹر میں ناپی جاتی ہے، اور اطراف یا بارڈر کے کام یہی خریدتے ہیں۔"
+  },
+  {
+    "term": "Area",
+    "definition_en": "The amount of surface a shape covers - the carpet; measured in square metres, and what tiling or painting tasks buy.",
+    "definition_ur": "کسی شکل کا ڈھکا ہوا سطحی رقبہ، یعنی قالین؛ مربع میٹر میں ناپی جاتی ہے، اور ٹائل یا پینٹ کے کام یہی خریدتے ہیں۔"
+  },
+  {
+    "term": "Volume",
+    "definition_en": "The amount of space a solid fills - the water in the tank; measured in cubic metres or litres.",
+    "definition_ur": "کسی ٹھوس چیز کا بھرا ہوا خانہ، یعنی ٹینک میں پانی؛ مکعب میٹر یا لیٹر میں ناپا جاتا ہے۔"
+  },
+  {
+    "term": "Rectangle",
+    "definition_en": "A shape with four right angles and opposite sides equal; its area is length x width.",
+    "definition_ur": "ایسی شکل جس کے چار زاویے قائمہ ہوں اور سامنے کی باتیں برابر ہوں؛ اس کا رقبہ لمبائی ضرب چوڑائی ہے۔"
+  },
+  {
+    "term": "Square",
+    "definition_en": "A rectangle with all four sides equal; a special rectangle, so every square fact is also a rectangle fact.",
+    "definition_ur": "ایسا مستطیل جس کے چاروں طرف برابر ہوں؛ ایک خاص مستطیل، پس مربع کی ہر بات مستطیل کی بات بھی ہے۔"
+  },
+  {
+    "term": "Triangle",
+    "definition_en": "A shape with three sides whose angles sum to 180 degrees; its area is half the enclosing rectangle with the same base and height.",
+    "definition_ur": "تین طرفوں والی شکل جس کے زاویوں کا مجموعہ 180 ڈگری ہے؛ اس کا رقبہ اسی اساس اور اونچائی والے مستطیل کا آدھا ہے۔"
+  },
+  {
+    "term": "Circle",
+    "definition_en": "The set of every point at one fixed distance from a centre; its circumference is pi times the diameter and its area is pi times the radius squared.",
+    "definition_ur": "کسی مرکز سے ایک مقررہ فاصلے پر واقع تمام نقطوں کا مجموعہ؛ اس کا محیط پای ضرب قطر اور رقبہ پای ضرب نصف قطر کا مربع ہے۔"
+  },
+  {
+    "term": "Radius",
+    "definition_en": "The fixed distance from a circle's centre to its edge; half the diameter, and the length a circle computation needs.",
+    "definition_ur": "دائرے کے مرکز سے کنارے تک مقررہ فاصلہ؛ قطر کا آدھا، اور دائرے کے حساب کے لیے درکار لمبائی۔"
+  },
+  {
+    "term": "Data",
+    "definition_en": "The raw facts collected for a question - counts, words, register marks - which become numbers only when summarized.",
+    "definition_ur": "کسی سوال کے لیے جمع کیے گئے خام حقائق - گنتی، الفاظ، رجسٹر کے نشان - جو خلاصہ کرنے پر اعداد بنتے ہیں۔"
+  },
+  {
+    "term": "Frequency table",
+    "definition_en": "A table counting how often each answer or value occurs; its total should close at the sample size, and a gap names a collection problem.",
+    "definition_ur": "ایسا جدول جو بتاتا ہے ہر جواب کتنی بار آیا؛ اس کا کل نمونے کے حجم کے برابر ہونا چاہیے، اور کمی جمع کاری کی خرابی بتاتی ہے۔"
+  },
+  {
+    "term": "Tally",
+    "definition_en": "Counting strokes grouped in fives (four vertical, the fifth across) used to build a frequency table by hand.",
+    "definition_ur": "پانچ پانچ کے گروہوں میں گنتی کے نشان (چار عمودی، پانچواں ترچھا) جو تعدد جدول ہاتھ سے بنانے کے کام آتے ہیں۔"
+  },
+  {
+    "term": "Bar chart",
+    "definition_en": "A display comparing categories with bars whose heights are the values; the one rule is that bars start at zero.",
+    "definition_ur": "ایسا ڈسپلے جو اقسام کو باروں کی اونچائی سے موازنہ کرتا ہے؛ اصول یہ ہے کہ بار صفر سے شروع ہوں۔"
+  },
+  {
+    "term": "Pie chart",
+    "definition_en": "A display showing parts of one whole as slices of a circle, each slice's angle equal to its share of 360 degrees.",
+    "definition_ur": "ایسا ڈسپلے جو ایک پورے کے حصے دائرے کے ٹکڑوں میں دکھاتا ہے، ہر ٹکڑے کا زاویہ اس کے 360 میں سے حصے کے برابر ہوتا ہے۔"
+  },
+  {
+    "term": "Line graph",
+    "definition_en": "A display tracking change over time, one point per period joined so the trend is visible; the default whenever the horizontal axis is time.",
+    "definition_ur": "وقت کے ساتھ تبدیلی دکھانے والا ڈسپلے، ہر دور کا ایک نقطہ ملا ہوا تاکہ رجحان نظر آئے؛ جب افقی محور وقت ہو تو یہی پہلا انتخاب ہے۔"
+  },
+  {
+    "term": "Pictograph",
+    "definition_en": "A display using repeated icons, each standing for a fixed count stated in its key; suits young readers and public notices.",
+    "definition_ur": "بار بار دہرائی گئی تصویروں والا ڈسپلے، ہر تصویر ایک مقررہ گنتی کی علامت جو کلید میں لکھی ہوتی ہے؛ چھوٹے قاری اور عام اعلانات کے لیے موزوں۔"
+  },
+  {
+    "term": "Measures of central tendency",
+    "definition_en": "The three averages - mean, median and mode - each answering \"what is typical?\" in a different way.",
+    "definition_ur": "تین اوسط - حسابی اوسط، درمیانی قدر اور عاد - جو \"عام طور پر کیا ہے؟\" کا الگ الگ جواب دیتے ہیں۔"
+  },
+  {
+    "term": "Mean",
+    "definition_en": "The fair-share average: all values added, divided by how many; sensitive to outliers, which can drag it far from the typical value.",
+    "definition_ur": "منصفانہ حصے والی اوسط: تمام قیمتیں جمع کر کے تعداد پر تقسیم؛ انتہائی قیمتوں سے متاثر ہوتی ہے جو اسے عام قدر سے دور کھینچ سکتی ہیں۔"
+  },
+  {
+    "term": "Median",
+    "definition_en": "The middle value when data are sorted: half the values sit at or below it, half at or above; resistant to outliers.",
+    "definition_ur": "ترتیب دیے گئے معطیات کی درمیانی قیمت: آدھی قیمتیں اس کے برابر یا نیچے، آدھی برابر یا اوپر؛ انتہائی قیمتوں سے محفوظ۔"
+  },
+  {
+    "term": "Mode",
+    "definition_en": "The most frequent value; the only average that also works for categories, such as the most common travel mode.",
+    "definition_ur": "سب سے زیادہ دہرائی جانے والی قیمت؛ واحد اوسط جو اقسام کے لیے بھی چلتی ہے، جیسے سب سے عام سفر کا طریقہ۔"
+  },
+  {
+    "term": "Profit",
+    "definition_en": "Takings minus total costs; its percentage is always computed against costs, which is what lets stalls of different sizes compare themselves.",
+    "definition_ur": "کل آمدنی منہا کل لاگت؛ اس کا فیصد ہمیشہ لاگت کے حساب سے لگایا جاتا ہے، اسی سے مختلف سائز کے کاروبار آپس میں موازنہ کر سکتے ہیں۔"
+  },
+  {
+    "term": "Loss",
+    "definition_en": "Costs above takings - profit's negative twin; its percentage is also computed against costs.",
+    "definition_ur": "لاگت آمدنی سے زیادہ ہونا، یعنی منافع کی منفی صورت؛ اس کا فیصد بھی لاگت کے حساب سے لگایا جاتا ہے۔"
+  },
+  {
+    "term": "Interest",
+    "definition_en": "The price of money over time - the saver's reward or the borrower's cost, stated as a percent per year.",
+    "definition_ur": "وقت کے ساتھ پیسے کی قیمت - بچت کرنے والے کا صلہ یا قرض لینے والے کی لاگت، فیصد فی سال کے طور پر۔"
+  },
+  {
+    "term": "Simple interest",
+    "definition_en": "Interest paying a fixed percentage of the original amount each year: principal x rate x time; it grows in a straight line.",
+    "definition_ur": "ایسا سود جو ہر سال اصل رقم کا مقررہ فیصد دیتا ہے: اصل ضرب شرح ضرب مدت؛ یہ سیدھی لکیر میں بڑھتا ہے۔"
+  },
+  {
+    "term": "Budget",
+    "definition_en": "A plan for money before it arrives: income, fixed costs, variable costs, savings (before spending) and a month-end review.",
+    "definition_ur": "پیسہ آنے سے پہلے اس کا منصوبہ: آمدنی، مقررہ اخراجات، بدلنے والے اخراجات، بچت (خرچ سے پہلے) اور مہینے کے آخر میں جائزہ۔"
   }
 ]

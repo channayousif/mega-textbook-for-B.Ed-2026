@@ -1,0 +1,97 @@
+G3 source verification - GQUR-300 Unit 5 - run001
+Reviewed at HEAD ad0c4d1 (unit content authored at 56f5b54, unchanged since).
+Bytes relied on, pinned by SHA-256 at review time:
+
+  9686693d9c278a6a851cd0948e3298579194fb3b6cb4e6750b110eaa222e1b53  specs/content/gqur-300/sources/texts/pbs.md
+  b585a09d7a061509255b32111df69dbd17bf3d9e9a2087542a075a211ebf409d  specs/content/gqur-300/sources/texts/openstax-prealgebra.md
+  c32985472cafb3c16777757bb4915cd561d73de922a67dd92374ecb23517aa4d  specs/content/gqur-300/sources/texts/tout2020.md
+
+BINDING NOTE: pbs.md and openstax-prealgebra.md are committed and clean at HEAD
+but are NOT entries of this unit's input manifest. scripts/lib/review-evidence.mjs
+`citedKeysFor` binds `sources/texts/<key>.md` only for keys matching
+\b[a-z][a-z-]*\d{4}\b or \b[a-z][a-z0-9-]*-\d{4}\b (year-bearing keys). The keys
+"pbs" and "openstax-prealgebra" carry no year, so the manifest excludes them
+(only tout2020.md is bound). The parent supplied pbs.md as a bound excerpt by
+instruction; this review pins the exact bytes above. Post-review edits to these
+two files would NOT invalidate this unit's evidence - recorded as an advisory
+finding for the parent/owner.
+
+VERIFIED - pbs (figures). specs/content/gqur-300/sources/texts/pbs.md
+"Record summary (Sindh, Census 2023)" supports every census figure quoted in
+the unit: population 55,696,147; literacy 10 years and above 57.54 percent
+(2017: 54.57), male 64.23, female 50.21; out of school 5-16 46.29 percent.
+Cross-checked against every occurrence in docs/semester-1/gqur-300/unit-05/
+(topic-03.mdx:67-68, 74, 80, 133-135; unit-assessment.mdx:30, 93, 116-117,
+132-134; index.mdx:23-24, 56-57; unit-teacher-notes.mdx:48-50, 72-73). All
+figure citations agree with the excerpt.
+
+NOT VERIFIED - pbs (conduct and structure claims). The excerpt's "What this
+supports" limits full-text support to "the figures quoted above". The following
+PBS-attributed prose is absent from the bound excerpt and unverified:
+  - topic-03.mdx:71-72 "the country's first digital census"
+  - topic-03.mdx:72-73 "Door-to-door enumeration on tablets, March to May 2023,
+    approved by the Council of Common Interests"
+  - topic-01.mdx:75-77 "its Sindh report (2023) is organized as exactly these
+    stages (PBS, 2023)"
+Repair: extend sources/texts/pbs.md to quote/summarize the report passages that
+carry these facts (the PDF was downloaded and read per the declaration), or
+soften the prose to what the excerpt supports.
+
+NOT VERIFIED - openstax-prealgebra (Unit 5 mapping). The bound excerpt verifies
+chapter/section structure for Units 2-4 topics only: its "What this supports"
+reads "GQUR-300 Units 2-4 ... Supported at record/structure level". Sections
+fetched were 5.1 (Decimals) and 5.7 (square roots); Section 5.5 is not among
+them. Yet coverage/unit-05.md maps U5-01, U5-02 and U5-03 to
+openstax-prealgebra, sources/unit-05.md:10 claims it supports "frequency
+tables, averages (mean/median/mode) and data displays", and topic-01.mdx:141-143
+cites "Ch. 5, Section 5.5 Averages and Probability, and the data sections". No
+bound evidence verifies frequency tables, data displays, Section 5.5, or any
+"data sections" of Prealgebra 2e. Repair: extend the excerpt (fetch and verify
+Section 5.5, and name the data-display sections if any exist) or re-scope the
+mapping honestly (e.g. averages-only support for U5-03, once 5.5 is verified).
+
+TRACEABILITY CLAIM FALSE - sources/unit-05.md:3-5 claims "every key here is
+cited both in prose and in a per-topic ## Further reading section".
+openstax-prealgebra appears only in topic-01.mdx:141-143 (Further reading) and
+nowhere in unit prose. pbs (topic-01:77, topic-03:68, 135; assessment:134),
+oecd-pisa (topic-02:71) and tout2020 (topic-03:83) do have prose citations.
+Same defect class as GQUR-300 Unit 4 run001 blocking finding 3.
+
+VERIFIED - tout2020 (record level). sources/texts/tout2020.md summarises the
+ERIC record (not verbatim publisher text, disclosed in the excerpt). The prose
+claim at topic-03.mdx:83-87 ("what counts as 'literacy' or 'numerate' depends
+on the tasks asked, and cross-comparing numbers without reading their
+construction misleads") matches the excerpt's record summary exactly and does
+not overstate it. The unit's sources table says "registry checked 2026-09-23",
+accurate for what was read.
+
+DECLARED UNVERIFIABLE - oecd-pisa. sources/unit-05.md:16-18 declares oecd.org
+403 to automated fetches (checked 2026-09-23), canonical URL, framework
+described from its public summary, cited with that limit. Corpus-wide owner
+ruling D-2026-0001 (specs/decisions/log.md:29-47, confirmed, corpus-wide,
+2026-09-19) authorises flag-and-proceed, so the declaration does not by itself
+fail sources. The prose claim at topic-02.mdx:70-71 ("The PISA framework makes
+this exact demand: interpreting mathematics in context includes recognising how
+a display frames what it shows") attributes a specific demand to a text only
+described from a public summary; "makes this exact demand" likely states more
+than a public summary supports. Advisory: soften the attribution or bind the
+public summary text.
+
+FACTUAL ERROR (not a source-availability issue) - topic-03.mdx:79-80 states the
+male-female literacy gap as "nearly 10 percentage points". From the unit's own
+verified figures the gap is 64.23 - 50.21 = 14.02 percentage points, as
+computed by the unit's own ERQ-3 rubric (unit-assessment.mdx:204), RRQ-9 model
+(:188) and teacher notes (unit-teacher-notes.mdx:72-73, "the 14.02-point gap").
+
+GOVERNANCE RECORD NOTES (advisory):
+  - sources/unit-05.md:9 marks pbs Kind "guide-required", but pbs is named in
+    neither the course guide's recommended books (1st 2026.txt:651-656) nor the
+    content-spec reading list's "### Guide-required" block
+    (content-spec.md:83-90); it is "### Curated-supplementary" (:102). The
+    contract's Kind vocabulary (specs/007-content-depth-standard/contracts/
+    sources-consulted.md) has no curated-supplementary value.
+  - content-spec.md:462 maps grawe (bibliographic level only) and grawe2012 to
+    Unit 5, but sources/unit-05.md cites neither; Unit 5's actual guide-required
+    reading (grawe) has no citation of any level in the unit. Units 1 and 6 cite
+    their guide-required monographs at bibliographic level with the D-2026-0001
+    limit stated.

@@ -1,0 +1,54 @@
+
+> bed-mega-textbook@0.1.0 prebuild
+> node scripts/build-content-index.mjs && node scripts/report-content-status.mjs
+
+✓ Wrote 112 content-index records to static/content-index.json
+✓ Copied catalog/courses.json to static/catalog-courses.json
+✓ Wrote content status for 8 course(s) to static/content-status.json
+
+> bed-mega-textbook@0.1.0 build
+> docusaurus build
+
+◇ injected env (3) from .env.local // tip: ◈ encrypted .env [www.dotenvx.com]
+[33m[1m[WARNING][22m The [36m`siteConfig.onBrokenMarkdownLinks`[39m[33m config option is deprecated and will be removed in Docusaurus v4.[39m
+[33mPlease migrate and move this option to [36m`siteConfig.markdown.hooks.onBrokenMarkdownLinks`[39m[33m instead.[39m
+[36m[1m[INFO][22m[39m Website will be built for all these locales: 
+- en
+- ur
+[36m[1m[INFO][22m[39m [34m[1m[en][22m[39m Creating an optimized production build...
+◇ injected env (0) from .env.local // tip: ⌘ override existing { override: true }
+[33m[1m[WARNING][22m The [36m`siteConfig.onBrokenMarkdownLinks`[39m[33m config option is deprecated and will be removed in Docusaurus v4.[39m
+[33mPlease migrate and move this option to [36m`siteConfig.markdown.hooks.onBrokenMarkdownLinks`[39m[33m instead.[39m
+[90m[[90mwebpackbar[90m][39m [36mℹ[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [36mℹ[39m Compiling Server
+[90m[[90mwebpackbar[90m][39m [32m✔[39m Server: Compiled successfully in 13.46s
+[90m[[90mwebpackbar[90m][39m [32m✔[39m Client: Compiled successfully in 24.96s
+[33m[1m[WARNING][22m {"moduleIdentifier":"javascript/dynamic|/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/node_modules/@supabase/supabase-js/dist/index.cjs","moduleName":"./node_modules/@supabase/supabase-js/dist/index.cjs","loc":"638:118-128","message":"Critical dependency: the request of a dependency is an expression","compilerPath":"server"}[39m
+[32m[1m[SUCCESS][22m[39m Generated static files in [36m[4m"build"[24m[39m.
+[36m[1m[INFO][22m[39m [34m[1m[ur][22m[39m Creating an optimized production build...
+◇ injected env (0) from .env.local // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+[33m[1m[WARNING][22m The [36m`siteConfig.onBrokenMarkdownLinks`[39m[33m config option is deprecated and will be removed in Docusaurus v4.[39m
+[33mPlease migrate and move this option to [36m`siteConfig.markdown.hooks.onBrokenMarkdownLinks`[39m[33m instead.[39m
+[90m[[90mwebpackbar[90m][39m [36mℹ[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [36mℹ[39m Compiling Server
+[90m[[90mwebpackbar[90m][39m [32m✔[39m Server: Compiled successfully in 6.91s
+[90m[[90mwebpackbar[90m][39m [32m✔[39m Client: Compiled successfully in 16.13s
+[33m[1m[WARNING][22m {"moduleIdentifier":"javascript/dynamic|/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/node_modules/@supabase/supabase-js/dist/index.cjs","moduleName":"./node_modules/@supabase/supabase-js/dist/index.cjs","loc":"638:118-128","message":"Critical dependency: the request of a dependency is an expression","compilerPath":"server"}[39m
+
+[31m[1m[ERROR][22m Error: Unable to build website for locale [34m[1mur[22m[39m[31m.[39m
+[31m    at tryToBuildLocale (/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/node_modules/@docusaurus/core/lib/commands/build/build.js:76:15)[39m
+[31m    at async /home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/node_modules/@docusaurus/core/lib/commands/build/build.js:34:9[39m
+[31m    at async mapAsyncSequential (/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/node_modules/@docusaurus/utils/lib/jsUtils.js:21:24)[39m
+[31m    at async Command.build (/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/node_modules/@docusaurus/core/lib/commands/build/build.js:33:5)[39m
+[31m    at async Promise.all (index 0)[39m
+[31m    at async runCLI (/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/node_modules/@docusaurus/core/lib/commands/cli.js:56:5)[39m
+[31m    at async file:///home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/node_modules/@docusaurus/core/bin/docusaurus.mjs:44:3 {[39m
+[31m  [cause]: [Error: ENOENT: no such file or directory, open '/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/build/ur/search-index.json'] {[39m
+[31m    errno: -2,[39m
+[31m    code: 'ENOENT',[39m
+[31m    syscall: 'open',[39m
+[31m    path: '/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/build/ur/search-index.json'[39m
+[31m  }[39m
+[31m}[39m
+[36m[1m[INFO][22m[39m Docusaurus version: [33m3.10.2[39m
+Node version: [33mv22.22.1[39m

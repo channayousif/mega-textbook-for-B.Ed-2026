@@ -1,0 +1,121 @@
+# Independent assessment working - G3 GQUR-300 Unit 2
+# Reviewer attempt: agent-g3-gqur300-u2-run001
+# Method: every item solved from the stem alone, grounded in the topic passage it
+# rests on, BEFORE reading the supplied key. The bank and its key share one file,
+# so each derivation below names the topic passage it uses rather than the key.
+
+## MCQs (derived answers, then compared with the supplied key)
+
+1. Whole numbers = {0, 1, 2, 3, ...}. a) 0,1,5,12 all whole. b) has -3 (integer,
+   not whole). c) has 1/2 (fraction). d) has 0.5 (decimal). DERIVED: a. KEY: a. MATCH.
+   Grounding: topic-01 "### Whole numbers and integers" (whole numbers are the
+   counting numbers and zero).
+2. A debt recorded as -3,500: the sign records that the amount reduces the shop's
+   position (bookkeeping made honest). DERIVED: b. KEY: b. MATCH.
+3. 5.5 / 2.75 = 2 exactly (2.75 x 2 = 5.5). DERIVED: a. KEY: a. MATCH.
+4. 12 x 0.1 = 12 x 1/10 = 1.2. DERIVED: c. KEY: c. MATCH.
+5. 40:20 = 2:1 (divide both by 20). DERIVED: b. KEY: b. MATCH.
+6. Multiplier 30/12 = 2.5; 4 x 2.5 = 10 eggs. DERIVED: b. KEY: b. MATCH.
+7. Rise acted on the original: original = 17,600 / 1.1 = 16,000. Check:
+   16,000 x 1.1 = 17,600. DERIVED: b. KEY: b. MATCH. Distractors: 15,840 =
+   17,600 x 0.9 (the classic subtract-from-new error), 19,360 = 17,600 x 1.1
+   (add-on error). Plausible, well-built distractors.
+8. 8^2 = 8 x 8 = 64. DERIVED: b. KEY: b. MATCH.
+9. sqrt(81) = 9 (9 x 9 = 81). DERIVED: b. KEY: b. MATCH.
+10. 187 / 26 = 7 remainder 5 (26 x 7 = 182; 187 - 182 = 5); 5 pupils remain, so
+    8 vans. DERIVED: b. KEY: b. MATCH.
+
+MCQ key agreement: 10/10. No double-keyed stem; every distractor is a plausible
+error (sign error, off-by-one, halving, add-on percentage).
+
+## RRQs (derived answers, then compared with the model answers)
+
+1. -3 < -0.5 < 1/2 < 0.75 < 2. MODEL: same. MATCH.
+2. 9,000 + (-4,500) = 4,500 rupees. MODEL: same. MATCH.
+3. 0.1 is one tenth; multiplying takes one tenth OF 12, and taking a part of a
+   whole gives less than the whole. MODEL: same reasoning. MATCH.
+4. Multiplier 50/20 = 2.5; 6 x 2.5 = 15 spoons. MODEL: same. MATCH.
+5. 0.25 x 640 = 160; 640 - 160 = 480; direct 0.75 x 640 = 480; agree. MATCH.
+6. *** DISCREPANCY. *** Recipe serves 20 people with 6 spoons sugar (topic-02
+   classroom situation). Friend: "20 more people, so add 6 more spoons of sugar"
+   = 40 people total, 6 + 6 = 12 spoons. Correct scaling for 40 people:
+   6 x (40/20) = 6 x 2 = 12 spoons. THE FRIEND'S AMOUNT IS ARITHMETICALLY
+   CORRECT: at a doubling, adding the original amount equals multiplying by 2,
+   and if the friend adds 4 spoons of tea the same way the ratio 12:8 = 3:2 is
+   preserved, so the recipe is NOT broken. The supplied model answer asserts
+   "adding keeps the difference constant while destroying the ratio", which is
+   false for a doubling (12:8 = 3:2 = 6:4). The question "Explain ... why this
+   breaks the recipe" (topic-02 CYU 5, RRQ-06) has no true answer at these
+   numbers. The general misconception (additive scaling) is real, but it fails
+   visibly only when the multiplier is not 2 (e.g. 30 more people: add gives 12,
+   correct is 15). The same self-refuting numbers run through topic-02.mdx:55-58
+   (misconception paragraph), topic-02.mdx:98-99 (CYU 5), unit-assessment.mdx
+   RRQ-06 + its model answer, and the teacher-notes sherbat demonstration
+   (unit-teacher-notes.mdx:45-47), which would produce two identical-tasting
+   batches at a doubling.
+7. 7 x 7 = 49 < 50 < 64 = 8 x 8, so sqrt(50) lies between 7 and 8. MATCH.
+8. (a) multiply - 15 equal groups of 40 combined; (b) divide - 300 breaks into
+   equal groups of 30. MATCH.
+9. 7^2 = 49; sqrt(100) = 10; squaring climbs side -> area, root climbs back.
+   MATCH.
+10. 7 vans carry 182 of 187; the discarded remainder of 5 forces an 8th van.
+    MATCH.
+
+RRQ agreement: 9/10 sound; RRQ-06 unsound as posed (see discrepancy above).
+
+## ERQs (derived answers, then compared with the rubrics)
+
+1. Canteen flour: 5.5 / 0.75 = 7.33 -> 7 full batches; leftover 5.5 - 5.25 =
+   0.25 kg. Cost per batch: 1,200 / 7 = 171.4 -> about 171 rupees (leftover as
+   waste) or 1,200 / 7.33 = 163.6 -> about 164 rupees (per-batch basis). Both
+   defensible. Reasonableness: 7 x 0.75 = 5.25, just under 5.5, so 7 batches is
+   plausible. RUBRIC: agrees (7 batches, 0.25 kg, ~171 or equivalent).
+2. Notebook deals: A = 100 x 80 x 0.8 = 6,400. B = buy 80, receive 100
+   (4 x [20 bought + 5 free]) = 80 x 80 = 6,400. TIE. RUBRIC: agrees, and
+   rewards noticing the tie.
+3. Mosaic: sqrt(225) = 15; 15 x 15 fits inside 20 x 20; full design 400 tiles;
+   400 - 225 = 175 more. RUBRIC: agrees.
+4. Marksheet: 36/45 = 80%; 42/60 = 70%; 55/75 = 73.3%; 18/25 = 72%; 27/30 = 90%.
+   Ranking best to worst: 27/30, 36/45, 55/75, 18/25, 42/60. The weakest
+   performer is 42/60 (70%). NOTE: 55/75 is the largest RAW score (55), not
+   42/60; the ERQ stem's "looked most impressive" and the teacher notes' "the
+   raw score that looked biggest (42/60)" (unit-teacher-notes.mdx:60-61)
+   overstate: 42 is the second-largest raw score. The rubric's intended answer
+   (42/60 as impressive-looking but weakest) is defensible but the "biggest"
+   claim in the teacher notes is factually wrong. Advisory.
+5. Transport: 187 / 26 = 7 r 5 -> 8 vans; 8 x 3,000 = 24,000 <= 25,000, fits.
+   Alternative: 187 / 40 = 4.675 -> 5 forty-seat buses; 5 x 4,500 = 22,500
+   (200 seats), cheaper. RUBRIC: agrees.
+
+ERQ agreement: 5/5 arithmetically sound; ERQ-4 has the advisory wording issue
+above. Mark totals: ERQ1 6, ERQ2 6, ERQ3 6, ERQ4 7, ERQ5 10; each rubric's
+criteria sum to its stated total. RRQ marks 2+2+2+2+2+2+2+4+3+2 = 23, each
+breakdown sums to its stated total.
+
+## Blueprint conformance (content-spec "## Unit 2" -> Unit-end assessment blueprint)
+
+- 10 MCQ / 10 RRQ / 5 ERQ: counts exact.
+- >= 2 MCQ per topic: 2.1 has MCQ 1-4; 2.2 has MCQ 5-7; 2.3 has MCQ 8-10. MET.
+- >= 2 RRQ per topic: 2.1 has RRQ 1-3; 2.2 has RRQ 4-6; 2.3 has RRQ 7-10. MET.
+- MCQs Remember to Apply: labels 1,8 Remember; 2,5 Understand; 3,4,6,7,9,10
+  Apply. Range respected. (MCQ-09 "sqrt(81)" is arguably recall despite its
+  Apply label; it does not break the floor.)
+- RRQs Understand to Analyze: labels 3,9 Understand; 1,2,4,5,7,8 Apply; 6,10
+  Analyze. Range respected on labels. RRQ-10's analysis demand is genuine;
+  RRQ-06's is not, because its premise is false at the chosen numbers.
+- ERQs Analyze to Evaluate: 1-4 Analyze, 5 Evaluate. MET; ERQ rubrics demand
+  analysis with computations, and ERQ-5 requires evaluation of an alternative.
+- Per-topic Summative tasks each carry one Analyze-or-higher mini-rubric
+  criterion (topic-01 reasonableness check, topic-02 circumstance analysed,
+  topic-03 supported proposal). MET.
+
+## Concept-graph derived linkages (concepts/unit-02.md "Assessment item IDs")
+
+Checked every row against what the named item actually asks. One false linkage:
+CON:GQUR-300-2-7 "Proportion as equal ratios, checked by cross-products" lists
+RRQ-05, but RRQ-05 is the atlas discount percentage item (25 percent off a
+640-rupee atlas, two routes). It contains no ratios and no cross-products; it
+assesses CON:GQUR-300-2-9 (percentage as a ratio per hundred), which also lists
+it. The cross-product check is taught in topic-02.mdx:42-44 but assessed by no
+item in the bank. All other twelve rows' linkages are sound (CON-2-3 -> MCQ-01
+is weak but defensible: the item requires recognising 1/2 as a non-whole part).

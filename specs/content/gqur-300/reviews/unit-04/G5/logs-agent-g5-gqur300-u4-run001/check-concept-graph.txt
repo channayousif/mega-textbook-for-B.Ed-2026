@@ -1,0 +1,4 @@
+=== npm run check:concept-graph ===
+exit_code=0
+✓ Concept graph is consistent (coverage, no orphans, acyclic, resolvable prerequisites, assessment linkage).
+✓ Concept graph is consistent (coverage, no orphans, acyclic, resolvable prerequisites, assessment linkage).

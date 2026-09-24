@@ -1,0 +1,224 @@
+{
+  "base": "http://localhost:3212/semester-1/gqur-300/unit-02",
+  "generated": "2026-09-23T23:12:11.304Z",
+  "pages": [
+    {
+      "name": "index",
+      "url": "http://localhost:3212/semester-1/gqur-300/unit-02/",
+      "h1": 1,
+      "headingOutline": [
+        "H1: Numbers and Operations",
+        "H2: Unit learning outcomes​",
+        "H2: Prerequisite knowledge​",
+        "H2: In this unit​",
+        "H2: How to use this unit​"
+      ],
+      "vagueLinks": [],
+      "figures": 0,
+      "contentImages": [],
+      "emptyAltFigures": 0,
+      "docOverflowDesktop": 0,
+      "tablesDesktop": [],
+      "docOverflowNarrow": 0,
+      "tablesNarrow": [],
+      "docOverflowPrint": 0,
+      "tablesPrint": [],
+      "printHiddenNav": true
+    },
+    {
+      "name": "topic-01",
+      "url": "http://localhost:3212/semester-1/gqur-300/unit-02/topic-01",
+      "h1": 1,
+      "headingOutline": [
+        "H1: Topic 2.1 - The number system: whole numbers, integers, frac",
+        "H2: A real classroom situation​",
+        "H2: Explanation​",
+        "H3: Whole numbers and integers​",
+        "H3: Fractions and decimals​",
+        "H2: Activity: The bazaar ledger​",
+        "H2: Check your understanding​",
+        "H2: Summary​",
+        "H2: Self-assessment checklist​",
+        "H2: Try this at your practicum school​",
+        "H2: Summative task​",
+        "H2: Further reading​"
+      ],
+      "vagueLinks": [],
+      "figures": 2,
+      "contentImages": [
+        {
+          "src": "/img/figures/gqur-300/unit-02/fig-U2-1.svg",
+          "alt": "Diagram of the number system as nested panels: whole numbers sit inside integers, which sit inside rational numbers, with example numbers 7, -4, three quarters, and 0.75 placed in their correct regions."
+        },
+        {
+          "src": "/img/figures/gqur-300/unit-02/fig-U2-1.dark.svg",
+          "alt": "Diagram of the number system as nested panels: whole numbers sit inside integers, which sit inside rational numbers, with example numbers 7, -4, three quarters, and 0.75 placed in their correct regions."
+        },
+        {
+          "src": "/img/figures/gqur-300/unit-02/fig-U2-2.svg",
+          "alt": "Table of the four operations with one worked metre-example each for fractions and for decimals."
+        },
+        {
+          "src": "/img/figures/gqur-300/unit-02/fig-U2-2.dark.svg",
+          "alt": "Table of the four operations with one worked metre-example each for fractions and for decimals."
+        }
+      ],
+      "emptyAltFigures": 0,
+      "docOverflowDesktop": 0,
+      "tablesDesktop": [],
+      "docOverflowNarrow": 0,
+      "tablesNarrow": [],
+      "docOverflowPrint": 0,
+      "tablesPrint": [],
+      "printHiddenNav": true
+    },
+    {
+      "name": "topic-02",
+      "url": "http://localhost:3212/semester-1/gqur-300/unit-02/topic-02",
+      "h1": 1,
+      "headingOutline": [
+        "H1: Topic 2.2 - Ratios, proportions and percentages",
+        "H2: A real classroom situation​",
+        "H2: Explanation​",
+        "H3: Ratios and proportions​",
+        "H3: Percentages​",
+        "H2: Activity: The marksheet percentage relay​",
+        "H2: Check your understanding​",
+        "H2: Summary​",
+        "H2: Self-assessment checklist​",
+        "H2: Try this at your practicum school​",
+        "H2: Summative task​",
+        "H2: Further reading​"
+      ],
+      "vagueLinks": [],
+      "figures": 2,
+      "contentImages": [
+        {
+          "src": "/img/figures/gqur-300/unit-02/fig-U2-3.svg",
+          "alt": "Triangle diagram linking ratio, proportion and percentage at its corners, each with a one-line example, showing they are one connected idea."
+        },
+        {
+          "src": "/img/figures/gqur-300/unit-02/fig-U2-3.dark.svg",
+          "alt": "Triangle diagram linking ratio, proportion and percentage at its corners, each with a one-line example, showing they are one connected idea."
+        },
+        {
+          "src": "/img/figures/gqur-300/unit-02/fig-U2-4.svg",
+          "alt": "Table of four percentage situations with the question each asks and a worked rupee example for each."
+        },
+        {
+          "src": "/img/figures/gqur-300/unit-02/fig-U2-4.dark.svg",
+          "alt": "Table of four percentage situations with the question each asks and a worked rupee example for each."
+        }
+      ],
+      "emptyAltFigures": 0,
+      "docOverflowDesktop": 0,
+      "tablesDesktop": [],
+      "docOverflowNarrow": 0,
+      "tablesNarrow": [],
+      "docOverflowPrint": 0,
+      "tablesPrint": [],
+      "printHiddenNav": true
+    },
+    {
+      "name": "topic-03",
+      "url": "http://localhost:3212/semester-1/gqur-300/unit-02/topic-03",
+      "h1": 1,
+      "headingOutline": [
+        "H1: Topic 2.3 - Powers, roots and daily-life applications",
+        "H2: A real classroom situation​",
+        "H2: Explanation​",
+        "H3: Powers and roots​",
+        "H3: Applications of numbers and operations in daily life​",
+        "H2: Activity: Tile the courtyard​",
+        "H2: Check your understanding​",
+        "H2: Summary​",
+        "H2: Self-assessment checklist​",
+        "H2: Try this at your practicum school​",
+        "H2: Summative task​",
+        "H2: Further reading​"
+      ],
+      "vagueLinks": [],
+      "figures": 2,
+      "contentImages": [
+        {
+          "src": "/img/figures/gqur-300/unit-02/fig-U2-5.svg",
+          "alt": "Diagram of square numbers 1 to 25 drawn as growing tile grids, with sides 1 to 5 above and areas 1 to 25 below, and paired arrows naming squaring and square root."
+        },
+        {
+          "src": "/img/figures/gqur-300/unit-02/fig-U2-5.dark.svg",
+          "alt": "Diagram of square numbers 1 to 25 drawn as growing tile grids, with sides 1 to 5 above and areas 1 to 25 below, and paired arrows naming squaring and square root."
+        },
+        {
+          "src": "/img/figures/gqur-300/unit-02/fig-U2-6.svg",
+          "alt": "Flowchart for choosing the operation in a word problem: read the situation, decide between multiply, divide, or add and subtract using what the total does, then check reasonableness."
+        },
+        {
+          "src": "/img/figures/gqur-300/unit-02/fig-U2-6.dark.svg",
+          "alt": "Flowchart for choosing the operation in a word problem: read the situation, decide between multiply, divide, or add and subtract using what the total does, then check reasonableness."
+        }
+      ],
+      "emptyAltFigures": 0,
+      "docOverflowDesktop": 0,
+      "tablesDesktop": [],
+      "docOverflowNarrow": 0,
+      "tablesNarrow": [],
+      "docOverflowPrint": 0,
+      "tablesPrint": [],
+      "printHiddenNav": true
+    },
+    {
+      "name": "unit-assessment",
+      "url": "http://localhost:3212/semester-1/gqur-300/unit-02/unit-assessment",
+      "h1": 1,
+      "headingOutline": [
+        "H1: Unit 2 assessment",
+        "H2: Unit summary​",
+        "H2: Summative assessment​",
+        "H3: Multiple-choice questions (MCQs)​",
+        "H3: Restricted-response questions (RRQs)​",
+        "H3: Extended-response questions (ERQs)​",
+        "H2: Answers and marking guidance​",
+        "H3: MCQ answer key​",
+        "H3: RRQ model answers and mark schemes​",
+        "H3: ERQ rubrics​"
+      ],
+      "vagueLinks": [],
+      "figures": 0,
+      "contentImages": [],
+      "emptyAltFigures": 0,
+      "docOverflowDesktop": 0,
+      "tablesDesktop": [],
+      "docOverflowNarrow": 0,
+      "tablesNarrow": [],
+      "docOverflowPrint": 0,
+      "tablesPrint": [],
+      "printHiddenNav": true
+    },
+    {
+      "name": "unit-teacher-notes",
+      "url": "http://localhost:3212/semester-1/gqur-300/unit-02/unit-teacher-notes",
+      "note": "re-inspected after dev-server on-demand compile; first pass caught the page pre-render",
+      "h1": 1,
+      "headingOutline": [
+        "H1: Unit 2 teacher notes",
+        "H2: Sequencing note​",
+        "H2: Teaching strategies from the guide​",
+        "H2: Common misconceptions to probe​",
+        "H2: Running the activities​",
+        "H2: Practical work​",
+        "H2: Assessment guidance​",
+        "H2: Practicum links​"
+      ],
+      "vagueLinks": [],
+      "figures": 0,
+      "contentImages": [],
+      "docOverflowDesktop": 0,
+      "docOverflowNarrow": 0,
+      "tablesNarrow": [],
+      "docOverflowPrint": 0,
+      "tablesPrint": [],
+      "printHiddenNav": true
+    }
+  ],
+  "darkThemeApplied": "dark"
+}

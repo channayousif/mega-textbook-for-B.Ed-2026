@@ -1,0 +1,34 @@
+{
+  "generated": "2026-09-24T01:49:20.392Z",
+  "imgBox": {
+    "x": 316,
+    "y": 606.078125,
+    "width": 702.984375,
+    "height": 424.390625
+  },
+  "renderSize": "703x425",
+  "scale": {
+    "sx": 0.9012820512820513,
+    "sy": 0.9042553191489362
+  },
+  "samples": {
+    "stated_20_baseRow": true,
+    "stated_45_baseRow": true,
+    "stated_50_baseRow": true,
+    "stated_55_baseRow": false,
+    "stated_60_baseRow": true,
+    "stated_62_baseRow": true,
+    "stated_70_baseRow": false,
+    "stated_96_baseRow": false,
+    "plotted_35_baseRow": true,
+    "plotted_40_baseRow": true,
+    "plotted_52_baseRow": true,
+    "plotted_100_baseRow": true,
+    "stated_62_stackSecond": false,
+    "plotted_52_stackSecond": true,
+    "stated_70_stackBase": false,
+    "plotted_60_stackBase": true,
+    "plotted_60_stackSecond": true,
+    "plotted_60_stackThird": true
+  }
+}

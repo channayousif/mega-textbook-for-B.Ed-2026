@@ -1,0 +1,489 @@
+{
+ "fontCheck": {
+  "nastaliqUsable": true,
+  "loadedFamilies": [
+   "Noto Nastaliq Urdu"
+  ],
+  "htmlDir": "rtl",
+  "bodyFont": "\"Noto Nastaliq Urdu\", \"Noto Naskh Arabic\", \"Jameel Noori Nastaleeq\", serif"
+ },
+ "pages": [
+  {
+   "viewport": "desktop-1280",
+   "page": "index",
+   "clipped": [],
+   "beyondViewport": [],
+   "tables": [],
+   "figs": [],
+   "docDir": "rtl"
+  },
+  {
+   "viewport": "desktop-1280",
+   "page": "topic-01",
+   "clipped": [],
+   "beyondViewport": [],
+   "tables": [
+    {
+     "dir": "rtl",
+     "firstRowCells": [
+      "وجہ",
+      "تعدد"
+     ]
+    }
+   ],
+   "figs": [
+    {
+     "src": "/img/figures/gqur-300/unit-05/fig-U5-1.ur.svg",
+     "naturalWidth": 249,
+     "naturalHeight": 150,
+     "complete": true
+    },
+    {
+     "src": "/img/figures/gqur-300/unit-05/fig-U5-1.ur.dark.svg",
+     "naturalWidth": 0,
+     "naturalHeight": 0,
+     "complete": false
+    },
+    {
+     "src": "/img/figures/gqur-300/unit-05/fig-U5-2.ur.svg",
+     "naturalWidth": 249,
+     "naturalHeight": 150,
+     "complete": true
+    },
+    {
+     "src": "/img/figures/gqur-300/unit-05/fig-U5-2.ur.dark.svg",
+     "naturalWidth": 0,
+     "naturalHeight": 0,
+     "complete": false
+    }
+   ],
+   "docDir": "rtl"
+  },
+  {
+   "viewport": "desktop-1280",
+   "page": "topic-02",
+   "clipped": [],
+   "beyondViewport": [],
+   "tables": [],
+   "figs": [
+    {
+     "src": "/img/figures/gqur-300/unit-05/fig-U5-3.ur.svg",
+     "naturalWidth": 249,
+     "naturalHeight": 150,
+     "complete": true
+    },
+    {
+     "src": "/img/figures/gqur-300/unit-05/fig-U5-3.ur.dark.svg",
+     "naturalWidth": 0,
+     "naturalHeight": 0,
+     "complete": false
+    },
+    {
+     "src": "/img/figures/gqur-300/unit-05/fig-U5-4.ur.svg",
+     "naturalWidth": 249,
+     "naturalHeight": 150,
+     "complete": true
+    },
+    {
+     "src": "/img/figures/gqur-300/unit-05/fig-U5-4.ur.dark.svg",
+     "naturalWidth": 0,
+     "naturalHeight": 0,
+     "complete": false
+    }
+   ],
+   "docDir": "rtl"
+  },
+  {
+   "viewport": "desktop-1280",
+   "page": "topic-03",
+   "clipped": [],
+   "beyondViewport": [],
+   "tables": [],
+   "figs": [
+    {
+     "src": "/img/figures/gqur-300/unit-05/fig-U5-5.ur.svg",
+     "naturalWidth": 249,
+     "naturalHeight": 150,
+     "complete": true
+    },
+    {
+     "src": "/img/figures/gqur-300/unit-05/fig-U5-5.ur.dark.svg",
+     "naturalWidth": 0,
+     "naturalHeight": 0,
+     "complete": false
+    },
+    {
+     "src": "/img/figures/gqur-300/unit-05/fig-U5-6.ur.svg",
+     "naturalWidth": 249,
+     "naturalHeight": 150,
+     "complete": true
+    },
+    {
+     "src": "/img/figures/gqur-300/unit-05/fig-U5-6.ur.dark.svg",
+     "naturalWidth": 0,
+     "naturalHeight": 0,
+     "complete": false
+    }
+   ],
+   "docDir": "rtl"
+  },
+  {
+   "viewport": "desktop-1280",
+   "page": "unit-assessment",
+   "clipped": [],
+   "beyondViewport": [],
+   "tables": [],
+   "figs": [],
+   "docDir": "rtl"
+  },
+  {
+   "viewport": "desktop-1280",
+   "page": "unit-teacher-notes",
+   "clipped": [],
+   "beyondViewport": [],
+   "tables": [],
+   "figs": [],
+   "docDir": "rtl"
+  },
+  {
+   "viewport": "narrow-360",
+   "page": "index",
+   "clipped": [],
+   "beyondViewport": [],
+   "tables": [],
+   "figs": [],
+   "docDir": "rtl"
+  },
+  {
+   "viewport": "narrow-360",
+   "page": "topic-01",
+   "clipped": [],
+   "beyondViewport": [],
+   "tables": [
+    {
+     "dir": "rtl",
+     "firstRowCells": [
+      "وجہ",
+      "تعدد"
+     ]
+    }
+   ],
+   "figs": [
+    {
+     "src": "/img/figures/gqur-300/unit-05/fig-U5-1.ur.svg",
+     "naturalWidth": 249,
+     "naturalHeight": 150,
+     "complete": true
+    },
+    {
+     "src": "/img/figures/gqur-300/unit-05/fig-U5-1.ur.dark.svg",
+     "naturalWidth": 0,
+     "naturalHeight": 0,
+     "complete": false
+    },
+    {
+     "src": "/img/figures/gqur-300/unit-05/fig-U5-2.ur.svg",
+     "naturalWidth": 249,
+     "naturalHeight": 150,
+     "complete": true
+    },
+    {
+     "src": "/img/figures/gqur-300/unit-05/fig-U5-2.ur.dark.svg",
+     "naturalWidth": 0,
+     "naturalHeight": 0,
+     "complete": false
+    }
+   ],
+   "docDir": "rtl"
+  },
+  {
+   "viewport": "narrow-360",
+   "page": "topic-02",
+   "clipped": [],
+   "beyondViewport": [],
+   "tables": [],
+   "figs": [
+    {
+     "src": "/img/figures/gqur-300/unit-05/fig-U5-3.ur.svg",
+     "naturalWidth": 249,
+     "naturalHeight": 150,
+     "complete": true
+    },
+    {
+     "src": "/img/figures/gqur-300/unit-05/fig-U5-3.ur.dark.svg",
+     "naturalWidth": 0,
+     "naturalHeight": 0,
+     "complete": false
+    },
+    {
+     "src": "/img/figures/gqur-300/unit-05/fig-U5-4.ur.svg",
+     "naturalWidth": 249,
+     "naturalHeight": 150,
+     "complete": true
+    },
+    {
+     "src": "/img/figures/gqur-300/unit-05/fig-U5-4.ur.dark.svg",
+     "naturalWidth": 0,
+     "naturalHeight": 0,
+     "complete": false
+    }
+   ],
+   "docDir": "rtl"
+  },
+  {
+   "viewport": "narrow-360",
+   "page": "topic-03",
+   "clipped": [],
+   "beyondViewport": [],
+   "tables": [],
+   "figs": [
+    {
+     "src": "/img/figures/gqur-300/unit-05/fig-U5-5.ur.svg",
+     "naturalWidth": 249,
+     "naturalHeight": 150,
+     "complete": true
+    },
+    {
+     "src": "/img/figures/gqur-300/unit-05/fig-U5-5.ur.dark.svg",
+     "naturalWidth": 0,
+     "naturalHeight": 0,
+     "complete": false
+    },
+    {
+     "src": "/img/figures/gqur-300/unit-05/fig-U5-6.ur.svg",
+     "naturalWidth": 249,
+     "naturalHeight": 150,
+     "complete": true
+    },
+    {
+     "src": "/img/figures/gqur-300/unit-05/fig-U5-6.ur.dark.svg",
+     "naturalWidth": 0,
+     "naturalHeight": 0,
+     "complete": false
+    }
+   ],
+   "docDir": "rtl"
+  },
+  {
+   "viewport": "narrow-360",
+   "page": "unit-assessment",
+   "clipped": [],
+   "beyondViewport": [],
+   "tables": [],
+   "figs": [],
+   "docDir": "rtl"
+  },
+  {
+   "viewport": "narrow-360",
+   "page": "unit-teacher-notes",
+   "clipped": [],
+   "beyondViewport": [],
+   "tables": [],
+   "figs": [],
+   "docDir": "rtl"
+  }
+ ],
+ "figures": {
+  "fig-U5-1": {
+   "W": 249,
+   "H": 150,
+   "titleBand": {
+    "ink": 135,
+    "n": 6266,
+    "ratio": 0.0215
+   },
+   "captionBand": {
+    "ink": 128,
+    "n": 6266,
+    "ratio": 0.0204
+   }
+  },
+  "fig-U5-2": {
+   "W": 249,
+   "H": 150,
+   "titleBand": {
+    "ink": 80,
+    "n": 6266,
+    "ratio": 0.0128
+   },
+   "captionBand": {
+    "ink": 70,
+    "n": 6266,
+    "ratio": 0.0112
+   }
+  },
+  "fig-U5-3": {
+   "W": 249,
+   "H": 150,
+   "titleBand": {
+    "ink": 202,
+    "n": 6266,
+    "ratio": 0.0322
+   },
+   "captionBand": {
+    "ink": 173,
+    "n": 6266,
+    "ratio": 0.0276
+   }
+  },
+  "fig-U5-4": {
+   "W": 249,
+   "H": 150,
+   "titleBand": {
+    "ink": 77,
+    "n": 6266,
+    "ratio": 0.0123
+   },
+   "captionBand": {
+    "ink": 97,
+    "n": 6266,
+    "ratio": 0.0155
+   }
+  },
+  "fig-U5-5": {
+   "W": 249,
+   "H": 150,
+   "titleBand": {
+    "ink": 41,
+    "n": 6266,
+    "ratio": 0.0065
+   },
+   "captionBand": {
+    "ink": 200,
+    "n": 6266,
+    "ratio": 0.0319
+   },
+   "dots": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "meanLineX420": 1,
+   "medianLineX405": 0,
+   "axisLabels": {
+    "at20": {
+     "ink": 0,
+     "n": 176,
+     "ratio": 0
+    },
+    "at100": {
+     "ink": 0,
+     "n": 176,
+     "ratio": 0
+    },
+    "at60": {
+     "ink": 0,
+     "n": 176,
+     "ratio": 0
+    }
+   },
+   "modeRing": [
+    [
+     null,
+     null,
+     null
+    ],
+    [
+     null,
+     null,
+     null
+    ],
+    [
+     null,
+     null,
+     null
+    ],
+    [
+     null,
+     null,
+     null
+    ]
+   ],
+   "gapBetweenDotsIsLight": null
+  },
+  "fig-U5-6": {
+   "W": 249,
+   "H": 150,
+   "titleBand": {
+    "ink": 62,
+    "n": 6266,
+    "ratio": 0.0099
+   },
+   "captionBand": {
+    "ink": 59,
+    "n": 6266,
+    "ratio": 0.0094
+   }
+  }
+ },
+ "bidi": {
+  "found": {
+   "660": true,
+   "57.54": true,
+   "64.23": true,
+   "50.21": true,
+   "46.29": true,
+   "54.57": true,
+   "14.02": true,
+   "2.97": true,
+   "11,120": true,
+   "4,200": true,
+   "55,600": true,
+   "39,000": true
+  },
+  "reversedStringsPresent": {
+   "45.75": false,
+   "32.46": false,
+   "12.05": false,
+   "75.45": false,
+   "20.41": false,
+   "79.2": false
+  }
+ },
+ "print": [
+  {
+   "page": "index",
+   "navDisplayed": "none",
+   "clippedCount": 0,
+   "clipped": []
+  },
+  {
+   "page": "topic-01",
+   "navDisplayed": "none",
+   "clippedCount": 0,
+   "clipped": []
+  },
+  {
+   "page": "topic-02",
+   "navDisplayed": "none",
+   "clippedCount": 0,
+   "clipped": []
+  },
+  {
+   "page": "topic-03",
+   "navDisplayed": "none",
+   "clippedCount": 0,
+   "clipped": []
+  },
+  {
+   "page": "unit-assessment",
+   "navDisplayed": "none",
+   "clippedCount": 0,
+   "clipped": []
+  },
+  {
+   "page": "unit-teacher-notes",
+   "navDisplayed": "none",
+   "clippedCount": 0,
+   "clipped": []
+  }
+ ]
+}

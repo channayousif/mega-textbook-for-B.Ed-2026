@@ -1,0 +1,29 @@
+Initial `npm run check:content` execution at 2026-09-23 (before any regeneration):
+exit code 1.
+
+  validate:content        PASS
+  check:pipeline-gate     PASS
+  check:depth-gate        PASS
+  check:figures           PASS
+  check:no-em-dash        PASS
+  check:no-answer-keys    PASS
+  check:concept-graph     PASS
+  check:bloom-bands       PASS
+  check:source-floor      PASS
+  check:content-status    FAIL
+  check:docs-sync         PASS
+
+Failure message:
+  "static/content-status.json is stale - it no longer describes the working tree.
+   Every publication banner is derived from this file, so a stale report
+   publishes units under the wrong tier. Run: npm run build:content-status"
+
+Investigation: static/content-status.json is a git-ignored generated artifact
+(.gitignore line 18, Spec 010 T027 convention); it was stale in this worktree,
+not in any tracked file. Remedy applied: ran the gate's own instructed command
+(node scripts/report-content-status.mjs, the script behind
+npm run build:content-status), which rewrote only that untracked file.
+git status --porcelain confirmed no tracked file was modified at any point.
+Re-run of `npm run check:content` then exited 0 (see check-content.txt).
+The first-run log was overwritten by the re-run in check-content.txt; this note
+records the first run's actual result per the evidence contract's honesty rule.
