@@ -1,0 +1,55 @@
+render-review log - GNAS-301 Unit 6 G3 round 2 (2026-09-24T00:35:54Z attempt)
+
+HOW INSPECTION RAN
+- Host: this reviewer session's machine (2-core box; one heavy process at a time per
+  parent instruction). One shared build and one shared Playwright run covered Units 5
+  and 6 together.
+- Build: one shared Docusaurus production build, executed in a detached temporary git
+  worktree at HEAD 68577b8 (/tmp/gnas301-g3build, node_modules symlinked). Rationale:
+  an untracked sibling-session file (i18n/ur/.../gnas-301/unit-02/topic-03.mdx, G4
+  work in progress containing a 'PrintOut' import typo) breaks `npm run build` in the
+  shared working tree; the untracked file is not a bound input and was not touched.
+  The failed shared-tree attempt is recorded in the unit-05 evidence set
+  (build-shared-tree-failed.txt); the successful build log is build.txt here. All
+  bound inputs are byte-identical at HEAD 68577b8 and at 05ece10 (the three
+  intervening commits touch only the unbound i18n/ur tree).
+- Serve: npx docusaurus serve --port 3457 from the worktree build.
+- Browser: Playwright 1.61.1, bundled Chromium, script
+  ../unit-05/G3/round-02/renders-20260924T003554Z/inspect-render.mjs (shared run;
+  unit-06 outputs saved under this unit's renders directory).
+
+WHAT WAS INSPECTED (all 9 unit-06 pages: index, topic-01..06, unit-assessment,
+unit-teacher-notes)
+1. Desktop 1280x800: console errors and failed requests captured per page; every
+   figure <img> checked for load state, alt text and loading=lazy. Result: no failed
+   requests; all 12 light figure variants load with full descriptive alt text on the
+   six topic pages (dark twins present in DOM with the same alt, hidden in light
+   mode, displayed under data-theme=dark - verified in the dark pass,
+   dark-topic-01.png). Fresh single-page loads are console-clean (consolecheck.mjs,
+  shared run). React #418/#423 hydration errors appear only after sequential
+   client-side navigation within one browser context and reproduce site-wide (also on
+   pages outside units 5/6), so they are a site-wide production-build behaviour, not a
+   unit-6 content defect.
+2. Narrow 360x640: document overflow 0 on all 9 pages; all figures scale into the
+   328px content box (right edge <= 344 < 360); mini-rubric tables measured on the
+   <table> element itself (per the G3 reference): scrollWidth == clientWidth on every
+   table, so none is scrollable and no tabindex/role is required by the
+   markScrollableRegions design.
+3. A4 print emulation (794x1123, media print): navbar/sidebar hidden; content
+   unclipped on all 9 pages; the only element extending past the 794px box on the
+   index page is the standard visually-hidden "Skip to main content" link (an a11y
+   feature, not content; identical on unit 5 and unit 6 index pages). The
+   unit-assessment print view shows the full bank and the "Answers and marking
+   guidance" section (print-a4-unit-assessment.png).
+4. Dark mode: data-theme=dark on topic-01; light variants hide, dark variants load
+   and display (render-inspect.json darkFigures).
+5. Limitation: this session's file tool could not present PNG pixels to the reviewer
+   (same limitation as the round-1 unit-6 review), so visual inspection rests on the
+   real-browser DOM/CSS measurements above at three viewport/media configurations,
+   plus measure-figure-text geometry over all 48 committed SVG variants (no text
+   overflow, no wordmark overprint) and direct coordinate analysis of the committed
+   SVG sources.
+
+ARTIFACTS (renders-20260924T003554Z/): render-inspect.json (full measurements),
+desktop-{index,topic-01,unit-assessment}.png, narrow-360-{index,topic-01,
+unit-assessment}.png, print-a4-{topic-01,unit-assessment}.png, dark-topic-01.png.

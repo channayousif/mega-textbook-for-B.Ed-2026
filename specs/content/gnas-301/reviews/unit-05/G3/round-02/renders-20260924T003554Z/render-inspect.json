@@ -1,0 +1,366 @@
+{
+  "pages": {
+    "index": {
+      "desktopFigures": [],
+      "narrow": {
+        "pageOverflow": 0,
+        "figures": [],
+        "tables": []
+      },
+      "print": {
+        "docWidth": 794,
+        "printOverflow": 16,
+        "clippedElementCount": 2,
+        "chromeHidden": true,
+        "answersPresent": false
+      }
+    },
+    "topic-01": {
+      "desktopFigures": [
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-1.svg",
+          "alt": "Diagram of an atmospheric agent's route to harm, from emission through air, blood and target organ to effect, with carbon monoxide as the worked example",
+          "loaded": true,
+          "lazy": "lazy"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-1.dark.svg",
+          "alt": "Diagram of an atmospheric agent's route to harm, from emission through air, blood and target organ to effect, with carbon monoxide as the worked example",
+          "loaded": false,
+          "lazy": "lazy"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-2.svg",
+          "alt": "Table of six atmospheric agents with main source, target organ and impact, and one protection for each",
+          "loaded": true,
+          "lazy": "lazy"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-2.dark.svg",
+          "alt": "Table of six atmospheric agents with main source, target organ and impact, and one protection for each",
+          "loaded": false,
+          "lazy": "lazy"
+        }
+      ],
+      "narrow": {
+        "pageOverflow": 0,
+        "figures": [
+          {
+            "src": "/img/figures/gnas-301/unit-05/fig-U5-1.svg",
+            "left": 16,
+            "right": 344,
+            "visibleInViewport": true
+          },
+          {
+            "src": "/img/figures/gnas-301/unit-05/fig-U5-1.dark.svg",
+            "left": 0,
+            "right": 0,
+            "visibleInViewport": false
+          },
+          {
+            "src": "/img/figures/gnas-301/unit-05/fig-U5-2.svg",
+            "left": 16,
+            "right": 344,
+            "visibleInViewport": true
+          },
+          {
+            "src": "/img/figures/gnas-301/unit-05/fig-U5-2.dark.svg",
+            "left": 0,
+            "right": 0,
+            "visibleInViewport": false
+          }
+        ],
+        "tables": [
+          {
+            "scrollWidth": 328,
+            "clientWidth": 328,
+            "scrollable": false,
+            "farColumnReachable": null,
+            "keyboardAttrs": null
+          }
+        ]
+      },
+      "print": {
+        "docWidth": 794,
+        "printOverflow": 0,
+        "clippedElementCount": 0,
+        "chromeHidden": true,
+        "answersPresent": false
+      }
+    },
+    "topic-02": {
+      "desktopFigures": [
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-3.svg",
+          "alt": "Flowchart of the fate of a xenobiotic, absorption, distribution, biotransformation with its two outcomes detoxification and bioactivation, then excretion or storage",
+          "loaded": true,
+          "lazy": "lazy"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-3.dark.svg",
+          "alt": "Flowchart of the fate of a xenobiotic, absorption, distribution, biotransformation with its two outcomes detoxification and bioactivation, then excretion or storage",
+          "loaded": false,
+          "lazy": "lazy"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-4.svg",
+          "alt": "Table comparing detoxification and bioactivation with what the liver produces, a worked example and the risk each carries",
+          "loaded": true,
+          "lazy": "lazy"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-4.dark.svg",
+          "alt": "Table comparing detoxification and bioactivation with what the liver produces, a worked example and the risk each carries",
+          "loaded": false,
+          "lazy": "lazy"
+        }
+      ],
+      "narrow": {
+        "pageOverflow": 0,
+        "figures": [
+          {
+            "src": "/img/figures/gnas-301/unit-05/fig-U5-3.svg",
+            "left": 16,
+            "right": 344,
+            "visibleInViewport": true
+          },
+          {
+            "src": "/img/figures/gnas-301/unit-05/fig-U5-3.dark.svg",
+            "left": 0,
+            "right": 0,
+            "visibleInViewport": false
+          },
+          {
+            "src": "/img/figures/gnas-301/unit-05/fig-U5-4.svg",
+            "left": 16,
+            "right": 344,
+            "visibleInViewport": true
+          },
+          {
+            "src": "/img/figures/gnas-301/unit-05/fig-U5-4.dark.svg",
+            "left": 0,
+            "right": 0,
+            "visibleInViewport": false
+          }
+        ],
+        "tables": [
+          {
+            "scrollWidth": 328,
+            "clientWidth": 328,
+            "scrollable": false,
+            "farColumnReachable": null,
+            "keyboardAttrs": null
+          }
+        ]
+      },
+      "print": {
+        "docWidth": 794,
+        "printOverflow": 0,
+        "clippedElementCount": 0,
+        "chromeHidden": true,
+        "answersPresent": false
+      }
+    },
+    "topic-03": {
+      "desktopFigures": [
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-5.svg",
+          "alt": "Flowchart of natural detoxification, the liver's two phases then exits by kidneys, lungs and gut, with a storage branch to fat and bone",
+          "loaded": true,
+          "lazy": "lazy"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-5.dark.svg",
+          "alt": "Flowchart of natural detoxification, the liver's two phases then exits by kidneys, lungs and gut, with a storage branch to fat and bone",
+          "loaded": false,
+          "lazy": "lazy"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-6.svg",
+          "alt": "Table of what helps and what hinders the body's natural detoxification, with examples and an honest note on each",
+          "loaded": true,
+          "lazy": "lazy"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-6.dark.svg",
+          "alt": "Table of what helps and what hinders the body's natural detoxification, with examples and an honest note on each",
+          "loaded": false,
+          "lazy": "lazy"
+        }
+      ],
+      "narrow": {
+        "pageOverflow": 0,
+        "figures": [
+          {
+            "src": "/img/figures/gnas-301/unit-05/fig-U5-5.svg",
+            "left": 16,
+            "right": 344,
+            "visibleInViewport": true
+          },
+          {
+            "src": "/img/figures/gnas-301/unit-05/fig-U5-5.dark.svg",
+            "left": 0,
+            "right": 0,
+            "visibleInViewport": false
+          },
+          {
+            "src": "/img/figures/gnas-301/unit-05/fig-U5-6.svg",
+            "left": 16,
+            "right": 344,
+            "visibleInViewport": true
+          },
+          {
+            "src": "/img/figures/gnas-301/unit-05/fig-U5-6.dark.svg",
+            "left": 0,
+            "right": 0,
+            "visibleInViewport": false
+          }
+        ],
+        "tables": [
+          {
+            "scrollWidth": 328,
+            "clientWidth": 328,
+            "scrollable": false,
+            "farColumnReachable": null,
+            "keyboardAttrs": null
+          }
+        ]
+      },
+      "print": {
+        "docWidth": 794,
+        "printOverflow": 0,
+        "clippedElementCount": 0,
+        "chromeHidden": true,
+        "answersPresent": false
+      }
+    },
+    "topic-04": {
+      "desktopFigures": [
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-7.svg",
+          "alt": "Timeline of multilateral environmental agreements from Stockholm 1972 to Paris 2015, six marked points each with what it controls",
+          "loaded": true,
+          "lazy": "lazy"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-7.dark.svg",
+          "alt": "Timeline of multilateral environmental agreements from Stockholm 1972 to Paris 2015, six marked points each with what it controls",
+          "loaded": false,
+          "lazy": "lazy"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-8.svg",
+          "alt": "Table of seven SDGs for environment and health with each goal's target and one Pakistan anchor",
+          "loaded": true,
+          "lazy": "lazy"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-8.dark.svg",
+          "alt": "Table of seven SDGs for environment and health with each goal's target and one Pakistan anchor",
+          "loaded": false,
+          "lazy": "lazy"
+        }
+      ],
+      "narrow": {
+        "pageOverflow": 0,
+        "figures": [
+          {
+            "src": "/img/figures/gnas-301/unit-05/fig-U5-7.svg",
+            "left": 16,
+            "right": 344,
+            "visibleInViewport": true
+          },
+          {
+            "src": "/img/figures/gnas-301/unit-05/fig-U5-7.dark.svg",
+            "left": 0,
+            "right": 0,
+            "visibleInViewport": false
+          },
+          {
+            "src": "/img/figures/gnas-301/unit-05/fig-U5-8.svg",
+            "left": 16,
+            "right": 344,
+            "visibleInViewport": true
+          },
+          {
+            "src": "/img/figures/gnas-301/unit-05/fig-U5-8.dark.svg",
+            "left": 0,
+            "right": 0,
+            "visibleInViewport": false
+          }
+        ],
+        "tables": [
+          {
+            "scrollWidth": 328,
+            "clientWidth": 328,
+            "scrollable": false,
+            "farColumnReachable": null,
+            "keyboardAttrs": null
+          }
+        ]
+      },
+      "print": {
+        "docWidth": 794,
+        "printOverflow": 0,
+        "clippedElementCount": 0,
+        "chromeHidden": true,
+        "answersPresent": false
+      }
+    },
+    "unit-assessment": {
+      "desktopFigures": [],
+      "narrow": {
+        "pageOverflow": 0,
+        "figures": [],
+        "tables": []
+      },
+      "print": {
+        "docWidth": 794,
+        "printOverflow": 0,
+        "clippedElementCount": 0,
+        "chromeHidden": true,
+        "answersPresent": true
+      }
+    },
+    "unit-teacher-notes": {
+      "desktopFigures": [],
+      "narrow": {
+        "pageOverflow": 0,
+        "figures": [],
+        "tables": []
+      },
+      "print": {
+        "docWidth": 794,
+        "printOverflow": 0,
+        "clippedElementCount": 0,
+        "chromeHidden": true,
+        "answersPresent": false
+      }
+    }
+  },
+  "desktopConsoleErrors": [
+    "Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.\n    at la (http://localhost:3457/assets/js/main.2affa10e.js:2:317997)\n    at kc (http://localhost:3457/assets/js/main.2affa10e.js:2:390740)\n    at vl (http://localhost:3457/assets/js/main.2affa10e.js:2:378298)\n    at bl (http://localhost:3457/assets/js/main.2affa10e.js:2:378270)\n    at rl (http://localhost:3457/assets/js/main.2affa10e.js:2:373351)\n    at k (http://localhost:3457/assets/js/main.2affa10e.js:2:438328)\n    at MessagePort.O (http://localhost:3457/assets/js/main.2affa10e.js:2:438860) {componentStack: \n    at main\n    at o (http://localhost:3457/asset…calhost:3457/assets/js/main.2affa10e.js:2:407524), digest: null}",
+    "Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.\n    at da (http://localhost:3457/assets/js/main.2affa10e.js:2:318457)\n    at Qs (http://localhost:3457/assets/js/main.2affa10e.js:2:353789)\n    at yl (http://localhost:3457/assets/js/main.2affa10e.js:2:378619)\n    at vl (http://localhost:3457/assets/js/main.2affa10e.js:2:378359)\n    at bl (http://localhost:3457/assets/js/main.2affa10e.js:2:378270)\n    at rl (http://localhost:3457/assets/js/main.2affa10e.js:2:373351)\n    at k (http://localhost:3457/assets/js/main.2affa10e.js:2:438328)\n    at MessagePort.O (http://localhost:3457/assets/js/main.2affa10e.js:2:438860) {componentStack: \n    at div\n    at M (http://localhost:3457/assets…calhost:3457/assets/js/main.2affa10e.js:2:407524), digest: null}",
+    "Docusaurus React Root onRecoverableError: Error: Minified React error #418; visit https://reactjs.org/docs/error-decoder.html?invariant=418 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.\n    at la (http://localhost:3457/assets/js/main.2affa10e.js:2:317997)\n    at kc (http://localhost:3457/assets/js/main.2affa10e.js:2:390740)\n    at vl (http://localhost:3457/assets/js/main.2affa10e.js:2:378298)\n    at bl (http://localhost:3457/assets/js/main.2affa10e.js:2:378270)\n    at rl (http://localhost:3457/assets/js/main.2affa10e.js:2:373351)\n    at k (http://localhost:3457/assets/js/main.2affa10e.js:2:438328)\n    at MessagePort.O (http://localhost:3457/assets/js/main.2affa10e.js:2:438860) {componentStack: \n    at footer\n    at Gn (http://localhost:3457/as…calhost:3457/assets/js/main.2affa10e.js:2:407524), digest: null}",
+    "Docusaurus React Root onRecoverableError: Error: Minified React error #423; visit https://reactjs.org/docs/error-decoder.html?invariant=423 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.\n    at kc (http://localhost:3457/assets/js/main.2affa10e.js:2:390426)\n    at vl (http://localhost:3457/assets/js/main.2affa10e.js:2:378298)\n    at gl (http://localhost:3457/assets/js/main.2affa10e.js:2:378226)\n    at hl (http://localhost:3457/assets/js/main.2affa10e.js:2:378089)\n    at il (http://localhost:3457/assets/js/main.2affa10e.js:2:374924)\n    at rl (http://localhost:3457/assets/js/main.2affa10e.js:2:373479)\n    at k (http://localhost:3457/assets/js/main.2affa10e.js:2:438328)\n    at MessagePort.O (http://localhost:3457/assets/js/main.2affa10e.js:2:438860) {componentStack: , digest: null}"
+  ],
+  "desktopFailedRequests": [],
+  "darkFigures": [
+    {
+      "src": "/img/figures/gnas-301/unit-05/fig-U5-1.svg",
+      "displayed": false
+    },
+    {
+      "src": "/img/figures/gnas-301/unit-05/fig-U5-1.dark.svg",
+      "displayed": true
+    },
+    {
+      "src": "/img/figures/gnas-301/unit-05/fig-U5-2.svg",
+      "displayed": false
+    },
+    {
+      "src": "/img/figures/gnas-301/unit-05/fig-U5-2.dark.svg",
+      "displayed": true
+    }
+  ]
+}
