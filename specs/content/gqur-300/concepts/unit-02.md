@@ -21,7 +21,7 @@ here and **carries a G5 flag** (see the list at the foot of this file).
 | CON:GQUR-300-2-4 | Decimals as place-value names for fractions | اعشاریے بطور کسروں کے مقامی قیمت والے نام | CON:GQUR-300-2-3 | 2.1 | SLO:GQUR-300-1-1 | MCQ-03 |
 | CON:GQUR-300-2-5 | Multiplying by a number between 0 and 1 shrinks | صفر اور ایک کے درمیان عدد سے ضرب، نتیجہ چھوٹا کرتی ہے | CON:GQUR-300-2-3, CON:GQUR-300-2-4 | 2.1 | SLO:GQUR-300-1-1 | MCQ-04, RRQ-03 |
 | CON:GQUR-300-2-6 | Ratio as comparison of two quantities | نسبت بطور دو مقداروں کا موازنہ | - | 2.2 | SLO:GQUR-300-3-3 | MCQ-05 |
-| CON:GQUR-300-2-7 | Proportion as equal ratios, checked by cross-products | تناسب بطور برابر نسبتیں، ضربدری سے ثابت | CON:GQUR-300-2-6 | 2.2 | SLO:GQUR-300-3-3 | RRQ-05 |
+| CON:GQUR-300-2-7 | Proportion as equal ratios, checked by cross-products | تناسب بطور برابر نسبتیں، ضربدری سے ثابت | CON:GQUR-300-2-6 | 2.2 | SLO:GQUR-300-3-3 | - |
 | CON:GQUR-300-2-8 | Scaling by a multiplier, never by addition | پیمانہ بدلتے وقت ضربی عنصر، جمع کبھی نہیں | CON:GQUR-300-2-7 | 2.2 | SLO:GQUR-300-2-2 | MCQ-06, RRQ-04, RRQ-06 |
 | CON:GQUR-300-2-9 | Percentage as a ratio per hundred | فیصد بطور سو میں سے نسبت | CON:GQUR-300-2-6 | 2.2 | SLO:GQUR-300-2-2 | RRQ-05 |
 | CON:GQUR-300-2-10 | The four percentage situations including the reverse case | فیصد کی چار صورتحالیں بشمول الٹی صورت | CON:GQUR-300-2-9 | 2.2 | SLO:GQUR-300-2-2 | MCQ-07, ERQ-04 |

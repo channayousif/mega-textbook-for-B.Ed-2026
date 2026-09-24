@@ -153,7 +153,8 @@ distribution is the spec's construction for a 16-week semester and is labelled a
 
 Weeks 1-3 (derived). Unit Spec (G1) for `docs/semester-1/gqur-300/unit-01/`.
 
-- **CLO refs**: course outcomes 1 and 3.
+- **CLO refs**: course outcomes 1, 2 and 3 (estimation and problem solving serve outcome
+  2 alongside 1 and 3).
 - **Key terms**: Quantitative reasoning, Numeracy, Number sense, Estimation,
   Approximation, Logical reasoning, Problem-solving strategy.
 - **Topics**: what quantitative reasoning is and why it matters; number sense with

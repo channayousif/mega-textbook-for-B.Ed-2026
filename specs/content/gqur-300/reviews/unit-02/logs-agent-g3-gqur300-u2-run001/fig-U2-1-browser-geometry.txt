@@ -1,0 +1,112 @@
+{
+ "viewBox": "780x470",
+ "texts": [
+  {
+   "text": "Rational numbers",
+   "x": 360,
+   "bboxRight": 430,
+   "bboxTop": 99,
+   "clipped": false
+  },
+  {
+   "text": "3/4",
+   "x": 540,
+   "bboxRight": 563,
+   "bboxTop": 137,
+   "clipped": false
+  },
+  {
+   "text": "0.75",
+   "x": 576,
+   "bboxRight": 607,
+   "bboxTop": 137,
+   "clipped": false
+  },
+  {
+   "text": "every fraction has a",
+   "x": 540,
+   "bboxRight": 670,
+   "bboxTop": 164,
+   "clipped": false
+  },
+  {
+   "text": "decimal name",
+   "x": 540,
+   "bboxRight": 632,
+   "bboxTop": 182,
+   "clipped": false
+  },
+  {
+   "text": "Integers",
+   "x": 300,
+   "bboxRight": 333,
+   "bboxTop": 225,
+   "clipped": false
+  },
+  {
+   "text": "-4",
+   "x": 440,
+   "bboxRight": 454,
+   "bboxTop": 267,
+   "clipped": false
+  },
+  {
+   "text": "Whole numbers",
+   "x": 240,
+   "bboxRight": 302,
+   "bboxTop": 281,
+   "clipped": false
+  },
+  {
+   "text": "7",
+   "x": 240,
+   "bboxRight": 244,
+   "bboxTop": 309,
+   "clipped": false
+  },
+  {
+   "text": "The number family tree",
+   "x": 390,
+   "bboxRight": 496,
+   "bboxTop": 33,
+   "clipped": false
+  },
+  {
+   "text": "0 counts as a whole number",
+   "x": 696,
+   "bboxRight": 880,
+   "bboxTop": 416,
+   "clipped": true
+  },
+  {
+   "text": "textbook.com.pk",
+   "x": 768,
+   "bboxRight": 768,
+   "bboxTop": 450,
+   "clipped": false
+  }
+ ]
+}
+{
+ "info": {
+  "title": "Unit 2 teacher notes | B.Ed Mega Textbook",
+  "mainExists": true,
+  "headings": [
+   "H1:Unit 2 teacher notes",
+   "H2:Sequencing note​",
+   "H2:Teaching strategies from the guide​",
+   "H2:Common misconceptions to probe​",
+   "H2:Running the activities​",
+   "H2:Practical work​",
+   "H2:Assessment guidance​",
+   "H2:Practicum links​"
+  ],
+  "bodyTextSample": "Semester 1GQUR-300 · Quantitative Reasoning-IUnit 2 · Numbers and OperationsUnit 2 teacher notes Draft - expert review pending This unit is complete and passes the platform’s automated checks, but no reviewer has read it yet. Treat its sources and claims with care. 🖨 Print / Save as PDF Unit 2 teacher notes Sequencing note​ Topic 2.1 builds the number system as one family (draw the family tree on"
+ },
+ "errors": [
+  "console: [webpack-dev-server] Errors while compiling. Reload prevented.",
+  "console: [webpack-dev-server] ERROR in ./docs/semester-1/gqur-300/unit-03/topic-01.mdx\nModule build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):\nError: MDX compilation failed for file \"/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/docs/semester-1/gqur-300/unit-03/topic-01.mdx\"\nCause: Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`\nDetails:\n{\n  \"column\": 36,\n  \"file\": \"\",\n  \"message\": \"Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`\",\n  \"line\": 141,\n  \"name\": \"141:36\",\n  \"place\": {\n    \"_bufferIndex\": 33,\n    \"_index\": 0,\n    \"line\": 141,\n    \"column\": 36,\n    \"offset\": 7642\n  },\n  \"reason\": \"Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`\",\n  \"ruleId\": \"unexpected-character\",\n  \"source\": \"micromark-extension-mdx-jsx\",\n  \"url\": \"https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect\"\n}\n\n    at compileToJSX (/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)\n    at async loadMDX (/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)\n    at async Object.mdxLoader (/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/node_modules/@docusaurus/mdx-loader/lib/loader.js:157:24)",
+  "console: [webpack-dev-server] ERROR in ./docs/semester-1/gqur-300/unit-03/topic-02.mdx\nModule build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):\nError: MDX compilation failed for file \"/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/docs/semester-1/gqur-300/unit-03/topic-02.mdx\"\nCause: Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`\nDetails:\n{\n  \"column\": 76,\n  \"file\": \"\",\n  \"message\": \"Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`\",\n  \"line\": 70,\n  \"name\": \"70:76\",\n  \"place\": {\n    \"_bufferIndex\": 75,\n    \"_index\": 2,\n    \"line\": 70,\n    \"column\": 76,\n    \"offset\": 3729\n  },\n  \"reason\": \"Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`\",\n  \"ruleId\": \"unexpected-character\",\n  \"source\": \"micromark-extension-mdx-jsx\",\n  \"url\": \"https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect\"\n}\n\n    at compileToJSX (/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)\n    at async loadMDX (/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)\n    at async Object.mdxLoader (/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/node_modules/@docusaurus/mdx-loader/lib/loader.js:157:24)",
+  "console: [webpack-dev-server] ERROR in ./docs/semester-1/gqur-300/unit-03/unit-assessment.mdx\nModule build failed (from ./node_modules/@docusaurus/mdx-loader/lib/index.js):\nError: MDX compilation failed for file \"/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/docs/semester-1/gqur-300/unit-03/unit-assessment.mdx\"\nCause: Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`\nDetails:\n{\n  \"column\": 17,\n  \"file\": \"\",\n  \"message\": \"Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`\",\n  \"line\": 72,\n  \"name\": \"72:17\",\n  \"place\": {\n    \"_bufferIndex\": 13,\n    \"_index\": 0,\n    \"line\": 72,\n    \"column\": 17,\n    \"offset\": 2408\n  },\n  \"reason\": \"Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`\",\n  \"ruleId\": \"unexpected-character\",\n  \"source\": \"micromark-extension-mdx-jsx\",\n  \"url\": \"https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect\"\n}\n\n    at compileToJSX (/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/node_modules/@docusaurus/mdx-loader/lib/utils.js:93:15)\n    at async loadMDX (/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/node_modules/@docusaurus/mdx-loader/lib/loader.js:22:20)\n    at async Object.mdxLoader (/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/node_modules/@docusaurus/mdx-loader/lib/loader.js:157:24)"
+ ]
+}

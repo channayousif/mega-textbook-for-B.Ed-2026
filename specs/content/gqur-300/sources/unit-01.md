@@ -11,7 +11,7 @@ prose and in a per-topic `## Further reading` section.
 | grawe2012 | Grawe, N. D. (2012). Achieving a quantitatively literate citizenry: Resources and community to support national change. *Liberal Education, 98*(2), 30-35. | ERIC EJ981327, https://eric.ed.gov/?id=EJ981327 (registry checked 2026-09-23) | U1-01: quantitative literacy as a habit of mind expected in every field | open-access-substitute |
 | sikko2023 | Sikko, S. A. (2023). What can we learn from the different understandings of mathematical literacy? *Numeracy, 16*(1). | ERIC EJ1450768, https://eric.ed.gov/?id=EJ1450768 (registry checked 2026-09-23) | U1-01: the shared core of mathematical-literacy definitions | open-access-substitute |
 | gula2025 | Gula, T., & Lovric, M. (2025). Promoting mathematical thinking of university students: The case of a numeracy course. *Canadian Journal of Science, Mathematics and Technology Education, 25*(1), 171-184. | ERIC EJ1489427, https://doi.org/10.1007/s42330-024-00342-0 (registry checked 2026-09-23) | U1-02, U1-03: numeracy tasks as their own category, inspiring transfer between concrete and abstract thinking | open-access-substitute |
-| oecd-pisa | OECD. *PISA Mathematics Framework.* OECD Publishing, Paris. | https://www.oecd.org/pisa/ (checked 2026-09-23) | U1-01, U1-02: mathematical literacy as reasoning in real-world situations | open-access-substitute |
+| oecd-pisa | OECD. *PISA Mathematics Framework.* OECD Publishing, Paris. | https://www.oecd.org/pisa/ (checked 2026-09-23) | U1-01: mathematical literacy as reasoning in real-world situations | open-access-substitute |
 
 ## Unverifiable sources
 

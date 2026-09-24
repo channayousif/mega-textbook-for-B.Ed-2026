@@ -13,7 +13,6 @@ key it is grounded in.
 | U1-01 | topic-01.mdx | The importance of quantitative reasoning for a teacher | npst2009 |
 | U1-01 | topic-01.mdx | The importance of quantitative reasoning for a teacher | grawe2012 |
 | U1-02 | topic-02.mdx | Numeracy and number sense | gula2025 |
-| U1-02 | topic-02.mdx | Numeracy and number sense | oecd-pisa |
 | U1-03 | topic-02.mdx | Estimation and approximation | gula2025 |
 | U1-04 | topic-03.mdx | Logical reasoning | steen2001 |
 | U1-05 | topic-03.mdx | Problem-solving strategies | steen2001 |
