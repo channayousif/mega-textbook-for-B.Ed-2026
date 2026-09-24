@@ -1239,3 +1239,32 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   merge rather than an out-of-band hotfix.
 - **Blocks:** nothing in the automated gates (all green on the repaired bytes); the Unit 2
   feat023-r1 accessibility pass is superseded by a cycle-2 re-run against the repaired figures.
+
+---
+
+## G-2026-63 - EFMP-302 Unit 2 G3: two advisory cycles consumed; the post-report figure repair is unverified
+
+- **Status:** open
+- **Gate:** G3 (English review), ADR-0019 two-cycle limit
+- **Source:** EFMP-302 Unit 2 G3 feat023-r2 (2026-09-24,
+  `specs/content/efmp-302/reviews/unit-02/G3/agent-g3-efmp302-u2-feat023-r2.json`), in the
+  G-2026-24 pattern
+- **Question:** Unit 2's feature-023 G3 review ran two advisory cycles. Cycle 1 (feat023-r1)
+  returned pass, but its accessibility pass was earned against the b8f8ffe-broken figures
+  without figure-internal geometry measurement (G-2026-62). Cycle 2 (feat023-r2), run against
+  the repaired figures with exactly that measurement, returned **revise** on one blocking
+  finding: fig-U2-5 (both EN variants) superposed the "was outweighed" and "did not follow
+  through" failure-branch labels - pre-existing damage from the original figure commit,
+  invisible to every gate and to cycle 1. The author repaired it post-report (rewrapped
+  step-4's label as two lines right of its path line; measure-figure-text clean on both
+  variants; the cycle-2 report's own negative-control instrument class confirms the geometry),
+  rebound the G2 evidence, and per ADR-0019 the repair is unverified by a reviewer. Cycle 1's
+  two advisory repairs (MCQ 6 key caveat, figures-manifest note) are verified landed by
+  cycle 2; the MCQ key was re-derived blind at 10/10; three advisories carry (U2-12's
+  indirect summative coverage, bebeau1999's text-level limit, the fig-U2-1 cosmetic graze).
+- **Needed, and from whom:** the curriculum owner, to either accept the repaired state on the
+  two advisory reports or authorise a third G3 cycle for Unit 2. The unit's G2 gates are green
+  at the repaired commit; the G3 tracker row remains open either way.
+- **Blocks:** a third G3 cycle for Unit 2; nothing else. G4 translation of Unit 2 is already
+  complete (the rate probe), and the G5 review binds the current English inputs as its
+  comparison base.
