@@ -1,0 +1,3 @@
+$ npm run check:depth-gate   (repo HEAD 2222688, 2026-09-24T03:39:48.075Z)
+✓ Depth gate passed (concept coverage, required blocks, formative floor, reading-minutes band, coverage↔sources consistency).
+exit_code=0
