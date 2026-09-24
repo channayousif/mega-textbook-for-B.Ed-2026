@@ -162,3 +162,32 @@ eventually the boredom can even turn into behavior problems."
 Used for (Unit 5): giftedness recognised and supported (U5-5); the gifted stereotype
 corrected (U5-1's reinforcement row).
 
+## Chapter 6 - Student motivation (verified; used by Unit 6)
+
+On Maslow's needs: "According to Maslow, individuals must satisfy physical survival
+needs before they seek to satisfy needs of belonging, they satisfy belonging needs
+before esteem needs, and so on. In theory, too, people have both deficit needs and
+growth needs, and the deficit needs must be satisfied before growth needs can
+influence behavior (Maslow, 1970)."
+
+On self-determination theory: "A recent theory of motivation based on the idea of
+needs is self-determination theory, proposed by the psychologists Edward Deci and
+Richard Ryan (2000), among others." The chapter's classroom applications include
+"Supporting autonomy in learners".
+
+On goals: the chapter distinguishes "Goals that contribute to achievement" from
+"Goals that affect achievement indirectly", including "Failure-avoidant goals", and
+recommends "Encouraging mastery goals".
+
+On attributions: the chapter treats "Motives related to attributions" under the
+headings "Locus, stability, and controllability" and "Influencing students'
+attributions".
+
+On interests: "Situational interest versus personal interest", with "Benefits of
+personal interest" and "Stimulating situational interests".
+
+Used for (Unit 6): Maslow's deficit and growth needs (U6-2); self-determination
+theory and its classroom use (U6-4); mastery and failure-avoidant goals (U6-5); the
+attribution dimensions (U6-5); situational and personal interest (U6-6); the
+reinforcement rows (U6-1, U6-4, U6-6).
+
