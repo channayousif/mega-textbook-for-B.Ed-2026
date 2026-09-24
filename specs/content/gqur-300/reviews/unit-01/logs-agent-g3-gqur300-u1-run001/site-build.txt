@@ -1,0 +1,102 @@
+
+> bed-mega-textbook@0.1.0 prebuild
+> node scripts/build-content-index.mjs && node scripts/report-content-status.mjs
+
+✓ Wrote 112 content-index records to static/content-index.json
+✓ Copied catalog/courses.json to static/catalog-courses.json
+✓ Wrote content status for 8 course(s) to static/content-status.json
+
+> bed-mega-textbook@0.1.0 build
+> docusaurus build
+
+◇ injected env (3) from .env.local // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+[33m[1m[WARNING][22m The [36m`siteConfig.onBrokenMarkdownLinks`[39m[33m config option is deprecated and will be removed in Docusaurus v4.[39m
+[33mPlease migrate and move this option to [36m`siteConfig.markdown.hooks.onBrokenMarkdownLinks`[39m[33m instead.[39m
+[36m[1m[INFO][22m[39m Website will be built for all these locales: 
+- en
+- ur
+[36m[1m[INFO][22m[39m [34m[1m[en][22m[39m Creating an optimized production build...
+◇ injected env (0) from .env.local // tip: ⌘ enable debugging { debug: true }
+[33m[1m[WARNING][22m The [36m`siteConfig.onBrokenMarkdownLinks`[39m[33m config option is deprecated and will be removed in Docusaurus v4.[39m
+[33mPlease migrate and move this option to [36m`siteConfig.markdown.hooks.onBrokenMarkdownLinks`[39m[33m instead.[39m
+[90m[[90mwebpackbar[90m][39m [36mℹ[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [36mℹ[39m Compiling Server
+[90m[[90mwebpackbar[90m][39m [32m✔[39m Server: Compiled with some errors in 45.16s
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/node_modules/@docusaurus/mdx-loader/lib/index.js??ruleSet[1].rules[8].use[0]!/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/docs/semester-1/gqur-300/unit-03/topic-01.mdx': No serializer registered for VFileMessage
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/javascript/JavascriptModule -> webpack/lib/errors/ModuleBuildError -> Error -> VFileMessage
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/node_modules/@docusaurus/mdx-loader/lib/index.js??ruleSet[1].rules[8].use[0]!/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/docs/semester-1/gqur-300/unit-03/topic-02.mdx': No serializer registered for VFileMessage
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/javascript/JavascriptModule -> webpack/lib/errors/ModuleBuildError -> Error -> VFileMessage
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/node_modules/@docusaurus/mdx-loader/lib/index.js??ruleSet[1].rules[8].use[0]!/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/docs/semester-1/gqur-300/unit-03/unit-assessment.mdx': No serializer registered for VFileMessage
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/javascript/JavascriptModule -> webpack/lib/errors/ModuleBuildError -> Error -> VFileMessage
+[90m[[90mwebpackbar[90m][39m [32m✔[39m Client: Compiled with some errors in 1.70m
+[31m[1m[ERROR][22m Client bundle compiled with errors therefore further build is impossible.[39m
+[31m[31mError: MDX compilation failed for file [36m[4m"/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/docs/semester-1/gqur-300/unit-03/topic-01.mdx"[24m[39m[31m[31m[39m[31m[39m
+[31m[31mCause: Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`[39m[31m[39m
+[31m[31mDetails:[39m[31m[39m
+[31m[31m{[39m[31m[39m
+[31m[31m  "column": 36,[39m[31m[39m
+[31m[31m  "file": "",[39m[31m[39m
+[31m[31m  "message": "Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`",[39m[31m[39m
+[31m[31m  "line": 141,[39m[31m[39m
+[31m[31m  "name": "141:36",[39m[31m[39m
+[31m[31m  "place": {[39m[31m[39m
+[31m[31m    "_bufferIndex": 33,[39m[31m[39m
+[31m[31m    "_index": 0,[39m[31m[39m
+[31m[31m    "line": 141,[39m[31m[39m
+[31m[31m    "column": 36,[39m[31m[39m
+[31m[31m    "offset": 7642[39m[31m[39m
+[31m[31m  },[39m[31m[39m
+[31m[31m  "reason": "Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`",[39m[31m[39m
+[31m[31m  "ruleId": "unexpected-character",[39m[31m[39m
+[31m[31m  "source": "micromark-extension-mdx-jsx",[39m[31m[39m
+[31m[31m  "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect"[39m[31m[39m
+[31m[31m}[39m[31m[39m
+[31m[39m
+[31m[33m--------------------------[39m[31m[39m
+[31m[39m
+[31m[31mError: MDX compilation failed for file [36m[4m"/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/docs/semester-1/gqur-300/unit-03/topic-02.mdx"[24m[39m[31m[31m[39m[31m[39m
+[31m[31mCause: Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`[39m[31m[39m
+[31m[31mDetails:[39m[31m[39m
+[31m[31m{[39m[31m[39m
+[31m[31m  "column": 76,[39m[31m[39m
+[31m[31m  "file": "",[39m[31m[39m
+[31m[31m  "message": "Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`",[39m[31m[39m
+[31m[31m  "line": 70,[39m[31m[39m
+[31m[31m  "name": "70:76",[39m[31m[39m
+[31m[31m  "place": {[39m[31m[39m
+[31m[31m    "_bufferIndex": 75,[39m[31m[39m
+[31m[31m    "_index": 2,[39m[31m[39m
+[31m[31m    "line": 70,[39m[31m[39m
+[31m[31m    "column": 76,[39m[31m[39m
+[31m[31m    "offset": 3729[39m[31m[39m
+[31m[31m  },[39m[31m[39m
+[31m[31m  "reason": "Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`",[39m[31m[39m
+[31m[31m  "ruleId": "unexpected-character",[39m[31m[39m
+[31m[31m  "source": "micromark-extension-mdx-jsx",[39m[31m[39m
+[31m[31m  "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect"[39m[31m[39m
+[31m[31m}[39m[31m[39m
+[31m[39m
+[31m[33m--------------------------[39m[31m[39m
+[31m[39m
+[31m[31mError: MDX compilation failed for file [36m[4m"/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-affcb48d7818e8183/docs/semester-1/gqur-300/unit-03/unit-assessment.mdx"[24m[39m[31m[31m[39m[31m[39m
+[31m[31mCause: Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`[39m[31m[39m
+[31m[31mDetails:[39m[31m[39m
+[31m[31m{[39m[31m[39m
+[31m[31m  "column": 17,[39m[31m[39m
+[31m[31m  "file": "",[39m[31m[39m
+[31m[31m  "message": "Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`",[39m[31m[39m
+[31m[31m  "line": 72,[39m[31m[39m
+[31m[31m  "name": "72:17",[39m[31m[39m
+[31m[31m  "place": {[39m[31m[39m
+[31m[31m    "_bufferIndex": 13,[39m[31m[39m
+[31m[31m    "_index": 0,[39m[31m[39m
+[31m[31m    "line": 72,[39m[31m[39m
+[31m[31m    "column": 17,[39m[31m[39m
+[31m[31m    "offset": 2408[39m[31m[39m
+[31m[31m  },[39m[31m[39m
+[31m[31m  "reason": "Unexpected character `=` (U+003D) before name, expected a character that can start a name, such as a letter, `$`, or `_`",[39m[31m[39m
+[31m[31m  "ruleId": "unexpected-character",[39m[31m[39m
+[31m[31m  "source": "micromark-extension-mdx-jsx",[39m[31m[39m
+[31m[31m  "url": "https://github.com/micromark/micromark-extension-mdx-jsx#unexpected-character-at-expected-expect"[39m[31m[39m
+[31m[31m}[39m[31m[39m
+EXIT:1

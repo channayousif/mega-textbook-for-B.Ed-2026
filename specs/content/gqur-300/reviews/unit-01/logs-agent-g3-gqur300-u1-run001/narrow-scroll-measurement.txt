@@ -1,0 +1,18 @@
+narrow-scroll-measurement - GQUR-300 Unit 1 - agent-g3-gqur300-u1-run001
+Date: 2026-09-23. Viewport 360x740, dev server render (see render-review.txt for identity).
+
+Method per G3 rubric: query all <table> elements in <main> at 360px, measure the table
+element itself (scrollWidth vs clientWidth, computed overflow-x), set scrollLeft to
+scrollWidth and re-measure the last column's rect, and read tabindex/role/aria-label
+(hydration-added keyboard attributes).
+
+Result: NOT APPLICABLE - zero <table> elements exist on any of the six unit pages
+(index, topic-01..03, unit-assessment, unit-teacher-notes). The unit contains no Markdown
+tables (grep "^|" over all six .mdx files: 0 matches); every tabular presentation is a
+committed SVG figure (fig-U1-2, U1-4, U1-6 table archetypes) which scales responsively
+inside <figure>. The wrapper-vs-table measurement trap described in the rubric therefore
+cannot arise on this unit.
+
+Narrow full-page screenshots for all six pages are saved (renders dir, *-narrow360.png).
+No horizontally clipped content was found in the narrow DOM (no element with bounding
+rect right > 360 other than none; figures scale to container width).

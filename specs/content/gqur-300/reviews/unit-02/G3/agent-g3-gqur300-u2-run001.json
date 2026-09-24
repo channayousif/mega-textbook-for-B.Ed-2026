@@ -1,0 +1,388 @@
+{
+  "schema_version": 1,
+  "course_code": "GQUR-300",
+  "unit_no": 2,
+  "stage": "G3",
+  "disposition": "revise",
+  "reviewer_id": "agent:g3-reviewer",
+  "author_run_id": "commit:c1634c8",
+  "reviewer_run_id": "agent-g3-gqur300-u2-run001",
+  "model": "LongCat-2.0",
+  "started_at": "2026-09-23T22:44:00Z",
+  "completed_at": "2026-09-23T23:28:24Z",
+  "skill_digest": "eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b",
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g3.md": "074c8464b4bc0f2f2b76bbb19707c50b54cb907920407873a4e5d193e866f53f",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "f1d7f063cc2c826693a3d8428fb5d3ee45455fdb7906ebc5adadee8b9a434d47",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-1/gqur-300/course-overview.mdx": "0249b931667c214573763e695ed33739ecede15a33ff2b852f44bd286803dcb2",
+    "docs/semester-1/gqur-300/unit-02/_category_.json": "21a5b64d5a279836e988afb998845841de0cb5333206b04c19429575d1d4a991",
+    "docs/semester-1/gqur-300/unit-02/index.mdx": "a01a2cc528540fbf45aee3aa2562d926749044200c2d6122a77fd26117be87b0",
+    "docs/semester-1/gqur-300/unit-02/topic-01.mdx": "35e5c448325a7042cade222b03d45aaffaac7dd5047dbf0616ca7240fd5f265a",
+    "docs/semester-1/gqur-300/unit-02/topic-02.mdx": "09606675a8d1d41439f3a757c95bf787d072faddd143d0c294b1da6a85da7338",
+    "docs/semester-1/gqur-300/unit-02/topic-03.mdx": "ad025de3e0d4900f7f62db85144e1a022f337f71ef3c3c5a5ec0e5d113823444",
+    "docs/semester-1/gqur-300/unit-02/unit-assessment.mdx": "6d6f3313845d994ce9a8b9df89f2da34fb5e4e98fafc3f9a2d2b460133a8dab5",
+    "docs/semester-1/gqur-300/unit-02/unit-teacher-notes.mdx": "ac1d628cff3251ecf531c0b22103981cc84e84dd5d96054f59be8b70b1f44397",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "41b698f8cbbb12f4030d6893083a5c36e4a19848b5ddb86206e5ba72847b8b13",
+    "scripts/check-no-answer-keys.mjs": "f38d60e5360e0c29f2dae02001195690f3b95e0ad2d7ae1a3c03a0d09c053f0d",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "bb614c625f7bf397ce51a317bdb8901711c00fa009d4ad0a506c5096e5b9ddd2",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "77f03816f68663621059f17745109fdde9b103c555f707e0c62d5ff56d2a4cd9",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "973496faae3366d13e8cdd3ba8d68edf7bd3745bdc6928311ee03c55f24b18b2",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/gqur-300/concepts/unit-02.md": "5dd9d37d25c48f3193aee6baf63d9cb3691cce056727bccabd9d184d1200813c",
+    "specs/content/gqur-300/content-spec.md": "03722e930fdfbd7bcbbdebd8e8b4d366d0170a95c975366ef9626aa06939787b",
+    "specs/content/gqur-300/coverage/unit-02.md": "400445148b69eeac1bc0639c7bc35f158cbae845d943e769b0f4f078d88619f3",
+    "specs/content/gqur-300/figures/unit-02.md": "4c601a0eed412da79804190f62ebc9207c30ff8891751237507d4860ac119aeb",
+    "specs/content/gqur-300/sources/texts/gula2025.md": "c1f02cf389f08236d7518c76e78786bff34982ab7e75749f240e44ba94e160dc",
+    "specs/content/gqur-300/sources/unit-02.md": "6ff944fbd7c1c6f585019dc80fb9788d3a298dadd2182fc5ac9745127900984a",
+    "specs/content/style-guide.md": "db96c9b33b0fb9522986462a0b519620c3c1d7602a046d7b90e638f643da4610",
+    "static/img/figures/gqur-300/unit-02/fig-U2-1.dark.svg": "ab796333083600555aeedf9c57ca9211d2ab4e4eba53728e92108cea6baea172",
+    "static/img/figures/gqur-300/unit-02/fig-U2-1.svg": "2533af66f6b2710aeae0880cbe1e4239d9c21b932913870dc94560be9990cf8c",
+    "static/img/figures/gqur-300/unit-02/fig-U2-2.dark.svg": "e6dfa613da2c22059da5fcfb49e384876e9b29dcaf0293f369227398bf289066",
+    "static/img/figures/gqur-300/unit-02/fig-U2-2.svg": "241fad1ff5893aa3fd1d65cb941d3e124d15e2a94942500f23cba62d08adb2d9",
+    "static/img/figures/gqur-300/unit-02/fig-U2-3.dark.svg": "0e10d66c495ba547e4c21addd48fb380a4626de6c30c11b0dd8f0ba1a515da44",
+    "static/img/figures/gqur-300/unit-02/fig-U2-3.svg": "84a814ffd10e31bcbd22c93ec7a188174ae3644ea54317d3b8b8e50ccc450964",
+    "static/img/figures/gqur-300/unit-02/fig-U2-4.dark.svg": "d723d00efa3faf32c671168ad62c876d13e2ca962c954abb6a8b7baf384484f9",
+    "static/img/figures/gqur-300/unit-02/fig-U2-4.svg": "3d5e1cb16d13ef7f587b307ff6648b19b5e06cf09ecfb1ca3eabdfb73f609e27",
+    "static/img/figures/gqur-300/unit-02/fig-U2-5.dark.svg": "f8cf879ee6376150fb9d44f33dddd10722729b398b6aa4e081042aec35241f5f",
+    "static/img/figures/gqur-300/unit-02/fig-U2-5.svg": "9f469274290e89c36d03d61323b56231520fe5404f22aa01890d586099e13605",
+    "static/img/figures/gqur-300/unit-02/fig-U2-6.dark.svg": "bd8af123b45c45bc2563ddc980e5462272c100bceab96c3fab8809d493c35a2e",
+    "static/img/figures/gqur-300/unit-02/fig-U2-6.svg": "47b7068165ffb2928ce43b5d5026734a428c8debab20151695ac29df6fc4642e"
+  },
+  "rubric_version": "1.0.0",
+  "skill_version": "1.1.0",
+  "reviewed_commit": "235af7bc25793cbc4265b26b148febdd5960d3c5",
+  "prepared_manifest": "specs/content/gqur-300/reviews/unit-02/G3/manifest.json",
+  "superseded_reports": [],
+  "summary": "G3 English review of GQUR-300 Unit 2 (Numbers and Operations) against the bound course guide, content spec, coverage matrix, sources, figure manifest, concept graph, style guide and contracts. All 96 bound inputs digest-verified against the prepared manifest at commit 235af7b with zero mismatches, and the bound tree was clean at the start and end of the review. All three cited sources were retrieved and read this session: the NCC mathematics page and both PDFs it serves (the Grades 1-8 Suggested Guidelines, text-decoded from CID glyphs, opens with the Number and Operations domain; the NCP Mathematics Progression Grid 1-12, National Curriculum of Pakistan 2022-23, Domain A Numbers and Operations with integers, ratio, proportion and percentage SLOs), the OpenStax Prealgebra 2e table of contents (every cited chapter and section exists exactly as cited, authors, 2020, CC BY confirmed), and the ERIC record for Gula and Lovric (2025), whose abstract confirms every claim the verification excerpt makes.\n\nDisposition is revise, with four blocking defects, each with a precise location and repair.\n\nFirst, fig-U2-1's side note '0 counts as a whole number' is clipped about 100px past the SVG's 780px viewBox in both the light and dark variants: the text is anchored at x=696 and its glyph box runs to x=880. Three independent measurements agree (in-browser getBBox on the served SVG, scripts/measure-figure-text.mjs, and pixel analysis of the rendered element screenshot), and check:figures passes because it measures no glyph geometry. A learner cannot recover the note's content.\n\nSecond, the unit's flagship misconception, scaling by adding, is self-refuting at the numbers chosen: the recipe serves 20 people with 6 spoons of sugar, the friend adds 6 spoons for 20 more people, and 6 + 6 = 12 is exactly the correct 6 x 2 for 40 people, so the recipe is not broken and the ratio is not destroyed. The supplied model answer nonetheless asserts that adding destroys the ratio. The defect runs through the misconception paragraph, the topic check-your-understanding item, RRQ-06 and its model answer, and the teacher-notes sherbat demonstration, which would produce two identical-tasting batches at a doubling.\n\nThird, gula2025 is cited only in topic-03's Further reading and appears nowhere in unit prose, contradicting sources/unit-02.md's own claim that every key is cited both in prose and in a per-topic Further reading section.\n\nFourth, the concept graph maps CON:GQUR-300-2-7 (proportion as equal ratios, checked by cross-products) to RRQ-05, which is the atlas percentage-discount item and assesses a different concept; the cross-product check is taught in topic-02 prose but assessed by no item in the bank.\n\nEverything else the rubric asks for holds: all four guide leaves are taught and assessed, the MCQ key agrees with independent derivation on 10 of 10 items, all five ERQ rubrics are arithmetically sound and sum to their stated totals, the 10/10/5 blueprint and per-topic floors are met, the register is accessible to a fresh HSC graduate, activities are feasible with stated group sizes and timings, and narrow-viewport and A4 print layout are clean with figures and answers intact. Advisory findings: the teacher notes call 42/60 the raw score that 'looked biggest' when 55/75 is the largest raw score; both NCC citations read n.d. although the Progression Grid's own title page is dated 2022-23; the content-spec key terms Root and Operation are not carried as glossary entries while the other ten are; and 9 of the 10 RRQs restate topic check-your-understanding or worked-example items, so the summative bank adds little beyond the formative cycle for those items.\n\nRecorded for the parent, outside this unit's bound inputs: the production build (npm run build) fails at this commit on GQUR-300 unit-03 MDX (bare < and <= parsed as JSX at topic-01.mdx:141, topic-02.mdx:70, unit-assessment.mdx:72). Unit-03 is not bound to this review and every unit-02 page compiles; the render inspection therefore ran against the Docusaurus dev server, which serves the same reviewed bytes for unit-02. Unit-03 needs its own repair before the site can build statically.\n\nThis report is advisory. It is unsigned, no qualification record or protected registry entry exists for this reviewer, and nothing here certifies the unit, activates a reviewer, or writes a tracker row.",
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        "Scheme-and-Course-guides/extracted-text/1st 2026.txt:584-589 - the guide's Unit 2 carries exactly four leaves: 'Whole numbers, integers, fractions, and decimals', 'Ratios, proportions, and percentages', 'Powers and roots', 'Applications in daily life'.",
+        "specs/content/gqur-300/content-spec.md '## Unit 2' -> '### Sub-topic checklist': U2-01/U2-02 carry Guide ref G2.1, U2-03/U2-04 G2.2, U2-05 G2.3, U2-06 G2.4. Every guide leaf is claimed by at least one row and no row invents scope outside the guide; checked leaf by leaf against the guide text.",
+        "CLO trace: content-spec '## Unit 2' states 'CLO refs: course outcomes 1, 2 and 3'; the unit's clo_refs (SLO:GQUR-300-1-1, SLO:GQUR-300-2-2, SLO:GQUR-300-3-3) match the corpus convention verified against sibling units (unit-01, outcomes 1 and 3, uses SLO:GQUR-300-1-1 and SLO:GQUR-300-3-3; unit-03, outcomes 1 and 2, uses SLO:GQUR-300-1-1 and SLO:GQUR-300-2-2).",
+        "Week placement 'Weeks 4-6 (derived)' is labelled as derived per D-2026-0012, and the G0/G1 chain is intact: content-spec status approved, intake D-2026-0042, G2 gate evidence at reviews/unit-02/G2/. No contradictory or missing G0/G1 authority found.",
+        "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/input-binding-verification.txt - 96/96 bound inputs digest-match the prepared manifest; skill_digest matches; no dirty bound inputs at review start or end."
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "fail",
+      "evidence": [
+        "VERIFIED - ncm. https://ncc.gov.pk/Detail/ZjgzYzg2MmMtZDc0Zi00NjEzLTk5ZmYtZGJiNjc5ODljOGUx returns HTTP 200 and serves both documents the unit cites: 'Mathematics 1-8 - Suggested Guidelines.pdf' (5,192,918 bytes, matching the content-spec note '5.2 MB') and '4_ NCP Mathematics PG 1-12.pdf' (15,893,007 bytes, '15.9 MB'). Both downloaded and read (sources-agent-g3-gqur300-u2-run001/).",
+        "ncm 1-8 Suggested Guidelines: CID-glyph text decoded (gid = ASCII - 29 core-font order); title 'DRAFT Mathematics Class I... Suggested Guidelines'; first domain 'Number and Operations', standard 'Students will be able to count, read, write, compare, order, add, subtract, multiply and divide numbers... recognize fractions as part of the whole... solve problems in contexts using appropriate number operations'. This directly supports topic-01.mdx:55-57 ('whole numbers and integers sit at its foundation'). Note: the 1-8 Guidelines contain no integer, percentage or genuine ratio strand (the 11 raw 'ratio' hits are substrings of 'Operations').",
+        "ncm Progression Grid 1-12: properly decodable; title page 'National Curriculum of Pakistan 2022-23 MATHEMATICS Grades 1-12'; Domain A Numbers and Operations; word-boundary counts integers 22, percentage 15, ratio 9, proportion 4, exponent 4, power 7; sample SLO 'use the concept of place value for whole numbers, integers, rational numbers and decimal numbers [SLO: M-01-A-04]' and strand line 'square roots and cube roots, ratio, rate, proportion, percentages, profit, loss, discount, Zakat'. The sources-file claim that ncm supports the number, ratio and percentage strands (U2-01, U2-03, U2-04) is supported, with the ratio/percentage support living in the PG 1-12 document.",
+        "VERIFIED - openstax-prealgebra. https://openstax.org/books/prealgebra-2e/pages/1-introduction returns HTTP 200 and embeds the full TOC (extracted to openstax-prealgebra-2e-toc.txt): Ch. 1 Whole Numbers, Ch. 3 Integers, Ch. 4 Fractions, Ch. 5 Decimals with 5.6 Ratios and Rate and 5.7 Simplify and Use Square Roots, Ch. 6 Percents, Ch. 9 Math Models and Geometry. Every chapter and section the unit's three Further-reading blocks cite exists exactly as cited. Authors Marecek, Anthony-Smith and Mathis, year 2020 and CC BY license confirmed on the page.",
+        "VERIFIED at record level - gula2025. https://eric.ed.gov/?id=EJ1489427 returns HTTP 200; record confirms Gula and Lovric (2025), Canadian Journal of Science, Mathematics and Technology Education, v25 n1 p171-184. The abstract confirms every claim the verification excerpt (specs/content/gqur-300/sources/texts/gula2025.md) makes, including the verbatim 'often conflated with math-lite', the QR/QL/ML interchangeability, numeracy tasks as 'a distinct form of mathematics tasks' distinct from word problems and modelling, quality tasks that 'inspire transfer between concrete and abstract thinking spaces', and the 'Numbers for Life' course. The excerpt's provenance note (record summary, not publisher full text) is honest.",
+        "FAILURE - citation traceability broken for gula2025. specs/content/gqur-300/sources/unit-02.md:3-5 asserts 'every key here is cited both in prose and in a per-topic ## Further reading section', but 'Gula' appears nowhere in unit prose: its only appearance is the Further-reading line at docs/semester-1/gqur-300/unit-02/topic-03.mdx:149-151. The claim it is recorded as supporting (U2-06, numeracy tasks as their own category, distinct from word problems and modelling) is not made anywhere in topic-03's prose either. npm run check:depth-gate exits 0 because coverage-sources consistency is a key-closure check, not a prose-citation check.",
+        "Unverifiable sources: none declared ('None for this unit'), and none needed - all three keys were retrieved and read this session, so D-2026-0001 is not engaged."
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "Taught-passage mapping verified 6/6. Every row of specs/content/gqur-300/coverage/unit-02.md names a file and an exact ### heading that exists in that file (U2-01/U2-02 topic-01.mdx 'Whole numbers and integers' / 'Fractions and decimals'; U2-03/U2-04 topic-02.mdx 'Ratios and proportions' / 'Percentages'; U2-05/U2-06 topic-03.mdx 'Powers and roots' / 'Applications of numbers and operations in daily life'), and the prose under each heading genuinely teaches the sub-topic rather than naming it.",
+        "Outcome chain guide leaf -> taught passage -> assessment verified for all six sub-topics: U2-01 assessed by MCQ-01, MCQ-02, RRQ-01, RRQ-02; U2-02 by MCQ-03, MCQ-04, RRQ-03; U2-03 by MCQ-05, MCQ-06, RRQ-04, RRQ-06; U2-04 by MCQ-07, RRQ-05, ERQ-04; U2-05 by MCQ-08, MCQ-09, RRQ-07, RRQ-09, ERQ-03; U2-06 by MCQ-10, RRQ-08, RRQ-10, ERQ-01, ERQ-02, ERQ-05.",
+        "Topic partition total and disjoint: content-spec '### Topic list' assigns U2-01/02 to 2.1, U2-03/04 to 2.2, U2-05/06 to 2.3, and the three topic files match; every topic file is the File of at least one coverage row.",
+        "Depth budget: index 5 + topics 15/15/15 + assessment 12 + teacher notes 6 = 68 reading-minutes, inside the content-spec band of 55-70 (also gate-checked).",
+        "Sources closure is mutual: coverage cites exactly ncm, openstax-prealgebra, gula2025 and sources/unit-02.md carries exactly those three keys."
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "fail",
+      "evidence": [
+        "Independent working recorded in logs-agent-g3-gqur300-u2-run001/assessment-independent-working.txt, with each derivation tied to the topic passage it rests on rather than to the key (the bank and key share one file).",
+        "MCQ key agreement 10/10. Derived answers 1 a, 2 b, 3 a, 4 c, 5 b, 6 b, 7 b, 8 b, 9 b, 10 b all match the supplied key. Distractors are plausible errors, notably MCQ-07's 15,840 (17,600 x 0.9, the subtract-from-new trap) and 19,360 (17,600 x 1.1, the add-on trap). No double-keyed stem.",
+        "RRQ agreement 9/10 sound: RRQ-1 ordering, RRQ-2 integer position, RRQ-3 part-of-whole, RRQ-4 multiplier 2.5 and 15 spoons, RRQ-5 both discount routes 480, RRQ-7 sqrt(50) between 7 and 8 via 49 and 64, RRQ-8 multiply/divide with reasons, RRQ-9 49 and 10 with the side-area connection, RRQ-10 discarded remainder forces the 8th van.",
+        "ERQ arithmetic sound 5/5: ERQ-1 7 batches and 0.25 kg left, cost about 171 (or 164) per batch; ERQ-2 both deals 6,400 and the tie; ERQ-3 15-by-15 fits, 400 needed, 175 more; ERQ-4 conversions 80, 70, 73.3, 72, 90 percent with ranking 27/30 first down to 42/60 last; ERQ-5 8 vans, 24,000 within 25,000, alternative 5 x 4,500 = 22,500. Every rubric's criteria sum to its stated total (6, 6, 6, 7, 10); RRQ breakdowns sum to their totals (23 overall).",
+        "Blueprint met: exactly 10/10/5; at least 2 MCQ and 2 RRQ per topic (2.1: MCQ 1-4, RRQ 1-3; 2.2: MCQ 5-7, RRQ 4-6; 2.3: MCQ 8-10, RRQ 7-10); MCQs Remember to Apply, RRQs Understand to Analyze, ERQs Analyze to Evaluate on the labels; each topic's Summative-task mini-rubric carries one Analyze-or-higher criterion.",
+        "FAILURE 1 - RRQ-06 is unsound as posed and its model answer states a falsehood. The recipe serves 20 people with 6 spoons of sugar (topic-02 classroom situation); the friend's '20 more people, so add 6 more spoons of sugar' gives 6 + 6 = 12 spoons for 40 people, which is exactly the correct 6 x 2 = 12, and adding 4 spoons of tea the same way preserves the ratio (12:8 = 3:2 = 6:4). The recipe is not broken, yet the item asks trainees to 'explain the error' and the model answer (unit-assessment.mdx:176-179) asserts 'adding keeps the difference constant while destroying the ratio', which is false at a doubling. The same self-refuting numbers appear at topic-02.mdx:55-58 (misconception paragraph), topic-02.mdx:98-99 (Check your understanding 5) and unit-teacher-notes.mdx:45-47 (sherbat demonstration). The additive-scaling misconception is real but only fails visibly when the multiplier is not 2.",
+        "FAILURE 2 - false derived linkage in the concept graph. specs/content/gqur-300/concepts/unit-02.md:24 maps CON:GQUR-300-2-7 'Proportion as equal ratios, checked by cross-products' to RRQ-05, but RRQ-05 is the atlas percentage-discount item (25 percent off a 640-rupee atlas, two routes) and assesses CON:GQUR-300-2-9, which also lists it. The cross-product check is taught at topic-02.mdx:42-44 but assessed by no item in the bank. npm run check:concept-graph exits 0 because it verifies ID resolution, acyclicity and orphan-freedom, not that a named item assesses the named concept.",
+        "Recorded, not a failure: MCQ-09 (sqrt(81)) is labelled Apply but is recall of a perfect square; it does not break the blueprint floor."
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "fail",
+      "evidence": [
+        "Inspection record: logs-agent-g3-gqur300-u2-run001/render-review.txt; DOM measurements in renders-agent-g3-gqur300-u2-run001/render-inspection.json. Rendered input identity: docs/semester-1/gqur-300/unit-02/ at commit 235af7b (authoring commit c1634c8, no bound input changed since), served by the Docusaurus dev server on port 3212 because the production build fails on unrelated unit-03 MDX (see findings); Chromium via Playwright; desktop 1280x900, narrow 360x740 at DSF 2 isMobile hasTouch, print via emulateMedia media=print at 794x1123 plus A4 page.pdf. All six pages inspected.",
+        "FAILURE - fig-U2-1's side note is clipped. static/img/figures/gqur-300/unit-02/fig-U2-1.svg anchors '0 counts as a whole number' at x=696 in a 780-wide viewBox; the in-browser getBBox of the served SVG measures the glyph box to x=880 (clipped: true; fig-U2-1-browser-geometry.txt), scripts/measure-figure-text.mjs independently reports 'overflows right edge by 100.3px', and pixel analysis of the rendered element screenshot finds 112 dark text pixels in the last 8 columns at the note's rows, i.e. glyphs physically cut at the boundary. The dark variant fig-U2-1.dark.svg has identical geometry and is equally clipped (fig-U2-1-element-dark.png). A learner cannot recover the note's instructional content from the figure. The Urdu variant fig-U2-1.ur.svg uses a different, safe placement (x=84, text-anchor end).",
+        "PASSING - figures render with full alternative text: each topic page renders exactly 2 figure elements with 4 content images (light and dark variants per figure), every img carrying the manifest Alt text verbatim; zero empty alt. Alt texts in figures/unit-02.md match the Figure alt attributes whitespace-exactly on all six rows.",
+        "PASSING - headings and reading order: one h1 per page, h2/h3 correctly nested in the nine-part cycle order on all six pages (topic-01 outline in render-inspection.json; unit-teacher-notes re-inspected after its first dev-server compile: h1 plus 7 h2).",
+        "PASSING - links: zero vague link labels (here, click here, read more, link, this) in main content across all six pages.",
+        "PASSING - small-screen layout: at 360 CSS px, documentElement scrollWidth equals clientWidth on all six pages (page-level horizontal overflow 0 px). The unit contains no HTML tables (its comparison tables are SVG figures), so the narrow-viewport table-scroll protocol has nothing to check; recorded so the absence is explicit.",
+        "PASSING - A4 print: page overflow 0 px on all six pages; navbar, sidebar and breadcrumbs compute display:none; figures keep break-inside avoid and the print stylesheet forces the light variant on white paper; the Answers and marking guidance section of unit-assessment.mdx remains visible in print, the established teacher-handout posture. A4 PDFs saved for all six pages.",
+        "npm run check:figures exits 0 ('2 RENDERED figures per topic, a placed schematic per unit... placed assets exist') because it measures no glyph geometry; the clipping is exactly the class of defect the G3 reference warns the figure gate cannot see."
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "Register is reachable by a fresh HSC/intermediate graduate per specs/content/style-guide.md '## EN readability rules': short active sentences, one idea per paragraph, every load-bearing term defined in plain words at first use (whole number, integer, fraction, decimal, ratio, proportion, percentage, power, exponent, square root).",
+        "All ten glossary wrappers resolve to bilingual entries in glossary.json (Whole number, Integer, Fraction, Decimal, Ratio, Proportion, Percentage, Power, Exponent, Square root), enforced by validate:content's T018 check and re-verified directly against the bank. The content-spec key terms Root and Operation are not glossary entries (advisory finding).",
+        "npm run check:no-em-dash exits 0 (scanned docs, licence, guides, i18n, specs/content, glossary.json); no em dash in the unit.",
+        "Every page carries a front-matter description and est_reading_minutes; the unit total of 68 minutes sits inside the content-spec depth budget of 55-70.",
+        "Concrete Pakistani grounding throughout (Jodia Bazaar ledger, Skardu temperature, Nawabshah tiling, rupee examples) with no unexplained cultural or technical presupposition; Unit 1 prerequisites are stated in index.mdx and honoured."
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "fail",
+      "evidence": [
+        "PASSING - progression. Each topic runs the nine-part cycle in order (verified in the rendered heading outline): classroom situation, explanation with worked examples, activity, check your understanding, summary, self-assessment checklist, practicum task, summative task, further reading. Unit 1's four-step strategy is carried through (topic-01 tailor example, topic-02 two-route discount check, topic-03 vans look-back), so the unit builds on its stated prerequisite rather than restating it.",
+        "PASSING - activities are feasible in a Pakistani/Sindhi classroom with usable instructions and materials: the bazaar ledger (pairs, mock ledger, 25 minutes), the marksheet percentage relay (groups of four, five anonymised results, no calculator, 20 minutes), tile the courtyard (groups of three, 12 x 9 m plan, three tile sizes, 25 minutes). The teacher-notes tile counts check out (432, 108, 48 tiles).",
+        "PASSING - misconceptions are named and corrected with a repair, not a scolding: 'multiplying always makes bigger' (topic-01, 12 x 0.1), '8 squared is 8 x 2' (topic-03, tile picture), 'the remainder can be dropped' (topic-03 vans, teacher notes). The content-spec's other two listed misconceptions ('a percentage is a separate kind of number', 'division of fractions has no meaning') are addressed structurally - percentage taught as a ratio out of 100 and as one of three notations of one idea (fig-U2-3), fraction division given a concrete metre meaning (fig-U2-2) - though not as named callouts; recorded, not counted a defect.",
+        "PASSING - teacher notes are substantive: three-week sequencing with reasons, four misconceptions to probe with concrete classroom moves, activity-running guidance including the deliberate sign-error entry, and marking guidance that names the bank's deliberate traps.",
+        "FAILURE - the add-to-scale misconception correction is self-refuting at the numbers chosen. topic-02.mdx:55-58 presents '20 more people, so 6 more spoons of sugar' as the error to correct, but for a 20-to-40 doubling the additive answer equals the multiplicative one (12 = 6 x 2), so the worked misconception demonstrates nothing: a trainee who checks the arithmetic finds the friend is right, and the paragraph's claim that adding destroys the ratio is false at these numbers. The teacher-notes sherbat demonstration (unit-assessment.mdx RRQ-06 and unit-teacher-notes.mdx:45-47) would mix two identical-tasting batches. The repair is to move to a non-doubling case (for example 30 more people: adding gives 12 spoons where 15 are needed), which makes the error visible; the general principle (multiply, never add) needs no change."
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "Clipped figure text: static/img/figures/gqur-300/unit-02/fig-U2-1.svg (and the bound dark twin fig-U2-1.dark.svg) anchor the side note '0 counts as a whole number' at x=696 in a 780-wide viewBox; the glyph box runs to x=880, so roughly the last 100px of the note is cut at the figure boundary in both light and dark themes. Verified three ways: in-browser getBBox on the served SVG (logs-agent-g3-gqur300-u2-run001/fig-U2-1-browser-geometry.txt), scripts/measure-figure-text.mjs ('overflows right edge by 100.3px', exit 1, logs-agent-g3-gqur300-u2-run001/measure-figure-text.txt), and pixel analysis of the rendered element screenshot (glyphs present in the final 8 columns at the note's rows). A learner cannot recover the note. npm run check:figures exits 0 because it measures no glyph geometry. REPAIR: re-anchor or shorten the note in both SVGs - the Urdu variant fig-U2-1.ur.svg already uses a safe placement (x=84, text-anchor end) that the English repair can mirror - then re-run node scripts/measure-figure-text.mjs on both files until clean."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "Self-refuting misconception example and unsound model answer: the add-to-scale misconception is presented with the one multiplier (2) at which adding the original amount is correct. The recipe serves 20 people with 6 spoons of sugar; the friend's '20 more people, so add 6 more spoons of sugar' yields 12 spoons for 40 people, which equals the correct 6 x 2, and adding 4 spoons of tea the same way preserves the ratio 12:8 = 3:2, so the recipe is not broken. Locations: docs/semester-1/gqur-300/unit-02/topic-02.mdx:55-58 (misconception paragraph, 'Adding the same amount keeps the difference constant, but recipes need the ratio constant'), topic-02.mdx:98-99 (Check your understanding 5, 'Explain in two sentences why this breaks the recipe'), unit-assessment.mdx:110-111 (RRQ-06 stem) and 176-179 (model answer asserting the ratio is destroyed), unit-teacher-notes.mdx:45-47 (sherbat demonstration, which would produce two identical-tasting batches at a doubling). REPAIR: change the crowd increase to a non-doubling (for example 30 more people: add gives 12 where 15 are needed) consistently across all five locations, keeping the multiply-never-add principle; the model answer's ratio-vs-difference explanation then becomes true as stated."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "Citation traceability broken for gula2025: specs/content/gqur-300/sources/unit-02.md:3-5 asserts 'every key here is cited both in prose and in a per-topic ## Further reading section', but Gula and Lovric (2025) appears only in the Further-reading block at docs/semester-1/gqur-300/unit-02/topic-03.mdx:149-151 and nowhere in unit prose; the claim it is recorded as supporting (U2-06, numeracy tasks as their own category, distinct from word problems and modelling) is not made in the prose either, while coverage/unit-02.md grounds U2-06 in this key. The source itself was retrieved (ERIC EJ1489427) and its abstract supports the substance. REPAIR: cite Gula and Lovric in topic-03's prose where the daily-life applications framing rests on it (for example at the '### Applications of numbers and operations in daily life' opening, attributing the numeracy-task framing), or correct the sources-file claim and re-ground U2-06 on openstax-prealgebra alone."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "False assessment linkage in the concept graph: specs/content/gqur-300/concepts/unit-02.md:24 maps CON:GQUR-300-2-7 'Proportion as equal ratios, checked by cross-products' to RRQ-05, but RRQ-05 is the atlas percentage-discount item (25 percent off a 640-rupee atlas in two ways) and assesses CON:GQUR-300-2-9 (percentage as a ratio per hundred), which also lists it. The cross-product check is taught at topic-02.mdx:42-44 but assessed by no item anywhere in the bank, so the row overstates assessment coverage. npm run check:concept-graph exits 0 because it checks ID resolution, acyclicity and orphan-freedom, not semantic linkage. REPAIR: either add an RRQ that actually checks a proportion by cross-products and point the row at it, or set the row's Assessment item IDs to '-' ; do not leave RRQ-05 on this row."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Inaccurate superlative in the teacher notes: docs/semester-1/gqur-300/unit-02/unit-teacher-notes.mdx:60-61 says 'the raw score that looked biggest (42/60) performs worst', but 55/75 is the largest raw score (55 > 42) and performs mid-table (73.3 percent); 42/60 is the second-largest raw score and the weakest performer. The ERQ-04 stem's 'which raw score looked most impressive but performed worst' (unit-assessment.mdx:137-139) has the same looseness. REPAIR: reword to 'second-largest raw score' or 'large-looking but weakest'."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Citation date: both unit citations read '(NCC, n.d.)' on the owner-approved reasoning that the NCC landing page asserts no publication year, but the retrieved Progression Grid's own title page is dated 'National Curriculum of Pakistan 2022-23' (sources-agent-g3-gqur300-u2-run001/ncp-mathematics-pg-1-12-extracted.txt). The citation could carry the document's own date. Owner call; not blocking."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Unglossed declared key terms: specs/content/gqur-300/content-spec.md '## Unit 2' declares ten key terms; eight plus Exponent and Square root are carried as bilingual glossary entries, but 'Root' and 'Operation' are not (verified against glossary.json). 'Root' is effectively covered by the Square root entry; 'Operation' is used throughout topic-03 without a glossary wrapper. REPAIR: add glossary entries or note the substitution in the spec."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Summative bank reuses formative material: 9 of the 10 RRQs restate topic check-your-understanding or worked-example items (RRQ-01/02/03/06/08/10 verbatim; RRQ-04/05/07/09 same structure and numbers as the topic's examples), and ERQ-01/02/03 restate the three topic Summative tasks verbatim. No contract requires novelty and the bank does sample the whole unit, but a trainee who worked the formative cycle has already met most of the summative band. REPAIR opportunity at the same time as the RRQ-06 fix: vary surface features (contexts or numbers) on the re-used items."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Outside this unit's bound inputs, recorded for the parent: the production build fails at this commit on GQUR-300 unit-03 MDX - bare '<' and '<=' in prose are parsed as JSX by MDX v3 (docs/semester-1/gqur-300/unit-03/topic-01.mdx:141, topic-02.mdx:70, unit-assessment.mdx:72; npm run build exit 1, logs-agent-g3-gqur300-u2-run001/build.txt). Unit-03 is excluded from this review's manifest by ADR-0027 scoping and every unit-02 page compiles and renders, so this review's render inspection ran against the dev server over the same reviewed bytes; but the site cannot build statically and CI's FULL_GATES will fail until unit-03 escapes its '<' characters. Expected non-content command failure, recorded so it is not mistaken for a unit-02 defect."
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/validate-content.txt"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/check-depth-gate.txt"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/check-figures.txt"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/check-no-em-dash.txt"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/check-no-answer-keys.txt"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/check-docs-sync.txt"
+    },
+    {
+      "name": "check:concept-graph",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/check-concept-graph.txt"
+    },
+    {
+      "name": "check:pipeline-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/check-pipeline-gate.txt"
+    },
+    {
+      "name": "check:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/check-content.txt"
+    },
+    {
+      "name": "measure-figure-text",
+      "exit_code": 1,
+      "log_path": "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/measure-figure-text.txt"
+    },
+    {
+      "name": "build",
+      "exit_code": 1,
+      "log_path": "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/build.txt"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/render-review.txt"
+    },
+    {
+      "name": "input-binding-verification",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/input-binding-verification.txt"
+    },
+    {
+      "name": "assessment-independent-working",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/assessment-independent-working.txt"
+    },
+    {
+      "name": "source-verification",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-300/reviews/unit-02/sources-agent-g3-gqur300-u2-run001/source-verification.txt"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/assessment-independent-working.txt": "1bf1d02a9703aca3bffef4064742116149343a5873f1bcf02e785b159ef64a83",
+    "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/build.txt": "6df073a3775509ee1659b39fa56e0dc34fb199a9bb0200cd072c8fce4a2a4684",
+    "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/check-concept-graph.txt": "908560a9cfc2f48d67904d2616b4ef7c70c72eadfaeeca95ca11e429e38f09b3",
+    "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/check-content.txt": "3107b6f5652c182598ad00a1aa65f7c2c09dbdcaf833c13585872d1013791738",
+    "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/check-depth-gate.txt": "b0c4eeaa24613853bc7dd1124721c3576b9c2ea0d83d804bb98a47c646579f2f",
+    "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/check-docs-sync.txt": "388691a97d7539a857dafad859d26a639e67f09402e7f0c242b4a09e4b62049b",
+    "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/check-figures.txt": "3d8e7e0311cc402d8ef731bc62cfd8efd8bb72907261a2ec1da4ed2ea4db7c3a",
+    "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/check-no-answer-keys.txt": "07bdbedac2c0160b677af6f03371aa01b528aecb70843febd3ea836ff03a8da1",
+    "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/check-no-em-dash.txt": "f94465f4c88bd3c3db4d995e7757fc7f08feae27e57c724a2eaafc8499ec2fe6",
+    "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/check-pipeline-gate.txt": "7013e2b984a3e85a61b06f87764be9631a79a25faa76475ce1d38b5c4bea96a5",
+    "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/dev-server.txt": "03e025ed570926af58c9e8cfef41d9423b31d4d13c35099c83b96f03581c3f75",
+    "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/fig-U2-1-browser-geometry.txt": "0c3c8c2a98ee679bdf757b571d54cb8e7a48197e419f848c575aa6eda395b8dc",
+    "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/input-binding-verification.txt": "82884ba5645578bac44d2606b250e77c435e5d9d5136d461e840e7abcd1cd845",
+    "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/measure-figure-text.txt": "7a19d5b6af702e19e7287859da2b7e653598a3e6d73e4d294654511654da7596",
+    "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/render-review.txt": "bc820ecb4ecda2e572e68256e68f926712bec346f7cf9732c552e7915a7a37dd",
+    "specs/content/gqur-300/reviews/unit-02/logs-agent-g3-gqur300-u2-run001/validate-content.txt": "0753463dcc4f70bfeed270f5eb8accdfb2113670791fc90775ea247c275de426",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/fig-U2-1-element-dark.png": "a8b5459126a3f5204d4bef688c72dd04f565119db4ec282ce2e54423ef23704b",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/fig-U2-1-element-light.png": "74f8b16b9f4e16e4b1900bfc8a0b28ab280b27ee84bda4d83193a1e3f7ad3836",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/fig-U2-1-element-narrow-360.png": "258d8088a918c0ff3ac746f7c598f5fefaf7aaf87a327347345e12b042c48684",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/fig-U2-2-element-light.png": "eb3dff53bcaf574a61e72dc350c31eca91a067f798c7a65b70439d9ce665edcb",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/fig-U2-6-element-light.png": "ccd829fd5eedcbe63fc0e47ff55b644ab71817810796f5d97136e928c29b9b80",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/index-a4.pdf": "54664f1d6e37134edd21170a1240ad78df82fd2c2bed8ec332e525161eecd68c",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/index-desktop-1280.png": "17f51aeaf9842ba7e10f0f676cdc839518d9d8bea532455a54da1ee2864d3745",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/index-narrow-360.png": "1072c9a191a926cefa6f7d52d719b2af6bfd7047b34511e9320fc5234b5b0657",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/index-print-emulated.png": "e9923a8a0950a8f686c9ac8678e1c52c0eca55398c2fa36ef199bc8eeddd0ac1",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/render-inspection.json": "2fd0118ff3982d865aa39556fe727b43ff5551c4ba525e1e5b09563a3a2cb1c0",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/topic-01-a4.pdf": "698b9b74774c30d25103fe3eca926214ab5061fa494818aaee13de9801805abc",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/topic-01-desktop-1280.png": "2d7e3abf60e3bfd771938110c5c6a2573bd6190163cda93262d82f869d153350",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/topic-01-narrow-360.png": "b35336ccd3d0aba7c90aa42faf7126e5f1a59337a405be88c7cd6a22bfbb130c",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/topic-01-print-emulated.png": "ec28027cfb6ca444c4fe0b2262cf2089c187b22f0b6addfebf26a4ca052d98c4",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/topic-02-a4.pdf": "4aa73ae8e0a9627e1b4c9688e016921d6a432fdb441128b82c4c52c04e87715a",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/topic-02-desktop-1280.png": "6559ed9d68544ee1ebb6d17795930631a7943da7aa4ee140fdc6cf4b0b094eba",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/topic-02-narrow-360.png": "f82be9df669d0593f2335f4b1159d6d62a212fd1bb365e015783559a88ee2a58",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/topic-02-print-emulated.png": "1fd114f6a395ad7166ac239eea3ddc00867c488802c041ea848e4a35809158ec",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/topic-03-a4.pdf": "64bc3c10b0d80a28fc836624050d425ecc36491e8010a772fdbcab90252df1b9",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/topic-03-desktop-1280.png": "c34d659536e8670eef782083b57745d02cfbaff345f0a068a887de04d776ea11",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/topic-03-narrow-360.png": "1485fc118cca7faa0ede1c57c261b5ea7c61fd154e5e69f7759a32e08f2cb71f",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/topic-03-print-emulated.png": "ebdaa7e70d4fd0be71f8c2a9d927ec231d1d3e74be06520b9ecb2675a42756cc",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/unit-assessment-a4.pdf": "f33c79be78c00a0da27891f7ccd35a5451d35088fad0e3a7d72913bb74eaab81",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/unit-assessment-desktop-1280.png": "ae6e0b9a92e204123073d51657126440228126ec54760b5ec6fd112ec732b4f3",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/unit-assessment-narrow-360.png": "09d87ac0fecf335a719c9afde5ead627f1c42cdfe12fc01fb06d6d43693d27af",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/unit-assessment-print-emulated.png": "c525436e81388d16d92ada88a9a28f8fc701a852329595bdc0ded365ceef5a63",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/unit-teacher-notes-a4.pdf": "9715c51bef983fd23ab283964910fcb43a4532c647315409f54ae17a3b064e79",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/unit-teacher-notes-desktop-1280.png": "1eb4f33462057718825a1d3b7b7e30fd0d1ad38e64e1cfe3b828984f2ca75785",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/unit-teacher-notes-narrow-360.png": "df5fb0842718c254e57b1eef68c41ad9461a9cb7f5dc94ac101d1bce31babe37",
+    "specs/content/gqur-300/reviews/unit-02/renders-agent-g3-gqur300-u2-run001/unit-teacher-notes-print-emulated.png": "8b931cab6be2f7253d59be1fca4276e4f27404d005d1d60ef56e2640be9fd24a",
+    "specs/content/gqur-300/reviews/unit-02/sources-agent-g3-gqur300-u2-run001/eric-ej1489427.html": "ce32ff52ca57e8f3ef048d39912d1bbd458d7eb964ae30cd40d3910dbb8dc676",
+    "specs/content/gqur-300/reviews/unit-02/sources-agent-g3-gqur300-u2-run001/ncc-mathematics-guidelines-1-8-decoded.txt": "bdda314c0b6968dbd560228373606451e054640a60e632cdeedaa7d61cd08e66",
+    "specs/content/gqur-300/reviews/unit-02/sources-agent-g3-gqur300-u2-run001/ncc-mathematics-guidelines-1-8-extracted.txt": "2f826084d44a76a724595825377f477b3e65d3740d49a20ddda12ec994d6e672",
+    "specs/content/gqur-300/reviews/unit-02/sources-agent-g3-gqur300-u2-run001/ncc-mathematics-guidelines-1-8.pdf": "1524c0ae8d9e4d87a05bb239af82ccb6f7aadc51a17db789c27e20dd66da781e",
+    "specs/content/gqur-300/reviews/unit-02/sources-agent-g3-gqur300-u2-run001/ncc-page.html": "b3fd90b8770439fdfb3f058d9551eccf280a2fd5291d9d43ade0800d12e9569f",
+    "specs/content/gqur-300/reviews/unit-02/sources-agent-g3-gqur300-u2-run001/ncp-mathematics-pg-1-12-extracted.txt": "1dfb8d6aaa0cd0ece6e9c54551a6fe33a9bec64bc8a3937c1a011f3abaf337c9",
+    "specs/content/gqur-300/reviews/unit-02/sources-agent-g3-gqur300-u2-run001/ncp-mathematics-pg-1-12.pdf": "7c989a87f90e7f554ac5717cef7dfe13b6990e3663648d7f562e61456c78e2ee",
+    "specs/content/gqur-300/reviews/unit-02/sources-agent-g3-gqur300-u2-run001/openstax-ch1.html": "c0233faf264e27e317d8e7e9ae94d3b81f57182bab05124198bc31e1de5c4dc6",
+    "specs/content/gqur-300/reviews/unit-02/sources-agent-g3-gqur300-u2-run001/openstax-prealgebra-2e-toc.txt": "d66e66d6294e685abef1bdc1c5ff46263ccb181941dc2c4aa5c043bda44cff16",
+    "specs/content/gqur-300/reviews/unit-02/sources-agent-g3-gqur300-u2-run001/openstax-prealgebra-2e.html": "122a7b58174184305f56c8c5c86c995abd6060bc1920fae9a3cec195c07fcf18",
+    "specs/content/gqur-300/reviews/unit-02/sources-agent-g3-gqur300-u2-run001/source-verification.txt": "91965ad2975d71f34d53e556cf32394d3e656db10d3a24396e2fc3ef35ee3308"
+  }
+}
