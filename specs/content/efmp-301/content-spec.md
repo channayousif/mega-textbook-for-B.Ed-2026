@@ -45,7 +45,7 @@ authoritative for this course.
 
 ## Course-wide items
 
-- **Course Learning Outcomes** (guide `:1029-1041`, verbatim; recorded for the spec record
+- **Course Learning Outcomes** (guide `:1031-1040`, verbatim; recorded for the spec record
   only, never reproduced into learner-facing content as a copy-paste block): by the end of
   this course, students will be able to:
   1. Understand major theories of learning and development relevant to education.
@@ -54,9 +54,9 @@ authoritative for this course.
   4. Analyze motivation, intelligence, and creativity in learning contexts.
   5. Use assessment techniques to support student learning.
   6. Promote inclusive, ethical, and supportive learning environments.
-- **Teaching strategies** (guide `:1189-1195`, verbatim intent): lectures; interactive
+- **Teaching strategies** (guide `:1173-1180`, verbatim intent): lectures; interactive
   discussions; question-answer sessions; demonstration; case study analysis.
-- **Practical work** (guide `:1197-1203`, verbatim intent): hands-on computer exercises;
+- **Practical work** (guide `:1182-1191`, verbatim intent): hands-on computer exercises;
   individual assignments; group assignments; presentations; internet-research tasks.
   These fold into each unit's teacher notes and activity design (Art. III.6); the
   computer and internet-research items are the natural carriers of the Week 16 technology
@@ -71,7 +71,7 @@ authoritative for this course.
 ## Course Description
 
 The guide describes the course as the scientific study of human learning, development and
-behaviour in educational settings (`1st 2026.txt:1017-1027`). It examines psychological
+behaviour in educational settings (`1st 2026.txt:1023-1029`). It examines psychological
 principles and theories that explain how students learn, grow and differ as individuals;
 it focuses on the cognitive, emotional, social and motivational processes involved in
 learning, as well as classroom management, assessment and instructional strategies; and it
@@ -94,7 +94,7 @@ Two consequences for authoring, both load-bearing:
 
 ## Reading list
 
-The guide's two recommended books (`1st 2026.txt:1200-1204`). `Key` is the citation key
+The guide's two recommended books (`1st 2026.txt:1198-1202`). `Key` is the citation key
 used in each unit's `sources/unit-NN.md`. `Units` tags which unit(s) each source supports.
 Cited by reference only - never reproduced (Constitution Art. III.5, Spec 006 FR-010).
 
@@ -102,7 +102,7 @@ Cited by reference only - never reproduced (Constitution Art. III.5, Spec 006 FR
 
 | Key | Citation | DOI/URL | Units | Note |
 |---|---|---|---|---|
-| seifert2009 | Seifert, K., & Sutton, R. (2009). *Educational Psychology* (2nd ed.). CC BY 3.0. | https://home.cc.umanitoba.ca/~seifert/EdPsy2009.pdf | 1-6 | **Verified real and open access** (guide book 2; retrieved 2026-09-24, 376 pp). The same text is served by the Open Textbook Library at https://open.umn.edu/opentextbooks/textbooks/educational-psychology, the URL Unit 1's sources already bind. Its twelve chapters (the learning process; student development; student diversity; students with special educational needs; student motivation; classroom management; the nature of classroom communication; facilitating complex thinking; planning instruction; teacher-made assessment strategies; standardized and other formal assessments) map directly onto this course's guide chapters, and it is the backbone source for Units 2-6 |
+| seifert2009 | Seifert, K., & Sutton, R. (2009). *Educational Psychology* (2nd ed.). CC BY 3.0. | https://home.cc.umanitoba.ca/~seifert/EdPsy2009.pdf | 1-6 | **Verified real and open access** (guide book 2; retrieved 2026-09-24, 376 pp). The same text is served by the Open Textbook Library at https://open.umn.edu/opentextbooks/textbooks/educational-psychology, the URL Unit 1's sources already bind. Its twelve chapters (the changing teaching profession and you; the learning process; student development; student diversity; students with special educational needs; student motivation; classroom management; the nature of classroom communication; facilitating complex thinking; planning instruction; teacher-made assessment strategies; standardized and other formal assessments) map directly onto this course's guide chapters, and it is the backbone source for Units 2-6 |
 | seifert-hk | Seifert, K. *Educational Psychology* (revised ed., Connexions col11302). CC BY-SA 4.0. Open Textbooks for Hong Kong. | https://www.opentextbooks.org.hk/system/files/export/6/6118/pdf/Educational_Psychology_6118.pdf | 2-6 | **Verified real and open access** (guide book 1; retrieved 2026-09-24, 455 pp). Kelvin Seifert's own revised edition of the same book via Connexions; used as the second binding wherever the 2009 edition needs a second view |
 
 **Both guide books are open-access and retrievable**, so the D-2026-0013 / D-2026-0021
@@ -125,7 +125,7 @@ briefly) are verified and bound per unit at authoring time.
 
 ## Week schedule
 
-**The calendar is guide-given** (`1st 2026.txt:1043-1187`): the guide numbers its outline
+**The calendar is guide-given** (`1st 2026.txt:1042-1171`): the guide numbers its outline
 by week and chapter, with no mid-term week named (unlike GNAS-301) and the final revision
 and assessment slot inside Week 16. **The unit partition is derived** (D-2026-0012): the
 guide carries no unit headings, so its contiguous teaching weeks are merged into six
@@ -163,6 +163,45 @@ the same reasoning: each chapter is one teaching week, and each trio forms one a
 learner in the classroom; the professional practice of teaching and well-being). The
 Week 16 "final revision / assessment" slot is the course-review territory, carried by
 Unit 6's assessment and the eventual `course-review.mdx`, not a separate unit.
+
+## Course review plan
+
+Seeds an eventual `docs/semester-1/efmp-301/course-review.mdx` (Spec 008 FR-016; contract:
+`specs/008-rich-unit-pedagogy/contracts/end-of-course-review.md`), for which the guide's
+Week 16 "Final revision / assessment" slot is the natural home. Not parsed by any gate.
+Authoring the file itself is follow-up work outside this feature.
+
+- **Course summary points** (the through-lines the review should recap):
+  - Educational psychology tests the theories every teacher already holds, replacing
+    proverbs with evidence that could be wrong (Unit 1).
+  - Development is orderly in sequence and uneven in rate; reading learners through
+    principles, domains and stages changes what a teacher expects and does (Unit 2).
+  - Learning theories are answers to real questions - behaviour, cognition, observation,
+    construction - and a teacher's job is to choose and combine them, not to recite them
+    (Unit 3).
+  - Attention, memory, thinking, intelligence and creativity are systems with jobs;
+    teaching that works with them beats teaching that works against them (Unit 4).
+  - Motivation, individual differences and classroom management form one arc: why learners
+    try, how they differ, and how the room is run so all of them belong (Unit 5).
+  - Assessment, teaching methods and well-being close the loop: the course's ideas become
+    decisions a teacher can justify, guided ethically and supported by technology where it
+    helps (Unit 6).
+- **Practice-question mix**: `### MCQs` ~18 (all six units, Remember to Apply); `### RRQs`
+  ~12 (Understand to Analyze, >= 1 per unit); `### ERQs` ~6 (Analyze to Evaluate/Create,
+  each integrating two or more units).
+- **Practicum project ideas** (3-6 briefs a trainee carries into placement):
+  - *Development watch* - observe two pupils of clearly different ages doing the same task
+    on one visit; bring back the notes read through the developmental principles.
+  - *Theory-in-action log* - one week, one classroom episode per day and the theory that
+    best explains it; bring back the log with one justified theory choice.
+  - *Memory-friendly lesson redesign* - rebuild one lesson around attention and retrieval;
+    teach it and compare with the original; bring back the before-and-after notes.
+  - *Motivation audit* - read one class through Maslow, Herzberg and self-determination;
+    bring back the audit with two changes made and what followed.
+  - *Assessment makeover* - turn one end-of-topic test into a formative cycle; bring back
+    the instrument and what it revealed in time to act on.
+  - *Well-being walk* - a structured walk of the placement school through the well-being
+    lens (demands and supports); bring back the map and two low-cost recommendations.
 
 ## The golden unit's G1 blocks (Unit 1, carried forward)
 
@@ -562,7 +601,7 @@ checklist`. Row order is load-bearing: row N maps to `topic-0N.mdx`.
 | 4.4 | Intelligence: theories and measurement | U4-9, U4-10, U4-11 | fig-U4-7: diagram, fig-U4-8: table | 19 |
 | 4.5 | Creativity and giftedness | U4-12, U4-13 | fig-U4-9: concept-map, fig-U4-10: table | 17 |
 
-**Depth budget**: 13 sub-topics; 110-140 reading-min (target 125: index 4 + topics 16 +
+**Depth budget**: 13 sub-topics; 110-140 reading-min (target 126: index 4 + topics 16 +
 19 + 19 + 19 + 17 + assessment 24 + teacher notes 8).
 
 **Prerequisite knowledge**: Units 1-3 (the learning process from Unit 3's cognitive
@@ -853,7 +892,7 @@ checklist`. Row order is load-bearing: row N maps to `topic-0N.mdx`.
 | 6.3 | Mental health, well-being, guidance and counseling | U6-7, U6-8 | fig-U6-5: diagram, fig-U6-6: table | 17 |
 | 6.4 | Educational psychology in practice: application, technology and ethics | U6-9, U6-10, U6-11 | fig-U6-7: concept-map, fig-U6-8: table, fig-U6-9: timeline | 18 |
 
-**Depth budget**: 11 sub-topics; 100-130 reading-min (target 114: index 4 + topics 19 +
+**Depth budget**: 11 sub-topics; 100-130 reading-min (target 108: index 4 + topics 19 +
 18 + 17 + 18 + assessment 24 + teacher notes 8).
 
 **Prerequisite knowledge**: Units 1-5 (the whole course). This is the integrative
