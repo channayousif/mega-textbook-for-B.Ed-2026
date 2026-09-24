@@ -1,0 +1,18 @@
+
+> bed-mega-textbook@0.1.0 check:depth-gate
+> node scripts/check-unit-depth.mjs
+
+
+✗ Depth gate failed with 10 finding(s):
+
+  - GENG-300 Unit 1 (docs/semester-1/geng-300/unit-01): unit-assessment.mdx is missing the `## Unit summary` section
+  - GENG-300 Unit 1 (docs/semester-1/geng-300/unit-01): no coverage matrix at specs/content/geng-300/coverage/unit-01.md
+  - GENG-300 Unit 1 (docs/semester-1/geng-300/unit-01): no sources-consulted list at specs/content/geng-300/sources/unit-01.md
+  - GENG-300 Unit 1 (docs/semester-1/geng-300/unit-01): unit-total est_reading_minutes is 92, outside the depth-budget band 50–70 reading-min (FR-016)
+  - GICT-300 Unit 2 (docs/semester-1/gict-300/unit-02): `### Topic list` has 4 row(s) but 1 topic-*.mdx file(s) are on disk
+  - GICT-300 Unit 2 (docs/semester-1/gict-300/unit-02): index.mdx `## In this unit` lists 4 item(s) but the unit has 1 topic file(s)
+  - GICT-300 Unit 2 (docs/semester-1/gict-300/unit-02): unit-assessment.mdx not found (required for a per-topic unit)
+  - GICT-300 Unit 2 (docs/semester-1/gict-300/unit-02): no coverage matrix at specs/content/gict-300/coverage/unit-02.md
+  - GICT-300 Unit 2 (docs/semester-1/gict-300/unit-02): no sources-consulted list at specs/content/gict-300/sources/unit-02.md
+  - GICT-300 Unit 2 (docs/semester-1/gict-300/unit-02): cannot check the reading-minutes band — a new-shape file is missing or has no numeric `est_reading_minutes`
+

@@ -1,0 +1,86 @@
+---
+title: "Unit 3 teacher notes"
+description: "GICT-300 Unit 3 teaching guidance: sequencing the four topics, probing the OS misconceptions, running the activities, and linking practical work to OS concepts."
+course_code: GICT-300
+unit_no: 3
+clo_refs:
+  - "SLO:GICT-300-3-4"
+blooms_summary: "Guidance for tutors sequencing Unit 3: moving trainees from 'the OS is the desktop picture' and 'closing a window stops the program' to time sharing, the process lifecycle, the I/O chain and the kernel's layers; how to run the four activities; what misconceptions to probe. No assessment items."
+est_reading_minutes: 7
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+
+<PrintHandout />
+
+# Unit 3 teacher notes
+
+## Sequencing note
+
+Unit 3 runs outside-in. Topic 3.1 gives the OS's job description and types; 3.2 opens its
+two everyday offices (files and processes); 3.3 follows its traffic management (input and
+output); 3.4 descends to the kernel that owns all three. Teach in order, and keep
+returning to the same two classroom scenes: the clerk's lost letter (files) and the
+afternoon slowdown (processes). They carry the unit.
+
+## Common misconceptions to probe
+
+1. **"The operating system is just the desktop picture and the taskbar."** Probe before
+   revealing Topic 3.1: ask who is in charge before any app opens. Follow the boot
+   sequence from Unit 2 and name the OS as the always-present layer.
+2. **"Closing a window stops the program."** The most persistent one. Probe with the
+   process list on a real machine: close a window, watch the process survive, then end
+   the process and watch what vanishes.
+3. **"A slow computer is an old computer."** Probe with the time-sharing idea: what
+   happens to each program's slice when more programs demand turns? Age is one cause;
+   crowding is the commoner one.
+4. **"Deleted means erased."** Probe after Topic 3.2: what does the OS actually remove
+   when you delete a file? (Its index record; the space is marked reusable.)
+5. **"The internet enters the computer by magic."** Carried over from Unit 2; Topic 3.3's
+   chain gives it names again - interface, driver, OS.
+
+## Managing the activities
+
+**Topic 3.1 - Function spotting (20 minutes, pairs).** The trap is naming the visible
+action (printing) instead of the OS function underneath (input/output management).
+Require the sentence "the OS did X" for every item.
+
+**Topic 3.2 - The naming rescue and the process list (20 minutes, pairs).** The naming
+half is deliberately concrete; the process-list half is the eye-opener. If machines are
+available, have pairs find one background process and one visible application, and close
+nothing without permission. The swap-and-find test at the end is the assessment.
+
+**Topic 3.3 - The diagnostic ladder (20 minutes, pairs).** The trap is jumping to the
+device ("the printer is broken"). Insist every diagnosis names the link and the evidence.
+The five faults are ordered roughly from easy to arguable; let the arguments happen.
+
+**Topic 3.4 - Layer sort (15 minutes, pairs or threes).** The driver card is the intended
+argument: it is software, but it serves the kernel's device control. Do not resolve it
+early; the reasoning is the point.
+
+## Working with the guide's strategies
+
+**Lectures** suit the two structural pictures: the OS-types table (3.1) and the four
+layers (3.4). Keep each to the figure and one example. **Interactive discussion** and
+**question-answer sessions** fit the misconception probes; run them before each
+correction. **Demonstrations** are the unit's heart: open the process list live, delete a
+file and discuss what happened, plug in a USB drive and narrate the chain, print two
+documents and watch the queue. **Case study analysis** is every diagnostic scenario in
+3.3 and the two ERQ fault cases; treat the afternoon slowdown as a standing case the
+class returns to.
+
+## Practical work and practicum links
+
+- **Hands-on computer exercises:** the process list, the file-scheme design against the
+  school's real document store, and the diagnostic walk-through of one real fault.
+- **Individual assignments:** the office rescue plan (3.2) and the print-fault analysis
+  (3.3).
+- **Group assignments:** the naming rescue, the diagnostic ladder and the layer sort.
+- **Internet research tasks:** optional - have trainees find the name of the OS their own
+  phone runs and one fact about its type; require a source.
+- **Presentations:** the staff-meeting explainer (3.4) presents well; the layer sort can
+  end with each group defending one placement.
+
+The practicum tasks (watching the office computer, the document store sketch, the fault
+story) extend the school ICT profile begun in Unit 2 and feed Unit 4's security audit.

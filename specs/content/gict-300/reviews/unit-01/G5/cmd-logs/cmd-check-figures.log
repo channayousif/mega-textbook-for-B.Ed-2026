@@ -1,0 +1,17 @@
+COMMAND: npm run check:figures
+RUN A (repo-wide, worktree HEAD 5005f2e, run 2026-09-23T17:10-17:12Z): see findings below.
+Repo-wide exit_code=1. Both findings are geng-300 paths (stale tree). Zero findings reference GICT-300 or any other course.
+Full output:
+
+✗ Figure gate failed with 2 finding(s):
+
+  - GENG-300 Unit 1 (docs/semester-1/geng-300/unit-01): topic file topic-02.mdx renders 1 figure(s) — Constitution III.10 requires at least 2 rendered <Figure> elements
+  - GENG-300 Unit 1 (docs/semester-1/geng-300/unit-01): no figure manifest at specs/content/geng-300/figures/unit-01.md
+
+RUN B (scoped CONTENT_ROOT overlay = worktree HEAD 5005f2e content + origin/main geng-300 fix
+(docs/semester-1/geng-300, specs/content/geng-300, static/img/figures/geng-300) + glossary.json
+merged (HEAD 135 terms + 62 geng-300 terms from origin/main), cwd /tmp/g5ov, run 2026-09-23T17:2xZ):
+GICT-300 and every other in-scope course pass (after adding origin/main static/img/figures/geng-300 to the overlay).
+Full output:
+✓ Figure gate passed (≥ 2 RENDERED figures per topic, a placed schematic per unit, well-formed, unique; manifest consistent; placed assets exist).
+exit_code=0

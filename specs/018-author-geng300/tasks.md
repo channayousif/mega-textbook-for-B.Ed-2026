@@ -10,7 +10,7 @@ parallel.
 
 ## Path Conventions
 
-Content under `licence/geng-300/unit-NN/` (licence track, route `/licence`). Governance under
+Content under `docs/semester-1/geng-300/unit-NN/` (licence track, route `/licence`). Governance under
 `specs/content/geng-300/`. Figures under `static/img/figures/geng-300/`.
 
 ---
@@ -23,10 +23,10 @@ Content under `licence/geng-300/unit-NN/` (licence track, route `/licence`). Gov
 
 ## Phase 2: Unit Authoring
 
-- [ ] **T004** Author Unit 1 (Foundations): `licence/geng-300/unit-01/` index, 8 topic nine-part cycles, 10/10/5 assessment, teacher notes. Governance: coverage, sources, figures, concepts. Run `npm run check:content`.
-- [ ] **T005** Author Unit 2 (Comprehension & Analysis): `licence/geng-300/unit-02/` index, 7 topic nine-part cycles, 10/10/5 assessment, teacher notes. Governance: coverage, sources, figures, concepts. Run `npm run check:content`.
-- [ ] **T006** Author Unit 3 (Effective Communication): `licence/geng-300/unit-03/` index, 10 topic nine-part cycles, 10/10/5 assessment, teacher notes. Governance: coverage, sources, figures, concepts. Run `npm run check:content`.
-- [ ] **T007** Author Unit 4 (Professional Writing & Intercultural Communication): `licence/geng-300/unit-04/` index, 6 topic nine-part cycles, 10/10/5 assessment, teacher notes. Governance: coverage, sources, figures, concepts. Run `npm run check:content`.
+- [ ] **T004** Author Unit 1 (Foundations): `docs/semester-1/geng-300/unit-01/` index, 8 topic nine-part cycles, 10/10/5 assessment, teacher notes. Governance: coverage, sources, figures, concepts. Run `npm run check:content`.
+- [ ] **T005** Author Unit 2 (Comprehension & Analysis): `docs/semester-1/geng-300/unit-02/` index, 7 topic nine-part cycles, 10/10/5 assessment, teacher notes. Governance: coverage, sources, figures, concepts. Run `npm run check:content`.
+- [ ] **T006** Author Unit 3 (Effective Communication): `docs/semester-1/geng-300/unit-03/` index, 10 topic nine-part cycles, 10/10/5 assessment, teacher notes. Governance: coverage, sources, figures, concepts. Run `npm run check:content`.
+- [ ] **T007** Author Unit 4 (Professional Writing & Intercultural Communication): `docs/semester-1/geng-300/unit-04/` index, 6 topic nine-part cycles, 10/10/5 assessment, teacher notes. Governance: coverage, sources, figures, concepts. Run `npm run check:content`.
 
 ## Phase 3: Figures
 
@@ -45,4 +45,4 @@ Content under `licence/geng-300/unit-NN/` (licence track, route `/licence`). Gov
 4. `check:concept-graph`: acyclic, resolvable
 5. `check:bloom-bands`: MCQ Remember-Apply, RRQ Understand-Analyze, ERQ Analyze+
 6. `check:depth-gate`: reading-min within budget
-7. Course renders at textbook.com.pk/licence/geng-300/
+7. Course renders at textbook.com.pk/docs/semester-1/geng-300/

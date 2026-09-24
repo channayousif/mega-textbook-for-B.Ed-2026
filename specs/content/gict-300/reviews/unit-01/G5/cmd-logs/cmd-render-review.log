@@ -1,0 +1,60 @@
+COMMAND: render-review (host browser/print inspection of the built Urdu route)
+Reviewed input identity: worktree HEAD 5005f2e (G5 manifest input_manifest verified byte-identical
+to specs/content/gict-300/reviews/unit-01/G5/manifest.json before inspection; Urdu files bound at
+digests e82d7480/1988d361/7dd7dbc0/3c03b532/1ab1542f/d4a46d6d/8f502dfa).
+
+STEP 1 - production build (one build, per capacity directive; load average at start 4.37 on 2 cores):
+  npm run build  ->  exit_code=0 (both locales; "Generated static files in build/ur")
+  Full log: logs-raw/build.log
+
+STEP 2 - rendered inspection of the /ur route:
+  node scripts/render-inspect.mjs GICT-300 1 --locale ur \
+    --out specs/content/gict-300/reviews/unit-01/G5/render-inspect-ur
+  ->  exit_code=1 (2 defect flags, both on fig-U1-2.ur caption-vs-wordmark; see STEP 3)
+  Browser: chromium 149.0.7827.0 over `docusaurus serve` (production build, not the dev server).
+  Viewports: desktop 1280x900, narrow 360x780, A4 print emulation 794px (print PDFs emitted).
+  Pages inspected (7): index, topic-01..04, unit-assessment, unit-teacher-notes at
+  /ur/semester-1/gict-300/unit-01/...  Full log: render-inspect-ur/render-inspect.log
+  Results:
+    A desktop: all 7 pages HTTP 200; no skipped heading levels; every visible figure loads
+       (natural 249x150; hidden .ur.dark twins display:none by design); every img has non-empty
+       Urdu alt text; no document horizontal overflow.
+    B narrow 360px: docHorizontalOverflow=0px on all 7 pages; every figure client=328 scroll=328
+       scroller=none (no spill, no unreachable table).
+    C A4 print 794px: clippedElems=0 on all 7 pages; every visible print figure w=762 right=778
+       fits; the Urdu answers section and all its sub-headings render in print
+       (answerHeadings list captured in the log).
+    D SVG geometry: all 16 Urdu figure variants (8 x .ur + 8 x .ur.dark) measured; 14 clean;
+       fig-U1-2.ur and fig-U1-2.ur.dark flagged "caption overlaps the wordmark".
+
+STEP 3 - reviewer follow-up on the two D flags (render-inspect heuristic check):
+  The tool's overlap test (scripts/render-inspect.mjs:323) checks rec.r > wmB.x - 2 plus vertical
+  intersection but NOT horizontal intersection with the wordmark's right edge, so any text that
+  vertically abuts the wordmark band and lies anywhere to its right is flagged. Exact getBBox
+  measurement (logs-raw/fig-u1-2-ur-bbox-measurement.txt):
+    fig-U1-2.ur.svg      wordmark x=12.0..104.5 top=449.6 | caption x=420.4..764.0 bottom=452.3
+    fig-U1-2.ur.dark.svg identical geometry
+  The horizontal ranges [12,104.5] and [420.4,764] are disjoint: no visual overlap is possible.
+  The English fig-U1-2.svg (caption left, wordmark right) is geometrically equivalent mirrored.
+  Verdict: tool false positive; recorded as an advisory finding, not a figure defect.
+  Element screenshots saved: render-inspect-ur/fig-U1-2-ur-full.png, fig-U1-2-ur-bottomband.png.
+
+STEP 4 - targeted RTL/Nastaliq probes on the served build (logs-raw/*.txt):
+  rtl-font-probe.txt: /ur pages have html lang="ur" dir="rtl"; Noto Nastaliq Urdu webfont loaded
+    (document.fonts.check true); body paragraphs compute to the Nastaliq stack.
+  font-family-probe.txt: h1/h2/h3 compute to the theme sans stack (Urdu glyphs fall back to the
+    system Arabic-script font) - identical on the published EFMP-302 Unit 1 Urdu reference page
+    (font-family-probe-efmp302-reference.txt), so this is a corpus-wide theme property, not a
+    unit defect; recorded as advisory.
+  bidi-latin-citation-probe.txt: embedded Latin citations render as intact LTR islands inside RTL
+    prose with correct paren placement, e.g. "... مسئلہ حل کرنا (Vuorikari, Kluzer, and Punie,
+    2022)۔" and "(HEC, n.d.)۔"; brand names Easypaisa/JazzCash render correctly.
+
+LIMITATION (recorded honestly): the reviewer session could not inline-view the PNG artifacts
+(image rendering unavailable in this harness); visual inspection therefore rests on the
+render-inspect tool's in-browser measurements (headings, alt, loading, overflow, clipping, SVG
+geometry), the exact getBBox re-measurements above, and the computed-style probes. The PNGs and
+print PDFs are saved unchanged as evidence for any human auditor to view.
+
+exit_code=1 (render-inspect hard-defect exit; both flags resolved by the reviewer as a tool
+false positive - see STEP 3)

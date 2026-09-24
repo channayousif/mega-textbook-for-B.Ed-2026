@@ -1,0 +1,17 @@
+
+✗ Content validation failed with 13 error(s):
+
+  - docs/semester-1/geng-300/unit-01/activities.mdx: legacy file 'activities.mdx' cannot coexist with topic-*.mdx — fold it into the topic cycles
+  - docs/semester-1/geng-300/unit-01/formative.mdx: legacy file 'formative.mdx' cannot coexist with topic-*.mdx — fold it into the topic cycles
+  - docs/semester-1/geng-300/unit-01/summative.mdx: legacy file 'summative.mdx' cannot coexist with topic-*.mdx — fold it into the topic cycles
+  - docs/semester-1/geng-300/unit-01/teacher-notes.mdx: legacy file 'teacher-notes.mdx' cannot coexist with topic-*.mdx — rename to 'unit-teacher-notes.mdx'
+  - docs/semester-1/geng-300/unit-01/index.mdx: invalid front-matter: /clo_refs/0 must match pattern "^SLO:[A-Z]{2,4}-[0-9]{3}(--)?-[0-9]+-[0-9]+$"; /clo_refs/1 must match pattern "^SLO:[A-Z]{2,4}-[0-9]{3}(--)?-[0-9]+-[0-9]+$"
+  - docs/semester-1/geng-300/unit-01/topic-01.mdx: invalid front-matter: /clo_refs/0 must match pattern "^SLO:[A-Z]{2,4}-[0-9]{3}(--)?-[0-9]+-[0-9]+$"
+  - docs/semester-1/geng-300/unit-01/topic-01.mdx: <Glossary term="Vocabulary building"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-01/topic-02.mdx: invalid front-matter: /clo_refs/0 must match pattern "^SLO:[A-Z]{2,4}-[0-9]{3}(--)?-[0-9]+-[0-9]+$"
+  - docs/semester-1/geng-300/unit-01/topic-02.mdx: <Glossary term="Subject-verb agreement"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-01/topic-03.mdx: invalid front-matter: /clo_refs/0 must match pattern "^SLO:[A-Z]{2,4}-[0-9]{3}(--)?-[0-9]+-[0-9]+$"; /clo_refs/1 must match pattern "^SLO:[A-Z]{2,4}-[0-9]{3}(--)?-[0-9]+-[0-9]+$"
+  - docs/semester-1/geng-300/unit-01/topic-04.mdx: invalid front-matter: /clo_refs/0 must match pattern "^SLO:[A-Z]{2,4}-[0-9]{3}(--)?-[0-9]+-[0-9]+$"; /clo_refs/1 must match pattern "^SLO:[A-Z]{2,4}-[0-9]{3}(--)?-[0-9]+-[0-9]+$"
+  - docs/semester-1/geng-300/unit-01/unit-assessment.mdx: invalid front-matter: /clo_refs/0 must match pattern "^SLO:[A-Z]{2,4}-[0-9]{3}(--)?-[0-9]+-[0-9]+$"; /clo_refs/1 must match pattern "^SLO:[A-Z]{2,4}-[0-9]{3}(--)?-[0-9]+-[0-9]+$"
+  - docs/semester-1/geng-300/unit-01/unit-teacher-notes.mdx: invalid front-matter: /clo_refs/0 must match pattern "^SLO:[A-Z]{2,4}-[0-9]{3}(--)?-[0-9]+-[0-9]+$"; /clo_refs/1 must match pattern "^SLO:[A-Z]{2,4}-[0-9]{3}(--)?-[0-9]+-[0-9]+$"
+
