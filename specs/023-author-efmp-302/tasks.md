@@ -42,10 +42,13 @@ and run records under `history/prompts/efmp-302/`.
 - [x] **T007** Same for Unit 5 (carried: hennessy2022 declaration, RRQ 9 rebalance; 11
   run-007 advisories). (feat023-r1: pass, 7/7 criteria, both 44bc1d7 repairs verify, erq-rubric
   refutation confirmed, zero figure defects, 13 advisories carry)
-- [ ] **T008** Same for Unit 6 (carried: A2/S1/S2/P2 owner-judgement findings from run 007
-  escalate; not re-litigated).
-- [ ] **T009** Record a G-2026-62..71 escalation for every unit whose findings exceed the
-  two-cycle budget or need owner judgement; record the G3 run PHRs.
+- [x] **T008** Same for Unit 6 (carried: A2/S1/S2/P2 owner-judgement findings from run 007
+  escalate; not re-litigated). (feat023-r1: escalate - 6/7 criteria pass; 4a3a789 repairs
+  verify; A2/P2 RESOLVED in current bytes; S1/S2 owner-gated as G-2026-64)
+- [x] **T009** Record a G-2026-62..71 escalation for every unit whose findings exceed the
+  two-cycle budget or need owner judgement; record the G3 run PHRs. (G-2026-62 b8f8ffe
+  regression + gate blind spot; G-2026-63 Unit 2 cycle budget; G-2026-64 Unit 6 sources
+  blockers; PHRs 0043-0047)
 
 ## Phase 3: Urdu mirrors, Units 3-6 (G4)
 
@@ -56,10 +59,12 @@ and run records under `history/prompts/efmp-302/`.
   defects)
 - [x] **T012** Translate Unit 5 (4 topics, 8 figures): same pattern; 14 of 16 concept labels
   already authored (largest authored set). (15,763 words; 0 render defects)
-- [ ] **T013** Translate Unit 6 (4 topics, 8 figures): same pattern; note the Reflective
-  practice / Reflective Decision Making relationship flagged in concepts/unit-06.md.
-- [ ] **T014** Record per-unit translation PHRs with word counts and proposed (unbanked)
-  terms; tracker G4 Notes updated, rows stay open, translation_status stays draft.
+- [x] **T013** Translate Unit 6 (4 topics, 8 figures): same pattern; note the Reflective
+  practice / Reflective Decision Making relationship flagged in concepts/unit-06.md. (14,844
+  words; 0 render defects; Reflective practice rendered distinct from the banked Unit 2 term)
+- [x] **T014** Record per-unit translation PHRs with word counts and proposed (unbanked)
+  terms; tracker G4 Notes updated, rows stay open, translation_status stays draft. (PHRs
+  0045-0047; all key_terms bank-accepted so no unbanked proposals; rows left open)
 
 ## Phase 4: Fresh advisory G5 reviews (Units 1-6)
 
