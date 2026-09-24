@@ -1268,3 +1268,36 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 - **Blocks:** a third G3 cycle for Unit 2; nothing else. G4 translation of Unit 2 is already
   complete (the rate probe), and the G5 review binds the current English inputs as its
   comparison base.
+
+---
+
+## G-2026-64 - EFMP-302 Unit 6 G3: the sources blockers are owner decisions; the fresh review escalates
+
+- **Status:** open
+- **Gate:** G3 (English review), sources criterion
+- **Source:** EFMP-302 Unit 6 G3 feat023-r1 (2026-09-24,
+  `specs/content/efmp-302/reviews/unit-06/G3/agent-g3-efmp302-u6-feat023-r1.json`), disposition
+  escalate
+- **Question:** the fresh feature-023 review of Unit 6 passes six of seven criteria on current
+  bytes but fails `sources` on two blocking findings that predate this feature and were already
+  marked owner-judgement in run 007: (S1) seven `coverage/unit-06.md` rows (U6-05/06 in day1999,
+  U6-07/08/10 in villegas2003, U6-12/13 in guskey2000) assert a grounding the prose never cites
+  in the named sections - repairing requires deciding whether the coverage claim or the citation
+  is wrong, and adding citations to unretrievable texts would invent attributions; (S2)
+  topic-01's Guskey (2000) multi-level evaluation attribution and Villegas-Reimers (2003)
+  principles-convergence attribution carry no level-of-support declaration, and the texts are
+  declared unretrievable, so the declaration's content is itself an owner judgement under
+  D-2026-0001. The reviewer dispositioned escalate rather than revise because an author repair
+  cycle for these is not authorised. Also verified this run: the 4a3a789 repairs hold (the
+  decision register is a bound input via the rulings map; fig-U6-5's caption is consistent), and
+  two of run-007's four owner findings are RESOLVED in current bytes - A2 by D-2026-0004's
+  course-wide extension and P2 by 9972d70's Bloom relabelling (check:bloom-bands green over 400
+  items). S3 (no bound source text for any of Unit 6's six keys) carries uncertain; figure
+  geometry is clean across all 16 EN files.
+- **Needed, and from whom:** the curriculum owner, to rule on S1 (correct the coverage rows or
+  direct the prose citations) and S2 (the level-of-support declarations for guskey2000 and
+  villegas2003, in the D-2026-0001 manner), and to decide whether a further G3 cycle for Unit 6
+  is wanted after those rulings. G4 translation proceeds on the current English bytes; the G5
+  review binds them as its comparison base.
+- **Blocks:** G3 closure for Unit 6 (row stays open); nothing else - the unit's deterministic
+  gates are green and its Urdu mirror is unaffected.
