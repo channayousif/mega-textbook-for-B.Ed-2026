@@ -945,3 +945,27 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 - **Question:** Unit 6 G3 ran two advisory cycles. Round 1 (reviews/unit-06/G3/agent-g3-gnas301-u6-run001.json) returned revise with 4 blocking findings. Round 2 (reviews/unit-06/G3/round-02/agent-g3-gnas301-u6-run002.json) found the ERQ-04 rewrite and the RRQ-08 re-key had not actually been committed and returned revise with 4 blocking findings: ERQ-04 still covering only 6.4, the RRQ/MCQ surplus distribution off the blueprint, the misattributed WHO framing in topic-06, and the anwar2026 excerpt's verification claim. The author applied the full repair set post-report (commit applying the remaining Units 5-6 G3 round-2 repairs), and the G2 evidence was regenerated at the repaired commit. ADR-0019 reserves further cycles to the owner after two.
 - **Needed, and from whom:** the curriculum owner, to accept the repaired state on the two advisory reports or authorise a third G3 cycle for Unit 6.
 - **Blocks:** a third G3 cycle for Unit 6; nothing else.
+
+---
+
+## G-2026-28 - GNAS-301 Unit 2 G5: stale G3 dependency after post-pass advisory applications
+
+- **Status:** open
+- **Gate:** G5 (Urdu review), English dependency rule (G5 rubric); ADR-0019 advisory regime
+- **Source:** GNAS-301 G5 round 1, 2026-09-24 (reviews/unit-02/G5/agent-g5-gnas301-u2-run001.json)
+- **Question:** Unit 2's G3 round 2 returned PASS (2026-09-23T22:06Z), after which the
+  round-2 advisories were applied (commit f514923, 22:13Z: linkified URLs, a softened
+  topic-01 claim onto the bound excerpt, the park-park declaration). The G5 rubric requires
+  accepted G3 evidence for the exact English inputs bound to the review, so the changed
+  English digests invalidate the dependency even though the changes were the G3 reviewer's
+  own advisories. The G5 round 1 therefore escalated (6 blocking, 12 advisory). The Urdu
+  content defects it found are repaired at the current commit; the render-blocking MDX
+  errors (unit-02 PrintOut import, unit-06 </Gloss>) are fixed so future renders work.
+- **Needed, and from whom:** the curriculum owner, to either accept the advisory-applied
+  English state (the delta is the G3 round-2 report's own advisory list, applied verbatim)
+  or authorise a fresh G3 round binding the current bytes; a G5 round 2 then re-runs with
+  working renders. The same dependency question applies to Units 1, 4, 5 and 6, whose
+  post-report repairs are already recorded as G-2026-24, G-2026-25, G-2026-26 and
+  G-2026-27.
+- **Blocks:** G5 acceptance for Unit 2 (and, by the same rule, the other units); nothing
+  else. G4 translation and the Urdu-side G5 findings stand on their own evidence.
