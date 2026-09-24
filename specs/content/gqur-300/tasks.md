@@ -34,10 +34,10 @@ on every unit).
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
 | Unit 4 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0042; content-spec status: approved |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-04/G2/20260924T011729574Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-04/G2/20260924T062302741Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 78f0366; report reviews/unit-04/G3/agent-g3-gqur300-u4-run001.json |
 | Unit 4 | G4 ur-translation | ▢ | | full Urdu mirror required |
-| Unit 4 | G5 ur-review | ▢ | | advisory |
+| Unit 4 | G5 ur-review | ▢ | | advisory run001: revise (report binds 59faad3; a later concurrent commit changed one non-cited input); repairs applied at 1b191de; report reviews/unit-04/G5/agent-g5-gqur300-u4-run001.json |
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
 | Unit 5 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0042; content-spec status: approved |
