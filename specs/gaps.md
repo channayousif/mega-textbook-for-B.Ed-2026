@@ -912,3 +912,14 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   G2 gates are green at the current commit; the G3 tracker row remains open either way.
 - **Blocks:** a third G3 cycle for Unit 1; nothing else. G4 translation of Unit 1 may
   proceed on the gate-checked English (the G5 reviewer binds to the latest G3 report).
+
+---
+
+## G-2026-25 - GNAS-301 Unit 4 G3: two advisory cycles consumed; the third is owner-gated
+
+- **Status:** open
+- **Gate:** G3 (English review), ADR-0019 two-cycle limit
+- **Source:** GNAS-301 authoring session, 2026-09-24
+- **Question:** Unit 4 G3 ran two advisory cycles. Round 1 (reviews/unit-04/G3/agent-g3-gnas301-u4-run001.json) returned revise with 4 blocking findings. Round 2 (reviews/unit-04/G3/round-02/agent-g3-gnas301-u4-run002.json) verified the quotation rework and source declarations but returned revise with 2 remaining blocking findings: phantom abbasi2022 support for U4-08/U4-09 and phantom who-mental-health-work for U4-10. The author applied these repairs post-report (commit applying Unit 4 G3 round-2 repairs). ADR-0019 reserves further cycles to the owner after two.
+- **Needed, and from whom:** the curriculum owner, to accept the repaired state on the two advisory reports or authorise a third G3 cycle for Unit 4.
+- **Blocks:** a third G3 cycle for Unit 4; nothing else.
