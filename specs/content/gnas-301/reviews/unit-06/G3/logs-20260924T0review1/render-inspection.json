@@ -1,0 +1,689 @@
+{
+  "started": "2026-09-23T23:58:19.374Z",
+  "base": "http://localhost:3457/semester-1/gnas-301/unit-06",
+  "passes": {
+    "desktop": {
+      "viewport": "1280x800",
+      "pages": {
+        "index": {
+          "title": "Toxic Substances, Climate Change and Smog | B.Ed Mega Textbook",
+          "h1": "Toxic Substances, Climate Change and Smog",
+          "figures": [],
+          "tables": 0,
+          "brokenImgs": [],
+          "glossaryTerms": 0,
+          "furtherReadingLinks": 0
+        },
+        "topic-01": {
+          "title": "Topic 6.1 - What toxicology studies: substances and their classes | B.Ed Mega Textbook",
+          "h1": "Topic 6.1 - What toxicology studies: substances and their classes",
+          "figures": [
+            {
+              "alt": "Concept map of toxicology four questions, the agent, the route, the effect and the dose, branching from a central toxicology node with the dose emphasised",
+              "loaded": true,
+              "width": 703,
+              "caption": "textbook.com.pk"
+            },
+            {
+              "alt": "Table of six classes of toxic substances with examples, origin and one property that matters for each",
+              "loaded": true,
+              "width": 703,
+              "caption": "textbook.com.pk"
+            }
+          ],
+          "tables": 1,
+          "brokenImgs": [
+            "/img/figures/gnas-301/unit-06/fig-U6-1.dark.svg",
+            "/img/figures/gnas-301/unit-06/fig-U6-2.dark.svg"
+          ],
+          "glossaryTerms": 2,
+          "furtherReadingLinks": 5
+        },
+        "topic-02": {
+          "title": "Topic 6.2 - Effects of toxic substances | B.Ed Mega Textbook",
+          "h1": "Topic 6.2 - Effects of toxic substances",
+          "figures": [
+            {
+              "alt": "Table of the effect classes of toxic substances with definition, one example and detection or prevention for each",
+              "loaded": true,
+              "width": 703,
+              "caption": "textbook.com.pk"
+            },
+            {
+              "alt": "Diagram of two dose-response curves, one with a threshold and safe zone, one without a known safe level, as drawn for the genotoxic class",
+              "loaded": true,
+              "width": 703,
+              "caption": "textbook.com.pk"
+            }
+          ],
+          "tables": 1,
+          "brokenImgs": [
+            "/img/figures/gnas-301/unit-06/fig-U6-3.dark.svg",
+            "/img/figures/gnas-301/unit-06/fig-U6-4.dark.svg"
+          ],
+          "glossaryTerms": 7,
+          "furtherReadingLinks": 4
+        },
+        "topic-03": {
+          "title": "Topic 6.3 - Pollutants in the body: essentiality, absorption, accumulation | B.Ed Mega Textbook",
+          "h1": "Topic 6.3 - Pollutants in the body: essentiality, absorption, accumulation",
+          "figures": [
+            {
+              "alt": "Flowchart of the routes of absorption, inhalation, ingestion and skin contact, leading through the bloodstream to a target organ, with a pesticide example riding all three",
+              "loaded": true,
+              "width": 703,
+              "caption": "textbook.com.pk"
+            },
+            {
+              "alt": "Diagram of bioaccumulation and bio-magnification up a four-step lake food chain, plankton, small fish, large fish and the fishing family, with the concentration rising at each step",
+              "loaded": true,
+              "width": 703,
+              "caption": "textbook.com.pk"
+            }
+          ],
+          "tables": 1,
+          "brokenImgs": [
+            "/img/figures/gnas-301/unit-06/fig-U6-5.dark.svg",
+            "/img/figures/gnas-301/unit-06/fig-U6-6.dark.svg"
+          ],
+          "glossaryTerms": 3,
+          "furtherReadingLinks": 7
+        },
+        "topic-04": {
+          "title": "Topic 6.4 - The greenhouse effect and global warming | B.Ed Mega Textbook",
+          "h1": "Topic 6.4 - The greenhouse effect and global warming",
+          "figures": [
+            {
+              "alt": "Diagram of the greenhouse effect, shortwave sunlight in, longwave heat out, greenhouse gases trapping part of it, with natural and enhanced panels",
+              "loaded": true,
+              "width": 703,
+              "caption": "textbook.com.pk"
+            },
+            {
+              "alt": "Table of the main greenhouse gases with main sources and role in warming for each",
+              "loaded": true,
+              "width": 703,
+              "caption": "textbook.com.pk"
+            }
+          ],
+          "tables": 1,
+          "brokenImgs": [
+            "/img/figures/gnas-301/unit-06/fig-U6-7.dark.svg",
+            "/img/figures/gnas-301/unit-06/fig-U6-8.dark.svg"
+          ],
+          "glossaryTerms": 0,
+          "furtherReadingLinks": 5
+        },
+        "topic-05": {
+          "title": "Topic 6.5 - Smog | B.Ed Mega Textbook",
+          "h1": "Topic 6.5 - Smog",
+          "figures": [
+            {
+              "alt": "Diagram of smog formation, two panels, winter sulfurous smog under an inversion with coal and waste smoke, and summer photochemical smog with traffic emissions cooked by sunlight into ozone",
+              "loaded": true,
+              "width": 703,
+              "caption": "textbook.com.pk"
+            },
+            {
+              "alt": "Table comparing sulfurous and photochemical smog with causes, health effects and control measures",
+              "loaded": true,
+              "width": 703,
+              "caption": "textbook.com.pk"
+            }
+          ],
+          "tables": 1,
+          "brokenImgs": [
+            "/img/figures/gnas-301/unit-06/fig-U6-9.dark.svg",
+            "/img/figures/gnas-301/unit-06/fig-U6-10.dark.svg"
+          ],
+          "glossaryTerms": 1,
+          "furtherReadingLinks": 6
+        },
+        "topic-06": {
+          "title": "Topic 6.6 - Climate change: mitigation and adaptation | B.Ed Mega Textbook",
+          "h1": "Topic 6.6 - Climate change: mitigation and adaptation",
+          "figures": [
+            {
+              "alt": "Concept map of climate change, causes on the left feeding a central node, effects on the right, with mitigation and adaptation response branches",
+              "loaded": true,
+              "width": 703,
+              "caption": "textbook.com.pk"
+            },
+            {
+              "alt": "Table comparing mitigation and adaptation with what each answers, Pakistani examples and the school-scale version of each",
+              "loaded": true,
+              "width": 703,
+              "caption": "textbook.com.pk"
+            }
+          ],
+          "tables": 1,
+          "brokenImgs": [
+            "/img/figures/gnas-301/unit-06/fig-U6-11.dark.svg",
+            "/img/figures/gnas-301/unit-06/fig-U6-12.dark.svg"
+          ],
+          "glossaryTerms": 2,
+          "furtherReadingLinks": 7
+        },
+        "unit-assessment": {
+          "title": "Unit 6 assessment | B.Ed Mega Textbook",
+          "h1": "Unit 6 assessment",
+          "figures": [],
+          "tables": 0,
+          "brokenImgs": [],
+          "glossaryTerms": 0,
+          "furtherReadingLinks": 0
+        },
+        "unit-teacher-notes": {
+          "title": "Unit 6 teacher notes | B.Ed Mega Textbook",
+          "h1": "Unit 6 teacher notes",
+          "figures": [],
+          "tables": 0,
+          "brokenImgs": [],
+          "glossaryTerms": 0,
+          "furtherReadingLinks": 0
+        }
+      },
+      "consoleErrors": []
+    },
+    "narrow": {
+      "viewport": "360x640",
+      "pages": {
+        "index": {
+          "pageOverflow": 0,
+          "tables": [],
+          "figures": []
+        },
+        "topic-01": {
+          "pageOverflow": 0,
+          "tables": [
+            {
+              "scrollable": false,
+              "scrollWidth": 328,
+              "clientWidth": 328,
+              "lastColumnRightAfterFullSwipe": 343.5,
+              "viewport": 360,
+              "reachableBySwipe": true,
+              "keyboardAttrs": {
+                "tabindex": null,
+                "role": null,
+                "ariaLabel": null
+              }
+            }
+          ],
+          "figures": [
+            {
+              "alt": "Concept map of toxicology four questions, the agent, the route, the effect and the dose, branching from a central toxicology node with the dose emphasised",
+              "loaded": true,
+              "displayWidth": 328,
+              "clipped": false
+            },
+            {
+              "alt": "Concept map of toxicology four questions, the agent, the route, the effect and the dose, branching from a central toxicology node with the dose emphasised",
+              "loaded": false,
+              "displayWidth": 0,
+              "clipped": false
+            },
+            {
+              "alt": "Table of six classes of toxic substances with examples, origin and one property that matters for each",
+              "loaded": true,
+              "displayWidth": 328,
+              "clipped": false
+            },
+            {
+              "alt": "Table of six classes of toxic substances with examples, origin and one property that matters for each",
+              "loaded": false,
+              "displayWidth": 0,
+              "clipped": false
+            }
+          ]
+        },
+        "topic-02": {
+          "pageOverflow": 0,
+          "tables": [
+            {
+              "scrollable": false,
+              "scrollWidth": 328,
+              "clientWidth": 328,
+              "lastColumnRightAfterFullSwipe": 343.5,
+              "viewport": 360,
+              "reachableBySwipe": true,
+              "keyboardAttrs": {
+                "tabindex": null,
+                "role": null,
+                "ariaLabel": null
+              }
+            }
+          ],
+          "figures": [
+            {
+              "alt": "Table of the effect classes of toxic substances with definition, one example and detection or prevention for each",
+              "loaded": true,
+              "displayWidth": 328,
+              "clipped": false
+            },
+            {
+              "alt": "Table of the effect classes of toxic substances with definition, one example and detection or prevention for each",
+              "loaded": false,
+              "displayWidth": 0,
+              "clipped": false
+            },
+            {
+              "alt": "Diagram of two dose-response curves, one with a threshold and safe zone, one without a known safe level, as drawn for the genotoxic class",
+              "loaded": true,
+              "displayWidth": 328,
+              "clipped": false
+            },
+            {
+              "alt": "Diagram of two dose-response curves, one with a threshold and safe zone, one without a known safe level, as drawn for the genotoxic class",
+              "loaded": false,
+              "displayWidth": 0,
+              "clipped": false
+            }
+          ]
+        },
+        "topic-03": {
+          "pageOverflow": 0,
+          "tables": [
+            {
+              "scrollable": false,
+              "scrollWidth": 328,
+              "clientWidth": 328,
+              "lastColumnRightAfterFullSwipe": 343.5,
+              "viewport": 360,
+              "reachableBySwipe": true,
+              "keyboardAttrs": {
+                "tabindex": null,
+                "role": null,
+                "ariaLabel": null
+              }
+            }
+          ],
+          "figures": [
+            {
+              "alt": "Flowchart of the routes of absorption, inhalation, ingestion and skin contact, leading through the bloodstream to a target organ, with a pesticide example riding all three",
+              "loaded": true,
+              "displayWidth": 328,
+              "clipped": false
+            },
+            {
+              "alt": "Flowchart of the routes of absorption, inhalation, ingestion and skin contact, leading through the bloodstream to a target organ, with a pesticide example riding all three",
+              "loaded": false,
+              "displayWidth": 0,
+              "clipped": false
+            },
+            {
+              "alt": "Diagram of bioaccumulation and bio-magnification up a four-step lake food chain, plankton, small fish, large fish and the fishing family, with the concentration rising at each step",
+              "loaded": true,
+              "displayWidth": 328,
+              "clipped": false
+            },
+            {
+              "alt": "Diagram of bioaccumulation and bio-magnification up a four-step lake food chain, plankton, small fish, large fish and the fishing family, with the concentration rising at each step",
+              "loaded": false,
+              "displayWidth": 0,
+              "clipped": false
+            }
+          ]
+        },
+        "topic-04": {
+          "pageOverflow": 0,
+          "tables": [
+            {
+              "scrollable": false,
+              "scrollWidth": 328,
+              "clientWidth": 328,
+              "lastColumnRightAfterFullSwipe": 343.5,
+              "viewport": 360,
+              "reachableBySwipe": true,
+              "keyboardAttrs": {
+                "tabindex": null,
+                "role": null,
+                "ariaLabel": null
+              }
+            }
+          ],
+          "figures": [
+            {
+              "alt": "Diagram of the greenhouse effect, shortwave sunlight in, longwave heat out, greenhouse gases trapping part of it, with natural and enhanced panels",
+              "loaded": true,
+              "displayWidth": 328,
+              "clipped": false
+            },
+            {
+              "alt": "Diagram of the greenhouse effect, shortwave sunlight in, longwave heat out, greenhouse gases trapping part of it, with natural and enhanced panels",
+              "loaded": false,
+              "displayWidth": 0,
+              "clipped": false
+            },
+            {
+              "alt": "Table of the main greenhouse gases with main sources and role in warming for each",
+              "loaded": true,
+              "displayWidth": 328,
+              "clipped": false
+            },
+            {
+              "alt": "Table of the main greenhouse gases with main sources and role in warming for each",
+              "loaded": false,
+              "displayWidth": 0,
+              "clipped": false
+            }
+          ]
+        },
+        "topic-05": {
+          "pageOverflow": 0,
+          "tables": [
+            {
+              "scrollable": false,
+              "scrollWidth": 328,
+              "clientWidth": 328,
+              "lastColumnRightAfterFullSwipe": 343.5,
+              "viewport": 360,
+              "reachableBySwipe": true,
+              "keyboardAttrs": {
+                "tabindex": null,
+                "role": null,
+                "ariaLabel": null
+              }
+            }
+          ],
+          "figures": [
+            {
+              "alt": "Diagram of smog formation, two panels, winter sulfurous smog under an inversion with coal and waste smoke, and summer photochemical smog with traffic emissions cooked by sunlight into ozone",
+              "loaded": true,
+              "displayWidth": 328,
+              "clipped": false
+            },
+            {
+              "alt": "Diagram of smog formation, two panels, winter sulfurous smog under an inversion with coal and waste smoke, and summer photochemical smog with traffic emissions cooked by sunlight into ozone",
+              "loaded": false,
+              "displayWidth": 0,
+              "clipped": false
+            },
+            {
+              "alt": "Table comparing sulfurous and photochemical smog with causes, health effects and control measures",
+              "loaded": true,
+              "displayWidth": 328,
+              "clipped": false
+            },
+            {
+              "alt": "Table comparing sulfurous and photochemical smog with causes, health effects and control measures",
+              "loaded": false,
+              "displayWidth": 0,
+              "clipped": false
+            }
+          ]
+        },
+        "topic-06": {
+          "pageOverflow": 0,
+          "tables": [
+            {
+              "scrollable": false,
+              "scrollWidth": 328,
+              "clientWidth": 328,
+              "lastColumnRightAfterFullSwipe": 343.5,
+              "viewport": 360,
+              "reachableBySwipe": true,
+              "keyboardAttrs": {
+                "tabindex": null,
+                "role": null,
+                "ariaLabel": null
+              }
+            }
+          ],
+          "figures": [
+            {
+              "alt": "Concept map of climate change, causes on the left feeding a central node, effects on the right, with mitigation and adaptation response branches",
+              "loaded": true,
+              "displayWidth": 328,
+              "clipped": false
+            },
+            {
+              "alt": "Concept map of climate change, causes on the left feeding a central node, effects on the right, with mitigation and adaptation response branches",
+              "loaded": false,
+              "displayWidth": 0,
+              "clipped": false
+            },
+            {
+              "alt": "Table comparing mitigation and adaptation with what each answers, Pakistani examples and the school-scale version of each",
+              "loaded": true,
+              "displayWidth": 328,
+              "clipped": false
+            },
+            {
+              "alt": "Table comparing mitigation and adaptation with what each answers, Pakistani examples and the school-scale version of each",
+              "loaded": false,
+              "displayWidth": 0,
+              "clipped": false
+            }
+          ]
+        },
+        "unit-assessment": {
+          "pageOverflow": 0,
+          "tables": [],
+          "figures": []
+        },
+        "unit-teacher-notes": {
+          "pageOverflow": 0,
+          "tables": [],
+          "figures": []
+        }
+      }
+    },
+    "print": {
+      "viewport": "794x1123 (A4 @96dpi), media print",
+      "pages": {
+        "index": {
+          "figures": [],
+          "answersSectionPresent": false,
+          "chromeDisplay": [
+            "none",
+            "none",
+            "absent"
+          ],
+          "tables": [],
+          "docScrollW": 794,
+          "docClientW": 794
+        },
+        "topic-01": {
+          "figures": [
+            {
+              "alt": "Concept map of toxicology four questions, the agent, the route, the effect and the dose, branching from a central toxicology node with the dose emphasised",
+              "visible": true,
+              "which": "light"
+            },
+            {
+              "alt": "Table of six classes of toxic substances with examples, origin and one property that matters for each",
+              "visible": true,
+              "which": "light"
+            }
+          ],
+          "answersSectionPresent": false,
+          "chromeDisplay": [
+            "none",
+            "none",
+            "absent"
+          ],
+          "tables": [
+            {
+              "scrollWidth": 753,
+              "clientWidth": 753,
+              "overflow": false
+            }
+          ],
+          "docScrollW": 794,
+          "docClientW": 794
+        },
+        "topic-02": {
+          "figures": [
+            {
+              "alt": "Table of the effect classes of toxic substances with definition, one example and detection or prevention for each",
+              "visible": true,
+              "which": "light"
+            },
+            {
+              "alt": "Diagram of two dose-response curves, one with a threshold and safe zone, one without a known safe level, as drawn for the genotoxic class",
+              "visible": true,
+              "which": "light"
+            }
+          ],
+          "answersSectionPresent": false,
+          "chromeDisplay": [
+            "none",
+            "none",
+            "absent"
+          ],
+          "tables": [
+            {
+              "scrollWidth": 741,
+              "clientWidth": 741,
+              "overflow": false
+            }
+          ],
+          "docScrollW": 794,
+          "docClientW": 794
+        },
+        "topic-03": {
+          "figures": [
+            {
+              "alt": "Flowchart of the routes of absorption, inhalation, ingestion and skin contact, leading through the bloodstream to a target organ, with a pesticide example riding all three",
+              "visible": true,
+              "which": "light"
+            },
+            {
+              "alt": "Diagram of bioaccumulation and bio-magnification up a four-step lake food chain, plankton, small fish, large fish and the fishing family, with the concentration rising at each step",
+              "visible": true,
+              "which": "light"
+            }
+          ],
+          "answersSectionPresent": false,
+          "chromeDisplay": [
+            "none",
+            "none",
+            "absent"
+          ],
+          "tables": [
+            {
+              "scrollWidth": 701,
+              "clientWidth": 701,
+              "overflow": false
+            }
+          ],
+          "docScrollW": 794,
+          "docClientW": 794
+        },
+        "topic-04": {
+          "figures": [
+            {
+              "alt": "Diagram of the greenhouse effect, shortwave sunlight in, longwave heat out, greenhouse gases trapping part of it, with natural and enhanced panels",
+              "visible": true,
+              "which": "light"
+            },
+            {
+              "alt": "Table of the main greenhouse gases with main sources and role in warming for each",
+              "visible": true,
+              "which": "light"
+            }
+          ],
+          "answersSectionPresent": false,
+          "chromeDisplay": [
+            "none",
+            "none",
+            "absent"
+          ],
+          "tables": [
+            {
+              "scrollWidth": 703,
+              "clientWidth": 703,
+              "overflow": false
+            }
+          ],
+          "docScrollW": 794,
+          "docClientW": 794
+        },
+        "topic-05": {
+          "figures": [
+            {
+              "alt": "Diagram of smog formation, two panels, winter sulfurous smog under an inversion with coal and waste smoke, and summer photochemical smog with traffic emissions cooked by sunlight into ozone",
+              "visible": true,
+              "which": "light"
+            },
+            {
+              "alt": "Table comparing sulfurous and photochemical smog with causes, health effects and control measures",
+              "visible": true,
+              "which": "light"
+            }
+          ],
+          "answersSectionPresent": false,
+          "chromeDisplay": [
+            "none",
+            "none",
+            "absent"
+          ],
+          "tables": [
+            {
+              "scrollWidth": 615,
+              "clientWidth": 615,
+              "overflow": false
+            }
+          ],
+          "docScrollW": 794,
+          "docClientW": 794
+        },
+        "topic-06": {
+          "figures": [
+            {
+              "alt": "Concept map of climate change, causes on the left feeding a central node, effects on the right, with mitigation and adaptation response branches",
+              "visible": true,
+              "which": "light"
+            },
+            {
+              "alt": "Table comparing mitigation and adaptation with what each answers, Pakistani examples and the school-scale version of each",
+              "visible": true,
+              "which": "light"
+            }
+          ],
+          "answersSectionPresent": false,
+          "chromeDisplay": [
+            "none",
+            "none",
+            "absent"
+          ],
+          "tables": [
+            {
+              "scrollWidth": 746,
+              "clientWidth": 746,
+              "overflow": false
+            }
+          ],
+          "docScrollW": 794,
+          "docClientW": 794
+        },
+        "unit-assessment": {
+          "figures": [],
+          "answersSectionPresent": true,
+          "chromeDisplay": [
+            "none",
+            "none",
+            "absent"
+          ],
+          "tables": [],
+          "docScrollW": 794,
+          "docClientW": 794
+        },
+        "unit-teacher-notes": {
+          "figures": [],
+          "answersSectionPresent": false,
+          "chromeDisplay": [
+            "none",
+            "none",
+            "absent"
+          ],
+          "tables": [],
+          "docScrollW": 794,
+          "docClientW": 794
+        }
+      }
+    }
+  },
+  "completed": "2026-09-23T23:58:48.525Z"
+}

@@ -1,0 +1,301 @@
+{
+  "base": "http://localhost:4173/semester-1/gnas-301/unit-05",
+  "started_at": "2026-09-23T23:55:28.011Z",
+  "pages": {
+    "index": {
+      "url": "http://localhost:4173/semester-1/gnas-301/unit-05/index/",
+      "title": "Error response",
+      "figures": [],
+      "h2": [],
+      "tables_desktop": [],
+      "tables_narrow": [],
+      "narrowDocumentOverflow": 0,
+      "printOverflow": 0,
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (File not found)"
+      ]
+    },
+    "topic-01": {
+      "url": "http://localhost:4173/semester-1/gnas-301/unit-05/topic-01/",
+      "title": "Topic 5.1 - Toxic impacts of atmospheric agents | B.Ed Mega Textbook",
+      "figures": [
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-1.svg",
+          "loaded": true,
+          "alt": "Diagram of an atmospheric agent's route to harm, from emission through air, blood and target organ to effect, with carbon monoxide as the worked example"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-1.dark.svg",
+          "loaded": false,
+          "alt": "Diagram of an atmospheric agent's route to harm, from emission through air, blood and target organ to effect, with carbon monoxide as the worked example"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-2.svg",
+          "loaded": true,
+          "alt": "Table of six atmospheric agents with main source, target organ and impact, and one protection for each"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-2.dark.svg",
+          "loaded": false,
+          "alt": "Table of six atmospheric agents with main source, target organ and impact, and one protection for each"
+        }
+      ],
+      "h2": [
+        "A real classroom situation​",
+        "Explanation​",
+        "Activity: Chain the agent​",
+        "Check your understanding​",
+        "Summary​",
+        "Self-assessment checklist​",
+        "Try this at your practicum school​",
+        "Summative task​",
+        "Further reading​"
+      ],
+      "tables_desktop": [
+        {
+          "rows": 5,
+          "scrollWidth": 703,
+          "clientWidth": 703,
+          "tabindex": null,
+          "role": null,
+          "ariaLabel": null
+        }
+      ],
+      "tables_narrow": [
+        {
+          "scrollWidth": 328,
+          "clientWidth": 328,
+          "scrollLeft": 0,
+          "lastColumnRightAfterScroll": 344,
+          "reachableBySwipe": true,
+          "tabindex": null,
+          "role": null,
+          "ariaLabel": null
+        }
+      ],
+      "narrowDocumentOverflow": 0,
+      "printOverflow": 0,
+      "consoleErrors": []
+    },
+    "topic-02": {
+      "url": "http://localhost:4173/semester-1/gnas-301/unit-05/topic-02/",
+      "title": "Topic 5.2 - Fate of toxins: detoxification and bioactivation | B.Ed Mega Textbook",
+      "figures": [
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-3.svg",
+          "loaded": true,
+          "alt": "Flowchart of the fate of a xenobiotic, absorption, distribution, biotransformation with its two outcomes detoxification and bioactivation, then excretion or storage"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-3.dark.svg",
+          "loaded": false,
+          "alt": "Flowchart of the fate of a xenobiotic, absorption, distribution, biotransformation with its two outcomes detoxification and bioactivation, then excretion or storage"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-4.svg",
+          "loaded": true,
+          "alt": "Table comparing detoxification and bioactivation with what the liver produces, a worked example and the risk each carries"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-4.dark.svg",
+          "loaded": false,
+          "alt": "Table comparing detoxification and bioactivation with what the liver produces, a worked example and the risk each carries"
+        }
+      ],
+      "h2": [
+        "A real classroom situation​",
+        "Explanation​",
+        "Activity: Journey map​",
+        "Check your understanding​",
+        "Summary​",
+        "Self-assessment checklist​",
+        "Try this at your practicum school​",
+        "Summative task​",
+        "Further reading​"
+      ],
+      "tables_desktop": [
+        {
+          "rows": 5,
+          "scrollWidth": 703,
+          "clientWidth": 703,
+          "tabindex": null,
+          "role": null,
+          "ariaLabel": null
+        }
+      ],
+      "tables_narrow": [
+        {
+          "scrollWidth": 328,
+          "clientWidth": 328,
+          "scrollLeft": 0,
+          "lastColumnRightAfterScroll": 344,
+          "reachableBySwipe": true,
+          "tabindex": null,
+          "role": null,
+          "ariaLabel": null
+        }
+      ],
+      "narrowDocumentOverflow": 0,
+      "printOverflow": 0,
+      "consoleErrors": []
+    },
+    "topic-03": {
+      "url": "http://localhost:4173/semester-1/gnas-301/unit-05/topic-03/",
+      "title": "Topic 5.3 - Natural detoxification processes | B.Ed Mega Textbook",
+      "figures": [
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-5.svg",
+          "loaded": true,
+          "alt": "Flowchart of natural detoxification, the liver's two phases then exits by kidneys, lungs and gut, with a storage branch to fat and bone"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-5.dark.svg",
+          "loaded": false,
+          "alt": "Flowchart of natural detoxification, the liver's two phases then exits by kidneys, lungs and gut, with a storage branch to fat and bone"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-6.svg",
+          "loaded": true,
+          "alt": "Table of what helps and what hinders the body's natural detoxification, with examples and an honest note on each"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-6.dark.svg",
+          "loaded": false,
+          "alt": "Table of what helps and what hinders the body's natural detoxification, with examples and an honest note on each"
+        }
+      ],
+      "h2": [
+        "A real classroom situation​",
+        "Explanation​",
+        "Activity: The honest label​",
+        "Check your understanding​",
+        "Summary​",
+        "Self-assessment checklist​",
+        "Try this at your practicum school​",
+        "Summative task​",
+        "Further reading​"
+      ],
+      "tables_desktop": [
+        {
+          "rows": 5,
+          "scrollWidth": 703,
+          "clientWidth": 703,
+          "tabindex": null,
+          "role": null,
+          "ariaLabel": null
+        }
+      ],
+      "tables_narrow": [
+        {
+          "scrollWidth": 328,
+          "clientWidth": 328,
+          "scrollLeft": 0,
+          "lastColumnRightAfterScroll": 344,
+          "reachableBySwipe": true,
+          "tabindex": null,
+          "role": null,
+          "ariaLabel": null
+        }
+      ],
+      "narrowDocumentOverflow": 0,
+      "printOverflow": 0,
+      "consoleErrors": []
+    },
+    "topic-04": {
+      "url": "http://localhost:4173/semester-1/gnas-301/unit-05/topic-04/",
+      "title": "Topic 5.4 - Global frameworks: MEAs, SDGs and environmental law | B.Ed Mega Textbook",
+      "figures": [
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-7.svg",
+          "loaded": true,
+          "alt": "Timeline of multilateral environmental agreements from Stockholm 1972 to Paris 2015, six marked points each with what it controls"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-7.dark.svg",
+          "loaded": false,
+          "alt": "Timeline of multilateral environmental agreements from Stockholm 1972 to Paris 2015, six marked points each with what it controls"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-8.svg",
+          "loaded": true,
+          "alt": "Table of seven SDGs for environment and health with each goal's target and one Pakistan anchor"
+        },
+        {
+          "src": "/img/figures/gnas-301/unit-05/fig-U5-8.dark.svg",
+          "loaded": false,
+          "alt": "Table of seven SDGs for environment and health with each goal's target and one Pakistan anchor"
+        }
+      ],
+      "h2": [
+        "A real classroom situation​",
+        "Explanation​",
+        "Activity: The wall timeline​",
+        "Check your understanding​",
+        "Summary​",
+        "Self-assessment checklist​",
+        "Try this at your practicum school​",
+        "Summative task​",
+        "Further reading​"
+      ],
+      "tables_desktop": [
+        {
+          "rows": 5,
+          "scrollWidth": 703,
+          "clientWidth": 703,
+          "tabindex": null,
+          "role": null,
+          "ariaLabel": null
+        }
+      ],
+      "tables_narrow": [
+        {
+          "scrollWidth": 328,
+          "clientWidth": 328,
+          "scrollLeft": 0,
+          "lastColumnRightAfterScroll": 344,
+          "reachableBySwipe": true,
+          "tabindex": null,
+          "role": null,
+          "ariaLabel": null
+        }
+      ],
+      "narrowDocumentOverflow": 0,
+      "printOverflow": 0,
+      "consoleErrors": []
+    },
+    "unit-assessment": {
+      "url": "http://localhost:4173/semester-1/gnas-301/unit-05/unit-assessment/",
+      "title": "Unit 5 assessment | B.Ed Mega Textbook",
+      "figures": [],
+      "h2": [
+        "Unit summary​",
+        "Summative assessment​",
+        "Answers and marking guidance​"
+      ],
+      "tables_desktop": [],
+      "tables_narrow": [],
+      "narrowDocumentOverflow": 0,
+      "printOverflow": 0,
+      "consoleErrors": []
+    },
+    "unit-teacher-notes": {
+      "url": "http://localhost:4173/semester-1/gnas-301/unit-05/unit-teacher-notes/",
+      "title": "Unit 5 teacher notes | B.Ed Mega Textbook",
+      "figures": [],
+      "h2": [
+        "Sequencing note​",
+        "Teaching strategies (from the course guide)​",
+        "Common misconceptions to probe​",
+        "Managing the activities​",
+        "Practical work and practicum links​"
+      ],
+      "tables_desktop": [],
+      "tables_narrow": [],
+      "narrowDocumentOverflow": 0,
+      "printOverflow": 0,
+      "consoleErrors": []
+    }
+  },
+  "completed_at": "2026-09-23T23:56:01.786Z",
+  "userAgent": "149.0.7827.0"
+}

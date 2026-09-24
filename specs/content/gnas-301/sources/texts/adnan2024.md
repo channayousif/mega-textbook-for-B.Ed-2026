@@ -1,6 +1,6 @@
 # Bound excerpt - adnan2024
 
-Adnan, M., Xiao, B., Bibi, S., & Xiao, P. (2024). Addressing current climate issues in
+Adnan, M., Xiao, B., Bibi, S., Xiao, P., Zhao, Y., & Wang, Y. (2024). Addressing current climate issues in
 Pakistan: An opportunity for a sustainable future. *Environmental Challenges, 15*, 100887.
 https://doi.org/10.1016/j.envc.2024.100887
 
