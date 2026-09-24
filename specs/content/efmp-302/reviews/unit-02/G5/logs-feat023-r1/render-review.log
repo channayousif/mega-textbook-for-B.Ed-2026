@@ -1,0 +1,101 @@
+# render-review - EFMP-302 Unit 2, G5 feat023-r1 (Urdu mirror)
+
+Reviewer: agent:g5-reviewer (fresh session, did not author or translate this content)
+Started: 2026-09-24T19:25:19Z   Finished: 2026-09-24T19:47:29Z
+Disposition of this record: inspection complete, no rendering defect found; exit 0.
+This log records HOW the host/browser/print inspection ran and what was read, per the
+review-unit skill ("render-review names the actual host/browser inspection record").
+
+## Setup
+
+- Site: fresh `npm run build` (both locales) at 2026-09-24T19:20-19:25Z, exit 0
+  (logs-feat023-r1/site-build.log; "Generated static files in build/ur").
+- Serving: docusaurus serve on http://127.0.0.1:4599 (a serve process already bound to
+  4599 in this worktree was reused; it serves build/ from disk, and every measured
+  served artifact was sha256-compared with the committed bytes - 0 mismatches).
+- Browser: chromium 149.0.7827.0 via playwright-core.
+- Viewports: desktop 1280x900 (dsf 1), narrow 360x780 (dsf 2), A4 print media 794px
+  (dsf 2) + PDF emission per page.
+- Route: /ur/semester-1/efmp-302/unit-02 (7 pages: index, topic-01..04,
+  unit-assessment, unit-teacher-notes). Served pages confirmed lang="ur" dir="rtl".
+
+## Instruments run (all logs and artifacts under this review directory)
+
+1. scripts/render-inspect.mjs EFMP-302 2 --locale ur --out renders-feat023-r1
+   (render-inspect.log, render-inspect.json, 14 full-page PNGs, 7 print PDFs) - exit 0,
+   defects: 0. Sections A-D clean: no skipped heading levels, every image served with
+   non-empty alt, dark variants hidden (natural=0x0), 0px document overflow at 360px,
+   every table fits its 328px client width without a scroller, each figure is its own
+   scroll container (scroll=780 vs client=328), clippedElems=0 on all 7 pages at A4,
+   all print figures fit, answers and marking guidance render unclipped.
+2. renders-feat023-r1/ur-figure-text-overlap.mjs - the measurement no prior review ran
+   over the Urdu variants: served-bytes sha256 match, rendered-DOM getBBox pairwise
+   text intersection plus canvas pixel ink-intersection over all 16 Urdu variants
+   (8 figures x .ur.svg/.ur.dark.svg), wordmark vs text and vs shapes, plus a negative
+   control over the known-bad b8f8ffe .ur.svg bytes. Result: 16/16 clean (0 bbox pairs,
+   0 ink collisions, 0 near-misses, 0 wordmark-text overlaps); control detects 5/6/7
+   overlapping pairs with 0/2/3 real ink collisions, proving instrument sensitivity.
+   16 standalone 2x PNGs saved.
+3. renders-feat023-r1/ur-element-inspect.mjs + ur-key-inspect.mjs - targeted element
+   captures: the topic-03 diagnostic table and the ERQ 1 rubric table at 360x780, the
+   MCQ list and the MCQ answer key at 360x780, the RRQ mark schemes, the topic-01
+   further-reading section (embedded Latin citations), the topic-02 disclosure
+   paragraph, the index article, and a mid-topic paragraph at 1280x900; plus a
+   mechanical line-end character census over the assessment page (179 text nodes).
+4. renders-feat023-r1/ur-print-inspect.mjs - print-media captures at 794px: fig-U2-5.ur
+   (w=760 right=777, fits), the MCQ key, and a full paragraph.
+5. renders-feat023-r1/en-fig-u2-5-repair-check.mjs - the same geometry method over the
+   two repaired EN fig-U2-5 variants (8db9943): 0 overlapping pairs; "was outweighed"
+   (x 488.0-585.6) now disjoint from the rewrapped "did not"/"follow through"
+   (x 678.0-764.4, two lines).
+6. renders-feat023-r1/compare-manifests.mjs - G3 feat023-r2 vs G5 feat023-r1 input
+   manifests: 99 shared paths identical; the only changed English inputs are the two
+   repaired fig-U2-5 EN variants (manifest-comparison-g3r2-vs-g5r1.log).
+
+## What this reviewer read directly (visual, not just instrumented)
+
+This session CAN view raster images; every PNG below was opened and read by the
+reviewer, paired with the input identity above (current committed bytes, sha-matched):
+
+- Nastaliq legibility: desktop-element-topic01-paragraph.png, desktop-element-index-article.png,
+  print-a4-element-topic01-paragraph.png - clear Nastaliq at desktop and print scale;
+  bold segments render bold; justified RTL text; no clipped ascenders/descenders.
+- Bidi punctuation at line ends: question marks, full stops, colons, semicolons and
+  closing parentheses sit at the LEFT edge of ended lines (correct for RTL) across the
+  MCQ list, key, paragraphs and tables captures; the mechanical census shows Urdu
+  full stop (۔) 29x and ")" 35x among line-final characters; no punctuation appears
+  stranded on the wrong side.
+- Embedded Latin: desktop-element-topic01-further-reading.png - citations (Carr, D.
+  (2000); Icka, E., & Kochoska, J. (2024); journal titles) render left-to-right
+  correctly inside RTL lines; Western digits (2.1, 9, 2009, 350-400, 794) embed
+  correctly throughout; the "textbook.com.pk" wordmark is preserved untranslated in
+  all 16 figure variants (correct for a wordmark).
+- Table column order at 360px: narrow360-element-topic03-diagnostic-table.png (جزو |
+  ناکامی | دراصل کیا مدد دیتا ہے, rightmost-first) and
+  narrow360-element-assessment-erq1-rubric.png (معیار | محدود (1-2) | مناسب (3) |
+  مضبوط (4-5)) - column order mirrors the English tables for RTL; cells fit with no
+  clipping (client=328 scroll=328).
+- .ur.svg label fit and mirroring: all 16 standalone 2x renders read; fig-U2-5.ur
+  verified in detail - four stages run right-to-left (1 اخلاقی حساسیت rightmost to
+  4 اخلاقی کردار leftmost), the four failure labels are disjoint and legible, the
+  outcome box and footer fit; fig-U2-1.ur column and row-label columns sit rightmost;
+  fig-U2-6.ur loop stations and fig-U2-8.ur panels run right-to-left; coordinate
+  comparison of fig-U2-2.ur and fig-U2-4.ur against their EN sources confirms the
+  horizontal mirroring the style guide (v4.1) requires, with text-anchor swapped.
+  narrow360-element-topic03-fig5-scrolled.png shows the figure inside its own
+  scroller at the RTL start edge.
+- A4 print: print-a4-element-topic03-fig5.png (760px wide, fits 794px), the MCQ key
+  and paragraph print captures; render-inspect section C measured clippedElems=0 on
+  all 7 pages and all print figures fitting. PDFs were emitted per page; this host
+  has no pdftoppm, so the PDFs were not re-rasterized - print inspection was done in
+  print-media emulation (the same engine that emits the PDFs) plus the print PNG
+  captures above; the PDFs are retained as artifacts for human verification.
+
+## Result
+
+No rendering, RTL, typography or figure-geometry defect was found in the Urdu mirror.
+The one content defect found by this review (the Urdu MCQ 6 answer key lacking the
+English key's uncorroborated-attribution caveat) is a source-text omission that
+renders exactly as authored; it is recorded in the report findings, not here.
+
+exit 0

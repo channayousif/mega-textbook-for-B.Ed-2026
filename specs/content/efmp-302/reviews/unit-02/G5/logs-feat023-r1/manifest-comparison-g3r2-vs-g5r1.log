@@ -1,0 +1,39 @@
+# manifest comparison: G3 feat023-r2 vs G5 feat023-r1
+shared paths identical: 99
+shared paths CHANGED (2):
+  static/img/figures/efmp-302/unit-02/fig-U2-5.dark.svg
+    g3r2=db76358adc592807abbd21816fe6a18fdb5bcccc4e2f0693e7bdf048516295b9
+    g5r1=5b46139d37ebc377557a5b01aa2f1e51a9de0117f2cca1aa75bea9d744bc2333
+  static/img/figures/efmp-302/unit-02/fig-U2-5.svg
+    g3r2=9fcd1069eb6dc36c65ac514b374ac732fc74a1d703f7dd736e5682492f215f5c
+    g5r1=561001c0b7e8117bfb8181b9aea728da8a65c3fb2bdbc2b9bff8882f7bcd1ac3
+only in G3 r2 manifest (2):
+  .claude/agents/g3-reviewer.md
+  .claude/skills/review-unit/references/g3.md
+only in G5 r1 manifest (26):
+  .claude/agents/g5-reviewer.md
+  .claude/skills/review-unit/references/g5.md
+  i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-02/index.mdx
+  i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-02/topic-01.mdx
+  i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-02/topic-02.mdx
+  i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-02/topic-03.mdx
+  i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-02/topic-04.mdx
+  i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-02/unit-assessment.mdx
+  i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-02/unit-teacher-notes.mdx
+  specs/content/terminology.csv
+  static/img/figures/efmp-302/unit-02/fig-U2-1.ur.dark.svg
+  static/img/figures/efmp-302/unit-02/fig-U2-1.ur.svg
+  static/img/figures/efmp-302/unit-02/fig-U2-2.ur.dark.svg
+  static/img/figures/efmp-302/unit-02/fig-U2-2.ur.svg
+  static/img/figures/efmp-302/unit-02/fig-U2-3.ur.dark.svg
+  static/img/figures/efmp-302/unit-02/fig-U2-3.ur.svg
+  static/img/figures/efmp-302/unit-02/fig-U2-4.ur.dark.svg
+  static/img/figures/efmp-302/unit-02/fig-U2-4.ur.svg
+  static/img/figures/efmp-302/unit-02/fig-U2-5.ur.dark.svg
+  static/img/figures/efmp-302/unit-02/fig-U2-5.ur.svg
+  static/img/figures/efmp-302/unit-02/fig-U2-6.ur.dark.svg
+  static/img/figures/efmp-302/unit-02/fig-U2-6.ur.svg
+  static/img/figures/efmp-302/unit-02/fig-U2-7.ur.dark.svg
+  static/img/figures/efmp-302/unit-02/fig-U2-7.ur.svg
+  static/img/figures/efmp-302/unit-02/fig-U2-8.ur.dark.svg
+  static/img/figures/efmp-302/unit-02/fig-U2-8.ur.svg
