@@ -1,0 +1,4 @@
+$ npm run validate:content   (GICT-300 U5 G3 overlay run, 2026-09-23; overlay = worktree HEAD 6361ad6 with the pre-existing stale geng-300 tree replaced by the 018-author-geng300 relocation: docs/semester-1/geng-300 removed, licence/geng-300 + specs/content/geng-300 + static/img/figures/geng-300 added, glossary.json merged (135 worktree + 62 sibling entries); every GICT-300 byte identical to the bound manifest state; the same overlay basis as this unit's G2 evidence. The as-is worktree run of this gate is logged separately and fails only on geng-300, which is out of scope for this review and already fixed on the unmerged sibling branch 018-author-geng300.)
+
+✓ Content validation passed.
+exit_code=0

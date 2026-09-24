@@ -1,0 +1,52 @@
+G3 command-run environment notes (GICT-300 Unit 3, review at HEAD 07d7420)
+=========================================================================
+Review run: agent-g3-gict300-u3-run001, 2026-09-23. Same construction as the
+Unit 1 G3 run (see specs/content/gict-300/reviews/unit-01/G3/overlay-notes.txt)
+and the unit's own G2 evidence (reviews/unit-03/G2/).
+
+Why an overlay was needed
+-------------------------
+Running the six gates unmodified in this worktree fails only on trees that are
+NOT this review's subject. Verified by as-is runs before overlaying (saved in
+asis/, real exit codes):
+
+  validate:content 1, check:depth-gate 1, check:figures 1,
+  check:no-answer-keys 1, check:no-em-dash 1, check:docs-sync 0.
+
+Every failing finding is in the stale docs/semester-1/geng-300/ legacy tree or
+the em dashes in specs/content/geng-300/intake/evaluation.md (9 occurrences) -
+both pre-existing on this base (origin/main 39c9a95), both already fixed on
+the unmerged sibling branch 018-author-geng300, both out of scope for this
+GICT-300 review. Zero GICT-300 findings in any as-is run (verified by grep:
+no "gict-300" occurrence in any as-is log). This matches the gate state the
+intake evaluator recorded at D-2026-0030 (decision item: deterministic checks
+at HEAD 73001c11 with the same geng-300-only failures).
+
+Overlay construction (/tmp/gict300-u3-g3-aed74e6f - private path: the shared
+/tmp/gict300-g3-overlay was in concurrent use by a sibling review session)
+---------------------------------------------------------------------------
+- Base: `git archive HEAD` at 07d7420 (the reviewed state; the manifest's 101
+  bound inputs were verified byte-identical under the review-evidence
+  normalization - translation_status line and ADR-0027 spec slicing - before
+  any gate ran, and re-verified against the worktree after the run).
+- Removed: docs/semester-1/geng-300 (the stale placement).
+- Replaced with branch 018-author-geng300 (2bf47e6) versions:
+  licence/geng-300, specs/content/geng-300 (minus its reviews/ evidence
+  directory), static/img/figures/geng-300.
+- glossary.json merged: HEAD's 135 terms + the branch's 130 geng-300 terms
+  (HEAD wins on the 68 shared terms) = 197 terms, so both courses'
+  <Glossary> references resolve. glossary.json is not a bound input.
+- node_modules symlinked from the worktree (same commit's dependencies).
+- check:docs-sync and check:no-em-dash resolve their scan roots from cwd, so
+  they were run with cwd = the overlay; the other four honour CONTENT_ROOT.
+
+Result over the overlay (logs in this directory): all six gates exit 0.
+
+Manifest note
+-------------
+The parent's briefing said the bundle was "prepared at commit d7377ac"; the
+prepared manifest's digests in fact match HEAD 6361ad6 and the current HEAD
+07d7420 identically (d7377ac -> 6361ad6 -> 07d7420 changed no bound input for
+this unit; 07d7420 is a PHR-only commit). Digest verification, not the commit
+label, is authoritative: all 101 inputs verified identical at review time and
+re-verified after the run.

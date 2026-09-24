@@ -1,0 +1,143 @@
+---
+title: "Topic 3.3 - Managing input and output"
+description: "How the operating system manages input and output: device drivers, buffers, and the journey of data between applications and devices."
+course_code: GICT-300
+unit_no: 3
+topic_no: 3
+topic_label: "3.3"
+clo_refs:
+  - "SLO:GICT-300-3-4"
+blooms_summary: "Remember, understand and apply input/output management: trace the journey of a request from application to device and back, and explain the driver's role."
+est_reading_minutes: 12
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+import Glossary from '@site/src/components/Glossary';
+
+<PrintHandout />
+
+# Topic 3.3 - Managing input and output
+
+## A real classroom situation
+
+The teacher plugs a new printer into the lab's computer. Nothing happens for a few
+seconds; then a small message appears: "installing device software". A minute later the
+printer works, and - the remarkable part - the word processor, the browser and the
+results spreadsheet can all print to it, though none of them was written with this
+printer in mind. What happened in that minute is the quiet centre of this topic: the
+operating system installed a <Glossary term="Device driver">device driver</Glossary>,
+the translator that lets any application talk to any device, and took over the job of
+managing the traffic between them.
+
+<Figure id="fig-U3-5" src="/img/figures/gict-300/unit-03/fig-U3-5.svg" alt="Diagram of an input/output request flowing from the application to the operating system, through the driver to the device, with a return arrow reporting completion." />
+
+## Explanation
+
+### Managing input and output
+
+Every device - keyboard, screen, disk, printer, USB drive - speaks its own low-level
+language of signals and registers. No application wants to know those languages, and no
+device maker wants to write a different version of every application. The operating
+system stands in the middle and makes both sides simple.
+
+The chain works like this. An **application** asks for something ordinary: "print this
+page", "read this file", "show this frame". It addresses the request to the operating
+system, never to the device directly. The **operating system** accepts the request,
+checks that it is allowed, and places it in a queue. The **driver**, a small piece of
+system software written for one specific device, translates the request into that
+device's own commands. The **device** does the work and reports back, and the operating
+system passes the result to the application. Your click on "Print" and the whir of the
+printer are the two visible ends of that chain; the middle is the OS doing what it does
+all day.
+
+Two more ideas complete the picture. A <Glossary term="Buffer">buffer</Glossary> is a
+small holding area in memory where the OS parks data in transit - the first part of a
+print job sits in a buffer so the application can move on while the slow printer catches
+up. And <Glossary term="Spooling">spooling</Glossary> is the same idea at larger scale:
+print jobs queue up one after another, which is why three teachers can click Print at
+once and the pages still come out in order, one job at a time.
+
+<Figure id="fig-U3-6" src="/img/figures/gict-300/unit-03/fig-U3-6.svg" alt="Table of five everyday input/output requests, what the operating system does for each, and what the user notices." />
+
+The payoff of this arrangement is enormous and usually invisible: applications stay
+simple because they speak one language (the OS), and devices stay interchangeable
+because each plugs in through its own driver. When a device "does not work", the chain
+gives you a diagnostic ladder: is it the device (does it have power?), the driver (does
+the OS recognise it?), or the application (does the request even reach the OS?)? Naming
+the rung turns a shrug into a plan.
+
+A note on the blocked state from Topic 3.2: now you can see why a process that starts an
+input/output operation goes blocked. The disk will take its time whatever the process
+does, so the OS parks the process and gives the processor to someone else until the
+device reports completion. Waiting is not wasted; it is scheduled.
+
+## Activity: The diagnostic ladder
+
+Work in pairs. About 20 minutes.
+
+1. Your teacher describes five faults: a printer that shows no lights; a printer with
+   lights that no program can print to; a USB drive that works on one computer but not
+   another; a keyboard that types nothing; a file that opens on the office machine but
+   not on the lab machine.
+2. For each fault, agree where the chain is most likely broken: device, driver, or
+   application - and write one sentence naming the evidence that points there.
+3. For one fault of your choice, write the two questions you would ask the user first.
+4. Compare ladders with another pair. Where you disagree, test both against the chain in
+   the first figure.
+
+## Check your understanding
+
+1. Define a device driver in one sentence. *(Remember)*
+2. Trace the journey of a print request from the word processor to the page, naming all
+   four links in the chain. *(Understand)*
+3. A USB drive works on one computer but not another. Using the chain, give the most
+   likely broken link and your reason. *(Apply)*
+4. Explain what a buffer does and why printing does not freeze the word processor.
+   *(Understand)*
+
+## Summary
+
+Input/output management is the operating system's translation service: applications make
+ordinary requests, the OS queues and polices them, drivers translate them into each
+device's own language, and buffers and spooling smooth the speed differences so
+everything appears to happen at once. The chain doubles as a diagnostic ladder - device,
+driver, or application - and it explains why a process doing input/output goes blocked
+rather than busy.
+
+## Self-assessment checklist
+
+- [ ] I can name the four links of an input/output request and say what each does.
+- [ ] I can define driver, buffer and spooling with an example of each.
+- [ ] I can use the chain to place a described fault on the right rung.
+
+## Try this at your practicum school
+
+Find one device that is currently not working in the school (or ask about the last one
+that failed). Write three sentences: the symptom, which link of the chain the fault
+belonged to, and what fixed it.
+
+## Summative task
+
+A teacher complains: "I clicked Print, the printer has power and paper, but nothing comes
+out, and only my computer has this problem; others print fine." In one page, analyse the
+fault using the input/output chain: name the link you would check first and why, what
+the next two checks would be, and what the likely fix is at each step.
+
+**Marking guide (10 marks):**
+
+- The chain named and applied to the symptom (Analyse): 4 marks.
+- Checks ordered sensibly with a reason for each: 3 marks.
+- Likely fixes matched to the right link: 2 marks.
+- Clear writing: 1 mark.
+
+## Further reading
+
+- Arpaci-Dusseau, R. H., & Arpaci-Dusseau, A. C. (2023). *Operating Systems: Three Easy
+  Pieces* (version 1.10), chapters 4 (the blocked state) and 36 (I/O devices).
+  https://pages.cs.wisc.edu/~remzi/OSTEP/
+- Bourgeois, D. T., Smith, J. L., Wang, S., & Mortati, J. (2019). *Information Systems for
+  Business and Beyond* (2nd ed.), chapter 2. Open Textbook Library.
+  https://open.umn.edu/opentextbooks/textbooks/information-systems-for-business-and-beyond
+- Norton, P. *Introduction to Computers*. McGraw-Hill Education. (Course guide reading;
+  print monograph, cited at bibliographic level.)

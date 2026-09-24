@@ -11,7 +11,7 @@ the requirements. This plan decomposes the work into tasks.
 ## Implementation Approach
 
 Follow the gated Spec 006/008 workflow. Author English-only (bilingual: false), no Urdu
-mirror. Use the licence track (`licence/geng-300/unit-NN/`).
+mirror. Use the licence track (`docs/semester-1/geng-300/unit-NN/`).
 
 ## Tasks
 
@@ -61,10 +61,10 @@ Create the content-spec with `status: approved`:
 ### Task 3: Author Unit 1 - Foundations of Functional English
 
 **Files**:
-- `licence/geng-300/unit-01/index.mdx`
-- `licence/geng-300/unit-01/topic-01..08.mdx` (8 topics)
-- `licence/geng-300/unit-01/unit-assessment.mdx`
-- `licence/geng-300/unit-01/unit-teacher-notes.mdx`
+- `docs/semester-1/geng-300/unit-01/index.mdx`
+- `docs/semester-1/geng-300/unit-01/topic-01..08.mdx` (8 topics)
+- `docs/semester-1/geng-300/unit-01/unit-assessment.mdx`
+- `docs/semester-1/geng-300/unit-01/unit-teacher-notes.mdx`
 - `specs/content/geng-300/coverage/unit-01.md`
 - `specs/content/geng-300/sources/unit-01.md`
 - `specs/content/geng-300/figures/unit-01.md`
@@ -141,4 +141,4 @@ For each unit, use the generate-figures skill:
 4. `check:concept-graph` passes (acyclic, resolvable)
 5. `check:bloom-bands` passes (MCQ Remember-Apply, RRQ Understand-Analyze, ERQ Analyze+)
 6. `check:depth-gate` passes (reading-min within budget)
-7. Course renders at textbook.com.pk/licence/geng-300/
+7. Course renders at textbook.com.pk/docs/semester-1/geng-300/

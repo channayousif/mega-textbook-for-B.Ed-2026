@@ -340,6 +340,341 @@
     "definition_ur": "کورس کی اختتامی ترکیب: ایک پورے گروہ کی تقریب جس میں ہر تربیت یافتہ شخص ایک عقیدہ بیان کرتا ہے جو کورس کے دوران بدل گیا اور تبدیلی کا ثبوت پیش کرتا ہے۔"
   },
   {
+    "term": "Computer literacy",
+    "definition_en": "The knowledge and skill needed to use computers and related technology effectively: operating devices, handling files, creating documents, finding and judging information, and communicating safely.",
+    "definition_ur": "کمپیوٹر اور متعلقہ ٹیکنالوجی کو مؤثر طریقے سے استعمال کرنے کے لیے درکار علم اور مہارت: ڈیوائس چلانا، فائلوں کا انتظام، دستاویزات بنانا، معلومات ڈھونڈنا اور جانچنا، اور محفوظ طریقے سے رابطہ کرنا۔"
+  },
+  {
+    "term": "Information and Communication Technology",
+    "definition_en": "The family of technologies that handle information and communication together: computers, phones, networks, the internet, and the software that runs on them.",
+    "definition_ur": "معلومات اور مواصلات کو ایک ساتھ سنبھالنے والی ٹیکنالوجیوں کا خاندان: کمپیوٹر، موبائل فون، نیٹ ورکس، انٹرنیٹ، اور ان پر چلنے والا سافٹ ویئر۔"
+  },
+  {
+    "term": "Abacus",
+    "definition_en": "An ancient calculating tool in which beads are slid along rods to add and subtract quickly.",
+    "definition_ur": "قدیم حسابی آلہ جس میں تیلیوں کو سلائیوں پر حرکت دے کر جلد سے جلد جمع اور تفریق کی جاتی ہے۔"
+  },
+  {
+    "term": "Digital computer",
+    "definition_en": "A computer that works with discrete values, in practice the 0s and 1s of the binary system; laptops, phones and desktops are digital computers.",
+    "definition_ur": "ایسا کمپیوٹر جو الگ الگ قدروں پر کام کرتا ہے، عملی طور پر بائنری نظام کی صفر اور ایک پر؛ لیپ ٹاپ، موبائل فون اور ڈیسک ٹاپ ڈیجیٹل کمپیوٹر ہیں۔"
+  },
+  {
+    "term": "Analog computer",
+    "definition_en": "A computer that works with continuous physical quantities, such as voltage, that change smoothly; it measures rather than counts.",
+    "definition_ur": "ایسا کمپیوٹر جو مسلسل بدلتی طبیعی مقداروں، جیسے وولٹیج، پر کام کرتا ہے؛ یہ گنتی کے بجائے پیمائش کرتا ہے۔"
+  },
+  {
+    "term": "Hybrid computer",
+    "definition_en": "A computer that measures an analog quantity, converts it into digital form, and then processes it digitally, such as a hospital patient monitor.",
+    "definition_ur": "ایسا کمپیوٹر جو پہلے اینالاگ مقدار ناپتا ہے، پھر اسے ڈیجیٹل شکل میں بدل کر ڈیجیٹل طریقے سے پراسیس کرتا ہے، جیسے ہسپتال کی مریض نگرانی کی مشین۔"
+  },
+  {
+    "term": "Embedded computer",
+    "definition_en": "A small computer fixed inside another device to run that one device, such as a washing machine's controller or a car's engine management unit.",
+    "definition_ur": "کسی دوسری مشین کے اندر لگا چھوٹا کمپیوٹر جو صرف اسی ایک مشین کا کام سنبھالتا ہے، جیسے واشنگ مشین کا کنٹرولر یا گاڑی کے انجن کا انتظامی یونٹ۔"
+  },
+  {
+    "term": "Input device",
+    "definition_en": "A device that puts data into the computer, such as a keyboard, mouse, scanner, microphone or webcam.",
+    "definition_ur": "وہ ڈیوائس جو کمپیوٹر میں ڈیٹا داخل کرتی ہے، جیسے کی بورڈ، ماؤس، اسکینر، مائیکروفون یا ویب کیم۔"
+  },
+  {
+    "term": "Output device",
+    "definition_en": "A device that brings results out of the computer in a form a person can use, such as a monitor, projector, speakers or printer.",
+    "definition_ur": "وہ ڈیوائس جو کمپیوٹر کے نتائج کو انسان کے استعمال کے قابل شکل میں باہر لاتی ہے، جیسے مانیٹر، پروجیکٹر، اسپیکر یا پرنٹر۔"
+  },
+  {
+    "term": "Storage device",
+    "definition_en": "A device that keeps data whether or not the power is on, such as a hard disk, solid state drive, flash drive or DVD.",
+    "definition_ur": "وہ ڈیوائس جو بجلی بند ہونے کے باوجود ڈیٹا محفوظ رکھتی ہے، جیسے ہارڈ ڈسک، سولڈ اسٹیٹ ڈرائیو، فلیش ڈرائیو یا ڈی وی ڈی۔"
+  },
+  {
+    "term": "RAM",
+    "definition_en": "Random Access Memory: the computer's fast, volatile working memory, which holds programs and data while in use and loses them at power off.",
+    "definition_ur": "رینڈم ایکسیس میموری: کمپیوٹر کی تیز اور متغیر ورکنگ میموری، جو استعمال کے وقت پروگرام اور ڈیٹا رکھتی ہے اور بجلی بند ہوتے ہی مٹ جاتی ہے۔"
+  },
+  {
+    "term": "Random Access Memory",
+    "definition_en": "See RAM: the working memory into which programs and data load while you use them; volatile, so unsaved work is lost at power off.",
+    "definition_ur": "ریم دیکھیں: وہ ورکنگ میموری جس میں استعمال کے وقت پروگرام اور ڈیٹا لوڈ ہوتے ہیں؛ متغیر ہونے کی وجہ سے محفوظ کیا گیا کام بجلی بند ہونے پر ضائع ہو جاتا ہے۔"
+  },
+  {
+    "term": "Read Only Memory",
+    "definition_en": "ROM: the small, permanent memory that holds the instructions a computer needs to start itself; non-volatile and not normally rewritten in everyday use.",
+    "definition_ur": "روم: وہ چھوٹی مستقل میموری جس میں کمپیوٹر کے چالو ہونے کی ہدایات ہوتی ہیں؛ بجلی بند ہونے پر بھی قائم رہتی ہے اور عام استعمال میں بدلی نہیں جاتی۔"
+  },
+  {
+    "term": "Secondary storage",
+    "definition_en": "Memory that keeps data across power cuts: the hard disk, solid state drive, flash drive, DVD or memory card where saved files live.",
+    "definition_ur": "وہ میموری جو بجلی بند ہونے کے باوجود ڈیٹا رکھتی ہے: ہارڈ ڈسک، سولڈ اسٹیٹ ڈرائیو، فلیش ڈرائیو، ڈی وی ڈی یا میموری کارڈ، جہاں محفوظ فائلیں رہتی ہیں۔"
+  },
+  {
+    "term": "System software",
+    "definition_en": "The software that runs the machine itself: the operating system plus utilities such as antivirus and backup tools.",
+    "definition_ur": "وہ سافٹ ویئر جو مشین خود کو چلاتا ہے: آپریٹنگ سسٹم اور اس کے ساتھ یوٹیلیٹیز جیسے اینٹی وائرس اور بیک اپ ٹولز۔"
+  },
+  {
+    "term": "Operating system",
+    "definition_en": "The system software that manages the computer's hardware resources, provides the user interface, and hosts every application, such as Windows, Linux or Android.",
+    "definition_ur": "وہ سسٹم سافٹ ویئر جو کمپیوٹر کے ہارڈ ویئر وسائل سنبھالتا ہے، صارف کو انٹرفیس فراہم کرتا ہے اور ہر ایپلیکیشن کو جگہ دیتا ہے، جیسے ونڈوز، لینکس یا اینڈرائیڈ۔"
+  },
+  {
+    "term": "Utility software",
+    "definition_en": "Small system programs that fix, check or tune the machine, such as the antivirus scanner, disk cleanup tool or backup program.",
+    "definition_ur": "چھوٹے سسٹم پروگرام جو مشین کو درست، جانچنے یا بہتر کرتے ہیں، جیسے اینٹی وائرس، ڈسک صفائی ٹول یا بیک اپ پروگرام۔"
+  },
+  {
+    "term": "Application software",
+    "definition_en": "The software you run to get tasks done, such as a word processor, spreadsheet, browser or photo editor.",
+    "definition_ur": "وہ سافٹ ویئر جو آپ کاموں کے لیے چلاتے ہیں، جیسے ورڈ پروسیسر، اسپریڈ شیٹ، براؤزر یا فوٹو ایڈیٹر۔"
+  },
+  {
+    "term": "Computer network",
+    "definition_en": "A set of computers and devices connected so they can share resources such as files, a printer or an internet connection.",
+    "definition_ur": "کمپیوٹروں اور ڈیوائسوں کا ایسا مجموعہ جو آپس میں جڑ کر فائلیں، پرنٹر یا انٹرنیٹ جیسے وسائل شیئر کر سکے۔"
+  },
+  {
+    "term": "Network interface card",
+    "definition_en": "The built-in hardware that is each machine's doorway onto a network.",
+    "definition_ur": "وہ اندرونی ہارڈ ویئر جو ہر مشین کا نیٹ ورک میں داخل ہونے کا دروازہ ہے۔"
+  },
+  {
+    "term": "Switch",
+    "definition_en": "A network device that connects machines in one place and forwards each message only to the machine it is addressed to.",
+    "definition_ur": "نیٹ ورک ڈیوائس جو ایک جگہ کی مشینوں کو جوڑتی ہے اور ہر پیغام صرف اس مشین تک بھیجتی ہے جس کے نام کا ہے۔"
+  },
+  {
+    "term": "Router",
+    "definition_en": "The network device that connects one network to another, such as a school network to the internet line.",
+    "definition_ur": "نیٹ ورک ڈیوائس جو ایک نیٹ ورک کو دوسرے سے جوڑتی ہے، جیسے اسکول کے نیٹ ورک کو انٹرنیٹ لائن سے۔"
+  },
+  {
+    "term": "Wi-Fi",
+    "definition_en": "Wireless networking that takes an internet signal and converts it into radio waves, letting devices connect without cables.",
+    "definition_ur": "وائرلیس نیٹ ورکنگ جو انٹرنیٹ سگنل کو ریڈیو لہروں میں بدل دیتی ہے، جس سے ڈیوائسیں بغیر کیبل جڑ سکتی ہیں۔"
+  },
+  {
+    "term": "Protocol",
+    "definition_en": "A set of rules that governs how communication takes place on a network; machines can only talk when both follow the same rules.",
+    "definition_ur": "قواعد کا مجموعہ جو نیٹ ورک پر مواصلت کے طریقے کو متعین کرتا ہے؛ مشینیں صرف ایک ہی قواعد ماننے پر بات کر سکتی ہیں۔"
+  },
+  {
+    "term": "Buffer",
+    "definition_en": "A small holding area in memory where the operating system parks data in transit between a program and a device.",
+    "definition_ur": "میموری کا چھوٹا انتظار گاہ جہاں آپریٹنگ سسٹم پروگرام اور ڈیوائس کے درمیان سفر کرتا ڈیٹا رکھتا ہے۔"
+  },
+  {
+    "term": "Spooling",
+    "definition_en": "Queueing input/output jobs one after another, as print jobs do, so several requests can be made at once and completed in order.",
+    "definition_ur": "ان پٹ آؤٹ پٹ کے کاموں کو باری باری قطار میں لگانا، جیسے پرنٹ کے کام، تاکہ کئی درخواستیں ایک ساتھ دی جائیں اور ترتیب سے مکمل ہوں۔"
+  },
+  {
+    "term": "Device driver",
+    "definition_en": "A small piece of system software written for one specific device, translating the operating system's requests into that device's own commands.",
+    "definition_ur": "کسی ایک مخصوص ڈیوائس کے لیے لکھا گیا چھوٹا سسٹم سافٹ ویئر، جو آپریٹنگ سسٹم کی درخواستوں کو اسی ڈیوائس کے احکام میں بدلتا ہے۔"
+  },
+  {
+    "term": "File",
+    "definition_en": "A named collection of data stored by the operating system, identified by its name and extension, its folder path, and its metadata.",
+    "definition_ur": "آپریٹنگ سسٹم کے محفوظ کردہ ڈیٹا کا نام رکھا مجموعہ، جس کی شناخت نام و ایکسٹینشن، فولڈر کا راستہ اور میٹا ڈیٹا سے ہوتی ہے۔"
+  },
+  {
+    "term": "Process",
+    "definition_en": "A program in execution, with its address space, its registers and the files it has open; the unit the operating system schedules.",
+    "definition_ur": "چلتا ہوا پروگرام، اپنے ایڈریس اسپیس، رجسٹرز اور کھلی فائلوں کے ساتھ؛ یہی اکائی ہے جسے آپریٹنگ سسٹم باری دیتا ہے۔"
+  },
+  {
+    "term": "Kernel",
+    "definition_en": "The core of the operating system: the always-running layer that schedules processes, manages memory, controls devices through drivers, and exposes system calls.",
+    "definition_ur": "آپریٹنگ سسٹم کا مرکزی حصہ: ہمیشہ چلنے والی تہہ جو پروسیسز کو باری دیتی ہے، میموری سنبھالتی ہے، ڈرائیوروں کے ذریعے ڈیوائسیں کنٹرول کرتی ہے، اور سسٹم کالز فراہم کرتی ہے۔"
+  },
+  {
+    "term": "File management",
+    "definition_en": "The operating system's services over files: creating, naming, renaming, moving, copying and deleting them, keeping the folder tree, and tracking where each file's bytes sit on the disk.",
+    "definition_ur": "آپریٹنگ سسٹم کی فائلوں پر خدمات: بنانا، نام دینا، نام بدلنا، منتقل کرنا، کاپی کرنا اور ڈیلیٹ کرنا، فولڈر ٹری برقرار رکھنا، اور ہر فائل کے بائٹس کی جگہ کا ریکارڈ رکھنا۔"
+  },
+  {
+    "term": "Malware",
+    "definition_en": "Harmful software that gets onto a device to do damage or steal, such as a virus, ransomware or spyware.",
+    "definition_ur": "نقصان دہ سافٹ ویئر جو کسی ڈیوائس میں داخل ہو کر نقصان پہنچاتی یا چوری کرتی ہے، جیسے وائرس، رینسم ویئر یا اسپائی ویئر۔"
+  },
+  {
+    "term": "Virus",
+    "definition_en": "Malware that spreads by attaching itself to files and programs, usually arriving as an email attachment or download.",
+    "definition_ur": "وہ ملویئر جو فائلوں اور پروگراموں سے چپک کر پھیلتی ہے، عام طور پر ای میل اٹیچمنٹ یا ڈاؤن لوڈ کی شکل میں آتی ہے۔"
+  },
+  {
+    "term": "Ransomware",
+    "definition_en": "Malware that locks your files and demands money to unlock them.",
+    "definition_ur": "وہ ملویئر جو آپ کی فائلیں مقفل کر کے انہیں کھولنے کے بدلے پیسے مانگتی ہے۔"
+  },
+  {
+    "term": "Spyware",
+    "definition_en": "Malware that sits quietly on a device and reports what you do, including the passwords you type.",
+    "definition_ur": "وہ ملویئر جو ڈیوائس پر خاموشی سے بیٹھ کر آپ کے کام کی اطلاع دیتی ہے، بشمول آپ کے ٹائپ کیے پاس ورڈ۔"
+  },
+  {
+    "term": "Phishing",
+    "definition_en": "A message that looks like it is from a trusted source but leads you to a fake page or harmful link in order to capture your credentials.",
+    "definition_ur": "وہ پیغام جو بھروسے کے ذریعے سے لگتا ہے مگر آپ کو جعلی صفحے یا نقصان دہ لنک تک لے جاتا ہے تاکہ آپ کی شناخت چوری ہو۔"
+  },
+  {
+    "term": "Social engineering",
+    "definition_en": "An attack that needs no software: the attacker simply talks or tricks you into revealing information or acting.",
+    "definition_ur": "وہ حملہ جس میں سافٹ ویئر کی ضرورت نہیں: حملہ آور صرف بات یا دھوکے سے آپ سے معلومات نکلواتا ہے یا کام کرواتا ہے۔"
+  },
+  {
+    "term": "Pretexting",
+    "definition_en": "Social engineering by phone or message, where the attacker pretends to be an authorised person to get a password reset or information.",
+    "definition_ur": "فون یا پیغام کے ذریعے سوشل انجینئرنگ، جس میں حملہ آور خود کو مجاز شخص ظاہر کر کے پاس ورڈ یا معلومات حاصل کرتا ہے۔"
+  },
+  {
+    "term": "CIA triad",
+    "definition_en": "The three things security protects: confidentiality (access only for those allowed), integrity (information not altered), and availability (reachable when needed).",
+    "definition_ur": "سیکیورٹی کے تین محافظ: رازداری (رسائی صرف اجازت والوں کو)، درستگی (معلومات میں ردوبدل نہ ہو)، اور دستیابی (ضرورت پر دستیاب ہو)۔"
+  },
+  {
+    "term": "Digital footprint",
+    "definition_en": "The trail of data a person leaves online: the active part they publish and the passive part collected about them.",
+    "definition_ur": "آن لائن چھوڑی گئی ڈیٹا کا نشان: فعال حصہ جو آپ خود شائع کرتے ہیں اور غیر فعال حصہ جو آپ کے بارے میں اکٹھا کیا جاتا ہے۔"
+  },
+  {
+    "term": "Password manager",
+    "definition_en": "An application that generates and stores a different strong password for every account, locked behind one master password.",
+    "definition_ur": "وہ ایپلیکیشن جو ہر اکاؤنٹ کے لیے الگ مضبوط پاس ورڈ بناتی اور محفوظ رکھتی ہے، ایک ماسٹر پاس ورڈ کے پیچھے۔"
+  },
+  {
+    "term": "Authentication",
+    "definition_en": "The system's act of checking that you are who you claim to be, using something you know, something you have, or something you are.",
+    "definition_ur": "سسٹم کا یہ جانچنا کہ آپ وہی ہیں جس کا دعویٰ کرتے ہیں، اس سے کہ آپ کیا جانتے ہیں، کیا رکھتے ہیں، یا خود کیا ہیں۔"
+  },
+  {
+    "term": "Multi-factor authentication",
+    "definition_en": "Authentication that combines two different kinds of evidence, such as a password plus a code on your phone, so a stolen password alone opens nothing.",
+    "definition_ur": "تصدیق جو دو مختلف قسم کے ثبوت ملا کر کرتی ہے، جیسے پاس ورڈ اور فون پر کوڈ، تاکہ چوری شدہ پاس ورڈ اکیلا کچھ نہ کھول سکے۔"
+  },
+  {
+    "term": "Personal data",
+    "definition_en": "Any information that identifies a living person: name, photograph, phone number, address, marks, health notes, biometrics.",
+    "definition_ur": "کسی زندہ شخص کی شناخت کرنے والی کوئی بھی معلومات: نام، تصویر، فون نمبر، پتہ، نمبر، صحت کے نوٹس، بائیو میٹرکس۔"
+  },
+  {
+    "term": "Sensitive personal data",
+    "definition_en": "Personal data whose leakage harms more than it embarrasses: health records, religion, biometrics, financial details.",
+    "definition_ur": "وہ ذاتی ڈیٹا جس کے اگلنے سے صرف شرمندگی نہیں بلکہ نقصان ہوتا ہے: صحت کے ریکارڈ، مذہب، بائیو میٹرکس، مالی تفصیل۔"
+  },
+  {
+    "term": "Data protection",
+    "definition_en": "The principle and practice of treating personal data as belonging to the person it describes, with the holder as caretaker.",
+    "definition_ur": "یہ اصول اور عمل کہ ذاتی ڈیٹا اسی شخص کی ملکیت ہے جس کے بارے میں ہے، اور رکھنے والا محافظ ہے۔"
+  },
+  {
+    "term": "Consent",
+    "definition_en": "A freely given, informed agreement to the collection or use of one's data; a child cannot weigh consequences the way an adult can, so the duty on the school is heavier.",
+    "definition_ur": "اپنے ڈیٹا کے اکٹھے کرنے یا استعمال کے لیے آزادانہ اور باخبر اجازت؛ بچہ بالغ کی طرح نتائج نہیں تول سکتا، اس لیے اسکول کی ذمہ داری بھاری ہے۔"
+  },
+  {
+    "term": "Digital citizenship",
+    "definition_en": "The ability to participate in digital society safely, ethically and constructively, carrying rights and responsibilities that arrive together.",
+    "definition_ur": "ڈیجیٹل معاشرے میں محفوظ، اخلاقی اور تعمیری طور پر حصہ لینے کی صلاحیت، جس کے ساتھ حقوق اور ذمہ داریاں ساتھ ساتھ آتی ہیں۔"
+  },
+  {
+    "term": "Netiquette",
+    "definition_en": "The set of conventions for behaving well in written digital communication such as email, chat and forums, needed because text carries no tone.",
+    "definition_ur": "ای میل، چیٹ اور فورم جیسی تحریری مواصلت میں اچھے رویے کے اصول، ضروری اس لیے کہ تحریر لہجہ نہیں اٹھاتی۔"
+  },
+  {
+    "term": "Intellectual property",
+    "definition_en": "Property that derives from the work of the mind or intellect - ideas, inventions, processes and creative works - protectable through copyright, patents and trademarks.",
+    "definition_ur": "وہ ملکیت جو ذہن کے کام سے پیدا ہو - خیال، ایجاد، طریقہ کار اور تخلیقی کام - جو کاپی رائٹ، پیٹنٹ اور ٹریڈ مارک سے محفوظ ہوتی ہے۔"
+  },
+  {
+    "term": "Copyright",
+    "definition_en": "The protection given to songs, computer programs, books and other creative works, arriving automatically when the work is created and lasting a long time.",
+    "definition_ur": "گانوں، کمپیوٹر پروگراموں، کتابوں اور دیگر تخلیقی کاموں کو دیا جانے والا تحفظ، جو کام بننے پر خود بخود لگ جاتا ہے اور طویل عرصے تک رہتا ہے۔"
+  },
+  {
+    "term": "Patent",
+    "definition_en": "Legal protection for an invention, lasting about twenty years, requiring the invention to be original, non-obvious and useful.",
+    "definition_ur": "کسی ایجاد کا قانونی تحفظ، تقریبا بیس سال کے لیے، بشرطیکہ ایجاد نئی، غیر معمولی اور مفید ہو۔"
+  },
+  {
+    "term": "Trademark",
+    "definition_en": "A word, phrase, logo, shape or sound identifying the source of goods or services; it does not expire while it is used and defended.",
+    "definition_ur": "کوئی لفظ، جملہ، لوگو، شکل یا آواز جو سامان یا خدمات کے ذریعے کی شناخت کرے؛ استعمال اور دفاع جاری رہے تو اس کی میعاد ختم نہیں ہوتی۔"
+  },
+  {
+    "term": "Public domain",
+    "definition_en": "The state of a work whose copyright has expired or never applied: no restrictions at all on its use or distribution.",
+    "definition_ur": "وہ حالت جب کسی کام کا کاپی رائٹ ختم ہو چکا ہو یا کبھی لگا ہی نہ ہو: اس کے استعمال یا پھیلاؤ پر کوئی پابندی نہیں۔"
+  },
+  {
+    "term": "Fair use",
+    "definition_en": "A limitation on copyright law that allows the use of protected works without prior authorization in specific cases, weighed by four factors including purpose and market effect.",
+    "definition_ur": "کاپی رائٹ قانون کی وہ حد جو مخصوص صورتوں میں پہلے اجازت کے بغیر محفوظ کام کے استعمال کی اجازت دیتی ہے، چار عوامل کے موازنے سے، بشمول مقصد اور منڈی پر اثر۔"
+  },
+  {
+    "term": "Creative Commons",
+    "definition_en": "A family of licences under which creators permit reuse of their work in advance on stated conditions, sitting between full copyright and the public domain.",
+    "definition_ur": "اجازت ناموں کا خاندان جس میں تخلیق کار اپنے کام کے دوبارہ استعمال کی پہلے سے، بتائی گئی شرائط پر اجازت دیتے ہیں؛ یہ مکمل کاپی رائٹ اور پبلک ڈومین کے درمیان ہے۔"
+  },
+  {
+    "term": "Plagiarism",
+    "definition_en": "Presenting someone else's words, ideas or work as your own; wider than word-for-word copying, it includes synonym-swapping, uncited paraphrase, uncredited images and self-plagiarism.",
+    "definition_ur": "کسی اور کے الفاظ، خیال یا کام کو اپنا بتانا؛ لفظ بہ لفظ نقل سے وسیع، اس میں ہم معنی الفاظ بدلنا، بغیر حوالہ paraphrase، بغیر سہرے کی تصویر اور خود سرقہ شامل ہے۔"
+  },
+  {
+    "term": "Web browser",
+    "definition_en": "The application that asks for, receives and displays web pages, such as Chrome, Firefox, Safari or Edge.",
+    "definition_ur": "وہ ایپلیکیشن جو ویب صفحات مانگتی، واپس لاتی اور دکھاتی ہے، جیسے کروم، فائر فاکس، سفاری یا ایج۔"
+  },
+  {
+    "term": "Search engine",
+    "definition_en": "A website that keeps an index of the web and offers matching pages when you type words; its ranking mixes relevance, popularity and payment.",
+    "definition_ur": "وہ ویب سائٹ جو ویب کا اشاریہ رکھتی ہے اور الفاظ لکھنے پر مطابق صفحات تجویز کرتی ہے؛ اس کی ترتیب میں مطابقت، مقبولیت اور ادائیگی ملے ہوتے ہیں۔"
+  },
+  {
+    "term": "Online communication tool",
+    "definition_en": "Any application that carries communication over the internet - email, chat, video meetings, forums, learning platforms - each fitting different purposes.",
+    "definition_ur": "وہ ایپلیکیشن جو انٹرنیٹ پر مواصلت لیتی ہے - ای میل، چیٹ، ویڈیو میٹنگ، فورم، لرننگ پلیٹ فارم - ہر ایک الگ مقصد کے لیے۔"
+  },
+  {
+    "term": "Safe browsing",
+    "definition_en": "The practice of judging a website before trusting it: reading the domain, checking the padlock, judging the page's demands, and reaching account pages by a known address.",
+    "definition_ur": "ویب سائٹ پر بھروسے سے پہلے اس کی جانچ: ڈومین پڑھنا، پیڈ لاک دیکھنا، صفحے کی مانگ جانچنا، اور اکاؤنٹ کے صفحات تک جانا ہوا پتہ استعمال کرنا۔"
+  },
+  {
+    "term": "Domain name",
+    "definition_en": "The part of a web address before the first single slash that identifies the site's owner - the one part an attacker cannot fake cheaply.",
+    "definition_ur": "ویب پتے کا وہ حصہ جو پہلے واحد سلیش سے پہلے آتا ہے اور سائٹ کے مالک کی شناخت کرتا ہے - وہ واحد حصہ جو حملہ آور سستے میں جعلی نہیں بنا سکتا۔"
+  },
+  {
+    "term": "Artificial Intelligence",
+    "definition_en": "The field of building systems that perform tasks normally needing human intelligence, mostly by learning patterns from very large amounts of example data; it predicts rather than understands.",
+    "definition_ur": "وہ شعبہ جس میں ایسے نظام بنائے جاتے ہیں جو عام طور پر انسانی ذہانت والے کام کریں، زیادہ تر بہت زیادہ مثالوں سے نمونے سیکھ کر؛ یہ سمجھنے کے بجائے پیش گوئی کرتے ہیں۔"
+  },
+  {
+    "term": "Blockchain",
+    "definition_en": "A record-keeping design in which blocks of entries each carry a seal derived from the previous block, so old entries cannot be silently changed without breaking every later seal.",
+    "definition_ur": "ریکارڈ رکھنے کا وہ ڈیزائن جس میں ہر بلاک پچھلے بلاک سے نکلی مہر اٹھاتا ہے، تاکہ پرانے اندراج خاموشی سے بدلے تو ہر بعد کی مہر ٹوٹ جائے۔"
+  },
+  {
+    "term": "Internet of Things",
+    "definition_en": "The family of ordinary objects given sensors, small processors and a network connection, so they measure and report without a human typing anything.",
+    "definition_ur": "عام چیزوں کا وہ خاندان جنہیں سینسر، چھوٹے پروسیسر اور نیٹ ورک کنکشن دیا گیا ہے، تاکہ وہ بغیر کسی انسانی ٹائپنگ کے ناپ اور اطلاع دیں۔"
+  },
+  {
+    "term": "Virtual reality",
+    "definition_en": "Technology that replaces the world: a headset covers the eyes and ears and the wearer stands inside a computer-generated environment.",
+    "definition_ur": "وہ ٹیکنالوجی جو دنیا کو بدل دیتی ہے: ہیڈ سیٹ آنکھوں کانوں پر رکھتا ہے اور پہننے والا کمپیوٹر کی بنی دنیا کے اندر کھڑا ہوتا ہے۔"
+  },
+  {
+    "term": "Augmented reality",
+    "definition_en": "Technology that adds to the world: looking through a phone or glasses at the real classroom, digital objects appear within it.",
+    "definition_ur": "وہ ٹیکنالوجی جو دنیا میں اضافہ کرتی ہے: فون یا چشمے سے حقیقی کلاس روم دیکھیں تو اس کے اندر ڈیجیٹل چیزیں نظر آنے لگتی ہیں۔"
+  },
+  {
     "term": "Vocabulary building",
     "definition_en": "The deliberate process of expanding the words you can use accurately, most effectively through contextual usage rather than memorising word lists.",
     "definition_ur": "الفاظ کو درست طریقے سے استعمال کرنے کی صلاحیت کو بڑھانے کا ایک منظم عمل، جس میں الفاظ کو سیاق و سباق میں سیکھنا ان کی فہست یاد کرنے سے زیادہ مؤثر ہے۔"

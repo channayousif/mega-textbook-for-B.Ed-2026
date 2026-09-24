@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "course_code": "GICT-300",
+  "unit_no": 2,
+  "locale": "ur",
+  "base": "http://127.0.0.1:4622",
+  "route": "/ur/semester-1/gict-300/unit-02",
+  "pages": [
+    "index",
+    "topic-01",
+    "topic-02",
+    "topic-03",
+    "topic-04",
+    "unit-assessment",
+    "unit-teacher-notes"
+  ],
+  "figures": [
+    "fig-U2-1",
+    "fig-U2-2",
+    "fig-U2-3",
+    "fig-U2-4",
+    "fig-U2-5",
+    "fig-U2-6",
+    "fig-U2-7",
+    "fig-U2-8"
+  ],
+  "viewports": [
+    "1280x900",
+    "360x780",
+    "A4 794x1123 print"
+  ],
+  "defects": [
+    "fig-U2-4.ur: text \"ہر قطار پڑھ کر تینوں قسموں کی میمو\" overlaps the wordmark",
+    "fig-U2-4.ur.dark: text \"ہر قطار پڑھ کر تینوں قسموں کی میمو\" overlaps the wordmark",
+    "fig-U2-5.ur: text \"ٹھوس اور ہٹی ہوئی سرخیاں تحریری لی\" overlaps the wordmark",
+    "fig-U2-5.ur.dark: text \"ٹھوس اور ہٹی ہوئی سرخیاں تحریری لی\" overlaps the wordmark"
+  ],
+  "exit_code": 1,
+  "generated_at": "2026-09-23T22:37:27.146Z"
+}
