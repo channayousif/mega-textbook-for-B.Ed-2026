@@ -1,0 +1,3 @@
+### npm run check:depth-gate
+✓ Depth gate passed (concept coverage, required blocks, formative floor, reading-minutes band, coverage↔sources consistency).
+check:depth-gate exit=0
