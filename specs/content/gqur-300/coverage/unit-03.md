@@ -9,9 +9,8 @@ key it is grounded in.
 |---|---|---|---|
 | U3-01 | topic-01.mdx | Variables and algebraic expressions | openstax-prealgebra |
 | U3-04 | topic-01.mdx | Patterns and sequences | ncm |
-| U3-04 | topic-01.mdx | Patterns and sequences | openstax-prealgebra |
 | U3-04 | topic-01.mdx | Patterns and sequences | gula2025 |
 | U3-02 | topic-02.mdx | Linear equations | openstax-prealgebra |
-| U3-03 | topic-02.mdx | Linear inequalities | openstax-prealgebra |
+| U3-03 | topic-02.mdx | Linear inequalities | no-source-u3-3 |
 | U3-05 | topic-03.mdx | Use of algebra in problem solving | openstax-prealgebra |
 | U3-05 | topic-03.mdx | Use of algebra in problem solving | ncm |

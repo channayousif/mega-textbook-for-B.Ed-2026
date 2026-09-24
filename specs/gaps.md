@@ -851,3 +851,26 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   the `**Mapped readings**` lines of Units 2-6~~ **unblocked** by the owner ruling of 2026-09-23
   and the NCC check. The `steen2001` locator repair landed at commit 139876c; the remaining
   mechanical repairs from `D-2026-0041` landed at c72199e.
+
+---
+
+## G-2026-29 - GQUR-300 Unit 3: Linear inequalities (U3-03) has no verifiable external source in the course's source set
+
+- **Status:** open
+- **Gate:** G3 English review (sources criterion), advisory
+- **Source:** GQUR-300 Unit 3 G3 review run001 (2026-09-24)
+- **Criterion:** `sources` (G3).
+- **Detail:** The guide lists "Linear equations and inequalities" as one sub-topic
+  (`Scheme-and-Course-guides/extracted-text/1st 2026.txt:585`). The Unit 3 G3 review
+  (run001) verified that OpenStax *Prealgebra 2e* - the course's only algebra source -
+  contains no inequalities chapter (11-chapter ToC checked), and the NCC documents' text
+  layer cannot be read on this host to verify strand content beyond titles and grade
+  coverage. The sub-topic is therefore covered from the guide text and general mathematics
+  knowledge, recorded as a `no-external-source` row in `sources/unit-03.md` per the
+  author-unit skill's rule, and escalated here rather than inventing a citation.
+- **Needed, and from whom:** the curriculum owner, to either confirm an accessible source
+  that covers linear inequalities at the right level (for example OpenStax *Elementary
+  Algebra 2e*, which would need adding to the content-spec reading list), or accept the
+  no-external-source posture for this sub-topic.
+- **Blocks:** nothing in the automated gates; the G3 sources criterion for Unit 3 records
+  the gap explicitly. The English content itself is complete and internally verified.

@@ -1,0 +1,112 @@
+G3 independent assessment working - GQUR-300 Unit 4 (Measurement and Geometry)
+Reviewer run: agent-g3-gqur300-u4-run001. Date: 2026-09-23/24 (UTC 2026-09-24T00:3x).
+Method: each item was solved from the mathematics and the topic passage it rests on,
+then compared against the supplied key/rubric. Discrepancies are recorded without
+rewriting the bank.
+
+MCQs (derived answer -> supplied key)
+1. 2.5 m x 100 = 250 cm -> b. AGREE. Distractors: a 25 (x10 slip), c 2,500 (x1000 slip),
+   d 0.25 (/100). Plausible.
+2. A measurement is a number-unit pair; "500" names no unit -> b. AGREE.
+3. 15 m = 1,500 cm; 1,500 / 250 = 6 -> a. AGREE. Distractor b (17) is the wrong-order
+   division 250 / 15 = 16.67 -> 17; d (60) is 15 / 0.25 (converting the roll to 0.25 m
+   and dividing the wrong way). Plausible. NOTE: topic-01.mdx:56-57 describes the 17-roll
+   mistake as "dividing 15 by 250 directly", but 15 / 250 = 0.06; the 17 outcome arises
+   from 250 / 15. See finding on the worked example.
+4. 2 x (8 + 6) = 28 m -> c. AGREE. a 48 is the area (quantity confusion), b 14 is
+   half-perimeter, d 16 is 8+6+2? (weak but harmless).
+5. 8 x 6 = 48 sq m -> a. AGREE. b 28 is the perimeter, d 480 is a x10 slip.
+6. Triangle = half its enclosing rectangle -> b. AGREE.
+7. 2 x 1 x 1.5 = 3 cubic metres -> b. AGREE. a 4.5 is 2+1+1.5 (adding), c is a unit
+   error, d 450 litres is a conversion error.
+8. Corridor 2x20: area 40, perimeter 44. Room 6x7: area 42, perimeter 26. Corridor more
+   perimeter, room more area -> c. AGREE.
+9. Skirting runs along the boundary -> c (perimeter). AGREE.
+10. choose, measure, compute, check -> b. AGREE.
+MCQ key agreement: 10/10.
+
+RRQs (derived answer vs model answer)
+1. (a) 3.4 x 100 = 340 cm; (b) 5,600 / 1,000 = 5.6 L; (c) 0.9 x 1,000 = 900 g. Model
+   (340 cm, 5.6 L, 900 g), 1 mark each, total 3. AGREE.
+2. Bare number lacks a unit; a water tank's "500" most plausibly means 500 litres or
+   500 millilitres. Model matches; 2 marks (1 number-unit point, 1 both units). AGREE.
+3. Perimeter 2 x (9 + 5) = 28 m; area 9 x 5 = 45 sq m. Model matches; 2 marks
+   (1 values, 1 units). AGREE.
+4. (1.2 x 0.8) / 2 = 0.48 sq m; the half comes from the triangle being half its
+   enclosing rectangle. Model matches; 2 marks. AGREE.
+5. Circumference 2 x 3.14 x 4 = 25.12 m; area 3.14 x 4^2 = 50.24 sq m. Model matches;
+   2 marks. AGREE.
+6. Area 6 x 3 = 18 sq m; 18 / 10 = 1.8 -> buy 2 litres; rounds up because paint is sold
+   in whole litres. Model matches; 2 marks. AGREE.
+7. 4,800 sq m classroom is impossible (a classroom is roughly 10 x 10 = 100 sq m); the
+   error is a unit slip at the measure/choose move; the round-number check catches it.
+   Model says "choose-or-measure move (a unit slip)" and gives the same check. AGREE
+   (the model's hedge over two moves is acceptable marking guidance).
+8. Circle: every point at one fixed distance (radius) from a centre; circumference needs
+   the radius (or diameter). Model matches; 2 marks. AGREE.
+9. 1.5 x 1 x 1 = 1.5 cubic metres = 1,500 litres. Model matches; 2 marks. AGREE.
+10. (a) lace border = perimeter, metres; (b) marble floor = area, square metres;
+    (c) water for a drum = volume/capacity, litres. Model matches; 3 marks. AGREE.
+RRQ agreement: 10/10.
+
+ERQs (derived answer vs rubric)
+1. Rice: 120 x 75 g = 9,000 g = 9 kg; 9 / 25 < 1 so order 1 sack with 25 - 9 = 16 kg
+   left over; cost 1 x 4,200 = 4,200 rupees; check: 9 kg is well under one 25 kg sack.
+   Rubric matches (Total 0-2, Sacks 0-2, Cost and check 0-2; total 6). AGREE.
+2. Fence 2 x (12 + 8) = 40 m; carpet 5 x 4 = 20 sq m; tank pi r^2 h = 3.14 x 1 x 1 x 2
+   = 6.28 cubic metres = 6,280 litres; estimate check: a 2x2x2 box holds 8,000 L.
+   Rubric matches (4 x 0-2 = 8). AGREE.
+3. Carpet 3 x 2 = 6 sq m; skirting along the two walls 3 + 2 = 5 m; shelves 250 x 2.5 cm
+   = 625 cm = 6.25 m; 6.25 / 0.8 = 7.8125 -> 8 shelves; a single 4-shelf bookcase
+   leaves 4 shelves short. Rubric matches (4 x 0-2 = 8). AGREE.
+4. Skirting 2 x (30 + 20) = 100 m (outer rectangle); tiles 600 - 20 = 580 sq m.
+   DISCREPANCY - the Re-measure analysis rubric is inverted. With the store's SIZE
+   fixed, the open (tileable) area is 600 - 20 = 580 sq m wherever the store sits: the
+   rubric's own Tiles criterion computes exactly this, with no position term. The
+   quantity that varies with the store's position is the skirting line around the open
+   region (a mid-wall notch adds about 2 x 4 = 8 m of detour versus a corner placement,
+   and the rubric's own Skirting criterion concedes the notch "adds or subtracts a few
+   metres"). The rubric instead awards 0-3 for asserting "the tiles depend on the open
+   area, which changes with the store's position ... the boundary is unaffected by where
+   the store sits inside it" - the opposite of the arithmetic, and internally
+   contradictory with the rubric's own Skirting and Tiles criteria. A trainee giving
+   the correct analysis (tiles invariant; skirting position-sensitive) would be marked
+   down. BLOCKING.
+5. Practicum plan evaluation (four moves, weakest move, teacher's verdict, communication
+   change). Rubric 5 x 0-2 = 10, Evaluate demand. Sound; depends on the Topic 4.3
+   practicum task having been done, which the unit schedules. AGREE.
+
+Topic-level formative and summative items (spot re-derivation)
+- topic-01 CYU: (a) 340 cm (b) 5.6 L (c) 900 g; 6 rolls; "500" lacks a unit (500 L or
+  500 mL); round tablecloth -> circle + radius/diameter, dupatta lace -> rectangle +
+  length and width. All sound.
+- topic-01 Summative: 9 kg, 1 sack / 16 kg left, 4,200 rupees. Sound.
+- topic-02 CYU: 28 m / 45 sq m; 3 sq m flower bed; 1.5 m^3 = 1,500 L; 25.12 m / 50.24
+  sq m; corridor vs room. All sound.
+- topic-02 Summative: 40 m; 20 sq m; 6.28 m^3 = 6,280 L. Sound.
+- topic-03 CYU: four moves; 8 x 2.5 = 20 sq m -> 2 L; lace=perimeter/m, marble=area/sq
+  m, drum=volume/L; 4,800 sq m -> measure/choose slip + round-number check; 14 shelves.
+  All sound.
+- topic-03 Summative: 6 sq m; 5 m; 8 shelves. Sound.
+- Misconception numbers: corridor 40/44 vs room 42/26 correct; 0.75 kg = 750 g correct;
+  1.5 L = 1,500 mL correct.
+- Worked examples: bunting 6 rolls correct BUT the aside describing the classic mistake
+  ("dividing 15 by 250 directly and ordering 17 rolls") is arithmetically false:
+  15 / 250 = 0.06; the 17-roll error comes from 250 / 15 = 16.67 -> 17. BLOCKING
+  (topic-01.mdx:56-57; echoed by unit-teacher-notes.mdx:68-69 "MCQ-03 punishes dividing
+  before converting", which is defensible on its own but rests on the same example).
+
+Blueprint and demand
+- Counts: 10 MCQ / 10 RRQ / 5 ERQ (gate-checked). Per-topic MCQ distribution 3 / 6 / 1;
+  RRQ 2 / 5 / 3. Topic 4.3 carries 1 MCQ, below the ">= 2 MCQ per topic" floor, under
+  the content-spec's parenthetical "(Topic 4.3 may carry fewer where items integrate
+  earlier sub-topics)". RRQ floor met for all topics. Recorded as advisory.
+- Bloom bands: MCQs Remember->Apply (1,10 Remember; 2,6,9 Understand; rest Apply);
+  RRQs Understand->Analyze (2,8,10 Understand; 7 Analyze; rest Apply); ERQs
+  Analyze->Evaluate (1-4 Analyze, 5 Evaluate). Matches the blueprint. Each topic's
+  Summative task carries one Analyze-or-higher criterion. Classifications re-derived
+  from the thinking required: RRQ-07 (diagnose the failing move) and topic-02 CYU-5 /
+  topic-03 CYU-4 (compare/attribute) genuinely demand Analyze; ERQ-5 (evaluate own plan)
+  genuinely demands Evaluate.
+- Mark totals: ERQ-1 6, ERQ-2 8, ERQ-3 8, ERQ-4 8 (2+2+3+1), ERQ-5 10. Arithmetic of
+  each rubric's stated total verified.
