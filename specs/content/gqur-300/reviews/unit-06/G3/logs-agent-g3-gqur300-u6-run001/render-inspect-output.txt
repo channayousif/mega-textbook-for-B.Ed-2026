@@ -1,0 +1,80 @@
+
+=== index @360 ===
+title: Quantitative Reasoning in Everyday Life | B.Ed Mega Textbook
+page horizontal overflow: 0px (none)
+headings: 5 h1-h3 nodes; first: H1: Quantitative Reasoning in Everyday Life
+figures: 0
+tables: 0
+unnamed links: 1; empty-alt imgs: 0
+
+=== topic-01 @360 ===
+title: Topic 6.1 - Financial literacy: profit, loss, interest and budgeting | B.Ed Mega Textbook
+page horizontal overflow: 0px (none)
+headings: 13 h1-h3 nodes; first: H1: Topic 6.1 - Financial literacy: profit, loss, interest and b
+figures: 4
+  img loaded=true natural=249x150 rendered=328x198 lazy=lazy alt="Flowchart of building a monthly budget: income, fixed costs, variable ..."
+  img loaded=false natural=0x0 rendered=0x0 lazy=lazy alt="Flowchart of building a monthly budget: income, fixed costs, variable ..."
+  img loaded=true natural=249x150 rendered=328x198 lazy=lazy alt="Table of four financial terms with what each measures and a worked rup..."
+  img loaded=false natural=0x0 rendered=0x0 lazy=lazy alt="Table of four financial terms with what each measures and a worked rup..."
+tables: 0
+unnamed links: 1; empty-alt imgs: 0
+
+=== topic-02 @360 ===
+title: Topic 6.2 - Quantitative reasoning in media and advertisements | B.Ed Mega Textbook
+page horizontal overflow: 0px (none)
+headings: 11 h1-h3 nodes; first: H1: Topic 6.2 - Quantitative reasoning in media and advertisemen
+figures: 4
+  img loaded=true natural=249x150 rendered=328x198 lazy=lazy alt="Diagram of two bar charts of the same survey data: the advertised vers..."
+  img loaded=false natural=0x0 rendered=0x0 lazy=lazy alt="Diagram of two bar charts of the same survey data: the advertised vers..."
+  img loaded=true natural=249x150 rendered=328x198 lazy=lazy alt="Table of five questions to ask of a numeric claim in media, each with ..."
+  img loaded=false natural=0x0 rendered=0x0 lazy=lazy alt="Table of five questions to ask of a numeric claim in media, each with ..."
+tables: 0
+unnamed links: 1; empty-alt imgs: 0
+
+=== topic-03 @360 ===
+title: Topic 6.3 - Decision-making with data in education and society | B.Ed Mega Textbook
+page horizontal overflow: 0px (none)
+headings: 12 h1-h3 nodes; first: H1: Topic 6.3 - Decision-making with data in education and socie
+figures: 4
+  img loaded=true natural=249x150 rendered=328x198 lazy=lazy alt="Concept map of decision-making with data: a central decision node with..."
+  img loaded=false natural=0x0 rendered=0x0 lazy=lazy alt="Concept map of decision-making with data: a central decision node with..."
+  img loaded=true natural=249x150 rendered=328x198 lazy=lazy alt="Table of five education and society indicators with what each measures..."
+  img loaded=false natural=0x0 rendered=0x0 lazy=lazy alt="Table of five education and society indicators with what each measures..."
+tables: 0
+unnamed links: 1; empty-alt imgs: 0
+
+=== unit-assessment @360 ===
+title: Unit 6 assessment | B.Ed Mega Textbook
+page horizontal overflow: 0px (none)
+headings: 10 h1-h3 nodes; first: H1: Unit 6 assessment
+figures: 0
+tables: 0
+unnamed links: 1; empty-alt imgs: 0
+
+=== unit-teacher-notes @360 ===
+title: Unit 6 teacher notes | B.Ed Mega Textbook
+page horizontal overflow: 0px (none)
+headings: 8 h1-h3 nodes; first: H1: Unit 6 teacher notes
+figures: 0
+tables: 0
+unnamed links: 1; empty-alt imgs: 0
+
+=== desktop 1280 screenshots saved for all 6 pages ===
+
+=== index @A4 print === page overflowX=0px; figures: none
+
+=== topic-01 @A4 print === page overflowX=0px; figures: w=762, w=762
+
+=== topic-02 @A4 print === page overflowX=0px; figures: w=762, w=762
+
+=== topic-03 @A4 print === page overflowX=0px; figures: w=762, w=762
+
+=== unit-assessment @A4 print === page overflowX=0px; figures: none
+
+=== unit-teacher-notes @A4 print === page overflowX=0px; figures: none
+
+=== dark mode (topic-01) === data-theme=dark
+  img src: http://localhost:4173/img/figures/gqur-300/unit-06/fig-U6-1.svg
+  img src: http://localhost:4173/img/figures/gqur-300/unit-06/fig-U6-1.dark.svg
+  img src: http://localhost:4173/img/figures/gqur-300/unit-06/fig-U6-2.svg
+  img src: http://localhost:4173/img/figures/gqur-300/unit-06/fig-U6-2.dark.svg
