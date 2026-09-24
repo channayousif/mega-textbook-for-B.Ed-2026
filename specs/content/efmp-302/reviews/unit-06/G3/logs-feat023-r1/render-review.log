@@ -1,0 +1,92 @@
+### render-review (host browser/print inspection record) - EFMP-302 Unit 6, feat023-r1
+### reviewer run: agent-g3-efmp302-u6-feat023-r1   date: 2026-09-24
+### rendered input identity: build/ regenerated at worktree HEAD 15ee421
+###   (npm run build, exit 0, BOTH locales: "build" and "build/ur"; log: build.log)
+### served at http://127.0.0.1:8124 (python3 -m http.server, build/ root)
+### browser: bundled Chromium via playwright-core (render-inspect reports
+###   chromium 149.0.7827.0; all scripts below used the same runtime)
+### viewports: desktop 1280x900, narrow 360x740 and 360x780, print 794px A4
+###   (emulateMedia print, PDF + PNG artifacts)
+
+The inspection ran as five real executions, each with its own log in this
+directory; this file is the composite record the report cites as `render-review`.
+
+1. render-inspect.mjs (log: render-inspect.log, exit 1)
+   - Full-page desktop/narrow/print inspection of all six unit pages:
+     headings (no skipped levels anywhere), image alt text (all 16 figure imgs
+     carry non-empty alt identical to the figure manifest's Alt text column),
+     no vague link text, no document-level horizontal overflow at 360px on any
+     page, A4 print with clippedElems=0 on every page and all four answer
+     headings present on unit-assessment.
+   - Narrow 360px scroll measurement taken ON THE SCROLLER ITSELF (g3.md rule):
+     the five ERQ rubric tables on unit-assessment are TABLE elements with
+     clientWidth 328 vs scrollWidth 439-524, tabindex="0", role="region",
+     aria-label "Scrollable table, scroll sideways to see all columns"; the
+     topic figures are FIGURE.figure elements with client 328 vs scroll
+     880-936. Content is swipe-reachable; keyboard attributes present.
+   - ONE DEFECT FLAGGED, exit 1: "topic-03: visible image did not load:
+     /img/figures/efmp-302/unit-06/fig-U6-6.svg". Investigated and DISMISSED
+     with evidence - see item 2. Not a content defect.
+   - SVG text geometry pass (its section D): all 16 unit-06 SVGs clean for
+     viewBox overflow and wordmark overprint.
+
+2. fig-u6-6-load-check.mjs (log: fig-u6-6-load-check.log, exit 0)
+   - fig-U6-6 sits 3912px down topic-03 (the unit's longest page). Before
+     scrolling, the lazy image is legitimately unfetched: naturalWidth 0,
+     complete=false. After scrollIntoView + networkidle: HTTP 200, natural
+     300x147, complete=true, shown=true; zero failed requests. All other
+     figures on all four topic pages load (dark variants 0x0 = correctly
+     display:none under the light theme).
+   - VERDICT: the render-inspect defect was a lazy-load measurement race
+     (naturalWidth read before the deep-page lazy fetch), not a broken asset.
+     In-page screenshot saved: renders-feat023-r1/fig-U6-6-inpage-desktop.png.
+
+3. figure-geometry-overlap.mjs (log: figure-geometry-overlap.log, exit 0;
+   data: figure-geometry-overlap.json) - the G-2026-62 follow-up instrument.
+   - Loaded all 16 committed SVGs (8 figures x light+dark) directly in
+     Chromium and measured the rendered bounding box of every leaf text node
+     (tspan where present, else <text>) in SVG user units.
+   - TEXT-ON-TEXT SUPERPOSITION: 0 pairs in all 16 files (0 near-mises).
+   - WORDMARK COLLISION: 0 in all 16 files. VIEWBOX ESCAPE: 0 in all 16.
+   - RECT ESCAPE (text wider than its enclosing box): fig-U6-2, both variants,
+     4 of 6 dashed "rules out" boxes - "training away from the pupils you
+     teach" +25.2 units past the box edge, "generic sessions on teaching in
+     general" +23.7, "advice about a lesson nobody watched" +20.2, "the
+     assigned course nobody asked for" +15.4 (run-007 X2, confirmed live,
+     advisory: nothing clipped, no collision, meaning recoverable). fig-U6-3,
+     both variants: the two transition labels graze the adjacent stage-box
+     fill by 7-10px (new, cosmetic, advisory).
+   - NEGATIVE CONTROL (log: negative-control-b8f8ffe.log, exit 0): the same
+     instrument run on the b8f8ffe-era bytes of fig-U6-2 and fig-U6-6 flags 25
+     text-on-text superpositions (stacked-baseline collisions exactly as
+     G-2026-62 describes). The instrument detects the damage class, so the
+     zero-defect result on the current (69bae9e-reverted) bytes is meaningful.
+
+4. figure-displayed-size.mjs (log: figure-displayed-size.log, exit 0)
+   - Desktop 1280x900: table-archetype figures display at 640px wide
+     (fig-U6-5 scale 0.684, ~7.5px effective for 11px body text; fig-U6-1/2/4/7
+     ~0.69-0.71); timeline/flowchart carriers at 703px (0.78-0.80, ~8.6-8.8px).
+     Matches run-007 X3; advisory, carried.
+   - Narrow 360x740: figures display at full intrinsic width (880-936px)
+     inside the 328px scroll container - text is at ~1:1 scale on mobile,
+     larger than desktop, and swipe-reachable.
+
+5. pixel-probe.py (log: pixel-probe.log, exit 0)
+   - fig-U6-2 escape strip (x881-906, right of the dashed edge): 11.0% dark
+     ink on 80.4% light background - the escaped label text is fully inked and
+     legible outside the box, same ink density as the in-box portion (9.2%).
+   - fig-U6-3 transition-label graze: 30-35% ink over the light stage fill -
+     legible.
+   - Dark variants genuinely render dark (fig-U6-1 panel interior 100% dark
+     pixels in the dark variant vs 100% light in the light variant).
+
+Artifacts (renders-feat023-r1/): render-inspect desktop/narrow PNGs for all
+six pages, print PDFs for all six pages, per-figure geometry PNGs for all 16
+SVG variants, fig-U6-6-inpage-desktop.png.
+
+Session limitation, disclosed: the reviewer's image-viewing tool returned no
+visual content for PNGs in this session, so no subjective eyeball pass was
+possible. The inspection above is therefore entirely numeric/DOM/pixel
+measurement of the actual rendered pages (geometry, ink density, naturalWidth,
+scrollWidth, heading order, alt text, clipping), which is what the rubric's
+accessibility checks name; the artifacts are saved for any human audit.
