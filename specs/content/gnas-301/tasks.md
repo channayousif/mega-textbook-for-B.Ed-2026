@@ -29,17 +29,17 @@ units may be authored.
 | Unit 2 | G6 assets | ▢ | | |
 | Unit 2 | G7 publish | ▢ | | |
 | Unit 3 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0020 + owner resolutions G-2026-22/G-2026-23 + floor D-2026-0021; content-spec status: approved |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-03/G2/20260924T040955691Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-03/G2/20260924T080841561Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | advisory rounds 1-2: round-2 PASS; report reviews/unit-03/G3/round-02/agent-g3-gnas301-u3-run002.json (disposition pass, advisory) |
 | Unit 3 | G4 ur-translation | ✅ | auto:g4 | all 7 Urdu mirror files at i18n/ur/.../gnas-301/unit-03/, 2026-09-24; heading parity exact, terminology-bank-driven, .ur.svg figure variants, zero em-dash; translation_status stays draft pending G5 |
-| Unit 3 | G5 ur-review | ▢ | | |
+| Unit 3 | G5 ur-review | ▢ | | advisory round 1: revise (1 blocking, 11 advisory); report reviews/unit-03/G5/agent-g5-gnas301-u3-run001.json; blocking finding and advisories repaired post-report |
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
 | Unit 4 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0020 + owner resolutions G-2026-22/G-2026-23 + floor D-2026-0021; content-spec status: approved |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-04/G2/20260924T015524885Z-gates.json|
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-04/G2/20260924T080844786Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | advisory rounds 1-2: revise; reports reviews/unit-04/G3/agent-g3-gnas301-u4-run001.json + round-02/agent-g3-gnas301-u4-run002.json; round-2 blocking findings (phantom abbasi2022 U4-08/U4-09, phantom who-mental-health-work U4-10) repaired post-report; two-cycle limit reached, third cycle owner-gated (G-2026-31) |
 | Unit 4 | G4 ur-translation | ✅ | auto:g4 | all 10 Urdu mirror files at i18n/ur/.../gnas-301/unit-04/, 2026-09-24; heading parity exact, terminology-bank-driven, .ur.svg figure variants, zero em-dash; translation_status stays draft pending G5 |
-| Unit 4 | G5 ur-review | ▢ | | |
+| Unit 4 | G5 ur-review | ▢ | | advisory round 1: escalate (6 blocking, 8 advisory); report reviews/unit-04/G5/agent-g5-gnas301-u4-run001.json; 5 content blockings repaired post-report, dependency escalation folded into G-2026-34's owner question |
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
 | Unit 5 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0020 + owner resolutions G-2026-22/G-2026-23 + floor D-2026-0021; content-spec status: approved |
