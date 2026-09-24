@@ -1,0 +1,4 @@
+Report structurally valid: escalate. This does not authorize gate completion.
+exit_code=0
+Report structurally valid: escalate. This does not authorize gate completion.
+final_validation_exit=0

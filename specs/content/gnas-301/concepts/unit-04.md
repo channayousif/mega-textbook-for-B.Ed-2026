@@ -13,18 +13,18 @@ flag** (see the list at the foot of this file).
 
 | Concept ID | Label EN | Label UR | Prerequisites | Topic | SLO refs | Assessment item IDs |
 |---|---|---|---|---|---|---|
-| CON:GNAS-301-4-1 | Sector hazard portraits | شعبوں کے خطرے کے نقشے | - | 4.1 | SLO:GNAS-301-4-1 | MCQ-01, RRQ-01, ERQ-01 |
+| CON:GNAS-301-4-1 | Sector hazard portraits | شعبوں کے خطرے کے خاکے | - | 4.1 | SLO:GNAS-301-4-1 | MCQ-01, RRQ-01, ERQ-01 |
 | CON:GNAS-301-4-2 | Incident grades | واقعے کے درجے | CON:GNAS-301-4-1 | 4.1 | SLO:GNAS-301-4-1 | MCQ-02, RRQ-02 |
 | CON:GNAS-301-4-3 | PDCA cycle | پی ڈی سی اے چکر | - | 4.2 | SLO:GNAS-301-4-1 | MCQ-03, RRQ-03 |
-| CON:GNAS-301-4-4 | Regulatory ladder | قوانین کا زینہ | - | 4.3 | SLO:GNAS-301-4-2 | MCQ-04, RRQ-04 |
+| CON:GNAS-301-4-4 | Regulatory ladder | قوانین کی سیڑھی | - | 4.3 | SLO:GNAS-301-4-2 | MCQ-04, RRQ-04 |
 | CON:GNAS-301-4-5 | Internal control layers | اندرونی کنٹرول کی تہیں | CON:GNAS-301-4-4 | 4.3 | SLO:GNAS-301-4-2 | RRQ-04, ERQ-02 |
 | CON:GNAS-301-4-6 | Duties triangle and rights | فرائض کا مثلث اور حقوق | - | 4.4 | SLO:GNAS-301-4-2 | MCQ-05, RRQ-05, ERQ-02 |
-| CON:GNAS-301-4-7 | OHS professional role web | پروفیشنل کا کردار جال | CON:GNAS-301-4-6 | 4.4 | SLO:GNAS-301-4-2 | ERQ-02 |
+| CON:GNAS-301-4-7 | OHS professional role web | او ایچ ایس پیشہ ور کا کردار جالا | CON:GNAS-301-4-6 | 4.4 | SLO:GNAS-301-4-2 | ERQ-02 |
 | CON:GNAS-301-4-8 | Management functions in HSE | ایچ ایس ای میں انتظامی افعال | CON:GNAS-301-4-3 | 4.5 | SLO:GNAS-301-4-3 | - |
 | CON:GNAS-301-4-9 | Incident pyramid and Swiss cheese | واقعات کا ہرم اور سوئس پنیر | CON:GNAS-301-4-8 | 4.5 | SLO:GNAS-301-4-3 | MCQ-06, MCQ-07, RRQ-06, RRQ-07, ERQ-03 |
-| CON:GNAS-301-4-10 | Organizational environment | ادارے کا ماحول | CON:GNAS-301-4-9 | 4.5 | SLO:GNAS-301-4-3 | ERQ-03 |
-| CON:GNAS-301-4-11 | HSE plan steps | ایچ ایس ای پلان کے مرحلے | CON:GNAS-301-4-4 | 4.6 | SLO:GNAS-301-4-3 | MCQ-08, RRQ-08, ERQ-04, ERQ-05 |
-| CON:GNAS-301-4-12 | Quiet exposures and the toolbox | خاموش خطرے اور اوزار | CON:GNAS-301-4-1 | 4.7 | SLO:GNAS-301-4-3 | MCQ-09, MCQ-10, RRQ-09, RRQ-10, ERQ-05 |
+| CON:GNAS-301-4-10 | Organizational environment | تنظیمی ماحول | CON:GNAS-301-4-9 | 4.5 | SLO:GNAS-301-4-3 | ERQ-03 |
+| CON:GNAS-301-4-11 | HSE plan steps | ایچ ایس ای منصوبہ کے مرحلے | CON:GNAS-301-4-4 | 4.6 | SLO:GNAS-301-4-3 | MCQ-08, RRQ-08, ERQ-04, ERQ-05 |
+| CON:GNAS-301-4-12 | Quiet exposures and the toolbox | خاموش واقفیت اور اوزار | CON:GNAS-301-4-1 | 4.7 | SLO:GNAS-301-4-3 | MCQ-09, MCQ-10, RRQ-09, RRQ-10, ERQ-05 |
 
 ## Authored Urdu labels (G5 review list)
 

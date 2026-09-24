@@ -1,0 +1,5 @@
+prepared entries: 157, current entries: 157
+missing from current: 0
+extra in current: 0
+digest mismatches: 0
+required_criteria: ["authority","sources","coverage","assessment","accessibility","completeness","semantics","terminology","register","rtl"]
