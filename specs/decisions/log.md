@@ -1825,3 +1825,177 @@ Recorded here so the boundary stays visible as the log grows:
     `check:concept-graph`; this approval does not settle them.
   - Does not approve any unit's English review (G3) or Urdu translation (G5). Certifies no
     content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
+
+## D-2026-0044 - EFMP-301 rework: the owner-ruled chapter-wise 12-unit partition, reworked Units 4-12, no new escalation
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** EFMP-301 only, and only the **rework to the owner's chapter-wise ruling**: the 12-unit
+  partition, the reworked Units 4-12, and the course-level sections the rework touched (header
+  guide note, Course Description consequences, reading-list unit tags, week schedule, course
+  review plan), at commit `25a94d5` ("content(efmp-301): rework extension to the owner's
+  chapter-wise 12-unit partition (G-2026-52 ruling)"). Evaluated in a fresh session that did not
+  draft the spec. Settles the `G-2026-52` partition question against the owner's 2026-09-24 ruling
+  and confirms the `G-2026-53` status-flip path. Units 1-3 blocks and the reading list are verified
+  byte-identical to commit `a104623` (what `D-2026-0043` approved; confirmed by direct diff this
+  run, the rework's first unit-level change begins at the Unit 4 heading) and are not re-opened;
+  Unit 1 stays frozen under Art. VI.1.
+- **Decided by:** agent:evaluator, 2026-09-24
+- **Decision:**
+  1. **The partition is approved against the owner's ruling, not as a fresh derivation.** The guide
+     numbers its outline by week and chapter with no unit headings (`1st 2026.txt:1042-1171`), so
+     the partition was escalated as `G-2026-52`; the owner ruled on 2026-09-24 ("chapterwise is
+     good, consider chapters as units. follow the course guide", recorded resolved in
+     `specs/gaps.md`) and the ruling enumerates all twelve units with their chapters and weeks. The
+     spec implements exactly that ruling, verified mechanically: 12 units; Unit 1 = Ch 1 W1-2 (the
+     frozen golden unit), Unit 2 = Ch 2 W3-4, Unit 3 = Ch 3 W5-7, Unit 4 = Ch 4 W8-9, Unit 5 =
+     Ch 5 W10, Unit 6 = Ch 6 W11, Unit 7 = Ch 7 W12, Unit 8 = Ch 8 W13, Unit 9 = Ch 9 W14,
+     Unit 10 = Ch 10 W15, Unit 11 = Ch 11 W16, Unit 12 = Ch 12 W16; every unit's teaching weeks
+     are the guide's own placement of its chapter; no week reordered, no chapter split; the shared
+     Week 16 recorded honestly in both Unit 11's and Unit 12's headers; contact hours
+     6+6+9+6+3+3+3+3+3+3+3 = 48 = 16 weeks x 3 credit hours, with Week 16's 3 hours shared by
+     Units 11 and 12. The `partition` criterion of `D-2026-0043` is thereby approved; units 2-12
+     authoring is unblocked.
+  2. **The Week 16 bullet assignment is a faithful within-guide resolution and is approved.** The
+     guide's W16 block (`:1162-1171`) combines Chapters 11 and 12 under one heading and lists five
+     substantive bullets (`:1164-1168`) plus the final-revision slot (`:1171`) without chapter
+     attribution. The ruling's own text names the two chapter titles (Unit 11 "Mental Health and
+     Well-being in Schools"; Unit 12 "Guidance and Counseling"), which anchors the two
+     title-matched bullets (`:1164` to Unit 11, `:1165` to Unit 12). The three unmatched bullets -
+     application of educational psychology (`:1166`), technology and learning (`:1167`),
+     professional ethics (`:1168`) - are assigned to Unit 12 as the course's closing material, and
+     the final-revision slot seeds the course review. No second document is in conflict; every W16
+     substantive bullet stays inside W16's two units and is claimed exactly once (verified
+     mechanically); and the assignment is disclosed in the header guide note, the week schedule,
+     Unit 12's own section and the evaluator note as "a disclosure, not a claim about the guide".
+     This is the within-guide-slip posture the partition criterion permits resolving under a `D-`
+     code, and it is stated here explicitly: the guide does not attribute these three bullets, the
+     ruling's chapter rule plus the guide's "(Combined + Course Review)" heading and bullet order
+     are what make the closing-material reading faithful. The owner may redirect any of the three
+     at confirmation as a one-row reassignment inside Units 11-12 without re-opening the partition.
+  3. **Coverage of the reworked units is complete and adds no off-guide topic.** The guide carries
+     35 substantive bullets for Weeks 3-16 (W3 `:1057-1058`; W4 `:1063,1077`; W5 `:1082`; W6
+     `:1089-1090`; W7 `:1097`; W8 `:1103-1104`; W9 `:1109`; W10 `:1115-1118`; W11 `:1123-1125`;
+     W12 `:1134-1136`; W13 `:1142-1144`; W14 `:1149-1151`; W15 `:1157,1158,1160`; W16
+     `:1164-1168`) plus three non-teaching slots (W7 `:1098`, W9 `:1110`, W16 `:1171`); all 35
+     were re-verified present in the guide text this run. The reworked checklists carry 49 rows
+     (U4: 8, U5: 5, U6: 6, U7: 5, U8: 5, U9: 6, U10: 4, U11: 4, U12: 6; IDs contiguous), beside
+     the unchanged 22 rows of Units 2-3, 71 in total. Every W8-W16 substantive bullet is claimed by
+     exactly one unit, in the ruling unit for its week; the W9 "Class activities" slot is folded
+     into U4-8, the same pattern Unit 1's approved U1-14 established and `D-2026-0043` approved
+     for U3-12; the W16 revision slot is routed to the course review, disclosed. No row cites a
+     guide bullet or slot that does not exist. Decompositions are disclosed in each checklist
+     introduction and stay inside the guide's own words (W8 "Attention and perception" into its two
+     processes; the W11 theory bullet's three named theories into U6-2/3/4; the W16 single broad
+     bullet into four constituents per the Unit-1 broad-bullet pattern `D-2026-0043` accepted).
+     Noted, non-blocking: `D-2026-0043` item 2's per-week bullet locators were loose (for example
+     "W3 `:1045-1047`" points at Week 1's bullets); this item's locators are exact and supersede
+     them for tracing.
+  4. **The outcome traces hold.** The six CLOs (`:1031-1040`) are transcribed verbatim at
+     `content-spec.md:53-61`. The reworked units carry 19 new SLOs (U4: 3, U5: 2, U6: 2, U7: 2,
+     U8: 2, U9: 2, U10: 2, U11: 1, U12: 3), beside Units 2-3's 5 unchanged, 24 in total; each
+     traces to named guide CLOs and every CLO is delivered: CLO 1 by Units 2-4; CLO 2 by Unit 7
+     (W12); CLO 3 by Units 2-4, 8, 10 and 12; CLO 4 by Units 5-6 (W10-11); CLO 5 by Unit 9 (W14);
+     CLO 6 by Units 7, 11 and 12 (W12, W16). No SLO lacks a guide ancestor and no CLO is orphaned.
+  5. **Blueprints and structure conform.** All nine reworked units carry the fixed 10/10/5 bank
+     with the style-guide (v4.5) Bloom bands and at least one Analyze-or-higher ERQ rubric; every
+     spread sums exactly (MCQ and RRQ 4/3/3 for U4/U8/U9/U12 and 5/5 for U5/U6/U7/U10/U11; ERQ
+     per-topic plus integrative summing to 5 in every unit), verified mechanically. Every Topic
+     list is a total, disjoint partition of its checklist (verified mechanically for Units 2-12).
+     Depth budgets: sub-topic counts match their tables; every unit's components sum exactly to
+     its stated target (U4 90, U5 73, U6 74, U7 73, U8 86, U9 86, U10 72, U11 71, U12 86);
+     targets sit inside their bands and bands stay within roughly +/-25% of target. Figure plans:
+     >= 2 carriers per topic, >= 1 concept-map/flowchart/timeline per unit, the six-value
+     archetype vocabulary, unique well-formed `fig-U<n>-<seq>` IDs, and topic-list cells
+     consistent with the plan bullets (verified mechanically for Units 2-12). Front matter
+     (`course_code: EFMP-301`, `status: draft`, `bilingual: true`) validates against
+     `contracts/content-spec-frontmatter.schema.json`. Zero em dashes. Gate exit codes recorded
+     this run: `validate:content` 0, `check:pipeline-gate` **1** (single finding, the known
+     `G-2026-53` consequence: "EFMP-301 Unit 1 ... content-spec.md is not approved (status:
+     'draft')"; resolved by the owner's ruling, see item 9), `check:depth-gate` 0, `check:figures`
+     0, `check:no-em-dash` 0, `check:no-answer-keys` 0, `check:concept-graph` 0,
+     `check:bloom-bands` 0, `check:source-floor` 0, `check:content-status` 0, `check:docs-sync` 0.
+     The depth/figures/concept-graph/bloom gates walk `docs/`, where only Unit 1 exists; the
+     Units 2-12 invariants above were replayed directly against the spec, the `D-2026-0020` method.
+  6. **The regression base is intact.** Unit 1's G1 blocks (91 lines) and the Units 2-3 blocks
+     (250 lines) are byte-identical between `a104623` and the rework (direct diff this run); the
+     four `D-2026-0043` item-8 repairs remain applied (guide locators `:1173-1180`, `:1182-1191`,
+     `:1023-1029`, `:1031-1040`, `:1198-1202`, `:1042-1171`; the corrected twelve-title
+     seifert2009 chapter list; the `## Course review plan` section). Identity is unchanged
+     (precedence note intact; catalog `3 (3-0)`, Major: Professional, Semester 1; guide `:1011`,
+     `:1016-1021`; `D-2026-0003` posture; no Article II.3 conflict). Readings: both guide URLs
+     (`:1198-1202`) re-verified retrievable independently this run, 2026-09-24 (HTTP 200 both);
+     the reading list is unchanged apart from unit tags widened to 1-12 / 2-12.
+  7. **Decision residue: one ruling-determined residue found, reported for repair.** The whole
+     specification was swept for superseded designs, not only the reworked sections: no one-page
+     or one-term development plan (`D-2026-0002`/`D-2026-0004`); the single five-file
+     `formative.mdx`/`summative.mdx` mention is Unit 1's carried-forward supersession note; no
+     review-cycle assumptions (`D-2026-0005`); the PTGR folder appears only in the labelled
+     provenance note (`D-2026-0003`); `D-2026-0012` correctly applied with the partition now
+     recorded as owner-determined per the ruling. One residue: the course review plan's summary
+     points 5 and 6 (`content-spec.md:189-193`) still cite the superseded five-block merge's unit
+     numbers ("(Unit 5)" for the motivation / individual-differences / management arc and
+     "(Unit 6)" for the assessment / teaching / well-being arc; under the ruling those are Units
+     6-8 and 9-12). The through-line content is correct, the section is parsed by no gate, and the
+     correction is fully determined by the ruling and the guide (no scope judgement), so it is
+     reported for repair in the `D-2026-0043` item-8 manner rather than escalated.
+  8. **Repair items** (author applies with the status flip or before authoring Units 2-12; none
+     blocks this approval):
+     (a) `## Course review plan`, summary points 5-6 (`content-spec.md:189-193`): replace the
+     stale "(Unit 5)" and "(Unit 6)" references with the ruled partition's units (motivation,
+     individual differences and classroom management are Units 6-8; assessment, teaching methods,
+     well-being, guidance and ethics are Units 9-12).
+     (b) `## Unit 5` sub-topic checklist introduction (`content-spec.md:677`): "guide Chapter 10's
+     four Week 10 bullets" should read "guide Chapter 5's" - the chapter number is conflated with
+     the week number; the unit header and every row's Guide source cell are already correct.
+     (c) The "(Topic X.Y; a unit schematic)" label is applied to four `diagram`-kind figures
+     (fig-U5-1, fig-U6-1, fig-U9-4, fig-U11-1). Style-guide v4.5 reserves the per-unit schematic
+     rule for concept-map / flowchart / timeline, and each affected unit carries a genuine
+     schematic elsewhere (fig-U5-3, fig-U6-3, fig-U9-1 and fig-U9-5, fig-U11-3), so Art. III.10
+     is met; drop the label from `diagram` rows or reword it so the figure author is not misled
+     about which row satisfies the rule.
+  9. **Status flip authorized by the ruling.** Under the `G-2026-53` resolution (owner decision,
+     2026-09-24, option a) the author may set the content-spec `status: approved` once this entry
+     is recorded, recording `D-2026-0043`, `D-2026-0044` and the ruling in the front-matter note;
+     that restores `check:pipeline-gate` for Unit 1 with no gate-code change. This entry remains
+     pending-owner-review; the owner's confirmation of this decision and the flip are separate
+     owner actions, and a veto at review would re-open items 1-2 only.
+- **Basis:** `Scheme-and-Course-guides/extracted-text/1st 2026.txt`, the EFMP-301 block at
+  `:1011-1204`: code `:1011`, title `:1017`, semester `:1016`, credit hours `:1019-1021`, Course
+  Description `:1023-1029`, CLOs `:1031-1040`, week outline `:1042-1171` (per-week bullet
+  locators as cited in item 3), teaching strategies `:1173-1180`, practical work `:1182-1191`,
+  recommended books `:1193-1202` (URLs `:1198-1202`). The owner rulings recorded resolved in
+  `specs/gaps.md`: `G-2026-52` (chapter-wise partition, 2026-09-24) and `G-2026-53` (status-flip
+  path, 2026-09-24). Item 1 rests on the ruling plus the guide's chapter structure; item 2 on the
+  ruling's own chapter titles plus the guide's W16 block; items 3-4 on the guide directly; items
+  5-6 on the bound `specs/content/style-guide.md` (v4.5), `contracts/` and the diff against
+  `a104623`; item 7 on the confirmed decisions it names. `catalog/courses.json`
+  `semesters[0].courses[4]`. `D-2026-0043` (the prior round, whose approvals for Units 2-3, the
+  reading list and the course-wide items this round carries forward), `D-2026-0003`,
+  `D-2026-0012`, `D-2026-0002`/`D-2026-0004`, `D-2026-0005`. URL retrievability re-verified from
+  this host on 2026-09-24.
+- **Bound to:** `specs/content/efmp-301/intake-2/manifest.json`, manifest digest
+  `728480dca1085600f480cb9bd8500cf62240b8c24d2a5a03ff2665dfea460150`, **58 inputs** at commit
+  `25a94d5cf5184ade0cd61ddf090f18b57c6f545d`. Recomputed independently with `manifestFor()` from
+  `scripts/lib/review-evidence.mjs` over the same `intakeRoots('efmp-301')` root set
+  `prepare-intake-evidence.mjs` uses: every path and every digest matched, with no extra and no
+  missing entry, and the recorded `manifest_digest` reproduced from a fresh read from disk. The
+  `registers` field also matched. **Any change to a bound input voids this approval**
+  (Art. VII.8.5). The two registers are recorded in `registers`, not `input_manifest`, per the
+  `G-2026-15` fix, so recording this decision does not void it.
+- **Limits and what remains open:**
+  - What this does **not** settle: per-unit source bindings (`sources/unit-NN.md`, judged at G3);
+    figure prompts, alt text and SVG geometry (authored with the units); the Urdu terminology of
+    the course (banked vs authored labels, G4/G5); concept graphs for Units 2-12
+    (`specs/content/efmp-301/concepts/unit-NN.md`, authored per unit, enforced by
+    `check:concept-graph`); the `course-review.mdx` file itself (future work outside this
+    feature).
+  - Unit 1 remains frozen (Art. VI.1); nothing here re-opens its content, Urdu mirror or
+    governance artefacts.
+  - The Week 16 bullet placement (item 2) may be redirected by the owner at confirmation - a
+    one-row reassignment inside Units 11-12 that would not re-open the partition or the other
+    items of this decision.
+  - The repair items in item 8 are the author's to apply; they do not block the status flip but
+    should land with it or before authoring Units 2-12 begins.
+  - Does not approve any unit's English review (G3) or Urdu translation (G5). Certifies no
+    content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
