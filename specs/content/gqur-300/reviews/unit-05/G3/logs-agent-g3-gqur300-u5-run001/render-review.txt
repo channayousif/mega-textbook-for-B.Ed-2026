@@ -1,0 +1,78 @@
+G3 render review - GQUR-300 Unit 5 - run001
+Host/browser inspection record (this file IS the render-review command log).
+
+Rendered input identity: production static build (`npm run build`, exit 0, log
+build.txt) of the reviewed working tree at HEAD ad0c4d1, whose bound unit-05
+inputs match the prepared manifest exactly (input-binding-verification.txt:
+96/96 digests, no dirty inputs). Served locally by `npm run serve` on
+http://127.0.0.1:4311 (log serve.txt); all six unit routes returned HTTP 200
+before inspection. Browser: repository Playwright Chromium (headless), driven
+by the scripts saved beside this log (render-inspect.mjs, render-inspect-tables.mjs,
+render-verify.mjs, render-verify-fig-u55.mjs); run logs render-inspect-run.txt,
+render-inspect-tables-run.txt, render-verify-run.txt, render-verify-fig-u55-run.txt.
+
+Viewports and print setup:
+  - Desktop 1280x900, light scheme (default).
+  - Narrow 360x800 (small-screen layout).
+  - Print: media emulation 'print' at 794x1123 (A4 at 96dpi), plus two real
+    A4 page.pdf() outputs (topic-02-a4.pdf, unit-assessment-a4.pdf; MediaBox
+    595.92x842.88pt, 5 and 6 pages).
+  - Dark theme: [data-theme=dark] emulation for figure element renders.
+
+Artifacts (all under renders-agent-g3-gqur300-u5-run001/):
+  - {index,topic-01,topic-02,topic-03,unit-assessment,unit-teacher-notes}-desktop-1280.png
+  - same six pages at -narrow-360.png and -print-emulated.png (fullPage)
+  - fig-U5-1..U5-6 -element-light.png and -element-dark.png
+  - fig-U5-5-verify.png, fig-U5-5-img-verify.png (pixel-check inputs)
+  - topic-02-a4.pdf, unit-assessment-a4.pdf
+  - render-inspection.json, render-inspection-tables.json,
+    render-verification.json, fig-U5-5-pixel-check.json (measurements)
+
+Inspection findings:
+  - Headings: every page has exactly one H1; heading sequences are logical
+    (H1 -> H2 -> H3; topic files run the nine-part cycle headings in order).
+  - Links: no empty link text on any page; index "In this unit" links carry
+    descriptive text.
+  - Images/alt: every <img> (light and dark variants, 2 per figure) carries a
+    non-empty alt equal to the manifest alt text; the hidden dark variant is
+    display:none so exactly one is exposed to the accessibility tree.
+  - Figures render: 2 figures per topic page load (imgCount 4 = light+dark for
+    each), figure elements present with the credit figcaption (Spec 009 design;
+    the accessible description is the alt).
+  - Narrow 360px: no horizontal document overflow on any of the six pages
+    (documentElement.scrollWidth = 360 everywhere). The topic-01 frequency
+    table is 275px wide (fits; not a scroll container), last column right edge
+    290px < 360px, fully reachable; no tabindex/role/aria-label needed because
+    the table is not a scroll container (per the G3 reference's measurement
+    rule, measured on the <table> itself).
+  - Print: zero overflowing elements (img/svg/table/pre/figure wider than or
+    beyond the 794px A4 emulation) on any page; both A4 PDFs generated with
+    real multi-page content; the bounded "Answers and marking guidance" section
+    prints without clipping (check:no-answer-keys passed; section is the final
+    ## of unit-assessment.mdx).
+  - fig-U5-5 rendered-output pixel check (fig-U5-5-pixel-check.json): the
+    rendered image confirms the SVG source defect - dark dots present at the
+    value positions 35, 40, 52 (stacked pair), 60 (stacked triple) and 100; NO
+    dots at the stated data positions 55, 70 and 96; the "median = 62" dashed
+    line sits at the 52 position and the "mode = 70" circle sits on the 60
+    stack. The figure contradicts its own subtitle, its alt text and the
+    topic-03 prose. See blocking finding.
+
+Inspection limitation: this session's image-display tool returned no output for
+PNG and JPEG files, so the reviewer could not view rendered pixels directly.
+Visual verification therefore rests on in-browser DOM measurement (overflow,
+alt text, heading outlines, table geometry), in-browser pixel sampling of the
+rendered fig-U5-5 image (objective colour checks at computed coordinates),
+deterministic SVG source analysis (measure-figure-text.txt: all 12 SVGs within
+viewBox, no wordmark overprint) and valid multi-page A4 PDFs. All 26 PNGs, 2
+PDFs and 4 measurement JSON files are saved unchanged for human visual
+inspection. Had this been the only open question on an otherwise passing unit,
+it would have justified escalation rather than a pass.
+
+Worktree concurrency note: HEAD moved from 37171b6 to ad0c4d1 during this
+review; ad0c4d1 touches only specs/content/gqur-300/tasks.md, which the input
+manifest excludes by design, and the manifest was re-verified after it landed
+(96/96, no dirty inputs). No tracked bound input was modified during the
+review; static/content-status.json (git-ignored, generated) was regenerated
+once with the gate's own instructed command after the initial check:content
+run failed on its staleness (see check-content-initial-run.txt).

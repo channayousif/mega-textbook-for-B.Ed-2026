@@ -20,6 +20,17 @@ are quoted from its "Census - 2023 at a Glance" table and its division-level tab
   percent; population density 395.25 per square kilometre; average household size 5.65.
 - Divisions: Karachi 20,382,881; Hyderabad 11,659,246; Larkana 7,093,706.
 
+## Census conduct (from the report's foreword)
+
+- The 2023 census was Pakistan's **first digital census**: enumeration was carried out
+  on tablets rather than paper schedules.
+- Field enumeration ran **March to May 2023**.
+- The census was conducted under the **Council of Common Interests** (CCI) approval,
+  with results notified after CCI consideration.
+
+These conduct details are the ones quoted in Unit 5 topic-03's "Who collected it?" and
+"How?" interpretation questions.
+
 ## What this supports
 
 GQUR-300 Units 5 and 6: real Sindh census figures for the data-analysis units (reading
