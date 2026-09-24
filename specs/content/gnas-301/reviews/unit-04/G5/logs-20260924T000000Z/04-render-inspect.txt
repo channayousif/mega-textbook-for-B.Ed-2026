@@ -1,0 +1,11 @@
+index: dir=rtl font="Noto Nastaliq Urdu" figs=0(ur=0,broken=0) narrow(overflow=false,tables=0,figsFit=true) print(clipped=0,figsFit=true) errors=0
+topic-01: dir=rtl font="Noto Nastaliq Urdu" figs=2(ur=2,broken=0) narrow(overflow=false,tables=1,figsFit=true) print(clipped=0,figsFit=false) errors=0
+topic-02: dir=rtl font="Noto Nastaliq Urdu" figs=2(ur=2,broken=0) narrow(overflow=false,tables=1,figsFit=true) print(clipped=0,figsFit=false) errors=0
+topic-03: dir=rtl font="Noto Nastaliq Urdu" figs=2(ur=2,broken=0) narrow(overflow=false,tables=1,figsFit=true) print(clipped=0,figsFit=false) errors=0
+topic-04: dir=rtl font="Noto Nastaliq Urdu" figs=2(ur=2,broken=0) narrow(overflow=false,tables=1,figsFit=true) print(clipped=0,figsFit=false) errors=0
+topic-05: dir=rtl font="Noto Nastaliq Urdu" figs=2(ur=2,broken=0) narrow(overflow=false,tables=1,figsFit=true) print(clipped=0,figsFit=false) errors=0
+topic-06: dir=rtl font="Noto Nastaliq Urdu" figs=2(ur=2,broken=0) narrow(overflow=false,tables=1,figsFit=true) print(clipped=0,figsFit=false) errors=0
+topic-07: dir=rtl font="Noto Nastaliq Urdu" figs=2(ur=2,broken=0) narrow(overflow=false,tables=1,figsFit=true) print(clipped=0,figsFit=false) errors=0
+unit-assessment: dir=rtl font="Noto Nastaliq Urdu" figs=0(ur=0,broken=0) narrow(overflow=false,tables=0,figsFit=true) print(clipped=0,figsFit=true) errors=0
+unit-teacher-notes: dir=rtl font="Noto Nastaliq Urdu" figs=0(ur=0,broken=0) narrow(overflow=false,tables=0,figsFit=true) print(clipped=0,figsFit=true) errors=0
+G5 render inspection complete

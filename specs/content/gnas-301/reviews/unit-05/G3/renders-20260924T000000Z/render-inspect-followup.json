@@ -1,0 +1,62 @@
+{
+  "index404s": [],
+  "indexHeadings": [
+    "H1: Toxicology Essentials and Environmental Governance",
+    "H2: Unit learning outcomes​",
+    "H2: Prerequisite knowledge​",
+    "H2: In this unit​",
+    "H2: How to use this unit​"
+  ],
+  "indexUrl": "http://localhost:4173/semester-1/gnas-301/unit-05/",
+  "figuresNarrow": [
+    {
+      "figcaption": "textbook.com.pk",
+      "scrollWidth": 328,
+      "clientWidth": 328,
+      "tabindex": null,
+      "role": null,
+      "ariaLabel": null,
+      "imgRightAfterScroll": 344,
+      "reachableBySwipe": true
+    },
+    {
+      "figcaption": "textbook.com.pk",
+      "scrollWidth": 328,
+      "clientWidth": 328,
+      "tabindex": null,
+      "role": null,
+      "ariaLabel": null,
+      "imgRightAfterScroll": 344,
+      "reachableBySwipe": true
+    }
+  ],
+  "darkTheme": "dark",
+  "figuresDark": [
+    {
+      "src": "/img/figures/gnas-301/unit-05/fig-U5-1.svg",
+      "loaded": true,
+      "displayed": false
+    },
+    {
+      "src": "/img/figures/gnas-301/unit-05/fig-U5-1.dark.svg",
+      "loaded": true,
+      "displayed": true
+    },
+    {
+      "src": "/img/figures/gnas-301/unit-05/fig-U5-2.svg",
+      "loaded": true,
+      "displayed": false
+    },
+    {
+      "src": "/img/figures/gnas-301/unit-05/fig-U5-2.dark.svg",
+      "loaded": true,
+      "displayed": true
+    }
+  ],
+  "printAssessment": {
+    "docScrollWidth": 794,
+    "clientWidth": 794,
+    "clippedCount": 0,
+    "clippedSample": []
+  }
+}

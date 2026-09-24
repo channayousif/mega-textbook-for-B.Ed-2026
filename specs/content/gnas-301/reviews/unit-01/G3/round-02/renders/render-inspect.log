@@ -1,0 +1,20 @@
+browser: chromium 149.0.7827.0 (playwright)
+host: http://127.0.0.1:4611 (node static server over build/)
+narrow360 index: docOverflowX=0, tables=[], figuresFit=true
+printA4 index: clippedElems=0
+topic-01 figure order: all=/img/figures/gnas-301/unit-01/fig-U1-2.svg, /img/figures/gnas-301/unit-01/fig-U1-1.svg | after scope prose=/img/figures/gnas-301/unit-01/fig-U1-2.svg | next fig after "figure below" sentence=null
+narrow360 topic-01: docOverflowX=0, tables=[{"c":328,"s":328,"kb":false}], figuresFit=true
+printA4 topic-01: clippedElems=0
+narrow360 topic-02: docOverflowX=0, tables=[{"c":328,"s":328,"kb":false}], figuresFit=true
+printA4 topic-02: clippedElems=0
+narrow360 topic-03: docOverflowX=0, tables=[{"c":328,"s":328,"kb":false}], figuresFit=true
+printA4 topic-03: clippedElems=0
+narrow360 topic-04: docOverflowX=0, tables=[{"c":328,"s":328,"kb":false}], figuresFit=true
+printA4 topic-04: clippedElems=0
+narrow360 unit-assessment: docOverflowX=0, tables=[], figuresFit=true
+printA4 unit-assessment: clippedElems=0
+narrow360 unit-teacher-notes: docOverflowX=0, tables=[], figuresFit=true
+printA4 unit-teacher-notes: clippedElems=0
+dark-mode topic-01: visible broken images=none
+
+defects: NONE

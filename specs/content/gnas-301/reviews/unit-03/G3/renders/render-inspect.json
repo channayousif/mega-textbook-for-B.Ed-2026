@@ -1,0 +1,355 @@
+{
+  "base": "http://127.0.0.1:4611",
+  "generated": "2026-09-23T22:25:06.488Z",
+  "pages": [
+    {
+      "name": "index",
+      "path": "/semester-1/gnas-301/unit-03/",
+      "desktop": {
+        "title": "Air, Noise and Environmental Hazards | B.Ed Mega Textbook",
+        "h1Count": 1,
+        "imgCount": 0,
+        "brokenImages": [],
+        "imagesWithoutAlt": [],
+        "skippedHeadingLevels": [],
+        "docOverflowX": false,
+        "linksNoText": 0,
+        "consoleErrors": [],
+        "figures": [],
+        "darkToggle": "present"
+      },
+      "narrow": {
+        "docOverflowX": false,
+        "docScrollW": 360,
+        "docClientW": 360,
+        "tables": [],
+        "figures": []
+      },
+      "print": {
+        "pdf": "print-a4-index.pdf"
+      }
+    },
+    {
+      "name": "topic-01",
+      "path": "/semester-1/gnas-301/unit-03/topic-01",
+      "desktop": {
+        "title": "Topic 3.1 - Air pollution | B.Ed Mega Textbook",
+        "h1Count": 1,
+        "imgCount": 4,
+        "brokenImages": [],
+        "imagesWithoutAlt": [],
+        "skippedHeadingLevels": [],
+        "docOverflowX": false,
+        "linksNoText": 0,
+        "consoleErrors": [],
+        "figures": [
+          {
+            "img": "/img/figures/gnas-301/unit-03/fig-U3-1.svg",
+            "loaded": true,
+            "alt": "Diagram of the air pollution chain from sources through the air to receptors, with control strategies marked at source, pathway and receptor",
+            "caption": "textbook.com.pk"
+          },
+          {
+            "img": "/img/figures/gnas-301/unit-03/fig-U3-2.svg",
+            "loaded": true,
+            "alt": "Table of six major air pollutants with main source, health effect and one control strategy for each",
+            "caption": "textbook.com.pk"
+          }
+        ],
+        "darkToggle": "present"
+      },
+      "narrow": {
+        "docOverflowX": false,
+        "docScrollW": 360,
+        "docClientW": 360,
+        "tables": [
+          {
+            "rows": 5,
+            "clientWidth": 328,
+            "scrollWidth": 328,
+            "fitsViewportWidth": true,
+            "keyboardAttrs": {
+              "tabindex": null,
+              "role": null,
+              "ariaLabel": null
+            }
+          }
+        ],
+        "figures": [
+          {
+            "img": "/img/figures/gnas-301/unit-03/fig-U3-1.svg",
+            "figRight": 344,
+            "viewportW": 360,
+            "figFits": true,
+            "scrollerOverflowX": "visible"
+          },
+          {
+            "img": "/img/figures/gnas-301/unit-03/fig-U3-2.svg",
+            "figRight": 344,
+            "viewportW": 360,
+            "figFits": true,
+            "scrollerOverflowX": "visible"
+          }
+        ]
+      },
+      "print": {
+        "pdf": "print-a4-topic-01.pdf"
+      }
+    },
+    {
+      "name": "topic-02",
+      "path": "/semester-1/gnas-301/unit-03/topic-02",
+      "desktop": {
+        "title": "Topic 3.2 - Noise pollution | B.Ed Mega Textbook",
+        "h1Count": 1,
+        "imgCount": 4,
+        "brokenImages": [],
+        "imagesWithoutAlt": [],
+        "skippedHeadingLevels": [],
+        "docOverflowX": false,
+        "linksNoText": 0,
+        "consoleErrors": [],
+        "figures": [
+          {
+            "img": "/img/figures/gnas-301/unit-03/fig-U3-3.svg",
+            "loaded": true,
+            "alt": "Diagram of a decibel ladder from a quiet library at 30 dB to a pressure horn above 110 dB, with the hearing-damage zone marked above 85 dB",
+            "caption": "textbook.com.pk"
+          },
+          {
+            "img": "/img/figures/gnas-301/unit-03/fig-U3-4.svg",
+            "loaded": true,
+            "alt": "Table of five noise sources with health impact, who is exposed and one control measure for each",
+            "caption": "textbook.com.pk"
+          }
+        ],
+        "darkToggle": "present"
+      },
+      "narrow": {
+        "docOverflowX": false,
+        "docScrollW": 360,
+        "docClientW": 360,
+        "tables": [
+          {
+            "rows": 5,
+            "clientWidth": 328,
+            "scrollWidth": 328,
+            "fitsViewportWidth": true,
+            "keyboardAttrs": {
+              "tabindex": null,
+              "role": null,
+              "ariaLabel": null
+            }
+          }
+        ],
+        "figures": [
+          {
+            "img": "/img/figures/gnas-301/unit-03/fig-U3-3.svg",
+            "figRight": 344,
+            "viewportW": 360,
+            "figFits": true,
+            "scrollerOverflowX": "visible"
+          },
+          {
+            "img": "/img/figures/gnas-301/unit-03/fig-U3-4.svg",
+            "figRight": 344,
+            "viewportW": 360,
+            "figFits": true,
+            "scrollerOverflowX": "visible"
+          }
+        ]
+      },
+      "print": {
+        "pdf": "print-a4-topic-02.pdf"
+      }
+    },
+    {
+      "name": "topic-03",
+      "path": "/semester-1/gnas-301/unit-03/topic-03",
+      "desktop": {
+        "title": "Topic 3.3 - Hazards in health, safety and environment | B.Ed Mega Textbook",
+        "h1Count": 1,
+        "imgCount": 4,
+        "brokenImages": [],
+        "imagesWithoutAlt": [],
+        "skippedHeadingLevels": [],
+        "docOverflowX": false,
+        "linksNoText": 0,
+        "consoleErrors": [],
+        "figures": [
+          {
+            "img": "/img/figures/gnas-301/unit-03/fig-U3-5.svg",
+            "loaded": true,
+            "alt": "Concept map of the five hazard classes, physical, mechanical, biological, chemical and psychological, branching from a central hazard node, each with a Pakistani example",
+            "caption": "textbook.com.pk"
+          },
+          {
+            "img": "/img/figures/gnas-301/unit-03/fig-U3-6.svg",
+            "loaded": true,
+            "alt": "Table of the five hazard classes with one example, health effect and one safety measure for each",
+            "caption": "textbook.com.pk"
+          }
+        ],
+        "darkToggle": "present"
+      },
+      "narrow": {
+        "docOverflowX": false,
+        "docScrollW": 360,
+        "docClientW": 360,
+        "tables": [
+          {
+            "rows": 5,
+            "clientWidth": 328,
+            "scrollWidth": 328,
+            "fitsViewportWidth": true,
+            "keyboardAttrs": {
+              "tabindex": null,
+              "role": null,
+              "ariaLabel": null
+            }
+          }
+        ],
+        "figures": [
+          {
+            "img": "/img/figures/gnas-301/unit-03/fig-U3-5.svg",
+            "figRight": 344,
+            "viewportW": 360,
+            "figFits": true,
+            "scrollerOverflowX": "visible"
+          },
+          {
+            "img": "/img/figures/gnas-301/unit-03/fig-U3-6.svg",
+            "figRight": 344,
+            "viewportW": 360,
+            "figFits": true,
+            "scrollerOverflowX": "visible"
+          }
+        ]
+      },
+      "print": {
+        "pdf": "print-a4-topic-03.pdf"
+      }
+    },
+    {
+      "name": "topic-04",
+      "path": "/semester-1/gnas-301/unit-03/topic-04",
+      "desktop": {
+        "title": "Topic 3.4 - Risk assessment and management | B.Ed Mega Textbook",
+        "h1Count": 1,
+        "imgCount": 4,
+        "brokenImages": [],
+        "imagesWithoutAlt": [],
+        "skippedHeadingLevels": [],
+        "docOverflowX": false,
+        "linksNoText": 0,
+        "consoleErrors": [],
+        "figures": [
+          {
+            "img": "/img/figures/gnas-301/unit-03/fig-U3-7.svg",
+            "loaded": true,
+            "alt": "Flowchart of the risk management cycle, identify hazards, assess risks, control, monitor and review, drawn as a loop",
+            "caption": "textbook.com.pk"
+          },
+          {
+            "img": "/img/figures/gnas-301/unit-03/fig-U3-8.svg",
+            "loaded": true,
+            "alt": "Table of four hazard identification tools with what each finds and its blind spot",
+            "caption": "textbook.com.pk"
+          }
+        ],
+        "darkToggle": "present"
+      },
+      "narrow": {
+        "docOverflowX": false,
+        "docScrollW": 360,
+        "docClientW": 360,
+        "tables": [
+          {
+            "rows": 5,
+            "clientWidth": 328,
+            "scrollWidth": 328,
+            "fitsViewportWidth": true,
+            "keyboardAttrs": {
+              "tabindex": null,
+              "role": null,
+              "ariaLabel": null
+            }
+          }
+        ],
+        "figures": [
+          {
+            "img": "/img/figures/gnas-301/unit-03/fig-U3-7.svg",
+            "figRight": 344,
+            "viewportW": 360,
+            "figFits": true,
+            "scrollerOverflowX": "visible"
+          },
+          {
+            "img": "/img/figures/gnas-301/unit-03/fig-U3-8.svg",
+            "figRight": 344,
+            "viewportW": 360,
+            "figFits": true,
+            "scrollerOverflowX": "visible"
+          }
+        ]
+      },
+      "print": {
+        "pdf": "print-a4-topic-04.pdf"
+      }
+    },
+    {
+      "name": "unit-assessment",
+      "path": "/semester-1/gnas-301/unit-03/unit-assessment",
+      "desktop": {
+        "title": "Unit 3 assessment | B.Ed Mega Textbook",
+        "h1Count": 1,
+        "imgCount": 0,
+        "brokenImages": [],
+        "imagesWithoutAlt": [],
+        "skippedHeadingLevels": [],
+        "docOverflowX": false,
+        "linksNoText": 0,
+        "consoleErrors": [],
+        "figures": [],
+        "darkToggle": "present"
+      },
+      "narrow": {
+        "docOverflowX": false,
+        "docScrollW": 360,
+        "docClientW": 360,
+        "tables": [],
+        "figures": []
+      },
+      "print": {
+        "pdf": "print-a4-unit-assessment.pdf"
+      }
+    },
+    {
+      "name": "unit-teacher-notes",
+      "path": "/semester-1/gnas-301/unit-03/unit-teacher-notes",
+      "desktop": {
+        "title": "Unit 3 teacher notes | B.Ed Mega Textbook",
+        "h1Count": 1,
+        "imgCount": 0,
+        "brokenImages": [],
+        "imagesWithoutAlt": [],
+        "skippedHeadingLevels": [],
+        "docOverflowX": false,
+        "linksNoText": 0,
+        "consoleErrors": [],
+        "figures": [],
+        "darkToggle": "present"
+      },
+      "narrow": {
+        "docOverflowX": false,
+        "docScrollW": 360,
+        "docClientW": 360,
+        "tables": [],
+        "figures": []
+      },
+      "print": {
+        "pdf": "print-a4-unit-teacher-notes.pdf"
+      }
+    }
+  ]
+}

@@ -985,6 +985,311 @@
     "definition_ur": "اس بات کا مطالعہ کہ مختلف ثقافی پس منظر کے لوگ ایک دوسرے کے ساتھ کیسے رابطہ کرتے ہیں، اور ثقافی مفروضے پیغامات کے بھیجنے، وصول کرنے اور ان کی تفسیر کو کیسے شکل دیتے ہیں۔"
   },
   {
+    "term": "Environmental science",
+    "definition_en": "The study of the natural environment and the ways people interact with it.",
+    "definition_ur": "قدتی ماحول اور اس سے انسانی تعلق کا مطالعہ۔"
+  },
+  {
+    "term": "Natural environment",
+    "definition_en": "Everything around us that is not made by people: air, water, soil, rocks, living things and the climate.",
+    "definition_ur": "وہ سب کچھ جو ہمارے ارد گرد ہے اور انسانوں کا بنایا ہوا نہیں: ہوا، پانی، مٹی، چٹانیں، جاندار اور موسم۔"
+  },
+  {
+    "term": "Biosphere",
+    "definition_en": "The thin zone of the Earth where life exists, where the atmosphere, hydrosphere and lithosphere meet.",
+    "definition_ur": "زمین کا وہ پتلا حصہ جہاں زندگی پائی جاتی ہے، جہاں کرہ ہوا، کرہ آب اور کرہ خاک آپس میں ملتے ہیں۔"
+  },
+  {
+    "term": "Anthropogenic",
+    "definition_en": "Caused by people, especially of environmental change brought about by human activity.",
+    "definition_ur": "انسانوں کے سبب پیدا ہوا، خاص طور پر انسانی سرگرمی سے پیدا ہونے والی ماحولیاتی تبدیلی کے لیے۔"
+  },
+  {
+    "term": "Ecosystem",
+    "definition_en": "A living community together with its non-living surroundings, functioning as one system.",
+    "definition_ur": "جانداروں کی ایک برادری اور ان کے بے جان ماحول، جو ایک نظام کی طرح مل کر کام کرتے ہیں۔"
+  },
+  {
+    "term": "Ecosystem services",
+    "definition_en": "The benefits people receive from functioning ecosystems, such as clean water, food and protection from storms.",
+    "definition_ur": "کام کرنے والے ماحولیاتی نظاموں سے انسانوں کو ملنے والے فائدے، جیسے صاف پانی، خوراک اور طوفانوں سے حفاظت۔"
+  },
+  {
+    "term": "Natural resources",
+    "definition_en": "Anything from the environment that people use to meet their needs, such as water, soil, minerals and forests.",
+    "definition_ur": "ماحول سے ملنے والی وہ ہر چیز جو انسان اپنی ضروریات پوری کرنے کے لیے استعمال کرتا ہے، جیسے پانی، مٹی، معدنیات اور جنگلات۔"
+  },
+  {
+    "term": "Renewable resources",
+    "definition_en": "Resources that renew themselves on a human timescale if they are not overused.",
+    "definition_ur": "وہ وسائل جو مناسب استعمال میں انسانی دور میں دوبارہ پیدا ہو جاتے ہیں۔"
+  },
+  {
+    "term": "Non-renewable resources",
+    "definition_en": "Resources that exist as fixed stocks and cannot be rebuilt on a human timescale.",
+    "definition_ur": "وہ وسائل جو مقررہ مقدار میں موجود ہیں اور انسانی دور میں دوبارہ نہیں بن سکتے۔"
+  },
+  {
+    "term": "Sustainability",
+    "definition_en": "The test of whether an action can continue, as it is, without exhausting what it depends on.",
+    "definition_ur": "اس بات کا امتحان کہ کوئی عمل اسی طرح جاری رہ سکتا ہے یا نہیں، بغیر اس چیز کو ختم کیے جس پر وہ منحصر ہے۔"
+  },
+  {
+    "term": "Water security",
+    "definition_en": "Reliable access to water of acceptable quality and quantity for health and livelihoods.",
+    "definition_ur": "صحت اور روزگار کے لیے قابلِ قبول معیار اور مقدار کے پانی تک قابلِ بھروسہ رسائی۔"
+  },
+  {
+    "term": "Water scarcity",
+    "definition_en": "A situation where per-person water availability falls below the level a population needs, usually measured per year.",
+    "definition_ur": "وہ صورتحال جہاں فی فرد پانی کی دستیابی آبادی کی ضرورت سے کم ہو جائے، عموماً سالانہ ماپی جاتی ہے۔"
+  },
+  {
+    "term": "Water pollution",
+    "definition_en": "The addition of substances or heat to water at a level that harms its use by people or by living things.",
+    "definition_ur": "پانی میں ایسے مادوں یا حرارت کا اضافہ جو اس کے انسانی یا حیاتی استعمال کو نقصان پہنچائے۔"
+  },
+  {
+    "term": "Pathogen",
+    "definition_en": "An organism, such as a bacterium or virus, that causes disease.",
+    "definition_ur": "کوئی جاندار، جیسے بیکٹیریا یا وائرس، جو بیماری پیدا کرتا ہے۔"
+  },
+  {
+    "term": "Eutrophication",
+    "definition_en": "The over-fertilisation of a water body by nutrients, causing an algal bloom followed by a collapse in oxygen.",
+    "definition_ur": "غذائی مادوں سے کسی آبی جسم کی زیادہ کھاد پڑنا، جس سے الگی پھیلتی ہے اور پھر آکسیجن شدید کم ہو جاتی ہے۔"
+  },
+  {
+    "term": "Effluent",
+    "definition_en": "The liquid waste a facility or household discharges.",
+    "definition_ur": "کسی ادارے یا گھر سے خارج ہونے والا مائع فضلہ۔"
+  },
+  {
+    "term": "Municipal solid waste",
+    "definition_en": "The everyday waste of households, shops, schools and offices.",
+    "definition_ur": "گھروں، دکانوں، اسکولوں اور دفتروں کا روزمرہ کا کچرا۔"
+  },
+  {
+    "term": "Waste hierarchy",
+    "definition_en": "The ordering of waste options from best to worst: reduce, reuse, recycle, recover, dispose.",
+    "definition_ur": "کچرے کے انتظام کے طریقوں کی بہترین سے بدترین ترتیب: کم کریں، دوبارہ استعمال، ری سائیکل، بحالی، اخراج۔"
+  },
+  {
+    "term": "Recycling",
+    "definition_en": "Turning used material into new material, which depends on clean, separated collection.",
+    "definition_ur": "استعمال شدہ مادے کو نیا مواد بنانا، جو صاف اور الگ کیے گئے کچرے پر منحصر ہے۔"
+  },
+  {
+    "term": "Hazardous waste",
+    "definition_en": "Waste whose properties, infectious, toxic, flammable or corrosive, make it dangerous to people or the environment.",
+    "definition_ur": "وہ کچرا جس کی خصوصیات، عدوی، زہریلی، آتش گیر یا کارآمد، اسے انسانوں یا ماحول کے لیے خطرناک بناتی ہیں۔"
+  },
+  {
+    "term": "Sanitation",
+    "definition_en": "The provision of facilities and services for the safe disposal of human waste, including latrines, sewerage and treatment.",
+    "definition_ur": "انسانی فضلے کے محفوظ اخراج کی سہولیات اور خدمات، بشمول بیت الخلا، گندے پانی کا نظام اور اس کا علاج۔"
+  },
+  {
+    "term": "Air pollution",
+    "definition_en": "The presence of substances in the air at levels that harm people, other living things or materials.",
+    "definition_ur": "ہوا میں ایسے مادوں کی موجودگی جو انسانوں، دوسرے جانداروں یا چیزوں کو نقصان پہنچائے۔"
+  },
+  {
+    "term": "Noise pollution",
+    "definition_en": "Sound loud or persistent enough to harm health or wellbeing.",
+    "definition_ur": "ایسی آواز جو اتنی بلند یا مسلسل ہو کہ صحت یا سکون کو نقصان پہنچائے۔"
+  },
+  {
+    "term": "Hazard",
+    "definition_en": "Anything with the potential to cause harm; the condition itself, not the event.",
+    "definition_ur": "وہ ہر چیز جس میں نقصان کی صلاحیت ہو؛ حالت خود، واقعہ نہیں۔"
+  },
+  {
+    "term": "Health, safety and environment",
+    "definition_en": "The field that studies hazards to people and the environment together, often abbreviated HSE.",
+    "definition_ur": "وہ علم جو انسانوں اور ماحول کے خطرات کو ایک ساتھ پڑھتا ہے، عام طور پر ایچ ایس ای۔"
+  },
+  {
+    "term": "Environmental safety",
+    "definition_en": "Managing the surroundings, a school, worksite, water or air, so that they do not injure the people inside them.",
+    "definition_ur": "ماحول کو ایسی حالت میں رکھنا، اسکول، کام کی جگہ، پانی یا ہوا، کہ وہ اندر موجود انسانوں کو نقصان نہ پہنچائے۔"
+  },
+  {
+    "term": "Risk",
+    "definition_en": "The chance and the seriousness of harm actually occurring, in real conditions.",
+    "definition_ur": "حقیقی حالات میں نقصان کے واقع ہونے کا امکان اور اس کی شدت۔"
+  },
+  {
+    "term": "OSH management system",
+    "definition_en": "The organised set of elements, policy, organisation, planning, procedures, checking and review, through which a workplace manages its hazards continuously.",
+    "definition_ur": "ادارے کے وہ منظم عناصر، پالیسی، تنظیم، منصوبہ بندی، طریقہ کار، جانچ اور جائزہ، جن کے ذریعے کام کی جگہ خطرات کو مسلسل سنبھالتی ہے۔"
+  },
+  {
+    "term": "Incident",
+    "definition_en": "Any unplanned event that did or could have caused harm; the injury, the fatality and the near-miss are its grades.",
+    "definition_ur": "کوئی بھی غیر منصوبہ بند واقعہ جس نے نقصان کیا ہو یا کر سکتا تھا؛ زخم، موت اور بچا واقعہ اس کے درجے ہیں۔"
+  },
+  {
+    "term": "Internal control",
+    "definition_en": "The measures an organisation uses to make sure its own rules are actually followed: authorisation, records, supervision and review.",
+    "definition_ur": "وہ اقدامات جو کوئی ادارہ اپنے قواعد کے اصل میں ماننے کے لیے استعمال کرتا ہے: اجازت، ریکارڈ، نگرانی اور جائزہ۔"
+  },
+  {
+    "term": "OHS professional",
+    "definition_en": "The person a workplace employs to make its safety work: adviser, trainer, inspector, investigator, record keeper and communicator.",
+    "definition_ur": "وہ شخص جسے کام کی جگہ حفاظت کا کام سونپتی ہے: مشیر، تربیت کار، معائنہ کار، تفتیش کار، ریکارڈ رکھنے والا اور رابطہ کار۔"
+  },
+  {
+    "term": "Incident pyramid",
+    "definition_en": "The model in which every serious injury sits on a much wider base of minor injuries, near-misses and unsafe acts sharing the same causes.",
+    "definition_ur": "وہ ماڈل جس میں ہر سنگین زخم کے نیچے چھوٹے زخموں، بچے واقعات اور غیر محفوظ عمل کی وسیع بنیاد ہوتی ہے، سب ایک ہی اسباب سے۔"
+  },
+  {
+    "term": "Swiss cheese model",
+    "definition_en": "The model of accident causation in which defences are slices with holes, and harm passes through when the holes line up.",
+    "definition_ur": "حادثے کے سبب کا وہ ماڈل جس میں دفاع سوراخ والی پنیر کی سلائیں ہیں، اور نقصان تب گزرتا ہے جب سوراخ ایک لائن میں آ جائیں۔"
+  },
+  {
+    "term": "Organizational environment",
+    "definition_en": "The workplace's own climate: how work is divided, how pressure is applied, and how bad news travels.",
+    "definition_ur": "کام کی جگہ کا اپنا ماحول: کام کی تقسیم، دباؤ کا انداز، اور بری خبر کا سفر۔"
+  },
+  {
+    "term": "HSE plan",
+    "definition_en": "The document that turns statutes and the PDCA cycle into a named, dated commitment for one workplace.",
+    "definition_ur": "وہ دستاویز جو قوانین اور پی ڈی سی اے چکر کو کسی ایک کام کی جگہ کے نامزد، تاریخ والے وعدے میں بدلتی ہے۔"
+  },
+  {
+    "term": "Toxic agent",
+    "definition_en": "A substance that harms a living organism when it reaches a sensitive site in enough amount.",
+    "definition_ur": "وہ مادہ جو کافی مقدار میں کسی حساس جگہ پر پہنچ کر جاندار کو نقصان دیتا ہے۔"
+  },
+  {
+    "term": "Xenobiotic",
+    "definition_en": "Any chemical foreign to the body: pesticides, drugs, industrial solvents, pollutants.",
+    "definition_ur": "جسم کے لیے غیر ملکی کوئی بھی کیمیکل: کیڑے مار ادویات، دوائیں، صنعتی سالوینٹ، آلودگیاں۔"
+  },
+  {
+    "term": "Biotransformation",
+    "definition_en": "The liver chemical reworking of a xenobiotic that prepares it for export.",
+    "definition_ur": "جگر کی وہ کیمیائی تبدیلی جو زینو بائیوٹک کو اخراج کے لیے تیار کرتی ہے۔"
+  },
+  {
+    "term": "Detoxification",
+    "definition_en": "A biotransformation outcome in which the product is less harmful and exportable.",
+    "definition_ur": "حیاتیاتی تبدیلی کا وہ نتیجہ جس میں مصنوع کم نقصان دہ اور نکلنے کے قابل ہو۔"
+  },
+  {
+    "term": "Bioactivation",
+    "definition_en": "A biotransformation outcome in which the product is more poisonous than the original.",
+    "definition_ur": "حیاتیاتی تبدیلی کا وہ نتیجہ جس میں مصنوع اصل سے زیادہ زہریلا ہو۔"
+  },
+  {
+    "term": "Multilateral environmental agreement",
+    "definition_en": "A treaty among many states that commits them to manage a shared environmental problem, through ratification and reporting cycles.",
+    "definition_ur": "کئی ریاستوں کا وہ معاہدہ جو انہیں مشترکہ ماحولیاتی مسئلے سنبھالنے کا پابند کرتا ہے، توثیق اور رپورٹنگ کے چکر کے ذریعے۔"
+  },
+  {
+    "term": "Sustainable Development Goals",
+    "definition_en": "Seventeen goals for 2030 adopted by all United Nations member states in 2015, each with targets and indicators.",
+    "definition_ur": "سترہ اہداف برائے 2030، تمام اقوام متحدہ رکن ریاستوں نے 2015 میں اپنائے، ہر ایک میں نشان اور پیمانے۔"
+  },
+  {
+    "term": "Toxicology",
+    "definition_en": "The study of the adverse effects of chemicals on living organisms.",
+    "definition_ur": "کیمیکلز کے جانداروں پر نقصان دہ اثرات کا علم۔"
+  },
+  {
+    "term": "Dose",
+    "definition_en": "The amount of a substance that reaches a sensitive site; the founding question of toxicology.",
+    "definition_ur": "کسی مادے کی وہ مقدار جو حساس جگہ تک پہنچے؛ زہریلی مادوں کے علم کا بنیادی سوال۔"
+  },
+  {
+    "term": "Acute effect",
+    "definition_en": "An effect appearing quickly after a single or short exposure.",
+    "definition_ur": "ایک یا مختصر رابطے کے بعد جلد ظاہر ہونے والا اثر۔"
+  },
+  {
+    "term": "Chronic effect",
+    "definition_en": "An effect developing slowly over long, often low-level exposure.",
+    "definition_ur": "طویل، اکثر کم سطح رابطے پر آہستہ آہستہ پیدا ہونے والا اثر۔"
+  },
+  {
+    "term": "Genotoxic agent",
+    "definition_en": "An agent that damages DNA, the cell instruction manual.",
+    "definition_ur": "وہ عنصر جو ڈی این اے، خلیے کی ہدایت نامہ، کو نقصان پہنچائے۔"
+  },
+  {
+    "term": "Mutagen",
+    "definition_en": "An agent that causes changes in the DNA sequence.",
+    "definition_ur": "وہ عنصر جو ڈی این اے کی ترتیب میں تبدیلی پیدا کرے۔"
+  },
+  {
+    "term": "Teratogen",
+    "definition_en": "An agent that harms the developing unborn child, with timing as decisive as dose.",
+    "definition_ur": "وہ عنصر جو بڑھتے ہوئے ناجائز بچے کو نقصان دے؛ وقت خوراک جیسا ہی فیصلہ کن۔"
+  },
+  {
+    "term": "Carcinogen",
+    "definition_en": "An agent that causes cancer.",
+    "definition_ur": "وہ عنصر جو سرطان پیدا کرے۔"
+  },
+  {
+    "term": "Sensitizer",
+    "definition_en": "An agent that trains the immune system to overreact to later exposures.",
+    "definition_ur": "وہ عنصر جو مدافعت کو بعد کے رابطوں پر حد سے زیادہ ردعمل سکھا دے۔"
+  },
+  {
+    "term": "Essentiality",
+    "definition_en": "The property of being required for life, with toxicity waiting higher up the same ladder.",
+    "definition_ur": "زندگی کے لیے ضروری ہونے کی صفت؛ اسی زینے پر اوپر زہریلی ہونا رکھا ہے۔"
+  },
+  {
+    "term": "Bioaccumulation",
+    "definition_en": "The build-up of a substance within one organism when entry outpaces exit.",
+    "definition_ur": "جب کوئی مادہ اندر آنا باہر جانے سے تیز ہو تو ایک جاندار میں جمع ہونا۔"
+  },
+  {
+    "term": "Smog",
+    "definition_en": "A visible mixture of pollutants held near the ground: sulfurous in winter, photochemical in summer.",
+    "definition_ur": "زمین کے قریب قید آلودگیوں کا دکھائی دینے والا مرکب: سردیوں میں سلفری، گرمیوں میں فوٹو کیمیکل۔"
+  },
+  {
+    "term": "Mitigation",
+    "definition_en": "Reducing the causes of climate change, emissions and deforestation, for the shared future.",
+    "definition_ur": "موسمیاتی تبدیلی کے اسباب گھٹانا، اخراج اور جنگلات کٹائی، مشترکہ مستقبل کے لیے۔"
+  },
+  {
+    "term": "Adaptation",
+    "definition_en": "Softening the harms of the climate impacts already arriving: heat plans, flood-proofing, early warning.",
+    "definition_ur": "پہنچ چلے موسمی اثرات کے نقصان کو نرم کرنا: گرمی منصوبے، سیل سے بچاؤ، ابتدائی اطلاع۔"
+  },
+  {
+    "term": "Bio-magnification",
+    "definition_en": "The rise in concentration of a substance up the food chain as each predator eats many prey.",
+    "definition_ur": "غذائی زنجیر پر چڑھتے ہوئے کسی مادے کی حراستی بڑھنا، جب ہر شکاری بہت شکار کھاتا ہے۔"
+  },
+  {
+    "term": "Toxic substance",
+    "definition_en": "Any substance that can harm a living organism; the subject toxicology studies, classified by origin, use and effect.",
+    "definition_ur": "کوئی بھی مادہ جو جاندار کو نقصان دے سکتا ہے؛ زہریات کا موضوع، جو اصل، استعمال اور اثر سے درجہ بندی ہوتا ہے۔"
+  },
+  {
+    "term": "Dose-response",
+    "definition_en": "The relationship between the amount of a substance reaching the target and the harm it produces, usually drawn as a curve.",
+    "definition_ur": "ہدف تک پہنچنے والی مقدار اور پیدا ہونے والے نقصان کا رشتہ، جو عام طور پر منحنی کی شکل میں بنایا جاتا ہے۔"
+  },
+  {
+    "term": "Greenhouse effect",
+    "definition_en": "The natural warming of the lower atmosphere as greenhouse gases return part of the outgoing heat downward.",
+    "definition_ur": "گرین ہاؤس گیسوں کے باہر جانے والی حرارت کا حصہ نیچے لوٹانے سے نچلی فضا کی قدرتی گرمی۔"
+  },
+  {
+    "term": "Global warming",
+    "definition_en": "The observed rise in the Earth's average surface temperature driven by the enhanced greenhouse effect.",
+    "definition_ur": "بڑھی ہوئی گرین ہاؤس اثر کی وجہ سے زمین کی اوسط سطحی درجہ حرارت میں مشاہدہ شدہ اضافہ۔"
+  },
+  {
     "term": "Quantitative reasoning",
     "definition_en": "The habit of using numbers, data, and logical thinking to understand situations and make sound decisions; the reasoning lies in deciding what to calculate and what the result means, not in the calculation itself.",
     "definition_ur": "اعداد، معطیات اور منطقی سوچ کا استعمال کرتے ہوئے صورتحالوں کو سمجھنے اور ٹھیک فیصلے کرنے کی عادت؛ اس میں اصل سوچ یہ طے کرنے میں ہے کہ کیا حساب کرنا ہے اور نتیجے کا کیا مطلب ہے، حساب خود نہیں۔"

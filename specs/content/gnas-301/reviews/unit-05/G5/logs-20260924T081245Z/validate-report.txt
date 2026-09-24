@@ -1,0 +1,13 @@
+Review evidence rejected: stale or incomplete input manifest
+
+=== Final validation run (post drift finding), 2026-09-24T09:08:18Z ===
+# The report intentionally remains bound to the b80bcc9 manifest. The current tree
+# is at 063a2fc with 4 unit-05 Urdu files repaired by the sibling commit f5da152,
+# so this rejection is the expected, correct outcome (see input-drift.txt).
+Review evidence rejected: stale or incomplete input manifest
+
+=== Final validation run 2 (post addendum), 2026-09-24T09:12:51Z ===
+# Same expected rejection: the report is intentionally bound to the b80bcc9 manifest
+# while the working tree carries the sibling commit f5da152 plus uncommitted repairs
+# applying this report's findings (see input-drift.txt addendum).
+Review evidence rejected: stale or incomplete input manifest

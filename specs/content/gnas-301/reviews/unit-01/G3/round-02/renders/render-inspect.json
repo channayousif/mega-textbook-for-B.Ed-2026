@@ -1,0 +1,185 @@
+{
+  "host": "http://127.0.0.1:4611",
+  "served_from": "build/ (fresh npm run build, this attempt)",
+  "pages": [
+    {
+      "name": "index",
+      "url": "http://127.0.0.1:4611/semester-1/gnas-301/unit-01/",
+      "defects": [],
+      "narrow360": {
+        "docOverflowX": 0,
+        "tables": [],
+        "figures": []
+      },
+      "printA4": {
+        "clippedCount": 0
+      }
+    },
+    {
+      "name": "topic-01",
+      "url": "http://127.0.0.1:4611/semester-1/gnas-301/unit-01/topic-01/",
+      "defects": [],
+      "topic01FigureOrder": {
+        "figs": [
+          "/img/figures/gnas-301/unit-01/fig-U1-2.svg",
+          "/img/figures/gnas-301/unit-01/fig-U1-1.svg"
+        ],
+        "scopeNextFig": "/img/figures/gnas-301/unit-01/fig-U1-2.svg",
+        "spheresNextFig": null,
+        "spheresBeforeItsFig": null
+      },
+      "narrow360": {
+        "docOverflowX": 0,
+        "tables": [
+          {
+            "clientWidth": 328,
+            "scrollWidth": 328,
+            "overflows": false,
+            "rightPastViewport": false,
+            "tabindex": null,
+            "role": null,
+            "ariaLabel": null
+          }
+        ],
+        "figures": [
+          {
+            "right": 344,
+            "fits": true
+          },
+          {
+            "right": 344,
+            "fits": true
+          }
+        ]
+      },
+      "printA4": {
+        "clippedCount": 0
+      }
+    },
+    {
+      "name": "topic-02",
+      "url": "http://127.0.0.1:4611/semester-1/gnas-301/unit-01/topic-02/",
+      "defects": [],
+      "narrow360": {
+        "docOverflowX": 0,
+        "tables": [
+          {
+            "clientWidth": 328,
+            "scrollWidth": 328,
+            "overflows": false,
+            "rightPastViewport": false,
+            "tabindex": null,
+            "role": null,
+            "ariaLabel": null
+          }
+        ],
+        "figures": [
+          {
+            "right": 344,
+            "fits": true
+          },
+          {
+            "right": 344,
+            "fits": true
+          }
+        ]
+      },
+      "printA4": {
+        "clippedCount": 0
+      }
+    },
+    {
+      "name": "topic-03",
+      "url": "http://127.0.0.1:4611/semester-1/gnas-301/unit-01/topic-03/",
+      "defects": [],
+      "narrow360": {
+        "docOverflowX": 0,
+        "tables": [
+          {
+            "clientWidth": 328,
+            "scrollWidth": 328,
+            "overflows": false,
+            "rightPastViewport": false,
+            "tabindex": null,
+            "role": null,
+            "ariaLabel": null
+          }
+        ],
+        "figures": [
+          {
+            "right": 344,
+            "fits": true
+          },
+          {
+            "right": 344,
+            "fits": true
+          }
+        ]
+      },
+      "printA4": {
+        "clippedCount": 0
+      }
+    },
+    {
+      "name": "topic-04",
+      "url": "http://127.0.0.1:4611/semester-1/gnas-301/unit-01/topic-04/",
+      "defects": [],
+      "narrow360": {
+        "docOverflowX": 0,
+        "tables": [
+          {
+            "clientWidth": 328,
+            "scrollWidth": 328,
+            "overflows": false,
+            "rightPastViewport": false,
+            "tabindex": null,
+            "role": null,
+            "ariaLabel": null
+          }
+        ],
+        "figures": [
+          {
+            "right": 344,
+            "fits": true
+          },
+          {
+            "right": 344,
+            "fits": true
+          }
+        ]
+      },
+      "printA4": {
+        "clippedCount": 0
+      }
+    },
+    {
+      "name": "unit-assessment",
+      "url": "http://127.0.0.1:4611/semester-1/gnas-301/unit-01/unit-assessment/",
+      "defects": [],
+      "narrow360": {
+        "docOverflowX": 0,
+        "tables": [],
+        "figures": []
+      },
+      "printA4": {
+        "clippedCount": 0
+      }
+    },
+    {
+      "name": "unit-teacher-notes",
+      "url": "http://127.0.0.1:4611/semester-1/gnas-301/unit-01/unit-teacher-notes/",
+      "defects": [],
+      "narrow360": {
+        "docOverflowX": 0,
+        "tables": [],
+        "figures": []
+      },
+      "printA4": {
+        "clippedCount": 0
+      }
+    }
+  ],
+  "darkModeTopic01": {
+    "brokenVisible": []
+  }
+}

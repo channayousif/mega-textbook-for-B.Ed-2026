@@ -1,0 +1,21 @@
+PASS schema_version/stage
+PASS disposition
+PASS required strings
+PASS reviewer_id format - agent:g5-reviewer
+PASS identity distinct
+PASS timestamps
+PASS skill_digest
+FAIL SKIPPED input_manifest (official validator fails here) - official check fails: 22 drifted digests: i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-01.mdx, i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-02.mdx, i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-03.mdx, i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-04.mdx, i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/unit-assessment.mdx, i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/unit-teacher-notes.mdx, static/img/figures/gnas-301/unit-05/fig-U5-1.dark.svg, static/img/figures/gnas-301/unit-05/fig-U5-1.svg, static/img/figures/gnas-301/unit-05/fig-U5-1.ur.dark.svg, static/img/figures/gnas-301/unit-05/fig-U5-1.ur.svg, static/img/figures/gnas-301/unit-05/fig-U5-2.ur.dark.svg, static/img/figures/gnas-301/unit-05/fig-U5-2.ur.svg, static/img/figures/gnas-301/unit-05/fig-U5-4.ur.dark.svg, static/img/figures/gnas-301/unit-05/fig-U5-4.ur.svg, static/img/figures/gnas-301/unit-05/fig-U5-5.ur.dark.svg, static/img/figures/gnas-301/unit-05/fig-U5-5.ur.svg, static/img/figures/gnas-301/unit-05/fig-U5-6.ur.dark.svg, static/img/figures/gnas-301/unit-05/fig-U5-6.ur.svg, static/img/figures/gnas-301/unit-05/fig-U5-7.ur.dark.svg, static/img/figures/gnas-301/unit-05/fig-U5-7.ur.svg, static/img/figures/gnas-301/unit-05/fig-U5-8.ur.dark.svg, static/img/figures/gnas-301/unit-05/fig-U5-8.ur.svg
+PASS criteria count
+PASS criteria ids
+PASS findings format
+PASS criterion format
+PASS pass criteria have evidence
+PASS evidence_manifest object
+PASS evidence hashes
+PASS commands format
+PASS command logs in manifest
+PASS render PNGs in manifest
+PASS g3_report present
+
+ALL OTHER CHECKS PASS - the input-manifest drift is the sole official-validation blocker

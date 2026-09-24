@@ -1,0 +1,79 @@
+[36m[1m[INFO][22m[39m Starting the development server...
+◇ injected env (0) from .env.local // tip: ⌘ suppress logs { quiet: true }
+[33m[1m[WARNING][22m The [36m`siteConfig.onBrokenMarkdownLinks`[39m[33m config option is deprecated and will be removed in Docusaurus v4.[39m
+[33mPlease migrate and move this option to [36m`siteConfig.markdown.hooks.onBrokenMarkdownLinks`[39m[33m instead.[39m
+[32m[1m[SUCCESS][22m[39m Docusaurus website is running at: [36m[4mhttp://localhost:3210/[24m[39m
+[90m[[90mwebpackbar[90m][39m [36mℹ[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m✔[39m Client: Compiled with some errors in 49.09s
+[31mModule not found: Error: Can't resolve '@site/src/components/PrintOut' in '/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-a8eefd2fc607a93b9/i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02'[39m
+
+[33m--------------------------[39m
+
+[31mError: MDX compilation failed for file [36m[4m"/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-a8eefd2fc607a93b9/i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-06/topic-06.mdx"[24m[39m[31m[39m
+[31mCause: Unexpected closing tag `</Gloss>`, expected corresponding closing tag for `<Glossary>` (36:41-36:69)[39m
+[31mDetails:[39m
+[31m{[39m
+[31m  "column": 72,[39m
+[31m  "file": "",[39m
+[31m  "message": "Unexpected closing tag `</Gloss>`, expected corresponding closing tag for `<Glossary>` (36:41-36:69)",[39m
+[31m  "line": 36,[39m
+[31m  "name": "36:72-36:80",[39m
+[31m  "place": {[39m
+[31m    "start": {[39m
+[31m      "_bufferIndex": 71,[39m
+[31m      "_index": 0,[39m
+[31m      "line": 36,[39m
+[31m      "column": 72,[39m
+[31m      "offset": 2276[39m
+[31m    },[39m
+[31m    "end": {[39m
+[31m      "_bufferIndex": 79,[39m
+[31m      "_index": 0,[39m
+[31m      "line": 36,[39m
+[31m      "column": 80,[39m
+[31m      "offset": 2284[39m
+[31m    }[39m
+[31m  },[39m
+[31m  "reason": "Unexpected closing tag `</Gloss>`, expected corresponding closing tag for `<Glossary>` (36:41-36:69)",[39m
+[31m  "ruleId": "end-tag-mismatch",[39m
+[31m  "source": "mdast-util-mdx-jsx"[39m
+[31m}[39m
+[1mclient[39m[22m (webpack 5.108.4) compiled with [1m[31m2 errors[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mℹ[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m✔[39m Client: Compiled with some errors in 9.28s
+[31mModule not found: Error: Can't resolve '@site/src/components/PrintOut' in '/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-a8eefd2fc607a93b9/i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02'[39m
+
+[33m--------------------------[39m
+
+[31mError: MDX compilation failed for file [36m[4m"/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-a8eefd2fc607a93b9/i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-06/topic-06.mdx"[24m[39m[31m[39m
+[31mCause: Unexpected closing tag `</Gloss>`, expected corresponding closing tag for `<Glossary>` (36:41-36:69)[39m
+[31mDetails:[39m
+[31m{[39m
+[31m  "column": 72,[39m
+[31m  "file": "",[39m
+[31m  "message": "Unexpected closing tag `</Gloss>`, expected corresponding closing tag for `<Glossary>` (36:41-36:69)",[39m
+[31m  "line": 36,[39m
+[31m  "name": "36:72-36:80",[39m
+[31m  "place": {[39m
+[31m    "start": {[39m
+[31m      "_bufferIndex": 71,[39m
+[31m      "_index": 0,[39m
+[31m      "line": 36,[39m
+[31m      "column": 72,[39m
+[31m      "offset": 2276[39m
+[31m    },[39m
+[31m    "end": {[39m
+[31m      "_bufferIndex": 79,[39m
+[31m      "_index": 0,[39m
+[31m      "line": 36,[39m
+[31m      "column": 80,[39m
+[31m      "offset": 2284[39m
+[31m    }[39m
+[31m  },[39m
+[31m  "reason": "Unexpected closing tag `</Gloss>`, expected corresponding closing tag for `<Glossary>` (36:41-36:69)",[39m
+[31m  "ruleId": "end-tag-mismatch",[39m
+[31m  "source": "mdast-util-mdx-jsx"[39m
+[31m}[39m
+[1mclient[39m[22m (webpack 5.108.4) compiled with [1m[31m2 errors[39m[22m
+<w> [webpack.cache.PackFileCacheStrategy] Skipped not serializable cache item 'Compilation/modules|/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-a8eefd2fc607a93b9/node_modules/@docusaurus/mdx-loader/lib/index.js??ruleSet[1].rules[12].use[0]!/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-a8eefd2fc607a93b9/i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-06/topic-06.mdx': No serializer registered for VFileMessage
+<w> while serializing webpack/lib/cache/PackFileCacheStrategy.PackContentItems -> webpack/lib/javascript/JavascriptModule -> webpack/lib/errors/ModuleBuildError -> Error -> VFileMessage

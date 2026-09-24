@@ -1,0 +1,1416 @@
+{
+ "base": "http://127.0.0.1:4613",
+ "started": "2026-09-24T00:50:15.650Z",
+ "browser": "149.0.7827.0",
+ "units": [
+  {
+   "unit": 3,
+   "pages": [
+    {
+     "name": "index",
+     "path": "/semester-1/gnas-301/unit-03/",
+     "desktop": {
+      "title": "Air, Noise and Environmental Hazards | B.Ed Mega Textbook",
+      "h1Count": 1,
+      "imgCount": 0,
+      "brokenImages": [],
+      "imagesWithoutAlt": [],
+      "skippedHeadingLevels": [],
+      "docScrollWidth": 1280,
+      "docClientWidth": 1280,
+      "docOverflowX": false,
+      "linksNoText": 0,
+      "consoleErrors": [],
+      "figures": []
+     },
+     "narrow": {
+      "docScrollWidth": 360,
+      "docClientWidth": 360,
+      "docOverflowX": false,
+      "tables": [],
+      "figures": []
+     },
+     "print": {
+      "docScrollWidth": 794,
+      "docOverflowX": false,
+      "clippedElems": [],
+      "navbarHidden": true,
+      "sidebarHidden": true,
+      "figures": [],
+      "allFiguresFit": true,
+      "answersHeadingY": null
+     }
+    },
+    {
+     "name": "topic-01",
+     "path": "/semester-1/gnas-301/unit-03/topic-01",
+     "desktop": {
+      "title": "Topic 3.1 - Air pollution | B.Ed Mega Textbook",
+      "h1Count": 1,
+      "imgCount": 4,
+      "brokenImages": [],
+      "imagesWithoutAlt": [],
+      "skippedHeadingLevels": [],
+      "docScrollWidth": 1280,
+      "docClientWidth": 1280,
+      "docOverflowX": false,
+      "linksNoText": 0,
+      "consoleErrors": [],
+      "figures": [
+       {
+        "id": "fig-U3-1",
+        "alt": "Diagram of the air pollution chain from sources through the air to receptors, with control strategies marked at source, pathway and receptor",
+        "altLen": 140,
+        "hasFigcaption": true,
+        "loaded": true,
+        "pixelStddev": 26.1
+       },
+       {
+        "id": "fig-U3-2",
+        "alt": "Table of six major air pollutants with main source, health effect and one control strategy for each",
+        "altLen": 99,
+        "hasFigcaption": true,
+        "loaded": true,
+        "pixelStddev": 29.4
+       }
+      ]
+     },
+     "narrow": {
+      "docScrollWidth": 360,
+      "docClientWidth": 360,
+      "docOverflowX": false,
+      "tables": [
+       {
+        "clientWidth": 328,
+        "scrollWidth": 328,
+        "fits": true,
+        "lastColRightBeforeScroll": 344,
+        "lastColRightAfterScroll": 344,
+        "reachableBySwipe": true,
+        "hydrationAttrs": {
+         "tabindex": null,
+         "role": null,
+         "ariaLabel": null
+        }
+       }
+      ],
+      "figures": [
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-1.svg",
+        "right": 344,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-1.dark.svg",
+        "right": 0,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-2.svg",
+        "right": 344,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-2.dark.svg",
+        "right": 0,
+        "fits": true
+       }
+      ]
+     },
+     "print": {
+      "docScrollWidth": 794,
+      "docOverflowX": false,
+      "clippedElems": [],
+      "navbarHidden": true,
+      "sidebarHidden": true,
+      "figures": [
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-1.svg",
+        "right": 778,
+        "loaded": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-1.dark.svg",
+        "right": 0,
+        "loaded": false
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-2.svg",
+        "right": 778,
+        "loaded": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-2.dark.svg",
+        "right": 0,
+        "loaded": false
+       }
+      ],
+      "allFiguresFit": false,
+      "answersHeadingY": null
+     }
+    },
+    {
+     "name": "topic-02",
+     "path": "/semester-1/gnas-301/unit-03/topic-02",
+     "desktop": {
+      "title": "Topic 3.2 - Noise pollution | B.Ed Mega Textbook",
+      "h1Count": 1,
+      "imgCount": 4,
+      "brokenImages": [],
+      "imagesWithoutAlt": [],
+      "skippedHeadingLevels": [],
+      "docScrollWidth": 1280,
+      "docClientWidth": 1280,
+      "docOverflowX": false,
+      "linksNoText": 0,
+      "consoleErrors": [],
+      "figures": [
+       {
+        "id": "fig-U3-3",
+        "alt": "Diagram of a decibel ladder from a quiet library at 30 dB to a pressure horn above 110 dB, with the hearing-damage zone marked above 85 dB",
+        "altLen": 138,
+        "hasFigcaption": true,
+        "loaded": true,
+        "pixelStddev": 23.7
+       },
+       {
+        "id": "fig-U3-4",
+        "alt": "Table of five noise sources with health impact, who is exposed and one control measure for each",
+        "altLen": 95,
+        "hasFigcaption": true,
+        "loaded": true,
+        "pixelStddev": 29.6
+       }
+      ]
+     },
+     "narrow": {
+      "docScrollWidth": 360,
+      "docClientWidth": 360,
+      "docOverflowX": false,
+      "tables": [
+       {
+        "clientWidth": 328,
+        "scrollWidth": 328,
+        "fits": true,
+        "lastColRightBeforeScroll": 344,
+        "lastColRightAfterScroll": 344,
+        "reachableBySwipe": true,
+        "hydrationAttrs": {
+         "tabindex": null,
+         "role": null,
+         "ariaLabel": null
+        }
+       }
+      ],
+      "figures": [
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-3.svg",
+        "right": 344,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-3.dark.svg",
+        "right": 0,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-4.svg",
+        "right": 344,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-4.dark.svg",
+        "right": 0,
+        "fits": true
+       }
+      ]
+     },
+     "print": {
+      "docScrollWidth": 794,
+      "docOverflowX": false,
+      "clippedElems": [],
+      "navbarHidden": true,
+      "sidebarHidden": true,
+      "figures": [
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-3.svg",
+        "right": 778,
+        "loaded": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-3.dark.svg",
+        "right": 0,
+        "loaded": false
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-4.svg",
+        "right": 778,
+        "loaded": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-4.dark.svg",
+        "right": 0,
+        "loaded": false
+       }
+      ],
+      "allFiguresFit": false,
+      "answersHeadingY": null
+     }
+    },
+    {
+     "name": "topic-03",
+     "path": "/semester-1/gnas-301/unit-03/topic-03",
+     "desktop": {
+      "title": "Topic 3.3 - Hazards in health, safety and environment | B.Ed Mega Textbook",
+      "h1Count": 1,
+      "imgCount": 4,
+      "brokenImages": [],
+      "imagesWithoutAlt": [],
+      "skippedHeadingLevels": [],
+      "docScrollWidth": 1280,
+      "docClientWidth": 1280,
+      "docOverflowX": false,
+      "linksNoText": 0,
+      "consoleErrors": [],
+      "figures": [
+       {
+        "id": "fig-U3-5",
+        "alt": "Concept map of the five hazard classes, physical, mechanical, biological, chemical and psychological, branching from a central hazard node, each with a Pakistani example",
+        "altLen": 169,
+        "hasFigcaption": true,
+        "loaded": true,
+        "pixelStddev": 23.3
+       },
+       {
+        "id": "fig-U3-6",
+        "alt": "Table of the five hazard classes with one example, health effect and one safety measure for each",
+        "altLen": 96,
+        "hasFigcaption": true,
+        "loaded": true,
+        "pixelStddev": 29.2
+       }
+      ]
+     },
+     "narrow": {
+      "docScrollWidth": 360,
+      "docClientWidth": 360,
+      "docOverflowX": false,
+      "tables": [
+       {
+        "clientWidth": 328,
+        "scrollWidth": 328,
+        "fits": true,
+        "lastColRightBeforeScroll": 344,
+        "lastColRightAfterScroll": 344,
+        "reachableBySwipe": true,
+        "hydrationAttrs": {
+         "tabindex": null,
+         "role": null,
+         "ariaLabel": null
+        }
+       }
+      ],
+      "figures": [
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-5.svg",
+        "right": 344,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-5.dark.svg",
+        "right": 0,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-6.svg",
+        "right": 344,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-6.dark.svg",
+        "right": 0,
+        "fits": true
+       }
+      ]
+     },
+     "print": {
+      "docScrollWidth": 794,
+      "docOverflowX": false,
+      "clippedElems": [],
+      "navbarHidden": true,
+      "sidebarHidden": true,
+      "figures": [
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-5.svg",
+        "right": 778,
+        "loaded": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-5.dark.svg",
+        "right": 0,
+        "loaded": false
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-6.svg",
+        "right": 778,
+        "loaded": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-6.dark.svg",
+        "right": 0,
+        "loaded": false
+       }
+      ],
+      "allFiguresFit": false,
+      "answersHeadingY": null
+     }
+    },
+    {
+     "name": "topic-04",
+     "path": "/semester-1/gnas-301/unit-03/topic-04",
+     "desktop": {
+      "title": "Topic 3.4 - Risk assessment and management | B.Ed Mega Textbook",
+      "h1Count": 1,
+      "imgCount": 4,
+      "brokenImages": [],
+      "imagesWithoutAlt": [],
+      "skippedHeadingLevels": [],
+      "docScrollWidth": 1280,
+      "docClientWidth": 1280,
+      "docOverflowX": false,
+      "linksNoText": 0,
+      "consoleErrors": [],
+      "figures": [
+       {
+        "id": "fig-U3-7",
+        "alt": "Flowchart of the risk management cycle, identify hazards, assess risks, control, monitor and review, drawn as a loop",
+        "altLen": 116,
+        "hasFigcaption": true,
+        "loaded": true,
+        "pixelStddev": 23.1
+       },
+       {
+        "id": "fig-U3-8",
+        "alt": "Table of four hazard identification tools with what each finds and its blind spot",
+        "altLen": 81,
+        "hasFigcaption": true,
+        "loaded": true,
+        "pixelStddev": 27.9
+       }
+      ]
+     },
+     "narrow": {
+      "docScrollWidth": 360,
+      "docClientWidth": 360,
+      "docOverflowX": false,
+      "tables": [
+       {
+        "clientWidth": 328,
+        "scrollWidth": 328,
+        "fits": true,
+        "lastColRightBeforeScroll": 344,
+        "lastColRightAfterScroll": 344,
+        "reachableBySwipe": true,
+        "hydrationAttrs": {
+         "tabindex": null,
+         "role": null,
+         "ariaLabel": null
+        }
+       }
+      ],
+      "figures": [
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-7.svg",
+        "right": 344,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-7.dark.svg",
+        "right": 0,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-8.svg",
+        "right": 344,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-8.dark.svg",
+        "right": 0,
+        "fits": true
+       }
+      ]
+     },
+     "print": {
+      "docScrollWidth": 794,
+      "docOverflowX": false,
+      "clippedElems": [],
+      "navbarHidden": true,
+      "sidebarHidden": true,
+      "figures": [
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-7.svg",
+        "right": 778,
+        "loaded": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-7.dark.svg",
+        "right": 0,
+        "loaded": false
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-8.svg",
+        "right": 778,
+        "loaded": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-03/fig-U3-8.dark.svg",
+        "right": 0,
+        "loaded": false
+       }
+      ],
+      "allFiguresFit": false,
+      "answersHeadingY": null
+     }
+    },
+    {
+     "name": "unit-assessment",
+     "path": "/semester-1/gnas-301/unit-03/unit-assessment",
+     "desktop": {
+      "title": "Unit 3 assessment | B.Ed Mega Textbook",
+      "h1Count": 1,
+      "imgCount": 0,
+      "brokenImages": [],
+      "imagesWithoutAlt": [],
+      "skippedHeadingLevels": [],
+      "docScrollWidth": 1280,
+      "docClientWidth": 1280,
+      "docOverflowX": false,
+      "linksNoText": 0,
+      "consoleErrors": [],
+      "figures": []
+     },
+     "narrow": {
+      "docScrollWidth": 360,
+      "docClientWidth": 360,
+      "docOverflowX": false,
+      "tables": [],
+      "figures": []
+     },
+     "print": {
+      "docScrollWidth": 794,
+      "docOverflowX": false,
+      "clippedElems": [],
+      "navbarHidden": true,
+      "sidebarHidden": true,
+      "figures": [],
+      "allFiguresFit": true,
+      "answersHeadingY": 2709
+     }
+    },
+    {
+     "name": "unit-teacher-notes",
+     "path": "/semester-1/gnas-301/unit-03/unit-teacher-notes",
+     "desktop": {
+      "title": "Unit 3 teacher notes | B.Ed Mega Textbook",
+      "h1Count": 1,
+      "imgCount": 0,
+      "brokenImages": [],
+      "imagesWithoutAlt": [],
+      "skippedHeadingLevels": [],
+      "docScrollWidth": 1280,
+      "docClientWidth": 1280,
+      "docOverflowX": false,
+      "linksNoText": 0,
+      "consoleErrors": [],
+      "figures": []
+     },
+     "narrow": {
+      "docScrollWidth": 360,
+      "docClientWidth": 360,
+      "docOverflowX": false,
+      "tables": [],
+      "figures": []
+     },
+     "print": {
+      "docScrollWidth": 794,
+      "docOverflowX": false,
+      "clippedElems": [],
+      "navbarHidden": true,
+      "sidebarHidden": true,
+      "figures": [],
+      "allFiguresFit": true,
+      "answersHeadingY": null
+     }
+    }
+   ]
+  },
+  {
+   "unit": 4,
+   "pages": [
+    {
+     "name": "index",
+     "path": "/semester-1/gnas-301/unit-04/",
+     "desktop": {
+      "title": "Occupational Safety and Health | B.Ed Mega Textbook",
+      "h1Count": 1,
+      "imgCount": 0,
+      "brokenImages": [],
+      "imagesWithoutAlt": [],
+      "skippedHeadingLevels": [],
+      "docScrollWidth": 1280,
+      "docClientWidth": 1280,
+      "docOverflowX": false,
+      "linksNoText": 0,
+      "consoleErrors": [],
+      "figures": []
+     },
+     "narrow": {
+      "docScrollWidth": 360,
+      "docClientWidth": 360,
+      "docOverflowX": false,
+      "tables": [],
+      "figures": []
+     },
+     "print": {
+      "docScrollWidth": 794,
+      "docOverflowX": false,
+      "clippedElems": [],
+      "navbarHidden": true,
+      "sidebarHidden": true,
+      "figures": [],
+      "allFiguresFit": true,
+      "answersHeadingY": null
+     }
+    },
+    {
+     "name": "topic-01",
+     "path": "/semester-1/gnas-301/unit-04/topic-01",
+     "desktop": {
+      "title": "Topic 4.1 - The workplace as an environment | B.Ed Mega Textbook",
+      "h1Count": 1,
+      "imgCount": 4,
+      "brokenImages": [],
+      "imagesWithoutAlt": [],
+      "skippedHeadingLevels": [],
+      "docScrollWidth": 1280,
+      "docClientWidth": 1280,
+      "docOverflowX": false,
+      "linksNoText": 0,
+      "consoleErrors": [],
+      "figures": [
+       {
+        "id": "fig-U4-1",
+        "alt": "Diagram of four workplace sectors, industry, construction, agriculture and services, each panel with its characteristic hazards labelled",
+        "altLen": 136,
+        "hasFigcaption": true,
+        "loaded": true,
+        "pixelStddev": 23.9
+       },
+       {
+        "id": "fig-U4-2",
+        "alt": "Table of accident and injury types by sector with a driver and one prevention point each",
+        "altLen": 88,
+        "hasFigcaption": true,
+        "loaded": true,
+        "pixelStddev": 29.6
+       }
+      ]
+     },
+     "narrow": {
+      "docScrollWidth": 360,
+      "docClientWidth": 360,
+      "docOverflowX": false,
+      "tables": [
+       {
+        "clientWidth": 328,
+        "scrollWidth": 328,
+        "fits": true,
+        "lastColRightBeforeScroll": 344,
+        "lastColRightAfterScroll": 344,
+        "reachableBySwipe": true,
+        "hydrationAttrs": {
+         "tabindex": null,
+         "role": null,
+         "ariaLabel": null
+        }
+       }
+      ],
+      "figures": [
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-1.svg",
+        "right": 344,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-1.dark.svg",
+        "right": 0,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-2.svg",
+        "right": 344,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-2.dark.svg",
+        "right": 0,
+        "fits": true
+       }
+      ]
+     },
+     "print": {
+      "docScrollWidth": 794,
+      "docOverflowX": false,
+      "clippedElems": [],
+      "navbarHidden": true,
+      "sidebarHidden": true,
+      "figures": [
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-1.svg",
+        "right": 778,
+        "loaded": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-1.dark.svg",
+        "right": 0,
+        "loaded": false
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-2.svg",
+        "right": 778,
+        "loaded": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-2.dark.svg",
+        "right": 0,
+        "loaded": false
+       }
+      ],
+      "allFiguresFit": false,
+      "answersHeadingY": null
+     }
+    },
+    {
+     "name": "topic-02",
+     "path": "/semester-1/gnas-301/unit-04/topic-02",
+     "desktop": {
+      "title": "Topic 4.2 - OSH management systems | B.Ed Mega Textbook",
+      "h1Count": 1,
+      "imgCount": 4,
+      "brokenImages": [],
+      "imagesWithoutAlt": [],
+      "skippedHeadingLevels": [],
+      "docScrollWidth": 1280,
+      "docClientWidth": 1280,
+      "docOverflowX": false,
+      "linksNoText": 0,
+      "consoleErrors": [],
+      "figures": [
+       {
+        "id": "fig-U4-3",
+        "alt": "Flowchart of the PDCA cycle of an OSH management system, plan, do, check, act, drawn as a loop",
+        "altLen": 94,
+        "hasFigcaption": true,
+        "loaded": true,
+        "pixelStddev": 23.2
+       },
+       {
+        "id": "fig-U4-4",
+        "alt": "Table comparing the ILO Convention No. 155 and ISO 45001:2018 reference points with what each is, who it binds and one contribution",
+        "altLen": 131,
+        "hasFigcaption": true,
+        "loaded": true,
+        "pixelStddev": 28.5
+       }
+      ]
+     },
+     "narrow": {
+      "docScrollWidth": 360,
+      "docClientWidth": 360,
+      "docOverflowX": false,
+      "tables": [
+       {
+        "clientWidth": 328,
+        "scrollWidth": 328,
+        "fits": true,
+        "lastColRightBeforeScroll": 344,
+        "lastColRightAfterScroll": 344,
+        "reachableBySwipe": true,
+        "hydrationAttrs": {
+         "tabindex": null,
+         "role": null,
+         "ariaLabel": null
+        }
+       }
+      ],
+      "figures": [
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-3.svg",
+        "right": 344,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-3.dark.svg",
+        "right": 0,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-4.svg",
+        "right": 344,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-4.dark.svg",
+        "right": 0,
+        "fits": true
+       }
+      ]
+     },
+     "print": {
+      "docScrollWidth": 794,
+      "docOverflowX": false,
+      "clippedElems": [],
+      "navbarHidden": true,
+      "sidebarHidden": true,
+      "figures": [
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-3.svg",
+        "right": 778,
+        "loaded": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-3.dark.svg",
+        "right": 0,
+        "loaded": false
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-4.svg",
+        "right": 778,
+        "loaded": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-4.dark.svg",
+        "right": 0,
+        "loaded": false
+       }
+      ],
+      "allFiguresFit": false,
+      "answersHeadingY": null
+     }
+    },
+    {
+     "name": "topic-03",
+     "path": "/semester-1/gnas-301/unit-04/topic-03",
+     "desktop": {
+      "title": "Topic 4.3 - Safety management, regulation and internal control | B.Ed Mega Textbook",
+      "h1Count": 1,
+      "imgCount": 4,
+      "brokenImages": [],
+      "imagesWithoutAlt": [],
+      "skippedHeadingLevels": [],
+      "docScrollWidth": 1280,
+      "docClientWidth": 1280,
+      "docOverflowX": false,
+      "linksNoText": 0,
+      "consoleErrors": [],
+      "figures": [
+       {
+        "id": "fig-U4-6",
+        "alt": "Table of the four instruments of HSE regulation, act, rules and regulations, codes of practice and guidance, with what each does and a question it answers",
+        "altLen": 154,
+        "hasFigcaption": true,
+        "loaded": true,
+        "pixelStddev": 27.2
+       },
+       {
+        "id": "fig-U4-5",
+        "alt": "Diagram of internal control as five stacked layers, management philosophy, policies, procedures, supervision and records, each catching what the one above misses",
+        "altLen": 161,
+        "hasFigcaption": true,
+        "loaded": true,
+        "pixelStddev": 24.7
+       }
+      ]
+     },
+     "narrow": {
+      "docScrollWidth": 360,
+      "docClientWidth": 360,
+      "docOverflowX": false,
+      "tables": [
+       {
+        "clientWidth": 328,
+        "scrollWidth": 328,
+        "fits": true,
+        "lastColRightBeforeScroll": 344,
+        "lastColRightAfterScroll": 344,
+        "reachableBySwipe": true,
+        "hydrationAttrs": {
+         "tabindex": null,
+         "role": null,
+         "ariaLabel": null
+        }
+       }
+      ],
+      "figures": [
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-6.svg",
+        "right": 344,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-6.dark.svg",
+        "right": 0,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-5.svg",
+        "right": 344,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-5.dark.svg",
+        "right": 0,
+        "fits": true
+       }
+      ]
+     },
+     "print": {
+      "docScrollWidth": 794,
+      "docOverflowX": false,
+      "clippedElems": [],
+      "navbarHidden": true,
+      "sidebarHidden": true,
+      "figures": [
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-6.svg",
+        "right": 778,
+        "loaded": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-6.dark.svg",
+        "right": 0,
+        "loaded": false
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-5.svg",
+        "right": 778,
+        "loaded": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-5.dark.svg",
+        "right": 0,
+        "loaded": false
+       }
+      ],
+      "allFiguresFit": false,
+      "answersHeadingY": null
+     }
+    },
+    {
+     "name": "topic-04",
+     "path": "/semester-1/gnas-301/unit-04/topic-04",
+     "desktop": {
+      "title": "Topic 4.4 - Duties, rights and the OHS professional | B.Ed Mega Textbook",
+      "h1Count": 1,
+      "imgCount": 4,
+      "brokenImages": [],
+      "imagesWithoutAlt": [],
+      "skippedHeadingLevels": [],
+      "docScrollWidth": 1280,
+      "docClientWidth": 1280,
+      "docOverflowX": false,
+      "linksNoText": 0,
+      "consoleErrors": [],
+      "figures": [
+       {
+        "id": "fig-U4-7",
+        "alt": "Table of the duties and rights triangle, employer, worker and government, each with duties and rights or powers",
+        "altLen": 111,
+        "hasFigcaption": true,
+        "loaded": true,
+        "pixelStddev": 26.5
+       },
+       {
+        "id": "fig-U4-8",
+        "alt": "Diagram of the OHS professional's role web with six spokes, adviser, trainer, inspector, investigator, record keeper and communicator, around a central professional node",
+        "altLen": 169,
+        "hasFigcaption": true,
+        "loaded": true,
+        "pixelStddev": 22.5
+       }
+      ]
+     },
+     "narrow": {
+      "docScrollWidth": 360,
+      "docClientWidth": 360,
+      "docOverflowX": false,
+      "tables": [
+       {
+        "clientWidth": 328,
+        "scrollWidth": 328,
+        "fits": true,
+        "lastColRightBeforeScroll": 344,
+        "lastColRightAfterScroll": 344,
+        "reachableBySwipe": true,
+        "hydrationAttrs": {
+         "tabindex": null,
+         "role": null,
+         "ariaLabel": null
+        }
+       }
+      ],
+      "figures": [
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-7.svg",
+        "right": 344,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-7.dark.svg",
+        "right": 0,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-8.svg",
+        "right": 344,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-8.dark.svg",
+        "right": 0,
+        "fits": true
+       }
+      ]
+     },
+     "print": {
+      "docScrollWidth": 794,
+      "docOverflowX": false,
+      "clippedElems": [],
+      "navbarHidden": true,
+      "sidebarHidden": true,
+      "figures": [
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-7.svg",
+        "right": 778,
+        "loaded": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-7.dark.svg",
+        "right": 0,
+        "loaded": false
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-8.svg",
+        "right": 778,
+        "loaded": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-8.dark.svg",
+        "right": 0,
+        "loaded": false
+       }
+      ],
+      "allFiguresFit": false,
+      "answersHeadingY": null
+     }
+    },
+    {
+     "name": "topic-05",
+     "path": "/semester-1/gnas-301/unit-04/topic-05",
+     "desktop": {
+      "title": "Topic 4.5 - Principles, measures and models of HSE management | B.Ed Mega Textbook",
+      "h1Count": 1,
+      "imgCount": 4,
+      "brokenImages": [],
+      "imagesWithoutAlt": [],
+      "skippedHeadingLevels": [],
+      "docScrollWidth": 1280,
+      "docClientWidth": 1280,
+      "docOverflowX": false,
+      "linksNoText": 0,
+      "consoleErrors": [],
+      "figures": [
+       {
+        "id": "fig-U4-9",
+        "alt": "Concept map linking the four management functions, plan, organise, lead and control, to a central safe workplace node and the outcomes safe people, safe plant, safe procedures and safe place",
+        "altLen": 190,
+        "hasFigcaption": true,
+        "loaded": true,
+        "pixelStddev": 22.1
+       },
+       {
+        "id": "fig-U4-10",
+        "alt": "Table of three HSE measures and models, the incident pyramid, the Swiss cheese model and the safety climate survey, with what each shows and what each is silent about",
+        "altLen": 166,
+        "hasFigcaption": true,
+        "loaded": true,
+        "pixelStddev": 27.9
+       }
+      ]
+     },
+     "narrow": {
+      "docScrollWidth": 360,
+      "docClientWidth": 360,
+      "docOverflowX": false,
+      "tables": [
+       {
+        "clientWidth": 328,
+        "scrollWidth": 328,
+        "fits": true,
+        "lastColRightBeforeScroll": 344,
+        "lastColRightAfterScroll": 344,
+        "reachableBySwipe": true,
+        "hydrationAttrs": {
+         "tabindex": null,
+         "role": null,
+         "ariaLabel": null
+        }
+       }
+      ],
+      "figures": [
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-9.svg",
+        "right": 344,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-9.dark.svg",
+        "right": 0,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-10.svg",
+        "right": 344,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-10.dark.svg",
+        "right": 0,
+        "fits": true
+       }
+      ]
+     },
+     "print": {
+      "docScrollWidth": 794,
+      "docOverflowX": false,
+      "clippedElems": [],
+      "navbarHidden": true,
+      "sidebarHidden": true,
+      "figures": [
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-9.svg",
+        "right": 778,
+        "loaded": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-9.dark.svg",
+        "right": 0,
+        "loaded": false
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-10.svg",
+        "right": 778,
+        "loaded": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-10.dark.svg",
+        "right": 0,
+        "loaded": false
+       }
+      ],
+      "allFiguresFit": false,
+      "answersHeadingY": null
+     }
+    },
+    {
+     "name": "topic-06",
+     "path": "/semester-1/gnas-301/unit-04/topic-06",
+     "desktop": {
+      "title": "Topic 4.6 - HSE statutes, regulations and plans | B.Ed Mega Textbook",
+      "h1Count": 1,
+      "imgCount": 4,
+      "brokenImages": [],
+      "imagesWithoutAlt": [],
+      "skippedHeadingLevels": [],
+      "docScrollWidth": 1280,
+      "docClientWidth": 1280,
+      "docOverflowX": false,
+      "linksNoText": 0,
+      "consoleErrors": [],
+      "figures": [
+       {
+        "id": "fig-U4-12",
+        "alt": "Table of five layers of HSE statutes and regulations applicable in Pakistan with what each governs and who enforces it",
+        "altLen": 118,
+        "hasFigcaption": true,
+        "loaded": true,
+        "pixelStddev": 28
+       },
+       {
+        "id": "fig-U4-11",
+        "alt": "Flowchart of the six steps of establishing an HSE plan, scope, hazards, objectives, controls and resources, training and communication, monitoring and review, as a loop",
+        "altLen": 168,
+        "hasFigcaption": true,
+        "loaded": true,
+        "pixelStddev": 25.4
+       }
+      ]
+     },
+     "narrow": {
+      "docScrollWidth": 360,
+      "docClientWidth": 360,
+      "docOverflowX": false,
+      "tables": [
+       {
+        "clientWidth": 328,
+        "scrollWidth": 328,
+        "fits": true,
+        "lastColRightBeforeScroll": 344,
+        "lastColRightAfterScroll": 344,
+        "reachableBySwipe": true,
+        "hydrationAttrs": {
+         "tabindex": null,
+         "role": null,
+         "ariaLabel": null
+        }
+       }
+      ],
+      "figures": [
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-12.svg",
+        "right": 344,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-12.dark.svg",
+        "right": 0,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-11.svg",
+        "right": 344,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-11.dark.svg",
+        "right": 0,
+        "fits": true
+       }
+      ]
+     },
+     "print": {
+      "docScrollWidth": 794,
+      "docOverflowX": false,
+      "clippedElems": [],
+      "navbarHidden": true,
+      "sidebarHidden": true,
+      "figures": [
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-12.svg",
+        "right": 778,
+        "loaded": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-12.dark.svg",
+        "right": 0,
+        "loaded": false
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-11.svg",
+        "right": 778,
+        "loaded": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-11.dark.svg",
+        "right": 0,
+        "loaded": false
+       }
+      ],
+      "allFiguresFit": false,
+      "answersHeadingY": null
+     }
+    },
+    {
+     "name": "topic-07",
+     "path": "/semester-1/gnas-301/unit-04/topic-07",
+     "desktop": {
+      "title": "Topic 4.7 - Health challenges, the external environment and tools | B.Ed Mega Textbook",
+      "h1Count": 1,
+      "imgCount": 4,
+      "brokenImages": [],
+      "imagesWithoutAlt": [],
+      "skippedHeadingLevels": [],
+      "docScrollWidth": 1280,
+      "docClientWidth": 1280,
+      "docOverflowX": false,
+      "linksNoText": 0,
+      "consoleErrors": [],
+      "figures": [
+       {
+        "id": "fig-U4-13",
+        "alt": "Table of five worker health challenges, heat, dust, noise, stress and ergonomics, each with a workplace example, an external-environment interaction and one control",
+        "altLen": 164,
+        "hasFigcaption": true,
+        "loaded": true,
+        "pixelStddev": 28.1
+       },
+       {
+        "id": "fig-U4-14",
+        "alt": "Diagram of HSE tools and instruments mapped to the four management-system elements, plan, do, check and act, that each supports",
+        "altLen": 127,
+        "hasFigcaption": true,
+        "loaded": true,
+        "pixelStddev": 24.3
+       }
+      ]
+     },
+     "narrow": {
+      "docScrollWidth": 360,
+      "docClientWidth": 360,
+      "docOverflowX": false,
+      "tables": [
+       {
+        "clientWidth": 328,
+        "scrollWidth": 328,
+        "fits": true,
+        "lastColRightBeforeScroll": 344,
+        "lastColRightAfterScroll": 344,
+        "reachableBySwipe": true,
+        "hydrationAttrs": {
+         "tabindex": null,
+         "role": null,
+         "ariaLabel": null
+        }
+       }
+      ],
+      "figures": [
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-13.svg",
+        "right": 344,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-13.dark.svg",
+        "right": 0,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-14.svg",
+        "right": 344,
+        "fits": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-14.dark.svg",
+        "right": 0,
+        "fits": true
+       }
+      ]
+     },
+     "print": {
+      "docScrollWidth": 794,
+      "docOverflowX": false,
+      "clippedElems": [],
+      "navbarHidden": true,
+      "sidebarHidden": true,
+      "figures": [
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-13.svg",
+        "right": 778,
+        "loaded": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-13.dark.svg",
+        "right": 0,
+        "loaded": false
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-14.svg",
+        "right": 778,
+        "loaded": true
+       },
+       {
+        "src": "/img/figures/gnas-301/unit-04/fig-U4-14.dark.svg",
+        "right": 0,
+        "loaded": false
+       }
+      ],
+      "allFiguresFit": false,
+      "answersHeadingY": null
+     }
+    },
+    {
+     "name": "unit-assessment",
+     "path": "/semester-1/gnas-301/unit-04/unit-assessment",
+     "desktop": {
+      "title": "Unit 4 assessment | B.Ed Mega Textbook",
+      "h1Count": 1,
+      "imgCount": 0,
+      "brokenImages": [],
+      "imagesWithoutAlt": [],
+      "skippedHeadingLevels": [],
+      "docScrollWidth": 1280,
+      "docClientWidth": 1280,
+      "docOverflowX": false,
+      "linksNoText": 0,
+      "consoleErrors": [],
+      "figures": []
+     },
+     "narrow": {
+      "docScrollWidth": 360,
+      "docClientWidth": 360,
+      "docOverflowX": false,
+      "tables": [],
+      "figures": []
+     },
+     "print": {
+      "docScrollWidth": 794,
+      "docOverflowX": false,
+      "clippedElems": [],
+      "navbarHidden": true,
+      "sidebarHidden": true,
+      "figures": [],
+      "allFiguresFit": true,
+      "answersHeadingY": 2814
+     }
+    },
+    {
+     "name": "unit-teacher-notes",
+     "path": "/semester-1/gnas-301/unit-04/unit-teacher-notes",
+     "desktop": {
+      "title": "Unit 4 teacher notes | B.Ed Mega Textbook",
+      "h1Count": 1,
+      "imgCount": 0,
+      "brokenImages": [],
+      "imagesWithoutAlt": [],
+      "skippedHeadingLevels": [],
+      "docScrollWidth": 1280,
+      "docClientWidth": 1280,
+      "docOverflowX": false,
+      "linksNoText": 0,
+      "consoleErrors": [],
+      "figures": []
+     },
+     "narrow": {
+      "docScrollWidth": 360,
+      "docClientWidth": 360,
+      "docOverflowX": false,
+      "tables": [],
+      "figures": []
+     },
+     "print": {
+      "docScrollWidth": 794,
+      "docOverflowX": false,
+      "clippedElems": [],
+      "navbarHidden": true,
+      "sidebarHidden": true,
+      "figures": [],
+      "allFiguresFit": true,
+      "answersHeadingY": null
+     }
+    }
+   ]
+  }
+ ],
+ "completed": "2026-09-24T00:51:44.756Z"
+}
