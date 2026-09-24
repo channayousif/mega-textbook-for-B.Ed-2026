@@ -1,0 +1,42 @@
+G3 render-review - GNAS-301 Unit 6 - attempt agent-g3-gnas301-u6-run001
+Date: 2026-09-23/24 (started 2026-09-23T23:5xZ, completed 2026-09-24T00:0xZ)
+Host: local worktree, Linux 6.17.0-1020-oracle, Node 22.22.1
+Browser: Playwright (repo devDependency) with bundled Chromium headless (chromium-1243),
+  driven by the saved script logs-20260924T0review1/inspect-render.mjs.
+Served artifact: fresh `npm run build` (both locales, exit 0, build.log) served by
+  `npx docusaurus serve --port 3457` (serve.log); pages fetched over HTTP 200.
+Rendered input identity: worktree HEAD 1aebf6a; unit-06 English files byte-identical to
+  the prepared G3 manifest (verified by digest); course-overview.mdx at sibling commit
+  a495278 (drift documented in the report).
+Inspected pages (all 9): index, topic-01..06, unit-assessment, unit-teacher-notes.
+Pass 1 desktop 1280x800: 0 console errors / 0 pageerrors across all 9 pages; figures
+  load (light variants, naturalWidth>0), both light/dark img variants carry the same
+  descriptive alt, loading=lazy; screenshots render-desktop-{topic-01,topic-03,unit-assessment}.png.
+Pass 2 narrow 360x640: page-level horizontal overflow 0 on all 9 pages; no clipped
+  figures; the mini-rubric <table> elements measured directly per the G3 rubric
+  (scrollWidth 328 == clientWidth 328, not scrollable, so no swipe/keyboard reach
+  requirement arises); screenshots render-narrow-360-{topic-01,unit-assessment}.png.
+Pass 3 A4 print emulation (viewport 794x1123, emulateMedia print): navbar/sidebar/toc
+  display:none, light figure variants visible on all 6 topic pages, answers section
+  present in unit-assessment, no table overflow, document width 794/794; full-page
+  screenshots render-print-a4-{topic-01,unit-assessment}.png.
+Machine record: render-inspection.json (per-page DOM measurements).
+LIMITATION (recorded honestly): this review session's file-reading tool could not
+  present PNG pixels to the reviewer (image reads returned no visual content), so
+  pixel-level eyeballing was unavailable. The accessibility conclusions rest on
+  real-browser DOM/CSS measurement at all three viewports, the measure-figure-text
+  geometry pass over all 48 SVG variants, and direct SVG source verification
+  (<title>/<desc>/role="img" and label content checked for all 12 figures).
+--- inspect-render.mjs stdout follows ---
+inspection complete
+desktop console errors: 0
+narrow index: pageOverflow=0 tables=0 unreachableTables=0 clippedFigs=0
+narrow topic-01: pageOverflow=0 tables=1 unreachableTables=0 clippedFigs=0
+narrow topic-02: pageOverflow=0 tables=1 unreachableTables=0 clippedFigs=0
+narrow topic-03: pageOverflow=0 tables=1 unreachableTables=0 clippedFigs=0
+narrow topic-04: pageOverflow=0 tables=1 unreachableTables=0 clippedFigs=0
+narrow topic-05: pageOverflow=0 tables=1 unreachableTables=0 clippedFigs=0
+narrow topic-06: pageOverflow=0 tables=1 unreachableTables=0 clippedFigs=0
+narrow unit-assessment: pageOverflow=0 tables=0 unreachableTables=0 clippedFigs=0
+narrow unit-teacher-notes: pageOverflow=0 tables=0 unreachableTables=0 clippedFigs=0
+EXIT_CODE=0

@@ -1,0 +1,56 @@
+RTL alignment defect evidence (GNAS-301 Unit 5 G5, run agent-g5-gnas301-u5-run001)
+================================================================================
+Found: 2026-09-24, during rendered-page inspection of the Urdu unit at
+http://localhost:3459/ur/semester-1/gnas-301/unit-05/ (build at HEAD b80bcc9).
+
+1. Source intent (src/css/custom.css:49-52, FR-002/FR-013/T019):
+
+   html[dir='rtl'] .markdown {
+     line-height: 2.2; /* Nastaliq glyphs stack; needs generous leading */
+     text-align: right;
+   }
+
+2. Built English stylesheet (build/assets/css/styles.ff1ea0b2.css) keeps the intent:
+
+   html[dir=rtl] .markdown{line-height:2.2;text-align:right}
+
+3. Built Urdu stylesheet (build/ur/assets/css/styles.161fd4ec.css) has the value
+   FLIPPED by Docusaurus's RTL CSS pass (rtlcss mirrors physical directions, so the
+   manually-RTL-corrected `right` becomes `left` - a double flip):
+
+   html[dir=rtl] .markdown{line-height:2.2;text-align:left}
+
+4. Production (textbook.com.pk) serves the same flipped rule. Fetched 2026-09-24
+   from https://textbook.com.pk/ur/assets/css/styles.161fd4ec.css:
+
+   html[dir=rtl] .markdown{line-height:2.2;text-align:left}
+
+5. Browser verification (Playwright Chromium 1228, viewport 1280x800,
+   /ur/semester-1/gnas-301/unit-05/topic-01/):
+
+   - CDP CSS.getMatchedStylesForNode on article .markdown returns exactly one
+     text-align declaration: html[dir="rtl"] .markdown -> text-align:left
+     (line-height:2.2 also applies, proving the rule matches).
+   - Computed: .markdown direction=rtl, text-align=left.
+   - Range measurement of the first h2 ("ایک حقیقی جماعتی صورتحال"):
+     element box left=561 right=1264; text box left=561 right=1068.
+     The heading text hugs the LEFT edge with ~196px empty on the right.
+   - Synthetic probe (div with 'ٹیسٹ جملہ' appended inside .markdown):
+     element left=561 right=1264; text left=561 right=622. Left-anchored.
+   - English page comparison (same probe): text left=316=elemLeft (correct for LTR).
+
+Effect: every Urdu page's markdown prose is left-anchored. Paragraph bodies fill
+the column so only last lines show it, but headings, short lines and list items
+sit at the physical left edge instead of the right edge, inverting the intended
+RTL typography. Bidi character order, shaping and digits are unaffected.
+
+Scope: platform-level (src/css/custom.css + the Docusaurus RTL stylesheet pass);
+affects every Urdu page of every course, not only this unit. Not a translation
+defect. Likely repair directions for the platform owner: use a logical property
+(text-align: start) or exclude the rule from the RTL flip pass, then rebuild.
+
+Cross-check: this run also confirmed html dir=rtl / lang=ur on all 7 unit pages,
+the Noto Nastaliq Urdu webfont loading for page prose (document.fonts.check
+true), Western digits only (0 Eastern/Arabic-Indic digits), tables fitting the
+360px viewport, and clean A4 print emulation (0 clipped elements). Those checks
+pass; the alignment defect above does not.

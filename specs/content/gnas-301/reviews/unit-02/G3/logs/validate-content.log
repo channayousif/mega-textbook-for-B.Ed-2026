@@ -1,0 +1,7 @@
+
+> bed-mega-textbook@0.1.0 validate:content
+> node scripts/validate-content.mjs
+
+✓ Content validation passed.
+
+EXIT_CODE=0

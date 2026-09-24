@@ -789,6 +789,189 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 
 ---
 
+## G-2026-22 - GNAS-301 intake: the six-unit partition is the spec's construction over a guide that gives only a week table
+
+- **Status:** **resolved** (owner decision, 2026-09-23)
+- **Gate:** G0 intake / G1 unit-spec (partition criterion)
+- **Source:** `D-2026-0020`
+- **Detail:** The GNAS-301 guide block (`Scheme-and-Course-guides/extracted-text/1st 2026.txt:143-366`)
+  numbers its topical outline under explicit week headings only: Week 1 (`:195`) through Week 16
+  (`:315`), sub-topics 1.1 to 16.2, with the mid-term at 7.1 (`:252`) and the final term at 16.2
+  (`:318`). It carries **no unit headings of any kind**. The spec records the calendar as
+  guide-given and derives a six-unit partition (Weeks 1-2 -> Unit 1, 3-4 -> Unit 2, 5-6 -> Unit 3,
+  8-10 -> Unit 4, 11-12 -> Unit 5, 13-16 -> Unit 6), clearly labelled as derived per
+  `D-2026-0012` with its basis stated (contiguous whole weeks; the mid-term divides the pre- and
+  post-mid halves; boundaries where the guide's topics change character).
+
+  What the guide **does** determine, and what the evaluator verified mechanically: the 16-week
+  calendar, the mid-term and final placement, and the partition's structural properties -
+  contiguous whole weeks, no guide topic reordered, no week split across units, the mid-term week
+  excluded from teaching units, and 16.1 taught in the examination week per the guide's own
+  placement (it is a teaching sub-topic the guide lists under Week 16, before the final
+  examination entry).
+
+  What the guide does **not** determine: the number of units (six) and the block boundaries. The
+  guide gives no unit grouping, so any contiguous merge - three units, six, one per teaching week -
+  is equally consistent with it. The spec's stated basis ("block boundaries fall where the guide's
+  own topics change character") is a pedagogical judgement. `D-2026-0012` permits the section to
+  be recorded as derived and labelled; it expressly leaves the substance "for an evaluator to
+  approve or escalate", and the partition criterion's own text for week-table-only guides is that
+  the partition is a judgement the guide does not determine. The spec anticipates this and asks
+  for the finding ("if the evaluator judges a different merge better serves the guide's grouping,
+  that is a G0/G1 finding to apply before authoring").
+- **Needed, and from whom:** the curriculum owner, to confirm the six-block merge (2/2/2/3/2/4
+  teaching weeks across Units 1 to 6) or supply another partition, in the manner `G-2026-16`
+  settled EFMP-304's calendar. The week calendar itself needs no decision: it is guide-given.
+- **Decision (2026-09-23):** the owner **confirmed the six-unit partition exactly as derived**:
+  teaching weeks 2/2/2/3/2/4 across Units 1 to 6 (Weeks 1-2 -> Unit 1, 3-4 -> Unit 2, 5-6 ->
+  Unit 3, 8-10 -> Unit 4, 11-12 -> Unit 5, 13-16 -> Unit 6). The partition is now
+  owner-determined on the guide's week calendar, in the manner `G-2026-16` settled EFMP-304's.
+- **Blocks:** ~~the `partition` criterion of `D-2026-0020`~~ **unblocked**. The "Weeks N-M" line
+  opening each of the six `## Unit N` subsections stands as confirmed.
+
+## G-2026-23 - GNAS-301's guide reading list: five of seven entries do not resolve as printed, and the spec's open-access floor is neither owner-adopted nor enforced
+
+- **Status:** **resolved** (owner decision, 2026-09-23)
+- **Gate:** G0 intake (readings criterion)
+- **Source:** `D-2026-0020`
+- **Detail:** The guide lists seven recommended books (`1st 2026.txt:352-366`). The spec
+  transcribes all seven and files each as verified real or flagged. The evaluator verified each
+  entry independently against Open Library on 2026-09-23 (an external registry, not a bound
+  input):
+
+  | Guide entry | Verification |
+  |---|---|
+  | *Planetary Health*, A. Haines and H. Frumkin | **resolves**: *Planetary Health*, Island Press; 1st ed. 2020 (Myers & Frumkin), 2nd ed. 2023 (Frumkin & Haines) - the guide's pair matches the second edition, as the spec records |
+  | *Occupational Health*, J. M. Harrington / F. S. Gill | **resolves**: *Occupational health*, Harrington & Gill, Blackwell Scientific, 1983 |
+  | *Oxford Textbook of Environmental Science, Vol. I & II*, W. W. Holland | does not resolve as printed; Holland's real multi-volume Oxford textbook is the *Oxford Textbook of Public Health* (with R. Detels, OUP, 1984-1997), confirming the spec's identification |
+  | *Textbook of Preventive of Pollution*, J. E. Park, K. Park | does not resolve as printed; the closest real work is *Park's Textbook of Preventive and Social Medicine* (J. E. Park, Banarsidas Bhanot, 1970 onward), confirming the spec's identification |
+  | *Environmental Science in South East Asia*, W. O. Phoon, P. C. Y. Chen | does not resolve as printed; W. O. Phoon is a real Singapore-based occupational-health author (*Occupational health in developing countries in Asia*, SEAMIC, 1985); the exact title with Chen is not locatable, confirming the spec's reading |
+  | *Environmental Health Practice*, R. S. F. Shilling | not resolvable from this host either way: Open Library holds no Shilling records at all and web search returned nothing; the spec's identification (his real standard work is *Occupational Health Practice*) is consistent with the claim but unverified from here |
+  | *Environmental Studies*, Clark and Henderson | does not resolve as printed: no Clark/Henderson environmental-studies textbook in Open Library's title matches set; a web-search candidate (*Environmental Studies: Critical Approaches*, Broadview Press) could not be verified on Open Library or at the publisher and is recorded here only as an unverified lead |
+
+  So the spec's reading of its reading list is confirmed in substance: **two of seven verified
+  real, five unresolvable as printed** and flagged per `D-2026-0001` with title-level support
+  only. All seven are print monographs; none carries a DOI. Units 2 and 3 map only flagged
+  sources, so some units have no verified-real guide reading at all.
+
+  Three things need an owner decision, none of which the guide determines:
+
+  1. **Usability.** This is the `G-2026-14` question again, on weaker ground: EFMP-304's seven
+     entries all resolved to real works and only access was the problem; here five of seven do
+     not resolve as printed. `D-2026-0013` settled EFMP-304's usability, and its Limits state it
+     "does not set a corpus-wide floor, though it is the obvious precedent for any other course
+     whose guide list is print-only". Whether GNAS-301 authors against this list as it stands is
+     the owner's call.
+  2. **The floor.** The spec sets a binding G2 requirement of at least two verifiable
+     open-access sources per unit for **all six units** (stronger than EFMP-304's 2/2/2/1/1/1),
+     resolved through a named registry and recorded with the date of verification, with an
+     escalation path if a unit cannot meet it. The design follows the EFMP-304 precedent and,
+     like that precedent, needs adoption: an evaluator approving it as binding would be
+     extending `D-2026-0013`'s scope, which Art. VII.8.2 reserves.
+  3. **Enforcement.** The floor is **not declared in `open_access_floor` front matter**, so
+     `check:source-floor` - the `G-2026-17` fix built for exactly this - does not check GNAS-301
+     at all. Verified on this run: the gate's only finding is GENG-300's; GNAS-301 is invisible
+     to it. The spec's "binding requirement" is currently enforced by nothing. The fix is known
+     and cheap (declare the floor in front matter in the form the gate reads, as EFMP-304 and
+     GENG-300 already do), but wiring it should follow the owner's adoption decision, and the
+     declaration is the author's action, not the evaluator's.
+- **Needed, and from whom:** the curriculum owner, to (a) confirm the five flags and the
+  closest-real-work identifications, or supply the real works the guide means (in particular for
+  "Environmental Studies - Clark and Henderson" and "Environmental Health Practice - Shilling");
+  (b) adopt the two-per-unit open-access floor for GNAS-301, adopt it with different numbers, or
+  decline it; and (c) direct that the adopted floor be declared in `open_access_floor` front
+  matter so `check:source-floor` enforces it.
+- **Decision (2026-09-23):** the owner **confirmed all three items as the spec proposed them**:
+  (a) the five `D-2026-0001` flags and the closest-real-work identifications are confirmed, and
+  use of the verified open-access replacement source set (12 sources, listed in the spec's
+  `### Curated-supplementary` table) is confirmed; (b) the two-verifiable-open-access-sources-
+  per-unit floor is **adopted** for all six units, recorded as `D-2026-0021` on the
+  `D-2026-0013` precedent; and (c) the adopted floor is declared in the content-spec's
+  `open_access_floor` front matter so `check:source-floor` enforces it.
+- **Blocks:** ~~the `readings` criterion of `D-2026-0020`; the `### Curated-supplementary`
+  section's empty-with-floor posture~~ **unblocked**. The `**Mapped readings**` lines of all six
+  units stand on the adopted floor.
+
+---
+
+## G-2026-24 - GNAS-301 Unit 1 G3: two advisory cycles consumed; the third is owner-gated
+
+- **Status:** open
+- **Gate:** G3 (English review), ADR-0019 two-cycle limit
+- **Source:** GNAS-301 authoring session, 2026-09-23
+- **Question:** Unit 1's G3 review has run two advisory cycles. Round 1
+  (reviews/unit-01/G3/20260923T205300Z-g3-attempt-01.json) returned revise with 4 blocking
+  findings; all were repaired. Round 2
+  (reviews/unit-01/G3/round-02/20260923T214406Z-g3-attempt-02.json) verified all four
+  repairs and returned revise with a single blocking finding, an excerpt-completeness gap
+  in sources/texts/abbas2012.md, which the author repaired immediately after the report
+  (commit "apply Unit 1 G3 round-2 repairs"). ADR-0019 reserves further review cycles to
+  the owner after two.
+- **Needed, and from whom:** the curriculum owner, to either accept the repaired state on
+  the existing two advisory reports or authorise a third G3 cycle for Unit 1. The unit's
+  G2 gates are green at the current commit; the G3 tracker row remains open either way.
+- **Blocks:** a third G3 cycle for Unit 1; nothing else. G4 translation of Unit 1 may
+  proceed on the gate-checked English (the G5 reviewer binds to the latest G3 report).
+
+---
+
+## G-2026-31 - GNAS-301 Unit 4 G3: two advisory cycles consumed; the third is owner-gated
+
+- **Status:** open
+- **Gate:** G3 (English review), ADR-0019 two-cycle limit
+- **Source:** GNAS-301 authoring session, 2026-09-24
+- **Question:** Unit 4 G3 ran two advisory cycles. Round 1 (reviews/unit-04/G3/agent-g3-gnas301-u4-run001.json) returned revise with 4 blocking findings. Round 2 (reviews/unit-04/G3/round-02/agent-g3-gnas301-u4-run002.json) verified the quotation rework and source declarations but returned revise with 2 remaining blocking findings: phantom abbasi2022 support for U4-08/U4-09 and phantom who-mental-health-work for U4-10. The author applied these repairs post-report (commit applying Unit 4 G3 round-2 repairs). ADR-0019 reserves further cycles to the owner after two.
+- **Needed, and from whom:** the curriculum owner, to accept the repaired state on the two advisory reports or authorise a third G3 cycle for Unit 4.
+- **Blocks:** a third G3 cycle for Unit 4; nothing else.
+
+---
+
+## G-2026-32 - GNAS-301 Unit 5 G3: two advisory cycles consumed; the third is owner-gated
+
+- **Status:** open
+- **Gate:** G3 (English review), ADR-0019 two-cycle limit
+- **Source:** GNAS-301 authoring session, 2026-09-24
+- **Question:** Unit 5 G3 ran two advisory cycles. Round 1 (reviews/unit-05/G3/20260924T001055Z-g3-attempt-01.json) returned revise with 4 blocking findings. Round 2 (reviews/unit-05/G3/round-02/agent-g3-gnas301-u5-run002.json) found most round-1 repairs had not actually been committed and returned revise with 5 blocking findings: the 5.1 RRQ deficit, the PM2.5 bloodstream claims beyond what the WHO 2024 fact sheet supports, the fig-U5-3 connector arrows (and the untouched .ur.svg geometry), the coverage-matrix U5-07/U5-06 cells, and the incomplete alibhatti2017 author list. The author applied the full repair set post-report (commit applying the remaining Units 5-6 G3 round-2 repairs), and the G2 evidence was regenerated at the repaired commit. ADR-0019 reserves further cycles to the owner after two.
+- **Needed, and from whom:** the curriculum owner, to accept the repaired state on the two advisory reports or authorise a third G3 cycle for Unit 5.
+- **Blocks:** a third G3 cycle for Unit 5; nothing else.
+
+---
+
+## G-2026-33 - GNAS-301 Unit 6 G3: two advisory cycles consumed; the third is owner-gated
+
+- **Status:** open
+- **Gate:** G3 (English review), ADR-0019 two-cycle limit
+- **Source:** GNAS-301 authoring session, 2026-09-24
+- **Question:** Unit 6 G3 ran two advisory cycles. Round 1 (reviews/unit-06/G3/agent-g3-gnas301-u6-run001.json) returned revise with 4 blocking findings. Round 2 (reviews/unit-06/G3/round-02/agent-g3-gnas301-u6-run002.json) found the ERQ-04 rewrite and the RRQ-08 re-key had not actually been committed and returned revise with 4 blocking findings: ERQ-04 still covering only 6.4, the RRQ/MCQ surplus distribution off the blueprint, the misattributed WHO framing in topic-06, and the anwar2026 excerpt's verification claim. The author applied the full repair set post-report (commit applying the remaining Units 5-6 G3 round-2 repairs), and the G2 evidence was regenerated at the repaired commit. ADR-0019 reserves further cycles to the owner after two.
+- **Needed, and from whom:** the curriculum owner, to accept the repaired state on the two advisory reports or authorise a third G3 cycle for Unit 6.
+- **Blocks:** a third G3 cycle for Unit 6; nothing else.
+
+---
+
+## G-2026-34 - GNAS-301 Unit 2 G5: stale G3 dependency after post-pass advisory applications
+
+- **Status:** open
+- **Gate:** G5 (Urdu review), English dependency rule (G5 rubric); ADR-0019 advisory regime
+- **Source:** GNAS-301 G5 round 1, 2026-09-24 (reviews/unit-02/G5/agent-g5-gnas301-u2-run001.json)
+- **Question:** Unit 2's G3 round 2 returned PASS (2026-09-23T22:06Z), after which the
+  round-2 advisories were applied (commit f514923, 22:13Z: linkified URLs, a softened
+  topic-01 claim onto the bound excerpt, the park-park declaration). The G5 rubric requires
+  accepted G3 evidence for the exact English inputs bound to the review, so the changed
+  English digests invalidate the dependency even though the changes were the G3 reviewer's
+  own advisories. The G5 round 1 therefore escalated (6 blocking, 12 advisory). The Urdu
+  content defects it found are repaired at the current commit; the render-blocking MDX
+  errors (unit-02 PrintOut import, unit-06 </Gloss>) are fixed so future renders work.
+- **Needed, and from whom:** the curriculum owner, to either accept the advisory-applied
+  English state (the delta is the G3 round-2 report's own advisory list, applied verbatim)
+  or authorise a fresh G3 round binding the current bytes; a G5 round 2 then re-runs with
+  working renders. The same dependency question applies to Units 1, 4, 5 and 6, whose
+  post-report repairs are already recorded as G-2026-24, G-2026-31, G-2026-32 and
+  G-2026-33.
+- **Blocks:** G5 acceptance for Unit 2 (and, by the same rule, the other units); nothing
+  else. G4 translation and the Urdu-side G5 findings stand on their own evidence.
+
+---
+
 ## G-2026-25 - GICT-300's term length and week distribution are the spec's construction, not the guide's
 
 - **Status:** open

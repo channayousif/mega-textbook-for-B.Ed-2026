@@ -1,0 +1,8 @@
+index: desktop(dir=rtl, errors=0, broken=0, noAlt=0, urSvg=0/0, nastaliq=true) narrow(overflow=false, tables=0) print(clipped=0, figsFit=true)
+topic-01: desktop(dir=rtl, errors=0, broken=0, noAlt=0, urSvg=2/4, nastaliq=true) narrow(overflow=false, tables=1) print(clipped=0, figsFit=false)
+topic-02: desktop(dir=rtl, errors=0, broken=0, noAlt=0, urSvg=2/4, nastaliq=true) narrow(overflow=false, tables=1) print(clipped=0, figsFit=false)
+topic-03: desktop(dir=rtl, errors=0, broken=0, noAlt=0, urSvg=2/4, nastaliq=true) narrow(overflow=false, tables=1) print(clipped=0, figsFit=false)
+topic-04: desktop(dir=rtl, errors=0, broken=0, noAlt=0, urSvg=2/4, nastaliq=true) narrow(overflow=false, tables=1) print(clipped=0, figsFit=false)
+unit-assessment: desktop(dir=rtl, errors=0, broken=0, noAlt=0, urSvg=0/0, nastaliq=true) narrow(overflow=false, tables=0) print(clipped=0, figsFit=true)
+unit-teacher-notes: desktop(dir=rtl, errors=0, broken=0, noAlt=0, urSvg=0/0, nastaliq=true) narrow(overflow=false, tables=0) print(clipped=0, figsFit=true)
+render inspection complete

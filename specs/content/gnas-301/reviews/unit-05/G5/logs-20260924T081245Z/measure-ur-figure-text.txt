@@ -1,0 +1,26 @@
+fig-U5-1: 780x470, 24 texts, fonts="Noto Nastaliq Urdu"
+   clipped: 10 جنریٹر، بھٹہ،(57,-12,65x16) | ٹریفک، کچرا جلانا(43,-12,95x16) | سانس اسے اندر لے جاتی ہے؛(161,-12,157x16) | حراستی ضرب وقت(186,-12,108x16) | خون کی دریا میں سوار(326,-12,127x16) | اس کی جگہ تک(348,-12,85x16) | پھیپھڑے، خون، دماغ:(485,-12,110x16) | وہ عضو جسے نقصان(484,-12,112x16) | سر درد سے بیماری تک:(626,-12,128x16) | نقصان پہنچتا ہے(648,-12,84x16)
+   overlaps: 5 [جنریٹر، بھٹہ، ~ ٹریفک، کچرا جلانا 66x15] [سانس اسے اندر لے جاتی ہے؛ ~ حراستی ضرب وقت 108x15] [خون کی دریا میں سوار ~ اس کی جگہ تک 84x15] [پھیپھڑے، خون، دماغ: ~ وہ عضو جسے نقصان 110x15] [سر درد سے بیماری تک: ~ نقصان پہنچتا ہے 84x15]
+fig-U5-2: 780x470, 39 texts, fonts="Noto Nastaliq Urdu"
+   clipped: 0 
+   overlaps: 0 
+fig-U5-3: 780x470, 22 texts, fonts="Noto Nastaliq Urdu"
+   clipped: 0 
+   overlaps: 0 
+fig-U5-4: 780x470, 19 texts, fonts="Noto Nastaliq Urdu"
+   clipped: 0 
+   overlaps: 2 [CO صاف ہوا میں سانس سے باہر ~ وقت لیتا ہے 43x17] [ایک نامیاتی فاسفیٹ بدل کر ~ نقصان لیبل سے آگے 11x16]
+fig-U5-5: 780x470, 15 texts, fonts="Noto Nastaliq Urdu"
+   clipped: 0 
+   overlaps: 0 
+fig-U5-6: 780x470, 19 texts, fonts="Noto Nastaliq Urdu"
+   clipped: 0 
+   overlaps: 0 
+fig-U5-7: 780x470, 21 texts, fonts="Noto Nastaliq Urdu"
+   clipped: 0 
+   overlaps: 0 
+fig-U5-8: 780x470, 30 texts, fonts="Noto Nastaliq Urdu"
+   clipped: 0 
+   overlaps: 0 
+page nastaliq webfont loaded: [33mtrue[39m
+page loaded font families: Noto Nastaliq Urdu

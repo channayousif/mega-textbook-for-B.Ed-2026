@@ -1,0 +1,81 @@
+Input drift during review (GNAS-301 Unit 5 G5, run agent-g5-gnas301-u5-run001)
+==============================================================================
+Recorded: 2026-09-24 ~08:58 UTC (04:58 -0500 is wrong; see times below in -0500
+worktree-local time as git reports them; UTC = local + 5h).
+
+The G5 input manifest was prepared and bound at commit b80bcc9
+(2026-09-24 03:10:00 -0500). This review started at 03:12 -0500 and verified all
+127 bound inputs with 0 digest problems at 03:13 -0500 (verify-manifest.txt).
+
+While the review was in progress, a sibling G5 session (Unit 6 round 1) committed
+twice in this shared worktree, moving HEAD from b80bcc9 to 063a2fc:
+
+  f5da152 2026-09-24 04:00:59 -0500 fix(gnas-301): apply G5 Unit 6 round-1 Urdu repairs
+  063a2fc 2026-09-24 04:01:23 -0500 chore(gnas-301): refresh G2 evidence for Unit 6
+                                      and record its G5 round-1 status
+
+Commit f5da152 also touched FOUR OF THE SEVEN URDU FILES UNDER REVIEW in unit-05,
+applying the arsenic spelling fix آرینک -> آرسینک in every occurrence:
+
+  i18n/ur/.../gnas-301/unit-05/topic-01.mdx          (3 occurrences; mtime 03:53:43)
+  i18n/ur/.../gnas-301/unit-05/topic-04.mdx          (4 occurrences)
+  i18n/ur/.../gnas-301/unit-05/unit-assessment.mdx   (4 occurrences)
+  i18n/ur/.../gnas-301/unit-05/unit-teacher-notes.mdx (1 occurrence)
+
+No other bound input changed: the recomputed input manifest differs from the bound
+one in exactly these 4 digests (0 paths added, 0 removed, all other 123 identical;
+docs/, specs/content/gnas-301/, static figures, scripts and the skill unchanged).
+
+Timeline check (all -0500): every piece of review evidence predates the edit:
+  03:13  verify-manifest (0 problems, tree == b80bcc9)
+  03:14-03:25  full EN/UR passage reads (all 14 files; آرینک still present)
+  03:30  npm run build (build.txt mtime 03:30:26) - the built/served pages are
+         the bound state, so every screenshot and probe below is bound-state
+  03:31-03:55  render inspection, figure measurements, print and bidi checks
+         (all against the 03:30 build served on localhost:3459)
+  03:53:43  sibling edits topic-01.mdx (first of the four files)
+  04:00:59  sibling commits f5da152
+  ~04:57  report written; validate then rejects with
+         "stale or incomplete input manifest" against the drifted tree
+
+Consequences, per the review-unit skill ("Missing inputs, a mismatched digest, or
+unverifiable independence require escalation"; "do not silently refresh it"):
+
+1. All findings in agent-g5-gnas301-u5-run001.json describe the BOUND b80bcc9
+   bytes; none was gathered after the drift.
+2. The arsenic misspelling finding (advisory) is already repaired in the current
+   tree by f5da152; it is marked resolved with this note, to be re-verified in
+   the next round's fresh bundle.
+3. The report cannot validate against the current tree ("stale or incomplete
+   input manifest" is the correct, expected rejection). The manifest is NOT
+   refreshed from here. The parent must prepare a new manifest at the repaired
+   commit for the next G5 attempt, and a fresh reviewer session must recheck.
+4. This drift is recorded as a blocking finding in the report; it does not
+   change any other finding's validity.
+
+ADDENDUM (recorded 2026-09-24T09:12Z = 04:12 -0500): while this report
+was being finalized, ADDITIONAL uncommitted working-tree edits appeared on top of
+063a2fc, applying this report's own findings to unit-05 (and sibling repairs to
+units 03/04):
+
+  - static/img/figures/gnas-301/unit-05/fig-U5-1.svg (+ .dark/.ur/.ur.dark):
+    y="130+0"/"130+20" -> y="130"/"150"  (this report's blocking finding 6)
+  - fig-U5-7.ur.svg: "موسم +" -> "موسمیات +", "موسمی معاہدہ" -> "موسمیاتی معاہدہ",
+    "کثیر الفریقی" -> "کثیر الجہتی"  (blocking finding 4; advisory 13)
+  - fig-U5-2/4/5/6/8 .ur.svg variants similarly edited
+  - topic-01.mdx: "دریائے سندھ کے ساتھ" restored (advisory 15: "along the Indus")
+  - topic-02.mdx: "اخراج" -> "گرنے والا مادہ" (blocking finding 8); "فی ایک ایک
+    جملہ" -> "فی ایک جملہ" (advisory 15)
+  - topic-03.mdx: "تربیت یافتہ استاد" -> "زیرِ تربیت استاد" (advisory 10);
+    "بے نم والا" -> "غیر دلکش", "حقیقی والا" -> "حقیقی" (advisory 15);
+    rubric tag "(تشخیص)" -> "(جانچیں)" (advisory 12)
+  - topic-04.mdx: "تربیت یافتہ" -> "زیرِ تربیت"; "کے خلاف رپورٹ" -> "کے بارے میں
+    رپورٹ" (advisory 15)
+
+At the time of this addendum the recomputed input manifest differed from the bound
+one in 22 digests (6 unit-05 Urdu MDX files + 16 unit-05 figure SVGs; the count
+keeps growing as the repairs proceed). None of these edits existed when the review
+evidence was gathered, and none is verified by this report: per the skill, a
+separate author repairs content, the parent prepares a new manifest, and a FRESH
+reviewer session rechecks. This report remains bound to b80bcc9 and its findings
+describe those bytes.

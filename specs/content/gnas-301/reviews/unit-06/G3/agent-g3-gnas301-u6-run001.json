@@ -1,0 +1,347 @@
+{
+  "schema_version": 1,
+  "course_code": "GNAS-301",
+  "unit_no": 6,
+  "stage": "G3",
+  "disposition": "revise",
+  "reviewer_id": "agent:g3-reviewer",
+  "author_run_id": "commit:e05ffff",
+  "reviewer_run_id": "agent-g3-gnas301-u6-run001",
+  "model": "LongCat-2.0",
+  "started_at": "2026-09-23T23:35:00Z",
+  "completed_at": "2026-09-24T00:12:55Z",
+  "skill_digest": "eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b",
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g3.md": "074c8464b4bc0f2f2b76bbb19707c50b54cb907920407873a4e5d193e866f53f",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "f1d7f063cc2c826693a3d8428fb5d3ee45455fdb7906ebc5adadee8b9a434d47",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-1/gnas-301/course-overview.mdx": "41dce7cbd1847a767e780693e7375cb99e4a5e803caef0d7bb54c78b14fbf8ee",
+    "docs/semester-1/gnas-301/unit-06/index.mdx": "d791cd21c6da8d7fd9be11f09964732be9e3b5980a3d599d89fbd21c394405d1",
+    "docs/semester-1/gnas-301/unit-06/topic-01.mdx": "416f14df6b99eb35bfd7483b71dd4f0c973df8689611ecc6245d8d409e2ba99c",
+    "docs/semester-1/gnas-301/unit-06/topic-02.mdx": "1446127e992278b571a9a0531126d0f734e8a92ca332df937f0f545bc5e6b615",
+    "docs/semester-1/gnas-301/unit-06/topic-03.mdx": "d0395a2b490b2044c632dff4f926ee329bfbb03b83a0e6dc6bba3924f21a26da",
+    "docs/semester-1/gnas-301/unit-06/topic-04.mdx": "229195e83d6dd33eddba8e73f47f2c4e6f9e510bfd3a6a225ccee11f001a0354",
+    "docs/semester-1/gnas-301/unit-06/topic-05.mdx": "ff9b2406e62f28bd13ae9aecbabb72088e8a1a8591f0e0e565047655167a5d2d",
+    "docs/semester-1/gnas-301/unit-06/topic-06.mdx": "55081274b367469b0a069932d2010fd6a9b504afd8844dd8de2121a712a55926",
+    "docs/semester-1/gnas-301/unit-06/unit-assessment.mdx": "dc162c918db3b6d361c770940a1151a6beee85b72fd472d4fa1f980328705794",
+    "docs/semester-1/gnas-301/unit-06/unit-teacher-notes.mdx": "32818a3436e215c6b4760863d6a045e6b2a45a934c3be1acb0b0d2d712454181",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "41b698f8cbbb12f4030d6893083a5c36e4a19848b5ddb86206e5ba72847b8b13",
+    "scripts/check-no-answer-keys.mjs": "f38d60e5360e0c29f2dae02001195690f3b95e0ad2d7ae1a3c03a0d09c053f0d",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "bb614c625f7bf397ce51a317bdb8901711c00fa009d4ad0a506c5096e5b9ddd2",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "77f03816f68663621059f17745109fdde9b103c555f707e0c62d5ff56d2a4cd9",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "973496faae3366d13e8cdd3ba8d68edf7bd3745bdc6928311ee03c55f24b18b2",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/gnas-301/concepts/unit-06.md": "83845d26148adf291ed4090079942f22bbab14261a47f2acc8221d6813854155",
+    "specs/content/gnas-301/content-spec.md": "421dcceb8a2bd30c14fedf9671ce677b81e850ea8b455aab366bf28b3ad10ddc",
+    "specs/content/gnas-301/coverage/unit-06.md": "e4e4aa2c2bb527093a2655dc1da3ddc661bf6eed7889bb16ab4ca9888dce3965",
+    "specs/content/gnas-301/figures/unit-06.md": "6c950bd3cc6edc93b6c7fe2362a58db11fed0543a3ec2234d0b879f4485572c8",
+    "specs/content/gnas-301/sources/texts/adnan2024.md": "dafc772d3856abcdcc91a436c684d98a83369ef88602bff1ceb95c83193ded05",
+    "specs/content/gnas-301/sources/texts/alibhatti2017.md": "3baa576eda8fc1150c1d76b92d91a18849cd6b46fbedeeb52726e0db9f91b27d",
+    "specs/content/gnas-301/sources/texts/anwar2026.md": "62896070c95433006914785d74493669fa6ce8296769c8a5e1c435161912c3ff",
+    "specs/content/gnas-301/sources/texts/guardans2013.md": "971c266938703d1196db2c1e60b614710960984eb7f8a6fba86cb0edf2e4aec6",
+    "specs/content/gnas-301/sources/texts/who-air-2024.md": "8698e0efef2db62ec02d3b3e409f4b6d913ea7fae67494688c30990866eb4a9e",
+    "specs/content/gnas-301/sources/texts/who-climate-2023.md": "9e7ecd83e115ca7efa6930097fa7dd9910ddba2751d5fe4b48dd9bccd4bad610",
+    "specs/content/gnas-301/sources/unit-06.md": "741d86069e1667c14e66ed3bd280fee0085db639ab31a742e91f96f4b5e21e42",
+    "specs/content/style-guide.md": "db96c9b33b0fb9522986462a0b519620c3c1d7602a046d7b90e638f643da4610",
+    "static/img/figures/gnas-301/unit-06/fig-U6-1.dark.svg": "1abbd48649e9e131f7c494e69b0ad4600afa600bb2c1408457dc4f20af1807d7",
+    "static/img/figures/gnas-301/unit-06/fig-U6-1.svg": "beb8d9ce3e254ff6cf13c863a986ed88d2bb5fd3932460c77460e90133b3cbec",
+    "static/img/figures/gnas-301/unit-06/fig-U6-10.dark.svg": "1a3e76bde8cc8dbd0d3277af42a30f4939b4ce7ec1d379231c24a892696105e8",
+    "static/img/figures/gnas-301/unit-06/fig-U6-10.svg": "bd0e9a1fad9ae7451249129d9b60b1599a8cacf8b3753a6bdcc0b21afbc63d3d",
+    "static/img/figures/gnas-301/unit-06/fig-U6-11.dark.svg": "f37a9b1f1a7366d842600904cb4c5d392ccbd3cb3d1db499cb915662b6e0c4c3",
+    "static/img/figures/gnas-301/unit-06/fig-U6-11.svg": "4e048947f5664f49c41c0cb3e7e8045e3b70e681db9a3e92f81196b46d36d9ea",
+    "static/img/figures/gnas-301/unit-06/fig-U6-12.dark.svg": "3299010ad58c2fa1065b71ba1ea6d2b92c1e29c09cf820cb51d4d4379b91d329",
+    "static/img/figures/gnas-301/unit-06/fig-U6-12.svg": "6f5a82cce106ff2343d0b2376fe66d839ee242cf40754594e537092a309cabe4",
+    "static/img/figures/gnas-301/unit-06/fig-U6-2.dark.svg": "eb489cafe9a61fc793092c2c4cd2ae156d20270298344bac545087616974fe60",
+    "static/img/figures/gnas-301/unit-06/fig-U6-2.svg": "16066ab050cf7517670728427bfd0a1cf0d751c5b0dc7cd4cbf67ee8a8569e5f",
+    "static/img/figures/gnas-301/unit-06/fig-U6-3.dark.svg": "10fe406aba4246112d3ce26a2a4a8c7e1a7056ff60751774479a7894f93b9b22",
+    "static/img/figures/gnas-301/unit-06/fig-U6-3.svg": "07498bdf3888efd44bd4bd4930170f865151eddc6d16a4073221deb51e9b2bc0",
+    "static/img/figures/gnas-301/unit-06/fig-U6-4.dark.svg": "56f513cafe8d50299fd6fc7bc6f344a16b898c0e8a46547978d47e24c3ae03da",
+    "static/img/figures/gnas-301/unit-06/fig-U6-4.svg": "d1c2ca6cfe298f3103742dd4c21ead940cce8e46cb94c4bd30c6670d437624ba",
+    "static/img/figures/gnas-301/unit-06/fig-U6-5.dark.svg": "b83bacdd6e76252ce9838588c084d8573b1fbe83c50d1c6d75fbd80f06265839",
+    "static/img/figures/gnas-301/unit-06/fig-U6-5.svg": "d4a9c29bd0f4ce3b268cefd084be18b6709cc9887e0638fd76818987b1aff4b1",
+    "static/img/figures/gnas-301/unit-06/fig-U6-6.dark.svg": "67cff8aa99521d60f7997f8a12a1744b944ef847e570f6dac9bd9a668be12e3f",
+    "static/img/figures/gnas-301/unit-06/fig-U6-6.svg": "3ceecd2db678ac0f8de9cfc312ff3b179420123534b7500c70383ef90a36cf2b",
+    "static/img/figures/gnas-301/unit-06/fig-U6-7.dark.svg": "ec4f77702ec53625812f14cd64388c0beba13f821b66199335c521f5b4dacb54",
+    "static/img/figures/gnas-301/unit-06/fig-U6-7.svg": "ed7129bee04252c2cb49c1ec6e859d1e2442e949f4a519096d44ed6785783435",
+    "static/img/figures/gnas-301/unit-06/fig-U6-8.dark.svg": "6f364ba52262a5afb7acf57e41277290eec9d97495e3cf8ca3a97a7bf4a476f0",
+    "static/img/figures/gnas-301/unit-06/fig-U6-8.svg": "ca54333e55d2586d19b21e52abbe4b78b9be52a89a85c00fe1739e23f11aa35a",
+    "static/img/figures/gnas-301/unit-06/fig-U6-9.dark.svg": "fb68667e6fcc6aa0abbc8ef3f753dede3de82ff9baef3a64747f6a767a7e7d0e",
+    "static/img/figures/gnas-301/unit-06/fig-U6-9.svg": "e626cf7c29d11d763e0d6b88f1aec25c13f5bfa52a4bb0bafe6ce27c55721885"
+  },
+  "rulings": {
+    "D-2026-0001": "8ff79df9af668329f6d0094a2257654f45fc545122a753b4888fb9936f402f1f",
+    "D-2026-0020": "84634da46e3d983ace09ce20d2ed5ea5e1588f30e1f405e44b62c967585925e7",
+    "D-2026-0021": "6004630196719c12ca61d4ed45ed09a2da427c431d666434b6a0221bda078268"
+  },
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        "Course guide Unit 6 leaves (Scheme-and-Course-guides/extracted-text/1st 2026.txt:295-317, sections 13.1-13.5, 14.1-14.4, 15.1-15.2, 16.1) all present in the approved content-spec ## Unit 6 Sub-topic checklist (specs/content/gnas-301/content-spec.md:887-900, U6-01..U6-12)",
+        "specs/content/gnas-301/coverage/unit-06.md maps every U6-NN to the exact topic file and ### heading; each named section verified present and on-subject in docs/semester-1/gnas-301/unit-06/topic-01..06.mdx",
+        "SLO refs (SLO:GNAS-301-6-1, -6-2) consistent across index, topics, assessment and concepts/unit-06.md; spec approved under D-2026-0021 with partition G-2026-22",
+        "Reading minutes 110 (5+15+15+16+13+13+15+12+6) inside the 90-115 depth budget"
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "fail",
+      "evidence": [
+        "Bound excerpts verified against prose claims: alibhatti2017.md (24 Indus-bank districts, arsenic in Sindh groundwater -> topic-01 U6-03), anwar2026.md (winter smog critical for environment and public health in Lahore district -> topic-05 U6-11), guardans2013.md (POPs build up in organisms -> topic-03 U6-09), who-air-2024.md (4.2 million premature deaths -> topic-05), who-climate-2023.md (3.6 billion susceptible; ~250,000 additional deaths/yr 2030-2050 -> topic-06), adnan2024.md (floods implications, measures and policies evaluated -> topic-06)",
+        "Course-tree excerpts read although NOT bound in this manifest (see advisory finding on the year-less citedKeys gap): sources/texts/nasa-climate-evidence.md verifies all four topic-04 figures (about 1C since late 19th century; CO2 about 250x faster; 279+148 Gt/yr ice loss; ~20 cm sea rise); sources/texts/who-chemical-safety.md verifies the spans-natural-and-manufactured framing and the major-concerns list; sources/texts/un-paris.md bibliographic only",
+        "FAIL: topic-06.mdx:82-83 attributes to (WHO, 2023) the framing \"one of the largest health interventions available\"; neither the bound who-climate-2023 excerpt nor the live fact sheet (fetched and read 2026-09-24) contains it; closest actual text is \"very large gains for health\"",
+        "FAIL: incomplete author lists - adnan2024 cites 4 of 6 authors (Crossref lists Adnan, Xiao, Bibi, Xiao, Zhao, Wang), anwar2026 cites 4 of 10 (Crossref lists 10, article 43), alibhatti2017 cites 4 of 5 (DOAJ lists Khuhawar as fifth, pages 1037-1049); the sources/unit-06.md \"authors matched\" verification claims are inaccurate for all three",
+        "Unverifiable-sources declaration judged honest and sufficient: haines-frumkin flagged per D-2026-0001 with owner confirmation, cited by reference only; 2015 Karachi heatwave and 2022 floods declared as public-record events with the analytical reading declared as the unit's own framework, floods implications additionally carried by adnan2024",
+        "topic-06 \"did least to cause\" clause verified via the DOAJ full abstract of adnan2024 (\"despite contributing less than 1 % to global greenhouse gas emissions\"); the bound excerpt truncates before that sentence"
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "All 12 sub-topics taught: U6-01..03 in topic-01.mdx, U6-04..05 in topic-02.mdx, U6-06..09 in topic-03.mdx, U6-10 in topic-04.mdx, U6-11 in topic-05.mdx, U6-12 in topic-06.mdx; each with explanation, worked example and formative items",
+        "Every topic also carries a summative task with mini-rubric; bank items trace to all six topics (see assessment criterion for distribution defects)",
+        "concepts/unit-06.md covers all 12 sub-topic IDs with derived item IDs matching the actual bank"
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "fail",
+      "evidence": [
+        "All 25 items solved independently before reading the answers section; derived MCQ key 1-b, 2-b, 3-c, 4-b, 5-b, 6-b, 7-b, 8-b, 9-c, 10-b matches the supplied key exactly; RRQ model answers match derived answers (RRQ-05 mark scheme accepts any defensible route ranking)",
+        "FAIL: ERQ-04 (unit-assessment.mdx:129-130) and its rubric (:195-198) cover only Topic 6.4; the approved blueprint (content-spec.md:990-995) requires the fourth ERQ to integrate 6.4 and 6.5 as one air story, so Topic 6.5 has no ERQ coverage and the five ERQs do not cover all six topics",
+        "FAIL: RRQ surplus distribution - RRQ-08 and RRQ-09 both assess 6.5 (extras went to 6.1, 6.2, 6.3, 6.5) while the blueprint assigns the four surplus RRQs to the denser topics 6.1, 6.2, 6.3, 6.6; 6.6 receives only its single minimum RRQ (and single MCQ); the file's own blooms_summary asserts \"the extras to the denser topics\"",
+        "Per-topic minimums met (>=1 MCQ and >=1 RRQ per topic); 10/10/5 counts exact; >=1 ERQ at Analyze-or-higher satisfied (ERQ-01, ERQ-05)",
+        "MCQ distractors plausible, no ambiguous stems; advisory: 8 of 10 correct answers are option b; advisory: ERQ-02 labelled Evaluate but its rubric criteria top out at Apply"
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "pass",
+      "evidence": [
+        "render-review (Playwright 1.x, bundled Chromium, fresh docusaurus build served at localhost:3457): all 9 pages at 1280x800 with 0 console errors; figures load (light variants), both light/dark img variants carry the same descriptive alt, loading=lazy",
+        "Narrow 360x640: pageOverflow 0 on all 9 pages; no clipped figures; mini-rubric tables fit (scrollWidth 328 == clientWidth, not scrollable, so no keyboard-reach requirement); rubric swipe methodology applied to the table elements themselves",
+        "A4 print emulation (794x1123, media print): navbar/sidebar/toc hidden, light figure variants visible on all 6 topic pages, answers section present in unit-assessment, no table overflow, doc width 794/794",
+        "measure-figure-text on all 48 unit-06 SVG variants: no text overflow past the 780 viewBox, no wordmark overprint; every SVG carries <title>, <desc> and role=\"img\"",
+        "Further-reading links are descriptive markdown links throughout",
+        "Limitation recorded in render-review.log: this session's file tool could not present PNG pixels to the reviewer, so pixel-level viewing was unavailable; inspection rests on real-browser DOM/CSS measurement at three viewports plus SVG source verification"
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "Register holds for a fresh HSC/intermediate graduate: technical terms defined at first use, 15 inline bilingual glossary tooltips, concrete classroom hooks before each explanation",
+        "Advisory: 5 of the spec's 15 key terms (Toxic substance, Dose-response, Greenhouse effect, Global warming, Climate change) lack glossary.json entries and inline tags although they include the unit's title concepts",
+        "A few sentences sit at the literary upper edge of the band (e.g. topic-02 \"behind them wait the special classes\"); vocabulary itself stays plain"
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": [
+        "All six topics carry the nine-part cycle (gate-checked) with Pakistan-grounded hooks (Tharparkar health day, district hospital ward, Keenjhar Lake trip, Lahore assembly, Hyderabad college corridor)",
+        "All five spec misconceptions present and corrected (natural-means-safe, small-dose-harmless, greenhouse-is-the-problem, smog-is-fog, mitigation-vs-adaptation)",
+        "Activities feasible in stated context with teacher-notes fallbacks (pane model as single demonstration if kit short); retrieval-style check items; practicum tasks concrete and school-real; 6.6 integrates the course tools as the blueprint intends"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "Assessment blueprint deviation (ERQ): unit-assessment.mdx ERQ-04 (lines 129-130) and its rubric (lines 195-198) cover only Topic 6.4 (greenhouse). The approved blueprint (specs/content/gnas-301/content-spec.md:990-995) requires the fourth ERQ to integrate 6.4 and 6.5 (warming and smog as one air story), so Topic 6.5 has no ERQ coverage and the five ERQs do not cover all six topics. Repair: rewrite ERQ-04 to integrate the winter-grey/smog story with the warming story and extend its rubric accordingly."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "Assessment blueprint deviation (RRQ surplus): RRQ-08 and RRQ-09 both assess Topic 6.5, so the four surplus RRQs went to 6.1, 6.2, 6.3 and 6.5, while the blueprint assigns surpluses to the denser topics 6.1, 6.2, 6.3, 6.6; Topic 6.6 (the capstone) receives only its single minimum RRQ and single MCQ. The unit-assessment.mdx blooms_summary itself asserts \"the extras to the denser topics\", which the bank does not honour. Repair: re-key one 6.5 RRQ to 6.6 content (keeping the inversion item in topic-05 formative work) and update concepts/unit-06.md item mappings."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "Misattributed WHO framing: topic-06.mdx (Common misconception paragraph, lines 79-83) states \"the WHO frames cutting emissions as one of the largest health interventions available (WHO, 2023)\". Neither the bound who-climate-2023 excerpt nor the live WHO fact sheet (fetched and read 2026-09-24) contains that framing; the closest actual statement is that cutting emissions \"can result in very large gains for health\". Repair: reword to the source's actual framing."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "Citation accuracy: three journal citations carry incomplete author lists. adnan2024 cites 4 of 6 authors (Crossref: Adnan, Xiao, Bibi, Xiao, Zhao, Wang); anwar2026 cites 4 of 10 (Crossref lists ten authors, article number 43); alibhatti2017 cites 4 of 5 (DOAJ lists Khuhawar, M. Y. as fifth author, pages 1037-1049). Occurrences: specs/content/gnas-301/sources/unit-06.md table rows, Further reading in topic-01/02/03/05/06.mdx, and the excerpt headers in sources/texts/{adnan2024,anwar2026,alibhatti2017}.md. The sources file's \"authors ... matched\" Crossref/DOAJ verification claims are inaccurate for all three. Repair: complete the author lists (or adopt a consistent first-author-et-al style with owner approval) and correct the verification claims."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "topic-06.mdx worked example asserts the Karachi heat-action plan measures \"cut the 2015 toll in the calmer years since\"; this efficacy claim goes beyond both the declared public-record events (sources/unit-06.md Unverifiable sources covers the events and the framework, not policy-response efficacy) and the bound adnan2024 excerpt. Repair: soften to the measures heat plans carry, or bind a source for the efficacy claim."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Five of the spec's 15 key terms (Toxic substance, Dose-response, Greenhouse effect, Global warming, Climate change) lack bilingual glossary entries and inline tags; the authoring commit e05ffff added five other terms (Toxicology, Genotoxic agent, Mutagen, Sensitizer, Essentiality) instead. The unit's title concepts are among the missing. Repair: add glossary.json entries and tag first use, before G4 translation."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "MCQ answer-position skew: 8 of 10 correct answers are option b (the other two are c). Consider redistributing correct positions in a future repair round."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "ERQ Bloom labels overstate rubric demand: ERQ-02 is labelled Evaluate but its rubric criteria top out at Apply; ERQ-05's Create is carried by a 0-1 closing-sentence criterion. Classifying from the thinking required, the bank still satisfies the blueprint's >=1 Analyze-or-higher requirement."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Bundle gap: the prepared manifest did not bind sources/texts/{who-chemical-safety,nasa-climate-evidence,un-paris}.md although the unit cites all three keys; the citedKeys extraction in scripts/lib/review-evidence.mjs:300-311 only matches year-suffixed keys, so year-less keys never bind their excerpts (the under-binding blind-spot direction ADR-0027 warns about). The reviewer read the three excerpts from the course tree and verified the claims; a future bundle should bind them."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Mid-review input drift, documented not refreshed: docs/semester-1/gnas-301/course-overview.mdx changed after the manifest was prepared (sibling commit a495278, coming-soon placeholder rewritten to a full overview; later sibling commits 1aebf6a..ba4c10e added Unit 1 Urdu mirrors, which touch no bound input). All 114 other inputs are byte-identical to the prepared bundle; the reviewer read the course-overview diff and the full new file and assessed the impact on Unit 6 findings as none. This report binds the current input set so validation recomputes cleanly."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Figure manifest prompt text for fig-U6-3 says \"six rows\" then lists seven effect classes; the rendered figure correctly carries all seven (acute, chronic, genotoxic, mutagenic, teratogenic, carcinogenic, sensitizing). Cosmetic governance-table fix only."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "The bound adnan2024 excerpt truncates the abstract before the sentence \"despite contributing less than 1 % to global greenhouse gas emissions\", which is what supports topic-06's \"a crisis it did least to cause\" clause; the reviewer verified it against the DOAJ full abstract. Consider extending the excerpt so the claim is bound."
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/validate-content.log"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/check-depth-gate.log"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/check-figures.log"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/check-no-em-dash.log"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/check-no-answer-keys.log"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/check-docs-sync.log"
+    },
+    {
+      "name": "check:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/check-content.log"
+    },
+    {
+      "name": "measure-figure-text",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/measure-figure-text.log"
+    },
+    {
+      "name": "site-build",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/build.log"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/render-review.log"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/build.log": "e56a73c6c72087bfccf9522fc7aff03c46e00ef7e14ee2c287aeb4e5419d24ba",
+    "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/check-content.log": "e68bdabdcb5a77f0143fc8830d0b0b55a23de8e084f674f567ccd88bea3f8050",
+    "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/check-depth-gate.log": "b0c4eeaa24613853bc7dd1124721c3576b9c2ea0d83d804bb98a47c646579f2f",
+    "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/check-docs-sync.log": "388691a97d7539a857dafad859d26a639e67f09402e7f0c242b4a09e4b62049b",
+    "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/check-figures.log": "3d8e7e0311cc402d8ef731bc62cfd8efd8bb72907261a2ec1da4ed2ea4db7c3a",
+    "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/check-no-answer-keys.log": "3fa235456d5db64e830f726b03bd39a9f3388aa8239273fa8f1b6f549465fc39",
+    "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/check-no-em-dash.log": "f94465f4c88bd3c3db4d995e7757fc7f08feae27e57c724a2eaafc8499ec2fe6",
+    "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/inspect-render.mjs": "1cbfa597a998b6cf4a847d63b1ce45a8148e0a3a0698595b386df583c0bc1fb0",
+    "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/measure-figure-text.log": "053427d6d13ca964a9850157b234b70506c8d035757e9156e2cb45aaf254d9d0",
+    "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/render-desktop-topic-01.png": "0863defc6927877cfc84101008d5209a98d32bf87342effe83814c6e90d4997d",
+    "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/render-desktop-topic-03.png": "a5f61dd8cb9f9a104a73142570aabebafc60ec8bffa6684efd814628eba49860",
+    "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/render-desktop-unit-assessment.png": "c1889ab9db895ff3cb027a765b501c04098e9ee2a2613aeee9d62c631c44621b",
+    "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/render-inspection.json": "dede86a0b4a184978fc426ff1a8473a35b7b22f695d8ba8305aea85a650feef7",
+    "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/render-narrow-360-topic-01.png": "977871aaa6d581245d52ba4d09160cae69b5946404d9063ec5753b524c0eef51",
+    "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/render-narrow-360-unit-assessment.png": "432d9003c4238b0374969bbea97ed3685f1c8526b55b5d4d3bcd65966154170e",
+    "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/render-print-a4-topic-01.png": "54b379e62dee485c2aa958f3c6c83c9415255c726e23de6469f2c8f6713a777d",
+    "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/render-print-a4-unit-assessment.png": "b657a89ebed02bb854e170d2cdb0a5fbec660474cbf3fde9d9754c57ae077f32",
+    "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/render-review.log": "e885b45a1ec494033dbbe0dbb4198df465316b401deb379ebebbdfb421fd6392",
+    "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/serve.log": "bb42a135509d83b79e9178b6710e14c3d36c08a764919e09366395b64f268be4",
+    "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/validate-content.log": "0753463dcc4f70bfeed270f5eb8accdfb2113670791fc90775ea247c275de426",
+    "specs/content/gnas-301/reviews/unit-06/G3/logs-20260924T0review1/write-report.mjs": "ac675b0cbc6233e934451568a86b4d0f3ee4f58ea8f35ecf33db9bd9f82ad0ca"
+  }
+}

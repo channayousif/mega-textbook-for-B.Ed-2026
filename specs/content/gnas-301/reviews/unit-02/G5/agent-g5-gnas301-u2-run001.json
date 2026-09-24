@@ -1,0 +1,399 @@
+{
+  "schema_version": 1,
+  "course_code": "GNAS-301",
+  "unit_no": 2,
+  "stage": "G5",
+  "disposition": "escalate",
+  "reviewer_id": "agent:g5-reviewer",
+  "author_run_id": "claude-code:019-author-gnas-301",
+  "reviewer_run_id": "agent:g5-reviewer:gnas301-u2-run001",
+  "model": "LongCat-2.0",
+  "started_at": "2026-09-24T04:15:00Z",
+  "completed_at": "2026-09-24T06:10:34Z",
+  "skill_digest": "02797f90adddd8f4bc50c6e80c6e68d8f6f0219d68d297aabcc8b5443bace5a8",
+  "g3_report": "specs/content/gnas-301/reviews/unit-02/G3/round-02/agent-g3-gnas301-u2-run002.json",
+  "input_manifest": {
+    ".claude/agents/g5-reviewer.md": "b63596b668dd8814fc7b34d59326171f7c789b8dc4e631e30c2c19fe05f2c68a",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g5.md": "7cbdf9929e6073b71663ec8951a9a42d1e8e683af479434f8409c81002d33159",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "f1d7f063cc2c826693a3d8428fb5d3ee45455fdb7906ebc5adadee8b9a434d47",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-1/gnas-301/course-overview.mdx": "41dce7cbd1847a767e780693e7375cb99e4a5e803caef0d7bb54c78b14fbf8ee",
+    "docs/semester-1/gnas-301/unit-02/index.mdx": "f4fa594eacedfbae03bdb9fa33f441d03aa6867327c20f38462ae486740fc656",
+    "docs/semester-1/gnas-301/unit-02/topic-01.mdx": "2bbfebf665818c4e93f0ba99258eb627d45a02b9c5cca70ef7a68082c2fd17b8",
+    "docs/semester-1/gnas-301/unit-02/topic-02.mdx": "d57a78dd997d61887083477346421da0df9f1f46210cec2df25a4e5d645ea192",
+    "docs/semester-1/gnas-301/unit-02/topic-03.mdx": "8401b8c38fb8ce9e564e4e3cff973040663bc64f03c8e6adaa621953768629c7",
+    "docs/semester-1/gnas-301/unit-02/unit-assessment.mdx": "d2e74a805ec84c5fd835b705e8a9bf61aa35893b778b6c74bffc63a56ca09a4c",
+    "docs/semester-1/gnas-301/unit-02/unit-teacher-notes.mdx": "5971daae83604e228e0cdfb7e176e28bb191b581fa0a496fc341c1c91a22a9fc",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/index.mdx": "862bb855a096e75427f47122fe02e8529c7a5d1a519407e70862c4376f4eb61e",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-01.mdx": "91e8b0db5265bfe22cd2cb1f6e0652a55885e99428b9c9d6b70fa816f1e3ce81",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-02.mdx": "d33a1e22ad72f3c54d0ce6ae2aeae1d2b14a62a80bc06bb46206fecc707619f5",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-03.mdx": "2f9684350087dde4bbf4b88c7c318d8ef7a21ca7d6a2311a6149fe70c001a4aa",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/unit-assessment.mdx": "aa8419071753b3b1606d29e35347f8e97bef1d45e951c56e2f1d0b9d22b14643",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/unit-teacher-notes.mdx": "6b603b90d526ddcb7c4de6a6354484e6d1baf8b4e18b4a6bc5fdab6652d9b9e3",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "41b698f8cbbb12f4030d6893083a5c36e4a19848b5ddb86206e5ba72847b8b13",
+    "scripts/check-no-answer-keys.mjs": "f38d60e5360e0c29f2dae02001195690f3b95e0ad2d7ae1a3c03a0d09c053f0d",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "bb614c625f7bf397ce51a317bdb8901711c00fa009d4ad0a506c5096e5b9ddd2",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "77f03816f68663621059f17745109fdde9b103c555f707e0c62d5ff56d2a4cd9",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "973496faae3366d13e8cdd3ba8d68edf7bd3745bdc6928311ee03c55f24b18b2",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/gnas-301/concepts/unit-02.md": "bdba0246414956278106ae67a2ba8fa45c66278adc62c68f9904681459804b40",
+    "specs/content/gnas-301/content-spec.md": "3b97f2f1d913a917b8e49777a1e7f10ab7f46b7826ba83004709e335039d38c1",
+    "specs/content/gnas-301/coverage/unit-02.md": "b8b7553395d55759a11c24d017f8cfe391f8a9b168ee4411b188cb821d93a4a9",
+    "specs/content/gnas-301/figures/unit-02.md": "36199d11d11ccdb5e0400cdd58232297062aaf4bcdff0c76f41ff69f094a33c5",
+    "specs/content/gnas-301/sources/texts/archer2010.md": "be2393d4e25c083dfcf4bc568e20be4fe0b8013e1c2a574dd5a6594a25367a58",
+    "specs/content/gnas-301/sources/texts/ilmas2026.md": "cd256182773e73727bf1f6858b8dc7ddf4f8d9aa5113a1ef2d0db32ade2a579a",
+    "specs/content/gnas-301/sources/texts/samtio2022.md": "feea15bdcda0080bc302061396339075840ae2ed43a5613a728798181f4313a8",
+    "specs/content/gnas-301/sources/texts/usgs-water-2019.md": "cf37f4cceaf18e6cde19572f0626ef5fde143cdcdb789d96a6131fb235590702",
+    "specs/content/gnas-301/sources/texts/who-healthcare-waste-2024.md": "b26fa5fd879f3dbde4babf2dfcd15b890b9103691f120d99bf2af3a55b38c8d6",
+    "specs/content/gnas-301/sources/texts/who-sanitation-2024.md": "82f79b61c82da80d4add1d0399b3db3d6f5767e152e0bda04e48fc95a2cca779",
+    "specs/content/gnas-301/sources/texts/who-water-2023.md": "40333d29fcf90adb66a9305e18a6f3355dbd15f506e3c38682f2c420eb7013ff",
+    "specs/content/gnas-301/sources/unit-02.md": "7637d5d595a43c9afe85102b8e120b2a3d7dacc8a0984dd52c5d7cee798f106a",
+    "specs/content/style-guide.md": "db96c9b33b0fb9522986462a0b519620c3c1d7602a046d7b90e638f643da4610",
+    "specs/content/terminology.csv": "ad917e28cde688eb72bd92226c2326e2d23da3da80fc53ea8c812b1a47f73337",
+    "static/img/figures/gnas-301/unit-02/fig-U2-1.dark.svg": "689b868bfcefd78692da73ce9aa39c99e42cd15f1953438f9ed2cc583894291f",
+    "static/img/figures/gnas-301/unit-02/fig-U2-1.svg": "b1fc602d69ce095d00921fddd0a43e50804110e5025a3ed7f98a3aa1da16f0bb",
+    "static/img/figures/gnas-301/unit-02/fig-U2-1.ur.dark.svg": "dee5038b0e30feede69d3945d510d118f46aed3ed0887271c33046a62c1681ec",
+    "static/img/figures/gnas-301/unit-02/fig-U2-1.ur.svg": "a31735af1c28b94dcdb17f946e0b9fb35764c58cd4158d1da9efef4a0746fa59",
+    "static/img/figures/gnas-301/unit-02/fig-U2-2.dark.svg": "3a7ad92a772464af1734fc318155d7d0be126e8cfda3b9c42ad385fe919c1399",
+    "static/img/figures/gnas-301/unit-02/fig-U2-2.svg": "82c6610350e42908670b9dfc15aed1300f7e9c1e11a46a0c84a68d503cb63e83",
+    "static/img/figures/gnas-301/unit-02/fig-U2-2.ur.dark.svg": "5362b21b0674515421ccbec63835af65bdd138ab1cd7586889449bd5dbffc902",
+    "static/img/figures/gnas-301/unit-02/fig-U2-2.ur.svg": "a3936ba4f4fea4ac28cff1b65cefdb22ff5468f9e1153b93e52d3f642956cf9c",
+    "static/img/figures/gnas-301/unit-02/fig-U2-3.dark.svg": "b497f84e2dc721cf922d18fc7c54fd746a51ca69bd46c4f5e00d84f93588ae66",
+    "static/img/figures/gnas-301/unit-02/fig-U2-3.svg": "17a59edf46f9cedd73cfe3e66bfe2207864d10541821c99a9b45771f38e50202",
+    "static/img/figures/gnas-301/unit-02/fig-U2-3.ur.dark.svg": "07eab8bff40dd5de2fe161e4e4f9e72558c95f7a2fef6542e7c3bb6a923c9f4a",
+    "static/img/figures/gnas-301/unit-02/fig-U2-3.ur.svg": "2d97017f1bff3c9e74b4f6a8ef50932c5f57d0f5c61cb7bd23ec696caf4d5724",
+    "static/img/figures/gnas-301/unit-02/fig-U2-4.dark.svg": "1695d562a300c44d193a2583c80b1245ed1511303fe32027fbd6327cdc5b039f",
+    "static/img/figures/gnas-301/unit-02/fig-U2-4.svg": "cc6550a9ed5e9316ff8e0aea3d4dd17e8791f39d361cf992a512475232ba8ce9",
+    "static/img/figures/gnas-301/unit-02/fig-U2-4.ur.dark.svg": "cfed8809c4633a196fe8c37ee6e7968d9314ac2a12698e14aae9413a1ecb3e3e",
+    "static/img/figures/gnas-301/unit-02/fig-U2-4.ur.svg": "d4c31b8c2f9d38462b3bab3b67cecf9189619f492abbaa8a3bd8b763f346c3f0",
+    "static/img/figures/gnas-301/unit-02/fig-U2-5.dark.svg": "09c612b1ef58f6bcb878392b4f2d8281f8c0365d08e78695795c402819ff3e48",
+    "static/img/figures/gnas-301/unit-02/fig-U2-5.svg": "8e417f3fbd2ee5e62fdc80b98a729883179b667c2fd9128db171f718643421c4",
+    "static/img/figures/gnas-301/unit-02/fig-U2-5.ur.dark.svg": "2bb202aec2f46a8ccaec67e5e5b261e3e98bd6aff949377adb968cf48d0a58de",
+    "static/img/figures/gnas-301/unit-02/fig-U2-5.ur.svg": "c97a8620499eea74f42fd8640a947c786e4ad63e7ba09a08fd3569f707f8fcd3",
+    "static/img/figures/gnas-301/unit-02/fig-U2-6.dark.svg": "cf57e984f29e7aad09ca879e69ef77b8e210e0b788e1a4c0ae8e4400e5b74c55",
+    "static/img/figures/gnas-301/unit-02/fig-U2-6.svg": "c473ba88b059ce11a80e7f1b7acbf7165ccf47ca3952d06a23411bdef4220d1f",
+    "static/img/figures/gnas-301/unit-02/fig-U2-6.ur.dark.svg": "d94a34986c379e1c7e44aef7a20f668f7c1753667dc0362c45a41305324d4468",
+    "static/img/figures/gnas-301/unit-02/fig-U2-6.ur.svg": "107023556c51a7a20b2da697f328e3bca040b01ebdad2f40e6f05fbd6d807418"
+  },
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "fail",
+      "evidence": [
+        "G3 dependency invalidated: specs/content/gnas-301/reviews/unit-02/G3/round-02/agent-g3-gnas301-u2-run002.json (completed 2026-09-23T22:06:16Z, disposition pass) now fails 'node scripts/review-evidence.mjs validate' with 'stale or incomplete input manifest' (exit 1, re-run 2026-09-24)",
+        "Three bound inputs changed after that G3 report: docs/semester-1/gnas-301/unit-02/topic-01.mdx (commit f514923 2026-09-23T22:13:10Z applied the report's own advisories 7 minutes after completion), docs/semester-1/gnas-301/course-overview.mdx (commit a495278), specs/content/gnas-301/sources/unit-02.md (f514923); established by diffing a freshly prepared G3 manifest against the report's input_manifest",
+        "The current English topic-01.mdx:66-68 (softened per-capita stress claim) has no accepted G3 evidence; .claude/skills/review-unit/references/g5.md requires accepted G3 evidence for the exact English inputs and states a changed English digest invalidates the dependency",
+        "Course-guide binding otherwise intact: .specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx bound and digest-verified; SLO:GNAS-301-2-1/2-2 carried in the frontmatter of all six Urdu files"
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "fail",
+      "evidence": [
+        "In-text citation '(Ilmas et al., 2026)' transliterated as '(ابلس وغیرہ، 2026)' at i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-03.mdx:44: 'ابلس' spells Iblis and cannot be matched by a reader to the Latin-script reference 'Ilmas, B., ... (2026)' at topic-03.mdx:103",
+        "Truncated reference titles in the Urdu further-reading list: i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-01.mdx:94 (Archer drops 'under changing climatic and socio economic conditions'), :95 (Samtio drops '; using water quality index'), :93 drops the '(Water Science School)' qualifier",
+        "WHO WASH claim degraded: i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-02.mdx:46 renders 'inadequate water, sanitation and hygiene' as 'ناکافی پانی، صفائی اور صفائی' (sanitation twice; hygiene lost); the 14 لاکھ = 1.4 million figure is preserved",
+        "All other source quantities carried intact and checked against the English: 96.5 per cent / 97 droplets (USGS 2019, topic-01.mdx:32), 2 ارب (WHO 2023, :42), 505,000 (WHO 2023, topic-02.mdx:38), 32 samples and TDS exceedance (Samtio 2022, topic-01.mdx:44), 85/15 per cent (WHO 2024, topic-03.mdx:50), 44 per cent (WHO 2024, topic-03.mdx:44), 108 million tonnes CO2e (Ilmas 2026, topic-03.mdx:44)"
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "All six unit outcomes (docs/semester-1/gnas-301/unit-02/index.mdx:29-36) are taught in Urdu: outcomes 1-2 in i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-01.mdx (global distribution :32, Pakistan's resources :38, security definition :44), outcomes 3-4 in topic-02.mdx (pollution chain :32, treatment stages :54-56), outcomes 5-6 in topic-03.mdx (five stages :32, hierarchy :38-42, hospital and industrial waste :48-52)",
+        "All outcomes are assessed in Urdu in i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/unit-assessment.mdx: MCQ 1/2/3/10 and RRQ 1/2/3 (distribution, security, Chachro), MCQ 4/5/6, RRQ 5/7 and ERQ 2/4 (pollution, effluents, treatment), MCQ 7/8/9, RRQ 8/9/10 and ERQ 3/5 (waste hierarchy, segregation, hazardous waste)",
+        "Structural parity holds: heading counts match per file (index 5/5, topic-01 11/11, topic-02 12/12, topic-03 12/12, unit-assessment 10/10, unit-teacher-notes 6/6); every nine-part topic section, checklist, activity and the full 10/10/5 bank are present in Urdu"
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "fail",
+      "evidence": [
+        "Independently answered all 10 Urdu MCQs before reading the key: the Urdu key (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/unit-assessment.mdx:113-122) matches the English key (docs/semester-1/gnas-301/unit-02/unit-assessment.mdx:139-151) item by item (ب، د، الف، ج، ب، د، ب، الف، ب، ج = b,d,a,c,b,d,b,a,b,c); option ordering preserved (الف/ب/ج/د = a/b/c/d), including MCQ 7's four full hierarchy orderings",
+        "RRQ mark schemes preserved exactly (2/5/2/3/3/2/2/2/3/3 marks) and ERQ analytic-rubric totals preserved (10 each) at i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/unit-assessment.mdx:126-143; Bloom labels match the English item for item; no item translation reveals an answer or lowers cognitive demand",
+        "FAIL: 'Summative assessment' is rendered 'تشکیلی جائزہ' (formative assessment) at i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/unit-assessment.mdx:24, and 'Summative task' as 'تشکیلی کام' at i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-01.mdx:76, topic-02.mdx:90, topic-03.mdx:86 - contrary to the frozen bank (specs/content/terminology.csv: 'Summative Assessment,مجموعی جائزہ / جامع تشخیص'; 'Summative Stage,اختتامی مرحلہ'; تشکیلی is the banked Urdu for Formative)",
+        "RRQ 9 model answer renders 'pathological' as 'مرضی' (wish/will) instead of 'مرضیاتی' at i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/unit-assessment.mdx:134",
+        "Corrupted token inside the summative-task context: i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-03.mdx:90 'ہیڈ ٹیچر کو_term کے آخر میں' (stray '_term'); 'end of term' left untranslated as 'term' at topic-03.mdx:98 and unit-assessment.mdx:107"
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "unverified",
+      "evidence": [
+        "Source-level alt text present and descriptive in Urdu for every figure carrier: i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-01.mdx:34,:40; topic-02.mdx:34,:44; topic-03.mdx:36,:54; the six .ur.svg assets under static/img/figures/gnas-301/unit-02/ carry Urdu <title>/<desc> and Urdu labels (direct SVG inspection, render-review.log)",
+        "Rendered accessibility (DOM order, heading hierarchy in the rendered page, contrast, screen-reader behaviour) could not be inspected because no Urdu unit page renders in the current state; see the rtl criterion and specs/content/gnas-301/reviews/unit-02/G5/logs-20260924T0434Z/render-review.log"
+      ]
+    },
+    {
+      "id": "completeness",
+      "status": "fail",
+      "evidence": [
+        "BLOCKING: i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-03.mdx:15 imports from '@site/src/components/PrintOut', which does not exist (src/components/ contains PrintHandout.tsx only). The English file and the other five Urdu files import '@site/src/components/PrintHandout'. The Urdu Topic 2.3 page renders blank ('Cannot find module' page error; renders-run001/ur-topic-03-desktop.png) and the production build fails on this file (specs/content/gnas-301/reviews/unit-02/G5/logs-20260924T0434Z/build.log, 'Module not found: Error: Can't resolve @site/src/components/PrintOut')",
+        "Omissions found by passage comparison: i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-02.mdx:46 drops '(chemical dosing, filtration)'; :55 drops 'in tanks or trickling filters'; :58 drops 'the standards name the pollutant, the receiving water and the maximum concentration allowed'; :66 drops '(houses, a workshop, a clinic)' and 'then compare maps with another pair'; :88 drops '(pipes, open channels, dumped waste)'; :100 drops 'not from a wish list'; i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-03.mdx:44 drops 'less discussed but real'; :50 drops the 'pathological waste' category from the risk-stream list; i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/unit-teacher-notes.mdx:41 drops 'of the rules behind the bins'; the teacher-notes frontmatter description and blooms_summary drop their trailing qualifier phrases",
+        "No heading-only stubs: every section under every heading carries translated prose, and all activities, checklists and worked examples are complete"
+      ]
+    },
+    {
+      "id": "semantics",
+      "status": "fail",
+      "evidence": [
+        "BLOCKING: 'corrosive' translated as 'کارآمد' (useful) in the hazardous-waste property list at i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-03.mdx:48 ('عدوی، زہریلا، آتش گیر، کارآمد یا تیز دھار') and :50 (WHO 15 per cent characterization) - a hazard property is taught as 'useful'",
+        "BLOCKING: the topic-02 hook is tautological in Urdu: 'Clear, she says, is not the same as clean' (docs/semester-1/gnas-301/unit-02/topic-02.mdx:28) is rendered 'صاف، وہ کہتی ہیں، صاف کے برابر نہیں۔' (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-02.mdx:24) - both English words map to صاف, so the sentence reads 'clear is not equal to clear'; the distinction the topic hinges on needs two distinct words (e.g. شفاف vs صاف/محق)",
+        "BLOCKING: garbled summary sentence at i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-03.mdx:73: 'جو قاعدے سب سے پہلے بچاتے ہیں وہ وہ کام کرتے ہیں جو کچرے کو ہاتھوں سے سنبھالتے ہیں۔' makes the rules the actors doing the handling; the English (docs/semester-1/gnas-301/unit-02/topic-03.mdx:134-135) says the people the rules protect first are the workers who handle the waste with their hands",
+        "Directional reversal: i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/index.mdx:45 'each builds on the one before' rendered 'ہر ایک اگلے پر بنتا ہے' ('each builds on the next')",
+        "Attachment ambiguity: i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-01.mdx:38 and :63 attach 'بڑھتے ہوئے' to the resources rather than the stress, so 'increasingly so' can read as 'resources increasing with population growth'",
+        "Weakened priority claim: i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-03.mdx:32 'before it is anything else' rendered 'اور کچھ اور بھی' ('and other things too')"
+      ]
+    },
+    {
+      "id": "terminology",
+      "status": "fail",
+      "evidence": [
+        "Frozen-bank violation: specs/content/terminology.csv banks 'Summative Assessment,مجموعی جائزہ / جامع تشخیص' and 'Summative Stage,اختتامی مرحلہ', yet the translation uses 'تشکیلی' (the banked Urdu for Formative) for every 'Summative' occurrence (4 locators listed under the assessment criterion)",
+        "Same concept split across surfaces: 'dispose' is 'اخراج' in the figure labels (static/img/figures/gnas-301/unit-02/fig-U2-5.ur.svg step 5) but 'ضائع' in the prose, alt text and answer key (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-03.mdx:36,:42,:58; unit-assessment.mdx:119)",
+        "Non-standard or misleading term choices: 'حلیہ مثال' for 'worked example' (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-01.mdx:46, topic-02.mdx:60, topic-03.mdx:56, unit-teacher-notes.mdx:18; 'حلیہ' means disguise/physique, should be 'حل شدہ مثال'); 'نالی کا سر' for 'Trace the drain' (topic-02.mdx:64, unit-teacher-notes.mdx:35; 'سر' = head, should be 'سراغ'); 'نامی' for organic instead of 'نامیاتی' (topic-02.mdx:39,:50,:77); 'جذب' for adsorption where the English distinguishes adsorption from absorption (topic-02.mdx:56 and MCQ 5 option ج); 'مرضی' for 'مرضیاتی' pathological (unit-assessment.mdx:134); TDS as 'کل تحلیل مادہ' in topic-01.mdx:44 but left as Latin 'TDS' in unit-assessment.mdx:115,:128",
+        "'The Indus' rendered as 'سندھ' without the 'دریائے' qualifier at i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-01.mdx:38 ('سندھ اور اس کے معاون دریا') and :63 ('سندھ کے نظام پر') and in the index description (index.mdx:3), ambiguous with the province of Sindh; the assessment model answer uses the unambiguous 'سندھ دریائی نظام' (unit-assessment.mdx:127)",
+        "The bank holds no environmental-science terms (121 entries, education and psychology only), so no other bank conflicts arise; new environmental terms are proposed here as findings for the owner, and the bank was not modified"
+      ]
+    },
+    {
+      "id": "register",
+      "status": "fail",
+      "evidence": [
+        "Coinages a B.Ed student cannot parse: 'شمارندی' for counters (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-01.mdx:52), 'صحتی اثر' for health effect (topic-02.mdx:26,:34), 'تلہائی' for settling (topic-02.mdx:54; also unit-assessment.mdx:59,:118), 'ایک قطری کا' for 'of one droplet' (topic-01.mdx:32)",
+        "Colloquial English loans in academic prose: 'فیل ہونا' for fail (topic-01.mdx:44,:59,:63; unit-assessment.mdx:92), 'فالو کرتا ہے' (topic-03.mdx:52), 'میٹرنگ' (topic-01.mdx:48)",
+        "Legalese 'بمقابلہ' in teaching prose (topic-01.mdx:38); gender/agreement slips: 'پانی کی توازن' (index.mdx:20; توازن is masculine), 'محلے کا ٹینکی' (topic-01.mdx:24), 'ایک مقدار کا حقیقت' (topic-01.mdx:74), 'سلامتی کی استدلال' (topic-01.mdx:87)",
+        "The register is otherwise plain, classroom-appropriate Urdu consistent with academic-plain (درسی مگر عام فہم); the defects above are localized and repairable"
+      ]
+    },
+    {
+      "id": "rtl",
+      "status": "fail",
+      "evidence": [
+        "Urdu Topic 2.3 renders blank: page error 'Cannot find module @site/src/components/PrintOut'; captures renders-run001/ur-topic-03-{desktop,narrow,a4-print}.png and render-report.json",
+        "The other five Unit 2 Urdu pages crash in the browser: visible text 'یہ صفحہ کریش ہو گیا ہے / دوبارہ کوشش کریں / Cannot read properties of undefined (reading id)'; the five desktop captures are byte-identical (SHA-256 499085f9...), i.e. the same crash screen rather than page content",
+        "Production build fails on the Unit 2 file (specs/content/gnas-301/reviews/unit-02/G5/logs-20260924T0434Z/build.log: 'Module not found: Can't resolve @site/src/components/PrintOut' in i18n/ur/.../gnas-301/unit-02); the dev server was the only render path and it shows no content",
+        "dir=rtl and lang=ur are correctly set on the rendered shell; Nastaliq shaping, bidi punctuation, numerals, embedded Latin expressions, table order, wrapping, clipping and reading sequence remain uninspected because no Urdu unit page renders",
+        "The six .ur.svg figure variants carry Urdu labels and titles (direct SVG inspection); in-page figure rendering is unverified"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "Urdu Topic 2.3 is unrenderable and breaks the Urdu site: i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-03.mdx:15 imports from '@site/src/components/PrintOut', which does not exist. The English file and the other five Urdu files import '@site/src/components/PrintHandout'. Rendered result: the page is blank with 'Cannot find module' (renders-run001/ur-topic-03-desktop.png), 'npm run build' fails on this file (logs-20260924T0434Z/build.log), and in dev mode the whole Urdu docs instance crashes ('یہ صفحہ کریش ہو گیا ہے', 'Cannot read properties of undefined (reading id)'), so none of the six Unit 2 Urdu pages can be read. Repair: correct the import to '@site/src/components/PrintHandout'."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "'Summative' is translated as 'تشکیلی' (formative), the opposite assessment type, against the frozen bank: 'تشکیلی کام' for 'Summative task' at i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-01.mdx:76, topic-02.mdx:90, topic-03.mdx:86, and 'تشکیلی جائزہ' for 'Summative assessment' at i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/unit-assessment.mdx:24. terminology.csv banks Summative Assessment = مجموعی جائزہ / جامع تشخیص and Summative Stage = اختتامی مرحلہ, while تشکیلی is the banked Urdu for Formative. For B.Ed students the formative/summative distinction is core professional vocabulary, so every Urdu summative task is mislabelled. Repair per the bank (e.g. مجموعی کام / مجموعی جائزہ or اختتامی کام)."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "'Corrosive' is translated as 'کارآمد' (useful) in the hazardous-waste property list at i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-03.mdx:48 ('عدوی، زہریلا، آتش گیر، کارآمد یا تیز دھار') and again at :50 in the WHO 15 per cent characterization. A hazard property is taught as 'useful'. Repair to a corrosivity term (e.g. 'کوروزی والا / تیزابی گھساؤ والا')."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "The Topic 2.2 hook is tautological in Urdu: 'Clear, she says, is not the same as clean' (docs/semester-1/gnas-301/unit-02/topic-02.mdx:28) becomes 'صاف، وہ کہتی ہیں، صاف کے برابر نہیں۔' (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-02.mdx:24), i.e. 'clear is not equal to clear'. Both English words map to صاف, destroying the clear-versus-clean distinction the whole topic turns on (it recurs at :62 and :77 where context only partially rescues it). Repair by distinguishing the two concepts, e.g. 'شفاف (صاف دکھنے والا) صاف (بے آلودگی) کے برابر نہیں'."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "Garbled summary sentence at i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-03.mdx:73: 'جو قاعدے سب سے پہلے بچاتے ہیں وہ وہ کام کرتے ہیں جو کچرے کو ہاتھوں سے سنبھالتے ہیں۔' makes the rules the actors that handle the waste. The English (docs/semester-1/gnas-301/unit-02/topic-03.mdx:134-135) states: 'The people the rules protect first are the workers who handle the waste with their hands.' The worker-protection claim is lost. Repair to name the workers as the protected party, e.g. 'قاعدے سب سے پہلے ان مزدوروں کو بچاتے ہیں جو کچرا ہاتھوں سے سنبھالتے ہیں'."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "The accepted G3 dependency does not cover the English inputs bound to this review: the G3 round-2 report (specs/content/gnas-301/reviews/unit-02/G3/round-02/agent-g3-gnas301-u2-run002.json, completed 2026-09-23T22:06:16Z, disposition pass) bound docs/semester-1/gnas-301/unit-02/topic-01.mdx, docs/semester-1/gnas-301/course-overview.mdx and specs/content/gnas-301/sources/unit-02.md at earlier digests; all three changed afterwards (f514923 at 22:13:10Z applied that report's own advisories to topic-01 and sources; a495278 rewrote course-overview). 'node scripts/review-evidence.mjs validate' on the G3 report now exits 1 ('stale or incomplete input manifest'). Per references/g5.md a changed English digest invalidates the dependency: the current softened water-stress passage (topic-01.mdx:66-68) has no accepted G3 evidence. This is not repairable inside G5: a fresh G3 round must bind the current English state, then a fresh G5 with working renders."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "'A worked example' is rendered 'ایک حلیہ مثال' (حلیہ = disguise/physique; nonsense here) at i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-01.mdx:46, topic-02.mdx:60, topic-03.mdx:56, and 'حلیہ مثالوں' at unit-teacher-notes.mdx:18 and topic-03.mdx:80. Use 'حل شدہ مثال'."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Activity heading 'Trace the drain' is rendered 'نالی کا سر' ('the drain's head') at i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-02.mdx:64 and unit-teacher-notes.mdx:35; the intended word is 'سراغ' (trace), e.g. 'نالی کا سراغ لیں'."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Citation linkage broken for Ilmas et al. 2026: the in-text citation '(ابلس وغیرہ، 2026)' at i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-03.mdx:44 transliterates the author as Iblis and cannot be matched to the Latin-script reference at :103. Use 'ایلماس/الماس وغیرہ، 2026' or keep the Latin name."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Truncated reference titles in the Urdu further-reading list: i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-01.mdx:94 (Archer article title drops 'under changing climatic and socio economic conditions'), :95 (Samtio drops '; using water quality index'), :93 (USGS drops the '(Water Science School)' label). References should carry full titles."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "WHO WASH claim degraded at i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-02.mdx:46: 'inadequate water, sanitation and hygiene' becomes 'ناکافی پانی، صفائی اور صفائی' (sanitation twice, hygiene lost). Render hygiene distinctly, e.g. 'ناکافی پانی، صفائی اور ذاتی صفائی و صحت'."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Omitted details (each verified against the English): i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-02.mdx:46 '(chemical dosing, filtration)'; :55 'in tanks or trickling filters'; :58 the NEQS clause 'the standards name the pollutant, the receiving water and the maximum concentration allowed'; :66 '(houses, a workshop, a clinic)' and 'then compare maps with another pair'; :88 '(pipes, open channels, dumped waste)'; :100 rubric 'not from a wish list'; i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-03.mdx:44 'less discussed but real'; unit-teacher-notes.mdx:41 'of the rules behind the bins'; teacher-notes frontmatter description/blooms_summary trailing qualifiers."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Hospital risk-waste categories corrupted at i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-03.mdx:50: the English's five categories (sharps, infectious, pathological, pharmaceutical, chemical) become 'تیز دھاری چیزیں، عدوی بانڈ، لیبارٹوری کلچر، دوائیں، کیمیکل' - 'pathological waste' is dropped and the examples (dressings, laboratory cultures) are promoted to categories. The RRQ 9 model answer (unit-assessment.mdx:134) also renders 'pathological' as 'مرضی' (wish) instead of 'مرضیاتی'."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Corrupted/untranslated 'end of term': stray token 'کو_term' at i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-03.mdx:90 inside the summative-task prompt, and bare Latin 'term' at topic-03.mdx:98 and unit-assessment.mdx:107. Use 'سیشن/سالیانہ امتحان کے آخر میں' per the course calendar terms."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Directional and attachment errors: i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/index.mdx:45 'each builds on the one before' rendered 'ہر ایک اگلے پر بنتا ہے' ('each builds on the next'); i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-01.mdx:38,:63 'بڑھتے ہوئے' attaches to resources rather than stress ('increasingly so'); i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-03.mdx:32 'before it is anything else' weakened to 'اور کچھ اور بھی'."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "'The Indus' is rendered 'سندھ' without the 'دریائے' qualifier at i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-02/topic-01.mdx:38 and :63 and in the index description (index.mdx:3), which reads as the province of Sindh; the assessment model answer's 'سندھ دریائی نظام' (unit-assessment.mdx:127) is the clearer form. Also 'dispose' is split across surfaces: figures say 'اخراج' (fig-U2-5.ur.svg) while prose/alt/answer key say 'ضائع'."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Register and grammar defects to repair: coinages 'شمارندی' (topic-01.mdx:52), 'صحتی اثر' (topic-02.mdx:26,:34), 'تلہائی' (topic-02.mdx:54; unit-assessment.mdx:59,:118), 'ایک قطری کا' (topic-01.mdx:32); colloquial 'فیل ہونا' (topic-01.mdx:44,:59,:63; unit-assessment.mdx:92), 'فالو کرتا ہے' (topic-03.mdx:52), 'میٹرنگ' (topic-01.mdx:48); legalese 'بمقابلہ' (topic-01.mdx:38); agreement slips 'پانی کی توازن' (index.mdx:20), 'محلے کا ٹینکی' (topic-01.mdx:24), 'مقدار کا حقیقت' (topic-01.mdx:74), 'سلامتی کی استدلال' (topic-01.mdx:87); terminology imprecision 'نامی' for 'نامیاتی' (topic-02.mdx:39,:50,:77), 'جذب' for adsorption (topic-02.mdx:56), TDS inconsistency ('کل تحلیل مادہ' vs Latin 'TDS', topic-01.mdx:44 vs unit-assessment.mdx:115,:128)."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Out-of-scope build blocker recorded for the parent: i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-06/topic-06.mdx:36 closes a '<Glossary>' with '</Gloss>', which fails 'npm run build' (MDX compilation error, logs-20260924T0434Z/build.log). It is outside Unit 2's review scope but blocks any production build, so render verification of Unit 2 via a production build stays impossible until it is repaired."
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-02/G5/logs-20260924T0434Z/validate-content.log"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-02/G5/logs-20260924T0434Z/check-depth-gate.log"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-02/G5/logs-20260924T0434Z/check-figures.log"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-02/G5/logs-20260924T0434Z/check-no-em-dash.log"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-02/G5/logs-20260924T0434Z/check-no-answer-keys.log"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-02/G5/logs-20260924T0434Z/check-docs-sync.log"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 1,
+      "log_path": "specs/content/gnas-301/reviews/unit-02/G5/logs-20260924T0434Z/render-review.log"
+    },
+    {
+      "name": "build",
+      "exit_code": 1,
+      "log_path": "specs/content/gnas-301/reviews/unit-02/G5/logs-20260924T0434Z/build.log"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/gnas-301/reviews/unit-02/G5/logs-20260924T0434Z/build.log": "d2d0fceecfab44ecfe7c081506571be046d1851aea42d1673f9b8fa9e8d4ef9a",
+    "specs/content/gnas-301/reviews/unit-02/G5/logs-20260924T0434Z/check-depth-gate.log": "222dd1e39a10177d675a7bef352a1c7841cad65bfeebed37ad0654bba24651dc",
+    "specs/content/gnas-301/reviews/unit-02/G5/logs-20260924T0434Z/check-docs-sync.log": "e4127f6549c9f4314c13774251c20a359e6dcabe8a430c41c40200399894e400",
+    "specs/content/gnas-301/reviews/unit-02/G5/logs-20260924T0434Z/check-figures.log": "060487afad830f59d8230ff9e8962d029945ec553f554cb0931eb3006493e52c",
+    "specs/content/gnas-301/reviews/unit-02/G5/logs-20260924T0434Z/check-no-answer-keys.log": "f334cd9f04affd5ad7c1755142489c9c191cf6d31f3f3bc90a3adb95b0e62f30",
+    "specs/content/gnas-301/reviews/unit-02/G5/logs-20260924T0434Z/check-no-em-dash.log": "32b4ce780030facee618bb016c0132cb7006c0686d130b7aa0a55ad28cdef073",
+    "specs/content/gnas-301/reviews/unit-02/G5/logs-20260924T0434Z/dev-server.log": "5006eb205dda3d0d24b53933a5f728696614722caf2a064052b3c8a6630e2c43",
+    "specs/content/gnas-301/reviews/unit-02/G5/logs-20260924T0434Z/render-review.log": "5d32ca07589a441a8fbe43ed0c92ab507c0a7dc82b11614739c783c6c0faf0a8",
+    "specs/content/gnas-301/reviews/unit-02/G5/logs-20260924T0434Z/validate-content.log": "fa8b3c7340c1c2dec80293fad136492ecc2e41ea3af5ca5efa595ebc2367d1e8",
+    "specs/content/gnas-301/reviews/unit-02/G5/renders-run001/en-topic-03-desktop.png": "8303973c8ed2b519880c0b7fd2ce9f0a0dfc56e30138a769fff6986ad4c8f572",
+    "specs/content/gnas-301/reviews/unit-02/G5/renders-run001/render-report.json": "73b0b716ae0aabe5fe7f78f27a68e419b3a93f59fbe35951cf317722b8c005a6",
+    "specs/content/gnas-301/reviews/unit-02/G5/renders-run001/ur-assessment-a4-print.png": "ddf60ba57bf8101db63987bd793b93cc6e4c9452fffd0bab5b84b68476c67881",
+    "specs/content/gnas-301/reviews/unit-02/G5/renders-run001/ur-assessment-desktop.png": "499085f947790900cd3265be704ba5c5f194f714df18de67fb7118db7aacfb6f",
+    "specs/content/gnas-301/reviews/unit-02/G5/renders-run001/ur-assessment-narrow.png": "ee55e32ffd49973aecde40b54cc9ac9ea9a360264c7e439be07ba48274856f3e",
+    "specs/content/gnas-301/reviews/unit-02/G5/renders-run001/ur-index-desktop.png": "499085f947790900cd3265be704ba5c5f194f714df18de67fb7118db7aacfb6f",
+    "specs/content/gnas-301/reviews/unit-02/G5/renders-run001/ur-teacher-notes-desktop.png": "499085f947790900cd3265be704ba5c5f194f714df18de67fb7118db7aacfb6f",
+    "specs/content/gnas-301/reviews/unit-02/G5/renders-run001/ur-topic-01-a4-print.png": "ddf60ba57bf8101db63987bd793b93cc6e4c9452fffd0bab5b84b68476c67881",
+    "specs/content/gnas-301/reviews/unit-02/G5/renders-run001/ur-topic-01-desktop.png": "499085f947790900cd3265be704ba5c5f194f714df18de67fb7118db7aacfb6f",
+    "specs/content/gnas-301/reviews/unit-02/G5/renders-run001/ur-topic-01-narrow.png": "ee55e32ffd49973aecde40b54cc9ac9ea9a360264c7e439be07ba48274856f3e",
+    "specs/content/gnas-301/reviews/unit-02/G5/renders-run001/ur-topic-02-desktop.png": "499085f947790900cd3265be704ba5c5f194f714df18de67fb7118db7aacfb6f",
+    "specs/content/gnas-301/reviews/unit-02/G5/renders-run001/ur-topic-03-a4-print.png": "6335d87eec118264138b3bb5239f84924a81a66385daa2552cb54d015a73771b",
+    "specs/content/gnas-301/reviews/unit-02/G5/renders-run001/ur-topic-03-desktop.png": "9d2df8f6f2cb32f0d9abef98d7115d273c1a9454f39ae2a82eb7015fba2a3066",
+    "specs/content/gnas-301/reviews/unit-02/G5/renders-run001/ur-topic-03-narrow.png": "e4d03cb9e04f413e6b2e7ea23c6434f99ab7e843bc5fbee40ff0350c055c490f"
+  }
+}

@@ -1,0 +1,355 @@
+{
+  "schema_version": 1,
+  "course_code": "GNAS-301",
+  "unit_no": 3,
+  "stage": "G3",
+  "disposition": "pass",
+  "reviewer_id": "agent:g3-reviewer",
+  "author_run_id": "commit:40e24be",
+  "reviewer_run_id": "agent-g3-gnas301-u3-run002",
+  "model": "LongCat-2.0",
+  "started_at": "2026-09-23T23:52:00Z",
+  "completed_at": "2026-09-24T01:02:00Z",
+  "skill_digest": "eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b",
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g3.md": "074c8464b4bc0f2f2b76bbb19707c50b54cb907920407873a4e5d193e866f53f",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "f1d7f063cc2c826693a3d8428fb5d3ee45455fdb7906ebc5adadee8b9a434d47",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-1/gnas-301/course-overview.mdx": "41dce7cbd1847a767e780693e7375cb99e4a5e803caef0d7bb54c78b14fbf8ee",
+    "docs/semester-1/gnas-301/unit-03/index.mdx": "87bd34aa4faed8ab5db96042bc3cc4ec6c14d09a17480507492af744813f8f1f",
+    "docs/semester-1/gnas-301/unit-03/topic-01.mdx": "a0fbbcdbd37ee0dad9a1e322d96102c76435c90994c056a30d2d01ba161f4e7e",
+    "docs/semester-1/gnas-301/unit-03/topic-02.mdx": "180af44991663a50c8d6d974cf357bd412350b5bb31824a3fc811c936f62074f",
+    "docs/semester-1/gnas-301/unit-03/topic-03.mdx": "7d8fb45ea780cf8e0f095504da6f96e9e3f2804f26265ae839aa8d2b64549baf",
+    "docs/semester-1/gnas-301/unit-03/topic-04.mdx": "9c8167e616b4d1942970d512677758975fa98c531c52f88ba4d5b546cb7bc3b6",
+    "docs/semester-1/gnas-301/unit-03/unit-assessment.mdx": "bc98586b69f4d2834279761d9a68da592c746ff5b7c569f54aa8f4a65195b0ef",
+    "docs/semester-1/gnas-301/unit-03/unit-teacher-notes.mdx": "7592edffd46fc84e686bce301a2bcd1640e2feff5caa64bce5e339e4650ea942",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "41b698f8cbbb12f4030d6893083a5c36e4a19848b5ddb86206e5ba72847b8b13",
+    "scripts/check-no-answer-keys.mjs": "f38d60e5360e0c29f2dae02001195690f3b95e0ad2d7ae1a3c03a0d09c053f0d",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "bb614c625f7bf397ce51a317bdb8901711c00fa009d4ad0a506c5096e5b9ddd2",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "77f03816f68663621059f17745109fdde9b103c555f707e0c62d5ff56d2a4cd9",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "973496faae3366d13e8cdd3ba8d68edf7bd3745bdc6928311ee03c55f24b18b2",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/gnas-301/concepts/unit-03.md": "76c4401ee42972f213d784302e4dffa7f6b0d4f8e3956ef96d0ba54a2c884514",
+    "specs/content/gnas-301/content-spec.md": "7d1ca9a0b2c0ab6a7c6edfaa27578f43b5356b92233fcd55fa1312d614a23210",
+    "specs/content/gnas-301/coverage/unit-03.md": "fab33166232e2e47419196284ee84a07694a7fbabd4fd59a37cdf0b7881c0c92",
+    "specs/content/gnas-301/figures/unit-03.md": "8bddcaf970ecf41906a9163c47940c122ec360de70bf05d6519666161d5ab3aa",
+    "specs/content/gnas-301/sources/texts/abbasi2022.md": "83deb95cd5cbbf12d0631bceb65f1359bbfd306dc492a833a5205b1fc48d5fe3",
+    "specs/content/gnas-301/sources/texts/anwar2026.md": "62896070c95433006914785d74493669fa6ce8296769c8a5e1c435161912c3ff",
+    "specs/content/gnas-301/sources/texts/who-air-2024.md": "8698e0efef2db62ec02d3b3e409f4b6d913ea7fae67494688c30990866eb4a9e",
+    "specs/content/gnas-301/sources/texts/who-aqg-2021.md": "60b887aff2c0545ec568cd8bda275c28f7d7437ade7fef3aeb39cdd60617384f",
+    "specs/content/gnas-301/sources/texts/who-hearing-2026.md": "4cd55cceafa96652fc238d0067ea0fd8637549316e8782a0a6090eb968d38b63",
+    "specs/content/gnas-301/sources/unit-03.md": "86a64f735bd866245cd6d19483c5980e0cbebdcf2aca6110ee252f7631e53c3e",
+    "specs/content/style-guide.md": "db96c9b33b0fb9522986462a0b519620c3c1d7602a046d7b90e638f643da4610",
+    "static/img/figures/gnas-301/unit-03/fig-U3-1.dark.svg": "1724896d6ac893a651c724591c95a53cdf243ac74dc6436eb6ddfae3a286ccad",
+    "static/img/figures/gnas-301/unit-03/fig-U3-1.svg": "4c458a72c49b94501570f182de2f92b537a77894d45b9d5160d8f9731f8a54a5",
+    "static/img/figures/gnas-301/unit-03/fig-U3-2.dark.svg": "0b727999281e1ffdc6109051f3b7333f750736ea06f6192c8de6aac155113359",
+    "static/img/figures/gnas-301/unit-03/fig-U3-2.svg": "c3834524a5c420e75ef605bd2bc83aef43e7024c91f0d6b91e4085aa65e1d34e",
+    "static/img/figures/gnas-301/unit-03/fig-U3-3.dark.svg": "068d877e29c7ea11dab8e19b2af81deab4b93f5ecbdf75a4cef2e3d8d7787d0c",
+    "static/img/figures/gnas-301/unit-03/fig-U3-3.svg": "cbcee52f90f206ec0dc12397ee6058f7b63cd249e9ecc7a3c09633e33dd89ad0",
+    "static/img/figures/gnas-301/unit-03/fig-U3-4.dark.svg": "b0d311be3880bdca78c1a850498c6a1cb310e46ff0c4474dd001f7384201a873",
+    "static/img/figures/gnas-301/unit-03/fig-U3-4.svg": "09d510496c6b6f781a882a90bcff885ef9dd092144970bffa135d43c822ed169",
+    "static/img/figures/gnas-301/unit-03/fig-U3-5.dark.svg": "0b335af9558724dc6fc2bcbdb36819ae5600a2186e817a46a280ec6f077cfd5d",
+    "static/img/figures/gnas-301/unit-03/fig-U3-5.svg": "fc7880729d6a3b458e89a69e918857978032f74b0174748a872c549d236ef527",
+    "static/img/figures/gnas-301/unit-03/fig-U3-6.dark.svg": "816711eb5cfe47bf74ae05ee41eaebf0fead9ae69c583e307bb428cf44be2d06",
+    "static/img/figures/gnas-301/unit-03/fig-U3-6.svg": "1902719af8f355057d56114ac362f1af4053708528fed82cf082b0c1febb7b1c",
+    "static/img/figures/gnas-301/unit-03/fig-U3-7.dark.svg": "9f96259b49aaf70378d7bff22ec44363990c11506c6bc7e95d5a54975aa3d238",
+    "static/img/figures/gnas-301/unit-03/fig-U3-7.svg": "a765baf093cb5326a1f12ebbc2c8f728aebe1e5b8d652510b27169afa38981b3",
+    "static/img/figures/gnas-301/unit-03/fig-U3-8.dark.svg": "7305ce399a42726f9e5057eaed881dbc521ed1bc4eff6596ea64bbbf3f007611",
+    "static/img/figures/gnas-301/unit-03/fig-U3-8.svg": "473864b5d072b573f36b5ab7a3c27a393dc99b5da3c68a54a11c2feafdb467ab"
+  },
+  "rulings": {
+    "D-2026-0001": "8ff79df9af668329f6d0094a2257654f45fc545122a753b4888fb9936f402f1f",
+    "D-2026-0020": "84634da46e3d983ace09ce20d2ed5ea5e1588f30e1f405e44b62c967585925e7",
+    "D-2026-0021": "6004630196719c12ca61d4ed45ed09a2da427c431d666434b6a0221bda078268"
+  },
+  "supersedes": "specs/content/gnas-301/reviews/unit-03/G3/agent-g3-gnas301-u3-run001.json (revise, 1 blocking + 6 advisory)",
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        "Guide leaf subtopics 5.1-5.2 and 6.1-6.4 (Scheme-and-Course-guides/extracted-text/1st 2026.txt:238-248) map one-to-one to U3-01..U3-06 in specs/content/gnas-301/content-spec.md:508-519; spec status approved (D-2026-0020 + owner resolutions G-2026-22/G-2026-23 + D-2026-0021)",
+        "Taught sections verified: topic-01.mdx ### Air pollution: causes, effects and control strategies (guide 5.1); topic-02.mdx ### Noise pollution: sources, human health impacts and control measures (5.2); topic-03.mdx ### Health, safety and environment: hazards (6.1, 6.2) and ### Health and environment; environmental safety (6.3); topic-04.mdx ### Hazard identification, risk assessment and the risk management process (6.4)",
+        "SLO refs match the spec mapping (topic-01/02 -> SLO:GNAS-301-3-1, topic-03/04 -> SLO:GNAS-301-3-2; content-spec.md:488-490); index.mdx clo_refs list both; guide CLOs 2, 3 and 4 trace as the spec records",
+        "Prerequisite and forward cross-references are real: Unit 2's source-pathway-receptor chain reused with air as pathway (topic-01.mdx:37-39); Topic 3.3's hazard cards feed Topic 3.4's grid (topic-04.mdx:24-27, 81-84); Unit 4's workplace audit builds on Topic 3.4 (index.mdx:52-53, unit-teacher-notes.mdx:66-67)"
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "pass",
+      "evidence": [
+        "Open-access floor 2 (D-2026-0021) met: anwar2026 and abbasi2022 Crossref-verified 2026-09-23; who-air-2024, who-aqg-2021, who-hearing-2026 and who-occupational-health verified by direct fetch 2026-09-23 with bound excerpts (specs/content/gnas-301/sources/unit-03.md:7-9)",
+        "Every in-text citation verified against its bound excerpt: 4.2 million premature deaths in 2019 and 99 per cent above guidelines (sources/texts/who-air-2024.md:12-14 vs topic-01.mdx:54-57); the 2021 AQG as the yardstick controls aim for (who-aqg-2021.md:19-25 vs topic-01.mdx:57); 430 million people incl. 34 million children needing rehabilitation and loud noise a named cause (who-hearing-2026.md:11-14 vs topic-02.mdx:48-50); the occupational-health definition and heat stress/airborne particulates/mental-health concerns (who-occupational-health.md:11-21 vs topic-03.mdx:43-45); the Lahore winter-smog case with outdoor-working groups studied directly (anwar2026.md:13-21 vs topic-01.mdx:59-66); Karachi site hazards and community/site methods (abbasi2022.md:12-21 vs topic-03.mdx:67-70 and topic-04.mdx:45-46, 59-61)",
+        "ROUND-1 ADVISORY REPAIRED IN PROSE: the anwar2026 sentence now reads 'combined satellite observations over winter seasons (2019 to 2021)' (topic-01.mdx:59-63), within the bound abstract's scope; the 'worst air over the same settled winters' overstatement is gone from the learner text (residual excerpt-note inaccuracy recorded as an advisory finding)",
+        "Four guide-required monographs (holland-oxford, phoon-chen, shilling, harrington-gill) declared under ## Unverifiable sources with retrieval attempts, the date 2026-09-23 and owner authorisation (D-2026-0001, confirmed G-2026-23/D-2026-0021; sources/unit-03.md:24-46); all four are cited by reference only in Further reading with the flag carried in the learner-facing text; no prose claim rests on them",
+        "Advisory (carried from round 1): the 85 dB sustained-exposure threshold, the decibel-ladder reference values and the cardiovascular/sleep/classroom-learning effects of noise (topic-02.mdx:39-52, fig-U3-3) are standard mainstream findings stated without false precision but carried by no bound excerpt"
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "specs/content/gnas-301/coverage/unit-03.md maps all six sub-topics U3-01..U3-06 to exact topic-file ### headings; each mapping verified against the taught sections",
+        "All six guide leaf subtopics taught and assessed: 5.1 -> topic-01 + MCQ 1/2/3, RRQ 1/2, ERQ 1; 5.2 -> topic-02 + MCQ 4/5, RRQ 3/4, ERQ 2; 6.1/6.2 -> topic-03 + MCQ 6/7, RRQ 5/6/7, ERQ 3; 6.3 -> topic-03 + ERQ 3 and ERQ 5; 6.4 -> topic-04 + MCQ 8/9/10, RRQ 8/9/10, ERQ 4; ERQ 5 integrates air, noise and physical hazards through the 3.4 risk cycle",
+        "specs/content/gnas-301/concepts/unit-03.md covers 9 concepts with derived assessment IDs updated for the revised bank (RRQ-04 moved from CON:GNAS-301-3-2 to CON:GNAS-301-3-4); the authored Urdu labels are correctly flagged for G5 review"
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "pass",
+      "evidence": [
+        "Independent solve before reading answers: derived MCQ key 1-b, 2-c, 3-c, 4-a, 5-c, 6-d, 7-b, 8-a, 9-c, 10-c matches the supplied key exactly (unit-assessment.mdx:142-156); all ten RRQ model answers match my independent solutions with arithmetically consistent mark schemes; every ERQ analytic rubric totals 10 (1: 3+2+3+2; 2: 3+2+3+2; 3: 3+3+2+2; 4: 3+3+2+2; 5: 2+3+2+2+1)",
+        "ROUND-1 BLOCKING REPAIRED: Topic 3.2 now carries two unit-end RRQs. RRQ-4 was reworked into a noise-controls item ('A school beside a main road asks for the cheapest noise controls. Name one control at each of the three links, source, pathway and receptor, cheapest first', Apply, 3 marks; unit-assessment.mdx:109-110, 169-173). Per-topic distribution is now MCQ 3/2/2/3 and RRQ 2/2/3/3, satisfying the approved blueprint's '>= 2 MCQ and >= 2 RRQ per topic across 3.1 to 3.4' (content-spec.md:585-588) and the bank front matter's own claim (unit-assessment.mdx:9)",
+        "ROUND-1 ADVISORIES REPAIRED: MCQ key de-skewed from 7b/3c to 2a/2b/5c/1d with all four options used (options reordered in MCQs 2, 4, 6, 8, 10); MCQ-10 relabelled from (Apply) to (Understand), matching the recall the item actually requires",
+        "MCQ distractors individually sound: MCQ 6's distractors are one real hazard of each other class; MCQ 2/4/5's distractors are the misconceptions actually taught; MCQ 10's 'machinery failures alone' is directly contradicted by the cited study",
+        "Blueprint items otherwise satisfied: 10/10/5 shape; one ERQ per topic plus the integrative ERQ 5 taking one school through the full identify-assess-control-monitor sequence at Evaluate; analytic rubric per ERQ; >= 1 Analyze-or-higher ERQ (1 and 3 Analyze; 2, 4, 5 Evaluate)"
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "pass",
+      "evidence": [
+        "Fresh build (logs/build.log EXIT 0; build/ was stale against newer unit sources and was rebuilt before any inspection) served by docusaurus serve at http://127.0.0.1:4613; inspection in Playwright chromium 149.0.7827.0 at desktop 1280x900, narrow 360x780 and A4 print emulation (logs/render-review.log, renders/render-inspect.json)",
+        "All 7 pages: 0 console errors, 0 broken images, 0 images without alt text, 0 skipped heading levels, single h1, 0 links without text, no document horizontal overflow at 360px (docScrollWidth 360/360)",
+        "Content tables measured on the table element itself per the G3 rubric: clientWidth=328, scrollWidth=328 (fits, no scroll container needed) on every topic page at 360px, so no swipe scrolling is required and hydration tabindex/role/aria-label are not needed; figures fit at 360px",
+        "A4 print: 0 clipped elements on all 7 pages (docScrollWidth 794), navbar and sidebar display:none, both visible figures per topic load and fit width (right edge 778 of 794; hidden dark-theme variant imgs excluded), answers section present and unclipped in unit-assessment (heading at y=2709); print PDFs saved for all 7 pages (renders/print-a4-*.pdf)",
+        "All 8 figures lazy-load with alt text of 81-169 chars, figcaption present, and non-blank render (pixel stddev 23.1-29.6 per channel; renders/render-inspect.json); node scripts/measure-figure-text.mjs over all 32 committed unit-03 SVG variants (light, dark, ur, ur.dark): no text overflow of the 780x470 viewBox, no wordmark collision (logs/measure-figure-text.log EXIT 0); served-SVG label extraction confirms each figure's instructional labels (renders/render-text-check.json)"
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "HSC-register prose, short sentences, one idea per paragraph; key terms glossary-linked at first use (Air pollution, Noise pollution, Hazard, Health/safety/environment, Environmental safety, Risk) or defined inline in plain language (Particulate matter topic-01.mdx:43-45; Decibel topic-02.mdx:37-39; smog defined operationally through the Lahore case; risk assessment/management taught as the four-step process)",
+        "Reading minutes inside the spec budget: topics 15/13/16/15 within per-topic ranges 12-16/10-14/14-18/12-16 (content-spec.md:525-530); unit total 81 (index 5 + topics 59 + assessment 11 + teacher notes 6) within the 65-85 depth budget (content-spec.md:532)",
+        "Each topic runs classroom situation -> explanation with worked example and named misconception -> activity -> retrieval -> summary -> self-assessment -> practicum -> summative task with mini-rubric -> further reading"
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": [
+        "Nine-part topic cycle present and correctly ordered in all four topic files (check:depth-gate EXIT 0; heading order confirmed in render inspection, 0 skipped levels)",
+        "ROUND-1 ADVISORY REPAIRED: the spec-listed misconception 'smog is a winter problem only, and only in Lahore' (content-spec.md:537-540) is now addressed directly in topic-01.mdx:76-81, countering both halves (Karachi's air and the summer afternoons' ozone named as counter-evidence); all five spec-listed misconceptions are now addressed with named blocks (clean-air-invisible and winter-only topic-01; noise-harmless topic-02:69-73; hazards-mean-dramatic-accidents topic-03:87-90; risk-assessment-is-paperwork topic-04:74-77; hazard-vs-risk taught directly at topic-04:36-39)",
+        "Activities feasible in their stated Pakistani classroom contexts with ordinary materials: AQI week for a Pakistani city via the usual apps (topic-01), a free sound-meter app on one phone (topic-02), a hazard walk that is observe-only with permission (topic-03), score-and-defend reusing Topic 3.3's cards (topic-04)",
+        "One Pakistan-grounded worked example per sub-topic per the spec plan: Lahore winter AQI episode (U3-01), Karachi crossroads school noise readings (U3-02), the Dadu flood-relief camp week sorted into five classes (U3-03/U3-04/U3-05), the hazard-walk cards scored on the grid (U3-06)",
+        "Teacher notes follow the guide's teaching-strategy list (1st 2026.txt:320-331), sequence the two-week window as one continuous project, and link the unit's practicals forward to Unit 4's workplace audit"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "blocking",
+      "message": "ROUND-1 BLOCKING, REPAIRED AND VERIFIED: Topic 3.2 carried only one unit-end RRQ against the approved blueprint's '>= 2 MCQ and >= 2 RRQ per topic' (content-spec.md:585-588). The repair reworked RRQ-4 into a second Topic 3.2 noise-controls item (unit-assessment.mdx:109-110) with a matching model answer and 3-mark scheme (unit-assessment.mdx:169-173), rebalanced the per-topic RRQ distribution to 2/2/3/3, and updated the concept graph (concepts/unit-03.md:19, CON:GNAS-301-3-4 now lists RRQ-03, RRQ-04, ERQ-02). The bank front matter's per-topic claim is now true.",
+      "resolved": true
+    },
+    {
+      "severity": "advisory",
+      "message": "ROUND-1 ADVISORY, REPAIRED: the anwar2026 prose overstatement ('with the worst air over the same settled winters') is reworded to the bound abstract's scope ('combined satellite observations over winter seasons (2019 to 2021)', topic-01.mdx:59-63), and the winter-only/Lahore-only misconception is now countered (topic-01.mdx:76-81). Residual: the excerpt file's own support note still overstates (see the anwar2026 excerpt-note advisory below).",
+      "resolved": true
+    },
+    {
+      "severity": "advisory",
+      "message": "ROUND-1 ADVISORY, REPAIRED: MCQ-10 relabelled from (Apply) to (Understand), matching the recall actually required.",
+      "resolved": true
+    },
+    {
+      "severity": "advisory",
+      "message": "ROUND-1 ADVISORY, PARTLY REPAIRED: the MCQ key was de-skewed from 7 b / 3 c to 2 a / 2 b / 5 c / 1 d (options reordered in MCQs 2, 4, 6, 8, 10), so all four options are now used. Residual skew: c still carries 5 of 10 correct options (1-b, 2-c, 3-c, 4-a, 5-c, 6-d, 7-b, 8-a, 9-c, 10-c). Repair at next bank revision: balance to at most 4 per option.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "New advisory from the repair: RRQ-4 (unit-assessment.mdx:109-110) closely duplicates topic-02's formative Check-your-understanding item 4 (topic-02.mdx:89-90), the same stem 'one control at each of the three links, cheapest first'. RRQ-10 similarly reuses topic-04's CYU-4 scenario (loose wire vs wobbly ladder, topic-04.mdx:91-93). Summative items that mirror formative items nearly verbatim test recall of the practised answer rather than transfer. Repair at next revision: vary the scenario or constraints in the bank items.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "unit-assessment.mdx front-matter blooms_summary (line 9) claims 'RRQs at Understand to Analyze', but RRQ-3 and RRQ-8 are labelled (Remember), so the actual RRQ span is Remember to Analyze. Round 1 asked for the blooms_summary to be updated to match the revised bank; the per-topic claim was corrected but the range claim was not. Repair: correct the range to 'Remember to Analyze'.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "concepts/unit-03.md:19 maps the new RRQ-4 (noise controls at the three links) under CON:GNAS-301-3-4 'Noise health effects', a concept-level mismatch: the item tests control placement at source/pathway/receptor, not health effects. The graph has no noise-controls concept to hold it (3.2 carries only Decibel scale and Noise health effects). Repair at next revision: add a controls concept or annotate the placement.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "Unsourced standard noise-health values (carried from round 1): the 85 dB sustained-exposure threshold, the decibel-ladder reference values (whisper 30, conversation 60, busy road 85-95, pressure horn 110+) and the cardiovascular/sleep/classroom-learning effects of noise (topic-02.mdx:39-52, fig-U3-3) are standard mainstream environmental-health findings stated approximately and without false precision, but no bound source carries them: who-hearing-2026 supports the 430/34 million rehabilitation scale and noise-as-cause only. Repair at next revision: bind a verifiable source for the 85 dB threshold and the non-auditory effects (for example WHO environmental noise guidance) or mark the ladder values as conventional reference values.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "Further reading uses bare plain-text URLs (topic-01.mdx:142-148, topic-02.mdx:134-137, topic-03.mdx:150-156, topic-04.mdx:139-145) instead of the descriptive markdown links established in Units 1 and 2 (for example unit-01 topic-01 '[WHO Biodiversity fact sheet](...)'). Round 1 recorded this advisory with a repair request, and the repair commit message claims 'Further reading linkified', but no markdown links exist anywhere in the unit (grep for '](http' returns nothing). Repair: convert each entry to a descriptive markdown link.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "sources/texts/anwar2026.md:26-27 support note still claims the study shows 'its worst air settles over the same winters', which the bound abstract does not state (it records temporal and spatial variation of atmospheric pollution over winter seasons 2019-2021 without ranking winters). The repaired learner prose no longer makes the claim; the excerpt's support note was not updated to match. Repair: align the note with the abstract's scope, for example 'studied the temporal and spatial variation of pollution over the 2019-2021 winter seasons'.",
+      "resolved": false
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-03/G3/round-02/logs/validate:content.log"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-03/G3/round-02/logs/check:depth-gate.log"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-03/G3/round-02/logs/check:figures.log"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-03/G3/round-02/logs/check:no-em-dash.log"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-03/G3/round-02/logs/check:no-answer-keys.log"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-03/G3/round-02/logs/check:docs-sync.log"
+    },
+    {
+      "name": "check:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-03/G3/round-02/logs/check-content.log"
+    },
+    {
+      "name": "measure-figure-text",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-03/G3/round-02/logs/measure-figure-text.log"
+    },
+    {
+      "name": "site-build",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-03/G3/round-02/logs/build.log"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-03/G3/round-02/logs/render-review.log"
+    },
+    {
+      "name": "render-text-check",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-03/G3/round-02/logs/render-text-check.log"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/logs/build.log": "64a06315f83f73e9e5d571d202ef8ea6077817b6d229199ce1621896f3e073e7",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/logs/check-content.log": "96bcbd578ac4dba9a9560421d5685a68a6e3194ede763ed4eae2e03da36b1f86",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/logs/check:depth-gate.log": "b0c4eeaa24613853bc7dd1124721c3576b9c2ea0d83d804bb98a47c646579f2f",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/logs/check:docs-sync.log": "388691a97d7539a857dafad859d26a639e67f09402e7f0c242b4a09e4b62049b",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/logs/check:figures.log": "3d8e7e0311cc402d8ef731bc62cfd8efd8bb72907261a2ec1da4ed2ea4db7c3a",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/logs/check:no-answer-keys.log": "3fa235456d5db64e830f726b03bd39a9f3388aa8239273fa8f1b6f549465fc39",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/logs/check:no-em-dash.log": "f94465f4c88bd3c3db4d995e7757fc7f08feae27e57c724a2eaafc8499ec2fe6",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/logs/measure-figure-text.log": "1c6b9debd3f06e409cbadd494ef45c26b1139268374bafe2241abf86e2267e35",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/logs/render-review.log": "48f1844543af54500470e9871c62014aa096e0502418e184ca7a3e2d387a620e",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/logs/render-text-check.log": "013560fa3f2996080e28e5e439f6e8f8234d4f9034cbaf31cbbf6015975641fb",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/logs/serve.log": "3c963dc55ec5f287300ec737b1f98c749eabd4892e82f4e0314f4eea679e3a71",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/logs/validate:content.log": "0753463dcc4f70bfeed270f5eb8accdfb2113670791fc90775ea247c275de426",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/desktop-index.png": "2eef2d3c36f14567baa8e072ea04823c24726ab68ed4114ece1e4c80ed9a91b5",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/desktop-topic-01.png": "08f659743763f805d9bf13c1a618fe41fd91330b457206148d500c27ac2497b6",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/desktop-topic-02.png": "ba254e3dd113e6e5603fa2d44e97852d034afeb9f2296d23ccf6158b9871593a",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/desktop-topic-03.png": "68b866f6c051dceaf0739d627a1b9df2e7ad1add17e9f3eec9295fa643b73567",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/desktop-topic-04.png": "4c2840ac2cdd7c5d86d014cf9490a5f26cc53a38821db7c21d50e408f4f6d174",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/desktop-unit-assessment.png": "a6a01b14335c82af5e13a9ff9d2c73be1db4c97a6abb07421dfb5665b80f03b6",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/desktop-unit-teacher-notes.png": "9a3fcfe45ea19e218c4fd02846358c5f445dca3d2565adab0c98916583cd1263",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/narrow360-index.png": "255970f24c6e8396a2abdd7dde2b0c6fec4c6087fbe0b2be86a3bfe754f71384",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/narrow360-topic-01.png": "526e7da351f628edc73378e3b236f24253c03be21583fb8a9a24d0c58d1c4151",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/narrow360-topic-02.png": "e0ae7467f130d8c733fd3abb3ebbcc25b2abc1d58e609a8a9323145e06fcdd01",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/narrow360-topic-03.png": "1707240bd5763796e6b523b05886fc8e4120e263d26427bb32c4749c3311f520",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/narrow360-topic-04.png": "6f665873d586e3fc5d73d662304fed7889ff908a7b6069323f2aaa90c213b672",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/narrow360-unit-assessment.png": "61fbdd1dd5490e380743ded1d7f796666d249900cb74c612b164f71c9ab55b0e",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/narrow360-unit-teacher-notes.png": "19633e1c0b6580fc93df1a39451064da59547ed8479947011d9dd2b9e87be76f",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/print-a4-index.pdf": "318408f04aac9f4cd3f874f69eac9cd8aa2f678fdd868bfef2f89213230b696e",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/print-a4-topic-01.pdf": "1271adef134ca93bbeb9a0882b0161540ea9620fab988f87ccd2af92b73e3a43",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/print-a4-topic-02.pdf": "45414346fd1d37890f0e4dffa3d6d52509b7805737f3619cdf043e28fe204197",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/print-a4-topic-03.pdf": "27b1da712058926d6875e4f8feb1468310aaf3aeeeeae22acad0c158301fad56",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/print-a4-topic-04.pdf": "715b53f29bef85354c796d859795f2b69f8cc35982e99ab1b24829981f348df9",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/print-a4-unit-assessment.pdf": "2f727538a52c2b5814d78c8b0559f6fe4c94d7c90c99401602def722e65ab934",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/print-a4-unit-teacher-notes.pdf": "d3127ede4692d59b0ff04b4ab980a175b9524124b496e70cc17ecfdf8f3547a7",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/printview-index.png": "f041d7d9aefe5f2ad58f26697252db50c5ef637b19c54de396dfd66f5f3b8202",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/printview-topic-01.png": "3035b10a3e3155b4589fe5baddfd4089876b5cbc1217490793ddfc46065f277d",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/printview-topic-02.png": "4bd7906dd3b2ca719049cff85a5bcedfad75316aa84e933710f36e91569c2db6",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/printview-topic-03.png": "fd0af01dfd433c0a4027d063b336216b73948364be794f0907c166a9ce72a886",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/printview-topic-04.png": "541e927a7230db601a237a841f59f15df440156abf5f102799fc1ce30cab704f",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/printview-unit-assessment.png": "4254961f70c598225c14c808d105284c8e23352c428ef6844da4104d5cbbc459",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/printview-unit-teacher-notes.png": "7968ed3939eaad3e564b5b1f92de67f69639488b5953b3c4c501a941db48a4ef",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/render-inspect.json": "953afc0baaeca25ab41687e8cc38e1c8911029fded14c3f93210d79e066b1cbb",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/render-inspect.mjs": "c0b5121e4d090826f654a9cddb85ec0384b8f4b0987bf34fa0fadbf45b138369",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/render-text-check.json": "1b01bfbdb25ea6ea153f6ed161dbf0060ae54d2a0bcdda732ec4bb02c398242e",
+    "specs/content/gnas-301/reviews/unit-03/G3/round-02/renders/render-text-check.mjs": "9191f4ce18c25597d40f5a2b13a2dcdec667c8f229129170fcf1a5079977ac97"
+  }
+}
