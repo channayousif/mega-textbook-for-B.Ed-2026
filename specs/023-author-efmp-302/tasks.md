@@ -28,9 +28,10 @@ and run records under `history/prompts/efmp-302/`.
 
 ## Phase 2: Fresh advisory G3 reviews (Units 2-6)
 
-- [ ] **T004** Prepare G3 evidence and spawn a FRESH g3-reviewer for Unit 2; apply sensible
+- [x] **T004** Prepare G3 evidence and spawn a FRESH g3-reviewer for Unit 2; apply sensible
   repairs (max 2 cycles, then escalate under G-2026-62..71); refresh G2 evidence if bytes
-  change; tracker Notes updated, row stays open.
+  change; tracker Notes updated, row stays open. (feat023-r1: pass, 7/7 criteria, 0 blocking;
+  2 advisories repaired at 81ab33b, 2 carried; G2 rebound 20260924T133040759Z)
 - [ ] **T005** Same for Unit 3 (5 topics; revoked-provisional history respected - fresh review
   binds current bytes, prior reports stay on record).
 - [ ] **T006** Same for Unit 4 (carried: ten standard names in topic-02 corroborated from
