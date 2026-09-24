@@ -1,0 +1,24 @@
+fig-U3-1.ur.svg: texts=36 overlaps=0 nearMisses=0
+fig-U3-1.ur.dark.svg: texts=36 overlaps=0 nearMisses=0
+fig-U3-2.ur.svg: texts=26 overlaps=0 nearMisses=0
+fig-U3-2.ur.dark.svg: texts=26 overlaps=0 nearMisses=0
+fig-U3-3.ur.svg: texts=33 overlaps=0 nearMisses=0
+fig-U3-3.ur.dark.svg: texts=33 overlaps=0 nearMisses=0
+fig-U3-4.ur.svg: texts=23 overlaps=1 nearMisses=0 -> [{"a":"طرزِ عمل","b":"پیغام: میرے پاس آنا محفوظ ہے","xOverlap":76.9,"yOverlap":1.2}]
+fig-U3-4.ur.dark.svg: texts=23 overlaps=1 nearMisses=0 -> [{"a":"طرزِ عمل","b":"پیغام: میرے پاس آنا محفوظ ہے","xOverlap":76.9,"yOverlap":1.2}]
+fig-U3-5.ur.svg: texts=14 overlaps=0 nearMisses=1 near=[{"a":"صدرِ اسکول","b":"تاکہ مسئلہ جلد سنا جائے","gapX":86.7,"gapY":-1.5}]
+fig-U3-5.ur.dark.svg: texts=14 overlaps=0 nearMisses=1 near=[{"a":"صدرِ اسکول","b":"تاکہ مسئلہ جلد سنا جائے","gapX":86.7,"gapY":-1.5}]
+fig-U3-6.ur.svg: texts=29 overlaps=0 nearMisses=0
+fig-U3-6.ur.dark.svg: texts=29 overlaps=0 nearMisses=0
+fig-U3-7.ur.svg: texts=23 overlaps=0 nearMisses=0
+fig-U3-7.ur.dark.svg: texts=23 overlaps=0 nearMisses=0
+fig-U3-8.ur.svg: texts=14 overlaps=0 nearMisses=0
+fig-U3-8.ur.dark.svg: texts=14 overlaps=0 nearMisses=0
+fig-U3-9.ur.svg: texts=23 overlaps=0 nearMisses=0
+fig-U3-9.ur.dark.svg: texts=23 overlaps=0 nearMisses=0
+fig-U3-10.ur.svg: texts=14 overlaps=0 nearMisses=0
+fig-U3-10.ur.dark.svg: texts=14 overlaps=0 nearMisses=0
+NEGATIVE CONTROL: overlaps=1 -> [{"a":"معلم کی","b":"افادیت","xOverlap":47.9,"yOverlap":16}]
+total overlaps on the 20 committed Urdu variants: 2
+negative control detects: YES (1 overlap pair(s))
+DEFECTS-OR-INVALID-INSTRUMENT
