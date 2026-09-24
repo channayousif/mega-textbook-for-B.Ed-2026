@@ -191,3 +191,37 @@ theory and its classroom use (U6-4); mastery and failure-avoidant goals (U6-5); 
 attribution dimensions (U6-5); situational and personal interest (U6-6); the
 reinforcement rows (U6-1, U6-4, U6-6).
 
+## Chapter 5 (continued) and Chapter 4 (verified; used by Unit 7)
+
+On inclusion: "The key word here is inclusion: the student should participate in and
+contribute to the life of the class as much as possible. This means that wherever
+possible, the student attends special events (assemblies, field days) with the class;
+that if the class plays a group game, then the student with the disability is part of
+the game... The changes resulting from these inclusions are real, but can be positive
+for everyone. On the one hand, they foster acceptance and helpfulness toward the child
+with the disability; classmates learn that school is partly about providing
+opportunities for everyone, and not just about evaluating or comparing individuals'
+skills. On the other hand, the changes caused by inclusion stimulate the student with
+the disability to learn as much as possible from classmates, socially and
+academically."
+
+On the ambiguity of categories: "disabilities are inherently ambiguous. Naming and
+describing 'types' of them implies that disabilities are relatively fixed, stable, and
+distinct... As many teachers discover, though, the reality is somewhat different. The
+behavior and qualities of a particular student with a disability can be hard to
+categorize."
+
+On learning disabilities and support (Chapter 5's headings): "Assisting students with
+learning disabilities", "Metacognition and responding reflectively", "Constructivism,
+mentoring, and the zone of proximal development" - the supports that teach to the
+learner's present level, in the zone.
+
+On diversity (Chapter 4's framing): individual differences in "styles or intellectual
+abilities" are the chapter's opening ground, and the multiple-intelligences discussion
+(Chapter 4/5 boundary) widens what counts as an ability.
+
+Used for (Unit 7): abilities as profiles across domains (U7-2); the slow learner's
+supports in the zone-of-proximal-development framing (U7-3); giftedness recognised
+and supported (U7-4); the inclusion principle, its benefits for everyone, and the
+ambiguity caution (U7-5); the reinforcement rows (U7-2, U7-4).
+
