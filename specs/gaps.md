@@ -829,3 +829,37 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 - **Blocks:** the `## Week schedule` table and the "Weeks N-M (derived)" line opening each of the
   six `## Unit N` subsections. Nothing else: `D-2026-0030` is written to exclude the calendar,
   authoring does not depend on it, and no gate reads it.
+
+## G-2026-26 - GICT-300 review cycles closed at the two-cycle budget with post-cycle repairs applied
+
+- **Status:** open
+- **Gate:** G3 en-review / G5 ur-review (advisory, ADR-0019)
+- **Source:** 020-author-gict-300
+- **Question:** The GICT-300 authoring feature's instructions cap each review stage at two
+  cycles per unit, then escalate. Three units have reached that cap with repairs applied
+  AFTER the second cycle, leaving those repairs verified only by the author:
+
+  - **Unit 3 (G3):** run 001 revise (F1 sources-chain) -> repaired at a7200d2 -> run 002
+    revise (F5 an ostep misquotation introduced by the repair; F6 buffer/spooling and
+    metadata sub-claims) -> repaired at 90b097a (verbatim quote restored, ch 39 metadata
+    passage bound, buffer/spooling disclosed as title-level). The run-002 repairs are
+    mechanical but no third G3 cycle remains in budget.
+  - **Unit 4 (G3):** run 001 revise (5 findings) -> repaired at a7200d2 -> run 002 revise
+    (B1 an 11-character password labelled "twelve"; B2 a sources-preamble overclaim) ->
+    repaired at aa2e7d0. Same posture.
+  - **Unit 1 (G5):** run 001 escalated solely because its G3 run 001 pre-dated the
+    English repairs; the G3 run 002 now passes over the current bytes, but no G5 run 002
+    was run within budget (the shared sources/texts/bourgeois2019.md excerpt is bound by
+    every unit's manifest, so each unit's repair stales every other unit's evidence and a
+    fully-fresh chain would need more cycles than the budget allows).
+
+  Every G5 run-001 Urdu finding across Units 1-4 has been repaired and committed. The
+  reviews are advisory; nothing is certified and no tracker row was marked done. The
+  question for the owner: accept the repaired state as the terminal state for this
+  feature's advisory evidence, or commission further review cycles (and, if the latter,
+  whether the shared-excerpt binding in `scripts/lib/review-evidence.mjs`'s citedKeys
+  derivation - which also leaves the year-less keys `ostep` and `wipoIP` unbound, flagged
+  by the Unit 3 and Unit 5 G3 run-002 reviewers - should be extended so a single-unit
+  repair stops invalidating every unit's evidence).
+- **Needed from:** curriculum owner (review-policy decision); developer (the tooling
+  question, only if the owner wants the binding extended).
