@@ -36,10 +36,12 @@ and run records under `history/prompts/efmp-302/`.
   binds current bytes, prior reports stay on record). (r1 revise on the b8f8ffe figure
   regression, repaired at 69bae9e; r2 pass, 7/7 criteria, repair verified 4 ways; 14 advisories
   carry)
-- [ ] **T006** Same for Unit 4 (carried: ten standard names in topic-02 corroborated from
-  secondary sources only; run-007 advisories).
-- [ ] **T007** Same for Unit 5 (carried: hennessy2022 declaration, RRQ 9 rebalance; 11
-  run-007 advisories).
+- [x] **T006** Same for Unit 4 (carried: ten standard names in topic-02 corroborated from
+  secondary sources only; run-007 advisories). (feat023-r1: pass, 7/7 criteria, ded73ec repairs
+  both verify, zero figure defects, 18 advisories carry)
+- [x] **T007** Same for Unit 5 (carried: hennessy2022 declaration, RRQ 9 rebalance; 11
+  run-007 advisories). (feat023-r1: pass, 7/7 criteria, both 44bc1d7 repairs verify, erq-rubric
+  refutation confirmed, zero figure defects, 13 advisories carry)
 - [ ] **T008** Same for Unit 6 (carried: A2/S1/S2/P2 owner-judgement findings from run 007
   escalate; not re-litigated).
 - [ ] **T009** Record a G-2026-62..71 escalation for every unit whose findings exceed the
@@ -50,9 +52,10 @@ and run records under `history/prompts/efmp-302/`.
 - [x] **T010** Translate Unit 3 (5 topics, 10 figures): complete mirror, `.ur.svg` +
   `.ur.dark.svg` variants, `key_terms` block, parity flip-check, `check:content`, render
   inspect; commit. (18,378 words; 0 render defects)
-- [ ] **T011** Translate Unit 4 (4 topics, 8 figures): same pattern.
-- [ ] **T012** Translate Unit 5 (4 topics, 8 figures): same pattern; 14 of 16 concept labels
-  already authored (largest authored set).
+- [x] **T011** Translate Unit 4 (4 topics, 8 figures): same pattern. (14,958 words; 0 render
+  defects)
+- [x] **T012** Translate Unit 5 (4 topics, 8 figures): same pattern; 14 of 16 concept labels
+  already authored (largest authored set). (15,763 words; 0 render defects)
 - [ ] **T013** Translate Unit 6 (4 topics, 8 figures): same pattern; note the Reflective
   practice / Reflective Decision Making relationship flagged in concepts/unit-06.md.
 - [ ] **T014** Record per-unit translation PHRs with word counts and proposed (unbanked)
