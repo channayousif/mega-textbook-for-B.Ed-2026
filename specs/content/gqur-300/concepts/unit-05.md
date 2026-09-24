@@ -22,11 +22,11 @@ here and **carries a G5 flag** (see the list at the foot of this file).
 | CON:GQUR-300-5-5 | Each display answers one kind of question | ہر ڈسپلے ایک ہی قسم کے سوال کا جواب دیتا ہے | CON:GQUR-300-5-3 | 5.2 | SLO:GQUR-300-5-5 | MCQ-04, MCQ-05, RRQ-06 |
 | CON:GQUR-300-5-6 | Reading a display's construction, not its impression | ڈسپلے کی ساخت پڑھنا، تاثر نہیں | CON:GQUR-300-5-5 | 5.2 | SLO:GQUR-300-5-5 | MCQ-07, RRQ-04, ERQ-02 |
 | CON:GQUR-300-5-7 | Pie slices as shares of one whole | پائی کے ٹکڑے بطور ایک پورے کے حصے | CON:GQUR-300-5-5 | 5.2 | SLO:GQUR-300-2-2 | MCQ-06, RRQ-07 |
-| CON:GQUR-300-5-8 | Mean as the fair share outliers can drag | اوسط بطور منصفانہ حصہ جسے انتہائی قیمت کھینچ سکتی ہے | CON:GQUR-300-5-3 | 5.3 | SLO:GQUR-300-2-2 | MCQ-08, RRQ-03 |
+| CON:GQUR-300-5-8 | Mean as the fair share outliers can drag | حسابی اوسط بطور منصفانہ حصہ جسے انتہائی قیمت کھینچ سکتی ہے | CON:GQUR-300-5-3 | 5.3 | SLO:GQUR-300-2-2 | MCQ-08, RRQ-03 |
 | CON:GQUR-300-5-9 | Median as the outlier-resistant middle | درمیانی قدر بطور انتہا سے بچنے والا وسط | CON:GQUR-300-5-8 | 5.3 | SLO:GQUR-300-2-2 | MCQ-08, RRQ-08 |
 | CON:GQUR-300-5-10 | Mode as the most frequent, even for categories | عاد بطور سب سے زیادہ دہرایا جانے والا، اقسام کے لیے بھی | CON:GQUR-300-5-8 | 5.3 | SLO:GQUR-300-2-2 | MCQ-09, RRQ-05 |
 | CON:GQUR-300-5-11 | The five interpretation questions | پانچ تشریحی سوالات | CON:GQUR-300-5-6 | 5.3 | SLO:GQUR-300-5-5 | RRQ-09, RRQ-10 |
-| CON:GQUR-300-5-12 | Reading a published statistic honestly (base, comparison, gap) | شائع شدہ اعداد و شمار کی دیانتدار قرأت | CON:GQUR-300-5-11 | 5.3 | SLO:GQUR-300-5-5 | MCQ-10, ERQ-03, ERQ-04 |
+| CON:GQUR-300-5-12 | Reading a published statistic honestly (base, comparison, gap) | شائع شدہ اعداد و شمار کی دیانتدار قرأت (بنیاد، موازنہ، خلا) | CON:GQUR-300-5-11 | 5.3 | SLO:GQUR-300-5-5 | MCQ-10, ERQ-03, ERQ-04 |
 
 ## Urdu labels needing G5 review
 
@@ -41,8 +41,8 @@ survive review should be promoted into `specs/content/terminology.csv`:
 - Each display answers one kind of question - ہر ڈسپلے ایک ہی قسم کے سوال کا جواب دیتا ہے
 - Reading a display's construction, not its impression - ڈسپلے کی ساخت پڑھنا، تاثر نہیں
 - Pie slices as shares of one whole - پائی کے ٹکڑے بطور ایک پورے کے حصے
-- Mean as the fair share outliers can drag - اوسط بطور منصفانہ حصہ جسے انتہائی قیمت کھینچ سکتی ہے
+- Mean as the fair share outliers can drag - حسابی اوسط بطور منصفانہ حصہ جسے انتہائی قیمت کھینچ سکتی ہے
 - Median as the outlier-resistant middle - درمیانی قدر بطور انتہا سے بچنے والا وسط
 - Mode as the most frequent, even for categories - عاد بطور سب سے زیادہ دہرایا جانے والا، اقسام کے لیے بھی
 - The five interpretation questions - پانچ تشریحی سوالات
-- Reading a published statistic honestly (base, comparison, gap) - شائع شدہ اعداد و شمار کی دیانتدار قرأت
+- Reading a published statistic honestly (base, comparison, gap) - شائع شدہ اعداد و شمار کی دیانتدار قرأت (بنیاد، موازنہ، خلا)

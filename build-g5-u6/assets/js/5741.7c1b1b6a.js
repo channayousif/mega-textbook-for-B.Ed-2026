@@ -1,0 +1,10 @@
+(self["webpackChunkbed_mega_textbook"] = self["webpackChunkbed_mega_textbook"] || []).push([[5741],{
+
+/***/ 5741
+() {
+
+/* (ignored) */
+
+/***/ }
+
+}]);
