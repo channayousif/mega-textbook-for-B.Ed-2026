@@ -8,7 +8,6 @@ the source key it is grounded in.
 | Sub-topic ID | File | Section | Source |
 |---|---|---|---|
 | U4-01 | topic-01.mdx | Workplace environment: OSH issues in industry, construction, agriculture and service sectors | khan2024 |
-| U4-01 | topic-01.mdx | Workplace environment: OSH issues in industry, construction, agriculture and service sectors | khan2024 |
 | U4-01 | topic-01.mdx | Workplace environment: OSH issues in industry, construction, agriculture and service sectors | nafees2019 |
 | U4-01 | topic-01.mdx | Workplace environment: OSH issues in industry, construction, agriculture and service sectors | who-occupational-health |
 | U4-02 | topic-01.mdx | Accidents, injuries and workplace fatalities | harrington-gill |
@@ -17,9 +16,9 @@ the source key it is grounded in.
 | U4-05 | topic-03.mdx | Internal control and management philosophy | abbasi2022 |
 | U4-06 | topic-04.mdx | Duties and rights; strategies and goals | harrington-gill |
 | U4-07 | topic-04.mdx | Roles and responsibilities of occupational health and safety professionals | khan2024 |
-| U4-08 | topic-05.mdx | Key principles of management and HSE; measures and models | abbasi2022 |
-| U4-09 | topic-05.mdx | Key principles of management and HSE; measures and models | abbasi2022 |
-| U4-10 | topic-05.mdx | Organizational environment | who-mental-health-work |
+| U4-08 | topic-05.mdx | Key principles of management and HSE; measures and models | harrington-gill |
+| U4-09 | topic-05.mdx | Key principles of management and HSE; measures and models | harrington-gill |
+| U4-10 | topic-05.mdx | Organizational environment | who-occupational-health |
 | U4-11 | topic-06.mdx | HSE statutes and regulations | harrington-gill |
 | U4-12 | topic-06.mdx | Establishing HSE plans | harrington-gill |
 | U4-13 | topic-07.mdx | Challenges of health within the working environment | nafees2019 |
@@ -33,4 +32,3 @@ the source key it is grounded in.
 | Sub-topic ID | File | Section | Source |
 |---|---|---|---|
 | U4-01 | unit-assessment.mdx | Unit summary | khan2024 |
-| U4-09 | unit-teacher-notes.mdx | Managing the activities | abbasi2022 |

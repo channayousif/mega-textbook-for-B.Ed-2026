@@ -1,0 +1,59 @@
+render-review log - GNAS-301 Unit 5 G3 round 2 (2026-09-24T00:35:54Z attempt)
+
+HOW INSPECTION RAN
+- Host: this reviewer session's machine (2-core box; one heavy process at a time per
+  parent instruction).
+- Build: one shared Docusaurus production build for Units 5 and 6, executed in a
+  detached temporary git worktree at HEAD 68577b8 (/tmp/gnas301-g3build, node_modules
+  symlinked). Rationale: an untracked sibling-session file
+  (i18n/ur/.../gnas-301/unit-02/topic-03.mdx, G4 work in progress containing a
+  'PrintOut' import typo) breaks `npm run build` in the shared working tree; the
+  untracked file is not a bound input and was not touched. A build in the shared tree
+  was attempted first and failed with exit 1 (Module not found: '@site/src/components/
+  PrintOut'); that attempt is recorded in build-shared-tree-failed.txt, and the
+  successful worktree build log is build.txt. All bound inputs are byte-identical
+  at HEAD 68577b8 and at 05ece10 (the three intervening commits touch only the unbound
+  i18n/ur tree).
+- Serve: npx docusaurus serve --port 3457 from the worktree build.
+- Browser: Playwright 1.61.1, bundled Chromium, script
+  renders-20260924T003554Z/inspect-render.mjs (saved beside this log).
+
+WHAT WAS INSPECTED (all 7 unit-05 pages: index, topic-01..04, unit-assessment,
+unit-teacher-notes)
+1. Desktop 1280x800: console errors and failed requests captured per page; every
+   figure <img> checked for load state, alt text and loading=lazy. Result: no failed
+   requests; every page's light figure variants load with full descriptive alt text
+   (dark twins present in DOM with the same alt, hidden in light mode, displayed under
+   data-theme=dark - verified in the dark-mode pass, see dark-topic-01.png). Fresh
+   single-page loads are console-clean (consolecheck.mjs). React #418/#423 hydration
+   errors appear only after sequential client-side navigation within one browser
+   context; spot checks show the same behaviour is reproducible site-wide (also on
+   non-unit pages) and pages outside units 5/6 are equally affected, so it is a
+   site-wide production-build behaviour, not a unit-5 content defect.
+2. Narrow 360x640: document overflow 0 on all 7 pages; all figures scale into the
+   328px content box (right edge <= 344 < 360); mini-rubric tables measured on the
+   <table> element itself (per the G3 reference): scrollWidth == clientWidth on every
+   table, so none is scrollable and no tabindex/role is required by the
+   markScrollableRegions design.
+3. A4 print emulation (794x1123, media print): navbar/sidebar hidden; content
+   unclipped on all 7 pages; the only element extending past the 794px box on the
+   index pages is the standard visually-hidden "Skip to main content" link (an
+   a11y feature, not content; identical on unit 5 and unit 6 index pages). The
+   unit-assessment print view shows the full bank and the "Answers and marking
+   guidance" section (print-a4-unit-assessment.png).
+4. Dark mode: data-theme=dark on topic-01; light variants hide, dark variants load
+   and display (render-inspect.json darkFigures).
+5. fig-U5-3 element render captured (figrender-fig-U5-3.png, 51798 bytes, screenshot
+   of the <figure> element on the rendered topic-02 page) to document the
+   connector-arrow geometry defect described in the report findings. The session's
+   file tool could not present PNG pixels to the reviewer (same limitation as the
+   round-1 unit-6 review), so the figure finding rests on the deterministic SVG
+   coordinate analysis of the committed fig-U5-3.svg / .dark.svg (panels x=26/216/
+   406/596 width 178; connector arrows at x 204-218 / 354-368 / 504-518, so arrows 2
+   and 3 begin inside panels 2 and 3 and stop 38px / 78px short of their target
+   panels) plus the real DOM render evidence above.
+
+ARTIFACTS (renders-20260924T003554Z/): render-inspect.json (full measurements),
+inspect-render.mjs, consolecheck.mjs, printcheck.mjs, check404.mjs, desktop-{index,
+topic-01,unit-assessment}.png, narrow-360-{index,topic-01,unit-assessment}.png,
+print-a4-{topic-01,unit-assessment}.png, dark-topic-01.png, figrender-fig-U5-3.png.
