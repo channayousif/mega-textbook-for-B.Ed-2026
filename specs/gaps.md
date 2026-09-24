@@ -923,3 +923,25 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 - **Question:** Unit 4 G3 ran two advisory cycles. Round 1 (reviews/unit-04/G3/agent-g3-gnas301-u4-run001.json) returned revise with 4 blocking findings. Round 2 (reviews/unit-04/G3/round-02/agent-g3-gnas301-u4-run002.json) verified the quotation rework and source declarations but returned revise with 2 remaining blocking findings: phantom abbasi2022 support for U4-08/U4-09 and phantom who-mental-health-work for U4-10. The author applied these repairs post-report (commit applying Unit 4 G3 round-2 repairs). ADR-0019 reserves further cycles to the owner after two.
 - **Needed, and from whom:** the curriculum owner, to accept the repaired state on the two advisory reports or authorise a third G3 cycle for Unit 4.
 - **Blocks:** a third G3 cycle for Unit 4; nothing else.
+
+---
+
+## G-2026-26 - GNAS-301 Unit 5 G3: two advisory cycles consumed; the third is owner-gated
+
+- **Status:** open
+- **Gate:** G3 (English review), ADR-0019 two-cycle limit
+- **Source:** GNAS-301 authoring session, 2026-09-24
+- **Question:** Unit 5 G3 ran two advisory cycles. Round 1 (reviews/unit-05/G3/20260924T001055Z-g3-attempt-01.json) returned revise with 4 blocking findings. Round 2 (reviews/unit-05/G3/round-02/agent-g3-gnas301-u5-run002.json) found most round-1 repairs had not actually been committed and returned revise with 5 blocking findings: the 5.1 RRQ deficit, the PM2.5 bloodstream claims beyond what the WHO 2024 fact sheet supports, the fig-U5-3 connector arrows (and the untouched .ur.svg geometry), the coverage-matrix U5-07/U5-06 cells, and the incomplete alibhatti2017 author list. The author applied the full repair set post-report (commit applying the remaining Units 5-6 G3 round-2 repairs), and the G2 evidence was regenerated at the repaired commit. ADR-0019 reserves further cycles to the owner after two.
+- **Needed, and from whom:** the curriculum owner, to accept the repaired state on the two advisory reports or authorise a third G3 cycle for Unit 5.
+- **Blocks:** a third G3 cycle for Unit 5; nothing else.
+
+---
+
+## G-2026-27 - GNAS-301 Unit 6 G3: two advisory cycles consumed; the third is owner-gated
+
+- **Status:** open
+- **Gate:** G3 (English review), ADR-0019 two-cycle limit
+- **Source:** GNAS-301 authoring session, 2026-09-24
+- **Question:** Unit 6 G3 ran two advisory cycles. Round 1 (reviews/unit-06/G3/agent-g3-gnas301-u6-run001.json) returned revise with 4 blocking findings. Round 2 (reviews/unit-06/G3/round-02/agent-g3-gnas301-u6-run002.json) found the ERQ-04 rewrite and the RRQ-08 re-key had not actually been committed and returned revise with 4 blocking findings: ERQ-04 still covering only 6.4, the RRQ/MCQ surplus distribution off the blueprint, the misattributed WHO framing in topic-06, and the anwar2026 excerpt's verification claim. The author applied the full repair set post-report (commit applying the remaining Units 5-6 G3 round-2 repairs), and the G2 evidence was regenerated at the repaired commit. ADR-0019 reserves further cycles to the owner after two.
+- **Needed, and from whom:** the curriculum owner, to accept the repaired state on the two advisory reports or authorise a third G3 cycle for Unit 6.
+- **Blocks:** a third G3 cycle for Unit 6; nothing else.
