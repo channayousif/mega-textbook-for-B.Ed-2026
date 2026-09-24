@@ -30,7 +30,7 @@ on every unit).
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-03/G2/20260924T011726786Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 78f0366; gap G-2026-29 open; report reviews/unit-03/G3/agent-g3-gqur300-u3-run001.json |
 | Unit 3 | G4 ur-translation | ▢ | | full Urdu mirror required |
-| Unit 3 | G5 ur-review | ▢ | | advisory |
+| Unit 3 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at 451a1f8; terminology rulings escalated to owner; report reviews/unit-03/G5/agent-g5-gqur300-u3-run001.json |
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
 | Unit 4 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0042; content-spec status: approved |
