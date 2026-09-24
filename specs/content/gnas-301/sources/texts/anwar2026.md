@@ -1,6 +1,6 @@
 # Bound excerpt - anwar2026
 
-Anwar, A., Younes, I., Afzal, M. Z., & Arshad, M. Z. (2026). Integrated remote sensing and
+Anwar, A., Younes, I., Afzal, M. Z., Arshad, M. Z., Fatima, N., Bibi, S., Raza, M., Khan, A., Ali, S., & Hussain, M. (2026). Integrated remote sensing and
 socio-economic evaluation of winter smog and its impacts in Lahore district, Pakistan.
 *Environmental Systems Research, 15*(1). https://doi.org/10.1186/s40068-026-00484-0
 

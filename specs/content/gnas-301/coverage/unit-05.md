@@ -16,7 +16,6 @@ the source key it is grounded in.
 | U5-05 | topic-04.mdx | Multilateral environmental agreements | guardans2013 |
 | U5-05 | topic-04.mdx | Multilateral environmental agreements | un-paris |
 | U5-06 | topic-04.mdx | Sustainable Development Goals (SDGs) | un-sdgs |
-| U5-06 | topic-04.mdx | Sustainable Development Goals (SDGs) | guardans2013 |
 | U5-07 | topic-04.mdx | Environmental laws, policies, guidelines and strategies related to public health | park-park |
 | U5-07 | topic-04.mdx | Multilateral environmental agreements | haines-frumkin |
 
