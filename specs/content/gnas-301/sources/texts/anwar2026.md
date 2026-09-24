@@ -4,9 +4,10 @@ Anwar, A., Younes, I., Afzal, M. Z., Arshad, M. Z., Fatima, N., Bibi, S., Raza, 
 socio-economic evaluation of winter smog and its impacts in Lahore district, Pakistan.
 *Environmental Systems Research, 15*(1). https://doi.org/10.1186/s40068-026-00484-0
 
-Open access (SpringerOpen). Crossref-verified 2026-09-23 against the Crossref registry
-(title, authors, journal, volume, issue, DOI all matched); abstract additionally read from
-the DOAJ record the same day.
+Open access (SpringerOpen). Crossref-verified: title, all ten authors, journal, volume,
+issue and DOI match the Crossref record (author-session fetch 2026-09-23; the complete
+ten-author list confirmed again in the Unit 6 G3 review, 2026-09-24); abstract
+additionally read from the DOAJ record.
 
 ## Abstract (verified, excerpt)
 
