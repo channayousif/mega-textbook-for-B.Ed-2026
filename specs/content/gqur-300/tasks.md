@@ -27,14 +27,14 @@ on every unit).
 | Unit 2 | G6 assets | ▢ | | |
 | Unit 2 | G7 publish | ▢ | | |
 | Unit 3 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0042; content-spec status: approved |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-03/G2/20260924T001002876Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-03/G2/20260924T011726786Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | advisory |
 | Unit 3 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 3 | G5 ur-review | ▢ | | advisory |
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
 | Unit 4 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0042; content-spec status: approved |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-04/G2/20260924T001027235Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-04/G2/20260924T011729574Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | advisory |
 | Unit 4 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 4 | G5 ur-review | ▢ | | advisory |
