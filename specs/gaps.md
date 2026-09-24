@@ -874,3 +874,73 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   no-external-source posture for this sub-topic.
 - **Blocks:** nothing in the automated gates; the G3 sources criterion for Unit 3 records
   the gap explicitly. The English content itself is complete and internally verified.
+
+---
+
+## G-2026-30 - GQUR-300: no accepted G3 evidence can cover the current English inputs (advisory chain needs an owner decision)
+
+- **Status:** open
+- **Gate:** G5 Urdu review (authority criterion), advisory; affects all six units
+- **Source:** GQUR-300 G5 reviews run001, Units 1-6 (2026-09-24), each recording the
+  dependency as an uncertain finding (Unit 1 U1, Unit 2 F11, Unit 3 F5, Unit 4 F5,
+  Unit 5 B2, Unit 6 A12)
+- **Criterion:** `authority` (G5); the G3 dependency clause of the review contract.
+- **Detail:** ADR-0019 blocks agent certification, so no accepted (signed) G3 evidence
+  exists in the reviewer registry. The best-available G3 evidence is the six advisory
+  run001 reports (all dispositions: revise). The author applied every G3 repair the
+  reports required, which changed the English inputs after each review (commits 93e6321,
+  78f0366, 2d5cd6a), and rebound the G2 gate evidence at each step - so no G3 verdict,
+  advisory or otherwise, covers the exact English bytes that the G5 reviews compared
+  against. The G5 reviewers therefore proceeded with the bound English inputs as the
+  authoritative comparison base and recorded this as a dependency finding per the
+  contract, rather than aborting.
+- **Needed, and from whom:** the curriculum owner, to either (a) accept the advisory
+  chain (G3 run001 + verified repairs + rebound G2 gates) as sufficient for the G5
+  stage, or (b) commission a fresh G3 pass over the current English inputs before the
+  G5 findings are treated as more than advisory. Until then no G5 tracker row can be
+  marked done from agent findings, which is the designed ADR-0019 posture.
+- **Blocks:** the G5 tracker rows for Units 1-6 (all left unchecked, advisory); nothing
+  in the automated gates. The Urdu content itself is complete and internally verified.
+
+---
+
+## G-2026-41 - GQUR-300: Urdu terminology and register rulings pending the curriculum owner
+
+- **Status:** open
+- **Gate:** G5 Urdu review (terminology and register criteria), advisory; course-wide
+- **Source:** GQUR-300 G5 reviews run001, Units 1-6 (2026-09-24), terminology and
+  register findings (Unit 1 U2/U3/U4, Unit 2 F8/F9/F10, Unit 3 F6, Unit 4 F6/F7,
+  Unit 5 A7-terminology, Unit 6 A2/A9)
+- **Criterion:** `terminology`, `register` (G5); the style guide's rule that conflicts
+  between translator choice and the bank are resolved by the curriculum owner.
+- **Detail:** The frozen bank (specs/content/terminology.csv) covers the
+  education-psychology courses only; none of GQUR-300's core mathematics terms are
+  banked. The G5 reviews confirmed most authored labels as internally consistent and
+  faithful, and the author adopted the banked terms wherever they exist (معیارِ جانچ
+  for Rubric, گروہی for Group Work, حکمتِ تدریس for Teaching Strategy, خود جائزہ for
+  Self-Assessment). The following need owner rulings, with the reviewers' proposals:
+  (a) disputed coinages embedded in glossary.json and the concept tables - تمام اعداد
+  vs مکمل اعداد for "whole number", وسیع vs قوت نما for "exponent", اثر vs الجبرائی
+  عبارت for "expression", بڑھوٹر vs نمو for "growth", قیمت vs قدر for "value",
+  ترازو ماڈل vs ترازو for "balance model"; (b) the crossed mapping Assessment =
+  جائزہ vs the bank's تشخیص while Evaluate is also rendered تشخیص; (c) Tally = گنتی,
+  which overlaps the ordinary word for counting; Records = رجسٹر, narrower than the
+  method name; (d) numeracy rendered عددیت in Unit 4 but عددی خواندگی in Unit 6;
+  (e) perimeter rendered three ways (اطراف کی پیمائش dominant), with اطراف also
+  meaning "sides" - the reviewers propose perimeter = اطراف کی پیمائش, sides = اضلاع;
+  (f) کینٹین proposed for banking (canteen); (g) the reader-gender policy - the Urdu
+  prose addresses the reader exclusively in the feminine while the SVG figure labels
+  use the masculine generic; (h) Latin technical terms kept in Urdu prose
+  (substitution, brainstorming, Bloom tags, bank labels) - defensible but worth an
+  explicit owner note; (i) Figure labels render in the OS Arabic fallback because
+  SVG-as-img cannot use the page's Nastaliq webfont, and table figures scale to
+  3.3-5.5 CSS px at the 360 px viewport (a site-wide pipeline property affecting the
+  English variants equally).
+- **Needed, and from whom:** the curriculum owner, to rule on each item, promote the
+  surviving authored labels into specs/content/terminology.csv, and record the
+  register policy. The author cannot edit the bank, the glossary entries, or the
+  style guide.
+- **Blocks:** nothing in the automated gates (the FR-016c terminology conformance
+  check fires only at translation_status: reviewed, and the key_terms blocks now
+  present in every UR index will surface every unbanked term at that flip, which is
+  the intended signal); the human quality pass before any reviewed flip.
