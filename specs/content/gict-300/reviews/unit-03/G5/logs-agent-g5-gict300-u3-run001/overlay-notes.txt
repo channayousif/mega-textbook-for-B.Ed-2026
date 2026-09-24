@@ -1,0 +1,62 @@
+G5 command-run environment notes (GICT-300 Unit 3, review at worktree HEAD bde5520)
+==================================================================================
+Review run: agent-g5-gict300-u3-run001, 2026-09-23. Same construction as the unit's own
+G3 run (specs/content/gict-300/reviews/unit-03/G3/overlay-notes-20260923T205030427Z.txt)
+and the Unit 1 G5 run (specs/content/gict-300/reviews/unit-01/G5/cmd-logs/).
+
+Manifest freshness (verified before anything ran)
+-------------------------------------------------
+The parent's manifest was prepared at 5005f2e; the worktree HEAD at review time is bde5520
+(commits 5d30070, 1bec44e, 684e916, bde5520 intervene - the G5 Units 1-2 advisory reports,
+their repairs and the Unit 1 G2 refresh). The manifest was NOT silently refreshed: the full
+input set was recomputed with manifestFor() from scripts/lib/review-evidence.mjs and compared
+digest-by-digest against the prepared manifest.json: 125/125 inputs identical, zero missing,
+zero added, zero changed, skill_digest current. The Units 1-2 repairs touched only unit-01/
+unit-02 Urdu files, unit-01/02 figures and Unit 1 G2 evidence - all outside this unit's bound
+set (ADR-0027 unit scoping + the reviews/ exclusion), which the digest comparison confirms.
+Digest verification, not the commit label, is authoritative.
+
+Why an overlay was needed
+-------------------------
+Running the six gates unmodified in this worktree fails only on trees that are NOT this
+review's subject. Verified by as-is runs before overlaying (saved in asis/, real exit codes):
+
+  validate:content 1, check:depth-gate 1, check:figures 1,
+  check:no-answer-keys 1, check:no-em-dash 1, check:docs-sync 0.
+
+Every failing finding is in the stale docs/semester-1/geng-300/ tree or
+specs/content/geng-300/ (13 + 4 + 2 + 3 + 9 findings respectively) - pre-existing on this
+branch base, already repaired on origin/main by the geng-300 track-relocation commits
+(86863c5..0d0788e), out of scope for this GICT-300 review. Zero GICT-300 findings in any
+as-is run (verified by grep: no "gict-300" occurrence in any as-is log).
+
+Overlay construction (/tmp/gict300-u3-g5-aed74e6f - private path, no concurrent use)
+-------------------------------------------------------------------------------------
+- Base: `git archive HEAD` at bde5520 (the reviewed state).
+- Removed: docs/semester-1/geng-300 and specs/content/geng-300 (the stale placement).
+- Replaced with origin/main (0d0788e) versions: docs/semester-1/geng-300,
+  specs/content/geng-300 (minus its reviews/ and intake/ evidence directories),
+  static/img/figures/geng-300. licence/geng-300 does not exist on main (the relocation moved
+  the course to Semester 1), so nothing to add there.
+- glossary.json merged: HEAD's 135 terms (which carry the GICT-300 terms) + origin/main's
+  62 main-only terms (which carry the geng-300 Functional English terms) = 197 terms, HEAD
+  winning on the 68 shared terms - the same merge the G3 overlay performed. glossary.json is
+  not a bound input.
+- node_modules symlinked from the worktree (same commit's dependencies).
+- The 125 bound inputs were then verified byte-identical inside the overlay under the
+  review-evidence normalization (124 by digest + specs/content/gict-300/content-spec.md by
+  raw byte compare; the one local-verification "mismatch" was my simplified checker lacking
+  the ADR-0027 sliceSpec, not a real difference).
+- check:docs-sync and check:no-em-dash resolve their scan roots from cwd, so they were run
+  with cwd = the overlay; the other four honour CONTENT_ROOT.
+
+Result over the overlay (logs in this directory): all six gates exit 0.
+
+Render-review environment
+-------------------------
+The production build (npm run build) ran on the worktree itself at HEAD bde5520 - the
+reviewed state, not the overlay - because the build does not run the content gates and the
+inspected route (/ur/semester-1/gict-300/unit-03) is unaffected by the geng-300 tree. Load
+average at build start: 1.25 on 2 cores (capacity directive threshold ~8; no limitation
+recorded - the full desktop/narrow/print/SVG-geometry inspection ran). render-inspect served
+the build on port 4617 via `docusaurus serve`; the server was stopped after inspection.

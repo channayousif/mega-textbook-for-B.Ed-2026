@@ -1,0 +1,22 @@
+== RTL / direction / lang attributes ==
+index: html lang="ur" dir="rtl" | h1="آپریٹنگ سسٹم کے تصورات" (dir rtl)
+topic-01: html lang="ur" dir="rtl" | h1="موضوع 3.1 - آپریٹنگ سسٹم کیا کرتا ہے" (dir rtl)
+topic-02: html lang="ur" dir="rtl" | h1="موضوع 3.2 - فائلیں اور پروسیسیں" (dir rtl)
+topic-03: html lang="ur" dir="rtl" | h1="موضوع 3.3 - ان پٹ اور آؤٹ پٹ کا انتظام" (dir rtl)
+topic-04: html lang="ur" dir="rtl" | h1="موضوع 3.4 - کرنل: نظام کا مرکز" (dir rtl)
+unit-assessment: html lang="ur" dir="rtl" | h1="یونٹ 3 کا جائزہ" (dir rtl)
+unit-teacher-notes: html lang="ur" dir="rtl" | h1="یونٹ 3 کے اساتذہ کے نوٹس" (dir rtl)
+
+== Nastaliq webfont ==
+document.fonts.check('12px "Noto Nastaliq Urdu"') on Urdu glyphs: true
+loaded Nastaliq faces: ["Noto Nastaliq Urdu loaded"]
+prose paragraph computed font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", "Jameel Noori Nastaleeq", serif
+prose paragraph computed direction: rtl
+
+== Embedded Latin (citations, code, filenames) as LTR islands in RTL prose ==
+  para: یونٹ 2 سے آپ آپریٹنگ سسٹم کے تین حصوں والا کام کا بیان پہلے ہی جانتے ہیں: کمپیوٹر کے ہارڈ ویئر وسائل کا انتظام، صارف انٹرفیس کے حصے فراہم کرنا، اور سا
+  para: او ایس وسائل کا انتظام کرتا ہے۔ ایک پروسیسر، میموری کا ایک ذخیرہ، ایک ڈسک، ایک نیٹ ورک کنکشن - مگر کئی پروگرام سبھی چاہتے ہیں۔ آپریٹنگ سسٹم بانٹتا بھی
+  para: آپریٹنگ سسٹم اقسام میں آتے ہیں، اور ہر قسم کا انداز اس کے کام کے مطابق بنا ہے۔ بیچ آپریٹنگ سسٹم اکٹھے کیے گئے کاموں کو ایک کے بعد ایک، صارف کی مداخلت 
+
+== Numerals used in Urdu prose (Western Arabic 0-9 vs Eastern ۰-۹) ==
+topic-01 page: Western digits=84  Eastern digits=0
