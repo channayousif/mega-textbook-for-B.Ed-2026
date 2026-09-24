@@ -1,0 +1,61 @@
+G5 independent assessment working - GQUR-300 Unit 4 (Urdu bank)
+Reviewer: agent:g5-reviewer, run agent-g5-gqur300-u4-run001
+
+Method: every Urdu item in i18n/ur/docusaurus-plugin-content-docs/current/
+semester-1/gqur-300/unit-04/unit-assessment.mdx was answered from the Urdu text
+alone, before comparing against the English bank and the supplied answer key.
+
+MCQs (Urdu options read and solved independently)
+1. 2.5 m -> cm: 2.5 x 100 = 250. Answer b. Key b. MATCH.
+2. "ٹینک 500 سمیٹتا ہے" not a measurement: number lacks unit. Answer b. Key b. MATCH.
+3. 250 cm rolls for 15 m: 15 m = 1,500 cm; 1,500 / 250 = 6. Answer a. Key a. MATCH.
+4. Perimeter 8x6 rectangle: 2 x (8+6) = 28 m. Answer c. Key c. MATCH.
+5. Area same rectangle: 48 sq m. Answer a. Key a. MATCH.
+6. Divide-by-two reason: triangle is half its enclosing rectangle. Answer b. Key b. MATCH.
+7. Box 2x1x1.5: 3 cubic metres. Answer b. Key b. MATCH.
+8. Corridor 2x20 vs room 6x7: corridor perimeter 44 > 26, room area 42 > 40.
+   Answer c. Key c. MATCH.
+9. Skirting board buys: perimeter. Answer c. Key c. MATCH.
+10. Four moves in order: choose, measure, compute, check. Answer b. Key b. MATCH.
+Option order a-d identical to English in all ten items; no reordering.
+
+RRQs (independently solved from the Urdu stems)
+1. (a) 340 cm; (b) 5.6 L; (c) 900 g. Model matches. Marks 3 (1 each). MATCH.
+2. Number-unit pair argument; 500 litres or 500 millilitres. Model matches. Marks 2. MATCH.
+3. Perimeter 2 x (9+5) = 28 m; area 45 sq m. Model matches. Marks 2. MATCH.
+4. (1.2 x 0.8)/2 = 0.48 sq m; half of enclosing rectangle. Model matches. Marks 2. MATCH.
+5. Circumference 2 x 3.14 x 4 = 25.12 m; area 3.14 x 16 = 50.24 sq m. MATCH. Marks 2.
+6. 6 x 3 = 18 sq m; 18/10 = 1.8 -> buy 2 L; whole-litre rounding. Model matches.
+   Marks 2. MATCH. (Note: the UR stem keeps the open English phrasing
+   "جواب کیوں اس طرح گول ہوتا ہے"; the topic-03 formative twin of this item does
+   not - see findings, blocking.)
+7. Choose-or-measure move; round-number check (classroom ~10x10 = 100 sq m).
+   Model matches. Marks 2. MATCH.
+8. Circle: all points one fixed distance (radius) from centre; circumference
+   needs radius (or diameter). Model matches. Marks 2. MATCH.
+9. 1.5 x 1 x 1 = 1.5 cubic m = 1,500 L. Model matches. Marks 2. MATCH.
+10. (a) perimeter, metres; (b) area, square metres; (c) volume/capacity, litres.
+    Model matches. Marks 3. MATCH.
+
+ERQs (rubric arithmetic independently recomputed)
+1. Rice: 120 x 75 g = 9,000 g = 9 kg; 9/25 < 1 sack -> 1 sack, 16 kg left;
+   4,200 rupees. UR rubric totals 6 (0-2 x3). MATCH.
+2. Fence 2 x (12+8) = 40 m; carpet 5 x 4 = 20 sq m; tank 3.14 x 1 x 1 x 2 =
+   6.28 cubic m = 6,280 L; estimation check ~2x2x2 = 8,000 L. Totals 8. MATCH.
+3. Carpet 6 sq m; skirting 3+2 = 5 m; shelves 250 x 2.5 cm = 625 cm = 6.25 m;
+   6.25/0.8 = 7.8 -> 8 shelves; 4-shelf bookcase leaves 4 short. Totals 8. MATCH.
+4. Skirting 2 x (30+20) = 100 m (notch accepted only if argued); tiles
+   600 - 20 = 580 sq m; re-measure analysis: tile area constant at 580 wherever
+   the store sits (size, not position, sets open area); skirting line changes
+   with position -> re-measure skirting. Units 0-1. Totals 8. MATCH - the
+   G3-repaired inverted analysis is correctly mirrored in the Urdu rubric.
+5. Practicum plan rubric: plan 0-2, weak move 0-2, teacher verdict 0-2,
+   communication improvement 0-2, clarity 0-2. Totals 10. MATCH.
+
+Cognitive demand: no Urdu item is lowered to recall relative to its English
+twin; Bloom tags preserved verbatim (Remember/Understand/Apply/Analyze/Evaluate
+kept in Latin in both locales). No item leaks its answer in the bank. The one
+answer-direction leak is in the topic-03 formative twin of RRQ-6 (reported as a
+blocking finding): EN asks "state why the answer rounds the way it does" but the
+Urdu asks "state why the answer goes up", and for that item's numbers
+(8 m x 2.5 m at 1 L per 10 sq m = exactly 2 L) no rounding occurs at all.
