@@ -1,0 +1,32 @@
+fig-U6-1.svg [900x400] leaves=41 pairs=0 wm=0 rectEscape=0 vbEscape=0 nearMiss=0 -> clean
+fig-U6-1.dark.svg [900x400] leaves=41 pairs=0 wm=0 rectEscape=0 vbEscape=0 nearMiss=0 -> clean
+fig-U6-2.svg [924x470] leaves=17 pairs=0 wm=0 rectEscape=4 vbEscape=0 nearMiss=0 -> clean (rect escape only)
+   RECT-ESCAPE [ro] "rules out: training away from the pupils you t" textRight=905.2 rectRight=880 overRight=25.2 overBottom=0
+   RECT-ESCAPE [ro] "rules out: generic sessions on teaching in gen" textRight=293.7 rectRight=270 overRight=23.7 overBottom=0
+   RECT-ESCAPE [ro] "rules out: advice about a lesson nobody watche" textRight=290.2 rectRight=270 overRight=20.2 overBottom=0
+   RECT-ESCAPE [ro] "rules out: the assigned course nobody asked fo" textRight=895.4 rectRight=880 overRight=15.4 overBottom=0
+fig-U6-2.dark.svg [924x470] leaves=17 pairs=0 wm=0 rectEscape=4 vbEscape=0 nearMiss=0 -> clean (rect escape only)
+   RECT-ESCAPE [ro] "rules out: training away from the pupils you t" textRight=905.2 rectRight=880 overRight=25.2 overBottom=0
+   RECT-ESCAPE [ro] "rules out: generic sessions on teaching in gen" textRight=293.7 rectRight=270 overRight=23.7 overBottom=0
+   RECT-ESCAPE [ro] "rules out: advice about a lesson nobody watche" textRight=290.2 rectRight=270 overRight=20.2 overBottom=0
+   RECT-ESCAPE [ro] "rules out: the assigned course nobody asked fo" textRight=895.4 rectRight=880 overRight=15.4 overBottom=0
+fig-U6-3.svg [900x400] leaves=22 pairs=0 wm=0 rectEscape=2 vbEscape=0 nearMiss=0 -> clean (rect escape only)
+   RECT-ESCAPE [s1] "from observing" textRight=349.4 rectRight=260 overRight=89.4 overBottom=0
+   RECT-ESCAPE [s2] "from surviving" textRight=647.2 rectRight=560 overRight=87.2 overBottom=0
+fig-U6-3.dark.svg [900x400] leaves=22 pairs=0 wm=0 rectEscape=2 vbEscape=0 nearMiss=0 -> clean (rect escape only)
+   RECT-ESCAPE [s1] "from observing" textRight=349.4 rectRight=260 overRight=89.4 overBottom=0
+   RECT-ESCAPE [s2] "from surviving" textRight=647.2 rectRight=560 overRight=87.2 overBottom=0
+fig-U6-4.svg [900x350] leaves=28 pairs=0 wm=0 rectEscape=0 vbEscape=0 nearMiss=0 -> clean
+fig-U6-4.dark.svg [900x350] leaves=28 pairs=0 wm=0 rectEscape=0 vbEscape=0 nearMiss=0 -> clean
+fig-U6-5.svg [936x400] leaves=53 pairs=0 wm=0 rectEscape=0 vbEscape=0 nearMiss=0 -> clean
+fig-U6-5.dark.svg [936x400] leaves=53 pairs=0 wm=0 rectEscape=0 vbEscape=0 nearMiss=0 -> clean
+fig-U6-6.svg [880x430] leaves=17 pairs=0 wm=0 rectEscape=0 vbEscape=0 nearMiss=0 -> clean
+fig-U6-6.dark.svg [880x430] leaves=17 pairs=0 wm=0 rectEscape=0 vbEscape=0 nearMiss=0 -> clean
+fig-U6-7.svg [880x470] leaves=22 pairs=0 wm=0 rectEscape=0 vbEscape=0 nearMiss=0 -> clean
+fig-U6-7.dark.svg [880x470] leaves=22 pairs=0 wm=0 rectEscape=0 vbEscape=0 nearMiss=0 -> clean
+fig-U6-8.svg [900x460] leaves=23 pairs=0 wm=0 rectEscape=0 vbEscape=0 nearMiss=0 -> clean
+fig-U6-8.dark.svg [900x460] leaves=23 pairs=0 wm=0 rectEscape=0 vbEscape=0 nearMiss=0 -> clean
+
+ink-intersection check: 0 file(s) with intersecting bboxes
+
+files measured: 16, with text-on-text/wordmark/viewBox defects: 0
