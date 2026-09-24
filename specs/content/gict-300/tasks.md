@@ -38,14 +38,14 @@ files at that commit. The geng-300 reds are recorded as known-stale-on-main in t
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-03/G2/20260923T214810065Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | advisory run 001 (disposition: revise; blocking F1 sources-chain, F2 render unverified under capacity directive) at reviews/unit-03/G3/agent-g3-gict300-u3-run001.json; F1 repair in progress; agent reviews advisory under ADR-0019 |
 | Unit 3 | G4 ur-translation | ▢ | | |
-| Unit 3 | G5 ur-review | ▢ | | |
+| Unit 3 | G5 ur-review | ▢ | | advisory run 001 (disposition: revise; F1 stale G3 dependency, F2-F5 Urdu defects repaired) at reviews/unit-03/G5/agent-g5-gict300-u3-run001.json; agent reviews advisory under ADR-0019 |
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
 | Unit 4 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0030; content-spec status: approved |
 | Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-04/G2/20260923T214817844Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | advisory run 001 (disposition: revise; 5 blocking findings: RRQ topic spread, citation overreach, sources mapping, unused source, MCQ skew) at reviews/unit-04/G3/agent-g3-gict300-u4-run001.json; repairs in progress; agent reviews advisory under ADR-0019 |
 | Unit 4 | G4 ur-translation | ▢ | | |
-| Unit 4 | G5 ur-review | ▢ | | |
+| Unit 4 | G5 ur-review | ▢ | | advisory run 001 (disposition: escalate; F1 stale G3 dependency, F2-F7 Urdu defects repaired) at reviews/unit-04/G5/agent-g5-gict300-u4-run001.json; agent reviews advisory under ADR-0019 |
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
 | Unit 5 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0030; content-spec status: approved |
