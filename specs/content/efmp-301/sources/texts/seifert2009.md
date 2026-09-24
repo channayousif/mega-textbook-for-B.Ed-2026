@@ -255,3 +255,38 @@ the importance of learning communicated (U8-3); rules and natural-logical
 consequences (U8-4); the response repertoire and escalation (U8-5); the reinforcement
 rows (U8-2, U8-3).
 
+## Chapter 11 - Teacher-made assessment strategies (verified; used by Unit 9)
+
+On summative assessment: "summative, that is, administered after the instruction is
+completed (e.g. a final examination in an educational psychology course). Summative
+assessments provide information about how well students mastered the material,
+whether students are ready for the next unit, and what grades should be given
+(Airasian, 2005)."
+
+On assessment for learning: "Using assessment to advance students' learning not just
+check on learning requires viewing assessment as a process that is integral to the
+all phases of teaching including planning, classroom interactions and instruction,
+communication with parents, and self-reflection (Stiggins, 2002)." Its steps include
+"Having clear instructional goals and communicating them to students", "Selecting
+appropriate assessment techniques", and "Using assessment to enhance motivation and
+confidence": "Students' motivation and confidence is influenced by the type of
+assessment used as well as the feedback given about the assessment results."
+
+On validity: "Validity is the evaluation of the 'adequacy and appropriateness of the
+interpretations and uses of assessment results' for a given group of individuals
+(Linn & Miller, 2005, p. 68)... validity refers to the interpretation and uses made
+of the results of an assessment procedure not of the assessment procedure itself."
+
+On reliability: "Reliability refers to the consistency of the measurement (Linn &
+Miller 2005)... How similar would the scores of the students be if they had taken
+the assessment on a Friday or Monday? Would the scores have varied if Mr Garcia had
+selected different test items, or if a different teacher had graded the test?"
+
+On bias: the chapter's "Basic concepts" triad is validity, reliability and the
+"Absence of bias".
+
+Used for (Unit 9): the purposes and decisions (U9-1); standardisation and the
+teacher-made trade (U9-3); validity, reliability and bias (U9-4); the formative
+cycle and the motivation finding (U9-5); summative's purposes (U9-6); the
+reinforcement rows (U9-1, U9-4, U9-5).
+
