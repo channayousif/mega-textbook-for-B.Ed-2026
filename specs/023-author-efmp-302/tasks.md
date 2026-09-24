@@ -32,8 +32,10 @@ and run records under `history/prompts/efmp-302/`.
   repairs (max 2 cycles, then escalate under G-2026-62..71); refresh G2 evidence if bytes
   change; tracker Notes updated, row stays open. (feat023-r1: pass, 7/7 criteria, 0 blocking;
   2 advisories repaired at 81ab33b, 2 carried; G2 rebound 20260924T133040759Z)
-- [ ] **T005** Same for Unit 3 (5 topics; revoked-provisional history respected - fresh review
-  binds current bytes, prior reports stay on record).
+- [x] **T005** Same for Unit 3 (5 topics; revoked-provisional history respected - fresh review
+  binds current bytes, prior reports stay on record). (r1 revise on the b8f8ffe figure
+  regression, repaired at 69bae9e; r2 pass, 7/7 criteria, repair verified 4 ways; 14 advisories
+  carry)
 - [ ] **T006** Same for Unit 4 (carried: ten standard names in topic-02 corroborated from
   secondary sources only; run-007 advisories).
 - [ ] **T007** Same for Unit 5 (carried: hennessy2022 declaration, RRQ 9 rebalance; 11
@@ -45,9 +47,9 @@ and run records under `history/prompts/efmp-302/`.
 
 ## Phase 3: Urdu mirrors, Units 3-6 (G4)
 
-- [ ] **T010** Translate Unit 3 (5 topics, 10 figures): complete mirror, `.ur.svg` +
+- [x] **T010** Translate Unit 3 (5 topics, 10 figures): complete mirror, `.ur.svg` +
   `.ur.dark.svg` variants, `key_terms` block, parity flip-check, `check:content`, render
-  inspect; commit.
+  inspect; commit. (18,378 words; 0 render defects)
 - [ ] **T011** Translate Unit 4 (4 topics, 8 figures): same pattern.
 - [ ] **T012** Translate Unit 5 (4 topics, 8 figures): same pattern; 14 of 16 concept labels
   already authored (largest authored set).
