@@ -1,0 +1,18 @@
+static/img/figures/gqur-300/unit-02/fig-U2-1.ur.svg: viewBox 780x470, min text x1=-40.7, OVERFLOW:
+  OVERFLOW x1=-40.7 x2=84.5 "0 کو تمام عدد گنا جاتا ہے"
+  near-left-edge x1=-40.7 x2=84.5 "0 کو تمام عدد گنا جاتا ہے"
+  near-left-edge x1=12 x2=104.7 "textbook.com.pk"
+static/img/figures/gqur-300/unit-02/fig-U2-2.ur.svg: viewBox 780x470, min text x1=12, all text inside
+  near-left-edge x1=12 x2=104.7 "textbook.com.pk"
+static/img/figures/gqur-300/unit-02/fig-U2-3.ur.svg: viewBox 780x470, min text x1=12, all text inside
+  near-left-edge x1=12 x2=104.7 "textbook.com.pk"
+static/img/figures/gqur-300/unit-02/fig-U2-4.ur.svg: viewBox 780x470, min text x1=12, all text inside
+  near-left-edge x1=33.4 x2=238 "500 روپے کی قمیض 20 فیصد رعایت"
+  near-left-edge x1=21.3 x2=238 "10 فیصد اضافے کے بعد فیس 2,200 ہے"
+  near-left-edge x1=12 x2=104.7 "textbook.com.pk"
+static/img/figures/gqur-300/unit-02/fig-U2-5.ur.svg: viewBox 780x470, min text x1=12, all text inside
+  near-left-edge x1=12 x2=104.7 "textbook.com.pk"
+static/img/figures/gqur-300/unit-02/fig-U2-6.ur.svg: viewBox 780x470, min text x1=12, all text inside
+  near-left-edge x1=37.3 x2=82.7 "جانچیں"
+  near-left-edge x1=35 x2=85.5 "کیا معقول"
+  near-left-edge x1=12 x2=104.7 "textbook.com.pk"

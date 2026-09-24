@@ -1,0 +1,10 @@
+{
+ "nastaliqCoversUnitText": true,
+ "nastaliqCoversSample": true,
+ "loadedFonts": [
+  "Noto Nastaliq Urdu 400 normal"
+ ],
+ "proseFontFamily": "\"Noto Nastaliq Urdu\", \"Noto Naskh Arabic\", \"Jameel Noori Nastaleeq\", serif",
+ "textLength": 4000,
+ "textHead": "سمسٹر 1GQUR-300 · Quantitative Reasoning-IUnit 2 · Numbers and Operationsموضوع 2.1 - عددی نظام: تمام اعداد، صحيح اعداد، کسریں اور اعشاریے مسودہ - ماہرانہ نظرثانی باقی ہے یہ یونٹ مکمل ہے اور خودکار جان"
+}

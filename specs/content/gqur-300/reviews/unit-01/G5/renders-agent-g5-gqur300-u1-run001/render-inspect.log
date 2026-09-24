@@ -1,0 +1,104 @@
+### starting: npm run serve -- --port 4599
+### render-inspect  GQUR-300 Unit 1 (ur)
+### route: /ur/semester-1/gqur-300/unit-01  pages: 6  placed figures: 6
+### host: http://127.0.0.1:4599   browser: chromium 149.0.7827.0
+### started: 2026-09-24T02:58:11.641Z
+
+===== A. DESKTOP 1280x900 =====
+
+-- index: headings=5 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+-- topic-01: headings=12 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=3 vagueLinks=0 hOverflow=false
+   img /img/figures/gqur-300/unit-01/fig-U1-1.ur.svg natural=249x150 shown=true loading=lazy alt="تصوراتی نقشہ جس کے مرکز میں مقداری استدلال ہے اور تین شاخیں ہیں: اعداد پر اعتماد، سیاق و س"
+   img /img/figures/gqur-300/unit-01/fig-U1-1.ur.dark.svg natural=0x0 shown=false loading=lazy alt="تصوراتی نقشہ جس کے مرکز میں مقداری استدلال ہے اور تین شاخیں ہیں: اعداد پر اعتماد، سیاق و س"
+   img /img/figures/gqur-300/unit-01/fig-U1-2.ur.svg natural=249x150 shown=true loading=lazy alt="پانچ اسکولی کاموں کی درجہ بندی کا جدول کہ انہیں مقداری استدلال کی ضرورت ہے یا نہیں، ہر خان"
+   img /img/figures/gqur-300/unit-01/fig-U1-2.ur.dark.svg natural=0x0 shown=false loading=lazy alt="پانچ اسکولی کاموں کی درجہ بندی کا جدول کہ انہیں مقداری استدلال کی ضرورت ہے یا نہیں، ہر خان"
+   heading order: no skipped levels
+   advisory bare-URL link text: https://archive.org/details/mathematicsdemoc0000un | https://eric.ed.gov/?id=EJ981327 | https://itacec.org/document/2015/7/National_Profes
+
+-- topic-02: headings=12 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=2 vagueLinks=0 hOverflow=false
+   img /img/figures/gqur-300/unit-01/fig-U1-3.ur.svg natural=249x150 shown=true loading=lazy alt="تخمینے کا زینہ: ایک عددی لکیر جو درست گنتی، گول کردہ تخمینہ اور مقدارِ رتبہ کے خانے دکھاتی"
+   img /img/figures/gqur-300/unit-01/fig-U1-3.ur.dark.svg natural=0x0 shown=false loading=lazy alt="تخمینے کا زینہ: ایک عددی لکیر جو درست گنتی، گول کردہ تخمینہ اور مقدارِ رتبہ کے خانے دکھاتی"
+   img /img/figures/gqur-300/unit-01/fig-U1-4.ur.svg natural=249x150 shown=true loading=lazy alt="چار تخمینے کی حکمت عملیوں کا جدول: ایک ستون میں طریقہ اور دوسرے میں کلاس روم کی مثال۔"
+   img /img/figures/gqur-300/unit-01/fig-U1-4.ur.dark.svg natural=0x0 shown=false loading=lazy alt="چار تخمینے کی حکمت عملیوں کا جدول: ایک ستون میں طریقہ اور دوسرے میں کلاس روم کی مثال۔"
+   heading order: no skipped levels
+   advisory bare-URL link text: https://doi.org/10.1007/s42330-024-00342-0 | https://www.oecd.org/pisa/
+
+-- topic-03: headings=12 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=2 vagueLinks=0 hOverflow=false
+   img /img/figures/gqur-300/unit-01/fig-U1-5.ur.svg natural=249x150 shown=true loading=lazy alt="مسائل حل کرنے کی چار مرحلوں والی حکمت عملی کا فلو چارٹ: سمجھنا، منصوبہ، عمل، نظرِ ثانی، او"
+   img /img/figures/gqur-300/unit-01/fig-U1-5.ur.dark.svg natural=0x0 shown=false loading=lazy alt="مسائل حل کرنے کی چار مرحلوں والی حکمت عملی کا فلو چارٹ: سمجھنا، منصوبہ، عمل، نظرِ ثانی، او"
+   img /img/figures/gqur-300/unit-01/fig-U1-6.ur.svg natural=249x150 shown=true loading=lazy alt="چار منطقی استدلال کے طریقوں کا جدول: ہر ایک کی ایک جملے میں وضاحت اور روزمرہ کی ایک مثال۔"
+   img /img/figures/gqur-300/unit-01/fig-U1-6.ur.dark.svg natural=0x0 shown=false loading=lazy alt="چار منطقی استدلال کے طریقوں کا جدول: ہر ایک کی ایک جملے میں وضاحت اور روزمرہ کی ایک مثال۔"
+   heading order: no skipped levels
+   advisory bare-URL link text: https://archive.org/details/mathematicsdemoc0000un | https://eric.ed.gov/?id=EJ1450768
+
+-- unit-assessment: headings=10 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+-- unit-teacher-notes: headings=8 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+===== B. NARROW 360x780 =====
+
+-- index: docHorizontalOverflow=0px tables=0 figures=0 spill=0
+
+-- topic-01: docHorizontalOverflow=0px tables=0 figures=2 spill=0
+   figure[0] .figure client=328 scroll=328 scroller=none
+   figure[1] .figure client=328 scroll=328 scroller=none
+
+-- topic-02: docHorizontalOverflow=0px tables=0 figures=2 spill=0
+   figure[0] .figure client=328 scroll=328 scroller=none
+   figure[1] .figure client=328 scroll=328 scroller=none
+
+-- topic-03: docHorizontalOverflow=0px tables=0 figures=2 spill=0
+   figure[0] .figure client=328 scroll=328 scroller=none
+   figure[1] .figure client=328 scroll=328 scroller=none
+
+-- unit-assessment: docHorizontalOverflow=0px tables=0 figures=0 spill=0
+
+-- unit-teacher-notes: docHorizontalOverflow=0px tables=0 figures=0 spill=0
+
+===== C. A4 PRINT EMULATION (794px) =====
+
+-- index @print: clippedElems=0 figureImgs=0 answerHeadings=[]
+
+-- topic-01 @print: clippedElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/gqur-300/unit-01/fig-U1-1.ur.svg w=762 right=778 fits
+   printfig /img/figures/gqur-300/unit-01/fig-U1-1.ur.dark.svg w=0 right=0 fits
+   printfig /img/figures/gqur-300/unit-01/fig-U1-2.ur.svg w=762 right=778 fits
+   printfig /img/figures/gqur-300/unit-01/fig-U1-2.ur.dark.svg w=0 right=0 fits
+
+-- topic-02 @print: clippedElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/gqur-300/unit-01/fig-U1-3.ur.svg w=762 right=778 fits
+   printfig /img/figures/gqur-300/unit-01/fig-U1-3.ur.dark.svg w=0 right=0 fits
+   printfig /img/figures/gqur-300/unit-01/fig-U1-4.ur.svg w=762 right=778 fits
+   printfig /img/figures/gqur-300/unit-01/fig-U1-4.ur.dark.svg w=0 right=0 fits
+
+-- topic-03 @print: clippedElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/gqur-300/unit-01/fig-U1-5.ur.svg w=762 right=778 fits
+   printfig /img/figures/gqur-300/unit-01/fig-U1-5.ur.dark.svg w=0 right=0 fits
+   printfig /img/figures/gqur-300/unit-01/fig-U1-6.ur.svg w=762 right=778 fits
+   printfig /img/figures/gqur-300/unit-01/fig-U1-6.ur.dark.svg w=0 right=0 fits
+
+-- unit-assessment @print: clippedElems=0 figureImgs=0 answerHeadings=["محدود جواب والے سوالات (RRQs)​","تفصیلی جواب والے سوالات (ERQs)​","جوابات اور نشان دہی کی رہنمائی​","MCQ جواب کی کنجی​","RRQ ماڈل جوابات اور نشان دہی کی اسکیمیں​"]
+
+-- unit-teacher-notes @print: clippedElems=0 figureImgs=0 answerHeadings=[]
+
+===== D. SVG TEXT GEOMETRY =====
+   fig-U1-1.ur [concept-map] viewBox=780x470 texts=11 wordmark@x=12 -> clean
+   fig-U1-1.ur.dark [concept-map] viewBox=780x470 texts=11 wordmark@x=12 -> clean
+   fig-U1-2.ur [table] viewBox=780x470 texts=23 wordmark@x=12 -> clean
+   fig-U1-2.ur.dark [table] viewBox=780x470 texts=23 wordmark@x=12 -> clean
+   fig-U1-3.ur [diagram] viewBox=780x470 texts=16 wordmark@x=12 -> clean
+   fig-U1-3.ur.dark [diagram] viewBox=780x470 texts=16 wordmark@x=12 -> clean
+   fig-U1-4.ur [table] viewBox=780x470 texts=24 wordmark@x=12 -> clean
+   fig-U1-4.ur.dark [table] viewBox=780x470 texts=24 wordmark@x=12 -> clean
+   fig-U1-5.ur [flowchart] viewBox=780x470 texts=17 wordmark@x=12 -> clean
+   fig-U1-5.ur.dark [flowchart] viewBox=780x470 texts=17 wordmark@x=12 -> clean
+   fig-U1-6.ur [table] viewBox=780x470 texts=26 wordmark@x=12 -> clean
+   fig-U1-6.ur.dark [table] viewBox=780x470 texts=26 wordmark@x=12 -> clean
+
+### finished: 2026-09-24T02:58:44.882Z
+### defects: 0
+### exit_code: 0
