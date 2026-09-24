@@ -320,8 +320,8 @@ engineering (4.1); fig-U4-2 `table` threats matched to the defence that stops ea
 fig-U4-3 `diagram` how a digital footprint grows: posts, photos, searches, purchases (4.2);
 fig-U4-4 `table` active vs passive footprint with examples (4.2); fig-U4-5 `flowchart` how
 multi-factor authentication works, step by step (4.3); fig-U4-6 `table` weak vs strong
-passwords and what makes the difference (4.3); fig-U4-7 `diagram` where your file goes when
-you save it to the cloud (4.3); fig-U4-8 `table` personal data types and who may legitimately
+passwords and what makes the difference (4.3); fig-U4-7 `diagram` a pupil record with the four
+data questions radiating out (4.4); fig-U4-8 `table` personal data types and who may legitimately
 ask for each (4.4).
 
 **Unit-end assessment blueprint**:

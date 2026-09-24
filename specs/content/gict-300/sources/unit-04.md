@@ -2,8 +2,8 @@
 
 Per `specs/007-content-depth-standard/contracts/sources-consulted.md`. Every key cited in
 `specs/content/gict-300/coverage/unit-04.md` appears here, and every key here appears in a
-per-topic `## Further reading` section; the registry-verified keys and the guide-required
-keys are also cited in prose.
+per-topic `## Further reading` section; the registry-verified keys are also cited in prose,
+and the guide-required keys are cited at bibliographic level.
 
 Verified 2026-09-23 against the course guide (`Scheme-and-Course-guides/extracted-text/1st
 2026.txt`, lines 374-538, the GICT-300 block) and the content-spec reading list
