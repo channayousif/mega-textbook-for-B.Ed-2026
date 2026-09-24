@@ -1,0 +1,135 @@
+### starting: npm run serve -- --port 4599
+### render-inspect  EFMP-302 Unit 4
+### route: /semester-1/efmp-302/unit-04  pages: 7  placed figures: 8
+### host: http://127.0.0.1:4599   browser: chromium 149.0.7827.0
+### started: 2026-09-24T16:08:28.322Z
+
+===== A. DESKTOP 1280x900 =====
+
+-- index: headings=5 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+-- topic-01: headings=14 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=2 vagueLinks=0 hOverflow=false
+   img /img/figures/efmp-302/unit-04/fig-U4-1.svg natural=300x133 shown=true loading=lazy alt="Table comparing a professional standard, a code of conduct and a curriculum by the questio"
+   img /img/figures/efmp-302/unit-04/fig-U4-1.dark.svg natural=0x0 shown=false loading=lazy alt="Table comparing a professional standard, a code of conduct and a curriculum by the questio"
+   img /img/figures/efmp-302/unit-04/fig-U4-2.svg natural=293x150 shown=true loading=lazy alt="Concept map of a professional standard at the centre with four branches - initial training"
+   img /img/figures/efmp-302/unit-04/fig-U4-2.dark.svg natural=0x0 shown=false loading=lazy alt="Concept map of a professional standard at the centre with four branches - initial training"
+   heading order: no skipped levels
+   advisory bare-URL link text: https://unesdoc.unesco.org/ark:/48223/pf0000372167 | https://files.eric.ed.gov/fulltext/ED530786.pdf
+
+-- topic-02: headings=13 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=2 vagueLinks=0 hOverflow=false
+   img /img/figures/efmp-302/unit-04/fig-U4-3.svg natural=281x150 shown=true loading=lazy alt="Nesting diagram of a professional standard containing knowledge, dispositions and performa"
+   img /img/figures/efmp-302/unit-04/fig-U4-3.dark.svg natural=0x0 shown=false loading=lazy alt="Nesting diagram of a professional standard containing knowledge, dispositions and performa"
+   img /img/figures/efmp-302/unit-04/fig-U4-4.svg natural=252x150 shown=true loading=lazy alt="Table listing the ten National Professional Standards for Teachers in Pakistan, each with "
+   img /img/figures/efmp-302/unit-04/fig-U4-4.dark.svg natural=0x0 shown=false loading=lazy alt="Table listing the ten National Professional Standards for Teachers in Pakistan, each with "
+   heading order: no skipped levels
+   advisory bare-URL link text: https://files.eric.ed.gov/fulltext/ED521228.pdf | https://unesdoc.unesco.org/ark:/48223/pf0000372167
+
+-- topic-03: headings=12 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=2 vagueLinks=0 hOverflow=false
+   img /img/figures/efmp-302/unit-04/fig-U4-5.svg natural=275x150 shown=true loading=lazy alt="Flowchart of a five-station self-evaluation loop - choose an indicator, collect evidence, "
+   img /img/figures/efmp-302/unit-04/fig-U4-5.dark.svg natural=0x0 shown=false loading=lazy alt="Flowchart of a five-station self-evaluation loop - choose an indicator, collect evidence, "
+   img /img/figures/efmp-302/unit-04/fig-U4-6.svg natural=300x140 shown=true loading=lazy alt="Table of evidence types against an indicator - pupil work, observation, planning documents"
+   img /img/figures/efmp-302/unit-04/fig-U4-6.dark.svg natural=0x0 shown=false loading=lazy alt="Table of evidence types against an indicator - pupil work, observation, planning documents"
+   heading order: no skipped levels
+   advisory bare-URL link text: https://files.eric.ed.gov/fulltext/ED521228.pdf | https://files.eric.ed.gov/fulltext/ED530786.pdf
+
+-- topic-04: headings=13 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=2 vagueLinks=0 hOverflow=false
+   img /img/figures/efmp-302/unit-04/fig-U4-7.svg natural=300x140 shown=true loading=lazy alt="Timeline of a teaching career marking where standards are applied - admission, certificati"
+   img /img/figures/efmp-302/unit-04/fig-U4-7.dark.svg natural=0x0 shown=false loading=lazy alt="Timeline of a teaching career marking where standards are applied - admission, certificati"
+   img /img/figures/efmp-302/unit-04/fig-U4-8.svg natural=281x150 shown=true loading=lazy alt="Diagram splitting an appraisal instrument into formative and summative halves, each with i"
+   img /img/figures/efmp-302/unit-04/fig-U4-8.dark.svg natural=0x0 shown=false loading=lazy alt="Diagram splitting an appraisal instrument into formative and summative halves, each with i"
+   heading order: no skipped levels
+   advisory bare-URL link text: https://files.eric.ed.gov/fulltext/ED530786.pdf | https://files.eric.ed.gov/fulltext/ED521228.pdf
+
+-- unit-assessment: headings=10 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+-- unit-teacher-notes: headings=7 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+===== B. NARROW 360x780 =====
+
+-- index: docHorizontalOverflow=0px tables=0 figures=0 spill=0
+
+-- topic-01: docHorizontalOverflow=0px tables=1 figures=2 spill=2
+   table[0] client=328 scroll=328 fits=true lastHeader="What a strong response d" scroller=NONE
+   figure[0] .figure client=328 scroll=900 scroller=FIGURE.figure
+   figure[1] .figure client=328 scroll=900 scroller=FIGURE.figure
+
+-- topic-02: docHorizontalOverflow=0px tables=1 figures=2 spill=2
+   table[0] client=328 scroll=328 fits=true lastHeader="What a strong response d" scroller=NONE
+   figure[0] .figure client=328 scroll=880 scroller=FIGURE.figure
+   figure[1] .figure client=328 scroll=940 scroller=FIGURE.figure
+
+-- topic-03: docHorizontalOverflow=0px tables=1 figures=2 spill=2
+   table[0] client=328 scroll=328 fits=true lastHeader="What a strong response d" scroller=NONE
+   figure[0] .figure client=328 scroll=880 scroller=FIGURE.figure
+   figure[1] .figure client=328 scroll=900 scroller=FIGURE.figure
+
+-- topic-04: docHorizontalOverflow=0px tables=1 figures=2 spill=2
+   table[0] client=328 scroll=328 fits=true lastHeader="What a strong response d" scroller=NONE
+   figure[0] .figure client=328 scroll=920 scroller=FIGURE.figure
+   figure[1] .figure client=328 scroll=880 scroller=FIGURE.figure
+
+-- unit-assessment: docHorizontalOverflow=0px tables=5 figures=0 spill=8
+   table[0] client=328 scroll=476 fits=false lastHeader="Strong (4-5)" scroller=TABLE. (client=328 scroll=476 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   table[1] client=328 scroll=532 fits=false lastHeader="Strong (4-5)" scroller=TABLE. (client=328 scroll=532 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   table[2] client=328 scroll=476 fits=false lastHeader="Strong (4-5)" scroller=TABLE. (client=328 scroll=476 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   table[3] client=328 scroll=579 fits=false lastHeader="Strong (4-5)" scroller=TABLE. (client=328 scroll=579 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   table[4] client=328 scroll=540 fits=false lastHeader="Strong (4-5)" scroller=TABLE. (client=328 scroll=540 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+
+-- unit-teacher-notes: docHorizontalOverflow=0px tables=0 figures=0 spill=0
+
+===== C. A4 PRINT EMULATION (794px) =====
+
+-- index @print: clippedElems=0 figureImgs=0 answerHeadings=[]
+
+-- topic-01 @print: clippedElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/efmp-302/unit-04/fig-U4-1.svg w=640 right=717 fits
+   printfig /img/figures/efmp-302/unit-04/fig-U4-1.dark.svg w=0 right=0 fits
+   printfig /img/figures/efmp-302/unit-04/fig-U4-2.svg w=640 right=717 fits
+   printfig /img/figures/efmp-302/unit-04/fig-U4-2.dark.svg w=0 right=0 fits
+
+-- topic-02 @print: clippedElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/efmp-302/unit-04/fig-U4-3.svg w=640 right=717 fits
+   printfig /img/figures/efmp-302/unit-04/fig-U4-3.dark.svg w=0 right=0 fits
+   printfig /img/figures/efmp-302/unit-04/fig-U4-4.svg w=640 right=717 fits
+   printfig /img/figures/efmp-302/unit-04/fig-U4-4.dark.svg w=0 right=0 fits
+
+-- topic-03 @print: clippedElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/efmp-302/unit-04/fig-U4-5.svg w=760 right=777 fits
+   printfig /img/figures/efmp-302/unit-04/fig-U4-5.dark.svg w=0 right=0 fits
+   printfig /img/figures/efmp-302/unit-04/fig-U4-6.svg w=640 right=717 fits
+   printfig /img/figures/efmp-302/unit-04/fig-U4-6.dark.svg w=0 right=0 fits
+
+-- topic-04 @print: clippedElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/efmp-302/unit-04/fig-U4-7.svg w=760 right=777 fits
+   printfig /img/figures/efmp-302/unit-04/fig-U4-7.dark.svg w=0 right=0 fits
+   printfig /img/figures/efmp-302/unit-04/fig-U4-8.svg w=640 right=717 fits
+   printfig /img/figures/efmp-302/unit-04/fig-U4-8.dark.svg w=0 right=0 fits
+
+-- unit-assessment @print: clippedElems=0 figureImgs=0 answerHeadings=["Answers and marking guidance​","MCQ answer key​","RRQ model answers and mark schemes​","ERQ rubrics​"]
+
+-- unit-teacher-notes @print: clippedElems=0 figureImgs=0 answerHeadings=["Marking the unit assessment​"]
+
+===== D. SVG TEXT GEOMETRY =====
+   fig-U4-1.light [table] viewBox=900x400 texts=32 wordmark@x=795.7 -> clean
+   fig-U4-1.dark [table] viewBox=900x400 texts=32 wordmark@x=795.7 -> clean
+   fig-U4-2.light [concept-map] viewBox=900x460 texts=19 wordmark@x=795.7 -> clean
+   fig-U4-2.dark [concept-map] viewBox=900x460 texts=19 wordmark@x=795.7 -> clean
+   fig-U4-3.light [diagram] viewBox=880x470 texts=19 wordmark@x=775.6 -> clean
+   fig-U4-3.dark [diagram] viewBox=880x470 texts=19 wordmark@x=775.6 -> clean
+   fig-U4-4.light [table] viewBox=940x560 texts=40 wordmark@x=835.7 -> clean
+   fig-U4-4.dark [table] viewBox=940x560 texts=40 wordmark@x=835.7 -> clean
+   fig-U4-5.light [flowchart] viewBox=880x480 texts=27 wordmark@x=775.6 -> clean
+   fig-U4-5.dark [flowchart] viewBox=880x480 texts=27 wordmark@x=775.6 -> clean
+   fig-U4-6.light [table] viewBox=900x420 texts=37 wordmark@x=795.7 -> clean
+   fig-U4-6.dark [table] viewBox=900x420 texts=37 wordmark@x=795.7 -> clean
+   fig-U4-7.light [timeline] viewBox=920x430 texts=32 wordmark@x=815.8 -> clean
+   fig-U4-7.dark [timeline] viewBox=920x430 texts=32 wordmark@x=815.8 -> clean
+   fig-U4-8.light [diagram] viewBox=880x470 texts=26 wordmark@x=775.6 -> clean
+   fig-U4-8.dark [diagram] viewBox=880x470 texts=26 wordmark@x=775.6 -> clean
+
+### finished: 2026-09-24T16:09:08.483Z
+### defects: 0
+### exit_code: 0

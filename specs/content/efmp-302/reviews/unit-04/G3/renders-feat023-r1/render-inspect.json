@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "course_code": "EFMP-302",
+  "unit_no": 4,
+  "locale": "en",
+  "base": "http://127.0.0.1:4599",
+  "route": "/semester-1/efmp-302/unit-04",
+  "pages": [
+    "index",
+    "topic-01",
+    "topic-02",
+    "topic-03",
+    "topic-04",
+    "unit-assessment",
+    "unit-teacher-notes"
+  ],
+  "figures": [
+    "fig-U4-1",
+    "fig-U4-2",
+    "fig-U4-3",
+    "fig-U4-4",
+    "fig-U4-5",
+    "fig-U4-6",
+    "fig-U4-7",
+    "fig-U4-8"
+  ],
+  "viewports": [
+    "1280x900",
+    "360x780",
+    "A4 794x1123 print"
+  ],
+  "defects": [],
+  "exit_code": 0,
+  "generated_at": "2026-09-24T16:09:08.484Z"
+}
