@@ -1,0 +1,50 @@
+[
+ {
+  "fig": "fig-U6-1",
+  "en": 0.509,
+  "ur": 0.488,
+  "enOffsetFromCentre": 0.009,
+  "urOffsetFromCentre": -0.012,
+  "mirrored": true
+ },
+ {
+  "fig": "fig-U6-2",
+  "en": 0.544,
+  "ur": 0.47,
+  "enOffsetFromCentre": 0.044,
+  "urOffsetFromCentre": -0.03,
+  "mirrored": true
+ },
+ {
+  "fig": "fig-U6-3",
+  "en": 0.517,
+  "ur": 0.481,
+  "enOffsetFromCentre": 0.017,
+  "urOffsetFromCentre": -0.019,
+  "mirrored": true
+ },
+ {
+  "fig": "fig-U6-4",
+  "en": 0.512,
+  "ur": 0.492,
+  "enOffsetFromCentre": 0.012,
+  "urOffsetFromCentre": -0.008,
+  "mirrored": true
+ },
+ {
+  "fig": "fig-U6-5",
+  "en": 0.505,
+  "ur": 0.498,
+  "enOffsetFromCentre": 0.005,
+  "urOffsetFromCentre": -0.002,
+  "mirrored": true
+ },
+ {
+  "fig": "fig-U6-6",
+  "en": 0.514,
+  "ur": 0.492,
+  "enOffsetFromCentre": 0.014,
+  "urOffsetFromCentre": -0.008,
+  "mirrored": true
+ }
+]

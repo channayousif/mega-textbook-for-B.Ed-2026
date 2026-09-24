@@ -1,0 +1,460 @@
+{
+  "schema_version": 1,
+  "course_code": "GQUR-300",
+  "unit_no": 3,
+  "stage": "G5",
+  "disposition": "revise",
+  "reviewer_id": "agent:g5-reviewer",
+  "author_run_id": "commit:59faad3f68b3760c693379e66dfbc5273f28bd37",
+  "reviewer_run_id": "agent-g5-gqur300-u3-run001",
+  "model": "longcat-2.0",
+  "started_at": "2026-09-23T23:05:00Z",
+  "completed_at": "2026-09-24T04:41:54Z",
+  "skill_digest": "02797f90adddd8f4bc50c6e80c6e68d8f6f0219d68d297aabcc8b5443bace5a8",
+  "rulings": {
+    "D-2026-0001": "8ff79df9af668329f6d0094a2257654f45fc545122a753b4888fb9936f402f1f"
+  },
+  "input_manifest": {
+    ".claude/agents/g5-reviewer.md": "b63596b668dd8814fc7b34d59326171f7c789b8dc4e631e30c2c19fe05f2c68a",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g5.md": "7cbdf9929e6073b71663ec8951a9a42d1e8e683af479434f8409c81002d33159",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "f1d7f063cc2c826693a3d8428fb5d3ee45455fdb7906ebc5adadee8b9a434d47",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-1/gqur-300/course-overview.mdx": "1fee7f54b53c2a1153aff7bfb976bfb1e140173767e1efee9b39d2e3af343e5c",
+    "docs/semester-1/gqur-300/unit-03/_category_.json": "36767621bfbafb63e0046d38d7ab85333938bee6b76ba4a2f6681428328fd15e",
+    "docs/semester-1/gqur-300/unit-03/index.mdx": "4c3692bcf324019f65825f29ef859cea9238fe3e16a727b62f14cbe16bd8e87b",
+    "docs/semester-1/gqur-300/unit-03/topic-01.mdx": "e1aed67e6a9572a0568e7f58fa3a012a3bde34ed9e9e311bdadebb008cecd9f5",
+    "docs/semester-1/gqur-300/unit-03/topic-02.mdx": "418c2750809d880a3eed1c1fb29e0664d2edb5e24982df0843d416243167c70b",
+    "docs/semester-1/gqur-300/unit-03/topic-03.mdx": "43f974be320212bb52b0477746dd88ca900aa2be5a31185948a459be8256db20",
+    "docs/semester-1/gqur-300/unit-03/unit-assessment.mdx": "6505110b659c229a6281139ccbbb2828eba644a55d3e71134df322d7de564466",
+    "docs/semester-1/gqur-300/unit-03/unit-teacher-notes.mdx": "cc6e4c7965daef4e7eea48a98e0090b75b1cbe1ea1ad9ea682586dd8fbb5f1eb",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/index.mdx": "4bf3b046a1ce581b35af17b031b8b5e03ca3ff1983dfe87a144ee912b90a3d63",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/topic-01.mdx": "2b3ad541247a036bfe4d680e0f51c83f6091da10010b566a96703f6d427cff60",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/topic-02.mdx": "6aff68905d39ea85de3b5e3e892593a3442f4764c86224a2050ef295e6661984",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/topic-03.mdx": "0b053a6a2de9e6b352ccdea719efd7bd2c4ea1f8f9e9995567b47975541613ca",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/unit-assessment.mdx": "8ae602b474046a031106298582b23222e63fa4157c335cfad574294ca6429432",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/unit-teacher-notes.mdx": "0b721f136707b9e90bd72448a1a709c05cb90b93cfdf37e14577271ef886502d",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "41b698f8cbbb12f4030d6893083a5c36e4a19848b5ddb86206e5ba72847b8b13",
+    "scripts/check-no-answer-keys.mjs": "f38d60e5360e0c29f2dae02001195690f3b95e0ad2d7ae1a3c03a0d09c053f0d",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "bb614c625f7bf397ce51a317bdb8901711c00fa009d4ad0a506c5096e5b9ddd2",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "77f03816f68663621059f17745109fdde9b103c555f707e0c62d5ff56d2a4cd9",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "973496faae3366d13e8cdd3ba8d68edf7bd3745bdc6928311ee03c55f24b18b2",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/gqur-300/concepts/unit-03.md": "c7b05d6f342c7c99fad49d0fe0066b0065c162f5cce9b8b85e9fbf35277b81c1",
+    "specs/content/gqur-300/content-spec.md": "e6a5a128fdf0dadf52e17030ab83db07ba57db75433fd9410752291990385a1b",
+    "specs/content/gqur-300/coverage/unit-03.md": "4bfb664c52801b816db653b725a75d3e902a034484dd9e9a55f6082b513d0c87",
+    "specs/content/gqur-300/figures/unit-03.md": "f3035ed206e7f1f0981b779f9d3405bbdbe3df99dfda934a80ca00f4e88215d1",
+    "specs/content/gqur-300/sources/texts/gula2025.md": "c1f02cf389f08236d7518c76e78786bff34982ab7e75749f240e44ba94e160dc",
+    "specs/content/gqur-300/sources/unit-03.md": "6898df3df5e3a7b0975cf9d75a5714fc56d9ba8fdeae9a72b2a97a37f194bbb9",
+    "specs/content/style-guide.md": "db96c9b33b0fb9522986462a0b519620c3c1d7602a046d7b90e638f643da4610",
+    "specs/content/terminology.csv": "ad917e28cde688eb72bd92226c2326e2d23da3da80fc53ea8c812b1a47f73337",
+    "static/img/figures/gqur-300/unit-03/fig-U3-1.dark.svg": "5f61b595a0b188d26e91c8b229e6e74f52d42e4c32ba224ee8e40b6e0d708c7c",
+    "static/img/figures/gqur-300/unit-03/fig-U3-1.svg": "fd273483aa26b70b6e134f21969fc86d96d06d1f9f10dbfc1e3f70f0379441d2",
+    "static/img/figures/gqur-300/unit-03/fig-U3-1.ur.dark.svg": "2e4b2da6143bd30425d929beb2c263d1e6b236fdec8ee05a9a41f20c3d851328",
+    "static/img/figures/gqur-300/unit-03/fig-U3-1.ur.svg": "19183bce9b106658d4c2ba582042fd7319679d14e2df719ad7a30acff56e7614",
+    "static/img/figures/gqur-300/unit-03/fig-U3-2.dark.svg": "6c534ccdfc1c267bb155265fb8b5c77dfc22f4859462b584cdc090c6303f1b3c",
+    "static/img/figures/gqur-300/unit-03/fig-U3-2.svg": "c48386dd867d833d304068fa08d8d8f946b7278f2be2b988c7b4bb2c231dc3eb",
+    "static/img/figures/gqur-300/unit-03/fig-U3-2.ur.dark.svg": "5bfdff482722a939a0498ba8334c0b1c434bb2950fbf609265a708fa47c41ab1",
+    "static/img/figures/gqur-300/unit-03/fig-U3-2.ur.svg": "0a358690508c9ad773ed3473c3e1949ca0c3dfe07d5aca2edde46c41971e9378",
+    "static/img/figures/gqur-300/unit-03/fig-U3-3.dark.svg": "38975beeab7d983dbaec6b5786c67e50ed2e0eae16c1dc40f0160d7853e429f2",
+    "static/img/figures/gqur-300/unit-03/fig-U3-3.svg": "367aa138c2a24885a7bf3c454e9a847882e85fee8a60595677932e7197f7f699",
+    "static/img/figures/gqur-300/unit-03/fig-U3-3.ur.dark.svg": "73b901d0214c83a52293a2c37f313e6653108086ddf3133e7f2c530204225dd9",
+    "static/img/figures/gqur-300/unit-03/fig-U3-3.ur.svg": "fb4b2ed9bd92c83154e42db9045ccf09dba8057519734b7e9cb4c16ca49d79cb",
+    "static/img/figures/gqur-300/unit-03/fig-U3-4.dark.svg": "19b87cca6a0852697d17fb86b846d0a48ca1de87b579545e55424695936862b5",
+    "static/img/figures/gqur-300/unit-03/fig-U3-4.svg": "9925f92fff1a5aec9a39610ef0816dbf276a3fb191a839f751eeecf01915e1a8",
+    "static/img/figures/gqur-300/unit-03/fig-U3-4.ur.dark.svg": "f9a663a0af89347a22fd47d7c96fb5d31070aec6c8746cb490002c9845cf70bc",
+    "static/img/figures/gqur-300/unit-03/fig-U3-4.ur.svg": "9d3ac4763ed34521cbd7f2cf0980339b09baba93367754e26796fd9bb7b9b027",
+    "static/img/figures/gqur-300/unit-03/fig-U3-5.dark.svg": "fbc9abad997b1fa438ebdfc6966814fa9eb79caba3e220ae28b16b791c24b915",
+    "static/img/figures/gqur-300/unit-03/fig-U3-5.svg": "22bb945539bf81e8a1866f6f5a8b223a9d88f9546e4b357673bbb1c25c6b28ea",
+    "static/img/figures/gqur-300/unit-03/fig-U3-5.ur.dark.svg": "7db9694db71b03525e52fae4d62a12a54f46d572bcd29c848b10fe06ee5597f1",
+    "static/img/figures/gqur-300/unit-03/fig-U3-5.ur.svg": "d4333612269d3927dd6155f62d9d21dab3b1196858616298d03aa605ca4463ea",
+    "static/img/figures/gqur-300/unit-03/fig-U3-6.dark.svg": "531284aa6959f0586842e318ce0e43de6caedc8471a8833cce3910fbda7a0d8f",
+    "static/img/figures/gqur-300/unit-03/fig-U3-6.svg": "75616d2e9d7b1ce8640309c62b0f9a4af437acea10806d6c54628da0bb3b8bba",
+    "static/img/figures/gqur-300/unit-03/fig-U3-6.ur.dark.svg": "f2b7969a6de618fccb6d659b22fe4c5abba413bc0ffa5721beeafcfa2a8bd1fd",
+    "static/img/figures/gqur-300/unit-03/fig-U3-6.ur.svg": "4344f4441facbc4a7865a2d461518a3358d3ef02ba6a3b4c0fc92f95baf01313"
+  },
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "fail",
+      "evidence": [
+        "Bundle verified: all 115 bound inputs recomputed identical to specs/content/gqur-300/reviews/unit-03/G5/manifest.json using the contract normalization (specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/input-binding-verification.txt); worktree HEAD 59faad3, clean tree.",
+        "G3 dependency unmet: no accepted G3 evidence exists (ADR-0019; specs/reviewers/registry.json has no enabled reviewers). Best-available context: G3 run001 advisory report (disposition revise) at specs/content/gqur-300/reviews/unit-03/G3/agent-g3-gqur300-u3-run001.json.",
+        "English digest changed since that G3 report: docs/semester-1/gqur-300/unit-03/topic-02.mdx and unit-assessment.mdx (git diff 93e6321..HEAD shows exactly the G3 advisory repairs F2/F3 applied at 78f0366). No re-review covers the repaired English; recorded as a dependency finding per the review handoff, not an abort.",
+        "Course/unit identity consistent across locales: GQUR-300 unit 3, same clo_refs (SLO:GQUR-300-1-1, SLO:GQUR-300-2-2) in all six Urdu files; course outcomes 1 (numerical and algebraic reasoning) and 2 (solve real-world quantitative problems) are taught and assessed in the Urdu mirror.",
+        "G2 context: the newest bound G2 evidence (specs/content/gqur-300/reviews/unit-03/G2/20260924T011726786Z-gates.json, commit 78f0366) predates the course-wide Urdu sweep (c61192e) that touched this unit's Urdu files; all deterministic gates were re-run fresh at HEAD by this review with exit 0."
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "pass",
+      "evidence": [
+        "Urdu Further-reading sections cite the same three sources with identical URLs/DOI (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/topic-01.mdx:136-142, topic-02.mdx:139-144, topic-03.mdx:125-131); chapter titles translated (باب 2: الجبرا کی زبان), citation data unchanged.",
+        "The Gula and Lovric (2025) claim (crossing between concrete and abstract thinking) is preserved without distortion at i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/topic-01.mdx:49-51.",
+        "The NCC curriculum claim is preserved at i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/topic-01.mdx:51-54; minor drift: \"(NCC, n.d.)\" becomes \"(NCC)\".",
+        "U3-03 (linear inequalities) is declared no-external-source in specs/content/gqur-300/sources/unit-03.md with attempts, date (2026-09-24) and escalation G-2026-29; per D-2026-0001 this does not by itself block (ruling cited in rulings).",
+        "No source claim is fabricated, dropped or strengthened in the Urdu mirror."
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "fail",
+      "evidence": [
+        "All five sub-topics present in Urdu: U3-01/U3-04 (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/topic-01.mdx), U3-02/U3-03 (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/topic-02.mdx), U3-05 (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/topic-03.mdx); heading counts match the English exactly per file (5/5, 12/12, 12/12, 11/11, 10/10, 8/8).",
+        "U3-03 (linear inequalities) is not validly assessed in Urdu: ERQ-4's Urdu stem omits the 45-rupee unit price, so the item the sub-topic's assessment rests on is unsolvable as written (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/unit-assessment.mdx:132-135).",
+        "Both course outcomes are taught and assessed in Urdu across the three topics and the 10/10/5 bank."
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "fail",
+      "evidence": [
+        "All 25 Urdu items answered independently before reading the key (specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/assessment-independent-working.txt); the English key was itself re-derived and is correct for all 25 items.",
+        "10/10 MCQ keys match the English (a,b,b,b,b,a,b,b,b,b); options in the same a-d order; no option leaks an answer; no item is lowered to recall.",
+        "RRQ model answers and mark schemes equivalent, including RRQ-8 which correctly tracks the G3-repaired English (substitution check belongs to the decide step, i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/unit-assessment.mdx:172-174).",
+        "ERQ rubric weights identical (7/7/7/8/10) and Analyze/Evaluate tags preserved; ERQ-4 is the exception: its Urdu stem cannot produce the rubric's 45b <= 1,700 (blocking finding)."
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "pass",
+      "evidence": [
+        "Urdu alt text present and faithful on all six figures (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/topic-01.mdx:24,58, i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/topic-02.mdx:25,65, i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/topic-03.mdx:25,42); fig-U3-2's Urdu alt additionally names the five vocabulary terms (benign addition).",
+        "All six .ur.svg and .ur.dark.svg variants committed; zero zero-size and zero out-of-bounds text nodes in the Urdu variants (figure-measurements.txt); dark variants carry the same labels; check:figures exit 0.",
+        "Pages render with dir=rtl and the Noto Nastaliq Urdu webfont loaded (fonts.check true, woff2 200); no horizontal overflow and zero clipped elements at 1280px and 360px on all six pages (render-measurements.txt).",
+        "A4 print emulation captured for all six pages (print-a4-*.png); advisory: figure labels scale to 3.3-4.1 CSS px at the 360px viewport (figure-scale.txt), the same systemic figure-design condition the Unit 1 G5 run flagged; it affects the English variants equally."
+      ]
+    },
+    {
+      "id": "completeness",
+      "status": "fail",
+      "evidence": [
+        "Structural parity complete: every English section has an Urdu counterpart in all six files; the Urdu index carries the required key_terms block (8 terms, i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/index.mdx:12-28), the intentional G4 structural addition.",
+        "Material omission: the topic-02 worked-example setup omits \"at most 2,000 rupees\" (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/topic-02.mdx:76-77 vs docs/semester-1/gqur-300/unit-03/topic-02.mdx:78-80); the 2,000 first appears mid-solution at i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/topic-02.mdx:78.",
+        "Smaller omissions recorded in specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/bilingual-comparison.txt: Amna's \"so 3 plus 38 more\" (topic-01:29-30), \"(NCC, n.d.)\" (topic-01:52), \"for a function\" (topic-01:122), \"safety\" in \"safety check\" (topic-02:33), \"for b boxes\" (topic-02:68), \"hover or tap\" (index:75-76), \"substitution\" in the bus-task check (topic-02:129, assessment ERQ-2), \"of triangles / can carry\" compressions (assessment ERQ-1).",
+        "Benign additions (no repair needed): fig-U3-2 Urdu alt names the five terms; fig-U3-5.ur.svg adds the four strategy steps in parentheses."
+      ]
+    },
+    {
+      "id": "semantics",
+      "status": "fail",
+      "evidence": [
+        "Blocking: ERQ-4 stem omits the 45-rupee unit price (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/unit-assessment.mdx:132-135 vs docs/semester-1/gqur-300/unit-03/unit-assessment.mdx:138-139).",
+        "Blocking: topic-02 worked example omits the 2,000-rupee budget from the setup (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/topic-02.mdx:76-77).",
+        "Blocking: arithmetic error \"38 ضرب 45 = 1,770\" (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/topic-02.mdx:80-81); 38 x 45 = 1,710 (docs/semester-1/gqur-300/unit-03/topic-02.mdx:83; the Urdu ERQ-4 rubric at unit-assessment.mdx:194 has the correct 1,710).",
+        "Blocking: \"Defend one answer to the class\" rendered as \"ایک جواب کلاس کے سامنے بچائیں\" (\"save one answer\", i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/topic-03.mdx:74 vs docs/semester-1/gqur-300/unit-03/topic-03.mdx:75-76).",
+        "Advisory shifts: modal force \"a teacher must walk\" -> \"چاہتی ہے\" (topic-01:53-54); \"round in the direction the situation demands\" -> \"وہاں گول کرنا\" (index:51-52, topic-02:108-109); \"sign slips\" -> \"نشانیاں\" (topic-02:55); tense shift \"settled\" -> present (topic-03:36)."
+      ]
+    },
+    {
+      "id": "terminology",
+      "status": "fail",
+      "evidence": [
+        "Banked terms correctly applied: معیارِ جانچ (Rubric) in all rubric contexts, گروہی کام (Group Work) at teacher-notes:61, حکمتِ تدریس (Teaching Strategy) heading at teacher-notes:28, خود جائزہ (Self-Assessment) in all three topics; ٹیوٹر transliteration applied; no residual ربرک or خود جانچ.",
+        "Residual of the swept گروپ class: \"گروپ اسائنمنٹ\" at i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/unit-teacher-notes.mdx:61 (گروہی اسائنمنٹ expected).",
+        "Internal inconsistency: index key_terms \"ترازو ماڈل\" (Balance model) vs glossary/body \"ترازو\" alone (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/topic-02.mdx:42-44).",
+        "Systematic calque \"قیمت\" (price) for \"value (of a variable)\" at topic-01:63, topic-01:104, topic-02:41-42, unit-assessment:112-113 and fig-U3-2.ur.svg; standard term قدر.",
+        "Unbanked coinages flagged for G5 confirmation in specs/content/gqur-300/concepts/unit-03.md: confirmed acceptable (متغیر، نمونہ، تسلسل، عددِ ضرب، رکن، لکیری مساوات، لکیری نابرابری); disputed (اثر for expression; بڑھوٹر for growth). Owner decisions required; survivors to be promoted into terminology.csv."
+      ]
+    },
+    {
+      "id": "register",
+      "status": "fail",
+      "evidence": [
+        "Overall the prose is academic-plain (درسی مگر عام فہم) and understandable for an entering B.Ed student; the reader is addressed in the feminine throughout, consistent with GQUR-300 Units 1-2 where the same policy is already an open owner question (carried over, not re-raised as new).",
+        "Non-words: \"بڑھوٹر\" (growth; topic-01:48,102, unit-assessment:22) and \"بنکھیں\" (draw; topic-01:85).",
+        "Misspellings: \"قائدوں\" for قاعدوں (topic-01:102), \"نابرابلی\" for نابرابری (unit-assessment:124), \"موازنے\" for موازنہ (teacher-notes:75), \"ممکنے چھوٹے چھپائی\" for ممکنہ چھوٹی چھپائی (topic-03:122, unit-assessment:191).",
+        "Grammar slips: \"کر سکنے گیں\" (index:45), \"کی عددی کام\" for کا (index:37), \"ایک ایسے کل\" (topic-02:121), \"خرچ اثر\" for خرچ کا اثر (topic-03:78), \"کچھ کچھ کے برابر\" (topic-01:68).",
+        "Latin \"substitution\" (index:49, topic-02:25,93,113, unit-assessment:104,110,134,164,172) and \"brainstorming\" (teacher-notes:30) kept in Latin script, consistent within the unit; the Bloom tags and MCQ/RRQ/ERQ labels are kept in English in both locales (same advisory as the Unit 1 G5)."
+      ]
+    },
+    {
+      "id": "rtl",
+      "status": "pass",
+      "evidence": [
+        "dir=rtl on all six Urdu pages; computed body font resolves to \"Noto Nastaliq Urdu\" and document.fonts.check is true with the woff2 fetched 200 (font-figure-scale.txt).",
+        "No horizontal overflow and zero viewport-clipped elements at 1280x900 and 360x740 on all six pages (render-measurements.txt); A4 print emulation captured (print-a4-*.png).",
+        "RTL table order verified inside the SVG tables: fig-U3-2.ur.svg headers اصطلاح x=630 > مطلب x=360 > مثال x=140; fig-U3-6.ur.svg روزمرہ جملہ x=550 > الجبرا x=180 (term/phrase column rightmost).",
+        "Embedded Latin (2t + 1, 60 + 15k = 195, x > 4, -2x < -8, k = 9, substitution) is present in the RTL flow in prose, figures and alt text; western numerals per course convention; no wrapping or clipping defects found.",
+        "Limitation recorded: this review host returns no visual content for image reads (verified with a minimal valid PNG), so inspection is DOM-, geometry-, font-state- and pixel-ink-based; all 24 screenshots are saved under renders-agent-g5-gqur300-u3-run001/ for human eyeballing (render-review.txt)."
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "[assessment] ERQ-4 stem omits the unit price. EN docs/semester-1/gqur-300/unit-03/unit-assessment.mdx:138-139 \"geometry boxes costing 45 rupees each\"; UR i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/unit-assessment.mdx:132-135 states the 2,000-rupee cap and the 300-rupee debt but never the 45-rupee price, so 45b <= 1,700 cannot be derived from the Urdu text while the rubric (UR:193-196) still expects it. The Urdu item is unsolvable as written. Repair: add \"45 روپے فی ڈبہ\" to the stem."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "[semantics/completeness] Topic-02 worked example omits the budget constraint. EN docs/semester-1/gqur-300/unit-03/topic-02.mdx:78-80 \"A school can spend at most 2,000 rupees on geometry boxes...\"; UR i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/topic-02.mdx:76-77 has only \"can buy geometry boxes at 45 rupees per box\" plus the 300-rupee debt; the 2,000 first appears mid-solution at UR:78 (\"ڈبوں کے لیے دستیاب: 2,000 - 300 = 1,700\"). A reader of the Urdu alone cannot reconstruct the problem. Repair: add \"زیادہ سے زیادہ 2,000 روپے خرچ کر سکتا ہے\" to the setup (the assessment's ERQ-4 UR stem has this part right)."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "[semantics] Arithmetic error introduced in translation. UR i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/topic-02.mdx:80-81 \"38 ضرب 45 = 1,770\"; 38 x 45 = 1,710. EN docs/semester-1/gqur-300/unit-03/topic-02.mdx:83 says 1,710 and the Urdu ERQ-4 rubric (i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/unit-assessment.mdx:194) also says 1,710, confirming the topic-02 figure is drift. Repair: 1,770 -> 1,710."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "[semantics] Wrong verb corrupts an activity step. EN docs/semester-1/gqur-300/unit-03/topic-03.mdx:75-76 \"Defend one answer to the class\"; UR i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/topic-03.mdx:74 \"ایک جواب کلاس کے سامنے بچائیں\" (\"save one answer before the class\") - بچانا means save, the needed verb is دفاع کرنا, which the teacher notes use correctly at i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/unit-teacher-notes.mdx:63. The rate-card clinic's capstone step is unperformable as written. Repair: \"کلاس کے سامنے ایک جواب کا دفاع کریں\"."
+    },
+    {
+      "severity": "uncertain",
+      "resolved": false,
+      "message": "[authority] G3 dependency unmet. No accepted G3 evidence exists in the registry (ADR-0019; agent certification blocked). Best-available: the G3 run001 advisory report (disposition revise) plus the English inputs bound in this manifest, which are the comparison base used. The English digest has changed since that G3 report (topic-02.mdx, unit-assessment.mdx - exactly the G3 advisory repairs applied at 78f0366, verified by git diff 93e6321..HEAD); no re-review covers the repaired English. The Urdu tracks the repaired English (RRQ-8 model and the 150-rupee fare example both match). This report is advisory only; a pass at G5 would additionally require an accepted G3 report for the current English inputs."
+    },
+    {
+      "severity": "uncertain",
+      "resolved": false,
+      "message": "[terminology] Owner decisions required on unbanked math terms (specs/content/gqur-300/concepts/unit-03.md lists them with a G5 flag; none are in terminology.csv). Confirmed acceptable: متغیر (variable), نمونہ (pattern), تسلسل (sequence), عددِ ضرب (coefficient), رکن (term), لکیری مساوات/نابرابری (linear equation/inequality), ترازو (balance). Disputed: (a) اثر for \"expression\" - اثر ordinarily means effect/impact and the standard Pakistani textbook term is الجبرائی عبارت; used consistently (index key_terms, all topics, assessment, fig-U3-2) so a one-time owner ruling can settle it; (b) بڑھوٹر for \"growth\" - not a dictionary word, نمو or بڑھاؤ is standard; (c) قیمت for \"value (of a variable)\" - reads as price in a unit full of rupee amounts, standard term قدر; (d) index key_terms \"ترازو ماڈل\" vs topic-02 body \"ترازو\" - pick one form. Survivors should be promoted into specs/content/terminology.csv per the concepts table; the bank was not edited by this review."
+    },
+    {
+      "severity": "uncertain",
+      "resolved": false,
+      "message": "[register] Reader-gender policy carried over from GQUR-300 Units 1-2 (owner ruling still pending there): the Urdu addresses the reader exclusively in the feminine (index:45 \"کر سکنے گیں\"; checklists \"سکتی ہوں\"; topic-03:64 \"دیکھ لیتی ہیں\"). Consistent across this unit and with Units 1-2, so not re-raised as a new Unit 3 defect; the pending ruling covers all three units. Note index:45 \"کر سکنے گیں\" is also ungrammatical in any policy (should be \"کر سکیں گیں\")."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "[semantics] Teacher-notes referent error on a swept line. EN docs/semester-1/gqur-300/unit-03/unit-teacher-notes.mdx:32-33 \"the tutor circulates while pairs trade equations\" (the tutor = the notes' reader); UR i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/unit-teacher-notes.mdx:32-33 \"آپ کے ٹیوٹر جوڑیوں کے بیچ گھومتے رہیں\" (\"your tutor keeps circulating\") - the sweep replaced the bare Latin \"tutors\" here with \"آپ کے ٹیوٹر\", cementing a broken point of view, and \"while pairs trade equations\" is dropped. Repair: \"آپ جوڑیوں کے بیچ گھومتے رہیں جبکہ جوڑیاں مساواتیں آپس میں بدلیں\"."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "[terminology] Residual of the swept گروپ defect class: \"گروپ اسائنمنٹ\" at i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-03/unit-teacher-notes.mdx:61 (EN \"a group assignment\") where the established form is گروہی (banked Group Work = گروہی کام applied on the same line). Repair: گروہی اسائنمنٹ."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "[register] Word-level defects, each a one-word repair: بڑھوٹر -> نمو/بڑھاؤ (topic-01:48,102; unit-assessment:22; also part of the terminology ruling), بنکھیں -> کھینچیں (topic-01:85), قائدوں -> قاعدوں (topic-01:102), نابرابلی -> نابرابری (unit-assessment:124), موازنے -> موازنہ (teacher-notes:75), ممکنے چھوٹے چھپائی -> ممکنہ چھوٹی چھپائی (topic-03:122; unit-assessment:191), کر سکنے گیں -> کر سکیں گیں (index:45), کی عددی کام -> کا عددی کام (index:37), ایک ایسے کل -> ایسا کل (topic-02:121), خرچ اثر -> خرچ کا اثر (topic-03:78), کچھ کچھ کے برابر -> کچھ چیز کچھ چیز کے برابر (topic-01:68), استادانی -> استانی (topic-01:28)."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "[semantics] Small omissions and modal shifts to tighten at the human pass: Amna's \"so 3 plus 38 more\" dropped (topic-01:29-30); \"(NCC, n.d.)\" -> \"(NCC)\" (topic-01:52); \"for a function\" dropped (topic-01:122); \"safety check\" -> جانچ (topic-02:33); \"for b boxes\" dropped (topic-02:68); \"hover or tap them\" -> \"ان پر جائیں\" (index:75-76); \"substitution check\" loses \"substitution\" in the bus task (topic-02:129) and assessment ERQ-2 (UR:125-126) though kept in ERQ-1/ERQ-4; ERQ-1 compresses \"largest whole number of triangles a 70-metre ribbon can carry\" to \"70 میٹر ربن کی سب سے بڑی پوری تعداد\" (unit-assessment:121-122); \"a teacher must walk\" -> \"چاہتی ہے\" wants-to (topic-01:53-54); \"round in the direction the situation demands\" -> \"وہاں گول کرنا\" round-where (index:51-52, topic-02:108-109); \"sign slips\" -> \"نشانیاں\" (topic-02:55); \"a rule plus a known total\" -> \"قاعدہ بمقابلہ معلوم کل\" rule-versus-total (index:39); gender mismatch \"ایک تربیتی طالبہ، مجاہد\" - طالبہ is feminine, Amjad male (topic-03:29; use طالبِ علم)."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "[rtl] Figure label size at the narrow viewport: the six figures render 328px wide at 360px, scaling their 12-15px SVG labels to 3.3-4.1 CSS px - below comfortable reading size, and Nastaliq stacking worsens it (figure-scale.txt). Same systemic figure-design condition the Unit 1 G5 run flagged (~5.5 CSS px there); it affects the English variants equally, so it is not introduced by the translation. No clipping or out-of-bounds text was found in the Urdu variants."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "[register] Latin technical terms left in Urdu prose: \"substitution\" (index:49; topic-02:25,93,113; unit-assessment:104,110,134,164,172) and \"brainstorming\" (teacher-notes:30), plus established transliterations (فلو چارٹ، ریٹ کارڈ، فلیٹ شرح، سیٹ اپ، کاؤنٹر). Consistent within the unit; the Unit 1 G5 already carries the owner question on keeping Bloom tags and bank labels in English, and these belong in the same ruling."
+    },
+    {
+      "severity": "advisory",
+      "resolved": true,
+      "message": "RESOLVED - INPUT BINDING VERIFIED. All 115 bound inputs recomputed identical to specs/content/gqur-300/reviews/unit-03/G5/manifest.json under the contract normalization (translation_status lifecycle lines; content-spec bound as the ADR-0027 Unit-3 slice) at worktree HEAD 59faad3, clean tree (specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/input-binding-verification.txt). A raw-byte check differs on exactly the 13 normalized paths, as expected."
+    },
+    {
+      "severity": "advisory",
+      "resolved": true,
+      "message": "RESOLVED - INDEPENDENCE. This session did not author or translate any reviewed byte: the unit was authored at fe83157, translated at fe16a05, G3-repaired at 78f0366 and Urdu-swept at c61192e, all before this fresh session started from a clean worktree at 59faad3."
+    },
+    {
+      "severity": "advisory",
+      "resolved": true,
+      "message": "RESOLVED - SWEEP VERIFICATION. The parent's course-wide sweep holds in Unit 3: ٹیوٹر transliteration applied (5 loci, no residual Latin \"tutors\"), معیارِ جانچ for rubric in all four rubric contexts, گروہی کام at teacher-notes:61, حکمتِ تدریس heading at teacher-notes:28, خود جائزہ in all three checklists, and the key_terms block present in the UR index (8 terms). Two residuals of the swept classes are reported separately (گروپ اسائنمنٹ; the آپ کے ٹیوٹر referent on a swept line)."
+    },
+    {
+      "severity": "advisory",
+      "resolved": true,
+      "message": "RESOLVED - RENDER ACCESS. Production build of both locales (exit 0), served locally, all six Urdu routes 200; desktop 1280x900, narrow 360x740 (dsf 2) and A4 print 794x1123 captured for all six pages plus the six standalone .ur.svg variants (24 screenshots). Nastaliq webfont confirmed loaded; no overflow or clipping. Host limitation (no image display, verified with a minimal valid PNG) recorded in render-review.txt; screenshots saved for human eyeballing."
+    }
+  ],
+  "commands": [
+    {
+      "name": "verify-input-manifest",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/input-binding-verification.txt"
+    },
+    {
+      "name": "bilingual-comparison",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/bilingual-comparison.txt"
+    },
+    {
+      "name": "assessment-independent-working",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/assessment-independent-working.txt"
+    },
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/validate-content.txt"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/check-depth-gate.txt"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/check-figures.txt"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/check-no-em-dash.txt"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/check-no-answer-keys.txt"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/check-docs-sync.txt"
+    },
+    {
+      "name": "check:pipeline-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/check-pipeline-gate.txt"
+    },
+    {
+      "name": "check:concept-graph",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/check-concept-graph.txt"
+    },
+    {
+      "name": "check:bloom-bands",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/check-bloom-bands.txt"
+    },
+    {
+      "name": "build",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/build.txt"
+    },
+    {
+      "name": "serve",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/serve.txt"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/render-review.txt"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/assessment-independent-working.txt": "d720f00d2f633765e285b516aeb429fe269a7f24aaf71bd8eaf58558665e42ef",
+    "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/bilingual-comparison.txt": "b3a3bc4fd72e612867dd7791e445a115ff57fafe5272dc5d52f01de02697f9ac",
+    "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/build.txt": "a583afeebd36849643f330255356471399aadd494fbdec3850c2bb45c16194f9",
+    "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/check-bloom-bands.txt": "7db7ddf823772832608f8ac541154d10b71485355f41d770a7822574d87e3b23",
+    "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/check-concept-graph.txt": "489b5f2c09d24d15206c56f4f092cee19b9f6c4fa91d61bae33abf82b46fba8a",
+    "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/check-depth-gate.txt": "15021f8f88122b596e67cfd48c2ff282fde912e1b86bb03c2137bcf9d8e062fd",
+    "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/check-docs-sync.txt": "cbc9f6e4b0b674cb49e2d9b795d81ed78f23dc431cba1130e4d64cf6d0bed749",
+    "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/check-figures.txt": "54a388cb9954b9d2f07f84e5385ac0003b94a6a54023abb188e864346958b04f",
+    "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/check-no-answer-keys.txt": "b393a0a314f24cdcddad68d5c53018b9909412f1af57c9739a7616db2903a304",
+    "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/check-no-em-dash.txt": "00405490c649d998b589b23505029de9134497966b02ff9ccefb1075aa414dd3",
+    "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/check-pipeline-gate.txt": "362c9e356ac10a4f2c75e335049c2ec449c0be23ab7941aa2749f0670b2abd9b",
+    "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/figure-measurements.txt": "5e64a7659fc8f0fc66d1f88f9c7f518e97ad8fa988c1f08eb968aba573ba904e",
+    "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/figure-scale.mjs": "eb8ae2d0db1cc57d74a15b4540c8d24bc83ce449e5c492e92e12112de0c9a04b",
+    "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/figure-scale.txt": "a29aacfcf35ea49bd9fec9971cd7816312329e03456b7741fa5e3e2432786a68",
+    "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/font-figure-scale.mjs": "a4b84b6f4ada02050b5b7699388e39673c2bfab155dc13baf10328c956207f65",
+    "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/font-figure-scale.txt": "3f8af19514c78cecf379166c17d2d72ac42a01fcaf4c49910137142228bb0662",
+    "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/input-binding-verification.txt": "2af1126d013e630a8e05abe9655dda836bdff094b9449ea9025be3f1720008d8",
+    "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/pixel-ink-analysis.txt": "7a62114adf0e54d1f2e3272331bdc6da23c5c11e0761213b43efdf20c4992412",
+    "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/pixel-ink.mjs": "e684d0eaa28e5810214f826c7b3849607920ffce79ad73215ba724d1e9b6760a",
+    "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/render-figures.mjs": "f77af25317f1c48122c9f8ae29a1e64358dc25cdfe07b90aac2455840cd77df1",
+    "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/render-inspect.mjs": "10bf5146a35f69e277bd59aa99897100c57622d9cef5b5121da1e6ce026c0a04",
+    "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/render-measure.mjs": "15fd297d13ecd6d57bd4bdb4bdcde9c829a5478964f2e3b743297a3fb63feccb",
+    "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/render-measurements.txt": "706287c4f4c5378ed54b79f4603d7974518bd8d54a930705bad7acaeada88629",
+    "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/render-review.txt": "109c57b87c2b4bdbdb584a2e36bc487bfdff3dfc8bea976be02b391dc2c8a6b6",
+    "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/serve.txt": "3075a931a48b593159ac18f3b15820318bb5b8aea4177fde5ae762f642d1ff3e",
+    "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/validate-content.txt": "5b3153a9d41a11051bff1d2f0396cf26eaaf00ae79e3b894c202823645c0e6a6",
+    "specs/content/gqur-300/reviews/unit-03/G5/logs-agent-g5-gqur300-u3-run001/write-report.mjs": "2e62c18908595017ac52705eb8833be3315c4d86909286737264e17da08d38ad",
+    "specs/content/gqur-300/reviews/unit-03/G5/renders-agent-g5-gqur300-u3-run001/desktop-index.png": "8925f9576561ae70b17658e60807ba355d04462429673d75acb8151733b4bc38",
+    "specs/content/gqur-300/reviews/unit-03/G5/renders-agent-g5-gqur300-u3-run001/desktop-topic-01.png": "3991d54dd1107fd39245785d1f68e693858e8aea2363806ca439fb81db2a14d8",
+    "specs/content/gqur-300/reviews/unit-03/G5/renders-agent-g5-gqur300-u3-run001/desktop-topic-02.png": "be4db6f96b6a8d67e4bbf8d52475b863da1c5590dba18ba765b6967777803203",
+    "specs/content/gqur-300/reviews/unit-03/G5/renders-agent-g5-gqur300-u3-run001/desktop-topic-03.png": "519ea20a31ee5915cd59365edeae80b9c457ae5deeb933f653518b668a681232",
+    "specs/content/gqur-300/reviews/unit-03/G5/renders-agent-g5-gqur300-u3-run001/desktop-unit-assessment.png": "538768d5109b9667c3c1268fcad73ca2a676e9250c8e352955da837856c81229",
+    "specs/content/gqur-300/reviews/unit-03/G5/renders-agent-g5-gqur300-u3-run001/desktop-unit-teacher-notes.png": "fa6cf3313abd0da7b85837b1cc010163bbb89deee0cd0185f2224f2f23d187aa",
+    "specs/content/gqur-300/reviews/unit-03/G5/renders-agent-g5-gqur300-u3-run001/figure-fig-U3-1-ur.png": "b63f365de07fc98b5abd108492b1c15afd2dd5dafd8a0cbe23ef7bdc0ac239ba",
+    "specs/content/gqur-300/reviews/unit-03/G5/renders-agent-g5-gqur300-u3-run001/figure-fig-U3-2-ur.png": "1ddba58be9472c80a87c34fc53034ed8d38e6ce0c34539969b49c5905a2b60ca",
+    "specs/content/gqur-300/reviews/unit-03/G5/renders-agent-g5-gqur300-u3-run001/figure-fig-U3-3-ur.png": "594268f4b758e59beb522b19e3b18566adee7285ca789eb6e369ee9d6c47e338",
+    "specs/content/gqur-300/reviews/unit-03/G5/renders-agent-g5-gqur300-u3-run001/figure-fig-U3-4-ur.png": "39107d5f371240d242082fca53fd4f4ccc596024d6ee963dafe8d6bbed1b20e2",
+    "specs/content/gqur-300/reviews/unit-03/G5/renders-agent-g5-gqur300-u3-run001/figure-fig-U3-5-ur.png": "5b1c3d220ce3592d6fe29d22d13127169a924dd4104f8bad27a9fa380f70eac7",
+    "specs/content/gqur-300/reviews/unit-03/G5/renders-agent-g5-gqur300-u3-run001/figure-fig-U3-6-ur.png": "aa28fc5461268045f40da6159854eb230f1b6c2466b0bc57c64bd348e5e4cdb8",
+    "specs/content/gqur-300/reviews/unit-03/G5/renders-agent-g5-gqur300-u3-run001/narrow-index.png": "78c0952cd656c67b36c2452038a1465d9a4102f42403ac02e8336bfd030e55b3",
+    "specs/content/gqur-300/reviews/unit-03/G5/renders-agent-g5-gqur300-u3-run001/narrow-topic-01.png": "9de2acad4b62772bcaed0cca858dba93704cde8cca7059bf33bab98d5910ce73",
+    "specs/content/gqur-300/reviews/unit-03/G5/renders-agent-g5-gqur300-u3-run001/narrow-topic-02.png": "2e01a15dd71d0d4308d50bade056082f9eb2200030308e92d05f6f398d3f065f",
+    "specs/content/gqur-300/reviews/unit-03/G5/renders-agent-g5-gqur300-u3-run001/narrow-topic-03.png": "86e744387c85835e247f29509e9fecfaf71a70df1fde4134f35316ae2b18332f",
+    "specs/content/gqur-300/reviews/unit-03/G5/renders-agent-g5-gqur300-u3-run001/narrow-unit-assessment.png": "d4bde3df67fd9c115d530805c22c00c2f7ba65904f38ce10f86b94d241e743e1",
+    "specs/content/gqur-300/reviews/unit-03/G5/renders-agent-g5-gqur300-u3-run001/narrow-unit-teacher-notes.png": "760a99647299d00725d32fcc938d42cd5a978d57cea006a3c174024bf9303090",
+    "specs/content/gqur-300/reviews/unit-03/G5/renders-agent-g5-gqur300-u3-run001/print-a4-index.png": "6d8c5b010a246d728bf74ba3a81c2d4788a6dd1caf0ea47d57dcaabb7b6f8197",
+    "specs/content/gqur-300/reviews/unit-03/G5/renders-agent-g5-gqur300-u3-run001/print-a4-topic-01.png": "de5794fc8dd2eb87c1a4cb66b47ed6ec5cd9cb0d57dd77ff58a294db60681e4f",
+    "specs/content/gqur-300/reviews/unit-03/G5/renders-agent-g5-gqur300-u3-run001/print-a4-topic-02.png": "ee893b6a67894a83d59f1064defb397da86929dbc97c245bebd9a51277f75edc",
+    "specs/content/gqur-300/reviews/unit-03/G5/renders-agent-g5-gqur300-u3-run001/print-a4-topic-03.png": "32a9f6214aa4c3606e9fdf92b9271aec994113c12d4790b826dff49257146fef",
+    "specs/content/gqur-300/reviews/unit-03/G5/renders-agent-g5-gqur300-u3-run001/print-a4-unit-assessment.png": "fcc55c4035d6723d92919729914e441f606a065aace6ff7ef7518d39f2baadc2",
+    "specs/content/gqur-300/reviews/unit-03/G5/renders-agent-g5-gqur300-u3-run001/print-a4-unit-teacher-notes.png": "82a309086e66035553bc1f26b4082879c014faa75e6474b26cac72363a98908b"
+  },
+  "summary": "Advisory G5 Urdu review of GQUR-300 Unit 3 (Algebraic Reasoning) at commit 59faad3; ADVISORY ONLY under ADR-0019 - no tracker row, sign-off or status change follows from this report. All 115 bound inputs verified. The six-file Urdu mirror is structurally complete (heading parity exact, key_terms present), the sweep fixes from Units 1-2 hold, all 25 assessment items were independently answered (10/10 MCQ keys match, no leakage, no lowered demand), the .ur.svg variants are correctly mirrored for RTL with correct table order, and everything renders cleanly at desktop, 360px and A4 print with the Nastaliq webfont loaded. Four blocking defects require repair before this unit could pass: the ERQ-4 stem omits the 45-rupee unit price (item unsolvable in Urdu), the topic-02 worked example omits the 2,000-rupee budget from its setup, an arithmetic error (38 x 45 given as 1,770 instead of 1,710), and \"Defend one answer\" rendered as \"save one answer\" (بچائیں). Terminology needs owner rulings (اثر for expression, بڑھوٹر for growth, قیمت for value, ترازو vs ترازو ماڈل) with the unbanked coinage set confirmed or promoted per the concepts table. Disposition: revise.",
+  "notes": "Severity vocabulary follows the evidence contract (blocking/uncertain/advisory); \"blocking\" means must-repair-before-pass. The G3 stage remains advisory (ADR-0019) and no accepted G3 evidence exists, so this G5 cannot certify anything even after repairs; a fresh G5 attempt would need a new prepared manifest and a fresh reviewer session. The deterministic parity gates fire only at translation_status: reviewed, so the structural parity gate is dormant at draft (check-pipeline-gate.txt lists this unit as gate-checked); no translation_status value was changed by this review. This review did not edit unit prose, the terminology bank, policy, tracker or any prior report, and did not run review-evidence.mjs accept."
+}

@@ -978,3 +978,510 @@ Recorded here so the boundary stays visible as the log grows:
     no gate reads them.
   - Does not approve any unit's English review (G3) or Urdu translation (G5). Certifies no
     content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
+## D-2026-0040 - GQUR-300 intake: identity, partition, coverage, outcomes, blueprint, structure, residue approved; readings escalated
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** GQUR-300 only. Settles identity, the six-unit partition, the sub-topic coverage of all
+  six checklists, the CLO traces, the assessment blueprints, structural conformance, and the absence
+  of decision residue. Does **not** settle the reading list's resolvability (`G-2026-28`).
+- **Decided by:** agent:evaluator, 2026-09-23
+- **Decision:**
+  1. **Identity.** GQUR-300, "Quantitative Reasoning-I", **3 (3-0)** credit hours, Semester 1,
+     category General Education, bilingual by default, as `catalog/courses.json` records it in its
+     Semester 1 group. The guide gives the code at `1st 2026.txt:546`, the title
+     "Quantitative Reasoning-1(Maths)" at `:549`, "Semester : 1st" at `:552`, and credit hours as a
+     bare total "3" at `:554` with no split. The revised board Scheme (final authority) gives
+     `GQUR-300 / Quantitative Reasoning-1 (Math) / 3(3-0) / General Education` at
+     `B.Ed 4 Year 2026 revised after board.txt:18-24`, in its Semester I block. The title variants
+     ("1" vs "I", "Maths" vs "Math", the parenthetical dropped in the catalog) are typographic, the
+     same posture as `D-2026-0006`'s ampersand ruling; the guide's total and the Scheme's split do
+     not contradict each other, which is the `G-2026-02`/`G-2026-05` posture. **There is no Article
+     II.3 conflict to escalate.** The departmental variant
+     `.specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx` sits in the bound bundle;
+     `D-2026-0003` (confirmed, corpus-wide) settles that folder as superseded provenance-only, and
+     the spec cites only the Faculty guide, so nothing new is in conflict. The catalog entry omits
+     `bilingual`, which the repo's `!== false` convention reads as bilingual (GENG-300/GENG-301 are
+     the explicit opt-outs), consistent with the spec's full-Urdu-scope claim and its degree-track
+     placement.
+  2. **Partition follows the guide.** The guide numbers six units at `1st 2026.txt:577`, `:584`,
+     `:591`, `:598`, `:620`, `:629` under its own titles; the spec carries exactly those six units
+     under those titles. The guide carries **no week table**; the spec's `## Week schedule` is a
+     derived distribution **clearly labelled as derived with its basis stated**
+     (`content-spec.md:89-90`, and the "(derived)" tag on every unit's weeks line), which is the
+     form `D-2026-0012` (confirmed, corpus-wide) permits. The 16-week term and the 3/3/3/2/3/2
+     distribution are approved **as to form** on the `D-2026-0012` footing, the same disposition
+     `D-2026-0019` gave GENG-300's derived 16-week schedule; the calendar substance remains the
+     spec's construction, not the guide's, and is recorded as such in Limits.
+  3. **Coverage is complete and adds nothing.** The guide enumerates **24** sub-topic bullets, four
+     per unit (`:579-582`, `:586-589`, `:593-596`, `:600`/`:601`/`:617`/`:618`,
+     `:622`/`:623`/`:624`/`:627`, `:631`/`:632`/`:634`/`:636`). The spec's six checklists carry
+     **30** rows (5+6+5+4+4+6). Every guide bullet appears exactly once, as itself or as its named
+     components, and the **six extra rows decompose five compound bullets using the guide's own
+     words**: `G1.4` "Logical reasoning and problem-solving strategies" to U1-04/U1-05; `G2.1`
+     "Whole numbers, integers, fractions, and decimals" to U2-01/U2-02; `G2.2` "Ratios,
+     proportions, and percentages" to U2-03/U2-04; `G3.2` "Linear equations and inequalities" to
+     U3-02/U3-03; `G6.1` "Financial literacy (profit, loss, interest, budgeting)" to
+     U6-01/U6-02/U6-03. Nothing is lost and nothing is added beyond the guide's own words: the one
+     insertion, "of numbers and operations" in U2-06, is the guide's own Unit 2 heading. Verified
+     mechanically, word-level, in both directions. This is the `D-2026-0019` standard applied to
+     GENG-300's comma-lists, applied here.
+  4. **The outcome traces hold.** The guide's five course outcomes (`:567`, `:568`, `:570`,
+     `:571`, `:573`) are reproduced verbatim at `content-spec.md:37-42`. Each has at least one unit
+     whose guide topics deliver it: CLO 1 (Unit 1 numeracy and number sense; Units 2-3), CLO 2
+     (Units 2-6 applications), CLO 3 (Unit 1 logical reasoning; Unit 2 ratios and proportions),
+     CLO 4 (Unit 6 "Interpreting quantitative information in education and society"), CLO 5 (Unit 5
+     tables, graphs, charts and statistical interpretation). **No SLO lacks a guide ancestor and no
+     CLO is orphaned**, so the `G-2026-10` failure mode is absent. The Unit 4 trace to CLO 4 is the
+     loosest (no Unit 4 guide bullet names communication); it is a mapping judgement, not an
+     addition, and CLO 4 does not depend on it.
+  5. **Readings: presence approved, resolvability not.** The guide's four readings (`:653-656`)
+     are all present in `### Guide-required`. `steen2001` resolves to a real work (Open Library:
+     Steen 2001, with a borrowable Internet Archive ebook), but the spec's added locator
+     "ERIC ED459269" is **false**: ED459269 is "State Summary of West Virginia. Ed Watch Online."
+     (Education Trust, 2001), verified against eric.ed.gov and the ERIC API, and *Mathematics and
+     Democracy* is not findable in ERIC at all. `grawe` does **not** resolve from this host: Open
+     Library catalogues eight Nathan D. Grawe works and not this title, the Internet Archive and
+     ERIC have no record, and Cognella answers 403. `ncm2006` is deferred by the spec itself with
+     added bibliographic detail (2006, Grades I-XII, Ministry of Education, Islamabad) that no
+     bound input verifies. `npst2009` resolves (in-corpus: EFMP-302's `npst-pakistan-2009`, with
+     the itacec.org retrieval limit already recorded under `D-2026-0001`). **Escalated as
+     `G-2026-28`**, following the `G-2026-09`/`D-2026-0010` precedent for guide-required entries
+     that do not resolve.
+  6. **All six assessment blueprints are internally consistent and consistent with the style
+     guide.** Every unit carries the fixed 10/10/5 bank (`style-guide.md` unit-end assessment bank
+     section), MCQ Remember to Apply, RRQ Understand to Analyze, ERQ Analyze to Evaluate, and the
+     Analyze-or-higher ERQ rubric requirement. Every unit has three topics, so the spec's
+     ">= 2 MCQ and >= 2 RRQ per topic" floors resolve to 6 of 10 with headroom: **no floor its own
+     items would breach, in any unit** (the EFMP-304 Unit 1 defect class is absent). The
+     parenthetical relaxations in Units 3-6 ("Topic N may carry fewer where items integrate
+     earlier sub-topics") are deliberate, disclosed relaxations of the spec's own floor; the style
+     guide sets no per-topic minimum, so nothing binding is breached. The course-review plan's
+     ~15-20 / ~10-15 / ~5-8 mix is permitted (the style guide fixes no count for
+     `course-review.mdx`).
+  7. **Structure conforms.** Front matter (`course_code: GQUR-300`, `status: draft`) validates
+     against `contracts/content-spec-frontmatter.schema.json`. All required course-level sections
+     are present in contract order (`## Course-wide items`, `## Course Description`,
+     `## Reading list` with both `### Guide-required` and `### Curated-supplementary (open
+     access)`, `## Week schedule`, `## Standards & frameworks anchors`, `## Course review plan`),
+     and every per-unit block is present in all six units. The spec-side invariants were replayed
+     directly with the gate's own parsers (`unitSectionLines`, `parseTopicList`, `parsePipeTable`,
+     `tableAfterHeading`), because every gate that walks `docs/` is vacuous for GQUR-300 (no
+     authored units): for all six units the `Sub-topic IDs` cells form a **total, disjoint
+     partition** of the checklist; every checklist `Topic` cell equals its `### Topic list` row
+     label; every `**Depth budget**` sub-topic and topic count matches its tables; every topic
+     plans two figure carriers; every unit plans at least one concept-map, flowchart or timeline
+     (Art. III.10). Zero failures across all six units.
+  8. **No decision residue.** All confirmed entries were swept against the **whole** spec.
+     `D-2026-0001` is invoked at the grawe row within its Limits. `D-2026-0003` is correctly
+     inapplicable: the spec cites only the Faculty guide and never the departmental variant, though
+     the variant file sits in the bound bundle. `D-2026-0005` is not evaded. `D-2026-0012` is
+     applied correctly (the week schedule is labelled derived with its basis stated).
+     `D-2026-0002`/`D-2026-0004`'s superseded EFMP-302 activity design appears nowhere; the only
+     "one-page" hit in the spec is GQUR-300's own practicum wording. `D-2026-0013` is
+     EFMP-304-specific and correctly not extended: GQUR-300 declares no `open_access_floor`, and
+     its guide list is not wholly print-only. `D-2026-0014` introduces no superseded design.
+- **Basis:** `Scheme-and-Course-guides/extracted-text/1st 2026.txt`, the GQUR-300 block at
+  `:546-680`: code `:546`, title `:549`, semester `:552`, credit hours `:554`, description
+  `:558-563`, outcomes `:564-573`, unit headings `:577`/`:584`/`:591`/`:598`/`:620`/`:629`,
+  readings `:651-656`, teaching strategies `:638-646` and `:658-661`, practical work `:663-666`,
+  assessment criteria `:668-680`. The revised board Scheme at
+  `B.Ed 4 Year 2026 revised after board.txt:18-24`. `catalog/courses.json` Semester 1 group.
+  `specs/content/style-guide.md` v4.5 for the bank, Bloom bands and visual density;
+  `contracts/content-spec-frontmatter.schema.json` and the content-spec v2/v3 contracts for the
+  section set. External registries (not bound inputs, checked 2026-09-23): Open Library, the
+  Internet Archive and the ERIC API for the readings findings in item 5. Items 1-4 are determined
+  by the guide directly; items 6-8 rest on the bound style guide and contracts and are approved on
+  that footing; item 5 rests on the guide for presence and on the registries for resolvability.
+
+  **Deterministic checks actually run at HEAD `ffd1f6f`, with real exit codes:**
+  `npm run check:no-em-dash` **1** (9 findings, all in `specs/content/geng-300/intake/evaluation.md`,
+  none in GQUR-300); `npm run validate:content` **1** (GENG-300 unit-01 front matter, none GQUR-300);
+  `npm run check:bloom-bands` **0**; `npm run check:concept-graph` **0**; `npm run check:depth-gate`
+  **1** (GENG-300 Unit 1, none GQUR-300); `npm run check:figures` **1** (GENG-300 Unit 1, none
+  GQUR-300); `npm run check:no-answer-keys` **1** (GENG-300 teacher notes, none GQUR-300);
+  `npm run check:docs-sync` **0**; `npm run check:source-floor` **1** (GENG-300 declares a floor,
+  GQUR-300 declares none); `npm run check:pipeline-gate` **1** (none GQUR-300). Every failing gate
+  fails on GENG-300's authored unit or on the GENG-300 evaluator's own record; a grep of every
+  failing output for "gqur" returns zero. The green gates are vacuous for this course (no authored
+  units) and are recorded as such, not cited as passes; the spec-side invariants above were
+  replayed directly instead.
+- **Bound to:** `specs/content/gqur-300/intake/manifest.json`, manifest digest
+  `c16e64c0a515fcb2cf58325c847e975f72adbfe60bae20e2d1c4672bf641c007`, **54 inputs** at commit
+  `ffd1f6fe3d2e1cb2e8643ae656c2417a665522ac`. Recomputed independently with `manifestFor()` from
+  `scripts/lib/review-evidence.mjs` over the same `intakeRoots('gqur-300')` root set the prepare
+  script uses: every path and every digest matched, with no extra and no missing entry, and the
+  recorded `manifest_digest` reproduced from a fresh read. The `registers` field also matched.
+  **Any change to a bound input voids this approval** (Art. VII.8.5). The two registers are in
+  `registers`, not `input_manifest`, per the `G-2026-15` fix, so recording this decision does not
+  void it.
+- **Limits and what remains blocked:**
+  - **Criterion 5 `readings` is not approved.** `G-2026-28`. The `### Guide-required` rows for
+    `grawe` and `ncm2006`, and those two keys within the `**Mapped readings**` lines of Units 2-6
+    (grawe in Units 5-6, ncm2006 in Units 2-4), are blocked with it. The `steen2001` and `npst2009`
+    rows and the whole `### Curated-supplementary (open access)` table are not blocked.
+  - **`status` stays `draft`.** Authoring remains blocked under Spec 006 FR-002 until `G-2026-28`
+    is settled and the locator repair below lands. This decision is the G0/G1 approval for
+    everything else; once the readings question is settled, no re-evaluation of items 1-4 and 6-8
+    is needed unless a bound input changes.
+  - **The week schedule is approved as to form only.** The 16-week term and the 3/3/3/2/3/2
+    distribution are the spec's construction, permitted and labelled under `D-2026-0012`, not
+    guide-given. Same disposition as GENG-300 under `D-2026-0019`.
+  - **Reported for repair, needing no owner decision:** (a) the `steen2001` locator
+    "ERIC ED459269, https://eric.ed.gov/?id=ED459269" is false and must be corrected or removed
+    (the work is real and borrowable via the Internet Archive; it is not findable in ERIC);
+    (b) the guide-block citation "lines 549-715" is imprecise (the block runs `:546-680`; `:709`
+    onward is the EFMP-302 header) and the Course Description citation ":555-561" should read
+    ":558-563"; (c) the Unit 4 CLO-4 trace is loose and would rest better on Unit 6 alone.
+  - Does not approve any unit's English review (G3) or Urdu translation (G5). Certifies no content,
+    qualifies no reviewer, authorises no publication (Art. VII.8.4).
+
+---
+
+## D-2026-0041 - GQUR-300 re-evaluation after repair: identity, partition, coverage, outcomes, blueprint, structure, residue re-approved; readings still not approved (G-2026-28 open)
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** GQUR-300 only. Re-evaluation of the spec as repaired at commit `139876c` ("fix(gqur-300):
+  repair intake findings from D-2026-0040 / G-2026-28"), by an evaluator who did not draft it. Settles
+  identity, the six-unit partition, the sub-topic coverage of all six checklists, the CLO traces, the
+  assessment blueprints, structural conformance, the absence of decision residue, and the resolvability
+  of every reading **except** the two whose disposition `G-2026-28` reserves to the owner. Does **not**
+  settle the `grawe` and `ncm` rows of `### Guide-required`. `D-2026-0040`'s approval bound to `ffd1f6f`;
+  the repair changed the spec, voiding it under Art. VII.8.5, so this entry re-records the approvals at
+  `139876c`.
+- **Decided by:** agent:evaluator, 2026-09-23
+- **Decision:**
+  1. **Identity.** GQUR-300, "Quantitative Reasoning-I", **3 (3-0)** credit hours, Semester 1, category
+     General Education, bilingual by default, as `catalog/courses.json` records it in its Semester 1
+     group. The guide gives the code at `1st 2026.txt:546`, the title "Quantitative Reasoning-1(Maths)"
+     at `:549`, "Semester : 1st" at `:552`, and credit hours as a bare total "3" at `:554` with no split.
+     The revised board Scheme (final authority) gives `GQUR-300 / Quantitative Reasoning-1 (Math) /
+     3(3-0) / General Education` at `B.Ed 4 Year 2026 revised after board.txt:18-24` (verified this run).
+     The title variants are typographic (`D-2026-0006` posture); the guide's total and the Scheme's
+     split do not contradict each other (`G-2026-02`/`G-2026-05` posture). **No Article II.3 conflict.**
+     The departmental variant `.specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx` sits
+     in the bound bundle; `D-2026-0003` (confirmed, corpus-wide) settles that folder as superseded
+     provenance-only, and the spec cites only the Faculty guide (zero `.specify` references, verified).
+     The catalog entry omits `bilingual`, which the repo's `!== false` convention
+     (`scripts/check-figures.mjs:128`) reads as bilingual.
+  2. **Partition follows the guide.** The guide numbers six units at `1st 2026.txt:577`, `:584`, `:591`,
+     `:598`, `:620`, `:629`; the spec carries exactly those six units under those titles (verified
+     mechanically, string-equal after trimming the PDF bullet glyph). The guide carries **no week
+     table**; the spec's `## Week schedule` is a derived distribution clearly labelled as derived with
+     its basis stated (`content-spec.md:30-33`, `:99-102`, and "(derived)" on every unit's weeks line),
+     the form `D-2026-0012` (confirmed, corpus-wide) permits. The 16-week term and the 3/3/3/2/3/2
+     distribution are approved **as to form only**; the calendar substance remains the spec's
+     construction (see Limits), the same disposition `D-2026-0019` gave GENG-300.
+  3. **Coverage is complete and adds nothing.** The guide enumerates **24** sub-topic bullets, four per
+     unit (`:579-582`, `:586-589`, `:593-596`, `:600`/`:601`/`:617`/`:618`,
+     `:622`/`:623`/`:624`/`:627`, `:631`/`:632`/`:634`/`:636`). The spec's six checklists carry **30**
+     rows (5+6+5+4+4+6). Every guide bullet appears exactly once, as itself or as its named components;
+     the six extra rows decompose five compound bullets using the guide's own words (`G1.4` to
+     U1-04/U1-05; `G2.1` to U2-01/U2-02; `G2.2` to U2-03/U2-04; `G3.2` to U3-02/U3-03; `G6.1` to
+     U6-01/U6-02/U6-03). Verified mechanically, word-level, in both directions (nothing lost, nothing
+     added beyond the guide's own words; the one insertion, "of numbers and operations" in U2-06, is the
+     guide's own Unit 2 heading at `:584`). `D-2026-0019` standard.
+  4. **The outcome traces hold.** The guide's five course outcomes (`:567`, `:568`, `:570`, `:571`,
+     `:573`) are reproduced verbatim at `content-spec.md:37-42` (verified mechanically; the only
+     difference is the guide's PDF bullet glyph). Each CLO is referenced by at least one unit (CLO 1:
+     Units 1-3; CLO 2: Units 2-6; CLO 3: Units 1-2; CLO 4: Units 4 and 6; CLO 5: Units 5-6). No SLO
+     lacks a guide ancestor and no CLO is orphaned. The repaired Unit 4 trace to CLO 4 now discloses its
+     mechanism ("communicating measurements and geometric results precisely"); it remains a mapping
+     judgement, not an addition, and CLO 4's guide-anchored delivery rests on Unit 6
+     ("Interpreting quantitative information in education and society", `:636`).
+  5. **Readings: presence and every resolvable entry approved; the `grawe`/`ncm` disposition is not.**
+     All four guide readings (`:653-656`) are present in `### Guide-required`. **`steen2001` resolves
+     and its repaired locator is true**: the Internet Archive record
+     `https://archive.org/details/mathematicsdemoc0000unse` was fetched this run and is "Mathematics
+     and democracy: the case for quantitative literacy", NCED, Princeton NJ, 2001, ISBN 0970954700,
+     controlled-lending - exactly what the spec's citation and note state; the Open Library work
+     `OL18229070W` also verified. **`npst2009` resolves** (in-corpus precedent: EFMP-302's
+     `npst-pakistan-2009` at the identical itacec.org URL; the host's HTTP 401 is the retrieval limit
+     already recorded under `D-2026-0001`). **Every curated-supplementary work is real**: `grawe2012`
+     (ERIC EJ981327), `sikko2023` (EJ1450768), `gula2025` (EJ1489427), `mcclure2020` (EJ1480153) all
+     verified exact against eric.ed.gov this run; `tout2020` (EJ1266633) verified real;
+     `openstax-prealgebra` resolves at its exact URL with matching title/authors/year; `pbs` resolves
+     (HTTP 200). **The `D-2026-0013` floor pattern is satisfied**: every unit's `**Mapped readings**`
+     line carries at least one verified open-access source (U1: grawe2012, sikko2023; U2: gula2025,
+     openstax-prealgebra; U3/U4: openstax-prealgebra; U5: grawe2012, tout2020, pbs; U6: mcclure2020,
+     pbs), verified mechanically. **Not approved:** the `grawe` and `ncm` rows. `G-2026-28` remains
+     open and reserves their disposition to the owner; the repair applied the unresolvable-recording
+     branch of that choice unilaterally. The `ncm` row now conforms to the `D-2026-0010` manner (the
+     unverified 2006/Grades I-XII/imprint details are gone; the citation is the guide's own words
+     `:655`); the `grawe` row does not fully conform - it retains "Cognella Academic Publishing", an
+     added detail no bound input verifies, against the same row's "cited at bibliographic level only".
+     Extending the `D-2026-0010` manner (scope: EFMP-302, two keys) to another course is a scope
+     judgement, and every reading-list disposition in this register so far (`D-2026-0010`,
+     `D-2026-0013`, the `G-2026-21` decision) was an owner ruling on its own course's list. The
+     evaluator's own web searches this run surfaced a plausible Cognella record for the Grawe title
+     (full title "Quantitative Literacy: Reasoning About Data, Change, Chance, and Uncertainty", ISBN
+     978-1-5165-4901-6) that could not be verified from this host through any registry (Open Library:
+     no record, checked this run; Cognella's site serves search pages but no static product record;
+     search results unstable across repeated queries), so the owner's confirm-or-record choice is
+     substantive, not formal.
+  6. **All six assessment blueprints are internally consistent and consistent with the style guide.**
+     Every unit carries the fixed 10/10/5 bank with MCQ Remember to Apply, RRQ Understand to Analyze,
+     ERQ Analyze to Evaluate, and the Analyze-or-higher ERQ rubric requirement
+     (`specs/content/style-guide.md:223-231`). Every unit has three topics, so the ">= 2 MCQ and >= 2
+     RRQ per topic" floors resolve to 6 of 10 with headroom: **no floor its own items would breach,
+     in any unit**. The parenthetical relaxations in Units 3-6 are deliberate, disclosed relaxations
+     of the spec's own floor; the style guide sets no per-topic minimum. The course-review plan's
+     ~15-20 / ~10-15 / ~5-8 mix is permitted (`style-guide.md:234-235` fixes no count for
+     `course-review.mdx`).
+  7. **Structure conforms.** Front matter (`course_code: GQUR-300`, `status: draft`) validates against
+     `contracts/content-spec-frontmatter.schema.json` (replayed directly with ajv). All six required
+     course-level sections are present in contract order, both reading-list subheadings carry the
+     contract's column set, and every per-unit block is present in all six units (verified
+     mechanically). No em dashes in the spec. The spec-side invariants were replayed directly with the
+     gate's own parsers (`unitSectionLines`, `parseTopicList`, `parsePipeTable`, `tableAfterHeading`),
+     because every gate that walks `docs/` is vacuous for GQUR-300 (no authored units): for all six
+     units the `Sub-topic IDs` cells form a **total, disjoint partition** of the checklist; every
+     checklist `Topic` cell equals its `### Topic list` row label; every `**Depth budget**` count
+     matches its tables; every topic carries exactly two figure carriers, consistent between the
+     `### Topic list` column and the `**Figure plan**` bullets; every unit plans at least one
+     concept-map, flowchart or timeline (Art. III.10). Zero failures across all six units. Every
+     `**Mapped readings**` key resolves to a reading-list row.
+  8. **No decision residue.** All confirmed entries were swept against the **whole** spec.
+     `D-2026-0001` is invoked within its Limits (steen2001, grawe and npst2009 notes state their
+     text-retrieval limits). `D-2026-0002`/`D-2026-0004`'s superseded EFMP-302 activity design appears
+     nowhere; the only "one-page" hit is GQUR-300's own practicum wording (`content-spec.md:137`).
+     `D-2026-0003` is correctly inapplicable (the spec cites only the Faculty guide). `D-2026-0005` is
+     not evaded. `D-2026-0012` is applied correctly. `D-2026-0013` is invoked as precedent in prose,
+     not contradicted and not silently converted into a binding rule (the spec declares no
+     `open_access_floor`; see Limits). `D-2026-0014` introduces no superseded design. All three repair
+     items `D-2026-0040` listed have landed: the source-block citation now reads `:546-680`, the Course
+     Description citation `:558-563`, the `steen2001` locator is the verified IA record, and the Unit 4
+     CLO-4 trace is tightened.
+- **Basis:** `Scheme-and-Course-guides/extracted-text/1st 2026.txt`, the GQUR-300 block at `:546-680`:
+  code `:546`, title `:549`, semester `:552`, credit hours `:554`, description `:558-563`, outcomes
+  `:564-573`, unit headings `:577`/`:584`/`:591`/`:598`/`:620`/`:629`, readings `:653-656` (Steen `:653`,
+  Grawe `:654`, National Curriculum for Mathematics `:655`, HEC NPST `:656`). The revised board Scheme
+  at `B.Ed 4 Year 2026 revised after board.txt:18-24`. `catalog/courses.json` Semester 1 group.
+  `specs/content/style-guide.md` v4.5 for the bank, Bloom bands and visual density;
+  `contracts/content-spec-frontmatter.schema.json` and the content-spec v2/v3 contracts for the
+  section set. External registries (not bound inputs, checked 2026-09-23): the Internet Archive and
+  Open Library for `steen2001`; eric.ed.gov for the five curated articles; Crossref
+  (10.1007/s11159-020-09831-4) for `tout2020`'s page range; Open Library and Cognella's site for
+  `grawe`. Items 1-4 are determined by the guide directly; items 6-8 rest on the bound style guide and
+  contracts and are approved on that footing; item 5 rests on the guide for presence and on the
+  registries for resolvability.
+
+  **Deterministic checks actually run at HEAD `139876c`, with real exit codes:**
+  `npm run check:no-em-dash` **1** (9 findings, all in `specs/content/geng-300/intake/evaluation.md`);
+  `npm run validate:content` **1** (13 errors, all GENG-300 unit-01); `npm run check:bloom-bands`
+  **0**; `npm run check:concept-graph` **0**; `npm run check:depth-gate` **1** (GENG-300);
+  `npm run check:figures` **1** (GENG-300); `npm run check:no-answer-keys` **1** (GENG-300);
+  `npm run check:docs-sync` **0**; `npm run check:source-floor` **1** (GENG-300 declares a floor with
+  no sources file); `npm run check:pipeline-gate` **1** (none GQUR-300). A grep of every failing
+  output for "gqur" returns zero. The green gates are vacuous for this course (no authored units) and
+  are recorded as such, not cited as passes; the spec-side invariants above were replayed directly
+  instead.
+- **Bound to:** `specs/content/gqur-300/intake/manifest.json`, manifest digest
+  `4acaa8f34ee767a924610174fd2a9c2e63a0ae3b8aa3fc623978a7fb65a782da`, **54 inputs** at commit
+  `139876c5c19f9c8ef093eb2c57b25ce4e2462e5a`. Recomputed independently with `manifestFor()` from
+  `scripts/lib/review-evidence.mjs` over the same `intakeRoots('gqur-300')` root set the prepare
+  script uses: every path and every digest matched, with no extra and no missing entry, and the
+  recorded `manifest_digest` reproduced. The `registers` field also matched. **Any change to a bound
+  input voids this approval** (Art. VII.8.5). The two registers are in `registers`, not
+  `input_manifest`, per the `G-2026-15` fix, so recording this decision does not void it.
+- **Limits and what remains blocked:**
+  - **Criterion 5 `readings` is not approved.** `G-2026-28` stays open. Blocked: the `grawe` and `ncm`
+    rows of `### Guide-required`, and those two keys within the `**Mapped readings**` lines of Units
+    2-6 (ncm in Units 2-4, grawe in Units 5-6). Not blocked: the `steen2001` and `npst2009` rows, the
+    whole `### Curated-supplementary (open access)` table as to the reality of its works, and the
+    per-unit open-access mapping. **Update to `G-2026-28` recorded here** (the gap entry itself is not
+    rewritten): its item 1's spec-side defects are repaired except the Cognella imprint; its item 2's
+    unverified additions are removed and the row now conforms to the `D-2026-0010` manner; its item
+    3's false locator is fixed and verified true; the owner's remaining choice is exactly the
+    confirm-or-record decision the gap frames, now with a narrower surface.
+  - **Repairs needed, no owner decision:** (a) `tout2020`'s page range "583-605" is **false** - ERIC
+    EJ1266633 and Crossref both give **183-209** (verified this run); (b) the `grawe` note's guide
+    citation `1st 2026.txt:652` is false - line 652 is blank; Grawe is at `:654`; (c) the `ncm` note's
+    citation `1st 2026.txt:653` is false - line 653 is the Steen entry; NCM is at `:655`. All three
+    were introduced by the repair; (d) if the owner directs the unresolvable recording for `grawe`,
+    the "Cognella Academic Publishing" imprint must go with it, since the row's own manner is
+    "bibliographic level only".
+  - **Recommended, not required:** declare `open_access_floor` in the content-spec front matter so the
+    prose floor ("every unit maps at least one verified open-access source") becomes checkable by
+    `check:source-floor` at G2, the `G-2026-17` machinery.
+  - **The week schedule is approved as to form only.** The 16-week term and the 3/3/3/2/3/2
+    distribution are the spec's construction, permitted and labelled under `D-2026-0012`, not
+    guide-given.
+  - **`status` stays `draft`.** Authoring remains blocked under Spec 006 FR-002 until `G-2026-28` is
+    settled and the repairs above land. Once the readings question is settled, items 1-4 and 6-8 need
+    no re-evaluation unless a bound input changes.
+  - Does not approve any unit's English review (G3) or Urdu translation (G5). Certifies no content,
+    qualifies no reviewer, authorises no publication (Art. VII.8.4).
+
+---
+
+## D-2026-0042 - GQUR-300 third intake pass: all eight criteria approved, readings settled by the G-2026-28 owner ruling
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** GQUR-300 only. Third intake pass, by an evaluator who did not draft the spec, judging the
+  spec as it stands at commit `43910bf` ("intake(gqur-300): apply owner ruling G-2026-28 to the reading
+  list"). Settles all eight criteria **including `readings`**, whose `grawe`/`ncm` dispositions the owner
+  ruled on in the resolved `G-2026-28` entry (2026-09-23). Re-records the seven criteria `D-2026-0041`
+  approved at the pre-ruling state, and approves `readings` for the first time. `D-2026-0040`/`0041`
+  were treated as context only; every verdict below was re-derived from the bound inputs this run.
+- **Decided by:** agent:evaluator, 2026-09-23
+- **Decision:**
+  1. **Identity.** GQUR-300, "Quantitative Reasoning-I", **3 (3-0)** credit hours, Semester 1, category
+     General Education, bilingual by default, as `catalog/courses.json` records it in its Semester 1
+     group. The guide gives the code at `1st 2026.txt:546`, the title "Quantitative Reasoning-1(Maths)"
+     at `:549`, "Semester : 1st" at `:552`, and credit hours as a bare total "3" at `:554` with no split.
+     The revised board Scheme (final authority) gives `GQUR-300 / Quantitative Reasoning-1 (Math) /
+     3(3-0) / General Education` at `B.Ed 4 Year 2026 revised after board.txt:18-24` (verified this run).
+     Title variants are typographic (`D-2026-0006` posture); the guide's total and the Scheme's split do
+     not contradict each other (`G-2026-02`/`G-2026-05` posture). **No Article II.3 conflict.** The
+     departmental variant `.specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx` sits in
+     the bound bundle; `D-2026-0003` (confirmed, corpus-wide) settles that folder as superseded
+     provenance-only, and the spec carries zero `.specify` references (verified by grep this run).
+  2. **Partition follows the guide.** The guide numbers six units at `1st 2026.txt:577`, `:584`, `:591`,
+     `:598`, `:620`, `:629`; the spec carries exactly those six units under those titles (string-equal
+     after trimming the PDF bullet glyph, verified mechanically this run). The guide carries **no week
+     table**; the spec's `## Week schedule` is a derived distribution clearly labelled as derived with
+     its basis stated (`content-spec.md:36-39`, `:105-108`, and "(derived)" on every unit's weeks line),
+     the form `D-2026-0012` (confirmed, corpus-wide) permits. The 16-week term and the 3/3/3/2/3/2
+     distribution are approved **as to form only**; the calendar substance remains the spec's
+     construction (see Limits).
+  3. **Coverage is complete and adds nothing.** The guide enumerates **24** sub-topic bullets, four per
+     unit (`:579-582`, `:586-589`, `:593-596`, `:600`/`:601`/`:617`/`:618`,
+     `:622`/`:623`/`:624`/`:627`, `:631`/`:632`/`:634`/`:636`). The spec's six checklists carry **30**
+     rows (5+6+5+4+4+6). Verified mechanically, word-level, in both directions this run: every guide
+     bullet appears exactly once, as itself or as its named components, and the six extra rows decompose
+     five compound bullets using the guide's own words (`G1.4` to U1-04/U1-05; `G2.1` to U2-01/U2-02;
+     `G2.2` to U2-03/U2-04; `G3.2` to U3-02/U3-03; `G6.1` to U6-01/U6-02/U6-03). The single insertion,
+     "of numbers and operations" in U2-06, is the guide's own Unit 2 heading at `:584`; the row-level
+     trace confirms it is the only heading-word insertion in the spec. `D-2026-0019` standard.
+  4. **The outcome traces hold.** The guide's five course outcomes (`:567`, `:568`, `:570`, `:571`,
+     `:573`) are reproduced verbatim at `content-spec.md:43-48` (verified mechanically; the only
+     difference is the guide's PDF bullet glyph). Unit CLO refs: U1 → 1, 3; U2 → 1, 2, 3; U3 → 1, 2;
+     U4 → 2, 4; U5 → 2, 5; U6 → 2, 4, 5. No SLO lacks a guide ancestor, no CLO is orphaned, and no ref
+     falls outside 1-5 (all verified mechanically). The Unit 4 trace to CLO 4 carries a disclosed
+     mechanism gloss ("communicating measurements and geometric results precisely"); it is a mapping
+     judgement, not an addition, and CLO 4's guide-anchored delivery rests on Unit 6
+     ("Interpreting quantitative information in education and society", `:636`).
+  5. **Readings: approved, for the first time.** All four guide readings (`:653-656`) are present in
+     `### Guide-required`, and each is now either resolvable or owner-ruled:
+     - `steen2001` **resolves and its locator is true**: the Internet Archive record
+       `archive.org/details/mathematicsdemoc0000unse` was fetched this run and is "Mathematics and
+       democracy: the case for quantitative literacy", NCED, Princeton NJ, 2001, ISBN 0970954700,
+       controlled-lending - exactly what the row states; cited at bibliographic level with
+       `D-2026-0001` governing the unobtainable text.
+     - `grawe` **conforms to the owner's `G-2026-28(a)` ruling** (recorded resolved in
+       `specs/gaps.md`): recorded unresolvable in the `D-2026-0010` manner, the citation at title level
+       with **no imprint** (the word "Cognella" now appears only inside the note's record of what was
+       checked, not as bibliographic detail), the limit stated at point of use, and the same author's
+       verified open-access article `grawe2012` as the cited replacement. The extension of the
+       `D-2026-0010` manner to this course is owner-ruled, not silent.
+     - `ncm` **conforms to the owner's `G-2026-28(b)` ruling**: the owner-directed NCC website check is
+       recorded in the resolved gap entry, and the row cites the verified NCC Mathematics page
+       (ncc.gov.pk) with the two named documents and no publication year (the page asserts none). This
+       evaluator re-fetched the page this run and it verifies: the NCP Mathematics Progression Grid
+       (1-12) and the Mathematics Suggested Guidelines (1-8) are served as open PDFs, with no
+       publication year asserted.
+     - `npst2009` resolves (in-corpus precedent: EFMP-302's `npst-pakistan-2009`; the itacec.org
+       retrieval limit is already recorded under `D-2026-0001`).
+     Every curated-supplementary work is real, verified this run against the ERIC API where it has an
+     ERIC id (`grawe2012` EJ981327, `tout2020` EJ1266633 with the repaired page range 183-209,
+     `sikko2023` EJ1450768, `gula2025` EJ1489427, `mcclure2020` EJ1480153 - titles, authors, years and
+     journals all match the rows), and unchanged since `D-2026-0041`'s verification where it does not
+     (`openstax-prealgebra`, `pbs`, `oecd-pisa`). The `open_access_floor: default: 1` front-matter
+     declaration is the `D-2026-0041`-recommended repair: the prose floor is now machine-checkable by
+     `check:source-floor` at G2, and every unit's `**Mapped readings**` maps at least one verified
+     open-access source (U1: grawe2012, sikko2023; U2: gula2025, openstax-prealgebra; U3/U4:
+     openstax-prealgebra; U5: grawe2012, tout2020, pbs; U6: mcclure2020, pbs - verified mechanically).
+  6. **All six assessment blueprints are internally consistent and consistent with the style guide.**
+     Every unit carries the fixed 10/10/5 bank with MCQ Remember to Apply, RRQ Understand to Analyze,
+     ERQ Analyze to Evaluate, and the Analyze-or-higher ERQ rubric requirement
+     (`specs/content/style-guide.md:223-231`). The spec's ERQ band "Analyze to Evaluate" sits within the
+     style guide's "Analyze → Evaluate/Create" band (a subset, not a breach). Every unit has three
+     topics, so the ">= 2 MCQ and >= 2 RRQ per topic" floors resolve to 6 of 10 with headroom: **no
+     floor its own items would breach, in any unit**. The parenthetical relaxations in Units 3-6 are
+     deliberate, disclosed relaxations of the spec's own floor; the style guide sets no per-topic
+     minimum. The course-review plan's ~15-20 / ~10-15 / ~5-8 mix is permitted (`style-guide.md:234-235`
+     fixes no count for `course-review.mdx`).
+  7. **Structure conforms.** Front matter (`course_code: GQUR-300`, `status: draft`,
+     `open_access_floor: {default: 1}`) validates against
+     `contracts/content-spec-frontmatter.schema.json` (replayed directly with ajv 2020-12 this run; the
+     floor key is permitted by the contract's `additionalProperties: true` and is the key
+     `check-source-floor.mjs` reads). All required course-level sections are present in contract order,
+     both reading-list subheadings carry the contract's column set, and every per-unit block is present
+     in all six units. The spec-side invariants were replayed directly with the gate's own parsers
+     (`unitSectionLines`, `parsePipeTable`, `tableAfterHeading`), because every gate that walks `docs/`
+     is vacuous for GQUR-300's authored content (only the `coming_soon` placeholder tree exists): for
+     all six units the `Sub-topic IDs` cells form a **total, disjoint partition** of the checklist;
+     every checklist `Topic` cell equals its `### Topic list` row label; every `**Depth budget**`
+     sub-topic and topic count matches its tables (the reading-min band is a unit-file total per
+     `style-guide.md` "Depth budget", not the sum of the per-topic planning figures); every topic plans
+     exactly two figure carriers, consistent between the `### Topic list` column and the
+     `**Figure plan**` bullets; every unit plans at least one concept-map, flowchart or timeline
+     (Art. III.10); every `**Mapped readings**` key resolves to a reading-list row. **Zero failures
+     across all six units.** No em dashes in the spec.
+  8. **No decision residue.** All confirmed entries were swept against the **whole** spec.
+     `D-2026-0001` is invoked within its Limits (steen2001, grawe and npst2009 notes state their
+     text-retrieval limits). `D-2026-0002`/`D-2026-0004`'s superseded EFMP-302 activity design appears
+     nowhere; the only "one-page" hit is GQUR-300's own practicum wording (`content-spec.md:143`).
+     `D-2026-0003` is correctly inapplicable (zero `.specify` references). `D-2026-0005` is not evaded.
+     `D-2026-0012` is applied correctly (derived-and-labelled week schedule). `D-2026-0010`'s
+     unresolvable-recording manner is extended to `grawe` **by the owner's `G-2026-28(a)` ruling**, not
+     silently. `D-2026-0013`'s floor pattern is invoked as precedent with a declared, machine-checkable
+     floor - the repair `D-2026-0041` recommended, and anticipated by that decision's Limits ("the
+     obvious precedent for any other course whose guide list is print-only"). `D-2026-0014` introduces
+     no superseded design. All repairs `D-2026-0041` directed have landed at `c72199e`/`43910bf`
+     (tout2020 pages 183-209; grawe guide ref `:654`; ncm guide ref `:655`; the `open_access_floor`
+     declaration; the Cognella imprint removal), confirmed by diffing `139876c..43910bf`: the change is
+     exactly the ruling application plus those repairs, nothing else.
+- **Basis:** `Scheme-and-Course-guides/extracted-text/1st 2026.txt`, the GQUR-300 block at `:546-680`:
+  code `:546`, title `:549`, semester `:552`, credit hours `:554`, description `:558-563`, outcomes
+  `:564-573`, unit headings `:577`/`:584`/`:591`/`:598`/`:620`/`:629`, readings `:651-656` (Steen
+  `:653`, Grawe `:654`, National Curriculum for Mathematics `:655`, HEC NPST `:656`). The revised board
+  Scheme at `B.Ed 4 Year 2026 revised after board.txt:18-24`. `catalog/courses.json` Semester 1 group.
+  `specs/content/style-guide.md` v4.5 for the bank, Bloom bands, depth budget and visual density;
+  `contracts/content-spec-frontmatter.schema.json` and the content-spec v2/v3 contracts for the section
+  set. The resolved `G-2026-28` entry in `specs/gaps.md` (a bound register) for the owner's `grawe`/`ncm`
+  ruling. External registries (not bound inputs, checked 2026-09-23, this run): the Internet Archive
+  for `steen2001`; the NCC Mathematics page for `ncm`; the ERIC API for `grawe2012`, `tout2020`,
+  `sikko2023`, `gula2025` and `mcclure2020`. Items 1-4 are determined by the guide directly; items 6-8
+  rest on the bound style guide and contracts; item 5 rests on the guide for presence, on the owner
+  ruling for the two ruled dispositions, and on the registries for resolvability of the rest.
+
+  **Deterministic checks actually run at HEAD `43910bf`, with real exit codes:**
+  `npm run check:no-em-dash` **1** (0 gqur mentions; findings are in GENG-300 material);
+  `npm run validate:content` **1** (0 gqur mentions; GENG-300 unit-01 front matter);
+  `npm run check:bloom-bands` **0**; `npm run check:concept-graph` **0**; `npm run check:depth-gate`
+  **1** (0 gqur mentions); `npm run check:figures` **1** (0 gqur mentions); `npm run
+  check:no-answer-keys` **1** (0 gqur mentions); `npm run check:docs-sync` **0**; `npm run
+  check:source-floor` **1** (2 findings: GENG-300 Unit 1 and **GQUR-300 Unit 1, both "declares a floor
+  of 1 but has no sources/unit-01.md"** - the GQUR-300 finding walks the `coming_soon` placeholder tree
+  at `docs/semester-1/gqur-300/unit-01/`; sources are authored with units, not at intake, so this is the
+  expected-at-intake condition recorded the same way for GENG-300 under `D-2026-0019`, and the floor
+  binds at G2); `npm run check:pipeline-gate` **1** (0 gqur mentions). The green gates are vacuous for
+  this course's authored content and are recorded as such, not cited as passes; the spec-side
+  invariants above were replayed directly instead.
+- **Bound to:** `specs/content/gqur-300/intake/manifest.json`, manifest digest
+  `4d3fd0ae99da012d1a34b7a1fbad9a7440c173a5f2d071ba8825d9c9937195a1`, **54 inputs** at commit
+  `43910bfc9177e14b0b3c4128e9e48288173d1682`. Recomputed independently with `manifestFor()` from
+  `scripts/lib/review-evidence.mjs` over the same `intakeRoots('gqur-300')` root set the prepare script
+  uses: every path and every digest matched, with no extra and no missing entry, and the recorded
+  `manifest_digest` reproduced from a fresh read. The `registers` field also matched. **Any change to a
+  bound input voids this approval** (Art. VII.8.5). The two registers are in `registers`, not
+  `input_manifest`, per the `G-2026-15` fix, so recording this decision does not void it.
+- **Limits:**
+  - **No criterion is blocked and no gap is open for this course.** `G-2026-28` is resolved by the
+    owner ruling; this decision consumes no `G-` code (the block `G-2026-29`/`G-2026-30` stays unused).
+  - **`status: approved` is the owner's action, not this evaluator's** (Spec 006 FR-002: the
+    content-spec front-matter contract has the owner set it). This entry is the G0/G1 approval on which
+    that flip may rest: with it recorded at pending-owner-review, the owner may set
+    `status: approved` and authoring may begin. No repairs remain.
+  - **The week schedule is approved as to form only.** The 16-week term and the 3/3/3/2/3/2
+    distribution are the spec's construction, permitted and labelled under `D-2026-0012`, not
+    guide-given.
+  - The `grawe` row remains a title-level citation to a work that cannot be shown to exist from this
+    host; retrievable content for its units is carried by `grawe2012` and the other mapped open-access
+    sources, and `D-2026-0001` still governs any prose that leans on the unopened title.
+  - Does not approve any unit's English review (G3) or Urdu translation (G5). Certifies no content,
+    qualifies no reviewer, authorises no publication (Art. VII.8.4).

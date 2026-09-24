@@ -1,0 +1,4 @@
+=== npm run check:docs-sync ===
+exit_code=0
+✓ docs are in sync with the code constants
+✓ docs are in sync with the code constants

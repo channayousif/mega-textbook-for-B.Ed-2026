@@ -1,0 +1,16 @@
+fig-U4-1 [ur]: fontOk=true texts=22 problems=0
+fig-U4-1 [en]: fontOk=true texts=22 problems=0
+fig-U4-2 [ur]: fontOk=true texts=17 problems=0
+fig-U4-2 [en]: fontOk=true texts=17 problems=0
+fig-U4-3 [ur]: fontOk=true texts=16 problems=0
+fig-U4-3 [en]: fontOk=true texts=16 problems=0
+fig-U4-4 [ur]: fontOk=true texts=27 problems=0
+fig-U4-4 [en]: fontOk=true texts=27 problems=0
+fig-U4-5 [ur]: fontOk=true texts=16 problems=0
+fig-U4-5 [en]: fontOk=true texts=16 problems=1
+   ! "estimate with round numbers:" bbox={"x":566.6,"y":188,"w":196.8,"h":15} inViewBox=true inPanel=false panel=panel@585,140 160x120
+fig-U4-6 [ur]: fontOk=true texts=26 problems=2
+   ! "لمبائی ضرب چوڑائی ضرب اونچائی، پھر 1,000 سے" bbox={"x":-16.4,"y":233.8,"w":224.4,"h":20.2} inViewBox=false inPanel=false panel=stroke@20,56 730x360
+   ! "کتابیں ضرب جلد کی موٹائی، پھر شیلف لمبائی پر ت" bbox={"x":-22.7,"y":289.6,"w":236,"h":30.4} inViewBox=false inPanel=false panel=stroke@20,56 730x360
+fig-U4-6 [en]: fontOk=true texts=26 problems=1
+   ! "length x width x height x 1,000" bbox={"x":572,"y":236,"w":203.8,"h":15} inViewBox=true inPanel=false panel=stroke@30,56 730x360

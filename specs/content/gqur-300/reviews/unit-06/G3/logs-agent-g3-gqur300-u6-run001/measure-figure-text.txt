@@ -1,0 +1,13 @@
+✓ static/img/figures/gqur-300/unit-06/fig-U6-1.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gqur-300/unit-06/fig-U6-2.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gqur-300/unit-06/fig-U6-3.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gqur-300/unit-06/fig-U6-4.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gqur-300/unit-06/fig-U6-5.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gqur-300/unit-06/fig-U6-6.svg (780x470, widest text ends at 769.2, wordmark at 675.7)
+✓ static/img/figures/gqur-300/unit-06/fig-U6-1.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gqur-300/unit-06/fig-U6-2.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gqur-300/unit-06/fig-U6-3.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gqur-300/unit-06/fig-U6-4.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gqur-300/unit-06/fig-U6-5.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gqur-300/unit-06/fig-U6-6.dark.svg (780x470, widest text ends at 769.2, wordmark at 675.7)
+measure-figure-text exit=0
