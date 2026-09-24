@@ -1,0 +1,504 @@
+{
+  "generated_at": "2026-09-24T04:36:38.071Z",
+  "courses": [
+    {
+      "course_code": "EED-313",
+      "units": [
+        {
+          "unit_no": 1,
+          "authored": true,
+          "translation_status": "draft",
+          "depth_check": "pass",
+          "gates": {
+            "G2": "done",
+            "G3": "provisional",
+            "G5": "open"
+          },
+          "publication": "provisional",
+          "figures": {
+            "prompt_only": 0,
+            "generated": 0,
+            "placed": 8
+          },
+          "figures_pending": []
+        },
+        {
+          "unit_no": 2,
+          "authored": true,
+          "translation_status": "draft",
+          "depth_check": "pass",
+          "gates": {
+            "G2": "done",
+            "G3": "open",
+            "G5": "open"
+          },
+          "publication": "gated",
+          "figures": {
+            "prompt_only": 0,
+            "generated": 0,
+            "placed": 6
+          },
+          "figures_pending": []
+        },
+        {
+          "unit_no": 3,
+          "authored": true,
+          "translation_status": "draft",
+          "depth_check": "pass",
+          "gates": {
+            "G2": "done",
+            "G3": "open",
+            "G5": "open"
+          },
+          "publication": "gated",
+          "figures": {
+            "prompt_only": 0,
+            "generated": 0,
+            "placed": 8
+          },
+          "figures_pending": []
+        },
+        {
+          "unit_no": 4,
+          "authored": true,
+          "translation_status": "draft",
+          "depth_check": "pass",
+          "gates": {
+            "G2": "done",
+            "G3": "open",
+            "G5": "open"
+          },
+          "publication": "gated",
+          "figures": {
+            "prompt_only": 0,
+            "generated": 0,
+            "placed": 8
+          },
+          "figures_pending": []
+        },
+        {
+          "unit_no": 5,
+          "authored": true,
+          "translation_status": "draft",
+          "depth_check": "pass",
+          "gates": {
+            "G2": "done",
+            "G3": "open",
+            "G5": "open"
+          },
+          "publication": "gated",
+          "figures": {
+            "prompt_only": 0,
+            "generated": 0,
+            "placed": 8
+          },
+          "figures_pending": []
+        }
+      ]
+    },
+    {
+      "course_code": "EFMP-301",
+      "units": [
+        {
+          "unit_no": 1,
+          "authored": true,
+          "translation_status": "draft",
+          "depth_check": "not_applicable",
+          "gates": {
+            "G2": "done",
+            "G3": "done",
+            "G5": "open"
+          },
+          "publication": "certified",
+          "figures": {
+            "prompt_only": 0,
+            "generated": 0,
+            "placed": 9
+          },
+          "figures_pending": []
+        }
+      ]
+    },
+    {
+      "course_code": "EFMP-302",
+      "units": [
+        {
+          "unit_no": 1,
+          "authored": true,
+          "translation_status": "reviewed",
+          "depth_check": "pass",
+          "gates": {
+            "G2": "done",
+            "G3": "done",
+            "G5": "done"
+          },
+          "publication": "certified",
+          "figures": {
+            "prompt_only": 0,
+            "generated": 0,
+            "placed": 8
+          },
+          "figures_pending": []
+        },
+        {
+          "unit_no": 2,
+          "authored": true,
+          "translation_status": "draft",
+          "depth_check": "pass",
+          "gates": {
+            "G2": "done",
+            "G3": "open",
+            "G5": "open"
+          },
+          "publication": "gated",
+          "figures": {
+            "prompt_only": 0,
+            "generated": 0,
+            "placed": 8
+          },
+          "figures_pending": []
+        },
+        {
+          "unit_no": 3,
+          "authored": true,
+          "translation_status": "draft",
+          "depth_check": "pass",
+          "gates": {
+            "G2": "done",
+            "G3": "open",
+            "G5": "open"
+          },
+          "publication": "gated",
+          "figures": {
+            "prompt_only": 0,
+            "generated": 0,
+            "placed": 10
+          },
+          "figures_pending": []
+        },
+        {
+          "unit_no": 4,
+          "authored": true,
+          "translation_status": "draft",
+          "depth_check": "pass",
+          "gates": {
+            "G2": "done",
+            "G3": "open",
+            "G5": "open"
+          },
+          "publication": "gated",
+          "figures": {
+            "prompt_only": 0,
+            "generated": 0,
+            "placed": 8
+          },
+          "figures_pending": []
+        },
+        {
+          "unit_no": 5,
+          "authored": true,
+          "translation_status": "draft",
+          "depth_check": "pass",
+          "gates": {
+            "G2": "done",
+            "G3": "open",
+            "G5": "open"
+          },
+          "publication": "gated",
+          "figures": {
+            "prompt_only": 0,
+            "generated": 0,
+            "placed": 8
+          },
+          "figures_pending": []
+        },
+        {
+          "unit_no": 6,
+          "authored": true,
+          "translation_status": "draft",
+          "depth_check": "pass",
+          "gates": {
+            "G2": "done",
+            "G3": "open",
+            "G5": "open"
+          },
+          "publication": "gated",
+          "figures": {
+            "prompt_only": 0,
+            "generated": 0,
+            "placed": 8
+          },
+          "figures_pending": []
+        }
+      ]
+    },
+    {
+      "course_code": "EFMP-304",
+      "units": [
+        {
+          "unit_no": 1,
+          "authored": true,
+          "translation_status": "draft",
+          "depth_check": "pass",
+          "gates": {
+            "G2": "done",
+            "G3": "open",
+            "G5": "open"
+          },
+          "publication": "gated",
+          "figures": {
+            "prompt_only": 0,
+            "generated": 0,
+            "placed": 10
+          },
+          "figures_pending": []
+        }
+      ]
+    },
+    {
+      "course_code": "GENG-300",
+      "units": [
+        {
+          "unit_no": 1,
+          "authored": true,
+          "translation_status": "draft",
+          "depth_check": "pass",
+          "gates": {
+            "G2": "done",
+            "G3": "open",
+            "G5": "open"
+          },
+          "publication": "gated",
+          "figures": {
+            "prompt_only": 0,
+            "generated": 0,
+            "placed": 6
+          },
+          "figures_pending": []
+        },
+        {
+          "unit_no": 2,
+          "authored": true,
+          "translation_status": "draft",
+          "depth_check": "pass",
+          "gates": {
+            "G2": "done",
+            "G3": "open",
+            "G5": "open"
+          },
+          "publication": "gated",
+          "figures": {
+            "prompt_only": 0,
+            "generated": 0,
+            "placed": 6
+          },
+          "figures_pending": []
+        },
+        {
+          "unit_no": 3,
+          "authored": true,
+          "translation_status": "draft",
+          "depth_check": "pass",
+          "gates": {
+            "G2": "done",
+            "G3": "open",
+            "G5": "open"
+          },
+          "publication": "gated",
+          "figures": {
+            "prompt_only": 0,
+            "generated": 0,
+            "placed": 6
+          },
+          "figures_pending": []
+        },
+        {
+          "unit_no": 4,
+          "authored": true,
+          "translation_status": "draft",
+          "depth_check": "pass",
+          "gates": {
+            "G2": "done",
+            "G3": "open",
+            "G5": "open"
+          },
+          "publication": "gated",
+          "figures": {
+            "prompt_only": 0,
+            "generated": 0,
+            "placed": 6
+          },
+          "figures_pending": []
+        }
+      ]
+    },
+    {
+      "course_code": "GICT-300",
+      "units": [
+        {
+          "unit_no": 1,
+          "authored": false,
+          "translation_status": "draft",
+          "depth_check": "not_applicable",
+          "gates": {
+            "G2": "open",
+            "G3": "open",
+            "G5": "open"
+          },
+          "publication": "unpublished",
+          "figures": {
+            "prompt_only": 0,
+            "generated": 0,
+            "placed": 0
+          },
+          "figures_pending": []
+        }
+      ]
+    },
+    {
+      "course_code": "GNAS-301",
+      "units": [
+        {
+          "unit_no": 1,
+          "authored": true,
+          "translation_status": "draft",
+          "depth_check": "pass",
+          "gates": {
+            "G2": "done",
+            "G3": "open",
+            "G5": "open"
+          },
+          "publication": "gated",
+          "figures": {
+            "prompt_only": 0,
+            "generated": 0,
+            "placed": 8
+          },
+          "figures_pending": []
+        },
+        {
+          "unit_no": 2,
+          "authored": true,
+          "translation_status": "draft",
+          "depth_check": "pass",
+          "gates": {
+            "G2": "done",
+            "G3": "open",
+            "G5": "open"
+          },
+          "publication": "gated",
+          "figures": {
+            "prompt_only": 0,
+            "generated": 0,
+            "placed": 6
+          },
+          "figures_pending": []
+        },
+        {
+          "unit_no": 3,
+          "authored": true,
+          "translation_status": "draft",
+          "depth_check": "pass",
+          "gates": {
+            "G2": "done",
+            "G3": "open",
+            "G5": "open"
+          },
+          "publication": "gated",
+          "figures": {
+            "prompt_only": 0,
+            "generated": 0,
+            "placed": 8
+          },
+          "figures_pending": []
+        },
+        {
+          "unit_no": 4,
+          "authored": true,
+          "translation_status": "draft",
+          "depth_check": "pass",
+          "gates": {
+            "G2": "done",
+            "G3": "open",
+            "G5": "open"
+          },
+          "publication": "gated",
+          "figures": {
+            "prompt_only": 0,
+            "generated": 0,
+            "placed": 14
+          },
+          "figures_pending": []
+        },
+        {
+          "unit_no": 5,
+          "authored": true,
+          "translation_status": "draft",
+          "depth_check": "pass",
+          "gates": {
+            "G2": "done",
+            "G3": "open",
+            "G5": "open"
+          },
+          "publication": "gated",
+          "figures": {
+            "prompt_only": 0,
+            "generated": 0,
+            "placed": 8
+          },
+          "figures_pending": []
+        },
+        {
+          "unit_no": 6,
+          "authored": true,
+          "translation_status": "draft",
+          "depth_check": "pass",
+          "gates": {
+            "G2": "done",
+            "G3": "open",
+            "G5": "open"
+          },
+          "publication": "gated",
+          "figures": {
+            "prompt_only": 0,
+            "generated": 0,
+            "placed": 12
+          },
+          "figures_pending": []
+        }
+      ]
+    },
+    {
+      "course_code": "GQUR-300",
+      "units": [
+        {
+          "unit_no": 1,
+          "authored": false,
+          "translation_status": "draft",
+          "depth_check": "not_applicable",
+          "gates": {
+            "G2": "open",
+            "G3": "open",
+            "G5": "open"
+          },
+          "publication": "unpublished",
+          "figures": {
+            "prompt_only": 0,
+            "generated": 0,
+            "placed": 0
+          },
+          "figures_pending": []
+        }
+      ]
+    }
+  ],
+  "commit": "64ae26094bb3206dc44a03fe7d3c6ac3baf65bb3",
+  "trackers": {
+    "specs/content/efmp-301/tasks.md": "9e15c91e8a61112bb73772da5116edfd3984ed4051b2ea4f6525dde18bb8d152",
+    "specs/content/efmp-302/tasks.md": "014767c2ca9b09343939dccfe9a58ba507e89b7e5afeb32eb29478fe10c7bc43",
+    "specs/content/gnas-301/tasks.md": "efc805b26de601db8cc9f71e87c350f82fd2ab2526d9a8338a0e7b1c9e3835a8",
+    "specs/content/efmp-304/tasks.md": "ca3aa13ebdf8786322bd5cd1db4e97536cb878863e2b2fc4355de9d25e071f9f",
+    "specs/content/eed-313/tasks.md": "0068ff5b5fba4e24592848f308b5fd825fd5db08f75a5be04823060fa726265e",
+    "specs/content/geng-300/tasks.md": "d518a2c90630cacf5cd7fc00e61114541e91252a4370d37e831720b3a03ee49b"
+  }
+}

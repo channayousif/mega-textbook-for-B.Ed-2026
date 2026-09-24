@@ -1,0 +1,77 @@
+figure shot failed /img/figures/gnas-301/unit-01/fig-U1-2.ur.dark.svg elementHandle.screenshot: Timeout 30000ms exceeded.
+Call log:
+[2m  - taking element screenshot[22m
+[2m  - waiting for fonts to load...[22m
+[2m  - fonts loaded[22m
+[2m  - attempting scroll into view action[22m
+[2m    2 × waiting for element to be stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying scroll into view action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying scroll into view action[22m
+[2m      - waiting 100ms[22m
+[2m    55 × waiting for element to be stable[22m
+[2m       - element is not visible[22m
+[2m     - retrying scroll into view action[22m
+[2m       - waiting 500ms[22m
+
+figure shot failed /img/figures/gnas-301/unit-01/fig-U1-1.ur.dark.svg elementHandle.screenshot: Timeout 30000ms exceeded.
+Call log:
+[2m  - taking element screenshot[22m
+[2m  - waiting for fonts to load...[22m
+[2m  - fonts loaded[22m
+[2m  - attempting scroll into view action[22m
+[2m    2 × waiting for element to be stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying scroll into view action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying scroll into view action[22m
+[2m      - waiting 100ms[22m
+[2m    58 × waiting for element to be stable[22m
+[2m       - element is not visible[22m
+[2m     - retrying scroll into view action[22m
+[2m       - waiting 500ms[22m
+
+figure shot failed /img/figures/gnas-301/unit-01/fig-U1-7.ur.dark.svg elementHandle.screenshot: Timeout 30000ms exceeded.
+Call log:
+[2m  - taking element screenshot[22m
+[2m  - waiting for fonts to load...[22m
+[2m  - fonts loaded[22m
+[2m  - attempting scroll into view action[22m
+[2m    2 × waiting for element to be stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying scroll into view action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying scroll into view action[22m
+[2m      - waiting 100ms[22m
+[2m    58 × waiting for element to be stable[22m
+[2m       - element is not visible[22m
+[2m     - retrying scroll into view action[22m
+[2m       - waiting 500ms[22m
+
+figure shot failed /img/figures/gnas-301/unit-01/fig-U1-8.ur.dark.svg elementHandle.screenshot: Timeout 30000ms exceeded.
+Call log:
+[2m  - taking element screenshot[22m
+[2m  - waiting for fonts to load...[22m
+[2m  - fonts loaded[22m
+[2m  - attempting scroll into view action[22m
+[2m    2 × waiting for element to be stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying scroll into view action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying scroll into view action[22m
+[2m      - waiting 100ms[22m
+[2m    58 × waiting for element to be stable[22m
+[2m       - element is not visible[22m
+[2m     - retrying scroll into view action[22m
+[2m       - waiting 500ms[22m
+
+renders + inspection record written to /home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-a8eefd2fc607a93b9/specs/content/gnas-301/reviews/unit-01/G5/renders-20260924T043310Z
