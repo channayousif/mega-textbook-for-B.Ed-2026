@@ -1,0 +1,4 @@
+=== npm run check:no-answer-keys ===
+exit_code=0
+✓ No answer keys / private marking material found (scanned: docs, licence, i18n, build, specs/content).
+✓ No answer keys / private marking material found (scanned: docs, licence, i18n, build, specs/content).
