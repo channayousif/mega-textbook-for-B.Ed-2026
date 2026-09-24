@@ -290,3 +290,34 @@ teacher-made trade (U9-3); validity, reliability and bias (U9-4); the formative
 cycle and the motivation finding (U9-5); summative's purposes (U9-6); the
 reinforcement rows (U9-1, U9-4, U9-5).
 
+## Chapter 10 - Planning instruction (verified; used by Unit 10)
+
+On purposes: "'If you don't know where you're going, you could end up someplace
+else.' (Casey Stengel)... Almost by definition, education has purposes, goals, and
+objectives, and a central task of teaching is to know what these are and to
+transform the most general goals into specific objectives and tasks for students."
+
+On the benefits of clarity: "If students know precisely what they are supposed to
+learn, they can focus their attention and effort more effectively. If the teacher
+knows precisely what students are supposed to learn, then the teacher can make
+better use of class time and choose and design assessments of their learning that
+are more fair and valid."
+
+On Mager's objectives: "In the most commonly used version of this approach,
+originated by Robert Mager (1962, 2005), a good behavioral objective should have
+three features. First, it should specify a behavior that can in fact be observed.
+In practice this usually means identifying something that a student does or says,
+not something a student thinks or feels." The second feature "describes conditions
+of performance of the behavior", and the third a criterion.
+
+On selecting goals and the chapter's instructional-strategy repertoire: the
+chapter's companion (Chapter 9, "Facilitating complex thinking") carries the
+strategy catalogue - cooperative learning, inquiry, discovery learning,
+self-reflection, independent study, concept maps, lectures, direct instruction,
+mastery learning - with their demands and uses.
+
+Used for (Unit 10): the methods as tools and the choosing frame (U10-1, U10-2);
+backward design and Mager's behavioural objectives (U10-3); the effectiveness
+framing - purposes made specific, class time used well, fair and valid assessment
+(U10-4); the reinforcement rows (U10-1, U10-3).
+
