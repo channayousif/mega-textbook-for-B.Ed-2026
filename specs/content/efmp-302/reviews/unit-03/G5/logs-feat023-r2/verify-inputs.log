@@ -1,0 +1,12 @@
+verify-inputs (feat023-r2) 2026-09-24T21:45:02.061Z
+prepared manifest: specs/content/efmp-302/reviews/unit-03/G5/feat023-r2/manifest.json
+prepared paths: 140
+recomputed paths: 140
+missing from current tree: 0
+added in current tree: 0
+digest mismatches: 0
+skill_digest prepared: 02797f90adddd8f4bc50c6e80c6e68d8f6f0219d68d297aabcc8b5443bace5a8
+skill_digest current:  02797f90adddd8f4bc50c6e80c6e68d8f6f0219d68d297aabcc8b5443bace5a8
+skill_digest match: true
+required_criteria match: true
+RESULT: ALL 140 BOUND INPUTS DIGEST-VERIFIED AGAINST CURRENT BYTES
