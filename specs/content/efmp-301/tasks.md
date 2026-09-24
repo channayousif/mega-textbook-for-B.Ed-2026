@@ -79,7 +79,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 8 | G6 assets | ▢ | | |
 | Unit 8 | G7 publish | ▢ | | |
 | Unit 9 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
-| Unit 9 | G2 en-draft | ▢ | | |
+| Unit 9 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-09/G2/20260924T230028319Z-gates.json |
 | Unit 9 | G3 en-review | ▢ | | |
 | Unit 9 | G4 ur-translation | ▢ | | |
 | Unit 9 | G5 ur-review | ▢ | | |
