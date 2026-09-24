@@ -1,0 +1,10 @@
+$ npm run check:depth-gate   (GICT-300 U5 G3 as-is worktree run, 2026-09-23, worktree HEAD 6361ad6. Exit 1: every failure is GENG-300 Unit 1 (stale tree); zero GICT-300 findings. Out of scope, as above.)
+
+
+✗ Depth gate failed with 4 finding(s):
+
+  - GENG-300 Unit 1 (docs/semester-1/geng-300/unit-01): unit-assessment.mdx is missing the `## Unit summary` section
+  - GENG-300 Unit 1 (docs/semester-1/geng-300/unit-01): no coverage matrix at specs/content/geng-300/coverage/unit-01.md
+  - GENG-300 Unit 1 (docs/semester-1/geng-300/unit-01): no sources-consulted list at specs/content/geng-300/sources/unit-01.md
+  - GENG-300 Unit 1 (docs/semester-1/geng-300/unit-01): unit-total est_reading_minutes is 92, outside the depth-budget band 50–70 reading-min (FR-016)
+

@@ -1,0 +1,76 @@
+G3 independent assessment working - GQUR-300 Unit 5 - run001
+Reviewer solved every item before reading the supplied answers, then compared.
+
+MCQs (derived answer -> supplied key):
+1. Data cycle order taught in topic-01: question, collect, organize, summarize,
+   interpret -> b. Key: b. AGREE.
+2. Arrivals after the bell are observable events; a survey relies on memory ->
+   b (observation at the gate). Key: b. AGREE.
+3. 12 + 14 + 9 = 35; 40 - 35 = 5 unrecorded -> b. Key: b. AGREE.
+   Distractor note: "c) the mode is 14" is defensibly wrong - the mode is a
+   category (transport), 14 is its frequency, and the frequency list 12/14/9 has
+   no mode. No key conflict.
+4. "Share of the class" = parts of one whole -> c (pie chart). Key: c. AGREE.
+5. Attendance across a week = change over time -> b (line graph). Key: b. AGREE.
+6. 30 percent of 360 = 108 degrees -> c. Key: c. AGREE.
+7. Axis starting at 10 stretches small value differences into large-looking
+   height differences -> b. Key: b. AGREE.
+8. Sorted: 4,000 / 4,100 / 4,200 / 4,300 / 39,000. Median 4,200; mean
+   55,600 / 5 = 11,120 distorted by the wedding order -> b. Key: b. AGREE.
+   Distractor "mode, 4,000" is wrong: all five values are distinct (no mode).
+9. Only average defined for categories -> c (mode). Key: c. AGREE.
+10. Census literacy rate counts persons 10 years and above -> b. Key: b. AGREE.
+MCQ key agreement: 10/10.
+
+RRQs (derived answer vs model):
+1. observation (arrivals at the gate), survey (snack choice), records (last
+   month's absences) - AGREE with model.
+2. Total 35 against sample 40 -> 5 unrecorded; next move find them or rerun,
+   not summarize - AGREE.
+3. Sum 20+45+50+55+60+62+62+70+70+70+96 = 660; mean 660/11 = 60; median = 6th
+   of 11 sorted = 62; mode = 70 (only value appearing three times; 62 appears
+   twice) - AGREE.
+4. Class A 3 x 10 = 30, Class B 5 x 10 = 50; without the key the icons read as
+   3 vs 5, a 20-pupil error - AGREE.
+5. Sorted 35, 38, 40, 42, 45: median 40 (3rd of 5); all values distinct so no
+   mode - AGREE.
+6. Differences between bars look larger than the values justify because visible
+   bar heights start at 10 - AGREE.
+7. 22.5 percent of 360 = 81 degrees - AGREE.
+8. A few very high values drag the mean above what almost any case costs; the
+   median reports the middle unaffected by extremes - AGREE.
+9. Gap = 64.23 - 50.21 = 14.02 percentage points; the headline hides the gender
+   divide and the 46.29 percent out-of-school rate. Computation AGREES with the
+   model's first clause. DISCREPANCY: the model's second clause calls it "the
+   near-10-point-plus divide" (unit-assessment.mdx:188-190) - 14.02 is not
+   "near 10"; the phrase echoes topic-03.mdx:79-80 ("nearly 10 percentage
+   points"), which contradicts the unit's own figures, its ERQ-3 rubric
+   (14.02) and the teacher notes (14.02-point gap). Recorded, bank not rewritten.
+10. Who collected it, how, compared to what, what is the base, what is missing -
+    AGREE.
+
+ERQs (derived vs rubric):
+1. Travel survey: table totalling 20, modal share as percentage, one bias with
+   concrete fix - AGREE with rubric.
+2. Total 38+42+35+40+45 = 200; largest 45; 45/200 = 22.5 percent;
+   22.5% x 360 = 81 degrees - AGREE.
+3. Gap 64.23 - 50.21 = 14.02 pp; rise 57.54 - 54.57 = 2.97 pp;
+   14.02 / 2.97 = 4.72, so "more than four times" is correct - AGREE.
+4. Mean 60, median 62, mode 70; mean < median < mode is the signature of a low
+   tail pulling the mean down; rubric totals 3+2+2 = 7 - AGREE.
+5. Own data cycle at Evaluate level; rubric totals 3+2+2+3 = 10 - AGREE.
+
+Blueprint audit (content-spec.md ## Unit 5, "Unit-end assessment blueprint"):
+10 MCQ / 10 RRQ / 5 ERQ present. Per-topic distribution: MCQ 3 (Q1-3) / 4
+(Q4-7) / 3 (Q8-10); RRQ 2 (Q1-2) / 3 (Q4,6,7) / 5 (Q3,5,8,9,10) - the >= 2 MCQ
+and >= 2 RRQ per topic floor is met for all three topics. MCQs span Remember
+(Q1, Q9), Understand (Q7, Q10) and Apply (Q2, Q3, Q4, Q5, Q6, Q8); RRQs span
+Understand (Q1, Q6, Q8), Apply (Q3, Q5, Q7) and Analyze (Q2, Q4, Q9); ERQs are
+Analyze (1-4) and Evaluate (5). Bloom labels match the thinking actually
+required (checked item by item, not from the verbs). At least one ERQ rubric
+demands Analyze-or-higher: ERQ 1-4 carry explicit Analyze criteria, ERQ-5 is
+Evaluate. Mark totals in each rubric sum correctly (6/6/6/7/10).
+
+Conclusion: the bank is arithmetically sound and blueprint-compliant except the
+RRQ-9 model phrase noted above, which conflicts with the bank's own ERQ-3
+rubric and with the correct 14.02 computation in the same sentence.

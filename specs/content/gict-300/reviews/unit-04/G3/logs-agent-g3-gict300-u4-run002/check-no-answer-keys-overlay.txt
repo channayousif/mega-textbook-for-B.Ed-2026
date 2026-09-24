@@ -1,0 +1,4 @@
+Scoped overlay run: CONTENT_ROOT=/tmp/g3-run002-overlay (repo at e12079a minus the stale geng-300 course incl. its build pages; GICT-300 inputs verified byte-identical to the bound manifest). Full-HEAD run in check-no-answer-keys.txt fails only on geng-300 build pages.
+$ CONTENT_ROOT=/tmp/g3-run002-overlay node scripts/check-no-answer-keys.mjs   (2026-09-24T01:04:14.691Z)
+✓ No answer keys / private marking material found (scanned: docs, licence, i18n, build, specs/content).
+exit=0

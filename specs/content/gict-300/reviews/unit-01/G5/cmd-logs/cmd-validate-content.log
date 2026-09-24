@@ -1,0 +1,32 @@
+COMMAND: npm run validate:content
+RUN A (repo-wide, worktree HEAD 5005f2e, run 2026-09-23T17:10-17:12Z): see findings below.
+Repo-wide exit_code=1. All 13 findings are docs/semester-1/geng-300/* (stale tree inherited from branch base 39c9a95, out of GICT-300 scope): 4 legacy-file findings, 8 clo_refs pattern findings, 2 Glossary-term findings (geng-300 terms absent from this branch glossary.json). Zero findings reference GICT-300 or any other course.
+Full output:
+
+> bed-mega-textbook@0.1.0 validate:content
+> node scripts/validate-content.mjs
+
+
+✗ Content validation failed with 13 error(s):
+
+  - docs/semester-1/geng-300/unit-01/activities.mdx: legacy file 'activities.mdx' cannot coexist with topic-*.mdx — fold it into the topic cycles
+  - docs/semester-1/geng-300/unit-01/formative.mdx: legacy file 'formative.mdx' cannot coexist with topic-*.mdx — fold it into the topic cycles
+  - docs/semester-1/geng-300/unit-01/summative.mdx: legacy file 'summative.mdx' cannot coexist with topic-*.mdx — fold it into the topic cycles
+  - docs/semester-1/geng-300/unit-01/teacher-notes.mdx: legacy file 'teacher-notes.mdx' cannot coexist with topic-*.mdx — rename to 'unit-teacher-notes.mdx'
+  - docs/semester-1/geng-300/unit-01/index.mdx: invalid front-matter: /clo_refs/0 must match pattern "^SLO:[A-Z]{2,4}-[0-9]{3}(--)?-[0-9]+-[0-9]+$"; /clo_refs/1 must match pattern "^SLO:[A-Z]{2,4}-[0-9]{3}(--)?-[0-9]+-[0-9]+$"
+  - docs/semester-1/geng-300/unit-01/topic-01.mdx: invalid front-matter: /clo_refs/0 must match pattern "^SLO:[A-Z]{2,4}-[0-9]{3}(--)?-[0-9]+-[0-9]+$"
+  - docs/semester-1/geng-300/unit-01/topic-01.mdx: <Glossary term="Vocabulary building"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-01/topic-02.mdx: invalid front-matter: /clo_refs/0 must match pattern "^SLO:[A-Z]{2,4}-[0-9]{3}(--)?-[0-9]+-[0-9]+$"
+  - docs/semester-1/geng-300/unit-01/topic-02.mdx: <Glossary term="Subject-verb agreement"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-01/topic-03.mdx: invalid front-matter: /clo_refs/0 must match pattern "^SLO:[A-Z]{2,4}-[0-9]{3}(--)?-[0-9]+-[0-9]+$"; /clo_refs/1 must match pattern "^SLO:[A-Z]{2,4}-[0-9]{3}(--)?-[0-9]+-[0-9]+$"
+  - docs/semester-1/geng-300/unit-01/topic-04.mdx: invalid front-matter: /clo_refs/0 must match pattern "^SLO:[A-Z]{2,4}-[0-9]{3}(--)?-[0-9]+-[0-9]+$"; /clo_refs/1 must match pattern "^SLO:[A-Z]{2,4}-[0-9]{3}(--)?-[0-9]+-[0-9]+$"
+  - docs/semester-1/geng-300/unit-01/unit-assessment.mdx: invalid front-matter: /clo_refs/0 must match pattern "^SLO:[A-Z]{2,4}-[0-9]{3}(--)?-[0-9]+-[0-9]+$"; /clo_refs/1 must match pattern "^SLO:[A-Z]{2,4}-[0-9]{3}(--)?-[0-9]+-[0-9]+$"
+  - docs/semester-1/geng-300/unit-01/unit-teacher-notes.mdx: invalid front-matter: /clo_refs/0 must match pattern "^SLO:[A-Z]{2,4}-[0-9]{3}(--)?-[0-9]+-[0-9]+$"; /clo_refs/1 must match pattern "^SLO:[A-Z]{2,4}-[0-9]{3}(--)?-[0-9]+-[0-9]+$"
+
+RUN B (scoped CONTENT_ROOT overlay = worktree HEAD 5005f2e content + origin/main geng-300 fix
+(docs/semester-1/geng-300, specs/content/geng-300, static/img/figures/geng-300) + glossary.json
+merged (HEAD 135 terms + 62 geng-300 terms from origin/main), cwd /tmp/g5ov, run 2026-09-23T17:2xZ):
+GICT-300 and every other in-scope course pass; the stale geng-300 tree is replaced by the fixed one.
+Full output:
+✓ Content validation passed.
+exit_code=0

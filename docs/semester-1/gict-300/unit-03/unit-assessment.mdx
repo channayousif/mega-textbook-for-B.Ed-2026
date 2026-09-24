@@ -1,0 +1,228 @@
+---
+title: "Unit 3 assessment"
+description: "GICT-300 Unit 3 question bank: 10 MCQs, 10 restricted-response and 5 extended-response items on operating system functions and types, files and processes, input/output management, and the kernel."
+course_code: GICT-300
+unit_no: 3
+clo_refs:
+  - "SLO:GICT-300-3-4"
+blooms_summary: "A 10/10/5 bank spanning all four topics, with at least two MCQs and two RRQs per topic: MCQs at Remember, Understand and Apply; RRQs at Understand, Apply and Analyze; ERQs at Analyze and Evaluate."
+est_reading_minutes: 20
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+
+<PrintHandout />
+
+# Unit 3 assessment
+
+## Unit summary
+
+The operating system manages resources (dividing the processor by time sharing and
+guarding memory), provides the user interface, hosts applications, and keeps files and
+devices in order; its types - batch, time-sharing, real-time, distributed, mobile - tune
+the same functions to different promises. File management rests on the three identifiers
+of a file (name and extension, folder path, metadata) and the OS's services over them.
+Process management rests on the process, a program in execution with its address space,
+registers and open files, moving through the states running, ready and blocked while the
+OS time-shares one processor among many. Input/output management is a translation chain:
+application, operating system, driver, device, smoothed by buffers and spooling - and it
+doubles as a diagnostic ladder. At the centre sits the kernel, the always-running core
+that schedules, manages memory, controls devices and exposes the guarded doorways
+(system calls) through which applications must request every service.
+
+## Summative assessment
+
+### Multiple-choice questions (MCQs)
+
+1. Which of these is NOT part of the operating system's three-part job? *(Remember)*
+   a) managing the hardware resources of the computer
+   b) providing the user-interface components
+   c) providing a platform for applications
+   d) typing documents for the user
+
+2. Time sharing means: *(Understand)*
+   a) each user is given a fixed hour of computer time
+   b) the OS switches the processor among programs so quickly that they seem to run
+      together
+   c) several users share one keyboard in turns
+   d) the computer shares its files over the network
+
+3. A patient monitor must record every heartbeat instantly and never wait its turn. The
+   operating system type it resembles is: *(Apply)*
+   a) batch
+   b) real-time
+   c) time-sharing
+   d) mobile
+
+4. The three things that identify a file are: *(Remember)*
+   a) its name, its size and its colour
+   b) its name and extension, its folder path, and its metadata
+   c) its icon, its font and its folder
+   d) its drive, its cable and its port
+
+5. A process has just started reading from the disk and cannot continue until the read
+   finishes. Its state is: *(Apply)*
+   a) running
+   b) ready
+   c) blocked
+   d) terminated
+
+6. Closing a window sometimes leaves a process running in the background. This shows
+   that: *(Understand)*
+   a) windows and processes are unrelated things
+   b) a process is a program in execution, which may outlive its window
+   c) the operating system has failed
+   d) a process is a kind of file
+
+7. A device driver is: *(Remember)*
+   a) a type of application software
+   b) a small piece of system software that translates the OS's requests into one
+      device's own commands
+   c) a network cable standard
+   d) the part of ROM that starts the machine
+
+8. A USB drive works on one computer but not on another. The most likely broken link in
+   the input/output chain is: *(Apply)*
+   a) the device itself
+   b) the driver on the second computer
+   c) the application
+   d) the file's metadata
+
+9. Applications never touch hardware directly because: *(Understand)*
+   a) they are too slow to talk to devices
+   b) they must ask through system calls, and the kernel decides
+   c) hardware physically refuses application signals
+   d) the desktop blocks them
+
+10. The kernel is: *(Remember)*
+    a) the desktop picture and taskbar
+    b) the always-running core of the operating system
+    c) a kind of application for managing files
+    d) another name for the whole operating system
+
+### Restricted-response questions (RRQs)
+
+1. Explain time sharing and the "illusion of many processors" in two sentences. *(Understand)*
+2. Match each described machine to an operating system type, with one clause of reason: a
+   bank's overnight payroll run; a school office desktop; a car's engine controller.
+   *(Apply)*
+3. Name the three identifiers of a file, and propose a naming pattern for a school's
+   letters that would make them findable in five seconds. *(Understand)*
+4. Narrate the states a process passes through from "the user double-clicks the icon" to
+   "the program is closed", using the words scheduled and blocked at least once. *(Analyze)*
+5. Trace a print request through the four links of the input/output chain, naming each
+   link. *(Understand)*
+6. A printer has power and paper, nothing prints, and only one computer is affected.
+   Analyse which link of the chain the fault most likely belongs to, and name your next
+   two checks. *(Analyze)*
+7. Explain the difference between the kernel and the operating system, using the Linux
+   example. *(Understand)*
+8. Sort these into the four layers (applications, shell and utilities, kernel, hardware):
+   the scheduler, a word processor, the desktop icons, a printer driver, the settings
+   screen, memory allocation. *(Apply)*
+9. A school computer slows down every afternoon. Explain the slowness in terms of process
+   management and name one thing to check. *(Analyze)*
+10. Explain what a buffer does and why printing does not freeze the word processor.
+    *(Understand)*
+
+### Extended-response questions (ERQs)
+
+1. A school wants a machine to run its biometric attendance system, which must record
+   every check instantly. Evaluate which operating system type the machine should
+   resemble and why, and what would go wrong with an ordinary time-sharing desktop
+   instead. *(Evaluate)*
+2. Write a one-page "office rescue plan" for a school that cannot find last term's letters
+   and whose computer slows every afternoon: address the finding problem with a file
+   scheme and the slowness with process management. *(Analyze)*
+3. A teacher reports: "I clicked Print, the printer has power and paper, but nothing comes
+   out, and only my computer has this problem." In one page, analyse the fault using the
+   input/output chain, name the link you would check first, and give the likely fix at
+   each step. *(Analyze)*
+4. For a staff meeting, prepare a one-page explainer titled "Who is really running the
+   computer?" that uses the four layers and the kernel's functions to explain why closing
+   a window is not always ending a program. *(Analyze)*
+5. Using the whole unit, evaluate the statement: "The operating system is the quiet
+   manager of the machine." Draw on scheduling, file management, input/output management
+   and the kernel's system calls as your evidence. *(Evaluate)*
+
+## Answers and marking guidance
+
+### MCQ answer key
+
+1. d - doing the user's tasks is application software's job, not the OS's.
+2. b - time sharing switches the processor so fast that every program seems continuous.
+3. b - a real-time system must respond within a strict time limit; that is its promise.
+4. b - name and extension, folder path and metadata are the three identifiers.
+5. c - waiting on an operation to finish is the blocked state.
+6. b - a process is the running program; the window is only one face it may show.
+7. b - the driver translates for one specific device.
+8. b - the device works elsewhere, so the device is fine; the missing or broken driver on
+   the second machine is the likely link.
+9. b - system calls are the guarded doorways; the kernel decides and acts.
+10. b - the kernel is the core within the whole operating system package.
+
+### RRQ model answers and mark schemes
+
+1. Model: one processor runs one process at an instant; by running one, pausing it and
+   running another, the OS makes many programs appear simultaneous - the illusion of many
+   processors where there is one. **Marks (2):** 1 for the switching; 1 for the illusion.
+2. Model: overnight payroll is batch (jobs collected and run without user interaction);
+   the school desktop is time-sharing (many programs share the processor in turns); the
+   engine controller is real-time (must respond within a strict limit). **Marks (3):** 1
+   per correct match with a reason.
+3. Model: name and extension, folder path, metadata; a date-first pattern such as
+   "2026-03-15-parent-notice" inside a year-then-kind folder tree makes any letter
+   findable quickly. **Marks (3):** 1 for the three identifiers; 2 for a workable naming
+   pattern.
+4. Model: double-click creates a new process; it becomes ready; the OS schedules it into
+   running; when it opens a file from disk it blocks until the read completes, then
+   returns to ready and is scheduled again; on close it terminates (or keeps running in
+   the background). **Marks (4):** 1 for new-to-ready; 1 for scheduled into running; 1
+   for blocked with a cause; 1 for the ending.
+5. Model: the application asks the OS; the OS queues and polices the request; the driver
+   translates it into the printer's commands; the device prints and reports back.
+   **Marks (4):** 1 per link in order.
+6. Model: since only one computer is affected, the fault sits on that machine's side of
+   the chain - most likely the driver or the application's request, not the printer;
+   checks: does the OS see the printer in its devices list (driver), and does the print
+   queue show the job stuck (OS/application). **Marks (3):** 1 for placing the fault; 2
+   for two sensible checks.
+7. Model: the operating system is the whole package - kernel plus shell plus utilities;
+   the kernel is the essential core within it; "Linux" strictly names a kernel, and the
+   familiar Linux desktops bundle it with shells and utilities to make complete operating
+   systems. **Marks (3):** 1 for the package; 1 for the core; 1 for the Linux example.
+8. Model: applications - word processor; shell and utilities - desktop icons, settings
+   screen; kernel - scheduler, memory allocation; hardware - (the printer driver sits
+   with the kernel's device-control layer under its supervision). **Marks (4):** 1 per
+   layer mostly correct, with the driver's placement reasoned.
+9. Model: each afternoon more processes compete for turns, so each gets a smaller slice
+   and everything crawls; check the process list for background programs or a stuck
+   process and close what is not needed. **Marks (3):** 1 for the crowding explanation;
+   1 for the slice idea; 1 for a concrete check.
+10. Model: a buffer is a holding area in memory where the OS parks data in transit; the
+    word processor hands the page to the buffer and moves on while the slower printer
+    works through it, so the application does not freeze. **Marks (3):** 1 for the
+    definition; 1 for the speed difference; 1 for the consequence.
+
+### ERQ rubrics
+
+1. **Attendance machine (Evaluate).** Criteria: *Correct OS type with its defining
+   promise* (0-3); *Recommendation justified against the instant-response requirement*
+   (0-4, Analyse); *Failure mode of the time-sharing alternative explained concretely*
+   (0-2); *Clarity* (0-1). Total 10.
+2. **Office rescue plan (Analyze).** Criteria: *File scheme workable: at most three
+   levels, naming pattern, rule for new files* (0-3); *Slowness diagnosed with process
+   states and time sharing* (0-4, Analyse); *Both problems tied to OS functions* (0-2);
+   *One-page clarity* (0-1). Total 10.
+3. **Print fault (Analyze).** Criteria: *The chain named and applied to the symptom*
+   (0-4); *Checks ordered with reasons* (0-3); *Likely fixes matched to the right link*
+   (0-2); *Clarity* (0-1). Total 10.
+4. **Staff-meeting explainer (Analyze).** Criteria: *Four layers presented accurately*
+   (0-3); *Kernel functions in plain language* (0-3); *The window-versus-process question
+   answered with system calls and scheduling rather than assertion* (0-3, Analyse);
+   *Fits the audience* (0-1). Total 10.
+5. **Integrative evaluation (Evaluate).** Criteria: *Draws on at least three of
+   scheduling, file management, I/O management, system calls* (0-3); *Each drawn part
+   used accurately* (0-3); *The "quiet manager" judgement defended as a synthesis, not a
+   list* (0-3, Analyse); *Clarity* (0-1). Total 10.

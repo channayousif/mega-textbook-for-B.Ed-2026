@@ -1,0 +1,1489 @@
+[45m[1m INFO [22m[49m Accepting connections at http://localhost:4173
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:43:55 PM[22m [33m::1[39m [36mGET /semester-1/gqur-300/unit-06/topic-01/[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:43:55 PM[22m [33m::1[39m [32mReturned 200 in 15 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:43:55 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-1.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:43:55 PM[22m [33m::1[39m [32mReturned 200 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:41 PM[22m [33m::1[39m [36mGET /semester-1/gqur-300/unit-06/[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:41 PM[22m [33m::1[39m [32mReturned 200 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:41 PM[22m [33m::1[39m [36mGET /assets/css/styles.ff1ea0b2.css[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:41 PM[22m [33m::1[39m [36mGET /assets/js/runtime~main.dccf367f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:41 PM[22m [33m::1[39m [36mGET /assets/js/main.29a3449d.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:41 PM[22m [33m::1[39m [36mGET /img/logo.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:41 PM[22m [33m::1[39m [32mReturned 200 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:41 PM[22m [33m::1[39m [32mReturned 200 in 9 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:41 PM[22m [33m::1[39m [32mReturned 200 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:41 PM[22m [33m::1[39m [32mReturned 200 in 14 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:41 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:41 PM[22m [33m::1[39m [32mReturned 200 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:41 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:41 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:41 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:41 PM[22m [33m::1[39m [32mReturned 200 in 9 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:41 PM[22m [33m::1[39m [32mReturned 200 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:41 PM[22m [33m::1[39m [32mReturned 200 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:41 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:41 PM[22m [33m::1[39m [36mGET /assets/js/3889.05c74f59.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:41 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:41 PM[22m [33m::1[39m [36mGET /assets/js/f571a10c.837ee4ad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:41 PM[22m [33m::1[39m [32mReturned 200 in 32 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:41 PM[22m [33m::1[39m [32mReturned 200 in 30 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:41 PM[22m [33m::1[39m [32mReturned 200 in 9 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:41 PM[22m [33m::1[39m [32mReturned 200 in 39 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [36mGET /content-index.json[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [36mGET /assets/js/8543.c4b60cfb.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [32mReturned 200 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [32mReturned 200 in 27 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [36mGET /assets/js/f8409a7e.02119427.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [32mReturned 304 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [32mReturned 304 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [32mReturned 200 in 14 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [36mGET /assets/js/136f6ffc.faceaa80.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [36mGET /assets/js/f8409a7e.02119427.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [32mReturned 304 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [32mReturned 304 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [32mReturned 304 in 9 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [32mReturned 304 in 10 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [32mReturned 304 in 13 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [36mGET /assets/js/8fad2f46.1a4ffe7f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [36mGET /assets/js/cdb567f2.0aabfd69.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [32mReturned 200 in 9 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [32mReturned 200 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:42 PM[22m [33m::1[39m [32mReturned 200 in 75 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [36mGET /semester-1/gqur-300/unit-06/topic-01[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [36mGET /assets/css/styles.ff1ea0b2.css[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [36mGET /assets/js/runtime~main.dccf367f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [36mGET /assets/js/main.29a3449d.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [36mGET /img/logo.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [36mGET /assets/js/3889.05c74f59.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [32mReturned 304 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [32mReturned 304 in 10 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [32mReturned 304 in 10 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [32mReturned 304 in 11 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [36mGET /assets/js/cdb567f2.0aabfd69.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-1.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-2.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [32mReturned 200 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [36mGET /content-index.json[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [36mGET /assets/js/8543.c4b60cfb.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [36mGET /assets/js/f8409a7e.02119427.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [32mReturned 304 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [32mReturned 304 in 10 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [32mReturned 304 in 9 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [32mReturned 304 in 10 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [32mReturned 304 in 9 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [32mReturned 304 in 12 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [36mGET /assets/js/f571a10c.837ee4ad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:43 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:44 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:44 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:44 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:44 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:44 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:44 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:44 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:44 PM[22m [33m::1[39m [36mGET /assets/js/f8409a7e.02119427.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:44 PM[22m [33m::1[39m [32mReturned 304 in 9 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:44 PM[22m [33m::1[39m [32mReturned 304 in 10 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:44 PM[22m [33m::1[39m [32mReturned 304 in 10 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:44 PM[22m [33m::1[39m [32mReturned 304 in 9 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:44 PM[22m [33m::1[39m [32mReturned 304 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:44 PM[22m [33m::1[39m [32mReturned 304 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:44 PM[22m [33m::1[39m [36mGET /assets/js/8fad2f46.1a4ffe7f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:44 PM[22m [33m::1[39m [36mGET /assets/js/cdb567f2.0aabfd69.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:44 PM[22m [33m::1[39m [36mGET /assets/js/136f6ffc.faceaa80.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:44 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:44 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:44 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /semester-1/gqur-300/unit-06/topic-02[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/css/styles.ff1ea0b2.css[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/runtime~main.dccf367f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/main.29a3449d.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /img/logo.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-3.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-4.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 200 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 200 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/3889.05c74f59.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/136f6ffc.faceaa80.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /content-index.json[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/8543.c4b60cfb.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 0 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 10 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/f8409a7e.02119427.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 0 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/f571a10c.837ee4ad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/f8409a7e.02119427.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/e9353c13.b3fc3a67.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/f536dda5.61d80b58.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/e9e0284c.b01510dd.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/8fad2f46.1a4ffe7f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 200 in 18 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/47c73d47.fc3f5ad0.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/cdb567f2.0aabfd69.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/2841fb67.84cd3bad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 200 in 20 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [36mGET /assets/js/136f6ffc.faceaa80.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 200 in 22 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 200 in 19 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:45 PM[22m [33m::1[39m [32mReturned 200 in 16 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [36mGET /semester-1/gqur-300/unit-06/topic-03[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [36mGET /assets/css/styles.ff1ea0b2.css[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [36mGET /assets/js/runtime~main.dccf367f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [36mGET /assets/js/main.29a3449d.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [36mGET /img/logo.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-5.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-6.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [32mReturned 200 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [32mReturned 200 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [36mGET /assets/js/3889.05c74f59.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [36mGET /assets/js/8fad2f46.1a4ffe7f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [32mReturned 304 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [32mReturned 304 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:46 PM[22m [33m::1[39m [32mReturned 304 in 11 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [36mGET /content-index.json[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [36mGET /assets/js/8543.c4b60cfb.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [32mReturned 304 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [32mReturned 304 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [32mReturned 304 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [32mReturned 304 in 11 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [36mGET /assets/js/f8409a7e.02119427.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [36mGET /assets/js/f571a10c.837ee4ad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [32mReturned 304 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [36mGET /assets/js/f8409a7e.02119427.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [36mGET /assets/js/136f6ffc.faceaa80.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [36mGET /assets/js/8fad2f46.1a4ffe7f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [36mGET /assets/js/cdb567f2.0aabfd69.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:47 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /semester-1/gqur-300/unit-06/unit-assessment[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/css/styles.ff1ea0b2.css[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/js/runtime~main.dccf367f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/js/main.29a3449d.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /img/logo.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/js/065638d0.62c8407a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/js/3889.05c74f59.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 0 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 200 in 9 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /content-index.json[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/js/8543.c4b60cfb.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/js/f8409a7e.02119427.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/js/f571a10c.837ee4ad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/js/f8409a7e.02119427.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/js/8fad2f46.1a4ffe7f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/js/cdb567f2.0aabfd69.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [36mGET /assets/js/136f6ffc.faceaa80.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:48 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /semester-1/gqur-300/unit-06/unit-teacher-notes[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/css/styles.ff1ea0b2.css[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/runtime~main.dccf367f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/main.29a3449d.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /img/logo.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 0 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/3889.05c74f59.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/0ee5487f.f0a4e714.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 200 in 9 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /content-index.json[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/8543.c4b60cfb.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/f8409a7e.02119427.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/f571a10c.837ee4ad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/f8409a7e.02119427.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 0 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/f536dda5.61d80b58.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/2841fb67.84cd3bad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/8fad2f46.1a4ffe7f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/47c73d47.fc3f5ad0.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/e9353c13.b3fc3a67.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/136f6ffc.faceaa80.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/cdb567f2.0aabfd69.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [36mGET /assets/js/e9e0284c.b01510dd.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:50 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:51 PM[22m [33m::1[39m [36mGET /semester-1/gqur-300/unit-06/[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:51 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:51 PM[22m [33m::1[39m [36mGET /assets/css/styles.ff1ea0b2.css[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:51 PM[22m [33m::1[39m [36mGET /assets/js/runtime~main.dccf367f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:51 PM[22m [33m::1[39m [32mReturned 200 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:51 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:51 PM[22m [33m::1[39m [36mGET /assets/js/main.29a3449d.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:51 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:51 PM[22m [33m::1[39m [36mGET /img/logo.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:51 PM[22m [33m::1[39m [32mReturned 200 in 0 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:51 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:51 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:51 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:51 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:51 PM[22m [33m::1[39m [32mReturned 200 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:51 PM[22m [33m::1[39m [32mReturned 200 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:51 PM[22m [33m::1[39m [32mReturned 200 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:51 PM[22m [33m::1[39m [32mReturned 200 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:51 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:51 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:51 PM[22m [33m::1[39m [36mGET /assets/js/3889.05c74f59.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:51 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:51 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:51 PM[22m [33m::1[39m [36mGET /assets/js/f571a10c.837ee4ad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:51 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:51 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [36mGET /content-index.json[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [36mGET /assets/js/8543.c4b60cfb.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [36mGET /assets/js/f8409a7e.02119427.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [36mGET /assets/js/e9353c13.b3fc3a67.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [36mGET /assets/js/2841fb67.84cd3bad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [32mReturned 200 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [32mReturned 304 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [32mReturned 200 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [32mReturned 200 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [36mGET /assets/js/47c73d47.fc3f5ad0.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [36mGET /assets/js/e9e0284c.b01510dd.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [32mReturned 200 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [32mReturned 200 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [36mGET /assets/js/a060c64e.c3d3097b.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [32mReturned 200 in 9 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [36mGET /assets/js/136f6ffc.faceaa80.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [36mGET /assets/js/8fad2f46.1a4ffe7f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [36mGET /assets/js/cdb567f2.0aabfd69.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [36mGET /assets/js/9b3954ae.207e24e3.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [36mGET /assets/js/55b70e20.0d2d5a35.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [36mGET /assets/js/f571a10c.837ee4ad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [32mReturned 200 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [32mReturned 200 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [32mReturned 200 in 10 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [32mReturned 200 in 10 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [36mGET /assets/js/2895fe63.287f1998.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [36mGET /assets/js/f3a2928a.4f8661b1.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [32mReturned 200 in 23 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [32mReturned 200 in 26 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [36mGET /assets/js/f536dda5.61d80b58.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:52 PM[22m [33m::1[39m [32mReturned 200 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /semester-1/gqur-300/unit-06/topic-01[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/css/styles.ff1ea0b2.css[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/runtime~main.dccf367f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/main.29a3449d.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /img/logo.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-1.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-2.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/3889.05c74f59.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/cdb567f2.0aabfd69.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /content-index.json[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/8543.c4b60cfb.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/f8409a7e.02119427.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 10 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 9 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 10 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/8fad2f46.1a4ffe7f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/e9e0284c.b01510dd.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/9b3954ae.207e24e3.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/55b70e20.0d2d5a35.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/2895fe63.287f1998.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/47c73d47.fc3f5ad0.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/136f6ffc.faceaa80.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/f536dda5.61d80b58.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/f571a10c.837ee4ad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/e9353c13.b3fc3a67.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/2841fb67.84cd3bad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [36mGET /assets/js/cdb567f2.0aabfd69.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:53 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /semester-1/gqur-300/unit-06/topic-02[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/css/styles.ff1ea0b2.css[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/runtime~main.dccf367f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/main.29a3449d.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /img/logo.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 0 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-3.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-4.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 200 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 200 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 0 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/3889.05c74f59.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/136f6ffc.faceaa80.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /content-index.json[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 0 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/8543.c4b60cfb.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 0 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/f8409a7e.02119427.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/f571a10c.837ee4ad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 0 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/f536dda5.61d80b58.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 0 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/e9353c13.b3fc3a67.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/47c73d47.fc3f5ad0.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/136f6ffc.faceaa80.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/cdb567f2.0aabfd69.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/2841fb67.84cd3bad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/8fad2f46.1a4ffe7f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/e9e0284c.b01510dd.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/9b3954ae.207e24e3.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/55b70e20.0d2d5a35.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [36mGET /assets/js/2895fe63.287f1998.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:54 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /semester-1/gqur-300/unit-06/topic-03[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/css/styles.ff1ea0b2.css[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/runtime~main.dccf367f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/main.29a3449d.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /img/logo.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 0 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/3889.05c74f59.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/8fad2f46.1a4ffe7f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 0 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-5.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-6.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 200 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /content-index.json[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/8543.c4b60cfb.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 0 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/f8409a7e.02119427.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/f536dda5.61d80b58.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/8fad2f46.1a4ffe7f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/47c73d47.fc3f5ad0.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/136f6ffc.faceaa80.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/f571a10c.837ee4ad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/9b3954ae.207e24e3.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/55b70e20.0d2d5a35.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/2895fe63.287f1998.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/e9353c13.b3fc3a67.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/2841fb67.84cd3bad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/cdb567f2.0aabfd69.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [36mGET /assets/js/e9e0284c.b01510dd.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:55 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [36mGET /semester-1/gqur-300/unit-06/unit-assessment[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [36mGET /assets/css/styles.ff1ea0b2.css[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [36mGET /assets/js/runtime~main.dccf367f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [36mGET /assets/js/main.29a3449d.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [36mGET /img/logo.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [32mReturned 304 in 9 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [36mGET /assets/js/3889.05c74f59.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [36mGET /assets/js/065638d0.62c8407a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [32mReturned 200 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [36mGET /content-index.json[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [36mGET /assets/js/8543.c4b60cfb.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [32mReturned 304 in 9 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:56 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [36mGET /assets/js/f8409a7e.02119427.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [36mGET /assets/js/e9e0284c.b01510dd.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [36mGET /assets/js/2841fb67.84cd3bad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [36mGET /assets/js/f536dda5.61d80b58.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [36mGET /assets/js/8fad2f46.1a4ffe7f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [36mGET /assets/js/e9353c13.b3fc3a67.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [36mGET /assets/js/f571a10c.837ee4ad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [36mGET /assets/js/136f6ffc.faceaa80.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [36mGET /assets/js/47c73d47.fc3f5ad0.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [36mGET /assets/js/9b3954ae.207e24e3.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [36mGET /assets/js/55b70e20.0d2d5a35.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [36mGET /assets/js/2895fe63.287f1998.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [36mGET /assets/js/cdb567f2.0aabfd69.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [36mGET /semester-1/gqur-300/unit-06/unit-teacher-notes[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:57 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/css/styles.ff1ea0b2.css[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/runtime~main.dccf367f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/main.29a3449d.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 0 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /img/logo.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 0 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/3889.05c74f59.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/0ee5487f.f0a4e714.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /content-index.json[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/8543.c4b60cfb.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 9 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 11 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 11 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 9 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/f8409a7e.02119427.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 9 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/e9e0284c.b01510dd.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/47c73d47.fc3f5ad0.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/f571a10c.837ee4ad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/e9353c13.b3fc3a67.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/2841fb67.84cd3bad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 15 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/f536dda5.61d80b58.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/136f6ffc.faceaa80.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/cdb567f2.0aabfd69.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/9b3954ae.207e24e3.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/55b70e20.0d2d5a35.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/2895fe63.287f1998.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [36mGET /assets/js/8fad2f46.1a4ffe7f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:58 PM[22m [33m::1[39m [32mReturned 304 in 0 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /semester-1/gqur-300/unit-06/[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/css/styles.ff1ea0b2.css[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/runtime~main.dccf367f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/main.29a3449d.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 200 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /img/logo.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 200 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 200 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 200 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 200 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 200 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/3889.05c74f59.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 200 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/f571a10c.837ee4ad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 200 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 200 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /content-index.json[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/8543.c4b60cfb.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/f8409a7e.02119427.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 304 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 304 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 304 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 200 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/47c73d47.fc3f5ad0.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/f571a10c.837ee4ad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/f536dda5.61d80b58.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/36617769.9aab975f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/2841fb67.84cd3bad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 200 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 200 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/e9e0284c.b01510dd.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/e9353c13.b3fc3a67.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 200 in 11 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 304 in 9 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 304 in 9 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 304 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/8fad2f46.1a4ffe7f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/065638d0.62c8407a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/cdb567f2.0aabfd69.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/f8409a7e.02119427.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 200 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/136f6ffc.faceaa80.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [36mGET /assets/js/0ee5487f.f0a4e714.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:45:59 PM[22m [33m::1[39m [32mReturned 200 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [36mGET /semester-1/gqur-300/unit-06/topic-01[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [36mGET /assets/css/styles.ff1ea0b2.css[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [36mGET /assets/js/runtime~main.dccf367f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [36mGET /assets/js/main.29a3449d.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [36mGET /img/logo.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [36mGET /assets/js/3889.05c74f59.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [36mGET /assets/js/cdb567f2.0aabfd69.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-1.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-2.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [32mReturned 200 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [36mGET /content-index.json[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [36mGET /assets/js/8543.c4b60cfb.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:00 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [36mGET /semester-1/gqur-300/unit-06/topic-02[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [36mGET /assets/css/styles.ff1ea0b2.css[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [36mGET /assets/js/runtime~main.dccf367f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [36mGET /assets/js/main.29a3449d.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [36mGET /img/logo.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-3.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-4.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [32mReturned 200 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [36mGET /assets/js/3889.05c74f59.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [36mGET /assets/js/136f6ffc.faceaa80.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [36mGET /content-index.json[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [36mGET /assets/js/8543.c4b60cfb.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:02 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [36mGET /semester-1/gqur-300/unit-06/topic-03[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [36mGET /assets/css/styles.ff1ea0b2.css[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [36mGET /assets/js/runtime~main.dccf367f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [36mGET /assets/js/main.29a3449d.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [36mGET /img/logo.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-5.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-6.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [32mReturned 200 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [32mReturned 304 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [32mReturned 304 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [32mReturned 304 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [36mGET /assets/js/3889.05c74f59.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [36mGET /assets/js/8fad2f46.1a4ffe7f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [36mGET /content-index.json[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [36mGET /assets/js/8543.c4b60cfb.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:03 PM[22m [33m::1[39m [32mReturned 304 in 0 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [36mGET /semester-1/gqur-300/unit-06/unit-assessment[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [36mGET /assets/css/styles.ff1ea0b2.css[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [36mGET /assets/js/runtime~main.dccf367f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [36mGET /assets/js/main.29a3449d.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [36mGET /img/logo.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [36mGET /assets/js/3889.05c74f59.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [36mGET /assets/js/065638d0.62c8407a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [36mGET /content-index.json[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [36mGET /assets/js/8543.c4b60cfb.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:04 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [36mGET /semester-1/gqur-300/unit-06/unit-teacher-notes[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [36mGET /assets/css/styles.ff1ea0b2.css[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [36mGET /assets/js/runtime~main.dccf367f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [32mReturned 304 in 0 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [36mGET /assets/js/main.29a3449d.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [36mGET /img/logo.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [36mGET /assets/js/3889.05c74f59.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [36mGET /assets/js/0ee5487f.f0a4e714.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [32mReturned 304 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [32mReturned 304 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [32mReturned 304 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [32mReturned 304 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [32mReturned 304 in 9 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [36mGET /content-index.json[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [36mGET /assets/js/8543.c4b60cfb.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:06 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /semester-1/gqur-300/unit-06/topic-01[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 200 in 0 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/css/styles.ff1ea0b2.css[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/runtime~main.dccf367f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/main.29a3449d.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /img/logo.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 200 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 200 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-1.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-2.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 200 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 200 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 200 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 200 in 10 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/3889.05c74f59.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 200 in 13 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 200 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 200 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/cdb567f2.0aabfd69.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /content-index.json[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/8543.c4b60cfb.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 304 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 304 in 10 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 304 in 10 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 304 in 11 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 304 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 304 in 11 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/f8409a7e.02119427.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 200 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/2841fb67.84cd3bad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/9b3954ae.207e24e3.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/55b70e20.0d2d5a35.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/2895fe63.287f1998.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 200 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 200 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 200 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 200 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/e9353c13.b3fc3a67.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 200 in 9 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/cdb567f2.0aabfd69.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 304 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/47c73d47.fc3f5ad0.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/8fad2f46.1a4ffe7f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/f571a10c.837ee4ad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/e9e0284c.b01510dd.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/f536dda5.61d80b58.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [36mGET /assets/js/136f6ffc.faceaa80.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 200 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 200 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 200 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 200 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 200 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:07 PM[22m [33m::1[39m [32mReturned 200 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /semester-1/gqur-300/unit-06/topic-01[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/css/styles.ff1ea0b2.css[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/runtime~main.dccf367f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/main.29a3449d.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /img/logo.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-1.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-2.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-1.dark.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-2.dark.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 200 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 200 in 10 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/3889.05c74f59.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/cdb567f2.0aabfd69.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /content-index.json[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/8543.c4b60cfb.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 12 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 10 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 13 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/f8409a7e.02119427.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/e9353c13.b3fc3a67.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/f571a10c.837ee4ad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/cdb567f2.0aabfd69.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/e9e0284c.b01510dd.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/2841fb67.84cd3bad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/f536dda5.61d80b58.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/47c73d47.fc3f5ad0.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/8fad2f46.1a4ffe7f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/136f6ffc.faceaa80.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/9b3954ae.207e24e3.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/55b70e20.0d2d5a35.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [36mGET /assets/js/2895fe63.287f1998.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:46:08 PM[22m [33m::1[39m [32mReturned 304 in 0 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /semester-1/gqur-300/unit-06/topic-01[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/css/styles.ff1ea0b2.css[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/runtime~main.dccf367f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/main.29a3449d.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /img/logo.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-1.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-2.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 200 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 200 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 200 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 200 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/3889.05c74f59.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/cdb567f2.0aabfd69.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 200 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /content-index.json[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/8543.c4b60cfb.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 200 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 304 in 9 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 304 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 304 in 9 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/f8409a7e.02119427.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/f571a10c.837ee4ad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 200 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 200 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/f536dda5.61d80b58.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/f8409a7e.02119427.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/e9e0284c.b01510dd.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/2841fb67.84cd3bad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/e9353c13.b3fc3a67.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 200 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 200 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 200 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/47c73d47.fc3f5ad0.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 200 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/f8409a7e.02119427.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/136f6ffc.faceaa80.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/8fad2f46.1a4ffe7f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [36mGET /assets/js/cdb567f2.0aabfd69.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 200 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:09 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [36mGET /semester-1/gqur-300/unit-06/topic-02[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [36mGET /assets/css/styles.ff1ea0b2.css[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [36mGET /assets/js/runtime~main.dccf367f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [36mGET /assets/js/main.29a3449d.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [36mGET /img/logo.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [32mReturned 304 in 0 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-3.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-4.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [32mReturned 200 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [32mReturned 304 in 8 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [36mGET /assets/js/3889.05c74f59.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [36mGET /assets/js/136f6ffc.faceaa80.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [36mGET /content-index.json[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [36mGET /assets/js/8543.c4b60cfb.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [32mReturned 304 in 7 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [36mGET /assets/js/f8409a7e.02119427.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [36mGET /assets/js/f571a10c.837ee4ad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:11 PM[22m [33m::1[39m [32mReturned 304 in 0 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:12 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:12 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:12 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:12 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:12 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:12 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:12 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:12 PM[22m [33m::1[39m [36mGET /assets/js/f8409a7e.02119427.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:12 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:12 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:12 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:12 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:12 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:12 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:12 PM[22m [33m::1[39m [36mGET /assets/js/136f6ffc.faceaa80.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:12 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:12 PM[22m [33m::1[39m [36mGET /assets/js/cdb567f2.0aabfd69.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:12 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:12 PM[22m [33m::1[39m [36mGET /assets/js/8fad2f46.1a4ffe7f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:12 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /semester-1/gqur-300/unit-06/topic-03[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 200 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/css/styles.ff1ea0b2.css[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/js/runtime~main.dccf367f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/js/main.29a3449d.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /img/logo.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 0 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-5.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /img/figures/gqur-300/unit-06/fig-U6-6.svg[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 200 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 200 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/js/3889.05c74f59.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 0 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/js/8fad2f46.1a4ffe7f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /content-index.json[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/js/8543.c4b60cfb.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 6 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/js/f8409a7e.02119427.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 4 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/js/f571a10c.837ee4ad.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 0 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/js/5e95c892.fd32337a.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/js/aba21aa0.cb792990.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/js/a7bd4aaa.174859fc.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/js/22dd74f7.0011c214.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/js/a94703ab.52c3f652.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 3 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/js/17896441.fb53a893.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 5 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/js/f8409a7e.02119427.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/js/8fad2f46.1a4ffe7f.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/js/136f6ffc.faceaa80.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [36mGET /assets/js/cdb567f2.0aabfd69.js[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 2 ms[39m
+[44m[1m HTTP [22m[49m [2m9/23/2026 8:47:14 PM[22m [33m::1[39m [32mReturned 304 in 1 ms[39m
+
+[45m[1m INFO [22m[49m Gracefully shutting down. Please wait...

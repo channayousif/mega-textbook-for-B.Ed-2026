@@ -1,0 +1,35 @@
+fig-U3-1.svg
+  wordmark: x=675.7 right=768.1 top=449.6 bottom=462.6
+  caption : x=199.8 right=579.6 top=439.6 bottom=455.2
+  caption text: Time sharing: one processor, many progra
+  ACTUAL bbox overlap: false  (horizontal gap caption.x - wordmark.right = -568.3px)
+
+fig-U3-1.ur.svg
+  wordmark: x=12.0 right=104.4 top=449.6 bottom=462.6
+  caption : x=246.9 right=533.4 top=439.6 bottom=455.9
+  caption text: ٹائم شیئرنگ: ایک پروسیسر، کئی پروگرام، ت
+  ACTUAL bbox overlap: false  (horizontal gap caption.x - wordmark.right = 142.5px)
+
+fig-U3-3.svg
+  wordmark: x=675.7 right=768.1 top=449.6 bottom=462.6
+  caption : x=129.9 right=650.1 top=439.6 bottom=455.2
+  caption text: Deleting a file removes its record from 
+  ACTUAL bbox overlap: false  (horizontal gap caption.x - wordmark.right = -638.2px)
+
+fig-U3-3.ur.svg
+  wordmark: x=12.0 right=104.4 top=449.6 bottom=462.6
+  caption : x=107.8 right=672.2 top=439.6 bottom=455.2
+  caption text: ڈیلیٹ کرنے سے فائل کا ریکارڈ انڈیکس سے ہ
+  ACTUAL bbox overlap: false  (horizontal gap caption.x - wordmark.right = 3.4px)
+
+fig-U3-4.svg
+  wordmark: x=675.7 right=768.1 top=449.6 bottom=462.6
+  caption : x=112.0 right=667.4 top=439.6 bottom=455.2
+  caption text: Too many processes wanting turns means a
+  ACTUAL bbox overlap: false  (horizontal gap caption.x - wordmark.right = -656.2px)
+
+fig-U3-4.ur.svg
+  wordmark: x=12.0 right=104.4 top=449.6 bottom=462.6
+  caption : x=186.9 right=593.4 top=439.6 bottom=455.9
+  caption text: کئی پروسیسیں باری مانگیں تو ہر ایک کو چھ
+  ACTUAL bbox overlap: false  (horizontal gap caption.x - wordmark.right = 82.5px)

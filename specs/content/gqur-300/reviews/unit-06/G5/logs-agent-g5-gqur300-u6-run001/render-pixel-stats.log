@@ -1,0 +1,177 @@
+[
+ {
+  "file": "a4-print-index.png",
+  "w": 794,
+  "h": 1572,
+  "channelStdev": "40.1,40.7,41.9",
+  "nonBlank": true
+ },
+ {
+  "file": "a4-print-topic-01.png",
+  "w": 794,
+  "h": 5221,
+  "channelStdev": "41.1,40.5,40.8",
+  "nonBlank": true
+ },
+ {
+  "file": "a4-print-topic-02.png",
+  "w": 794,
+  "h": 4544,
+  "channelStdev": "40.7,39.8,40.0",
+  "nonBlank": true
+ },
+ {
+  "file": "a4-print-topic-03.png",
+  "w": 794,
+  "h": 4850,
+  "channelStdev": "41.8,41.3,41.5",
+  "nonBlank": true
+ },
+ {
+  "file": "a4-print-unit-assessment.png",
+  "w": 794,
+  "h": 4662,
+  "channelStdev": "41.1,41.0,41.3",
+  "nonBlank": true
+ },
+ {
+  "file": "a4-print-unit-teacher-notes.png",
+  "w": 794,
+  "h": 2078,
+  "channelStdev": "41.1,41.6,41.7",
+  "nonBlank": true
+ },
+ {
+  "file": "desktop-1280-index.png",
+  "w": 1280,
+  "h": 1957,
+  "channelStdev": "51.8,50.3,48.5",
+  "nonBlank": true
+ },
+ {
+  "file": "desktop-1280-topic-01.png",
+  "w": 1280,
+  "h": 5827,
+  "channelStdev": "40.5,39.2,38.3",
+  "nonBlank": true
+ },
+ {
+  "file": "desktop-1280-topic-02.png",
+  "w": 1280,
+  "h": 5175,
+  "channelStdev": "41.0,39.5,38.5",
+  "nonBlank": true
+ },
+ {
+  "file": "desktop-1280-topic-03.png",
+  "w": 1280,
+  "h": 5421,
+  "channelStdev": "41.3,40.0,39.1",
+  "nonBlank": true
+ },
+ {
+  "file": "desktop-1280-unit-assessment.png",
+  "w": 1280,
+  "h": 5445,
+  "channelStdev": "40.6,39.6,38.7",
+  "nonBlank": true
+ },
+ {
+  "file": "desktop-1280-unit-teacher-notes.png",
+  "w": 1280,
+  "h": 2580,
+  "channelStdev": "48.7,47.1,45.4",
+  "nonBlank": true
+ },
+ {
+  "file": "figure-fig-U6-1-ur-desktop.png",
+  "w": 703,
+  "h": 425,
+  "channelStdev": "36.2,31.6,33.1",
+  "nonBlank": true
+ },
+ {
+  "file": "figure-fig-U6-2-ur-desktop.png",
+  "w": 703,
+  "h": 425,
+  "channelStdev": "36.8,33.1,34.2",
+  "nonBlank": true
+ },
+ {
+  "file": "figure-fig-U6-3-ur-desktop.png",
+  "w": 703,
+  "h": 425,
+  "channelStdev": "37.7,31.0,30.9",
+  "nonBlank": true
+ },
+ {
+  "file": "figure-fig-U6-4-ur-desktop.png",
+  "w": 703,
+  "h": 425,
+  "channelStdev": "36.0,32.4,33.4",
+  "nonBlank": true
+ },
+ {
+  "file": "figure-fig-U6-5-ur-desktop.png",
+  "w": 703,
+  "h": 425,
+  "channelStdev": "29.6,27.4,27.7",
+  "nonBlank": true
+ },
+ {
+  "file": "figure-fig-U6-6-ur-desktop.png",
+  "w": 703,
+  "h": 426,
+  "channelStdev": "40.8,36.9,38.0",
+  "nonBlank": true
+ },
+ {
+  "file": "figure-fig-U6-6-ur-narrow.png",
+  "w": 328,
+  "h": 200,
+  "channelStdev": "36.2,32.8,33.8",
+  "nonBlank": true
+ },
+ {
+  "file": "narrow-360-index.png",
+  "w": 360,
+  "h": 2824,
+  "channelStdev": "56.0,54.5,53.7",
+  "nonBlank": true
+ },
+ {
+  "file": "narrow-360-topic-01.png",
+  "w": 360,
+  "h": 8327,
+  "channelStdev": "48.9,47.6,47.2",
+  "nonBlank": true
+ },
+ {
+  "file": "narrow-360-topic-02.png",
+  "w": 360,
+  "h": 7048,
+  "channelStdev": "49.4,47.8,47.4",
+  "nonBlank": true
+ },
+ {
+  "file": "narrow-360-topic-03.png",
+  "w": 360,
+  "h": 7656,
+  "channelStdev": "49.7,48.4,48.0",
+  "nonBlank": true
+ },
+ {
+  "file": "narrow-360-unit-assessment.png",
+  "w": 360,
+  "h": 9202,
+  "channelStdev": "48.0,46.9,46.6",
+  "nonBlank": true
+ },
+ {
+  "file": "narrow-360-unit-teacher-notes.png",
+  "w": 360,
+  "h": 3899,
+  "channelStdev": "54.3,52.6,51.7",
+  "nonBlank": true
+ }
+]

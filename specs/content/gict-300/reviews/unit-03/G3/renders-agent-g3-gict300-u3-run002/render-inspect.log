@@ -1,0 +1,126 @@
+### starting: npm run serve -- --port 4621
+### render-inspect  GICT-300 Unit 3
+### route: /semester-1/gict-300/unit-03  pages: 7  placed figures: 8
+### host: http://127.0.0.1:4621   browser: chromium 149.0.7827.0
+### started: 2026-09-24T02:24:36.816Z
+
+===== A. DESKTOP 1280x900 =====
+
+-- index: headings=5 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+-- topic-01: headings=12 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=2 vagueLinks=0 hOverflow=false
+   img /img/figures/gict-300/unit-03/fig-U3-1.svg natural=249x150 shown=true loading=lazy alt="Concept map with the operating system at the centre and four branches: managing hardware r"
+   img /img/figures/gict-300/unit-03/fig-U3-1.dark.svg natural=0x0 shown=false loading=lazy alt="Concept map with the operating system at the centre and four branches: managing hardware r"
+   img /img/figures/gict-300/unit-03/fig-U3-2.svg natural=249x150 shown=true loading=lazy alt="Table of five operating system types with how each works and one example use of each."
+   img /img/figures/gict-300/unit-03/fig-U3-2.dark.svg natural=0x0 shown=false loading=lazy alt="Table of five operating system types with how each works and one example use of each."
+   heading order: no skipped levels
+   advisory bare-URL link text: https://pages.cs.wisc.edu/~remzi/OSTEP/ | https://open.umn.edu/opentextbooks/textbooks/infor
+
+-- topic-02: headings=12 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=2 vagueLinks=0 hOverflow=false
+   img /img/figures/gict-300/unit-03/fig-U3-3.svg natural=249x150 shown=true loading=lazy alt="Diagram of a file shown with its three identifying features: the name with extension, the "
+   img /img/figures/gict-300/unit-03/fig-U3-3.dark.svg natural=0x0 shown=false loading=lazy alt="Diagram of a file shown with its three identifying features: the name with extension, the "
+   img /img/figures/gict-300/unit-03/fig-U3-4.svg natural=249x150 shown=true loading=lazy alt="Flowchart of process states: a new process becomes ready, is scheduled into running, may b"
+   img /img/figures/gict-300/unit-03/fig-U3-4.dark.svg natural=0x0 shown=false loading=lazy alt="Flowchart of process states: a new process becomes ready, is scheduled into running, may b"
+   heading order: no skipped levels
+   advisory bare-URL link text: https://pages.cs.wisc.edu/~remzi/OSTEP/ | https://open.umn.edu/opentextbooks/textbooks/infor
+
+-- topic-03: headings=11 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=2 vagueLinks=0 hOverflow=false
+   img /img/figures/gict-300/unit-03/fig-U3-5.svg natural=249x150 shown=true loading=lazy alt="Diagram of an input/output request flowing from the application to the operating system, t"
+   img /img/figures/gict-300/unit-03/fig-U3-5.dark.svg natural=0x0 shown=false loading=lazy alt="Diagram of an input/output request flowing from the application to the operating system, t"
+   img /img/figures/gict-300/unit-03/fig-U3-6.svg natural=249x150 shown=true loading=lazy alt="Table of five everyday input/output requests, what the operating system does for each, and"
+   img /img/figures/gict-300/unit-03/fig-U3-6.dark.svg natural=0x0 shown=false loading=lazy alt="Table of five everyday input/output requests, what the operating system does for each, and"
+   heading order: no skipped levels
+   advisory bare-URL link text: https://pages.cs.wisc.edu/~remzi/OSTEP/ | https://open.umn.edu/opentextbooks/textbooks/infor
+
+-- topic-04: headings=11 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=2 vagueLinks=0 hOverflow=false
+   img /img/figures/gict-300/unit-03/fig-U3-7.svg natural=249x150 shown=true loading=lazy alt="Four stacked layers from applications at the top, through the shell and utilities, to the "
+   img /img/figures/gict-300/unit-03/fig-U3-7.dark.svg natural=0x0 shown=false loading=lazy alt="Four stacked layers from applications at the top, through the shell and utilities, to the "
+   img /img/figures/gict-300/unit-03/fig-U3-8.svg natural=249x150 shown=true loading=lazy alt="Table of four kernel functions with a plain-language description of each and where the ide"
+   img /img/figures/gict-300/unit-03/fig-U3-8.dark.svg natural=0x0 shown=false loading=lazy alt="Table of four kernel functions with a plain-language description of each and where the ide"
+   heading order: no skipped levels
+   advisory bare-URL link text: https://pages.cs.wisc.edu/~remzi/OSTEP/ | https://open.umn.edu/opentextbooks/textbooks/infor
+
+-- unit-assessment: headings=10 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+-- unit-teacher-notes: headings=6 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+===== B. NARROW 360x780 =====
+
+-- index: docHorizontalOverflow=0px tables=0 figures=0 spill=0
+
+-- topic-01: docHorizontalOverflow=0px tables=0 figures=2 spill=0
+   figure[0] .figure client=328 scroll=328 scroller=none
+   figure[1] .figure client=328 scroll=328 scroller=none
+
+-- topic-02: docHorizontalOverflow=0px tables=0 figures=2 spill=0
+   figure[0] .figure client=328 scroll=328 scroller=none
+   figure[1] .figure client=328 scroll=328 scroller=none
+
+-- topic-03: docHorizontalOverflow=0px tables=0 figures=2 spill=0
+   figure[0] .figure client=328 scroll=328 scroller=none
+   figure[1] .figure client=328 scroll=328 scroller=none
+
+-- topic-04: docHorizontalOverflow=0px tables=0 figures=2 spill=0
+   figure[0] .figure client=328 scroll=328 scroller=none
+   figure[1] .figure client=328 scroll=328 scroller=none
+
+-- unit-assessment: docHorizontalOverflow=0px tables=0 figures=0 spill=0
+
+-- unit-teacher-notes: docHorizontalOverflow=0px tables=0 figures=0 spill=0
+
+===== C. A4 PRINT EMULATION (794px) =====
+
+-- index @print: clippedElems=0 figureImgs=0 answerHeadings=[]
+
+-- topic-01 @print: clippedElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/gict-300/unit-03/fig-U3-1.svg w=762 right=778 fits
+   printfig /img/figures/gict-300/unit-03/fig-U3-1.dark.svg w=0 right=0 fits
+   printfig /img/figures/gict-300/unit-03/fig-U3-2.svg w=762 right=778 fits
+   printfig /img/figures/gict-300/unit-03/fig-U3-2.dark.svg w=0 right=0 fits
+
+-- topic-02 @print: clippedElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/gict-300/unit-03/fig-U3-3.svg w=762 right=778 fits
+   printfig /img/figures/gict-300/unit-03/fig-U3-3.dark.svg w=0 right=0 fits
+   printfig /img/figures/gict-300/unit-03/fig-U3-4.svg w=762 right=778 fits
+   printfig /img/figures/gict-300/unit-03/fig-U3-4.dark.svg w=0 right=0 fits
+
+-- topic-03 @print: clippedElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/gict-300/unit-03/fig-U3-5.svg w=762 right=778 fits
+   printfig /img/figures/gict-300/unit-03/fig-U3-5.dark.svg w=0 right=0 fits
+   printfig /img/figures/gict-300/unit-03/fig-U3-6.svg w=762 right=778 fits
+   printfig /img/figures/gict-300/unit-03/fig-U3-6.dark.svg w=0 right=0 fits
+
+-- topic-04 @print: clippedElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/gict-300/unit-03/fig-U3-7.svg w=762 right=778 fits
+   printfig /img/figures/gict-300/unit-03/fig-U3-7.dark.svg w=0 right=0 fits
+   printfig /img/figures/gict-300/unit-03/fig-U3-8.svg w=762 right=778 fits
+   printfig /img/figures/gict-300/unit-03/fig-U3-8.dark.svg w=0 right=0 fits
+
+-- unit-assessment @print: clippedElems=0 figureImgs=0 answerHeadings=["Answers and marking guidance​","MCQ answer key​","RRQ model answers and mark schemes​","ERQ rubrics​"]
+
+-- unit-teacher-notes @print: clippedElems=0 figureImgs=0 answerHeadings=[]
+
+===== D. SVG TEXT GEOMETRY =====
+   fig-U3-1.light [concept-map] viewBox=780x470 texts=18 wordmark@x=675.7 -> clean
+   fig-U3-1.dark [concept-map] viewBox=780x470 texts=18 wordmark@x=675.7 -> clean
+   fig-U3-2.light [table] viewBox=780x470 texts=30 wordmark@x=675.7 -> clean
+   fig-U3-2.dark [table] viewBox=780x470 texts=30 wordmark@x=675.7 -> clean
+   fig-U3-3.light [diagram] viewBox=780x470 texts=14 wordmark@x=675.7 -> clean
+   fig-U3-3.dark [diagram] viewBox=780x470 texts=14 wordmark@x=675.7 -> clean
+   fig-U3-4.light [flowchart] viewBox=780x470 texts=15 wordmark@x=675.7 -> clean
+   fig-U3-4.dark [flowchart] viewBox=780x470 texts=15 wordmark@x=675.7 -> clean
+   fig-U3-5.light [diagram] viewBox=780x470 texts=15 wordmark@x=675.7 -> clean
+   fig-U3-5.dark [diagram] viewBox=780x470 texts=15 wordmark@x=675.7 -> clean
+   fig-U3-6.light [table] viewBox=780x470 texts=27 wordmark@x=675.7 -> clean
+   fig-U3-6.dark [table] viewBox=780x470 texts=27 wordmark@x=675.7 -> clean
+   fig-U3-7.light [diagram] viewBox=780x470 texts=15 wordmark@x=675.7 -> clean
+   fig-U3-7.dark [diagram] viewBox=780x470 texts=15 wordmark@x=675.7 -> clean
+   fig-U3-8.light [table] viewBox=780x470 texts=25 wordmark@x=675.7 -> clean
+   fig-U3-8.dark [table] viewBox=780x470 texts=25 wordmark@x=675.7 -> clean
+
+### finished: 2026-09-24T02:25:14.595Z
+### defects: 0
+### exit_code: 0

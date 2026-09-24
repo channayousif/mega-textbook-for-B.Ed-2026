@@ -1,0 +1,6 @@
+
+> bed-mega-textbook@0.1.0 check:figures
+> node scripts/check-figures.mjs
+
+✓ Figure gate passed (≥ 2 RENDERED figures per topic, a placed schematic per unit, well-formed, unique; manifest consistent; placed assets exist).
+check:figures exit=0

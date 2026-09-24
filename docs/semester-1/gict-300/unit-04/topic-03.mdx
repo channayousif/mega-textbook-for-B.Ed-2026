@@ -1,0 +1,153 @@
+---
+title: "Topic 4.3 - Passwords, authentication, and the cloud"
+description: "Password management and authentication (including multi-factor), and cloud computing basics using the NIST definition."
+course_code: GICT-300
+unit_no: 4
+topic_no: 3
+topic_label: "4.3"
+clo_refs:
+  - "SLO:GICT-300-4-5"
+blooms_summary: "Remember, understand and apply password management, authentication and cloud basics: judge password strength, explain multi-factor authentication, and explain what the cloud is."
+est_reading_minutes: 14
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+import Glossary from '@site/src/components/Glossary';
+
+<PrintHandout />
+
+# Topic 4.3 - Passwords, authentication, and the cloud
+
+## A real classroom situation
+
+The school office computer's marks portal is protected by the password "school123". It
+meets the portal's rule - eight characters, one word, easy for everyone on the staff to
+remember and share. That is exactly the problem: a password everyone can share is a
+password everyone can use, including someone who should not. When the portal is
+compromised, the technician's first instruction is not a new firewall; it is a new way of
+thinking about secrets - and a second lock on the door that no shared word can be.
+
+<Figure id="fig-U4-5" src="/img/figures/gict-300/unit-04/fig-U4-5.svg" alt="Flowchart of multi-factor authentication: password checked, a code requested on the phone, code entered, both factors accepted, and access granted." />
+
+## Explanation
+
+### Password management and authentication
+
+A password works by being a secret between you and a system. Three habits keep it one.
+**Length and variety beat cleverness**: Bourgeois and colleagues (2019) report that the
+most common real-world passwords were literally "password", "123456" and "12345678" -
+the first things an attacker tries - and recommend at least twelve characters for a
+personal password, mixing letters of both cases, digits and symbols, with no dictionary
+words. **Never reuse a password across accounts**: one phished site should not unlock
+your email, your bank and the school portal. **Never share it**: an attacker who cannot
+guess a password will often simply ask for it (that is pretexting from Topic 4.1).
+
+Because human memory is the weakest link, the modern answer is a
+<Glossary term="Password manager">password manager</Glossary>: an application that
+generates and stores a different strong password for every account, locked behind one
+master password you do remember. One good secret replaces forty weak ones.
+
+<Glossary term="Authentication">Authentication</Glossary> is the system's act of
+checking that you are who you claim to be, and it can rest on three kinds of evidence:
+something you know (a password), something you have (a phone or a security key), and
+something you are (a fingerprint or face). <Glossary term="Multi-factor authentication">Multi-factor
+authentication (MFA)</Glossary> combines two different kinds - a password plus a code
+sent to your phone, as the figure shows. Its power is simple: an attacker who phishes
+your password still cannot log in, because the second factor is in your pocket. Every
+account that matters - email first of all, because email resets everything else -
+should have MFA turned on.
+
+<Figure id="fig-U4-6" src="/img/figures/gict-300/unit-04/fig-U4-6.svg" alt="Table of five passwords and habits with a verdict and reason for each." />
+
+### Cloud computing basics
+
+"The cloud" is not a place in the sky; it is other people's computers, rented by the
+minute. The standard definition, from NIST, runs: cloud computing is "a model for
+enabling ubiquitous, convenient, on-demand network access to a shared pool of
+configurable computing resources... that can be rapidly provisioned and released with
+minimal management effort or service provider interaction" (Mell and Grance, 2011). The
+definition names five essential characteristics: on-demand self-service, broad network
+access, resource pooling, rapid elasticity, and measured service - you get what you need
+when you need it, over the network, from a shared pool, scaling up and down, paying for
+what you use.
+
+For a school, the practical translation is threefold. **Storage**: files kept in the
+cloud (a drive, a backup service) live on the provider's machines, copied across data
+centres - which is why a stolen laptop no longer means lost records. **Services**:
+email, documents, and learning platforms that run in the browser are cloud services,
+nothing installed on the lab machines. **Someone else's responsibility, someone else's
+rules**: the provider runs the servers, but you have handed them your data, so the
+provider's reputation, terms and location matter. The cloud is a trade: convenience and
+durability in exchange for trust. Topic 4.4 takes up what that trust should require.
+
+## Activity: Password workshop
+
+Work in pairs. About 20 minutes.
+
+1. Your teacher writes five passwords on the board (from the second figure's list, plus
+   two new ones). For each, agree a verdict - weak, strong, or dangerous habit - and one
+   clause of reasoning.
+2. Together, invent a strong password you could actually remember, using a method (not a
+   word): for example, the first letters of a sentence only you know, with a number and
+   symbol added. Write the method, not the password itself.
+3. List which of your own accounts currently has MFA turned on, and mark the two that
+   most need it.
+4. Discuss: what would you tell the school office that currently shares one password
+   among five people? Propose a workable alternative in two sentences.
+
+## Check your understanding
+
+1. Name the three kinds of authentication evidence, with one example of each. *(Remember)*
+2. Explain why "school123" is a weak password even though it has eight characters. *(Understand)*
+3. Your email account is phished but has MFA enabled. Explain what happens when the
+   attacker tries to log in. *(Apply)*
+4. State the NIST definition of cloud computing in your own words, naming two of its
+   five characteristics. *(Understand)*
+
+## Summary
+
+A password is a secret, and the habits that keep it one are length and variety, no
+reuse, and no sharing - with a password manager doing the remembering. Authentication
+can rest on something you know, have, or are, and multi-factor authentication combines
+two kinds, so a phished password alone opens nothing. The cloud is other people's
+computers: on-demand, networked, pooled, elastic, metered - convenient and durable, at
+the price of trusting the provider with your data.
+
+## Self-assessment checklist
+
+- [ ] I can judge a password's strength and explain my verdict.
+- [ ] I can explain how MFA works and why it defeats a phished password.
+- [ ] I can explain what the cloud is and name its five characteristics.
+
+## Try this at your practicum school
+
+Ask the office (politely) whether the school's portal or email uses any second factor
+today, and how many people share the main password. Write two sentences: the current
+practice, and the single change you would recommend first.
+
+## Summative task
+
+The school office shares one password for the marks portal among five staff, and the
+head teacher keeps the only backup drive in the same cupboard as the computer. In one
+page, recommend a security upgrade: what to change about the passwords and why, whether
+and how to add a second factor, and what to do about the backup - connecting each
+recommendation to a threat from Topic 4.1.
+
+**Marking guide (10 marks):**
+
+- The password problem diagnosed with its real risks (sharing, weakness, reuse): 3 marks.
+- The MFA recommendation explains the mechanism, not just the name (Analyse): 3 marks.
+- The backup recommendation addresses the same-location failure: 2 marks.
+- Each recommendation is tied to a named threat: 1 mark.
+- Clear, one page: 1 mark.
+
+## Further reading
+
+- Mell, P., & Grance, T. (2011). *The NIST Definition of Cloud Computing* (Special
+  Publication 800-145). National Institute of Standards and Technology.
+  https://doi.org/10.6028/NIST.SP.800-145
+- Bourgeois, D. T., Smith, J. L., Wang, S., & Mortati, J. (2019). *Information Systems for
+  Business and Beyond* (2nd ed.), chapter 6. Open Textbook Library.
+  https://open.umn.edu/opentextbooks/textbooks/information-systems-for-business-and-beyond
+- National Cybersecurity Alliance. *Stay Safe Online*. https://staysafeonline.org/

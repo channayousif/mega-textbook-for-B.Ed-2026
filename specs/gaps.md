@@ -969,3 +969,235 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   G-2026-33.
 - **Blocks:** G5 acceptance for Unit 2 (and, by the same rule, the other units); nothing
   else. G4 translation and the Urdu-side G5 findings stand on their own evidence.
+
+---
+
+## G-2026-25 - GICT-300's term length and week distribution are the spec's construction, not the guide's
+
+- **Status:** open
+- **Gate:** G0 intake / G1 unit-spec (partition criterion, calendar only)
+- **Source:** `D-2026-0030`
+- **Question:** The GICT-300 guide block (`Scheme-and-Course-guides/extracted-text/1st 2026.txt:374-538`)
+  carries a course description, eight learning outcomes, an explicit six-unit course outline, a
+  "Teaching / Instructional Strategies" list, a "Practical Work" list and a "Recommended Books /
+  References" list. It carries **no week table of any kind**, and no statement of term length or
+  of how contact hours distribute across the term. The revised board Scheme contains the word
+  "week" nowhere at all (verified: 0 matches in `B.Ed 4 Year 2026 revised after board.txt`). The
+  same guide file carries no week table for the other Semester I courses either (GENG-300,
+  `D-2026-0012`'s basis), so the silence is the guide's posture, not an extraction artefact.
+
+  `specs/content/gict-300/content-spec.md:67-82` supplies a schedule, correctly marked "Derived,
+  not guide-given" with its basis stated (the 3 (2-1) credit-hour split, a 16-week semester, and
+  the relative weight of each guide unit "as judged by sub-topic count and cognitive demand") -
+  the form `D-2026-0012` permits and reserves to this gate. It allocates a **16-week** term as
+  **3/3/2/3/2/3** across Units 1 to 6, and each `## Unit N` subsection repeats its band on its
+  first line (`:86`, `:147`, `:208`, `:267`, `:325`, `:377`).
+
+  Two things are undetermined, not one. First, the **term length**: nothing in the 54 bound
+  inputs states that a GICT-300 term is sixteen weeks. Second, the **distribution**: the stated
+  basis is sub-topic count and cognitive demand, but the allocation is not proportional to
+  sub-topic count (Unit 6 carries 7 sub-topics in 3 weeks while Unit 3 carries 4 in 2 and Unit 5
+  carries 4 in 2; per-sub-topic weight varies from 0.43 to 0.6), so the work is done by a
+  pedagogical judgement the guide supplies no basis for. The spec is candid that this is a
+  judgement, and `D-2026-0012` expressly leaves the disposition to the evaluator; the evaluator
+  escalates, exactly as `G-2026-16` did for EFMP-304.
+
+  The owner has confirmed 16-week calendars for two courses individually (EFMP-304 in the
+  `G-2026-16` decision; EED-313 in `G-2026-20`), but neither ruling sets a corpus-wide term
+  length, so GICT-300's calendar still needs its own confirmation.
+- **Needed, and from whom:** the curriculum owner, to state the term length GICT-300 is taught
+  over and either to confirm the proposed 3/3/2/3/2/3 distribution or supply another; or to
+  direct that `## Week schedule` be recorded as guide-silent for this course, which
+  `D-2026-0012` expressly permits as the alternative.
+- **Blocks:** the `## Week schedule` table and the "Weeks N-M (derived)" line opening each of the
+  six `## Unit N` subsections. Nothing else: `D-2026-0030` is written to exclude the calendar,
+  authoring does not depend on it, and no gate reads it.
+
+## G-2026-26 - GICT-300 review cycles closed at the two-cycle budget with post-cycle repairs applied
+
+- **Status:** open
+- **Gate:** G3 en-review / G5 ur-review (advisory, ADR-0019)
+- **Source:** 020-author-gict-300
+- **Question:** The GICT-300 authoring feature's instructions cap each review stage at two
+  cycles per unit, then escalate. Three units have reached that cap with repairs applied
+  AFTER the second cycle, leaving those repairs verified only by the author:
+
+  - **Unit 3 (G3):** run 001 revise (F1 sources-chain) -> repaired at a7200d2 -> run 002
+    revise (F5 an ostep misquotation introduced by the repair; F6 buffer/spooling and
+    metadata sub-claims) -> repaired at 90b097a (verbatim quote restored, ch 39 metadata
+    passage bound, buffer/spooling disclosed as title-level). The run-002 repairs are
+    mechanical but no third G3 cycle remains in budget.
+  - **Unit 4 (G3):** run 001 revise (5 findings) -> repaired at a7200d2 -> run 002 revise
+    (B1 an 11-character password labelled "twelve"; B2 a sources-preamble overclaim) ->
+    repaired at aa2e7d0. Same posture.
+  - **Unit 1 (G5):** run 001 escalated solely because its G3 run 001 pre-dated the
+    English repairs; the G3 run 002 now passes over the current bytes, but no G5 run 002
+    was run within budget (the shared sources/texts/bourgeois2019.md excerpt is bound by
+    every unit's manifest, so each unit's repair stales every other unit's evidence and a
+    fully-fresh chain would need more cycles than the budget allows).
+
+  Every G5 run-001 Urdu finding across Units 1-4 has been repaired and committed. The
+  reviews are advisory; nothing is certified and no tracker row was marked done. The
+  question for the owner: accept the repaired state as the terminal state for this
+  feature's advisory evidence, or commission further review cycles (and, if the latter,
+  whether the shared-excerpt binding in `scripts/lib/review-evidence.mjs`'s citedKeys
+  derivation - which also leaves the year-less keys `ostep` and `wipoIP` unbound, flagged
+  by the Unit 3 and Unit 5 G3 run-002 reviewers - should be extended so a single-unit
+  repair stops invalidating every unit's evidence).
+- **Needed from:** curriculum owner (review-policy decision); developer (the tooling
+  question, only if the owner wants the binding extended).
+## G-2026-28 - GQUR-300 reading list: one guide-required entry unresolvable, one deferred with unverified additions, one false locator
+
+- **Status:** **resolved** (owner ruling, relayed via the orchestrator session, 2026-09-23)
+- **Gate:** G0 intake (readings criterion)
+- **Source:** `D-2026-0040`
+- **Criterion:** `readings` (G0 intake).
+- **Detail:** The guide lists four readings at `Scheme-and-Course-guides/extracted-text/1st
+  2026.txt:651-656`: Steen; Grawe; National Curriculum for Mathematics (Pakistan); HEC National
+  Professional Standards for Teachers. The spec reproduces all four in `### Guide-required`
+  (`specs/content/gqur-300/content-spec.md:70-77`). Presence is not in question; resolvability is:
+
+  1. **`grawe` does not resolve from this host.** "Grawe, N. *Quantitative Literacy: Reasoning
+     about Data.* Cognella Academic Publishing." Nathan D. Grawe is a real quantitative-literacy
+     author (ERIC EJ981327, 2012, *Liberal Education*/AAC&U), but the specific title is absent
+     from every registry reachable on 2026-09-23: Open Library's author search returns eight
+     Grawe works and not this one; the Internet Archive has no record; ERIC has none; Cognella's
+     own site answers HTTP 403 to this host. The spec marks it "to verify at unit authoring" and
+     applies `D-2026-0001`, but `D-2026-0001` governs a source whose **text** cannot be obtained,
+     not a work that cannot be shown to exist; the `G-2026-09`/`D-2026-0010` precedent (icka2024)
+     is the matching case. The spec's added publisher detail is itself unverified.
+  2. **`ncm2006` is deferred with unverified additions.** The guide names only "National
+     Curriculum for Mathematics (Pakistan)". The spec expands it to "Government of Pakistan,
+     Ministry of Education. (2006). *National Curriculum for Mathematics (Grades I-XII).*
+     Islamabad." with "to verify at unit authoring". Nothing in the bound inputs verifies the
+     year, the grade range or the imprint.
+  3. **`steen2001`'s locator is false (repair, no ruling needed).** The work is real and verified
+     (Open Library: Steen 2001, with a borrowable Internet Archive ebook), but the spec's added
+     "ERIC ED459269, https://eric.ed.gov/?id=ED459269" points to "State Summary of West Virginia.
+     Ed Watch Online." (Education Trust, 2001), verified against eric.ed.gov and the ERIC API.
+     *Mathematics and Democracy* is not findable in ERIC at all. Recorded here for the owner's
+     information because the intake briefing repeated the false number; the fix is mechanical and
+     is listed as a repair in `D-2026-0040`.
+  4. `npst2009` resolves (in-corpus: EFMP-302's `npst-pakistan-2009`, with the itacec.org
+     retrieval limit already recorded under `D-2026-0001`).
+
+- **Needed, and from whom:** the curriculum owner, to (a) supply a resolvable locator for Grawe's
+  *Quantitative Literacy: Reasoning about Data* (or confirm the Cognella bibliographic record), or
+  direct that it be recorded unresolvable in the `D-2026-0010` manner: guide-required, cited at
+  bibliographic level only, limit stated at point of use; and (b) confirm or correct the 2006
+  National Curriculum for Mathematics record, or direct the same unresolvable recording.
+  `D-2026-0001` governs whatever texts cannot then be obtained.
+- **Owner ruling (2026-09-23, relayed verbatim via the orchestrator session):**
+  1. **(a) `grawe`: RECORD UNRESOLVABLE.** The owner confirms the `D-2026-0010` manner: keep the
+     guide citation at title level flagged unresolvable, REMOVE the unverifiable "Cognella
+     Academic Publishing" imprint, and cite the verified open-access replacements.
+  2. **(b) `ncm`: CHECK THE NATIONAL CURRICULUM COUNCIL WEBSITE.** The owner directed a check of
+     the National Curriculum Council (Pakistan) website (ncc.gov.pk) for the "National Curriculum
+     for Mathematics" record; if a resolvable record is found there, cite it as the guide-required
+     source; if nothing citable resolves, record exactly what was checked and re-escalate.
+     **Check performed 2026-09-23:** the NCC Mathematics page
+     (https://ncc.gov.pk/Detail/ZjgzYzg2MmMtZDc0Zi00NjEzLTk5ZmYtZGJiNjc5ODljOGUx, reached via
+     ncc.gov.pk > Compulsory Subjects > Mathematics) lists and serves the national mathematics
+     curriculum documents as open PDFs: "NCP - Math Progression Grid Grade (1-12)"
+     (4_ NCP Mathematics PG 1-12.pdf, 15.9 MB, HTTP 200), "Math Suggested Guidlines Grade (1-8)"
+     (Mathematics 1-8 - Suggested Guidelines.pdf, 5.2 MB, HTTP 200), "Math Suggested Guidlines
+     Grade (9-12)" and "Functional Mathematics Grade (9-10)". PDF file modification dates are
+     2023-11 and 2023-03; the listing page asserts no publication year, so none is cited. A
+     resolvable record WAS found; it is cited as the guide-required source.
+- **Blocks:** ~~the `### Guide-required` rows for `grawe` and `ncm2006`, and those two keys within
+  the `**Mapped readings**` lines of Units 2-6~~ **unblocked** by the owner ruling of 2026-09-23
+  and the NCC check. The `steen2001` locator repair landed at commit 139876c; the remaining
+  mechanical repairs from `D-2026-0041` landed at c72199e.
+
+---
+
+## G-2026-29 - GQUR-300 Unit 3: Linear inequalities (U3-03) has no verifiable external source in the course's source set
+
+- **Status:** open
+- **Gate:** G3 English review (sources criterion), advisory
+- **Source:** GQUR-300 Unit 3 G3 review run001 (2026-09-24)
+- **Criterion:** `sources` (G3).
+- **Detail:** The guide lists "Linear equations and inequalities" as one sub-topic
+  (`Scheme-and-Course-guides/extracted-text/1st 2026.txt:585`). The Unit 3 G3 review
+  (run001) verified that OpenStax *Prealgebra 2e* - the course's only algebra source -
+  contains no inequalities chapter (11-chapter ToC checked), and the NCC documents' text
+  layer cannot be read on this host to verify strand content beyond titles and grade
+  coverage. The sub-topic is therefore covered from the guide text and general mathematics
+  knowledge, recorded as a `no-external-source` row in `sources/unit-03.md` per the
+  author-unit skill's rule, and escalated here rather than inventing a citation.
+- **Needed, and from whom:** the curriculum owner, to either confirm an accessible source
+  that covers linear inequalities at the right level (for example OpenStax *Elementary
+  Algebra 2e*, which would need adding to the content-spec reading list), or accept the
+  no-external-source posture for this sub-topic.
+- **Blocks:** nothing in the automated gates; the G3 sources criterion for Unit 3 records
+  the gap explicitly. The English content itself is complete and internally verified.
+
+---
+
+## G-2026-30 - GQUR-300: no accepted G3 evidence can cover the current English inputs (advisory chain needs an owner decision)
+
+- **Status:** open
+- **Gate:** G5 Urdu review (authority criterion), advisory; affects all six units
+- **Source:** GQUR-300 G5 reviews run001, Units 1-6 (2026-09-24), each recording the
+  dependency as an uncertain finding (Unit 1 U1, Unit 2 F11, Unit 3 F5, Unit 4 F5,
+  Unit 5 B2, Unit 6 A12)
+- **Criterion:** `authority` (G5); the G3 dependency clause of the review contract.
+- **Detail:** ADR-0019 blocks agent certification, so no accepted (signed) G3 evidence
+  exists in the reviewer registry. The best-available G3 evidence is the six advisory
+  run001 reports (all dispositions: revise). The author applied every G3 repair the
+  reports required, which changed the English inputs after each review (commits 93e6321,
+  78f0366, 2d5cd6a), and rebound the G2 gate evidence at each step - so no G3 verdict,
+  advisory or otherwise, covers the exact English bytes that the G5 reviews compared
+  against. The G5 reviewers therefore proceeded with the bound English inputs as the
+  authoritative comparison base and recorded this as a dependency finding per the
+  contract, rather than aborting.
+- **Needed, and from whom:** the curriculum owner, to either (a) accept the advisory
+  chain (G3 run001 + verified repairs + rebound G2 gates) as sufficient for the G5
+  stage, or (b) commission a fresh G3 pass over the current English inputs before the
+  G5 findings are treated as more than advisory. Until then no G5 tracker row can be
+  marked done from agent findings, which is the designed ADR-0019 posture.
+- **Blocks:** the G5 tracker rows for Units 1-6 (all left unchecked, advisory); nothing
+  in the automated gates. The Urdu content itself is complete and internally verified.
+
+---
+
+## G-2026-41 - GQUR-300: Urdu terminology and register rulings pending the curriculum owner
+
+- **Status:** open
+- **Gate:** G5 Urdu review (terminology and register criteria), advisory; course-wide
+- **Source:** GQUR-300 G5 reviews run001, Units 1-6 (2026-09-24), terminology and
+  register findings (Unit 1 U2/U3/U4, Unit 2 F8/F9/F10, Unit 3 F6, Unit 4 F6/F7,
+  Unit 5 A7-terminology, Unit 6 A2/A9)
+- **Criterion:** `terminology`, `register` (G5); the style guide's rule that conflicts
+  between translator choice and the bank are resolved by the curriculum owner.
+- **Detail:** The frozen bank (specs/content/terminology.csv) covers the
+  education-psychology courses only; none of GQUR-300's core mathematics terms are
+  banked. The G5 reviews confirmed most authored labels as internally consistent and
+  faithful, and the author adopted the banked terms wherever they exist (معیارِ جانچ
+  for Rubric, گروہی for Group Work, حکمتِ تدریس for Teaching Strategy, خود جائزہ for
+  Self-Assessment). The following need owner rulings, with the reviewers' proposals:
+  (a) disputed coinages embedded in glossary.json and the concept tables - تمام اعداد
+  vs مکمل اعداد for "whole number", وسیع vs قوت نما for "exponent", اثر vs الجبرائی
+  عبارت for "expression", بڑھوٹر vs نمو for "growth", قیمت vs قدر for "value",
+  ترازو ماڈل vs ترازو for "balance model"; (b) the crossed mapping Assessment =
+  جائزہ vs the bank's تشخیص while Evaluate is also rendered تشخیص; (c) Tally = گنتی,
+  which overlaps the ordinary word for counting; Records = رجسٹر, narrower than the
+  method name; (d) numeracy rendered عددیت in Unit 4 but عددی خواندگی in Unit 6;
+  (e) perimeter rendered three ways (اطراف کی پیمائش dominant), with اطراف also
+  meaning "sides" - the reviewers propose perimeter = اطراف کی پیمائش, sides = اضلاع;
+  (f) کینٹین proposed for banking (canteen); (g) the reader-gender policy - the Urdu
+  prose addresses the reader exclusively in the feminine while the SVG figure labels
+  use the masculine generic; (h) Latin technical terms kept in Urdu prose
+  (substitution, brainstorming, Bloom tags, bank labels) - defensible but worth an
+  explicit owner note; (i) Figure labels render in the OS Arabic fallback because
+  SVG-as-img cannot use the page's Nastaliq webfont, and table figures scale to
+  3.3-5.5 CSS px at the 360 px viewport (a site-wide pipeline property affecting the
+  English variants equally).
+- **Needed, and from whom:** the curriculum owner, to rule on each item, promote the
+  surviving authored labels into specs/content/terminology.csv, and record the
+  register policy. The author cannot edit the bank, the glossary entries, or the
+  style guide.
+- **Blocks:** nothing in the automated gates (the FR-016c terminology conformance
+  check fires only at translation_status: reviewed, and the key_terms blocks now
+  present in every UR index will surface every unbanked term at that flip, which is
+  the intended signal); the human quality pass before any reviewed flip.

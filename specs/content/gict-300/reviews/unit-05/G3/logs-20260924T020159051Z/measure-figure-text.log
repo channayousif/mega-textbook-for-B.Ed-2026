@@ -1,0 +1,15 @@
+$ node scripts/measure-figure-text.mjs static/img/figures/gict-300/unit-05/fig-U5-{1..6}.svg + .dark.svg   (GICT-300 U5 G3 run 002, worktree bound bytes at HEAD 0f8e97d, 2026-09-24T02:07Z; 12 variants measured: no text past the 780x470 viewBox, no wordmark overprint)
+
+✓ static/img/figures/gict-300/unit-05/fig-U5-1.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gict-300/unit-05/fig-U5-1.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gict-300/unit-05/fig-U5-2.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gict-300/unit-05/fig-U5-2.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gict-300/unit-05/fig-U5-3.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gict-300/unit-05/fig-U5-3.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gict-300/unit-05/fig-U5-4.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gict-300/unit-05/fig-U5-4.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gict-300/unit-05/fig-U5-5.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gict-300/unit-05/fig-U5-5.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gict-300/unit-05/fig-U5-6.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gict-300/unit-05/fig-U5-6.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+exit_code=0
