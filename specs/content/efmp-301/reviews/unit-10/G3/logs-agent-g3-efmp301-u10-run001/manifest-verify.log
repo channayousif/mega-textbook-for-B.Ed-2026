@@ -1,0 +1,13 @@
+prepared-manifest commit: 6d6236d7 (2026-09-25 02:45:00 -0500)
+review-start HEAD: 4dbe708a; end-of-review HEAD: 53b051ea
+prepared inputs: [33m93[39m | current inputs: [33m93[39m
+missing from tree: []
+added since prepare: []
+digest mismatches: [33m5[39m
+  - specs/content/efmp-301/sources/texts/seifert2009.md
+  - static/img/figures/efmp-301/unit-10/fig-U10-2.dark.svg
+  - static/img/figures/efmp-301/unit-10/fig-U10-2.svg
+  - static/img/figures/efmp-301/unit-10/fig-U10-3.dark.svg
+  - static/img/figures/efmp-301/unit-10/fig-U10-3.svg
+skill_digest match: [33mtrue[39m
+drift provenance: 8c15c7c9 (seifert2009.md +130 lines, additive sections for Units 2-4; Unit 10 excerpt section verified unchanged), 42ad6a8d (fig-U10-2/fig-U10-3 light+dark label-overflow fixes)

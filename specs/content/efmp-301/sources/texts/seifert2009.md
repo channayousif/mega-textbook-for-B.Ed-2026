@@ -451,3 +451,21 @@ of the problem and working on each part separately.... Another helpful strategy 
 working backward from a final solution to the originally stated problem.... A third
 helpful strategy is analogical thinking - using knowledge or experiences with similar
 features or structures to help solve the problem at hand (Bassok, 2003)."
+
+## Chapter 12 - Standardized and other formal assessments (verified; used by Unit 9; added at G3 repair 2026-09-25)
+
+On what standardisation controls: "Standardized tests are created by a team - usually
+test experts from a commercial testing company who consult classroom teachers and
+university faculty - and are administered in standardized ways. Students not only
+respond to the same questions they also receive the same directions and have the same
+time limits. Explicit scoring criteria are used."
+
+On the bias question: "In a multicultural society one crucial question is: Are
+standardized tests biased against certain social groups?" And the content mechanism:
+items can trade on vocabulary that differs by subculture - the book's example is a
+verbal item keyed to the professional meaning of "field", "whereas cashiers and
+maintenance workers have jobs so their children are less likely to know this meaning
+of field". On mitigation: "Testing companies try to minimize these kinds of content
+problems by having test developers from a variety of backgrounds review items and by
+examining statistically if certain groups find some items easier or harder. However,
+problems do exist..."
