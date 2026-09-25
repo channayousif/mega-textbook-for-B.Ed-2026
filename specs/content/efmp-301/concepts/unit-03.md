@@ -13,14 +13,14 @@ Development). The rest are authored here and carry a G5 flag, listed at the foot
 | Concept ID | Label EN | Label UR | Prerequisites | Topic | SLO refs | Assessment item IDs |
 |---|---|---|---|---|---|---|
 | CON:EFMP-301-3-1 | Behaviourism: learning as observable behaviour | طرزِ عمل پسندی: قابلِ مشاہدہ رویے کے طور پر تعلم | - | 3.1 | SLO:EFMP-301-3-1 | MCQ-01, RRQ-01 |
-| CON:EFMP-301-3-2 | Classical conditioning: learning by association | کلاسیکی شرط بندی: وابستگی سے تعلم | CON:EFMP-301-3-1 | 3.1 | SLO:EFMP-301-3-1 | MCQ-02, RRQ-01, RRQ-02 |
-| CON:EFMP-301-3-3 | Operant conditioning: learning from consequences | عملی شرط بندی: نتیجوں سے تعلم | CON:EFMP-301-3-1 | 3.1 | SLO:EFMP-301-3-1 | RRQ-01, RRQ-03 |
+| CON:EFMP-301-3-2 | Classical conditioning: learning by association | کلاسیکی شرط بندی: وابستگی سے تعلم | CON:EFMP-301-3-1 | 3.1 | SLO:EFMP-301-3-1 | RRQ-01, RRQ-02 |
+| CON:EFMP-301-3-3 | Operant conditioning: learning from consequences | عملی شرط بندی: نتیجوں سے تعلم | CON:EFMP-301-3-1 | 3.1 | SLO:EFMP-301-3-1 | RRQ-01 |
 | CON:EFMP-301-3-4 | Reinforcement and punishment read precisely | تقویت اور سزا کی درست پڑھائی | CON:EFMP-301-3-3 | 3.1 | SLO:EFMP-301-3-1 | MCQ-03, MCQ-04, RRQ-04, ERQ-01 |
 | CON:EFMP-301-3-5 | The cognitive turn: learning as thinking | ادراکی موڑ: سوچ کے طور پر تعلم | CON:EFMP-301-3-1 | 3.2 | SLO:EFMP-301-3-2 | - |
 | CON:EFMP-301-3-6 | Schemas, assimilation and accommodation | سکیماں، ہم آہنگی اور تعدیل | CON:EFMP-301-3-5 | 3.2 | SLO:EFMP-301-3-2 | MCQ-05, MCQ-07, RRQ-05, ERQ-02 |
 | CON:EFMP-301-3-7 | Bruner's modes, guided discovery and the spiral | برنر کی نمائندگی، رہنمائی دریافت اور مراحل کا سلسلہ | CON:EFMP-301-3-5 | 3.2 | SLO:EFMP-301-3-2 | MCQ-06, RRQ-06 |
 | CON:EFMP-301-3-8 | Observational learning and vicarious reinforcement | مشاہداتی تعلم اور وکالی تقویت | CON:EFMP-301-3-3 | 3.3 | SLO:EFMP-301-3-2 | MCQ-08, RRQ-07, ERQ-03 |
-| CON:EFMP-301-3-9 | Models: chosen, and read by their outcomes | منزلیں: انتخاب اور نتائج سے پڑھی گئیں | CON:EFMP-301-3-8 | 3.3 | SLO:EFMP-301-3-2 | RRQ-08, ERQ-03 |
+| CON:EFMP-301-3-9 | Models: chosen, and read by their outcomes | منزلیں: انتخاب اور نتائج سے پڑھی گئیں | CON:EFMP-301-3-8 | 3.3 | SLO:EFMP-301-3-2 | MCQ-02, RRQ-03, RRQ-08, ERQ-03 |
 | CON:EFMP-301-3-10 | Constructivism: understanding is built | تعمیریت: فہم تعمیر ہوتی ہے | CON:EFMP-301-3-6 | 3.4 | SLO:EFMP-301-3-3 | MCQ-10 |
 | CON:EFMP-301-3-11 | The zone of proximal development and scaffolding | علاقہ ہائے قربی نشوونما اور معاونتی تدریس | CON:EFMP-301-3-10 | 3.4 | SLO:EFMP-301-3-3 | MCQ-09, RRQ-09, ERQ-04 |
 | CON:EFMP-301-3-12 | Choosing and combining the four lenses | چار نظروں کا انتخاب اور امتزاج | CON:EFMP-301-3-4, CON:EFMP-301-3-6, CON:EFMP-301-3-8, CON:EFMP-301-3-11 | 3.4 | SLO:EFMP-301-3-3 | RRQ-10, ERQ-05 |
