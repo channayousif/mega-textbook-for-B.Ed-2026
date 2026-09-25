@@ -5,7 +5,7 @@ University. CC BY-NC-SA 4.0. https://openstax.org/books/psychology-2e
 
 Open-access open textbook (the OpenStax psychology text used across North American
 introductory courses). Retrieved and read from the open web edition on 2026-09-24
-(sections 5.1 and 8.1). Non-commercial educational use with attribution, per the
+(sections 5.1, 6.3, 6.4, 7.4, 7.5, 8.1 and 10.1). Non-commercial educational use with attribution, per the
 license. Excerpts quoted with section citations.
 
 ## Section 5.1 - Sensation versus perception (verified; used by Unit 4)
