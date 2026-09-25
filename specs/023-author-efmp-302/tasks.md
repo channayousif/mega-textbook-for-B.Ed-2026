@@ -68,34 +68,43 @@ and run records under `history/prompts/efmp-302/`.
 
 ## Phase 4: Fresh advisory G5 reviews (Units 1-6)
 
-- [ ] **T015** Prepare G5 evidence and spawn a FRESH g5-reviewer for Unit 2; escalate any
+- [x] **T015** Prepare G5 evidence and spawn a FRESH g5-reviewer for Unit 2; escalate any
   G3-dependency binding failure under G-2026-62..71 (G-2026-34 pattern); apply Urdu-side
-  repairs within two cycles; row stays open.
-- [ ] **T016** Same for Unit 3.
-- [ ] **T017** Same for Unit 4.
-- [ ] **T018** Same for Unit 5.
-- [ ] **T019** Same for Unit 6.
-- [ ] **T020** Unit 1: if no G5-demanded repair touched its mirror, its accepted human
+  repairs within two cycles; row stays open. (r1 revise - one Urdu key gap - repaired at
+  86ce1dd; r2 all ten criteria pass, escalate only on G-2026-65)
+- [x] **T016** Same for Unit 3. (r1 revise - 8 semantic defects - repaired at c138103; r2 all
+  ten criteria pass, escalate only on G-2026-65)
+- [x] **T017** Same for Unit 4. (r1 revise - 13 defects - repaired at a483c9e; r2 12/13
+  verified, 4 residuals repaired post-report and escalated as G-2026-66)
+- [x] **T018** Same for Unit 5. (r1 revise - 9 defects - repaired at 219960c; r2 all nine
+  verify, 9/10 pass, register batch + dependency escalated as G-2026-67)
+- [x] **T019** Same for Unit 6. (r1 revise - fig-U6-7 missing margin notes + six wrong words -
+  repaired at e99c1a2; r2, re-spawned after the harness classifier outage, all ten criteria
+  pass with the repair verified four ways; advisories + dependency escalated as G-2026-68)
+- [x] **T020** Unit 1: if no G5-demanded repair touched its mirror, its accepted human
   sign-off stands and no fresh G5 is forced; otherwise run the same pattern. Record the G5
-  run PHRs.
+  run PHRs. (No G5-demanded repair touched Unit 1's mirror - its accepted human sign-off
+  stands; G5 run PHRs recorded, 0044-0048)
 
 ## Phase 5: Final gates + PR
 
 - [ ] **T021** `npm run check:all` (full tier incl. bilingual build); fix findings (max 2
   cycles, then document).
-- [ ] **T022** Update `specs/content/efmp-302/tasks.md` Notes with all report paths; verify no
-  G3/G5/G6/G7 row was marked done and translation_status is unchanged on units 2-6.
+- [x] **T022** Update `specs/content/efmp-302/tasks.md` Notes with all report paths; verify no
+  G3/G5/G6/G7 row was marked done and translation_status is unchanged on units 2-6. (All
+  feature-023 G3/G5 report paths recorded in the Notes; verified 2026-09-25: zero agent-done
+  gate rows, all 36 unit-02..06 Urdu files still `translation_status: draft`)
 - [ ] **T023** `git push -u origin HEAD`; `gh pr create --base main` with the mandated body
   (course code, Urdu units + word counts, G3/G5 runs and outcomes, D/G codes consumed,
   escalations, gate summary). Do NOT merge.
 
 ## Verification
 
-- [ ] `npm run check:content` green after each Urdu unit (T010-T013)
-- [ ] `npm run figures:variants:check` clean; units 3-6 figures carry `.ur.svg` + `.ur.dark.svg`
+- [x] `npm run check:content` green after each Urdu unit (T010-T013)
+- [x] `npm run figures:variants:check` clean; units 3-6 figures carry `.ur.svg` + `.ur.dark.svg`
 - [ ] `npm run check:all` green at the final commit (T021)
-- [ ] Units 2-6 carry fresh advisory G3 reports; units 2-6 carry fresh advisory G5 reports
-- [ ] Every binding failure and budget exhaustion escalated under G-2026-62..71
-- [ ] No G3/G5/G6/G7 tracker row marked done; no human initials; no self-signing
-- [ ] Zero em dash in every file touched
+- [x] Units 2-6 carry fresh advisory G3 reports; units 2-6 carry fresh advisory G5 reports
+- [x] Every binding failure and budget exhaustion escalated under G-2026-62..71
+- [x] No G3/G5/G6/G7 tracker row marked done; no human initials; no self-signing
+- [x] Zero em dash in every file touched
 - [ ] PR open to main, not merged

@@ -1384,3 +1384,40 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   certified G5 pass.
 - **Blocks:** a third G5 cycle for Unit 5; nothing else. The Urdu content is semantically
   verified; the register items are presentational.
+
+---
+
+## G-2026-68 - EFMP-302 Unit 6 G5: two cycles consumed; advisories and the G3 dependency need the owner
+
+- **Status:** open
+- **Gate:** G5 Urdu review, ADR-0019 two-cycle limit
+- **Source:** EFMP-302 Unit 6 G5 feat023-r2 (2026-09-25,
+  `specs/content/efmp-302/reviews/unit-06/G5/agent-g5-efmp302-u6-feat023-r2.json`), in the
+  G-2026-63 pattern
+- **Question:** Unit 6's feature-023 G5 review ran two advisory cycles (cycle 2 completed by a
+  re-spawned reviewer after a transient harness classifier outage; same inputs, same port,
+  same instrument). Cycle 1 returned revise on one figure defect - fig-U6-7's Urdu variants
+  carried 19 of the English figure's 22 text elements, dropping two margin-note boxes - plus
+  six wrong-word findings; all repaired at e99c1a2. Cycle 2 verified the figure repair four
+  ways (source bytes 22/22, served build, in-render DOM, pixel ink 0.088-0.107 in both
+  note-box regions of both variants) and all six word repairs, with the only bound-input
+  changes since r1 being the seven Urdu-side paths of e99c1a2; every English path is
+  byte-identical to what the G3 and the r1 G5 reviewed. All ten criteria pass on the current
+  bytes; the disposition is escalate on (a) the G3 dependency (G-2026-65; no signed G3 exists,
+  and Unit 6's advisory G3 carries the owner-gated S1/S2 sources blockers, G-2026-64) and
+  (b) nine unresolved advisories: a register bundle (پسائی x2, اوپر کا شکل x5,
+  ناکام نہیں ہے رہی, ایسی نظریہ in fig-U6-4.ur, "quote" x2, فریمنگ x4, استادِ تربیت calque);
+  comparative/nuance drops (topic-04:76 "harder than" weakened to "as difficult as",
+  teacher-notes "at least three" dropped and "polite" rendered جھوٹی, topic-02 "not unlucky"
+  for "not unusual"); an added topic-03 parenthetical distinguishing this unit's غور و فکر
+  from Unit 2's banked term (owner decision); the CON:6-6 preservice label (owner term
+  decision); a stale figures/unit-06.md preamble; and a corrected instrument finding that
+  fig-U6-2's dashed rules-out boxes overflow in both locales (inherited from the English
+  design, cosmetic, G3 advisory class).
+- **Needed, and from whom:** the curriculum owner, to either accept the repaired state on the
+  two advisory reports or authorise a third G5 cycle after a directed register/nuance pass; and
+  to resolve the G3 dependency per G-2026-65 (signed G3 or owner-accepted equivalent) before
+  any certified G5 pass. The CON:6-6 label and the fig-U6-2 bilingual overflow are owner-side
+  design decisions.
+- **Blocks:** a third G5 cycle for Unit 6; nothing else. The Urdu content is semantically
+  verified; the register items are presentational.
