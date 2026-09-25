@@ -88,8 +88,11 @@ and run records under `history/prompts/efmp-302/`.
 
 ## Phase 5: Final gates + PR
 
-- [ ] **T021** `npm run check:all` (full tier incl. bilingual build); fix findings (max 2
-  cycles, then document).
+- [x] **T021** `npm run check:all` (full tier incl. bilingual build); fix findings (max 2
+  cycles, then document). (2026-09-25: all 17 full gates pass; the only finding was the
+  git-ignored generated static/content-status.json going stale after the tracker edits -
+  regenerated via `npm run build:content-status`, no commit needed; re-run green at 070aa54f
+  and again at the final commit, after the U4/U5 G3 row completion)
 - [x] **T022** Update `specs/content/efmp-302/tasks.md` Notes with all report paths; verify no
   G3/G5/G6/G7 row was marked done and translation_status is unchanged on units 2-6. (All
   feature-023 G3/G5 report paths recorded in the Notes; verified 2026-09-25: zero agent-done
@@ -102,7 +105,7 @@ and run records under `history/prompts/efmp-302/`.
 
 - [x] `npm run check:content` green after each Urdu unit (T010-T013)
 - [x] `npm run figures:variants:check` clean; units 3-6 figures carry `.ur.svg` + `.ur.dark.svg`
-- [ ] `npm run check:all` green at the final commit (T021)
+- [x] `npm run check:all` green at the final commit (T021)
 - [x] Units 2-6 carry fresh advisory G3 reports; units 2-6 carry fresh advisory G5 reports
 - [x] Every binding failure and budget exhaustion escalated under G-2026-62..71
 - [x] No G3/G5/G6/G7 tracker row marked done; no human initials; no self-signing
