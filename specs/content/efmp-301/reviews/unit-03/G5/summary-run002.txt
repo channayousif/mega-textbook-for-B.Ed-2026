@@ -1,0 +1,87 @@
+G5 Urdu review - EFMP-301 Unit 3 (Learning Theories)
+Run: agent-g5-efmp301-u3-run002 (fresh re-run after run001 was killed by an
+infrastructure outage; run001 artifacts untouched)
+Reviewer: agent:g5-reviewer, model LongCat-2.0, advisory under ADR-0019
+Date: 2026-09-25
+Report: specs/content/efmp-301/reviews/unit-03/G5/agent-g5-efmp301-u3-run002.json
+
+DISPOSITION: REVISE
+
+Inputs: all 134 manifest digests verified against the worktree (manifest-verify.log);
+skill_digest matches. English authoring c9f85832 (PHR 0049), G4 Urdu translation 6d6236d7
+(PHR 0068), G3 repairs b220ae5d; the bound Urdu carries the G3-repair mirroring (citation
+re-attributions, response-cost replacement, assessment rebalance) - verified passage by
+passage.
+
+What was done
+- Full EN/UR passage comparison across index, topic-01..04, unit-assessment (10 MCQ + 10
+  RRQ + 5 ERQ, keys, mark schemes, rubrics) and teacher notes: negation, modal force,
+  quantities, examples, pronoun references and instructional sequences checked per passage.
+- Assessment equivalence: all 10 Urdu MCQs answered independently before opening the
+  English key; my answers (b,d,b,b,b,c,b,c,a,b) match both keys exactly; option order,
+  cognitive demand and mark splits preserved; the G3-repaired 3/3/2/2 MCQ and 3/2/3/2 RRQ
+  blueprint spreads are mirrored in Urdu.
+- Terminology checked against the frozen bank (terminology.csv) and the bound concept
+  graph (concepts/unit-03.md).
+- Deterministic gates all pass: validate:content, check:depth-gate, check:figures,
+  check:no-em-dash, check:no-answer-keys, check:docs-sync (logs in
+  logs-agent-g5-efmp301-u3-run002/).
+- Real render inspection: npm run build (exit 0) + serve on :3462 + Playwright Chromium
+  (repo devDependency; the Chrome-channel MCPs had no Chrome binary). Desktop 1280x800,
+  narrow 360x640 (zero horizontal overflow on all 7 pages, programmatic check), A4 print
+  PDFs, per-figure element captures, dark-variant captures. Nastaliq shaping, bidi,
+  RTL figure mirroring (verified geometrically), print stylesheet and dark swap all
+  correct. 56 evidence files hashed in the report.
+
+Why revise - blocking findings (repair requests)
+1. fig-U3-1.ur.svg/.ur.dark.svg: lower-panel explanatory labels left in English
+   (bell/food/salivation explanations).
+2. fig-U3-5.ur.svg/.ur.dark.svg: only headers translated; the entire four-row comparison
+   body remains English.
+3. fig-U3-3.ur.svg: row-2 label truncated to "مکمل کام کے / مکمل کام"; "ستارہ چارٹ"
+   (star chart) omitted.
+4. Systematic terminology-bank drift: سلوکیات vs bank طرزِ عمل پسندی; تعمیدیت/تعمیدی vs
+   تعمیریت; باوری تعمیر vs معاونتی تدریس; قریبی نشوونما کا علاقہ vs علاقہ ہائے قربی
+   نشوونما. The index key_terms block encodes سلوکیات; the Urdu teacher notes cite the
+   bank terms as the unit's key terms, so the mismatch is reader-visible; the concept
+   graph uses a third set of variants (سکیماں، تعدیل، وکالی تقویت، منزلیں).
+5. topic-01: "un-hear an association" inverted to "cannot hear the association"
+   (کوئی بھی بتائے جانے سے association کو نہیں سن سکتا).
+6. topic-01:42: "classroom management" rendered "جماعت کی کاؤنٹرائزنگ" (garbled; bank
+   جماعتی انتظام).
+7. "salivation" rendered "رال" (resin) in topic-01 prose and fig-U3-1 labels; should be
+   لعاب/لعاب دہن.
+8. topic-02:60: "draw the roti (iconic)" rendered "روٹی بنائیں" (make the roti),
+   corrupting the enactive->iconic->symbolic sequence.
+9. "spiral curriculum" rendered "مراحل کا نصاب" (curriculum of stages) throughout;
+   loses the spiral and collides with Piaget's مراحل in the same topic.
+10. topic-03:104 rubric row: "observers who were never addressed" garbled via مباحثت
+    (discussion).
+11. topic-03:50: "inflatable-doll studies" rendered "پھول والے گڑیے" (flower doll);
+    should be پھولنے والی.
+12. teacher-notes:71: "formative work" rendered "صورت بہبود کام" (non-phrase; bank
+    تشکیلی تشخیص).
+13. topic-02:64: خاکوں used for both schemas and diagrams - term collision.
+
+Escalation (owner)
+- G3 dependency: the bound G3 report is an unsigned ADR-0019 advisory run (disposition
+  revise) and the English was repaired after it; no signed/accepted G3 exists for the
+  current inputs while certification is unprovisioned. Recorded as an uncertain finding
+  per the GQUR-300 PR #65 precedent; the full comparison was nevertheless performed
+  against the current bound English.
+- English-side residuals for the owner: "constructivist approes" typo persists at
+  docs/.../topic-04.mdx:50 although the G3 repair commit claims it fixed; fig-U3-2.svg
+  and .dark.svg <desc> still say "response cost" (visible labels were fixed; the Urdu
+  variant is correct).
+
+Advisory findings (see report): meaning shifts (age for stage, conscious for intuitive,
+positive/negative for prosocial/antisocial), Urdu typos (شاگرڈ x2, استار, روے),
+تعلیم vs تعلم in titles/figure headers, visible "_association" markdown artifact,
+garbled MCQ key explanation 1, and a list of register coinages for owner judgement.
+
+Criteria: authority pass, sources pass, coverage pass, assessment pass, accessibility
+pass, completeness fail, semantics fail, terminology fail, register fail, rtl fail.
+
+This report is advisory only. It does not mark the gate done, does not sign or register
+anything, and does not change translation_status. Repairs belong to the author; a new
+manifest and a fresh reviewer session are required afterwards.

@@ -18,7 +18,7 @@ Development). The rest are authored here and carry a G5 flag, listed at the foot
 | CON:EFMP-301-3-4 | Reinforcement and punishment read precisely | تقویت اور سزا کی درست پڑھائی | CON:EFMP-301-3-3 | 3.1 | SLO:EFMP-301-3-1 | MCQ-03, MCQ-04, RRQ-04, ERQ-01 |
 | CON:EFMP-301-3-5 | The cognitive turn: learning as thinking | ادراکی موڑ: سوچ کے طور پر تعلم | CON:EFMP-301-3-1 | 3.2 | SLO:EFMP-301-3-2 | - |
 | CON:EFMP-301-3-6 | Schemas, assimilation and accommodation | سکیماں، ہم آہنگی اور تعدیل | CON:EFMP-301-3-5 | 3.2 | SLO:EFMP-301-3-2 | MCQ-05, MCQ-07, RRQ-05, ERQ-02 |
-| CON:EFMP-301-3-7 | Bruner's modes, guided discovery and the spiral | برنر کی نمائندگی، رہنمائی دریافت اور مراحل کا سلسلہ | CON:EFMP-301-3-5 | 3.2 | SLO:EFMP-301-3-2 | MCQ-06, RRQ-06 |
+| CON:EFMP-301-3-7 | Bruner's modes, guided discovery and the spiral | برنر کی نمائندگی، رہنمائی دریافت اور مارپیچ نصاب | CON:EFMP-301-3-5 | 3.2 | SLO:EFMP-301-3-2 | MCQ-06, RRQ-06 |
 | CON:EFMP-301-3-8 | Observational learning and vicarious reinforcement | مشاہداتی تعلم اور وکالی تقویت | CON:EFMP-301-3-3 | 3.3 | SLO:EFMP-301-3-2 | MCQ-08, RRQ-07, ERQ-03 |
 | CON:EFMP-301-3-9 | Models: chosen, and read by their outcomes | منزلیں: انتخاب اور نتائج سے پڑھی گئیں | CON:EFMP-301-3-8 | 3.3 | SLO:EFMP-301-3-2 | MCQ-02, RRQ-03, RRQ-08, ERQ-03 |
 | CON:EFMP-301-3-10 | Constructivism: understanding is built | تعمیریت: فہم تعمیر ہوتی ہے | CON:EFMP-301-3-6 | 3.4 | SLO:EFMP-301-3-3 | MCQ-10 |
