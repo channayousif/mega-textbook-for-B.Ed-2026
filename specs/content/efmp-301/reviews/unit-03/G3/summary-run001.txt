@@ -1,0 +1,139 @@
+G3 English review summary - EFMP-301 Unit 3 (Learning Theories), run 001
+========================================================================
+
+Run: agent-g3-efmp301-u3-run001 (reviewer agent:g3-reviewer, model LongCat-2.0),
+2026-09-25T07:40:50Z to 2026-09-25T08:51:29Z.
+Report: specs/content/efmp-301/reviews/unit-03/G3/agent-g3-efmp301-u3-run001.json
+(validated: "Report structurally valid: revise").
+Subject: docs/semester-1/efmp-301/unit-03/ (index, topic-01..04, unit-assessment,
+unit-teacher-notes) plus governance (coverage/, sources/, figures/, concepts/,
+approved content-spec under D-2026-0044). Author identity supplied by the parent:
+a Claude Code agent session (model LongCat-2.0) in worktree agent-ad57ca9469bfc4572 on
+branch 022-author-efmp-301, recorded in
+history/prompts/022-author-efmp-301/0049-english-authoring-complete.misc.prompt.md;
+the Unit 3 English bytes were authored in commit c9f8583 (author_run_id
+"commit:c9f8583"). This reviewer session did not author or translate any of the
+reviewed material. First review round (no previous findings).
+
+DISPOSITION: REVISE
+-------------------
+Observed, actionable content defects with precise locations and repair requests.
+Criteria: authority PASS, coverage PASS, readability PASS, pedagogy PASS,
+accessibility PASS; sources FAIL, assessment FAIL. Four blocking findings, one
+uncertain, seven advisory. This report is advisory under ADR-0019: it does not
+certify the unit, write the tracker row, or mark any gate done.
+
+INPUT VERIFICATION
+------------------
+All 106 manifest digests were verified two ways: a raw SHA-256 pass (98 exact; the 8
+raw mismatches are exactly the ADR-0027 content-spec slice and the translation_status
+normalization), then a full recomputation with inputManifest() from
+scripts/lib/review-evidence.mjs, which applies the same normalization as prepare:
+106/106 paths and digests match the working tree at HEAD 90c3f10, no missing, no
+extra, no dirty bound inputs. skill_digest matches (eccc4074...). Independence: fresh
+session, not the authoring session; author/reviewer run identities are distinct.
+
+WHAT WAS CHECKED AND FOUND
+--------------------------
+- Authority: the guide (1st 2026.txt lines 1079-1098) allots Weeks 5-7 to Chapter 3
+  Parts 1-3 and names exactly the theorists the unit teaches (Pavlov/Skinner;
+  Piaget/Bruner; Bandura; constructivist approaches + application/review). CLO traces
+  match (SLO 3-1 -> CLOs 1+3, 3-2 -> CLO 1, 3-3 -> CLOs 1+3). Teaching strategies and
+  practical work are folded per Art. III.6 (course overview + teacher notes). PASS.
+- Coverage: all 12 checklist sub-topics taught; every coverage-matrix heading exists
+  verbatim in the topic files; depth budget sums to 113 (target 113); 9/9 figures
+  placed; concept graph consistent. PASS.
+- Sources: the interesting one. Every in-prose citation was checked against the bound
+  excerpt, and the excerpt against the primary source itself (the reviewer fetched
+  https://home.cc.umanitoba.ca/~seifert/EdPsy2009.pdf, 376 pp, and read Chapter 2 and
+  the related chapters directly). Three distinct problems:
+  (F1, blocking) The bound excerpt omits passages for four accurate in-prose
+  citations (Pavlov topic-01:61-64; extinction :77-81; reinforcement distinction
+  :111-125; schemas/assimilation/accommodation topic-02:59-78). All four ARE in the
+  book (pp. 24-25, 27-28, 33-34, 111-112) - the citations are honest, the bundle just
+  cannot show it. Extend the excerpt, re-prepare, re-review.
+  (F2, blocking) Misattribution: Bruner's three modes and their order
+  (topic-02:97-101, cited to Seifert & Sutton), Bandura's four observational-learning
+  steps (topic-03:47-64), and "the four consequence types"/"response cost"
+  (topic-01:108-120, cited) are NOT in that book at all (zero occurrences of
+  "enactive", "iconic", "response cost"; no four-step account; no four-type
+  framework). These standard accounts need a registered, excerpt-bound source of
+  their own - exactly what the spec's "supplements verified at authoring time"
+  mechanism (content-spec:432-435) anticipated.
+  (F3, blocking) The Bobo-doll claim ("among the most replicated findings in
+  psychology", topic-03:75-83) is uncited and unsupported by anything registered or
+  bound; the spec planned a Bobo-doll supplement, none was registered.
+  (F4, uncertain) sources/unit-03.md:16 claims vosniadou2001 supports U3-5/6/10, but
+  the bound Vosniadou excerpt contains only the Units 1-2 Principle 11 material. No
+  prose cites Vosniadou, so nothing learner-facing rests on it. FAIL.
+- Assessment: the reviewer solved all 10 MCQs independently BEFORE reading the key
+  (derived 1-b, 2-c, 3-b, 4-b, 5-b, 6-c, 7-b, 8-c, 9-a, 10-b) - the supplied key
+  matches on all ten; RRQ model answers and ERQ rubrics (each summing to 20) also
+  check out. The defect is the spread: MCQs run 4/3/1/2 across topics 3.1-3.4 against
+  the approved 3/3/2/2 (content-spec:545) and RRQs run 4/2/2/2 against 3/2/3/2
+  (content-spec:546) - topic 3.1 over-weighted, topic 3.3 under-weighted by one item
+  per band (F6, blocking). Advisory wording items: MCQ 7 option b "assimilated into
+  no schema" (line 93), RRQ 9 model answer "unaided even with help" (line 210), RRQ
+  10 model answer generic rather than Amjad-specific (lines 211-215). FAIL.
+- Readability: HSC-register prose, terms defined at first use and used consistently,
+  Sindh contexts throughout, cross-references to Unit 2 verified accurate. One typo:
+  "constructivist approes" (topic-04:50). PASS.
+- Pedagogy: all four topics carry the complete nine-part cycle in order; activities
+  are feasible with no materials; misconception boxes cover the spec's six listed
+  misconceptions; the four-lens capstone is exactly the guide's Week 7 application
+  slot. PASS.
+- Accessibility: all 18 SVGs have title/desc/aria structure and descriptive alt text
+  matching the manifest; measure-figure-text reports no overflow in any figure (one
+  cosmetic wordmark-collision note on fig-U3-1). Render inspection (chromium, 7
+  pages, 1280x900 / 360x780 / A4 794x1123 print): zero defects - no broken images,
+  no missing alt, no skipped headings, no horizontal overflow at 360; the one
+  overflowing table (teacher notes) scrolls properly with tabindex=0/role=region/
+  aria-label and its last column is reachable (389 -> 343 after scrolling the table
+  itself, per the G3 reference's measurement rule); A4 print shows no clipping and
+  the answers section prints unclipped. PASS.
+
+DETERMINISTIC CHECKS (real exit codes, logs under logs-agent-g3-efmp301-u3-run001/)
+-----------------------------------------------------------------------------------
+validate:content 0 | check:depth-gate 0 | check:figures 0 | check:no-em-dash 0 |
+check:no-answer-keys 0 | check:docs-sync 0 | check:concept-graph 0 (informational) |
+check:bloom-bands 0 (informational) | measure-figure-text 0 (both batches) |
+render-review 0 (renders-agent-g3-efmp301-u3-run001/render-inspect.log, 36 artifacts) |
+build 1 (see L1 below) | dev server 0.
+
+LIMITATIONS RECORDED
+--------------------
+L1. npm run build fails (exit 1) on a defect OUTSIDE this unit's bundle:
+    i18n/ur/.../efmp-301/unit-02/topic-02.mdx:17 (commit 90c3f10) imports
+    @site/components/Glossary instead of @site/src/components/Glossary, breaking the
+    client bundle for the whole site. Render inspection therefore ran against the
+    Docusaurus dev server (same components and CSS; English routes compile on
+    demand). This must be repaired in the Urdu/G4 lane before production deploys and
+    any later G5 render checks.
+L2. The reviewer's in-session viewing of saved PNGs was partially blocked by the
+    environment (only some full-page screenshots rendered for direct viewing). The
+    DOM-level layout measurements (alt, headings, overflow, table reachability,
+    print fit) are the substantive checks, are fully logged, and the 36 render
+    artifacts are saved for parent/human inspection.
+
+REPAIR REQUESTS (for the author, then a fresh manifest and a fresh reviewer)
+----------------------------------------------------------------------------
+R1. Extend sources/texts/seifert2009.md with the Chapter 2 passages actually cited
+    (Pavlov exhibit, extinction, Piaget schemas/assimilation/accommodation) and the
+    positive/negative reinforcement definitions (Ch 6 table), with the same
+    verified-quote format.
+R2. Register and bind an open-access source that actually contains Bruner's three
+    modes, Bandura's four steps, the consequence quadrants/response cost, and the
+    Bobo-doll research (one supplement can cover several), extend the excerpt file,
+    and cite it at topic-01:108-120, topic-02:97-116, topic-03:47-83. Alternatively
+    re-attribute or re-source those claims accurately.
+R3. Rebalance the bank: move one MCQ and one RRQ from topic-3.1 material to
+    topic-3.3 material (update concepts/unit-03.md assessment IDs), or record a
+    justified blueprint amendment in the spec.
+R4. Fix the small wording items: topic-04:50 typo, MCQ 7 option b, RRQ 9 model
+    answer, RRQ 10 model answer Amjad-specificity; reconcile the vosniadou2001
+    Supports claim (or extend its excerpt) and the "Both guide books" preamble in
+    sources/unit-03.md.
+R5. (Outside this bundle) Repair the Urdu unit-02 Glossary import so the site builds.
+
+Preserve unresolved findings across attempts; at most two repair/review cycles per
+stage per submission; unchanged-input retries seeking a pass are prohibited.

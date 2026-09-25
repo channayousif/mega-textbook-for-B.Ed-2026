@@ -1,0 +1,44 @@
+[36m[1m[INFO][22m[39m Starting the development server...
+◇ injected env (0) from .env.local // tip: ⌘ override existing { override: true }
+[33m[1m[WARNING][22m The [36m`siteConfig.onBrokenMarkdownLinks`[39m[33m config option is deprecated and will be removed in Docusaurus v4.[39m
+[33mPlease migrate and move this option to [36m`siteConfig.markdown.hooks.onBrokenMarkdownLinks`[39m[33m instead.[39m
+[32m[1m[SUCCESS][22m[39m Docusaurus website is running at: [36m[4mhttp://localhost:4612/[24m[39m
+[90m[[90mwebpackbar[90m][39m [36mℹ[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m✔[39m Client: Compiled successfully in 20.63s
+[1mclient[39m[22m (webpack 5.108.4) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mℹ[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m✔[39m Client: Compiled successfully in 2.18s
+[1mclient[39m[22m (webpack 5.108.4) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mℹ[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m✔[39m Client: Compiled successfully in 1.79s
+[1mclient[39m[22m (webpack 5.108.4) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mℹ[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m✔[39m Client: Compiled successfully in 31.76s
+[1mclient[39m[22m (webpack 5.108.4) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mℹ[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m✔[39m Client: Compiled successfully in 6.02s
+[1mclient[39m[22m (webpack 5.108.4) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mℹ[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m✔[39m Client: Compiled successfully in 19.87s
+[1mclient[39m[22m (webpack 5.108.4) compiled [1m[32msuccessfully[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mℹ[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m✔[39m Client: Compiled with some errors in 13.47s
+[31mModule not found: Error: Can't resolve '@site/components/Glossary' in '/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-ad57ca9469bfc4572/i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02'[39m
+[1mclient[39m[22m (webpack 5.108.4) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mℹ[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m✔[39m Client: Compiled with some errors in 2.88s
+[31mModule not found: Error: Can't resolve '@site/components/Glossary' in '/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-ad57ca9469bfc4572/i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02'[39m
+[1mclient[39m[22m (webpack 5.108.4) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mℹ[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m✔[39m Client: Compiled with some errors in 1.08s
+[31mModule not found: Error: Can't resolve '@site/components/Glossary' in '/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-ad57ca9469bfc4572/i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02'[39m
+[1mclient[39m[22m (webpack 5.108.4) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mℹ[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m✔[39m Client: Compiled with some errors in 9.36s
+[31mModule not found: Error: Can't resolve '@site/components/Glossary' in '/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-ad57ca9469bfc4572/i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02'[39m
+[1mclient[39m[22m (webpack 5.108.4) compiled with [1m[31m1 error[39m[22m
+[90m[[90mwebpackbar[90m][39m [36mℹ[39m Compiling Client
+[90m[[90mwebpackbar[90m][39m [32m✔[39m Client: Compiled successfully in 17.52s
+[1mclient[39m[22m (webpack 5.108.4) compiled [1m[32msuccessfully[39m[22m
+
+[killed]

@@ -1,0 +1,19 @@
+### teacher-notes sequencing table reachability proof (360px, per G3 reference method)
+{
+  "tableClientWidth": 328,
+  "tableScrollWidth": 368,
+  "scrollLeftAfter": 40,
+  "tabindex": "0",
+  "role": "region",
+  "ariaLabel": "Scrollable table, scroll sideways to see all columns",
+  "lastColumnBeforeScroll": {
+    "right": 384,
+    "text": "Leave time for"
+  },
+  "lastColumnAfterScroll": {
+    "right": 344,
+    "text": "Leave time for"
+  },
+  "viewport": 360,
+  "reachableBySwipe": true
+}
