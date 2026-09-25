@@ -20,5 +20,5 @@ Where a sub-topic is revisited outside the section that first teaches it.
 |---|---|---|---|
 | U5-1 | unit-assessment.mdx | Unit summary | spielman2020 |
 | U5-4 | topic-02.mdx | Giftedness: recognizing and teaching gifted learners | spielman2020 |
-| U5-1 | topic-01.mdx | Theories of intelligence: one ability or many | seifert2009 |
+| U5-1 | topic-01.mdx | Theories of intelligence: one ability or many | rohrer2012 |
 | U5-4 | unit-teacher-notes.mdx | Practical work | guide-efmp301 |

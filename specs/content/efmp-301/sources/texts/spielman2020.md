@@ -68,6 +68,14 @@ modern IQ testing, one standard deviation is 15 points", with scores from 85 to 
 counting as average. On limits: questions remain about "the degree to which any test
 can truly measure an individual's intelligence".
 
+On the history of misuse (added at G3 repair 2026-09-25): "IQ tests have sometimes been
+used as arguments in support of insidious purposes, such as the eugenics movement....
+The infamous Supreme Court Case, Buck v. Bell, legalized the forced sterilization of some
+people deemed 'feeble-minded' through this type of testing, resulting in about 65,000
+sterilizations." And on the professional guardrail that followed: "Today, only
+professionals trained in psychology can administer IQ tests, and the purchase of most
+tests requires an advanced degree in psychology."
+
 Used for (Unit 5): the theories-of-intelligence axis and Spearman's g (U5-1);
 Gardner's multiple intelligences and the evidence caution (U5-2); IQ scores, the mean
 and deviation, and the measurement limits (U5-3); creativity, divergent and convergent
