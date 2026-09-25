@@ -30,4 +30,4 @@ that survive review should be promoted into `specs/content/terminology.csv`.
 زیادہ کا اثر), `CON:EFMP-301-6-3` (بطور ترتیب کار compound), `CON:EFMP-301-6-4` (محرک اور
 حفظانِ صحت عوامل compound), `CON:EFMP-301-6-5` (خود ارادیت نظریہ کی تین ضروریات),
 `CON:EFMP-301-6-6` (کارکردگی کے مقاصد compound), `CON:EFMP-301-6-7` (نسبت دہی کا چکر),
-`CON:EFMP-301-6-8` (تعلیم میں جذبات compound).
+`CON:EFMP-301-6-8` (تعلم میں جذبات compound).
