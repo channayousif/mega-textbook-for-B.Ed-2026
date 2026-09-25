@@ -6,6 +6,7 @@ exact heading that teaches it.
 | Sub-topic ID | File | Section | Source |
 |---|---|---|---|
 | U3-1 | topic-01.mdx | Learning as behaviour: the behaviourist view | seifert2009 |
+| U3-1 | topic-01.mdx | Reinforcement and punishment in the classroom | spielman2020 |
 | U3-2 | topic-01.mdx | Pavlov: classical conditioning | seifert2009 |
 | U3-3 | topic-01.mdx | Skinner: operant conditioning | seifert2009 |
 | U3-4 | topic-01.mdx | Reinforcement and punishment in the classroom | seifert2009 |
@@ -14,7 +15,9 @@ exact heading that teaches it.
 | U3-6 | topic-02.mdx | Piaget: schemas, assimilation and accommodation | seifert2009 |
 | U3-6 | topic-02.mdx | Piaget: schemas, assimilation and accommodation | vosniadou2001 |
 | U3-7 | topic-02.mdx | Bruner: representation, discovery and the spiral curriculum | seifert2009 |
+| U3-7 | topic-02.mdx | Bruner: representation, discovery and the spiral curriculum | antonides2022 |
 | U3-8 | topic-03.mdx | Bandura: learning by observation | seifert2009 |
+| U3-8 | topic-03.mdx | Bandura: learning by observation | spielman2020 |
 | U3-9 | topic-03.mdx | What the observational-learning research showed, and what it means for models | seifert2009 |
 | U3-10 | topic-04.mdx | Constructivism: the learner builds understanding | seifert2009 |
 | U3-10 | topic-04.mdx | Constructivism: the learner builds understanding | vosniadou2001 |
