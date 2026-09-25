@@ -321,3 +321,133 @@ backward design and Mager's behavioural objectives (U10-3); the effectiveness
 framing - purposes made specific, class time used well, fair and valid assessment
 (U10-4); the reinforcement rows (U10-1, U10-3).
 
+
+## Chapter 2 extension - conditioning, constructivism, modeling (verified; used by Unit 3; added at G3 repair 2026-09-25)
+
+On Pavlov and respondent conditioning: "Involuntary stimuli and responses were first
+studied systematically early in the twentieth-century by the Russian scientist Ivan
+Pavlov (1927). Pavlov's most well-known work did not involve humans, but dogs, and
+specifically their involuntary tendency to salivate when eating." On the elements: "At
+the beginning Ginger salivates (an unconditioned response (UR)) only when she actually
+tastes her dinner (an unconditioned stimulus (US)). As time goes by, however, a neutral
+stimulus - such as the sound of opening a bag containing fresh dog food - is continually
+paired with the eating/tasting experience. Eventually the neutral stimulus becomes able
+to elicit salivation even before any dog food is offered to Ginger... At this point the
+neutral stimulus is called a conditioned stimulus (UCS) and the original response is
+renamed as a conditioned response (CR)."
+
+On extinction: "Extinction: This term does not refer to the fate of dinosaurs, but to
+the disappearance of a link between the conditioned stimulus and the conditioned
+response.... But because the link between the classroom and your particular smile is no
+longer repeated or associated, the child's response gradually extinguishes, or fades
+until it has disappeared entirely. In a sense the child's initial learning is
+'unlearned'." And: "whether the conditioned stimulus is positive or negative, extinction
+does not happen suddenly or immediately, but unfolds over time."
+
+On operant conditioning's basics: "operant conditioning focuses on how the effects of
+consequences on behaviors. The operant model of learning begins with the idea that
+certain consequences tend to make certain behaviors happen more frequently... One of the
+pioneers in the field was a Harvard professor named B. F. Skinner, who published
+numerous books and articles about the details of the process and who pointed out many
+parallels between operant conditioning in animals and operant conditioning in humans."
+
+On constructivism and Piaget's mechanisms: "constructivism... is a perspective on
+learning focused on how students actively create (or 'construct') knowledge out of
+experiences." On the two versions: "these are called psychological constructivism and
+social constructivism". On assimilation: "Assimilation is the interpretation of new
+information in terms of pre-existing concepts, information or ideas. A preschool child
+who already understands the concept of bird, for example, might initially label any
+flying object with this term - even butterflies or mosquitoes." On accommodation:
+"Assimilation operates jointly with accommodation, which is the revision or modification
+of pre-existing concepts in terms of new information or experience." On schemas: "Piaget
+called each mental representation a schema (all of them together - the plural - was
+called schemata). A schema was not merely a concept, but an elaborated mixture of
+vocabulary, actions, and experience related to the concept."
+
+On Bruner and scaffolding: "One early expression of this viewpoint came from the
+American psychologist Jerome Bruner (1960, 1966, 1996), who became convinced that
+students could usually learn more than had been traditionally expected as long as they
+were given appropriate guidance and resources. He called such support instructional
+scaffolding - literally meaning a temporary framework, like one used in constructing a
+building, that allows a much stronger structure to be built within it. In a comment
+that has been quoted widely (and sometimes disputed), he wrote: 'We [constructivist
+educators] begin with the hypothesis that any subject can be taught effectively in some
+intellectually honest form to any child at any stage of development.' (1960, p. 33)."
+
+On the reinforcement-punishment distinction (Table 14, Chapter 6's operant reframing):
+"Negative reinforcement: Stimulus that increases the likelihood of a behavior by being
+removed or taken away from a situation... Teacher stops nagging student about late
+homework." And "Punishment: Stimulus that decreases the likelihood of a behavior by
+being introduced or added to a situation... Teacher deducts points for late homework."
+
+On discovery learning: "the teacher (or sometimes fellow students) pose thoughtful
+questions intended to stimulate discussion and investigation by students. The approach
+has been described, used, and discussed by educators literally for decades, though
+sometimes under other names, including inquiry method (Postman & Weingartner, 1969),
+discovery learning (Bruner, 1960/2006), or progressive education (Dewey, 1933; Martin,
+2003)."
+
+On modeling and vicarious reinforcement: "Research repeatedly shows that modeling
+desired behaviors is an effective way to learn new behaviors, especially when the model
+is perceived as important (like the teacher), similar to the learner (like a student's
+best friend), or has a warm, positive relationship with the learner (like the teacher or
+the student's friend) (Bandura, 2002; Gibson, 2004). Modeling in this sense is sometimes
+also called observational learning.... Watching others being reinforced is sometimes
+called vicarious reinforcement." And on the negative case: "if the student observes that
+negative behaviors in others lead to positive consequences (like attention from peers),
+then the student may imitate the negative behaviors (Rebellon, 2006)."
+
+## Chapter 3 extension - play, social development, trust, belonging (verified; used by Unit 2; added at G3 repair 2026-09-25)
+
+On dramatic play and two-level thinking: "One of the most obvious examples of this kind
+of cognition is dramatic play, the improvised make-believe of preschool children....
+Ashley holds a plastic banana to her ear and says: 'Hello, Mom? Can you be sure to bring
+me my baby doll? OK!'" And on decentration: "There are hints of decentration in
+preschool children's dramatic play, which requires being aware on two levels at once -
+knowing that a banana can be both a banana and a 'telephone'."
+
+On external prompts for multi-step tasks: "If the younger children are to do this task
+reliably, they may need external prompts, such as having the teacher remind them
+periodically to go back to the story to look for more unknown words."
+
+On social development: "Social development refers to the long-term changes in
+relationships and interactions involving self, peers, and family. It includes both
+positive changes, such as how friendships develop, and negative changes, such as
+aggression or bullying."
+
+On the first relationship (Erikson's first crisis): "Trust and mistrust - Birth to one
+year - Development of trust between caregiver and child." And on the crisis model: "Erik
+Erikson developed a theory of social development that relies on stages, except that Erik
+thought of stages as a series of psychological or social (or psychosocial) crises -
+turning points in a person's relationships and feelings about himself or herself."
+
+On belonging and friends (Maslow within the social-development account): "After
+physiological and safety needs are met, love and belonging needs emerge. The person
+turns attention to making friends, being a friend, and cultivating positive personal
+relationships in general. In the classroom, a student motivated at this level may make
+approval from peers or teachers into a top priority."
+
+## Chapter 9 - Problem-solving strategies and obstacles (verified; used by Unit 4; added at G3 repair 2026-09-25)
+
+On algorithms and heuristics: "A well-defined procedure for solving a particular kind
+of problem is often called an algorithm; examples are the procedures for multiplying or
+dividing two numbers or the instructions for using a computer.... Algorithms are only
+effective when a problem is very well-structured and there is no question about whether
+the algorithm is an appropriate choice for the problem. In that situation it pretty much
+guarantees a correct solution. They do not work well, however, with ill-structured
+problems.... In those cases it is more effective to use heuristics, which are general
+strategies - 'rules of thumb', so to speak - that do not always work, but often do, or
+that provide at least partial solutions."
+
+On functional fixedness and response set: "One of these is functional fixedness: a
+tendency to regard the functions of objects and ideas as fixed.... Over time, we get so
+used to one particular purpose for an object that we overlook other uses.... Functional
+fixedness sometimes is also called response set, the tendency for a person to frame or
+think about each problem in a series in the same way as the previous problem, even when
+doing so is not appropriate to later problems."
+
+On helpful strategies: "One helpful strategy is problem analysis - identifying the parts
+of the problem and working on each part separately.... Another helpful strategy is
+working backward from a final solution to the originally stated problem.... A third
+helpful strategy is analogical thinking - using knowledge or experiences with similar
+features or structures to help solve the problem at hand (Bassok, 2003)."

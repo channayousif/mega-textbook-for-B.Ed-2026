@@ -91,3 +91,60 @@ one's full potential", attainable only once lower needs are met.
 Used for (Unit 6): the definition and the intrinsic-extrinsic distinction with the
 overjustification effect (U6-1); Maslow's hierarchy and its levels (U6-2); the
 anxiety-narrowing framing behind the emotions material (U6-6).
+
+## Section 6.3 - Operant conditioning (verified; used by Unit 3; added at G3 repair 2026-09-25)
+
+On the four-term quadrant: "All reinforcers (positive or negative) increase the
+likelihood of a behavioral response. All punishers (positive or negative) decrease the
+likelihood of a behavioral response. Now let's combine these four terms: positive
+reinforcement, negative reinforcement, positive punishment, and negative punishment
+(Table 6.2)." Table 6.2: Positive reinforcement - "Something is added to increase the
+likelihood of a behavior"; Negative reinforcement - "Something is removed to increase
+the likelihood of a behavior"; Positive punishment - "Something is added to decrease the
+likelihood of a behavior"; Negative punishment - "Something is removed to decrease the
+likelihood of a behavior."
+
+On positive reinforcement: "In positive reinforcement, a desirable stimulus is added to
+increase a behavior."
+
+On punishment's two forms: "In positive punishment, you add an undesirable stimulus to
+decrease a behavior. An example of positive punishment is scolding a student to get the
+student to stop texting in class." And: "In negative punishment, you remove a pleasant
+stimulus to decrease behavior. For example, when a child misbehaves, a parent can take
+away a favorite toy. In this case, a stimulus (the toy) is removed in order to decrease
+the behavior."
+
+## Section 6.4 - Observational learning (modeling) (verified; used by Unit 3; added at G3 repair 2026-09-25)
+
+On Bandura and social learning theory: "psychologist Albert Bandura's ideas about
+learning were different from those of strict behaviorists. Bandura and other researchers
+proposed a brand of behaviorism called social learning theory, which took cognitive
+processes into account. According to Bandura, pure behaviorism could not explain why
+learning can take place in the absence of external reinforcement."
+
+On the Bobo doll experiments: "Bandura researched modeling behavior, particularly
+children's modeling of adults' aggressive and violent behaviors (Bandura, Ross, & Ross,
+1961). He conducted an experiment with a five-foot inflatable doll that he called a Bobo
+doll. In the experiment, children's aggressive behavior was influenced by whether the
+teacher was punished for her behavior.... When the teacher was praised or ignored (and
+not punished for her behavior), the children imitated what she did, and even what she
+said. They punched, kicked, and yelled at the doll." And the conclusion: "Bandura
+concluded that we watch and learn, and that this learning can have both prosocial and
+antisocial effects."
+
+On the four steps of modeling: "Bandura described specific steps in the process of
+modeling that must be followed if learning is to be successful: attention, retention,
+reproduction, and motivation. First, you must be focused on what the model is doing -
+you have to pay attention. Next, you must be able to retain, or remember, what you
+observed; this is retention. Then, you must be able to perform the behavior that you
+observed and committed to memory; this is reproduction. Finally, you must have
+motivation."
+
+On vicarious reinforcement: "If you saw that the model was reinforced for their
+behavior, you will be more motivated to copy them. This is known as vicarious
+reinforcement. On the other hand, if you observed the model being punished, you would be
+less motivated to copy them. This is called vicarious punishment."
+
+On symbolic models: "A symbolic model can be fictional characters or real people who
+demonstrate behaviors in books, movies, television shows, video games, or Internet
+sources."
