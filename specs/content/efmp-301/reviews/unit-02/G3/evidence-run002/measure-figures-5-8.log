@@ -1,0 +1,10 @@
+✓ static/img/figures/efmp-301/unit-02/fig-U2-5.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✗ static/img/figures/efmp-301/unit-02/fig-U2-6.svg
+    overflows right edge by 0.3px: "multi-step instructions followed"
+✓ static/img/figures/efmp-301/unit-02/fig-U2-7.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-02/fig-U2-8.svg (780x470, widest text ends at 771.8, wordmark at 675.7)
+
+1 text-geometry problem(s).
+✓ static/img/figures/efmp-301/unit-02/fig-U2-1.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-02/fig-U2-5.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-02/fig-U2-7.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)

@@ -1,0 +1,10 @@
+### index page re-measure (desktop 1280x900) after waitForSelector(main h1)
+HTTP 200  title: Human Growth and Development | B.Ed Mega Textbook
+headings (5):
+  h1 Human Growth and Development
+  h2 Unit learning outcomes​
+  h2 Prerequisite knowledge​
+  h2 In this unit​
+  h2 How to use this unit​
+topic links: ["","​","​","​","Topic 2.1 - What development is, and the principles it follows","Topic 2.2 - Physical development","Topic 2.3 - Cognitive, emotional and social development","Topic 2.4 - Developmental stages and the classroom","​","PreviousIntroduction to Educational Psychology - teacher notes","NextTopic 2.1 - What development is, and the principles it follows","Unit learning outcomes","Prerequisite knowledge","In this unit","How to use this unit"]
+document horizontal overflow: false
