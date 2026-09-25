@@ -9,8 +9,10 @@ exact heading that teaches it.
 | U11-2 | topic-01.mdx | Common difficulties and their signs in school | who2026 |
 | U11-3 | topic-02.mdx | The school environment and well-being: demands and supports | who2026 |
 | U11-3 | topic-02.mdx | The school environment and well-being: demands and supports | seifert2009 |
+| U11-3 | topic-02.mdx | The school environment and well-being: demands and supports | who2026 |
+| U11-3 | topic-02.mdx | The school environment and well-being: demands and supports | seifert2009 |
 | U11-4 | topic-02.mdx | The teacher's role and its limits: notice, respond, refer | who2026 |
-| U11-4 | topic-02.mdx | The teacher's role and its limits: notice, respond, refer | seifert2009 |
+| U11-4 | topic-02.mdx | The teacher's role and its limits: notice, respond, refer | who2026 |
 
 ## Reinforcement
 

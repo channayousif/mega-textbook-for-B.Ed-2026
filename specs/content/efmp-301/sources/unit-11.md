@@ -4,15 +4,15 @@ Verified 2026-09-24. Every URL below was fetched and its title, authors and year
 against the page itself; nothing is cited from memory (Art. III.5, `author-unit` Step 1.3).
 
 The guide's Week 16 block names "Mental health and well-being in schools" as this unit's
-bullet. The definition and the school's role are bound to the WHO fact sheet; the
-classroom-relationship material to the guide's own recommended book (Chapter 8).
+bullet. The definition, the signs, the environment material and the teacher's role are bound to the
+WHO fact sheet; the course's earlier units supply the cross-referenced classroom background.
 
 ## Registry-verified open-access sources
 
 | Key | Citation | URL/DOI | Supports | Kind |
 |---|---|---|---|---|
 | who2026 | World Health Organization. (2026). *Mental health: Strengthening our response* (fact sheet). | https://www.who.int/news-room/fact-sheets/detail/mental-health-strengthening-our-response | U11-1 (the definition as a state of functioning more than the absence of illness; the basic-human-right framing); U11-2 (the public-health grounding of the signs material); U11-3 (reshaping school environments to protect mental health; school-based social and emotional learning effective across income levels); U11-4 (the environment-reshaping framing behind the teacher's role) | open-access-substitute, retrieved and read 2026-09-24; bound excerpt in sources/texts/who2026.md |
-| seifert2009 | Seifert, K., & Sutton, R. (2009). *Educational Psychology* (2nd ed.). CC BY 3.0. | https://home.cc.umanitoba.ca/~seifert/EdPsy2009.pdf | U11-3 (the teacher-pupil relationship and classroom communication of Chapter 8, behind the stations' supports); U11-4 (the teacher's communication role and its professional boundaries) | guide-required, retrieved and read 2026-09-24; bound excerpt in sources/texts/seifert2009.md |
+| seifert2009 | Seifert, K., & Sutton, R. (2009). *Educational Psychology* (2nd ed.). CC BY 3.0. | https://home.cc.umanitoba.ca/~seifert/EdPsy2009.pdf | background only: the course's earlier units (2, 3, 6, 8) that this unit's cross-references draw on; no Unit 11 prose claim rests on it | guide-required, retrieved and read 2026-09-24; bound excerpt in sources/texts/seifert2009.md |
 
 ## Guide-required sources
 
