@@ -1,0 +1,69 @@
+G3 English review - EFMP-301 Unit 9 (Assessment and Evaluation)
+Run: agent-g3-efmp301-u9-run001 | Reviewer: agent:g3-reviewer (LongCat-2.0, fresh session)
+Reviewed: 2026-09-25, HEAD 53b051ea (evidence captured at 4dbe708a; no Unit 9 input changed between)
+Author: commit:631bb07d (Claude Code agent session, LongCat-2.0, worktree agent-ad57ca9469bfc4572,
+       PHR history/prompts/022-author-efmp-301/0049-english-authoring-complete.misc.prompt.md)
+DISPOSITION: REVISE (advisory only; not a gate completion or acceptance)
+
+What was checked
+- Bound inputs verified against the prepared manifest. 5 of 98 digests had drifted before the
+  review began (seifert2009.md extended at 8c15c7c9; fig-U9-3/fig-U9-4 English SVGs reworked at
+  42ad6a8d). English prose unchanged. Per instruction the review covers and binds the current
+  bytes; drift recorded in the report.
+- All seven direct quotations verified verbatim against sources/texts/seifert2009.md:258-292.
+- All 10 MCQs and 10 RRQs solved independently before reading the supplied answers; derived
+  key 1-b 2-b 3-b 4-b 5-b 6-b 7-b 8-b 9-c 10-b and all RRQ substance match the supplied key
+  and mark schemes. No ambiguous stems, plausible distractors, sound analytic ERQ rubrics.
+- Gates all exit 0: validate:content, check:depth-gate, check:figures, check:no-em-dash,
+  check:no-answer-keys, check:docs-sync, plus check:concept-graph, check:bloom-bands,
+  figures:variants:check. npm run build exit 0. measure-figure-text: no glyph overflow in any
+  of the 12 English SVGs.
+- Rendered inspection (real Playwright Chromium against the served build): all 6 figures render
+  with manifest-verbatim alt text at 360px; no clipped figures or tables; the one overflowing
+  table (teacher-notes sequencing) is keyboard-marked (tabindex=0, role=region, aria-label) and
+  swipe-reachable; A4 print pass shows zero overflowing elements on all six pages, figures
+  visible, answers section present. 18 PNG artifacts saved.
+
+Criterion results
+  authority    pass   guide Week 14 Ch. 9 bullets -> U9-1..U9-6 -> taught sections; CLO 5 trace
+  sources      FAIL   three cited attributions lack bound passage support (below)
+  coverage     pass   all six sub-topics taught at the mapped sections; reinforcement verified
+  assessment   FAIL   blueprint topic spreads not met; key-distribution and Bloom-label notes
+  accessibility FAIL  two rendered figure defects (below)
+  readability  pass   HSC register held; 86 reading-min inside the 78-105 budget
+  pedagogy     pass   nine-part cycles, Sindh grounding, misconceptions, feasible activities
+
+Blocking findings (repair before pass)
+1. fig-U9-4 caption garbled (commit 42ad6a8d regression): "the wrong question (validity) needs
+   a / instrument; an inconsistent measure / better rubric - not by difficulty." Restore the
+   grammatical caption in fig-U9-4.svg and .dark.svg; the Urdu twin still has the correct text.
+2. fig-U9-3 teacher-made trade cell now reads "trades defensibility for fit", dropping
+   "comparability" - the exact trade the prose teaches twice and the manifest records. Restore
+   in both English variants; the Urdu twin still has the full phrase.
+3. Sources: "Four purposes cover the classroom territory (Seifert & Sutton, 2009)"
+   (topic-01.mdx:50), the standardisation definition (topic-02.mdx:43-47) and the
+   absence-of-bias gloss (topic-02.mdx:89-92) are cited to the source but absent from the
+   bound excerpt, which also binds no Chapter 12 text for U9-3; sources/unit-09.md:14 claims
+   support ("diagnostic-before-instruction framing"; "standardisation; the teacher-made
+   trade") the excerpt does not contain. Extend the excerpt with the real Chapter 11/12
+   passages or re-attribute as unit synthesis, and align the Supports column.
+4. Blueprint spreads: approved spec requires MCQ 4/3/3 and RRQ 3/4/3 across topics 9.1-9.3;
+   the unit's own concept graph yields MCQ 3/4/3 and RRQ 2/4/4 (Topic 9.1 under-sampled in
+   both bands). Re-theme one MCQ and one RRQ onto 9.1, or amend the blueprint with
+   justification.
+
+Advisory findings (fix at next revision)
+- 9 of 10 MCQ keys are option b; redistribute correct positions.
+- MCQ-03/08/09 labelled Apply but only require recognition of worked examples; no RRQ reaches
+  the band's Analyze top.
+- index.mdx "the test that ranks them in December" conflates the December summative test with
+  the March certifying board exam; topic-01's "three assessments" frame never introduces the
+  December test that the Explanation then uses.
+- figures/unit-09.md fig-U9-1 Prompt column assigns the wrong instances (sum -> "board
+  examination") vs the rendered SVG and prose (sum -> "the December test").
+- Session tooling could not display images; inspection ran as real-browser DOM measurement
+  plus SVG-text and pixel-statistics verification. PNGs saved for human viewing.
+
+Report: specs/content/efmp-301/reviews/unit-09/G3/agent-g3-efmp301-u9-run001.json
+Evidence: logs-agent-g3-efmp301-u9-run001/ and renders-agent-g3-efmp301-u9-run001/ beside it.
+This report is advisory. It does not certify the unit, complete a gate, or issue acceptance.

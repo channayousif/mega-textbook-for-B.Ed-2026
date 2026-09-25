@@ -1,0 +1,910 @@
+{
+  "base": "http://localhost:3210",
+  "generated": "2026-09-25T15:26:53.034Z",
+  "pages": [
+    {
+      "name": "index",
+      "path": "/semester-1/efmp-301/unit-10/",
+      "desktop": {
+        "headings": [
+          "H1: Teaching-Learning Process",
+          "H2: Unit learning outcomes​",
+          "H2: Prerequisite knowledge​",
+          "H2: In this unit​",
+          "H2: How to use this unit​"
+        ],
+        "figures": []
+      },
+      "narrow": {
+        "tables": [],
+        "overflow": {
+          "docClientWidth": 360,
+          "docScrollWidth": 360,
+          "overflowing": []
+        },
+        "figures": []
+      },
+      "print": {
+        "tables": [],
+        "overflow": {
+          "docClientWidth": 794,
+          "docScrollWidth": 794,
+          "overflowing": []
+        }
+      }
+    },
+    {
+      "name": "topic-01",
+      "path": "/semester-1/efmp-301/unit-10/topic-01/",
+      "desktop": {
+        "headings": [
+          "H1: Topic 10.1 - Teaching methods and strategies",
+          "H2: A real classroom situation​",
+          "H2: Explanation​",
+          "H3: Teaching methods: what each is good for​",
+          "H3: Choosing strategies: matching method to purpose​",
+          "H2: Activity: One topic, three methods​",
+          "H2: Check your understanding​",
+          "H2: Summary​",
+          "H2: Self-assessment checklist​",
+          "H2: Try this at your practicum school​",
+          "H2: Summative task​",
+          "H2: Further reading​"
+        ],
+        "figures": [
+          {
+            "src": "/img/figures/efmp-301/unit-10/fig-U10-1.svg",
+            "alt": "A table of six teaching methods - lecture, demonstration, discussion, question-answer, group work and case study - each against what it is good for, what it demands, and one use named in the course guide.",
+            "naturalWidth": 249,
+            "rendered": {
+              "w": 703,
+              "h": 424
+            },
+            "loading": "lazy"
+          },
+          {
+            "src": "/img/figures/efmp-301/unit-10/fig-U10-1.dark.svg",
+            "alt": "A table of six teaching methods - lecture, demonstration, discussion, question-answer, group work and case study - each against what it is good for, what it demands, and one use named in the course guide.",
+            "naturalWidth": 0,
+            "rendered": {
+              "w": 0,
+              "h": 0
+            },
+            "loading": "lazy"
+          },
+          {
+            "src": "/img/figures/efmp-301/unit-10/fig-U10-2.svg",
+            "alt": "A diagram of the choosing frame: the purpose at the top, the constraints in the middle, the method at the bottom, with a dashed check arrow from the method back to the purpose.",
+            "naturalWidth": 249,
+            "rendered": {
+              "w": 703,
+              "h": 424
+            },
+            "loading": "lazy"
+          },
+          {
+            "src": "/img/figures/efmp-301/unit-10/fig-U10-2.dark.svg",
+            "alt": "A diagram of the choosing frame: the purpose at the top, the constraints in the middle, the method at the bottom, with a dashed check arrow from the method back to the purpose.",
+            "naturalWidth": 0,
+            "rendered": {
+              "w": 0,
+              "h": 0
+            },
+            "loading": "lazy"
+          }
+        ]
+      },
+      "narrow": {
+        "tables": [
+          {
+            "before": {
+              "clientWidth": 328,
+              "scrollWidth": 328,
+              "scrollLeft": 0
+            },
+            "attrs": {
+              "tabindex": null,
+              "role": null,
+              "ariaLabel": null
+            },
+            "rightmostCellBefore": {
+              "x": 164.421875,
+              "y": 7609.859375,
+              "width": 179.078125,
+              "height": 78.28125,
+              "top": 7609.859375,
+              "right": 343.5,
+              "bottom": 7688.140625,
+              "left": 164.421875
+            },
+            "rightmostCellAfterScroll": {
+              "x": 164.421875,
+              "y": 7609.859375,
+              "width": 179.078125,
+              "height": 78.28125,
+              "top": 7609.859375,
+              "right": 343.5,
+              "bottom": 7688.140625,
+              "left": 164.421875
+            }
+          }
+        ],
+        "overflow": {
+          "docClientWidth": 360,
+          "docScrollWidth": 360,
+          "overflowing": []
+        },
+        "figures": [
+          {
+            "src": "/img/figures/efmp-301/unit-10/fig-U10-1.svg",
+            "alt": "A table of six teaching methods - lecture, demonstration, discussion, question-answer, group work and case study - each against what it is good for, what it demands, and one use named in the course guide.",
+            "naturalWidth": 249,
+            "rendered": {
+              "w": 328,
+              "h": 198
+            },
+            "loading": "lazy"
+          },
+          {
+            "src": "/img/figures/efmp-301/unit-10/fig-U10-1.dark.svg",
+            "alt": "A table of six teaching methods - lecture, demonstration, discussion, question-answer, group work and case study - each against what it is good for, what it demands, and one use named in the course guide.",
+            "naturalWidth": 0,
+            "rendered": {
+              "w": 0,
+              "h": 0
+            },
+            "loading": "lazy"
+          },
+          {
+            "src": "/img/figures/efmp-301/unit-10/fig-U10-2.svg",
+            "alt": "A diagram of the choosing frame: the purpose at the top, the constraints in the middle, the method at the bottom, with a dashed check arrow from the method back to the purpose.",
+            "naturalWidth": 249,
+            "rendered": {
+              "w": 328,
+              "h": 198
+            },
+            "loading": "lazy"
+          },
+          {
+            "src": "/img/figures/efmp-301/unit-10/fig-U10-2.dark.svg",
+            "alt": "A diagram of the choosing frame: the purpose at the top, the constraints in the middle, the method at the bottom, with a dashed check arrow from the method back to the purpose.",
+            "naturalWidth": 0,
+            "rendered": {
+              "w": 0,
+              "h": 0
+            },
+            "loading": "lazy"
+          }
+        ]
+      },
+      "print": {
+        "tables": [
+          {
+            "before": {
+              "clientWidth": 762,
+              "scrollWidth": 762,
+              "scrollLeft": 0
+            },
+            "attrs": {
+              "tabindex": null,
+              "role": null,
+              "ariaLabel": null
+            },
+            "rightmostCellBefore": {
+              "x": 321.3125,
+              "y": 4889.25,
+              "width": 456.1875,
+              "height": 51.890625,
+              "top": 4889.25,
+              "right": 777.5,
+              "bottom": 4941.140625,
+              "left": 321.3125
+            },
+            "rightmostCellAfterScroll": {
+              "x": 321.3125,
+              "y": 4889.25,
+              "width": 456.1875,
+              "height": 51.890625,
+              "top": 4889.25,
+              "right": 777.5,
+              "bottom": 4941.140625,
+              "left": 321.3125
+            }
+          }
+        ],
+        "overflow": {
+          "docClientWidth": 794,
+          "docScrollWidth": 794,
+          "overflowing": []
+        }
+      }
+    },
+    {
+      "name": "topic-02",
+      "path": "/semester-1/efmp-301/unit-10/topic-02/",
+      "desktop": {
+        "headings": [
+          "H1: Topic 10.2 - Instructional design and teacher effectiveness",
+          "H2: A real classroom situation​",
+          "H2: Explanation​",
+          "H3: Instructional design: planning backward from outcomes​",
+          "H3: Teacher effectiveness: what it is and how it grows​",
+          "H2: Activity: Two teachers, one inventory​",
+          "H2: Check your understanding​",
+          "H2: Summary​",
+          "H2: Self-assessment checklist​",
+          "H2: Try this at your practicum school​",
+          "H2: Summative task​",
+          "H2: Further reading​"
+        ],
+        "figures": [
+          {
+            "src": "/img/figures/efmp-301/unit-10/fig-U10-3.svg",
+            "alt": "A flowchart of backward design: the outcome at the top, the evidence second, the activity third, with a dashed forward-check arrow from the activity back to the outcome.",
+            "naturalWidth": 249,
+            "rendered": {
+              "w": 703,
+              "h": 424
+            },
+            "loading": "lazy"
+          },
+          {
+            "src": "/img/figures/efmp-301/unit-10/fig-U10-3.dark.svg",
+            "alt": "A flowchart of backward design: the outcome at the top, the evidence second, the activity third, with a dashed forward-check arrow from the activity back to the outcome.",
+            "naturalWidth": 0,
+            "rendered": {
+              "w": 0,
+              "h": 0
+            },
+            "loading": "lazy"
+          },
+          {
+            "src": "/img/figures/efmp-301/unit-10/fig-U10-4.svg",
+            "alt": "A table of five observable practices of effective teaching, each against what it looks like and the unit of this course that taught it.",
+            "naturalWidth": 249,
+            "rendered": {
+              "w": 703,
+              "h": 424
+            },
+            "loading": "lazy"
+          },
+          {
+            "src": "/img/figures/efmp-301/unit-10/fig-U10-4.dark.svg",
+            "alt": "A table of five observable practices of effective teaching, each against what it looks like and the unit of this course that taught it.",
+            "naturalWidth": 0,
+            "rendered": {
+              "w": 0,
+              "h": 0
+            },
+            "loading": "lazy"
+          }
+        ]
+      },
+      "narrow": {
+        "tables": [
+          {
+            "before": {
+              "clientWidth": 328,
+              "scrollWidth": 328,
+              "scrollLeft": 0
+            },
+            "attrs": {
+              "tabindex": null,
+              "role": null,
+              "ariaLabel": null
+            },
+            "rightmostCellBefore": {
+              "x": 162.765625,
+              "y": 8146.78125,
+              "width": 180.734375,
+              "height": 78.28125,
+              "top": 8146.78125,
+              "right": 343.5,
+              "bottom": 8225.0625,
+              "left": 162.765625
+            },
+            "rightmostCellAfterScroll": {
+              "x": 162.765625,
+              "y": 8146.78125,
+              "width": 180.734375,
+              "height": 78.28125,
+              "top": 8146.78125,
+              "right": 343.5,
+              "bottom": 8225.0625,
+              "left": 162.765625
+            }
+          }
+        ],
+        "overflow": {
+          "docClientWidth": 360,
+          "docScrollWidth": 360,
+          "overflowing": []
+        },
+        "figures": [
+          {
+            "src": "/img/figures/efmp-301/unit-10/fig-U10-3.svg",
+            "alt": "A flowchart of backward design: the outcome at the top, the evidence second, the activity third, with a dashed forward-check arrow from the activity back to the outcome.",
+            "naturalWidth": 249,
+            "rendered": {
+              "w": 328,
+              "h": 198
+            },
+            "loading": "lazy"
+          },
+          {
+            "src": "/img/figures/efmp-301/unit-10/fig-U10-3.dark.svg",
+            "alt": "A flowchart of backward design: the outcome at the top, the evidence second, the activity third, with a dashed forward-check arrow from the activity back to the outcome.",
+            "naturalWidth": 0,
+            "rendered": {
+              "w": 0,
+              "h": 0
+            },
+            "loading": "lazy"
+          },
+          {
+            "src": "/img/figures/efmp-301/unit-10/fig-U10-4.svg",
+            "alt": "A table of five observable practices of effective teaching, each against what it looks like and the unit of this course that taught it.",
+            "naturalWidth": 249,
+            "rendered": {
+              "w": 328,
+              "h": 198
+            },
+            "loading": "lazy"
+          },
+          {
+            "src": "/img/figures/efmp-301/unit-10/fig-U10-4.dark.svg",
+            "alt": "A table of five observable practices of effective teaching, each against what it looks like and the unit of this course that taught it.",
+            "naturalWidth": 0,
+            "rendered": {
+              "w": 0,
+              "h": 0
+            },
+            "loading": "lazy"
+          }
+        ]
+      },
+      "print": {
+        "tables": [
+          {
+            "before": {
+              "clientWidth": 762,
+              "scrollWidth": 762,
+              "scrollLeft": 0
+            },
+            "attrs": {
+              "tabindex": null,
+              "role": null,
+              "ariaLabel": null
+            },
+            "rightmostCellBefore": {
+              "x": 305.1875,
+              "y": 5177.546875,
+              "width": 472.3125,
+              "height": 51.890625,
+              "top": 5177.546875,
+              "right": 777.5,
+              "bottom": 5229.4375,
+              "left": 305.1875
+            },
+            "rightmostCellAfterScroll": {
+              "x": 305.1875,
+              "y": 5177.546875,
+              "width": 472.3125,
+              "height": 51.890625,
+              "top": 5177.546875,
+              "right": 777.5,
+              "bottom": 5229.4375,
+              "left": 305.1875
+            }
+          }
+        ],
+        "overflow": {
+          "docClientWidth": 794,
+          "docScrollWidth": 794,
+          "overflowing": []
+        }
+      }
+    },
+    {
+      "name": "unit-assessment",
+      "path": "/semester-1/efmp-301/unit-10/unit-assessment/",
+      "desktop": {
+        "headings": [
+          "H1: Teaching-Learning Process - assessment and review",
+          "H2: Unit summary​",
+          "H2: Summative assessment​",
+          "H3: Multiple-choice questions (MCQs)​",
+          "H3: Restricted-response questions (RRQs)​",
+          "H3: Extended-response questions (ERQs)​",
+          "H2: Answers and marking guidance​",
+          "H3: MCQ answer key​",
+          "H3: RRQ model answers and mark schemes​",
+          "H3: ERQ rubrics​"
+        ],
+        "figures": []
+      },
+      "narrow": {
+        "tables": [
+          {
+            "before": {
+              "clientWidth": 328,
+              "scrollWidth": 328,
+              "scrollLeft": 0
+            },
+            "attrs": {
+              "tabindex": null,
+              "role": null,
+              "ariaLabel": null
+            },
+            "rightmostCellBefore": {
+              "x": 263.71875,
+              "y": 7759.875,
+              "width": 79.78125,
+              "height": 51.890625,
+              "top": 7759.875,
+              "right": 343.5,
+              "bottom": 7811.765625,
+              "left": 263.71875
+            },
+            "rightmostCellAfterScroll": {
+              "x": 263.71875,
+              "y": 7759.875,
+              "width": 79.78125,
+              "height": 51.890625,
+              "top": 7759.875,
+              "right": 343.5,
+              "bottom": 7811.765625,
+              "left": 263.71875
+            }
+          },
+          {
+            "before": {
+              "clientWidth": 328,
+              "scrollWidth": 328,
+              "scrollLeft": 0
+            },
+            "attrs": {
+              "tabindex": null,
+              "role": null,
+              "ariaLabel": null
+            },
+            "rightmostCellBefore": {
+              "x": 263.71875,
+              "y": 8239.5625,
+              "width": 79.78125,
+              "height": 51.890625,
+              "top": 8239.5625,
+              "right": 343.5,
+              "bottom": 8291.453125,
+              "left": 263.71875
+            },
+            "rightmostCellAfterScroll": {
+              "x": 263.71875,
+              "y": 8239.5625,
+              "width": 79.78125,
+              "height": 51.890625,
+              "top": 8239.5625,
+              "right": 343.5,
+              "bottom": 8291.453125,
+              "left": 263.71875
+            }
+          },
+          {
+            "before": {
+              "clientWidth": 328,
+              "scrollWidth": 328,
+              "scrollLeft": 0
+            },
+            "attrs": {
+              "tabindex": null,
+              "role": null,
+              "ariaLabel": null
+            },
+            "rightmostCellBefore": {
+              "x": 263.71875,
+              "y": 8745.640625,
+              "width": 79.78125,
+              "height": 51.890625,
+              "top": 8745.640625,
+              "right": 343.5,
+              "bottom": 8797.53125,
+              "left": 263.71875
+            },
+            "rightmostCellAfterScroll": {
+              "x": 263.71875,
+              "y": 8745.640625,
+              "width": 79.78125,
+              "height": 51.890625,
+              "top": 8745.640625,
+              "right": 343.5,
+              "bottom": 8797.53125,
+              "left": 263.71875
+            }
+          },
+          {
+            "before": {
+              "clientWidth": 328,
+              "scrollWidth": 328,
+              "scrollLeft": 0
+            },
+            "attrs": {
+              "tabindex": null,
+              "role": null,
+              "ariaLabel": null
+            },
+            "rightmostCellBefore": {
+              "x": 263.71875,
+              "y": 9251.71875,
+              "width": 79.78125,
+              "height": 51.890625,
+              "top": 9251.71875,
+              "right": 343.5,
+              "bottom": 9303.609375,
+              "left": 263.71875
+            },
+            "rightmostCellAfterScroll": {
+              "x": 263.71875,
+              "y": 9251.71875,
+              "width": 79.78125,
+              "height": 51.890625,
+              "top": 9251.71875,
+              "right": 343.5,
+              "bottom": 9303.609375,
+              "left": 263.71875
+            }
+          },
+          {
+            "before": {
+              "clientWidth": 328,
+              "scrollWidth": 328,
+              "scrollLeft": 0
+            },
+            "attrs": {
+              "tabindex": null,
+              "role": null,
+              "ariaLabel": null
+            },
+            "rightmostCellBefore": {
+              "x": 263.71875,
+              "y": 9757.796875,
+              "width": 79.78125,
+              "height": 51.890625,
+              "top": 9757.796875,
+              "right": 343.5,
+              "bottom": 9809.6875,
+              "left": 263.71875
+            },
+            "rightmostCellAfterScroll": {
+              "x": 263.71875,
+              "y": 9757.796875,
+              "width": 79.78125,
+              "height": 51.890625,
+              "top": 9757.796875,
+              "right": 343.5,
+              "bottom": 9809.6875,
+              "left": 263.71875
+            }
+          }
+        ],
+        "overflow": {
+          "docClientWidth": 360,
+          "docScrollWidth": 360,
+          "overflowing": []
+        },
+        "figures": []
+      },
+      "print": {
+        "tables": [
+          {
+            "before": {
+              "clientWidth": 583,
+              "scrollWidth": 583,
+              "scrollLeft": 0
+            },
+            "attrs": {
+              "tabindex": null,
+              "role": null,
+              "ariaLabel": null
+            },
+            "rightmostCellBefore": {
+              "x": 518.828125,
+              "y": 4067.875,
+              "width": 79.78125,
+              "height": 51.890625,
+              "top": 4067.875,
+              "right": 598.609375,
+              "bottom": 4119.765625,
+              "left": 518.828125
+            },
+            "rightmostCellAfterScroll": {
+              "x": 518.828125,
+              "y": 4067.875,
+              "width": 79.78125,
+              "height": 51.890625,
+              "top": 4067.875,
+              "right": 598.609375,
+              "bottom": 4119.765625,
+              "left": 518.828125
+            }
+          },
+          {
+            "before": {
+              "clientWidth": 668,
+              "scrollWidth": 668,
+              "scrollLeft": 0
+            },
+            "attrs": {
+              "tabindex": null,
+              "role": null,
+              "ariaLabel": null
+            },
+            "rightmostCellBefore": {
+              "x": 604.203125,
+              "y": 4389.21875,
+              "width": 79.78125,
+              "height": 51.890625,
+              "top": 4389.21875,
+              "right": 683.984375,
+              "bottom": 4441.109375,
+              "left": 604.203125
+            },
+            "rightmostCellAfterScroll": {
+              "x": 604.203125,
+              "y": 4389.21875,
+              "width": 79.78125,
+              "height": 51.890625,
+              "top": 4389.21875,
+              "right": 683.984375,
+              "bottom": 4441.109375,
+              "left": 604.203125
+            }
+          },
+          {
+            "before": {
+              "clientWidth": 643,
+              "scrollWidth": 643,
+              "scrollLeft": 0
+            },
+            "attrs": {
+              "tabindex": null,
+              "role": null,
+              "ariaLabel": null
+            },
+            "rightmostCellBefore": {
+              "x": 579.1875,
+              "y": 4710.5625,
+              "width": 79.78125,
+              "height": 51.890625,
+              "top": 4710.5625,
+              "right": 658.96875,
+              "bottom": 4762.453125,
+              "left": 579.1875
+            },
+            "rightmostCellAfterScroll": {
+              "x": 579.1875,
+              "y": 4710.5625,
+              "width": 79.78125,
+              "height": 51.890625,
+              "top": 4710.5625,
+              "right": 658.96875,
+              "bottom": 4762.453125,
+              "left": 579.1875
+            }
+          },
+          {
+            "before": {
+              "clientWidth": 697,
+              "scrollWidth": 697,
+              "scrollLeft": 0
+            },
+            "attrs": {
+              "tabindex": null,
+              "role": null,
+              "ariaLabel": null
+            },
+            "rightmostCellBefore": {
+              "x": 632.71875,
+              "y": 5031.90625,
+              "width": 79.78125,
+              "height": 51.890625,
+              "top": 5031.90625,
+              "right": 712.5,
+              "bottom": 5083.796875,
+              "left": 632.71875
+            },
+            "rightmostCellAfterScroll": {
+              "x": 632.71875,
+              "y": 5031.90625,
+              "width": 79.78125,
+              "height": 51.890625,
+              "top": 5031.90625,
+              "right": 712.5,
+              "bottom": 5083.796875,
+              "left": 632.71875
+            }
+          },
+          {
+            "before": {
+              "clientWidth": 651,
+              "scrollWidth": 651,
+              "scrollLeft": 0
+            },
+            "attrs": {
+              "tabindex": null,
+              "role": null,
+              "ariaLabel": null
+            },
+            "rightmostCellBefore": {
+              "x": 586.78125,
+              "y": 5353.25,
+              "width": 79.78125,
+              "height": 51.890625,
+              "top": 5353.25,
+              "right": 666.5625,
+              "bottom": 5405.140625,
+              "left": 586.78125
+            },
+            "rightmostCellAfterScroll": {
+              "x": 586.78125,
+              "y": 5353.25,
+              "width": 79.78125,
+              "height": 51.890625,
+              "top": 5353.25,
+              "right": 666.5625,
+              "bottom": 5405.140625,
+              "left": 586.78125
+            }
+          }
+        ],
+        "overflow": {
+          "docClientWidth": 794,
+          "docScrollWidth": 794,
+          "overflowing": []
+        }
+      }
+    },
+    {
+      "name": "unit-teacher-notes",
+      "path": "/semester-1/efmp-301/unit-10/unit-teacher-notes/",
+      "desktop": {
+        "headings": [
+          "H1: Teaching-Learning Process - teacher notes",
+          "H2: Teaching strategies​",
+          "H2: Sequencing across the week​",
+          "H2: Misconceptions to expect, and how to handle them​",
+          "H2: Language and access​",
+          "H2: Practical work​",
+          "H2: Assessment notes​"
+        ],
+        "figures": []
+      },
+      "narrow": {
+        "tables": [
+          {
+            "before": {
+              "clientWidth": 328,
+              "scrollWidth": 328,
+              "scrollLeft": 0
+            },
+            "attrs": {
+              "tabindex": null,
+              "role": null,
+              "ariaLabel": null
+            },
+            "rightmostCellBefore": {
+              "x": 242.203125,
+              "y": 1917.671875,
+              "width": 101.296875,
+              "height": 78.28125,
+              "top": 1917.671875,
+              "right": 343.5,
+              "bottom": 1995.953125,
+              "left": 242.203125
+            },
+            "rightmostCellAfterScroll": {
+              "x": 242.203125,
+              "y": 1917.671875,
+              "width": 101.296875,
+              "height": 78.28125,
+              "top": 1917.671875,
+              "right": 343.5,
+              "bottom": 1995.953125,
+              "left": 242.203125
+            }
+          }
+        ],
+        "overflow": {
+          "docClientWidth": 360,
+          "docScrollWidth": 360,
+          "overflowing": []
+        },
+        "figures": []
+      },
+      "print": {
+        "tables": [
+          {
+            "before": {
+              "clientWidth": 762,
+              "scrollWidth": 762,
+              "scrollLeft": 0
+            },
+            "attrs": {
+              "tabindex": null,
+              "role": null,
+              "ariaLabel": null
+            },
+            "rightmostCellBefore": {
+              "x": 511.484375,
+              "y": 1015.84375,
+              "width": 266.015625,
+              "height": 51.890625,
+              "top": 1015.84375,
+              "right": 777.5,
+              "bottom": 1067.734375,
+              "left": 511.484375
+            },
+            "rightmostCellAfterScroll": {
+              "x": 511.484375,
+              "y": 1015.84375,
+              "width": 266.015625,
+              "height": 51.890625,
+              "top": 1015.84375,
+              "right": 777.5,
+              "bottom": 1067.734375,
+              "left": 511.484375
+            }
+          }
+        ],
+        "overflow": {
+          "docClientWidth": 794,
+          "docScrollWidth": 794,
+          "overflowing": []
+        }
+      }
+    }
+  ],
+  "darkTopic01": {
+    "figures": [
+      {
+        "src": "/img/figures/efmp-301/unit-10/fig-U10-1.svg",
+        "alt": "A table of six teaching methods - lecture, demonstration, discussion, question-answer, group work and case study - each against what it is good for, what it demands, and one use named in the course guide.",
+        "naturalWidth": 249,
+        "rendered": {
+          "w": 0,
+          "h": 0
+        },
+        "loading": "lazy"
+      },
+      {
+        "src": "/img/figures/efmp-301/unit-10/fig-U10-1.dark.svg",
+        "alt": "A table of six teaching methods - lecture, demonstration, discussion, question-answer, group work and case study - each against what it is good for, what it demands, and one use named in the course guide.",
+        "naturalWidth": 249,
+        "rendered": {
+          "w": 703,
+          "h": 424
+        },
+        "loading": "lazy"
+      },
+      {
+        "src": "/img/figures/efmp-301/unit-10/fig-U10-2.svg",
+        "alt": "A diagram of the choosing frame: the purpose at the top, the constraints in the middle, the method at the bottom, with a dashed check arrow from the method back to the purpose.",
+        "naturalWidth": 249,
+        "rendered": {
+          "w": 0,
+          "h": 0
+        },
+        "loading": "lazy"
+      },
+      {
+        "src": "/img/figures/efmp-301/unit-10/fig-U10-2.dark.svg",
+        "alt": "A diagram of the choosing frame: the purpose at the top, the constraints in the middle, the method at the bottom, with a dashed check arrow from the method back to the purpose.",
+        "naturalWidth": 249,
+        "rendered": {
+          "w": 703,
+          "h": 424
+        },
+        "loading": "lazy"
+      }
+    ]
+  }
+}
