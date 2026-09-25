@@ -1,0 +1,9 @@
+$ npm run figures:variants:check
+started: 2026-09-25T18:59:55Z
+
+> bed-mega-textbook@0.1.0 figures:variants:check
+> node scripts/build-figure-variants.mjs --check
+
+figures:variants --check OK (554 figure(s))
+exit_code=0
+finished: 2026-09-25T18:59:56Z
