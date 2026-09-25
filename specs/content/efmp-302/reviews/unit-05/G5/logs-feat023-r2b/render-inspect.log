@@ -1,0 +1,136 @@
+### starting: npm run serve -- --port 4627
+### render-inspect  EFMP-302 Unit 5 (ur)
+### route: /ur/semester-1/efmp-302/unit-05  pages: 7  placed figures: 8
+### host: http://127.0.0.1:4627   browser: chromium 149.0.7827.0
+### started: 2026-09-25T09:29:24.723Z
+
+===== A. DESKTOP 1280x900 =====
+
+-- index: headings=7 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+-- topic-01: headings=15 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=4 vagueLinks=0 hOverflow=false
+   img /img/figures/efmp-302/unit-05/fig-U5-1.ur.svg natural=287x150 shown=true loading=lazy alt="استاد کے کام کے ہفتے کی سرگرمی وار فہرست والا جدول، تقریباً گھنٹے، ہر سرگرمی اسکول سے باہر"
+   img /img/figures/efmp-302/unit-05/fig-U5-1.ur.dark.svg natural=0x0 shown=false loading=lazy alt="استاد کے کام کے ہفتے کی سرگرمی وار فہرست والا جدول، تقریباً گھنٹے، ہر سرگرمی اسکول سے باہر"
+   img /img/figures/efmp-302/unit-05/fig-U5-2.ur.svg natural=300x140 shown=true loading=lazy alt="قابلِ برداشت تقاضے سے وقتی دباؤ اور مسلسل غیر حل شدہ تقاضے سے پیشہ ورانہ تھکن کے تین پہلو "
+   img /img/figures/efmp-302/unit-05/fig-U5-2.ur.dark.svg natural=0x0 shown=false loading=lazy alt="قابلِ برداشت تقاضے سے وقتی دباؤ اور مسلسل غیر حل شدہ تقاضے سے پیشہ ورانہ تھکن کے تین پہلو "
+   heading order: no skipped levels
+   advisory bare-URL link text: https://doi.org/10.1002/wps.20311 | https://doi.org/10.1080/13540602.2021.1913404 | https://doi.org/10.1016/S0738-0593(01)00011-6 | https://doi.org/10.1016/j.ssaho.2021.100109
+
+-- topic-02: headings=13 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=3 vagueLinks=0 hOverflow=false
+   img /img/figures/efmp-302/unit-05/fig-U5-3.ur.svg natural=294x150 shown=true loading=lazy alt="استاد کے گرد چھ مانگنے والے فریقوں کا تصوراتی نقشہ - شاگرد، والدین، صدرِ اسکول، ضلع، امتحا"
+   img /img/figures/efmp-302/unit-05/fig-U5-3.ur.dark.svg natural=0x0 shown=false loading=lazy alt="استاد کے گرد چھ مانگنے والے فریقوں کا تصوراتی نقشہ - شاگرد، والدین، صدرِ اسکول، ضلع، امتحا"
+   img /img/figures/efmp-302/unit-05/fig-U5-4.ur.svg natural=300x137 shown=true loading=lazy alt="تدریس کا طب، قانون، انجینئرنگ اور نرسنگ سے موازنہ کرنے والا جدول، تنخواہ، داخلے کی چھانٹ، "
+   img /img/figures/efmp-302/unit-05/fig-U5-4.ur.dark.svg natural=0x0 shown=false loading=lazy alt="تدریس کا طب، قانون، انجینئرنگ اور نرسنگ سے موازنہ کرنے والا جدول، تنخواہ، داخلے کی چھانٹ، "
+   heading order: no skipped levels
+   advisory bare-URL link text: https://files.eric.ed.gov/fulltext/ED530786.pdf | https://doi.org/10.1080/713698714 | https://doi.org/10.1016/j.sbspro.2010.12.444
+
+-- topic-03: headings=12 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=1 vagueLinks=0 hOverflow=false
+   img /img/figures/efmp-302/unit-05/fig-U5-5.ur.svg natural=300x133 shown=true loading=lazy alt="چار تجویز کردہ جماعتی ٹیکنالوجی استعمالات کا جائزہ لینے والا جدول، ہر ایک کے اضافے، لاگت، "
+   img /img/figures/efmp-302/unit-05/fig-U5-5.ur.dark.svg natural=0x0 shown=false loading=lazy alt="چار تجویز کردہ جماعتی ٹیکنالوجی استعمالات کا جائزہ لینے والا جدول، ہر ایک کے اضافے، لاگت، "
+   img /img/figures/efmp-302/unit-05/fig-U5-6.ur.svg natural=281x150 shown=true loading=lazy alt="پیشہ ورانہ اور ذاتی ڈیجیٹل حلقوں کے آپس میں چھوئتے ہوئے خاکے کے ساتھ، پار ہونے والی صورتیں"
+   img /img/figures/efmp-302/unit-05/fig-U5-6.ur.dark.svg natural=0x0 shown=false loading=lazy alt="پیشہ ورانہ اور ذاتی ڈیجیٹل حلقوں کے آپس میں چھوئتے ہوئے خاکے کے ساتھ، پار ہونے والی صورتیں"
+   heading order: no skipped levels
+   advisory bare-URL link text: https://doi.org/10.1016/j.caeo.2022.100080
+
+-- topic-04: headings=12 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=2 vagueLinks=0 hOverflow=false
+   img /img/figures/efmp-302/unit-05/fig-U5-7.ur.svg natural=281x150 shown=true loading=lazy alt="تین دائروں والا خاکہ جو دکھاتا ہے کہ استاد کیا کنٹرول کرتا ہے، پر کیا اثر ڈال سکتا ہے، اور"
+   img /img/figures/efmp-302/unit-05/fig-U5-7.ur.dark.svg natural=0x0 shown=false loading=lazy alt="تین دائروں والا خاکہ جو دکھاتا ہے کہ استاد کیا کنٹرول کرتا ہے، پر کیا اثر ڈال سکتا ہے، اور"
+   img /img/figures/efmp-302/unit-05/fig-U5-8.ur.svg natural=287x150 shown=true loading=lazy alt="کسی نامی چیلنج کو ایک تبدیلی میں بدلنے کا فلوچارٹ - نام لیجیے، اختیار یا اثر میں رکھیے، سب"
+   img /img/figures/efmp-302/unit-05/fig-U5-8.ur.dark.svg natural=0x0 shown=false loading=lazy alt="کسی نامی چیلنج کو ایک تبدیلی میں بدلنے کا فلوچارٹ - نام لیجیے، اختیار یا اثر میں رکھیے، سب"
+   heading order: no skipped levels
+   advisory bare-URL link text: https://doi.org/10.1080/13540602.2021.1913404 | https://doi.org/10.1080/713698714
+
+-- unit-assessment: headings=10 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+-- unit-teacher-notes: headings=7 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+===== B. NARROW 360x780 =====
+
+-- index: docHorizontalOverflow=0px tables=0 figures=0 spill=0
+
+-- topic-01: docHorizontalOverflow=0px tables=1 figures=2 spill=0
+   table[0] client=328 scroll=328 fits=true lastHeader="ایک مضبوط جواب کیا کرتا " scroller=NONE
+   figure[0] .figure client=328 scroll=880 scroller=FIGURE.figure
+   figure[1] .figure client=328 scroll=1030 scroller=FIGURE.figure
+
+-- topic-02: docHorizontalOverflow=0px tables=1 figures=2 spill=0
+   table[0] client=328 scroll=328 fits=true lastHeader="ایک مضبوط جواب کیا کرتا " scroller=NONE
+   figure[0] .figure client=328 scroll=920 scroller=FIGURE.figure
+   figure[1] .figure client=328 scroll=900 scroller=FIGURE.figure
+
+-- topic-03: docHorizontalOverflow=0px tables=1 figures=2 spill=0
+   table[0] client=328 scroll=328 fits=true lastHeader="ایک مضبوط جواب کیا کرتا " scroller=NONE
+   figure[0] .figure client=328 scroll=900 scroller=FIGURE.figure
+   figure[1] .figure client=328 scroll=880 scroller=FIGURE.figure
+
+-- topic-04: docHorizontalOverflow=0px tables=1 figures=2 spill=0
+   table[0] client=328 scroll=328 fits=true lastHeader="ایک مضبوط جواب کیا کرتا " scroller=NONE
+   figure[0] .figure client=328 scroll=880 scroller=FIGURE.figure
+   figure[1] .figure client=328 scroll=900 scroller=FIGURE.figure
+
+-- unit-assessment: docHorizontalOverflow=0px tables=5 figures=0 spill=0
+   table[0] client=328 scroll=328 fits=true lastHeader="مضبوط (4-5)" scroller=NONE
+   table[1] client=328 scroll=328 fits=true lastHeader="مضبوط (4-5)" scroller=NONE
+   table[2] client=328 scroll=328 fits=true lastHeader="مضبوط (4-5)" scroller=NONE
+   table[3] client=328 scroll=328 fits=true lastHeader="مضبوط (4-5)" scroller=NONE
+   table[4] client=328 scroll=328 fits=true lastHeader="مضبوط (4-5)" scroller=NONE
+
+-- unit-teacher-notes: docHorizontalOverflow=0px tables=0 figures=0 spill=0
+
+===== C. A4 PRINT EMULATION (794px) =====
+
+-- index @print: clippedElems=0 figureImgs=0 answerHeadings=[]
+
+-- topic-01 @print: clippedElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/efmp-302/unit-05/fig-U5-1.ur.svg w=640 right=717 fits
+   printfig /img/figures/efmp-302/unit-05/fig-U5-1.ur.dark.svg w=0 right=0 fits
+   printfig /img/figures/efmp-302/unit-05/fig-U5-2.ur.svg w=760 right=777 fits
+   printfig /img/figures/efmp-302/unit-05/fig-U5-2.ur.dark.svg w=0 right=0 fits
+
+-- topic-02 @print: clippedElems=0 figureImgs=4 answerHeadings=["استاد کی جوابدہی پر بڑھتی توجہ​"]
+   printfig /img/figures/efmp-302/unit-05/fig-U5-3.ur.svg w=640 right=717 fits
+   printfig /img/figures/efmp-302/unit-05/fig-U5-3.ur.dark.svg w=0 right=0 fits
+   printfig /img/figures/efmp-302/unit-05/fig-U5-4.ur.svg w=640 right=717 fits
+   printfig /img/figures/efmp-302/unit-05/fig-U5-4.ur.dark.svg w=0 right=0 fits
+
+-- topic-03 @print: clippedElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/efmp-302/unit-05/fig-U5-5.ur.svg w=640 right=717 fits
+   printfig /img/figures/efmp-302/unit-05/fig-U5-5.ur.dark.svg w=0 right=0 fits
+   printfig /img/figures/efmp-302/unit-05/fig-U5-6.ur.svg w=640 right=717 fits
+   printfig /img/figures/efmp-302/unit-05/fig-U5-6.ur.dark.svg w=0 right=0 fits
+
+-- topic-04 @print: clippedElems=0 figureImgs=4 answerHeadings=["برداشت کے بجائے ترقی اور بڑھوتری بطور جواب​"]
+   printfig /img/figures/efmp-302/unit-05/fig-U5-7.ur.svg w=640 right=717 fits
+   printfig /img/figures/efmp-302/unit-05/fig-U5-7.ur.dark.svg w=0 right=0 fits
+   printfig /img/figures/efmp-302/unit-05/fig-U5-8.ur.svg w=760 right=777 fits
+   printfig /img/figures/efmp-302/unit-05/fig-U5-8.ur.dark.svg w=0 right=0 fits
+
+-- unit-assessment @print: clippedElems=0 figureImgs=0 answerHeadings=["محدود جوابی سوالات (RRQs)​","تفصیلی جوابی سوالات (ERQs)​","جوابات اور نمبر دہی کی رہنمائی​","MCQ جوابی کلید​","RRQ نمونہ جوابات اور نمبر دہی کے خاکے​"]
+
+-- unit-teacher-notes @print: clippedElems=0 figureImgs=0 answerHeadings=[]
+
+===== D. SVG TEXT GEOMETRY =====
+   fig-U5-1.ur [table] viewBox=880x460 texts=41 wordmark@x=775.6 -> clean
+   fig-U5-1.ur.dark [table] viewBox=880x460 texts=41 wordmark@x=775.6 -> clean
+   fig-U5-2.ur [flowchart] viewBox=1030x480 texts=27 wordmark@x=925.8 -> clean
+   fig-U5-2.ur.dark [flowchart] viewBox=1030x480 texts=27 wordmark@x=925.8 -> clean
+   fig-U5-3.ur [concept-map] viewBox=920x470 texts=24 wordmark@x=815.8 -> clean
+   fig-U5-3.ur.dark [concept-map] viewBox=920x470 texts=24 wordmark@x=815.8 -> clean
+   fig-U5-4.ur [table] viewBox=900x410 texts=36 wordmark@x=795.7 -> clean
+   fig-U5-4.ur.dark [table] viewBox=900x410 texts=36 wordmark@x=795.7 -> clean
+   fig-U5-5.ur [table] viewBox=900x400 texts=46 wordmark@x=795.7 -> clean
+   fig-U5-5.ur.dark [table] viewBox=900x400 texts=46 wordmark@x=795.7 -> clean
+   fig-U5-6.ur [diagram] viewBox=880x470 texts=22 wordmark@x=775.6 -> clean
+   fig-U5-6.ur.dark [diagram] viewBox=880x470 texts=22 wordmark@x=775.6 -> clean
+   fig-U5-7.ur [diagram] viewBox=880x470 texts=23 wordmark@x=775.6 -> clean
+   fig-U5-7.ur.dark [diagram] viewBox=880x470 texts=23 wordmark@x=775.6 -> clean
+   fig-U5-8.ur [flowchart] viewBox=900x470 texts=19 wordmark@x=795.7 -> clean
+   fig-U5-8.ur.dark [flowchart] viewBox=900x470 texts=19 wordmark@x=795.7 -> clean
+
+### finished: 2026-09-25T09:30:12.719Z
+### defects: 0
+
+Artifacts: /home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-ae2ddfdbf249be0f2/specs/content/efmp-302/reviews/unit-05/G5/renders-feat023-r2b
