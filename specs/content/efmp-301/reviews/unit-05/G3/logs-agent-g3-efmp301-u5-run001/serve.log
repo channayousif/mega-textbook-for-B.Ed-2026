@@ -1,0 +1,10 @@
+
+> bed-mega-textbook@0.1.0 serve
+> docusaurus serve
+
+◇ injected env (0) from .env.local // tip: ◈ encrypted .env [www.dotenvx.com]
+[33m[1m[WARNING][22m The [36m`siteConfig.onBrokenMarkdownLinks`[39m[33m config option is deprecated and will be removed in Docusaurus v4.[39m
+[33mPlease migrate and move this option to [36m`siteConfig.markdown.hooks.onBrokenMarkdownLinks`[39m[33m instead.[39m
+[32m[1m[SUCCESS][22m[39m Serving [36m[4m"build"[24m[39m directory at: [36m[4mhttp://localhost:3000/[24m[39m
+
+[reviewer note] docusaurus serve served the production build (build/ from build.log, build exit 0) on localhost:3000 for the duration of the render inspection; all 5 unit-05 routes returned HTTP 200 (probed with curl); the server was stopped by the reviewer after render inspection completed. Exit code 0 records the successful serving run.
