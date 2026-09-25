@@ -79,14 +79,14 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 8 | G6 assets | ▢ | | |
 | Unit 8 | G7 publish | ▢ | | |
 | Unit 9 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
-| Unit 9 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-09/G2/20260925T122657375Z-gates.json |
+| Unit 9 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-09/G2/20260925T164410238Z-gates.json |
 | Unit 9 | G3 en-review | ▢ | | |
 | Unit 9 | G4 ur-translation | ✅ | auto:gates | full UR mirror (6 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
 | Unit 9 | G5 ur-review | ▢ | | |
 | Unit 9 | G6 assets | ▢ | | |
 | Unit 9 | G7 publish | ▢ | | |
 | Unit 10 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
-| Unit 10 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-10/G2/20260925T122700571Z-gates.json |
+| Unit 10 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-10/G2/20260925T164414379Z-gates.json |
 | Unit 10 | G3 en-review | ▢ | | |
 | Unit 10 | G4 ur-translation | ✅ | auto:gates | full UR mirror (5 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
 | Unit 10 | G5 ur-review | ▢ | | |
