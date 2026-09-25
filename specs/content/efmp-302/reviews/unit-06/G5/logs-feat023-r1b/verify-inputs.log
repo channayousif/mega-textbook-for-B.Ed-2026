@@ -1,0 +1,9 @@
+G5 manifest verification (inputManifest from scripts/lib/review-evidence.mjs):
+  bound paths in manifest: [33m125[39m | recomputed at HEAD 1da5f6b: [33m125[39m
+  missing from current tree: [33m0[39m []
+  digest mismatches: [33m0[39m []
+  paths in current not in manifest: [33m0[39m []
+  skill_digest match: [33mtrue[39m
+  dirtyInputs: []
+English-base stability vs the G3 feat023-r1 manifest (commit 15ee421):
+  shared paths: [33m99[39m | English-side digest changes since that G3: [33m0[39m []
