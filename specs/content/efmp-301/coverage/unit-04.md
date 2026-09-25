@@ -10,6 +10,7 @@ exact heading that teaches it.
 | U4-3 | topic-02.mdx | The information-processing model: sensory, working and long-term memory | spielman2020 |
 | U4-4 | topic-02.mdx | Encoding, storage, retrieval - and why forgetting happens | spielman2020 |
 | U4-4 | topic-02.mdx | Encoding, storage, retrieval - and why forgetting happens | vosniadou2001 |
+| U4-4 | topic-02.mdx | Encoding, storage, retrieval - and why forgetting happens | ariel2018 |
 | U4-5 | topic-03.mdx | Thinking and concept formation | seifert2009 |
 | U4-5 | topic-03.mdx | Thinking and concept formation | vosniadou2001 |
 | U4-6 | topic-03.mdx | Problem-solving: strategies and obstacles | seifert2009 |

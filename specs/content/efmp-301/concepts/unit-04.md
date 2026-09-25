@@ -13,12 +13,12 @@ are authored here and carry a G5 flag, listed at the foot.
 | Concept ID | Label EN | Label UR | Prerequisites | Topic | SLO refs | Assessment item IDs |
 |---|---|---|---|---|---|---|
 | CON:EFMP-301-4-1 | Attention as the gateway | توجہ بطور داخلی راستہ | - | 4.1 | SLO:EFMP-301-4-1 | MCQ-01, RRQ-01 |
-| CON:EFMP-301-4-2 | The spotlight: captured, divisible at a cost, depletable | سپاٹ لائٹ: گرفت میں آنا، تقسیم کی قیمت، تھکاوٹ | CON:EFMP-301-4-1 | 4.1 | SLO:EFMP-301-4-1 | MCQ-02, RRQ-01, ERQ-01 |
+| CON:EFMP-301-4-2 | The spotlight: captured, divisible at a cost, depletable | سپاٹ لائٹ: گرفت میں آنا، تقسیم کی قیمت، تھکاوٹ | CON:EFMP-301-4-1 | 4.1 | SLO:EFMP-301-4-1 | MCQ-02, MCQ-05, RRQ-01, ERQ-01 |
 | CON:EFMP-301-4-3 | Perception as active interpretation | ادراک بطور فعال تشریح | CON:EFMP-301-4-1 | 4.1 | SLO:EFMP-301-4-1 | MCQ-03, RRQ-02 |
-| CON:EFMP-301-4-4 | The three memory systems and their jobs | تین یادداشتی نظام اور ان کے کام | - | 4.2 | SLO:EFMP-301-4-1 | MCQ-04, RRQ-03, RRQ-04 |
-| CON:EFMP-301-4-5 | Encoding, storage and retrieval | رمز کاری، حفظ اور واپسی | CON:EFMP-301-4-4 | 4.2 | SLO:EFMP-301-4-1 | RRQ-05 |
-| CON:EFMP-301-4-6 | The three faces of forgetting and their remedies | بھول جانے کے تین روپ اور ان کے علاج | CON:EFMP-301-4-5 | 4.2 | SLO:EFMP-301-4-1 | MCQ-05, RRQ-06, ERQ-02 |
-| CON:EFMP-301-4-7 | Study strategies the evidence supports | شہادت سے ثابت مطالعہ حکمت عملیاں | CON:EFMP-301-4-6 | 4.2 | SLO:EFMP-301-4-1 | MCQ-06, MCQ-07, RRQ-07, ERQ-02, ERQ-04 |
+| CON:EFMP-301-4-4 | The three memory systems and their jobs | تین یادداشتی نظام اور ان کے کام | - | 4.2 | SLO:EFMP-301-4-2 | MCQ-04, RRQ-03, RRQ-04 |
+| CON:EFMP-301-4-5 | Encoding, storage and retrieval | رمز کاری، حفظ اور واپسی | CON:EFMP-301-4-4 | 4.2 | SLO:EFMP-301-4-2 | ERQ-02 |
+| CON:EFMP-301-4-6 | The three faces of forgetting and their remedies | بھول جانے کے تین روپ اور ان کے علاج | CON:EFMP-301-4-5 | 4.2 | SLO:EFMP-301-4-2 | MCQ-05, RRQ-06, ERQ-02 |
+| CON:EFMP-301-4-7 | Study strategies the evidence supports | شہادت سے ثابت مطالعہ حکمت عملیاں | CON:EFMP-301-4-6 | 4.2 | SLO:EFMP-301-4-2 | MCQ-06, MCQ-07, RRQ-07, ERQ-02, ERQ-04 |
 | CON:EFMP-301-4-8 | Concepts: learned categories with boundaries | تصورات: سیکھی گئی اقسام اور ان کی حدود | CON:EFMP-301-4-3 | 4.3 | SLO:EFMP-301-4-3 | RRQ-08 |
 | CON:EFMP-301-4-9 | Problem-solving strategies and their obstacles | مسئلہ حل کرنے کی حکمت عملیاں اور رکاوٹیں | CON:EFMP-301-4-8 | 4.3 | SLO:EFMP-301-4-3 | MCQ-08, MCQ-10, RRQ-08, ERQ-03 |
 | CON:EFMP-301-4-10 | Inductive and deductive reasoning | استقرائی اور استنتاجی استدلال | CON:EFMP-301-4-8 | 4.3 | SLO:EFMP-301-4-3 | MCQ-09, RRQ-09 |
