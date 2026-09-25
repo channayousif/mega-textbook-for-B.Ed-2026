@@ -11,7 +11,7 @@ recommended book (Chapter 7), whose management chapter is the backbone of this u
 
 | Key | Citation | URL/DOI | Supports | Kind |
 |---|---|---|---|---|
-| seifert2009 | Seifert, K., & Sutton, R. (2009). *Educational Psychology* (2nd ed.). CC BY 3.0. | https://home.cc.umanitoba.ca/~seifert/EdPsy2009.pdf | U8-1 (the definition; what management serves); U8-2 (prevention first; space, procedures and routines; pacing); U8-3 (the environment's parts; communicating the importance of learning; feedback and records); U8-4 (rules as responsibility standards, few in number; natural and logical consequences); U8-5 (the response repertoire: ignoring, nonverbal gestures, consequences, conflict resolution); the reinforcement rows (U8-2, U8-3) | guide-required, retrieved and read 2026-09-24; bound excerpt in sources/texts/seifert2009.md |
+| seifert2009 | Seifert, K., & Sutton, R. (2009). *Educational Psychology* (2nd ed.). CC BY 3.0. | https://home.cc.umanitoba.ca/~seifert/EdPsy2009.pdf | U8-1 (the definition; what management serves); U8-2 (prevention first; space, procedures and routines); U8-3 (the environment's parts; communicating the importance of learning; feedback and records); U8-4 (rules as responsibility standards, few in number; natural and logical consequences); U8-5 (the escalation responses: ignoring, nonverbal gestures, consequences, conflict resolution) | guide-required, retrieved and read 2026-09-24; bound excerpt in sources/texts/seifert2009.md |
 
 ## Guide-required sources
 

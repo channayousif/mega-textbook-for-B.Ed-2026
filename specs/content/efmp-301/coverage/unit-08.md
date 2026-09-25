@@ -18,6 +18,5 @@ Where a sub-topic is revisited outside the section that first teaches it.
 | Sub-topic ID | File | Section | Source |
 |---|---|---|---|
 | U8-2 | topic-02.mdx | The parts of a positive learning environment | seifert2009 |
-| U8-3 | topic-03.mdx | Managing individual behavior: responses and escalation | seifert2009 |
 | U8-1 | unit-assessment.mdx | Unit summary | seifert2009 |
 | U8-5 | unit-teacher-notes.mdx | Practical work | guide-efmp301 |

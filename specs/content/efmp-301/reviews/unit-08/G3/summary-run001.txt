@@ -1,0 +1,86 @@
+G3 English review - EFMP-301 Unit 8 (Classroom Management)
+Run: agent-g3-efmp301-u8-run001 | Reviewer: agent:g3-reviewer (LongCat-2.0, fresh session)
+Date: 2026-09-25 | Disposition: REVISE (advisory; acceptance requires the protected path)
+
+DISPOSITION: revise. One blocking finding (assessment blueprint spread). All seven
+criteria otherwise verified; all deterministic gates exit 0.
+
+INPUT VERIFICATION
+98 of 98 bound paths present. 97 digests match the frozen manifest exactly; one
+bound input drifted after the manifest commit (seifert2009.md, extended by commit
+8c15c7c9 for other units' G3 repairs). Diff verified purely additive (130/0), no
+Unit 8 material touched; the Chapter 7 excerpts the unit cites are byte-identical.
+This report binds current HEAD digests (see the resolved advisory finding).
+Independence: authoring run commit:41a3e33 (worktree agent-ad57ca9469bfc4572,
+PHR 0049); this reviewer session did not author or translate the material.
+
+AUTHORITY - PASS. Guide Week 13 Chapter 8 (1st 2026.txt:1139-1144) carries exactly
+three bullets; all decomposed into U8-1..U8-5 and taught. Both SLOs trace to CLO 3
+as the spec records. clo_refs verified on every file. One advisory: the teacher
+notes over-attribute the ladder-borrow practical to the guide (the guide's
+practical list is course-generic) - the same unrepaired class as Units 5 and 7.
+
+SOURCES - PASS. The unit cites one content source (Seifert & Sutton 2009, Ch 7,
+the guide's recommended book). Retrieved the live PDF this run and read Chapter 7
+in full: all four quotations verified verbatim (prevention, rules x2,
+logical consequences); the lunch and late-arrival examples, the five-rules
+guidance and the attention-as-reinforcement mechanism (Exhibit 9) all present.
+The escalation ladder is correctly framed as documented practice, not sourced
+scholarship. Advisories: the sources-registry Supports cells describe the
+source's chapter rather than the taught sub-topics (U8-5 "response repertoire",
+U8-2 "pacing").
+
+COVERAGE - PASS. Every sub-topic has a taught passage; coverage matrix verified
+against rendered headings; depth budget 86/86 in band. Advisories: the U8-3
+reinforcement row points at a section that does not actually revisit the five
+parts; RRQ-03 and RRQ-06 are linked to no concept in the concept graph.
+
+ASSESSMENT - FAIL (blocking). Independent solve of all 10 MCQs before reading
+the key: all match (b,b,b,b,b,c,b,b,c,c); no ambiguous stems; RRQ mark schemes
+and ERQ rubrics verified (each ERQ sums to 20; one per topic plus two
+integrative as blueprinted). BUT the topic spread deviates from the approved
+blueprint (content-spec.md:1026-1027, verified at G1): MCQ 5/1/4 vs required
+4/3/3 and RRQ 3/3/4 vs required 3/4/3. Topic 8.2 carries one MCQ where the
+blueprint allots three. Repair: rebalance two MCQs and one RRQ onto 8.2
+material, or amend the blueprint through the owner. Advisory: 7 of 10 MCQ keys
+are option (b) - course-wide pattern, still unrepaired.
+
+ACCESSIBILITY - PASS. Narrow 360px: no page overflow; every content table
+measured on the table element itself fits (scrollWidth == clientWidth, last
+column at 344-345px), so nothing is unreachable and no spurious tab stops exist.
+All six figures load at 328x198 with manifest alt text verbatim (dark variants
+correctly hidden); pixel sampling confirms non-blank rendering. A4 print: no
+content element overflows the page box (only the framework skip-link sits
+off-canvas); light figures visible, dark hidden; answers section not clipped.
+measure-figure-text clean on all six SVGs (widest text 768.7 of 780).
+Advisory: fig-U8-1's on-image "not silence" tagline is missing from its alt text.
+
+READABILITY - PASS. Concrete Sindh openings (Hyderabad, Sukkur, Tando Allahyar);
+Classroom Management glossed via the Glossary component; cross-references
+resolve; HSC register throughout. Advisory: the spec's key-terms row and the
+teacher notes list Group Work / Active Learning, which never appear in the unit.
+
+PEDAGOGY - PASS. Nine-part cycle complete in all three topics; activities are
+pairs/20-minutes/zero-material; 15 formative CYU items; practicum tasks grounded
+(the ladder borrow with tally pools into ERQ 4); misconceptions addressed in
+prose, one explicit block, and four teacher-notes blocks.
+
+GATES (all exit 0, logs in logs-agent-g3-efmp301-u8-run001/): validate:content,
+check:depth-gate, check:figures, check:no-em-dash, check:no-answer-keys,
+check:docs-sync, check:concept-graph, check:bloom-bands (675 items),
+figures:variants:check (554 figures), measure-figure-text, build, serve,
+render-review (playwright-core chromium-1228, 360x800 DSF2 and 794x1123 print
+emulation against the HEAD 067c2ff2 build served at localhost:4318).
+
+BLOCKING FINDINGS (1)
+1. Assessment blueprint spread: MCQ 5/1/4 and RRQ 3/3/4 vs approved 4/3/3 and
+   3/4/3 (unit-assessment.mdx:46-125 vs content-spec.md:1026-1027).
+
+UNRESOLVED ADVISORIES (7): MCQ key position concentration (7/10 b); guide
+practical-work over-attribution (recurring); sources-registry Supports cells;
+concept-graph missing RRQ-03/RRQ-06 links; teacher-notes key-terms list; U8-3
+reinforcement row locator; fig-U8-1 alt-text tagline gap.
+
+This report is advisory. It does not certify the unit, mark any gate done, or
+alter tracker/translation status; acceptance requires the protected qualification
+and signing path (ADR-0019).
