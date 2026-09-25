@@ -143,7 +143,7 @@ for (const [fig, path] of FIGS) {
   const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
   await page.goto(BASE + path, { waitUntil: 'networkidle' });
   await page.waitForTimeout(300);
-  const img = page.locator(`article img[src*="${fig}"]`);
+  const img = page.locator(`article img[src$="${fig}.svg"]`);
   await img.scrollIntoViewIfNeeded();
   await page.waitForTimeout(200);
   await img.screenshot({ path: `${OUT}/figure-${fig}-light.png` });

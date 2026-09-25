@@ -114,7 +114,7 @@ form to any child at any stage of development." (1960, p. 33). The chapter's exh
 formula: "Learning According to Vygotsky: Novice -> Zone of Proximal Development <-
 Expert (ZPD)".
 
-## Chapter 10 - Planning instruction (verified; used by Unit 3)
+## Chapter 2 (continued) - modelling and observational learning (verified; used by Unit 3)
 
 On modelling and observational learning: "Research repeatedly shows that modeling
 desired behaviors is an effective way to learn new behaviors, especially when the model
@@ -129,12 +129,10 @@ And on the reverse: "if the student observes that negative behaviors in others l
 positive consequences (like attention from peers), then the student may imitate the
 negative behaviors (Rebellon, 2006)."
 
-Used for: the behaviourist definition and its two mechanisms (U3-1, U3-2, U3-3);
-reinforcement and consequence precision (U3-4); the cognitive turn and the
-behaviourism-constructivism contrast (U3-5); schemas, assimilation and accommodation
-(U3-6); Bruner's modes, guided discovery and the spiral (U3-7); Bandura's observational
-learning, vicarious reinforcement and model strength (U3-8, U3-9); constructivism's
-claims and the ZPD-scaffolding pair (U3-10, U3-11); the four-lens choice (U3-12).
+Used for: Bandura's observational learning, vicarious reinforcement and model
+strength (U3-8, U3-9), and Unit 12's "the device is not a model" finding (U12-6).
+The full Unit 3 binding (U3-1 to U3-12) spans the Chapter 2 sections above and the
+Chapter 2 extension below.
 
 ## Chapter 5 - Students with special educational needs (verified; used by Unit 5)
 

@@ -1,0 +1,24 @@
+G3 render-review - EFMP-301 Unit 12 - run001
+Host: this worktree (agent-ad57ca9469bfc4572), HEAD d837f4eb, branch 022-author-efmp-301.
+Build: npm run build (exit 0, build.log), then `npm run serve -- --port 3212 --no-open`
+(serve.log); pages fetched over http://localhost:3212 from the worktree-local build.
+Browser: Playwright Chromium (playwright-core), driven by
+logs-agent-g3-efmp301-u12-run001/render-inspect.mjs.
+Viewports per page: desktop 1280x800; narrow 360x640; A4 print emulation 794x1123 with
+page.emulateMedia({ media: 'print' }). Dark pass: data-theme=dark on topic-01.
+Pages inspected (all six): index, topic-01, topic-02, topic-03, unit-assessment,
+unit-teacher-notes, each at all three viewports, full-page screenshots.
+Also captured: per-figure element close-ups (light) for all six figures, a dark-page
+screenshot, and zoomed clips of the two suspect figure regions
+(figure-fig-U12-3-fifthrow-zoom.png, figure-fig-U12-1-dashlink-zoom.png).
+Audit JSON with measured table/figure/overflow data: renders-.../render-audit.json.
+Findings recorded from this inspection: no document overflow at any width; tables
+measured on the table element itself (clientWidth === scrollWidth 328 at 360px,
+rightmost cell 344 < 360, no scroll needed, so absent tabindex/role/aria-label are
+moot); figures 328x198 narrow with alt text and lazy loading; dark variants swap;
+answers/rubrics/options/figures not clipped in narrow or print. The figure geometry
+defects that this inspection surfaced (fig-U12-3 fifth-row overprint; fig-U12-1
+dashed-link geometry) are recorded in figure-overprint-audit.log and the report.
+
+Script output follows.
+render inspection complete; artifacts in specs/content/efmp-301/reviews/unit-12/G3/renders-agent-g3-efmp301-u12-run001
