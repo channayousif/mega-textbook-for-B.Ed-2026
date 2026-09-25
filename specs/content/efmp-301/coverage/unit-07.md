@@ -6,6 +6,7 @@ exact heading that teaches it.
 | Sub-topic ID | File | Section | Source |
 |---|---|---|---|
 | U7-1 | topic-01.mdx | Learning styles: the claim and the evidence | spielman2020 |
+| U7-1 | topic-01.mdx | Learning styles and abilities | rohrer2012 |
 | U7-1 | topic-01.mdx | Learning styles: the claim and the evidence | vosniadou2001 |
 | U7-2 | topic-01.mdx | Abilities: what differs, and what differences mean for teaching | seifert2009 |
 | U7-3 | topic-02.mdx | Slow learners: recognizing and supporting | seifert2009 |
