@@ -1,0 +1,13 @@
+# manifest re-verification after parent re-prepare (2026-09-25T14:00 local)
+# Initial verification at 13:13 local bound all 128 inputs OK (see manifest-verify.log).
+# Commits 678a6f2d (Unit 12 G3 round-1 repairs, extended source excerpts) and 43e2e859
+# (G2 evidence refresh) then changed 2 of the 128 bound inputs mid-review:
+# specs/content/efmp-301/sources/texts/seifert2009.md and vosniadou2001.md.
+# The parent re-prepared the manifest at HEAD c2cd6f64 and preserved the originally
+# bound manifest unmodified as manifest-run001-superseded-20260925T1313Z.json.
+# Unit 2 inputs were verified byte-identical across ec4863a8..HEAD (empty diff for
+# docs/semester-1/efmp-301/unit-02/, i18n/ur/.../unit-02/, terminology.csv,
+# style-guide.md, static/img/figures/efmp-301/unit-02/, coverage/sources/figures
+# manifests), so the review substance is unaffected by the re-bind.
+refreshed manifest: 128 inputs, 128 verified, mismatches: []
+changed vs superseded: ["specs/content/efmp-301/sources/texts/seifert2009.md","specs/content/efmp-301/sources/texts/vosniadou2001.md"] added: [] removed: []
