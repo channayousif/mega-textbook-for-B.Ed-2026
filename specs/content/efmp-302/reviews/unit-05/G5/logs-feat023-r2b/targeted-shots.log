@@ -1,0 +1,16 @@
+env: lang=ur dir=rtl nastaliqWebfont=true
+fonts loaded: Noto Nastaliq Urdu
+shot crop-t2-stance-repair1.png
+shot crop-t2-isore-tazad-repair4.png
+shot crop-t2-consequences-repair5.png
+shot crop-t3-cost-leg-repair3.png
+shot crop-t4-not-nothing-repair2.png
+shot crop-assess-rrq1-pt4-repair6.png
+shot crop-assess-erq1-rubric-repair9.png
+shot crop-assess-mcq3-options.png
+shot crop-assess-mcq1-key.png
+shot figure-U5-4-ur-light.png
+shot figure-U5-8-ur-light.png
+shot figure-U5-4-ur-dark.png
+shot figure-U5-8-ur-dark.png
+done
