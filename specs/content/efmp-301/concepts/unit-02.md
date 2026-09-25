@@ -13,18 +13,18 @@ Development). The rest are authored here and carry a G5 flag, listed at the foot
 | Concept ID | Label EN | Label UR | Prerequisites | Topic | SLO refs | Assessment item IDs |
 |---|---|---|---|---|---|---|
 | CON:EFMP-301-2-1 | Development | نشوونما | - | 2.1 | SLO:EFMP-301-2-1 | MCQ-01, RRQ-01 |
-| CON:EFMP-301-2-2 | The three engines: growth, maturation and learning | تین محرک: نشو، پختگی اور تعلم | CON:EFMP-301-2-1 | 2.1 | SLO:EFMP-301-2-1 | MCQ-02, RRQ-01, RRQ-03, ERQ-01 |
-| CON:EFMP-301-2-3 | Sequence and rate | ترتیب اور رفتار | CON:EFMP-301-2-1 | 2.1 | SLO:EFMP-301-2-1 | MCQ-03, MCQ-04, RRQ-02 |
-| CON:EFMP-301-2-4 | Heredity and environment as joint drivers | وراثت اور ماحول بطور مشترکہ محرک | CON:EFMP-301-2-1 | 2.1 | SLO:EFMP-301-2-1 | MCQ-05, RRQ-05, ERQ-01, ERQ-02 |
-| CON:EFMP-301-2-5 | Physical development: two steep phases and a wide spread | جسمانی نشوونما: دو تیز مراحل اور وسیع پھیلاؤ | CON:EFMP-301-2-3 | 2.2 | SLO:EFMP-301-2-1 | MCQ-06, RRQ-04, ERQ-02 |
-| CON:EFMP-301-2-6 | Gross motor skills before fine motor skills | بڑی حرکی مہارتیں باریک مہارتوں سے پہلے | CON:EFMP-301-2-5 | 2.2 | SLO:EFMP-301-2-1 | MCQ-07, ERQ-05 |
-| CON:EFMP-301-2-7 | Puberty and adolescence | بلوغت اور مراہقت | CON:EFMP-301-2-5 | 2.2 | SLO:EFMP-301-2-1 | - |
+| CON:EFMP-301-2-2 | The three engines: growth, maturation and learning | تین محرک: نشو، پختگی اور تعلم | CON:EFMP-301-2-1 | 2.1 | SLO:EFMP-301-2-1 | RRQ-01, ERQ-01 |
+| CON:EFMP-301-2-3 | Sequence and rate | ترتیب اور رفتار | CON:EFMP-301-2-1 | 2.1 | SLO:EFMP-301-2-1 | MCQ-06 |
+| CON:EFMP-301-2-4 | Heredity and environment as joint drivers | وراثت اور ماحول بطور مشترکہ محرک | CON:EFMP-301-2-1 | 2.1 | SLO:EFMP-301-2-1 | MCQ-07, RRQ-02, ERQ-01, ERQ-02 |
+| CON:EFMP-301-2-5 | Physical development: two steep phases and a wide spread | جسمانی نشوونما: دو تیز مراحل اور وسیع پھیلاؤ | CON:EFMP-301-2-3 | 2.2 | SLO:EFMP-301-2-1 | MCQ-04, RRQ-03, ERQ-02 |
+| CON:EFMP-301-2-6 | Gross motor skills before fine motor skills | بڑی حرکی مہارتیں باریک مہارتوں سے پہلے | CON:EFMP-301-2-5 | 2.2 | SLO:EFMP-301-2-1 | MCQ-05, RRQ-05, ERQ-05 |
+| CON:EFMP-301-2-7 | Puberty and adolescence | بلوغت اور مراہقت | CON:EFMP-301-2-5 | 2.2 | SLO:EFMP-301-2-1 | MCQ-02, RRQ-04 |
 | CON:EFMP-301-2-8 | Cognitive development | ادراکی نشوونما | CON:EFMP-301-2-3 | 2.3 | SLO:EFMP-301-2-2 | - |
 | CON:EFMP-301-2-9 | Conservation and the concrete operational gains | بقا کا تصور اور ٹھوس عملی سوچ کی صلاحیتیں | CON:EFMP-301-2-8 | 2.3 | SLO:EFMP-301-2-2 | MCQ-08, RRQ-06, ERQ-03 |
-| CON:EFMP-301-2-10 | Emotional development as regulation | جذباتی نشوونما بطور ضبط | CON:EFMP-301-2-1 | 2.3 | SLO:EFMP-301-2-2 | RRQ-07, RRQ-10, ERQ-05 |
-| CON:EFMP-301-2-11 | Social development: attachment, play and the peer group | معاشرتی نشوونما: وابستگی، کھیل اور ہم عمر گروہ | CON:EFMP-301-2-1 | 2.3 | SLO:EFMP-301-2-2 | MCQ-09, RRQ-10, ERQ-05 |
-| CON:EFMP-301-2-12 | The stage reading: position, not verdict | مرحلائی مطالعہ: مقام، فیصلہ نہیں | CON:EFMP-301-2-9 | 2.4 | SLO:EFMP-301-2-2 | MCQ-10, RRQ-08 |
-| CON:EFMP-301-2-13 | Matched teaching: concrete before symbolic | مطابق تدریس: ٹھوس سے علامتی کی طرف | CON:EFMP-301-2-12 | 2.4 | SLO:EFMP-301-2-2 | RRQ-09, ERQ-04, ERQ-05 |
+| CON:EFMP-301-2-10 | Emotional development as regulation | جذباتی نشوونما بطور ضبط | CON:EFMP-301-2-1 | 2.3 | SLO:EFMP-301-2-2 | RRQ-07, ERQ-05 |
+| CON:EFMP-301-2-11 | Social development: attachment, play and the peer group | معاشرتی نشوونما: وابستگی، کھیل اور ہم عمر گروہ | CON:EFMP-301-2-1 | 2.3 | SLO:EFMP-301-2-2 | MCQ-09, ERQ-05 |
+| CON:EFMP-301-2-12 | The stage reading: position, not verdict | مرحلائی مطالعہ: مقام، فیصلہ نہیں | CON:EFMP-301-2-9 | 2.4 | SLO:EFMP-301-2-2 | MCQ-10, RRQ-08, RRQ-10 |
+| CON:EFMP-301-2-13 | Matched teaching: concrete before symbolic | مطابق تدریس: ٹھوس سے علامتی کی طرف | CON:EFMP-301-2-12 | 2.4 | SLO:EFMP-301-2-2 | MCQ-03, RRQ-09, ERQ-04, ERQ-05 |
 
 ## Urdu labels needing G5 review
 

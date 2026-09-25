@@ -18,4 +18,4 @@ booklet. The guide's Chapter 2 (Weeks 3-4) supplies the scope and sequence.
 
 | Key | Citation | URL/DOI | Supports | Kind |
 |---|---|---|---|---|
-| guide-efmp301 | Faculty of Education, University of Sindh. *B.Ed (Elementary 4 Year) Semester-I course guide, EFMP-301 Educational Psychology*, Chapter 2, Weeks 3-4. | `Scheme-and-Course-guides/extracted-text/1st 2026.txt` | scope and sequence for the unit as a whole; the heredity-and-environment framing (U2-3); the guide-named practical work behind the teacher notes (U2-10) | guide-required |
+| guide-efmp301 | Faculty of Education, University of Sindh. *B.Ed (Elementary 4 Year) Semester-I course guide, EFMP-301 Educational Psychology*, Chapter 2, Weeks 3-4. | `Scheme-and-Course-guides/extracted-text/1st 2026.txt` | scope and sequence for the unit as a whole; the heredity-and-environment framing (U2-3); the practical work behind the teacher notes (U2-10; the guide's Practical Work list is course-generic, and the unit instantiates it) | guide-required |
