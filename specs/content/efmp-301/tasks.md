@@ -37,17 +37,17 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 2 | G6 assets | ▢ | | |
 | Unit 2 | G7 publish | ▢ | | |
 | Unit 3 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-03/G2/20260925T183425469Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-03/G2/20260925T224624191Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at b220ae5d; report reviews/unit-03/G3/agent-g3-efmp301-u3-run001.json |
 | Unit 3 | G4 ur-translation | ✅ | auto:gates | full UR mirror (7 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
-| Unit 3 | G5 ur-review | ▢ | | |
+| Unit 3 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at 17243da9; G3 dependency escalated to owner; terminology rulings (Learning prose/figure, coinages) escalated to owner; report reviews/unit-03/G5/agent-g5-efmp301-u3-run002.json |
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
 | Unit 4 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-04/G2/20260925T183428734Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-04/G2/20260925T225505159Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at a7a1a215; report reviews/unit-04/G3/agent-g3-efmp301-u4-run001.json |
 | Unit 4 | G4 ur-translation | ✅ | auto:gates | full UR mirror (6 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
-| Unit 4 | G5 ur-review | ▢ | | |
+| Unit 4 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at ff33d3a1; G3 dependency escalated to owner; terminology rulings (heuristic/means-ends/spotlight renderings) escalated to owner; report reviews/unit-04/G5/agent-g5-efmp301-u4-run001.json |
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
 | Unit 5 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
