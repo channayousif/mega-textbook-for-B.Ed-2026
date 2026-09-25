@@ -1,0 +1,640 @@
+{
+  "base": "http://localhost:3217",
+  "pages": [
+    {
+      "name": "index",
+      "pass": "desktop",
+      "title": "Cognitive Processes in Learning | B.Ed Mega Textbook",
+      "imgCount": 1,
+      "brokenImages": [],
+      "imgsNoAlt": 0,
+      "skippedHeadings": [],
+      "docOverflowX": 0,
+      "answersSectionPresent": false
+    },
+    {
+      "name": "topic-01",
+      "pass": "desktop",
+      "title": "Topic 4.1 - Attention and perception | B.Ed Mega Textbook",
+      "imgCount": 5,
+      "brokenImages": [],
+      "imgsNoAlt": 0,
+      "skippedHeadings": [],
+      "docOverflowX": 0,
+      "answersSectionPresent": false
+    },
+    {
+      "name": "topic-02",
+      "pass": "desktop",
+      "title": "Topic 4.2 - Memory and information processing | B.Ed Mega Textbook",
+      "imgCount": 5,
+      "brokenImages": [],
+      "imgsNoAlt": 0,
+      "skippedHeadings": [],
+      "docOverflowX": 0,
+      "answersSectionPresent": false
+    },
+    {
+      "name": "topic-03",
+      "pass": "desktop",
+      "title": "Topic 4.3 - Thinking, problem-solving and reasoning | B.Ed Mega Textbook",
+      "imgCount": 5,
+      "brokenImages": [],
+      "imgsNoAlt": 0,
+      "skippedHeadings": [],
+      "docOverflowX": 0,
+      "answersSectionPresent": false
+    },
+    {
+      "name": "unit-assessment",
+      "pass": "desktop",
+      "title": "Cognitive Processes in Learning - assessment and review | B.Ed Mega Textbook",
+      "imgCount": 1,
+      "brokenImages": [],
+      "imgsNoAlt": 0,
+      "skippedHeadings": [],
+      "docOverflowX": 0,
+      "answersSectionPresent": true
+    },
+    {
+      "name": "unit-teacher-notes",
+      "pass": "desktop",
+      "title": "Cognitive Processes in Learning - teacher notes | B.Ed Mega Textbook",
+      "imgCount": 1,
+      "brokenImages": [],
+      "imgsNoAlt": 0,
+      "skippedHeadings": [],
+      "docOverflowX": 0,
+      "answersSectionPresent": false
+    },
+    {
+      "name": "index",
+      "pass": "narrow360",
+      "docOverflowX": 0,
+      "tables": [],
+      "figures": [
+        {
+          "tag": "IMG",
+          "w": 28,
+          "right": 82,
+          "fitsViewport": true
+        },
+        {
+          "tag": "IMG",
+          "w": 28,
+          "right": -255,
+          "fitsViewport": true
+        }
+      ]
+    },
+    {
+      "name": "topic-01",
+      "pass": "narrow360",
+      "docOverflowX": 0,
+      "tables": [
+        {
+          "scrollable": false,
+          "clientWidth": 328,
+          "scrollWidth": 328,
+          "rectRight": 344,
+          "lastColRightBefore": 344,
+          "lastColRightAfterScroll": 344,
+          "reachableByScroll": true,
+          "tabindex": null,
+          "role": null,
+          "ariaLabel": null
+        }
+      ],
+      "figures": [
+        {
+          "tag": "IMG",
+          "w": 28,
+          "right": 82,
+          "fitsViewport": true
+        },
+        {
+          "tag": "IMG",
+          "w": 28,
+          "right": -255,
+          "fitsViewport": true
+        },
+        {
+          "tag": "FIGURE",
+          "w": 328,
+          "right": 344,
+          "fitsViewport": true
+        },
+        {
+          "tag": "IMG",
+          "w": 328,
+          "right": 344,
+          "fitsViewport": true
+        },
+        {
+          "tag": "IMG",
+          "w": 0,
+          "right": 0,
+          "fitsViewport": true
+        },
+        {
+          "tag": "FIGURE",
+          "w": 328,
+          "right": 344,
+          "fitsViewport": true
+        },
+        {
+          "tag": "IMG",
+          "w": 2,
+          "right": 181,
+          "fitsViewport": true
+        },
+        {
+          "tag": "IMG",
+          "w": 0,
+          "right": 0,
+          "fitsViewport": true
+        }
+      ]
+    },
+    {
+      "name": "topic-02",
+      "pass": "narrow360",
+      "docOverflowX": 0,
+      "tables": [
+        {
+          "scrollable": false,
+          "clientWidth": 328,
+          "scrollWidth": 328,
+          "rectRight": 344,
+          "lastColRightBefore": 344,
+          "lastColRightAfterScroll": 344,
+          "reachableByScroll": true,
+          "tabindex": null,
+          "role": null,
+          "ariaLabel": null
+        }
+      ],
+      "figures": [
+        {
+          "tag": "IMG",
+          "w": 28,
+          "right": 82,
+          "fitsViewport": true
+        },
+        {
+          "tag": "IMG",
+          "w": 28,
+          "right": -255,
+          "fitsViewport": true
+        },
+        {
+          "tag": "FIGURE",
+          "w": 328,
+          "right": 344,
+          "fitsViewport": true
+        },
+        {
+          "tag": "IMG",
+          "w": 328,
+          "right": 344,
+          "fitsViewport": true
+        },
+        {
+          "tag": "IMG",
+          "w": 0,
+          "right": 0,
+          "fitsViewport": true
+        },
+        {
+          "tag": "FIGURE",
+          "w": 328,
+          "right": 344,
+          "fitsViewport": true
+        },
+        {
+          "tag": "IMG",
+          "w": 2,
+          "right": 181,
+          "fitsViewport": true
+        },
+        {
+          "tag": "IMG",
+          "w": 0,
+          "right": 0,
+          "fitsViewport": true
+        }
+      ]
+    },
+    {
+      "name": "topic-03",
+      "pass": "narrow360",
+      "docOverflowX": 0,
+      "tables": [
+        {
+          "scrollable": false,
+          "clientWidth": 328,
+          "scrollWidth": 328,
+          "rectRight": 344,
+          "lastColRightBefore": 344,
+          "lastColRightAfterScroll": 344,
+          "reachableByScroll": true,
+          "tabindex": null,
+          "role": null,
+          "ariaLabel": null
+        }
+      ],
+      "figures": [
+        {
+          "tag": "IMG",
+          "w": 28,
+          "right": 82,
+          "fitsViewport": true
+        },
+        {
+          "tag": "IMG",
+          "w": 28,
+          "right": -255,
+          "fitsViewport": true
+        },
+        {
+          "tag": "FIGURE",
+          "w": 328,
+          "right": 344,
+          "fitsViewport": true
+        },
+        {
+          "tag": "IMG",
+          "w": 328,
+          "right": 344,
+          "fitsViewport": true
+        },
+        {
+          "tag": "IMG",
+          "w": 0,
+          "right": 0,
+          "fitsViewport": true
+        },
+        {
+          "tag": "FIGURE",
+          "w": 328,
+          "right": 344,
+          "fitsViewport": true
+        },
+        {
+          "tag": "IMG",
+          "w": 2,
+          "right": 181,
+          "fitsViewport": true
+        },
+        {
+          "tag": "IMG",
+          "w": 0,
+          "right": 0,
+          "fitsViewport": true
+        }
+      ]
+    },
+    {
+      "name": "unit-assessment",
+      "pass": "narrow360",
+      "docOverflowX": 0,
+      "tables": [
+        {
+          "scrollable": false,
+          "clientWidth": 328,
+          "scrollWidth": 328,
+          "rectRight": 344,
+          "lastColRightBefore": 344,
+          "lastColRightAfterScroll": 344,
+          "reachableByScroll": true,
+          "tabindex": null,
+          "role": null,
+          "ariaLabel": null
+        },
+        {
+          "scrollable": false,
+          "clientWidth": 328,
+          "scrollWidth": 328,
+          "rectRight": 344,
+          "lastColRightBefore": 344,
+          "lastColRightAfterScroll": 344,
+          "reachableByScroll": true,
+          "tabindex": null,
+          "role": null,
+          "ariaLabel": null
+        },
+        {
+          "scrollable": false,
+          "clientWidth": 328,
+          "scrollWidth": 328,
+          "rectRight": 344,
+          "lastColRightBefore": 344,
+          "lastColRightAfterScroll": 344,
+          "reachableByScroll": true,
+          "tabindex": null,
+          "role": null,
+          "ariaLabel": null
+        },
+        {
+          "scrollable": false,
+          "clientWidth": 328,
+          "scrollWidth": 328,
+          "rectRight": 344,
+          "lastColRightBefore": 344,
+          "lastColRightAfterScroll": 344,
+          "reachableByScroll": true,
+          "tabindex": null,
+          "role": null,
+          "ariaLabel": null
+        },
+        {
+          "scrollable": false,
+          "clientWidth": 328,
+          "scrollWidth": 328,
+          "rectRight": 344,
+          "lastColRightBefore": 344,
+          "lastColRightAfterScroll": 344,
+          "reachableByScroll": true,
+          "tabindex": null,
+          "role": null,
+          "ariaLabel": null
+        }
+      ],
+      "figures": [
+        {
+          "tag": "IMG",
+          "w": 28,
+          "right": 82,
+          "fitsViewport": true
+        },
+        {
+          "tag": "IMG",
+          "w": 28,
+          "right": -255,
+          "fitsViewport": true
+        }
+      ]
+    },
+    {
+      "name": "unit-teacher-notes",
+      "pass": "narrow360",
+      "docOverflowX": 0,
+      "tables": [
+        {
+          "scrollable": false,
+          "clientWidth": 328,
+          "scrollWidth": 328,
+          "rectRight": 344,
+          "lastColRightBefore": 344,
+          "lastColRightAfterScroll": 344,
+          "reachableByScroll": true,
+          "tabindex": null,
+          "role": null,
+          "ariaLabel": null
+        }
+      ],
+      "figures": [
+        {
+          "tag": "IMG",
+          "w": 28,
+          "right": 82,
+          "fitsViewport": true
+        },
+        {
+          "tag": "IMG",
+          "w": 28,
+          "right": -255,
+          "fitsViewport": true
+        }
+      ]
+    },
+    {
+      "name": "index",
+      "pass": "print-a4",
+      "clipped": [],
+      "figures": [
+        {
+          "tag": "IMG",
+          "w": 0,
+          "right": 0,
+          "fitsPage": true
+        },
+        {
+          "tag": "IMG",
+          "w": 0,
+          "right": 0,
+          "fitsPage": true
+        }
+      ],
+      "answersSectionPresent": false
+    },
+    {
+      "name": "topic-01",
+      "pass": "print-a4",
+      "clipped": [],
+      "figures": [
+        {
+          "tag": "IMG",
+          "w": 0,
+          "right": 0,
+          "fitsPage": true
+        },
+        {
+          "tag": "IMG",
+          "w": 0,
+          "right": 0,
+          "fitsPage": true
+        },
+        {
+          "tag": "FIGURE",
+          "w": 762,
+          "right": 778,
+          "fitsPage": true
+        },
+        {
+          "tag": "IMG",
+          "w": 762,
+          "right": 778,
+          "fitsPage": true
+        },
+        {
+          "tag": "IMG",
+          "w": 0,
+          "right": 0,
+          "fitsPage": true
+        },
+        {
+          "tag": "FIGURE",
+          "w": 762,
+          "right": 778,
+          "fitsPage": true
+        },
+        {
+          "tag": "IMG",
+          "w": 762,
+          "right": 778,
+          "fitsPage": true
+        },
+        {
+          "tag": "IMG",
+          "w": 0,
+          "right": 0,
+          "fitsPage": true
+        }
+      ],
+      "answersSectionPresent": false
+    },
+    {
+      "name": "topic-02",
+      "pass": "print-a4",
+      "clipped": [],
+      "figures": [
+        {
+          "tag": "IMG",
+          "w": 0,
+          "right": 0,
+          "fitsPage": true
+        },
+        {
+          "tag": "IMG",
+          "w": 0,
+          "right": 0,
+          "fitsPage": true
+        },
+        {
+          "tag": "FIGURE",
+          "w": 762,
+          "right": 778,
+          "fitsPage": true
+        },
+        {
+          "tag": "IMG",
+          "w": 762,
+          "right": 778,
+          "fitsPage": true
+        },
+        {
+          "tag": "IMG",
+          "w": 0,
+          "right": 0,
+          "fitsPage": true
+        },
+        {
+          "tag": "FIGURE",
+          "w": 762,
+          "right": 778,
+          "fitsPage": true
+        },
+        {
+          "tag": "IMG",
+          "w": 762,
+          "right": 778,
+          "fitsPage": true
+        },
+        {
+          "tag": "IMG",
+          "w": 0,
+          "right": 0,
+          "fitsPage": true
+        }
+      ],
+      "answersSectionPresent": false
+    },
+    {
+      "name": "topic-03",
+      "pass": "print-a4",
+      "clipped": [],
+      "figures": [
+        {
+          "tag": "IMG",
+          "w": 0,
+          "right": 0,
+          "fitsPage": true
+        },
+        {
+          "tag": "IMG",
+          "w": 0,
+          "right": 0,
+          "fitsPage": true
+        },
+        {
+          "tag": "FIGURE",
+          "w": 762,
+          "right": 778,
+          "fitsPage": true
+        },
+        {
+          "tag": "IMG",
+          "w": 762,
+          "right": 778,
+          "fitsPage": true
+        },
+        {
+          "tag": "IMG",
+          "w": 0,
+          "right": 0,
+          "fitsPage": true
+        },
+        {
+          "tag": "FIGURE",
+          "w": 762,
+          "right": 778,
+          "fitsPage": true
+        },
+        {
+          "tag": "IMG",
+          "w": 762,
+          "right": 778,
+          "fitsPage": true
+        },
+        {
+          "tag": "IMG",
+          "w": 0,
+          "right": 0,
+          "fitsPage": true
+        }
+      ],
+      "answersSectionPresent": false
+    },
+    {
+      "name": "unit-assessment",
+      "pass": "print-a4",
+      "clipped": [],
+      "figures": [
+        {
+          "tag": "IMG",
+          "w": 0,
+          "right": 0,
+          "fitsPage": true
+        },
+        {
+          "tag": "IMG",
+          "w": 0,
+          "right": 0,
+          "fitsPage": true
+        }
+      ],
+      "answersSectionPresent": true
+    },
+    {
+      "name": "unit-teacher-notes",
+      "pass": "print-a4",
+      "clipped": [],
+      "figures": [
+        {
+          "tag": "IMG",
+          "w": 0,
+          "right": 0,
+          "fitsPage": true
+        },
+        {
+          "tag": "IMG",
+          "w": 0,
+          "right": 0,
+          "fitsPage": true
+        }
+      ],
+      "answersSectionPresent": false
+    }
+  ]
+}
