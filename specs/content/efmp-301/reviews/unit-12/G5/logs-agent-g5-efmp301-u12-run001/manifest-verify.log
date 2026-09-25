@@ -1,0 +1,30 @@
+manifest-verify - EFMP-301 Unit 12 G5 (agent-g5-efmp301-u12-run001)
+
+$ node scripts/review-evidence.mjs prepare EFMP-301 12 G5 /tmp/g5-verify-manifest
+(in a scratch directory; the parent's manifest was NOT refreshed or overwritten)
+started: 2026-09-25T18:52:00Z (approx; first verification pass 18:46Z, re-verified 18:52Z)
+
+Prepared 120 inputs. Give the bundle to a fresh reviewer.
+
+$ diff /tmp/g5-verify-manifest/manifest.json specs/content/efmp-301/reviews/unit-12/G5/manifest.json
+(no output - identical)
+
+VERDICT: the parent's prepared manifest is exactly the manifest of the current worktree
+HEAD (43e2e859, branch 022-author-efmp-301). All 120 bound inputs verified: the English
+and Urdu unit files, governance tables, sources, figure assets, scripts, contracts and
+skill files are the current post-repair state on both sides.
+
+Reviewer note on method: a first raw-byte sha256 comparison of the 120 files reported 13
+mismatches (the 11 unit MDX files and content-spec.md); that was the reviewer's own
+error - scripts/lib/review-evidence.mjs normalizes an exact top-level
+`translation_status: draft|reviewed` line inside MDX frontmatter and hashes only the
+unit's own `## Unit 12` slice of content-spec.md (normalized(), lines 122-134). The
+implementation's own prepare command, run over the same tree, reproduces the parent's
+manifest byte-for-byte, which is the authoritative comparison.
+
+Working tree state at review time: clean except untracked review output directories
+(specs/content/efmp-301/reviews/unit-02/G5/ and .../unit-12/G5/), both under reviews/
+which the manifest traversal excludes by contract.
+
+exit_code=0
+finished: 2026-09-25T18:52:30Z

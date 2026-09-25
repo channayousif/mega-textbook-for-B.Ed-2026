@@ -1,0 +1,9 @@
+$ npm run check:depth-gate
+started: 2026-09-25T18:59:10Z
+
+> bed-mega-textbook@0.1.0 check:depth-gate
+> node scripts/check-unit-depth.mjs
+
+✓ Depth gate passed (concept coverage, required blocks, formative floor, reading-minutes band, coverage↔sources consistency).
+exit_code=0
+finished: 2026-09-25T18:59:11Z

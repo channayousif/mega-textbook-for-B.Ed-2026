@@ -1,0 +1,42 @@
+== Urdu page font audit
+  unit-12: lang=ur dir=rtl nastaliqLoaded=true check(12px)=true fonts=1
+    prose font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", "Jameel Noori Nastaleeq", serif
+  topic-01: lang=ur dir=rtl nastaliqLoaded=true check(12px)=true fonts=1
+    prose font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", "Jameel Noori Nastaleeq", serif
+  topic-02: lang=ur dir=rtl nastaliqLoaded=true check(12px)=true fonts=1
+    prose font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", "Jameel Noori Nastaleeq", serif
+  topic-03: lang=ur dir=rtl nastaliqLoaded=true check(12px)=true fonts=1
+    prose font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", "Jameel Noori Nastaleeq", serif
+  unit-assessment: lang=ur dir=rtl nastaliqLoaded=true check(12px)=true fonts=1
+    prose font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", "Jameel Noori Nastaleeq", serif
+  unit-teacher-notes: lang=ur dir=rtl nastaliqLoaded=true check(12px)=true fonts=1
+    prose font-family: "Noto Nastaliq Urdu", "Noto Naskh Arabic", "Jameel Noori Nastaleeq", serif
+== SVG trailing-punctuation bidi audit
+  fig-U12-1.ur.svg
+    (no labels with trailing Urdu punctuation)
+  fig-U12-2.ur.svg
+    "مہارت والا رشتہ: سننا،" full 225.4..332 stripped 229.1..332 -> LEFT (correct)
+  fig-U12-3.ur.svg
+    "سرپرست کا بچہ،" full 541.3..626 stripped 545.2..626 -> LEFT (correct)
+    "نمبر کام کو دکھائیں،" full 269.1..370 stripped 273..370 -> LEFT (correct)
+    "کبھی مکمل وعدہ نہ کریں؛" full 241.6..370.5 stripped 245.4..370.5 -> LEFT (correct)
+    "بدلنے کا دباؤ،" full 561.5..626 stripped 565.3..626 -> LEFT (correct)
+    "فلاح بمقابلہ ساکھ،" full 535.2..626 stripped 539.1..626 -> LEFT (correct)
+  fig-U12-4.ur.svg
+    "شاگرد کی فلاح ساکھ، نتائج،" full 497.4..642.6 stripped 499.4..640.6 -> ambiguous
+    "انصاف، رازداری، حدودیں،" full 143.1..276.9 stripped 145.1..274.9 -> ambiguous
+    "3. معیارات کیا کہتے ہیں؟" full 495.4..644.6 stripped 499..641 -> ambiguous
+    "پیشہ ورانہ معیارات،" full 520.2..619.8 stripped 522.2..617.8 -> ambiguous
+    "4. میں کیا کروں گا،" full 148.9..271.1 stripped 151.3..268.7 -> ambiguous
+    "اور کیا لکھوں گا؟" full 156.4..263.6 stripped 160..260 -> ambiguous
+    "فیصلہ اور اس کی وجہ،" full 151.2..268.8 stripped 153.2..266.8 -> ambiguous
+  fig-U12-5.ur.svg
+    "رویہ، ادراک، مشاہدہ،" full 101.4..198.6 stripped 103.3..196.7 -> ambiguous
+    "فیصلوں کے لیے تشخیص،" full 570.7..689.3 stripped 572.5..687.5 -> ambiguous
+    "توازن، حوالہ،" full 119.3..180.7 stripped 121.1..178.9 -> ambiguous
+    "سولہ ہفتے، ایک سوال: یہ شاگرد کیوں ک" full 205.5..574.5 stripped 208.7..571.3 -> ambiguous
+  fig-U12-6.ur.svg
+    "ذہانت،" full 345.6..374.4 stripped 347.4..372.6 -> ambiguous
+    "محرک،" full 253.8..286.2 stripped 255.6..284.4 -> ambiguous
+    "فلاح، رہنمائی،" full 403.4..466.6 stripped 405.2..464.8 -> ambiguous
+    "سولہ ہفتے، ایک سوال: یہ شاگرد کیوں ک" full 197.1..582.9 stripped 200.4..579.6 -> ambiguous

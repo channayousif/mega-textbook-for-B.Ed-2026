@@ -1,0 +1,33 @@
+== fig-U12-1.ur.svg
+  ok: no text-on-text, panel-crossing or column-crossing collisions
+== fig-U12-2.ur.svg
+  ok: no text-on-text, panel-crossing or column-crossing collisions
+== fig-U12-3.ur.svg
+  ok: no text-on-text, panel-crossing or column-crossing collisions
+  -- "شاگرد کی فلاح مقدم" bbox x 642.7..763.3 y 382.5..396.1
+  -- "فلاح بمقابلہ ساکھ،" bbox x 535.2..626.0 y 371.9..386.1
+  -- "فلاح سب سے بڑی ہے" bbox x 263.8..370.0 y 391.9..406.1
+  -- vlines: 
+== fig-U12-4.ur.svg
+  ok: no text-on-text, panel-crossing or column-crossing collisions
+== fig-U12-5.ur.svg
+  ok: no text-on-text, panel-crossing or column-crossing collisions
+== fig-U12-6.ur.svg
+  ok: no text-on-text, panel-crossing or column-crossing collisions
+== fig-U12-1.ur.dark.svg
+  ok: no text-on-text, panel-crossing or column-crossing collisions
+== fig-U12-2.ur.dark.svg
+  ok: no text-on-text, panel-crossing or column-crossing collisions
+== fig-U12-3.ur.dark.svg
+  ok: no text-on-text, panel-crossing or column-crossing collisions
+  -- "شاگرد کی فلاح مقدم" bbox x 642.7..763.3 y 382.5..396.1
+  -- "فلاح بمقابلہ ساکھ،" bbox x 535.2..626.0 y 371.9..386.1
+  -- "فلاح سب سے بڑی ہے" bbox x 263.8..370.0 y 391.9..406.1
+  -- vlines: 
+== fig-U12-4.ur.dark.svg
+  ok: no text-on-text, panel-crossing or column-crossing collisions
+== fig-U12-5.ur.dark.svg
+  ok: no text-on-text, panel-crossing or column-crossing collisions
+== fig-U12-6.ur.dark.svg
+  ok: no text-on-text, panel-crossing or column-crossing collisions
+no hard collisions
