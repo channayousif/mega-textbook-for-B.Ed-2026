@@ -1,0 +1,20 @@
+
+> bed-mega-textbook@0.1.0 check:pipeline-gate
+> node scripts/check-pipeline-gate.mjs
+
+
+✗ Pipeline gate failed with 11 finding(s):
+
+  - EFMP-301 Unit 2 (docs/semester-1/efmp-301/unit-02): G2 en-draft: stale or incomplete input manifest
+  - EFMP-301 Unit 3 (docs/semester-1/efmp-301/unit-03): G2 en-draft: stale or incomplete input manifest
+  - EFMP-301 Unit 4 (docs/semester-1/efmp-301/unit-04): G2 en-draft: stale or incomplete input manifest
+  - EFMP-301 Unit 5 (docs/semester-1/efmp-301/unit-05): G2 en-draft: stale or incomplete input manifest
+  - EFMP-301 Unit 6 (docs/semester-1/efmp-301/unit-06): G2 en-draft: stale or incomplete input manifest
+  - EFMP-301 Unit 7 (docs/semester-1/efmp-301/unit-07): G2 en-draft: stale or incomplete input manifest
+  - EFMP-301 Unit 8 (docs/semester-1/efmp-301/unit-08): G2 en-draft: stale or incomplete input manifest
+  - EFMP-301 Unit 9 (docs/semester-1/efmp-301/unit-09): G2 en-draft: stale or incomplete input manifest
+  - EFMP-301 Unit 10 (docs/semester-1/efmp-301/unit-10): G2 en-draft: stale or incomplete input manifest
+  - EFMP-301 Unit 11 (docs/semester-1/efmp-301/unit-11): G2 en-draft: stale or incomplete input manifest
+  - EFMP-301 Unit 12 (docs/semester-1/efmp-301/unit-12): G2 en-draft: stale or incomplete input manifest
+
+exit_code=1

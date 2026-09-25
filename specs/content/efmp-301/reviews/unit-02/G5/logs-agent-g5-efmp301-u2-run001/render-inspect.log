@@ -1,0 +1,29 @@
+index dir=rtl
+index nastaliq loaded (Noto Nastaliq Urdu): true
+index title: انسانی نشوونما اور ارتقا | B.Ed Mega Textbook
+index broken images: []
+index overflow: {"n":0,"wide":[],"docOverflowX":false,"docScrollW":1280,"docClientW":1280}
+saved 01-index-1280.png
+topic-01 broken images: ["/img/figures/efmp-301/unit-02/fig-U2-1.ur.dark.svg","/img/figures/efmp-301/unit-02/fig-U2-2.ur.svg","/img/figures/efmp-301/unit-02/fig-U2-2.ur.dark.svg"]
+topic-01 overflow: {"n":0,"wide":[],"docOverflowX":false,"docScrollW":1280,"docClientW":1280}
+saved 02-topic01-1280-top.png
+saved 03-topic01-1280-fig-u2-1.png
+saved 04-fig-u2-1-ur.png
+topic-01@360 overflow: {"n":0,"wide":[],"docOverflowX":false,"docScrollW":360,"docClientW":360}
+saved 05-topic01-360-top.png
+saved 06-topic01-360-mid.png
+saved 07-fig-u2-3-ur.png
+topic-02@1280 overflow: {"n":0,"wide":[],"docOverflowX":false,"docScrollW":360,"docClientW":360}
+saved 08-fig-u2-7-ur-timeline.png
+topic-04 broken images: ["/img/figures/efmp-301/unit-02/fig-U2-7.ur.dark.svg","/img/figures/efmp-301/unit-02/fig-U2-8.ur.svg","/img/figures/efmp-301/unit-02/fig-U2-8.ur.dark.svg"]
+assessment@360 overflow: {"n":0,"wide":[],"docOverflowX":false,"docScrollW":360,"docClientW":360}
+saved 09-assessment-360-mcqs.png
+saved 10-assessment-360-key.png
+saved 11-assessment-360-erq-table.png
+assessment broken images: []
+saved 12-assessment-print-a4.png
+saved 13-topic01-print-a4.png
+print emulation info: {"printColorAdjust":"economy","bodyWidth":1280}
+notes@360 overflow: {"n":0,"wide":[],"docOverflowX":false,"docScrollW":360,"docClientW":360}
+saved 14-teacher-notes-360.png
+console errors: none

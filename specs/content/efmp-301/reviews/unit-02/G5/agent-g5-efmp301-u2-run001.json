@@ -1,0 +1,510 @@
+{
+  "schema_version": 1,
+  "course_code": "EFMP-301",
+  "unit_no": 2,
+  "stage": "G5",
+  "disposition": "revise",
+  "reviewer_id": "agent:g5-reviewer",
+  "author_run_id": "claude-code:022-author-efmp-301:90c3f10",
+  "reviewer_run_id": "agent-g5-efmp301-u2-run001",
+  "model": "LongCat-2.0",
+  "started_at": "2026-09-25T18:12:00Z",
+  "completed_at": "2026-09-25T19:10:00Z",
+  "skill_digest": "02797f90adddd8f4bc50c6e80c6e68d8f6f0219d68d297aabcc8b5443bace5a8",
+  "g3_report": "specs/content/efmp-301/reviews/unit-02/G3/20260925T084500Z-g3-attempt-01.json",
+  "input_manifest": {
+    ".claude/agents/g5-reviewer.md": "b63596b668dd8814fc7b34d59326171f7c789b8dc4e631e30c2c19fe05f2c68a",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g5.md": "7cbdf9929e6073b71663ec8951a9a42d1e8e683af479434f8409c81002d33159",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "f1d7f063cc2c826693a3d8428fb5d3ee45455fdb7906ebc5adadee8b9a434d47",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-1/efmp-301/course-overview.mdx": "31a0f660e90abd8b0d60d273e057f73d0a8a14c61d18596cfeb61b4b9c6aa169",
+    "docs/semester-1/efmp-301/unit-02/_category_.json": "dc9e1cc2430944856d49b50986ebc241a9de9a70ec09ab946c048fa160e635f2",
+    "docs/semester-1/efmp-301/unit-02/index.mdx": "79f1388d66ffcd5f117890ad2ef802c52f2d92190c2f56fcfece5e4fa28ebdee",
+    "docs/semester-1/efmp-301/unit-02/topic-01.mdx": "3e2753e022ea25fab0e03c36691e0995a194d4c8fd50202f507714bcedb4ed0e",
+    "docs/semester-1/efmp-301/unit-02/topic-02.mdx": "a165832290b3d0157362f018a209ffe637b07566a87567ce1137cbcbb5abb106",
+    "docs/semester-1/efmp-301/unit-02/topic-03.mdx": "2b953e1617ee94332075bad3ac93cbbfcbc5441684af007980703c0144c91ce4",
+    "docs/semester-1/efmp-301/unit-02/topic-04.mdx": "6529d146d258a7aee6972e5c8528746727f326310ec95cc5e83fcea2a8ba9f93",
+    "docs/semester-1/efmp-301/unit-02/unit-assessment.mdx": "bc2e4709d28885f969b161c0f8e7f719c2e770f3393585cb272da9193c8be3a7",
+    "docs/semester-1/efmp-301/unit-02/unit-teacher-notes.mdx": "2e9eff2e1013465fddd5aa1dd5fa900dcb6f519fe31100e44602b7e54b482d79",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/index.mdx": "9bf5b3ffed7b03e44ad1e4b0d36c67783cff7f03c11cdce0c96a38804b2ed866",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-01.mdx": "8f7bb8437cce3acf2db618fb7a2fda97642bff3e24ba4ec3689470e06228108c",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-02.mdx": "877fd764c1556cc9051a6583771c5532f1facda65f5f7bbd3d989067a142227f",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-03.mdx": "baddd29d22d7ffadf895c65a14f3c8349d5b553b7add92a639b7957dd862a02b",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-04.mdx": "bda2680191255f344f8b7e86f2a2362f931f8f5c4350fc840dd1875b35d6e2cd",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/unit-assessment.mdx": "287f0108ae53e81eae0631f22f55434edfd624230c3d37ac330ce1ab70f848c8",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/unit-teacher-notes.mdx": "8f271d2bbc4f13e01e1bb4f667d070c8eaeb8085b1cf74b64ae15e073b5c30ee",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "41b698f8cbbb12f4030d6893083a5c36e4a19848b5ddb86206e5ba72847b8b13",
+    "scripts/check-no-answer-keys.mjs": "f38d60e5360e0c29f2dae02001195690f3b95e0ad2d7ae1a3c03a0d09c053f0d",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "bb614c625f7bf397ce51a317bdb8901711c00fa009d4ad0a506c5096e5b9ddd2",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "77f03816f68663621059f17745109fdde9b103c555f707e0c62d5ff56d2a4cd9",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "973496faae3366d13e8cdd3ba8d68edf7bd3745bdc6928311ee03c55f24b18b2",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/efmp-301/concepts/unit-02.md": "2dab6a130169ee4c03fc146ebae047b25c9a67d9a0a2513904878dc66a75e176",
+    "specs/content/efmp-301/content-spec.md": "7b3400e2c3bea8a2e3f3e76cac221698e7ba6bc58f6d336891f6ebcc56241ef9",
+    "specs/content/efmp-301/coverage/unit-02.md": "b11f561271e0b9d2ef1cf52f984517e02e0fe2e188492ad4d6a12b673272feb7",
+    "specs/content/efmp-301/figures/unit-02.md": "4d42b9b5a94a91e619e54d76487e807b5d83fd2ee008517309291f9f715d96bd",
+    "specs/content/efmp-301/intake-2/evaluation.md": "c3c6f9b2dc3f4f9246640b413a535b87e57c1f90b3c13414aa72582a30c7215d",
+    "specs/content/efmp-301/intake-2/manifest.json": "e5a0a1af3db56f0c88860b8c62a9b7e14088eae96c913252a8db2c4877d58996",
+    "specs/content/efmp-301/sources/texts/seifert2009.md": "6cc9d1e3987c7bdcb10c13cf47804dfc1e2aafbebd046a99b448609822795eb7",
+    "specs/content/efmp-301/sources/texts/vosniadou2001.md": "ec1f87d58bc433950caa3c9da4ed28eadb91a40bffc6e41999f323b7174453dd",
+    "specs/content/efmp-301/sources/unit-02.md": "280f02e77c5a0c716550ef2b93173804ec1b2aa2b4d7236b89fbbfc3d7e9e79a",
+    "specs/content/style-guide.md": "db96c9b33b0fb9522986462a0b519620c3c1d7602a046d7b90e638f643da4610",
+    "specs/content/terminology.csv": "ad917e28cde688eb72bd92226c2326e2d23da3da80fc53ea8c812b1a47f73337",
+    "static/img/figures/efmp-301/unit-02/fig-U2-1.dark.svg": "f54046c69b41390a36de86e063790a1623de78a705cdb6af45a88478b52eab5f",
+    "static/img/figures/efmp-301/unit-02/fig-U2-1.svg": "dae876d3e904391706b429f7ced18ba0c9d6e8d60414b741434181c30b290fcc",
+    "static/img/figures/efmp-301/unit-02/fig-U2-1.ur.dark.svg": "41a6fc95c54a37ea5c262d7510820f1485a59714e17448a886236e21fc6af834",
+    "static/img/figures/efmp-301/unit-02/fig-U2-1.ur.svg": "f361f310e8e1cd2d54406a7de4821f0f64f140d752bf444c61c0cfaa7c119931",
+    "static/img/figures/efmp-301/unit-02/fig-U2-2.dark.svg": "d721fa332992bc596a6da4d287eea540a2c71e84081a7cb74d400e0caf8f3672",
+    "static/img/figures/efmp-301/unit-02/fig-U2-2.svg": "70f86083ab76a4adb6b620f29251c939f40699aec77db67a556f4863a2400ebf",
+    "static/img/figures/efmp-301/unit-02/fig-U2-2.ur.dark.svg": "0d0621e90ff80a3a02b2117af7a65fb89f88be8d1c2268b4854614693a6f1c4a",
+    "static/img/figures/efmp-301/unit-02/fig-U2-2.ur.svg": "98aaf5f99e49f1cd9c3c80a401ae72e36528db6b8ad12fa483ac6df9df95a8ef",
+    "static/img/figures/efmp-301/unit-02/fig-U2-3.dark.svg": "6b46a85faab93de3670b4d337c5e10a41beafcae1c5338961e680d9c6c310e70",
+    "static/img/figures/efmp-301/unit-02/fig-U2-3.svg": "348b5bb866319f460521aaea2c624c813d48f04d7c46657d7944f9195648c5cb",
+    "static/img/figures/efmp-301/unit-02/fig-U2-3.ur.dark.svg": "a6b29370c013185a153792944b75cbde809d588fd00cb87ec83b7a0c8f6eedd3",
+    "static/img/figures/efmp-301/unit-02/fig-U2-3.ur.svg": "dea86ea3f3efbff63eaa079c2c8a46ccb8b5488276e5d250d00616233af9bdc5",
+    "static/img/figures/efmp-301/unit-02/fig-U2-4.dark.svg": "b4cafe624a2f1c86255121a9c79676ec054413de7b32e42adcddddd51a6af9b5",
+    "static/img/figures/efmp-301/unit-02/fig-U2-4.svg": "970547ffb066705b62bfbe347126f2103d65c84d599608ea5d7ec98b96093a98",
+    "static/img/figures/efmp-301/unit-02/fig-U2-4.ur.dark.svg": "fd6368795f0b85eb1bef4e2e520d85909d8b6dc2657aef6bdf4d404d34d37c4b",
+    "static/img/figures/efmp-301/unit-02/fig-U2-4.ur.svg": "dc4157d5a6ac4349a6a60191ae66a0c6f01eb2913041b804142848e33fe81672",
+    "static/img/figures/efmp-301/unit-02/fig-U2-5.dark.svg": "7f9c5f12acb499787403c391f74a47f74f77a3a21ff7c7846c173328a097e350",
+    "static/img/figures/efmp-301/unit-02/fig-U2-5.svg": "736ca34d6a84fd06f8334f86b8e4669c0e4d803b2997e9979e0aaba7553c0864",
+    "static/img/figures/efmp-301/unit-02/fig-U2-5.ur.dark.svg": "bc7530a2b1d16c96c5d500a367dd28828a2fa563d13e1bf83fbdcf70d4319091",
+    "static/img/figures/efmp-301/unit-02/fig-U2-5.ur.svg": "d5b3a87793eda1e9d69822f2c895dc9995372e083f7d37157fe81ab13e1a33e4",
+    "static/img/figures/efmp-301/unit-02/fig-U2-6.dark.svg": "7a33cfcc78fcffbecab3fbe4cbb353c4dca9895a7239056d970abf1a01a42b56",
+    "static/img/figures/efmp-301/unit-02/fig-U2-6.svg": "387a5b440536b4a84553cc1781785ee4b5f90a86d1d9d754778d8ea06f64a33a",
+    "static/img/figures/efmp-301/unit-02/fig-U2-6.ur.dark.svg": "35f435bd02bb8f99c6ddbead198c6be8a2165b994985fa4eff294ac8effa5ae1",
+    "static/img/figures/efmp-301/unit-02/fig-U2-6.ur.svg": "cfe4b627dcb04f52ce7eb2ae3977649d300d30be18c70205f8dd381a4bb2232a",
+    "static/img/figures/efmp-301/unit-02/fig-U2-7.dark.svg": "54e71bb4419fa4760c2a284d9cfa96727dec083199b1c24573148d368beca471",
+    "static/img/figures/efmp-301/unit-02/fig-U2-7.svg": "a33fc505e4147f1c2175afa6c01e043b429d425a087c70fe6a5978ebab79b0bf",
+    "static/img/figures/efmp-301/unit-02/fig-U2-7.ur.dark.svg": "d4031fff973d0b176324b97259a1322d4ba3c7452c851d3599a994fc5a709098",
+    "static/img/figures/efmp-301/unit-02/fig-U2-7.ur.svg": "508d759b359b008cdd4d4690df49a142913c901395b9705d5037b89bc311d49d",
+    "static/img/figures/efmp-301/unit-02/fig-U2-8.dark.svg": "f297f5d857c1232af2ccdbb6b12d7fd54ba482d17d9605c857d93e2c6d13ee29",
+    "static/img/figures/efmp-301/unit-02/fig-U2-8.svg": "61acd0406553678cf7e2a694568d5354d394a0a4e21a3086ec6f90849ccd5cb3",
+    "static/img/figures/efmp-301/unit-02/fig-U2-8.ur.dark.svg": "8d4b36141001984930d002dabb897b04dedd8c6e779165c2ff6b3ef506f0bdd1",
+    "static/img/figures/efmp-301/unit-02/fig-U2-8.ur.svg": "014302bdeab95aa15bdd9d52b3a09d235fc75c78256285b054a206cb476923b6"
+  },
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "fail",
+      "evidence": [
+        "G3 dependency unsatisfied for the bound English: specs/content/efmp-301/reviews/unit-02/G3/20260925T084500Z-g3-attempt-01.json is advisory/unsigned, disposition revise (authority, sources, assessment, accessibility failed; 5 open blocking findings); English repaired afterwards at commit acd0868f; G3 run-002 has a manifest only, no report; the G5 manifest binds post-repair bytes",
+        "Urdu outcomes mirror the approved unit outcomes (UR index.mdx:29-38 clo_refs SLO:EFMP-301-2-1/2-2 retained; all four topics and the 10/10/5 bank present)"
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "fail",
+      "evidence": [
+        "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-03.mdx:58 - Seifert & Sutton (2009) quoted definition of social development + citation dropped",
+        "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-03.mdx:60 - Erikson trust/mistrust quotation + citation dropped; \"secure base\" added",
+        "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-03.mdx:64 - Erikson school-age crises + Maslow + quotation + friends-vs-adults claim + citation dropped",
+        "Further-reading citations retained verbatim in all files (e.g. i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-01.mdx:133-136); remaining in-text citations retained (topic-03:36,38,62; topic-02:36,44,52,56; topic-04:44,46,54)"
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "All four topics, index, unit-assessment (10 MCQ + 10 RRQ + 5 ERQ + keys/rubrics) and teacher notes exist as complete Urdu mirrors; no heading-only stubs found in the passage-by-passage comparison",
+        "Both unit outcomes taught and assessed in Urdu: SLO 2-1 via topics 2.1-2.2 + MCQs 1-7 + RRQs 1-5,8-10; SLO 2-2 via topics 2.3-2.4 + MCQs 8-10 + RRQs 6-7 + ERQs 1-5",
+        "Semantic defects are recorded under semantics/completeness; outcome coverage itself is complete"
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "fail",
+      "evidence": [
+        "Blind derivation of all 10 Urdu MCQs (b,a,d,c,b,b,b,c,c,b) matches both keys; key correspondence verified",
+        "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/unit-assessment.mdx:48 MCQ 3 stem and :119 ERQ 5 - \"cannot follow instructions\" rendered as \"نہیں مانگ سکتا\" (cannot ask for)",
+        "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/unit-assessment.mdx:144 RRQ model answer 5 - page/fingers direction reversed in marking guidance",
+        "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-04.mdx:72 activity item 1 - matched/mismatched sequence reversed + sticks mistranslated",
+        "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/unit-assessment.mdx:42,101 - \"crossover years\" rendered with a term the topic text never establishes"
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "pass",
+      "evidence": [
+        "All 8 <Figure> alt texts translated into Urdu (topic-01:32,62; topic-02:30,62; topic-03:30,68; topic-04:32,64) and figure src wired to .ur.svg variants; rendered pages expose them (render-inspect.log)",
+        "No horizontal overflow/clipping at 1280 and 360 on any of the 7 Urdu pages (render-inspect.log overflow probes: 0 elements)",
+        "Print stylesheet applies: nav/navbar/TOC/footer/pagination hidden under print emulation (font-probe/render logs); no console errors",
+        "Caveat: pixel-level visual legibility could not be viewed by this session - see the uncertain finding; PNGs committed for human inspection"
+      ]
+    },
+    {
+      "id": "completeness",
+      "status": "fail",
+      "evidence": [
+        "Passage-by-passage EN-UR comparison across index, 4 topics, assessment, teacher notes, figure captions/labels performed (all 7 file pairs fully read and aligned)",
+        "Omissions: three cited passages (topic-03:58,60,64); \"Government Girls\" (topic-02:26); \"identical\" glasses (topic-03:26); \"underline\" (topic-04:73); \"a pupil whose experience says otherwise\" (topic-03:60); \"suddenly\" (topic-01:80)",
+        "Additions: \"محفوظ بنیاد\" secure base (topic-03:60); \"peaks in adolescence\" (topic-03:64); \"Swiss psychologist\" (topic-03:36)",
+        "Untranslated English residue: \"some\" (topic-01:68), \"shelf\" (topic-01:80), \"track\" (topic-04:54)"
+      ]
+    },
+    {
+      "id": "semantics",
+      "status": "fail",
+      "evidence": [
+        "Negation dropped: \"nothing you can measure\" -> \"کچھ بھی جو آپ ناپ سکیں\" (teacher-notes:47)",
+        "Meaning reversed/garbled: \"never worth\" -> \"اجازت نہیں دیتے\" (topic-03:46); \"counter-example\" -> \"جواب\" (topic-03:44); \"subtract\" -> \"جمع\" (topic-01:82); babble clause circular (topic-01:56); \"prodigies\" -> \"عبوری\" (topic-01:56); activity item 1 sequence reversed (topic-04:72); RRQ-5 page/fingers reversed (assessment:144); \"reason to be reliable\" -> causal claim (topic-03:60)",
+        "Ambiguity: \"The ages are approximate; the order is not\" -> \"ترتیب نہیں\" readable as \"no order\" (topic-03:38)",
+        "Modal/comparative weakening: \"matters more than the biology\" (topic-02:70); \"more developed\" (topic-01:48); \"seem to make no progress\" (topic-01:54)"
+      ]
+    },
+    {
+      "id": "terminology",
+      "status": "fail",
+      "evidence": [
+        "Bank-conformant: Development/نشوونما, Cognitive/ادراکی, Emotional/جذباتی, Social/معاشرتی نشوونما, Adolescence/مراہقت, Maturation/پختگی, Heredity/وراثت, Environment/ماحول, Peer Group/ہم عمر گروہ, Readiness/تیاری; UR index key_terms conform to terminology.csv",
+        "Drift: Rubric (معیارِ جانچ banked vs منی روبرک/روبرکس used); Learning (سیکھنا banked vs تعلم in prose vs سیکھنا in figures); Motivation (محرک vs حوصلہ); Individual Differences (انفرادی اختلافات vs انفرادی فرق); Formative (تشخیلی banked vs صورت بہبود coined)",
+        "Inconsistent pairs within the unit: شہادت/ثبوت, جذبات/احساس, جماؤ/میدان, عمر کے مطابق/مقابلے چھوٹا, پڑھائی/مطالعہ",
+        "New terms proposed for owner: بقا, الٹ پلٹ, مرکز سے ہٹنا, حسی حرکی, قبل عملی, ٹھوس عملی, رسمی عملی, وابستگی, نشو, تعلم"
+      ]
+    },
+    {
+      "id": "register",
+      "status": "fail",
+      "evidence": [
+        "Academic-plain register broadly achieved (درسی مگر عام فہم), but marred by: شاگرڈ misspelling x10 (topic-01, topic-02, topic-03)",
+        "Orthography: Arabic yeh in اٹھوائي (topic-02:97); روے for رویے (topic-04:58)",
+        "Grammar: gender-agreement errors (assessment ERQ1 \"فرق فرق\", topic-04:46,69 \"مرحلوں کی الفاظ\", topic-01:54,96, topic-03:62) and broken constructions (topic-01:72,84; topic-03:64)",
+        "Calques/transliterations: سرزمین, دھاگہ کھو دیتی, موور کرے, ہیٹ, پولیس, جڑاؤ, مجموعی کام (see findings)"
+      ]
+    },
+    {
+      "id": "rtl",
+      "status": "pass",
+      "evidence": [
+        "Real-browser inspection (Chromium 149 via repo Playwright 1.61.1) of all 7 Urdu pages at 1280 and 360 and under print emulation; dir=rtl throughout; prose computed font \"Noto Nastaliq Urdu\" with webfont loaded (16px/35.2px line-height)",
+        "Tables render RTL with first column rightmost (topic-01 rubric: معیار at x=1127 of 561-1264; ERQ5 table معیار right block, نمبر left block)",
+        "All 8 .ur.svg + .ur.dark.svg serve 200; light variant lazy-loads on scroll; dark variant selected under data-theme=dark; canvas ink analysis proves shaped non-tofu Urdu labels; timeline fig-U2-7 mirrored right-to-left per style-guide convention",
+        "22 PNG renders committed under renders-agent-g5-efmp301-u2-run001/ (normal, 360px, A4 print, all 8 figure variants); pixel-level viewing by this reviewer was not possible (see uncertain finding)"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "G3 dependency not satisfied for the bound English: the only G3 report (specs/content/efmp-301/reviews/unit-02/G3/20260925T084500Z-g3-attempt-01.json) is advisory, unsigned, disposition revise with 5 open blocking findings, and reviewed the PRE-repair English; the English was then repaired at commit acd0868f and the manifest binds the post-repair bytes, which no G3 report (signed or advisory; run-002 has a manifest but no report) covers. Escalated to the curriculum owner per the GQUR-300 PR #65 precedent. The full EN-UR comparison below was nevertheless performed against the current bound English."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-01.mdx:56 - \"Children babble before they speak words\" is rendered \"بچے بولنے سے پہلے بولتے ہیں\" (children speak before speaking), a circular non-sequitur in the orderly-sequence principle passage. Repair: e.g. \"بچے الفاظ بولنے سے پہلے آوازیں نکالتے ہیں\". The following two clauses restore babble->words->sentences only partially."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-01.mdx:56 - \"whatever the staff room claims about prodigies\" is rendered \"اسٹاف روم جتنے بھی عبوری کہانیاں کرے\"; \"prodigies\" (نابغہ بچے) is mistranslated as \"عبوری\" (transitional), producing a meaningless phrase in the no-skipping claim."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-01.mdx:82 (activity item 3) - \"The pupil can now subtract with borrowing, after three weeks of practice sums\" is rendered \"ادھار لینے والے حساب میں جمع کر سکتا ہے\": جمع (addition) is written where تفریق (subtraction) is meant, changing the mathematical meaning of the sorting item."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "Untranslated English words embedded in Urdu prose: i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-01.mdx:68 \"some ذہنی عملوں کی بنیادی رفتار\" (EN \"certain\" left as \"some\"); i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-01.mdx:80 \"اوپر والی shelf\" (EN \"shelf\"); i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-04.mdx:54 \"جگہ کو track کرنا ہے\" (EN \"track\"). All three must be Urdu."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-03.mdx:46 - \"They describe readiness, never worth\" is rendered \"وہ تیاری بیان کرتے ہیں، اجازت نہیں دیتے\" (\"they describe readiness, they do not give permission\"), a meaningless rendering that drops the stages-never-deserve-worth claim in the misconception box."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-03.mdx:44 - \"test a general claim ('all metals sink' - and find the counter-example)\" is rendered \"جانچ سکتا ہے اور جواب مل سکتا ہے\": \"counter-example\" (مثالِ مخالف) became \"an answer\", losing the formal-operations concept the sentence teaches."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-03.mdx:58,60,64 - three cited passages are dropped: (a) the Seifert & Sutton (2009) quoted definition of social development (\"the long-term changes in relationships and interactions involving self, peers, and family\" / \"how friendships develop\") plus its citation; (b) Erikson's first psychosocial crisis \"trust and mistrust\" with the quoted \"development of trust between caregiver and child\" plus its citation - replaced by an added \"محفوظ بنیاد\" (secure base) claim not in the English; (c) the peer-group sentence's \"making friends, being a friend\" quotation, the Erikson school-age crises AND Maslow's hierarchy references, the claim \"by the teenage years friends carry at least as much weight as adults\", and its citation - replaced by an added \"peaks in adolescence\" claim. Citations and quotations must retain their supporting meaning."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-03.mdx:60 - \"That is not a verdict on the pupil; it is a reason for a teacher to be reliable\" is rendered as a causal claim \"یہ استاد کے قابل بھروسہ ہونے کی وجہ سے ہے\" (this is because the teacher is reliable), reversing the prescriptive point; and the contrast class \"a pupil whose experience says otherwise\" is dropped from the preceding sentence."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-04.mdx:72 (activity item 1) - \"A Class 3 teacher introduces multiplication with bundles of sticks before the times table\" is rendered \"ضرب کا تعارف پہاڑوں کی گڈیوں سے پہلے کرتا ہے\": (a) \"bundles of sticks\" became \"پہاڑوں کی گڈیوں\" (bundles of mountains); (b) the sequence is reversed - the Urdu says the introduction happens BEFORE the sticks, so the EN's matched-teaching example reads as a mismatch."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/unit-assessment.mdx:48 (MCQ 3 stem) and :119 (ERQ 5) - \"cannot follow ... instructions\" is rendered \"ہدایات نہیں مانگ سکتا\" (cannot ASK FOR instructions) using مانگنا instead of e.g. \"پر عمل نہیں کر سکتا\", garbling both assessment stems."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/unit-assessment.mdx:144 (RRQ model answer 5) - \"fit the page to the fingers rather than drill the fingers to the page\" is rendered \"انگلیوں کو صفحے پر ڈھالیں، نہ کہ انگلیوں کو صفحے پر تھوپیں\": both clauses now say fingers-to-page, so the marking guidance reverses the EN's first instruction (adapt the page, not the fingers)."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/unit-teacher-notes.mdx:47 - the quoted answer \"nothing you can measure\" is rendered \"کچھ بھی جو آپ ناپ سکیں\" (anything you can measure) with the negation dropped, reversing the answer that is meant to break the development-equals-size equation."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-03.mdx:62 - \"thinking on two levels at once\" is rendered \"ایک سطح پر دو طرح کی سوچ\" (two kinds of thinking on ONE level), and \"is social training as much as cognitive\" loses \"social\" (\"تربیت بھی اور ادراک بھی\"), in the Piaget dramatic-play passage."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-02.mdx:26 - \"The Government Girls Primary School\" is rendered \"سرکاری اسکول\" with \"Girls\" (لڑکیوں کا) dropped, inconsistent with ہیڈ مسٹریس at :101 and with topic-04 where لڑکیوں کے پرائمری اسکول is kept."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-04.mdx:73 (activity item 2) - the quoted fifth instruction drops \"underline\": \"عبارت پر واپس جائیں اور کوئی بھی لفظ جو آپ نے جواب 2 میں استعمال کیا\" has no verb for what to do with the word (EN: \"underline any word you used in answer 2\")."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-03.mdx:38 - \"The ages are approximate; the order is not\" is rendered \"عمریں تقریباً ہیں؛ ترتیب نہیں\", whose natural reading is \"there is no order\", the opposite of the fixed-order claim; the ellipsis must be expanded (e.g. \"ترتیب تقریبی نہیں\")."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/unit-assessment.mdx:42,101 and i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-02.mdx - \"crossover years\" is rendered \"مخلوط سالوں\" (mixed years), which reads as co-education years and is a term the topic prose never establishes (topic 2.2 calls it the \"مشہور اور کبھی کبھی عجیب دور\"); the assessment item therefore hinges on a term the studied text does not teach."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/unit-teacher-notes.mdx:63 - \"they are almost always the mixtures\" (mixtures of engines) is rendered \"یہ تقریباً ہمیشہ ملاپ ہوتے ہیں\" (\"they are reconciliations\"), a wrong word (ملاپ = reconciliation) for مل جل صورتیں."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/unit-teacher-notes.mdx:69 - \"formative work\" is rendered \"صورت بہبود کام\", a non-word coinage; the banked adjective تشکیلی (Formative Assessment = تشکیلی تشخیص) exists and was not used."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-01.mdx:48 - \"a pupil who is taller is not thereby more developed in any sense a teacher cares about\" is rendered with a trailing spoken-style \"نہیں\" after a long positive clause and drops the comparative \"more\" (\"نشوونما پا لیتا ہے\"), leaving the negation scope unclear; and :54 \"Long plateaus are punctuated by bursts\" becomes \"لمبے مدتی جماؤ کو دھماکوں سے روک دیا جاتا ہے\" (plateaus are stopped by explosions), an unnatural rendering."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-02.mdx:70 and i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-01.mdx - the comparatives \"The classroom version of the principle matters more than the biology\" (topic-03 EN line 125, rendered as \"جماعت کی سطح پر اصول کا سب سے زیادہ کام کا حصہ یہ ہے\") and similar more-than claims drop the comparison; meaning is recoverable but weakened."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-02.mdx:52 - \"sexual maturation\" is coined as \"جنسری پختگی\" (جنسری is not a standard Urdu word) while i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/unit-assessment.mdx:40 uses the standard \"جنسی پختگی\"; :60 transliterates \"moves\" as \"موور کرے\" and :72 renders a race \"heat\" as \"ہیٹ\" (which reads as temperature)."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-03.mdx:26 - \"the taller of two identical glasses\" drops \"identical\" (دو ایک جیسے گلاس), weakening the conservation demonstration's setup; :36 adds \"سوئس ماہر نفسیات\" (Swiss psychologist) not present in the EN."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-02.mdx:79 (CYU 2) - \"why gross-motor readiness arrives before fine-motor readiness matters for handwriting\" is compressed to \"بڑی حرکی تیاری باریک تحریر کے لیے کیوں پہلے آتی ہے\", conflating the two readiness concepts; :81,92 (CYU 4, checklist) render \"what each responds to\" as \"ہر ایک کیا جواب دیتا ہے\" (what answer each gives)."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-02.mdx:64 and i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-02/topic-04.mdx:64 - \"once a term\" is rendered \"ایک بار موسم میں\" (once a season); ٹرم is the school term. topic-03:64 also breaks the \"holds social information no mark sheet supplies\" clause into the ungrammatical \"کوئی نمبر شیٹ فراہم نہیں کردہ معلومات رکھتا ہے\"."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "Terminology-bank drift: \"Rubric\" is banked as معیارِ جانچ (prose term adopted 2026-09-14) but the unit uses transliterations منی روبرک (topic rubrics) and روبرکس/روبرک (teacher notes :69, assessment :151); \"Learning\" is banked as سیکھنا but the prose engine term is تعلم while the .ur.svg figures label it سیکھنا, so prose and its own figures disagree on a core term; \"Motivation\" is banked as محرک but topic-04:62 uses حوصلہ; \"Individual Differences\" is banked as انفرادی اختلافات but topic-03:46 uses انفرادی فرق. Do not change the bank here; the owner must resolve each conflict per style-guide \"Terminology bank\"."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Inconsistent recurring renderings across the unit: evidence = شہادت (topics 1-2, index) vs ثبوت (topic-03:28, topic-04 rubric, assessment key 10); feeling = جذبات (topic-01, topic-03 heading) vs احساس (topic-03:50, assessment summary/model answers); plateau = جماؤ (topics) vs میدان (assessment summary/key 6); \"badly formed question\" = غلط ساخت کا سوال (topic-01) vs بری طرح بنا سوال (assessment RRQ 2); \"small for his age\" = عمر کے مطابق چھوٹا (topic-02) vs عمر کے مقابلے چھوٹا (assessment RRQ 3); reading = پڑھائی (topic-01) vs مطالعہ (assessment MCQ 4)."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "New technical terms introduced by this unit need an owner ruling before the bank is updated (proposed, not applied): بقا (conservation), الٹ پلٹ (reversibility - informal register; قابلِ الٹ پھیر is the formal coinage), مرکز سے ہٹنا (decentration), حسی حرکی / قبل عملی / ٹھوس عملی / رسمی عملی (Piaget stages; note رسمی means ceremonial-formal - صوری is the logic sense of \"formal\"), وابستگی (attachment), نشو (growth), تعلم (learning as engine)."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "Register/orthography defects that impede fluent academic-plain reading (درسی مگر عام فہم): the misspelling شاگرڈ for شاگرد occurs 10 times (topic-01 x6 incl. :48,56,80-87; topic-03 x3; topic-02 x1); Arabic yeh used for Urdu baari-yeh in اٹھوائي (topic-02:97); gender-agreement errors (فرق فرق بتانے assessment ERQ1 rubric; مرحلوں کی الفاظ topic-04:46,69; اچھال ہو رہی تھی topic-01:54; سکھائی ہو topic-01:96; بنی ہوئی کھیل topic-03:62); broken constructions (کچھ نہیں بھی نہیں topic-01:72; جاگتا ہوا سوتا نہیں topic-01:84; روے کو topic-04:58)."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Register calques and transliterations to smooth at repair time: سرزمین for \"territory\" (topic-03:44,54), دھاگہ کھو دیتی for \"loses the thread\" (topic-04:54), مجموعی کام for \"Summative task\", جڑاؤ (assessment ERQ2 rubric), پولیس نہ کریں for \"do not just police it\" (topic-04:60), شیو/فٹنگ/منیجر transliterations, \"باقاعدہ قواعد\" losing \"negotiated\" rules (topic-03:62), \"کلاسک جانچ\" (topic-03:40), \"نامی شاگرد\" for \"named pupil\" (teacher notes :71 vs index \"ایک شاگرد کو یاد رکھیں\")."
+    },
+    {
+      "severity": "uncertain",
+      "resolved": false,
+      "message": "Render-inspection limitation: this reviewer session could not visually view the captured PNG renders (the session's file-reading tool returns no image content for PNG/JPEG, verified on multiple files). All structural render properties (dir=rtl, Nastaliq webfont application to prose, table column order, zero overflow at 1280/360, print-stylesheet behaviour, figure variant wiring, shaped non-tofu figure labels via canvas ink analysis) were verified programmatically in the real Chromium browser, but pixel-level human judgement of Nastaliq legibility and visual bidi punctuation remains open; the 22 committed PNGs under renders-agent-g5-efmp301-u2-run001/ are the evidence for that human pass during repair verification."
+    },
+    {
+      "severity": "uncertain",
+      "resolved": false,
+      "message": "Urdu figure labels render in fallback Arabic-script fonts (FreeSerif/Unifont on this host) because a page webfont cannot cross into an <img>-embedded SVG and no system Nastaliq font exists here; labels are shaped and legible but Nastaliq only on clients with a system Nastaliq/Nastaleeq font. This is the repo-wide figure convention, identical to the reviewed EFMP-301 Unit 1 and EFMP-302 Unit 1 figures, so it is recorded as a platform observation for the owner, not a Unit 2 defect."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Informational: check:pipeline-gate currently fails course-wide (\"G2 en-draft: stale or incomplete input manifest\" for EFMP-301 units 2-12), a pre-existing G2 evidence-freshness gap for the owner; it is not a Unit 2 Urdu defect and the parity/terminology portion for this unit is inert while translation_status stays draft. The unit's UR key_terms (Development/نشوونما, Cognitive Development/ادراکی نشوونما) were verified to conform to terminology.csv manually."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Assessment equivalence verified despite the stem defects: all 10 Urdu MCQs were answered blind by the reviewer before either key was read (derived key b,a,d,c,b,b,b,c,c,b), matching both the Urdu key (unit-assessment.mdx:125-134) and the EN key (docs unit-assessment.mdx:173-189) exactly; option ordering, RRQ/ERQ task demands and Bloom tags otherwise correspond, and the ERQ rubric mark totals (20 each) match."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Mid-review input change, recorded for audit: after the initial 128/128 digest verification (13:13 local), commits 678a6f2d (Unit 12 G3 round-1 repairs, extended source excerpts) and 43e2e859 changed 2 of the 128 bound inputs (specs/content/efmp-301/sources/texts/seifert2009.md, vosniadou2001.md). Every Unit 2 input was verified byte-identical across ec4863a8..HEAD (empty diff over the unit-02 EN/UR directories, terminology.csv, style-guide.md, unit-02 figure assets and coverage/sources/figures manifests), so the EN-UR comparison, blind assessment derivation, gate runs and browser renders all reflect the bound unit bytes. The parent re-prepared the manifest at HEAD c2cd6f64 (this report binds that manifest) and preserved the originally bound manifest as manifest-run001-superseded-20260925T1313Z.json; the re-verification is logged in manifest-reverify.log."
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-02/G5/logs-agent-g5-efmp301-u2-run001/validate-content.log"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-02/G5/logs-agent-g5-efmp301-u2-run001/check-depth-gate.log"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-02/G5/logs-agent-g5-efmp301-u2-run001/check-figures.log"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-02/G5/logs-agent-g5-efmp301-u2-run001/check-no-em-dash.log"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-02/G5/logs-agent-g5-efmp301-u2-run001/check-no-answer-keys.log"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-02/G5/logs-agent-g5-efmp301-u2-run001/check-docs-sync.log"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-02/G5/logs-agent-g5-efmp301-u2-run001/render-review.log"
+    },
+    {
+      "name": "check:pipeline-gate (informational)",
+      "exit_code": 1,
+      "log_path": "specs/content/efmp-301/reviews/unit-02/G5/logs-agent-g5-efmp301-u2-run001/check-pipeline-gate-informational.log"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/efmp-301/reviews/unit-02/G5/logs-agent-g5-efmp301-u2-run001/check-depth-gate.log": "c5a5e48129becad9ecf5666bea3f8300fda05b52acf6b455aa9ceba14632e425",
+    "specs/content/efmp-301/reviews/unit-02/G5/logs-agent-g5-efmp301-u2-run001/check-docs-sync.log": "a8020fceef012e621e4a3f2529cfc7d82b06562657e6d81ab5b128992c787a7c",
+    "specs/content/efmp-301/reviews/unit-02/G5/logs-agent-g5-efmp301-u2-run001/check-figures.log": "27f8c42fd47e02f2ebbc9cdfec9b11ef0a89841234068cee1380985626a2cc2d",
+    "specs/content/efmp-301/reviews/unit-02/G5/logs-agent-g5-efmp301-u2-run001/check-no-answer-keys.log": "88c1db4bbf1d55a437937c63361bae010f6618a2ff9003d074982235dedba54c",
+    "specs/content/efmp-301/reviews/unit-02/G5/logs-agent-g5-efmp301-u2-run001/check-no-em-dash.log": "076f1e41d44fce9e3c02b2fcb558a7e7ca54375df680eebb07a7c7b38eeb1974",
+    "specs/content/efmp-301/reviews/unit-02/G5/logs-agent-g5-efmp301-u2-run001/check-pipeline-gate-informational.log": "25f4fc57aab530a35c9b93f8c838f98260955a1903276cef1a6f9a553b581e18",
+    "specs/content/efmp-301/reviews/unit-02/G5/logs-agent-g5-efmp301-u2-run001/font-probe.log": "0ecab17a4394b3dbd90482191a04a4e4d4bca80a09aaba9dc892cfab37aed5d3",
+    "specs/content/efmp-301/reviews/unit-02/G5/logs-agent-g5-efmp301-u2-run001/font-probe.mjs": "28a90698de06a7c439a376d5e87ea1b30246c43e9bd0ccb5dea3a4149e7bfc0d",
+    "specs/content/efmp-301/reviews/unit-02/G5/logs-agent-g5-efmp301-u2-run001/make-report.mjs": "8c9abc3ffda55f9189f7256d40665032f702c1490ee4e253360ab690140131ba",
+    "specs/content/efmp-301/reviews/unit-02/G5/logs-agent-g5-efmp301-u2-run001/manifest-reverify.log": "1e335d3c5f961bbbb955362cba904bc59d890eba6a1c5d5df938b2ee14699d77",
+    "specs/content/efmp-301/reviews/unit-02/G5/logs-agent-g5-efmp301-u2-run001/manifest-verify.log": "cb39a2995362dab56ba6ebf29a43af9a1a2b34ff6e64514917ab0f01aeb3ab91",
+    "specs/content/efmp-301/reviews/unit-02/G5/logs-agent-g5-efmp301-u2-run001/render-figures.log": "47e2b74045245af4b9f12971e32cbc5ed5e27e6dd66e5b2659d445322a5a53da",
+    "specs/content/efmp-301/reviews/unit-02/G5/logs-agent-g5-efmp301-u2-run001/render-figures.mjs": "37f01aaa4e259122b67f8e4b4754002ebe429f2824e64673282c28c1d1b7ef9e",
+    "specs/content/efmp-301/reviews/unit-02/G5/logs-agent-g5-efmp301-u2-run001/render-inspect.log": "84a2298f159db8b08811344db1176f7e876531715514c4e54e31e0827a4864d3",
+    "specs/content/efmp-301/reviews/unit-02/G5/logs-agent-g5-efmp301-u2-run001/render-inspect.mjs": "fafcaba59249195c2487a4682a97ee25e4d57cf96bb4b9a0a3fb740fb58cfd34",
+    "specs/content/efmp-301/reviews/unit-02/G5/logs-agent-g5-efmp301-u2-run001/render-review.log": "6ea17cf6161ec9c12f7d705cb725af40ef4f5ad7961a6673914b16b8018c9b9a",
+    "specs/content/efmp-301/reviews/unit-02/G5/logs-agent-g5-efmp301-u2-run001/validate-content.log": "a9ea6bea8b6c2133f72e426804964834e234eee27c552feac5c20b2281a93478",
+    "specs/content/efmp-301/reviews/unit-02/G5/renders-agent-g5-efmp301-u2-run001/01-index-1280.png": "12cdebe815db6fc231905642091e77e6f6f20c4e4c58b345727a3c5664b37cc2",
+    "specs/content/efmp-301/reviews/unit-02/G5/renders-agent-g5-efmp301-u2-run001/02-topic01-1280-top.png": "591857eb408aabb6f643b98055daba951f9250760b738562c082de439e5751d2",
+    "specs/content/efmp-301/reviews/unit-02/G5/renders-agent-g5-efmp301-u2-run001/03-topic01-1280-fig-u2-1.png": "f1c46a9a263f67207ea2e13a939e18cc2fafcd95bf45d18ffe97282134842ec3",
+    "specs/content/efmp-301/reviews/unit-02/G5/renders-agent-g5-efmp301-u2-run001/04-fig-u2-1-ur.png": "88f2cd184ff5a2dd59aed1d1cd66a8fe818fd7fdb5cac25d2697e9aff907d43b",
+    "specs/content/efmp-301/reviews/unit-02/G5/renders-agent-g5-efmp301-u2-run001/05-topic01-360-top.png": "d8c8f23fcbeaa878c09f58b50549e5e01bae10b5b9ab3d656ca156c3026ff249",
+    "specs/content/efmp-301/reviews/unit-02/G5/renders-agent-g5-efmp301-u2-run001/06-topic01-360-mid.png": "39c2f6b6644593725320399ba5a72ca5097bf9d803b5453aafad4cdbc70bdef3",
+    "specs/content/efmp-301/reviews/unit-02/G5/renders-agent-g5-efmp301-u2-run001/07-fig-u2-3-ur.png": "fbfdb00446172fe31781d07d2a11f4457a9ae794a3d10320027146a9d11bc5ee",
+    "specs/content/efmp-301/reviews/unit-02/G5/renders-agent-g5-efmp301-u2-run001/08-fig-u2-7-ur-timeline.png": "0c3b45f95a5ff474f49d521dff532a419a9decd2644a658aa95b3986e7600a03",
+    "specs/content/efmp-301/reviews/unit-02/G5/renders-agent-g5-efmp301-u2-run001/09-assessment-360-mcqs.png": "8b40390cda4b39bc310ab59db8a23518a6ad10c34ab62780e2a796a8d8ac01be",
+    "specs/content/efmp-301/reviews/unit-02/G5/renders-agent-g5-efmp301-u2-run001/10-assessment-360-key.png": "61478cb9c7c8b5daa6e9d0b5a338780882f0a4c2929d929b73c5262c8c66155a",
+    "specs/content/efmp-301/reviews/unit-02/G5/renders-agent-g5-efmp301-u2-run001/11-assessment-360-erq-table.png": "26476da5fa5a535652d3c70ed3c9a42e5919fcf1d3bb7ade0fd7f498a59ec76a",
+    "specs/content/efmp-301/reviews/unit-02/G5/renders-agent-g5-efmp301-u2-run001/12-assessment-print-a4.png": "1afd1853c7b04c2cacb6fdda9fe5f4b77f44173677a9620d8769ed15d04feba7",
+    "specs/content/efmp-301/reviews/unit-02/G5/renders-agent-g5-efmp301-u2-run001/13-topic01-print-a4.png": "abfa40ed14c8fdc3f6bf61f5c5c20063deec0e87db8c13857f49d2e3229a36cf",
+    "specs/content/efmp-301/reviews/unit-02/G5/renders-agent-g5-efmp301-u2-run001/14-teacher-notes-360.png": "c0bfde8426ac41b6fe9fd6ff06a2c842a7c8e721bfc45eb60baad9b9be4d68ab",
+    "specs/content/efmp-301/reviews/unit-02/G5/renders-agent-g5-efmp301-u2-run001/15-fig-U2-1-ur.png": "879cd4717aa089e0d68ab736e9e477f49ccd9464dd36ff118f1ada006f9f5fc9",
+    "specs/content/efmp-301/reviews/unit-02/G5/renders-agent-g5-efmp301-u2-run001/15-fig-U2-2-ur.png": "bb825a3b345b93cc39084ef4ee9c370c7f5ea45195b66dfc7c5d5f903384365d",
+    "specs/content/efmp-301/reviews/unit-02/G5/renders-agent-g5-efmp301-u2-run001/15-fig-U2-3-ur.png": "0c1697390da5d72881276aa25f258f734b144e9d641dd25a117f95e9fd6e8491",
+    "specs/content/efmp-301/reviews/unit-02/G5/renders-agent-g5-efmp301-u2-run001/15-fig-U2-4-ur.png": "30bb26ca9440545bc27d2b04f3fb8f1eabd506cef0c21bf067d1ad30b5a174fb",
+    "specs/content/efmp-301/reviews/unit-02/G5/renders-agent-g5-efmp301-u2-run001/15-fig-U2-5-ur.png": "0e45123f3209e7cee7519eea43f27b54236e473d8b550e49761b6d3538674632",
+    "specs/content/efmp-301/reviews/unit-02/G5/renders-agent-g5-efmp301-u2-run001/15-fig-U2-6-ur.png": "88776c8f17c0ba5344f874b899aa4b03929cb7cfc7ece2c1dbb46412cff45d29",
+    "specs/content/efmp-301/reviews/unit-02/G5/renders-agent-g5-efmp301-u2-run001/15-fig-U2-7-ur.png": "94b84a636d2256087165d7ed104ff5d0a11df3e549c062e8ad2675628f01bad1",
+    "specs/content/efmp-301/reviews/unit-02/G5/renders-agent-g5-efmp301-u2-run001/15-fig-U2-8-ur.png": "df1733bfc0965757d162292717de5f8d7e7d7e5faf6143c3809c03d93132a46a"
+  }
+}
