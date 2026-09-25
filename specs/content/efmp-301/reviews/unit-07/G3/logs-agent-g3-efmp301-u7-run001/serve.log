@@ -1,0 +1,4 @@
+◇ injected env (0) from .env.local // tip: ◈ secrets for agents [www.dotenvx.com]
+[33m[1m[WARNING][22m The [36m`siteConfig.onBrokenMarkdownLinks`[39m[33m config option is deprecated and will be removed in Docusaurus v4.[39m
+[33mPlease migrate and move this option to [36m`siteConfig.markdown.hooks.onBrokenMarkdownLinks`[39m[33m instead.[39m
+[32m[1m[SUCCESS][22m[39m Serving [36m[4m"build"[24m[39m directory at: [36m[4mhttp://localhost:4317/[24m[39m

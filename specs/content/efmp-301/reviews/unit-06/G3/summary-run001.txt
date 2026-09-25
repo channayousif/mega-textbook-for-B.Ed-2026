@@ -1,0 +1,106 @@
+G3 English review - EFMP-301 Unit 6 (Motivation and Emotion)
+Run: agent-g3-efmp301-u6-run001 | Reviewer: agent:g3-reviewer (LongCat-2.0, fresh session)
+Report: specs/content/efmp-301/reviews/unit-06/G3/agent-g3-efmp301-u6-run001.json
+Disposition: REVISE (advisory; 1 blocking finding, 13 advisory, 0 uncertain)
+
+Input bundle
+- The frozen manifest (specs/content/efmp-301/reviews/unit-06/G3/manifest.json) was verified
+  against the working tree with the evidence library's own inputManifest() normalisation: it
+  matches the tree at commit cff48358 (2026-09-24 19:11, where it was prepared) exactly.
+  HEAD had drifted before this review started: 6 of 94 bound inputs changed afterwards - the
+  four fig-U6-2/fig-U6-4 SVGs (English label-overflow repairs, commit 42ad6a8d) and the two
+  bound source texts seifert2009.md/spielman2020.md (excerpt extensions, commit a1411cdc).
+  HEAD moved again during the review (2f28b248 -> 49367150) with no further bound-input
+  changes (mismatch set re-verified identical). Per the parent's instruction the drift is
+  recorded (resolved advisory finding 14) and the report's input_manifest is rebound to the
+  current tree so validation recomputes cleanly. The unit prose, assessment, coverage,
+  concepts and figures manifest are byte-identical between the frozen and current states.
+- Author identity: commit 4f6d38f6 "content(efmp-301): author Unit 6 Motivation and Emotion
+  (EN + figures + governance)" (2026-09-24), a Claude Code agent session (LongCat-2.0) in
+  worktree agent-ad57ca9469bfc4572, recorded in PHR
+  history/prompts/022-author-efmp-301/0049-english-authoring-complete.misc.prompt.md. This
+  reviewer session did not author or translate the material. skill_digest matches.
+
+What passed
+- Authority: guide Week 11 / Chapter 6's three bullets map exactly to the six approved
+  sub-topics, all taught at their mapped headings; CLO 4 trace holds; D-2026-0044 partition
+  authority intact; teacher-notes strategy list matches the guide.
+- Coverage: 6/6 sub-topics taught; depth budget exact (74 min); 4 figures placed (2 per topic,
+  flowchart present); concept graph consistent, all derived assessment IDs verified
+  item-by-item.
+- Assessment substance: all 10 MCQs independently solved before reading the key - the derived
+  key (1-b, 2-b, 3-b, 4-b, 5-b, 6-b, 7-a, 8-b, 9-b, 10-b) matches the supplied key in full;
+  all 10 RRQ model answers independently derived and matched; spreads exactly 5/5 on both
+  bands; every ERQ rubric sums to 20 with an Analyze-or-higher criterion.
+- Source verification (live, 2026-09-25): OpenStax Psychology 2e 10.1 confirms verbatim the
+  definition, the two forms, overjustification and Maslow, including the anxiety/arousal
+  (Yerkes-Dodson) framing claimed for U6-6; Seifert & Sutton Ch. 6 (fetched from the
+  registered URL, text extracted) confirms verbatim the deficit/growth precedence, SDT's
+  Deci-Ryan attribution AND its three needs, mastery/performance/failure-avoidant goals, the
+  three attribution dimensions, and situational vs personal interest. Herzberg (U6-3) is
+  declared no-external-source, the prose discloses its level, and its lists match the
+  canonical textbook treatment.
+- Accessibility: production build exits 0; all five pages inspected at desktop 1280x900,
+  narrow 360x780 and A4 print 794x1123 - zero overflow, zero broken/missing-alt images, zero
+  skipped headings, zero clipped elements; the one overflowing table (teacher-notes sequencing
+  table at 360px) is its own scroll container, its last column reachable by scroll, with
+  tabindex/role/aria-label from hydration; print hides nav/sidebar, forces light figures with
+  break-inside avoid; measure-figure-text clean on all 8 SVGs. 15 render artifacts saved and
+  hash-bound; PNG validity verified programmatically (in-session PNG viewing blocked, as in
+  prior rounds).
+- Readability/pedagogy: HSC register held, every term defined at first use, Sindh-localized
+  running cases, feasible activities, all five spec misconceptions addressed, nine-part
+  cycles in order.
+
+Blocking finding (repair required)
+1. False cross-reference to Unit 2's content (sources: fail): topic-01.mdx:107-110 says "The
+   two schools of Unit 2's Nawabshah scene - one with functioning fans and clean water, one
+   without - differ in hygiene", but Unit 2's Nawabshah scene (unit-02/topic-02.mdx:26-38) is
+   a physical-development contrast (height/weight, "food" vs "breeding"); no fans or
+   clean-water contrast exists anywhere in Unit 2. The spec's worked-example plan lists the
+   two-schools example without the Unit 2 attribution. Repair: describe Unit 2's scene
+   accurately or present the example as this unit's own; re-prepare the manifest; fresh
+   reviewer re-verifies.
+
+Advisory findings
+2. Misquote: "reaching one's full potential" (topic-01.mdx:76-77; bound excerpt
+   spielman2020.md:96-97) - the live source says "achieving one's full potential".
+3. Pronoun altered inside quotation marks: "it brings" vs the source's "they bring"
+   (topic-01.mdx:53-55).
+4. Deficit/growth gloss "(the lower four)... (the top)" goes beyond Seifert, whose own Table 8
+   uses a six-need scheme (topic-01.mdx:77-80).
+5. Teacher notes overstate the guide's practical component as this unit's recording assignment
+   (unit-teacher-notes.mdx:83-86; the guide's Practical Work list is course-generic).
+6. Coverage reinforcement row U6-6/"The attribution loop" is unsupported - that section has no
+   emotions content (coverage/unit-06.md:24; likely meant U6-5).
+7. Spec banks Stress, Self-Esteem and Self-Concept as Unit 6 key terms but none is taught;
+   teacher notes list دباؤ (stress) among the unit's banked terms (content-spec.md:763-766,
+   unit-teacher-notes.mdx:76-77).
+8. ERQ rubrics mark "within the word count" but the ERQ section never states one (golden Unit
+   1 states 300-400 words).
+9. Integrative ERQ 5 requires only SDT's needs and the emotions, not "the three theories and
+   the attribution loop" as the approved blueprint describes (content-spec.md:846-849).
+10. MCQ key clustering: 9 of 10 keys are option b (all correct, but gameable).
+11. Herzberg no-source declaration deviates from the D-2026-0001 "## Unverifiable sources"
+    pattern (no owner authorisation or attempts listed), and the spec's planned supplement was
+    never registered (sources/unit-06.md:27-31, content-spec.md:767-770).
+12. Bound-excerpt gaps: the 10.1 excerpt omits the anxiety/arousal passages claimed as U6-6
+    support (verified live), and spielman2020.md:8's header still says "(sections 5.1 and
+    8.1)" (Unit 5 round-1 advisory, still unfixed).
+13. Concept-graph footnote writes تعلیم میں جذبات where the table row has تعلم میں جذبات
+    (concepts/unit-06.md:33 vs :22).
+14. (Resolved) Manifest drift recorded and report rebound - see Input bundle above.
+
+Deterministic checks (real exit codes, logs under logs-agent-g3-efmp301-u6-run001/)
+validate:content 0 | check:depth-gate 0 | check:figures 0 | check:no-em-dash 0 |
+check:no-answer-keys 0 | check:docs-sync 0 | check:concept-graph 0 | check:bloom-bands 0 |
+check:source-floor 0 | figures:variants:check 0 | measure-figure-text 0 | build 0 | serve 0 |
+render-review 0 (browser/print inspection record in render-review.log; DOM measurements in
+render-measurements.log; 15 PNGs under renders-agent-g3-efmp301-u6-run001/).
+
+Limitations recorded
+- In-session viewing of saved PNGs was blocked by the environment (as in prior rounds); PNG
+  validity/non-blankness verified programmatically (png-stats.log) and the substantive checks
+  are the logged DOM-level measurements.
+- Report validated with `node scripts/review-evidence.mjs validate` (exit 0). This report is
+  advisory: it does not certify the unit, mark any gate done, or authorize acceptance.

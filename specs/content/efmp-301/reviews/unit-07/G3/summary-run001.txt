@@ -1,0 +1,75 @@
+G3 English review - EFMP-301 Unit 7 (Individual Differences and Special Needs)
+Run: agent-g3-efmp301-u7-run001 | Reviewer: agent:g3-reviewer (LongCat-2.0)
+Reviewed at HEAD 49367150 (authoring commit 0ac568a); report: agent-g3-efmp301-u7-run001.json
+Disposition: REVISE (2 blocking findings; 5 advisory, 1 of them reconciled process note)
+
+Input binding
+- The supplied manifest (committed 6d6236d7, 02:45) was stale for 4 of 95 inputs against
+  HEAD: seifert2009.md + spielman2020.md (extended by 8c15c7c9 for other units' repairs)
+  and fig-U7-4.svg/.dark.svg (label fix in 42ad6a8d). Re-verified by re-running prepare
+  and diffing: exactly those four digests differ, no paths added or removed. A later
+  commit (067c2ff2, Unit 6 round-1 repairs) changed spielman2020.md again (excerpt
+  header section list fixed - the advisory below); verified via git show that no other
+  Unit 7 bound input changed, and that one digest was updated to the current bytes.
+  Commits 88aafa6f/49367150 touched only Unit 2. This report binds the current HEAD
+  digests and reviewed the current bytes.
+
+What passed
+- Authority: guide Week 12 Chapter 7's three bullets all taught and assessed; SLO 7-1/7-2
+  CLO traces verified against the guide and the intake record.
+- Coverage: all five sub-topics have real taught passages and assessment items; depth
+  budget 73 min matches the spec; concept graph consistent.
+- Assessment correctness: all 10 MCQs solved independently before reading the key - all
+  match; RRQ mark schemes and 20-mark analytic ERQ rubrics verified (criteria sum
+  exactly); Bloom bands within the blueprint; answers section bounded and last.
+- Accessibility: 360px and A4 print inspected on real rendered pages (Playwright against
+  the fresh build). All four figures load at 328x198 with manifest alt text; every
+  content table fits (scrollWidth == clientWidth == 328; nothing to scroll); zero
+  overflowing elements in A4 print on all five pages; measure-figure-text clean on all
+  four SVGs (the fig-U7-4 fix at HEAD verified).
+- Readability and pedagogy: HSC-register prose, concrete Sindh anchors, glossed key
+  terms, complete nine-part cycles, feasible zero-material activities, misconception
+  blocks, 10 formative retrieval items above the 5-8 floor.
+
+Blocking findings (repair required)
+1. SOURCES - The learning-styles evidence claim (Topic 7.1's centre,
+   topic-01.mdx:47-51) has no carrying source. sources/unit-07.md:15 registers
+   spielman2020 for "the learning-styles claim and its evidence caution", but the bound
+   excerpt contains no learning-styles passage; the live cited page (OpenStax Psych 2e
+   Section 7.4, verified 2026-09-25) never mentions learning styles; vosniadou2001 (33
+   pp, searched in full) does not either. topic-01.mdx:171-173 sends learners to that
+   unrelated section. The claim is accurate and the repo already carries the right
+   source - rohrer2012 (Rohrer & Pashler 2012), bound for Unit 5 after its round-1
+   repair, which Unit 7 does not cite. Repair: cite Rohrer & Pashler inline at the
+   verdict, add the rohrer2012 row to sources/unit-07.md, fix the U7-1 cells in
+   coverage/unit-07.md, and re-scope the Further Reading.
+   (Positive verification: every Seifert & Sutton quotation in Topic 7.2 was confirmed
+   verbatim against the live PDF, pp. 90, 97-99.)
+2. ASSESSMENT - Blueprint spread deviation. The approved blueprint
+   (content-spec.md:932-934; intake verified 5/5 for Unit 7) requires MCQ and RRQ
+   spreads of 5/5 across topics 7.1/7.2. The bank is MCQ 4/6 and RRQ 3/7. ERQ 2/2+1
+   matches. Repair: rebalance one MCQ and two RRQs to 7.1 material, or amend the
+   blueprint through the owner.
+
+Advisory findings
+3. 9 of 10 MCQ keys are option (b) (course-wide pattern; Unit 7 the most extreme).
+   Shuffle option positions.
+4. Teacher notes overstate the guide: the wheelchair walk is the unit's instantiation
+   of the guide's generic "Group Assignments" slot, not a chapter-specific guide
+   practical (unit-teacher-notes.mdx:86-89, sources/unit-07.md:23).
+5. Coverage reinforcement row U7-4 points at the inclusion section, whose prose does
+   not revisit gifted material (the fig-U7-3 carrier and the summary do).
+6. spielman2020.md:7-8 excerpt header listed "sections 5.1 and 8.1" while the file
+   carries seven sections (same advisory as Unit 5 round 1). Repaired while this review
+   was in progress by commit 067c2ff2; the report binds the post-fix bytes.
+7. (Reconciled) The manifest drift note above.
+
+Commands run (all exit 0; logs in logs-agent-g3-efmp301-u7-run001/):
+validate:content, check:depth-gate, check:figures, check:no-em-dash,
+check:no-answer-keys, check:docs-sync, check:concept-graph, check:bloom-bands,
+figures:variants:check, measure-figure-text, build, serve, render-review.
+Rendered evidence: renders-agent-g3-efmp301-u7-run001/ (24 PNGs at 360px and A4 print
+plus render-inspection.json).
+
+This report is advisory. It does not certify the unit, mark any gate done, or alter
+tracker/translation/registry state.
