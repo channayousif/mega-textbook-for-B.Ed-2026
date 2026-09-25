@@ -1357,3 +1357,30 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   garbles, minor semantic shifts, concept-label reworks for CON:4-12/CON:4-15) also carry.
 - **Blocks:** a third G5 cycle for Unit 4; nothing else. The G3 dependency (G-2026-65) blocks
   G5 acceptance independently.
+
+---
+
+## G-2026-67 - EFMP-302 Unit 5 G5: two cycles consumed; the register batch and the G3 dependency need the owner
+
+- **Status:** open
+- **Gate:** G5 Urdu review, ADR-0019 two-cycle limit
+- **Source:** EFMP-302 Unit 5 G5 feat023-r2 (2026-09-25,
+  `specs/content/efmp-302/reviews/unit-05/G5/agent-g5-efmp302-u5-feat023-r2.json`), in the
+  G-2026-63 pattern
+- **Question:** Unit 5's feature-023 G5 review ran two advisory cycles. Cycle 1 returned revise
+  with 9 blocking Urdu-side findings; all were repaired at 219960c. Cycle 2 verified all nine
+  repairs three ways (source, served build, rendered crops) with nothing regressed, and
+  escalated on two things: (a) the G3 dependency (G-2026-65; English verified byte-identical to
+  the advisory G3 pass, 105/105 shared paths), which alone forbids a pass; (b) the register
+  criterion, which fails on the unrepaired cycle-1 advisory batch - 7 typos, 9+ gender-agreement
+  slips, 4 code-mixed "quote" verbs, شہادت for "evidence", ورک لوڈ/کام کا بوجھ alternation - all
+  advisory-severity, none inverting meaning, clearable by one proofreading pass the reviewer
+  judged beyond its two-cycle budget. The smaller semantic advisories (MCQ 3 "اصول" strengthening
+  "default"; MCQ 7 key dropping خود مختاری; the لچک elasticity-vs-resilience polysemy; the
+  carried G3 advisories mirrored in Urdu) also carry.
+- **Needed, and from whom:** the curriculum owner, to either authorise a third G5 cycle after a
+  directed proofreading pass or accept the repaired state on the two advisory reports; and to
+  resolve the G3 dependency per G-2026-65 (signed G3 or owner-accepted equivalent) before any
+  certified G5 pass.
+- **Blocks:** a third G5 cycle for Unit 5; nothing else. The Urdu content is semantically
+  verified; the register items are presentational.
