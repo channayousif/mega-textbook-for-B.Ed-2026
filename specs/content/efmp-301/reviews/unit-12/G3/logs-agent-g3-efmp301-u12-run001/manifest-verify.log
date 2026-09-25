@@ -1,0 +1,23 @@
+frozen inputs: [33m101[39m current inputs: [33m101[39m
+added since freeze: []
+removed since freeze: []
+changed since freeze: ["specs/content/efmp-301/sources/texts/seifert2009.md"]
+HEAD at review start: d837f4eb (2026-09-25 11:41:23 -0500)
+manifest prepared: 2026-09-24 19:13 (committed 6d6236d7 2026-09-25 02:45)
+drift source: seifert2009.md extended at 8c15c7c9 (2026-09-25 05:13) and b2ff0b3b (2026-09-25 11:25)
+drift diff 0d8f9067..HEAD on seifert2009.md: additions only, 0 deletions (verified)
+added sections labelled: used by Unit 3 / Unit 2 / Unit 4 / Unit 9 - none for Unit 12
+skill_digest frozen: eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b | current recomputation matches (validateReport check)
+
+Final drift check at HEAD f1d20a72 (2026-09-25 12:49:52 -0500), after mid-review
+commits 45fe8f23 (G2 evidence refresh), 3a31f523 (Unit 11 G3 round-1 repairs) and
+f1d20a72 (Unit 11 G2 refresh):
+- git diff d837f4eb..f1d20a72 over every unit-12 bound path (docs unit-12 dir,
+  coverage/sources/figures/concepts unit-12 files, content-spec.md, sources/texts/,
+  unit-12 figure assets, style guide, review skill/agent) is EMPTY: no unit-12
+  bound input changed during the review.
+- The only input still differing from the frozen manifest is
+  specs/content/efmp-301/sources/texts/seifert2009.md (the pre-review drift
+  described above; unchanged since d837f4eb).
+- The report input_manifest was recomputed at f1d20a72 and the report validates
+  against it (node scripts/review-evidence.mjs validate, exit 0).

@@ -29,4 +29,5 @@ and learning. Ask children thought-provoking questions and give them problems to
 
 Used for: the developmental-differences framing behind Unit 2's rate principle and
 matched teaching (U2-2, U2-6, U2-10); Unit 1's learner-difference material (U1-8, U1-9,
-U1-13, U1-14, already cited there).
+U1-13, U1-14, already cited there); Unit 12's course-whole reading of the learning
+principles (U12-5).
