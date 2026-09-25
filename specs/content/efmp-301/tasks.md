@@ -86,21 +86,21 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 9 | G6 assets | ▢ | | |
 | Unit 9 | G7 publish | ▢ | | |
 | Unit 10 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
-| Unit 10 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-10/G2/20260924T232314408Z-gates.json |
+| Unit 10 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-10/G2/20260925T000405819Z-gates.json |
 | Unit 10 | G3 en-review | ▢ | | |
 | Unit 10 | G4 ur-translation | ▢ | | |
 | Unit 10 | G5 ur-review | ▢ | | |
 | Unit 10 | G6 assets | ▢ | | |
 | Unit 10 | G7 publish | ▢ | | |
 | Unit 11 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
-| Unit 11 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-11/G2/20260924T234227520Z-gates.json |
+| Unit 11 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-11/G2/20260925T000408715Z-gates.json |
 | Unit 11 | G3 en-review | ▢ | | |
 | Unit 11 | G4 ur-translation | ▢ | | |
 | Unit 11 | G5 ur-review | ▢ | | |
 | Unit 11 | G6 assets | ▢ | | |
 | Unit 11 | G7 publish | ▢ | | |
 | Unit 12 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
-| Unit 12 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-12/G2/20260924T235949586Z-gates.json |
+| Unit 12 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-12/G2/20260925T000411691Z-gates.json |
 | Unit 12 | G3 en-review | ▢ | | |
 | Unit 12 | G4 ur-translation | ▢ | | |
 | Unit 12 | G5 ur-review | ▢ | | |
