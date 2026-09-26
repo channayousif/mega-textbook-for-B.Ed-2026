@@ -1,0 +1,67 @@
+# Urdu figure geometry - browser-measured with the production Noto Nastaliq Urdu webfont
+fontLoaded: true
+Method: each .ur.svg inlined into a same-origin HTML wrapper carrying the site webfont; every <text> getBBox measured against the 780x470 viewBox, the mirrored dividers, every other text element, and each marker path against its marker viewBox. Nastaliq bboxes are ~29-31px tall, so adjacent-line bbox interleaving (oy 11-14) indicates crowding, not necessarily ink collision; same-baseline pairs and viewBox overruns are hard defects.
+
+## fig-U10-1  (dividers 672/418/204; ink ["M 768 70H768V74H12z"])
+text-pair bbox overlaps: 22
+  overlap: "کیا کام" [x=532] vs "آتا ہے" [x=530] ox=31 oy=12
+  overlap: "کیا اسے" [x=295] vs "چاہئے" [x=298.5] ox=26 oy=11
+  overlap: "گائیڈ کا نام" [x=87.5] vs "لیا استعمال" [x=83.5] ox=44 oy=12
+  overlap: "نئی زمین تیزی سے طے؛" [x=570] vs "مشترکہ ڈھانچہ" [x=609] ox=51 oy=13
+  overlap: "سننے کی استقامت؛" [x=334] vs "استاد کی تیاری" [x=350] ox=56 oy=13
+  overlap: "نئے یونٹ کا" [x=146] vs "نقشہ متعارف کروانا" [x=114] ox=46 oy=13
+  overlap: "عمل کو دیکھنا؛" [x=606] vs "دلچسپی جگانے والا حیرت" [x=562] ox=54 oy=13
+  overlap: "مواد؛ ساٹھ شاگردوں تک" [x=310] vs "نظر" [x=389] ox=17 oy=13
+  overlap: "کیتلی اور ٹھنڈی" [x=131] vs "پلیٹ" [x=169] ox=23 oy=13
+  overlap: "سوچ بلند آواز میں؛ جماعت" [x=552] vs "کے خیال سننا" [x=605] ox=55 oy=13
+  overlap: "ایسا سوال جو بحث کے قابل ہو؛" [x=274] vs "ایسے اصول جو گفتگو محفوظ رکھیں" [x=278] ox=128 oy=13
+  overlap: "اسٹاف روم کا واقعہ" [x=112] vs "کھلم کھلا بحث" [x=137] ox=55 oy=14
+  overlap: "سوال-" [x=706.1] vs "جواب" [x=706.5] ox=27 oy=13
+  overlap: "سمجھ جانچنا؛" [x=612] vs "قدم بہ قدم سوچ نظر آتی ہے" [x=548] ox=48 oy=13
+  overlap: "ہاں اور نہ سے آگے" [x=329] vs "سوال؛ وقفہ" [x=361] ox=45 oy=13
+  overlap: "نئی مہارت کی" [x=138] vs "رہنمائی مشق" [x=141] ox=51 oy=13
+  overlap: "خیالات کی مشق؛ سماجی" [x=565] vs "فہم کی تعمیر" [x=615] ox=45 oy=13
+  overlap: "ایسا کام جسے گروپ چاہئے؛" [x=298] vs "کردار؛ نگرانی" [x=358] ox=48 oy=13
+  overlap: "بند بانسری والا" [x=138] vs "تجربہ" [x=173] ox=19 oy=13
+  overlap: "حقیقی مواد پر تجزیہ؛" [x=585] vs "حقیقی صورتحال میں منتقلی" [x=562] ox=75 oy=13
+  overlap: "حقیقی واقعہ؛ وقت" [x=335] vs "اس پر کام کرنے کا" [x=331] ox=71 oy=13
+  overlap: "دو اسکولوں" [x=148] vs "والا یونٹ 7 کا واقعہ" [x=118.3] ox=44 oy=13
+
+## fig-U10-2  (dividers ; ink ["M 780 0L 770 5L 780 10z"])
+marker a10 viewBox=[0,0,10,10] pathBBox={"x":770,"y":0,"w":10,"h":10} insideViewBox=false
+VIEWBOX OVERFLOW: "کی خدمت کرتا ہے؟" bbox x=-2.5 y=266 w=90 h=31 right=87.5
+text-pair bbox overlaps: 9
+  overlap: "1. مقصد" [x=372.3] vs "آخر تک شاگرد کیا کر سکنے چاہئے؟" [x=323.5] ox=35 oy=9
+  overlap: "آخر تک شاگرد کیا کر سکنے چاہئے؟" [x=323.5] vs "فعل طریقے کے خاندان کا نام بتاتا ہے" [x=310] ox=136 oy=12
+  overlap: "2. حدود" [x=374.3] vs "ساٹھ شاگرد، ایک بورڈ، چالیس منٹ، اس جماع" [x=258] ox=31 oy=9
+  overlap: "ساٹھ شاگرد، ایک بورڈ، چالیس منٹ، اس جماع" [x=258] vs "- وہ مواد جس میں ڈیزائن کام کرتا ہے" [x=311.9] ox=156 oy=11
+  overlap: "3. طریقہ" [x=372.3] vs "آخر میں چنا جائے، مقصد کو" [x=333.5] ox=35 oy=9
+  overlap: "آخر میں چنا جائے، مقصد کو" [x=333.5] vs "حدوں کے اندر فِٹ کرنے کے لیے" [x=316.5] ox=116 oy=11
+  overlap: "جانچ: کیا" [x=22.8] vs "چنا ہوا طریقہ" [x=12.5] ox=35 oy=11
+  overlap: "چنا ہوا طریقہ" [x=12.5] vs "اب بھی مقصد" [x=7] ox=55 oy=11
+  overlap: "اب بھی مقصد" [x=7] vs "کی خدمت کرتا ہے؟" [x=-2.5] ox=65 oy=11
+
+## fig-U10-3  (dividers ; ink ["M 780 0L 770 5L 780 10z"])
+marker a103 viewBox=[0,0,10,10] pathBBox={"x":770,"y":0,"w":10,"h":10} insideViewBox=false
+VIEWBOX OVERFLOW: "اُس نتیجے کے لیے کرتی ہے؟" bbox x=-17.5 y=246 w=116 h=31 right=98.5
+text-pair bbox overlaps: 9
+  overlap: "1. نتیجہ" [x=376.6] vs "آخر تک شاگرد کیا کر سکنے چاہئے؟" [x=323.5] ox=28 oy=10
+  overlap: "آخر تک شاگرد کیا کر سکنے چاہئے؟" [x=323.5] vs "ایک جملہ، ایک فعل، ایک کسوٹی" [x=321.5] ox=135 oy=12
+  overlap: "2. شہادت" [x=367.1] vs "کیا دکھائے گہ کہ نتیجہ حاصل ہوا؟" [x=324] ox=46 oy=10
+  overlap: "کیا دکھائے گہ کہ نتیجہ حاصل ہوا؟" [x=324] vs "جانچ سرگرمی سے پہلے بنائی جائے، بعد میں " [x=294] ox=137 oy=11
+  overlap: "3. سرگرمی" [x=367.6] vs "شہادت پیدا کرنے کے لیے چنی جائے" [x=310.5] ox=45 oy=10
+  overlap: "شہادت پیدا کرنے کے لیے چنی جائے" [x=310.5] vs "- آغاز، وضاحت، مشق، اختتام" [x=325.4] ox=132 oy=11
+  overlap: "آگے کی جانچ:" [x=12.3] vs "کیا یہ سرگرمی" [x=14] ox=54 oy=11
+  overlap: "کیا یہ سرگرمی" [x=14] vs "وہی شہادت پیدا" [x=5] ox=57 oy=11
+  overlap: "وہی شہادت پیدا" [x=5] vs "اُس نتیجے کے لیے کرتی ہے؟" [x=-17.5] ox=70 oy=11
+
+## fig-U10-4  (dividers 568/236; ink ["M 768 74H768V78H12z"])
+text-pair bbox overlaps: 7
+  overlap: "کیسا" [x=393.5] vs "دکھتی ہے" [x=382] ox=22 oy=11
+  overlap: "وہ یونٹ جس" [x=96] vs "نے سکھایا" [x=102] ox=45 oy=11
+  overlap: "نتیجے کا جملہ سرگرمیوں" [x=468] vs "کی فہرست سے پہلے" [x=475] ox=84 oy=11
+  overlap: "شہادت، تشریح، عمل،" [x=461] vs "دن نہ کہ ہفتے" [x=504] ox=52 oy=11
+  overlap: "ایک وقت میں ایک تقاضا؛" [x=444] vs "مرحلے باہر لکھے ہوئے" [x=470] ox=86 oy=11
+  overlap: "تین ضرورتیں پوری کرتی،" [x=619.5] vs "عزت رکھتی" [x=644.5] ox=47 oy=11
+  overlap: "انتخاب، دکھنے والی پیش رفت، سلام،" [x=401] vs "ذاتی بات" [x=516] ox=40 oy=12
+
