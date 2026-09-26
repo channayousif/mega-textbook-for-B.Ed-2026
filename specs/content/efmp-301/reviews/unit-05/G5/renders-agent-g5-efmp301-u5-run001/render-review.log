@@ -1,0 +1,47 @@
+### render-review: EFMP-301 Unit 5, Urdu mirror (/ur/semester-1/efmp-301/unit-05)
+### reviewer: agent:g5-reviewer  run: agent-g5-efmp301-u5-run001
+### host: this worktree, 2-core box; load checked before build (0.62 -> safe; no concurrent build)
+### rendered input identity: git 022-author-efmp-301 @ f945c377 (clean tree; unit-05 EN last touched at
+###   a1411cdc "Unit 5 G3 round-1 repairs", UR mirror at a1411cdc; G5 manifest verified 110/110 digests)
+
+Build and serve
+- npm run build -> exit 0 (logs-agent-g5-efmp301-u5-run001/build.log; "Generated static files in build/ur")
+- node scripts/render-inspect.mjs EFMP-301 5 --locale ur --out <this dir> --port 4617 -> exit 0, defects: 0
+  (logs-agent-g5-efmp301-u5-run001/render-inspect.log; chrome-devtools and playwright MCP browsers were
+  unavailable on this host - no /opt/google/chrome - so the repo's own Playwright/Chromium 149.0.7827.0
+  driver was used, the same one the G3 runs used)
+
+A. Desktop 1280x900 (chromium, real browser, served build/ur)
+- All 5 pages load; headings have no skipped levels; every figure <img> has alt text; no broken or
+  unserved images; the visible (light) figure variant is shown, the dark variant is the theme-switched
+  duplicate (natural=0x0 while hidden, as designed).
+- Reviewer visually inspected desktop-topic-01.png, desktop-topic-02.png, desktop-unit-assessment.png:
+  Nastaliq renders legibly (self-hosted webfont), body is RTL, the draft "untranslated" badge shows.
+- fig-U5-1 renders MIRRORED for RTL as the style guide v4.1 requires: the Spearman panel (single large
+  circle with "g") sits on the RIGHT, the Gardner panel (eight small circles) on the LEFT. The in-page
+  alt text, however, says the opposite (Spearman left / Gardner right) - recorded as a finding.
+- fig-U5-2 renders as a four-row table; the bottom "history" row is visibly in LATIN SCRIPT while the
+  rest of the table is Urdu - the untranslated-English finding, confirmed on the rendered page.
+- fig-U5-3 and fig-U5-4 render on topic-02; the "divergent thinking" node label reads "واگرا سوچ",
+  which is not a meaningful Urdu word (prose term: بکھری سوچ) - recorded as a finding.
+
+B. Narrow 360x780
+- docHorizontalOverflow=0px on all 5 pages; every table fits (client=scroll, scroller=NONE); both figure
+  containers per topic fit; no spill. narrow360-topic-01.png visually inspected: single-column reflow.
+
+C. A4 print emulation (794px, print media)
+- clippedElems=0 on all 5 pages; all four print figures fit (w=762 right=778); the assessment's answer
+  sections and rubric tables are present in the print PDFs (print-a4-*.pdf).
+
+D. SVG text geometry (measured in-browser, getBBox)
+- All 8 Urdu SVGs (fig-U5-1..U5-4 .ur.svg and .ur.dark.svg): no text past the viewBox, no wordmark
+  overprint. The known clipping defect family from sibling units is NOT present here.
+
+Supplementary close-up capture (figure-closeups.mjs): attempted twice, could not run to completion
+because the Bash safety classifier was in a transient outage window; the full-page renders above, the
+geometry measurements and the SVG source inspection stand as the figure evidence. No finding rests on
+the missing close-ups alone.
+
+Conclusion: rendering, fonts, RTL layout, narrow viewport and print are sound; the figure defects that
+matter are content defects inside the SVGs (untranslated English rows, garbled label, stale desc), not
+geometry defects.
