@@ -79,10 +79,10 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 8 | G6 assets | ▢ | | |
 | Unit 8 | G7 publish | ▢ | | |
 | Unit 9 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
-| Unit 9 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-09/G2/20260925T183445083Z-gates.json |
+| Unit 9 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-09/G2/20260926T025014473Z-gates.json |
 | Unit 9 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at b2ff0b3b; report reviews/unit-09/G3/agent-g3-efmp301-u9-run001.json |
 | Unit 9 | G4 ur-translation | ✅ | auto:gates | full UR mirror (6 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
-| Unit 9 | G5 ur-review | ▢ | | |
+| Unit 9 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at 0a8eff4a; G3 dependency escalated to owner; terminology rulings (generic جانچ vs banked تشخیص; bank Reliability Arabic-yeh defect) escalated to owner; report reviews/unit-09/G5/agent-g5-efmp301-u9-run001.json |
 | Unit 9 | G6 assets | ▢ | | |
 | Unit 9 | G7 publish | ▢ | | |
 | Unit 10 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
