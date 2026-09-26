@@ -1,0 +1,9 @@
+verify-manifest - G5 run001, EFMP-301 Unit 10
+worktree HEAD at verification: 7ef23eccf4b43a9e80975c1e84660269022e0829 (moved from 8e974084 during the review: parent committed sibling Unit 8 G5/G2 records f688322d + 7ef23ecc, touching only reviews/unit-08/** and the excluded course tasks.md)
+prepared manifest: specs/content/efmp-301/reviews/unit-10/G5/manifest.json (107 inputs)
+recomputed with scripts/lib/review-evidence.mjs inputManifest (frontmatter lifecycle normalization + content-spec unit slice)
+entries: 107  digest mismatches: 0  missing: 0  extra: 0
+skill_digest: prepared=02797f90adddd8f4bc50c6e80c6e68d8f6f0219d68d297aabcc8b5443bace5a8 recomputed=02797f90adddd8f4bc50c6e80c6e68d8f6f0219d68d297aabcc8b5443bace5a8 match=true
+required_criteria: ["authority","sources","coverage","assessment","accessibility","completeness","semantics","terminology","register","rtl"]
+note: a raw sha256sum comparison without the module normalization shows 11 apparent mismatches (10 unit MDX files + content-spec.md); all resolve under the contract normalization (translation_status lifecycle lines; content-spec unit-10 slice). Bundle verified intact at both 8e974084 and 7ef23ecc.
+exit_code: 0
