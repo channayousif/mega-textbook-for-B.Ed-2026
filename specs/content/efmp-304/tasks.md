@@ -12,7 +12,7 @@ G2 en-draft cleared by deterministic gates.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-01/G2/20260926T113956586Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-01/G2/20260926T215042447Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | |
 | Unit 1 | G4 ur-translation | ▢ | | |
 | Unit 1 | G5 ur-review | ▢ | | |
