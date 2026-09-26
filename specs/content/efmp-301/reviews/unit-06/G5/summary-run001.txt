@@ -1,0 +1,103 @@
+G5 Urdu review - EFMP-301 Unit 6 (Motivation and Emotion)
+Run: agent-g5-efmp301-u6-run001 | Reviewer: agent:g5-reviewer (LongCat-2.0, fresh session)
+Report: specs/content/efmp-301/reviews/unit-06/G5/agent-g5-efmp301-u6-run001.json
+Disposition: REVISE (advisory under ADR-0019; 8 blocking, 1 uncertain, 6 advisory findings)
+
+Input bundle
+- The prepared manifest (specs/content/efmp-301/reviews/unit-06/G5/manifest.json) was verified
+  against the current tree with the evidence library's own normalisation (frontmatter
+  translation_status lines normalised; content-spec.md sliced to Unit 6): 108/108 inputs match,
+  0 drifted (logs/verify-manifest.log). An initial raw-byte comparison falsely showed 11
+  mismatches; the normalised comparison is the authoritative one and is clean.
+- Urdu authored by the G4 run (PHR 0068, commit 585650d4) with the G3-repair mirror at commit
+  067c2ff2. This session neither authored nor translated the material.
+
+What passed
+- Coverage: all 6 sub-topics taught in Urdu at the mirrored headings; all five files complete,
+  no stubs, no omitted or added sections; no untranslated English in the MDX prose.
+- Sources: citations retained inline; the two bound excerpts support the translated quotations;
+  the Herzberg no-external-source disclosure is mirrored; the G3 round-1 repairs (the
+  two-Sindh-schools example, "achieving", the teacher-notes practical-work rewording) are all
+  correctly mirrored in Urdu (verified against the 067c2ff2 diff).
+- Assessment: all 10 Urdu MCQs independently answered before reading the key - derived key
+  1-b,2-b,3-b,4-b,5-b,6-b,7-a,8-b,9-b,10-b matches the Urdu and English keys exactly; option
+  order preserved; RRQ model answers, ERQ stems, all five rubric tables (identical marks) and
+  every cognitive-demand tag match.
+- Accessibility: build exit 0; all five Urdu pages rendered at 1280x900, 360x780 and A4 print
+  with zero overflow, zero console errors, dir=rtl, Urdu alt text on all four figures, dark
+  variants wired, print styles correct (nav/sidebar hidden, light figures, break-inside avoid).
+  Noto Nastaliq Urdu loads for body text.
+- All six mandatory gates pass: validate:content, check:depth-gate, check:figures,
+  check:no-em-dash, check:no-answer-keys, check:docs-sync (exit 0, logs bound).
+
+Blocking findings (repair required)
+1. Terminology bank departures for the unit's core terms: prose uses حوصلہ/اندرونی حوصلہ/
+   بیرونی حوصلہ for Motivation/Intrinsic/Extrinsic (bank: محرک/باطنی محرک/خارجی محرک) and
+   گھبراہٹ for Anxiety (bank: اضطراب - which the unit's own fig-U6-4 and concept graph use);
+   Working Memory as کام کرنے والی یادداشت (bank pair: عامل یادداشت / فعال یادداشت). The
+   teacher notes' own banked-terms line contradicts the prose. Bank conflicts are owner-resolved
+   per the style guide: conform the prose to the bank, or get an owner ruling and update the
+   bank first.
+2. شاگرڈ misspelled for شاگرد 15 times across topic-01 (4), topic-02 (7), unit-assessment (3)
+   and teacher-notes (1). Known repo-wide defect family, already repaired in sibling units.
+3. topic-02.mdx:50: "your method missed the carrying - here is the fix" mistranslated as
+   "تمہارے طریقے نے قرض لینا چھوڑ دیا: یہ درست ہے" (your method stopped taking a loan: this
+   is correct) - the arithmetic "carrying" became "taking a loan"; the example is meaningless.
+4. fig-U6-3.ur.svg: both loop arrows strike through the label "محنت، قابلیت، قسمت، کام کی
+   مشکل" (browser-measured bbox x 317.1-518.0, y 125.3-140.1; paths M 580 137H245 and
+   M 240 137H570); the second arrow also points the wrong way. Correct mirrors: M580 137H535
+   and M240 137H210.
+5. fig-U6-4.ur.svg + .ur.dark.svg: the curiosity row's teacher-move cell is untranslated
+   English ("let questions live; do not answer / the ones nobody asked") - the pre-42ad6a8d
+   English label; the Urdu variants predate that English fix and were never refreshed.
+6. fig-U6-2.ur.svg and fig-U6-4.ur.svg: grid lines misplaced by incomplete RTL mirroring
+   (only each path's first coordinate was mirrored). fig-U6-4: spurious divider x=600 strikes
+   six cell texts of the "یہ تعلم کے ساتھ کیا کرتا ہے" column; the trigger/move column
+   boundary is missing. fig-U6-2: doubled divider at 624/632; the مثال/حد boundary missing.
+   Correct mirrors: fig-U6-2 632/360/156, fig-U6-4 628/388/180.
+7. fig-U6-1.ur.svg: the rotated axis label kept the English left-side placement while its
+   arrow was mirrored to the right edge; the label is detached by ~620px (style-guide v4.1).
+8. index.mdx key_terms declares "Formative Assessment / صورت بہبود جائزہ": wrong flagship
+   concept for a Motivation unit and non-banked Urdu (bank: تشکیلی تشخیص).
+   check:pipeline-gate's terminology check will fail this entry once translation_status is
+   reviewed.
+
+Uncertain finding (owner escalation)
+9. G3 dependency not satisfied: the only G3 evidence is advisory run001 (disposition revise,
+   one OPEN blocking finding) against the PRE-repair English; the English was repaired at
+   067c2ff2 with no round-2 verification, and no signed/accepted G3 exists for the current
+   inputs. Escalated to the owner per the GQUR-300 PR #65 precedent; the full comparison
+   against the current bound English was nevertheless performed.
+
+Advisory findings
+10. Known defect family: منی روبرک/روبرکس for the banked معیارِ جانچ (topic-01:116,
+    topic-02:108, assessment:3,147); صورت بہبود for formative (teacher-notes:65).
+11. Unify figure/prose/concept-graph terms: خود ارتقا vs خود کی تکمیل (self-actualization);
+    نسبت دہی vs اسناد (attribution); حفظانِ صحت عوامل vs صفائی عوامل (hygiene); مقاصد vs
+    ہدف (goals); two constructions of overjustification.
+12. سطریں (lines) for Maslow's "levels" (should be سطحیں) at topic-01:48,90,102; رجحان
+    (tendency) for "aptitude" at topic-02:46.
+13. Register: "یونٹ کا دستخط بدلنا" garbles "the unit's signature reframe" (teacher-notes:51);
+    "ظاہرے کا" non-word (topic-02:38,42); "بے وجہ کوشش کے بغیر..." garbles "pupils with no
+    reason to try" (topic-01:60); informal loanwords لیور/فٹ/ڈیٹے.
+14. Minor drifts: چھینا for "starved" (topic-01:120, assessment:107); "triage" dropped from
+    the unit summary; RRQ-10 drops the "keep" element; fig-U6-4 "high-stakes" as "زیادہ نمبر
+    والا" and "موقوفی" for situational; بنیا grammar slip; empty <text> in fig-U6-3; ڈھونھنے
+    typo.
+15. Out of unit scope, for the owner: Urdu h1/h2 headings resolve to the Latin system-ui stack
+    on every Urdu page (verified on Units 3/5/6), so headings use a system Arabic-script
+    fallback while body text is Nastaliq. Also pre-existing English-figure defects: fig-U6-2.svg
+    divider x=624 crosses a cell text and both English tables' footers are crossed by faint
+    dividers.
+
+Evidence
+- Logs under logs-agent-g5-efmp301-u6-run001/ (17 command/inspection logs + harnesses),
+  renders under renders-agent-g5-efmp301-u6-run001/ (19 PNGs: desktop 1280, narrow 360, A4
+  print, dark viewport, four figure close-ups), all SHA-256-bound in the report's
+  evidence_manifest. Render inspection ran on the production build served at localhost:3217
+  (Chromium via playwright-core); in-session PNG viewing is blocked in this environment (as in
+  prior rounds), so figure-defect conclusions rest on browser-measured geometry
+  (figure-geometry.log, rotated-label.log) with the PNGs as human-viewable evidence.
+
+This report is advisory under ADR-0019. It does not certify the unit, mark any gate done, or
+alter translation_status, tracker rows, the terminology bank or any prior report.

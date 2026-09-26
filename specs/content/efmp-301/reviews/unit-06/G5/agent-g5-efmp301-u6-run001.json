@@ -1,0 +1,439 @@
+{
+  "schema_version": 1,
+  "course_code": "EFMP-301",
+  "unit_no": 6,
+  "stage": "G5",
+  "disposition": "revise",
+  "reviewer_id": "agent:g5-reviewer",
+  "author_run_id": "claude-code:022-author-efmp-301:585650d4",
+  "reviewer_run_id": "agent-g5-efmp301-u6-run001",
+  "model": "LongCat-2.0",
+  "started_at": "2026-09-25T23:05:00Z",
+  "completed_at": "2026-09-25T23:55:00Z",
+  "skill_digest": "02797f90adddd8f4bc50c6e80c6e68d8f6f0219d68d297aabcc8b5443bace5a8",
+  "g3_report": "specs/content/efmp-301/reviews/unit-06/G3/agent-g3-efmp301-u6-run001.json",
+  "input_manifest": {
+    ".claude/agents/g5-reviewer.md": "b63596b668dd8814fc7b34d59326171f7c789b8dc4e631e30c2c19fe05f2c68a",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g5.md": "7cbdf9929e6073b71663ec8951a9a42d1e8e683af479434f8409c81002d33159",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "f1d7f063cc2c826693a3d8428fb5d3ee45455fdb7906ebc5adadee8b9a434d47",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-1/efmp-301/course-overview.mdx": "31a0f660e90abd8b0d60d273e057f73d0a8a14c61d18596cfeb61b4b9c6aa169",
+    "docs/semester-1/efmp-301/unit-06/_category_.json": "218da8d16273f9a90e98bcb6f051c6947497d22e61e8c994deece833a228b95b",
+    "docs/semester-1/efmp-301/unit-06/index.mdx": "5a89def198967045911bbcb36354c47b3b5b384d8a7335905c2d2b06100721c9",
+    "docs/semester-1/efmp-301/unit-06/topic-01.mdx": "f56e3fd437e876145bbbfc42a5c3fd31897217b95a1edd40b480ce5e7dc7fc99",
+    "docs/semester-1/efmp-301/unit-06/topic-02.mdx": "d6f7b02f6d3362dd77c00122f7cdc30939229f61baee8515b1f0be4a31c9924a",
+    "docs/semester-1/efmp-301/unit-06/unit-assessment.mdx": "0b58612a6c65b986cd1b16c7cea15494d66cffd9bacdcb6b0d59f08c47bf41a4",
+    "docs/semester-1/efmp-301/unit-06/unit-teacher-notes.mdx": "9946f991fe42a964ee10be096e9193faacdf4257030717324b0f292e01cc29e8",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-06/index.mdx": "1cf3e0c9c9fc3e566c4701aa2b586b3341d75d9057fe4a89ce7ba899201937bd",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-06/topic-01.mdx": "77c9a20ac47247cb03293c864baebd9bc1c1df3f663d0862b8baf23457c85c09",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-06/topic-02.mdx": "64791aedccbfca1f83566fe2c02a655a983e963ed2814491f3449be08ffaa73b",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-06/unit-assessment.mdx": "c3ddf8211c73dd3c4186926d35904caa6c7e9a33f69975c584b2d48e3cab7008",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-06/unit-teacher-notes.mdx": "a76080b30efa1c1d993d0f3ad98d3b48f709502469879935ffe8ee77230239df",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "41b698f8cbbb12f4030d6893083a5c36e4a19848b5ddb86206e5ba72847b8b13",
+    "scripts/check-no-answer-keys.mjs": "f38d60e5360e0c29f2dae02001195690f3b95e0ad2d7ae1a3c03a0d09c053f0d",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "bb614c625f7bf397ce51a317bdb8901711c00fa009d4ad0a506c5096e5b9ddd2",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "77f03816f68663621059f17745109fdde9b103c555f707e0c62d5ff56d2a4cd9",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "973496faae3366d13e8cdd3ba8d68edf7bd3745bdc6928311ee03c55f24b18b2",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/efmp-301/concepts/unit-06.md": "0f8abf5ebd1d216b422d417f560735646d26f0731c97df06281e440b5f81106e",
+    "specs/content/efmp-301/content-spec.md": "0cfbb433b6c0929b06023d3eab871124234ffc12ef91e3f56a0de3a2eece33ef",
+    "specs/content/efmp-301/coverage/unit-06.md": "4b1fd051579de3f27af07da74df54087571aebc98a78373ca81bc1161725094e",
+    "specs/content/efmp-301/figures/unit-06.md": "d48edbd4c6a4e342fd338054143898e8076aa7c9e027343b4490548feda10d9c",
+    "specs/content/efmp-301/intake-2/evaluation.md": "c3c6f9b2dc3f4f9246640b413a535b87e57c1f90b3c13414aa72582a30c7215d",
+    "specs/content/efmp-301/intake-2/manifest.json": "e5a0a1af3db56f0c88860b8c62a9b7e14088eae96c913252a8db2c4877d58996",
+    "specs/content/efmp-301/sources/texts/seifert2009.md": "6cc9d1e3987c7bdcb10c13cf47804dfc1e2aafbebd046a99b448609822795eb7",
+    "specs/content/efmp-301/sources/texts/spielman2020.md": "1c9a2d86f42f48478ceba6b24fa135fa3c88e8f880aaaa1377f13741ee09be5e",
+    "specs/content/efmp-301/sources/unit-06.md": "8e2e7ee9759a623c741d8ae1303de439c5e1acd09496d3b575b388b9c193218d",
+    "specs/content/style-guide.md": "db96c9b33b0fb9522986462a0b519620c3c1d7602a046d7b90e638f643da4610",
+    "specs/content/terminology.csv": "ad917e28cde688eb72bd92226c2326e2d23da3da80fc53ea8c812b1a47f73337",
+    "static/img/figures/efmp-301/unit-06/fig-U6-1.dark.svg": "e3fb3d131528abd2290b90d2c7b37cd6b3ead5813a4b24207fa5e40fec5592b5",
+    "static/img/figures/efmp-301/unit-06/fig-U6-1.svg": "012830714ce3e4b7b95fcb4eccbd2db4f053e68e37fc122337a100e93a46d0dd",
+    "static/img/figures/efmp-301/unit-06/fig-U6-1.ur.dark.svg": "50d405f6ff921341238c8d3d4ce9d89d213219a90dbc11130a0ca69696b92dee",
+    "static/img/figures/efmp-301/unit-06/fig-U6-1.ur.svg": "56687ba9a23495e6f76aa0cf0028ac8282139f13ca3f3e49aec1c321c8a1fc40",
+    "static/img/figures/efmp-301/unit-06/fig-U6-2.dark.svg": "92000f067862cac68587ef51b8547d5fccc23b764ebcfaf2c9002dbbdae22c81",
+    "static/img/figures/efmp-301/unit-06/fig-U6-2.svg": "0ae48d4f07b98aeac9afb5c39939794fe650d709d2f909d073874725272670b4",
+    "static/img/figures/efmp-301/unit-06/fig-U6-2.ur.dark.svg": "ce5be464efe4d7d0cab32082ec943472360444767dbf9a9e7110d599066c210c",
+    "static/img/figures/efmp-301/unit-06/fig-U6-2.ur.svg": "b46841b1cebc24613ac26cb94ae0c42a95b212d3298dedcb97b65c324811fd3e",
+    "static/img/figures/efmp-301/unit-06/fig-U6-3.dark.svg": "9f39d5963ba457ce7265379c6002af9bf8ed45663f73bd68c2ce4bc9ea58b058",
+    "static/img/figures/efmp-301/unit-06/fig-U6-3.svg": "0c175f24a005883d1d1bca90dd6c86dbb423724c037064c957bf24593b3fe2ca",
+    "static/img/figures/efmp-301/unit-06/fig-U6-3.ur.dark.svg": "c7d04aaed8e9307ce15a3dc3595bd3a84549c11edf67f4de40f96ea691278bfe",
+    "static/img/figures/efmp-301/unit-06/fig-U6-3.ur.svg": "b55c32ec91f703f7d6ab55282bb32c6e5fdd0b45d328f140cfefd6708ddb23b6",
+    "static/img/figures/efmp-301/unit-06/fig-U6-4.dark.svg": "bc3b1a47419123917def8e66ef0bd427df2b5fc75b1c994eea20cba28f44b61b",
+    "static/img/figures/efmp-301/unit-06/fig-U6-4.svg": "dccdacea338afa22d9629367ec8210566124a538ee54122e64414e76de59118c",
+    "static/img/figures/efmp-301/unit-06/fig-U6-4.ur.dark.svg": "261ed6afc9992aca9817dfdeef011ce16ab7d4a136822c0176715890be0dbc92",
+    "static/img/figures/efmp-301/unit-06/fig-U6-4.ur.svg": "518d40e968082d357e33c0436ab1eb38ea26d708ffbbd099b26a08f512fc8ca8"
+  },
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "unverified",
+      "evidence": [
+        "Direct check performed and holds: the course guide (Scheme-and-Course-guides/extracted-text/1st 2026.txt, EFMP-301 Chapter 6 / Week 11) names Maslow, Herzberg, Self-Determination Theory, achievement motivation and the role of emotions in learning; all five are taught in Urdu at the mirrored headings (UR topic-01.mdx:46,54,64; topic-02.mdx:36,44,54) and the SLO clo_refs are unchanged in every UR file.",
+        "Dependency NOT satisfied: the only G3 evidence is the advisory run001 report (disposition revise, one OPEN blocking finding) prepared against the PRE-repair English (manifest at cff48358, 2026-09-24 19:11); the English was repaired afterwards at commit 067c2ff2 (2026-09-25 08:48) and no round-2 G3 verified the repair. No accepted, signed G3 report exists for the current English inputs. Recorded as an uncertain finding for owner escalation (GQUR-300 PR #65 precedent), per the parent instruction; the full Urdu-vs-current-English comparison was nevertheless performed against the bound bytes."
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "pass",
+      "evidence": [
+        "Both bound source excerpts support the translated claims: spielman2020.md:86-97 (definition, intrinsic/extrinsic, overjustification, Maslow \"achieving one's full potential\") and seifert2009.md:174-185 (SDT, mastery/failure-avoidant goals, locus/stability/controllability, situational vs personal interest).",
+        "Citations retained inline in Urdu at UR topic-01.mdx:38,40,42,48 and topic-02.mdx:38,46,60; the Herzberg no-external-source disclosure is mirrored (UR topic-01.mdx:56 vs EN :96-98).",
+        "The G3-round-1 repairs are correctly mirrored in Urdu: \"achieving\" -> \"اپنی پوری صلاحیت حاصل کرنا\" (UR topic-01.mdx:48, changed from \"تک پہنچنا\" in 067c2ff2), the two-Sindh-schools replacement (UR topic-01.mdx:60), and the teacher-notes practical-work rewording (UR unit-teacher-notes.mdx:59); verified against the 067c2ff2 diff."
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "All 6 sub-topics of coverage/unit-06.md are taught in Urdu at the mirrored headings: U6-1 UR topic-01.mdx:36, U6-2 :46, U6-3 :54, U6-4 :64, U6-5 UR topic-02.mdx:36, U6-6 :54; reinforcement rows present (U6-1 at topic-02.mdx:36, U6-6 at :44, U6-4 at unit-assessment.mdx:24, U6-3 at unit-teacher-notes.mdx:36-41).",
+        "All five files (index, topic-01, topic-02, unit-assessment, unit-teacher-notes) are complete translations with matching section structure; no heading-only stubs found in the EN/UR alignment."
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "pass",
+      "evidence": [
+        "All 10 Urdu MCQs independently answered before reading the English key: derived key 1-b, 2-b, 3-b, 4-b, 5-b, 6-b, 7-a, 8-b, 9-b, 10-b matches the Urdu key (unit-assessment.mdx:121-130) and the English key exactly; option order preserved item-for-item; no translation leak found (distractors remain plausible in Urdu).",
+        "RRQ meanings, model answers and mark allocations match (UR unit-assessment.mdx:136-145 vs EN :174-195); ERQ stems and all five rubric tables match row-for-row with identical marks (6/7/3/4, 6/6/4/4, 5/7/4/4, 6/6/4/4, 6/7/3/4) and identical Analyze/Create tags.",
+        "Cognitive-demand tags preserved (یاد رکھنا/سمجھنا/لاگو کرنا/تجزیہ/تخلیق map to Remember/Understand/Apply/Analyze/Create) on every item.",
+        "Caveat recorded under terminology: the Urdu item text uses حوصلہ/اندرونی/بیرونی حوصلہ where the bank and the English key intend محرک/باطنی/خارجی محرک; the answers still correspond one-to-one."
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "pass",
+      "evidence": [
+        "Production build exit 0; all five Urdu pages served (HTTP 200) and rendered at desktop 1280x900, narrow 360x780 and A4 print 794x1123: zero horizontal overflow at both widths, zero console errors, dir=rtl on every page (render-review.log).",
+        "All four Urdu figures load with Urdu alt text (fig-U6-1/2/3/4 .ur.svg, naturalWidth>0); dark variants wired and displayed under [data-theme=dark] (check-dark-font.log); print emulation hides nav/sidebar, forces light figures with break-inside avoid (check-print.log).",
+        "Noto Nastaliq Urdu webfont loads and applies to body, paragraphs, list items and table cells (check-fonts-detail.log). Site-wide pre-existing condition recorded as an advisory finding: h1/h2 resolve to the Latin system-ui stack (also on Units 3/5), so headings use a system Arabic-script fallback."
+      ]
+    },
+    {
+      "id": "completeness",
+      "status": "pass",
+      "evidence": [
+        "Passage-by-passage alignment of all five file pairs found no omitted or added sections; activities, check-your-understanding, summaries, self-assessment checklists, practicum tasks, summative tasks, mini-rubrics, further reading and the full 10/10/5 bank with answers are all present in Urdu.",
+        "No untranslated English prose found in the Urdu MDX files (Latin-script sweep excluding citations, component imports, SDT/ERQ/MCQ/RRQ abbreviations and figure paths returned nothing).",
+        "Untranslated English DOES remain inside fig-U6-4.ur.svg (a figure label) - recorded under the rtl criterion, not completeness of the MDX mirrors."
+      ]
+    },
+    {
+      "id": "semantics",
+      "status": "fail",
+      "evidence": [
+        "BLOCKING: UR topic-02.mdx:50 mistranslates the feedback example \"your method missed the carrying - here is the fix\" as \"تمہارے طریقے نے قرض لینا چھوڑ دیا: یہ درست ہے\" (\"your method stopped taking a loan: this is correct\"). \"Carrying\" (arithmetic carry) became \"taking a loan\" (قرض لینا), and \"here is the fix\" became \"this is correct\"; the example is meaningless in Urdu.",
+        "Advisory drifts: \"starved\" rendered as \"چھینا\" (snatched) in UR topic-01.mdx:120 and unit-assessment.mdx:107 while the body and ERQ-1 rubric row correctly use \"بھوکا رکھا\"/\"بھوک\"; the unit summary drops \"triage\" (UR unit-assessment.mdx:24 vs EN :27); RRQ-10 model answer drops the \"keep\" element (unit-assessment.mdx:145); \"high-stakes test\" becomes \"زیادہ نمبر والا امتحان\" (high-marks exam) in fig-U6-4.ur.svg.",
+        "Verified preserved: negation, modal force, quantities (two weeks, six weeks, 250-300 words, 10/10/5 items, marks), dates (October/December/January/Week 11), comparisons, causal claims and the approach/protect loop logic all match the English across both topics and the assessment."
+      ]
+    },
+    {
+      "id": "terminology",
+      "status": "fail",
+      "evidence": [
+        "BLOCKING: core-term departures from the frozen bank. terminology.csv:8-10 banks Motivation=محرک, Intrinsic=باطنی محرک, Extrinsic=خارجی محرک; the Urdu prose uses حوصلہ/اندرونی حوصلہ/بیرونی حوصلہ throughout (index.mdx:2,31; topic-01.mdx:36-42,96; topic-02.mdx:2,36; unit-assessment.mdx:2,24,32). The unit's own teacher notes list the banked terms (UR unit-teacher-notes.mdx:55, mirroring EN :76-77) and the prose contradicts that line; the concept graph (concepts/unit-06.md:15) and fig-U6-2.ur.svg (title \"تین محرک نظریوں کا موازنہ\") use محرک. The prose itself even uses \"اندرونی محرک\" once for \"intrinsic motive\" (topic-01.mdx:42, teacher-notes.mdx:32), so the unit is internally inconsistent.",
+        "BLOCKING: Anxiety banked as اضطراب (terminology.csv:56; used in fig-U6-4.ur.svg and concepts/unit-06.md:22) but the prose uses گھبراہٹ throughout topic-02 (lines 3,54,58,80,89,100) and the assessment (lines 80,102,144). Working Memory banked as the pair عامل یادداشت / فعال یادداشت (terminology.csv:98) but Unit 6 uses کام کرنے والی یادداشت (topic-02.mdx:58, unit-assessment.mdx:144).",
+        "BLOCKING: the misspelling شاگرڈ (correct: شاگرد) appears 15 times: topic-01.mdx:28,42,50,108; topic-02.mdx:3,26,36,40(x2),70,89,100; unit-assessment.mdx:41,113,137; unit-teacher-notes.mdx:30 (known repo-wide defect family, repaired in sibling units).",
+        "BLOCKING: UR index.mdx:12-14 key_terms declares en \"Formative Assessment\" / ur \"صورت بہبود جائزہ\": wrong flagship concept for this unit (siblings carry their own: U3 Behaviorism, U5 Individual Differences) and non-banked Urdu (bank: تشکیلی تشخیص). check:pipeline-gate's terminology conformance check (scripts/check-pipeline-gate.mjs:218-232) will fail on this entry once translation_status flips to reviewed.",
+        "Known defect family: منی روبرک/روبرکس calque for the banked Rubric=معیارِ جانچ (terminology.csv:72) at topic-01.mdx:116, topic-02.mdx:108, unit-assessment.mdx:3,147; and صورت بہبود for formative in unit-teacher-notes.mdx:65.",
+        "Figure/prose/concept-graph inconsistencies needing unification: self-actualization خود ارتقا (fig-U6-1.ur.svg) vs خود کی تکمیل (topic-01.mdx:48, unit-assessment.mdx:45-48); attribution نسبت دہی (fig-U6-3.ur.svg title, concepts/unit-06.md:21,32) vs اسناد (all prose); hygiene factors حفظانِ صحت عوامل (concepts/unit-06.md:18) vs صفائی عوامل (prose); goals مقاصد (concepts:20) vs ہدف (prose); overjustification حدِ جواز سے زیادہ کا اثر (concepts:16) vs حد سے زیادہ جواز کا اثر (prose).",
+        "Word-choice errors: Maslow's \"levels\" rendered سطریں (lines) instead of سطحیں at topic-01.mdx:48,90,102; \"aptitude\" rendered رجحان (tendency) at topic-02.mdx:46."
+      ]
+    },
+    {
+      "id": "register",
+      "status": "fail",
+      "evidence": [
+        "Garbled calques: \"the unit's signature reframe\" rendered \"یونٹ کا دستخط بدلنا\" (\"changing the unit's signature\", nonsense) at unit-teacher-notes.mdx:51; \"aim at appearance\" rendered \"ظاہرے کا\" (non-word) at topic-02.mdx:38 and \"عدالت کی ظاہرے کی قیمت\" at :42; \"a comfortable building full of pupils with no reason to try\" rendered \"بے وجہ کوشش کے بغیر شاگردوں سے بھری آرام دہ عمارت\" (\"without unjustified effort\") at topic-01.mdx:60.",
+        "Informal loanwords in academic-plain register: لیور (lever, topic-02.mdx:58, unit-assessment.mdx:101,143), فٹ (fit, topic-02.mdx:58, unit-assessment.mdx:82,129,144), ڈیٹے (data, unit-teacher-notes.mdx:30), ٹاپر (topper, topic-01.mdx:26); the bulk of the prose does hold درسی مگر عام فہم register with natural sentence order.",
+        "Minor grammar slips: \"کام کی جگہ کی اطمینان\" (should be کے اطمینان, topic-01.mdx:56), \"بالغ ملازموں پر بنیا\" (should be بنی, fig-U6-2.ur.svg), \"ڈھونھنے\" (should be ڈھونڈنے, unit-assessment.mdx:88), an empty <text> element in fig-U6-3.ur.svg."
+      ]
+    },
+    {
+      "id": "rtl",
+      "status": "fail",
+      "evidence": [
+        "BLOCKING: fig-U6-3.ur.svg - both loop arrows strike through the explanation text. Paths \"M 580 137H245\" and \"M 240 137H570\" run at y=137 through the measured bbox of \"محنت، قابلیت، قسمت، کام کی مشکل\" (x 317.1-518.0, y 125.3-140.1); the second arrow also points rightward (explanation -> outcome), reversing the loop's reading direction. The English arrows sit correctly in the gaps (M200 137H245, M540 137H570). Browser-measured; see figure-geometry.log.",
+        "BLOCKING: fig-U6-4.ur.svg and fig-U6-4.ur.dark.svg leave the curiosity row's teacher-move cell in untranslated English (\"let questions live; do not answer / the ones nobody asked\") - the pre-42ad6a8d English label, never translated; the .ur.svg variants predate that English fix and were not refreshed.",
+        "BLOCKING: misplaced grid lines from incomplete RTL mirroring (only the first coordinate of each multi-segment path was mirrored). fig-U6-4.ur.svg grid \"M 628 16V414M392 16V414M600 16V414\" (English 152/392/600; correct mirror 628/388/180): the spurious x=600 divider strikes six cell texts of the \"یہ تعلم کے ساتھ کیا کرتا ہے\" column and the trigger/move column boundary (x~180) is missing. fig-U6-2.ur.svg grid \"M 632 14V418M420 14V418M624 14V418\" (English 148/420/624; correct mirror 632/360/156): doubled divider at 624/632 and the مثال/حد column boundary (x~156) missing; both lines also cross the footer caption (the English footer is likewise crossed - pre-existing, noted for the owner).",
+        "BLOCKING: fig-U6-1.ur.svg - the rotated axis label \"پہلے خسارے کی ضروریات، پھر نشوونما\" kept the English x=-240/y=57/rotate(-90) placement (renders at the left edge, anchor ~(57,240)) while its arrow was mirrored to x=680; the label is detached from the arrow by ~620px (style-guide v4.1 requires translated rotated labels to carry across).",
+        "Passing aspects: pages are dir=rtl with no overflow at 360px; MDX tables and prose order read correctly; Nastaliq renders in body text; print view correct (render-review.log, check-print.log)."
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "Terminology bank departures for the unit's core terms: prose uses حوصلہ/اندرونی حوصلہ/بیرونی حوصلہ for Motivation/Intrinsic/Extrinsic (bank: محرک/باطنی محرک/خارجی محرک, terminology.csv:8-10) and گھبراہٹ for Anxiety (bank: اضطراب, used by the unit's own fig-U6-4 and concept graph); Working Memory as کام کرنے والی یادداشت (bank pair: عامل یادداشت / فعال یادداشت). The teacher notes' own banked-terms line (UR unit-teacher-notes.mdx:55) and the concept graph contradict the prose. Repair: conform the prose to the banked terms (or obtain an owner ruling and update the bank first - a bank conflict is owner-resolved per style-guide \"Terminology bank\")."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "The misspelling شاگرڈ for شاگرد occurs 15 times across four student-facing files (topic-01.mdx:28,42,50,108; topic-02.mdx:3,26,36,40x2,70,89,100; unit-assessment.mdx:41,113,137; unit-teacher-notes.mdx:30). Known repo-wide defect family already repaired in sibling units; correct spelling شاگرد is used elsewhere in the same files."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "UR topic-02.mdx:50: the structured-experience feedback example \"your method missed the carrying - here is the fix\" is mistranslated as \"تمہارے طریقے نے قرض لینا چھوڑ دیا: یہ درست ہے\" (your method stopped taking a loan: this is correct). The arithmetic \"carrying\" became \"taking a loan\" and \"here is the fix\" became \"this is correct\"; the example must be retranslated (e.g. \"تمہارے طریقے نے بقایا آگے لکھنا چھوڑ دیا تھا: یہاں اس کا حل ہے\")."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "fig-U6-3.ur.svg: both loop arrows (paths \"M 580 137H245\" and \"M 240 137H570\") strike through the label \"محنت، قابلیت، قسمت، کام کی مشکل\" (measured bbox x 317.1-518.0, y 125.3-140.1); the second arrow also points the wrong way (toward the outcome box). Correct mirrors of the English arrows are \"M580 137H535\" and \"M240 137H210\". Regenerate the variant with scripts/mirror-figure-rtl.mjs from the English geometry and re-translate labels."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "fig-U6-4.ur.svg and fig-U6-4.ur.dark.svg: the curiosity row's teacher-move cell is untranslated English (\"let questions live; do not answer / the ones nobody asked\"), left over from the pre-42ad6a8d English; the current English label reads \"let questions live / the ones nobody asked\". Translate the cell (e.g. \"سوالوں کو زندہ رہنے دیں / جنہیں کسی نے نہیں پوچھا\") and refresh both variants against the current English figure."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "fig-U6-2.ur.svg and fig-U6-4.ur.svg: grid lines misplaced by incomplete RTL mirroring (only the first M coordinate of each multi-segment path was mirrored). fig-U6-4: spurious divider x=600 strikes six cell texts of the \"یہ تعلم کے ساتھ کیا کرتا ہے\" column; the trigger/move column boundary (mirrored x~180) is missing. fig-U6-2: doubled divider at x=624/632; the مثال/حد column boundary (mirrored x~156) is missing. Correct mirrors: fig-U6-2 632/360/156, fig-U6-4 628/388/180."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "fig-U6-1.ur.svg: the rotated axis label \"پہلے خسارے کی ضروریات، پھر نشوونما\" retains the English placement (x=-240, y=57, rotate(-90); renders at the left edge) while its arrow was mirrored to x=680, leaving the label detached on the opposite side of the figure. Carry the rotated label across with the arrow per style-guide v4.1."
+    },
+    {
+      "severity": "blocking",
+      "resolved": false,
+      "message": "UR index.mdx:12-14 key_terms block declares en \"Formative Assessment\" / ur \"صورت بہبود جائزہ\": the flagship concept is wrong for a Motivation unit (siblings carry their own: U3 Behaviorism, U5 Individual Differences; Unit 6's natural entry is Motivation/محرک) and the Urdu is not the banked term (bank: تشکیلی تشخیص). check:pipeline-gate (scripts/check-pipeline-gate.mjs:218-232) will fail this entry once translation_status becomes reviewed."
+    },
+    {
+      "severity": "uncertain",
+      "resolved": false,
+      "message": "G3 dependency not satisfied: the contract requires an accepted, signed G3 report for the exact English inputs bound here. The available G3 (agent-g3-efmp301-u6-run001.json) is advisory, disposition revise with an OPEN blocking finding, and was prepared against the pre-repair English; the English was repaired at commit 067c2ff2 afterwards with no round-2 verification, and no signed/accepted G3 exists. Escalated to the owner per the GQUR-300 PR #65 precedent. The full Urdu-vs-current-English comparison was nevertheless performed against the bound bytes (all 108 manifest digests verified against the tree)."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Known defect family: منی روبرک (topic-01.mdx:116, topic-02.mdx:108) and روبرکس (unit-assessment.mdx:3 description, :147 heading) for the banked Rubric=معیارِ جانچ; صورت بہبود for formative (unit-teacher-notes.mdx:65, bank: تشکیلی). Replace with the banked terms."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Unify figure/prose/concept-graph terminology: self-actualization خود ارتقا (fig-U6-1) vs خود کی تکمیل (prose, MCQ-3); attribution نسبت دہی (fig-U6-3, concept graph) vs اسناد (prose); hygiene حفظانِ صحت عوامل (concept graph) vs صفائی عوامل (prose); goals مقاصد (concept graph) vs ہدف (prose); overjustification حدِ جواز سے زیادہ کا اثر (concept graph) vs حد سے زیادہ جواز کا اثر (prose). The concept graph flags these authored labels for G5 review; whichever survives should be promoted into the bank and used consistently."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Word-choice errors: Maslow's five \"levels\" rendered سطریں (lines) instead of سطحیں at topic-01.mdx:48,90,102; \"aptitude\" rendered رجحان (tendency) at topic-02.mdx:46 (use استعداد/صلاحیت)."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Register repairs: \"یونٹ کا دستخط بدلنا\" (unit-teacher-notes.mdx:51) is a garbled calque of \"the unit's signature reframe\" (suggest \"یونٹ کی خاص نظر بدلنے والی بات\"); \"ظاہرے کا\" (topic-02.mdx:38) and \"عدالت کی ظاہرے کی قیمت\" (:42) are non-words/garbled (suggest \"دکھاوے کا\" / \"عدالت میں نظر آنے کی قیمت\"); \"بے وجہ کوشش کے بغیر شاگردوں سے بھری آرام دہ عمارت\" (topic-01.mdx:60) garbles \"pupils with no reason to try\" (suggest \"کوشش کا کوئی سبب نہ رکھنے والے شاگردوں سے بھری\"); informal loanwords لیور/فٹ/ڈیٹے (suggest ذرائع/سمائے/ڈیٹا)."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Minor semantic drifts to align: \"starved\" as چھینا (snatched) at topic-01.mdx:120 and unit-assessment.mdx:107 (body and ERQ-1 rubric correctly use بھوکا رکھنا/بھوک); \"triage\" dropped from the unit summary (unit-assessment.mdx:24); RRQ-10 model answer drops the \"keep\" element (unit-assessment.mdx:145); fig-U6-4 \"high-stakes test\" as زیادہ نمبر والا امتحان (high-marks) and \"موقوفی دلچسپی\" (suspended) for situational interest (prose: صورتحال والی دلچسپی); \"بنیا\" grammar slip in fig-U6-2.ur.svg; empty <text> element in fig-U6-3.ur.svg; ڈھونھنے typo (unit-assessment.mdx:88)."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Out of unit scope, for the owner (platform): Urdu h1/h2 headings resolve to the Latin system-ui font stack on every Urdu page (verified on Units 3, 5, 6), so headings render in a system Arabic-script fallback while body text is Noto Nastaliq Urdu - mixed typography across all courses. Also pre-existing English-figure defects outside G5 scope: fig-U6-2.svg divider x=624 crosses the \"midday meal\" cell text and both English tables' footer captions are crossed by their dividers (faint 25%-opacity lines)."
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/validate-content.log"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/check-depth-gate.log"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/check-figures.log"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/check-no-em-dash.log"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/check-no-answer-keys.log"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/check-docs-sync.log"
+    },
+    {
+      "name": "verify-manifest",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/verify-manifest.log"
+    },
+    {
+      "name": "measure-figure-text",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/measure-figure-text.log"
+    },
+    {
+      "name": "figure-geometry",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/figure-geometry.log"
+    },
+    {
+      "name": "rotated-label",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/rotated-label.log"
+    },
+    {
+      "name": "build",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/build.log"
+    },
+    {
+      "name": "serve",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/serve.log"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/render-review.log"
+    },
+    {
+      "name": "check-dark-font",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/check-dark-font.log"
+    },
+    {
+      "name": "check-fonts-detail",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/check-fonts-detail.log"
+    },
+    {
+      "name": "check-print",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/check-print.log"
+    },
+    {
+      "name": "check-heading-font-other-courses",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/check-heading-font-other-courses.log"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/assemble-report.mjs": "b94c5aa1f53a34e77b5972a14a624d546a510bdc510b234858d479e2d376d2ab",
+    "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/build.log": "2f123a34b82da337ccdbe0cc011a81e285156c0d93fac63f1e6a94049e057f80",
+    "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/check-dark-font.log": "d78b2d895d54129537a58c70a379496a94340af63cde51c2de479ef5c3107e5d",
+    "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/check-dark-font.mjs": "fbd89b424f0f4ee497e21a618bda88bfc09b17060d57dd85d43377cf459d5ffc",
+    "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/check-depth-gate.log": "b0c4eeaa24613853bc7dd1124721c3576b9c2ea0d83d804bb98a47c646579f2f",
+    "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/check-docs-sync.log": "388691a97d7539a857dafad859d26a639e67f09402e7f0c242b4a09e4b62049b",
+    "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/check-figures.log": "3d8e7e0311cc402d8ef731bc62cfd8efd8bb72907261a2ec1da4ed2ea4db7c3a",
+    "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/check-fonts-detail.log": "d892806056de4d5babe867db776fd133fcd755c772a64a4aa0c6fc59c320c94f",
+    "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/check-fonts-detail.mjs": "f12820c66399aaee47a79dcb2253c9f6af84ff8aa3f2325f057cc601a9cc8e5c",
+    "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/check-heading-font-other-courses.log": "d580ef19a8c6149fa7fd8cfababa6b6c5b80045fac9d6440321cf1fb7af91f5e",
+    "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/check-heading-font-other-courses.mjs": "a55a844194f92883bb2e01cdcf09bac49d2efcad72c2cbb7b2c33c93cbf71802",
+    "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/check-no-answer-keys.log": "3fa235456d5db64e830f726b03bd39a9f3388aa8239273fa8f1b6f549465fc39",
+    "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/check-no-em-dash.log": "f94465f4c88bd3c3db4d995e7757fc7f08feae27e57c724a2eaafc8499ec2fe6",
+    "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/check-print.log": "9a684a51a0853fc521e254bebbb76bb60348967b15f5ac54110efed5e7d2731b",
+    "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/check-print.mjs": "c7d888964eba69d3665095a5b0459d7979b57f7dd03f2631bca649cc35bb413b",
+    "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/figure-geometry.log": "6bec85beedd9c010514f6cc34ea4829d05ec5b84dcda99f3f4c786871311cf06",
+    "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/figure-geometry.mjs": "c5ccc97b2010616453fbd16227f8977f8877e5829fd0014d67db2581dd9d0f39",
+    "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/measure-figure-text.log": "e746d254d59bc86d420e95e265101adebda47ec7715072cb6ef2a863e6aded1e",
+    "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/render-review.log": "99d9788eab4fdb66595413557d4a6c1d04b1bcf399bfb133aabfc569d7c161f0",
+    "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/render-urdu-pages.mjs": "10d0e70245e348f60a748c6b299581d23d33b493f8b84bb60d92c9acd3af85b4",
+    "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/rotated-label.log": "f8811c24063af2aa36b6e60aaa763607502ac2ae58d0ea3c03b26fb197547672",
+    "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/rotated-label.mjs": "9a1b58edd59c479e015a7d0c87d87b766e952b68f24951a2930524c28838f7c8",
+    "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/serve.log": "eba3011ac4cb574736cf821ad3cad54973984f9ca30bf04c9a5dfe6f4275c6d2",
+    "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/validate-content.log": "0753463dcc4f70bfeed270f5eb8accdfb2113670791fc90775ea247c275de426",
+    "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/verify-manifest.log": "811fae65d6bbfe03d0fc706c5077e5254cba5fc606a60b66d9f6f9afd8a9bc13",
+    "specs/content/efmp-301/reviews/unit-06/G5/logs-agent-g5-efmp301-u6-run001/verify-manifest.mjs": "950b4b2440abf20b33888cf3da1930c562e7a53d0b226ae394de6eb2cf2de06d",
+    "specs/content/efmp-301/reviews/unit-06/G5/renders-agent-g5-efmp301-u6-run001/index-a4-print.png": "d616145146287b183b7761e762510bd852e08b2fd4d9f67e5c0571b42172905b",
+    "specs/content/efmp-301/reviews/unit-06/G5/renders-agent-g5-efmp301-u6-run001/index-desktop-1280.png": "43653914cdaba376ebe532d807476b0d324877b9ddeaeb03aad6b513653d9a13",
+    "specs/content/efmp-301/reviews/unit-06/G5/renders-agent-g5-efmp301-u6-run001/index-narrow-360.png": "3afaf80e6b8495d2a86eb7aedd7fe7ab8a541b390a878a08ca3408ec9ef31590",
+    "specs/content/efmp-301/reviews/unit-06/G5/renders-agent-g5-efmp301-u6-run001/topic-01-a4-print.png": "5d289ee63903076337ae054564afcd620c4a0337c010fe083c13e6a4fc62ff7c",
+    "specs/content/efmp-301/reviews/unit-06/G5/renders-agent-g5-efmp301-u6-run001/topic-01-desktop-1280.png": "bbdc6518a51cadf0df9fbaa9c0f7ec03aba4d0bf594b894502db22033ea888b0",
+    "specs/content/efmp-301/reviews/unit-06/G5/renders-agent-g5-efmp301-u6-run001/topic-01-fig1.png": "935b9631c8ebe92e5a8ba08fcb4638740c9caa1c2ce9f345826fd862f8c1a8cb",
+    "specs/content/efmp-301/reviews/unit-06/G5/renders-agent-g5-efmp301-u6-run001/topic-01-fig2.png": "70b87c55facdb6ca08ef139dbed9a2674e198abc54b72d182964f5934ce43c99",
+    "specs/content/efmp-301/reviews/unit-06/G5/renders-agent-g5-efmp301-u6-run001/topic-01-narrow-360.png": "449140b7dc4890ea06bfbd50b14230274e68e83bb7e4459b303fd2db3a8928ae",
+    "specs/content/efmp-301/reviews/unit-06/G5/renders-agent-g5-efmp301-u6-run001/topic-02-a4-print.png": "c8e30991cbc8a15af7577147475e722c6ea0cd457af7afed2a6a658a549fbbcc",
+    "specs/content/efmp-301/reviews/unit-06/G5/renders-agent-g5-efmp301-u6-run001/topic-02-dark-viewport.png": "f8629599b03e4cec8e787d7ce56c33a62cc7d165d61710bd784f7e8902a1e9d7",
+    "specs/content/efmp-301/reviews/unit-06/G5/renders-agent-g5-efmp301-u6-run001/topic-02-desktop-1280.png": "98a9ae4434efd41987adb6f8bfbea2e9c90d8dc83506c253ab70b34247e6a069",
+    "specs/content/efmp-301/reviews/unit-06/G5/renders-agent-g5-efmp301-u6-run001/topic-02-fig1.png": "202b212cad1d7fa22536e6105e827e0558320400c72134e8eaa6e3c330dc8422",
+    "specs/content/efmp-301/reviews/unit-06/G5/renders-agent-g5-efmp301-u6-run001/topic-02-fig2.png": "6d15e281c0f0a9112e14b78a84fd1207f20627bbc65491b934d63ba21cc27dec",
+    "specs/content/efmp-301/reviews/unit-06/G5/renders-agent-g5-efmp301-u6-run001/topic-02-narrow-360.png": "1fcacd1b33fd514845f69a2824c7e04a189d4d0789cc918f39fb108562962599",
+    "specs/content/efmp-301/reviews/unit-06/G5/renders-agent-g5-efmp301-u6-run001/unit-assessment-a4-print.png": "4971ae53a6b3c11e4db4aaff1e76b7e92e6dede0bce4576d0a1a8e927bd071fa",
+    "specs/content/efmp-301/reviews/unit-06/G5/renders-agent-g5-efmp301-u6-run001/unit-assessment-desktop-1280.png": "e376b4dbf350c931a6e853f219e709c81412604f8a79905d2e6a5318c9fd8192",
+    "specs/content/efmp-301/reviews/unit-06/G5/renders-agent-g5-efmp301-u6-run001/unit-assessment-narrow-360.png": "4101ac10cb52b16819f942cc0fe490ec13cf9c38451be186c99ef2625306c28c",
+    "specs/content/efmp-301/reviews/unit-06/G5/renders-agent-g5-efmp301-u6-run001/unit-teacher-notes-desktop-1280.png": "d73ed74b4e816ed05eafe04769f4c6e400ad869bfa53fb06009e8e6dbe952ff3",
+    "specs/content/efmp-301/reviews/unit-06/G5/renders-agent-g5-efmp301-u6-run001/unit-teacher-notes-narrow-360.png": "13092828f12848e4a1a799e164a708c3694d0ac5c2d16f2f3e2f9781cd7ed198"
+  },
+  "notes": [
+    "Advisory report under ADR-0019: certification is not provisioned; this report does not certify, sign, register or mark any gate done.",
+    "The Urdu mirror was authored by the G4 run (PHR 0068, commit 585650d4) and its G3-repair mirror at commit 067c2ff2; this reviewer session neither authored nor translated the material.",
+    "All 108 bound inputs verified against the prepared manifest with the evidence library's normalisation (verify-manifest.log): 108/108 match, 0 drifted.",
+    "Render inspection ran on the production build served at http://localhost:3217 (2-core box, load checked before build; single build at a time), Chromium via playwright-core, desktop 1280x900, narrow 360x780, A4 print 794x1123, plus a [data-theme=dark] pass; 19 PNGs saved. In-session PNG viewing is blocked in this environment (as in prior rounds), so figure-defect conclusions rest on browser-measured geometry (figure-geometry.log, rotated-label.log) with the PNGs as human-viewable evidence."
+  ]
+}
