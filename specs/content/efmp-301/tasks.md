@@ -65,10 +65,10 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 6 | G6 assets | ▢ | | |
 | Unit 6 | G7 publish | ▢ | | |
 | Unit 7 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
-| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-07/G2/20260925T183438600Z-gates.json |
+| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-07/G2/20260926T013136146Z-gates.json |
 | Unit 7 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 4dbe708a; report reviews/unit-07/G3/agent-g3-efmp301-u7-run001.json |
 | Unit 7 | G4 ur-translation | ✅ | auto:gates | full UR mirror (5 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
-| Unit 7 | G5 ur-review | ▢ | | |
+| Unit 7 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at fd019271; G3 dependency escalated to owner; Slow Learner bank conflict (کمزور متعلم vs the unit slow-!=-weak teaching) escalated to owner; report reviews/unit-07/G5/agent-g5-efmp301-u7-run001.json |
 | Unit 7 | G6 assets | ▢ | | |
 | Unit 7 | G7 publish | ▢ | | |
 | Unit 8 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
