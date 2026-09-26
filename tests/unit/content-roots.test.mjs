@@ -8,7 +8,7 @@ import { describe, it, expect, afterEach } from 'vitest';
 import { mkdtempSync, mkdirSync, writeFileSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
-import { TRACKS, CONTENT_ROOTS, walkUnits, resolveUnit, urPathFor, findDuplicateCourseCodes } from '../../scripts/lib/content-roots.mjs';
+import { TRACKS, CONTENT_ROOTS, walkUnits, walkCourses, walkLicenceSubtopics, resolveUnit, urPathFor, findDuplicateCourseCodes } from '../../scripts/lib/content-roots.mjs';
 
 const made = [];
 afterEach(() => { for (const d of made.splice(0)) rmSync(d, { recursive: true, force: true }); });
@@ -116,31 +116,36 @@ describe('urPathFor', () => {
   });
 });
 
-describe('the licence track', () => {
-  it('has no ordinal, and never reports one (FR-008)', () => {
-    const root = fixture(['licence/eed-313/unit-01']);
-    const [u] = walkUnits(root);
-    expect(u.track.id).toBe('licence');
-    expect(u.track.hasOrdinal).toBe(false);
-    expect(u.ordinal).toBeNull();
-    expect(u.trackDir).toBe('');
+describe('the licence track (Feature 024: topic list, no courses)', () => {
+  it('has no ordinal and a topic-list shape', () => {
+    const licence = TRACKS.find((t) => t.id === 'licence');
+    expect(licence.hasOrdinal).toBe(false);
+    expect(licence.shape).toBe('topic-list');
   });
 
-  it('holds courses at the track root, with no grouping directory', () => {
-    const root = fixture(['licence/eed-313/unit-01', 'licence/eed-411/unit-02']);
-    expect(walkUnits(root).map((u) => u.courseCode)).toEqual(['EED-313', 'EED-411']);
-  });
-
-  it('resolves its Urdu mirror to the -licence instance, not the default (FR-006)', () => {
-    const root = fixture(['licence/eed-313/unit-01']);
-    const [u] = walkUnits(root);
-    expect(urPathFor(u)).toContain('docusaurus-plugin-content-docs-licence');
-    expect(urPathFor(u)).not.toMatch(/content-docs\/current/);
-  });
-
-  it('is walked alongside the pre-service track, pre-service first', () => {
+  it('is never walked as courses or units, so the unit-shaped gates skip it', () => {
     const root = fixture(['licence/eed-313/unit-01', 'docs/semester-1/efmp-301/unit-01']);
-    expect(walkUnits(root).map((u) => u.track.id)).toEqual(['pre-service', 'licence']);
+    expect(walkUnits(root).map((u) => u.track.id)).toEqual(['pre-service']);
+    expect(walkCourses(root).map((c) => c.track.id)).toEqual(['pre-service']);
+  });
+
+  it('walks pedagogy pages by heading, classifying index, practice and subtopics', () => {
+    const root = fixture();
+    const dir = join(root, 'licence', 'pedagogy', 'c-classroom-management');
+    mkdirSync(dir, { recursive: true });
+    for (const f of ['index', 'practice', 'physical-setup']) writeFileSync(join(dir, `${f}.mdx`), '---\n---\n');
+    const pages = walkLicenceSubtopics(root);
+    expect(pages.map((p) => [p.heading, p.slug, p.kind])).toEqual([
+      ['c', 'index', 'heading-index'],
+      ['c', 'physical-setup', 'subtopic'],
+      ['c', 'practice', 'practice'],
+    ]);
+    expect(pages[1].route).toBe('/licence/pedagogy/c-classroom-management/physical-setup');
+    expect(pages[1].urFile).toContain('docusaurus-plugin-content-docs-licence/current/pedagogy/c-classroom-management/physical-setup.mdx');
+  });
+
+  it('yields nothing when there is no pedagogy section', () => {
+    expect(walkLicenceSubtopics(fixture())).toEqual([]);
   });
 
   it('contributes its content root to CONTENT_ROOTS for the pattern gates (FR-014)', () => {
@@ -150,15 +155,13 @@ describe('the licence track', () => {
 
 describe('findDuplicateCourseCodes (FR-011)', () => {
   it('reports nothing when every code lives in one track', () => {
-    const root = fixture(['docs/semester-1/efmp-301/unit-01', 'licence/eed-313/unit-01']);
+    const root = fixture(['docs/semester-1/efmp-301/unit-01', 'docs/semester-1/efmp-302/unit-01']);
     expect(findDuplicateCourseCodes(root)).toEqual([]);
   });
 
-  it('reports a code that appears in two tracks, naming both', () => {
+  it('ignores the course-free licence track entirely (Feature 024)', () => {
     const root = fixture(['docs/semester-4/efmp-408/unit-01', 'licence/efmp-408/unit-01']);
-    expect(findDuplicateCourseCodes(root)).toEqual([
-      { courseCode: 'EFMP-408', tracks: ['licence', 'pre-service'] },
-    ]);
+    expect(findDuplicateCourseCodes(root)).toEqual([]);
   });
 
   it('does not flag one course appearing twice within the same track', () => {

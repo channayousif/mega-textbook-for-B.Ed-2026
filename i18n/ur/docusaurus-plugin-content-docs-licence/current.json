@@ -3,8 +3,32 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.licenceSidebar.category.EED-313 · Classroom Management": {
-    "message": "EED-313 · Classroom Management",
-    "description": "The label for category 'EED-313 · Classroom Management' in sidebar 'licenceSidebar'"
+  "sidebar.licenceSidebar.category.Pedagogy (Part II)": {
+    "message": "تدریسیات (حصہ دوم)",
+    "description": "The label for category 'Pedagogy (Part II)' in sidebar 'licenceSidebar'"
+  },
+  "sidebar.licenceSidebar.category.Pedagogy (Part II).link.generated-index.title": {
+    "message": "تدریسی مواد کا علم",
+    "description": "The generated-index page title for category 'Pedagogy (Part II)' in sidebar 'licenceSidebar'"
+  },
+  "sidebar.licenceSidebar.category.A. Methods of Teaching and Foundations of Education": {
+    "message": "A. تدریسی طریقے اور تعلیم کی بنیادیں",
+    "description": "The label for category 'A. Methods of Teaching and Foundations of Education' in sidebar 'licenceSidebar'"
+  },
+  "sidebar.licenceSidebar.category.B. Child Development and Education Psychology": {
+    "message": "B. بچوں کی نشوونما اور تعلیمی نفسیات",
+    "description": "The label for category 'B. Child Development and Education Psychology' in sidebar 'licenceSidebar'"
+  },
+  "sidebar.licenceSidebar.category.C. Classroom Management": {
+    "message": "C. کلاس روم مینجمنٹ",
+    "description": "The label for category 'C. Classroom Management' in sidebar 'licenceSidebar'"
+  },
+  "sidebar.licenceSidebar.category.D. Classroom Assessment and Test Development and Evaluation": {
+    "message": "D. کلاس روم جانچ اور ٹیسٹ سازی و تشخیص",
+    "description": "The label for category 'D. Classroom Assessment and Test Development and Evaluation' in sidebar 'licenceSidebar'"
+  },
+  "sidebar.licenceSidebar.category.E. School Community and Teacher": {
+    "message": "E. اسکول، برادری اور استاد",
+    "description": "The label for category 'E. School Community and Teacher' in sidebar 'licenceSidebar'"
   }
 }

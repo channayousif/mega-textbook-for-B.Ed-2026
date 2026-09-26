@@ -1511,3 +1511,17 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   design decisions.
 - **Blocks:** a third G5 cycle for Unit 6; nothing else. The Urdu content is semantically
   verified; the register items are presentational.
+
+## G-2026-69 - Licence track pages are not assignable in classes
+
+- **Status:** open (accepted limitation)
+- **Gate:** none; product scope
+- **Source:** Feature 024 (`specs/024-licence-topic-design/spec.md`), 2026-09-26
+- **Question:** Feature 024 removed course codes from the licence track at the owner's direction;
+  it is now a STEDA Part II topic list. Classes, assignments, unit progress and the content index
+  all key on `course_code`/`unit_no`, so licence pages cannot be assigned, tracked or offered in
+  the class-creation dropdown (`walkCourses` yields nothing for the licence track and
+  `catalog/courses.json` lists no licence courses).
+- **Needed, and from whom:** the owner, only if licence preparation should become assignable;
+  that would need a page-keyed (not unit-keyed) assignment target, which is a later spec.
+- **Blocks:** nothing in Feature 024.
