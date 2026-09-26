@@ -1,0 +1,135 @@
+{
+  "measured_at": "2026-09-24T22:10:43.923Z",
+  "epsilon_user_units": 0.1,
+  "font_limitation": "host has no Nastaliq font; fallback Arabic metrics used",
+  "results": [
+    {
+      "file": "fig-U4-1.ur.svg",
+      "texts": 33,
+      "candidates": [],
+      "wmCollisions": [],
+      "textOnText": [],
+      "ink": []
+    },
+    {
+      "file": "fig-U4-1.ur.dark.svg",
+      "texts": 33,
+      "candidates": [],
+      "wmCollisions": [],
+      "textOnText": [],
+      "ink": []
+    },
+    {
+      "file": "fig-U4-2.ur.svg",
+      "texts": 19,
+      "candidates": [],
+      "wmCollisions": [],
+      "textOnText": [],
+      "ink": []
+    },
+    {
+      "file": "fig-U4-2.ur.dark.svg",
+      "texts": 19,
+      "candidates": [],
+      "wmCollisions": [],
+      "textOnText": [],
+      "ink": []
+    },
+    {
+      "file": "fig-U4-3.ur.svg",
+      "texts": 19,
+      "candidates": [],
+      "wmCollisions": [],
+      "textOnText": [],
+      "ink": []
+    },
+    {
+      "file": "fig-U4-3.ur.dark.svg",
+      "texts": 19,
+      "candidates": [],
+      "wmCollisions": [],
+      "textOnText": [],
+      "ink": []
+    },
+    {
+      "file": "fig-U4-4.ur.svg",
+      "texts": 40,
+      "candidates": [],
+      "wmCollisions": [],
+      "textOnText": [],
+      "ink": []
+    },
+    {
+      "file": "fig-U4-4.ur.dark.svg",
+      "texts": 40,
+      "candidates": [],
+      "wmCollisions": [],
+      "textOnText": [],
+      "ink": []
+    },
+    {
+      "file": "fig-U4-5.ur.svg",
+      "texts": 27,
+      "candidates": [],
+      "wmCollisions": [],
+      "textOnText": [],
+      "ink": []
+    },
+    {
+      "file": "fig-U4-5.ur.dark.svg",
+      "texts": 27,
+      "candidates": [],
+      "wmCollisions": [],
+      "textOnText": [],
+      "ink": []
+    },
+    {
+      "file": "fig-U4-6.ur.svg",
+      "texts": 37,
+      "candidates": [],
+      "wmCollisions": [],
+      "textOnText": [],
+      "ink": []
+    },
+    {
+      "file": "fig-U4-6.ur.dark.svg",
+      "texts": 37,
+      "candidates": [],
+      "wmCollisions": [],
+      "textOnText": [],
+      "ink": []
+    },
+    {
+      "file": "fig-U4-7.ur.svg",
+      "texts": 32,
+      "candidates": [],
+      "wmCollisions": [],
+      "textOnText": [],
+      "ink": []
+    },
+    {
+      "file": "fig-U4-7.ur.dark.svg",
+      "texts": 32,
+      "candidates": [],
+      "wmCollisions": [],
+      "textOnText": [],
+      "ink": []
+    },
+    {
+      "file": "fig-U4-8.ur.svg",
+      "texts": 26,
+      "candidates": [],
+      "wmCollisions": [],
+      "textOnText": [],
+      "ink": []
+    },
+    {
+      "file": "fig-U4-8.ur.dark.svg",
+      "texts": 26,
+      "candidates": [],
+      "wmCollisions": [],
+      "textOnText": [],
+      "ink": []
+    }
+  ]
+}

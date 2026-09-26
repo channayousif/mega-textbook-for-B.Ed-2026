@@ -1,0 +1,71 @@
+build/ mtime: 2026-09-24T22:50:19.329Z
+build/ur mtime: 2026-09-24T22:50:34.952Z
+HEAD at review: a483c9e (repair commit a483c9e)
+
+--- repaired strings present in built pages ---
+OK  index: "4.2 کے بغیر 4.3" -> 1 (repair 2: dependency un-inverted)
+OK  topic-01: "داؤ" -> 2 (repair 4: stakes as داؤ)
+OK  topic-01: "زیرِ خدمت استاد" -> 1 (repair 6: serving teacher)
+OK  topic-01: "تضاد" -> 2 (repair 5: tension as تضاد)
+OK  topic-01: "زیرِ بحث استعمال کا نام" -> 1 (repair 13c: استعمال not استعلام)
+OK  topic-03: "اعلیٰ داؤ والے" -> 1 (repair 4: high-stakes)
+OK  topic-03: "شمارشے" -> 1 (repair 13a: tallies not locks)
+OK  topic-03: "مشق کے بجائے ریکارڈ" -> 1 (repair 3: record instead of practice)
+OK  topic-03: "جس کے خلاف ڈیزائن کرنا پڑتا ہے" -> 1 (repair 12: risk to design against)
+OK  topic-04: "چاہتا ہے" -> 3 (repair 1: U+FFFD gone, چاہتا restored)
+OK  topic-04: "شاذ و نادر" -> 1 (repair 10: rarely)
+OK  topic-04: "ترغیبی ڈھانچہ" -> 1 (repair 8: incentive structure)
+OK  topic-04: "گرا سکتا" -> 1 (repair 13e: collapse)
+OK  topic-04: "لگتی ہے" -> 2 (repair 13f: sounds unanswerable)
+OK  unit-assessment: "یکجائتی" -> 1 (repair 7: ERQ-2 label)
+OK  unit-assessment: "متبادل" -> 8 (repair 13d: متبادل not متبیل)
+OK  unit-assessment: "حقیقی تضاد" -> 1 (repair 5: tension in RRQ-3 scheme)
+OK  unit-teacher-notes: "مشق کے بجائے ریکارڈ" -> 1 (repair 3: debrief question)
+OK  unit-teacher-notes: "جلدی کرنے پر باقی نہیں رہتا" -> 1 (repair 3: rushed negation)
+
+--- cycle-1 defect strings absent from built pages ---
+OK  topic-01: "دہشت" -> 0 (expected 0)
+OK  topic-01: "تناوب" -> 0 (expected 0)
+OK  topic-01: "فرضی استاد" -> 0 (expected 0)
+OK  topic-01: "استعلام" -> 0 (expected 0)
+OK  topic-03: "تالے" -> 0 (expected 0)
+OK  topic-03: "اعلیٰ دہشت" -> 0 (expected 0)
+OK  topic-04: "اشاریہ ڈھانچہ" -> 0 (expected 0)
+OK  topic-04: "گرما سکتا" -> 0 (expected 0)
+OK  topic-04: "متبیل" -> 0 (expected 0)
+OK  topic-04: "سنتا ہے" -> 0 (expected 0)
+OK  unit-assessment: "متبیل" -> 0 (expected 0)
+OK  index: "4.3 کے بغیر 4.2" -> 0 (expected 0)
+
+--- residual defects present (build serves current bytes) ---
+OK  unit-teacher-notes: "ERQ 2 مجموعی سوال" -> 1 (residual: repair 7 incomplete at :105)
+OK  unit-assessment: "مجموعی نقشہ" -> 1 (residual: repair 7 incomplete at ERQ-2 rubric title :263)
+OK  unit-assessment: "خلاصی" -> 1 (residual: wrong word for Abstract at :261)
+OK  topic-03: "ثبٹ" -> 2 (residual: misspelling of ثبوت at :99/:154)
+
+--- frontmatter-only repairs and residuals (blooms_summary does not render; verified from source) ---
+OK  topic-04.mdx source: "جس شخص کا جائزہ لیا جاتا ہے اس میں" -> 1 (repair 11 in blooms_summary (frontmatter); not rendered in page body)
+OK  unit-assessment.mdx source: "ایک مجموعی سوال" -> 1 (residual: repair 7 incomplete in blooms_summary (frontmatter); not rendered in page body)
+
+--- U+FFFD count: source vs built ---
+source topic-04.mdx = 0, built topic-04 page = 0 (both must be 0)
+
+--- Urdu figure variants served from build ---
+build serves fig-U4-1.ur.svg: true
+build serves fig-U4-1.ur.dark.svg: true
+build serves fig-U4-2.ur.svg: true
+build serves fig-U4-2.ur.dark.svg: true
+build serves fig-U4-3.ur.svg: true
+build serves fig-U4-3.ur.dark.svg: true
+build serves fig-U4-4.ur.svg: true
+build serves fig-U4-4.ur.dark.svg: true
+build serves fig-U4-5.ur.svg: true
+build serves fig-U4-5.ur.dark.svg: true
+build serves fig-U4-6.ur.svg: true
+build serves fig-U4-6.ur.dark.svg: true
+build serves fig-U4-7.ur.svg: true
+build serves fig-U4-7.ur.dark.svg: true
+build serves fig-U4-8.ur.svg: true
+build serves fig-U4-8.ur.dark.svg: true
+
+BUILD FRESHNESS PROBE: OK - shared build serves the current (a483c9e) Urdu bytes for Unit 4

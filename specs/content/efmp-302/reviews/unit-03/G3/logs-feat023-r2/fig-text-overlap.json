@@ -1,0 +1,432 @@
+{
+  "generated": "2026-09-24T14:53:08.524Z",
+  "figures": [
+    {
+      "file": "fig-U3-1.svg",
+      "servedMatchesCommitted": true,
+      "viewBox": "0 0 900 400",
+      "textCount": 33,
+      "bboxOverlapPairs": 0,
+      "glyphCollisions": 0,
+      "nearMisses": 0,
+      "pairs": [],
+      "wordmark": {
+        "found": true,
+        "bbox": {
+          "x": 795.6,
+          "y": 378,
+          "w": 93,
+          "h": 13
+        },
+        "textOverlaps": [],
+        "rectHits": []
+      }
+    },
+    {
+      "file": "fig-U3-1.dark.svg",
+      "servedMatchesCommitted": true,
+      "viewBox": "0 0 900 400",
+      "textCount": 33,
+      "bboxOverlapPairs": 0,
+      "glyphCollisions": 0,
+      "nearMisses": 0,
+      "pairs": [],
+      "wordmark": {
+        "found": true,
+        "bbox": {
+          "x": 795.6,
+          "y": 378,
+          "w": 93,
+          "h": 13
+        },
+        "textOverlaps": [],
+        "rectHits": []
+      }
+    },
+    {
+      "file": "fig-U3-2.svg",
+      "servedMatchesCommitted": true,
+      "viewBox": "0 0 900 460",
+      "textCount": 26,
+      "bboxOverlapPairs": 0,
+      "glyphCollisions": 0,
+      "nearMisses": 0,
+      "pairs": [],
+      "wordmark": {
+        "found": true,
+        "bbox": {
+          "x": 795.6,
+          "y": 430,
+          "w": 93,
+          "h": 13
+        },
+        "textOverlaps": [],
+        "rectHits": []
+      }
+    },
+    {
+      "file": "fig-U3-2.dark.svg",
+      "servedMatchesCommitted": true,
+      "viewBox": "0 0 900 460",
+      "textCount": 26,
+      "bboxOverlapPairs": 0,
+      "glyphCollisions": 0,
+      "nearMisses": 0,
+      "pairs": [],
+      "wordmark": {
+        "found": true,
+        "bbox": {
+          "x": 795.6,
+          "y": 430,
+          "w": 93,
+          "h": 13
+        },
+        "textOverlaps": [],
+        "rectHits": []
+      }
+    },
+    {
+      "file": "fig-U3-3.svg",
+      "servedMatchesCommitted": true,
+      "viewBox": "0 0 900 470",
+      "textCount": 33,
+      "bboxOverlapPairs": 0,
+      "glyphCollisions": 0,
+      "nearMisses": 0,
+      "pairs": [],
+      "wordmark": {
+        "found": true,
+        "bbox": {
+          "x": 795.6,
+          "y": 446,
+          "w": 93,
+          "h": 13
+        },
+        "textOverlaps": [],
+        "rectHits": []
+      }
+    },
+    {
+      "file": "fig-U3-3.dark.svg",
+      "servedMatchesCommitted": true,
+      "viewBox": "0 0 900 470",
+      "textCount": 33,
+      "bboxOverlapPairs": 0,
+      "glyphCollisions": 0,
+      "nearMisses": 0,
+      "pairs": [],
+      "wordmark": {
+        "found": true,
+        "bbox": {
+          "x": 795.6,
+          "y": 446,
+          "w": 93,
+          "h": 13
+        },
+        "textOverlaps": [],
+        "rectHits": []
+      }
+    },
+    {
+      "file": "fig-U3-4.svg",
+      "servedMatchesCommitted": true,
+      "viewBox": "0 0 800 470",
+      "textCount": 23,
+      "bboxOverlapPairs": 0,
+      "glyphCollisions": 0,
+      "nearMisses": 0,
+      "pairs": [],
+      "wordmark": {
+        "found": true,
+        "bbox": {
+          "x": 695.6,
+          "y": 446,
+          "w": 93,
+          "h": 13
+        },
+        "textOverlaps": [],
+        "rectHits": []
+      }
+    },
+    {
+      "file": "fig-U3-4.dark.svg",
+      "servedMatchesCommitted": true,
+      "viewBox": "0 0 800 470",
+      "textCount": 23,
+      "bboxOverlapPairs": 0,
+      "glyphCollisions": 0,
+      "nearMisses": 0,
+      "pairs": [],
+      "wordmark": {
+        "found": true,
+        "bbox": {
+          "x": 695.6,
+          "y": 446,
+          "w": 93,
+          "h": 13
+        },
+        "textOverlaps": [],
+        "rectHits": []
+      }
+    },
+    {
+      "file": "fig-U3-5.svg",
+      "servedMatchesCommitted": true,
+      "viewBox": "0 0 880 470",
+      "textCount": 14,
+      "bboxOverlapPairs": 0,
+      "glyphCollisions": 0,
+      "nearMisses": 0,
+      "pairs": [],
+      "wordmark": {
+        "found": true,
+        "bbox": {
+          "x": 775.6,
+          "y": 442,
+          "w": 93,
+          "h": 13
+        },
+        "textOverlaps": [],
+        "rectHits": []
+      }
+    },
+    {
+      "file": "fig-U3-5.dark.svg",
+      "servedMatchesCommitted": true,
+      "viewBox": "0 0 880 470",
+      "textCount": 14,
+      "bboxOverlapPairs": 0,
+      "glyphCollisions": 0,
+      "nearMisses": 0,
+      "pairs": [],
+      "wordmark": {
+        "found": true,
+        "bbox": {
+          "x": 775.6,
+          "y": 442,
+          "w": 93,
+          "h": 13
+        },
+        "textOverlaps": [],
+        "rectHits": []
+      }
+    },
+    {
+      "file": "fig-U3-6.svg",
+      "servedMatchesCommitted": true,
+      "viewBox": "0 0 880 520",
+      "textCount": 29,
+      "bboxOverlapPairs": 0,
+      "glyphCollisions": 0,
+      "nearMisses": 0,
+      "pairs": [],
+      "wordmark": {
+        "found": true,
+        "bbox": {
+          "x": 775.6,
+          "y": 502,
+          "w": 93,
+          "h": 13
+        },
+        "textOverlaps": [],
+        "rectHits": []
+      }
+    },
+    {
+      "file": "fig-U3-6.dark.svg",
+      "servedMatchesCommitted": true,
+      "viewBox": "0 0 880 520",
+      "textCount": 29,
+      "bboxOverlapPairs": 0,
+      "glyphCollisions": 0,
+      "nearMisses": 0,
+      "pairs": [],
+      "wordmark": {
+        "found": true,
+        "bbox": {
+          "x": 775.6,
+          "y": 502,
+          "w": 93,
+          "h": 13
+        },
+        "textOverlaps": [],
+        "rectHits": []
+      }
+    },
+    {
+      "file": "fig-U3-7.svg",
+      "servedMatchesCommitted": true,
+      "viewBox": "0 0 860 400",
+      "textCount": 23,
+      "bboxOverlapPairs": 0,
+      "glyphCollisions": 0,
+      "nearMisses": 0,
+      "pairs": [],
+      "wordmark": {
+        "found": true,
+        "bbox": {
+          "x": 755.6,
+          "y": 376,
+          "w": 93,
+          "h": 13
+        },
+        "textOverlaps": [],
+        "rectHits": []
+      }
+    },
+    {
+      "file": "fig-U3-7.dark.svg",
+      "servedMatchesCommitted": true,
+      "viewBox": "0 0 860 400",
+      "textCount": 23,
+      "bboxOverlapPairs": 0,
+      "glyphCollisions": 0,
+      "nearMisses": 0,
+      "pairs": [],
+      "wordmark": {
+        "found": true,
+        "bbox": {
+          "x": 755.6,
+          "y": 376,
+          "w": 93,
+          "h": 13
+        },
+        "textOverlaps": [],
+        "rectHits": []
+      }
+    },
+    {
+      "file": "fig-U3-8.svg",
+      "servedMatchesCommitted": true,
+      "viewBox": "0 0 860 490",
+      "textCount": 14,
+      "bboxOverlapPairs": 0,
+      "glyphCollisions": 0,
+      "nearMisses": 0,
+      "pairs": [],
+      "wordmark": {
+        "found": true,
+        "bbox": {
+          "x": 755.6,
+          "y": 462,
+          "w": 93,
+          "h": 13
+        },
+        "textOverlaps": [],
+        "rectHits": []
+      }
+    },
+    {
+      "file": "fig-U3-8.dark.svg",
+      "servedMatchesCommitted": true,
+      "viewBox": "0 0 860 490",
+      "textCount": 14,
+      "bboxOverlapPairs": 0,
+      "glyphCollisions": 0,
+      "nearMisses": 0,
+      "pairs": [],
+      "wordmark": {
+        "found": true,
+        "bbox": {
+          "x": 755.6,
+          "y": 462,
+          "w": 93,
+          "h": 13
+        },
+        "textOverlaps": [],
+        "rectHits": []
+      }
+    },
+    {
+      "file": "fig-U3-9.svg",
+      "servedMatchesCommitted": true,
+      "viewBox": "0 0 900 420",
+      "textCount": 23,
+      "bboxOverlapPairs": 0,
+      "glyphCollisions": 0,
+      "nearMisses": 0,
+      "pairs": [],
+      "wordmark": {
+        "found": true,
+        "bbox": {
+          "x": 795.6,
+          "y": 394,
+          "w": 93,
+          "h": 13
+        },
+        "textOverlaps": [],
+        "rectHits": []
+      }
+    },
+    {
+      "file": "fig-U3-9.dark.svg",
+      "servedMatchesCommitted": true,
+      "viewBox": "0 0 900 420",
+      "textCount": 23,
+      "bboxOverlapPairs": 0,
+      "glyphCollisions": 0,
+      "nearMisses": 0,
+      "pairs": [],
+      "wordmark": {
+        "found": true,
+        "bbox": {
+          "x": 795.6,
+          "y": 394,
+          "w": 93,
+          "h": 13
+        },
+        "textOverlaps": [],
+        "rectHits": []
+      }
+    },
+    {
+      "file": "fig-U3-10.svg",
+      "servedMatchesCommitted": true,
+      "viewBox": "0 0 900 470",
+      "textCount": 14,
+      "bboxOverlapPairs": 0,
+      "glyphCollisions": 0,
+      "nearMisses": 0,
+      "pairs": [],
+      "wordmark": {
+        "found": true,
+        "bbox": {
+          "x": 795.6,
+          "y": 442,
+          "w": 93,
+          "h": 13
+        },
+        "textOverlaps": [],
+        "rectHits": []
+      }
+    },
+    {
+      "file": "fig-U3-10.dark.svg",
+      "servedMatchesCommitted": true,
+      "viewBox": "0 0 900 470",
+      "textCount": 14,
+      "bboxOverlapPairs": 0,
+      "glyphCollisions": 0,
+      "nearMisses": 0,
+      "pairs": [],
+      "wordmark": {
+        "found": true,
+        "bbox": {
+          "x": 795.6,
+          "y": 442,
+          "w": 93,
+          "h": 13
+        },
+        "textOverlaps": [],
+        "rectHits": []
+      }
+    }
+  ],
+  "summary": {
+    "filesChecked": 20,
+    "servedMismatch": 0,
+    "bboxOverlapPairsTotal": 0,
+    "glyphCollisionsTotal": 0,
+    "nearMissTotal": 0
+  }
+}

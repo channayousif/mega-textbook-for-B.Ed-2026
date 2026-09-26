@@ -1,0 +1,20 @@
+site-build evidence (feat023-r2) - NOT a rebuild
+Shared two-locale build at build/ was produced at commit 86ce1dd immediately before this
+review session launched; this reviewer did not run npm run build (per parent instruction).
+
+Freshness check run just now:
+  node -e "read build/ur/semester-1/efmp-302/unit-02/unit-assessment/index.html; assert repaired caveat present"
+  served page: build/ur/semester-1/efmp-302/unit-02/unit-assessment/index.html
+  repaired MCQ 6 caveat sentence present in served HTML: true
+  occurrences of غیر مصدقہ in served page: 1 (expected 1: the repaired key item 6)
+  page lang/dir: lang=ur dir=rtl
+
+Timestamps (stat):
+  source i18n/ur/.../unit-02/unit-assessment.mdx mtime: 2026-09-24T20:06:24.066Z
+  build/ur/.../unit-assessment/index.html mtime:        2026-09-24T20:14:10.196Z
+  build file is newer than the repaired source and contains the repaired string: build is fresh.
+
+Rendered MCQ 6 key excerpt from the served page (tags stripped):
+  class="">ج - معیار 9 مسلسل پیشہ ورانہ ترقی کو ضابطہ اخلاق کے ساتھ رکھتا ہے، اسی لیے یونٹ 2 کی ذمہ داریاں اور یونٹ 6 کی ترقی ایک ہی معیار کے تحت آتی ہیں۔ جیسا کہ موضوع 2.2 بیان کرتا ہے، بنیادی دستاویز کھولی نہیں جا سکی، چنانچہ یہ نسبت ثانوی بیانات پر چلتی ہے اور غیر مصدقہ ہے۔ <l
+
+Conclusion: served content matches current files (commit 86ce1dd). No rebuild needed.

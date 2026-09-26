@@ -1,0 +1,42 @@
+fig-U3-1.svg: texts=33 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=0 servedOk=true
+fig-U3-1.dark.svg: texts=33 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=0 servedOk=true
+fig-U3-2.svg: texts=26 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=0 servedOk=true
+fig-U3-2.dark.svg: texts=26 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=0 servedOk=true
+fig-U3-3.svg: texts=33 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=0 servedOk=true
+fig-U3-3.dark.svg: texts=33 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=0 servedOk=true
+fig-U3-4.svg: texts=23 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=0 servedOk=true
+fig-U3-4.dark.svg: texts=23 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=0 servedOk=true
+fig-U3-5.svg: texts=14 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=0 servedOk=true
+fig-U3-5.dark.svg: texts=14 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=0 servedOk=true
+fig-U3-6.svg: texts=29 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=0 servedOk=true
+fig-U3-6.dark.svg: texts=29 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=0 servedOk=true
+fig-U3-7.svg: texts=23 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=0 servedOk=true
+fig-U3-7.dark.svg: texts=23 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=0 servedOk=true
+fig-U3-8.svg: texts=14 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=0 servedOk=true
+fig-U3-8.dark.svg: texts=14 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=0 servedOk=true
+fig-U3-9.svg: texts=23 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=0 servedOk=true
+fig-U3-9.dark.svg: texts=23 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=0 servedOk=true
+fig-U3-10.svg: texts=14 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=0 servedOk=true
+fig-U3-10.dark.svg: texts=14 bboxPairs=0 collisions=0 nearMisses=0 wmTextOverlaps=0 wmRectHits=0 servedOk=true
+SUMMARY {"filesChecked":20,"servedMismatch":0,"bboxOverlapPairsTotal":0,"glyphCollisionsTotal":0,"nearMissTotal":0}
+fig-U3-2.svg (b8f8ffe): texts=26 bboxOverlapPairs=16
+   OVERLAP: "Teacher" vs "effectiveness" (78.9x3)
+   OVERLAP: "Subject andpedagogicalknowledge" vs "evidenced by: what gets explainedcorrectly" (97.6x33)
+   OVERLAP: "Planning" vs "evidenced by: sequence, not theplan document" (68.9x13)
+   OVERLAP: "evidenced by: sequence, not theplan document" vs "Explanation andquestioning" (129.8x8)
+   OVERLAP: "Explanation andquestioning" vs "evidenced by: who answers, and howoften" (129.8x23)
+   OVERLAP: "Assessment use" vs "evidenced by: what changed aftermarking" (129.4x13)
+fig-U3-6.svg (b8f8ffe): texts=29 bboxOverlapPairs=10
+   OVERLAP: "Is this the right" vs "place to talk?" (136.9x3)
+   OVERLAP: "Can they hear a" vs "reply yet?" (101.1x3)
+   OVERLAP: "Do I have" vs "the facts?" (95.5x3)
+   OVERLAP: "Is it within my" vs "authority?" (104.6x3)
+   OVERLAP: "Resolved now" vs "agree the next stepaloud" (137.9x7)
+   OVERLAP: "Resolved afterchecking" vs "name a time you willreply" (146.6x17)
+fig-U3-7.svg (b8f8ffe): texts=23 bboxOverlapPairs=9
+   OVERLAP: "Precise content:definitions," vs "instructions,reasoning" (98.8x19)
+   OVERLAP: "Stance: interest,impatience," vs "whether you mean it" (132x9)
+   OVERLAP: "Too much at once;words" vs "the pupil does nothold" (145.2x19)
+   OVERLAP: "Read wrongly, andread" vs "without you decidingto send it" (148.9x19)
+   OVERLAP: "each other" vs "Furlich (2016): the verbal measurewas significant, the non-verbalone was not. Sample size andsetting are unstated in theabstract -" (76.5x6)
+   OVERLAP: "The class tends to believe thenon-verbal channel." vs "A practitioner's heuristic: widelyheld, and not established as afinding by the studies cited here." (231.5x27)

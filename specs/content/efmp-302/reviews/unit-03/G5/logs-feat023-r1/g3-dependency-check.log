@@ -1,0 +1,6 @@
+G3 report: agent-g3-efmp302-u3-feat023-r2, disposition pass, author_run_id commit:7a87094, completed 2026-09-24T15:09:45Z
+English-side paths compared (G5 manifest vs G3 r2 manifest): 30
+diverged: 0
+bound by G5 but not by G3 r2: 0
+Urdu-side paths bound by G5 (not expected in a G3 manifest): 8
+ENGLISH-BASE-IDENTICAL-TO-G3-R2-PASS

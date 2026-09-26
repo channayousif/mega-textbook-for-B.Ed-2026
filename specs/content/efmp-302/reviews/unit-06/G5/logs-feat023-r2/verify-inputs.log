@@ -1,0 +1,9 @@
+G5 r2 manifest verification (inputManifest from scripts/lib/review-evidence.mjs):
+  bound paths in manifest: 125 | recomputed at HEAD: 125
+  missing from current tree: 0 []
+  digest mismatches: 0 []
+  paths in current not in manifest: 0 []
+  skill_digest match: true
+  dirtyInputs: []
+Base stability vs the r1 G5 report:
+  shared paths: 125 | digest changes since r1: 7 ["i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-06/index.mdx","i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-06/topic-02.mdx","i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-06/topic-04.mdx","i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-06/unit-assessment.mdx","i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-06/unit-teacher-notes.mdx","static/img/figures/efmp-302/unit-06/fig-U6-7.ur.dark.svg","static/img/figures/efmp-302/unit-06/fig-U6-7.ur.svg"]

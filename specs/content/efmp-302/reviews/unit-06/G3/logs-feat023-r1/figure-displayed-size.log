@@ -1,0 +1,12 @@
+
+== viewport 1280x900 ==
+topic-01: fig-U6-1.svg displays 640x286, fig-U6-2.svg displays 640x327
+topic-02: fig-U6-3.svg displays 703x314, fig-U6-4.svg displays 640x250
+topic-03: fig-U6-5.svg displays 640x275, fig-U6-6.svg displays 703x345
+topic-04: fig-U6-7.svg displays 640x343, fig-U6-8.svg displays 703x360
+
+== viewport 360x740 ==
+topic-01: fig-U6-1.svg displays 900x401, fig-U6-2.svg displays 924x471
+topic-02: fig-U6-3.svg displays 900x401, fig-U6-4.svg displays 900x351
+topic-03: fig-U6-5.svg displays 936x401, fig-U6-6.svg displays 880x431
+topic-04: fig-U6-7.svg displays 880x471, fig-U6-8.svg displays 900x461

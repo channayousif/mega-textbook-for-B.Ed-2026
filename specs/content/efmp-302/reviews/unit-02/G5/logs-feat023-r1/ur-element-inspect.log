@@ -1,0 +1,13 @@
+# ur-element-inspect - EFMP-302 unit-02 G5 feat023-r1
+# started: 2026-09-24T19:36:00.584Z  base: http://127.0.0.1:4599  browser: chromium 149.0.7827.0
+captured narrow360-element-topic03-diagnostic-table.png
+captured narrow360-element-topic03-fig5-scrolled.png
+fig5 scroller: client=328 scrollW=780 scrollLeftAfter=0
+captured narrow360-element-assessment-mcq-list.png
+captured narrow360-element-assessment-mcq-key.png
+assessment line-end character census (first rect per text node): {"textNodesSampled":179,"lineEndCharCounts":{"ہ":9,"ک":2,"ص":3,"ر":5,"ے":34,"۔":29,"F":1,")":35," ":21,"ا":7,"\n":5,"ل":3,"س":1,"ی":8,"د":1,"چ":1,"ت":3,"ن":2,"ں":5,"ط":1,"م":1,"ق":2}}
+captured desktop-element-topic01-further-reading.png
+captured desktop-element-topic01-paragraph.png
+captured desktop-element-topic02-caveat.png
+captured desktop-element-index-article.png
+# finished: 2026-09-24T19:36:10.534Z

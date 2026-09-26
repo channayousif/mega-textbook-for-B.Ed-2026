@@ -1,0 +1,427 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-24T15:28:29.956Z",
+  "base": "http://127.0.0.1:4599",
+  "browser": "chromium 149.0.7827.0",
+  "method": "served bytes sha256-matched, inlined at viewBox size, getBBox pairwise, canvas ink-intersection per overlapping pair",
+  "results": [
+    {
+      "label": "fig-U2-1.light.svg",
+      "viewBox": "780x470",
+      "textCount": 35,
+      "bboxPairs": [],
+      "nearMisses": [],
+      "wmTextOverlaps": [],
+      "wmRectHits": [
+        {
+          "tag": "rect",
+          "cls": "bg",
+          "ix": 93,
+          "iy": 13
+        },
+        {
+          "tag": "rect",
+          "cls": "focus",
+          "ix": 88.4,
+          "iy": 4
+        },
+        {
+          "tag": "rect",
+          "cls": "grid",
+          "ix": 88.4,
+          "iy": 4
+        }
+      ],
+      "collisions": [],
+      "servedMatchesCommitted": true
+    },
+    {
+      "label": "fig-U2-1.dark.svg",
+      "viewBox": "780x470",
+      "textCount": 35,
+      "bboxPairs": [],
+      "nearMisses": [],
+      "wmTextOverlaps": [],
+      "wmRectHits": [
+        {
+          "tag": "rect",
+          "cls": "bg",
+          "ix": 93,
+          "iy": 13
+        },
+        {
+          "tag": "rect",
+          "cls": "focus",
+          "ix": 88.4,
+          "iy": 4
+        },
+        {
+          "tag": "rect",
+          "cls": "grid",
+          "ix": 88.4,
+          "iy": 4
+        }
+      ],
+      "collisions": [],
+      "servedMatchesCommitted": true
+    },
+    {
+      "label": "fig-U2-2.light.svg",
+      "viewBox": "780x470",
+      "textCount": 16,
+      "bboxPairs": [],
+      "nearMisses": [],
+      "wmTextOverlaps": [],
+      "wmRectHits": [
+        {
+          "tag": "rect",
+          "cls": "bg",
+          "ix": 93,
+          "iy": 13
+        }
+      ],
+      "collisions": [],
+      "servedMatchesCommitted": true
+    },
+    {
+      "label": "fig-U2-2.dark.svg",
+      "viewBox": "780x470",
+      "textCount": 16,
+      "bboxPairs": [],
+      "nearMisses": [],
+      "wmTextOverlaps": [],
+      "wmRectHits": [
+        {
+          "tag": "rect",
+          "cls": "bg",
+          "ix": 93,
+          "iy": 13
+        }
+      ],
+      "collisions": [],
+      "servedMatchesCommitted": true
+    },
+    {
+      "label": "fig-U2-3.light.svg",
+      "viewBox": "780x430",
+      "textCount": 32,
+      "bboxPairs": [
+        {
+          "a": "a verdict handed to a pupil",
+          "b": "the pupil, silently",
+          "ix": 1.5,
+          "iy": 5
+        },
+        {
+          "a": "travels and is never checked",
+          "b": "every later teacher",
+          "ix": 13,
+          "iy": 4
+        }
+      ],
+      "nearMisses": [],
+      "wmTextOverlaps": [],
+      "wmRectHits": [
+        {
+          "tag": "rect",
+          "cls": "bg",
+          "ix": 93,
+          "iy": 13
+        }
+      ],
+      "collisions": [
+        {
+          "a": "a verdict handed to a pupil",
+          "b": "the pupil, silently",
+          "ix": 1.5,
+          "iy": 5,
+          "both": 0,
+          "aOnly": 768,
+          "bOnly": 485
+        },
+        {
+          "a": "travels and is never checked",
+          "b": "every later teacher",
+          "ix": 13,
+          "iy": 4,
+          "both": 0,
+          "aOnly": 822,
+          "bOnly": 512
+        }
+      ],
+      "servedMatchesCommitted": true
+    },
+    {
+      "label": "fig-U2-3.dark.svg",
+      "viewBox": "780x430",
+      "textCount": 32,
+      "bboxPairs": [
+        {
+          "a": "a verdict handed to a pupil",
+          "b": "the pupil, silently",
+          "ix": 1.5,
+          "iy": 5
+        },
+        {
+          "a": "travels and is never checked",
+          "b": "every later teacher",
+          "ix": 13,
+          "iy": 4
+        }
+      ],
+      "nearMisses": [],
+      "wmTextOverlaps": [],
+      "wmRectHits": [
+        {
+          "tag": "rect",
+          "cls": "bg",
+          "ix": 93,
+          "iy": 13
+        }
+      ],
+      "collisions": [
+        {
+          "a": "a verdict handed to a pupil",
+          "b": "the pupil, silently",
+          "ix": 1.5,
+          "iy": 5,
+          "both": 0,
+          "aOnly": 762,
+          "bOnly": 477
+        },
+        {
+          "a": "travels and is never checked",
+          "b": "every later teacher",
+          "ix": 13,
+          "iy": 4,
+          "both": 0,
+          "aOnly": 819,
+          "bOnly": 498
+        }
+      ],
+      "servedMatchesCommitted": true
+    },
+    {
+      "label": "fig-U2-4.light.svg",
+      "viewBox": "780x470",
+      "textCount": 15,
+      "bboxPairs": [],
+      "nearMisses": [],
+      "wmTextOverlaps": [],
+      "wmRectHits": [
+        {
+          "tag": "rect",
+          "cls": "bg",
+          "ix": 93,
+          "iy": 13
+        }
+      ],
+      "collisions": [],
+      "servedMatchesCommitted": true
+    },
+    {
+      "label": "fig-U2-4.dark.svg",
+      "viewBox": "780x470",
+      "textCount": 15,
+      "bboxPairs": [],
+      "nearMisses": [],
+      "wmTextOverlaps": [],
+      "wmRectHits": [
+        {
+          "tag": "rect",
+          "cls": "bg",
+          "ix": 93,
+          "iy": 13
+        }
+      ],
+      "collisions": [],
+      "servedMatchesCommitted": true
+    },
+    {
+      "label": "fig-U2-5.light.svg",
+      "viewBox": "780x430",
+      "textCount": 20,
+      "bboxPairs": [
+        {
+          "a": "was outweighed",
+          "b": "did not follow through",
+          "ix": 97.6,
+          "iy": 14
+        }
+      ],
+      "nearMisses": [],
+      "wmTextOverlaps": [],
+      "wmRectHits": [
+        {
+          "tag": "rect",
+          "cls": "bg",
+          "ix": 93,
+          "iy": 13
+        }
+      ],
+      "collisions": [
+        {
+          "a": "was outweighed",
+          "b": "did not follow through",
+          "ix": 97.6,
+          "iy": 14,
+          "both": 281,
+          "aOnly": 217,
+          "bOnly": 339
+        }
+      ],
+      "servedMatchesCommitted": true
+    },
+    {
+      "label": "fig-U2-5.dark.svg",
+      "viewBox": "780x430",
+      "textCount": 20,
+      "bboxPairs": [
+        {
+          "a": "was outweighed",
+          "b": "did not follow through",
+          "ix": 97.6,
+          "iy": 14
+        }
+      ],
+      "nearMisses": [],
+      "wmTextOverlaps": [],
+      "wmRectHits": [
+        {
+          "tag": "rect",
+          "cls": "bg",
+          "ix": 93,
+          "iy": 13
+        }
+      ],
+      "collisions": [
+        {
+          "a": "was outweighed",
+          "b": "did not follow through",
+          "ix": 97.6,
+          "iy": 14,
+          "both": 270,
+          "aOnly": 216,
+          "bOnly": 339
+        }
+      ],
+      "servedMatchesCommitted": true
+    },
+    {
+      "label": "fig-U2-6.light.svg",
+      "viewBox": "780x430",
+      "textCount": 16,
+      "bboxPairs": [],
+      "nearMisses": [],
+      "wmTextOverlaps": [],
+      "wmRectHits": [
+        {
+          "tag": "rect",
+          "cls": "bg",
+          "ix": 93,
+          "iy": 13
+        }
+      ],
+      "collisions": [],
+      "servedMatchesCommitted": true
+    },
+    {
+      "label": "fig-U2-6.dark.svg",
+      "viewBox": "780x430",
+      "textCount": 16,
+      "bboxPairs": [],
+      "nearMisses": [],
+      "wmTextOverlaps": [],
+      "wmRectHits": [
+        {
+          "tag": "rect",
+          "cls": "bg",
+          "ix": 93,
+          "iy": 13
+        }
+      ],
+      "collisions": [],
+      "servedMatchesCommitted": true
+    },
+    {
+      "label": "fig-U2-7.light.svg",
+      "viewBox": "780x420",
+      "textCount": 34,
+      "bboxPairs": [],
+      "nearMisses": [],
+      "wmTextOverlaps": [],
+      "wmRectHits": [
+        {
+          "tag": "rect",
+          "cls": "bg",
+          "ix": 93,
+          "iy": 13
+        }
+      ],
+      "collisions": [],
+      "servedMatchesCommitted": true
+    },
+    {
+      "label": "fig-U2-7.dark.svg",
+      "viewBox": "780x420",
+      "textCount": 34,
+      "bboxPairs": [],
+      "nearMisses": [],
+      "wmTextOverlaps": [],
+      "wmRectHits": [
+        {
+          "tag": "rect",
+          "cls": "bg",
+          "ix": 93,
+          "iy": 13
+        }
+      ],
+      "collisions": [],
+      "servedMatchesCommitted": true
+    },
+    {
+      "label": "fig-U2-8.light.svg",
+      "viewBox": "780x430",
+      "textCount": 27,
+      "bboxPairs": [],
+      "nearMisses": [],
+      "wmTextOverlaps": [],
+      "wmRectHits": [
+        {
+          "tag": "rect",
+          "cls": "bg",
+          "ix": 93,
+          "iy": 13
+        }
+      ],
+      "collisions": [],
+      "servedMatchesCommitted": true
+    },
+    {
+      "label": "fig-U2-8.dark.svg",
+      "viewBox": "780x430",
+      "textCount": 27,
+      "bboxPairs": [],
+      "nearMisses": [],
+      "wmTextOverlaps": [],
+      "wmRectHits": [
+        {
+          "tag": "rect",
+          "cls": "bg",
+          "ix": 93,
+          "iy": 13
+        }
+      ],
+      "collisions": [],
+      "servedMatchesCommitted": true
+    }
+  ],
+  "summary": {
+    "filesChecked": 16,
+    "servedMismatch": 0,
+    "bboxOverlapPairsTotal": 6,
+    "inkCollisionsTotal": 2,
+    "nearMissTotal": 0,
+    "wmTextOverlapsTotal": 0
+  }
+}

@@ -1288,3 +1288,226 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 - **Blocks:** ~~merge of the extension branch to `main` (CI `check:pipeline-gate`)~~ **unblocked
   once the reworked spec passes re-intake and `status: approved` is set**; nothing in this
   evaluation itself, and nothing in the other content gates.
+
+---
+
+---
+
+## G-2026-62 - EFMP-302: the b8f8ffe figure re-optimisation shipped overlapping text to production, and no gate can see text-on-text overlap inside a committed SVG
+
+- **Status:** open
+- **Gate:** G3 (English review), accessibility criterion; affects all six EFMP-302 units
+- **Source:** EFMP-302 Unit 3 G3 feat023-r1 (2026-09-24,
+  `specs/content/efmp-302/reviews/unit-03/G3/agent-g3-efmp302-u3-feat023-r1.json`, blocking
+  finding B-01), verified by feat023-r2
+  (`agent-g3-efmp302-u3-feat023-r2.json`)
+- **Question:** commit `b8f8ffe` (2026-09-21, "refresh G2 gate evidence manifests") silently
+  included a mass SVG "re-optimisation" of all 132 figure files under
+  `static/img/figures/efmp-302/`: a second CSS block enlarged every font (12.5-13px rules
+  overridden by 16-18px rules) and long labels were re-wrapped into tspan blocks whose stacked
+  baselines collide, so distinct strings printed on top of each other in nearly every figure
+  (Unit 3 alone measured 18 full superpositions; a course-wide sweep estimated ~1000
+  collisions). Every MDX carrier was also left 50px short of the enlarged viewBoxes. Because
+  `b8f8ffe` is on `main` and the site auto-deploys from `main`, learners saw overlapping figure
+  text in production from 2026-09-21 until the repair merges. The deterministic gates could not
+  catch it: `check:figures` reads no glyph geometry, and `measure-figure-text.mjs` checks only
+  viewBox overflow and the wordmark, not text-on-text overlap. Only a review that measures
+  rendered geometry found it - and the Unit 2 feat023-r1 review, which ran the same gates but
+  did not measure figure-internal geometry, passed the same broken figures on accessibility.
+- **Action taken (author, feature 023):** all 132 files reverted to their pre-b8f8ffe geometry
+  (commit `69bae9e`; no later commit had touched them, so nothing intentional was lost), and
+  the one repair b8f8ffe had incidentally absorbed was re-applied (run-007 A-01, the fig-U3-6
+  wordmark collision). Unit 3's cycle-2 review verified the repair four independent ways,
+  including a negative control that reproduces the superpositions on the b8f8ffe bytes.
+  `measure-figure-text` now reports fig-U3-6 clean; 10 pre-existing cosmetic shape-wordmark
+  grazes remain (the reported-not-failed class prior reviews accepted).
+- **Needed, and from whom:** the owner, to (a) extend `measure-figure-text.mjs` (or add a gate)
+  so text-on-text overlap inside committed SVGs fails CI, closing the blind spot for every
+  course; (b) note that a "cosmetic" asset-wide re-optimisation is a content change that needs
+  review, not a chore commit - the commit message here described only manifest refreshes; and
+  (c) confirm the production exposure window (2026-09-21 to merge) is acceptable to close by
+  merge rather than an out-of-band hotfix.
+- **Blocks:** nothing in the automated gates (all green on the repaired bytes); the Unit 2
+  feat023-r1 accessibility pass is superseded by a cycle-2 re-run against the repaired figures.
+
+---
+
+## G-2026-63 - EFMP-302 Unit 2 G3: two advisory cycles consumed; the post-report figure repair is unverified
+
+- **Status:** open
+- **Gate:** G3 (English review), ADR-0019 two-cycle limit
+- **Source:** EFMP-302 Unit 2 G3 feat023-r2 (2026-09-24,
+  `specs/content/efmp-302/reviews/unit-02/G3/agent-g3-efmp302-u2-feat023-r2.json`), in the
+  G-2026-24 pattern
+- **Question:** Unit 2's feature-023 G3 review ran two advisory cycles. Cycle 1 (feat023-r1)
+  returned pass, but its accessibility pass was earned against the b8f8ffe-broken figures
+  without figure-internal geometry measurement (G-2026-62). Cycle 2 (feat023-r2), run against
+  the repaired figures with exactly that measurement, returned **revise** on one blocking
+  finding: fig-U2-5 (both EN variants) superposed the "was outweighed" and "did not follow
+  through" failure-branch labels - pre-existing damage from the original figure commit,
+  invisible to every gate and to cycle 1. The author repaired it post-report (rewrapped
+  step-4's label as two lines right of its path line; measure-figure-text clean on both
+  variants; the cycle-2 report's own negative-control instrument class confirms the geometry),
+  rebound the G2 evidence, and per ADR-0019 the repair is unverified by a reviewer. Cycle 1's
+  two advisory repairs (MCQ 6 key caveat, figures-manifest note) are verified landed by
+  cycle 2; the MCQ key was re-derived blind at 10/10; three advisories carry (U2-12's
+  indirect summative coverage, bebeau1999's text-level limit, the fig-U2-1 cosmetic graze).
+- **Needed, and from whom:** the curriculum owner, to either accept the repaired state on the
+  two advisory reports or authorise a third G3 cycle for Unit 2. The unit's G2 gates are green
+  at the repaired commit; the G3 tracker row remains open either way.
+- **Blocks:** a third G3 cycle for Unit 2; nothing else. G4 translation of Unit 2 is already
+  complete (the rate probe), and the G5 review binds the current English inputs as its
+  comparison base.
+
+---
+
+## G-2026-64 - EFMP-302 Unit 6 G3: the sources blockers are owner decisions; the fresh review escalates
+
+- **Status:** open
+- **Gate:** G3 (English review), sources criterion
+- **Source:** EFMP-302 Unit 6 G3 feat023-r1 (2026-09-24,
+  `specs/content/efmp-302/reviews/unit-06/G3/agent-g3-efmp302-u6-feat023-r1.json`), disposition
+  escalate
+- **Question:** the fresh feature-023 review of Unit 6 passes six of seven criteria on current
+  bytes but fails `sources` on two blocking findings that predate this feature and were already
+  marked owner-judgement in run 007: (S1) seven `coverage/unit-06.md` rows (U6-05/06 in day1999,
+  U6-07/08/10 in villegas2003, U6-12/13 in guskey2000) assert a grounding the prose never cites
+  in the named sections - repairing requires deciding whether the coverage claim or the citation
+  is wrong, and adding citations to unretrievable texts would invent attributions; (S2)
+  topic-01's Guskey (2000) multi-level evaluation attribution and Villegas-Reimers (2003)
+  principles-convergence attribution carry no level-of-support declaration, and the texts are
+  declared unretrievable, so the declaration's content is itself an owner judgement under
+  D-2026-0001. The reviewer dispositioned escalate rather than revise because an author repair
+  cycle for these is not authorised. Also verified this run: the 4a3a789 repairs hold (the
+  decision register is a bound input via the rulings map; fig-U6-5's caption is consistent), and
+  two of run-007's four owner findings are RESOLVED in current bytes - A2 by D-2026-0004's
+  course-wide extension and P2 by 9972d70's Bloom relabelling (check:bloom-bands green over 400
+  items). S3 (no bound source text for any of Unit 6's six keys) carries uncertain; figure
+  geometry is clean across all 16 EN files.
+- **Needed, and from whom:** the curriculum owner, to rule on S1 (correct the coverage rows or
+  direct the prose citations) and S2 (the level-of-support declarations for guskey2000 and
+  villegas2003, in the D-2026-0001 manner), and to decide whether a further G3 cycle for Unit 6
+  is wanted after those rulings. G4 translation proceeds on the current English bytes; the G5
+  review binds them as its comparison base.
+- **Blocks:** G3 closure for Unit 6 (row stays open); nothing else - the unit's deterministic
+  gates are green and its Urdu mirror is unaffected.
+
+---
+
+## G-2026-65 - EFMP-302: no accepted G3 evidence can cover the current English inputs for G5 (course-wide)
+
+- **Status:** open
+- **Gate:** G5 Urdu review (authority criterion), advisory; affects Units 2-6
+- **Source:** EFMP-302 G5 feat023-r1, Unit 2 (2026-09-24,
+  `specs/content/efmp-302/reviews/unit-02/G5/agent-g5-efmp302-u2-feat023-r1.json`, uncertain
+  finding U-01), in the G-2026-30/G-2026-34 pattern; the same dependency is recorded by every
+  subsequent feat023 G5 report
+- **Criterion:** `authority` (G5); the G3 dependency clause of the review contract.
+- **Detail:** ADR-0019 blocks agent certification, so no accepted (signed) G3 evidence exists in
+  the reviewer registry. The best-available G3 evidence per unit is the feat023 advisory chain
+  (Unit 2: cycle-1 pass earned against the b8f8ffe-broken figures, cycle-2 revise with the
+  fig-U2-5 label collision repaired post-report at 8db9943; Unit 3: cycle-2 pass on the
+  reverted figures; Units 4-5: cycle-1 passes; Unit 6: cycle-1 escalate with owner-gated
+  sources findings, G-2026-64). The English bytes have in several cases changed after the
+  relevant G3 report (post-report repairs), so no single G3 verdict covers the exact English
+  bytes the G5 reviews compare against. The G5 reviewers therefore proceeded with the bound
+  English inputs as the authoritative comparison base and recorded the dependency as an
+  uncertain finding per the contract, rather than aborting. Unit 1 is excepted: its G5 row
+  carries accepted human sign-off (2026-09-09) and its mirror was untouched by feature 023.
+- **Needed, and from whom:** the curriculum owner, to either (a) accept the advisory chains
+  (feat023 G3 reports + verified repairs + rebound G2 gates) as sufficient for the G5 stage, or
+  (b) commission fresh G3 passes over the current English inputs before the G5 findings are
+  treated as more than advisory. Until then no G5 tracker row can be marked done from agent
+  findings, which is the designed ADR-0019 posture.
+- **Blocks:** the G5 tracker rows for Units 2-6 (all left open, advisory); nothing in the
+  automated gates. The Urdu content itself is complete and internally verified.
+
+---
+
+## G-2026-66 - EFMP-302 Unit 4 G5: two cycles consumed; the post-report residual repairs are unverified
+
+- **Status:** open
+- **Gate:** G5 Urdu review, ADR-0019 two-cycle limit
+- **Source:** EFMP-302 Unit 4 G5 feat023-r2 (2026-09-24,
+  `specs/content/efmp-302/reviews/unit-04/G5/agent-g5-efmp302-u4-feat023-r2.json`), in the
+  G-2026-63 pattern
+- **Question:** Unit 4's feature-023 G5 review ran two advisory cycles. Cycle 1 (feat023-r1)
+  returned revise with 13 blocking Urdu-side findings; all were repaired at a483c9e. Cycle 2
+  (feat023-r2) verified 12 of the 13 repairs fully and found 4 residual defects of the same
+  classes at loci cycle 1 had not pinned: "integrative" still rendered مجموعی at three loci
+  (the blooms summary, the ERQ-2 rubric title, the teacher notes); fig-U4-8's Urdu captions
+  still weakening Isoré's "rarely" to "perhaps" (the repair commit touched no SVG); خلاصی for
+  "Abstract" in the ERQ-1 rubric; and the non-word ثبٹ for ثبوت twice. The author applied
+  these four repairs post-report (prose loci plus both fig-U4-8 Urdu variants regenerated with
+  شاذ و نادر); all content gates, figures:variants:check and measure-figure-text are green on
+  the repaired bytes, but the repairs are unverified by a reviewer. ADR-0019 reserves further
+  cycles to the owner after two.
+- **Needed, and from whom:** the curriculum owner, to either accept the repaired state on the
+  two advisory reports or authorise a third G5 cycle for Unit 4. Six advisories (register
+  garbles, minor semantic shifts, concept-label reworks for CON:4-12/CON:4-15) also carry.
+- **Blocks:** a third G5 cycle for Unit 4; nothing else. The G3 dependency (G-2026-65) blocks
+  G5 acceptance independently.
+
+---
+
+## G-2026-67 - EFMP-302 Unit 5 G5: two cycles consumed; the register batch and the G3 dependency need the owner
+
+- **Status:** open
+- **Gate:** G5 Urdu review, ADR-0019 two-cycle limit
+- **Source:** EFMP-302 Unit 5 G5 feat023-r2 (2026-09-25,
+  `specs/content/efmp-302/reviews/unit-05/G5/agent-g5-efmp302-u5-feat023-r2.json`), in the
+  G-2026-63 pattern
+- **Question:** Unit 5's feature-023 G5 review ran two advisory cycles. Cycle 1 returned revise
+  with 9 blocking Urdu-side findings; all were repaired at 219960c. Cycle 2 verified all nine
+  repairs three ways (source, served build, rendered crops) with nothing regressed, and
+  escalated on two things: (a) the G3 dependency (G-2026-65; English verified byte-identical to
+  the advisory G3 pass, 105/105 shared paths), which alone forbids a pass; (b) the register
+  criterion, which fails on the unrepaired cycle-1 advisory batch - 7 typos, 9+ gender-agreement
+  slips, 4 code-mixed "quote" verbs, شہادت for "evidence", ورک لوڈ/کام کا بوجھ alternation - all
+  advisory-severity, none inverting meaning, clearable by one proofreading pass the reviewer
+  judged beyond its two-cycle budget. The smaller semantic advisories (MCQ 3 "اصول" strengthening
+  "default"; MCQ 7 key dropping خود مختاری; the لچک elasticity-vs-resilience polysemy; the
+  carried G3 advisories mirrored in Urdu) also carry.
+- **Needed, and from whom:** the curriculum owner, to either authorise a third G5 cycle after a
+  directed proofreading pass or accept the repaired state on the two advisory reports; and to
+  resolve the G3 dependency per G-2026-65 (signed G3 or owner-accepted equivalent) before any
+  certified G5 pass.
+- **Blocks:** a third G5 cycle for Unit 5; nothing else. The Urdu content is semantically
+  verified; the register items are presentational.
+
+---
+
+## G-2026-68 - EFMP-302 Unit 6 G5: two cycles consumed; advisories and the G3 dependency need the owner
+
+- **Status:** open
+- **Gate:** G5 Urdu review, ADR-0019 two-cycle limit
+- **Source:** EFMP-302 Unit 6 G5 feat023-r2 (2026-09-25,
+  `specs/content/efmp-302/reviews/unit-06/G5/agent-g5-efmp302-u6-feat023-r2.json`), in the
+  G-2026-63 pattern
+- **Question:** Unit 6's feature-023 G5 review ran two advisory cycles (cycle 2 completed by a
+  re-spawned reviewer after a transient harness classifier outage; same inputs, same port,
+  same instrument). Cycle 1 returned revise on one figure defect - fig-U6-7's Urdu variants
+  carried 19 of the English figure's 22 text elements, dropping two margin-note boxes - plus
+  six wrong-word findings; all repaired at e99c1a2. Cycle 2 verified the figure repair four
+  ways (source bytes 22/22, served build, in-render DOM, pixel ink 0.088-0.107 in both
+  note-box regions of both variants) and all six word repairs, with the only bound-input
+  changes since r1 being the seven Urdu-side paths of e99c1a2; every English path is
+  byte-identical to what the G3 and the r1 G5 reviewed. All ten criteria pass on the current
+  bytes; the disposition is escalate on (a) the G3 dependency (G-2026-65; no signed G3 exists,
+  and Unit 6's advisory G3 carries the owner-gated S1/S2 sources blockers, G-2026-64) and
+  (b) nine unresolved advisories: a register bundle (پسائی x2, اوپر کا شکل x5,
+  ناکام نہیں ہے رہی, ایسی نظریہ in fig-U6-4.ur, "quote" x2, فریمنگ x4, استادِ تربیت calque);
+  comparative/nuance drops (topic-04:76 "harder than" weakened to "as difficult as",
+  teacher-notes "at least three" dropped and "polite" rendered جھوٹی, topic-02 "not unlucky"
+  for "not unusual"); an added topic-03 parenthetical distinguishing this unit's غور و فکر
+  from Unit 2's banked term (owner decision); the CON:6-6 preservice label (owner term
+  decision); a stale figures/unit-06.md preamble; and a corrected instrument finding that
+  fig-U6-2's dashed rules-out boxes overflow in both locales (inherited from the English
+  design, cosmetic, G3 advisory class).
+- **Needed, and from whom:** the curriculum owner, to either accept the repaired state on the
+  two advisory reports or authorise a third G5 cycle after a directed register/nuance pass; and
+  to resolve the G3 dependency per G-2026-65 (signed G3 or owner-accepted equivalent) before
+  any certified G5 pass. The CON:6-6 label and the fig-U6-2 bilingual overflow are owner-side
+  design decisions.
+- **Blocks:** a third G5 cycle for Unit 6; nothing else. The Urdu content is semantically
+  verified; the register items are presentational.
