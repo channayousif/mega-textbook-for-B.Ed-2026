@@ -1,1 +1,134 @@
-{}
+{
+  "/semester-1/efmp-301/unit-03/topic-01": [
+    {
+      "route": "/licence/pedagogy/c-classroom-management/learning-theories-and-cm",
+      "objective_id": "C01",
+      "title_en": "C01. Learning theories and classroom management",
+      "title_ur": "C01. نظریاتِ تعلم اور جماعتی انتظام"
+    }
+  ],
+  "/semester-1/efmp-301/unit-03/topic-02": [
+    {
+      "route": "/licence/pedagogy/c-classroom-management/learning-theories-and-cm",
+      "objective_id": "C01",
+      "title_en": "C01. Learning theories and classroom management",
+      "title_ur": "C01. نظریاتِ تعلم اور جماعتی انتظام"
+    }
+  ],
+  "/semester-1/efmp-301/unit-03/topic-04": [
+    {
+      "route": "/licence/pedagogy/c-classroom-management/learning-theories-and-cm",
+      "objective_id": "C01",
+      "title_en": "C01. Learning theories and classroom management",
+      "title_ur": "C01. نظریاتِ تعلم اور جماعتی انتظام"
+    },
+    {
+      "route": "/licence/pedagogy/c-classroom-management/differentiated-learning",
+      "objective_id": "C10",
+      "title_en": "C10. Differentiated learning",
+      "title_ur": "C10. متنوع تعلم"
+    }
+  ],
+  "/semester-1/efmp-301/unit-06/topic-01": [
+    {
+      "route": "/licence/pedagogy/c-classroom-management/cm-strategies",
+      "objective_id": "C09",
+      "title_en": "C09. Strategies for classroom management",
+      "title_ur": "C09. جماعتی انتظام کی حکمتِ عملیاں"
+    }
+  ],
+  "/semester-1/efmp-301/unit-07/topic-02": [
+    {
+      "route": "/licence/pedagogy/c-classroom-management/differentiated-learning",
+      "objective_id": "C10",
+      "title_en": "C10. Differentiated learning",
+      "title_ur": "C10. متنوع تعلم"
+    }
+  ],
+  "/semester-1/efmp-301/unit-08/topic-01": [
+    {
+      "route": "/licence/pedagogy/c-classroom-management/learning-theories-and-cm",
+      "objective_id": "C01",
+      "title_en": "C01. Learning theories and classroom management",
+      "title_ur": "C01. نظریاتِ تعلم اور جماعتی انتظام"
+    },
+    {
+      "route": "/licence/pedagogy/c-classroom-management/routines-schedules-time",
+      "objective_id": "C06",
+      "title_en": "C06. Routines, schedules and time management",
+      "title_ur": "C06. معمولات، نظام الاوقات اور وقت کا انتظام"
+    },
+    {
+      "route": "/licence/pedagogy/c-classroom-management/cm-strategies",
+      "objective_id": "C09",
+      "title_en": "C09. Strategies for classroom management",
+      "title_ur": "C09. جماعتی انتظام کی حکمتِ عملیاں"
+    }
+  ],
+  "/semester-1/efmp-301/unit-08/topic-02": [
+    {
+      "route": "/licence/pedagogy/c-classroom-management/effective-environment",
+      "objective_id": "C02",
+      "title_en": "C02. Designing an effective classroom environment",
+      "title_ur": "C02. مؤثر جماعتی ماحول کی تشکیل"
+    },
+    {
+      "route": "/licence/pedagogy/c-classroom-management/physical-and-social-environment",
+      "objective_id": "C04",
+      "title_en": "C04. Physical and social environment features",
+      "title_ur": "C04. طبعی اور معاشرتی ماحول کی خصوصیات"
+    },
+    {
+      "route": "/licence/pedagogy/c-classroom-management/physical-setup",
+      "objective_id": "C08",
+      "title_en": "C08. Physical setup of the classroom",
+      "title_ur": "C08. جماعت کی طبعی ترتیب"
+    }
+  ],
+  "/semester-1/efmp-301/unit-08/topic-03": [
+    {
+      "route": "/licence/pedagogy/c-classroom-management/cm-strategies",
+      "objective_id": "C09",
+      "title_en": "C09. Strategies for classroom management",
+      "title_ur": "C09. جماعتی انتظام کی حکمتِ عملیاں"
+    }
+  ],
+  "/semester-1/efmp-301/unit-10/topic-02": [
+    {
+      "route": "/licence/pedagogy/c-classroom-management/curriculum-and-cm",
+      "objective_id": "C05",
+      "title_en": "C05. Curriculum and classroom management",
+      "title_ur": "C05. نصاب اور جماعتی انتظام"
+    }
+  ],
+  "/semester-1/efmp-302/unit-03/topic-03": [
+    {
+      "route": "/licence/pedagogy/c-classroom-management/shared-values-and-community",
+      "objective_id": "C07",
+      "title_en": "C07. Creating shared values and community",
+      "title_ur": "C07. مشترکہ اقدار اور برادری کی تشکیل"
+    }
+  ],
+  "/semester-1/efmp-302/unit-04/topic-03": [
+    {
+      "route": "/licence/pedagogy/c-classroom-management/observation-and-data",
+      "objective_id": "C03",
+      "title_en": "C03. Classroom observation and data collection",
+      "title_ur": "C03. جماعتی مشاہدہ اور معلومات کی جمع آوری"
+    }
+  ],
+  "/semester-1/efmp-302/unit-05/topic-01": [
+    {
+      "route": "/licence/pedagogy/c-classroom-management/routines-schedules-time",
+      "objective_id": "C06",
+      "title_en": "C06. Routines, schedules and time management",
+      "title_ur": "C06. معمولات، نظام الاوقات اور وقت کا انتظام"
+    },
+    {
+      "route": "/licence/pedagogy/c-classroom-management/differentiated-learning",
+      "objective_id": "C10",
+      "title_en": "C10. Differentiated learning",
+      "title_ur": "C10. متنوع تعلم"
+    }
+  ]
+}

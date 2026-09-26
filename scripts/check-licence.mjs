@@ -171,10 +171,11 @@ for (const [k, o] of missing) {
   (ALLOW_MISSING ? warnings : errors).push(`licence/${LICENCE_SECTION}/${k}.mdx: no page for ${o.id} "${o.steda_objective}"`);
 }
 
-// Legacy course-shaped directories left from before Feature 024 (EED-313 until
-// its migration lands). Anything else at the licence root is a stray.
+// Legacy course-shaped directories left from before Feature 024. EED-313 was the
+// last one; heading C's migration removed it, so the set is now empty. Anything
+// else at the licence root is a stray.
 const licenceRoot = join(ROOT, TRACKS.find((t) => t.id === 'licence').contentRoot);
-const LEGACY = new Set(['eed-313']);
+const LEGACY = new Set([]);
 if (existsSync(licenceRoot)) {
   const { readdirSync, statSync } = await import('node:fs');
   for (const n of readdirSync(licenceRoot)) {
