@@ -29,6 +29,8 @@ export const CONTENT_GATES = [
   'check:concept-graph',
   'check:bloom-bands',
   'check:source-floor',
+  'check:licence',
+  'licence:map:check',
   'check:content-status',
   'check:docs-sync',
 ];

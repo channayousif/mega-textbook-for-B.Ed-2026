@@ -541,6 +541,16 @@ that will ever exist, and that the concept graph is load-bearing for everything 
     asynchronous review loop has **no deadline, owner or counter** - the stable state of an
     unbounded loop is that it never runs. If it is to be real it needs a number.
 
+## Semester I is content-complete *(2026-09-26)*
+
+All six Semester I courses (GENG-300, GNAS-301, GICT-300, GQUR-300, EFMP-301, EFMP-302) are
+authored and live: 41 of 41 units, the five bilingual courses with full Urdu mirrors, every
+figure placed. **Content-complete is not certified.** Only EFMP-301 U1 and EFMP-302 U1 have
+passed G3/G5/G7; the other 39 units carry advisory or no reviews, and 17 owner-decision gaps are
+open (G-2026-24..26, 29..34, 41, 62..68). No bilingual course has an Urdu `course-overview.mdx`.
+Owner decision (2026-09-26): record Semester I as content-complete, keep the review backlog
+queued, and move to the licence track (Feature 024).
+
 ## Immediate Next Steps *(revised 2026-09-20)*
 
 Four of the six previous steps are done. Struck items are recorded so the next reader can see

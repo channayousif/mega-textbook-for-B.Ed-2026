@@ -113,6 +113,14 @@ jobs:
       - name: Open-access source floor
         run: npm run check:source-floor
 
+      # Licence track (Feature 024): registry closure, front matter, degree
+      # cross-link resolution, depth by coverage, practice shape, Urdu parity.
+      - name: Licence track gate
+        run: npm run check:licence
+
+      - name: Licence reverse-link map freshness
+        run: npm run licence:map:check
+
       # Adding a course is content-only — zero platform-code change (FR-005, SC-006, T034)
       - name: Add-course content-only check
         run: npm run check:add-course

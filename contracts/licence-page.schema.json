@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bed-textbook/contracts/licence-page.schema.json",
+  "title": "Licence track page front matter (Feature 024)",
+  "description": "Front matter for every page under licence/pedagogy/<heading>/. The licence track is a code-free list of STEDA Part II topics and subtopics; see specs/024-licence-topic-design/spec.md. Enforced by scripts/check-licence.mjs against catalog/licence-objectives.json.",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["title", "description", "page_kind", "heading", "translation_status"],
+  "properties": {
+    "title": { "type": "string", "minLength": 1 },
+    "description": { "type": "string", "minLength": 20 },
+    "page_kind": { "enum": ["heading-index", "subtopic", "practice"] },
+    "heading": { "enum": ["a", "b", "c", "d", "e"] },
+    "translation_status": { "enum": ["draft", "reviewed"] },
+    "sidebar_position": { "type": "number" },
+    "objective_id": { "type": "string", "pattern": "^[A-E][0-9]{2}$" },
+    "steda_objective": { "type": "string", "minLength": 1 },
+    "coverage": {
+      "enum": ["covered", "partial", "authored"],
+      "description": "covered: a degree unit already teaches this; the page is an exam-focused summary plus links. partial: summary plus links plus authored residue. authored: no degree unit teaches it; full teaching here."
+    },
+    "degree_links": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path", "label"],
+        "properties": {
+          "path": { "type": "string", "pattern": "^/semester-[1-8]/[a-z0-9-]+/" },
+          "label": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "guide_ref": {
+      "type": "object",
+      "required": ["guide", "units"],
+      "properties": {
+        "guide": { "type": "string" },
+        "units": { "type": "string" }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 5 }
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "page_kind": { "const": "subtopic" } } },
+      "then": { "required": ["objective_id", "steda_objective", "coverage", "degree_links", "guide_ref", "sources"] }
+    },
+    {
+      "if": { "properties": { "coverage": { "enum": ["covered", "partial"] } }, "required": ["coverage"] },
+      "then": { "properties": { "degree_links": { "minItems": 1 } } }
+    }
+  ]
+}

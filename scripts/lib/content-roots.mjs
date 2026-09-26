@@ -43,6 +43,8 @@ export const TRACKS = Object.freeze([
     /** Courses are grouped one level down, in directories matching this. */
     dirPattern: /^semester-(\d+)$/,
     hasOrdinal: true,
+    /** Course > unit > topic. Every unit-walking gate reads this shape. */
+    shape: 'course-unit',
     pluginId: null, // the default docs-plugin instance
     urBase: urBaseFor(null),
     routeBasePath: '/',
@@ -57,6 +59,15 @@ export const TRACKS = Object.freeze([
      */
     dirPattern: null,
     hasOrdinal: false,
+    /**
+     * Feature 024: the licence track is a list of STEDA Part II topics and
+     * subtopics under `pedagogy/<heading>/<subtopic>.mdx`, not courses and units.
+     * It has no course codes, so `walkCourses`/`walkUnits` yield nothing for it
+     * and the unit-shaped gates never see it; `walkLicenceSubtopics` and
+     * `check-licence.mjs` own it instead. `CONTENT_ROOTS` still lists it, so the
+     * pattern-scanning gates (em dash, answer keys) keep covering it.
+     */
+    shape: 'topic-list',
     pluginId: 'licence',
     urBase: urBaseFor('licence'),
     routeBasePath: '/licence',
@@ -83,7 +94,8 @@ const trackOf = (id) => TRACKS.find((t) => t.id === id);
  */
 export function walkCourses(root, options = {}) {
   const base = resolve(root);
-  const tracks = options.track ? [trackOf(options.track)].filter(Boolean) : TRACKS;
+  const tracks = (options.track ? [trackOf(options.track)].filter(Boolean) : TRACKS)
+    .filter((t) => t.shape === 'course-unit');
   const out = [];
 
   for (const track of tracks) {
@@ -196,4 +208,36 @@ export function findDuplicateCourseCodes(root) {
 /** The only sanctioned way to build an Urdu path. Never join a UR base yourself. */
 export function urPathFor(record, ...segments) {
   return join(record.urUnitDir, ...segments);
+}
+
+/** The heading directory the licence track keeps its topic list under (Feature 024). */
+export const LICENCE_SECTION = 'pedagogy';
+
+/**
+ * Every licence page under `licence/pedagogy/<heading>/`, English side, with its
+ * Urdu mirror path. `kind` is `heading-index` for `index.mdx`, `practice` for
+ * `practice.mdx`, and `subtopic` for everything else. Sorted by heading then file.
+ */
+export function walkLicenceSubtopics(root) {
+  const track = trackOf('licence');
+  const base = resolve(root);
+  const sectionDir = join(base, track.contentRoot, LICENCE_SECTION);
+  const out = [];
+  for (const headingDir of dirs(sectionDir).sort()) {
+    const dir = join(sectionDir, headingDir);
+    const files = readdirSync(dir).filter((n) => n.endsWith('.mdx')).sort();
+    for (const file of files) {
+      const slug = file.replace(/\.mdx$/, '');
+      out.push(Object.freeze({
+        headingDir,
+        heading: headingDir.split('-')[0],
+        slug,
+        kind: slug === 'index' ? 'heading-index' : slug === 'practice' ? 'practice' : 'subtopic',
+        file: join(dir, file),
+        urFile: join(base, track.urBase, LICENCE_SECTION, headingDir, file),
+        route: `${track.routeBasePath}/${LICENCE_SECTION}/${headingDir}/${slug === 'index' ? '' : slug}`,
+      }));
+    }
+  }
+  return out;
 }

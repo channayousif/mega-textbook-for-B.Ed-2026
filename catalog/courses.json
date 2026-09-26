@@ -150,16 +150,8 @@
       "id": "licence",
       "title_en": "Licence track",
       "title_ur": "لائسنس ٹریک",
-      "courses": [
-        {
-          "code": "EED-313",
-          "title_en": "Classroom Management",
-          "title_ur": "کلاس روم مینجمنٹ",
-          "credit_hours": "3 (3-0)",
-          "category": "Licence track",
-          "bilingual": true
-        }
-      ]
+      "courses": [],
+      "sections": "Feature 024: the licence track has no courses or course codes. Its content is the STEDA Part II topic list in catalog/licence-objectives.json, served under /licence/pedagogy/."
     }
   ]
 }

@@ -14,6 +14,7 @@ import {
   submitGuestFeedback,
 } from '@site/src/lib/contentFeedback';
 import { fetchContentIndex } from '@site/src/lib/assignments';
+import LicenceRelevance from '@site/src/components/LicenceRelevance';
 import type { SuggestionCategory, TeachingLogSourceKind, ContentFeedbackPageKind, ContentFeedbackScope } from '@site/src/lib/types';
 
 /**
@@ -795,6 +796,7 @@ export default function DocItemFooterWrapper(): React.ReactElement {
 
   return (
     <>
+      <LicenceRelevance />
       {role === 'student' && courseCode && unitNo !== null && (markedHydrated || marked) && (
         <div className="margin-top--md">
           {error && <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>}

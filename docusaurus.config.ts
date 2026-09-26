@@ -187,13 +187,13 @@ const config: Config = {
       },
     ],
     /**
-     * Third docs instance: the licence content track (Feature 015, ADR-0020).
+     * Third docs instance: the licence content track (Feature 015, ADR-0020;
+     * reshaped by Feature 024 into a code-free STEDA Part II topic list under
+     * `licence/pedagogy/<heading>/<subtopic>.mdx`).
      *
-     * EED-313 Classroom Management is assessed by the Sindh Teaching Licence
-     * test but was restructured out of the 2026 scheme, so it has no degree
-     * course to live in. Keeping it in its own instance rather than a semester
-     * folder avoids recording a false fact about the approved programme in the
-     * URL and the sidebar.
+     * Keeping it in its own instance rather than a semester folder avoids
+     * recording a false fact about the approved programme in the URL and the
+     * sidebar: nothing here is a degree course.
      *
      * `id` is load-bearing: omit it and the instance silently merges into the
      * first one (the failure mode Spec 004's quickstart records). It also fixes
@@ -207,6 +207,19 @@ const config: Config = {
         path: 'licence',
         routeBasePath: 'licence',
         sidebarPath: './sidebars-licence.ts',
+      },
+    ],
+    /**
+     * Feature 024: redirects for licence URLs retired by the topic-list
+     * migration (the old EED-313 course pages). The list is content, kept in
+     * catalog/licence-redirects.json so a migration never needs a config edit.
+     */
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: (JSON.parse(readFileSync('./catalog/licence-redirects.json', 'utf8')) as {
+          redirects: { from: string; to: string }[];
+        }).redirects,
       },
     ],
   ],

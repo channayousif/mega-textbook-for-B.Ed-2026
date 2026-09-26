@@ -210,7 +210,7 @@ npm run check:content
 npm run check:all
 ```
 
-`check:content` runs, in order: `validate:content` -> `check:pipeline-gate` -> `check:depth-gate` -> `check:figures` -> `check:no-em-dash` -> `check:no-answer-keys` -> `check:concept-graph` -> `check:bloom-bands` -> `check:source-floor` -> `check:content-status` -> `check:docs-sync`.
+`check:content` runs, in order: `validate:content` -> `check:pipeline-gate` -> `check:depth-gate` -> `check:figures` -> `check:no-em-dash` -> `check:no-answer-keys` -> `check:concept-graph` -> `check:bloom-bands` -> `check:source-floor` -> `check:licence` -> `licence:map:check` -> `check:content-status` -> `check:docs-sync`.
 <!-- END GENERATED gate-commands -->
 
 `check:pipeline-gate` may be **red** for this unit until its `tasks.md` G2/G3 rows re-clear the

@@ -2,7 +2,7 @@
   "name": "bed-mega-textbook",
   "version": "0.1.0",
   "private": true,
-  "description": "Bilingual (English + Urdu) digital textbook for the B.Ed (4-Year) programme \u2014 Docusaurus content platform.",
+  "description": "Bilingual (English + Urdu) digital textbook for the B.Ed (4-Year) programme — Docusaurus content platform.",
   "engines": {
     "node": ">=22"
   },
@@ -24,6 +24,9 @@
     "check:depth-gate": "node scripts/check-unit-depth.mjs",
     "check:figures": "node scripts/check-figures.mjs",
     "check:no-em-dash": "node scripts/check-no-em-dash.mjs",
+    "check:licence": "node scripts/check-licence.mjs --allow-missing",
+    "licence:map": "node scripts/build-licence-map.mjs",
+    "licence:map:check": "node scripts/build-licence-map.mjs --check",
     "build:content-status": "node scripts/report-content-status.mjs",
     "check:content-status": "node scripts/report-content-status.mjs --check",
     "optimize:figure": "node scripts/optimize-figure.mjs",
@@ -46,6 +49,7 @@
   },
   "dependencies": {
     "@docusaurus/core": "^3.10.2",
+    "@docusaurus/plugin-client-redirects": "^3.10.2",
     "@docusaurus/preset-classic": "^3.10.2",
     "@easyops-cn/docusaurus-search-local": "^0.55.2",
     "@mdx-js/react": "^3.0.0",

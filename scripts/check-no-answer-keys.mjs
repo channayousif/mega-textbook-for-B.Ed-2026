@@ -45,9 +45,11 @@ const PROSE_PATTERNS = [
 const ALL_PATTERNS = [...FRONT_MATTER_PATTERNS, ...PROSE_PATTERNS];
 
 const CANONICAL_HEADING = '## Answers and marking guidance';
-const BOUNDED_SRC_RE = /(?:^|\/)(unit-assessment|course-review)\.mdx$/;
+// Feature 024: every licence page carries its CRQ/ERQ rubrics under the same final bounded
+// heading, so the licence topic list (EN and UR mirror) takes the same exception.
+const BOUNDED_SRC_RE = /(?:^|\/)(unit-assessment|course-review)\.mdx$|(?:^|\/)(?:licence|docusaurus-plugin-content-docs-licence\/current)\/pedagogy\/[^/]+\/[^/]+\.mdx$/;
 // Built routes: .../unit-assessment/index.html  OR  .../unit-assessment.html  (+ /ur/ mirrors)
-const BOUNDED_HTML_RE = /(?:^|\/)(unit-assessment|course-review)(?:\/index)?\.html$/;
+const BOUNDED_HTML_RE = /(?:^|\/)(unit-assessment|course-review)(?:\/index)?\.html$|\/licence\/pedagogy\/[^/]+\/[^/]+(?:\/index)?\.html$/;
 
 const SCAN_EXT = new Set(['.md', '.mdx', '.html']);
 // Spec 006: style-guide.md is the documented home for these exact marker phrases.

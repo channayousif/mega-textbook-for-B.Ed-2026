@@ -1,0 +1,4 @@
+{
+  "_note": "Feature 024: client redirects for licence URLs retired by the topic-list migration. Each entry is {\"from\": old path, \"to\": new path}. A \"from\" path must no longer exist as a page (the plugin refuses to shadow a live route), so entries land in the same change that deletes the old page. Read by docusaurus.config.ts.",
+  "redirects": []
+}
