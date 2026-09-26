@@ -1,0 +1,123 @@
+G5 Urdu review - EFMP-301 Unit 8 (Classroom Management)
+Run: agent-g5-efmp301-u8-run001 | Reviewer: agent:g5-reviewer (LongCat-2.0, fresh session)
+Report: specs/content/efmp-301/reviews/unit-08/G5/agent-g5-efmp301-u8-run001.json
+Disposition: REVISE (advisory under ADR-0019; 7 blocking, 1 uncertain, 6 advisory findings)
+
+Input bundle
+- The prepared manifest (specs/content/efmp-301/reviews/unit-08/G5/manifest.json) was verified
+  against the current tree with the evidence library's own normalisation: 117/117 inputs match,
+  0 drifted (logs-agent-g5-efmp301-u8-run001/verify-manifest.log).
+- English authored at 41a3e33e (PHR 0049, LongCat-2.0), G3-repaired at f2e751aa; Urdu mirrored
+  by the G4 run at c6325afe (PHR 0068, LongCat-2.0) with the repair mirror at f2e751aa and the
+  pre-flight mechanical lint at 72c14f85. This session neither authored nor translated the
+  material.
+
+What passed
+- Completeness: every section of all six files mirrored in full - nine-part cycle x3, index
+  outcomes/prerequisites/map/how-to, 10/10/5 bank with bounded answers and rubrics, all six
+  teacher-notes sections; no stubs, no omissions or additions; no untranslated English prose.
+- Sources: Seifert & Sutton (2009) citations retained inline at every translated quotation;
+  quotation meanings preserved; the repaired practical-work attribution is correctly mirrored.
+- Assessment equivalence: all 10 Urdu MCQs independently answered before reading either key -
+  derived 1-b, 2-b, 3-b, 4-b, 5-a, 6-c, 7-b, 8-b, 9-c, 10-b matches the Urdu and English keys
+  exactly; option order, RRQ mark allocations and all five ERQ rubrics (identical marks,
+  20 each) mirror the English; the G3-repaired items (MCQ-05, MCQ-10, RRQ-10) are mirrored.
+- Deterministic gates all pass: validate:content, check:depth-gate, check:figures,
+  check:no-em-dash, check:no-answer-keys, check:docs-sync (exit 0, logs bound).
+- Page-level RTL/accessibility: all six Urdu pages rendered from the production build served at
+  localhost:3212 at desktop 1280x900, narrow 360x780 and A4 print 794x1123 - dir=rtl, zero
+  horizontal overflow at both viewports, every table fits (328=328 at 360px), zero console
+  errors, Urdu alt text on every figure, print clean (only the framework skip-link past the
+  page box, no visible dark variants), body text in Noto Nastaliq Urdu.
+
+Blocking findings (repair required)
+1. Terminology: "Classroom Management" rendered as "جماعت کی کاؤنٹرائزنگ" 42 times across all
+   six files - a garbled transliteration that is not an Urdu word and not the banked term
+   (جماعتی انتظام, terminology.csv:26). The unit's own fig-U8-1.ur.svg, concepts/unit-08.md,
+   teacher-notes banked-terms line (unit-teacher-notes.mdx:56) and glossary.json all contradict
+   the prose. The UR index key_terms block declares the unbanked pair (index.mdx:12-14) and
+   will fail check:pipeline-gate FR-016c once translation_status flips to reviewed.
+2. Terminology: گھبراہٹ for Anxiety (bank: اضطراب) at topic-01.mdx:50, topic-03.mdx:90,96,
+   unit-assessment.mdx:113,175, unit-teacher-notes.mdx:50. Known repo-wide defect family,
+   blocking in Unit 6 round 1; the pre-flight lint (72c14f85) did not cover it.
+3. Terminology: حوصلہ for Motivation (bank: محرک) at index.mdx:23,38 and انفرادی فرق for
+   Individual Differences (bank: انفرادی اختلافات) at index.mdx:38 - both repeat sibling-unit
+   blocking families.
+4. Semantics: "step" of the ladder rendered as سیڑھی (ladder) - "سیڑھی کی پہلی سیڑھی"
+   (MCQ-9, unit-assessment.mdx:82), "سیڑھی کی پانچ سیڑھیاں" (RRQ-9 :104; topic-03.mdx:68,79),
+   "سیڑھی ایک سیڑھی ایک وقت میں" (summary :73), "پانچ سیڑھیوں کی بڑھتی سیڑھی" (fig-U8-5 alt
+   :29), "ہر سیڑھ" (fig-U8-5.ur.svg note). Reads as "the ladder's five ladders". The correct
+   words are already in the unit's own artifacts (قدم in teacher-notes:28, مرحلہ in
+   fig-U8-2/4/5 cell texts).
+5. RTL/figure: all three Urdu table figures carry vertical grid dividers misplaced by
+   incomplete RTL mirroring - only each grid path's FIRST M coordinate was mirrored; the rest
+   kept English x positions (same family as Unit 6 round-1 blocking finding 6).
+   Browser-measured (figure-geometry.log): fig-U8-6.ur.svg + dark have dividers 648/360/576
+   (correct: 648/420/204) - the x=576 divider strikes 7 function-column cell texts and x=360
+   strikes 8 first-response cell texts (15 crossings; the English original has zero), and the
+   intended 204 boundary is missing. fig-U8-2.ur.svg (662/424, correct 662/356) and
+   fig-U8-4.ur.svg (628/436, correct 628/344) have the same unmirrored second divider - no text
+   is struck there, but the visible column boundary is 68/92px from where the correctly
+   mirrored headers and cells are centred.
+6. RTL/figure: fig-U8-5.ur.svg + .ur.dark.svg - the arrowhead marker path
+   "M 780 0L 770 5L 780 10z" lies entirely outside its marker viewBox "0 0 10 10", so it clips
+   to nothing: the ladder's upward arrow renders headless in Urdu (the English marker renders).
+   Pixel-measured over the PNGs (marker-pixels.log): EN tip-box gray-mean 0.832 vs line-only
+   control 0.906 (the head's pixels); UR tip-box 0.931 - lighter than its own control, i.e. no
+   head pixels at all.
+7. Assessment: RRQ-10 changes the English "a once-a-term seating map" to
+   "سال میں ایک بار بنایا بیٹھنے کا نقشہ" (once a year, unit-assessment.mdx:105), and the
+   item sentence is garbled ("وہ جو ... دکھاتا ہے جو ... نہیں دکھاتیں").
+
+Uncertain finding (owner escalation)
+8. G3 dependency not satisfied for the bound English (GQUR-300 PR #65 precedent, same status
+   as Units 5/6/7): the only G3 report is advisory run001 (disposition revise) and reviewed the
+   PRE-repair English; the English was repaired at f2e751aa with no round-2 verification, and
+   no signed/accepted G3 exists for the current inputs. The full comparison was nevertheless
+   performed against the current bound English.
+
+Advisory findings
+9. Unify figure/prose/concept-graph terms (nine core splits): consistency تسلسل/استقلال;
+   learning time تعلیمی/تعلمی وقت; safety حفاظت/تحفظ; participation شرکت/شراکت; norms
+   اصول/رسمیں/رسم; feedback بازخورد/تاثرات; dignity وقار/عزت; private word نجی/ذاتی بات;
+   parent meeting میٹنگ/ملاقات. The concept graph's own foot note asks G5 to confirm these
+   labels and promote survivors to the bank.
+10. Figure label word-choice: fig-U8-6 header "ممکنہ کارکردگی" (likely performance) for "a
+    likely function" (prose/alt use فعل); fig-U8-6 row "بلند آواز میں" for "calling out";
+    fig-U8-5 note "سرپٹی نہیں" for "not a slip" (prose: پھسلنا); fig-U8-1/alt "بطور داخل"
+    for "as inputs".
+11. Register: منتظم (manager) used as an adjective for "managed" x6 (index.mdx:25,
+    topic-01.mdx:36,50,66,72, teacher-notes:46); "نشوونمائی طور پر" for "developmentally" x7
+    and "نشوونمائی قرأت"; "پٹی پہنے ہوئی سزا" for "a punishment with a costume on"
+    (topic-03.mdx:47); "ایک اور آمادگی" for "another confrontation" (assessment:143); garbled
+    "جس کا، نوٹ کریں، دفاع نام لینے کر رہا تھا" (topic-03.mdx:90) and double-genitive
+    "استاد کے غلط جوابوں کے پہلے جوابوں سے بنا" (assessment:141); "چلنے والا سیٹ" for "a
+    workable set" (topic-03.mdx:37); typo "ہفہ" (topic-02.mdx:86); طالب علم inside the rules
+    quotation vs شاگرد everywhere else (topic-03.mdx:37).
+12. Minor semantic drifts: "settles" as بیٹھتی ہے (topic-01.mdx:28); "where a consequence
+    teaches anything at all" loses exclusivity (topic-03.mdx:47); MCQ-7a "efficiency" as
+    کارکردگی; fig-U8-4 "mark" as چیک vs prose نمبر; fig-U8-1 tagline کاپیوں vs alt کتابوں;
+    "rigidity" as سخت گیری (topic-01.mdx:44).
+13. English-side residuals for the owner (mirrored faithfully, not translation defects):
+    fig-U8-2 (EN+UR) carries only three horizontal separators for four principle rows;
+    fig-U8-1 (EN+UR) paints the consistency/استقلال panel over the central ellipse's inner
+    half - the ellipse-connector and the left (EN) / right (UR) portion of the central label
+    are covered (ellipse [137,361] vs panel [20,250] in EN; [419,643] vs [530,760] in UR).
+14. Platform (owner, out of unit scope): Urdu h1/h2 heading font stack - recorded by Units
+    5/6 rounds; re-checked on this unit's render.
+
+Evidence
+- Logs under logs-agent-g5-efmp301-u8-run001/ (gate logs, verify-manifest, render-figures,
+  figure-geometry, measure-figure-text, render-review, harnesses); renders under
+  renders-agent-g5-efmp301-u8-run001/ (18 figure PNGs: EN/UR/UR-dark x 6; page PNGs at
+  desktop 1280, narrow 360, A4 print). All SHA-256-bound in the report's evidence_manifest.
+- Render inspection ran on this worktree's production build served at localhost:3212
+  (docusaurus serve; build written 2026-09-26T00:54:52Z from the clean tree at HEAD 58126b44;
+  served Urdu Unit 8 content spot-verified against the current sources before inspection).
+  In-session PNG viewing is blocked in this environment (as in prior rounds), so figure
+  conclusions rest on browser-measured geometry with the PNGs as human-viewable evidence.
+
+This report is advisory under ADR-0019. It does not certify the unit, mark any gate done, or
+alter translation_status, tracker rows, the terminology bank or any prior report. The Bash
+safety classifier flapped throughout this run; the render evidence was gathered in the
+available windows and the comparison work was completed read-only in between.
