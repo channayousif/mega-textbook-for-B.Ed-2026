@@ -1,0 +1,15 @@
+index: h=5 h1=1 skip=false imgs=1 missingAlt=0 darkShown=0 docOverflowX=0 scrollers=0 allReachable=true
+topic-01: h=12 h1=1 skip=false imgs=6 missingAlt=0 darkShown=0 docOverflowX=0 scrollers=2 allReachable=true
+   FIGURE.figure figure--table(900>328 reach=true tb=0 role=region) | FIGURE.figure figure--concept-map(900>328 reach=true tb=0 role=region)
+topic-02: h=14 h1=1 skip=false imgs=6 missingAlt=0 darkShown=0 docOverflowX=0 scrollers=2 allReachable=true
+   FIGURE.figure figure--table(900>328 reach=true tb=0 role=region) | FIGURE.figure figure--diagram(800>328 reach=true tb=0 role=region)
+topic-03: h=12 h1=1 skip=false imgs=6 missingAlt=0 darkShown=0 docOverflowX=0 scrollers=2 allReachable=true
+   FIGURE.figure figure--concept-map(880>328 reach=true tb=0 role=region) | FIGURE.figure figure--flowchart(880>328 reach=true tb=0 role=region)
+topic-04: h=13 h1=1 skip=false imgs=6 missingAlt=0 darkShown=0 docOverflowX=0 scrollers=2 allReachable=true
+   FIGURE.figure figure--table(860>328 reach=true tb=0 role=region) | FIGURE.figure figure--diagram(860>328 reach=true tb=0 role=region)
+topic-05: h=14 h1=1 skip=false imgs=6 missingAlt=0 darkShown=0 docOverflowX=0 scrollers=2 allReachable=true
+   FIGURE.figure figure--timeline(900>328 reach=true tb=0 role=region) | FIGURE.figure figure--concept-map(900>328 reach=true tb=0 role=region)
+unit-assessment: h=10 h1=1 skip=false imgs=2 missingAlt=0 darkShown=0 docOverflowX=0 scrollers=5 allReachable=true
+   TABLE.(527>328 reach=true tb=0 role=region) | TABLE.(473>328 reach=true tb=0 role=region) | TABLE.(471>328 reach=true tb=0 role=region) | TABLE.(488>328 reach=true tb=0 role=region) | TABLE.(499>328 reach=true tb=0 role=region)
+unit-teacher-notes: h=7 h1=1 skip=false imgs=2 missingAlt=0 darkShown=0 docOverflowX=0 scrollers=0 allReachable=true
+done

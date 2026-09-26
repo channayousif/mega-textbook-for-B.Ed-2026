@@ -1,0 +1,44 @@
+build/ mtime: 2026-09-24T22:50:19.329Z
+HEAD at review: a483c9e
+index.html: "تدریسی پیشے کے مسائل اور چیلنج" -> 4
+index.html: "262 نارویجن استادوں کی دریافت" -> 1
+index.html: "کچھ شامل نہیں ہوا اور کچھ چھوڑا نہیں گیا" -> 1
+topic-01/index.html: "محترمہ شہناز" -> 4
+topic-01/index.html: "تینتالیس کاپیاں" -> 1
+topic-01/index.html: "انسانی خدمت والے پیشوں" -> 2
+topic-01/index.html: "صفروں" -> 1
+topic-02/index.html: "جناب رفیق" -> 8
+topic-02/index.html: "اس سے اتفاق نہیں کرتا" -> 1
+topic-02/index.html: "تناوب" -> 1
+topic-02/index.html: "کم تنخواہ اور کم اعتماد" -> 1
+topic-03/index.html: "محترمہ سندس" -> 7
+topic-03/index.html: "چالیس ٹیبلٹ" -> 3
+topic-03/index.html: "ملے جلے" -> 1
+topic-03/index.html: "ان کا مطلب ان کے پاس ہونے والے صرف تیس منٹ" -> 1
+topic-04/index.html: "جناب بلال" -> 4
+topic-04/index.html: "باسٹھ" -> 6
+topic-04/index.html: "اور کچھ بھی نہیں ہیں" -> 1
+topic-04/index.html: "منتقل کرنے کا طریقہ" -> 1
+unit-assessment/index.html: "ایک حلقے کے بارے میں سچ فیصلے" -> 1
+unit-assessment/index.html: "ہٹانے اور fixed الگ" -> 1
+unit-assessment/index.html: "اکاون شاگردوں" -> 1
+unit-teacher-notes/index.html: "پری سروس بیچ" -> 1
+unit-teacher-notes/index.html: "ہر تھکن کا ماخذ کہاں چلا" -> 1
+unit-teacher-notes/index.html: "اور اختتام" -> 4
+build serves fig-U5-1.ur.svg: true (byte-identical to source: true)
+build serves fig-U5-1.ur.dark.svg: true (byte-identical to source: true)
+build serves fig-U5-2.ur.svg: true (byte-identical to source: true)
+build serves fig-U5-2.ur.dark.svg: true (byte-identical to source: true)
+build serves fig-U5-3.ur.svg: true (byte-identical to source: true)
+build serves fig-U5-3.ur.dark.svg: true (byte-identical to source: true)
+build serves fig-U5-4.ur.svg: true (byte-identical to source: true)
+build serves fig-U5-4.ur.dark.svg: true (byte-identical to source: true)
+build serves fig-U5-5.ur.svg: true (byte-identical to source: true)
+build serves fig-U5-5.ur.dark.svg: true (byte-identical to source: true)
+build serves fig-U5-6.ur.svg: true (byte-identical to source: true)
+build serves fig-U5-6.ur.dark.svg: true (byte-identical to source: true)
+build serves fig-U5-7.ur.svg: true (byte-identical to source: true)
+build serves fig-U5-7.ur.dark.svg: true (byte-identical to source: true)
+build serves fig-U5-8.ur.svg: true (byte-identical to source: true)
+build serves fig-U5-8.ur.dark.svg: true (byte-identical to source: true)
+FRESHNESS: OK - every current-source probe found in the built Urdu pages and all 16 Urdu figure assets byte-identical

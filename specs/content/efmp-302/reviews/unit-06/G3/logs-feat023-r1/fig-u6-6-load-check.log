@@ -1,0 +1,10 @@
+before scroll: natural=0x0 complete=false figureTop=3912 viewportH=900 (page must scroll 3112px before lazy fetch begins)
+after scroll + networkidle: natural=300x147 complete=true shown=true
+fig-U6-6 network responses: 200 http://127.0.0.1:8124/img/figures/efmp-302/unit-06/fig-U6-6.svg
+failed requests: none
+in-page screenshot: renders-feat023-r1/fig-U6-6-inpage-desktop.png
+topic-01: logo.svg=150x150, fig-U6-1.svg=300x133, fig-U6-1.dark.svg=0x0 (hidden), fig-U6-2.svg=295x150, fig-U6-2.dark.svg=0x0 (hidden)
+topic-02: logo.svg=150x150, fig-U6-3.svg=300x133, fig-U6-3.dark.svg=0x0 (hidden), fig-U6-4.svg=300x117, fig-U6-4.dark.svg=0x0 (hidden)
+topic-04: logo.svg=150x150, fig-U6-7.svg=281x150, fig-U6-7.dark.svg=0x0 (hidden), fig-U6-8.svg=293x150, fig-U6-8.dark.svg=0x0 (hidden)
+
+VERDICT: FIG-U6-6 LOADS: render-inspect defect was a lazy-load measurement race, not a content defect

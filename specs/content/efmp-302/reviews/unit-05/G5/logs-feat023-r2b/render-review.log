@@ -1,0 +1,85 @@
+render-review feat023-r2b - EFMP-302 Unit 5, Urdu mirror (G5 cycle 2)
+Reviewer's actual host/browser inspection record. Advisory only; not certification.
+
+## How inspection ran
+
+- Served input identity: the shared two-locale build at build/ (mtime 2026-09-24T19:10:44 -0500,
+  built immediately after repair commit 219960c at 2026-09-24T19:09:46 -0500; the only later
+  commits are review-evidence/tracker commits that change no content). NOT a rebuild: no
+  `npm run build` was run by this reviewer. Freshness proven by logs-feat023-r2b/site-build.log -
+  every one of the seven repaired prose passages is present in the built Urdu HTML
+  (whitespace-normalised matching) and all 16 Urdu figure assets under
+  build/img/figures/efmp-302/unit-05/ are byte-identical to static/ sources, which covers the two
+  repaired figures (fig-U5-4, fig-U5-8) in the served pages.
+- Instrument: node scripts/render-inspect.mjs EFMP-302 5 --locale ur --port 4627
+  --out specs/content/efmp-302/reviews/unit-05/G5/renders-feat023-r2b
+  (Chromium 149.0.7827.0 headless; sections A desktop 1280x900, B narrow 360x780,
+  C A4 print 794px, D SVG text geometry). Exit 0, defects 0. Full log:
+  logs-feat023-r2b/render-inspect.log; machine record renders-feat023-r2b/render-inspect.json.
+- Targeted close-up inspection: reviewer-authored Playwright driver
+  logs-feat023-r2b/targeted-shots.mjs against the same served build
+  (env: html lang="ur" dir="rtl"; document.fonts reports the self-hosted
+  "Noto Nastaliq Urdu" webfont loaded). Log: logs-feat023-r2b/targeted-shots.log.
+
+## Section A-C results (render-inspect, all seven Urdu pages)
+
+- Desktop 1280x900: no skipped heading levels, no broken images, no missing alt, no horizontal
+  overflow on any page; heading counts 7/15/13/12/12/10/7 (index/t1/t2/t3/t4/assessment/notes),
+  identical to the English files (verified by grep count on docs/).
+- Narrow 360x780: docHorizontalOverflow 0px on every page; each of the eight figures is its own
+  scroll container (scroller=FIGURE.figure, client 328 vs scroll 880-1030); all six marking
+  tables fit without scrolling (client 328 = scroll 328).
+- A4 print 794px: clippedElems 0 on every page; all eight figures fit (max right edge 777px).
+- SVG text geometry (section D): all 16 Urdu variants clean - no text past the viewBox, no
+  wordmark collision (41/27/24/36/46/22/23/19 text elements per figure).
+
+## Section D - reviewer's visual inspection of the repaired loci (targeted-shots)
+
+All nine cycle-1 repair loci inspected at native scale in the rendered pages
+(renders-feat023-r2b/crop-*.png, figure-U5-*-ur-*.png):
+
+1. crop-t2-stance-repair1.png - topic-02 stance sentence reads
+   "جوابدہی کا دعویٰ مضبوط ہے اور یہ یونٹ اس سے اختلاف نہیں کرتا" (اختلاف, not اتفاق نہیں);
+   the following public-trust sentence renders consistently with it.
+2. crop-t2-isore-tazad-repair4.png - Isoré passage reads
+   "جوابدہی اور ترقی کے درمیان تضاد کو ... مرکزی ڈیزائن مسئلہ پاتی ہیں" (تضاد).
+3. crop-t2-consequences-repair5.png - "ناپتے ہیں، موازنہ کرتے ہیں اور نتیجہ لاگو کرتے ہیں"
+   followed by "وہ اپنی ذات میں وہ کچھ فراہم نہیں کرتے".
+4. crop-t3-cost-leg-repair3.png - "ان کی لاگت ان کے پاس ہونے والے صرف تیس منٹ ہیں" inside the
+   add/cost/depend/replace parallel.
+5. crop-t4-not-nothing-repair2.png - "چھوٹے ہیں مگر موجود بھی ہیں:" immediately followed by the
+   four-resource list.
+6. crop-assess-rrq1-pt4-repair6.png - RRQ 1 point 4 "بوجھ محنت اور خلوص کے ساتھ جُڑتا ہے، رسمی
+   فرض کے ساتھ نہیں".
+7. crop-assess-erq1-rubric-repair9.png - ERQ 1 rubric Adequate cell "ہٹانے والے اور نہ ہٹنے والے
+   الگ"; no untranslated Latin word remains in the row.
+8. figure-U5-4-ur-light.png - Law (قانون) row public-recognition cell reads ملے جلے, matching the
+   EN figure's "Mixed"; the rest of the table (طب/قانون/انجینئرنگ/نرسنگ/تدریس rows) renders
+   correctly RTL with row labels on the right.
+9. figure-U5-8-ur-light.png - station 1 sublabel reads "ٹھیک طرح، "نظم و ضبط" نہیں"; the six
+   stations mirror right-to-left with the loop-back arrow along the bottom.
+
+Nastaliq, bidi, numerals and embedded Latin verified on these crops and on the full-page desktop
+renders (desktop-*.png): Noto Nastaliq Urdu shaping and ligatures correct; Western digits inside
+RTL runs (262، 22 تا 28، 450 تا 500، 4-5) and embedded Latin (Maslach, Leiter, Skaalvik, Isoré,
+OECD, WhatsApp, MCQ/RRQ/ERQ) render without scrambling; punctuation sits on the correct side of
+RTL runs.
+
+## Limitations recorded honestly
+
+- Dark-theme figure re-shots: the reviewer's driver could not force the site's dark theme
+  (setting html[data-theme=dark] and localStorage 'theme' produced byte-identical images to the
+  light shots; the site's theme initialiser overrides both). Dark-variant verification therefore
+  rests on: the .ur.dark.svg source bytes (both repaired labels verified present by direct
+  extraction), the build assets being byte-identical to static/ sources (site-build.log), and
+  render-inspect section A confirming both variants serve on every carrier. Cycle 1's
+  renders-feat023-r1/figure-U5-4-ur-dark.png and figure-U5-8-ur-dark.png remain the visual dark
+  evidence for the unrepaired labels; the repaired labels are verified in source and build bytes.
+- No system Noto Nastaliq Urdu is installed on this host for SVG-internal figure text (the .ur.svg
+  files use system font stacks and embed no font), so figure-internal glyphs render in fallback
+  Arabic shaping in the browser screenshots; page body text is unaffected (the self-hosted webfont
+  loads - targeted-shots.log). Figure-internal Nastaliq verification on a Nastaliq-capable host
+  remains an owner-side check, as in the Unit 3/4 G5 runs (carried advisory).
+- pdftoppm is not installed on this host, so the A4 print PDFs were not rasterised for visual
+  reading; print evidence is the render-inspect section C measurements (clippedElems 0, all
+  figures within 794px) plus the committed PDF artifacts themselves.
