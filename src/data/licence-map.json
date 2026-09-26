@@ -1,1 +1,108 @@
-{}
+{
+  "/semester-1/efmp-301/unit-01/topic-04": [
+    {
+      "route": "/licence/pedagogy/d-assessment-and-test-dev/feedback",
+      "objective_id": "D04",
+      "title_en": "D04. Feedback: characteristics and benefits",
+      "title_ur": "D04. تاثرات (فیڈبیک): خصوصیات اور فوائد"
+    }
+  ],
+  "/semester-1/efmp-301/unit-05/topic-01": [
+    {
+      "route": "/licence/pedagogy/d-assessment-and-test-dev/tests-and-measurement",
+      "objective_id": "D12",
+      "title_en": "D12. Tests and measurement",
+      "title_ur": "D12. ٹیسٹ اور پیمائش"
+    }
+  ],
+  "/semester-1/efmp-301/unit-08/topic-02": [
+    {
+      "route": "/licence/pedagogy/d-assessment-and-test-dev/feedback",
+      "objective_id": "D04",
+      "title_en": "D04. Feedback: characteristics and benefits",
+      "title_ur": "D04. تاثرات (فیڈبیک): خصوصیات اور فوائد"
+    }
+  ],
+  "/semester-1/efmp-301/unit-09/topic-01": [
+    {
+      "route": "/licence/pedagogy/d-assessment-and-test-dev/assessment-evaluation-testing",
+      "objective_id": "D01",
+      "title_en": "D01. Assessment, evaluation and testing defined",
+      "title_ur": "D01. تشخیص، تعینِ قدر اور ٹیسٹنگ کی تعریفیں"
+    },
+    {
+      "route": "/licence/pedagogy/d-assessment-and-test-dev/assessment-vs-evaluation",
+      "objective_id": "D02",
+      "title_en": "D02. Assessment and evaluation: the difference",
+      "title_ur": "D02. تشخیص اور تعینِ قدر: فرق"
+    },
+    {
+      "route": "/licence/pedagogy/d-assessment-and-test-dev/formative-and-summative",
+      "objective_id": "D03",
+      "title_en": "D03. Formative and summative assessment",
+      "title_ur": "D03. تشکیلی تشخیص اور مجموعی جائزہ"
+    },
+    {
+      "route": "/licence/pedagogy/d-assessment-and-test-dev/teacher-made-tests",
+      "objective_id": "D11",
+      "title_en": "D11. Significance of teacher-made tests",
+      "title_ur": "D11. استاد کے بنائے ہوئے ٹیسٹوں کی اہمیت"
+    }
+  ],
+  "/semester-1/efmp-301/unit-09/topic-02": [
+    {
+      "route": "/licence/pedagogy/d-assessment-and-test-dev/assessment-evaluation-testing",
+      "objective_id": "D01",
+      "title_en": "D01. Assessment, evaluation and testing defined",
+      "title_ur": "D01. تشخیص، تعینِ قدر اور ٹیسٹنگ کی تعریفیں"
+    },
+    {
+      "route": "/licence/pedagogy/d-assessment-and-test-dev/teacher-made-tests",
+      "objective_id": "D11",
+      "title_en": "D11. Significance of teacher-made tests",
+      "title_ur": "D11. استاد کے بنائے ہوئے ٹیسٹوں کی اہمیت"
+    },
+    {
+      "route": "/licence/pedagogy/d-assessment-and-test-dev/tests-and-measurement",
+      "objective_id": "D12",
+      "title_en": "D12. Tests and measurement",
+      "title_ur": "D12. ٹیسٹ اور پیمائش"
+    },
+    {
+      "route": "/licence/pedagogy/d-assessment-and-test-dev/validity-reliability",
+      "objective_id": "D15",
+      "title_en": "D15. Validity, reliability and characteristics of tests",
+      "title_ur": "D15. صداقت، اعتماديت اور ٹیسٹوں کی خصوصیات"
+    }
+  ],
+  "/semester-1/efmp-301/unit-09/topic-03": [
+    {
+      "route": "/licence/pedagogy/d-assessment-and-test-dev/assessment-vs-evaluation",
+      "objective_id": "D02",
+      "title_en": "D02. Assessment and evaluation: the difference",
+      "title_ur": "D02. تشخیص اور تعینِ قدر: فرق"
+    },
+    {
+      "route": "/licence/pedagogy/d-assessment-and-test-dev/formative-and-summative",
+      "objective_id": "D03",
+      "title_en": "D03. Formative and summative assessment",
+      "title_ur": "D03. تشکیلی تشخیص اور مجموعی جائزہ"
+    }
+  ],
+  "/semester-1/efmp-301/unit-10/topic-02": [
+    {
+      "route": "/licence/pedagogy/d-assessment-and-test-dev/assessment-embedded-lesson-plans",
+      "objective_id": "D06",
+      "title_en": "D06. Assessment-embedded lesson plans",
+      "title_ur": "D06. تشخیص پر مشتمل سبق کے منصوبے"
+    }
+  ],
+  "/semester-1/efmp-302/unit-04/topic-02": [
+    {
+      "route": "/licence/pedagogy/d-assessment-and-test-dev/assessment-policy-pakistan",
+      "objective_id": "D05",
+      "title_en": "D05. Assessment policy and practice in Pakistan",
+      "title_ur": "D05. پاکستان میں تشخیص کی پالیسی اور عمل"
+    }
+  ]
+}
