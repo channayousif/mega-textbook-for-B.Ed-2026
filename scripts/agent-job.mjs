@@ -58,8 +58,12 @@ if (command === 'sync-catalog') {
   process.stdout.write(`Reported ${configs.length} host configuration(s)\n`);
 } else if (command === 'claim') {
   const configs = hostConfigurations();
-  const { data, error } = await db.rpc('claim_agent_job');
+  const { data: claimed, error } = await db.rpc('claim_agent_job');
   if (error) throw new Error(error.message);
+  // An empty queue comes back through PostgREST as a row of nulls, not null,
+  // because the function returns a composite. Without this, every quiet
+  // heartbeat tried to report job `null` and failed on the claim check.
+  const data = claimed?.id ? claimed : null;
   if (data && !configs.some(c => c.provider === data.provider && c.host_config_name === data.host_config_name)) {
     await report(data.id, data.claim_token, 'failed', { error_text: `Host configuration unavailable: ${data.provider}/${data.host_config_name}` });
     process.stdout.write(`${JSON.stringify({ status: 'failed', job_id: data.id })}\n`);

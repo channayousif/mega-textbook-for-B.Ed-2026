@@ -78,14 +78,22 @@ test('application, direct grant, review decision and job retry are reachable', a
     const reviewRow = await svc.from('review_submissions').select('id').eq('comments', comment).single();
     const job = await svc.from('agent_jobs').select('id').eq('review_id', reviewRow.data!.id).single();
     const jobCard = adminPage.locator('article.work-panel').filter({ hasText: job.data!.id });
+    // claim_agent_job returns an all-null row, not null, when nothing is claimable,
+    // so assert the claimed id rather than trusting a non-null `data`.
     const claim1 = await svc.rpc('claim_agent_job', { p_id: job.data!.id });
     expect(claim1.error).toBeNull();
-    await svc.rpc('report_agent_job', { p_id: job.data!.id, p_token: claim1.data.claim_token, p_status: 'failed', p_error: 'Host agent unavailable.' });
+    expect(claim1.data?.id).toBe(job.data!.id);
+    const failed = await svc.rpc('report_agent_job', { p_id: job.data!.id, p_token: claim1.data.claim_token, p_status: 'failed', p_error: 'Host agent unavailable.' });
+    expect(failed.error).toBeNull();
     await adminPage.reload();
     await expect(jobCard.getByText('Host agent unavailable.')).toBeVisible();
     await jobCard.getByRole('button', { name: 'Retry job' }).click();
+    // The retry RPC is async; claiming before it commits finds the job still
+    // `failed` and gets the empty row back.
+    await expect(adminPage.getByText('Job returned to the approved queue.')).toBeVisible();
     const claim2 = await svc.rpc('claim_agent_job', { p_id: job.data!.id });
     expect(claim2.error).toBeNull();
+    expect(claim2.data?.id).toBe(job.data!.id);
     const reported = await svc.rpc('report_agent_job', { p_id: job.data!.id, p_token: claim2.data.claim_token, p_status: 'completed', p_diff: 'Added a specific example.', p_checks: { content: 'pass' }, p_pr_url: 'https://github.com/example/repo/pull/12' });
     expect(reported.error).toBeNull();
     await adminPage.reload();

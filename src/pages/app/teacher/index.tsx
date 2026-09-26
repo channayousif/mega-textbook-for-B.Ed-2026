@@ -38,6 +38,10 @@ const MESSAGES = {
     en: "You're all caught up - nothing ungraded and nothing due soon.",
     ur: 'آپ بالکل اپ ٹو ڈیٹ ہیں - کچھ بھی غیر گریڈ شدہ یا جلد واجب نہیں۔',
   },
+  nextWhenClear: {
+    en: 'Review class activity or plan the next lesson.',
+    ur: 'کلاس کی سرگرمی دیکھیں یا اگلے سبق کی منصوبہ بندی کریں۔',
+  },
   noClasses: {
     en: 'You have no classes yet. Create one to get started.',
     ur: 'ابھی تک آپ کی کوئی کلاس نہیں ہے۔ شروع کرنے کے لیے ایک کلاس بنائیں۔',
@@ -101,7 +105,7 @@ function OverviewContent(): React.ReactElement {
       <h1>{MESSAGES.title[locale]}</h1>
       <section className="work-panel work-panel--accent"><h2>{MESSAGES.next[locale]}</h2>
         {totalUngraded > 0 ? <><p>{totalUngraded} {MESSAGES.ungradedCount[locale]}</p><Link className="button button--primary" to="/app/classes/queue">{MESSAGES.gradeNow[locale]}</Link></> :
-          soonestDue.length > 0 ? <><p>{MESSAGES.soonestDue[locale]}: {soonestDue[0].title}</p><Link className="button button--primary" to="/app/classes/assignments">{MESSAGES.soonestDue[locale]}</Link></> : <p>{MESSAGES.caughtUp[locale]}</p>}
+          soonestDue.length > 0 ? <><p>{MESSAGES.soonestDue[locale]}: {soonestDue[0].title}</p><Link className="button button--primary" to="/app/classes/assignments">{MESSAGES.soonestDue[locale]}</Link></> : <p>{MESSAGES.nextWhenClear[locale]}</p>}
       </section>
       <div className="work-grid">
       {caughtUp ? (
