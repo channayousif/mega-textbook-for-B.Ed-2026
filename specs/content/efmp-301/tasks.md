@@ -93,10 +93,10 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 10 | G6 assets | ▢ | | |
 | Unit 10 | G7 publish | ▢ | | |
 | Unit 11 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
-| Unit 11 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-11/G2/20260926T013912666Z-gates.json |
+| Unit 11 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-11/G2/20260926T044748706Z-gates.json |
 | Unit 11 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 3a31f523; report reviews/unit-11/G3/agent-g3-efmp301-u11-20260925T165209548Z.json |
 | Unit 11 | G4 ur-translation | ✅ | auto:gates | full UR mirror (5 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
-| Unit 11 | G5 ur-review | ▢ | | |
+| Unit 11 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at ee512a75; G3 dependency escalated to owner; register advisories escalated to owner; report reviews/unit-11/G5/agent-g5-efmp301-u11-run001.json |
 | Unit 11 | G6 assets | ▢ | | |
 | Unit 11 | G7 publish | ▢ | | |
 | Unit 12 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
