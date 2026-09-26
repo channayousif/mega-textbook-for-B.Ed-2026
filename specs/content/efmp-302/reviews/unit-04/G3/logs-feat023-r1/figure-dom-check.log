@@ -1,0 +1,32 @@
+# Supplementary rendered-DOM verification - EFMP-302 Unit 4, G3 feat023-r1
+# Reviewer: agent:g3-reviewer, 2026-09-24
+# Method: the fresh session build (site-build.log, commit 51f46ec, both locales) served
+# with `npx docusaurus serve --port 4601`; driven with playwright-core chromium
+# (149.0.7827.0) at 360x780 CSS px, isMobile, deviceScaleFactor 2 - the narrow viewport
+# the G3 reference requires. Page: /semester-1/efmp-302/unit-04/topic-02/.
+
+## Measured (actual values, not template assertions)
+
+figure#fig-U4-3: tabindex="0" role="region"
+  aria-label="Scrollable figure, scroll sideways to see the whole diagram"
+  figcaption textContent = "textbook.com.pk" (the visible attribution, Art. III.9a;
+    no caption prop is passed, so the SVG-internal teaching sentence is image-only
+    text - carried advisory, unchanged)
+  img alt length = 223 chars (current post-ded73ec alt, identical on both variants)
+figure#fig-U4-4: tabindex="0" role="region", same aria-label
+  figcaption textContent = "textbook.com.pk"; img alt length = 206 chars
+
+## Scroll-reachability test (the G3 reference's own method)
+
+figure#fig-U4-3 at 360 px: scrollWidth=880 clientWidth=328
+after scrollLeft = scrollWidth: scrollLeft=552, img right edge = 344 CSS px < 360 viewport
+=> the whole diagram is reachable by swipe/scroll; the overflow is the figure's own
+scroll container, not document overflow (docHorizontalOverflow=0px in render-review.log).
+
+## Keyboard reachability
+
+Both figures expose tabindex="0" role="region" with an aria-label in the hydrated DOM,
+which is the WCAG 2.1.1 half of the narrow-viewport check. The at-rest visual affordance
+(no right-edge fade on figures, unlike data-scrollable tables) remains a carried
+advisory: verified visually at renders-feat023-r1/crop-narrow360-fig-U4-3-feat023-r1.png,
+which is cut mid-diagram with no edge treatment.

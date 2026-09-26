@@ -14,11 +14,11 @@ table's ID set both ways (`scripts/check-figures.mjs`).
 Every `Kind` here is a deterministic schematic, so under ADR-0024 all eight were Claude's to
 author; none is a raster illustration and none is a Codex handoff.
 
-**No `.ur.svg` variants yet, deliberately.** The unit is `translation_status: draft` and has no
-Urdu mirror on disk at all: its legacy Urdu files were removed as orphans when the unit was
-re-drafted, and under ADR-0022 the Urdu mirror arrives in the corpus-wide translation phase. A
-`.ur.svg` authored now would have no carrier to sit in. The translated-label variants are
-authored alongside the G4 translation.
+**`.ur.svg` variants are in place.** The unit's Urdu mirror was translated as the ADR-0022 rate
+probe (commit 7a828f9, 2026-09-20), and all eight translated-label `.ur.svg` variants are
+committed alongside it, wired into the Urdu topic files. The unit remains
+`translation_status: draft` until a G5 review is accepted; at `draft` the `.ur.svg` requirement
+is not gate-enforced, but the variants are authored and ready for the flip.
 
 | Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
 |---|---|---|---|---|---|---|

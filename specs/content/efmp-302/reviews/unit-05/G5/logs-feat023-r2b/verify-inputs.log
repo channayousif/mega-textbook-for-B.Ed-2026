@@ -1,0 +1,20 @@
+verify-inputs feat023-r2b 2026-09-25T11:48:20.314Z
+git HEAD: e99c1a2371a0ef877abeafe0032b690818534713
+prepared paths: 131
+recomputed paths: 131
+added (in recomputed, not prepared): 0
+dropped (in prepared, not recomputed): 0
+digest mismatches: 0
+skill_digest prepared: 02797f90adddd8f4bc50c6e80c6e68d8f6f0219d68d297aabcc8b5443bace5a8
+skill_digest recomputed: 02797f90adddd8f4bc50c6e80c6e68d8f6f0219d68d297aabcc8b5443bace5a8
+skill_digest match: true
+English unit inputs identical to G3 feat023-r1 binding: 105 same, 0 different
+Urdu bound paths: 7
+  i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-05/index.mdx: disk==manifest (after documented translation_status normalization) [raw-byte hash 294c8cd158d4]
+  i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-05/topic-01.mdx: disk==manifest (after documented translation_status normalization) [raw-byte hash e48cd580a9de]
+  i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-05/topic-02.mdx: disk==manifest (after documented translation_status normalization) [raw-byte hash 193189f154d4]
+  i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-05/topic-03.mdx: disk==manifest (after documented translation_status normalization) [raw-byte hash e565b5ad7de6]
+  i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-05/topic-04.mdx: disk==manifest (after documented translation_status normalization) [raw-byte hash 1b868954548f]
+  i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-05/unit-assessment.mdx: disk==manifest (after documented translation_status normalization) [raw-byte hash 6f9893c3282b]
+  i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-05/unit-teacher-notes.mdx: disk==manifest (after documented translation_status normalization) [raw-byte hash 7d7c43bfd338]
+VERDICT: manifest verified (131/131, no refresh)

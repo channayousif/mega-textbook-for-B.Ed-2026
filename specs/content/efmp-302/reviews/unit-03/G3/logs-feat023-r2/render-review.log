@@ -1,0 +1,80 @@
+$ render-review (host browser/print inspection record) - agent-g3-efmp302-u3-feat023-r2
+2026-09-24T14:48:38Z - 2026-09-24T14:55:00Z
+
+HOW INSPECTION RAN
+==================
+Fresh production build of both locales (en, ur) at 2026-09-24T14:46:44Z-14:48:08Z
+(npm run build, exit 0, logs-feat023-r2/site-build.log). All inspection below ran
+against that build.
+
+1. render-inspect tool over the served build (docusaurus serve, port 4599,
+   chromium 149.0.7827.0), 8 unit pages, exit 0, defects 0:
+   logs-feat023-r2/render-inspect.log (tool's own copy: renders-feat023-r2/render-inspect.log)
+   A. desktop 1280x900: headings ordered, no skips, every img served with non-empty
+      alt, light/dark pairs share alt with exactly one shown, no broken images.
+   B. narrow 360x780: document overflow 0px on all 8 pages; each figure is its own
+      scroll container (scrollWidth 800-900 in clientWidth 328) and each of the five
+      unit-assessment rubric tables scrolls (471-527 in 328) with tabindex="0",
+      role="region" and an aria-label.
+   C. A4 print emulation 794px: clippedElems=0 on all 8 pages; every print figure
+      fits; the full answers and marking guidance section renders unclipped;
+      print-a4-*.pdf saved under renders-feat023-r2/.
+   D. SVG geometry per committed tool: all 20 unit-03 SVGs clean for viewBox
+      overflow and wordmark overprint.
+
+2. Independent page inspection (this reviewer's own Playwright driver, not the
+   tool's log): logs-feat023-r2/page-inspect.log + page-inspect.json. Served the
+   same build on port 4602. Per page: exactly one h1, no heading-level skips, no
+   missing alt, no dark variant shown in light mode; at 360px walked every element
+   for overflow-x auto/scroll with scrollWidth > clientWidth, applied the G3
+   reference's scrollLeft-to-edge test to each scroller found, and confirmed
+   tabindex="0" role="region" plus aria-label ("Scrollable figure, scroll sideways
+   to see the whole diagram" / "Scrollable table, scroll sideways to see all
+   columns"). All scrollers reachable; document overflow 0px everywhere.
+
+3. Figure text-on-text overlap measurement (the check neither measure-figure-text
+   nor check:figures performs), over all 20 committed SVGs (10 figures x light/dark):
+   logs-feat023-r2/fig-text-overlap-run.log + fig-text-overlap.json.
+   Method: each SVG inlined into a blank page at natural viewBox size in headless
+   Chromium; every <text> element's getBBox() measured in SVG user units; pairwise
+   intersection computed between distinct text elements; every bbox-overlapping
+   pair then pixel-tested by rendering the SVG three times into canvases (element A
+   alone, element B alone, all text hidden) and counting pixels inked in both A and
+   B relative to the empty variant.
+   RESULT: 0 bbox-overlapping pairs, 0 glyph collisions, 0 near-misses across all
+   20 files; wordmark clear of all text and all painted rects in all 20 files;
+   fig-U3-6 wordmark ink box y 502-515 clears the re-fixed outcome box (bottom edge
+   496) by 6px in both variants. All 20 build/img/... copies hash-match the
+   committed static/img/... bytes (servedMismatch=0).
+   NEGATIVE CONTROL: the same measurement over the known-bad b8f8ffe bytes
+   (fig-U3-2, fig-U3-6, fig-U3-7) detects 16, 10 and 9 bbox-overlapping pairs
+   respectively, including the exact superpositions cycle-1 recorded
+   (fig-U3-7 "definitions,"/"instructions," and the row-4 heuristic overprint;
+   fig-U3-2 caption overprints; fig-U3-6 wrapped-label collisions):
+   fig-text-overlap-control-b8f8ffe.json. The zero result on current bytes is
+   therefore a measured absence, not an insensitive instrument.
+
+4. Served-bytes identity: build/img/figures/efmp-302/unit-03/*.svg sha256 equal to
+   static/img/figures/efmp-302/unit-03/*.svg for all 20 files (in fig-text-overlap.json,
+   servedMatchesCommitted=true throughout), and the prepared feat023-r2 manifest
+   recomputes identically against the working tree (111/111 inputs).
+
+RENDERED ARTIFACTS SAVED (renders-feat023-r2/)
+===============================================
+- desktop-{index,topic-01..05,unit-assessment,unit-teacher-notes}.png (1280x900)
+- narrow360-*.png (360x780, same 8 pages)
+- print-a4-*.pdf (794px print emulation, 8 pages)
+- fig-U3-{1..10}{,.dark}-standalone-2x.png (each committed SVG rendered at 2x)
+
+LIMITATION, RECORDED HONESTLY
+=============================
+This reviewer session could not view raster images directly (PNG reads returned no
+visual content), the same limitation the cycle-1 reviewer recorded. Visual
+inspection was therefore performed by real-browser DOM geometry measurement and
+pixel-level ink intersection over the actual built and served pages and SVGs, with
+a negative control proving the instrument detects the known-bad geometry, and all
+screenshots and PDFs saved under renders-feat023-r2/ for human verification. This
+is stronger than eyeballing for overlap detection, but a human should still look
+at the renders before publication.
+
+EXIT=0

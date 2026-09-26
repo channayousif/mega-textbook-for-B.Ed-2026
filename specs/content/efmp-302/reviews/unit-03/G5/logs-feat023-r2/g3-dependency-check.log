@@ -1,0 +1,44 @@
+g3-dependency-check (feat023-r2) 2026-09-24T21:45:34.651Z
+g5 manifest: specs/content/efmp-302/reviews/unit-03/G5/feat023-r2/manifest.json (140 paths)
+g3 report: specs/content/efmp-302/reviews/unit-03/G3/agent-g3-efmp302-u3-feat023-r2.json
+g3 disposition: pass (authority:pass, sources:pass, coverage:pass, assessment:pass, accessibility:pass, readability:pass, pedagogy:pass)
+g3 reviewer_run_id: agent-g3-efmp302-u3-feat023-r2, author_run_id: commit:7a87094, completed_at: 2026-09-24T15:09:45Z
+shared paths: 109
+G5-only paths (Urdu mirror + G5-only validators): 31
+  G5-only: .claude/agents/g5-reviewer.md
+  G5-only: .claude/skills/review-unit/references/g5.md
+  G5-only: i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-03/index.mdx
+  G5-only: i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-03/topic-01.mdx
+  G5-only: i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-03/topic-02.mdx
+  G5-only: i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-03/topic-03.mdx
+  G5-only: i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-03/topic-04.mdx
+  G5-only: i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-03/topic-05.mdx
+  G5-only: i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-03/unit-assessment.mdx
+  G5-only: i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-03/unit-teacher-notes.mdx
+  G5-only: specs/content/terminology.csv
+  G5-only: static/img/figures/efmp-302/unit-03/fig-U3-1.ur.dark.svg
+  G5-only: static/img/figures/efmp-302/unit-03/fig-U3-1.ur.svg
+  G5-only: static/img/figures/efmp-302/unit-03/fig-U3-10.ur.dark.svg
+  G5-only: static/img/figures/efmp-302/unit-03/fig-U3-10.ur.svg
+  G5-only: static/img/figures/efmp-302/unit-03/fig-U3-2.ur.dark.svg
+  G5-only: static/img/figures/efmp-302/unit-03/fig-U3-2.ur.svg
+  G5-only: static/img/figures/efmp-302/unit-03/fig-U3-3.ur.dark.svg
+  G5-only: static/img/figures/efmp-302/unit-03/fig-U3-3.ur.svg
+  G5-only: static/img/figures/efmp-302/unit-03/fig-U3-4.ur.dark.svg
+  G5-only: static/img/figures/efmp-302/unit-03/fig-U3-4.ur.svg
+  G5-only: static/img/figures/efmp-302/unit-03/fig-U3-5.ur.dark.svg
+  G5-only: static/img/figures/efmp-302/unit-03/fig-U3-5.ur.svg
+  G5-only: static/img/figures/efmp-302/unit-03/fig-U3-6.ur.dark.svg
+  G5-only: static/img/figures/efmp-302/unit-03/fig-U3-6.ur.svg
+  G5-only: static/img/figures/efmp-302/unit-03/fig-U3-7.ur.dark.svg
+  G5-only: static/img/figures/efmp-302/unit-03/fig-U3-7.ur.svg
+  G5-only: static/img/figures/efmp-302/unit-03/fig-U3-8.ur.dark.svg
+  G5-only: static/img/figures/efmp-302/unit-03/fig-U3-8.ur.svg
+  G5-only: static/img/figures/efmp-302/unit-03/fig-U3-9.ur.dark.svg
+  G5-only: static/img/figures/efmp-302/unit-03/fig-U3-9.ur.svg
+G3-only paths: 2
+  G3-only: .claude/agents/g3-reviewer.md
+  G3-only: .claude/skills/review-unit/references/g3.md
+shared digest mismatches: 0
+English-side shared subset (docs/, static/img/figures/, catalog): 31 paths, mismatches: 0
+RESULT: EVERY SHARED INPUT (INCLUDING ALL ENGLISH-SIDE INPUTS) IS BYTE-IDENTICAL BETWEEN THE G5 feat023-r2 BINDING AND THE ADVISORY G3 r2 PASS

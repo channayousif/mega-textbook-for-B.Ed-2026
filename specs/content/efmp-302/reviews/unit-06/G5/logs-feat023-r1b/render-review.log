@@ -1,0 +1,85 @@
+render-review - EFMP-302 Unit 6, Urdu mirror, G5 feat023-r1b
+=============================================================
+
+Rendered input identity
+-----------------------
+- Build: the shared two-locale build at build/ (built 2026-09-24 19:11 local at commit
+  219960c; the only commits since are review-evidence commits that change no content).
+  NOT rebuilt by this review: freshness verified instead by probe (build-freshness.log +
+  probe-missing.log): 35 verbatim prose probes taken programmatically from the seven Urdu
+  source files, 33 exact matches against the tag-stripped built pages, the remaining 2
+  verified present by fragment search (JSX text-node separators split two words). Every
+  built Unit 6 Urdu page carries lang="ur" dir="rtl" and the current Urdu title/description.
+- Served: npm run serve -- --port 4628 --no-open (docusaurus serve, static build output,
+  both locales), http://127.0.0.1:4628/ur/semester-1/efmp-302/unit-06/
+- Browser: bundled Chromium 149.0.7827.0 via playwright-core (render-inspect.log header).
+- Pages inspected: index, topic-01..04, unit-assessment, unit-teacher-notes (7 pages).
+- Viewports: desktop 1280x900; narrow 360x780 (mobile, touch, dsf 2); A4 print emulation
+  794x1123 with media=print and PDF emission.
+
+How inspection ran
+------------------
+1. scripts/render-inspect.mjs EFMP-302 6 --locale ur --port 4628 --out renders-feat023-r1b
+   (exit 0, zero defects; full log in this directory and renders-feat023-r1b/render-inspect.log):
+   - A. desktop: all 7 pages HTTP 200; no skipped heading levels; 16 figure imgs (8 visible
+     .ur.svg + 8 hidden .ur.dark.svg per the two-variant theme design), zero visible-broken,
+     zero not-served, zero missing alt; no horizontal overflow; 5 advisory bare-URL
+     further-reading links (same class as the English pages).
+   - B. narrow 360x780: docHorizontalOverflow=0px on all 7 pages; the four topic mini-rubric
+     tables and the five ERQ rubric tables FIT at client=328 (scroll=328, last header
+     "مضبوط (4-5)" / "ایک مضبوط جواب کیا کرتا "); the eight figures are FIGURE.figure
+     scrollers (client 328, scroll 880-936), i.e. swipe-reachable, matching the English
+     pages' behaviour; zero spill elements.
+   - C. A4 print: clippedElems=0 on all 7 pages; every visible figure fits (right edge at
+     most 777 of 794); the answers/marking sections are present in print on unit-assessment
+     ("جوابات اور نمبر دہی کی رہنمائی", "MCQ جوابی کلید", "RRQ نمونہ جوابات اور نمبر دہی کے
+     خاکے", "تفصیلی جوابی سوالات (ERQs)", "محدود جوابی سوالات (RRQs)").
+   - D. SVG geometry: all 16 Urdu variants (8 x .ur + 8 x .ur.dark) clean: no text past the
+     viewBox, no wordmark overprint. Text counts per file recorded (fig-U6-7.ur = 19 texts).
+2. figure-geometry-overlap-ur.mjs (this directory; the G3 feat023-r1 instrument pointed at
+   the Urdu variants, validated in the G3 by a negative control on the b8f8ffe bytes):
+   rendered-DOM leaf-text bounding boxes over all 16 Urdu variants: ZERO text-on-text
+   superposition, ZERO wordmark collisions, ZERO rect escapes, ZERO viewBox escapes, ZERO
+   near-misses (figure-geometry-overlap-ur.log/.json). Note: the EN fig-U6-2 dashed-box
+   rect escapes (G3 advisory X2) do NOT reproduce in the Urdu variant - the Urdu labels fit.
+3. measure-figure-text.mjs over all 16 Urdu variants: exit 0; widest text 924.3 of 936
+   (fig-U6-5.ur), no wordmark overprint (measure-figure-text.log).
+4. Reviewer reading of the rendered pages: the full-page desktop screenshot of topic-04 was
+   visually read (RTL layout confirmed: title, figure block on the right with margin notes
+   on the left, prose, tables). Pixel probe (pixel-probe.log) over the rendered topic-04
+   page: structured ink rows throughout the figure region (densities 0.03-0.35 in text
+   bands) and ink in every 500px band of the page - real rendered Nastaliq, not blank or
+   tofu. DISCLOSED SESSION LIMITATION: the image-viewing tool returned visual content for
+   only the first screenshot read; subsequent image reads returned no visual content (the
+   same limitation the G3 feat023-r1 session disclosed). The visual reading is therefore
+   one full-page render plus numeric/DOM/pixel measurement of every page and figure, with
+   all PNG/PDF artifacts saved under renders-feat023-r1b/ for human audit.
+
+Findings from the rendered inspection
+-------------------------------------
+- No rendering, accessibility, RTL, or print defect found by measurement: headings ordered,
+  alt text on every figure image, narrow scrollers reachable, print unclipped, all 16 Urdu
+  SVG variants geometrically clean, bidi/numerals/embedded Latin (wait time, MCQ, RRQ, ERQ,
+  B.Ed, URLs) render without overflow or clipping.
+- The fig-U6-7 Urdu defect (see the report's blocking finding) is a CONTENT omission, not a
+  rendering failure: the served SVG renders cleanly but carries 19 text elements where the
+  English carries 22, one note box where the English carries two, and a leader line
+  (M346 348 L286 348) pointing at no box. The rendering instruments report "clean" because
+  they measure geometry, not EN-UR parity; the omission was found by byte-level EN/UR text
+  comparison (ur-figure-text-dump.txt vs en-figure-text-dump.txt).
+- Carried platform advisories that apply equally to the Urdu pages (English-side, G3 X1/X3):
+  identical accessible names on the five ERQ rubric-table scrollers and the figure scrollers
+  at 360px; table-archetype figures display ~640px against 880-936-unit viewboxes on desktop
+  (~7.5px effective body text), while at 360px they render at intrinsic width inside the
+  scroller.
+
+Artifacts
+---------
+renders-feat023-r1b/: desktop-*.png (7), narrow360-*.png (7), print-a4-*.pdf (7),
+fig-U6-*.ur.light-geometry.png + fig-U6-*.ur.dark-geometry.png (16), render-inspect.log,
+render-inspect.json, crops/ (8 full-resolution regions).
+logs-feat023-r1b/: render-inspect.log, figure-geometry-overlap-ur.log/.json/.mjs,
+measure-figure-text.log, pixel-probe.log, build-freshness.log, probe-missing.log,
+verify-inputs.log, ur/en-figure-text-dump.txt, independent-urdu-mcq-derivation.md.
+
+exit_code: 0

@@ -1,0 +1,16 @@
+/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-ae2ddfdbf249be0f2/specs/content/efmp-302/reviews/unit-06/G3/logs-feat023-r1/pixel-probe.py:12: DeprecationWarning: Image.Image.getdata is deprecated and will be removed in Pillow 14 (2027-10-15). Use get_flattened_data instead.
+  pixels = list(crop.getdata())
+fig-U6-2 light: 1500x840 scale=1.623 y-offset=38.5
+  escape strip x881-906 y79-93 (text outside box): 920 px, dark ink=101 (11.0%), light bg=740 (80.4%)
+  inside-box same text x850-878 y79-93: 1058 px, dark ink=97 (9.2%), light bg=891 (84.2%)
+  empty area below boxes x881-906 y120-140: 1280 px, dark ink=0 (0.0%), light bg=1280 (100.0%)
+fig-U6-2 dark: 1500x840 scale=1.623 y-offset=38.5
+  escape strip x881-906 y79-93: 920 px, dark ink=841 (91.4%), light bg=0 (0.0%)
+fig-U6-3 light: 1500x840 scale=1.667 y-offset=86.7
+  label overhang on s1 fill x250-260 y112-125: 374 px, dark ink=131 (35.0%), light bg=209 (55.9%)
+  label over gap x262-338 y112-125: 2794 px, dark ink=616 (22.0%), light bg=1964 (70.3%)
+  label overhang on s3 fill x640-648 y98-111: 308 px, dark ink=93 (30.2%), light bg=201 (65.3%)
+fig-U6-1 light: 1500x840 scale=1.667 y-offset=86.7
+  panel interior x400-500 y210-225: 4175 px, dark ink=0 (0.0%), light bg=4175 (100.0%)
+fig-U6-1 dark: 1500x840 scale=1.667 y-offset=86.7
+  panel interior x400-500 y210-225: 4175 px, dark ink=4175 (100.0%), light bg=0 (0.0%)

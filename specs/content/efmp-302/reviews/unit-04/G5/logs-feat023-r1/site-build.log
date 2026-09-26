@@ -1,0 +1,45 @@
+build/ mtime: 2026-09-24T21:39:00.746Z
+build/ur mtime: 2026-09-24T21:39:16.236Z
+HEAD at review: c138103 (git log -1 --format=%h)
+index.html: "ترتیب سے پڑھیے" -> 1
+index.html: "بنیادی دستاویز پر ایک بات" -> 1
+index.html: "4.3 کے بغیر 4.2" -> 1
+topic-01/index.html: "دہشت" -> 2
+topic-01/index.html: "فرضی استاد" -> 1
+topic-01/index.html: "formally" -> 1
+topic-01/index.html: "تناوب" -> 1
+topic-02/index.html: "دس ہیں" -> 1
+topic-02/index.html: "اقسام کا ملاپ" -> 1
+topic-02/index.html: "پیچھا کر سکے" -> 1
+topic-03/index.html: "تالے" -> 1
+topic-03/index.html: "خلاصی طور پر" -> 1
+topic-03/index.html: "چالیس منٹ" -> 2
+topic-03/index.html: "اعلیٰ دہشت" -> 1
+topic-04/index.html: "اشاریہ ڈھانچہ" -> 1
+topic-04/index.html: "گرما سکتا" -> 1
+topic-04/index.html: "متبیل" -> 2
+unit-assessment/index.html: "متبیل" -> 2
+unit-assessment/index.html: "مجموعی۔" -> 1
+unit-assessment/index.html: "وزارتِ تعلیم، 2009" -> 1
+unit-teacher-notes/index.html: "چھیں چھیں" -> 1
+unit-teacher-notes/index.html: "نتیجہ گھڑنے" -> 1
+unit-teacher-notes/index.html: "لے کر نہیں آنا" -> 1
+unit-teacher-notes/index.html: "کمرے میں ملنے والا جواب" -> 1
+U+FFFD count: source topic-04.mdx = 1, built topic-04/index.html = 1
+build serves fig-U4-1.ur.svg: true
+build serves fig-U4-1.ur.dark.svg: true
+build serves fig-U4-2.ur.svg: true
+build serves fig-U4-2.ur.dark.svg: true
+build serves fig-U4-3.ur.svg: true
+build serves fig-U4-3.ur.dark.svg: true
+build serves fig-U4-4.ur.svg: true
+build serves fig-U4-4.ur.dark.svg: true
+build serves fig-U4-5.ur.svg: true
+build serves fig-U4-5.ur.dark.svg: true
+build serves fig-U4-6.ur.svg: true
+build serves fig-U4-6.ur.dark.svg: true
+build serves fig-U4-7.ur.svg: true
+build serves fig-U4-7.ur.dark.svg: true
+build serves fig-U4-8.ur.svg: true
+build serves fig-U4-8.ur.dark.svg: true
+FRESHNESS: OK - every current-source probe found in the built Urdu pages

@@ -1,0 +1,15 @@
+### ur-element-inspect feat023-r2  host=http://127.0.0.1:4621  browser=chromium 149.0.7827.0
+### started: 2026-09-24T20:29:51.408Z
+ok desktop-element-assessment-mcq6-key  (repaired Urdu MCQ 6 key with appended caveat)  box=671x106
+ok desktop-element-assessment-mcq6-question  (MCQ 6 question with Standard 9 options)
+ok desktop-element-topic01-further-reading  (further reading list with Latin citations)
+ok desktop-element-topic01-paragraph  (topic-01 body paragraph Nastaliq)  box=703x106
+ok desktop-element-topic02-caveat  (taught-passage disclosure paragraph)
+ok narrow360-element-topic03-diagnostic-table  (RTL table column order at 360px)
+ok narrow360-element-assessment-mcq6-key  (repaired MCQ 6 key at 360px)  box=296x211
+ok narrow360-element-assessment-erq1-rubric  (ERQ 1 rubric RTL at 360px)
+ok desktop-element-topic03-fig5  (fig-U2-5.ur.svg rendered figure)  box=703x439
+ok print-a4-element-assessment-mcq6-key  (repaired key item in A4 print media)
+
+### captured 10 element shots
+### finished: 2026-09-24T20:30:11.476Z
