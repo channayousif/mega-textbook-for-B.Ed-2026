@@ -48,6 +48,7 @@ Thumbs.db
 *.swp
 .vscode/
 .idea/
+client_secret_2_166784146133-hs1q359dkahcl9nerrprs0o2kj1qrihv.apps.googleusercontent.com.json
 
 # Spec 006: quiz/answer-key staging worksheets — never committed (FR-018)
 specs/content/**/.staging/
