@@ -1,3 +1,31 @@
+---
+id: 0080
+title: Read Repository Guidance
+stage: general
+date: 2026-09-26
+surface: agent
+model: gpt-6
+feature: none
+branch: 024-licence-topic-design
+user: user
+command: repository guidance
+labels: ["instructions", "repository"]
+links:
+  spec: null
+  ticket: null
+  adr: null
+  pr: null
+files:
+  - AGENTS.md
+tests:
+  - none
+---
+
+## Prompt
+
+# AGENTS.md instructions for /home/a2ahs/mega_book_for_B.Ed
+
+<INSTRUCTIONS>
 # Repository guidance
 
 ## Read first
@@ -64,35 +92,25 @@ Record user requests via `.specify/templates/phr-template.prompt.md` (routing in
 
 ADR-0024 governs the Claude/Codex boundary. Claude owns prose, figure briefs, alt text, SVG schematics, and `prompt-only` manifest rows. Codex owns raster generation, WebP optimization, placement, and raster manifest transitions. Don't silently rewrite authored inputs during raster production.
 
-## Antigravity (`agy`) review and approved implementation jobs
+## Antigravity (`agy`) reviewer role
 
-Antigravity may run in either of two explicitly separated modes. A **review run** remains an
-independent reviewer on a different vendor, model family and quota pool from the authoring
-session. `.agents/skills.json` exposes the repository skills from `.claude/skills/`.
-An **implementation run** may work only on an admin-approved `agent_jobs` item, on its assigned
-`agent/job-<uuid>` branch, and may open a draft pull request. It has no review authority over
-material it authored. The host must use a separate fresh run for any subsequent review, with
-no shared conversation or hidden state and with ADR-0019's independence requirements intact.
+Antigravity runs here as an **independent reviewer only**, on a different vendor, model family
+and quota pool from the authoring session. Its skills are the repository's own: `.agents/skills/`
+holds symlinks to `.claude/skills/`, so there is one standard with two consumers.
 
-Scope for every **review run**:
+Scope, in force for every `agy` run in this repository:
 
 - **Write only** under `specs/content/<course>/reviews/`. Never write to `docs/`, `licence/`,
   `i18n/`, `static/img/`, `catalog/`, `src/`, `supabase/`, or any `specs/content/**/tasks.md`.
 - **Never** append a tracker row, mark a gate done, sign evidence, self-register in
   `specs/reviewers/registry.json`, merge, publish, or use human initials for an agent result.
-- **Never author or revise content in a review run.** Implementation is a separate approved job.
+- **Never author or revise content.** Authoring, figure generation and topic revision stay in the
+  main Claude session; those skills state "one skill, no sub-agent" and are not exposed here.
 - Record a real `reviewer_run_id` (the `agy` conversation ID). A placeholder such as `UNSUPPLIED`
   or `TODO` is rejected by `acceptProvisionalReport` and voids the review.
 - Independence is the basis for trusting an unregistered reviewer: do not review material this
   session drafted, and do not run a cycle beyond ADR-0019's limit of two without owner
   authorisation recorded in `specs/decisions/log.md`.
-
-In an **implementation run**, follow the approved job instructions and repository gates. Do
-not change reviewer registry, signed evidence, tracker gate status, or publication state. Report
-the diff and checks to the admin job queue and open a **draft** PR. The implementation run must
-never certify or recommend approval for its own output. Raster illustration production remains
-with Codex under ADR-0024. The `revise-topic` skill is available for bounded content-revision
-jobs; the `review-unit` skill is for separate independent review runs only.
 
 Invocation, verified 2026-09-20 against `agy` 1.2.7:
 
@@ -112,5 +130,31 @@ is narrower than `--dangerously-skip-permissions`. Do not pass `--disable-slash-
 switches off skill expansion. `--mode plan` cannot be used for review, because the reviewer must
 write its report. See `history/adr/0019-*` and the Feature 014 evidence contract.
 
-The change from reviewer-only policy is an ADR candidate recorded in
-`specs/decisions/adr-proposals.md`; no ADR has been adopted yet.
+Raster illustration production stays with Codex under ADR-0024, not with Antigravity.
+
+</INSTRUCTIONS><environment_context>
+  <cwd>/home/a2ahs/mega_book_for_B.Ed</cwd>
+  <shell>bash</shell>
+  <current_date>2026-09-26</current_date>
+  <timezone>Etc/GMT+5</timezone>
+  <filesystem><workspace_roots><root>/home/a2ahs/mega_book_for_B.Ed</root></workspace_roots><permission_profile type="disabled"><file_system type="unrestricted" /></permission_profile></filesystem>
+</environment_context>
+
+## Response snapshot
+
+Read repository guidance, constitution, workflow, feature specs, and governing ADRs before implementation.
+
+## Outcome
+
+- ✅ Impact: Established repository constraints for the implementation.
+- 🧪 Tests: None for the instruction-only input.
+- 📁 Files: Read AGENTS.md and related guidance.
+- 🔁 Next prompts: Implement the supplied feature plan.
+- 🧠 Reflection: Keep existing user changes untouched and preserve independent review.
+
+## Evaluation notes (flywheel)
+
+- Failure modes observed: None.
+- Graders run and results (PASS/FAIL): Not applicable.
+- Prompt variant (if applicable): none
+- Next experiment (smallest change to try): Implement and verify the feature.

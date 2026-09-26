@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
 import AuthGuard from '@site/src/components/AuthGuard';
+import Link from '@docusaurus/Link';
 import { getSupabase } from '@site/src/lib/supabase';
 import type { UserRole, AccountStatus } from '@site/src/contexts/AuthContext';
 
@@ -19,12 +20,12 @@ type AdminUserRow = {
 };
 
 /**
- * Admin user list (Spec 002, T043) - role editing + verified_teacher toggle,
- * plus the Spec 017 `reviewer` capability toggle (FR-001).
+ * Admin user list (Spec 002, T043) - role editing and verified_teacher toggle.
+ * Feature 025 moves review access to qualification-backed scoped grants.
  *
- * Both capability toggles write a plain column and rely entirely on the
- * database to refuse an unauthorised write: the 0044 guard raises 42501 for a
- * non-admin, and the 0009/0044 audit trigger records the change either way.
+ * The verified-teacher toggle writes a privileged column and relies on the
+ * database to refuse an unauthorised write. Reviewer scopes are managed on
+ * the dedicated page through admin-only RPCs with their own action audit.
  * Neither is checked here, deliberately (Art. IX.2).
  * Wrapped in AuthGuard requiring admin (FR-007, FR-015); the actual writes are
  * enforced by RLS + the 0008 guard trigger regardless of this page's UI, and
@@ -84,22 +85,6 @@ function AdminUsersContent(): React.ReactElement {
     await load();
   }
 
-  async function toggleReviewer(row: AdminUserRow): Promise<void> {
-    const supabase = await getSupabase();
-    if (!supabase) return;
-    setPendingId(row.id);
-    const { error: updateError } = await supabase
-      .from('profiles')
-      .update({ reviewer: !row.reviewer })
-      .eq('id', row.id);
-    setPendingId(null);
-    if (updateError) {
-      setError(`Could not change reviewer capability for ${row.email ?? row.id}.`);
-      return;
-    }
-    await load();
-  }
-
   async function toggleSuspend(row: AdminUserRow): Promise<void> {
     const supabase = await getSupabase();
     if (!supabase) return;
@@ -143,7 +128,7 @@ function AdminUsersContent(): React.ReactElement {
               <th>Name</th>
               <th>Role</th>
               <th>Verified teacher</th>
-              <th>Reviewer</th>
+              <th>Reviewer access</th>
               <th>Status</th>
               <th />
             </tr>
@@ -177,17 +162,7 @@ function AdminUsersContent(): React.ReactElement {
                     />
                   </label>
                 </td>
-                <td>
-                  <label className="auth-tap-target">
-                    <input
-                      type="checkbox"
-                      aria-label={`Reviewer capability for ${row.email ?? row.id}`}
-                      checked={row.reviewer}
-                      disabled={pendingId === row.id || Boolean(row.deleted_at)}
-                      onChange={() => toggleReviewer(row)}
-                    />
-                  </label>
-                </td>
+                <td><Link to={`/app/admin/reviewers?user=${row.id}`}>Manage scopes</Link></td>
                 <td>{row.status}</td>
                 <td>
                   {!row.deleted_at && (

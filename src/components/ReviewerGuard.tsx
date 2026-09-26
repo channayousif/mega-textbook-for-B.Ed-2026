@@ -16,14 +16,11 @@ import { getSupabase } from '@site/src/lib/supabase';
  *
  * One thing it does NOT do cosmetically: the capability check is
  * `is_reviewer()` over RPC, not `profile.reviewer` from the cached session.
- * The cache survives a suspension; the function does not, because the status
- * test lives inside it (0044, mirroring 0004_is_admin.sql). That is the whole
- * of success criterion 2 - a suspended reviewer is refused by the database's
- * answer rather than by the browser's memory of a column.
+ * Feature 025 makes that function derive access from active scoped grants, so
+ * suspension and revocation take effect without trusting a cached column.
  *
- * An admin is admitted without the capability, because an admin may already
- * grant it to themselves in one click; making them do so would be ceremony,
- * not security.
+ * An admin can inspect the formal queue for oversight. The workbench itself
+ * still filters to active grants before a review can be submitted.
  */
 
 function useLocale(): 'en' | 'ur' {
@@ -39,10 +36,11 @@ const MESSAGES = {
     ur: 'یہ صفحہ تصدیق شدہ جائزہ کاروں کے لیے ہے',
   },
   deniedBody: {
-    en: 'Certifying a unit review is an admin-granted capability, recorded in specs/reviewers/human-reviewers.md. Your own tools are available from your dashboard.',
-    ur: 'کسی یونٹ کے جائزے کی تصدیق ایک ایسی اہلیت ہے جو منتظم عطا کرتا ہے اور جس کا اندراج specs/reviewers/human-reviewers.md میں ہوتا ہے۔ آپ کے اپنے ٹولز آپ کے ڈیش بورڈ پر دستیاب ہیں۔',
+    en: 'Review access requires an active grant for a track or course. You can apply with qualification evidence.',
+    ur: 'جائزے کے لیے ٹریک یا کورس کی فعال اجازت درکار ہے۔ آپ اپنی اہلیت کے ثبوت کے ساتھ درخواست دے سکتے ہیں۔',
   },
   goToYourTools: { en: 'Go to your dashboard', ur: 'اپنے ڈیش بورڈ پر جائیں' },
+  apply: { en: 'Apply to review', ur: 'جائزے کے لیے درخواست دیں' },
 } as const;
 
 export default function ReviewerGuard({
@@ -93,6 +91,7 @@ export default function ReviewerGuard({
       <div className="alert alert--info" role="alert" data-testid="reviewer-guard-denied">
         <p><strong>{MESSAGES.deniedTitle[locale]}</strong></p>
         <p>{MESSAGES.deniedBody[locale]}</p>
+        <p><Link to="/app/reviewer/apply" className="button button--primary button--sm">{MESSAGES.apply[locale]}</Link></p>
         <p>
           <Link to="/app/dashboard" className="button button--primary button--sm">
             {MESSAGES.goToYourTools[locale]}

@@ -1,7 +1,11 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import Layout from '@theme/Layout';
+import Link from '@docusaurus/Link';
 import ReviewerGuard from '@site/src/components/ReviewerGuard';
 import { useAuth } from '@site/src/contexts/AuthContext';
+import { getSupabase } from '@site/src/lib/supabase';
+import { fetchCatalog } from '@site/src/lib/catalog';
+import { canReview, courseTrack, type ReviewerGrant } from '@site/src/lib/reviewerScopes';
 import { fetchContentStatus } from '@site/src/lib/contentStatus';
 import {
   buildReviewQueue, buildCertification, buildTrackerRow, certificationPath,
@@ -64,7 +68,7 @@ function download(filename: string, body: string, type: string): void {
 }
 
 function ReviewQueueContent(): React.ReactElement {
-  const { displayName } = useAuth();
+  const { displayName, profile, role } = useAuth();
   const [queue, setQueue] = useState<ReviewQueueItem[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [selected, setSelected] = useState<ReviewQueueItem | null>(null);
@@ -82,17 +86,21 @@ function ReviewQueueContent(): React.ReactElement {
 
   const load = useCallback(async () => {
     setError(null);
-    const [status, indexRes] = await Promise.all([
+    const [status, indexRes, catalog, db] = await Promise.all([
       fetchContentStatus(),
       fetch('/content-index.json').then((r) => (r.ok ? r.json() : [])).catch(() => []),
+      fetchCatalog(), getSupabase(),
     ]);
     if (!status) {
       setError('Could not read the content status report. Is the site built?');
       setQueue([]);
       return;
     }
-    setQueue(buildReviewQueue(status, (indexRes as ContentIndexEntry[]) ?? []));
-  }, []);
+    const grantsResponse = db && profile ? await db.from('reviewer_grants').select('id,track,course_code,revoked_at').eq('subject_id', profile.id) : null;
+    if (grantsResponse?.error || !catalog) { setError('Could not load reviewer scopes.'); setQueue([]); return; }
+    const grants = (grantsResponse?.data ?? []) as ReviewerGrant[];
+    setQueue(buildReviewQueue(status, (indexRes as ContentIndexEntry[]) ?? []).filter(item => role === 'admin' || canReview(grants, courseTrack(catalog, item.course_code), item.course_code)));
+  }, [profile, role]);
 
   useEffect(() => {
     void load();
@@ -171,6 +179,7 @@ function ReviewQueueContent(): React.ReactElement {
   return (
     <main className="container margin-vert--lg">
       <h1>Review queue</h1>
+      <p><Link to="/app/reviewer/workbench">Topic checklist and recommendations</Link></p>
       <p>
         Units awaiting a G3 English review or a G5 Urdu review, derived from each course tracker.
         Certifying produces two files to commit; this page changes nothing by itself.

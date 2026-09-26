@@ -2,7 +2,7 @@
   "entries": [
     {
       "path": ".claude/skills",
-      "include_only": ["review-unit"]
+      "include_only": ["review-unit", "revise-topic"]
     }
   ]
 }

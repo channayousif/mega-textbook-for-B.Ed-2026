@@ -1,5 +1,9 @@
 # Feature Specification: Student and teacher dashboard redesign
 
+> **Home-page iteration (Feature 025, 2026-09-26):** The dashboard shell and tools remain,
+> while both home pages now prioritize the next action and add retryable error states.
+> See `specs/025-admin-review-workflows/spec.md`.
+
 **Feature Branch**: `011-dashboard-redesign`
 **Created**: 2026-09-09
 **Status**: Draft

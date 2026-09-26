@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
+import Link from '@docusaurus/Link';
 import AuthGuard from '@site/src/components/AuthGuard';
 import {
   fetchModerationQueue, transitionSuggestion, isIllegalTransitionError,
@@ -135,7 +136,7 @@ function AdminSuggestionsContent(): React.ReactElement {
                     onChange={(e) => setNotes((n) => ({ ...n, [row.id]: e.target.value }))}
                   />
                 </td>
-                <td>
+              <td>
                   {NEXT_STATUSES[row.status].map((next) => (
                     <button
                       key={next}
@@ -148,6 +149,7 @@ function AdminSuggestionsContent(): React.ReactElement {
                       {next}
                     </button>
                   ))}
+                  {row.status === 'accepted' && <Link className="button button--sm button--primary margin-left--sm" to={`/app/admin/agent-jobs?suggestion=${row.id}`}>Queue agent job</Link>}
                 </td>
               </tr>
             ))}
