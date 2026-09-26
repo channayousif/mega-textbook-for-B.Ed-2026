@@ -1,0 +1,117 @@
+G5 Urdu review - EFMP-301 Unit 7 (Individual Differences and Special Needs)
+Run: agent-g5-efmp301-u7-run001 | Reviewer: agent:g5-reviewer (LongCat-2.0, fresh session)
+Report: specs/content/efmp-301/reviews/unit-07/G5/agent-g5-efmp301-u7-run001.json
+Disposition: REVISE (advisory under ADR-0019; 5 blocking, 1 uncertain, 8 advisory findings)
+
+Input bundle
+- The prepared manifest (specs/content/efmp-301/reviews/unit-07/G5/manifest.json, 110 inputs) was
+  verified against the current tree with the evidence library's own normalisation
+  (frontmatter translation_status lines normalised; content-spec.md sliced to Unit 7): 110/110
+  match, 0 drifted (logs/verify-manifest.log). An initial raw-byte comparison falsely showed 11
+  mismatches; the normalised comparison is authoritative and clean.
+- English authored in the EFMP-301 authoring phase (PHR 0049, commit 0ac568aa), G3-repaired at
+  4dbe708a + 76141405; Urdu G4 base at 5627ccc3 (PHR 0068) with the G3-repair mirror and the
+  72c14f85 pre-flight lint on top. This session neither authored nor translated the material.
+
+What passed
+- Completeness: all five files complete with mirrored nine-part cycles and heading parity
+  (5/12/13/10/7); no stubs, no omitted or added sections; no untranslated English prose; figures
+  wired to .ur.svg with Urdu alt text.
+- Sources: Rohrer & Pashler (2012) verdict citation correctly mirrored (the G3 repair); all
+  Seifert & Sutton quotations preserve their supporting meaning; Further Reading mirrors the
+  re-scoped entries.
+- Assessment: all 10 Urdu MCQs independently answered before reading either key - derived key
+  1-b, 2-b, 3-b, 4-b, 5-b, 6-c, 7-b, 8-b, 9-d, 10-b matches the Urdu and English keys exactly;
+  option order preserved; RRQ mark schemes, all five ERQ rubrics (identical 20-mark rows) and
+  every cognitive-demand tag match; the G3-repaired 5/5 MCQ + 5/5 RRQ blueprint is mirrored.
+- Accessibility: build exit 0; all five Urdu pages rendered at 1280x900, 360x780 and A4 print
+  with zero horizontal overflow and zero console errors; dir=rtl + lang=ur; Noto Nastaliq Urdu
+  webfont loads for body text; all 8 Urdu SVG assets serve 200; dark variants load under
+  [data-theme]=dark; no text past any viewBox; no text-on-text overprint.
+- Known mechanical defect families are clean in the MDX prose: no شاگرڈ, no روبرک, no صورت
+  بہبود, no شہادت in prose, تشکیلی and معیارِ جانچ used correctly (the 72c14f85 lint held for
+  the prose; finding 2 below is the SVG-title residual).
+
+Blocking findings (repair required)
+1. Terminology bank departures on the unit's five core terms: تعلیمی اسلوب (15x) vs banked
+   طرزِ تعلم; سست سیکھنے والا (18x) vs banked کمزور متعلم; خاص صلاحیت والا (20x) vs banked
+   ذہین متعلم; شمولی تعلیم (10x) vs banked شمولیتی تعلیم; انفرادی فرق (7x) vs banked انفرادی
+   اختلافات. The unit contradicts itself: its concept graph and its own figure labels use the
+   banked forms, and the English teacher notes' banked-terms line names them. index key_terms
+   (انفرادی فرق / سست سیکھنے والا / شمولی تعلیم) will fail check:pipeline-gate FR-016c once
+   translation_status flips to reviewed. Units 5 and 6 were repaired to the bank after their G5
+   round 1. Owner resolves: conform the Urdu to the bank, or rule and update the bank first
+   (کمزور متعلم "weak learner" itself sits oddly with this unit's slow-≠-weak teaching, which is
+   exactly why it needs an explicit ruling).
+2. fig-U7-1.ur.svg + .ur.dark.svg <title> says "طرزِ تعلم کا دعوی اور شہادت" - شہادت
+   (testimony) for evidence, the known defect family, residual in the SVG title after the MDX
+   lint sweep; the Urdu also adds "اور شہادت" to the English title.
+3. fig-U7-1.ur.svg + dark: incomplete RTL mirroring of the grid - the x=264 column divider was
+   reflected to 516 but the second 516 was not mirrored, so the research / worth-keeping columns
+   have no boundary (grid renders "M 516 ...M516 ..."); the header underline strip is a
+   degenerate tapering triangle ("M 768 76H768V80H12z").
+4. fig-U7-4.ur.svg + dark: vertical dividers drawn at 662/372/574 where the correct mirrors of
+   the English 118/372/574 are 662/408/206. All text is anchored for the correct grid, so the
+   x=574 divider strikes the recognition header and six recognition cell texts and x=372 strikes
+   all six "does NOT help" cell texts (browser-measured bboxes in render-inspection.json); the
+   recognition/NOT-help and NOT-help/helps boundaries are missing; same degenerate header strip.
+   Same defect family as the Unit 6 G5 round-1 figure findings.
+5. "shelf" translated as آلہ (instrument) in all three places (topic-02:26, topic-02:93,
+   teacher-notes:61) - wrong referent inside the unit's two-schools inclusion story and the
+   practical-work list. Repair: تختہ / تاک (or شیلف).
+
+Uncertain finding (owner escalation)
+6. G3 dependency not satisfied: the only G3 evidence is advisory run001 (disposition revise)
+   against the PRE-repair English; the English was repaired at 4dbe708a + 76141405 with no
+   round-2 verification, and no signed/accepted G3 exists for the current inputs. Escalated to
+   the owner per the GQUR-300 PR #65 precedent (same as Units 5 and 6); the full comparison
+   against the current bound English was nevertheless performed, and all three G3 repairs
+   verify as correctly mirrored in Urdu.
+
+Advisory findings
+7. "real problems" as "اور مسائل" (and problems) at topic-02:50, assessment MCQ-7b and RRQ-7
+   answer; fig-U7-4 correctly says حقیقی مسائل - unify.
+8. Register: garbled/calqued renderings - "کیوں نہیں کو چارٹ چاہئے" (topic-01:72, assessment
+   RRQ-2); "سلام اور پوچھنے کی رہنے کی مہارتیں" (topic-02:54); "لکھ چھوڑتا ہے" calque of
+   "writes off" (topic-02:36); "جماعتی پتا" calque of "classroom address" (topic-01:52); "دو
+   ہاتھ والی مہارت" calque of "two-handed skill" + "یونٹ یونٹ 5" duplication (index:50); "خانہ
+   پروفائل" (topic-01:90); "کس ساتھی سے مانے" (topic-02:26).
+9. Grammar/agreement slips: پروفائل کی الفاظ (teacher-notes:57); اسٹاف روم کی اختصار
+   (topic-02:38); دیکھیں for دیکھتی ہوں (topic-02:76, assessment:99); جس سے for جن سے
+   (index:41); "پندرہ الفاظ سے کم" for "no more than fifteen words" (topic-01:67); "کیا دیا"
+   for "what it cost" (topic-01:96, ERQ-1); طالب علم vs شاگرد (topic-02:56).
+10. Figure/prose term splits: خاکہ (figure + concept graph) vs پروفائل (prose/alt) for
+    profile; کثیر اسلوبی تدریس (figures) vs کثیر انداز تدریس (prose); شمولیتی جماعت (fig-U7-3)
+    vs شمولیت (prose).
+11. Loanword register: کلاسیکی (assessment:126), خیرات والا فریم (topic-02:58).
+12. English-side residuals for the owner: the EN figures' own dividers already cross their footer
+    sentences (measured: fig-U7-1.svg x=264 crosses the footer bbox 24..504; fig-U7-4.svg x=118
+    and x=372 cross the footer bbox 23..544 - en-figure-geometry.log), so the Urdu footer strikes
+    mirror an English design trait; fixing the Urdu grids alone leaves footer strikes on both
+    sides unless dividers stop above the footer row.
+13. Environment limitations: no Nastaliq font on this host (SVG figures via <img> cannot load
+    the webfont), so figure-label Nastaliq legibility was not visually verifiable; figure
+    conclusions rest on browser-measured geometry + SVG source comparison, with the 20 PNGs as
+    human-viewable evidence (same posture as Units 5/6). Body text does render Nastaliq.
+14. (Informational) Assessment equivalence verified - blind solve matches both keys exactly.
+
+Evidence
+- Logs under logs-agent-g5-efmp301-u7-run001/ (17 files: six mandatory gate logs, pipeline-gate,
+  verify-manifest, build, serve, render-review, render-inspection harness + JSON, dark-inspection
+  harness + log, en-figure-geometry harness + log), renders under
+  renders-agent-g5-efmp301-u7-run001/ (20 PNGs: desktop 1280,
+  narrow 360, A4 print, four figure close-ups, one dark viewport), all SHA-256-bound in the
+  report's evidence_manifest. Render inspection ran on the production build of HEAD 58126b44
+  served at localhost:3213 (Chromium via playwright-core); in-session PNG viewing is blocked in
+  this environment, so figure-defect conclusions rest on browser-measured geometry
+  (render-inspection.json) with the PNGs as human-viewable evidence.
+- All six mandatory gates pass with real logs: validate:content, check:depth-gate,
+  check:figures, check:no-em-dash, check:no-answer-keys, check:docs-sync (exit 0).
+
+Next step (owner)
+Repair the Urdu per findings 1-5 (and optionally 7-11), rule finding 1's bank question and
+close the G3 dependency gap (finding 6); then the parent prepares a fresh manifest and a new
+reviewer session runs G5 run002.
+
+This report is advisory under ADR-0019. It does not certify the unit, mark any gate done, or
+alter translation_status, tracker rows, the terminology bank or any prior report.
