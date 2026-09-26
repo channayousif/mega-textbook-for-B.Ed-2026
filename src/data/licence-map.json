@@ -1,1 +1,136 @@
-{}
+{
+  "/semester-1/efmp-301/unit-01/topic-02": [
+    {
+      "route": "/licence/pedagogy/a-methods-and-foundations/psychological-foundations",
+      "objective_id": "A10",
+      "title_en": "A10. The psychological foundations of education",
+      "title_ur": "A10. تعلیم کی نفسیاتی بنیادیں"
+    }
+  ],
+  "/semester-1/efmp-301/unit-03/topic-01": [
+    {
+      "route": "/licence/pedagogy/a-methods-and-foundations/teacher-and-student-centred",
+      "objective_id": "A04",
+      "title_en": "A04. Teacher and student-centred instructional approaches",
+      "title_ur": "A04. استاد مرکز اور طالب علم مرکز تدریسی طرزِ رسائی"
+    },
+    {
+      "route": "/licence/pedagogy/a-methods-and-foundations/psychological-foundations",
+      "objective_id": "A10",
+      "title_en": "A10. The psychological foundations of education",
+      "title_ur": "A10. تعلیم کی نفسیاتی بنیادیں"
+    }
+  ],
+  "/semester-1/efmp-301/unit-03/topic-02": [
+    {
+      "route": "/licence/pedagogy/a-methods-and-foundations/psychological-foundations",
+      "objective_id": "A10",
+      "title_en": "A10. The psychological foundations of education",
+      "title_ur": "A10. تعلیم کی نفسیاتی بنیادیں"
+    }
+  ],
+  "/semester-1/efmp-301/unit-03/topic-03": [
+    {
+      "route": "/licence/pedagogy/a-methods-and-foundations/psychological-foundations",
+      "objective_id": "A10",
+      "title_en": "A10. The psychological foundations of education",
+      "title_ur": "A10. تعلیم کی نفسیاتی بنیادیں"
+    }
+  ],
+  "/semester-1/efmp-301/unit-03/topic-04": [
+    {
+      "route": "/licence/pedagogy/a-methods-and-foundations/teacher-and-student-centred",
+      "objective_id": "A04",
+      "title_en": "A04. Teacher and student-centred instructional approaches",
+      "title_ur": "A04. استاد مرکز اور طالب علم مرکز تدریسی طرزِ رسائی"
+    },
+    {
+      "route": "/licence/pedagogy/a-methods-and-foundations/psychological-foundations",
+      "objective_id": "A10",
+      "title_en": "A10. The psychological foundations of education",
+      "title_ur": "A10. تعلیم کی نفسیاتی بنیادیں"
+    }
+  ],
+  "/semester-1/efmp-301/unit-06/topic-01": [
+    {
+      "route": "/licence/pedagogy/a-methods-and-foundations/psychological-foundations",
+      "objective_id": "A10",
+      "title_en": "A10. The psychological foundations of education",
+      "title_ur": "A10. تعلیم کی نفسیاتی بنیادیں"
+    }
+  ],
+  "/semester-1/efmp-301/unit-10/topic-01": [
+    {
+      "route": "/licence/pedagogy/a-methods-and-foundations/instructional-approaches",
+      "objective_id": "A01",
+      "title_en": "A01. Instructional approaches and strategies",
+      "title_ur": "A01. تدریسی طرزِ رسائی اور حکمتِ عملیاں"
+    },
+    {
+      "route": "/licence/pedagogy/a-methods-and-foundations/questioning-strategy",
+      "objective_id": "A02",
+      "title_en": "A02. Effective questioning strategy",
+      "title_ur": "A02. سوال کرنے کی مؤثر حکمتِ عملی"
+    },
+    {
+      "route": "/licence/pedagogy/a-methods-and-foundations/cooperative-learning",
+      "objective_id": "A03",
+      "title_en": "A03. Cooperative learning strategy",
+      "title_ur": "A03. باہمی تعاون پر مبنی تعلم کی حکمتِ عملی"
+    }
+  ],
+  "/semester-1/efmp-301/unit-10/topic-02": [
+    {
+      "route": "/licence/pedagogy/a-methods-and-foundations/instructional-approaches",
+      "objective_id": "A01",
+      "title_en": "A01. Instructional approaches and strategies",
+      "title_ur": "A01. تدریسی طرزِ رسائی اور حکمتِ عملیاں"
+    },
+    {
+      "route": "/licence/pedagogy/a-methods-and-foundations/blooms-taxonomy",
+      "objective_id": "A05",
+      "title_en": "A05. Bloom's Taxonomy of educational objectives",
+      "title_ur": "A05. تعلیمی مقاصد کی بلوم کی درجہ بندی"
+    }
+  ],
+  "/semester-1/efmp-302/unit-01/topic-02": [
+    {
+      "route": "/licence/pedagogy/a-methods-and-foundations/teacher-and-student-centred",
+      "objective_id": "A04",
+      "title_en": "A04. Teacher and student-centred instructional approaches",
+      "title_ur": "A04. استاد مرکز اور طالب علم مرکز تدریسی طرزِ رسائی"
+    }
+  ],
+  "/semester-1/efmp-302/unit-04/topic-01": [
+    {
+      "route": "/licence/pedagogy/a-methods-and-foundations/npst-pakistan",
+      "objective_id": "A06",
+      "title_en": "A06. National Professional Standards for Teachers in Pakistan",
+      "title_ur": "A06. پاکستان میں اساتذہ کے لیے قومی پیشہ ورانہ معیارات"
+    }
+  ],
+  "/semester-1/efmp-302/unit-04/topic-02": [
+    {
+      "route": "/licence/pedagogy/a-methods-and-foundations/npst-pakistan",
+      "objective_id": "A06",
+      "title_en": "A06. National Professional Standards for Teachers in Pakistan",
+      "title_ur": "A06. پاکستان میں اساتذہ کے لیے قومی پیشہ ورانہ معیارات"
+    }
+  ],
+  "/semester-1/efmp-302/unit-04/topic-03": [
+    {
+      "route": "/licence/pedagogy/a-methods-and-foundations/npst-pakistan",
+      "objective_id": "A06",
+      "title_en": "A06. National Professional Standards for Teachers in Pakistan",
+      "title_ur": "A06. پاکستان میں اساتذہ کے لیے قومی پیشہ ورانہ معیارات"
+    }
+  ],
+  "/semester-1/efmp-302/unit-04/topic-04": [
+    {
+      "route": "/licence/pedagogy/a-methods-and-foundations/npst-pakistan",
+      "objective_id": "A06",
+      "title_en": "A06. National Professional Standards for Teachers in Pakistan",
+      "title_ur": "A06. پاکستان میں اساتذہ کے لیے قومی پیشہ ورانہ معیارات"
+    }
+  ]
+}
