@@ -1,0 +1,128 @@
+
+=== fig-U6-1.svg (viewBox 780x470) ===
+grid verticals: []
+no line/text crossings
+
+=== fig-U6-1.ur.svg (viewBox 780x470) ===
+grid verticals: []
+no line/text crossings
+
+=== fig-U6-2.svg (viewBox 780x470) ===
+grid verticals: [{"x":148,"y1":14,"y2":418},{"x":420,"y1":14,"y2":418},{"x":624,"y1":14,"y2":418}]
+horizontal paths: [{"d":"M12 74H768V78H12z","x1":12,"x2":768,"y":76}]
+CROSSINGS: [
+ {
+  "kind": "grid-line",
+  "x": 148,
+  "text": "Three theories, three questions: t"
+ },
+ {
+  "kind": "grid-line",
+  "x": 420,
+  "text": "Three theories, three questions: t"
+ },
+ {
+  "kind": "grid-line",
+  "x": 624,
+  "text": "the midday meal that changed"
+ }
+]
+
+=== fig-U6-2.ur.svg (viewBox 780x470) ===
+grid verticals: [{"x":632,"y1":14,"y2":418},{"x":420,"y1":14,"y2":418},{"x":624,"y1":14,"y2":418}]
+horizontal paths: [{"d":"M 768 74H768V78H12z","x1":12,"x2":768,"y":76}]
+CROSSINGS: [
+ {
+  "kind": "grid-line",
+  "x": 632,
+  "text": "تین نظریے، تین سوال: ان میں انتخاب"
+ },
+ {
+  "kind": "grid-line",
+  "x": 624,
+  "text": "تین نظریے، تین سوال: ان میں انتخاب"
+ }
+]
+
+=== fig-U6-3.svg (viewBox 780x470) ===
+grid verticals: []
+horizontal paths: [{"d":"M200 137H245","x1":200,"x2":245,"y":137},{"d":"M540 137H570","x1":540,"x2":570,"y":137}]
+no line/text crossings
+
+=== fig-U6-3.ur.svg (viewBox 780x470) ===
+grid verticals: []
+horizontal paths: [{"d":"M 580 137H245","x1":245,"x2":580,"y":137},{"d":"M 240 137H570","x1":240,"x2":570,"y":137}]
+CROSSINGS: [
+ {
+  "kind": "h-path",
+  "d": "M 580 137H245",
+  "text": "محنت، قابلیت، قسمت، کام کی مشکل"
+ },
+ {
+  "kind": "h-path",
+  "d": "M 240 137H570",
+  "text": "محنت، قابلیت، قسمت، کام کی مشکل"
+ }
+]
+
+=== fig-U6-4.svg (viewBox 780x470) ===
+grid verticals: [{"x":152,"y1":16,"y2":414},{"x":392,"y1":16,"y2":414},{"x":600,"y1":16,"y2":414}]
+horizontal paths: [{"d":"M12 78H768V82H12z","x1":12,"x2":768,"y":80}]
+CROSSINGS: [
+ {
+  "kind": "grid-line",
+  "x": 152,
+  "text": "Each move costs the teacher's atte"
+ },
+ {
+  "kind": "grid-line",
+  "x": 600,
+  "text": "the demonstration jar, the story"
+ }
+]
+
+=== fig-U6-4.ur.svg (viewBox 780x470) ===
+grid verticals: [{"x":628,"y1":16,"y2":414},{"x":392,"y1":16,"y2":414},{"x":600,"y1":16,"y2":414}]
+horizontal paths: [{"d":"M 768 78H768V82H12z","x1":12,"x2":768,"y":80}]
+CROSSINGS: [
+ {
+  "kind": "grid-line",
+  "x": 628,
+  "text": "ہر اقدام کی قیمت استاد کی توجہ ہے،"
+ },
+ {
+  "kind": "grid-line",
+  "x": 600,
+  "text": "کام کی میز تنگ کر دیتا ہے"
+ },
+ {
+  "kind": "grid-line",
+  "x": 600,
+  "text": "یہاں تک کہ صرف خوف سمائے"
+ },
+ {
+  "kind": "grid-line",
+  "x": 600,
+  "text": "توجہ وسیع کرتی ہے"
+ },
+ {
+  "kind": "grid-line",
+  "x": 600,
+  "text": "اور تھامے رکھتی ہے"
+ },
+ {
+  "kind": "grid-line",
+  "x": 600,
+  "text": "ایک مخصوص خلا کھولتا ہے"
+ },
+ {
+  "kind": "grid-line",
+  "x": 600,
+  "text": "اور چاہتا ہے کہ وہ بھرے"
+ },
+ {
+  "kind": "grid-line",
+  "x": 600,
+  "text": "ہر اقدام کی قیمت استاد کی توجہ ہے،"
+ }
+]

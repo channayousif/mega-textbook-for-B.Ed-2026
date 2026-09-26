@@ -1,0 +1,2 @@
+FONT: {"family":"system-ui, -apple-system, \"Segoe UI\", Roboto, Ubuntu, Cantarell, \"Noto Sans\", sa","loadedFamilies":["Noto Nastaliq Urdu"],"nastaliq":true}
+DARK FIGURES: [{"src":"fig-U6-3.ur.svg","visible":false,"w":249},{"src":"fig-U6-3.ur.dark.svg","visible":true,"w":249},{"src":"fig-U6-4.ur.svg","visible":false,"w":249},{"src":"fig-U6-4.ur.dark.svg","visible":true,"w":249}]
