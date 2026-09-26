@@ -1,4 +1,4 @@
-# Licence track — source documents
+# Licence track: source documents
 
 Primary-source PDFs committed here so reviewers can verify the factual claims
 made in the licence-track pages (specs/content/licence-blueprint.md provenance).
