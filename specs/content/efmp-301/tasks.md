@@ -51,17 +51,17 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
 | Unit 5 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-05/G2/20260925T183431985Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-05/G2/20260926T002442799Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at a1411cdc; report reviews/unit-05/G3/agent-g3-efmp301-u5-run001.json |
 | Unit 5 | G4 ur-translation | ✅ | auto:gates | full UR mirror (5 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
-| Unit 5 | G5 ur-review | ▢ | | |
+| Unit 5 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at b8eabccc; G3 dependency escalated to owner; figure/prose vocabulary splits escalated to owner; report reviews/unit-05/G5/agent-g5-efmp301-u5-run001.json |
 | Unit 5 | G6 assets | ▢ | | |
 | Unit 5 | G7 publish | ▢ | | |
 | Unit 6 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-06/G2/20260925T183435270Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-06/G2/20260926T001510081Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 067c2ff2; report reviews/unit-06/G3/agent-g3-efmp301-u6-run001.json |
 | Unit 6 | G4 ur-translation | ✅ | auto:gates | full UR mirror (5 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
-| Unit 6 | G5 ur-review | ▢ | | |
+| Unit 6 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at 91844dfd; G3 dependency escalated to owner; figure/prose term unification escalated to owner; report reviews/unit-06/G5/agent-g5-efmp301-u6-run001.json |
 | Unit 6 | G6 assets | ▢ | | |
 | Unit 6 | G7 publish | ▢ | | |
 | Unit 7 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
