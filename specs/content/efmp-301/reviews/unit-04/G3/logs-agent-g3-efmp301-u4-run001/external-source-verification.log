@@ -1,0 +1,50 @@
+External source verification attempts - EFMP-301 Unit 4 G3 (run001)
+Date: 2026-09-25. Reviewer: agent:g3-reviewer. These checks refine, but do not
+substitute for, bundle-bound verification. The bundle remains the review input.
+
+1. OpenStax Psychology 2e, Section 8.1 "How memory functions"
+   https://openstax.org/books/psychology-2e/pages/8-1-how-memory-functions
+   Method: WebFetch (live page), 2026-09-25.
+   Result: The page does NOT contain study-strategy evidence. No spacing/spaced/
+   distributed practice, no retrieval practice/testing effect, no re-reading,
+   no highlighting, no teaching-it-to-someone study content. Closest content:
+   "Active rehearsal is a way of attending to information to move it from
+   short-term to long-term memory"; elaborative rehearsal ("the act of linking
+   new information you are trying to learn to existing information that you
+   already know"); levels of processing (Craik & Lockhart, 1972). Decay and
+   proactive interference ARE present ("During decay, the memory trace becomes
+   less activated over time..."; "During proactive interference, previously
+   learned information interferes with the ability to learn new information");
+   retrieval failure is not presented as a cause of forgetting; no Ebbinghaus.
+   Consequence for findings: the unit's comparative study-strategy evidence
+   claims (topic-02.mdx spacing/retrieval passages; fig-U4-4 "what the evidence
+   says" column) are absent from the cited source itself, not merely from the
+   bound excerpt.
+
+2. Seifert & Sutton (2009) Educational Psychology 2nd ed., Chapter 9
+   "Facilitating complex thinking"
+   https://home.cc.umanitoba.ca/~seifert/EdPsy2009.pdf
+   Method: WebFetch (PDF fetched, 2.9 MB, 376 pp, saved locally); attempted
+   local text extraction with a zlib content-stream extractor - the PDF's text
+   layer uses subset font encodings, extraction produced no readable text
+   (0 occurrences of even "transfer" or "problem solving" in 14.3M extracted
+   chars, i.e. extraction failure, not absence). HTML mirrors attempted:
+   pressbooks.pub/edpsych/chapter/facilitating-complex-thinking/ (HTTP 403),
+   saylordotorg.github.io/text_educational-psychology/s15-facilitating-complex-thinking.html
+   (HTTP 404; index 404), api.github.com repo listing (404).
+   A web search summary (non-verbatim, not usable as verification) indicates
+   the chapter treats algorithms, heuristics, functional fixedness and
+   transfer, and possibly organises strategies under Bransford & Stein's IDEAL
+   framework rather than the unit's five-name list.
+   Consequence for findings: whether topic-03's five named strategies
+   (algorithm, heuristic, means-ends analysis, working backwards, analogy) and
+   obstacles (functional fixedness, set effect) are actually in Seifert &
+   Sutton Chapter 9 could NOT be verified. The in-prose citations remain
+   unverified from the bundle and unverified from the primary source by this
+   reviewer. Repair must bind the actual passages.
+
+3. Guide authority (bundle-bound, no external fetch needed):
+   Scheme-and-Course-guides/extracted-text/1st 2026.txt lines 1099-1110 carry
+   Week 8 (Attention and perception; Memory and information processing) and
+   Week 9 (Thinking, problem-solving, and reasoning; Class activities) for
+   Chapter 4, matching the unit's sub-topic checklist exactly.

@@ -1,0 +1,178 @@
+[
+  {
+    "file": "inspect-narrow-topic-01-fig1.png",
+    "width": 328,
+    "height": 239,
+    "channelStdev": [
+      47,
+      42.2,
+      43.2
+    ],
+    "dominant": {
+      "r": 232,
+      "g": 248,
+      "b": 248
+    },
+    "blank": false
+  },
+  {
+    "file": "inspect-narrow-topic-01-fig2.png",
+    "width": 328,
+    "height": 239,
+    "channelStdev": [
+      37.3,
+      33.7,
+      34.8
+    ],
+    "dominant": {
+      "r": 232,
+      "g": 248,
+      "b": 248
+    },
+    "blank": false
+  },
+  {
+    "file": "inspect-narrow-topic-01-table1.png",
+    "width": 328,
+    "height": 576,
+    "channelStdev": [
+      44.1,
+      43.6,
+      43.9
+    ],
+    "dominant": {
+      "r": 248,
+      "g": 248,
+      "b": 248
+    },
+    "blank": false
+  },
+  {
+    "file": "inspect-narrow-topic-02-fig1.png",
+    "width": 328,
+    "height": 239,
+    "channelStdev": [
+      41.4,
+      37.6,
+      38.8
+    ],
+    "dominant": {
+      "r": 248,
+      "g": 248,
+      "b": 248
+    },
+    "blank": false
+  },
+  {
+    "file": "inspect-narrow-topic-02-fig2.png",
+    "width": 328,
+    "height": 239,
+    "channelStdev": [
+      35.2,
+      29.6,
+      31
+    ],
+    "dominant": {
+      "r": 248,
+      "g": 248,
+      "b": 248
+    },
+    "blank": false
+  },
+  {
+    "file": "inspect-narrow-topic-02-table1.png",
+    "width": 328,
+    "height": 603,
+    "channelStdev": [
+      43.8,
+      43.2,
+      43.6
+    ],
+    "dominant": {
+      "r": 248,
+      "g": 248,
+      "b": 248
+    },
+    "blank": false
+  },
+  {
+    "file": "inspect-narrow-topic-03-fig1.png",
+    "width": 328,
+    "height": 239,
+    "channelStdev": [
+      34.5,
+      30.8,
+      32
+    ],
+    "dominant": {
+      "r": 248,
+      "g": 248,
+      "b": 248
+    },
+    "blank": false
+  },
+  {
+    "file": "inspect-narrow-topic-03-fig2.png",
+    "width": 328,
+    "height": 239,
+    "channelStdev": [
+      35.5,
+      32.4,
+      33.4
+    ],
+    "dominant": {
+      "r": 232,
+      "g": 248,
+      "b": 248
+    },
+    "blank": false
+  },
+  {
+    "file": "inspect-narrow-topic-03-table1.png",
+    "width": 328,
+    "height": 603,
+    "channelStdev": [
+      44.3,
+      43.8,
+      44.1
+    ],
+    "dominant": {
+      "r": 248,
+      "g": 248,
+      "b": 248
+    },
+    "blank": false
+  },
+  {
+    "file": "inspect-print-assessment-answers.png",
+    "width": 762,
+    "height": 41,
+    "channelStdev": [
+      83.9,
+      83.1,
+      82.3
+    ],
+    "dominant": {
+      "r": 248,
+      "g": 248,
+      "b": 248
+    },
+    "blank": false
+  },
+  {
+    "file": "inspect-print-assessment-rubric1.png",
+    "width": 696,
+    "height": 260,
+    "channelStdev": [
+      37.9,
+      37.4,
+      37.6
+    ],
+    "dominant": {
+      "r": 248,
+      "g": 248,
+      "b": 248
+    },
+    "blank": false
+  }
+]

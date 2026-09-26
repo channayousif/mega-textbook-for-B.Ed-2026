@@ -1,0 +1,18 @@
+desktop index: imgs=1 broken=0 noAlt=0 skippedH=[] docOverflowX=0
+desktop topic-01: imgs=5 broken=0 noAlt=0 skippedH=[] docOverflowX=0
+desktop topic-02: imgs=5 broken=0 noAlt=0 skippedH=[] docOverflowX=0
+desktop topic-03: imgs=5 broken=0 noAlt=0 skippedH=[] docOverflowX=0
+desktop unit-assessment: imgs=1 broken=0 noAlt=0 skippedH=[] docOverflowX=0
+desktop unit-teacher-notes: imgs=1 broken=0 noAlt=0 skippedH=[] docOverflowX=0
+narrow360 index: docOverflowX=0 tables[0]:  figuresFit=2/2
+narrow360 topic-01: docOverflowX=0 tables[1]: scroll=328/328 reach=true a11y=null/null/false figuresFit=8/8
+narrow360 topic-02: docOverflowX=0 tables[1]: scroll=328/328 reach=true a11y=null/null/false figuresFit=8/8
+narrow360 topic-03: docOverflowX=0 tables[1]: scroll=328/328 reach=true a11y=null/null/false figuresFit=8/8
+narrow360 unit-assessment: docOverflowX=0 tables[5]: scroll=328/328 reach=true a11y=null/null/false | scroll=328/328 reach=true a11y=null/null/false | scroll=328/328 reach=true a11y=null/null/false | scroll=328/328 reach=true a11y=null/null/false | scroll=328/328 reach=true a11y=null/null/false figuresFit=2/2
+narrow360 unit-teacher-notes: docOverflowX=0 tables[1]: scroll=328/328 reach=true a11y=null/null/false figuresFit=2/2
+print-a4 index: clipped=[] figuresFit=2/2 answers=false
+print-a4 topic-01: clipped=[] figuresFit=8/8 answers=false
+print-a4 topic-02: clipped=[] figuresFit=8/8 answers=false
+print-a4 topic-03: clipped=[] figuresFit=8/8 answers=false
+print-a4 unit-assessment: clipped=[] figuresFit=2/2 answers=true
+print-a4 unit-teacher-notes: clipped=[] figuresFit=2/2 answers=false

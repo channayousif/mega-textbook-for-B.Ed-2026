@@ -1,0 +1,79 @@
+G3 English review - EFMP-301 Unit 5 (Intelligence and Creativity)
+Run: agent-g3-efmp301-u5-run001 | Reviewer: agent:g3-reviewer (LongCat-2.0, fresh session)
+Report: specs/content/efmp-301/reviews/unit-05/G3/agent-g3-efmp301-u5-run001.json
+Disposition: REVISE (advisory; 2 blocking findings, 8 advisory, 0 uncertain)
+
+Input bundle
+- Manifest specs/content/efmp-301/reviews/unit-05/G3/manifest.json verified against the
+  working tree with the evidence library's own normalization: all 95 entries match, no
+  missing, no extra, no drift; skill digest matches. HEAD 8902c36 (branch
+  022-author-efmp-301), unchanged at re-verification after the review. Author identity:
+  commit 3b2107b (Claude Code agent session, LongCat-2.0, worktree agent-ad57ca9469bfc4572,
+  PHR 0049). Reviewer session did not author or translate this material.
+- An initial raw-byte digest comparison showed 6 "mismatches"; that was the reviewer's own
+  error - the contract normalizes translation_status lines and slices content-spec.md per
+  unit (ADR-0027). Recomputed with inputManifest(), everything matches.
+
+What passed
+- Authority: guide Week 10 / Chapter 5's four bullets map exactly to the five approved
+  sub-topics, all taught at their mapped headings; CLO 4 trace holds; D-2026-0044 partition
+  authority intact; teacher-notes strategy list matches the guide.
+- Coverage: 5/5 sub-topics taught; depth budget exact (73 min); 4 figures placed (2 per
+  topic, concept-map present); concept graph consistent, derived assessment IDs verified
+  item-by-item.
+- Assessment substance: all 10 MCQs independently solved before reading the key - the
+  reviewer's derived key (1-b, 2-c, 3-b, 4-b, 5-c, 6-b, 7-b, 8-a, 9-b, 10-b) matches the
+  supplied key in full; distractors sound; RRQ mark schemes and ERQ rubrics (each summing
+  to 20, each with an Analyze-or-higher criterion) check out.
+- Accessibility: production build exits 0; all five pages inspected at desktop 1280x900,
+  narrow 360x780 and A4 print 794x1123 - zero overflow, zero broken images, zero missing
+  alt, zero skipped headings, zero clipped elements; all figures fit at every size; the one
+  scrollable table is its own scroll container with keyboard attrs and its last column is
+  reachable by scroll; measure-figure-text clean on all four SVGs. 34 render artifacts saved.
+- Readability/pedagogy: HSC register held, terms defined at first use, Sindh-localized
+  examples, feasible activities, real misconceptions, nine-part cycles in order.
+
+Blocking findings (repair required)
+1. Uncorroborated evidence claims with no registered or bound source (sources: fail):
+   the learning-styles evidence claim (topic-01.mdx:96-102, assessed at MCQ 6 and RRQ 10),
+   the "rank immigrants and justify exclusion" testing-history claim (:118-120), and the
+   "predicts school performance moderately well... almost nothing else" claim (:124-126).
+   The reviewer fetched the registered OpenStax 7.4/7.5 pages: none of these appear there,
+   and the spec's own planned supplements (content-spec.md:672-674) were never registered.
+   Repair: register and bind sources that carry these claims, or soften to what bound
+   sources support; re-prepare the manifest; fresh reviewer re-verifies.
+2. Assessment blueprint deviation (assessment: fail): MCQ spread 6/4 and RRQ spread 4/6
+   against the approved 5/5 for both bands (content-spec.md:747-748). Repair: move one MCQ
+   to 5.2 material and one RRQ to 5.1 material (updating concept-graph assessment IDs), or
+   record a justified spec amendment.
+
+Advisory findings
+3. "Separable factors in test data" gloss goes beyond the cited source's wording
+   (topic-01.mdx:75-76, :91-92; teacher notes :62-63; RRQ 2 model answer).
+4. Thurstone named position (topic-01.mdx:61-64; fig-U5-1 label) is in no bound or cited
+   source (live OpenStax 7.4 has no Thurstone).
+5. The integrative ERQ 5 integrates only topic 5.2's two sub-topics, not "the intelligence
+   theories, the measurement limits and the creativity material" as the spec describes
+   (content-spec.md:750-752); teacher notes overstate it as "integrates both topics".
+6. Coverage reinforcement row U5-1/seifert2009 (coverage/unit-05.md:23; sources/unit-05.md:17)
+   names a section with no Seifert content.
+7. Teacher notes' "the guide's practical component for this chapter is a case study
+   analysis" overstates the guide (case study analysis is a course-wide strategy; the
+   guide's Practical Work list is generic).
+8. Typo: topic-01.mdx:69 "Kirin's wire" -> "Kiran's wire".
+9. Spelling inconsistency: "recognizing" (topic-02 heading, mirroring the spec) vs
+   "Recognise" (index).
+10. Bound-excerpt header drift: spielman2020.md:8 still lists "(sections 5.1 and 8.1)".
+
+Deterministic checks (real exit codes, logs under logs-agent-g3-efmp301-u5-run001/)
+validate:content 0 | check:depth-gate 0 | check:figures 0 | check:no-em-dash 0 |
+check:no-answer-keys 0 | check:docs-sync 0 | check:concept-graph 0 | check:bloom-bands 0 |
+measure-figure-text 0 | build 0 | serve 0 | render-review 0 (browser/print inspection log
+under renders-agent-g3-efmp301-u5-run001/).
+
+Limitations recorded
+- In-session viewing of saved PNGs was blocked by the environment (as in prior rounds);
+  PNG validity/non-blankness verified programmatically (sharp stats in png-stats.log) and
+  the substantive checks are the logged DOM-level measurements.
+- Report validated with `node scripts/review-evidence.mjs validate` (exit 0). This report
+  is advisory: it does not certify the unit, mark any gate done, or authorize acceptance.

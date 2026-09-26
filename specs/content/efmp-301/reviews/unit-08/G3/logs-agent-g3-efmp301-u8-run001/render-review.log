@@ -1,0 +1,47 @@
+render-review - EFMP-301 Unit 8 G3, run agent-g3-efmp301-u8-run001
+Date: 2026-09-25 (started 08:45Z, inspection 09:05-09:20Z)
+Host: local worktree agent-ad57ca9469bfc4572 at commit 067c2ff2 (022-author-efmp-301)
+Rendered input identity: `npm run build` (docusaurus build, exit 0) of HEAD 067c2ff2,
+served with `npx docusaurus serve --port 4318` (serve.log). All six unit pages returned
+HTTP 200 at http://localhost:4318/semester-1/efmp-301/unit-08/ (docs routeBasePath '/').
+Browser: playwright-core chromium-1228 (/home/a2ahs/.cache/ms-playwright/chromium-1228),
+Node v22.22.1, driven by a Playwright script (same engine as scripts/measure-figure-text.mjs).
+
+Narrow viewport: 360x800, deviceScaleFactor 2, media screen.
+  - Full-page screenshots of all six pages: narrow-360-*.png.
+  - Every content table measured ON THE TABLE ELEMENT itself (not the wrapper), per the
+    G3 reference: scrollWidth, clientWidth, computed overflow-x, first-row last-column
+    right edge before and after setting table.scrollLeft = table.scrollWidth.
+    Result: topic-01/02/03 mini-rubric tables and all five assessment tables report
+    scrollWidth == clientWidth == 328 (last column right edge 344 < 360); the
+    teacher-notes sequencing table reports 329 vs 328 (1px, under the mark threshold)
+    and its last column comes to 344 after full scroll. No table has an unreachable
+    column; documentElement.scrollWidth == clientWidth == 360 on every page (no page
+    overflow). Keyboard attributes: no table carries tabindex/role/aria-label because
+    src/theme/DocItem/Content.tsx markScrollableRegions only marks regions that
+    actually overflow (scrollWidth > clientWidth + 1); nothing overflows, so there is
+    nothing to keyboard-scroll. Table close-ups: narrow-360-*-table-*.png.
+  - Figures: all six <Figure> carriers verified after scroll (figure-load-check.log):
+    light SVG loaded (naturalWidth>0), rendered 328x198 (780:470 aspect), dark variant
+    display:none, alt text verbatim from the figure manifest, canvas pixel sampling
+    non-blank. Close-ups: narrow-360-*-fig-U8-*-closeup.png. (Below-the-fold figures
+    report loaded=false at top-of-page because the component is loading="lazy";
+    the load check scrolled each into view and confirmed the load.)
+
+A4 print emulation: 794x1123 viewport, deviceScaleFactor 1, media print.
+  - Full-page + top-viewport screenshots of all six pages: a4-print-*.png.
+  - Page-box overflow scan (every body element's bounding rect vs the 794px box):
+    the only element past the box on every page is the Docusaurus skip-to-content
+    link (a.skipToContent_fXgn, left=794), an off-canvas framework accessibility
+    control, not learner content. No content element, table, figure or answers
+    section overflows.
+  - Figure theming in print: every light .svg display=inline-block visible=true;
+    every .dark.svg display=none. Answers-section viewport shot:
+    a4-print-unit-assessment-answers-viewport.png.
+
+Figure glyph geometry: node scripts/measure-figure-text.mjs on all six committed SVGs
+(measure-figure-text.log): all clean, widest text ends at 768.4-768.7 of the 780-wide
+viewBox, wordmark clear at 675.7; exit 0.
+
+Raw measurements: renders-agent-g3-efmp301-u8-run001/render-inspection.json
+(headings per page, per-table geometry, per-figure load/alt/size, print overflow scan).

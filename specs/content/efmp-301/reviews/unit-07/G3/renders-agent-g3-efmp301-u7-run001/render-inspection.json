@@ -1,0 +1,495 @@
+[
+  {
+    "pass": "narrow-360",
+    "page": "index",
+    "url": "http://localhost:4317/semester-1/efmp-301/unit-07/",
+    "title": "Individual Differences and Special Needs | B.Ed Mega Textbook"
+  },
+  {
+    "pass": "narrow-360",
+    "page": "index",
+    "headings": 5
+  },
+  {
+    "pass": "narrow-360",
+    "page": "topic-01",
+    "url": "http://localhost:4317/semester-1/efmp-301/unit-07/topic-01/",
+    "title": "Topic 7.1 - Learning styles and abilities | B.Ed Mega Textbook"
+  },
+  {
+    "pass": "narrow-360",
+    "page": "topic-01",
+    "figure": "/img/figures/efmp-301/unit-07/fig-U7-1.svg",
+    "alt": "A table of the learning-styles claim against what the research found and what is worth kee",
+    "rendered": true,
+    "visible": true
+  },
+  {
+    "pass": "narrow-360",
+    "page": "topic-01",
+    "figure": "/img/figures/efmp-301/unit-07/fig-U7-1.dark.svg",
+    "alt": "A table of the learning-styles claim against what the research found and what is worth kee",
+    "rendered": false,
+    "visible": false
+  },
+  {
+    "pass": "narrow-360",
+    "page": "topic-01",
+    "figure": "/img/figures/efmp-301/unit-07/fig-U7-2.svg",
+    "alt": "A profile of one pupil's abilities drawn as bars across six domains - language, number, sp",
+    "rendered": false,
+    "visible": true
+  },
+  {
+    "pass": "narrow-360",
+    "page": "topic-01",
+    "figure": "/img/figures/efmp-301/unit-07/fig-U7-2.dark.svg",
+    "alt": "A profile of one pupil's abilities drawn as bars across six domains - language, number, sp",
+    "rendered": false,
+    "visible": false
+  },
+  {
+    "pass": "narrow-360",
+    "page": "topic-01",
+    "headings": 12
+  },
+  {
+    "pass": "narrow-360",
+    "page": "topic-01",
+    "table": "Draft - expert review pendingThis unit i",
+    "rows": 5,
+    "caption": "Draft - expert review pendingThis unit i",
+    "before": {
+      "clientWidth": 328,
+      "scrollWidth": 328,
+      "overflowX": "auto"
+    },
+    "rectBefore": {
+      "x": 142,
+      "y": 7456.828125,
+      "width": 201.5,
+      "height": 131.0625,
+      "top": 7456.828125,
+      "right": 343.5,
+      "bottom": 7587.890625,
+      "left": 142
+    },
+    "rectAfter": {
+      "x": 142,
+      "y": 7456.828125,
+      "width": 201.5,
+      "height": 131.0625,
+      "top": 7456.828125,
+      "right": 343.5,
+      "bottom": 7587.890625,
+      "left": 142
+    },
+    "scrollable": false,
+    "tabindex": null,
+    "role": null,
+    "ariaLabel": null,
+    "viewport": 360
+  },
+  {
+    "pass": "narrow-360",
+    "page": "topic-02",
+    "url": "http://localhost:4317/semester-1/efmp-301/unit-07/topic-02/",
+    "title": "Topic 7.2 - Slow learners, gifted learners and inclusive education | B.Ed Mega Textbook"
+  },
+  {
+    "pass": "narrow-360",
+    "page": "topic-02",
+    "figure": "/img/figures/efmp-301/unit-07/fig-U7-3.svg",
+    "alt": "A concept map of the inclusive classroom with four branches - slow learner, gifted learner",
+    "rendered": true,
+    "visible": true
+  },
+  {
+    "pass": "narrow-360",
+    "page": "topic-02",
+    "figure": "/img/figures/efmp-301/unit-07/fig-U7-3.dark.svg",
+    "alt": "A concept map of the inclusive classroom with four branches - slow learner, gifted learner",
+    "rendered": false,
+    "visible": false
+  },
+  {
+    "pass": "narrow-360",
+    "page": "topic-02",
+    "figure": "/img/figures/efmp-301/unit-07/fig-U7-4.svg",
+    "alt": "A table of three learners - slow, gifted and disabled - each against how each is recognise",
+    "rendered": false,
+    "visible": true
+  },
+  {
+    "pass": "narrow-360",
+    "page": "topic-02",
+    "figure": "/img/figures/efmp-301/unit-07/fig-U7-4.dark.svg",
+    "alt": "A table of three learners - slow, gifted and disabled - each against how each is recognise",
+    "rendered": false,
+    "visible": false
+  },
+  {
+    "pass": "narrow-360",
+    "page": "topic-02",
+    "headings": 13
+  },
+  {
+    "pass": "narrow-360",
+    "page": "topic-02",
+    "table": "Draft - expert review pendingThis unit i",
+    "rows": 5,
+    "caption": "Draft - expert review pendingThis unit i",
+    "before": {
+      "clientWidth": 328,
+      "scrollWidth": 328,
+      "overflowX": "auto"
+    },
+    "rectBefore": {
+      "x": 160.890625,
+      "y": 8156.75,
+      "width": 182.609375,
+      "height": 131.0625,
+      "top": 8156.75,
+      "right": 343.5,
+      "bottom": 8287.8125,
+      "left": 160.890625
+    },
+    "rectAfter": {
+      "x": 160.890625,
+      "y": 8156.75,
+      "width": 182.609375,
+      "height": 131.0625,
+      "top": 8156.75,
+      "right": 343.5,
+      "bottom": 8287.8125,
+      "left": 160.890625
+    },
+    "scrollable": false,
+    "tabindex": null,
+    "role": null,
+    "ariaLabel": null,
+    "viewport": 360
+  },
+  {
+    "pass": "narrow-360",
+    "page": "unit-assessment",
+    "url": "http://localhost:4317/semester-1/efmp-301/unit-07/unit-assessment/",
+    "title": "Individual Differences and Special Needs - assessment and review | B.Ed Mega Textbook"
+  },
+  {
+    "pass": "narrow-360",
+    "page": "unit-assessment",
+    "headings": 10
+  },
+  {
+    "pass": "narrow-360",
+    "page": "unit-assessment",
+    "table": "Draft - expert review pendingThis unit i",
+    "rows": 5,
+    "caption": "Draft - expert review pendingThis unit i",
+    "before": {
+      "clientWidth": 328,
+      "scrollWidth": 328,
+      "overflowX": "auto"
+    },
+    "rectBefore": {
+      "x": 263.71875,
+      "y": 8427.078125,
+      "width": 79.78125,
+      "height": 104.671875,
+      "top": 8427.078125,
+      "right": 343.5,
+      "bottom": 8531.75,
+      "left": 263.71875
+    },
+    "rectAfter": {
+      "x": 263.71875,
+      "y": 8427.078125,
+      "width": 79.78125,
+      "height": 104.671875,
+      "top": 8427.078125,
+      "right": 343.5,
+      "bottom": 8531.75,
+      "left": 263.71875
+    },
+    "scrollable": false,
+    "tabindex": null,
+    "role": null,
+    "ariaLabel": null,
+    "viewport": 360
+  },
+  {
+    "pass": "narrow-360",
+    "page": "unit-assessment",
+    "table": "Draft - expert review pendingThis unit i",
+    "rows": 5,
+    "caption": "Draft - expert review pendingThis unit i",
+    "before": {
+      "clientWidth": 328,
+      "scrollWidth": 328,
+      "overflowX": "auto"
+    },
+    "rectBefore": {
+      "x": 263.71875,
+      "y": 8985.9375,
+      "width": 79.78125,
+      "height": 78.28125,
+      "top": 8985.9375,
+      "right": 343.5,
+      "bottom": 9064.21875,
+      "left": 263.71875
+    },
+    "rectAfter": {
+      "x": 263.71875,
+      "y": 8985.9375,
+      "width": 79.78125,
+      "height": 78.28125,
+      "top": 8985.9375,
+      "right": 343.5,
+      "bottom": 9064.21875,
+      "left": 263.71875
+    },
+    "scrollable": false,
+    "tabindex": null,
+    "role": null,
+    "ariaLabel": null,
+    "viewport": 360
+  },
+  {
+    "pass": "narrow-360",
+    "page": "unit-assessment",
+    "table": "Draft - expert review pendingThis unit i",
+    "rows": 5,
+    "caption": "Draft - expert review pendingThis unit i",
+    "before": {
+      "clientWidth": 328,
+      "scrollWidth": 328,
+      "overflowX": "auto"
+    },
+    "rectBefore": {
+      "x": 263.71875,
+      "y": 9492.015625,
+      "width": 79.78125,
+      "height": 78.28125,
+      "top": 9492.015625,
+      "right": 343.5,
+      "bottom": 9570.296875,
+      "left": 263.71875
+    },
+    "rectAfter": {
+      "x": 263.71875,
+      "y": 9492.015625,
+      "width": 79.78125,
+      "height": 78.28125,
+      "top": 9492.015625,
+      "right": 343.5,
+      "bottom": 9570.296875,
+      "left": 263.71875
+    },
+    "scrollable": false,
+    "tabindex": null,
+    "role": null,
+    "ariaLabel": null,
+    "viewport": 360
+  },
+  {
+    "pass": "narrow-360",
+    "page": "unit-assessment",
+    "table": "Draft - expert review pendingThis unit i",
+    "rows": 5,
+    "caption": "Draft - expert review pendingThis unit i",
+    "before": {
+      "clientWidth": 328,
+      "scrollWidth": 328,
+      "overflowX": "auto"
+    },
+    "rectBefore": {
+      "x": 263.71875,
+      "y": 9998.09375,
+      "width": 79.78125,
+      "height": 78.28125,
+      "top": 9998.09375,
+      "right": 343.5,
+      "bottom": 10076.375,
+      "left": 263.71875
+    },
+    "rectAfter": {
+      "x": 263.71875,
+      "y": 9998.09375,
+      "width": 79.78125,
+      "height": 78.28125,
+      "top": 9998.09375,
+      "right": 343.5,
+      "bottom": 10076.375,
+      "left": 263.71875
+    },
+    "scrollable": false,
+    "tabindex": null,
+    "role": null,
+    "ariaLabel": null,
+    "viewport": 360
+  },
+  {
+    "pass": "narrow-360",
+    "page": "unit-assessment",
+    "table": "Draft - expert review pendingThis unit i",
+    "rows": 5,
+    "caption": "Draft - expert review pendingThis unit i",
+    "before": {
+      "clientWidth": 328,
+      "scrollWidth": 328,
+      "overflowX": "auto"
+    },
+    "rectBefore": {
+      "x": 263.71875,
+      "y": 10504.171875,
+      "width": 79.78125,
+      "height": 78.28125,
+      "top": 10504.171875,
+      "right": 343.5,
+      "bottom": 10582.453125,
+      "left": 263.71875
+    },
+    "rectAfter": {
+      "x": 263.71875,
+      "y": 10504.171875,
+      "width": 79.78125,
+      "height": 78.28125,
+      "top": 10504.171875,
+      "right": 343.5,
+      "bottom": 10582.453125,
+      "left": 263.71875
+    },
+    "scrollable": false,
+    "tabindex": null,
+    "role": null,
+    "ariaLabel": null,
+    "viewport": 360
+  },
+  {
+    "pass": "narrow-360",
+    "page": "unit-teacher-notes",
+    "url": "http://localhost:4317/semester-1/efmp-301/unit-07/unit-teacher-notes/",
+    "title": "Individual Differences and Special Needs - teacher notes | B.Ed Mega Textbook"
+  },
+  {
+    "pass": "narrow-360",
+    "page": "unit-teacher-notes",
+    "headings": 7
+  },
+  {
+    "pass": "narrow-360",
+    "page": "unit-teacher-notes",
+    "table": "Draft - expert review pendingThis unit i",
+    "rows": 3,
+    "caption": "Draft - expert review pendingThis unit i",
+    "before": {
+      "clientWidth": 328,
+      "scrollWidth": 328,
+      "overflowX": "auto"
+    },
+    "rectBefore": {
+      "x": 235.75,
+      "y": 1972.609375,
+      "width": 107.75,
+      "height": 131.0625,
+      "top": 1972.609375,
+      "right": 343.5,
+      "bottom": 2103.671875,
+      "left": 235.75
+    },
+    "rectAfter": {
+      "x": 235.75,
+      "y": 1972.609375,
+      "width": 107.75,
+      "height": 131.0625,
+      "top": 1972.609375,
+      "right": 343.5,
+      "bottom": 2103.671875,
+      "left": 235.75
+    },
+    "scrollable": false,
+    "tabindex": null,
+    "role": null,
+    "ariaLabel": null,
+    "viewport": 360
+  },
+  {
+    "pass": "a4-print",
+    "page": "index",
+    "docW": 794,
+    "bad": []
+  },
+  {
+    "pass": "a4-print",
+    "page": "topic-01",
+    "docW": 794,
+    "bad": []
+  },
+  {
+    "pass": "a4-print",
+    "page": "topic-01",
+    "figure": "/img/figures/efmp-301/unit-07/fig-U7-1.svg",
+    "visible": true
+  },
+  {
+    "pass": "a4-print",
+    "page": "topic-01",
+    "figure": "/img/figures/efmp-301/unit-07/fig-U7-1.dark.svg",
+    "visible": false
+  },
+  {
+    "pass": "a4-print",
+    "page": "topic-01",
+    "figure": "/img/figures/efmp-301/unit-07/fig-U7-2.svg",
+    "visible": true
+  },
+  {
+    "pass": "a4-print",
+    "page": "topic-01",
+    "figure": "/img/figures/efmp-301/unit-07/fig-U7-2.dark.svg",
+    "visible": false
+  },
+  {
+    "pass": "a4-print",
+    "page": "topic-02",
+    "docW": 794,
+    "bad": []
+  },
+  {
+    "pass": "a4-print",
+    "page": "topic-02",
+    "figure": "/img/figures/efmp-301/unit-07/fig-U7-3.svg",
+    "visible": true
+  },
+  {
+    "pass": "a4-print",
+    "page": "topic-02",
+    "figure": "/img/figures/efmp-301/unit-07/fig-U7-3.dark.svg",
+    "visible": false
+  },
+  {
+    "pass": "a4-print",
+    "page": "topic-02",
+    "figure": "/img/figures/efmp-301/unit-07/fig-U7-4.svg",
+    "visible": true
+  },
+  {
+    "pass": "a4-print",
+    "page": "topic-02",
+    "figure": "/img/figures/efmp-301/unit-07/fig-U7-4.dark.svg",
+    "visible": false
+  },
+  {
+    "pass": "a4-print",
+    "page": "unit-assessment",
+    "docW": 794,
+    "bad": []
+  },
+  {
+    "pass": "a4-print",
+    "page": "unit-teacher-notes",
+    "docW": 794,
+    "bad": []
+  }
+]

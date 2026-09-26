@@ -1,0 +1,47 @@
+render-review - EFMP-301 Unit 12 G5 Urdu (agent-g5-efmp301-u12-run001)
+
+How inspection ran (all real executions; logs and artifacts under this run's directories):
+
+1. Build. `npm run build` from the worktree root, exit 0 (logs-agent-g5-efmp301-u12-run001/build.log).
+   Static Urdu site generated in build/ur. Rendered input identity: worktree
+   agent-ad57ca9469bfc4572 at commit 43e2e859 (the manifest-verified bound state; the
+   regenerated prepare manifest over this tree is byte-identical to the parent's
+   specs/content/efmp-301/reviews/unit-12/G5/manifest.json).
+2. Serve. `npx docusaurus serve --port 3215 --dir build` (serve.log), background task.
+   Urdu pages verified HTTP 200 at /ur/semester-1/efmp-301/unit-12/*.
+3. Page inspection. node render-inspect-ur.mjs (Playwright Chromium, real browser):
+   the six Urdu pages (index, topic-01, topic-02, topic-03, unit-assessment,
+   unit-teacher-notes) each captured at 1280x800 desktop, 360x640 narrow and
+   794x1123 media=print A4 emulation, plus a [data-theme=dark] capture of topic-01
+   and element close-ups of all six .ur.svg figures. 25 PNGs + render-audit-ur.json
+   under renders-agent-g5-efmp301-u12-run001/.
+   Measured results: lang=ur and dir=rtl on every page; no document overflow at 360px
+   or 794px print on any page (docScrollWidth === docClientWidth); every content table
+   fits without horizontal scroll at 360px (clientWidth 328 === scrollWidth 328,
+   rightmost cell right edge 344 < 360) and at print width; figures render 328x198
+   narrow / 703x424 desktop with non-empty Urdu alt text and lazy loading; the six
+   dark variants swap in under [data-theme=dark] (light variants 0x0, dark 703x424);
+   the nine-part heading order renders on all three topics.
+4. Figure geometry. node figure-overprint-audit-ur.mjs over all 12 Urdu variants
+   (6 light + 6 dark): no text-on-text overprint, no panel-border crossing, no
+   column-boundary crossing in any variant (figure-overprint-audit-ur.log). The G3
+   repair locus (fig-U12-3 fifth row) measured inside its columns in both variants:
+   duty label 642.7..763.3, column-2 text 535.2..626.0 (right edge 12px clear of the
+   638 grid line), column-3 text 263.8..370.0; all five row separators present
+   (grid path y=74,144,215,285,356; panel bottom 426; row text y 371.9..406.1).
+5. Font and bidi. node nastaliq-bidi-audit.mjs (nastaliq-bidi-audit.log): the
+   self-hosted Noto Nastaliq Urdu webfont is loaded (document.fonts) and applied to
+   the prose on all six pages (computed font-family "Noto Nastaliq Urdu", ...); every
+   discriminable SVG label ending in Urdu punctuation (، ؛) renders the mark on the
+   correct LEFT side of the run (bbox comparison with the mark stripped: fig-U12-2
+   1 label, fig-U12-3 5 labels); middle-anchored labels cannot be discriminated by
+   bbox alone but use the same character sequences and bidi engine.
+6. Reviewer image-channel limitation (recorded honestly): this reviewing session
+   could not display PNG content (the Read tool returned no image data for PNGs;
+   the chrome-devtools and playwright MCP browsers found no system Chrome at
+   /opt/google/chrome/chrome). Visual verification therefore rests on the
+   browser-measured geometry above plus source-level analysis of every SVG label;
+   the 25 saved PNG renders remain evidence for human or superseding-reviewer
+   verification. Render access itself was NOT missing: the pages built, served and
+   rendered in a real Chromium, and were measured; only the reviewer's own image
+   display channel was unavailable.

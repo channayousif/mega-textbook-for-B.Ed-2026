@@ -1,0 +1,9 @@
+$ npm run validate:content
+started: 2026-09-25T18:59:10Z
+
+> bed-mega-textbook@0.1.0 validate:content
+> node scripts/validate-content.mjs
+
+✓ Content validation passed.
+exit_code=0
+finished: 2026-09-25T18:59:10Z

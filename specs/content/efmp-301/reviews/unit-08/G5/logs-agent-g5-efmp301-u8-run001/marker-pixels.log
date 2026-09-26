@@ -1,0 +1,32 @@
+fig-U8-5 arrowhead pixel evidence (G5 run001)
+================================================
+Method: the harness canvas drawImage of an inline <svg> element is not a valid
+canvas image source, so the marker check was completed with ImageMagick over the
+DSF-2 PNGs already rendered by render-figures-harness.mjs (figures/fig-U8-5.en.png
+and figures/fig-U8-5.ur.png, both 1560x940). Boxes are 50x40 PNG px = 25x20 SVG
+units. Gray-channel mean: 1.0 = pure white background.
+
+Commands (run 2026-09-26T03:0xZ, exit 0 each):
+  convert fig-U8-5.en.png -crop 50x40+215+170 -colorspace Gray -format "%[fx:mean]"
+  convert fig-U8-5.ur.png -crop 50x40+1295+170 -colorspace Gray -format "%[fx:mean]"
+  convert fig-U8-5.en.png -crop 50x40+215+270 -colorspace Gray -format "%[fx:mean]"
+  convert fig-U8-5.ur.png -crop 50x40+1295+270 -colorspace Gray -format "%[fx:mean]"
+
+Results:
+  EN tip box   (SVG x 107.5-132.5, y 85-105):  mean = 0.8319
+  UR tip box   (SVG x 647.5-672.5, y 85-105):  mean = 0.9314
+  EN line-only (SVG x 107.5-132.5, y 135-155): mean = 0.9058
+  UR line-only (SVG x 647.5-672.5, y 135-155): mean = 0.9058
+
+Reading: the two line-only controls are byte-identical (the arrow LINE renders
+the same in both variants). The EN tip box is 0.099 darker than its line-only
+control because the arrowHEAD contributes dark pixels there; the UR tip box is
+LIGHTER than its line-only control (it contains only the half-covered line, y
+85-95, and nothing else). The Urdu arrowhead contributes no pixels.
+
+Conclusion: fig-U8-5.ur.svg (and its .ur.dark.svg twin, same marker bytes)
+renders the ladder's upward arrow WITHOUT a head. Source cause: the marker path
+"M 780 0L 770 5L 780 10z" lies entirely outside the marker viewBox "0 0 10 10"
+(marker overflow is hidden by default), so it clips to nothing; the English
+marker "M0 0 L10 5 L0 10 z" renders normally. Even unclipped, the mirrored
+triangle would point backward along the upward path.

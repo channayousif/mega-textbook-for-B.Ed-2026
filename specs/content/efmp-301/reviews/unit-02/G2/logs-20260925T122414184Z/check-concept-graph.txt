@@ -1,0 +1,6 @@
+$ npm run check:concept-graph   (repo HEAD a1411cdc, 2026-09-25T12:24:15.459Z)
+
+✗ Concept-graph gate failed with 1 finding(s):
+
+  - EFMP-301 Unit 4: restricted item "MCQ-05" is cited as assessment evidence by concepts in 2 different topics (4.1, 4.2) - an MCQ or RRQ assesses one topic, so at least one of these mappings is wrong
+exit_code=1

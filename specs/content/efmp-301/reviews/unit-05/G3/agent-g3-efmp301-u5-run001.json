@@ -1,0 +1,347 @@
+{
+  "schema_version": 1,
+  "course_code": "EFMP-301",
+  "unit_no": 5,
+  "stage": "G3",
+  "disposition": "revise",
+  "reviewer_id": "agent:g3-reviewer",
+  "author_run_id": "commit:3b2107b",
+  "reviewer_run_id": "agent-g3-efmp301-u5-run001",
+  "model": "LongCat-2.0",
+  "started_at": "2026-09-25T09:00:00Z",
+  "completed_at": "2026-09-25T09:40:00Z",
+  "skill_digest": "eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b",
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g3.md": "074c8464b4bc0f2f2b76bbb19707c50b54cb907920407873a4e5d193e866f53f",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "f1d7f063cc2c826693a3d8428fb5d3ee45455fdb7906ebc5adadee8b9a434d47",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-1/efmp-301/course-overview.mdx": "31a0f660e90abd8b0d60d273e057f73d0a8a14c61d18596cfeb61b4b9c6aa169",
+    "docs/semester-1/efmp-301/unit-05/_category_.json": "8cfa90f9db0a2f82862e0d2688d3460c5a615b039f15a561aafb39d7de1ab6b8",
+    "docs/semester-1/efmp-301/unit-05/index.mdx": "23a7447fea7a963531c028a2d1400033a5a3c870ea79d96e4cb87d69d8606d04",
+    "docs/semester-1/efmp-301/unit-05/topic-01.mdx": "c21e9694c378e27dfef88c59502aa194fc5861d7295f3a325f0c44d26900b46e",
+    "docs/semester-1/efmp-301/unit-05/topic-02.mdx": "b0f86c92a243d57da1bd181fd1798978cf43c3b02d9fa3096baf355498f3e445",
+    "docs/semester-1/efmp-301/unit-05/unit-assessment.mdx": "a5702446b796d6ffb79f92cb7c3b4fbdd57e778cc5da112ed93fd4c886e8de1c",
+    "docs/semester-1/efmp-301/unit-05/unit-teacher-notes.mdx": "d29abfd990d50e410a83ed21d6a84e14eb009d613fbfd79880d58a0f3507c0a7",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "41b698f8cbbb12f4030d6893083a5c36e4a19848b5ddb86206e5ba72847b8b13",
+    "scripts/check-no-answer-keys.mjs": "f38d60e5360e0c29f2dae02001195690f3b95e0ad2d7ae1a3c03a0d09c053f0d",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "bb614c625f7bf397ce51a317bdb8901711c00fa009d4ad0a506c5096e5b9ddd2",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "77f03816f68663621059f17745109fdde9b103c555f707e0c62d5ff56d2a4cd9",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "973496faae3366d13e8cdd3ba8d68edf7bd3745bdc6928311ee03c55f24b18b2",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/efmp-301/concepts/unit-05.md": "928820ec15ec57044e46dfb959fded3e5d9f428451fce83be60baa2248616bae",
+    "specs/content/efmp-301/content-spec.md": "6147fcb5c80cd2c1da312c770179a3127db6fd0ee6a5c29d93f3559158396660",
+    "specs/content/efmp-301/coverage/unit-05.md": "b3f1c476fb8f4e46bfd377c382923f2cae1dbd1a04ee81b2081aa04405f603cf",
+    "specs/content/efmp-301/figures/unit-05.md": "e0f0d558796ce381abba95045214fceb41b904dfbaa3a35724dbf0f4d722b637",
+    "specs/content/efmp-301/intake-2/evaluation.md": "c3c6f9b2dc3f4f9246640b413a535b87e57c1f90b3c13414aa72582a30c7215d",
+    "specs/content/efmp-301/intake-2/manifest.json": "e5a0a1af3db56f0c88860b8c62a9b7e14088eae96c913252a8db2c4877d58996",
+    "specs/content/efmp-301/sources/texts/seifert2009.md": "542501fc1b05d47dccfd4a7db99070c8ddf31f3cedf92d107efb9a80122fa96e",
+    "specs/content/efmp-301/sources/texts/spielman2020.md": "ec976a8189f2e0b9e699400289686155fd46d590481600a76f19be15444b5caa",
+    "specs/content/efmp-301/sources/texts/vosniadou2001.md": "fe36e9a1b86434073f5920040396c726382f76ff6b7d350d45137cfb930c2822",
+    "specs/content/efmp-301/sources/unit-05.md": "218305c1b201bbeed0d9809a0325b0a340e50d81a4a8fe221dbc688a427bac96",
+    "specs/content/style-guide.md": "db96c9b33b0fb9522986462a0b519620c3c1d7602a046d7b90e638f643da4610",
+    "static/img/figures/efmp-301/unit-05/fig-U5-1.dark.svg": "fa91fc89abd4cbc9420692daf5e08f141582ceea40473659f7898cd0ae684bfd",
+    "static/img/figures/efmp-301/unit-05/fig-U5-1.svg": "8f329d67be72ba78a557ca31ea556178cf1f892557506593af3a18d0ea1f8a69",
+    "static/img/figures/efmp-301/unit-05/fig-U5-2.dark.svg": "59eabf93d189023c665b2f1a676a6687f35c16f2dc5989854bb5a481d996ae13",
+    "static/img/figures/efmp-301/unit-05/fig-U5-2.svg": "30a77e5662c8e78959b55173e6e6523b8287295ec63e7d3d7bf4a93c90237d88",
+    "static/img/figures/efmp-301/unit-05/fig-U5-3.dark.svg": "6750cead8433e6c4662f4e36b54f74c034fa48e7910292df207eaaf8707efe1b",
+    "static/img/figures/efmp-301/unit-05/fig-U5-3.svg": "17ee4560961ccc591b31ba2a938665a9c2455a6cea5bd9a3f49192a6ed4ddcf8",
+    "static/img/figures/efmp-301/unit-05/fig-U5-4.dark.svg": "07b150074ef1ee08a28fd2910d0300c1feca23ea548eae4cdb0c9b8e5692302b",
+    "static/img/figures/efmp-301/unit-05/fig-U5-4.svg": "ea33a135842bbc72ccfa39e6fdc6be5c77407cabfefce467362d7cfe6aa90237"
+  },
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        "Guide authority verified: Scheme-and-Course-guides/extracted-text/1st 2026.txt:1113-1118 allots Week 10 to Chapter 5 \"Intelligence and Creativity\" with exactly the four bullets the unit teaches (Theories of intelligence; Multiple intelligences; Measurement of intelligence; Creativity and giftedness); each is decomposed into the approved five-row sub-topic checklist (specs/content/efmp-301/content-spec.md:683-689, U5-1..U5-5) and every row is taught at its mapped heading (topic-01.mdx:40, :81, :104; topic-02.mdx:42, :78 - headings verified verbatim).",
+        "CLO trace verified: guide CLO 4 \"Analyze motivation, intelligence, and creativity in learning contexts\" (1st 2026.txt:1038) is the trace target of both SLO:EFMP-301-5-1 and SLO:EFMP-301-5-2 (content-spec.md:665-667); the unit front matter carries both clo_refs and the bank delivers the Analyze demand (ERQ 1-3 Analyze, ERQ 4-5 Create, RRQ 10 Analyze).",
+        "G0/G1 authority intact: specs/content/efmp-301/intake-2/evaluation.md records the D-2026-0044 second-pass approval of the chapter-wise 12-unit partition (Unit 5 = guide Chapter 5, Week 10, 5 checklist rows, 5/5 MCQ/RRQ spreads, 73-min depth budget verified by the evaluator); the spec carries status approved. No contradictory authority found.",
+        "Calendar and strategy claims verified: teacher notes' Week 10 single-week framing (unit-teacher-notes.mdx:22-25) matches the guide; the strategy list the teacher notes cite (unit-teacher-notes.mdx:29-30) matches guide lines 1173-1180 (Lectures, Interactive Discussions, Question-Answer Session, Demonstration, Case Study Analysis). One overstatement about the guide's practical component recorded as an advisory finding."
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "fail",
+      "evidence": [
+        "VERIFIED against the bound excerpt specs/content/efmp-301/sources/texts/spielman2020.md: Spearman g quote (topic-01.mdx:46-48 vs excerpt lines 51-52), Gardner \"at least eight intelligences\" + the eight-name list (topic-01.mdx:53-55 vs :52-56), \"heavily criticized for lacking empirical evidence\" (topic-01.mdx:74-75 vs :55-56), IQ definition + mean 100 + SD 15 + 85-115 band (topic-01.mdx:106-110 vs :65-68), \"the degree to which any test can truly measure an individual's intelligence\" (topic-01.mdx:122-124 vs :68-69), creativity definition (topic-02.mdx:44-45 vs :58-59), divergent/convergent thinking (topic-02.mdx:57-59 vs :59-61).",
+        "VERIFIED against specs/content/efmp-301/sources/texts/seifert2009.md: the widened gifted meaning and \"gifted and talented\" (topic-02.mdx:84-87 vs excerpt lines 141-145), the qualities (topic-02.mdx:87-89 vs :147-151), the stereotype correction \"not necessarily awkward socially... quite the contrary\" + all economic and cultural groups (topic-02.mdx:91-94 vs :153-156), and the accommodation/boredom passage (topic-02.mdx:97-100 vs :158-160). VERIFIED against specs/content/efmp-301/sources/texts/vosniadou2001.md: the Gardner \"many dimensions of human intelligence\" passage and its school-environment recommendation (topic-01.mdx:86-90 vs excerpt lines 20-24), correctly attributed through Vosniadou to Gardner.",
+        "Reviewer independently fetched the registered URLs (openstax.org Psychology 2e sections 7.4 and 7.5, 2026-09-25) to check claims beyond the excerpt: the quoted sentences confirm verbatim; but 7.4 contains no Thurstone, no learning-styles discussion and no factor-analytic treatment of the eight intelligences, and 7.5 contains no immigrant-ranking history (its history content is the eugenics movement and Buck v. Bell, which the bound excerpt does not include) and no statement that IQ predicts school performance.",
+        "UNCORROBORATED FROM THE BUNDLE (blocking finding): the learning-styles evidence claim and its multimodal residue (topic-01.mdx:96-102, assessed at MCQ 6 and RRQ 10), the early-testing history claim \"used to rank immigrants and justify exclusion\" (topic-01.mdx:118-120), and the prediction-strength claim \"predicts school performance moderately well... and predicts almost nothing else a school exists to grow\" (topic-01.mdx:124-126) appear in no registered or bound source; the content-spec planned supplements for exactly this material (content-spec.md:672-674 \"an open-access treatment of Gardner's multiple intelligences and its critiques, and of intelligence-testing history\") but sources/unit-05.md registers none.",
+        "sources/unit-05.md declares no \"## Unverifiable sources\" section (all three sources declared retrieved and read 2026-09-24), so the D-2026-0001 unavailable-source path does not apply: these are undeclared support gaps, not declared-unretrievable sources.",
+        "Cosmetic excerpt-metadata drift: the spielman2020 excerpt header still says \"sections 5.1 and 8.1\" (sources/texts/spielman2020.md:8) although the same file now also carries the Unit 5 sections 7.4-7.5; recorded as an advisory finding to repair when the excerpt is extended."
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "All five approved sub-topics are taught: coverage/unit-05.md maps U5-1..U5-5 each to an exact topic file and heading, and all five named headings exist verbatim (topic-01.mdx:40 \"Theories of intelligence: one ability or many\", :81 \"Multiple intelligences: the claim and its evidence\", :104 \"Measurement of intelligence: what tests measure, and what they miss\"; topic-02.mdx:42 \"Creativity: what it is and how classrooms grow it\", :78 \"Giftedness: recognizing and teaching gifted learners\"); the topic partition matches the spec Topic list (U5-1..3 -> 5.1, U5-4..5 -> 5.2, content-spec.md:696-699).",
+        "Depth budget arithmetic verified: est_reading_minutes 4 + 19 + 18 + 24 + 8 = 73 = the spec target 73, inside the 66-90 band (content-spec.md:701-702); check:depth-gate exit 0.",
+        "Figures: all four planned figures placed as <Figure> carriers (two per topic), fig-U5-3 is the per-unit concept-map schematic; carrier set == manifest set both ways, alt text matches the manifest Alt column verbatim; check:figures exit 0; measure-figure-text.mjs reports no text overflow in any figure (widest text ends 768.4 inside the 780 viewBox).",
+        "Concept graph specs/content/efmp-301/concepts/unit-05.md is consistent: all ten concepts map to real topics and SLO refs, prerequisites resolve, and every derived assessment ID (MCQ-01..10, RRQ-01..10, ERQ-01..05) was checked item-by-item against the bank and matches; check:concept-graph exit 0.",
+        "One governance-table inaccuracy recorded as an advisory finding: the reinforcement row \"U5-1 | topic-01.mdx | Theories of intelligence... | seifert2009\" (coverage/unit-05.md:23, mirrored by sources/unit-05.md:17) names a section that contains no Seifert content or citation - all Seifert & Sutton citations are in topic-02.mdx's giftedness section."
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "fail",
+      "evidence": [
+        "Independent solve before comparing with the supplied answers: reviewer derived MCQ key 1-b, 2-c, 3-b, 4-b, 5-c, 6-b, 7-b, 8-a, 9-b, 10-b from the taught material and domain knowledge; all ten match the supplied key (unit-assessment.mdx:163-172) with sound rationales. Distractors are plausible and non-ambiguous (MCQ 4's 85/115 option targets the band/SD confusion; MCQ 1's \"a fixed quantity set at birth\" targets the heredity misconception; MCQ 9's options each contradict a taught fact).",
+        "RRQ model answers and mark schemes (unit-assessment.mdx:176-203) match the reviewer's independently derived answers in substance, each with point-by-point marks; ERQ rubrics each sum to 20 (5+7+4+4, 5+6+5+4, 4+8+4+4, 5+7+4+4, 5+7+4+4) and each carries at least one Analyze-or-higher criterion as required.",
+        "BLUEPRINT DEVIATION (blocking finding): the MCQ topic spread is 6/4 (Q1-6 -> topic 5.1, Q7-10 -> topic 5.2) and the RRQ spread is 4/6 (R1-3 and R10 -> 5.1, R4-9 -> 5.2) against the approved 5/5 for both bands (content-spec.md:747-748; the intake-2 evaluation item 6 verified the declared 5/5 spreads). Topic 5.1 is over-weighted by one MCQ and topic 5.2 by one RRQ. The ERQ spread (2 per topic plus one capstone) matches in structure.",
+        "Bloom tags match the thinking actually required, not just the verbs (MCQs Remember-Apply, RRQs Understand-Analyze, ERQs Analyze-Create); check:bloom-bands exit 0 across 675 items; answers and marking guidance are correctly bounded as the file's single final ## section (check:no-answer-keys exit 0).",
+        "Outcome coverage: SLO:EFMP-301-5-1 is assessed by MCQ 1-6, RRQ 1-3 and 10, ERQ 1 and 3; SLO:EFMP-301-5-2 by MCQ 7-10, RRQ 4-9, ERQ 2, 4 and 5; both unit outcomes are sampled. The spec's description of the integrative fifth ERQ (a pupil read through the intelligence theories, the measurement limits and the creativity material, content-spec.md:750-752) is only partly realized - recorded as an advisory finding."
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "pass",
+      "evidence": [
+        "All four committed English SVGs carry role=\"img\" and aria-labelledby=\"t d\" with a <title id=\"t\"> and <desc> (verified in the SVG bytes); the <Figure> alt attributes in the MDX match the figure manifest Alt text column verbatim; measure-figure-text.mjs reports no text overflow and no wordmark overprint in any of the four figures (widest text ends 768.4 inside the 780 viewBox; wordmark at 675.7).",
+        "Render inspection (repo Playwright 1.61.1 driving cached chromium against the production build served by docusaurus serve at localhost:3000; build exit 0 logged in build.log; all five unit routes returned HTTP 200): desktop 1280x900 - 0 horizontal document overflow, 0 broken images, 0 images without alt, 0 skipped heading levels on all five pages (index, topic-01, topic-02, unit-assessment, unit-teacher-notes).",
+        "Narrow 360x780 - 0 document overflow on all five pages; all four figures load after lazy-scroll and fit (rendered width 328, right edge 344, inside the 360 viewport; the .dark.svg twins are unfetched in light mode by design); the single scrollable table (teacher-notes sequencing table, unit-teacher-notes.mdx:49-53) is its own scroll container with tabindex=\"0\" and role=\"region\" from hydration, and its last column is reachable by scroll (right edge 351 -> 344 after scrollLeft = scrollWidth), so per the G3 rubric's measurement rule it is not a defect.",
+        "A4 print emulation 794x1123 with print media - 0 clipped elements on all five pages; figures fit (width 762, right edge 778, inside 794); the Answers and marking guidance section is present and unclipped in print (inspect-print-assessment-answers.png). 34 render artifacts (full-page PNGs at three viewports, per-figure close-ups, A4 PDFs, measurement JSON) under renders-agent-g3-efmp301-u5-run001/.",
+        "LIMITATION RECORDED: in-session viewing of the saved PNGs was blocked by this environment (the Read tool returned no image content), as in prior review rounds; PNG validity and non-blankness were verified programmatically with the repo's sharp (all 24 PNGs sized, channel stdev 34-61 - see png-stats.log) and the substantive layout checks are the DOM-level measurements fully logged in render-inspect.json and render-inspect.log."
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "Register held for a fresh HSC/intermediate graduate (Constitution Art. III.1, style-guide EN readability rules): short sentences, active voice, one idea per paragraph throughout the five files; every technical term is defined at first use and then used consistently - g (topic-01.mdx:45-48), the eight intelligences (:53-59), IQ/mean/standard deviation/average band with the two-thirds gloss (:106-112), fluency/flexibility/originality/elaboration (topic-02.mdx:49-54), divergent/convergent thinking (:56-62), giftedness (:83-87).",
+        "Pakistan/Sindh localization per Art. III.4: Hyderabad Class 6 two-pupils case (topic-01.mdx:26-31), a Class 5 talent show with Sindh districts and crops (:133-135), the \"my village\" Urdu essays (topic-02.mdx:26-30), the head teacher's torch, the bus that no longer stops at the village; practicum tasks are concrete school-based exercises.",
+        "Cross-references verified accurate: the Unit 4 thinking sub-topics named as prerequisite (index.mdx:46-47) exist in unit-04; the two-pupils case and the two village essays carry through the topics and the bank exactly as index.mdx \"How to use this unit\" promises (index.mdx:55-65).",
+        "One typo and one spelling inconsistency recorded as advisory findings: topic-01.mdx:69 \"Kirin's wire\" should read \"Kiran's wire\"; topic-02.mdx:78 heading \"recognizing\" (American) against the unit's British \"Recognise\" (index.mdx:42). check:no-em-dash exit 0 (zero em dashes across docs, licence, guides, i18n, specs/content, glossary.json)."
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": [
+        "Nine-part learning cycle present and monotonically ordered in both topic files (A real classroom situation -> Explanation -> Activity -> Check your understanding (5 numbered items each, floor 3) -> Summary -> Self-assessment checklist (4 items each, floor 3) -> Try this at your practicum school -> Summative task with mini-rubric -> Further reading); check:depth-gate exit 0.",
+        "Activities are feasible in the stated Pakistani classroom context with usable instructions and no special materials: the talent-show group analysis (topic-01.mdx:129-143, small groups, about 20 minutes) and the fifth-box pair marking (topic-02.mdx:109-123, pairs, about 20 minutes, essays written in five lines if unread); both practicum tasks are concrete (bus-breakdown comparison, topic-01.mdx:175-180; add the fifth box to one real piece of marking, topic-02.mdx:157-161).",
+        "Misconceptions are real and covered: the two in-topic misconception boxes (topic-01.mdx:72-79 \"multiple intelligences is proven\"; topic-02.mdx:71-76 \"creativity is only for art lessons\") plus the teacher notes' four anticipated misconceptions (unit-teacher-notes.mdx:58-78) cover the spec's five listed misconceptions (content-spec.md:708-712; the \"one fixed number set at birth\" item is carried by MCQ 1's distractor d and the measurement limits); each topic's summative mini-rubric carries an Analyze-or-higher criterion.",
+        "Progression verified in both topics from classroom situation to explanation, activity, retrieval, reflection and assessment; the unit's through-line - holding a theory's appeal and its evidence caution at once, and keeping one pupil in mind whom the tests would miss - is set up in index.mdx:57-63 and delivered by the talent-show activity's third question, ERQ 3 and ERQ 5; the teacher notes sequence the one week sensibly and explicitly protect the evidence caution over the measurement detail if a session is lost (unit-teacher-notes.mdx:54-56)."
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "blocking",
+      "message": "Uncorroborated evidence claims with no registered or bound source: (a) the learning-styles claim \"The evidence for matching teaching to a diagnosed style is weak\" and its multimodal residue (docs/semester-1/efmp-301/unit-05/topic-01.mdx:96-102), directly assessed at MCQ 6 and RRQ 10; (b) the history claim \"Early IQ testing was used to rank immigrants and justify exclusion, in ways the data never supported\" (topic-01.mdx:118-120); (c) the prediction-strength claim \"A score predicts school performance moderately well... and predicts almost nothing else a school exists to grow\" (topic-01.mdx:124-126). The reviewer fetched the registered OpenStax sections 7.4 and 7.5: none of these passages appear there (7.4 has no learning-styles content; 7.5's history material is eugenics/Buck v. Bell, not immigrant ranking, and it makes no school-performance prediction statement), and the bound excerpts carry none of them. The content-spec planned supplements for exactly this material (specs/content/efmp-301/content-spec.md:672-674) but sources/unit-05.md registers none. Repair: register and bind open-access sources that carry these claims (e.g. a learning-styles evidence review; an intelligence-testing history source), or soften each claim to what bound sources support, then re-prepare the manifest and have a fresh reviewer re-verify.",
+      "resolved": false
+    },
+    {
+      "severity": "blocking",
+      "message": "Assessment blueprint deviation: the MCQ topic spread is 6/4 (unit-assessment.mdx Q1-6 -> topic 5.1, Q7-10 -> topic 5.2) and the RRQ spread is 4/6 (R1-3 and R10 -> 5.1, R4-9 -> 5.2) against the approved 5/5 for both bands (specs/content/efmp-301/content-spec.md:747-748, verified as declared by the intake-2 evaluation item 6). Topic 5.1 is over-weighted by one MCQ and topic 5.2 by one RRQ. Repair: move one MCQ from 5.1 material to 5.2 material and one RRQ from 5.2 material to 5.1 material (updating the concept graph's derived assessment IDs accordingly), or record a justified blueprint amendment in the content-spec.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "The gloss on the Gardner criticism attributes more specificity than the cited source carries: \"the eight intelligences do not show up as separable factors in test data\" (topic-01.mdx:75-76), \"the eight intelligences have not demonstrated independence in measurement\" (:91-92), the teacher notes' \"state the criticism's content (the eight do not separate in test data)\" (unit-teacher-notes.mdx:62-63) and RRQ 2's model answer \"the eight do not show as separable factors\" (unit-assessment.mdx:180-181). The bound and live OpenStax text says only \"heavily criticized for lacking empirical evidence\" with no factor-analytic treatment. The gloss is accurate to the wider literature but uncorroborated; repair by binding a critique source that carries it or wording the gloss as the unit's own reading of \"lacking empirical evidence\".",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "The middle-positions passage names Thurstone (\"Thurstone's few primary abilities, and the modern two-level accounts\", topic-01.mdx:61-64) and fig-U5-1 labels \"Thurstone and others: a few primary abilities\", but no bound or cited source contains Thurstone (the live OpenStax 7.4 covers Spearman, Cattell, Sternberg, Gardner and CHC, not Thurstone). The position is spec-planned (content-spec.md:726-728) and historically accurate; repair by citing a source that carries it or presenting it as general history of the field.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "The integrative fifth ERQ does not do what the approved blueprint describes: the spec's parenthetical (content-spec.md:750-752) calls for \"a described pupil's profile read through the intelligence theories, the measurement limits and the creativity material into a justified teaching response\", but ERQ 5 (unit-assessment.mdx:154-157) integrates only topic 5.2's two sub-topics (the early finisher = giftedness; the essay pupil = creativity/originality) and draws on nothing from 5.1. The teacher notes' \"ERQ 5 is the capstone and integrates both topics by design\" (unit-teacher-notes.mdx:105-106) overstates accordingly. Repair: widen ERQ 5 (or swap it) so the capstone genuinely reads a pupil through both topics, or amend the spec's description.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "Governance-table inaccuracy: the coverage reinforcement row \"U5-1 | topic-01.mdx | Theories of intelligence: one ability or many | seifert2009\" (specs/content/efmp-301/coverage/unit-05.md:23), mirrored by sources/unit-05.md:17 (\"U5-1 (the gifted stereotype reinforcement row)\"), names a section that contains no Seifert content - every Seifert & Sutton citation in the unit is in topic-02.mdx's giftedness section (topic-02.mdx:84-105), which is already the U5-5 row. Repair: correct or drop the row (and the sources Supports cell) so the coverage matrix names only reinforcements that exist in prose.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "Guide-attribution overstatement: unit-teacher-notes.mdx:88-91 says \"The guide's practical component for this chapter is a case study analysis\" and sources/unit-05.md:24 calls it \"the guide-named practical work behind the teacher notes\", but the guide pairs no practical work with Chapter 5 - it lists Case Study Analysis among course-wide teaching strategies (1st 2026.txt:1173-1180) and a generic five-item Practical Work list (:1182-1189). The designed practical (each trainee brings one undersampled pupil; groups design the fifth box) is sound and uses a guide-named strategy; repair the wording to attribute it to the unit's design rather than to a chapter-specific guide component.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "Typo: topic-01.mdx:69 \"the ladder misses Kirin's wire\" should read \"Kiran's wire\" (the pupil introduced at topic-01.mdx:28-31 is Kiran).",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "Spelling inconsistency: the topic-02.mdx:78 heading uses American \"recognizing\" while the unit otherwise uses British \"recognise\" (index.mdx:42 \"Recognise and support gifted learners\"). The heading mirrors the content-spec's sub-topic name (content-spec.md:689), so the inconsistency originates upstream; align on the British spelling in both places at the next spec/content revision.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "Bound-excerpt metadata drift: sources/texts/spielman2020.md:8 still says \"Retrieved and read from the open web edition on 2026-09-24 (sections 5.1 and 8.1)\" although the same file now also carries sections 7.4, 7.5 and 10.1 for Units 5-6. Cosmetic; repair the parenthetical when the excerpt is extended for the blocking source findings.",
+      "resolved": false
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-05/G3/logs-agent-g3-efmp301-u5-run001/validate-content.log"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-05/G3/logs-agent-g3-efmp301-u5-run001/check-depth-gate.log"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-05/G3/logs-agent-g3-efmp301-u5-run001/check-figures.log"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-05/G3/logs-agent-g3-efmp301-u5-run001/check-no-em-dash.log"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-05/G3/logs-agent-g3-efmp301-u5-run001/check-no-answer-keys.log"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-05/G3/logs-agent-g3-efmp301-u5-run001/check-docs-sync.log"
+    },
+    {
+      "name": "check:concept-graph",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-05/G3/logs-agent-g3-efmp301-u5-run001/check-concept-graph.log"
+    },
+    {
+      "name": "check:bloom-bands",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-05/G3/logs-agent-g3-efmp301-u5-run001/check-bloom-bands.log"
+    },
+    {
+      "name": "measure-figure-text",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-05/G3/logs-agent-g3-efmp301-u5-run001/measure-figures.log"
+    },
+    {
+      "name": "build",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-05/G3/logs-agent-g3-efmp301-u5-run001/build.log"
+    },
+    {
+      "name": "serve",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-05/G3/logs-agent-g3-efmp301-u5-run001/serve.log"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/render-inspect.log"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/efmp-301/reviews/unit-05/G3/logs-agent-g3-efmp301-u5-run001/build.log": "1a6033e5d0d7fe793d1c53e62a303893c7573972086f2aa63283a4dd76321b9a",
+    "specs/content/efmp-301/reviews/unit-05/G3/logs-agent-g3-efmp301-u5-run001/check-bloom-bands.log": "8bb3a69d745c3dc606633572fde29da2173b8e444503ad40a5fba45c97325478",
+    "specs/content/efmp-301/reviews/unit-05/G3/logs-agent-g3-efmp301-u5-run001/check-concept-graph.log": "908560a9cfc2f48d67904d2616b4ef7c70c72eadfaeeca95ca11e429e38f09b3",
+    "specs/content/efmp-301/reviews/unit-05/G3/logs-agent-g3-efmp301-u5-run001/check-depth-gate.log": "b0c4eeaa24613853bc7dd1124721c3576b9c2ea0d83d804bb98a47c646579f2f",
+    "specs/content/efmp-301/reviews/unit-05/G3/logs-agent-g3-efmp301-u5-run001/check-docs-sync.log": "388691a97d7539a857dafad859d26a639e67f09402e7f0c242b4a09e4b62049b",
+    "specs/content/efmp-301/reviews/unit-05/G3/logs-agent-g3-efmp301-u5-run001/check-figures.log": "3d8e7e0311cc402d8ef731bc62cfd8efd8bb72907261a2ec1da4ed2ea4db7c3a",
+    "specs/content/efmp-301/reviews/unit-05/G3/logs-agent-g3-efmp301-u5-run001/check-no-answer-keys.log": "07bdbedac2c0160b677af6f03371aa01b528aecb70843febd3ea836ff03a8da1",
+    "specs/content/efmp-301/reviews/unit-05/G3/logs-agent-g3-efmp301-u5-run001/check-no-em-dash.log": "f94465f4c88bd3c3db4d995e7757fc7f08feae27e57c724a2eaafc8499ec2fe6",
+    "specs/content/efmp-301/reviews/unit-05/G3/logs-agent-g3-efmp301-u5-run001/measure-figures.log": "e28cd4a9adda1bea4b983d740b929676086681c5364565338fa46f23bba76297",
+    "specs/content/efmp-301/reviews/unit-05/G3/logs-agent-g3-efmp301-u5-run001/serve.log": "32379ed5ba5be40b36172b6edab9a9e178aa8f0a51388777e99c54dfe26faf17",
+    "specs/content/efmp-301/reviews/unit-05/G3/logs-agent-g3-efmp301-u5-run001/validate-content.log": "0753463dcc4f70bfeed270f5eb8accdfb2113670791fc90775ea247c275de426",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/desktop-index.png": "2662d878f284a6748d9de91465cb2da5cd11f6fc3c95ab58a8415c0f8f84a546",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/desktop-topic-01.png": "2bc3d16b4eabca050789ae3cc14c50502b2fe0562457795581d760923aae3db2",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/desktop-topic-02.png": "0d5cc768d81db1095ede6224a1723102194559a50f4f8e17d00a54fc6275a7d9",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/desktop-unit-assessment.png": "6decc39a2c978ba7d0f42c486c59cdf07a47ecd0ae96cfe90eeb55379855d6b7",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/desktop-unit-teacher-notes.png": "26987bbe7cd2dbd481aac5c68fb9a0f0fe8bcb1ad81337aab2c68bf77619587c",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/inspect-narrow-assessment-answers.png": "cce54c3fcd537eb0e3bc71c8c05927ca88df1251e8e18921fa6816dc112e6f8f",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/inspect-narrow-topic-01-fig1.png": "dc0155849d7efb33804da8009fda731f08d6e3036a60ea91856bd2925bb93b89",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/inspect-narrow-topic-01-fig3.png": "4ee44ee0fe1537edfabc70a49d53351ed561f3c8d4ba3dace97dd2718a13feee",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/inspect-narrow-topic-02-fig1.png": "e4493d6b4e665e8e05ea65be0756fa47605a3cb0734c448dc6e30f6999bec0bc",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/inspect-narrow-topic-02-fig3.png": "ef8fd9e2a961c0585a7e39cb3bf791df57b9e3bfe3948e68ead6ce2256126855",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/inspect-narrow-topic01-fig1.png": "bbc7b7f4b107a28a998f1fb0305086690c9dc3200bd3f2fb0cf266c04020e698",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/inspect-narrow-topic01-table.png": "8828cf53ee91fab96753bf6ae626b8bf95974b4977b7b6a0af2112a5f47009d4",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/inspect-print-assessment-answers.png": "ae17373b7fe8c621fe1f66ce733773f446b098fe6aec83914b7d3445a012d8c8",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/inspect-print-topic02-fig3.png": "8835114a9b36670b58cb273775e1ac07bb1dac99d1846711d163a5274bc8aa70",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/narrow360-index.png": "97c3de8a1039342914f74ba38e292ecad825c60c3b2b23c36794bb194ca11859",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/narrow360-topic-01.png": "91fd32a36a4c5a52b32872ba54f0f979acee81147e75f694286ad1c225bd16ea",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/narrow360-topic-02.png": "950caced4a997255ce815975709ffa3e91a5ce09825036c995e70cc1c285932b",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/narrow360-unit-assessment.png": "50b83edf1b58f09b57906829b850d7606aa6cef3abebdb2d3177a657a32b9b57",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/narrow360-unit-teacher-notes.png": "92722cbc297675c8c1abff1d53fcc0b33dcd680205bfda33c93451fa94f35eb7",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/png-stats.log": "41084d7ae763305e36c7ff5a0db44346cfe1af49e4cf58ad1f3b5b2c9bd6bd79",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/print-a4-index.pdf": "042a1f9789094b3ef7aaa160eaff0953bf2b2ee849ac717388b1e47584e3d3c7",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/print-a4-index.png": "169fb3d8521705b1e9398c26a787ac38015023d4e80cd5e4cac8386a52363774",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/print-a4-topic-01.pdf": "bf35b3dbb18778dd0e6620e78d07b70f62f79ce2b569d834ad73088153ea5e7f",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/print-a4-topic-01.png": "eab4be7eca9710e33e8cd346ffe9480a5712113a874b8b6a18b5d908af043f94",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/print-a4-topic-02.pdf": "56f0f37623eb0e34d466a9327b6ea8862d1b4f4e2629ccd6017654725a90a09d",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/print-a4-topic-02.png": "5abbdd179b161130a6e42154d1adbff65aeb0793ceb698206bc90bf54ac0ddc7",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/print-a4-unit-assessment.pdf": "4a81e6285b3885589c7cc7bcdeab05f93bf55bc11d0e71ba71951e7f24dab9d4",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/print-a4-unit-assessment.png": "c90fec1970bfca33f065b86bdc18c9b66f0f3317ab70bfe3dfd5206cae3feb56",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/print-a4-unit-teacher-notes.pdf": "e94817d566f61beb030061e4ae38de01598901b59bbfc86ce8e4f65398ca9251",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/print-a4-unit-teacher-notes.png": "85531c0d3acc3425994c56ea46f68bda1d2ac34cdb7d273501e81482d8b8cd21",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/render-inspect.json": "9ea34291ce821c73de5259b69c98b38c9d8b406dee430e30467dbdc9cd47c198",
+    "specs/content/efmp-301/reviews/unit-05/G3/renders-agent-g3-efmp301-u5-run001/render-inspect.log": "141242b9fd5149539da3290c298273e94975d25207a1cf53819e53e61d333b88"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "course_code": "EFMP-301",
+  "unit_no": 2,
+  "locale": "en",
+  "base": "http://127.0.0.1:4612",
+  "route": "/semester-1/efmp-301/unit-02",
+  "pages": [
+    "index",
+    "topic-01",
+    "topic-02",
+    "topic-03",
+    "topic-04",
+    "unit-assessment",
+    "unit-teacher-notes"
+  ],
+  "figures": [
+    "fig-U2-1",
+    "fig-U2-2",
+    "fig-U2-3",
+    "fig-U2-4",
+    "fig-U2-5",
+    "fig-U2-6",
+    "fig-U2-7",
+    "fig-U2-8"
+  ],
+  "viewports": [
+    "1280x900",
+    "360x780",
+    "A4 794x1123 print"
+  ],
+  "defects": [
+    "fig-U2-6.light: text \"multi-step instructions followed\" past viewBox right edge",
+    "fig-U2-6.dark: text \"multi-step instructions followed\" past viewBox right edge"
+  ],
+  "exit_code": 1,
+  "generated_at": "2026-09-25T08:24:25.928Z"
+}

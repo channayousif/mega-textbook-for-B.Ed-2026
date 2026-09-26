@@ -1,0 +1,37 @@
+png dark-topic-01.png: 1280x6386 stdev=[29.4,29.9,29.5] blank=false
+png desktop-index.png: 1280x2238 stdev=[49.8,48.4,46.8] blank=false
+png desktop-topic-01.png: 1280x6386 stdev=[39.7,38.2,37.6] blank=false
+png desktop-topic-02.png: 1280x6733 stdev=[39.6,38.2,37.7] blank=false
+png desktop-topic-03.png: 1280x7213 stdev=[38.6,37.3,36.8] blank=false
+png desktop-unit-assessment.png: 1280x7279 stdev=[36.6,35.8,35.2] blank=false
+png desktop-unit-teacher-notes.png: 1280x3294 stdev=[45.3,44,42.8] blank=false
+png narrow360-index.png: 360x3465 stdev=[53.5,52.3,51.6] blank=false
+png narrow360-topic-01.png: 360x9097 stdev=[47.6,46.3,46.2] blank=false
+png narrow360-topic-02.png: 360x9560 stdev=[48.2,47.1,46.9] blank=false
+png narrow360-topic-03.png: 360x10341 stdev=[47.4,46.2,46.1] blank=false
+png narrow360-unit-assessment.png: 360x11562 stdev=[44.7,43.7,43.7] blank=false
+png narrow360-unit-teacher-notes.png: 360x5205 stdev=[51,49.6,49.2] blank=false
+png print-a4-index.png: 794x1837 stdev=[39.8,40.3,41.4] blank=false
+png print-a4-topic-01.png: 794x5835 stdev=[41,39.8,40.5] blank=false
+png print-a4-topic-02.png: 794x6112 stdev=[41.8,40.6,41.2] blank=false
+png print-a4-topic-03.png: 794x6627 stdev=[40.2,39.5,40] blank=false
+png print-a4-unit-assessment.png: 794x6516 stdev=[37.2,37.2,37.6] blank=false
+png print-a4-unit-teacher-notes.png: 794x2778 stdev=[40.3,40.7,41.4] blank=false
+png ur-figure-fig-U4-1.png: 703x425 stdev=[51.6,46.3,47.2] blank=false
+png ur-figure-fig-U4-2.png: 703x425 stdev=[38.7,35.1,36] blank=false
+png ur-figure-fig-U4-3.png: 703x426 stdev=[45.1,40.7,41.9] blank=false
+png ur-figure-fig-U4-4.png: 703x425 stdev=[43.2,33.8,36] blank=false
+png ur-figure-fig-U4-5.png: 703x425 stdev=[39.6,35.1,36.6] blank=false
+png ur-figure-fig-U4-6.png: 703x425 stdev=[39.1,35.7,36.6] blank=false
+svg fig-U4-1.ur: viewBox=780x470 texts=20 clipped=[] overlaps=0 empty=0 font=""Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", system-ui, sans-serif" dir=ltr
+svg fig-U4-1.ur.dark: viewBox=780x470 texts=20 clipped=[] overlaps=0 empty=0 font=""Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", system-ui, sans-serif" dir=ltr
+svg fig-U4-2.ur: viewBox=780x470 texts=41 clipped=[] overlaps=0 empty=1 font=""Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", system-ui, sans-serif" dir=ltr
+svg fig-U4-2.ur.dark: viewBox=780x470 texts=41 clipped=[] overlaps=0 empty=1 font=""Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", system-ui, sans-serif" dir=ltr
+svg fig-U4-3.ur: viewBox=780x470 texts=28 clipped=[] overlaps=0 empty=0 font=""Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", system-ui, sans-serif" dir=ltr
+svg fig-U4-3.ur.dark: viewBox=780x470 texts=28 clipped=[] overlaps=0 empty=0 font=""Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", system-ui, sans-serif" dir=ltr
+svg fig-U4-4.ur: viewBox=780x470 texts=45 clipped=["اسکول کی سطح پر","سب سے سستی اور سب"] overlaps=0 empty=1 font=""Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", system-ui, sans-serif" dir=ltr
+svg fig-U4-4.ur.dark: viewBox=780x470 texts=45 clipped=["اسکول کی سطح پر","سب سے سستی اور سب"] overlaps=0 empty=1 font=""Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", system-ui, sans-serif" dir=ltr
+svg fig-U4-5.ur: viewBox=780x470 texts=20 clipped=[] overlaps=0 empty=0 font=""Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", system-ui, sans-serif" dir=ltr
+svg fig-U4-5.ur.dark: viewBox=780x470 texts=20 clipped=[] overlaps=0 empty=0 font=""Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", system-ui, sans-serif" dir=ltr
+svg fig-U4-6.ur: viewBox=780x470 texts=33 clipped=[] overlaps=0 empty=1 font=""Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", system-ui, sans-serif" dir=ltr
+svg fig-U4-6.ur.dark: viewBox=780x470 texts=33 clipped=[] overlaps=0 empty=1 font=""Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", system-ui, sans-serif" dir=ltr

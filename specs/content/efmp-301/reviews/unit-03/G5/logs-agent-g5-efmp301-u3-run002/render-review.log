@@ -1,0 +1,56 @@
+Render review - agent-g5-efmp301-u3-run002 (G5 Urdu, EFMP-301 Unit 3)
+Date: 2026-09-25
+Host: repository worktree agent-ad57ca9469bfc4572 (2-core box, load avg 1.47 before build;
+one build at a time respected; leftover run001 serve processes on ports 3212/3457 were left
+untouched).
+
+Build: npm run build (node scripts via npm, Docusaurus 3.10), exit 0, log build.log.
+Serve: npx docusaurus serve --dir build --port 3462 --no-open (serve.log), HTTP 200 on
+/ur/semester-1/efmp-301/unit-03/.
+
+Browser inspection: Playwright (repo devDependency, bundled Chromium
+~/.cache/ms-playwright/chromium-1228), driven by reviewer-written Node scripts
+(/tmp/g5-u3-render.mjs, /tmp/g5-u3-figs.mjs, /tmp/g5-u3-overflow.mjs, dark-mode capture).
+Chrome DevTools MCP and the Playwright MCP were unavailable (no /opt/google/chrome/chrome;
+MCP pinned to the chrome channel), so the repo's own Playwright was used directly.
+
+Inspected input identity: worktree HEAD aa3fa503; all 134 manifest digests verified to match
+the current tree (node script importing scripts/lib/review-evidence.mjs inputManifest);
+skill_digest matches.
+
+Viewports and passes:
+1. Desktop 1280x800, light: viewport + full-page PNG for index, topic-01..04,
+   unit-assessment, unit-teacher-notes (desktop-*.png, desktop-*-full.png).
+2. Narrow 360x640: all seven pages (narrow360-*.png). Programmatic overflow check:
+   documentElement.scrollWidth - clientWidth = 0 on all seven pages (no horizontal
+   overflow); no leaf element wider than viewport.
+3. A4 print emulation (794x1123, emulateMedia print): PDF + full-page PNG for all seven
+   pages (print-a4-*.pdf, print-a4-*.png). Print stylesheet applies; RTL tables and
+   Nastaliq legible in print.
+4. Figures: per-figure element screenshots in page context at 1280x800
+   (figure-fig-U3-1..9-ur.png), all nine .ur.svg sources confirmed loading (img.complete,
+   src=/img/figures/efmp-301/unit-03/fig-U3-*.ur.svg).
+5. Dark mode: html[data-theme='dark'] set post-load; CSS swap verified programmatically
+   (light img display:none, .ur.dark.svg display:inline-block); element screenshots
+   figure-fig-U3-1-ur-dark.png, figure-fig-U3-2-ur-dark.png.
+6. html dir=rtl confirmed on all pages.
+
+Findings from visual inspection:
+- Nastaliq shaping and bidi: correct on all pages and translated figures; Urdu numerals
+  used in fig-U3-6 (۱۔ ۲۔ ۳۔ ۴۔); Latin digits in fig-U3-9 row numbers render fine.
+- RTL figure mirroring: verified geometrically (UR x = viewBox width - EN x) for
+  fig-U3-1/2/5/6/9 samples; layout mirrored, glyphs not flipped.
+- DEFECT fig-U3-1 (.ur.svg and .ur.dark.svg): lower-panel explanatory labels remain in
+  English ("bell: neutral stimulus becomes conditioned stimulus", "food: unconditioned
+  stimulus", "salivation: response now triggered by the bell"). See figure-fig-U3-1-ur.png.
+- DEFECT fig-U3-5 (.ur.svg and .ur.dark.svg): only title, column headers and first row
+  label translated; the entire table body (four comparison rows) remains in English. See
+  figure-fig-U3-5-ur.png.
+- DEFECT fig-U3-3 (.ur.svg): row-2 label reads "مکمل کام کے / مکمل کام" and omits
+  "ستارہ چارٹ" (star chart); EN label "star chart for completed work". See
+  figure-fig-U3-3-ur.png.
+- No text-on-text overprint or clipping observed in the translated figures; font sizes
+  were reduced in UR variants (e.g. body 12.5px vs 14px EN) and remain legible at 1280
+  and 360 widths.
+- Markdown artifact: topic-01 renders literal "_association" (stray underscore from
+  **_association**) - confirmed in DOM (strong text "_association").

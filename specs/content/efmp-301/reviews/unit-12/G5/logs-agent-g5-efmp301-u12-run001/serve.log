@@ -1,0 +1,10 @@
+$ npx docusaurus serve --port 3215 --dir build
+started: 2026-09-25T19:16:02Z
+◇ injected env (0) from .env.local // tip: ◈ secrets for agents [www.dotenvx.com]
+[33m[1m[WARNING][22m The [36m`siteConfig.onBrokenMarkdownLinks`[39m[33m config option is deprecated and will be removed in Docusaurus v4.[39m
+[33mPlease migrate and move this option to [36m`siteConfig.markdown.hooks.onBrokenMarkdownLinks`[39m[33m instead.[39m
+[32m[1m[SUCCESS][22m[39m Serving [36m[4m"build"[24m[39m directory at: [36m[4mhttp://localhost:3215/[24m[39m
+server confirmed serving build/ at http://localhost:3215/ (Urdu pages returned HTTP 200)
+server stopped by the reviewer after render inspection completed (TaskStop); no error occurred
+exit_code=0 (server lifetime; intentional stop after inspection)
+finished: 2026-09-25T19:41:00Z

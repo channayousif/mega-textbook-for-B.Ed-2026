@@ -1,0 +1,139 @@
+G5 Urdu review - EFMP-301 Unit 9 (Assessment and Evaluation)
+Run: agent-g5-efmp301-u9-run001 | Reviewer: agent:g5-reviewer | Model: LongCat-2.0
+Disposition: REVISE (advisory under ADR-0019; not certification, no gate or tracker change)
+
+INPUTS
+Prepared manifest verified 117/117 digests against the current tree
+(specs/content/efmp-301/reviews/unit-09/G5/manifest.json; logs-agent-g5-efmp301-u9-run001/verify-manifest.log).
+English: docs/semester-1/efmp-301/unit-09/ (post-G3-repair state, commits b2ff0b3b + 72c14f85).
+Urdu: i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-09/ (G4 run, PHR 0068).
+
+G3 DEPENDENCY (uncertain, escalated to the owner)
+The only G3 evidence is advisory run001 (disposition revise, 4 blocking findings) reviewed
+against the PRE-repair English. 11 of its 98 bound inputs genuinely changed in the repair
+commit b2ff0b3b (EN index/topic-01/unit-assessment, concept graph, figure manifest, source
+excerpt + sources list, fig-U9-3/fig-U9-4 light+dark SVGs; g3-dependency-drift.log), no
+round-2 G3 review of the repaired English exists, and the report is unsigned. Per the
+GQUR-300 PR #65 precedent this is a dependency escalation to the owner. The full comparison
+below was nevertheless performed against the current bound English.
+
+WHAT PASSED
+- All six deterministic gates exit 0: validate:content, check:depth-gate, check:figures,
+  check:no-em-dash, check:no-answer-keys, check:docs-sync (logs/).
+- Assessment equivalence: all 10 Urdu MCQs independently answered before reading any key
+  (1-b, 2-b, 3-b, 4-b, 5-b, 6-b, 7-b, 8-b, 9-c, 10-b); they match the Urdu and English keys
+  exactly. Option order, RRQ mark schemes, all five 20-mark ERQ rubrics (4/8/4/4 and 5/7/4/4)
+  and every Bloom label mirror the English. No answer is revealed by the translation.
+- Page rendering: all six Urdu pages render dir=rtl lang=ur with the Nastaliq webfont
+  loaded, zero console errors, no horizontal overflow at 360px or in A4 print emulation
+  (renders/ holds desktop-1280, narrow-360 and print-a4 PNGs for all six pages).
+- Sources: the three Seifert & Sutton quotations are translated with citations preserved
+  and the bound excerpt contains every quoted passage; the G3-repaired re-attributions
+  (four-purposes frame as unit synthesis, citation dropped) are correctly carried into Urdu.
+- Completeness: every EN section, activity, check, rubric row and figure is present in the
+  Urdu; no untranslated English prose (only intentional citations, URLs and code refs).
+
+BLOCKING FINDINGS (repair required)
+1. fig-U9-4.ur.svg + .ur.dark.svg: geometry destroyed. The hole "mirroring" applied
+   cx -> 780-cx without moving the target groups, so 9 of 16 holes render outside the
+   780-wide viewBox. Browser-measured: the target at translate(390,110) has ALL FOUR holes
+   off-canvas (the "قابلِ اعتماد، صحیح نہیں" / reliable-not-valid target renders EMPTY);
+   the targets at (110,110), (670,110) and (250,330) show only 1-2 of their 4 holes, so
+   "reliable and valid" shows off-centre holes and "valid in aim, not reliable" shows one
+   near-centre hole - the patterns contradict their labels. The "دونوں سے خالی" label sits
+   at x=530 while its target is at x=250 (detached), and the caption's last line clips past
+   the left edge (x=-3.8 under fallback fonts). render-inspection.json figures."fig-U9-4.ur".
+2. fig-U9-2.ur.svg + dark: grid dividers not mirrored. EN verticals 122/332/548 mirror to
+   658/448/232, but the UR draws 658/332/548. Browser-measured 6 divider-strikes on cell
+   and header text ("کب ہوتی ہے", "وہ فیصلہ جو وہ جاتی ہے", "کہاں سے شروع کریں؛ کیا",
+   "دوبارہ سکھائیں، آگے بڑھیں،") - lines overprint the words.
+3. fig-U9-3.ur.svg + dark: (a) untranslated G3 repair - the teacher-made trades cell still
+   reads "موازنہ اور دفاع چھوڑ کر مناسبت لیتا ہے" (trades comparability AND defensibility
+   for fit), the pre-repair meaning; the repaired English says only "trades comparability
+   for fit" (b2ff0b3b) and the Urdu prose agrees (موازنے کی قیمت پر). (b) Three
+   trades-column cell texts clip past the left viewBox edge (x=-2.4 / -50.9 / -8.4 under
+   fallback fonts; -11.5 with the Nastaliq webfont injected) - words are cut off.
+4. fig-U9-5.ur.svg + dark: "evidence" rendered شہادت (testimony) throughout the labels,
+   title and desc ("1. شہادت لیں", "ابھی کی تعلم کی شہادت لیں:", "شہادت کو مقصد کے مقابلے
+   پڑھیں", "چکر تبھی تشکیلی ہے جب شہادت کوئی فیصلہ بدلے"...) - the known repo-wide defect
+   family; pre-flight lint 72c14f85 swept the MDX prose (correctly ثبوت) but not SVG labels.
+   The same شہادت sits in the concept graph (concepts/unit-09.md rows CON:9-1 and CON:9-6,
+   both G5-flagged). Also the arrowhead marker path was mapped into 780-space
+   (M 780 0L 770 5L 780 10z) inside a 10x10 marker viewport, so all three arrows render
+   headless and the cycle's flow direction is unreadable.
+5. fig-U9-6.ur.svg + dark: the divider at x=436 is not mirrored (should be 344); it strikes
+   the footer rule sentence "پہلے فیصلہ نام کریں، پھر فیصلہ وقت چنے۔" and the
+   formative/summative columns visually merge (the 344 boundary is missing).
+6. Terminology bank departures on the unit's six core terms - conform-or-rule escalation:
+   prose uses جانچ (Assessment; bank: تشخیص), تشکیلی جانچ / مجموعی جانچ (Formative /
+   Summative; bank: تشکیلی تشخیص / مجموعی جائزہ-جامع تشخیص), درستگی (Validity; bank:
+   صداقت), اعتبار (Reliability; bank: اعتماديت), معیاری ٹیسٹ (Standardised Test; bank:
+   معیاری آزمائش). The unit contradicts itself three ways: topic-03's headings use
+   تشکیلی/مجموعی تشخیص; the index key_terms block declares تشکیلی جائزہ (not in the bank -
+   check:pipeline-gate FR-016c will fail the moment translation_status flips to reviewed);
+   and the figures + concept graph use the banked forms (صداقت، اعتماديت، معیاری آزمائش)
+   while the prose never does. Unit 10 already cross-references "یونٹ 9 کی درستگی", so the
+   resolution needs an owner ruling covering both units (bank the prose forms, or
+   re-translate U9+U10 to the bank). The banked Reliability row itself carries a codepoint
+   defect: اعتماديت with Arabic yeh U+064A instead of Urdu ی U+06CC. Per the style guide
+   (## Terminology bank) the owner resolves translator-vs-bank conflicts and updates the bank.
+7. topic-02.mdx:54 and :77: "neither is answered by the pass rate / by difficulty" is
+   rendered "اور نہیں کا جواب پاس فیصد سے ملتا ہے" / "اور نہیں کا جواب مشکل سے ملتا ہے",
+   which most naturally reads "and the answer 'no' comes from the pass rate / difficulty" -
+   the opposite assertion, and precisely the misconception the paragraph is clearing. The
+   unit summary renders the same construction correctly ("مشکل کسی کیفیت سوال کا جواب
+   نہیں دیتی"), so this is a defect, not a choice. Repair: e.g. "اور پاس فیصد ان میں سے
+   کسی سوال کا جواب نہیں دیتی" / "اور مشکل ان میں سے کسی کا جواب نہیں دیتی".
+8. "Corridor" mistranslated as گلی (street): topic-03.mdx:26 "اسی گلی کے دو استاد" ("two
+   teachers of the same street") for "two teachers in the same corridor"; ERQ-3 title
+   "دو گلیاں"; teacher-notes rows 40/52/68. The concept graph uses راہداری - a better word
+   (برآمدہ/گلیار also serve). Three renderings of one setting noun; the student-facing one
+   is wrong.
+
+ADVISORY FINDINGS (unresolved; full list in the report JSON)
+- Systematic literal calque کھلانا for "feed (a decision)" (39 occurrences) - decodable
+  but not idiomatic Urdu for providing evidence to a decision.
+- Garbled or calqued renderings: "مالا داده سیٹ" (richest data set, index:50), "تعریف کی
+  قیمت" (the definition's value, topic-01:36), "منصوبہ بندی کا داخل" (planning input,
+  topic-01:40), "دلیل کے قابل طور پر" (arguably, topic-01:28), "الٹ گڈ مڈ"/"گڈ مڈ"
+  (confusion, topic-03:52 + fig-U9-6 desc), "بطور کرنا"/"ایک کرنا" (a DO, topic-03:95 +
+  ERQ-5), "جیسے یونٹ کھینچتا ہے" (as the unit draws it, RRQ-1), "بچایا گیا" (is defended,
+  ERQ-5 rubric), "بچھڑنے کو وضاحت کرتا ہے" (explains the divergence, ERQ-3 rubric),
+  "کھڑا ہوا جواب" (standing counter-example, teacher-notes:48), "جہاں محفوظ ہیں محفوظ
+  ہیں" (banked where banked, teacher-notes:56).
+- Grammar slips: تعتبار typo for اعتبار (teacher-notes:32), "ٹیسٹوں کا تاریخ" (index:50),
+  "ایسے گھڑی" (topic-02:48), "مواد کی انصاف" (assessment MCQ-7c), "پہلا پندرہ دن"
+  (topic-01:26), mixed gender for the new pupil (جانتا ہے/پڑھ سکتا vs لیتی ہے,
+  topic-02:26), clipped MCQ-9 options ("سوالوں کی / وقت کی / مضمون کی" with no head noun).
+- Weakened figure labels: fig-U9-1 "کیا آ چکا ہے؟" (what has been mastered?),
+  "ابھی کیا بیٹھ رہا ہے؟" (what is landing now?); fig-U9-5 "کیا ہوا کام" (the worked
+  task); fig-U9-2 garbled title "چار اقسام کی تشخیص" and header "وہ فیصلہ جو وہ جاتی ہے".
+- Term choices to review: خود احتساب for self-reflection (خود جائزہ expected,
+  topic-03:36), حصول for achievement, "مختلف نما مقامات والے کسور" for unlike fractions,
+  بچاؤ کا چکر vs prose بچانے کا چکر (fig-U9-6), ٹرم ریکارڈ vs prose مدت کا ریکارڈ
+  (fig-U9-6), خلا vs prose شگاف (fig-U9-6), اختتامی کوئز vs prose نکلنے والا کوئز.
+- English-side/shared residuals for the owner (outside Urdu repair scope): fig-U9-3.svg EN
+  has three headed columns but four cell columns (its manifest Prompt describes four
+  columns: "who writes it / what stays fixed / what it trades away / what it is for"), so
+  header-cell alignment is off in the EN original the UR faithfully mirrors; fig-U9-1's
+  manifest Prompt still names "the board certificate" as the certify instance while the
+  SVG says "the board examination"; EN dividers cross footer sentences (fig-U9-3 measured).
+
+ENVIRONMENT LIMITATIONS (recorded honestly)
+No system Arabic/Nastaliq font is installed on this review host and the Read tool returns
+no image content, so figure-label Nastaliq legibility could not be visually confirmed; the
+figure PNGs show fallback-font rendering and figure conclusions rest on browser-measured
+geometry (render-inspection.json), including a Nastaliq-webfont-injected measurement pass
+that re-measured every text bbox with the production font. Consecutive-line bbox overlaps
+measured under Nastaliq reflect that font's tall line box, not visible collision, and are
+not counted as defects. The MCP browser plugins cannot launch (no system Chrome);
+inspection ran through playwright-core with the cached Chromium 1243 build serving the
+production build at localhost:3217.
+
+ARTIFACTS
+Report: specs/content/efmp-301/reviews/unit-09/G5/agent-g5-efmp301-u9-run001.json
+Logs: specs/content/efmp-301/reviews/unit-09/G5/logs-agent-g5-efmp301-u9-run001/
+Renders: specs/content/efmp-301/reviews/unit-09/G5/renders-agent-g5-efmp301-u9-run001/
+(24 PNGs: 6 pages x desktop-1280/narrow-360/print-a4 + 6 Urdu figure renders)
+Advisory only: this review changed no unit prose, tracker row, translation_status,
+terminology bank, registry or rubric, and issues no acceptance.

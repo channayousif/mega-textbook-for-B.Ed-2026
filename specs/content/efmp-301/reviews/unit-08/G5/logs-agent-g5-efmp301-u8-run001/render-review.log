@@ -1,0 +1,359 @@
+[
+ {
+  "name": "index",
+  "view": "desktop-1280x900",
+  "title": "جماعت کی کاؤنٹرائزنگ | B.Ed Mega Textbook",
+  "dir": "rtl",
+  "overflowX": 0,
+  "h1": "جماعت کی کاؤنٹرائزنگ",
+  "h1font": "system-ui, -apple-system, \"Segoe UI\", Roboto, Ubuntu, Cantarell, \"Noto Sans\", sans-serif, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+  "bodyfont": "\"Noto Nastaliq Urdu\", \"Noto Naskh Arabic\", \"Jameel Noori Nastaleeq\", serif",
+  "imgs": [
+   {
+    "src": "/ur/img/logo.svg",
+    "ok": true,
+    "alt": "B.Ed Mega Textbook"
+   }
+  ],
+  "headings": [
+   "جماعت کی کاؤنٹرائزنگ",
+   "یونٹ کے تعلیمی نتائج​",
+   "پیشگی معلومات​",
+   "اس یونٹ میں​",
+   "اس یونٹ کا استعمال کیسے کریں​"
+  ],
+  "errors": []
+ },
+ {
+  "name": "index",
+  "view": "narrow-360x780",
+  "overflowX": 0,
+  "tables": []
+ },
+ {
+  "name": "index",
+  "view": "a4-print-794x1123",
+  "overflowX": 0,
+  "pastPageBox": [
+   "A.skipToContent_fXgn right=0"
+  ],
+  "visibleDarkVariants": []
+ },
+ {
+  "name": "topic-01",
+  "view": "desktop-1280x900",
+  "title": "موضوع 8.1 - جماعت کی کاؤنٹرائزنگ کیا ہے، اور اس کے اصول | B.Ed Mega Textbook",
+  "dir": "rtl",
+  "overflowX": 0,
+  "h1": "موضوع 8.1 - جماعت کی کاؤنٹرائزنگ کیا ہے، اور اس کے اصول",
+  "h1font": "system-ui, -apple-system, \"Segoe UI\", Roboto, Ubuntu, Cantarell, \"Noto Sans\", sans-serif, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+  "bodyfont": "\"Noto Nastaliq Urdu\", \"Noto Naskh Arabic\", \"Jameel Noori Nastaleeq\", serif",
+  "imgs": [
+   {
+    "src": "/ur/img/logo.svg",
+    "ok": true,
+    "alt": "B.Ed Mega Textbook"
+   },
+   {
+    "src": "/img/figures/efmp-301/unit-08/fig-U8-1.ur.svg",
+    "ok": true,
+    "alt": "جماعت کی کاؤنٹرائزنگ کا تصوری نقشہ چار شاخوں کے ساتھ: ر"
+   },
+   {
+    "src": "/img/figures/efmp-301/unit-08/fig-U8-1.ur.dark.svg",
+    "ok": false,
+    "alt": "جماعت کی کاؤنٹرائزنگ کا تصوری نقشہ چار شاخوں کے ساتھ: ر"
+   },
+   {
+    "src": "/img/figures/efmp-301/unit-08/fig-U8-2.ur.svg",
+    "ok": false,
+    "alt": "چار کاؤنٹرائزنگ اصولوں کا جدول: روک تھام، معمول، مشغولی"
+   },
+   {
+    "src": "/img/figures/efmp-301/unit-08/fig-U8-2.ur.dark.svg",
+    "ok": false,
+    "alt": "چار کاؤنٹرائزنگ اصولوں کا جدول: روک تھام، معمول، مشغولی"
+   }
+  ],
+  "headings": [
+   "موضوع 8.1 - جماعت کی کاؤنٹرائزنگ کیا ہے، اور اس کے اصول",
+   "ایک حقیقی جماعتی صورتحال​",
+   "وضاحت​",
+   "سرگرمی: دو کمرے، دس منٹ​",
+   "اپنی سمجھ جانچیں​",
+   "خلاصہ​",
+   "خود جانچ کی فہرست​",
+   "اپنے پریکٹیکم اسکول میں آزمائیں​",
+   "مجموعی کام​",
+   "مزید مطالعہ​"
+  ],
+  "errors": []
+ },
+ {
+  "name": "topic-01",
+  "view": "narrow-360x780",
+  "overflowX": 0,
+  "tables": [
+   {
+    "sw": 328,
+    "cw": 328
+   }
+  ]
+ },
+ {
+  "name": "topic-01",
+  "view": "a4-print-794x1123",
+  "overflowX": 0,
+  "pastPageBox": [
+   "A.skipToContent_fXgn right=0"
+  ],
+  "visibleDarkVariants": []
+ },
+ {
+  "name": "topic-02",
+  "view": "desktop-1280x900",
+  "title": "موضوع 8.2 - مثبت تعلیمی ماحول بنانا | B.Ed Mega Textbook",
+  "dir": "rtl",
+  "overflowX": 0,
+  "h1": "موضوع 8.2 - مثبت تعلیمی ماحول بنانا",
+  "h1font": "system-ui, -apple-system, \"Segoe UI\", Roboto, Ubuntu, Cantarell, \"Noto Sans\", sans-serif, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+  "bodyfont": "\"Noto Nastaliq Urdu\", \"Noto Naskh Arabic\", \"Jameel Noori Nastaleeq\", serif",
+  "imgs": [
+   {
+    "src": "/ur/img/logo.svg",
+    "ok": true,
+    "alt": "B.Ed Mega Textbook"
+   },
+   {
+    "src": "/img/figures/efmp-301/unit-08/fig-U8-3.ur.svg",
+    "ok": true,
+    "alt": "مثبت تعلیمی ماحول کا فرش نقشہ، مرکز کے ارد گرد چار زونو"
+   },
+   {
+    "src": "/img/figures/efmp-301/unit-08/fig-U8-3.ur.dark.svg",
+    "ok": false,
+    "alt": "مثبت تعلیمی ماحول کا فرش نقشہ، مرکز کے ارد گرد چا�ر زون"
+   },
+   {
+    "src": "/img/figures/efmp-301/unit-08/fig-U8-4.ur.svg",
+    "ok": false,
+    "alt": "مثبت تعلیمی ماحول کے پانچ حصوں کا جدول: جسمانی جگہ، معم"
+   },
+   {
+    "src": "/img/figures/efmp-301/unit-08/fig-U8-4.ur.dark.svg",
+    "ok": false,
+    "alt": "مثبت تعلیمی ماحول کے پانچ حصوں کا جدول: جسمانی جگہ، معم"
+   }
+  ],
+  "headings": [
+   "موضوع 8.2 - مثبت تعلیمی ماحول بنانا",
+   "ایک حقیقی جماعتی صورتحال​",
+   "وضاحت​",
+   "سرگرمی: کمرے کا جائزہ​",
+   "اپنی سمجھ جانچیں​",
+   "خلاصہ​",
+   "خود جانچ کی فہرست​",
+   "اپنے پریکٹیکم اسکول میں آزمائیں​",
+   "مجموعی کام​",
+   "مزید مطالعہ​"
+  ],
+  "errors": []
+ },
+ {
+  "name": "topic-02",
+  "view": "narrow-360x780",
+  "overflowX": 0,
+  "tables": [
+   {
+    "sw": 328,
+    "cw": 328
+   }
+  ]
+ },
+ {
+  "name": "topic-02",
+  "view": "a4-print-794x1123",
+  "overflowX": 0,
+  "pastPageBox": [
+   "A.skipToContent_fXgn right=0"
+  ],
+  "visibleDarkVariants": []
+ },
+ {
+  "name": "topic-03",
+  "view": "desktop-1280x900",
+  "title": "موضوع 8.3 - نظم و ضبط اور رویے کا انتظام | B.Ed Mega Textbook",
+  "dir": "rtl",
+  "overflowX": 0,
+  "h1": "موضوع 8.3 - نظم و ضبط اور رویے کا انتظام",
+  "h1font": "system-ui, -apple-system, \"Segoe UI\", Roboto, Ubuntu, Cantarell, \"Noto Sans\", sans-serif, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+  "bodyfont": "\"Noto Nastaliq Urdu\", \"Noto Naskh Arabic\", \"Jameel Noori Nastaleeq\", serif",
+  "imgs": [
+   {
+    "src": "/ur/img/logo.svg",
+    "ok": true,
+    "alt": "B.Ed Mega Textbook"
+   },
+   {
+    "src": "/img/figures/efmp-301/unit-08/fig-U8-5.ur.svg",
+    "ok": true,
+    "alt": "پانچ سیڑھیوں کی بڑھتی سیڑھی: قربت، نجی بات، انتخاب، نتی"
+   },
+   {
+    "src": "/img/figures/efmp-301/unit-08/fig-U8-5.ur.dark.svg",
+    "ok": false,
+    "alt": "پانچ سیڑھیوں کی بڑھتی سیڑھی: قربت، نجی بات، انتخاب، نتی"
+   },
+   {
+    "src": "/img/figures/efmp-301/unit-08/fig-U8-6.ur.svg",
+    "ok": false,
+    "alt": "چار عام رویوں کا جدول: پکارنا، سیٹ سے باہر، کام سے انکا"
+   },
+   {
+    "src": "/img/figures/efmp-301/unit-08/fig-U8-6.ur.dark.svg",
+    "ok": false,
+    "alt": "چار عام رویوں کا جدول: پکارنا، سیٹ سے باہر، کام سے انکا"
+   }
+  ],
+  "headings": [
+   "موضوع 8.3 - نظم و ضبط اور رویے کا انتظام",
+   "ایک حقیقی جماعتی صورتحال​",
+   "وضاحت​",
+   "سرگرمی: اسے سیڑھی پر رکھیں​",
+   "اپنی سمجھ جانچیں​",
+   "خلاصہ​",
+   "خود جانچ کی فہرست​",
+   "اپنے پریکٹیکم اسکول میں آزمائیں​",
+   "مجموعی کام​",
+   "مزید مطالعہ​"
+  ],
+  "errors": []
+ },
+ {
+  "name": "topic-03",
+  "view": "narrow-360x780",
+  "overflowX": 0,
+  "tables": [
+   {
+    "sw": 328,
+    "cw": 328
+   }
+  ]
+ },
+ {
+  "name": "topic-03",
+  "view": "a4-print-794x1123",
+  "overflowX": 0,
+  "pastPageBox": [
+   "A.skipToContent_fXgn right=0"
+  ],
+  "visibleDarkVariants": []
+ },
+ {
+  "name": "unit-assessment",
+  "view": "desktop-1280x900",
+  "title": "جماعت کی کاؤنٹرائزنگ - جائزہ اور مجموعی سوالات | B.Ed Mega Textbook",
+  "dir": "rtl",
+  "overflowX": 0,
+  "h1": "جماعت کی کاؤنٹرائزنگ - جائزہ اور مجموعی سوالات",
+  "h1font": "system-ui, -apple-system, \"Segoe UI\", Roboto, Ubuntu, Cantarell, \"Noto Sans\", sans-serif, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+  "bodyfont": "\"Noto Nastaliq Urdu\", \"Noto Naskh Arabic\", \"Jameel Noori Nastaleeq\", serif",
+  "imgs": [
+   {
+    "src": "/ur/img/logo.svg",
+    "ok": true,
+    "alt": "B.Ed Mega Textbook"
+   }
+  ],
+  "headings": [
+   "جماعت کی کاؤنٹرائزنگ - جائزہ اور مجموعی سوالات",
+   "یونٹ کا خلاصہ​",
+   "مجموعی جائزہ​",
+   "جوابات اور نمبر دینے کی رہنمائی​"
+  ],
+  "errors": []
+ },
+ {
+  "name": "unit-assessment",
+  "view": "narrow-360x780",
+  "overflowX": 0,
+  "tables": [
+   {
+    "sw": 328,
+    "cw": 328
+   },
+   {
+    "sw": 328,
+    "cw": 328
+   },
+   {
+    "sw": 328,
+    "cw": 328
+   },
+   {
+    "sw": 328,
+    "cw": 328
+   },
+   {
+    "sw": 328,
+    "cw": 328
+   }
+  ]
+ },
+ {
+  "name": "unit-assessment",
+  "view": "a4-print-794x1123",
+  "overflowX": 0,
+  "pastPageBox": [
+   "A.skipToContent_fXgn right=0"
+  ],
+  "visibleDarkVariants": []
+ },
+ {
+  "name": "unit-teacher-notes",
+  "view": "desktop-1280x900",
+  "title": "جماعت کی کاؤنٹرائزنگ - استاد کے نوٹس | B.Ed Mega Textbook",
+  "dir": "rtl",
+  "overflowX": 0,
+  "h1": "جماعت کی کاؤنٹرائزنگ - استاد کے نوٹس",
+  "h1font": "system-ui, -apple-system, \"Segoe UI\", Roboto, Ubuntu, Cantarell, \"Noto Sans\", sans-serif, BlinkMacSystemFont, \"Segoe UI\", Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\"",
+  "bodyfont": "\"Noto Nastaliq Urdu\", \"Noto Naskh Arabic\", \"Jameel Noori Nastaleeq\", serif",
+  "imgs": [
+   {
+    "src": "/ur/img/logo.svg",
+    "ok": true,
+    "alt": "B.Ed Mega Textbook"
+   }
+  ],
+  "headings": [
+   "جماعت کی کاؤنٹرائزنگ - استاد کے نوٹس",
+   "تدریسی حکمت عملیاں​",
+   "ہفتے پر ترتیب​",
+   "متوقع غلط فہمیاں، اور ان کا علاج​",
+   "زبان اور رسائی​",
+   "عملی کام​",
+   "جائزے کے نوٹس​"
+  ],
+  "errors": []
+ },
+ {
+  "name": "unit-teacher-notes",
+  "view": "narrow-360x780",
+  "overflowX": 0,
+  "tables": [
+   {
+    "sw": 328,
+    "cw": 328
+   }
+  ]
+ },
+ {
+  "name": "unit-teacher-notes",
+  "view": "a4-print-794x1123",
+  "overflowX": 0,
+  "pastPageBox": [
+   "A.skipToContent_fXgn right=0"
+  ],
+  "visibleDarkVariants": []
+ }
+]
