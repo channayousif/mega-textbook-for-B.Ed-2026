@@ -1,5 +1,10 @@
 # Feature 017: The reviewer role
 
+> **Superseded access rule (Feature 025, 2026-09-26):** `profiles.reviewer` remains for
+> historical audit but no longer grants review access. Active track/course grants with
+> qualification evidence control the workbench and formal queue. The licence track has no
+> course codes under Feature 024. See `specs/025-admin-review-workflows/spec.md`.
+
 **Status**: Scoped 2026-09-13, awaiting owner approval.
 **Decision**: Roadmap "The bilingual review pipeline (two stages)", owner 2026-09-12, with the
 certification boundary confirmed 2026-09-13: the agent prepares and is advisory, the human

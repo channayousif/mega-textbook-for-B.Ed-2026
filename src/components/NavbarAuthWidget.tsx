@@ -32,7 +32,7 @@ export default function NavbarAuthWidget({
   onClick?: () => void;
 }): React.ReactElement | null {
   const location = useLocation();
-  const { loading, session, displayName, isConfigured, signOut } = useAuth();
+  const { loading, session, displayName, role, isConfigured, signOut } = useAuth();
 
   if (!isConfigured) return null;
   // Resolving the session - render neither state to avoid a signed-out flash.
@@ -67,6 +67,9 @@ export default function NavbarAuthWidget({
       {displayName}
     </a>
   );
+  const adminLink = role === 'admin' ? (
+    <a className={linkClassName} href="/app/admin/" onClick={onClick}>Admin</a>
+  ) : null;
   const signOutButton = (
     <button type="button" className={linkClassName} onClick={handleSignOut}>
       Sign out
@@ -76,6 +79,7 @@ export default function NavbarAuthWidget({
   if (!mobile) {
     return (
       <>
+        {adminLink}
         {profileLink}
         {signOutButton}
       </>
@@ -84,6 +88,7 @@ export default function NavbarAuthWidget({
 
   return (
     <>
+      {adminLink && <li className="menu__list-item">{adminLink}</li>}
       <li className="menu__list-item">{profileLink}</li>
       <li className="menu__list-item">{signOutButton}</li>
     </>

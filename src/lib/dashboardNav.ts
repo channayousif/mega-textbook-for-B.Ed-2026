@@ -25,6 +25,7 @@ export const studentNav: readonly NavItem[] = [
   { key: 'notes', label: { en: 'Notes', ur: 'نوٹس' }, to: '/app/dashboard/notes', activeMatch: /^\/app\/dashboard\/notes/ },
   { key: 'classes', label: { en: 'My classes', ur: 'میری کلاسیں' }, to: '/app/dashboard/classes', activeMatch: /^\/app\/dashboard\/classes/ },
   { key: 'history', label: { en: 'History', ur: 'ماضی' }, to: '/app/dashboard/history', activeMatch: /^\/app\/dashboard\/history/ },
+  { key: 'review', label: { en: 'Review content', ur: 'مواد کا جائزہ' }, to: '/app/reviewer/apply', activeMatch: /^\/app\/reviewer/ },
 ] as const;
 
 export const teacherNav: readonly NavItem[] = [
@@ -36,6 +37,7 @@ export const teacherNav: readonly NavItem[] = [
   { key: 'quiz-authoring', label: { en: 'Quiz authoring', ur: 'کوئز تیاری' }, to: '/app/teacher/quiz-authoring', activeMatch: /^\/app\/teacher\/quiz-authoring/ },
   { key: 'teaching-log', label: { en: 'Teaching log', ur: 'تدریسی نوٹ بک' }, to: '/app/teacher/teaching-log', activeMatch: /^\/app\/teacher\/teaching-log/ },
   { key: 'feedback', label: { en: 'Feedback & suggestions', ur: 'رائے اور تجاویز' }, to: '/app/teacher/feedback-suggestions', activeMatch: /^\/app\/teacher\/feedback-suggestions/ },
+  { key: 'review', label: { en: 'Review content', ur: 'مواد کا جائزہ' }, to: '/app/reviewer/apply', activeMatch: /^\/app\/reviewer/ },
 ] as const;
 
 export function activeKey(items: readonly NavItem[], pathname: string): string | null {

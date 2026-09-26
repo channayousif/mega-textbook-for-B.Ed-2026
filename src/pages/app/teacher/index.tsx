@@ -23,6 +23,11 @@ function useLocale(): 'en' | 'ur' {
 }
 
 const MESSAGES = {
+  title: { en: 'Teaching dashboard', ur: 'تدریسی ڈیش بورڈ' },
+  next: { en: 'Next action', ur: 'اگلا کام' },
+  gradeNow: { en: 'Open grading queue', ur: 'گریڈنگ کی قطار کھولیں' },
+  createClass: { en: 'Create a class', ur: 'کلاس بنائیں' },
+  retry: { en: 'Try again', ur: 'دوبارہ کوشش کریں' },
   loading: { en: 'Loading…', ur: 'لوڈ ہو رہا ہے…' },
   loadError: { en: 'Could not load your overview.', ur: 'جائزہ لوڈ نہیں ہو سکا۔' },
   ungradedByClass: { en: 'Ungraded submissions', ur: 'غیر گریڈ شدہ جمع کرائے گئے کام' },
@@ -49,8 +54,10 @@ function OverviewContent(): React.ReactElement {
   const [soonestDue, setSoonestDue] = useState<SoonestDueAssignment[] | null>(null);
   const [recentActivity, setRecentActivity] = useState<RecentActivityItem[] | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [loaded, setLoaded] = useState(false);
 
   const load = useCallback(async () => {
+    setError(null);
     const [ungradedRes, soonestDueRes, recentActivityRes] = await Promise.all([
       fetchUngradedCountsByClass(),
       fetchSoonestDueAssignments(5),
@@ -58,25 +65,30 @@ function OverviewContent(): React.ReactElement {
     ]);
     if (ungradedRes.error || soonestDueRes.error || recentActivityRes.error) {
       setError(MESSAGES.loadError[locale]);
+      setLoaded(true);
       return;
     }
     setUngraded(ungradedRes.data ?? []);
     setSoonestDue(soonestDueRes.data ?? []);
     setRecentActivity(recentActivityRes.data ?? []);
+    setLoaded(true);
   }, [locale]);
 
   useEffect(() => {
     load();
   }, [load]);
 
-  if (!ungraded || !soonestDue || !recentActivity) return <p>{MESSAGES.loading[locale]}</p>;
+  if (!loaded) return <p role="status">{MESSAGES.loading[locale]}</p>;
+
+  if (error || !ungraded || !soonestDue || !recentActivity) return <div className="work-panel" role="alert"><h1>{MESSAGES.title[locale]}</h1><p>{error || MESSAGES.loadError[locale]}</p><button className="button button--primary" onClick={() => void load()}>{MESSAGES.retry[locale]}</button></div>;
 
   if (ungraded.length === 0) {
     return (
-      <div>
-        {error && <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>}
+      <div className="dashboard-home" dir={locale === 'ur' ? 'rtl' : 'ltr'}>
+        <h1>{MESSAGES.title[locale]}</h1>
+        <section className="work-panel work-panel--accent"><h2>{MESSAGES.next[locale]}</h2>
         <p>{MESSAGES.noClasses[locale]}</p>
-        <p><Link to="/app/classes" className="button button--primary button--sm">{MESSAGES.manageClasses[locale]}</Link></p>
+        <p><Link to="/app/classes" className="button button--primary">{MESSAGES.createClass[locale]}</Link></p></section>
       </div>
     );
   }
@@ -85,16 +97,18 @@ function OverviewContent(): React.ReactElement {
   const caughtUp = totalUngraded === 0 && soonestDue.length === 0;
 
   return (
-    <div>
-      {error && (
-        <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>
-      )}
-
+    <div className="dashboard-home" dir={locale === 'ur' ? 'rtl' : 'ltr'}>
+      <h1>{MESSAGES.title[locale]}</h1>
+      <section className="work-panel work-panel--accent"><h2>{MESSAGES.next[locale]}</h2>
+        {totalUngraded > 0 ? <><p>{totalUngraded} {MESSAGES.ungradedCount[locale]}</p><Link className="button button--primary" to="/app/classes/queue">{MESSAGES.gradeNow[locale]}</Link></> :
+          soonestDue.length > 0 ? <><p>{MESSAGES.soonestDue[locale]}: {soonestDue[0].title}</p><Link className="button button--primary" to="/app/classes/assignments">{MESSAGES.soonestDue[locale]}</Link></> : <p>{MESSAGES.caughtUp[locale]}</p>}
+      </section>
+      <div className="work-grid">
       {caughtUp ? (
-        <p>{MESSAGES.caughtUp[locale]}</p>
+        <section className="work-panel"><h2>{MESSAGES.ungradedByClass[locale]}</h2><p>{MESSAGES.caughtUp[locale]}</p></section>
       ) : (
         <>
-          <h3>{MESSAGES.ungradedByClass[locale]}</h3>
+          <section className="work-panel"><h2>{MESSAGES.ungradedByClass[locale]}</h2>
           <ul>
             {ungraded.map((c) => (
               <li key={c.classId} data-testid="ungraded-count-row">
@@ -108,8 +122,8 @@ function OverviewContent(): React.ReactElement {
               </li>
             ))}
           </ul>
-
-          <h3>{MESSAGES.soonestDue[locale]}</h3>
+          </section>
+          <section className="work-panel"><h2>{MESSAGES.soonestDue[locale]}</h2>
           <ul>
             {soonestDue.map((item) => (
               <li key={item.id} data-testid="soonest-due-item">
@@ -119,10 +133,11 @@ function OverviewContent(): React.ReactElement {
               </li>
             ))}
           </ul>
+          </section>
         </>
       )}
-
-      <h3>{MESSAGES.recentActivity[locale]}</h3>
+      <section className="work-panel"><h2>{MESSAGES.recentActivity[locale]}</h2>
+      {recentActivity.length === 0 && <p>{locale === 'ur' ? 'ابھی کوئی نئی سرگرمی نہیں۔' : 'No recent activity.'}</p>}
       <ul>
         {recentActivity.map((item) => (
           <li key={`${item.kind}-${item.id}`} data-testid="recent-activity-item">
@@ -130,8 +145,9 @@ function OverviewContent(): React.ReactElement {
           </li>
         ))}
       </ul>
-
-      <p><Link to="/app/classes">{MESSAGES.manageClasses[locale]}</Link></p>
+      </section>
+      <section className="work-panel"><h2>{MESSAGES.manageClasses[locale]}</h2><p><Link to="/app/classes">{MESSAGES.manageClasses[locale]}</Link></p><p><Link to="/app/teacher/quiz-authoring">{locale === 'ur' ? 'کوئز تیار کریں' : 'Author a quiz'}</Link></p><p><Link to="/app/teacher/teaching-log">{locale === 'ur' ? 'تدریسی نوٹ لکھیں' : 'Record teaching'}</Link></p></section>
+      </div>
     </div>
   );
 }

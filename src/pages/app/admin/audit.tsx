@@ -14,6 +14,7 @@ type AuditRow = {
 };
 
 type ProfileLabel = { full_name: string | null; role: string };
+type ActionRow = { id: number; actor_id: string | null; action: string; target_type: string; target_id: string | null; detail: Record<string, unknown>; occurred_at: string };
 
 /**
  * Admin audit history (Spec 002, T044) - SC-008: "who granted answer-key
@@ -23,6 +24,7 @@ type ProfileLabel = { full_name: string | null; role: string };
  */
 function AuditHistoryContent(): React.ReactElement {
   const [rows, setRows] = useState<AuditRow[] | null>(null);
+  const [actions, setActions] = useState<ActionRow[]>([]);
   const [labels, setLabels] = useState<Record<string, ProfileLabel>>({});
   const [error, setError] = useState<string | null>(null);
 
@@ -42,7 +44,12 @@ function AuditHistoryContent(): React.ReactElement {
       const auditRows = (data ?? []) as AuditRow[];
       setRows(auditRows);
 
-      const ids = Array.from(new Set(auditRows.flatMap((r) => [r.subject_id, r.actor_id])));
+      const { data: actionData, error: actionError } = await supabase
+        .from('admin_action_history').select('*').order('occurred_at', { ascending: false });
+      if (actionError) setError('Could not load admin action history.');
+      else setActions((actionData ?? []) as ActionRow[]);
+
+      const ids = Array.from(new Set([...auditRows.flatMap((r) => [r.subject_id, r.actor_id]), ...((actionData ?? []) as ActionRow[]).map(r => r.actor_id).filter((id): id is string => Boolean(id))]));
       if (ids.length === 0) return;
       const { data: profileRows } = await supabase
         .from('profiles')
@@ -65,6 +72,9 @@ function AuditHistoryContent(): React.ReactElement {
   return (
     <main className="container auth-page margin-vert--lg">
       <h1>Privilege audit history</h1>
+
+      <h2>Admin workflow actions</h2>
+      {actions.length === 0 ? <p>No workflow actions recorded yet.</p> : <div className="table-scroll"><table><thead><tr><th>When</th><th>Actor</th><th>Action</th><th>Target</th><th>Detail</th></tr></thead><tbody>{actions.map(a => <tr key={a.id}><td>{new Date(a.occurred_at).toLocaleString()}</td><td>{a.actor_id ? label(a.actor_id) : 'Service'}</td><td>{a.action}</td><td>{a.target_type} {a.target_id}</td><td><code>{JSON.stringify(a.detail)}</code></td></tr>)}</tbody></table></div>}
 
       {error && <div className="alert alert--danger" role="alert" aria-live="assertive">{error}</div>}
 

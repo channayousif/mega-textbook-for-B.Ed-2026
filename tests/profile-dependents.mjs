@@ -19,6 +19,11 @@
  * Order matters only in that profiles comes last; these are all siblings.
  */
 export const PROFILE_DEPENDENTS = [
+  ['admin_action_history', 'actor_id'],
+  ['agent_jobs', 'requested_by'],
+  ['review_submissions', 'reviewer_id'],
+  ['reviewer_grants', 'subject_id'],
+  ['reviewer_applications', 'applicant_id'],
   ['unit_progress', 'student_id'],
   ['student_achievements', 'student_id'],
   ['self_assessment_checks', 'student_id'],

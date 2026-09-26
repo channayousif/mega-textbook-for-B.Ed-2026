@@ -5,7 +5,7 @@
  *  - a non-admin self-grant RAISES (the 0044 guard branch), and a non-admin
  *    grant on someone else's row is a 0-row no-op (RLS filters before the
  *    trigger runs)
- *  - is_reviewer() goes false the moment the holder is suspended or deleted,
+ *  - is_reviewer() derives from active scoped grants and goes false on suspension,
  *    read over RPC as the holder's own client, because the review surface
  *    trusts the database's answer and not the cached profile column
  *  - holding `reviewer` grants no new write anywhere
@@ -55,7 +55,7 @@ describe.skipIf(!rlsConfigured)('reviewer capability - grant, audit, suspension,
   }
 
   // T010 (SC1, FR-001)
-  test('an admin grants and revokes, and both directions land in privilege_audit', async () => {
+  test('the legacy reviewer flag remains audited but cannot grant scoped access', async () => {
     const admin = await makeAdmin();
     const adminProfile = await getProfileByAuthId(admin.authUserId);
     const subject = await createSignedInUser({ role: 'teacher' });
@@ -65,6 +65,8 @@ describe.skipIf(!rlsConfigured)('reviewer capability - grant, audit, suspension,
     const { error: grantError } = await admin.client
       .from('profiles').update({ reviewer: true }).eq('id', subjectProfile.id);
     expect(grantError).toBeNull();
+    const capability = await subject.client.rpc('is_reviewer');
+    expect(capability.data).toBe(false);
 
     const { error: revokeError } = await admin.client
       .from('profiles').update({ reviewer: false }).eq('id', subjectProfile.id);
@@ -101,7 +103,13 @@ describe.skipIf(!rlsConfigured)('reviewer capability - grant, audit, suspension,
   test('is_reviewer() goes false the moment the holder is suspended or deleted', async () => {
     const user = await createSignedInUser({ role: 'teacher' });
     created.push(user.authUserId);
-    await adminSet(user.authUserId, { reviewer: true });
+    const admin = await makeAdmin();
+    const profile = await getProfileByAuthId(user.authUserId);
+    const { error: grantError } = await admin.client.rpc('grant_reviewer_scope', {
+      p_subject: profile.id, p_track: 'bed', p_course: 'EFMP-301',
+      p_evidence: 'Qualified through comparative unit review.',
+    });
+    expect(grantError).toBeNull();
 
     const active = await user.client.rpc('is_reviewer');
     expect(active.error).toBeNull();
@@ -123,7 +131,13 @@ describe.skipIf(!rlsConfigured)('reviewer capability - grant, audit, suspension,
   test('holding reviewer grants no new write anywhere', async () => {
     const user = await createSignedInUser({ role: 'teacher' });
     created.push(user.authUserId);
-    await adminSet(user.authUserId, { reviewer: true });
+    const admin = await makeAdmin();
+    const profile = await getProfileByAuthId(user.authUserId);
+    const { error: grantError } = await admin.client.rpc('grant_reviewer_scope', {
+      p_subject: profile.id, p_track: 'bed', p_course: 'EFMP-301',
+      p_evidence: 'Qualified through comparative unit review.',
+    });
+    expect(grantError).toBeNull();
 
     const victim = await createSignedInUser({ role: 'student' });
     created.push(victim.authUserId);
@@ -163,7 +177,13 @@ describe.skipIf(!rlsConfigured)('reviewer capability - grant, audit, suspension,
   test('a reviewer keeps exactly the content_feedback insert every account has', async () => {
     const user = await createSignedInUser({ role: 'teacher' });
     created.push(user.authUserId);
-    await adminSet(user.authUserId, { reviewer: true });
+    const admin = await makeAdmin();
+    const reviewerProfile = await getProfileByAuthId(user.authUserId);
+    const { error: grantError } = await admin.client.rpc('grant_reviewer_scope', {
+      p_subject: reviewerProfile.id, p_track: 'bed', p_course: 'EFMP-301',
+      p_evidence: 'Qualified through comparative unit review.',
+    });
+    expect(grantError).toBeNull();
 
     const profile = await getProfileByAuthId(user.authUserId);
     createdFeedbackAuthors.push(profile.id);
