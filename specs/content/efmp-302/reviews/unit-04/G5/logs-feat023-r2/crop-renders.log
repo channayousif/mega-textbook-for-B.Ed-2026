@@ -1,0 +1,39 @@
+OK   crop-index-dependency.png <- index: repair 2: dependency sentence
+OK   crop-topic-01-dau.png <- topic-01: repair 4: stakes bullet
+OK   crop-topic-01-serving.png <- topic-01: repair 6: serving teacher
+OK   crop-topic-03-tallies.png <- topic-03: repair 13a + residual ثبٹ: own-record paragraph
+OK   crop-topic-03-practicum.png <- topic-03: repair 3: practicum record-not-practice
+OK   crop-topic-03-isore.png <- topic-03: repair 4+12: high-stakes + risk-to-design-against
+OK   crop-topic-04-chahata.png <- topic-04: repair 1: restored چاہتا passage
+OK   crop-topic-04-isore.png <- topic-04: repair 10: rarely passage
+OK   crop-topic-04-incentive.png <- topic-04: repair 8: incentive structure
+MISS crop-topic-04-fig-U4-8.png <- topic-04: residual: fig-U4-8 caption شاید (locator not found: figure:has-text("تشکیلی بمقابلہ مجموعی"))
+OK   crop-assessment-erq2.png <- unit-assessment: repair 7 (fixed locus): ERQ-2 label یکجائتی
+MISS crop-assessment-erq2-rubric.png <- unit-assessment: residual: ERQ-2 rubric title مجموعی (locator not found: h3:has-text("مجموعی نقشہ"))
+OK   crop-assessment-khalisi.png <- unit-assessment: residual: خلاصی for Abstract
+OK   crop-notes-debrief.png <- unit-teacher-notes: repair 3: debrief question + negation
+OK   crop-notes-erq2.png <- unit-teacher-notes: residual: ERQ 2 مجموعی سوال
+crops: 13 ok, 2 missed
+OK   crop-topic-04-fig-U4-8.png
+OK   crop-assessment-erq2-rubric.png
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+page.screenshot: Timeout 30000ms exceeded.
+Call log:
+[2m  - taking page screenshot[22m
+[2m  - waiting for fonts to load...[22m
+[2m  - fonts loaded[22m
+
+    at [90m/home/a2ahs/mega_book_for_B.Ed/.claude/worktrees/agent-ae2ddfdbf249be0f2/[39mspecs/content/efmp-302/reviews/unit-04/G5/logs-feat023-r2/svg-caption-shot.mjs:15:12 {
+  log: [
+    [32m'  - taking page screenshot'[39m,
+    [32m'  - waiting for fonts to load...'[39m,
+    [32m'  - fonts loaded'[39m
+  ],
+  name: [32m'TimeoutError'[39m
+}
+
+Node.js v22.22.1
+OK   crop-fig-U4-8-ur-full.png

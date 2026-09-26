@@ -1,0 +1,36 @@
+A. Repaired sentences present in built pages (visible text):
+  [OK] index.html: ذتی repair
+  [OK] topic-02/index.html: ملاا repair
+  [OK] topic-04/index.html: ذتی repair (summary)
+  [OK] unit-assessment/index.html: متبعل repair (summary)
+  [OK] unit-assessment/index.html: متبعل repair (MCQ 3 stem)
+  [OK] unit-teacher-notes/index.html: فرضی استاد repair
+  [OK] unit-teacher-notes/index.html: session/marking garble repair
+B. Pre-repair defect strings absent from built pages:
+  [OK] index.html: ذتی پیشہ ورانہ
+  [OK] topic-02/index.html: نہیں ملاا
+  [OK] topic-04/index.html: ذتی ترقی کا منصوبہ
+  [OK] unit-assessment/index.html: متبعل
+  [OK] unit-teacher-notes/index.html: فرضی استاد
+  [OK] unit-teacher-notes/index.html: نششت
+C. Built fig-U6-7 Urdu SVG assets carry the added margin notes:
+  [OK] fig-U6-7.ur.svg: پانچ ہدف مارچ تک افسوسوں کی فہرست ہوتے ہ
+  [OK] fig-U6-7.ur.svg: ابھی طے کیجیے، مارچ میں نہیں۔
+  [OK] fig-U6-7.ur.svg: بعد میں چنی گئی شہادت ہمیشہ داد دیتی ہے۔
+  [OK] fig-U6-7.ur.svg: ایک، پانچ نہیں۔
+  [OK] fig-U6-7.ur.dark.svg: پانچ ہدف مارچ تک افسوسوں کی فہرست ہوتے ہ
+  [OK] fig-U6-7.ur.dark.svg: ابھی طے کیجیے، مارچ میں نہیں۔
+  [OK] fig-U6-7.ur.dark.svg: بعد میں چنی گئی شہادت ہمیشہ داد دیتی ہے۔
+  [OK] fig-U6-7.ur.dark.svg: ایک، پانچ نہیں۔
+D. General freshness: 5 clean prose probes per page (r1 method):
+  index.mdx: 5/5 probes found
+  topic-01.mdx: 5/5 probes found
+  topic-02.mdx: 5/5 probes found
+  topic-03.mdx: 4/5 probes found
+    missing: مشاہدہ نہیں کر سکتا۔ اس کی کمزوری یہ ہے کہ یہ فرماں برداری کی مشق بن ج
+  topic-04.mdx: 5/5 probes found
+  unit-assessment.mdx: 4/5 probes found
+    missing: اصول پورا کرتی ہے اور صرف محفوظ وقت کی قیمت لیتی ہے؛ غور و فکر کے اوزا
+  unit-teacher-notes.mdx: 5/5 probes found
+
+RESULT: 2 FAILURES

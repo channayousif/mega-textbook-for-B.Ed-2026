@@ -1,0 +1,12 @@
+figure SVGs in build: 40; hash-matching static: 40; differing: none
+built page index.html: marker FOUND (marker="مؤثر استاد بننا"); first NUL byte at 21639
+built page topic-01/index.html: marker FOUND (marker="نہ صرف اشارہ شدہ تعریفیں"); first NUL byte at 24878
+built page topic-02/index.html: marker FOUND (marker="مہارت کے آگے آتا ہے، پیچھے نہیں"); first NUL byte at 28558
+built page topic-04/index.html: marker FOUND (marker="شہادت کو اس کے دائرے کے ساتھ پڑھیے"); first NUL byte at 22108
+built page topic-05/index.html: marker FOUND (marker="بار بردار"); first NUL byte at 22155
+built page unit-assessment/index.html: marker FOUND (marker="تجمیعی؛"); first NUL byte at 22042
+built page unit-teacher-notes/index.html: marker FOUND (marker="فرضی استاد"); first NUL byte at 21991
+built page topic-03/index.html: marker FOUND (marker="مشترک دھاگہ"); first NUL byte at 22092
+built Urdu Unit 3 pages with current-content markers: 8/8
+built EN topic-04 contains 'Read the evidence with its scope attached': true
+BUILD-FRESH-FOR-UNIT-3-URDU

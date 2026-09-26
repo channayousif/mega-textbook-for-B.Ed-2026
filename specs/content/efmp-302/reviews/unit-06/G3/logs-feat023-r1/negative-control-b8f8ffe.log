@@ -1,0 +1,30 @@
+fig-U6-2.svg (b8f8ffe bytes): 32 leaf text nodes
+   SUPERPOSITION "Development that" x "changes practice" overlap 172.7x1.4
+   SUPERPOSITION "Embedded in your" x "classroom" overlap 102.7x1.4
+   SUPERPOSITION "classroom" x "rules out: training away from the" overlap 102.7x2.6
+   SUPERPOSITION "Focused on content" x "and pupils" overlap 105.7x1.4
+   SUPERPOSITION "and pupils" x "rules out: generic sessions on" overlap 105.7x2.6
+   SUPERPOSITION "Supported by" x "feedback" overlap 93.8x1.4
+   SUPERPOSITION "feedback" x "rules out: advice about a lesson" overlap 93.8x2.6
+   SUPERPOSITION "Chosen by the" x "teacher" overlap 77.9x1.4
+   SUPERPOSITION "teacher" x "rules out: the assigned course" overlap 77.9x2.6
+   SUPERPOSITION "principle is the practical test. A" x "certified and reported. It simply" overlap 218.6x6.7
+   SUPERPOSITION "provision that fails several of" x "certified and reported. It simply" overlap 203.5x6.7
+   SUPERPOSITION "provision that fails several of" x "will not change what happens in" overlap 203.5x6.7
+   SUPERPOSITION "these can still be attended," x "will not change what happens in" overlap 191.5x6.7
+   SUPERPOSITION "these can still be attended," x "the room." overlap 68.0x6.7
+fig-U6-6.svg (b8f8ffe bytes): 29 leaf text nodes
+   SUPERPOSITION "1 Plan ONE lesson" x "together" overlap 89.3x3.1
+   SUPERPOSITION "together" x "a group, not an" overlap 89.3x11.6
+   SUPERPOSITION "2 One teaches;" x "the others observe" overlap 151.8x3.1
+   SUPERPOSITION "the others observe" x "the lesson belongs" overlap 131.3x11.6
+   SUPERPOSITION "3 Examine the" x "evidence" overlap 90.8x3.1
+   SUPERPOSITION "evidence" x "what pupils did and" overlap 90.8x11.6
+   SUPERPOSITION "4 Revise the lesson" x "then 5, teach it" overlap 107.1x5.6
+   SUPERPOSITION "Watch the PUPILS," x "not the teacher" overlap 158.2x3.1
+   SUPERPOSITION "and what makes it hard: nobody is" x "rather than performance. The" overlap 208.1x14.7
+   SUPERPOSITION "being appraised, so the observers" x "moment it becomes an observation" overlap 238.4x14.7
+   SUPERPOSITION "are free to look at learning" x "of the teacher, the cycle stops" overlap 186.7x14.7
+
+negative control: 25 superposition(s) flagged on the known-broken bytes
+INSTRUMENT VALID: detects the b8f8ffe damage class; the clean result on current bytes is meaningful

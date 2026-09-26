@@ -1,0 +1,17 @@
+static/img/figures/efmp-302/unit-05/fig-U5-1.ur.svg: 41 text elements, 0 overlaps, 0 viewBox overflows, minVertGap=1.87, minHorizGap=17.72, minWordmarkClear=17.72
+static/img/figures/efmp-302/unit-05/fig-U5-2.ur.svg: 27 text elements, 0 overlaps, 0 viewBox overflows, minVertGap=2.55, minHorizGap=80.29, minWordmarkClear=28.27
+static/img/figures/efmp-302/unit-05/fig-U5-3.ur.svg: 24 text elements, 0 overlaps, 0 viewBox overflows, minVertGap=2.38, minHorizGap=57.76, minWordmarkClear=57.39
+static/img/figures/efmp-302/unit-05/fig-U5-4.ur.svg: 36 text elements, 0 overlaps, 0 viewBox overflows, minVertGap=3.75, minHorizGap=37.70, minWordmarkClear=37.70
+static/img/figures/efmp-302/unit-05/fig-U5-5.ur.svg: 46 text elements, 0 overlaps, 0 viewBox overflows, minVertGap=2.50, minHorizGap=31.28, minWordmarkClear=37.70
+static/img/figures/efmp-302/unit-05/fig-U5-6.ur.svg: 22 text elements, 0 overlaps, 0 viewBox overflows, minVertGap=4.07, minHorizGap=17.72, minWordmarkClear=17.72
+static/img/figures/efmp-302/unit-05/fig-U5-7.ur.svg: 23 text elements, 0 overlaps, 0 viewBox overflows, minVertGap=0.85, minHorizGap=151.54, minWordmarkClear=17.72
+static/img/figures/efmp-302/unit-05/fig-U5-8.ur.svg: 19 text elements, 0 overlaps, 0 viewBox overflows, minVertGap=2.50, minHorizGap=37.70, minWordmarkClear=37.70
+static/img/figures/efmp-302/unit-05/fig-U5-1.ur.dark.svg: 41 text elements, 0 overlaps, 0 viewBox overflows, minVertGap=1.87, minHorizGap=17.72, minWordmarkClear=17.72
+static/img/figures/efmp-302/unit-05/fig-U5-2.ur.dark.svg: 27 text elements, 0 overlaps, 0 viewBox overflows, minVertGap=2.55, minHorizGap=80.29, minWordmarkClear=28.27
+static/img/figures/efmp-302/unit-05/fig-U5-3.ur.dark.svg: 24 text elements, 0 overlaps, 0 viewBox overflows, minVertGap=2.38, minHorizGap=57.76, minWordmarkClear=57.39
+static/img/figures/efmp-302/unit-05/fig-U5-4.ur.dark.svg: 36 text elements, 0 overlaps, 0 viewBox overflows, minVertGap=3.75, minHorizGap=37.70, minWordmarkClear=37.70
+static/img/figures/efmp-302/unit-05/fig-U5-5.ur.dark.svg: 46 text elements, 0 overlaps, 0 viewBox overflows, minVertGap=2.50, minHorizGap=31.28, minWordmarkClear=37.70
+static/img/figures/efmp-302/unit-05/fig-U5-6.ur.dark.svg: 22 text elements, 0 overlaps, 0 viewBox overflows, minVertGap=4.07, minHorizGap=17.72, minWordmarkClear=17.72
+static/img/figures/efmp-302/unit-05/fig-U5-7.ur.dark.svg: 23 text elements, 0 overlaps, 0 viewBox overflows, minVertGap=0.85, minHorizGap=151.54, minWordmarkClear=17.72
+static/img/figures/efmp-302/unit-05/fig-U5-8.ur.dark.svg: 19 text elements, 0 overlaps, 0 viewBox overflows, minVertGap=2.50, minHorizGap=37.70, minWordmarkClear=37.70
+RESULT: CLEAN - no text-on-text superposition, wordmark collision or viewBox overflow in any of the 16 Urdu variants (fallback-metric geometry)

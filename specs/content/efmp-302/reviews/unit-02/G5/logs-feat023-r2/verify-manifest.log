@@ -1,0 +1,13 @@
+r2 manifest paths: 127
+digests verified against current bytes: 127
+failures: 0
+
+Diff r1 (cycle-1) -> r2 (current) input manifests:
+added paths: 0
+removed paths: 0
+changed digests: 1
+  ~ i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-02/unit-assessment.mdx
+      r1 9a71b46498b0e79e803b6caa8b5f7f4c2cb26e3155a0c46d36c831e208f3b648
+      r2 2e9bc627fea7c8b9a8b2c52d885f46dedad9aced470a1b2561c4c434462eb1ab
+
+RESULT: all r2 manifest digests match current bytes

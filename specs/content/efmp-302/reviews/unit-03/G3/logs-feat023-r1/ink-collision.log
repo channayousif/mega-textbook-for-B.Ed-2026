@@ -1,0 +1,56 @@
+
+===== fig-U3-7.svg: "held, and not established as a" vs "Saying "take your time" while" =====
+A="A practitioner's heuristic: widelyheld, " B="Saying "take your time" whileglancing at" overlapBox=424,280 232x36
+  [render mode="held, and not established as a" visible texts=1]
+  [render mode="Saying "take your time" while" visible texts=1]
+ink pixels: A=3666 B=3525 BOTH=1784 (5.35% of overlap box)
+INK COLLISION CONFIRMED: 1784 pixels carry ink from both lines
+
+===== fig-U3-7.svg: "definitions," vs "instructions," =====
+A="Precise content:definitions," B="instructions,reasoning" overlapBox=250,99 99x19
+  [render mode="definitions," visible texts=1]
+  [render mode="instructions," visible texts=1]
+ink pixels: A=681 B=702 BOTH=586 (7.79% of overlap box)
+INK COLLISION CONFIRMED: 586 pixels carry ink from both lines
+
+===== fig-U3-2.svg: "Effectiveness is a bundle of" vs "Each leaf names how it is" =====
+A="Effectiveness is a bundle ofprocesses, n" B="Each leaf names how it isevidenced, beca" overlapBox=351,308 199x36
+  [render mode="Effectiveness is a bundle of" visible texts=1]
+  [render mode="Each leaf names how it is" visible texts=1]
+ink pixels: A=2987 B=2798 BOTH=1471 (5.15% of overlap box)
+INK COLLISION CONFIRMED: 1471 pixels carry ink from both lines
+
+===== fig-U3-9.svg: "still expected to instruct - while" vs "That accumulation, not any single" =====
+A="A teacher today is still expectedto tran" B="That accumulation, not any singlerole, i" overlapBox=40,338 239x56
+  [render mode="still expected to instruct - w" visible texts=1]
+  [render mode="That accumulation, not any sin" visible texts=1]
+ink pixels: A=3668 B=4807 BOTH=1842 (3.45% of overlap box)
+INK COLLISION CONFIRMED: 1842 pixels carry ink from both lines
+
+===== fig-U3-6.svg: "nameable." vs "Escalation is an outcome, not a" =====
+A="Every path ends somewherenameable." B="Escalation is an outcome, not afailure," overlapBox=30,296 200x18
+  [render mode="nameable." visible texts=1]
+  [render mode="Escalation is an outcome, not " visible texts=1]
+ink pixels: A=680 B=2005 BOTH=215 (1.49% of overlap box)
+INK COLLISION CONFIRMED: 215 pixels carry ink from both lines
+
+===== fig-U3-5.svg: "the relationship is FOR, not with" vs "A relationship that achieves none" =====
+A="Each link is labelled with whatthe relat" B="A relationship that achieves noneof thes" overlapBox=328,388 225x36
+  [render mode="the relationship is FOR, not w" visible texts=1]
+  [render mode="A relationship that achieves n" visible texts=1]
+ink pixels: A=2653 B=2941 BOTH=1353 (4.19% of overlap box)
+INK COLLISION CONFIRMED: 1353 pixels carry ink from both lines
+
+===== fig-U3-4.svg: "seriously" vs "Changed in: a day" =====
+A="Signals: I take thisseriously" B="Changed in: a day" overlapBox=555,64 128x10
+  [render mode="seriously" visible texts=1]
+  [render mode="Changed in: a day" visible texts=1]
+ink pixels: A=436 B=930 BOTH=137 (2.69% of overlap box)
+INK COLLISION CONFIRMED: 137 pixels carry ink from both lines
+
+===== fig-U3-3.svg: "Adaptability" vs "The dashed column is the part" =====
+A="Adaptability" B="The dashed column is the partusually lef" overlapBox=30,404 83x11
+  [render mode="Adaptability" visible texts=1]
+  [render mode="The dashed column is the part" visible texts=1]
+ink pixels: A=1127 B=541 BOTH=304 (8.32% of overlap box)
+INK COLLISION CONFIRMED: 304 pixels carry ink from both lines

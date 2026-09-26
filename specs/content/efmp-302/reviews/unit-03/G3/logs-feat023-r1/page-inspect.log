@@ -1,0 +1,96 @@
+{
+  "topic04_narrow": {
+    "wrapper": {
+      "clientWidth": 328,
+      "scrollWidth": 328,
+      "overflowX": "visible"
+    },
+    "figures": [
+      {
+        "id": "fig-U3-7",
+        "clientWidth": 328,
+        "scrollWidth": 860,
+        "overflowX": "auto",
+        "scrollLeftBefore": 0,
+        "scrollLeftAfter": 532,
+        "reachedRightEdge": true,
+        "tabindex": "0",
+        "role": "region",
+        "ariaLabel": "Scrollable figure, scroll sideways to see the whole diagram"
+      },
+      {
+        "id": "fig-U3-8",
+        "clientWidth": 328,
+        "scrollWidth": 860,
+        "overflowX": "auto",
+        "scrollLeftBefore": 0,
+        "scrollLeftAfter": 532,
+        "reachedRightEdge": true,
+        "tabindex": "0",
+        "role": "region",
+        "ariaLabel": "Scrollable figure, scroll sideways to see the whole diagram"
+      }
+    ],
+    "svgServedAs": null
+  },
+  "assessment_narrow": [
+    {
+      "clientWidth": 328,
+      "scrollWidth": 527,
+      "overflowX": "auto",
+      "scrollLeftAfter": 199,
+      "reachedRightEdge": true,
+      "tabindex": "0",
+      "role": "region",
+      "ariaLabel": "Scrollable table, scroll sideways to see all columns"
+    },
+    {
+      "clientWidth": 328,
+      "scrollWidth": 473,
+      "overflowX": "auto",
+      "scrollLeftAfter": 145,
+      "reachedRightEdge": true,
+      "tabindex": "0",
+      "role": "region",
+      "ariaLabel": "Scrollable table, scroll sideways to see all columns"
+    },
+    {
+      "clientWidth": 328,
+      "scrollWidth": 471,
+      "overflowX": "auto",
+      "scrollLeftAfter": 143,
+      "reachedRightEdge": true,
+      "tabindex": "0",
+      "role": "region",
+      "ariaLabel": "Scrollable table, scroll sideways to see all columns"
+    },
+    {
+      "clientWidth": 328,
+      "scrollWidth": 488,
+      "overflowX": "auto",
+      "scrollLeftAfter": 160,
+      "reachedRightEdge": true,
+      "tabindex": "0",
+      "role": "region",
+      "ariaLabel": "Scrollable table, scroll sideways to see all columns"
+    },
+    {
+      "clientWidth": 328,
+      "scrollWidth": 499,
+      "overflowX": "auto",
+      "scrollLeftAfter": 171,
+      "reachedRightEdge": true,
+      "tabindex": "0",
+      "role": "region",
+      "ariaLabel": "Scrollable table, scroll sideways to see all columns"
+    }
+  ],
+  "servedFigU37": {
+    "status": 200,
+    "bytes": 5008
+  },
+  "assessment_print": {
+    "hasAnswersHeading": true,
+    "clippedElements": 231
+  }
+}
