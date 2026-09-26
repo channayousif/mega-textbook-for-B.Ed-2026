@@ -1,0 +1,8 @@
+answer-key-comparison - agent-g5-efmp301-u11-run001
+EN key (docs/semester-1/efmp-301/unit-11/unit-assessment.mdx): 1-b, 2-c, 3-b, 4-b, 5-c, 6-d, 7-b, 8-c, 9-c, 10-b
+UR key (i18n/ur/.../unit-assessment.mdx):                       1-b, 2-c, 3-b, 4-b, 5-c, 6-d, 7-b, 8-c, 9-c, 10-b
+Reviewer independent answers (from Urdu items, pre-key):        1-b, 2-c, 3-b, 4-b, 5-c, 6-d, 7-b, 8-c, 9-c, 10-b
+Independent answers == EN key: true | Independent answers == UR key: true
+EN key == UR key (exact): true
+Note: the parent dispatch quoted "1-b, 2-c, 3-b, 4-d, 5-c, 6-a, 7-b, 8-d, 9-c, 10-c" as the EN key;
+that sequence does NOT match the bound English file and is wrong for items 4, 6, 8, 10 as bound.
