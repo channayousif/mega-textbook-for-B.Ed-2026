@@ -117,8 +117,10 @@ main() {
     log "ABORT: $REPO/.env.local missing (build-time Supabase URL/anon key)"
     exit 1
   fi
-  npm ci --no-audit --no-fund >>"$LOG" 2>&1
-  npm run build >>"$LOG" 2>&1
+  # Shared with dev sessions (CLAUDE.md "Host resource limits"): queue behind any
+  # other heavy job so two builds never stack and exhaust the host's RAM.
+  flock /tmp/mega-book-heavy.lock npm ci --no-audit --no-fund >>"$LOG" 2>&1
+  flock /tmp/mega-book-heavy.lock npm run build >>"$LOG" 2>&1
 
   # Sanity: never rsync a broken/partial build over the live site.
   for f in build/index.html build/ur/index.html build/app/classes/index.html; do
