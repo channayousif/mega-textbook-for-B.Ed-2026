@@ -42,6 +42,8 @@ Gate authority is `scripts/lib/gates.mjs` (`CONTENT_GATES` vs `FULL_GATES`). `ch
 
 CI runs against a live shared Supabase instance with concurrency serialization (`shared-supabase` group, `queue: max`). Running `test:rls` locally while CI is in flight races on shared fixture rows.
 
+Host limits: this host also serves production (2 CPU / 12 GB). Concurrent heavy jobs froze it on 2026-09-20 and 2026-09-24. Run build, start/serve, `npm ci`, vitest, Playwright/Chromium and `sharp` jobs one at a time, prefixed with `flock /tmp/mega-book-heavy.lock`; never from parallel sub-agents; kill any dev server when done. See CLAUDE.md "Host resource limits".
+
 ## Content work
 
 Read `specs/content/style-guide.md` and the course's content spec and tracker before editing units. Authoring, translation, review and revision skills live in `.claude/skills/` (`author-unit`, `translate-unit`, `generate-figures`, `review-unit`, `revise-topic`, `evaluate-intake`).
