@@ -16,6 +16,53 @@ import { createClient } from '@supabase/supabase-js';
 import { PROFILE_DEPENDENTS } from '../profile-dependents.mjs';
 import { randomUUID } from 'node:crypto';
 
+function _isTransportError(err) {
+  const msg = (err?.message || '').toLowerCase();
+  const status = err?.status || err?.statusCode;
+  if (msg.includes('fetch failed') || msg.includes('econnreset') || 
+      msg.includes('etimedout') || msg.includes('eai_again') || 
+      msg.includes('socket hang up')) {
+    return true;
+  }
+  if (status >= 500 && status <= 599) return true;
+  return false;
+}
+
+const _backoff = (attempt) => 
+  new Promise((resolve) => setTimeout(resolve, (attempt === 1 ? 250 : 750) + Math.floor(Math.random() * 50)));
+
+async function withTransportRetry(fn) {
+  let attempt = 1;
+  const maxAttempts = 3;
+  while (true) {
+    try {
+      const res = await fn();
+      if (res && res.error) {
+        if (_isTransportError(res.error) && attempt < maxAttempts) {
+          await _backoff(attempt);
+          attempt++;
+          continue;
+        }
+        if (attempt > 1 && _isTransportError(res.error)) {
+          res.error.message = `${res.error.message} (after ${attempt} attempts)`;
+        }
+      }
+      return res;
+    } catch (error) {
+      if (_isTransportError(error) && attempt < maxAttempts) {
+        await _backoff(attempt);
+        attempt++;
+        continue;
+      }
+      if (attempt > 1 && _isTransportError(error)) {
+        error.message = `${error.message} (after ${attempt} attempts)`;
+      }
+      throw error;
+    }
+  }
+}
+
+
 const URL = process.env.DOCUSAURUS_SUPABASE_URL;
 const ANON = process.env.DOCUSAURUS_SUPABASE_ANON_KEY;
 const SERVICE = process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -58,12 +105,12 @@ export async function createUser({ role = 'student', confirmed = true, fullName 
   const svc = serviceClient();
   const email = testEmail(role);
 
-  const { data, error } = await svc.auth.admin.createUser({
+  const { data, error } = await withTransportRetry(() => svc.auth.admin.createUser({
     email,
     password: PASSWORD,
     email_confirm: confirmed,
     user_metadata: { role, ...(fullName ? { full_name: fullName } : {}) },
-  });
+  }));
   if (error) throw new Error(`createUser(${role}): ${error.message}`);
 
   return { authUserId: data.user.id, email, password: PASSWORD };
@@ -72,7 +119,7 @@ export async function createUser({ role = 'student', confirmed = true, fullName 
 /** Sign in and return an RLS-bound client. Returns { client: null, error } on failure. */
 export async function signIn(email, password = PASSWORD) {
   const client = anonClient();
-  const { data, error } = await client.auth.signInWithPassword({ email, password });
+  const { data, error } = await withTransportRetry(() => client.auth.signInWithPassword({ email, password }));
   if (error) return { client: null, error };
   return { client, error: null, accessToken: data.session.access_token };
 }
@@ -88,8 +135,8 @@ export async function createSignedInUser(opts = {}) {
 /** Read a profile by auth id using the service role (fixture inspection). */
 export async function getProfileByAuthId(authUserId) {
   const svc = serviceClient();
-  const { data, error } = await svc
-    .from('profiles').select('*').eq('auth_user_id', authUserId).maybeSingle();
+  const { data, error } = await withTransportRetry(() => svc
+    .from('profiles').select('*').eq('auth_user_id', authUserId).maybeSingle());
   if (error) throw new Error(`getProfileByAuthId: ${error.message}`);
   return data;
 }
@@ -101,7 +148,7 @@ export async function getProfileByAuthId(authUserId) {
  */
 export async function adminSet(authUserId, patch) {
   const svc = serviceClient();
-  const { error } = await svc.from('profiles').update(patch).eq('auth_user_id', authUserId);
+  const { error } = await withTransportRetry(() => svc.from('profiles').update(patch).eq('auth_user_id', authUserId));
   if (error) throw new Error(`adminSet: ${error.message}`);
 }
 
@@ -128,8 +175,8 @@ export async function cleanupUsers(authUserIds = []) {
   const ids = authUserIds.filter(Boolean);
   if (ids.length === 0) return;
 
-  const { data: profiles } = await svc.from('profiles').select('id').in('auth_user_id', ids);
-  await Promise.allSettled(ids.map((id) => svc.auth.admin.deleteUser(id)));
+  const { data: profiles } = await withTransportRetry(() => svc.from('profiles').select('id').in('auth_user_id', ids));
+  await Promise.allSettled(ids.map((id) => withTransportRetry(() => svc.auth.admin.deleteUser(id))));
 
   const profileIds = (profiles ?? []).map((p) => p.id);
   if (profileIds.length === 0) return;
@@ -144,10 +191,10 @@ export async function cleanupUsers(authUserIds = []) {
   // so adding a table that references profiles(id) without updating it fails
   // `npm test` rather than silently stranding rows.
   for (const [table, column] of PROFILE_DEPENDENTS) {
-    await svc.from(table).delete().in(column, profileIds);
+    await withTransportRetry(() => svc.from(table).delete().in(column, profileIds));
   }
 
-  const { error } = await svc.from('profiles').delete().in('id', profileIds);
+  const { error } = await withTransportRetry(() => svc.from('profiles').delete().in('id', profileIds));
   if (error) {
     // Loud, but not throwing: teardown is the wrong place to mask a real test
     // failure. A silent swallow here is exactly what hid 29,249 rows.
