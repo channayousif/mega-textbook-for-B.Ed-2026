@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Layout from '@theme/Layout';
 import AuthGuard from '@site/src/components/AuthGuard';
 import AppDashboardShell from '@site/src/components/AppDashboardShell';
-import { supabase } from '@site/src/lib/supabase';
+import { getSupabase } from '@site/src/lib/supabase';
 
 export default function AdminOrdersPage(): React.ReactElement {
   const [orders, setOrders] = useState<any[]>([]);
@@ -11,7 +11,7 @@ export default function AdminOrdersPage(): React.ReactElement {
 
   async function loadOrders() {
     setLoading(true);
-    const { data, error: err } = await supabase
+    const { data, error: err } = await getSupabase()
       .from('orders')
       .select('*, profiles!buyer_id(email, name)')
       .order('created_at', { ascending: false });
@@ -36,7 +36,7 @@ export default function AdminOrdersPage(): React.ReactElement {
       updates.outgoing_transfer_reference = outgoing_transfer_reference;
     }
 
-    const { error: err } = await supabase
+    const { error: err } = await getSupabase()
       .from('orders')
       .update(updates)
       .eq('id', orderId);

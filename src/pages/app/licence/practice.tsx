@@ -3,7 +3,7 @@ import Layout from '@theme/Layout';
 import AuthGuard from '@site/src/components/AuthGuard';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useQueryParam } from '@site/src/contexts/ClassContext';
-import { supabase } from '@site/src/lib/supabase';
+import { getSupabase } from '@site/src/lib/supabase';
 // Need MDX component or just render markdown
 import Markdown from 'react-markdown';
 
@@ -23,7 +23,7 @@ export default function LicencePracticePage(): React.ReactElement {
     async function load() {
       setLoading(true);
       const id = `pedagogy/${unit}`;
-      const { data, error: err } = await supabase
+      const { data, error: err } = await getSupabase()
         .from('paid_pages')
         .select('content')
         .eq('id', id)

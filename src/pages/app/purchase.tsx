@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Layout from '@theme/Layout';
 import AuthGuard from '@site/src/components/AuthGuard';
 import { useAuth } from '@site/src/contexts/AuthContext';
-import { supabase } from '@site/src/lib/supabase';
+import { getSupabase } from '@site/src/lib/supabase';
 
 // Placeholders for accounts
 const ACCOUNTS = {
@@ -28,6 +28,7 @@ export default function PurchasePage(): React.ReactElement {
     setError(null);
     setSubmitting(true);
 
+    const supabase = getSupabase();
     // Generate a short reference
     const ref = 'ORD-' + Math.random().toString(36).substring(2, 8).toUpperCase();
     
