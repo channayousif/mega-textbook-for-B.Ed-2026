@@ -1,0 +1,206 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.textbook.category.Semester 1": {
+    "message": "Semester 1",
+    "description": "The label for category 'Semester 1' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.GENG-300 · Functional English": {
+    "message": "GENG-300 · Functional English",
+    "description": "The label for category 'GENG-300 · Functional English' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 1 · Foundations of Functional English": {
+    "message": "Unit 1 · Foundations of Functional English",
+    "description": "The label for category 'Unit 1 · Foundations of Functional English' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 2 · Comprehension and Analysis": {
+    "message": "Unit 2 · Comprehension and Analysis",
+    "description": "The label for category 'Unit 2 · Comprehension and Analysis' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 3 · Effective Communication": {
+    "message": "Unit 3 · Effective Communication",
+    "description": "The label for category 'Unit 3 · Effective Communication' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 4 · Professional Writing and Intercultural Communication": {
+    "message": "Unit 4 · Professional Writing and Intercultural Communication",
+    "description": "The label for category 'Unit 4 · Professional Writing and Intercultural Communication' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.GNAS-301 · Environmental Science": {
+    "message": "GNAS-301 · Environmental Science",
+    "description": "The label for category 'GNAS-301 · Environmental Science' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 1 - Environmental Science and Ecosystems": {
+    "message": "Unit 1 - Environmental Science and Ecosystems",
+    "description": "The label for category 'Unit 1 - Environmental Science and Ecosystems' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Water and Waste Management": {
+    "message": "Water and Waste Management",
+    "description": "The label for category 'Water and Waste Management' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Air, Noise and Environmental Hazards": {
+    "message": "Air, Noise and Environmental Hazards",
+    "description": "The label for category 'Air, Noise and Environmental Hazards' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Occupational Safety and Health": {
+    "message": "Occupational Safety and Health",
+    "description": "The label for category 'Occupational Safety and Health' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Toxicology Essentials and Environmental Governance": {
+    "message": "Toxicology Essentials and Environmental Governance",
+    "description": "The label for category 'Toxicology Essentials and Environmental Governance' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Toxic Substances, Climate Change and Smog": {
+    "message": "Toxic Substances, Climate Change and Smog",
+    "description": "The label for category 'Toxic Substances, Climate Change and Smog' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.GICT-300 · Application of ICT": {
+    "message": "GICT-300 · Application of ICT",
+    "description": "The label for category 'GICT-300 · Application of ICT' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 1 · Introduction to Computer Literacy and ICT": {
+    "message": "Unit 1 · Introduction to Computer Literacy and ICT",
+    "description": "The label for category 'Unit 1 · Introduction to Computer Literacy and ICT' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 2 · Computer Hardware and Software Fundamentals": {
+    "message": "Unit 2 · Computer Hardware and Software Fundamentals",
+    "description": "The label for category 'Unit 2 · Computer Hardware and Software Fundamentals' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 3 · Operating System Concepts": {
+    "message": "Unit 3 · Operating System Concepts",
+    "description": "The label for category 'Unit 3 · Operating System Concepts' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 4 · Cyber security and Data Protection": {
+    "message": "Unit 4 · Cyber security and Data Protection",
+    "description": "The label for category 'Unit 4 · Cyber security and Data Protection' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 5 · Ethical and Responsible Use of ICT": {
+    "message": "Unit 5 · Ethical and Responsible Use of ICT",
+    "description": "The label for category 'Unit 5 · Ethical and Responsible Use of ICT' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 6 · Internet Applications and Emerging Technologies": {
+    "message": "Unit 6 · Internet Applications and Emerging Technologies",
+    "description": "The label for category 'Unit 6 · Internet Applications and Emerging Technologies' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.GQUR-300 · Quantitative Reasoning-I": {
+    "message": "GQUR-300 · Quantitative Reasoning-I",
+    "description": "The label for category 'GQUR-300 · Quantitative Reasoning-I' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 1 · Foundations of Quantitative Reasoning": {
+    "message": "Unit 1 · Foundations of Quantitative Reasoning",
+    "description": "The label for category 'Unit 1 · Foundations of Quantitative Reasoning' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 2 · Numbers and Operations": {
+    "message": "Unit 2 · Numbers and Operations",
+    "description": "The label for category 'Unit 2 · Numbers and Operations' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 3 · Algebraic Reasoning": {
+    "message": "Unit 3 · Algebraic Reasoning",
+    "description": "The label for category 'Unit 3 · Algebraic Reasoning' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 4 · Measurement and Geometry": {
+    "message": "Unit 4 · Measurement and Geometry",
+    "description": "The label for category 'Unit 4 · Measurement and Geometry' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 5 · Data Analysis and Statistics": {
+    "message": "Unit 5 · Data Analysis and Statistics",
+    "description": "The label for category 'Unit 5 · Data Analysis and Statistics' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 6 · Quantitative Reasoning in Everyday Life": {
+    "message": "Unit 6 · Quantitative Reasoning in Everyday Life",
+    "description": "The label for category 'Unit 6 · Quantitative Reasoning in Everyday Life' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.EFMP-301 · Educational Psychology": {
+    "message": "EFMP-301 · Educational Psychology",
+    "description": "The label for category 'EFMP-301 · Educational Psychology' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 1 · Introduction to Educational Psychology": {
+    "message": "Unit 1 · Introduction to Educational Psychology",
+    "description": "The label for category 'Unit 1 · Introduction to Educational Psychology' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 2 · Human Growth and Development": {
+    "message": "Unit 2 · Human Growth and Development",
+    "description": "The label for category 'Unit 2 · Human Growth and Development' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 3 · Learning Theories": {
+    "message": "Unit 3 · Learning Theories",
+    "description": "The label for category 'Unit 3 · Learning Theories' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 4 · Cognitive Processes in Learning": {
+    "message": "Unit 4 · Cognitive Processes in Learning",
+    "description": "The label for category 'Unit 4 · Cognitive Processes in Learning' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 5 · Intelligence and Creativity": {
+    "message": "Unit 5 · Intelligence and Creativity",
+    "description": "The label for category 'Unit 5 · Intelligence and Creativity' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 6 · Motivation and Emotion": {
+    "message": "Unit 6 · Motivation and Emotion",
+    "description": "The label for category 'Unit 6 · Motivation and Emotion' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 7 · Individual Differences and Special Needs": {
+    "message": "Unit 7 · Individual Differences and Special Needs",
+    "description": "The label for category 'Unit 7 · Individual Differences and Special Needs' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 8 · Classroom Management": {
+    "message": "Unit 8 · Classroom Management",
+    "description": "The label for category 'Unit 8 · Classroom Management' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 9 · Assessment and Evaluation": {
+    "message": "Unit 9 · Assessment and Evaluation",
+    "description": "The label for category 'Unit 9 · Assessment and Evaluation' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 10 · Teaching-Learning Process": {
+    "message": "Unit 10 · Teaching-Learning Process",
+    "description": "The label for category 'Unit 10 · Teaching-Learning Process' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 11 · Mental Health and Well-being in Schools": {
+    "message": "Unit 11 · Mental Health and Well-being in Schools",
+    "description": "The label for category 'Unit 11 · Mental Health and Well-being in Schools' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 12 · Guidance and Counseling": {
+    "message": "Unit 12 · Guidance and Counseling",
+    "description": "The label for category 'Unit 12 · Guidance and Counseling' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.EFMP-302 · Teaching Profession": {
+    "message": "EFMP-302 · Teaching Profession",
+    "description": "The label for category 'EFMP-302 · Teaching Profession' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 1 · Understanding Teaching": {
+    "message": "Unit 1 · Understanding Teaching",
+    "description": "The label for category 'Unit 1 · Understanding Teaching' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 2 · Models and Frameworks of Professional Ethics and Behaviors": {
+    "message": "Unit 2 · Models and Frameworks of Professional Ethics and Behaviors",
+    "description": "The label for category 'Unit 2 · Models and Frameworks of Professional Ethics and Behaviors' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 3 · Becoming an Effective Teacher": {
+    "message": "Unit 3 · Becoming an Effective Teacher",
+    "description": "The label for category 'Unit 3 · Becoming an Effective Teacher' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 4 · The Professional Standards and Competencies for Teachers": {
+    "message": "Unit 4 · The Professional Standards and Competencies for Teachers",
+    "description": "The label for category 'Unit 4 · The Professional Standards and Competencies for Teachers' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 5 · Issues and Challenges in Teaching Profession": {
+    "message": "Unit 5 · Issues and Challenges in Teaching Profession",
+    "description": "The label for category 'Unit 5 · Issues and Challenges in Teaching Profession' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Unit 6 · Sustaining Professionalism through Continuous Learning": {
+    "message": "Unit 6 · Sustaining Professionalism through Continuous Learning",
+    "description": "The label for category 'Unit 6 · Sustaining Professionalism through Continuous Learning' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Semester 2": {
+    "message": "Semester 2",
+    "description": "The label for category 'Semester 2' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.efmp-304": {
+    "message": "efmp-304",
+    "description": "The label for category 'efmp-304' in sidebar 'textbook'"
+  },
+  "sidebar.textbook.category.Understanding Critical Thinking": {
+    "message": "Understanding Critical Thinking",
+    "description": "The label for category 'Understanding Critical Thinking' in sidebar 'textbook'"
+  }
+}

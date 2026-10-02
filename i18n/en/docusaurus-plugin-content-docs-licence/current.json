@@ -1,0 +1,34 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.licenceSidebar.category.Pedagogy (Part II)": {
+    "message": "Pedagogy (Part II)",
+    "description": "The label for category 'Pedagogy (Part II)' in sidebar 'licenceSidebar'"
+  },
+  "sidebar.licenceSidebar.category.Pedagogy (Part II).link.generated-index.title": {
+    "message": "Pedagogical Content Knowledge",
+    "description": "The generated-index page title for category 'Pedagogy (Part II)' in sidebar 'licenceSidebar'"
+  },
+  "sidebar.licenceSidebar.category.A. Methods of Teaching and Foundations of Education": {
+    "message": "A. Methods of Teaching and Foundations of Education",
+    "description": "The label for category 'A. Methods of Teaching and Foundations of Education' in sidebar 'licenceSidebar'"
+  },
+  "sidebar.licenceSidebar.category.B. Child Development and Education Psychology": {
+    "message": "B. Child Development and Education Psychology",
+    "description": "The label for category 'B. Child Development and Education Psychology' in sidebar 'licenceSidebar'"
+  },
+  "sidebar.licenceSidebar.category.C. Classroom Management": {
+    "message": "C. Classroom Management",
+    "description": "The label for category 'C. Classroom Management' in sidebar 'licenceSidebar'"
+  },
+  "sidebar.licenceSidebar.category.D. Classroom Assessment and Test Development and Evaluation": {
+    "message": "D. Classroom Assessment and Test Development and Evaluation",
+    "description": "The label for category 'D. Classroom Assessment and Test Development and Evaluation' in sidebar 'licenceSidebar'"
+  },
+  "sidebar.licenceSidebar.category.E. School Community and Teacher": {
+    "message": "E. School Community and Teacher",
+    "description": "The label for category 'E. School Community and Teacher' in sidebar 'licenceSidebar'"
+  }
+}
