@@ -1,4 +1,40 @@
 {
+  "home.title": {
+    "message": "[URDU_TODO] B.Ed (4-Year) Mega Textbook & Licence Practice Pass"
+  },
+  "home.subtitle": {
+    "message": "[URDU_TODO] The complete bilingual (English & Urdu) resource for trainee and practising teachers in Pakistan doing the B.Ed (4-Year) programme at the University of Sindh."
+  },
+  "home.licenceTitle": {
+    "message": "[URDU_TODO] Licence Practice Pass"
+  },
+  "home.licenceDesc": {
+    "message": "[URDU_TODO] Prepare for the teaching licence exam with our flagship practice track. Includes 60 CRQs, 5 case-study ERQs with rubrics, and timed server-marked mocks."
+  },
+  "home.licencePrice": {
+    "message": "[URDU_TODO] Rs 1,500 One-time payment"
+  },
+  "home.licenceAction": {
+    "message": "[URDU_TODO] Get the Practice Pass"
+  },
+  "home.textbookTitle": {
+    "message": "[URDU_TODO] B.Ed Digital Textbook"
+  },
+  "home.textbookDesc": {
+    "message": "[URDU_TODO] Read the full B.Ed textbook online for free. Explore semesters, courses, and units, available in both English and Urdu."
+  },
+  "home.textbookAction": {
+    "message": "[URDU_TODO] Browse the Textbook"
+  },
+  "home.appTitle": {
+    "message": "[URDU_TODO] Learning Platform"
+  },
+  "home.appDesc": {
+    "message": "[URDU_TODO] Institutions can use our signed-in platform for classes, assignments, submissions, grading, and teacher certification dashboards."
+  },
+  "home.appAction": {
+    "message": "[URDU_TODO] Sign up for /app/"
+  },
   "pricing.title": {
     "message": "Licence Practice Pass"
   },
@@ -33,291 +69,275 @@
     "message": "Buy Now"
   },
   "theme.ErrorPageContent.title": {
-    "message": "This page crashed.",
+    "message": "یہ صفحہ کریش ہو گیا ہے۔",
     "description": "The title of the fallback page when the page crashed"
   },
   "theme.BackToTopButton.buttonAriaLabel": {
-    "message": "Scroll back to top",
+    "message": "واپس اوپر جائیں",
     "description": "The ARIA label for the back to top button"
   },
   "theme.blog.archive.title": {
-    "message": "Archive",
+    "message": "آرکائیو",
     "description": "The page & hero title of the blog archive page"
   },
   "theme.blog.archive.description": {
-    "message": "Archive",
+    "message": "آرکائیو",
     "description": "The page & hero description of the blog archive page"
   },
   "theme.blog.paginator.navAriaLabel": {
-    "message": "Blog list page navigation",
+    "message": "بلاگ لسٹ پیج نیویگیشن",
     "description": "The ARIA label for the blog pagination"
   },
   "theme.blog.paginator.newerEntries": {
-    "message": "Newer entries",
+    "message": "نئی تحریریں",
     "description": "The label used to navigate to the newer blog posts page (previous page)"
   },
   "theme.blog.paginator.olderEntries": {
-    "message": "Older entries",
+    "message": "پرانی تحریریں",
     "description": "The label used to navigate to the older blog posts page (next page)"
   },
   "theme.blog.post.paginator.navAriaLabel": {
-    "message": "Blog post page navigation",
+    "message": "بلاگ پوسٹ پیج نیویگیشن",
     "description": "The ARIA label for the blog posts pagination"
   },
   "theme.blog.post.paginator.newerPost": {
-    "message": "Newer post",
+    "message": "نئی پوسٹ",
     "description": "The blog post button label to navigate to the newer/previous post"
   },
   "theme.blog.post.paginator.olderPost": {
-    "message": "Older post",
+    "message": "پرانی پوسٹ",
     "description": "The blog post button label to navigate to the older/next post"
   },
   "theme.tags.tagsPageLink": {
-    "message": "View all tags",
+    "message": "تمام ٹیگز دیکھیں",
     "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel.mode.system": {
-    "message": "system mode",
+    "message": "سسٹم موڈ",
     "description": "The name for the system color mode"
   },
   "theme.colorToggle.ariaLabel.mode.light": {
-    "message": "light mode",
+    "message": "لائٹ موڈ",
     "description": "The name for the light color mode"
   },
   "theme.colorToggle.ariaLabel.mode.dark": {
-    "message": "dark mode",
+    "message": "ڈارک موڈ",
     "description": "The name for the dark color mode"
   },
   "theme.colorToggle.ariaLabel": {
-    "message": "Switch between dark and light mode (currently {mode})",
+    "message": "ڈارک اور لائٹ موڈ کے درمیان تبدیل کریں (فی الحال {mode})",
     "description": "The ARIA label for the color mode toggle"
   },
   "theme.docs.breadcrumbs.navAriaLabel": {
-    "message": "Breadcrumbs",
+    "message": "بریڈ کرمبز",
     "description": "The ARIA label for the breadcrumbs"
   },
   "theme.docs.paginator.navAriaLabel": {
-    "message": "Docs pages",
+    "message": "ڈاکس کے صفحات",
     "description": "The ARIA label for the docs pagination"
   },
   "theme.docs.paginator.previous": {
-    "message": "Previous",
+    "message": "پچھلا",
     "description": "The label used to navigate to the previous doc"
   },
   "theme.docs.paginator.next": {
-    "message": "Next",
+    "message": "اگلا",
     "description": "The label used to navigate to the next doc"
   },
   "theme.docs.tagDocListPageTitle.nDocsTagged": {
-    "message": "One doc tagged|{count} docs tagged",
+    "message": "ایک ڈاک ٹیگ کردہ|{count} ڈاکس ٹیگ کردہ",
     "description": "Pluralized label for \"{count} docs tagged\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.docs.tagDocListPageTitle": {
-    "message": "{nDocsTagged} with \"{tagName}\"",
+    "message": "\"{tagName}\" کے ساتھ {nDocsTagged}",
     "description": "The title of the page for a docs tag"
   },
   "theme.docs.versionBadge.label": {
-    "message": "Version: {versionLabel}"
+    "message": "ورژن: {versionLabel}"
   },
   "theme.docs.versions.unreleasedVersionLabel": {
-    "message": "This is unreleased documentation for {siteTitle} {versionLabel} version.",
+    "message": "یہ {siteTitle} {versionLabel} ورژن کی غیر جاری شدہ دستاویزات ہیں۔",
     "description": "The label used to tell the user that he's browsing an unreleased doc version"
   },
   "theme.docs.versions.unmaintainedVersionLabel": {
-    "message": "This is documentation for {siteTitle} {versionLabel}, which is no longer actively maintained.",
+    "message": "یہ {siteTitle} {versionLabel} کی دستاویزات ہیں، جن کی اب فعال طور پر دیکھ بھال نہیں کی جاتی۔",
     "description": "The label used to tell the user that he's browsing an unmaintained doc version"
   },
   "theme.docs.versions.latestVersionSuggestionLabel": {
-    "message": "For up-to-date documentation, see the {latestVersionLink} ({versionLabel}).",
+    "message": "تازہ ترین دستاویزات کے لیے، {latestVersionLink} ({versionLabel}) دیکھیں۔",
     "description": "The label used to tell the user to check the latest version"
   },
   "theme.docs.versions.latestVersionLinkLabel": {
-    "message": "latest version",
+    "message": "تازہ ترین ورژن",
     "description": "The label used for the latest version suggestion link label"
   },
   "theme.common.editThisPage": {
-    "message": "Edit this page",
+    "message": "اس صفحے کی تدوین کریں",
     "description": "The link label to edit the current page"
   },
   "theme.common.headingLinkTitle": {
-    "message": "Direct link to {heading}",
+    "message": "{heading} کا براہ راست لنک",
     "description": "Title for link to heading"
   },
   "theme.lastUpdated.atDate": {
-    "message": " on {date}",
+    "message": " بتاریخ {date}",
     "description": "The words used to describe on which date a page has been last updated"
   },
   "theme.lastUpdated.byUser": {
-    "message": " by {user}",
+    "message": " از {user}",
     "description": "The words used to describe by who the page has been last updated"
   },
   "theme.lastUpdated.lastUpdatedAtBy": {
-    "message": "Last updated{atDate}{byUser}",
+    "message": "آخری بار اپ ڈیٹ کیا گیا {atDate}{byUser}",
     "description": "The sentence used to display when a page has been last updated, and by who"
   },
   "theme.navbar.mobileVersionsDropdown.label": {
-    "message": "Versions",
+    "message": "ورژنز",
     "description": "The label for the navbar versions dropdown on mobile view"
   },
   "theme.NotFound.title": {
-    "message": "Page Not Found",
+    "message": "صفحہ نہیں ملا",
     "description": "The title of the 404 page"
   },
   "theme.tags.tagsListLabel": {
-    "message": "Tags:",
+    "message": "ٹیگز:",
     "description": "The label alongside a tag list"
   },
   "theme.admonition.caution": {
-    "message": "caution",
+    "message": "احتیاط",
     "description": "The default label used for the Caution admonition (:::caution)"
   },
   "theme.admonition.danger": {
-    "message": "danger",
+    "message": "خطرہ",
     "description": "The default label used for the Danger admonition (:::danger)"
   },
   "theme.admonition.info": {
-    "message": "info",
+    "message": "معلومات",
     "description": "The default label used for the Info admonition (:::info)"
   },
   "theme.admonition.note": {
-    "message": "note",
+    "message": "نوٹ",
     "description": "The default label used for the Note admonition (:::note)"
   },
   "theme.admonition.tip": {
-    "message": "tip",
+    "message": "ٹپ",
     "description": "The default label used for the Tip admonition (:::tip)"
   },
   "theme.admonition.warning": {
-    "message": "warning",
+    "message": "انتباہ",
     "description": "The default label used for the Warning admonition (:::warning)"
   },
   "theme.AnnouncementBar.closeButtonAriaLabel": {
-    "message": "Close",
+    "message": "بند کریں",
     "description": "The ARIA label for close button of announcement bar"
   },
   "theme.blog.sidebar.navAriaLabel": {
-    "message": "Blog recent posts navigation",
+    "message": "بلاگ کی حالیہ پوسٹس کی نیویگیشن",
     "description": "The ARIA label for recent posts in the blog sidebar"
   },
   "theme.DocSidebarItem.expandCategoryAriaLabel": {
-    "message": "Expand sidebar category '{label}'",
+    "message": "سائڈبار کیٹیگری '{label}' کو پھیلائیں",
     "description": "The ARIA label to expand the sidebar category"
   },
   "theme.DocSidebarItem.collapseCategoryAriaLabel": {
-    "message": "Collapse sidebar category '{label}'",
+    "message": "سائڈبار کیٹیگری '{label}' کو سمیٹیں",
     "description": "The ARIA label to collapse the sidebar category"
   },
   "theme.IconExternalLink.ariaLabel": {
-    "message": "(opens in new tab)",
+    "message": "(نئی ٹیب میں کھلتا ہے)",
     "description": "The ARIA label for the external link icon"
   },
   "theme.NavBar.navAriaLabel": {
-    "message": "Main",
+    "message": "مین",
     "description": "The ARIA label for the main navigation"
   },
   "theme.navbar.mobileLanguageDropdown.label": {
-    "message": "Languages",
+    "message": "زبانیں",
     "description": "The label for the mobile language switcher dropdown"
   },
   "theme.NotFound.p1": {
-    "message": "We could not find what you were looking for.",
+    "message": "ہم وہ تلاش نہیں کر سکے جو آپ ڈھونڈ رہے تھے۔",
     "description": "The first paragraph of the 404 page"
   },
   "theme.NotFound.p2": {
-    "message": "Please contact the owner of the site that linked you to the original URL and let them know their link is broken.",
+    "message": "براہ کرم اس سائٹ کے مالک سے رابطہ کریں جس نے آپ کو اصل URL کا لنک دیا تھا اور انہیں بتائیں کہ ان کا لنک کام نہیں کر رہا۔",
     "description": "The 2nd paragraph of the 404 page"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
-    "message": "On this page",
+    "message": "اس صفحے پر",
     "description": "The label used by the button on the collapsible TOC component"
   },
   "theme.blog.post.readMore": {
-    "message": "Read more",
+    "message": "مزید پڑھیں",
     "description": "The label used in blog post item excerpts to link to full blog posts"
   },
   "theme.blog.post.readMoreLabel": {
-    "message": "Read more about {title}",
+    "message": "{title} کے بارے میں مزید پڑھیں",
     "description": "The ARIA label for the link to full blog posts from excerpts"
   },
   "theme.blog.post.readingTime.plurals": {
-    "message": "One min read|{readingTime} min read",
+    "message": "ایک منٹ کا مطالعہ|{readingTime} منٹ کا مطالعہ",
     "description": "Pluralized label for \"{readingTime} min read\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.CodeBlock.copy": {
-    "message": "Copy",
+    "message": "کاپی کریں",
     "description": "The copy button label on code blocks"
   },
   "theme.CodeBlock.copied": {
-    "message": "Copied",
+    "message": "کاپی کر لیا گیا",
     "description": "The copied button label on code blocks"
   },
   "theme.CodeBlock.copyButtonAriaLabel": {
-    "message": "Copy code to clipboard",
+    "message": "کوڈ کلپ بورڈ پر کاپی کریں",
     "description": "The ARIA label for copy code blocks button"
   },
   "theme.CodeBlock.wordWrapToggle": {
-    "message": "Toggle word wrap",
+    "message": "ورڈ ریپ تبدیل کریں",
     "description": "The title attribute for toggle word wrapping button of code block lines"
   },
   "theme.docs.breadcrumbs.home": {
-    "message": "Home page",
+    "message": "ہوم پیج",
     "description": "The ARIA label for the home page in the breadcrumbs"
   },
   "theme.docs.sidebar.collapseButtonTitle": {
-    "message": "Collapse sidebar",
+    "message": "سائڈبار سمیٹیں",
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.collapseButtonAriaLabel": {
-    "message": "Collapse sidebar",
+    "message": "سائڈبار سمیٹیں",
     "description": "The title attribute for collapse button of doc sidebar"
   },
   "theme.docs.sidebar.navAriaLabel": {
-    "message": "Docs sidebar",
+    "message": "ڈاکس سائڈبار",
     "description": "The ARIA label for the sidebar navigation"
   },
   "theme.docs.sidebar.closeSidebarButtonAriaLabel": {
-    "message": "Close navigation bar",
+    "message": "نیویگیشن بار بند کریں",
     "description": "The ARIA label for close button of mobile sidebar"
   },
   "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
-    "message": "← Back to main menu",
+    "message": "← مین مینو پر واپس جائیں",
     "description": "The label of the back button to return to main menu, inside the mobile navbar sidebar secondary menu (notably used to display the docs sidebar)"
   },
   "theme.docs.sidebar.toggleSidebarButtonAriaLabel": {
-    "message": "Toggle navigation bar",
+    "message": "نیویگیشن بار تبدیل کریں",
     "description": "The ARIA label for hamburger menu button of mobile navigation"
   },
   "theme.navbar.mobileDropdown.collapseButton.expandAriaLabel": {
-    "message": "Expand the dropdown",
+    "message": "ڈراپ ڈاؤن پھیلائیں",
     "description": "The ARIA label of the button to expand the mobile dropdown navbar item"
   },
   "theme.navbar.mobileDropdown.collapseButton.collapseAriaLabel": {
-    "message": "Collapse the dropdown",
+    "message": "ڈراپ ڈاؤن سمیٹیں",
     "description": "The ARIA label of the button to collapse the mobile dropdown navbar item"
   },
   "theme.docs.sidebar.expandButtonTitle": {
-    "message": "Expand sidebar",
+    "message": "سائڈبار پھیلائیں",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
   },
   "theme.docs.sidebar.expandButtonAriaLabel": {
-    "message": "Expand sidebar",
+    "message": "سائڈبار پھیلائیں",
     "description": "The ARIA label and title attribute for expand button of doc sidebar"
-  },
-  "theme.SearchBar.noResultsText": {
-    "message": "No results"
-  },
-  "theme.SearchBar.seeAllOutsideContext": {
-    "message": "See all results outside \"{context}\""
-  },
-  "theme.SearchBar.searchInContext": {
-    "message": "See all results within \"{context}\""
-  },
-  "theme.SearchBar.seeAll": {
-    "message": "See all results"
-  },
-  "theme.SearchBar.label": {
-    "message": "Search",
-    "description": "The ARIA label and placeholder for search button"
   },
   "theme.SearchPage.existingResultsTitle": {
     "message": "Search results for \"{query}\"",
@@ -338,12 +358,28 @@
     "message": "No documents were found",
     "description": "The paragraph for empty search result"
   },
+  "theme.SearchBar.noResultsText": {
+    "message": "No results"
+  },
+  "theme.SearchBar.seeAllOutsideContext": {
+    "message": "See all results outside \"{context}\""
+  },
+  "theme.SearchBar.searchInContext": {
+    "message": "See all results within \"{context}\""
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "See all results"
+  },
+  "theme.SearchBar.label": {
+    "message": "Search",
+    "description": "The ARIA label and placeholder for search button"
+  },
   "theme.blog.post.plurals": {
-    "message": "One post|{count} posts",
+    "message": "ایک پوسٹ|{count} پوسٹس",
     "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.blog.tagTitle": {
-    "message": "{nPosts} tagged with \"{tagName}\"",
+    "message": "\"{tagName}\" کے ساتھ ٹیگ کردہ {nPosts}",
     "description": "The title of the page for a blog tag"
   },
   "theme.blog.author.pageTitle": {
@@ -351,83 +387,47 @@
     "description": "The title of the page for a blog author"
   },
   "theme.blog.authorsList.pageTitle": {
-    "message": "Authors",
+    "message": "مصنفین",
     "description": "The title of the authors page"
   },
   "theme.blog.authorsList.viewAll": {
-    "message": "View all authors",
+    "message": "تمام مصنفین دیکھیں",
     "description": "The label of the link targeting the blog authors page"
   },
   "theme.blog.author.noPosts": {
-    "message": "This author has not written any posts yet.",
+    "message": "اس مصنف نے ابھی تک کوئی پوسٹ نہیں لکھی۔",
     "description": "The text for authors with 0 blog post"
   },
   "theme.contentVisibility.unlistedBanner.title": {
-    "message": "Unlisted page",
+    "message": "غیر فہرست شدہ صفحہ",
     "description": "The unlisted content banner title"
   },
   "theme.contentVisibility.unlistedBanner.message": {
-    "message": "This page is unlisted. Search engines will not index it, and only users having a direct link can access it.",
+    "message": "یہ صفحہ غیر فہرست شدہ ہے۔ سرچ انجن اسے انڈیکس نہیں کریں گے، اور صرف وہ صارفین جن کے پاس براہ راست لنک ہے وہ اسے دیکھ سکتے ہیں۔",
     "description": "The unlisted content banner message"
   },
   "theme.contentVisibility.draftBanner.title": {
-    "message": "Draft page",
+    "message": "ڈرافٹ صفحہ",
     "description": "The draft content banner title"
   },
   "theme.contentVisibility.draftBanner.message": {
-    "message": "This page is a draft. It will only be visible in dev and be excluded from the production build.",
+    "message": "یہ صفحہ ایک ڈرافٹ ہے۔ یہ صرف ڈیولپمنٹ میں نظر آئے گا اور پروڈکشن بلڈ سے خارج کر دیا جائے گا۔",
     "description": "The draft content banner message"
   },
   "theme.docs.DocCard.categoryDescription.plurals": {
-    "message": "1 item|{count} items",
+    "message": "1 آئٹم|{count} آئٹمز",
     "description": "The default description for a category card in the generated index about how many items this category includes"
   },
   "theme.ErrorPageContent.tryAgain": {
-    "message": "Try again",
+    "message": "دوبارہ کوشش کریں",
     "description": "The label of the button to try again rendering when the React error boundary captures an error"
   },
   "theme.common.skipToMainContent": {
-    "message": "Skip to main content",
+    "message": "مین مواد پر جائیں",
     "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
   },
   "theme.tags.tagsPageTitle": {
-    "message": "Tags",
+    "message": "ٹیگز",
     "description": "The title of the tag list page"
-  },
-  "home.title": {
-    "message": "B.Ed (4-Year) Mega Textbook & Licence Practice Pass"
-  },
-  "home.subtitle": {
-    "message": "The complete bilingual (English & Urdu) resource for trainee and practising teachers in Pakistan doing the B.Ed (4-Year) programme at the University of Sindh."
-  },
-  "home.licenceTitle": {
-    "message": "Licence Practice Pass"
-  },
-  "home.licenceDesc": {
-    "message": "Prepare for the teaching licence exam with our flagship practice track. Includes 60 CRQs, 5 case-study ERQs with rubrics, and timed server-marked mocks."
-  },
-  "home.licencePrice": {
-    "message": "Rs 1,500 One-time payment"
-  },
-  "home.licenceAction": {
-    "message": "Get the Practice Pass"
-  },
-  "home.textbookTitle": {
-    "message": "B.Ed Digital Textbook"
-  },
-  "home.textbookDesc": {
-    "message": "Read the full B.Ed textbook online for free. Explore semesters, courses, and units, available in both English and Urdu."
-  },
-  "home.textbookAction": {
-    "message": "Browse the Textbook"
-  },
-  "home.appTitle": {
-    "message": "Learning Platform"
-  },
-  "home.appDesc": {
-    "message": "Institutions can use our signed-in platform for classes, assignments, submissions, grading, and teacher certification dashboards."
-  },
-  "home.appAction": {
-    "message": "Sign up for /app/"
   }
 }
