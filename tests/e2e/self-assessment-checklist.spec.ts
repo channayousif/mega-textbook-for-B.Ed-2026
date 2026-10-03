@@ -38,8 +38,8 @@ const configured = Boolean(SUPABASE_URL && ANON_KEY && SERVICE_KEY);
 test.skip(!configured, 'requires DOCUSAURUS_SUPABASE_URL, DOCUSAURUS_SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY');
 
 const PASSWORD = 'Test-Passw0rd!';
-const TOPIC_PATH = '/semester-1/efmp-302/unit-01/topic-01';
-const TOPIC_PATH_UR = '/ur/semester-1/efmp-302/unit-01/topic-01';
+const TOPIC_PATH = '/semester-1/efmp-302/unit-01/topic-01/';
+const TOPIC_PATH_UR = '/ur/semester-1/efmp-302/unit-01/topic-01/';
 
 async function signIn(page: import('@playwright/test').Page, email: string): Promise<void> {
   await page.goto('/app/login');

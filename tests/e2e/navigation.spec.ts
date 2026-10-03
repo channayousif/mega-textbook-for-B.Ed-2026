@@ -6,7 +6,7 @@ import { test, expect } from '@playwright/test';
  */
 // The site root `/` is the TEX-5 landing page (no docs sidebar); the textbook's
 // entry point - and the target of the landing page's "Browse" button - is `/intro`.
-const TEXTBOOK_HOME = '/intro';
+const TEXTBOOK_HOME = '/intro/';
 
 test('sidebar is organized Semester → Course → Unit', async ({ page }) => {
   await page.goto(TEXTBOOK_HOME);
