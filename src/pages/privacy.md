@@ -1,3 +1,8 @@
+---
+title: Privacy & Cookies
+description: Privacy policy and cookie information for the Textbook.com.pk platform.
+---
+
 # Privacy & Cookies
 
 We use Google Analytics 4 (GA4) to understand how the site is used, helping us improve the textbook and track our growth.
