@@ -151,6 +151,10 @@ const config: Config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        gtag: {
+          trackingID: 'G-2DCL2X01DL',
+          anonymizeIP: true,
+        },
         // The sitemap shipped on pure defaults: 88 URLs at a uniform
         // weekly/0.5, including 35 auth-gated /app/* pages and /search/, all
         // of which render empty behind a guard for a crawler. Excluding them
@@ -282,6 +286,17 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
+      links: [
+        {
+          title: 'Legal',
+          items: [
+            {
+              label: 'Privacy & Cookies',
+              to: '/privacy',
+            },
+          ],
+        },
+      ],
       copyright: 'B.Ed (4-Year) Mega Textbook - University of Sindh, Faculty of Education.',
     },
   } satisfies Preset.ThemeConfig,
