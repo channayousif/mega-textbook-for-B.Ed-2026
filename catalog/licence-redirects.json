@@ -27,11 +27,11 @@
     },
     {
       "from": "/licence/eed-313/unit-01/unit-assessment",
-      "to": "/app/licence/practice/"
+      "to": "/licence/pedagogy/c-classroom-management/practice/"
     },
     {
       "from": "/licence/eed-313/unit-01/unit-teacher-notes",
-      "to": "/app/licence/practice/"
+      "to": "/licence/pedagogy/c-classroom-management/practice/"
     },
     {
       "from": "/licence/eed-313/unit-02",
@@ -51,11 +51,11 @@
     },
     {
       "from": "/licence/eed-313/unit-02/unit-assessment",
-      "to": "/app/licence/practice/"
+      "to": "/licence/pedagogy/c-classroom-management/practice/"
     },
     {
       "from": "/licence/eed-313/unit-02/unit-teacher-notes",
-      "to": "/app/licence/practice/"
+      "to": "/licence/pedagogy/c-classroom-management/practice/"
     },
     {
       "from": "/licence/eed-313/unit-03",
@@ -79,11 +79,11 @@
     },
     {
       "from": "/licence/eed-313/unit-03/unit-assessment",
-      "to": "/app/licence/practice/"
+      "to": "/licence/pedagogy/c-classroom-management/practice/"
     },
     {
       "from": "/licence/eed-313/unit-03/unit-teacher-notes",
-      "to": "/app/licence/practice/"
+      "to": "/licence/pedagogy/c-classroom-management/practice/"
     },
     {
       "from": "/licence/eed-313/unit-04",
@@ -107,11 +107,11 @@
     },
     {
       "from": "/licence/eed-313/unit-04/unit-assessment",
-      "to": "/app/licence/practice/"
+      "to": "/licence/pedagogy/c-classroom-management/practice/"
     },
     {
       "from": "/licence/eed-313/unit-04/unit-teacher-notes",
-      "to": "/app/licence/practice/"
+      "to": "/licence/pedagogy/c-classroom-management/practice/"
     },
     {
       "from": "/licence/eed-313/unit-05",
@@ -135,11 +135,11 @@
     },
     {
       "from": "/licence/eed-313/unit-05/unit-assessment",
-      "to": "/app/licence/practice/"
+      "to": "/licence/pedagogy/c-classroom-management/practice/"
     },
     {
       "from": "/licence/eed-313/unit-05/unit-teacher-notes",
-      "to": "/app/licence/practice/"
+      "to": "/licence/pedagogy/c-classroom-management/practice/"
     }
   ]
 }

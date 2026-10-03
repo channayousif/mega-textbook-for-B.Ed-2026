@@ -242,14 +242,13 @@ const config: Config = {
     ],
   ],
 
-    themeConfig: {
+  themeConfig: {
     // Without this there is no og:image at all, while twitter:card is
     // summary_large_image - so every WhatsApp/social share rendered a blank
     // card. WhatsApp matters a great deal for this audience.
     image: 'img/social-card.png',
     metadata: [
       { name: 'keywords', content: 'B.Ed, B.Ed 4 year, teacher education, University of Sindh, Pakistan, Sindh, bilingual textbook, Urdu, EFMP, GECE' },
-      { name: 'description', content: 'Bilingual digital textbook and Licence Practice Pass for the B.Ed (4-Year) programme in Sindh.' },
       { name: 'twitter:card', content: 'summary_large_image' },
       { property: 'og:site_name', content: 'B.Ed Mega Textbook' },
       { property: 'og:type', content: 'website' },
@@ -265,8 +264,6 @@ const config: Config = {
         // track is deliberately absent from the semester sidebar, because
         // EED-313 is not part of the approved 2026 scheme (research R3).
         { to: '/licence/', label: 'Licence track', position: 'left' },
-        { to: '/pricing', label: 'Pricing', position: 'right' },
-        { to: '/app/signup', label: 'Sign up', position: 'right' },
         // Spec 010 follow-up, 2026-09-07 - registers
         // src/components/MobileTopBarWidgets.tsx; renders nothing at
         // desktop widths, a compact locale-switch + sign-in-status pair at
