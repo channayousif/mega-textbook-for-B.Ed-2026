@@ -1,39 +1,39 @@
 {
   "home.title": {
-    "message": "[URDU_TODO] B.Ed (4-Year) Mega Textbook & Licence Practice Pass"
+    "message": "بی ایڈ (چار سالہ) میگا ٹیکسٹ بک اور لائسنس پریکٹس پاس"
   },
   "home.subtitle": {
-    "message": "[URDU_TODO] The complete bilingual (English & Urdu) resource for trainee and practising teachers in Pakistan doing the B.Ed (4-Year) programme at the University of Sindh."
+    "message": "پاکستان کے زیرِ تربیت اور پہلے سے پڑھا رہے اساتذہ کے لیے جامعہ سندھ کے بی ایڈ (چار سالہ) پروگرام کا پورا مواد، انگریزی اور اردو دونوں میں۔"
   },
   "home.licenceTitle": {
-    "message": "[URDU_TODO] Licence Practice Pass"
+    "message": "لائسنس پریکٹس پاس"
   },
   "home.licenceDesc": {
-    "message": "[URDU_TODO] Prepare for the teaching licence exam with our flagship practice track. Includes 60 CRQs, 5 case-study ERQs with rubrics, and timed server-marked mocks."
+    "message": "ہمارے نمایاں مشقی ٹریک کے ساتھ ٹیچنگ لائسنس کے امتحان کی تیاری کریں۔ اس میں 60 تعمیری جوابی سوال (CRQ)، معیارِ جانچ کے ساتھ 5 کیس اسٹڈی والے طویل جوابی سوال (ERQ)، اور وقت کی پابندی والے سرور سے جانچے جانے والے مشقی پرچے شامل ہیں۔"
   },
   "home.licencePrice": {
-    "message": "[URDU_TODO] Rs 1,500 One-time payment"
+    "message": "Rs 1,500 ایک بار کی ادائیگی"
   },
   "home.licenceAction": {
-    "message": "[URDU_TODO] Get the Practice Pass"
+    "message": "پریکٹس پاس حاصل کریں"
   },
   "home.textbookTitle": {
-    "message": "[URDU_TODO] B.Ed Digital Textbook"
+    "message": "بی ایڈ ڈیجیٹل ٹیکسٹ بک"
   },
   "home.textbookDesc": {
-    "message": "[URDU_TODO] Read the full B.Ed textbook online for free. Explore semesters, courses, and units, available in both English and Urdu."
+    "message": "پوری بی ایڈ نصابی کتاب آن لائن مفت پڑھیں۔ سمسٹر، کورس اور یونٹ کھول کر دیکھیں، جو انگریزی اور اردو دونوں میں دستیاب ہیں۔"
   },
   "home.textbookAction": {
-    "message": "[URDU_TODO] Browse the Textbook"
+    "message": "نصابی کتاب دیکھیں"
   },
   "home.appTitle": {
-    "message": "[URDU_TODO] Learning Platform"
+    "message": "سیکھنے کا پلیٹ فارم"
   },
   "home.appDesc": {
-    "message": "[URDU_TODO] Institutions can use our signed-in platform for classes, assignments, submissions, grading, and teacher certification dashboards."
+    "message": "ادارے ہمارے سائن ان والے پلیٹ فارم پر جماعتیں، اسائنمنٹ، جمع کرائے گئے کام، نمبر لگانے کا عمل اور اساتذہ کی سند بندی کے ڈیش بورڈ چلا سکتے ہیں۔"
   },
   "home.appAction": {
-    "message": "[URDU_TODO] Sign up for /app/"
+    "message": "/app/ پر اکاؤنٹ بنائیں"
   },
   "pricing.title": {
     "message": "Licence Practice Pass"
