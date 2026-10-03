@@ -91,7 +91,10 @@ test('self-assessment checklist persists across reloads/devices, syncs on sign-i
     await contextB.close();
 
     // Sign out on device A; the checklist stays interactive, backed by localStorage.
-    await pageA.getByRole('button', { name: /sign out/i }).click();
+    await Promise.all([
+      pageA.waitForNavigation(),
+      pageA.getByRole('button', { name: /sign out/i }).click()
+    ]);
     await expect(pageA.getByTestId('self-assessment-sync-hint')).toBeVisible();
     const cb3 = pageA.getByTestId('self-assessment-checkbox-3');
     await cb3.check();
@@ -110,7 +113,10 @@ test('self-assessment checklist persists across reloads/devices, syncs on sign-i
     // A second sign-out/sign-in cycle does not re-run the merge or clobber
     // the account's own (since-changed) record — untick locally while signed
     // out, then confirm the account's ticked row wins on the next sign-in.
-    await pageA.getByRole('button', { name: /sign out/i }).click();
+    await Promise.all([
+      pageA.waitForNavigation(),
+      pageA.getByRole('button', { name: /sign out/i }).click()
+    ]);
     await expect(pageA.getByTestId('self-assessment-sync-hint')).toBeVisible();
     await pageA.getByTestId('self-assessment-checkbox-3').uncheck();
     await pageA.waitForLoadState('networkidle');
@@ -133,7 +139,10 @@ test('self-assessment checklist persists across reloads/devices, syncs on sign-i
 
     // ur/RTL: the page itself renders right-to-left, and this topic's now-reviewed
     // Urdu checklist hydrates into the same interactive control the `en` side uses.
-    await pageA.getByRole('button', { name: /sign out/i }).click();
+    await Promise.all([
+      pageA.waitForNavigation(),
+      pageA.getByRole('button', { name: /sign out/i }).click()
+    ]);
     // Wait for sign-out to visibly complete before navigating - signOut() itself is
     // async (a network call to revoke the session), and navigating away immediately
     // risks the new page load racing ahead of it, still seeing a stale session.
