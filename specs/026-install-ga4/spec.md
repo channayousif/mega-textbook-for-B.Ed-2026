@@ -44,7 +44,7 @@ As a site visitor, I want to be informed about how cookies are used for analytic
 ### Functional Requirements
 
 - **FR-001**: System MUST include the `@docusaurus/plugin-google-gtag` via the `preset-classic` option.
-- **FR-002**: The Measurement ID MUST be read from config (`docusaurus.config.ts` or env var) and not hardcoded in components. [NEEDS CLARIFICATION: What is the GA4 Measurement ID (`G-XXXXXXXXXX`)?]
+- **FR-002**: The Measurement ID MUST be read from config (`docusaurus.config.ts` or env var) and not hardcoded in components. The GA4 Measurement ID is `G-2DCL2X01DL`.
 - **FR-003**: System MUST fire GA4 on both locales (`en` and `ur`).
 - **FR-004**: System MUST NOT break the `ur` build.
 - **FR-005**: System MUST include a bilingual privacy/cookies page linked from the footer, stating what is collected and why, keeping it factual and not over-promising.
