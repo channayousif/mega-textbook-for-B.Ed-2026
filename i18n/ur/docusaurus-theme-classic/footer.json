@@ -1,4 +1,12 @@
 {
+  "link.title.Legal": {
+    "message": "قانونی",
+    "description": "The title of the footer links column with title=Legal in the footer"
+  },
+  "link.item.label.Privacy & Cookies": {
+    "message": "پرائیویسی اور کوکیز",
+    "description": "The label of footer link with label=Privacy & Cookies linking to /privacy"
+  },
   "copyright": {
     "message": "B.Ed (4-Year) Mega Textbook - University of Sindh, Faculty of Education.",
     "description": "The footer copyright"
