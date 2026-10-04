@@ -60,6 +60,239 @@ html[dir='rtl'] code {
   unicode-bidi: isolate;
 }
 
+/* --- Reading typography (UX refresh, 2026-10-04) ----------------------------
+   Long-form readability for the doc column only: larger text, generous
+   leading, a ~72-character measure for running text, and section headings
+   that visibly separate the topic cycle. Tables and figures keep the full
+   column width. The RTL block above wins on line-height by specificity. */
+:root {
+  --reading-measure: 72ch;
+  --reading-font-size: 1.0625rem;
+  --ifm-paragraph-margin-bottom: 1.1rem;
+}
+
+@media (min-width: 997px) {
+  :root {
+    --reading-font-size: 1.125rem;
+  }
+}
+
+.theme-doc-markdown {
+  font-size: var(--reading-font-size);
+  line-height: 1.75;
+}
+
+.theme-doc-markdown > p,
+.theme-doc-markdown > ul,
+.theme-doc-markdown > ol,
+.theme-doc-markdown > blockquote,
+.theme-doc-markdown > h2,
+.theme-doc-markdown > h3,
+.theme-doc-markdown > h4,
+.topic-section > p,
+.topic-section > ul,
+.topic-section > ol,
+.topic-section > h3 {
+  max-width: var(--reading-measure);
+}
+
+.theme-doc-markdown li + li {
+  margin-top: 0.35rem;
+}
+
+.theme-doc-markdown h1 {
+  font-size: 2.25rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.theme-doc-markdown > h2,
+.topic-section > h2 {
+  margin-top: 2.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-primary-darker);
+  font-size: 1.6rem;
+  line-height: 1.3;
+}
+
+html[data-theme='dark'] .theme-doc-markdown > h2,
+html[data-theme='dark'] .topic-section > h2 {
+  color: var(--ifm-color-primary-lighter);
+}
+
+.theme-doc-markdown > h3,
+.topic-section > h3 {
+  margin-top: 2rem;
+  font-size: 1.25rem;
+}
+
+.theme-doc-markdown blockquote {
+  border-inline-start: 4px solid var(--ifm-color-primary-lightest);
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 0 6px 6px 0;
+  padding: 0.75rem 1rem;
+  color: inherit;
+}
+
+/* --- Topic cycle sections, callouts, Bloom chips (src/rehype/topic-enhance.mjs) */
+:root {
+  --tone-story-bg: #fdf6e7;
+  --tone-story-edge: #d99a2b;
+  --tone-task-bg: #eaf5f1;
+  --tone-task-edge: #2c9f84;
+  --tone-warn-bg: #fdefee;
+  --tone-warn-edge: #c4473f;
+  --tone-example-bg: #edf2fb;
+  --tone-example-edge: #3d6bc4;
+  --tone-rubric-bg: #f3effb;
+  --tone-rubric-edge: #7655c2;
+  --tone-quiet-bg: var(--ifm-color-emphasis-100);
+}
+
+html[data-theme='dark'] {
+  --tone-story-bg: rgba(217, 154, 43, 0.1);
+  --tone-task-bg: rgba(56, 198, 164, 0.09);
+  --tone-warn-bg: rgba(196, 71, 63, 0.14);
+  --tone-example-bg: rgba(61, 107, 196, 0.16);
+  --tone-rubric-bg: rgba(118, 85, 194, 0.16);
+}
+
+.topic-section {
+  margin-top: 2.75rem;
+}
+
+.topic-section--scenario,
+.topic-section--activity,
+.topic-section--summary,
+.topic-section--practicum,
+.topic-section--check {
+  padding: 1.25rem 1.5rem 0.5rem;
+  border-radius: 12px;
+  border-inline-start: 5px solid transparent;
+}
+
+.topic-section--scenario {
+  background: var(--tone-story-bg);
+  border-inline-start-color: var(--tone-story-edge);
+}
+
+.topic-section--activity {
+  background: var(--tone-task-bg);
+  border-inline-start-color: var(--tone-task-edge);
+}
+
+.topic-section--summary {
+  background: var(--tone-quiet-bg);
+  border-inline-start-color: var(--ifm-color-primary);
+}
+
+.topic-section--practicum {
+  border: 2px dashed var(--tone-task-edge);
+}
+
+.topic-section--check {
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+/* Inside a card the heading is the card's title, not a page divider. */
+.topic-section--scenario > h2,
+.topic-section--activity > h2,
+.topic-section--summary > h2,
+.topic-section--practicum > h2,
+.topic-section--check > h2 {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.topic-section--reading {
+  font-size: 0.95em;
+}
+
+.activity-brief {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--tone-task-edge);
+}
+
+.callout {
+  padding: 0.9rem 1.1rem;
+  border-radius: 10px;
+  border-inline-start: 4px solid transparent;
+  margin-block: 1.4rem;
+}
+
+.callout--misconception {
+  background: var(--tone-warn-bg);
+  border-inline-start-color: var(--tone-warn-edge);
+}
+
+.callout--example {
+  background: var(--tone-example-bg);
+  border-inline-start-color: var(--tone-example-edge);
+}
+
+.callout--rubric {
+  background: var(--tone-rubric-bg);
+  border-inline-start-color: var(--tone-rubric-edge);
+  overflow-x: auto;
+}
+
+.callout--rubric > table {
+  margin-bottom: 0.4rem;
+  background: var(--ifm-background-surface-color);
+}
+
+.callout__title {
+  margin-bottom: 0.6rem;
+}
+
+.check-list > li {
+  padding: 0.6rem 0.9rem;
+  margin-bottom: 0.6rem;
+  border-radius: 8px;
+  background: var(--tone-quiet-bg);
+}
+
+.bloom-chip {
+  display: inline-block;
+  margin-inline-start: 0.35rem;
+  padding: 0 0.55rem;
+  border-radius: 999px;
+  font-size: 0.78em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.7;
+  vertical-align: 0.08em;
+  color: #fff;
+  background: #5f6b7a;
+}
+
+.bloom-chip--remember { background: #4b6584; }
+.bloom-chip--understand { background: #1f6f5c; }
+.bloom-chip--apply { background: #8a5a00; }
+.bloom-chip--analyze { background: #7655c2; }
+.bloom-chip--evaluate { background: #b03a48; }
+.bloom-chip--create { background: #2f6db5; }
+
+@media print {
+  .topic-section,
+  .callout,
+  .check-list > li {
+    background: none !important;
+    border-color: #999 !important;
+  }
+
+  .bloom-chip {
+    color: #000;
+    background: none !important;
+    border: 1px solid #000;
+  }
+}
+
 /* --- Glossary term (FR-016) ------------------------------------------------ */
 .glossary-term {
   text-decoration: underline dotted;
