@@ -111,3 +111,4 @@ does not state, and a figure teaching the wrong answer to its own MCQ 8). Both w
 `38d8e7f`. Its remaining 14 advisories carry to the improvement loop.
 
 Re-reviewing would be cycle 8, which `D-2026-0005` reserves to an explicit owner decision.
+| Unit 5 | G3 en-review | 🟡 | agent:66f69806-3ec6-4df3-af92-5b0235e295ce | provisional:specs/content/efmp-302/reviews/unit-05/G3/AGY_CONVERSATION_ID.json |

@@ -1,0 +1,40 @@
+### text-separation margins - EFMP-302 unit-05, all 8 figures x 2 EN theme variants
+### minGapV = smallest vertical gap among horizontally-overlapping pairs (negative = overlap)
+### minGapH = smallest horizontal gap among vertically-overlapping pairs (negative = overlap)
+### started: 2026-09-24T16:58:58.008Z
+-- fig-U5-1.dark.svg: texts=41 minGapV=4.45px ("Visible from outside" / "the school?") minGapH=50.72px ("Rough hours" / "Visible from outside") overlappingPairs=0 wordmarkMinGap=180.45px
+-- fig-U5-1.svg: texts=41 minGapV=4.45px ("Visible from outside" / "the school?") minGapH=50.72px ("Rough hours" / "Visible from outside") overlappingPairs=0 wordmarkMinGap=180.45px
+-- fig-U5-2.dark.svg: texts=27 minGapV=2.53px ("resources" / "sustainable") minGapH=34.30px ("autonomy, or a demand removed" / "supervisory support, shared load") overlappingPairs=0 wordmarkMinGap=398.65px
+-- fig-U5-2.svg: texts=27 minGapV=2.53px ("resources" / "sustainable") minGapH=34.30px ("autonomy, or a demand removed" / "supervisory support, shared load") overlappingPairs=0 wordmarkMinGap=398.65px
+-- fig-U5-3.dark.svg: texts=24 minGapV=3.39px ("wants: candidates who can pass" / "measure: one paper, on one day") minGapH=406.12px ("wants: a school that runs, and no complaints" / "wants: compliance and returns on time") overlappingPairs=0 wordmarkMinGap=103.39px
+-- fig-U5-3.svg: texts=24 minGapV=3.39px ("wants: candidates who can pass" / "measure: one paper, on one day") minGapH=406.12px ("wants: a school that runs, and no complaints" / "wants: compliance and returns on time") overlappingPairs=0 wordmarkMinGap=103.39px
+-- fig-U5-4.dark.svg: texts=36 minGapV=5.00px ("Pay, against the" / "national average") minGapH=54.66px ("national average" / "length and selectivity") overlappingPairs=0 wordmarkMinGap=91.04px
+-- fig-U5-4.svg: texts=36 minGapV=5.00px ("Pay, against the" / "national average") minGapH=54.66px ("national average" / "length and selectivity") overlappingPairs=0 wordmarkMinGap=91.04px
+-- fig-U5-5.dark.svg: texts=46 minGapV=2.78px ("Video lesson replacing" / "an explanation") minGapH=26.06px ("Video lesson replacing" / "A voice that is not") overlappingPairs=0 wordmarkMinGap=10.44px
+-- fig-U5-5.svg: texts=46 minGapV=2.78px ("Video lesson replacing" / "an explanation") minGapH=26.06px ("Video lesson replacing" / "A voice that is not") overlappingPairs=0 wordmarkMinGap=10.44px
+-- fig-U5-6.dark.svg: texts=22 minGapV=5.45px ("The overlap is not avoidable and does not need to be. W" / "at speed, in a message thread, is how boundaries are lo") minGapH=43.45px ("The overlap is not avoidable and does not need to be. W" / "textbook.com.pk") overlappingPairs=0 wordmarkMinGap=43.45px
+-- fig-U5-6.svg: texts=22 minGapV=5.45px ("The overlap is not avoidable and does not need to be. W" / "at speed, in a message thread, is how boundaries are lo") minGapH=43.45px ("The overlap is not avoidable and does not need to be. W" / "textbook.com.pk") overlappingPairs=0 wordmarkMinGap=43.45px
+-- fig-U5-7.dark.svg: texts=24 minGapV=3.18px ("a colleague's practice . a head's decision" / "a departmental habit") minGapH=171.51px ("Second region: what you can influence" / "for a class size to change before teaching well.") overlappingPairs=0 wordmarkMinGap=73.64px
+-- fig-U5-7.svg: texts=24 minGapV=3.18px ("a colleague's practice . a head's decision" / "a departmental habit") minGapH=171.51px ("Second region: what you can influence" / "for a class size to change before teaching well.") overlappingPairs=0 wordmarkMinGap=73.64px
+-- fig-U5-8.dark.svg: texts=19 minGapV=3.78px ("Then stop. Effort spent here is where frustration comes" / "and naming the ask is the only move available.") minGapH=93.76px ("5 Make the change" / "6 Check") overlappingPairs=0 wordmarkMinGap=170.44px
+-- fig-U5-8.svg: texts=19 minGapV=3.78px ("Then stop. Effort spent here is where frustration comes" / "and naming the ask is the only move available.") minGapH=93.76px ("5 Make the change" / "6 Check") overlappingPairs=0 wordmarkMinGap=170.44px
+
+### closest horizontally-overlapping pairs (minGapV < 6px), all variants:
+   fig-U5-1.dark.svg: 4.45px - "Visible from outside" / "the school?"
+   fig-U5-1.svg: 4.45px - "Visible from outside" / "the school?"
+   fig-U5-2.dark.svg: 2.53px - "resources" / "sustainable"
+   fig-U5-2.svg: 2.53px - "resources" / "sustainable"
+   fig-U5-3.dark.svg: 3.39px - "wants: candidates who can pass" / "measure: one paper, on one day"
+   fig-U5-3.svg: 3.39px - "wants: candidates who can pass" / "measure: one paper, on one day"
+   fig-U5-4.dark.svg: 5.00px - "Pay, against the" / "national average"
+   fig-U5-4.svg: 5.00px - "Pay, against the" / "national average"
+   fig-U5-5.dark.svg: 2.78px - "Video lesson replacing" / "an explanation"
+   fig-U5-5.svg: 2.78px - "Video lesson replacing" / "an explanation"
+   fig-U5-6.dark.svg: 5.45px - "The overlap is not avoidable and does not need to be. W" / "at speed, in a message thread, is how boundaries are lo"
+   fig-U5-6.svg: 5.45px - "The overlap is not avoidable and does not need to be. W" / "at speed, in a message thread, is how boundaries are lo"
+   fig-U5-7.dark.svg: 3.18px - "a colleague's practice . a head's decision" / "a departmental habit"
+   fig-U5-7.svg: 3.18px - "a colleague's practice . a head's decision" / "a departmental habit"
+   fig-U5-8.dark.svg: 3.78px - "Then stop. Effort spent here is where frustration comes" / "and naming the ask is the only move available."
+   fig-U5-8.svg: 3.78px - "Then stop. Effort spent here is where frustration comes" / "and naming the ask is the only move available."
+### finished: 2026-09-24T16:59:06.678Z
+### hard defects: 0
