@@ -60,7 +60,20 @@ English-first publication is permitted with the required untranslated banner; Ur
 
 ## Work records
 
-Record user requests via `.specify/templates/phr-template.prompt.md` (routing in `CLAUDE.md`). Suggest significant architectural decisions for an ADR; do not create an ADR without authorization.
+Record user requests via `.specify/templates/phr-template.prompt.md` (routing in `CLAUDE.md`).
+
+**Strict PHR rule (board, 2026-10-04).** PHRs are how the Paperclip CEO and agents learn what was
+done outside Paperclip. Codex, Antigravity and every other CLI agent follow it exactly as Claude does;
+having no shell or no slash command is not an exemption (write the file with your file tools):
+- Write one PHR for **every** user prompt that changes a file, makes or records a decision, or
+  touches Paperclip, the server or production (ops, deploys and status checks included).
+- Commit the PHR **in the same PR** as the work it records; a PR without its PHR is incomplete.
+- Board-direct sessions put `board-direct` in `labels`; Paperclip agent runs put their agent name.
+  `links.ticket` names the TEX issue, or `null`.
+- Fill the `## Handoff (for CEO and agents)` section: what shipped, decisions the team must respect,
+  what is pending and who owns it, and which Paperclip issues are affected.
+
+Suggest significant architectural decisions for an ADR; do not create an ADR without authorization.
 
 ## Visuals
 

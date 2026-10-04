@@ -60,6 +60,446 @@ html[dir='rtl'] code {
   unicode-bidi: isolate;
 }
 
+/* --- Reading typography (UX refresh, 2026-10-04) ----------------------------
+   Long-form readability for the doc column only: larger text, generous
+   leading, a ~72-character measure for running text, and section headings
+   that visibly separate the topic cycle. Tables and figures keep the full
+   column width. The RTL block above wins on line-height by specificity. */
+:root {
+  --reading-measure: 72ch;
+  --reading-font-size: 1.0625rem;
+  --ifm-paragraph-margin-bottom: 1.1rem;
+}
+
+@media (min-width: 997px) {
+  :root {
+    --reading-font-size: 1.125rem;
+  }
+}
+
+.theme-doc-markdown {
+  font-size: var(--reading-font-size);
+  line-height: 1.75;
+}
+
+.theme-doc-markdown > p,
+.theme-doc-markdown > ul,
+.theme-doc-markdown > ol,
+.theme-doc-markdown > blockquote,
+.theme-doc-markdown > h2,
+.theme-doc-markdown > h3,
+.theme-doc-markdown > h4,
+.topic-section > p,
+.topic-section > ul,
+.topic-section > ol,
+.topic-section > h3 {
+  max-width: var(--reading-measure);
+}
+
+.theme-doc-markdown li + li {
+  margin-top: 0.35rem;
+}
+
+.theme-doc-markdown h1 {
+  font-size: 2.25rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.theme-doc-markdown > h2,
+.topic-section > h2 {
+  margin-top: 2.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-primary-darker);
+  font-size: 1.6rem;
+  line-height: 1.3;
+}
+
+html[data-theme='dark'] .theme-doc-markdown > h2,
+html[data-theme='dark'] .topic-section > h2 {
+  color: var(--ifm-color-primary-lighter);
+}
+
+.theme-doc-markdown > h3,
+.topic-section > h3 {
+  margin-top: 2rem;
+  font-size: 1.25rem;
+}
+
+.theme-doc-markdown blockquote {
+  border-inline-start: 4px solid var(--ifm-color-primary-lightest);
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 0 6px 6px 0;
+  padding: 0.75rem 1rem;
+  color: inherit;
+}
+
+/* --- Topic cycle sections, callouts, Bloom chips (src/rehype/topic-enhance.mjs) */
+:root {
+  --tone-story-bg: #fdf6e7;
+  --tone-story-edge: #d99a2b;
+  --tone-task-bg: #eaf5f1;
+  --tone-task-edge: #2c9f84;
+  --tone-warn-bg: #fdefee;
+  --tone-warn-edge: #c4473f;
+  --tone-example-bg: #edf2fb;
+  --tone-example-edge: #3d6bc4;
+  --tone-rubric-bg: #f3effb;
+  --tone-rubric-edge: #7655c2;
+  --tone-quiet-bg: var(--ifm-color-emphasis-100);
+}
+
+html[data-theme='dark'] {
+  --tone-story-bg: rgba(217, 154, 43, 0.1);
+  --tone-task-bg: rgba(56, 198, 164, 0.09);
+  --tone-warn-bg: rgba(196, 71, 63, 0.14);
+  --tone-example-bg: rgba(61, 107, 196, 0.16);
+  --tone-rubric-bg: rgba(118, 85, 194, 0.16);
+}
+
+.topic-section {
+  margin-top: 2.75rem;
+}
+
+.topic-section--scenario,
+.topic-section--activity,
+.topic-section--summary,
+.topic-section--practicum,
+.topic-section--check {
+  padding: 1.25rem 1.5rem 0.5rem;
+  border-radius: 12px;
+  border-inline-start: 5px solid transparent;
+}
+
+.topic-section--scenario {
+  background: var(--tone-story-bg);
+  border-inline-start-color: var(--tone-story-edge);
+}
+
+.topic-section--activity {
+  background: var(--tone-task-bg);
+  border-inline-start-color: var(--tone-task-edge);
+}
+
+.topic-section--summary {
+  background: var(--tone-quiet-bg);
+  border-inline-start-color: var(--ifm-color-primary);
+}
+
+.topic-section--practicum {
+  border: 2px dashed var(--tone-task-edge);
+}
+
+.topic-section--check {
+  border: 1px solid var(--ifm-color-emphasis-300);
+}
+
+/* Inside a card the heading is the card's title, not a page divider. */
+.topic-section--scenario > h2,
+.topic-section--activity > h2,
+.topic-section--summary > h2,
+.topic-section--practicum > h2,
+.topic-section--check > h2 {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.topic-section--reading {
+  font-size: 0.95em;
+}
+
+.activity-brief {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--tone-task-edge);
+}
+
+.callout {
+  padding: 0.9rem 1.1rem;
+  border-radius: 10px;
+  border-inline-start: 4px solid transparent;
+  margin-block: 1.4rem;
+}
+
+.callout--misconception {
+  background: var(--tone-warn-bg);
+  border-inline-start-color: var(--tone-warn-edge);
+}
+
+.callout--example {
+  background: var(--tone-example-bg);
+  border-inline-start-color: var(--tone-example-edge);
+}
+
+.callout--rubric {
+  background: var(--tone-rubric-bg);
+  border-inline-start-color: var(--tone-rubric-edge);
+  overflow-x: auto;
+}
+
+.callout--rubric > table {
+  margin-bottom: 0.4rem;
+  background: var(--ifm-background-surface-color);
+}
+
+.callout__title {
+  margin-bottom: 0.6rem;
+}
+
+.check-list > li {
+  padding: 0.6rem 0.9rem;
+  margin-bottom: 0.6rem;
+  border-radius: 8px;
+  background: var(--tone-quiet-bg);
+}
+
+.bloom-chip {
+  display: inline-block;
+  margin-inline-start: 0.35rem;
+  padding: 0 0.55rem;
+  border-radius: 999px;
+  font-size: 0.78em;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.7;
+  vertical-align: 0.08em;
+  color: #fff;
+  background: #5f6b7a;
+}
+
+.bloom-chip--remember { background: #4b6584; }
+.bloom-chip--understand { background: #1f6f5c; }
+.bloom-chip--apply { background: #8a5a00; }
+.bloom-chip--analyze { background: #7655c2; }
+.bloom-chip--evaluate { background: #b03a48; }
+.bloom-chip--create { background: #2f6db5; }
+
+@media print {
+  .topic-section,
+  .callout,
+  .check-list > li {
+    background: none !important;
+    border-color: #999 !important;
+  }
+
+  .bloom-chip {
+    color: #000;
+    background: none !important;
+    border: 1px solid #000;
+  }
+}
+
+/* --- Reading tools (src/components/ReadingTools.tsx) ------------------------ */
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('/fonts/OpenDyslexic-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('/fonts/OpenDyslexic-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+.reading-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  background: var(--ifm-color-emphasis-100);
+  font-size: 0.85rem;
+}
+
+.reading-toolbar__time {
+  font-weight: 600;
+  color: var(--ifm-color-primary-darker);
+}
+
+html[data-theme='dark'] .reading-toolbar__time {
+  color: var(--ifm-color-primary-lighter);
+}
+
+.reading-toolbar__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.reading-toolbar__btn {
+  min-height: 2rem;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+  font: inherit;
+  cursor: pointer;
+}
+
+.reading-toolbar__btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.reading-toolbar__btn[aria-pressed='true'] {
+  border-color: var(--ifm-color-primary);
+  background: var(--ifm-color-primary);
+  color: #fff;
+}
+
+html[data-theme='dark'] .reading-toolbar__btn[aria-pressed='true'] {
+  color: #10221d;
+}
+
+.reading-progress {
+  position: fixed;
+  top: var(--ifm-navbar-height);
+  inset-inline: 0;
+  z-index: calc(var(--ifm-z-index-fixed) - 1);
+  height: 3px;
+  background: transparent;
+  pointer-events: none;
+}
+
+.reading-progress__bar {
+  height: 100%;
+  background: var(--ifm-color-primary);
+  transform-origin: left center;
+  transition: transform 80ms linear;
+}
+
+.answer-note {
+  margin-top: 0.5rem;
+}
+
+.answer-note > summary {
+  cursor: pointer;
+  color: var(--ifm-color-primary-darker);
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+html[data-theme='dark'] .answer-note > summary {
+  color: var(--ifm-color-primary-lighter);
+}
+
+.answer-note__text {
+  display: block;
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+  font: inherit;
+  font-size: 0.95em;
+  resize: vertical;
+}
+
+.answer-note__status {
+  display: block;
+  min-height: 1.2em;
+  font-size: 0.8em;
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* Reader preferences, set on <html> by ReadingToolbar. */
+html[data-text-size='1'] {
+  --reading-font-size: 1.25rem;
+}
+
+html[data-text-size='2'] {
+  --reading-font-size: 1.4rem;
+}
+
+html[data-dyslexic-font] .theme-doc-markdown {
+  font-family: 'OpenDyslexic', var(--ifm-font-family-base);
+  line-height: 1.9;
+  word-spacing: 0.08em;
+}
+
+/* The Nastaliq script has no OpenDyslexic glyphs; Urdu keeps its own face. */
+html[dir='rtl'][data-dyslexic-font] .theme-doc-markdown {
+  font-family: 'Noto Nastaliq Urdu', 'Noto Naskh Arabic', serif;
+}
+
+html[data-high-contrast] {
+  --ifm-font-color-base: #000;
+  --ifm-background-color: #fff;
+  --tone-story-bg: #fff;
+  --tone-task-bg: #fff;
+  --tone-warn-bg: #fff;
+  --tone-example-bg: #fff;
+  --tone-rubric-bg: #fff;
+  --tone-quiet-bg: #fff;
+}
+
+html[data-high-contrast][data-theme='dark'] {
+  --ifm-font-color-base: #fff;
+  --ifm-background-color: #000;
+  --ifm-background-surface-color: #000;
+  --tone-story-bg: #000;
+  --tone-task-bg: #000;
+  --tone-warn-bg: #000;
+  --tone-example-bg: #000;
+  --tone-rubric-bg: #000;
+  --tone-quiet-bg: #000;
+}
+
+html[data-high-contrast] .topic-section--scenario,
+html[data-high-contrast] .topic-section--activity,
+html[data-high-contrast] .topic-section--summary,
+html[data-high-contrast] .topic-section--practicum,
+html[data-high-contrast] .topic-section--check,
+html[data-high-contrast] .callout,
+html[data-high-contrast] .check-list > li {
+  border: 2px solid currentColor;
+}
+
+html[data-high-contrast] .theme-doc-markdown a {
+  text-decoration: underline;
+}
+
+/* Next / previous topic as cards. */
+.pagination-nav__link {
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  border-color: var(--ifm-color-emphasis-300);
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.pagination-nav__link:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.pagination-nav__sublabel {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.75rem;
+}
+
+.pagination-nav__label {
+  color: var(--ifm-color-primary-darker);
+  font-size: 1.05rem;
+}
+
+html[data-theme='dark'] .pagination-nav__label {
+  color: var(--ifm-color-primary-lighter);
+}
+
 /* --- Glossary term (FR-016) ------------------------------------------------ */
 .glossary-term {
   text-decoration: underline dotted;

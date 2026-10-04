@@ -43,7 +43,7 @@ Follow ADR-0019 and the Feature 014 evidence contract. Existing human sign-off r
 
 ## Claude and Codex visual roles
 
-ADR-0024 defines the cross-agent boundary for course visuals.
+ADR-0024 defines the cross-agent boundary for course visuals; ADR-0029 adds Gemini via `agy` as a raster producer.
 
 - **Claude owns meaning and deterministic schematics:** course research and prose, pedagogy,
   citations, figure planning, generation prompts, alt text, figure manifests at `prompt-only`,
@@ -51,9 +51,12 @@ ADR-0024 defines the cross-agent boundary for course visuals.
 - **Codex owns raster production:** generated raster illustrations, edits to raster images,
   visual inspection, WebP optimisation, placement in course files, raster manifest transitions,
   and the relevant repository gates. Codex uses its built-in image-generation tool by default.
-- When a figure is `Kind: illustration`, Claude MUST NOT invoke an image generator, edit or
-  optimise a raster, or mark it `generated` or `placed`. Claude records a complete prompt, alt
-  text, aspect and target path, leaves it `prompt-only`, and hands it to Codex.
+- When a figure is `Kind: illustration`, Claude records a complete prompt, alt text, aspect and
+  target path at `prompt-only` first. ADR-0029 (2026-10-04) then lets Claude produce it with
+  Gemini via `agy generate_image` through `scripts/generate-illustration.mjs` (local, serial,
+  never in CI), optimise it, inspect it for pedagogy and cultural accuracy, and mark it
+  `generated` then `placed`. Codex remains an approved alternative producer; Claude never uses
+  any other image generator.
 - Either agent may identify a conceptual or accessibility problem. Claude remains responsible
   for judging pedagogical meaning; a generated image is never accepted only because it rendered
   successfully. G3/G5 independence and human escalation rules remain unchanged.
@@ -86,6 +89,17 @@ After completing requests, you **MUST** create a PHR (Prompt History Record).
 - Debugging sessions
 - Spec/task/plan creation
 - Multi-step workflows
+
+**Strict PHR rule (board, 2026-10-04; overrides the list above).** PHRs are how the Paperclip
+CEO and agents learn what was done outside Paperclip, so they are mandatory, not best effort:
+- Write one PHR for **every** user prompt that changes a file, makes or records a decision, or
+  touches Paperclip, the server or production (ops, deploys and status checks included).
+- Commit the PHR **in the same PR** as the work it records; a PR without its PHR is incomplete.
+- Board-direct sessions (the owner working with Claude/Codex/agy outside Paperclip) put
+  `board-direct` in `labels`; Paperclip agent runs put their agent name. `links.ticket` names
+  the TEX issue, or `null`.
+- Fill the `## Handoff (for CEO and agents)` section: what shipped, decisions the team must
+  respect, what is pending and who owns it, and which Paperclip issues are affected.
 
 **PHR Creation Process:**
 

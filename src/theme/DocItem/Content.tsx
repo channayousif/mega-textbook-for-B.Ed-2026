@@ -5,6 +5,8 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import ReviewStatusBanner from '@site/src/components/ReviewStatusBanner';
 import { fetchOwnChecks, upsertCheck, mergeLocalChecks } from '@site/src/lib/selfAssessment';
+import { useLocation } from '@docusaurus/router';
+import { ReadingToolbar, ReadingProgress, useAnswerNotes } from '@site/src/components/ReadingTools';
 
 /**
  * Swizzled DocItem/Content (Spec 010 T013).
@@ -268,6 +270,9 @@ export default function DocItemContentWrapper(props: Props): React.ReactElement 
   const unitNo = typeof frontMatter?.unit_no === 'number' ? frontMatter.unit_no : null;
   const topicNo = typeof frontMatter?.topic_no === 'number' ? frontMatter.topic_no : null;
   const locale: 'en' | 'ur' = i18n.currentLocale === 'ur' ? 'ur' : 'en';
+  const { pathname } = useLocation();
+  const minutes = typeof frontMatter?.est_reading_minutes === 'number' ? frontMatter.est_reading_minutes : null;
+  useAnswerNotes(locale, pathname);
 
   useEffect(() => {
     if (courseCode === null || unitNo === null || topicNo === null) return undefined;
@@ -411,7 +416,9 @@ export default function DocItemContentWrapper(props: Props): React.ReactElement 
   // locales - with zero content edits and no manifest invalidation.
   return (
     <>
+      <ReadingProgress locale={locale} />
       <ReviewStatusBanner courseCode={courseCode} unitNo={unitNo} />
+      <ReadingToolbar minutes={minutes} locale={locale} />
       <ContentOriginal {...props} />
     </>
   );

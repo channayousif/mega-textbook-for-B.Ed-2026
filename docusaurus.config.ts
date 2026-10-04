@@ -3,6 +3,7 @@ import { readFileSync } from 'node:fs';
 import { config as loadEnv } from 'dotenv';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import rehypeTopicEnhance from './src/rehype/topic-enhance.mjs';
 
 /**
  * Loads `.env.local` into `process.env` for local `npm run build`/`start` -
@@ -146,10 +147,17 @@ const config: Config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: './sidebars.ts',
+          // UX refresh: styles the nine-part topic cycle (sections, callouts,
+          // Bloom chips) from existing markup, without editing any content file.
+          rehypePlugins: [rehypeTopicEnhance],
         },
         blog: false,
         theme: {
           customCss: './src/css/custom.css',
+        },
+        gtag: {
+          trackingID: 'G-2DCL2X01DL',
+          anonymizeIP: true,
         },
         // The sitemap shipped on pure defaults: 88 URLs at a uniform
         // weekly/0.5, including 35 auth-gated /app/* pages and /search/, all
@@ -257,6 +265,8 @@ const config: Config = {
       logo: { alt: 'B.Ed Mega Textbook', src: 'img/logo.svg', width: 28, height: 28 },
       title: 'B.Ed Textbook',
       items: [
+        { to: '/about', label: 'About', position: 'left' },
+        { to: '/contact', label: 'Contact', position: 'left' },
         // Feature 015, T027 - the licence track's only navigation entry.
         // Article X-bis discoverability is met here plus offline search; the
         // track is deliberately absent from the semester sidebar, because
@@ -282,6 +292,17 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
+      links: [
+        {
+          title: 'Legal',
+          items: [
+            {
+              label: 'Privacy & Cookies',
+              to: '/privacy',
+            },
+          ],
+        },
+      ],
       copyright: 'B.Ed (4-Year) Mega Textbook - University of Sindh, Faculty of Education.',
     },
   } satisfies Preset.ThemeConfig,

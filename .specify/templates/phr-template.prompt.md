@@ -37,6 +37,13 @@ tests:
 - 🔁 Next prompts: {{NEXT_PROMPTS}}
 - 🧠 Reflection: {{REFLECTION_NOTE}}
 
+## Handoff (for CEO and agents)
+
+- Shipped / changed: {{HANDOFF_SHIPPED}}
+- Decisions the team must respect: {{HANDOFF_DECISIONS}}
+- Pending / next owner: {{HANDOFF_PENDING}}
+- Paperclip issues affected: {{HANDOFF_ISSUES}}
+
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: {{FAILURE_MODES}}
