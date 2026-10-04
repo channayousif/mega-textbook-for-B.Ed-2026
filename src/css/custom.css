@@ -293,6 +293,213 @@ html[data-theme='dark'] {
   }
 }
 
+/* --- Reading tools (src/components/ReadingTools.tsx) ------------------------ */
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('/fonts/OpenDyslexic-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('/fonts/OpenDyslexic-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+}
+
+.reading-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.4rem 0.6rem;
+  border-radius: 8px;
+  background: var(--ifm-color-emphasis-100);
+  font-size: 0.85rem;
+}
+
+.reading-toolbar__time {
+  font-weight: 600;
+  color: var(--ifm-color-primary-darker);
+}
+
+html[data-theme='dark'] .reading-toolbar__time {
+  color: var(--ifm-color-primary-lighter);
+}
+
+.reading-toolbar__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.reading-toolbar__btn {
+  min-height: 2rem;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+  font: inherit;
+  cursor: pointer;
+}
+
+.reading-toolbar__btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.reading-toolbar__btn[aria-pressed='true'] {
+  border-color: var(--ifm-color-primary);
+  background: var(--ifm-color-primary);
+  color: #fff;
+}
+
+html[data-theme='dark'] .reading-toolbar__btn[aria-pressed='true'] {
+  color: #10221d;
+}
+
+.reading-progress {
+  position: fixed;
+  top: var(--ifm-navbar-height);
+  inset-inline: 0;
+  z-index: calc(var(--ifm-z-index-fixed) - 1);
+  height: 3px;
+  background: transparent;
+  pointer-events: none;
+}
+
+.reading-progress__bar {
+  height: 100%;
+  background: var(--ifm-color-primary);
+  transform-origin: left center;
+  transition: transform 80ms linear;
+}
+
+.answer-note {
+  margin-top: 0.5rem;
+}
+
+.answer-note > summary {
+  cursor: pointer;
+  color: var(--ifm-color-primary-darker);
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+html[data-theme='dark'] .answer-note > summary {
+  color: var(--ifm-color-primary-lighter);
+}
+
+.answer-note__text {
+  display: block;
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+  font: inherit;
+  font-size: 0.95em;
+  resize: vertical;
+}
+
+.answer-note__status {
+  display: block;
+  min-height: 1.2em;
+  font-size: 0.8em;
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* Reader preferences, set on <html> by ReadingToolbar. */
+html[data-text-size='1'] {
+  --reading-font-size: 1.25rem;
+}
+
+html[data-text-size='2'] {
+  --reading-font-size: 1.4rem;
+}
+
+html[data-dyslexic-font] .theme-doc-markdown {
+  font-family: 'OpenDyslexic', var(--ifm-font-family-base);
+  line-height: 1.9;
+  word-spacing: 0.08em;
+}
+
+/* The Nastaliq script has no OpenDyslexic glyphs; Urdu keeps its own face. */
+html[dir='rtl'][data-dyslexic-font] .theme-doc-markdown {
+  font-family: 'Noto Nastaliq Urdu', 'Noto Naskh Arabic', serif;
+}
+
+html[data-high-contrast] {
+  --ifm-font-color-base: #000;
+  --ifm-background-color: #fff;
+  --tone-story-bg: #fff;
+  --tone-task-bg: #fff;
+  --tone-warn-bg: #fff;
+  --tone-example-bg: #fff;
+  --tone-rubric-bg: #fff;
+  --tone-quiet-bg: #fff;
+}
+
+html[data-high-contrast][data-theme='dark'] {
+  --ifm-font-color-base: #fff;
+  --ifm-background-color: #000;
+  --ifm-background-surface-color: #000;
+  --tone-story-bg: #000;
+  --tone-task-bg: #000;
+  --tone-warn-bg: #000;
+  --tone-example-bg: #000;
+  --tone-rubric-bg: #000;
+  --tone-quiet-bg: #000;
+}
+
+html[data-high-contrast] .topic-section--scenario,
+html[data-high-contrast] .topic-section--activity,
+html[data-high-contrast] .topic-section--summary,
+html[data-high-contrast] .topic-section--practicum,
+html[data-high-contrast] .topic-section--check,
+html[data-high-contrast] .callout,
+html[data-high-contrast] .check-list > li {
+  border: 2px solid currentColor;
+}
+
+html[data-high-contrast] .theme-doc-markdown a {
+  text-decoration: underline;
+}
+
+/* Next / previous topic as cards. */
+.pagination-nav__link {
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  border-color: var(--ifm-color-emphasis-300);
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.pagination-nav__link:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.pagination-nav__sublabel {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.75rem;
+}
+
+.pagination-nav__label {
+  color: var(--ifm-color-primary-darker);
+  font-size: 1.05rem;
+}
+
+html[data-theme='dark'] .pagination-nav__label {
+  color: var(--ifm-color-primary-lighter);
+}
+
 /* --- Glossary term (FR-016) ------------------------------------------------ */
 .glossary-term {
   text-decoration: underline dotted;
