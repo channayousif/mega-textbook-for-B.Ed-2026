@@ -28,7 +28,7 @@ files:
  - scripts/generate-illustration.mjs
  - .claude/skills/generate-figures/references/raster-codex-handoff.md
  - specs/content/efmp-302/figures/unit-01.md
- - specs/content/efmp-302/figures/unit-01-banner.md
+ - specs/content/efmp-302/figures/unit-01.banner.md
  - docs/semester-1/efmp-302/unit-01/{index,topic-01..04}.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-01/{index,topic-01..04}.mdx
  - static/img/figures/efmp-302/unit-01/fig-U1-{9..13}.webp

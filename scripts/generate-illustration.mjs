@@ -4,7 +4,7 @@
  *
  *   node scripts/generate-illustration.mjs <course> <unit> [--id fig-U1-9] [--dry-run] [--reuse-staging] [--banner]
  *
- * `--banner` reads the unit's sidecar banner manifest (unit-NN-banner.md) instead.
+ * `--banner` reads the unit's sidecar banner manifest (unit-NN.banner.md) instead.
  * `--reuse-staging` skips the agy call when `.staging/<figId>.png` already exists (for example
  * after an optimiser failure), so a retry does not spend another generation.
  *
@@ -55,7 +55,7 @@ if (!course || !unitArg) die('usage: <course> <unit> [--id fig-UN-M] [--dry-run]
 
 const pad = String(Number(unitArg)).padStart(2, '0');
 const courseDir = course.toLowerCase();
-const manifestFile = join(ROOT, 'specs/content', courseDir, 'figures', `unit-${pad}${flag('--banner') ? '-banner' : ''}.md`);
+const manifestFile = join(ROOT, 'specs/content', courseDir, 'figures', `unit-${pad}${flag('--banner') ? '.banner' : ''}.md`);
 if (!existsSync(manifestFile)) die(`no manifest at ${manifestFile}`);
 
 const stagingDir = join(ROOT, 'specs/content', courseDir, 'figures', '.staging');

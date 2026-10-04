@@ -5,7 +5,7 @@
 > `node scripts/generate-illustration.mjs <course> <unit> [--banner]` (local, serial, never CI),
 > then inspect every image for pedagogy, Pakistani/Sindhi cultural accuracy, no text and no maps
 > or flags before placing it and marking the row `placed`. Unit banners use the sidecar
-> `figures/unit-NN-banner.md`. The Codex handoff below remains valid as the alternative route.
+> `figures/unit-NN.banner.md`. The Codex handoff below remains valid as the alternative route.
 
 
 A `Kind: illustration` figure needs pictorial depth that a schematic SVG cannot provide, such as

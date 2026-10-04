@@ -45,10 +45,12 @@ existing figure manifest.
    ADR-0024 point 5 rather than removing it.
 5. **Placements.** One 16:9 banner per unit `index.mdx` and one scene per topic for "A real
    classroom situation". Pilot on EFMP-302 Unit 1 before batch roll-out. Topic scenes are rows
-   in the unit manifest (`unit-NN.md`). Banners are rows in a sidecar `unit-NN-banner.md` with the
+   in the unit manifest (`unit-NN.md`). Banners are rows in a sidecar `unit-NN.banner.md` with the
    same columns and lifecycle, because `check:figures` reads only topic files and its source is
    hashed into every unit's review evidence (`scripts/lib/review-evidence.mjs`): changing it
-   would mark all outstanding review evidence stale.
+   would mark all outstanding review evidence stale. The `unit-NN.banner.md` name matters: ADR-0027
+   scopes a course file to one unit only when `unit-NN` is followed by `.`, `/` or the end, so a
+   `unit-NN-banner.md` name would bind to, and stale, every unit in the course.
 6. **Asset contracts unchanged.** Output passes through `scripts/optimize-figure.mjs` (WebP,
    longest edge at most 1600 px, at most 150 KB), one file for both locales with locale-specific
    alt text, `Kind: illustration` rows, and `check:figures`.
