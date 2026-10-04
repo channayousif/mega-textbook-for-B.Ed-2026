@@ -1,5 +1,13 @@
 # Raster illustrations - Claude to Codex handoff
 
+> **ADR-0029 (2026-10-04):** Gemini via `agy` is now an approved raster producer beside Codex.
+> After writing a complete `prompt-only` illustration row, run
+> `node scripts/generate-illustration.mjs <course> <unit> [--banner]` (local, serial, never CI),
+> then inspect every image for pedagogy, Pakistani/Sindhi cultural accuracy, no text and no maps
+> or flags before placing it and marking the row `placed`. Unit banners use the sidecar
+> `figures/unit-NN-banner.md`. The Codex handoff below remains valid as the alternative route.
+
+
 A `Kind: illustration` figure needs pictorial depth that a schematic SVG cannot provide, such as
 people, a classroom, a historical setting or a place. Under ADR-0024, Claude specifies the visual
 and Codex produces it.
