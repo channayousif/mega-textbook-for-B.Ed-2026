@@ -434,7 +434,7 @@ export default function DocItemContentWrapper(props: Props): React.ReactElement 
       <ReviewStatusBanner courseCode={courseCode} unitNo={unitNo} />
       <ReadingToolbar minutes={minutes} locale={locale} />
       <ContentOriginal {...props} />
-      {isTopicOrAssessment && <FeedbackWidget />}
+      {(courseCode !== null && unitNo !== null) && <FeedbackWidget />}
     </>
   );
 }

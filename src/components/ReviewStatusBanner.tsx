@@ -30,8 +30,8 @@ const MESSAGES: Record<Tier, { label: Record<'en' | 'ur', string>; body: Record<
       ur: 'مسودہ - ماہرانہ نظرثانی باقی ہے',
     },
     body: {
-      en: 'This unit is complete and passes the platform\u2019s automated checks, but no reviewer has read it yet. Treat its sources and claims with care.',
-      ur: 'یہ یونٹ مکمل ہے اور خودکار جانچ سے گزر چکا ہے، لیکن ابھی کسی ماہر نے اسے نہیں پڑھا۔ اس کے حوالہ جات اور دعووں کو احتیاط سے لیں۔',
+      en: 'This unit is complete and passes the platform\u2019s automated checks, but no reviewer has read it yet. Treat its sources and claims with care. Please use the feedback form at the bottom of the page to report any errors.',
+      ur: 'یہ یونٹ مکمل ہے اور خودکار جانچ سے گزر چکا ہے، لیکن ابھی کسی ماہر نے اسے نہیں پڑھا۔ اس کے حوالہ جات اور دعووں کو احتیاط سے لیں۔ براہ کرم کسی بھی غلطی کی نشاندہی کے لیے صفحے کے آخر میں موجود فیڈبیک فارم استعمال کریں۔',
     },
   },
   provisional: {
@@ -40,8 +40,8 @@ const MESSAGES: Record<Tier, { label: Record<'en' | 'ur', string>; body: Record<
       ur: 'حتمی نظرثانی باقی ہے',
     },
     body: {
-      en: 'This unit has passed an independent automated review and is published for use. A final human review is still outstanding, so treat its details as provisional.',
-      ur: 'یہ یونٹ ایک خودکار آزاد جائزے سے گزر چکا ہے اور استعمال کے لیے شائع کیا گیا ہے۔ حتمی انسانی نظرثانی ابھی باقی ہے، اس لیے اس کی تفصیلات کو عارضی سمجھیں۔',
+      en: 'This unit has passed an independent automated review and is published for use. A final human review is still outstanding, so treat its details as provisional. Please use the feedback form at the bottom of the page to report any errors.',
+      ur: 'یہ یونٹ ایک خودکار آزاد جائزے سے گزر چکا ہے اور استعمال کے لیے شائع کیا گیا ہے۔ حتمی انسانی نظرثانی ابھی باقی ہے، اس لیے اس کی تفصیلات کو عارضی سمجھیں۔ براہ کرم کسی بھی غلطی کی نشاندہی کے لیے صفحے کے آخر میں موجود فیڈبیک فارم استعمال کریں۔',
     },
   },
 };
