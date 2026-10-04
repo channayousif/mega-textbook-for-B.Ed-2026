@@ -16,6 +16,43 @@ import { AuthProvider } from '@site/src/contexts/AuthContext';
  * AuthProvider handles that by refusing to construct a client outside the
  * browser (see src/lib/supabase.ts).
  */
+import { useLocation } from '@docusaurus/router';
+import { trackEvent } from '@site/src/lib/analytics';
+import { useAuth } from '@site/src/contexts/AuthContext';
+
+function RouteAnalytics() {
+  const location = useLocation();
+  const { session } = useAuth();
+
+  React.useEffect(() => {
+    // app_platform_view
+    if (location.pathname.startsWith('/app') || location.pathname.startsWith('/ur/app')) {
+      trackEvent('app_platform_view', { user_status: session ? 'signed_in' : 'anonymous' });
+    }
+  }, [location.pathname, !!session]);
+
+  React.useEffect(() => {
+    const handleClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const anchor = target.closest('a');
+      if (anchor && anchor.href && anchor.href.endsWith('.pdf')) {
+        const url = new URL(anchor.href);
+        const fileName = url.pathname.split('/').pop() || anchor.href;
+        trackEvent('resource_download', { file_name: fileName, resource_type: 'pdf' });
+      }
+    };
+    document.addEventListener('click', handleClick);
+    return () => document.removeEventListener('click', handleClick);
+  }, []);
+
+  return null;
+}
+
 export default function Root({ children }: { children: React.ReactNode }): React.ReactElement {
-  return <AuthProvider>{children}</AuthProvider>;
+  return (
+    <AuthProvider>
+      <RouteAnalytics />
+      {children}
+    </AuthProvider>
+  );
 }
