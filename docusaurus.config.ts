@@ -257,6 +257,8 @@ const config: Config = {
       logo: { alt: 'B.Ed Mega Textbook', src: 'img/logo.svg', width: 28, height: 28 },
       title: 'B.Ed Textbook',
       items: [
+        { to: '/about', label: 'About', position: 'left' },
+        { to: '/contact', label: 'Contact', position: 'left' },
         // Feature 015, T027 - the licence track's only navigation entry.
         // Article X-bis discoverability is met here plus offline search; the
         // track is deliberately absent from the semester sidebar, because
