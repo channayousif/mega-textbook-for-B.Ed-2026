@@ -90,6 +90,17 @@ After completing requests, you **MUST** create a PHR (Prompt History Record).
 - Spec/task/plan creation
 - Multi-step workflows
 
+**Strict PHR rule (board, 2026-10-04; overrides the list above).** PHRs are how the Paperclip
+CEO and agents learn what was done outside Paperclip, so they are mandatory, not best effort:
+- Write one PHR for **every** user prompt that changes a file, makes or records a decision, or
+  touches Paperclip, the server or production (ops, deploys and status checks included).
+- Commit the PHR **in the same PR** as the work it records; a PR without its PHR is incomplete.
+- Board-direct sessions (the owner working with Claude/Codex/agy outside Paperclip) put
+  `board-direct` in `labels`; Paperclip agent runs put their agent name. `links.ticket` names
+  the TEX issue, or `null`.
+- Fill the `## Handoff (for CEO and agents)` section: what shipped, decisions the team must
+  respect, what is pending and who owns it, and which Paperclip issues are affected.
+
 **PHR Creation Process:**
 
 1) Detect stage
