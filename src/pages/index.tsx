@@ -8,13 +8,13 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title="Home"
-      description="Bilingual digital textbook and Licence Practice Pass for the B.Ed (4-Year) programme in Sindh.">
+      description="Free bilingual (English and Urdu) digital textbook and teaching licence exam preparation for the B.Ed (4-Year) programme in Sindh.">
       <main >
         <div className="container margin-vert--xl" style={{ maxWidth: '800px' }}>
           <div className="row">
             <div className="col">
               <h1 className="hero__title text--center margin-bottom--lg">
-                <Translate id="home.title">B.Ed (4-Year) Mega Textbook & Licence Practice Pass</Translate>
+                <Translate id="home.title">B.Ed (4-Year) Mega Textbook</Translate>
               </h1>
               
               <p className="hero__subtitle text--center margin-bottom--xl">
@@ -24,29 +24,6 @@ export default function Home(): JSX.Element {
               </p>
 
               <div className="row margin-bottom--xl">
-                <div className="col margin-bottom--lg">
-                  <div className="card shadow--md height--100">
-                    <div className="card__header">
-                      <h3><Translate id="home.licenceTitle">Licence Practice Pass</Translate></h3>
-                    </div>
-                    <div className="card__body">
-                      <p>
-                        <Translate id="home.licenceDesc">
-                          Prepare for the teaching licence exam with our flagship practice track. Includes 60 CRQs, 5 case-study ERQs with rubrics, and timed server-marked mocks.
-                        </Translate>
-                      </p>
-                      <p className="text--bold">
-                        <Translate id="home.licencePrice">Rs 1,500 One-time payment</Translate>
-                      </p>
-                    </div>
-                    <div className="card__footer">
-                      <Link className="button button--primary button--block" to="/pricing">
-                        <Translate id="home.licenceAction">Get the Practice Pass</Translate>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
                 <div className="col margin-bottom--lg">
                   <div className="card shadow--md height--100">
                     <div className="card__header">
@@ -60,8 +37,27 @@ export default function Home(): JSX.Element {
                       </p>
                     </div>
                     <div className="card__footer">
-                      <Link className="button button--secondary button--block" to="/intro">
+                      <Link className="button button--primary button--block" to="/intro">
                         <Translate id="home.textbookAction">Browse the Textbook</Translate>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+                <div className="col margin-bottom--lg">
+                  <div className="card shadow--md height--100">
+                    <div className="card__header">
+                      <h3><Translate id="home.licenceTitle">Licence Exam Preparation</Translate></h3>
+                    </div>
+                    <div className="card__body">
+                      <p>
+                        <Translate id="home.licenceDesc">
+                          Prepare for the teaching licence exam with the licence track: every syllabus heading explained, free to read, in English and Urdu.
+                        </Translate>
+                      </p>
+                    </div>
+                    <div className="card__footer">
+                      <Link className="button button--secondary button--block" to="/licence">
+                        <Translate id="home.licenceAction">Open the Licence Track</Translate>
                       </Link>
                     </div>
                   </div>
