@@ -46,22 +46,24 @@ placeholders.
 Changes: a strict PHR rule in `CLAUDE.md` and `AGENTS.md` (PHR for every acting prompt, committed
 with the work, `board-direct` label, mandatory handoff); a `## Handoff (for CEO and agents)`
 section in the PHR template; a "Board-direct awareness" section in all six Paperclip role files
-so every run first reads new PHRs; backfill PHR 0086. The Paperclip tree hold on TEX-7/TEX-8 and
-the board comments on TEX-18/TEX-8 are posted once the board API key file exists.
+so every run first reads new PHRs; backfill PHR 0086. Posted through the owner-authenticated
+`paperclipai` CLI (the dashboard has no board-key UI): manual `pause` tree holds on TEX-7 (covers
+TEX-18) and TEX-8, and a `--resume` board update on TEX-20 that woke the CEO out of `error`.
+Paused issues reject comments (409 "Task is paused"), so TEX-8 and TEX-18 carry the hold reason only.
 
 ## Outcome
 
 - ✅ Impact: board-direct work becomes visible to the CEO and agents through PHRs.
 - 🧪 Tests: no-em-dash gate on edited docs.
 - 📁 Files: CLAUDE.md, AGENTS.md, PHR template, PHRs 0086/0087, role files (outside repo).
-- 🔁 Next prompts: post the hold once `~/.config/paperclip/board.key` exists; consider a `check:phr` CI gate (Tier A) if PHR discipline slips.
+- 🔁 Next prompts: release the holds when the board revisits the paid layer; consider a `check:phr` CI gate (Tier A) if PHR discipline slips.
 - 🧠 Reflection: the CEO had no inbound channel for work done outside Paperclip.
 
 ## Handoff (for CEO and agents)
 
 - Shipped / changed: strict PHR rule (CLAUDE.md, AGENTS.md); PHR template gains a Handoff section; role files require reading new PHRs at the start of every run.
 - Decisions the team must respect: Licence paid layer (TEX-7, TEX-8, TEX-18 tree) is **on hold**; priority is UI/UX. Every repo-writing run leaves a PHR with a Handoff section.
-- Pending / next owner: ProgramManager to finish TEX-20 (contact details) when it next wakes; board to create the board API key so the Paperclip hold can be posted.
+- Pending / next owner: ProgramManager is working TEX-20 (contact details); the board releases the TEX-7/TEX-8 holds when ready.
 - Paperclip issues affected: TEX-20, TEX-18, TEX-8, TEX-7.
 
 ## Evaluation notes (flywheel)
