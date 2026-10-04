@@ -4,6 +4,8 @@ import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import ReviewStatusBanner from '@site/src/components/ReviewStatusBanner';
+import FeedbackWidget from '@site/src/components/FeedbackWidget';
+import { trackEvent } from '@site/src/lib/analytics';
 import { fetchOwnChecks, upsertCheck, mergeLocalChecks } from '@site/src/lib/selfAssessment';
 import { useLocation } from '@docusaurus/router';
 import { ReadingToolbar, ReadingProgress, useAnswerNotes } from '@site/src/components/ReadingTools';
@@ -406,6 +408,15 @@ export default function DocItemContentWrapper(props: Props): React.ReactElement 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [courseCode, unitNo, topicNo, locale, role, loading]);
 
+  useEffect(() => {
+    if (pathname.includes('/licence/')) {
+      trackEvent('licence_track_view', {
+        course_code: courseCode,
+        unit_id: unitNo,
+      });
+    }
+  }, [pathname, courseCode, unitNo]);
+
   useEffect(() => markScrollableRegions({
     table: MESSAGES.scrollableTable[locale],
     figure: MESSAGES.scrollableFigure[locale],
@@ -414,12 +425,16 @@ export default function DocItemContentWrapper(props: Props): React.ReactElement 
   // Rendered here rather than in MDX so every file of a provisional unit carries
   // the notice - index, each topic, the assessment and the teacher notes, in both
   // locales - with zero content edits and no manifest invalidation.
+  
+  const isTopicOrAssessment = typeof topicNo === 'number' || pathname.endsWith('/assessment');
+
   return (
     <>
       <ReadingProgress locale={locale} />
       <ReviewStatusBanner courseCode={courseCode} unitNo={unitNo} />
       <ReadingToolbar minutes={minutes} locale={locale} />
       <ContentOriginal {...props} />
+      {isTopicOrAssessment && <FeedbackWidget />}
     </>
   );
 }
