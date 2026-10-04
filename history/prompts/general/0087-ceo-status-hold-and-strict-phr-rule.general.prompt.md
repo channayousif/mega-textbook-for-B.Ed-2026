@@ -19,7 +19,7 @@ files:
  - CLAUDE.md
  - AGENTS.md
  - .specify/templates/phr-template.prompt.md
- - history/prompts/general/0086-board-direct-uiux-pivot-2026-10-04.general.prompt.md
+ - history/prompts/general/0088-board-direct-uiux-pivot-2026-10-04.general.prompt.md
  - history/prompts/general/0087-ceo-status-hold-and-strict-phr-rule.general.prompt.md
  - /home/a2ahs/org/textbook/roles/*.md (outside the repo; 6 role files)
 tests:
@@ -46,7 +46,7 @@ placeholders.
 Changes: a strict PHR rule in `CLAUDE.md` and `AGENTS.md` (PHR for every acting prompt, committed
 with the work, `board-direct` label, mandatory handoff); a `## Handoff (for CEO and agents)`
 section in the PHR template; a "Board-direct awareness" section in all six Paperclip role files
-so every run first reads new PHRs; backfill PHR 0086. Posted through the owner-authenticated
+so every run first reads new PHRs; backfill PHR 0088. Posted through the owner-authenticated
 `paperclipai` CLI (the dashboard has no board-key UI): manual `pause` tree holds on TEX-7 (covers
 TEX-18) and TEX-8, and a `--resume` board update on TEX-20 that woke the CEO out of `error`.
 Paused issues reject comments (409 "Task is paused"), so TEX-8 and TEX-18 carry the hold reason only.
@@ -55,7 +55,7 @@ Paused issues reject comments (409 "Task is paused"), so TEX-8 and TEX-18 carry 
 
 - ✅ Impact: board-direct work becomes visible to the CEO and agents through PHRs.
 - 🧪 Tests: no-em-dash gate on edited docs.
-- 📁 Files: CLAUDE.md, AGENTS.md, PHR template, PHRs 0086/0087, role files (outside repo).
+- 📁 Files: CLAUDE.md, AGENTS.md, PHR template, PHRs 0087/0088, role files (outside repo).
 - 🔁 Next prompts: release the holds when the board revisits the paid layer; consider a `check:phr` CI gate (Tier A) if PHR discipline slips.
 - 🧠 Reflection: the CEO had no inbound channel for work done outside Paperclip.
 

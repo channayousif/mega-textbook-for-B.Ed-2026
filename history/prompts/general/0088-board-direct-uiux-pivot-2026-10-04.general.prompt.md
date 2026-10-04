@@ -1,5 +1,5 @@
 ---
-id: 0086
+id: 0088
 title: Board-direct UI/UX pivot summary 2026-10-04
 stage: general
 date: 2026-10-04
@@ -16,7 +16,7 @@ links:
   adr: history/adr/0029-gemini-agy-raster-illustration-producer.md
   pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/84, https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/86, https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/89, https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/90, https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/91
 files:
- - history/prompts/general/0086-board-direct-uiux-pivot-2026-10-04.general.prompt.md
+ - history/prompts/general/0088-board-direct-uiux-pivot-2026-10-04.general.prompt.md
 tests:
  - none (record only; the listed PRs carried their own CI and e2e runs)
 ---
