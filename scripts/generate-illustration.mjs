@@ -26,6 +26,8 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync, statSync, openSync, closeSync, unlinkSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { join, resolve } from 'node:path';
+import { homedir } from 'node:os';
+import { readdirSync } from 'node:fs';
 import { parseManifest } from './lib/figure-manifest.mjs';
 
 const ROOT = resolve(import.meta.dirname, '..');
@@ -107,6 +109,24 @@ function runOptimizer(png, webp) {
 }
 
 /** Optimise to the shared budget; a detailed scene over 150 KB is retried once at 1200 px. */
+/**
+ * agy reports an exhausted image quota only in its own log, not in its JSON reply. After a
+ * failed generation, read the newest run log; if the quota is gone, the rest of the batch
+ * would fail the same way, so stop and report when it resets.
+ */
+function quotaResetAfterFailure() {
+  try {
+    const dir = join(homedir(), '.gemini/antigravity-cli/log');
+    const newest = readdirSync(dir).filter((n) => n.startsWith('cli-')).sort().pop();
+    const text = readFileSync(join(dir, newest), 'utf8');
+    if (!/QUOTA_EXHAUSTED/.test(text)) return null;
+    const stamps = [...text.matchAll(/"quotaResetTimeStamp":\s*"([^"]+)"/g)].map((m) => m[1]).sort();
+    return stamps.pop() || 'unknown';
+  } catch {
+    return null;
+  }
+}
+
 async function optimise(png, webp) {
   let res = runOptimizer(png, webp);
   if (res.status === 0) return;
@@ -140,12 +160,26 @@ if (flag('--dry-run')) {
   process.exit(0);
 }
 
-let lockFd;
-try {
-  lockFd = openSync(LOCK, 'wx');
-} catch {
-  die(`another generation run holds ${LOCK}; generation is serial by design (ADR-0029). Remove it if stale.`);
+/** The lock records its owner's pid, so a run killed mid-batch does not block the next one. */
+function takeLock() {
+  try {
+    const fd = openSync(LOCK, 'wx');
+    writeFileSync(fd, String(process.pid));
+    return fd;
+  } catch {
+    const owner = Number(readFileSync(LOCK, 'utf8').trim());
+    let alive = false;
+    try {
+      alive = owner > 0 && process.kill(owner, 0);
+    } catch {
+      alive = false;
+    }
+    if (alive) die(`generation run ${owner} holds ${LOCK}; generation is serial by design (ADR-0029).`);
+    unlinkSync(LOCK);
+    return takeLock();
+  }
 }
+const lockFd = takeLock();
 
 mkdirSync(stagingDir, { recursive: true });
 mkdirSync(outDir, { recursive: true });
@@ -171,10 +205,16 @@ try {
     } catch (e) {
       failures += 1;
       console.error(`✗ ${row.id}: ${e.message}`);
+      const reset = quotaResetAfterFailure();
+      if (reset) {
+        console.error(`✗ image quota exhausted (QUOTA_EXHAUSTED); resets at ${reset}. Stopping this batch; rerun after then.`);
+        process.exitCode = 3;
+        break;
+      }
     }
   }
 } finally {
   closeSync(lockFd);
   unlinkSync(LOCK);
 }
-process.exit(failures ? 1 : 0);
+if (!process.exitCode) process.exitCode = failures ? 1 : 0;
