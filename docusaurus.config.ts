@@ -3,6 +3,7 @@ import { readFileSync } from 'node:fs';
 import { config as loadEnv } from 'dotenv';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import rehypeTopicEnhance from './src/rehype/topic-enhance.mjs';
 
 /**
  * Loads `.env.local` into `process.env` for local `npm run build`/`start` -
@@ -146,6 +147,9 @@ const config: Config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: './sidebars.ts',
+          // UX refresh: styles the nine-part topic cycle (sections, callouts,
+          // Bloom chips) from existing markup, without editing any content file.
+          rehypePlugins: [rehypeTopicEnhance],
         },
         blog: false,
         theme: {
@@ -246,14 +250,13 @@ const config: Config = {
     ],
   ],
 
-    themeConfig: {
+  themeConfig: {
     // Without this there is no og:image at all, while twitter:card is
     // summary_large_image - so every WhatsApp/social share rendered a blank
     // card. WhatsApp matters a great deal for this audience.
     image: 'img/social-card.png',
     metadata: [
       { name: 'keywords', content: 'B.Ed, B.Ed 4 year, teacher education, University of Sindh, Pakistan, Sindh, bilingual textbook, Urdu, EFMP, GECE' },
-      { name: 'description', content: 'Bilingual digital textbook and Licence Practice Pass for the B.Ed (4-Year) programme in Sindh.' },
       { name: 'twitter:card', content: 'summary_large_image' },
       { property: 'og:site_name', content: 'B.Ed Mega Textbook' },
       { property: 'og:type', content: 'website' },
@@ -262,13 +265,13 @@ const config: Config = {
       logo: { alt: 'B.Ed Mega Textbook', src: 'img/logo.svg', width: 28, height: 28 },
       title: 'B.Ed Textbook',
       items: [
+        { to: '/about', label: 'About', position: 'left' },
+        { to: '/contact', label: 'Contact', position: 'left' },
         // Feature 015, T027 - the licence track's only navigation entry.
         // Article X-bis discoverability is met here plus offline search; the
         // track is deliberately absent from the semester sidebar, because
         // EED-313 is not part of the approved 2026 scheme (research R3).
         { to: '/licence/', label: 'Licence track', position: 'left' },
-        { to: '/pricing', label: 'Pricing', position: 'right' },
-        { to: '/app/signup', label: 'Sign up', position: 'right' },
         // Spec 010 follow-up, 2026-09-07 - registers
         // src/components/MobileTopBarWidgets.tsx; renders nothing at
         // desktop widths, a compact locale-switch + sign-in-status pair at
