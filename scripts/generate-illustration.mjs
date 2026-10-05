@@ -39,6 +39,8 @@ const HOUSE_STYLE = [
   'Setting, people, dress and classroom objects must be authentic to Sindh, Pakistan',
   '(for example shalwar kameez, dupatta, school uniforms, benches or desks, chalkboard).',
   'Respectful, inclusive, natural expressions; no stereotypes or caricature.',
+  'Every adult in the frame wears Pakistani dress: no blazers, suits, jackets or Western office',
+  'clothing on any teacher, parent or head teacher, including figures in the background or in insets.',
   'Clean composition with soft natural light and a calm palette that sits well beside teal (#1f6f5c).',
   'Absolutely no text, letters, numbers, signs, captions, logos or watermarks anywhere in the image,',
   'and no maps, globes with country outlines, flags or national emblems; keep wall posters to simple shapes or plants.',

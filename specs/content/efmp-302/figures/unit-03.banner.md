@@ -5,4 +5,4 @@ unit figure manifest; produced with Gemini via `agy` and inspected before `place
 
 | Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
 |---|---|---|---|---|---|---|
-| fig-U3-11 | index | illustration | wide landscape banner: a lively, well-run government school classroom in Sindh where a woman teacher moves among pupils working in pairs, leaning in to listen to one pair's explanation, pupils engaged and confident; warm, purposeful atmosphere | A teacher moves among pupils working in pairs, leaning in to listen to one pair's explanation in a lively Sindh classroom. | /img/figures/efmp-302/unit-03/fig-U3-11.webp | placed |
+| fig-U3-11 | index | illustration | wide landscape banner: a lively, well-run government school classroom in Sindh where a woman teacher moves among pupils working in pairs, leaning in to listen to one pair's explanation, pupils engaged and confident; warm, purposeful atmosphere | A teacher crouches beside a desk to listen as a boy and a girl explain their work, while the rest of the class works in pairs in a lively Sindh classroom. | /img/figures/efmp-302/unit-03/fig-U3-11.webp | placed |
