@@ -23,7 +23,7 @@ Two are bound below.
 | Key | Citation | URL/DOI | Supports | Kind |
 |---|---|---|---|---|
 | yuzenker2022 | Yu, S., & Zenker, F. (2022). Identifying linked and convergent argument structures. *Informal Logic, 42*(2), 363-387. | https://doi.org/10.22329/il.v42i1.7133 | U3-04 (describing argument structure before evaluating its strength) | open access (Informal Logic, University of Windsor), Crossref-verified and abstract retrieved 2026-10-05 |
-| qin2016 | Qin, J. (2016). Applying the Toulmin model in teaching L2 argumentative writing. *Journal of Language Learning and Teaching, 3*(2), 21-29. | https://doi.org/10.66887/jltl.v3i2.109 | U3-02 (explicit instruction in reasoning patterns improves learners' skills) | open access, Crossref-verified and full text retrieved 2026-10-05 |
+| qin2016 | Qin, J. (2016). Applying the Toulmin model in teaching L2 argumentative writing. *Journal of Language Learning and Teaching, 3*(2), 21-29. | https://doi.org/10.66887/jltl.v3i2.109 | U3-02 (explicit instruction in reasoning patterns improves learners' skills), U3-03 (practice in identifying inductive patterns builds reasoning skill) | open access, Crossref-verified and full text retrieved 2026-10-05 |
 
 ## Unverifiable sources
 
