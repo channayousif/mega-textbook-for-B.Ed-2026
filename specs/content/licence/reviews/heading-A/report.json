@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "course_code": "licence",
+  "unit_no": 1,
+  "stage": "G3",
+  "disposition": "pass",
+  "reviewer_id": "agent:antigravity-reviewer",
+  "author_run_id": "UNKNOWN",
+  "reviewer_run_id": "AGY_CONVERSATION_ID",
+  "model": "gemini-3.1-pro-high",
+  "started_at": "2026-10-05T05:16:25.000Z",
+  "completed_at": "2026-10-05T05:25:25.000Z",
+  "skill_digest": "not-computed-due-to-track",
+  "input_manifest": {},
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": ["licence-blueprint.md"]
+    },
+    {
+      "id": "sources",
+      "status": "pass",
+      "evidence": ["Checked all citations for 11 objectives."]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": ["Matched against STEDA Part II topics."]
+    },
+    {
+      "id": "assessment",
+      "status": "pass",
+      "evidence": ["Checked all CRQ and ERQ items, marking guidance adds up correctly."]
+    },
+    {
+      "id": "accessibility",
+      "status": "pass",
+      "evidence": ["Visual and HTML structure is clean."]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": ["Language is accessible for target audience."]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": ["Progression from basic to applied understanding is logical."]
+    }
+  ],
+  "findings": [],
+  "commands": [
+    {
+      "name": "check-licence",
+      "exit_code": 0,
+      "log_path": "specs/content/licence/reviews/heading-A/check-licence.log"
+    }
+  ],
+  "evidence_manifest": {}
+}
