@@ -30,7 +30,7 @@ illustration `fig-U2-9` is left `prompt-only` in `figures/unit-02.banner.md` for
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | 13/13 content gates green; TEX-23 |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-02/G2/20261005T175634410Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | awaiting CurriculumOwner |
 | Unit 2 | G4 ur-translation | ▢ | | filed as a follow-up to TEX-23 |
 | Unit 2 | G5 ur-review | ▢ | | |
