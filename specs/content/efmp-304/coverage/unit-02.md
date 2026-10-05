@@ -15,10 +15,10 @@ has at least one row naming the exact `topic-NN.mdx` its `### Topic list` row as
 | U2-01 | topic-01.mdx | Argument distinguished from explanation | bassham2010 |
 | U2-01 | topic-01.mdx | Argument distinguished from explanation | malone2003 |
 | U2-02 | topic-01.mdx | The classical form of an argument | bassham2010 |
-| U2-02 | topic-01.mdx | The classical form of an argument | qin2019 |
+| U2-02 | topic-01.mdx | The classical form of an argument | qin2016 |
 | U2-03 | topic-02.mdx | The rhetorical triangle | bassham2010 |
 | U2-04 | topic-02.mdx | Issue questions and information questions | bassham2010 |
-| U2-04 | topic-02.mdx | Issue questions and information questions | qin2019 |
+| U2-04 | topic-02.mdx | Issue questions and information questions | qin2016 |
 | U2-05 | topic-03.mdx | Types of argument | bassham2010 |
 | U2-05 | topic-03.mdx | Types of argument | yuzenker2022 |
 | U2-06 | topic-04.mdx | Identifying premises | bassham2010 |

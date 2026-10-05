@@ -23,7 +23,7 @@ Three are bound below.
 | Key | Citation | URL/DOI | Supports | Kind |
 |---|---|---|---|---|
 | malone2003 | Malone, M. E. (2003). Three recalcitrant problems of argument identification. *Informal Logic, 23*(3). | https://doi.org/10.22329/il.v23i3.2173 | U2-01 (criteria for the presence of an argument), U2-06 (implicit premises), U2-08 (indeterminate cases) | open access (Informal Logic, University of Windsor), Crossref-verified and full text retrieved 2026-10-04 |
-| qin2019 | Qin, J. (2019). Applying the Toulmin model in teaching L2 argumentative writing. *Journal of Language Teaching and Learning, 3*(2), 21-29. | https://doi.org/10.66887/jltl.v3i2.109 | U2-02 (explicit instruction in argument structure), U2-04 (learners' handling of opposing views) | open access, Crossref-verified and abstract retrieved 2026-10-04 |
+| qin2016 | Qin, J. (2016). Applying the Toulmin model in teaching L2 argumentative writing. *Journal of Language Learning and Teaching, 3*(2), 21-29. | https://doi.org/10.66887/jltl.v3i2.109 | U2-02 (explicit instruction in argument structure), U2-04 (learners' handling of opposing views) | open access, Crossref-verified and full text retrieved 2026-10-04 |
 | yuzenker2022 | Yu, S., & Zenker, F. (2022). Identifying linked and convergent argument structures. *Informal Logic, 42*(2), 363-387. | https://doi.org/10.22329/il.v42i1.7133 | U2-05 (describing argument structure before evaluating its strength) | open access (Informal Logic, University of Windsor), Crossref-verified and abstract retrieved 2026-10-04 |
 
 ## Unverifiable sources
