@@ -1648,5 +1648,35 @@
   "term": "Unstated premise",
   "definition_en": "A premise the argument depends on but does not state, usually because it seemed obvious to the writer. It is not concealed; it is simply left unsaid.",
   "definition_ur": "ایک پریمیس جس پر دلیل منحصر ہے مگر اسے بیان نہیں کیا گیا، عموماً اس وجہ سے کہ لکھاری کے لیے یہ واضح تھا۔ یہ چھپا ہوا نہیں ہے؛ صرف ناگفتہ رہ گیا ہے۔"
+ },
+ {
+  "term": "Deductive argument",
+  "definition_en": "An argument that claims its premises, if true, guarantee the conclusion. The conclusion follows necessarily; there is no room for the premises to be true and the conclusion false.",
+  "definition_ur": "ایک دلیل جس کا دعوی ہے کہ اس کی پریمیسز اگر درست ہوں تو نتیجہ یقینی ہے۔ نتیجہ لازمی طور پر آتا ہے؛ پریمیسز درست ہونے اور نتیجہ غلط ہونے کا کوئی راستہ نہیں۔"
+ },
+ {
+  "term": "Inductive argument",
+  "definition_en": "An argument that claims its premises, if true, make the conclusion probable or likely, but do not guarantee it.",
+  "definition_ur": "ایک دلیل جس کا دعوی ہے کہ اس کی پریمیسز اگر درست ہوں تو نتیجہ غالب یا ممکن ہے، مگر یقینی نہیں۔"
+ },
+ {
+  "term": "Validity",
+  "definition_en": "The property of a deductive argument in which the conclusion actually follows from the premises. If the premises were true, the conclusion would have to be true. Validity is about the link between premises and conclusion, not about whether the premises are actually true.",
+  "definition_ur": "اس دلیل کا خاصہ جس میں نتیجہ پریمیسز سے واقعی اخذ ہوتا ہے۔ اگر پریمیسز درست ہوتیں تو نتیج۾ لازما درست ہوتا۔ ولڈٹی پریمیسز اور نتیجے کے لنک کے بارے میں ہے، نہ کہ پریمیسز واقعی درست ہیں۔"
+ },
+ {
+  "term": "Soundness",
+  "definition_en": "The property of a deductive argument that is both valid and has all true premises. A sound argument is one you can rely on to reach a true conclusion.",
+  "definition_ur": "ایک اس دلیل کا خاصہ جو ولڈ ہو اور اس کی تمام پریمیسز درست ہوں۔ ایک سانڈ دلیل وہ ہے جس پر بھروسہ کر کے درست نتیجہ اخذ کیا جا سکتا ہے۔"
+ },
+ {
+  "term": "Strength",
+  "definition_en": "The property of an inductive argument in which the premises actually make the conclusion probable. A strong inductive argument is one where the premises, if true, give the conclusion good support.",
+  "definition_ur": "اس دلیل کا خاصہ جس میں پریمیسز واقعی نتیجے کو غالب بناتی ہیں۔ ایک مضبوط استقرئی دلیل وہ ہے جس میں پریمیسز اگر درست ہوں تو نتیجے کو اچھا ساتھ دیتی ہیں۔"
+ },
+ {
+  "term": "Cogency",
+  "definition_en": "The property of an inductive argument that is both strong and has all true premises. A cogent argument is one you can rely on to reach a probably-true conclusion.",
+  "definition_ur": "ایک اس دلیل کا خاصہ جو مضبوط ہو اور اس کی تمام پریمیسز درست ہوں۔ ایک کوجینٹ دلیل وہ ہے جس پر بھروسہ کر کے غالبا درست نتیجہ اخذ کیا جا سکتا ہے۔"
  }
 ]
