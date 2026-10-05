@@ -14,8 +14,11 @@ has at least one row naming the exact `topic-NN.mdx` its `### Topic list` row as
 |---|---|---|---|
 | U3-01 | topic-01.mdx | Distinguishing deductive from inductive arguments | bassham2010 |
 | U3-02 | topic-02.mdx | Common patterns of deductive reasoning | bassham2010 |
+| U3-02 | topic-02.mdx | Common patterns of deductive reasoning | qin2016 |
 | U3-03 | topic-03.mdx | Common patterns of inductive reasoning | bassham2010 |
+| U3-03 | topic-03.mdx | Common patterns of inductive reasoning | qin2016 |
 | U3-04 | topic-04.mdx | Deductive validity and inductive strength | bassham2010 |
+| U3-04 | topic-04.mdx | Deductive validity and inductive strength | yuzenker2022 |
 
 ## Reinforcement
 
