@@ -1,0 +1,35 @@
+### figure text-geometry overlap measurement - EFMP-302 unit 05 (feat023-r1)
+### method: rendered getBoundingClientRect of every <text> element; pairwise intersection >1.5px in both axes = superposition
+### started: 2026-09-24T16:52:24.535Z
+
+-- fig-U5-1.dark.svg: texts=41 viewBox=880x460 -> clean (wordmark "textbook.com.pk" @[1128.2,746.3])
+-- fig-U5-1.svg: texts=41 viewBox=880x460 -> clean (wordmark "textbook.com.pk" @[1128.2,746.3])
+-- fig-U5-2.dark.svg: texts=27 viewBox=1030x480 -> clean (wordmark "textbook.com.pk" @[1150.4,715.4])
+-- fig-U5-2.svg: texts=27 viewBox=1030x480 -> clean (wordmark "textbook.com.pk" @[1150.4,715.4])
+-- fig-U5-3.dark.svg: texts=24 viewBox=920x470 -> clean (wordmark "textbook.com.pk" @[1134.9,737.9])
+-- fig-U5-3.svg: texts=24 viewBox=920x470 -> clean (wordmark "textbook.com.pk" @[1134.9,737.9])
+-- fig-U5-4.dark.svg: texts=36 viewBox=900x410 -> clean (wordmark "textbook.com.pk" @[1131.7,709.5])
+-- fig-U5-4.svg: texts=36 viewBox=900x410 -> clean (wordmark "textbook.com.pk" @[1131.7,709.5])
+-- fig-U5-5.dark.svg: texts=46 viewBox=900x400 -> clean (wordmark "textbook.com.pk" @[1131.7,702.4])
+-- fig-U5-5.svg: texts=46 viewBox=900x400 -> clean (wordmark "textbook.com.pk" @[1131.7,702.4])
+-- fig-U5-6.dark.svg: texts=22 viewBox=880x470 -> clean (wordmark "textbook.com.pk" @[1128.2,733.2])
+-- fig-U5-6.svg: texts=22 viewBox=880x470 -> clean (wordmark "textbook.com.pk" @[1128.2,733.2])
+-- fig-U5-7.dark.svg: texts=24 viewBox=880x470 -> clean (wordmark "textbook.com.pk" @[1128.2,750.6])
+-- fig-U5-7.svg: texts=24 viewBox=880x470 -> clean (wordmark "textbook.com.pk" @[1128.2,750.6])
+-- fig-U5-8.dark.svg: texts=19 viewBox=900x470 -> clean (wordmark "textbook.com.pk" @[1131.7,743.6])
+-- fig-U5-8.svg: texts=19 viewBox=900x470 -> clean (wordmark "textbook.com.pk" @[1131.7,743.6])
+
+===== ERQ rubric table re-measure at 360px (per references/g3.md) =====
+-- table[0] client=328 scroll=525 tabindex=0 role=region aria="Scrollable table, scroll sideways to see all columns"
+   Strong col before scroll: x 408.2-540.6 fits=false; after scrollLeft=197: x 211.2-343.6 fits=true
+-- table[1] client=328 scroll=521 tabindex=0 role=region aria="Scrollable table, scroll sideways to see all columns"
+   Strong col before scroll: x 389-536.4 fits=false; after scrollLeft=193: x 196-343.4 fits=true
+-- table[2] client=328 scroll=542 tabindex=0 role=region aria="Scrollable table, scroll sideways to see all columns"
+   Strong col before scroll: x 431.5-557.5 fits=false; after scrollLeft=214: x 217.5-343.5 fits=true
+-- table[3] client=328 scroll=514 tabindex=0 role=region aria="Scrollable table, scroll sideways to see all columns"
+   Strong col before scroll: x 397.5-529.1 fits=false; after scrollLeft=186: x 211.5-343.1 fits=true
+-- table[4] client=328 scroll=473 tabindex=0 role=region aria="Scrollable table, scroll sideways to see all columns"
+   Strong col before scroll: x 356.4-488.7 fits=false; after scrollLeft=145: x 211.4-343.7 fits=true
+
+### finished: 2026-09-24T16:52:35.204Z
+### text-overlap pairs + wordmark collisions: 0; hard defects: 0
