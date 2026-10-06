@@ -53,7 +53,10 @@ Three tiers, derived from the tracker, not authored:
 1. **Publication authority is not self-granted.** Art. VII.1 does not delegate publication.
    Publishing under `gated` requires a standing owner authorisation recorded in
    `specs/decisions/log.md` naming the courses it covers. Without that clause the plumbing would
-   authorise ~90 publications by itself.
+   authorise ~90 publications by itself. **Amended 2026-10-06 by `D-2026-0045`:** publication
+   authority for QC-cleared content (§2a checklist A–F on the TEX-4 roadmap) is delegated to the
+   CEO, who records clearance on the issue and moves the tracker row. This is an additional
+   delegation alongside `D-2026-0014`, not a replacement.
 2. **A broken claim of review is worse than no claim.** A G3 row that is *present* but whose
    evidence does not validate remains a gate failure. Only the *absence* of review is permitted.
 3. **The notice is the whole mitigation, so it fails loud.** A missing, malformed or stale status
@@ -69,7 +72,10 @@ Three tiers, derived from the tracker, not authored:
 **This provision covers the build-out of the 15 catalogued courses and nothing beyond it.** When
 those courses are authored, the owner decides explicitly whether to keep, narrow or withdraw it.
 A unit that is still `gated` at that point is reviewed or withdrawn; it does not become permanent
-by default.
+by default. **Superseded 2026-10-06 by `D-2026-0045`:** the board's instruction (TEX-26) makes
+the machine-authored disclaimer **permanent and intentional**. A `gated` unit stays published under
+that disclaimer at the build-out boundary; it is not reviewed or withdrawn by default. `D-2026-0045`
+records the full rule.
 
 ## Alternatives considered
 
