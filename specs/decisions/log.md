@@ -22,6 +22,9 @@ Recorded here so the boundary stays visible as the log grows:
   is a question about the world, not the repository. These continue to escalate via
   `specs/gaps.md`.
 - **Publication authority** (Constitution Art. VII.1) and **reviewer qualification** (Art. VII.5).
+  - *Amended 2026-10-06 by `D-2026-0045`:* publication authority **is** delegated to the CEO
+    for QC-cleared content (§2a checklist A–F on the TEX-4 roadmap). Reviewer qualification
+    remains undelegated.
 - Anything an evaluator marks as not determined by the course guide.
 
 ---
@@ -1999,3 +2002,43 @@ Recorded here so the boundary stays visible as the log grows:
     should land with it or before authoring Units 2-12 begins.
   - Does not approve any unit's English review (G3) or Urdu translation (G5). Certifies no
     content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
+
+---
+
+## D-2026-0045 — CEO publication authority under the permanent machine-authored disclaimer
+
+- **Status:** pending-owner-review
+- **Gate:** G7 (publish), ADR-0026 §1 supersession
+- **Scope:** all courses and units that satisfy the §2a QC clearance checklist on [TEX-4
+  roadmap](/TEX/issues/TEX-4#document-roadmap), revision 6. Supersedes ADR-0026 §1 for the
+  build-out; does not narrow `D-2026-0014` (the owner's standing authorisation for the 15
+  catalogued courses), it adds a second publication path alongside it.
+- **Decided by:** board instruction, 2026-10-04 (TEX-26), recorded by CEO 2026-10-06
+- **Decision:**
+  1. **The reader-facing notice is permanent and intentional**, not a defect. Every
+     machine-authored page carries it by design; it has no exit date, and no work item is
+     justified by "removing the banner". A unit whose deterministic gates pass is published
+     under that notice, and a passing agent review (`provisional`) refines the notice, but
+     neither review tier is a publication precondition. A `gated` unit does **not** get
+     reviewed or withdrawn at the build-out boundary — it stays published under the
+     disclaimer. This replaces ADR-0026's exit condition ("reviewed or withdrawn; it does
+     not become permanent by default").
+  2. **Publication authority for QC-cleared content is delegated to the CEO.** The CEO
+     records the clearance on the issue once the §2a checklist (A–F) is satisfied, and the
+     tracker row moves to the tier the evidence supports. This is an additional delegation
+     on top of `D-2026-0014`, which remains the owner's standing authorisation. The CEO
+     does not certify content, qualify any reviewer, or waive any Art. VI.1 obligation.
+- **Basis:** Board instruction (TEX-26): "The banner / 'no reviewer has read it yet' is NOT
+  a status bug to fix. It is our intentional disclaimer to the reader that the content is
+  machine-authored and they can give feedback for errors and omissions. The CEO publishes a
+  course/unit/topic once QC checks are clear." The notice is described as "the whole
+  mitigation" in ADR-0026 §3; the board has confirmed it is also permanent. `D-2026-0014`
+  authorises the 15 catalogued courses; this decision authorises the CEO to publish any
+  QC-cleared unit without a per-unit owner sign-off.
+- **Applied in:** TEX-4 roadmap revision 6 (§5.1), TEX-27 (EFMP-302 U3/U4/U5 at
+  `provisional`), and every future QC-cleared publication.
+- **Limits:** Publishes only units that satisfy the §2a QC clearance checklist. Does not
+  certify, qualify, or waive Art. VI.1. Narrowed automatically when `D-2026-0014` lapses
+  (when the 15 catalogued courses are authored).
+- **Amends:** ADR-0026 §1 (publication authority delegation) and ADR-0026's exit condition
+  (gated units stay gated permanently under the disclaimer).
