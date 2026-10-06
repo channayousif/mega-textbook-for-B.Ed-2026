@@ -111,7 +111,6 @@ does not state, and a figure teaching the wrong answer to its own MCQ 8). Both w
 `38d8e7f`. Its remaining 14 advisories carry to the improvement loop.
 
 Re-reviewing would be cycle 8, which `D-2026-0005` reserves to an explicit owner decision.
-| Unit 5 | G3 en-review | 🟡 | agent:66f69806-3ec6-4df3-af92-5b0235e295ce | provisional:specs/content/efmp-302/reviews/unit-05/G3/AGY_CONVERSATION_ID.json |
 
 ## Note - TEX-27 QC clearance of Units 3, 4 and 5 (2026-10-04): not cleared
 
@@ -133,3 +132,16 @@ Two different causes, needing two different remedies:
   `D-2026-0017` reasoning. Escalated structurally as `G-2026-71`.
 
 Criteria A, B, D, E and F all passed; the per-criterion record is in `D-2026-0046`.
+
+## Note - provisional rows from #103 / #105 withdrawn (2026-10-06)
+
+#103 (TEX-29) and #105 (TEX-31) each added a `🟡` provisional G3 row, for Units 3 and 5, backed
+by a report named `AGY_CONVERSATION_ID.json`. Both reports carry that unfilled template token as
+`reviewer_run_id` and identical `started_at` / `completed_at` stamps, so neither shows that an
+independent reviewer session ran. `D-2026-0046` item 2 requires exactly that for the Unit 5
+cycle. Both rows are withdrawn and both reports stay on record. `acceptProvisionalReport` now
+refuses bare `*_ID` template tokens and zero-duration reviews.
+
+- **Unit 3** still needs the fresh G3 cycle under `G-2026-70`.
+- **Unit 5**'s additional cycle granted by `D-2026-0046` is **still owed**: #105 does not
+  discharge it, because independence was not shown.
