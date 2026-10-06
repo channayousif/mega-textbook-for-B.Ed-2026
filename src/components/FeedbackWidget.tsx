@@ -60,14 +60,14 @@ export default function FeedbackWidget() {
 
   if (submittedHelpful === true || commentSubmitted) {
     return (
-      <div style={{ marginTop: '2rem', padding: '1rem', border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '8px', textAlign: 'center' }}>
+      <div id="feedback-widget" style={{ marginTop: '2rem', padding: '1rem', border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '8px', textAlign: 'center' }}>
         <p style={{ margin: 0, fontWeight: 'bold' }}>{textThanks}</p>
       </div>
     );
   }
 
   return (
-    <div style={{ marginTop: '2rem', padding: '1.5rem', border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '8px' }}>
+    <div id="feedback-widget" style={{ marginTop: '2rem', padding: '1.5rem', border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '8px' }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
         <span style={{ fontWeight: 'bold', fontSize: '1.1rem' }}>{textQuestion}</span>
         <div style={{ display: 'flex', gap: '0.5rem' }}>

@@ -23,15 +23,23 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 type Tier = 'gated' | 'provisional';
 
-const MESSAGES: Record<Tier, { label: Record<'en' | 'ur', string>; body: Record<'en' | 'ur', string> }> = {
+const MESSAGES: Record<Tier, { label: Record<'en' | 'ur', string>; body: Record<'en' | 'ur', React.ReactNode> }> = {
   gated: {
     label: {
       en: 'Draft - expert review pending',
       ur: 'مسودہ - ماہرانہ نظرثانی باقی ہے',
     },
     body: {
-      en: 'This unit is complete and passes the platform\u2019s automated checks, but no reviewer has read it yet. Treat its sources and claims with care. Please use the feedback form at the bottom of the page to report any errors.',
-      ur: 'یہ یونٹ مکمل ہے اور خودکار جانچ سے گزر چکا ہے، لیکن ابھی کسی ماہر نے اسے نہیں پڑھا۔ اس کے حوالہ جات اور دعووں کو احتیاط سے لیں۔ براہ کرم کسی بھی غلطی کی نشاندہی کے لیے صفحے کے آخر میں موجود فیڈبیک فارم استعمال کریں۔',
+      en: (
+        <>
+          Note: This unit is complete and passes the platform’s automated checks, but it is not reviewed yet. So, treat its sources and claims with care. You are encouraged to <a href="#feedback-widget">report errors and provide feedback</a>.
+        </>
+      ),
+      ur: (
+        <>
+          نوٹ: یہ یونٹ مکمل ہے اور پلیٹ فارم کی خودکار جانچ سے گزر چکا ہے، لیکن ابھی اس پر نظرثانی نہیں کی گئی۔ اس لیے اس کے ذرائع اور دعووں کو احتیاط سے لیں۔ ہم آپ کی حوصلہ افزائی کرتے ہیں کہ <a href="#feedback-widget">غلطیوں کی نشاندہی کریں اور اپنی رائے دیں</a>۔
+        </>
+      ),
     },
   },
   provisional: {
@@ -40,8 +48,16 @@ const MESSAGES: Record<Tier, { label: Record<'en' | 'ur', string>; body: Record<
       ur: 'حتمی نظرثانی باقی ہے',
     },
     body: {
-      en: 'This unit has passed an independent automated review and is published for use. A final human review is still outstanding, so treat its details as provisional. Please use the feedback form at the bottom of the page to report any errors.',
-      ur: 'یہ یونٹ ایک خودکار آزاد جائزے سے گزر چکا ہے اور استعمال کے لیے شائع کیا گیا ہے۔ حتمی انسانی نظرثانی ابھی باقی ہے، اس لیے اس کی تفصیلات کو عارضی سمجھیں۔ براہ کرم کسی بھی غلطی کی نشاندہی کے لیے صفحے کے آخر میں موجود فیڈبیک فارم استعمال کریں۔',
+      en: (
+        <>
+          This unit has passed an independent automated review and is published for use. A final human review is still outstanding, so treat its details as provisional. Please use the <a href="#feedback-widget">feedback form at the bottom of the page</a> to report any errors.
+        </>
+      ),
+      ur: (
+        <>
+          یہ یونٹ ایک خودکار آزاد جائزے سے گزر چکا ہے اور استعمال کے لیے شائع کیا گیا ہے۔ حتمی انسانی نظرثانی ابھی باقی ہے، اس لیے اس کی تفصیلات کو عارضی سمجھیں۔ براہ کرم کسی بھی غلطی کی نشاندہی کے لیے صفحے کے آخر میں موجود <a href="#feedback-widget">فیڈبیک فارم</a> استعمال کریں۔
+        </>
+      ),
     },
   },
 };
