@@ -61,3 +61,4 @@ all accepted. go on
 - Local checkout reset is pending the #111 merge: `backup/38f64a91` branch, then `git reset --keep origin/main`.
 - The owner chose an admin merge of #111 (a review approval was required). Merged as 14da9b6d.
 - Local checkout: `backup/38f64a91` created, then `git reset --keep origin/main`. The README.md edit and untracked files were kept.
+- Root cause of the placeholder (outside the repo): `~/org/textbook/roles/reviewer-agy.md` had agy write the token `AGY_CONVERSATION_ID`, and `~/bin/paperclip-agy.sh` replaced it only after agy had already committed and pushed. Fixed with owner approval (.bak-20261006 backups). Reports now carry `reviewer_run_id: paperclip-run:<PAPERCLIP_RUN_ID>`, a wrapper-supplied `started_at`, a real `completed_at`, and run-named files. The wrapper fails the heartbeat (exit 5) if a review file written during the run still holds a placeholder. The role file also forbids tracker edits.
