@@ -204,6 +204,26 @@ test('provisional acceptance refuses placeholder run identities', (t) => {
   assert.throws(() => acceptProvisionalReport(f.root, path), /placeholder/);
 });
 
+test('provisional acceptance refuses unfilled template run identities', (t) => {
+  const f = fixture(t);
+  for (const id of ['AGY_CONVERSATION_ID', 'RUN_ID', 'REVIEWER_RUN_ID']) {
+    const path = unsigned(f, { reviewer_run_id: id }, `specs/content/efmp-301/reviews/unit-01/G3/tpl-${id}.json`);
+    assert.throws(() => acceptProvisionalReport(f.root, path), /placeholder/);
+  }
+  // Real identity shapes stay accepted.
+  for (const id of ['3f2b9c1e-7a4d-4e2a-9b1c-0d8e6f5a4b3c', 'commit:bb21d67', 'agent:g3-reviewer-run-42']) {
+    const path = unsigned(f, { reviewer_run_id: id }, `specs/content/efmp-301/reviews/unit-01/G3/ok-${id.replace(/[^a-z0-9]/gi, '')}.json`);
+    assert.doesNotThrow(() => acceptProvisionalReport(f.root, path));
+  }
+});
+
+test('provisional acceptance refuses a zero-duration review', (t) => {
+  const f = fixture(t);
+  const path = unsigned(f, { started_at: '2026-10-04T21:38:05.923Z', completed_at: '2026-10-04T21:38:05.923Z' });
+  assert.doesNotThrow(() => validateReport(f.root, JSON.parse(readFileSync(join(f.root, path)))));
+  assert.throws(() => acceptProvisionalReport(f.root, path), /zero-duration/);
+});
+
 test('provisional acceptance goes stale when the reviewed content changes', (t) => {
   const f = fixture(t);
   const path = unsigned(f);

@@ -13,42 +13,42 @@ on every unit).
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0042; content-spec status: approved |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-01/G2/20260926T113935136Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-01/G2/20261006T182223539Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 93e6321; report reviews/unit-01/G3/agent-g3-gqur300-u1-run001.json |
 | Unit 1 | G4 ur-translation | ▢ | | full Urdu mirror required (bilingual: true) |
 | Unit 1 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at 2222688; G3 dependency escalated to owner; report reviews/unit-01/G5/agent-g5-gqur300-u1-run001.json |
 | Unit 1 | G6 assets | ▢ | | |
 | Unit 1 | G7 publish | ▢ | | |
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0042; content-spec status: approved |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-02/G2/20260926T113938690Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-02/G2/20261006T182228262Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 93e6321; report reviews/unit-02/G3/agent-g3-gqur300-u2-run001.json |
 | Unit 2 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 2 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at c61192e; G3 dependency escalated to owner; report reviews/unit-02/G5/agent-g5-gqur300-u2-run001.json |
 | Unit 2 | G6 assets | ▢ | | |
 | Unit 2 | G7 publish | ▢ | | |
 | Unit 3 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0042; content-spec status: approved |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-03/G2/20260926T113942507Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-03/G2/20261006T182232968Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 78f0366; gap G-2026-29 open; report reviews/unit-03/G3/agent-g3-gqur300-u3-run001.json |
 | Unit 3 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 3 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at 451a1f8; terminology rulings escalated to owner; report reviews/unit-03/G5/agent-g5-gqur300-u3-run001.json |
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
 | Unit 4 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0042; content-spec status: approved |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-04/G2/20260926T113945908Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-04/G2/20261006T182238162Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 78f0366; report reviews/unit-04/G3/agent-g3-gqur300-u4-run001.json |
 | Unit 4 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 4 | G5 ur-review | ▢ | | advisory run001: revise (report binds 59faad3; a later concurrent commit changed one non-cited input); repairs applied at 1b191de; report reviews/unit-04/G5/agent-g5-gqur300-u4-run001.json |
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
 | Unit 5 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0042; content-spec status: approved |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-05/G2/20260926T113949514Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-05/G2/20261006T182242965Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 2d5cd6a; report reviews/unit-05/G3/agent-g3-gqur300-u5-run001.json |
 | Unit 5 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 5 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at 2af6a00; G3 dependency escalated (G-2026-30); report reviews/unit-05/G5/agent-g5-gqur300-u5-run001.json |
 | Unit 5 | G6 assets | ▢ | | |
 | Unit 5 | G7 publish | ▢ | | |
 | Unit 6 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0042; content-spec status: approved |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-06/G2/20260926T113953105Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-06/G2/20261006T182248032Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 2d5cd6a; report reviews/unit-06/G3/agent-g3-gqur300-u6-run001.json |
 | Unit 6 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 6 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at 4725d17; G3 dependency escalated (G-2026-30); report reviews/unit-06/G5/agent-g5-gqur300-u6-run001.json |

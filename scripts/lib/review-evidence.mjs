@@ -488,9 +488,16 @@ export function acceptProvisionalReport(root, path, expected = {}) {
   // "UNSUPPLIED-parent-did-not-provide-author-run-identity". A stub where the
   // author identity belongs means nobody established independence, so it cannot
   // carry a provisional publication.
+  // Unfilled template tokens count too: `AGY_CONVERSATION_ID` reached two tracker
+  // rows (EFMP-302 U3/U5, #103/#105) because only the words above were refused.
+  // Real identities are UUIDs, `commit:<sha>` or `agent:<id>`, never a bare
+  // upper-case `*_ID` token.
   for (const key of ['author_run_id', 'reviewer_run_id']) {
-    requireValue(!/UNSUPPLIED|UNKNOWN|TODO|PLACEHOLDER|^n\/a$/i.test(report[key]), `${key} is a placeholder, not a real run identity`);
+    requireValue(!/UNSUPPLIED|UNKNOWN|TODO|PLACEHOLDER|^n\/a$/i.test(report[key]) && !/^[A-Z][A-Z0-9_]*_ID$/.test(report[key]), `${key} is a placeholder, not a real run identity`);
   }
+  // A review is a session, so it has a duration. `validateReport` allows equal
+  // timestamps; a provisional pass with none is a stamped template, not a run.
+  requireValue(Date.parse(report.completed_at) > Date.parse(report.started_at), 'zero-duration review is not a real run');
   if (report.stage === 'G5') {
     requireValue(typeof report.g3_report === 'string', 'G5 requires G3 report');
     acceptProvisionalReport(root, report.g3_report, { course_code: report.course_code, unit_no: report.unit_no, stage: 'G3' });
