@@ -1526,6 +1526,63 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   that would need a page-keyed (not unit-keyed) assignment target, which is a later spec.
 - **Blocks:** nothing in Feature 024.
 
+---
+
+## G-2026-70 - EFMP-302: fifteen illustrations were inserted into three already-reviewed units, and no reviewer has seen any of them
+
+- **Status:** open
+- **Gate:** G3 English review (freshness, Art. VII.4); publication tier
+- **Source:** TEX-27 QC clearance of Units 3, 4 and 5, 2026-10-04 (`D-2026-0046`); commit
+  `08ac3ff1` "feat(figures): Gemini illustrations for EFMP-302 Units 2-4 (15 images)"
+- **Question:** `08ac3ff1` added five raster illustrations to Unit 2, six to Unit 3
+  (`fig-U3-11` to `fig-U3-16`) and four to Unit 4 (`fig-U4-9` to `fig-U4-12`), editing
+  `index.mdx` and every affected topic file to carry them. Units 3 and 4 had already returned a
+  **passing** feature-023 G3. The insertion is therefore post-review content change: it
+  invalidates both G3 manifests (`stale or incomplete input manifest`, measured at `71dfa698`)
+  and it puts learner-facing images into published units that **no independent reviewer has ever
+  looked at**. The curriculum owner inspected all ten of the Unit 3 and Unit 4 images on
+  2026-10-04 and found no map, flag, emblem or implausibly non-Sindh classroom, with one
+  advisory fidelity drift (`fig-U4-12` places the teacher at the front where its prompt says the
+  back). That inspection is the owner's own and is not independent review. ADR-0029 authorises
+  Claude to produce and inspect rasters; it does not make a produced raster reviewed, and nothing
+  in the gate set can read an illustration for pedagogical meaning.
+- **Needed, and from whom:** the curriculum owner, to commission one fresh G3 cycle per unit over
+  the current bytes (`D-2026-0046` item 3 does this for Units 3 and 4; Unit 2's G3 is separately
+  open under `G-2026-63`). More generally: a rule that inserting a figure into a unit whose G3
+  has passed re-opens that G3, stated where the figure skills can see it, so this does not recur
+  silently on the remaining ~84 units.
+- **Blocks:** the `provisional` publication tier for EFMP-302 Units 3 and 4. Nothing in the
+  automated gates - every content gate is green on the inserted images.
+
+---
+
+## G-2026-71 - A licence-track feature invalidated EFMP-302's review evidence; ADR-0027's narrowing is incomplete
+
+- **Status:** open
+- **Gate:** G3/G5 evidence binding (`manifestRoots()` in `scripts/lib/review-evidence.mjs`)
+- **Source:** TEX-27 QC clearance of Unit 5, 2026-10-04 (`D-2026-0046`); commit `cac3204c`
+  "feat(licence): Feature 024 platform - licence track as a code-free STEDA topic list"
+- **Question:** EFMP-302 Unit 5's passing feature-023 G3 no longer validates, and the entire
+  cause is `cac3204c`: it changed `catalog/courses.json`, `scripts/lib/gates.mjs`,
+  `scripts/lib/content-roots.mjs` and `scripts/check-no-answer-keys.mjs`, and added
+  `contracts/licence-page.schema.json`. Zero bound paths were removed and **zero content paths
+  changed** - the English bytes the reviewer read are byte-identical today. This is `G-2026-18`
+  and `D-2026-0017` recurring with a third distinct trigger. ADR-0027 narrowed the bound set to
+  stop per-unit churn and left the cross-feature class untouched: a feature that adds a new
+  content *track* has no bearing on whether an EFMP-302 English unit was reviewed well, yet it
+  voids every outstanding review in the repository. At ninety units with fourteen courses still
+  to author, this is the dominant cost of holding review evidence at all.
+- **Needed, and from whom:** the owner and [WebLeadAgy](/TEX/agents/weblead), to decide whether
+  `manifestRoots()` should bind `catalog/courses.json`, `contracts/` and the gate-script closure
+  whole, or only the slices a given course's review could rest on. Any narrowing is an amendment
+  to ADR-0027 and a change to a bound script, so it is Tier A and it re-invalidates every
+  outstanding manifest once, by design. Until it is decided, each recurrence costs one review
+  cycle per affected unit (`D-2026-0046` item 2 spends one on Unit 5).
+- **Blocks:** the `provisional` tier for EFMP-302 Unit 5 until its granted cycle runs. Nothing in
+  the automated gates.
+
+---
+
 ## EFMP-302 Unit 4 (TEX-30) - fig-U4-12 raster illustration contradicts prompt
 
 **Status:** `open`

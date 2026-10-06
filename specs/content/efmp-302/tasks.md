@@ -113,3 +113,24 @@ does not state, and a figure teaching the wrong answer to its own MCQ 8). Both w
 
 Re-reviewing would be cycle 8, which `D-2026-0005` reserves to an explicit owner decision.
 | Unit 5 | G3 en-review | 🟡 | agent:66f69806-3ec6-4df3-af92-5b0235e295ce | provisional:specs/content/efmp-302/reviews/unit-05/G3/AGY_CONVERSATION_ID.json |
+
+## Note - TEX-27 QC clearance of Units 3, 4 and 5 (2026-10-04): not cleared
+
+The CEO authorisation on TEX-26 to publish these three units at `provisional` was conditional on
+the roadmap section 2a QC checklist. **Criterion C failed for all three**, so no row below was
+edited and all three stay in the gate-checked tier. Full record: `D-2026-0046`.
+
+`acceptProvisionalReport()` run at `71dfa698` against the three feature-023 G3 reports returns
+`stale or incomplete input manifest` for each. Under ADR-0026 §2 a present-but-invalid G3 row is
+a gate failure, so writing the `🟡` row would have turned `check:pipeline-gate` red.
+
+Two different causes, needing two different remedies:
+
+- **Units 3 and 4** - `08ac3ff1` inserted six (U3) and four (U4) raster illustrations into prose
+  that had already passed G3. The English bytes changed after the review, so each needs a **fresh
+  G3 cycle over its current bytes** before any tier claim. Escalated as `G-2026-70`.
+- **Unit 5** - zero content paths changed. The sole invalidating commit is `cac3204c`, the
+  licence-track feature. `D-2026-0046` grants Unit 5 **one additional G3 cycle** on the
+  `D-2026-0017` reasoning. Escalated structurally as `G-2026-71`.
+
+Criteria A, B, D, E and F all passed; the per-criterion record is in `D-2026-0046`.

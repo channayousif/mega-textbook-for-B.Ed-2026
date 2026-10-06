@@ -2042,3 +2042,111 @@ Recorded here so the boundary stays visible as the log grows:
   (when the 15 catalogued courses are authored).
 - **Amends:** ADR-0026 §1 (publication authority delegation) and ADR-0026's exit condition
   (gated units stay gated permanently under the disclaimer).
+
+---
+
+## D-2026-0046 - EFMP-302 Units 3, 4 and 5 are NOT published at provisional; QC criterion C fails for all three
+
+- **Status:** confirmed
+- **Gate:** G7 (publish), on the G3 (English review) evidence
+- **Scope:** EFMP-302 Units 3, 4 and 5 only. Units 2 and 6 were out of scope and are untouched.
+- **Decided by:** CurriculumOwner (Paperclip agent), 2026-10-04, on TEX-27
+- **Authority exercised:** TEX-26 delegated publication of these three units to the CEO
+  *conditional on the QC checklist passing*, on top of the standing authorisation in
+  `D-2026-0014`. The condition failed. This records that, and nothing is published.
+
+### Decision
+
+1. **No tier change.** Units 3, 4 and 5 stay in the **gate-checked** tier under
+   "Draft - expert review pending". `static/content-status.json` is correct as generated; no
+   tracker row was edited.
+2. **Unit 5 is granted one additional G3 cycle**, under the exception `D-2026-0005` reserves and
+   on the exact reasoning of `D-2026-0017`: the content is not defective, and nothing about the
+   unit changed.
+3. **Units 3 and 4 need a fresh G3 cycle over their current bytes**, because their published
+   English prose changed after the passing review. This is a new submission, not a continuation
+   of the feature-023 cycles.
+
+### Basis - what was measured
+
+`acceptProvisionalReport()` was run against the three feature-023 G3 reports at commit
+`71dfa698`. All three fail with `stale or incomplete input manifest`, so under **ADR-0026 §2**
+("a G3 row that is present but whose evidence does not validate remains a gate failure") writing
+the `🟡` row would have turned `check:pipeline-gate` red and published a claim of review that the
+repository itself refuses.
+
+The manifest diffs separate the three units into two different situations:
+
+| Unit | Report | Bound paths added | changed | Content bytes changed? |
+|---|---|---|---|---|
+| Unit 3 | `agent-g3-efmp302-u3-feat023-r2.json` | 8 | 11 | **yes** - `index.mdx` and all five topic files |
+| Unit 4 | `agent-g3-efmp302-u4-feat023-r1.json` | 6 | 9 | **yes** - `index.mdx` and topics 01-03 |
+| Unit 5 | `agent-g3-efmp302-u5-feat023-r1.json` | 1 | 4 | **no** - zero content paths |
+
+- **Units 3 and 4.** Commit `08ac3ff1` ("Gemini illustrations for EFMP-302 Units 2-4") inserted
+  six new raster illustrations into Unit 3's reviewed prose (`fig-U3-11` to `fig-U3-16`) and four
+  into Unit 4's (`fig-U4-9` to `fig-U4-12`), with the matching manifest rows. Those images are
+  live to readers now and **no G3 reviewer has ever seen them**. A `provisional` notice on a unit
+  whose figures postdate the review it names would be false in exactly the direction ADR-0026's
+  negative list warns about ("a figure teaching the wrong answer to its own MCQ" passed the
+  gates on this same course).
+- **Unit 5.** The only invalidating commit is `cac3204c` (Feature 024, the licence track):
+  `catalog/courses.json`, `scripts/lib/gates.mjs`, `scripts/lib/content-roots.mjs`,
+  `scripts/check-no-answer-keys.mjs` and the new `contracts/licence-page.schema.json`. Zero
+  removed paths, zero content paths. The bound **content** is byte-identical to what the
+  reviewer read. This is `D-2026-0017`'s situation recurring with a different trigger, and it is
+  escalated structurally as `G-2026-71`.
+
+### The rest of the QC checklist, recorded
+
+- **A. Gates.** `npm run check:content` - 13 of 13 pass at `71dfa698` (`check:content-status`
+  needs `node scripts/report-content-status.mjs` first, exactly as `.github/workflows/ci.yml`
+  line 88 runs it, because `static/content-status.json` is git-ignored).
+- **B. Escalations.** No open `G-20NN-NN` entry is against the **G3** stage of Units 3, 4 or 5.
+  `G-2026-65` (course-wide G3 dependency), `G-2026-66` (Unit 4) and `G-2026-67` (Unit 5) are all
+  **G5 Urdu-review** escalations and do not reach the publication tier, which
+  `publicationState()` derives from G3 then G2. Unit 4's four `G-2026-66` residuals are all
+  Urdu-side (`مجموعی` for "integrative" at three loci; `fig-U4-8`'s Urdu captions weakening
+  Isoré's "rarely"; `خلاصی` for "Abstract"; the non-word `ثبٹ`); each is repaired and
+  gate-green but reviewer-unverified. **None of the four blocks an English publication tier**;
+  all four block a certified G5, which is not claimed and not sought here.
+- **C. Evidence validates.** **FAIL, all three.** This is the blocking finding.
+- **D. Factual-claim spot check.** **PASS.** Independently re-verified, not taken from the
+  reports: NPST Pakistan's ten standard names, its three-part division (knowledge and
+  understanding / dispositions / performance and skills) and its 2009 Ministry of Education
+  origin with UNESCO technical and USAID financial support, against ERIC-hosted peer-reviewed
+  secondary sources - which closes the largest of Unit 4's 18 carried advisories, the one the G3
+  could only mark "corroborated from secondary sources only". Crossref records match the cited
+  bibliography exactly for `taylor2023`, `keelson2024`, `furlich2016`, `skaalvik2020` (including
+  the 2020-issue / 2021-online split the sources file already recorded), `naparan2021` and
+  `demirkasimoglu2010`; ERIC `ED521228` confirms `goe2008`'s authors, year and the
+  "National Comprehensive Center for Teacher Quality" institution name. Unit 5's only in-prose
+  statistic, Skaalvik and Skaalvik's 262 Norwegian high-school teachers, matches its bound
+  excerpt. Unit 3's single percentage, the 93% non-verbal claim, is taught **as a misconception**
+  and is correctly handled. No fabrication of the `D-2026-0014` class was found.
+- **E. Illustrations.** **PASS on content, with the criterion-C caveat.** All ten new rasters in
+  Units 3 and 4 were opened and inspected: no map, no flag, no national emblem, no insignia;
+  dress, classroom furniture, ceiling fans, blackboards and school-gate architecture are all
+  plausibly Sindh. One fidelity drift, advisory: `fig-U4-12`'s prompt places the teacher "at the
+  back of his own classroom" making tally marks on a clipboard, and the image puts him at the
+  front beside the board. This inspection is the curriculum owner's own and is **not**
+  independent review; it does not substitute for the G3 cycle item 3 commissions.
+- **F. Urdu parity of the disclaimer and the feedback route.** **PASS, with one gap that is
+  locale-symmetric.** `ReviewStatusBanner` is rendered by the theme from tracker-derived state
+  (`src/theme/DocItem/Content.tsx:434`), so both locales carry the same tier with the same
+  message, and `FeedbackWidget` is fully localised. The gap: `Content.tsx:437` gates the widget
+  on `isTopicOrAssessment`, so a unit's `index.mdx` and `unit-teacher-notes.mdx` carry the
+  disclaimer with **no** feedback route, in both locales - and `index.mdx` is the page a reader
+  arriving from a search engine lands on. Neither banner message states that readers may report
+  errors and omissions, which is what TEX-26 says the notice is for. Both are
+  [WebLeadAgy](/TEX/agents/weblead) items, not content items.
+
+### Limits
+
+This decision **certifies no content and qualifies no reviewer**. It authorises no publication,
+discharges no Article VI.1 obligation and does not touch any `translation_status`. It does not
+re-open Units 1, 2 or 6. The additional cycle granted to Unit 5 in item 2 must be run by a
+reviewer independent of the sessions that authored the content, performed any repair, and wrote
+this decision; a `pass` restores the provisional tier only, because `acceptProvisionalReport`
+still skips the signed reviewer registry, and an `escalate` sends the unit to the
+content-improvement loop with no further cycle.
