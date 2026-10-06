@@ -1613,5 +1613,70 @@
   "term": "Guidance and Counseling",
   "definition_en": "Guidance is information and direction toward a choice; counseling is a skilled relationship aimed at understanding. Both are distinct from teaching, and the teacher holds only the first line of each.",
   "definition_ur": "رہنمائی کسی انتخاب کی طرف معلومات اور رخ ہے؛ مشاورت فہم کا مقصد رکھنے والا مہارت والا رشتہ ہے۔ دونوں تدریس سے الگ ہیں، اور استاد صرف ہر ایک کی پہلی صف سنبھالتا ہے۔"
+ },
+ {
+  "term": "Conclusion",
+  "definition_en": "The statement that the premises of an argument are offered to support. It is what the argument is trying to get the audience to accept.",
+  "definition_ur": "وہ بیان جس کی طرف دلائل دیے جاتے ہیں۔ یہ وہ بات ہے جس کا ارگ نے سننے والے کمنے قبول کرنے کی کوشش کی ہے۔"
+ },
+ {
+  "term": "Explanation",
+  "definition_en": "A passage that offers reasons to make you understand something both sides already accept. It is judged by whether it is true and illuminating, not by whether its reasons support a disputed conclusion.",
+  "definition_ur": "وہ عبور جو کوئی ایسی بات سمجھنے میں مدد دے جسے دونوں فریق پہلے ہیں تسلیم کر چکے ہیں۔ اس کا اندازا اس کی حقیقت اور وضاحت سے ہوتا ہے، نہ کہ اس کے دلائل کسی متزلزل نتیجے کا ساتھ دیتے ہیں۔"
+ },
+ {
+  "term": "Information question",
+  "definition_en": "A question that has a single verifiable answer established by looking, counting, measuring or checking a record. No argument is needed to settle it.",
+  "definition_ur": "ایک سوال جس کا جواب دیکھ کر، گن کر، ناپ کر یا ریکارد چیک کر کے تصدیق کیا جا سکتا ہے۔ اس کا فیصلہ کرنے کے لیے کسی دلیل کی ضرورت نہیں ہوتی۔"
+ },
+ {
+  "term": "Issue question",
+  "definition_en": "A question that admits more than one reasonable answer and requires reasoning rather than retrieval to settle. An argument is needed.",
+  "definition_ur": "ایک سوال جس کے ایک سے زیادہ معقول جواب ممکن ہوں اور جس کا فیصلہ تلاش کی بجانئے استدلال کا عمل درکار ہو۔ ایک دلیل ضروری ہے۔"
+ },
+ {
+  "term": "Premise",
+  "definition_en": "A statement offered in support of the conclusion of an argument. An argument can have one or many premises.",
+  "definition_ur": "ایک بیان جو کسی دلیل کے نتیجے کی حمایت میں دیا گیا ہو۔ ایک دلیل میں ایک یا زیادہ پریمیس ہو سکتی ہے۔"
+ },
+ {
+  "term": "Rhetorical triangle",
+  "definition_en": "A model of communication with three corners: speaker, audience and subject. The same message takes a different shape depending on which corner moves.",
+  "definition_ur": "روابط کا ایک ماڈل جس کے تین کونے ہیں: خطیب، سامنے والا اور موضوع۔ ایک جیسے پیغام کی شکل وہ کونے جو بدلتا ہے اس کے لحاظ سے بدل جاتی ہے۔"
+ },
+ {
+  "term": "Unstated premise",
+  "definition_en": "A premise the argument depends on but does not state, usually because it seemed obvious to the writer. It is not concealed; it is simply left unsaid.",
+  "definition_ur": "ایک پریمیس جس پر دلیل منحصر ہے مگر اسے بیان نہیں کیا گیا، عموماً اس وجہ سے کہ لکھاری کے لیے یہ واضح تھا۔ یہ چھپا ہوا نہیں ہے؛ صرف ناگفتہ رہ گیا ہے۔"
+ },
+ {
+  "term": "Deductive argument",
+  "definition_en": "An argument that claims its premises, if true, guarantee the conclusion. The conclusion follows necessarily; there is no room for the premises to be true and the conclusion false.",
+  "definition_ur": "ایک دلیل جس کا دعوی ہے کہ اس کی پریمیسز اگر درست ہوں تو نتیجہ یقینی ہے۔ نتیجہ لازمی طور پر آتا ہے؛ پریمیسز درست ہونے اور نتیجہ غلط ہونے کا کوئی راستہ نہیں۔"
+ },
+ {
+  "term": "Inductive argument",
+  "definition_en": "An argument that claims its premises, if true, make the conclusion probable or likely, but do not guarantee it.",
+  "definition_ur": "ایک دلیل جس کا دعوی ہے کہ اس کی پریمیسز اگر درست ہوں تو نتیجہ غالب یا ممکن ہے، مگر یقینی نہیں۔"
+ },
+ {
+  "term": "Validity",
+  "definition_en": "The property of a deductive argument in which the conclusion actually follows from the premises. If the premises were true, the conclusion would have to be true. Validity is about the link between premises and conclusion, not about whether the premises are actually true.",
+  "definition_ur": "اس دلیل کا خاصہ جس میں نتیجہ پریمیسز سے واقعی اخذ ہوتا ہے۔ اگر پریمیسز درست ہوتیں تو نتیج۾ لازما درست ہوتا۔ ولڈٹی پریمیسز اور نتیجے کے لنک کے بارے میں ہے، نہ کہ پریمیسز واقعی درست ہیں۔"
+ },
+ {
+  "term": "Soundness",
+  "definition_en": "The property of a deductive argument that is both valid and has all true premises. A sound argument is one you can rely on to reach a true conclusion.",
+  "definition_ur": "ایک اس دلیل کا خاصہ جو ولڈ ہو اور اس کی تمام پریمیسز درست ہوں۔ ایک سانڈ دلیل وہ ہے جس پر بھروسہ کر کے درست نتیجہ اخذ کیا جا سکتا ہے۔"
+ },
+ {
+  "term": "Strength",
+  "definition_en": "The property of an inductive argument in which the premises actually make the conclusion probable. A strong inductive argument is one where the premises, if true, give the conclusion good support.",
+  "definition_ur": "اس دلیل کا خاصہ جس میں پریمیسز واقعی نتیجے کو غالب بناتی ہیں۔ ایک مضبوط استقرئی دلیل وہ ہے جس میں پریمیسز اگر درست ہوں تو نتیجے کو اچھا ساتھ دیتی ہیں۔"
+ },
+ {
+  "term": "Cogency",
+  "definition_en": "The property of an inductive argument that is both strong and has all true premises. A cogent argument is one you can rely on to reach a probably-true conclusion.",
+  "definition_ur": "ایک اس دلیل کا خاصہ جو مضبوط ہو اور اس کی تمام پریمیسز درست ہوں۔ ایک کوجینٹ دلیل وہ ہے جس پر بھروسہ کر کے غالبا درست نتیجہ اخذ کیا جا سکتا ہے۔"
  }
 ]

@@ -1,0 +1,236 @@
+---
+title: "Topic 3.2 - Common patterns of deductive reasoning"
+description: "The common patterns of deductive reasoning: categorical syllogism, modus ponens, modus tollens and chain arguments, with the fallacy each is commonly confused with."
+course_code: EFMP-304
+unit_no: 3
+topic_no: 2
+topic_label: "3.2"
+clo_refs:
+  - "SLO:EFMP-304-3-1"
+blooms_summary: "Remember the common patterns of deductive reasoning and their names; understand what makes each valid and what the near-miss fallacy looks like; apply the patterns to identify which one a staffroom argument uses and whether it is valid."
+est_reading_minutes: 19
+translation_status: draft
+assessment_weighting:
+  summative: 70
+  formative: 30
+assessment_weighting_note: "EFMP-304's guide gives a course-specific marks table that reads as 30 formative / 70 summative, displacing Constitution Art. III.7's 60/40 default for this course."
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+
+<PrintHandout />
+
+## A real classroom situation
+
+A head teacher is deciding whether to grant leave to Mr Hussain, who has used all his casual leave.
+Three colleagues make deductive arguments. They reach different conclusions, and only one of the
+arguments is valid.
+
+Colleague 1: "All teachers who have used their casual leave are refused further leave. Mr Hussain
+has used his. So he is refused."
+
+Colleague 2: "If a teacher has an emergency, he is granted leave. Mr Hussain has an emergency. So he
+is granted leave."
+
+Colleague 3: "If a teacher has an emergency, he is granted leave. Mr Hussain was not granted leave.
+So he has no emergency."
+
+All three use a recognisable pattern. All three look reasonable at first glance. But patterns can
+be misused, and this topic teaches you to spot the difference between a pattern used correctly and
+one that only looks correct.
+
+<Figure id="fig-U3-3" kind="table" src="/img/figures/efmp-304/unit-03/fig-U3-3.svg" alt="Table of four deductive patterns: categorical syllogism, modus ponens, modus tollens and chain argument, each with a school example and the near-miss fallacy it is confused with." width={880} height={520} />
+
+## Explanation
+
+### Common patterns of deductive reasoning
+
+Topic 3.1 said a deductive argument claims that its premises guarantee the conclusion. This topic
+names the patterns that do that job. The guide asks for "common patterns", not a formal logic
+course, so four cover almost everything a teacher meets. Name them in English; the Latin names are
+given where they are standard, but you are assessed on recognition in real prose, not on reciting
+the names.
+
+#### 1. Categorical syllogism (Barbara)
+
+The pattern: all A are B; C is A; so C is B.
+
+> "All teachers who have used their casual leave are refused further leave. Mr Hussain has used his.
+> So he is refused."
+
+*When it is valid:* the first premise really does cover every case. If the rule truly applies to all
+teachers without exception, the conclusion follows.
+
+*The near-miss fallacy: "all A are B; C is B; so C is A."** "All teachers who have used their
+casual leave are refused. Mr Hussain was refused. So he has used his casual leave." That does not
+follow. He might be refused for a different reason. The pattern looks the same but the middle term
+is in the wrong place. This is the single most common deductive error in staffroom reasoning.
+
+#### 2. Modus ponens (affirming the antecedent)
+
+The pattern: if P then Q; P is true; so Q.
+
+> "If a teacher has an emergency, he is granted leave. Mr Hussain has an emergency. So he is granted
+> leave."
+
+*When it is valid:* the conditional (if-then) premise really does hold, and the condition is met.
+
+*The near-miss fallacy: "if P then Q; Q is true; so P."** "If a teacher has an emergency, he is
+granted leave. Mr Hussain was granted leave. So he had an emergency." That does not follow. Leave
+might have been granted for a different reason. Affirming the consequent is the modus ponens twin
+that looks right but is not.
+
+#### 3. Modus tollens (denying the consequent)
+
+The pattern: if P then Q; Q is false; so P is false.
+
+> "If a teacher has an emergency, he is granted leave. Mr Hussain was not granted leave. So he has
+> no emergency."
+
+*When it is valid:* the conditional premise holds, and the outcome did not happen, so the condition
+was not met.
+
+*The near-miss fallacy: "if P then Q; P is false; so Q is false."** "If a teacher has an emergency,
+he is granted leave. Mr Hussain has no emergency. So he was not granted leave." That does not
+follow. Leave might be granted for reasons other than an emergency. Denying the antecedent looks
+like modus tollens but is not.
+
+#### 4. Chain argument (hypothetical syllogism)
+
+The pattern: if P then Q; if Q then R; so if P then R.
+
+> "If the grant arrives by March, the laboratory is repaired. If the laboratory is repaired, grade
+> 9 can do practicals. So if the grant arrives by March, grade 9 can do practicals."
+
+*When it is valid:* both conditionals hold, and the chain is unbroken.
+
+*The near-miss fallacy: a broken chain.* "If the grant arrives, the laboratory is repaired. If the
+laboratory is repaired, grade 9 can do practicals. The grant did not arrive. So grade 9 cannot do
+practicals." The last step is denying the antecedent of the chain. The grant is not the only way
+the laboratory might be repaired.
+
+<Figure id="fig-U3-4" kind="diagram" src="/img/figures/efmp-304/unit-03/fig-U3-4.svg" alt="One valid deductive pattern drawn as premises, inference bar and conclusion, beside its invalid twin with the single changed element highlighted." width={780} height={470} />
+
+### Why the near-misses matter
+
+The near-miss fallacies are not exotic errors. They are the everyday mistakes in staffroom and
+meeting-room reasoning, and they are convincing precisely because they look like the valid pattern.
+A teacher who argues "all the classes I taught last year did well; this class is doing well; so it
+is one of mine" has committed the categorical near-miss. A head who argues "if the grant arrives
+the work is done; the grant did not arrive; so the work is not done" has denied the antecedent.
+
+The skill is not to memorise the Latin names. It is to ask, of any deductive argument: **does the
+conclusion actually follow from these premises, or does it only look like it does?**
+
+Bassham et al. (2010) treat these four patterns as the core of introductory deductive reasoning,
+and the near-miss fallacies as the errors a teacher should learn to name. The patterns are tools
+for reading, not for writing formal proofs. Research on teaching argument structure supports the
+claim that these patterns are learnable: Qin (2016) found that explicit instruction in a structured
+model of argument, with practice labelling its elements, led learners to produce more complete
+arguments including opposing views and rebuttals that were previously absent.
+
+### A worked example before you try it
+
+Here is the move performed once, slowly, on a different staffroom sentence.
+
+> "If we split grade 9, we need an extra room. If we need an extra room, we must convert the store
+> room. So if we split grade 9, we must convert the store room."
+
+**Step 1 - which pattern?** If P then Q; if Q then R; so if P then R. This is a **chain argument**.
+
+**Step 2 - is it valid?** Yes, as stated. If both conditionals hold, the conclusion follows.
+
+**Step 3 - what could go wrong?** The argument is valid, but it might not be sound. If the first
+conditional is false (perhaps grade 9 can be split without an extra room), the conclusion does not
+follow in practice. Validity is about the link; soundness is about the link plus the truth of the
+premises. Topic 3.4 takes that distinction further.
+
+Now you try the same three steps in the activity.
+
+## Activity: Name the pattern
+
+Work in pairs. About 30 minutes.
+
+Each pair takes the six arguments below. For each one, name the **pattern** (categorical syllogism,
+modus ponens, modus tollens or chain argument) and say whether it is **valid** as stated. If it is
+not valid, name the **near-miss fallacy** it commits.
+
+1. "All pupils who miss more than ten days are flagged. Sara missed twelve days. So Sara is flagged."
+2. "If the examination is postponed, the results are delayed. The examination was postponed. So the results are delayed."
+3. "If the examination is postponed, the results are delayed. The results were not delayed. So the examination was not postponed."
+4. "If the examination is postponed, the results are delayed. The examination was not postponed. So the results were not delayed."
+5. "All pupils who miss more than ten days are flagged. Sara is flagged. So she missed more than ten days."
+6. "If the grant arrives, the books are ordered. If the books are ordered, the library opens by September. So if the grant arrives, the library opens by September."
+
+Then take one argument that is **valid but might not be sound** (the premises might be false). Write
+two sentences: one saying what would have to be true for the argument to be sound, and one saying
+what a critic could attack without denying the validity.
+
+## Check your understanding
+
+1. *(Remember)* Name the four deductive patterns in this topic. You may use the English names.
+2. *(Understand)* Explain the difference between a valid deductive argument and a sound one. Use a school example.
+3. *(Apply)* Classify this argument and say whether it is valid: "If the teacher is absent, the period is free. The period is free. So the teacher is absent."
+4. *(Apply)* Classify this argument and say whether it is valid: "All schools that submitted the report on time received their grant. We submitted on time. So we received our grant."
+5. *(Analyze)* A teacher argues: "If a pupil revises, he passes. He did not revise. So he did not pass." Name the pattern, say whether it is valid, and name the fallacy if it is not.
+
+## Summary
+
+The four common deductive patterns are the categorical syllogism, modus ponens, modus tollens and
+the chain argument. Each has a near-miss fallacy that looks like it but does not follow: the
+categorical near-miss (affirming the consequent in the middle term), affirming the consequent,
+denying the antecedent, and the broken chain. The skill is to recognise the pattern, check whether
+the conclusion actually follows, and name the fallacy when it does not. Validity is about the link
+between premises and conclusion; soundness is about the link plus the truth of the premises.
+
+## Self-assessment checklist
+
+- [ ] I can name the four deductive patterns and recognise each in a staffroom argument.
+- [ ] I can tell whether a deductive argument is valid by checking whether the conclusion follows from the premises.
+- [ ] I can name the near-miss fallacy for each pattern and spot it in real reasoning.
+- [ ] I can explain the difference between validity and soundness.
+- [ ] I can say what a critic can attack without denying an argument's validity.
+
+## Try this at your practicum school
+
+Find one deductive argument in a meeting, a circular or a conversation this week. Write it down.
+Then do three things: name the pattern, say whether it is valid, and if it is not, name the
+near-miss fallacy. If it is valid, say whether you believe the premises are true. Bring the note
+to your tutorial.
+
+## Summative task
+
+Here is a staffroom discussion about a school rule.
+
+> **A.** "All teachers who arrive after the first bell are marked late. Mr Soomro was marked late.
+> So he arrived after the first bell."
+>
+> **B.** "If a teacher arrives after the first bell, he is marked late. Mr Soomro arrived after the
+> first bell. So he was marked late."
+>
+> **C.** "If a teacher arrives after the first bell, he is marked late. Mr Soomro was not marked
+> late. So he did not arrive after the first bell."
+
+Write 200 to 250 words that (a) names the pattern in each argument, (b) says which are valid and
+which are not, (c) names the fallacy in any invalid one, and (d) for the valid ones, says whether
+they are sound and what would have to be checked to decide.
+
+**Mini-rubric**
+
+| Criterion | Levels |
+|---|---|
+| *Pattern naming* | 0-3: all three correctly named / two correct / one or none. |
+| *Validity judgement* | 0-3: each correctly judged with a reason / most correct / unreliable. |
+| *Fallacy naming* | 0-2: correct fallacy named for each invalid argument / partial / none. |
+| *Soundness reasoning* | 0-3: says what would have to be true for each valid argument to be sound, tied to its specific premises (**Analyze**: the reasoning turns on the actual content, not on general plausibility) / a general statement / none. |
+| *Clarity* | 0-2: within the word band and organised under the four parts / not. |
+
+## Further reading
+
+Bassham, G., Irwin, W., Nardone, H., & Wallace, J. M. (2010). *Critical thinking: A student's
+introduction* (4th ed.). McGraw-Hill. The chapters on deductive reasoning supply the patterns and
+their near-miss fallacies drawn on in this topic.
+
+Qin, J. (2016). Applying the Toulmin model in teaching L2 argumentative writing. *Journal of
+Language Learning and Teaching, 3*(2), 21-29. https://doi.org/10.66887/jltl.v3i2.109 - a classroom
+study showing that explicit instruction in argument structure improves learners' reasoning.

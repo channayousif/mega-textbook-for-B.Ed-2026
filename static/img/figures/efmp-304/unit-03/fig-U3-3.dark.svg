@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 520" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Deductive patterns</title><desc id="d">Table of four deductive patterns with examples and near-miss fallacies.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700;fill:var(--ink)} .sh{font-size:12px;font-weight:600;fill:var(--ink)} .m{font-size:12px;fill:var(--muted)} .c{text-anchor:middle} .wm{fill:var(--wm);font-size:11px} .b1{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2} .b2{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2} .b3{fill:var(--a3-fill);stroke:var(--a3);stroke-width:2} .b4{fill:var(--a4-fill);stroke:var(--a4);stroke-width:2} .line{stroke:var(--line);stroke-width:2}</style><rect class="bg" x="0" y="0" width="880"/><rect class="bg" x="0" y="0" width="880" height="520"/>
+   <rect class="panel" x="16" y="16" width="848" height="44" rx="4"/>
+   <text class="h c" x="130" y="44">Pattern</text>
+   <text class="h c" x="330" y="44">School example</text>
+   <text class="h c" x="580" y="44">Near-miss fallacy</text>
+   <text class="sh" x="28" y="110">Categorical syllogism</text>
+   <text class="c" x="330" y="110">All A are B. C is A. So C is B.</text>
+   <text class="c" x="580" y="110">affirming the consequent in the middle</text>
+   <text class="sh" x="28" y="190">Modus ponens</text>
+   <text class="c" x="330" y="190">If P then Q. P. So Q.</text>
+   <text class="c" x="580" y="190">affirming the consequent</text>
+   <text class="sh" x="28" y="270">Modus tollens</text>
+   <text class="c" x="330" y="270">If P then Q. Not Q. So not P.</text>
+   <text class="c" x="580" y="270">denying the antecedent</text>
+   <text class="sh" x="28" y="350">Chain argument</text>
+   <text class="c" x="330" y="350">If P then Q. If Q then R. So if P then R.</text>
+   <text class="c" x="580" y="350">broken chain (denying antecedent of chain)</text><text class="wm" x="870" y="510" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

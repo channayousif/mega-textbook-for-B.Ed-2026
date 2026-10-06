@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Valid pattern beside its invalid twin</title><desc id="d">One valid deductive pattern drawn beside its invalid twin with the changed element highlighted.</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700;fill:var(--ink)} .sh{font-size:12px;font-weight:600;fill:var(--ink)} .m{font-size:12px;fill:var(--muted)} .c{text-anchor:middle} .wm{fill:var(--wm);font-size:11px} .b1{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2} .b2{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2} .b3{fill:var(--a3-fill);stroke:var(--a3);stroke-width:2} .b4{fill:var(--a4-fill);stroke:var(--a4);stroke-width:2} .line{stroke:var(--line);stroke-width:2}</style><rect class="bg" x="0" y="0" width="780"/><rect class="bg" x="0" y="0" width="780" height="470"/>
+   <rect x="30" y="30" width="340" height="160" rx="6" class="b1"/>
+   <text class="sh c" x="200" y="60">VALID: Modus ponens</text>
+   <text class="c" x="200" y="100">If the teacher is absent,</text>
+   <text class="c" x="200" y="120">the period is free.</text>
+   <text class="c" x="200" y="150">The teacher is absent.</text>
+   <text class="c" x="200" y="175">So the period is free.</text>
+   <rect x="410" y="30" width="340" height="160" rx="6" class="b3"/>
+   <text class="sh c" x="580" y="60">INVALID: Affirming the consequent</text>
+   <text class="c" x="580" y="100">If the teacher is absent,</text>
+   <text class="c" x="580" y="120">the period is free.</text>
+   <text class="c" x="580" y="150">The period is free.</text>
+   <text class="c" x="580" y="175">So the teacher is absent.</text>
+   <rect x="30" y="230" width="720" height="60" rx="6" class="panel"/>
+   <text class="m c" x="390" y="255">The single changed element is the second premise: &quot;P&quot; becomes &quot;Q&quot;, breaking the link.</text><text class="wm" x="770" y="460" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

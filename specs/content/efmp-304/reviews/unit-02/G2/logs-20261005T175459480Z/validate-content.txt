@@ -1,0 +1,12 @@
+$ npm run validate:content   (repo HEAD 19460d4a, 2026-10-05T17:54:59.481Z)
+
+✗ Content validation failed with 7 error(s):
+
+  - docs/semester-2/efmp-304/unit-02/topic-01.mdx: <Glossary term="Explanation"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-304/unit-02/topic-01.mdx: <Glossary term="Premise"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-304/unit-02/topic-01.mdx: <Glossary term="Conclusion"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-304/unit-02/topic-02.mdx: <Glossary term="Rhetorical triangle"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-304/unit-02/topic-02.mdx: <Glossary term="Information question"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-304/unit-02/topic-02.mdx: <Glossary term="Issue question"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-304/unit-02/topic-04.mdx: <Glossary term="Unstated premise"> has no matching entry in glossary.json
+exit_code=1
