@@ -1525,3 +1525,11 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 - **Needed, and from whom:** the owner, only if licence preparation should become assignable;
   that would need a page-keyed (not unit-keyed) assignment target, which is a later spec.
 - **Blocks:** nothing in Feature 024.
+
+## EFMP-302 Unit 4 (TEX-30) - fig-U4-12 raster illustration contradicts prompt
+
+**Status:** `open`
+**Reported by:** Antigravity (G3 review cycle 1)
+**Date:** 2026-10-04
+
+The generated raster illustration `fig-U4-12.webp` places the teacher at the front beside the board, which contradicts its prompt specifying a landscape scene of a male teacher "at the back of his own classroom". A repair or regeneration is needed before G3 can pass.
