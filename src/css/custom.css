@@ -500,6 +500,19 @@ html[data-theme='dark'] .pagination-nav__label {
   color: var(--ifm-color-primary-lighter);
 }
 
+/* Desktop text justification for LTR prose. Scoped to paragraph elements so
+   headings, lists, and table cells keep their default left-align. Only applies
+   above Docusaurus's 996px sidebar breakpoint where the content column is wide
+   enough that justified text looks intentional rather than stretched.
+   RTL (Urdu) prose is excluded; its text-align: start is set above. */
+@media (min-width: 997px) {
+  html:not([dir='rtl']) .markdown p {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+}
+
 /* --- Glossary term (FR-016) ------------------------------------------------ */
 .glossary-term {
   text-decoration: underline dotted;
@@ -630,22 +643,20 @@ html[data-theme='dark'] .bloom-tag {
    stay legible. `illustration` (raster) keeps the full 100% max-width above.
 
    `min(100%, …)` is load-bearing, not decoration. These selectors have the SAME
-   specificity as `.figure img` above and come later, so a bare `max-width: 640px`
-   REPLACES the 100% cap rather than tightening it: below 640px the image could no
-   longer shrink to its column, rendered at a fixed 640px on a 390px phone, and
-   pushed the whole document to a 656px scrollWidth. Every unit with a schematic
+   specificity as `.figure img` above and come later, so a bare `max-width: 760px`
+   REPLACES the 100% cap rather than tightening it: below 760px the image could no
+   longer shrink to its column, rendered at a fixed 760px on a 390px phone, and
+   pushed the whole document to a 776px scrollWidth. Every unit with a schematic
    scrolled sideways on a phone. Keep both bounds in one value so the archetype cap
-   and the container cap always apply together. */
+   and the container cap always apply together.
+
+   All schematic archetypes use the SAME 760px cap so bordered figure boxes appear
+   at a uniform width on desktop (equal-width-boxes fix). */
 .figure--table img,
 .figure--concept-map img,
 .figure--flowchart img,
 .figure--timeline img,
 .figure--diagram img {
-  max-width: min(100%, 640px);
-}
-/* A flow / timeline reads better a little wider. */
-.figure--flowchart img,
-.figure--timeline img {
   max-width: min(100%, 760px);
 }
 
