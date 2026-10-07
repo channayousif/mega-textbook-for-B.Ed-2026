@@ -8,18 +8,18 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title="Home"
-      description="Free bilingual (English and Urdu) digital textbook and teaching licence exam preparation for the B.Ed (4-Year) programme in Sindh.">
-      <main >
+      description="A free bilingual (English and Urdu) collection of textbooks and a learning platform for Grades 9-12 and teacher education (ADE, B.Ed Hons). Built for students and their teachers.">
+       <main >
         <div className="container margin-vert--xl" style={{ maxWidth: '800px' }}>
           <div className="row">
             <div className="col">
               <h1 className="hero__title text--center margin-bottom--lg">
-                <Translate id="home.title">B.Ed (4-Year) Mega Textbook</Translate>
+                <Translate id="home.title">Mega Textbook</Translate>
               </h1>
-              
+
               <p className="hero__subtitle text--center margin-bottom--xl">
                 <Translate id="home.subtitle">
-                  The complete bilingual (English & Urdu) resource for trainee and practising teachers in Pakistan doing the B.Ed (4-Year) programme at the University of Sindh.
+                  A bilingual (English &amp; Urdu) collection of textbooks and a learning platform for Grades 9-12 and teacher education (ADE, B.Ed Hons) — built for students and their teachers.
                 </Translate>
               </p>
 
@@ -27,18 +27,18 @@ export default function Home(): JSX.Element {
                 <div className="col margin-bottom--lg">
                   <div className="card shadow--md height--100">
                     <div className="card__header">
-                      <h3><Translate id="home.textbookTitle">B.Ed Digital Textbook</Translate></h3>
+                      <h3><Translate id="home.textbookTitle">Textbook Collection</Translate></h3>
                     </div>
                     <div className="card__body">
                       <p>
                         <Translate id="home.textbookDesc">
-                          Read the full B.Ed textbook online for free. Explore semesters, courses, and units, available in both English and Urdu.
+                          Read free bilingual textbooks online — Grades 9-12 subjects and teacher-education programmes (ADE, B.Ed Hons). Explore semesters, courses, and units in English and Urdu.
                         </Translate>
                       </p>
                     </div>
                     <div className="card__footer">
                       <Link className="button button--primary button--block" to="/intro">
-                        <Translate id="home.textbookAction">Browse the Textbook</Translate>
+                        <Translate id="home.textbookAction">Browse the Textbooks</Translate>
                       </Link>
                     </div>
                   </div>

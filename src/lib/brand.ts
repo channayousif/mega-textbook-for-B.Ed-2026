@@ -6,6 +6,6 @@
  * bundle. `check:docs-sync` asserts the two agree.
  */
 export const WORDMARK_TEXT = 'textbook.com.pk';
-export const SITE_NAME = 'B.Ed Mega Textbook';
-export const PUBLISHER = 'University of Sindh, Faculty of Education';
+export const SITE_NAME = 'Mega Textbook';
+export const PUBLISHER = 'Mega Textbook';
 export const SITE_URL = 'https://textbook.com.pk';

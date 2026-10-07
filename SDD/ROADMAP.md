@@ -1,5 +1,24 @@
 # ROADMAP & ARCHITECTURE OVERVIEW
 
+## Platform Vision *(board direction, 2026-10-07)*
+
+The project is envisioned as a **collection of textbooks and a learning management system (LMS)** for
+two audiences:
+
+1. **Grades 9-12** — school subjects, bilingual (English + Urdu), for students and their teachers.
+2. **Teacher-education degree programmes** — ADE and B.Ed (Hons), for prospective teachers and their
+   instructors, including a teaching-licence track.
+
+**Current state:** an MVP targeted at prospective teachers (ADE/B.Ed students) and their teachers.
+The B.Ed (Hons) corpus described in this roadmap is that MVP. Grade 9-12 subject tracks and the ADE
+programme are the next expansion — the architecture (static book + signed-in LMS, self-hosted
+Supabase, bilingual EN/UR) is built to carry both.
+
+This roadmap documents the B.Ed (Hons) content pipeline, the platform architecture, and the
+decisions that govern both. Sections that are B.Ed-specific (corsemester structure, course codes,
+the licence overlay) are flagged as such and are expected to be joined by parallel Grade 9-12 and
+ADE structures as those tracks are authored.
+
 > **Revision 2026-09-20.** Phases 1-4 are delivered. Phase 5 (content) is live and has changed
 > shape: the measurement this roadmap asked for was run, it **refuted the plan it was meant to
 > calibrate**, and the publication model was rebuilt around the result. Publication no longer

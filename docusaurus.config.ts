@@ -99,8 +99,8 @@ function reviewNotices(): Record<string, PublicationTier> {
 }
 
 const config: Config = {
-  title: 'B.Ed Mega Textbook',
-  tagline: 'Bilingual digital textbook for the B.Ed (4-Year) programme',
+  title: 'Mega Textbook',
+  tagline: 'A bilingual collection of textbooks and a learning platform for Grades 9-12 and teacher education (ADE, B.Ed Hons).',
   favicon: 'img/favicon.svg',
   url: 'https://textbook.com.pk',
   baseUrl: '/',
@@ -256,14 +256,14 @@ const config: Config = {
     // card. WhatsApp matters a great deal for this audience.
     image: 'img/social-card.png',
     metadata: [
-      { name: 'keywords', content: 'B.Ed, B.Ed 4 year, teacher education, University of Sindh, Pakistan, Sindh, bilingual textbook, Urdu, EFMP, GECE' },
+      { name: 'keywords', content: 'textbooks, Grades 9-12, teacher education, ADE, B.Ed Hons, learning platform, LMS, Pakistan, Sindh, bilingual textbook, Urdu, EFMP, GECE' },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { property: 'og:site_name', content: 'B.Ed Mega Textbook' },
+      { property: 'og:site_name', content: 'Mega Textbook' },
       { property: 'og:type', content: 'website' },
     ],
     navbar: {
-      logo: { alt: 'B.Ed Mega Textbook', src: 'img/logo.svg', width: 28, height: 28 },
-      title: 'B.Ed Textbook',
+      logo: { alt: 'Mega Textbook', src: 'img/logo.svg', width: 28, height: 28 },
+      title: 'Mega Textbook',
       items: [
         { to: '/about', label: 'About', position: 'left' },
         { to: '/contact', label: 'Contact', position: 'left' },
@@ -303,7 +303,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: 'B.Ed (4-Year) Mega Textbook - University of Sindh, Faculty of Education.',
+      copyright: 'Mega Textbook — a bilingual textbook collection and learning platform for Grades 9-12 and teacher education.',
     },
   } satisfies Preset.ThemeConfig,
 };

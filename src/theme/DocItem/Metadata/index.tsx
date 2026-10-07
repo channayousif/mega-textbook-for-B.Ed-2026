@@ -17,6 +17,10 @@ import { SITE_NAME, PUBLISHER, SITE_URL } from '@site/src/lib/brand';
  * nothing new for an author to maintain, and no claim is emitted that the page
  * does not actually support. A page with no `course_code` (the site intro, for
  * instance) gets no LearningResource rather than a fabricated one.
+ *
+ * The site is an independent textbook collection and learning platform (not a
+ * university), so provider/publisher use `Organization`, not
+ * `CollegeOrUniversity` — that type would make a false institutional claim.
  */
 export default function MetadataWrapper(props: Record<string, unknown>): React.ReactElement {
   const { metadata, frontMatter } = useDoc() as {
@@ -42,12 +46,12 @@ export default function MetadataWrapper(props: Record<string, unknown>): React.R
       learningResourceType: frontMatter.topic_no ? 'Lesson' : 'Unit',
       educationalLevel: 'Undergraduate',
       ...(minutes ? { timeRequired: `PT${minutes}M` } : {}),
-      provider: { '@type': 'CollegeOrUniversity', name: PUBLISHER },
+      provider: { '@type': 'Organization', name: PUBLISHER },
       isPartOf: {
         '@type': 'Course',
         courseCode,
         name: courseCode,
-        provider: { '@type': 'CollegeOrUniversity', name: PUBLISHER },
+        provider: { '@type': 'Organization', name: PUBLISHER },
       },
     }
     : {
@@ -56,7 +60,7 @@ export default function MetadataWrapper(props: Record<string, unknown>): React.R
       name: SITE_NAME,
       url: SITE_URL,
       inLanguage: locale,
-      publisher: { '@type': 'CollegeOrUniversity', name: PUBLISHER },
+        publisher: { '@type': 'Organization', name: PUBLISHER },
     };
 
   return (
