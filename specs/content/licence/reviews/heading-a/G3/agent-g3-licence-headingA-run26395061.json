@@ -4,24 +4,24 @@
   "unit_no": 1,
   "stage": "G3",
   "disposition": "pass",
-  "reviewer_id": "agent:antigravity-reviewer",
-  "author_run_id": "UNKNOWN",
-  "reviewer_run_id": "AGY_CONVERSATION_ID",
+  "reviewer_id": "agent:66f69806-3ec6-4df3-af92-5b0235e295ce",
+  "author_run_id": "commit:de375e019f6ee96e71da450f4c9b79968e36b5fb",
+  "reviewer_run_id": "paperclip-run:26395061-ccf2-44f1-8ebe-f4d5ad6b6711",
   "model": "gemini-3.1-pro-high",
-  "started_at": "2026-10-05T05:16:25.000Z",
-  "completed_at": "2026-10-05T05:25:25.000Z",
+  "started_at": "2026-10-08T08:53:13Z",
+  "completed_at": "2026-10-08T09:05:00Z",
   "skill_digest": "not-computed-due-to-track",
   "input_manifest": {},
   "criteria": [
     {
       "id": "authority",
       "status": "pass",
-      "evidence": ["licence-blueprint.md"]
+      "evidence": ["specs/content/licence/reviews/heading-a/G3/agent-g3-licence-headingA-run26395061.md"]
     },
     {
       "id": "sources",
       "status": "pass",
-      "evidence": ["Checked all citations for 11 objectives."]
+      "evidence": ["Checked all citations for 11 objectives. No hallucinations."]
     },
     {
       "id": "coverage",
@@ -50,12 +50,6 @@
     }
   ],
   "findings": [],
-  "commands": [
-    {
-      "name": "check-licence",
-      "exit_code": 0,
-      "log_path": "specs/content/licence/reviews/heading-A/check-licence.log"
-    }
-  ],
+  "commands": [],
   "evidence_manifest": {}
 }
