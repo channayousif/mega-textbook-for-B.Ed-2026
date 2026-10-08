@@ -1,5 +1,0 @@
-prepared input count: [33m96[39m
-recomputed input count: [33m96[39m
-digest mismatches: NONE
-skill_digest match: YES
-dirty bound inputs at review start: NONE

@@ -1,9 +1,0 @@
-### command: npm run -s check:no-answer-keys
-### cwd: /home/a2ahs/mega_book_for_B.Ed
-### git HEAD: ac13c5c3ca603ed07c649dc0e82c619189279265
-### started: 2026-09-18T15:53:27-05:00
----
-✓ No answer keys / private marking material found (scanned: docs, licence, i18n, build, specs/content).
----
-### exit_code: 0
-### finished: 2026-09-18T15:53:28-05:00

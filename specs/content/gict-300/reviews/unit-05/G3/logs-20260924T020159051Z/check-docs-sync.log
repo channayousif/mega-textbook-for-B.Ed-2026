@@ -1,4 +1,0 @@
-$ npm run check:docs-sync   (GICT-300 U5 G3 run 002, worktree as-is at HEAD 0f8e97d, 2026-09-24T02:0xZ; every failure line below attributes to the stale geng-300 tree, out of scope and already fixed on main; zero gict-300 mentions, verified by grep) [passes as-is: this gate reads only skill docs and code constants, all identical between worktree and overlay]
-
-✓ docs are in sync with the code constants
-exit_code=0

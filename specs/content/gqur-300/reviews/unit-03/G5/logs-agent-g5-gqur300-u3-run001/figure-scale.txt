@@ -1,6 +1,0 @@
-desktop topic-01: fig-U3-1.ur.svg w=703 labelPx=7.0-8.8 ; fig-U3-2.ur.svg w=703 labelPx=7.0-8.8
-desktop topic-02: fig-U3-3.ur.svg w=703 labelPx=7.0-8.8 ; fig-U3-4.ur.svg w=703 labelPx=7.0-8.8
-desktop topic-03: fig-U3-5.ur.svg w=703 labelPx=7.0-8.8 ; fig-U3-6.ur.svg w=703 labelPx=7.0-8.8
-narrow topic-01: fig-U3-1.ur.svg w=328 labelPx=3.3-4.1 ; fig-U3-2.ur.svg w=328 labelPx=3.3-4.1
-narrow topic-02: fig-U3-3.ur.svg w=328 labelPx=3.3-4.1 ; fig-U3-4.ur.svg w=328 labelPx=3.3-4.1
-narrow topic-03: fig-U3-5.ur.svg w=328 labelPx=3.3-4.1 ; fig-U3-6.ur.svg w=328 labelPx=3.3-4.1

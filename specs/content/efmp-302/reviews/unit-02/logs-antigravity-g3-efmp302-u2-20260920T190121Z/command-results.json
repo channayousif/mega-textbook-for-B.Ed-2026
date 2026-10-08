@@ -1,8 +1,0 @@
-[]
-{"name": "validate-content", "exit_code": 0, "log_path": "specs/content/efmp-302/reviews/unit-02/logs-antigravity-g3-efmp302-u2-20260920T190121Z/validate-content.log"}
-{"name": "check-unit-depth", "exit_code": 0, "log_path": "specs/content/efmp-302/reviews/unit-02/logs-antigravity-g3-efmp302-u2-20260920T190121Z/check-depth-gate.log"}
-{"name": "check-figures", "exit_code": 0, "log_path": "specs/content/efmp-302/reviews/unit-02/logs-antigravity-g3-efmp302-u2-20260920T190121Z/check-figures.log"}
-{"name": "check-no-em-dash", "exit_code": 0, "log_path": "specs/content/efmp-302/reviews/unit-02/logs-antigravity-g3-efmp302-u2-20260920T190121Z/check-no-em-dash.log"}
-{"name": "check-no-answer-keys", "exit_code": 0, "log_path": "specs/content/efmp-302/reviews/unit-02/logs-antigravity-g3-efmp302-u2-20260920T190121Z/check-no-answer-keys.log"}
-{"name": "check-docs-sync", "exit_code": 0, "log_path": "specs/content/efmp-302/reviews/unit-02/logs-antigravity-g3-efmp302-u2-20260920T190121Z/check-docs-sync.log"}
-{"name": "check-pipeline-gate", "exit_code": 0, "log_path": "specs/content/efmp-302/reviews/unit-02/logs-antigravity-g3-efmp302-u2-20260920T190121Z/check-pipeline-gate.log"}

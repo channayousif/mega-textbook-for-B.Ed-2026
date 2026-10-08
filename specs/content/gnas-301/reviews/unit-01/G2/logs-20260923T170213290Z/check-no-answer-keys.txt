@@ -1,6 +1,0 @@
-$ npm run check:no-answer-keys   (repo HEAD be80907, 2026-09-23T17:02:15.135Z)
-
-✗ Answer-key / private material found in public content (1):
-
-  - docs/semester-1/geng-300/unit-01/unit-teacher-notes.mdx: matched /\bcorrect\s*answer\b/ ("correct answer")
-exit_code=1

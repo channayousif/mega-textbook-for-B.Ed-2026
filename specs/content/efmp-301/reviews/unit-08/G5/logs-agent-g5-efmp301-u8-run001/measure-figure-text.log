@@ -1,9 +1,0 @@
-Command: node scripts/measure-figure-text.mjs static/img/figures/efmp-301/unit-08/fig-U8-6.ur.svg
-Run: 2026-09-26T02:07Z, exit code 0 (observed in-session; stdout transcribed).
-
-✓ static/img/figures/efmp-301/unit-08/fig-U8-6.ur.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
-
-Note: the repo script proves no text in the Urdu behaviours table overflows the
-viewBox or overprints the wordmark; it does NOT check text against grid divider
-positions, which is the defect class recorded for this figure in
-figure-geometry.log (browser-measured bboxes vs the vertical dividers).

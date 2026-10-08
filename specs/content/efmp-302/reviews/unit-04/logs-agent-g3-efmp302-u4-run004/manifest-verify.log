@@ -1,7 +1,0 @@
-COMMANDS: ["validate:content","check:depth-gate","check:figures","check:no-em-dash","check:no-answer-keys","check:docs-sync","render-review"]
-CRITERIA.G3: ["authority","sources","coverage","assessment","accessibility","readability","pedagogy"]
-declared 137 live 137
-missing 0 mismatch 0
-skillDigest afded48dc524cf73584575bb010a9d6f826f117ee55a2da29c7a038033ca1554 manifest afded48dc524cf73584575bb010a9d6f826f117ee55a2da29c7a038033ca1554 match true
-dirtyInputs: []
-required_criteria: ["authority","sources","coverage","assessment","accessibility","readability","pedagogy"]

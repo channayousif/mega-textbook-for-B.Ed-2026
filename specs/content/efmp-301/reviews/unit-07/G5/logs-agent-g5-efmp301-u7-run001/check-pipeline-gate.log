@@ -1,7 +1,0 @@
-
-> bed-mega-textbook@0.1.0 check:pipeline-gate
-> node scripts/check-pipeline-gate.mjs
-
-✓ Pipeline gate passed (2 certified, 1 provisional - final review pending, 43 gate-checked - not yet reviewed).
-  provisional: EED-313 Unit 1
-  gate-checked: EED-313 Unit 2, EED-313 Unit 3, EED-313 Unit 4, EED-313 Unit 5, EFMP-301 Unit 10, EFMP-301 Unit 11, EFMP-301 Unit 12, EFMP-301 Unit 2, EFMP-301 Unit 3, EFMP-301 Unit 4, EFMP-301 Unit 5, EFMP-301 Unit 6, EFMP-301 Unit 7, EFMP-301 Unit 8, EFMP-301 Unit 9, EFMP-302 Unit 2, EFMP-302 Unit 3, EFMP-302 Unit 4, EFMP-302 Unit 5, EFMP-302 Unit 6, EFMP-304 Unit 1, GENG-300 Unit 1, GENG-300 Unit 2, GENG-300 Unit 3, GENG-300 Unit 4, GICT-300 Unit 1, GICT-300 Unit 2, GICT-300 Unit 3, GICT-300 Unit 4, GICT-300 Unit 5, GICT-300 Unit 6, GNAS-301 Unit 1, GNAS-301 Unit 2, GNAS-301 Unit 3, GNAS-301 Unit 4, GNAS-301 Unit 5, GNAS-301 Unit 6, GQUR-300 Unit 1, GQUR-300 Unit 2, GQUR-300 Unit 3, GQUR-300 Unit 4, GQUR-300 Unit 5, GQUR-300 Unit 6

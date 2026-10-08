@@ -1,7 +1,0 @@
-$ npm run check:figures   (GICT-300 U5 G3 run 002, worktree as-is at HEAD 0f8e97d, 2026-09-24T02:0xZ; every failure line below attributes to the stale geng-300 tree, out of scope and already fixed on main; zero gict-300 mentions, verified by grep)
-
-✗ Figure gate failed with 2 finding(s):
-
-  - GENG-300 Unit 1 (docs/semester-1/geng-300/unit-01): topic file topic-02.mdx renders 1 figure(s) — Constitution III.10 requires at least 2 rendered <Figure> elements
-  - GENG-300 Unit 1 (docs/semester-1/geng-300/unit-01): no figure manifest at specs/content/geng-300/figures/unit-01.md
-exit_code=1

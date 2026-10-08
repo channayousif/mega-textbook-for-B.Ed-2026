@@ -1,6 +1,0 @@
-### command: npm run -s check:concept-graph
-### cwd: /home/a2ahs/mega_book_for_B.Ed
-### commit: 203d716a47d628f7b9b58e12621edb7dea8f761c
-### started: 2026-09-19T17:03:35Z
-✓ Concept graph is consistent (coverage, no orphans, acyclic, resolvable prerequisites, assessment linkage).
-### exit_code: 0

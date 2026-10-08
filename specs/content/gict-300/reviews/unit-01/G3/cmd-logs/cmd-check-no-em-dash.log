@@ -1,4 +1,0 @@
-$ cd /tmp/gict300-g3-overlay && node <worktree>/scripts/check-no-em-dash.mjs   (gate scans CWD-relative trees; overlay CWD supplies the scanned dirs + glossary.json)
-2026-09-23T14:46:28.891Z
-✓ no em dash in authored content (scanned: docs, licence, guides, i18n, specs/content, glossary.json)
-exit_code=0

@@ -1,5 +1,0 @@
-
-> bed-mega-textbook@0.1.0 figures:variants:check
-> node scripts/build-figure-variants.mjs --check
-
-figures:variants --check OK (228 figure(s))

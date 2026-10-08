@@ -1,6 +1,0 @@
-figure fig-U3-1.ur.svg: renderedW=860 H=518 zeroSizeText=0 textOutOfBounds=0
-figure fig-U3-2.ur.svg: renderedW=860 H=518 zeroSizeText=0 textOutOfBounds=0
-figure fig-U3-3.ur.svg: renderedW=860 H=518 zeroSizeText=0 textOutOfBounds=0
-figure fig-U3-4.ur.svg: renderedW=860 H=518 zeroSizeText=0 textOutOfBounds=0
-figure fig-U3-5.ur.svg: renderedW=860 H=518 zeroSizeText=0 textOutOfBounds=0
-figure fig-U3-6.ur.svg: renderedW=860 H=518 zeroSizeText=0 textOutOfBounds=0

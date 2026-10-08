@@ -1,6 +1,0 @@
-$ npm run check:depth-gate   (repo HEAD 4dbe708a, 2026-09-25T15:04:17.250Z)
-
-✗ Depth gate failed with 1 finding(s):
-
-  - EFMP-301 Unit 7 (docs/semester-1/efmp-301/unit-07): coverage cites source "rohrer2012" but it is not a Key in the sources-consulted list
-exit_code=1

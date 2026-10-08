@@ -1,6 +1,0 @@
-prepared entries: 149, current entries: 149
-missing from current: 0
-extra in current: 0
-digest mismatches: 0
-required_criteria: ["authority","sources","coverage","assessment","accessibility","completeness","semantics","terminology","register","rtl"]
-skill_digest: 02797f90adddd8f4bc50c6e80c6e68d8f6f0219d68d297aabcc8b5443bace5a8

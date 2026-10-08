@@ -1,5 +1,0 @@
-✓ static/img/figures/gict-300/unit-06/fig-U6-5.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
-✓ static/img/figures/gict-300/unit-06/fig-U6-6.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
-✓ static/img/figures/gict-300/unit-06/fig-U6-7.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
-✓ static/img/figures/gict-300/unit-06/fig-U6-8.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
-exit_code=0

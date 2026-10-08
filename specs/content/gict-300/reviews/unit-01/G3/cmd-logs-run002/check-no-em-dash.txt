@@ -1,1 +1,0 @@
-✓ no em dash in authored content (scanned: docs, licence, guides, i18n, specs/content, glossary.json)

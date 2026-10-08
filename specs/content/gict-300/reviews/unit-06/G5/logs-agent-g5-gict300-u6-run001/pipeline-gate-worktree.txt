@@ -1,5 +1,0 @@
-
-✗ Pipeline gate failed with 1 finding(s):
-
-  - GENG-300 Unit 1 (docs/semester-1/geng-300/unit-01): no tasks.md found at specs/content/geng-300/tasks.md
-

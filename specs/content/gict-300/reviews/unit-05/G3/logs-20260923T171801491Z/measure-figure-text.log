@@ -1,9 +1,0 @@
-$ npm run measure-figure-text (node scripts/measure-figure-text.mjs fig-U5-1..6.svg)   (GICT-300 U5 G3 as-is worktree run, 2026-09-23, worktree HEAD 6361ad6. Exit 0: all six unit-05 SVGs clean (no text past viewBox, no wordmark overprint).)
-
-✓ static/img/figures/gict-300/unit-05/fig-U5-1.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
-✓ static/img/figures/gict-300/unit-05/fig-U5-2.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
-✓ static/img/figures/gict-300/unit-05/fig-U5-3.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
-✓ static/img/figures/gict-300/unit-05/fig-U5-4.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
-✓ static/img/figures/gict-300/unit-05/fig-U5-5.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
-✓ static/img/figures/gict-300/unit-05/fig-U5-6.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
-exit_code=0

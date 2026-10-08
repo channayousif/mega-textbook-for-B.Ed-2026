@@ -1,6 +1,0 @@
-
-> bed-mega-textbook@0.1.0 check:content-status
-> node scripts/report-content-status.mjs --check
-
-✓ Content status is current (7 course(s)).
-EXIT:0

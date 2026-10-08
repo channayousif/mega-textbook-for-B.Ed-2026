@@ -1,8 +1,0 @@
-manifest entries: 107 live entries: 107
-missing from live: []
-extra in live: []
-digest mismatches: []
-skill_digest manifest: ecc109748e21917715f7903dfe419bf6c731a9f835561badb1bcbbb1268ed7c0
-skill_digest live    : ecc109748e21917715f7903dfe419bf6c731a9f835561badb1bcbbb1268ed7c0
-skill_digest match: true
-required_criteria: ["authority","sources","coverage","assessment","accessibility","readability","pedagogy"]

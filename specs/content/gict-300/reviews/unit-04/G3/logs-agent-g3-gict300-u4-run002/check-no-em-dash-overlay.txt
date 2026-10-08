@@ -1,4 +1,0 @@
-Scoped overlay run over /tmp/g3-run002-overlay (repo at e12079a minus the stale geng-300 course; GICT-300 inputs verified byte-identical to the bound manifest). glossary.json was scanned clean by the full-HEAD run in check-no-em-dash.txt (its only findings were geng-300).
-$ node scripts/check-no-em-dash.mjs --scan-dir /tmp/g3-run002-overlay/docs --scan-dir /tmp/g3-run002-overlay/licence --scan-dir /tmp/g3-run002-overlay/guides --scan-dir /tmp/g3-run002-overlay/i18n --scan-dir /tmp/g3-run002-overlay/specs/content   (2026-09-24T01:04:28.562Z)
-✓ no em dash in authored content (scanned: /tmp/g3-run002-overlay/docs, /tmp/g3-run002-overlay/licence, /tmp/g3-run002-overlay/guides, /tmp/g3-run002-overlay/i18n, /tmp/g3-run002-overlay/specs/content)
-exit=0
