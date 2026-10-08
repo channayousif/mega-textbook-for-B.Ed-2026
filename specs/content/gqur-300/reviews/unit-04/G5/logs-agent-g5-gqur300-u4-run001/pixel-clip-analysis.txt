@@ -1,6 +1,0 @@
-fig-U4-1: 780x470 left-edge ink bands: []
-fig-U4-2: 780x470 left-edge ink bands: []
-fig-U4-3: 780x470 left-edge ink bands: []
-fig-U4-4: 780x470 left-edge ink bands: []
-fig-U4-5: 780x470 left-edge ink bands: []
-fig-U4-6: 780x470 left-edge ink bands: [[291,292],[295,297]]

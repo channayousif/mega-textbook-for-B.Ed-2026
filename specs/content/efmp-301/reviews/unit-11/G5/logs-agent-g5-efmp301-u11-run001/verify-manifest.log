@@ -1,4 +1,0 @@
-verify-manifest - agent-g5-efmp301-u11-run001
-Recomputed the G5 input manifest from the current tree via scripts/lib/review-evidence.mjs inputManifest() and diffed against the prepared manifest.json (108 inputs).
-Result: NO DRIFT - all 108 bound inputs match (MDX front-matter translation_status normalization applies, per the evidence contract)
-

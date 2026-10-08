@@ -1,9 +1,0 @@
-
-✗ Figure gate failed with 5 finding(s):
-
-  - EED-313 Unit 1 (licence/eed-313/unit-01): topic file topic-01.mdx renders 0 figure(s) (2 still a prompt-only marker, which renders nothing) — Constitution III.10 requires at least 2 rendered <Figure> elements
-  - EED-313 Unit 1 (licence/eed-313/unit-01): topic file topic-02.mdx renders 0 figure(s) (2 still a prompt-only marker, which renders nothing) — Constitution III.10 requires at least 2 rendered <Figure> elements
-  - EED-313 Unit 1 (licence/eed-313/unit-01): topic file topic-03.mdx renders 0 figure(s) (2 still a prompt-only marker, which renders nothing) — Constitution III.10 requires at least 2 rendered <Figure> elements
-  - EED-313 Unit 1 (licence/eed-313/unit-01): topic file topic-04.mdx renders 0 figure(s) (2 still a prompt-only marker, which renders nothing) — Constitution III.10 requires at least 2 rendered <Figure> elements
-  - EED-313 Unit 1 (licence/eed-313/unit-01): unit has a concept-map / flowchart / timeline planned but none placed - Art. III.10 schematic requirement is a floor on rendered output, not on intent
-

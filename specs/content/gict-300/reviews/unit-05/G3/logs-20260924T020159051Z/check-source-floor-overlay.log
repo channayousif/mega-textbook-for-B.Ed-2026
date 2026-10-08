@@ -1,4 +1,0 @@
-$ npm run check:source-floor   (GICT-300 U5 G3 run 002, CONTENT_ROOT overlay at 2026-09-24T02:0xZ; overlay basis: see overlay-basis.txt in this directory; the as-is worktree run of this gate is logged under the same name without the -overlay suffix)
-
-✓ Open-access source floor met (7 unit(s) across 2 course(s) declaring a floor).
-exit_code=0

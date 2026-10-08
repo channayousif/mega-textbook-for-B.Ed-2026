@@ -1,3 +1,0 @@
-$ node scripts/review-evidence.mjs validate specs/content/efmp-302/reviews/unit-04/G3/agent-g3-efmp302-u4-run005.json
-Report structurally valid: escalate. This does not authorize gate completion.
-[exit] 0

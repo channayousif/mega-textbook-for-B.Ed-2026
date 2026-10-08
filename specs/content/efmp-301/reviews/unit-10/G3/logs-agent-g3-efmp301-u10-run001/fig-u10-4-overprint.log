@@ -1,9 +1,0 @@
-fig-U10-4 text-on-text collision measurement (getBBox via Playwright Chromium):
- fig-U10-4.svg:
-   [224-677.6 x 402.9-417.1] "reads pupils developmentally: where is this pupil, and what is the next step"
-   [537.3-574.7 x 402.3-417.1] "Unit 2"
-   overlap: 37.4 x 14.2 px
- fig-U10-4.dark.svg:
-   [224-677.6 x 402.9-417.1] "reads pupils developmentally: where is this pupil, and what is the next step"
-   [537.3-574.7 x 402.3-417.1] "Unit 2"
-   overlap: 37.4 x 14.2 px

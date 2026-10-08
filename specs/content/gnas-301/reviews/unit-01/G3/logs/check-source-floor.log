@@ -1,5 +1,0 @@
-
-> bed-mega-textbook@0.1.0 check:source-floor
-> node scripts/check-source-floor.mjs
-
-✓ Open-access source floor met (2 unit(s) across 2 course(s) declaring a floor).

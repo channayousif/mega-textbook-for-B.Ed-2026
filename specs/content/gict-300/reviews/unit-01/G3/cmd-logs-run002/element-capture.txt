@@ -1,2 +1,0 @@
-fig-U1-6 label geometry in served SVG: {"x":"768","y":"425","anchor":"end"}
-element captures written

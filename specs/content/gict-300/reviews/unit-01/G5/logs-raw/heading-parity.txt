@@ -1,8 +1,0 @@
-index.mdx: EN 5 headings [1,2,2,2,2] | UR 5 headings [1,2,2,2,2] -> STRUCTURAL MATCH
-topic-01.mdx: EN 12 headings [1,2,2,3,3,2,2,2,2,2,2,2] | UR 12 headings [1,2,2,3,3,2,2,2,2,2,2,2] -> STRUCTURAL MATCH
-topic-02.mdx: EN 12 headings [1,2,2,3,3,2,2,2,2,2,2,2] | UR 12 headings [1,2,2,3,3,2,2,2,2,2,2,2] -> STRUCTURAL MATCH
-topic-03.mdx: EN 12 headings [1,2,2,3,3,2,2,2,2,2,2,2] | UR 12 headings [1,2,2,3,3,2,2,2,2,2,2,2] -> STRUCTURAL MATCH
-topic-04.mdx: EN 12 headings [1,2,2,3,3,2,2,2,2,2,2,2] | UR 12 headings [1,2,2,3,3,2,2,2,2,2,2,2] -> STRUCTURAL MATCH
-unit-assessment.mdx: EN 10 headings [1,2,2,3,3,3,2,3,3,3] | UR 10 headings [1,2,2,3,3,3,2,3,3,3] -> STRUCTURAL MATCH
-unit-teacher-notes.mdx: EN 6 headings [1,2,2,2,2,2] | UR 6 headings [1,2,2,2,2,2] -> STRUCTURAL MATCH
-ALL FILES STRUCTURALLY ALIGNED

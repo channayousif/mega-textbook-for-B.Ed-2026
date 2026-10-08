@@ -1,3 +1,0 @@
-$ npm run --silent check:docs-sync
-✓ docs are in sync with the code constants
-EXIT_CODE=0

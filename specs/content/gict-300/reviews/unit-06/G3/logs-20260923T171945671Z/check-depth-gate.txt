@@ -1,9 +1,0 @@
-G3 review run 20260923T171945671Z, worktree HEAD 6361ad6 (branch 020-author-gict-300).
-OUT-OF-SCOPE OVERLAY APPLIED for this run (same approach as the unit's G2 evidence): the pre-existing red geng-300 state (stale docs/semester-1/geng-300 tree; em dashes in specs/content/geng-300/intake/evaluation.md) is not this review's subject and was replaced by the sibling branch 018-author-geng300's committed fixes: docs/semester-1/geng-300 removed from the working tree, specs/content/geng-300 checked out from 018-author-geng300. No bound input of this review (GICT-300 unit 6 manifest paths) was modified; baseline as-is runs with the failures attributed to geng-300 are in logs-20260923T171945671Z-baseline/.
-
-
-> bed-mega-textbook@0.1.0 check:depth-gate
-> node scripts/check-unit-depth.mjs
-
-✓ Depth gate passed (concept coverage, required blocks, formative floor, reading-minutes band, coverage↔sources consistency).
-exit_code=0

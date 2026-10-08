@@ -1,8 +1,0 @@
-◇ injected env (0) from .env.local // tip: ⌘ override existing { override: true }
-[33m[1m[WARNING][22m The [36m`siteConfig.onBrokenMarkdownLinks`[39m[33m config option is deprecated and will be removed in Docusaurus v4.[39m
-[33mPlease migrate and move this option to [36m`siteConfig.markdown.hooks.onBrokenMarkdownLinks`[39m[33m instead.[39m
-[32m[1m[SUCCESS][22m[39m Serving [36m[4m"build"[24m[39m directory at: [36m[4mhttp://localhost:3459/[24m[39m
-
-# Server stopped by reviewer at 2026-09-24T08:54Z after render inspection completed.
-# Served build at HEAD b80bcc9 (worktree agent-a8eefd2fc607a93b9), port 3459.
-# All 7 Urdu unit-05 pages returned HTTP 200; EN pages also verified 200.

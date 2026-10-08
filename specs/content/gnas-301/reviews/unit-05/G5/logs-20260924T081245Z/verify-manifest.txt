@@ -1,4 +1,0 @@
-G5 unit-05: 127 inputs, 0 problems
-skill_digest in manifest: 02797f90adddd8f4bc50c6e80c6e68d8f6f0219d68d297aabcc8b5443bace5a8
-required_criteria: ["authority","sources","coverage","assessment","accessibility","completeness","semantics","terminology","register","rtl"]
-computed G5 skill_digest: 02797f90adddd8f4bc50c6e80c6e68d8f6f0219d68d297aabcc8b5443bace5a8

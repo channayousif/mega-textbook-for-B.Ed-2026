@@ -1,6 +1,0 @@
-
-> bed-mega-textbook@0.1.0 check:concept-graph
-> node scripts/check-concept-graph.mjs
-
-✓ Concept graph is consistent (coverage, no orphans, acyclic, resolvable prerequisites, assessment linkage).
-exit_code=0

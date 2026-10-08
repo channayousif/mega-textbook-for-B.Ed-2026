@@ -1,8 +1,0 @@
-$ npm run check:no-answer-keys   (GICT-300 U5 G3 run 002, worktree as-is at HEAD 0f8e97d, 2026-09-24T02:0xZ; every failure line below attributes to the stale geng-300 tree, out of scope and already fixed on main; zero gict-300 mentions, verified by grep)
-
-✗ Answer-key / private material found in public content (3):
-
-  - docs/semester-1/geng-300/unit-01/unit-teacher-notes.mdx: matched /\bcorrect\s*answer\b/ ("correct answer")
-  - build/semester-1/geng-300/unit-01/unit-teacher-notes/index.html: matched /\bcorrect\s*answer\b/ ("correct answer")
-  - build/ur/semester-1/geng-300/unit-01/unit-teacher-notes/index.html: matched /\bcorrect\s*answer\b/ ("correct answer")
-exit_code=1

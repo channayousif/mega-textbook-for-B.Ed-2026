@@ -1,8 +1,0 @@
-# command: npm run figures:variants:check
-# commit: 482eb52a70a162629433f4e6c0b07dcd42116add
-
-> bed-mega-textbook@0.1.0 figures:variants:check
-> node scripts/build-figure-variants.mjs --check
-
-figures:variants --check OK (76 figure(s))
-# exit_code: 0

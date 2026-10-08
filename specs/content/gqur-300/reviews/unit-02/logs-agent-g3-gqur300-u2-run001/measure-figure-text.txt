@@ -1,9 +1,0 @@
-✗ static/img/figures/gqur-300/unit-02/fig-U2-1.svg
-    overflows right edge by 100.3px: "0 counts as a whole number"
-✓ static/img/figures/gqur-300/unit-02/fig-U2-2.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
-✓ static/img/figures/gqur-300/unit-02/fig-U2-3.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
-✓ static/img/figures/gqur-300/unit-02/fig-U2-4.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
-✓ static/img/figures/gqur-300/unit-02/fig-U2-5.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
-✓ static/img/figures/gqur-300/unit-02/fig-U2-6.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
-
-1 text-geometry problem(s).

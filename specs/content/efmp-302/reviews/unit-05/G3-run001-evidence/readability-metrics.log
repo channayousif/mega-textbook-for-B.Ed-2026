@@ -1,9 +1,0 @@
-# Readability metrics, EFMP-302 Unit 5 (prose only; frontmatter, MDX comments/figure prompts,
-# import lines, tables, list markers and code stripped). Flesch-Kincaid grade + Flesch reading ease.
-index.mdx                  sentences=  31 words=  611 words/sentence= 19.7 FK-grade= 10.8 reading-ease= 52.8 sentences>45w=0
-topic-01.mdx               sentences= 130 words= 2229 words/sentence= 17.1 FK-grade= 10.7 reading-ease= 49.2 sentences>45w=3
-topic-02.mdx               sentences= 105 words= 1703 words/sentence= 16.2 FK-grade=  9.8 reading-ease= 53.6 sentences>45w=0
-topic-03.mdx               sentences=  93 words= 1601 words/sentence= 17.2 FK-grade= 10.6 reading-ease= 50.0 sentences>45w=1
-topic-04.mdx               sentences= 109 words= 1627 words/sentence= 14.9 FK-grade=  8.9 reading-ease= 58.1 sentences>45w=1
-unit-assessment.mdx        sentences=  66 words= 1683 words/sentence= 25.5 FK-grade= 14.6 reading-ease= 35.8 sentences>45w=3
-unit-teacher-notes.mdx     sentences=  55 words=  857 words/sentence= 15.6 FK-grade=  8.9 reading-ease= 59.1 sentences>45w=0

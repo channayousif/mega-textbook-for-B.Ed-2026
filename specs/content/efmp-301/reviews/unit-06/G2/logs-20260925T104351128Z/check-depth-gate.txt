@@ -1,7 +1,0 @@
-$ npm run check:depth-gate   (repo HEAD b220ae5, 2026-09-25T10:43:51.668Z)
-
-✗ Depth gate failed with 2 finding(s):
-
-  - EFMP-301 Unit 3 (docs/semester-1/efmp-301/unit-03): sources-consulted Key "spielman2020" is not referenced by any coverage row
-  - EFMP-301 Unit 3 (docs/semester-1/efmp-301/unit-03): sources-consulted Key "antonides2022" is not referenced by any coverage row
-exit_code=1

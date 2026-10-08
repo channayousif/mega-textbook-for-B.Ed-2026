@@ -1,4 +1,0 @@
-Scoped overlay run: CONTENT_ROOT=/tmp/g3-run002-overlay (repo at e12079a minus the stale geng-300 course; GICT-300 inputs verified byte-identical to the bound manifest). Full-HEAD run in check-depth-gate.txt fails only on geng-300 Unit 1.
-$ CONTENT_ROOT=/tmp/g3-run002-overlay node scripts/check-unit-depth.mjs   (2026-09-24T01:03:51.314Z)
-✓ Depth gate passed (concept coverage, required blocks, formative floor, reading-minutes band, coverage↔sources consistency).
-exit=0

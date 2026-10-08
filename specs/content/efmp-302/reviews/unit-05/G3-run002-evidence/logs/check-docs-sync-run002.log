@@ -1,9 +1,0 @@
-### command: npm run check:docs-sync
-### cwd: /home/a2ahs/mega_book_for_B.Ed  commit: 4ae095247187523cfd9e31df94749543a7d88e53
-### started: 2026-09-19T01:54:35Z
-
-> bed-mega-textbook@0.1.0 check:docs-sync
-> node scripts/check-docs-sync.mjs
-
-✓ docs are in sync with the code constants
-### exit_code: 0

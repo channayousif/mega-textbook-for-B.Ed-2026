@@ -1,8 +1,0 @@
-✓ static/img/figures/efmp-301/unit-03/fig-U3-1.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
-  ~ shape .panel [18,230,762,454] collides with the wordmark by 86.3 x 4.5px
-✓ static/img/figures/efmp-301/unit-03/fig-U3-2.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
-✓ static/img/figures/efmp-301/unit-03/fig-U3-3.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
-✓ static/img/figures/efmp-301/unit-03/fig-U3-4.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
-✓ static/img/figures/efmp-301/unit-03/fig-U3-5.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
-
-1 cosmetic wordmark collision(s) - reported, not failed.

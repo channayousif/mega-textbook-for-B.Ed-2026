@@ -1,9 +1,0 @@
-
-> bed-mega-textbook@0.1.0 check:no-answer-keys
-> node scripts/check-no-answer-keys.mjs
-
-
-✗ Answer-key / private material found in public content (1):
-
-  - docs/semester-1/geng-300/unit-01/unit-teacher-notes.mdx: matched /\bcorrect\s*answer\b/ ("correct answer")
-exit_code=1

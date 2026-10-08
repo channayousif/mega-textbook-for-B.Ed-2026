@@ -1,9 +1,0 @@
-# command: npm run -s validate:content
-# cwd: /home/a2ahs/mega_book_for_B.Ed
-# commit: b1310819838938cb1f7da130fb9c2ca942598cad
-# started: 2026-09-19T11:42:03-05:00
----
-✓ Content validation passed.
----
-# exit_code: 0
-# finished: 2026-09-19T11:42:04-05:00

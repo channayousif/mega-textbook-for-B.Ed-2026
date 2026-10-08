@@ -1,4 +1,0 @@
-$ npm run -s validate:content   (CONTENT_ROOT overlay /tmp/gict300-u3-g3-aed74e6f, repo HEAD 07d7420, 2026-09-23T20:51:04Z)
-# overlay = HEAD 07d7420 archive + 018-author-geng300 geng-300 fixes + merged glossary; 101 bound inputs verified identical to prepared manifest
-✓ Content validation passed.
-exit_code=0

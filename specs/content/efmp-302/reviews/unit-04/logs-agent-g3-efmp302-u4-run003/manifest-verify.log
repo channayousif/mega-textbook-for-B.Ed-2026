@@ -1,9 +1,0 @@
-manifest entries 137 current 137
-MISSING []
-EXTRA []
-DIGEST_MISMATCH []
-skillDigest current afded48dc524cf73584575bb010a9d6f826f117ee55a2da29c7a038033ca1554 manifest afded48dc524cf73584575bb010a9d6f826f117ee55a2da29c7a038033ca1554
-required_criteria ["authority","sources","coverage","assessment","accessibility","readability","pedagogy"]
-CRITERIA {"G3":["authority","sources","coverage","assessment","accessibility","readability","pedagogy"],"G5":["authority","sources","coverage","assessment","accessibility","completeness","semantics","terminology","register","rtl"]}
-COMMANDS ["validate:content","check:depth-gate","check:figures","check:no-em-dash","check:no-answer-keys","check:docs-sync","render-review"]
-dirty []

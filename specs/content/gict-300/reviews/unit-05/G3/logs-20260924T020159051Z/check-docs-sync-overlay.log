@@ -1,4 +1,0 @@
-$ npm run check:docs-sync   (GICT-300 U5 G3 run 002, CONTENT_ROOT overlay at 2026-09-24T02:0xZ; overlay basis: see overlay-basis.txt in this directory; the as-is worktree run of this gate is logged under the same name without the -overlay suffix) [run with cwd=/tmp/g3u5-overlay: this gate reads cwd-relative files]
-
-✓ docs are in sync with the code constants
-exit_code=0

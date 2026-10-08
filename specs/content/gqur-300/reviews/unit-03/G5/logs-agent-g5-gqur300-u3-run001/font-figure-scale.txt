@@ -1,4 +1,0 @@
-fonts: Nastaliq check=true loaded=[Noto Nastaliq Urdu] requests=[200 NotoNastaliqUrdu-Regular-c69344ec193bfffbe7389853eb057daa.woff2]
-narrow topic-01: 
-narrow topic-02: 
-narrow topic-03: 

@@ -1,6 +1,0 @@
-prepared entries: [33m125[39m
-recomputed entries: [33m125[39m
-removed: [33m0[39m
-digest mismatches: [33m0[39m
-added (in current, not in manifest): [33m0[39m
-skill_digest match: no
