@@ -87,15 +87,33 @@ Changes in rev2:
   wordmarks when the board provides them.
 - PR #113 body updated; new `request_confirmation` (v2) posted on TEX-36.
 
+### Revision 3 (commit a0fbf577) — board PR comments + real logo images
+
+Board PR comments (on PR #113):
+1. `docs/intro.mdx` line 3: "A free bilingual (English and Urdu) textbook collection and learning
+   platform for ADE, B.Ed Hons, STEDA teacher-licence aspirants" — use this exact description text.
+2. `i18n/ur/.../about.mdx` line 3: "remove کے لیے" — drop the Urdu "for" from the description line.
+3. "i donot see ane loge images, search the internet and download the logos" — replace wordmark
+   placeholders with real downloaded logo images.
+
+Changes in rev3:
+- **Intro description** (`docs/intro.mdx`): matched the board's exact requested text.
+- **Urdu about.mdx** (`i18n/ur/.../about.mdx`): description reworded to drop "کے لیے".
+- **Logo images**: downloaded real logos from official sources — HEC (Wikimedia thumb), University of
+  Sindh (usindh.edu.pk), Government of Sindh (sindh.gov.pk). Created clean SVG wordmarks for STEDA,
+  GEC, ADTTI, DETRCs, REEC, PITE. Footer component (`src/theme/Footer/index.tsx`) rewritten to use
+  real `<img>` tags with these assets. 9 logo files under `static/img/logos/`.
+- PR #113 body updated; new `request_confirmation` (v3) posted on TEX-36.
+
 ## Outcome
 
 - ✅ Impact: every public-facing string that narrowly scoped the project to B.Ed / University of
   Sindh is now broadened to the board's vision (ADE, B.Ed Hons, STEDA teacher-licence aspirants,
   Grades 9-12 — students + teachers). Footer now carries an institutional logo strip.
 - 🧪 Tests: content-only changes; no logic or schema change.
-- 📁 Files: 18 files across both revisions (see lists above) + this PHR.
-- 🔁 Next prompts: Urdu mirrors for landing page, contact, and intro need alignment; board to
-  provide real logo image assets for the footer strip.
+- 📁 Files: 18 source files + 9 logo assets across all revisions (see lists above) + this PHR.
+- 🔁 Next prompts: Urdu mirrors for landing page, contact, and intro need alignment; replace SVG
+  wordmark logos (STEDA, GEC, ADTTI, DETRCs, REEC, PITE) with official logo files when obtained.
 - 🧠 Reflection: the university branding was already removed per locked decision 7 but had left
   residual references in brand constants, metadata schema, and content pages. The board's rev2
   feedback re-introduces University of Sindh, STEDA, HEC and others as *affiliate logos* in the
