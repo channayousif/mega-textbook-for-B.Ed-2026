@@ -2,15 +2,26 @@ import React from 'react';
 import Footer from '@theme-original/Footer';
 import type { Props as FooterProps } from '@docusaurus/theme-classic/lib/types';
 
+import hecLogo from '@site/static/img/logos/hec.png';
+import universityOfSindhLogo from '@site/static/img/logos/university-of-sindh.png';
+import sindhGovtLogo from '@site/static/img/logos/sindh-govt.png';
+import stedaLogo from '@site/static/img/logos/steda.svg';
+import gecLogo from '@site/static/img/logos/gec.svg';
+import adttiLogo from '@site/static/img/logos/adtti.svg';
+import detrcLogo from '@site/static/img/logos/detrc.svg';
+import reecLogo from '@site/static/img/logos/reec.svg';
+import piteLogo from '@site/static/img/logos/pite.svg';
+
 const FOOTER_LOGOS = [
-  { abbr: 'STEDA', name: 'Sindh Teacher Education Development Authority' },
-  { abbr: 'HEC', name: 'Higher Education Commission' },
-  { abbr: 'UoS', name: 'University of Sindh' },
-  { abbr: 'GEC', name: 'Government Elementary Colleges, Sindh' },
-  { abbr: 'ADTTI', name: 'Additional Director, Teacher Training Institutions' },
-  { abbr: 'DETRC', name: 'District Education Teacher Resource Centres' },
-  { abbr: 'REEC', name: 'Regional Education Extension Centres' },
-  { abbr: 'PITE', name: 'Provincial Institute of Teacher Education, Sindh' },
+  { src: hecLogo, alt: 'Higher Education Commission (HEC)' },
+  { src: universityOfSindhLogo, alt: 'University of Sindh' },
+  { src: sindhGovtLogo, alt: 'Government of Sindh' },
+  { src: stedaLogo, alt: 'STEDA' },
+  { src: gecLogo, alt: 'Government Elementary Colleges, Sindh' },
+  { src: adttiLogo, alt: 'Additional Director, TTIs' },
+  { src: detrcLogo, alt: 'DETRCs' },
+  { src: reecLogo, alt: 'REECs' },
+  { src: piteLogo, alt: 'PITE Sindh' },
 ];
 
 function FooterLogos(): React.ReactElement {
@@ -22,8 +33,8 @@ function FooterLogos(): React.ReactElement {
         </p>
         <div className="footer-logos__strip">
           {FOOTER_LOGOS.map((logo) => (
-            <div key={logo.abbr} className="footer-logos__item" title={logo.name}>
-              <span className="footer-logos__abbr">{logo.abbr}</span>
+            <div key={logo.alt} className="footer-logos__item" title={logo.alt}>
+              <img src={logo.src} alt={logo.alt} className="footer-logos__img" />
             </div>
           ))}
         </div>
