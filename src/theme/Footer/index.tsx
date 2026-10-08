@@ -5,8 +5,9 @@ import type { Props as FooterProps } from '@docusaurus/theme-classic/lib/types';
 import hecLogo from '@site/static/img/logos/hec.png';
 import universityOfSindhLogo from '@site/static/img/logos/university-of-sindh.png';
 import sindhGovtLogo from '@site/static/img/logos/sindh-govt.png';
-import stedaLogo from '@site/static/img/logos/steda.svg';
-import gecLogo from '@site/static/img/logos/gec.png';
+import stedaLogo from '@site/static/img/logos/steda.png';
+import gecLogo from '@site/static/img/logos/gec-cropped.png';
+import gec2Logo from '@site/static/img/logos/gec2.png';
 import adttiLogo from '@site/static/img/logos/adtti.png';
 import detrcLogo from '@site/static/img/logos/detrc.png';
 import reecLogo from '@site/static/img/logos/reec.png';
@@ -17,10 +18,11 @@ const FOOTER_LOGOS = [
   { src: universityOfSindhLogo, alt: 'University of Sindh' },
   { src: sindhGovtLogo, alt: 'Government of Sindh' },
   { src: stedaLogo, alt: 'STEDA' },
-  { src: gecLogo, alt: 'Government Elementary Colleges, Sindh' },
+  { src: gecLogo, alt: 'Government Elementary College, Sindh' },
+  { src: gec2Logo, alt: 'Government Elementary College, Sindh' },
   { src: adttiLogo, alt: 'Additional Director, TTIs' },
-  { src: detrcLogo, alt: 'DETRCs' },
-  { src: reecLogo, alt: 'REECs' },
+  { src: detrcLogo, alt: 'DETRC' },
+  { src: reecLogo, alt: 'REEC' },
   { src: piteLogo, alt: 'PITE Sindh' },
 ];
 
@@ -32,8 +34,8 @@ function FooterLogos(): React.ReactElement {
           Supported by
         </p>
         <div className="footer-logos__strip">
-          {FOOTER_LOGOS.map((logo) => (
-            <div key={logo.alt} className="footer-logos__item" title={logo.alt}>
+          {FOOTER_LOGOS.map((logo, index) => (
+            <div key={`${logo.alt}-${index}`} className="footer-logos__item" title={logo.alt}>
               <img src={logo.src} alt={logo.alt} className="footer-logos__img" />
             </div>
           ))}
