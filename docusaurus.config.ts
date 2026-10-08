@@ -100,7 +100,7 @@ function reviewNotices(): Record<string, PublicationTier> {
 
 const config: Config = {
   title: 'Mega Textbook',
-  tagline: 'A bilingual collection of textbooks and a learning platform for Grades 9-12 and teacher education (ADE, B.Ed Hons).',
+  tagline: 'A bilingual textbook collection and learning platform for ADE, B.Ed Hons, STEDA teacher-licence aspirants, and Grades 9-12.',
   favicon: 'img/favicon.svg',
   url: 'https://textbook.com.pk',
   baseUrl: '/',
@@ -256,7 +256,7 @@ const config: Config = {
     // card. WhatsApp matters a great deal for this audience.
     image: 'img/social-card.png',
     metadata: [
-      { name: 'keywords', content: 'textbooks, Grades 9-12, teacher education, ADE, B.Ed Hons, learning platform, LMS, Pakistan, Sindh, bilingual textbook, Urdu, EFMP, GECE' },
+      { name: 'keywords', content: 'textbooks, Grades 9-12, teacher education, ADE, B.Ed Hons, STEDA, teaching licence, Sindh, learning platform, LMS, Pakistan, bilingual textbook, Urdu, EFMP, GECE' },
       { name: 'twitter:card', content: 'summary_large_image' },
       { property: 'og:site_name', content: 'Mega Textbook' },
       { property: 'og:type', content: 'website' },
@@ -303,7 +303,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: 'Mega Textbook — a bilingual textbook collection and learning platform for Grades 9-12 and teacher education.',
+      copyright: 'Mega Textbook — a bilingual textbook collection and learning platform for ADE, B.Ed Hons, STEDA teacher-licence aspirants, and Grades 9-12.',
     },
   } satisfies Preset.ThemeConfig,
 };

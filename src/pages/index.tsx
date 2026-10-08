@@ -8,7 +8,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout
       title="Home"
-      description="A free bilingual (English and Urdu) collection of textbooks and a learning platform for Grades 9-12 and teacher education (ADE, B.Ed Hons). Built for students and their teachers.">
+      description="A free bilingual (English and Urdu) textbook collection and learning platform. The MVP serves ADE and B.Ed(H) students and their teachers, and STEDA teacher-licence aspirants.">
        <main >
         <div className="container margin-vert--xl" style={{ maxWidth: '800px' }}>
           <div className="row">
@@ -19,7 +19,7 @@ export default function Home(): JSX.Element {
 
               <p className="hero__subtitle text--center margin-bottom--xl">
                 <Translate id="home.subtitle">
-                  A bilingual (English &amp; Urdu) collection of textbooks and a learning platform for Grades 9-12 and teacher education (ADE, B.Ed Hons) — built for students and their teachers.
+                  A bilingual (English &amp; Urdu) textbook collection and learning platform. The MVP serves ADE and B.Ed(H) students and their teachers, and STEDA teacher-licence aspirants under the Government of Sindh.
                 </Translate>
               </p>
 
@@ -31,8 +31,8 @@ export default function Home(): JSX.Element {
                     </div>
                     <div className="card__body">
                       <p>
-                        <Translate id="home.textbookDesc">
-                          Read free bilingual textbooks online — Grades 9-12 subjects and teacher-education programmes (ADE, B.Ed Hons). Explore semesters, courses, and units in English and Urdu.
+                         <Translate id="home.textbookDesc">
+                          Read free bilingual textbooks online — ADE and B.Ed(H) programmes and the STEDA teacher-licence syllabus. Explore semesters, courses, and units in English and Urdu.
                         </Translate>
                       </p>
                     </div>
