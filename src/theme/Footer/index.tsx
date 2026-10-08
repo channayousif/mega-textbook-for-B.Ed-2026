@@ -6,11 +6,11 @@ import hecLogo from '@site/static/img/logos/hec.png';
 import universityOfSindhLogo from '@site/static/img/logos/university-of-sindh.png';
 import sindhGovtLogo from '@site/static/img/logos/sindh-govt.png';
 import stedaLogo from '@site/static/img/logos/steda.svg';
-import gecLogo from '@site/static/img/logos/gec.svg';
-import adttiLogo from '@site/static/img/logos/adtti.svg';
-import detrcLogo from '@site/static/img/logos/detrc.svg';
-import reecLogo from '@site/static/img/logos/reec.svg';
-import piteLogo from '@site/static/img/logos/pite.svg';
+import gecLogo from '@site/static/img/logos/gec.png';
+import adttiLogo from '@site/static/img/logos/adtti.png';
+import detrcLogo from '@site/static/img/logos/detrc.png';
+import reecLogo from '@site/static/img/logos/reec.png';
+import piteLogo from '@site/static/img/logos/pite.png';
 
 const FOOTER_LOGOS = [
   { src: hecLogo, alt: 'Higher Education Commission (HEC)' },
