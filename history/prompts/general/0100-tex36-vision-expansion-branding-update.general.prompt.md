@@ -105,6 +105,15 @@ Changes in rev3:
   real `<img>` tags with these assets. 9 logo files under `static/img/logos/`.
 - PR #113 body updated; new `request_confirmation` (v3) posted on TEX-36.
 
+### Revisions 4–6 (commits 7445e024 → b4d22411 → 15c720e8)
+
+- **Rev4**: replaced SVG wordmarks with real PNG logos from board-provided URLs (ADTTI, DETRC, GEC,
+  PITE, REEC). HEC from Wikimedia thumb. STEDA still wordmark.
+- **Rev5**: STEDA real logo downloaded from `steda.gos.pk`. GEC: kept all (cropped image + second
+  option). DETRC: kept.
+- **Rev6**: removed `gec-cropped.png` per board PR comment. Renamed `gec2.png` → `gec.png`. Footer
+  shows 9 logos total.
+
 ## Outcome
 
 - ✅ Impact: every public-facing string that narrowly scoped the project to B.Ed / University of
