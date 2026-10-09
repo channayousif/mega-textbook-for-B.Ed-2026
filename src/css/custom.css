@@ -1098,3 +1098,61 @@ html[dir='rtl'] .dashboard-shell__sidebar {
     display: block;
   }
 }
+
+/* --- Institutional logo strip (footer) ------------------------------------
+   Wordmark placeholders for partner institutions. Replace each .footer-logos__abbr
+   span with an <img> of the official logo when the assets are provided. */
+.footer-logos {
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  background: var(--ifm-background-surface-color);
+}
+
+.footer-logos__heading {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.footer-logos__strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem 2rem;
+}
+
+.footer-logos__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+}
+
+.footer-logos__abbr {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  color: var(--ifm-color-emphasis-700);
+  background: var(--ifm-background-color);
+  white-space: nowrap;
+}
+
+.footer-logos__item img {
+  max-height: 2.5rem;
+  max-width: 6rem;
+  object-fit: contain;
+}
+
+@media print {
+  .footer-logos {
+    display: none !important;
+  }
+}

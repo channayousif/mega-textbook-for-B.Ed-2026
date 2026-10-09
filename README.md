@@ -1,9 +1,12 @@
-# B.Ed (4-Year) Mega Textbook & Learning Platform
+# Mega Textbook — Bilingual Textbook Collection & Learning Platform
 
-A bilingual (English + Urdu) digital textbook and learning platform for the B.Ed (4-Year)
-programme, University of Sindh, Faculty of Education, Elsa Kazi Campus, Hyderabad. Built on
+A bilingual (English + Urdu) collection of digital textbooks and a learning platform for
+**Grades 9-12** and **teacher-education degree programmes (ADE, B.Ed Hons)**. Built on
 [Docusaurus](https://docusaurus.io/) v3 with a self-hosted [Supabase](https://supabase.com/)
 backend for application state (auth, classes, grading, teacher/student dashboards).
+
+The current release is an MVP for the B.Ed (Hons) programme; Grade 9-12 subject tracks and the
+ADE programme are the planned expansion.
 
 Governance, requirements, and every architectural decision are recorded under [`.specify/`](.specify/),
 [`specs/`](specs/), and [`history/adr/`](history/adr/) - see [`.specify/memory/constitution.md`](.specify/memory/constitution.md)
