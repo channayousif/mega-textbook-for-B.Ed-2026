@@ -255,13 +255,13 @@ Weeks 3-5 (derived). Unit Spec (G1) for `docs/semester-2/gqur-301/unit-02/`.
 | ID | Guide ref | Topic | Sub-topic |
 |---|---|---|---|
 | U2-01 | 3.1 | 3.1 | Population concepts |
-| U2-02 | 3.2.a | 3.2 | Random sampling |
-| U2-03 | 3.2.b | 3.2 | Non-random sampling |
+| U2-02 | 3.2 | 3.2 | Random sampling |
+| U2-03 | 3.2 | 3.2 | Non-random sampling |
 | U2-04 | 4.1 | 4.1 | Mean (arithmetic average) |
-| U2-05 | 4.2 | 4.2 | Median |
+| U2-05 | 4.1 | 4.1 | Median |
 | U2-06 | 5.1 | 5.1 | Mode |
-| U2-07 | 5.2 | 5.2 | Comparison of mean, median, mode |
-| U2-08 | 5.3 | 5.3 | Applications and interpretation |
+| U2-07 | 5.1 | 5.1 | Comparison of mean, median, mode |
+| U2-08 | 5.1 | 5.1 | Applications and interpretation |
 
 ### Topic list
 
@@ -272,7 +272,7 @@ Weeks 3-5 (derived). Unit Spec (G1) for `docs/semester-2/gqur-301/unit-02/`.
 | 4.1 | Mean and median | U2-04, U2-05 | 14-18 | fig-U2-5: diagram, fig-U2-6: table |
 | 5.1 | Mode, comparison and interpretation | U2-06, U2-07, U2-08 | 14-18 | fig-U2-7: diagram, fig-U2-8: table |
 
-**Depth budget**: 8 sub-topics; 4 topics; 60-80 reading-min.
+**Depth budget**: 8 sub-topics; 4 topics; 70-90 reading-min.
 
 **Prerequisite knowledge**: Unit 1 (data types, frequency distributions).
 
