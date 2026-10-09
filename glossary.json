@@ -1677,6 +1677,46 @@
  {
   "term": "Cogency",
   "definition_en": "The property of an inductive argument that is both strong and has all true premises. A cogent argument is one you can rely on to reach a probably-true conclusion.",
-  "definition_ur": "ایک اس دلیل کا خاصہ جو مضبوط ہو اور اس کی تمام پریمیسز درست ہوں۔ ایک کوجینٹ دلیل وہ ہے جس پر بھروسہ کر کے غالبا درست نتیجہ اخذ کیا جا سکتا ہے۔"
- }
+   "definition_ur": "ایک اس دلیل کا خاصہ جو مضبوط ہو اور اس کی تمام پریمیسز درست ہوں۔ ایک کوجینٹ دلیل وہ ہے جس پر بھروسہ کر کے غالبا درست نتیجہ اخذ کیا جا سکتا ہے۔"
+  },
+  {
+   "term": "Modes of writing",
+   "definition_en": "The four broad purposes a piece of writing can serve: narration (telling a story), description (painting a picture), exposition (explaining and informing) and argumentation (persuading).",
+   "definition_ur": "تحریر کے چار وسیع مقاصد: کہانی (بیان کرنا), تفصیل (تصویر کچھانا), تشریح (وضاحت دینا) اور دلیل (قائل کرنا)."
+  },
+  {
+   "term": "Expository writing",
+   "definition_en": "Writing whose main purpose is to explain, inform or clarify a topic in a clear and organized way. It is the dominant mode in academic essays, reports and textbooks.",
+   "definition_ur": "تحریر جس کا بنیادی مقصد کسی موضوع کو واضح اور منظم طریقے سے وضاحت دینا، آگاہ کرنا یا واضح کرنا ہو۔ یہ تعلیمی مضامین، رپورٹوں اور نصابی کتابوں میں غلبہ رکھتا ہے۔"
+  },
+  {
+   "term": "Clarity",
+   "definition_en": "The quality of writing that makes it easy for the reader to understand the meaning on the first reading, without guessing.",
+   "definition_ur": "تحریر کا وہ وصف جس کی وجہ سے قاری کو پڑھ کر مطلب فوراً سمجھ آتا ہے، بغیر کوئی اندیشہ لگائے۔"
+  },
+  {
+   "term": "Coherence",
+   "definition_en": "The quality of writing in which ideas connect logically and the reader can move smoothly from one sentence to the next.",
+   "definition_ur": "تحریر کا وہ وصف جس میں خیالات منطقی طور پر جڑے ہوتے ہیں اور قاری ایک جملے سے دوسرے جملے تے آسانی سے بڑھ سکتا ہے۔"
+  },
+  {
+   "term": "Organization",
+   "definition_en": "The quality of writing that is planned and structured before it is produced, with a clear order of ideas.",
+   "definition_ur": "تحریر کا وہ وصف جو لکھنے سے پہلے منصوبہ بندی اور ڈھانچے سے لکھی جائے، جس میں خیالات کی ترتیب واضح ہو۔"
+  },
+  {
+   "term": "Topic sentence",
+   "definition_en": "The sentence in a paragraph that states the main idea. It usually comes first and tells the reader what the paragraph is about.",
+   "definition_ur": "پیراگراف کا وہ جملہ جو مرکزی خیال بیان کرتا ہے۔ عام طور پر پہلے آتا ہے اور قاری کو بتاتا ہے کہ پیراگراف کس بارے میں ہے۔"
+  },
+  {
+   "term": "Supporting details",
+   "definition_en": "Sentences that develop, explain or prove the topic sentence with examples, reasons, facts or evidence.",
+   "definition_ur": "وے جملے جو موضوعی جملے کو مثالوں، وجوہات، حقائق یا دلیل سے تیار کرتے، وضاحت دیتے یا ثابت کرتے ہیں۔"
+  },
+  {
+   "term": "Concluding sentence",
+   "definition_en": "The sentence that rounds off a paragraph, often restating the main idea in different words or summarizing the points made.",
+   "definition_ur": "پیراگراف کو مکمل کرنے والا جملہ، جو عام طور پر مرکزی خیال کو مختلف الفاظوں میں دہرلاتا ہے یا پیش کیے گئے نکات کا خلاصہ پیش کرتا ہے۔"
+  }
 ]
