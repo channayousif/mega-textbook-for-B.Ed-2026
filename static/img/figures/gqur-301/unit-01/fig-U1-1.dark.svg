@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Types of data concept map</title><desc id="d">A concept map placing Data at the centre, branching into Qualitative and Quantitative, with Quantitative branching further into Discrete and Continuous, each with two Pakistani classroom examples.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700;fill:var(--ink)} .sh{font-size:12px;font-weight:600;fill:var(--ink)} .m{font-size:12px;fill:var(--muted)} .c{text-anchor:middle} .wm{fill:var(--wm);font-size:11px} .b1{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2} .b2{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2} .b3{fill:var(--a3-fill);stroke:var(--a3);stroke-width:2} .b4{fill:var(--a4-fill);stroke:var(--a4);stroke-width:2} .line{stroke:var(--line);stroke-width:2}</style><rect class="bg" x="0" y="0" width="780"/><rect class="bg" x="0" y="0" width="780" height="470"/>
+
+  <!-- Centre: Data -->
+  <rect class="b1" x="310" y="200" width="160" height="50" rx="8"/>
+  <text class="h c" x="390" y="232">Data</text>
+
+  <!-- Branch: Qualitative -->
+  <line class="line" x1="310" y1="225" x2="180" y2="140"/>
+  <rect class="b2" x="80" y="110" width="200" height="40" rx="6"/>
+  <text class="sh c" x="180" y="136">Qualitative</text>
+
+  <!-- Branch: Quantitative -->
+  <line class="line" x1="470" y1="225" x2="580" y2="140"/>
+  <rect class="b2" x="500" y="110" width="200" height="40" rx="6"/>
+  <text class="sh c" x="600" y="136">Quantitative</text>
+
+  <!-- Qualitative examples -->
+  <line class="line" x1="130" y1="150" x2="80" y2="200"/>
+  <rect class="panel" x="20" y="185" width="160" height="30" rx="4"/>
+  <text class="m c" x="100" y="205">e.g. subjects taught</text>
+
+  <line class="line" x1="180" y1="150" x2="200" y2="200"/>
+  <rect class="panel" x="160" y="185" width="160" height="30" rx="4"/>
+  <text class="m c" x="240" y="205">e.g. gender (M/F)</text>
+
+  <!-- Discrete -->
+  <line class="line" x1="560" y1="150" x2="520" y2="200"/>
+  <rect class="b3" x="440" y="185" width="160" height="35" rx="5"/>
+  <text class="sh c" x="520" y="207">Discrete (counts)</text>
+
+  <!-- Continuous -->
+  <line class="line" x1="640" y1="150" x2="680" y2="200"/>
+  <rect class="b3" x="640" y="185" width="130" height="35" rx="5"/>
+  <text class="sh c" x="705" y="207">Continuous</text>
+
+  <!-- Discrete examples -->
+  <line class="line" x1="480" y1="220" x2="450" y2="270"/>
+  <rect class="panel" x="380" y="258" width="180" height="28" rx="4"/>
+  <text class="m c" x="470" y="277">e.g. pupils present (25, 26)</text>
+
+  <line class="line" x1="540" y1="220" x2="560" y2="270"/>
+  <rect class="panel" x="510" y="258" width="170" height="28" rx="4"/>
+  <text class="m c" x="595" y="277">e.g. correct answers (18/20)</text>
+
+  <!-- Continuous examples -->
+  <line class="line" x1="670" y1="220" x2="650" y2="270"/>
+  <rect class="panel" x="570" y="258" width="180" height="28" rx="4"/>
+  <text class="m c" x="660" y="277">e.g. height (145.2 cm)</text>
+
+  <line class="line" x1="720" y1="220" x2="740" y2="270"/>
+  <rect class="panel" x="690" y="258" width="85" height="28" rx="4"/>
+  <text class="m c" x="733" y="277">e.g. time (12.4 min)</text>
+
+  <!-- Caption -->
+  <rect class="panel" x="30" y="340" width="720" height="100" rx="6"/>
+  <text class="sh" x="50" y="365">Caption: Types of data and Pakistani classroom examples</text>
+  <text class="m" x="50" y="385">Qualitative data describe categories. Quantitative data are numbers that support arithmetic.</text>
+  <text class="m" x="50" y="400">Quantitative data split into discrete (counts) and continuous (measurements).</text>
+  <text class="m" x="50" y="420">Credit: textbook.com.pk based on Lane (2023) and Illowsky et al. (2020).</text>
+
+  <!-- Wordmark -->
+  <text class="wm" x="760" y="460" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

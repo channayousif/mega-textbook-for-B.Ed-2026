@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d"><title id="t">How to build a frequency distribution table</title><desc id="d">A flowchart showing the steps to build a frequency table: sort, choose intervals, set width, tally, count.</desc>
+  <defs>
+    <style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700;fill:var(--ink)} .sh{font-size:12px;font-weight:600;fill:var(--ink)} .m{font-size:12px;fill:var(--muted)} .c{text-anchor:middle} .wm{fill:var(--wm);font-size:11px} .b1{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2} .b2{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2} .b3{fill:var(--a3-fill);stroke:var(--a3);stroke-width:2} .b4{fill:var(--a4-fill);stroke:var(--a4);stroke-width:2} .line{stroke:var(--line);stroke-width:2}</style>
+    <marker id="arrow-primary" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="var(--a1)"/>
+    </marker>
+  </defs>
+
+  <text x="760" y="460" class="wm" aria-hidden="true">textbook.com.pk</text>
+  <text x="30" y="30" class="title">How to build a frequency distribution table</text>
+
+  <!-- Step 1 -->
+  <rect x="290" y="50" width="200" height="45" rx="6" class="step-box"/>
+  <text x="310" y="70" class="num">1.</text>
+  <text x="330" y="78" class="step">Sort the data</text>
+  <text x="330" y="90" class="sub">smallest to largest</text>
+  <line x1="390" y1="95" x2="390" y2="115" class="arrow" marker-end="url(#arrow-primary)"/>
+
+  <!-- Step 2 -->
+  <rect x="290" y="115" width="200" height="45" rx="6" class="step-box"/>
+  <text x="310" y="135" class="num">2.</text>
+  <text x="330" y="143" class="step">Decide number of</text>
+  <text x="330" y="155" class="sub">intervals (5 to 15)</text>
+  <line x1="390" y1="160" x2="390" y2="180" class="arrow" marker-end="url(#arrow-primary)"/>
+
+  <!-- Step 3 -->
+  <rect x="290" y="180" width="200" height="45" rx="6" class="step-box"/>
+  <text x="310" y="200" class="num">3.</text>
+  <text x="330" y="208" class="step">Set interval width</text>
+  <text x="330" y="220" class="sub">range / number of intervals</text>
+  <line x1="390" y1="225" x2="390" y2="245" class="arrow" marker-end="url(#arrow-primary)"/>
+
+  <!-- Step 4 -->
+  <rect x="290" y="245" width="200" height="45" rx="6" class="step-box"/>
+  <text x="310" y="265" class="num">4.</text>
+  <text x="330" y="273" class="step">Define the intervals</text>
+  <text x="330" y="285" class="sub">non-overlapping, cover all data</text>
+  <line x1="390" y1="290" x2="390" y2="310" class="arrow" marker-end="url(#arrow-primary)"/>
+
+  <!-- Step 5 -->
+  <rect x="290" y="310" width="200" height="45" rx="6" class="step-box"/>
+  <text x="310" y="330" class="num">5.</text>
+  <text x="330" y="338" class="step">Tally each value</text>
+  <text x="330" y="350" class="sub">into its interval</text>
+  <line x1="390" y1="355" x2="390" y2="375" class="arrow" marker-end="url(#arrow-primary)"/>
+
+  <!-- Step 6 -->
+  <rect x="290" y="375" width="200" height="45" rx="6" class="step-box"/>
+  <text x="310" y="395" class="num">6.</text>
+  <text x="330" y="403" class="step">Count tally strokes</text>
+  <text x="330" y="415" class="sub">to get frequency</text>
+
+  <!-- Left annotation -->
+  <rect x="30" y="115" width="230" height="45" rx="4" fill="var(--panel)" stroke="var(--line)" stroke-width="0.8"/>
+  <text x="45" y="135" class="sub">Example: quiz marks</text>
+  <text x="45" y="150" class="sub">11, 12, 13, ..., 25 (n=25)</text>
+
+  <!-- Right annotation -->
+  <rect x="550" y="180" width="200" height="45" rx="4" fill="var(--panel)" stroke="var(--line)" stroke-width="0.8"/>
+  <text x="565" y="200" class="sub">Range: 25 - 11 = 14</text>
+  <text x="565" y="215" class="sub">Width: round to 5</text>
+
+  <!-- Caption -->
+  <text x="30" y="445" class="caption">Caption: Six steps from raw data to a frequency distribution table. Credit: textbook.com.pk.</text>
+</svg>

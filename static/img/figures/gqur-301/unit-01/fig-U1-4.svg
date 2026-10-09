@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d"><title id="t">Primary vs secondary sources compared</title><desc id="d">Table comparing primary and secondary sources across five rows: who collects, how, cost, timeliness, and relevance, with school-based examples for each.</desc>
+  <defs>
+    <style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700;fill:var(--ink)} .sh{font-size:12px;font-weight:600;fill:var(--ink)} .m{font-size:12px;fill:var(--muted)} .c{text-anchor:middle} .wm{fill:var(--wm);font-size:11px} .b1{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2} .b2{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2} .b3{fill:var(--a3-fill);stroke:var(--a3);stroke-width:2} .b4{fill:var(--a4-fill);stroke:var(--a4);stroke-width:2} .line{stroke:var(--line);stroke-width:2}</style>
+  </defs>
+
+  <text x="760" y="460" class="wm" aria-hidden="true">textbook.com.pk</text>
+  <text x="30" y="30" class="title">Primary vs secondary sources compared</text>
+
+  <!-- Header -->
+  <rect x="30" y="45" width="720" height="28" rx="4" class="header-bg"/>
+  <line x1="160" y1="45" x2="160" y2="73" class="border"/>
+  <line x1="450" y1="45" x2="450" y2="73" class="border"/>
+  <text x="95" y="64" text-anchor="middle" class="header">Aspect</text>
+  <text x="305" y="64" text-anchor="middle" class="header">Primary source</text>
+  <text x="585" y="64" text-anchor="middle" class="header">Secondary source</text>
+
+  <!-- Row 1: Who collects -->
+  <rect x="30" y="73" width="720" height="45" class="row-bg-1"/>
+  <line x1="160" y1="73" x2="160" y2="118" class="border"/>
+  <line x1="450" y1="73" x2="450" y2="118" class="border"/>
+  <text x="95" y="95" text-anchor="middle" class="row-label">Who collects</text>
+  <text x="95" y="110" text-anchor="middle" class="row-label">the data</text>
+  <text x="305" y="95" text-anchor="middle" class="cell">You (the teacher</text>
+  <text x="305" y="110" text-anchor="middle" class="cell">or researcher)</text>
+  <text x="585" y="95" text-anchor="middle" class="cell">Someone else (govt,</text>
+  <text x="585" y="110" text-anchor="middle" class="cell">school, publisher)</text>
+
+  <!-- Row 2: How -->
+  <rect x="30" y="118" width="720" height="45" class="row-bg-2"/>
+  <line x1="160" y1="118" x2="160" y2="163" class="border"/>
+  <line x1="450" y1="118" x2="450" y2="163" class="border"/>
+  <text x="95" y="140" text-anchor="middle" class="row-label">How</text>
+  <text x="305" y="140" text-anchor="middle" class="cell">Questionnaire, count,</text>
+  <text x="305" y="155" text-anchor="middle" class="cell">measurement, interview</text>
+  <text x="585" y="140" text-anchor="middle" class="cell">Census, register,</text>
+  <text x="585" y="155" text-anchor="middle" class="cell">published report</text>
+
+  <!-- Row 3: Cost -->
+  <rect x="30" y="163" width="720" height="45" class="row-bg-1"/>
+  <line x1="160" y1="163" x2="160" y2="208" class="border"/>
+  <line x1="450" y1="163" x2="450" y2="208" class="border"/>
+  <text x="95" y="185" text-anchor="middle" class="row-label">Cost</text>
+  <text x="305" y="185" text-anchor="middle" class="cell">Higher (your time,</text>
+  <text x="305" y="200" text-anchor="middle" class="cell">materials, travel)</text>
+  <text x="585" y="185" text-anchor="middle" class="cell">Lower (already</text>
+  <text x="585" y="200" text-anchor="middle" class="cell">collected)</text>
+
+  <!-- Row 4: Timeliness -->
+  <rect x="30" y="208" width="720" height="45" class="row-bg-2"/>
+  <line x1="160" y1="208" x2="160" y2="253" class="border"/>
+  <line x1="450" y1="208" x2="450" y2="253" class="border"/>
+  <text x="95" y="230" text-anchor="middle" class="row-label">Timeliness</text>
+  <text x="305" y="230" text-anchor="middle" class="cell">Fresh (collected now)</text>
+  <text x="585" y="230" text-anchor="middle" class="cell">May be dated (last</text>
+  <text x="585" y="245" text-anchor="middle" class="cell">year, last census)</text>
+
+  <!-- Row 5: Relevance -->
+  <rect x="30" y="253" width="720" height="45" class="row-bg-1"/>
+  <line x1="160" y1="253" x2="160" y2="298" class="border"/>
+  <line x1="450" y1="253" x2="450" y2="298" class="border"/>
+  <text x="95" y="275" text-anchor="middle" class="row-label">Relevance</text>
+  <text x="305" y="275" text-anchor="middle" class="cell">High (exactly your</text>
+  <text x="305" y="290" text-anchor="middle" class="cell">group and question)</text>
+  <text x="585" y="275" text-anchor="middle" class="cell">Variable (collected</text>
+  <text x="585" y="290" text-anchor="middle" class="cell">for another purpose)</text>
+
+  <!-- Decision box -->
+  <rect x="30" y="320" width="720" height="100" rx="6" fill="var(--a1-fill)" stroke="var(--a1)" stroke-width="1"/>
+  <text x="50" y="345" class="cell" font-weight="600">The three-question rule:</text>
+  <text x="50" y="365" class="cell">1. Does the data I need already exist? &rarr; check secondary first.</text>
+  <text x="50" y="385" class="cell">2. Do they cover my group and my question? &rarr; if not, go primary.</text>
+  <text x="50" y="405" class="cell">3. Do I have time and resources? &rarr; if not, use the best available secondary source.</text>
+
+  <!-- Caption -->
+  <text x="30" y="445" class="caption">Caption: Comparison of primary and secondary data sources. Credit: textbook.com.pk.</text>
+</svg>
