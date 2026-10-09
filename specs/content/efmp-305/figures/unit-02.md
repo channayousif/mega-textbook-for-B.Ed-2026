@@ -1,0 +1,8 @@
+# EFMP-305 Unit 2 - Figure Manifest
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U2-1 | 2.1 | concept-map | Concept-map showing the three broad categories of learner diversity (disability, learning difficulty, social difference) with branches for each subcategory and a short classroom example beside each branch. | A concept-map showing three categories of learner diversity (disability, learning difficulty, social difference) branching into subcategories with a classroom example for each. | | prompt-only |
+| fig-U2-2 | 2.1 | table | Table listing common disabilities (visual impairment, hearing impairment, physical disability, intellectual disability), their classroom signs and one practical implication for the teacher in each case. | A table listing common disabilities, their classroom signs and practical implications for teachers in Pakistani schools. | | prompt-only |
+| fig-U2-3 | 2.2 | flowchart | Flowchart showing the teacher's decision path for identifying and responding to a learner's individual needs. Start with observation, move to informal assessment, then to adaptation, then to evaluation. Each step has a short question. | A flowchart showing a four-step decision path for identifying and responding to individual learner needs: observe, assess, adapt, evaluate. | | prompt-only |
+| fig-U2-4 | 2.2 | diagram | Diagram showing the labelling cycle: a teacher labels a pupil, the pupil internalises the label, the pupil's behaviour confirms the label, the teacher's expectations drop, and the cycle repeats. An arrow showing how respect breaks the cycle. | A diagram showing how labelling creates a self-fulfilling cycle and how respect breaks that cycle. | | prompt-only |

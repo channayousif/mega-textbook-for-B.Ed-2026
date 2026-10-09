@@ -237,7 +237,7 @@ Weeks 3-4. Unit Spec (G1) for `docs/semester-2/efmp-305/unit-02/`.
 
 ### Depth budget
 
-A-B band: 130-160 reading minutes across the unit.
+**Depth budget**: 5 sub-topics; 2 topics; 40-55 reading-min (A-B band).
 
 ### Figure plan
 
