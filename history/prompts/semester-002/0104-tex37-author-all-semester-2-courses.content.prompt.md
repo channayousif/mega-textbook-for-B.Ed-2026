@@ -54,13 +54,32 @@ Unit partitions:
 
 ## Outcome
 
-- Plan committed and pushed to agent/tex-7 branch
-- Issue set to in_review with pending confirmation card
-- Waiting for board authorization to create 7 child issues and begin parallel authoring
+- Plan committed and pushed to agent/tex-37 branch
+- Board confirmed via interaction 251daffb (accepted)
+- Created 7 child issues, all assigned to BilingualAuthor (bbc7d03f)
+- All children block on TEX-37; TEX-37 is in_progress
+
+### Child Issues Created
+
+| ID | Course | Priority |
+|---|---|---|
+| 7bfd21c2 | TEX-37a: EFMP-304 Complete units 4-6 | high |
+| 3966d873 | TEX-37: EFMP-305 Inclusive Education | high |
+| f002912a | TEX-37: EFMP-303 Educational Policies | high |
+| 11350afb | TEX-37: GQUR-301 Quantitative Reasoning | medium |
+| 32bd26ad | TEX-37: GENG-301 Expository Writing | medium |
+| fd2bbf04 | TEX-37: GSOS-301 Social Science | medium |
+| 325ba7e1 | TEX-37: GPKS-402 Pakistan Studies | medium |
 
 ## Handoff (for CEO and agents)
 
-Board confirmation requested via interaction 251daffb on TEX-37. On acceptance:
-create 7 child issues (one per course), delegate authoring with author-unit skill,
-run QC gates per course, generate figures, build Urdu mirrors. EFMP-304 child
-should complete remaining units 4-6 only (units 1-3 already done).
+7 child issues delegated to BilingualAuthor. Each child has full instructions in
+its description. Children will be woken on BilingualAgent's next heartbeat. TEX-37
+stays in_progress until `issue_children_completed` fires. Monitor for:
+- Content specs needing G0/G1 intake (CurriculumOwner)
+- QC gate failures needing escalation
+- Figure generation needing Codex handoff (ADR-0024)
+- Urdu mirror completion
+
+On all children completing: run final `npm run check:all`, verify all courses
+render on platform, merge child PRs, then mark TEX-37 done.
