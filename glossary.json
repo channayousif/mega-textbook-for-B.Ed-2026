@@ -1677,46 +1677,196 @@
  {
   "term": "Cogency",
   "definition_en": "The property of an inductive argument that is both strong and has all true premises. A cogent argument is one you can rely on to reach a probably-true conclusion.",
-   "definition_ur": "ایک اس دلیل کا خاصہ جو مضبوط ہو اور اس کی تمام پریمیسز درست ہوں۔ ایک کوجینٹ دلیل وہ ہے جس پر بھروسہ کر کے غالبا درست نتیجہ اخذ کیا جا سکتا ہے۔"
-  },
-  {
-   "term": "Modes of writing",
-   "definition_en": "The four broad purposes a piece of writing can serve: narration (telling a story), description (painting a picture), exposition (explaining and informing) and argumentation (persuading).",
-   "definition_ur": "تحریر کے چار وسیع مقاصد: کہانی (بیان کرنا), تفصیل (تصویر کچھانا), تشریح (وضاحت دینا) اور دلیل (قائل کرنا)."
-  },
-  {
-   "term": "Expository writing",
-   "definition_en": "Writing whose main purpose is to explain, inform or clarify a topic in a clear and organized way. It is the dominant mode in academic essays, reports and textbooks.",
-   "definition_ur": "تحریر جس کا بنیادی مقصد کسی موضوع کو واضح اور منظم طریقے سے وضاحت دینا، آگاہ کرنا یا واضح کرنا ہو۔ یہ تعلیمی مضامین، رپورٹوں اور نصابی کتابوں میں غلبہ رکھتا ہے۔"
-  },
-  {
-   "term": "Clarity",
-   "definition_en": "The quality of writing that makes it easy for the reader to understand the meaning on the first reading, without guessing.",
-   "definition_ur": "تحریر کا وہ وصف جس کی وجہ سے قاری کو پڑھ کر مطلب فوراً سمجھ آتا ہے، بغیر کوئی اندیشہ لگائے۔"
-  },
-  {
-   "term": "Coherence",
-   "definition_en": "The quality of writing in which ideas connect logically and the reader can move smoothly from one sentence to the next.",
-   "definition_ur": "تحریر کا وہ وصف جس میں خیالات منطقی طور پر جڑے ہوتے ہیں اور قاری ایک جملے سے دوسرے جملے تے آسانی سے بڑھ سکتا ہے۔"
-  },
-  {
-   "term": "Organization",
-   "definition_en": "The quality of writing that is planned and structured before it is produced, with a clear order of ideas.",
-   "definition_ur": "تحریر کا وہ وصف جو لکھنے سے پہلے منصوبہ بندی اور ڈھانچے سے لکھی جائے، جس میں خیالات کی ترتیب واضح ہو۔"
-  },
-  {
-   "term": "Topic sentence",
-   "definition_en": "The sentence in a paragraph that states the main idea. It usually comes first and tells the reader what the paragraph is about.",
-   "definition_ur": "پیراگراف کا وہ جملہ جو مرکزی خیال بیان کرتا ہے۔ عام طور پر پہلے آتا ہے اور قاری کو بتاتا ہے کہ پیراگراف کس بارے میں ہے۔"
-  },
-  {
-   "term": "Supporting details",
-   "definition_en": "Sentences that develop, explain or prove the topic sentence with examples, reasons, facts or evidence.",
-   "definition_ur": "وے جملے جو موضوعی جملے کو مثالوں، وجوہات، حقائق یا دلیل سے تیار کرتے، وضاحت دیتے یا ثابت کرتے ہیں۔"
-  },
-  {
-   "term": "Concluding sentence",
-   "definition_en": "The sentence that rounds off a paragraph, often restating the main idea in different words or summarizing the points made.",
-   "definition_ur": "پیراگراف کو مکمل کرنے والا جملہ، جو عام طور پر مرکزی خیال کو مختلف الفاظوں میں دہرلاتا ہے یا پیش کیے گئے نکات کا خلاصہ پیش کرتا ہے۔"
-  }
+  "definition_ur": "ایک اس دلیل کا خاصہ جو مضبوط ہو اور اس کی تمام پریمیسز درست ہوں۔ ایک کوجینٹ دلیل وہ ہے جس پر بھروسہ کر کے غالبا درست نتیجہ اخذ کیا جا سکتا ہے۔"
+ },
+ {
+  "term": "Modes of writing",
+  "definition_en": "The four broad purposes a piece of writing can serve: narration (telling a story), description (painting a picture), exposition (explaining and informing) and argumentation (persuading).",
+  "definition_ur": "تحریر کے چار وسیع مقاصد: کہانی (بیان کرنا), تفصیل (تصویر کچھانا), تشریح (وضاحت دینا) اور دلیل (قائل کرنا)."
+ },
+ {
+  "term": "Expository writing",
+  "definition_en": "Writing whose main purpose is to explain, inform or clarify a topic in a clear and organized way. It is the dominant mode in academic essays, reports and textbooks.",
+  "definition_ur": "تحریر جس کا بنیادی مقصد کسی موضوع کو واضح اور منظم طریقے سے وضاحت دینا، آگاہ کرنا یا واضح کرنا ہو۔ یہ تعلیمی مضامین، رپورٹوں اور نصابی کتابوں میں غلبہ رکھتا ہے۔"
+ },
+ {
+  "term": "Clarity",
+  "definition_en": "The quality of writing that makes it easy for the reader to understand the meaning on the first reading, without guessing.",
+  "definition_ur": "تحریر کا وہ وصف جس کی وجہ سے قاری کو پڑھ کر مطلب فوراً سمجھ آتا ہے، بغیر کوئی اندیشہ لگائے۔"
+ },
+ {
+  "term": "Coherence",
+  "definition_en": "The quality of writing in which ideas connect logically and the reader can move smoothly from one sentence to the next.",
+  "definition_ur": "تحریر کا وہ وصف جس میں خیالات منطقی طور پر جڑے ہوتے ہیں اور قاری ایک جملے سے دوسرے جملے تے آسانی سے بڑھ سکتا ہے۔"
+ },
+ {
+  "term": "Organization",
+  "definition_en": "The quality of writing that is planned and structured before it is produced, with a clear order of ideas.",
+  "definition_ur": "تحریر کا وہ وصف جو لکھنے سے پہلے منصوبہ بندی اور ڈھانچے سے لکھی جائے، جس میں خیالات کی ترتیب واضح ہو۔"
+ },
+ {
+  "term": "Topic sentence",
+  "definition_en": "The sentence in a paragraph that states the main idea. It usually comes first and tells the reader what the paragraph is about.",
+  "definition_ur": "پیراگراف کا وہ جملہ جو مرکزی خیال بیان کرتا ہے۔ عام طور پر پہلے آتا ہے اور قاری کو بتاتا ہے کہ پیراگراف کس بارے میں ہے۔"
+ },
+ {
+  "term": "Supporting details",
+  "definition_en": "Sentences that develop, explain or prove the topic sentence with examples, reasons, facts or evidence.",
+  "definition_ur": "وے جملے جو موضوعی جملے کو مثالوں، وجوہات، حقائق یا دلیل سے تیار کرتے، وضاحت دیتے یا ثابت کرتے ہیں۔"
+ },
+ {
+  "term": "Concluding sentence",
+  "definition_en": "The sentence that rounds off a paragraph, often restating the main idea in different words or summarizing the points made.",
+  "definition_ur": "پیراگراف کو مکمل کرنے والا جملہ، جو عام طور پر مرکزی خیال کو مختلف الفاظوں میں دہرلاتا ہے یا پیش کیے گئے نکات کا خلاصہ پیش کرتا ہے۔"
+ },
+ {
+  "term": "Pre-writing",
+  "definition_en": "Everything a writer does before writing the first draft: generating ideas and organizing them into a plan.",
+  "definition_ur": "پہلے مسودہ لکھنے سے پہلے مصنف جو کچھ کرتا ہے: خیالات پیدا کرنا اور ان کو منصوبے میں ترتیب دینا۔"
+ },
+ {
+  "term": "Brainstorming",
+  "definition_en": "A pre-writing technique in which the writer generates as many ideas as possible about a topic without judging or editing them.",
+  "definition_ur": "ایک قبل از تحریر ہنر جس میں مصنف کسی موضوع پر جتنے ممکن ہوں خیالات پیدا کرتا ہے، بغیر ان کا جائزہ لیے یا تدوین کیے۔"
+ },
+ {
+  "term": "Free-writing",
+  "definition_en": "Writing continuously for a set time without stopping, to discover what you think about a topic.",
+  "definition_ur": "مخصوص وقت کے لیے بغیر رکے لکھنا، تاکہ معلوم ہو کہ کسی موضوع پر آپ کیا سوچتے ہیں۔"
+ },
+ {
+  "term": "Mind-mapping",
+  "definition_en": "A visual pre-writing technique in which the writer places the topic at the centre and draws branches for related ideas and details.",
+  "definition_ur": "ایک بصری قبل از تحریر ہنر جس میں مصنف موضوع کو مرکز میں رکھتا ہے اور متعلقہ خیالات اور تفصیلات کے لیڈ شاخیں بنتا ہے۔"
+ },
+ {
+  "term": "Outlining",
+  "definition_en": "Arranging ideas into the order they will appear in a draft, usually as a list of main points and supporting points.",
+  "definition_ur": "خیالات کو اس ترتیب میں ترتیب دینا جس میں وہ مسودہ میں نظر آئیں گے، عام طور پر مرکزی نکات اور معاون نکات کی فہرست کی شکل میں۔"
+ },
+ {
+  "term": "Drafting",
+  "definition_en": "The stage of the writing process in which the writer produces a complete version of the text, from first rough version to refined version.",
+  "definition_ur": "تحریری عمل کا وہ مرحلہ جس میں مصنف متن مکمل ورژن تیار کرتا ہے، پہلے خام ورژن سے بہتر ورژن تک۔"
+ },
+ {
+  "term": "Revising",
+  "definition_en": "The stage of improving a draft by changing its content, organization and argument strength - what is said and how it is arranged.",
+  "definition_ur": "مسودہ بہتر بنانے کا مرحلہ جس میں مواد، تنظیم اور دلیل کی طاقت تبدیل کی جاتی ہے - کیا کہا گیا اور کیسے ترتیب دیا گیا۔"
+ },
+ {
+  "term": "Proof reading",
+  "definition_en": "The final check of a text for small errors in spelling, punctuation and formatting that earlier stages may have missed.",
+  "definition_ur": "متن کی آخری جانچ جس میٹ املا، ترقيم اور فارمیٹنگ کی چھوٹی غلطیاں جو پچھلے مراحل سے چھوّ گئی ہوں۔"
+ },
+ {
+  "term": "Peer review",
+  "definition_en": "The process of exchanging drafts with a classmate or colleague and giving structured feedback on each other's work.",
+  "definition_ur": "مسودوں کا ہم جماعت یا ساتھی کے ساتھ تبادلہ کرنا اور ایک دوسرے کے کام پر منظم رائے دینا۔"
+ },
+ {
+  "term": "Hook",
+  "definition_en": "The first sentence or two of an essay, designed to capture the reader's attention.",
+  "definition_ur": "مضمون کا پہلا جملہ یا دو جملے، جو قاری کی توجہ حاصل کرنے کے لیے تیار کیے جاتے ہیں۔"
+ },
+ {
+  "term": "Thesis statement",
+  "definition_en": "The sentence at the end of an introduction that states the essay's main argument or position.",
+  "definition_ur": "تعارف کا آخری جملہ جو مضمون کی مرکزی دلیل یا پوزیشن بیان کرتا ہے۔"
+ },
+ {
+  "term": "Description",
+  "definition_en": "A mode of writing that paints a picture with words, helping the reader see, hear, smell or feel a person, place or object.",
+  "definition_ur": "تحریر کا وہ انداز جو الفاظ سے تصویر کچھاتا ہے، قاری کو دکھانے، سنانے، سونگھنے یا محسوس کرنے میں مدد دیتا ہے۔"
+ },
+ {
+  "term": "Classification",
+  "definition_en": "A type of expository writing that sorts items into categories based on a single organizing principle.",
+  "definition_ur": "تشریحی تحریر کا ایک قسم جو اشیاء کو ایک تنظیمی اصول کی بنیاد پر زمروں میں تقسیم کرتی ہے۔"
+ },
+ {
+  "term": "Cause and effect",
+  "definition_en": "A type of expository writing that explores the relationships between events and their outcomes.",
+  "definition_ur": "تشریحی تحریر کا ایک قسم جو واقعات اور ان کے نتائج کے درمیان تعلقات کا جائزہ لیتی ہے۔"
+ },
+ {
+  "term": "Process analysis",
+  "definition_en": "A type of expository writing that explains a step-by-step procedure.",
+  "definition_ur": "تشریحی تحریر کا ایک قسم قدم بہ قدم طریقۂ کار کی وضاحت کرتی ہے۔"
+ },
+ {
+  "term": "Compare and contrast",
+  "definition_en": "A type of expository writing that analyses similarities and differences between two or more things.",
+  "definition_ur": "تشریحی تحریر کا ایک قسم جو دو یا زیادہ چیزوں کے درمیان مماثلت اور اختلاف کا تجزیہ کرتی ہے۔"
+ },
+ {
+  "term": "Citation",
+  "definition_en": "A reference to the source of a fact, quotation or idea used in your writing.",
+  "definition_ur": "تحریر میں استعمال کی گئی کسی حقیقت، اقتباس یا خیال کے ماخذ کا حوالہ۔"
+ },
+ {
+  "term": "Illustration",
+  "definition_en": "A type of expository writing that supports a point with concrete examples.",
+  "definition_ur": "تشریحی تحریر کا ایک قسم جو کسی نیکت کو مخصوص مثالوں سے ثابت کرتی ہے۔"
+ },
+ {
+  "term": "Body paragraph",
+  "definition_en": "A paragraph in the middle of an essay that develops one point from the thesis with a topic sentence, evidence and explanation.",
+  "definition_ur": "مضمون کی درمیان میں آنے والا پیراگراف جو نظریہ سے ایک نیکت کو موضوعی جملہ، دلیل اور وضاحت سے تیار کرتا ہے۔"
+ },
+ {
+  "term": "Argumentation",
+  "definition_en": "A mode of writing that tries to persuade the reader to accept a position by making a case and supporting it with evidence.",
+  "definition_ur": "تحریر کا وہ انداز جو قاری کو کسی پوزیشن کو قبول کرنے کے لیے قائل کرنے کی کوشش کرتا ہے۔"
+ },
+ {
+  "term": "Narration",
+  "definition_en": "A mode of writing that tells a story or recounts events in time order.",
+  "definition_ur": "تحریر کا وہ انداز جو کہانی سنانے یا واقعات کو وقت کی ترتیب میں بیان کرنے کے لیے استعمال ہوتا ہے۔"
+ },
+ {
+  "term": "Exposition",
+  "definition_en": "A mode of writing that explains, informs or clarifies a topic in a clear, organized way.",
+  "definition_ur": "تحریر کا وہ انداز جو کسی موضوع کو واضح اور منظم طریقے سے وضاحت دیتا، آگاہ کرتا یا واضح کرتا ہے۔"
+ },
+ {
+  "term": "APA style",
+  "definition_en": "A citation format developed by the American Psychological Association, commonly used in education and social sciences.",
+  "definition_ur": "امریکی نفسیاتی ایسوسی ایشن کی بنیاد پر تیار کردہ حوالہ دینے کا طریقہ، جو تعلیم اور سماجی علوم میں عام استعمال میں ہے۔"
+ },
+ {
+  "term": "MLA style",
+  "definition_en": "A citation format developed by the Modern Language Association, commonly used in humanities and literature.",
+  "definition_ur": "ماڈرن لینگویج ایسوسی ایشن کی بنیاد پر تیار کردہ حوالہ دینے کا طریقہ، جو انسانیات اور ادبیات میں عام استعمال میں ہے۔"
+ },
+ {
+  "term": "CRAAP test",
+  "definition_en": "A checklist for evaluating source credibility: Currency, Relevance, Authority, Accuracy, and Purpose.",
+  "definition_ur": "ماخذ کی مستندی کی جانچ کے لیے ایک چیک لسٹ: وقت، مطابقت، اختیار، درستگی اور مقصد."
+ },
+ {
+  "term": "Quoting",
+  "definition_en": "Using an author's exact words, in quotation marks, with a citation. Used sparingly when the exact wording matters.",
+  "definition_ur": "مصنف کے اصل الفاظ استعمال کرنا، اقتباسی نشانات کے ساتھ، حوالہ دے کر۔ صرف تبھی استعمال کرنا جب اصل الفاظ اہم ہوں۔"
+ },
+ {
+  "term": "Paraphrasing",
+  "definition_en": "Restating an authors idea in your own words and sentence structure, with a citation.",
+  "definition_ur": "مصنف کے خیال کو اپنے الفاظ اور جملے کی ساخت میں دہرانا، حوالہ دے کر۔"
+ },
+ {
+  "term": "Summarizing",
+  "definition_en": "Condensing a longer passage or argument into a few sentences in your own words, with a citation.",
+  "definition_ur": "طویل پیراگراف یا دلیل کو اپنے الفاظ میں چند جملوں میں خلاصہ کرنا، حوالہ دے کر۔"
+ },
+ {
+  "term": "Academic integrity",
+  "definition_en": "The ethical principle of producing original work and giving credit to others for their ideas, words and data.",
+  "definition_ur": "اصل کام تیار کرنے اور دوسروں کو ان کے خیالات، الفاظ اور اعدادوشمار کا اعتراف کرنے کا اخلاقی اصول۔"
+ },
+ {
+  "term": "Originality",
+  "definition_en": "The quality of being new and produced by the writer, not copied or closely borrowed from another source.",
+  "definition_ur": "نیا ہونے اور مصنف کی طرف سے تیار کیے جانے کا وصف، نہ کہ کسی دوسرے ماخذ سے نقل یا قرض۔"
+ }
 ]
