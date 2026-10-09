@@ -1703,5 +1703,35 @@
   "term": "Histogram",
   "definition_en": "A chart that displays quantitative data grouped into intervals, with touching bars showing the shape of the distribution.",
   "definition_ur": "ایک چارٹ جو مقداری ڈیٹا کے وقفوں میں گروپ کر کے دکھاتا ہے، جس میں متصل پٹیاں تقسیم کی شکل دکھاتی ہیں۔"
+ },
+ {
+  "term": "Population",
+  "definition_en": "The complete set of individuals, items or measurements that a study wants to learn about. The population is defined by the research question.",
+  "definition_ur": "ان تمام افراد، اشیاء یا پیماؤں کا مکمل مجموعہ جس کے بارے میں مطالعہ معلومات حاصل کرنا چاہتا ہے۔ آبادی تحقیقی سوال سے متعین ہوتی ہے۔"
+ },
+ {
+  "term": "Parameter",
+  "definition_en": "A numerical summary of a population, such as the true population mean. A parameter is usually fixed but unknown because the whole population cannot be measured.",
+  "definition_ur": "آبادی کا عددی خلاصہ، جیسے آبادی کا حقیقی اوسط۔ پیرامیٹر عام طور پر مقرر ہوتا ہے لیکن نامعلوم ہوتا ہے کیونکہ پوری آبادی کو ناپا نہیں جا سکتا۔"
+ },
+ {
+  "term": "Sample",
+  "definition_en": "A subset of the population that is selected and measured. The numerical summary of a sample is called a statistic.",
+  "definition_ur": "آبادی کا ایک ذیریں حصہ جسے منتخب کیا جاتا ہے اور ناپا جاتا ہے۔ نمونے کے عددی خلاصے کو شماریاتی عدد کہا جاتا ہے۔"
+ },
+ {
+  "term": "Statistic",
+  "definition_en": "A numerical summary computed from a sample, such as the sample mean. A statistic is used to estimate the corresponding population parameter.",
+  "definition_ur": "نمونے سے حاصل کیا گیا عددی خلاصہ، جیسے نمونے کا اوسط۔ شماریاتی عدد کا استعمال متعلقہ آبادی پیرامیٹر کا اندازہ لگانے کے لیے ہوتا ہے۔"
+ },
+ {
+  "term": "Random sampling",
+  "definition_en": "A sampling method in which every member of the population has a known, non-zero chance of being selected. Includes simple random, systematic and stratified sampling.",
+  "definition_ur": "ایک نمونے کی ترتیب جس میں آبادی کے ہر رکن کے منتخب ہونے کا معلوم، غیر صفر امکان ہوتا ہے۔ اس میں سادہ تصادفی، نظامی اور طبقاتی نمونے شامل ہیں۔"
+ },
+ {
+  "term": "Non-random sampling",
+  "definition_en": "A sampling method in which selection is based on judgement, convenience or accessibility rather than a probabilistic procedure. Includes convenience, purposive and quota sampling.",
+  "definition_ur": "ایک نمونے کی ترتیب جس میں انتخاب قضاوت، سہولت یا رسائی کی بنیاد پر ہوتا ہے نہ کہ ایک احتمالی طریقے پر۔ اس میں سہولت، مقاصد اور کوٹہ نمونے شامل ہیں۔"
  }
 ]

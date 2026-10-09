@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Population and sample diagram</title><desc id="d">A diagram showing a large circle labelled 'Population: all 347 schools' with a smaller circle inside labelled 'Sample: 30 selected schools', with an inference arrow.</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700;fill:var(--ink)} .sh{font-size:12px;font-weight:600;fill:var(--ink)} .m{font-size:12px;fill:var(--muted)} .c{text-anchor:middle} .wm{fill:var(--wm);font-size:11px} .b1{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2} .b2{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2} .b3{fill:var(--a3-fill);stroke:var(--a3);stroke-width:2} .b4{fill:var(--a4-fill);stroke:var(--a4);stroke-width:2} .line{stroke:var(--line);stroke-width:2}</style><rect class="bg" x="0" y="0" width="780"/><rect class="bg" x="0" y="0" width="780" height="470"/>
+
+  <!-- Large population circle -->
+  <circle cx="360" cy="220" r="140" class="pop"/>
+  <text class="h c" x="360" y="120">Population</text>
+  <text class="sh c" x="360" y="140">All 347 schools</text>
+  <text class="m c" x="360" y="158">in the district</text>
+
+  <!-- Small sample circle -->
+  <circle cx="360" cy="260" r="50" class="samp"/>
+  <text class="sh c" x="360" y="255">Sample</text>
+  <text class="m c" x="360" y="272">30 schools</text>
+
+  <!-- Inference arrow -->
+  <line class="arrow" x1="520" y1="220" x2="650" y2="170" marker-end="url(#arrow-blue)"/>
+  <text class="sh c" x="590" y="155">Inference</text>
+  <text class="m c" x="590" y="172">from sample</text>
+  <text class="m c" x="590" y="185">to population</text>
+
+  <!-- Population estimate box -->
+  <rect x="580" y="200" width="170" height="70" rx="6" class="panel" stroke="var(--line)" stroke-width="1"/>
+  <text class="sh c" x="665" y="225">Population</text>
+  <text class="sh c" x="665" y="242">estimate</text>
+  <text class="m c" x="665" y="260">(from statistic)</text>
+
+  <!-- Caption -->
+  <rect x="30" y="380" width="720" height="70" rx="6" fill="var(--panel)" stroke="var(--line)" stroke-width="1"/>
+  <text class="sh" x="50" y="405">Caption: A sample of 30 schools drawn from a population of 347</text>
+  <text class="m" x="50" y="425">The statistic computed from the sample is used to estimate the population parameter.</text>
+  <text class="m" x="50" y="440">Credit: textbook.com.pk.</text>
+
+  <text class="wm" x="760" y="460" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+
+  <defs>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="var(--line)"/>
+    </marker>
+  </defs>
+</svg>

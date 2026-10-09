@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Worked mean and median computation</title><desc id="d">A worked table computing the mean and median step by step from 10 quiz marks: sorted values, sum, count, mean formula; then median position and value.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700;fill:var(--ink)} .sh{font-size:12px;font-weight:600;fill:var(--ink)} .m{font-size:12px;fill:var(--muted)} .c{text-anchor:middle} .wm{fill:var(--wm);font-size:11px} .b1{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2} .b2{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2} .b3{fill:var(--a3-fill);stroke:var(--a3);stroke-width:2} .b4{fill:var(--a4-fill);stroke:var(--a4);stroke-width:2} .line{stroke:var(--line);stroke-width:2}</style><rect class="bg" x="0" y="0" width="780"/><rect class="bg" x="0" y="0" width="780" height="470"/>
+
+  <text class="h" x="30" y="28">Worked example: quiz marks (out of 20, n=10)</text>
+
+  <!-- Raw data -->
+  <rect x="20" y="40" width="740" height="35" rx="4" fill="var(--panel)" stroke="var(--line)" stroke-width="1"/>
+  <text class="sh" x="35" y="55">Raw data:</text>
+  <text class="m" x="120" y="55">12, 14, 15, 16, 17, 17, 18, 18, 19, 3</text>
+
+  <!-- Sorted data -->
+  <rect x="20" y="80" width="740" height="35" rx="4" fill="var(--panel)" stroke="var(--line)" stroke-width="1"/>
+  <text class="sh" x="35" y="95">Step 1 - Sorted:</text>
+  <text class="m" x="160" y="95">3, 12, 14, 15, 16, 17, 17, 18, 18, 19</text>
+
+  <!-- Mean computation -->
+  <rect x="20" y="130" width="360" height="130" rx="6" fill="var(--a1-fill)" stroke="var(--a1)" stroke-width="1.5"/>
+  <text class="h" x="200" y="155">Mean</text>
+  <text class="sh" x="40" y="175">Formula: mean = sum / n</text>
+  <text class="sh" x="40" y="195">Sum = 12+14+15+16+17+17+18+18+19+3 = 149</text>
+  <text class="sh" x="40" y="215">n = 10</text>
+  <text class="sh" x="40" y="235">Mean = 149 / 10 = 14.9</text>
+
+  <!-- Median computation -->
+  <rect x="400" y="130" width="360" height="130" rx="6" fill="var(--a2-fill)" stroke="var(--a2)" stroke-width="1.5"/>
+  <text class="h" x="580" y="155">Median</text>
+  <text class="sh" x="420" y="175">n = 10 (even)</text>
+  <text class="sh" x="420" y="195">Positions: n/2 = 5th and n/2+1 = 6th</text>
+  <text class="sh" x="420" y="215">5th value = 16</text>
+  <text class="sh" x="420" y="235">6th value = 17</text>
+  <text class="sh" x="420" y="252">Median = (16+17)/2 = 16.5</text>
+
+  <!-- Result -->
+  <rect x="20" y="280" width="740" height="60" rx="6" fill="var(--a3-fill)" stroke="var(--a3)" stroke-width="1.5"/>
+  <text class="h" x="390" y="305" text-anchor="middle">Result</text>
+  <text class="sh" x="390" y="325" text-anchor="middle">Mean = 14.9 | Median = 16.5</text>
+  <text class="m" x="390" y="338" text-anchor="middle">The median is higher because the outlier (3) pulls the mean down.</text>
+
+  <!-- Caption -->
+  <text class="m c" x="390" y="380">Caption: Worked computation of mean and median from the same data set.</text>
+  <text class="m c" x="390" y="395">Credit: textbook.com.pk based on Lane (2023).</text>
+
+  <text class="wm" x="760" y="460" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

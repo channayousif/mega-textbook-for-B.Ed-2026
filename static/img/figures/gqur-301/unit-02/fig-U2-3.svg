@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Sampling methods comparison</title><desc id="d">Table comparing random sampling methods (simple random, systematic, stratified) and non-random methods (convenience, purposive, quota) with descriptions and school examples.</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700;fill:var(--ink)} .sh{font-size:12px;font-weight:600;fill:var(--ink)} .m{font-size:12px;fill:var(--muted)} .c{text-anchor:middle} .wm{fill:var(--wm);font-size:11px} .b1{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2} .b2{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2} .b3{fill:var(--a3-fill);stroke:var(--a3);stroke-width:2} .b4{fill:var(--a4-fill);stroke:var(--a4);stroke-width:2} .line{stroke:var(--line);stroke-width:2}</style><rect class="bg" x="0" y="0" width="780"/><rect class="bg" x="0" y="0" width="780" height="470"/>
+
+  <text class="h" x="30" y="28">Random vs non-random sampling methods</text>
+
+  <!-- Header -->
+  <rect class="hb" x="20" y="40" width="740" height="28" rx="4"/>
+  <line class="bd" x1="180" y1="40" x2="180" y2="68"/>
+  <line class="bd" x1="350" y1="40" x2="350" y2="68"/>
+  <line class="bd" x1="520" y1="40" x2="520" y2="68"/>
+  <text class="h c" x="100" y="59">Method</text>
+  <text class="h c" x="265" y="59">How it works</text>
+  <text class="h c" x="435" y="59">When to use</text>
+  <text class="h c" x="630" y="59">School example</text>
+
+  <!-- Row 1: Simple random -->
+  <rect class="row1" x="20" y="68" width="740" height="40"/>
+  <line class="bd" x1="180" y1="68" x2="180" y2="108"/>
+  <line class="bd" x1="350" y1="68" x2="350" y2="108"/>
+  <line class="bd" x1="520" y1="68" x2="520" y2="108"/>
+  <text class="sh c" x="100" y="90">Simple random</text>
+  <text class="m c" x="265" y="85">Every member equal</text>
+  <text class="m c" x="265" y="98">chance</text>
+  <text class="m c" x="435" y="85">Has full list,</text>
+  <text class="m c" x="435" y="98">no subgroups matter</text>
+  <text class="m c" x="630" y="85">Draw names</text>
+  <text class="m c" x="630" y="98">from a hat</text>
+
+  <!-- Row 2: Systematic -->
+  <rect class="row2" x="20" y="108" width="740" height="40"/>
+  <line class="bd" x1="180" y1="108" x2="180" y2="148"/>
+  <line class="bd" x1="350" y1="108" x2="350" y2="148"/>
+  <line class="bd" x1="520" y1="108" x2="520" y2="148"/>
+  <text class="sh c" x="100" y="130">Systematic</text>
+  <text class="m c" x="265" y="125">Every kth from</text>
+  <text class="m c" x="265" y="138">a list</text>
+  <text class="m c" x="435" y="125">Has a list,</text>
+  <text class="m c" x="435" y="138">quick to do</text>
+  <text class="m c" x="630" y="125">Every 5th pupil</text>
+  <text class="m c" x="630" y="138">on roll</text>
+
+  <!-- Row 3: Stratified -->
+  <rect class="row1" x="20" y="148" width="740" height="40"/>
+  <line class="bd" x1="180" y1="148" x2="180" y2="188"/>
+  <line class="bd" x1="350" y1="148" x2="350" y2="188"/>
+  <line class="bd" x1="520" y1="148" x2="520" y2="188"/>
+  <text class="sh c" x="100" y="170">Stratified</text>
+  <text class="m c" x="265" y="165">Divide into strata,</text>
+  <text class="m c" x="265" y="178">sample each</text>
+  <text class="m c" x="435" y="165">Distinct subgroups</text>
+  <text class="m c" x="435" y="178">that matter</text>
+  <text class="m c" x="630" y="165">Sample each</text>
+  <text class="m c" x="630" y="178">grade separately</text>
+
+  <!-- Row 4: Convenience -->
+  <rect class="row2" x="20" y="188" width="740" height="40"/>
+  <line class="bd" x1="180" y1="188" x2="180" y2="228"/>
+  <line class="bd" x1="350" y1="188" x2="350" y2="228"/>
+  <line class="bd" x1="520" y1="188" x2="520" y2="228"/>
+  <text class="sh c" x="100" y="210">Convenience</text>
+  <text class="m c" x="265" y="205">Whoever is</text>
+  <text class="m c" x="265" y="218">easiest to reach</text>
+  <text class="m c" x="435" y="205">Exploratory work</text>
+  <text class="m c" x="435" y="218">only</text>
+  <text class="m c" x="630" y="205">Pupils in the</text>
+  <text class="m c" x="630" y="218">courtyard</text>
+
+  <!-- Row 5: Purposive -->
+  <rect class="row1" x="20" y="228" width="740" height="40"/>
+  <line class="bd" x1="180" y1="228" x2="180" y2="268"/>
+  <line class="bd" x1="350" y1="228" x2="350" y2="268"/>
+  <line class="bd" x1="520" y1="228" x2="520" y2="268"/>
+  <text class="sh c" x="100" y="250">Purposive</text>
+  <text class="m c" x="265" y="245">Select by specific</text>
+  <text class="m c" x="265" y="258">criteria</text>
+  <text class="m c" x="435" y="245">Studying a</text>
+  <text class="m c" x="435" y="258">specific subgroup</text>
+  <text class="m c" x="630" y="245">Worst-absent</text>
+  <text class="m c" x="630" y="258">pupils only</text>
+
+  <!-- Caption -->
+  <rect x="20" y="320" width="740" height="120" rx="6" fill="var(--panel)" stroke="var(--line)" stroke-width="1"/>
+  <text class="sh" x="40" y="345">Caption: Random vs non-random sampling methods</text>
+  <text class="m" x="40" y="370">Random sampling (top 3 rows) gives every member a known chance of selection and</text>
+  <text class="m" x="40" y="385">supports generalisation to the population. Non-random methods (bottom rows) are easier</text>
+  <text class="m" x="40" y="400">but do not support quantified representativeness.</text>
+  <text class="m" x="40" y="425">Credit: textbook.com.pk based on Lane (2023).</text>
+
+  <text class="wm" x="760" y="455" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>
