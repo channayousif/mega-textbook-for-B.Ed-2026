@@ -1,0 +1,162 @@
+---
+title: "Topic 3.1 - Population concepts"
+description: "Population concepts: what a population is, why we sample, and the relationship between population, sample, parameter and statistic."
+course_code: GQUR-301
+unit_no: 2
+topic_no: 1
+topic_label: "3.1"
+clo_refs:
+  - "SLO:GQUR-301-2-1"
+blooms_summary: "Remember the definitions of population, sample, parameter and statistic; understand why sampling is necessary; apply the concept to identify the population and sample in a described study."
+est_reading_minutes: 14
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+import Glossary from '@site/src/components/Glossary';
+
+<PrintHandout />
+
+## A real classroom situation
+
+A district education officer in Nawabshah wants to know the average number of
+pupils per classroom in all government primary schools in the district. There
+are 347 schools. She could visit every school and count every classroom, but
+that would take weeks she does not have. Instead, she selects 30 schools,
+counts their classrooms, and uses the result to estimate the district average.
+Her staff ask: "Can 30 schools really represent 347?" She is not entirely sure
+what guarantees that they can, or what can go wrong.
+
+<Figure id="fig-U2-1" kind="concept-map" src="/img/figures/gqur-301/unit-02/fig-U2-1.svg" alt="A concept map placing 'Population' at the centre, branching into Sample, Parameter and Statistic, with arrows showing the inference direction from sample to population." width={780} height={470} />
+
+<Figure id="fig-U2-2" kind="diagram" src="/img/figures/gqur-301/unit-02/fig-U2-2.svg" alt="A diagram showing a large circle labelled 'Population: all 347 schools' with a smaller circle inside labelled 'Sample: 30 selected schools', and an arrow from the sample pointing to the population labelled 'inference'." width={780} height={470} />
+
+Her question is the starting point for every statistical study: how do you learn
+about a large group by measuring a small one? This topic gives you the
+vocabulary to answer it.
+
+## Explanation
+
+### Population: the whole group you want to learn about
+
+A <Glossary term="Population" /> is the complete set of individuals, items or
+measurements that you want to study. The population is defined by the research
+question, not by convenience. If the district officer wants to know about all
+government primary schools in the district, the population is all 347 schools -
+not the 30 she visits, not the ones near the road.
+
+A population can be large (all children in Sindh) or small (all pupils in one
+school). What matters is that it is the *entire* group the conclusion will be
+about. The numerical summary of a population - for example, the true average
+class size across all 347 schools - is called a <Glossary term="Parameter" />.
+A parameter is a fixed value, but in most studies it is unknown because you
+cannot measure the whole population.
+
+### Sample: the part you actually measure
+
+A <Glossary term="Sample" /> is a subset of the population that you select and
+measure. The numerical summary computed from the sample is called a
+<Glossary term="Statistic" />. The district officer computes the average class
+size of her 30 schools; that average is a statistic. She then uses the statistic
+to estimate the parameter.
+
+### Why sample at all?
+
+Sampling is necessary for three practical reasons:
+
+1. **Cost and time.** Measuring every school in a district, every household in
+   a tehsil, or every patient in a hospital is often prohibitively expensive
+   and slow.
+2. **Physical impossibility.** Some populations are infinite or inaccessible.
+   You cannot test every tablet in a production batch (destructive testing
+   would destroy them all), so you test a sample.
+3. **Accuracy.** A carefully collected sample can be *more* accurate than a
+   careless census. A rushed count of 347 schools with tired enumerators makes
+   more mistakes than a careful count of 30 well-trained ones.
+
+### The inference arrow: from sample to sample to population
+
+The whole point of sampling is to make an inference - to use what you learned
+from the sample to say something about the population. The arrow points from
+sample to population. This is easy to get backwards: the sample does not "come
+from" the population in the sense that the population is shaped by the sample.
+You select the sample *from* the population and then reason *back* to the
+population. Getting the direction right matters for understanding bias.
+
+**Common misconception.** Many trainees think "a bigger population needs a
+bigger sample". The precision of an estimate depends on the *absolute* sample
+size, not on the fraction of the population sampled. A sample of 400 gives
+roughly the same precision whether the population is 10,000 or 10 million -
+provided the sample is well chosen.
+
+## Activity: Identify the population and sample
+
+Work in pairs. About 15 minutes.
+
+For each of the three scenarios below, identify: (a) the population, (b) the
+sample, (c) the parameter of interest, (d) the statistic that would be
+computed from the sample.
+
+1. A researcher surveys 200 teachers in Shaheed Benazirabad to estimate the
+   average teaching experience of all government school teachers in Sindh.
+2. A school nurse weighs 40 pupils in grade 5 to estimate the average weight
+   of all 180 pupils in that grade.
+3. A quality inspector tests 50 tablets from a batch of 5,000 to estimate the
+   percentage that fail a drop test.
+
+Compare your answers with another pair. Where you disagree, discuss whether the
+sample is likely to represent the population well.
+
+## Check your understanding
+
+1. *(Remember)* Define population, sample, parameter and statistic in your own words.
+2. *(Understand)* Explain why a sample of 100 pupils can give a good estimate of the average height of all 2,000 pupils in a school, but a sample of 10 may not.
+3. *(Apply)* A researcher wants to estimate the average household income in a village of 500 households. She interviews 50. Identify the population, sample, parameter and statistic for this study.
+
+## Summary
+
+A population is the complete group you want to learn about; a sample is the
+subset you actually measure. A parameter summarises the population (usually
+unknown); a statistic summarises the sample and is used to estimate the
+parameter. Sampling is necessary because measuring the whole population is
+often too costly, impossible, or less accurate than a well-collected sample.
+
+## Self-assessment checklist
+
+- [ ] I can define population, sample, parameter and statistic with a clear example.
+- [ ] I can explain why sampling is necessary.
+- [ ] I can identify the population, sample, parameter and statistic in a described study.
+
+## Try this at your practicum school
+
+At your practicum school, find one example where the administration uses a
+sample to learn about a larger group (for example, checking attendance in a few
+classes instead of all, or testing a few water coolers instead of every one).
+Identify the population, sample, parameter and statistic. Bring your example to
+the next session.
+
+## Summative task
+
+A nutritionist wants to estimate the average daily calorie intake of
+government school children in a district with 120 schools. She selects 15
+schools and records the meals eaten by a random selection of 20 pupils in each
+selected school.
+
+a) Identify the population, sample, parameter and statistic for this study.
+b) The nutritionist says, "My sample is 15 out of 120 schools, which is 12.5 per cent, so it is large enough." Explain whether the fraction of schools sampled determines the quality of the estimate, or whether something else matters more.
+
+**Mini-rubric**
+
+| Criterion | Levels |
+|---|---|
+| *Identification* | 0-3: population, sample, parameter and statistic all correctly identified / three of four / two or fewer. |
+| *Explanation* | 0-3: clear explanation that absolute sample size matters more than the fraction, with a reason / partial explanation / none. |
+
+## Further reading
+
+Lane, D. M. (2023). *Online Statistics Education.* Rice University.
+https://onlinestatbook.com/ - Chapter 1 covers populations and samples.
+
+Illowsky, B., et al. (2020). *Introductory Statistics 2e.* OpenStax.
+https://openstax.org/details/books/introductory-statistics-2e - Section 1.2 on
+data, sampling and variation (CC BY 4.0).
