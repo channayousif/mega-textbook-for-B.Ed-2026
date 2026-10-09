@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d"><title id="t">Data-type classification matrix</title><desc id="d">Table with four rows comparing data type, what it records, example from a school, and the key question it answers, for qualitative, discrete quantitative, and continuous quantitative data.</desc>
+  <defs>
+    <style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700;fill:var(--ink)} .sh{font-size:12px;font-weight:600;fill:var(--ink)} .m{font-size:12px;fill:var(--muted)} .c{text-anchor:middle} .wm{fill:var(--wm);font-size:11px} .b1{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2} .b2{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2} .b3{fill:var(--a3-fill);stroke:var(--a3);stroke-width:2} .b4{fill:var(--a4-fill);stroke:var(--a4);stroke-width:2} .line{stroke:var(--line);stroke-width:2}</style>
+  </defs>
+
+  <text x="760" y="460" class="wm" aria-hidden="true">textbook.com.pk</text>
+  <text x="30" y="30" class="title">Data-type classification matrix</text>
+
+  <!-- Table header -->
+  <rect x="30" y="45" width="720" height="30" rx="4" class="header-bg"/>
+  <line x1="170" y1="45" x2="170" y2="75" class="border"/>
+  <line x1="340" y1="45" x2="340" y2="75" class="border"/>
+  <line x1="540" y1="45" x2="540" y2="75" class="border"/>
+  <text x="100" y="65" text-anchor="middle" class="header">Data type</text>
+  <text x="255" y="65" text-anchor="middle" class="header">What it records</text>
+  <text x="440" y="65" text-anchor="middle" class="header">School example</text>
+  <text x="650" y="65" text-anchor="middle" class="header">Key question</text>
+
+  <!-- Row 1: Qualitative -->
+  <rect x="30" y="75" width="720" height="55" class="row-bg-1"/>
+  <line x1="170" y1="75" x2="170" y2="130" class="border"/>
+  <line x1="340" y1="75" x2="340" y2="130" class="border"/>
+  <line x1="540" y1="75" x2="540" y2="130" class="border"/>
+  <text x="100" y="100" text-anchor="middle" class="row-header">Qualitative</text>
+  <text x="100" y="118" text-anchor="middle" class="cell">(categorical)</text>
+  <text x="255" y="100" text-anchor="middle" class="cell">Categories, labels,</text>
+  <text x="255" y="115" text-anchor="middle" class="cell">qualities</text>
+  <text x="440" y="100" text-anchor="middle" class="cell">Subjects taught,</text>
+  <text x="440" y="115" text-anchor="middle" class="cell">gender, school name</text>
+  <text x="650" y="100" text-anchor="middle" class="cell">What kind?</text>
+  <text x="650" y="115" text-anchor="middle" class="cell">Which one?</text>
+
+  <!-- Row 2: Discrete -->
+  <rect x="30" y="130" width="720" height="55" class="row-bg-2"/>
+  <line x1="170" y1="130" x2="170" y2="185" class="border"/>
+  <line x1="340" y1="130" x2="340" y2="185" class="border"/>
+  <line x1="540" y1="130" x2="540" y2="185" class="border"/>
+  <text x="100" y="155" text-anchor="middle" class="row-header">Quantitative</text>
+  <text x="100" y="173" text-anchor="middle" class="cell">(discrete)</text>
+  <text x="255" y="155" text-anchor="middle" class="cell">Counts - distinct</text>
+  <text x="255" y="170" text-anchor="middle" class="cell">whole numbers</text>
+  <text x="440" y="155" text-anchor="middle" class="cell">Pupils present (28),</text>
+  <text x="440" y="170" text-anchor="middle" class="cell">absences (3)</text>
+  <text x="650" y="155" text-anchor="middle" class="cell">How many?</text>
+
+  <!-- Row 3: Continuous -->
+  <rect x="30" y="185" width="720" height="55" class="row-bg-1"/>
+  <line x1="170" y1="185" x2="170" y2="240" class="border"/>
+  <line x1="340" y1="185" x2="340" y2="240" class="border"/>
+  <line x1="540" y1="185" x2="540" y2="240" class="border"/>
+  <text x="100" y="210" text-anchor="middle" class="row-header">Quantitative</text>
+  <text x="100" y="228" text-anchor="middle" class="cell">(continuous)</text>
+  <text x="255" y="210" text-anchor="middle" class="cell">Measurements - any</text>
+  <text x="255" y="225" text-anchor="middle" class="cell">value in a range</text>
+  <text x="440" y="210" text-anchor="middle" class="cell">Height (145.2 cm),</text>
+  <text x="440" y="225" text-anchor="middle" class="cell">time (12.4 min)</text>
+  <text x="650" y="210" text-anchor="middle" class="cell">How much?</text>
+
+  <!-- Arithmetic test box -->
+  <rect x="30" y="260" width="720" height="80" rx="6" fill="var(--a1-fill)" stroke="var(--a1)" stroke-width="1"/>
+  <text x="50" y="285" class="cell" font-weight="600">The arithmetic test:</text>
+  <text x="50" y="305" class="cell">Can you add, subtract, average the values and get a meaningful result?</text>
+  <text x="50" y="320" class="cell">Yes &rarr; quantitative (then: counts = discrete, measurements = continuous). No &rarr; qualitative.</text>
+
+  <!-- Caption -->
+  <text x="30" y="370" class="caption">Caption: Data-type classification with Pakistani classroom examples. Credit: textbook.com.pk.</text>
+</svg>

@@ -1678,5 +1678,30 @@
   "term": "Cogency",
   "definition_en": "The property of an inductive argument that is both strong and has all true premises. A cogent argument is one you can rely on to reach a probably-true conclusion.",
   "definition_ur": "ایک اس دلیل کا خاصہ جو مضبوط ہو اور اس کی تمام پریمیسز درست ہوں۔ ایک کوجینٹ دلیل وہ ہے جس پر بھروسہ کر کے غالبا درست نتیجہ اخذ کیا جا سکتا ہے۔"
+ },
+ {
+  "term": "Primary source",
+  "definition_en": "A source of data that you collect yourself, directly, for your own purpose - through a questionnaire, a count, a measurement or an interview.",
+  "definition_ur": "ایک ذریعہ جس کے ذریعہ آپ خود اپنے مقصد کے لیے براہِ راست معلومات اکھٹی کرتے ہیں - سوالنامہ، گنتی، پیمائش یا انٹرویو کے ذریعے۔"
+ },
+ {
+  "term": "Secondary source",
+  "definition_en": "A source of data that already exists, collected by someone else for some other purpose - such as a government report, a school register or a published research article.",
+  "definition_ur": "ایک ایسا ذریعہ جو پہلے سے موجود ہو، کسی اور کے ذریعے کسی اور مقصد کے لیے اکھٹا کیا گیو ہو - جیسے سرکاری رپورٹ، سکول رجسٹر یا شائع شدہ تحقیقی مضمون۔"
+ },
+ {
+  "term": "Frequency distribution",
+  "definition_en": "A table that shows how often each value or each interval of values occurs in a data set. It turns a raw list into a picture of the data's shape.",
+  "definition_ur": "ایک جدول جو دکھاتا ہے کہ ایک ڈیٹا سیٹ میں ہر قیمت یا ہر وقفے کتنی بار آتی ہے۔ یہ خام فہرست کو ڈیٹا کی شکل کی تصویر میں بدل دیتا ہے۔"
+ },
+ {
+  "term": "Cumulative frequency",
+  "definition_en": "A running total in a frequency distribution table: for each interval, the total frequency up to and including that interval.",
+  "definition_ur": "تعدد کے جدول میں جاری مجموع: ہر وقفے کے لیے، اس وقفے سمیت اور تک کل تعدد۔"
+ },
+ {
+  "term": "Histogram",
+  "definition_en": "A chart that displays quantitative data grouped into intervals, with touching bars showing the shape of the distribution.",
+  "definition_ur": "ایک چارٹ جو مقداری ڈیٹا کے وقفوں میں گروپ کر کے دکھاتا ہے، جس میں متصل پٹیاں تقسیم کی شکل دکھاتی ہیں۔"
  }
 ]

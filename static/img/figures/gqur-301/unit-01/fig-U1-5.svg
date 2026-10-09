@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d"><title id="t">Worked frequency distribution: quiz marks</title><desc id="d">A worked frequency distribution table with columns for class interval, tally, frequency and relative frequency, using 25 quiz marks.</desc>
+  <defs>
+    <style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700;fill:var(--ink)} .sh{font-size:12px;font-weight:600;fill:var(--ink)} .m{font-size:12px;fill:var(--muted)} .c{text-anchor:middle} .wm{fill:var(--wm);font-size:11px} .b1{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2} .b2{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2} .b3{fill:var(--a3-fill);stroke:var(--a3);stroke-width:2} .b4{fill:var(--a4-fill);stroke:var(--a4);stroke-width:2} .line{stroke:var(--line);stroke-width:2}</style>
+  </defs>
+
+  <text x="760" y="460" class="wm" aria-hidden="true">textbook.com.pk</text>
+  <text x="30" y="30" class="title">Worked frequency distribution: quiz marks (out of 30, n=25)</text>
+
+  <!-- Raw data display -->
+  <rect x="30" y="45" width="720" height="40" rx="4" class="data-box"/>
+  <text x="45" y="60" class="cell" font-weight="600">Raw data (unsorted):</text>
+  <text x="45" y="75" class="cell">18 22 15 20 23 12 19 21 17 24 14 16 20 22 13 18 25 11 19 17 21 16 23 15 20</text>
+
+  <!-- Table header -->
+  <rect x="30" y="100" width="720" height="30" rx="4" class="header-bg"/>
+  <line x1="170" y1="100" x2="170" y2="130" class="border"/>
+  <line x1="320" y1="100" x2="320" y2="130" class="border"/>
+  <line x1="470" y1="100" x2="470" y2="130" class="border"/>
+  <line x1="620" y1="100" x2="620" y2="130" class="border"/>
+  <text x="100" y="120" text-anchor="middle" class="header">Class interval</text>
+  <text x="245" y="120" text-anchor="middle" class="header">Tally</text>
+  <text x="395" y="120" text-anchor="middle" class="header">Frequency (f)</text>
+  <text x="545" y="120" text-anchor="middle" class="header">Relative freq.</text>
+  <text x="690" y="120" text-anchor="middle" class="header">Cumulative f</text>
+
+  <!-- Row 1: 10-14 -->
+  <rect x="30" y="130" width="720" height="40" class="row-bg-1"/>
+  <line x1="170" y1="130" x2="170" y2="170" class="border"/>
+  <line x1="320" y1="130" x2="320" y2="170" class="border"/>
+  <line x1="470" y1="130" x2="470" y2="170" class="border"/>
+  <line x1="620" y1="130" x2="620" y2="170" class="border"/>
+  <text x="100" y="155" text-anchor="middle" class="cell">10-14</text>
+  <text x="245" y="155" text-anchor="middle" class="tally">|||</text>
+  <text x="395" y="155" text-anchor="middle" class="cell">5</text>
+  <text x="545" y="155" text-anchor="middle" class="cell">0.20</text>
+  <text x="690" y="155" text-anchor="middle" class="cell">5</text>
+
+  <!-- Row 2: 15-19 -->
+  <rect x="30" y="170" width="720" height="40" class="row-bg-2"/>
+  <line x1="170" y1="170" x2="170" y2="210" class="border"/>
+  <line x1="320" y1="170" x2="320" y2="210" class="border"/>
+  <line x1="470" y1="170" x2="470" y2="210" class="border"/>
+  <line x1="620" y1="170" x2="620" y2="210" class="border"/>
+  <text x="100" y="195" text-anchor="middle" class="cell">15-19</text>
+  <text x="245" y="195" text-anchor="middle" class="tally">|||| ||||</text>
+  <text x="395" y="195" text-anchor="middle" class="cell">9</text>
+  <text x="545" y="195" text-anchor="middle" class="cell">0.36</text>
+  <text x="690" y="195" text-anchor="middle" class="cell">14</text>
+
+  <!-- Row 3: 20-24 -->
+  <rect x="30" y="210" width="720" height="40" class="row-bg-1"/>
+  <line x1="170" y1="210" x2="170" y2="250" class="border"/>
+  <line x1="320" y1="210" x2="320" y2="250" class="border"/>
+  <line x1="470" y1="210" x2="470" y2="250" class="border"/>
+  <line x1="620" y1="210" x2="620" y2="250" class="border"/>
+  <text x="100" y="235" text-anchor="middle" class="cell">20-24</text>
+  <text x="245" y="235" text-anchor="middle" class="tally">|||| |||| |</text>
+  <text x="395" y="235" text-anchor="middle" class="cell">10</text>
+  <text x="545" y="235" text-anchor="middle" class="cell">0.40</text>
+  <text x="690" y="235" text-anchor="middle" class="cell">24</text>
+
+  <!-- Row 4: 25-29 -->
+  <rect x="30" y="250" width="720" height="40" class="row-bg-2"/>
+  <line x1="170" y1="250" x2="170" y2="290" class="border"/>
+  <line x1="320" y1="250" x2="320" y2="290" class="border"/>
+  <line x1="470" y1="250" x2="470" y2="290" class="border"/>
+  <line x1="620" y1="250" x2="620" y2="290" class="border"/>
+  <text x="100" y="275" text-anchor="middle" class="cell">25-29</text>
+  <text x="245" y="275" text-anchor="middle" class="tally">|</text>
+  <text x="395" y="275" text-anchor="middle" class="cell">1</text>
+  <text x="545" y="275" text-anchor="middle" class="cell">0.04</text>
+  <text x="690" y="275" text-anchor="middle" class="cell">25</text>
+
+  <!-- Total row -->
+  <rect x="30" y="290" width="440" height="35" rx="4" class="total-bg"/>
+  <line x1="320" y1="290" x2="320" y2="325" class="border"/>
+  <line x1="470" y1="290" x2="470" y2="325" class="border"/>
+  <text x="200" y="313" text-anchor="middle" class="cell" font-weight="600">Total</text>
+  <text x="395" y="313" text-anchor="middle" class="cell" font-weight="600">25</text>
+  <text x="545" y="313" text-anchor="middle" class="cell" font-weight="600">1.00</text>
+
+  <!-- Annotation -->
+  <rect x="30" y="345" width="720" height="80" rx="6" fill="var(--a1-fill)" stroke="var(--a1)" stroke-width="1"/>
+  <text x="50" y="370" class="cell" font-weight="600">What the table tells us:</text>
+  <text x="50" y="390" class="cell">Most marks cluster in the 15-24 range (23 out of 25 pupils). The highest bar is at 20-24.</text>
+  <text x="50" y="410" class="cell">Cumulative frequency: 14 pupils scored 19 or below; 24 pupils scored 24 or below.</text>
+
+  <!-- Caption -->
+  <text x="30" y="445" class="caption">Caption: A worked frequency distribution table with tally, frequency, relative frequency and cumulative frequency.</text>
+</svg>
