@@ -125,7 +125,7 @@ Weeks 4 to 7 (derived). Unit Spec (G1) for `docs/semester-2/geng-301/unit-02/`.
 | U2-06 | 2 | 2.3 | Revising: checking content, organization and argument strength |
 | U2-07 | 2 | 2.3 | Editing: correcting grammar, word choice, sentence structure and tone |
 | U2-08 | 2 | 2.4 | Proof reading: fine-tuning for errors in spelling, punctuation and formatting |
-| U2-09 | 2 | 2.5 | Peer review: giving and receiving structured feedback |
+| U2-09 | 2 | 2.4 | Peer review: giving and receiving structured feedback |
 
 ### Topic list
 
@@ -136,7 +136,7 @@ Weeks 4 to 7 (derived). Unit Spec (G1) for `docs/semester-2/geng-301/unit-02/`.
 | 2.3 | Revising and editing | U2-06, U2-07 | 18-22 | fig-U2-3: diagram, fig-U2-7: table |
 | 2.4 | Proof reading and peer review | U2-08, U2-09 | 14-18 | fig-U2-4: timeline, fig-U2-8: table |
 
-**Depth budget**: 9 sub-topics; 4 topics; 66-80 reading-min.
+**Depth budget**: 9 sub-topics; 4 topics; 85-100 reading-min.
 
 **Common misconceptions**: "good writers get it right the first time"; "revising is just fixing
 spelling mistakes"; "peer review means finding faults in others' work".
@@ -178,7 +178,7 @@ Weeks 8 to 10 (derived). Unit Spec (G1) for `docs/semester-2/geng-301/unit-03/`.
 | U3-06 | 3 | 3.3 | Supporting evidence: facts, examples, statistics, quotations |
 | U3-07 | 3 | 3.3 | Transitional devices: words and phrases that connect paragraphs |
 | U3-08 | 3 | 3.4 | Conclusion types: summary, call to action, prediction, full circle |
-| U3-09 | 3 | 3.5 | Cohesion and coherence: creating seamless connections between paragraphs |
+| U3-09 | 3 | 3.4 | Cohesion and coherence: creating seamless connections between paragraphs |
 
 ### Topic list
 
@@ -189,7 +189,9 @@ Weeks 8 to 10 (derived). Unit Spec (G1) for `docs/semester-2/geng-301/unit-03/`.
 | 3.3 | Building body paragraphs | U3-05, U3-06, U3-07 | 18-22 | fig-U3-3: flowchart, fig-U3-8: table |
 | 3.4 | Ending well and connecting ideas | U3-08, U3-09 | 16-20 | fig-U3-4: concept-map, fig-U3-5: table |
 
-**Depth budget**: 9 sub-topics; 4 topics; 62-76 reading-min.
+-95 reading-min.
+
+**Depth budget**: 9 sub-topics; 4 topics; 80-95 reading-min.
 
 **Common misconceptions**: "a thesis is just the topic title"; "every paragraph must have exactly
 five sentences"; "the conclusion just repeats the introduction word for word".
@@ -227,8 +229,8 @@ Weeks 11 to 13 (derived). Unit Spec (G1) for `docs/semester-2/geng-301/unit-04/`
 | U4-02 | 4 | 4.1 | Illustration: supporting a point with concrete examples |
 | U4-03 | 4 | 4.2 | Classification: sorting items into categories by a single principle |
 | U4-04 | 4 | 4.3 | Cause and effect: exploring relationships between events and outcomes |
-| U4-05 | 4 | 4.4 | Process analysis: explaining step-by-step procedures clearly |
-| U4-06 | 4 | 4.5 | Comparative analysis: organizing similarities and differences (block and point-by-point) |
+| U4-05 | 4 | 4.3 | Process analysis: explaining step-by-step procedures clearly |
+| U4-06 | 4 | 4.3 | Comparative analysis: organizing similarities and differences (block and point-by-point) |
 
 ### Topic list
 
@@ -238,7 +240,7 @@ Weeks 11 to 13 (derived). Unit Spec (G1) for `docs/semester-2/geng-301/unit-04/`
 | 4.2 | Sorting and connecting | U4-03, U4-04 | 16-20 | fig-U4-2: concept-map, fig-U4-6: table |
 | 4.3 | Explaining steps and comparing | U4-05, U4-06 | 18-22 | fig-U4-3: flowchart, fig-U4-4: table |
 
-**Depth budget**: 6 sub-topics; 3 topics; 48-60 reading-min.
+**Depth budget**: 6 sub-topics; 3 topics; 70-85 reading-min.
 
 **Common misconceptions**: "cause and effect means one cause leads to one effect"; "compare and
 contrast must always be block format"; "process analysis is just a list of steps without
@@ -289,7 +291,7 @@ Weeks 14 to 15 (derived). Unit Spec (G1) for `docs/semester-2/geng-301/unit-05/`
 | 5.3 | Writing for public readers | U5-05, U5-06 | 14-18 | fig-U5-3: diagram, fig-U5-7: table |
 | 5.4 | Adjusting tone and style | U5-07 | 12-16 | fig-U5-4: table, fig-U5-8: table |
 
-**Depth budget**: 7 sub-topics; 4 topics; 54-70 reading-min.
+**Depth budget**: 7 sub-topics; 4 topics; 78-90 reading-min.
 
 **Common misconceptions**: "formal writing always means complex vocabulary"; "the same essay works
 for every audience"; "tone is just about being polite".
@@ -340,7 +342,7 @@ Week 16 (derived). Unit Spec (G1) for `docs/semester-2/geng-301/unit-06/`.
 | 6.3 | Using others' words and ideas | U6-05, U6-06 | 14-18 | fig-U6-3: table, fig-U6-7: table |
 | 6.4 | Staying honest in your writing | U6-07 | 12-16 | fig-U6-4: diagram, fig-U6-8: table |
 
-**Depth budget**: 7 sub-topics; 4 topics; 54-70 reading-min.
+**Depth budget**: 7 sub-topics; 4 topics; 78-90 reading-min.
 
 **Common misconceptions**: "if I change a few words it is not plagiarism"; "citing sources makes my
 writing look weak"; "only direct copying counts as plagiarism".
