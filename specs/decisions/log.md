@@ -2150,3 +2150,86 @@ reviewer independent of the sessions that authored the content, performed any re
 this decision; a `pass` restores the provisional tier only, because `acceptProvisionalReport`
 still skips the signed reviewer registry, and an `escalate` sends the unit to the
 content-improvement loop with no further cycle.
+
+---
+
+## D-2026-0050 - GENG-301 intake: identity, partition, outcomes, readings (presence) and blueprint approved; coverage, structure and decision residue not approved
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** GENG-301 (Expository Writing) only. Settles five of the eight criteria: `identity`,
+  `partition`, `outcomes`, `readings` (presence and resolution of the guide list only) and
+  `blueprint`. Does **not** settle `coverage`, `structure` or `decision-residue`, which fail on
+  the bound inputs, and does not settle the four matters escalated as `G-2026-87` to `G-2026-90`.
+- **Decided by:** agent:evaluator, 2026-10-10
+- **Decision:**
+  1. **Identity (pass).** GENG-301, "Expository Writing", 3 credit hours, Semester 2, General
+     Education. Guide: code `2nd 2026.txt:3`, title `:9`, credit hours `:13`, semester `:15-17`.
+     Revised board Scheme (final authority, `specs/gaps.md` header): Semester II block
+     (`B.Ed 4 Year 2026 revised after board.txt:90`), row `GENG-301 / Expository Writing / 3 (3-0)
+     / General Education` at `:128-136`. `catalog/courses.json` carries the same code, title,
+     `3 (3-0)`, General Education and `bilingual: false`. The guide's total and the Scheme's split
+     do not contradict (`G-2026-02`/`G-2026-05` posture). No Article II.3 conflict.
+  2. **Partition (pass).** The guide numbers six syllabus sections (`2nd 2026.txt:44`, `:50`, `:61`,
+     `:77`, `:86`, `:93`); the spec carries exactly six units in that order, one per section. The
+     guide determines this. Approval covers the units and their order; the spec's shortened titles
+     for Units 4, 5 and 6 (dropping "Different" and "Specific", adding "in Writing") are wording,
+     not partition, and are not approved as guide titles.
+  3. **Outcomes (pass).** The three course learning outcomes are reproduced verbatim at
+     `content-spec.md:35-40` from `2nd 2026.txt:31-41`. Unit CLO refs (U1: 1, 2; U2: 1; U3: 1, 2;
+     U4: 2; U5: 2; U6: 3) all fall in 1-3, every CLO has a unit whose guide section carries its
+     substance (CLO 1 at `:50-59`, CLO 2 at `:77-91`, CLO 3 at `:93-98`), and the spec states no
+     SLO without a guide ancestor.
+  4. **Readings (pass, presence and resolution only).** All ten guide readings
+     (`2nd 2026.txt:108-126`) are present at `content-spec.md:360-374`, and each resolved this run
+     to a real work in Open Library (works OL65275W, OL33417829W, OL2042383W, OL37563548W,
+     OL38285W, OL23048W, OL16062911W, OL5847286W, OL5956058W, OL15441513W). All ten are print
+     monographs; `D-2026-0001` governs their text and binds authors to title-level support. The
+     sourcing posture for a print-only list is escalated as `G-2026-89` and is **not** approved here.
+  5. **Blueprint (pass).** Every unit fixes the unit-end bank at 10 MCQ / 10 RRQ / 5 ERQ with
+     >= 2 MCQ and >= 2 RRQ per topic; at most four topics per unit, so the floors need at most 8 of
+     10 items and are feasible. Each unit names one Analyze-or-higher summative item (Evaluate in
+     Units 3 and 6, Create in Unit 4), inside the style guide's ERQ band. The spec states no Bloom
+     band of its own, so `style-guide.md` "Unit-end assessment bank" defaults govern; nothing in the
+     spec contradicts them.
+- **Not approved (failing criteria, returned to the drafter; no `G-` code is needed because the
+  guide or the bound contract settles each one):**
+  - **Coverage.** (a) `U1-01` (`content-spec.md:71`) places exposition among "four modes" with
+    description as a separate mode; the guide classes Description as a type of expository writing
+    (`2nd 2026.txt:77-79`), and the guide's "types" at `:46` is left uncovered as expository types.
+    (b) "conciseness" (`:57`) is lost from `U2-06`/`U2-07` (`content-spec.md:125-126`). (c) `U5-05`
+    (`content-spec.md:281`) replaces the guide's "persuasive" (`:90`) with "accessible".
+  - **Structure.** (a) `U4-04` is assigned to Topic 4.3 in the checklist (`content-spec.md:231`)
+    and to Topic 4.2 in the topic list; `check:depth-gate` passes anyway (`G-2026-91`). (b) A stray
+    line `-95 reading-min.` at `content-spec.md:192`. (c) Against the content-spec v3 contract
+    (`specs/008-rich-unit-pedagogy/contracts/content-spec-v3.md`, read at the bound commit but
+    outside the manifest): no `## Course Description`, `## Week schedule` or `## Course review plan`
+    section; `## Reading list` has no `### Guide-required` keyed table and tags no reading to a unit,
+    so the keys the six `sources/unit-NN.md` files cite resolve to nothing in the spec; no unit
+    carries `**Mapped readings**`, `**Prerequisite knowledge**` or `**Worked-examples plan**`.
+  - **Decision residue.** `content-spec.md:8` states "16 weeks" under a guide citation
+    (`2nd 2026.txt` lines 3-180), which carries no week count; `D-2026-0012` forbids presenting a
+    calendar as guide-supplied. Applying `D-2026-0012` here is guide-determined (the guide has no
+    week count). `content-spec.md:362-363` invokes `D-2026-0001` as "flag and proceed", beyond its
+    stated Limits; escalated as `G-2026-89`.
+- **Blocked:** Unit 1 (U1-01), Unit 2 (U2-04 to U2-07), Unit 3 (U3-03, U3-04, `:192`), Unit 4
+  (U4-04 partition), Unit 5 (U5-05, U5-06), and course-wide the week schedule (`G-2026-88`), the
+  reading list structure and sourcing posture (`G-2026-89`) and the missing contract sections.
+  Unit 6's checklist covers its guide section exactly once and is blocked only by the course-wide
+  items.
+- **Basis:** `Scheme-and-Course-guides/extracted-text/2nd 2026.txt:3-154` (GENG-301 block);
+  `Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt:90-136`;
+  `catalog/courses.json` GENG-301 entry; `specs/content/geng-301/content-spec.md` (status: draft);
+  `specs/content/style-guide.md` v4.5. Evaluation record:
+  `intake/GENG-301/evaluation.md` beside the manifest below.
+- **Bound to:** `/tmp/claude-1005/-home-a2ahs-mega-book-for-B-Ed/e283ce34-647b-4701-9268-ea887141a5b3/scratchpad/intake/GENG-301/manifest.json`
+  (commit `513894b1e284beb83f045d2618c1d5d765d301f1`, 79 inputs), manifest digest
+  `7ff61ccf0548b99738a9f2716228a858ffc7df93f561f31ea28228b04a603f5e`. Any change to a bound input
+  voids this approval.
+- **Limits:** The spec may **not** move to `status: approved` on the owner's confirmation of this
+  entry alone: coverage, structure and residue must be repaired by the drafter, `G-2026-87` to
+  `G-2026-89` ruled on, and the repaired spec re-evaluated on a fresh manifest. Does not approve
+  the topic grouping within any unit, the derived week distribution, or any elaboration escalated
+  in `G-2026-87`. The six units authored before this evaluation were read as context only and are
+  not judged. Certifies no content, qualifies no reviewer, authorises no publication
+  (Art. VII.8).
