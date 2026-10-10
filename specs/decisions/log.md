@@ -2211,7 +2211,7 @@ content-improvement loop with no further cycle.
 - **Consequences:** G3/G4/G5 tracker rows for Units 4-6 record the agent passes as `▣` and stay open (ADR-0019); `translation_status` stays `draft`. Unit 4 G2 evidence regenerated because its concept table is a bound input.
 ## D-2026-0052 - GPKS-402 intake: identity, coverage, outcome traces (except SLO 6-1), structure and decision residue approved; partition, readings escalated; blueprint fails
 
-- **Status:** pending-owner-review
+- **Status:** confirmed (owner, 2026-10-10; escalations ruled in D-2026-0053; spec approval still requires the listed author repairs and a fresh intake)
 - **Gate:** G0 intake / G1 unit-spec
 - **Scope:** GPKS-402 Pakistan Studies, `specs/content/gpks-402/content-spec.md` (status: draft)
   at commit `26ecd199`. Settles only the five criteria approved below.
