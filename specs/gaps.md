@@ -1590,3 +1590,153 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 **Date:** 2026-10-04
 
 The generated raster illustration `fig-U4-12.webp` places the teacher at the front beside the board, which contradicts its prompt specifying a landscape scene of a male teacher "at the back of his own classroom". A repair or regeneration is needed before G3 can pass.
+
+---
+
+## Intake evaluation, GPKS-402 (2026-10-10)
+
+Recorded by `agent:evaluator` under `D-2026-0052`, bound to
+`intake/GPKS-402/manifest.json` (manifest digest
+`513a177525d45102d39c8d4cee3a52d9f1c3b333575535987465988ed6c4512a`, commit `26ecd199`). Guide:
+`Scheme-and-Course-guides/extracted-text/2nd 2026.txt:972-1153`. Spec:
+`specs/content/gpks-402/content-spec.md` (status: draft). Evaluation record:
+`intake/GPKS-402/evaluation.md`.
+
+## G-2026-97 - GPKS-402 intake: the six-unit partition is the spec's construction over a guide that gives only a week table, and the spec's week schedule misstates the guide's weeks
+
+- **Status:** open
+- **Gate:** G0 intake / G1 unit-spec (partition criterion)
+- **Source:** `D-2026-0052`
+- **Detail:** The guide's "Course Contents / Weekly Breakdown" (`2nd 2026.txt:1008-1141`) numbers
+  sixteen weeks: teaching Weeks 1-8 (`:1010-1083`), "Week 9: Mid-Term Examination" (`:1085`),
+  teaching Weeks 10-15 (`:1087-1135`) and "Week 16: Review and Final Assessment" (`:1137-1141`).
+  It carries **no unit headings of any kind**. The spec derives six units. Reading the spec's own
+  sub-topic checklists (`Guide ref` column), the proposed partition is:
+
+  | Unit | Guide weeks (from the checklists) | Teaching weeks |
+  |---|---|---|
+  | 1 Introduction and Ideological Foundations | 1-2 | 2 |
+  | 2 Reform Movements and the Pakistan Movement | 3-4 | 2 |
+  | 3 Constitutional Development | 5-6 | 2 |
+  | 4 Governance, (Fundamental) Rights and Geography | 7, 8 and 10 (spans the Week 9 mid-term) | 3 |
+  | 5 Economy and Society | 11-12 | 2 |
+  | 6 Foreign Policy, Contemporary Issues and (the Role of) Education | 13-15 | 3 |
+
+  What the guide **does** determine, and the evaluator verified mechanically: the week numbers,
+  the mid-term and review placement, and that the checklist partition uses contiguous guide weeks,
+  reorders no guide topic and splits no week across units. What the guide does **not** determine:
+  the number of units (six), the block boundaries, and in particular the choice to join Weeks 7-8
+  (political structure, rights) with Week 10 (geography) across the mid-term. `G-2026-22`
+  (GNAS-301) is the precedent: the owner confirmed a comparable merge there, but that ruling is
+  course-specific and does not bind GPKS-402.
+
+  **Separate defect, guide-determined, for the author to repair (not an owner question):** the
+  spec's `## Week schedule` table (`content-spec.md:49-58`) does not match the guide or the spec's
+  own checklists. It gives Unit 4 as Weeks "7-8" (its checklist cites Week 10 at `:220-222`),
+  Unit 5 as "9-10" (guide Weeks 11-12, `:1095-1109`) and Unit 6 as "11-12" (guide Weeks 13-15,
+  `:1111-1135`); it omits the Week 9 mid-term and Week 16 entirely; and it presents this as guide
+  content with no "derived" label, which the content-spec contract as amended by `D-2026-0012`
+  forbids. The unit opening lines repeat the conflict in self-contradicting form:
+  `:256` "Weeks 9-10 (guide Week 11-12)" and `:303` "Weeks 11-15 (guide Week 13-15)". Unit titles
+  also drift between the table and the headings for Units 4 (`:56` vs `:199`) and 6 (`:58` vs
+  `:301`).
+- **Needed, and from whom:** the curriculum owner, to confirm the six-block partition above
+  (2/2/2/3/2/3 teaching weeks, Unit 4 spanning the mid-term) or supply another. The week
+  numbering itself needs no decision: it is guide-given, and the schedule table and unit opening
+  lines must be corrected to it by the author before re-intake.
+- **Blocks:** the `partition` criterion of `D-2026-0052`; the `## Week schedule` table and the
+  "Weeks N-M" line opening each `## Unit N` subsection. It does not block the sub-topic checklists,
+  whose `Guide ref` weeks are correct.
+
+## G-2026-98 - GPKS-402 reading list: one guide entry is ambiguous, all four are print-only, no open-access floor is declared, and both curated supplements are defective
+
+- **Status:** open
+- **Gate:** G0 intake (readings criterion)
+- **Source:** `D-2026-0052`
+- **Detail:** The guide lists four "Recommended Readings" (`2nd 2026.txt:1143-1153`); the spec
+  transcribes all four (`content-spec.md:33-40`). Verified by the evaluator on 2026-10-10 against
+  external catalogues (not bound inputs):
+
+  | Guide entry | Verification |
+  |---|---|
+  | Government of Pakistan. *Pakistan Studies Curriculum (HEC)* (`:1145`) | **ambiguous**: HEC publishes more than one document that fits (a 2007-08 Pakistan Studies degree curriculum and a 2025-26 "Pakistan Studies (AD, BS, MPhil/MS)" degree curriculum on hec.gov.pk's Revised Curricula page, plus an undergraduate compulsory-course outline). The guide does not say which; the spec gives no year or locator, and `sources/unit-01.md:17` records "no stable URL resolves from this host", although hec.gov.pk URLs for both degree curricula were located on this run |
+  | Ikram Rabbani. *Pakistan Studies* (`:1149`) | **resolves**: M. Ikram Rabbani, *Pakistan Studies*, Caravan Book House, Lahore; multiple editions, print only; edition unspecified |
+  | Hamid Khan. *Constitutional and Political History of Pakistan* (`:1151`) | **resolves**: Oxford University Press Pakistan, several editions (4th ed. ISBN 9780199060986); print only |
+  | Shahid Javed Burki. *Pakistan: Fifty Years of Nationhood* (`:1153`) | **resolves**: Westview Press, 3rd ed. 1999, ISBN 9780813336213; print only |
+
+  All four are monographs or official documents with no DOI. Under `D-2026-0001` an author is
+  bound to title-level support unless a copy is obtainable. Unlike EFMP-304 (`D-2026-0013`) and
+  GNAS-301 (`D-2026-0021`), the spec declares **no** open-access floor and no `open_access_floor`
+  front matter, so `check:source-floor` does not see GPKS-402 (exit 0 with no GPKS mention on this
+  run; the `G-2026-17` condition).
+
+  The `### Curated-supplementary (open access)` table (`:42-47`) has two entries, both defective:
+  - `ziad-pak-foreign-policy`: "Zia, S. (2020). Pakistan's foreign policy: Challenges and
+    opportunities. *Journal of the Research Society of Pakistan*, 57(2)." **Not locatable**: no
+    such article was found; similarly titled articles exist in other venues (e.g. CISS Insight).
+    The key ("ziad") and the author ("Zia") disagree, and the entry claims open access with no
+    URL.
+  - `goe-bloom`: Goe, Bell and Little (2008), ERIC ED521228, **is real**, but its subject is
+    approaches to evaluating teacher effectiveness, not "civic education in nation building" as
+    the note claims; it is tagged to Units "4, 8" and the course has no Unit 8; the key implies a
+    Bloom source it is not.
+
+  The reading list's `Units` column also disagrees with the per-unit `**Mapped readings**` lines:
+  `hamid-khan-const` is listed for Units 3-4 but mapped in Unit 2 (`:139`); `hec-pak-studies` is
+  listed for Units 1-3 but mapped in Unit 4 (`:238`) and not in Unit 2; `goe-bloom` is listed for
+  Units 4 and 8 but mapped only in Unit 6 (`:339`). The `burki-fifty-years` note says "first fifty
+  decades" (`:40`).
+- **Needed, and from whom:** the curriculum owner, to (a) name which HEC document the guide's
+  first entry means (or accept title-level citation of a named one); (b) decide whether GPKS-402
+  authors against this print-only list as it stands, and whether to adopt an open-access floor on
+  the `D-2026-0013` / `D-2026-0021` precedent, declared in front matter so `check:source-floor`
+  enforces it. The supplement defects and the Units-column inconsistencies are the author's to
+  repair, and a replacement for the unlocatable journal entry needs verifying before it is bound.
+- **Blocks:** the `readings` criterion of `D-2026-0052`; the `## Reading list` section and the
+  `**Mapped readings**` line of every unit. Units 1 and 2 are already authored against this list
+  (see `G-2026-100`).
+
+## G-2026-99 - GPKS-402 SLO 6-1 (foreign policy) traces to no stated course objective
+
+- **Status:** open
+- **Gate:** G0 intake (outcomes criterion)
+- **Source:** `D-2026-0052`
+- **Detail:** The guide states five course objectives (`2nd 2026.txt:996-1006`): ideological
+  foundations; the historical evolution of the Pakistan Movement; constitutional and political
+  developments; Pakistan's geography, economy and society; and national integration and civic
+  responsibility through education. The guide teaches foreign policy in Week 13 (`:1111-1117`),
+  but no objective names it. The spec traces `SLO:GPKS-402-6-1` (principles of foreign policy;
+  relations with neighbours; role in international organisations) to objectives 4 and 5
+  (`content-spec.md:305`). Neither covers foreign policy on its wording; the nearest reading is
+  objective 3's "political developments", which the spec does not cite. The SLO has a guide
+  ancestor in the week table, so it is not an added outcome, but its objective trace is the spec's
+  construction and the guide does not settle it. The guide gives no objective-to-week mapping
+  anywhere, so the trace is an interpretation either way.
+- **Needed, and from whom:** the curriculum owner, to state which objective Week 13 serves (3, 4,
+  another, or "content without a stated objective, retained because the guide teaches it"), in the
+  manner `D-2026-0011` settled EFMP-302's unmatched CLO 4.
+- **Blocks:** the `outcomes` criterion of `D-2026-0052` for `SLO:GPKS-402-6-1` only (the Unit 6
+  `**CLO/SLO refs**` line). The other thirteen SLO traces are approved.
+
+## G-2026-100 - GPKS-402 Units 1 and 2 were authored (EN and UR) against an unapproved spec, before G0/G1, and the spec has defects that reach them
+
+- **Status:** open
+- **Gate:** G0 intake / G1 unit-spec (process)
+- **Source:** `D-2026-0052`
+- **Detail:** At the bound commit `26ecd199`, `docs/semester-2/gpks-402/unit-01/` and `unit-02/`
+  exist with Urdu mirrors under `i18n/ur/.../semester-2/gpks-402/`, while the spec is
+  `status: draft`. `contracts/content-spec-frontmatter.schema.json` (bound) describes `approved` as
+  set by the owner "before any unit under this course may be drafted". `check:pipeline-gate`
+  reports this for both units (exit 1: "course content-spec.md is not approved (status:
+  'draft')"; no G2 en-draft row); `check:figures` also exits 1 on both units (every topic carries
+  prompt-only figure markers, none rendered). This evaluation judged the spec only and treated the
+  authored units as context. But three spec defects found here reach the authored units: the
+  ERQ blueprint arithmetic (`D-2026-0052`, blueprint criterion: "one per topic plus one integrative"
+  gives 3 ERQs for two-topic units, not the required 5), the reading list (`G-2026-98`) Units 1-2
+  were sourced from, and the unit week lines (`G-2026-97`).
+- **Needed, and from whom:** the curriculum owner, to decide the disposition of the two authored
+  units: retain them and re-check them against the repaired, re-approved spec, or withdraw them for
+  re-authoring after approval. Repairing the spec changes a bound input, so `D-2026-0052` is void
+  on repair and a fresh intake bundle is needed either way.
+- **Blocks:** any gate progress for GPKS-402 Units 1 and 2 (G2 onward) until the spec is approved.
+  It does not block the spec repairs themselves.
