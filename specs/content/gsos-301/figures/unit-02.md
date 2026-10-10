@@ -1,0 +1,6 @@
+# GSOS-301 Unit 2 - Figure manifest
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U2-1 | 2.1 | diagram | labelled diagram, landscape: a central circle "Culture" branching to four labelled boxes: Norms (rules of behaviour), Values (shared ideals), Beliefs (accepted truths), Symbols (meaningful objects/gestures); each box has a Pakistani example; clean flat vector, labelled, high contrast, no colour-only meaning | A labelled diagram showing the four elements of culture branching from a central "Culture" circle, each with a Pakistani example: norms (standing for the national anthem), values (respect for elders), beliefs (Islamic principles), symbols (the crescent on the flag). |  | prompt-only |
+| fig-U2-2 | 2.2 | concept-map | concept map, landscape: five nodes labelled Family, School, Peer Group, Media, and Religion, each connected to "Socialization" at the centre, with a brief description of what each transmits; clean flat vector, labelled, high contrast, no colour-only meaning | A concept map placing "Socialization" at the centre with five agents branching off: Family (first values and language), School (knowledge and norms), Peer Group (belonging and identity), Media (images and aspirations), Religion (moral framework and rituals). |  | prompt-only |

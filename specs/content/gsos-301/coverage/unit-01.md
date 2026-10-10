@@ -2,16 +2,16 @@
 
 | Sub-topic ID | File | Section | Source |
 |---|---|---|---|
-| 1.1 | topic-01.mdx | ### Definition of sociology | givens2023 |
-| 1.2 | topic-01.mdx | ### The nature of sociology | henson2022 |
-| 1.3 | topic-01.mdx | ### Importance of sociology | givens2023 |
-| 1.4 | topic-02.mdx | ### Auguste Comte (1798-1857) | henson2022 |
-| 1.5 | topic-02.mdx | ### Karl Marx (1818-1883) | givens2023 |
-| 1.6 | topic-02.mdx | ### Emile Durkheim (1858-1917) | henson2022 |
-| 1.7 | topic-02.mdx | ### Max Weber (1864-1920) | givens2023 |
-| 1.8 | topic-03.mdx | ### Functionalism | givens2023 |
-| 1.9 | topic-03.mdx | ### Conflict Theory | henson2022 |
-| 1.10 | topic-03.mdx | ### Symbolic Interactionism | givens2023 |
+| U1-01 | topic-01.mdx | ### Definition of sociology | givens2023 |
+| U1-02 | topic-01.mdx | ### The nature of sociology | henson2022 |
+| U1-03 | topic-01.mdx | ### Importance of sociology | givens2023 |
+| U1-04 | topic-02.mdx | ### Auguste Comte (1798-1857) | henson2022 |
+| U1-05 | topic-02.mdx | ### Karl Marx (1818-1883) | givens2023 |
+| U1-06 | topic-02.mdx | ### Emile Durkheim (1858-1917) | henson2022 |
+| U1-07 | topic-02.mdx | ### Max Weber (1864-1920) | givens2023 |
+| U1-08 | topic-03.mdx | ### Functionalism | givens2023 |
+| U1-09 | topic-03.mdx | ### Conflict Theory | henson2022 |
+| U1-10 | topic-03.mdx | ### Symbolic Interactionism | givens2023 |
 
 ## Reinforcement
 

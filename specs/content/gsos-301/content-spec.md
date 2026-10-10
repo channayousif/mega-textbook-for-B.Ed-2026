@@ -96,26 +96,30 @@ Seeds an eventual `docs/semester-2/gsos-301/course-review.mdx` (Spec 008 FR-016)
 
 ### Sub-topic checklist
 
-| ID | Sub-topic | Topic |
-|---|---|---|
-| 1.1 | Definition, scope, and nature of sociology | 1.1 |
-| 1.2 | Sociology as a science | 1.1 |
-| 1.3 | Importance of sociology | 1.1 |
-| 1.4 | Origins of sociology: Auguste Comte | 1.2 |
-| 1.5 | Origins of sociology: Karl Marx | 1.2 |
-| 1.6 | Origins of sociology: Emile Durkheim | 1.2 |
-| 1.7 | Origins of sociology: Max Weber | 1.2 |
-| 1.8 | Functionalism | 1.3 |
-| 1.9 | Conflict theory | 1.3 |
-| 1.10 | Symbolic interactionism | 1.3 |
+One row per leaf item from the course guide sections on introduction to sociology, origins, and perspectives.
+
+| ID | Guide ref | Topic | Sub-topic |
+|---|---|---|---|
+| U1-01 | Week 1 | 1.1 | Definition, scope, and nature of sociology |
+| U1-02 | Week 1 | 1.1 | Sociology as a science |
+| U1-03 | Week 1 | 1.1 | Importance of sociology |
+| U1-04 | Week 2 | 1.2 | Auguste Comte and the founding of sociology |
+| U1-05 | Week 2 | 1.2 | Karl Marx and class conflict |
+| U1-06 | Week 2 | 1.2 | Emile Durkheim and social facts |
+| U1-07 | Week 2 | 1.2 | Max Weber and verstehen |
+| U1-08 | Week 3 | 1.3 | Functionalism |
+| U1-09 | Week 3 | 1.3 | Conflict theory |
+| U1-10 | Week 3 | 1.3 | Symbolic interactionism |
 
 ### Topic list
 
-| Topic | Label | Sub-topic IDs | What it teaches |
-|---|---|---|---|
-| Topic 1 | 1.1 | 1.1, 1.2, 1.3 | What sociology is, how it differs from common sense, and why it matters for a teacher |
-| Topic 2 | 1.2 | 1.4, 1.5, 1.6, 1.7 | The four founders and what each contributed to sociology's way of seeing |
-| Topic 3 | 1.3 | 1.8, 1.9, 1.10 | The three major perspectives and how each explains social life differently |
+`Sub-topic IDs` cells form a **total, disjoint partition** of the `### Sub-topic checklist`.
+
+| Topic | Title | Sub-topic IDs | Reading-min | Figures (id: archetype) |
+|---|---|---|---|---|
+| 1.1 | What sociology is, and why it matters | U1-01, U1-02, U1-03 | 13-19 | fig-U1-1: diagram, fig-U1-2: concept-map |
+| 1.2 | The founders of sociology | U1-04, U1-05, U1-06, U1-07 | 16-22 | fig-U1-3: concept-map |
+| 1.3 | The three major perspectives | U1-08, U1-09, U1-10 | 14-20 | - |
 
 **Depth budget**: 10 sub-topics; 45-60 reading-min.
 
@@ -152,21 +156,25 @@ Seeds an eventual `docs/semester-2/gsos-301/course-review.mdx` (Spec 008 FR-016)
 
 ### Sub-topic checklist
 
-| ID | Sub-topic | Topic |
-|---|---|---|
-| 2.1 | Elements of culture: norms, values, beliefs | 2.1 |
-| 2.2 | Cultural diversity | 2.1 |
-| 2.3 | Ethnocentrism vs cultural relativism | 2.1 |
-| 2.4 | Agents of socialization: family, school, media | 2.2 |
-| 2.5 | Role of society in personality development | 2.2 |
-| 2.6 | Stages of socialization | 2.2 |
+One row per leaf item from the course guide sections on culture and socialization.
+
+| ID | Guide ref | Topic | Sub-topic |
+|---|---|---|---|
+| U2-01 | Week 4 | 2.1 | Elements of culture: norms, values, beliefs |
+| U2-02 | Week 4 | 2.1 | Cultural diversity |
+| U2-03 | Week 4 | 2.1 | Ethnocentrism vs cultural relativism |
+| U2-04 | Week 5 | 2.2 | Agents of socialization: family, school, media |
+| U2-05 | Week 5 | 2.2 | Role of society in personality development |
+| U2-06 | Week 5 | 2.2 | Stages of socialization |
 
 ### Topic list
 
-| Topic | Label | Sub-topic IDs | What it teaches |
-|---|---|---|---|
-| Topic 1 | 2.1 | 2.1, 2.2, 2.3 | What culture is, its elements, and how cultures differ without hierarchy |
-| Topic 2 | 2.2 | 2.4, 2.5, 2.6 | How society shapes who we become through socialization |
+`Sub-topic IDs` cells form a **total, disjoint partition** of the `### Sub-topic checklist`.
+
+| Topic | Title | Sub-topic IDs | Reading-min | Figures (id: archetype) |
+|---|---|---|---|---|
+| 2.1 | What culture is, and how it varies | U2-01, U2-02, U2-03 | 16-22 | fig-U2-1: diagram, fig-U2-2: concept-map |
+| 2.2 | How society makes us who we are | U2-04, U2-05, U2-06 | 14-20 | - |
 
 **Depth budget**: 6 sub-topics; 40-55 reading-min.
 
