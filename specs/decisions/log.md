@@ -2291,3 +2291,68 @@ content-improvement loop with no further cycle.
   in `G-2026-87`. The six units authored before this evaluation were read as context only and are
   not judged. Certifies no content, qualifies no reviewer, authorises no publication
   (Art. VII.8).
+
+## D-2026-0056 - GENG-301 intake re-run: identity, partition, outcomes and blueprint approved; coverage, readings, structure and decision residue still fail
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** GENG-301 (Expository Writing) only, re-evaluated after the drafter's repairs at commit
+  `dc9e0907`. Settles `identity`, `partition`, `outcomes` and `blueprint`, re-bound to the new
+  manifest. Does **not** settle `coverage`, `readings` (beyond presence of the guide list),
+  `structure` or `decision-residue`, which fail on the bound inputs. Relies on the confirmed owner
+  ruling `D-2026-0053` (resolving `G-2026-87`, `-88`, `-89`).
+- **Decided by:** agent:evaluator, 2026-10-10
+- **Decision:**
+  1. **Identity (pass).** GENG-301, "Expository Writing", 3 (3-0), Semester 2, General Education.
+     Guide `2nd 2026.txt:3`, `:9`, `:13`, `:15-17`; Scheme
+     `B.Ed 4 Year 2026 revised after board.txt:128-136`; `catalog/courses.json` unchanged. Spec
+     `:8` no longer states "16 weeks".
+  2. **Partition (pass).** Six units follow the guide's six numbered sections (`:44`, `:50`, `:61`,
+     `:77`, `:86`, `:93`) in order. The derived week split is confirmed by `D-2026-0053` item 1.
+     Does not approve shortened titles as guide titles or the within-unit topic grouping.
+  3. **Outcomes (pass).** Spec `:63-67` reproduces guide `:33-41` verbatim. Unit CLO refs all trace.
+  4. **Blueprint (pass).** 10/10/5 with >= 2 MCQ and >= 2 RRQ per topic in every unit. At most 4
+     topics, so the floors need <= 8 of 10 items, and Unit 4 needs 6 of 10 after the U4-04 move.
+- **Not approved (returned to the drafter; each is settled by the guide, the content-spec v3 contract
+  or `D-2026-0053`, so no `G-` code is raised):**
+  - **Coverage.** Four-modes residue survives at key terms `content-spec.md:107` and fig-U1-1
+    `:145`, although U1-01 `:124` was repaired (guide `:46`, `:77-79`). Rows U2-04 `:178`, U2-05
+    `:179`, U2-06 `:180`, U3-03 `:232`, U3-04 `:233` and U5-06 `:341` add matter beyond their guide
+    bullet but name no derivation, which `D-2026-0053` item 4 requires. Repaired: conciseness
+    (`:180-181`) and persuasive (`:340`).
+  - **Readings.** Guide-required table `:82-93` omits Longknife & Sullivan (guide `:125`) and labels
+    `apa2020` "guide required", but the guide lists no APA manual. `zinsser2006` names *Writing to
+    Learn* at `:90` and *On Writing Well* at `:273`, and *On Writing Well* in `sources/unit-04.md`
+    and `unit-05.md`. `open_access_floor: 1` per unit (`:78`) is breached by the spec's own mapping:
+    Units 1, 2 and 6 bind no open-access source, and UNESCO2022 is tagged Unit 3 in the table but
+    mapped to Unit 4. Neither open-access entry resolves to a verified specific work: UNESCO2022
+    gives only the unesdoc root, and `www.sindheducation.org` failed DNS on 2026-10-10.
+  - **Structure.** `## Course review plan` (`:55-59`) lacks the contract's summary points,
+    practice-question mix and practicum ideas. Each unit's worked-example line is not labelled
+    `**Worked-examples plan**`. Repaired: U4-04 Topic column, stray line, Course Description
+    (verbatim guide `:20-28`), Week schedule, keyed table, Mapped readings, Prerequisite knowledge.
+    Exit codes: `check-unit-depth` 0, `check-concept-graph` 0, `check-no-em-dash` 0, frontmatter
+    schema valid. `check-pipeline-gate` 1 and `check-figures` 1 fail only on GENG-301 units authored
+    before intake.
+  - **Decision residue.** The `D-2026-0050` four-modes residue above. `:423-424` attributes
+    no-reproduction to `D-2026-0001`, which governs unretrievable sources; Art. III.5 already covers
+    no-reproduction. "All entries are print monographs" now contradicts the spec's own open-access
+    table.
+- **Blocked:** Unit 1 (`:107`, `:145`, open-access floor), Unit 2 (U2-04 to U2-06, open-access
+  floor), Unit 3 (U3-03, U3-04, open-access mapping), Unit 4 (`zinsser2006`, open-access mapping),
+  Unit 5 (U5-06, SindhEd2023), Unit 6 (`apa2020` label, open-access floor), and course-wide the
+  keyed reading tables, the course review plan and the reading-list preamble. The spec may **not**
+  move to `status: approved`.
+- **Basis:** `Scheme-and-Course-guides/extracted-text/2nd 2026.txt:3-154`;
+  `B.Ed 4 Year 2026 revised after board.txt:90-136`; `catalog/courses.json`;
+  `specs/content/geng-301/content-spec.md` at `dc9e0907` (status: draft); `specs/content/style-guide.md`;
+  `specs/008-rich-unit-pedagogy/contracts/content-spec-v3.md` (read at the bound commit);
+  `D-2026-0053`. Evaluation record: `intake2/GENG-301/evaluation.md` beside the manifest below.
+- **Bound to:** `/tmp/claude-1005/-home-a2ahs-mega-book-for-B-Ed/e283ce34-647b-4701-9268-ea887141a5b3/scratchpad/intake2/GENG-301/manifest.json`
+  (commit `dc9e0907caae9d752e776ccf170852b229d9ad95`, 79 inputs, all recomputed with `manifestFor()`
+  and matching), manifest digest `16388059ba316f00533a867b64608b71f050df5df3d905a57894a4ae7c31ebad`.
+  Any change to a bound input voids this approval.
+- **Limits:** Supersedes nothing in `D-2026-0050`. It re-binds that entry's passing criteria to the
+  repaired inputs. After the listed repairs, the spec needs a fresh manifest and a fresh intake.
+  `G-2026-90` (tracker) and `G-2026-91` (tooling) are untouched. This entry certifies no content,
+  qualifies no reviewer and authorises no publication (Art. VII.8).
