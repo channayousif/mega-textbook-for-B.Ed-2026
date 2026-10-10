@@ -1590,3 +1590,151 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 **Date:** 2026-10-04
 
 The generated raster illustration `fig-U4-12.webp` places the teacher at the front beside the board, which contradicts its prompt specifying a landscape scene of a male teacher "at the back of his own classroom". A repair or regeneration is needed before G3 can pass.
+
+---
+
+## G-2026-72 - EFMP-305 credit hours: the Faculty guide states `03 (0-3)`, the revised Scheme and the catalog state `3 (3-0)`
+
+- **Status:** open
+- **Gate:** G0 intake, `identity` criterion. Constitution Art. II.3.
+- **Raised by:** agent:evaluator, 2026-10-10, under `D-2026-0047` (manifest
+  `scratchpad/intake/EFMP-305/manifest.json`, digest
+  `e3bcd12fc5ccddfd907816905a55b030b08c4a8082a4622fb83f95fe5b8f5f65`, commit `00c49f1a`).
+- **Detail:** the EFMP-305 course guide is the Faculty of Education block in
+  `Scheme-and-Course-guides/2nd 2026.pdf`, page 4. It reads "Course No.: EFMP-305 ... Credit
+  Hours: 03 (0-3)" (extract `extracted-text/2nd 2026.txt:190`, `:196`; re-extracted directly from
+  the PDF with pypdf this run, same text). The revised board Scheme, the designated final
+  authority, gives `EFMP-305 / Inclusive Education / 3 (3-0) / Major: Professional Course - V`
+  (`B.Ed 4 Year 2026 revised after board.txt:166-172`), and so does the superseded Scheme
+  (`B.Ed 4 Year board.txt:85-88`). `catalog/courses.json` carries `3 (3-0)`.
+  `(3-0)` is three theory hours and no practical; `(0-3)` is the reverse.
+
+  This is **not** covered by `D-2026-0003`. That ruling settled the `.specify/Course_guides_and_Scheme/`
+  departmental variant set, whose files say `(0-3)`; EFMP-305 has no file in that folder, and the
+  `(0-3)` here comes from the **Faculty** guide, the document `D-2026-0003` treated as governing.
+  `G-2026-05` held for GSOS-301 that "credit-hour values are a property of the degree-awarding
+  scheme", which points at `(3-0)`, but this register's header records that each guide-vs-scheme
+  conflict is decided on its own merits by the owner. **Not decided here.**
+
+  Consequences in the spec: `content-spec.md:8` states "3 (3-0) credit hours. Source:
+  `Scheme-and-Course-guides/2nd 2026.pdf`", attributing the Scheme's value to a guide that says
+  the opposite, without disclosure. `:49-51` records "Practical work: none listed in the guide"
+  and reads the guide's "lots of practice" (`2nd 2026.txt:298`) as non-practical; if `(0-3)` were
+  authoritative the course would be wholly practical and that reading would not stand.
+- **Needed, and from whom:** the curriculum owner, to state the credit-hour split for EFMP-305,
+  and whether the guide's `(0-3)` is a drafting slip (as the departmental `(0-3)` was found to be
+  for EFMP-301/302).
+- **Blocks:** the `identity` criterion; `content-spec.md:8`; the course-wide "Practical work" and
+  "Teaching strategies" items (`:32-34`, `:49-51`); `catalog/courses.json` `credit_hours` is
+  unaffected unless the owner rules for `(0-3)`. Blocks `status: approved`.
+
+## G-2026-73 - EFMP-305 has no reading list in its course guide
+
+- **Status:** open
+- **Gate:** G0 intake, `readings` criterion.
+- **Raised by:** agent:evaluator, 2026-10-10, under `D-2026-0047` (same manifest).
+- **Detail:** the EFMP-305 guide block (`2nd 2026.txt:189-345`) carries a description, five
+  outcomes, a sixteen-week outline, a teaching-learning paragraph, a class-participation paragraph
+  and a marks table. It carries **no** "Recommended Books", "Suggested Readings" or reference list
+  of any kind. Under the evaluate-intake skill a course with no reading list cannot pass
+  `readings`; authoring against no sources is what produced EFMP-302's `sources` failures.
+
+  The spec (`content-spec.md:15-21`, `:52-54`, `:78-107`) records the silence, then supplies a
+  per-unit open-access binding floor modelled on `D-2026-0013`. Three things the guide does not
+  settle:
+  1. **Whether a floor stands in for a guide list at all, and at what level.** `D-2026-0013`
+     (EFMP-304) and `D-2026-0021` (GNAS-301) were each owner rulings scoped to one course; neither
+     extends to EFMP-305. The spec's floor (two sources for Units 1, 2 and 5; one for 3, 4 and 6)
+     is its own construction and is not machine-declared (`open_access_floor` absent from the front
+     matter, so `check:source-floor` cannot see it).
+  2. **The spec's framing is wrong on the precedent.** `:20-21` says "As with EFMP-302/304 this is
+     guide silence on *optional* enrichment sections". EFMP-302 has a 12-entry guide reading list
+     and EFMP-304 seven monographs (`D-2026-0013`); neither was guide-silent on readings.
+  3. **The three "course-wide anchors" are search targets, not resolvable entries.**
+     "UNESCO (2020). *Inclusive education: All means all. Education 2030*" misstates the title:
+     the 2020 Global Education Monitoring Report is *Inclusion and education: All means all*
+     (unesco.org/gem-report, checked 2026-10-10). "National Education Policy of Pakistan (latest
+     available; 2009 or successor)" names no edition. Only UNCRPD (2006) Article 24 resolves as
+     written. No row carries a key, DOI or URL, and every unit's "Mapped readings" cell is a topic
+     description, not a key.
+
+  For the owner's information only, not adopted: `extracted-text/3rd 2026.txt:290-295` carries an
+  inclusive-education reference list (Booth and Ainscow 2016; Mittler 2019; Loreman, Deppeler and
+  Harvey 2020; UNESCO 2017; Government of Pakistan 2018) attached to the **EFMP-406 Contemporary
+  Literacy** block, beside an "inclusive lesson plan" assessment that does not match that course.
+  It may be a misplaced list. Whether it belongs to EFMP-305 is a question about the world.
+- **Needed, and from whom:** the curriculum owner, to rule (a) whether EFMP-305 authors against a
+  binding open-access floor and at what per-unit level, as was ruled for EFMP-304 and GNAS-301, or
+  (b) supply or designate a reading list (including whether the `3rd 2026` list belongs to this
+  course). The drafter then repairs the anchors (correct UNESCO title, a named NEP edition, keys and
+  locators) and declares the floor in front matter.
+- **Blocks:** the `readings` criterion; `## Reading list` (`:78-107`); every unit's `Mapped
+  readings` column; G2 source binding for all six units. Blocks `status: approved`.
+
+## G-2026-74 - EFMP-305: three checklist sub-topics have no guide ancestor
+
+- **Status:** open
+- **Gate:** G1 unit-spec, `coverage` criterion.
+- **Raised by:** agent:evaluator, 2026-10-10, under `D-2026-0047` (same manifest).
+- **Detail:** every guide week item (`2nd 2026.txt:227-294`) appears in the spec's checklists
+  exactly once, and 27 of the 30 rows are faithful decompositions (recorded in `D-2026-0047`).
+  Three rows trace to no guide week item, no guide sub-topic and no phrase of the course
+  description:
+  - **U1-5** "Common misconceptions about inclusion" (`content-spec.md:176`), Unit 1 Topic 1.2.
+    Weeks 1-2 list only meaning and concept, principles, and importance in Pakistan
+    (`:227`, `:231`). A misconceptions block is a structural requirement of every topic file; making
+    it an assessed sub-topic is an addition.
+  - **U3-5** "Putting the three strategies together in one lesson" (`:276`), which is the **whole**
+    of Topic 3.3 (`:284`). Weeks 5-7 list three strategies (`:264`, `:266`, `:270`) and no
+    synthesis. CLO 3 ("apply inclusive teaching strategies", `:217`) is an outcome ancestor, not a
+    sub-topic one.
+  - **U5-5** "From policy to practice: closing the gap" (`:374`), assigned to Topics 5.1 and 5.3.
+    Weeks 10-13 (`:280-286`) carry no implementation-gap item.
+  Under Art. II.2 and the skill's coverage rule, an addition is an escalation, not an evaluator
+  decision. The owner has previously confirmed authored decompositions under bare headings
+  (`D-2026-0009`), but these are not decompositions of any heading.
+- **Needed, and from whom:** the curriculum owner, to rule for each row: keep it as a disclosed
+  expansion (with its basis stated in the spec), fold it into a guide-anchored row, or remove it.
+  U1-5 is already authored in Unit 1 (`docs/semester-2/efmp-305/unit-01/topic-02.mdx`), so a
+  removal ruling reaches authored content.
+- **Blocks:** U1-5 and Unit 1 Topic 1.2's row; U3-5 and Unit 3 Topic 3.3 entirely; U5-5 and
+  Unit 5 Topics 5.1 and 5.3. Blocks `status: approved`.
+
+## G-2026-75 - EFMP-305: the formative/summative reading of the guide's marks table is not guide-given
+
+- **Status:** open
+- **Gate:** G0 intake, course-wide assessment (Constitution Art. III.7).
+- **Raised by:** agent:evaluator, 2026-10-10, under `D-2026-0047` (same manifest).
+- **Detail:** the guide's marks table (`2nd 2026.txt:312-345`) gives Mid-Term 30, Final-Term 50,
+  Assignment/Presentation/Sessional 10, Attendance 10, Total 100. The spec transcribes it
+  correctly (`content-spec.md:38-44`) and that transcription is approved in `D-2026-0047`. It then
+  states (`:46-48`) that Assignment/Presentation **and Attendance** are formative, so "the split is
+  therefore 80 summative / 20 formative, which the guide specifies directly". The guide uses neither
+  word; attendance is not an assessment instrument; and Art. III.7 allows a deviation from 60/40
+  "justified in the unit spec", which this sentence asserts rather than justifies. `D-2026-0007`
+  recorded the identical bucketing for EFMP-304 as "a bucketing judgement the guide does not state"
+  and left it unsettled.
+- **Needed, and from whom:** the curriculum owner, to state whether a guide's own marks table
+  displaces the Art. III.7 default for EFMP-305 and how attendance is classified, or to accept the
+  table as the weighting with no formative/summative label.
+- **Blocks:** only the sentence at `content-spec.md:46-48`. No unit-end bank and no gate depend on
+  it.
+
+## G-2026-76 - EFMP-305 tracker records G1 as done on a spec that has never been approved
+
+- **Status:** open
+- **Gate:** G1 unit-spec (record integrity). Spec 006 FR-002.
+- **Raised by:** agent:evaluator, 2026-10-10, under `D-2026-0047` (same manifest).
+- **Detail:** `specs/content/efmp-305/tasks.md` (not a bound input; read for context) marks
+  `Unit 1 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved` and the same for Unit 2,
+  and its Unit 1 note says "G1 unit-spec affirmed at intake". At commit `00c49f1a` the spec's
+  front matter is `status: draft` (`content-spec.md:3`), no `D-` entry approves EFMP-305 at any
+  gate, and `check:pipeline-gate` exits 1 with "course content-spec.md is not approved (status:
+  'draft')" for both units. Units 1 and 2 are authored on disk although the spec itself says
+  (`:11-13`) that no unit may be authored until G0/G1 sets `status: approved`. The tracker also
+  says Unit 2 is "not started" while `docs/semester-2/efmp-305/unit-02/` holds five files.
+  `D-2026-0047` is the first G0/G1 record for this course and does not approve the spec.
+- **Needed, and from whom:** the curriculum owner, to decide the disposition of the two G1 rows
+  (this evaluator does not edit the tracker) and of the pre-approval authoring of Units 1 and 2,
+  which will need re-checking against whatever the owner rules on `G-2026-72` to `G-2026-74`.
+- **Blocks:** nothing further in the spec; it blocks reliance on the tracker's G1 rows for EFMP-305.

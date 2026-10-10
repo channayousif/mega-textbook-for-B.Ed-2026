@@ -2150,3 +2150,124 @@ reviewer independent of the sessions that authored the content, performed any re
 this decision; a `pass` restores the provisional tier only, because `acceptProvisionalReport`
 still skips the signed reviewer registry, and an `escalate` sends the unit to the
 content-improvement loop with no further cycle.
+
+---
+
+## D-2026-0047 - EFMP-305 intake: partition (with the guide's Unit 6 week slip), guide-anchored coverage, outcomes, blueprint and residue approved; identity, readings, three additions and structure not approved
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** EFMP-305 Inclusive Education only, the `content-spec.md` at commit `00c49f1a` (drafted by
+  the Paperclip BilingualAuthor agent; this evaluator did not draft it). Settles `partition`,
+  `outcomes`, `blueprint` and `decision-residue`, and `coverage` in part. Does **not** settle
+  `identity` (`G-2026-72`), `readings` (`G-2026-73`), the three unanchored checklist rows
+  (`G-2026-74`), the formative/summative label on the marks table (`G-2026-75`) or `structure`
+  (fails; drafter repair, no owner question). Authored Units 1 and 2 are context only.
+- **Decided by:** agent:evaluator, 2026-10-10
+- **Decision:**
+  1. **Partition follows the guide; one within-guide slip resolved.** The guide numbers six units
+     with sixteen consecutive week rows (`2nd 2026.txt:225-294`); the spec carries the same six units
+     under the same titles in the same order (`content-spec.md:114-121`, `## Unit 1` to `## Unit 6`).
+     The guide's Unit 6 header says "(2 Weeks)" (`:288`) while listing Week-14, Week-15 and Week-16
+     beneath it (`:290`, `:292`, `:294`); the headers sum to 15 against the guide's own 16 enumerated
+     weeks, and every other header matches its row count. No second document carries a calendar
+     (the revised Scheme contains no "week" at all), so this is a slip inside one document.
+     **Resolved: Unit 6 spans Weeks 14-16 (three weeks), the 2/2/3/2/4/3 distribution the spec
+     records.** The spec adopts this silently; it should disclose the guide's header (repair, not an
+     owner question).
+  2. **Coverage, guide to spec: complete.** All 21 guide week items appear in the checklists exactly
+     once: W1 -> U1-1; W2 -> U1-3, U1-4; W3 -> U2-1, U2-2, U2-3; W4 -> U2-4, U2-5; W5 -> U3-1, U3-2;
+     W6 -> U3-3; W7 -> U3-4; W8 -> U4-1, U4-2 (accessibility), U4-5 (arrangement); W9 -> U4-3, U4-4;
+     W10 -> U5-1; W11 -> U5-2; W12 -> U5-3; W13 -> U5-4; W14 -> U6-1; W15 -> U6-2, U6-3; W16 -> U6-4,
+     U6-5. **Approved as decompositions:** these 26 rows, plus U1-2 (segregation, integration and
+     inclusion), whose ancestor is the guide's own description "evolving from segregation to
+     inclusion" (`:201-202`). U4-4 (low-cost assistive solutions) is approved as a decomposition of
+     Week 9's "assistive tools" localised under Art. III.4, not as new scope. **Not approved:** U1-5,
+     U3-5, U5-5 (`G-2026-74`).
+  3. **Outcomes trace.** The five spec CLOs (`content-spec.md:27-31`) are the guide's five outcomes
+     (`2nd 2026.txt:213-221`) less the leading "To". Every unit's SLOs name a guide week item and
+     cite CLOs within 1-5: U1 -> 1, 5; U2 -> 2, 5; U3 -> 3; U4 -> 2, 3; U5 -> 4, 5; U6 -> 2, 5 (plus
+     the description). No CLO is orphaned and no SLO lacks a guide ancestor. The spec's locator
+     "~207-217" should read `:211-221` (repair).
+  4. **The marks table is transcribed correctly.** Mid 30 / Final 50 / Assignment-Presentation-
+     Sessional 10 / Attendance 10 = 100 (`:312-345`; re-extracted from the PDF page 6 this run),
+     at `content-spec.md:38-44`. The "80 summative / 20 formative" label at `:46-48` is not approved
+     (`G-2026-75`).
+  5. **Blueprints are consistent.** Every unit fixes 10 MCQ / 10 RRQ / 5 ERQ, every item
+     Bloom-tagged, matching `style-guide.md:223-231`. Unit 1's stated bands (MCQ Remember-Apply,
+     RRQ Understand-Analyze, ERQ Analyze-Evaluate) sit inside the style guide's; Units 2-6 state no
+     band and so inherit the style guide's. The spec sets no per-topic minimum, so no floor can be
+     breached by its own items. Target Blooms reaching Create (U3-5, U4-4, U6-5) fall within the
+     ERQ band. The course-review mix (~15 / ~10 / ~5) is unconstrained (`style-guide.md:234-235`).
+  6. **No decision residue.** Every confirmed entry swept against the whole spec: no one-page or
+     one-term plan (`D-2026-0002`/`0004`); zero `.specify` references (`D-2026-0003`); `D-2026-0012`
+     inapplicable (the week table is guide-given); `D-2026-0013`/`D-2026-0021` are invoked as
+     pattern, not as rulings, which is the subject of `G-2026-73`, not residue; nothing from
+     `D-2026-0001`, `0005`, `0008`-`0011`, `0014`, `0017` or `0046` is superseded here.
+- **Not approved, with the defect:**
+  - **identity** (`G-2026-72`). Code EFMP-305, title "Inclusive Education", Semester 2 and the
+    Professional category agree across guide (`2nd 2026.txt:190-194`), revised Scheme
+    (`B.Ed 4 Year 2026 revised after board.txt:166-172`) and `catalog/courses.json`. The credit-hour
+    split does not: guide `03 (0-3)` (`:196`, confirmed from the PDF), Scheme and catalog `3 (3-0)`.
+    Art. II.3; not decided.
+  - **readings** (`G-2026-73`). The guide has no reading list; the spec's floor is not owner-ruled
+    for this course, and its anchors are not resolvable as written.
+  - **coverage, spec to guide** (`G-2026-74`). U1-5, U3-5, U5-5.
+  - **structure: fail.** Repairs for the drafter, needing no owner decision:
+    (a) Units 5 and 6 break the gated total-disjoint partition: U5-5 is in Topics 5.1 and 5.3,
+    U6-4 in Topics 6.1 and 6.3 (`content-spec.md:380-382`, `:429-431`); `check:depth-gate` will fail
+    both units once authored.
+    (b) Units 3-6 have no gate-readable `**Depth budget**: ... A-B reading-min` line (`:288`, `:336`,
+    `:386`, `:435`); the gate fails each once authored. Unit 5's note says "four topics" against
+    three rows.
+    (c) Art. III.10 visual density: Topics 3.3, 4.1, 5.1, 5.3, 6.1 and 6.2 each plan one figure
+    against the two-per-topic floor (`style-guide.md:155`).
+    (d) Contract form (content-spec v2/v3): checklists lack the `Guide ref` and `Topic` columns in
+    all six units; the `### Topic list` header is `Topic | Label | Sub-topic IDs | Mapped readings`
+    (title and label swapped, no `Reading-min` or `Figures`); no unit carries the `Prerequisite
+    knowledge`, `Common misconceptions`, `Mapped readings` (keys), `Worked-examples plan` or
+    `International best-practice notes` lines; `## Reading list` lacks the `### Guide-required` /
+    `### Curated-supplementary (open access)` tables; `## Course review plan` lacks `Practicum
+    project ideas`.
+    (e) Accuracy: `:8` attributes `3 (3-0)` to the guide; `:20-21` calls EFMP-302/304 guide-silent on
+    readings; the assessment locator "~330-342" should be `:312-345`; the guide's Class
+    Participation paragraph (`:306-310`, supervisor worksheets and material) is omitted from the
+    teaching-strategies item (Art. III.6).
+    Front matter validates against `contracts/content-spec-frontmatter.schema.json`; zero em dashes.
+- **Basis:** `Scheme-and-Course-guides/2nd 2026.pdf` pages 4-6 and its extract
+  `extracted-text/2nd 2026.txt:189-345` (code `:190`, title `:192`, semester `:194`, credit hours
+  `:196`, description `:199-207`, outcomes `:209-221`, units and weeks `:225-294`, teaching
+  framework `:296-300`, class participation `:306-310`, marks `:312-345`); the revised Scheme
+  `:166-172`; `catalog/courses.json` (EFMP-305 row); `specs/content/style-guide.md` v4.5;
+  `contracts/content-spec-frontmatter.schema.json`; content-spec contracts
+  `specs/007-content-depth-standard/contracts/content-spec-v2.md` and
+  `specs/008-rich-unit-pedagogy/contracts/content-spec-v3.md` (read, not bound). Items 1-4 are
+  determined by the guide directly; items 5-6 by the bound style guide and the registers.
+  **Deterministic checks run at `00c49f1a`, real exit codes:** `check:depth-gate` 0;
+  `check:figures` 1 (6 EFMP-305 findings, all on authored Units 1-2: prompt-only markers not
+  rendered; not a spec defect); `check:concept-graph` 0; `check:bloom-bands` 0;
+  `check:source-floor` 0 (vacuous: no floor declared); `check:pipeline-gate` 1 (4 EFMP-305
+  findings: spec `status: draft`, G2 rows not done); `validate:content` 0; `check:no-em-dash` 0;
+  `check:no-answer-keys` 0; `check:docs-sync` 0. The green depth gate is vacuous for Units 3-6
+  (unauthored), so the spec-side invariants were replayed directly with the gate's own parsers
+  (`unitSectionLines`, `parseTopicList`, `parsePipeTable`, `tableAfterHeading`): Units 1 and 2
+  pass; Units 3-6 fail as in (a)-(c).
+- **Bound to:** `/tmp/claude-1005/-home-a2ahs-mega-book-for-B-Ed/e283ce34-647b-4701-9268-ea887141a5b3/scratchpad/intake/EFMP-305/manifest.json`,
+  manifest digest `e3bcd12fc5ccddfd907816905a55b030b08c4a8082a4622fb83f95fe5b8f5f65`, 63 inputs at
+  commit `00c49f1ae333daebb37c2232998ca48d9c1ba6b1`. Recomputed independently with `manifestFor()`
+  over the `intakeRoots('efmp-305')` root set: every path and digest matched, no extra or missing
+  entry, `manifest_digest` reproduced, and both `registers` digests matched before this entry was
+  written. **Any change to a bound input voids this approval** (Art. VII.8.5).
+- **Limits:**
+  - **`status` stays `draft`.** The spec may **not** move to `approved` on owner confirmation of
+    this entry alone. That needs owner rulings on `G-2026-72`, `G-2026-73` and `G-2026-74` (and
+    optionally `G-2026-75`), the structure repairs above, and a fresh intake pass over the repaired
+    spec, which will bind a new manifest.
+  - **Blocked units and sections:** Unit 1 Topic 1.2 (U1-5); Unit 3 Topic 3.3 (U3-5) and the Unit 3
+    depth line and figure plan; Unit 4 depth line and Topic 4.1 figure plan; Unit 5 Topics 5.1 and
+    5.3 (U5-5, partition, figures) and depth line; Unit 6 Topics 6.1-6.3 (U6-4 partition), Topics
+    6.1-6.2 figure plan and depth line; course-wide `## Reading list`, every `Mapped readings`
+    cell, `:8`, `:32-34`, `:46-51`. Units 1 and 2 are otherwise structurally conformant.
+  - The tracker's G1 rows for Units 1 and 2 are unsupported by any approval (`G-2026-76`). This
+    entry does not make them true.
+  - Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
