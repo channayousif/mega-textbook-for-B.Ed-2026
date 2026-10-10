@@ -1,6 +1,6 @@
 ---
 course_code: GQUR-301
-status: approved
+status: draft
 open_access_floor:
   default: 1
 ---
