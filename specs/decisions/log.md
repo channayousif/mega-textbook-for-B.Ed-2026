@@ -2169,7 +2169,9 @@ content-improvement loop with no further cycle.
   2. **Readings.** Where a guide gives no reading list, only print monographs, or an ambiguous
      entry, the author may bind verified real works chosen for relevance to the course outcomes,
      labelled as author-selected rather than guide-required; every unit must bind at least one
-     open-access source, declared as `open_access_floor: 1`. Resolves `G-2026-73`, `G-2026-79`,
+     open-access source, declared in the spec front matter as the mapping form
+     `open_access_floor:` / `  default: 1` (the form `check:source-floor` reads; a bare
+     `open_access_floor: 1` is not enforced). Resolves `G-2026-73`, `G-2026-79`,
      `G-2026-89`, `G-2026-93`, `G-2026-94`, `G-2026-98`. Unresolvable or misattributed entries
      the intakes named must still be corrected; this ruling does not validate them.
   3. **EFMP-305 credit hours.** **3 (3-0)**, theory. The revised Scheme and the catalog govern;
@@ -2181,7 +2183,14 @@ content-improvement loop with no further cycle.
      `G-2026-74`, `G-2026-83`, `G-2026-87`, `G-2026-99`.
   5. **GPKS-402 Units 1-2.** Withdrawn. They were authored before intake and will be re-authored
      after the spec is approved. Resolves `G-2026-100`.
-- **Not ruled:** `G-2026-75` (EFMP-305 80/20 label) stays open; `G-2026-76` and `G-2026-90`
+  6. **EFMP-305 assessment split.** **40 formative / 60 summative.** The spec's "80 summative /
+     20 formative" label is replaced; the spec's assessment section and the course overview (EN
+     and UR) must state 40/60. Resolves `G-2026-75`.
+  7. **EFMP-305 Unit 5 disability statute.** The guide's "Rights of Persons with Disabilities Act
+     (2018)" is taught as the **Sindh Empowerment of Persons with Disabilities Act, 2018** (the
+     law in force for Sindh teachers), with a short comparison to the federal ICT Rights of Persons
+     with Disabilities Act, 2020. Resolves `G-2026-102` (raised by `D-2026-0054`).
+- **Not ruled:** `G-2026-76` and `G-2026-90`
   (tracker G1 claims) are author repairs; `G-2026-91` (depth-gate Topic column) is a tooling item.
 - **Limits:** This decision approves no specification. Each spec still needs the author repairs
   its intake listed, then a fresh intake on a newly prepared manifest, before it may move to
