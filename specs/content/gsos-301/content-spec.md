@@ -1,6 +1,7 @@
 ---
 course_code: GSOS-301
 status: draft
+open_access_floor: 1
 ---
 
 # GSOS-301 - Social Science (Sociology) - Content Spec
@@ -34,39 +35,44 @@ Two consequences for authoring, both load-bearing:
 
 ## Reading list
 
-Full references from the guide's "Recommended Books" and standard sociology texts. `Key` is the citation key used in each unit's `sources/unit-NN.md`. `Units` tags which unit(s) each source supports.
+`Key` is the citation key used in each unit's `sources/unit-NN.md`. `Units` tags which unit(s) each source supports. Sources are labelled **guide-required** only where the guide explicitly names them; all other sources are **author-selected** (chosen for relevance to course outcomes and verified to resolve).
 
-### Guide-required
+### Author-selected (open access)
 
 | Key | Citation | DOI/URL | Units | Note |
 |---|---|---|---|---|
-| givens2023 | Givens, S. M., & White, J. M. (Eds.) (2023). *Sociology*. OpenStax. | https://openstax.org/details/books/introduction-sociology-3e | 1-6 | Open-access introductory sociology; the course's spine for concepts and definitions across all units |
+| conerly2021 | Conerly, T. R., Holmes, K., & Tamang, S. K. (Eds.) (2021). *Introduction to sociology* (3rd ed.). OpenStax. | https://openstax.org/details/books/introduction-sociology-3e | 1-6 | Open-access introductory sociology; the course's spine for concepts and definitions across all units |
 | henson2022 | Henson, L. (2022). *Sociology: An introduction*. LibreTexts. | https://socialsci.libretexts.org/Bookshelves/Sociology/Introduction_to_Sociology | 1-6 | Open-access resource for sociological perspectives, culture, socialization, stratification, and institutions |
-| lindsey2020 | Lindsey, D. (2020). *Sociology* (7th ed.). Routledge. | (print) | 1, 2, 3, 4 | Classical and contemporary perspectives, culture, socialization, social structure. **Scope: US/UK grounded**; transferable on method, Pakistani examples must be authored |
-| anderson2016 | Anderson, H. A., & Dolphin, L. L. (2016). *Sociology: The essentials* (8th ed.). Cengage. | (print) | 1, 2, 3, 5 | Social institutions, stratification, social change. **Scope: US grounded**; transferable on framework only |
 
-### Curated-supplementary (open access) - to be bound at G2, not asserted here
+### Author-selected (print)
 
-**Deliberately empty.** No citation is listed in this section because none has been verified from this host, and inventing DOIs is exactly what produced previous `sources` failures.
-
-Instead, this spec sets a **binding requirement on G2 source-binding** for each unit:
-
-- Units 1 to 6 MUST each bind **at least one** verifiable open-access source before authoring, resolved through Crossref, OpenAlex, ERIC or DOAJ and recorded in `sources/unit-NN.md` with the registry and date of verification.
-- Search targets, not citations: UNESCO reports on education and society; Pakistan Bureau of Statistics data; World Bank education statistics; sociology textbooks on OpenStax/LibreTexts; peer-reviewed open-access articles on Pakistani society.
-- If a unit cannot meet its floor, that is an escalation to `specs/gaps.md`, not a reason to lean harder on an unopened book.
+| Key | Citation | DOI/URL | Units | Note |
+|---|---|---|---|---|
+| lindsey2010 | Lindsey, L. L., & Beach, S. (2010). *Sociology* (2nd ed.). Prentice Hall. | (print) | 1, 2, 3, 4 | Classical and contemporary perspectives, culture, socialization, social structure. **Scope: US grounded**; transferable on method, Pakistani examples must be authored |
+| andersen2014 | Andersen, M. L., Taylor, H. F., & Logio, K. A. (2014). *Sociology: The essentials* (8th ed.). Cengage. | (print) | 1, 2, 3, 5 | Social institutions, stratification, social change. **Scope: US grounded**; transferable on framework only |
 
 ## Week schedule
 
-**Derived, not guide-given.** The guide gives a 16-week topic list. The distribution below is proportional to sub-topic count and pedagogical density.
+Source: guide lines 802-942 (Weeks 1-16). The guide provides a full week table; the distribution below follows it directly (D-2026-0012).
 
-| Week(s) | Unit | Sub-topics |
-|---|---|---|
-| 1-2 | Unit 1 - Introduction to Sociology and Sociological Perspectives | Definition, scope, nature and importance of sociology; sociology as a science; origins (Comte, Marx, Durkheim, Weber); functionalism, conflict theory, symbolic interactionism |
-| 3-4 | Unit 2 - Culture and Socialization | Elements of culture (norms, values, beliefs); cultural diversity; ethnocentrism vs cultural relativism; agents of socialization; stages of socialization |
-| 5-6 | Unit 3 - Social Structure and Social Interaction | Status and roles; social groups (primary, secondary); organizations and bureaucracy; cooperation, competition, conflict; social interaction patterns; communication |
-| 7 | Unit 4 - Social Stratification and Gender | Class, caste, and social hierarchy; mobility; inequality in society; gender roles and stereotypes; gender inequality; feminist perspectives |
-| 8-9 | Unit 5 - Social Institutions | Family; education; religion; economy; politics; healthcare |
-| 10-11 | Unit 6 - Social Change and Social Problems | Causes of social change; modernization and globalization; role of technology; poverty; crime and deviance; unemployment; media and society; human rights; environmental issues |
+| Week(s) | Unit |
+|---|---|
+| 1 | Unit 1 - Introduction to Sociology: definition, scope, nature, importance, sociology as a science |
+| 2 | Unit 1 - Origins of Sociology: Comte, Marx, Durkheim, Weber |
+| 3 | Unit 1 - Sociological Perspectives: functionalism, conflict theory, symbolic interactionism |
+| 4 | Unit 2 - Culture: elements, diversity, ethnocentrism vs cultural relativism |
+| 5 | Unit 2 - Socialization: agents, personality development, stages |
+| 6 | Unit 3 - Social Structure: status, roles, groups, organizations |
+| 7 | Unit 3 - Social Interaction: cooperation, competition, conflict, communication |
+| 8 | Mid-Term Review / Exam |
+| 9 | Unit 4 - Social Stratification: class, caste, mobility, inequality |
+| 10 | Unit 4 - Gender and Society: roles, stereotypes, inequality, feminist perspectives |
+| 11 | Unit 5 - Social Institutions: family, education, religion |
+| 12 | Unit 5 - Social Institutions: economy, politics, healthcare |
+| 13 | Unit 6 - Social Change: causes, modernization, globalization, technology |
+| 14 | Unit 6 - Social Problems: poverty, crime, deviance, unemployment |
+| 15 | Unit 6 - Contemporary Issues: media, human rights, environment |
+| 16 | Final Review & Exam |
 
 ## Course review plan
 
@@ -83,6 +89,7 @@ Seeds an eventual `docs/semester-2/gsos-301/course-review.mdx` (Spec 008 FR-016)
 - **Practicum project ideas**:
   - *Sociological observation* - spend one school day recording three examples of social interaction (cooperation, competition, or conflict) and analyse them using one of the three perspectives.
   - *Family institution mapping* - interview one family about how the institution of education has shaped their children's life chances; write a one-page analysis.
+- **Practice-question mix**: `### MCQs` ~15 (all six units, Remember to Apply); `### RRQs` ~10 (Understand to Analyze, >= 1 per unit); `### ERQs` ~5 (Analyze to Evaluate/Create, each integrating two or more units).
 
 ## Standards & frameworks anchors
 
@@ -93,6 +100,8 @@ Seeds an eventual `docs/semester-2/gsos-301/course-review.mdx` (Spec 008 FR-016)
 ---
 
 ## Unit 1 - Introduction to Sociology and Sociological Perspectives
+
+**Unit learning outcomes** (derived from CLO 1, 6): define sociology, its scope and nature; name the four founders and their contributions; explain the three major perspectives; apply a perspective to analyse a described situation.
 
 ### Sub-topic checklist
 
@@ -118,17 +127,17 @@ One row per leaf item from the course guide sections on introduction to sociolog
 | Topic | Title | Sub-topic IDs | Reading-min | Figures (id: archetype) |
 |---|---|---|---|---|
 | 1.1 | What sociology is, and why it matters | U1-01, U1-02, U1-03 | 13-19 | fig-U1-1: diagram, fig-U1-2: concept-map |
-| 1.2 | The founders of sociology | U1-04, U1-05, U1-06, U1-07 | 16-22 | fig-U1-3: concept-map |
-| 1.3 | The three major perspectives | U1-08, U1-09, U1-10 | 14-20 | - |
+| 1.2 | The founders of sociology | U1-04, U1-05, U1-06, U1-07 | 16-22 | fig-U1-3: concept-map, fig-U1-4: table |
+| 1.3 | The three major perspectives | U1-08, U1-09, U1-10 | 14-20 | fig-U1-5: concept-map, fig-U1-6: table |
 
-**Depth budget**: 10 sub-topics; 45-60 reading-min.
+**Depth budget**: 10 sub-topics; 3 topics; 45-60 reading-min.
 
 ### Mapped readings
 
 | Key | Used for |
 |---|---|
-| givens2023 | Units 1.1-1.3 (what sociology is, why it matters); Units 1.4-1.7 (founders); Units 1.8-1.10 (perspectives) |
-| henson2022 | Units 1.1-1.3 (definitions, scope); Units 1.8-1.10 (perspective comparisons) |
+| conerly2021 | U1-01, U1-03 (what sociology is, why it matters); U1-04, U1-05, U1-06, U1-07 (founders); U1-08, U1-09, U1-10 (perspectives) |
+| henson2022 | U1-01, U1-02 (definitions, scope); U1-08, U1-09, U1-10 (perspective comparisons) |
 
 ### Common misconceptions
 
@@ -141,8 +150,11 @@ One row per leaf item from the course guide sections on introduction to sociolog
 | Figure ID | Topic | Archetype | Purpose |
 |---|---|---|---|
 | fig-U1-1 | 1.1 | diagram | A Venn diagram showing sociology's relationship to common sense, psychology, and social work - overlaps and distinct zones |
-| fig-U1-2 | 1.2 | concept-map | Four founders (Comte, Marx, Durkheim, Weber) linked to their key contributions and concepts |
-| fig-U1-3 | 1.3 | concept-map | The three perspectives (functionalism, conflict theory, symbolic interactionism) linked to their core assumptions and key thinkers |
+| fig-U1-2 | 1.1 | concept-map | The sociological imagination linking personal troubles to social structures, with teacher examples |
+| fig-U1-3 | 1.2 | concept-map | Four founders (Comte, Marx, Durkheim, Weber) linked to their key contributions and concepts |
+| fig-U1-4 | 1.2 | table | Comparison table of the four founders: key concept, method, and legacy |
+| fig-U1-5 | 1.3 | concept-map | The three perspectives (functionalism, conflict theory, symbolic interactionism) linked to their core assumptions and key thinkers |
+| fig-U1-6 | 1.3 | table | Comparison table of the three perspectives: core assumption, level of analysis, key question |
 
 ### Unit-end assessment blueprint
 
@@ -153,6 +165,8 @@ One row per leaf item from the course guide sections on introduction to sociolog
 ---
 
 ## Unit 2 - Culture and Socialization
+
+**Unit learning outcomes** (derived from CLO 1, 2): define culture and its elements; distinguish ethnocentrism from cultural relativism; name the agents of socialization; explain the stages of socialization; analyse a described situation using culture and socialization concepts.
 
 ### Sub-topic checklist
 
@@ -174,16 +188,16 @@ One row per leaf item from the course guide sections on culture and socializatio
 | Topic | Title | Sub-topic IDs | Reading-min | Figures (id: archetype) |
 |---|---|---|---|---|
 | 2.1 | What culture is, and how it varies | U2-01, U2-02, U2-03 | 16-22 | fig-U2-1: diagram, fig-U2-2: concept-map |
-| 2.2 | How society makes us who we are | U2-04, U2-05, U2-06 | 14-20 | - |
+| 2.2 | How society makes us who we are | U2-04, U2-05, U2-06 | 14-20 | fig-U2-3: concept-map, fig-U2-4: table |
 
-**Depth budget**: 6 sub-topics; 40-55 reading-min.
+**Depth budget**: 6 sub-topics; 2 topics; 40-55 reading-min.
 
 ### Mapped readings
 
 | Key | Used for |
 |---|---|
-| givens2023 | Units 2.1-2.3 (culture elements, diversity, ethnocentrism); Units 2.4-2.6 (socialization agents and stages) |
-| lindsey2020 | Units 2.1-2.3 (cultural norms and values); Units 2.4-2.6 (socialization and personality) |
+| conerly2021 | U2-01, U2-02, U2-03 (culture elements, diversity, ethnocentrism); U2-04, U2-05, U2-06 (socialization agents and stages) |
+| lindsey2010 | U2-01, U2-02, U2-03 (cultural norms and values); U2-04, U2-05, U2-06 (socialization and personality) |
 
 ### Common misconceptions
 
@@ -195,8 +209,10 @@ One row per leaf item from the course guide sections on culture and socializatio
 
 | Figure ID | Topic | Archetype | Purpose |
 |---|---|---|---|
-| fig-U2-1 | 2.1 | diagram | A labelled diagram of culture's elements (norms, values, beliefs, symbols) with examples |
-| fig-U2-2 | 2.2 | concept-map | Agents of socialization (family, school, peers, media, religion) linked to what each transmits |
+| fig-U2-1 | 2.1 | diagram | A labelled diagram of culture's elements (norms, values, beliefs, symbols) with Pakistani examples |
+| fig-U2-2 | 2.1 | concept-map | Ethnocentrism vs cultural relativism as contrasting stances, with Pakistani classroom examples |
+| fig-U2-3 | 2.2 | concept-map | Agents of socialization (family, school, peers, media, religion) linked to what each transmits |
+| fig-U2-4 | 2.2 | table | Comparison table of Mead's stages of socialization with examples |
 
 ### Unit-end assessment blueprint
 
@@ -208,32 +224,34 @@ One row per leaf item from the course guide sections on culture and socializatio
 
 ## Unit 3 - Social Structure and Social Interaction
 
+**Unit learning outcomes** (derived from CLO 1, 2): explain status, role, and group; distinguish primary and secondary groups; describe the three social interaction processes; analyse a described situation using social structure concepts.
+
 ### Sub-topic checklist
 
-| ID | Sub-topic | Topic |
-|---|---|---|
-| 3.1 | Status and roles | 3.1 |
-| 3.2 | Social groups: primary and secondary | 3.1 |
-| 3.3 | Organizations and bureaucracy | 3.1 |
-| 3.4 | Cooperation, competition, conflict | 3.2 |
-| 3.5 | Social interaction patterns | 3.2 |
-| 3.6 | Communication in society | 3.2 |
+| ID | Guide ref | Topic | Sub-topic |
+|---|---|---|---|
+| U3-01 | Week 6 | 3.1 | Status and roles |
+| U3-02 | Week 6 | 3.1 | Social groups: primary and secondary |
+| U3-03 | Week 6 | 3.1 | Organizations and bureaucracy |
+| U3-04 | Week 7 | 3.2 | Cooperation, competition, conflict |
+| U3-05 | Week 7 | 3.2 | Social interaction patterns |
+| U3-06 | Week 7 | 3.2 | Communication in society |
 
 ### Topic list
 
-| Topic | Label | Sub-topic IDs | What it teaches |
-|---|---|---|---|
-| Topic 1 | 3.1 | 3.1, 3.2, 3.3 | How society is structured through statuses, roles, groups, and organizations |
-| Topic 2 | 3.2 | 3.4, 3.5, 3.6 | How people interact and the patterns that structure collective life |
+| Topic | Title | Sub-topic IDs | Reading-min | Figures (id: archetype) |
+|---|---|---|---|---|
+| 3.1 | How society is structured | U3-01, U3-02, U3-03 | 14-20 | fig-U3-1: diagram, fig-U3-2: table |
+| 3.2 | How people interact | U3-04, U3-05, U3-06 | 14-20 | fig-U3-3: flowchart, fig-U3-4: table |
 
-**Depth budget**: 6 sub-topics; 40-55 reading-min.
+**Depth budget**: 6 sub-topics; 2 topics; 40-55 reading-min.
 
 ### Mapped readings
 
 | Key | Used for |
 |---|---|
-| givens2023 | Units 3.1-3.3 (status, roles, groups, organizations); Units 3.4-3.6 (interaction and communication) |
-| henson2022 | Units 3.1-3.3 (social structure); Units 3.4-3.6 (interaction processes) |
+| conerly2021 | U3-01, U3-02, U3-03 (status, roles, groups, organizations); U3-04, U3-05, U3-06 (interaction and communication) |
+| henson2022 | U3-01, U3-02, U3-03 (social structure); U3-04, U3-05, U3-06 (interaction processes) |
 
 ### Common misconceptions
 
@@ -246,7 +264,9 @@ One row per leaf item from the course guide sections on culture and socializatio
 | Figure ID | Topic | Archetype | Purpose |
 |---|---|---|---|
 | fig-U3-1 | 3.1 | diagram | A diagram showing the relationship between status, role, and role set, with a classroom example |
-| fig-U3-2 | 3.2 | flowchart | A flowchart showing the three interaction processes (cooperation, competition, conflict) and their outcomes |
+| fig-U3-2 | 3.1 | table | Comparison table of primary and secondary groups with Pakistani examples |
+| fig-U3-3 | 3.2 | flowchart | A flowchart showing the three interaction processes (cooperation, competition, conflict) and their outcomes |
+| fig-U3-4 | 3.2 | table | Table comparing social interaction patterns in Pakistani urban vs rural contexts |
 
 ### Unit-end assessment blueprint
 
@@ -258,32 +278,34 @@ One row per leaf item from the course guide sections on culture and socializatio
 
 ## Unit 4 - Social Stratification and Gender
 
+**Unit learning outcomes** (derived from CLO 2, 4): explain class, caste, and hierarchy; describe social mobility; identify gender roles and stereotypes; analyse inequality using sociological frameworks.
+
 ### Sub-topic checklist
 
-| ID | Sub-topic | Topic |
-|---|---|---|
-| 4.1 | Class, caste, and social hierarchy | 4.1 |
-| 4.2 | Social mobility | 4.1 |
-| 4.3 | Inequality in society | 4.1 |
-| 4.4 | Gender roles and stereotypes | 4.2 |
-| 4.5 | Gender inequality | 4.2 |
-| 4.6 | Feminist perspectives | 4.2 |
+| ID | Guide ref | Topic | Sub-topic |
+|---|---|---|---|
+| U4-01 | Week 9 | 4.1 | Class, caste, and social hierarchy |
+| U4-02 | Week 9 | 4.1 | Social mobility |
+| U4-03 | Week 9 | 4.1 | Inequality in society |
+| U4-04 | Week 10 | 4.2 | Gender roles and stereotypes |
+| U4-05 | Week 10 | 4.2 | Gender inequality |
+| U4-06 | Week 10 | 4.2 | Feminist perspectives |
 
 ### Topic list
 
-| Topic | Label | Sub-topic IDs | What it teaches |
-|---|---|---|---|
-| Topic 1 | 4.1 | 4.1, 4.2, 4.3 | How societies rank people and the consequences of inequality |
-| Topic 2 | 4.2 | 4.4, 4.5, 4.6 | How gender structures social life and the sociology of gender inequality |
+| Topic | Title | Sub-topic IDs | Reading-min | Figures (id: archetype) |
+|---|---|---|---|---|
+| 4.1 | How societies rank people | U4-01, U4-02, U4-03 | 16-22 | fig-U4-1: diagram, fig-U4-2: table |
+| 4.2 | How gender structures social life | U4-04, U4-05, U4-06 | 16-22 | fig-U4-3: concept-map, fig-U4-4: table |
 
-**Depth budget**: 6 sub-topics; 45-60 reading-min.
+**Depth budget**: 6 sub-topics; 2 topics; 45-60 reading-min.
 
 ### Mapped readings
 
 | Key | Used for |
 |---|---|
-| givens2023 | Units 4.1-4.3 (stratification, class, mobility, inequality); Units 4.4-4.6 (gender roles, inequality, feminism) |
-| lindsey2020 | Units 4.1-4.3 (social hierarchy); Units 4.4-4.6 (gender and feminist theory) |
+| conerly2021 | U4-01, U4-02, U4-03 (stratification, class, mobility, inequality); U4-04, U4-05, U4-06 (gender roles, inequality, feminism) |
+| lindsey2010 | U4-01, U4-02, U4-03 (social hierarchy); U4-04, U4-05, U4-06 (gender and feminist theory) |
 
 ### Common misconceptions
 
@@ -296,7 +318,9 @@ One row per leaf item from the course guide sections on culture and socializatio
 | Figure ID | Topic | Archetype | Purpose |
 |---|---|---|---|
 | fig-U4-1 | 4.1 | diagram | A diagram showing the three dimensions of stratification (class, caste, status) with Pakistani examples |
-| fig-U4-2 | 4.2 | concept-map | A concept map linking gender roles, stereotypes, inequality, and feminist responses |
+| fig-U4-2 | 4.1 | table | Comparison table of types of social mobility with Pakistani examples |
+| fig-U4-3 | 4.2 | concept-map | A concept map linking gender roles, stereotypes, inequality, and feminist responses |
+| fig-U4-4 | 4.2 | table | Comparison table of gender inequality indicators in Pakistan (education, work, health) |
 
 ### Unit-end assessment blueprint
 
@@ -308,32 +332,34 @@ One row per leaf item from the course guide sections on culture and socializatio
 
 ## Unit 5 - Social Institutions
 
+**Unit learning outcomes** (derived from CLO 3): explain the functions of family, education, religion, economy, politics, and healthcare as social institutions; analyse how institutions interrelate; describe institutional change.
+
 ### Sub-topic checklist
 
-| ID | Sub-topic | Topic |
-|---|---|---|
-| 5.1 | Family as a social institution | 5.1 |
-| 5.2 | Education as a social institution | 5.1 |
-| 5.3 | Religion as a social institution | 5.1 |
-| 5.4 | Economy as a social institution | 5.2 |
-| 5.5 | Politics as a social institution | 5.2 |
-| 5.6 | Healthcare as a social institution | 5.2 |
+| ID | Guide ref | Topic | Sub-topic |
+|---|---|---|---|
+| U5-01 | Week 11 | 5.1 | Family as a social institution |
+| U5-02 | Week 11 | 5.1 | Education as a social institution |
+| U5-03 | Week 11 | 5.1 | Religion as a social institution |
+| U5-04 | Week 12 | 5.2 | Economy as a social institution |
+| U5-05 | Week 12 | 5.2 | Politics as a social institution |
+| U5-06 | Week 12 | 5.2 | Healthcare as a social institution |
 
 ### Topic list
 
-| Topic | Label | Sub-topic IDs | What it teaches |
-|---|---|---|---|
-| Topic 1 | 5.1 | 5.1, 5.2, 5.3 | Family, education, and religion: their functions and how they shape society |
-| Topic 2 | 5.2 | 5.4, 5.5, 5.6 | Economy, politics, and healthcare: institutions that organize collective life |
+| Topic | Title | Sub-topic IDs | Reading-min | Figures (id: archetype) |
+|---|---|---|---|---|
+| 5.1 | Family, education, and religion | U5-01, U5-02, U5-03 | 16-22 | fig-U5-1: concept-map, fig-U5-2: table |
+| 5.2 | Economy, politics, and healthcare | U5-04, U5-05, U5-06 | 16-22 | fig-U5-3: concept-map, fig-U5-4: table |
 
-**Depth budget**: 6 sub-topics; 45-60 reading-min.
+**Depth budget**: 6 sub-topics; 2 topics; 45-60 reading-min.
 
 ### Mapped readings
 
 | Key | Used for |
 |---|---|
-| givens2023 | Units 5.1-5.3 (family, education, religion); Units 5.4-5.6 (economy, politics, healthcare) |
-| anderson2016 | Units 5.1-5.3 (institutions and their functions); Units 5.4-5.6 (economic and political institutions) |
+| conerly2021 | U5-01, U5-02, U5-03 (family, education, religion); U5-04, U5-05, U5-06 (economy, politics, healthcare) |
+| andersen2014 | U5-01, U5-02, U5-03 (institutions and their functions); U5-04, U5-05, U5-06 (economic and political institutions) |
 
 ### Common misconceptions
 
@@ -345,8 +371,10 @@ One row per leaf item from the course guide sections on culture and socializatio
 
 | Figure ID | Topic | Archetype | Purpose |
 |---|---|---|---|
-| fig-U5-1 | 5.1 | concept-map | A concept map showing the six institutions and their core functions |
-| fig-U5-2 | 5.2 | diagram | A diagram illustrating how institutions interrelate (e.g., education feeds into economy, family shapes education) |
+| fig-U5-1 | 5.1 | concept-map | A concept map showing family, education, and religion and their core functions |
+| fig-U5-2 | 5.1 | table | Comparison table of the three institutions: function, norms, and Pakistani context |
+| fig-U5-3 | 5.2 | concept-map | A concept map showing economy, politics, and healthcare and their interconnections |
+| fig-U5-4 | 5.2 | table | Comparison table of the three institutions: function, norms, and Pakistani context |
 
 ### Unit-end assessment blueprint
 
@@ -358,35 +386,37 @@ One row per leaf item from the course guide sections on culture and socializatio
 
 ## Unit 6 - Social Change and Social Problems
 
+**Unit learning outcomes** (derived from CLO 4, 5): explain the causes of social change; describe modernization, globalization, and technology; identify major social problems; apply sociological knowledge to a real-world social issue.
+
 ### Sub-topic checklist
 
-| ID | Sub-topic | Topic |
-|---|---|---|
-| 6.1 | Causes of social change | 6.1 |
-| 6.2 | Modernization and globalization | 6.1 |
-| 6.3 | Role of technology in social change | 6.1 |
-| 6.4 | Poverty as a social problem | 6.2 |
-| 6.5 | Crime and deviance | 6.2 |
-| 6.6 | Unemployment | 6.2 |
-| 6.7 | Media and society | 6.2 |
-| 6.8 | Human rights | 6.2 |
-| 6.9 | Environmental issues | 6.2 |
+| ID | Guide ref | Topic | Sub-topic |
+|---|---|---|---|
+| U6-01 | Week 13 | 6.1 | Causes of social change |
+| U6-02 | Week 13 | 6.1 | Modernization and globalization |
+| U6-03 | Week 13 | 6.1 | Role of technology in social change |
+| U6-04 | Week 14 | 6.2 | Poverty as a social problem |
+| U6-05 | Week 14 | 6.2 | Crime and deviance |
+| U6-06 | Week 14 | 6.2 | Unemployment |
+| U6-07 | Week 15 | 6.2 | Media and society |
+| U6-08 | Week 15 | 6.2 | Human rights |
+| U6-09 | Week 15 | 6.2 | Environmental issues |
 
 ### Topic list
 
-| Topic | Label | Sub-topic IDs | What it teaches |
-|---|---|---|---|
-| Topic 1 | 6.1 | 6.1, 6.2, 6.3 | Why and how societies change: modernization, globalization, and technology |
-| Topic 2 | 6.2 | 6.4, 6.5, 6.6, 6.7, 6.8, 6.9 | Poverty, crime, unemployment, media, human rights, and the environment as social problems |
+| Topic | Title | Sub-topic IDs | Reading-min | Figures (id: archetype) |
+|---|---|---|---|---|
+| 6.1 | Why societies change | U6-01, U6-02, U6-03 | 16-22 | fig-U6-1: concept-map, fig-U6-2: table |
+| 6.2 | Social problems and contemporary issues | U6-04, U6-05, U6-06, U6-07, U6-08, U6-09 | 18-25 | fig-U6-3: concept-map, fig-U6-4: table |
 
-**Depth budget**: 9 sub-topics; 50-65 reading-min.
+**Depth budget**: 9 sub-topics; 2 topics; 50-65 reading-min.
 
 ### Mapped readings
 
 | Key | Used for |
 |---|---|
-| givens2023 | Units 6.1-6.3 (causes of change, modernization, technology); Units 6.4-6.9 (poverty, crime, unemployment, media, human rights, environment) |
-| henson2022 | Units 6.1-6.3 (social change); Units 6.4-6.9 (social problems and their sociological analysis) |
+| conerly2021 | U6-01, U6-02, U6-03 (causes of change, modernization, technology); U6-04, U6-05, U6-06, U6-07, U6-08, U6-09 (poverty, crime, unemployment, media, human rights, environment) |
+| henson2022 | U6-01, U6-02, U6-03 (social change); U6-04, U6-05, U6-06, U6-07, U6-08, U6-09 (social problems and their sociological analysis) |
 
 ### Common misconceptions
 
@@ -400,7 +430,9 @@ One row per leaf item from the course guide sections on culture and socializatio
 | Figure ID | Topic | Archetype | Purpose |
 |---|---|---|---|
 | fig-U6-1 | 6.1 | concept-map | A concept map showing the drivers of social change (modernization, globalization, technology) and their interconnections |
-| fig-U6-2 | 6.2 | diagram | A diagram showing the major social problems and their structural causes |
+| fig-U6-2 | 6.1 | table | Comparison table of modernization vs tradition in Pakistani society |
+| fig-U6-3 | 6.2 | concept-map | A concept map showing the major social problems and their structural causes |
+| fig-U6-4 | 6.2 | table | Table of key social problems in Pakistan with sociological explanations |
 
 ### Unit-end assessment blueprint
 
