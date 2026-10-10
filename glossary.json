@@ -1678,5 +1678,85 @@
   "term": "Cogency",
   "definition_en": "The property of an inductive argument that is both strong and has all true premises. A cogent argument is one you can rely on to reach a probably-true conclusion.",
   "definition_ur": "ایک اس دلیل کا خاصہ جو مضبوط ہو اور اس کی تمام پریمیسز درست ہوں۔ ایک کوجینٹ دلیل وہ ہے جس پر بھروسہ کر کے غالبا درست نتیجہ اخذ کیا جا سکتا ہے۔"
+ },
+ {
+  "term": "Segregation",
+  "definition_en": "Educating learners with differences in separate settings - separate schools, classrooms or sections - rather than in the ordinary classroom.",
+  "definition_ur": "مختلف ضرورتوالے طلباء کو علیدگی کے ماحول میں تعلیم دینا - الگ اسکول، الگ کلاسروم یا الگ سیکشن - عام کلاسروم میں نہیں۔"
+ },
+ {
+  "term": "Integration",
+  "definition_en": "Placing learners with differences in the ordinary school while expecting the child to adapt to what the school already offers; the school itself changes little.",
+  "definition_ur": "مختلف ضرورتوالے طلباء کو عام اسکول میں رکھنا اور توقع رکھنا کہ بچہ اسکول کے موجودہ نظام کے مطابق ہو جائے؛ اسکول خود تبدیل نہیں ہوتا۔"
+ },
+ {
+  "term": "Equality",
+  "definition_en": "Giving every learner the same treatment, resources or opportunities regardless of their individual circumstances.",
+  "definition_ur": "ہر طالب علم کو اس کی انفرادی حالات سے بلا نظر ایسی ہی سلوک، وسائل یا مواقع دینا۔"
+ },
+ {
+  "term": "Equity",
+  "definition_en": "Giving each learner the resources and support they need to participate and succeed, which may differ from one learner to another.",
+  "definition_ur": "ہر طالب علم کو وہ وسائل اور مدد دینا جس کی اسے شریک ہونے اور کامیاب ہونے کی ضرورت ہو، جو ایک سے دوسرے سے مختلف ہو سکتی ہے۔"
+ },
+ {
+  "term": "Diversity",
+  "definition_en": "The range of differences among learners - in ability, language, background, gender and culture - that a classroom contains.",
+  "definition_ur": "طلباء کے درمیان اختلافات کی وساعت - قابلیت، زبان، پس منظر، جنس اور ثقافت میں - جو ایک کلاسروم میں موجود ہوتی ہے۔"
+ },
+ {
+  "term": "Learner Diversity",
+  "definition_en": "The full range of differences among pupils in a classroom, including disabilities, learning difficulties and social differences.",
+  "definition_ur": "کلاسروم میں طلباء کے درمیان اختلافات کی مکمل وساعت، جس میں معذوریاں، سیکھنے کی مشکلات اور سماجی اختلافات شامل ہیں۔"
+ },
+ {
+  "term": "Inclusive Classroom",
+  "definition_en": "A classroom in which every learner participates fully and the teacher adapts teaching, materials and the environment to remove barriers.",
+  "definition_ur": "ایک ایسی کلاسروم جس میں ہر طالب علم مکمل طور پر شریک ہوتا ہے اور استاد رکاوٹوں کو دور کرنے کے لیے تدریس، مواد اور ماحول کو موزاں کرتا ہے۔"
+ },
+ {
+  "term": "Differentiated Instruction",
+  "definition_en": "Teaching that adapts the content, the process or the product to match the readiness, interests and learning profile of different pupils.",
+  "definition_ur": "ایسی تدریج جس میں مواد، عمل یا حاصل کار کو مختلف طلباء کی تیاری، دلچسپی اور سیکھنے کے نمے کے مطابق ڈھالیا جائے۔"
+ },
+ {
+  "term": "Cooperative Learning",
+  "definition_en": "A teaching approach in which pupils work together in small groups, each member contributing to a shared task and to one another's learning.",
+  "definition_ur": "ایسی تدریجی نرتیجہ جس میں طلباء چھوٹے گروپوں میں مل کر کام کرتے ہیں، ہر رکن مشترہہ کام اور ایک دوسرے کی سیکھنے میں حصہ ڈالتا ہے۔"
+ },
+ {
+  "term": "Flexible Assessment",
+  "definition_en": "Assessment that offers pupils different ways to show what they know, such as oral response, practical demonstration or adjusted tasks, rather than a single written exam.",
+  "definition_ur": "ایسی جانچ جو طلباء کو یہ بتانے کے لیے مختلف راستے پیش کرتی ہے کہ وہ کیا جانتے ہیں، جیسیاً زبانی جواب، عملی نمائش یا مخصوص کام، صرف ایک تحریری امتحان کے بجائے۔"
+ },
+ {
+  "term": "Accessibility",
+  "definition_en": "The degree to which a classroom, building or material can be used by every learner, including those with physical or sensory disabilities.",
+  "definition_ur": "وہ درجہ جس تک ایک کلاس rpm، عمارت یا مواد ہر طالب علم کے استعمال کے قابل ہو، جسمانی یا حسی معذوریوں والوں سمیت۔"
+ },
+ {
+  "term": "Assistive Technology",
+  "definition_en": "Any device, tool or software that helps a learner with a disability to participate in learning - from a simple magnifier to a screen reader.",
+  "definition_ur": "کوئی بھی آلہ، اوزار یا سافٹ ویئر جو کسی معذور طالب علم کو سیکھنے میں شریک ہونے میں مدد کرتا ہے - سادہ مکنائفائر سے لے کر اسکرین ریڈر تک۔"
+ },
+ {
+  "term": "Mainstreaming",
+  "definition_en": "Placing a learner with a disability in an ordinary classroom, often with the expectation that the child will keep up with the standard curriculum.",
+  "definition_ur": "کسی معذور طالب علم کو عام کلاسروم میں رکھنا، اکثر اس توقع کے ساتھ کہ بچہ معیادی نصاب کے ساتھ چلے گا۔"
+ },
+ {
+  "term": "Special Educational Needs",
+  "definition_en": "Needs that arise from a disability, learning difficulty or other difference and that require additional or different support to enable the learner to participate.",
+  "definition_ur": "وہ ضرورتیں جو کسی معذوری، سیکھنے کی مشکل یا دوسرے اختلاف سے پیدا ہوتی ہیں اور جو طالب علم کو شریک ہونے کے قابل بنانے کے لیے اضافی یا مختلف مدد مانگتی ہیں۔"
+ },
+ {
+  "term": "Individualized Education Programme",
+  "definition_en": "A written plan that sets out the specific goals, support and accommodations for a learner with special educational needs.",
+  "definition_ur": "ایک تحریری منصوبہ جو خصوصی تعلیمی ضرورتوں والے طالب علم کے لیے مخصوص اہداف، مدد اور سہولتیں طے کرتا ہے۔"
+ },
+ {
+  "term": "Universal Design for Learning",
+  "definition_en": "A framework for planning teaching that provides multiple ways for pupils to engage, to receive information and to show what they have learned.",
+  "definition_ur": "تدریس کی منصوبہ بندی کا ایسی ڈھانچہ جو طلباء کو شریک ہونے، معلومات حاصل کرنے اور سیکھے ہوئے دکھانے کے کئی راستے فراہم کرتا ہے۔"
  }
 ]
