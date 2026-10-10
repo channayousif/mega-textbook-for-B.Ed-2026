@@ -63,7 +63,7 @@ The guide describes the course as an "introductory level undergraduate course
 that focuses on the fundamentals related to quantitative concepts and analysis",
 designed to "familiarize students with the basic concepts of statistics and to
 develop students' abilities to analyze and interpret quantitative information"
-(`2nd 2026.txt:385-389`). The course enables students to "cultivate their
+(`2nd 2026.txt:383-388`). The course enables students to "cultivate their
 quantitative literacy and problem-solving skills while effectively expanding
 their academic horizon and breadth of knowledge of their specific major/field of
 study."
@@ -84,10 +84,10 @@ open-access source** (below) that carries its retrievable content.
 | Key | Citation | DOI/URL | Units | Note |
 |---|---|---|---|---|
 | mann2001 | Mann, P. S. (2001). *Introductory Statistics.* Wiley. | ISBN 0471341121 | 1, 2, 3, 4, 5, 6 | print monograph; cited at bibliographic level only |
-| baboons | Baboons, S. *Applied Statistical Modeling.* | unresolvable | 4, 5, 6 | guide-required; title absent from major catalogs; cited at title level only |
-| zaslow | Zaslow, E. *Quantitative Reasoning: Thinking in Numbers.* | unresolvable | 1, 2 | guide-required; cited at title level only |
+| baboons | Babones, S. J. (Ed.). (2013). *Applied Statistical Modeling* (4 vols). SAGE. | ISBN 9781446208397 | 4, 5, 6 | guide-required (misprinted "Baboons" in guide); cited at bibliographic level only |
+| zaslow | Zaslow, E. (2020). *Quantitative Reasoning: Thinking in Numbers.* Cambridge University Press. | ISBN 9781108419413 | 1, 2 | guide-required; cited at bibliographic level only |
 | chatfield | Chatfield, C. (1983). *Statistics for Technology: A Course in Applied Statistics.* Chapman & Hall. | ISBN 0412237902 | 3, 4 | print monograph; cited at bibliographic level only |
-| lock2008 | Lock, R. H., Lock, P. F., Lock Morgan, K., & Lock, E. F. (2008). *Statistics: Unlocking the Power of Data.* Wiley. | ISBN 9780471764003 | 4, 5, 6 | print monograph; cited at bibliographic level only |
+| lock2008 | Lock, R. H., Lock, P. F., Lock Morgan, K., & Lock, E. F. (2012). *Statistics: Unlocking the Power of Data* (1st ed.). Wiley. | ISBN 9780470601877 | 4, 5, 6 | print monograph; cited at bibliographic level only |
 | chaudhry2008 | Chaudhry, S. M., & Kamal, S. (2008). *Introduction to Statistical Theory* (Parts I & II, 8th ed.). Ilmi Kitab Khana, Lahore. | unresolvable (print) | all | guide-required; Pakistani textbook; cited at bibliographic level only |
 | haq1984 | Haq, M. (1984). *Foundation of Probability and Statistics.* Tahir Sons, Urdu Bazar, Karachi. | unresolvable (print) | 4, 5 | guide-required Pakistani text; cited at bibliographic level only |
 
@@ -95,9 +95,8 @@ open-access source** (below) that carries its retrievable content.
 
 | Key | Citation | DOI/URL | Units | Note |
 |---|---|---|---|---|
-| siegfried2020 | Siegfried, T. (2020). *Seeing Statistics.* American Statistical Association. | https://www.seeingstatistics.com/ | 1, 2 | verified 2026-10-09; open-access animated statistics textbook |
 | lane2023 | Lane, D. M. (2023). *Online Statistics Education: A Multimedia Course of Study.* Rice University. | https://onlinestatbook.com/ | 1, 2, 3, 4, 5, 6 | verified 2026-10-09; open-access full statistics textbook (CC BY-NC-SA) |
-| openstax-stats | Illowsky, B., et al. (2020). *Introductory Statistics 2e.* OpenStax, Rice University. | https://openstax.org/details/books/introductory-statistics-2e | 1, 2, 3, 4, 5, 6 | verified 2026-10-09; open-access full textbook (CC BY 4.0) |
+| openstax-stats | Illowsky, B., & Dean, S. (2023). *Introductory Statistics 2e* (2nd ed.). OpenStax, Rice University. | https://openstax.org/details/books/introductory-statistics-2e | 1, 2, 3, 4, 5, 6 | verified 2026-10-09; open-access full textbook (CC BY 4.0) |
 | nist-sematech | NIST/SEMATECH. *e-Handbook of Statistical Methods.* | https://www.itl.nist.gov/div898/handbook/ | 3, 4, 6 | verified 2026-10-09; U.S. government open-access statistics handbook |
 | pbs | Pakistan Bureau of Statistics. Government of Pakistan. | https://www.pbs.gov.pk/ | 1, 2, 3 | verified 2026-10-09; Sindh/Pakistan census and survey figures for data units |
 | ncc-maths | National Curriculum Council, Ministry of Federal Education and Professional Training. *Mathematics Progression Grid.* | https://ncc.gov.pk/ | 1, 2 | school mathematics data handling strands this course re-grounds for teachers |
@@ -111,10 +110,10 @@ to one week; the 6-unit distribution below groups adjacent chapters.
 |---|---|---|
 | 1-2 | Unit 1 | types of data (qualitative vs quantitative, discrete vs continuous); sources of data (primary, secondary); frequency distribution tables; cumulative frequency; bar charts; histograms; pie charts |
 | 3-5 | Unit 2 | population concepts; sampling techniques (random, non-random); mean; median; mode; comparison and interpretation |
-| 6-8 | Unit 3 | range; variance; standard deviation; data interpretation using dispersion; counting principles; multiplicative rule; permutations; combinations |
-| 9-11 | Unit 4 | basic probability concepts; probability rules; random variables (discrete and continuous); probability distributions; probabilistic models |
+| 6-8 | Unit 3 | range; variance; standard deviation; data interpretation using dispersion; counting principles; multiplicative rule; permutations; combinations; applications in problem solving |
+| 9-11 | Unit 4 | basic probability concepts; probability rules; random variables (discrete and continuous); probability distributions; probabilistic models; applications in real life |
 | 12-13 | Unit 5 | scatter plots; interpretation of relationships; correlation (types and coefficient); linear regression |
-| 14-16 | Unit 6 | point estimation; confidence intervals; hypothesis testing concept; z-test; t-test; statistical modeling exercises |
+| 14-16 | Unit 6 | point estimation; confidence intervals; hypothesis testing concept; z-test; t-test; statistical modeling exercises; problem solving using statistical concepts; review and integration |
 
 ## Standards & frameworks anchors
 
@@ -206,7 +205,7 @@ and a bar chart are the same thing"; "frequency tables are only for small data
 sets."
 
 **Mapped readings**: lane2023 (Chapter 1-2), openstax-stats (Chapter 1-2),
-siegfried2020 (data organization modules), ncc-maths, pbs.
+ncc-maths, pbs.
 
 **Worked-examples plan**: roughly one Pakistan-grounded vignette per sub-topic
 (classroom observations, test marks, school budget) - see coverage/unit-01.md.
@@ -282,7 +281,8 @@ median is just the middle number without any calculation"; "mode only matters
 for qualitative data."
 
 **Mapped readings**: lane2023 (Chapters 1, 3), openstax-stats (Chapters 1, 3),
-mann2001 (bibliographic level only).
+mann2001 (bibliographic level only). Author-selected: nist-sematech (Section 1.3.3,
+sampling and central tendency).
 
 **Worked-examples plan**: roughly one Pakistan-grounded vignette per sub-topic
 (school enrolment, classroom marks, survey data) - see coverage/unit-02.md.
@@ -336,10 +336,10 @@ Weeks 6-8 (derived). Unit Spec (G1) for `docs/semester-2/gqur-301/unit-03/`.
 | U3-03 | 6.2 | 6.2 | Standard deviation |
 | U3-04 | 6.3 | 6.3 | Data interpretation using dispersion |
 | U3-05 | 7.1 | 7.1 | Basic counting principles |
-| U3-06 | 7.2 | 7.2 | Multiplicative rule |
+| U3-06 | 7.2 | 7.1 | Multiplicative rule |
 | U3-07 | 8.1 | 8.1 | Permutations |
-| U3-08 | 8.2 | 8.2 | Combinations |
-| U3-09 | 8.3 | 8.3 | Applications in problem solving |
+| U3-08 | 8.2 | 8.1 | Combinations |
+| U3-09 | 8.3 | 8.1 | Applications in problem solving |
 
 ### Topic list
 
@@ -421,7 +421,7 @@ Weeks 9-11 (derived). Unit Spec (G1) for `docs/semester-2/gqur-301/unit-04/`.
 | U4-04 | 10.1 | 10.1 | Random variables: continuous |
 | U4-05 | 10.2 | 10.2 | Probability distributions |
 | U4-06 | 11.1 | 11.1 | Introduction to probabilistic models |
-| U4-07 | 11.2 | 11.2 | Applications in real life |
+| U4-07 | 11.2 | 11.1 | Applications in real life |
 
 ### Topic list
 
@@ -507,7 +507,7 @@ Weeks 12-13 (derived). Unit Spec (G1) for `docs/semester-2/gqur-301/unit-05/`.
 
 | Topic | Title | Sub-topic IDs | Reading-min | Figures (id: archetype) |
 |---|---|---|---|---|
-| 12.1 | Scatter plots | U5-01 | 12-16 | fig-U5-1: diagram, fig-U5-2: table |
+| 12.1 | Scatter plots | U5-01 | 12-16 | fig-U5-1: concept-map, fig-U5-2: table |
 | 12.2 | Interpreting relationships | U5-02 | 12-16 | fig-U5-3: diagram, fig-U5-4: table |
 | 13.1 | Correlation | U5-03, U5-04 | 14-18 | fig-U5-5: diagram, fig-U5-6: table |
 | 13.2 | Linear regression | U5-05 | 14-18 | fig-U5-7: diagram, fig-U5-8: table |
@@ -530,8 +530,9 @@ lock2008 (bibliographic level only), nist-sematech (Section 1.3.7).
 coverage/unit-05.md.
 
 **Figure plan**:
-- fig-U5-1 - diagram: a scatter plot with axes labeled, points plotted, and the
-  overall pattern visible (Topic 12.1)
+- fig-U5-1 - concept-map: bivariate analysis concepts (scatter plot, correlation,
+  regression) linked to their purposes, with the flow from plotting to interpretation
+  to inference (Topic 12.1)
 - fig-U5-2 - table: raw bivariate data table (study hours, test score) that the
   learner plots (Topic 12.1)
 - fig-U5-3 - diagram: three scatter plots side by side - positive, negative, and
@@ -579,10 +580,10 @@ Weeks 14-16 (derived). Unit Spec (G1) for `docs/semester-2/gqur-301/unit-06/`.
 | U6-02 | 14.2 | 14.2 | Confidence intervals |
 | U6-03 | 15.1 | 15.1 | Concept of hypothesis testing |
 | U6-04 | 15.2 | 15.2 | z-test |
-| U6-05 | 15.3 | 15.3 | t-test |
+| U6-05 | 15.3 | 15.2 | t-test |
 | U6-06 | 16.1 | 16.1 | Statistical modeling exercises |
-| U6-07 | 16.2 | 16.2 | Problem solving using statistical concepts |
-| U6-08 | 16.3 | 16.3 | Review and integration of concepts |
+| U6-07 | 16.2 | 16.1 | Problem solving using statistical concepts |
+| U6-08 | 16.3 | 16.1 | Review and integration of concepts |
 
 ### Topic list
 
