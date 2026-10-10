@@ -30,21 +30,21 @@ on every unit). Unit 1 and Unit 2 G2 en-draft complete.
 | Unit 3 | G5 ur-review | ▢ | | |
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
-| Unit 3 | G1 unit-spec | ▢ | | intake pending; do not mark until intake approves |
+| Unit 4 | G1 unit-spec | ▢ | | intake pending; do not mark until intake approves |
 | Unit 4 | G2 en-draft | ▢ | | |
 | Unit 4 | G3 en-review | ▢ | | |
 | Unit 4 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 4 | G5 ur-review | ▢ | | |
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
-| Unit 3 | G1 unit-spec | ▢ | | intake pending; do not mark until intake approves |
+| Unit 5 | G1 unit-spec | ▢ | | intake pending; do not mark until intake approves |
 | Unit 5 | G2 en-draft | ▢ | | |
 | Unit 5 | G3 en-review | ▢ | | |
 | Unit 5 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 5 | G5 ur-review | ▢ | | |
 | Unit 5 | G6 assets | ▢ | | |
 | Unit 5 | G7 publish | ▢ | | |
-| Unit 3 | G1 unit-spec | ▢ | | intake pending; do not mark until intake approves |
+| Unit 6 | G1 unit-spec | ▢ | | intake pending; do not mark until intake approves |
 | Unit 6 | G2 en-draft | ▢ | | |
 | Unit 6 | G3 en-review | ▢ | | |
 | Unit 6 | G4 ur-translation | ▢ | | full Urdu mirror required |

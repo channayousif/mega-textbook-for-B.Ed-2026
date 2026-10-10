@@ -8,7 +8,7 @@ open_access_floor:
 # GQUR-301 - Quantitative Reasoning-II (Statistics) - Content Spec
 
 General Education, Semester 2, 3 (3-0) credit hours, 16 weeks. Source:
-`Scheme-and-Course-guides/extracted-text/2nd 2026.txt` lines 383-588
+`Scheme-and-Course-guides/extracted-text/2nd 2026.txt` lines 365-580
 ("Quantitative Reasoning (II)", University of Sindh, Faculty of Education).
 Original PDF: `Scheme-and-Course-guides/2nd 2026.pdf`.
 
@@ -43,7 +43,7 @@ labelled as such.
   1. Understanding of fundamental statistical concepts.
   2. Basic ability to interpret data presented in various formats including
      tables, graphs and charts.
-  3. Ability to critically evaluate quantitative information to make
+  3. It is an ability to critically evaluate quantitative information to make
      evidence-based decisions through appropriate computational tools.
 - **Teaching strategies (guide):** lectures; class discussions; question-answer
   sessions; brainstorming activities; practical work including group work, group
@@ -97,7 +97,7 @@ open-access source** (below) that carries its retrievable content.
 |---|---|---|---|---|
 | lane2023 | Lane, D. M. (2023). *Online Statistics Education: A Multimedia Course of Study.* Rice University. | https://onlinestatbook.com/ | 1, 2, 3, 4, 5, 6 | verified 2026-10-09; open-access full statistics textbook (CC BY-NC-SA) |
 | openstax-stats | Illowsky, B., & Dean, S. (2023). *Introductory Statistics 2e* (2nd ed.). OpenStax, Rice University. | https://openstax.org/details/books/introductory-statistics-2e | 1, 2, 3, 4, 5, 6 | verified 2026-10-09; open-access full textbook (CC BY 4.0) |
-| nist-sematech | NIST/SEMATECH. *e-Handbook of Statistical Methods.* | https://www.itl.nist.gov/div898/handbook/ | 3, 4, 6 | verified 2026-10-09; U.S. government open-access statistics handbook |
+| nist-sematech | NIST/SEMATECH. *e-Handbook of Statistical Methods.* | https://www.itl.nist.gov/div898/handbook/ | 2, 3, 4, 5, 6 | verified 2026-10-09; U.S. government open-access statistics handbook |
 | pbs | Pakistan Bureau of Statistics. Government of Pakistan. | https://www.pbs.gov.pk/ | 1, 2, 3 | verified 2026-10-09; Sindh/Pakistan census and survey figures for data units |
 | ncc-maths | National Curriculum Council, Ministry of Federal Education and Professional Training. *Mathematics Progression Grid.* | https://ncc.gov.pk/ | 1, 2 | school mathematics data handling strands this course re-grounds for teachers |
 
@@ -257,10 +257,10 @@ Weeks 3-5 (derived). Unit Spec (G1) for `docs/semester-2/gqur-301/unit-02/`.
 | U2-02 | 3.2 | 3.2 | Random sampling |
 | U2-03 | 3.2 | 3.2 | Non-random sampling |
 | U2-04 | 4.1 | 4.1 | Mean (arithmetic average) |
-| U2-05 | 4.1 | 4.1 | Median |
+| U2-05 | 4.2 | 4.1 | Median |
 | U2-06 | 5.1 | 5.1 | Mode |
-| U2-07 | 5.1 | 5.1 | Comparison of mean, median, mode |
-| U2-08 | 5.1 | 5.1 | Applications and interpretation |
+| U2-07 | 5.2 | 5.1 | Comparison of mean, median, mode |
+| U2-08 | 5.3 | 5.1 | Applications and interpretation |
 
 ### Topic list
 
@@ -281,8 +281,8 @@ median is just the middle number without any calculation"; "mode only matters
 for qualitative data."
 
 **Mapped readings**: lane2023 (Chapters 1, 3), openstax-stats (Chapters 1, 3),
-mann2001 (bibliographic level only). Author-selected: nist-sematech (Section 1.3.3,
-sampling and central tendency).
+mann2001 (bibliographic level only). Author-selected: nist-sematech (Section 1.3.5.1,
+measures of location: mean, median, mode).
 
 **Worked-examples plan**: roughly one Pakistan-grounded vignette per sub-topic
 (school enrolment, classroom marks, survey data) - see coverage/unit-02.md.
@@ -444,7 +444,7 @@ cannot happen together"; "a random variable is always evenly distributed."
 
 **Mapped readings**: lane2023 (Chapter 5), openstax-stats (Chapter 3, 5, 6),
 nist-sematech (Section 1.3.6), haq1984 (bibliographic level only), baboons
-(title level only).
+(bibliographic level only).
 
 **Worked-examples plan**: roughly one Pakistan-grounded vignette per sub-topic
 (attendance, weather, school events) - see coverage/unit-04.md.
@@ -523,7 +523,8 @@ regression line always passes through the origin"; "a steeper slope always
 means a stronger relationship."
 
 **Mapped readings**: lane2023 (Chapter 4), openstax-stats (Chapter 4, 12),
-lock2008 (bibliographic level only), nist-sematech (Section 1.3.7).
+lock2008 (bibliographic level only), nist-sematech (Sections 1.3.3.26 scatter
+plot, 4.1.4.1 linear least squares regression).
 
 **Worked-examples plan**: roughly one Pakistan-grounded vignette per sub-topic
 (study hours and marks, temperature and ice-cream sales) - see
@@ -607,8 +608,9 @@ researcher believes"; "a small p-value proves the alternative hypothesis";
 matter."
 
 **Mapped readings**: lane2023 (Chapters 7, 8, 9, 10), openstax-stats (Chapters
-7, 8, 9, 10), nist-sematech (Section 1.3.7), lock2008 (bibliographic level
-only), baboons (title level only).
+7, 8, 9, 10), nist-sematech (Sections 1.3.5.2 confidence limits for the mean,
+1.3.5.3 two-sample t-test, 7.1.3 statistical tests), lock2008 (bibliographic
+level only), baboons (bibliographic level only).
 
 **Worked-examples plan**: roughly one Pakistan-grounded vignette per sub-topic
 (classroom test data, school survey) - see coverage/unit-06.md.
