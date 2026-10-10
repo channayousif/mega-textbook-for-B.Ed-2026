@@ -1674,9 +1674,14 @@
   "definition_en": "The property of an inductive argument in which the premises actually make the conclusion probable. A strong inductive argument is one where the premises, if true, give the conclusion good support.",
   "definition_ur": "اس دلیل کا خاصہ جس میں پریمیسز واقعی نتیجے کو غالب بناتی ہیں۔ ایک مضبوط استقرئی دلیل وہ ہے جس میں پریمیسز اگر درست ہوں تو نتیجے کو اچھا ساتھ دیتی ہیں۔"
  },
- {
-  "term": "Cogency",
-  "definition_en": "The property of an inductive argument that is both strong and has all true premises. A cogent argument is one you can rely on to reach a probably-true conclusion.",
-  "definition_ur": "ایک اس دلیل کا خاصہ جو مضبوط ہو اور اس کی تمام پریمیسز درست ہوں۔ ایک کوجینٹ دلیل وہ ہے جس پر بھروسہ کر کے غالبا درست نتیجہ اخذ کیا جا سکتا ہے۔"
- }
+  {
+   "term": "Cogency",
+   "definition_en": "The property of an inductive argument that is both strong and has all true premises. A cogent argument is one you can rely on to reach a probably-true conclusion.",
+   "definition_ur": "ایک اس دلیل کا خاصہ جو مضبوط ہو اور اس کی تمام پریمیسز درست ہوں۔ ایک کوجینٹ دلیل وہ ہے جس پر بھروسہ کر کے غالبا درست نتیجہ اخذ کیا جا سکتا ہے۔"
+  },
+  {
+   "term": "Sociology",
+   "definition_en": "The systematic, evidence-based study of human social life, groups, and societies. It examines how social structures, relationships and institutions shape individual behaviour and collective life.",
+   "definition_ur": "انسانی معاشرتی زندگی، گروہوں اور معاشروں کا منطقی اور شہادت پر مبنی مطالعہ۔ یہ دیکھتا ہے کہ سماجی ڈھانچے، رشتے اور ادارات انسان کے انفرادی اور اجتماعی رویے کو کیسے شکل دیتے ہیں۔"
+  }
 ]
