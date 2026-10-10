@@ -2150,3 +2150,39 @@ reviewer independent of the sessions that authored the content, performed any re
 this decision; a `pass` restores the provisional tier only, because `acceptProvisionalReport`
 still skips the signed reviewer registry, and an `escalate` sends the unit to the
 content-improvement loop with no further cycle.
+
+## D-2026-0053 - Semester 2 intake: owner rulings on the G0/G1 escalations
+
+- **Status:** confirmed
+- **Gate:** G0 (course intake) and G1 (unit-spec)
+- **Scope:** Semester 2 courses EFMP-305, EFMP-303, GQUR-301, GENG-301, GSOS-301, GPKS-402; the
+  gaps those six intakes raised (`D-2026-0047` to `D-2026-0052`, gaps `G-2026-72` to `G-2026-100`,
+  recorded on the TEX-39 to TEX-44 branches)
+- **Decided by:** curriculum owner, 2026-10-10 (board-direct, relayed through Claude Code)
+- **Decision:**
+  1. **Unit partition.** Each spec's proposed grouping of the guide's week table into units is
+     confirmed as drafted: `G-2026-77` (EFMP-303), `G-2026-82` (GQUR-301), `G-2026-88`
+     (GENG-301 week split), `G-2026-92` (GSOS-301, including the Week 14/15 Unit 6 merge) and
+     `G-2026-97` (GPKS-402). Where a guide carries a week table, the unit's weeks follow that
+     table; the grouping is confirmed, not any week calendar that contradicts the guide
+     (`G-2026-78` resolves to the guide's own 16-week table).
+  2. **Readings.** Where a guide gives no reading list, only print monographs, or an ambiguous
+     entry, the author may bind verified real works chosen for relevance to the course outcomes,
+     labelled as author-selected rather than guide-required; every unit must bind at least one
+     open-access source, declared as `open_access_floor: 1`. Resolves `G-2026-73`, `G-2026-79`,
+     `G-2026-89`, `G-2026-93`, `G-2026-94`, `G-2026-98`. Unresolvable or misattributed entries
+     the intakes named must still be corrected; this ruling does not validate them.
+  3. **EFMP-305 credit hours.** **3 (3-0)**, theory. The revised Scheme and the catalog govern;
+     the guide's `03 (0-3)` is treated as a guide-side slip. Resolves `G-2026-72`.
+  4. **Sub-topics derived from outcomes and readings.** A guide often lists only broad topics and
+     a reading list. The author may derive sub-topics, checklist rows and SLO wording from
+     relevance to the guide's course outcomes and its referred reading material. Such an
+     addition is permitted when its row names the outcome or reading it derives from. Resolves
+     `G-2026-74`, `G-2026-83`, `G-2026-87`, `G-2026-99`.
+  5. **GPKS-402 Units 1-2.** Withdrawn. They were authored before intake and will be re-authored
+     after the spec is approved. Resolves `G-2026-100`.
+- **Not ruled:** `G-2026-75` (EFMP-305 80/20 label) stays open; `G-2026-76` and `G-2026-90`
+  (tracker G1 claims) are author repairs; `G-2026-91` (depth-gate Topic column) is a tooling item.
+- **Limits:** This decision approves no specification. Each spec still needs the author repairs
+  its intake listed, then a fresh intake on a newly prepared manifest, before it may move to
+  `status: approved`. It certifies no content and qualifies no reviewer.
