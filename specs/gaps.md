@@ -1595,7 +1595,7 @@ The generated raster illustration `fig-U4-12.webp` places the teacher at the fro
 
 ## G-2026-87 - GENG-301: checklist rows that go beyond the guide bullet they cite
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
 - **Gate:** G0 intake / G1 unit-spec (`coverage` criterion)
 - **Source:** `D-2026-0050`
 - **Detail:** Each row below cites a real guide bullet but adds matter the bullet does not contain.
@@ -1620,7 +1620,7 @@ The generated raster illustration `fig-U4-12.webp` places the teacher at the fro
 
 ## G-2026-88 - GENG-301: the derived week distribution and the "16 weeks" term length are not the guide's
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
 - **Gate:** G0 intake / G1 unit-spec (week schedule, `decision-residue`)
 - **Source:** `D-2026-0050`
 - **Detail:** The guide block (`2nd 2026.txt:3-154`) carries no week table and no term length. The
@@ -1639,7 +1639,7 @@ The generated raster illustration `fig-U4-12.webp` places the teacher at the fro
 
 ## G-2026-89 - GENG-301: an all-print reading list with no open-access floor, and `D-2026-0001` read as a licence to proceed
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
 - **Gate:** G0 intake (`readings`, `decision-residue`)
 - **Source:** `D-2026-0050`
 - **Detail:** All ten guide readings (`2nd 2026.txt:108-126`) are real and present, but every one is

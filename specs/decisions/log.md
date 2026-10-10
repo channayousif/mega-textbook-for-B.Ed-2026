@@ -2155,7 +2155,7 @@ content-improvement loop with no further cycle.
 
 ## D-2026-0050 - GENG-301 intake: identity, partition, outcomes, readings (presence) and blueprint approved; coverage, structure and decision residue not approved
 
-- **Status:** pending-owner-review
+- **Status:** confirmed (owner, 2026-10-10; escalations ruled in D-2026-0053; spec approval still requires the listed author repairs and a fresh intake)
 - **Gate:** G0 intake / G1 unit-spec
 - **Scope:** GENG-301 (Expository Writing) only. Settles five of the eight criteria: `identity`,
   `partition`, `outcomes`, `readings` (presence and resolution of the guide list only) and
