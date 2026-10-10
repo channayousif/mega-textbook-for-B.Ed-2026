@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "course_code": "EFMP-304",
+  "unit_no": 6,
+  "stage": "G3",
+  "disposition": "pass",
+  "reviewer_id": "agent:agy",
+  "author_run_id": "paperclip-run:author-run",
+  "reviewer_run_id": "paperclip-run:2650cb05-51e9-4330-bb57-0740bf3e6643",
+  "model": "Gemini 3.1 Pro (High)",
+  "started_at": "2026-10-10T16:05:30Z",
+  "completed_at": "2026-10-10T16:16:20Z",
+  "skill_digest": "eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b",
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g3.md": "074c8464b4bc0f2f2b76bbb19707c50b54cb907920407873a4e5d193e866f53f",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "715b493fec67701dfb45e2ac65749c5fc9069161aadd27a8397a72d89c0874da",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/licence-page.schema.json": "3fc99078935af7419b4545d21c7d77d66e80ed847755df38ddc500ee35775a3c",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-2/efmp-304/course-overview.mdx": "72501a06a1e346704adf848564ab53f3a08600a3d6a15bec2b37588bd18ed6bf",
+    "docs/semester-2/efmp-304/unit-06/index.mdx": "4e6dd3138acddd99669ddd172e145d26fe1b348984b4e0bf643f0a40bb23076c",
+    "docs/semester-2/efmp-304/unit-06/topic-01.mdx": "4810bd3e4be99a8b82bfb17fbb1d55b81a3fd921bb4b86404b8e44b05e30bae7",
+    "docs/semester-2/efmp-304/unit-06/topic-02.mdx": "6d2c88449d273d55c1238f60a70fa374601c338803824219f95ea3c78849b6dc",
+    "docs/semester-2/efmp-304/unit-06/topic-03.mdx": "f1b37e5bac94ea5428189b877bc3eb3b8922ea65b1088bbd1d01be4aa2ba6aed",
+    "docs/semester-2/efmp-304/unit-06/topic-04.mdx": "2b54c2a5dd3dc4a3e7de530873f8b9bce0a268198e05a509cb64254ee5d10e04",
+    "docs/semester-2/efmp-304/unit-06/unit-assessment.mdx": "f07a842af07ca75ba341e695a1930e33c3f2459e872583cde84b561219f85a4b",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "41b698f8cbbb12f4030d6893083a5c36e4a19848b5ddb86206e5ba72847b8b13",
+    "scripts/check-no-answer-keys.mjs": "8d3f8cac335c50774ee622d61cb37d987c0393c99e54eff31f2bd042625a78c3",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "8ce3a62bd80534181cf1d74fa92bc3ea2b5d937b3f528e96c2a3e20c5a87047a",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "cc33a878d98865149b248c6a524be4e9d294293ddfaecc443dc19b7ace6af7cf",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "26edbdd3d86edf7587cbf8e01f0b0cbe45e19428827da34e26cfd0534f34f1b9",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/efmp-304/concepts/unit-06.md": "e599283031844acf3fe01c0a0ae731f6c86cc1177efb1e2cd0df7a8fcab3b747",
+    "specs/content/efmp-304/content-spec.md": "6493fcf875ef170ba0b1bacef7c92481bc2df9301ed30c46acb4ce4c4f9cf5e1",
+    "specs/content/efmp-304/coverage/unit-06.md": "65a64873fee42edebc59c21b49c92c6a8c02aa4c8b3d34d531bce91787b526d1",
+    "specs/content/efmp-304/figures/unit-06.md": "1c8b0f5f847549f706bf5c9a09f92415b4cae28a5744f6904850f1853e8527a5",
+    "specs/content/efmp-304/sources/texts/pedro2005.md": "dcf9e8c1d54fae0546da100aad3a2bfce88689493c6e58a8ab44e795ee8d9095",
+    "specs/content/efmp-304/sources/unit-06.md": "377dd21a1c5c5a5493c2b420914e2f4d021db643c0edf0cb30dd2df1e40bc32a",
+    "specs/content/style-guide.md": "db96c9b33b0fb9522986462a0b519620c3c1d7602a046d7b90e638f643da4610",
+    "static/img/figures/efmp-304/unit-06/fig-U6-1.dark.svg": "ec469dd617cc805161d74041954707c412572a645b6c17f7f3b0c0ceeee9b1a9",
+    "static/img/figures/efmp-304/unit-06/fig-U6-1.svg": "bae468eeae33e8bf046ec69d6046f4f67392ffe2f466f60be93bed1c2f3254e9",
+    "static/img/figures/efmp-304/unit-06/fig-U6-2.dark.svg": "a62eabf3a603577d7b2017fd226472ac504c5fc32b156913bab6d2cba5ea491a",
+    "static/img/figures/efmp-304/unit-06/fig-U6-2.svg": "7c3e6ac13edd4568dba58160cd38b7eb78aee1ff303c10db25740805ce433a25",
+    "static/img/figures/efmp-304/unit-06/fig-U6-3.dark.svg": "fce6a0d14a010edfe4b436accdd5a870b56a335f77fa8a9b6e6eb8a049b72f6d",
+    "static/img/figures/efmp-304/unit-06/fig-U6-3.svg": "de6c428fb3417d33d7b50df562fd82e1fea348eb2e4475622215473db9c8cf0c",
+    "static/img/figures/efmp-304/unit-06/fig-U6-4.dark.svg": "d4f718fac8cd59613089c90eb8a6a6a5d6abd456869939c2340c50178731c4e7",
+    "static/img/figures/efmp-304/unit-06/fig-U6-4.svg": "74fcb06c58a90bd70475243e477340a71d1d65308463abaa23e0d88bf270393c",
+    "static/img/figures/efmp-304/unit-06/fig-U6-5.dark.svg": "f9d978dd5a90439a876a2c1efee21bfeac9314eb163dedfa2a212df162a8cec5",
+    "static/img/figures/efmp-304/unit-06/fig-U6-5.svg": "ce1bf237896ef1169ccacc376ba1ef30bf5b48f787b4cc06e7c627042367bf0b",
+    "static/img/figures/efmp-304/unit-06/fig-U6-6.dark.svg": "379123ba7fa383781ef55a4fd981308cd1e62ee43ca3cae320e71c9f40984e07",
+    "static/img/figures/efmp-304/unit-06/fig-U6-6.svg": "28d0b3ad4a792905b0252853e27df42217236c599826d3c3ceaf96bc6a12af39",
+    "static/img/figures/efmp-304/unit-06/fig-U6-7.dark.svg": "c256a97c2f7ca8856902601dae668c41f914bfea539251671f8a896408bf16c6",
+    "static/img/figures/efmp-304/unit-06/fig-U6-7.svg": "0559205ae78e59cc853813ef240cbd3f973b3e17e3a26908179c3926a7f5f67d",
+    "static/img/figures/efmp-304/unit-06/fig-U6-8.dark.svg": "9d111d17f733e9dc81af4402f6811389717931be5e1c5f77ac53067fb6e99372",
+    "static/img/figures/efmp-304/unit-06/fig-U6-8.svg": "f55c372f01a753d78b2afd74053a4c5ee47e56faf9b6c6bd9a3a214ebd36be22"
+  },
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        "docs/semester-2/efmp-304/unit-06/index.mdx"
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "pass",
+      "evidence": [
+        "docs/semester-2/efmp-304/unit-06/index.mdx"
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "docs/semester-2/efmp-304/unit-06/index.mdx"
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "pass",
+      "evidence": [
+        "docs/semester-2/efmp-304/unit-06/index.mdx"
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "pass",
+      "evidence": [
+        "docs/semester-2/efmp-304/unit-06/index.mdx"
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "docs/semester-2/efmp-304/unit-06/index.mdx"
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": [
+        "docs/semester-2/efmp-304/unit-06/index.mdx"
+      ]
+    }
+  ],
+  "findings": [],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-304/reviews/unit-06/logs-2650cb05/validate-content.log"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-304/reviews/unit-06/logs-2650cb05/check-depth-gate.log"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-304/reviews/unit-06/logs-2650cb05/check-figures.log"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-304/reviews/unit-06/logs-2650cb05/check-no-em-dash.log"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-304/reviews/unit-06/logs-2650cb05/check-no-answer-keys.log"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-304/reviews/unit-06/logs-2650cb05/check-docs-sync.log"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-304/reviews/unit-06/logs-2650cb05/render-review.log"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/efmp-304/reviews/unit-06/logs-2650cb05/validate-content.log": "0753463dcc4f70bfeed270f5eb8accdfb2113670791fc90775ea247c275de426",
+    "specs/content/efmp-304/reviews/unit-06/logs-2650cb05/check-depth-gate.log": "b0c4eeaa24613853bc7dd1124721c3576b9c2ea0d83d804bb98a47c646579f2f",
+    "specs/content/efmp-304/reviews/unit-06/logs-2650cb05/check-figures.log": "3d8e7e0311cc402d8ef731bc62cfd8efd8bb72907261a2ec1da4ed2ea4db7c3a",
+    "specs/content/efmp-304/reviews/unit-06/logs-2650cb05/check-no-em-dash.log": "f94465f4c88bd3c3db4d995e7757fc7f08feae27e57c724a2eaafc8499ec2fe6",
+    "specs/content/efmp-304/reviews/unit-06/logs-2650cb05/check-no-answer-keys.log": "07bdbedac2c0160b677af6f03371aa01b528aecb70843febd3ea836ff03a8da1",
+    "specs/content/efmp-304/reviews/unit-06/logs-2650cb05/check-docs-sync.log": "388691a97d7539a857dafad859d26a639e67f09402e7f0c242b4a09e4b62049b",
+    "specs/content/efmp-304/reviews/unit-06/logs-2650cb05/render-review.log": "3bd8d5cd1c4f07b80aeb08ca3b109d7606f74a26fcaed2de337afa59f80787b2",
+    "specs/content/efmp-304/reviews/unit-06/renders-2650cb05/render-u6.png": "e099b73da7299f0c3bf0f5c085476fe2084f889fd25c0567c789c68c88d6fd94"
+  }
+}
