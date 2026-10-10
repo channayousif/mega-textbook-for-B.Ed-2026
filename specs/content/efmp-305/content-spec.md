@@ -45,9 +45,8 @@ their place.
   | Attendance | 10 |
   | **Total** | **100** |
 
-  Read against Art. III.7's formative/summative split. Mid-Term and Final-Term are summative
-  (80 marks). Assignment/Presentation and Attendance are formative (20 marks). The split is
-  therefore **80 summative / 20 formative**, which the guide specifies directly.
+  **Owner ruling (D-2026-0053 item 6): the course assessment split is 40 formative / 60
+  summative.** This is the binding classification and replaces the earlier 80/20 reading.
 - **Practical work**: none listed in the guide (guide-silent). The "lots of practice" in the
   framework paragraph refers to active participation in lectures and discussions, not a
   assessed practical component, and is not recorded as such.
