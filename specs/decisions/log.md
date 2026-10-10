@@ -2155,7 +2155,7 @@ content-improvement loop with no further cycle.
 
 ## D-2026-0049 - GQUR-301 intake: identity, blueprint and decision residue approved; partition and outcomes escalated; coverage, readings and structure fail
 
-- **Status:** pending-owner-review
+- **Status:** confirmed (owner, 2026-10-10; escalations ruled in D-2026-0053; spec approval still requires the listed author repairs and a fresh intake)
 - **Gate:** G0 intake / G1 unit-spec
 - **Scope:** GQUR-301 only. First intake evaluation of `specs/content/gqur-301/content-spec.md` at
   commit `2fd037b2`, by an evaluator that did not draft it (drafted by the Paperclip
