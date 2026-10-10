@@ -1605,7 +1605,7 @@ only and are not judged here.
 
 ## G-2026-77 - EFMP-303 intake: the six-unit partition is the spec's construction over a guide that gives only a week table
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
 - **Gate:** G0 intake / G1 unit-spec (`partition` criterion)
 - **Source:** `D-2026-0048`
 - **Detail:** The EFMP-303 guide block (`Scheme-and-Course-guides/extracted-text/2nd 2026.txt:1171-1358`)
@@ -1633,7 +1633,7 @@ only and are not judged here.
 
 ## G-2026-78 - EFMP-303's `## Week schedule` says the guide has no week table, and its calendar contradicts the guide's
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
 - **Gate:** G0 intake / G1 unit-spec (`partition` calendar, `structure`, `decision-residue` against `D-2026-0012`)
 - **Source:** `D-2026-0048`
 - **Detail:** `content-spec.md:77-78` states "The guide carries no week table. The distribution
@@ -1669,7 +1669,7 @@ only and are not judged here.
 
 ## G-2026-79 - EFMP-303 reading list: three of five entries do not resolve as printed, both policy locators are false, and the open-access floor is declared as zero
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
 - **Gate:** G0 intake (`readings` criterion)
 - **Source:** `D-2026-0048`
 - **Detail:** The guide lists four recommended readings (`2nd 2026.txt:1349-1357`). The spec
