@@ -2150,3 +2150,115 @@ reviewer independent of the sessions that authored the content, performed any re
 this decision; a `pass` restores the provisional tier only, because `acceptProvisionalReport`
 still skips the signed reviewer registry, and an `escalate` sends the unit to the
 content-improvement loop with no further cycle.
+
+---
+
+## D-2026-0051 - GSOS-301 intake: identity, coverage, outcome traces and blueprints approved; partition and readings escalated; structure and decision residue fail for repair
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** GSOS-301 only. Settles identity, sub-topic coverage of all six checklists, the CLO
+  record, and the six unit-end assessment blueprints. Does **not** settle the six-unit partition
+  (`G-2026-92`), the reading list (`G-2026-93`) or the open-access floor (`G-2026-94`), and does
+  **not** approve structure or decision residue, which fail on defects the guide and the contracts
+  already determine (repair items below; no owner decision needed).
+- **Decided by:** agent:evaluator, 2026-10-10
+- **Decision:**
+  1. **Identity (pass).** GSOS-301, "Social Science (Sociology)", **2 (2-0)**, Semester 2,
+     General Education, bilingual by default, as `catalog/courses.json` records it in its
+     Semester 2 group. The guide gives code `GSOS-301` at `2nd 2026.txt:778`, the title
+     "Sociology" at `:776` and "Credit Hours 03" at `:787-789`; the revised Scheme (final
+     authority) gives `GSOS-301 / Social Science (Sociology) / 2(2-0) / General Education` at
+     `B.Ed 4 Year 2026 revised after board.txt:118-121`. The credit-hour conflict is the Article
+     II.3 conflict the owner already resolved as **2 (2-0)** in `G-2026-05`, and the title is the
+     owner-reconciled inventory title in `G-2026-01`; both bind. The spec states 2 (2-0) at
+     `content-spec.md:8`; no "3 CH" residue anywhere in the spec. Nothing new to escalate.
+  2. **Coverage (pass).** The guide enumerates **43** teaching leaves across Weeks 1-7 and 9-15
+     (`:804-808`, `:813-818`, `:823-827`, `:844-850`, `:854-858`, `:862-867`, `:871-874`,
+     `:883-887`, `:891-895`, `:899-904`, `:910-913`, `:917-919`, `:923-927`, `:931-935`), reading
+     "Contributions of early thinkers" (`:812`) as the heading of its four names; Weeks 8
+     (`:876-879`) and 16 (`:937-942`) are review/examination entries, not sub-topics. The spec's
+     six checklists carry 10/6/6/6/6/9 = **43** rows. Every guide leaf appears
+     exactly once and no row introduces a sub-topic the guide lacks. Two regroupings lose nothing:
+     `:804` "Definition and scope" plus `:805` "Nature and importance" become U1-01 "Definition,
+     scope, and nature" and U1-03 "Importance". The founder glosses at U1-04 to U1-07 ("class
+     conflict", "social facts", "verstehen", "founding of sociology") name one contribution each
+     inside the guide's "Contributions of" (`:812`); they focus, they do not add, and authors must
+     not read them as exhaustive.
+  3. **Outcomes (pass).** The six course outcomes (`:794-800`) are reproduced at
+     `content-spec.md:14-20` without substantive change, and the spec introduces no SLO of its own,
+     so there is no outcome without a guide ancestor. The spec maps no unit to a CLO; that is a
+     traceability gap for repair (below), not an addition.
+  4. **Blueprints (pass).** All six units carry exactly 10 MCQ (Remember to Apply), 10 RRQ
+     (Understand to Analyze) and 5 ERQ (Analyze to Evaluate/Create), matching
+     `style-guide.md` "Unit-end assessment bank". Every per-topic split sums to its band (U1
+     3/4/3; U2-U5 5/5; U6 4/6), and every topic gets at least 3 MCQ and 3 RRQ, so no floor the
+     spec sets is breached by its own items.
+- **Not approved:**
+  - **Partition** - escalated as `G-2026-92`. The guide gives a 16-week table with no unit
+    headings; the six-unit merge (Weeks 1-3, 4-5, 6-7, 9-10, 11-12, 13-15) and the Unit 6 topic
+    split are the spec's judgement.
+  - **Readings** - escalated as `G-2026-93` (the guide's two entries are absent from the spec and
+    the four "Guide-required" rows are not the guide's, with misattributed or non-resolving
+    citations) and `G-2026-94` (the spec's self-declared "binding" open-access floor is not
+    owner-adopted).
+  - **Structure (fail, repair).** Units 3-6 checklist IDs are `3.1`...`6.9`, not
+    `^U<n>-\d{2,}$` (`content-spec.md:213-220`, `:263-270`, `:313-320`, `:363-373`), with no
+    `Guide ref` column; their `### Topic list` tables use `Topic | Label | Sub-topic IDs | What it
+    teaches` with no `Reading-min` or `Figures` column (`:224-227`, `:274-277`, `:324-327`,
+    `:377-380`). Replayed with the gate's own parsers: Units 3-6 yield **0** parseable checklist
+    IDs and **0** assigned topic IDs, so `check:depth-gate` will fail each unit the moment it is
+    authored. Visual density (Art. III.10, >= 2 figures per topic) is under-planned in every topic
+    of every unit (Topic list cells 2/1/0 in Unit 1, 2/0 in Unit 2; one figure per topic in Units
+    3-6). The Unit 1 and Unit 2 Topic list and Figure plan disagree on which topic carries
+    fig-U1-2, fig-U1-3 and fig-U2-2. `## Course review plan` lacks the "Practice-question mix"
+    bullet and has 2 practicum ideas against the v3 contract's 3-6. Per-unit
+    `**Prerequisite knowledge**`, `**Worked-examples plan**` and `**International best-practice
+    notes**` lines (v2 contract) are absent in all six units.
+  - **Decision residue (fail, repair).** `D-2026-0012` (confirmed, corpus-wide) permits a
+    derived week schedule only for a **guide-silent** course. This guide is not silent: it gives
+    Weeks 1-16 at `:802-942`. The spec labels its schedule "Derived, not guide-given"
+    (`content-spec.md:58-69`) and contradicts the guide: it ends teaching at Week 11, places
+    Unit 4 at Week 7 (guide Weeks 9-10), omits the Week 8 mid-term and Week 16 final, and drops
+    U2-05 from the Unit 2 row. The guide determines the calendar, so the fix is to record the
+    guide's weeks; no extension of `D-2026-0012` is needed or approved. No other confirmed entry
+    leaves residue: `D-2026-0002`/`D-2026-0004` designs are absent (the one "one-page" hit,
+    `:85`, is GSOS-301's own practicum wording); `D-2026-0003` is inapplicable (no GSOS variant in
+    that folder, none cited); `D-2026-0013`/`D-2026-0021` are course-scoped and not extended
+    (see `G-2026-94`).
+- **Basis:** `Scheme-and-Course-guides/extracted-text/2nd 2026.txt:776-968` (the GSOS-301 block;
+  `:972` begins GPKS-302); `B.Ed 4 Year 2026 revised after board.txt:118-121`; `specs/gaps.md`
+  `G-2026-01`, `G-2026-05`; `specs/content/style-guide.md` v4.5; `contracts/content-spec-frontmatter.schema.json`;
+  content-spec v2/v3 contracts. Items 1-3 are determined by the guide (and, for item 1, by binding
+  owner rulings); item 4 rests on the bound style guide.
+  **Deterministic checks run at `ca5f0af5`, real exit codes:** `check:no-em-dash` 0,
+  `validate:content` 0, `check:bloom-bands` 0, `check:concept-graph` 0, `check:depth-gate` 0
+  (vacuous for Units 3-6, which are unauthored), `check:figures` **1** (7 findings, all GSOS-301
+  Units 1-2: prompt-only markers render no figure), `check:no-answer-keys` 0, `check:docs-sync`
+  0, `check:source-floor` 0 (GSOS-301 declares no `open_access_floor`, so the spec's floor is not
+  enforced), `check:pipeline-gate` **1** (4 findings, all GSOS-301 Units 1-2: content-spec is
+  `draft`; G2 rows not done). The failures concern the pre-intake authored units, which are
+  context only here.
+- **Bound to:** `/tmp/claude-1005/-home-a2ahs-mega-book-for-B-Ed/e283ce34-647b-4701-9268-ea887141a5b3/scratchpad/intake/GSOS-301/manifest.json`,
+  manifest digest `99a1ad1ed73ffc58ee06b63fb45126a419c9dc337be2b30ecca1d4ee0e827752`, 63 inputs at
+  commit `ca5f0af5eb0b7c697dd33c091b4ae6feb72d683b`. Recomputed independently with `manifestFor()`
+  over the `intakeRoots('gsos-301')` set: 0 mismatches, digest reproduced, both registers matched.
+  **Any change to a bound input voids this approval** (Art. VII.8.5); the registers are not
+  freshness-bearing (`G-2026-15`), so recording this entry does not void it.
+- **Limits and what remains blocked:**
+  - **`status` stays `draft`.** It may not move to `approved` on this decision: partition and
+    readings are owner-gated (`G-2026-92`, `G-2026-93`, `G-2026-94`) and structure/residue need
+    repair. After the owner rules and the repairs land, a re-intake against a fresh manifest must
+    re-check structure and residue; items 1-4 need no re-evaluation unless a bound input they
+    rest on changes.
+  - **Blocked:** every unit's partition boundaries and the Unit 6 topic split (`G-2026-92`); the
+    whole `## Reading list`, every unit's `### Mapped readings`, and the G2 source-binding floor
+    (`G-2026-93`, `G-2026-94`); Units 3-6 additionally on the structural repair; the `## Week
+    schedule` on the residue repair.
+  - **Reported for repair, needing no owner decision:** the structure and residue items above;
+    `content-spec.md:32` says the course is "explicitly for trainee teachers", which no guide line
+    states; the block citation `:776-972` should end at `:968`; the spec maps no unit to a CLO.
+  - Context only, not judged: Units 1-2 (EN+UR) were authored before intake; their
+    `sources/unit-0{1,2}.md` cite `givens2023`/`henson2022` as `guide-required`, which
+    `G-2026-93` puts in question.
+  - Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
