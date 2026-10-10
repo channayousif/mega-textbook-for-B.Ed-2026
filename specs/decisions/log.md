@@ -2329,3 +2329,52 @@ content-improvement loop with no further cycle.
   - The tracker's G1 rows for Units 1 and 2 are unsupported by any approval (`G-2026-76`). This
     entry does not make them true.
   - Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
+
+## D-2026-0054 - EFMP-305 re-intake after repair: identity, partition, coverage, outcomes, blueprint and residue approved; readings escalated (G-2026-102); structure not approved (author repairs outstanding)
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** EFMP-305 Inclusive Education only, `specs/content/efmp-305/content-spec.md` at commit
+  `bc61ff7a` (drafted and repaired by the Paperclip BilingualAuthor agent; this evaluator drafted
+  none of it). Settles `identity`, `partition`, `coverage`, `outcomes`, `blueprint` and
+  `decision-residue`. Does not settle `readings` or `structure`.
+- **Decided by:** agent:evaluator, 2026-10-10
+- **Decision:**
+  1. `identity`: code, title, semester and category match guide (`2nd 2026.txt:189-197`), Scheme
+     (`B.Ed 4 Year 2026 revised after board.txt:166-170`) and catalog; credit hours `3 (3-0)` rest
+     on the confirmed owner ruling `D-2026-0053` item 3 (resolves `G-2026-72`). Spec `:9` agrees.
+  2. `partition`: six units follow the guide's numbered units (`:225-294`). The Unit 6 header
+     "(2 Weeks)" against Weeks 14-16 is a within-guide slip, no second document in conflict;
+     Unit 6 = three weeks, now disclosed at spec `:133`.
+  3. `coverage`: every guide week item (`:227-294`) appears exactly once across the 30 checklist
+     rows; 27 rows are decompositions of guide items; the three non-guide rows `U1-5`, `U3-5`,
+     `U5-5` each name their outcome derivation (`:192`, `:294`, `:398`) as `D-2026-0053` item 4
+     requires (resolves `G-2026-74`). Topic partitions are now total and disjoint in all six units.
+  4. `outcomes`: all SLO groups trace to guide outcomes `:213-221`.
+  5. `blueprint`: 10 MCQ / 10 RRQ / 5 ERQ per unit with Bloom ranges consistent with
+     `style-guide.md`; course split 40 formative / 60 summative per `D-2026-0053` item 6 (spec
+     `:48-49`, resolves `G-2026-75`).
+  6. `decision-residue`: no 80/20 label, no `(0-3)`, no two-week Unit 6, no underived added row
+     remains anywhere in the spec.
+- **Basis:** guide `Scheme-and-Course-guides/extracted-text/2nd 2026.txt:189-345`; owner ruling
+  `D-2026-0053` (confirmed 2026-10-10); record `scratchpad/intake2/EFMP-305/evaluation.md`.
+- **Bound to:** `scratchpad/intake2/EFMP-305/manifest.json`, manifest digest
+  `13d09407ed3ff1cbf2b04fbf5e83455517b4013b5d8bb85ba65143385353567a` (63 inputs, recomputed with
+  `manifestFor()`, 0 mismatches; registers matched before writing). Any change to a bound input,
+  including the spec, voids this approval.
+- **Limits:**
+  - `readings` not approved: `G-2026-102` (the guide's RPwD Act 2018 does not resolve to one
+    enacted statute). The three course-wide anchors (UNESCO 2020 GEM Report, UNCRPD 2006, NEP
+    2009) are resolvable and labelled author-selected under `D-2026-0053` item 2, and
+    `open_access_floor: 1` is declared; that part would pass on its own. Blocks Unit 5 Topics 5.1
+    and 5.2.
+  - `structure` not approved. `D-2026-0053` binds the author to the repairs `D-2026-0047` listed;
+    outstanding: Topic 6.2 plans one figure (Art. III.10 floor two, `:471-472`); the contract-form
+    repairs (checklist `Guide ref`/`Topic` columns, topic-list header, the per-unit
+    `Prerequisite knowledge` / `Common misconceptions` / `Mapped readings` / `Worked-examples plan`
+    / `International best-practice notes` lines, the `Guide-required` / `Curated-supplementary
+    (open access)` reading tables, course-review practicum ideas) are not made; accuracy at `:20-21`
+    (EFMP-302/304 described as guide-silent on readings), `:27` (outcomes locator should be
+    `:211-221`) and `:140-141` (guide does name the statute, `:282`).
+  - The spec may not move to `status: approved` on this entry.
+  - Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
