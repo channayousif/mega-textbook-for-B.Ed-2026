@@ -1702,7 +1702,7 @@ The generated raster illustration `fig-U4-12.webp` places the teacher at the fro
 
 ## G-2026-75 - EFMP-305: the formative/summative reading of the guide's marks table is not guide-given
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
 - **Gate:** G0 intake, course-wide assessment (Constitution Art. III.7).
 - **Raised by:** agent:evaluator, 2026-10-10, under `D-2026-0047` (same manifest).
 - **Detail:** the guide's marks table (`2nd 2026.txt:312-345`) gives Mid-Term 30, Final-Term 50,
