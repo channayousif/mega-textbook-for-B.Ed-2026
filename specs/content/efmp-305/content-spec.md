@@ -1,11 +1,12 @@
 ---
 course_code: EFMP-305
 status: draft
+open_access_floor: 1
 ---
 
 # EFMP-305 - Inclusive Education - Content Spec
 
-Semester 2, Major: Professional, 3 (3-0) credit hours. Source: `Scheme-and-Course-guides/2nd 2026.pdf`
+Semester 2, Major: Professional, 3 (3-0) theory. Source: `Scheme-and-Course-guides/2nd 2026.pdf`
 (extracted text, `extracted-text/2nd 2026.txt` lines 189-362).
 
 **Status is `draft`, deliberately.** Under Constitution Art. VII.8 this spec is submitted to an
@@ -17,8 +18,9 @@ Description, five Course Outcomes, the six-unit topic list with a week-by-week s
 "Teaching-Learning Framework" paragraph and an "Assessment Criteria" table. It carries **no**
 "Text Books and References" list, no "Suggested Practical Activities", and no separate
 "Teaching/Instructional Strategies" section beyond the framework paragraph. As with EFMP-302/304
-this is guide silence on *optional* enrichment sections, not ambiguity on a required one, so
-nothing is invented in their place.
+this is guide silence on *optional* enrichment sections (reading list, suggested activities,
+detailed teaching strategies), not ambiguity on a required one, so nothing is invented in
+their place.
 
 ## Course-wide items
 
@@ -32,7 +34,7 @@ nothing is invented in their place.
 - **Teaching strategies**: the guide names lecture, group discussions and "lots of practice"
   as the instructional format, with active participation, quizzes and additional reading
   materials. No further strategies are listed (guide-silent).
-- **Assessment criteria**: the guide **does** give a course-specific weighting (lines ~330-342),
+- **Assessment criteria**: the guide **does** give a course-specific weighting (lines 312-345),
   so the Constitution Art. III.7 default of 60/40 does **not** apply here:
 
   | Component | Marks |
@@ -49,6 +51,9 @@ nothing is invented in their place.
 - **Practical work**: none listed in the guide (guide-silent). The "lots of practice" in the
   framework paragraph refers to active participation in lectures and discussions, not a
   assessed practical component, and is not recorded as such.
+- **Class Participation** (guide lines 306-310): the guide encourages questions and
+  discussion during class and notes that students will get more from classroom discussions.
+  This is guide-silent on *assessed* practical work, not on participation expectations.
 - **Recommended resources**: the guide lists no "Text Books and References" section
   (guide-silent). Sources for each unit are bound at G2 from open-access materials; see the
   per-unit `**Mapped readings**` notes and the binding floor in `## Reading list` below.
@@ -84,9 +89,15 @@ The guide lists no "Text Books and References" section (guide-silent). This spec
 
 | Search target | Supports | Notes |
 |---|---|---|
-| UNESCO (2020). *Inclusive education: All means all. Education 2030*. | Course-wide framing, Unit 1, Unit 5 | Global monitoring framework on inclusive education; policy language |
-| UNCRPD (2006). *Convention on the Rights of Persons with Disabilities*, Article 24 | Unit 1, Unit 5 | The international rights basis for inclusive education |
-| National Education Policy of Pakistan (latest available; 2009 or successor) | Unit 5 | Pakistan's stated commitments on inclusive education and special needs |
+| UNESCO. (2020). *Inclusion and education: All means all. Education 2030*. | Course-wide framing, Unit 1, Unit 5 | Global monitoring framework on inclusive education; policy language. Author-selected; guide has no reading list. |
+| UNCRPD. (2006). *Convention on the Rights of Persons with Disabilities*, Article 24. | Unit 1, Unit 5 | The international rights basis for inclusive education. Author-selected; guide has no reading list. |
+| Government of Pakistan. (2009). *National Education Policy 2009*. Ministry of Education. | Unit 5 | Pakistan's stated commitments on inclusive education and special needs. Author-selected; guide has no reading list. |
+
+### Open-access floor
+
+`open_access_floor: 1` (declared in front matter). Every unit binds at least one verifiable
+open-access source. Sources named in the guide are guide-required; all others are author-selected
+and labelled as such.
 
 ### Per-unit binding floor
 
@@ -120,14 +131,18 @@ distributed 2/2/3/2/4/3 across Units 1 to 6.
 | 10-13 | Unit 5 - Policies and Legal Framework in Pakistan | National Education Policy (inclusive education aspects); Rights of Persons with Disabilities Act (2018); School responsibilities under legal requirements; Teacher's role and attitude |
 | 14-16 | Unit 6 - Collaboration and Parental Involvement | Building empathy and supportive classroom culture; Working with parents and collaboration with special educators; Challenges and solutions |
 
+**Unit 6 week note:** the guide's Unit 6 header says "(2 Weeks)" but lists Weeks 14, 15 and 16 (three weeks). Under D-2026-0047 this is treated as a within-guide slip; Unit 6 is three weeks.
+
 ## Standards & frameworks anchors
 
 - **UNCRPD Article 24** (2006) is the international rights anchor for inclusive education and
   underpins Unit 5's policy discussion.
 - **Pakistan's Rights of Persons with Disabilities Act (2018)** is the primary national legal
-  framework and the spine of Unit 5.
-- **National Education Policy of Pakistan** provides the national policy language on inclusive
-  education and special needs; used in Unit 5.
+  framework and the spine of Unit 5. Author-selected; guide names disability policy but lists
+  no specific statute.
+- **National Education Policy of Pakistan (2009)** provides the national policy language on
+  inclusive education and special needs; used in Unit 5. Author-selected; guide names policy
+  but lists no specific document.
 - **No external teaching standards framework** is named by this guide (unlike EFMP-302 which
   names NACTE). Nothing is substituted in their place.
 
@@ -174,6 +189,8 @@ Weeks 1-2. Unit Spec (G1) for `docs/semester-2/efmp-305/unit-01/`.
 | U1-3 | Principles of inclusion | Understand |
 | U1-4 | Importance of inclusive education in Pakistan | Evaluate |
 | U1-5 | Common misconceptions about inclusion | Analyze |
+
+**Added-row derivations (per D-2026-0053):** U1-5 derives from CLO 1 (understanding the concept of inclusive education includes addressing common misconceptions).
 
 ### Topic list
 
@@ -275,6 +292,8 @@ Weeks 5-7. Unit Spec (G1) for `docs/semester-2/efmp-305/unit-03/`.
 | U3-4 | Flexible assessment: accommodations and alternatives to standard testing | Apply |
 | U3-5 | Putting the three strategies together in one lesson | Create |
 
+**Added-row derivation (per D-2026-0053):** U3-5 derives from CLO 3 (apply inclusive teaching strategies): combining the three strategies into one lesson is the highest form of application.
+
 ### Topic list
 
 | Topic | Label | Sub-topic IDs | Mapped readings |
@@ -285,7 +304,7 @@ Weeks 5-7. Unit Spec (G1) for `docs/semester-2/efmp-305/unit-03/`.
 
 ### Depth budget
 
-A-B band: 150-180 reading minutes across the unit (three topics, most practice-dense unit).
+**Depth budget**: 5 sub-topics; 3 topics; 150-180 reading-min (A-B band). Most practice-dense unit.
 
 ### Figure plan
 
@@ -296,7 +315,9 @@ A-B band: 150-180 reading minutes across the unit (three topics, most practice-d
   (Topic 3.2)
 - `fig-U3-4`: table - assessment accommodations matched to learner needs (Topic 3.2)
 - `fig-U3-5`: flowchart - the inclusive lesson planning cycle integrating all three strategies
-  (Topic 3.3)
+   (Topic 3.3)
+- `fig-U3-6`: table - a lesson plan template showing where differentiation, cooperative learning
+   and flexible assessment appear in a single lesson (Topic 3.3)
 
 ### Unit-end assessment blueprint
 
@@ -333,15 +354,17 @@ Weeks 8-9. Unit Spec (G1) for `docs/semester-2/efmp-305/unit-04/`.
 
 ### Depth budget
 
-A-B band: 120-150 reading minutes across the unit.
+**Depth budget**: 5 sub-topics; 2 topics; 120-150 reading-min (A-B band).
 
 ### Figure plan
 
 - `fig-U4-1`: concept-map - the elements of an inclusive classroom environment (Topic 4.1)
-- `fig-U4-2`: diagram - an inclusive classroom layout showing accessible seating, learning
+- `fig-U4-2`: table - classroom management strategies for inclusion matched to common challenges
+  (Topic 4.1)
+- `fig-U4-3`: diagram - an inclusive classroom layout showing accessible seating, learning
   corners and movement paths (Topic 4.2)
-- `fig-U4-3`: table - teaching aids and assistive tools matched to learner needs, with cost
-  indicators (Topic 4.2)
+- `fig-U4-4`: table - teaching aids and assistive tools matched to learner needs, with cost
+   indicators (Topic 4.2)
 
 ### Unit-end assessment blueprint
 
@@ -373,26 +396,32 @@ Weeks 10-13. Unit Spec (G1) for `docs/semester-2/efmp-305/unit-05/`.
 | U5-4 | Teacher's role: developing a positive attitude toward inclusion | Evaluate |
 | U5-5 | From policy to practice: closing the gap | Analyze |
 
+**Added-row derivation (per D-2026-0053):** U5-5 derives from CLO 4 (understand Pakistan's policies on inclusive education): closing the policy-to-practice gap is a core analytical skill for policy understanding.
+
 ### Topic list
 
 | Topic | Label | Sub-topic IDs | Mapped readings |
 |---|---|---|---|
-| Pakistan's inclusive-education policy | 5.1 | U5-1, U5-5 | National Education Policy (Pakistan); policy analysis literature on inclusive education in Pakistan |
+| Pakistan's inclusive-education policy | 5.1 | U5-1 | National Education Policy (Pakistan); policy analysis literature on inclusive education in Pakistan |
 | The RPwD Act 2018 and school responsibilities | 5.2 | U5-2, U5-3 | Full text or summary of RPwD Act 2018; legal commentary on school obligations |
 | The teacher's attitude and the policy-to-practice gap | 5.3 | U5-4, U5-5 | Literature on teacher attitudes toward inclusion; studies on implementation gaps in Pakistani schools |
 
 ### Depth budget
 
-A-B band: 150-180 reading minutes across the unit (four topics, most content-heavy unit).
+**Depth budget**: 5 sub-topics; 3 topics; 150-180 reading-min (A-B band). Most content-heavy unit.
 
 ### Figure plan
 
 - `fig-U5-1`: timeline - the evolution of Pakistan's disability and inclusive-education policy
-  from pre-2000 to the RPwD Act 2018 (Topic 5.1)
-- `fig-U5-2`: table - key provisions of the RPwD Act 2018 relevant to schools (Topic 5.2)
-- `fig-U5-3`: concept-map - school responsibilities under the legal framework (Topic 5.2)
-- `fig-U5-4`: diagram - the attitude-action cycle: how teacher attitudes shape inclusion outcomes
-  (Topic 5.3)
+   from pre-2000 to the RPwD Act 2018 (Topic 5.1)
+- `fig-U5-2`: table - comparing the NEP 2009 inclusive-education provisions with the RPwD Act
+   2018 (Topic 5.1)
+- `fig-U5-3`: table - key provisions of the RPwD Act 2018 relevant to schools (Topic 5.2)
+- `fig-U5-4`: concept-map - school responsibilities under the legal framework (Topic 5.2)
+- `fig-U5-5`: diagram - the attitude-action cycle: how teacher attitudes shape inclusion outcomes
+   (Topic 5.3)
+- `fig-U5-6`: table - common policy-to-practice gaps in Pakistani schools and teacher-level
+   responses (Topic 5.3)
 
 ### Unit-end assessment blueprint
 
@@ -426,23 +455,25 @@ Weeks 14-16. Unit Spec (G1) for `docs/semester-2/efmp-305/unit-06/`.
 
 | Topic | Label | Sub-topic IDs | Mapped readings |
 |---|---|---|---|
-| Empathy and a supportive classroom culture | 6.1 | U6-1, U6-4 | Literature on classroom culture and empathy in inclusive settings; studies on inclusion challenges in Pakistani schools |
+| Empathy and a supportive classroom culture | 6.1 | U6-1 | Literature on classroom culture and empathy in inclusive settings |
 | Parents, special educators and the school team | 6.2 | U6-2, U6-3 | Parental-involvement literature; collaboration models between general and special educators |
 | Challenges and practical solutions | 6.3 | U6-4, U6-5 | Barrier analysis and solution literature; case studies from Pakistani contexts |
 
 ### Depth budget
 
-A-B band: 140-170 reading minutes across the unit (three topics).
+**Depth budget**: 5 sub-topics; 3 topics; 140-170 reading-min (A-B band).
 
 ### Figure plan
 
 - `fig-U6-1`: concept-map - the elements of an empathetic, supportive classroom culture
-  (Topic 6.1)
-- `fig-U6-2`: flowchart - the collaboration cycle between teacher, parent and special educator
-  (Topic 6.2)
-- `fig-U6-3`: table - common inclusion barriers in Pakistani schools and practical solutions
-  (Topic 6.3)
-- `fig-U6-4`: diagram - a whole-school inclusion model showing all stakeholders (Topic 6.3)
+   (Topic 6.1)
+- `fig-U6-2`: table - empathy-building activities for Pakistani classrooms with time and
+   resource requirements (Topic 6.1)
+- `fig-U6-3`: flowchart - the collaboration cycle between teacher, parent and special educator
+   (Topic 6.2)
+- `fig-U6-4`: table - common inclusion barriers in Pakistani schools and practical solutions
+   (Topic 6.3)
+- `fig-U6-5`: diagram - a whole-school inclusion model showing all stakeholders (Topic 6.3)
 
 ### Unit-end assessment blueprint
 
