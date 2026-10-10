@@ -1,6 +1,10 @@
 ---
 course_code: GENG-301
 status: draft
+# D-2026-0053 item 2: every unit binds >= 1 verified open-access source, in the mapping
+# form check:source-floor reads.
+open_access_floor:
+  default: 1
 ---
 
 # GENG-301 - Expository Writing - Content Spec
@@ -49,14 +53,45 @@ written to be v4.5-ready.
 | 6 | Ethical Considerations in Writing | 16 |
 
 **Week schedule note (D-2026-0012):** the guide gives numbered syllabus sections but no week
-table. The week distributions above are **derived** and labelled as such. They are a reasonable
-partition of the guide's content; the guide does not determine this split.
+table. The week distributions above are **derived** and labelled as such; the guide does not
+determine this split. The split was confirmed as drafted by the curriculum owner in `D-2026-0053`
+item 1 (`G-2026-88`).
 
 ## Course review plan
 
-A course-level review (`course-review.mdx`) is planned after Unit 6, drawing together the writing
-process, essay structure, expository types, audience-aware writing and ethical considerations into a
-single integrative assessment.
+Seeds an eventual `docs/semester-2/geng-301/course-review.mdx` after Unit 6 (contract:
+`specs/008-rich-unit-pedagogy/contracts/end-of-course-review.md`). Not parsed by any gate.
+
+- **Course summary points** (the through-lines the review should recap):
+  - Expository writing explains and informs; its types (description, illustration,
+    classification, cause and effect, process analysis, comparative analysis) are ways of
+    organizing an explanation, chosen to suit the material (Units 1, 4; CLO 2).
+  - Good writing is produced by a process, not in one attempt: pre-writing, drafting, revising,
+    editing and proof reading each do a different job (Unit 2; CLO 1).
+  - A well-structured essay is built around one clear, focused thesis that every paragraph serves,
+    joined by deliberate transitions (Units 1, 3; CLO 1).
+  - Purpose and audience decide tone, register and form; the same content is written differently
+    for academic and public readers (Unit 5; CLO 2).
+  - Originality is an ethical practice: credible sources, accurate citation, honest quoting,
+    paraphrasing and summarizing, and no plagiarism (Unit 6; CLO 3).
+- **Practice-question mix**: about 20 MCQs (at least 3 per unit), 12 RRQs (2 per unit) and 4 ERQs
+  that each span two or more units (for example, plan, draft and revise a short expository essay
+  for a named audience, citing one source in APA style); ERQs at Analyze level or higher.
+- **Practicum project ideas** (3-6):
+  - Expository writing portfolio (the guide's suggested practical activity) - show range across
+    expository types; collect one piece per type from Unit 4, each with its pre-writing notes and
+    a revised draft; bring the portfolio and a one-page reflection to the end-of-course
+    presentation.
+  - Process log - make the writing process visible; keep dated notes from pre-writing to proof
+    reading for one essay; bring the log and the drafts showing revisions.
+  - Peer-review circle - practise giving and receiving critique; exchange drafts in groups of
+    three using a shared checklist; bring the annotated drafts and a note on what changed.
+  - One topic, two audiences - adjust tone and register; write the same school-related content
+    for an academic reader and for parents in a community notice; bring both versions with a
+    short commentary on the choices.
+  - Source-integrity audit - apply ethical writing practice; check one of your own essays for
+    source credibility, citation accuracy and paraphrase quality; bring the audited essay and a
+    corrected APA reference list.
 
 ## Course-wide items
 
@@ -75,43 +110,60 @@ single integrative assessment.
   The guide's own list includes Axelrod & Cooper, Graff & Birkenstein, Rosenwasser & Stephen,
   Williams & Bizup, Strunk & White, Faigley & Selzer, Zinsser, Bullock et al., Longknife &
   Sullivan, and Johnson-Sheehan & Paine.
-- **open_access_floor:** 1 (every unit binds >= 1 open-access source).
+- **Open-access floor:** every unit binds >= 1 verified open-access source (`D-2026-0053` item 2;
+  declared as `open_access_floor` in the front matter above).
 
 ### Guide-required readings
 
 | Key | Citation | DOI/URL | Units | Note |
 |---|---|---|---|---|
-| axelrod2016 | Axelrod, R. B., & Cooper, C. R. *The St. Martin's Guide to Writing.* |  | 2,3,4 | guide required |
+| axelrod2016 | Axelrod, R. B., & Cooper, C. R. *The St. Martin's Guide to Writing.* |  | 1,2,3,4 | guide required |
 | graff2011 | Graff, G., & Birkenstein, C. *They Say / I Say.* |  | 1,3,5,6 | guide required |
 | rosenwasser2012 | Rosenwasser, D., & Stephen, J. *Writing Analytically.* |  | 4 | guide required |
 | williams2017 | Williams, J. M., & Bizup, J. *Style: Lessons in Clarity and Grace.* |  | 1,2,3,5 | guide required |
 | strunk2000 | Strunk, W. Jr., & White, E. B. *The Elements of Style.* |  | 1,2 | guide required |
 | faigley2015 | Faigley, L., & Selzer, J. *Good Reasons with Contemporary Arguments.* |  | 4 | guide required |
-| zinsser2006 | Zinsser, W. *Writing to Learn.* |  | 4,5 | guide required |
+| zinsser1988 | Zinsser, W. *Writing to Learn.* |  | 4,5 | guide required |
 | bullock2016 | Bullock, R., Goggin, M. D., & Weinberg, F. *The Norton Field Guide to Writing.* |  | 3 | guide required |
-| johnson2016 | Johnson-Sheehan, R., & Paine, C. *Writing Today.* |  | 2,3,5,6 | guide required |
-| apa2020 | American Psychological Association. *Publication Manual* (7th ed.). |  | 6 | guide required |
+| johnson2016 | Johnson-Sheehan, R., & Paine, C. *Writing Today.* |  | 2,5,6 | guide required |
+| longknife2002 | Longknife, A., & Sullivan, K. D. *The Art of Styling Sentences.* |  | 1,2 | guide required (guide `:125`) |
 
-### Author-selected readings (open-access)
+### Author-selected readings (print)
+
+Not on the guide list; chosen for relevance to the course outcomes (`D-2026-0053` item 2).
 
 | Key | Citation | DOI/URL | Units | Note |
 |---|---|---|---|---|
-| UNESCO2022 | UNESCO. (2022). *Global Education Monitoring Report.* | https://unesdoc.unesco.org | 3 | author selected |
-| SindhEd2023 | Sindh Education Foundation. (2023). *Annual Report.* | https://www.sindheducation.org | 5 | author selected |
+| apa2020 | American Psychological Association. (2020). *Publication Manual of the American Psychological Association* (7th ed.). APA. |  | 6 | author selected; serves CLO 3 (APA citation, guide `:96` names APA only as a style) |
+| zinsser2006 | Zinsser, W. (2006). *On Writing Well* (30th anniversary ed.). Harper Perennial. |  | 4,5 | author selected; serves CLO 2 (description, illustration, writing for public readers); a different book from the guide's *Writing to Learn* (`zinsser1988`) |
+
+### Author-selected readings (open-access)
+
+Each URL was fetched on 2026-10-10 and the content checked against the unit it serves.
+
+| Key | Citation | DOI/URL | Units | Note |
+|---|---|---|---|---|
+| openstax2021 | Robinson, M. B., & Jerskey, M. (Senior Contributing Authors). (2021). *Writing Guide with Handbook.* OpenStax. CC BY-NC-SA 4.0. | https://openstax.org/details/books/writing-guide | 1,2,3,4,5,6 | author selected; verified 2026-10-10; sections used: U1 6.7, 10.6 (clarity, coherence, paragraphs and transitions; CLO 1); U2 8.5, 8.7 (drafting, peer review, revising the final draft; CLO 1); U3 10.3 (thesis, reasoning and evidence; CLO 1); U4 11.3 (reasoning strategies: classification, cause and effect, comparison; CLO 2); U5 18.3 (genre, audience, purpose; CLO 2); U6 12.6, 13.6 (integrating sources and quotations, ethical research, plagiarism; CLO 3) |
+| UNESCO2022 | UNESCO. (2022). *Global Education Monitoring Report - Gender Report: Deepening the debate on those still left behind.* UNESCO. | https://doi.org/10.54676/RCZB6329 (unesdoc record pf0000381329; landing page https://www.unesco.org/gem-report/en/2022-gender-report) | 4 | author selected; verified 2026-10-10 via Crossref and the GEM landing page; serves CLO 2 as a model expository data report for cause-and-effect and comparative analysis |
+| sef2022-23 | Sindh Education Foundation. *Annual Report 2022-23.* Sindh Education Foundation. | https://sef.org.pk/public/files/1754891210.pdf | 5 | author selected; verified 2026-10-10 (listed under Annual Reports at https://sef.org.pk/publications/7, posted 2025-08-11); serves CLO 2 as a Sindh example of writing for a public audience |
 
 ## Unit 1: Introduction to Expository Writing
 
 Weeks 1 to 3 (derived). Unit Spec (G1) for `docs/semester-2/geng-301/unit-01/`.
 
 - **CLO refs**: course outcomes 1 and 2.
-- **Key terms**: Expository writing, Narration, Description, Exposition, Argumentation, Paragraph,
-  Topic sentence, Supporting details, Concluding sentence.
+- **Key terms**: Expository writing, Expository types (description, illustration, classification,
+  cause and effect, process analysis, comparative analysis), Purpose, Clarity, Coherence,
+  Paragraph, Topic sentence, Supporting details, Concluding sentence.
 - **Topics**: understanding expository writing (definition, types, purpose, applications);
   characteristics of effective expository writing (clarity, coherence, organization); introduction to
   paragraph writing.
-- **Mapped readings**: graff2011 (They Say / I Say); williams2017 (Style); strunk2000 (Elements of Style).
+- **Mapped readings**: graff2011 (They Say / I Say); williams2017 (Style); strunk2000 (Elements of Style);
+  axelrod2016 (St. Martin's Guide); longknife2002 (Art of Styling Sentences); openstax2021 sections 6.7 and 10.6 (open access:
+  https://openstax.org/books/writing-guide/pages/6-7-evaluation-conventions-clarity-and-coherence,
+  https://openstax.org/books/writing-guide/pages/10-6-editing-focus-paragraphs-and-transitions).
 - **Prerequisite knowledge**: Functional English (GENG-300) or equivalent HSC-level English.
-- **Worked-example / activity concepts**: identify the expository type of sample passages; draft a
+- **Worked-examples plan**: identify the expository type of sample passages; draft a
   single paragraph with a topic sentence and supporting details; evaluate sample paragraphs for
   clarity and coherence.
 - **Assessment blueprint**: formative on identifying expository types and paragraph components;
@@ -142,8 +194,9 @@ Weeks 1 to 3 (derived). Unit Spec (G1) for `docs/semester-2/geng-301/unit-01/`.
 **Common misconceptions**: "expository writing means long and formal writing"; "a paragraph is
 just a group of sentences"; "coherence means using big transition words like 'furthermore'".
 
-**Figure plan**: fig-U1-1 `concept-map` the four modes of writing and how exposition relates to them
-(1.1); fig-U1-4 `table` expository writing purposes with examples from Pakistani academic contexts
+**Figure plan**: fig-U1-1 `concept-map` expository writing at the centre, branching to its types
+(description, illustration, classification, cause and effect, process analysis, comparative
+analysis) and its purposes, per guide `:46`, `:79-84` (1.1); fig-U1-4 `table` expository writing purposes with examples from Pakistani academic contexts
 (1.1); fig-U1-2 `diagram` clarity, coherence and organization as three pillars of effective writing
 (1.2); fig-U1-5 `table` common clarity problems with before-and-after revisions (1.2); fig-U1-3
 `flowchart` the paragraph-writing process from topic sentence to conclusion (1.3); fig-U1-6 `table`
@@ -161,9 +214,12 @@ Weeks 4 to 7 (derived). Unit Spec (G1) for `docs/semester-2/geng-301/unit-02/`.
 - **Topics**: pre-writing techniques (brainstorming, free-writing, mind-mapping, listing,
   questioning, outlining); drafting (three-stage process); revising and editing; proof reading;
   peer review and feedback.
-- **Mapped readings**: axelrod2016 (St. Martin's Guide); williams2017 (Style); johnson2016 (Writing Today).
+- **Mapped readings**: axelrod2016 (St. Martin's Guide); williams2017 (Style); johnson2016 (Writing Today);
+  strunk2000 (Elements of Style); longknife2002 (Art of Styling Sentences); openstax2021 sections 8.5 and 8.7 (open access:
+  https://openstax.org/books/writing-guide/pages/8-5-writing-process-creating-an-analytical-report,
+  https://openstax.org/books/writing-guide/pages/8-7-evaluation-reviewing-the-final-draft).
 - **Prerequisite knowledge**: Unit 1 of this course.
-- **Worked-example / activity concepts**: apply mind-mapping to a given topic; produce a three-stage
+- **Worked-examples plan**: apply mind-mapping to a given topic; produce a three-stage
   draft on an assigned topic; conduct a structured peer review using a checklist.
 - **Assessment blueprint**: formative on applying pre-writing and drafting techniques; summative
   includes one Analyze-or-higher item evaluating a described writer's process decisions.
@@ -175,9 +231,9 @@ Weeks 4 to 7 (derived). Unit Spec (G1) for `docs/semester-2/geng-301/unit-02/`.
 | U2-01 | 2 | 2.1 | Brainstorming and listing: generating ideas quickly without judgement |
 | U2-02 | 2 | 2.1 | Free-writing and mind-mapping: exploring connections between ideas |
 | U2-03 | 2 | 2.1 | Questioning (who, what, why, how) and outlining: shaping ideas into structure |
-| U2-04 | 2 | 2.2 | Drafting: three-stage process (rough draft, structured draft, refined draft) |
-| U2-05 | 2 | 2.2 | Drafting: writing for a purpose and audience from the first draft onward |
-| U2-06 | 2 | 2.3 | Revising: checking content, organization, argument strength and conciseness |
+| U2-04 | 2 (stage names derived: CLO 1) | 2.2 | Drafting: three-stage process (rough draft, structured draft, refined draft) |
+| U2-05 | 2 (derived: CLO 2) | 2.2 | Drafting: writing for a purpose and audience from the first draft onward |
+| U2-06 | 2 | 2.3 | Revising: checking content, organization, clarity, coherence and conciseness |
 | U2-07 | 2 | 2.3 | Editing: correcting grammar, word choice, sentence structure, conciseness and tone |
 | U2-08 | 2 | 2.4 | Proof reading: fine-tuning for errors in spelling, punctuation and formatting |
 | U2-09 | 2 | 2.4 | Peer review: giving and receiving structured feedback |
@@ -216,9 +272,11 @@ Weeks 8 to 10 (derived). Unit Spec (G1) for `docs/semester-2/geng-301/unit-03/`.
 - **Topics**: introduction and hook; thesis statement; body paragraphs (topic sentences, supporting
   evidence, transitional devices); conclusion (types of concluding paragraphs); ensuring cohesion and
   coherence.
-- **Mapped readings**: graff2011 (They Say / I Say); bullock2016 (Norton Field Guide); axelrod2016 (St. Martin's Guide).
+- **Mapped readings**: graff2011 (They Say / I Say); bullock2016 (Norton Field Guide); axelrod2016 (St. Martin's Guide);
+  williams2017 (Style); openstax2021 section 10.3 (open access:
+  https://openstax.org/books/writing-guide/pages/10-3-glance-at-genre-thesis-reasoning-and-evidence).
 - **Prerequisite knowledge**: Units 1 and 2 of this course.
-- **Worked-example / activity concepts**: craft thesis statements for given topics; revise weak body
+- **Worked-examples plan**: craft thesis statements for given topics; revise weak body
   paragraphs; reorganize a jumbled essay into logical order.
 - **Assessment blueprint**: formative on identifying thesis statements and body paragraph components;
   summative includes one Evaluate-level item judging the organizational quality of a sample essay.
@@ -229,8 +287,8 @@ Weeks 8 to 10 (derived). Unit Spec (G1) for `docs/semester-2/geng-301/unit-03/`.
 |---|---|---|---|
 | U3-01 | 3 | 3.1 | The hook: engaging the reader with a question, anecdote, statistic or bold statement |
 | U3-02 | 3 | 3.1 | Introduction structure: from hook to thesis, setting up the essay |
-| U3-03 | 3 | 3.2 | Thesis statement: crafting a clear, focused, arguable central idea |
-| U3-04 | 3 | 3.2 | Strong vs weak thesis statements: specificity, scope and debatability |
+| U3-03 | 3 | 3.2 | Thesis statement: crafting a clear and focused central idea |
+| U3-04 | 3 (derived: CLO 1; openstax2021 10.3) | 3.2 | Strong vs weak thesis statements: specificity and scope |
 | U3-05 | 3 | 3.3 | Body paragraphs: topic sentences that connect to the thesis |
 | U3-06 | 3 | 3.3 | Supporting evidence: facts, examples, statistics, quotations |
 | U3-07 | 3 | 3.3 | Transitional devices: words and phrases that connect paragraphs |
@@ -270,9 +328,13 @@ Weeks 11 to 13 (derived). Unit Spec (G1) for `docs/semester-2/geng-301/unit-04/`
   Compare and contrast, Thesis, Evidence.
 - **Topics**: description; illustration; classification; cause and effect; process analysis;
   comparative analysis.
-- **Mapped readings**: rosenwasser2012 (Writing Analytically); faigley2015 (Good Reasons); zinsser2006 (On Writing Well); UNESCO2022 (GEM Report).
+- **Mapped readings**: rosenwasser2012 (Writing Analytically); faigley2015 (Good Reasons); axelrod2016 (St. Martin's Guide);
+  zinsser1988 (Writing to Learn);
+  zinsser2006 (On Writing Well, author selected); UNESCO2022 (GEM Gender Report 2022, open access);
+  openstax2021 section 11.3 (open access:
+  https://openstax.org/books/writing-guide/pages/11-3-glance-at-genre-reasoning-strategies-and-signal-words).
 - **Prerequisite knowledge**: Units 1-3 of this course.
-- **Worked-example / activity concepts**: write a process analysis of a familiar procedure (making
+- **Worked-examples plan**: write a process analysis of a familiar procedure (making
   Sindhi biryani, conducting a science demo); draft a compare-and-contrast essay on two Pakistani
   educational practices; identify expository types in sample texts.
 - **Assessment blueprint**: formative on identifying and drafting each expository type; summative
@@ -321,9 +383,12 @@ Weeks 14 to 15 (derived). Unit Spec (G1) for `docs/semester-2/geng-301/unit-05/`
   Entertainment, Academic writing, Public writing.
 - **Topics**: different types of purposes (to inform, analyze, persuade, entertain); writing for
   academic audiences; writing for public audiences; different tones and styles.
-- **Mapped readings**: graff2011 (They Say / I Say); williams2017 (Style); johnson2016 (Writing Today); SindhEd2023 (SEF Annual Report).
+- **Mapped readings**: graff2011 (They Say / I Say); williams2017 (Style); johnson2016 (Writing Today);
+  zinsser1988 (Writing to Learn); zinsser2006 (On Writing Well, author selected); sef2022-23 (SEF
+  Annual Report 2022-23, open access); openstax2021 section 18.3 (open access:
+  https://openstax.org/books/writing-guide/pages/18-3-glance-at-genre-genre-audience-purpose-organization).
 - **Prerequisite knowledge**: Units 1-4 of this course.
-- **Worked-example / activity concepts**: rewrite the same content for two different audiences
+- **Worked-examples plan**: rewrite the same content for two different audiences
   (academic journal vs community newsletter); analyze tone in sample texts; adjust formality in given
   passages.
 - **Assessment blueprint**: formative on identifying purpose and audience in sample texts; summative
@@ -338,7 +403,7 @@ Weeks 14 to 15 (derived). Unit Spec (G1) for `docs/semester-2/geng-301/unit-05/`
 | U5-03 | 5 | 5.2 | Academic audiences: formality, objectivity, evidence-based reasoning |
 | U5-04 | 5 | 5.2 | Academic conventions: citation, structure, hedging language |
 | U5-05 | 5 | 5.3 | Public audiences: engaging, informative, persuasive and accessible language |
-| U5-06 | 5 | 5.3 | Public writing forms: opinion columns, newsletters, blogs |
+| U5-06 | 5 (derived: CLO 2; openstax2021 18.3) | 5.3 | Public writing forms: opinion columns, newsletters, blogs |
 | U5-07 | 5 | 5.4 | Tone and style: adjusting language for purpose and audience |
 
 ### Topic list
@@ -375,9 +440,12 @@ Week 16 (derived). Unit Spec (G1) for `docs/semester-2/geng-301/unit-06/`.
 - **Topics**: ensuring original writing (finding and evaluating sources); proper citation and
   referencing (APA, MLA); integrating quotes and evidence (quoting, paraphrasing, summarizing);
   avoiding plagiarism.
-- **Mapped readings**: graff2011 (They Say / I Say); johnson2016 (Writing Today); apa2020 (Publication Manual).
+- **Mapped readings**: graff2011 (They Say / I Say); johnson2016 (Writing Today); apa2020 (Publication Manual,
+  author selected); openstax2021 sections 12.6 and 13.6 (open access:
+  https://openstax.org/books/writing-guide/pages/12-6-editing-focus-integrating-sources-and-quotations,
+  https://openstax.org/books/writing-guide/pages/13-6-spotlight-on-ethical-research).
 - **Prerequisite knowledge**: Units 1-5 of this course.
-- **Worked-example / activity concepts**: evaluate sources for credibility; paraphrase and cite a
+- **Worked-examples plan**: evaluate sources for credibility; paraphrase and cite a
   given passage in APA style; identify plagiarism in sample texts.
 - **Assessment blueprint**: formative on paraphrasing and citation practice; summative includes one
   Evaluate-level item judging the ethical quality of a described student's writing.
@@ -420,8 +488,9 @@ checklist for student writers (6.4).
 
 ## Reading list
 
-Cited by reference only (Constitution Art. III.5). All entries are print monographs; cited by
-reference per D-2026-0001 (no reproduction of text).
+Cited by reference only, never reproduced (Constitution Art. III.5). The ten guide entries below
+are print monographs; the author-selected works, including the open-access ones, are listed in the
+keyed tables under Course-wide items.
 
 1. Axelrod, R. B., & Cooper, C. R. *The St. Martin's Guide to Writing.* (guide recommended)
 2. Graff, G., & Birkenstein, C. *They Say / I Say: The Moves That Matter in Academic Writing.* (guide recommended)
