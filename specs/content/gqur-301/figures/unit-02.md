@@ -1,0 +1,12 @@
+# Unit 2 Figure Manifest
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U2-1 | 3.1 | concept-map | Population and its relationship to Sample, Parameter and Statistic with inference arrows. | A concept map placing 'Population' at the centre, branching into Sample, Parameter and Statistic, with arrows showing the inference direction. | /img/figures/gqur-301/unit-02/fig-U2-1.svg | placed |
+| fig-U2-2 | 3.1 | diagram | Population of 347 schools with a sample of 30 highlighted and inference arrow. | A diagram showing a large circle labelled 'Population: all 347 schools' with a smaller circle inside labelled 'Sample: 30 selected schools'. | /img/figures/gqur-301/unit-02/fig-U2-2.svg | placed |
+| fig-U2-3 | 3.2 | table | Random vs non-random sampling methods compared with descriptions and school examples. | Table comparing random sampling methods and non-random methods with descriptions and school examples. | /img/figures/gqur-301/unit-02/fig-U2-3.svg | placed |
+| fig-U2-4 | 3.2 | flowchart | Decision guide for choosing a sampling method based on research question, sampling frame and subgroups. | A flowchart for choosing a sampling method: start with the research question, decide on sampling frame, random selection, subgroups. | /img/figures/gqur-301/unit-02/fig-U2-4.svg | placed |
+| fig-U2-5 | 4.1 | diagram | Number line showing 10 quiz marks with mean and median marked, showing outlier effect. | A number line showing the 10 quiz marks as dots, with the mean marked at 14.9 and the median at 17. | /img/figures/gqur-301/unit-02/fig-U2-5.svg | placed |
+| fig-U2-6 | 4.1 | table | Worked table computing mean and median step by step from quiz marks. | A worked table computing the mean and median step by step from the 10 quiz marks. | /img/figures/gqur-301/unit-02/fig-U2-6.svg | placed |
+| fig-U2-7 | 5.1 | diagram | Three distributions (symmetric, right-skewed, left-skewed) showing mean-median-mode relationship. | Three distributions side by side: symmetric, right-skewed, and left-skewed, with labels showing the relationship. | /img/figures/gqur-301/unit-02/fig-U2-7.svg | placed |
+| fig-U2-8 | 5.1 | table | When to use mean, median or mode by data type and distribution shape. | Table comparing when to use mean, median and mode by data type and distribution shape. | /img/figures/gqur-301/unit-02/fig-U2-8.svg | placed |

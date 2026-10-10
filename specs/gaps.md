@@ -1590,3 +1590,65 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 **Date:** 2026-10-04
 
 The generated raster illustration `fig-U4-12.webp` places the teacher at the front beside the board, which contradicts its prompt specifying a landscape scene of a male teacher "at the back of his own classroom". A repair or regeneration is needed before G3 can pass.
+
+---
+
+## Intake evaluation, GQUR-301 (2026-10-10)
+
+Recorded by `agent:evaluator` under `D-2026-0049`, bound to
+`intake/GQUR-301/manifest.json` (manifest digest
+`3dfe0d37ddf4b9c86599a2699445647cc2bcd33aa266fe7788deac6b8141434a`, commit `2fd037b2`).
+
+## G-2026-82 - GQUR-301 intake: the six-unit partition is the spec's construction over a guide that gives only week-mapped chapters
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G0 intake / G1 unit-spec (`partition` criterion)
+- **Source:** `D-2026-0049`
+- **Detail:** The GQUR-301 guide block (`Scheme-and-Course-guides/extracted-text/2nd 2026.txt:371-580`)
+  gives a **Course Outline** of 16 chapters, each mapped to exactly one week: Chapter 1 Week 1
+  (`:405`) through Chapter 16 Week 16 (`:524`). It carries **no unit headings of any kind**. The
+  spec (`specs/content/gqur-301/content-spec.md:34-37`, `:107-117`) merges the chapters into six
+  units: Ch 1-2 (Weeks 1-2) -> Unit 1, Ch 3-5 (Weeks 3-5) -> Unit 2, Ch 6-8 (Weeks 6-8) -> Unit 3,
+  Ch 9-11 (Weeks 9-11) -> Unit 4, Ch 12-13 (Weeks 12-13) -> Unit 5, Ch 14-16 (Weeks 14-16) ->
+  Unit 6, labelled as derived on every unit's weeks line.
+
+  What the guide **does** determine, and the evaluator verified: the 16-week calendar, the
+  chapter-to-week mapping, and the partition's structural properties - contiguous whole chapters,
+  no chapter split across units, no chapter reordered, every chapter placed exactly once.
+
+  What the guide does **not** determine: the number of units (six) and the block boundaries
+  (2/3/3/3/2/3 chapters). Any contiguous merge, including one unit per chapter, is equally
+  consistent with the guide. Two boundaries in particular are judgements: Unit 3 joins
+  dispersion (Ch 6) to counting techniques (Ch 7-8), and Unit 6 folds the guide's
+  course-integration chapter (Ch 16, "Quantitative Reasoning Applications") into the inference
+  unit. This is the same condition as `G-2026-22` (GNAS-301) and `G-2026-52` (EFMP-301), both
+  owner-settled.
+- **Needed, and from whom:** the curriculum owner, to confirm the six-unit merge exactly as
+  derived (2/3/3/3/2/3 chapters across Units 1 to 6) or supply another partition. The week
+  calendar itself needs no decision: it is guide-given.
+- **Blocks:** the `partition` criterion of `D-2026-0049`, and with it the unit grouping of all
+  six `## Unit N` subsections and the "Weeks N-M (derived)" line opening each. Units 1 and 2 were
+  authored before intake on this unconfirmed partition.
+
+## G-2026-83 - GQUR-301 CLO 3's "appropriate computational tools" has no ancestor in the guide's outline, and no unit delivers it
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G0 intake / G1 unit-spec (`outcomes` criterion)
+- **Source:** `D-2026-0049`
+- **Detail:** The guide's third course outcome reads "It is an ability to critically evaluate
+  quantitative information to make evidence-based decisions through appropriate computational
+  tools" (`2nd 2026.txt:399-401`). None of the guide's 16 chapters (`:405-527`) names a
+  computational tool (calculator, spreadsheet, statistical software), and neither does its
+  Teaching Strategy (`:531-535`). The spec reproduces the outcome (`content-spec.md:41-47`) and
+  cites CLO 3 for Units 4, 5 and 6 (`:399`, `:482`, `:558`), but no unit's topics, activities,
+  figure plan or blueprint plans any use of a computational tool (zero hits for "calculator",
+  "spreadsheet" or "software" in the spec). The trace is therefore asserted, not delivered, for
+  the "computational tools" component; the "critically evaluate ... evidence-based decisions"
+  component is plausibly carried by Units 4-6. This is the `G-2026-10` / `D-2026-0011` condition
+  (EFMP-302 CLO 4), which the owner settled as a guide drafting artefact.
+- **Needed, and from whom:** the curriculum owner, to rule whether (a) CLO 3's computational-tools
+  component is a guide drafting artefact and the traces stand as written, or (b) one or more units
+  must plan explicit computational-tool work (and if so, which units and what tools), which would
+  be an addition the guide's outline does not contain.
+- **Blocks:** the `outcomes` criterion of `D-2026-0049`; specifically the CLO 3 refs of Units 4,
+  5 and 6. The CLO 1 and CLO 2 traces are not blocked.

@@ -1,0 +1,182 @@
+---
+title: "Topic 1.3 - Frequency distributions"
+description: "Frequency distributions: building a frequency table from raw data, cumulative frequency, and using them to see patterns."
+course_code: GQUR-301
+unit_no: 1
+topic_no: 3
+topic_label: "1.3"
+clo_refs:
+  - "SLO:GQUR-301-1-2"
+blooms_summary: "Remember the structure of a frequency distribution table; understand why grouping data into intervals reveals patterns; apply the process to construct a frequency table and a cumulative frequency table from raw data."
+est_reading_minutes: 16
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+import Glossary from '@site/src/components/Glossary';
+
+<PrintHandout />
+
+## A real classroom situation
+
+A teacher has just marked a 30-mark quiz for her grade 7 class of 25 pupils.
+The marks, in no particular order, are: 18, 22, 15, 20, 23, 12, 19, 21, 17,
+24, 14, 16, 20, 22, 13, 18, 25, 11, 19, 17, 21, 16, 23, 15, 20. She wants to
+know how the class did overall, but the raw list tells her little. She could
+sort the numbers, but with 25 entries that only helps a little. She needs a way
+to see the shape of the marks at a glance - where they cluster, where they
+spread, whether there are very low or very high scores.
+
+<Figure id="fig-U1-5" kind="table" src="/img/figures/gqur-301/unit-01/fig-U1-5.svg" alt="A worked frequency distribution table with columns for class interval, tally, frequency and relative frequency, using the 25 quiz marks from the opening situation." width={780} height={470} />
+
+<Figure id="fig-U1-6" kind="flowchart" src="/img/figures/gqur-301/unit-01/fig-U1-6.svg" alt="A flowchart showing the steps to build a frequency table: sort the data, decide the number of intervals, set the interval width, tally each value into its interval, count the tally to get frequency." width={780} height={470} />
+
+Her need is a common one. A <Glossary term="Frequency distribution" /> is a
+table that shows how often each value or each interval of values occurs. It
+turns a raw list into a picture of the data's shape. This topic shows you how
+to build one, step by step.
+
+## Explanation
+
+### What a frequency distribution shows
+
+A frequency distribution table has two essential columns: the **class
+intervals** (the ranges of values) and the **frequency** (the count of data
+points that fall in each interval). Two optional but useful columns are
+**relative frequency** (the proportion of the total in each interval) and
+**cumulative frequency** (the running total).
+
+For the quiz marks above, grouping into intervals of width 5 gives:
+
+| Class interval | Frequency |
+|---|---|
+| 10-14 | 5 |
+| 15-19 | 9 |
+| 20-24 | 10 |
+| 25-29 | 1 |
+
+From this table you can see at a glance that most marks cluster in the 15-24
+range, with the 20-24 interval having the highest count. The raw list did not
+show this so clearly.
+
+### Step-by-step: building a frequency table from raw data
+
+Follow these steps for any small to medium data set.
+
+1. **Sort the data** from smallest to largest. This helps you see the range
+   and spot any values that look unusual.
+2. **Decide the number of intervals.** A common rule of thumb is 5 to 15
+   intervals. With 25 data points, 4 to 6 intervals usually works well. Too few
+   intervals hide the shape; too many leave most intervals empty.
+3. **Set the interval width.** Divide the range (largest value minus smallest)
+   by the number of intervals and round to a convenient number. For the quiz
+   marks, the range is 25 - 11 = 14; with 5 intervals the width is about 3,
+   but a width of 5 gives cleaner intervals.
+4. **Define the intervals** so that every data point falls in exactly one
+   interval. Use non-overlapping boundaries. Write them as "10-14", "15-19",
+   and so on.
+5. **Tally** each data point into its interval. A tally column (using vertical
+   strokes) makes counting easier.
+6. **Count** the tally strokes to get the frequency for each interval.
+
+### Cumulative frequency: a running total
+
+A <Glossary term="Cumulative frequency" /> adds a third column to the table:
+for each interval, it gives the total frequency up to and including that
+interval. It answers the question "how many data points are at or below this
+value?"
+
+For the quiz marks table:
+
+| Class interval | Frequency | Cumulative frequency |
+|---|---|---|
+| 10-14 | 5 | 5 |
+| 15-19 | 9 | 14 |
+| 20-24 | 10 | 24 |
+| 25-29 | 1 | 25 |
+
+The cumulative frequency column tells you that 14 pupils scored 19 or below,
+and 24 scored 24 or below. This is useful when you want to know what proportion
+of the class scored at or below a certain level.
+
+**Common misconception.** Many trainees assume that "frequency tables are only
+for small data sets and are not used in real statistical work." In fact,
+frequency distributions are the foundation of histograms and of the probability
+distributions you will meet in Unit 4. The skill of grouping data into
+intervals and counting frequencies is used throughout statistics, not only in
+classroom exercises.
+
+## Activity: Build a table together
+
+Work in pairs. About 20 minutes.
+
+Use the following data set: the number of books read in the last month by 20
+pupils in a grade 6 class: 3, 5, 2, 7, 4, 6, 3, 8, 1, 5, 4, 6, 2, 7, 3, 5, 4,
+6, 5, 3.
+
+1. Sort the data and find the range.
+2. Decide on a reasonable number of intervals and interval width.
+3. Build the frequency table with class intervals, tally, frequency, and
+   cumulative frequency.
+4. Write one sentence describing what the table tells you about reading
+   habits in this class.
+
+Compare your table with another pair. If your intervals differ, discuss which
+grouping reveals the pattern more clearly.
+
+## Check your understanding
+
+1. *(Remember)* Name the essential columns of a frequency distribution table and the two optional columns mentioned in this topic.
+2. *(Understand)* Explain why a data set of 100 values might need more intervals than a data set of 20 values.
+3. *(Apply)* The following marks (out of 10) were recorded for 16 pupils: 4, 6, 7, 5, 8, 3, 6, 7, 5, 4, 9, 6, 5, 7, 6, 5. Construct a frequency table with intervals of width 2, starting from 2-3. Include a cumulative frequency column.
+
+## Summary
+
+A frequency distribution table groups raw data into intervals and counts how
+many values fall in each. The steps are: sort, choose the number of intervals,
+set the width, tally, and count. Cumulative frequency adds a running total
+that tells you how many values lie at or below each interval. The table reveals
+the shape of the data - where it clusters and how it spreads - far more clearly
+than a raw list.
+
+## Self-assessment checklist
+
+- [ ] I can construct a frequency table from a raw data set.
+- [ ] I can add a cumulative frequency column and interpret what it shows.
+- [ ] I can choose a reasonable number of intervals for a given data set.
+
+## Try this at your practicum school
+
+At your practicum school, collect a small data set of your choice (for example,
+the marks of one class on a recent quiz, or the number of pupils absent each
+day for one week). Build a frequency distribution table and a cumulative
+frequency table. Write two sentences describing what the tables reveal. Bring
+your work to the next session.
+
+## Summative task
+
+The following are the heights (in cm) of 20 pupils in a grade 8 class: 142,
+148, 151, 145, 155, 139, 147, 152, 144, 150, 146, 153, 141, 149, 143, 154,
+140, 156, 138, 151.
+
+Construct a frequency distribution table using intervals of width 5 starting
+from 135-139. Include a frequency column and a cumulative frequency column.
+Then answer: how many pupils are shorter than 150 cm? Write the answer using
+your cumulative frequency column.
+
+**Mini-rubric**
+
+| Criterion | Levels |
+|---|---|
+| *Table construction* | 0-3: intervals correct, frequencies correct, cumulative column correct / two of three correct / one or none. |
+| *Interpretation* | 0-2: correct count of pupils below 150 cm with reference to the cumulative column / correct count without reference / incorrect. |
+
+## Further reading
+
+Lane, D. M. (2023). *Online Statistics Education.* Rice University.
+https://onlinestatbook.com/ - Chapter 2 covers frequency distributions with
+interactive examples.
+
+Illowsky, B., et al. (2020). *Introductory Statistics 2e.* OpenStax.
+https://openstax.org/details/books/introductory-statistics-2e - Section 1.3
+on frequency and cumulative frequency (CC BY 4.0).

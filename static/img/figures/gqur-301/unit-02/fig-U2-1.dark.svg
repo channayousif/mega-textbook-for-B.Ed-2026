@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Population, sample, parameter and statistic</title><desc id="d">A concept map placing Population at the centre, branching into Sample, Parameter and Statistic, with arrows showing the inference direction from sample to population.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700;fill:var(--ink)} .sh{font-size:12px;font-weight:600;fill:var(--ink)} .m{font-size:12px;fill:var(--muted)} .c{text-anchor:middle} .wm{fill:var(--wm);font-size:11px} .b1{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2} .b2{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2} .b3{fill:var(--a3-fill);stroke:var(--a3);stroke-width:2} .b4{fill:var(--a4-fill);stroke:var(--a4);stroke-width:2} .line{stroke:var(--line);stroke-width:2}</style><rect class="bg" x="0" y="0" width="780"/><rect class="bg" x="0" y="0" width="780" height="470"/>
+
+  <!-- Centre: Population -->
+  <rect class="b1" x="310" y="180" width="160" height="50" rx="8"/>
+  <text class="h c" x="390" y="212">Population</text>
+
+  <!-- Sample -->
+  <line class="line" x1="310" y1="205" x2="150" y2="110"/>
+  <rect class="b2" x="70" y="80" width="160" height="45" rx="6"/>
+  <text class="sh c" x="150" y="107">Sample</text>
+  <text class="m c" x="150" y="120">(measured subset)</text>
+
+  <!-- Statistic -->
+  <rect class="b3" x="20" y="155" width="150" height="40" rx="4"/>
+  <text class="sh c" x="95" y="175">Statistic</text>
+  <text class="m c" x="95" y="188">(from sample)</text>
+
+  <!-- Parameter -->
+  <rect class="b2" x="550" y="80" width="170" height="45" rx="6"/>
+  <text class="sh c" x="635" y="107">Parameter</text>
+  <text class="m c" x="635" y="120">(true value, unknown)</text>
+
+  <!-- Inference arrow from sample to population -->
+  <line class="line" x1="150" y1="125" x2="350" y2="190" marker-end="url(#arrow-blue)"/>
+  <text class="m c" x="230" y="145">inference</text>
+
+  <!-- Examples -->
+  <rect class="panel" x="60" y="280" width="200" height="60" rx="4"/>
+  <text class="sh" x="80" y="305">Example</text>
+  <text class="m" x="80" y="325">Population: all 347 schools</text>
+  <text class="m" x="80" y="338">Sample: 30 selected schools</text>
+
+  <rect class="panel" x="510" y="280" width="220" height="60" rx="4"/>
+  <text class="sh" x="530" y="305">Example</text>
+  <text class="m" x="530" y="325">Parameter: true average class size</text>
+  <text class="m" x="530" y="338">Statistic: average of 30 schools</text>
+
+  <!-- Caption -->
+  <rect class="panel" x="30" y="370" width="720" height="80" rx="6"/>
+  <text class="sh" x="50" y="395">Caption: Population, sample, parameter and statistic</text>
+  <text class="m" x="50" y="415">The population is the complete group of interest. The sample is the subset measured.</text>
+  <text class="m" x="50" y="430">A statistic from the sample is used to estimate the population parameter.</text>
+  <text class="m" x="50" y="445">Credit: textbook.com.pk based on Lane (2023) and Illowsky et al. (2020).</text>
+
+  <text class="wm" x="760" y="460" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+
+  <defs>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="var(--line)"/>
+    </marker>
+  </defs>
+</svg>

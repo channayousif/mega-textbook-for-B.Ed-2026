@@ -1,0 +1,167 @@
+---
+title: "Topic 5.1 - Mode, comparison and interpretation"
+description: "Mode, comparison and interpretation: the most frequent value, comparing mean median and mode, and choosing the right measure for the data."
+course_code: GQUR-301
+unit_no: 2
+topic_no: 4
+topic_label: "5.1"
+clo_refs:
+  - "SLO:GQUR-301-2-2"
+blooms_summary: "Remember how to find the mode; understand the relationship between mean median and mode in symmetric and skewed distributions; apply the comparison to choose the best measure for a given data set; analyze a distribution to describe its shape."
+est_reading_minutes: 16
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+import Glossary from '@site/src/components/Glossary';
+
+<PrintHandout />
+
+## A real classroom situation
+
+A teacher records the favourite subject of each pupil in her class of 30: Urdu
+8, Mathematics 12, Science 6, English 3, Social Studies 1. She also has the
+test marks from the last exam and has already computed the mean (38.2) and the
+median (37.5). Now the head teacher asks her: "What is the most popular
+subject?" That is a different question, and neither the mean nor the median
+can answer it. She needs a third measure.
+
+<Figure id="fig-U2-7" kind="diagram" src="/img/figures/gqur-301/unit-02/fig-U2-7.svg" alt="Three distributions side by side: symmetric where mean median and mode are equal, right-skewed where mean is greater than median is greater than mode, and left-skewed where mean is less than median is less than mode, with labels showing the relationship." width={780} height={470} />
+
+<Figure id="fig-U2-8" kind="table" src="/img/figures/gqur-301/unit-02/fig-U2-8.svg" alt="Table comparing when to use mean, median and mode by data type and distribution shape, with school examples." width={780} height={470} />
+
+This topic completes the set of central tendency measures and shows you how to
+choose between them.
+
+## Explanation
+
+### The mode: the most frequent value
+
+The <Glossary term="Mode" /> is the value that occurs most frequently in a
+data set. To find the mode:
+
+1. **Tally** the frequency of each value (or each interval, for grouped data).
+2. **Identify** the value with the highest frequency.
+
+For the favourite subjects data: Mathematics occurs 12 times, more than any
+other subject. The mode is Mathematics.
+
+A data set can have one mode (unimodal), two modes (bimodal), or more
+(multimodal). If every value occurs the same number of times, there is no
+mode. The mode is the only measure of central tendency that can be used with
+qualitative data - you cannot compute a mean or median for "Urdu" and
+"Mathematics", but you can say which subject occurs most often.
+
+### Mean, median and mode: the symmetry story
+
+In a perfectly symmetric distribution, the mean, median and mode are all
+equal. As a distribution becomes skewed, they diverge in a predictable way:
+
+- **Right-skewed** (long tail to the right): mean > median > mode.
+  The mean is pulled toward the high outliers.
+- **Left-skewed** (long tail to the left): mean < median < mode.
+  The mean is pulled toward the low outliers.
+
+This relationship is useful because it gives you a quick check: if you compute
+the three measures and find mean = 45, median = 38, mode = 32, you know the
+distribution is right-skewed without drawing a graph.
+
+### Choosing the right measure: a decision guide
+
+| Situation | Best measure | Why |
+|---|---|---|
+| Quantitative data, symmetric, no outliers | Mean | Uses all information; basis for later inference |
+| Quantitative data, skewed or with outliers | Median | Robust to extremes |
+| Qualitative (categorical) data | Mode | Only measure that applies |
+| You want the most typical category | Mode | Tells you what is most common |
+| Income, house prices, test marks with a few extremes | Median | Prevents outliers from distorting the picture |
+
+### Worked example: comparing all three
+
+**Data:** test marks (out of 10) of 12 pupils: 4, 5, 6, 6, 7, 7, 7, 8, 8, 9, 9, 4.
+
+**Mode:** 7 occurs three times (most frequent). Mode = 7.
+
+**Median:** *n* = 12 (even). Average of 6th and 7th values: (7 + 7) / 2 = 7.
+
+**Mean:** Sum = 4 + 5 + 6 + 6 + 7 + 7 + 7 + 8 + 8 + 9 + 9 + 4 = 80. Mean = 80 / 12 = 6.67.
+
+Here the mean (6.67) is slightly below the median and mode (both 7) because the
+two low values (4, 4) pull the mean down. The distribution is slightly
+left-skewed.
+
+**Common misconception.** Many trainees think "if the data are numbers, you
+should always report the mean". This is not true. For qualitative data the mode
+is the only option. For skewed quantitative data the median is often more
+honest. The best practice is to compute all three when possible and let the
+comparison tell you about the shape of the distribution.
+
+## Activity: Find all three measures
+
+Work in pairs. About 15 minutes.
+
+Use the following data set: the number of siblings of 15 pupils in a class:
+0, 1, 1, 2, 2, 2, 2, 3, 3, 3, 4, 4, 5, 6, 8.
+
+1. Compute the mean (show your work).
+2. Compute the median (show your work).
+3. Find the mode.
+4. Compare the three values. Is the distribution roughly symmetric,
+   right-skewed or left-skewed? Write one sentence explaining your reasoning.
+
+Compare your results with another pair. If your answers differ, re-check the
+calculations together.
+
+## Check your understanding
+
+1. *(Remember)* Define the mode in your own words and explain when it is the only applicable measure of central tendency.
+2. *(Understand)* A data set has mean = 25, median = 28, mode = 30. Is the distribution left-skewed or right-skewed? Explain your reasoning.
+3. *(Apply)* A shopkeeper records the shoe size of the last 20 customers: 7, 8, 8, 8, 9, 9, 9, 9, 10, 10. Which measure of central tendency best represents the typical shoe size and why?
+
+## Summary
+
+The mode is the most frequent value and is the only measure that works for
+qualitative data. In symmetric distributions mean, median and mode are equal; in
+skewed distributions they diverge predictably. The best measure depends on the
+data type and the shape of the distribution: mean for symmetric quantitative
+data, median for skewed data, mode for categorical data or when you want the
+most common value.
+
+## Self-assessment checklist
+
+- [ ] I can find the mode of a data set.
+- [ ] I can explain the relationship between mean, median and mode in skewed distributions.
+- [ ] I can choose the appropriate measure of central tendency for a given data set.
+
+## Try this at your practicum school
+
+At your practicum school, collect one quantitative data set (for example, test
+marks) and one qualitative data set (for example, favourite subject). For the
+quantitative set, compute all three measures and describe the shape. For the
+qualitative set, find the mode. Bring your findings to the next session.
+
+## Summative task
+
+The following are the ages (in years) of 10 teachers at a school: 28, 35, 42,
+31, 38, 45, 29, 33, 40, 32.
+
+a) Compute the mean, median and mode.
+b) Write a short paragraph (80-120 words) describing what the comparison of
+   the three measures tells you about the shape of this distribution. Based on
+   your analysis, which measure would you report as the "typical" age and why?
+
+**Mini-rubric**
+
+| Criterion | Levels |
+|---|---|
+| *Computation* | 0-3: mean, median and mode all correct / two correct / one or none. |
+| *Interpretation* | 0-3: correct description of shape with correct reasoning linking the three measures / partial / none. |
+
+## Further reading
+
+Lane, D. M. (2023). *Online Statistics Education.* Rice University.
+https://onlinestatbook.com/ - Chapter 3 covers the mode and comparing measures.
+
+Illowsky, B., et al. (2020). *Introductory Statistics 2e.* OpenStax.
+https://openstax.org/details/books/introductory-statistics-2e - Section 2.3 on
+measures of central tendency (CC BY 4.0).

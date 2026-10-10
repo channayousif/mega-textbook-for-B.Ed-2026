@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">When to use mean, median and mode</title><desc id="d">Table comparing when to use mean, median and mode by data type and distribution shape, with school examples.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700;fill:var(--ink)} .sh{font-size:12px;font-weight:600;fill:var(--ink)} .m{font-size:12px;fill:var(--muted)} .c{text-anchor:middle} .wm{fill:var(--wm);font-size:11px} .b1{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2} .b2{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2} .b3{fill:var(--a3-fill);stroke:var(--a3);stroke-width:2} .b4{fill:var(--a4-fill);stroke:var(--a4);stroke-width:2} .line{stroke:var(--line);stroke-width:2}</style><rect class="bg" x="0" y="0" width="780"/><rect class="bg" x="0" y="0" width="780" height="470"/>
+
+  <text class="h" x="30" y="28">When to use each measure of central tendency</text>
+
+  <!-- Header -->
+  <rect class="hb" x="20" y="40" width="740" height="28" rx="4"/>
+  <line class="bd" x1="200" y1="40" x2="200" y2="68"/>
+  <line class="bd" x1="420" y1="40" x2="420" y2="68"/>
+  <text class="h c" x="110" y="59">Situation</text>
+  <text class="h c" x="310" y="59">Best measure</text>
+  <text class="h c" x="580" y="59">Why</text>
+
+  <!-- Row 1 -->
+  <rect class="row1" x="20" y="68" width="740" height="45"/>
+  <line class="bd" x1="200" y1="68" x2="200" y2="113"/>
+  <line class="bd" x1="420" y1="68" x2="420" y2="113"/>
+  <text class="sh c" x="110" y="88">Quantitative, symmetric,</text>
+  <text class="sh c" x="110" y="102">no outliers</text>
+  <text class="sh c" x="310" y="95">Mean</text>
+  <text class="m c" x="580" y="88">Uses all information;</text>
+  <text class="m c" x="580" y="102">basis for later inference</text>
+
+  <!-- Row 2 -->
+  <rect class="row2" x="20" y="113" width="740" height="45"/>
+  <line class="bd" x1="200" y1="113" x2="200" y2="158"/>
+  <line class="bd" x1="420" y1="113" x2="420" y2="158"/>
+  <text class="sh c" x="110" y="133">Quantitative, skewed</text>
+  <text class="sh c" x="110" y="147">or with outliers</text>
+  <text class="sh c" x="310" y="140">Median</text>
+  <text class="m c" x="580" y="133">Robust to extremes;</text>
+  <text class="m c" x="580" y="147">not pulled by outliers</text>
+
+  <!-- Row 3 -->
+  <rect class="row1" x="20" y="158" width="740" height="45"/>
+  <line class="bd" x1="200" y1="158" x2="200" y2="203"/>
+  <line class="bd" x1="420" y1="158" x2="420" y2="203"/>
+  <text class="sh c" x="110" y="178">Qualitative</text>
+  <text class="sh c" x="110" y="192">(categorical) data</text>
+  <text class="sh c" x="310" y="185">Mode</text>
+  <text class="m c" x="580" y="178">Only measure that</text>
+  <text class="m c" x="580" y="192">applies to categories</text>
+
+  <!-- Row 4 -->
+  <rect class="row2" x="20" y="203" width="740" height="45"/>
+  <line class="bd" x1="200" y1="203" x2="200" y2="248"/>
+  <line class="bd" x1="420" y1="203" x2="420" y2="248"/>
+  <text class="sh c" x="110" y="223">Want the most</text>
+  <text class="sh c" x="110" y="237">typical category</text>
+  <text class="sh c" x="310" y="230">Mode</text>
+  <text class="m c" x="580" y="223">Tells you what is</text>
+  <text class="m c" x="580" y="237">most common</text>
+
+  <!-- Row 5 -->
+  <rect class="row1" x="20" y="248" width="740" height="45"/>
+  <line class="bd" x1="200" y1="248" x2="200" y2="293"/>
+  <line class="bd" x1="420" y1="248" x2="420" y2="293"/>
+  <text class="sh c" x="110" y="268">Income, house prices,</text>
+  <text class="sh c" x="110" y="282">marks with extremes</text>
+  <text class="sh c" x="310" y="275">Median</text>
+  <text class="m c" x="580" y="268">Prevents outliers from</text>
+  <text class="m c" x="580" y="282">distorting the picture</text>
+
+  <!-- Caption -->
+  <rect x="20" y="320" width="740" height="100" rx="6" fill="var(--panel)" stroke="var(--line)" stroke-width="1"/>
+  <text class="sh" x="40" y="345">Caption: Decision guide for choosing a measure of central tendency</text>
+  <text class="m" x="40" y="365">There is no single correct measure. The right choice depends on the data type and the</text>
+  <text class="m" x="40" y="380">shape of the distribution. When in doubt, compute all three and let the comparison guide you.</text>
+  <text class="m" x="40" y="395">School example: for a skewed distribution of test marks with a few very low scores,</text>
+  <text class="m" x="40" y="410">report the median to avoid the low outliers pulling the average down. Credit: textbook.com.pk.</text>
+
+  <text class="wm" x="760" y="455" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

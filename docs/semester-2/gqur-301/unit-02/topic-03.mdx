@@ -1,0 +1,176 @@
+---
+title: "Topic 4.1 - Mean and median"
+description: "Mean and median: computing the arithmetic average and the middle value, with worked examples using Pakistani classroom data."
+course_code: GQUR-301
+unit_no: 2
+topic_no: 3
+topic_label: "4.1"
+clo_refs:
+  - "SLO:GQUR-301-2-2"
+blooms_summary: "Remember the formulas for mean and median; understand what each measures and how outliers affect them; apply the computation to raw data sets; analyze which measure best describes the centre of a skewed distribution."
+est_reading_minutes: 16
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+import Glossary from '@site/src/components/Glossary';
+
+<PrintHandout />
+
+## A real classroom situation
+
+A teacher has recorded the marks (out of 20) of 10 pupils on a short quiz:
+12, 14, 15, 16, 17, 17, 18, 18, 19, 3. One pupil scored only 3. The teacher
+wants to report a single number that represents how the class did. She adds the
+marks, divides by 10, and gets 14.9. But she knows that 14.9 does not feel right
+- most pupils scored 15 or above. The one very low mark is pulling the average
+down. She wonders if there is a better way to describe the class's centre.
+
+<Figure id="fig-U2-5" kind="diagram" src="/img/figures/gqur-301/unit-02/fig-U2-5.svg" alt="A number line showing the 10 quiz marks as dots, with the mean marked at 14.9 and the median at 17, showing how the low outlier pulls the mean left." width={780} height={470} />
+
+<Figure id="fig-U2-6" kind="table" src="/img/figures/gqur-301/unit-02/fig-U2-6.svg" alt="A worked table computing the mean and median step by step from the 10 quiz marks: sorted values, sum, count, mean formula; then median position and value." width={780} height={470} />
+
+Her instinct is correct. This topic gives you two measures of central tendency
+- the mean and the median - and the tools to decide which one to report.
+
+## Explanation
+
+### The mean: the arithmetic average
+
+The <Glossary term="Mean" /> (often called the arithmetic average) is the sum
+of all values divided by the number of values.
+
+$$\bar{x} = \frac{\sum x_i}{n}$$
+
+For the quiz marks:
+
+$$\bar{x} = \frac{12 + 14 + 15 + 16 + 17 + 17 + 18 + 18 + 19 + 3}{10} = \frac{149}{10} = 14.9$$
+
+The mean uses every value in the data set. This is both its strength and its
+weakness: the mean uses all the information, but it is sensitive to extreme
+values. The mark of 3 pulls the mean down by about 1.2 points compared to what
+it would be without that one value.
+
+### The median: the middle value
+
+The <Glossary term="Median" /> is the middle value when the data are arranged
+in order. To find the median:
+
+1. **Sort** the data from smallest to largest.
+2. **Count** the number of values, *n*.
+3. If *n* is **odd**, the median is the value at position (*n* + 1) / 2.
+4. If *n* is **even**, the median is the average of the two middle values
+   (positions *n* / 2 and *n* / 2 + 1).
+
+For the quiz marks (sorted): 3, 12, 14, 15, 16, 17, 17, 18, 18, 19.
+
+*n* = 10 (even), so the median is the average of the 5th and 6th values:
+(16 + 17) / 2 = 16.5.
+
+The median is 16.5, much closer to where most of the marks sit. The one low
+mark of 3 barely affects the median because the median only cares about the
+middle position, not the actual values at the extremes.
+
+### Worked example: computing mean and median together
+
+**Data:** test marks (out of 50) of 8 pupils: 28, 35, 42, 38, 45, 31, 40, 36.
+
+**Step 1: Sort the data.** 28, 31, 35, 36, 38, 40, 42, 45.
+
+**Step 2: Compute the mean.** Sum = 28 + 31 + 35 + 36 + 38 + 40 + 42 + 45 = 295.
+*n* = 8. Mean = 295 / 8 = 36.875.
+
+**Step 3: Find the median.** *n* = 8 (even), so the median is the average of
+the 4th and 5th values: (36 + 38) / 2 = 37.
+
+**Result:** Mean = 36.875, Median = 37. In this data set the two measures are
+close because the data are roughly symmetric with no extreme outliers.
+
+### When to use which
+
+- **Use the mean** when the data are roughly symmetric with no extreme
+  outliers. The mean uses all the information and is the basis for many later
+  statistical techniques.
+- **Use the median** when the data are skewed or contain outliers. The median
+  is robust - it is not pulled by extreme values.
+- **Report both** when they differ, because the gap between them tells the
+  reader about the shape of the distribution.
+
+**Common misconception.** Many trainees think "the mean is always the right
+answer for the average". The mean is the default, but when a distribution is
+skewed (for example, income data, where a few very high incomes pull the mean
+up), the median gives a more honest picture of the typical value. There is no
+single "correct" measure - the right choice depends on the shape of the data
+and the question you are answering.
+
+## Activity: Compute mean and median from your own data
+
+Work in pairs. About 20 minutes.
+
+Collect a small data set of your choice from your college or practicum school.
+For example: the ages of 10 pupils in a class, the number of books read in the
+last month by 10 pupils, or the heights (in cm) of 10 classmates.
+
+1. Record the raw data.
+2. Sort the data and compute the mean.
+3. Sort the data and compute the median.
+4. Compare the two. If they differ, explain why (look for outliers or skewness).
+5. Write one sentence saying which measure better represents the centre of
+   your data and why.
+
+Share your findings with another pair. Discuss whether the mean or median was
+more representative and why.
+
+## Check your understanding
+
+1. *(Remember)* State the formula for the mean in words and in symbols.
+2. *(Understand)* Explain why the median is described as "robust" while the mean is "sensitive to outliers".
+3. *(Apply)* The following salaries (in thousands of rupees per month) are recorded for 9 employees: 25, 28, 30, 32, 35, 38, 40, 45, 200. Compute both the mean and the median. Which measure better represents the typical salary and why?
+
+## Summary
+
+The mean is the arithmetic average (sum divided by count) and uses every value.
+The median is the middle value when data are sorted and is robust to outliers.
+For symmetric data without outliers the two are similar; for skewed data or
+data with outliers the median is often more representative. Reporting both
+gives the reader the fullest picture of the centre.
+
+## Self-assessment checklist
+
+- [ ] I can compute the mean of a raw data set.
+- [ ] I can compute the median of a raw data set (both odd and even *n*).
+- [ ] I can explain when the median is preferred over the mean.
+
+## Try this at your practicum school
+
+At your practicum school, obtain a set of 10 to 15 test marks from one class.
+Compute the mean and median. Compare them and write two sentences explaining
+which measure better represents the class's performance and why. Bring your
+calculations to the next session.
+
+## Summative task
+
+The following are the monthly incomes (in thousands of rupees) of 11 families
+in a neighbourhood: 18, 22, 25, 28, 30, 32, 35, 38, 40, 45, 120.
+
+a) Compute the mean income.
+b) Compute the median income.
+c) Write a short paragraph (80-120 words) explaining which measure better
+   represents the typical family income in this neighbourhood and why. In your
+   paragraph, identify the outlier and describe its effect on the mean.
+
+**Mini-rubric**
+
+| Criterion | Levels |
+|---|---|
+| *Computation* | 0-3: mean correct, median correct, outlier identified / two of three / one or none. |
+| *Explanation* | 0-3: clear explanation of which measure is more representative with correct reasoning about the outlier / partial explanation / none. |
+
+## Further reading
+
+Lane, D. M. (2023). *Online Statistics Education.* Rice University.
+https://onlinestatbook.com/ - Chapter 3 covers measures of central tendency.
+
+Illowsky, B., et al. (2020). *Introductory Statistics 2e.* OpenStax.
+https://openstax.org/details/books/introductory-statistics-2e - Section 2.3 on
+the mean and median (CC BY 4.0).
