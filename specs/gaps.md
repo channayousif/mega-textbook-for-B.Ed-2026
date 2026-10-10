@@ -1590,3 +1590,123 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 **Date:** 2026-10-04
 
 The generated raster illustration `fig-U4-12.webp` places the teacher at the front beside the board, which contradicts its prompt specifying a landscape scene of a male teacher "at the back of his own classroom". A repair or regeneration is needed before G3 can pass.
+
+---
+
+## Intake evaluation, EFMP-303 (2026-10-10)
+
+Recorded by `agent:evaluator` under `D-2026-0048`, bound to
+`intake/EFMP-303/manifest.json`, manifest digest
+`7888898df5da901f1daf58251556809aa8ce0c04f8412fb267445b99694a3805`, at commit `2452929d`. The
+spec was drafted by the Paperclip BilingualAuthor agent, not by this evaluator. All six units were
+authored before intake and the spec had been self-set to `status: approved` without an intake
+decision; the board reverted it to `draft` (`2452929d`). The authored units were read as context
+only and are not judged here.
+
+## G-2026-77 - EFMP-303 intake: the six-unit partition is the spec's construction over a guide that gives only a week table
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G0 intake / G1 unit-spec (`partition` criterion)
+- **Source:** `D-2026-0048`
+- **Detail:** The EFMP-303 guide block (`Scheme-and-Course-guides/extracted-text/2nd 2026.txt:1171-1358`)
+  lays its contents out under explicit week headings only, Week 1 (`:1215`) through Week 16
+  (`:1343`), three bullets per teaching week for Weeks 1-15 and a review week at 16. It carries
+  **no unit headings of any kind**. The spec groups the weeks into six units:
+  Weeks 1-2 -> Unit 1, 3-5 -> Unit 2, 6-8 -> Unit 3, 9-10 -> Unit 4, 11-12 -> Unit 5,
+  13-15 -> Unit 6 (read from each unit's "Topics (from guide Weeks N-M)" line, `content-spec.md:111`,
+  `:176`, `:238`, `:300`, `:355`, `:414`, and from the `Guide ref` column of every checklist).
+
+  What the guide **does** determine, verified mechanically on this run: the merge uses contiguous
+  whole weeks in guide order, no week is split across units, every one of the 45 Week 1-15
+  bullets lands in exactly one unit, and the unit titles track the guide's own week headings.
+
+  What the guide does **not** determine: the number of units (six) and the block boundaries. Any
+  contiguous merge is equally consistent with a week table. The spec states no basis for its
+  merge beyond "the task's unit plan" (`:77-78`), which is not a bound input. This is the
+  `G-2026-22` (GNAS-301) and `G-2026-52` (EFMP-301) condition exactly, and the partition
+  criterion's text for week-table-only guides requires escalation.
+- **Needed, and from whom:** the curriculum owner, to confirm the six-block merge
+  (2/3/3/2/2/3 teaching weeks across Units 1 to 6, as above) or supply another partition.
+- **Blocks:** the `partition` criterion of `D-2026-0048`, and therefore the spec's move to
+  `status: approved`. If the owner supplies a different partition, every per-unit block
+  (checklists, topic lists, figure plans, blueprints) must be re-cut and re-evaluated.
+
+## G-2026-78 - EFMP-303's `## Week schedule` says the guide has no week table, and its calendar contradicts the guide's
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G0 intake / G1 unit-spec (`partition` calendar, `structure`, `decision-residue` against `D-2026-0012`)
+- **Source:** `D-2026-0048`
+- **Detail:** `content-spec.md:77-78` states "The guide carries no week table. The distribution
+  below follows the task's unit plan across a 16-week term: 3/3/3/2/3/2 across Units 1 to 6."
+  The first sentence is false: the guide gives a full sixteen-week table at `2nd 2026.txt:1215-1347`.
+  The calendar that follows (`:80-87`, and the opening "Weeks N-M" line of every unit at `:105`,
+  `:170`, `:231`, `:295`, `:349`, `:407`) assigns Unit 1 to Weeks 1-3, Unit 2 to 4-6, Unit 3 to
+  7-9, Unit 4 to 10-11, Unit 5 to 12-14 and Unit 6 to 15-16. That contradicts the guide, which
+  teaches Unit 1's content in Weeks 1-2 and puts Unit 2's early policies in Week 3 (`:1233`), and
+  it contradicts the spec's own `Guide ref` column and its own "Topics (from guide Weeks N-M)"
+  lines, which follow the guide correctly. Two calendars now sit in one spec, one of them the
+  guide's and one from an unbound task document.
+
+  `D-2026-0012` (confirmed, corpus-wide) permits a guide-silent course to record the section as
+  guide-silent or as a labelled derivation, and forbids presenting an invented calendar as though
+  the guide supplied it. This spec has the inverse defect: it applies the guide-silent pattern to
+  a course whose guide is not silent and substitutes an outside calendar for the guide's.
+
+  The guide's **Week 16** ("Course review", `:1345`; "Student presentations and discussions",
+  `:1347`) is not routed anywhere. The spec's `## Course review plan` (`:89-101`) plausibly serves
+  the first slot but does not say so; the second slot appears nowhere. `D-2026-0043` item 2 shows
+  the accepted pattern: route the review slot to the course review and disclose it.
+- **Needed, and from whom:** the curriculum owner, to say which calendar governs: the guide's week
+  table (which the evidence supports, and which would make Unit 1 = Weeks 1-2 ... Unit 6 = Weeks
+  13-15, with Week 16 as course review), or the "task's unit plan" 3/3/3/2/3/2, if the board did
+  issue that plan as an override. The evaluator cannot tell whether the task plan carries owner
+  authority, so it does not decide this. Also needed: how Week 16's "student presentations and
+  discussions" is recorded (routed to the course review, or disclosed as an in-class activity
+  outside the textbook). After the ruling the author corrects `:77-87` and the six "Weeks N-M"
+  lines; the evaluator does not repair the spec.
+- **Blocks:** `## Week schedule`, the six "Weeks N-M" unit opening lines, and the spec's move to
+  `status: approved`. Depends on `G-2026-77` for the unit boundaries.
+
+## G-2026-79 - EFMP-303 reading list: three of five entries do not resolve as printed, both policy locators are false, and the open-access floor is declared as zero
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G0 intake (`readings` criterion)
+- **Source:** `D-2026-0048`
+- **Detail:** The guide lists four recommended readings (`2nd 2026.txt:1349-1357`). The spec
+  transcribes them as five keys, splitting "National Education Policies (2009 & 2017)" into two
+  (`content-spec.md:60-66`), which is a faithful reading. The evaluator checked each entry
+  independently on 2026-10-10 (Open Library search API, web search, direct HTTP; none of these
+  are bound inputs):
+
+  | Key | Guide line | Verification |
+  |---|---|---|
+  | `nep2009` | `:1351` | **resolves** to a real work (Government of Pakistan, Ministry of Education, 2009), attested in the literature and hosted at itacec.org and planipolis. Neither copy was retrievable from this host (itacec HTTP 401, the same refusal `D-2026-0001` records; planipolis served a bot challenge). The spec's locator `https://moe.gov.pk` is **false**: it serves a page titled "MoFEPT Skills Courses - Cisco NetAcad Free Enrollment", not the policy, so the spec's "open-access PDF from the Ministry" note is unsupported |
+  | `nep2017` | `:1351` | **resolves** to a real work (Ministry of Federal Education and Professional Training). The ministry's copy is filed at a URL naming it "Draft National Educaiton Policy 2017"; whether a final edition supersedes the draft is unestablished. The spec's locator `https://mofept.gov.pk` is a bare domain and did not connect from this host |
+  | `unesco-epg` | `:1353` | **does not resolve as printed**. There is no Open Library match for "Education Planning and Policy Guidelines" and web search finds no UNESCO or IIEP work with that title. IIEP publishes related but different titles. The spec gives no year and links only the IIEP homepage. The bound `sources/` files bind this one key to **two different IIEP web pages** (Units 1 and 3: "What is educational planning?", as an open-access substitute; Unit 4: "Planning education, building the future", as guide-required), so the key does not name one work |
+  | `andrabi-pak` | `:1355` | **does not resolve as printed**. No Open Library title match; Open Library's T. R. S. Andrabi records are economics working papers (for example *Religious school enrollment in Pakistan*, 2005); web search finds nothing. No year, no publisher |
+  | `khan2018` | `:1357` | **does not resolve as printed**. No Open Library title match (the nearest is K. Bengali, *History of educational policy making and planning in Pakistan*, SDPI 1999); web search finds nothing. "Khan, A." is too common to identify |
+
+  So **two of five** spec entries are real works, neither retrievable here at a document URL, and
+  **three of five** do not resolve. By the spec's `**Mapped readings**` lines, **Units 1, 3 and 4
+  map only to entries that do not resolve** (U1 `unesco-epg`, `andrabi-pak`; U3 the same pair;
+  U4 `unesco-epg` only), so those units have no verified guide reading at all.
+
+  `D-2026-0001` covers sources that exist but cannot be retrieved. It does not cover works that
+  may not exist, and `G-2026-23` (GNAS-301) needed an owner ruling for that case. The spec's own
+  remedy is a floor, "Each unit MUST bind at least one verifiable open-access source before
+  authoring" (`:70-73`), but its front matter declares `open_access_floor` as **0 for every unit
+  and the default** (`:4-11`). `check:source-floor` therefore passes EFMP-303 without checking
+  anything (exit 0 on this run). Prose and front matter contradict each other, and the floor is
+  unadopted: `D-2026-0013`'s Limits make it a precedent only, and `D-2026-0021` shows that
+  adopting one is an owner act.
+- **Needed, and from whom:** the curriculum owner, to (a) confirm that `unesco-epg`,
+  `andrabi-pak` and `khan2018` are flagged as unresolvable with title-level support at most, or
+  supply the real works the guide means; (b) adopt an open-access floor per unit for EFMP-303
+  (the spec's prose proposes at least one per unit; the `D-2026-0013` and `D-2026-0021`
+  precedents used two for the units that lean on unopenable books), adopt it with other numbers,
+  or decline it; and (c) direct that the adopted floor be declared in `open_access_floor` front
+  matter so `check:source-floor` enforces it. Author repairs needing no ruling: replace the two
+  policy locators with document-level URLs that actually serve the policies, and settle
+  `unesco-epg` on one identified work.
+- **Blocks:** the `readings` criterion of `D-2026-0048`; the `**Mapped readings**` lines of all
+  six units (Units 1, 3 and 4 most of all), and the spec's move to `status: approved`.

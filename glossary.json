@@ -1677,6 +1677,156 @@
  {
   "term": "Cogency",
   "definition_en": "The property of an inductive argument that is both strong and has all true premises. A cogent argument is one you can rely on to reach a probably-true conclusion.",
-  "definition_ur": "ایک اس دلیل کا خاصہ جو مضبوط ہو اور اس کی تمام پریمیسز درست ہوں۔ ایک کوجینٹ دلیل وہ ہے جس پر بھروسہ کر کے غالبا درست نتیجہ اخذ کیا جا سکتا ہے۔"
+  "definition_ur": "ایک اس دلیل کا خاصہ جو مضبوط ہو اور اس کی تمام پریMیسز درست ہوں۔ ایک کوجینٹ دلیل وہ ہے جس پر بھروسہ کر کے غالبا درست نتیجہ اخذ کیا جا سکتا ہے۔"
+ },
+ {
+  "term": "Accreditation",
+  "definition_en": "The formal process by which an institution or programme is judged to meet a set of defined quality standards, usually involving self-evaluation, external review and periodic renewal.",
+  "definition_ur": "وہ رسمی عمل جس کے ذریعے کسی ادارے یا پروگرام کا تعین کیا جاتا ہے کہ وہ متعین معیارات کے معیار پر پورا اترتا ہے، جس میں عام طور پر خود تشخیص، بیرونی جائزہ اور وقت پر تجدید شامل ہوتی ہے۔"
+ },
+ {
+  "term": "Standardization",
+  "definition_en": "The process of setting common standards for what students should learn and be able to do at each level, while leaving teaching methods to teachers' professional judgment.",
+  "definition_ur": "وہ عمل جس میں ہر سطح پر اس بات کے عام معیارات طے کیے جاتے ہیں کہ شاگرد کیا سیکھیں اور کیا کر سکتے ہیں، جبکہ تدریسی طریقے اساتذہ کے پیشہ ورانہ فیصلے پر چھوڑے جاتے ہیں۔"
+ },
+ {
+  "term": "Human capital",
+  "definition_en": "The stock of knowledge, skills and abilities that a person has and that make them productive in economic life, built largely through education and training.",
+  "definition_ur": "علم، مہارت اور صلاحیتوں کا وہ ذخیرہ جو کسی شخص کے پاس ہوتا ہے اور جو اسے معاشی زندگی میں پیداواری بناتا ہے، جو زیادہ تر تعلیم اور تربیت سے تشکیل پاتا ہے۔"
+ },
+ {
+  "term": "Teacher training",
+  "definition_en": "The formal preparation of teachers, both before they enter the profession (pre-service) and during their careers (in-service), aimed at building the knowledge and skills needed for effective teaching.",
+  "definition_ur": "اساتذہ کی رسمی تیاری، ہ انہیں پیشے میں داخل ہونے سے پہلے (قبل از خدمت) اور کیریئر کے دوران (دوران servicے) کی جاتی ہے، جس کا مقصد مؤثر تدریس کے لیے درکار علم اور مہارت کی تعمیر ہے۔"
+ },
+ {
+  "term": "Development plan",
+  "definition_en": "A multi-sector government document that sets economic and social goals with budgets for a fixed period, typically five years.",
+  "definition_ur": "حکومت کی ایک کثیر شعبہ دستاویز جو مقررہ مدت، عام طور پر پنج سال، کے لیے معاشی اور سماجی اہداف اور بجٹ مقرر کرتی ہے۔"
+ },
+ {
+  "term": "Five-year plan",
+  "definition_en": "A development plan covering a five-year period; Pakistan has used five-year plans as its main planning instrument since 1955.",
+  "definition_ur": "پنج سالہ مدت پر مبنی ترقی منصوبہ؛ پاکستان نے 1955 سے پنج سالہ منصوبوں کو اپنا بنیادی منصوبہ بندی کا آلہ بنایا ہے۔"
+ },
+ {
+  "term": "Macro planning",
+  "definition_en": "Planning at the district, provincial or national level that deals with the education system as a whole.",
+  "definition_ur": "ضلعی، صوبائی یا قومی سطح کی منصوبہ بندی جو تعلیمی نظام کو بطور کل سامنے رکھتی ہے۔"
+ },
+ {
+  "term": "Micro planning",
+  "definition_en": "Planning at the school or institutional level that focuses on the detailed running of a school.",
+  "definition_ur": "مدرسہ یا ادارے کی سطح کی منصوبہ بندی جو کسی مدرسے کے تفصیلی انتظام پر توجہ مرکوز کرتی ہے۔"
+ },
+ {
+  "term": "Strategic planning",
+  "definition_en": "Focused, time-bound planning that addresses a specific problem or goal within a defined scope.",
+  "definition_ur": "مرکوز اور وقت پر مبنی منصوبہ بندی جو مقررہ دائرے میں کسی مخصوص مسئلے یا ہدف کو حل کرتی ہے۔"
+ },
+ {
+  "term": "Needs assessment",
+  "definition_en": "The systematic process of collecting and analysing data to identify gaps between the current state and the desired state.",
+  "definition_ur": "موجودہ صورتحال اور مطلوبہ صورتحال کے درمیان خلیج کی نشاندہی کے لیے اعداد و شمار اکٹھا کرنے اور تجزیہ کرنے کا منظم عمل۔"
+ },
+ {
+  "term": "Resource allocation",
+  "definition_en": "The process of deciding how funds, people, materials and time are distributed to achieve planned goals.",
+  "definition_ur": "منصوبہ بندی شدہ اہداف کے حصول کے لیے یہ فیصلہ کرنے کا عمل کہ فنڈ، افراد، سامان اور وقت کیسے تقسیم ہوں۔"
+ },
+ {
+  "term": "Monitoring",
+  "definition_en": "The regular collection of information about an education program or policy while it is running, to check whether it is happening as planned.",
+  "definition_ur": "تعلیمی پروگرام یا پالیسی کے دوران اس بارے باقاعدگی سے معلومات اکٹھا کرنا، یہ دیکھنے کے لیے کہ کیا یہ منصوبہ کے مطابق ہو رہا ہے۔"
+ },
+ {
+  "term": "Evaluation",
+  "definition_en": "A periodic, deeper judgement of whether an education program is achieving its goals and whether it is worth the resources spent on it.",
+  "definition_ur": "تعلیمی پروگرام کا وقفوں پر گہرا جائزہ لینا، یہ دیکھنے کے لیے کہ کیا یہ اپنے اہداف کے قابل ہے اور کیا اس پر خرچ کردہ وسائل کی قیمت سے فائدہ ہے۔"
+ },
+ {
+  "term": "Tool",
+  "definition_en": "In monitoring and evaluation, any instrument used to collect or organise data about a program, such as an attendance register, a test result, a school visit checklist or a budget report.",
+  "definition_ur": "نگرانی اور جائزہ میں کوئی بھی آلہ جو کسی پروگرام کے بارے میں اعداد و شمار اکٹھا کرنے یا ترتیب دینے کے لیے استعمال ہوتا ہے، جیسے حاضری رجسٹر، ٹیسٹ کے نتائج، سکول دورے کی چیک لسٹ یا بجٹ رپورٹ۔"
+ },
+ {
+  "term": "Financial constraint",
+  "definition_en": "A barrier to policy implementation caused by funds that are insufficient, released late, or not spent as intended before reaching schools.",
+  "definition_ur": "پالیسی کے نفاذ میں رکاوت جو اس وجہ سے پیدا ہوتی ہے کہ فنڈ ناکافی ہوں، تاخیر سے جاری ہوں، یا سکولوں تک پہنچنے سے پہلے مقررہ مقصد پر خرچ نہ ہوں۔"
+ },
+ {
+  "term": "Political instability",
+  "definition_en": "Frequent changes in government, ministerial appointments or policy direction that disrupt long-term education programs before they can produce results.",
+  "definition_ur": "حکومت، وزیرانہ تقرریوں یا پالیسی کی سمت میں بار بار تبدیلیاں جو طویل مدتی تعلیمی پروگراموں کو اس سے پہلے متاثر کرتی ہیں کہ وہ نتائج پیدا کر سکیں۔"
+ },
+ {
+  "term": "Bureaucracy",
+  "definition_en": "The rules, procedures and administrative structures through which government work is carried out, which can become a challenge when they slow down action or weaken coordination.",
+  "definition_ur": "وہ قواعد، طریقہ کار اور انتظامی ڈھانچہ جن کے ذریعے سرکاری کام انجام پاتا ہے، جو اس وقت رکاوت بن جاتا ہے جب وہ عمل کو سست کرے یا ہم آہنگی کمزور کرے۔"
+ },
+ {
+  "term": "Educational policy",
+  "definition_en": "A statement of what the government or an institution wants to achieve in education and the principles it will follow to get there.",
+  "definition_ur": "ایک بیان جو حکومت یا کوئi ادارہ تعلیم میں کیا حاصل کرنا چاہتا ہے اور کس اصولوں کی پیروی کرے گا، اسے تعلیمی پالیسی کہتے ہیں۔"
+ },
+ {
+  "term": "Educational planning",
+  "definition_en": "The process of working out how to achieve what an education policy sets out, including timelines, budgets and responsibilities.",
+  "definition_ur": "وہ عمل جس میں تعلیمی پالیسی کے اہداف کی تکمیل کا طریقہ کار تیار کیا جاتا ہے، جس میں وقت کی حدیں، بجٹ اور ذمہ داریاں شامل ہیں۔"
+ },
+ {
+  "term": "Policy implementation",
+  "definition_en": "The process of carrying out a policy decision and putting it into practice.",
+  "definition_ur": "پالیسی فیصلے کو عملی شکل دینے اور پر کرنے کا عمل۔"
+ },
+ {
+  "term": "National education policy",
+  "definition_en": "A policy document issued by the federal government that sets out education goals for the whole country.",
+  "definition_ur": "وفاقی حکومت کی طرف سے جاری کردہ ایک پالیسی دستاویز جو پورے ملک کے لیے تعلیم کے اہداف طے پاتی ہے۔"
+ },
+ {
+  "term": "Policy objective",
+  "definition_en": "A specific goal that a policy aims to achieve.",
+  "definition_ur": "پالیسی کا کوئi مخصوص ہدف جسے وہ حاصل کرنا چاہتی ہے۔"
+ },
+ {
+  "term": "Curriculum reform",
+  "definition_en": "Changes made to what is taught in schools, including subjects, content and teaching approaches.",
+  "definition_ur": "اسکولوں میں پڑھائے جانے والے مضمون، مواد اور تدریسی طریقہ کار میں کی گئی تبدیلیاں۔"
+ },
+ {
+  "term": "Quality assurance",
+  "definition_en": "Systems and processes that ensure education meets agreed standards.",
+  "definition_ur": "وہ نظام اور عمل جو یقینی بناتے ہیں کہ تعلیم متفقہ معیارات پر پوری آتی ہے۔"
+ },
+ {
+  "term": "Inclusive education",
+  "definition_en": "Education that ensures all learners, regardless of gender, disability, ethnicity or background, can participate and learn.",
+  "definition_ur": "وہ تعلیم جو یقینی بناتی ہے کہ تمام متعلمین، جنس، معذوری، نسل یا پس منظر سے قطع نظر، شریک ہو سکتے ہیں اور سیکھ سکتے ہیں۔"
+ },
+ {
+  "term": "Sustainable Development Goals (SDGs)",
+  "definition_en": "A set of 17 global goals adopted by the United Nations in 2015, including SDG 4 which focuses on quality education for all.",
+  "definition_ur": "2015 میں اقوام متحدہ کی طرف سے اپنائے گئے 17 عالمی اہداف کا ایک مجموعہ، جس میں SDG 4 شامل ہے جو سب کے لیے معیاری تعلیم پر مرکوز ہے۔"
+ },
+ {
+  "term": "ICT in education",
+  "definition_en": "The use of information and communication technology - computers, internet, software and digital tools - in teaching, learning and education management.",
+  "definition_ur": "تعلیمی نظام میں معلوماتی و مواصلاتی ٹیکنالوجی - کمپیوٹر، انٹرنیٹ، سافٹ ویئر اور ڈیجیٹل آلات - کا استعمال۔"
+ },
+ {
+  "term": "Data-driven planning",
+  "definition_en": "Planning decisions that are based on evidence and data rather than assumption or tradition.",
+  "definition_ur": "وہ منصوبہ بندی جو شہادت اور اعداد و شمار پر مبنی ہوتی ہے، قیاس یا رواج پر نہیں۔"
+ },
+ {
+  "term": "Digital transformation",
+  "definition_en": "The process of using digital technologies to fundamentally change how an organisation or sector operates and delivers value.",
+  "definition_ur": "کisi ادارے یا شعبے کے عمل اور خدمات کی بنیادی تبدیلی کے لیے ڈیجیٹل ٹیکنالوجی کا استعمال۔"
+ },
+ {
+  "term": "Innovation",
+  "definition_en": "A new idea, method or solution that improves on what existed before.",
+  "definition_ur": "کوئi نیا خیال، طریقہ یا حل جو پہلے سے موجود چیز کو بہتر بنائے۔"
  }
 ]

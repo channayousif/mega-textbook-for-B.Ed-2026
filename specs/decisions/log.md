@@ -2150,3 +2150,115 @@ reviewer independent of the sessions that authored the content, performed any re
 this decision; a `pass` restores the provisional tier only, because `acceptProvisionalReport`
 still skips the signed reviewer registry, and an `escalate` sends the unit to the
 content-improvement loop with no further cycle.
+
+## D-2026-0048 - EFMP-303 intake: identity, coverage, outcome traces, blueprint and structure approved; partition, calendar and readings escalated
+
+- **Status:** confirmed (owner, 2026-10-10; escalations ruled in D-2026-0053; spec approval still requires the listed author repairs and a fresh intake)
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** EFMP-303 only, `specs/content/efmp-303/content-spec.md` at commit `2452929d`
+  (`status: draft`, after the board reverted the authoring agent's self-set approval). Evaluated in
+  a fresh session that did not draft the spec; the spec was drafted by the Paperclip
+  BilingualAuthor agent. The six authored units were read as context only. This entry settles
+  criteria 1, 3, 4, 6 and 7 as listed below. It does **not** settle `partition` (`G-2026-77`),
+  the calendar in `## Week schedule` (`G-2026-78`) or `readings` (`G-2026-79`).
+- **Decided by:** agent:evaluator, 2026-10-10
+- **Decision:**
+  1. **Identity: approved.** EFMP-303, "Educational Policies and Plans of Pakistan", **3 (3-0)**,
+     Semester 2, Major: Professional. The guide gives the code at `2nd 2026.txt:1171`, "Hours 3 /
+     Credit" at `:1172-1174` (a bare total, no split), the title at `:1176` and "2ND" semester at
+     `:1177`. The revised board Scheme, which `specs/gaps.md` names as the final authority, records
+     `EFMP-303 / Educational Policies and Plans of Pakistan / 3 (3-0) / Major: Professional
+     Course -III` in its Semester II table (`B.Ed 4 Year 2026 revised after board.txt:90`,
+     `:142-148`). `catalog/courses.json` `semesters[1].courses[3]` records the same code, title,
+     `3 (3-0)` and `Major: Professional`. A guide total of 3 and a Scheme split of `3 (3-0)` do not
+     conflict (the `G-2026-02`/`G-2026-05` posture), and `.specify/Course_guides_and_Scheme/`
+     holds no EFMP-303 file, so `D-2026-0003` does not apply. **No Article II.3 conflict.**
+  2. **Coverage: approved.** The guide's Weeks 1-15 carry **45 teaching bullets**, three per week
+     (`:1217`-`:1341`). The spec's six checklists carry **45 rows** (U1 6, U2 9, U3 9, U4 6, U5 6,
+     U6 9), with unique IDs. Paired in order by script, every bullet maps to exactly one row with
+     the correct `Guide ref` week, and no row lacks a guide bullet. Where a row adds words, they
+     come from the guide's own week heading (U2-04 to U2-09 "NEP 2009:/NEP 2017:" from `:1241`,
+     `:1251`; U6-02 "from international comparisons" from `:1315`; U4-04 "in policy
+     implementation" from `:1291`) or are a minimal gloss on a bare bullet (U4-01 "meaning and
+     purpose" on "Monitoring and Evaluation", `:1285`). None adds a topic the guide lacks.
+     Week 16 (`:1345`, `:1347`) is a review week, not teaching content; its routing is part of
+     `G-2026-78`.
+  3. **Outcome traces: approved, with one trace to remove.** The guide's five Course Objectives
+     (`:1193-1201`) are transcribed faithfully at `content-spec.md:23-27`. Each of the 12 SLOs
+     restates a guide week heading or heading pair (SLO 1-1 Week 1, 1-2 Week 2, 2-1 Week 3, 2-2
+     Weeks 4-5, 3-1 Week 6, 3-2 Weeks 7-8, 4-1 Week 9, 4-2 Week 10, 5-1 Week 11, 5-2 Week 12, 6-1
+     Week 13, 6-2 Weeks 14-15), so no SLO is an addition. Every objective is delivered by at least
+     one unit whose guide weeks carry it: objective 1 by Units 1-2 (Weeks 2-5), objective 2 by
+     Units 2-3 (Weeks 4-6), objective 3 by Unit 3 (Weeks 6-8), objective 4 by Unit 4 (Week 10),
+     objective 5 by Unit 6 (Week 15). **Repair, guide-determined:** Unit 1's trace to objective 5
+     ("Propose strategies to improve...", `content-spec.md:107-109`) has no support in Weeks 1-2
+     (`:1215-1231`), so the "and 5" should be dropped; the remaining trace to objective 1 stands.
+     Advisory only: Unit 5's trace to objective 2 is weak; its objective 4 trace carries it.
+  4. **Blueprint: approved.** All six units carry the style guide's fixed bank (10 MCQ Remember
+     to Apply, 10 RRQ Understand to Analyze, 5 ERQ Analyze to Evaluate/Create, at least one
+     Analyze-or-higher ERQ; `style-guide.md` "Unit-end assessment bank"). The per-topic minimums
+     fit their counts in every unit: MCQ/RRQ at least 2 per topic gives 8/8 of 10 (Unit 1, 4
+     topics), 6/6 (Units 2, 3, 6) and 4/4 (Units 4, 5); "one ERQ per topic" plus the stated
+     integrative item gives 4, 4, 4, 3, 3, 4 of 5. No floor is breached by the spec's own item
+     counts. The guide carries no assessment criteria (block runs description, objectives, week
+     table, readings, `:1179-1357`), so the Art. III.7 60/40 default is applied, not invented
+     (`:29-30`). Course review mix (~15/~10/~5) is unconstrained by the style guide.
+  5. **Structure: approved on the bound requirements, except `## Week schedule` (`G-2026-78`).**
+     Front matter validates against `contracts/content-spec-frontmatter.schema.json` (ajv, valid).
+     Every unit has a `### Sub-topic checklist` and a `### Topic list` whose `Sub-topic IDs`
+     partition the checklist exactly, a depth budget in the gate's format whose sub-topic and topic
+     counts match its tables, and a figure plan meeting Art. III.10 (2 carriers per topic,
+     at least 1 concept-map/flowchart/timeline per unit, the six-value `Kind` vocabulary,
+     contiguous unit-scoped `fig-U<n>-<seq>` IDs, topic tags matching the topic list). All
+     verified by script. Zero em dashes. Gate exit codes on this run: `validate:content` **0**,
+     `check:depth-gate` **0**, `check:no-em-dash` **0**, `check:no-answer-keys` **0**,
+     `check:concept-graph` **0**, `check:docs-sync` **0**, `check:source-floor` **0** (vacuous,
+     see `G-2026-79`), `check:pipeline-gate` **1** (12 findings, all EFMP-303: `status: draft` and
+     no `tasks.md` for each of six units, the expected result of the board's reversion, not a spec
+     defect), `check:figures` **1** (6 findings, schematics planned but not placed in the
+     **authored** units), `check:bloom-bands` **1** (4 findings, missing Bloom tags in the
+     **authored** Unit 2 assessment), `check:content-status` **1** (`static/content-status.json`
+     is a build artefact absent from this worktree). The last three are about authored content,
+     which is context at this gate; they are reported, not judged.
+- **Decision residue: not approved; folded into `G-2026-78`.** Every confirmed decision that
+  touches this course was swept against the whole spec. `D-2026-0002`/`0004` (one-page plan),
+  `D-2026-0005` (cycle limit) and `D-2026-0003` (variant folder): no residue. `D-2026-0001`: the
+  spec invokes it for print monographs, but three entries may not exist at all, which is outside
+  its scope (`G-2026-79`). `D-2026-0012`: **misapplied**. The spec uses the guide-silent wording
+  for a course whose guide has a week table, and replaces the guide's calendar with one from an
+  unbound task plan. Restoring the guide's calendar would be guide-determined, but whether the
+  task plan carries owner authority is not something the evaluator can know, so it is escalated.
+- **Basis:** `Scheme-and-Course-guides/extracted-text/2nd 2026.txt`, EFMP-303 block `:1171-1358`
+  (code `:1171`, credit `:1172-1174`, title `:1176`, semester `:1177`, description `:1179-1189`,
+  objectives `:1191-1201`, week table `:1203-1347`, readings `:1349-1357`);
+  `B.Ed 4 Year 2026 revised after board.txt:90`, `:142-148`; `catalog/courses.json`
+  `semesters[1].courses[3]`; `specs/content/style-guide.md` and
+  `contracts/content-spec-frontmatter.schema.json` for blueprint and structure; the confirmed
+  decisions named above. Items 1-3 are determined by the guide and Scheme directly. Items 4-5
+  rest on the guide for content and on the bound style guide and contract for form.
+- **Bound to:** `/tmp/claude-1005/-home-a2ahs-mega-book-for-B-Ed/e283ce34-647b-4701-9268-ea887141a5b3/scratchpad/intake/EFMP-303/manifest.json`,
+  manifest digest `7888898df5da901f1daf58251556809aa8ce0c04f8412fb267445b99694a3805`, **80
+  inputs** at commit `2452929d1ba1b34c0a4f2335df49bc40fd015fa9`. Recomputed independently with
+  `manifestFor()` from `scripts/lib/review-evidence.mjs` over the `intakeRoots('efmp-303')` root
+  set: every path and digest matched, nothing extra or missing, and `manifest_digest` reproduced.
+  Both `registers` digests also matched at read time. **Any change to a bound input voids this
+  approval** (Art. VII.8.5). Recording this entry and the gap entries does not void it, because
+  the registers are outside `input_manifest` (`G-2026-15`).
+- **Limits and what remains blocked:**
+  - **`partition` is not approved** (`G-2026-77`): the six-block merge over a week-only guide is
+    a judgement the guide does not make. Only its mechanical properties are verified.
+  - **`## Week schedule` and the six "Weeks N-M" unit opening lines are not approved**
+    (`G-2026-78`): they contradict the guide's calendar and the spec's own guide refs, and
+    Week 16 is unrouted.
+  - **`readings` is not approved** (`G-2026-79`): three of five entries do not resolve, both
+    policy locators are false, and the open-access floor is declared as zero. Every unit's
+    `**Mapped readings**` line is blocked, Units 1, 3 and 4 most of all.
+  - **The spec may not move to `status: approved` on this entry.** That needs the owner to
+    confirm this entry and resolve `G-2026-77`, `G-2026-78` and `G-2026-79`, then the author's
+    repairs (calendar, locators, floor declaration, the Unit 1 objective-5 trace) and a
+    re-evaluation of the changed sections against a fresh manifest. Setting `status: approved`
+    is the owner's act, not this evaluator's.
+  - The six units authored before intake are not validated by this entry. If the partition,
+    calendar or readings change, they may need re-cutting or re-sourcing.
+  - Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4), and
+    does not approve any G3 or G5 review.
