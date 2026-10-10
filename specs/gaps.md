@@ -1590,3 +1590,98 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 **Date:** 2026-10-04
 
 The generated raster illustration `fig-U4-12.webp` places the teacher at the front beside the board, which contradicts its prompt specifying a landscape scene of a male teacher "at the back of his own classroom". A repair or regeneration is needed before G3 can pass.
+
+---
+
+## G-2026-92 - GSOS-301 intake: the six-unit partition and the Unit 6 topic split are the spec's construction over a guide that gives only a week table
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G0 intake / G1 unit-spec (partition criterion)
+- **Source:** `D-2026-0051`
+- **Detail:** The GSOS-301 guide block (`Scheme-and-Course-guides/extracted-text/2nd 2026.txt:776-968`)
+  carries a 16-week table and no unit headings: Weeks 1-7 (`:802-874`), Week 8 mid-term review
+  and exam (`:876-879`), Weeks 9-15 (`:881-935`), Week 16 final review and exam (`:937-942`). The
+  spec builds six units from it. By sub-topic membership, which matches the guide exactly:
+  Unit 1 = Weeks 1-3, Unit 2 = Weeks 4-5, Unit 3 = Weeks 6-7, Unit 4 = Weeks 9-10, Unit 5 =
+  Weeks 11-12, Unit 6 = Weeks 13-15 (teaching weeks 3/2/2/2/2/3).
+
+  What the guide **does** determine, verified: contiguous whole weeks, no guide topic reordered,
+  no week split across units, the mid-term and final weeks excluded from teaching units. Units
+  1-5 also split into topics exactly on the guide's week lines (one topic per week).
+
+  What the guide does **not** determine: the number of units and the boundaries. Any contiguous
+  merge is equally consistent with it. Two boundary choices in particular are judgements:
+  (a) Week 3 "Sociological Perspectives" joins Unit 1 rather than standing alone; (b) Unit 6
+  merges Week 14 "Social Problems" (`:921-927`) and Week 15 "Society and Contemporary Issues"
+  (`:929-935`) into one Topic 6.2 titled as "social problems", so media, human rights and the
+  environment are framed as social problems, which the guide does not do. A week-aligned
+  alternative is three topics in Unit 6 (Weeks 13/14/15).
+
+  Note: the spec's own `## Week schedule` (`content-spec.md:58-69`) does not record this
+  partition; it presents a "derived" 11-week calendar that contradicts the guide. That is a repair
+  item under `D-2026-0051` (decision residue), not part of this question.
+- **Needed, and from whom:** the curriculum owner, to confirm the six-unit merge (teaching weeks
+  3/2/2/2/2/3) or supply another, and to rule whether Unit 6 keeps two topics (Weeks 13 | 14-15)
+  or splits three ways on the guide's week lines. Precedent: `G-2026-22` (GNAS-301), `G-2026-52`
+  (EFMP-301).
+- **Blocks:** the `partition` criterion of `D-2026-0051`; `status: approved` for GSOS-301; the
+  Unit 6 `### Topic list`.
+
+## G-2026-93 - GSOS-301 reading list: the guide's two entries are missing from the spec, and the four "Guide-required" rows are not the guide's and do not resolve as printed
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G0 intake (readings criterion)
+- **Source:** `D-2026-0051`
+- **Detail:** The guide's "Recommended Books" (`2nd 2026.txt:964-968`) are two bare URLs:
+  1. `https://api.pageplace.de/preview/DT0400.9781135034900_A24760348/preview-9781135034900_A24760348.pdf`
+     resolves (HTTP 200, `application/pdf`, 6,270,766 bytes, sha256 `ff612d5a30956f899c08e7ecf58598a7c67db3d1f096f096f6f1ac8def9c7b24`, fetched
+     2026-10-10). The PDF metadata names **Harry M. Johnson, *Sociology: A Systematic
+     Introduction*** (ISBN 9781135034900, a Routledge ebook reissue). It is a publisher
+     **preview** of roughly 70 pages, not the full text: a monograph under `D-2026-0001`, binding
+     authors to title-level support unless a copy is obtained.
+  2. `https://www.slideshare.net/slideshow/introduction-of-sociology-238865842/238865842` resolves
+     to a 31-slide deck "Introduction of Sociology" uploaded by Bhavesh Singh, framed around
+     sociology in nursing. It is not a scholarly work and is of doubtful use as a citable source.
+
+  The spec's `### Guide-required` table (`content-spec.md:39-46`) lists **neither**. It lists four
+  works the guide does not name, all labelled guide-required:
+  - `givens2023` "Givens & White (Eds.) (2023), *Sociology*, OpenStax": the URL resolves to
+    OpenStax *Introduction to Sociology 3e* by **Conerly, Holmes & Tamang (2021)**. Authors,
+    year and title as printed do not match the work at the URL.
+  - `henson2022` "Henson (2022), *Sociology: An introduction*, LibreTexts": the URL resolves to a
+    LibreTexts "Introduction to Sociology" bookshelf; no Henson attribution was found on the page.
+    Unverified as printed.
+  - `lindsey2020` "Lindsey, D. (2020), *Sociology* (7th ed.), Routledge": not found. Open Library
+    has Linda L. Lindsey & Stephen Beach, *Sociology*, Prentice Hall (1999-2003 editions).
+  - `anderson2016` "Anderson & Dolphin (2016), *Sociology: The essentials* (8th ed.), Cengage":
+    not found as printed. The real work is Margaret L. Andersen, Howard F. Taylor (& Kim A. Logio),
+    *Sociology: The Essentials*, Wadsworth/Cengage.
+  Authored Units 1-2 (before intake) already cite `givens2023` and `henson2022` as
+  `guide-required` in `sources/unit-0{1,2}.md`.
+- **Needed, and from whom:** the curriculum owner: (a) whether the two guide URLs constitute the
+  course reading list, and whether the slide deck is admitted as a source at all; (b) whether
+  Johnson is cited at title level only (`D-2026-0013` posture) or a copy is to be obtained;
+  (c) whether corrected open-access substitutes (OpenStax *Introduction to Sociology 3e*, the
+  LibreTexts text with its real attribution) may stand as `open-access-substitute`, not
+  `guide-required`; (d) that `lindsey2020` and `anderson2016` are removed or replaced with
+  correctly cited works. Correcting the misattributed citations is a repair once (a)-(c) are ruled.
+- **Blocks:** the `readings` criterion of `D-2026-0051`; `status: approved`; every unit's
+  `### Mapped readings`; G3 for authored Units 1-2 until their sources files are relabelled.
+
+## G-2026-94 - GSOS-301's "binding" G2 open-access floor is self-declared, not owner-adopted, and not enforced
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G0 intake (readings criterion)
+- **Source:** `D-2026-0051`
+- **Detail:** `content-spec.md:48-56` states the spec "sets a binding requirement on G2
+  source-binding": at least one verifiable open-access source per unit for Units 1-6, resolved
+  through Crossref, OpenAlex, ERIC or DOAJ. A floor is binding only when the owner adopts it, as
+  `D-2026-0013` (EFMP-304) and `D-2026-0021` (GNAS-301) did; both are course-scoped and neither
+  extends to GSOS-301. The spec front matter declares no `open_access_floor`, so
+  `check:source-floor` exits 0 without checking anything for this course. Same pattern as
+  `G-2026-23`. Given `G-2026-93` (the guide's only book is a preview-only monograph), a floor is
+  the obvious mitigation, but adopting it is not an evaluator's call.
+- **Needed, and from whom:** the curriculum owner, to adopt, amend or reject the floor (count per
+  unit, registries), and if adopted, to have the front matter declare it so the gate enforces it.
+- **Blocks:** the `readings` criterion of `D-2026-0051`; `status: approved`; G2 source binding for
+  Units 3-6.
