@@ -6,8 +6,8 @@
 
 | Unit | Title | EN draft | G3 review | UR translation | G5 review | Figures | Notes |
 |---|---|---|---|---|---|---|---|
-| 1 | Introduction and Ideological Foundations | ▣ | ☐ | ▣ | ☐ | prompt-only | First unit, index + 2 topics + assessment + teacher notes, EN + UR |
-| 2 | Reform Movements and the Pakistan Movement | ☐ | ☐ | ☐ | ☐ | planned | |
+| 1 | Introduction and Ideological Foundations | ☐ | ☐ | ☐ | ☐ | planned | Withdrawn 2026-10-10 (owner, D-2026-0053 / G-2026-100): authored before intake; re-author after spec approval |
+| 2 | Reform Movements and the Pakistan Movement | ☐ | ☐ | ☐ | ☐ | planned | Withdrawn 2026-10-10 (owner, D-2026-0053 / G-2026-100) |
 | 3 | Constitutional Development | ☐ | ☐ | ☐ | ☐ | planned | |
 | 4 | Governance, Rights and Geography | ☐ | ☐ | ☐ | ☐ | planned | |
 | 5 | Economy and Society | ☐ | ☐ | ☐ | ☐ | planned | |

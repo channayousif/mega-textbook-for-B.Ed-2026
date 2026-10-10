@@ -2153,7 +2153,7 @@ content-improvement loop with no further cycle.
 
 ## D-2026-0052 - GPKS-402 intake: identity, coverage, outcome traces (except SLO 6-1), structure and decision residue approved; partition, readings escalated; blueprint fails
 
-- **Status:** pending-owner-review
+- **Status:** confirmed (owner, 2026-10-10; escalations ruled in D-2026-0053; spec approval still requires the listed author repairs and a fresh intake)
 - **Gate:** G0 intake / G1 unit-spec
 - **Scope:** GPKS-402 Pakistan Studies, `specs/content/gpks-402/content-spec.md` (status: draft)
   at commit `26ecd199`. Settles only the five criteria approved below.
