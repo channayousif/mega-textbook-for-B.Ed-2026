@@ -1,13 +1,14 @@
 ---
 course_code: GPKS-402
 status: draft
+open_access_floor: 1
 ---
 
 # GPKS-402 - Pakistan Studies - Content Spec
 
 Semester 2, General Education, 2 (2-0) credit hours. Source: `Scheme-and-Course-guides/extracted-text/2nd 2026.txt` lines 979-1156.
 
-**Course code note.** The course guide block at lines 979-980 labels this course "GPKS - 302". The University of Sindh scheme of studies registers it as GPKS-402. The content spec follows the scheme-of-studios code (GPKS-402) as the authoritative identifier; the guide block is the source material for content only.
+**Course code note** (cites `G-2026-03`, resolved): the course guide block at lines 979-980 labels this course "GPKS - 302". The University of Sindh scheme of studies (final authority, `G-2026-03`) registers it as GPKS-402. The content spec follows the scheme-of-studies code (GPKS-402) as the authoritative identifier; the guide block is the source material for content only.
 
 ## Course-wide items
 
@@ -28,23 +29,29 @@ From the course guide (paraphrased): this course provides a comprehensive study 
 
 ## Reading list
 
-Full references for the guide's "Recommended Readings" plus curated open-access supplements. `Key` is the citation key used in each unit's `sources/unit-NN.md`. `Units` tags which unit(s) each source supports. Cited by reference only - never reproduced (Constitution Art. III.5, Spec 006 FR-010).
+Full references for the guide's "Recommended Readings" plus curated open-access supplements. `Key` is the citation key used in each unit's `sources/unit-NN.md`. `Units` tags which unit(s) each source supports. Cited by reference only - never reproduced (Constitution Art. III.5, Spec 006 FR-010). Every unit binds >= 1 open-access source (`open_access_floor: 1` in frontmatter). Where the guide has no list, only print entries, or ambiguous entries, verified real works are chosen for relevance to course outcomes and labelled **author-selected** (not guide-required).
 
-### Guide-required
-
-| Key | Citation | DOI/URL | Units | Note |
-|---|---|---|---|---|
-| hec-pak-studies | Government of Pakistan, Higher Education Commission. *Pakistan Studies Curriculum (HEC)*. | (HEC document) | 1, 2, 3 | the HEC-prescribed curriculum for Pakistan Studies at the undergraduate level; sets the scope and standards for the course |
-| rabbani-pak-studies | Ikram Rabbani. *Pakistan Studies*. | (print) | 1, 2, 4, 5 | standard textbook covering the ideological basis, the Movement, and the geography and economy of Pakistan |
-| hamid-khan-const | Hamid Khan. *Constitutional and Political History of Pakistan*. | (print) | 3, 4 | authoritative account of constitutional development from the Objectives Resolution through 1973, and of civil-military relations |
-| burki-fifty-years | Shahid Javed Burki. *Pakistan: Fifty Years of Nationhood*. | (print) | 5, 6 | economic and social history of Pakistan's first fifty decades; covers agriculture, industry, social structure and foreign policy challenges |
-
-### Curated-supplementary (open access)
+### Guide-required (print/HEC documents)
 
 | Key | Citation | DOI/URL | Units | Note |
 |---|---|---|---|---|
-| ziad-pak-foreign-policy | Zia, S. (2020). Pakistan's foreign policy: Challenges and opportunities. *Journal of the Research Society of Pakistan*, 57(2). | (open access - journal site) | 6 | overview of foreign policy principles and relations with neighbors |
-| goe-bloom | Goe, L., Bell, C., & Little, O. (2008). *Approaches to evaluating teacher effectiveness: A research synthesis*. National Comprehensive Center for Teacher Quality. | https://files.eric.ed.gov/fulltext/ED521228.pdf (ERIC ED521228) | 4, 8 | teacher effectiveness and civic education in nation building |
+| hec-pak-studies | Government of Pakistan, Higher Education Commission. *Pakistan Studies Curriculum (HEC)*. | (HEC document) | 1, 2, 3 | the HEC-prescribed curriculum for Pakistan Studies at the undergraduate level; sets the scope and standards for the course. **Ambiguity note:** the guide's "Pakistan Studies Curriculum (HEC)" fits more than one HEC document; this entry binds the undergraduate-level curriculum as the authoritative scope document |
+| rabbani-pak-studies | Ikram Rabbani. *Pakistan Studies*. | (print) | 1, 2, 4, 5 | standard textbook covering the ideological basis, the Movement, and the geography and economy of Pakistan. Verified: Caravan Book House |
+| hamid-khan-const | Hamid Khan. *Constitutional and Political History of Pakistan*. | (print) | 3, 4 | authoritative account of constitutional development from the Objectives Resolution through 1973, and of civil-military relations. Verified: OUP Pakistan, 4th ed. ISBN 9780199060986 |
+| burki-fifty-years | Shahid Javed Burki. *Pakistan: Fifty Years of Nationhood*. | (print) | 5, 6 | economic and social history of Pakistan's first fifty years; covers agriculture, industry, social structure and foreign policy challenges. Verified: Westview, 3rd ed. 1999, ISBN 9780813336213 |
+
+### Author-selected (open access)
+
+These supplement the guide's print-only list with verified open-access works chosen for relevance to course outcomes. Each unit binds >= 1.
+
+| Key | Citation | DOI/URL | Units | Note |
+|---|---|---|---|---|
+| pbs-pak-stats | Government of Pakistan, Pakistan Bureau of Statistics. *Pakistan Statistical Yearbook*. | https://www.pbs.gov.pk/ | 4, 5 | official statistics on population, geography, economy and society; open access |
+| sbp-annual | State Bank of Pakistan. *Annual Report*. | https://www.sbp.org.pk/reports_annual.htm | 5 | economic data, trade and industry overview; open access |
+| mofa-foreign-policy | Government of Pakistan, Ministry of Foreign Affairs. *Foreign Policy of Pakistan*. | https://mofa.gov.pk/ | 6 | principles of foreign policy and relations with neighbours; open access |
+| pak-constitution-1973 | Government of Pakistan. *The Constitution of Pakistan 1973*. | https://na.gov.pk/uploads/documents/1973_constitution.pdf | 3, 4 | the full text of the 1973 Constitution, including fundamental rights and Islamic provisions; open access |
+| unesco-pak-education | UNESCO. *Education for All 2015 National Review: Pakistan*. | https://unesdoc.unesco.org/ark:/48223/pf0000232662 | 6 | education and national integration in Pakistan; open access |
+| na-lahore-resolution | Government of Pakistan, National Assembly. *Lahore Resolution 1940*. | https://na.gov.pk/ | 2 | the founding political document of the Pakistan Movement; open access |
 
 ## Week schedule
 
@@ -53,9 +60,9 @@ Full references for the guide's "Recommended Readings" plus curated open-access 
 | 1-2 | Unit 1 - Introduction and Ideological Foundations | meaning, scope and importance of Pakistan Studies; national ideology and identity; Two-Nation Theory; Islamic concept of state; Vision of Quaid-e-Azam |
 | 3-4 | Unit 2 - Reform Movements and the Pakistan Movement | Shah Waliullah; Sir Syed Ahmad Khan and Aligarh Movement; role of Muslim intelligentsia; formation of All-India Muslim League; key events and milestones; creation of Pakistan |
 | 5-6 | Unit 3 - Constitutional Development | Objectives Resolution; Constitutions of 1956 and 1962; constitutional challenges; Constitution of 1973: background, salient features, Islamic provisions |
-| 7-8 | Unit 4 - Governance, Rights and Geography | federal system; legislature, executive, judiciary; civil-military relations; fundamental rights; principles of policy; role of citizens; physical features; climate and natural resources; strategic importance |
-| 9-10 | Unit 5 - Economy and Society | agriculture, industry and trade; economic challenges; role of education in economic development; social structure; cultural diversity; languages and traditions |
-| 11-12 | Unit 6 - Foreign Policy, Contemporary Issues and Education | principles of foreign policy; relations with neighboring countries; role in international organizations; population growth; poverty and unemployment; terrorism and extremism; environmental issues; education and national integration; civic education; responsibilities of teachers |
+| 7-8, 10 | Unit 4 - Governance, Fundamental Rights and Geography | federal system; legislature, executive, judiciary; civil-military relations; fundamental rights; principles of policy; role of citizens; physical features; climate and natural resources; strategic importance |
+| 11-12 | Unit 5 - Economy and Society | agriculture, industry and trade; economic challenges; role of education in economic development; social structure; cultural diversity; languages and traditions |
+| 13-15 | Unit 6 - Foreign Policy, Contemporary Issues and the Role of Education | principles of foreign policy; relations with neighboring countries; role in international organizations; population growth; poverty and unemployment; terrorism and extremism; environmental issues; education and national integration; civic education; responsibilities of teachers |
 
 ## Unit 1: Introduction and Ideological Foundations
 
@@ -90,7 +97,7 @@ Weeks 1-2. Unit Spec (G1) for `docs/semester-2/gpks-402/unit-01/`.
 
 **Common misconceptions**: "Pakistan Studies is only a history subject"; "the Two-Nation Theory means Hindus and Muslims cannot live together"; " ideology and religion are the same thing"; "Pakistan Studies has no relevance to classroom teaching".
 
-**Mapped readings**: hec-pak-studies, rabbani-pak-studies.
+**Mapped readings**: hec-pak-studies, rabbani-pak-studies, pak-constitution-1973.
 
 **Figure plan**:
   - fig-U1-1 - `concept-map` - Pakistan Studies at the centre, linked to its sub-disciplines (history, geography, economy, civics, culture) and to its purpose in teacher education (Topic 1.1)
@@ -101,7 +108,7 @@ Weeks 1-2. Unit Spec (G1) for `docs/semester-2/gpks-402/unit-01/`.
 **Unit-end assessment blueprint**:
   - MCQs (10): Remember to Apply; >= 2 per topic
   - RRQs (10): Understand to Analyze; >= 2 per topic
-  - ERQs (5): Analyze to Evaluate/Create; one per topic plus one integrative item; each ERQ carries an analytic rubric, >= 1 demanding Analyze-or-higher
+  - ERQs (5): Analyze to Evaluate/Create; 2 per topic plus 1 integrative item (total 5); each ERQ carries an analytic rubric, >= 1 demanding Analyze-or-higher
 
 ## Unit 2: Reform Movements and the Pakistan Movement
 
@@ -136,7 +143,7 @@ Weeks 3-4. Unit Spec (G1) for `docs/semester-2/gpks-402/unit-02/`.
 
 **Common misconceptions**: "the Pakistan Movement started only in 1940"; "Sir Syed supported the Two-Nation Theory directly"; "Pakistan was created only because of Jinnah's leadership" (ignoring the broader social and intellectual groundwork).
 
-**Mapped readings**: rabbani-pak-studies, hamid-khan-const.
+**Mapped readings**: rabbani-pak-studies, hamid-khan-const, na-lahore-resolution.
 
 **Figure plan**:
   - fig-U2-1 - `timeline` - reform milestones: Shah Waliullah (early 1800s), Aligarh College founded (1875), Sir Syed's political thought, leading to the Muslim League (1906) (Topic 2.1)
@@ -147,7 +154,7 @@ Weeks 3-4. Unit Spec (G1) for `docs/semester-2/gpks-402/unit-02/`.
 **Unit-end assessment blueprint**:
   - MCQs (10): Remember to Apply; >= 2 per topic
   - RRQs (10): Understand to Analyze; >= 2 per topic
-  - ERQs (5): Analyze to Evaluate/Create; one per topic plus one integrative; each ERQ carries an analytic rubric, >= 1 demanding Analyze-or-higher
+  - ERQs (5): Analyze to Evaluate/Create; 2 per topic plus 1 integrative (total 5); each ERQ carries an analytic rubric, >= 1 demanding Analyze-or-higher
 
 ## Unit 3: Constitutional Development
 
@@ -198,7 +205,7 @@ Weeks 5-6. Unit Spec (G1) for `docs/semester-2/gpks-402/unit-03/`.
 
 ## Unit 4: Governance, Fundamental Rights and Geography
 
-Weeks 7-8 and 10. Unit Spec (G1) for `docs/semester-2/gpks-402/unit-04/`.
+Weeks 7-8 and 10. Unit Spec (G1) for `docs/semester-2/gpks-402/unit-04/`. Week 9 is the mid-term examination (no content).
 
 - **CLO/SLO refs**: `SLO:GPKS-402-4-1` (federal system; legislature, executive, judiciary; civil-military relations), `SLO:GPKS-402-4-2` (fundamental rights; principles of policy; role of citizens), `SLO:GPKS-402-4-3` (physical features; climate and natural resources; strategic importance) - traces to guide objectives 3, 4.
 - **Key terms**: Federalism, Separation of Powers, Fundamental Rights, Strategic Importance.
@@ -235,7 +242,7 @@ Weeks 7-8 and 10. Unit Spec (G1) for `docs/semester-2/gpks-402/unit-04/`.
 
 **Common misconceptions**: "Pakistan has always been governed by the military"; "fundamental rights are the same as in the US Constitution"; "Pakistan's geography is only desert"; "civil-military relations are only a problem, never a subject of study".
 
-**Mapped readings**: hamid-khan-const, rabbani-pak-studies, hec-pak-studies.
+**Mapped readings**: hamid-khan-const, rabbani-pak-studies, hec-pak-studies, pbs-pak-stats, pak-constitution-1973.
 
 **Figure plan**:
   - fig-U4-1 - `diagram` - the structure of Pakistan's government: legislature, executive and judiciary with their key organs (Topic 4.1)
@@ -249,11 +256,11 @@ Weeks 7-8 and 10. Unit Spec (G1) for `docs/semester-2/gpks-402/unit-04/`.
 **Unit-end assessment blueprint**:
   - MCQs (10): Remember to Apply; >= 2 per topic
   - RRQs (10): Understand to Analyze; >= 2 per topic
-  - ERQs (5): Analyze to Evaluate/Create; one per topic (at least 4.1, 4.2) plus one integrative; each ERQ carries an analytic rubric, >= 1 demanding Analyze-or-higher
+  - ERQs (5): Analyze to Evaluate/Create; 1 per topic (4.1, 4.2, 4.3) plus 2 integrative (total 5); each ERQ carries an analytic rubric, >= 1 demanding Analyze-or-higher
 
 ## Unit 5: Economy and Society
 
-Weeks 9-10 (guide Week 11-12). Unit Spec (G1) for `docs/semester-2/gpks-402/unit-05/`.
+Weeks 11-12. Unit Spec (G1) for `docs/semester-2/gpks-402/unit-05/`.
 
 - **CLO/SLO refs**: `SLO:GPKS-402-5-1` (agriculture, industry and trade; economic challenges; role of education in economic development), `SLO:GPKS-402-5-2` (social structure; cultural diversity; languages and traditions) - traces to guide objectives 4, 5.
 - **Key terms**: Agriculture-based economy, Industrial Sector, Cultural Diversity, Social Structure.
@@ -285,7 +292,7 @@ Weeks 9-10 (guide Week 11-12). Unit Spec (G1) for `docs/semester-2/gpks-402/unit
 
 **Common misconceptions**: "Pakistan's economy depends only on agriculture"; "cultural diversity is a weakness, not a strength"; "education has no direct link to economic growth"; "all of Pakistan shares one uniform culture".
 
-**Mapped readings**: burki-fifty-years, rabbani-pak-studies.
+**Mapped readings**: burki-fifty-years, rabbani-pak-studies, pbs-pak-stats, sbp-annual.
 
 **Figure plan**:
   - fig-U5-1 - `table` - the three sectors of the economy (agriculture, industry, services) with their GDP share, key products and main challenges (Topic 5.1)
@@ -296,11 +303,11 @@ Weeks 9-10 (guide Week 11-12). Unit Spec (G1) for `docs/semester-2/gpks-402/unit
 **Unit-end assessment blueprint**:
   - MCQs (10): Remember to Apply; >= 2 per topic
   - RRQs (10): Understand to Analyze; >= 2 per topic
-  - ERQs (5): Analyze to Evaluate/Create; one per topic plus one integrative; each ERQ carries an analytic rubric, >= 1 demanding Analyze-or-higher
+  - ERQs (5): Analyze to Evaluate/Create; 2 per topic plus 1 integrative (total 5); each ERQ carries an analytic rubric, >= 1 demanding Analyze-or-higher
 
 ## Unit 6: Foreign Policy, Contemporary Issues and the Role of Education
 
-Weeks 11-15 (guide Week 13-15). Unit Spec (G1) for `docs/semester-2/gpks-402/unit-06/`.
+Weeks 13-15. Unit Spec (G1) for `docs/semester-2/gpks-402/unit-06/`. Week 16 is review and final assessment (no content).
 
 - **CLO/SLO refs**: `SLO:GPKS-402-6-1` (principles of foreign policy; relations with neighbors; role in international organizations), `SLO:GPKS-402-6-2` (population growth; poverty and unemployment; terrorism and extremism; environmental issues), `SLO:GPKS-402-6-3` (education and national integration; civic education; responsibilities of teachers) - traces to guide objectives 4, 5.
 - **Key Terms**: Foreign Policy Principles, National Integration, Civic Education, Terrorism and Extremism.
@@ -336,7 +343,7 @@ Weeks 11-15 (guide Week 13-15). Unit Spec (G1) for `docs/semester-2/gpks-402/uni
 
 **Common misconceptions**: "foreign policy is only about relations with India"; "terrorism is caused only by poverty"; "education cannot address extremism"; "civic education is only about voting"; "teachers have no role in nation building beyond the classroom".
 
-**Mapped readings**: burki-fifty-years, ziad-pak-foreign-policy, goe-bloom.
+**Mapped readings**: burki-fifty-years, mofa-foreign-policy, unesco-pak-education.
 
 **Figure plan**:
   - fig-U6-1 - `diagram` - Pakistan's foreign policy: principles at the centre, linked to key relationships (India, Afghanistan, China, Iran) and international forums (Topic 6.1)
@@ -349,4 +356,4 @@ Weeks 11-15 (guide Week 13-15). Unit Spec (G1) for `docs/semester-2/gpks-402/uni
 **Unit-end assessment blueprint**:
   - MCQs (10): Remember to Apply; >= 2 per topic
   - RRQs (10): Understand to Analyze; >= 2 per topic
-  - ERQs (5): Analyze to Evaluate/Create; one per topic (at least 6.1, 6.2) plus one integrative; each ERQ carries an analytic rubric, >= 1 demanding Analyze-or-higher
+  - ERQs (5): Analyze to Evaluate/Create; 1 per topic (6.1, 6.2, 6.3) plus 2 integrative (total 5); each ERQ carries an analytic rubric, >= 1 demanding Analyze-or-higher
