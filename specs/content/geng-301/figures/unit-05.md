@@ -1,0 +1,12 @@
+# GENG-301 Unit 5 - Figure Manifest
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U5-1 | 5.1 | concept-map | clean flat vector concept map, landscape: "Writing purposes" centre, four branches (Inform, Analyze, Persuade, Entertain); labelled, high contrast, no colour-only meaning | A concept map of four writing purposes with strategies for each. | | prompt-only |
+| fig-U5-5 | 5.1 | table | clean flat vector table, landscape: four rows (Inform, Analyze, Persuade, Entertain) and three columns (Purpose, Strategy, Signal words); labelled, high contrast, no colour-only meaning | Table comparing four writing purposes by strategy and signal words. | | prompt-only |
+| fig-U5-2 | 5.2 | table | clean flat vector table, landscape: four rows comparing informal and academic versions (Tone, Vocabulary, Evidence, Person); labelled, high contrast, no colour-only meaning | Table comparing informal and academic writing on tone, vocabulary, evidence and person. | | prompt-only |
+| fig-U5-6 | 5.2 | table | clean flat vector table, landscape: four rows of hedging phrases ranked by strength with examples; labelled, high contrast, no colour-only meaning | Table of hedging language phrases ranked by strength. | | prompt-only |
+| fig-U5-3 | 5.3 | diagram | clean flat vector diagram, landscape: audience-awareness spectrum from academic to public with key differences labelled; labelled, high contrast, no colour-only meaning | A diagram showing the audience-awareness spectrum from academic to public. | | prompt-only |
+| fig-U5-7 | 5.3 | table | clean flat vector table, landscape: three rows (Opinion column, Newsletter, Blog) and three columns (Length, Tone, Features); labelled, high contrast, no colour-only meaning | Table comparing three public writing forms. | | prompt-only |
+| fig-U5-4 | 5.4 | table | clean flat vector table, landscape: three rows showing the same content for three audiences (Academic, Public, Personal); labelled, high contrast, no colour-only meaning | Table showing how the same content changes in tone for different audiences. | | prompt-only |
+| fig-U5-8 | 5.4 | table | clean flat vector table, landscape: three rows (Formal, Semi-formal, Informal) and three columns (Features, Appropriate for, Example); labelled, high contrast, no colour-only meaning | A style checklist for formal, semi-formal and informal register. | | prompt-only |
