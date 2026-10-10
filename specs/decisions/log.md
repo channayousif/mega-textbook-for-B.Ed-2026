@@ -2155,7 +2155,7 @@ content-improvement loop with no further cycle.
 
 ## D-2026-0051 - GSOS-301 intake: identity, coverage, outcome traces and blueprints approved; partition and readings escalated; structure and decision residue fail for repair
 
-- **Status:** pending-owner-review
+- **Status:** confirmed (owner, 2026-10-10; escalations ruled in D-2026-0053; spec approval still requires the listed author repairs and a fresh intake)
 - **Gate:** G0 intake / G1 unit-spec
 - **Scope:** GSOS-301 only. Settles identity, sub-topic coverage of all six checklists, the CLO
   record, and the six unit-end assessment blueprints. Does **not** settle the six-unit partition
