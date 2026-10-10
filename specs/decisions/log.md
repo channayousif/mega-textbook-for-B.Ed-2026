@@ -2181,7 +2181,10 @@ content-improvement loop with no further cycle.
      `G-2026-74`, `G-2026-83`, `G-2026-87`, `G-2026-99`.
   5. **GPKS-402 Units 1-2.** Withdrawn. They were authored before intake and will be re-authored
      after the spec is approved. Resolves `G-2026-100`.
-- **Not ruled:** `G-2026-75` (EFMP-305 80/20 label) stays open; `G-2026-76` and `G-2026-90`
+  6. **EFMP-305 assessment split.** **40 formative / 60 summative.** The spec's "80 summative /
+     20 formative" label is replaced; the spec's assessment section and the course overview (EN
+     and UR) must state 40/60. Resolves `G-2026-75`.
+- **Not ruled:** `G-2026-76` and `G-2026-90`
   (tracker G1 claims) are author repairs; `G-2026-91` (depth-gate Topic column) is a tooling item.
 - **Limits:** This decision approves no specification. Each spec still needs the author repairs
   its intake listed, then a fresh intake on a newly prepared manifest, before it may move to
