@@ -2186,6 +2186,10 @@ content-improvement loop with no further cycle.
   6. **EFMP-305 assessment split.** **40 formative / 60 summative.** The spec's "80 summative /
      20 formative" label is replaced; the spec's assessment section and the course overview (EN
      and UR) must state 40/60. Resolves `G-2026-75`.
+  7. **EFMP-305 Unit 5 disability statute.** The guide's "Rights of Persons with Disabilities Act
+     (2018)" is taught as the **Sindh Empowerment of Persons with Disabilities Act, 2018** (the
+     law in force for Sindh teachers), with a short comparison to the federal ICT Rights of Persons
+     with Disabilities Act, 2020. Resolves `G-2026-102` (raised by `D-2026-0054`).
 - **Not ruled:** `G-2026-76` and `G-2026-90`
   (tracker G1 claims) are author repairs; `G-2026-91` (depth-gate Topic column) is a tooling item.
 - **Limits:** This decision approves no specification. Each spec still needs the author repairs
