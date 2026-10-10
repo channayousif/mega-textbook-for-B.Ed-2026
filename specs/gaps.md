@@ -1595,7 +1595,7 @@ The generated raster illustration `fig-U4-12.webp` places the teacher at the fro
 
 ## G-2026-72 - EFMP-305 credit hours: the Faculty guide states `03 (0-3)`, the revised Scheme and the catalog state `3 (3-0)`
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
 - **Gate:** G0 intake, `identity` criterion. Constitution Art. II.3.
 - **Raised by:** agent:evaluator, 2026-10-10, under `D-2026-0047` (manifest
   `scratchpad/intake/EFMP-305/manifest.json`, digest
@@ -1630,7 +1630,7 @@ The generated raster illustration `fig-U4-12.webp` places the teacher at the fro
 
 ## G-2026-73 - EFMP-305 has no reading list in its course guide
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
 - **Gate:** G0 intake, `readings` criterion.
 - **Raised by:** agent:evaluator, 2026-10-10, under `D-2026-0047` (same manifest).
 - **Detail:** the EFMP-305 guide block (`2nd 2026.txt:189-345`) carries a description, five
@@ -1673,7 +1673,7 @@ The generated raster illustration `fig-U4-12.webp` places the teacher at the fro
 
 ## G-2026-74 - EFMP-305: three checklist sub-topics have no guide ancestor
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
 - **Gate:** G1 unit-spec, `coverage` criterion.
 - **Raised by:** agent:evaluator, 2026-10-10, under `D-2026-0047` (same manifest).
 - **Detail:** every guide week item (`2nd 2026.txt:227-294`) appears in the spec's checklists

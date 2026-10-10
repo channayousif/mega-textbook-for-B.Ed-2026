@@ -2155,7 +2155,7 @@ content-improvement loop with no further cycle.
 
 ## D-2026-0047 - EFMP-305 intake: partition (with the guide's Unit 6 week slip), guide-anchored coverage, outcomes, blueprint and residue approved; identity, readings, three additions and structure not approved
 
-- **Status:** pending-owner-review
+- **Status:** confirmed (owner, 2026-10-10; escalations ruled in D-2026-0053; spec approval still requires the listed author repairs and a fresh intake)
 - **Gate:** G0 intake / G1 unit-spec
 - **Scope:** EFMP-305 Inclusive Education only, the `content-spec.md` at commit `00c49f1a` (drafted by
   the Paperclip BilingualAuthor agent; this evaluator did not draft it). Settles `partition`,
