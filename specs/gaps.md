@@ -1601,7 +1601,7 @@ Recorded by `agent:evaluator` under `D-2026-0049`, bound to
 
 ## G-2026-82 - GQUR-301 intake: the six-unit partition is the spec's construction over a guide that gives only week-mapped chapters
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
 - **Gate:** G0 intake / G1 unit-spec (`partition` criterion)
 - **Source:** `D-2026-0049`
 - **Detail:** The GQUR-301 guide block (`Scheme-and-Course-guides/extracted-text/2nd 2026.txt:371-580`)
@@ -1632,7 +1632,7 @@ Recorded by `agent:evaluator` under `D-2026-0049`, bound to
 
 ## G-2026-83 - GQUR-301 CLO 3's "appropriate computational tools" has no ancestor in the guide's outline, and no unit delivers it
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
 - **Gate:** G0 intake / G1 unit-spec (`outcomes` criterion)
 - **Source:** `D-2026-0049`
 - **Detail:** The guide's third course outcome reads "It is an ability to critically evaluate
