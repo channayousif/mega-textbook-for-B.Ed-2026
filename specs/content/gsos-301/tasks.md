@@ -18,7 +18,7 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit 1 | G3 en-review | ▢ | | awaiting CurriculumOwner |
 | Unit 1 | G4 ur-translation | ▣ | auto:gates | authored; QC checks pending |
 | Unit 1 | G5 ur-review | ▢ | | awaiting CurriculumOwner |
-| Unit 1 | G6 assets | ▢ | | 3 figures prompt-only; schematic handoff pending |
+| Unit 1 | G6 assets | ▢ | | 6 figures prompt-only; schematic handoff pending |
 | Unit 1 | G7 publish | ▢ | | |
 
 **Unit 2 - Culture and Socialization:** not started.
