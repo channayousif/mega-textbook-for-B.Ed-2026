@@ -2321,3 +2321,106 @@ content-improvement loop with no further cycle.
   2. **Ten terms banked in `specs/content/terminology.csv`, as proposed:** Reflective Thinking `تاملی سوچ`, Reflective Process `تاملی عمل`, Reflective Practice `تاملی مشق`, Reflective Journal `تاملی جریدہ`, Reflective Cycle `تاملی چکر`, Descriptive Writing `بیانیہ تحریر`, Reflective Writing `تاملی تحریر`, Technical Reflection `فنی تامل`, Contextual Reflection `سیاقی تامل`, Dialectical Reflection `جدلیاتی تامل`. Later translators reuse these; the existing `Reflective Decision Making` entry is unchanged.
   3. **Follow-ups scheduled, not fixed in place:** the two English defects in Unit 6 (`topic-03.mdx` "did not understood"; `unit-assessment.mdx` RRQ 5 question/answer mismatch) go through `revise-topic` with fresh G2/G3/G5, because editing reviewed files would invalidate the bound evidence. EFMP-304 `.ur.svg` figure variants are scheduled as a BilingualAuthor task after the Semester 2 courses.
 - **Consequences:** G3/G4/G5 tracker rows for Units 4-6 record the agent passes as `▣` and stay open (ADR-0019); `translation_status` stays `draft`. Unit 4 G2 evidence regenerated because its concept table is a bound input.
+
+---
+
+## D-2026-0057 - GSOS-301 re-intake after repair: identity, partition, coverage, blueprint and decision residue approved; outcomes, readings and structure still fail on unrepaired items
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** GSOS-301 only. Re-checks all eight criteria against the repaired spec. Settles identity,
+  the six-unit partition as applied, sub-topic coverage of all six checklists, the six unit-end
+  blueprints and the absence of decision residue. Does **not** approve outcomes, readings or
+  structure, each of which fails on a defect the guide, the owner rulings or the confirmed
+  `D-2026-0051` repair list already determines (repairs below; no new owner decision needed).
+- **Decided by:** agent:evaluator, 2026-10-10
+- **Decision:**
+  1. **Identity (pass).** Unchanged from `D-2026-0051` item 1: the guide, Scheme and catalog are
+     byte-identical to that bundle, and the spec still states 2 (2-0) at `content-spec.md:9`.
+     `G-2026-01` and `G-2026-05` bind.
+  2. **Partition (pass).** `G-2026-92` is resolved by the confirmed owner ruling `D-2026-0053`
+     item 1 (six units, teaching weeks 3/2/2/2/2/3, Unit 6 merging Weeks 14 and 15 into Topic
+     6.2), and that ruling requires a unit's weeks to follow the guide's week table. The spec now
+     does: `## Week schedule` (`content-spec.md:54-75`) lists Weeks 1-16 exactly as the guide
+     gives them (`2nd 2026.txt:802-942`), including the Week 8 mid-term and Week 16 final, and
+     every checklist row's `Guide ref` names the guide week that carries it. Topic 6.2 is now
+     titled "Social problems and contemporary issues" (`:410`), so Week 15 is no longer framed as
+     a social problem. This approval rests on the owner ruling, not on the guide alone.
+  3. **Coverage (pass).** The 43 checklist rows (`:110-121`, `:175-182`, `:231-238`, `:285-292`,
+     `:339-346`, `:393-403`) are the guide's 43 teaching leaves (`:804-935`, excluding Weeks 8
+     and 16), each exactly once, with no addition. Only IDs, `Guide ref` and `Topic` columns and
+     row wording (for example U5-01 "Family as a social institution" for `:899` "Family") changed
+     since `D-2026-0051`; no leaf was lost or added.
+  4. **Blueprint (pass).** The six blueprints are unchanged from `D-2026-0051` item 4 (10/10/5
+     per unit, style-guide Bloom bands, per-topic splits summing correctly, at least 3 MCQ and 3
+     RRQ per topic). The new course-review practice-question mix (`:92`, ~15/~10/~5) is consistent
+     with the style guide's course-review banks.
+  5. **Decision residue (pass).** The `D-2026-0012` misapplication `D-2026-0051` found is gone: no
+     derived calendar remains. Searched the whole bound GSOS-301 tree for the superseded designs:
+     no `givens2023`, `lindsey2020`, `anderson2016`, `Guide-required` mislabel, "derived" week
+     label, or self-declared "binding" floor survives; the floor is now the front-matter
+     `open_access_floor: 1` that `D-2026-0053` item 2 requires. Advisory only: `:56` still cites
+     `D-2026-0012` for a schedule the guide itself supplies; the citation should be dropped, but
+     the schedule does not depend on it.
+- **Not approved:**
+  - **Outcomes (fail, repair).** The CLO record (`:15-21` = guide `:794-800`) and the new unit
+     learning outcomes trace to named CLOs, which `D-2026-0053` item 4 permits, except one: Unit 5
+     (`:335`) "describe institutional change" is labelled "derived from CLO 3", but CLO 3
+     (`:796`) concerns how institutions influence life; change is CLO 4 (`:798`). Name CLO 4 in
+     the Unit 5 derivation or drop the clause. Guide-determined; no escalation.
+  - **Readings (fail, repair).** `D-2026-0053` item 2 allows author-selected works and sets the
+     floor, and the spec complies on labelling and floor (`conerly2021` is open access and bound
+     in every unit). Three items remain, all determined already:
+     (a) the guide's own reading list (`2nd 2026.txt:964-968`: the Johnson *Sociology: A
+     Systematic Introduction* publisher preview and the SlideShare deck) is still absent, though
+     `:38` itself promises guide-required labels where the guide names a work. Record both as the
+     guide's list, with Johnson under `D-2026-0001` title-level posture; whether to bind either
+     in `### Mapped readings` stays the author's choice.
+     (b) `henson2022` still does not resolve as printed: the LibreTexts URL is a bookshelf holding
+     "Introduction to Sociology (Hammond et al.)", "Introductory Sociology 1e (OpenStax)" and
+     "Sociology (Boundless)", with no Henson work (fetched 2026-10-10). `D-2026-0053` item 2
+     says named misattributions must still be corrected.
+     (c) `lindsey2010` is misdated: Lindsey & Beach *Sociology* (2nd ed.), Prentice Hall, is
+     2001-2002 (Open Library `OL3335670W`); no 2010 edition was found. `andersen2014` resolves
+     (8th ed. with Logio, Cengage, 2014, `OL25629757W`) and `conerly2021` resolves.
+  - **Structure (fail, repair).** The machine-read structure now passes: replayed with the gate's
+     own parsers (`unitSectionLines`, `parseTopicList`, `tableAfterHeading`, `parsePipeTable`),
+     all six units parse to `U<n>-NN` IDs (10/6/6/6/6/9 = 43), each Topic list is a total,
+     disjoint partition agreeing with the checklist `Topic` column, every topic plans exactly two
+     figures, every unit plans a concept-map or flowchart, Figure plan and Topic list agree, and
+     every Depth budget range parses; the front matter validates against
+     `contracts/content-spec-frontmatter.schema.json`. Still unrepaired from the owner-confirmed
+     `D-2026-0051` repair list: `## Course review plan` has 2 practicum ideas (`:89-91`) against
+     the v3 contract's 3-6; no unit carries `**Prerequisite knowledge**`, `**Worked-examples
+     plan**` or `**International best-practice notes**`; `:33` still says the course is
+     "explicitly for trainee teachers", which no guide line states; `:9` still cites `:776-972`
+     where the block ends at `:968`.
+- **Basis:** `Scheme-and-Course-guides/extracted-text/2nd 2026.txt:776-968`; owner rulings
+  `D-2026-0053` (confirmed 2026-10-10) items 1, 2 and 4, and the owner's confirmation of
+  `D-2026-0051` with its repair list; `G-2026-01`, `G-2026-05`; `D-2026-0001`, `D-2026-0012`;
+  `specs/content/style-guide.md`; `contracts/content-spec-frontmatter.schema.json`. The v2/v3
+  content-spec contracts (`specs/007-.../content-spec-v2.md`, `specs/008-.../content-spec-v3.md`)
+  are not bound inputs; the structure items resting on them stand because the owner confirmed
+  them as repairs in `D-2026-0051`.
+  **Deterministic checks at `1b560c46`, real exit codes:** `check:no-em-dash` 0,
+  `validate:content` 0, `check:bloom-bands` 0, `check:concept-graph` 0, `check:depth-gate` 0,
+  `check:figures` **1** (GSOS-301 findings all in pre-intake Units 1-2: prompt-only markers, and
+  topic files that predate the repaired figure plan), `check:no-answer-keys` 0, `check:docs-sync`
+  0, `check:source-floor` 0 (floor declared and met), `check:pipeline-gate` **1** (GSOS-301 Units
+  1-2: spec `draft`, G2 rows not done). The failures concern authored Units 1-2, which are context
+  only here.
+- **Bound to:** `/tmp/claude-1005/-home-a2ahs-mega-book-for-B-Ed/e283ce34-647b-4701-9268-ea887141a5b3/scratchpad/intake2/GSOS-301/manifest.json`,
+  manifest digest `cb5ea9c8d8c79e4f8c918000d51a91ded42176609fa0d0b2b45ef9ae33758e10`, 63 inputs
+  at commit `1b560c4618e41d97feedfcbae45b7c43b6481e23`. Recomputed independently with
+  `manifestFor()` over `intakeRoots('gsos-301')`: 0 mismatches, digest reproduced, both registers
+  matched at read time. **Any change to a bound input voids this decision** (Art. VII.8.5). The
+  repairs above will change `content-spec.md`, so a fresh manifest and intake are required.
+- **Limits and what remains blocked:**
+  - **`status` stays `draft`.** Outcomes, readings and structure are not approved.
+  - **Blocked:** the whole `## Reading list` and the `### Mapped readings` of Units 1, 3 and 6
+    (`henson2022`) and Units 2 and 4 (`lindsey2010`); Unit 5's outcome line; every unit's
+    missing v2 lines; the course review plan.
+  - **No new escalation.** Every open item is a repair the guide, `D-2026-0053` or the confirmed
+    `D-2026-0051` already determines. Reserved codes `G-2026-114` to `G-2026-117` are unused.
+  - Context only, not judged: authored Units 1-2 and their coverage, sources and figure files.
+  - Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
