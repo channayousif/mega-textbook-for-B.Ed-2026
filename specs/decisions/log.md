@@ -2169,7 +2169,9 @@ content-improvement loop with no further cycle.
   2. **Readings.** Where a guide gives no reading list, only print monographs, or an ambiguous
      entry, the author may bind verified real works chosen for relevance to the course outcomes,
      labelled as author-selected rather than guide-required; every unit must bind at least one
-     open-access source, declared as `open_access_floor: 1`. Resolves `G-2026-73`, `G-2026-79`,
+     open-access source, declared in the spec front matter as the mapping form
+     `open_access_floor:` / `  default: 1` (the form `check:source-floor` reads; a bare
+     `open_access_floor: 1` is not enforced). Resolves `G-2026-73`, `G-2026-79`,
      `G-2026-89`, `G-2026-93`, `G-2026-94`, `G-2026-98`. Unresolvable or misattributed entries
      the intakes named must still be corrected; this ruling does not validate them.
   3. **EFMP-305 credit hours.** **3 (3-0)**, theory. The revised Scheme and the catalog govern;
