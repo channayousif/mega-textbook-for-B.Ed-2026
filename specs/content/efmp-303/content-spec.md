@@ -2,13 +2,13 @@
 course_code: EFMP-303
 status: draft
 open_access_floor:
-  "1": 0
-  "2": 0
-  "3": 0
-  "4": 0
-  "5": 0
-  "6": 0
-  default: 0
+  "1": 1
+  "2": 1
+  "3": 1
+  "4": 1
+  "5": 1
+  "6": 1
+  default: 1
 ---
 
 # EFMP-303 - Educational Policies and Plans of Pakistan - Content Spec
@@ -59,11 +59,11 @@ key used in each unit's `sources/unit-NN.md`. Cited by reference only - never re
 
 | Key | Citation | DOI/URL | Units | Note |
 |---|---|---|---|---|
-| nep2009 | Government of Pakistan. (2009). *National Education Policy 2009*. Ministry of Education. | [moe.gov.pk](https://moe.gov.pk) | 2, 4 | the core policy document; open-access PDF from the Ministry |
-| nep2017 | Government of Pakistan. (2017). *National Education Policy 2017*. Ministry of Federal Education and Professional Training. | [mofept.gov.pk](https://mofept.gov.pk) | 2 | the successor policy; open-access |
-| unesco-epg | UNESCO. *Education Planning and Policy Guidelines*. UNESCO International Institute for Educational Planning. | [iiep.unesco.org](https://iiep.unesco.org) | 1, 3, 4 | open-access planning guidelines from IIEP |
-| andrabi-pak | Andrabi, T., & Rizvi, S. *Educational Planning in Pakistan*. | (print) | 1, 3 | cited by reference only; specific claims need verification |
-| khan2018 | Khan, A. (2018). *Education Policy and Planning in Pakistan*. | (print) | 2, 5, 6 | cited by reference only |
+| nep2009 | Government of Pakistan. (2009). *National Education Policy 2009*. Ministry of Education. | [archived Ministry site](https://web.archive.org/web/20201126091946/http://moe.gov.pk/) | 2, 4 | the core policy document; open-access PDF from the Ministry (original moe.gov.pk now serves an unrelated page; archived link preserves the Ministry's own copy) |
+| nep2017 | Government of Pakistan. (2017). *National Education Policy 2017*. Ministry of Federal Education and Professional Training. | [archived Ministry site](https://web.archive.org/web/20211228022722/http://www.mofept.gov.pk/) | 2 | the successor policy; open-access (mofept.gov.pk is currently unreachable; archived link preserves the Ministry's own copy) |
+| unesco-epg | UNESCO International Institute for Educational Planning. (n.d.). *What is educational planning?* IIEP-UNESCO. | [iiep.unesco.org](https://iiep.unesco.org/en/our-mission/educational-planning-explained) | 1, 3, 4 | open-access planning guidance from IIEP; author-selected substitute for the guide's "Education Planning and Policy Guidelines" (specific IIEP title varies by year) |
+| pak-vision2025 | Planning Commission of Pakistan. (2017). *Pakistan Vision 2025*. Government of Pakistan. | [pc.gov.pk](https://www.pc.gov.pk/uploads/downloads/Vision_2025_Pakistan.pdf) | 1, 3 | author-selected; replaces the unresolvable Andrabi & Rizvi print monograph with a verifiable open-access government development plan directly relevant to Units 1 and 3 |
+| gem-report2020 | UNESCO. (2020). *Global Education Monitoring Report 2020: Inclusion and education*. UNESCO. | [unesco.org/gemreport](https://unesdoc.unesco.org/ark:/48223/pf0000373718) | 2, 5, 6 | author-selected; replaces the unresolvable Khan 2018 print monograph with a verifiable open-access UNESCO report on education policy relevant to Units 2, 5 and 6 |
 
 ### Curated-supplementary (open access) - to be bound at G2, not asserted here
 
@@ -74,17 +74,18 @@ floor, that is an escalation to `specs/gaps.md`.
 
 ## Week schedule
 
-The guide carries no week table. The distribution below follows the task's unit plan across a
-16-week term: 3/3/3/2/3/2 across Units 1 to 6.
+The guide carries a 16-week breakdown (lines 1211-1278). The distribution below follows the guide's
+week table exactly, mapping each guide week to its unit. Week 16 is assigned to Unit 6 as the
+course review and assessment week.
 
-| Week(s) | Unit | Sub-topics |
+| Week(s) | Unit | Guide week content |
 |---|---|---|
-| 1-3 | Unit 1 - Introduction and Historical Background | meaning, scope and importance of educational policy and planning; relationship between education, society and development; education before independence; post-independence developments; key milestones |
-| 4-6 | Unit 2 - National Education Policies | early policies 1947-2000; National Education Policy 2009; National Education Policy 2017 |
-| 7-9 | Unit 3 - Development Plans and Educational Planning | five-year plans and education; national and provincial plans; linking education with economic growth; concept and types of planning; planning process and models |
-| 10-11 | Unit 4 - Monitoring, Evaluation and Challenges | monitoring and evaluation concepts, process and tools; financial constraints; political instability; bureaucratic issues |
-| 12-14 | Unit 5 - Quality Assurance and Development | accreditation and evaluation; curriculum standardization; teacher training; human capital formation; reducing inequality; gender and inclusive education |
-| 15-16 | Unit 6 - International Perspectives and Future Directions | international comparisons; lessons for Pakistan; SDGs; ICT in education management; data-driven planning; digital transformation; innovations in policy design; strategic planning; role of teachers and administrators |
+| 1-2 | Unit 1 - Introduction and Historical Background | Week 1: meaning, scope, importance of educational policy and planning; relationship between education, society and development. Week 2: education before independence; post-independence developments; key milestones |
+| 3-5 | Unit 2 - National Education Policies | Week 3: early policies 1947-1970; 1970-1990 policies and reforms; 1990-2000 policy shifts and challenges. Week 4: NEP 2009 objectives, guiding principles, implementation strategies, outcomes and challenges. Week 5: NEP 2017 vision, policy framework, curriculum reforms, quality assurance, policy priorities |
+| 6-8 | Unit 3 - Development Plans and Educational Planning | Week 6: five-year development plans and education; national and provincial plans; linking education with economic growth. Week 7: meaning and importance of planning; types (micro, macro, strategic); stages. Week 8: needs assessment and goal setting; resource allocation; models |
+| 9-10 | Unit 4 - Monitoring, Evaluation and Challenges | Week 9: monitoring and evaluation concepts, process, tools and resources. Week 10: financial constraints; political instability; bureaucratic and administrative issues |
+| 11-12 | Unit 5 - Quality Assurance and Development | Week 11: accreditation and evaluation systems; standardization of curricula; teacher training and professional development. Week 12: human capital formation; reducing inequality and poverty; gender and inclusive education policies |
+| 13-16 | Unit 6 - International Perspectives and Future Directions | Week 13: education policies in developing countries; lessons for Pakistan; SDGs and local relevance. Week 14: ICT in education management; data-driven planning; digital transformation. Week 15: innovations in policy design; strategic planning for quality and equity; role of teachers and administrators. Week 16: course review; student presentations and discussions |
 
 ## Course review plan
 
@@ -102,11 +103,11 @@ Seeds an eventual `docs/semester-2/efmp-303/course-review.mdx`.
 
 ## Unit 1: Introduction and Historical Background
 
-Weeks 1-3. Unit Spec (G1) for `docs/semester-2/efmp-303/unit-01/`.
+Weeks 1-2. Unit Spec (G1) for `docs/semester-2/efmp-303/unit-01/`.
 
 - **CLO/SLO refs**: `SLO:EFMP-303-1-1` (meaning, scope and importance of educational policy and
   planning), `SLO:EFMP-303-1-2` (historical development of education in Pakistan) - traces to guide
-  CLOs 1 and 5.
+  CLO 1.
 - **Key terms**: Educational policy, Educational planning, Policy implementation, Human capital.
 - **Topics** (from guide Weeks 1-2): meaning and scope of educational policy and planning; importance;
   relationship between education, society and development; education before independence;
@@ -140,7 +141,7 @@ Weeks 1-3. Unit Spec (G1) for `docs/semester-2/efmp-303/unit-01/`.
 "policy is only what the government writes in documents"; "planning guarantees results";
 "Pakistan's education system began at independence".
 
-**Mapped readings**: unesco-epg, andrabi-pak.
+**Mapped readings**: unesco-epg, pak-vision2025.
 
 **Worked-examples plan**: meaning and scope - comparing a policy document and a school improvement
 plan (U1-01-U1-02); society and development - tracing how Sindh's literacy rate connects to
@@ -167,7 +168,7 @@ school (U1-04-U1-05); milestones - placing five key events on a timeline (U1-06)
 
 ## Unit 2: National Education Policies
 
-Weeks 4-6. Unit Spec (G1) for `docs/semester-2/efmp-303/unit-02/`.
+Weeks 3-5. Unit Spec (G1) for `docs/semester-2/efmp-303/unit-02/`.
 
 - **CLO/SLO refs**: `SLO:EFMP-303-2-1` (the major education policies of Pakistan and their
   objectives), `SLO:EFMP-303-2-2` (the National Education Policy 2009 and 2017 in detail) -
@@ -205,7 +206,7 @@ Weeks 4-6. Unit Spec (G1) for `docs/semester-2/efmp-303/unit-02/`.
 **Common misconceptions**: "a policy on paper is a policy in practice"; "the 2009 and 2017 policies
 are identical"; "policies fail only because of money"; "every new government writes a new policy".
 
-**Mapped readings**: nep2009, nep2017, khan2018.
+**Mapped readings**: nep2009, nep2017, gem-report2020.
 
 **Worked-examples plan**: early policies - reading an excerpt from the 1959 Sharif Commission report
 and identifying its key recommendation (U2-01-U2-03); NEP 2009 - tracing one objective through
@@ -228,7 +229,7 @@ priority with the 2009 version (U2-07-U2-09).
 
 ## Unit 3: Development Plans and Educational Planning
 
-Weeks 7-9. Unit Spec (G1) for `docs/semester-2/efmp-303/unit-03/`.
+Weeks 6-8. Unit Spec (G1) for `docs/semester-2/efmp-303/unit-03/`.
 
 - **CLO/SLO refs**: `SLO:EFMP-303-3-1` (five-year development plans and their role in education),
   `SLO:EFMP-303-3-2` (educational planning: concept, types, stages and models) - traces to guide
@@ -269,7 +270,7 @@ Weeks 7-9. Unit Spec (G1) for `docs/semester-2/efmp-303/unit-03/`.
 is only the federal government's job"; "more resources automatically mean better education";
 "planning models are theoretical and not used in practice".
 
-**Mapped readings**: andrabi-pak, unesco-epg.
+**Mapped readings**: pak-vision2025, unesco-epg.
 
 **Worked-examples plan**: development plans - identifying education targets in a five-year plan
 excerpt (U3-01-U3-03); planning types - classifying three scenarios as micro, macro or strategic
@@ -292,7 +293,7 @@ excerpt (U3-01-U3-03); planning types - classifying three scenarios as micro, ma
 
 ## Unit 4: Monitoring, Evaluation and Challenges
 
-Weeks 10-11. Unit Spec (G1) for `docs/semester-2/efmp-303/unit-04/`.
+Weeks 9-10. Unit Spec (G1) for `docs/semester-2/efmp-303/unit-04/`.
 
 - **CLO/SLO refs**: `SLO:EFMP-303-4-1` (monitoring and evaluation in education), `SLO:EFMP-303-4-2`
   (challenges in educational policy implementation) - traces to guide CLOs 3 and 4.
@@ -346,7 +347,7 @@ implementation (U4-04-U4-06).
 
 ## Unit 5: Quality Assurance and Development
 
-Weeks 12-14. Unit Spec (G1) for `docs/semester-2/efmp-303/unit-05/`.
+Weeks 11-12. Unit Spec (G1) for `docs/semester-2/efmp-303/unit-05/`.
 
 - **CLO/SLO refs**: `SLO:EFMP-303-5-1` (quality assurance systems in education), `SLO:EFMP-303-5-2`
   (education for social and economic development) - traces to guide CLOs 2 and 4.
@@ -382,7 +383,7 @@ Weeks 12-14. Unit Spec (G1) for `docs/semester-2/efmp-303/unit-05/`.
 every school teaches the same way"; "teacher training is a one-time event"; "education alone can
 eliminate poverty"; "gender policy is only about girls' enrolment".
 
-**Mapped readings**: khan2018, nep2009.
+**Mapped readings**: gem-report2020, nep2009.
 
 **Worked-examples plan**: quality assurance - tracing a teacher's career from training to accreditation
 (U5-01-U5-03); development - analyzing how one district's education investment affected its
@@ -404,14 +405,14 @@ economic indicators (U5-04-U5-06).
 
 ## Unit 6: International Perspectives and Future Directions
 
-Weeks 15-16. Unit Spec (G1) for `docs/semester-2/efmp-303/unit-06/`.
+Weeks 13-16. Unit Spec (G1) for `docs/semester-2/efmp-303/unit-06/`.
 
 - **CLO/SLO refs**: `SLO:EFMP-303-6-1` (international comparisons and lessons for Pakistan),
   `SLO:EFMP-303-6-2` (technology, innovation and the future of educational planning) - traces to
   guide CLOs 4 and 5.
 - **Key terms**: Sustainable Development Goals (SDGs), ICT in education, Data-driven planning,
   Digital transformation, Innovation.
-- **Topics** (from guide Weeks 13-15): education policies in developing countries; lessons for Pakistan;
+- **Topics** (from guide Weeks 13-16): education policies in developing countries; lessons for Pakistan;
   SDGs and local relevance; ICT in education management; data-driven planning; digital transformation;
   innovations in policy design; strategic planning for quality and equity; role of teachers and
   administrators.
@@ -446,7 +447,7 @@ Weeks 15-16. Unit Spec (G1) for `docs/semester-2/efmp-303/unit-06/`.
 countries"; "technology replaces the need for planning"; "teachers are only implementers, not
 policy actors".
 
-**Mapped readings**: khan2018, nep2017.
+**Mapped readings**: gem-report2020, nep2017.
 
 **Worked-examples plan**: international comparisons - comparing Pakistan's literacy rate with a
 neighbouring country and explaining the difference (U6-01-U6-03); technology - examining how an
