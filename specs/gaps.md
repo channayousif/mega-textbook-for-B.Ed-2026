@@ -1604,7 +1604,7 @@ Recorded by `agent:evaluator` under `D-2026-0052`, bound to
 
 ## G-2026-97 - GPKS-402 intake: the six-unit partition is the spec's construction over a guide that gives only a week table, and the spec's week schedule misstates the guide's weeks
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
 - **Gate:** G0 intake / G1 unit-spec (partition criterion)
 - **Source:** `D-2026-0052`
 - **Detail:** The guide's "Course Contents / Weekly Breakdown" (`2nd 2026.txt:1008-1141`) numbers
@@ -1650,7 +1650,7 @@ Recorded by `agent:evaluator` under `D-2026-0052`, bound to
 
 ## G-2026-98 - GPKS-402 reading list: one guide entry is ambiguous, all four are print-only, no open-access floor is declared, and both curated supplements are defective
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
 - **Gate:** G0 intake (readings criterion)
 - **Source:** `D-2026-0052`
 - **Detail:** The guide lists four "Recommended Readings" (`2nd 2026.txt:1143-1153`); the spec
@@ -1698,7 +1698,7 @@ Recorded by `agent:evaluator` under `D-2026-0052`, bound to
 
 ## G-2026-99 - GPKS-402 SLO 6-1 (foreign policy) traces to no stated course objective
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
 - **Gate:** G0 intake (outcomes criterion)
 - **Source:** `D-2026-0052`
 - **Detail:** The guide states five course objectives (`2nd 2026.txt:996-1006`): ideological
@@ -1720,7 +1720,7 @@ Recorded by `agent:evaluator` under `D-2026-0052`, bound to
 
 ## G-2026-100 - GPKS-402 Units 1 and 2 were authored (EN and UR) against an unapproved spec, before G0/G1, and the spec has defects that reach them
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
 - **Gate:** G0 intake / G1 unit-spec (process)
 - **Source:** `D-2026-0052`
 - **Detail:** At the bound commit `26ecd199`, `docs/semester-2/gpks-402/unit-01/` and `unit-02/`
