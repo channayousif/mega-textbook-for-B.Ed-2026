@@ -2153,7 +2153,7 @@ content-improvement loop with no further cycle.
 
 ## D-2026-0048 - EFMP-303 intake: identity, coverage, outcome traces, blueprint and structure approved; partition, calendar and readings escalated
 
-- **Status:** pending-owner-review
+- **Status:** confirmed (owner, 2026-10-10; escalations ruled in D-2026-0053; spec approval still requires the listed author repairs and a fresh intake)
 - **Gate:** G0 intake / G1 unit-spec
 - **Scope:** EFMP-303 only, `specs/content/efmp-303/content-spec.md` at commit `2452929d`
   (`status: draft`, after the board reverted the authoring agent's self-set approval). Evaluated in
