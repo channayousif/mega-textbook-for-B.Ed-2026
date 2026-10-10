@@ -1738,3 +1738,31 @@ The generated raster illustration `fig-U4-12.webp` places the teacher at the fro
   (this evaluator does not edit the tracker) and of the pre-approval authoring of Units 1 and 2,
   which will need re-checking against whatever the owner rules on `G-2026-72` to `G-2026-74`.
 - **Blocks:** nothing further in the spec; it blocks reliance on the tracker's G1 rows for EFMP-305.
+
+## G-2026-102 - EFMP-305 Unit 5: the guide's "Rights of Persons with Disabilities Act (2018)" does not resolve to one enacted Pakistani statute
+
+- **Status:** open
+- **Gate:** G0 intake `readings`; G1 unit-spec, Unit 5. Constitution Art. II.3 (which external
+  instrument is meant is a question about the world).
+- **Raised by:** agent:evaluator, 2026-10-10, under `D-2026-0054` (manifest
+  `scratchpad/intake2/EFMP-305/manifest.json`, digest
+  `13d09407ed3ff1cbf2b04fbf5e83455517b4013b5d8bb85ba65143385353567a`, commit `bc61ff7a`).
+- **Detail:** the guide names the instrument at Week 11 (`2nd 2026.txt:282`, "Rights of Persons
+  with Disabilities Act (2018)"). The spec makes it the "primary national legal framework and the
+  spine of Unit 5" (`content-spec.md:139-141`) and builds `U5-2`, `U5-3`, `fig-U5-1` to `fig-U5-4`
+  and Topic 5.2 on it. No federal Pakistani statute of that name and year was enacted: the
+  federal instrument is the ICT Rights of Persons with Disabilities Act, 2020 (tabled as a bill in
+  2018; Ministry of Human Rights brief, mohr.gov.pk); the 2018 statute is provincial, the Sindh
+  Empowerment of Persons with Disabilities Act, 2018. The guide's name matches the first and its
+  year matches the second. Which one Unit 5 teaches, or whether it teaches both (and the other
+  provincial Acts), is a choice the guide does not determine. `D-2026-0053` item 2 permits the
+  author to bind verified works where a guide entry is ambiguous, but it also requires that
+  unresolvable or misattributed entries be corrected, not validated; and this one fixes what a
+  four-week unit's legal content is, not only which source supports it.
+- **Separately (author repair, not part of the question):** `content-spec.md:140-141` says the
+  guide "lists no specific statute". It does (`:282`).
+- **Needed, and from whom:** the curriculum owner, to rule which statute(s) Unit 5 teaches under
+  the guide's Week 11 item and Week 12 "School responsibilities under legal requirements".
+- **Blocks:** `readings` for EFMP-305; Unit 5 Topics 5.1 (`fig-U5-1`, `fig-U5-2`) and 5.2 (`U5-2`,
+  `U5-3`, `fig-U5-3`, `fig-U5-4`); `## Standards & frameworks anchors` second bullet; Unit 5 key
+  term "Rights of Persons with Disabilities Act (RPwD)". Units 1-4 and 6 are not blocked by it.
