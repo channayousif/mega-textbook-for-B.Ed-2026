@@ -1595,7 +1595,7 @@ The generated raster illustration `fig-U4-12.webp` places the teacher at the fro
 
 ## G-2026-92 - GSOS-301 intake: the six-unit partition and the Unit 6 topic split are the spec's construction over a guide that gives only a week table
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
 - **Gate:** G0 intake / G1 unit-spec (partition criterion)
 - **Source:** `D-2026-0051`
 - **Detail:** The GSOS-301 guide block (`Scheme-and-Course-guides/extracted-text/2nd 2026.txt:776-968`)
@@ -1629,7 +1629,7 @@ The generated raster illustration `fig-U4-12.webp` places the teacher at the fro
 
 ## G-2026-93 - GSOS-301 reading list: the guide's two entries are missing from the spec, and the four "Guide-required" rows are not the guide's and do not resolve as printed
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
 - **Gate:** G0 intake (readings criterion)
 - **Source:** `D-2026-0051`
 - **Detail:** The guide's "Recommended Books" (`2nd 2026.txt:964-968`) are two bare URLs:
@@ -1670,7 +1670,7 @@ The generated raster illustration `fig-U4-12.webp` places the teacher at the fro
 
 ## G-2026-94 - GSOS-301's "binding" G2 open-access floor is self-declared, not owner-adopted, and not enforced
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
 - **Gate:** G0 intake (readings criterion)
 - **Source:** `D-2026-0051`
 - **Detail:** `content-spec.md:48-56` states the spec "sets a binding requirement on G2
