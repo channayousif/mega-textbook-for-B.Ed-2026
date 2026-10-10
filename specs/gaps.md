@@ -1741,7 +1741,7 @@ The generated raster illustration `fig-U4-12.webp` places the teacher at the fro
 
 ## G-2026-102 - EFMP-305 Unit 5: the guide's "Rights of Persons with Disabilities Act (2018)" does not resolve to one enacted Pakistani statute
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
 - **Gate:** G0 intake `readings`; G1 unit-spec, Unit 5. Constitution Art. II.3 (which external
   instrument is meant is a question about the world).
 - **Raised by:** agent:evaluator, 2026-10-10, under `D-2026-0054` (manifest
