@@ -2516,3 +2516,61 @@ content-improvement loop with no further cycle.
   - **No escalation.** Reserved codes `G-2026-142` to `G-2026-145` are unused.
   - Context only, not judged: authored Units 1-2 and their coverage, sources and figure files.
   - Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
+
+## D-2026-0066 - GSOS-301 fourth intake: all eight criteria approved; readings repair from D-2026-0064 verified
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** GSOS-301 only. Limited, as `D-2026-0064` permitted, to the readings repair plus a fresh
+  decision-residue search; restates the other six verdicts on this manifest because their inputs
+  are byte-identical. Settles all eight criteria for the spec at `44dfdb70`.
+- **Decided by:** agent:evaluator, 2026-10-10
+- **Decision:**
+  1. **Delta.** Against the `D-2026-0064` manifest (digest `bb6b7514...`), the only changed spec
+     input is `specs/content/gsos-301/content-spec.md` (`git diff 5bc6ea4c 44dfdb70`: 4
+     insertions, 1 deletion at `:57`, `:227`, `:348`, `:409`); the two other new paths are the
+     prior intake's own record. Guide, Scheme, catalog, contracts, style guide, coverage, sources,
+     figures and concepts are byte-identical.
+  2. **Identity, partition, coverage, outcomes, blueprint, structure (pass, carried forward).**
+     None of their locators is touched; `D-2026-0064` items 1-6 hold. Partition rests on the
+     confirmed owner ruling `D-2026-0053` item 1. The three new Mapped-readings rows cite only
+     existing checklist IDs (U2-01..06 `:197-202`, U4-01..06 `:321-326`, U5-01..03 `:382-384`) and
+     add no sub-topic; `validate:content` exits 0.
+  3. **Readings (pass).** `D-2026-0053` item 2 requires every unit to bind a registry-verified
+     open-access source. `hammondnd` (`:57`) records OpenAlex `W2590335685` and a verification
+     date; re-queried 2026-10-10: book, open access (green), Ron Hammond and Paul Chaney. It is now
+     planned in every unit's `### Mapped readings` (`:160`, `:227`, `:288`, `:348`, `:409`,
+     `:473`) and its Units column reads `1-6`. Every chapter cited exists on LibreTexts under the
+     stated title (checked 2026-10-10): 1.05 Culture, 1.06 Socialization, 1.07 Society and Groups,
+     1.08 Deviance and Crime, 1.09 Stratification, 1.10 Sex and Gender, 1.13 Family, 1.14
+     Education, 1.15 Religion, 1.16 Media. The earlier readings repairs (guide list `:43-50`,
+     `johnson1961` title-level under `D-2026-0001`, `lindsey2001` ISBN) are unchanged.
+  4. **Decision residue (pass).** Whole bound GSOS-301 tree searched afresh: `henson2022` survives
+     only in historical replacement notes; no `lindsey2010`, `introduction-to-sociology-3e`,
+     `776-972`, `D-2026-0012`, bare `open_access_floor: 1`, or stale `hammondnd` Units `1, 3, 6`.
+- **Advisories (no repair required):** chapter 1.10 does not treat feminist perspectives, so the
+  Unit 4 author should not cite `hammondnd` for U4-06 (`conerly2021` and `lindsey2001` cover it).
+  `check:source-floor` still exits 1 on authored `sources/unit-02.md`, which is pre-intake content
+  that does not yet bind `hammondnd`; it must be fixed when Unit 2 is re-sourced, and is not a spec
+  defect. The `D-2026-0064` advisories on `hammondnd`'s year and `singhnd` stand.
+- **Basis:** `Scheme-and-Course-guides/extracted-text/2nd 2026.txt:776-968`; owner rulings
+  `D-2026-0053` (confirmed) items 1, 2 and 4; `D-2026-0051` (confirmed); `D-2026-0057`,
+  `D-2026-0064`; `G-2026-01`, `G-2026-05`; `D-2026-0001`; `scripts/check-source-floor.mjs:40-41,75-76`.
+  **Deterministic checks at `44dfdb70`, real exit codes:** `check:no-em-dash` 0,
+  `validate:content` 0, `check:bloom-bands` 0, `check:concept-graph` 0, `check:depth-gate` 0,
+  `check:no-answer-keys` 0, `check:docs-sync` 0, `check:figures` **1** (15 GSOS-301 findings, all
+  in pre-intake authored Units 1-2), `check:source-floor` **1** (authored Unit 2 sources file),
+  `check:pipeline-gate` **1** (Units 1-2: spec `draft`, G2 rows not done). None is a spec defect;
+  all three were present at `D-2026-0064`.
+- **Bound to:** `/tmp/claude-1005/-home-a2ahs-mega-book-for-B-Ed/e283ce34-647b-4701-9268-ea887141a5b3/scratchpad/intake4/GSOS-301/manifest.json`,
+  manifest digest `f47bd2809b78fdfcf4c90fe93954530b714f860d1cce03ee79c59e11a9cbaccd`, 67 inputs
+  at commit `44dfdb707e0d50b85a21574f5f17b3d21df4fd41`. Recomputed independently with
+  `manifestFor()` over `intakeRoots('gsos-301')`: 0 mismatches, digest reproduced, both registers
+  matched at read time. Record: `intake4/GSOS-301/evaluation.md`. **Any change to a bound input
+  voids this decision** (Art. VII.8.5), except the anticipated `status:` line below.
+- **Limits:**
+  - On owner confirmation, `content-spec.md` may move to `status: approved`. Nothing remains
+    blocked at G0/G1.
+  - **No escalation.** Reserved codes `G-2026-150` to `G-2026-153` are unused.
+  - Context only, not judged: authored Units 1-2 and their coverage, sources and figure files.
+  - Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
