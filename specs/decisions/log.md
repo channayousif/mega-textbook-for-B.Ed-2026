@@ -2340,7 +2340,7 @@ content-improvement loop with no further cycle.
 
 ## D-2026-0063 - EFMP-303 third intake: all eight criteria approved; the six D-2026-0059 repairs are applied
 
-- **Status:** pending-owner-review
+- **Status:** confirmed (owner, 2026-10-10, relayed by the board session); spec moves to status: approved
 - **Gate:** G0 intake / G1 unit-spec
 - **Scope:** EFMP-303 only, `specs/content/efmp-303/content-spec.md` (`status: draft`) and its
   `sources/unit-0[1-6].md` at commit `0f7b4608`, after the repairs of `0f7b4608` made in response

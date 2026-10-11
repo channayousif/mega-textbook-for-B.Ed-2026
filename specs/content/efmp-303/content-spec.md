@@ -1,6 +1,6 @@
 ---
 course_code: EFMP-303
-status: draft
+status: approved
 open_access_floor:
   "1": 1
   "2": 1
