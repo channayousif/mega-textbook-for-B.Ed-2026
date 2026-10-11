@@ -65,7 +65,7 @@ deterministic gates.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 4 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-04/G2/20261010T151713741Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-04/G2/20261011T213308061Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | awaiting Reviewer |
 | Unit 4 | G4 ur-translation | ▢ | | |
 | Unit 4 | G5 ur-review | ▢ | | |
@@ -81,7 +81,7 @@ open-access source bound against a declared floor of one. G1 unit-spec affirmed 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 5 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-05/G2/20261010T151723902Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-05/G2/20261011T213316040Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | awaiting Reviewer |
 | Unit 5 | G4 ur-translation | ▢ | | |
 | Unit 5 | G5 ur-review | ▢ | | |
@@ -98,7 +98,7 @@ at intake; G2 cleared.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 6 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-06/G2/20261010T151727721Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-06/G2/20261011T213320443Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | awaiting Reviewer |
 | Unit 6 | G4 ur-translation | ▢ | | |
 | Unit 6 | G5 ur-review | ▢ | | |
