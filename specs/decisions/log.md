@@ -2424,3 +2424,95 @@ content-improvement loop with no further cycle.
     `D-2026-0051` already determines. Reserved codes `G-2026-114` to `G-2026-117` are unused.
   - Context only, not judged: authored Units 1-2 and their coverage, sources and figure files.
   - Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
+
+## D-2026-0064 - GSOS-301 third intake: seven criteria approved; readings fail on one repair (no registry-verifiable open-access source planned for Units 2, 4 and 5)
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** GSOS-301 only. Re-checks all eight criteria against the spec as repaired after
+  `D-2026-0057`. Settles identity, partition, coverage, outcomes, blueprint, structure and decision
+  residue. Does **not** approve readings, which fails on one item the owner ruling `D-2026-0053`
+  item 2 already determines (repair below; no new owner decision needed).
+- **Decided by:** agent:evaluator, 2026-10-10
+- **Decision:**
+  1. **Identity (pass).** The guide, Scheme and catalog are byte-identical to the `D-2026-0057`
+     bundle; `content-spec.md:12` states 2 (2-0) against the guide's `03` (`2nd 2026.txt:789`),
+     which `G-2026-01` and `G-2026-05` already adjudicate.
+  2. **Partition (pass).** Unchanged since `D-2026-0057` item 2 (checklists, Topic lists and Week
+     schedule untouched apart from dropping the `D-2026-0012` citation at `:68`). Rests on the
+     confirmed owner ruling `D-2026-0053` item 1, not on the guide alone.
+  3. **Coverage (pass).** The 43 checklist rows are unchanged (re-counted: 43 `U<n>-NN | Week`
+     rows) and remain the guide's 43 teaching leaves (`2nd 2026.txt:804-935`, excluding Weeks 8
+     and 16), each once. The new per-unit lines reference only existing IDs and add no sub-topic.
+  4. **Outcomes (pass).** The `D-2026-0057` repair is made: Unit 5 (`:374`) now attributes
+     "describe institutional change" to CLO 4 (`2nd 2026.txt:797-798`, "inequality and social
+     change") and the institution clauses to CLO 3 (`:796`). Every unit outcome names a guide CLO,
+     as `D-2026-0053` item 4 permits.
+  5. **Blueprint (pass).** Unchanged since `D-2026-0051` item 4 / `D-2026-0057` item 4.
+  6. **Structure (pass).** All four `D-2026-0057` structure repairs are made: `## Course review
+     plan` has 4 practicum ideas (`:102-105`, contract 3-6); every unit carries
+     `**Prerequisite knowledge**`, `**Worked-examples plan**` and `**International best-practice
+     notes**` (Units 1-6 at `:149-153`, `:215-219`, `:276-280`, `:336-340`, `:396-400`,
+     `:459-463`); `:36` no longer attributes "trainee teachers" to the guide; `:12` cites
+     `776-968`. Front matter (`open_access_floor: {default: 1}`, the mapping form `D-2026-0053`
+     item 2 requires) validates against `contracts/content-spec-frontmatter.schema.json`.
+  7. **Decision residue (pass).** Searched the whole bound GSOS-301 tree: no `henson2022` or
+     `lindsey2010` key survives (only historical notes recording their replacement), no
+     `introduction-to-sociology-3e` URL, no `776-972`, no bare `open_access_floor: 1`, no derived
+     calendar; the advisory `D-2026-0012` citation is gone.
+- **Not approved:**
+  - **Readings (fail, one repair).** Repairs (a)-(c) of `D-2026-0057` are made and verified:
+    (a) the guide's list (`2nd 2026.txt:964-968`) is recorded at `:43-50`; `johnson1961`
+    resolves (preview PDF fetched 2026-10-10: Harry M. Johnson, *Sociology: A Systematic
+    Introduction*, Routledge 1961, International Library of Sociology, paperback 2011, (c) 1960
+    Harcourt, Brace), title-level under `D-2026-0001` as stated. (b) `henson2022` is replaced by
+    `hammondnd` (`:57`): the LibreTexts URL returns 200 and names Ron Hammond and Paul Cheney,
+    Utah Valley University; OpenAlex `W2590335685` is "Introduction to Sociology Hammond and
+    Cheney", Ron Hammond and Paul Chaney, book, open access. (c) `lindsey2001` (`:63`): Open
+    Library `OL7331644M` confirms ISBN 0130413259, *Sociology (2nd Edition)*, Prentice Hall, 26
+    June 2001, work `OL3335670W`.
+    **Remaining defect:** `D-2026-0053` item 2 requires every unit to bind an open-access source
+    under a floor declared in the form `check:source-floor` reads, and that check counts a source
+    only when its row names a registry (Crossref, OpenAlex, ERIC, DOAJ, PubMed, Semantic Scholar,
+    Unpaywall) and an ISO date (`scripts/check-source-floor.mjs:40-41,75-76`); the spec's own
+    front matter (`:4-5`) calls the floor "registry-verified". Units 1, 3 and 6 plan `hammondnd`,
+    which carries OpenAlex and a date (`:57`). Units 2, 4 and 5 (`:222-226`, `:342-346`,
+    `:402-406`) plan only `conerly2021` as open access, whose row (`:56`) records no registry,
+    and no registry record of the 3rd edition was found (OpenAlex title and author searches: no
+    3e record, only 2e copies; Crossref: no match; Semantic Scholar rate-limited, unchecked). As
+    planned, those three units cannot meet the spec's own floor; `check:source-floor` already
+    exits 1 on authored Unit 2 for this reason. **Repair:** for each of Units 2, 4 and 5, plan in
+    `### Mapped readings` an open-access source whose reading-list row records a registry
+    identity and verification date (for example `hammondnd`, whose culture, socialization,
+    stratification, gender, family, education and religion chapters `:57` itself lists), or
+    record such an identity for `conerly2021` if one exists. Determined by `D-2026-0053` item 2;
+    no escalation.
+  - **Advisories (no repair required):** `hammondnd` is cited n.d. while OpenAlex records 2017
+    (a repository deposit year); either is defensible. `singhnd`'s author and audience
+    attribution (`:50`) could not be checked (SlideShare served a client challenge); no unit maps
+    it, so no unit depends on it, but it must be verified before any unit binds it.
+- **Basis:** `Scheme-and-Course-guides/extracted-text/2nd 2026.txt:776-968`; owner rulings
+  `D-2026-0053` (confirmed 2026-10-10) items 1, 2 and 4; `D-2026-0051` (confirmed) and its repair
+  list; `D-2026-0057`; `G-2026-01`, `G-2026-05`; `D-2026-0001`; `specs/content/style-guide.md`;
+  `contracts/content-spec-frontmatter.schema.json`.
+  **Deterministic checks at `cb40583c`, real exit codes:** `check:no-em-dash` 0,
+  `validate:content` 0, `check:bloom-bands` 0, `check:concept-graph` 0, `check:depth-gate` 0,
+  `check:no-answer-keys` 0, `check:docs-sync` 0, `check:figures` **1** (15 GSOS-301 findings, all
+  in pre-intake authored Units 1-2), `check:source-floor` **1** (GSOS-301 Unit 2: 0
+  registry-verified sources, floor 1; see the readings defect), `check:pipeline-gate` **1**
+  (GSOS-301 Units 1-2: spec `draft`, G2 rows not done).
+- **Bound to:** `/tmp/claude-1005/-home-a2ahs-mega-book-for-B-Ed/e283ce34-647b-4701-9268-ea887141a5b3/scratchpad/intake3/GSOS-301/manifest.json`,
+  manifest digest `bb6b75142c86353c6d8f824e8bf31468cc36ea290a030b3b3ee9d26047004c06`, 65 inputs
+  at commit `cb40583ce918cbb486c2a6860ad32f56c611f085`. Recomputed independently with
+  `manifestFor()` over `intakeRoots('gsos-301')`: 0 mismatches, digest reproduced, both registers
+  matched at read time. **Any change to a bound input voids this decision** (Art. VII.8.5). The
+  readings repair will change `content-spec.md`, so a fresh manifest and intake are required.
+- **Limits and what remains blocked:**
+  - **`status` stays `draft`.** Readings is not approved; the spec may not move to
+    `status: approved` on confirmation of this decision.
+  - **Blocked:** the `### Mapped readings` of Units 2, 4 and 5 and the reading-list rows they
+    rely on. A fourth intake may limit itself to the readings repair if every other bound input is
+    unchanged.
+  - **No escalation.** Reserved codes `G-2026-142` to `G-2026-145` are unused.
+  - Context only, not judged: authored Units 1-2 and their coverage, sources and figure files.
+  - Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
