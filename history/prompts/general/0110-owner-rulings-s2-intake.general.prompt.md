@@ -36,6 +36,8 @@ accept the plan's grouping for all,
 
  proceed
 
+(follow-up) its 40 formative 60 summative,
+
 ## Response snapshot
 
 Recorded owner rulings as D-2026-0053 (PR #125 to main): partitions confirmed (weeks follow guide week tables), readings posture (author-selected verified works where guide has none/print-only, open_access_floor 1 per unit; interpretation of "agreed"), EFMP-305 3 (3-0), outcome/reading-derived sub-topics permitted when the row names its derivation, GPKS-402 Units 1-2 withdrawn. On each child branch: intake D-codes confirmed, ruled gaps marked resolved. Deleted GPKS-402 Units 1-2 (EN+UR + per-unit governance) on agent/TEX-44; gates green. Posted rulings and next steps to TEX-37..44.
@@ -48,5 +50,5 @@ Recorded owner rulings as D-2026-0053 (PR #125 to main): partitions confirmed (w
 
 - Shipped / changed: D-2026-0053; gap and decision statuses on six branches; GPKS-402 U1-2 withdrawn.
 - Decisions the team must respect: D-2026-0053 items 1-5. Only the intake evaluator moves a spec to approved; agents never edit `status:`.
-- Pending / next owner: BilingualAuthor makes author repairs on TEX-39..44 and comments "repairs done"; board re-runs intake on a fresh manifest. Still open: G-2026-75 (EFMP-305 80/20 label, owner), G-2026-91 (depth-gate tooling, WebLeadAgy).
+- Pending / next owner: BilingualAuthor makes author repairs on TEX-39..44 and comments "repairs done"; board re-runs intake on a fresh manifest. EFMP-305 assessment split ruled 40 formative / 60 summative (D-2026-0053 item 6, G-2026-75). Still open: G-2026-91 (depth-gate tooling, WebLeadAgy).
 - Paperclip issues affected: TEX-37, TEX-39, TEX-40, TEX-41, TEX-42, TEX-43, TEX-44.
