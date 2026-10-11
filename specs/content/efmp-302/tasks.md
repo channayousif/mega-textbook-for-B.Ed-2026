@@ -139,7 +139,9 @@ Criteria A, B, D, E and F all passed; the per-criterion record is in `D-2026-004
 by a report named `AGY_CONVERSATION_ID.json`. Both reports carry that unfilled template token as
 `reviewer_run_id` and identical `started_at` / `completed_at` stamps, so neither shows that an
 independent reviewer session ran. `D-2026-0046` item 2 requires exactly that for the Unit 5
-cycle. Both rows are withdrawn and both reports stay on record. `acceptProvisionalReport` now
+cycle. Both rows are withdrawn. The reports stayed on record until 2026-10-10, when the owner had
+them removed from the tree (they kept tripping the agy wrapper's placeholder guard); they remain
+in git history at `de375e01`. `acceptProvisionalReport` now
 refuses bare `*_ID` template tokens and zero-duration reviews.
 
 - **Unit 3** still needs the fresh G3 cycle under `G-2026-70`.
