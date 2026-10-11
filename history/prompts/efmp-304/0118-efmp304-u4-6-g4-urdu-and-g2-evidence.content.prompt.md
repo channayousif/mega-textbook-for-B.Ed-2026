@@ -113,4 +113,23 @@ work.)
     / تاملی جریدہ, Reflective cycle / تاملی چکر, Descriptive writing / بیانیہ تحریر,
     Reflective writing / تاملی تحریر, Technical reflection / فنی تامل, Contextual
     reflection / سیاقی تامل, Dialectical reflection / جدلیاتی تامل.
-- **Paperclip issues affected:** TEX-38.
+- **Pre-existing defect found in EFMP-304 Unit 3's accepted Urdu, NOT fixed here** (it is
+  another pass's accepted work, so it is raised rather than edited): the Unit 3 Urdu
+  assessment has Latin capitals embedded inside Urdu words - `ٹیSٹ` for `ٹیسٹ` and
+  `پریمیSز` for `پریمیسز`, 41 occurrences in
+  `i18n/ur/.../efmp-304/unit-03/unit-assessment.mdx` and 18 in its `topic-02.mdx`. These
+  render as garbled words to an Urdu reader. Units 4-6 were checked for the same defect
+  with `grep -P '[\x{0600}-\x{06FF}][A-Za-z]+[\x{0600}-\x{06FF}]'` and are clean.
+  Unit 3's Urdu index additionally carries the `## Key terms` heading-parity defect that
+  was repaired in Unit 6. Both belong in a `revise-topic` pass on Unit 3.
+- **Paperclip control-plane note:** this run was not bound to a heartbeat task
+  (`PAPERCLIP_TASK_ID` unset), so `PATCH /api/issues/<TEX-38>` and
+  `POST /api/issues/<TEX-38>/comments` both returned
+  `403 cross_issue_influence_run_context_required` even with `X-Paperclip-Run-Id` set.
+  Issue creation was unaffected. Per the bounded-retry rule the write was not retried
+  further; the report was delivered through PR #118's body, this PHR, and issues TEX-46
+  and TEX-47 instead. **TEX-38 could not be set `blocked` on TEX-46** - TEX-47 asks
+  CurriculumOwner to do it.
+- **Paperclip issues affected:** TEX-38 (could not be updated), TEX-46 (G5 review,
+  created, assigned to Reviewer), TEX-47 (owner rulings, created, assigned to
+  CurriculumOwner).
