@@ -2320,3 +2320,67 @@ content-improvement loop with no further cycle.
     `:211-221`) and `:140-141` (guide does name the statute, `:282`).
   - The spec may not move to `status: approved` on this entry.
   - Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
+
+## D-2026-0065 - EFMP-305 third intake: all eight G0/G1 criteria approved; the spec is a faithful derivation of the guide under the confirmed owner rulings
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** EFMP-305 Inclusive Education only, the whole bound `specs/content/efmp-305/` tree at
+  commit `76659f21` (drafted and repaired by authors other than this evaluator). Settles
+  `identity`, `partition`, `coverage`, `outcomes`, `readings`, `blueprint`, `structure` and
+  `decision-residue` for all six units. Supersedes the open limits of `D-2026-0054`.
+- **Decided by:** agent:evaluator, 2026-10-10
+- **Decision:**
+  1. `identity`: code, title, semester and category match guide (`2nd 2026.txt:189-197`), Scheme
+     and catalog (`3 (3-0)`, Major: Professional); credit hours rest on confirmed `D-2026-0053`
+     item 3. Spec `:13`, `:20-22` agree.
+  2. `partition`: six units follow the guide's numbered units (`:225-294`), weeks 2/2/3/2/4/3 = 16;
+     the Unit 6 "(2 Weeks)" header against Weeks 14-16 is a within-guide slip with no second
+     document in conflict, disclosed at spec `:167`.
+  3. `coverage`: every guide week item (`:227-294`) appears exactly once across the 30 checklist
+     rows, each now carrying a `Guide ref`; `U1-2` anchors to the course description (`:201-202`);
+     the three non-guide rows `U1-5`, `U3-5`, `U5-5` are marked `derived` and name their outcome
+     (`:255`, `:401`, `:550`) as `D-2026-0053` item 4 requires. Topic partitions total and disjoint.
+  4. `outcomes`: every SLO group traces to the guide's five outcomes (`:213-221`); locator now
+     correct (spec `:36`).
+  5. `readings`: the guide has no reading list (`:189-345`); author-selected readings labelled as
+     such under `D-2026-0053` item 2 (spec `:96-119`); open-access floor in the mapping form
+     (`:7-8`), `check:source-floor` exit 0. `G-2026-102` is applied as ruled in `D-2026-0053`
+     item 7: Unit 5 teaches the Sindh Empowerment of Persons with Disabilities Act, 2018 (Sindh Act
+     No. XLVIII of 2018) with a short comparison to the ICT Rights of Persons with Disability Act,
+     2020 (Act No. XXXV of 2020), in `U5-2`, `U5-3`, Topic 5.2, key terms, anchors, `fig-U5-1` to
+     `fig-U5-4`, worked examples and misconceptions; the guide's own Week 11 text is preserved at
+     `:164` and `:537`. Both statute citations and all five DOIs were checked by this evaluator.
+  6. `blueprint`: 10 MCQ / 10 RRQ / 5 ERQ per unit with Bloom ranges consistent with
+     `style-guide.md` v4.5; course split 40 formative / 60 summative per `D-2026-0053` item 6
+     (spec `:57-58`); depth bands consistent with the per-topic reading minutes.
+  7. `structure`: every repair `D-2026-0054` listed is made (Topic 6.2 now plans `fig-U6-3` and
+     `fig-U6-6`; checklist and topic-list contract columns; the five per-unit authoring lines in
+     all six units; Guide-required / Curated-supplementary tables; practicum ideas; accuracy at
+     `:29`, `:36`, `:170`). Replay: all 15 topics plan two figures, every unit plans a schematic.
+     Gates at `76659f21`: depth-gate, concept-graph, bloom-bands, source-floor, validate:content,
+     no-em-dash, no-answer-keys, docs-sync exit 0; figures and pipeline-gate exit 1 on authored
+     Units 1-2 content state and `status: draft` only, not spec defects.
+  8. `decision-residue`: no 80/20, `(0-3)`, two-week Unit 6, underived row, "primary national"
+     statute or pre-ruling source title remains in the spec tree. One residue extended here as
+     ruling-determined, not a scope judgement: `sources/unit-01.md:9-10` still says the binding
+     floor is two open-access sources per unit; `D-2026-0053` item 2 and spec `:131` make it one,
+     and the ruling governs.
+- **Basis:** guide `Scheme-and-Course-guides/extracted-text/2nd 2026.txt:189-345`; confirmed owner
+  ruling `D-2026-0053` (read from `scratchpad/intake2/D-2026-0053.md`, sha256 `15d74a8c...c2ab1f`;
+  items 6-7 merging to main via PR #128); record `scratchpad/intake3/EFMP-305/evaluation.md`.
+- **Bound to:** `scratchpad/intake3/EFMP-305/manifest.json`, manifest digest
+  `6342b0733dd3748e087e3d61a177c780e41dbd5af41fc3265b9ea7cf209da9b5` (65 inputs, recomputed with
+  `manifestFor()`, 0 mismatches; register digests matched before writing). Any change to a bound
+  input voids this approval.
+- **Limits:**
+  - On owner confirmation of this entry the spec may move to `status: approved`; this entry does
+    not itself set it.
+  - Does not certify authored content. Carried to G2/G3, not spec defects: Units 1-2 prose still
+    uses pre-ruling statute wording (flagged at `sources/unit-01.md:28-30`);
+    `sources/unit-02.md:23` dates Westwood's 7th edition 2018 (Routledge's 7th edition is 2015,
+    doi:10.4324/9781315716695); `hehir2016` and `unCRPD` in `sources/unit-01.md` carry generic
+    domain URLs; the UR course overview must state 40/60 (`D-2026-0053` item 6).
+  - Unit 4 and Unit 6 open-access floor sources and the U5-4 teacher-attitude study are G2
+    binding obligations the spec itself records; an unmet floor is a G2 escalation.
+  - Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
