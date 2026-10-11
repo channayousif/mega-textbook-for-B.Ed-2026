@@ -2395,3 +2395,75 @@ content-improvement loop with no further cycle.
     `nep2017`'s draft-versus-final edition is still unestablished.
   - No new gap was raised: `G-2026-122` to `G-2026-125` were reserved and not used.
   - Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
+
+## D-2026-0063 - EFMP-303 third intake: all eight criteria approved; the six D-2026-0059 repairs are applied
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** EFMP-303 only, `specs/content/efmp-303/content-spec.md` (`status: draft`) and its
+  `sources/unit-0[1-6].md` at commit `0f7b4608`, after the repairs of `0f7b4608` made in response
+  to `D-2026-0059`. Evaluated in a fresh session that drafted neither the spec nor its repairs.
+  Re-checks all eight criteria. Rests on the owner's confirmed `D-2026-0053` items 1 and 2 (record
+  file `intake2/D-2026-0053.md`, sha256 at read time
+  `15d74a8c3e737fbd639164f2b9e3c933504b0d2558659dfed8dfdfecadc2ab1f`; this differs from the digest
+  `D-2026-0059` recorded because items 6 and 7, EFMP-305 only, were added since; items 1 and 2 are
+  the ones relied on here).
+- **Decided by:** agent:evaluator, 2026-10-10
+- **Decision:**
+  1. **identity: pass.** EFMP-303, "Educational Policies and Plans of Pakistan", `3 (3-0)`,
+     Semester 2, Major: Professional. Guide, Scheme and catalog unchanged since `D-2026-0059.1`.
+  2. **partition: pass.** Six blocks, Weeks 1-2 / 3-5 / 6-8 / 9-10 / 11-12 / 13-15, as
+     `D-2026-0053` item 1 confirmed. Unit 6 now reads "Weeks 13-15" (spec `:424`, `:431`, `:101`);
+     Week 16 is a course-review row (`:102`) belonging to no unit.
+  3. **coverage: pass.** 45 checklist rows, unchanged since `D-2026-0048.2`; each pairs 1:1 with a
+     guide Week 1-15 bullet. Week 16 is covered by `## Course review plan` (`:104-118`).
+  4. **outcomes: pass.** SLO traces unchanged since `D-2026-0059.4`.
+  5. **readings: pass.** The guide's list (`:1349-1357`) is present and quoted (`:54-56`). The two
+     identifiable entries (NEP 2009, NEP 2017) sit under `### Guide-required` with document-level
+     locators; the ambiguous or unresolvable entries are replaced, disclosed, by verified real works
+     under a separate `### Author-selected` heading, as `D-2026-0053` item 2 permits. Floor declared
+     in the enforced mapping form and met in every unit.
+  6. **blueprint: pass.** Unchanged since `D-2026-0048.4`.
+  7. **structure: pass.** `validate:content`, `check:depth-gate`, `check:no-em-dash`,
+     `check:no-answer-keys`, `check:concept-graph`, `check:docs-sync`, `check:source-floor`,
+     `check:figures`, `check:bloom-bands` exit 0. `check:pipeline-gate` exits 1 with the 12
+     expected findings (`status: draft` and stale G2 manifests, x6 units).
+  8. **decision-residue: pass.** No `13-16`, Unit-6 Week 16, `1211-1278`, archive homepage, IIEP
+     page, wrong Vision URL/year or `OpenAlex-verified` marker remains anywhere in
+     `specs/content/efmp-303/` outside the intake records.
+- **Basis:** guide `Scheme-and-Course-guides/extracted-text/2nd 2026.txt:1171-1357` (objectives
+  `:1193-1201`, week table `:1215-1347`, Week 16 "Review and Final Assessment" `:1343-1347`,
+  readings `:1349-1357`). The six `D-2026-0059` repairs were checked independently on 2026-10-10:
+  (a) `nep2009` locator serves a 73-page PDF whose first page reads "National Education Policy
+  2009, Ministry of Education, Government of Pakistan, November, 2009" (created 2009-11-26);
+  (b) `nep2017` locator is the Drive file the Pakistan Institute of Education page lists as row 6,
+  "Draft National Education Policy 2017"; it serves a 184-page PDF titled "National Education
+  Policy 2017" / "2017-2025" (created 2017-09-22); (c) `unesco-epg` is bound to Coombs (1970), and
+  ERIC ED052510 returns "What Is Educational Planning? Fundamentals of Educational Planning-1",
+  Coombs, Philip H.; one Kind in all three units; (d) `pak-vision2025` URL serves the 110-page PDF
+  (created 2014-08-10), year 2014, OpenAlex marker removed; Unit 3 now meets its floor through the
+  ERIC-verified `unesco-epg` row; (e) author-selected entries moved under their own heading and the
+  intro no longer calls them the guide's readings; (f) Unit 6 Weeks 13-15, Week 16 routed to the
+  course review plan with "student presentations and discussions" disclosed, locator `1215-1347`.
+- **Bound to:** `intake3/EFMP-303/manifest.json`, manifest digest
+  `77f7ba00be2d2b111329c873cd1639cb8c067c5873a4b2384e9b37bb8ff43d2c` (82 inputs, recomputed with
+  `manifestFor()`, 0 mismatches; registers matched at read time). Any change to a bound input voids
+  this entry. Record: `intake3/EFMP-303/evaluation.md`.
+- **Limits:**
+  - Nothing is blocked by this evaluation. On owner confirmation of this entry the owner may set
+    `status: approved`; setting it is the owner's act, not this entry's.
+  - The unesdoc locator `pf0000076671` could not be fetched from this host (Cloudflare challenge,
+    HTTP 403, which also blocks the Crossref-verified `pf0000373718`); the work itself is verified
+    through ERIC and library catalogues.
+  - Non-blocking, recommended before G2: the per-unit `**Mapped readings**` lines for Unit 1 (`:160`,
+    omits `gem-report2020`) and Unit 4 (`:346`, omits `nep2009` and `gem-report2020`) lag the
+    `## Reading list` Units column and `sources/unit-0{1,4}.md`, which agree with each other. The
+    style guide reads the mapping from `## Reading list`, so this is not a structure failure. Fixing
+    it changes a bound input and voids this entry.
+  - Advisory for G2/G3, carried from `D-2026-0059`: `gem-report2020` support claims for U2-01 to
+    U2-03, U4-06, U6-04 and U6-06 need source-level checks; `nep2017` is a draft edition (title-level
+    support, `D-2026-0001`); `sources/unit-05.md` `wb_hci` carries an OpenAlex date of 2024-06-15;
+    the `Kind` value `author-selected` is outside the style guide's three-value list but is the
+    label `D-2026-0053` item 2 requires.
+  - No gap was raised: `G-2026-138` to `G-2026-141` were reserved and not used.
+  - Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
