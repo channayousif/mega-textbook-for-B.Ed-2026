@@ -2424,7 +2424,7 @@ content-improvement loop with no further cycle.
 
 ## D-2026-0060 - GQUR-301 third intake: all eight criteria approved; the D-2026-0055 repairs are made
 
-- **Status:** pending-owner-review
+- **Status:** confirmed (owner, 2026-10-10, relayed by the board session); spec moves to status: approved
 - **Gate:** G0 intake / G1 unit-spec
 - **Scope:** GQUR-301 only. Third intake pass on `specs/content/gqur-301/content-spec.md` as repaired
   at commit `c332c0b0` (board-direct repair session), by an evaluator that drafted neither the spec
