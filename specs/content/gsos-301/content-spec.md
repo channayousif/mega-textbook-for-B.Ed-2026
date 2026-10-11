@@ -1,12 +1,15 @@
 ---
 course_code: GSOS-301
 status: draft
-open_access_floor: 1
+# D-2026-0053 item 2: every unit binds at least one registry-verified open-access
+# source, in the mapping form `check:source-floor` reads.
+open_access_floor:
+  default: 1
 ---
 
 # GSOS-301 - Social Science (Sociology) - Content Spec
 
-Semester 2, General Education, 2 (2-0) credit hours. Source: `Scheme-and-Course-guides/extracted-text/2nd 2026.txt` lines 776-972.
+Semester 2, General Education, 2 (2-0) credit hours. Source: `Scheme-and-Course-guides/extracted-text/2nd 2026.txt` lines 776-968.
 
 **Status is `draft`, deliberately.** Under Constitution Art. VII.8 this spec is submitted to an intake evaluator for G0/G1, which is what sets `status: approved`. No unit may be authored until that happens (Spec 006 FR-002).
 
@@ -30,30 +33,39 @@ This course introduces students to sociology as the systematic study of society,
 
 Two consequences for authoring, both load-bearing:
 
-1. **The course is explicitly for trainee teachers**, so every example must ground in a Pakistani/Sindh classroom or community context. Abstract sociological concepts land best when tied to the lived experience of a B.Ed student who will teach in a government or private school.
+1. **The learners are B.Ed trainee teachers** (the programme context; the guide itself does not say so), so every example must ground in a Pakistani/Sindh classroom or community context. Abstract sociological concepts land best when tied to the lived experience of a B.Ed student who will teach in a government or private school.
 2. **Six units cover a full introductory sociology syllabus** in 2 credit hours. The prose must be efficient and concept-dense without being jargon-heavy. HSC register throughout.
 
 ## Reading list
 
-`Key` is the citation key used in each unit's `sources/unit-NN.md`. `Units` tags which unit(s) each source supports. Sources are labelled **guide-required** only where the guide explicitly names them; all other sources are **author-selected** (chosen for relevance to course outcomes and verified to resolve).
+`Key` is the citation key used in each unit's `sources/unit-NN.md`. `Units` tags which unit(s) each source supports. Sources are labelled **guide-required** only where the guide explicitly names them; all other sources are **author-selected** under `D-2026-0053` item 2 (chosen for relevance to course outcomes and verified to resolve).
+
+### Guide-required
+
+The guide's "Recommended Books" (lines 964-968) gives two URLs and no citations. Both are identified below from the resources themselves (checked 2026-10-10). Binding either in a unit's `### Mapped readings` is optional.
+
+| Key | Citation | DOI/URL | Units | Note |
+|---|---|---|---|---|
+| johnson1961 | Johnson, H. M. (1961). *Sociology: A systematic introduction*. Routledge (International Library of Sociology; first issued in paperback 2011). First published 1960 by Harcourt, Brace. | https://api.pageplace.de/preview/DT0400.9781135034900_A24760348/preview-9781135034900_A24760348.pdf | 1-6 (title level) | The guide's URL is a **publisher preview only** (front matter and opening pages, eISBN 9781135034900); the full text cannot be opened, so support is title-level under `D-2026-0001`. A mid-century US systematic treatise: cite for concepts and frameworks, never for current data |
+| singhnd | Singh, B. (n.d.). *Introduction of sociology* [Slide deck]. SlideShare. | https://www.slideshare.net/slideshow/introduction-of-sociology-238865842/238865842 | 1 | Uploader BHAVESHSINGH27 (Bhavesh Singh); upload year not shown to the authoring host, hence n.d. Covers definition, nature, scope and importance of sociology. **Scope caution: prepared for B.Sc. Nursing students** (medical sociology); cite for introductory definitions only. SlideShare blocks scripted access, so the deck was identified through the search index, not read in full |
 
 ### Author-selected (open access)
 
 | Key | Citation | DOI/URL | Units | Note |
 |---|---|---|---|---|
 | conerly2021 | Conerly, T. R., Holmes, K., & Tamang, S. K. (Eds.) (2021). *Introduction to sociology* (3rd ed.). OpenStax. | https://openstax.org/details/books/introduction-sociology-3e | 1-6 | Open-access introductory sociology; the course's spine for concepts and definitions across all units |
-| henson2022 | Henson, L. (2022). *Sociology: An introduction*. LibreTexts. | https://socialsci.libretexts.org/Bookshelves/Sociology/Introduction_to_Sociology | 1-6 | Open-access resource for sociological perspectives, culture, socialization, stratification, and institutions |
+| hammondnd | Hammond, R. J., & Cheney, P. (n.d.). *Introduction to sociology*. LibreTexts (CC BY 3.0). | https://socialsci.libretexts.org/Bookshelves/Sociology/Introduction_to_Sociology/Introduction_to_Sociology_(Hammond_et_al.) | 1, 3, 6 | Open-access text (Utah Valley University authors) with chapters on history and founders, sociological imagination, theories, scientific sociology, culture, socialization, groups, deviance, stratification, gender, family, education, religion and media. No publication year is stated (chapter 1.1 carries a 2005 copyright notice; the LibreTexts source is a 2010 web-archive copy), hence n.d. OpenAlex W2590335685, verified 2026-10-10. Replaces `henson2022`, which named no real work (`D-2026-0057`). **Scope: US grounded** |
 
 ### Author-selected (print)
 
 | Key | Citation | DOI/URL | Units | Note |
 |---|---|---|---|---|
-| lindsey2010 | Lindsey, L. L., & Beach, S. (2010). *Sociology* (2nd ed.). Prentice Hall. | (print) | 1, 2, 3, 4 | Classical and contemporary perspectives, culture, socialization, social structure. **Scope: US grounded**; transferable on method, Pakistani examples must be authored |
+| lindsey2001 | Lindsey, L. L., & Beach, S. (2001). *Sociology* (2nd ed.). Prentice Hall. ISBN 0130413259. | (print) | 1, 2, 3, 4 | Classical and contemporary perspectives, culture, socialization, social structure. **Scope: US grounded**; transferable on method, Pakistani examples must be authored |
 | andersen2014 | Andersen, M. L., Taylor, H. F., & Logio, K. A. (2014). *Sociology: The essentials* (8th ed.). Cengage. | (print) | 1, 2, 3, 5 | Social institutions, stratification, social change. **Scope: US grounded**; transferable on framework only |
 
 ## Week schedule
 
-Source: guide lines 802-942 (Weeks 1-16). The guide provides a full week table; the distribution below follows it directly (D-2026-0012).
+Source: guide lines 802-942 (Weeks 1-16). The guide provides a full week table; the distribution below follows it directly.
 
 | Week(s) | Unit |
 |---|---|
@@ -89,6 +101,8 @@ Seeds an eventual `docs/semester-2/gsos-301/course-review.mdx` (Spec 008 FR-016)
 - **Practicum project ideas**:
   - *Sociological observation* - spend one school day recording three examples of social interaction (cooperation, competition, or conflict) and analyse them using one of the three perspectives.
   - *Family institution mapping* - interview one family about how the institution of education has shaped their children's life chances; write a one-page analysis.
+  - *Stratification in the school* - with the head teacher's permission, list the anonymised factors (fee status, distance travelled, parents' occupation category, gender) that shape which pupils attend regularly; explain the pattern using class and gender concepts from Unit 4.
+  - *Social change in one generation* - interview a grandparent and a parent about one change in community life (mobile phones, girls' schooling, migration to cities); classify its causes using Unit 6 and present the analysis to peers.
 - **Practice-question mix**: `### MCQs` ~15 (all six units, Remember to Apply); `### RRQs` ~10 (Understand to Analyze, >= 1 per unit); `### ERQs` ~5 (Analyze to Evaluate/Create, each integrating two or more units).
 
 ## Standards & frameworks anchors
@@ -132,12 +146,18 @@ One row per leaf item from the course guide sections on introduction to sociolog
 
 **Depth budget**: 10 sub-topics; 3 topics; 45-60 reading-min.
 
+**Prerequisite knowledge**: none beyond HSC-level general studies. This is the opening unit; no prior sociology is assumed. Learners should be able to tell an opinion from a reasoned claim, which EFMP-304 also develops.
+
+**Worked-examples plan** (one Pakistan-grounded example per sub-topic group): what sociology is - why pupils from one village drop out of school after Class 5, explained first as "common sense" and then sociologically (U1-01 to U1-03); the founders - a Sindh town's shift from farming to factory work read through Comte, Marx, Durkheim and Weber in turn (U1-04 to U1-07); the perspectives - a school's annual prize day analysed once each as functionalist, conflict and interactionist (U1-08 to U1-10).
+
+**International best-practice notes**: introduce the sociological imagination (personal troubles and public issues) early as the course's organising habit, as standard open introductory texts do. Present the three perspectives as lenses applied to the same case, not as rival answers to memorise, and keep the founders tied to the questions their societies faced.
+
 ### Mapped readings
 
 | Key | Used for |
 |---|---|
 | conerly2021 | U1-01, U1-03 (what sociology is, why it matters); U1-04, U1-05, U1-06, U1-07 (founders); U1-08, U1-09, U1-10 (perspectives) |
-| henson2022 | U1-01, U1-02 (definitions, scope); U1-08, U1-09, U1-10 (perspective comparisons) |
+| hammondnd | U1-01, U1-02 (definitions, scope); U1-08, U1-09, U1-10 (perspective comparisons) |
 
 ### Common misconceptions
 
@@ -192,12 +212,19 @@ One row per leaf item from the course guide sections on culture and socializatio
 
 **Depth budget**: 6 sub-topics; 2 topics; 40-55 reading-min.
 
+**Prerequisite knowledge**: Unit 1's definition of sociology and the three perspectives (U1-01, U1-08 to U1-10). The unit assumes, and does not reteach, the idea that behaviour has social causes. Personality concepts from EFMP-301 may be referenced, not taught.
+
+**Worked-examples plan**: culture - norms, values and beliefs around greeting elders in a Sindhi, Punjabi and Pashtun household (U2-01, U2-02); ethnocentrism - a classroom remark about another community's dress or food, reread through cultural relativism (U2-03); socialization - how a child learns gender roles from family, school and television (U2-04, U2-05); stages - a pupil's move from play to rule-based games in the school yard read through Mead (U2-06).
+
+**International best-practice notes**: treat cultural relativism as a method of understanding, not as moral approval of every practice, a distinction introductory texts stress. Teach socialization as lifelong (including the trainee's own professional socialization as a teacher) rather than as a childhood stage only.
+
+
 ### Mapped readings
 
 | Key | Used for |
 |---|---|
 | conerly2021 | U2-01, U2-02, U2-03 (culture elements, diversity, ethnocentrism); U2-04, U2-05, U2-06 (socialization agents and stages) |
-| lindsey2010 | U2-01, U2-02, U2-03 (cultural norms and values); U2-04, U2-05, U2-06 (socialization and personality) |
+| lindsey2001 | U2-01, U2-02, U2-03 (cultural norms and values); U2-04, U2-05, U2-06 (socialization and personality) |
 
 ### Common misconceptions
 
@@ -246,12 +273,18 @@ One row per leaf item from the course guide sections on culture and socializatio
 
 **Depth budget**: 6 sub-topics; 2 topics; 40-55 reading-min.
 
+**Prerequisite knowledge**: Unit 2's socialization (U2-04 to U2-06) and Unit 1's perspectives. Roles are learned through socialization, so the unit builds on it rather than reopening it.
+
+**Worked-examples plan**: status and role - a teacher who is also a daughter, a union member and a neighbour, and the role strain that follows (U3-01); groups - a staffroom friendship circle against the district education office as primary and secondary groups (U3-02); bureaucracy - the steps to get a transfer order, read through Weber's ideal type (U3-03); interaction - cooperation, competition and conflict in an inter-school debate and its preparation (U3-04 to U3-06).
+
+**International best-practice notes**: anchor abstract structure in observable interaction before generalising, the micro-to-macro order most introductory texts follow. Present conflict and bureaucracy even-handedly, showing both costs and functions, so learners do not read them as simply bad.
+
 ### Mapped readings
 
 | Key | Used for |
 |---|---|
 | conerly2021 | U3-01, U3-02, U3-03 (status, roles, groups, organizations); U3-04, U3-05, U3-06 (interaction and communication) |
-| henson2022 | U3-01, U3-02, U3-03 (social structure); U3-04, U3-05, U3-06 (interaction processes) |
+| hammondnd | U3-01, U3-02, U3-03 (status, roles, groups and organizations; chapter 1.7, Society and Groups) |
 
 ### Common misconceptions
 
@@ -300,12 +333,18 @@ One row per leaf item from the course guide sections on culture and socializatio
 
 **Depth budget**: 6 sub-topics; 2 topics; 45-60 reading-min.
 
+**Prerequisite knowledge**: Unit 3's status and role (U3-01) and Unit 1's conflict perspective (U1-09). Stratification is ranked status and gender is a learned role, so both concepts must already be secure.
+
+**Worked-examples plan**: class, caste and hierarchy - biradari and occupational standing in a Sindh village (U4-01); mobility - a labourer's son who becomes a teacher, and what made it possible (U4-02); inequality - differences in school facilities between an urban private and a rural government school (U4-03); gender - who is expected to fetch water, study further or speak in class (U4-04, U4-05); feminist perspectives - the same enrolment gap read through liberal and structural feminist lenses (U4-06).
+
+**International best-practice notes**: separate description of inequality from blame, and distinguish sex from gender before discussing roles, as standard texts do. Use published indicators (enrolment, literacy, labour-force participation) cited to their source rather than impressions, and handle caste and biradari examples with care for pupils who may belong to the groups discussed.
+
 ### Mapped readings
 
 | Key | Used for |
 |---|---|
 | conerly2021 | U4-01, U4-02, U4-03 (stratification, class, mobility, inequality); U4-04, U4-05, U4-06 (gender roles, inequality, feminism) |
-| lindsey2010 | U4-01, U4-02, U4-03 (social hierarchy); U4-04, U4-05, U4-06 (gender and feminist theory) |
+| lindsey2001 | U4-01, U4-02, U4-03 (social hierarchy); U4-04, U4-05, U4-06 (gender and feminist theory) |
 
 ### Common misconceptions
 
@@ -332,7 +371,7 @@ One row per leaf item from the course guide sections on culture and socializatio
 
 ## Unit 5 - Social Institutions
 
-**Unit learning outcomes** (derived from CLO 3): explain the functions of family, education, religion, economy, politics, and healthcare as social institutions; analyse how institutions interrelate; describe institutional change.
+**Unit learning outcomes** (derived from CLO 3, 4): explain the functions of family, education, religion, economy, politics, and healthcare as social institutions (CLO 3); analyse how institutions interrelate (CLO 3); describe institutional change (CLO 4).
 
 ### Sub-topic checklist
 
@@ -353,6 +392,12 @@ One row per leaf item from the course guide sections on culture and socializatio
 | 5.2 | Economy, politics, and healthcare | U5-04, U5-05, U5-06 | 16-22 | fig-U5-3: concept-map, fig-U5-4: table |
 
 **Depth budget**: 6 sub-topics; 2 topics; 45-60 reading-min.
+
+**Prerequisite knowledge**: Unit 1's functionalist and conflict perspectives (U1-08, U1-09) and Unit 3's idea of organizations (U3-03). Institutions are analysed through those lenses, so the unit does not reintroduce them.
+
+**Worked-examples plan**: family - joint and nuclear households in one mohalla and what each provides (U5-01); education - the school as transmitter of knowledge and as sorter of life chances (U5-02); religion - a community's religious occasions as sources of cohesion and identity (U5-03); economy, politics and healthcare - how a factory closure affects household income, local politics and access to a Basic Health Unit (U5-04 to U5-06); institutional change - the growth of private schooling as an example (CLO 4).
+
+**International best-practice notes**: define an institution as a pattern of norms and roles, not a building, which is the most common learner error. Show institutions as interdependent (a change in one moves the others), and present religion sociologically and respectfully, describing its social functions without judging belief.
 
 ### Mapped readings
 
@@ -411,12 +456,18 @@ One row per leaf item from the course guide sections on culture and socializatio
 
 **Depth budget**: 9 sub-topics; 2 topics; 50-65 reading-min.
 
+**Prerequisite knowledge**: Unit 4's stratification and inequality (U4-01 to U4-03) and Unit 5's institutions. Social problems are analysed as products of structure and institutions, so this capstone unit assumes both.
+
+**Worked-examples plan**: causes of change - how a new road changes a village's economy and family life (U6-01); modernization and globalization - imported media and migration remittances in one Sindh district (U6-02); technology - mobile phones and online learning after school closures (U6-03); social problems - poverty, crime and unemployment traced to structural causes using one local case each (U6-04 to U6-06); contemporary issues - media portrayal of a flood, children's rights, and environmental damage to a river community (U6-07 to U6-09).
+
+**International best-practice notes**: frame social problems through the structure-versus-individual distinction (public issues, not only private troubles) and pair each problem with evidence and a possible response, so learners analyse rather than lament. Present globalization and technology as mixed in effect, not simply progress or threat.
+
 ### Mapped readings
 
 | Key | Used for |
 |---|---|
 | conerly2021 | U6-01, U6-02, U6-03 (causes of change, modernization, technology); U6-04, U6-05, U6-06, U6-07, U6-08, U6-09 (poverty, crime, unemployment, media, human rights, environment) |
-| henson2022 | U6-01, U6-02, U6-03 (social change); U6-04, U6-05, U6-06, U6-07, U6-08, U6-09 (social problems and their sociological analysis) |
+| hammondnd | U6-05 (crime and deviance; chapter 1.8); U6-07 (media and society; chapter 1.16) |
 
 ### Common misconceptions
 
