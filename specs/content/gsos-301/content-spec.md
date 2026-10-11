@@ -1,6 +1,6 @@
 ---
 course_code: GSOS-301
-status: draft
+status: approved
 # D-2026-0053 item 2: every unit binds at least one registry-verified open-access
 # source, in the mapping form `check:source-floor` reads.
 open_access_floor:

@@ -2519,7 +2519,7 @@ content-improvement loop with no further cycle.
 
 ## D-2026-0066 - GSOS-301 fourth intake: all eight criteria approved; readings repair from D-2026-0064 verified
 
-- **Status:** pending-owner-review
+- **Status:** confirmed (owner, 2026-10-10, relayed by the board session); spec moves to status: approved
 - **Gate:** G0 intake / G1 unit-spec
 - **Scope:** GSOS-301 only. Limited, as `D-2026-0064` permitted, to the readings repair plus a fresh
   decision-residue search; restates the other six verdicts on this manifest because their inputs
