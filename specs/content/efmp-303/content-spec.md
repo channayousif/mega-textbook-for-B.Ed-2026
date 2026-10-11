@@ -51,19 +51,32 @@ Two consequences for authoring, both load-bearing:
 
 ## Reading list
 
-Full references from the guide's "Recommended Readings" (lines 1349-1358). `Key` is the citation
-key used in each unit's `sources/unit-NN.md`. Cited by reference only - never reproduced
-(Constitution Art. III.5).
+The guide's "Recommended Readings" (guide lines 1349-1358) name four entries: Government of Pakistan,
+National Education Policies (2009 & 2017); UNESCO, Education Planning and Policy Guidelines; Andrabi &
+Rizvi, Educational Planning in Pakistan; Khan (2018), Education Policy and Planning in Pakistan. Only
+the two National Education Policies resolve to identifiable documents, and they alone are bound under
+`### Guide-required`. The works under `### Author-selected` are verified real works chosen by the
+author for relevance to the course outcomes under `D-2026-0053` item 2; they are **not** the guide's
+readings. `Key` is the citation key used in each unit's `sources/unit-NN.md`. Cited by reference
+only - never reproduced (Constitution Art. III.5).
 
 ### Guide-required
 
 | Key | Citation | DOI/URL | Units | Note |
 |---|---|---|---|---|
-| nep2009 | Government of Pakistan. (2009). *National Education Policy 2009*. Ministry of Education. | [archived Ministry site](https://web.archive.org/web/20201126091946/http://moe.gov.pk/) | 2, 4 | the core policy document; open-access PDF from the Ministry (original moe.gov.pk now serves an unrelated page; archived link preserves the Ministry's own copy) |
-| nep2017 | Government of Pakistan. (2017). *National Education Policy 2017*. Ministry of Federal Education and Professional Training. | [archived Ministry site](https://web.archive.org/web/20211228022722/http://www.mofept.gov.pk/) | 2 | the successor policy; open-access (mofept.gov.pk is currently unreachable; archived link preserves the Ministry's own copy) |
-| unesco-epg | UNESCO International Institute for Educational Planning. (n.d.). *What is educational planning?* IIEP-UNESCO. | [iiep.unesco.org](https://iiep.unesco.org/en/our-mission/educational-planning-explained) | 1, 3, 4 | open-access planning guidance from IIEP; author-selected substitute for the guide's "Education Planning and Policy Guidelines" (specific IIEP title varies by year) |
-| pak-vision2025 | Planning Commission of Pakistan. (2017). *Pakistan Vision 2025*. Government of Pakistan. | [pc.gov.pk](https://www.pc.gov.pk/uploads/downloads/Vision_2025_Pakistan.pdf) | 1, 3 | author-selected; replaces the unresolvable Andrabi & Rizvi print monograph with a verifiable open-access government development plan directly relevant to Units 1 and 3 |
-| gem-report2020 | UNESCO. (2020). *Global Education Monitoring Report 2020: Inclusion and education*. UNESCO. | [unesco.org/gemreport](https://unesdoc.unesco.org/ark:/48223/pf0000373718) | 2, 5, 6 | author-selected; replaces the unresolvable Khan 2018 print monograph with a verifiable open-access UNESCO report on education policy relevant to Units 2, 5 and 6 |
+| nep2009 | Government of Pakistan. (2009). *National Education Policy 2009*. Ministry of Education. | [media.unesco.org PDF](https://media.unesco.org/sites/default/files/webform/r2e002/a9a9a5c08261acdc4d1cff930054a63dd4b44a6d.pdf) | 2, 4, 5 | the core policy document. Full-text PDF (73 pp., running head "National Education Policy 2009", file created 2009-11-26) hosted by the UNESCO Right to Education Observatory; checked 2026-10-10 |
+| nep2017 | Government of Pakistan. (2017). *National Education Policy 2017* (draft). Ministry of Federal Education and Professional Training. | [PIE copy (Google Drive)](https://drive.google.com/file/d/1ioRLNFXDElnVo87ATTQdz32FT2c2EeKn/view?usp=sharing) | 2, 6 | the successor policy. Document-level copy linked from the Pakistan Institute of Education's "National Education Policies" page (`pie.gov.pk/Detail/ZTcwZDc5ODMtMWQ2My00MGY5LTk3MDktZWZhYzgyOGMyMzM1`), listed there as "Draft National Education Policy 2017"; the file (184 pp., created 2017-09-22) carries the cover title "National Education Policy 2017-2025". Whether a later final edition governs is unestablished (`D-2026-0001` title-level support); checked 2026-10-10 |
+
+### Author-selected
+
+Not guide-required. Each entry was chosen by the author under `D-2026-0053` item 2 and checked on
+2026-10-10.
+
+| Key | Citation | DOI/URL | Units | Note |
+|---|---|---|---|---|
+| unesco-epg | Coombs, P. H. (1970). *What is educational planning?* (Fundamentals of Educational Planning, 1). UNESCO International Institute for Educational Planning. | [unesdoc pf0000076671](https://unesdoc.unesco.org/ark:/48223/pf0000076671) | 1, 3, 4 | author-selected stand-in for the guide's ambiguous "UNESCO. Education Planning and Policy Guidelines", which names no identifiable work. Open full text on UNESDOC (imprint "Published in 1970"); ERIC record ED052510 (ERIC dates it 1969) |
+| pak-vision2025 | Planning Commission of Pakistan. (2014). *Pakistan Vision 2025*. Government of Pakistan. | [pc.gov.pk PDF](https://www.pc.gov.pk/uploads/vision2025/Pakistan-Vision-2025.pdf) | 1, 3 | author-selected; replaces the unresolvable Andrabi & Rizvi entry with an open-access government development plan relevant to Units 1 and 3. No registry record found |
+| gem-report2020 | UNESCO. (2020). *Global Education Monitoring Report 2020: Inclusion and education*. UNESCO. | [unesdoc pf0000373718](https://unesdoc.unesco.org/ark:/48223/pf0000373718) | 1, 2, 4, 5, 6 | author-selected; replaces the unresolvable Khan (2018) entry with an open-access UNESCO report on education policy. Crossref DOI 10.54676/jjnk6989 |
 
 ### Curated-supplementary (open access) - to be bound at G2, not asserted here
 
@@ -74,9 +87,9 @@ floor, that is an escalation to `specs/gaps.md`.
 
 ## Week schedule
 
-The guide carries a 16-week breakdown (lines 1211-1278). The distribution below follows the guide's
-week table exactly, mapping each guide week to its unit. Week 16 is assigned to Unit 6 as the
-course review and assessment week.
+The guide carries a 16-week breakdown (lines 1215-1347). The distribution below follows the guide's
+week table exactly, mapping each guide week to its unit. Week 16 ("Review and Final Assessment") is
+the whole-course review, not part of Unit 6; it is routed to `## Course review plan`.
 
 | Week(s) | Unit | Guide week content |
 |---|---|---|
@@ -85,11 +98,14 @@ course review and assessment week.
 | 6-8 | Unit 3 - Development Plans and Educational Planning | Week 6: five-year development plans and education; national and provincial plans; linking education with economic growth. Week 7: meaning and importance of planning; types (micro, macro, strategic); stages. Week 8: needs assessment and goal setting; resource allocation; models |
 | 9-10 | Unit 4 - Monitoring, Evaluation and Challenges | Week 9: monitoring and evaluation concepts, process, tools and resources. Week 10: financial constraints; political instability; bureaucratic and administrative issues |
 | 11-12 | Unit 5 - Quality Assurance and Development | Week 11: accreditation and evaluation systems; standardization of curricula; teacher training and professional development. Week 12: human capital formation; reducing inequality and poverty; gender and inclusive education policies |
-| 13-16 | Unit 6 - International Perspectives and Future Directions | Week 13: education policies in developing countries; lessons for Pakistan; SDGs and local relevance. Week 14: ICT in education management; data-driven planning; digital transformation. Week 15: innovations in policy design; strategic planning for quality and equity; role of teachers and administrators. Week 16: course review; student presentations and discussions |
+| 13-15 | Unit 6 - International Perspectives and Future Directions | Week 13: education policies in developing countries; lessons for Pakistan; SDGs and local relevance. Week 14: ICT in education management; data-driven planning; digital transformation. Week 15: innovations in policy design; strategic planning for quality and equity; role of teachers and administrators |
+| 16 | Course review | Week 16, Review and Final Assessment: course review; student presentations and discussions (see `## Course review plan`) |
 
 ## Course review plan
 
-Seeds an eventual `docs/semester-2/efmp-303/course-review.mdx`.
+Seeds an eventual `docs/semester-2/efmp-303/course-review.mdx`. This plan covers guide Week 16,
+"Review and Final Assessment" (guide lines 1343-1347), which the guide gives as a course review plus
+student presentations and discussions. It belongs to no unit.
 
 - **Course summary points**:
   - Pakistan's education policies evolved through distinct phases tied to political and social change.
@@ -405,14 +421,14 @@ economic indicators (U5-04-U5-06).
 
 ## Unit 6: International Perspectives and Future Directions
 
-Weeks 13-16. Unit Spec (G1) for `docs/semester-2/efmp-303/unit-06/`.
+Weeks 13-15. Unit Spec (G1) for `docs/semester-2/efmp-303/unit-06/`.
 
 - **CLO/SLO refs**: `SLO:EFMP-303-6-1` (international comparisons and lessons for Pakistan),
   `SLO:EFMP-303-6-2` (technology, innovation and the future of educational planning) - traces to
   guide CLOs 4 and 5.
 - **Key terms**: Sustainable Development Goals (SDGs), ICT in education, Data-driven planning,
   Digital transformation, Innovation.
-- **Topics** (from guide Weeks 13-16): education policies in developing countries; lessons for Pakistan;
+- **Topics** (from guide Weeks 13-15): education policies in developing countries; lessons for Pakistan;
   SDGs and local relevance; ICT in education management; data-driven planning; digital transformation;
   innovations in policy design; strategic planning for quality and equity; role of teachers and
   administrators.
