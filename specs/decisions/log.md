@@ -2381,7 +2381,7 @@ content-improvement loop with no further cycle.
 
 ## D-2026-0065 - EFMP-305 third intake: all eight G0/G1 criteria approved; the spec is a faithful derivation of the guide under the confirmed owner rulings
 
-- **Status:** pending-owner-review
+- **Status:** confirmed (owner, 2026-10-10, relayed by the board session); spec moves to status: approved
 - **Gate:** G0 intake / G1 unit-spec
 - **Scope:** EFMP-305 Inclusive Education only, the whole bound `specs/content/efmp-305/` tree at
   commit `76659f21` (drafted and repaired by authors other than this evaluator). Settles
