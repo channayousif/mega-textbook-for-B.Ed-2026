@@ -2359,7 +2359,7 @@ content-improvement loop with no further cycle.
 
 ## D-2026-0062 - GENG-301 third intake: all eight G0/G1 criteria pass on the repaired spec
 
-- **Status:** pending-owner-review
+- **Status:** confirmed (owner, 2026-10-10, relayed by the board session); spec moves to status: approved
 - **Gate:** G0 intake / G1 unit-spec
 - **Scope:** GENG-301 (Expository Writing) only, re-evaluated after the board-direct repairs at
   commit `8be7d967`. Settles all eight criteria (`identity`, `partition`, `coverage`, `outcomes`,
