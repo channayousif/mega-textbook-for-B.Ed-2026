@@ -54,7 +54,7 @@ The guide's "Recommended Books" (lines 964-968) gives two URLs and no citations.
 | Key | Citation | DOI/URL | Units | Note |
 |---|---|---|---|---|
 | conerly2021 | Conerly, T. R., Holmes, K., & Tamang, S. K. (Eds.) (2021). *Introduction to sociology* (3rd ed.). OpenStax. | https://openstax.org/details/books/introduction-sociology-3e | 1-6 | Open-access introductory sociology; the course's spine for concepts and definitions across all units |
-| hammondnd | Hammond, R. J., & Cheney, P. (n.d.). *Introduction to sociology*. LibreTexts (CC BY 3.0). | https://socialsci.libretexts.org/Bookshelves/Sociology/Introduction_to_Sociology/Introduction_to_Sociology_(Hammond_et_al.) | 1, 3, 6 | Open-access text (Utah Valley University authors) with chapters on history and founders, sociological imagination, theories, scientific sociology, culture, socialization, groups, deviance, stratification, gender, family, education, religion and media. No publication year is stated (chapter 1.1 carries a 2005 copyright notice; the LibreTexts source is a 2010 web-archive copy), hence n.d. OpenAlex W2590335685, verified 2026-10-10. Replaces `henson2022`, which named no real work (`D-2026-0057`). **Scope: US grounded** |
+| hammondnd | Hammond, R. J., & Cheney, P. (n.d.). *Introduction to sociology*. LibreTexts (CC BY 3.0). | https://socialsci.libretexts.org/Bookshelves/Sociology/Introduction_to_Sociology/Introduction_to_Sociology_(Hammond_et_al.) | 1-6 | Open-access text (Utah Valley University authors) with chapters on history and founders, sociological imagination, theories, scientific sociology, culture, socialization, groups, deviance, stratification, gender, family, education, religion and media. No publication year is stated (chapter 1.1 carries a 2005 copyright notice; the LibreTexts source is a 2010 web-archive copy), hence n.d. OpenAlex W2590335685, verified 2026-10-10; chapter titles 1.5-1.16 checked on LibreTexts 2026-10-10. Bound in Units 1-6 so every unit meets the registry-verified open-access floor (`D-2026-0064`). Replaces `henson2022`, which named no real work (`D-2026-0057`). **Scope: US grounded** |
 
 ### Author-selected (print)
 
@@ -224,6 +224,7 @@ One row per leaf item from the course guide sections on culture and socializatio
 | Key | Used for |
 |---|---|
 | conerly2021 | U2-01, U2-02, U2-03 (culture elements, diversity, ethnocentrism); U2-04, U2-05, U2-06 (socialization agents and stages) |
+| hammondnd | U2-01, U2-02, U2-03 (culture; chapter 1.5, Culture); U2-04, U2-05, U2-06 (socialization; chapter 1.6, Socialization) |
 | lindsey2001 | U2-01, U2-02, U2-03 (cultural norms and values); U2-04, U2-05, U2-06 (socialization and personality) |
 
 ### Common misconceptions
@@ -344,6 +345,7 @@ One row per leaf item from the course guide sections on culture and socializatio
 | Key | Used for |
 |---|---|
 | conerly2021 | U4-01, U4-02, U4-03 (stratification, class, mobility, inequality); U4-04, U4-05, U4-06 (gender roles, inequality, feminism) |
+| hammondnd | U4-01, U4-02, U4-03 (stratification; chapter 1.9, Stratification); U4-04, U4-05, U4-06 (gender; chapter 1.10, Sex and Gender) |
 | lindsey2001 | U4-01, U4-02, U4-03 (social hierarchy); U4-04, U4-05, U4-06 (gender and feminist theory) |
 
 ### Common misconceptions
@@ -404,6 +406,7 @@ One row per leaf item from the course guide sections on culture and socializatio
 | Key | Used for |
 |---|---|
 | conerly2021 | U5-01, U5-02, U5-03 (family, education, religion); U5-04, U5-05, U5-06 (economy, politics, healthcare) |
+| hammondnd | U5-01 (family; chapter 1.13, Family); U5-02 (education; chapter 1.14, Education); U5-03 (religion; chapter 1.15, Religion) |
 | andersen2014 | U5-01, U5-02, U5-03 (institutions and their functions); U5-04, U5-05, U5-06 (economic and political institutions) |
 
 ### Common misconceptions
