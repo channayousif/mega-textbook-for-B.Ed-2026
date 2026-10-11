@@ -1,6 +1,6 @@
 ---
 course_code: GENG-301
-status: draft
+status: approved
 # D-2026-0053 item 2: every unit binds >= 1 verified open-access source, in the mapping
 # form check:source-floor reads.
 open_access_floor:
