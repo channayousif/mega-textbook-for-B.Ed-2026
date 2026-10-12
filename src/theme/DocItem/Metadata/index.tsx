@@ -20,7 +20,7 @@ import { SITE_NAME, PUBLISHER, SITE_URL } from '@site/src/lib/brand';
  *
  * The site is an independent textbook collection and learning platform (not a
  * university), so provider/publisher use `Organization`, not
- * `CollegeOrUniversity` — that type would make a false institutional claim.
+ * `CollegeOrUniversity` - that type would make a false institutional claim.
  */
 export default function MetadataWrapper(props: Record<string, unknown>): React.ReactElement {
   const { metadata, frontMatter } = useDoc() as {

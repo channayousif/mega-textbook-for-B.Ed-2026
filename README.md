@@ -1,4 +1,4 @@
-# Mega Textbook — Bilingual Textbook Collection & Learning Platform
+# Mega Textbook - Bilingual Textbook Collection & Learning Platform
 
 A bilingual (English + Urdu) collection of digital textbooks and a learning platform for
 **Grades 9-12** and **teacher-education degree programmes (ADE, B.Ed Hons)**. Built on

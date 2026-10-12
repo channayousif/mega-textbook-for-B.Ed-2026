@@ -32,7 +32,7 @@ export default function Home(): JSX.Element {
                     <div className="card__body">
                       <p>
                          <Translate id="home.textbookDesc">
-                          Read free bilingual textbooks online — ADE and B.Ed(H) programmes and the STEDA teacher-licence syllabus. Explore semesters, courses, and units in English and Urdu.
+                          Read free bilingual textbooks online - ADE and B.Ed(H) programmes and the STEDA teacher-licence syllabus. Explore semesters, courses, and units in English and Urdu.
                         </Translate>
                       </p>
                     </div>

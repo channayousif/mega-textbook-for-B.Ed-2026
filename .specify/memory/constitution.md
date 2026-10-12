@@ -546,7 +546,8 @@ Follow-up TODOs:
 -->
 
 # CONSTITUTION
-## Mega Textbook — Bilingual Textbook Collection & Learning Platform
+## B.Ed (4-Year) Mega Textbook & Learning Platform
+**University of Sindh, Faculty of Education, Elsa Kazi Campus, Hyderabad**
 
 This constitution is the highest-authority document of the project. Every spec, plan, task,
 and line of code MUST comply with it. Amendments require an explicit version bump and a
@@ -556,19 +557,13 @@ written rationale (Article XI).
 
 ## Article I - Purpose
 
-Build a bilingual (English + Urdu) collection of digital textbooks and a learning platform for
-**Grades 9-12** and **teacher-education degree programmes (ADE, B.Ed Hons)**, serving:
+Build a bilingual (English + Urdu) digital textbook and learning platform for the B.Ed
+(4-Year) programme (UGE Policy 2023 v1.1, aligned with HEC's 2025 Proposed Curriculum for
+Education, applicable from 2026; 8 semesters, 132 credit hours), serving:
 
-1. **School students and their teachers** — Grades 9-12 subjects, as a primary or
-   teacher-guided secondary learning resource.
-2. **Prospective teachers and their instructors** — ADE and B.Ed (Hons) programmes
-   (UGE Policy 2023 v1.1, aligned with HEC's 2025 Proposed Curriculum for Education;
-   8 semesters, 132 credit hours), as a teaching companion (activities, handouts,
-   formative/summative assessments) and a virtual class manager (assignments, grading,
-   progress tracking).
-
-The current release is an MVP for audience 2 (the B.Ed Hons programme). Grade 9-12 subject
-tracks and the ADE programme are the planned expansion.
+1. **Students** - as a primary or teacher-guided secondary learning resource.
+2. **Teachers** - as a teaching companion (activities, handouts, formative/summative
+   assessments) and a virtual class manager (assignments, grading, progress tracking).
 
 ## Article II - Guiding Document Supremacy
 

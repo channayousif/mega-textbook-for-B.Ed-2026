@@ -303,7 +303,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: 'Mega Textbook — a bilingual textbook collection and learning platform for ADE, B.Ed Hons, STEDA teacher-licence aspirants, and Grades 9-12.',
+      copyright: 'Mega Textbook - a bilingual textbook collection and learning platform for ADE, B.Ed Hons, STEDA teacher-licence aspirants, and Grades 9-12.',
     },
   } satisfies Preset.ThemeConfig,
 };

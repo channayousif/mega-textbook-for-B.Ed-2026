@@ -1,6 +1,6 @@
 ---
 id: 0100
-title: TEX-36 platform vision expansion — branding & content update
+title: TEX-36 platform vision expansion - branding & content update
 stage: general
 date: 2026-10-07
 surface: agent
@@ -8,7 +8,7 @@ model: claude-opus-5-5
 feature: none
 branch: agent/TEX-36
 user: M Yousif Channa
-command: TEX-36 board message — note vision, modify landing/footer/docs/roadmap
+command: TEX-36 board message - note vision, modify landing/footer/docs/roadmap
 labels: ["ceo", "branding", "vision", "tex-36", "handoff"]
 links:
   spec: null
@@ -52,11 +52,11 @@ Applied the vision across all public-facing brand touchpoints and governance doc
   `PUBLISHER` `University of Sindh, Faculty of Education` → `Mega Textbook` (locked decision 7
   already removed university branding; now enforced everywhere).
 - **Site config** (`docusaurus.config.ts`): title, tagline, keywords, navbar logo/title, og:site_name,
-  footer copyright — all broadened to "Mega Textbook" + Grades 9-12 / ADE / B.Ed Hons.
+  footer copyright - all broadened to "Mega Textbook" + Grades 9-12 / ADE / B.Ed Hons.
 - **Landing page** (`src/pages/index.tsx`): headline, subtitle, card copy rewritten for the broader
   vision.
 - **About / Contact / Intro** pages: rewritten to reflect dual audience (school + teacher-education).
-- **schema.org** (`Metadata/index.tsx`): `CollegeOrUniversity` → `Organization` — no longer making a
+- **schema.org** (`Metadata/index.tsx`): `CollegeOrUniversity` → `Organization` - no longer making a
   false institutional claim.
 - **Roadmap** (`SDD/ROADMAP.md`): new "Platform Vision" section at the top framing the two audiences;
   flagged B.Ed-specific sections as the current MVP with Grade 9-12/ADE as planned expansion.
@@ -68,7 +68,7 @@ Applied the vision across all public-facing brand touchpoints and governance doc
 Draft PR #113 opened. Board rejected it with two pieces of feedback (recorded in the
 `request_confirmation` interaction result).
 
-### Revision 2 (commit 26839d4b) — addresses board feedback
+### Revision 2 (commit 26839d4b) - addresses board feedback
 
 Board feedback:
 1. "Currently our MVP caters ADE and B.Ed(H) students and teachers and also Aspirants of Teacher
@@ -87,19 +87,19 @@ Changes in rev2:
   wordmarks when the board provides them.
 - PR #113 body updated; new `request_confirmation` (v2) posted on TEX-36.
 
-### Revision 3 (commit a0fbf577) — board PR comments + real logo images
+### Revision 3 (commit a0fbf577) - board PR comments + real logo images
 
 Board PR comments (on PR #113):
 1. `docs/intro.mdx` line 3: "A free bilingual (English and Urdu) textbook collection and learning
-   platform for ADE, B.Ed Hons, STEDA teacher-licence aspirants" — use this exact description text.
-2. `i18n/ur/.../about.mdx` line 3: "remove کے لیے" — drop the Urdu "for" from the description line.
-3. "i donot see ane loge images, search the internet and download the logos" — replace wordmark
+   platform for ADE, B.Ed Hons, STEDA teacher-licence aspirants" - use this exact description text.
+2. `i18n/ur/.../about.mdx` line 3: "remove کے لیے" - drop the Urdu "for" from the description line.
+3. "i donot see ane loge images, search the internet and download the logos" - replace wordmark
    placeholders with real downloaded logo images.
 
 Changes in rev3:
 - **Intro description** (`docs/intro.mdx`): matched the board's exact requested text.
 - **Urdu about.mdx** (`i18n/ur/.../about.mdx`): description reworded to drop "کے لیے".
-- **Logo images**: downloaded real logos from official sources — HEC (Wikimedia thumb), University of
+- **Logo images**: downloaded real logos from official sources - HEC (Wikimedia thumb), University of
   Sindh (usindh.edu.pk), Government of Sindh (sindh.gov.pk). Created clean SVG wordmarks for STEDA,
   GEC, ADTTI, DETRCs, REEC, PITE. Footer component (`src/theme/Footer/index.tsx`) rewritten to use
   real `<img>` tags with these assets. 9 logo files under `static/img/logos/`.
@@ -118,7 +118,7 @@ Changes in rev3:
 
 - ✅ Impact: every public-facing string that narrowly scoped the project to B.Ed / University of
   Sindh is now broadened to the board's vision (ADE, B.Ed Hons, STEDA teacher-licence aspirants,
-  Grades 9-12 — students + teachers). Footer now carries an institutional logo strip.
+  Grades 9-12 - students + teachers). Footer now carries an institutional logo strip.
 - 🧪 Tests: content-only changes; no logic or schema change.
 - 📁 Files: 18 source files + 9 logo assets across all revisions (see lists above) + this PHR.
 - 🔁 Next prompts: Urdu mirrors for landing page, contact, and intro need alignment; replace SVG
@@ -126,12 +126,12 @@ Changes in rev3:
 - 🧠 Reflection: the university branding was already removed per locked decision 7 but had left
   residual references in brand constants, metadata schema, and content pages. The board's rev2
   feedback re-introduces University of Sindh, STEDA, HEC and others as *affiliate logos* in the
-  footer — a different framing from "site branding". schema.org stays `Organization`; the logos are
+  footer - a different framing from "site branding". schema.org stays `Organization`; the logos are
   presentational footer content, not a provider/publisher claim.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: branding, content, and footer across 18 files — see Response snapshot for the
+- Shipped / changed: branding, content, and footer across 18 files - see Response snapshot for the
   full list per revision.
 - Decisions the team must respect: the project is branded as "Mega Textbook" serving ADE, B.Ed Hons,
   STEDA teacher-licence aspirants, and Grades 9-12. The footer carries an institutional logo strip;
