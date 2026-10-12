@@ -3,8 +3,8 @@
   "course_code": "EFMP-304",
   "unit_no": 4,
   "stage": "G2",
-  "reviewed_commit": "5d8a088d",
-  "generated_at": "2026-10-11T21:33:15.496Z",
+  "reviewed_commit": "e7217317",
+  "generated_at": "2026-10-12T03:28:43.033Z",
   "input_manifest": {
     ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
     ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
@@ -83,7 +83,7 @@
     "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
     "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
     "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
-    "specs/content/efmp-304/concepts/unit-04.md": "01570a95b6df9611349d3e0e49b6cf201f422bae5a8131afe0303cc5febf01e0",
+    "specs/content/efmp-304/concepts/unit-04.md": "b11430001ce19c2a94754a029737505d7b9df5c543fcb867ff0e667a00f8e88f",
     "specs/content/efmp-304/content-spec.md": "019ca1fd95647f3d5130aed3d19a1ff7eb47e13a332f0ef3eedd95009cfdc35f",
     "specs/content/efmp-304/coverage/unit-04.md": "57aa8b56e9f0dbe7bb0e01c9e75ec96f6a92aa748165e8fbf820e300b97d3635",
     "specs/content/efmp-304/figures/unit-04.md": "b94944c3770eb25182c38add2e9719e46b1bf2be52cfc006a5cea8a3f84dd612",
@@ -111,52 +111,52 @@
     {
       "name": "validate:content",
       "exit_code": 0,
-      "log_path": "specs/content/efmp-304/reviews/unit-04/G2/logs-20261011T213308061Z/validate-content.txt"
+      "log_path": "specs/content/efmp-304/reviews/unit-04/G2/logs-20261012T032836942Z/validate-content.txt"
     },
     {
       "name": "check:depth-gate",
       "exit_code": 0,
-      "log_path": "specs/content/efmp-304/reviews/unit-04/G2/logs-20261011T213308061Z/check-depth-gate.txt"
+      "log_path": "specs/content/efmp-304/reviews/unit-04/G2/logs-20261012T032836942Z/check-depth-gate.txt"
     },
     {
       "name": "check:figures",
       "exit_code": 0,
-      "log_path": "specs/content/efmp-304/reviews/unit-04/G2/logs-20261011T213308061Z/check-figures.txt"
+      "log_path": "specs/content/efmp-304/reviews/unit-04/G2/logs-20261012T032836942Z/check-figures.txt"
     },
     {
       "name": "check:concept-graph",
       "exit_code": 0,
-      "log_path": "specs/content/efmp-304/reviews/unit-04/G2/logs-20261011T213308061Z/check-concept-graph.txt"
+      "log_path": "specs/content/efmp-304/reviews/unit-04/G2/logs-20261012T032836942Z/check-concept-graph.txt"
     },
     {
       "name": "check:bloom-bands",
       "exit_code": 0,
-      "log_path": "specs/content/efmp-304/reviews/unit-04/G2/logs-20261011T213308061Z/check-bloom-bands.txt"
+      "log_path": "specs/content/efmp-304/reviews/unit-04/G2/logs-20261012T032836942Z/check-bloom-bands.txt"
     },
     {
       "name": "check:no-em-dash",
       "exit_code": 0,
-      "log_path": "specs/content/efmp-304/reviews/unit-04/G2/logs-20261011T213308061Z/check-no-em-dash.txt"
+      "log_path": "specs/content/efmp-304/reviews/unit-04/G2/logs-20261012T032836942Z/check-no-em-dash.txt"
     },
     {
       "name": "check:no-answer-keys",
       "exit_code": 0,
-      "log_path": "specs/content/efmp-304/reviews/unit-04/G2/logs-20261011T213308061Z/check-no-answer-keys.txt"
+      "log_path": "specs/content/efmp-304/reviews/unit-04/G2/logs-20261012T032836942Z/check-no-answer-keys.txt"
     },
     {
       "name": "check:docs-sync",
       "exit_code": 0,
-      "log_path": "specs/content/efmp-304/reviews/unit-04/G2/logs-20261011T213308061Z/check-docs-sync.txt"
+      "log_path": "specs/content/efmp-304/reviews/unit-04/G2/logs-20261012T032836942Z/check-docs-sync.txt"
     }
   ],
   "evidence_manifest": {
-    "specs/content/efmp-304/reviews/unit-04/G2/logs-20261011T213308061Z/validate-content.txt": "3aa1e94897714860cfaf6ed2b9dccd325b2c29d68464a58f507b02b9966ae47f",
-    "specs/content/efmp-304/reviews/unit-04/G2/logs-20261011T213308061Z/check-depth-gate.txt": "5f729a134e3d54e7a55d27bd0bf902a4c6a0685f532fc2fc25e8f8fb4921ec72",
-    "specs/content/efmp-304/reviews/unit-04/G2/logs-20261011T213308061Z/check-figures.txt": "968e0580eb97d2cae3de3355d1d9d08888565fd220b11a011537ff00b9659a24",
-    "specs/content/efmp-304/reviews/unit-04/G2/logs-20261011T213308061Z/check-concept-graph.txt": "c6b7d7702d0ca3594b8c50a27a16a8294ec288d7eb826d40b27475aea1efffb5",
-    "specs/content/efmp-304/reviews/unit-04/G2/logs-20261011T213308061Z/check-bloom-bands.txt": "193872f6049bea2f4d91a6c028f20a44f66e2cbe56093db810850c93635ac7ec",
-    "specs/content/efmp-304/reviews/unit-04/G2/logs-20261011T213308061Z/check-no-em-dash.txt": "ac345969ea626004ec27c125d8bfdb5683d36721b509447a77014fb4895e13f9",
-    "specs/content/efmp-304/reviews/unit-04/G2/logs-20261011T213308061Z/check-no-answer-keys.txt": "80d9834fb2d68a658bab3f8f913f07b3baf27fa65675dddf1039a3cf31dc07a0",
-    "specs/content/efmp-304/reviews/unit-04/G2/logs-20261011T213308061Z/check-docs-sync.txt": "226dca8cd6417e7489777865cb147a29c54b33de2584aed8c8ca83fc571c57f1"
+    "specs/content/efmp-304/reviews/unit-04/G2/logs-20261012T032836942Z/validate-content.txt": "6cfb949c3fc224968f89c4eda47af4a6faa777337e33a3ec62825a078fdd11f8",
+    "specs/content/efmp-304/reviews/unit-04/G2/logs-20261012T032836942Z/check-depth-gate.txt": "fe963ab8f4f4322e29b114d5abb160c83286b3517d05c4d0fe6106179b5dff55",
+    "specs/content/efmp-304/reviews/unit-04/G2/logs-20261012T032836942Z/check-figures.txt": "c2da48565a9212a60456b23d1352766b395093da5bcebf8af66d26484906d7ef",
+    "specs/content/efmp-304/reviews/unit-04/G2/logs-20261012T032836942Z/check-concept-graph.txt": "f136ac96b16104404c2f9551310da5cbec4a4a3424c7931343c2cda6af4265b3",
+    "specs/content/efmp-304/reviews/unit-04/G2/logs-20261012T032836942Z/check-bloom-bands.txt": "2834d7b2df9e348d060354819db89d4160438fcbd52049b4ddae483b1f12c212",
+    "specs/content/efmp-304/reviews/unit-04/G2/logs-20261012T032836942Z/check-no-em-dash.txt": "2508e6e3b4c1d977672788e6bcf2370f7f9ab868009121d3b4565a026db120c8",
+    "specs/content/efmp-304/reviews/unit-04/G2/logs-20261012T032836942Z/check-no-answer-keys.txt": "4b44f582b76f6e2ab6123f342daa64a0d79d3861d1e67f0c5224ae6ba10e5bb5",
+    "specs/content/efmp-304/reviews/unit-04/G2/logs-20261012T032836942Z/check-docs-sync.txt": "34d42a0e422b3f9b2deb25686a913262ac7e1b31eb62bbd71d82312e76b20ad3"
   }
 }
