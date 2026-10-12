@@ -95,12 +95,20 @@ per-topic layout: `index.mdx` + `topic-01…04.mdx` (nine-part cycles) + `unit-a
 floor of one. This unit carries the course's assessed reflection file (10 marks). G1 unit-spec affirmed
 at intake; G2 cleared.
 
+**D-2026-0067 item 3 repair (2026-10-12, TEX-48):** two reviewed English defects were fixed -
+`topic-03.mdx`'s third journal entry read "did not understood", and `unit-assessment.mdx` RRQ 5 asked a
+two-sentence Understand question but carried a four-mark prompt-listing model answer. The Urdu model
+answer 5 carried the same mismatch and was mirrored; the Urdu `topic-03.mdx` entry was already correct.
+Because those are bound review inputs, G2 was regenerated
+(`20261012T033427776Z-gates.json` supersedes `20261011T213320443Z-gates.json`) and the G3 and G5 rows
+are back to awaiting a fresh independent review of the current bytes.
+
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 6 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-06/G2/20261011T213320443Z-gates.json |
-| Unit 6 | G3 en-review | ▣ | | agent G3 (Reviewer, agy Gemini, run 501d802f) **pass**, zero findings: `specs/content/efmp-304/reviews/unit-06/G3/agent-g3-efmp-304-u6-run501d802f.json` (PR #126, TEX-45). Row stays open: agent evidence cannot close it (ADR-0019) |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-06/G2/20261012T033427776Z-gates.json |
+| Unit 6 | G3 en-review | ▣ | | **Fresh G3 pending (TEX-48).** The D-2026-0067 item 3 repair changed two bound English inputs (`topic-03.mdx`, `unit-assessment.mdx`), so the prior agent G3 (Reviewer, agy Gemini, run 501d802f) **pass** with zero findings, `specs/content/efmp-304/reviews/unit-06/G3/agent-g3-efmp-304-u6-run501d802f.json` (PR #126, TEX-45), no longer binds the current bytes. Row stays open: agent evidence cannot close it (ADR-0019) |
 | Unit 6 | G4 ur-translation | ▣ | | Urdu mirror complete (BilingualAuthor, TEX-38, PR #118, through `0749027b`); reflective-practice terms owner-banked 2026-10-11 (D-2026-0067). `translation_status` stays draft pending certification |
-| Unit 6 | G5 ur-review | ▣ | | agent G5 (Reviewer, agy Gemini, run 36f939d6) **pass**, 3 advisories: `specs/content/efmp-304/reviews/unit-06/G5/agent-g5-efmp-304-u6-run36f939d6.json` (PR #132, TEX-46). Row stays open (ADR-0019) |
+| Unit 6 | G5 ur-review | ▣ | | **Fresh G5 pending (TEX-48).** Advisory F1 of the prior agent G5 (Reviewer, agy Gemini, run 36f939d6) **pass**, 3 advisories, `specs/content/efmp-304/reviews/unit-06/G5/agent-g5-efmp-304-u6-run36f939d6.json` (PR #132, TEX-46), is now repaired in both locales, which changes the Urdu `unit-assessment.mdx` bytes the run was bound to. Row stays open (ADR-0019) |
 | Unit 6 | G6 assets | ✅ | auto:gates | 8 schematics placed; dark variants derived |
 | Unit 6 | G7 publish | ▢ | | |
