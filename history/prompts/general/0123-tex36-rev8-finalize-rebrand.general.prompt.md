@@ -49,8 +49,8 @@ Fixed all six board items and pushed rev8 (commit 6e73faa6):
 
 1. **Constitution reverted** - `git checkout origin/main -- .specify/memory/constitution.md`. Diff vs origin/main is now empty for this file.
 2. **Branch merged** - `git merge origin/main` clean, 0 commits behind main.
-3. **Em dashes removed** - sed replaced ` — ` with ` - ` across 8 files: README.md, SDD/ROADMAP.md, docusaurus.config.ts, src/pages/about.mdx, src/pages/index.tsx, Metadata/index.tsx, i18n/ur/about.mdx, PHR 0100. Zero em dashes in `git diff origin/main..HEAD`.
-4. **Urdu mirrors** - child issue TEX-50 opened to track alignment of landing, contact, and intro Urdu mirrors.
+3. **Em dashes removed** - sed replaced the em dash (U+2014) with a spaced hyphen across 8 files: README.md, SDD/ROADMAP.md, docusaurus.config.ts, src/pages/about.mdx, src/pages/index.tsx, Metadata/index.tsx, i18n/ur/about.mdx, PHR 0100. Zero em dashes in `git diff origin/main..HEAD`.
+4. **Urdu mirrors** - child issue TEX-51 opened to track alignment of landing, contact, and intro Urdu mirrors.
 5. **adtti.png compressed** - ImageMagick resize 150x150 + strip + quality 80: 404KB -> 48KB.
 6. **PR review threads** - replied to all 9 review comments with status confirmation.
 7. **PR title** - em dash removed: "TEX-36: rebrand to Mega Textbook - platform vision (Grades 9-12 + teacher ed)"
@@ -62,12 +62,12 @@ CI triggered automatically (run 38300264077). Awaiting green before board merge.
 
 - 10 files changed in rev8 (35 insertions, 40 deletions)
 - CI running on rev8
-- Child issue TEX-50 opened for Urdu mirror alignment
+- Child issue TEX-51 opened for Urdu mirror alignment
 - All board PR review comments replied to
 
 ## Handoff (for CEO and agents)
 
 - Shipped / changed: PR #113 updated with rev8 (commit 6e73faa6), CI running
 - Decisions the team must respect: constitution.md must NOT be edited in this PR; Article I amendment deferred to separate /sp.constitution issue. Zero em dash in diff enforced.
-- Pending / next owner: board merges PR #113 once CI green. TEX-50 owns Urdu mirror alignment.
-- Paperclip issues affected: TEX-36 (in_progress), TEX-50 (new child, pending board merge of #113)
+- Pending / next owner: board merges PR #113 once CI green. TEX-51 owns Urdu mirror alignment.
+- Paperclip issues affected: TEX-36 (in_progress), TEX-51 (new child, pending board merge of #113)
