@@ -1107,13 +1107,13 @@ html[dir='rtl'] .dashboard-shell__sidebar {
   background: var(--ifm-background-surface-color);
 }
 
-.footer-logos__heading {
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--ifm-color-emphasis-600);
-}
+ .footer-logos__heading {
+   font-size: 0.8rem;
+   font-weight: 600;
+   text-transform: uppercase;
+   letter-spacing: 0.06em;
+   color: var(--ifm-color-emphasis-800);
+ }
 
 .footer-logos__strip {
   display: flex;
