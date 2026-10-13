@@ -12,7 +12,7 @@ G2 en-draft cleared by deterministic gates.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-01/G2/20261006T182251802Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-01/G2/20261013T123653402Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | |
 | Unit 1 | G4 ur-translation | ▢ | | |
 | Unit 1 | G5 ur-review | ▢ | | |
@@ -30,7 +30,7 @@ illustration `fig-U2-9` is left `prompt-only` in `figures/unit-02.banner.md` for
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-02/G2/20261006T182256391Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-02/G2/20261013T123659954Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | awaiting CurriculumOwner |
 | Unit 2 | G4 ur-translation | ▢ | | filed as a follow-up to TEX-23 |
 | Unit 2 | G5 ur-review | ▢ | | |
@@ -48,7 +48,7 @@ intake; G2 cleared by deterministic gates.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 3 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-03/G2/20261006T182301718Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-03/G2/20261013T123703920Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | awaiting CurriculumOwner |
 | Unit 3 | G4 ur-translation | ▢ | | filed as a follow-up to TEX-23 |
 | Unit 3 | G5 ur-review | ▢ | | |
@@ -65,7 +65,7 @@ deterministic gates.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 4 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-04/G2/20261012T032836942Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-04/G2/20261013T123708086Z-gates.json |
 | Unit 4 | G3 en-review | ▣ | | agent G3 (Reviewer, agy Gemini, run 501d802f) **pass**, zero findings: `specs/content/efmp-304/reviews/unit-04/G3/agent-g3-efmp-304-u4-run501d802f.json` (PR #126, TEX-45). Row stays open: agent evidence cannot close it (ADR-0019) |
 | Unit 4 | G4 ur-translation | ▣ | | Urdu mirror complete (BilingualAuthor, TEX-38, PR #118, through `0749027b`); reflective-practice terms owner-banked 2026-10-11 (D-2026-0067). `translation_status` stays draft pending certification |
 | Unit 4 | G5 ur-review | ▣ | | agent G5 (Reviewer, agy Gemini, run 36f939d6) **pass**, 3 advisories: `specs/content/efmp-304/reviews/unit-04/G5/agent-g5-efmp-304-u4-run36f939d6.json` (PR #132, TEX-46). Row stays open (ADR-0019) |
@@ -81,7 +81,7 @@ open-access source bound against a declared floor of one. G1 unit-spec affirmed 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 5 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-05/G2/20261011T213316040Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-05/G2/20261013T123711781Z-gates.json |
 | Unit 5 | G3 en-review | ▣ | | agent G3 (Reviewer, agy Gemini, run 501d802f) **pass**, zero findings: `specs/content/efmp-304/reviews/unit-05/G3/agent-g3-efmp-304-u5-run501d802f.json` (PR #126, TEX-45). Row stays open: agent evidence cannot close it (ADR-0019) |
 | Unit 5 | G4 ur-translation | ▣ | | Urdu mirror complete (BilingualAuthor, TEX-38, PR #118, through `0749027b`); reflective-practice terms owner-banked 2026-10-11 (D-2026-0067). `translation_status` stays draft pending certification |
 | Unit 5 | G5 ur-review | ▣ | | agent G5 (Reviewer, agy Gemini, run 36f939d6) **pass**, 3 advisories: `specs/content/efmp-304/reviews/unit-05/G5/agent-g5-efmp-304-u5-run36f939d6.json` (PR #132, TEX-46). Row stays open (ADR-0019) |
@@ -106,7 +106,7 @@ are back to awaiting a fresh independent review of the current bytes.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 6 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-06/G2/20261012T033427776Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-06/G2/20261013T131331005Z-gates.json |
 | Unit 6 | G3 en-review | ▣ | | **Fresh G3 pending (TEX-48).** The D-2026-0067 item 3 repair changed two bound English inputs (`topic-03.mdx`, `unit-assessment.mdx`), so the prior agent G3 (Reviewer, agy Gemini, run 501d802f) **pass** with zero findings, `specs/content/efmp-304/reviews/unit-06/G3/agent-g3-efmp-304-u6-run501d802f.json` (PR #126, TEX-45), no longer binds the current bytes. Row stays open: agent evidence cannot close it (ADR-0019) |
 | Unit 6 | G4 ur-translation | ▣ | | Urdu mirror complete (BilingualAuthor, TEX-38, PR #118, through `0749027b`); reflective-practice terms owner-banked 2026-10-11 (D-2026-0067). `translation_status` stays draft pending certification |
 | Unit 6 | G5 ur-review | ▣ | | **Fresh G5 pending (TEX-48).** Advisory F1 of the prior agent G5 (Reviewer, agy Gemini, run 36f939d6) **pass**, 3 advisories, `specs/content/efmp-304/reviews/unit-06/G5/agent-g5-efmp-304-u6-run36f939d6.json` (PR #132, TEX-46), is now repaired in both locales, which changes the Urdu `unit-assessment.mdx` bytes the run was bound to. Row stays open (ADR-0019) |
