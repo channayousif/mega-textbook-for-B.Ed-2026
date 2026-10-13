@@ -2209,3 +2209,19 @@ content-improvement loop with no further cycle.
   2. **Ten terms banked in `specs/content/terminology.csv`, as proposed:** Reflective Thinking `تاملی سوچ`, Reflective Process `تاملی عمل`, Reflective Practice `تاملی مشق`, Reflective Journal `تاملی جریدہ`, Reflective Cycle `تاملی چکر`, Descriptive Writing `بیانیہ تحریر`, Reflective Writing `تاملی تحریر`, Technical Reflection `فنی تامل`, Contextual Reflection `سیاقی تامل`, Dialectical Reflection `جدلیاتی تامل`. Later translators reuse these; the existing `Reflective Decision Making` entry is unchanged.
   3. **Follow-ups scheduled, not fixed in place:** the two English defects in Unit 6 (`topic-03.mdx` "did not understood"; `unit-assessment.mdx` RRQ 5 question/answer mismatch) go through `revise-topic` with fresh G2/G3/G5, because editing reviewed files would invalidate the bound evidence. EFMP-304 `.ur.svg` figure variants are scheduled as a BilingualAuthor task after the Semester 2 courses.
 - **Consequences:** G3/G4/G5 tracker rows for Units 4-6 record the agent passes as `▣` and stay open (ADR-0019); `translation_status` stays `draft`. Unit 4 G2 evidence regenerated because its concept table is a bound input.
+
+## D-2026-0068 - Style guide v4.6: Urdu alt connector and <desc>/alt parity rule
+
+- **Status:** confirmed (owner, 2026-10-13)
+- **Gate:** Tier A content standard (style guide is a freshness-bearing bound input for every G2 review manifest, `scripts/lib/review-evidence.mjs:188`)
+- **Scope:** `specs/content/style-guide.md` v4.5 → v4.6; two rules added:
+  1. Urdu alt-text clause connector: colon (not spaced hyphen) for result/elaboration clauses in Urdu alt text.
+  2. `<desc>`/alt parity: an SVG figure's internal `<desc>` MUST equal the `<Figure alt>` carrying it, in both locales and both theme variants.
+- **Decided by:** owner (M Yousif Channa), via board merge of PR #141 (2026-10-13T10:33:30Z), confirmed by ProgramManager ruling on TEX-55.
+- **Decision:**
+  1. **Land v4.6 now.** The content half (rule applied unit-wide to EFMP-302 Unit 1) shipped in PR #139; the standard half recorded the rule in PR #141. Both merged.
+  2. **`<desc>`/alt gate (TEX-52) merged in the same ruling.** PR #142 lands `check:figures` enforcement of rule 2, so gate and standard stay in step.
+  3. **44 stale G2 manifests:** PR #141 merged with CI red (44 stale manifests spanning EFMP-301 U2-12, EFMP-302 U2-6, GENG-300, GICT-300, GNAS-301, GQUR-300, EFMP-304 U1-6). Current state: gate passes (41 gate-checked, not re-certified). The board merged without pre-regeneration; regeneration is a follow-up, not a merge blocker.
+  4. **Regeneration not scheduled here.** Who re-certifies the 44 manifests against v4.6, and in what batches under `scripts/heavy.sh`, is a board/CurriculumOwner follow-up — it is not part of this ruling.
+- **Consequences:** `specs/content/style-guide.md` is now v4.6. Every G2 manifest signed before this commit is stale relative to v4.6; `check:pipeline-gate` reports them as "gate-checked" (passing, not certified). The next translated unit inherits both rules instead of re-deciding per figure. TEX-25 A-03's "rule written into the style guide" half is met.
+- **Limits:** This decision records a ruling the board already executed by merging. It does not schedule or assign the 44-manifest regeneration. It certifies no content and qualifies no reviewer.
