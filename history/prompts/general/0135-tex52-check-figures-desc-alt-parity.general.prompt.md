@@ -14,7 +14,7 @@ links:
   spec: null
   ticket: TEX-52
   adr: null
-  pr: null
+  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/142
 files:
   - scripts/check-figures.mjs
   - tests/unit/figures-gate.test.mjs
