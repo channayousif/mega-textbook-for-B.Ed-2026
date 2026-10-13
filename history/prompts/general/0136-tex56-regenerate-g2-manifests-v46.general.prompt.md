@@ -14,7 +14,7 @@ links:
   spec: null
   ticket: "TEX-56"
   adr: null
-  pr: null
+  pr: "https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/145"
 files:
   - static/img/figures/ (450 SVG desc fixes)
   - specs/content/efmp-301/reviews/ (G2 evidence)
