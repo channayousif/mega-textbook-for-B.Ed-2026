@@ -280,10 +280,38 @@ function checkUnit({ unitDir, urUnitDir, courseDir, courseFolder, courseCode, un
   const reviewedBilingual = isBilingualCourse(courseDir) && translationStatus === 'reviewed';
   const urDir = urUnitDir;
 
+  const urCarriersById = new Map();
+  const urCarrierFileById = new Map();
+  if (existsSync(urDir)) {
+    for (const tf of [...topicFilesIn(urDir), 'index.mdx']) {
+      const p = join(urDir, tf);
+      if (existsSync(p)) {
+        const found = carriersIn(matter(readFileSync(p, 'utf8')).content);
+        for (const c of found) {
+          if (!urCarriersById.has(c.id)) {
+            urCarriersById.set(c.id, c);
+            urCarrierFileById.set(c.id, tf);
+          }
+        }
+      }
+    }
+  }
+
+  const indexCarriers = existsSync(enIndex)
+    ? carriersIn(matter(readFileSync(enIndex, 'utf8')).content)
+    : [];
+  const indexCarrierById = new Map(indexCarriers.map((c) => [c.id, c]));
+
   for (const [id, r] of manifestById) {
     if (r.status !== 'placed') continue;
     const enFile = carrierFileById.get(id);
-    const enCarrier = carrierById.get(id);
+    const enCarrier = carrierById.get(id) || indexCarrierById.get(id);
+    const enAlt = enCarrier ? enCarrier.alt : null;
+    const enCarrierFile = enFile || (indexCarrierById.has(id) ? 'index.mdx' : null);
+
+    const urCarrier = urCarriersById.get(id);
+    const urAlt = urCarrier ? urCarrier.alt : null;
+    const urCarrierFile = urCarrierFileById.get(id);
 
     if (enCarrier && enCarrier.form !== 'figure') {
       err(label, `figure "${id}" is placed but ${enFile} still carries the comment marker, not a rendered <Figure>`);
@@ -294,7 +322,11 @@ function checkUnit({ unitDir, urUnitDir, courseDir, courseFolder, courseCode, un
       if (!existsSync(assetPath)) {
         err(label, `figure "${id}" is placed but its Src file does not exist: static${r.src}`);
       } else if (rel.endsWith('.svg')) {
-        lintSvg(label, id, assetPath, `static/${rel}`, { dark: false });
+        lintSvg(label, id, assetPath, `static/${rel}`, {
+          dark: false,
+          expectedAlt: enAlt,
+          carrierFile: enCarrierFile,
+        });
         // Spec 013 D3: the dark variant is derived, so a stale one is a real
         // defect - it would render yesterday's figure to every dark-mode reader.
         const darkRel = rel.replace(/\.svg$/, '.dark.svg');
@@ -302,12 +334,45 @@ function checkUnit({ unitDir, urUnitDir, courseDir, courseFolder, courseCode, un
         if (!existsSync(darkPath)) {
           err(label, `figure "${id}" has no dark variant static/${darkRel} - run: npm run figures:variants`);
         } else {
-          lintSvg(label, id, darkPath, `static/${darkRel}`, { dark: true });
+          lintSvg(label, id, darkPath, `static/${darkRel}`, {
+            dark: true,
+            expectedAlt: enAlt,
+            carrierFile: enCarrierFile,
+            lightRelPath: `static/${rel}`,
+          });
           const light = readFileSync(assetPath, 'utf8');
           const expectedDark = light.split(rootBlock(LIGHT_TOKENS)).join(rootBlock(DARK_TOKENS));
           if (readFileSync(darkPath, 'utf8') !== expectedDark) {
             err(label, `figure "${id}": static/${darkRel} is stale - run: npm run figures:variants`);
           }
+        }
+      }
+    }
+    if (r.hasSrcCol && r.src && r.src.endsWith('.svg')) {
+      const urRel = r.src.replace(/^\/+/, '').replace(/\.svg$/, '.ur.svg');
+      const urSvg = join(STATIC_DIR, urRel);
+      if (existsSync(urSvg)) {
+        lintSvg(label, id, urSvg, `static/${urRel}`, {
+          dark: false,
+          expectedAlt: urAlt,
+          carrierFile: urCarrierFile,
+        });
+        const urDarkRel = urRel.replace(/\.svg$/, '.dark.svg');
+        const urDarkSvg = join(STATIC_DIR, urDarkRel);
+        if (existsSync(urDarkSvg)) {
+          lintSvg(label, id, urDarkSvg, `static/${urDarkRel}`, {
+            dark: true,
+            expectedAlt: urAlt,
+            carrierFile: urCarrierFile,
+            lightRelPath: `static/${urRel}`,
+          });
+          const urLight = readFileSync(urSvg, 'utf8');
+          const expectedUrDark = urLight.split(rootBlock(LIGHT_TOKENS)).join(rootBlock(DARK_TOKENS));
+          if (readFileSync(urDarkSvg, 'utf8') !== expectedUrDark) {
+            err(label, `figure "${id}": static/${urDarkRel} is stale - run: npm run figures:variants`);
+          }
+        } else {
+          err(label, `figure "${id}" has no dark variant static/${urDarkRel} - run: npm run figures:variants`);
         }
       }
     }
@@ -352,7 +417,7 @@ function checkUnit({ unitDir, urUnitDir, courseDir, courseFolder, courseCode, un
 const EM_DASHES = /[—―⸺⸻]/;
 const COLOUR_LITERAL = /#[0-9a-fA-F]{3,8}\b|\brgba?\(|\bhsla?\(/g;
 
-function lintSvg(label, id, absPath, relPath, { dark }) {
+function lintSvg(label, id, absPath, relPath, { dark, expectedAlt, carrierFile, lightRelPath } = {}) {
   const svg = readFileSync(absPath, 'utf8');
   const bytes = Buffer.byteLength(svg);
 
@@ -373,7 +438,18 @@ function lintSvg(label, id, absPath, relPath, { dark }) {
   const title = /<title\b[^>]*>([\s\S]*?)<\/title>/.exec(svg);
   const desc = /<desc\b[^>]*>([\s\S]*?)<\/desc>/.exec(svg);
   if (!title || !title[1].trim()) err(label, `figure "${id}": ${relPath} needs a non-empty <title>`);
-  if (!desc || !desc[1].trim()) err(label, `figure "${id}": ${relPath} needs a non-empty <desc>`);
+  if (!desc || !desc[1].trim()) {
+    err(label, `figure "${id}": ${relPath} needs a non-empty <desc>`);
+  } else if (expectedAlt !== undefined && expectedAlt !== null) {
+    const descText = norm(desc[1]);
+    if (descText !== expectedAlt) {
+      if (dark) {
+        err(label, `figure "${id}": ${relPath} <desc> differs from carrier alt (regenerate with "npm run figures:variants" after updating ${lightRelPath || 'the light source'})`);
+      } else {
+        err(label, `figure "${id}": ${relPath} <desc> differs from carrier alt in ${carrierFile || 'topic carrier'}`);
+      }
+    }
+  }
 
   // Art. III.9 - check-no-em-dash.mjs scans docs/guides/i18n/specs, never
   // static/, so figure labels were the one authored surface with no em-dash
