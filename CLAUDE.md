@@ -22,11 +22,13 @@ host (and the live site) on 2026-09-20 and 2026-09-24. Therefore:
 
 - **Heavy jobs** are `npm run build`, `npm run start`/`serve`, `npm ci`, Playwright or any
   Chromium run (e2e, `render-inspect.mjs`, screenshot scripts), `sharp` batch work, and `vitest`.
-- Run **at most one heavy job at a time across all sessions and subagents**. Prefix every
-  heavy job with `flock /tmp/mega-book-heavy.lock` so concurrent ones queue instead of stacking,
-  e.g. `flock /tmp/mega-book-heavy.lock npm run build`.
+- Run **at most two heavy jobs at a time across all sessions and subagents** (owner ruling,
+  2026-10-13). Prefix every heavy job with `scripts/heavy.sh` so a third one queues instead of
+  stacking, e.g. `scripts/heavy.sh npm run build`. The script holds one of two slots
+  (`/tmp/mega-book-heavy.lock`, `/tmp/mega-book-heavy.2.lock`); a bare
+  `flock /tmp/mega-book-heavy.lock` still counts as slot 1.
 - Never run heavy jobs in parallel subagents. Subagents may read, grep and edit; builds,
-  dev servers and browser runs happen from the main session, one at a time.
+  dev servers and browser runs happen from the main session.
 - Stop any dev/preview server you start (`kill` it) as soon as the check is done; never leave
   one running at the end of a task.
 - Before a heavy job, check `free -m`; if available memory is under 3 GB, wait or ask the user.
