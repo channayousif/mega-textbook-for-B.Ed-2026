@@ -1,0 +1,111 @@
+### starting: npm run serve -- --port 4599
+### render-inspect  EFMP-303 Unit 2 (ur)
+### route: /ur/semester-2/efmp-303/unit-02  pages: 6  placed figures: 6
+### host: http://127.0.0.1:4599   browser: chromium 149.0.7827.0
+### started: 2026-10-15T13:58:11.772Z
+
+===== A. DESKTOP 1280x900 =====
+
+-- index: headings=5 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+-- topic-01: headings=13 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   img /img/figures/efmp-303/unit-02/fig-U2-1.ur.svg natural=249x150 shown=true loading=lazy alt="ایک زمانی خاکہ جو 1947 سے 2000 تک پاکستان کی بڑی تعلیمی پالیسیاں دکھاتا ہے: 1947 کی تعلیمی"
+   img /img/figures/efmp-303/unit-02/fig-U2-1.ur.dark.svg natural=0x0 shown=false loading=lazy alt="ایک زمانی خاکہ جو 1947 سے 2000 تک پاکستان کی بڑی تعلیمی پالیسیاں دکھاتا ہے: 1947 کی تعلیمی"
+   img /img/figures/efmp-303/unit-02/fig-U2-2.ur.svg natural=249x150 shown=true loading=lazy alt="ایک جدول جو 1947 سے 2000 تک کی ہر ابتدائی پالیسی کو سال، بنیادی توجہ اور اہم نتیجہ کے خانو"
+   img /img/figures/efmp-303/unit-02/fig-U2-2.ur.dark.svg natural=0x0 shown=false loading=lazy alt="ایک جدول جو 1947 سے 2000 تک کی ہر ابتدائی پالیسی کو سال، بنیادی توجہ اور اہم نتیجہ کے خانو"
+   heading order: no skipped levels
+
+-- topic-02: headings=13 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=1 vagueLinks=0 hOverflow=false
+   img /img/figures/efmp-303/unit-02/fig-U2-3.ur.svg natural=249x150 shown=true loading=lazy alt="ایک بہاؤ خاکہ تین پٹیوں میں: قومی تعلیمی پالیسی 2009 کے اہداف (مفت اور لازمی تعلیم، معیار "
+   img /img/figures/efmp-303/unit-02/fig-U2-3.ur.dark.svg natural=0x0 shown=false loading=lazy alt="ایک ب�ہاؤ خاکہ تین پٹیوں میں: قومی تعلیمی پالیسی 2009 کے اہداف (مفت اور لازمی تعلیم، معیار"
+   img /img/figures/efmp-303/unit-02/fig-U2-4.ur.svg natural=249x150 shown=true loading=lazy alt="ایک جدول جو قومی تعلیمی پالیسی 2009 کے پانچ اہداف کو ان کی نفاذی حکمتِ عملی سے جوڑتا ہے: م"
+   img /img/figures/efmp-303/unit-02/fig-U2-4.ur.dark.svg natural=0x0 shown=false loading=lazy alt="ایک جدول جو قومی تعلیمی پالیسی 2009 کے پانچ اہداف کو ان کی نفاذی حکمتِ عملی سے جوڑتا ہے: م"
+   heading order: no skipped levels
+   advisory bare-URL link text: https://media.unesco.org/sites/default/files/webfo
+
+-- topic-03: headings=13 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=1 vagueLinks=0 hOverflow=false
+   img /img/figures/efmp-303/unit-02/fig-U2-5.ur.svg natural=249x150 shown=true loading=lazy alt="ایک تصوراتی نقشہ جس کے مرکز میں 'قومی تعلیمی پالیسی 2017 کی ترجیحات' ہے اور اس کی چھ شاخیں"
+   img /img/figures/efmp-303/unit-02/fig-U2-5.ur.dark.svg natural=0x0 shown=false loading=lazy alt="ایک تصوراتی نقشہ جس کے مرکز میں 'قومی تعلیمی پالیسی 2017 کی ترجیحات' ہے اور اس کی چھ شاخیں"
+   img /img/figures/efmp-303/unit-02/fig-U2-6.ur.svg natural=249x150 shown=true loading=lazy alt="قومی تعلیمی پالیسی 2009 اور قومی تعلیمی پالیسی 2017 کا سات پہلوؤں پر موازنہ کرنے والا جدول"
+   img /img/figures/efmp-303/unit-02/fig-U2-6.ur.dark.svg natural=0x0 shown=false loading=lazy alt="قومی تعلیمی پالیسی 2009 اور قومی تعلیمی پالیسی 2017 کا سات پہلوؤں پر موازنہ کرنے والا جدول"
+   heading order: no skipped levels
+   advisory bare-URL link text: https://drive.google.com/file/d/1ioRLNFXDElnVo87AT
+
+-- unit-assessment: headings=10 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+-- unit-teacher-notes: headings=7 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+===== B. NARROW 360x780 =====
+
+-- index: docHorizontalOverflow=0px tables=0 figures=0 spill=0
+
+-- topic-01: docHorizontalOverflow=0px tables=1 figures=2 spill=0
+   table[0] client=289 scroll=289 fits=true lastHeader="درجے" scroller=NONE
+   figure[0] .figure client=275 scroll=780 scroller=FIGURE.figure
+   figure[1] .figure client=275 scroll=780 scroller=FIGURE.figure
+
+-- topic-02: docHorizontalOverflow=0px tables=1 figures=2 spill=0
+   table[0] client=289 scroll=289 fits=true lastHeader="درجے" scroller=NONE
+   figure[0] .figure client=275 scroll=780 scroller=FIGURE.figure
+   figure[1] .figure client=275 scroll=780 scroller=FIGURE.figure
+
+-- topic-03: docHorizontalOverflow=0px tables=1 figures=2 spill=0
+   table[0] client=289 scroll=289 fits=true lastHeader="درجے" scroller=NONE
+   figure[0] .figure client=275 scroll=780 scroller=FIGURE.figure
+   figure[1] .figure client=275 scroll=780 scroller=FIGURE.figure
+
+-- unit-assessment: docHorizontalOverflow=0px tables=5 figures=0 spill=0
+   table[0] client=328 scroll=328 fits=true lastHeader="0 تا 3" scroller=NONE
+   table[1] client=328 scroll=328 fits=true lastHeader="0 تا 3" scroller=NONE
+   table[2] client=328 scroll=328 fits=true lastHeader="0 تا 4" scroller=NONE
+   table[3] client=328 scroll=328 fits=true lastHeader="0 تا 4" scroller=NONE
+   table[4] client=328 scroll=328 fits=true lastHeader="0 تا 4" scroller=NONE
+
+-- unit-teacher-notes: docHorizontalOverflow=0px tables=0 figures=0 spill=0
+
+===== C. A4 PRINT EMULATION (794px) =====
+
+-- index @print: clippedElems=0 figureImgs=0 answerHeadings=[]
+
+-- topic-01 @print: clippedElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/efmp-303/unit-02/fig-U2-1.ur.svg w=709 right=749 fits
+   printfig /img/figures/efmp-303/unit-02/fig-U2-1.ur.dark.svg w=0 right=0 fits
+   printfig /img/figures/efmp-303/unit-02/fig-U2-2.ur.svg w=709 right=749 fits
+   printfig /img/figures/efmp-303/unit-02/fig-U2-2.ur.dark.svg w=0 right=0 fits
+
+-- topic-02 @print: clippedElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/efmp-303/unit-02/fig-U2-3.ur.svg w=709 right=749 fits
+   printfig /img/figures/efmp-303/unit-02/fig-U2-3.ur.dark.svg w=0 right=0 fits
+   printfig /img/figures/efmp-303/unit-02/fig-U2-4.ur.svg w=709 right=749 fits
+   printfig /img/figures/efmp-303/unit-02/fig-U2-4.ur.dark.svg w=0 right=0 fits
+
+-- topic-03 @print: clippedElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/efmp-303/unit-02/fig-U2-5.ur.svg w=709 right=749 fits
+   printfig /img/figures/efmp-303/unit-02/fig-U2-5.ur.dark.svg w=0 right=0 fits
+   printfig /img/figures/efmp-303/unit-02/fig-U2-6.ur.svg w=709 right=749 fits
+   printfig /img/figures/efmp-303/unit-02/fig-U2-6.ur.dark.svg w=0 right=0 fits
+
+-- unit-assessment @print: clippedElems=0 figureImgs=0 answerHeadings=["محدود جوابی سوالات (RRQs)​","تفصیلی جوابی سوالات (ERQs)​","جوابات اور نمبر دہی کی رہنمائی​","MCQ جوابی کلید​","RRQ نمونہ جوابات اور نمبر دہی کے خاکے​","ERQ روبرک​"]
+
+-- unit-teacher-notes @print: clippedElems=0 figureImgs=0 answerHeadings=[]
+
+===== D. SVG TEXT GEOMETRY =====
+   fig-U2-1.ur [timeline] viewBox=780x470 texts=24 wordmark@x=684.1 -> clean
+   fig-U2-1.ur.dark [timeline] viewBox=780x470 texts=24 wordmark@x=684.1 -> clean
+   fig-U2-2.ur [table] viewBox=780x470 texts=23 wordmark@x=684.1 -> clean
+   fig-U2-2.ur.dark [table] viewBox=780x470 texts=23 wordmark@x=684.1 -> clean
+   fig-U2-3.ur [flowchart] viewBox=780x470 texts=35 wordmark@x=684.1 -> clean
+   fig-U2-3.ur.dark [flowchart] viewBox=780x470 texts=35 wordmark@x=684.1 -> clean
+   fig-U2-4.ur [table] viewBox=780x470 texts=20 wordmark@x=684.1 -> clean
+   fig-U2-4.ur.dark [table] viewBox=780x470 texts=20 wordmark@x=684.1 -> clean
+   fig-U2-5.ur [concept-map] viewBox=780x470 texts=16 wordmark@x=684.1 -> clean
+   fig-U2-5.ur.dark [concept-map] viewBox=780x470 texts=16 wordmark@x=684.1 -> clean
+   fig-U2-6.ur [table] viewBox=780x470 texts=26 wordmark@x=684.1 -> clean
+   fig-U2-6.ur.dark [table] viewBox=780x470 texts=26 wordmark@x=684.1 -> clean
+
+### finished: 2026-10-15T13:59:21.733Z
+### defects: 0
+### exit_code: 0
