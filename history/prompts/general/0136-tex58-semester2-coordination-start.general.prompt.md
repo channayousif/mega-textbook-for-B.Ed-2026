@@ -28,8 +28,8 @@ TEX-58 assigned (replaces TEX-37, reopens TEX-39..44 under it). Coordinate per-c
 ## Response snapshot
 
 Read PHRs 0134/0135/0131/0132/133. Confirmed:
-- Style guide v4.6 already on main (PR #141 merged) — rebase target is current origin/main.
-- TEX-56 (PR #145) G2 manifest regen has failing build — not blocking rebase.
+- Style guide v4.6 already on main (PR #141 merged) - rebase target is current origin/main.
+- TEX-56 (PR #145) G2 manifest regen has failing build - not blocking rebase.
 - Reviewer on gemini-3.8-flash-high interim (agy Claude quota exhausted until ~2026-10-17).
 
 Audited all six child branches. EN unit state:
@@ -42,7 +42,7 @@ Audited all six child branches. EN unit state:
 
 Updated all six child issue titles (TEX-37: → TEX-58: prefix), updated all six descriptions with current state and precise next steps.
 
-Moved TEX-40 and TEX-42 to in_progress (most complete — all 6 EN units done, only UR + figures + gates + review remain). Woke BilingualAuthor via @-mention on both. Remaining four (TEX-39, TEX-41, TEX-43, TEX-44) stay todo, queued by least-remaining-work order.
+Moved TEX-40 and TEX-42 to in_progress (most complete - all 6 EN units done, only UR + figures + gates + review remain). Woke BilingualAuthor via @-mention on both. Remaining four (TEX-39, TEX-41, TEX-43, TEX-44) stay todo, queued by least-remaining-work order.
 
 Posted coordination status comment on TEX-58 summarizing state, blockers, and priority.
 
