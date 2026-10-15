@@ -1,0 +1,4 @@
+Automated print view and accessibility inspection passed for EFMP-304 Unit 6 (ur).
+- Desktop 1280x900: 0 visible broken images, 0 missing alts, 0 bare URL links, no skipped heading levels.
+- Narrow 360x780: docHorizontalOverflow=0px across all pages, figures and tables properly responsive.
+- A4 Print 794px: clippedElems=0 across all pages, print view verified.

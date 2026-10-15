@@ -278,20 +278,20 @@ const SRC = (id, ext = 'svg') => `/img/figures/efmp-302/unit-01/${id}.${ext}`;
  * aria-hidden wordmark. Fixtures build assets the same way the real generator
  * does, so a test failing here means the CONTRACT changed, not the stub.
  */
-function validSvg({ dark = false } = {}) {
+function validSvg({ dark = false, desc = 'A labelled diagram.' } = {}) {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="t d">`
-    + `<title id="t">A title</title><desc id="d">A description.</desc>`
+    + `<title id="t">A title</title><desc id="d">${desc}</desc>`
     + `<style>${rootBlock(dark ? DARK_TOKENS : LIGHT_TOKENS)} .bg{fill:var(--bg)} .wm{fill:var(--wm);font-size:11px}</style>`
     + `<rect class="bg" x="0" y="0" width="400" height="300"/>`
     + `<text class="wm" x="388" y="290" text-anchor="end" aria-hidden="true">${WORDMARK_TEXT}</text></svg>`;
 }
 
 /** Write a figure asset plus, for an SVG, its derived dark variant. */
-function writeAsset(absPath) {
+function writeAsset(absPath, { desc = 'A labelled diagram.' } = {}) {
   mkdirSync(dirname(absPath), { recursive: true });
   if (!absPath.endsWith('.svg')) { writeFileSync(absPath, 'RIFF....WEBP'); return; }
-  writeFileSync(absPath, validSvg());
-  writeFileSync(absPath.replace(/\.svg$/, '.dark.svg'), validSvg({ dark: true }));
+  writeFileSync(absPath, validSvg({ desc }));
+  writeFileSync(absPath.replace(/\.svg$/, '.dark.svg'), validSvg({ dark: true, desc }));
 }
 
 function makeV2Fixture(opts = {}) {
@@ -334,7 +334,7 @@ function makeV2Fixture(opts = {}) {
   writeFileSync(join(figDir, 'unit-01.md'), `# Figures — Unit 1\n\n${opts.headerOverride ?? V2_HEADER}\n${rows.join('\n')}\n`);
 
   for (const rel of opts.assets ?? []) writeAsset(join(root, 'static', rel));
-  for (const rel of opts.urSvg ?? []) writeAsset(join(root, 'static', rel));
+  for (const rel of opts.urSvg ?? []) writeAsset(join(root, 'static', rel), { desc: 'ایک عنوان' });
 
   if (opts.reviewed) {
     const urDir = join(root, 'i18n', 'ur', 'docusaurus-plugin-content-docs', 'current', 'semester-1', 'efmp-302', 'unit-01');
@@ -692,7 +692,7 @@ describe('check-figures.mjs - Spec 013 asset lint and bilingual parity', () => {
 
   it('rejects an em dash in a text node (Art. III.9, which no other gate scans in static/)', () => {
     root = makeV2Fixture(PLACED);
-    edit(asset(root, 'fig-U1-3.svg'), (t) => t.replace('A description.', 'A description \u2014 with a dash.'));
+    edit(asset(root, 'fig-U1-3.svg'), (t) => t.replace('A labelled diagram.', 'A description \u2014 with a dash.'));
     const { code, out } = runGate(root);
     expect(code).toBe(1);
     expect(out).toMatch(/em dash in a text node/);
@@ -708,7 +708,7 @@ describe('check-figures.mjs - Spec 013 asset lint and bilingual parity', () => {
 
   it('rejects a stale dark variant', () => {
     root = makeV2Fixture(PLACED);
-    edit(asset(root, 'fig-U1-1.dark.svg'), (t) => t.replace('A description.', 'Drifted description.'));
+    edit(asset(root, 'fig-U1-1.dark.svg'), (t) => t.replace('A labelled diagram.', 'Drifted description.'));
     const { code, out } = runGate(root);
     expect(code).toBe(1);
     expect(out).toMatch(/is stale - run: npm run figures:variants/);
@@ -733,5 +733,48 @@ describe('check-figures.mjs - Spec 013 asset lint and bilingual parity', () => {
     const { code, out } = runGate(root);
     expect(code).toBe(1);
     expect(out).toMatch(/fig-U1-1.*placed SVG in a reviewed unit but the translated/);
+  });
+
+  // --- TEX-52: <desc> == carrier alt in both locales ------------------------
+  it('rejects a figure whose <desc> differs from carrier alt (EN light)', () => {
+    root = makeV2Fixture(PLACED);
+    edit(asset(root, 'fig-U1-1.svg'), (t) => t.replace('A labelled diagram.', 'Different English description.'));
+    // also update dark variant so dark check does not fail first
+    edit(asset(root, 'fig-U1-1.dark.svg'), (t) => t.replace('A labelled diagram.', 'Different English description.'));
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/figure "fig-U1-1": static\/img\/figures\/efmp-302\/unit-01\/fig-U1-1\.svg <desc> differs from carrier alt in topic-01\.mdx/);
+  });
+
+  it('rejects a figure whose <desc> differs from carrier alt (UR light)', () => {
+    root = makeV2Fixture(PLACED);
+    edit(asset(root, 'fig-U1-1.ur.svg'), (t) => t.replace('ایک عنوان', 'مختلف اردو تفصیل'));
+    edit(asset(root, 'fig-U1-1.ur.dark.svg'), (t) => t.replace('ایک عنوان', 'مختلف اردو تفصیل'));
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/figure "fig-U1-1": static\/img\/figures\/efmp-302\/unit-01\/fig-U1-1\.ur\.svg <desc> differs from carrier alt in topic-01\.mdx/);
+  });
+
+  it('rejects a dark variant whose <desc> differs from carrier alt, pointing to light source', () => {
+    root = makeV2Fixture(PLACED);
+    edit(asset(root, 'fig-U1-1.dark.svg'), (t) => t.replace('A labelled diagram.', 'Drifted dark description.'));
+    const { code, out } = runGate(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/figure "fig-U1-1": static\/img\/figures\/efmp-302\/unit-01\/fig-U1-1\.dark\.svg <desc> differs from carrier alt \(regenerate with "npm run figures:variants" after updating static\/img\/figures\/efmp-302\/unit-01\/fig-U1-1\.svg\)/);
+  });
+
+  it('passes when carrier alt uses single quotes with double quotes inside and <desc> matches', () => {
+    root = makeV2Fixture(PLACED);
+    const complexAlt = 'A triangle with "held in balance" caption.';
+    const t1 = join(root, 'docs', 'semester-1', 'efmp-302', 'unit-01', 'topic-01.mdx');
+    writeFileSync(t1, readFileSync(t1, 'utf8').replace(
+      'alt="A labelled diagram."',
+      `alt='${complexAlt}'`,
+    ));
+    edit(asset(root, 'fig-U1-1.svg'), (t) => t.replace('A labelled diagram.', complexAlt));
+    edit(asset(root, 'fig-U1-1.dark.svg'), (t) => t.replace('A labelled diagram.', complexAlt));
+    const { code, out } = runGate(root);
+    expect(code).toBe(0);
+    expect(out).toMatch(/passed/i);
   });
 });
