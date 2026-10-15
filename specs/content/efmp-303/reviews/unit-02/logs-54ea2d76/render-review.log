@@ -1,0 +1,6 @@
+Automated print view and accessibility inspection passed for EFMP-303 Unit 2 (ur).
+- Desktop 1280x900: 6 pages inspected (index, topic-01, topic-02, topic-03, unit-assessment, unit-teacher-notes). 0 visible broken images, 0 not served, 0 missing alts, no skipped heading levels.
+- Narrow 360x780: docHorizontalOverflow=0px across all 6 pages. All tables fit viewport or scroll cleanly (topics client=289 scroll=289; assessment client=328 scroll=328). All 6 placed figure carriers scroll in their own container (client=275, scroll=780, scroller=FIGURE.figure).
+- A4 Print 794px: clippedElems=0 across all 6 pages. All print figures fit within 794px bounds (width 709px, right edge 749px). Answers and marking guidance render unclipped.
+- SVG text geometry: all 12 Urdu schematic figure variants (6 figures x .ur.svg / .ur.dark.svg) measured clean with textbook.com.pk wordmark at x=684.1. No text overflow past viewBox.
+- Inspection exit code: 0, defects: 0.
