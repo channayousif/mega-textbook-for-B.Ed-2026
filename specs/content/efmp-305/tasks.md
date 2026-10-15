@@ -67,16 +67,25 @@ the 4 expected prompt-only findings until G6 renders them.
 | Unit 3 | G6 assets | ▢ | | 6 schematic figures prompt-only (2 flowchart, 1 concept-map, 3 table) |
 | Unit 3 | G7 publish | ▢ | | |
 
-**Unit 4 - Creating an Inclusive Classroom Environment:** not started.
+**Unit 4 - Creating an Inclusive Classroom Environment (2026-10-15):** authored to the Spec 008
+v3.0 per-topic layout: `index.mdx` + `topic-01…02.mdx` (nine-part cycles) + `unit-assessment.mdx`
+(10/10/5 bank + bounded answers and band rubrics) + `unit-teacher-notes.mdx`. Reading-minutes total
+150, at the ceiling of the 120-150 depth band; the owner may wish to re-baseline the band, since the
+two topics ran 12,282 words against an allocation of roughly 11,000. Governance files written:
+`coverage/unit-04.md`, `sources/unit-04.md` (four Crossref- and OpenAlex-verified open-access
+bindings, floor met without the escalation the reading list anticipated), `concepts/unit-04.md`
+(20 concepts), `figures/unit-04.md` (4 figures, all `prompt-only`). `check:figures` reports the 3
+expected prompt-only findings for this unit (two per topic file, plus the schematic floor) until G6
+renders them.
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 4 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
-| Unit 4 | G2 en-draft | ▢ | | |
+| Unit 4 | G2 en-draft | ▣ | | authored 2026-10-15; gates pass except figures (prompt-only) |
 | Unit 4 | G3 en-review | ▢ | | |
 | Unit 4 | G4 ur-translation | ▢ | | |
 | Unit 4 | G5 ur-review | ▢ | | |
-| Unit 4 | G6 assets | ▢ | | |
+| Unit 4 | G6 assets | ▢ | | 4 schematic figures prompt-only (1 concept-map, 1 diagram, 2 table) |
 | Unit 4 | G7 publish | ▢ | | |
 
 **Unit 5 - Policies and Legal Framework in Pakistan:** not started.
