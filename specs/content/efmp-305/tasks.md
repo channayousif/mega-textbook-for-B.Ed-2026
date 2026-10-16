@@ -124,14 +124,40 @@ renders them. Statute framing follows `D-2026-0053` item 7: the Sindh Act is tau
 | Unit 5 | G6 assets | ▢ | | 6 schematic figures prompt-only (1 timeline, 1 concept-map, 1 diagram, 3 table) |
 | Unit 5 | G7 publish | ▢ | | |
 
-**Unit 6 - Collaboration and Parental Involvement:** not started.
+**Unit 6 - Collaboration and Parental Involvement (2026-10-16):** preserved the interrupted
+English draft on `agent/TEX-39` / PR #119 and completed a bounded authoring repair under the
+board's Codex exception on TEX-84. Six files: opening, three topic cycles, a 10/10/5 assessment
+with bounded answers, analytic ERQ criteria and four-band descriptors, and teacher notes.
+All five earlier units are named when their ideas are used. Three weeks, following D-2026-0047.
+
+**Reading estimate:** 152 minutes in total at 180 visible-text words per minute, excluding
+front matter, imports and figure-brief comments. File estimates are index.mdx: 7, topic-01.mdx: 34, topic-02.mdx: 38, topic-03.mdx: 34, unit-assessment.mdx: 30, unit-teacher-notes.mdx: 9.
+The total is inside 140-170. Topic estimates are below the spec's separate per-topic planning
+ranges; CurriculumOwner should assess that planning discrepancy without padding the prose.
+The approved content spec and G1 rows are unchanged.
+
+**Source and pedagogy limitations:** six DOI records rechecked in Crossref and OpenAlex on
+2026-10-16. Source support remains abstract-level for the six journal articles. Fresh UNICEF
+retrieval returned HTTP 403; its interrupted-run provenance is preserved and the long copied
+extracts replaced with paraphrased verification locators. G3 must reopen source texts before
+certification. Cases and outcomes are explicitly fictional composites. Corrected causal language
+around the empathy study, removed the incorrect specialist-time percentage and inspection assurance,
+added family consent and private-record handling, and kept needed accessible seating available daily.
+The IEP remains a shared working plan. The learner-facing assessment ends with an immediate Monday action.
+
+**Assets and gates:** six detailed figure briefs with English alt text remain `prompt-only`.
+Figure rendering/localisation is G6 work, not claimed complete. No G2 evidence is emitted while
+figures fail. Initial `check:content`: validation, depth, no-em-dash, no-answer-keys, concept graph,
+Bloom bands, source floor, Licence checks and docs-sync pass; pipeline and figures fail across the
+repository, and generated content status needed refresh. Final checks and build are recorded in
+the PHR and Paperclip handoff. No G3/G5 certification or publication is claimed.
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 6 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
-| Unit 6 | G2 en-draft | ▢ | | |
-| Unit 6 | G3 en-review | ▢ | | |
-| Unit 6 | G4 ur-translation | ▢ | | |
+| Unit 6 | G2 en-draft | ▣ | | authored 2026-10-16; deterministic completion pending placed figures and valid gate evidence |
+| Unit 6 | G3 en-review | ▢ | | independent review pending; CurriculumOwner handoff on TEX-78 |
+| Unit 6 | G4 ur-translation | ▢ | | separately scoped Urdu child; English-only assignment |
 | Unit 6 | G5 ur-review | ▢ | | |
-| Unit 6 | G6 assets | ▢ | | |
+| Unit 6 | G6 assets | ▢ | | 6 schematic figures prompt-only (1 concept-map, 1 flowchart, 1 diagram, 3 table) |
 | Unit 6 | G7 publish | ▢ | | |
