@@ -2432,3 +2432,14 @@ content-improvement loop with no further cycle.
   already give. `G-2026-90` (tracker) and `G-2026-91` (tooling) are untouched. Supersedes nothing
   in `D-2026-0050` or `D-2026-0056`. This entry certifies no content, qualifies no reviewer and
   authorises no publication (Art. VII.8).
+## D-2026-0067 - EFMP-304 Units 4-6: reflective-practice Urdu terms banked; concept-label collision resolved
+
+- **Status:** confirmed (owner, 2026-10-11)
+- **Gate:** G4 ur-translation / G5 ur-review (terminology)
+- **Scope:** EFMP-304 Units 4-6 Urdu mirror (TEX-38, PR #118) and its G5 review (TEX-46, PR #132); raised by BilingualAuthor in TEX-47 and as advisories F1/F2 in the G5 reports.
+- **Decided by:** owner (M Yousif Channa), via board session, 2026-10-11
+- **Decision:**
+  1. **Concept-label collision resolved.** `CON:EFMP-304-4-2` Reflective process = `تاملی عمل`; `CON:EFMP-304-4-3` Reflective practice = `تاملی مشق`. `specs/content/efmp-304/concepts/unit-04.md` updated to match; Topic 4.1 depends on the two being distinct.
+  2. **Ten terms banked in `specs/content/terminology.csv`, as proposed:** Reflective Thinking `تاملی سوچ`, Reflective Process `تاملی عمل`, Reflective Practice `تاملی مشق`, Reflective Journal `تاملی جریدہ`, Reflective Cycle `تاملی چکر`, Descriptive Writing `بیانیہ تحریر`, Reflective Writing `تاملی تحریر`, Technical Reflection `فنی تامل`, Contextual Reflection `سیاقی تامل`, Dialectical Reflection `جدلیاتی تامل`. Later translators reuse these; the existing `Reflective Decision Making` entry is unchanged.
+  3. **Follow-ups scheduled, not fixed in place:** the two English defects in Unit 6 (`topic-03.mdx` "did not understood"; `unit-assessment.mdx` RRQ 5 question/answer mismatch) go through `revise-topic` with fresh G2/G3/G5, because editing reviewed files would invalidate the bound evidence. EFMP-304 `.ur.svg` figure variants are scheduled as a BilingualAuthor task after the Semester 2 courses.
+- **Consequences:** G3/G4/G5 tracker rows for Units 4-6 record the agent passes as `▣` and stay open (ADR-0019); `translation_status` stays `draft`. Unit 4 G2 evidence regenerated because its concept table is a bound input.

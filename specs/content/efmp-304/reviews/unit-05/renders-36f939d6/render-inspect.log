@@ -1,0 +1,151 @@
+### starting: npm run serve -- --port 4599
+### render-inspect  EFMP-304 Unit 5 (ur)
+### route: /ur/semester-2/efmp-304/unit-05  pages: 6  placed figures: 8
+### host: http://127.0.0.1:4599   browser: chromium 149.0.7827.0
+### started: 2026-10-11T22:37:44.590Z
+
+===== A. DESKTOP 1280x900 =====
+
+-- index: headings=5 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+-- topic-01: headings=13 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   img /img/figures/efmp-304/unit-05/fig-U5-1.svg natural=249x150 shown=true loading=lazy alt="ایک خاکہ جو تجربے کو غور و فکر سے گزر کر سیکھنے تک پہنچتا دکھاتا ہے (بنیادی راستہ)، اور اس"
+   img /img/figures/efmp-304/unit-05/fig-U5-1.dark.svg natural=0x0 shown=false loading=lazy alt="ایک خاکہ جو تجربے کو غور و فکر سے گزر کر سیکھنے تک پہنچتا دکھاتا ہے (بنیادی راستہ)، اور اس"
+   img /img/figures/efmp-304/unit-05/fig-U5-2.svg natural=249x150 shown=true loading=lazy alt="ایک جدول جو دکھاتا ہے کہ صرف تجربہ کیا دیتا ہے (معمول، اعتماد، شناسائی) اور کیا نہیں دیتا "
+   img /img/figures/efmp-304/unit-05/fig-U5-2.dark.svg natural=0x0 shown=false loading=lazy alt="ایک جدول جو دکھاتا ہے کہ صرف تجربہ کیا دیتا ہے (معمول، اعتماد، شناسائی) اور کیا نہیں دیتا "
+   heading order: no skipped levels
+
+-- topic-02: headings=13 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   img /img/figures/efmp-304/unit-05/fig-U5-3.svg natural=249x150 shown=true loading=lazy alt="تاملی چکر کا بہاؤ خاکہ ایک بند حلقے کے طور پر: بیان، تجزیہ، متبادل، فیصلہ، آزمائش، دوبارہ "
+   img /img/figures/efmp-304/unit-05/fig-U5-3.dark.svg natural=0x0 shown=false loading=lazy alt="تاملی چکر کا بہاؤ خاکہ ایک بند حلقے کے طور پر: بیان، تجزیہ، متبادل، فیصلہ، آزمائش، دوبارہ "
+   img /img/figures/efmp-304/unit-05/fig-U5-4.svg natural=249x150 shown=true loading=lazy alt="چکر کے ہر مرحلے کا جدول تین کالموں کے ساتھ: وہ سوال جو وہ پوچھتا ہے، وہ پیداوار جو وہ دیتا"
+   img /img/figures/efmp-304/unit-05/fig-U5-4.dark.svg natural=0x0 shown=false loading=lazy alt="چکر کے ہر مرحلے کا جدول تین کالموں کے ساتھ: وہ سوال جو وہ پوچھتا ہے، وہ پیداوار جو وہ دیتا"
+   heading order: no skipped levels
+
+-- topic-03: headings=13 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   img /img/figures/efmp-304/unit-05/fig-U5-5.svg natural=249x150 shown=true loading=lazy alt="ایک زمانی خاکہ جو دکھاتا ہے کہ تاملی مشق کے پیچھے کے خیالات کہاں سے آئے: Dewey (1933، تعلی"
+   img /img/figures/efmp-304/unit-05/fig-U5-5.dark.svg natural=0x0 shown=false loading=lazy alt="ایک زمانی خاکہ جو دکھاتا ہے کہ تاملی مشق کے پیچھے کے خیالات کہاں سے آئے: Dewey (1933، تعلی"
+   img /img/figures/efmp-304/unit-05/fig-U5-6.svg natural=249x150 shown=true loading=lazy alt="ایک تصوری خاکہ جو تاملی مشق کو خوراک دینے والے نظریاتی سلسلے دکھاتا ہے: تجرباتی تعلم (Dewe"
+   img /img/figures/efmp-304/unit-05/fig-U5-6.dark.svg natural=0x0 shown=false loading=lazy alt="ایک تصوری خاکہ جو تاملی مشق کو خوراک دینے والے نظریاتی سلسلے دکھاتا ہے: تجرباتی تعلم (Dewe"
+   heading order: no skipped levels
+
+-- topic-04: headings=14 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   img /img/figures/efmp-304/unit-05/fig-U5-7.svg natural=249x150 shown=true loading=lazy alt="ایک جدول جو نمونوں کا آمنے سامنے موازنہ کرتا ہے: مرحلے، ہر ایک کس کام کے لیے اچھا ہے، وقت "
+   img /img/figures/efmp-304/unit-05/fig-U5-7.dark.svg natural=0x0 shown=false loading=lazy alt="ایک جدول جو نمونوں کا آمنے سامنے موازنہ کرتا ہے: مرحلے، ہر ایک کس کام کے لیے اچھا ہے، وقت "
+   img /img/figures/efmp-304/unit-05/fig-U5-8.svg natural=249x150 shown=true loading=lazy alt="ایک خاکہ جو ایک ہی واقعے کو متوازی طور پر دو نمونوں میں داخل ہوتا دکھاتا ہے (بائیں طرف Gib"
+   img /img/figures/efmp-304/unit-05/fig-U5-8.dark.svg natural=0x0 shown=false loading=lazy alt="ایک خاکہ جو ایک ہی واقعے کو متوازی طور پر دو نمونوں میں داخل ہوتا دکھاتا ہے (بائیں طرف Gib"
+   heading order: no skipped levels
+
+-- unit-assessment: headings=10 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+===== B. NARROW 360x780 =====
+
+-- index: docHorizontalOverflow=0px tables=0 figures=0 spill=0
+
+-- topic-01: docHorizontalOverflow=0px tables=1 figures=2 spill=0
+   table[0] client=289 scroll=289 fits=true lastHeader="درجے" scroller=NONE
+   figure[0] .figure client=275 scroll=780 scroller=FIGURE.figure
+   figure[1] .figure client=328 scroll=820 scroller=FIGURE.figure
+
+-- topic-02: docHorizontalOverflow=0px tables=1 figures=2 spill=0
+   table[0] client=289 scroll=289 fits=true lastHeader="درجے" scroller=NONE
+   figure[0] .figure client=275 scroll=820 scroller=FIGURE.figure
+   figure[1] .figure client=328 scroll=820 scroller=FIGURE.figure
+
+-- topic-03: docHorizontalOverflow=0px tables=1 figures=2 spill=0
+   table[0] client=289 scroll=289 fits=true lastHeader="درجے" scroller=NONE
+   figure[0] .figure client=275 scroll=820 scroller=FIGURE.figure
+   figure[1] .figure client=328 scroll=820 scroller=FIGURE.figure
+
+-- topic-04: docHorizontalOverflow=0px tables=1 figures=2 spill=0
+   table[0] client=289 scroll=289 fits=true lastHeader="درجے" scroller=NONE
+   figure[0] .figure client=275 scroll=820 scroller=FIGURE.figure
+   figure[1] .figure client=328 scroll=820 scroller=FIGURE.figure
+
+-- unit-assessment: docHorizontalOverflow=0px tables=0 figures=0 spill=0
+
+===== C. A4 PRINT EMULATION (794px) =====
+
+-- index @print: clippedElems=0 figureImgs=0 answerHeadings=[]
+
+-- topic-01 @print: clippedElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/efmp-304/unit-05/fig-U5-1.svg w=709 right=749 fits
+   printfig /img/figures/efmp-304/unit-05/fig-U5-1.dark.svg w=0 right=0 fits
+   printfig /img/figures/efmp-304/unit-05/fig-U5-2.svg w=760 right=777 fits
+   printfig /img/figures/efmp-304/unit-05/fig-U5-2.dark.svg w=0 right=0 fits
+
+-- topic-02 @print: clippedElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/efmp-304/unit-05/fig-U5-3.svg w=709 right=749 fits
+   printfig /img/figures/efmp-304/unit-05/fig-U5-3.dark.svg w=0 right=0 fits
+   printfig /img/figures/efmp-304/unit-05/fig-U5-4.svg w=760 right=777 fits
+   printfig /img/figures/efmp-304/unit-05/fig-U5-4.dark.svg w=0 right=0 fits
+
+-- topic-03 @print: clippedElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/efmp-304/unit-05/fig-U5-5.svg w=709 right=749 fits
+   printfig /img/figures/efmp-304/unit-05/fig-U5-5.dark.svg w=0 right=0 fits
+   printfig /img/figures/efmp-304/unit-05/fig-U5-6.svg w=760 right=777 fits
+   printfig /img/figures/efmp-304/unit-05/fig-U5-6.dark.svg w=0 right=0 fits
+
+-- topic-04 @print: clippedElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/efmp-304/unit-05/fig-U5-7.svg w=709 right=749 fits
+   printfig /img/figures/efmp-304/unit-05/fig-U5-7.dark.svg w=0 right=0 fits
+   printfig /img/figures/efmp-304/unit-05/fig-U5-8.svg w=760 right=777 fits
+   printfig /img/figures/efmp-304/unit-05/fig-U5-8.dark.svg w=0 right=0 fits
+
+-- unit-assessment @print: clippedElems=0 figureImgs=0 answerHeadings=["محدود جوابی سوال (RRQs)​","توسیعی جوابی سوال (ERQs)​","جواب اور مارکنگ کی رہنمائی​","MCQ جواب کی کلید​","RRQ ماڈل جواب اور مارک سکیم​","ERQ روبرکس​"]
+
+===== D. SVG TEXT GEOMETRY =====
+   fig-U5-1.ur MISSING (HTTP 404)
+   DEFECT variant .ur not served
+   fig-U5-1.ur.dark MISSING (HTTP 404)
+   DEFECT variant .ur.dark not served
+   fig-U5-2.ur MISSING (HTTP 404)
+   DEFECT variant .ur not served
+   fig-U5-2.ur.dark MISSING (HTTP 404)
+   DEFECT variant .ur.dark not served
+   fig-U5-3.ur MISSING (HTTP 404)
+   DEFECT variant .ur not served
+   fig-U5-3.ur.dark MISSING (HTTP 404)
+   DEFECT variant .ur.dark not served
+   fig-U5-4.ur MISSING (HTTP 404)
+   DEFECT variant .ur not served
+   fig-U5-4.ur.dark MISSING (HTTP 404)
+   DEFECT variant .ur.dark not served
+   fig-U5-5.ur MISSING (HTTP 404)
+   DEFECT variant .ur not served
+   fig-U5-5.ur.dark MISSING (HTTP 404)
+   DEFECT variant .ur.dark not served
+   fig-U5-6.ur MISSING (HTTP 404)
+   DEFECT variant .ur not served
+   fig-U5-6.ur.dark MISSING (HTTP 404)
+   DEFECT variant .ur.dark not served
+   fig-U5-7.ur MISSING (HTTP 404)
+   DEFECT variant .ur not served
+   fig-U5-7.ur.dark MISSING (HTTP 404)
+   DEFECT variant .ur.dark not served
+   fig-U5-8.ur MISSING (HTTP 404)
+   DEFECT variant .ur not served
+   fig-U5-8.ur.dark MISSING (HTTP 404)
+   DEFECT variant .ur.dark not served
+
+### finished: 2026-10-11T22:38:56.595Z
+### defects: 16
+###   fig-U5-1: variant .ur not served
+###   fig-U5-1: variant .ur.dark not served
+###   fig-U5-2: variant .ur not served
+###   fig-U5-2: variant .ur.dark not served
+###   fig-U5-3: variant .ur not served
+###   fig-U5-3: variant .ur.dark not served
+###   fig-U5-4: variant .ur not served
+###   fig-U5-4: variant .ur.dark not served
+###   fig-U5-5: variant .ur not served
+###   fig-U5-5: variant .ur.dark not served
+###   fig-U5-6: variant .ur not served
+###   fig-U5-6: variant .ur.dark not served
+###   fig-U5-7: variant .ur not served
+###   fig-U5-7: variant .ur.dark not served
+###   fig-U5-8: variant .ur not served
+###   fig-U5-8: variant .ur.dark not served
+### exit_code: 1

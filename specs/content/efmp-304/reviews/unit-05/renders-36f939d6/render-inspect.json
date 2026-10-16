@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "course_code": "EFMP-304",
+  "unit_no": 5,
+  "locale": "ur",
+  "base": "http://127.0.0.1:4599",
+  "route": "/ur/semester-2/efmp-304/unit-05",
+  "pages": [
+    "index",
+    "topic-01",
+    "topic-02",
+    "topic-03",
+    "topic-04",
+    "unit-assessment"
+  ],
+  "figures": [
+    "fig-U5-1",
+    "fig-U5-2",
+    "fig-U5-3",
+    "fig-U5-4",
+    "fig-U5-5",
+    "fig-U5-6",
+    "fig-U5-7",
+    "fig-U5-8"
+  ],
+  "viewports": [
+    "1280x900",
+    "360x780",
+    "A4 794x1123 print"
+  ],
+  "defects": [
+    "fig-U5-1: variant .ur not served",
+    "fig-U5-1: variant .ur.dark not served",
+    "fig-U5-2: variant .ur not served",
+    "fig-U5-2: variant .ur.dark not served",
+    "fig-U5-3: variant .ur not served",
+    "fig-U5-3: variant .ur.dark not served",
+    "fig-U5-4: variant .ur not served",
+    "fig-U5-4: variant .ur.dark not served",
+    "fig-U5-5: variant .ur not served",
+    "fig-U5-5: variant .ur.dark not served",
+    "fig-U5-6: variant .ur not served",
+    "fig-U5-6: variant .ur.dark not served",
+    "fig-U5-7: variant .ur not served",
+    "fig-U5-7: variant .ur.dark not served",
+    "fig-U5-8: variant .ur not served",
+    "fig-U5-8: variant .ur.dark not served"
+  ],
+  "exit_code": 1,
+  "generated_at": "2026-10-11T22:38:56.596Z"
+}

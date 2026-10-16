@@ -1,5 +1,5 @@
 ---
-version: "4.5"
+version: "4.6"
 ---
 
 # Content Style Guide
@@ -87,6 +87,19 @@ publish gate to a corpus completion requirement. A unit may publish English-only
 the parity gate still applies wherever an Urdu version exists - what changed is when the Urdu
 version is owed, not whether it is.
 
+**v4.6** (2026-10-13, EFMP-302 Unit 1 G5 follow-ups) settles two things the Urdu alt text of a
+translated unit was deciding per figure. First, a **colon** introduces a result or elaboration
+clause in Urdu alt text and in an Urdu `<desc>`; the spaced hyphen `" - "` is an English fallback
+for the em-dash ban (Art. III.9) and Urdu is under no such constraint, while a mid-sentence hyphen
+reads badly in RTL Nastaliq. Second, a figure's `<desc>` and its page `alt` MUST be the **same
+string** in the same locale. Neither rule changes what assistive technology reads, because
+`<Figure>` renders an `<img>` and an SVG behind an `<img>` never exposes its internal `<desc>` -
+they are provenance rules, and the second is the one that matters: EFMP-302 Unit 1 shipped a
+`کے خلاف` calque inside `fig-U1-1.ur.svg` for three weeks after the G5 verdict had removed it from
+the page, because `check:figures` asserts only that `<desc>` is non-empty. Taken during the v4.0
+freeze for the v4.1 reason: the drift was already systemic at 2 units (12 of 16 `<desc>` strings in
+one unit), and every unit authored before the rule lands has to be re-checked by hand.
+
 **v4.5** (2026-09-15, ADR-0024) assigns generated raster illustrations and raster edits to
 Codex, whose built-in image-generation tool was verified against the existing WebP optimiser and
 150 KB budget. Claude continues to own figure meaning, prompts, alt text and deterministic SVG
@@ -137,6 +150,13 @@ cleanup pass removed every existing em dash from those trees. No section is adde
   `translation_status: reviewed`.
 - **No em dash** in Urdu prose either (Constitution Art. III.9). Use a comma, a full stop, or
   parentheses; a spaced hyphen `" - "` is the fallback. `check:no-em-dash` scans `i18n/` too.
+- **Clause connectors in alt text and `<desc>` (v4.6).** A clause that states the result of, or
+  elaborates on, what precedes it is introduced with a **colon** `:`, never a spaced hyphen. The
+  hyphen in the English alt text exists only because Art. III.9 bans the em dash; Urdu has no
+  such constraint, and a mid-sentence hyphen breaks the line badly in RTL Nastaliq. Where the
+  clause is a continuation rather than an elaboration, end the sentence and start a new one
+  (`... منصوبہ ایڈجسٹ کریں۔ پھر ...`) rather than reaching for a connector at all. Apply it to
+  every figure in a unit at once: a unit split between the two conventions is the defect.
 
 ## Pakistan/Sindh localization rules
 
@@ -524,6 +544,23 @@ Only `concept-map` /
 `topic-*.mdx` `<Figure src>` points at it. A placed `illustration` reuses the one `.webp` with a
 translated `alt`. Enforced when the EN `index.mdx` is `translation_status: reviewed`;
 written-and-wired but not gate-blocked while `draft`.
+
+**`<desc>` and `alt` are one string, per locale (v4.6).** A schematic's `<desc>` MUST equal the
+`alt` on the `<Figure>` that carries it, in that locale: `fig-U1-1.svg`'s `<desc>` equals the EN
+page alt, `fig-U1-1.ur.svg`'s equals the UR page alt.
+
+This is a provenance rule, not an accessibility one. `<Figure>` renders an `<img>`, and an SVG
+behind an `<img>` never exposes its internal `<title>` / `<desc>` to assistive technology - the
+`alt` attribute is the whole accessible name. So a corrected alt and a stale `<desc>` present no
+defect to a reader and no failure to a gate (`check:figures` asserts only that `<desc>` is
+non-empty), which is exactly why the drift survives review: EFMP-302 Unit 1 carried a ruled-wrong
+`کے خلاف` calque inside `fig-U1-1.ur.svg` for three weeks after G5 had removed it from the page.
+
+Two consequences for an author. Correcting an alt is **two** edits, the page and the asset, in
+both locales. And the alt is the authority when they disagree: it is the string that was reviewed
+at G3/G5 and the string a reader actually hears, so sync the `<desc>` to it rather than the other
+way round. Re-derive the dark variants afterwards (`npm run figures:variants`); they are generated
+from the light source and carry the same `<desc>`.
 
 **Bilingual, part two: the layout is mirrored, not only the labels (v4.1).** A `.ur.svg` whose
 labels are translated but whose geometry is untouched still reads left to right, and an Urdu
