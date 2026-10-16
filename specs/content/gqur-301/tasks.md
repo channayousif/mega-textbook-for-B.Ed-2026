@@ -3,9 +3,19 @@
 Legend (FR-005's 3-value status enum): `▢` not-started · `▣` in-progress · `✅` done (requires
 reviewer initials). One row per unit per stage (`G1`-`G7`).
 
-**Course state (2026-10-10):** content-spec draft (intake D-2026-0049 pending;
-repairs applied, awaiting re-evaluation). Bilingual course (full Urdu scope, G4/G5
-on every unit). Unit 1 and Unit 2 G2 en-draft complete.
+**Course state (2026-10-16):** content-spec approved by the owner following
+D-2026-0060. Branch recovered from origin/agent/tex-41 and rebased on origin/main
+(style-guide v4.6). Units 1 and 2 have English drafts and 16 placed English SVG
+figures with dark variants. Urdu mirrors and Units 3–6 remain outstanding.
+Unit 3 bilingual authoring is assigned in TEX-87, a child of TEX-70, on the same
+branch and PR #121. Gate rows below remain unchanged pending real evidence.
+
+**Recovery checks:** `check:content` passed 11 of 13 gates after generating the
+ignored content-status report. Pipeline and figure gates report corpus baseline
+failures; GQUR-301 G2 rows remain unfinished. After the final SVG repairs,
+`check:figures` reports no GQUR-301 findings. All 32 English light/dark SVGs parse
+as XML; the page alt and SVG description agree for every placed figure. This is
+an accessibility-provenance repair, not a G3/G5 review or full unit acceptance.
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
