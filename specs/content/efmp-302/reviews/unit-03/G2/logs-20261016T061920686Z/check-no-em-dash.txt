@@ -1,0 +1,23 @@
+$ npm run check:no-em-dash   (repo HEAD 147135ed, 2026-10-16T06:19:26.994Z)
+
+✖ Em dash found in authored content (7 occurrence(s)).
+
+  specs/content/efmp-301/figures-reconciliation-report.md:1:41  U+2014 EM DASH
+      ...esc/Alt Reconciliation Report — efmp-301
+  specs/content/efmp-302/figures-reconciliation-report.md:1:41  U+2014 EM DASH
+      ...esc/Alt Reconciliation Report — efmp-302
+  specs/content/efmp-304/figures-reconciliation-report.md:1:41  U+2014 EM DASH
+      ...esc/Alt Reconciliation Report — efmp-304
+  specs/content/geng-300/figures-reconciliation-report.md:1:41  U+2014 EM DASH
+      ...esc/Alt Reconciliation Report — geng-300
+  specs/content/gict-300/figures-reconciliation-report.md:1:41  U+2014 EM DASH
+      ...esc/Alt Reconciliation Report — gict-300
+  specs/content/gnas-301/figures-reconciliation-report.md:1:41  U+2014 EM DASH
+      ...esc/Alt Reconciliation Report — gnas-301
+  specs/content/gqur-300/figures-reconciliation-report.md:1:41  U+2014 EM DASH
+      ...esc/Alt Reconciliation Report — gqur-300
+
+Constitution Art. III.9: authored content contains zero em dash characters.
+Restructure the sentence or use a spaced hyphen " - ". The en dash (U+2013)
+is still allowed for numeric ranges. See specs/content/style-guide.md.
+exit_code=1
