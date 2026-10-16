@@ -88,16 +88,40 @@ renders them.
 | Unit 4 | G6 assets | ▢ | | 4 schematic figures prompt-only (1 concept-map, 1 diagram, 2 table) |
 | Unit 4 | G7 publish | ▢ | | |
 
-**Unit 5 - Policies and Legal Framework in Pakistan:** not started.
+**Unit 5 - Policies and Legal Framework in Pakistan (2026-10-15):** authored to the Spec 008 v3.0
+per-topic layout: `index.mdx` + `topic-01…03.mdx` (nine-part cycles) + `unit-assessment.mdx`
+(10/10/5 bank + bounded answers and band rubrics) + `unit-teacher-notes.mdx`. Reading-minutes total
+179, inside the 150-180 depth band; the three topics run 19,000 words, the longest unit in the
+course, as the spec's "most content-heavy unit" note anticipated.
+
+**Source position, which is what distinguishes this unit.** All three primary documents were
+**retrieved in full from the authoring host on 2026-10-15, read, and committed as verification
+excerpts with checksums** at `sources/texts/sindh2018.md`, `sources/texts/ict2020.md` and
+`sources/texts/nep2009.md`. Every claim the unit makes about what a legal or policy document
+requires is grounded in that retrieved text and quoted from it; nothing rests on a secondary
+account. This discharges the hard source constraint on this unit (at least two of the three
+retrieved, not merely named) with all three. Three further registry-verified open-access Pakistani
+teacher-attitude studies were bound at abstract level (`parveen2022`, `virani2022`, `anis2025`),
+alongside `ainscow2020b`, which meets the open-access floor. `unCRPD` and `unesco2020` are bound by
+URL only and carry framing claims only. **Amendments, rules, notifications and case law were not
+checked** and the sources file and teacher notes both say so.
+
+Governance files written: `coverage/unit-05.md`, `sources/unit-05.md` (nine keys, three with bound
+full-text excerpts, floor met), `concepts/unit-05.md` (28 concepts; six statutory terms carry an
+explicit instruction to the G4 translator to keep the English in parentheses and never paraphrase a
+quoted clause), `figures/unit-05.md` (6 figures, all `prompt-only`). `check:figures` reports the
+expected prompt-only findings for this unit (two per topic file, plus the schematic floor) until G6
+renders them. Statute framing follows `D-2026-0053` item 7: the Sindh Act is taught as the guide's
+2018 Act, with the federal ICT Act, 2020 confined to one passage and one figure.
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 5 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
-| Unit 5 | G2 en-draft | ▢ | | |
+| Unit 5 | G2 en-draft | ▣ | | authored 2026-10-15; gates pass except figures (prompt-only) |
 | Unit 5 | G3 en-review | ▢ | | |
 | Unit 5 | G4 ur-translation | ▢ | | |
 | Unit 5 | G5 ur-review | ▢ | | |
-| Unit 5 | G6 assets | ▢ | | |
+| Unit 5 | G6 assets | ▢ | | 6 schematic figures prompt-only (1 timeline, 1 concept-map, 1 diagram, 3 table) |
 | Unit 5 | G7 publish | ▢ | | |
 
 **Unit 6 - Collaboration and Parental Involvement:** not started.
