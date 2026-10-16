@@ -60,7 +60,7 @@
   <rect x="30" y="260" width="720" height="80" rx="6" fill="var(--a1-fill)" stroke="var(--a1)" stroke-width="1"/>
   <text x="50" y="285" class="cell" font-weight="600">The arithmetic test:</text>
   <text x="50" y="305" class="cell">Can you add, subtract, average the values and get a meaningful result?</text>
-  <text x="50" y="320" class="cell">Yes &rarr; quantitative (then: counts = discrete, measurements = continuous). No &rarr; qualitative.</text>
+  <text x="50" y="320" class="cell">Yes → quantitative (then: counts = discrete, measurements = continuous). No → qualitative.</text>
 
   <!-- Caption -->
   <text x="30" y="370" class="caption">Caption: Data-type classification with Pakistani classroom examples. Credit: textbook.com.pk.</text>
