@@ -13,7 +13,7 @@ labels: [BilingualAuthor, figures, codex-exception]
 links:
   spec: specs/content/efmp-305/content-spec.md
   ticket: TEX-79
-  adr: history/adr/0024-claude-codex-visual-production-boundary.md
+  adr: history/adr/0024-capability-based-claude-and-codex-visual-authoring.md
   pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/119
 files:
   - static/img/figures/efmp-305/unit-01/ (16 SVG assets)
