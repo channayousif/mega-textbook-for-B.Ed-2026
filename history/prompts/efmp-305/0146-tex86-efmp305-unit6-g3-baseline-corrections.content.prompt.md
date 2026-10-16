@@ -56,9 +56,13 @@ No em dashes introduced. Committed to agent/TEX-39 branch on top of 91bb82d9.
 - Pending / next owner: CurriculumOwner pushes the commit and arranges independent G3 review (Reviewer agent, ADR-0019); TEX-80 (Urdu mirror) remains blocked until G3 acceptance lands; TEX-79 (figures) is in progress and must be coordinated.
 - Paperclip issues affected: TEX-86 (this), TEX-80, TEX-79, TEX-78.
 
+## Response snapshot (2026-10-16, post figure-handoff re-bundle)
+
+TEX-79 placed English figure carriers on agent/TEX-39 (commit 544653f7), changing English topic bytes. The previous G3 bundle (411f5b76, 89 inputs) became stale. Re-prepared the G3 review bundle against 544653f7 at new commit 78798ec3 (101 inputs). Updated TEX-97 description and instructed the Reviewer to use the new manifest. Settled English commit is now 78798ec3.
+
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none.
-- Graders run and results (PASS/FAIL): check:content PASS (expected prompt-only figure warnings for Unit 6 remain).
+- Graders run and results (PASS/FAIL): check:content PASS (expected figure warnings resolved by placement; depth-gate exceedance 193 vs 140-170 is the flagged finding).
 - Prompt variant (if applicable): none.
 - Next experiment (smallest change to try): none.
