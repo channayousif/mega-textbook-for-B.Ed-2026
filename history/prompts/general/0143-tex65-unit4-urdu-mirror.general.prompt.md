@@ -21,13 +21,24 @@ files:
   - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-04/topic-02.mdx
   - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-04/unit-assessment.mdx
   - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-04/unit-teacher-notes.mdx
-  - static/img/figures/efmp-303/unit-04/fig-U4-{1,2,3,4}.ur.svg
-  - static/img/figures/efmp-303/unit-04/fig-U4-{1,2,3,4}.ur.dark.svg
+  - static/img/figures/efmp-303/unit-04/fig-U4-1.ur.svg
+  - static/img/figures/efmp-303/unit-04/fig-U4-2.ur.svg
+  - static/img/figures/efmp-303/unit-04/fig-U4-3.ur.svg
+  - static/img/figures/efmp-303/unit-04/fig-U4-4.ur.svg
+  - static/img/figures/efmp-303/unit-04/fig-U4-1.ur.dark.svg
+  - static/img/figures/efmp-303/unit-04/fig-U4-2.ur.dark.svg
+  - static/img/figures/efmp-303/unit-04/fig-U4-3.ur.dark.svg
+  - static/img/figures/efmp-303/unit-04/fig-U4-4.ur.dark.svg
   - history/prompts/general/0143-tex65-unit4-urdu-mirror.general.prompt.md
 tests:
   - Temporary reviewed check-content; restored both indexes to draft in finally
   - Structural comparison of five files, immutable metadata, numbered items and figure identifiers
   - Exact alt/desc equality on four Urdu SVGs; SVG budget optimization and variants freshness
+  - Final npm run build PASS for en and ur; initial cold attempt exit 143, final cached retry exit 0
+  - render-inspect EFMP-303 4 --locale ur PASS, zero defects across five pages and eight SVG variants
+  - Final check-content 11/13 PASS; stale pipeline evidence and corpus figure findings remain
+  - Eight built SVGs byte-identical to source; both locale indexes confirmed draft
+  - Visual author inspection of phone index, schematic previews and A4 topic/assessment previews
 ---
 
 ## Prompt
@@ -162,7 +173,7 @@ Translated the settled English Unit 4 baseline 8bd42ca8 into five complete Urdu 
 ## Outcome
 
 - Impact: Complete Urdu draft of Monitoring, Evaluation and Challenges, with its assessment and teacher notes.
-- Tests: Structural and metadata comparisons pass. Reviewed-state validate:content passes; no target Urdu terminology/figure findings. The later draft-state run passes depth and no-em-dash after CurriculumOwner fixes. Full gates remain red on existing evidence/corpus issues and a generated status report stale during the concurrent source repair. The earlier English formatting failures were repaired by CurriculumOwner. Build/render results will be added before handoff.
+- Tests: Structural and metadata comparisons pass. Reviewed-state validate:content passes; no target Urdu terminology/figure findings. The later draft-state run passes depth and no-em-dash after CurriculumOwner fixes. Full gates remain red on existing evidence/corpus issues and a generated status report stale during the concurrent source repair. The earlier English formatting failures were repaired by CurriculumOwner. Final full build PASS for both locales against 5eb57728 and final SVGs. Render inspection PASS (exit 0, zero detected defects), all five pages at desktop/phone/A4, eight SVG variants clean. Final suite is 11/13: only stale pipeline evidence and corpus figure findings remain. First cold build exited 143 without a compiler error; cached final retry passed.
 - Files: Five Urdu MDX files, eight Urdu SVG variants, and this PHR.
 - Next prompts: CurriculumOwner receives the draft; independent G5 must wait for accepted G3 of matching English inputs.
 - Reflection: Teach, don't cover and Urdu as an original: preserve worked examples, reasoning and retrieval tasks at equivalent depth rather than summarize them.
@@ -171,7 +182,7 @@ Translated the settled English Unit 4 baseline 8bd42ca8 into five complete Urdu 
 
 - Shipped / changed: Five complete Urdu drafts and four localized figures with derived dark variants on existing PR #120. No English edits, tracker updates or review claims.
 - Decisions the team must respect: English semantic baseline 8bd42ca8 plus owner formatting repair 5eb57728; draft status in both locales. Term bank remains unchanged. Exact paragraph meaning, scenario qualifications, counts and scoring cross over. Author verification is not G5 acceptance.
-- Pending / next owner: CurriculumOwner repaired the source-side cycle heading and em dash in 5eb57728 after the TEX-99 follow-up comment, and owns terminology proposals and intake of this draft. Independent Reviewer owns future G5, contingent on accepted G3. TEX-61 owns existing corpus figure-gate debt. Final verification results to be appended before commit/handoff.
+- Pending / next owner: CurriculumOwner repaired the source-side cycle heading and em dash in 5eb57728 after the TEX-99 follow-up comment, and owns terminology proposals and intake of this draft. Independent Reviewer owns future G5, contingent on accepted G3. TEX-61 owns existing corpus figure-gate debt. Final verification is recorded below; CurriculumOwner is the actual review assignee. No accepted G3/G5 is asserted.
 - Paperclip issues affected: TEX-65, TEX-99 and TEX-59; TEX-61 remains a separate corpus blocker.
 
 ## Terminology handoff
@@ -228,6 +239,33 @@ No new factual sources were introduced or registry verifications claimed. Existi
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Reviewed flag also demands G4/G5 tracker completion, which cannot truthfully be supplied by this translation run; those expected findings are reported, not papered over.
-- Graders run and results (PASS/FAIL): Structural parity PASS; full reviewed content suite FAIL on external/baseline findings.
+- Graders run and results (PASS/FAIL): Structural parity PASS; final build PASS in both locales; rendered inspection PASS with zero defects; variants freshness PASS; final content suite 11/13, FAIL only on stale pipeline evidence and corpus figure findings. Earlier source formatting findings were repaired by owner.
 - Prompt variant (if applicable): Children-completed resume delta.
 - Next experiment (smallest change to try): Independent comparison after English review dependency is satisfied.
+
+## Final verification record
+
+
+English baseline: 5eb57728275366d2cc5a55bb933e5a30d99c728a (semantic settlement 8bd42ca8 plus formatting-only repair). Urdu content and figures: commit 6417223e on agent/TEX-40, PR #120.
+
+All five Urdu files are included under source/ur; English comparison files are under source/en. Four localized SVGs and derived dark variants are under source/figures. Both locale indexes remain translation_status: draft. No G4/G5 tracker row was marked complete.
+
+Final full npm build succeeded for English and Urdu. First cold build was terminated with signal 15 (exit 143) during Urdu client compilation; its origin was not identified. The final retry completed successfully against the settled formatting repair and final figures.
+
+Final npm run check:content: 11/13 pass. Pipeline-gate fails on existing stale G2 evidence; check:figures fails on corpus alt/description debt including EFMP-303 Unit 3. Unit 4 has no figure finding. Earlier temporary reviewed run additionally reports the expected unfinished G4/G5 rows; its flags were reverted in finally. Original English heading and em-dash failures were repaired by CurriculumOwner, not the translator.
+
+Structural comparisons pass for file set, heading level vectors, component calls, numbered assessment items, immutable metadata and figure attributes. All four Urdu SVG descriptions equal carrier alts; variants freshness passes. All eight built SVGs match committed source bytes. Exact input digests are supplied for author check reproducibility; they are not a signed review evidence manifest.
+
+render-inspect.mjs EFMP-303 4 --locale ur --port 46565: exit 0, zero detected defects over five pages, desktop 1280x900, phone 360x780 and A4 print. All page tables fit at phone width, with zero document overflow. Eight SVG variants measure clean. Desktop/phone screenshots, five A4 PDFs, and print preview images are included. Direct standalone light/dark figure previews are included as well. Author visually inspected the phone index, all four schematic designs, a dark table variant, and A4 topic/assessment previews. Font bounding-box overlap candidates are advisory; visible title clipping and centre-label crowding found during author inspection were fixed before the final build.
+
+Terminology proposals are in terminology-proposals.md. The mandatory bank and glossary were not edited. No new factual sources or registry verifications are claimed. Source-specific support remains an English review responsibility.
+
+This is an author verification bundle, not independent G3/G5 acceptance. CurriculumOwner must handle G4 intake and arrange independent G5 after accepted G3 for matching English inputs. Both locales remain draft.
+
+## Inspectable evidence
+
+Three attachment-backed artifact work products are registered on TEX-65 (the full 18.8 MB package exceeded the 10 MB per-file limit). Download all three parts and extract into one directory.
+
+- Part 1: attachment `b9029704-6722-46f7-89cf-997ec83513cb`, work product `0620b681-8c30-4bd1-9f43-cb68cca9f738`.
+- Part 2: attachment `d9ba2255-38a7-41f5-96ff-1a596c80c95a`, work product `67c8744c-0a2d-412b-9dd1-812d29c95524`.
+- Part 3: attachment `7015e99d-8d9f-46ba-9cf0-3f597b492ffd`, work product `4ae46b3f-4e10-4484-8d58-bfcc5c87e6f9`.
