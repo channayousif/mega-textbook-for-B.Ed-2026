@@ -2283,3 +2283,39 @@ content-improvement loop with no further cycle.
   The placement of the guide's Week 16 review items (`:1139-1141`) is not settled here. This
   certifies no content, qualifies no reviewer, authorises no publication and says nothing about
   the authored Units 1 and 2.
+
+## D-2026-0068 - GPKS-402 fresh G0/G1 intake: all eight criteria approved
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** GPKS-402 Pakistan Studies, all six units
+- **Decided by:** agent:evaluator, 2026-10-17
+- **Decision:** approve all eight intake criteria — identity, partition, coverage, outcomes,
+  readings, blueprint, structure, decision-residue. The three escalations the prior intake
+  (`D-2026-0052`) raised (`G-2026-97` partition, `G-2026-98` readings, `G-2026-99` outcomes)
+  were resolved by the confirmed owner ruling `D-2026-0053` (2026-10-10); this intake verifies
+  the repaired spec against that ruling rather than re-raising them. The blueprint and
+  source-floor defects `D-2026-0052` found are repaired and confirmed by the deterministic gates.
+- **Basis:** guide `Scheme-and-Course-guides/extracted-text/2nd 2026.txt` lines 979-1153 (code
+  `:980`, title `:982`, description `:986-994`, objectives `:996-1006`, weeks `:1008-1141`,
+  readings `:1143-1153`); revised board Scheme `B.Ed 4 Year 2026 revised after board.txt` (final
+  authority, `G-2026-03`); catalog `courses.json` Semester 2 `GPKS-402 / Pakistan Studies / 2 (2-0)`.
+  Owner ruling `D-2026-0053` confirmed the partition grouping (`G-2026-97`), the author-selected
+  readings approach with open-access floor (`G-2026-98`), and outcome derivation from
+  outcomes+readings (`G-2026-99`); Units 1-2 withdrawn (`G-2026-100`). Deterministic checks
+  (exit 0): em-dash, validate:content, bloom-bands, concept-graph, depth-gate, source-floor,
+  no-answer-keys, docs-sync. ERQ arithmetic verified for all six units (each sums to 5). Coverage:
+  43 teaching-week bullets → 47 rows via documented decomposition; every bullet once, no orphan
+  rows.
+- **Bound to:** `specs/content/gpks-402/intake-88/manifest.json`, manifest digest
+  `4b7ec0302eb9f10b4fbc2244368a1b872bf4087d85c24ad4e1a2b67d19b9b1d` (55 inputs, recomputed
+  with `manifestFor()`, zero path/digest mismatches; registers `specs/decisions/log.md`
+  `84ba9cd8...` and `specs/gaps.md` `1d14ea0e...` recorded at read time). A change to any bound
+  input voids this approval (Art. VII.8.5).
+- **Limits:** approves the *specification*, not any content — no units are authored, none
+  certified, no reviewer qualified, no publication authorised. Three reading-list Units-column
+  cross-references remain imprecise (`pak-constitution-1973` mapped by Unit 1, `hamid-khan-const`
+  by Unit 2, `hec-pak-studies` by Unit 4, against the reading-list Units column) — advisory for
+  author alignment, not a criterion defect and not escalated. `status: approved` awaits owner
+  confirmation of this entry; until then no unit may be authored (FR-002/FR-016b). Supersedes
+  the stale `D-2026-0052` on the repaired spec.
