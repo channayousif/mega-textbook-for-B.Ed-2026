@@ -1,4 +1,4 @@
-# Figure Desc/Alt Reconciliation Report — efmp-301
+# Figure Desc/Alt Reconciliation Report - efmp-301
 Total SVG variants: 138
 Unique figures: 65
 

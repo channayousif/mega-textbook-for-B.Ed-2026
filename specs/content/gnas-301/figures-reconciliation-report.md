@@ -1,4 +1,4 @@
-# Figure Desc/Alt Reconciliation Report — gnas-301
+# Figure Desc/Alt Reconciliation Report - gnas-301
 Total SVG variants: 122
 Unique figures: 56
 

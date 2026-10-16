@@ -1,4 +1,4 @@
-# Figure Desc/Alt Reconciliation Report — gict-300
+# Figure Desc/Alt Reconciliation Report - gict-300
 Total SVG variants: 74
 Unique figures: 37
 

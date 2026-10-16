@@ -1,4 +1,4 @@
-# Figure Desc/Alt Reconciliation Report — gqur-300
+# Figure Desc/Alt Reconciliation Report - gqur-300
 Total SVG variants: 20
 Unique figures: 10
 

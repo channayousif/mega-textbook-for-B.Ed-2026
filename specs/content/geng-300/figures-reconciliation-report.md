@@ -1,4 +1,4 @@
-# Figure Desc/Alt Reconciliation Report — geng-300
+# Figure Desc/Alt Reconciliation Report - geng-300
 Total SVG variants: 22
 Unique figures: 11
 
