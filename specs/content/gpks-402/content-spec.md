@@ -1,7 +1,8 @@
 ---
 course_code: GPKS-402
 status: draft
-open_access_floor: 1
+open_access_floor:
+  default: 1
 ---
 
 # GPKS-402 - Pakistan Studies - Content Spec
@@ -29,7 +30,7 @@ From the course guide (paraphrased): this course provides a comprehensive study 
 
 ## Reading list
 
-Full references for the guide's "Recommended Readings" plus curated open-access supplements. `Key` is the citation key used in each unit's `sources/unit-NN.md`. `Units` tags which unit(s) each source supports. Cited by reference only - never reproduced (Constitution Art. III.5, Spec 006 FR-010). Every unit binds >= 1 open-access source (`open_access_floor: 1` in frontmatter). Where the guide has no list, only print entries, or ambiguous entries, verified real works are chosen for relevance to course outcomes and labelled **author-selected** (not guide-required).
+Full references for the guide's "Recommended Readings" plus curated open-access supplements. `Key` is the citation key used in each unit's `sources/unit-NN.md`. `Units` tags which unit(s) each source supports. Cited by reference only - never reproduced (Constitution Art. III.5, Spec 006 FR-010). Every unit binds >= 1 open-access source (`open_access_floor` mapping with `default: 1` in frontmatter). Where the guide has no list, only print entries, or ambiguous entries, verified real works are chosen for relevance to course outcomes and labelled **author-selected** (not guide-required).
 
 ### Guide-required (print/HEC documents)
 
@@ -201,7 +202,7 @@ Weeks 5-6. Unit Spec (G1) for `docs/semester-2/gpks-402/unit-03/`.
 **Unit-end assessment blueprint**:
   - MCQs (10): Remember to Apply; >= 2 per topic
   - RRQs (10): Understand to Analyze; >= 2 per topic
-  - ERQs (5): Analyze to Evaluate/Create; one per topic plus one integrative; each ERQ carries an analytic rubric, >= 1 demanding Analyze-or-higher
+  - ERQs (5): Analyze to Evaluate/Create; 2 per topic plus 1 integrative (total 5); each ERQ carries an analytic rubric, >= 1 demanding Analyze-or-higher
 
 ## Unit 4: Governance, Fundamental Rights and Geography
 
