@@ -14,7 +14,7 @@ links:
   spec: specs/content/gpks-402/content-spec.md
   ticket: TEX-72
   adr: null
-  pr: https://github.com/a2ahs/mega_book_for_B.Ed/pull/124
+  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/124
 files:
  - specs/content/gpks-402/content-spec.md
  - history/prompts/general/0140-tex72-resume-intake-prerequisite.general.prompt.md
