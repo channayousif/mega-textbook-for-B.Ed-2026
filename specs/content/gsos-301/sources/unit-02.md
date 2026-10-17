@@ -10,5 +10,5 @@
 ## Unverifiable sources
 
 - `conerly2021`: Open-access textbook; the authoring host cannot download the full text for excerpt binding. URL verified to resolve.
-- `hammondnd`: U2-01 to U2-06. Open-access LibreTexts text; chapter pages read for scope on 2026-10-10, but no excerpt is bound, so support for each claim is unverified until a reviewer checks it. Bound for the open-access floor (D-2026-0064).
+- `hammondnd`: U2-01, U2-02, U2-03, U2-04, U2-05, U2-06. Open-access LibreTexts text; chapter pages read for scope on 2026-10-10, but no excerpt is bound, so support for each claim is unverified until a reviewer checks it. Bound for the open-access floor (D-2026-0064).
 - `lindsey2001`: Print monograph (2nd ed., Open Library OL3335670W; previously misdated 2010); the authoring host cannot open the full text for excerpt binding.

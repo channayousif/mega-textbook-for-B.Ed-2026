@@ -3,11 +3,17 @@
 | Sub-topic ID | File | Section | Source |
 |---|---|---|---|
 | U2-01 | topic-01.mdx | ### What culture is | conerly2021 |
+| U2-01 | topic-01.mdx | ### What culture is | hammondnd |
 | U2-02 | topic-01.mdx | ### Cultural diversity | conerly2021 |
+| U2-02 | topic-01.mdx | ### Cultural diversity | hammondnd |
 | U2-03 | topic-01.mdx | ### Ethnocentrism vs cultural relativism | lindsey2001 |
+| U2-03 | topic-01.mdx | ### Ethnocentrism vs cultural relativism | hammondnd |
 | U2-04 | topic-02.mdx | ### Agents of socialization | conerly2021 |
+| U2-04 | topic-02.mdx | ### Agents of socialization | hammondnd |
 | U2-05 | topic-02.mdx | ### The role of society in personality development | lindsey2001 |
+| U2-05 | topic-02.mdx | ### The role of society in personality development | hammondnd |
 | U2-06 | topic-02.mdx | ### Stages of socialization | conerly2021 |
+| U2-06 | topic-02.mdx | ### Stages of socialization | hammondnd |
 
 ## Reinforcement
 
