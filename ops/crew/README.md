@@ -32,7 +32,11 @@ is healthy, the review waits while every other kind of job keeps flowing.
    finding that main does not already have. Then the dispatcher writes the job's PHR, pushes the
    branch and opens a PR. A failed attempt is retried with the gate output as feedback, and the
    third attempt goes to a different worker; after that the job is `gate_red` for the lead.
-5. **PRs**: green CI leads to auto-merge (main auto-deploys). Red CI queues a fix job on the same
+5. **PRs**: green CI leads to auto-merge (main auto-deploys). The merge uses `gh pr merge --admin`
+   because every PR comes from the owner account, which cannot approve its own PR. The owner ruled
+   "auto-merge when CI green" on 2026-10-17, so CI is the review gate. The merge uses `gh pr merge --admin`, because
+   every PR comes from the owner account, which cannot approve its own PR; the owner ruled
+   "auto-merge when CI green" on 2026-10-17, so CI is the review gate. Red CI queues a fix job on the same
    branch. A PR that touches a protected path (style guide, constitution, ADRs, scripts, catalog,
    `.github/`, an approved content-spec or intake) is never auto-merged: the owner is asked.
 6. **launch**: up to 3 jobs run at once, one per unit, and none start while the host has under
