@@ -477,13 +477,26 @@ function managePrs(board, decisions, events) {
     if (pr.state === 'MERGED') { j.status = 'merged'; log(board, j, 'merged'); cleanup(j); continue; }
     if (pr.state === 'CLOSED') { j.status = 'closed'; log(board, j, 'closed'); cleanup(j); continue; }
     const checks = latestChecks(pr.statusCheckRollup || []);
+    // GitHub runs no PR CI while a PR conflicts, so waiting would stall it forever. Salvage
+    // branches all append to the same registries, so each salvage that merges conflicts
+    // the rest; resolving needs judgement (keep both sides, renumber clashing IDs).
+    if (pr.mergeable === 'CONFLICTING') {
+      if (board.jobs.some((x) => x.parent === j.id && ACTIVE.includes(x.status))) continue;
+      const tries = board.jobs.filter((x) => x.parent === j.id && x.id.includes('-conflict')).length;
+      if (tries >= 5) { j.status = 'gate_red'; events.push(`🔴 PR #${j.prNumber} (${j.id}) still conflicts after ${tries} merge attempts`); continue; }
+      board.jobs.push({ id: `${j.id}-conflict${tries + 1}`, parent: j.id, course: j.course, unit: j.unit, stage: 'fix', status: 'queued', attempts: 0, tried: [],
+        branch: j.branch, pr: j.prNumber, createdAt: now(),
+        task: `PR #${j.prNumber} conflicts with main. Run \`git fetch origin && git merge origin/main\` on this branch and resolve every conflict. Shared registries (glossary.json, specs/decisions/log.md, specs/gaps.md, specs/content/terminology.csv) are append-only: keep BOTH sides' entries, in main's order then this branch's, and drop exact duplicates. If an ID this branch added (D-YYYY-NNNN, G-YYYY-NN, a glossary key) is already used on main for something else, give this branch's entry the next free ID and update every reference to it in this branch's files. Never change or remove an entry that main already has. Commit the merge, then make \`npm run check:content\` pass.` });
+      log(board, j, `conflicts with main; merge job queued`);
+      continue;
+    }
     // CheckRun carries status/conclusion; a legacy StatusContext carries state.
     const pending = checks.some((c) => (c.status ? c.status !== 'COMPLETED' : ['PENDING', 'EXPECTED'].includes(c.state)));
     const failed = checks.filter((c) => (c.status ? !['SUCCESS', 'NEUTRAL', 'SKIPPED'].includes(c.conclusion) : ['FAILURE', 'ERROR'].includes(c.state)));
     if (pending || !checks.length) continue;
     if (failed.length) {
       if (board.jobs.some((x) => x.parent === j.id && ACTIVE.includes(x.status))) continue;
-      const fixes = board.jobs.filter((x) => x.parent === j.id).length;
+      const fixes = board.jobs.filter((x) => x.parent === j.id && x.id.includes('-cifix')).length;
       if (fixes >= 2) { j.status = 'gate_red'; events.push(`🔴 PR #${j.prNumber} (${j.id}) still red after ${fixes} CI fixes`); continue; }
       board.jobs.push({ id: `${j.id}-cifix${fixes + 1}`, parent: j.id, course: j.course, unit: j.unit, stage: 'fix', status: 'queued', attempts: 0, tried: [],
         branch: j.branch, pr: j.prNumber, createdAt: now(),
@@ -492,7 +505,6 @@ function managePrs(board, decisions, events) {
       log(board, j, `CI red: ${failed.map((c) => c.name).join(', ')}; fix job queued`);
       continue;
     }
-    if (pr.mergeable === 'CONFLICTING') continue;
     const touched = prFiles(j.prNumber).filter((f) => PROTECTED.some((re) => re.test(f)));
     if (touched.length) {
       if (!decisions.items.some((d) => d.pr === j.prNumber && d.status === 'open')) {
