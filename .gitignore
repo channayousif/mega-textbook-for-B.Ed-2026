@@ -87,3 +87,8 @@ specs/015-licence-content-tree/baseline/
 # future snapshot shows up as untracked, which `dirtyInputs()` scans with
 # `--untracked-files=all` and will refuse to prepare against.
 build-*/
+
+# Crew (ops/crew/README.md): per-job worktrees symlink node_modules and hold
+# their brief in .crew/; neither is ever committed.
+/node_modules
+.crew/
