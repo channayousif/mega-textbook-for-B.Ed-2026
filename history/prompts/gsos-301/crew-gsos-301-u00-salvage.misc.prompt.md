@@ -35,6 +35,7 @@ files:
  - history/prompts/general/0108-gsos-301-spec-repairs-general.prompt.md
  - history/prompts/general/0140-tex71-rebase-audit-and-serial-continuation.general.prompt.md
  - history/prompts/general/0144-gsos-301-u00-salvage.general.prompt.md
+ - history/prompts/gsos-301/crew-gsos-301-u00-salvage.misc.prompt.md
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/_category_.json
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-01/_category_.json
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-01/index.mdx
@@ -141,7 +142,7 @@ Rebased on origin/main, authored and placed SVG figures for units 1 and 2 in Eng
 
 - Impact: salvage for GSOS-301 Unit 0 by agy (attempt 1).
 - Tests: npm run check:content passed in the job worktree before the PR was opened.
-- Files: 88 file(s), listed above.
+- Files: 89 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
