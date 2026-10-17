@@ -7,7 +7,7 @@
 | zinsser2006 | Zinsser, W. (2006). *On writing well* (30th anniversary ed.). Harper Perennial. | no-external-source | U5-05, U5-06: public writing | print monograph |
 | johnson2016 | Johnson-Sheehan, R., & Paine, C. (2016). *Writing today* (4th ed.). Pearson. | no-external-source | U5-07: tone and register | print monograph |
 
-| writing2015 | *Writing for Success*. (2015). University of Minnesota Libraries Publishing, chapter 6.1. | https://open.lib.umn.edu/writingforsuccess/ ; accessible chapter mirror: https://saylordotorg.github.io/text_writing-for-success/s10-01-purpose-audience-tone-and-cont.html | U5-01 to U5-07: purpose, audience, tone and content | open textbook; registry:OpenAlex https://openalex.org/W7206719389, verified 2026-10-17 (2015 title record, open repository location); publisher licence: CC BY-NC-SA |
+| writing2015 | *Writing for Success*. (2015). University of Minnesota Libraries Publishing, chapter 6.1. | https://open.lib.umn.edu/writingforsuccess/ ; accessible chapter mirror: https://saylordotorg.github.io/text_writing-for-success/s10-01-purpose-audience-tone-and-cont.html | U5-01, U5-07: supplemental chapter binding | open textbook; registry:OpenAlex https://openalex.org/W7206719389, verified 2026-10-17 (2015 title record, open repository location); publisher licence: CC BY-NC-SA |
 
 ## Unverifiable sources
 

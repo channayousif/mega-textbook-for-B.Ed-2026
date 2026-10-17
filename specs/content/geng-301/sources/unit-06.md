@@ -6,7 +6,7 @@
 | apa2020 | American Psychological Association. (2020). *Publication manual of the American Psychological Association* (7th ed.). APA. | no-external-source | U6-03, U6-04: citation styles | print monograph |
 | graff2011 | Graff, G., & Birkenstein, C. (2011). *They say / I say* (2nd ed.). W. W. Norton. | no-external-source | U6-05, U6-06: integration, paraphrasing | print monograph |
 
-| writing2015 | *Writing for Success*. (2015). University of Minnesota Libraries Publishing, chapter 12.1. | https://open.lib.umn.edu/writingforsuccess/ ; accessible chapter mirror: https://saylordotorg.github.io/text_writing-for-success/s16-01-creating-a-rough-draft-for-a-r.html | U6-05 to U6-07: quoting, paraphrasing, summarizing and avoiding plagiarism | open textbook; registry:OpenAlex https://openalex.org/W7206719389, verified 2026-10-17 (2015 title record, open repository location); publisher licence: CC BY-NC-SA |
+| writing2015 | *Writing for Success*. (2015). University of Minnesota Libraries Publishing, chapter 12.1. | https://open.lib.umn.edu/writingforsuccess/ ; accessible chapter mirror: https://saylordotorg.github.io/text_writing-for-success/s16-01-creating-a-rough-draft-for-a-r.html | U6-05, U6-06, U6-07: supplemental chapter binding | open textbook; registry:OpenAlex https://openalex.org/W7206719389, verified 2026-10-17 (2015 title record, open repository location); publisher licence: CC BY-NC-SA |
 
 ## Unverifiable sources
 

@@ -4,7 +4,11 @@
 |---|---|---|---|
 | U4-01 | topic-01.mdx | ### Description | zinsser2006 |
 | U4-02 | topic-01.mdx | ### Illustration | zinsser2006 |
-| U4-03 | topic-02.mdx | ### Classification | rosenwasser2012, writing2015 |
-| U4-04 | topic-02.mdx | ### Cause and effect | rosenwasser2012, writing2015 |
-| U4-05 | topic-03.mdx | ### Process analysis | axelrod2016, writing2015 |
-| U4-06 | topic-03.mdx | ### Comparative analysis | faigley2015, writing2015 |
+| U4-03 | topic-02.mdx | ### Classification | rosenwasser2012 |
+| U4-03 | topic-02.mdx | ### Classification | writing2015 |
+| U4-04 | topic-02.mdx | ### Cause and effect | rosenwasser2012 |
+| U4-04 | topic-02.mdx | ### Cause and effect | writing2015 |
+| U4-05 | topic-03.mdx | ### Process analysis | axelrod2016 |
+| U4-05 | topic-03.mdx | ### Process analysis | writing2015 |
+| U4-06 | topic-03.mdx | ### Comparative analysis | faigley2015 |
+| U4-06 | topic-03.mdx | ### Comparative analysis | writing2015 |

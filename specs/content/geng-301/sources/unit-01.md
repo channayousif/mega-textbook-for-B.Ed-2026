@@ -7,7 +7,7 @@
 | strunk2000 | Strunk, W. Jr., & White, E. B. (2000). *The elements of style* (4th ed.). Longman. | no-external-source | U1-05: organization, paragraph as unit | print monograph |
 | axelrod2016 | Axelrod, R. B., & Cooper, C. R. (2016). *The St. Martin's guide to writing* (11th ed.). Bedford/St. Martin's. | no-external-source | U1-06, U1-07: paragraph structure, unity, completeness | print monograph |
 
-| writing2015 | *Writing for Success*. (2015). University of Minnesota Libraries Publishing, chapter 6.2. | https://open.lib.umn.edu/writingforsuccess/ ; accessible chapter mirror: https://saylordotorg.github.io/text_writing-for-success/s10-02-effective-means-for-writing-a-.html | U1-03 to U1-07: paragraph unity, coherence and organization | open textbook; registry:OpenAlex https://openalex.org/W7206719389, verified 2026-10-17 (2015 title record, open repository location); publisher licence: CC BY-NC-SA |
+| writing2015 | *Writing for Success*. (2015). University of Minnesota Libraries Publishing, chapter 6.2. | https://open.lib.umn.edu/writingforsuccess/ ; accessible chapter mirror: https://saylordotorg.github.io/text_writing-for-success/s10-02-effective-means-for-writing-a-.html | U1-06, U1-07: supplemental chapter binding | open textbook; registry:OpenAlex https://openalex.org/W7206719389, verified 2026-10-17 (2015 title record, open repository location); publisher licence: CC BY-NC-SA |
 
 ## Unverifiable sources
 

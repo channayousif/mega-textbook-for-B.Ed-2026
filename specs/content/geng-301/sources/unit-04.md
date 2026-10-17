@@ -7,7 +7,7 @@
 | axelrod2016 | Axelrod, R. B., & Cooper, C. R. (2016). *The St. Martin's guide to writing* (11th ed.). Bedford/St. Martin's. | no-external-source | U4-05: process analysis | print monograph |
 | faigley2015 | Faigley, L., & Selzer, J. (2015). *Good reasons with contemporary arguments* (6th ed.). Pearson. | no-external-source | U4-06: comparative analysis | print monograph |
 
-| writing2015 | *Writing for Success*. (2015). University of Minnesota Libraries Publishing, chapter 10. | https://open.lib.umn.edu/writingforsuccess/ ; accessible chapter mirror: https://saylordotorg.github.io/text_writing-for-success/s14-rhetorical-modes.html | U4-01 to U4-06: expository rhetorical modes | open textbook; registry:OpenAlex https://openalex.org/W7206719389, verified 2026-10-17 (2015 title record, open repository location); publisher licence: CC BY-NC-SA |
+| writing2015 | *Writing for Success*. (2015). University of Minnesota Libraries Publishing, chapter 10. | https://open.lib.umn.edu/writingforsuccess/ ; accessible chapter mirror: https://saylordotorg.github.io/text_writing-for-success/s14-rhetorical-modes.html | U4-03, U4-04, U4-05, U4-06: supplemental chapter binding | open textbook; registry:OpenAlex https://openalex.org/W7206719389, verified 2026-10-17 (2015 title record, open repository location); publisher licence: CC BY-NC-SA |
 
 ## Unverifiable sources
 
