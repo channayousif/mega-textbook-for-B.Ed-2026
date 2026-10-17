@@ -64,23 +64,43 @@ describe('RLS fixture isolation', () => {
     expect(body).toMatch(/throw new Error/);
   });
 
-  it('serializes CI runs so they cannot race on the shared database', () => {
-    const ci = readFileSync(join(REPO, '.github', 'workflows', 'ci.yml'), 'utf8');
-    expect(ci).toMatch(/^concurrency:/m);
-    // Cancelling a run mid-suite is what strands fixture rows, so an ENABLED
-    // cancel-in-progress is the thing to forbid. `false` is the default, and it
-    // cannot be spelled out at all alongside `queue`, so asserting its presence
-    // would forbid the queueing fix below rather than guard anything.
-    expect(ci).not.toMatch(/cancel-in-progress:\s*true/);
+  // The lock lives on the jobs that touch the shared Supabase project, not on the
+  // whole workflow (content fast lane, 2026-10-17): `build` touches no database and
+  // runs in parallel. So the guard is per job. Every job that runs test:rls or
+  // test:e2e must hold the one group, queue rather than drop, and never cancel.
+  const ci = () => readFileSync(join(REPO, '.github', 'workflows', 'ci.yml'), 'utf8');
+  const jobs = (text) => {
+    const body = text.slice(text.search(/^jobs:\s*$/m));
+    const parts = body.split(/^ {2}(?=[A-Za-z][\w-]*:\s*$)/m).slice(1);
+    return Object.fromEntries(parts.map((p) => [p.slice(0, p.indexOf(':')), p]));
+  };
+  const databaseJobs = (text) =>
+    Object.entries(jobs(text)).filter(([, t]) => /npm run (?:-s )?test:(?:rls|e2e)\b/.test(t));
+
+  it('serializes every job that uses the shared database', () => {
+    const found = databaseJobs(ci());
+    expect(found.map(([name]) => name).sort()).toEqual(['e2e', 'rls']);
+    for (const [, t] of found) {
+      expect(t).toMatch(/^ {4}concurrency:\s*\n {6}group:\s*shared-supabase\s*$/m);
+      // Cancelling a job mid-suite is what strands fixture rows, so an ENABLED
+      // cancel-in-progress is the thing to forbid. `false` is the default, and it
+      // cannot be spelled out at all alongside `queue`.
+      expect(t).not.toMatch(/cancel-in-progress:\s*true/);
+    }
   });
 
-  it('queues serialized runs instead of dropping them', () => {
-    const ci = readFileSync(join(REPO, '.github', 'workflows', 'ci.yml'), 'utf8');
-    // The default `queue: single` holds one pending run and cancels it when a
+  it('queues serialized jobs instead of dropping them', () => {
+    // The default `queue: single` holds one pending entry and cancels it when a
     // third joins the group. On 2026-09-14 that evicted main's run for 18adacc,
     // leaving the merge commit for PR #57 with no CI verdict at all - and
     // scripts/deploy-prod.sh gates on a success run for the exact head_sha, so
     // that SHA would never have deployed. `queue: max` waits, FIFO, instead.
-    expect(ci).toMatch(/^\s*queue:\s*max\s*$/m);
+    for (const [, t] of databaseJobs(ci())) expect(t).toMatch(/^ {6}queue:\s*max\s*$/m);
+  });
+
+  it('runs the database suites on every push to main', () => {
+    // Content-only PRs may skip rls/e2e; main may not, because deploy-prod.sh
+    // deploys only a main SHA whose ci.yml run succeeded.
+    expect(ci()).toMatch(/if \[ "\$EVENT" != "pull_request" \]; then echo "app=true"/);
   });
 });

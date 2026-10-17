@@ -23,7 +23,7 @@ files at that commit. The geng-300 reds are recorded as known-stale-on-main in t
 | Unit 1 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0030; content-spec status: approved |
 | Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-01/G2/20261013T123436400Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | advisory run 001 (disposition: revise) at reviews/unit-01/G3/agent-g3-gict300-u1-run001.json; blocking findings F1/F2 repaired at 140dd8a, advisory F3/F4 repaired, F5 (bare URLs) left; agent reviews are advisory under ADR-0019 |
-| Unit 1 | G4 ur-translation | ▢ | | |
+| Unit 1 | G4 ur-translation | ▣ | | UR mirror (7 files) re-verified against EN baseline ee13c3e2 on 2026-10-17 (crew gict-300-u01-translate): semantic pass fixed abacus beads, term binding (سبقی منصوبہ, نشوونما), dropped teacher-notes clause, grammar; fig-U1-3/5/7 .ur.svg labels and desc synced, dark variants regenerated; check:content green; reviewed-flip parity clean except 12 unbanked key_terms (owner to bank) and this G4/G5 pair; translation_status stays draft pending a fresh independent G5 |
 | Unit 1 | G5 ur-review | ▢ | | advisory run 001 (disposition: escalate; F1 stale G3 dependency needs run002, F2-F4 Urdu defects repaired) at reviews/unit-01/G5/agent-g5-gict300-u1-run001.json; agent reviews advisory under ADR-0019 |
 | Unit 1 | G6 assets | ▢ | | |
 | Unit 1 | G7 publish | ▢ | | |

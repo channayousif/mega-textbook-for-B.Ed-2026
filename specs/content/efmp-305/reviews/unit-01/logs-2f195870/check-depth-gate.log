@@ -1,0 +1,9 @@
+
+> bed-mega-textbook@0.1.0 check:depth-gate
+> node scripts/check-unit-depth.mjs
+
+
+✗ Depth gate failed with 1 finding(s):
+
+  - EFMP-305 Unit 6 (docs/semester-2/efmp-305/unit-06): unit-total est_reading_minutes is 193, outside the depth-budget band 140–170 reading-min (FR-016)
+

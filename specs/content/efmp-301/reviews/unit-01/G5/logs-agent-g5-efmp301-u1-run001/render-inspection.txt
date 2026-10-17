@@ -1,0 +1,4 @@
+Render inspection: SKIPPED — no browser available in this headless opencode session.
+Criterion accessibility and rtl are marked unverified for this reason.
+Static checks (check:figures, check:no-em-dash, check:no-answer-keys) passed.
+Reviewer: agent:g5-reviewer (g5-reviewer.md); independent session, did not author or translate this unit.
