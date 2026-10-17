@@ -1,0 +1,13 @@
+Browser accessibility and print view inspection executed for EFMP-304 Unit 1 via scripts/render-inspect.mjs.
+Command: node scripts/render-inspect.mjs EFMP-304 1 --base http://127.0.0.1:4599 --out specs/content/efmp-304/reviews/unit-01/renders-5e4cc29c/en
+Host: http://127.0.0.1:4599 (prebuilt production HTML)
+Browser: headless Chromium 149.0.7827.0 (Playwright)
+Setups: Desktop 1280x900, Narrow 360x780, A4 Print 794x1123 emulation
+Pages inspected: index, topic-01, topic-02, topic-03, topic-04, topic-05, unit-assessment (7 pages)
+
+Results:
+- Desktop 1280x900: 1 visible image load defect on topic-02 (/img/figures/efmp-304/unit-01/fig-U1-3.svg failed to load, natural=0x0, XML parsererror 'expected >' at col 1877). 0 missing alts. Heading orders valid (no skipped levels). Bare URL links noted as advisory on topic-02 and topic-03.
+- Narrow 360x780: docHorizontalOverflow=0px across all 7 pages. Figure scrollers functional. Tables fit viewport cleanly.
+- A4 Print 794px: clippedElems=0 across all 7 pages. Heading structures and answers present.
+- SVG text geometry: 10 defects across 5 figures (light and dark variants) where wordmark 'textbook.com.pk' overflows 780px viewBox right edge: fig-U1-1 (by 47.3px), fig-U1-4 (by 34.6px), fig-U1-5 (by 34.6px), fig-U1-7 (by 34.6px), fig-U1-10 (by 34.6px).
+Exit code: 1 (actionable visual defects recorded for revision).

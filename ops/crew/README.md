@@ -40,20 +40,38 @@ is healthy, the review waits while every other kind of job keeps flowing.
    branch. A PR that touches a protected path (style guide, constitution, ADRs, scripts, catalog,
    `.github/`, an approved content-spec or intake) is never auto-merged: the owner is asked.
 6. **launch**: up to 3 jobs run at once, one per unit, and none start while the host has under
-   3 GB free. The crew never builds locally; CI builds every PR on GitHub's runners.
+   3 GB of free memory or under 8 GB of free disk (`CREW_MIN_FREE_DISK_MB`). The crew never builds
+   locally; CI builds every PR on GitHub's runners. Job worktrees are sparse: they leave out the
+   `reviews/**/renders-*/` evidence folders (1.7 of a checkout's 2.3 GB, read by no gate), and the
+   crew's leftover auto-commit uses `git add --sparse` so new renders are still committed. A
+   launch that fails is logged on the job and retried next tick (`gate_red` after 3 failures);
+   it never aborts the tick, and the board is saved even when a phase throws.
 
 ## Owner commands (Discord or WhatsApp, only from the owner's own ID)
 
 - `C-007 merge` / `C-007 hold` / `C-007 yes ...`: answer a decision (free text after it is kept).
 - `crew status`, `crew pause`, `crew resume`, `crew prioritise EFMP-305`, `crew stop <job>`,
-  `crew retry <job>`.
+  `crew retry <job>`, `crew note <directions>`, `crew help`. A leading `/` is accepted.
 
-Any other message is ignored by the crew (openclaw's own assistant may still reply to it).
+Two paths deliver them, and each command is applied once:
+
+1. **Instant**: openclaw's `crew` skill (`~/.openclaw/workspace/skills/crew/SKILL.md`) runs
+   `crew.mjs cmd '<message>' --via whatsapp|discord` and replies with what it prints. A
+   state-changing command waits for a running tick (same `tick.lock`). The command is recorded
+   in `handled.json` so the tick does not apply it again.
+2. **Fallback** (openclaw's model unavailable): the tick reads the same messages from Discord and
+   openclaw's session logs and replies in the place each one came from (DM, WhatsApp or channel).
+
+`crew note` appends to `~/.crew/mega-book/OWNER-NOTES.md`; the lead reads it before planning.
+Any other message is ignored by the crew. Textbook was removed from openclaw's Paperclip relay
+and digest (`~/bin/paperclip-board.sh`, `~/bin/paperclip-digest.sh`, backups `*.bak-20261017`);
+Da Vinci still uses them.
 
 ## Lead commands
 
 ```bash
 node scripts/crew/crew.mjs status                      # BOARD.md in ~/.crew/mega-book
+node scripts/crew/crew.mjs cmd 'crew status'           # what the owner sees
 node scripts/crew/crew.mjs plan --dry-run
 node scripts/crew/crew.mjs tick --dry-run
 node scripts/crew/crew.mjs add EFMP-305 0 salvage --branch agent/TEX-39 --pr 119 --task "..."
