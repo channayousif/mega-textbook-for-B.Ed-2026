@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "course_code": "EFMP-304",
+  "unit_no": 1,
+  "locale": "en",
+  "base": "http://127.0.0.1:4599",
+  "route": "/semester-2/efmp-304/unit-01",
+  "pages": [
+    "index",
+    "topic-01",
+    "topic-02",
+    "topic-03",
+    "topic-04",
+    "topic-05",
+    "unit-assessment"
+  ],
+  "figures": [
+    "fig-U1-1",
+    "fig-U1-2",
+    "fig-U1-3",
+    "fig-U1-4",
+    "fig-U1-5",
+    "fig-U1-6",
+    "fig-U1-7",
+    "fig-U1-8",
+    "fig-U1-9",
+    "fig-U1-10"
+  ],
+  "viewports": [
+    "1280x900",
+    "360x780",
+    "A4 794x1123 print"
+  ],
+  "defects": [
+    "topic-02: visible image did not load: /img/figures/efmp-304/unit-01/fig-U1-3.svg",
+    "fig-U1-1.light: text \"textbook.com.pk\" past viewBox right edge",
+    "fig-U1-1.dark: text \"textbook.com.pk\" past viewBox right edge",
+    "fig-U1-4.light: text \"textbook.com.pk\" past viewBox right edge",
+    "fig-U1-4.dark: text \"textbook.com.pk\" past viewBox right edge",
+    "fig-U1-5.light: text \"textbook.com.pk\" past viewBox right edge",
+    "fig-U1-5.dark: text \"textbook.com.pk\" past viewBox right edge",
+    "fig-U1-7.light: text \"textbook.com.pk\" past viewBox right edge",
+    "fig-U1-7.dark: text \"textbook.com.pk\" past viewBox right edge",
+    "fig-U1-10.light: text \"textbook.com.pk\" past viewBox right edge",
+    "fig-U1-10.dark: text \"textbook.com.pk\" past viewBox right edge"
+  ],
+  "exit_code": 1,
+  "generated_at": "2026-10-17T14:22:44.747Z"
+}

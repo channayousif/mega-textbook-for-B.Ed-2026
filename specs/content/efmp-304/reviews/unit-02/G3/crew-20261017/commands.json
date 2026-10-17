@@ -1,0 +1,52 @@
+[
+  {
+    "name": "validate:content",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-304/reviews/unit-02/G3/crew-20261017/validate-content.log"
+  },
+  {
+    "name": "check:depth-gate",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-304/reviews/unit-02/G3/crew-20261017/check-depth-gate.log"
+  },
+  {
+    "name": "check:figures",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-304/reviews/unit-02/G3/crew-20261017/check-figures.log"
+  },
+  {
+    "name": "check:no-em-dash",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-304/reviews/unit-02/G3/crew-20261017/check-no-em-dash.log"
+  },
+  {
+    "name": "check:no-answer-keys",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-304/reviews/unit-02/G3/crew-20261017/check-no-answer-keys.log"
+  },
+  {
+    "name": "check:docs-sync",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-304/reviews/unit-02/G3/crew-20261017/check-docs-sync.log"
+  },
+  {
+    "name": "check:content",
+    "exit_code": 1,
+    "log_path": "specs/content/efmp-304/reviews/unit-02/G3/crew-20261017/check-content.log"
+  },
+  {
+    "name": "figure-geometry",
+    "exit_code": 1,
+    "log_path": "specs/content/efmp-304/reviews/unit-02/G3/crew-20261017/figure-geometry.log"
+  },
+  {
+    "name": "render-figures",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-304/reviews/unit-02/G3/crew-20261017/render-figures.log"
+  },
+  {
+    "name": "input-verification",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-304/reviews/unit-02/G3/crew-20261017/input-verification.log"
+  }
+]

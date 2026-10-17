@@ -1,0 +1,11 @@
+$ npm run check:bloom-bands   (repo HEAD 944c3b63, 2026-10-10T15:24:55.449Z)
+✗ Bloom band gate failed with 4 finding(s):
+
+  - docs/semester-2/efmp-303/unit-02/unit-assessment.mdx: RRQ 5 carries no Bloom tag (spec band: Understand to Analyze)
+  - docs/semester-2/efmp-303/unit-02/unit-assessment.mdx: RRQ 9 carries no Bloom tag (spec band: Understand to Analyze)
+  - docs/semester-2/efmp-303/unit-02/unit-assessment.mdx: ERQ 1 carries no Bloom tag (spec band: Analyze to Create)
+  - docs/semester-2/efmp-303/unit-02/unit-assessment.mdx: ERQ 3 carries no Bloom tag (spec band: Analyze to Create)
+
+Either the item is mis-tagged, or the unit spec declares a band the bank does not honour.
+Changing the band is a G1 decision; changing the item is authoring.
+exit_code=1

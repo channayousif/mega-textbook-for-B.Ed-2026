@@ -1,0 +1,85 @@
+{
+  "method": "Each SVG rendered separately with the bundled Noto Nastaliq Urdu font; light and dark sources measured on all four viewBox edges.",
+  "results": [
+    {
+      "file": "fig-U5-1.ur.dark.svg",
+      "fontLoaded": true,
+      "overflow": []
+    },
+    {
+      "file": "fig-U5-1.ur.svg",
+      "fontLoaded": true,
+      "overflow": []
+    },
+    {
+      "file": "fig-U5-2.ur.dark.svg",
+      "fontLoaded": true,
+      "overflow": []
+    },
+    {
+      "file": "fig-U5-2.ur.svg",
+      "fontLoaded": true,
+      "overflow": []
+    },
+    {
+      "file": "fig-U5-3.ur.dark.svg",
+      "fontLoaded": true,
+      "overflow": []
+    },
+    {
+      "file": "fig-U5-3.ur.svg",
+      "fontLoaded": true,
+      "overflow": []
+    },
+    {
+      "file": "fig-U5-4.ur.dark.svg",
+      "fontLoaded": true,
+      "overflow": []
+    },
+    {
+      "file": "fig-U5-4.ur.svg",
+      "fontLoaded": true,
+      "overflow": []
+    },
+    {
+      "file": "fig-U5-5.ur.dark.svg",
+      "fontLoaded": true,
+      "overflow": []
+    },
+    {
+      "file": "fig-U5-5.ur.svg",
+      "fontLoaded": true,
+      "overflow": []
+    },
+    {
+      "file": "fig-U5-6.ur.dark.svg",
+      "fontLoaded": true,
+      "overflow": []
+    },
+    {
+      "file": "fig-U5-6.ur.svg",
+      "fontLoaded": true,
+      "overflow": []
+    },
+    {
+      "file": "fig-U5-7.ur.dark.svg",
+      "fontLoaded": true,
+      "overflow": []
+    },
+    {
+      "file": "fig-U5-7.ur.svg",
+      "fontLoaded": true,
+      "overflow": []
+    },
+    {
+      "file": "fig-U5-8.ur.dark.svg",
+      "fontLoaded": true,
+      "overflow": []
+    },
+    {
+      "file": "fig-U5-8.ur.svg",
+      "fontLoaded": true,
+      "overflow": []
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+PASS index.mdx: metadata, headings, imports, components, glossary, links, Bloom tags, figures, MDX compilation
+PASS bank Professional Ethics = پیشہ ورانہ اخلاقیات
+PASS bank Code of Ethical Conduct = ضابطہ اخلاق
+PASS bank Ethical Dilemma = اخلاقی مخمصہ
+PASS bank Reflective Decision Making = غور و فکر پر مبنی فیصلہ سازی
+PASS topic-01.mdx: metadata, headings, imports, components, glossary, links, Bloom tags, figures, MDX compilation
+PASS topic-02.mdx: metadata, headings, imports, components, glossary, links, Bloom tags, figures, MDX compilation
+PASS topic-03.mdx: metadata, headings, imports, components, glossary, links, Bloom tags, figures, MDX compilation
+PASS topic-04.mdx: metadata, headings, imports, components, glossary, links, Bloom tags, figures, MDX compilation
+PASS unit-assessment.mdx: metadata, headings, imports, components, glossary, links, Bloom tags, figures, MDX compilation
+PASS assessment کثیر انتخابی سوالات (MCQs): 10
+PASS assessment محدود جوابی سوالات (RRQs): 10
+PASS assessment تفصیلی جوابی سوالات (ERQs): 5
+PASS bounded final answers section, 10 MCQ key letters, RRQ mark totals
+PASS unit-teacher-notes.mdx: metadata, headings, imports, components, glossary, links, Bloom tags, figures, MDX compilation
+PASS complete mirror: 7 pages, 13 figures, 4 glossary calls. All statuses draft.
+This is translator verification, not G5 acceptance or full rendered-page inspection.
