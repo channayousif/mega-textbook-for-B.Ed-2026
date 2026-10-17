@@ -47,6 +47,10 @@ is healthy, the review waits while every other kind of job keeps flowing.
    launch that fails is logged on the job and retried next tick (`gate_red` after 3 failures);
    it never aborts the tick, and the board is saved even when a phase throws.
 
+After a salvage PR merges, the tick deletes the Paperclip branches it replaced (its
+`supersedes` PRs' head branches and its `base`), unless an open PR still uses one
+(owner ruling, 2026-10-17). Each job does this once and logs `retired superseded branches`.
+
 ## Owner commands (Discord or WhatsApp, only from the owner's own ID)
 
 - `C-007 merge` / `C-007 hold` / `C-007 yes ...`: answer a decision (free text after it is kept).
