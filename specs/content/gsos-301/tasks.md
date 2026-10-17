@@ -14,7 +14,7 @@ G1 unit-spec drafted (pending G0 intake approval).
 |---|---|---|---|---|
 | Unit 1 | G0 course-intake | ▣ | | content-spec status: draft, pending G0/G1 intake |
 | Unit 1 | G1 unit-spec | ▢ | | pending G0 intake |
-| Unit 1 | G2 en-draft | ▣ | auto:gates | authored; QC checks pending |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-01/G2/20261017T120744171Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | awaiting CurriculumOwner |
 | Unit 1 | G4 ur-translation | ▣ | auto:gates | authored; QC checks pending |
 | Unit 1 | G5 ur-review | ▢ | | awaiting CurriculumOwner |
@@ -26,7 +26,7 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 2 | G1 unit-spec | ▢ | | pending G0 intake |
-| Unit 2 | G2 en-draft | ▢ | | |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-02/G2/20261017T120753514Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | |
 | Unit 2 | G4 ur-translation | ▢ | | |
 | Unit 2 | G5 ur-review | ▢ | | |
