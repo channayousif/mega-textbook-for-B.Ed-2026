@@ -62,6 +62,7 @@ files:
  - history/prompts/general/0106-author-geng-301-expository-writing-all-units.general.prompt.md
  - history/prompts/general/0141-tex60-recover-merge-figure-descriptions.general.prompt.md
  - history/prompts/general/0144-salvage-geng301-content-gates.general.prompt.md
+ - history/prompts/geng-301/crew-geng-301-u00-salvage.misc.prompt.md
  - specs/content/geng-301/concepts/unit-01.md
  - specs/content/geng-301/concepts/unit-02.md
  - specs/content/geng-301/concepts/unit-03.md
@@ -282,7 +283,7 @@ Preserved GENG-301 content and shared entries during rebase, repaired source cov
 
 - Impact: salvage for GENG-301 Unit 0 by codex (attempt 1).
 - Tests: npm run check:content passed in the job worktree before the PR was opened.
-- Files: 229 file(s), listed above.
+- Files: 230 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
