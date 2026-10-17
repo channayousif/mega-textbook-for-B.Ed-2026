@@ -18,10 +18,17 @@ links:
 files:
   - glossary.json
   - specs/decisions/log.md
+  - specs/gaps.md
   - specs/content/efmp-303/
   - static/img/figures/efmp-303/unit-02/fig-U2-1.svg
+  - static/img/figures/efmp-303/unit-03/fig-U3-2.svg
+  - static/img/figures/efmp-303/unit-03/fig-U3-2.dark.svg
 tests:
-  - npm run check:content
+  - npm run check:content (13/13 PASS)
+  - origin/main baseline check:content (12 PASS, missing generated content-status file)
+  - prepare-gate-evidence EFMP-303 Units 1-6 (48/48 command results PASS)
+  - figures:variants --check, scoped to EFMP-303 (52 PASS)
+  - git diff --check (PASS)
 ---
 
 ## Prompt
@@ -54,26 +61,51 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Rebased the existing EFMP-303 course onto origin/main, preserving main's shared entries and the course's later repairs. Merged origin/agent/TEX-74 and origin/agent/TEX-73. Content-gate verification and evidence refresh are in progress.
+Rebased the existing EFMP-303 course onto origin/main, preserving main's shared entries and the course's later repairs. Merged origin/agent/TEX-74 and origin/agent/TEX-73. Synced fig-U3-2 desc to the existing page alt, derived its dark variant, generated the ignored content-status artifact, and refreshed G2 evidence for all six units with the repository tooling. All 13 content gates pass.
 
 ## Outcome
 
-- Impact: Course integration preserved; deterministic verification in progress.
-- Tests: First content-gate run in progress; comparison against origin/main pending.
-- Files: Shared conflict resolutions, imported figure fix and independent review reports.
-- Next prompts: No new authorization needed for the brief's remaining work.
+- Impact: Course integration preserved; all deterministic content gates pass without exceptions.
+- Tests: Initial run found six stale G2 records, two figure desc mismatches and missing generated content-status. Main baseline passed 12 gates and failed only on the missing generated status file. Final branch run passed all 13 gates; 52 dark variants also passed freshness.
+- Files: Shared conflict resolutions, imported figure fix and independent review reports, synchronized Unit 3 desc, six new G2 records with real command logs, and refreshed tracker evidence paths. Historical evidence remains unchanged.
+- Next prompts: Independent academic review and later publication remain outside this salvage task.
 - Reflection: Review reports are historical evidence and do not authorize self-certification.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Rebase and requested branch merges completed locally.
+- Shipped / changed: Rebased onto main, merged TEX-74 and TEX-73, preserved main shared rows and later course repairs, repaired fig-U3-2 provenance, and refreshed all six G2 references. All 13 content gates pass.
 - Decisions the team must respect: Preserve owner decisions and main's shared rows; do not mark G3/G5 done or alter approved specifications.
-- Pending / next owner: Codex is completing content-gate repairs and verification before the final local commit.
+- Pending / next owner: No salvage work remains. The curriculum owner retains review/publication decisions. No push, PR, build or dev server was performed; .crew/ remains the supplied untracked job input.
 - Paperclip issues affected: TEX-40, TEX-74, TEX-73.
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Shared glossary and decision-log rebase conflicts; divergent course repairs in the figure-fix branch.
-- Graders run and results (PASS/FAIL): Content-gate run pending completion.
+- Graders run and results (PASS/FAIL): PASS: all 13 content gates; 48 G2 command results; 52 scoped dark variants; main-row preservation and merge ancestry checks. Initial failures were repaired; main had no stale G2 findings at fetched commit 6f471631.
 - Prompt variant (if applicable): none.
-- Next experiment (smallest change to try): Repair only findings added by EFMP-303; compare remaining failures with origin/main.
+- Next experiment (smallest change to try): No further repair is needed for the requested deterministic gates.
+
+### Final content-gate output
+
+```text
+> bed-mega-textbook@0.1.0 check:content
+> node scripts/run-gates.mjs content
+
+Running 13 content gates
+
+  validate:content        PASS  1.9s
+  check:pipeline-gate     PASS  12.6s
+  check:depth-gate        PASS  0.7s
+  check:figures           PASS  1.2s
+  check:no-em-dash        PASS  1.3s
+  check:no-answer-keys    PASS  1.1s
+  check:concept-graph     PASS  0.9s
+  check:bloom-bands       PASS  1.1s
+  check:source-floor      PASS  1.2s
+  check:licence           PASS  2.2s
+  licence:map:check       PASS  1.0s
+  check:content-status    PASS  1.1s
+  check:docs-sync         PASS  0.8s
+
+All content gates passed.
+```
