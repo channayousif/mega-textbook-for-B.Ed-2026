@@ -454,6 +454,21 @@ function prFiles(n) {
   return sh('gh', ['pr', 'view', String(n), '--json', 'files', '-q', '.files[].path'], ROOT, { allowFail: true }).out.split('\n').filter(Boolean);
 }
 
+/**
+ * A re-run on the same head commit (re-opened PR, re-run job) leaves the old run's check
+ * runs in the rollup beside the new ones, so a stale FAILURE would outlive a green re-run
+ * and queue a needless fix job. Keep only the most recent result per workflow and check.
+ */
+export function latestChecks(checks) {
+  const latest = new Map();
+  for (const c of checks) {
+    const key = `${c.workflowName || ''}/${c.name || c.context}`;
+    const at = Date.parse(c.startedAt || c.createdAt || 0) || 0;
+    if (!latest.has(key) || at >= latest.get(key).at) latest.set(key, { c, at });
+  }
+  return [...latest.values()].map((x) => x.c);
+}
+
 function managePrs(board, decisions, events) {
   for (const j of board.jobs.filter((x) => x.status === 'pr_open' && x.prNumber)) {
     const v = sh('gh', ['pr', 'view', String(j.prNumber), '--json', 'state,mergeable,statusCheckRollup,isDraft'], ROOT, { allowFail: true });
@@ -461,7 +476,7 @@ function managePrs(board, decisions, events) {
     const pr = JSON.parse(v.out);
     if (pr.state === 'MERGED') { j.status = 'merged'; log(board, j, 'merged'); cleanup(j); continue; }
     if (pr.state === 'CLOSED') { j.status = 'closed'; log(board, j, 'closed'); cleanup(j); continue; }
-    const checks = pr.statusCheckRollup || [];
+    const checks = latestChecks(pr.statusCheckRollup || []);
     // CheckRun carries status/conclusion; a legacy StatusContext carries state.
     const pending = checks.some((c) => (c.status ? c.status !== 'COMPLETED' : ['PENDING', 'EXPECTED'].includes(c.state)));
     const failed = checks.filter((c) => (c.status ? !['SUCCESS', 'NEUTRAL', 'SKIPPED'].includes(c.conclusion) : ['FAILURE', 'ERROR'].includes(c.state)));
