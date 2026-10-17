@@ -1,0 +1,11 @@
+$ npm run check:figures   (repo HEAD 944c3b63, 2026-10-10T15:24:54.683Z)
+
+✗ Figure gate failed with 6 finding(s):
+
+  - EFMP-303 Unit 1 (docs/semester-2/efmp-303/unit-01): unit has a concept-map / flowchart / timeline planned but none placed - Art. III.10 schematic requirement is a floor on rendered output, not on intent
+  - EFMP-303 Unit 2 (docs/semester-2/efmp-303/unit-02): unit has a concept-map / flowchart / timeline planned but none placed - Art. III.10 schematic requirement is a floor on rendered output, not on intent
+  - EFMP-303 Unit 3 (docs/semester-2/efmp-303/unit-03): unit has a concept-map / flowchart / timeline planned but none placed - Art. III.10 schematic requirement is a floor on rendered output, not on intent
+  - EFMP-303 Unit 4 (docs/semester-2/efmp-303/unit-04): unit has a concept-map / flowchart / timeline planned but none placed - Art. III.10 schematic requirement is a floor on rendered output, not on intent
+  - EFMP-303 Unit 5 (docs/semester-2/efmp-303/unit-05): unit has a concept-map / flowchart / timeline planned but none placed - Art. III.10 schematic requirement is a floor on rendered output, not on intent
+  - EFMP-303 Unit 6 (docs/semester-2/efmp-303/unit-06): unit has a concept-map / flowchart / timeline planned but none placed - Art. III.10 schematic requirement is a floor on rendered output, not on intent
+exit_code=1
