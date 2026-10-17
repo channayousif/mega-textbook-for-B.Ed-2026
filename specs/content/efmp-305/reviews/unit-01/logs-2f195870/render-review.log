@@ -1,0 +1,6 @@
+Render inspection completed for EFMP-305 Unit 1 (en).
+- Desktop 1280x900: 5 pages inspected in English (index, topic-01, topic-02, unit-assessment, unit-teacher-notes). 0 broken images, 0 missing alts, no skipped heading levels.
+- Narrow 360x780: docHorizontalOverflow=0px across all 5 pages. Tables fit or scroll within containers cleanly (display: block; overflow-x: auto).
+- A4 Print 794px: clippedElems=0 across all 5 pages. Handouts, answers, and rubrics unclipped.
+- Placed figures: All 4 figures (fig-U1-1 through fig-U1-4) placed as <Figure> carriers in topics with valid SVGs under static/img/figures/efmp-305/unit-01/. Text geometry verified clean with scripts/measure-figure-text.mjs.
+- Inspection exit code: 0 for DOM, viewport rendering, and placed figure assets.
