@@ -50,6 +50,7 @@ intake; G2 cleared by deterministic gates.
 | Unit 3 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-03/G2/20261013T123703920Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | awaiting CurriculumOwner |
+| Unit 3 | G3 en-review | ▢ | | Advisory **escalate**: `specs/content/efmp-304/reviews/unit-03/G3/crew-efmp-304-u03-g3-r65d2428e.json`; limitations and follow-up: `specs/content/efmp-304/reviews/unit-03/G3/continuation-summary.md`. Render inspection, provenance and source support remain unresolved. CurriculumOwner to arrange follow-up; no G3 sign-off. |
 | Unit 3 | G4 ur-translation | ▢ | | filed as a follow-up to TEX-23 |
 | Unit 3 | G5 ur-review | ▢ | | |
 | Unit 3 | G6 assets | ✅ | auto:gates | 8 schematics placed; banner `fig-U3-9` prompt-only, raster handoff pending |
