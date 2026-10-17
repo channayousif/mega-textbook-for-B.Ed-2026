@@ -5,30 +5,65 @@ on:
     branches: [main]
   pull_request:
 
-# Every run of this workflow talks to the SAME Supabase project: `test:rls` and
-# `test:e2e` both create real users, classes and submissions there. Two runs in
-# flight at once therefore race on shared rows - which is exactly how three
-# overlapping runs (two `main` pushes plus a PR) collided on the RLS suite's
-# fixture join codes and left stranded classes behind, taking `main` red until
-# they were purged by hand.
+# Two jobs talk to the SAME Supabase project: `rls` (test:rls) and `e2e` both
+# create real users, classes and submissions there. Two of them in flight at once
+# race on shared rows - which is exactly how three overlapping runs (two `main`
+# pushes plus a PR) collided on the RLS suite's fixture join codes and left
+# stranded classes behind, taking `main` red until they were purged by hand.
 #
-# Serialize on one group so a second run queues instead of racing - and use
-# `queue: max` so that it genuinely queues. The default, `queue: single`, holds
-# at most ONE pending run and cancels it the moment a third run joins the
-# group. On 2026-09-14 that silently dropped main's run for 18adacc when a PR
-# push landed behind it, leaving a merge commit with no CI verdict at all and
+# So those two jobs, and only those two, serialize on one group with `queue: max`
+# so a second one genuinely queues. The default, `queue: single`, holds at most
+# ONE pending entry and cancels it the moment a third joins the group. On
+# 2026-09-14 that silently dropped main's run for 18adacc when a PR push landed
+# behind it, leaving a merge commit with no CI verdict at all and
 # scripts/deploy-prod.sh holding that SHA forever. `queue: max` keeps up to 100
-# runs waiting in FIFO order instead, so nothing is dropped.
+# waiting in FIFO order instead, so nothing is dropped.
 #
 # `cancel-in-progress` is deliberately absent, not merely false: it cannot be
 # combined with queueing, and cancelling mid-suite is what strands fixture rows
-# in the first place. A queued run waits rather than killing the one holding
+# in the first place. A queued job waits rather than killing the one holding
 # the database.
-concurrency:
-  group: shared-supabase
-  queue: max
+#
+# Content fast lane (owner, 2026-10-17). The group used to sit on the whole
+# workflow, so every crew content PR waited ~20 min per run behind every other
+# run: 23 runs deep, about 7 hours. `build` (every content gate, unit tests and
+# the two-locale build) touches no database, so it now runs outside the group
+# and in parallel. A PR whose files are ALL content (see `changes`) skips `rls`
+# and `e2e`; a skipped job does not fail the run. Every push to `main` still
+# runs everything, so scripts/deploy-prod.sh, which deploys only a main SHA whose
+# ci.yml run succeeded, is gated exactly as before. `e2e` reuses `build`'s
+# output instead of rebuilding while it holds the database.
 
 jobs:
+  # Decides whether this run needs the Supabase suites. Content-only means every
+  # changed file is course content, its Urdu mirror, figures, specs or records;
+  # anything else (src/, scripts/, config, catalog, supabase/, workflows,
+  # package files, UI translations) runs the full suite.
+  changes:
+    runs-on: ubuntu-latest
+    outputs:
+      app: ${{ steps.classify.outputs.app }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - id: classify
+        env:
+          EVENT: ${{ github.event_name }}
+          BASE: ${{ github.event.pull_request.base.sha }}
+          HEAD: ${{ github.event.pull_request.head.sha }}
+        run: |
+          if [ "$EVENT" != "pull_request" ]; then echo "app=true" >> "$GITHUB_OUTPUT"; exit 0; fi
+          content='^(docs|licence|guides|history|specs)/|^i18n/[^/]+/docusaurus-plugin-content-docs[^/]*/|^static/img/figures/'
+          other=$(git diff --name-only "$BASE...$HEAD" | grep -Ev "$content" || true)
+          if [ -n "$other" ]; then
+            echo "app=true" >> "$GITHUB_OUTPUT"
+            { echo "Full suite: non-content files changed:"; echo "$other" | head -20; } >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "app=false" >> "$GITHUB_OUTPUT"
+            echo "Content-only PR: rls and e2e skipped (they run on the main push)." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
   build:
     runs-on: ubuntu-latest
     steps:
@@ -139,6 +174,14 @@ jobs:
           DOCUSAURUS_SUPABASE_ANON_KEY: ${{ secrets.DOCUSAURUS_SUPABASE_ANON_KEY }}
         run: npm run build
 
+      # e2e serves this exact build rather than rebuilding while it holds the database.
+      - name: Keep the build for e2e
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-build
+          path: build/
+          retention-days: 1
+
       # No answer keys leaked into the built output either (T028)
       - name: Answer-key safety check (built output)
         run: npm run check:no-answer-keys
@@ -147,6 +190,25 @@ jobs:
       # Constitution Art. V.1) — release-blocking if it ever does.
       - name: Service-role key safety check
         run: npm run check:no-service-key
+
+      # Lighthouse budget: a11y ≥ 0.9, FCP < 2.5s Slow-4G, total weight budget (SC-002, T038).
+      - name: Lighthouse CI
+        run: npx --yes @lhci/cli@0.14.x autorun || echo "::warning::Lighthouse budget not met"
+
+  rls:
+    needs: changes
+    if: needs.changes.outputs.app == 'true'
+    runs-on: ubuntu-latest
+    concurrency:
+      group: shared-supabase
+      queue: max
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
 
       # Spec 002 SC-004 evidence — the RLS access-control matrix. Negative
       # cases are mandatory; treat a missing/skipped one as a failing gate,
@@ -159,10 +221,6 @@ jobs:
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: npm run test:rls
 
-      # Lighthouse budget: a11y ≥ 0.9, FCP < 2.5s Slow-4G, total weight budget (SC-002, T038).
-      - name: Lighthouse CI
-        run: npx --yes @lhci/cli@0.14.x autorun || echo "::warning::Lighthouse budget not met"
-
   e2e:
     # Browser e2e (T012/T022/T023/T027, plus Spec 002's auth-*.spec.ts) — needs
     # a real build + browser host deps, which the sandbox lacks; GitHub Actions
@@ -172,7 +230,11 @@ jobs:
     # rather than fail, so a missing secret silently drops coverage instead of
     # loudly breaking the build. Watch the job summary for skip counts.
     runs-on: ubuntu-latest
-    needs: build
+    needs: [changes, build]
+    if: needs.changes.outputs.app == 'true'
+    concurrency:
+      group: shared-supabase
+      queue: max
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -180,12 +242,11 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npm run validate:content
-      - name: Build
-        env:
-          DOCUSAURUS_SUPABASE_URL: ${{ secrets.DOCUSAURUS_SUPABASE_URL }}
-          DOCUSAURUS_SUPABASE_ANON_KEY: ${{ secrets.DOCUSAURUS_SUPABASE_ANON_KEY }}
-        run: npm run build
+      - name: Use the build job's output
+        uses: actions/download-artifact@v4
+        with:
+          name: site-build
+          path: build/
       - name: Install Playwright + browser deps
         run: npx playwright install --with-deps chromium
       - name: Run e2e (against served build)
