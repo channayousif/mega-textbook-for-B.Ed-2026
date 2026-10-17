@@ -84,8 +84,8 @@ open-access source bound against a declared floor of one. G1 unit-spec affirmed 
 | Unit 5 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
 | Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-05/G2/20261013T123711781Z-gates.json |
 | Unit 5 | G3 en-review | ▣ | | agent G3 (Reviewer, agy Gemini, run 501d802f) **pass**, zero findings: `specs/content/efmp-304/reviews/unit-05/G3/agent-g3-efmp-304-u5-run501d802f.json` (PR #126, TEX-45). Row stays open: agent evidence cannot close it (ADR-0019) |
-| Unit 5 | G4 ur-translation | ▣ | | Urdu mirror complete (BilingualAuthor, TEX-38, PR #118, through `0749027b`); reflective-practice terms owner-banked 2026-10-11 (D-2026-0067). `translation_status` stays draft pending certification |
-| Unit 5 | G5 ur-review | ▣ | | agent G5 (Reviewer, agy Gemini, run 36f939d6) **pass**, 3 advisories: `specs/content/efmp-304/reviews/unit-05/G5/agent-g5-efmp-304-u5-run36f939d6.json` (PR #132, TEX-46). Row stays open (ADR-0019) |
+| Unit 5 | G4 ur-translation | ✅ | auto:gates | full UR mirror (6 files; BilingualAuthor, TEX-38, PR #118) completed 2026-10-17 by the crew translate job: 8 `.ur.svg` label variants authored, measured and wired (`fig-U5-1…8`, closes G5 advisory F3), `blooms_summary` translated, `Topic`/`Unit` labels set to موضوع/یونٹ; check:content 13/13 pass and parity/figures/key_terms clean under a temporary `reviewed` flip (reverted). `translation_status` stays draft pending G5 |
+| Unit 5 | G5 ur-review | ▣ | | agent G5 (Reviewer, agy Gemini, run 36f939d6) **pass**, 3 advisories: `specs/content/efmp-304/reviews/unit-05/G5/agent-g5-efmp-304-u5-run36f939d6.json` (PR #132, TEX-46). Row stays open (ADR-0019). The Urdu mirror changed on 2026-10-17 (G4 completion: `.ur.svg` figures, translated `blooms_summary`, موضوع/یونٹ labels), so this run's inputs are stale and a fresh G5 is needed |
 | Unit 5 | G6 assets | ✅ | auto:gates | 8 schematics placed; dark variants derived |
 | Unit 5 | G7 publish | ▢ | | |
 
