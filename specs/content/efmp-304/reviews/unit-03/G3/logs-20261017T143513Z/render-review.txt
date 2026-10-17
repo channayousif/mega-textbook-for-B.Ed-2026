@@ -1,0 +1,12 @@
+Render inspection not performed.
+
+Reason: The crew job constraint (brief.md) prohibits running `npm run build` or a dev server.
+The render-review command requires a built/serving site to inspect rendered pages at
+narrow viewport (360px) and A4 print emulation. Neither is available under the constraint.
+
+Structural accessibility checks were performed from source instead:
+- All eight figures have descriptive alt text in the manifest and <Figure> carriers.
+- Heading hierarchy is correct (H1 per topic, H2 for major sections, H3 for sub-patterns).
+- Further reading links use descriptive text, not bare URLs.
+
+A separate render inspection is recommended before publication.

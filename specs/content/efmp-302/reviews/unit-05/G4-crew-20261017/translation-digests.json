@@ -1,0 +1,29 @@
+{
+  "english_commit": "65d2428e170574f474b50d20cefdf722ef389d19",
+  "purpose": "Translator handoff identity only; no review or signing authority",
+  "files": {
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-05/index.mdx": "e4ba2c009364cda7efedb18b1ea36a8d85396d92fc9741ca1d298052f45ccfa2",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-05/topic-01.mdx": "5038ab05b9b9fb0b7019c0532f2857525d0560d2311905cfd74d86b1e61e88db",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-05/topic-02.mdx": "a77c8eb66a4916a0231cf198032fd20f6d9172c6876a4ddc39638e5b2991bd1d",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-05/topic-03.mdx": "5c922a32dea632290074d623f86ce10233c5dcbdb677fa61d75cb022c38ff089",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-05/topic-04.mdx": "c1f4be2562f35b9ab531845a19e6b1dd53539e3e4020ea9ce1b60e80227694bd",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-05/unit-assessment.mdx": "cf14d6ecdeb137fce2ebc7aa0016fd698209d2de62e4d02ed87b329a88a1bfce",
+    "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-302/unit-05/unit-teacher-notes.mdx": "b3b2e09efc74324d6b6cfbd061f91c1512ee2e44255298048516836b4ab7e651",
+    "static/img/figures/efmp-302/unit-05/fig-U5-1.ur.dark.svg": "f7e2404616fce204c171bc0f694a5ed46ea56aa9c8ac9a454541b2b775fa3c38",
+    "static/img/figures/efmp-302/unit-05/fig-U5-1.ur.svg": "e4b56f877418181d06889edb4c5b27003f9f3c2eb151fa0c2aea0e5168897b33",
+    "static/img/figures/efmp-302/unit-05/fig-U5-2.ur.dark.svg": "77e1d6f14de5e91e11fcaf46a6319647621c755565459d1fe661b985b2226209",
+    "static/img/figures/efmp-302/unit-05/fig-U5-2.ur.svg": "43d2f1eaae0109de0dad0bbd80873960087f8f0b4be60b2fe97e1e6b66b78d3f",
+    "static/img/figures/efmp-302/unit-05/fig-U5-3.ur.dark.svg": "11484783c2f8d8065097c3bb27412e3f687019e684d73ce132e6fcdcd6e36ebb",
+    "static/img/figures/efmp-302/unit-05/fig-U5-3.ur.svg": "93f408214c649c94b1073d6c22c328b26a19efb710842705863d4c7d44e6717d",
+    "static/img/figures/efmp-302/unit-05/fig-U5-4.ur.dark.svg": "2da2676d1bd3e731f666a7869a48356d17a3290c4a3a0d13e3d0212cf2c79384",
+    "static/img/figures/efmp-302/unit-05/fig-U5-4.ur.svg": "9f04a0ab5aaeae384cc18183a6056f5edc02d79620f3d9ad7b1467fd6b513b62",
+    "static/img/figures/efmp-302/unit-05/fig-U5-5.ur.dark.svg": "12e591820730e95927814e693a49621d3a9ec6060e7a941c687c4b73927a8e18",
+    "static/img/figures/efmp-302/unit-05/fig-U5-5.ur.svg": "a04c6f2ae75a4566c296e2813cd95eea3acb9024f4b2d1c6e42b3dcb0f0e0093",
+    "static/img/figures/efmp-302/unit-05/fig-U5-6.ur.dark.svg": "96df157b6dd56f2ab5394511a784887ff26378892a3c671d7b5d0f2118e1dccc",
+    "static/img/figures/efmp-302/unit-05/fig-U5-6.ur.svg": "24fd0db0a12f96ee83e31ae1ebc9d7883d116b54008af30b5fe26cb291b163dc",
+    "static/img/figures/efmp-302/unit-05/fig-U5-7.ur.dark.svg": "c87f952192f5c331600d31a85ad13a4808fd0144a6bc387bd387be83d5f77300",
+    "static/img/figures/efmp-302/unit-05/fig-U5-7.ur.svg": "23d896472c4e564cc344b55c738b425cf6e4ce842cee4f47e0dde48586d2a1d1",
+    "static/img/figures/efmp-302/unit-05/fig-U5-8.ur.dark.svg": "e44edb97031aee63512fc54789a1ffd52c6bb3520aa98e4bce9ccdc51023b492",
+    "static/img/figures/efmp-302/unit-05/fig-U5-8.ur.svg": "a0f2cb161b130e9c672876acdfe6875e2a50e6c929312405f50486f877923768"
+  }
+}
