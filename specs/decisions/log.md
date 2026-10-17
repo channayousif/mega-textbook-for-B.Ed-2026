@@ -2151,64 +2151,6 @@ this decision; a `pass` restores the provisional tier only, because `acceptProvi
 still skips the signed reviewer registry, and an `escalate` sends the unit to the
 content-improvement loop with no further cycle.
 
-## D-2026-0053 - Semester 2 intake: owner rulings on the G0/G1 escalations
-
-- **Status:** confirmed
-- **Gate:** G0 (course intake) and G1 (unit-spec)
-- **Scope:** Semester 2 courses EFMP-305, EFMP-303, GQUR-301, GENG-301, GSOS-301, GPKS-402; the
-  gaps those six intakes raised (`D-2026-0047` to `D-2026-0052`, gaps `G-2026-72` to `G-2026-100`,
-  recorded on the TEX-39 to TEX-44 branches)
-- **Decided by:** curriculum owner, 2026-10-10 (board-direct, relayed through Claude Code)
-- **Decision:**
-  1. **Unit partition.** Each spec's proposed grouping of the guide's week table into units is
-     confirmed as drafted: `G-2026-77` (EFMP-303), `G-2026-82` (GQUR-301), `G-2026-88`
-     (GENG-301 week split), `G-2026-92` (GSOS-301, including the Week 14/15 Unit 6 merge) and
-     `G-2026-97` (GPKS-402). Where a guide carries a week table, the unit's weeks follow that
-     table; the grouping is confirmed, not any week calendar that contradicts the guide
-     (`G-2026-78` resolves to the guide's own 16-week table).
-  2. **Readings.** Where a guide gives no reading list, only print monographs, or an ambiguous
-     entry, the author may bind verified real works chosen for relevance to the course outcomes,
-     labelled as author-selected rather than guide-required; every unit must bind at least one
-     open-access source, declared in the spec front matter as the mapping form
-     `open_access_floor:` / `  default: 1` (the form `check:source-floor` reads; a bare
-     `open_access_floor: 1` is not enforced). Resolves `G-2026-73`, `G-2026-79`,
-     `G-2026-89`, `G-2026-93`, `G-2026-94`, `G-2026-98`. Unresolvable or misattributed entries
-     the intakes named must still be corrected; this ruling does not validate them.
-  3. **EFMP-305 credit hours.** **3 (3-0)**, theory. The revised Scheme and the catalog govern;
-     the guide's `03 (0-3)` is treated as a guide-side slip. Resolves `G-2026-72`.
-  4. **Sub-topics derived from outcomes and readings.** A guide often lists only broad topics and
-     a reading list. The author may derive sub-topics, checklist rows and SLO wording from
-     relevance to the guide's course outcomes and its referred reading material. Such an
-     addition is permitted when its row names the outcome or reading it derives from. Resolves
-     `G-2026-74`, `G-2026-83`, `G-2026-87`, `G-2026-99`.
-  5. **GPKS-402 Units 1-2.** Withdrawn. They were authored before intake and will be re-authored
-     after the spec is approved. Resolves `G-2026-100`.
-  6. **EFMP-305 assessment split.** **40 formative / 60 summative.** The spec's "80 summative /
-     20 formative" label is replaced; the spec's assessment section and the course overview (EN
-     and UR) must state 40/60. Resolves `G-2026-75`.
-  7. **EFMP-305 Unit 5 disability statute.** The guide's "Rights of Persons with Disabilities Act
-     (2018)" is taught as the **Sindh Empowerment of Persons with Disabilities Act, 2018** (the
-     law in force for Sindh teachers), with a short comparison to the federal ICT Rights of Persons
-     with Disabilities Act, 2020. Resolves `G-2026-102` (raised by `D-2026-0054`).
-- **Not ruled:** `G-2026-76` and `G-2026-90`
-  (tracker G1 claims) are author repairs; `G-2026-91` (depth-gate Topic column) is a tooling item.
-- **Limits:** This decision approves no specification. Each spec still needs the author repairs
-  its intake listed, then a fresh intake on a newly prepared manifest, before it may move to
-  `status: approved`. It certifies no content and qualifies no reviewer.
-
----
-
-## D-2026-0067 - EFMP-304 Units 4-6: reflective-practice Urdu terms banked; concept-label collision resolved
-
-- **Status:** confirmed (owner, 2026-10-11)
-- **Gate:** G4 ur-translation / G5 ur-review (terminology)
-- **Scope:** EFMP-304 Units 4-6 Urdu mirror (TEX-38, PR #118) and its G5 review (TEX-46, PR #132); raised by BilingualAuthor in TEX-47 and as advisories F1/F2 in the G5 reports.
-- **Decided by:** owner (M Yousif Channa), via board session, 2026-10-11
-- **Decision:**
-  1. **Concept-label collision resolved.** `CON:EFMP-304-4-2` Reflective process = `تاملی عمل`; `CON:EFMP-304-4-3` Reflective practice = `تاملی مشق`. `specs/content/efmp-304/concepts/unit-04.md` updated to match; Topic 4.1 depends on the two being distinct.
-  2. **Ten terms banked in `specs/content/terminology.csv`, as proposed:** Reflective Thinking `تاملی سوچ`, Reflective Process `تاملی عمل`, Reflective Practice `تاملی مشق`, Reflective Journal `تاملی جریدہ`, Reflective Cycle `تاملی چکر`, Descriptive Writing `بیانیہ تحریر`, Reflective Writing `تاملی تحریر`, Technical Reflection `فنی تامل`, Contextual Reflection `سیاقی تامل`, Dialectical Reflection `جدلیاتی تامل`. Later translators reuse these; the existing `Reflective Decision Making` entry is unchanged.
-  3. **Follow-ups scheduled, not fixed in place:** the two English defects in Unit 6 (`topic-03.mdx` "did not understood"; `unit-assessment.mdx` RRQ 5 question/answer mismatch) go through `revise-topic` with fresh G2/G3/G5, because editing reviewed files would invalidate the bound evidence. EFMP-304 `.ur.svg` figure variants are scheduled as a BilingualAuthor task after the Semester 2 courses.
-- **Consequences:** G3/G4/G5 tracker rows for Units 4-6 record the agent passes as `▣` and stay open (ADR-0019); `translation_status` stays `draft`. Unit 4 G2 evidence regenerated because its concept table is a bound input.
 ---
 
 ## D-2026-0047 - EFMP-305 intake: partition (with the guide's Unit 6 week slip), guide-anchored coverage, outcomes, blueprint and residue approved; identity, readings, three additions and structure not approved
@@ -2330,6 +2272,55 @@ content-improvement loop with no further cycle.
     entry does not make them true.
   - Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
 
+---
+
+## D-2026-0053 - Semester 2 intake: owner rulings on the G0/G1 escalations
+
+- **Status:** confirmed
+- **Gate:** G0 (course intake) and G1 (unit-spec)
+- **Scope:** Semester 2 courses EFMP-305, EFMP-303, GQUR-301, GENG-301, GSOS-301, GPKS-402; the
+  gaps those six intakes raised (`D-2026-0047` to `D-2026-0052`, gaps `G-2026-72` to `G-2026-100`,
+  recorded on the TEX-39 to TEX-44 branches)
+- **Decided by:** curriculum owner, 2026-10-10 (board-direct, relayed through Claude Code)
+- **Decision:**
+  1. **Unit partition.** Each spec's proposed grouping of the guide's week table into units is
+     confirmed as drafted: `G-2026-77` (EFMP-303), `G-2026-82` (GQUR-301), `G-2026-88`
+     (GENG-301 week split), `G-2026-92` (GSOS-301, including the Week 14/15 Unit 6 merge) and
+     `G-2026-97` (GPKS-402). Where a guide carries a week table, the unit's weeks follow that
+     table; the grouping is confirmed, not any week calendar that contradicts the guide
+     (`G-2026-78` resolves to the guide's own 16-week table).
+  2. **Readings.** Where a guide gives no reading list, only print monographs, or an ambiguous
+     entry, the author may bind verified real works chosen for relevance to the course outcomes,
+     labelled as author-selected rather than guide-required; every unit must bind at least one
+     open-access source, declared in the spec front matter as the mapping form
+     `open_access_floor:` / `  default: 1` (the form `check:source-floor` reads; a bare
+     `open_access_floor: 1` is not enforced). Resolves `G-2026-73`, `G-2026-79`,
+     `G-2026-89`, `G-2026-93`, `G-2026-94`, `G-2026-98`. Unresolvable or misattributed entries
+     the intakes named must still be corrected; this ruling does not validate them.
+  3. **EFMP-305 credit hours.** **3 (3-0)**, theory. The revised Scheme and the catalog govern;
+     the guide's `03 (0-3)` is treated as a guide-side slip. Resolves `G-2026-72`.
+  4. **Sub-topics derived from outcomes and readings.** A guide often lists only broad topics and
+     a reading list. The author may derive sub-topics, checklist rows and SLO wording from
+     relevance to the guide's course outcomes and its referred reading material. Such an
+     addition is permitted when its row names the outcome or reading it derives from. Resolves
+     `G-2026-74`, `G-2026-83`, `G-2026-87`, `G-2026-99`.
+  5. **GPKS-402 Units 1-2.** Withdrawn. They were authored before intake and will be re-authored
+     after the spec is approved. Resolves `G-2026-100`.
+  6. **EFMP-305 assessment split.** **40 formative / 60 summative.** The spec's "80 summative /
+     20 formative" label is replaced; the spec's assessment section and the course overview (EN
+     and UR) must state 40/60. Resolves `G-2026-75`.
+  7. **EFMP-305 Unit 5 disability statute.** The guide's "Rights of Persons with Disabilities Act
+     (2018)" is taught as the **Sindh Empowerment of Persons with Disabilities Act, 2018** (the
+     law in force for Sindh teachers), with a short comparison to the federal ICT Rights of Persons
+     with Disabilities Act, 2020. Resolves `G-2026-102` (raised by `D-2026-0054`).
+- **Not ruled:** `G-2026-76` and `G-2026-90`
+  (tracker G1 claims) are author repairs; `G-2026-91` (depth-gate Topic column) is a tooling item.
+- **Limits:** This decision approves no specification. Each spec still needs the author repairs
+  its intake listed, then a fresh intake on a newly prepared manifest, before it may move to
+  `status: approved`. It certifies no content and qualifies no reviewer.
+
+---
+
 ## D-2026-0054 - EFMP-305 re-intake after repair: identity, partition, coverage, outcomes, blueprint and residue approved; readings escalated (G-2026-102); structure not approved (author repairs outstanding)
 
 - **Status:** pending-owner-review
@@ -2378,6 +2369,8 @@ content-improvement loop with no further cycle.
     `:211-221`) and `:140-141` (guide does name the statute, `:282`).
   - The spec may not move to `status: approved` on this entry.
   - Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
+
+---
 
 ## D-2026-0065 - EFMP-305 third intake: all eight G0/G1 criteria approved; the spec is a faithful derivation of the guide under the confirmed owner rulings
 
@@ -2442,3 +2435,17 @@ content-improvement loop with no further cycle.
   - Unit 4 and Unit 6 open-access floor sources and the U5-4 teacher-attitude study are G2
     binding obligations the spec itself records; an unmet floor is a G2 escalation.
   - Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
+
+---
+
+## D-2026-0067 - EFMP-304 Units 4-6: reflective-practice Urdu terms banked; concept-label collision resolved
+
+- **Status:** confirmed (owner, 2026-10-11)
+- **Gate:** G4 ur-translation / G5 ur-review (terminology)
+- **Scope:** EFMP-304 Units 4-6 Urdu mirror (TEX-38, PR #118) and its G5 review (TEX-46, PR #132); raised by BilingualAuthor in TEX-47 and as advisories F1/F2 in the G5 reports.
+- **Decided by:** owner (M Yousif Channa), via board session, 2026-10-11
+- **Decision:**
+  1. **Concept-label collision resolved.** `CON:EFMP-304-4-2` Reflective process = `تاملی عمل`; `CON:EFMP-304-4-3` Reflective practice = `تاملی مشق`. `specs/content/efmp-304/concepts/unit-04.md` updated to match; Topic 4.1 depends on the two being distinct.
+  2. **Ten terms banked in `specs/content/terminology.csv`, as proposed:** Reflective Thinking `تاملی سوچ`, Reflective Process `تاملی عمل`, Reflective Practice `تاملی مشق`, Reflective Journal `تاملی جریدہ`, Reflective Cycle `تاملی چکر`, Descriptive Writing `بیانیہ تحریر`, Reflective Writing `تاملی تحریر`, Technical Reflection `فنی تامل`, Contextual Reflection `سیاقی تامل`, Dialectical Reflection `جدلیاتی تامل`. Later translators reuse these; the existing `Reflective Decision Making` entry is unchanged.
+  3. **Follow-ups scheduled, not fixed in place:** the two English defects in Unit 6 (`topic-03.mdx` "did not understood"; `unit-assessment.mdx` RRQ 5 question/answer mismatch) go through `revise-topic` with fresh G2/G3/G5, because editing reviewed files would invalidate the bound evidence. EFMP-304 `.ur.svg` figure variants are scheduled as a BilingualAuthor task after the Semester 2 courses.
+- **Consequences:** G3/G4/G5 tracker rows for Units 4-6 record the agent passes as `▣` and stay open (ADR-0019); `translation_status` stays `draft`. Unit 4 G2 evidence regenerated because its concept table is a bound input.
