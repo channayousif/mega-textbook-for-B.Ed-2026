@@ -2307,7 +2307,7 @@ content-improvement loop with no further cycle.
 - **Gate:** G0 intake / G1 unit-spec
 - **Scope:** GPKS-402 Pakistan Studies, all six units
 - **Decided by:** agent:evaluator, 2026-10-17
-- **Decision:** approve all eight intake criteria — identity, partition, coverage, outcomes,
+- **Decision:** approve all eight intake criteria - identity, partition, coverage, outcomes,
   readings, blueprint, structure, decision-residue. The three escalations the prior intake
   (`D-2026-0052`) raised (`G-2026-97` partition, `G-2026-98` readings, `G-2026-99` outcomes)
   were resolved by the confirmed owner ruling `D-2026-0053` (2026-10-10); this intake verifies
@@ -2329,10 +2329,10 @@ content-improvement loop with no further cycle.
   with `manifestFor()`, zero path/digest mismatches; registers `specs/decisions/log.md`
   `84ba9cd8...` and `specs/gaps.md` `1d14ea0e...` recorded at read time). A change to any bound
   input voids this approval (Art. VII.8.5).
-- **Limits:** approves the *specification*, not any content — no units are authored, none
+- **Limits:** approves the *specification*, not any content - no units are authored, none
   certified, no reviewer qualified, no publication authorised. Three reading-list Units-column
   cross-references remain imprecise (`pak-constitution-1973` mapped by Unit 1, `hamid-khan-const`
-  by Unit 2, `hec-pak-studies` by Unit 4, against the reading-list Units column) — advisory for
+  by Unit 2, `hec-pak-studies` by Unit 4, against the reading-list Units column) - advisory for
   author alignment, not a criterion defect and not escalated. `status: approved` awaits owner
   confirmation of this entry; until then no unit may be authored (FR-002/FR-016b). Supersedes
   the stale `D-2026-0052` on the repaired spec.

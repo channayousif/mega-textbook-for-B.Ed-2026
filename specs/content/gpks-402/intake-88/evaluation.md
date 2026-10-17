@@ -31,11 +31,11 @@
 | check:bloom-bands | 0 | none (750 items) |
 | check:concept-graph | 0 | none |
 | check:depth-gate | 0 | none (concept coverage, required blocks, formative floor, reading-min band, coverage↔sources) |
-| check:source-floor | 0 | floor met — `open_access_floor: default: 1` declared; every unit binds >= 1 open-access source |
+| check:source-floor | 0 | floor met - `open_access_floor: default: 1` declared; every unit binds >= 1 open-access source |
 | check:no-answer-keys | 0 | none |
 | check:docs-sync | 0 | none (no authored units in scope) |
 
-`check:pipeline-gate` and `check:figures` are not evaluable here — they run against authored
+`check:pipeline-gate` and `check:figures` are not evaluable here - they run against authored
 `docs/`, and no units are authored yet (Units 1-2 were withdrawn under `D-2026-0053`; all
 other units await this approval). Their Sem-1 failures belong to EFMP-301/302 and are
 unrelated to this spec.
@@ -105,12 +105,12 @@ material. No added outcome lacks a guide ancestor.
 
 Guide "Recommended Readings" (lines 1143-1153): four entries, all transcribed, all resolvable
 to verified real works:
-- hec-pak-studies — HEC undergraduate Pakistan Studies curriculum (ambiguity noted: the
+- hec-pak-studies - HEC undergraduate Pakistan Studies curriculum (ambiguity noted: the
   title fits >1 HEC document; the spec binds the undergraduate-level scope document)
-- rabbani-pak-studies — Ikram Rabbani, *Pakistan Studies* (Caravan Book House)
-- hamid-khan-const — Hamid Khan, *Constitutional and Political History of Pakistan* (OUP
+- rabbani-pak-studies - Ikram Rabbani, *Pakistan Studies* (Caravan Book House)
+- hamid-khan-const - Hamid Khan, *Constitutional and Political History of Pakistan* (OUP
   Pakistan, 4th ed. ISBN 9780199060986)
-- burki-fifty-years — Shahid Javed Burki, *Pakistan: Fifty Years of Nationhood* (Westview,
+- burki-fifty-years - Shahid Javed Burki, *Pakistan: Fifty Years of Nationhood* (Westview,
   3rd ed. 1999 ISBN 9780813336213)
 
 The first is a print/HEC document; the rest are print monographs (`D-2026-0001` title-level
@@ -125,12 +125,12 @@ foreign-policy`, `goe-bloom`) are gone, replaced by the verified open-access ent
 the "fifty decades" note typo is repaired (reads "fifty years").
 
 **Advisory (not a criterion defect, for author cleanup):** three reading-list entries have a
-Units column that disagrees with the unit's `**Mapped readings**` line — `pak-constitution-
+Units column that disagrees with the unit's `**Mapped readings**` line - `pak-constitution-
 1973` (list says 3,4; Unit 1 maps it), `hamid-khan-const` (list says 3,4; Unit 2 maps it),
 `hec-pak-studies` (list says 1,2,3; Unit 4 maps it). The entries themselves are real and
 resolvable, so criterion 5 passes; the cross-reference is imprecise and the author should
 align the Units column with the per-unit mapped lists before unit authoring. Reported, not
-escalated — `G-2026-98` is already resolved by `D-2026-0053`.
+escalated - `G-2026-98` is already resolved by `D-2026-0053`.
 
 ### 6. blueprint - PASS (author repair confirmed)
 
