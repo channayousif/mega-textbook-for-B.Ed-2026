@@ -1,0 +1,33 @@
+
+> bed-mega-textbook@0.1.0 check:content
+> node scripts/run-gates.mjs content
+
+Running 13 content gates
+
+  validate:content        PASS  0.8s
+  check:pipeline-gate     FAIL  8.2s
+  check:depth-gate        PASS  0.6s
+  check:figures           PASS  1.1s
+  check:no-em-dash        PASS  0.5s
+  check:no-answer-keys    PASS  0.4s
+  check:concept-graph     PASS  0.3s
+  check:bloom-bands       PASS  0.3s
+  check:source-floor      PASS  0.4s
+  check:licence           PASS  0.6s
+  licence:map:check       PASS  0.4s
+  check:content-status    PASS  0.5s
+  check:docs-sync         PASS  0.4s
+
+============================================================
+check:pipeline-gate
+============================================================
+
+✗ Pipeline gate failed with 2 finding(s):
+
+  - EFMP-302 Unit 2 (docs/semester-1/efmp-302/unit-02): 'G4 ur-translation' row for Unit 2 is not done (status: '▢')
+  - EFMP-302 Unit 2 (docs/semester-1/efmp-302/unit-02): 'G5 ur-review' row for Unit 2 is not done (status: '▣')
+
+
+1 of 13 content gates failed: check:pipeline-gate.
+
+Probe exit: 1
