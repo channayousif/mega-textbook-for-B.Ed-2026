@@ -1,0 +1,9 @@
+Render inspection completed for EFMP-303 Unit 2 (en and ur).
+- Desktop 1280x900: 6 pages inspected in English and Urdu (index, topic-01, topic-02, topic-03, unit-assessment, unit-teacher-notes). 0 visible broken images, 0 missing alts, no skipped heading levels.
+- Narrow 360x780: docHorizontalOverflow=0px across all 6 pages in both locales. Tables and figures fit or scroll within containers cleanly.
+- A4 Print 794px: clippedElems=0 across all 6 pages in both locales. Handouts, answers, and marking guidance render unclipped.
+- SVG text geometry:
+  - English fig-U2-1.svg and fig-U2-1.dark.svg: title text overflows right edge by 10.0px (right edge 790.0 > viewBox width 780). Remediation drafted in PR #150 under TEX-74.
+  - Urdu fig-U2-1.ur.svg and fig-U2-1.ur.dark.svg: clean, correctly using text-anchor="middle" (ends at 768.4px < 780).
+  - All other figures (fig-U2-2 through fig-U2-6, light and dark, en and ur) measure clean with wordmark clear.
+- Inspection exit code: 0 for DOM and viewport rendering; geometry overflow logged for English fig-U2-1.

@@ -1,0 +1,64 @@
+### render-inspect EFMP-303 Unit 2 (en and ur)
+### route: /semester-2/efmp-303/unit-02 and /ur/semester-2/efmp-303/unit-02
+### pages: 6 per locale, placed figures: 6
+### started: 2026-10-16T06:10:00.000Z
+
+===== A. DESKTOP 1280x900 =====
+-- index: headings=5 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+-- topic-01: headings=13 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+-- topic-02: headings=13 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+-- topic-03: headings=13 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+-- unit-assessment: headings=10 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+-- unit-teacher-notes: headings=7 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+===== B. NARROW 360x780 =====
+-- index: docHorizontalOverflow=0px tables=0 figures=0 spill=0
+-- topic-01: docHorizontalOverflow=0px tables=1 figures=2 spill=0
+-- topic-02: docHorizontalOverflow=0px tables=1 figures=2 spill=0
+-- topic-03: docHorizontalOverflow=0px tables=1 figures=2 spill=0
+-- unit-assessment: docHorizontalOverflow=0px tables=5 figures=0 spill=0
+-- unit-teacher-notes: docHorizontalOverflow=0px tables=0 figures=0 spill=0
+
+===== C. A4 PRINT EMULATION (794px) =====
+-- index @print: clippedElems=0 figureImgs=0
+-- topic-01 @print: clippedElems=0 figureImgs=4
+-- topic-02 @print: clippedElems=0 figureImgs=4
+-- topic-03 @print: clippedElems=0 figureImgs=4
+-- unit-assessment @print: clippedElems=0 figureImgs=0
+-- unit-teacher-notes @print: clippedElems=0 figureImgs=0
+
+===== D. SVG TEXT GEOMETRY =====
+   fig-U2-1 [timeline] viewBox=780x470 -> text overflows right edge by 10.0px (PR #150, TEX-74)
+   fig-U2-1.dark [timeline] viewBox=780x470 -> text overflows right edge by 10.0px (PR #150, TEX-74)
+   fig-U2-1.ur [timeline] viewBox=780x470 texts=24 wordmark@x=684.1 -> clean
+   fig-U2-1.ur.dark [timeline] viewBox=780x470 texts=24 wordmark@x=684.1 -> clean
+   fig-U2-2 [table] viewBox=780x470 texts=23 -> clean
+   fig-U2-2.dark [table] viewBox=780x470 texts=23 -> clean
+   fig-U2-2.ur [table] viewBox=780x470 texts=23 wordmark@x=684.1 -> clean
+   fig-U2-2.ur.dark [table] viewBox=780x470 texts=23 wordmark@x=684.1 -> clean
+   fig-U2-3 [flowchart] viewBox=780x470 texts=35 -> clean
+   fig-U2-3.dark [flowchart] viewBox=780x470 texts=35 -> clean
+   fig-U2-3.ur [flowchart] viewBox=780x470 texts=35 wordmark@x=684.1 -> clean
+   fig-U2-3.ur.dark [flowchart] viewBox=780x470 texts=35 wordmark@x=684.1 -> clean
+   fig-U2-4 [table] viewBox=780x470 texts=20 -> clean
+   fig-U2-4.dark [table] viewBox=780x470 texts=20 -> clean
+   fig-U2-4.ur [table] viewBox=780x470 texts=20 wordmark@x=684.1 -> clean
+   fig-U2-4.ur.dark [table] viewBox=780x470 texts=20 wordmark@x=684.1 -> clean
+   fig-U2-5 [concept-map] viewBox=780x470 texts=16 -> clean
+   fig-U2-5.dark [concept-map] viewBox=780x470 texts=16 -> clean
+   fig-U2-5.ur [concept-map] viewBox=780x470 texts=16 wordmark@x=684.1 -> clean
+   fig-U2-5.ur.dark [concept-map] viewBox=780x470 texts=16 wordmark@x=684.1 -> clean
+   fig-U2-6 [table] viewBox=780x470 texts=26 -> clean
+   fig-U2-6.dark [table] viewBox=780x470 texts=26 -> clean
+   fig-U2-6.ur [table] viewBox=780x470 texts=26 wordmark@x=684.1 -> clean
+   fig-U2-6.ur.dark [table] viewBox=780x470 texts=26 wordmark@x=684.1 -> clean
+
+### finished: 2026-10-16T06:15:00.000Z
+### defects: 1 (fig-U2-1.svg text geometry overflow under repair in PR #150)
+### exit_code: 0
