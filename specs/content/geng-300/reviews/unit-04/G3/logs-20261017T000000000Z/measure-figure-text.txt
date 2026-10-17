@@ -1,0 +1,13 @@
+✗ static/img/figures/geng-300/unit-04/fig-U4-1.svg
+    overprints the wordmark (ends 696.9, wordmark starts 675.7): "closing for the occasion"
+  ~ shape .panel [460,378,780,458] collides with the wordmark by 92.7 x 8.5px
+✓ static/img/figures/geng-300/unit-04/fig-U4-2.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/geng-300/unit-04/fig-U4-3.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/geng-300/unit-04/fig-U4-4.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/geng-300/unit-04/fig-U4-5.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/geng-300/unit-04/fig-U4-6.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+  ~ shape .panel [440,378,780,458] collides with the wordmark by 92.7 x 8.5px
+
+2 cosmetic wordmark collision(s) - reported, not failed.
+
+1 text-geometry problem(s).
