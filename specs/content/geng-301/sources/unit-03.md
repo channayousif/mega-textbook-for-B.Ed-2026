@@ -7,6 +7,8 @@
 | axelrod2016 | Axelrod, R. B., & Cooper, C. R. (2016). *The St. Martin's guide to writing* (11th ed.). Bedford/St. Martin's. | no-external-source | U3-05, U3-06, U3-07: body paragraphs | print monograph |
 | williams2017 | Williams, J. M., & Bizup, J. (2017). *Style: Lessons in clarity and grace* (12th ed.). Pearson. | no-external-source | U3-08, U3-09: conclusions, cohesion | print monograph |
 
+| writing2015 | *Writing for Success*. (2015). University of Minnesota Libraries Publishing, chapter 9. | https://open.lib.umn.edu/writingforsuccess/ ; accessible chapter mirror: https://saylordotorg.github.io/text_writing-for-success/s13-writing-essays-from-start-to-f.html | U3-01 to U3-06: thesis, body paragraphs, organization and conclusions | open textbook; registry:OpenAlex https://openalex.org/W7206719389, verified 2026-10-17 (2015 title record, open repository location); publisher licence: CC BY-NC-SA |
+
 ## Unverifiable sources
 
 The following sources are print monographs recommended by the course guide. No open-access
