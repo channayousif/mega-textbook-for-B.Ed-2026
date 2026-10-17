@@ -1,5 +1,5 @@
 ---
-id: 0141-tex88-gpks402-fresh-g0-g1-intake
+id: 0160-tex88-gpks402-fresh-g0-g1-intake
 title: TEX-88 fresh G0/G1 intake for GPKS-402 before authoring
 stage: intake
 date: 2026-10-17

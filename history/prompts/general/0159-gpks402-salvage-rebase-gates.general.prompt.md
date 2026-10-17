@@ -18,7 +18,7 @@ links:
 files:
   - specs/decisions/log.md
   - specs/content/gpks-402/intake-88/evaluation.md
-  - history/prompts/general/0141-tex88-gpks402-fresh-g0-g1-intake.general.prompt.md
+  - history/prompts/general/0160-tex88-gpks402-fresh-g0-g1-intake.general.prompt.md
   - history/prompts/general/0159-gpks402-salvage-rebase-gates.general.prompt.md
 tests:
   - npm run check:content (13 of 13 gates pass after rebase)
@@ -38,7 +38,7 @@ GPKS-402 entries after it. All other branch files are byte-identical to the pre-
 First gate run failed on two gates: `check:no-em-dash` (8 em dashes in
 `specs/content/gpks-402/intake-88/evaluation.md`) and `check:content-status` (git-ignored
 `static/content-status.json` missing). Replaced the em dashes with spaced hyphens in the
-evaluation, in this branch's GPKS-402 decision-log entry and in PHR 0141 (the evaluation is the
+evaluation, in this branch's GPKS-402 decision-log entry and in PHR 0160 (formerly 0141) (the evaluation is the
 intake output, not a bound input in `intake-88/manifest.json`, so the manifest is unaffected);
 regenerated the status file with `npm run build:content-status`. Rerun: all 13 content gates pass.
 
@@ -46,7 +46,7 @@ regenerated the status file with `npm run build:content-status`. Rerun: all 13 c
 
 - ✅ Impact: branch is current with main and gate-clean; ready for the crew lead to push and PR.
 - 🧪 Tests: `npm run check:content` exit 0.
-- 📁 Files: decisions log (conflict resolution and em dashes), intake-88 evaluation, PHR 0141.
+- 📁 Files: decisions log (conflict resolution and em dashes), intake-88 evaluation, PHR 0160 (formerly 0141).
 - 🔁 Next prompts: owner confirms the GPKS-402 intake decision; renumber the decision ID first (see below).
 - 🧠 Reflection: the host disk was at 99% during the rebase and the final pick failed writing the
   index; it was recovered by re-committing the PHR with the original message.
@@ -57,7 +57,7 @@ regenerated the status file with `npm run build:content-status`. Rerun: all 13 c
 - Decisions the team must respect: the branch's GPKS-402 fresh-intake entry is headed
   `D-2026-0068`, but main already uses `D-2026-0068` for the style guide v4.6 ruling. The ID was
   left unchanged here because PR #153 and the owner channel refer to it; the crew lead or owner
-  must assign a free decision ID (and update `intake-88/evaluation.md` and PHR 0141) before merge.
+  must assign a free decision ID (and update `intake-88/evaluation.md` and PHR 0160 (formerly 0141)) before merge.
 - Pending / next owner: crew lead (push, PR, decision-ID renumber); owner (confirm the intake so
   the content-spec can move to `status: approved`).
 - Paperclip issues affected: TEX-88, TEX-72 (Paperclip paused; tracked by crew).
