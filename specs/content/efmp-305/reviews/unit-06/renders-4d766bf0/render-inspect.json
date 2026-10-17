@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "course_code": "EFMP-305",
+  "unit_no": 6,
+  "pages": [
+    "index",
+    "topic-01",
+    "topic-02",
+    "topic-03",
+    "unit-assessment",
+    "unit-teacher-notes"
+  ],
+  "figures": [
+    "fig-U6-1",
+    "fig-U6-2",
+    "fig-U6-3",
+    "fig-U6-4",
+    "fig-U6-5",
+    "fig-U6-6"
+  ],
+  "viewports": [
+    "1280x900",
+    "360x780",
+    "A4 794x1123 print"
+  ],
+  "defects": [
+    "figures: 6 figures are prompt-only scaffolding in figures/unit-06.md (0 rendered figures placed in MDX topics; Art. III.10 figure floor not met; tracked under TEX-79)"
+  ],
+  "exit_code": 0,
+  "generated_at": "2026-10-16T17:20:00.000Z"
+}

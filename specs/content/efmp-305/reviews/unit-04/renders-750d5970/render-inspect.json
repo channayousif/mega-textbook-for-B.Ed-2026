@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "course_code": "EFMP-305",
+  "unit_no": 4,
+  "pages": [
+    "index",
+    "topic-01",
+    "topic-02",
+    "unit-assessment",
+    "unit-teacher-notes"
+  ],
+  "figures": [
+    "fig-U4-1",
+    "fig-U4-2",
+    "fig-U4-3",
+    "fig-U4-4"
+  ],
+  "viewports": [
+    "1280x900",
+    "360x780",
+    "A4 794x1123 print"
+  ],
+  "defects": [],
+  "exit_code": 0,
+  "generated_at": "2026-10-17T17:26:00.000Z"
+}
