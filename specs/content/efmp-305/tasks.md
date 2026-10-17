@@ -118,7 +118,7 @@ renders them. Statute framing follows `D-2026-0053` item 7: the Sindh Act is tau
 |---|---|---|---|---|
 | Unit 5 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
 | Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-05/G2/20261017T113341540Z-gates.json |
-| Unit 5 | G3 en-review | ▢ | | |
+| Unit 5 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only, not certification: specs/content/efmp-305/reviews/unit-05/G3/01a14adc-fef3-7883-8e8f-dd0c7ca30b71.json. Assessment ambiguity, incomplete audit, privacy conflict, source overclaims; provenance and narrow/A4 renders unavailable. |
 | Unit 5 | G4 ur-translation | ▢ | | |
 | Unit 5 | G5 ur-review | ▢ | | |
 | Unit 5 | G6 assets | ▢ | | 6 schematic figures prompt-only (1 timeline, 1 concept-map, 1 diagram, 3 table) |
