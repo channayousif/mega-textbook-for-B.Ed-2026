@@ -486,7 +486,57 @@ export function latestChecks(checks) {
   return [...latest.values()].map((x) => x.c);
 }
 
+/** Check names that failed on main's latest finished (not cancelled) CI run. */
+function mainFailures() {
+  const r = sh('gh', ['run', 'list', '--workflow', 'CI', '--branch', 'main', '--event', 'push', '--limit', '10',
+    '--json', 'databaseId,status,conclusion'], ROOT, { allowFail: true });
+  if (!r.ok) return null;
+  const run = JSON.parse(r.out || '[]').find((x) => x.status === 'completed' && x.conclusion !== 'cancelled');
+  if (!run) return null;
+  const v = sh('gh', ['run', 'view', String(run.databaseId), '--json', 'jobs'], ROOT, { allowFail: true });
+  if (!v.ok) return null;
+  return new Set(JSON.parse(v.out).jobs.filter((x) => x.conclusion === 'failure').map((x) => x.name));
+}
+
+/**
+ * Queue CI-fix jobs only for failures that belong to the PR. On 2026-10-17 three CI breaks
+ * (a workflow test, an invalid glossary.json on main, the e2e webServer) turned every PR red
+ * at once, and the crew sent workers to "fix" each PR; one copied ci.yml into a content
+ * branch. A check that also failed on main's latest finished run, or that fails on 3+ PRs
+ * in the same tick, is systemic: those PRs are held (still pr_open, so a re-run picks them
+ * up) and the owner gets one alert.
+ */
+function queueCiFixes(board, red, events) {
+  if (!red.length) return;
+  const count = {};
+  for (const { names } of red) for (const n of new Set(names)) count[n] = (count[n] || 0) + 1;
+  const onMain = mainFailures() || new Set();
+  const systemic = new Set(Object.keys(count).filter((n) => onMain.has(n) || count[n] >= 3));
+  const held = [];
+  for (const { j, names } of red) {
+    if (names.every((n) => systemic.has(n))) {
+      held.push(j.prNumber);
+      if (!/held: systemic/.test(j.history?.at(-1) || '')) log(board, j, `CI red on ${names.join(', ')}, held: systemic (main or 3+ PRs), no fix job`);
+      continue;
+    }
+    const fixes = board.jobs.filter((x) => x.parent === j.id && x.id.includes('-cifix')).length;
+    if (fixes >= 2) { j.status = 'gate_red'; events.push(`🔴 PR #${j.prNumber} (${j.id}) still red after ${fixes} CI fixes`); continue; }
+    board.jobs.push({ id: `${j.id}-cifix${fixes + 1}`, parent: j.id, course: j.course, unit: j.unit, stage: 'fix', status: 'queued', attempts: 0, tried: [],
+      branch: j.branch, pr: j.prNumber, createdAt: now(),
+      task: `CI failed on PR #${j.prNumber} (checks: ${names.join(', ')}). Run \`gh pr checks ${j.prNumber}\` and \`gh run view --log-failed\` to read the failure, fix it on this branch with the smallest change, and make \`npm run check:content\` pass. A build failure is usually malformed MDX or a broken relative link in this unit's files.` });
+    j.status = 'gate_red';
+    log(board, j, `CI red: ${names.join(', ')}; fix job queued`);
+  }
+  const key = [...systemic].sort().join(',');
+  const prev = board.systemicAlert || {};
+  if (held.length && (prev.key !== key || Date.now() - Date.parse(prev.at || 0) > 6 * 36e5)) {
+    board.systemicAlert = { key, at: now() };
+    events.push(`⚠️ CI check(s) ${key} fail on ${onMain.size ? 'main and ' : ''}${held.length} PR(s) (#${held.join(', #')}). Treated as a CI or main problem, not the PRs': no fix jobs queued. They re-check when CI is fixed and re-run.`);
+  }
+}
+
 function managePrs(board, decisions, events) {
+  const red = [];
   for (const j of board.jobs.filter((x) => x.status === 'pr_open' && x.prNumber)) {
     const v = sh('gh', ['pr', 'view', String(j.prNumber), '--json', 'state,mergeable,statusCheckRollup,isDraft'], ROOT, { allowFail: true });
     if (!v.ok) continue;
@@ -512,14 +562,8 @@ function managePrs(board, decisions, events) {
     const failed = checks.filter((c) => (c.status ? !['SUCCESS', 'NEUTRAL', 'SKIPPED'].includes(c.conclusion) : ['FAILURE', 'ERROR'].includes(c.state)));
     if (pending || !checks.length) continue;
     if (failed.length) {
-      if (board.jobs.some((x) => x.parent === j.id && ACTIVE.includes(x.status))) continue;
-      const fixes = board.jobs.filter((x) => x.parent === j.id && x.id.includes('-cifix')).length;
-      if (fixes >= 2) { j.status = 'gate_red'; events.push(`🔴 PR #${j.prNumber} (${j.id}) still red after ${fixes} CI fixes`); continue; }
-      board.jobs.push({ id: `${j.id}-cifix${fixes + 1}`, parent: j.id, course: j.course, unit: j.unit, stage: 'fix', status: 'queued', attempts: 0, tried: [],
-        branch: j.branch, pr: j.prNumber, createdAt: now(),
-        task: `CI failed on PR #${j.prNumber} (checks: ${failed.map((c) => c.name || c.context).join(', ')}). Run \`gh pr checks ${j.prNumber}\` and \`gh run view --log-failed\` to read the failure, fix it on this branch with the smallest change, and make \`npm run check:content\` pass. A build failure is usually malformed MDX or a broken relative link in this unit's files.` });
-      j.status = 'gate_red';
-      log(board, j, `CI red: ${failed.map((c) => c.name).join(', ')}; fix job queued`);
+      // Decided after the loop: a failure shared with main or with many PRs is not this PR's.
+      if (!board.jobs.some((x) => x.parent === j.id && ACTIVE.includes(x.status))) red.push({ j, names: failed.map((c) => c.name || c.context) });
       continue;
     }
     const touched = prFiles(j.prNumber).filter((f) => PROTECTED.some((re) => re.test(f)));
@@ -541,6 +585,7 @@ function managePrs(board, decisions, events) {
       sh('git', ['push', '-q', 'origin', '--delete', j.branch], ROOT, { allowFail: true });
     }
   }
+  queueCiFixes(board, red, events);
 }
 
 // ---------------------------------------------------------------- decisions and owner commands
