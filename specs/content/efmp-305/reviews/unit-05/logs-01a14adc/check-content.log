@@ -1,0 +1,29 @@
+$ npm run check:content
+
+> bed-mega-textbook@0.1.0 check:content
+> node scripts/run-gates.mjs content
+
+Running 13 content gates
+
+  validate:content        PASS  0.8s
+  check:pipeline-gate     PASS  10.0s
+  check:depth-gate        PASS  0.8s
+  check:figures           PASS  1.1s
+  check:no-em-dash        PASS  0.8s
+  check:no-answer-keys    PASS  1.3s
+  check:concept-graph     PASS  0.6s
+  check:bloom-bands       PASS  0.6s
+  check:source-floor      PASS  0.7s
+  check:licence           PASS  1.0s
+  licence:map:check       PASS  1.0s
+  check:content-status    FAIL  1.2s
+  check:docs-sync         PASS  0.5s
+
+============================================================
+check:content-status
+============================================================
+✗ static/content-status.json is missing. Run: npm run build:content-status
+
+1 of 13 content gates failed: check:content-status.
+
+Exit code: 1

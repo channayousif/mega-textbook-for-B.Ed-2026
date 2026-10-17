@@ -1,0 +1,47 @@
+### render-inspect EFMP-305 Unit 6 (en)
+### route: /semester-2/efmp-305/unit-06
+### pages: 6, placed figures: 0 (6 prompt-only in manifest)
+### started: 2026-10-16T17:16:00.000Z
+
+===== A. DESKTOP 1280x900 =====
+-- index: headings=5 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+-- topic-01: headings=15 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+-- topic-02: headings=16 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+-- topic-03: headings=15 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+-- unit-assessment: headings=10 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+-- unit-teacher-notes: headings=6 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+===== B. NARROW 360x780 =====
+-- index: docHorizontalOverflow=0px tables=0 figures=0 spill=0
+-- topic-01: docHorizontalOverflow=0px tables=1 figures=0 spill=0
+   table[0] scroller=table.display-block (fits=false, scroller active, reachable)
+-- topic-02: docHorizontalOverflow=0px tables=1 figures=0 spill=0
+   table[0] scroller=table.display-block (fits=false, scroller active, reachable)
+-- topic-03: docHorizontalOverflow=0px tables=1 figures=0 spill=0
+   table[0] scroller=table.display-block (fits=false, scroller active, reachable)
+-- unit-assessment: docHorizontalOverflow=0px tables=1 figures=0 spill=0
+   table[0] scroller=table.display-block (fits=false, scroller active, reachable)
+-- unit-teacher-notes: docHorizontalOverflow=0px tables=0 figures=0 spill=0
+
+===== C. A4 PRINT EMULATION (794px) =====
+-- index @print: clippedElems=0 figureImgs=0
+-- topic-01 @print: clippedElems=0 figureImgs=0
+-- topic-02 @print: clippedElems=0 figureImgs=0
+-- topic-03 @print: clippedElems=0 figureImgs=0
+-- unit-assessment @print: clippedElems=0 figureImgs=0 answerHeadings=["## Answers and marking guidance"]
+-- unit-teacher-notes @print: clippedElems=0 figureImgs=0
+
+===== D. SVG TEXT GEOMETRY =====
+   All 6 unit figures (fig-U6-1 through fig-U6-6) are prompt-only scaffolding in specs/content/efmp-305/figures/unit-06.md.
+   No placed SVG assets present under static/img/figures/efmp-305/unit-06/.
+   Figure production and placement owned by TEX-79.
+
+### finished: 2026-10-16T17:25:00.000Z
+### defects: 1 (unplaced prompt-only figures; check:figures exit 1)
+### exit_code: 0

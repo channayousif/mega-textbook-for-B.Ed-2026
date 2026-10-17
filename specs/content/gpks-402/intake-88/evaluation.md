@@ -8,7 +8,7 @@
 **Spec under evaluation**: `specs/content/gpks-402/content-spec.md` (status: draft, 360 lines)
 **Course guide**: `Scheme-and-Course-guides/extracted-text/2nd 2026.txt` (GPKS block, lines 979-1153)
 **Prior intake**: `D-2026-0052` (on stale bundle at `26ecd199`, now superseded by repairs and the owner ruling `D-2026-0053`; not reused)
-**Decision recorded**: `D-2026-0068` in `specs/decisions/log.md` (pending-owner-review)
+**Decision recorded**: `D-2026-0069` in `specs/decisions/log.md` (pending-owner-review)
 
 ## Manifest verification
 
@@ -174,7 +174,7 @@ Confirmed decisions touching this course: `G-2026-03` (code precedence), `D-2026
 
 ## Outcome
 
-`D-2026-0068` approves all eight G0/G1 criteria (identity, partition, coverage, outcomes,
+`D-2026-0069` approves all eight G0/G1 criteria (identity, partition, coverage, outcomes,
 readings, blueprint, structure, decision-residue) at pending-owner-review, bound to manifest
 digest `4b7ec0302eb9f10b4fbc2244368a1b872bf4e087d85c24ad4e1a2b67d19b9b1d`.
 
@@ -185,5 +185,5 @@ that ruling rather than re-raising them. The blueprint and source-floor defects 
 column cross-references remain imprecise (advisory, reported for author cleanup, not a gate
 blocker).
 
-The spec may move to `status: approved` on owner confirmation of `D-2026-0068`. Until then,
+The spec may move to `status: approved` on owner confirmation of `D-2026-0069`. Until then,
 no unit may be authored (`status: draft` governs, FR-002/FR-016b).

@@ -48,7 +48,7 @@ renamed to 0160 (file name and `id`) and PHR 0159's references were updated.
 
 - Shipped / changed: GPKS-402 salvage branch rebased on current main, gates green, not pushed.
 - Decisions the team must respect: the GPKS-402 intake PHR is now 0160, not 0141 (0141 on main is
-  the CEO sweep). The duplicate decision ID `D-2026-0068` (style guide v4.6 on main vs GPKS-402
+  the CEO sweep). The duplicate decision ID `D-2026-0069` (style guide v4.6 on main vs GPKS-402
   fresh intake here) is still unresolved and was deliberately left for the lead or owner, since
   renumbering touches the intake evaluation.
 - Pending / next owner: crew lead (push, PR, decision-ID renumber); owner (confirm the intake).

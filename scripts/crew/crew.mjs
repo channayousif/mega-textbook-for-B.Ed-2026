@@ -200,11 +200,28 @@ function prepareWorktree(board, j) {
   return wt;
 }
 
+/**
+ * Only the crew pushes, after its own gate (finishSuccess). The brief says so, but a worker
+ * ignored it on 2026-10-17: it pushed a broken conflict merge (invalid glossary.json) mid-run,
+ * the owner's merge approval landed it on main, and every PR went red. So each job worktree
+ * gets a push URL that cannot work, lifted only for the crew's own push.
+ */
+function guardPush(wt) {
+  sh('git', ['config', 'extensions.worktreeConfig', 'true'], wt);
+  sh('git', ['config', '--worktree', 'remote.origin.pushurl', 'crew-only-the-crew-pushes://disabled'], wt);
+}
+/** The worker has exited by now: lift the guard for the crew's own push, then restore it. */
+function crewPush(wt, args) {
+  sh('git', ['config', '--worktree', '--unset-all', 'remote.origin.pushurl'], wt, { allowFail: true });
+  try { return sh('git', ['push', ...args], wt); } finally { guardPush(wt); }
+}
+
 function launch(board, j, worker) {
   j.worker = worker;
   j.family = familyOf(worker);
   j.branch = j.branch || `crew/${j.id}`;
   j.worktree = prepareWorktree(board, j);
+  guardPush(j.worktree);
   const briefText = brief(j);
   writeFileSync(join(j.worktree, '.crew', 'brief.md'), briefText);
   const prompt = `Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.`;
@@ -380,7 +397,7 @@ function finishSuccess(board, j, logText) {
   writePhr(j, summary.replace(/\u2014/g, ' - '));
   sh('git', ['add', 'history/prompts'], wt);
   sh('git', ['commit', '-q', '-m', `docs(phr): crew ${j.id}`], wt, { allowFail: true });
-  sh('git', ['push', '-q', '-u', 'origin', `HEAD:${j.branch}`, '--force-with-lease'], wt);
+  crewPush(wt, ['-q', '-u', 'origin', `HEAD:${j.branch}`, '--force-with-lease']);
   if (j.parent) return { ok: true, summary }; // CI-fix job: the push updated the parent's PR
   const title = `crew(${j.course.toLowerCase()}): ${j.stage} unit ${j.unit} by ${j.worker}`;
   const body = `${summary}\n\nCrew job \`${j.id}\`, worker **${j.worker}** (${j.family}), attempt ${j.attempts}. \`npm run check:content\` passed before push; CI builds the site.\n${j.supersedes ? `\nSupersedes ${String(j.supersedes).split(',').map((n) => `#${n}`).join(', ')}.\n` : ''}\n🤖 Generated with [Claude Code](https://claude.com/claude-code)`;
@@ -454,6 +471,21 @@ function prFiles(n) {
   return sh('gh', ['pr', 'view', String(n), '--json', 'files', '-q', '.files[].path'], ROOT, { allowFail: true }).out.split('\n').filter(Boolean);
 }
 
+/**
+ * A re-run on the same head commit (re-opened PR, re-run job) leaves the old run's check
+ * runs in the rollup beside the new ones, so a stale FAILURE would outlive a green re-run
+ * and queue a needless fix job. Keep only the most recent result per workflow and check.
+ */
+export function latestChecks(checks) {
+  const latest = new Map();
+  for (const c of checks) {
+    const key = `${c.workflowName || ''}/${c.name || c.context}`;
+    const at = Date.parse(c.startedAt || c.createdAt || 0) || 0;
+    if (!latest.has(key) || at >= latest.get(key).at) latest.set(key, { c, at });
+  }
+  return [...latest.values()].map((x) => x.c);
+}
+
 function managePrs(board, decisions, events) {
   for (const j of board.jobs.filter((x) => x.status === 'pr_open' && x.prNumber)) {
     const v = sh('gh', ['pr', 'view', String(j.prNumber), '--json', 'state,mergeable,statusCheckRollup,isDraft'], ROOT, { allowFail: true });
@@ -461,14 +493,27 @@ function managePrs(board, decisions, events) {
     const pr = JSON.parse(v.out);
     if (pr.state === 'MERGED') { j.status = 'merged'; log(board, j, 'merged'); cleanup(j); continue; }
     if (pr.state === 'CLOSED') { j.status = 'closed'; log(board, j, 'closed'); cleanup(j); continue; }
-    const checks = pr.statusCheckRollup || [];
+    const checks = latestChecks(pr.statusCheckRollup || []);
+    // GitHub runs no PR CI while a PR conflicts, so waiting would stall it forever. Salvage
+    // branches all append to the same registries, so each salvage that merges conflicts
+    // the rest; resolving needs judgement (keep both sides, renumber clashing IDs).
+    if (pr.mergeable === 'CONFLICTING') {
+      if (board.jobs.some((x) => x.parent === j.id && ACTIVE.includes(x.status))) continue;
+      const tries = board.jobs.filter((x) => x.parent === j.id && x.id.includes('-conflict')).length;
+      if (tries >= 5) { j.status = 'gate_red'; events.push(`🔴 PR #${j.prNumber} (${j.id}) still conflicts after ${tries} merge attempts`); continue; }
+      board.jobs.push({ id: `${j.id}-conflict${tries + 1}`, parent: j.id, course: j.course, unit: j.unit, stage: 'fix', status: 'queued', attempts: 0, tried: [],
+        branch: j.branch, pr: j.prNumber, createdAt: now(),
+        task: `PR #${j.prNumber} conflicts with main. Run \`git fetch origin && git merge origin/main\` on this branch and resolve every conflict. Shared registries (glossary.json, specs/decisions/log.md, specs/gaps.md, specs/content/terminology.csv) are append-only: keep BOTH sides' entries, in main's order then this branch's, and drop exact duplicates. If an ID this branch added (D-YYYY-NNNN, G-YYYY-NN, a glossary key) is already used on main for something else, give this branch's entry the next free ID and update every reference to it in this branch's files. Never change or remove an entry that main already has. Commit the merge, then make \`npm run check:content\` pass.` });
+      log(board, j, `conflicts with main; merge job queued`);
+      continue;
+    }
     // CheckRun carries status/conclusion; a legacy StatusContext carries state.
     const pending = checks.some((c) => (c.status ? c.status !== 'COMPLETED' : ['PENDING', 'EXPECTED'].includes(c.state)));
     const failed = checks.filter((c) => (c.status ? !['SUCCESS', 'NEUTRAL', 'SKIPPED'].includes(c.conclusion) : ['FAILURE', 'ERROR'].includes(c.state)));
     if (pending || !checks.length) continue;
     if (failed.length) {
       if (board.jobs.some((x) => x.parent === j.id && ACTIVE.includes(x.status))) continue;
-      const fixes = board.jobs.filter((x) => x.parent === j.id).length;
+      const fixes = board.jobs.filter((x) => x.parent === j.id && x.id.includes('-cifix')).length;
       if (fixes >= 2) { j.status = 'gate_red'; events.push(`🔴 PR #${j.prNumber} (${j.id}) still red after ${fixes} CI fixes`); continue; }
       board.jobs.push({ id: `${j.id}-cifix${fixes + 1}`, parent: j.id, course: j.course, unit: j.unit, stage: 'fix', status: 'queued', attempts: 0, tried: [],
         branch: j.branch, pr: j.prNumber, createdAt: now(),
@@ -477,11 +522,13 @@ function managePrs(board, decisions, events) {
       log(board, j, `CI red: ${failed.map((c) => c.name).join(', ')}; fix job queued`);
       continue;
     }
-    if (pr.mergeable === 'CONFLICTING') continue;
     const touched = prFiles(j.prNumber).filter((f) => PROTECTED.some((re) => re.test(f)));
-    if (touched.length) {
+    // An owner "merge" approves the protected files they were shown. If later commits touch
+    // others, ask again; either way the merge itself waits for green CI (checked above).
+    const approved = new Set(j.ownerApproved?.files || []);
+    if (touched.length && !touched.every((f) => approved.has(f))) {
       if (!decisions.items.some((d) => d.pr === j.prNumber && d.status === 'open')) {
-        ask(decisions, `PR #${j.prNumber} (${j.id}) is green but touches protected files: ${touched.slice(0, 6).join(', ')}. Merge it?`, ['merge', 'hold'], { pr: j.prNumber, job: j.id });
+        ask(decisions, `PR #${j.prNumber} (${j.id}) is green but touches protected files: ${touched.slice(0, 6).join(', ')}${touched.length > 6 ? ` and ${touched.length - 6} more` : ''}. Merge it?`, ['merge', 'hold'], { pr: j.prNumber, job: j.id, files: touched });
       }
       continue;
     }
@@ -552,11 +599,12 @@ function handleCommand(text, { board, decisions, control, health }, via = 'cli')
   if (!item.options.includes(answer)) return `${item.id} options are: ${item.options.join(' / ')}. Reply e.g. "${item.id} ${item.options[0]}".`;
   item.status = 'answered'; item.answer = answer; item.note = d[3]?.trim(); item.answeredAt = now(); item.via = via;
   let extra = '';
-  if (item.pr && answer === 'merge' && !DRY) {
-    const r = sh('gh', ['pr', 'merge', String(item.pr), '--merge', '--admin'], ROOT, { allowFail: true });
+  if (item.pr && answer === 'merge') {
+    // Never merge here: the PR may have changed since it was green. The tick merges it once
+    // CI is green on its latest commit.
     const j = board.jobs.find((x) => x.id === item.job);
-    if (r.ok && j) { j.status = 'merged'; log(board, j, `merged on owner decision ${item.id}`); }
-    extra = r.ok ? `; PR #${item.pr} merged` : `; merging PR #${item.pr} failed: ${r.err.slice(-160)}`;
+    if (j) { j.ownerApproved = { id: item.id, files: item.files || [] }; log(board, j, `approved by owner (${item.id}); merges when CI is green`); }
+    extra = `; PR #${item.pr} merges as soon as CI is green on its latest commit`;
   }
   if (item.job && answer === 'hold') { const j = board.jobs.find((x) => x.id === item.job); if (j) j.status = 'blocked'; }
   return `noted ${item.id}: ${answer}${extra}`;

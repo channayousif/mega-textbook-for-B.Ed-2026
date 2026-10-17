@@ -45,7 +45,7 @@ with `npm run build:content-status`, all 13 gates passed.
 ## Handoff (for CEO and agents)
 
 - Shipped / changed: rebase plus this record; not pushed, no PR.
-- Decisions the team must respect: `D-2026-0068` is still used twice in `specs/decisions/log.md`
+- Decisions the team must respect: `D-2026-0069` is still used twice in `specs/decisions/log.md`
   (line 2213 style guide v4.6 from main; line 2304 GPKS-402 fresh intake on this branch). The
   intake entry needs a new ID before merge; left for the lead or owner because it touches the
   intake evaluation and PR #153 references.

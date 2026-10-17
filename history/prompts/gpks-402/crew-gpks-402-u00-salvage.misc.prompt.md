@@ -56,7 +56,7 @@ Read AGENTS.md and CLAUDE.md first and obey them: no em dash (U+2014) anywhere, 
 human initials, never edit the style guide, constitution, ADRs, gate scripts, catalog or an approved content-spec.
 
 ## Task
-This branch carries earlier, unfinished work from PR #153 (agent/TEX-88). Run `git fetch origin && git rebase origin/main`, resolve every conflict (keep this unit's content; take main's version of shared files such as the style guide, gates and catalog), then make every content gate pass. Extra instructions: This branch holds the fresh G0/G1 intake (D-2026-0068) and supersedes the older agent/TEX-44. Shared files (glossary.json, specs/decisions/log.md, specs/gaps.md, terminology.csv): keep both sides' entries, never drop main's rows. The pipeline gate fails on main today only on stale G2 manifests for other courses; ignore those.
+This branch carries earlier, unfinished work from PR #153 (agent/TEX-88). Run `git fetch origin && git rebase origin/main`, resolve every conflict (keep this unit's content; take main's version of shared files such as the style guide, gates and catalog), then make every content gate pass. Extra instructions: This branch holds the fresh G0/G1 intake (D-2026-0069) and supersedes the older agent/TEX-44. Shared files (glossary.json, specs/decisions/log.md, specs/gaps.md, terminology.csv): keep both sides' entries, never drop main's rows. The pipeline gate fails on main today only on stale G2 manifests for other courses; ignore those.
 
 ## Scope
 The whole GPKS-402 course: its docs and i18n trees, `specs/content/gpks-402/`, its figures, and the shared files its PR already touches.

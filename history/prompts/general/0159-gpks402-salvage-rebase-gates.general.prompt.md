@@ -32,7 +32,7 @@ Read .crew/brief.md in the current directory and carry it out completely. It is 
 
 Rebased the 10 commits carried over from PR #153 (agent/TEX-88) onto origin/main ceac3d6a
 (pre-rebase backup branch `crew-backup/gpks-402-u00-salvage-pre-rebase`). The only conflict was
-`specs/decisions/log.md`: kept main's D-2026-0068 style-guide entry and appended the branch's
+`specs/decisions/log.md`: kept main's D-2026-0069 style-guide entry and appended the branch's
 GPKS-402 entries after it. All other branch files are byte-identical to the pre-rebase tree.
 
 First gate run failed on two gates: `check:no-em-dash` (8 em dashes in
@@ -55,7 +55,7 @@ regenerated the status file with `npm run build:content-status`. Rerun: all 13 c
 
 - Shipped / changed: GPKS-402 salvage branch rebased on main, all content gates green, not pushed.
 - Decisions the team must respect: the branch's GPKS-402 fresh-intake entry is headed
-  `D-2026-0068`, but main already uses `D-2026-0068` for the style guide v4.6 ruling. The ID was
+  `D-2026-0069`, but main already uses `D-2026-0069` for the style guide v4.6 ruling. The ID was
   left unchanged here because PR #153 and the owner channel refer to it; the crew lead or owner
   must assign a free decision ID (and update `intake-88/evaluation.md` and PHR 0160 (formerly 0141)) before merge.
 - Pending / next owner: crew lead (push, PR, decision-ID renumber); owner (confirm the intake so
