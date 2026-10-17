@@ -7,7 +7,8 @@
  *   health.json     per-worker ok / cooling / down
  *   decisions.json  owner decision queue (asked over openclaw)
  *   inbox.json      last-read message ids per channel
- *   control.json    paused flag, course priorities
+ *   control.json    paused flag, course priorities, owner notes
+ *   handled.json    owner commands already answered by `crew.mjs cmd` (so the tick skips them)
  *   logs/<job>.log  worker output; logs/<job>.exit its exit code
  */
 import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from 'node:fs';
@@ -24,6 +25,7 @@ const DEFAULTS = {
   health: {},
   decisions: { items: [] },
   inbox: {},
+  handled: { items: [] },
   control: { paused: false, priority: [] },
 };
 
