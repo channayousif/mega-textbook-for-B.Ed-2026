@@ -200,11 +200,28 @@ function prepareWorktree(board, j) {
   return wt;
 }
 
+/**
+ * Only the crew pushes, after its own gate (finishSuccess). The brief says so, but a worker
+ * ignored it on 2026-10-17: it pushed a broken conflict merge (invalid glossary.json) mid-run,
+ * the owner's merge approval landed it on main, and every PR went red. So each job worktree
+ * gets a push URL that cannot work, lifted only for the crew's own push.
+ */
+function guardPush(wt) {
+  sh('git', ['config', 'extensions.worktreeConfig', 'true'], wt);
+  sh('git', ['config', '--worktree', 'remote.origin.pushurl', 'crew-only-the-crew-pushes://disabled'], wt);
+}
+/** The worker has exited by now: lift the guard for the crew's own push, then restore it. */
+function crewPush(wt, args) {
+  sh('git', ['config', '--worktree', '--unset-all', 'remote.origin.pushurl'], wt, { allowFail: true });
+  try { return sh('git', ['push', ...args], wt); } finally { guardPush(wt); }
+}
+
 function launch(board, j, worker) {
   j.worker = worker;
   j.family = familyOf(worker);
   j.branch = j.branch || `crew/${j.id}`;
   j.worktree = prepareWorktree(board, j);
+  guardPush(j.worktree);
   const briefText = brief(j);
   writeFileSync(join(j.worktree, '.crew', 'brief.md'), briefText);
   const prompt = `Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.`;
@@ -380,7 +397,7 @@ function finishSuccess(board, j, logText) {
   writePhr(j, summary.replace(/\u2014/g, ' - '));
   sh('git', ['add', 'history/prompts'], wt);
   sh('git', ['commit', '-q', '-m', `docs(phr): crew ${j.id}`], wt, { allowFail: true });
-  sh('git', ['push', '-q', '-u', 'origin', `HEAD:${j.branch}`, '--force-with-lease'], wt);
+  crewPush(wt, ['-q', '-u', 'origin', `HEAD:${j.branch}`, '--force-with-lease']);
   if (j.parent) return { ok: true, summary }; // CI-fix job: the push updated the parent's PR
   const title = `crew(${j.course.toLowerCase()}): ${j.stage} unit ${j.unit} by ${j.worker}`;
   const body = `${summary}\n\nCrew job \`${j.id}\`, worker **${j.worker}** (${j.family}), attempt ${j.attempts}. \`npm run check:content\` passed before push; CI builds the site.\n${j.supersedes ? `\nSupersedes ${String(j.supersedes).split(',').map((n) => `#${n}`).join(', ')}.\n` : ''}\n🤖 Generated with [Claude Code](https://claude.com/claude-code)`;
@@ -506,9 +523,12 @@ function managePrs(board, decisions, events) {
       continue;
     }
     const touched = prFiles(j.prNumber).filter((f) => PROTECTED.some((re) => re.test(f)));
-    if (touched.length) {
+    // An owner "merge" approves the protected files they were shown. If later commits touch
+    // others, ask again; either way the merge itself waits for green CI (checked above).
+    const approved = new Set(j.ownerApproved?.files || []);
+    if (touched.length && !touched.every((f) => approved.has(f))) {
       if (!decisions.items.some((d) => d.pr === j.prNumber && d.status === 'open')) {
-        ask(decisions, `PR #${j.prNumber} (${j.id}) is green but touches protected files: ${touched.slice(0, 6).join(', ')}. Merge it?`, ['merge', 'hold'], { pr: j.prNumber, job: j.id });
+        ask(decisions, `PR #${j.prNumber} (${j.id}) is green but touches protected files: ${touched.slice(0, 6).join(', ')}${touched.length > 6 ? ` and ${touched.length - 6} more` : ''}. Merge it?`, ['merge', 'hold'], { pr: j.prNumber, job: j.id, files: touched });
       }
       continue;
     }
@@ -579,11 +599,12 @@ function handleCommand(text, { board, decisions, control, health }, via = 'cli')
   if (!item.options.includes(answer)) return `${item.id} options are: ${item.options.join(' / ')}. Reply e.g. "${item.id} ${item.options[0]}".`;
   item.status = 'answered'; item.answer = answer; item.note = d[3]?.trim(); item.answeredAt = now(); item.via = via;
   let extra = '';
-  if (item.pr && answer === 'merge' && !DRY) {
-    const r = sh('gh', ['pr', 'merge', String(item.pr), '--merge', '--admin'], ROOT, { allowFail: true });
+  if (item.pr && answer === 'merge') {
+    // Never merge here: the PR may have changed since it was green. The tick merges it once
+    // CI is green on its latest commit.
     const j = board.jobs.find((x) => x.id === item.job);
-    if (r.ok && j) { j.status = 'merged'; log(board, j, `merged on owner decision ${item.id}`); }
-    extra = r.ok ? `; PR #${item.pr} merged` : `; merging PR #${item.pr} failed: ${r.err.slice(-160)}`;
+    if (j) { j.ownerApproved = { id: item.id, files: item.files || [] }; log(board, j, `approved by owner (${item.id}); merges when CI is green`); }
+    extra = `; PR #${item.pr} merges as soon as CI is green on its latest commit`;
   }
   if (item.job && answer === 'hold') { const j = board.jobs.find((x) => x.id === item.job); if (j) j.status = 'blocked'; }
   return `noted ${item.id}: ${answer}${extra}`;
