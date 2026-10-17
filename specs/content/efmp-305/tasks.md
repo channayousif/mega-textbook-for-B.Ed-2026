@@ -22,12 +22,12 @@ distinction is exactly what `G-2026-76` was raised about. The author does not mo
 
 **Unit 1 - Foundations of Inclusive Education (2026-10-09):** authored to the Spec 008 v3.0
 per-topic layout: `index.mdx` + `topic-01…02.mdx` (nine-part cycles) + `unit-assessment.mdx`
-(10/10/5 bank + bounded answers) + `unit-teacher-notes.mdx`. G2 en-draft pending gate run.
+(10/10/5 bank + bounded answers) + `unit-teacher-notes.mdx`. G2 en-draft cleared by deterministic gates on 2026-10-17.
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
-| Unit 1 | G2 en-draft | ▣ | | authored; gate run pending |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-01/G2/20261017T113315187Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | |
 | Unit 1 | G4 ur-translation | ▢ | | |
 | Unit 1 | G5 ur-review | ▢ | | |
@@ -36,12 +36,12 @@ per-topic layout: `index.mdx` + `topic-01…02.mdx` (nine-part cycles) + `unit-a
 
 **Unit 2 - Understanding Learner Diversity (2026-10-09):** authored to the Spec 008 v3.0
 per-topic layout: `index.mdx` + `topic-01…02.mdx` (nine-part cycles) + `unit-assessment.mdx`
-(10/10/5 bank + bounded answers) + `unit-teacher-notes.mdx`. G2 en-draft pending gate run.
+(10/10/5 bank + bounded answers) + `unit-teacher-notes.mdx`. G2 en-draft cleared by deterministic gates on 2026-10-17.
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 2 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
-| Unit 2 | G2 en-draft | ▣ | | authored; gate run pending |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-02/G2/20261017T113324655Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | |
 | Unit 2 | G4 ur-translation | ▢ | | |
 | Unit 2 | G5 ur-review | ▢ | | |
@@ -60,7 +60,7 @@ the 4 expected prompt-only findings until G6 renders them.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 3 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
-| Unit 3 | G2 en-draft | ▣ | | authored 2026-10-15; gates pass except figures (prompt-only) |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-03/G2/20261017T113329276Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | |
 | Unit 3 | G4 ur-translation | ▢ | | |
 | Unit 3 | G5 ur-review | ▢ | | |
@@ -81,7 +81,7 @@ renders them.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 4 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
-| Unit 4 | G2 en-draft | ▣ | | authored 2026-10-15; gates pass except figures (prompt-only) |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-04/G2/20261017T113335543Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | |
 | Unit 4 | G4 ur-translation | ▢ | | |
 | Unit 4 | G5 ur-review | ▢ | | |
@@ -117,7 +117,7 @@ renders them. Statute framing follows `D-2026-0053` item 7: the Sindh Act is tau
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 5 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
-| Unit 5 | G2 en-draft | ▣ | | authored 2026-10-15; gates pass except figures (prompt-only) |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-05/G2/20261017T113341540Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | |
 | Unit 5 | G4 ur-translation | ▢ | | |
 | Unit 5 | G5 ur-review | ▢ | | |
@@ -155,7 +155,7 @@ the PHR and Paperclip handoff. No G3/G5 certification or publication is claimed.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 6 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
-| Unit 6 | G2 en-draft | ▣ | | authored 2026-10-16; deterministic completion pending placed figures and valid gate evidence |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-06/G2/20261017T113349684Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | independent review pending; CurriculumOwner handoff on TEX-78 |
 | Unit 6 | G4 ur-translation | ▢ | | separately scoped Urdu child; English-only assignment |
 | Unit 6 | G5 ur-review | ▢ | | |
