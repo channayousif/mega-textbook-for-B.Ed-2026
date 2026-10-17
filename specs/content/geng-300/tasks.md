@@ -28,7 +28,7 @@ G1 unit-spec affirmed at intake (D-2026-0019). G2 en-draft cleared by determinis
 | Unit 2 | G7 publish | ▢ | | |
 | Unit 3 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0019; content-spec status: approved |
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-300/reviews/unit-03/G2/20261013T123501910Z-gates.json |
-| Unit 3 | G3 en-review | ▢ | | |
+| Unit 3 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory preflight: escalate; provenance, authority and render handoff pending. advisory:specs/content/geng-300/reviews/unit-03/G3/20261017-crew-preflight.json; not certification |
 | Unit 3 | G4 ur-translation | ▢ | | English-only course |
 | Unit 3 | G5 ur-review | ▢ | | English-only course |
 | Unit 3 | G6 assets | ▢ | | |

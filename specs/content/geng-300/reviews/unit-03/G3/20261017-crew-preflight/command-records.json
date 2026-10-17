@@ -1,0 +1,32 @@
+[
+  {
+    "name": "validate:content",
+    "exit_code": 0,
+    "log_path": "specs/content/geng-300/reviews/unit-03/G3/20261017-crew-preflight/validate-content.log"
+  },
+  {
+    "name": "check:depth-gate",
+    "exit_code": 0,
+    "log_path": "specs/content/geng-300/reviews/unit-03/G3/20261017-crew-preflight/check-depth-gate.log"
+  },
+  {
+    "name": "check:figures",
+    "exit_code": 0,
+    "log_path": "specs/content/geng-300/reviews/unit-03/G3/20261017-crew-preflight/check-figures.log"
+  },
+  {
+    "name": "check:no-em-dash",
+    "exit_code": 0,
+    "log_path": "specs/content/geng-300/reviews/unit-03/G3/20261017-crew-preflight/check-no-em-dash.log"
+  },
+  {
+    "name": "check:no-answer-keys",
+    "exit_code": 0,
+    "log_path": "specs/content/geng-300/reviews/unit-03/G3/20261017-crew-preflight/check-no-answer-keys.log"
+  },
+  {
+    "name": "check:docs-sync",
+    "exit_code": 0,
+    "log_path": "specs/content/geng-300/reviews/unit-03/G3/20261017-crew-preflight/check-docs-sync.log"
+  }
+]
