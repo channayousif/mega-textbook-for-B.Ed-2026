@@ -39,7 +39,7 @@ Merged origin/main 9b886f58. Resolved terminology and gap conflicts with main fi
 ## Outcome
 
 - Impact: PR #167 merge conflicts resolved locally.
-- Tests: Content gates and main comparison recorded below after execution.
+- Tests: The merged branch and origin/main each passed 12 of 13 content gates, failing only on the ignored generated content-status report (stale locally, absent on a fresh main checkout). Regenerated the ignored report using npm run build:content-status; final npm run check:content passed all 13 gates.
 - Files: Shared registries, branch intake reference and prompt history.
 - Next prompts: Owner handles existing intake and review work.
 - Reflection: Main entries remain byte-for-byte intact.
@@ -54,6 +54,6 @@ Merged origin/main 9b886f58. Resolved terminology and gap conflicts with main fi
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Concurrent append-only registry additions and decision-ID collision.
-- Graders run and results: Pending completion of the content-gate comparison.
+- Graders run and results: Shared-registry prefix checks PASS; branch glossary entries all preserved; no new decision/gap ID collisions. Both baseline suites report only the generated content-status prerequisite. After regenerating that ignored artifact, all 13 content gates PASS.
 - Prompt variant: none
 - Next experiment: none
