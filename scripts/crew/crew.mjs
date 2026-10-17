@@ -5,6 +5,7 @@
  *   node scripts/crew/crew.mjs plan [--dry-run]     derive jobs from main's content state
  *   node scripts/crew/crew.mjs tick [--dry-run]     inbox, reap, PRs, launch (the lead loop body)
  *   node scripts/crew/crew.mjs status               write and print BOARD.md
+ *   node scripts/crew/crew.mjs retire [--dry-run]   delete Paperclip branches replaced by merged salvage PRs
  *   node scripts/crew/crew.mjs cmd "<owner message>"  apply one owner command now and print the reply
  *   node scripts/crew/crew.mjs digest               send the daily digest to the owner
  *   node scripts/crew/crew.mjs add <course> <unit> <stage> [--branch b] [--pr n] [--task "..."]
@@ -588,6 +589,41 @@ function managePrs(board, decisions, events) {
   queueCiFixes(board, red, events);
 }
 
+/**
+ * Owner ruling 2026-10-17: once a salvage PR is on main, delete the Paperclip branches it
+ * replaced (the head branches of its `supersedes` PRs, and its `base`). The salvage branch
+ * carries that work, rebased. A branch is kept while any open PR uses it as head or base,
+ * or while its own PR is still open. Runs for every merged job once (`retired`), however
+ * the merge happened.
+ */
+function retireSuperseded(board, events) {
+  const todo = board.jobs.filter((j) => j.status === 'merged' && !j.retired && (j.supersedes || j.base));
+  if (!todo.length) return;
+  const open = sh('gh', ['pr', 'list', '--state', 'open', '--limit', '200', '--json', 'headRefName,baseRefName'], ROOT, { allowFail: true });
+  if (!open.ok) return; // try again next tick rather than delete blind
+  const inUse = new Set(JSON.parse(open.out || '[]').flatMap((p) => [p.headRefName, p.baseRefName]));
+  for (const j of todo) {
+    const branches = new Set(j.base ? [j.base] : []);
+    for (const n of String(j.supersedes || '').split(',').filter(Boolean)) {
+      const v = sh('gh', ['pr', 'view', n, '--json', 'state,headRefName'], ROOT, { allowFail: true });
+      if (!v.ok) continue;
+      const { state, headRefName } = JSON.parse(v.out);
+      if (state !== 'OPEN') branches.add(headRefName);
+    }
+    const gone = [];
+    for (const b of branches) {
+      if (!b || b === 'main' || b === j.branch || b.startsWith('crew/') || inUse.has(b)) continue;
+      if (DRY) { console.log(`[dry-run] would delete branch ${b} (superseded by ${j.id})`); continue; }
+      const r = sh('git', ['push', '-q', 'origin', '--delete', b], ROOT, { allowFail: true });
+      if (r.ok || /remote ref does not exist/.test(r.err)) gone.push(b);
+    }
+    if (DRY) continue;
+    j.retired = true;
+    log(board, j, `retired superseded branches: ${gone.join(', ') || 'none left'}`);
+    if (gone.length) events.push(`🧹 ${j.id}: deleted superseded branches ${gone.join(', ')}`);
+  }
+}
+
 // ---------------------------------------------------------------- decisions and owner commands
 
 function ask(decisions, question, options = ['yes', 'no'], extra = {}) {
@@ -750,6 +786,7 @@ function tick() {
     // A cooling worker becomes eligible again when its time passes; the next real job is the probe.
     for (const [w, h] of Object.entries(health)) if (h.state === 'cooling' && Date.parse(h.until) <= Date.now()) health[w] = { ...h, state: 'ok' };
     phase('prs', () => managePrs(board, decisions, events));
+    phase('retire', () => retireSuperseded(board, events));
     if (!control.paused) phase('launch', () => launchQueued(board, health, control, events));
     const eligible = Object.keys(WORKERS).filter((w) => !['down', 'cooling'].includes(health[w]?.state));
     if (!eligible.length) events.push('⚠️ every worker is cooling or down; nothing can run until one recovers');
@@ -768,6 +805,7 @@ const [cmd, ...rest] = firstFlag < 0 ? args : args.slice(0, firstFlag);
 if (cmd === 'plan') plan();
 else if (cmd === 'tick') tick();
 else if (cmd === 'status') status();
+else if (cmd === 'retire') { const board = load('board'); const events = []; retireSuperseded(board, events); if (!DRY) { save('board', board); if (events.length) send(events.join('\n')); } console.log(events.join('\n') || 'nothing to retire'); }
 else if (cmd === 'cmd') {
   // openclaw's crew skill: `crew.mjs cmd "<owner message>" [--via whatsapp]`; prints the reply.
   const text = rest.join(' ');
