@@ -1,0 +1,61 @@
+### render-inspect EFMP-305 Unit 6 (en)
+### route: /semester-2/efmp-305/unit-06
+### pages: 6, placed figures: 6 (placed in topics and manifest)
+### started: 2026-10-16T22:05:00.000Z
+
+===== A. DESKTOP 1280x900 =====
+-- index: headings=5 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+-- topic-01: headings=15 imgs=2 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   figures: fig-U6-1 (flowchart), fig-U6-2 (table)
+   heading order: no skipped levels
+-- topic-02: headings=16 imgs=2 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   figures: fig-U6-3 (flowchart), fig-U6-4 (table)
+   heading order: no skipped levels
+-- topic-03: headings=15 imgs=2 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   figures: fig-U6-5 (diagram), fig-U6-6 (table)
+   heading order: no skipped levels
+-- unit-assessment: headings=10 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+-- unit-teacher-notes: headings=6 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+===== B. NARROW 360x780 =====
+-- index: docHorizontalOverflow=0px tables=0 figures=0 spill=0
+-- topic-01: docHorizontalOverflow=0px tables=1 figures=2 spill=0
+   table[0] scroller=table.display-block (fits=false, scroller active, reachable)
+   figure[0] fig-U6-1 (flowchart): width 100%, responsive SVG, within viewport
+   figure[1] fig-U6-2 (table): width 100%, responsive SVG, within viewport
+-- topic-02: docHorizontalOverflow=0px tables=1 figures=2 spill=0
+   table[0] scroller=table.display-block (fits=false, scroller active, reachable)
+   figure[0] fig-U6-3 (flowchart): width 100%, responsive SVG, within viewport
+   figure[1] fig-U6-4 (table): width 100%, responsive SVG, within viewport
+-- topic-03: docHorizontalOverflow=0px tables=1 figures=2 spill=0
+   table[0] scroller=table.display-block (fits=false, scroller active, reachable)
+   figure[0] fig-U6-5 (diagram): width 100%, responsive SVG, within viewport
+   figure[1] fig-U6-6 (table): width 100%, responsive SVG, within viewport
+-- unit-assessment: docHorizontalOverflow=0px tables=1 figures=0 spill=0
+   table[0] scroller=table.display-block (fits=false, scroller active, reachable)
+-- unit-teacher-notes: docHorizontalOverflow=0px tables=0 figures=0 spill=0
+
+===== C. A4 PRINT EMULATION (794px) =====
+-- index @print: clippedElems=0 figureImgs=0
+-- topic-01 @print: clippedElems=0 figureImgs=2
+-- topic-02 @print: clippedElems=0 figureImgs=2
+-- topic-03 @print: clippedElems=0 figureImgs=2
+-- unit-assessment @print: clippedElems=0 figureImgs=0 answerHeadings=["## Answers and marking guidance"]
+-- unit-teacher-notes @print: clippedElems=0 figureImgs=0
+
+===== D. SVG TEXT GEOMETRY =====
+   All 6 unit figures (fig-U6-1 through fig-U6-6) rendered and placed in topics and manifest.
+   SVGs measured with measure-figure-text.mjs:
+   - fig-U6-1: 1000x1350, widest text 985.2, wordmark 884.3 (clean)
+   - fig-U6-2: 760x3998, widest text 745.3, wordmark 644.3 (clean)
+   - fig-U6-3: 820x2141, widest text 805.2, wordmark 704.3 (clean)
+   - fig-U6-4: 760x5064, widest text 745.3, wordmark 644.3 (clean)
+   - fig-U6-5: 1100x2071, widest text 1085, wordmark 984.4 (clean)
+   - fig-U6-6: 760x3442, widest text 745.3, wordmark 644.3 (clean)
+
+### finished: 2026-10-16T22:12:00.000Z
+### defects: 0
+### exit_code: 0
