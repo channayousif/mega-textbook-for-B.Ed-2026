@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Mead's Stages of Socialization</title><desc id="d">A comparison table of Mead's stages of socialization showing age range, key activity and examples for each stage.</desc>
+<style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671} .bg{fill:var(--bg)} .hdr{fill:var(--a1-fill);stroke:var(--ink);stroke-width:1.5} text{font-size:12px;fill:var(--ink)} .h{font-size:13px;font-weight:700} .th{font-size:13px;font-weight:700;fill:var(--a1);text-anchor:middle} .wm{fill:var(--wm);font-size:11px}</style>
+<rect class="bg" x="0" y="0" width="780" height="470"/>
+<!-- Table Boundary -->
+<rect x="20" y="30" width="740" height="395" fill="none" stroke="var(--ink)" stroke-width="2"/>
+
+<!-- Header Row -->
+<rect class="hdr" x="20" y="30" width="740" height="50"/>
+<line x1="160" y1="30" x2="160" y2="425" stroke="var(--ink)" stroke-width="1.5"/>
+<line x1="270" y1="30" x2="270" y2="425" stroke="var(--ink)" stroke-width="1.5"/>
+<line x1="510" y1="30" x2="510" y2="425" stroke="var(--ink)" stroke-width="1.5"/>
+
+<text class="th" x="90" y="60">Stage</text>
+<text class="th" x="215" y="60">Age range</text>
+<text class="th" x="390" y="60">Key activity</text>
+<text class="th" x="635" y="60">Example</text>
+
+<!-- Row 1: Preparatory -->
+<line x1="20" y1="165" x2="760" y2="165" stroke="var(--ink)" stroke-width="1"/>
+<text class="h" x="30" y="112" fill="var(--a2)">Preparatory</text>
+<text class="m" x="30" y="130" fill="var(--muted)">Imitation</text>
+<text x="175" y="122">Infancy to</text>
+<text x="175" y="140">approx. 2 years</text>
+<text x="285" y="112">Imitates gestures and words of others</text>
+<text x="285" y="130">without understanding meaning; no distinct</text>
+<text x="285" y="148">sense of separate self yet</text>
+<text x="525" y="112">An infant copying clapping,</text>
+<text x="525" y="130">smiling when smiled at, or</text>
+<text x="525" y="148">repeating sounds heard</text>
+
+<!-- Row 2: Play -->
+<line x1="20" y1="250" x2="760" y2="250" stroke="var(--ink)" stroke-width="1"/>
+<text class="h" x="30" y="200" fill="var(--a3)">Play</text>
+<text class="m" x="30" y="218" fill="var(--muted)">Role-taking</text>
+<text x="175" y="208">Early childhood</text>
+<text x="175" y="226">(ages 2 to 6)</text>
+<text x="285" y="198">Takes the role of a single significant</text>
+<text x="285" y="216">other at a time; acts out adult roles</text>
+<text x="285" y="234">and develops a rudimentary self</text>
+<text x="525" y="198">A child playing doctor,</text>
+<text x="525" y="216">parent, or teacher to dolls</text>
+<text x="525" y="234">or siblings</text>
+
+<!-- Row 3: Game -->
+<line x1="20" y1="335" x2="760" y2="335" stroke="var(--ink)" stroke-width="1"/>
+<text class="h" x="30" y="285" fill="var(--a4)">Game</text>
+<text class="m" x="30" y="303" fill="var(--muted)">Multiple roles</text>
+<text x="175" y="293">School age</text>
+<text x="175" y="311">(ages 7 and older)</text>
+<text x="285" y="283">Takes multiple roles simultaneously;</text>
+<text x="285" y="301">understands rules and expectations</text>
+<text x="285" y="319">of the whole group</text>
+<text x="525" y="283">Playing cricket or football:</text>
+<text x="525" y="301">knowing every position's duty</text>
+<text x="525" y="319">and team strategy</text>
+
+<!-- Row 4: Adult -->
+<text class="h" x="30" y="370" fill="var(--a1)">Adult</text>
+<text class="m" x="30" y="388" fill="var(--muted)">Generalized other</text>
+<text x="175" y="378">Adolescence</text>
+<text x="175" y="396">&amp; adulthood</text>
+<text x="285" y="368">Internalizes the generalized other;</text>
+<text x="285" y="386">understands overarching cultural norms,</text>
+<text x="285" y="404">laws and community expectations</text>
+<text x="525" y="368">A trainee teacher adopting</text>
+<text x="525" y="386">professional ethics and</text>
+<text x="525" y="404">societal civic duties</text>
+<text class="wm" x="768" y="460" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

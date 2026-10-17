@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Agents of Socialization</title><desc id="d">A concept map placing "Socialization" at the centre with five agents branching off: Family (first values and language), School (knowledge and norms), Peer Group (belonging and identity), Media (images and aspirations), Religion (moral framework and rituals).</desc>
+<style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} .center-panel{fill:var(--a1-fill);stroke:var(--a1);stroke-width:3} .link{stroke:var(--line);stroke-width:2;fill:none} text{font-size:12px;fill:var(--ink);text-anchor:middle} .h{font-size:14px;font-weight:700} .m{font-size:11px;fill:var(--muted)} .wm{fill:var(--wm);font-size:11px}</style>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--line)"/></marker></defs>
+<rect class="bg" x="0" y="0" width="780" height="470"/>
+
+<!-- Center -->
+<ellipse class="center-panel" cx="390" cy="235" rx="85" ry="45"/>
+<text class="h" x="390" y="232" fill="var(--a1)">Socialization</text>
+<text class="m" x="390" y="250">Lifelong social learning</text>
+
+<!-- Node 1: Family (top) -->
+<rect class="panel" x="285" y="25" width="210" height="85" rx="8"/>
+<text class="h" x="390" y="50" fill="var(--a2)">Family</text>
+<text class="m" x="390" y="70">Primary agent of socialization</text>
+<text x="390" y="88">First values and language</text>
+<line class="link" x1="390" y1="190" x2="390" y2="110" marker-end="url(#ar)"/>
+
+<!-- Node 2: School (top-right) -->
+<rect class="panel" x="540" y="100" width="210" height="85" rx="8"/>
+<text class="h" x="645" y="125" fill="var(--a3)">School</text>
+<text class="m" x="645" y="145">Formal &amp; hidden curriculum</text>
+<text x="645" y="163">Knowledge and norms</text>
+<line class="link" x1="455" y1="205" x2="540" y2="165" marker-end="url(#ar)"/>
+
+<!-- Node 3: Peer Group (bottom-right) -->
+<rect class="panel" x="525" y="320" width="220" height="85" rx="8"/>
+<text class="h" x="635" y="345" fill="var(--a4)">Peer Group</text>
+<text class="m" x="635" y="365">Equal status relationships</text>
+<text x="635" y="383">Belonging and identity</text>
+<line class="link" x1="455" y1="265" x2="535" y2="320" marker-end="url(#ar)"/>
+
+<!-- Node 4: Media (bottom-left) -->
+<rect class="panel" x="35" y="320" width="220" height="85" rx="8"/>
+<text class="h" x="145" y="345" fill="var(--a1)">Media</text>
+<text class="m" x="145" y="365">Mass communication &amp; culture</text>
+<text x="145" y="383">Images and aspirations</text>
+<line class="link" x1="325" y1="265" x2="245" y2="320" marker-end="url(#ar)"/>
+
+<!-- Node 5: Religion (top-left) -->
+<rect class="panel" x="30" y="100" width="210" height="85" rx="8"/>
+<text class="h" x="135" y="125" fill="var(--a2)">Religion</text>
+<text class="m" x="135" y="145">Moral values &amp; sacred rituals</text>
+<text x="135" y="163">Moral framework and rituals</text>
+<line class="link" x1="325" y1="205" x2="240" y2="165" marker-end="url(#ar)"/>
+<text class="wm" x="768" y="460" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>
