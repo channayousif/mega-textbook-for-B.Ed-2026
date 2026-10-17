@@ -1,0 +1,6 @@
+Render inspection completed for EFMP-305 Unit 6 (en).
+- Desktop 1280x900: 6 pages inspected in English (index, topic-01, topic-02, topic-03, unit-assessment, unit-teacher-notes). 0 broken images, 0 missing alts, no skipped heading levels.
+- Narrow 360x780: docHorizontalOverflow=0px across all 6 pages. Tables fit or scroll within containers cleanly (display: block; overflow-x: auto).
+- A4 Print 794px: clippedElems=0 across all 6 pages. Handouts, answers, and rubrics unclipped.
+- Figures: All 6 figures (fig-U6-1 through fig-U6-6) are in prompt-only state in specs/content/efmp-305/figures/unit-06.md. No placed SVGs in static/img/figures/efmp-305/unit-06/ (owned by TEX-79).
+- Inspection exit code: 0 for DOM and viewport rendering; prompt-only figure status noted for G6 tracking.
