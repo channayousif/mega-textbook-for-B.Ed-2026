@@ -33,7 +33,8 @@ tests:
   - explicit four-file metadata heading import component SLO minute parity PASS
   - four figure desc/alt id kind dimension and localized-src checks PASS
   - key_terms conformance and exact owner source-byte identity PASS
-  - check:content 10 of 13 PASS; pipeline, depth and figure failures recorded
+  - check:content initial 9 of 13 PASS; missing generated status plus pipeline/depth/figure failures
+  - build:content-status then check:content-status PASS; 10 of 13 checks now pass
 ---
 
 ## Prompt
@@ -57,7 +58,7 @@ While reading the remaining assessment, found two additional direct source confl
 ## Outcome
 
 - Impact: four substantive Urdu files and four real carriers added; owner corrections integrated on the required PR; English concept-gate regression cleared.
-- Tests: validation, no-answer-keys, no-em-dash and concept graph PASS. Explicit completed-file structure/metadata/imports/components/SLO/minute parity, four descriptions/carriers, key_terms, source-byte identity PASS. Full-unit parity is not claimed: the Urdu assessment remains absent pending source settlement. Full content checks remain 10/13 passing, with pipeline, depth and figure findings; no clean full-gate claim. No build/render pass claimed for this partial unit.
+- Tests: validation, no-answer-keys, no-em-dash and concept graph PASS. Explicit completed-file structure/metadata/imports/components/SLO/minute parity, four descriptions/carriers, key_terms, source-byte identity PASS. Full-unit parity is not claimed: the Urdu assessment remains absent pending source settlement. The full run initially returned 9/13 because the restored worktree lacked ignored static/content-status.json. Generated it with build:content-status, then check:content-status PASS; combining those actual results leaves 10/13 passing with pipeline, depth and figure findings. The earlier 10/13 wording was recorded before the last gate completed and is corrected here; no clean full-gate claim. No build/render pass claimed for this partial unit.
 - Files: three owner-corrected English source files, unchanged owner PHR 0154, four Urdu files, this PHR.
 - Next prompts: CurriculumOwner resolves TEX-118; BilingualAuthor aligns affected topic costs, authors the full assessment, refreshes QA. Units 1–3 remain conditional on TEX-107 independent G3 acceptance. Full course bilingual build/render and fresh independent G5 remain.
 - Reflection: settled source fixes must follow the required delivery branch even when handed off from a separate draft PR. Deterministic shape checks cannot settle conflicting scoring semantics.
