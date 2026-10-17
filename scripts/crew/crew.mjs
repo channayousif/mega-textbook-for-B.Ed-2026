@@ -1,0 +1,751 @@
+#!/usr/bin/env node
+/**
+ * crew - the repo-native replacement for the Paperclip CEO (ops/crew/README.md).
+ *
+ *   node scripts/crew/crew.mjs plan [--dry-run]     derive jobs from main's content state
+ *   node scripts/crew/crew.mjs tick [--dry-run]     inbox, reap, PRs, launch (the lead loop body)
+ *   node scripts/crew/crew.mjs status               write and print BOARD.md
+ *   node scripts/crew/crew.mjs cmd "<owner message>"  apply one owner command now and print the reply
+ *   node scripts/crew/crew.mjs digest               send the daily digest to the owner
+ *   node scripts/crew/crew.mjs add <course> <unit> <stage> [--branch b] [--pr n] [--task "..."]
+ *   node scripts/crew/crew.mjs ask "<question>" [--options "a|b"] [--job id]
+ *   node scripts/crew/crew.mjs health [worker ok|down|cooling]
+ *   node scripts/crew/crew.mjs notify "<text>" [--urgent] [--dry-run]
+ *
+ * Run it from a clean checkout of origin/main (the "control" checkout). Workers
+ * never touch that checkout; each job gets its own worktree under WT_DIR.
+ * The crew never runs `npm run build` locally: CI builds every PR on GitHub's
+ * runners, which keeps this production host's RAM for the live site.
+ */
+import { spawn, spawnSync } from 'node:child_process';
+import { appendFileSync, existsSync, mkdirSync, readFileSync, readdirSync, symlinkSync, writeFileSync, openSync } from 'node:fs';
+import { join, resolve } from 'node:path';
+import { WORKERS, STAGES, QUOTA_RE, COOLDOWN_MIN, pickWorker } from './workers.mjs';
+import { STATE_DIR, WT_DIR, LOG_DIR, load, save, ACTIVE, TERMINAL, jobId, now } from './state.mjs';
+import { send, reply, readInbox } from './notify.mjs';
+
+const ROOT = resolve(new URL('../..', import.meta.url).pathname);
+const MAX_PARALLEL = Number(process.env.CREW_MAX_PARALLEL || 3);
+const MIN_FREE_MB = Number(process.env.CREW_MIN_FREE_MB || 3072);
+// A full checkout is about 2.3 GB, most of it G3/G5 render evidence that no gate reads, so job
+// worktrees are sparse (about 0.6 GB). The disk floor keeps the live site and Supabase writable:
+// on 2026-10-17 the disk reached 99% and every tick crashed in `git worktree add`.
+const MIN_FREE_DISK_MB = Number(process.env.CREW_MIN_FREE_DISK_MB || 8192);
+const SPARSE = ['/*', '!/specs/content/*/reviews/**/renders-*/'];
+const JOB_TIMEOUT = process.env.CREW_JOB_TIMEOUT || '3h';
+const STAGE_ORDER = ['salvage', 'fix', 'repair_en', 'review_en', 'review_ur', 'translate', 'figures', 'illustrate', 'author'];
+/** A PR touching any of these is never auto-merged; the owner is asked instead. */
+const PROTECTED = [/^specs\/content\/style-guide\.md$/, /^\.specify\//, /^history\/adr\//, /^\.github\//,
+  /^scripts\//, /^catalog\//, /^package(-lock)?\.json$/, /content-spec\.md$/, /\/intake(-\d+)?\//, /^CLAUDE\.md$/, /^AGENTS\.md$/];
+
+const args = process.argv.slice(2);
+const flag = (name) => args.includes(`--${name}`);
+const opt = (name) => { const i = args.indexOf(`--${name}`); return i >= 0 ? args[i + 1] : undefined; };
+const DRY = flag('dry-run');
+
+function sh(cmd, cmdArgs, cwd = ROOT, { allowFail = false } = {}) {
+  const r = spawnSync(cmd, cmdArgs, { cwd, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
+  if (r.status !== 0 && !allowFail) throw new Error(`${cmd} ${cmdArgs.join(' ')}: ${(r.stderr || r.stdout).trim().slice(-800)}`);
+  return { ok: r.status === 0, out: (r.stdout || '').trim(), err: (r.stderr || '').trim() };
+}
+const familyOf = (worker) => WORKERS[worker]?.family;
+const unitKey = (j) => `${j.course}#${j.unit}`;
+const pad = (n) => String(n).padStart(2, '0');
+function log(board, job, event) { job.history = [...(job.history || []), `${now()} ${event}`].slice(-30); }
+
+// ---------------------------------------------------------------- plan
+
+/** Reads main's content state (the same source the status report and the site use). */
+function contentStatus() {
+  sh('node', ['scripts/report-content-status.mjs']);
+  return JSON.parse(readFileSync(join(ROOT, 'static', 'content-status.json'), 'utf8'));
+}
+
+function latestReport(course, unit, gate) {
+  const dir = join(ROOT, 'specs', 'content', course.toLowerCase(), 'reviews', `unit-${pad(unit)}`, gate);
+  if (!existsSync(dir)) return null;
+  const files = readdirSync(dir).filter((f) => f.endsWith('.json')).sort();
+  if (!files.length) return null;
+  try { return { file: join(dir, files.at(-1)), ...JSON.parse(readFileSync(join(dir, files.at(-1)), 'utf8')) }; } catch { return null; }
+}
+
+function trackerSuggestion(course, unit, stagePrefix) {
+  const file = join(ROOT, 'specs', 'content', course.toLowerCase(), 'tasks.md');
+  if (!existsSync(file)) return '';
+  const rows = readFileSync(file, 'utf8').split('\n').filter((l) => l.startsWith(`| Unit ${unit} | ${stagePrefix}`));
+  return rows.at(-1) || '';
+}
+
+function isBilingual(catalog, code) {
+  for (const s of catalog.semesters) for (const c of s.courses) if (c.code === code) return c.bilingual !== false;
+  return true;
+}
+
+/** The next stages a unit on main needs. Per-unit serialisation happens at launch. */
+function neededStages(course, u, bilingual) {
+  const need = [];
+  if (!u.authored) return ['author'];
+  const f = u.figures || {};
+  if (f.prompt_only > 0) need.push('figures');
+  const g3 = latestReport(course, u.unit_no, 'G3');
+  if (u.gates.G3 !== 'done') {
+    if (!g3) need.push('review_en');
+    else if (g3.disposition === 'revise' && !/repairs applied/i.test(trackerSuggestion(course, u.unit_no, 'G3'))) need.push('repair_en');
+  }
+  if (bilingual) {
+    if (!/G4[^|]*\| ✅/.test(trackerSuggestion(course, u.unit_no, 'G4'))) need.push('translate');
+    else if (u.gates.G5 !== 'done' && !latestReport(course, u.unit_no, 'G5')) need.push('review_ur');
+  }
+  return need;
+}
+
+function plan() {
+  const board = load('board');
+  const catalog = JSON.parse(readFileSync(join(ROOT, 'catalog', 'courses.json'), 'utf8'));
+  const status = contentStatus();
+  const added = [];
+  for (const c of status.courses) {
+    for (const u of c.units) {
+      for (const stage of neededStages(c.course_code, u, isBilingual(catalog, c.course_code))) {
+        const base = jobId(c.course_code, u.unit_no, stage);
+        const prior = board.jobs.filter((j) => j.id === base || j.id.startsWith(`${base}-r`));
+        if (prior.some((j) => ACTIVE.includes(j.status) || j.status === 'blocked')) continue;
+        // A merged job whose need persists means its output did not change main's state; do not loop on it.
+        if (prior.filter((j) => j.status === 'merged').length >= 2) continue;
+        const id = prior.length ? `${base}-r${prior.length}` : base;
+        added.push({ id, course: c.course_code, unit: u.unit_no, stage, status: 'queued', attempts: 0, tried: [], createdAt: now() });
+      }
+    }
+  }
+  if (!DRY) { board.jobs.push(...added); save('board', board); }
+  console.log(`${DRY ? '[dry-run] ' : ''}planned ${added.length} job(s)`);
+  for (const j of added) console.log(`  + ${j.id}`);
+  return added;
+}
+
+// ---------------------------------------------------------------- briefs
+
+const STAGE_TASK = {
+  salvage: (j) => `This branch carries earlier, unfinished work from ${j.pr ? `PR #${j.pr}` : 'an earlier branch'} (${j.base}). Run \`git fetch origin && git rebase origin/main\`, resolve every conflict (keep this unit's content; take main's version of shared files such as the style guide, gates and catalog), then make every content gate pass.${j.task ? ` Extra instructions: ${j.task}` : ''}`,
+  author: (j) => `Author ${j.course} Unit ${j.unit} from its approved content-spec, following the author-unit skill end to end (English only; the Urdu mirror is a separate job).`,
+  repair_en: (j) => `Apply the findings of the latest G3 report under specs/content/${j.course.toLowerCase()}/reviews/unit-${pad(j.unit)}/G3/. Make the smallest edits that resolve each finding, then append a new tracker row for Unit ${j.unit} G3 whose Suggestion begins "advisory: revise; repairs applied" and names the report. Leave G3 unticked.`,
+  figures: (j) => `Render every prompt-only schematic figure for ${j.course} Unit ${j.unit} (generate-figures skill): diagrams, tables, concept maps, flowcharts and timelines as SVG with their .ur.svg variants. Leave raster illustrations at prompt-only for the illustrate job.`,
+  illustrate: (j) => `Produce the raster illustrations for ${j.course} Unit ${j.unit} with \`scripts/heavy.sh node scripts/generate-illustration.mjs\` per ADR-0029, inspect each for pedagogy and cultural accuracy, optimise, place, and move the manifest rows to placed.`,
+  review_en: (j) => `Act as the INDEPENDENT G3 English reviewer of ${j.course} Unit ${j.unit} (review-unit skill, .claude/agents/g3-reviewer.md). You did not write this unit. Produce the evidence report the skill specifies and the advisory tracker row. Never tick G3, never add reviewer initials, never self-sign.`,
+  translate: (j) => `Translate ${j.course} Unit ${j.unit} into its complete Urdu mirror at G4 (translate-unit skill), bound to specs/content/terminology.csv. Record the G4 tracker row as the skill says; translation_status stays draft.`,
+  review_ur: (j) => `Act as the INDEPENDENT G5 Urdu reviewer of ${j.course} Unit ${j.unit} (review-unit skill, .claude/agents/g5-reviewer.md). You did not translate this unit. Produce the evidence report and advisory tracker row. Never tick G5, never self-sign.`,
+  fix: (j) => j.task || `Make every content gate pass for ${j.course} Unit ${j.unit} with the smallest edits.`,
+};
+
+function brief(j) {
+  const skill = STAGES[j.stage].skill;
+  const scope = j.unit === 0
+    ? `The whole ${j.course} course: its docs and i18n trees, \`specs/content/${j.course.toLowerCase()}/\`, its figures, and the shared files its PR already touches.`
+    : `${j.course} Unit ${j.unit} only: its docs/licence and i18n files, its rows and folders under
+\`specs/content/${j.course.toLowerCase()}/\`, and \`static/img/figures/${j.course.toLowerCase()}/unit-${pad(j.unit)}/\`.`;
+  return `# Crew job ${j.id}
+
+You are the ${j.worker} worker on the B.Ed bilingual textbook repo, working in this checkout on branch \`${j.branch}\`.
+Read AGENTS.md and CLAUDE.md first and obey them: no em dash (U+2014) anywhere, heavy commands only through
+\`scripts/heavy.sh\`, never run \`npm run build\` or a dev server, never mark G3/G5 done, never self-sign or use
+human initials, never edit the style guide, constitution, ADRs, gate scripts, catalog or an approved content-spec.
+
+## Task
+${STAGE_TASK[j.stage](j)}
+${skill ? `\nFollow \`.claude/skills/${skill}/SKILL.md\` exactly; read it and every file it references before starting.\n` : ''}
+## Scope
+${scope}
+
+## Continue, do not restart
+Earlier attempts may have left work on this branch. Check \`git log origin/main..HEAD\` and \`git status\` and build on it.
+
+## Done when
+1. \`npm run check:content\` reports no finding that origin/main does not also report (run it, read every
+   failure, fix those in your scope, rerun). Findings that already exist on main belong to other jobs.
+2. All work is committed on this branch with a conventional commit message. Do not push and do not open a PR.
+3. Your final output ends with one line: \`CREW-SUMMARY: <what you changed, in one sentence>\`.
+${j.feedback ? `\n## Feedback from the previous attempt\n${j.feedback}\n` : ''}`;
+}
+
+// ---------------------------------------------------------------- launch
+
+function memAvailableMb() {
+  const m = readFileSync('/proc/meminfo', 'utf8').match(/MemAvailable:\s+(\d+)/);
+  return m ? Number(m[1]) / 1024 : 0;
+}
+
+function diskFreeMb() {
+  mkdirSync(WT_DIR, { recursive: true });
+  const r = sh('df', ['-Pm', WT_DIR], ROOT, { allowFail: true });
+  return Number(r.out.split('\n').at(-1)?.split(/\s+/)[3] || 0);
+}
+
+function prepareWorktree(board, j) {
+  // A CI-fix job works on its parent's branch, which is already checked out in the parent's worktree.
+  const parent = j.parent && board.jobs.find((p) => p.id === j.parent);
+  if (parent?.worktree && existsSync(parent.worktree)) { mkdirSync(join(parent.worktree, '.crew'), { recursive: true }); return parent.worktree; }
+  const wt = join(WT_DIR, j.id);
+  if (!existsSync(wt)) {
+    mkdirSync(WT_DIR, { recursive: true });
+    sh('git', ['fetch', '-q', 'origin']);
+    const exists = sh('git', ['ls-remote', '--exit-code', '--heads', 'origin', j.branch], ROOT, { allowFail: true }).ok;
+    const ref = exists ? `origin/${j.branch}` : j.base ? `origin/${j.base}` : 'origin/main';
+    sh('git', ['worktree', 'add', '--no-checkout', '-B', j.branch, wt, ref]);
+    sh('git', ['sparse-checkout', 'set', '--no-cone', ...SPARSE], wt);
+    sh('git', ['reset', '-q', '--hard', 'HEAD'], wt);
+    const nm = join(ROOT, 'node_modules');
+    if (existsSync(nm) && !existsSync(join(wt, 'node_modules'))) symlinkSync(nm, join(wt, 'node_modules'));
+  }
+  mkdirSync(join(wt, '.crew'), { recursive: true });
+  return wt;
+}
+
+function launch(board, j, worker) {
+  j.worker = worker;
+  j.family = familyOf(worker);
+  j.branch = j.branch || `crew/${j.id}`;
+  j.worktree = prepareWorktree(board, j);
+  const briefText = brief(j);
+  writeFileSync(join(j.worktree, '.crew', 'brief.md'), briefText);
+  const prompt = `Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.`;
+  const [bin, binArgs] = WORKERS[worker].cmd(prompt);
+  j.log = join(LOG_DIR, `${j.id}.${(j.attempts || 0) + 1}.log`);
+  const exitFile = `${j.log}.exit`;
+  const q = (s) => `'${String(s).replace(/'/g, `'\\''`)}'`;
+  const line = `timeout ${JOB_TIMEOUT} ${[bin, ...binArgs].map(q).join(' ')} < /dev/null > ${q(j.log)} 2>&1; echo $? > ${q(exitFile)}`;
+  const child = spawn('bash', ['-c', line], { cwd: j.worktree, detached: true, stdio: 'ignore' });
+  child.unref();
+  j.pid = child.pid;
+  j.status = 'running';
+  j.startedAt = now();
+  j.attempts = (j.attempts || 0) + 1;
+  j.tried = [...new Set([...(j.tried || []), worker])];
+  log(board, j, `launched on ${worker} (attempt ${j.attempts})`);
+  console.log(`launched ${j.id} on ${worker}`);
+}
+
+function excludedFamilies(board, j) {
+  const of = STAGES[j.stage].reviewOf;
+  if (!of) return [];
+  const producers = board.jobs.filter((x) => unitKey(x) === unitKey(j) && x.stage === of && x.status === 'merged').map((x) => x.family);
+  // Legacy units were produced by the Claude-based Paperclip authors, so Claude may not review them.
+  return producers.length ? [...new Set(producers)] : ['anthropic'];
+}
+
+function launchQueued(board, health, control, events) {
+  const running = board.jobs.filter((j) => j.status === 'running');
+  const busyUnits = new Set(board.jobs.filter((j) => ['running', 'gate_red', 'pr_open'].includes(j.status) && j.stage !== 'fix').map(unitKey));
+  const prio = (j) => { const i = (control.priority || []).indexOf(j.course); return i < 0 ? 99 : i; };
+  const queue = board.jobs.filter((j) => j.status === 'queued')
+    .sort((a, b) => prio(a) - prio(b) || STAGE_ORDER.indexOf(a.stage) - STAGE_ORDER.indexOf(b.stage) || a.createdAt.localeCompare(b.createdAt));
+  let launched = 0;
+  for (const j of queue) {
+    if (running.length >= MAX_PARALLEL) break;
+    if (memAvailableMb() < MIN_FREE_MB) { console.log(`memory below ${MIN_FREE_MB} MB; not launching`); break; }
+    const disk = diskFreeMb();
+    if (disk < MIN_FREE_DISK_MB) {
+      console.log(`disk free ${disk} MB below ${MIN_FREE_DISK_MB} MB; not launching`);
+      // Alert at most every 6 hours, not every tick.
+      if (!control.diskAlertAt || Date.now() - Date.parse(control.diskAlertAt) > 6 * 36e5) {
+        control.diskAlertAt = now();
+        events.push(`⚠️ disk free ${Math.round(disk / 1024)} GB (floor ${Math.round(MIN_FREE_DISK_MB / 1024)} GB): no new jobs until space is freed`);
+      }
+      break;
+    }
+    if (busyUnits.has(unitKey(j)) && j.stage !== 'fix') continue;
+    const worker = pickWorker(j.stage, { health, running, excludeFamilies: excludedFamilies(board, j) });
+    if (!worker) continue; // waits; other stages keep flowing
+    if (DRY) { console.log(`[dry-run] would launch ${j.id} on ${worker}`); running.push({ worker }); continue; }
+    try {
+      launch(board, j, worker);
+    } catch (e) {
+      // One bad worktree must not abort the tick: an aborted tick saves nothing, so every job it
+      // launched is forgotten and launched again next tick (gpks-402 ran 9 times on 2026-10-17).
+      j.launchErrors = (j.launchErrors || 0) + 1;
+      log(board, j, `launch failed: ${e.message.slice(-200)}`);
+      if (j.launchErrors >= 3) { j.status = 'gate_red'; events.push(`🔴 ${j.id} could not be launched 3 times: ${e.message.slice(-160)}`); }
+      continue;
+    }
+    save('board', board);
+    running.push(j);
+    busyUnits.add(unitKey(j));
+    launched++;
+  }
+  return launched;
+}
+
+// ---------------------------------------------------------------- reap
+
+const alive = (pid) => { try { process.kill(pid, 0); return true; } catch { return false; } };
+
+function cool(health, worker, reason) {
+  const h = health[worker] || {};
+  const strikes = (h.strikes || 0) + 1;
+  const mins = COOLDOWN_MIN[Math.min(strikes, COOLDOWN_MIN.length) - 1];
+  health[worker] = { state: 'cooling', strikes, until: new Date(Date.now() + mins * 60000).toISOString(), last_error: reason.slice(0, 300) };
+  return mins;
+}
+
+function writePhr(j, summary) {
+  const dir = join(j.worktree, 'history', 'prompts', j.course.toLowerCase());
+  mkdirSync(dir, { recursive: true });
+  const files = sh('git', ['diff', '--name-only', 'origin/main...HEAD'], j.worktree, { allowFail: true }).out.split('\n').filter(Boolean);
+  const body = `---
+id: crew-${j.id}
+title: crew ${j.stage} ${j.course} unit ${j.unit}
+stage: misc
+date: ${now().slice(0, 10)}
+surface: agent
+model: ${j.worker}
+feature: ${j.course.toLowerCase()}
+branch: ${j.branch}
+user: crew
+command: crew ${j.stage}
+labels: ["crew", "${j.worker}", "${j.stage}"]
+links:
+  spec: specs/content/${j.course.toLowerCase()}/content-spec.md
+  ticket: null
+  adr: null
+  pr: null
+files:
+${files.map((f) => ` - ${f}`).join('\n') || ' - none'}
+tests:
+ - npm run check:content
+---
+
+## Prompt
+
+${readFileSync(join(j.worktree, '.crew', 'brief.md'), 'utf8')}
+
+## Response snapshot
+
+${summary}
+
+## Outcome
+
+- Impact: ${j.stage} for ${j.course} Unit ${j.unit} by ${j.worker} (attempt ${j.attempts}).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: ${files.length} file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
+
+## Handoff (for CEO and agents)
+
+- Shipped / changed: ${summary}
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
+
+## Evaluation notes (flywheel)
+
+- Failure modes observed: ${j.attempts > 1 ? `${j.attempts - 1} earlier attempt(s); see the board history` : 'none'}
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
+`;
+  writeFileSync(join(dir, `crew-${j.id}.${j.stage === 'author' ? 'green' : 'misc'}.prompt.md`), body.replace(/\u2014/g, ' - '));
+}
+
+/**
+ * Gate findings as a set of normalised lines. A job is judged against MAIN's
+ * findings, not against zero: when main itself is red (a corpus-wide standard
+ * change, say), a unit job that adds nothing new must still be able to land.
+ */
+function gateFindings(cwd) {
+  const r = sh('npm', ['run', '-s', 'check:content'], cwd, { allowFail: true });
+  if (r.ok) return [];
+  return [...new Set((r.out + '\n' + r.err).split('\n')
+    .filter((l) => /^\s+[-✗•]\s|✗|error/i.test(l) && !/PASS|FAIL\s+\d|DeprecationWarning/.test(l))
+    .map((l) => l.trim()))];
+}
+let mainBaseline = null;
+function newFindings(wt) {
+  const mine = gateFindings(wt);
+  if (!mine.length) return [];
+  mainBaseline ??= new Set(gateFindings(ROOT));
+  return mine.filter((l) => !mainBaseline.has(l));
+}
+
+function finishSuccess(board, j, logText) {
+  const wt = j.worktree;
+  if (sh('git', ['status', '--porcelain'], wt).out.replace(/^.. (\.crew|node_modules).*$/gm, '').trim()) {
+    sh('git', ['add', '-A', '--sparse', ':!.crew', ':!node_modules'], wt);
+    sh('git', ['commit', '-q', '-m', `chore(crew): ${j.id} uncommitted work from ${j.worker}`], wt, { allowFail: true });
+  }
+  const ahead = Number(sh('git', ['rev-list', '--count', 'origin/main..HEAD'], wt).out || 0);
+  if (!ahead) return { ok: false, why: 'the worker exited without committing any change' };
+  const fresh = newFindings(wt);
+  if (fresh.length) return { ok: false, why: `npm run check:content has ${fresh.length} finding(s) that main does not have:\n${fresh.slice(0, 40).join('\n')}` };
+  const summary = (logText.match(/CREW-SUMMARY:\s*(.+)/g) || []).at(-1)?.replace(/CREW-SUMMARY:\s*/, '') || `${j.stage} for ${j.course} Unit ${j.unit}`;
+  writePhr(j, summary.replace(/\u2014/g, ' - '));
+  sh('git', ['add', 'history/prompts'], wt);
+  sh('git', ['commit', '-q', '-m', `docs(phr): crew ${j.id}`], wt, { allowFail: true });
+  sh('git', ['push', '-q', '-u', 'origin', `HEAD:${j.branch}`, '--force-with-lease'], wt);
+  if (j.parent) return { ok: true, summary }; // CI-fix job: the push updated the parent's PR
+  const title = `crew(${j.course.toLowerCase()}): ${j.stage} unit ${j.unit} by ${j.worker}`;
+  const body = `${summary}\n\nCrew job \`${j.id}\`, worker **${j.worker}** (${j.family}), attempt ${j.attempts}. \`npm run check:content\` passed before push; CI builds the site.\n${j.supersedes ? `\nSupersedes ${String(j.supersedes).split(',').map((n) => `#${n}`).join(', ')}.\n` : ''}\n🤖 Generated with [Claude Code](https://claude.com/claude-code)`;
+  const pr = sh('gh', ['pr', 'create', '--head', j.branch, '--base', 'main', '--title', title, '--body', body], wt, { allowFail: true });
+  const url = pr.out.match(/https:\S+\/pull\/(\d+)/);
+  if (!url) {
+    const existing = sh('gh', ['pr', 'view', j.branch, '--json', 'number', '-q', '.number'], wt, { allowFail: true }).out;
+    if (!existing) return { ok: false, why: `gh pr create failed: ${pr.err.slice(-500)}` };
+    j.prNumber = Number(existing);
+  } else j.prNumber = Number(url[1]);
+  for (const old of String(j.supersedes || '').split(',').filter(Boolean)) {
+    sh('gh', ['pr', 'close', old, '--comment', `Salvaged into #${j.prNumber} by the crew (job \`${j.id}\`). Paperclip is paused; the crew board tracks this work now.`], wt, { allowFail: true });
+  }
+  return { ok: true, summary };
+}
+
+function reap(board, health, events) {
+  for (const j of board.jobs.filter((x) => x.status === 'running')) {
+    const exitFile = `${j.log}.exit`;
+    if (alive(j.pid) && !existsSync(exitFile)) continue;
+    const code = existsSync(exitFile) ? Number(readFileSync(exitFile, 'utf8').trim()) : -1;
+    const logText = existsSync(j.log) ? readFileSync(j.log, 'utf8') : '';
+    const tail = logText.slice(-4000);
+    const ahead = Number(sh('git', ['rev-list', '--count', 'origin/main..HEAD'], j.worktree, { allowFail: true }).out || 0);
+    const quota = QUOTA_RE.test(tail.slice(-1500)) && (code !== 0 || !ahead);
+    if (quota || (code === 124 && !tail.trim())) {
+      const mins = cool(health, j.worker, tail.slice(-300) || `exit ${code}`);
+      j.status = 'queued';
+      log(board, j, `${j.worker} hit a limit (exit ${code}); cooling ${mins} min; requeued`);
+      events.push(`⏸ ${j.worker} cooling ${mins} min; ${j.id} moves to the next worker`);
+      continue;
+    }
+    const result = code === 0 ? finishSuccess(board, j, logText) : { ok: false, why: `worker exited ${code}${code === 124 ? ' (timeout)' : ''}:\n${tail.slice(-1500)}` };
+    if (result.ok) {
+      health[j.worker] = { state: 'ok', strikes: 0 };
+      if (j.parent) {
+        // A fix job only updated its parent's branch; the parent PR goes back to waiting on CI.
+        j.status = 'merged';
+        const parent = board.jobs.find((p) => p.id === j.parent);
+        if (parent) { parent.status = 'pr_open'; log(board, parent, `fixed by ${j.id}`); }
+      } else j.status = 'pr_open';
+      log(board, j, `done on ${j.worker}${j.prNumber ? `; PR #${j.prNumber}` : ''}`);
+      events.push(`✅ ${j.id} by ${j.worker}${j.prNumber ? ` -> PR #${j.prNumber}` : ''}: ${result.summary}`);
+    } else if (j.attempts < 2) {
+      j.status = 'queued';
+      j.feedback = result.why;
+      log(board, j, `attempt ${j.attempts} failed; retrying with feedback`);
+    } else if (j.attempts < 3) {
+      // Third attempt goes to a different worker in the chain, carrying the same feedback.
+      j.status = 'queued';
+      j.feedback = result.why;
+      j.avoid = [j.worker];
+      log(board, j, `second failure on ${j.worker}; handing to another worker`);
+    } else {
+      j.status = 'gate_red';
+      log(board, j, `failed ${j.attempts} times; needs the lead`);
+      events.push(`🔴 ${j.id} failed ${j.attempts} times (last: ${j.worker}). ${result.why.split('\n')[0]}`);
+    }
+  }
+}
+
+// ---------------------------------------------------------------- PRs
+
+/** Remove a finished job's worktree; the branch history lives on in the merged PR. */
+function cleanup(j) {
+  if (j.parent || !j.worktree || !existsSync(j.worktree)) return;
+  sh('git', ['worktree', 'remove', '--force', j.worktree], ROOT, { allowFail: true });
+}
+
+function prFiles(n) {
+  return sh('gh', ['pr', 'view', String(n), '--json', 'files', '-q', '.files[].path'], ROOT, { allowFail: true }).out.split('\n').filter(Boolean);
+}
+
+/**
+ * A re-run on the same head commit (re-opened PR, re-run job) leaves the old run's check
+ * runs in the rollup beside the new ones, so a stale FAILURE would outlive a green re-run
+ * and queue a needless fix job. Keep only the most recent result per workflow and check.
+ */
+export function latestChecks(checks) {
+  const latest = new Map();
+  for (const c of checks) {
+    const key = `${c.workflowName || ''}/${c.name || c.context}`;
+    const at = Date.parse(c.startedAt || c.createdAt || 0) || 0;
+    if (!latest.has(key) || at >= latest.get(key).at) latest.set(key, { c, at });
+  }
+  return [...latest.values()].map((x) => x.c);
+}
+
+function managePrs(board, decisions, events) {
+  for (const j of board.jobs.filter((x) => x.status === 'pr_open' && x.prNumber)) {
+    const v = sh('gh', ['pr', 'view', String(j.prNumber), '--json', 'state,mergeable,statusCheckRollup,isDraft'], ROOT, { allowFail: true });
+    if (!v.ok) continue;
+    const pr = JSON.parse(v.out);
+    if (pr.state === 'MERGED') { j.status = 'merged'; log(board, j, 'merged'); cleanup(j); continue; }
+    if (pr.state === 'CLOSED') { j.status = 'closed'; log(board, j, 'closed'); cleanup(j); continue; }
+    const checks = latestChecks(pr.statusCheckRollup || []);
+    // GitHub runs no PR CI while a PR conflicts, so waiting would stall it forever. Salvage
+    // branches all append to the same registries, so each salvage that merges conflicts
+    // the rest; resolving needs judgement (keep both sides, renumber clashing IDs).
+    if (pr.mergeable === 'CONFLICTING') {
+      if (board.jobs.some((x) => x.parent === j.id && ACTIVE.includes(x.status))) continue;
+      const tries = board.jobs.filter((x) => x.parent === j.id && x.id.includes('-conflict')).length;
+      if (tries >= 5) { j.status = 'gate_red'; events.push(`🔴 PR #${j.prNumber} (${j.id}) still conflicts after ${tries} merge attempts`); continue; }
+      board.jobs.push({ id: `${j.id}-conflict${tries + 1}`, parent: j.id, course: j.course, unit: j.unit, stage: 'fix', status: 'queued', attempts: 0, tried: [],
+        branch: j.branch, pr: j.prNumber, createdAt: now(),
+        task: `PR #${j.prNumber} conflicts with main. Run \`git fetch origin && git merge origin/main\` on this branch and resolve every conflict. Shared registries (glossary.json, specs/decisions/log.md, specs/gaps.md, specs/content/terminology.csv) are append-only: keep BOTH sides' entries, in main's order then this branch's, and drop exact duplicates. If an ID this branch added (D-YYYY-NNNN, G-YYYY-NN, a glossary key) is already used on main for something else, give this branch's entry the next free ID and update every reference to it in this branch's files. Never change or remove an entry that main already has. Commit the merge, then make \`npm run check:content\` pass.` });
+      log(board, j, `conflicts with main; merge job queued`);
+      continue;
+    }
+    // CheckRun carries status/conclusion; a legacy StatusContext carries state.
+    const pending = checks.some((c) => (c.status ? c.status !== 'COMPLETED' : ['PENDING', 'EXPECTED'].includes(c.state)));
+    const failed = checks.filter((c) => (c.status ? !['SUCCESS', 'NEUTRAL', 'SKIPPED'].includes(c.conclusion) : ['FAILURE', 'ERROR'].includes(c.state)));
+    if (pending || !checks.length) continue;
+    if (failed.length) {
+      if (board.jobs.some((x) => x.parent === j.id && ACTIVE.includes(x.status))) continue;
+      const fixes = board.jobs.filter((x) => x.parent === j.id && x.id.includes('-cifix')).length;
+      if (fixes >= 2) { j.status = 'gate_red'; events.push(`🔴 PR #${j.prNumber} (${j.id}) still red after ${fixes} CI fixes`); continue; }
+      board.jobs.push({ id: `${j.id}-cifix${fixes + 1}`, parent: j.id, course: j.course, unit: j.unit, stage: 'fix', status: 'queued', attempts: 0, tried: [],
+        branch: j.branch, pr: j.prNumber, createdAt: now(),
+        task: `CI failed on PR #${j.prNumber} (checks: ${failed.map((c) => c.name || c.context).join(', ')}). Run \`gh pr checks ${j.prNumber}\` and \`gh run view --log-failed\` to read the failure, fix it on this branch with the smallest change, and make \`npm run check:content\` pass. A build failure is usually malformed MDX or a broken relative link in this unit's files.` });
+      j.status = 'gate_red';
+      log(board, j, `CI red: ${failed.map((c) => c.name).join(', ')}; fix job queued`);
+      continue;
+    }
+    const touched = prFiles(j.prNumber).filter((f) => PROTECTED.some((re) => re.test(f)));
+    if (touched.length) {
+      if (!decisions.items.some((d) => d.pr === j.prNumber && d.status === 'open')) {
+        ask(decisions, `PR #${j.prNumber} (${j.id}) is green but touches protected files: ${touched.slice(0, 6).join(', ')}. Merge it?`, ['merge', 'hold'], { pr: j.prNumber, job: j.id });
+      }
+      continue;
+    }
+    if (DRY) { console.log(`[dry-run] would merge PR #${j.prNumber}`); continue; }
+    if (pr.isDraft) sh('gh', ['pr', 'ready', String(j.prNumber)], ROOT, { allowFail: true });
+    const m = sh('gh', ['pr', 'merge', String(j.prNumber), '--merge', '--admin'], ROOT, { allowFail: true });
+    if (m.ok) {
+      j.status = 'merged'; log(board, j, 'auto-merged (CI green)'); events.push(`🚀 merged PR #${j.prNumber} (${j.id})`);
+      cleanup(j);
+      sh('git', ['push', '-q', 'origin', '--delete', j.branch], ROOT, { allowFail: true });
+    }
+  }
+}
+
+// ---------------------------------------------------------------- decisions and owner commands
+
+function ask(decisions, question, options = ['yes', 'no'], extra = {}) {
+  const n = decisions.items.length + 1;
+  const id = `C-${String(n).padStart(3, '0')}`;
+  decisions.items.push({ id, question, options, status: 'open', askedAt: now(), ...extra });
+  send(`❓ ${id}: ${question}\nReply "${id} ${options.join(`" or "${id} `)}" (free text after the option is recorded).`, { urgent: true, dryRun: DRY });
+  return id;
+}
+
+const HELP = 'commands: crew status | crew pause | crew resume | crew prioritise <COURSE> | crew stop <job> | crew retry <job> | crew note <directions for the crew> | C-### <option> [note]';
+
+/**
+ * One owner message -> one reply (or null when it is not for the crew). Shared by the tick's
+ * inbox poll and by `crew.mjs cmd`, which openclaw's crew skill calls so the owner gets an answer
+ * in seconds instead of at the next tick.
+ */
+function handleCommand(text, { board, decisions, control, health }, via = 'cli') {
+  text = text.trim();
+  const c = text.match(/^\/?crew\b[\s:,.-]*(\w+)?\s*([\s\S]*)$/i);
+  if (c) {
+    const v = (c[1] || 'status').toLowerCase();
+    const arg = c[2].trim();
+    if (v === 'status') return statusText(board, health, decisions, control);
+    if (v === 'help') return HELP;
+    if (v === 'pause') { control.paused = true; return 'paused: running jobs finish, no new jobs start. "crew resume" restarts.'; }
+    if (v === 'resume') { control.paused = false; return 'resumed: queued jobs start at the next tick (within 15 min).'; }
+    if (v.startsWith('priorit')) {
+      if (!arg) return 'usage: crew prioritise <COURSE>, e.g. crew prioritise EFMP-305';
+      const course = arg.split(/\s+/)[0].toUpperCase();
+      control.priority = [course, ...(control.priority || []).filter((x) => x !== course)];
+      return `priority: ${control.priority.join(' > ')}`;
+    }
+    if (v === 'stop' || v === 'retry') {
+      const j = board.jobs.find((x) => x.id === arg.split(/\s+/)[0]);
+      if (!j) return `no job "${arg}". "crew status" lists job ids.`;
+      if (v === 'stop') { if (j.pid && alive(j.pid)) try { process.kill(-j.pid); } catch {} j.status = 'blocked'; log(board, j, `stopped by owner via ${via}`); return `stopped ${j.id}`; }
+      j.status = 'queued'; j.attempts = 0; j.launchErrors = 0; log(board, j, `requeued by owner via ${via}`); return `requeued ${j.id}`;
+    }
+    if (v === 'note') {
+      if (!arg) return 'usage: crew note <directions>';
+      control.notes = [...(control.notes || []), { at: now(), via, text: arg }].slice(-50);
+      appendFileSync(join(STATE_DIR, 'OWNER-NOTES.md'), `\n## ${now()} (${via})\n${arg}\n`);
+      return 'noted. The crew lead reads owner notes before planning; anything that needs a decision comes back to you as a C-### question.';
+    }
+    return `unknown crew command "${v}". ${HELP}`;
+  }
+  const d = text.match(/^\/?(C-\d{3})\b\s*[:,-]?\s*(\S+)?\s*([\s\S]*)/i);
+  if (!d) return null; // ordinary chat is openclaw's business, not the crew's
+  const item = decisions.items.find((x) => x.id.toUpperCase() === d[1].toUpperCase());
+  if (!item) return `no decision ${d[1].toUpperCase()}.`;
+  if (item.status !== 'open') return `${item.id} was already answered: ${item.answer}.`;
+  const answer = (d[2] || '').toLowerCase();
+  if (!item.options.includes(answer)) return `${item.id} options are: ${item.options.join(' / ')}. Reply e.g. "${item.id} ${item.options[0]}".`;
+  item.status = 'answered'; item.answer = answer; item.note = d[3]?.trim(); item.answeredAt = now(); item.via = via;
+  let extra = '';
+  if (item.pr && answer === 'merge' && !DRY) {
+    const r = sh('gh', ['pr', 'merge', String(item.pr), '--merge', '--admin'], ROOT, { allowFail: true });
+    const j = board.jobs.find((x) => x.id === item.job);
+    if (r.ok && j) { j.status = 'merged'; log(board, j, `merged on owner decision ${item.id}`); }
+    extra = r.ok ? `; PR #${item.pr} merged` : `; merging PR #${item.pr} failed: ${r.err.slice(-160)}`;
+  }
+  if (item.job && answer === 'hold') { const j = board.jobs.find((x) => x.id === item.job); if (j) j.status = 'blocked'; }
+  return `noted ${item.id}: ${answer}${extra}`;
+}
+
+const norm = (t) => t.trim().toLowerCase().replace(/^\//, '').replace(/\s+/g, ' ');
+
+function handleInbox(board, decisions, control, health) {
+  const handled = load('handled');
+  for (const m of readInbox()) {
+    // Already answered instantly through openclaw (`crew.mjs cmd`): do not apply it twice.
+    const i = handled.items.findIndex((h) => h.text === norm(m.text) && Math.abs(Date.parse(h.at) - Date.parse(m.at)) < 30 * 6e4);
+    if (i >= 0) { handled.items.splice(i, 1); continue; }
+    const r = handleCommand(m.text, { board, decisions, control, health }, m.source);
+    if (r) reply(m.source, `🤖 crew: ${r}`, { dryRun: DRY });
+  }
+  handled.items = handled.items.filter((h) => Date.now() - Date.parse(h.at) < 2 * 36e5);
+  if (!DRY) save('handled', handled);
+}
+
+// ---------------------------------------------------------------- views
+
+function summaryLine(board, health) {
+  const by = (s) => board.jobs.filter((j) => j.status === s).length;
+  const hs = Object.entries(health).filter(([, h]) => h.state !== 'ok').map(([w, h]) => `${w} ${h.state}${h.until ? ` until ${h.until.slice(11, 16)}Z` : ''}`);
+  return `running ${by('running')}, queued ${by('queued')}, PRs open ${by('pr_open')}, red ${by('gate_red')}, blocked ${by('blocked')}, merged ${by('merged')}${hs.length ? `; ${hs.join(', ')}` : '; all workers ok'}`;
+}
+
+function statusText(board, health, decisions, control = load('control')) {
+  const ago = (t) => { const m = Math.round((Date.now() - Date.parse(t)) / 6e4); return m < 90 ? `${m}m` : `${Math.round(m / 60)}h`; };
+  const running = board.jobs.filter((j) => j.status === 'running').map((j) => `${j.id} (${j.worker}, ${ago(j.startedAt)})`);
+  const prs = board.jobs.filter((j) => j.status === 'pr_open').map((j) => `#${j.prNumber} ${j.id}`);
+  const red = board.jobs.filter((j) => j.status === 'gate_red').map((j) => j.id);
+  const open = decisions.items.filter((d) => d.status === 'open').map((d) => `${d.id} ${d.question}`);
+  return [`Crew status ${now().slice(0, 16).replace('T', ' ')} UTC${control.paused ? ' (PAUSED)' : ''}`,
+    summaryLine(board, health),
+    `Running: ${running.join(', ') || 'none'}`,
+    `PRs waiting on CI or merge: ${prs.join(', ') || 'none'}`,
+    ...(red.length ? [`Needs a fix: ${red.join(', ')}`] : []),
+    `Needs you: ${open.join(' | ') || 'nothing'}`,
+    ...(control.priority?.length ? [`Priority: ${control.priority.join(' > ')}`] : [])].join('\n');
+}
+
+function status() {
+  const board = load('board');
+  const health = load('health');
+  const decisions = load('decisions');
+  const rows = board.jobs.filter((j) => !TERMINAL.includes(j.status) || Date.now() - Date.parse(j.history?.at(-1)?.slice(0, 24) || j.createdAt) < 7 * 864e5)
+    .sort((a, b) => a.course.localeCompare(b.course) || a.unit - b.unit);
+  const md = `# Crew board
+
+Generated ${now()}. ${summaryLine(board, health)}
+
+## Workers
+| Worker | Family | State | Until | Last error |
+|---|---|---|---|---|
+${Object.keys(WORKERS).map((w) => { const h = health[w] || { state: 'ok' }; return `| ${w} | ${WORKERS[w].family} | ${h.state} | ${h.until || ''} | ${(h.last_error || '').replace(/[|\n]/g, ' ').slice(0, 80)} |`; }).join('\n')}
+
+## Open owner decisions
+${decisions.items.filter((d) => d.status === 'open').map((d) => `- **${d.id}** ${d.question} (${d.options.join(' / ')})`).join('\n') || 'none'}
+
+## Jobs
+| Job | Stage | Status | Worker | Tries | PR | Last event |
+|---|---|---|---|---|---|---|
+${rows.map((j) => `| ${j.id} | ${j.stage} | ${j.status} | ${j.worker || ''} | ${j.attempts} | ${j.prNumber ? `#${j.prNumber}` : ''} | ${(j.history?.at(-1) || '').slice(25).replace(/\|/g, '/')} |`).join('\n')}
+`;
+  writeFileSync(join(STATE_DIR, 'BOARD.md'), md);
+  console.log(md);
+  return md;
+}
+
+function digest() {
+  const board = load('board');
+  const health = load('health');
+  const since = Date.now() - 864e5;
+  const recent = board.jobs.filter((j) => (j.history || []).some((h) => Date.parse(h.slice(0, 24)) > since && /merged|done on/.test(h)));
+  const text = `📘 Crew daily digest ${now().slice(0, 10)}
+${summaryLine(board, health)}
+Last 24 h: ${recent.length ? recent.map((j) => `${j.id}${j.prNumber ? ` #${j.prNumber}` : ''} (${j.status})`).join(', ') : 'nothing finished'}
+Needs you: ${load('decisions').items.filter((d) => d.status === 'open').map((d) => d.id).join(', ') || 'nothing'}`;
+  send(text, { dryRun: DRY });
+}
+
+// ---------------------------------------------------------------- tick
+
+function tick() {
+  const board = load('board');
+  const health = load('health');
+  const decisions = load('decisions');
+  const control = load('control');
+  const events = [];
+  // Each phase is isolated and state is saved in `finally`: a crash in one phase used to discard
+  // the whole tick, so finished jobs were never reaped and launches were repeated every tick.
+  const phase = (name, fn) => { try { fn(); } catch (e) { console.error(`${name}: ${e.stack || e.message}`); } };
+  try {
+    phase('inbox', () => handleInbox(board, decisions, control, health));
+    phase('reap', () => reap(board, health, events));
+    // A cooling worker becomes eligible again when its time passes; the next real job is the probe.
+    for (const [w, h] of Object.entries(health)) if (h.state === 'cooling' && Date.parse(h.until) <= Date.now()) health[w] = { ...h, state: 'ok' };
+    phase('prs', () => managePrs(board, decisions, events));
+    if (!control.paused) phase('launch', () => launchQueued(board, health, control, events));
+    const eligible = Object.keys(WORKERS).filter((w) => !['down', 'cooling'].includes(health[w]?.state));
+    if (!eligible.length) events.push('⚠️ every worker is cooling or down; nothing can run until one recovers');
+    const red = events.filter((e) => /^(🔴|⚠️)/.test(e));
+    if (events.length && !DRY) phase('notify', () => send(events.join('\n'), { urgent: red.length > 0 }));
+  } finally {
+    if (!DRY) { save('board', board); save('health', health); save('decisions', decisions); save('control', control); }
+  }
+  console.log(summaryLine(board, health));
+}
+
+// ---------------------------------------------------------------- main
+
+const firstFlag = args.findIndex((a) => a.startsWith('--'));
+const [cmd, ...rest] = firstFlag < 0 ? args : args.slice(0, firstFlag);
+if (cmd === 'plan') plan();
+else if (cmd === 'tick') tick();
+else if (cmd === 'status') status();
+else if (cmd === 'cmd') {
+  // openclaw's crew skill: `crew.mjs cmd "<owner message>" [--via whatsapp]`; prints the reply.
+  const text = rest.join(' ');
+  // A state-changing command waits for a running tick (tick.sh holds this lock), otherwise the
+  // tick's final save would overwrite it. Status is read-only and answers at once.
+  if (!flag('locked') && !/^\/?crew\s*(status|help)?\s*$/i.test(text.trim())) {
+    const r = spawnSync('flock', ['-w', '100', join(STATE_DIR, 'tick.lock'), process.execPath, new URL(import.meta.url).pathname, ...args, '--locked'], { stdio: 'inherit' });
+    if (r.status !== 0) console.log('the crew is busy with a tick; send it again in a few minutes.');
+    process.exit(0);
+  }
+  const state = { board: load('board'), decisions: load('decisions'), control: load('control'), health: load('health') };
+  const r = handleCommand(text, state, opt('via') || 'openclaw');
+  console.log(r ?? `not a crew command. ${HELP}`);
+  if (r && !DRY) {
+    if (flag('locked')) { save('board', state.board); save('decisions', state.decisions); save('control', state.control); }
+    const handled = load('handled');
+    handled.items.push({ text: norm(text), at: now() });
+    save('handled', handled);
+  }
+}
+else if (cmd === 'digest') digest();
+else if (cmd === 'notify') send(rest.join(' '), { urgent: flag('urgent'), dryRun: DRY });
+else if (cmd === 'ask') { const d = load('decisions'); ask(d, rest.join(' '), (opt('options') || 'yes|no').split('|'), { job: opt('job') }); if (!DRY) save('decisions', d); }
+else if (cmd === 'add') {
+  const [course, unit, stage] = rest;
+  if (!course || !unit || !STAGES[stage]) throw new Error('usage: add <COURSE> <unit> <stage> [--branch b] [--pr n] [--task "..."]');
+  const board = load('board');
+  const base = jobId(course.toUpperCase(), unit, stage);
+  const n = board.jobs.filter((j) => j.id === base || j.id.startsWith(`${base}-r`)).length;
+  const job = { id: n ? `${base}-r${n}` : base, course: course.toUpperCase(), unit: Number(unit), stage, status: 'queued', attempts: 0, tried: [], createdAt: now(),
+    base: opt('branch'), pr: opt('pr') ? Number(opt('pr')) : undefined, supersedes: opt('supersedes') || opt('pr'), task: opt('task') };
+  board.jobs.push(job); save('board', board); console.log(`added ${job.id}`);
+} else if (cmd === 'adopt') {
+  // Track an existing PR (e.g. a green Paperclip PR) so the crew merges or fixes it like its own.
+  const [n, course, unit = '0'] = rest;
+  const v = JSON.parse(sh('gh', ['pr', 'view', n, '--json', 'headRefName']).out);
+  const board = load('board');
+  board.jobs.push({ id: `pr${n}`, course: (course || 'MISC').toUpperCase(), unit: Number(unit), stage: 'fix', status: 'pr_open', attempts: 1, tried: [],
+    worker: 'paperclip', family: 'anthropic', branch: v.headRefName, prNumber: Number(n), createdAt: now(), history: [`${now()} adopted existing PR #${n}`] });
+  save('board', board); console.log(`adopted PR #${n}`);
+} else if (cmd === 'health') {
+  const health = load('health');
+  if (rest[0] && rest[1]) { health[rest[0]] = rest[1] === 'ok' ? { state: 'ok', strikes: 0 } : { state: rest[1], until: rest[2] || new Date(Date.now() + 36e5).toISOString(), last_error: 'set by lead' }; save('health', health); }
+  console.log(JSON.stringify(health, null, 2));
+} else {
+  console.log(readFileSync(new URL(import.meta.url), 'utf8').split('\n').slice(2, 14).join('\n'));
+}

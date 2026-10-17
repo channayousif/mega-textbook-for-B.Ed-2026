@@ -1,0 +1,122 @@
+### starting: npm run serve -- --port 4599
+### render-inspect  GENG-300 Unit 1
+### route: /semester-1/geng-300/unit-01  pages: 6  placed figures: 6
+### host: http://127.0.0.1:4599   browser: chromium 149.0.7827.0
+### started: 2026-10-17T14:53:05.878Z
+
+===== A. DESKTOP 1280x900 =====
+
+-- index: headings=5 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+-- topic-01: headings=12 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   img /img/figures/geng-300/unit-01/fig-U1-1.svg natural=249x150 shown=true loading=lazy alt="Concept map showing vocabulary knowledge at the centre with branches to contextual usage, "
+   img /img/figures/geng-300/unit-01/fig-U1-1.dark.svg natural=0x0 shown=false loading=lazy alt="Concept map showing vocabulary knowledge at the centre with branches to contextual usage, "
+   img /img/figures/geng-300/unit-01/fig-U1-4.svg natural=249x150 shown=true loading=lazy alt="Table comparing common grammatical errors with corrections and explanations: subject-verb "
+   img /img/figures/geng-300/unit-01/fig-U1-4.dark.svg natural=0x0 shown=false loading=lazy alt="Table comparing common grammatical errors with corrections and explanations: subject-verb "
+   heading order: no skipped levels
+
+-- topic-02: headings=12 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   img /img/figures/geng-300/unit-01/fig-U1-2.svg natural=249x150 shown=true loading=lazy alt="Diagram showing the word-formation processes: affixation, compounding, clipping and back f"
+   img /img/figures/geng-300/unit-01/fig-U1-2.dark.svg natural=0x0 shown=false loading=lazy alt="Diagram showing the word-formation processes: affixation, compounding, clipping and back f"
+   img /img/figures/geng-300/unit-01/fig-U1-5.svg natural=249x150 shown=true loading=lazy alt="Table comparing the four sentence structures with examples: simple, compound, complex and "
+   img /img/figures/geng-300/unit-01/fig-U1-5.dark.svg natural=0x0 shown=false loading=lazy alt="Table comparing the four sentence structures with examples: simple, compound, complex and "
+   heading order: no skipped levels
+
+-- topic-03: headings=12 imgs=4 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   img /img/figures/geng-300/unit-01/fig-U1-3.svg natural=249x150 shown=true loading=lazy alt="Diagram showing the English sound system: vowels, diphthongs and consonants, with sounds t"
+   img /img/figures/geng-300/unit-01/fig-U1-3.dark.svg natural=0x0 shown=false loading=lazy alt="Diagram showing the English sound system: vowels, diphthongs and consonants, with sounds t"
+   img /img/figures/geng-300/unit-01/fig-U1-6.svg natural=249x150 shown=true loading=lazy alt="Table comparing common pronunciation challenges for Urdu speakers with the Urdu-influenced"
+   img /img/figures/geng-300/unit-01/fig-U1-6.dark.svg natural=0x0 shown=false loading=lazy alt="Table comparing common pronunciation challenges for Urdu speakers with the Urdu-influenced"
+   heading order: no skipped levels
+
+-- unit-assessment: headings=10 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+-- unit-teacher-notes: headings=7 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+===== B. NARROW 360x780 =====
+
+-- index: docHorizontalOverflow=0px tables=0 figures=0 spill=0
+
+-- topic-01: docHorizontalOverflow=0px tables=1 figures=2 spill=0
+   table[0] client=328 scroll=328 fits=true lastHeader="What a strong response d" scroller=NONE
+   figure[0] .figure client=328 scroll=328 scroller=none
+   figure[1] .figure client=328 scroll=328 scroller=none
+
+-- topic-02: docHorizontalOverflow=0px tables=1 figures=2 spill=0
+   table[0] client=328 scroll=328 fits=true lastHeader="What a strong response d" scroller=NONE
+   figure[0] .figure client=328 scroll=328 scroller=none
+   figure[1] .figure client=328 scroll=328 scroller=none
+
+-- topic-03: docHorizontalOverflow=0px tables=2 figures=2 spill=0
+   table[0] client=328 scroll=328 fits=true lastHeader="Pair 5" scroller=NONE
+   table[1] client=328 scroll=328 fits=true lastHeader="What a strong response d" scroller=NONE
+   figure[0] .figure client=328 scroll=328 scroller=none
+   figure[1] .figure client=328 scroll=328 scroller=none
+
+-- unit-assessment: docHorizontalOverflow=0px tables=5 figures=0 spill=8
+   table[0] client=328 scroll=495 fits=false lastHeader="Strong (4-5)" scroller=TABLE. (client=328 scroll=495 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   table[1] client=328 scroll=492 fits=false lastHeader="Strong (4-5)" scroller=TABLE. (client=328 scroll=492 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   table[2] client=328 scroll=475 fits=false lastHeader="Strong (4-5)" scroller=TABLE. (client=328 scroll=475 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   table[3] client=328 scroll=522 fits=false lastHeader="Strong (4-5)" scroller=TABLE. (client=328 scroll=522 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+   table[4] client=328 scroll=531 fits=false lastHeader="Strong (4-5)" scroller=TABLE. (client=328 scroll=531 tabindex=0 aria-label=Scrollable table, scroll sideways to see all columns)
+
+-- unit-teacher-notes: docHorizontalOverflow=0px tables=0 figures=0 spill=0
+
+===== C. A4 PRINT EMULATION (794px) =====
+
+-- index @print: clippedElems=0 figureImgs=0 answerHeadings=[]
+
+-- topic-01 @print: clippedElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/geng-300/unit-01/fig-U1-1.svg w=762 right=778 fits
+   printfig /img/figures/geng-300/unit-01/fig-U1-1.dark.svg w=0 right=0 fits
+   printfig /img/figures/geng-300/unit-01/fig-U1-4.svg w=762 right=778 fits
+   printfig /img/figures/geng-300/unit-01/fig-U1-4.dark.svg w=0 right=0 fits
+
+-- topic-02 @print: clippedElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/geng-300/unit-01/fig-U1-2.svg w=762 right=778 fits
+   printfig /img/figures/geng-300/unit-01/fig-U1-2.dark.svg w=0 right=0 fits
+   printfig /img/figures/geng-300/unit-01/fig-U1-5.svg w=762 right=778 fits
+   printfig /img/figures/geng-300/unit-01/fig-U1-5.dark.svg w=0 right=0 fits
+
+-- topic-03 @print: clippedElems=0 figureImgs=4 answerHeadings=[]
+   printfig /img/figures/geng-300/unit-01/fig-U1-3.svg w=762 right=778 fits
+   printfig /img/figures/geng-300/unit-01/fig-U1-3.dark.svg w=0 right=0 fits
+   printfig /img/figures/geng-300/unit-01/fig-U1-6.svg w=762 right=778 fits
+   printfig /img/figures/geng-300/unit-01/fig-U1-6.dark.svg w=0 right=0 fits
+
+-- unit-assessment @print: clippedElems=0 figureImgs=0 answerHeadings=["Answers and marking guidance​","MCQ answer key​","RRQ model answers and mark schemes​","ERQ rubrics​"]
+
+-- unit-teacher-notes @print: clippedElems=0 figureImgs=0 answerHeadings=[]
+
+===== D. SVG TEXT GEOMETRY =====
+   fig-U1-1.light [concept-map] viewBox=780x470 texts=17 wordmark@x=721.9 -> PROBLEM
+      ! "textbook.com.pk" x=721.9 right=814.3 bottom=462.6 (past viewBox right edge)
+   DEFECT text "textbook.com.pk" past viewBox right edge
+   fig-U1-1.dark [concept-map] viewBox=780x470 texts=17 wordmark@x=721.9 -> PROBLEM
+      ! "textbook.com.pk" x=721.9 right=814.3 bottom=462.6 (past viewBox right edge)
+   DEFECT text "textbook.com.pk" past viewBox right edge
+   fig-U1-4.light [table] viewBox=780x470 texts=33 wordmark@x=675.7 -> clean
+   fig-U1-4.dark [table] viewBox=780x470 texts=33 wordmark@x=675.7 -> clean
+   fig-U1-2.light [diagram] viewBox=780x470 texts=31 wordmark@x=675.7 -> clean
+   fig-U1-2.dark [diagram] viewBox=780x470 texts=31 wordmark@x=675.7 -> clean
+   fig-U1-5.light [table] viewBox=780x470 texts=29 wordmark@x=675.7 -> clean
+   fig-U1-5.dark [table] viewBox=780x470 texts=29 wordmark@x=675.7 -> clean
+   fig-U1-3.light [diagram] viewBox=780x470 texts=99 wordmark@x=721.9 -> PROBLEM
+      ! "textbook.com.pk" x=721.9 right=814.3 bottom=462.6 (past viewBox right edge)
+   DEFECT text "textbook.com.pk" past viewBox right edge
+   fig-U1-3.dark [diagram] viewBox=780x470 texts=99 wordmark@x=721.9 -> PROBLEM
+      ! "textbook.com.pk" x=721.9 right=814.3 bottom=462.6 (past viewBox right edge)
+   DEFECT text "textbook.com.pk" past viewBox right edge
+   fig-U1-6.light [table] viewBox=780x470 texts=41 wordmark@x=675.7 -> clean
+   fig-U1-6.dark [table] viewBox=780x470 texts=41 wordmark@x=675.7 -> clean
+
+### finished: 2026-10-17T14:53:42.692Z
+### defects: 4
+###   fig-U1-1.light: text "textbook.com.pk" past viewBox right edge
+###   fig-U1-1.dark: text "textbook.com.pk" past viewBox right edge
+###   fig-U1-3.light: text "textbook.com.pk" past viewBox right edge
+###   fig-U1-3.dark: text "textbook.com.pk" past viewBox right edge
+### exit_code: 1

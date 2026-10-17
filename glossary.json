@@ -1695,6 +1695,231 @@
     "definition_ur": "تدرسی تجربوں کا منظوم تحریری ریکارڈ، جسے ان سے سیکھنے کے لیے شہادت کے خلاف جانچا جاتا ہے - ڈائری سے مختلف، جو بغیر تجزیہ کے واقعات ریکارڈ کرتی ہے۔"
   },
   {
+    "term": "Segregation",
+    "definition_en": "Educating learners with differences in separate settings - separate schools, classrooms or sections - rather than in the ordinary classroom.",
+    "definition_ur": "مختلف ضرورتوالے طلباء کو علیدگی کے ماحول میں تعلیم دینا - الگ اسکول، الگ کلاسروم یا الگ سیکشن - عام کلاسروم میں نہیں۔"
+  },
+  {
+    "term": "Integration",
+    "definition_en": "Placing learners with differences in the ordinary school while expecting the child to adapt to what the school already offers; the school itself changes little.",
+    "definition_ur": "مختلف ضرورتوالے طلباء کو عام اسکول میں رکھنا اور توقع رکھنا کہ بچہ اسکول کے موجودہ نظام کے مطابق ہو جائے؛ اسکول خود تبدیل نہیں ہوتا۔"
+  },
+  {
+    "term": "Equality",
+    "definition_en": "Giving every learner the same treatment, resources or opportunities regardless of their individual circumstances.",
+    "definition_ur": "ہر طالب علم کو اس کی انفرادی حالات سے بلا نظر ایسی ہی سلوک، وسائل یا مواقع دینا۔"
+  },
+  {
+    "term": "Equity",
+    "definition_en": "Giving each learner the resources and support they need to participate and succeed, which may differ from one learner to another.",
+    "definition_ur": "ہر طالب علم کو وہ وسائل اور مدد دینا جس کی اسے شریک ہونے اور کامیاب ہونے کی ضرورت ہو، جو ایک سے دوسرے سے مختلف ہو سکتی ہے۔"
+  },
+  {
+    "term": "Diversity",
+    "definition_en": "The range of differences among learners - in ability, language, background, gender and culture - that a classroom contains.",
+    "definition_ur": "طلباء کے درمیان اختلافات کی وساعت - قابلیت، زبان، پس منظر، جنس اور ثقافت میں - جو ایک کلاسروم میں موجود ہوتی ہے۔"
+  },
+  {
+    "term": "Learner Diversity",
+    "definition_en": "The full range of differences among pupils in a classroom, including disabilities, learning difficulties and social differences.",
+    "definition_ur": "کلاسروم میں طلباء کے درمیان اختلافات کی مکمل وساعت، جس میں معذوریاں، سیکھنے کی مشکلات اور سماجی اختلافات شامل ہیں۔"
+  },
+  {
+    "term": "Inclusive Classroom",
+    "definition_en": "A classroom in which every learner participates fully and the teacher adapts teaching, materials and the environment to remove barriers.",
+    "definition_ur": "ایک ایسی کلاسروم جس میں ہر طالب علم مکمل طور پر شریک ہوتا ہے اور استاد رکاوٹوں کو دور کرنے کے لیے تدریس، مواد اور ماحول کو موزاں کرتا ہے۔"
+  },
+  {
+    "term": "Differentiated Instruction",
+    "definition_en": "Teaching that adapts the content, the process or the product to match the readiness, interests and learning profile of different pupils.",
+    "definition_ur": "ایسی تدریج جس میں مواد، عمل یا حاصل کار کو مختلف طلباء کی تیاری، دلچسپی اور سیکھنے کے نمے کے مطابق ڈھالیا جائے۔"
+  },
+  {
+    "term": "Cooperative Learning",
+    "definition_en": "A teaching approach in which pupils work together in small groups, each member contributing to a shared task and to one another's learning.",
+    "definition_ur": "تدریس کا ایسا طریقہ جس میں طلبہ چھوٹے گروہوں میں مل کر کام کرتے ہیں۔ ہر رکن مشترکہ کام میں اور ایک دوسرے کے سیکھنے میں حصہ ڈالتا ہے۔"
+  },
+  {
+    "term": "Flexible Assessment",
+    "definition_en": "Assessment that offers pupils different ways to show what they know, such as oral response, practical demonstration or adjusted tasks, rather than a single written exam.",
+    "definition_ur": "ایسی تشخیص جس میں طلبہ صرف ایک تحریری امتحان کے بجائے مختلف طریقوں سے اپنا علم ظاہر کر سکتے ہیں، مثلاً زبانی جواب، عملی مظاہرہ یا ضرورت کے مطابق ڈھالا ہوا کام۔"
+  },
+  {
+    "term": "Accessibility",
+    "definition_en": "The degree to which a classroom, building or material can be used by every learner, including those with physical or sensory disabilities.",
+    "definition_ur": "وہ درجہ جس تک ایک کلاس rpm، عمارت یا مواد ہر طالب علم کے استعمال کے قابل ہو، جسمانی یا حسی معذوریوں والوں سمیت۔"
+  },
+  {
+    "term": "Assistive Technology",
+    "definition_en": "Any device, tool or software that helps a learner with a disability to participate in learning - from a simple magnifier to a screen reader.",
+    "definition_ur": "کوئی بھی آلہ، اوزار یا سافٹ ویئر جو کسی معذور طالب علم کو سیکھنے میں شریک ہونے میں مدد کرتا ہے - سادہ مکنائفائر سے لے کر اسکرین ریڈر تک۔"
+  },
+  {
+    "term": "Mainstreaming",
+    "definition_en": "Placing a learner with a disability in an ordinary classroom, often with the expectation that the child will keep up with the standard curriculum.",
+    "definition_ur": "کسی معذور طالب علم کو عام کلاسروم میں رکھنا، اکثر اس توقع کے ساتھ کہ بچہ معیادی نصاب کے ساتھ چلے گا۔"
+  },
+  {
+    "term": "Special Educational Needs",
+    "definition_en": "Needs that arise from a disability, learning difficulty or other difference and that require additional or different support to enable the learner to participate.",
+    "definition_ur": "وہ ضرورتیں جو کسی معذوری، سیکھنے کی مشکل یا دوسرے اختلاف سے پیدا ہوتی ہیں اور جو طالب علم کو شریک ہونے کے قابل بنانے کے لیے اضافی یا مختلف مدد مانگتی ہیں۔"
+  },
+  {
+    "term": "Individualized Education Programme",
+    "definition_en": "A written plan that sets out the specific goals, support and accommodations for a learner with special educational needs.",
+    "definition_ur": "ایک تحریری منصوبہ جو خصوصی تعلیمی ضرورتوں والے طالب علم کے لیے مخصوص اہداف، مدد اور سہولتیں طے کرتا ہے۔"
+  },
+  {
+    "term": "Universal Design for Learning",
+    "definition_en": "A framework for planning teaching that provides multiple ways for pupils to engage, to receive information and to show what they have learned.",
+    "definition_ur": "تدریس کی منصوبہ بندی کا ایسا طریقۂ کار جو طلبہ کو سرگرمی میں شامل ہونے، معلومات حاصل کرنے اور اپنی سیکھی ہوئی بات ظاہر کرنے کے کئی راستے فراہم کرتا ہے۔"
+  },
+  {
+    "term": "Accreditation",
+    "definition_en": "The formal process by which an institution or programme is judged to meet a set of defined quality standards, usually involving self-evaluation, external review and periodic renewal.",
+    "definition_ur": "وہ رسمی عمل جس کے ذریعے کسی ادارے یا پروگرام کا تعین کیا جاتا ہے کہ وہ متعین معیارات کے معیار پر پورا اترتا ہے، جس میں عام طور پر خود تشخیص، بیرونی جائزہ اور وقت پر تجدید شامل ہوتی ہے۔"
+  },
+  {
+    "term": "Standardization",
+    "definition_en": "The process of setting common standards for what students should learn and be able to do at each level, while leaving teaching methods to teachers' professional judgment.",
+    "definition_ur": "وہ عمل جس میں ہر سطح پر اس بات کے عام معیارات طے کیے جاتے ہیں کہ شاگرد کیا سیکھیں اور کیا کر سکتے ہیں، جبکہ تدریسی طریقے اساتذہ کے پیشہ ورانہ فیصلے پر چھوڑے جاتے ہیں۔"
+  },
+  {
+    "term": "Human capital",
+    "definition_en": "The stock of knowledge, skills and abilities that a person has and that make them productive in economic life, built largely through education and training.",
+    "definition_ur": "علم، مہارت اور صلاحیتوں کا وہ ذخیرہ جو کسی شخص کے پاس ہوتا ہے اور جو اسے معاشی زندگی میں پیداواری بناتا ہے، جو زیادہ تر تعلیم اور تربیت سے تشکیل پاتا ہے۔"
+  },
+  {
+    "term": "Teacher training",
+    "definition_en": "The formal preparation of teachers, both before they enter the profession (pre-service) and during their careers (in-service), aimed at building the knowledge and skills needed for effective teaching.",
+    "definition_ur": "اساتذہ کی رسمی تیاری، جو انہیں پیشے میں داخل ہونے سے پہلے (قبل از خدمت) اور کیریئر کے دوران (دورانِ خدمت) دی جاتی ہے، جس کا مقصد مؤثر تدریس کے لیے درکار علم اور مہارت کی تعمیر ہے۔"
+  },
+  {
+    "term": "Development plan",
+    "definition_en": "A multi-sector government document that sets economic and social goals with budgets for a fixed period, typically five years.",
+    "definition_ur": "حکومت کی ایک کثیر شعبہ دستاویز جو مقررہ مدت، عام طور پر پنج سال، کے لیے معاشی اور سماجی اہداف اور بجٹ مقرر کرتی ہے۔"
+  },
+  {
+    "term": "Five-year plan",
+    "definition_en": "A development plan covering a five-year period; Pakistan has used five-year plans as its main planning instrument since 1955.",
+    "definition_ur": "پنج سالہ مدت پر مبنی ترقی منصوبہ؛ پاکستان نے 1955 سے پنج سالہ منصوبوں کو اپنا بنیادی منصوبہ بندی کا آلہ بنایا ہے۔"
+  },
+  {
+    "term": "Macro planning",
+    "definition_en": "Planning at the district, provincial or national level that deals with the education system as a whole.",
+    "definition_ur": "ضلعی، صوبائی یا قومی سطح کی منصوبہ بندی جو تعلیمی نظام کو بطور کل سامنے رکھتی ہے۔"
+  },
+  {
+    "term": "Micro planning",
+    "definition_en": "Planning at the school or institutional level that focuses on the detailed running of a school.",
+    "definition_ur": "مدرسہ یا ادارے کی سطح کی منصوبہ بندی جو کسی مدرسے کے تفصیلی انتظام پر توجہ مرکوز کرتی ہے۔"
+  },
+  {
+    "term": "Strategic planning",
+    "definition_en": "Focused, time-bound planning that addresses a specific problem or goal within a defined scope.",
+    "definition_ur": "مرکوز اور وقت پر مبنی منصوبہ بندی جو مقررہ دائرے میں کسی مخصوص مسئلے یا ہدف کو حل کرتی ہے۔"
+  },
+  {
+    "term": "Needs assessment",
+    "definition_en": "The systematic process of collecting and analysing data to identify gaps between the current state and the desired state.",
+    "definition_ur": "موجودہ صورتحال اور مطلوبہ صورتحال کے درمیان خلیج کی نشاندہی کے لیے اعداد و شمار اکٹھا کرنے اور تجزیہ کرنے کا منظم عمل۔"
+  },
+  {
+    "term": "Resource allocation",
+    "definition_en": "The process of deciding how funds, people, materials and time are distributed to achieve planned goals.",
+    "definition_ur": "منصوبہ بندی شدہ اہداف کے حصول کے لیے یہ فیصلہ کرنے کا عمل کہ فنڈ، افراد، سامان اور وقت کیسے تقسیم ہوں۔"
+  },
+  {
+    "term": "Monitoring",
+    "definition_en": "The regular collection of information about an education program or policy while it is running, to check whether it is happening as planned.",
+    "definition_ur": "تعلیمی پروگرام یا پالیسی کے دوران اس بارے باقاعدگی سے معلومات اکٹھا کرنا، یہ دیکھنے کے لیے کہ کیا یہ منصوبہ کے مطابق ہو رہا ہے۔"
+  },
+  {
+    "term": "Evaluation",
+    "definition_en": "A periodic, deeper judgement of whether an education program is achieving its goals and whether it is worth the resources spent on it.",
+    "definition_ur": "تعلیمی پروگرام کا وقفوں پر گہرا جائزہ لینا، یہ دیکھنے کے لیے کہ کیا یہ اپنے اہداف کے قابل ہے اور کیا اس پر خرچ کردہ وسائل کی قیمت سے فائدہ ہے۔"
+  },
+  {
+    "term": "Tool",
+    "definition_en": "In monitoring and evaluation, any instrument used to collect or organise data about a program, such as an attendance register, a test result, a school visit checklist or a budget report.",
+    "definition_ur": "نگرانی اور جائزہ میں کوئی بھی آلہ جو کسی پروگرام کے بارے میں اعداد و شمار اکٹھا کرنے یا ترتیب دینے کے لیے استعمال ہوتا ہے، جیسے حاضری رجسٹر، ٹیسٹ کے نتائج، سکول دورے کی چیک لسٹ یا بجٹ رپورٹ۔"
+  },
+  {
+    "term": "Financial constraint",
+    "definition_en": "A barrier to policy implementation caused by funds that are insufficient, released late, or not spent as intended before reaching schools.",
+    "definition_ur": "پالیسی کے نفاذ میں رکاوت جو اس وجہ سے پیدا ہوتی ہے کہ فنڈ ناکافی ہوں، تاخیر سے جاری ہوں، یا سکولوں تک پہنچنے سے پہلے مقررہ مقصد پر خرچ نہ ہوں۔"
+  },
+  {
+    "term": "Political instability",
+    "definition_en": "Frequent changes in government, ministerial appointments or policy direction that disrupt long-term education programs before they can produce results.",
+    "definition_ur": "حکومت، وزیرانہ تقرریوں یا پالیسی کی سمت میں بار بار تبدیلیاں جو طویل مدتی تعلیمی پروگراموں کو اس سے پہلے متاثر کرتی ہیں کہ وہ نتائج پیدا کر سکیں۔"
+  },
+  {
+    "term": "Bureaucracy",
+    "definition_en": "The rules, procedures and administrative structures through which government work is carried out, which can become a challenge when they slow down action or weaken coordination.",
+    "definition_ur": "وہ قواعد، طریقہ کار اور انتظامی ڈھانچہ جن کے ذریعے سرکاری کام انجام پاتا ہے، جو اس وقت رکاوت بن جاتا ہے جب وہ عمل کو سست کرے یا ہم آہنگی کمزور کرے۔"
+  },
+  {
+    "term": "Educational policy",
+    "definition_en": "A statement of what the government or an institution wants to achieve in education and the principles it will follow to get there.",
+    "definition_ur": "ایک تحریری بیان جس میں حکومت یا کوئی ادارہ بتاتا ہے کہ وہ تعلیم میں کیا حاصل کرنا چاہتا ہے اور کن اصولوں کی پیروی کرے گا۔"
+  },
+  {
+    "term": "Educational planning",
+    "definition_en": "The process of working out how to achieve what an education policy sets out, including timelines, budgets and responsibilities.",
+    "definition_ur": "وہ عمل جس میں تعلیمی پالیسی کے اہداف کی تکمیل کا طریقہ کار تیار کیا جاتا ہے، جس میں وقت کی حدیں، بجٹ اور ذمہ داریاں شامل ہیں۔"
+  },
+  {
+    "term": "Policy implementation",
+    "definition_en": "The process of carrying out a policy decision and putting it into practice.",
+    "definition_ur": "پالیسی فیصلے کو عملی شکل دینے اور پر کرنے کا عمل۔"
+  },
+  {
+    "term": "National education policy",
+    "definition_en": "A policy document issued by the federal government that sets out education goals for the whole country.",
+    "definition_ur": "وفاقی حکومت کی طرف سے جاری کردہ ایک پالیسی دستاویز جو پورے ملک کے لیے تعلیم کے اہداف طے پاتی ہے۔"
+  },
+  {
+    "term": "Policy objective",
+    "definition_en": "A specific goal that a policy aims to achieve.",
+    "definition_ur": "پالیسی کا کوئی مخصوص ہدف جسے وہ حاصل کرنا چاہتی ہے۔"
+  },
+  {
+    "term": "Curriculum reform",
+    "definition_en": "Changes made to what is taught in schools, including subjects, content and teaching approaches.",
+    "definition_ur": "اسکولوں میں پڑھائے جانے والے مضمون، مواد اور تدریسی طریقہ کار میں کی گئی تبدیلیاں۔"
+  },
+  {
+    "term": "Quality assurance",
+    "definition_en": "Systems and processes that ensure education meets agreed standards.",
+    "definition_ur": "وہ نظام اور عمل جو یقینی بناتے ہیں کہ تعلیم متفقہ معیارات پر پوری آتی ہے۔"
+  },
+  {
+    "term": "Sustainable Development Goals (SDGs)",
+    "definition_en": "A set of 17 global goals adopted by the United Nations in 2015, including SDG 4 which focuses on quality education for all.",
+    "definition_ur": "2015 میں اقوام متحدہ کی طرف سے اپنائے گئے 17 عالمی اہداف کا ایک مجموعہ، جس میں SDG 4 شامل ہے جو سب کے لیے معیاری تعلیم پر مرکوز ہے۔"
+  },
+  {
+    "term": "ICT in education",
+    "definition_en": "The use of information and communication technology - computers, internet, software and digital tools - in teaching, learning and education management.",
+    "definition_ur": "تعلیمی نظام میں معلوماتی و مواصلاتی ٹیکنالوجی - کمپیوٹر، انٹرنیٹ، سافٹ ویئر اور ڈیجیٹل آلات - کا استعمال۔"
+  },
+  {
+    "term": "Data-driven planning",
+    "definition_en": "Planning decisions that are based on evidence and data rather than assumption or tradition.",
+    "definition_ur": "وہ منصوبہ بندی جو شہادت اور اعداد و شمار پر مبنی ہوتی ہے، قیاس یا رواج پر نہیں۔"
+  },
+  {
+    "term": "Digital transformation",
+    "definition_en": "The process of using digital technologies to fundamentally change how an organisation or sector operates and delivers value.",
+    "definition_ur": "کسی ادارے یا شعبے کے عمل اور خدمات کی بنیادی تبدیلی کے لیے ڈیجیٹل ٹیکنالوجی کا استعمال۔"
+  },
+  {
+    "term": "Innovation",
+    "definition_en": "A new idea, method or solution that improves on what existed before.",
+    "definition_ur": "کوئی نیا خیال، طریقہ یا حل جو پہلے سے موجود چیز کو بہتر بنائے۔"
+  },
+  {
     "term": "Primary source",
     "definition_en": "A source of data that you collect yourself, directly, for your own purpose - through a questionnaire, a count, a measurement or an interview.",
     "definition_ur": "ایک ذریعہ جس کے ذریعہ آپ خود اپنے مقصد کے لیے براہِ راست معلومات اکھٹی کرتے ہیں - سوالنامہ، گنتی، پیمائش یا انٹرویو کے ذریعے۔"

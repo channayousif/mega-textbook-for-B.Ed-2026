@@ -1,0 +1,16 @@
+Browser accessibility and print view inspection executed for GENG-300 Unit 1 via scripts/render-inspect.mjs.
+Command: scripts/heavy.sh node scripts/render-inspect.mjs GENG-300 1 --out specs/content/geng-300/reviews/unit-01/renders-7c5e7ce2/en
+Host: local server on port 4599 (prebuilt production HTML)
+Browser: headless Chromium 149.0.7827.0 (Playwright)
+Setups: Desktop 1280x900, Narrow 360x780, A4 Print 794x1123 emulation
+Pages inspected: index, topic-01, topic-02, topic-03, unit-assessment, unit-teacher-notes (6 pages)
+
+Results:
+- Desktop 1280x900: 0 visible broken images, 0 missing alts, 0 bare URL links, 0 vague links, heading orders valid (no skipped levels).
+- Narrow 360x780: docHorizontalOverflow=0px across all 6 pages. Tables fit or scroll cleanly with tabindex="0" and aria-label.
+- A4 Print 794px: clippedElems=0 across all 6 pages. Heading structures and answers present.
+- SVG text geometry: 4 defects found across 2 figures (light and dark variants) where wordmark 'textbook.com.pk' overflows 780px viewBox right edge by 34.3px to 34.6px (extends to right=814.3px):
+  * fig-U1-1.svg and fig-U1-1.dark.svg
+  * fig-U1-3.svg and fig-U1-3.dark.svg
+  Cause: text-anchor:middle in the CSS text {...} selector overrides the presentation attribute text-anchor="end".
+Exit code: 1 (actionable visual defects recorded for revision).
