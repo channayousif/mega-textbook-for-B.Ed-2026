@@ -1,0 +1,13 @@
+Browser accessibility and print view inspection executed for GENG-300 Unit 2 via scripts/render-inspect.mjs.
+Command: scripts/heavy.sh node scripts/render-inspect.mjs GENG-300 2 --out specs/content/geng-300/reviews/unit-02/renders-24f6f754/en
+Host: local server on port 4599 (prebuilt production HTML)
+Browser: headless Chromium 149.0.7827.0 (Playwright)
+Setups: Desktop 1280x900, Narrow 360x780, A4 Print 794x1123 emulation
+Pages inspected: index, topic-01, topic-02, topic-03, unit-assessment, unit-teacher-notes (6 pages)
+
+Results:
+- Desktop 1280x900: 0 visible broken images, 0 not-served assets, 0 missing alts, 0 bare URL links, 0 vague links, heading orders valid (no skipped levels).
+- Narrow 360x780: docHorizontalOverflow=0px across all 6 pages. 5 content tables in unit-assessment scroll cleanly with tabindex="0" and aria-label="Scrollable table, scroll sideways to see all columns". Figures fit within viewport.
+- A4 Print 794px: clippedElems=0 across all 6 pages. Figures fit printable width (w=762, right=778 <= 794). Answers and marking guidance present and unclipped.
+- SVG text geometry: all 12 SVG variants (6 light, 6 dark) verified. Text within 780x470 viewBox bounds (widest text ends at x=768.4). No wordmark collision with text. Two minor cosmetic shape overlaps in fig-U2-5 (panel rect at y=456 touches wordmark box at y=463.3), reported not failed.
+Exit code: 0 (clean visual and accessibility inspection).

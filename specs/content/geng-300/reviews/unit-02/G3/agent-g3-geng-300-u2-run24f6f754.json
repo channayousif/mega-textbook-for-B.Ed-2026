@@ -1,0 +1,283 @@
+{
+  "schema_version": 1,
+  "course_code": "GENG-300",
+  "unit_no": 2,
+  "stage": "G3",
+  "disposition": "revise",
+  "reviewer_id": "agent:agy",
+  "author_run_id": "commit:b2241bc9",
+  "reviewer_run_id": "agy:24f6f754-39a8-4a44-9598-84808a1e86be",
+  "model": "Gemini 3.8 Flash (High)",
+  "started_at": "2026-10-17T15:15:00.000Z",
+  "completed_at": "2026-10-17T15:30:00.000Z",
+  "skill_digest": "eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b",
+  "rulings": {
+    "D-2026-0001": "8ff79df9af668329f6d0094a2257654f45fc545122a753b4888fb9936f402f1f"
+  },
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g3.md": "074c8464b4bc0f2f2b76bbb19707c50b54cb907920407873a4e5d193e866f53f",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "715b493fec67701dfb45e2ac65749c5fc9069161aadd27a8397a72d89c0874da",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/licence-page.schema.json": "3fc99078935af7419b4545d21c7d77d66e80ed847755df38ddc500ee35775a3c",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-1/geng-300/course-overview.mdx": "48871799ea8ae7d9f857087ea0146b0c0e2edb69f7175dbde23c441bcfe53119",
+    "docs/semester-1/geng-300/unit-02/_category_.json": "8f23167aa2a32c207f6e1cee9393b0f2dcea56728fe861666197190064aa9785",
+    "docs/semester-1/geng-300/unit-02/index.mdx": "4b5ae2fc830768aa6be205caf8aed5d53c19f0f546c4039c8ea6928fee1c6cd2",
+    "docs/semester-1/geng-300/unit-02/topic-01.mdx": "86cb8303c8711c1a272caf9fcbc4bb2394ebdfa009f0c3682c785e6328595099",
+    "docs/semester-1/geng-300/unit-02/topic-02.mdx": "e811daffabfe0add339a8d5b04d399247512be7eecc864a796eb4ee74a623821",
+    "docs/semester-1/geng-300/unit-02/topic-03.mdx": "b50203f4075af12759c5139899caed374957064ef1653a1f84616ac8b6fcba54",
+    "docs/semester-1/geng-300/unit-02/unit-assessment.mdx": "de7cbc098a5a4440f036821f171e2b17699f75754bdf82f22d2882b804c22687",
+    "docs/semester-1/geng-300/unit-02/unit-teacher-notes.mdx": "e84697b2847c8a29e6bdb60ca9017e96a51546b4503f8c81879b714e68647c0e",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "dfaa7045af0a9199dba81a06dab16963cce6221905c506afb73f60fb8ced9625",
+    "scripts/check-no-answer-keys.mjs": "8d3f8cac335c50774ee622d61cb37d987c0393c99e54eff31f2bd042625a78c3",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "8ce3a62bd80534181cf1d74fa92bc3ea2b5d937b3f528e96c2a3e20c5a87047a",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "cc33a878d98865149b248c6a524be4e9d294293ddfaecc443dc19b7ace6af7cf",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "26edbdd3d86edf7587cbf8e01f0b0cbe45e19428827da34e26cfd0534f34f1b9",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/geng-300/concepts/unit-02.md": "3a8469e0e5b41349934bdf796d4b493b97d487c0a387bd5d44da1919d85be439",
+    "specs/content/geng-300/content-spec.md": "497ac42e5a38366a3ef5c453e73fe792d9d8dc174c4e4941039d61ed2c8a0aa1",
+    "specs/content/geng-300/coverage/unit-02.md": "ff33b698050489fb847dfd7a60bb774357bea16c9d592974187c23b21ec681b2",
+    "specs/content/geng-300/figures/unit-02.md": "9ae1fc132d3cfb593ad729aa1873fc17bbc166eef87010a83f6e6f1ba314d4ad",
+    "specs/content/geng-300/sources/unit-02.md": "f23ee05b11ecd9e3a9d1ce6720a7cd300ac4b25b048fc11c3d6b2e5ad6901fab",
+    "specs/content/style-guide.md": "79f6cafc03b436c0e77c49ea658ef9a7a4de408b5c42020be39011a02a00dd7f",
+    "static/img/figures/geng-300/unit-02/fig-U2-1.dark.svg": "82cbb232c41b8a72337f8932f40de3a833156a067803e7dfe28066ad03baab12",
+    "static/img/figures/geng-300/unit-02/fig-U2-1.svg": "54147b70cb5d3ddbe183a216e1bcd1d8b64a6750249dd0cdf7b6a2a82b4533f4",
+    "static/img/figures/geng-300/unit-02/fig-U2-2.dark.svg": "181c32cdcd33867d21b514106f4e8e8f89548ae1a1f805f6db673e888a31408b",
+    "static/img/figures/geng-300/unit-02/fig-U2-2.svg": "770a105d6086296f81a14c352c31f034351c9c744b00e8e4bdfdd64391a6a7fe",
+    "static/img/figures/geng-300/unit-02/fig-U2-3.dark.svg": "caf6e3a0af4977d76fd264fe4450b1a7f0f878593f12b42a514f983c706d4f0c",
+    "static/img/figures/geng-300/unit-02/fig-U2-3.svg": "9c60df653de28146b4116dde42154257ea3355408436bd19a5d25e8871a6a47a",
+    "static/img/figures/geng-300/unit-02/fig-U2-4.dark.svg": "c60165d1b1a4cbdf913be178cc95acf2f029fff7635433d3836e1ba7dd99341d",
+    "static/img/figures/geng-300/unit-02/fig-U2-4.svg": "6f0709139dfd8d9d648ffa2bf3810112c6822fe776cca65867afa7f3dc7b70a3",
+    "static/img/figures/geng-300/unit-02/fig-U2-5.dark.svg": "30ba1a6d80f476dc6eb4f173233bef54a0d5083dce57e2996868fdd4ee4f0886",
+    "static/img/figures/geng-300/unit-02/fig-U2-5.svg": "a8aa32aba0d0e93f9cc8b6a1f11070cb62c98b99e235282ce0590f5de8695fe3",
+    "static/img/figures/geng-300/unit-02/fig-U2-6.dark.svg": "37810e4ede8e1f68f823107313aa2d6547ce35ad7d9fce34dd373771ce91597c",
+    "static/img/figures/geng-300/unit-02/fig-U2-6.svg": "d8c5c214930311a1636ca6cbf527518578b978f2a19942380568cd168559b11f"
+  },
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        "Approved guide syllabus 1st 2026.txt:53-58 leaf subtopics (Understanding purpose, audience and context; Contextual interpretation: tones, biases, stereotypes, assumptions, inferences; Reading strategies: skimming, scanning, SQ4R, critical reading; Active listening: overcoming listening barriers, focused listening) map to U2-01..U2-07 in specs/content/geng-300/content-spec.md:110-121",
+        "Spec status approved at intake (D-2026-0019; content-spec.md frontmatter status: approved)",
+        "Taught sections verified in docs/semester-1/geng-300/unit-02/: topic-01.mdx covers U2-01 (Purpose, audience and context) and U2-02 (Tone, bias, stereotypes, assumptions, inferences); topic-02.mdx covers U2-03 (Reading strategies), U2-04 (Active listening), U2-06 (Note-taking formats); topic-03.mdx covers U2-07 (Critical reading and listening in practice)",
+        "CLO mapping: index.mdx and topic files cite SLO:GENG-300-2-2 aligning with Course Learning Outcome 2 (comprehend a variety of literary / non-literary written and spoken texts in English)"
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "pass",
+      "evidence": [
+        "All 5 cited sources (kintsch1998, james2010, johns2011, swan2016, kachru2006) are declared under ## Unverifiable sources in specs/content/geng-300/sources/unit-02.md:7-22 as print-only monographs not retrievable on 2026-09-22 with owner authorisation D-2026-0001 (Constitution Art. VII, decision D-2026-0001: flag and proceed)",
+        "Declaration is honest, complete, and accurately accounts for all cited keys in coverage/unit-02.md",
+        "Prose references in docs/semester-1/geng-300/unit-02/ cite sources for general conceptual frameworks and reading lists without making uncorroborated factual or empirical assertions"
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "fail",
+      "evidence": [
+        "specs/content/geng-300/coverage/unit-02.md maps U2-01..U2-07 to topic files and section headings",
+        "DEFECT: specs/content/geng-300/content-spec.md:117 explicitly specifies leaf subtopic U2-05 as Reading strategies: making predictions, summarising, questioning. In docs/semester-1/geng-300/unit-02/topic-02.mdx, making predictions is completely omitted (0 occurrences in text); summarising and questioning are only referenced in passing as steps in SQ4R without explicit instruction on predictive reading strategies",
+        "concepts/unit-02.md lists 9 concepts spanning U2-01 to U2-07, with Urdu labels recorded for G5 review"
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "fail",
+      "evidence": [
+        "Independent solve of all 10 MCQs before reading answers: derived key 1-b, 2-c, 3-c, 4-c, 5-b, 6-b, 7-b, 8-a, 9-b, 10-c matches supplied answer key exactly; all items unambiguous",
+        "DEFECT 1: content-spec.md:107-108 requires summative assessment to include one Analyze-or-higher item comparing two texts for audience and purpose. Neither MCQ, RRQ, nor ERQ in unit-assessment.mdx contains any item comparing two texts for audience and purpose (ERQ 2 presents a single passage on girls education)",
+        "DEFECT 2: unit-assessment.mdx:178-179, RRQ 3 stem specifies (4 marks), but mark scheme allocates up to 4 marks for naming 4 strategies plus up to 4 marks for correct use cases, totaling 8 payable marks against a 4-mark total (arithmetic discrepancy)",
+        "Key distribution advisory: 10 MCQs have zero d keys (distribution: 1 a, 5 b, 4 c, 0 d)"
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "pass",
+      "evidence": [
+        "Fresh inspection via scripts/render-inspect.mjs (headless Chromium 149.0.7827.0, specs/content/geng-300/reviews/unit-02/renders-24f6f754/en/render-inspect.log, exit code 0)",
+        "Desktop 1280x900: all 6 pages have 0 visible broken images, 0 unserved assets, 0 missing alts, 0 bare URL links, valid heading hierarchy (no skipped levels), no horizontal overflow",
+        "Narrow 360x780: 0px document horizontal overflow across all 6 pages; 5 wide rubric tables in unit-assessment.mdx correctly configured as scroll containers (clientWidth=328, scrollWidth=469-528) with tabindex=0 and aria-label=Scrollable table, scroll sideways to see all columns; all figures fit within 360px viewport",
+        "A4 Print emulation (794px): clippedElems=0 across all 6 pages; figures render unclipped (w=762, right=778 <= 794 limit); Answers and marking guidance section renders completely without clipping",
+        "SVG geometry: measure-figure-text.mjs verified all 12 SVG files (6 light, 6 dark); all text within 780x470 viewBox (widest text ends at x=768.4); no text-wordmark collisions"
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "HSC-register prose, clear and accessible explanations suitable for B.Ed semester 1 students",
+        "Technical terms (Purpose, Audience, Context, Tone, Bias, Stereotype, Assumption, Inference, Active listening) defined clearly with concrete examples and glossary components",
+        "Reading time budget: topics estimated at 15, 14, 12 minutes (unit total 41 minutes prose + assessment), fitting within the spec depth budget of 55-65 reading-min"
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": [
+        "Nine-part topic cycles implemented across topic-01, topic-02, and topic-03: classroom situation -> explanation -> worked examples/figures -> activity -> check understanding -> summary -> self-assessment -> practicum -> summative task",
+        "Classroom situations rooted in realistic Pakistani government school contexts (Mr Sajid in Lahore, Miss Fatima in Peshawar, Miss Hina in Quetta)",
+        "Misconceptions directly addressed in each topic: a text means what it says and nothing more (2.1), listening is a passive skill (2.2), critical reading means finding faults (2.3)",
+        "Activities feasible in Pakistani teacher education contexts with paired/group discussion and practicum tasks linking school observations directly to unit concepts"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "blocking",
+      "message": "Approved blueprint requirement missing: specs/content/geng-300/content-spec.md:107-108 requires the summative assessment to include one Analyze-or-higher item comparing two texts for audience and purpose. In docs/semester-1/geng-300/unit-02/unit-assessment.mdx, no item in the 10 MCQs, 10 RRQs, or 5 ERQs performs this comparison (ERQ 2 presents a single passage on girls education and asks for the four moves of text analysis on that single text). Repair request: rework ERQ 2 (or restructure within the 5-ERQ blueprint) to provide two contrasting passages on the same topic and require learners to compare them for audience and purpose at Analyze or Evaluate level, aligning the rubric accordingly.",
+      "resolved": false
+    },
+    {
+      "severity": "blocking",
+      "message": "RRQ 3 mark scheme arithmetic discrepancy: in docs/semester-1/geng-300/unit-02/unit-assessment.mdx:178-179, RRQ 3 stem header specifies (4 marks), but the mark scheme allocates: Names all four strategies: skimming, scanning, SQ4R, critical reading (1 each up to 4). One mark per correct use case (up to 4). This allocates 8 payable marks against a 4-mark total, so a marker cannot apply the scheme consistently. Repair request: adjust the mark scheme allocation to 1 mark per strategy correctly named with its use case (4 marks total), or raise the question total to 8 marks.",
+      "resolved": false
+    },
+    {
+      "severity": "blocking",
+      "message": "Leaf subtopic U2-05 omitted from prose: specs/content/geng-300/content-spec.md:117 specifies subtopic U2-05 as Reading strategies: making predictions, summarising, questioning. In docs/semester-1/geng-300/unit-02/topic-02.mdx, making predictions is completely omitted from the text (zero occurrences in prose or checks); summarising and questioning are only referenced in passing as steps in SQ4R without explicit instruction on predictive reading strategies. Repair request: add explicit instruction and practice on making predictions before and during reading under ### Reading strategies in topic-02.mdx.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "In-text figure references and teacher notes contain cross-reference discrepancies: in topic-02.mdx:78-81, prose refers to The figure above maps common note-taking formats... but the preceding figure is fig-U2-5 (reading strategies table), while note-taking table fig-U2-6 is placed in topic-03.mdx. In topic-03.mdx:56-57, prose refers to The figure above maps the listening process... immediately following fig-U2-6, while the listening process diagram is fig-U2-3 at line 24. Furthermore, unit-teacher-notes.mdx:71-72 incorrectly describes fig-U2-6 as a concept map and fig-U2-3 as a flowchart. Repair request: correct in-text figure references to accurately match placed figures and correct figure archetype labels in teacher notes.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "MCQ answer key distribution skew: across the 10 MCQs in unit-assessment.mdx:155-167, correct options are 1 a, 5 b, 4 c, and 0 d. Option d is never the correct key. Repair request: redistribute correct keys across options a-d at next bank revision.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "Cosmetic wordmark bounding overlap in fig-U2-5: measure-figure-text.mjs reports shape .panel [14,368,750,456] overlaps with the wordmark box at y=463.3 by 74.3 x 6.5px in fig-U2-5.svg and fig-U2-5.dark.svg. All text remains within the 780x470 viewBox. Repair request: adjust bottom panel margin away from wordmark.",
+      "resolved": false
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/geng-300/reviews/unit-02/logs-24f6f754/validate-content.log"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/geng-300/reviews/unit-02/logs-24f6f754/check-depth-gate.log"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/geng-300/reviews/unit-02/logs-24f6f754/check-figures.log"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/geng-300/reviews/unit-02/logs-24f6f754/check-no-em-dash.log"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/geng-300/reviews/unit-02/logs-24f6f754/check-no-answer-keys.log"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/geng-300/reviews/unit-02/logs-24f6f754/check-docs-sync.log"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 0,
+      "log_path": "specs/content/geng-300/reviews/unit-02/logs-24f6f754/render-review.log"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/geng-300/reviews/unit-02/logs-24f6f754/check-depth-gate.log": "15021f8f88122b596e67cfd48c2ff282fde912e1b86bb03c2137bcf9d8e062fd",
+    "specs/content/geng-300/reviews/unit-02/logs-24f6f754/check-docs-sync.log": "cbc9f6e4b0b674cb49e2d9b795d81ed78f23dc431cba1130e4d64cf6d0bed749",
+    "specs/content/geng-300/reviews/unit-02/logs-24f6f754/check-figures.log": "54a388cb9954b9d2f07f84e5385ac0003b94a6a54023abb188e864346958b04f",
+    "specs/content/geng-300/reviews/unit-02/logs-24f6f754/check-no-answer-keys.log": "b393a0a314f24cdcddad68d5c53018b9909412f1af57c9739a7616db2903a304",
+    "specs/content/geng-300/reviews/unit-02/logs-24f6f754/check-no-em-dash.log": "00405490c649d998b589b23505029de9134497966b02ff9ccefb1075aa414dd3",
+    "specs/content/geng-300/reviews/unit-02/logs-24f6f754/render-review.log": "4bb82dc4785730b26c09a31d4bdd0c918e789745db84020b79be22ba39f73447",
+    "specs/content/geng-300/reviews/unit-02/logs-24f6f754/validate-content.log": "5b3153a9d41a11051bff1d2f0396cf26eaaf00ae79e3b894c202823645c0e6a6",
+    "specs/content/geng-300/reviews/unit-02/renders-24f6f754/en/desktop-index.png": "32bd7a415706fb0db78116e2226093ab1966cc3b7681b66216206df9bde800f0",
+    "specs/content/geng-300/reviews/unit-02/renders-24f6f754/en/desktop-topic-01.png": "843c678366afdc75292fa5dd06cbbce2f82d98d71162f51dd34e2f2d72b020e8",
+    "specs/content/geng-300/reviews/unit-02/renders-24f6f754/en/desktop-topic-02.png": "427159f4d4c3cb8878228aa102d4b851df5ecc03fe7e8033a6b9cea0ee568df5",
+    "specs/content/geng-300/reviews/unit-02/renders-24f6f754/en/desktop-topic-03.png": "98a7ed0857db237c9e52fc8dd55dfe3ffd919558d69a4825c6f2fe3b87f80adf",
+    "specs/content/geng-300/reviews/unit-02/renders-24f6f754/en/desktop-unit-assessment.png": "6b1e945f0e1fe227303ed87387813c325ad644729960f187b217b46e3037bd7a",
+    "specs/content/geng-300/reviews/unit-02/renders-24f6f754/en/desktop-unit-teacher-notes.png": "a6e1a53a62a052bf41c958adde3657c7c6a960d11fc4d99e47953a6c269ded1c",
+    "specs/content/geng-300/reviews/unit-02/renders-24f6f754/en/narrow360-index.png": "cc8d55ed52e90fb8e033a0188e7fc30f4c0bdf56b3ec20825dd611693230d249",
+    "specs/content/geng-300/reviews/unit-02/renders-24f6f754/en/narrow360-topic-01.png": "1c44146f1f2a5ec2ff0c2b957ce4a40645c194d2440bc869002efa657b91d465",
+    "specs/content/geng-300/reviews/unit-02/renders-24f6f754/en/narrow360-topic-02.png": "c14976ecfc3b9e8c2b73b62dc775bea01eb69a6c232a86990d3c094dbdef9952",
+    "specs/content/geng-300/reviews/unit-02/renders-24f6f754/en/narrow360-topic-03.png": "5f15ffdf383bbda69a0b486137783b6a276135493794de1b0f4b86602a4cd505",
+    "specs/content/geng-300/reviews/unit-02/renders-24f6f754/en/narrow360-unit-assessment.png": "259f7edc01392a63b6c3df872a696a027bf0258325dd363de3c9df161fe54f7a",
+    "specs/content/geng-300/reviews/unit-02/renders-24f6f754/en/narrow360-unit-teacher-notes.png": "b7b41110b87f033f66591ed1605fd2d4eabde2f93649914ca385ee978cf4f405",
+    "specs/content/geng-300/reviews/unit-02/renders-24f6f754/en/print-a4-index.pdf": "1bfd7f780e3e692d1a24fa6f4b2dbf066ac5a1d2217d8c174f4164fd4edb63bf",
+    "specs/content/geng-300/reviews/unit-02/renders-24f6f754/en/print-a4-topic-01.pdf": "9d1cd63f1db1a0ac039c4f6edc657c3e42865d15b034aeaf488ebc89ec6d702c",
+    "specs/content/geng-300/reviews/unit-02/renders-24f6f754/en/print-a4-topic-02.pdf": "f7dea94bf69dec5308bb6ab7dbbf3417a13f2510f824bb079fc2c3231ceb979e",
+    "specs/content/geng-300/reviews/unit-02/renders-24f6f754/en/print-a4-topic-03.pdf": "9d6038bfe1080193fe8ccb128935cc0e9ddb81b241e23e32772043e02f6491b9",
+    "specs/content/geng-300/reviews/unit-02/renders-24f6f754/en/print-a4-unit-assessment.pdf": "46914f23e4298299e959df91e03432fcae771ca5b3e1b8f8b6d875b9467e324b",
+    "specs/content/geng-300/reviews/unit-02/renders-24f6f754/en/print-a4-unit-teacher-notes.pdf": "b4651ea321a617b7dc1443d7125e6d19367434b18b0b5f2ea1d7a478b3196ced",
+    "specs/content/geng-300/reviews/unit-02/renders-24f6f754/en/render-inspect.json": "ee07fbdb43209c8ca10ee43b65b0c9581bdb45cab844ae6907c275dfdb0aab96",
+    "specs/content/geng-300/reviews/unit-02/renders-24f6f754/en/render-inspect.log": "36cee805267188ed82c1259805ab630eb324bf7d1d960c69c598856c8cbd93bc"
+  }
+}

@@ -1,0 +1,5 @@
+render-review NOT PERFORMED
+Reason: Job constraints (brief.md) prohibit running `npm run build` or starting a dev server.
+The review-evidence contract requires render-review (browser/print inspection of rendered pages)
+as a mandatory check for a passing G3 report. Without a build, MDX pages cannot be rendered.
+This is a blocking limitation that forces an escalate disposition.
