@@ -1,0 +1,54 @@
+### render-inspect EFMP-305 Unit 1 (en)
+### route: /semester-2/efmp-305/unit-01
+### pages: 5, placed figures: 4 (placed in topics and manifest)
+### started: 2026-10-17T02:25:00.000Z
+
+===== A. DESKTOP 1280x900 =====
+-- index: headings=5 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+-- topic-01: headings=13 imgs=2 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=1 vagueLinks=0 hOverflow=false
+   figures: fig-U1-1 (concept-map), fig-U1-2 (table)
+   bareUrlLinks: https://unesdoc.unesco.org (topic-01.mdx:183)
+   heading order: no skipped levels
+-- topic-02: headings=12 imgs=2 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   figures: fig-U1-3 (concept-map), fig-U1-4 (diagram)
+   heading order: no skipped levels
+-- unit-assessment: headings=9 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+-- unit-teacher-notes: headings=9 imgs=0 visibleBroken=0 notServed=0 missingAlt=0 bareUrlLinks=0 vagueLinks=0 hOverflow=false
+   heading order: no skipped levels
+
+===== B. NARROW 360x780 =====
+-- index: docHorizontalOverflow=0px tables=0 figures=0 spill=0
+-- topic-01: docHorizontalOverflow=0px tables=1 figures=2 spill=0
+   table[0] scroller=table.display-block (fits=false, scroller active, reachable)
+   figure[0] fig-U1-1 (concept-map): width 100%, responsive SVG, within viewport
+   figure[1] fig-U1-2 (table): width 100%, responsive SVG, within viewport
+-- topic-02: docHorizontalOverflow=0px tables=1 figures=2 spill=0
+   table[0] scroller=table.display-block (fits=false, scroller active, reachable)
+   figure[0] fig-U1-3 (concept-map): width 100%, responsive SVG, within viewport
+   figure[1] fig-U1-4 (diagram): width 100%, responsive SVG, within viewport
+-- unit-assessment: docHorizontalOverflow=0px tables=1 figures=0 spill=0
+   table[0] scroller=table.display-block (fits=false, scroller active, reachable)
+-- unit-teacher-notes: docHorizontalOverflow=0px tables=2 figures=0 spill=0
+   table[0] scroller=table.display-block (fits=false, scroller active, reachable)
+   table[1] scroller=table.display-block (fits=false, scroller active, reachable)
+
+===== C. A4 PRINT EMULATION (794px) =====
+-- index @print: clippedElems=0 figureImgs=0
+-- topic-01 @print: clippedElems=0 figureImgs=2
+-- topic-02 @print: clippedElems=0 figureImgs=2
+-- unit-assessment @print: clippedElems=0 figureImgs=0 answerHeadings=["## Answers and marking guidance"]
+-- unit-teacher-notes @print: clippedElems=0 figureImgs=0
+
+===== D. SVG TEXT GEOMETRY =====
+   All 4 unit figures (fig-U1-1 through fig-U1-4) rendered and placed in topics and manifest.
+   SVGs measured with measure-figure-text.mjs:
+   - fig-U1-1: 960x510, widest text 945.6, wordmark 844.3 (clean)
+   - fig-U1-2: 1080x690, widest text 1065.7, wordmark 964.3 (clean)
+   - fig-U1-3: 1000x790, widest text 985.2, wordmark 884.3 (clean)
+   - fig-U1-4: 960x650, widest text 945.6, wordmark 844.4 (clean)
+
+### finished: 2026-10-17T02:28:00.000Z
+### defects: 0
+### exit_code: 0
