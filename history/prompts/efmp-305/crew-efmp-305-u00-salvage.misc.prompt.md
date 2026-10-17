@@ -76,6 +76,7 @@ files:
  - history/prompts/efmp-305/0156-tex118-u4-assessment-marks-costing-alignment.content.prompt.md
  - history/prompts/efmp-305/0157-efmp305-salvage-rebase-g2-evidence.misc.prompt.md
  - history/prompts/efmp-305/0158-efmp305-salvage-second-rebase.misc.prompt.md
+ - history/prompts/efmp-305/crew-efmp-305-u00-salvage.misc.prompt.md
  - history/prompts/general/0106-author-efmp-305-unit-1-and-content-spec.general.prompt.md
  - history/prompts/general/0107-author-efmp-305-unit-2-learner-diversity.general.prompt.md
  - history/prompts/general/0108-efmp-305-intake-repairs-and-in-review.general.prompt.md
@@ -414,7 +415,7 @@ Rebased the EFMP-305 salvage branch onto current origin/main with its G3 review 
 
 - Impact: salvage for EFMP-305 Unit 0 by claude (attempt 2).
 - Tests: npm run check:content passed in the job worktree before the PR was opened.
-- Files: 357 file(s), listed above.
+- Files: 358 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
