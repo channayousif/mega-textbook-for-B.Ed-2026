@@ -1,6 +1,6 @@
 ---
 id: crew-gqur-301-u00-salvage-cifix2
-title: crew fix GQUR-301 build failure CI PR162
+title: crew fix GQUR-301 unit 0
 stage: misc
 date: 2026-10-18
 surface: agent
@@ -14,10 +14,79 @@ links:
   spec: specs/content/gqur-301/content-spec.md
   ticket: null
   adr: null
-  pr: "https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/162"
+  pr: null
 files:
+ - docs/semester-2/gqur-301/_category_.json
+ - docs/semester-2/gqur-301/course-overview.mdx
+ - docs/semester-2/gqur-301/unit-01/_category_.json
+ - docs/semester-2/gqur-301/unit-01/index.mdx
+ - docs/semester-2/gqur-301/unit-01/topic-01.mdx
+ - docs/semester-2/gqur-301/unit-01/topic-02.mdx
+ - docs/semester-2/gqur-301/unit-01/topic-03.mdx
+ - docs/semester-2/gqur-301/unit-01/topic-04.mdx
+ - docs/semester-2/gqur-301/unit-01/unit-assessment.mdx
+ - docs/semester-2/gqur-301/unit-01/unit-teacher-notes.mdx
+ - docs/semester-2/gqur-301/unit-02/_category_.json
+ - docs/semester-2/gqur-301/unit-02/index.mdx
+ - docs/semester-2/gqur-301/unit-02/topic-01.mdx
+ - docs/semester-2/gqur-301/unit-02/topic-02.mdx
  - docs/semester-2/gqur-301/unit-02/topic-03.mdx
+ - docs/semester-2/gqur-301/unit-02/topic-04.mdx
+ - docs/semester-2/gqur-301/unit-02/unit-assessment.mdx
+ - docs/semester-2/gqur-301/unit-02/unit-teacher-notes.mdx
+ - glossary.json
+ - history/prompts/general/0334-crew-resolves-pr175-conflicts.general.prompt.md
+ - history/prompts/gqur-301/0330-resume-branch-and-figure-repairs.general.prompt.md
+ - history/prompts/gqur-301/0331-rebase-main-and-g2-gate-evidence.general.prompt.md
+ - history/prompts/gqur-301/0332-gqur301-build-fix-topic03-sum.md
+ - history/prompts/gqur-301/328-gqur301-author-unit-01.md
+ - history/prompts/gqur-301/329-gqur301-intake-repairs.md
+ - history/prompts/gqur-301/crew-gqur-301-u00-salvage-cifix1.misc.prompt.md
+ - history/prompts/gqur-301/crew-gqur-301-u00-salvage-cifix2.misc.prompt.md
+ - history/prompts/gqur-301/crew-gqur-301-u00-salvage-conflict1.misc.prompt.md
+ - history/prompts/gqur-301/crew-gqur-301-u00-salvage-conflict2.misc.prompt.md
+ - history/prompts/gqur-301/crew-gqur-301-u00-salvage.misc.prompt.md
+ - specs/content/gqur-301/concepts/unit-01.md
+ - specs/content/gqur-301/concepts/unit-02.md
+ - specs/content/gqur-301/content-spec.md
+ - specs/content/gqur-301/coverage/unit-01.md
+ - specs/content/gqur-301/coverage/unit-02.md
+ - specs/content/gqur-301/figures/unit-01.md
+ - specs/content/gqur-301/figures/unit-02.md
+ - specs/content/gqur-301/intake-2/evaluation.md
+ - specs/content/gqur-301/intake-2/manifest.json
+ - specs/content/gqur-301/intake-3/evaluation.md
+ - specs/content/gqur-301/intake-3/manifest.json
+ - specs/content/gqur-301/intake/evaluation.md
+ - specs/content/gqur-301/intake/manifest.json
+ - specs/content/gqur-301/reviews/unit-01/G2/20261017T113130488Z-gates.json
+ - specs/content/gqur-301/reviews/unit-01/G2/logs-20261017T113130488Z/check-bloom-bands.txt
+ - specs/content/gqur-301/reviews/unit-01/G2/logs-20261017T113130488Z/check-concept-graph.txt
+ - specs/content/gqur-301/reviews/unit-01/G2/logs-20261017T113130488Z/check-depth-gate.txt
+ - specs/content/gqur-301/reviews/unit-01/G2/logs-20261017T113130488Z/check-docs-sync.txt
+ - specs/content/gqur-301/reviews/unit-01/G2/logs-20261017T113130488Z/check-figures.txt
+ - specs/content/gqur-301/reviews/unit-01/G2/logs-20261017T113130488Z/check-no-answer-keys.txt
+ - specs/content/gqur-301/reviews/unit-01/G2/logs-20261017T113130488Z/check-no-em-dash.txt
+ - specs/content/gqur-301/reviews/unit-01/G2/logs-20261017T113130488Z/validate-content.txt
+ - specs/content/gqur-301/reviews/unit-02/G2/20261017T113205592Z-gates.json
+ - specs/content/gqur-301/reviews/unit-02/G2/20261017T150237221Z-gates.json
  - specs/content/gqur-301/reviews/unit-02/G2/20261018T194041863Z-gates.json
+ - specs/content/gqur-301/reviews/unit-02/G2/logs-20261017T113205592Z/check-bloom-bands.txt
+ - specs/content/gqur-301/reviews/unit-02/G2/logs-20261017T113205592Z/check-concept-graph.txt
+ - specs/content/gqur-301/reviews/unit-02/G2/logs-20261017T113205592Z/check-depth-gate.txt
+ - specs/content/gqur-301/reviews/unit-02/G2/logs-20261017T113205592Z/check-docs-sync.txt
+ - specs/content/gqur-301/reviews/unit-02/G2/logs-20261017T113205592Z/check-figures.txt
+ - specs/content/gqur-301/reviews/unit-02/G2/logs-20261017T113205592Z/check-no-answer-keys.txt
+ - specs/content/gqur-301/reviews/unit-02/G2/logs-20261017T113205592Z/check-no-em-dash.txt
+ - specs/content/gqur-301/reviews/unit-02/G2/logs-20261017T113205592Z/validate-content.txt
+ - specs/content/gqur-301/reviews/unit-02/G2/logs-20261017T150237221Z/check-bloom-bands.txt
+ - specs/content/gqur-301/reviews/unit-02/G2/logs-20261017T150237221Z/check-concept-graph.txt
+ - specs/content/gqur-301/reviews/unit-02/G2/logs-20261017T150237221Z/check-depth-gate.txt
+ - specs/content/gqur-301/reviews/unit-02/G2/logs-20261017T150237221Z/check-docs-sync.txt
+ - specs/content/gqur-301/reviews/unit-02/G2/logs-20261017T150237221Z/check-figures.txt
+ - specs/content/gqur-301/reviews/unit-02/G2/logs-20261017T150237221Z/check-no-answer-keys.txt
+ - specs/content/gqur-301/reviews/unit-02/G2/logs-20261017T150237221Z/check-no-em-dash.txt
+ - specs/content/gqur-301/reviews/unit-02/G2/logs-20261017T150237221Z/validate-content.txt
  - specs/content/gqur-301/reviews/unit-02/G2/logs-20261018T194041863Z/check-bloom-bands.txt
  - specs/content/gqur-301/reviews/unit-02/G2/logs-20261018T194041863Z/check-concept-graph.txt
  - specs/content/gqur-301/reviews/unit-02/G2/logs-20261018T194041863Z/check-depth-gate.txt
@@ -26,7 +95,45 @@ files:
  - specs/content/gqur-301/reviews/unit-02/G2/logs-20261018T194041863Z/check-no-answer-keys.txt
  - specs/content/gqur-301/reviews/unit-02/G2/logs-20261018T194041863Z/check-no-em-dash.txt
  - specs/content/gqur-301/reviews/unit-02/G2/logs-20261018T194041863Z/validate-content.txt
+ - specs/content/gqur-301/sources/texts/lane2023.md
+ - specs/content/gqur-301/sources/texts/openstax-stats.md
+ - specs/content/gqur-301/sources/unit-01.md
+ - specs/content/gqur-301/sources/unit-02.md
  - specs/content/gqur-301/tasks.md
+ - specs/decisions/log.md
+ - specs/gaps.md
+ - static/img/figures/gqur-301/unit-01/fig-U1-1.dark.svg
+ - static/img/figures/gqur-301/unit-01/fig-U1-1.svg
+ - static/img/figures/gqur-301/unit-01/fig-U1-2.dark.svg
+ - static/img/figures/gqur-301/unit-01/fig-U1-2.svg
+ - static/img/figures/gqur-301/unit-01/fig-U1-3.dark.svg
+ - static/img/figures/gqur-301/unit-01/fig-U1-3.svg
+ - static/img/figures/gqur-301/unit-01/fig-U1-4.dark.svg
+ - static/img/figures/gqur-301/unit-01/fig-U1-4.svg
+ - static/img/figures/gqur-301/unit-01/fig-U1-5.dark.svg
+ - static/img/figures/gqur-301/unit-01/fig-U1-5.svg
+ - static/img/figures/gqur-301/unit-01/fig-U1-6.dark.svg
+ - static/img/figures/gqur-301/unit-01/fig-U1-6.svg
+ - static/img/figures/gqur-301/unit-01/fig-U1-7.dark.svg
+ - static/img/figures/gqur-301/unit-01/fig-U1-7.svg
+ - static/img/figures/gqur-301/unit-01/fig-U1-8.dark.svg
+ - static/img/figures/gqur-301/unit-01/fig-U1-8.svg
+ - static/img/figures/gqur-301/unit-02/fig-U2-1.dark.svg
+ - static/img/figures/gqur-301/unit-02/fig-U2-1.svg
+ - static/img/figures/gqur-301/unit-02/fig-U2-2.dark.svg
+ - static/img/figures/gqur-301/unit-02/fig-U2-2.svg
+ - static/img/figures/gqur-301/unit-02/fig-U2-3.dark.svg
+ - static/img/figures/gqur-301/unit-02/fig-U2-3.svg
+ - static/img/figures/gqur-301/unit-02/fig-U2-4.dark.svg
+ - static/img/figures/gqur-301/unit-02/fig-U2-4.svg
+ - static/img/figures/gqur-301/unit-02/fig-U2-5.dark.svg
+ - static/img/figures/gqur-301/unit-02/fig-U2-5.svg
+ - static/img/figures/gqur-301/unit-02/fig-U2-6.dark.svg
+ - static/img/figures/gqur-301/unit-02/fig-U2-6.svg
+ - static/img/figures/gqur-301/unit-02/fig-U2-7.dark.svg
+ - static/img/figures/gqur-301/unit-02/fig-U2-7.svg
+ - static/img/figures/gqur-301/unit-02/fig-U2-8.dark.svg
+ - static/img/figures/gqur-301/unit-02/fig-U2-8.svg
 tests:
  - npm run check:content
 ---
@@ -60,26 +167,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-fix for GQUR-301 Unit 2 topic-03 MDX build error
+Fixed the CI build failure (PR #162) by escaping LaTeX braces in GQUR-301 Unit 2 topic-03.mdx so MDX no longer parses `{x}` as a JSX expression, then regenerated the stale G2 gate evidence and updated the tracker.
 
 ## Outcome
 
-- Impact: fix for GQUR-301 Unit 2 build failure (CI PR #162) by opencode.
-- Tests: npm run check:content passed 13/13 after fix.
-- Files: 11 file(s), listed above.
+- Impact: fix for GQUR-301 Unit 0 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 118 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: escaped LaTeX braces in topic-03.mdx math blocks so MDX does not parse `{x}`/`{n}` as JSX expressions; regenerated G2 gate evidence (old manifest was stale after the file edit); updated tasks.md tracker row to point at the fresh evidence.
-- Decisions the team must respect: the math in topic-03.mdx uses `$$` blocks without remark-math installed, so every `{` `}` that LaTeX needs must be escaped as `\{` `\}` to avoid MDX JSX parse/runtime errors. Future math-heavy topics need the same treatment.
-- Pending / next owner: PR #162 build was also failing on `npm ci` being canceled (RLS job, not a real RLS failure) — re-run CI after this commit lands. G3/G5 review and Urdu mirror for Unit 2 remain outstanding.
-- Paperclip issues affected: none.
+- Shipped / changed: Fixed the CI build failure (PR #162) by escaping LaTeX braces in GQUR-301 Unit 2 topic-03.mdx so MDX no longer parses `{x}` as a JSX expression, then regenerated the stale G2 gate evidence and updated the tracker.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - The topic-03.mdx math blocks use `$$` delimiters without remark-math installed  -  every LaTeX `{` `}` must be escaped as `\{` `\}` to avoid MDX runtime errors; any future math-heavy topic file needs the same treatment. The RLS job failure in CI was `npm ci` being canceled by the PR author, not a real RLS failure.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: MDX interpreted LaTeX `{x}` in `\bar{x}` as a JSX expression, causing `ReferenceError: x is not defined` at SSG time. Fixing the file invalidated the existing G2 evidence manifest, requiring evidence regeneration.
-- Graders run and results (PASS/FAIL): check:content PASS (13/13)
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
