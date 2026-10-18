@@ -1,0 +1,7 @@
+✗ static/img/figures/efmp-303/unit-06/fig-U6-2.svg
+    overprints the wordmark (ends 773.6, wordmark starts 675.7): "professional development"
+  ~ shape .panel-c [580,420,750,460] collides with the wordmark by 74.3 x 10.5px
+
+1 cosmetic wordmark collision(s) - reported, not failed.
+
+1 text-geometry problem(s).
