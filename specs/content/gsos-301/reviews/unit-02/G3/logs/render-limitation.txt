@@ -1,0 +1,1 @@
+No render-review executed. Brief forbids build and dev server. Current rendered desktop/narrow/A4 views unavailable; accessibility unverified.
