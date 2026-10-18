@@ -11,6 +11,8 @@ numbering - no prose was changed to create them.
 **Urdu labels.** Two are drawn from `specs/content/terminology.csv`: `Continuous Professional
 Development` and `Professional Learning Community`. The remaining thirteen are authored here and
 **carry a G5 flag**.
+`CON:EFMP-302-6-12` was re-aligned on 2026-10-17 to the owner-banked `Reflective Practice`
+= `تاملی مشق` (D-2026-0067); the `بطور طریقہ کار` qualifier is still authored and still flagged.
 
 | Concept ID | Label EN | Label UR | Prerequisites | Topic | SLO refs | Assessment item IDs |
 |---|---|---|---|---|---|---|
@@ -25,7 +27,7 @@ Development` and `Professional Learning Community`. The remaining thirteen are a
 | CON:EFMP-302-6-9 | Mismatch between support offered and support needed | مطلوبہ اور فراہم کردہ معاونت کا فرق | CON:EFMP-302-6-8 | 6.2 | SLO:EFMP-302-6-1 | RRQ-06, ERQ-02 |
 | CON:EFMP-302-6-10 | Development routes compared | ترقی کے راستوں کا موازنہ | CON:EFMP-302-6-5 | 6.3 | SLO:EFMP-302-6-2 | MCQ-07, RRQ-07, ERQ-03 |
 | CON:EFMP-302-6-11 | Professional learning community | پیشہ ورانہ تعلمی برادری | CON:EFMP-302-6-10 | 6.3 | SLO:EFMP-302-6-2 | MCQ-07, ERQ-03 |
-| CON:EFMP-302-6-12 | Reflective practice as method | غور و فکر بطور طریقہ کار | CON:EFMP-302-6-10 | 6.3 | SLO:EFMP-302-6-2 | RRQ-08 |
+| CON:EFMP-302-6-12 | Reflective practice as method | تاملی مشق بطور طریقہ کار | CON:EFMP-302-6-10 | 6.3 | SLO:EFMP-302-6-2 | RRQ-08 |
 | CON:EFMP-302-6-13 | Lesson study | سبق کا مشترکہ مطالعہ | CON:EFMP-302-6-12 | 6.3 | SLO:EFMP-302-6-2 | MCQ-08 |
 | CON:EFMP-302-6-14 | The personal development plan | ذاتی پیشہ ورانہ ترقی کا منصوبہ | CON:EFMP-302-6-12 | 6.4 | SLO:EFMP-302-6-2 | MCQ-09, RRQ-09, ERQ-04, ERQ-05 |
 | CON:EFMP-302-6-15 | What destroys a plan, and the mid-year review | منصوبہ کیوں ناکام ہوتا ہے، اور سال کے وسط کا جائزہ | CON:EFMP-302-6-14 | 6.4 | SLO:EFMP-302-6-2 | MCQ-09, MCQ-10, RRQ-09, RRQ-10, ERQ-04, ERQ-05 |

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "course_code": "GENG-300",
+  "unit_no": 2,
+  "locale": "en",
+  "base": "http://127.0.0.1:4599",
+  "route": "/semester-1/geng-300/unit-02",
+  "pages": [
+    "index",
+    "topic-01",
+    "topic-02",
+    "topic-03",
+    "unit-assessment",
+    "unit-teacher-notes"
+  ],
+  "figures": [
+    "fig-U2-1",
+    "fig-U2-4",
+    "fig-U2-2",
+    "fig-U2-5",
+    "fig-U2-3",
+    "fig-U2-6"
+  ],
+  "viewports": [
+    "1280x900",
+    "360x780",
+    "A4 794x1123 print"
+  ],
+  "defects": [],
+  "exit_code": 0,
+  "generated_at": "2026-10-17T15:29:12.459Z"
+}

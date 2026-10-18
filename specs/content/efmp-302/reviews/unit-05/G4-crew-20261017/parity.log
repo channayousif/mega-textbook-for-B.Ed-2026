@@ -1,0 +1,22 @@
+index.mdx: PASS (front matter, heading vector, imports/components, figure attributes/paths/alt-desc, glossary keys, MDX compile)
+topic-01.mdx: PASS (front matter, heading vector, imports/components, figure attributes/paths/alt-desc, glossary keys, MDX compile)
+topic-02.mdx: PASS (front matter, heading vector, imports/components, figure attributes/paths/alt-desc, glossary keys, MDX compile)
+topic-03.mdx: PASS (front matter, heading vector, imports/components, figure attributes/paths/alt-desc, glossary keys, MDX compile)
+topic-04.mdx: PASS (front matter, heading vector, imports/components, figure attributes/paths/alt-desc, glossary keys, MDX compile)
+unit-assessment.mdx: PASS (front matter, heading vector, imports/components, figure attributes/paths/alt-desc, glossary keys, MDX compile)
+unit-teacher-notes.mdx: PASS (front matter, heading vector, imports/components, figure attributes/paths/alt-desc, glossary keys, MDX compile)
+Assessment: PASS 10/10/5, option key mapping d/c/a/b/d/b/a/c/d/a, RRQ marks 4/6/5/4/6/5/5/4/7/4
+Component totals: {"Figure":13,"Glossary":3,"PrintHandout":6,"BloomTag":0,"ObjectiveList":0,"ActivityCard":0,"TranslationStatusBadge":1}
+
+Final-byte recheck:
+index.mdx: final MDX compile, heading parity, invariant metadata and draft status PASS
+topic-01.mdx: final MDX compile, heading parity, invariant metadata and draft status PASS
+topic-02.mdx: final MDX compile, heading parity, invariant metadata and draft status PASS
+topic-03.mdx: final MDX compile, heading parity, invariant metadata and draft status PASS
+topic-04.mdx: final MDX compile, heading parity, invariant metadata and draft status PASS
+unit-assessment.mdx: final MDX compile, heading parity, invariant metadata and draft status PASS
+unit-teacher-notes.mdx: final MDX compile, heading parity, invariant metadata and draft status PASS
+Stress: bank-conformant PASS
+Teacher Burnout: bank-conformant PASS
+Multi-grade Classroom: bank-conformant PASS
+Digital Professionalism: bank-conformant PASS

@@ -15,9 +15,11 @@ You coordinate; workers do unit work. Read `ops/crew/README.md` first.
      set the old job to `closed`;
    - a worker hit a limit the regex missed: `crew.mjs health <worker> cooling <until>` and `crew.mjs retry <job>`;
    - it needs a ruling: `crew.mjs ask "<question>" --options "a|b" --job <job>` and leave it `blocked`.
-3. Answer nothing on the owner's behalf. Owner-only items (style guide, constitution, ADRs, G3/G5
+3. Read `~/.crew/mega-book/OWNER-NOTES.md` (owner directions sent as `crew note ...`) and act on
+   them within the rules below; turn anything that needs the owner's call into a C-### question.
+4. Answer nothing on the owner's behalf. Owner-only items (style guide, constitution, ADRs, G3/G5
    sign-off, approved content-spec edits, spending) always go through `ask`.
-4. Before ending, write a PHR for the session (CLAUDE.md), then run `crew.mjs status`.
+5. Before ending, write a PHR for the session (CLAUDE.md), then run `crew.mjs status`.
 
 ## Never
 - Run `npm run build`, a dev server or Playwright from the lead. CI builds PRs.

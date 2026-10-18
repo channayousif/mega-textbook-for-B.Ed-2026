@@ -56,6 +56,23 @@ export function send(text, { urgent = false, media = null, dryRun = false } = {}
   return delivered;
 }
 
+/**
+ * Answer in the place the owner asked: a Discord DM, the WhatsApp chat, or the channel.
+ * Falls back to the normal channel route when that target fails.
+ */
+export function reply(source, text, { dryRun = false } = {}) {
+  const o = owner();
+  const route = { discord_dm: ['discord', `user:${o.discordUser}`, 1900], whatsapp_dm: ['whatsapp', o.whatsapp, 3500] }[source];
+  if (!route) return send(text, { dryRun });
+  const [channel, target, size] = route;
+  for (const part of chunks(text, size)) {
+    if (dryRun) { console.log(`[dry-run] ${channel} ${target}: ${part}`); continue; }
+    const r = openclaw(['message', 'send', '--channel', channel, '--target', target, '-m', part]);
+    if (!r.ok) { console.error(`reply ${channel} failed: ${r.err.slice(-300)}`); return send(text, { dryRun }); }
+  }
+  return 1;
+}
+
 /** Owner messages from openclaw's own session log for a direct chat. */
 function sessionMessages(key) {
   const index = join(OC_SESSIONS, 'sessions.json');

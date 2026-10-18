@@ -1,0 +1,10 @@
+Baseline comparison: PASS, no additional content-gate findings.
+Baseline commit and origin/main: 65d2428e170574f474b50d20cefdf722ef389d19
+Initial git status was clean and origin/main..HEAD was empty.
+First suite ran before tracker edits, with only new review artifacts excluded from reviewed inputs.
+Only tracked source diff at final check: specs/content/efmp-304/tasks.md (Unit 2 advisory G3 note).
+Both executions: 12/13 pass; check:content-status alone fails with missing static/content-status.json.
+This is an ignored generated artifact, not a changed content input. No unrelated repair made.
+Initial log: specs/content/efmp-304/reviews/unit-02/G3/crew-20261017/check-content.log
+Final log: specs/content/efmp-304/reviews/unit-02/G3/crew-20261017/check-content-final.log
+Compared results: [["validate:content", "PASS"], ["check:pipeline-gate", "PASS"], ["check:depth-gate", "PASS"], ["check:figures", "PASS"], ["check:no-em-dash", "PASS"], ["check:no-answer-keys", "PASS"], ["check:concept-graph", "PASS"], ["check:bloom-bands", "PASS"], ["check:source-floor", "PASS"], ["check:licence", "PASS"], ["licence:map:check", "PASS"], ["check:content-status", "FAIL"], ["check:docs-sync", "PASS"]]
