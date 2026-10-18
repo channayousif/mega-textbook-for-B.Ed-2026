@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 470" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">چاروں اصطلاحات ایک جدول میں</title><desc id="d">چاروں اصطلاحات کا جدول: صداقت والی اور صداقت سے خالی دلیل کو درست اور غلط پریمیسز کے مقابل رکھا گیا ہے، اس میں استوار اور غیر استوار کی جگہیں دکھائی گئی ہیں، اور نیچے اس کا استقرائی متوازی دیا گیا ہے۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700;fill:var(--ink)} .sh{font-size:12px;font-weight:600;fill:var(--ink)} .m{font-size:12px;fill:var(--muted)} .c{text-anchor:middle} .wm{fill:var(--wm);font-size:11px} .b1{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2} .b2{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2} .b3{fill:var(--a3-fill);stroke:var(--a3);stroke-width:2} .b4{fill:var(--a4-fill);stroke:var(--a4);stroke-width:2} .line{stroke:var(--line);stroke-width:2}</style><rect class="bg" x="0" y="0" width="820"/>
+   <rect class="bg" x="0" y="0" width="820" height="470"/>
+   <rect class="panel" x="16" y="16" width="788" height="44" rx="4"/>
+   <text class="h" x="416" y="44" text-anchor="middle" direction="rtl">استنتاجی</text>
+   <rect class="panel" x="16" y="70" width="788" height="30" rx="2"/>
+   <text class="sh" x="560" y="90" text-anchor="middle" direction="rtl">پریمیسز درست</text>
+   <text class="sh" x="210" y="90" text-anchor="middle" direction="rtl">پریمیسز غلط</text>
+   <text class="sh" x="752" y="150" text-anchor="middle" direction="rtl">صداقت والی</text>
+   <rect x="420" y="120" width="280" height="60" rx="6" class="b1"/>
+   <text class="sh" x="560" y="145" text-anchor="middle" direction="rtl">استوار</text>
+   <text class="m" x="560" y="165" text-anchor="middle" direction="rtl">اس پر بھروسہ کریں</text>
+   <rect x="20" y="120" width="380" height="60" rx="6" class="b3"/>
+   <text class="sh" x="210" y="145" text-anchor="middle" direction="rtl">صداقت والی مگر غیر استوار</text>
+   <text class="m" x="210" y="165" text-anchor="middle" direction="rtl">غلط پریمیس اس کی بنیاد ہلا دیتی ہے</text>
+   <text class="sh" x="752" y="240" text-anchor="middle" direction="rtl">صداقت سے خالی</text>
+   <rect x="420" y="210" width="280" height="60" rx="6" class="b3"/>
+   <text class="sh" x="560" y="235" text-anchor="middle" direction="rtl">صداقت سے خالی</text>
+   <text class="m" x="560" y="255" text-anchor="middle" direction="rtl">ربط ٹوٹ جاتا ہے</text>
+   <rect x="20" y="210" width="380" height="60" rx="6" class="b3"/>
+   <text class="sh" x="210" y="235" text-anchor="middle" direction="rtl">صداقت سے خالی</text>
+   <text class="m" x="210" y="255" text-anchor="middle" direction="rtl">ربط ٹوٹ جاتا ہے</text>
+   <rect x="16" y="300" width="788" height="44" rx="4" fill="var(--a2-fill)" stroke="var(--a2)" stroke-width="2"/>
+   <text class="h" x="416" y="328" text-anchor="middle" direction="rtl">استقرائی متوازی</text>
+   <rect class="panel" x="16" y="350" width="788" height="30" rx="2"/>
+   <text class="sh" x="560" y="370" text-anchor="middle" direction="rtl">پریمیسز درست</text>
+   <text class="sh" x="210" y="370" text-anchor="middle" direction="rtl">پریمیسز غلط</text>
+   <text class="sh" x="752" y="430" text-anchor="middle" direction="rtl">مضبوط</text>
+   <rect x="420" y="400" width="280" height="60" rx="6" class="b1"/>
+   <text class="sh" x="560" y="425" text-anchor="middle" direction="rtl">وزنی</text>
+   <text class="m" x="560" y="445" text-anchor="middle" direction="rtl">اس پر بھروسہ کریں</text>
+   <rect x="20" y="400" width="380" height="60" rx="6" class="b3"/>
+   <text class="sh" x="210" y="425" text-anchor="middle" direction="rtl">مضبوط مگر بے وزن</text>
+   <text class="m" x="210" y="445" text-anchor="middle" direction="rtl">غلط پریمیس اس کی بنیاد ہلا دیتی ہے</text>
+   <text class="wm" x="810" y="462" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>
