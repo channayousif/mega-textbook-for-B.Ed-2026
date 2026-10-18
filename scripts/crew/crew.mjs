@@ -24,6 +24,7 @@ import { join, resolve } from 'node:path';
 import { WORKERS, STAGES, QUOTA_RE, COOLDOWN_MIN, pickWorker } from './workers.mjs';
 import { STATE_DIR, WT_DIR, LOG_DIR, load, save, ACTIVE, TERMINAL, jobId, now } from './state.mjs';
 import { send, reply, readInbox } from './notify.mjs';
+import { reviewFindingsSection, parseHandoff, priorHandoffsSection } from './handoff.mjs';
 
 const ROOT = resolve(new URL('../..', import.meta.url).pathname);
 const MAX_PARALLEL = Number(process.env.CREW_MAX_PARALLEL || 3);
@@ -138,8 +139,10 @@ const STAGE_TASK = {
   fix: (j) => j.task || `Make every content gate pass for ${j.course} Unit ${j.unit} with the smallest edits.`,
 };
 
-function brief(j) {
+function brief(j, board) {
   const skill = STAGES[j.stage].skill;
+  const findings = j.stage === 'repair_en' ? reviewFindingsSection(latestReport(j.course, j.unit, 'G3'), { root: ROOT }) : '';
+  const notes = priorHandoffsSection(board.jobs, j);
   const scope = j.unit === 0
     ? `The whole ${j.course} course: its docs and i18n trees, \`specs/content/${j.course.toLowerCase()}/\`, its figures, and the shared files its PR already touches.`
     : `${j.course} Unit ${j.unit} only: its docs/licence and i18n files, its rows and folders under
@@ -165,7 +168,9 @@ Earlier attempts may have left work on this branch. Check \`git log origin/main.
    failure, fix those in your scope, rerun). Findings that already exist on main belong to other jobs.
 2. All work is committed on this branch with a conventional commit message. Do not push and do not open a PR.
 3. Your final output ends with one line: \`CREW-SUMMARY: <what you changed, in one sentence>\`.
-${j.feedback ? `\n## Feedback from the previous attempt\n${j.feedback}\n` : ''}`;
+4. Optional, just before it: up to 3 lines \`CREW-HANDOFF: <note>\` for facts the next job on this unit
+   needs (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
+${findings ? `\n## Open findings from the latest G3 report\n${findings}\n` : ''}${notes ? `\n## Notes from earlier jobs on this unit\n${notes}\n` : ''}${j.feedback ? `\n## Feedback from the previous attempt\n${j.feedback}\n` : ''}`;
 }
 
 // ---------------------------------------------------------------- launch
@@ -223,7 +228,7 @@ function launch(board, j, worker) {
   j.branch = j.branch || `crew/${j.id}`;
   j.worktree = prepareWorktree(board, j);
   guardPush(j.worktree);
-  const briefText = brief(j);
+  const briefText = brief(j, board);
   writeFileSync(join(j.worktree, '.crew', 'brief.md'), briefText);
   const prompt = `Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.`;
   const [bin, binArgs] = WORKERS[worker].cmd(prompt);
@@ -351,7 +356,7 @@ ${summary}
 
 - Shipped / changed: ${summary}
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).${j.handoff?.length ? `\n- Notes for the next job on this unit:\n${j.handoff.map((n) => `  - ${n}`).join('\n')}` : ''}
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
@@ -395,6 +400,8 @@ function finishSuccess(board, j, logText) {
   const fresh = newFindings(wt);
   if (fresh.length) return { ok: false, why: `npm run check:content has ${fresh.length} finding(s) that main does not have:\n${fresh.slice(0, 40).join('\n')}` };
   const summary = (logText.match(/CREW-SUMMARY:\s*(.+)/g) || []).at(-1)?.replace(/CREW-SUMMARY:\s*/, '') || `${j.stage} for ${j.course} Unit ${j.unit}`;
+  j.handoff = parseHandoff(logText);
+  if (j.handoff.length) j.handoffAt = now();
   writePhr(j, summary.replace(/\u2014/g, ' - '));
   sh('git', ['add', 'history/prompts'], wt);
   sh('git', ['commit', '-q', '-m', `docs(phr): crew ${j.id}`], wt, { allowFail: true });
