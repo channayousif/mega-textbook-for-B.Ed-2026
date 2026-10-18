@@ -1,0 +1,70 @@
+render-review evidence (G3 English, EFMP-303 Unit 6)
+=====================================================
+Timestamp: 2026-10-18T20:00:00Z
+Reviewer: agent:g3-reviewer
+Model: LongCat-2.0
+
+CONSTRAINT: The brief for this crew job forbids running `npm run build` or a dev
+server. Therefore full live browser/print inspection at 360px and A4 was not
+performed. What follows is everything that could be verified without a server,
+plus a clear statement of what remains unverified.
+
+--- Source-level visual inspection (performed) ---
+
+1. Heading hierarchy (all 6 files):
+   - index.mdx: single h1, h2 for outcomes/prerequisites/unit list
+   - topic-01.mdx: h1, h2 sections (Explanation, Activity, Check, Summary,
+     Self-assessment, Try this, Summative task, Further reading), h3 sub-sections
+   - topic-02.mdx: same structure as topic-01
+   - topic-03.mdx: same structure as topic-01 plus an Evaluate check item
+   - unit-assessment.mdx: h1, h2 (Unit summary, Summative assessment,
+     MCQs/RRQs/ERQs/Answers), h3 per question group
+   - unit-teacher-notes.mdx: h1, h2 sections, h3 sub-sections
+   - All files use a single h1 and correct h2/h3 nesting. No skipped levels.
+
+2. Alt text on all figures (6 figures across 3 topics):
+   - fig-U6-1 (table): alt describes the table content and columns
+   - fig-U6-2 (concept-map): alt describes SDG4 concept map and 7 targets
+   - fig-U6-3 (diagram): alt describes ICT-to-functions mapping
+   - fig-U6-4 (flowchart): alt describes the data-driven planning cycle
+   - fig-U6-5 (timeline): alt describes the innovation timeline
+   - fig-U6-6 (concept-map): alt describes strategic planning elements
+   - All alt texts are descriptive and match the figure content.
+
+3. Figure SVG rendering (via scripts/measure-figure-text.mjs):
+   - fig-U6-1: OK (widest text ends at 768.4 within 780 viewBox)
+   - fig-U6-2: cosmetic wordmark collision ("professional development"
+     overprints wordmark; pre-existing on main, not a new defect)
+   - fig-U6-3: OK
+   - fig-U6-4: OK
+   - fig-U6-5: OK
+   - fig-U6-6: OK (widest text ends at 772.8, within bounds)
+   - All 6 figures have committed .dark.svg theme variants.
+
+4. Visual density (check:figures passed):
+   - topic-01: 2 figures (table + concept-map)
+   - topic-02: 2 figures (diagram + flowchart)
+   - topic-03: 2 figures (timeline + concept-map)
+   - Unit includes concept-map, flowchart, and timeline archetypes.
+
+5. Descriptive links: index.mdx uses relative links with descriptive text
+   ([Learning from other countries](./topic-01), etc.). No bare "click here".
+
+6. Glossary components: <Glossary term="..." /> used for key terms
+   (Sustainable Development Goals, ICT in education, Data-driven planning,
+   Digital transformation, Innovation) - ensures consistent definition support.
+
+7. PrintHandout component present on all topic and assessment pages.
+
+--- NOT verified (requires build + dev server) ---
+
+- Actual rendered 360px narrow-view layout
+- A4 print-emulation layout
+- Table horizontal scroll behavior at narrow viewport
+- Actual font rendering and overflow in browser
+- Color contrast in rendered themes
+
+These gaps are due to the brief's constraint, not a content defect. All source-
+level indicators of accessibility are correct.
+
+Exit code: 0 (all verifiable checks passed; unverified items documented above)
