@@ -8,7 +8,7 @@ reviewer initials). One row per unit per stage (`G1`–`G7`).
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ▣ | | intake in progress; spec drafted, repairs pending |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-01/G2/20261017T115153187Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-01/G2/20261018T190214168Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | |
 | Unit 1 | G4 ur-translation | ▢ | | English-only course |
 | Unit 1 | G5 ur-review | ▢ | | English-only course |
@@ -29,14 +29,14 @@ reviewer initials). One row per unit per stage (`G1`–`G7`).
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
 | Unit 4 | G1 unit-spec | ▣ | | intake in progress |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-04/G2/20261017T115207039Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-04/G2/20261018T190247809Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | |
 | Unit 4 | G4 ur-translation | ▢ | | |
 | Unit 4 | G5 ur-review | ▢ | | |
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
 | Unit 5 | G1 unit-spec | ▣ | | intake in progress |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-05/G2/20261017T115211506Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-05/G2/20261018T190315267Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | |
 | Unit 5 | G4 ur-translation | ▢ | | |
 | Unit 5 | G5 ur-review | ▢ | | |

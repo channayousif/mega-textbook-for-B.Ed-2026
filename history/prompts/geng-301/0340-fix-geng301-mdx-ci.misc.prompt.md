@@ -24,6 +24,7 @@ files:
   - history/prompts/geng-301/0340-fix-geng301-mdx-ci.misc.prompt.md
 tests:
   - Compile all 41 GENG-301 MDX files with @mdx-js/mdx
+  - npm run build:content-status
   - npm run check:content
   - npm run gates:evidence for affected units 1, 4 and 5
 ---
@@ -42,7 +43,7 @@ Commit locally without pushing or opening a PR.
 ## Outcome
 
 - Impact: Fix the three MDX compilation errors reported by CI with syntax-only edits.
-- Tests: Course-wide MDX compilation and content gates, with results recorded below.
+- Tests: All 41 course MDX files compile; affected G2 draft commands all pass. All 13 content gates pass after regenerating the ignored content-status cache.
 - Files: Three topic files, affected G2 records and tracker references, and this PHR.
 - Next prompts: CI build verification after the owner pushes.
 - Reflection: Content validation alone does not catch MDX parser errors.
@@ -56,7 +57,8 @@ Commit locally without pushing or opening a PR.
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: Invalid JSX closing tags, unclosed JSX, and literal braces parsed as expressions.
-- Graders run and results (PASS/FAIL): Pending final validation below.
+- Failure modes observed: Invalid JSX closing tags, unclosed JSX, literal braces parsed as expressions, stale G2 evidence after edits, and a stale generated content-status cache.
+- Validation setup: A temporary origin/main worktree was removed after an incomplete baseline attempt; no baseline exemption is claimed.
+- Graders run and results (PASS/FAIL): MDX compile PASS (41/41); G2 evidence PASS (Units 1, 4, 5); npm run check:content PASS (13/13); git diff --check PASS.
 - Prompt variant (if applicable): None.
 - Next experiment (smallest change to try): Run the CI build after pushing.
