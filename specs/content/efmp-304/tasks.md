@@ -30,7 +30,7 @@ illustration `fig-U2-9` is left `prompt-only` in `figures/unit-02.banner.md` for
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-02/G2/20261013T123659954Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-02/G2/20261018T203159015Z-gates.json |
 | Unit 2 | G3 en-review | ▣ | | Advisory independent Codex G3 **escalate** (thread 01a14a38-39b5-7ca3-b776-327860ede213): conceptual/source/assessment defects and SVG clipping; author provenance and page/print renders missing. Report: `specs/content/efmp-304/reviews/unit-02/G3/01a14a38-39b5-7ca3-b776-327860ede213.json`. Separate author repairs, owner/host supplies missing evidence, then fresh review. G3 stays open, unsigned (ADR-0019). |
 | Unit 2 | G4 ur-translation | ▣ | | Codex completed the six-page draft Urdu mirror against English `88efbd7d` on 2026-10-18, including 10/10/5 assessment parity, bank-bound key terms, eight Urdu SVGs and derived dark variants. Handoff: `specs/content/efmp-304/translations/unit-02/handoff.md`. Draft remains pending English G3 repairs, fresh independent G5 and full-page RTL/print inspection; no certification claimed |
 | Unit 2 | G5 ur-review | ▢ | | |
