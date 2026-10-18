@@ -62,7 +62,7 @@ a `flowchart` and a `concept-map` as the Art. III.10 schematics. G1 unit-spec at
 |---|---|---|---|---|
 | Unit 4 | G1 unit-spec | ▢ | | board G0/G1 intake pending |
 | Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-303/reviews/unit-04/G2/20261017T113130874Z-gates.json |
-| Unit 4 | G3 en-review | ▢ | | |
+| Unit 4 | G3 en-review | ▣ | | agent G3 (Reviewer, agy Gemini, run d3ec05d7) advisory escalation: specs/content/efmp-303/reviews/unit-04/G3/crew-20261018.json. Row stays open: agent evidence cannot close it (ADR-0019) |
 | Unit 4 | G4 ur-translation | ▢ | | |
 | Unit 4 | G5 ur-review | ▢ | | |
 | Unit 4 | G6 assets | ✅ | auto:gates | 4 schematics placed |
