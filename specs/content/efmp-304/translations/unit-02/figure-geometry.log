@@ -1,0 +1,19 @@
+Chromium 149.0.7827.0
+Noto Nastaliq Urdu SHA256 fecd45d69436d911d79ff10fc39ca7f7022cbe05214bc07f931820b7c7a7d15c
+{"file":"static/img/figures/efmp-304/unit-02/fig-U2-1.ur.svg","sha256":"efbdc26ebe9523a18004e8e477c76115dd1645317982d50f99e84627256b9230","width":820,"height":470,"labels":22,"fontLoaded":true,"problems":[]}
+{"file":"static/img/figures/efmp-304/unit-02/fig-U2-1.ur.dark.svg","sha256":"7d3ad2c10ee0fd4b349ac0f85fb1d4fe2c76f663bb419a745a6ff149c15dc75a","width":820,"height":470,"labels":22,"fontLoaded":true,"problems":[]}
+{"file":"static/img/figures/efmp-304/unit-02/fig-U2-2.ur.svg","sha256":"fe9333775c13a0a93f8a70b6742b204e1d26cc691ec48ed0c5f71d82d78d7203","width":780,"height":470,"labels":13,"fontLoaded":true,"problems":[]}
+{"file":"static/img/figures/efmp-304/unit-02/fig-U2-2.ur.dark.svg","sha256":"ea70a9dcb67d899911c219e58372f93a5f0ef698b2fe04e8e1242940f7d9f937","width":780,"height":470,"labels":13,"fontLoaded":true,"problems":[]}
+{"file":"static/img/figures/efmp-304/unit-02/fig-U2-3.ur.svg","sha256":"2deec177380ff37094690f73e4db37eba5ddf6a84536d99f0ee026d03722aeb8","width":820,"height":470,"labels":18,"fontLoaded":true,"problems":[]}
+{"file":"static/img/figures/efmp-304/unit-02/fig-U2-3.ur.dark.svg","sha256":"99ceba9b65b59ed273a9fee966fd97d66c004105ec959b917f6fb8acf4ed9f35","width":820,"height":470,"labels":18,"fontLoaded":true,"problems":[]}
+{"file":"static/img/figures/efmp-304/unit-02/fig-U2-4.ur.svg","sha256":"cc86921def4b6a25953d80e58ab8cfb9d75e64ef8d84b487edc1087d42887b2d","width":900,"height":470,"labels":37,"fontLoaded":true,"problems":[]}
+{"file":"static/img/figures/efmp-304/unit-02/fig-U2-4.ur.dark.svg","sha256":"fefb708f125d87e87c24e8b4f3b1b5a9d41622ecb249c4b69ac8b32afcdf8563","width":900,"height":470,"labels":37,"fontLoaded":true,"problems":[]}
+{"file":"static/img/figures/efmp-304/unit-02/fig-U2-5.ur.svg","sha256":"05579585ba180290df78cffdc670166fe61f6abf71080c714b18a0a2c1ec4e50","width":880,"height":520,"labels":24,"fontLoaded":true,"problems":[]}
+{"file":"static/img/figures/efmp-304/unit-02/fig-U2-5.ur.dark.svg","sha256":"3b30e8e79ad009f158885cf75dc72703e010bec8cda6fd4f6a6eb11ae2e0424d","width":880,"height":520,"labels":24,"fontLoaded":true,"problems":[]}
+{"file":"static/img/figures/efmp-304/unit-02/fig-U2-6.ur.svg","sha256":"9be797dc5d92333cbb94ab95ae62b30178813f0b3186576f5bd8ce4c7f8d044b","width":900,"height":470,"labels":26,"fontLoaded":true,"problems":[]}
+{"file":"static/img/figures/efmp-304/unit-02/fig-U2-6.ur.dark.svg","sha256":"c6fa960416f7ec3a9d54470df26c9e22ba55f6a26e24d2997e50bf8173ca83b2","width":900,"height":470,"labels":26,"fontLoaded":true,"problems":[]}
+{"file":"static/img/figures/efmp-304/unit-02/fig-U2-7.ur.svg","sha256":"fb826f9fc0018e45823996b46c2a3dc79c5e9f7d090330cfa02fd4c7c598a04e","width":820,"height":520,"labels":22,"fontLoaded":true,"problems":[]}
+{"file":"static/img/figures/efmp-304/unit-02/fig-U2-7.ur.dark.svg","sha256":"9b85062bdbadd20b40697a511e47fe9235e7318c78496021cddf8556374c3985","width":820,"height":520,"labels":22,"fontLoaded":true,"problems":[]}
+{"file":"static/img/figures/efmp-304/unit-02/fig-U2-8.ur.svg","sha256":"e53ce8df167f3e4a5c5dba8a4d0c095da99608cc978963be664d76bbb029d035","width":900,"height":470,"labels":28,"fontLoaded":true,"problems":[]}
+{"file":"static/img/figures/efmp-304/unit-02/fig-U2-8.ur.dark.svg","sha256":"476b58a697b4e4c3c8e30cdb6c0bc4ba3a36468f42e93149c748c03daf66f618","width":900,"height":470,"labels":28,"fontLoaded":true,"problems":[]}
+0 figure viewBox/font failures; this does not inspect full pages, narrow layout or print.
