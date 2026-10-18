@@ -59,24 +59,25 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Authored complete 5-file Urdu mirror for EFMP-305 Unit 2 adhering to academic-plain Urdu register, wired all 4 `.ur.svg` figure variants with exact `<desc>` alignment, bound `key_terms` to `terminology.csv`, validated full parity and terminology under temporary `reviewed` flip (reverted), updated the G4 tracker row to in-progress (`▣`), and confirmed all 13 content gates pass.
+Translated EFMP-305 Unit 2 into its complete 5-file Urdu mirror at G4 with figure variants wired, terminology bound, and tracker updated to in-progress.
 
 ## Outcome
 
 - Impact: translate for EFMP-305 Unit 2 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before commit.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 7 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored complete 5-file Urdu mirror for EFMP-305 Unit 2 (index, topic-01, topic-02, unit-assessment, unit-teacher-notes), wired 4 `.ur.svg` figure variants matching SVGs' `<desc>`, confirmed parity and bank conformance under temporary reviewed status (reverted to draft), updated G4 tracker row in `tasks.md`, and passed all 13 content gates.
-- Decisions the team must respect: G4 translation_status remains draft pending independent G5 review; this work does not self-certify or advance G5.
-- Pending / next owner: independent G5 Urdu reviewer session.
+- Shipped / changed: Translated EFMP-305 Unit 2 into its complete 5-file Urdu mirror at G4 with figure variants wired, terminology bound, and tracker updated to in-progress.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Proposed terms for CurriculumOwner banking: "Learner diversity" (متعلمین کا تنوع / سیکھنے والوں کا تنوع), "Impairment" (خرابی), "Handicap" (ہینڈی کیپ / ماحولیاتی رکاوٹ), "Labelling" (لیبلنگ / منفی ٹھپا لگانا), "Stigma" (داغ / عیب).
-  - All 5 key_terms in `index.mdx` (`Individual Differences`, `Inclusive Education`, `Slow Learner`, `Assessment`, `Attitude`) are banked in `terminology.csv`.
+  - All 4 .ur.svg figure variants are wired in topics 1 and 2 with exact carrier alt text matching the SVG `<desc>` tags.
+  - All 5 key_terms in `index.mdx` are bound to `terminology.csv`; `translation_status` remains `draft` pending independent G5 review.
+  - Proposed terms for curriculum owner: learner diversity (متعلمین کا تنوع), impairment (خرابی), handicap (ہینڈی کیپ / ماحولیاتی رکاوٹ), labelling (لیبلنگ / منفی ٹھپا لگانا), stigma (داغ / عیب).
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
