@@ -82,3 +82,19 @@ the curriculum owner owns terminology acceptance. No Paperclip issue was supplie
 
 This was a repair of an existing complete mirror, not a timed full-unit translation; it
 should not be used as a corpus translation throughput measurement.
+
+## Continuation: evidence freshness repair (2026-10-18)
+
+The first committed handoff lived at `translation/unit-03-handoff.md`. The evidence
+scoper did not recognise that hyphenated filename as unit-specific, so adding the record
+invalidated all six English G2 input manifests. Moved this lifecycle record under
+`reviews/unit-03/G4/`, the existing exclusion for review and gate records, and updated
+only Unit 3's G4 handoff link. No evidence JSON, gate code or signed review was edited.
+All six current G3 input manifests now exactly equal their existing G2 evidence manifests.
+
+Rechecked the seven-file mirror's structural metadata, heading vectors and component
+counts against English. Translation and figure bytes remain those of `20c1490b`.
+The G4 row remains in progress, and all translation statuses remain draft.
+
+Continuation validation: `npm run check:content` passed all 13 gates;
+`npm run figures:variants:check` passed for 746 sources. No new gate findings.
