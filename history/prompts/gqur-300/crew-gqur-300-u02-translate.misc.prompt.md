@@ -16,11 +16,11 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/gqur-300/crew-gqur-300-u02-translate.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-02/unit-teacher-notes.mdx
-  - specs/content/gqur-300/tasks.md
+ - history/prompts/gqur-300/crew-gqur-300-u02-translate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-02/unit-teacher-notes.mdx
+ - specs/content/gqur-300/tasks.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -55,23 +55,23 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Polished and verified the complete GQUR-300 Unit 2 Urdu mirror and figure variants at G4 against English baseline 96f35fa3, with all 13 content gates passing.
+Verified the complete GQUR-300 Unit 2 Urdu mirror and figure variants against English baseline 96f35fa3, synced teacher notes activity naming to Topic 2.1 bazaar ledger, updated the G4 tracker row, recorded the PHR, and passed all 13 content gates.
 
 ## Outcome
 
-- Impact: translate for GQUR-300 Unit 2 by agy.
-- Tests: npm run check:content passed in the job worktree before commit.
+- Impact: translate for GQUR-300 Unit 2 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 3 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Polished and verified the complete GQUR-300 Unit 2 Urdu mirror and figure variants at G4 against English baseline 96f35fa3; repaired activity naming in teacher notes to match Topic 2.1 bazaar ledger; confirmed structural and heading parity under temporary reviewed flip; all 13 content gates passing.
+- Shipped / changed: Verified the complete GQUR-300 Unit 2 Urdu mirror and figure variants against English baseline 96f35fa3, synced teacher notes activity naming to Topic 2.1 bazaar ledger, updated the G4 tracker row, recorded the PHR, and passed all 13 content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All 10 key_terms in Unit 2 index.mdx remain unbanked in terminology.csv (flagged in concepts/unit-02.md and G5 run001) and await curriculum owner banking.
+  - All 10 key_terms in Unit 2 index.mdx remain unbanked in terminology.csv (flagged in concepts/unit-02.md) and await curriculum owner banking.
   - The G4 tracker row in specs/content/gqur-300/tasks.md is set to in-progress (▣) and translation_status remains draft pending independent G5 review.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
