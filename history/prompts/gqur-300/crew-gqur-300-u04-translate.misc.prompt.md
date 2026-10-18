@@ -4,7 +4,7 @@ title: crew translate GQUR-300 unit 4
 stage: misc
 date: 2026-10-18
 surface: agent
-model: longcat/LongCat-2.0
+model: opencode
 feature: gqur-300
 branch: crew/gqur-300-u04-translate
 user: crew
@@ -54,24 +54,25 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Verified the complete GQUR-300 Unit 4 Urdu mirror and figure variants against English baseline, confirmed structural parity clean under temporary reviewed flip (reverted), updated the G4 tracker row to in-progress with detailed notes, and passed all 13 content gates.
+Verified GQUR-300 Unit 4 Urdu mirror (6 files, 12 figure variants) against English baseline, confirmed structural parity, updated G4 tracker to in-progress, and passed all 13 content gates.
 
 ## Outcome
 
-- Impact: translate verification and G4 tracker update for GQUR-300 Unit 4.
-- Tests: npm run check:content passed (all 13 gates).
+- Impact: translate for GQUR-300 Unit 4 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 2 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
-- Reflection: Urdu mirror was already present on origin/main from an earlier commit; this job verified and recorded the G4 row.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Verified the complete GQUR-300 Unit 4 Urdu mirror (6 files, 12 .ur.svg/.ur.dark.svg figure variants) against the English baseline, confirmed structural parity clean under a temporary reviewed flip (then reverted), updated the G4 tracker row to in-progress with detailed notes, and passed all 13 content gates.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job does not certify anything.
+- Shipped / changed: Verified GQUR-300 Unit 4 Urdu mirror (6 files, 12 figure variants) against English baseline, confirmed structural parity, updated G4 tracker to in-progress, and passed all 13 content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All 12 key_terms in Unit 4 index.mdx (Area, Centimetre, Circle, Kilogram, Millilitre, Perimeter, Radius, Rectangle, Square, Triangle, Unit of measurement, Volume) remain unbanked in terminology.csv and await curriculum owner banking.
-  - The G4 tracker row in specs/content/gqur-300/tasks.md is set to in-progress (▣) and translation_status remains draft pending independent G5 review.
+  - All 12 key_terms (Area, Centimetre, Circle, Kilogram, Millilitre, Perimeter, Radius, Rectangle, Square, Triangle, Unit of measurement, Volume) remain unbanked in terminology.csv and await curriculum owner banking before G5 review.
+  - The temporary reviewed flip (Step 5 parity check) was reverted; translation_status stays draft on both EN and UR index.mdx.
+  - Urdu mirror was already committed on origin/main from an earlier attempt; this job only verified and recorded the G4 row.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
