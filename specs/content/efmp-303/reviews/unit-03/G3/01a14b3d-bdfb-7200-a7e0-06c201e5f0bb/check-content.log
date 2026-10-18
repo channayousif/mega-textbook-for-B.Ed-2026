@@ -1,0 +1,353 @@
+$ npm run check:content
+
+> bed-mega-textbook@0.1.0 check:content
+> node scripts/run-gates.mjs content
+
+Running 13 content gates
+
+  validate:content        FAIL  1.9s
+  check:pipeline-gate     PASS  20.9s
+  check:depth-gate        PASS  1.1s
+  check:figures           PASS  1.0s
+  check:no-em-dash        PASS  0.6s
+  check:no-answer-keys    PASS  0.8s
+  check:concept-graph     PASS  0.7s
+  check:bloom-bands       PASS  0.4s
+  check:source-floor      PASS  0.9s
+  check:licence           PASS  0.9s
+  licence:map:check       PASS  0.5s
+  check:content-status    FAIL  0.6s
+  check:docs-sync         PASS  0.3s
+
+============================================================
+validate:content
+============================================================
+
+✗ Content validation failed with 316 error(s):
+
+  - glossary.json: invalid JSON: Expected ',' or '}' after property value in JSON at position 121226 (line 1841 column 5)
+  - docs/semester-1/efmp-301/unit-01/topic-01.mdx: <Glossary term="Educational Psychology"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-301/unit-02/topic-01.mdx: <Glossary term="Development"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-301/unit-02/topic-02.mdx: <Glossary term="Adolescence"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-301/unit-02/topic-03.mdx: <Glossary term="Cognitive Development"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-301/unit-03/topic-01.mdx: <Glossary term="Behaviorism"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-301/unit-03/topic-04.mdx: <Glossary term="Constructivism"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-301/unit-04/topic-01.mdx: <Glossary term="Attention"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-301/unit-07/topic-01.mdx: <Glossary term="Individual Differences"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-301/unit-07/topic-02.mdx: <Glossary term="Slow Learner"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-301/unit-07/topic-02.mdx: <Glossary term="Inclusive Education"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-301/unit-08/topic-01.mdx: <Glossary term="Classroom Management"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-301/unit-09/topic-01.mdx: <Glossary term="Assessment"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-301/unit-09/topic-03.mdx: <Glossary term="Formative Assessment"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-301/unit-09/topic-03.mdx: <Glossary term="Summative Assessment"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-301/unit-12/topic-01.mdx: <Glossary term="Guidance and Counseling"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-301/unit-12/topic-02.mdx: <Glossary term="Professional Ethics"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-301/unit-12/topic-03.mdx: <Glossary term="Professional Ethics"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-302/unit-01/topic-01.mdx: <Glossary term="Profession"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-302/unit-02/topic-01.mdx: <Glossary term="Professional Ethics"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-302/unit-02/topic-02.mdx: <Glossary term="Code of Ethical Conduct"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-302/unit-02/topic-03.mdx: <Glossary term="Reflective Decision Making"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-302/unit-02/topic-04.mdx: <Glossary term="Ethical Dilemma"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-302/unit-03/topic-01.mdx: <Glossary term="Teacher Effectiveness"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-302/unit-03/topic-04.mdx: <Glossary term="Verbal Communication"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-302/unit-03/topic-04.mdx: <Glossary term="Non-verbal Communication"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-302/unit-04/topic-01.mdx: <Glossary term="Professional Standards"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-302/unit-04/topic-02.mdx: <Glossary term="National Professional Standards for Teachers"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-302/unit-04/topic-03.mdx: <Glossary term="Professional Standards"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-302/unit-04/topic-04.mdx: <Glossary term="Teacher Licensing"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-302/unit-05/topic-01.mdx: <Glossary term="Burnout"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-302/unit-05/topic-01.mdx: <Glossary term="Multi-grade Classroom"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-302/unit-05/topic-02.mdx: <Glossary term="Occupational Status"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-302/unit-06/topic-01.mdx: <Glossary term="Continuous Professional Development"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-302/unit-06/topic-03.mdx: <Glossary term="Professional Learning Community"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-302/unit-06/topic-03.mdx: <Glossary term="Reflective Practice"> has no matching entry in glossary.json
+  - docs/semester-1/efmp-302/unit-06/topic-04.mdx: <Glossary term="Professional Development Plan"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-01/topic-01.mdx: <Glossary term="Register"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-01/topic-01.mdx: <Glossary term="Collocation"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-01/topic-01.mdx: <Glossary term="Connotation"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-01/topic-01.mdx: <Glossary term="Idiomatic expression"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-01/topic-01.mdx: <Glossary term="Communicative grammar"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-01/topic-02.mdx: <Glossary term="Simple sentence"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-01/topic-02.mdx: <Glossary term="Compound sentence"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-01/topic-02.mdx: <Glossary term="Complex sentence"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-01/topic-02.mdx: <Glossary term="Compound-complex sentence"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-02/topic-01.mdx: <Glossary term="Purpose"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-02/topic-01.mdx: <Glossary term="Audience"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-02/topic-01.mdx: <Glossary term="Context"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-02/topic-01.mdx: <Glossary term="Tone"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-02/topic-01.mdx: <Glossary term="Bias"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-02/topic-01.mdx: <Glossary term="Stereotype"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-02/topic-01.mdx: <Glossary term="Assumption"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-02/topic-01.mdx: <Glossary term="Inference"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-02/topic-02.mdx: <Glossary term="Active listening"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-03/topic-02.mdx: <Glossary term="Stereotype"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-03/topic-02.mdx: <Glossary term="Inclusive language"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-03/topic-02.mdx: <Glossary term="Cross-cultural communication"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-03/topic-02.mdx: <Glossary term="Public speaking"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-03/topic-02.mdx: <Glossary term="Stage fright"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-03/topic-02.mdx: <Glossary term="Voice modulation"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-03/topic-03.mdx: <Glossary term="Presentation skills"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-03/topic-03.mdx: <Glossary term="Handling Q&A"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-03/topic-03.mdx: <Glossary term="Managing time"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-03/topic-03.mdx: <Glossary term="Informal communication"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-03/topic-03.mdx: <Glossary term="Small talk"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-03/topic-03.mdx: <Glossary term="Networking"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-03/topic-03.mdx: <Glossary term="Turn-taking"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-03/topic-03.mdx: <Glossary term="Conversational repair"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-03/topic-03.mdx: <Glossary term="Politeness strategies"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-04/topic-01.mdx: <Glossary term="Business email"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-04/topic-02.mdx: <Glossary term="Intercultural communication"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-04/topic-03.mdx: <Glossary term="Register"> has no matching entry in glossary.json
+  - docs/semester-1/geng-300/unit-04/topic-03.mdx: <Glossary term="Tone"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-01/topic-01.mdx: <Glossary term="Computer literacy"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-01/topic-01.mdx: <Glossary term="Information and Communication Technology"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-01/topic-02.mdx: <Glossary term="Abacus"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-01/topic-03.mdx: <Glossary term="Digital computer"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-01/topic-03.mdx: <Glossary term="Analog computer"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-01/topic-03.mdx: <Glossary term="Hybrid computer"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-01/topic-03.mdx: <Glossary term="Embedded computer"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-02/topic-01.mdx: <Glossary term="Input device"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-02/topic-01.mdx: <Glossary term="Output device"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-02/topic-01.mdx: <Glossary term="Storage device"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-02/topic-02.mdx: <Glossary term="RAM"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-02/topic-02.mdx: <Glossary term="Random Access Memory"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-02/topic-02.mdx: <Glossary term="Read Only Memory"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-02/topic-02.mdx: <Glossary term="Secondary storage"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-02/topic-03.mdx: <Glossary term="System software"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-02/topic-03.mdx: <Glossary term="Operating system"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-02/topic-03.mdx: <Glossary term="Utility software"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-02/topic-03.mdx: <Glossary term="Application software"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-02/topic-04.mdx: <Glossary term="Computer network"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-02/topic-04.mdx: <Glossary term="Network interface card"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-02/topic-04.mdx: <Glossary term="Switch"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-02/topic-04.mdx: <Glossary term="Router"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-02/topic-04.mdx: <Glossary term="Wi-Fi"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-02/topic-04.mdx: <Glossary term="Protocol"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-03/topic-02.mdx: <Glossary term="File"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-03/topic-02.mdx: <Glossary term="File management"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-03/topic-02.mdx: <Glossary term="Process"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-03/topic-03.mdx: <Glossary term="Device driver"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-03/topic-03.mdx: <Glossary term="Buffer"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-03/topic-03.mdx: <Glossary term="Spooling"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-03/topic-04.mdx: <Glossary term="Kernel"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-04/topic-01.mdx: <Glossary term="Malware"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-04/topic-01.mdx: <Glossary term="Virus"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-04/topic-01.mdx: <Glossary term="Ransomware"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-04/topic-01.mdx: <Glossary term="Spyware"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-04/topic-01.mdx: <Glossary term="Phishing"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-04/topic-01.mdx: <Glossary term="Social engineering"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-04/topic-01.mdx: <Glossary term="Pretexting"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-04/topic-01.mdx: <Glossary term="CIA triad"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-04/topic-02.mdx: <Glossary term="Digital footprint"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-04/topic-03.mdx: <Glossary term="Password manager"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-04/topic-03.mdx: <Glossary term="Authentication"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-04/topic-03.mdx: <Glossary term="Multi-factor authentication"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-04/topic-04.mdx: <Glossary term="Personal data"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-04/topic-04.mdx: <Glossary term="Sensitive personal data"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-04/topic-04.mdx: <Glossary term="Data protection"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-04/topic-04.mdx: <Glossary term="Consent"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-05/index.mdx: <Glossary term="Digital citizenship"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-05/index.mdx: <Glossary term="Netiquette"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-05/index.mdx: <Glossary term="Intellectual property"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-05/index.mdx: <Glossary term="Plagiarism"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-05/topic-01.mdx: <Glossary term="Digital citizenship"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-05/topic-02.mdx: <Glossary term="Netiquette"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-05/topic-03.mdx: <Glossary term="Intellectual property"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-05/topic-03.mdx: <Glossary term="Copyright"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-05/topic-03.mdx: <Glossary term="Public domain"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-05/topic-03.mdx: <Glossary term="Patent"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-05/topic-03.mdx: <Glossary term="Trademark"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-05/topic-03.mdx: <Glossary term="Fair use"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-05/topic-03.mdx: <Glossary term="Creative Commons"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-05/topic-03.mdx: <Glossary term="Plagiarism"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-06/index.mdx: <Glossary term="Web browser"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-06/index.mdx: <Glossary term="Search engine"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-06/index.mdx: <Glossary term="Online communication tool"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-06/index.mdx: <Glossary term="Safe browsing"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-06/index.mdx: <Glossary term="Artificial Intelligence"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-06/index.mdx: <Glossary term="Blockchain"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-06/index.mdx: <Glossary term="Internet of Things"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-06/index.mdx: <Glossary term="Virtual reality"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-06/topic-01.mdx: <Glossary term="Web browser"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-06/topic-01.mdx: <Glossary term="Search engine"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-06/topic-02.mdx: <Glossary term="Domain name"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-06/topic-03.mdx: <Glossary term="Artificial Intelligence"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-06/topic-03.mdx: <Glossary term="Internet of Things"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-06/topic-04.mdx: <Glossary term="Blockchain"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-06/topic-04.mdx: <Glossary term="Virtual reality"> has no matching entry in glossary.json
+  - docs/semester-1/gict-300/unit-06/topic-04.mdx: <Glossary term="Augmented reality"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-01/topic-01.mdx: <Glossary term="Environmental science"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-01/topic-01.mdx: <Glossary term="Natural environment"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-01/topic-01.mdx: <Glossary term="Biosphere"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-01/topic-02.mdx: <Glossary term="Anthropogenic"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-01/topic-03.mdx: <Glossary term="Ecosystem"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-01/topic-03.mdx: <Glossary term="Ecosystem services"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-01/topic-03.mdx: <Glossary term="Natural resources"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-01/topic-03.mdx: <Glossary term="Renewable resources"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-01/topic-03.mdx: <Glossary term="Non-renewable resources"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-01/topic-04.mdx: <Glossary term="Sustainability"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-02/topic-01.mdx: <Glossary term="Water security"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-02/topic-01.mdx: <Glossary term="Water scarcity"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-02/topic-02.mdx: <Glossary term="Water pollution"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-02/topic-02.mdx: <Glossary term="Pathogen"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-02/topic-02.mdx: <Glossary term="Eutrophication"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-02/topic-02.mdx: <Glossary term="Sanitation"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-02/topic-02.mdx: <Glossary term="Effluent"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-02/topic-03.mdx: <Glossary term="Municipal solid waste"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-02/topic-03.mdx: <Glossary term="Waste hierarchy"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-02/topic-03.mdx: <Glossary term="Recycling"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-02/topic-03.mdx: <Glossary term="Hazardous waste"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-03/topic-01.mdx: <Glossary term="Air pollution"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-03/topic-02.mdx: <Glossary term="Noise pollution"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-03/topic-03.mdx: <Glossary term="Hazard"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-03/topic-03.mdx: <Glossary term="Health, safety and environment"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-03/topic-03.mdx: <Glossary term="Environmental safety"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-03/topic-04.mdx: <Glossary term="Risk"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-04/topic-01.mdx: <Glossary term="Incident"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-04/topic-02.mdx: <Glossary term="OSH management system"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-04/topic-03.mdx: <Glossary term="Internal control"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-04/topic-04.mdx: <Glossary term="OHS professional"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-04/topic-05.mdx: <Glossary term="Incident pyramid"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-04/topic-05.mdx: <Glossary term="Swiss cheese model"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-04/topic-05.mdx: <Glossary term="Organizational environment"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-04/topic-06.mdx: <Glossary term="HSE plan"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-05/topic-01.mdx: <Glossary term="Toxic agent"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-05/topic-02.mdx: <Glossary term="Xenobiotic"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-05/topic-02.mdx: <Glossary term="Biotransformation"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-05/topic-02.mdx: <Glossary term="Detoxification"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-05/topic-02.mdx: <Glossary term="Bioactivation"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-05/topic-04.mdx: <Glossary term="Multilateral environmental agreement"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-05/topic-04.mdx: <Glossary term="Sustainable Development Goals"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-06/topic-01.mdx: <Glossary term="Toxicology"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-06/topic-01.mdx: <Glossary term="Dose"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-06/topic-02.mdx: <Glossary term="Acute effect"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-06/topic-02.mdx: <Glossary term="Chronic effect"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-06/topic-02.mdx: <Glossary term="Genotoxic agent"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-06/topic-02.mdx: <Glossary term="Mutagen"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-06/topic-02.mdx: <Glossary term="Teratogen"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-06/topic-02.mdx: <Glossary term="Carcinogen"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-06/topic-02.mdx: <Glossary term="Sensitizer"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-06/topic-03.mdx: <Glossary term="Bio-magnification"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-06/topic-03.mdx: <Glossary term="Essentiality"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-06/topic-03.mdx: <Glossary term="Bioaccumulation"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-06/topic-05.mdx: <Glossary term="Smog"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-06/topic-06.mdx: <Glossary term="Mitigation"> has no matching entry in glossary.json
+  - docs/semester-1/gnas-301/unit-06/topic-06.mdx: <Glossary term="Adaptation"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-01/topic-01.mdx: <Glossary term="Quantitative reasoning"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-01/topic-02.mdx: <Glossary term="Numeracy"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-01/topic-02.mdx: <Glossary term="Number sense"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-01/topic-02.mdx: <Glossary term="Estimation"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-01/topic-02.mdx: <Glossary term="Approximation"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-01/topic-03.mdx: <Glossary term="Logical reasoning"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-01/topic-03.mdx: <Glossary term="Problem-solving strategy"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-02/topic-01.mdx: <Glossary term="Whole number"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-02/topic-01.mdx: <Glossary term="Integer"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-02/topic-01.mdx: <Glossary term="Fraction"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-02/topic-01.mdx: <Glossary term="Decimal"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-02/topic-02.mdx: <Glossary term="Ratio"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-02/topic-02.mdx: <Glossary term="Proportion"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-02/topic-02.mdx: <Glossary term="Percentage"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-02/topic-03.mdx: <Glossary term="Power"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-02/topic-03.mdx: <Glossary term="Exponent"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-02/topic-03.mdx: <Glossary term="Square root"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-03/topic-01.mdx: <Glossary term="Pattern"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-03/topic-01.mdx: <Glossary term="Sequence"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-03/topic-01.mdx: <Glossary term="Variable"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-03/topic-01.mdx: <Glossary term="Algebraic expression"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-03/topic-01.mdx: <Glossary term="Coefficient"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-03/topic-02.mdx: <Glossary term="Linear equation"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-03/topic-02.mdx: <Glossary term="Balance model"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-03/topic-02.mdx: <Glossary term="Linear inequality"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-04/topic-01.mdx: <Glossary term="Unit of measurement"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-04/topic-01.mdx: <Glossary term="Kilogram"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-04/topic-01.mdx: <Glossary term="Centimetre"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-04/topic-01.mdx: <Glossary term="Millilitre"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-04/topic-02.mdx: <Glossary term="Perimeter"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-04/topic-02.mdx: <Glossary term="Area"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-04/topic-02.mdx: <Glossary term="Volume"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-04/topic-02.mdx: <Glossary term="Rectangle"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-04/topic-02.mdx: <Glossary term="Square"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-04/topic-02.mdx: <Glossary term="Triangle"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-04/topic-02.mdx: <Glossary term="Circle"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-04/topic-02.mdx: <Glossary term="Radius"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-05/topic-01.mdx: <Glossary term="Data"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-05/topic-01.mdx: <Glossary term="Frequency table"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-05/topic-01.mdx: <Glossary term="Tally"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-05/topic-02.mdx: <Glossary term="Bar chart"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-05/topic-02.mdx: <Glossary term="Pie chart"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-05/topic-02.mdx: <Glossary term="Line graph"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-05/topic-02.mdx: <Glossary term="Pictograph"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-05/topic-03.mdx: <Glossary term="Measures of central tendency"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-05/topic-03.mdx: <Glossary term="Mean"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-05/topic-03.mdx: <Glossary term="Median"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-05/topic-03.mdx: <Glossary term="Mode"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-06/topic-01.mdx: <Glossary term="Profit"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-06/topic-01.mdx: <Glossary term="Loss"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-06/topic-01.mdx: <Glossary term="Interest"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-06/topic-01.mdx: <Glossary term="Simple interest"> has no matching entry in glossary.json
+  - docs/semester-1/gqur-300/unit-06/topic-01.mdx: <Glossary term="Budget"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-01/topic-01.mdx: <Glossary term="Educational policy"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-01/topic-01.mdx: <Glossary term="Educational planning"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-01/topic-02.mdx: <Glossary term="Human capital"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-02/topic-01.mdx: <Glossary term="National education policy"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-02/topic-01.mdx: <Glossary term="Policy objective"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-02/topic-03.mdx: <Glossary term="Curriculum reform"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-02/topic-03.mdx: <Glossary term="Quality assurance"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-03/topic-01.mdx: <Glossary term="Development plan"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-03/topic-01.mdx: <Glossary term="Development plan"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-03/topic-01.mdx: <Glossary term="Five-year plan"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-03/topic-02.mdx: <Glossary term="Micro planning"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-03/topic-02.mdx: <Glossary term="Macro planning"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-03/topic-02.mdx: <Glossary term="Strategic planning"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-03/topic-03.mdx: <Glossary term="Needs assessment"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-03/topic-03.mdx: <Glossary term="Resource allocation"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-04/topic-01.mdx: <Glossary term="Monitoring"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-04/topic-01.mdx: <Glossary term="Evaluation"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-04/topic-01.mdx: <Glossary term="Tool"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-04/topic-02.mdx: <Glossary term="Financial constraint"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-04/topic-02.mdx: <Glossary term="Political instability"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-04/topic-02.mdx: <Glossary term="Bureaucracy"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-05/topic-01.mdx: <Glossary term="Accreditation"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-05/topic-01.mdx: <Glossary term="Standardization"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-05/topic-02.mdx: <Glossary term="Human capital"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-05/topic-02.mdx: <Glossary term="Inclusive Education"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-06/topic-01.mdx: <Glossary term="Sustainable Development Goals (SDGs)"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-06/topic-02.mdx: <Glossary term="ICT in education"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-06/topic-02.mdx: <Glossary term="Data-driven planning"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-06/topic-02.mdx: <Glossary term="Digital transformation"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-06/topic-03.mdx: <Glossary term="Innovation"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-06/topic-03.mdx: <Glossary term="Data-driven planning"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-303/unit-06/topic-03.mdx: <Glossary term="Innovation"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-304/unit-01/topic-01.mdx: <Glossary term="Thinking"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-304/unit-01/topic-03.mdx: <Glossary term="Egocentrism"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-304/unit-01/topic-03.mdx: <Glossary term="Group conformity"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-304/unit-01/topic-04.mdx: <Glossary term="Statement"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-304/unit-01/topic-04.mdx: <Glossary term="Claim"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-304/unit-01/topic-04.mdx: <Glossary term="Issue"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-304/unit-01/topic-04.mdx: <Glossary term="Argument"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-304/unit-02/topic-01.mdx: <Glossary term="Argument"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-304/unit-02/topic-01.mdx: <Glossary term="Explanation"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-304/unit-02/topic-01.mdx: <Glossary term="Premise"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-304/unit-02/topic-01.mdx: <Glossary term="Conclusion"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-304/unit-02/topic-02.mdx: <Glossary term="Rhetorical triangle"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-304/unit-02/topic-02.mdx: <Glossary term="Information question"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-304/unit-02/topic-02.mdx: <Glossary term="Issue question"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-304/unit-02/topic-04.mdx: <Glossary term="Unstated premise"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-304/unit-03/topic-01.mdx: <Glossary term="Deductive argument"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-304/unit-03/topic-01.mdx: <Glossary term="Inductive argument"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-304/unit-03/topic-04.mdx: <Glossary term="Deductive argument"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-304/unit-03/topic-04.mdx: <Glossary term="Inductive argument"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-304/unit-04/topic-01.mdx: <Glossary term="Reflective thinking"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-304/unit-04/topic-01.mdx: <Glossary term="Reflective process"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-304/unit-04/topic-01.mdx: <Glossary term="Reflective Practice"> has no matching entry in glossary.json
+  - docs/semester-2/efmp-304/unit-06/topic-01.mdx: <Glossary term="Reflective journal"> has no matching entry in glossary.json
+
+
+============================================================
+check:content-status
+============================================================
+✗ static/content-status.json is missing. Run: npm run build:content-status
+
+2 of 13 content gates failed: validate:content, check:content-status.
+
+Exit code: 1

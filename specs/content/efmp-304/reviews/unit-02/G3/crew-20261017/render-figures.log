@@ -1,0 +1,4 @@
+Supplementary SVG inspection only. Browser 149.0.7827.0. No Docusaurus pages inspected.
+static/img/figures/efmp-304/unit-02/fig-U2-2.svg -> specs/content/efmp-304/reviews/unit-02/G3/crew-20261017/fig-U2-2-native.png; native 780 x 470, screen media.
+static/img/figures/efmp-304/unit-02/fig-U2-4.svg -> specs/content/efmp-304/reviews/unit-02/G3/crew-20261017/fig-U2-4-native.png; native 900 x 470, screen media.
+Required narrow (360px) and A4 print Docusaurus page inspection unavailable: brief forbids build/server, no fresh page render provided. SVG screenshots do not satisfy render-review.

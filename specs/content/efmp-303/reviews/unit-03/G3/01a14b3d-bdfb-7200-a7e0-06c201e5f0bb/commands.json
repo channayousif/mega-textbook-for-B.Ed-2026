@@ -1,0 +1,37 @@
+[
+  {
+    "name": "check:content",
+    "exit_code": 1,
+    "log_path": "specs/content/efmp-303/reviews/unit-03/G3/01a14b3d-bdfb-7200-a7e0-06c201e5f0bb/check-content.log"
+  },
+  {
+    "name": "validate:content",
+    "exit_code": 1,
+    "log_path": "specs/content/efmp-303/reviews/unit-03/G3/01a14b3d-bdfb-7200-a7e0-06c201e5f0bb/validate-content.log"
+  },
+  {
+    "name": "check:depth-gate",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-303/reviews/unit-03/G3/01a14b3d-bdfb-7200-a7e0-06c201e5f0bb/check-depth-gate.log"
+  },
+  {
+    "name": "check:figures",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-303/reviews/unit-03/G3/01a14b3d-bdfb-7200-a7e0-06c201e5f0bb/check-figures.log"
+  },
+  {
+    "name": "check:no-em-dash",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-303/reviews/unit-03/G3/01a14b3d-bdfb-7200-a7e0-06c201e5f0bb/check-no-em-dash.log"
+  },
+  {
+    "name": "check:no-answer-keys",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-303/reviews/unit-03/G3/01a14b3d-bdfb-7200-a7e0-06c201e5f0bb/check-no-answer-keys.log"
+  },
+  {
+    "name": "check:docs-sync",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-303/reviews/unit-03/G3/01a14b3d-bdfb-7200-a7e0-06c201e5f0bb/check-docs-sync.log"
+  }
+]

@@ -1,34 +1,3 @@
-# Gate Decision Log
-
-Every gate approval that was not made by the curriculum owner in person is recorded here under a
-stable code, with the basis it rested on and the inputs it was bound to. The owner reviews entries
-in batches and sets `confirmed` or `reversed`.
-
-This register is the counterpart to `specs/gaps.md`. That log records **questions escalated to the
-owner**; this one records **decisions taken on the owner's behalf**, so both directions of the
-delegation are auditable from the repository alone.
-
-Status: `pending-owner-review` (taken, awaiting the owner) - `confirmed` - `reversed`.
-
-A reversal reopens the gate. It never rewrites the original entry, because the point of the log is
-that a decision and its basis remain inspectable after the fact.
-
-## What is NOT delegated
-
-Recorded here so the boundary stays visible as the log grows:
-
-- **Article II.3 discrepancies** - a conflict between the board Scheme of Study and a course guide
-  is an adjudication about which external document is authoritative. No agent can settle that; it
-  is a question about the world, not the repository. These continue to escalate via
-  `specs/gaps.md`.
-- **Publication authority** (Constitution Art. VII.1) and **reviewer qualification** (Art. VII.5).
-  - *Amended 2026-10-06 by `D-2026-0045`:* publication authority **is** delegated to the CEO
-    for QC-cleared content (§2a checklist A–F on the TEX-4 roadmap). Reviewer qualification
-    remains undelegated.
-- Anything an evaluator marks as not determined by the course guide.
-
----
-
 ## D-2026-0001 - Unretrievable sources may be flagged and passed
 
 - **Status:** confirmed
@@ -50,6 +19,9 @@ Recorded here so the boundary stays visible as the log grows:
 - **Limits:** The source remains unverified; the declaration is not a substitute for reading it.
   A reviewer still fails `sources` where prose relies on such a source for a claim it does not
   disclose as uncorroborated, or states more than the declaration supports.
+
+
+---
 
 ## D-2026-0002 - EFMP-302 Unit 6 activity design: the one-page plan
 
@@ -76,6 +48,9 @@ Recorded here so the boundary stays visible as the log grows:
 
 ---
 
+
+---
+
 ## D-2026-0003 - `.specify/Course_guides_and_Scheme/` is a superseded departmental variant set
 
 - **Status:** confirmed
@@ -99,6 +74,9 @@ Recorded here so the boundary stays visible as the log grows:
 - **Applied in:** `specs/gaps.md` G-2026-07 resolved; a provenance README added to the folder so
   the question cannot recur silently.
 
+
+---
+
 ## D-2026-0004 - `D-2026-0002` extends beyond Unit 6
 
 - **Status:** confirmed
@@ -116,6 +94,9 @@ Recorded here so the boundary stays visible as the log grows:
 - **Limits:** settles EFMP-302 only. It does not change the assessment blueprint or any other
   course's activity design.
 
+
+---
+
 ## D-2026-0005 - No blanket waiver of ADR-0019's two-cycle repair limit
 
 - **Status:** confirmed
@@ -132,6 +113,9 @@ Recorded here so the boundary stays visible as the log grows:
   unit be visible and honest with open findings recorded, which is the intended relief.
 - **Limits:** a specific unit may still be granted a specific additional cycle by the owner. This
   refuses the blanket waiver, not every future exception.
+
+---
+
 
 ---
 
@@ -195,6 +179,9 @@ Recorded here so the boundary stays visible as the log grows:
   list (`G-2026-14`). Does **not** approve any unit's assessment blueprint. Does **not** authorise
   authoring: `content-spec.md` remains at `status: draft`. Certifies no content, qualifies no
   reviewer, authorises no publication.
+
+
+---
 
 ## D-2026-0007 - EFMP-304 sub-topic coverage, outcome traces, structure and decision residue
 
@@ -291,6 +278,9 @@ Recorded here so the boundary stays visible as the log grows:
 
 ---
 
+
+---
+
 ## D-2026-0008 - EFMP-301 Unit 1's one-directional source gap is accepted as disclosed
 
 - **Status:** confirmed
@@ -306,6 +296,9 @@ Recorded here so the boundary stays visible as the log grows:
   bullet would silently narrow approved scope.
 - **Limits:** settles this passage only. If an open-access treatment is found, the improvement loop
   should cite it. Resolves `G-2026-06`.
+
+
+---
 
 ## D-2026-0009 - EFMP-302 Unit 4's five authored sub-topics are confirmed
 
@@ -325,6 +318,9 @@ Recorded here so the boundary stays visible as the log grows:
   those are authoring corrections and needed no decision.
 - **Limits:** settles Unit 4's five rows. Resolves `G-2026-08`.
 
+
+---
+
 ## D-2026-0010 - EFMP-302 reading list: `kwakman2003` re-filed, `icka2024` recorded unresolvable
 
 - **Status:** confirmed
@@ -341,6 +337,9 @@ Recorded here so the boundary stays visible as the log grows:
   is handled the same way: flag and proceed.
 - **Limits:** settles these two keys. Resolves `G-2026-09`.
 
+
+---
+
 ## D-2026-0011 - EFMP-302 CLO 4 is a guide drafting artefact
 
 - **Status:** confirmed
@@ -356,6 +355,9 @@ Recorded here so the boundary stays visible as the log grows:
   approved scope; leaving the numeric traces unannotated would let a reader infer coverage that
   does not exist. If the outcome is owed to the programme, a methods course discharges it.
 - **Limits:** settles EFMP-302 only. Resolves `G-2026-10`.
+
+
+---
 
 ## D-2026-0012 - A guide-silent course may record `## Week schedule` as guide-silent
 
@@ -377,6 +379,9 @@ Recorded here so the boundary stays visible as the log grows:
 - **Limits:** relaxes *how* the section may be satisfied, never *whether* a course's teaching
   sequence is recorded.
 
+
+---
+
 ## D-2026-0013 - EFMP-304 authors against a binding open-access floor
 
 - **Status:** confirmed
@@ -397,6 +402,9 @@ Recorded here so the boundary stays visible as the log grows:
   deepens the sourcing.
 - **Limits:** settles EFMP-304. It does not set a corpus-wide floor, though it is the obvious
   precedent for any other course whose guide list is print-only. Resolves `G-2026-14`.
+
+
+---
 
 ## D-2026-0014 - Standing authorisation to publish gate-checked units
 
@@ -425,6 +433,9 @@ Recorded here so the boundary stays visible as the log grows:
   before review means defects of that class reach readers first, with the notice as the only
   mitigation.
 
+
+
+---
 
 ## D-2026-0015 - EFMP-304 intake: identity, the six-unit partition, guide coverage and outcome traces
 
@@ -503,6 +514,9 @@ Recorded here so the boundary stays visible as the log grows:
   settle whether the `D-2026-0013` floor is enforceable (`G-2026-17`). Does **not** approve any
   unit's assessment blueprint or structural conformance; those are `D-2026-0016`. Certifies no
   content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
+
+
+---
 
 ## D-2026-0016 - EFMP-304 unit-spec: assessment blueprints, structural conformance, no decision residue
 
@@ -623,6 +637,9 @@ Recorded here so the boundary stays visible as the log grows:
 
 ---
 
+
+---
+
 ## D-2026-0017 - EFMP-302 Unit 2 is granted one additional G3 cycle
 
 - **Status:** confirmed
@@ -647,6 +664,9 @@ Recorded here so the boundary stays visible as the log grows:
   tier only; it does not certify, because `acceptProvisionalReport` still skips the signed
   reviewer registry. An `escalate` sends Unit 2 to the content-improvement loop with no further
   cycle.
+
+---
+
 
 ---
 
@@ -741,6 +761,9 @@ Recorded here so the boundary stays visible as the log grows:
 
 ---
 
+
+---
+
 ## D-2026-0019 - GENG-300 intake: identity, partition, coverage, outcomes, readings, blueprint, structure, no decision residue
 
 - **Status:** pending-owner-review
@@ -784,31 +807,8 @@ Recorded here so the boundary stays visible as the log grows:
 
 ---
 
-## D-2026-0019 - GENG-300 intake: identity, coverage, outcomes, blueprint, structure, partition derived
 
-- **Status:** pending-owner-review
-- **Gate:** G0 intake / G1 unit-spec
-- **Scope:** GENG-300 only. Settles identity, the sub-topic coverage of all four checklists, the
-  CLO traces, the assessment blueprints, structural conformance, and the absence of decision
-  residue. Does NOT settle the four-unit partition (escalated, recorded below).
-- **Decided by:** agent:evaluator, 2026-09-22
-- **Decision:**
-  1. **Identity.** GENG-300, "Functional English", 3 (3-0) credit hours, Semester 1, General
-     Education, bilingual: false. Matches guide and catalog.
-  2. **Partition (derived, not guide-determined).** The guide gives numbered syllabus sections
-     but no week table or unit numbering. The 4-unit partition (Foundations; Comprehension and
-     Analysis; Effective Communication; Professional Writing and Intercultural Communication) is
-     derived and recorded per D-2026-0012. Owner confirmation required.
-  3. **Coverage.** All guide sub-topics map to exactly one spec sub-topic. No omissions, no
-     additions.
-  4. **Outcomes.** All 4 CLOs reproduced verbatim and traced to units.
-  5. **Readings.** 10 guide-recommended print monographs. Flagged per D-2026-0001.
-  6. **Blueprint.** 10/10/5 pattern per unit, Bloom-banded per style guide.
-  7. **Structure.** v4.0 structure conformance confirmed.
-  8. **Decision residue.** None found.
-- **Bound to:** `specs/content/geng-300/intake/manifest.json`, manifest digest 64b072c75649424f
-- **Limits:** Does not certify authored content. Does not settle the four-unit partition
-  (escalated, recorded).
+---
 
 ## D-2026-0020 - GNAS-301 intake: identity, coverage, outcome traces, blueprint, structure, no decision residue
 
@@ -943,6 +943,9 @@ Recorded here so the boundary stays visible as the log grows:
   - Does not approve any unit's English review (G3) or Urdu translation (G5). Certifies no
     content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
 
+
+---
+
 ## D-2026-0021 - GNAS-301 adopts a binding open-access floor and authors against the confirmed reading list
 
 - **Status:** confirmed
@@ -971,6 +974,9 @@ Recorded here so the boundary stays visible as the log grows:
   content-spec is set to `status: approved` on that combined authority. Does not approve any
   unit's English review (G3) or Urdu translation (G5). Certifies no content, qualifies no
   reviewer, authorises no publication (Art. VII.8.4).
+
+---
+
 
 ---
 
@@ -1143,6 +1149,9 @@ Recorded here so the boundary stays visible as the log grows:
     no gate reads them.
   - Does not approve any unit's English review (G3) or Urdu translation (G5). Certifies no
     content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
+
+---
+
 ## D-2026-0040 - GQUR-300 intake: identity, partition, coverage, outcomes, blueprint, structure, residue approved; readings escalated
 
 - **Status:** pending-owner-review
@@ -1300,6 +1309,9 @@ Recorded here so the boundary stays visible as the log grows:
     ":558-563"; (c) the Unit 4 CLO-4 trace is loose and would rest better on Unit 6 alone.
   - Does not approve any unit's English review (G3) or Urdu translation (G5). Certifies no content,
     qualifies no reviewer, authorises no publication (Art. VII.8.4).
+
+---
+
 
 ---
 
@@ -1481,6 +1493,9 @@ Recorded here so the boundary stays visible as the log grows:
 
 ---
 
+
+---
+
 ## D-2026-0042 - GQUR-300 third intake pass: all eight criteria approved, readings settled by the G-2026-28 owner ruling
 
 - **Status:** pending-owner-review
@@ -1650,6 +1665,9 @@ Recorded here so the boundary stays visible as the log grows:
     sources, and `D-2026-0001` still governs any prose that leans on the unopened title.
   - Does not approve any unit's English review (G3) or Urdu translation (G5). Certifies no content,
     qualifies no reviewer, authorises no publication (Art. VII.8.4).
+
+---
+
 
 ---
 
@@ -1829,6 +1847,9 @@ Recorded here so the boundary stays visible as the log grows:
   - Does not approve any unit's English review (G3) or Urdu translation (G5). Certifies no
     content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
 
+
+---
+
 ## D-2026-0044 - EFMP-301 rework: the owner-ruled chapter-wise 12-unit partition, reworked Units 4-12, no new escalation
 
 - **Status:** pending-owner-review
@@ -2005,6 +2026,9 @@ Recorded here so the boundary stays visible as the log grows:
 
 ---
 
+
+---
+
 ## D-2026-0045 — CEO publication authority under the permanent machine-authored disclaimer
 
 - **Status:** pending-owner-review
@@ -2042,6 +2066,9 @@ Recorded here so the boundary stays visible as the log grows:
   (when the 15 catalogued courses are authored).
 - **Amends:** ADR-0026 §1 (publication authority delegation) and ADR-0026's exit condition
   (gated units stay gated permanently under the disclaimer).
+
+---
+
 
 ---
 
@@ -2150,6 +2177,9 @@ reviewer independent of the sessions that authored the content, performed any re
 this decision; a `pass` restores the provisional tier only, because `acceptProvisionalReport`
 still skips the signed reviewer registry, and an `escalate` sends the unit to the
 content-improvement loop with no further cycle.
+
+---
+
 
 ---
 
@@ -2264,6 +2294,9 @@ content-improvement loop with no further cycle.
     calendar or readings change, they may need re-cutting or re-sourcing.
   - Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4), and
     does not approve any G3 or G5 review.
+
+---
+
 ## D-2026-0047 - EFMP-305 intake: partition (with the guide's Unit 6 week slip), guide-anchored coverage, outcomes, blueprint and residue approved; identity, readings, three additions and structure not approved
 
 - **Status:** confirmed (owner, 2026-10-10; escalations ruled in D-2026-0053; spec approval still requires the listed author repairs and a fresh intake)
@@ -2385,6 +2418,122 @@ content-improvement loop with no further cycle.
 
 ---
 
+
+---
+
+## D-2026-0051 - GSOS-301 intake: identity, coverage, outcome traces and blueprints approved; partition and readings escalated; structure and decision residue fail for repair
+
+- **Status:** confirmed (owner, 2026-10-10; escalations ruled in D-2026-0053; spec approval still requires the listed author repairs and a fresh intake)
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** GSOS-301 only. Settles identity, sub-topic coverage of all six checklists, the CLO
+  record, and the six unit-end assessment blueprints. Does **not** settle the six-unit partition
+  (`G-2026-92`), the reading list (`G-2026-93`) or the open-access floor (`G-2026-94`), and does
+  **not** approve structure or decision residue, which fail on defects the guide and the contracts
+  already determine (repair items below; no owner decision needed).
+- **Decided by:** agent:evaluator, 2026-10-10
+- **Decision:**
+  1. **Identity (pass).** GSOS-301, "Social Science (Sociology)", **2 (2-0)**, Semester 2,
+     General Education, bilingual by default, as `catalog/courses.json` records it in its
+     Semester 2 group. The guide gives code `GSOS-301` at `2nd 2026.txt:778`, the title
+     "Sociology" at `:776` and "Credit Hours 03" at `:787-789`; the revised Scheme (final
+     authority) gives `GSOS-301 / Social Science (Sociology) / 2(2-0) / General Education` at
+     `B.Ed 4 Year 2026 revised after board.txt:118-121`. The credit-hour conflict is the Article
+     II.3 conflict the owner already resolved as **2 (2-0)** in `G-2026-05`, and the title is the
+     owner-reconciled inventory title in `G-2026-01`; both bind. The spec states 2 (2-0) at
+     `content-spec.md:8`; no "3 CH" residue anywhere in the spec. Nothing new to escalate.
+  2. **Coverage (pass).** The guide enumerates **43** teaching leaves across Weeks 1-7 and 9-15
+     (`:804-808`, `:813-818`, `:823-827`, `:844-850`, `:854-858`, `:862-867`, `:871-874`,
+     `:883-887`, `:891-895`, `:899-904`, `:910-913`, `:917-919`, `:923-927`, `:931-935`), reading
+     "Contributions of early thinkers" (`:812`) as the heading of its four names; Weeks 8
+     (`:876-879`) and 16 (`:937-942`) are review/examination entries, not sub-topics. The spec's
+     six checklists carry 10/6/6/6/6/9 = **43** rows. Every guide leaf appears
+     exactly once and no row introduces a sub-topic the guide lacks. Two regroupings lose nothing:
+     `:804` "Definition and scope" plus `:805` "Nature and importance" become U1-01 "Definition,
+     scope, and nature" and U1-03 "Importance". The founder glosses at U1-04 to U1-07 ("class
+     conflict", "social facts", "verstehen", "founding of sociology") name one contribution each
+     inside the guide's "Contributions of" (`:812`); they focus, they do not add, and authors must
+     not read them as exhaustive.
+  3. **Outcomes (pass).** The six course outcomes (`:794-800`) are reproduced at
+     `content-spec.md:14-20` without substantive change, and the spec introduces no SLO of its own,
+     so there is no outcome without a guide ancestor. The spec maps no unit to a CLO; that is a
+     traceability gap for repair (below), not an addition.
+  4. **Blueprints (pass).** All six units carry exactly 10 MCQ (Remember to Apply), 10 RRQ
+     (Understand to Analyze) and 5 ERQ (Analyze to Evaluate/Create), matching
+     `style-guide.md` "Unit-end assessment bank". Every per-topic split sums to its band (U1
+     3/4/3; U2-U5 5/5; U6 4/6), and every topic gets at least 3 MCQ and 3 RRQ, so no floor the
+     spec sets is breached by its own items.
+- **Not approved:**
+  - **Partition** - escalated as `G-2026-92`. The guide gives a 16-week table with no unit
+    headings; the six-unit merge (Weeks 1-3, 4-5, 6-7, 9-10, 11-12, 13-15) and the Unit 6 topic
+    split are the spec's judgement.
+  - **Readings** - escalated as `G-2026-93` (the guide's two entries are absent from the spec and
+    the four "Guide-required" rows are not the guide's, with misattributed or non-resolving
+    citations) and `G-2026-94` (the spec's self-declared "binding" open-access floor is not
+    owner-adopted).
+  - **Structure (fail, repair).** Units 3-6 checklist IDs are `3.1`...`6.9`, not
+    `^U<n>-\d{2,}$` (`content-spec.md:213-220`, `:263-270`, `:313-320`, `:363-373`), with no
+    `Guide ref` column; their `### Topic list` tables use `Topic | Label | Sub-topic IDs | What it
+    teaches` with no `Reading-min` or `Figures` column (`:224-227`, `:274-277`, `:324-327`,
+    `:377-380`). Replayed with the gate's own parsers: Units 3-6 yield **0** parseable checklist
+    IDs and **0** assigned topic IDs, so `check:depth-gate` will fail each unit the moment it is
+    authored. Visual density (Art. III.10, >= 2 figures per topic) is under-planned in every topic
+    of every unit (Topic list cells 2/1/0 in Unit 1, 2/0 in Unit 2; one figure per topic in Units
+    3-6). The Unit 1 and Unit 2 Topic list and Figure plan disagree on which topic carries
+    fig-U1-2, fig-U1-3 and fig-U2-2. `## Course review plan` lacks the "Practice-question mix"
+    bullet and has 2 practicum ideas against the v3 contract's 3-6. Per-unit
+    `**Prerequisite knowledge**`, `**Worked-examples plan**` and `**International best-practice
+    notes**` lines (v2 contract) are absent in all six units.
+  - **Decision residue (fail, repair).** `D-2026-0012` (confirmed, corpus-wide) permits a
+    derived week schedule only for a **guide-silent** course. This guide is not silent: it gives
+    Weeks 1-16 at `:802-942`. The spec labels its schedule "Derived, not guide-given"
+    (`content-spec.md:58-69`) and contradicts the guide: it ends teaching at Week 11, places
+    Unit 4 at Week 7 (guide Weeks 9-10), omits the Week 8 mid-term and Week 16 final, and drops
+    U2-05 from the Unit 2 row. The guide determines the calendar, so the fix is to record the
+    guide's weeks; no extension of `D-2026-0012` is needed or approved. No other confirmed entry
+    leaves residue: `D-2026-0002`/`D-2026-0004` designs are absent (the one "one-page" hit,
+    `:85`, is GSOS-301's own practicum wording); `D-2026-0003` is inapplicable (no GSOS variant in
+    that folder, none cited); `D-2026-0013`/`D-2026-0021` are course-scoped and not extended
+    (see `G-2026-94`).
+- **Basis:** `Scheme-and-Course-guides/extracted-text/2nd 2026.txt:776-968` (the GSOS-301 block;
+  `:972` begins GPKS-302); `B.Ed 4 Year 2026 revised after board.txt:118-121`; `specs/gaps.md`
+  `G-2026-01`, `G-2026-05`; `specs/content/style-guide.md` v4.5; `contracts/content-spec-frontmatter.schema.json`;
+  content-spec v2/v3 contracts. Items 1-3 are determined by the guide (and, for item 1, by binding
+  owner rulings); item 4 rests on the bound style guide.
+  **Deterministic checks run at `ca5f0af5`, real exit codes:** `check:no-em-dash` 0,
+  `validate:content` 0, `check:bloom-bands` 0, `check:concept-graph` 0, `check:depth-gate` 0
+  (vacuous for Units 3-6, which are unauthored), `check:figures` **1** (7 findings, all GSOS-301
+  Units 1-2: prompt-only markers render no figure), `check:no-answer-keys` 0, `check:docs-sync`
+  0, `check:source-floor` 0 (GSOS-301 declares no `open_access_floor`, so the spec's floor is not
+  enforced), `check:pipeline-gate` **1** (4 findings, all GSOS-301 Units 1-2: content-spec is
+  `draft`; G2 rows not done). The failures concern the pre-intake authored units, which are
+  context only here.
+- **Bound to:** `/tmp/claude-1005/-home-a2ahs-mega-book-for-B-Ed/e283ce34-647b-4701-9268-ea887141a5b3/scratchpad/intake/GSOS-301/manifest.json`,
+  manifest digest `99a1ad1ed73ffc58ee06b63fb45126a419c9dc337be2b30ecca1d4ee0e827752`, 63 inputs at
+  commit `ca5f0af5eb0b7c697dd33c091b4ae6feb72d683b`. Recomputed independently with `manifestFor()`
+  over the `intakeRoots('gsos-301')` set: 0 mismatches, digest reproduced, both registers matched.
+  **Any change to a bound input voids this approval** (Art. VII.8.5); the registers are not
+  freshness-bearing (`G-2026-15`), so recording this entry does not void it.
+- **Limits and what remains blocked:**
+  - **`status` stays `draft`.** It may not move to `approved` on this decision: partition and
+    readings are owner-gated (`G-2026-92`, `G-2026-93`, `G-2026-94`) and structure/residue need
+    repair. After the owner rules and the repairs land, a re-intake against a fresh manifest must
+    re-check structure and residue; items 1-4 need no re-evaluation unless a bound input they
+    rest on changes.
+  - **Blocked:** every unit's partition boundaries and the Unit 6 topic split (`G-2026-92`); the
+    whole `## Reading list`, every unit's `### Mapped readings`, and the G2 source-binding floor
+    (`G-2026-93`, `G-2026-94`); Units 3-6 additionally on the structural repair; the `## Week
+    schedule` on the residue repair.
+  - **Reported for repair, needing no owner decision:** the structure and residue items above;
+    `content-spec.md:32` says the course is "explicitly for trainee teachers", which no guide line
+    states; the block citation `:776-972` should end at `:968`; the spec maps no unit to a CLO.
+  - Context only, not judged: Units 1-2 (EN+UR) were authored before intake; their
+    `sources/unit-0{1,2}.md` cite `givens2023`/`henson2022` as `guide-required`, which
+    `G-2026-93` puts in question.
+  - Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
+
+
+---
+
 ## D-2026-0053 - Semester 2 intake: owner rulings on the G0/G1 escalations
 
 - **Status:** confirmed
@@ -2429,6 +2578,9 @@ content-improvement loop with no further cycle.
 - **Limits:** This decision approves no specification. Each spec still needs the author repairs
   its intake listed, then a fresh intake on a newly prepared manifest, before it may move to
   `status: approved`. It certifies no content and qualifies no reviewer.
+
+---
+
 
 ---
 
@@ -2505,6 +2657,9 @@ content-improvement loop with no further cycle.
     and ICT and digital transformation (U6-04, U6-06). Those support claims need source-level checks.
     `nep2017`'s draft-versus-final edition is still unestablished.
   - No new gap was raised: `G-2026-122` to `G-2026-125` were reserved and not used.
+
+---
+
 ## D-2026-0054 - EFMP-305 re-intake after repair: identity, partition, coverage, outcomes, blueprint and residue approved; readings escalated (G-2026-102); structure not approved (author repairs outstanding)
 
 - **Status:** pending-owner-review
@@ -2553,6 +2708,9 @@ content-improvement loop with no further cycle.
     `:211-221`) and `:140-141` (guide does name the statute, `:282`).
   - The spec may not move to `status: approved` on this entry.
   - Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
+
+---
+
 
 ---
 
@@ -2627,6 +2785,9 @@ content-improvement loop with no further cycle.
     label `D-2026-0053` item 2 requires.
   - No gap was raised: `G-2026-138` to `G-2026-141` were reserved and not used.
   - Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
+
+
+---
 
 ## D-2026-0065 - EFMP-305 third intake: all eight G0/G1 criteria approved; the spec is a faithful derivation of the guide under the confirmed owner rulings
 
@@ -2694,6 +2855,9 @@ content-improvement loop with no further cycle.
 
 ---
 
+
+---
+
 ## D-2026-0067 - EFMP-304 Units 4-6: reflective-practice Urdu terms banked; concept-label collision resolved
 
 - **Status:** confirmed (owner, 2026-10-11)
@@ -2705,264 +2869,8 @@ content-improvement loop with no further cycle.
   2. **Ten terms banked in `specs/content/terminology.csv`, as proposed:** Reflective Thinking `تاملی سوچ`, Reflective Process `تاملی عمل`, Reflective Practice `تاملی مشق`, Reflective Journal `تاملی جریدہ`, Reflective Cycle `تاملی چکر`, Descriptive Writing `بیانیہ تحریر`, Reflective Writing `تاملی تحریر`, Technical Reflection `فنی تامل`, Contextual Reflection `سیاقی تامل`, Dialectical Reflection `جدلیاتی تامل`. Later translators reuse these; the existing `Reflective Decision Making` entry is unchanged.
   3. **Follow-ups scheduled, not fixed in place:** the two English defects in Unit 6 (`topic-03.mdx` "did not understood"; `unit-assessment.mdx` RRQ 5 question/answer mismatch) go through `revise-topic` with fresh G2/G3/G5, because editing reviewed files would invalidate the bound evidence. EFMP-304 `.ur.svg` figure variants are scheduled as a BilingualAuthor task after the Semester 2 courses.
 - **Consequences:** G3/G4/G5 tracker rows for Units 4-6 record the agent passes as `▣` and stay open (ADR-0019); `translation_status` stays `draft`. Unit 4 G2 evidence regenerated because its concept table is a bound input.
-## D-2026-0048 - EFMP-303 intake: identity, coverage, outcome traces, blueprint and structure approved; partition, calendar and readings escalated
 
-- **Status:** confirmed (owner, 2026-10-10; escalations ruled in D-2026-0053; spec approval still requires the listed author repairs and a fresh intake)
-- **Gate:** G0 intake / G1 unit-spec
-- **Scope:** EFMP-303 only, `specs/content/efmp-303/content-spec.md` at commit `2452929d`
-  (`status: draft`, after the board reverted the authoring agent's self-set approval). Evaluated in
-  a fresh session that did not draft the spec; the spec was drafted by the Paperclip
-  BilingualAuthor agent. The six authored units were read as context only. This entry settles
-  criteria 1, 3, 4, 6 and 7 as listed below. It does **not** settle `partition` (`G-2026-77`),
-  the calendar in `## Week schedule` (`G-2026-78`) or `readings` (`G-2026-79`).
-- **Decided by:** agent:evaluator, 2026-10-10
-- **Decision:**
-  1. **Identity: approved.** EFMP-303, "Educational Policies and Plans of Pakistan", **3 (3-0)**,
-     Semester 2, Major: Professional. The guide gives the code at `2nd 2026.txt:1171`, "Hours 3 /
-     Credit" at `:1172-1174` (a bare total, no split), the title at `:1176` and "2ND" semester at
-     `:1177`. The revised board Scheme, which `specs/gaps.md` names as the final authority, records
-     `EFMP-303 / Educational Policies and Plans of Pakistan / 3 (3-0) / Major: Professional
-     Course -III` in its Semester II table (`B.Ed 4 Year 2026 revised after board.txt:90`,
-     `:142-148`). `catalog/courses.json` `semesters[1].courses[3]` records the same code, title,
-     `3 (3-0)` and `Major: Professional`. A guide total of 3 and a Scheme split of `3 (3-0)` do not
-     conflict (the `G-2026-02`/`G-2026-05` posture), and `.specify/Course_guides_and_Scheme/`
-     holds no EFMP-303 file, so `D-2026-0003` does not apply. **No Article II.3 conflict.**
-  2. **Coverage: approved.** The guide's Weeks 1-15 carry **45 teaching bullets**, three per week
-     (`:1217`-`:1341`). The spec's six checklists carry **45 rows** (U1 6, U2 9, U3 9, U4 6, U5 6,
-     U6 9), with unique IDs. Paired in order by script, every bullet maps to exactly one row with
-     the correct `Guide ref` week, and no row lacks a guide bullet. Where a row adds words, they
-     come from the guide's own week heading (U2-04 to U2-09 "NEP 2009:/NEP 2017:" from `:1241`,
-     `:1251`; U6-02 "from international comparisons" from `:1315`; U4-04 "in policy
-     implementation" from `:1291`) or are a minimal gloss on a bare bullet (U4-01 "meaning and
-     purpose" on "Monitoring and Evaluation", `:1285`). None adds a topic the guide lacks.
-     Week 16 (`:1345`, `:1347`) is a review week, not teaching content; its routing is part of
-     `G-2026-78`.
-  3. **Outcome traces: approved, with one trace to remove.** The guide's five Course Objectives
-     (`:1193-1201`) are transcribed faithfully at `content-spec.md:23-27`. Each of the 12 SLOs
-     restates a guide week heading or heading pair (SLO 1-1 Week 1, 1-2 Week 2, 2-1 Week 3, 2-2
-     Weeks 4-5, 3-1 Week 6, 3-2 Weeks 7-8, 4-1 Week 9, 4-2 Week 10, 5-1 Week 11, 5-2 Week 12, 6-1
-     Week 13, 6-2 Weeks 14-15), so no SLO is an addition. Every objective is delivered by at least
-     one unit whose guide weeks carry it: objective 1 by Units 1-2 (Weeks 2-5), objective 2 by
-     Units 2-3 (Weeks 4-6), objective 3 by Unit 3 (Weeks 6-8), objective 4 by Unit 4 (Week 10),
-     objective 5 by Unit 6 (Week 15). **Repair, guide-determined:** Unit 1's trace to objective 5
-     ("Propose strategies to improve...", `content-spec.md:107-109`) has no support in Weeks 1-2
-     (`:1215-1231`), so the "and 5" should be dropped; the remaining trace to objective 1 stands.
-     Advisory only: Unit 5's trace to objective 2 is weak; its objective 4 trace carries it.
-  4. **Blueprint: approved.** All six units carry the style guide's fixed bank (10 MCQ Remember
-     to Apply, 10 RRQ Understand to Analyze, 5 ERQ Analyze to Evaluate/Create, at least one
-     Analyze-or-higher ERQ; `style-guide.md` "Unit-end assessment bank"). The per-topic minimums
-     fit their counts in every unit: MCQ/RRQ at least 2 per topic gives 8/8 of 10 (Unit 1, 4
-     topics), 6/6 (Units 2, 3, 6) and 4/4 (Units 4, 5); "one ERQ per topic" plus the stated
-     integrative item gives 4, 4, 4, 3, 3, 4 of 5. No floor is breached by the spec's own item
-     counts. The guide carries no assessment criteria (block runs description, objectives, week
-     table, readings, `:1179-1357`), so the Art. III.7 60/40 default is applied, not invented
-     (`:29-30`). Course review mix (~15/~10/~5) is unconstrained by the style guide.
-  5. **Structure: approved on the bound requirements, except `## Week schedule` (`G-2026-78`).**
-     Front matter validates against `contracts/content-spec-frontmatter.schema.json` (ajv, valid).
-     Every unit has a `### Sub-topic checklist` and a `### Topic list` whose `Sub-topic IDs`
-     partition the checklist exactly, a depth budget in the gate's format whose sub-topic and topic
-     counts match its tables, and a figure plan meeting Art. III.10 (2 carriers per topic,
-     at least 1 concept-map/flowchart/timeline per unit, the six-value `Kind` vocabulary,
-     contiguous unit-scoped `fig-U<n>-<seq>` IDs, topic tags matching the topic list). All
-     verified by script. Zero em dashes. Gate exit codes on this run: `validate:content` **0**,
-     `check:depth-gate` **0**, `check:no-em-dash` **0**, `check:no-answer-keys` **0**,
-     `check:concept-graph` **0**, `check:docs-sync` **0**, `check:source-floor` **0** (vacuous,
-     see `G-2026-79`), `check:pipeline-gate` **1** (12 findings, all EFMP-303: `status: draft` and
-     no `tasks.md` for each of six units, the expected result of the board's reversion, not a spec
-     defect), `check:figures` **1** (6 findings, schematics planned but not placed in the
-     **authored** units), `check:bloom-bands` **1** (4 findings, missing Bloom tags in the
-     **authored** Unit 2 assessment), `check:content-status` **1** (`static/content-status.json`
-     is a build artefact absent from this worktree). The last three are about authored content,
-     which is context at this gate; they are reported, not judged.
-- **Decision residue: not approved; folded into `G-2026-78`.** Every confirmed decision that
-  touches this course was swept against the whole spec. `D-2026-0002`/`0004` (one-page plan),
-  `D-2026-0005` (cycle limit) and `D-2026-0003` (variant folder): no residue. `D-2026-0001`: the
-  spec invokes it for print monographs, but three entries may not exist at all, which is outside
-  its scope (`G-2026-79`). `D-2026-0012`: **misapplied**. The spec uses the guide-silent wording
-  for a course whose guide has a week table, and replaces the guide's calendar with one from an
-  unbound task plan. Restoring the guide's calendar would be guide-determined, but whether the
-  task plan carries owner authority is not something the evaluator can know, so it is escalated.
-- **Basis:** `Scheme-and-Course-guides/extracted-text/2nd 2026.txt`, EFMP-303 block `:1171-1358`
-  (code `:1171`, credit `:1172-1174`, title `:1176`, semester `:1177`, description `:1179-1189`,
-  objectives `:1191-1201`, week table `:1203-1347`, readings `:1349-1357`);
-  `B.Ed 4 Year 2026 revised after board.txt:90`, `:142-148`; `catalog/courses.json`
-  `semesters[1].courses[3]`; `specs/content/style-guide.md` and
-  `contracts/content-spec-frontmatter.schema.json` for blueprint and structure; the confirmed
-  decisions named above. Items 1-3 are determined by the guide and Scheme directly. Items 4-5
-  rest on the guide for content and on the bound style guide and contract for form.
-- **Bound to:** `/tmp/claude-1005/-home-a2ahs-mega-book-for-B-Ed/e283ce34-647b-4701-9268-ea887141a5b3/scratchpad/intake/EFMP-303/manifest.json`,
-  manifest digest `7888898df5da901f1daf58251556809aa8ce0c04f8412fb267445b99694a3805`, **80
-  inputs** at commit `2452929d1ba1b34c0a4f2335df49bc40fd015fa9`. Recomputed independently with
-  `manifestFor()` from `scripts/lib/review-evidence.mjs` over the `intakeRoots('efmp-303')` root
-  set: every path and digest matched, nothing extra or missing, and `manifest_digest` reproduced.
-  Both `registers` digests also matched at read time. **Any change to a bound input voids this
-  approval** (Art. VII.8.5). Recording this entry and the gap entries does not void it, because
-  the registers are outside `input_manifest` (`G-2026-15`).
-- **Limits and what remains blocked:**
-  - **`partition` is not approved** (`G-2026-77`): the six-block merge over a week-only guide is
-    a judgement the guide does not make. Only its mechanical properties are verified.
-  - **`## Week schedule` and the six "Weeks N-M" unit opening lines are not approved**
-    (`G-2026-78`): they contradict the guide's calendar and the spec's own guide refs, and
-    Week 16 is unrouted.
-  - **`readings` is not approved** (`G-2026-79`): three of five entries do not resolve, both
-    policy locators are false, and the open-access floor is declared as zero. Every unit's
-    `**Mapped readings**` line is blocked, Units 1, 3 and 4 most of all.
-  - **The spec may not move to `status: approved` on this entry.** That needs the owner to
-    confirm this entry and resolve `G-2026-77`, `G-2026-78` and `G-2026-79`, then the author's
-    repairs (calendar, locators, floor declaration, the Unit 1 objective-5 trace) and a
-    re-evaluation of the changed sections against a fresh manifest. Setting `status: approved`
-    is the owner's act, not this evaluator's.
-  - The six units authored before intake are not validated by this entry. If the partition,
-    calendar or readings change, they may need re-cutting or re-sourcing.
-  - Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4), and
-    does not approve any G3 or G5 review.
-
-## D-2026-0059 - EFMP-303 re-intake after repairs: identity, partition, coverage, outcomes, blueprint, structure approved; readings and decision residue still need author repairs
-
-- **Status:** pending-owner-review
-- **Gate:** G0 intake / G1 unit-spec
-- **Scope:** EFMP-303 only, `specs/content/efmp-303/content-spec.md` (`status: draft`) at commit
-  `145fe4f4`, after the author repairs of `2144ac56` made in response to `D-2026-0048`. Evaluated
-  in a fresh session that did not draft the spec (drafted by the Paperclip BilingualAuthor agent).
-  Re-checks all eight criteria. Rests on the owner's confirmed `D-2026-0053` (record file
-  `intake2/D-2026-0053.md`, sha256 `56ae62a22da263d8f305e05bca1e3137622c50385be9475cdf9e5e064ab706ff`,
-  merging via PR #125), which resolved `G-2026-77`, `G-2026-78` and `G-2026-79`.
-- **Decided by:** agent:evaluator, 2026-10-10
-- **Decision:**
-  1. **identity: pass.** Code, title, `3 (3-0)`, Semester 2 unchanged since `D-2026-0048.1`; the
-     guide, Scheme and catalog are byte-identical to the prior bundle.
-  2. **partition: pass.** The six-block grouping (Weeks 1-2 / 3-5 / 6-8 / 9-10 / 11-12 / 13-15)
-     is the grouping `D-2026-0053` item 1 confirmed. The unit opening lines and `## Week schedule`
-     for Units 1-5 now follow the guide's own week table. Unit 6's span is a residue item (8 below).
-  3. **coverage: pass.** The 45 checklist rows are unchanged since `D-2026-0048.2` (no checklist
-     row in the diff); the 45 Week 1-15 bullets still pair 1:1. Week 16 is a course-level review
-     slot, not a unit sub-topic.
-  4. **outcomes: pass.** Unit 1 now traces to CLO 1 only (the `D-2026-0048.3` repair applied).
-     All other traces are unchanged.
-  5. **readings: fail (author repair, no escalation).** `D-2026-0053` item 2 settles the policy:
-     author-selected verified works are allowed when labelled as such, with `open_access_floor`
-     at 1 per unit. The front matter now declares that floor correctly. But the repaired entries
-     do not yet meet the ruling. See Limits for the repairs.
-  6. **blueprint: pass.** Unchanged since `D-2026-0048.4`.
-  7. **structure: pass.** `validate:content`, `check:depth-gate`, `check:no-em-dash`,
-     `check:no-answer-keys`, `check:concept-graph`, `check:docs-sync`, `check:source-floor`,
-     `check:figures`, `check:bloom-bands` all exit 0. `check:pipeline-gate` exits 1 with 12
-     expected findings (`status: draft` and stale G2 manifests after the spec change, x6 units).
-  8. **decision-residue: fail (author repair, no escalation).** `D-2026-0012` residue is gone, but
-     `D-2026-0053` items 1 and 2 are not fully applied (see Limits).
-- **Basis:** guide `Scheme-and-Course-guides/extracted-text/2nd 2026.txt:1171-1358` (objectives
-  `:1193-1201`, week table `:1215-1347`, Week 16 "Review and Final Assessment" `:1343-1347`,
-  readings `:1349-1357`). The Week 16 heading names a whole-course review, and `G-2026-78`, which
-  `D-2026-0053` resolved "to the guide's own 16-week table", spelled that table out as "Unit 6 =
-  Weeks 13-15, with Week 16 as course review". The reading defects are checked against the ruling's
-  own conditions ("verified real works", "labelled as author-selected rather than guide-required",
-  and "unresolvable or misattributed entries ... must still be corrected").
-- **Bound to:** `intake2/EFMP-303/manifest.json`, manifest digest
-  `fa37085d48cb7bd54a861e1043440fbb7b930739946e87677acafce45ea423c3` (80 inputs, recomputed with
-  `manifestFor()`, 0 mismatches; registers matched at read time). Any change to a bound input voids
-  this entry. Record: `intake2/EFMP-303/evaluation.md`.
-- **Limits and what remains blocked:**
-  - **Readings repairs (Reading list, all six `**Mapped readings**` lines, `sources/unit-0[1-6].md`):**
-    (a) `nep2009`: the archived `moe.gov.pk` snapshot returns HTTP 200 with a 0-byte body, so it
-    does not serve the policy. Give a document-level locator. (b) `nep2017`: the locator is a
-    ministry homepage snapshot. Give a document-level locator, as `G-2026-79` required. (c)
-    `unesco-epg`: `iiep.unesco.org/en/our-mission/educational-planning-explained` redirects to the
-    IIEP homepage. The work by that title is Coombs, P. H. (1970), *What is educational planning?*,
-    Fundamentals of Educational Planning 1, IIEP (unesdoc `pf0000076671`). Bind an identified work
-    and give it one Kind across units (it is `guide-required` in `sources/unit-04.md` but
-    `open-access-substitute` in Units 1 and 3). (d) `pak-vision2025`: the URL returns 404 (the
-    document is at `pc.gov.pk/uploads/vision2025/Pakistan-Vision-2025.pdf`), the year should be
-    2014, not 2017 (PDF created 2014-08-10), and "OpenAlex-verified 2026-10-10" in
-    `sources/unit-03.md` is unsupported because OpenAlex holds no record of the document. That row is
-    Unit 3's only floor-counting row, so Unit 3 meets its floor on an unsupported marker, and its
-    other open-access entry (`unesco-epg`) has a dead locator too. (e) `unesco-epg`, `pak-vision2025`
-    and `gem-report2020` are author-selected but sit under `### Guide-required`, under an intro that
-    calls the table the guide's "Recommended Readings". Move them to a separately headed
-    author-selected list.
-  - **Residue repairs (`## Week schedule`, Unit 6 opening):** Unit 6 should be "Weeks 13-15" and its
-    Topics should cite "guide Weeks 13-15". Week 16 should go to `## Course review plan`, with the
-    guide's "student presentations and discussions" disclosed there as the review week's classroom
-    activity. Correct the schedule's locator "lines 1211-1278" to `:1215-1347`.
-  - **The spec may not move to `status: approved` on this entry.** That needs the repairs above,
-    then a fresh intake against a newly prepared manifest. Setting the status is the owner's act.
-  - Advisory, not blocking, for G2/G3: `gem-report2020` (a global inclusion report) is mechanically
-    substituted for `khan2018` and claimed to support Pakistan's 1947-2000 policies (U2-01 to U2-03)
-    and ICT and digital transformation (U6-04, U6-06). Those support claims need source-level checks.
-    `nep2017`'s draft-versus-final edition is still unestablished.
-  - No new gap was raised: `G-2026-122` to `G-2026-125` were reserved and not used.
-  - Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
-
-## D-2026-0063 - EFMP-303 third intake: all eight criteria approved; the six D-2026-0059 repairs are applied
-
-- **Status:** confirmed (owner, 2026-10-10, relayed by the board session); spec moves to status: approved
-- **Gate:** G0 intake / G1 unit-spec
-- **Scope:** EFMP-303 only, `specs/content/efmp-303/content-spec.md` (`status: draft`) and its
-  `sources/unit-0[1-6].md` at commit `0f7b4608`, after the repairs of `0f7b4608` made in response
-  to `D-2026-0059`. Evaluated in a fresh session that drafted neither the spec nor its repairs.
-  Re-checks all eight criteria. Rests on the owner's confirmed `D-2026-0053` items 1 and 2 (record
-  file `intake2/D-2026-0053.md`, sha256 at read time
-  `15d74a8c3e737fbd639164f2b9e3c933504b0d2558659dfed8dfdfecadc2ab1f`; this differs from the digest
-  `D-2026-0059` recorded because items 6 and 7, EFMP-305 only, were added since; items 1 and 2 are
-  the ones relied on here).
-- **Decided by:** agent:evaluator, 2026-10-10
-- **Decision:**
-  1. **identity: pass.** EFMP-303, "Educational Policies and Plans of Pakistan", `3 (3-0)`,
-     Semester 2, Major: Professional. Guide, Scheme and catalog unchanged since `D-2026-0059.1`.
-  2. **partition: pass.** Six blocks, Weeks 1-2 / 3-5 / 6-8 / 9-10 / 11-12 / 13-15, as
-     `D-2026-0053` item 1 confirmed. Unit 6 now reads "Weeks 13-15" (spec `:424`, `:431`, `:101`);
-     Week 16 is a course-review row (`:102`) belonging to no unit.
-  3. **coverage: pass.** 45 checklist rows, unchanged since `D-2026-0048.2`; each pairs 1:1 with a
-     guide Week 1-15 bullet. Week 16 is covered by `## Course review plan` (`:104-118`).
-  4. **outcomes: pass.** SLO traces unchanged since `D-2026-0059.4`.
-  5. **readings: pass.** The guide's list (`:1349-1357`) is present and quoted (`:54-56`). The two
-     identifiable entries (NEP 2009, NEP 2017) sit under `### Guide-required` with document-level
-     locators; the ambiguous or unresolvable entries are replaced, disclosed, by verified real works
-     under a separate `### Author-selected` heading, as `D-2026-0053` item 2 permits. Floor declared
-     in the enforced mapping form and met in every unit.
-  6. **blueprint: pass.** Unchanged since `D-2026-0048.4`.
-  7. **structure: pass.** `validate:content`, `check:depth-gate`, `check:no-em-dash`,
-     `check:no-answer-keys`, `check:concept-graph`, `check:docs-sync`, `check:source-floor`,
-     `check:figures`, `check:bloom-bands` exit 0. `check:pipeline-gate` exits 1 with the 12
-     expected findings (`status: draft` and stale G2 manifests, x6 units).
-  8. **decision-residue: pass.** No `13-16`, Unit-6 Week 16, `1211-1278`, archive homepage, IIEP
-     page, wrong Vision URL/year or `OpenAlex-verified` marker remains anywhere in
-     `specs/content/efmp-303/` outside the intake records.
-- **Basis:** guide `Scheme-and-Course-guides/extracted-text/2nd 2026.txt:1171-1357` (objectives
-  `:1193-1201`, week table `:1215-1347`, Week 16 "Review and Final Assessment" `:1343-1347`,
-  readings `:1349-1357`). The six `D-2026-0059` repairs were checked independently on 2026-10-10:
-  (a) `nep2009` locator serves a 73-page PDF whose first page reads "National Education Policy
-  2009, Ministry of Education, Government of Pakistan, November, 2009" (created 2009-11-26);
-  (b) `nep2017` locator is the Drive file the Pakistan Institute of Education page lists as row 6,
-  "Draft National Education Policy 2017"; it serves a 184-page PDF titled "National Education
-  Policy 2017" / "2017-2025" (created 2017-09-22); (c) `unesco-epg` is bound to Coombs (1970), and
-  ERIC ED052510 returns "What Is Educational Planning? Fundamentals of Educational Planning-1",
-  Coombs, Philip H.; one Kind in all three units; (d) `pak-vision2025` URL serves the 110-page PDF
-  (created 2014-08-10), year 2014, OpenAlex marker removed; Unit 3 now meets its floor through the
-  ERIC-verified `unesco-epg` row; (e) author-selected entries moved under their own heading and the
-  intro no longer calls them the guide's readings; (f) Unit 6 Weeks 13-15, Week 16 routed to the
-  course review plan with "student presentations and discussions" disclosed, locator `1215-1347`.
-- **Bound to:** `intake3/EFMP-303/manifest.json`, manifest digest
-  `77f7ba00be2d2b111329c873cd1639cb8c067c5873a4b2384e9b37bb8ff43d2c` (82 inputs, recomputed with
-  `manifestFor()`, 0 mismatches; registers matched at read time). Any change to a bound input voids
-  this entry. Record: `intake3/EFMP-303/evaluation.md`.
-- **Limits:**
-  - Nothing is blocked by this evaluation. On owner confirmation of this entry the owner may set
-    `status: approved`; setting it is the owner's act, not this entry's.
-  - The unesdoc locator `pf0000076671` could not be fetched from this host (Cloudflare challenge,
-    HTTP 403, which also blocks the Crossref-verified `pf0000373718`); the work itself is verified
-    through ERIC and library catalogues.
-  - Non-blocking, recommended before G2: the per-unit `**Mapped readings**` lines for Unit 1 (`:160`,
-    omits `gem-report2020`) and Unit 4 (`:346`, omits `nep2009` and `gem-report2020`) lag the
-    `## Reading list` Units column and `sources/unit-0{1,4}.md`, which agree with each other. The
-    style guide reads the mapping from `## Reading list`, so this is not a structure failure. Fixing
-    it changes a bound input and voids this entry.
-  - Advisory for G2/G3, carried from `D-2026-0059`: `gem-report2020` support claims for U2-01 to
-    U2-03, U4-06, U6-04 and U6-06 need source-level checks; `nep2017` is a draft edition (title-level
-    support, `D-2026-0001`); `sources/unit-05.md` `wb_hci` carries an OpenAlex date of 2024-06-15;
-    the `Kind` value `author-selected` is outside the style guide's three-value list but is the
-    label `D-2026-0053` item 2 requires.
-  - No gap was raised: `G-2026-138` to `G-2026-141` were reserved and not used.
-  - Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
+---
 
 ## D-2026-0068 - Style guide v4.6: Urdu alt connector and <desc>/alt parity rule
 
@@ -2979,3 +2887,262 @@ content-improvement loop with no further cycle.
   4. **Regeneration not scheduled here.** Who re-certifies the 44 manifests against v4.6, and in what batches under `scripts/heavy.sh`, is a board/CurriculumOwner follow-up — it is not part of this ruling.
 - **Consequences:** `specs/content/style-guide.md` is now v4.6. Every G2 manifest signed before this commit is stale relative to v4.6; `check:pipeline-gate` reports them as "gate-checked" (passing, not certified). The next translated unit inherits both rules instead of re-deciding per figure. TEX-25 A-03's "rule written into the style guide" half is met.
 - **Limits:** This decision records a ruling the board already executed by merging. It does not schedule or assign the 44-manifest regeneration. It certifies no content and qualifies no reviewer.
+
+---
+
+## D-2026-0057 - GSOS-301 re-intake after repair: identity, partition, coverage, blueprint and decision residue approved; outcomes, readings and structure still fail on unrepaired items
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** GSOS-301 only. Re-checks all eight criteria against the repaired spec. Settles identity,
+  the six-unit partition as applied, sub-topic coverage of all six checklists, the six unit-end
+  blueprints and the absence of decision residue. Does **not** approve outcomes, readings or
+  structure, each of which fails on a defect the guide, the owner rulings or the confirmed
+  `D-2026-0051` repair list already determines (repairs below; no new owner decision needed).
+- **Decided by:** agent:evaluator, 2026-10-10
+- **Decision:**
+  1. **Identity (pass).** Unchanged from `D-2026-0051` item 1: the guide, Scheme and catalog are
+     byte-identical to that bundle, and the spec still states 2 (2-0) at `content-spec.md:9`.
+     `G-2026-01` and `G-2026-05` bind.
+  2. **Partition (pass).** `G-2026-92` is resolved by the confirmed owner ruling `D-2026-0053`
+     item 1 (six units, teaching weeks 3/2/2/2/2/3, Unit 6 merging Weeks 14 and 15 into Topic
+     6.2), and that ruling requires a unit's weeks to follow the guide's week table. The spec now
+     does: `## Week schedule` (`content-spec.md:54-75`) lists Weeks 1-16 exactly as the guide
+     gives them (`2nd 2026.txt:802-942`), including the Week 8 mid-term and Week 16 final, and
+     every checklist row's `Guide ref` names the guide week that carries it. Topic 6.2 is now
+     titled "Social problems and contemporary issues" (`:410`), so Week 15 is no longer framed as
+     a social problem. This approval rests on the owner ruling, not on the guide alone.
+  3. **Coverage (pass).** The 43 checklist rows (`:110-121`, `:175-182`, `:231-238`, `:285-292`,
+     `:339-346`, `:393-403`) are the guide's 43 teaching leaves (`:804-935`, excluding Weeks 8
+     and 16), each exactly once, with no addition. Only IDs, `Guide ref` and `Topic` columns and
+     row wording (for example U5-01 "Family as a social institution" for `:899` "Family") changed
+     since `D-2026-0051`; no leaf was lost or added.
+  4. **Blueprint (pass).** The six blueprints are unchanged from `D-2026-0051` item 4 (10/10/5
+     per unit, style-guide Bloom bands, per-topic splits summing correctly, at least 3 MCQ and 3
+     RRQ per topic). The new course-review practice-question mix (`:92`, ~15/~10/~5) is consistent
+     with the style guide's course-review banks.
+  5. **Decision residue (pass).** The `D-2026-0012` misapplication `D-2026-0051` found is gone: no
+     derived calendar remains. Searched the whole bound GSOS-301 tree for the superseded designs:
+     no `givens2023`, `lindsey2020`, `anderson2016`, `Guide-required` mislabel, "derived" week
+     label, or self-declared "binding" floor survives; the floor is now the front-matter
+     `open_access_floor: 1` that `D-2026-0053` item 2 requires. Advisory only: `:56` still cites
+     `D-2026-0012` for a schedule the guide itself supplies; the citation should be dropped, but
+     the schedule does not depend on it.
+- **Not approved:**
+  - **Outcomes (fail, repair).** The CLO record (`:15-21` = guide `:794-800`) and the new unit
+     learning outcomes trace to named CLOs, which `D-2026-0053` item 4 permits, except one: Unit 5
+     (`:335`) "describe institutional change" is labelled "derived from CLO 3", but CLO 3
+     (`:796`) concerns how institutions influence life; change is CLO 4 (`:798`). Name CLO 4 in
+     the Unit 5 derivation or drop the clause. Guide-determined; no escalation.
+  - **Readings (fail, repair).** `D-2026-0053` item 2 allows author-selected works and sets the
+     floor, and the spec complies on labelling and floor (`conerly2021` is open access and bound
+     in every unit). Three items remain, all determined already:
+     (a) the guide's own reading list (`2nd 2026.txt:964-968`: the Johnson *Sociology: A
+     Systematic Introduction* publisher preview and the SlideShare deck) is still absent, though
+     `:38` itself promises guide-required labels where the guide names a work. Record both as the
+     guide's list, with Johnson under `D-2026-0001` title-level posture; whether to bind either
+     in `### Mapped readings` stays the author's choice.
+     (b) `henson2022` still does not resolve as printed: the LibreTexts URL is a bookshelf holding
+     "Introduction to Sociology (Hammond et al.)", "Introductory Sociology 1e (OpenStax)" and
+     "Sociology (Boundless)", with no Henson work (fetched 2026-10-10). `D-2026-0053` item 2
+     says named misattributions must still be corrected.
+     (c) `lindsey2010` is misdated: Lindsey & Beach *Sociology* (2nd ed.), Prentice Hall, is
+     2001-2002 (Open Library `OL3335670W`); no 2010 edition was found. `andersen2014` resolves
+     (8th ed. with Logio, Cengage, 2014, `OL25629757W`) and `conerly2021` resolves.
+  - **Structure (fail, repair).** The machine-read structure now passes: replayed with the gate's
+     own parsers (`unitSectionLines`, `parseTopicList`, `tableAfterHeading`, `parsePipeTable`),
+     all six units parse to `U<n>-NN` IDs (10/6/6/6/6/9 = 43), each Topic list is a total,
+     disjoint partition agreeing with the checklist `Topic` column, every topic plans exactly two
+     figures, every unit plans a concept-map or flowchart, Figure plan and Topic list agree, and
+     every Depth budget range parses; the front matter validates against
+     `contracts/content-spec-frontmatter.schema.json`. Still unrepaired from the owner-confirmed
+     `D-2026-0051` repair list: `## Course review plan` has 2 practicum ideas (`:89-91`) against
+     the v3 contract's 3-6; no unit carries `**Prerequisite knowledge**`, `**Worked-examples
+     plan**` or `**International best-practice notes**`; `:33` still says the course is
+     "explicitly for trainee teachers", which no guide line states; `:9` still cites `:776-972`
+     where the block ends at `:968`.
+- **Basis:** `Scheme-and-Course-guides/extracted-text/2nd 2026.txt:776-968`; owner rulings
+  `D-2026-0053` (confirmed 2026-10-10) items 1, 2 and 4, and the owner's confirmation of
+  `D-2026-0051` with its repair list; `G-2026-01`, `G-2026-05`; `D-2026-0001`, `D-2026-0012`;
+  `specs/content/style-guide.md`; `contracts/content-spec-frontmatter.schema.json`. The v2/v3
+  content-spec contracts (`specs/007-.../content-spec-v2.md`, `specs/008-.../content-spec-v3.md`)
+  are not bound inputs; the structure items resting on them stand because the owner confirmed
+  them as repairs in `D-2026-0051`.
+  **Deterministic checks at `1b560c46`, real exit codes:** `check:no-em-dash` 0,
+  `validate:content` 0, `check:bloom-bands` 0, `check:concept-graph` 0, `check:depth-gate` 0,
+  `check:figures` **1** (GSOS-301 findings all in pre-intake Units 1-2: prompt-only markers, and
+  topic files that predate the repaired figure plan), `check:no-answer-keys` 0, `check:docs-sync`
+  0, `check:source-floor` 0 (floor declared and met), `check:pipeline-gate` **1** (GSOS-301 Units
+  1-2: spec `draft`, G2 rows not done). The failures concern authored Units 1-2, which are context
+  only here.
+- **Bound to:** `/tmp/claude-1005/-home-a2ahs-mega-book-for-B-Ed/e283ce34-647b-4701-9268-ea887141a5b3/scratchpad/intake2/GSOS-301/manifest.json`,
+  manifest digest `cb5ea9c8d8c79e4f8c918000d51a91ded42176609fa0d0b2b45ef9ae33758e10`, 63 inputs
+  at commit `1b560c4618e41d97feedfcbae45b7c43b6481e23`. Recomputed independently with
+  `manifestFor()` over `intakeRoots('gsos-301')`: 0 mismatches, digest reproduced, both registers
+  matched at read time. **Any change to a bound input voids this decision** (Art. VII.8.5). The
+  repairs above will change `content-spec.md`, so a fresh manifest and intake are required.
+- **Limits and what remains blocked:**
+  - **`status` stays `draft`.** Outcomes, readings and structure are not approved.
+  - **Blocked:** the whole `## Reading list` and the `### Mapped readings` of Units 1, 3 and 6
+    (`henson2022`) and Units 2 and 4 (`lindsey2010`); Unit 5's outcome line; every unit's
+    missing v2 lines; the course review plan.
+  - **No new escalation.** Every open item is a repair the guide, `D-2026-0053` or the confirmed
+    `D-2026-0051` already determines. Reserved codes `G-2026-114` to `G-2026-117` are unused.
+  - Context only, not judged: authored Units 1-2 and their coverage, sources and figure files.
+  - Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
+
+
+---
+
+## D-2026-0064 - GSOS-301 third intake: seven criteria approved; readings fail on one repair (no registry-verifiable open-access source planned for Units 2, 4 and 5)
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** GSOS-301 only. Re-checks all eight criteria against the spec as repaired after
+  `D-2026-0057`. Settles identity, partition, coverage, outcomes, blueprint, structure and decision
+  residue. Does **not** approve readings, which fails on one item the owner ruling `D-2026-0053`
+  item 2 already determines (repair below; no new owner decision needed).
+- **Decided by:** agent:evaluator, 2026-10-10
+- **Decision:**
+  1. **Identity (pass).** The guide, Scheme and catalog are byte-identical to the `D-2026-0057`
+     bundle; `content-spec.md:12` states 2 (2-0) against the guide's `03` (`2nd 2026.txt:789`),
+     which `G-2026-01` and `G-2026-05` already adjudicate.
+  2. **Partition (pass).** Unchanged since `D-2026-0057` item 2 (checklists, Topic lists and Week
+     schedule untouched apart from dropping the `D-2026-0012` citation at `:68`). Rests on the
+     confirmed owner ruling `D-2026-0053` item 1, not on the guide alone.
+  3. **Coverage (pass).** The 43 checklist rows are unchanged (re-counted: 43 `U<n>-NN | Week`
+     rows) and remain the guide's 43 teaching leaves (`2nd 2026.txt:804-935`, excluding Weeks 8
+     and 16), each once. The new per-unit lines reference only existing IDs and add no sub-topic.
+  4. **Outcomes (pass).** The `D-2026-0057` repair is made: Unit 5 (`:374`) now attributes
+     "describe institutional change" to CLO 4 (`2nd 2026.txt:797-798`, "inequality and social
+     change") and the institution clauses to CLO 3 (`:796`). Every unit outcome names a guide CLO,
+     as `D-2026-0053` item 4 permits.
+  5. **Blueprint (pass).** Unchanged since `D-2026-0051` item 4 / `D-2026-0057` item 4.
+  6. **Structure (pass).** All four `D-2026-0057` structure repairs are made: `## Course review
+     plan` has 4 practicum ideas (`:102-105`, contract 3-6); every unit carries
+     `**Prerequisite knowledge**`, `**Worked-examples plan**` and `**International best-practice
+     notes**` (Units 1-6 at `:149-153`, `:215-219`, `:276-280`, `:336-340`, `:396-400`,
+     `:459-463`); `:36` no longer attributes "trainee teachers" to the guide; `:12` cites
+     `776-968`. Front matter (`open_access_floor: {default: 1}`, the mapping form `D-2026-0053`
+     item 2 requires) validates against `contracts/content-spec-frontmatter.schema.json`.
+  7. **Decision residue (pass).** Searched the whole bound GSOS-301 tree: no `henson2022` or
+     `lindsey2010` key survives (only historical notes recording their replacement), no
+     `introduction-to-sociology-3e` URL, no `776-972`, no bare `open_access_floor: 1`, no derived
+     calendar; the advisory `D-2026-0012` citation is gone.
+- **Not approved:**
+  - **Readings (fail, one repair).** Repairs (a)-(c) of `D-2026-0057` are made and verified:
+    (a) the guide's list (`2nd 2026.txt:964-968`) is recorded at `:43-50`; `johnson1961`
+    resolves (preview PDF fetched 2026-10-10: Harry M. Johnson, *Sociology: A Systematic
+    Introduction*, Routledge 1961, International Library of Sociology, paperback 2011, (c) 1960
+    Harcourt, Brace), title-level under `D-2026-0001` as stated. (b) `henson2022` is replaced by
+    `hammondnd` (`:57`): the LibreTexts URL returns 200 and names Ron Hammond and Paul Cheney,
+    Utah Valley University; OpenAlex `W2590335685` is "Introduction to Sociology Hammond and
+    Cheney", Ron Hammond and Paul Chaney, book, open access. (c) `lindsey2001` (`:63`): Open
+    Library `OL7331644M` confirms ISBN 0130413259, *Sociology (2nd Edition)*, Prentice Hall, 26
+    June 2001, work `OL3335670W`.
+    **Remaining defect:** `D-2026-0053` item 2 requires every unit to bind an open-access source
+    under a floor declared in the form `check:source-floor` reads, and that check counts a source
+    only when its row names a registry (Crossref, OpenAlex, ERIC, DOAJ, PubMed, Semantic Scholar,
+    Unpaywall) and an ISO date (`scripts/check-source-floor.mjs:40-41,75-76`); the spec's own
+    front matter (`:4-5`) calls the floor "registry-verified". Units 1, 3 and 6 plan `hammondnd`,
+    which carries OpenAlex and a date (`:57`). Units 2, 4 and 5 (`:222-226`, `:342-346`,
+    `:402-406`) plan only `conerly2021` as open access, whose row (`:56`) records no registry,
+    and no registry record of the 3rd edition was found (OpenAlex title and author searches: no
+    3e record, only 2e copies; Crossref: no match; Semantic Scholar rate-limited, unchecked). As
+    planned, those three units cannot meet the spec's own floor; `check:source-floor` already
+    exits 1 on authored Unit 2 for this reason. **Repair:** for each of Units 2, 4 and 5, plan in
+    `### Mapped readings` an open-access source whose reading-list row records a registry
+    identity and verification date (for example `hammondnd`, whose culture, socialization,
+    stratification, gender, family, education and religion chapters `:57` itself lists), or
+    record such an identity for `conerly2021` if one exists. Determined by `D-2026-0053` item 2;
+    no escalation.
+  - **Advisories (no repair required):** `hammondnd` is cited n.d. while OpenAlex records 2017
+    (a repository deposit year); either is defensible. `singhnd`'s author and audience
+    attribution (`:50`) could not be checked (SlideShare served a client challenge); no unit maps
+    it, so no unit depends on it, but it must be verified before any unit binds it.
+- **Basis:** `Scheme-and-Course-guides/extracted-text/2nd 2026.txt:776-968`; owner rulings
+  `D-2026-0053` (confirmed 2026-10-10) items 1, 2 and 4; `D-2026-0051` (confirmed) and its repair
+  list; `D-2026-0057`; `G-2026-01`, `G-2026-05`; `D-2026-0001`; `specs/content/style-guide.md`;
+  `contracts/content-spec-frontmatter.schema.json`.
+  **Deterministic checks at `cb40583c`, real exit codes:** `check:no-em-dash` 0,
+  `validate:content` 0, `check:bloom-bands` 0, `check:concept-graph` 0, `check:depth-gate` 0,
+  `check:no-answer-keys` 0, `check:docs-sync` 0, `check:figures` **1** (15 GSOS-301 findings, all
+  in pre-intake authored Units 1-2), `check:source-floor` **1** (GSOS-301 Unit 2: 0
+  registry-verified sources, floor 1; see the readings defect), `check:pipeline-gate` **1**
+  (GSOS-301 Units 1-2: spec `draft`, G2 rows not done).
+- **Bound to:** `/tmp/claude-1005/-home-a2ahs-mega-book-for-B-Ed/e283ce34-647b-4701-9268-ea887141a5b3/scratchpad/intake3/GSOS-301/manifest.json`,
+  manifest digest `bb6b75142c86353c6d8f824e8bf31468cc36ea290a030b3b3ee9d26047004c06`, 65 inputs
+  at commit `cb40583ce918cbb486c2a6860ad32f56c611f085`. Recomputed independently with
+  `manifestFor()` over `intakeRoots('gsos-301')`: 0 mismatches, digest reproduced, both registers
+  matched at read time. **Any change to a bound input voids this decision** (Art. VII.8.5). The
+  readings repair will change `content-spec.md`, so a fresh manifest and intake are required.
+- **Limits and what remains blocked:**
+  - **`status` stays `draft`.** Readings is not approved; the spec may not move to
+    `status: approved` on confirmation of this decision.
+  - **Blocked:** the `### Mapped readings` of Units 2, 4 and 5 and the reading-list rows they
+    rely on. A fourth intake may limit itself to the readings repair if every other bound input is
+    unchanged.
+  - **No escalation.** Reserved codes `G-2026-142` to `G-2026-145` are unused.
+  - Context only, not judged: authored Units 1-2 and their coverage, sources and figure files.
+  - Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
+
+
+---
+
+## D-2026-0066 - GSOS-301 fourth intake: all eight criteria approved; readings repair from D-2026-0064 verified
+
+- **Status:** confirmed (owner, 2026-10-10, relayed by the board session); spec moves to status: approved
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** GSOS-301 only. Limited, as `D-2026-0064` permitted, to the readings repair plus a fresh
+  decision-residue search; restates the other six verdicts on this manifest because their inputs
+  are byte-identical. Settles all eight criteria for the spec at `44dfdb70`.
+- **Decided by:** agent:evaluator, 2026-10-10
+- **Decision:**
+  1. **Delta.** Against the `D-2026-0064` manifest (digest `bb6b7514...`), the only changed spec
+     input is `specs/content/gsos-301/content-spec.md` (`git diff 5bc6ea4c 44dfdb70`: 4
+     insertions, 1 deletion at `:57`, `:227`, `:348`, `:409`); the two other new paths are the
+     prior intake's own record. Guide, Scheme, catalog, contracts, style guide, coverage, sources,
+     figures and concepts are byte-identical.
+  2. **Identity, partition, coverage, outcomes, blueprint, structure (pass, carried forward).**
+     None of their locators is touched; `D-2026-0064` items 1-6 hold. Partition rests on the
+     confirmed owner ruling `D-2026-0053` item 1. The three new Mapped-readings rows cite only
+     existing checklist IDs (U2-01..06 `:197-202`, U4-01..06 `:321-326`, U5-01..03 `:382-384`) and
+     add no sub-topic; `validate:content` exits 0.
+  3. **Readings (pass).** `D-2026-0053` item 2 requires every unit to bind a registry-verified
+     open-access source. `hammondnd` (`:57`) records OpenAlex `W2590335685` and a verification
+     date; re-queried 2026-10-10: book, open access (green), Ron Hammond and Paul Chaney. It is now
+     planned in every unit's `### Mapped readings` (`:160`, `:227`, `:288`, `:348`, `:409`,
+     `:473`) and its Units column reads `1-6`. Every chapter cited exists on LibreTexts under the
+     stated title (checked 2026-10-10): 1.05 Culture, 1.06 Socialization, 1.07 Society and Groups,
+     1.08 Deviance and Crime, 1.09 Stratification, 1.10 Sex and Gender, 1.13 Family, 1.14
+     Education, 1.15 Religion, 1.16 Media. The earlier readings repairs (guide list `:43-50`,
+     `johnson1961` title-level under `D-2026-0001`, `lindsey2001` ISBN) are unchanged.
+  4. **Decision residue (pass).** Whole bound GSOS-301 tree searched afresh: `henson2022` survives
+     only in historical replacement notes; no `lindsey2010`, `introduction-to-sociology-3e`,
+     `776-972`, `D-2026-0012`, bare `open_access_floor: 1`, or stale `hammondnd` Units `1, 3, 6`.
+- **Advisories (no repair required):** chapter 1.10 does not treat feminist perspectives, so the
+  Unit 4 author should not cite `hammondnd` for U4-06 (`conerly2021` and `lindsey2001` cover it).
+  `check:source-floor` still exits 1 on authored `sources/unit-02.md`, which is pre-intake content
+  that does not yet bind `hammondnd`; it must be fixed when Unit 2 is re-sourced, and is not a spec
+  defect. The `D-2026-0064` advisories on `hammondnd`'s year and `singhnd` stand.
+- **Basis:** `Scheme-and-Course-guides/extracted-text/2nd 2026.txt:776-968`; owner rulings
+  `D-2026-0053` (confirmed) items 1, 2 and 4; `D-2026-0051` (confirmed); `D-2026-0057`,
+  `D-2026-0064`; `G-2026-01`, `G-2026-05`; `D-2026-0001`; `scripts/check-source-floor.mjs:40-41,75-76`.
+  **Deterministic checks at `44dfdb70`, real exit codes:** `check:no-em-dash` 0,
+  `validate:content` 0, `check:bloom-bands` 0, `check:concept-graph` 0, `check:depth-gate` 0,
+  `check:no-answer-keys` 0, `check:docs-sync` 0, `check:figures` **1** (15 GSOS-301 findings, all
+  in pre-intake authored Units 1-2), `check:source-floor` **1** (authored Unit 2 sources file),
+  `check:pipeline-gate` **1** (Units 1-2: spec `draft`, G2 rows not done). None is a spec defect;
+  all three were present at `D-2026-0064`.
+- **Bound to:** `/tmp/claude-1005/-home-a2ahs-mega-book-for-B-Ed/e283ce34-647b-4701-9268-ea887141a5b3/scratchpad/intake4/GSOS-301/manifest.json`,
+  manifest digest `f47bd2809b78fdfcf4c90fe93954530b714f860d1cce03ee79c59e11a9cbaccd`, 67 inputs
+  at commit `44dfdb707e0d50b85a21574f5f17b3d21df4fd41`. Recomputed independently with
+  `manifestFor()` over `intakeRoots('gsos-301')`: 0 mismatches, digest reproduced, both registers
+  matched at read time. Record: `intake4/GSOS-301/evaluation.md`. **Any change to a bound input
+  voids this decision** (Art. VII.8.5), except the anticipated `status:` line below.
+- **Limits:**
+  - On owner confirmation, `content-spec.md` may move to `status: approved`. Nothing remains
+    blocked at G0/G1.
+  - **No escalation.** Reserved codes `G-2026-150` to `G-2026-153` are unused.
+  - Context only, not judged: authored Units 1-2 and their coverage, sources and figure files.
+  - Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4).

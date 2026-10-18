@@ -1,0 +1,62 @@
+render-review evidence (G3 English, GSOS-301 Unit 1)
+=====================================================
+Timestamp: 2026-10-18T21:10:00Z
+Reviewer: agent:g3-reviewer
+Model: Gemini 3.8 Flash (High)
+Reviewer Run ID: 7725a4f0-f3eb-4a48-aed1-23a2605c30d8
+
+CONSTRAINT: The brief for this crew job forbids running `npm run build` or a dev
+server. Therefore full live browser/print inspection at 360px and A4 was not
+performed via automated browser. What follows is everything verified through
+source-level and geometry inspection, plus a clear statement of detected defects.
+
+--- Source-level visual and geometry inspection (performed) ---
+
+1. Heading hierarchy (all 6 files):
+   - index.mdx: single h1, h2 for outcomes/prerequisites/unit list
+   - topic-01.mdx: h1, h2 sections (Explanation, Activity, Check, Summary,
+     Self-assessment, Try this, Summative task, Further reading), h3 sub-sections
+   - topic-02.mdx: same structure as topic-01
+   - topic-03.mdx: same structure as topic-01
+   - unit-assessment.mdx: h1, h2 (Unit summary, Summative assessment,
+     MCQs/RRQs/ERQs/Answers), h3 per question group
+   - unit-teacher-notes.mdx: h1, h2 sections, h3 sub-sections
+   - All files use a single h1 and clean h2/h3 nesting without skipped levels.
+
+2. Alt text on all figures (6 figures across 3 topics):
+   - fig-U1-1 (diagram): Venn diagram showing sociology overlapping with common sense, psychology and social work
+   - fig-U1-2 (concept-map): Sociological imagination linking personal troubles to public issues
+   - fig-U1-3 (concept-map): Four founders of sociology and key concepts
+   - fig-U1-4 (table): Comparison table of the four founders (concept, method, legacy)
+   - fig-U1-5 (concept-map): Three major sociological perspectives and core assumptions
+   - fig-U1-6 (table): Comparison table of the three perspectives (assumption, level of analysis)
+   - All alt texts are descriptive and match figure content.
+
+3. Figure SVG text geometry (via scripts/measure-figure-text.mjs):
+   - fig-U1-1 (.svg & .dark.svg): DEFECT - wordmark "textbook.com.pk" overflows right edge by 34.6px (CSS text { text-anchor: middle } overrides text-anchor="end")
+   - fig-U1-2 (.svg & .dark.svg): DEFECT - wordmark "textbook.com.pk" overflows right edge by 34.6px
+   - fig-U1-3 (.svg & .dark.svg): DEFECT - wordmark "textbook.com.pk" overflows right edge by 34.6px
+   - fig-U1-4 (.svg & .dark.svg): DEFECT - "department; foundation of functionalism" overflows column boundary and right edge by 3.7px
+   - fig-U1-5 (.svg & .dark.svg): DEFECT - wordmark "textbook.com.pk" overflows right edge by 34.6px
+   - fig-U1-6 (.svg & .dark.svg): DEFECT - "Social classes & power structures" overflows column boundary and right edge by 18.0px
+   - Total text-geometry problems: 12 across 6 figures and their dark variants.
+
+4. Visual density (check:figures passed):
+   - topic-01: 2 figures (diagram + concept-map)
+   - topic-02: 2 figures (concept-map + table)
+   - topic-03: 2 figures (concept-map + table)
+   - Archetypes present: diagram, concept-map, table. Visual density floor (>= 2 per topic, >= 1 concept-map/flowchart/timeline per unit) met.
+
+5. Descriptive links:
+   - index.mdx uses relative links with descriptive text ([What sociology is, and why it matters](./topic-01), etc.). No bare URLs.
+
+6. Components:
+   - <Glossary term="Sociology" /> used in topic-01.
+   - <PrintHandout /> present on all topic and assessment pages.
+
+--- NOT verified (requires build + dev server) ---
+- Actual rendered 360px narrow-view layout
+- A4 print-emulation layout
+- Color contrast in rendered themes
+
+Exit code: 1 (figure text geometry overflows detected on all 6 figures)

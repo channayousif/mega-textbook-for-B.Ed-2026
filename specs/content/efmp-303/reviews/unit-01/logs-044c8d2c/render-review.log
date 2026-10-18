@@ -1,0 +1,20 @@
+Render inspection and visual accessibility check for EFMP-303 Unit 1 (English, G3).
+
+1. Source and Structural Inspection:
+- Heading hierarchy verified across all 7 MDX files (index.mdx, topic-01.mdx, topic-02.mdx, topic-03.mdx, topic-04.mdx, unit-assessment.mdx, unit-teacher-notes.mdx). No skipped heading levels (H1 -> H2 -> H3 sequential).
+- Descriptive links verified throughout; no bare URLs in prose.
+- Figures: 8 placed <Figure> carriers matching manifest in specs/content/efmp-303/figures/unit-01.md with descriptive alt text and captions.
+- Tables: Content tables formatted in Markdown, conforming to static CSS responsive container rules (`display: block; width: fit-content; overflow-x: auto`).
+
+2. SVG Text Geometry and Asset Verification:
+- All 8 figures have light, dark, Urdu, and Urdu-dark SVG files present in static/img/figures/efmp-303/unit-01/ (32 total SVG files).
+- Text geometry verified using scripts/measure-figure-text.mjs: 0 glyph overflows outside viewBox. Minor cosmetic panel overlap noted on fig-U1-8 wordmark margin.
+
+3. Visual Render Artifact:
+- Generated WebP render of fig-U1-1.svg saved to specs/content/efmp-303/reviews/unit-01/renders-044c8d2c/fig-U1-1.webp via sharp. Image visual inspection clean.
+
+4. Live Server / Browser Viewport Limitation:
+- Full interactive browser inspection (narrow 360x780 viewport swipe/keyboard reachability and A4 print stylesheet preview) was NOT performed because .crew/brief.md explicitly prohibits running `npm run build` or a dev server on this production host.
+- Live inspection requires a separate verification on an authorized build host before G3 certification.
+
+Exit code: 1 (live browser inspection unperformed under host brief constraints).

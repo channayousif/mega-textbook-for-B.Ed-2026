@@ -30,7 +30,7 @@ files at that commit. The geng-300 reds are recorded as known-stale-on-main in t
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0030; content-spec status: approved |
 | Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-02/G2/20261013T123447966Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | advisory run 001 (disposition: pass, no blocking findings) at reviews/unit-02/G3/agent-g3-gict300-u2-run001.json; agent reviews advisory under ADR-0019 |
-| Unit 2 | G4 ur-translation | ▢ | | |
+| Unit 2 | G4 ur-translation | ▣ | | mirror complete (2026-10-17): all 7 files from EN 37fcef38, 8 .ur.svg/.ur.dark.svg variants; structural parity clean under a temporary reviewed flip (reverted); "volatile" retranslated from متغیر to عارضی / غیر عارضی; all 14 key_terms are absent from terminology.csv and proposed to the owner (pipeline-gate terminology check will fail at reviewed until banked); render inspection not run (no build on this host); translation_status stays draft pending G5 |
 | Unit 2 | G5 ur-review | ▢ | | advisory run 001 (disposition: revise; F1-F3 figure-label defects repaired) at reviews/unit-02/G5/agent-g5-gict300-u2-run001.json; agent reviews advisory under ADR-0019 |
 | Unit 2 | G6 assets | ▢ | | |
 | Unit 2 | G7 publish | ▢ | | |
@@ -44,7 +44,7 @@ files at that commit. The geng-300 reds are recorded as known-stale-on-main in t
 | Unit 4 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0030; content-spec status: approved |
 | Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-04/G2/20261013T123512662Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | run 001 (disposition: revise; 5 blocking findings repaired at a7200d2) at reviews/unit-04/G3/agent-g3-gict300-u4-run001.json; run 002 (disposition: revise; B1 password miscount + B2 preamble repaired at aa2e7d0) at reviews/unit-04/G3/agent-g3-gict300-u4-run002.json; agent reviews advisory under ADR-0019 |
-| Unit 4 | G4 ur-translation | ▢ | | |
+| Unit 4 | G4 ur-translation | ▣ | | mirror complete (2026-10-18): all 7 files verified against EN ef87f8f4; 8 .ur.svg/.ur.dark.svg variants synced; semantic pass repaired ناجانز->نامعلوم, ملازم->آجر, عادیں->عادات, consent labels in fig-U4-7.ur.svg and dashed boxes in fig-U4-3.ur.svg; structural parity clean under temporary reviewed flip (reverted); all 15 key_terms proposed to owner (unbanked in terminology.csv); translation_status stays draft pending fresh independent G5 |
 | Unit 4 | G5 ur-review | ▢ | | advisory run 001 (disposition: escalate; F1 stale G3 dependency, F2-F7 Urdu defects repaired) at reviews/unit-04/G5/agent-g5-gict300-u4-run001.json; agent reviews advisory under ADR-0019 |
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |

@@ -30,9 +30,9 @@ illustration `fig-U2-9` is left `prompt-only` in `figures/unit-02.banner.md` for
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-02/G2/20261013T123659954Z-gates.json |
-| Unit 2 | G3 en-review | ▢ | | awaiting CurriculumOwner |
-| Unit 2 | G4 ur-translation | ▢ | | filed as a follow-up to TEX-23 |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-02/G2/20261018T203159015Z-gates.json |
+| Unit 2 | G3 en-review | ▣ | | Advisory independent Codex G3 **escalate** (thread 01a14a38-39b5-7ca3-b776-327860ede213): conceptual/source/assessment defects and SVG clipping; author provenance and page/print renders missing. Report: `specs/content/efmp-304/reviews/unit-02/G3/01a14a38-39b5-7ca3-b776-327860ede213.json`. Separate author repairs, owner/host supplies missing evidence, then fresh review. G3 stays open, unsigned (ADR-0019). |
+| Unit 2 | G4 ur-translation | ▣ | | Codex completed the six-page draft Urdu mirror against English `88efbd7d` on 2026-10-18, including 10/10/5 assessment parity, bank-bound key terms, eight Urdu SVGs and derived dark variants. Handoff: `specs/content/efmp-304/translations/unit-02/handoff.md`. Draft remains pending English G3 repairs, fresh independent G5 and full-page RTL/print inspection; no certification claimed |
 | Unit 2 | G5 ur-review | ▢ | | |
 | Unit 2 | G6 assets | ▣ | | 8 schematics placed; banner `fig-U2-9` prompt-only, raster handoff pending |
 | Unit 2 | G7 publish | ▢ | | |
@@ -51,7 +51,7 @@ intake; G2 cleared by deterministic gates.
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-03/G2/20261013T123703920Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | awaiting CurriculumOwner |
 | Unit 3 | G3 en-review | ▢ | | Advisory **escalate**: `specs/content/efmp-304/reviews/unit-03/G3/crew-efmp-304-u03-g3-r65d2428e.json`; limitations and follow-up: `specs/content/efmp-304/reviews/unit-03/G3/continuation-summary.md`. Render inspection, provenance and source support remain unresolved. CurriculumOwner to arrange follow-up; no G3 sign-off. |
-| Unit 3 | G4 ur-translation | ▢ | | filed as a follow-up to TEX-23 |
+| Unit 3 | G4 ur-translation | ▣ | | Crew job `efmp-304-u03-translate` retranslated the six-page Urdu mirror against English `88efbd7d` on 2026-10-18: academic-plain prose replacing the earlier draft (which inverted several validity claims), translated metadata and Bloom tags, bank-bound `key_terms` (Validity = صداقت), Urdu MCQ option labels in original order, and eight mirrored `.ur.svg` figures with derived dark variants. Handoff and proposed terms: `specs/content/efmp-304/reviews/unit-03/G4-20261018/handoff.md`. check:content 13/13; parity, figures and key_terms clean under a temporary `reviewed` flip (reverted). `translation_status` stays draft; fresh independent G5 and full-page RTL/print inspection pending. No certification claimed |
 | Unit 3 | G5 ur-review | ▢ | | |
 | Unit 3 | G6 assets | ✅ | auto:gates | 8 schematics placed; banner `fig-U3-9` prompt-only, raster handoff pending |
 | Unit 3 | G7 publish | ▢ | | |

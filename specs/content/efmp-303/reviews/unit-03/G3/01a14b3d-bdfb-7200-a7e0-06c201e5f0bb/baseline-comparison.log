@@ -1,0 +1,7 @@
+Baseline HEAD and origin/main: ee4d40dbbb9b9ff1f4c4e6b23b3d25d0772072f6
+Baseline ran before tracker changes on clean tracked files.
+Compared complete failure sections of initial and final npm run check:content logs byte for byte: identical.
+Both runs: validate:content and check:content-status fail; all other 11 content gates pass.
+All 316 content validator findings read: malformed glossary.json plus 315 cascading unresolved Glossary occurrences.
+New findings: 0. No baseline source files changed.
+Exit code: 0

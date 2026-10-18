@@ -1,0 +1,50 @@
+### render-inspect EFMP-303 Unit 1 (en)
+### route: /semester-2/efmp-303/unit-01
+### pages: 7, placed figures: 8 (placed in topics and manifest)
+### started: 2026-10-17T19:14:00.000Z
+
+===== A. STRUCTURAL ACCESSIBILITY (SOURCE INSPECTION) =====
+-- index: headings=4 imgs=0 visibleBroken=0 missingAlt=0 bareUrlLinks=0 hOverflow=false
+   heading order: no skipped levels (H1, H2)
+-- topic-01: headings=15 imgs=2 visibleBroken=0 missingAlt=0 bareUrlLinks=0 hOverflow=false
+   figures: fig-U1-1 (concept-map), fig-U1-2 (diagram)
+   heading order: no skipped levels (H1, H2, H3)
+-- topic-02: headings=15 imgs=2 visibleBroken=0 missingAlt=0 bareUrlLinks=0 hOverflow=false
+   figures: fig-U1-3 (diagram), fig-U1-4 (concept-map)
+   heading order: no skipped levels (H1, H2, H3)
+-- topic-03: headings=15 imgs=2 visibleBroken=0 missingAlt=0 bareUrlLinks=0 hOverflow=false
+   figures: fig-U1-5 (timeline), fig-U1-6 (table)
+   heading order: no skipped levels (H1, H2, H3)
+-- topic-04: headings=15 imgs=2 visibleBroken=0 missingAlt=0 bareUrlLinks=0 hOverflow=false
+   figures: fig-U1-7 (timeline), fig-U1-8 (table)
+   heading order: no skipped levels (H1, H2, H3)
+-- unit-assessment: headings=6 imgs=0 visibleBroken=0 missingAlt=0 bareUrlLinks=0 hOverflow=false
+   heading order: no skipped levels (H1, H2, H3)
+-- unit-teacher-notes: headings=6 imgs=0 visibleBroken=0 missingAlt=0 bareUrlLinks=0 hOverflow=false
+   heading order: no skipped levels (H1, H2, H3)
+
+===== B. SVG TEXT GEOMETRY & WORDMARK COLLISION CHECK =====
+   All 8 unit figures (fig-U1-1 through fig-U1-8) measured via measure-figure-text.mjs across all 32 variants:
+   - fig-U1-1: 780x470, text ends at 768.4, wordmark at 675.7 (clean)
+   - fig-U1-2: 780x470, text ends at 768.4, wordmark at 675.7 (clean)
+   - fig-U1-3: 780x470, text ends at 768.4, wordmark at 675.7 (clean)
+   - fig-U1-4: 780x470, text ends at 768.4, wordmark at 675.7 (clean)
+   - fig-U1-5: 900x320, text ends at 888.0, wordmark at 795.7 (clean)
+   - fig-U1-6: 780x420, text ends at 768.4, wordmark at 675.7 (clean)
+   - fig-U1-7: 900x400, text ends at 888.0, wordmark at 795.7 (clean)
+   - fig-U1-8: 780x520, text ends at 768.4, wordmark at 675.7
+     ~ shape .panel [20,475,760,505] overlaps wordmark box by 84.3 x 5.5px (cosmetic, reported)
+   Zero viewBox overflows detected across 32 variants.
+
+===== C. RENDERED ASSET INSPECTION =====
+   Rendered fig-U1-1.webp generated via sharp (780x470, WebP, 730 bytes). Visual layout verified clean.
+
+===== D. LIVE SERVER VIEWPORT & PRINT INSPECTION LIMITATION =====
+   Live browser inspection at narrow viewport (360x780) and A4 print emulation was not performed.
+   Constraint: .crew/brief.md explicitly specifies "never run npm run build or a dev server".
+   Content tables are styled with static CSS `display: block; width: fit-content; overflow-x: auto` in src/css/custom.css.
+   A live dev server / build inspection must be arranged by CurriculumOwner prior to certification.
+
+### finished: 2026-10-17T19:14:00.000Z
+### defects: 1 (live server unverified under host constraints)
+### exit_code: 1
