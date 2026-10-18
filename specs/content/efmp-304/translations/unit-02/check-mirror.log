@@ -1,0 +1,9 @@
+index.mdx: file, heading, metadata, component/import, figure/alt parity and MDX compile PASS
+topic-01.mdx: file, heading, metadata, component/import, figure/alt parity and MDX compile PASS
+topic-02.mdx: file, heading, metadata, component/import, figure/alt parity and MDX compile PASS
+topic-03.mdx: file, heading, metadata, component/import, figure/alt parity and MDX compile PASS
+topic-04.mdx: file, heading, metadata, component/import, figure/alt parity and MDX compile PASS
+unit-assessment.mdx: file, heading, metadata, component/import, figure/alt parity and MDX compile PASS
+9 declared key_terms conform to the frozen bank
+Assessment: 10/10/5 items, 40 options in original order, final bounded answers section PASS
+Translator MCQ self-solve: B C B B B A B C B C, corresponding to ب ج ب ب ب الف ب ج ب ج. Not independent review.
