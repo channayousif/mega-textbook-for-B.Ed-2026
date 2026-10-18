@@ -78,7 +78,7 @@ a `flowchart` and a `concept-map` as the Art. III.10 schematics. G1 unit-spec at
 |---|---|---|---|---|
 | Unit 5 | G1 unit-spec | ▢ | | board G0/G1 intake pending |
 | Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-303/reviews/unit-05/G2/20261017T113148433Z-gates.json |
-| Unit 5 | G3 en-review | ▢ | | |
+| Unit 5 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only: specs/content/efmp-303/reviews/unit-05/G3/crew-20261018.json; source support, assessment mappings/scoring, provenance and current renders unresolved. Unsigned; G3 remains open. |
 | Unit 5 | G4 ur-translation | ▢ | | |
 | Unit 5 | G5 ur-review | ▢ | | |
 | Unit 5 | G6 assets | ✅ | auto:gates | 4 schematics placed |
