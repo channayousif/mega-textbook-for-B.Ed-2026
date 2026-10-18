@@ -80,3 +80,5 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit 6 | G5 ur-review | ▢ | | |
 | Unit 6 | G6 assets | ▢ | | |
 | Unit 6 | G7 publish | ▢ | | |
+
+| Unit 2 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalate: specs/content/gsos-301/reviews/unit-02/G3/01a150d2-88d4-7793-864c-89e5aeafc08d.json; citation, stage, Bloom and mapping repairs; provenance and render evidence missing; no certification |
