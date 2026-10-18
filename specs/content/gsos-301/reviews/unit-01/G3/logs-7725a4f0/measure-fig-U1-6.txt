@@ -1,0 +1,6 @@
+✗ static/img/figures/gsos-301/unit-01/fig-U1-6.svg
+    overflows right edge by 18.0px: "Social classes & power structures"
+✗ static/img/figures/gsos-301/unit-01/fig-U1-6.dark.svg
+    overflows right edge by 18.0px: "Social classes & power structures"
+
+2 text-geometry problem(s).

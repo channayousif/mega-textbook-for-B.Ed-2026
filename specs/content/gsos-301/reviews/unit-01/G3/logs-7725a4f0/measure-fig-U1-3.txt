@@ -1,0 +1,6 @@
+✗ static/img/figures/gsos-301/unit-01/fig-U1-3.svg
+    overflows right edge by 34.6px: "textbook.com.pk"
+✗ static/img/figures/gsos-301/unit-01/fig-U1-3.dark.svg
+    overflows right edge by 34.6px: "textbook.com.pk"
+
+2 text-geometry problem(s).
