@@ -16,19 +16,20 @@ links:
   adr: null
   pr: null
 files:
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gict-300/unit-04/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gict-300/unit-04/topic-02.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gict-300/unit-04/topic-03.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gict-300/unit-04/topic-04.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gict-300/unit-04/unit-assessment.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gict-300/unit-04/unit-teacher-notes.mdx
-  - specs/content/gict-300/tasks.md
-  - static/img/figures/gict-300/unit-04/fig-U4-3.ur.dark.svg
-  - static/img/figures/gict-300/unit-04/fig-U4-3.ur.svg
-  - static/img/figures/gict-300/unit-04/fig-U4-7.ur.dark.svg
-  - static/img/figures/gict-300/unit-04/fig-U4-7.ur.svg
+ - history/prompts/gict-300/crew-gict-300-u04-translate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gict-300/unit-04/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gict-300/unit-04/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gict-300/unit-04/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gict-300/unit-04/topic-04.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gict-300/unit-04/unit-assessment.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gict-300/unit-04/unit-teacher-notes.mdx
+ - specs/content/gict-300/tasks.md
+ - static/img/figures/gict-300/unit-04/fig-U4-3.ur.dark.svg
+ - static/img/figures/gict-300/unit-04/fig-U4-3.ur.svg
+ - static/img/figures/gict-300/unit-04/fig-U4-7.ur.dark.svg
+ - static/img/figures/gict-300/unit-04/fig-U4-7.ur.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -60,26 +61,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit
    needs (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Completed G4 verification and translation polish for GICT-300 Unit 4, fixing terminology and phrasing defects across topics and assessments, syncing figure variants, and recording G4 tracker status.
+Polished and verified the complete GICT-300 Unit 4 Urdu mirror and figure variants at G4 against English baseline ef87f8f4, with all 13 content gates passing.
 
 ## Outcome
 
 - Impact: translate for GICT-300 Unit 4 by agy (attempt 1).
-- Tests: npm run check:content passed with 13/13 gates green.
-- Files: 11 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 12 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Completed G4 verification and translation polish for GICT-300 Unit 4, fixing terminology and phrasing defects across topics and assessments, syncing figure variants, and recording G4 tracker status.
+- Shipped / changed: Polished and verified the complete GICT-300 Unit 4 Urdu mirror and figure variants at G4 against English baseline ef87f8f4, with all 13 content gates passing.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All 15 key_terms in index.mdx remain unbanked in [terminology.csv](file:///home/a2ahs/crew-wt/gict-300-u04-translate/specs/content/terminology.csv) and are proposed for curriculum owner intake (flagged in [unit-04 concepts](file:///home/a2ahs/crew-wt/gict-300-u04-translate/specs/content/gict-300/concepts/unit-04.md)).
-  - The G4 tracker row in [tasks.md](file:///home/a2ahs/crew-wt/gict-300-u04-translate/specs/content/gict-300/tasks.md) is marked in-progress (`▣`) with `translation_status: draft` pending independent G5 review.
+  - All 15 key_terms in Unit 4 index.mdx remain unbanked in terminology.csv (flagged in concepts/unit-04.md) and await curriculum owner banking.
+  - The G4 tracker row in specs/content/gict-300/tasks.md is set to in-progress (▣) and translation_status remains draft pending independent G5 review.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
