@@ -5,6 +5,7 @@
  *   node scripts/crew/crew.mjs plan [--dry-run]     derive jobs from main's content state
  *   node scripts/crew/crew.mjs tick [--dry-run]     inbox, reap, PRs, launch (the lead loop body)
  *   node scripts/crew/crew.mjs status               write and print BOARD.md
+ *   node scripts/crew/crew.mjs retire [--dry-run]   delete Paperclip branches replaced by merged salvage PRs
  *   node scripts/crew/crew.mjs cmd "<owner message>"  apply one owner command now and print the reply
  *   node scripts/crew/crew.mjs digest               send the daily digest to the owner
  *   node scripts/crew/crew.mjs add <course> <unit> <stage> [--branch b] [--pr n] [--task "..."]
@@ -23,6 +24,7 @@ import { join, resolve } from 'node:path';
 import { WORKERS, STAGES, QUOTA_RE, COOLDOWN_MIN, pickWorker } from './workers.mjs';
 import { STATE_DIR, WT_DIR, LOG_DIR, load, save, ACTIVE, TERMINAL, jobId, now } from './state.mjs';
 import { send, reply, readInbox } from './notify.mjs';
+import { reviewFindingsSection, parseHandoff, priorHandoffsSection } from './handoff.mjs';
 
 const ROOT = resolve(new URL('../..', import.meta.url).pathname);
 const MAX_PARALLEL = Number(process.env.CREW_MAX_PARALLEL || 3);
@@ -137,8 +139,10 @@ const STAGE_TASK = {
   fix: (j) => j.task || `Make every content gate pass for ${j.course} Unit ${j.unit} with the smallest edits.`,
 };
 
-function brief(j) {
+function brief(j, board) {
   const skill = STAGES[j.stage].skill;
+  const findings = j.stage === 'repair_en' ? reviewFindingsSection(latestReport(j.course, j.unit, 'G3'), { root: ROOT }) : '';
+  const notes = priorHandoffsSection(board.jobs, j);
   const scope = j.unit === 0
     ? `The whole ${j.course} course: its docs and i18n trees, \`specs/content/${j.course.toLowerCase()}/\`, its figures, and the shared files its PR already touches.`
     : `${j.course} Unit ${j.unit} only: its docs/licence and i18n files, its rows and folders under
@@ -164,7 +168,9 @@ Earlier attempts may have left work on this branch. Check \`git log origin/main.
    failure, fix those in your scope, rerun). Findings that already exist on main belong to other jobs.
 2. All work is committed on this branch with a conventional commit message. Do not push and do not open a PR.
 3. Your final output ends with one line: \`CREW-SUMMARY: <what you changed, in one sentence>\`.
-${j.feedback ? `\n## Feedback from the previous attempt\n${j.feedback}\n` : ''}`;
+4. Optional, just before it: up to 3 lines \`CREW-HANDOFF: <note>\` for facts the next job on this unit
+   needs (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
+${findings ? `\n## Open findings from the latest G3 report\n${findings}\n` : ''}${notes ? `\n## Notes from earlier jobs on this unit\n${notes}\n` : ''}${j.feedback ? `\n## Feedback from the previous attempt\n${j.feedback}\n` : ''}`;
 }
 
 // ---------------------------------------------------------------- launch
@@ -222,7 +228,7 @@ function launch(board, j, worker) {
   j.branch = j.branch || `crew/${j.id}`;
   j.worktree = prepareWorktree(board, j);
   guardPush(j.worktree);
-  const briefText = brief(j);
+  const briefText = brief(j, board);
   writeFileSync(join(j.worktree, '.crew', 'brief.md'), briefText);
   const prompt = `Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.`;
   const [bin, binArgs] = WORKERS[worker].cmd(prompt);
@@ -350,7 +356,7 @@ ${summary}
 
 - Shipped / changed: ${summary}
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).${j.handoff?.length ? `\n- Notes for the next job on this unit:\n${j.handoff.map((n) => `  - ${n}`).join('\n')}` : ''}
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
@@ -383,10 +389,25 @@ function newFindings(wt) {
   return mine.filter((l) => !mainBaseline.has(l));
 }
 
+/**
+ * Keep the dispatcher's own files out of a job's commits. Exclude pathspecs (':!.crew') cannot do
+ * it: with --sparse, git exits 1 when one names an ignored path, and that throw stalled every reap
+ * from 2026-10-17 15:15 for 13 hours. The shared info/exclude covers old branches whose
+ * .gitignore lacks these entries too.
+ */
+function excludeCrewFiles(wt) {
+  const common = sh('git', ['rev-parse', '--path-format=absolute', '--git-common-dir'], wt).out;
+  const file = join(common, 'info', 'exclude');
+  const have = existsSync(file) ? readFileSync(file, 'utf8').split('\n') : [];
+  const missing = ['/.crew/', '/node_modules'].filter((l) => !have.includes(l));
+  if (missing.length) { mkdirSync(join(common, 'info'), { recursive: true }); appendFileSync(file, `\n${missing.join('\n')}\n`); }
+}
+
 function finishSuccess(board, j, logText) {
   const wt = j.worktree;
   if (sh('git', ['status', '--porcelain'], wt).out.replace(/^.. (\.crew|node_modules).*$/gm, '').trim()) {
-    sh('git', ['add', '-A', '--sparse', ':!.crew', ':!node_modules'], wt);
+    excludeCrewFiles(wt);
+    sh('git', ['add', '-A', '--sparse'], wt);
     sh('git', ['commit', '-q', '-m', `chore(crew): ${j.id} uncommitted work from ${j.worker}`], wt, { allowFail: true });
   }
   const ahead = Number(sh('git', ['rev-list', '--count', 'origin/main..HEAD'], wt).out || 0);
@@ -394,6 +415,8 @@ function finishSuccess(board, j, logText) {
   const fresh = newFindings(wt);
   if (fresh.length) return { ok: false, why: `npm run check:content has ${fresh.length} finding(s) that main does not have:\n${fresh.slice(0, 40).join('\n')}` };
   const summary = (logText.match(/CREW-SUMMARY:\s*(.+)/g) || []).at(-1)?.replace(/CREW-SUMMARY:\s*/, '') || `${j.stage} for ${j.course} Unit ${j.unit}`;
+  j.handoff = parseHandoff(logText);
+  if (j.handoff.length) j.handoffAt = now();
   writePhr(j, summary.replace(/\u2014/g, ' - '));
   sh('git', ['add', 'history/prompts'], wt);
   sh('git', ['commit', '-q', '-m', `docs(phr): crew ${j.id}`], wt, { allowFail: true });
@@ -416,46 +439,56 @@ function finishSuccess(board, j, logText) {
 
 function reap(board, health, events) {
   for (const j of board.jobs.filter((x) => x.status === 'running')) {
-    const exitFile = `${j.log}.exit`;
-    if (alive(j.pid) && !existsSync(exitFile)) continue;
-    const code = existsSync(exitFile) ? Number(readFileSync(exitFile, 'utf8').trim()) : -1;
-    const logText = existsSync(j.log) ? readFileSync(j.log, 'utf8') : '';
-    const tail = logText.slice(-4000);
-    const ahead = Number(sh('git', ['rev-list', '--count', 'origin/main..HEAD'], j.worktree, { allowFail: true }).out || 0);
-    const quota = QUOTA_RE.test(tail.slice(-1500)) && (code !== 0 || !ahead);
-    if (quota || (code === 124 && !tail.trim())) {
-      const mins = cool(health, j.worker, tail.slice(-300) || `exit ${code}`);
-      j.status = 'queued';
-      log(board, j, `${j.worker} hit a limit (exit ${code}); cooling ${mins} min; requeued`);
-      events.push(`⏸ ${j.worker} cooling ${mins} min; ${j.id} moves to the next worker`);
-      continue;
+    // One job's failure must not stop the others being reaped: a single throw here used to
+    // leave every finished job marked running, holding all launch slots (2026-10-17/18).
+    try { reapOne(board, health, events, j); } catch (e) {
+      const why = `reap failed: ${e.message.slice(-300)}`;
+      console.error(`${j.id}: ${e.stack || e.message}`);
+      if (j.history?.at(-1)?.slice(25) !== why) log(board, j, why);
     }
-    const result = code === 0 ? finishSuccess(board, j, logText) : { ok: false, why: `worker exited ${code}${code === 124 ? ' (timeout)' : ''}:\n${tail.slice(-1500)}` };
-    if (result.ok) {
-      health[j.worker] = { state: 'ok', strikes: 0 };
-      if (j.parent) {
-        // A fix job only updated its parent's branch; the parent PR goes back to waiting on CI.
-        j.status = 'merged';
-        const parent = board.jobs.find((p) => p.id === j.parent);
-        if (parent) { parent.status = 'pr_open'; log(board, parent, `fixed by ${j.id}`); }
-      } else j.status = 'pr_open';
-      log(board, j, `done on ${j.worker}${j.prNumber ? `; PR #${j.prNumber}` : ''}`);
-      events.push(`✅ ${j.id} by ${j.worker}${j.prNumber ? ` -> PR #${j.prNumber}` : ''}: ${result.summary}`);
-    } else if (j.attempts < 2) {
-      j.status = 'queued';
-      j.feedback = result.why;
-      log(board, j, `attempt ${j.attempts} failed; retrying with feedback`);
-    } else if (j.attempts < 3) {
-      // Third attempt goes to a different worker in the chain, carrying the same feedback.
-      j.status = 'queued';
-      j.feedback = result.why;
-      j.avoid = [j.worker];
-      log(board, j, `second failure on ${j.worker}; handing to another worker`);
-    } else {
-      j.status = 'gate_red';
-      log(board, j, `failed ${j.attempts} times; needs the lead`);
-      events.push(`🔴 ${j.id} failed ${j.attempts} times (last: ${j.worker}). ${result.why.split('\n')[0]}`);
-    }
+  }
+}
+
+function reapOne(board, health, events, j) {
+  const exitFile = `${j.log}.exit`;
+  if (alive(j.pid) && !existsSync(exitFile)) return;
+  const code = existsSync(exitFile) ? Number(readFileSync(exitFile, 'utf8').trim()) : -1;
+  const logText = existsSync(j.log) ? readFileSync(j.log, 'utf8') : '';
+  const tail = logText.slice(-4000);
+  const ahead = Number(sh('git', ['rev-list', '--count', 'origin/main..HEAD'], j.worktree, { allowFail: true }).out || 0);
+  const quota = QUOTA_RE.test(tail.slice(-1500)) && (code !== 0 || !ahead);
+  if (quota || (code === 124 && !tail.trim())) {
+    const mins = cool(health, j.worker, tail.slice(-300) || `exit ${code}`);
+    j.status = 'queued';
+    log(board, j, `${j.worker} hit a limit (exit ${code}); cooling ${mins} min; requeued`);
+    events.push(`⏸ ${j.worker} cooling ${mins} min; ${j.id} moves to the next worker`);
+    return;
+  }
+  const result = code === 0 ? finishSuccess(board, j, logText) : { ok: false, why: `worker exited ${code}${code === 124 ? ' (timeout)' : ''}:\n${tail.slice(-1500)}` };
+  if (result.ok) {
+    health[j.worker] = { state: 'ok', strikes: 0 };
+    if (j.parent) {
+      // A fix job only updated its parent's branch; the parent PR goes back to waiting on CI.
+      j.status = 'merged';
+      const parent = board.jobs.find((p) => p.id === j.parent);
+      if (parent) { parent.status = 'pr_open'; log(board, parent, `fixed by ${j.id}`); }
+    } else j.status = 'pr_open';
+    log(board, j, `done on ${j.worker}${j.prNumber ? `; PR #${j.prNumber}` : ''}`);
+    events.push(`✅ ${j.id} by ${j.worker}${j.prNumber ? ` -> PR #${j.prNumber}` : ''}: ${result.summary}`);
+  } else if (j.attempts < 2) {
+    j.status = 'queued';
+    j.feedback = result.why;
+    log(board, j, `attempt ${j.attempts} failed; retrying with feedback`);
+  } else if (j.attempts < 3) {
+    // Third attempt goes to a different worker in the chain, carrying the same feedback.
+    j.status = 'queued';
+    j.feedback = result.why;
+    j.avoid = [j.worker];
+    log(board, j, `second failure on ${j.worker}; handing to another worker`);
+  } else {
+    j.status = 'gate_red';
+    log(board, j, `failed ${j.attempts} times; needs the lead`);
+    events.push(`🔴 ${j.id} failed ${j.attempts} times (last: ${j.worker}). ${result.why.split('\n')[0]}`);
   }
 }
 
@@ -486,7 +519,57 @@ export function latestChecks(checks) {
   return [...latest.values()].map((x) => x.c);
 }
 
+/** Check names that failed on main's latest finished (not cancelled) CI run. */
+function mainFailures() {
+  const r = sh('gh', ['run', 'list', '--workflow', 'CI', '--branch', 'main', '--event', 'push', '--limit', '10',
+    '--json', 'databaseId,status,conclusion'], ROOT, { allowFail: true });
+  if (!r.ok) return null;
+  const run = JSON.parse(r.out || '[]').find((x) => x.status === 'completed' && x.conclusion !== 'cancelled');
+  if (!run) return null;
+  const v = sh('gh', ['run', 'view', String(run.databaseId), '--json', 'jobs'], ROOT, { allowFail: true });
+  if (!v.ok) return null;
+  return new Set(JSON.parse(v.out).jobs.filter((x) => x.conclusion === 'failure').map((x) => x.name));
+}
+
+/**
+ * Queue CI-fix jobs only for failures that belong to the PR. On 2026-10-17 three CI breaks
+ * (a workflow test, an invalid glossary.json on main, the e2e webServer) turned every PR red
+ * at once, and the crew sent workers to "fix" each PR; one copied ci.yml into a content
+ * branch. A check that also failed on main's latest finished run, or that fails on 3+ PRs
+ * in the same tick, is systemic: those PRs are held (still pr_open, so a re-run picks them
+ * up) and the owner gets one alert.
+ */
+function queueCiFixes(board, red, events) {
+  if (!red.length) return;
+  const count = {};
+  for (const { names } of red) for (const n of new Set(names)) count[n] = (count[n] || 0) + 1;
+  const onMain = mainFailures() || new Set();
+  const systemic = new Set(Object.keys(count).filter((n) => onMain.has(n) || count[n] >= 3));
+  const held = [];
+  for (const { j, names } of red) {
+    if (names.every((n) => systemic.has(n))) {
+      held.push(j.prNumber);
+      if (!/held: systemic/.test(j.history?.at(-1) || '')) log(board, j, `CI red on ${names.join(', ')}, held: systemic (main or 3+ PRs), no fix job`);
+      continue;
+    }
+    const fixes = board.jobs.filter((x) => x.parent === j.id && x.id.includes('-cifix')).length;
+    if (fixes >= 2) { j.status = 'gate_red'; events.push(`🔴 PR #${j.prNumber} (${j.id}) still red after ${fixes} CI fixes`); continue; }
+    board.jobs.push({ id: `${j.id}-cifix${fixes + 1}`, parent: j.id, course: j.course, unit: j.unit, stage: 'fix', status: 'queued', attempts: 0, tried: [],
+      branch: j.branch, pr: j.prNumber, createdAt: now(),
+      task: `CI failed on PR #${j.prNumber} (checks: ${names.join(', ')}). Run \`gh pr checks ${j.prNumber}\` and \`gh run view --log-failed\` to read the failure, fix it on this branch with the smallest change, and make \`npm run check:content\` pass. A build failure is usually malformed MDX or a broken relative link in this unit's files.` });
+    j.status = 'gate_red';
+    log(board, j, `CI red: ${names.join(', ')}; fix job queued`);
+  }
+  const key = [...systemic].sort().join(',');
+  const prev = board.systemicAlert || {};
+  if (held.length && (prev.key !== key || Date.now() - Date.parse(prev.at || 0) > 6 * 36e5)) {
+    board.systemicAlert = { key, at: now() };
+    events.push(`⚠️ CI check(s) ${key} fail on ${onMain.size ? 'main and ' : ''}${held.length} PR(s) (#${held.join(', #')}). Treated as a CI or main problem, not the PRs': no fix jobs queued. They re-check when CI is fixed and re-run.`);
+  }
+}
+
 function managePrs(board, decisions, events) {
+  const red = [];
   for (const j of board.jobs.filter((x) => x.status === 'pr_open' && x.prNumber)) {
     const v = sh('gh', ['pr', 'view', String(j.prNumber), '--json', 'state,mergeable,statusCheckRollup,isDraft'], ROOT, { allowFail: true });
     if (!v.ok) continue;
@@ -512,14 +595,8 @@ function managePrs(board, decisions, events) {
     const failed = checks.filter((c) => (c.status ? !['SUCCESS', 'NEUTRAL', 'SKIPPED'].includes(c.conclusion) : ['FAILURE', 'ERROR'].includes(c.state)));
     if (pending || !checks.length) continue;
     if (failed.length) {
-      if (board.jobs.some((x) => x.parent === j.id && ACTIVE.includes(x.status))) continue;
-      const fixes = board.jobs.filter((x) => x.parent === j.id && x.id.includes('-cifix')).length;
-      if (fixes >= 2) { j.status = 'gate_red'; events.push(`🔴 PR #${j.prNumber} (${j.id}) still red after ${fixes} CI fixes`); continue; }
-      board.jobs.push({ id: `${j.id}-cifix${fixes + 1}`, parent: j.id, course: j.course, unit: j.unit, stage: 'fix', status: 'queued', attempts: 0, tried: [],
-        branch: j.branch, pr: j.prNumber, createdAt: now(),
-        task: `CI failed on PR #${j.prNumber} (checks: ${failed.map((c) => c.name || c.context).join(', ')}). Run \`gh pr checks ${j.prNumber}\` and \`gh run view --log-failed\` to read the failure, fix it on this branch with the smallest change, and make \`npm run check:content\` pass. A build failure is usually malformed MDX or a broken relative link in this unit's files.` });
-      j.status = 'gate_red';
-      log(board, j, `CI red: ${failed.map((c) => c.name).join(', ')}; fix job queued`);
+      // Decided after the loop: a failure shared with main or with many PRs is not this PR's.
+      if (!board.jobs.some((x) => x.parent === j.id && ACTIVE.includes(x.status))) red.push({ j, names: failed.map((c) => c.name || c.context) });
       continue;
     }
     const touched = prFiles(j.prNumber).filter((f) => PROTECTED.some((re) => re.test(f)));
@@ -540,6 +617,42 @@ function managePrs(board, decisions, events) {
       cleanup(j);
       sh('git', ['push', '-q', 'origin', '--delete', j.branch], ROOT, { allowFail: true });
     }
+  }
+  queueCiFixes(board, red, events);
+}
+
+/**
+ * Owner ruling 2026-10-17: once a salvage PR is on main, delete the Paperclip branches it
+ * replaced (the head branches of its `supersedes` PRs, and its `base`). The salvage branch
+ * carries that work, rebased. A branch is kept while any open PR uses it as head or base,
+ * or while its own PR is still open. Runs for every merged job once (`retired`), however
+ * the merge happened.
+ */
+function retireSuperseded(board, events) {
+  const todo = board.jobs.filter((j) => j.status === 'merged' && !j.retired && (j.supersedes || j.base));
+  if (!todo.length) return;
+  const open = sh('gh', ['pr', 'list', '--state', 'open', '--limit', '200', '--json', 'headRefName,baseRefName'], ROOT, { allowFail: true });
+  if (!open.ok) return; // try again next tick rather than delete blind
+  const inUse = new Set(JSON.parse(open.out || '[]').flatMap((p) => [p.headRefName, p.baseRefName]));
+  for (const j of todo) {
+    const branches = new Set(j.base ? [j.base] : []);
+    for (const n of String(j.supersedes || '').split(',').filter(Boolean)) {
+      const v = sh('gh', ['pr', 'view', n, '--json', 'state,headRefName'], ROOT, { allowFail: true });
+      if (!v.ok) continue;
+      const { state, headRefName } = JSON.parse(v.out);
+      if (state !== 'OPEN') branches.add(headRefName);
+    }
+    const gone = [];
+    for (const b of branches) {
+      if (!b || b === 'main' || b === j.branch || b.startsWith('crew/') || inUse.has(b)) continue;
+      if (DRY) { console.log(`[dry-run] would delete branch ${b} (superseded by ${j.id})`); continue; }
+      const r = sh('git', ['push', '-q', 'origin', '--delete', b], ROOT, { allowFail: true });
+      if (r.ok || /remote ref does not exist/.test(r.err)) gone.push(b);
+    }
+    if (DRY) continue;
+    j.retired = true;
+    log(board, j, `retired superseded branches: ${gone.join(', ') || 'none left'}`);
+    if (gone.length) events.push(`🧹 ${j.id}: deleted superseded branches ${gone.join(', ')}`);
   }
 }
 
@@ -705,6 +818,7 @@ function tick() {
     // A cooling worker becomes eligible again when its time passes; the next real job is the probe.
     for (const [w, h] of Object.entries(health)) if (h.state === 'cooling' && Date.parse(h.until) <= Date.now()) health[w] = { ...h, state: 'ok' };
     phase('prs', () => managePrs(board, decisions, events));
+    phase('retire', () => retireSuperseded(board, events));
     if (!control.paused) phase('launch', () => launchQueued(board, health, control, events));
     const eligible = Object.keys(WORKERS).filter((w) => !['down', 'cooling'].includes(health[w]?.state));
     if (!eligible.length) events.push('⚠️ every worker is cooling or down; nothing can run until one recovers');
@@ -723,6 +837,7 @@ const [cmd, ...rest] = firstFlag < 0 ? args : args.slice(0, firstFlag);
 if (cmd === 'plan') plan();
 else if (cmd === 'tick') tick();
 else if (cmd === 'status') status();
+else if (cmd === 'retire') { const board = load('board'); const events = []; retireSuperseded(board, events); if (!DRY) { save('board', board); if (events.length) send(events.join('\n')); } console.log(events.join('\n') || 'nothing to retire'); }
 else if (cmd === 'cmd') {
   // openclaw's crew skill: `crew.mjs cmd "<owner message>" [--via whatsapp]`; prints the reply.
   const text = rest.join(' ');
