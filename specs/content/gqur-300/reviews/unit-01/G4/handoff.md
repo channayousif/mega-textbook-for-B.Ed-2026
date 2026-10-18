@@ -44,3 +44,7 @@ About 9 minutes elapsed from this worker invocation through preparation of the h
 `translation_status` remains `draft` everywhere because no accepted independent G5 review has occurred. G3 and G5 remain outstanding. The skill's Step 7 says not to append a G4 completion row; the existing G4 row has only a handoff note, with its status and empty initials preserved. No gate was self-certified.
 
 The curriculum owner owns vocabulary rulings and the current English G3 dependency. After that dependency is settled, a fresh independent G5 session should compare the whole mirror and inspect the actual built site. Historical advisory reports were not altered or represented as acceptance. No Paperclip issue was supplied or modified.
+
+## Continuation: evidence freshness repair (2026-10-18)
+
+The initial translation handoff and test logs were committed under `specs/content/gqur-300/translations/unit-01/`. The input manifest scoper binds unit-named course directories outside `/reviews/`, so adding that directory made Unit 1's recorded G2 input manifest stale. Relocated the handoff and log files under `specs/content/gqur-300/reviews/unit-01/G4/`, the excluded lifecycle-record path, matching the repository precedent established in GICT-300 Unit 3. Updated `tasks.md` to reference `reviews/unit-01/G4/handoff.md`. Unit 1's G2 input manifest now matches its recorded evidence manifest exactly, passing `check:pipeline-gate` without modifying G2 evidence.
