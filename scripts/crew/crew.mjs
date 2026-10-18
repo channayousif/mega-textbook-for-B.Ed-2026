@@ -389,10 +389,25 @@ function newFindings(wt) {
   return mine.filter((l) => !mainBaseline.has(l));
 }
 
+/**
+ * Keep the dispatcher's own files out of a job's commits. Exclude pathspecs (':!.crew') cannot do
+ * it: with --sparse, git exits 1 when one names an ignored path, and that throw stalled every reap
+ * from 2026-10-17 15:15 for 13 hours. The shared info/exclude covers old branches whose
+ * .gitignore lacks these entries too.
+ */
+function excludeCrewFiles(wt) {
+  const common = sh('git', ['rev-parse', '--path-format=absolute', '--git-common-dir'], wt).out;
+  const file = join(common, 'info', 'exclude');
+  const have = existsSync(file) ? readFileSync(file, 'utf8').split('\n') : [];
+  const missing = ['/.crew/', '/node_modules'].filter((l) => !have.includes(l));
+  if (missing.length) { mkdirSync(join(common, 'info'), { recursive: true }); appendFileSync(file, `\n${missing.join('\n')}\n`); }
+}
+
 function finishSuccess(board, j, logText) {
   const wt = j.worktree;
   if (sh('git', ['status', '--porcelain'], wt).out.replace(/^.. (\.crew|node_modules).*$/gm, '').trim()) {
-    sh('git', ['add', '-A', '--sparse', ':!.crew', ':!node_modules'], wt);
+    excludeCrewFiles(wt);
+    sh('git', ['add', '-A', '--sparse'], wt);
     sh('git', ['commit', '-q', '-m', `chore(crew): ${j.id} uncommitted work from ${j.worker}`], wt, { allowFail: true });
   }
   const ahead = Number(sh('git', ['rev-list', '--count', 'origin/main..HEAD'], wt).out || 0);
@@ -424,46 +439,56 @@ function finishSuccess(board, j, logText) {
 
 function reap(board, health, events) {
   for (const j of board.jobs.filter((x) => x.status === 'running')) {
-    const exitFile = `${j.log}.exit`;
-    if (alive(j.pid) && !existsSync(exitFile)) continue;
-    const code = existsSync(exitFile) ? Number(readFileSync(exitFile, 'utf8').trim()) : -1;
-    const logText = existsSync(j.log) ? readFileSync(j.log, 'utf8') : '';
-    const tail = logText.slice(-4000);
-    const ahead = Number(sh('git', ['rev-list', '--count', 'origin/main..HEAD'], j.worktree, { allowFail: true }).out || 0);
-    const quota = QUOTA_RE.test(tail.slice(-1500)) && (code !== 0 || !ahead);
-    if (quota || (code === 124 && !tail.trim())) {
-      const mins = cool(health, j.worker, tail.slice(-300) || `exit ${code}`);
-      j.status = 'queued';
-      log(board, j, `${j.worker} hit a limit (exit ${code}); cooling ${mins} min; requeued`);
-      events.push(`⏸ ${j.worker} cooling ${mins} min; ${j.id} moves to the next worker`);
-      continue;
+    // One job's failure must not stop the others being reaped: a single throw here used to
+    // leave every finished job marked running, holding all launch slots (2026-10-17/18).
+    try { reapOne(board, health, events, j); } catch (e) {
+      const why = `reap failed: ${e.message.slice(-300)}`;
+      console.error(`${j.id}: ${e.stack || e.message}`);
+      if (j.history?.at(-1)?.slice(25) !== why) log(board, j, why);
     }
-    const result = code === 0 ? finishSuccess(board, j, logText) : { ok: false, why: `worker exited ${code}${code === 124 ? ' (timeout)' : ''}:\n${tail.slice(-1500)}` };
-    if (result.ok) {
-      health[j.worker] = { state: 'ok', strikes: 0 };
-      if (j.parent) {
-        // A fix job only updated its parent's branch; the parent PR goes back to waiting on CI.
-        j.status = 'merged';
-        const parent = board.jobs.find((p) => p.id === j.parent);
-        if (parent) { parent.status = 'pr_open'; log(board, parent, `fixed by ${j.id}`); }
-      } else j.status = 'pr_open';
-      log(board, j, `done on ${j.worker}${j.prNumber ? `; PR #${j.prNumber}` : ''}`);
-      events.push(`✅ ${j.id} by ${j.worker}${j.prNumber ? ` -> PR #${j.prNumber}` : ''}: ${result.summary}`);
-    } else if (j.attempts < 2) {
-      j.status = 'queued';
-      j.feedback = result.why;
-      log(board, j, `attempt ${j.attempts} failed; retrying with feedback`);
-    } else if (j.attempts < 3) {
-      // Third attempt goes to a different worker in the chain, carrying the same feedback.
-      j.status = 'queued';
-      j.feedback = result.why;
-      j.avoid = [j.worker];
-      log(board, j, `second failure on ${j.worker}; handing to another worker`);
-    } else {
-      j.status = 'gate_red';
-      log(board, j, `failed ${j.attempts} times; needs the lead`);
-      events.push(`🔴 ${j.id} failed ${j.attempts} times (last: ${j.worker}). ${result.why.split('\n')[0]}`);
-    }
+  }
+}
+
+function reapOne(board, health, events, j) {
+  const exitFile = `${j.log}.exit`;
+  if (alive(j.pid) && !existsSync(exitFile)) return;
+  const code = existsSync(exitFile) ? Number(readFileSync(exitFile, 'utf8').trim()) : -1;
+  const logText = existsSync(j.log) ? readFileSync(j.log, 'utf8') : '';
+  const tail = logText.slice(-4000);
+  const ahead = Number(sh('git', ['rev-list', '--count', 'origin/main..HEAD'], j.worktree, { allowFail: true }).out || 0);
+  const quota = QUOTA_RE.test(tail.slice(-1500)) && (code !== 0 || !ahead);
+  if (quota || (code === 124 && !tail.trim())) {
+    const mins = cool(health, j.worker, tail.slice(-300) || `exit ${code}`);
+    j.status = 'queued';
+    log(board, j, `${j.worker} hit a limit (exit ${code}); cooling ${mins} min; requeued`);
+    events.push(`⏸ ${j.worker} cooling ${mins} min; ${j.id} moves to the next worker`);
+    return;
+  }
+  const result = code === 0 ? finishSuccess(board, j, logText) : { ok: false, why: `worker exited ${code}${code === 124 ? ' (timeout)' : ''}:\n${tail.slice(-1500)}` };
+  if (result.ok) {
+    health[j.worker] = { state: 'ok', strikes: 0 };
+    if (j.parent) {
+      // A fix job only updated its parent's branch; the parent PR goes back to waiting on CI.
+      j.status = 'merged';
+      const parent = board.jobs.find((p) => p.id === j.parent);
+      if (parent) { parent.status = 'pr_open'; log(board, parent, `fixed by ${j.id}`); }
+    } else j.status = 'pr_open';
+    log(board, j, `done on ${j.worker}${j.prNumber ? `; PR #${j.prNumber}` : ''}`);
+    events.push(`✅ ${j.id} by ${j.worker}${j.prNumber ? ` -> PR #${j.prNumber}` : ''}: ${result.summary}`);
+  } else if (j.attempts < 2) {
+    j.status = 'queued';
+    j.feedback = result.why;
+    log(board, j, `attempt ${j.attempts} failed; retrying with feedback`);
+  } else if (j.attempts < 3) {
+    // Third attempt goes to a different worker in the chain, carrying the same feedback.
+    j.status = 'queued';
+    j.feedback = result.why;
+    j.avoid = [j.worker];
+    log(board, j, `second failure on ${j.worker}; handing to another worker`);
+  } else {
+    j.status = 'gate_red';
+    log(board, j, `failed ${j.attempts} times; needs the lead`);
+    events.push(`🔴 ${j.id} failed ${j.attempts} times (last: ${j.worker}). ${result.why.split('\n')[0]}`);
   }
 }
 
