@@ -1,0 +1,9 @@
+Command: npm run check:no-em-dash
+Started: 2026-10-17T14:17:17.601605+00:00
+
+> bed-mega-textbook@0.1.0 check:no-em-dash
+> node scripts/check-no-em-dash.mjs
+
+✓ no em dash in authored content (scanned: docs, licence, guides, i18n, specs/content, glossary.json)
+
+Exit code: 0
