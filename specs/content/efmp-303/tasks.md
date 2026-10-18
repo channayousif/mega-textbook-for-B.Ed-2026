@@ -62,7 +62,7 @@ a `flowchart` and a `concept-map` as the Art. III.10 schematics. G1 unit-spec at
 |---|---|---|---|---|
 | Unit 4 | G1 unit-spec | ▢ | | board G0/G1 intake pending |
 | Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-303/reviews/unit-04/G2/20261017T113130874Z-gates.json |
-| Unit 4 | G3 en-review | ▢ | | |
+| Unit 4 | G3 en-review | ▣ | | agent G3 (Reviewer, agy Gemini, run d3ec05d7) advisory escalation: specs/content/efmp-303/reviews/unit-04/G3/crew-20261018.json. Row stays open: agent evidence cannot close it (ADR-0019) |
 | Unit 4 | G4 ur-translation | ▢ | | |
 | Unit 4 | G5 ur-review | ▢ | | |
 | Unit 4 | G6 assets | ✅ | auto:gates | 4 schematics placed |
@@ -78,7 +78,7 @@ a `flowchart` and a `concept-map` as the Art. III.10 schematics. G1 unit-spec at
 |---|---|---|---|---|
 | Unit 5 | G1 unit-spec | ▢ | | board G0/G1 intake pending |
 | Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-303/reviews/unit-05/G2/20261017T113148433Z-gates.json |
-| Unit 5 | G3 en-review | ▢ | | |
+| Unit 5 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only: specs/content/efmp-303/reviews/unit-05/G3/crew-20261018.json; source support, assessment mappings/scoring, provenance and current renders unresolved. Unsigned; G3 remains open. |
 | Unit 5 | G4 ur-translation | ▢ | | |
 | Unit 5 | G5 ur-review | ▢ | | |
 | Unit 5 | G6 assets | ✅ | auto:gates | 4 schematics placed |
@@ -99,3 +99,9 @@ unit-spec at intake (board-run G0/G1 intake pending).
 | Unit 6 | G5 ur-review | ▢ | | |
 | Unit 6 | G6 assets | ✅ | auto:gates | 6 schematics placed |
 | Unit 6 | G7 publish | ▢ | | |
+
+## Unit 3 advisory English review (2026-10-17)
+
+| Unit | Stage | Status | Reviewer | Notes |
+|---|---|---|---|---|
+| Unit 3 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation: diagram order, allocation table, assessment and source repairs; provenance and current page render evidence incomplete. Findings: specs/content/efmp-303/reviews/unit-03/G3/01a14b3d-bdfb-7200-a7e0-06c201e5f0bb.json; readable summary: specs/content/efmp-303/reviews/unit-03/G3/01a14b3d-bdfb-7200-a7e0-06c201e5f0bb/summary.md. G3 remains open. |

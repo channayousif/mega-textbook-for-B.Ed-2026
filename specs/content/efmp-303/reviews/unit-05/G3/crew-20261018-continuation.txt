@@ -1,0 +1,35 @@
+Continuation verification, 2026-10-18
+Existing report and prior evidence retained unchanged.
+
+$ npm run build:content-status
+> bed-mega-textbook@0.1.0 build:content-status
+> node scripts/report-content-status.mjs
+✓ Wrote content status for 9 course(s) to static/content-status.json
+Exit code: 0
+Generated file is ignored by git and must be regenerated in fresh checkouts.
+
+$ node scripts/review-evidence.mjs validate specs/content/efmp-303/reviews/unit-05/G3/crew-20261018.json
+Report structurally valid: escalate. This does not authorize gate completion.
+Exit code: 0
+
+$ npm run check:content
+> bed-mega-textbook@0.1.0 check:content
+> node scripts/run-gates.mjs content
+Running 13 content gates
+
+  validate:content        PASS  3.0s
+  check:pipeline-gate     PASS  27.5s
+  check:depth-gate        PASS  2.2s
+  check:figures           PASS  2.5s
+  check:no-em-dash        PASS  3.3s
+  check:no-answer-keys    PASS  1.2s
+  check:concept-graph     PASS  1.1s
+  check:bloom-bands       PASS  1.1s
+  check:source-floor      PASS  3.4s
+  check:licence           PASS  1.2s
+  licence:map:check       PASS  10.0s
+  check:content-status    PASS  2.3s
+  check:docs-sync         PASS  0.5s
+
+All content gates passed.
+Exit code: 0

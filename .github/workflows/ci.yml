@@ -247,6 +247,11 @@ jobs:
         with:
           name: site-build
           path: build/
+      # `docusaurus serve` loads docusaurus.config.ts, which refuses to start without
+      # the gitignored static/content-status.json. The build job generated its own;
+      # this job reuses the build, not that checkout, so it generates it too.
+      - name: Content status report (needed to load the site config)
+        run: node scripts/report-content-status.mjs
       - name: Install Playwright + browser deps
         run: npx playwright install --with-deps chromium
       - name: Run e2e (against served build)

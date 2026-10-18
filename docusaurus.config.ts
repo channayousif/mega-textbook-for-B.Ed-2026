@@ -4,6 +4,7 @@ import { config as loadEnv } from 'dotenv';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import rehypeTopicEnhance from './src/rehype/topic-enhance.mjs';
+import { textbookSidebarItems } from './sidebarItemsGenerator';
 
 /**
  * Loads `.env.local` into `process.env` for local `npm run build`/`start` -
@@ -147,6 +148,8 @@ const config: Config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: './sidebars.ts',
+          // Unit/topic numbers, overview-first order and Urdu labels come from data.
+          sidebarItemsGenerator: textbookSidebarItems,
           // UX refresh: styles the nine-part topic cycle (sections, callouts,
           // Bloom chips) from existing markup, without editing any content file.
           rehypePlugins: [rehypeTopicEnhance],

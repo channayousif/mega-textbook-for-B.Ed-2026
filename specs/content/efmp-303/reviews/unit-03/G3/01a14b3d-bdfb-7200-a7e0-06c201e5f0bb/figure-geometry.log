@@ -1,0 +1,12 @@
+$ scripts/heavy.sh node scripts/measure-figure-text.mjs static/img/figures/efmp-303/unit-03/fig-U3-1.svg static/img/figures/efmp-303/unit-03/fig-U3-2.svg static/img/figures/efmp-303/unit-03/fig-U3-3.svg static/img/figures/efmp-303/unit-03/fig-U3-4.svg static/img/figures/efmp-303/unit-03/fig-U3-5.svg static/img/figures/efmp-303/unit-03/fig-U3-6.svg
+✓ static/img/figures/efmp-303/unit-03/fig-U3-1.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✗ static/img/figures/efmp-303/unit-03/fig-U3-2.svg
+    overflows right edge by 254.9px: "Note: Allocation figures are approximate shares of the total"
+✓ static/img/figures/efmp-303/unit-03/fig-U3-3.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-303/unit-03/fig-U3-4.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-303/unit-03/fig-U3-5.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-303/unit-03/fig-U3-6.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+
+1 text-geometry problem(s).
+
+Exit code: 1
