@@ -1,0 +1,24 @@
+✓ static/img/figures/efmp-304/unit-02/fig-U2-1.dark.svg (820x470, widest text ends at 808.1, wordmark at 715.7)
+✓ static/img/figures/efmp-304/unit-02/fig-U2-1.svg (820x470, widest text ends at 808.1, wordmark at 715.7)
+✗ static/img/figures/efmp-304/unit-02/fig-U2-2.dark.svg
+    overflows right edge by 21.7px: "the inference:"
+    overflows right edge by 43.1px: "is this step good?"
+✗ static/img/figures/efmp-304/unit-02/fig-U2-2.svg
+    overflows right edge by 21.7px: "the inference:"
+    overflows right edge by 43.1px: "is this step good?"
+✓ static/img/figures/efmp-304/unit-02/fig-U2-3.dark.svg (820x470, widest text ends at 812.8, wordmark at 715.7)
+✓ static/img/figures/efmp-304/unit-02/fig-U2-3.svg (820x470, widest text ends at 812.8, wordmark at 715.7)
+✗ static/img/figures/efmp-304/unit-02/fig-U2-4.dark.svg
+    overflows right edge by 1.7px: "Not settled that way because"
+✗ static/img/figures/efmp-304/unit-02/fig-U2-4.svg
+    overflows right edge by 1.7px: "Not settled that way because"
+✓ static/img/figures/efmp-304/unit-02/fig-U2-5.dark.svg (880x520, widest text ends at 868.6, wordmark at 775.7)
+✓ static/img/figures/efmp-304/unit-02/fig-U2-5.svg (880x520, widest text ends at 868.6, wordmark at 775.7)
+✓ static/img/figures/efmp-304/unit-02/fig-U2-6.dark.svg (900x470, widest text ends at 888, wordmark at 795.7)
+✓ static/img/figures/efmp-304/unit-02/fig-U2-6.svg (900x470, widest text ends at 888, wordmark at 795.7)
+✓ static/img/figures/efmp-304/unit-02/fig-U2-7.dark.svg (820x520, widest text ends at 808.1, wordmark at 715.7)
+✓ static/img/figures/efmp-304/unit-02/fig-U2-7.svg (820x520, widest text ends at 808.1, wordmark at 715.7)
+✓ static/img/figures/efmp-304/unit-02/fig-U2-8.dark.svg (900x470, widest text ends at 888, wordmark at 795.7)
+✓ static/img/figures/efmp-304/unit-02/fig-U2-8.svg (900x470, widest text ends at 888, wordmark at 795.7)
+
+6 text-geometry problem(s).

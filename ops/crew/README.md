@@ -32,6 +32,12 @@ is healthy, the review waits while every other kind of job keeps flowing.
    finding that main does not already have. Then the dispatcher writes the job's PHR, pushes the
    branch and opens a PR. A failed attempt is retried with the gate output as feedback, and the
    third attempt goes to a different worker; after that the job is `gate_red` for the lead.
+   Workers never talk to each other; the brief carries what one job leaves for the next
+   (`scripts/crew/handoff.mjs`). A worker may end with up to 3 `CREW-HANDOFF: <note>` lines (known
+   leftovers, spots to check); the dispatcher keeps them on the job and in its PHR, and later
+   non-review jobs on the same unit (and a CI-fix job, from its parent) see the 5 newest. A
+   `repair_en` brief also lists the open findings of the latest G3 report, most severe first.
+   Review jobs never get handoff notes, so a G3/G5 reviewer is not primed by the producer.
 5. **PRs**: green CI leads to auto-merge (main auto-deploys). The merge uses `gh pr merge --admin`
    because every PR comes from the owner account, which cannot approve its own PR. The owner ruled
    "auto-merge when CI green" on 2026-10-17, so CI is the review gate. The merge uses `gh pr merge --admin`, because
@@ -46,6 +52,10 @@ is healthy, the review waits while every other kind of job keeps flowing.
    crew's leftover auto-commit uses `git add --sparse` so new renders are still committed. A
    launch that fails is logged on the job and retried next tick (`gate_red` after 3 failures);
    it never aborts the tick, and the board is saved even when a phase throws.
+
+After a salvage PR merges, the tick deletes the Paperclip branches it replaced (its
+`supersedes` PRs' head branches and its `base`), unless an open PR still uses one
+(owner ruling, 2026-10-17). Each job does this once and logs `retired superseded branches`.
 
 ## Owner commands (Discord or WhatsApp, only from the owner's own ID)
 

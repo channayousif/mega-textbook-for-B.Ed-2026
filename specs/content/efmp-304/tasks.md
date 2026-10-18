@@ -31,7 +31,7 @@ illustration `fig-U2-9` is left `prompt-only` in `figures/unit-02.banner.md` for
 |---|---|---|---|---|
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
 | Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-02/G2/20261013T123659954Z-gates.json |
-| Unit 2 | G3 en-review | ▢ | | awaiting CurriculumOwner |
+| Unit 2 | G3 en-review | ▣ | | Advisory independent Codex G3 **escalate** (thread 01a14a38-39b5-7ca3-b776-327860ede213): conceptual/source/assessment defects and SVG clipping; author provenance and page/print renders missing. Report: `specs/content/efmp-304/reviews/unit-02/G3/01a14a38-39b5-7ca3-b776-327860ede213.json`. Separate author repairs, owner/host supplies missing evidence, then fresh review. G3 stays open, unsigned (ADR-0019). |
 | Unit 2 | G4 ur-translation | ▢ | | filed as a follow-up to TEX-23 |
 | Unit 2 | G5 ur-review | ▢ | | |
 | Unit 2 | G6 assets | ▣ | | 8 schematics placed; banner `fig-U2-9` prompt-only, raster handoff pending |

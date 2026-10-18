@@ -945,6 +945,65 @@ html[dir='rtl'] div:has(> .theme-doc-sidebar-container) > main {
 }
 
 /*
+ * Show sidebar labels in full (owner report, 2026-10-17). Docusaurus 3.10 clamps
+ * every label to two lines, which cut unit and topic titles mid-phrase in both
+ * locales ("Environmental..."). Its CSS-module class names are hashed, so they are
+ * matched by prefix, and only inside the docs sidebar.
+ */
+.theme-doc-sidebar-menu [class*='categoryLinkLabel_'],
+.theme-doc-sidebar-menu [class*='linkLabel_'] {
+  display: block;
+  overflow: visible;
+  line-clamp: none;
+  -webkit-line-clamp: none;
+}
+
+/*
+ * Urdu sidebar readability (owner report, 2026-10-17). The sidebar stays on the
+ * left (decision above), but its menu reads right-to-left. Forcing the whole
+ * container `ltr` had left rtlcss's flipped Infima rules (`padding-right: 0`
+ * where the source says `padding-left: 0`) facing the wrong side, so every nested
+ * list kept the browser's default 40px start padding and topic labels were
+ * squeezed into ~86px. Under `rtl` those flipped rules are correct again: 12px
+ * nested indent, text from the right, carets on the left.
+ */
+/*rtl:ignore*/
+html[dir='rtl'] .theme-doc-sidebar-menu {
+  direction: rtl;
+}
+
+html[dir='rtl'] .theme-doc-sidebar-menu .menu__link {
+  line-height: 1.8;
+}
+
+/* A page with no Urdu file yet (sidebarItemsGenerator.ts marks it): its label is
+   wholly English, so it reads left-to-right, aligned with the Urdu column, and the
+   outermost such item carries an "EN" marker. */
+/*rtl:ignore*/
+html[dir='rtl'] .sidebar-item--en > .menu__link,
+html[dir='rtl'] .sidebar-item--en > .menu__list-item-collapsible > .menu__link {
+  direction: ltr;
+  text-align: right;
+  justify-content: flex-end;
+  font-family: var(--ifm-font-family-base);
+  line-height: 1.4;
+}
+
+/*rtl:ignore*/
+html[dir='rtl'] .sidebar-item--en:not(.sidebar-item--en .sidebar-item--en) > .menu__link::before,
+html[dir='rtl'] .sidebar-item--en:not(.sidebar-item--en .sidebar-item--en) > .menu__list-item-collapsible > .menu__link::before {
+  content: 'EN';
+  flex: none;
+  margin-right: 0.4rem;
+  padding: 0 0.3rem;
+  border: 1px solid var(--ifm-color-emphasis-400);
+  border-radius: 4px;
+  font-size: 0.65rem;
+  line-height: 1.4;
+  color: var(--ifm-color-emphasis-700);
+}
+
+/*
  * Mobile-only (Infima's own <=996px breakpoint): the search box becomes
  * `position: absolute`, anchored `right` in the English source CSS. rtlcss
  * flips that to `left` for the ur build (correct for a fully-mirrored
