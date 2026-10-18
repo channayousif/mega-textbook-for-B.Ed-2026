@@ -77,26 +77,29 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Completed the translation work on EFMP-304 Unit 3 by moving the translation handoff to `specs/content/efmp-304/reviews/unit-03/G4-20261018/handoff.md` to avoid invalidating the unit 3 G2 gate manifest, updating tasks.md tracker row, verifying all 13 content gates pass cleanly, and creating this Prompt History Record.
+Verified and completed EFMP-304 Unit 3 Urdu mirror at G4 draft status with all 13 content gates passing, relocating the handoff notes to reviews/unit-03/G4-20261018 to preserve G2 gate manifest validity.
 
 ## Outcome
 
-- Impact: translate for EFMP-304 Unit 3 continued and completed by agy.
-- Tests: npm run check:content 13/13 passed.
-- Files: 25 file(s) across the branch, listed above.
-- Next prompts: fresh independent G5 review for EFMP-304 Unit 3.
-- Reflection: None.
+- Impact: translate for EFMP-304 Unit 3 by agy (attempt 2).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 25 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Relocated G4 handoff to `reviews/unit-03/G4-20261018/handoff.md` to prevent stale input manifest in G2 gate checks, updated `tasks.md`, verified Urdu mirror parity, figure variants, and terminology conformance. All 13 content gates pass.
-- Decisions the team must respect: G4 remains draft pending independent G5 review.
-- Pending / next owner: independent G5 reviewer.
-- Paperclip issues affected: none.
+- Shipped / changed: Verified and completed EFMP-304 Unit 3 Urdu mirror at G4 draft status with all 13 content gates passing, relocating the handoff notes to reviews/unit-03/G4-20261018 to preserve G2 gate manifest validity.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - English G3 for EFMP-304 Unit 3 remains open with an advisory escalate, so any future English prose repair may require updating this Urdu mirror.
+  - Full-page desktop, 360 px, and A4 print rendering inspection via `render-inspect.mjs` was deferred under the crew build/server restriction and remains to be verified by independent G5.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: handoff file placed under `translations/unit-03` invalidated G2 input manifest; resolved by placing under `reviews/unit-03/`.
+- Failure modes observed: 1 earlier attempt(s); see the board history
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
