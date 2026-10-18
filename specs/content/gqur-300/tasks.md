@@ -22,7 +22,7 @@ on every unit).
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0042; content-spec status: approved |
 | Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-02/G2/20261013T123555879Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 93e6321; report reviews/unit-02/G3/agent-g3-gqur300-u2-run001.json |
-| Unit 2 | G4 ur-translation | ▢ | | full Urdu mirror required |
+| Unit 2 | G4 ur-translation | ▣ | | mirror complete (2026-10-18): all 6 files verified against EN 96f35fa3; 12 .ur.svg/.ur.dark.svg figure variants verified; teacher-notes activity names synced with topic-01 (بازار کا کھاتہ); structural parity clean under temporary reviewed flip (reverted); all 10 key_terms unbanked in terminology.csv and proposed to owner; translation_status stays draft pending fresh independent G5 |
 | Unit 2 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at c61192e; G3 dependency escalated to owner; report reviews/unit-02/G5/agent-g5-gqur300-u2-run001.json |
 | Unit 2 | G6 assets | ▢ | | |
 | Unit 2 | G7 publish | ▢ | | |
