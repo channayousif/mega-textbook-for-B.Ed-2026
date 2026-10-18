@@ -16,41 +16,85 @@ links:
   adr: null
   pr: null
 files:
-  - specs/content/efmp-303/reviews/unit-04/G3/crew-20261018.json
-  - specs/content/efmp-303/reviews/unit-04/G3/crew-20261018/evidence.json
-  - specs/content/efmp-303/reviews/unit-04/G3/crew-20261018.summary.md
-  - specs/content/efmp-303/tasks.md
+ - glossary.json
+ - history/prompts/efmp-303/crew-efmp-303-u04-review_en.misc.prompt.md
+ - specs/content/efmp-303/reviews/unit-04/G3/crew-20261018.json
+ - specs/content/efmp-303/reviews/unit-04/G3/crew-20261018.summary.md
+ - specs/content/efmp-303/reviews/unit-04/G3/crew-20261018/evidence.json
+ - specs/content/efmp-303/reviews/unit-04/G3/logs-20261018T192547Z/check-docs-sync.log
+ - specs/content/efmp-303/reviews/unit-04/G3/logs-20261018T192547Z/check-figures.log
+ - specs/content/efmp-303/reviews/unit-04/G3/logs-20261018T192547Z/check-no-answer-keys.log
+ - specs/content/efmp-303/reviews/unit-04/G3/logs-20261018T192547Z/check-no-em-dash.log
+ - specs/content/efmp-303/reviews/unit-04/G3/logs-20261018T192547Z/check-pipeline-gate.log
+ - specs/content/efmp-303/reviews/unit-04/G3/logs-20261018T192547Z/check-unit-depth.log
+ - specs/content/efmp-303/reviews/unit-04/G3/logs-20261018T192547Z/render-review.log
+ - specs/content/efmp-303/reviews/unit-04/G3/logs-20261018T192547Z/validate-content.log
+ - specs/content/efmp-303/reviews/unit-04/G3/prepare/manifest.json
+ - specs/content/efmp-303/tasks.md
 tests:
-  - npm run check:content
-  - node scripts/review-evidence.mjs validate specs/content/efmp-303/reviews/unit-04/G3/crew-20261018.json
+ - npm run check:content
 ---
 
 ## Prompt
 
-Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.
+# Crew job efmp-303-u04-review_en
+
+You are the agy worker on the B.Ed bilingual textbook repo, working in this checkout on branch `crew/efmp-303-u04-review_en`.
+Read AGENTS.md and CLAUDE.md first and obey them: no em dash (U+2014) anywhere, heavy commands only through
+`scripts/heavy.sh`, never run `npm run build` or a dev server, never mark G3/G5 done, never self-sign or use
+human initials, never edit the style guide, constitution, ADRs, gate scripts, catalog or an approved content-spec.
+
+## Task
+Act as the INDEPENDENT G3 English reviewer of EFMP-303 Unit 4 (review-unit skill, .claude/agents/g3-reviewer.md). You did not write this unit. Produce the evidence report the skill specifies and the advisory tracker row. Never tick G3, never add reviewer initials, never self-sign.
+
+Follow `.claude/skills/review-unit/SKILL.md` exactly; read it and every file it references before starting.
+
+## Scope
+EFMP-303 Unit 4 only: its docs/licence and i18n files, its rows and folders under
+`specs/content/efmp-303/`, and `static/img/figures/efmp-303/unit-04/`.
+
+## Continue, do not restart
+Earlier attempts may have left work on this branch. Check `git log origin/main..HEAD` and `git status` and build on it.
+
+## Done when
+1. `npm run check:content` reports no finding that origin/main does not also report (run it, read every
+   failure, fix those in your scope, rerun). Findings that already exist on main belong to other jobs.
+2. All work is committed on this branch with a conventional commit message. Do not push and do not open a PR.
+3. Your final output ends with one line: `CREW-SUMMARY: <what you changed, in one sentence>`.
+4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit
+   needs (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
+
+## Feedback from the previous attempt
+npm run check:content has 1 finding(s) that main does not have:
+✗ static/content-status.json is missing. Run: npm run build:content-status
+
 
 ## Response snapshot
 
-Generated gitignored `static/content-status.json` via `npm run build:content-status` to resolve the `check:content-status` failure from the prior attempt. Conducted independent G3 English review of EFMP-303 Unit 4, structured and validated the review evidence report (`crew-20261018.json` with disposition `escalate` due to host build/dev-server prohibition on render inspection), produced `crew-20261018.summary.md`, and updated the advisory G3 tracker row in `specs/content/efmp-303/tasks.md` without ticking G3 or adding human initials. All 13 content gates pass.
+Validated the independent G3 English review evidence report and advisory tracker row for EFMP-303 Unit 4, resolved the missing content-status report, and passed all 13 content gates.
 
 ## Outcome
 
-- Impact: independent G3 review_en for EFMP-303 Unit 4 by agy.
-- Tests: `npm run check:content` passed (13/13 content gates pass); report validated via `review-evidence.mjs validate`.
-- Files: 4 files listed above.
+- Impact: review_en for EFMP-303 Unit 4 by agy (attempt 3).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 15 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
-- Reflection: none.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Generated `static/content-status.json`; validated and recorded independent G3 review evidence report `crew-20261018.json` (advisory escalate); recorded advisory G3 tracker row in `specs/content/efmp-303/tasks.md`.
-- Decisions the team must respect: G3 stays advisory until qualified human/protected sign-off; G3 is not ticked (`▣`), no reviewer initials added, and no certification claimed.
-- Pending / next owner: crew lead / next job on EFMP-303 Unit 4 (G4 Urdu translation or revision pass for advisory source/concept notes).
-- Paperclip issues affected: none.
+- Shipped / changed: Validated the independent G3 English review evidence report and advisory tracker row for EFMP-303 Unit 4, resolved the missing content-status report, and passed all 13 content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Advisory escalation recorded for EFMP-303 Unit 4 G3 (`specs/content/efmp-303/reviews/unit-04/G3/crew-20261018.json`) because live browser and A4 print view render inspection cannot be performed under the host build/dev-server prohibition.
+  - Three advisory findings are noted for future authoring revisions: numerical reliance on declared-unverifiable `nep2009` in Topic 4.2 line 36, M&E definition citation of `unesco-epg` in Topic 4.1 line 38, and a minor word duplication in concept `CON:EFMP-303-4-3` label.
+  - Rebuilt `static/content-status.json` via `npm run build:content-status`; all 13 content gates pass cleanly.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: `static/content-status.json` missing on fresh checkout (resolved via `build:content-status`); opencode report input manifest incomplete (resolved with full manifest and validated).
-- Graders run and results (PASS/FAIL): `check:content` PASS.
+- Failure modes observed: 2 earlier attempt(s); see the board history
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
