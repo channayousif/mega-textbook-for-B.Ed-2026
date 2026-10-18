@@ -99,3 +99,9 @@ unit-spec at intake (board-run G0/G1 intake pending).
 | Unit 6 | G5 ur-review | ▢ | | |
 | Unit 6 | G6 assets | ✅ | auto:gates | 6 schematics placed |
 | Unit 6 | G7 publish | ▢ | | |
+
+## Unit 3 advisory English review (2026-10-17)
+
+| Unit | Stage | Status | Reviewer | Notes |
+|---|---|---|---|---|
+| Unit 3 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation: diagram order, allocation table, assessment and source repairs; provenance and current page render evidence incomplete. Findings: specs/content/efmp-303/reviews/unit-03/G3/01a14b3d-bdfb-7200-a7e0-06c201e5f0bb.json; readable summary: specs/content/efmp-303/reviews/unit-03/G3/01a14b3d-bdfb-7200-a7e0-06c201e5f0bb/summary.md. G3 remains open. |
