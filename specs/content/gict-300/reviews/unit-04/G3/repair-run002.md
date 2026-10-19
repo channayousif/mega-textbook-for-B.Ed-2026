@@ -19,3 +19,19 @@ Report: `agent-g3-gict300-u4-run002.json`. Baseline: `4400618b` (origin/main).
 G3 remains unticked, with a new advisory repair row. Translation status and publication state
 are unchanged. A fresh independent review is required; the curriculum owner must handle the
 ADR-0019 repair-cycle limit before commissioning another cycle. No reviewer was invoked here.
+
+## Validation
+
+- `npm run check:content`: all 13 gates passed after refresh; zero remaining findings,
+  so no finding exceeds the origin/main baseline. The first run exposed the missing ignored
+  `static/content-status.json`; generated it with `npm run build:content-status`. The repair
+  run exposed only Unit 4 stale G2 inputs; refreshed evidence rather than weakening checks.
+- `node scripts/prepare-gate-evidence.mjs GICT-300 4`: all eight draft checks passed on
+  committed repair `bd836c70`; append-only evidence and logs at
+  `../G2/20261019T140725503Z-gates.json`. New G2 row references this evidence.
+- `scripts/heavy.sh npm test`: 26 test files, 314 tests passed.
+- `git diff --check`: passed. Assessment headings and topic self-assessment checklist
+  wording, positions and counts preserved in EN/UR. No build or dev server run.
+- The starting checkout matched origin/main. A temporary archive baseline attempt lacked
+  Git metadata and was unsuitable for evidence comparison; it was discarded. Final checks
+  ran against the real committed Git checkout and passed without an overlay.

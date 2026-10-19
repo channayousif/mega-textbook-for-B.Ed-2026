@@ -28,11 +28,15 @@ files:
   - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gict-300/unit-04/unit-assessment.mdx
   - specs/content/gict-300/sources/unit-04.md
   - specs/content/gict-300/tasks.md
+  - specs/content/gict-300/reviews/unit-04/G2/20261019T140725503Z-gates.json
+  - specs/content/gict-300/reviews/unit-04/G2/logs-20261019T140725503Z/
   - specs/content/gict-300/reviews/unit-04/G3/repair-run002.md
   - history/prompts/general/0531-repair-gict300-unit-four-review.general.prompt.md
 tests:
-  - npm run check:content
-  - scripts/heavy.sh npm test
+  - npm run check:content (all 13 gates passed)
+  - scripts/heavy.sh npm test (26 files, 314 tests passed)
+  - node scripts/prepare-gate-evidence.mjs GICT-300 4 (8 checks passed)
+  - git diff --check (passed)
 ---
 
 ## Prompt
@@ -48,8 +52,8 @@ Verified earlier repairs rather than reapplying them. Recorded owner/tooling fol
 ## Outcome
 
 - Impact: Minimal bilingual repairs address A4, A5 and A7; B1, B2, A1 and A2 already repaired.
-- Tests: Content gates and unit tests executed; final results recorded in repair handoff.
-- Files: Unit 4 EN/UR content, sources, tracker, repair handoff, and this PHR.
+- Tests: All 13 content gates, eight G2 checks and 314 unit tests passed.
+- Files: Unit 4 EN/UR content, sources, tracker, repair handoff, fresh G2 evidence and logs, and this PHR.
 - Next prompts: Owner reconciliation of A3 and tooling repair for A6, then independent review.
 - Reflection: Historical findings must be checked against current bytes before editing.
 
@@ -63,6 +67,6 @@ Verified earlier repairs rather than reapplying them. Recorded owner/tooling fol
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Missing generated content-status artifact on clean checkout; content edits stale existing G2 digests.
-- Graders run and results (PASS/FAIL): Final results recorded in repair-run002.md.
+- Graders run and results (PASS/FAIL): PASS: 13 content gates, eight G2 checks, 314 unit tests and diff whitespace check.
 - Prompt variant (if applicable): None.
 - Next experiment (smallest change to try): Fresh independent review after owner handles the cycle limit.
