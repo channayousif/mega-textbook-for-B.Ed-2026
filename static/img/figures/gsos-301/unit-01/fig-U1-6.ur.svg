@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">بڑے عمرانی نقطہ نظر کا تقابل</title><desc id="d">تین بڑے عمرانی نقطہ نظر کا تقابلی جدول جس میں ان کی بنیادی فرضیات اور تجزیے کی سطحیں دکھائی گئی ہیں۔</desc>
+<style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95} .bg{fill:var(--bg)} .hdr{fill:var(--a1-fill);stroke:var(--ink);stroke-width:1.5} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700} .th{font-size:14px;font-weight:700;fill:var(--a1);text-anchor:middle} .wm{fill:var(--wm);font-size:11px}</style>
+<rect class="bg" x="0" y="0" width="780" height="470"/>
+<!-- Table Boundary -->
+<rect x="25" y="35" width="730" height="385" fill="none" stroke="var(--ink)" stroke-width="2"/>
+
+<!-- Header Row -->
+<rect class="hdr" x="25" y="35" width="730" height="55"/>
+<line x1="210" y1="35" x2="210" y2="420" stroke="var(--ink)" stroke-width="1.5"/>
+<line x1="560" y1="35" x2="560" y2="420" stroke="var(--ink)" stroke-width="1.5"/>
+
+<text class="th" x="117" y="68">نقطہ نظر</text>
+<text class="th" x="385" y="68">بنیادی فرضیہ</text>
+<text class="th" x="655" y="68">تجزیے کی سطح</text>
+
+<!-- Row 1: Functionalism -->
+<line x1="25" y1="170" x2="755" y2="170" stroke="var(--ink)" stroke-width="1"/>
+<text class="h" x="40" y="115" fill="var(--a2)">فعلیت پسندی</text>
+<text x="40" y="135" fill="var(--muted)">دورکائم، پارسنز</text>
+<text x="225" y="115">معاشرہ باہم مربوط حصوں کا نظام ہے جو استحکام،</text>
+<text x="225" y="135">ہم آہنگی اور سماجی ترتیب قائم رکھنے کے لیے کام کرتا ہے۔</text>
+<text class="h" x="580" y="115">میکرو سطح</text>
+<text x="580" y="135">مکمل ادارے اور معاشرہ</text>
+
+<!-- Row 2: Conflict Theory -->
+<line x1="25" y1="290" x2="755" y2="290" stroke="var(--ink)" stroke-width="1"/>
+<text class="h" x="40" y="235" fill="var(--a3)">نظریہ تنازع</text>
+<text x="40" y="255" fill="var(--muted)">کارل مارکس</text>
+<text x="225" y="225">معاشرہ وسیع عدم مساوات کا حامل ہے؛ سماجی گروہ</text>
+<text x="225" y="245">طاقت اور محدود وسائل کے حصول کے لیے مقابلہ کرتے ہیں؛</text>
+<text x="225" y="265">ادارے بالادست طبقے کی مراعات کو تحفظ دیتے ہیں۔</text>
+<text class="h" x="580" y="235">میکرو سطح</text>
+<text x="580" y="255">سماجی طبقات اور طاقت کے ڈھانچے</text>
+
+<!-- Row 3: Symbolic Interactionism -->
+<text class="h" x="40" y="355" fill="var(--a4)">علامتی باہمی تعامل</text>
+<text x="40" y="375" fill="var(--muted)">میڈ، بلومر</text>
+<text x="225" y="345">معاشرہ روزمرہ رو در رو تعاملات سے تعمیر ہوتا ہے؛</text>
+<text x="225" y="365">لوگ علامتوں اور اشاروں کو مشترکہ معنی دیتے ہیں</text>
+<text x="225" y="385">جو ان کے رویے اور خودی کے تصور کی رہنمائی کرتے ہیں۔</text>
+<text class="h" x="580" y="355">مائیکرو سطح</text>
+<text x="580" y="375">شخصی و باہمی ابلاغ</text>
+<text class="wm" x="768" y="460" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>
