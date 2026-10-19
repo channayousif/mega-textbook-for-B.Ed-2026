@@ -70,7 +70,8 @@ After a salvage PR merges, the tick deletes the Paperclip branches it replaced (
 
 ## Weekly maintenance (Sunday 02:00 PKT)
 
-The crew also tends the project itself (owner, 2026-10-19), spec-driven with reusable intelligence.
+The crew also tends the project itself (owner, 2026-10-19; ADR-0031), spec-driven with reusable
+intelligence.
 Schedules come from the tick in Asia/Karachi time (`scripts/crew/maintenance.mjs`), so no crontab
 or daylight-saving change is needed; each slot runs once.
 
