@@ -48,3 +48,22 @@ non-banked term required owner registration.
 (already on main, `▣`) is unchanged. This pass closes the G5 F3 figure-variant
 gap for Unit 6; a fresh independent G5 review against the new `.ur.svg` bytes
 is still pending.
+
+## Continuation verification (2026-10-18)
+
+The continuation translated the six remaining English Bloom summaries and the
+Topic/Unit labels in the existing Urdu prose. English content remains unchanged
+from origin/main at this checkout. G2 evidence was regenerated with the repository
+command to replace the stale input manifest; no G3/G5 acceptance was changed.
+
+The temporary reviewed-mode run passed file/heading parity, figures and bank-bound
+key terms. Its only findings were the deliberately open G4/G5 rows and a
+content-status report made stale by the temporary flip. Both index flags were
+restored to draft and the report regenerated before the final content gate run.
+Figure dark-variant verification passed for all 780 repository variants.
+
+Full-page desktop, narrow-width and A4 render inspection remains for the next
+owner because this crew brief prohibits builds and dev servers. Fresh independent
+G5 must include that inspection and the changed Urdu metadata and figure inputs.
+The earlier G5 report does not certify these changed inputs. No new terminology
+bank entries are proposed by this continuation. G4 remains in progress and unsigned.
