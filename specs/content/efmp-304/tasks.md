@@ -12,7 +12,7 @@ G2 en-draft cleared by deterministic gates.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-01/G2/20261013T123653402Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-01/G2/20261019T121920528Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | |
 | Unit 1 | G3 en-review | ▢ | | advisory: revise; repairs applied for `specs/content/efmp-304/reviews/unit-01/G3/agent-g3-efmp-304-u1-run5e4cc29c.json`: SVG syntax and wordmark geometry, RRQ 9 rebalanced to Topic 1.1 with Urdu model answer and concept mapping, placed manifest preamble, and descriptive article links in both locales. Fresh independent G3 and dependent G5 remain pending; no sign-off claimed. |
 | Unit 1 | G4 ur-translation | ▣ | | Seven-page Urdu mirror authored against English baseline on 2026-10-19 (crew efmp-304-u01-translate-r1): translated metadata, 14 bank-bound key terms, 10/10/5 assessment parity with Urdu MCQ option labels in order (الف/ب/ج/د), 10 mirrored Urdu SVGs with derived dark variants; check:content clean and parity/figures/key_terms verified clean under temporary reviewed flip (reverted). Handoff: `specs/content/efmp-304/reviews/unit-01/G4/translation-handoff.md`. translation_status stays draft pending fresh independent G5; no certification claimed |

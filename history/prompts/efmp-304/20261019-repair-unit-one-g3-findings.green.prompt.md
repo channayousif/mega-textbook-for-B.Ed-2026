@@ -51,12 +51,12 @@ Read .crew/brief.md in the current directory and carry it out completely. It is 
 
 ## Response snapshot
 
-Applied the five findings from agent-g3-efmp-304-u1-run5e4cc29c.json. Removed four malformed closing tags from Figure 3 and regenerated its dark variant. Added a wordmark CSS anchor override in five schematic sources and regenerated dark variants. Replaced RRQ 9 with a Topic 1.1 critical-thinking versus general-scepticism question, updated its two-mark model answer in English and Urdu, and mapped it in the concept graph. Corrected the placed manifest preamble and linked article titles to their DOI destinations in both locales. Appended an unsigned advisory G3 repair row; G3 stays unticked. G2 evidence refresh and final gate rerun follow the source commit because evidence preparation requires committed inputs.
+Applied the five findings from agent-g3-efmp-304-u1-run5e4cc29c.json. Removed four malformed closing tags from Figure 3 and regenerated its dark variant. Added a wordmark CSS anchor override in five schematic sources and regenerated dark variants. Replaced RRQ 9 with a Topic 1.1 critical-thinking versus general-scepticism question, updated its two-mark model answer in English and Urdu, and mapped it in the concept graph. Corrected the placed manifest preamble and linked article titles to their DOI destinations in both locales. Appended an unsigned advisory G3 repair row; G3 stays unticked. G2 evidence refreshed against source commit c109d734, then all 13 content gates passed. Evidence preparation requires committed inputs.
 
 ## Outcome
 
 - Impact: All five requested repairs applied with minimal edits.
-- Tests: XML parsing and affected wordmark geometry pass. Initial content run exposed stale Unit 1 G2 evidence and a missing generated content-status file; final results recorded in the repair handoff.
+- Tests: XML parsing and affected wordmark geometry pass. All 13 content gates and 314 unit tests pass after refreshing stale Unit 1 G2 evidence and the ignored generated content-status file; final results recorded in the repair handoff.
 - Files: Unit 1 English and Urdu pages, concepts, figures, tracker and SVG variants.
 - Next prompts: Fresh independent G3, then dependent G5, owned by the curriculum owner.
 - Reflection: SVG presentation attributes lose to CSS selectors; verify computed geometry rather than only the markup.
@@ -71,6 +71,6 @@ Applied the five findings from agent-g3-efmp-304-u1-run5e4cc29c.json. Removed fo
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Three additional malformed XML closing tags followed the reported first error; all four were removed.
-- Graders run and results: XML and affected SVG geometry PASS; final content/unit-test results in the repair handoff.
+- Graders run and results: XML and affected SVG geometry PASS; all 13 content gates and 314 unit tests PASS.
 - Prompt variant: .crew/brief.md
 - Next experiment: Independent review of the repaired unit.
