@@ -19,7 +19,7 @@
  * runners, which keeps this production host's RAM for the live site.
  */
 import { spawn, spawnSync } from 'node:child_process';
-import { appendFileSync, existsSync, mkdirSync, readFileSync, readdirSync, symlinkSync, writeFileSync, openSync } from 'node:fs';
+import { appendFileSync, closeSync, existsSync, mkdirSync, openSync, readFileSync, readSync, readdirSync, renameSync, statSync, symlinkSync, writeFileSync } from 'node:fs';
 import { join, relative, resolve } from 'node:path';
 import { WORKERS, STAGES, QUOTA_RE, COOLDOWN_MIN, pickWorker } from './workers.mjs';
 import { STATE_DIR, WT_DIR, LOG_DIR, load, save, ACTIVE, TERMINAL, jobId, now } from './state.mjs';
@@ -30,6 +30,9 @@ import { batchDue, batchCandidates, batchId, batchTitle, batchBody } from './bat
 import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport } from './planner.mjs';
 import { walkUnits } from '../lib/content-roots.mjs';
 import { REGISTRIES, registryProblems } from './registries.mjs';
+import { weekId, local, harvestSlot, slotsBetween, harvestDue, distillDue, maintenanceDue, contentFiles, maintenanceVerdict, parseVerdict } from './maintenance.mjs';
+import { OWN_PR, queueReview, recordReview, fanOutJobs } from './maintjobs.mjs';
+import { boardSignals, logSignals, cronSignals, phrSignals, reviewSignals, foldSignals, newlyHot, distillDigest, effect, parseRegistry } from './intel.mjs';
 
 const ROOT = resolve(new URL('../..', import.meta.url).pathname);
 const MAX_PARALLEL = Number(process.env.CREW_MAX_PARALLEL || 3);
@@ -41,10 +44,17 @@ const MIN_FREE_DISK_MB = Number(process.env.CREW_MIN_FREE_DISK_MB || 8192);
 const SPARSE = ['/*', '!/specs/content/*/reviews/**/renders-*/'];
 const JOB_TIMEOUT = process.env.CREW_JOB_TIMEOUT || '3h';
 const PUSH_SETTLE_MS = 3 * 60e3;
-const STAGE_ORDER = ['salvage', 'fix', 'repair_en', 'review_en', 'review_ur', 'translate', 'figures', 'illustrate', 'author'];
+// Self-maintenance stages sit just after fixes: a handful a week, so the corpus queue cannot starve them.
+const STAGE_ORDER = ['salvage', 'fix', 'maint_review', 'maint_survey', 'maint_refactor', 'maint_docs', 'maint_adr', 'maint_skill', 'intel_distill',
+  'repair_en', 'review_en', 'review_ur', 'translate', 'figures', 'illustrate', 'author'];
+/** Self-maintenance (scripts/crew/maintenance.mjs) and intelligence (scripts/crew/intel.mjs) stages. */
+const isSelf = (stage) => /^(maint|intel)_/.test(stage);
+const INTEL_DIR = join(STATE_DIR, 'intel');
 /** A PR touching any of these is never auto-merged; the owner is asked instead. */
 const PROTECTED = [/^specs\/content\/style-guide\.md$/, /^\.specify\//, /^history\/adr\//, /^\.github\//,
   /^scripts\//, /^catalog\//, /^package(-lock)?\.json$/, /content-spec\.md$/, /\/intake(-\d+)?\//, /^CLAUDE\.md$/, /^AGENTS\.md$/];
+/** Maintenance PRs also ask before changing skills or agent definitions: they steer every worker. */
+const MAINT_PROTECTED = [...PROTECTED, /^\.claude\//];
 
 const args = process.argv.slice(2);
 const flag = (name) => args.includes(`--${name}`);
@@ -152,7 +162,43 @@ const STAGE_TASK = {
   translate: (j) => `Translate ${j.course} Unit ${j.unit} into its complete Urdu mirror at G4 (translate-unit skill), bound to specs/content/terminology.csv. Record the G4 tracker row as the skill says; translation_status stays draft.`,
   review_ur: (j) => `Act as the INDEPENDENT G5 Urdu reviewer of ${j.course} Unit ${j.unit} (review-unit skill, .claude/agents/g5-reviewer.md). You did not translate this unit. Produce the evidence report and advisory tracker row. Never tick G5, never self-sign.`,
   fix: (j) => j.task || `Make every content gate pass for ${j.course} Unit ${j.unit} with the smallest edits.`,
+  intel_distill: (j) => `Distil today's reusable intelligence (intel-distill skill) into \`specs/intelligence/daily/${j.day}.md\`. These clusters grew in the last 24 hours (kind, recent count, total, signature, an example, evidence):\n\n${j.task}`,
+  maint_survey: (j) => `Run the ${j.week} maintenance survey (weekly-maintenance skill, "Survey"). Look at what changed since ${j.since.slice(0, 10)} and at this week's intelligence (\`specs/intelligence/daily/\`, \`specs/intelligence/registry.md\`), and write \`specs/maintenance/${j.week}/spec.md\`, \`plan.md\`, \`tasks.md\` and \`intelligence.md\`.`,
+  maint_refactor: (j) => j.task,
+  maint_docs: (j) => j.task,
+  maint_adr: (j) => j.task,
+  maint_skill: (j) => j.task,
+  maint_review: (j) => `Act as the INDEPENDENT reviewer of maintenance PR #${j.pr} (weekly-maintenance skill, "Review"). Another model family wrote it. Read the task it answers and \`git diff origin/main...HEAD\`, check every acceptance item and the rules, and change nothing.\n\n${j.task}`,
 };
+
+/** The rules line every brief opens with; self-maintenance may touch what content jobs must not. */
+function briefRules(j, self) {
+  const common = 'no em dash (U+2014) anywhere, heavy commands only through `scripts/heavy.sh`, never run `npm run build`, a dev server or Playwright';
+  if (!self) return `${common}, never mark G3/G5 done, never self-sign or use\nhuman initials, never edit the style guide, constitution, ADRs, gate scripts, catalog or an approved content-spec.`;
+  return `${common}, and never touch course content (\`docs/\`, \`licence/\`, the Urdu docs trees,
+\`specs/content/\`, \`static/img/figures/\`, \`glossary.json\`): the dispatcher rejects any such change. Never change
+what an ADR decided, never self-sign, never mark G3/G5 done. Protected paths (scripts, ADRs, skills, CLAUDE.md,
+AGENTS.md, catalog, CI) may change only inside your task; those PRs go to the owner.`;
+}
+
+/** How a job proves it is finished. */
+function doneWhen(j, self) {
+  if (j.stage === 'maint_review') return `1. You changed nothing and committed nothing.
+2. Your final output ends with one line: \`CREW-VERDICT: pass\` or \`CREW-VERDICT: revise - <what must change, specifically>\`.
+3. Just before it, one line \`CREW-SUMMARY: <your verdict in one sentence>\`.`;
+  const handoff = `4. Optional, just before it: up to 3 lines \`CREW-HANDOFF: <note>\` for facts the next job needs
+   (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.`;
+  if (self) return `1. The acceptance checks in your task pass; \`npm run check:content\` reports nothing new against origin/main;
+   any \`node --test tests/crew/*.test.mjs\` or unit tests covering what you changed pass.
+2. All work is committed on this branch with a conventional commit message. Do not push and do not open a PR.
+3. Your final output ends with one line: \`CREW-SUMMARY: <what you changed, in one sentence>\`.
+${handoff}`;
+  return `1. \`npm run check:content\` reports no finding that origin/main does not also report (run it, read every
+   failure, fix those in your scope, rerun). Findings that already exist on main belong to other jobs.
+2. All work is committed on this branch with a conventional commit message. Do not push and do not open a PR.
+3. Your final output ends with one line: \`CREW-SUMMARY: <what you changed, in one sentence>\`.
+${handoff.replace('the next job needs', 'the next job on this unit needs')}`;
+}
 
 function brief(j, board) {
   const skill = STAGES[j.stage].skill;
@@ -165,9 +211,7 @@ function brief(j, board) {
   return `# Crew job ${j.id}
 
 You are the ${j.worker} worker on the B.Ed bilingual textbook repo, working in this checkout on branch \`${j.branch}\`.
-Read AGENTS.md and CLAUDE.md first and obey them: no em dash (U+2014) anywhere, heavy commands only through
-\`scripts/heavy.sh\`, never run \`npm run build\` or a dev server, never mark G3/G5 done, never self-sign or use
-human initials, never edit the style guide, constitution, ADRs, gate scripts, catalog or an approved content-spec.
+Read AGENTS.md and CLAUDE.md first and obey them: ${briefRules(j, selfJob(board, j))}
 
 ## Task
 ${STAGE_TASK[j.stage](j)}
@@ -179,12 +223,7 @@ ${scope}
 Earlier attempts may have left work on this branch. Check \`git log origin/main..HEAD\` and \`git status\` and build on it.
 
 ## Done when
-1. \`npm run check:content\` reports no finding that origin/main does not also report (run it, read every
-   failure, fix those in your scope, rerun). Findings that already exist on main belong to other jobs.
-2. All work is committed on this branch with a conventional commit message. Do not push and do not open a PR.
-3. Your final output ends with one line: \`CREW-SUMMARY: <what you changed, in one sentence>\`.
-4. Optional, just before it: up to 3 lines \`CREW-HANDOFF: <note>\` for facts the next job on this unit
-   needs (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
+${doneWhen(j, selfJob(board, j))}
 ${findings ? `\n## Open findings from the latest G3 report\n${findings}\n` : ''}${notes ? `\n## Notes from earlier jobs on this unit\n${notes}\n` : ''}${j.feedback ? `\n## Feedback from the previous attempt\n${j.feedback}\n` : ''}`;
 }
 
@@ -272,6 +311,10 @@ function launch(board, j, worker) {
 function excludedFamilies(board, j) {
   const of = STAGES[j.stage].reviewOf;
   if (!of) return [];
+  if (of === 'parent') {
+    const parent = board.jobs.find((p) => p.id === j.parent);
+    return parent?.family ? [parent.family] : [];
+  }
   const producers = board.jobs.filter((x) => unitKey(x) === unitKey(j) && x.stage === of && x.status === 'merged').map((x) => x.family);
   // Legacy units were produced by the Claude-based Paperclip authors, so Claude may not review them.
   return producers.length ? [...new Set(producers)] : ['anthropic'];
@@ -297,7 +340,10 @@ function launchQueued(board, health, control, events) {
       }
       break;
     }
-    if (busyUnits.has(unitKey(j)) && j.stage !== 'fix') continue;
+    // A fix or review works on its parent's open PR, so the parent's unit being busy is the point.
+    if (busyUnits.has(unitKey(j)) && j.stage !== 'fix' && !j.parent) continue;
+    // Children of one parent (a review and a fix) share its worktree: one at a time.
+    if (j.parent && running.some((r) => r.parent === j.parent)) continue;
     const worker = pickWorker(j.stage, { health, running, excludeFamilies: excludedFamilies(board, j) });
     if (!worker) continue; // waits; other stages keep flowing
     if (DRY) { console.log(`[dry-run] would launch ${j.id} on ${worker}`); running.push({ worker }); continue; }
@@ -331,8 +377,16 @@ function cool(health, worker, reason) {
   return mins;
 }
 
+/** Where a job's PHR goes and what it links: its course, or the self-maintenance records. */
+function phrHome(j) {
+  if (j.stage === 'intel_distill') return { feature: 'crew-intelligence', spec: 'specs/intelligence/registry.md' };
+  if (isSelf(j.stage)) return { feature: 'crew-maintenance', spec: `specs/maintenance/${j.week}/spec.md` };
+  return { feature: j.course.toLowerCase(), spec: `specs/content/${j.course.toLowerCase()}/content-spec.md` };
+}
+
 function writePhr(j, summary) {
-  const dir = join(j.worktree, 'history', 'prompts', j.course.toLowerCase());
+  const home = phrHome(j);
+  const dir = join(j.worktree, 'history', 'prompts', home.feature);
   mkdirSync(dir, { recursive: true });
   const files = sh('git', ['diff', '--name-only', 'origin/main...HEAD'], j.worktree, { allowFail: true }).out.split('\n').filter(Boolean);
   const body = `---
@@ -342,13 +396,13 @@ stage: misc
 date: ${now().slice(0, 10)}
 surface: agent
 model: ${j.worker}
-feature: ${j.course.toLowerCase()}
+feature: ${home.feature}
 branch: ${j.branch}
 user: crew
 command: crew ${j.stage}
 labels: ["crew", "${j.worker}", "${j.stage}"]
 links:
-  spec: specs/content/${j.course.toLowerCase()}/content-spec.md
+  spec: ${home.spec}
   ticket: null
   adr: null
   pr: null
@@ -441,7 +495,22 @@ function registryDamage(wt) {
 
 const REGISTRY_RULE = 'The shared registries are append-only: keep every entry main has exactly as it is, add this branch\'s entries after them, give a new entry whose ID main already uses the next free ID (and update its references), and keep glossary.json valid JSON.';
 
+/**
+ * A maintenance review commits nothing: it runs in its parent's worktree, so anything it left is
+ * thrown away before its verdict is read, and the parent's branch stays exactly as reviewed.
+ */
+function finishReview(j, logText) {
+  const wt = j.worktree;
+  if (j.startHead) sh('git', ['reset', '-q', '--hard', j.startHead], wt, { allowFail: true });
+  sh('git', ['clean', '-fdq', '-e', '.crew', '-e', 'node_modules'], wt, { allowFail: true });
+  const v = parseVerdict(logText);
+  if (!v) return { ok: false, why: 'the review ended without a `CREW-VERDICT: pass` or `CREW-VERDICT: revise - <what must change>` line' };
+  const summary = (logText.match(/CREW-SUMMARY:\s*(.+)/g) || []).at(-1)?.replace(/CREW-SUMMARY:\s*/, '') || `review: ${v.verdict}`;
+  return { ok: true, summary: summary.replace(/\u2014/g, ' - '), verdict: v };
+}
+
 function finishSuccess(board, j, logText) {
+  if (j.stage === 'maint_review') return finishReview(j, logText);
   const wt = j.worktree;
   if (sh('git', ['status', '--porcelain'], wt).out.replace(/^.. (\.crew|node_modules).*$/gm, '').trim()) {
     excludeCrewFiles(wt);
@@ -451,6 +520,11 @@ function finishSuccess(board, j, logText) {
   const ahead = Number(sh('git', ['rev-list', '--count', 'origin/main..HEAD'], wt).out || 0);
   const made = j.startHead ? Number(sh('git', ['rev-list', '--count', `${j.startHead}..HEAD`], wt, { allowFail: true }).out || 0) : ahead;
   if (!ahead || !made) return { ok: false, why: 'the worker exited without committing any change' };
+  if (selfJob(board, j)) {
+    const changed = sh('git', ['diff', '--name-only', 'origin/main...HEAD'], wt, { allowFail: true }).out.split('\n').filter(Boolean);
+    const content = contentFiles(changed);
+    if (content.length) return { ok: false, why: `Self-maintenance never touches course content (the corpus crew owns it). Revert these files to origin/main: ${content.slice(0, 20).join(', ')}` };
+  }
   const fresh = newFindings(wt);
   if (fresh.length) return { ok: false, why: `npm run check:content has ${fresh.length} finding(s) that main does not have:\n${fresh.slice(0, 40).join('\n')}` };
   const damage = registryDamage(wt);
@@ -470,8 +544,11 @@ function finishSuccess(board, j, logText) {
   // gets its own PR, so the owner question it raises never holds up a whole batch.
   const touched = sh('git', ['diff', '--name-only', 'origin/main...HEAD'], wt, { allowFail: true }).out
     .split('\n').filter((f) => PROTECTED.some((re) => re.test(f)));
-  if (!touched.length) { j.readyAt = now(); return { ok: true, summary }; }
-  const title = `crew(${j.course.toLowerCase()}): ${j.stage} unit ${j.unit} by ${j.worker}`;
+  // Maintenance tasks always get their own reviewed PR (managePrs merges it on CI green + review pass).
+  if (!touched.length && !OWN_PR.has(j.stage)) { j.readyAt = now(); return { ok: true, summary }; }
+  const title = OWN_PR.has(j.stage)
+    ? `crew(maint ${j.week}): ${j.taskRow?.id || j.stage} ${j.taskRow?.title || ''}`.trim()
+    : `crew(${j.course.toLowerCase()}): ${j.stage} unit ${j.unit} by ${j.worker}`;
   const body = `${summary}\n\nCrew job \`${j.id}\`, worker **${j.worker}** (${j.family}), attempt ${j.attempts}. \`npm run check:content\` passed before push; CI builds the site.\n${j.supersedes ? `\nSupersedes ${String(j.supersedes).split(',').map((n) => `#${n}`).join(', ')}.\n` : ''}\n🤖 Generated with [Claude Code](https://claude.com/claude-code)`;
   const pr = sh('gh', ['pr', 'create', '--head', j.branch, '--base', 'main', '--title', title, '--body', body], wt, { allowFail: true });
   const url = pr.out.match(/https:\S+\/pull\/(\d+)/);
@@ -518,12 +595,20 @@ function reapOne(board, health, events, j) {
   const result = code === 0 ? finishSuccess(board, j, logText) : { ok: false, why: `worker exited ${code}${code === 124 ? ' (timeout)' : ''}:\n${tail.slice(-1500)}` };
   if (result.ok) {
     health[j.worker] = { state: 'ok', strikes: 0 };
+    if (j.stage === 'maint_review') { recordReview(board, j, result.verdict, result.summary, events); return; }
     if (j.parent) {
       // A fix job only updated its parent's branch; the parent PR goes back to waiting on CI.
       j.status = 'merged';
       const parent = board.jobs.find((p) => p.id === j.parent);
-      if (parent) { parent.status = parent.prNumber ? 'pr_open' : 'ready'; log(board, parent, `fixed by ${j.id}`); }
+      if (parent) {
+        parent.status = parent.prNumber ? 'pr_open' : 'ready';
+        log(board, parent, `fixed by ${j.id}`);
+        // A changed maintenance PR is reviewed again; the old verdict judged the old diff.
+        if (OWN_PR.has(parent.stage)) { delete parent.review; queueReview(board, parent, events); }
+      }
     } else j.status = j.prNumber ? 'pr_open' : 'ready';
+    if (OWN_PR.has(j.stage) && j.prNumber) queueReview(board, j, events);
+    if (j.stage === 'maint_survey') fanOut(board, j, events);
     log(board, j, `done on ${j.worker}${j.prNumber ? `; PR #${j.prNumber}` : j.status === 'ready' ? '; ready for the next batch' : ''}`);
     events.push(`✅ ${j.id} by ${j.worker}${j.prNumber ? ` -> PR #${j.prNumber}` : ''}: ${result.summary}`);
   } else if (j.attempts < 2) {
@@ -770,7 +855,14 @@ function managePrs(board, decisions, events) {
       if (!board.jobs.some((x) => x.parent === j.id && ACTIVE.includes(x.status))) red.push({ j, names: failed.map((c) => c.name || c.context) });
       continue;
     }
-    const touched = prFiles(j.prNumber).filter((f) => PROTECTED.some((re) => re.test(f)));
+    // Maintenance PRs merge only after an independent reviewer of another model family passed them
+    // (owner ruling 2026-10-19: auto-merge safe areas on green CI plus review). A missing review is
+    // queued here; a revise has queued a fix, so the PR waits for it.
+    const maint = OWN_PR.has(j.stage);
+    if (maint && j.review?.verdict !== 'pass') { if (!j.review) queueReview(board, j, events); continue; }
+    const files = prFiles(j.prNumber);
+    if (maint && maintenanceVerdict({ files, ciGreen: true, reviewPassed: true, protectedPatterns: MAINT_PROTECTED }) === 'merge') log(board, j, 'green, reviewed and unprotected: merging');
+    const touched = files.filter((f) => (maint ? MAINT_PROTECTED : PROTECTED).some((re) => re.test(f)));
     // An owner "merge" approves the protected files they were shown. If later commits touch
     // others, ask again; either way the merge itself waits for green CI (checked above).
     const approved = new Set(j.ownerApproved?.files || []);
@@ -837,7 +929,7 @@ function ask(decisions, question, options = ['yes', 'no'], extra = {}) {
   return id;
 }
 
-const HELP = 'commands: crew status | crew pause | crew resume | crew prioritise <COURSE> | crew stop <job> | crew retry <job> | crew note <directions for the crew> | C-### <option> [note]';
+const HELP = 'commands: crew status | crew pause | crew resume | crew prioritise <COURSE> | crew stop <job> | crew retry <job> | crew note <directions for the crew> | crew maintenance now|skip|status | crew intel now|status | C-### <option> [note]';
 
 /**
  * One owner message -> one reply (or null when it is not for the crew). Shared by the tick's
@@ -865,6 +957,24 @@ function handleCommand(text, { board, decisions, control, health }, via = 'cli')
       if (!j) return `no job "${arg}". "crew status" lists job ids.`;
       if (v === 'stop') { if (j.pid && alive(j.pid)) try { process.kill(-j.pid); } catch {} j.status = 'blocked'; log(board, j, `stopped by owner via ${via}`); return `stopped ${j.id}`; }
       j.status = 'queued'; j.attempts = 0; j.launchErrors = 0; log(board, j, `requeued by owner via ${via}`); return `requeued ${j.id}`;
+    }
+    if (v.startsWith('maint')) {
+      const sub = (arg.split(/\s+/)[0] || 'status').toLowerCase();
+      const week = weekId(new Date());
+      if (sub === 'now') {
+        const id = queueSurvey(board, week, [], `owner via ${via}`);
+        return id ? `maintenance ${week}: survey ${id} queued; it starts at the next tick. Sunday's run still happens.` : 'a maintenance survey is already queued or running.';
+      }
+      if (sub === 'skip') { board.maint = { ...board.maint, lastWeek: week }; return `maintenance skipped for ${week}; next run Sunday 02:00 PKT of the following week.`; }
+      return `Maintenance: ${maintenanceLine(board)}`;
+    }
+    if (v === 'intel') {
+      if ((arg.split(/\s+/)[0] || '').toLowerCase() === 'now') {
+        const h = harvest(board, [], harvestSlot(new Date()));
+        const id = queueDistill(board, [], local(new Date()).date, `owner via ${via}`);
+        return `harvested ${h.signals} signals into ${h.clusters} clusters (${h.hot} newly hot); ${id ? `distill ${id} queued` : 'nothing new to distil, or a distill is already queued'}.`;
+      }
+      return intelStatus(board);
     }
     if (v === 'note') {
       if (!arg) return 'usage: crew note <directions>';
@@ -937,6 +1047,8 @@ function statusText(board, health, decisions, control = load('control')) {
     `PRs waiting on CI or merge: ${prs.join(', ') || 'none'}`,
     `Ready for the next hourly batch: ${board.jobs.filter((j) => j.status === 'ready').length}`,
     `Awaiting your G3 sign-off: ${g3Line(board)}`,
+    `Weekly maintenance: ${maintenanceLine(board)}`,
+    `Intelligence: ${intelLine(board)}`,
     ...(red.length ? [`Needs a fix: ${red.join(', ')}`] : []),
     `Needs you: ${open.join(' | ') || 'nothing'}`,
     ...(control.priority?.length ? [`Priority: ${control.priority.join(' > ')}`] : [])].join('\n');
@@ -964,6 +1076,10 @@ ${decisions.items.filter((d) => d.status === 'open').map((d) => `- **${d.id}** $
 Agent review is done; only a person's G3 sign-off (ADR-0019) lets these units move on to the Urdu review.
 ${(board.awaitingG3?.units || []).map((x) => `- ${x.course} Unit ${x.unit}: advisory ${x.disposition}, \`${x.report}\``).join('\n') || 'none'}
 
+## Weekly maintenance and intelligence
+- Maintenance: ${maintenanceLine(board)}
+${intelStatus(board).split('\n').map((l) => (l.startsWith('- ') ? `  ${l}` : `- ${l}`)).join('\n')}
+
 ## Jobs
 | Job | Stage | Status | Worker | Tries | PR | Last event |
 |---|---|---|---|---|---|---|
@@ -983,8 +1099,174 @@ function digest() {
 ${summaryLine(board, health)}
 Last 24 h: ${recent.length ? recent.map((j) => `${j.id}${j.prNumber ? ` #${j.prNumber}` : ''} (${j.status})`).join(', ') : 'nothing finished'}
 Needs you: ${load('decisions').items.filter((d) => d.status === 'open').map((d) => d.id).join(', ') || 'nothing'}
-Awaiting your G3 sign-off: ${g3Line(board)}`;
+Awaiting your G3 sign-off: ${g3Line(board)}
+Weekly maintenance: ${maintenanceLine(board)}
+Intelligence: ${intelLine(board)}`;
   send(text, { dryRun: DRY });
+}
+
+// ---------------------------------------------------------------- self-maintenance and intelligence
+
+/** Is this job self-maintenance, itself or as a fix or review of a maintenance PR? */
+function selfJob(board, j) {
+  return isSelf(j.stage) || isSelf(board.jobs.find((p) => p.id === j.parent)?.stage || '');
+}
+
+
+/** After a survey passes, each row of its tasks.md becomes a job (scripts/crew/maintjobs.mjs). */
+function fanOut(board, survey, events) {
+  const dir = join(survey.worktree, 'specs', 'maintenance', survey.week);
+  const read = (f) => (existsSync(join(dir, f)) ? readFileSync(join(dir, f), 'utf8') : '');
+  const jobs = fanOutJobs(board, survey, { tasks: read('tasks.md'), spec: read('spec.md'), plan: read('plan.md') });
+  events.push(jobs.length
+    ? `🧹 maintenance ${survey.week}: ${jobs.length} task(s) queued (${jobs.map((t) => t.taskRow.id).join(', ')})`
+    : `🧹 maintenance ${survey.week}: the survey found nothing worth a task`);
+}
+
+/** Queue the week's survey. Only the scheduled run marks the week done; "crew maintenance now" is extra. */
+function queueSurvey(board, week, events, why, { scheduled = false } = {}) {
+  board.maint ||= {};
+  if (board.jobs.some((x) => x.stage === 'maint_survey' && ['queued', 'running'].includes(x.status))) return null;
+  const base = `maint-${week.toLowerCase()}-survey`;
+  const n = board.jobs.filter((x) => x.id === base || x.id.startsWith(`${base}-r`)).length;
+  const id = n ? `${base}-r${n}` : base;
+  board.jobs.push({ id, course: 'MAINT', unit: Number(week.slice(-2)) * 10, stage: 'maint_survey', status: 'queued', attempts: 0, tried: [], week,
+    since: board.maint.lastRunAt || new Date(Date.now() - 7 * 864e5).toISOString(), createdAt: now(),
+    scope: `\`specs/maintenance/${week}/\` only: the survey writes its four files and changes nothing else.` });
+  if (scheduled) board.maint.lastWeek = week;
+  board.maint.lastRunAt = now();
+  events.push(`🧹 maintenance ${week}: survey queued (${why})`);
+  if (DRY) console.log(`[dry-run] would queue ${id}`);
+  return id;
+}
+
+function maintenancePhase(board, events) {
+  const week = maintenanceDue(board.maint?.lastWeek, new Date());
+  if (week) queueSurvey(board, week, events, 'Sunday 02:00 PKT', { scheduled: true });
+}
+
+function loadClusters() {
+  try { return JSON.parse(readFileSync(join(INTEL_DIR, 'clusters.json'), 'utf8')); } catch { return {}; }
+}
+
+/**
+ * The 12-hourly harvest (scripts/crew/intel.mjs): signals from everything new since the cursor,
+ * folded into clusters on the host (~/.crew/<project>/intel/). No model is called. A crew failure
+ * that turns hot is announced at once, at most five per harvest.
+ */
+function harvest(board, events, slot) {
+  board.intel ||= {};
+  const since = board.intel.cursor || new Date(Date.now() - 7 * 864e5).toISOString();
+  const at = now();
+  const signals = boardSignals(board.jobs, since);
+  for (const f of existsSync(LOG_DIR) ? readdirSync(LOG_DIR) : []) {
+    if (!f.endsWith('.log')) continue;
+    const st = statSync(join(LOG_DIR, f));
+    if (st.mtime.toISOString() <= since) continue;
+    signals.push(...logSignals(readFileSync(join(LOG_DIR, f), 'utf8').slice(-20000), `log:${f}`, st.mtime.toISOString()));
+  }
+  const cron = join(STATE_DIR, 'cron.log');
+  let cronOffset = board.intel.cronOffset;
+  if (existsSync(cron)) {
+    const size = statSync(cron).size;
+    // cron.log lines carry no time, so old lines cannot be placed in the slot they happened in: the
+    // first harvest starts at the end (a back-fill would book a week of history as "now"), and a
+    // rotated (shrunk) log starts again from its top.
+    const from = cronOffset === undefined ? size : cronOffset > size ? 0 : cronOffset;
+    const buf = Buffer.alloc(size - from);
+    const fd = openSync(cron, 'r');
+    try { readSync(fd, buf, 0, buf.length, from); } finally { closeSync(fd); }
+    signals.push(...cronSignals(buf.toString('utf8'), at));
+    cronOffset = size;
+  }
+  const changed = sh('git', ['log', `--since=${since}`, '--name-only', '--format=', '--', 'history/prompts', 'specs/content'], ROOT, { allowFail: true }).out.split('\n');
+  for (const f of new Set(changed.filter(Boolean))) {
+    const p = join(ROOT, f);
+    if (!existsSync(p)) continue;
+    if (f.startsWith('history/prompts/') && f.endsWith('.md')) signals.push(...phrSignals(readFileSync(p, 'utf8'), `phr:${f}`, at));
+    else if (/\/reviews\/unit-\d+\/G[35]\/[^/]+\.json$/.test(f) && !/manifest/.test(f)) {
+      try { signals.push(...reviewSignals(JSON.parse(readFileSync(p, 'utf8')), `review:${f}`, at)); } catch { /* not a report */ }
+    }
+  }
+  // Count each signal in the slot it happened in (board events and logs carry their own time), so a
+  // first harvest's back-fill still shows the before/after of fixes adopted during that week.
+  const clusters = foldSignals(loadClusters(), signals, (s) => (s.at && s.at < at ? harvestSlot(new Date(s.at)) : slot));
+  const hot = newlyHot(clusters, slot);
+  // The first harvest back-fills a week: what is hot then is the baseline, mostly fixed already,
+  // so it is marked but not announced.
+  const alerts = board.intel.cursor ? hot.filter((c) => ['failure', 'cron', 'log-error'].includes(c.kind)) : [];
+  for (const c of hot) c.alertedAt = at;
+  for (const c of alerts.slice(0, 5)) events.push(`🧠 recurring ${c.kind} x${c.count} since ${c.first.slice(0, 10)}: ${c.example.replace(/\n/g, ' ').slice(0, 160)}`);
+  if (alerts.length > 5) events.push(`🧠 and ${alerts.length - 5} more recurring problems ("crew intel status")`);
+  for (const [k, c] of Object.entries(clusters)) if (c.count < 3 && Date.now() - Date.parse(c.last) > 60 * 864e5) delete clusters[k];
+  const summary = { slot, signals: signals.length, clusters: Object.keys(clusters).length, hot: hot.length };
+  if (DRY) { console.log(`[dry-run] harvest ${JSON.stringify(summary)}`); return summary; }
+  mkdirSync(INTEL_DIR, { recursive: true });
+  writeFileSync(join(INTEL_DIR, 'clusters.json.tmp'), JSON.stringify(clusters, null, 1));
+  renameSync(join(INTEL_DIR, 'clusters.json.tmp'), join(INTEL_DIR, 'clusters.json'));
+  if (signals.length) appendFileSync(join(INTEL_DIR, 'ledger.jsonl'), signals.map((s) => JSON.stringify({ slot, ...s })).join('\n') + '\n');
+  Object.assign(board.intel, { cursor: at, lastHarvestSlot: slot, cronOffset, slots: [...(board.intel.slots || []), slot].slice(-120), lastHarvest: summary });
+  return summary;
+}
+
+/** The daily distill job, given the clusters that grew over the last two harvests. */
+function queueDistill(board, events, day, why) {
+  board.intel ||= {};
+  board.intel.lastDistill = day;
+  const digestText = distillDigest(loadClusters(), slotsBetween(new Date(Date.now() - 864e5), new Date()));
+  if (!digestText) return null;
+  if (board.jobs.some((x) => x.stage === 'intel_distill' && ['queued', 'running'].includes(x.status))) return null;
+  const base = `intel-${day}-distill`;
+  const n = board.jobs.filter((x) => x.id === base || x.id.startsWith(`${base}-r`)).length;
+  const id = n ? `${base}-r${n}` : base;
+  board.jobs.push({ id, course: 'INTEL', unit: 0, stage: 'intel_distill', status: 'queued', attempts: 0, tried: [], day, createdAt: now(),
+    task: digestText, scope: `\`specs/intelligence/daily/${day}.md\` only.` });
+  events.push(`🧠 intelligence ${day}: distill queued (${why})`);
+  if (DRY) console.log(`[dry-run] would queue ${id}`);
+  return id;
+}
+
+function intelPhase(board, events) {
+  board.intel ||= {};
+  const date = new Date();
+  if (harvestDue(board.intel.lastHarvestSlot, date)) harvest(board, events, harvestSlot(date));
+  const day = distillDue(board.intel.lastDistill, date);
+  if (day) queueDistill(board, events, day, '03:00 PKT');
+}
+
+/** Effect of each adopted registry item on the cluster it targets ("worked", "no change", ...). */
+function registryEffects(board) {
+  const file = join(ROOT, 'specs', 'intelligence', 'registry.md');
+  if (!existsSync(file)) return [];
+  const clusters = Object.values(loadClusters());
+  const first = clusters.reduce((m, c) => (c.first < m ? c.first : m), now());
+  const slots = slotsBetween(new Date(first), new Date());
+  return parseRegistry(readFileSync(file, 'utf8')).filter((r) => r.signature && r.adopted)
+    .map((r) => `${r.id} ${effect(clusters.find((c) => c.sig === r.signature), r.adopted, slots)}`);
+}
+
+function maintenanceLine(board) {
+  const week = board.maint?.lastWeek || board.jobs.filter((j) => j.week).at(-1)?.week;
+  if (!week) return 'not run yet';
+  const jobs = board.jobs.filter((j) => j.week === week && OWN_PR.has(j.stage));
+  const count = (pred) => jobs.filter(pred).length;
+  return `${week}: ${count((j) => j.status === 'merged')} merged, ${count((j) => j.status === 'pr_open')} open, ${count((j) => ['queued', 'running'].includes(j.status))} in progress, ${count((j) => j.status === 'gate_red')} red`;
+}
+
+function intelLine(board) {
+  const h = board.intel?.lastHarvest;
+  if (!h) return 'no harvest yet';
+  const effects = registryEffects(board);
+  return `last harvest ${h.slot} PKT: ${h.signals} signals, ${h.clusters} clusters, ${h.hot} newly hot${effects.length ? `; registry: ${effects.join(', ')}` : ''}`;
+}
+
+function intelStatus(board) {
+  const slots = slotsBetween(new Date(Date.now() - 7 * 864e5), new Date());
+  const top = Object.values(loadClusters())
+    .map((c) => ({ c, recent: slots.reduce((n, s) => n + (c.slots[s] || 0), 0) }))
+    .filter((x) => x.recent > 0).sort((a, b) => b.recent - a.recent).slice(0, 8)
+    .map(({ c, recent }) => `- ${c.kind} x${recent} this week (${c.count} total): ${c.example.replace(/\n/g, ' ').slice(0, 120)}`);
+  return [`Intelligence: ${intelLine(board)}`, ...(top.length ? ['Top clusters this week:', ...top] : [])].join('\n');
 }
 
 // ---------------------------------------------------------------- tick
@@ -1002,6 +1284,8 @@ function tick() {
     phase('inbox', () => handleInbox(board, decisions, control, health));
     phase('reap', () => reap(board, health, events));
     phase('batch', () => batchPhase(board, events));
+    phase('intel', () => intelPhase(board, events));
+    phase('maintenance', () => maintenancePhase(board, events));
     // A cooling worker becomes eligible again when its time passes; the next real job is the probe.
     for (const [w, h] of Object.entries(health)) if (h.state === 'cooling' && Date.parse(h.until) <= Date.now()) health[w] = { ...h, state: 'ok' };
     phase('prs', () => managePrs(board, decisions, events));
