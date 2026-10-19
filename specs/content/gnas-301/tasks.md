@@ -56,3 +56,5 @@ units may be authored.
 | Unit 6 | G5 ur-review | ▢ | | advisory round 1: escalate (7 blocking, 9 advisory); report reviews/unit-06/G5/agent-g5-gnas301-u6-run001.json; 6 content blockings repaired post-report, dependency escalation folded into G-2026-34's owner question |
 | Unit 6 | G6 assets | ▢ | | |
 | Unit 6 | G7 publish | ▢ | | |
+
+| Unit 5 | G3 en-review | ▢ | | advisory: revise; repairs applied against reviews/unit-05/G3/round-02/agent-g3-gnas301-u5-run002.json and 20260924T001055Z-g3-attempt-01.json; EN/UR assessment, concept links, source dates and coverage reconciled; details reviews/unit-05/20261019-repair-notes.md; G3 unticked, fresh review owner-gated by G-2026-32 |
