@@ -866,6 +866,11 @@ html[data-theme='dark'] .figure__img--dark {
   --ifm-button-border-color: var(--ifm-color-danger-darkest);
 }
 
+/* Link QR codes (src/lib/printPage.ts) exist only while printing; never on screen. */
+.print-qr {
+  display: none;
+}
+
 /* --- A4 print stylesheet (FR-011, SC-009, T031) ---------------------------- */
 @media print {
   @page {
@@ -943,6 +948,28 @@ html[data-theme='dark'] .figure__img--dark {
   /* keep RTL/Nastaliq in printed Urdu handouts */
   html[dir='rtl'] .markdown {
     line-height: 2.2;
+  }
+  /* A link cannot be clicked on paper: its QR code sits on its own line just
+     after it, about 2 cm square (scannable from a phone at reading distance),
+     with the short URL beside it. */
+  .print-qr {
+    display: flex;
+    align-items: center;
+    gap: 3mm;
+    margin: 1.5mm 0;
+    break-inside: avoid;
+    break-before: avoid; /* keep it on the same page as its link */
+  }
+  .print-qr svg {
+    flex: none;
+    width: 20mm;
+    height: 20mm;
+  }
+  .print-qr__url {
+    font-size: 8pt;
+    line-height: 1.3;
+    color: #303846;
+    overflow-wrap: anywhere;
   }
   /* never split a figure across an A4 page boundary (Spec 009) */
   .figure {
