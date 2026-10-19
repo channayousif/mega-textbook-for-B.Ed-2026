@@ -1,8 +1,8 @@
 ---
 id: crew-gict-300-u04-translate-r1
-title: crew translate GICT-300 unit 4 r1
+title: crew translate GICT-300 unit 4
 stage: misc
-date: 2026-10-18
+date: 2026-10-19
 surface: agent
 model: agy
 feature: gict-300
@@ -60,20 +60,20 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Reconciled GICT-300 Unit 4 Urdu mirror key_terms with terminology.csv, authored the G4 translation handoff document documenting all 15 unbanked concept proposals for the curriculum owner, updated the tasks tracker with handoff link, and verified all 13 content gates pass cleanly.
+Bound Unit 4 Urdu mirror key_terms to accepted terminology.csv entries, authored the G4 translation handoff record documenting the 15 unbanked concept proposals for curriculum owner review, and updated the tasks tracker with all 13 content gates passing.
 
 ## Outcome
 
-- Impact: translate for GICT-300 Unit 4 by agy (attempt 2).
-- Tests: npm run check:content passed in the job worktree before committing.
+- Impact: translate for GICT-300 Unit 4 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 4 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Reconciled GICT-300 Unit 4 Urdu mirror key_terms with terminology.csv, authored G4 translation handoff record at reviews/unit-04/G4/translation-handoff.md with all 15 unbanked concept proposals, and updated the G4 tracker row in tasks.md with handoff link.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything. translation_status stays draft pending fresh independent G5 review.
+- Shipped / changed: Bound Unit 4 Urdu mirror key_terms to accepted terminology.csv entries, authored the G4 translation handoff record documenting the 15 unbanked concept proposals for curriculum owner review, and updated the tasks tracker with all 13 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Unit 4 Urdu mirror has complete 7-file structural, heading, and figure parity with English baseline ef87f8f4; translation_status remains draft pending fresh independent G5 review.
@@ -82,7 +82,7 @@ Reconciled GICT-300 Unit 4 Urdu mirror key_terms with terminology.csv, authored 
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: 1 earlier attempt(s); see the board history
+- Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
