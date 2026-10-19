@@ -22,8 +22,9 @@ units may be authored.
 | Unit 1 | G6 assets | ▢ | | |
 | Unit 1 | G7 publish | ▢ | | gate-checked tier pre-authorised by D-2026-0014 |
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0020 + owner resolutions G-2026-22/G-2026-23 + floor D-2026-0021; content-spec status: approved |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-02/G2/20261013T123554639Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-02/G2/20261019T142940752Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | advisory rounds 1-2: revise then PASS; round-2 report reviews/unit-02/G3/round-02/agent-g3-gnas301-u2-run002.json (disposition pass, advisory); round-2 advisories applied post-report |
+| Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied; report reviews/unit-02/G3/agent-g3-gnas301-u2-run001.json |
 | Unit 2 | G4 ur-translation | ✅ | auto:g4 | all 6 Urdu mirror files at i18n/ur/.../gnas-301/unit-02/, 2026-09-24; heading parity exact, terminology-bank-driven, .ur.svg figure variants, zero em-dash; translation_status stays draft pending G5 |
 | Unit 2 | G5 ur-review | ▢ | | advisory round 1: escalate (6 blocking, 12 advisory); report reviews/unit-02/G5/agent-g5-gnas301-u2-run001.json; content defects repaired post-report; stale G3 dependency recorded as G-2026-34 |
 | Unit 2 | G6 assets | ▢ | | |
