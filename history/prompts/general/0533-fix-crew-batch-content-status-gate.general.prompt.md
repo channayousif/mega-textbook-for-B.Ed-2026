@@ -14,7 +14,7 @@ links:
   spec: null
   ticket: null
   adr: null
-  pr: null
+  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/281
 files:
  - scripts/crew/crew.mjs
  - history/prompts/general/0531-crew-disk-unblock-and-delete-paperclip.general.prompt.md
