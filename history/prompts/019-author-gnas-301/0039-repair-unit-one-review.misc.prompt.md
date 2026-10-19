@@ -39,14 +39,16 @@ Read .crew/brief.md in the current directory and carry it out completely. It is 
 Verified both G3 reports against existing repairs. Completed descriptive DOI links, explicit
 cross-topic teacher references and drinking-water source identification in English and Urdu.
 Appended the requested advisory tracker row with G3 unticked. Recorded finding-by-finding
-repair provenance. Refreshing G2 deterministic evidence after committing its bound inputs.
+repair provenance. Refreshed G2 deterministic evidence after committing its bound inputs. All 13 final
+content gates passed.
 
 ## Outcome
 
 - Impact: Remaining Unit 1 repairs applied without duplicating fixes already on main.
 - Tests: All 314 tests passed across 26 files. Initial main-equivalent content run passed
   12 gates; missing generated content-status was the only failure. Content changes require
-  fresh Unit 1 G2 evidence; final gate outcome is recorded in the follow-up validation record.
+  fresh Unit 1 G2 evidence, which passed all eight draft checks. Final check:content
+  passed all 13 gates after rebuilding ignored static/content-status.json.
 - Files: Unit 1 EN/UR prose, tracker, repair record and G2 evidence only, plus this required PHR.
 - Next prompts: Owner-authorised independent review under G-2026-24.
 - Reflection: Shared source edits invalidate another unit's evidence, so avoided that edit.
@@ -61,6 +63,6 @@ repair provenance. Refreshing G2 deterministic evidence after committing its bou
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Existing main repairs made original report quotes stale; shared source edit staled Unit 2 G2 and was reverted.
-- Graders run and results (PASS/FAIL): Unit tests PASS; final content gates and G2 evidence recorded with follow-up validation.
+- Graders run and results (PASS/FAIL): Unit tests PASS (314); content gates PASS (13); G2 evidence PASS (8); diff whitespace PASS.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Fresh independent review only with owner authorisation.
