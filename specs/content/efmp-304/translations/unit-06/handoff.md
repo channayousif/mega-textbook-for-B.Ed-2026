@@ -67,3 +67,8 @@ owner because this crew brief prohibits builds and dev servers. Fresh independen
 G5 must include that inspection and the changed Urdu metadata and figure inputs.
 The earlier G5 report does not certify these changed inputs. No new terminology
 bank entries are proposed by this continuation. G4 remains in progress and unsigned.
+
+Final `npm run check:content`: all 13 gates passed. Additional metadata/component
+comparison passed for all six mirrored pages; assessment numbered-item counts
+match at 50/50, including the answer sections. The final G2 evidence is
+`20261019T003355701Z-gates.json`, prepared after committing the metadata changes.

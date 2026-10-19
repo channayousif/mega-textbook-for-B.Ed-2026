@@ -19,7 +19,7 @@ files:
   - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-304/unit-06/
   - specs/content/efmp-304/tasks.md
   - specs/content/efmp-304/translations/unit-06/handoff.md
-  - specs/content/efmp-304/reviews/unit-06/G2/20261019T003234470Z-gates.json
+  - specs/content/efmp-304/reviews/unit-06/G2/20261019T003355701Z-gates.json
 tests:
   - npm run check:content
   - npm run figures:variants:check
@@ -54,6 +54,6 @@ report, and verified conditional parity before restoring draft status.
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Stale G2 manifest from added Urdu figure inputs; missing ignored content-status output; untranslated Bloom summaries.
-- Graders run and results (PASS/FAIL): G2 deterministic commands PASS; figure variants PASS; final content result recorded in unit handoff.
+- Graders run and results (PASS/FAIL): G2 deterministic commands PASS; figure variants PASS; final content gates PASS (13/13); metadata and component comparison PASS for all six pages.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Independent G5 and rendered inspection on the committed bundle.
