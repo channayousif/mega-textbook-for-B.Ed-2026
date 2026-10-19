@@ -49,7 +49,19 @@ The index `key_terms` declares the five core terms (Budget, Interest, Loss, Prof
 - `translation_status` remains `draft` everywhere because no independent G5 review has taken place.
 - No Docusaurus build or dev server was run, strictly obeying the crew brief.
 
+## Retry review and repairs (2026-10-18, opencode / agy)
+
+A pass-by comparison against the English baseline found semantic and phrasing issues in the mirror and repaired them:
+
+- `topic-01.mdx:47` - "مینہ" (not a valid Urdu word) replaced with "طوفان" for EN "rainstorm". A halving of fair customers by a storm is now legible.
+- `topic-02.mdx:66` and `unit-assessment.mdx:168` - the calque "انجینئر کیا گیا" (literal for "engineered") replaced with "تیار کیا گیا" (constructed/devised) in both the prose and the RRQ-7 model answer, matching academic-plain register.
+- `index.mdx:33,51` - "اثر" (calque error for "expressions") replaced with "الجبری اظہارات" (algebraic expressions from Unit 3).
+- `index.mdx:65` - "ہر ایک اگلے پر سیدھا مبنی ہے" improved to "ہر موضوع پچھلے موضوع پر براہِ راست مبنی ہے" for clearer academic register.
+- `topic-02.mdx:94` - "کیا چھوٹا ہے" (meaning error for "what was left out") corrected to "کیا چھوڑا گیا ہے".
+
+All 13 content gates (`npm run check:content`) pass cleanly (13/13) after running `npm run build:content-status`. Component parity 6/6/5/0/0/0, MCQ item counts 50/50, MCQ answer keys and Bloom tag counts verified to match the English baseline commit `2976ef5e`. `check:no-em-dash` clean across all six UR files.
+
 ## Next owner and status
 
-`translation_status` remains `draft` in all files. G4 tracker row in `tasks.md` is updated to in-progress (`▣`) with this handoff reference; no G4 completion or review certification is claimed per `translate-unit` Step 7 and repository governance rules.
+`translation_status` remains `draft` in all files. G4 tracker row in `tasks.md` remains in-progress (`▣`) with this handoff reference; no G4 completion or review certification is claimed per `translate-unit` Step 7 and repository governance rules.
 A fresh, independent G5 review session is needed to evaluate the Urdu translation against the English baseline.
