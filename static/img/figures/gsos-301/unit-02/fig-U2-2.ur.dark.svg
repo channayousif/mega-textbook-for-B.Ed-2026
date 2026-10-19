@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">ثقافت پرستی بمقابلہ ثقافتی اضافیت</title><desc id="d">ثقافت پرستی (اپنے معیارات سے پرکھنا) اور ثقافتی اضافیت (اپنے سیاق میں سمجھنا) کا موازنہ کرنے والا خاکہ، مع پاکستانی کلاس روم مثالیں</desc>
+<style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} .center-panel{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2.5} .link{stroke:var(--line);stroke-width:2;fill:none} text{font-size:12px;fill:var(--ink);text-anchor:middle} .h{font-size:15px;font-weight:700} .m{font-size:11px;fill:var(--muted)} .wm{fill:var(--wm);font-size:11px}</style>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--line)"/></marker></defs>
+<rect class="bg" x="0" y="0" width="780" height="470"/>
+
+<!-- Center -->
+<rect class="center-panel" x="250" y="30" width="280" height="60" rx="8"/>
+<text class="h" x="390" y="55" fill="var(--a1)">ثقافت کا جائزہ</text>
+<text class="m" x="390" y="73">دو متضاد تجزیاتی زاویے</text>
+
+<!-- Right (in RTL reading): Ethnocentrism (ثقافت پرستی) -->
+<rect class="panel" x="430" y="125" width="310" height="295" rx="8"/>
+<text class="h" x="585" y="155" fill="var(--a3)">ثقافت پرستی</text>
+<text class="m" x="585" y="175">اپنے معیارات سے پرکھنا</text>
+<line x1="450" y1="190" x2="720" y2="190" stroke="var(--ink)" stroke-width="1"/>
+<text class="h" x="585" y="215">تعریف:</text>
+<text x="585" y="235">اپنی ثقافت کو فطری، درست</text>
+<text x="585" y="252">اور برتر سمجھنا</text>
+<text class="h" x="585" y="285">تدریس پر اثر:</text>
+<text x="585" y="305">تعصب پیدا کرتا ہے اور طلبہ کے</text>
+<text x="585" y="322">پس منظر و زبان کو مسترد کرتا ہے</text>
+<text class="h" x="585" y="355">پاکستانی کلاس روم کی مثال:</text>
+<text x="585" y="375">علاقائی لہجوں کا مذاق اڑانا یا دیہی</text>
+<text x="585" y="392">رسوم کو "پسماندہ" قرار دینا</text>
+
+<!-- Left (in RTL reading): Cultural Relativism (ثقافتی اضافیت) -->
+<rect class="panel" x="40" y="125" width="310" height="295" rx="8"/>
+<text class="h" x="195" y="155" fill="var(--a2)">ثقافتی اضافیت</text>
+<text class="m" x="195" y="175">اپنے سیاق میں سمجھنا</text>
+<line x1="60" y1="190" x2="330" y2="190" stroke="var(--ink)" stroke-width="1"/>
+<text class="h" x="195" y="215">تعریف:</text>
+<text x="195" y="235">کسی ثقافتی عمل کو اس کے اپنے</text>
+<text x="195" y="252">سیاق اور تاریخ میں سمجھنا</text>
+<text class="h" x="195" y="285">تدریس پر اثر:</text>
+<text x="195" y="305">ہمدردی بڑھاتا ہے، ثقافتی تنوع</text>
+<text x="195" y="322">کی قدر کر کے شمولیت لاتا ہے</text>
+<text class="h" x="195" y="355">پاکستانی کلاس روم کی مثال:</text>
+<text x="195" y="375">علاقائی مادری زبانوں اور متنوع</text>
+<text x="195" y="392">کمیونٹی روایات کی توقیر کرنا</text>
+
+<!-- Connectors -->
+<line class="link" x1="460" y1="90" x2="560" y2="125" marker-end="url(#ar)"/>
+<line class="link" x1="320" y1="90" x2="220" y2="125" marker-end="url(#ar)"/>
+<text class="wm" x="768" y="460" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

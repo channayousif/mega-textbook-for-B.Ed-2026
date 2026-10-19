@@ -21,14 +21,14 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit 1 | G6 assets | ▢ | | 6 figures prompt-only; schematic handoff pending |
 | Unit 1 | G7 publish | ▢ | | |
 
-**Unit 2 - Culture and Socialization:** not started.
+**Unit 2 - Culture and Socialization:** English content authored to the Spec 008 v3.0 per-topic layout: `index.mdx` + `topic-01..02.mdx` + `unit-assessment.mdx` (10/10/5 bank + bounded answers) + `unit-teacher-notes.mdx`. Urdu mirror (G4) authored for all 5 files. Figure variants (.ur.svg and .ur.dark.svg) created and verified.
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 2 | G1 unit-spec | ▢ | | pending G0 intake |
 | Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-02/G2/20261017T120753514Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | |
-| Unit 2 | G4 ur-translation | ▢ | | |
+| Unit 2 | G4 ur-translation | ▣ | auto:gates | full UR mirror (5 files) and 4 figure variants authored; gates pass; translation_status stays draft pending G5 |
 | Unit 2 | G5 ur-review | ▢ | | |
 | Unit 2 | G6 assets | ▢ | | |
 | Unit 2 | G7 publish | ▢ | | |
