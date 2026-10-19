@@ -63,7 +63,7 @@ a `flowchart` and a `concept-map` as the Art. III.10 schematics. G1 unit-spec at
 | Unit 4 | G1 unit-spec | ▢ | | board G0/G1 intake pending |
 | Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-303/reviews/unit-04/G2/20261017T113130874Z-gates.json |
 | Unit 4 | G3 en-review | ▣ | | agent G3 (Reviewer, agy Gemini, run d3ec05d7) advisory escalation: specs/content/efmp-303/reviews/unit-04/G3/crew-20261018.json. Row stays open: agent evidence cannot close it (ADR-0019) |
-| Unit 4 | G4 ur-translation | ▣ | | complete 5-file UR mirror verified against EN baseline (2026-10-18): 4 .ur.svg/.ur.dark.svg variants wired; structural parity, figure parity, and key_terms clean under temporary reviewed flip (reverted); translation_status stays draft pending fresh independent G5 |
+| Unit 4 | G4 ur-translation | ▣ | | Complete 5-file Urdu mirror verified against EN baseline (c0e60d31): 4 .ur.svg/.ur.dark.svg variants wired; structural parity, figure parity, and key_terms clean under temporary reviewed flip (reverted). Handoff: specs/content/efmp-303/reviews/unit-04/G4/translation-handoff.md. translation_status stays draft pending fresh independent G5 |
 | Unit 4 | G5 ur-review | ▢ | | |
 | Unit 4 | G6 assets | ✅ | auto:gates | 4 schematics placed |
 | Unit 4 | G7 publish | ▢ | | |
