@@ -62,3 +62,19 @@ Curriculum owner banks the eleven statistics terms (or rules on the Mode/عاد
 discrepancy) and resolves the G3 dependency. A fresh independent G5 reviewer
 compares every passage, assessment item and figure and obtains rendered evidence.
 No reviewer initials or review-completion marks were supplied here.
+
+## Retry validation, 2026-10-18
+
+Codex continued from 5bd81ad2 without changing the translated bundle or tracker
+status. The previous missing `static/content-status.json` finding was an absent
+gitignored generated artifact. Running `npm run build:content-status` regenerated
+it successfully; do this again in a fresh checkout before running content gates.
+The artifact remains generated and is not committed.
+
+`npm run check:content` now passes all 13 gates, with no findings. The captured
+output is `retry-content-gates.log` beside this handoff. A fresh source comparison
+confirmed all six file names, heading vectors and component counts match, all
+referenced Urdu figure files exist, and both index statuses remain `draft`.
+`npm run figures:variants:check` also passes. The earlier temporary reviewed-flip
+results above remain applicable because this continuation changed no unit inputs.
+Builds and rendered inspection remain prohibited by the brief and pending for G5.
