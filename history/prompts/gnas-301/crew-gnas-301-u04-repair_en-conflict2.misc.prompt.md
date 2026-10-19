@@ -1,34 +1,59 @@
 ---
 id: crew-gnas-301-u04-repair_en-conflict2
-title: Merge main into unit four
+title: crew fix GNAS-301 unit 4
 stage: misc
 date: 2026-10-19
 surface: agent
-model: GPT-6
+model: codex
 feature: gnas-301
 branch: crew/gnas-301-u04-repair_en
 user: crew
-command: Read .crew/brief.md and carry it out
-labels: ["crew", "codex", "merge"]
+command: crew fix
+labels: ["crew", "codex", "fix"]
 links:
   spec: specs/content/gnas-301/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
+ - docs/semester-1/gnas-301/unit-04/topic-01.mdx
+ - docs/semester-1/gnas-301/unit-04/topic-02.mdx
+ - docs/semester-1/gnas-301/unit-04/topic-03.mdx
+ - docs/semester-1/gnas-301/unit-04/topic-04.mdx
+ - docs/semester-1/gnas-301/unit-04/topic-05.mdx
+ - docs/semester-1/gnas-301/unit-04/topic-06.mdx
+ - docs/semester-1/gnas-301/unit-04/topic-07.mdx
+ - docs/semester-1/gnas-301/unit-04/unit-assessment.mdx
+ - history/prompts/gnas-301/0043-repair-unit-four-g3-findings.misc.prompt.md
+ - history/prompts/gnas-301/crew-gnas-301-u04-repair_en-conflict1.misc.prompt.md
  - history/prompts/gnas-301/crew-gnas-301-u04-repair_en-conflict2.misc.prompt.md
+ - history/prompts/gnas-301/crew-gnas-301-u04-repair_en.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-04/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-04/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-04/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-04/topic-04.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-04/topic-05.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-04/topic-06.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-04/topic-07.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-04/unit-assessment.mdx
+ - specs/content/gnas-301/concepts/unit-04.md
+ - specs/content/gnas-301/coverage/unit-04.md
+ - specs/content/gnas-301/reviews/unit-04/G2/20261019T150338371Z-gates.json
+ - specs/content/gnas-301/reviews/unit-04/G2/logs-20261019T150338371Z/check-bloom-bands.txt
+ - specs/content/gnas-301/reviews/unit-04/G2/logs-20261019T150338371Z/check-concept-graph.txt
+ - specs/content/gnas-301/reviews/unit-04/G2/logs-20261019T150338371Z/check-depth-gate.txt
+ - specs/content/gnas-301/reviews/unit-04/G2/logs-20261019T150338371Z/check-docs-sync.txt
+ - specs/content/gnas-301/reviews/unit-04/G2/logs-20261019T150338371Z/check-figures.txt
+ - specs/content/gnas-301/reviews/unit-04/G2/logs-20261019T150338371Z/check-no-answer-keys.txt
+ - specs/content/gnas-301/reviews/unit-04/G2/logs-20261019T150338371Z/check-no-em-dash.txt
+ - specs/content/gnas-301/reviews/unit-04/G2/logs-20261019T150338371Z/validate-content.txt
+ - specs/content/gnas-301/sources/unit-04.md
+ - specs/content/gnas-301/tasks.md
 tests:
- - scripts/heavy.sh npm run check:content (branch and origin/main)
- - npm run build:content-status (ignored local artifact)
- - git diff --check
- - Shared registries identical to origin/main
+ - npm run check:content
 ---
 
 ## Prompt
-
-Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.
-
-Delegated brief (verbatim):
 
 # Crew job gnas-301-u04-repair_en-conflict2
 
@@ -58,28 +83,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gnas-301-u04-repair_en, repair_en, codex) G3 remains unticked; a third review cycle requires owner authorization under G-2026-31.
 - (gnas-301-u04-repair_en, repair_en, codex) G3 remains unticked; a third review cycle requires owner authorization under G-2026-31.
 
+
 ## Response snapshot
 
-Merged origin/main without conflicts, preserving previous Unit 4 repairs. Shared registries match main, with no ID collisions. Branch and main both pass 12 gates and fail only check:content-status because static/content-status.json is stale on the branch and missing in the clean main worktree. Regenerated the ignored local report and reran all content gates successfully. No push or PR.
+Merged main into the Unit 4 repair branch, regenerated local content status, and committed the validation record.
 
 ## Outcome
 
-- Impact: Branch synchronized; no additional content-gate findings.
-- Tests: Initial full check:content runs on branch and main: 12 PASS and 1 baseline FAIL each. After local report regeneration, all 13 branch gates PASS; git diff --check PASS.
-- Files: Merge plus this PHR; no new unit edits required.
-- Next prompts: Owner authorization for third G3 cycle remains pending.
-- Reflection: Verify baseline before editing corpus-wide generated files outside unit scope.
+- Impact: fix for GNAS-301 Unit 4 by codex (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 33 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged main while retaining existing Unit 4 repairs.
-- Decisions the team must respect: G3/G5 remain open; shared registries unchanged; no certification or publication changes.
-- Pending / next owner: The ignored content-status report must be regenerated per worktree. Curriculum owner controls third G3 cycle under G-2026-31.
-- Paperclip issues affected: None supplied; links.ticket is null.
+- Shipped / changed: Merged main into the Unit 4 repair branch, regenerated local content status, and committed the validation record.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - G3 remains open; a third review cycle requires owner authorization under G-2026-31.
+  - G3 remains open; a third review cycle requires owner authorization under G-2026-31.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: Generated content-status report is stale locally and absent in clean main.
-- Graders run and results (PASS/FAIL): Initial 12/13 content gates PASS on branch and main; final branch run 13/13 PASS after regenerating the ignored report. Whitespace PASS.
-- Prompt variant (if applicable): Crew conflict2 brief.
-- Next experiment (smallest change to try): None needed for this merge.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
