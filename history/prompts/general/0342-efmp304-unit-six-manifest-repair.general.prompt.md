@@ -41,7 +41,7 @@ before preparing replacement evidence and updating its tracker reference.
 ## Outcome
 
 - Impact: Complete draft Urdu mirror retained and deterministic freshness repaired.
-- Tests: Metadata/components match for six pages; 780 figure variants pass. Conditional parity, figures and terminology pass; open G4/G5, stale G2 and temporary stale status report are expected findings during the temporary flip. Final gate results recorded below after execution.
+- Tests: Metadata/components match for six pages; 780 figure variants pass. Conditional parity, figures and terminology pass; open G4/G5, stale G2 and temporary stale status report are expected findings during the temporary flip. Final content run PASS, all 13 gates. Replacement G2 manifest/logs validate; assessment numbered items match 50/50 and ten option sets use Urdu letters.
 - Files: Assessment, handoff, G2 evidence/logs, tracker and this record.
 - Next prompts: Independent G5 including full-page RTL and A4 render inspection.
 - Reflection: Editing a bound handoff after preparing evidence invalidates that evidence.
@@ -56,6 +56,6 @@ before preparing replacement evidence and updating its tracker reference.
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Bound handoff changed after evidence preparation; Latin option labels remained in Urdu assessment.
-- Graders run and results (PASS/FAIL): Initial content run FAIL only for stale Unit 6 G2; conditional checks passed structural/figure/terminology checks with expected open review rows. Final results pending execution.
+- Graders run and results (PASS/FAIL): Initial content run FAIL only for stale Unit 6 G2; conditional checks passed structural/figure/terminology checks with expected open review rows. Final content run PASS (13/13), replacement G2 acceptance PASS, assessment numbering and Urdu option-set checks PASS.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Verify replacement evidence after committing all bound inputs.
