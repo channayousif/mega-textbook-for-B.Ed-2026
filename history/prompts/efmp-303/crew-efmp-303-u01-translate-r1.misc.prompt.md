@@ -1,15 +1,15 @@
 ---
 id: crew-efmp-303-u01-translate-r1
-title: crew re-verify EFMP-303 unit 1 G4 Urdu mirror
+title: crew translate EFMP-303 unit 1
 stage: misc
 date: 2026-10-19
 surface: agent
-model: claude
+model: opencode
 feature: efmp-303
 branch: crew/efmp-303-u01-translate-r1
 user: crew
-command: crew translate re-verify
-labels: ["crew", "claude", "translate", "verify"]
+command: crew translate
+labels: ["crew", "opencode", "translate"]
 links:
   spec: specs/content/efmp-303/content-spec.md
   ticket: null
@@ -17,47 +17,73 @@ links:
   pr: null
 files:
  - history/prompts/efmp-303/crew-efmp-303-u01-translate-r1.misc.prompt.md
- - specs/content/efmp-303/reviews/unit-01/G4/translation-handoff.md
- - specs/content/efmp-303/tasks.md
 tests:
  - npm run check:content
 ---
 
 ## Prompt
 
-Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.
+# Crew job efmp-303-u01-translate-r1
 
-## Brief: Crew job efmp-303-u01-translate-r1
+You are the opencode worker on the B.Ed bilingual textbook repo, working in this checkout on branch `crew/efmp-303-u01-translate-r1`.
+Read AGENTS.md and CLAUDE.md first and obey them: no em dash (U+2014) anywhere, heavy commands only through
+`scripts/heavy.sh`, never run `npm run build` or a dev server, never mark G3/G5 done, never self-sign or use
+human initials, never edit the style guide, constitution, ADRs, gate scripts, catalog or an approved content-spec.
 
-Task: Translate EFMP-303 Unit 1 into its complete Urdu mirror at G4 (translate-unit skill), bound to specs/content/terminology.csv. Record the G4 tracker row as the skill says; translation_status stays draft.
+## Task
+Translate EFMP-303 Unit 1 into its complete Urdu mirror at G4 (translate-unit skill), bound to specs/content/terminology.csv. Record the G4 tracker row as the skill says; translation_status stays draft.
+
+Follow `.claude/skills/translate-unit/SKILL.md` exactly; read it and every file it references before starting.
+
+## Scope
+EFMP-303 Unit 1 only: its docs/licence and i18n files, its rows and folders under
+`specs/content/efmp-303/`, and `static/img/figures/efmp-303/unit-01/`.
+
+## Continue, do not restart
+Earlier attempts may have left work on this branch. Check `git log origin/main..HEAD` and `git status` and build on it.
+
+## Done when
+1. `npm run check:content` reports no finding that origin/main does not also report (run it, read every
+   failure, fix those in your scope, rerun). Findings that already exist on main belong to other jobs.
+2. All work is committed on this branch with a conventional commit message. Do not push and do not open a PR.
+3. Your final output ends with one line: `CREW-SUMMARY: <what you changed, in one sentence>`.
+4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit
+   needs (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
+
+## Notes from earlier jobs on this unit
+- (efmp-303-u01-translate, translate, agy) All 8 .ur.svg figure variants and derived dark variants are wired in topics 1-4 with matching carrier alt text and passing figures:variants:check.
+- (efmp-303-u01-translate, translate, agy) Structural, figure, and terminology parity verified clean under temporary reviewed flip; translation_status stays draft pending independent G5 review.
+- (efmp-303-u01-translate, translate, agy) Proposed unbanked terms recorded in translation-handoff.md, including the Development sense split between child growth (نشوونما) and macro planning (ترقی).
+- (efmp-303-u01-review_en, review_en, agy) G3 disposition is escalate because host brief constraints prohibit running build or dev server for live interactive viewport (360x780) and A4 print emulation.
+- (efmp-303-u01-review_en, review_en, agy) Board G0/G1 intake status is noted as pending in tasks.md:15 despite approved content-spec.
+
 
 ## Response snapshot
 
-The Urdu mirror for EFMP-303 Unit 1 was already complete on origin/main from a prior agy pass (branch crew/efmp-303-u01-translate, PHR crew-efmp-303-u01-translate). This r1 branch was created from main with no new content changes needed. Re-verified the full mirror: all 13 content gates pass, structural parity (7 files, 8 figures, 3 glossaries, 6 print handouts, heading vectors), assessment bank (10/10/5), and key_terms (Curriculum/نصاب, Development/نشوونما) confirmed against terminology.csv. Temporary reviewed flip confirmed parity gates are silent-clean; reverted both index files to draft.
+Verified EFMP-303 Unit 1 Urdu mirror at G4  -  already complete and merged on main from prior agy pass; no content changes needed, all 13 gates pass, PHR recorded.
 
 ## Outcome
 
-- Impact: verified (no-op) — EFMP-303 Unit 1 Urdu mirror already complete and merged on main.
-- Tests: npm run check:content 13/13 PASS.
-- Files: 1 file added (this PHR); no content files changed.
-- Next prompts: crew lead should flip G4 tracker row to ✅ if the board accepts the prior agy mirror as G4-done, then dispatch an independent G5 review.
-- Reflection: branch was spun from main already containing the merged translate; the r1 re-verify was a guard against a stale branch and came back clean.
+- Impact: translate for EFMP-303 Unit 1 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 1 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: nothing new; this PHR records the r1 verification pass.
-- Decisions the team must respect: translation_status stays draft; G4/G5 tracker rows must not be flipped by this session. The G4 row remains ▣ in tasks.md.
-- Pending / next owner: independent G5 Urdu review of EFMP-303 Unit 1 remains pending (G5 ▢).
+- Shipped / changed: Verified EFMP-303 Unit 1 Urdu mirror at G4  -  already complete and merged on main from prior agy pass; no content changes needed, all 13 gates pass, PHR recorded.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All 8 .ur.svg/.ur.dark.svg variants wired in topics 1-4; figures:variants:check clean.
-  - Structural, figure, and terminology parity verified clean under temporary reviewed flip (reverted).
-  - Proposed unbanked terms recorded in translation-handoff.md (Development sense split: نشوونما vs ترقی).
-  - G3 escalated (host brief constraints); board G0/G1 intake still pending.
-- Paperclip issues affected: none.
+  - G4 tracker row stays ▣; independent G5 Urdu review remains pending.
+  - G3 escalated, board G0/G1 intake still pending.
+  - Proposed unbanked terms (Development sense split: نشوونما vs ترقی) in translation-handoff.md for owner determination.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none (clean mirror, clean gates).
-- Graders run and results (PASS/FAIL): check:content PASS (13/13).
-- Prompt variant (if applicable): crew brief v1 re-verify (r1)
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
