@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 # Curriculum Gaps & Discrepancies Log
 
 Per Constitution Art. II.3, any ambiguity or mismatch between the **board Scheme of Study** and
@@ -26,12 +24,6 @@ Status: `open` (awaiting owner decision) · `resolved` (decision recorded).
 > decided on its own merits by the owner, recorded per gap below.
 
 ---
-
-
-
----
-
->>>>>>> origin/main
 ## G-2026-01 - Sem I/II course guides extracted (was: pending PDF extraction)
 - **Status:** resolved
 - **Detail:** `1st 2026.pdf` and `2nd 2026.pdf` are text-extracted (via `pdfminer.six`/`pypdf` in a venv; `poppler-utils` needs root and was unavailable). Both follow the enriched 2026 structure: *Suggested Practical Activities (optional)*, *Suggested Instructional/Reading Materials*, *Teaching/Instructional Strategies*, *Practical Work*, *Assessment Criteria*, *Recommended Books*.
@@ -1778,15 +1770,7 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 
 The generated raster illustration `fig-U4-12.webp` places the teacher at the front beside the board, which contradicts its prompt specifying a landscape scene of a male teacher "at the back of his own classroom". A repair or regeneration is needed before G3 can pass.
 
-<<<<<<< HEAD
-=======
 ---
-
-
-
----
-
->>>>>>> origin/main
 ## G-2026-77 - EFMP-303 intake: the six-unit partition is the spec's construction over a guide that gives only a week table
 
 - **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
@@ -2100,108 +2084,6 @@ The generated raster illustration `fig-U4-12.webp` places the teacher at the fro
   `U5-3`, `fig-U5-3`, `fig-U5-4`); `## Standards & frameworks anchors` second bullet; Unit 5 key
   term "Rights of Persons with Disabilities Act (RPwD)". Units 1-4 and 6 are not blocked by it.
 
-<<<<<<< HEAD
-## G-2026-87 - GENG-301: checklist rows that go beyond the guide bullet they cite
-
-- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
-- **Gate:** G0 intake / G1 unit-spec (`coverage` criterion)
-- **Source:** `D-2026-0050`
-- **Detail:** Each row below cites a real guide bullet but adds matter the bullet does not contain.
-  Whether these are acceptable elaborations or out-of-scope additions is a scope judgement the guide
-  does not settle, so it is not approved and not rejected here:
-  - `U2-04` (`content-spec.md:123`) names the three drafting stages "rough, structured, refined";
-    the guide says only "three stage process of drafting techniques" (`2nd 2026.txt:56`) and names
-    no stages.
-  - `U2-05` (`content-spec.md:124`) adds "writing for a purpose and audience" to drafting; purpose
-    and audience are the guide's Unit 5 (`:86-91`), so the row may duplicate it.
-  - `U2-06` (`content-spec.md:125`) adds "argument strength" to revising; the guide's revising
-    bullet lists grammar, clarity, coherence, conciseness (`:57`).
-  - `U3-03`/`U3-04` (`content-spec.md:175-176`) require the thesis to be "arguable" and judge it on
-    "debatability"; the guide asks for "a clear and focused central idea" (`:64`). An arguable
-    thesis is an argumentative-essay criterion and changes what an expository thesis is taught to be.
-  - `U5-06` (`content-spec.md:282`) adds named public forms (opinion columns, newsletters, blogs);
-    the guide bullet (`:90`) names none.
-- **Needed, and from whom:** the curriculum owner, to rule each row in or out of scope (or to
-  name the source an author must ground the U2-04 stage names in). The drafter then repairs and the
-  spec is re-evaluated.
-- **Blocks:** those rows in Units 2, 3 and 5, and the `coverage` criterion for GENG-301.
-
-## G-2026-88 - GENG-301: the derived week distribution and the "16 weeks" term length are not the guide's
-
-- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
-- **Gate:** G0 intake / G1 unit-spec (week schedule, `decision-residue`)
-- **Source:** `D-2026-0050`
-- **Detail:** The guide block (`2nd 2026.txt:3-154`) carries no week table and no term length. The
-  spec labels its per-unit weeks as derived (`content-spec.md:29-31`, and "(derived)" on each
-  unit's weeks line: Unit 1 weeks 1-3, Unit 2 weeks 4-7, Unit 3 weeks 8-10, Unit 4 weeks 11-13,
-  Unit 5 weeks 14-15, Unit 6 week 16), which `D-2026-0012` permits, but states no basis beyond "a
-  reasonable partition"; `D-2026-0012` requires the basis to be stated. The allocation is not
-  proportional to the spec's own depth budgets (Unit 6 gets one week for 7 sub-topics and
-  78-90 reading-min; Unit 2 gets four weeks for 9 sub-topics). Separately, `content-spec.md:8`
-  states "16 weeks" under the guide citation as though the guide supplied it. There is no
-  `## Week schedule` section.
-- **Needed, and from whom:** the owner, to accept a derived distribution with a stated basis or to
-  direct the section to be recorded as guide-silent; the drafter then repairs line 8 and adds the
-  section.
-- **Blocks:** the course-wide week schedule. Does not block any unit's sub-topic content.
-
-## G-2026-89 - GENG-301: an all-print reading list with no open-access floor, and `D-2026-0001` read as a licence to proceed
-
-- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
-- **Gate:** G0 intake (`readings`, `decision-residue`)
-- **Source:** `D-2026-0050`
-- **Detail:** All ten guide readings (`2nd 2026.txt:108-126`) are real and present, but every one is
-  a print monograph. The spec says "flag and proceed per D-2026-0001" (`content-spec.md:362-363`)
-  and declares no `open_access_floor`. `D-2026-0001` is a G3 `sources` ruling whose Limits state
-  that the declaration is not a substitute for reading the source; it does not authorise authoring
-  against unopened books. This is the condition `D-2026-0013` (EFMP-304) and `D-2026-0021`
-  (GNAS-301) resolved by an owner-chosen binding open-access floor, and `D-2026-0013` names itself
-  the precedent for any print-only course but sets no corpus-wide floor. Context only, not judged:
-  the six `sources/unit-NN.md` files already bound at this commit record 23 rows, every one a print
-  monograph with no URL and none open-access.
-- **Needed, and from whom:** the owner, to decide whether GENG-301 adopts a binding open-access
-  floor (and its size per unit), or accepts title-level-only support with that limit stated at the
-  point of use. The drafter then records the ruling in the spec and the reading list's keyed table.
-- **Blocks:** reading-list sufficiency for all six units, and therefore every unit's G2/G3
-  `sources` posture. Does not block presence of the guide list, which `D-2026-0050` approves.
-
-## G-2026-90 - GENG-301: G1 recorded complete by the drafting agent before any intake evaluation
-
-- **Status:** open
-- **Gate:** G0 intake / G1 unit-spec (process)
-- **Source:** `D-2026-0050`; bound commit `513894b1` ("update GENG-301 tasks.md - G1/G2 complete for
-  all units")
-- **Detail:** `specs/content/geng-301/tasks.md` (the tracker, unbound and not edited here) marks
-  G1 unit-spec done for all six units with reviewer `BilingualAuthor`, the agent that drafted the
-  spec, and note "intake complete". The spec is `status: draft` and this is the first intake
-  evaluation, which does not approve coverage or structure. All six units were authored before
-  intake, while `contracts/content-spec-frontmatter.schema.json` describes `status: approved` as
-  the condition for drafting any unit. A drafter recording its own G1 is the self-evaluation the
-  evaluate-intake skill forbids.
-- **Needed, and from whom:** the owner (and whoever maintains the tracker), to decide how the six
-  G1 rows are corrected and whether the pre-intake units must be re-checked against the repaired
-  spec once it is approved.
-- **Blocks:** nothing in the spec itself; the tracker's G1 claims are unsupported by any recorded
-  decision until a re-evaluation approves the spec.
-
-## G-2026-91 - `check:depth-gate` does not cross-check the checklist `Topic` column against the topic list
-
-- **Status:** open
-- **Gate:** G1 unit-spec (`structure` tooling)
-- **Source:** `D-2026-0050`
-- **Detail:** The content-spec v3 contract says the gate checks the checklist's `Topic` column
-  against the `### Topic list` cells. GENG-301 assigns `U4-04` to Topic 4.3 in the checklist
-  (`content-spec.md:231`) and to Topic 4.2 in the topic list, and `node scripts/check-unit-depth.mjs`
-  exits 0 at the bound commit. `scripts/lib/unit-depth.mjs` validates the topic-list partition but
-  never reads the `Topic` column, so the contract promises a check that does not exist.
-- **Needed, and from whom:** the owner and the gate maintainer, to either implement the check or
-  correct the contract text. A change to a gate script is a bound-script change and invalidates
-  outstanding manifests once.
-- **Blocks:** nothing directly; the GENG-301 instance is reported as a `structure` failure under
-  `D-2026-0050`.
-
-=======
-
 ---
 
 ## G-2026-92 - GSOS-301 intake: the six-unit partition and the Unit 6 topic split are the spec's construction over a guide that gives only a week table
@@ -2452,4 +2334,112 @@ Recorded by `agent:evaluator` under `D-2026-0052`, bound to
   on repair and a fresh intake bundle is needed either way.
 - **Blocks:** any gate progress for GPKS-402 Units 1 and 2 (G2 onward) until the spec is approved.
   It does not block the spec repairs themselves.
->>>>>>> origin/main
+
+---
+
+## G-2026-87 - GENG-301: checklist rows that go beyond the guide bullet they cite
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G0 intake / G1 unit-spec (`coverage` criterion)
+- **Source:** `D-2026-0050`
+- **Detail:** Each row below cites a real guide bullet but adds matter the bullet does not contain.
+  Whether these are acceptable elaborations or out-of-scope additions is a scope judgement the guide
+  does not settle, so it is not approved and not rejected here:
+  - `U2-04` (`content-spec.md:123`) names the three drafting stages "rough, structured, refined";
+    the guide says only "three stage process of drafting techniques" (`2nd 2026.txt:56`) and names
+    no stages.
+  - `U2-05` (`content-spec.md:124`) adds "writing for a purpose and audience" to drafting; purpose
+    and audience are the guide's Unit 5 (`:86-91`), so the row may duplicate it.
+  - `U2-06` (`content-spec.md:125`) adds "argument strength" to revising; the guide's revising
+    bullet lists grammar, clarity, coherence, conciseness (`:57`).
+  - `U3-03`/`U3-04` (`content-spec.md:175-176`) require the thesis to be "arguable" and judge it on
+    "debatability"; the guide asks for "a clear and focused central idea" (`:64`). An arguable
+    thesis is an argumentative-essay criterion and changes what an expository thesis is taught to be.
+  - `U5-06` (`content-spec.md:282`) adds named public forms (opinion columns, newsletters, blogs);
+    the guide bullet (`:90`) names none.
+- **Needed, and from whom:** the curriculum owner, to rule each row in or out of scope (or to
+  name the source an author must ground the U2-04 stage names in). The drafter then repairs and the
+  spec is re-evaluated.
+- **Blocks:** those rows in Units 2, 3 and 5, and the `coverage` criterion for GENG-301.
+
+---
+
+## G-2026-88 - GENG-301: the derived week distribution and the "16 weeks" term length are not the guide's
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G0 intake / G1 unit-spec (week schedule, `decision-residue`)
+- **Source:** `D-2026-0050`
+- **Detail:** The guide block (`2nd 2026.txt:3-154`) carries no week table and no term length. The
+  spec labels its per-unit weeks as derived (`content-spec.md:29-31`, and "(derived)" on each
+  unit's weeks line: Unit 1 weeks 1-3, Unit 2 weeks 4-7, Unit 3 weeks 8-10, Unit 4 weeks 11-13,
+  Unit 5 weeks 14-15, Unit 6 week 16), which `D-2026-0012` permits, but states no basis beyond "a
+  reasonable partition"; `D-2026-0012` requires the basis to be stated. The allocation is not
+  proportional to the spec's own depth budgets (Unit 6 gets one week for 7 sub-topics and
+  78-90 reading-min; Unit 2 gets four weeks for 9 sub-topics). Separately, `content-spec.md:8`
+  states "16 weeks" under the guide citation as though the guide supplied it. There is no
+  `## Week schedule` section.
+- **Needed, and from whom:** the owner, to accept a derived distribution with a stated basis or to
+  direct the section to be recorded as guide-silent; the drafter then repairs line 8 and adds the
+  section.
+- **Blocks:** the course-wide week schedule. Does not block any unit's sub-topic content.
+
+---
+
+## G-2026-89 - GENG-301: an all-print reading list with no open-access floor, and `D-2026-0001` read as a licence to proceed
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G0 intake (`readings`, `decision-residue`)
+- **Source:** `D-2026-0050`
+- **Detail:** All ten guide readings (`2nd 2026.txt:108-126`) are real and present, but every one is
+  a print monograph. The spec says "flag and proceed per D-2026-0001" (`content-spec.md:362-363`)
+  and declares no `open_access_floor`. `D-2026-0001` is a G3 `sources` ruling whose Limits state
+  that the declaration is not a substitute for reading the source; it does not authorise authoring
+  against unopened books. This is the condition `D-2026-0013` (EFMP-304) and `D-2026-0021`
+  (GNAS-301) resolved by an owner-chosen binding open-access floor, and `D-2026-0013` names itself
+  the precedent for any print-only course but sets no corpus-wide floor. Context only, not judged:
+  the six `sources/unit-NN.md` files already bound at this commit record 23 rows, every one a print
+  monograph with no URL and none open-access.
+- **Needed, and from whom:** the owner, to decide whether GENG-301 adopts a binding open-access
+  floor (and its size per unit), or accepts title-level-only support with that limit stated at the
+  point of use. The drafter then records the ruling in the spec and the reading list's keyed table.
+- **Blocks:** reading-list sufficiency for all six units, and therefore every unit's G2/G3
+  `sources` posture. Does not block presence of the guide list, which `D-2026-0050` approves.
+
+---
+
+## G-2026-90 - GENG-301: G1 recorded complete by the drafting agent before any intake evaluation
+
+- **Status:** open
+- **Gate:** G0 intake / G1 unit-spec (process)
+- **Source:** `D-2026-0050`; bound commit `513894b1` ("update GENG-301 tasks.md - G1/G2 complete for
+  all units")
+- **Detail:** `specs/content/geng-301/tasks.md` (the tracker, unbound and not edited here) marks
+  G1 unit-spec done for all six units with reviewer `BilingualAuthor`, the agent that drafted the
+  spec, and note "intake complete". The spec is `status: draft` and this is the first intake
+  evaluation, which does not approve coverage or structure. All six units were authored before
+  intake, while `contracts/content-spec-frontmatter.schema.json` describes `status: approved` as
+  the condition for drafting any unit. A drafter recording its own G1 is the self-evaluation the
+  evaluate-intake skill forbids.
+- **Needed, and from whom:** the owner (and whoever maintains the tracker), to decide how the six
+  G1 rows are corrected and whether the pre-intake units must be re-checked against the repaired
+  spec once it is approved.
+- **Blocks:** nothing in the spec itself; the tracker's G1 claims are unsupported by any recorded
+  decision until a re-evaluation approves the spec.
+
+---
+
+## G-2026-91 - `check:depth-gate` does not cross-check the checklist `Topic` column against the topic list
+
+- **Status:** open
+- **Gate:** G1 unit-spec (`structure` tooling)
+- **Source:** `D-2026-0050`
+- **Detail:** The content-spec v3 contract says the gate checks the checklist's `Topic` column
+  against the `### Topic list` cells. GENG-301 assigns `U4-04` to Topic 4.3 in the checklist
+  (`content-spec.md:231`) and to Topic 4.2 in the topic list, and `node scripts/check-unit-depth.mjs`
+  exits 0 at the bound commit. `scripts/lib/unit-depth.mjs` validates the topic-list partition but
+  never reads the `Topic` column, so the contract promises a check that does not exist.
+- **Needed, and from whom:** the owner and the gate maintainer, to either implement the check or
+  correct the contract text. A change to a gate script is a bound-script change and invalidates
+  outstanding manifests once.
+- **Blocks:** nothing directly; the GENG-301 instance is reported as a `structure` failure under
+  `D-2026-0050`.

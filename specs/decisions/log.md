@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## What is NOT delegated
 
 Recorded here so the boundary stays visible as the log grows:
@@ -14,9 +13,6 @@ Recorded here so the boundary stays visible as the log grows:
 - Anything an evaluator marks as not determined by the course guide.
 
 ---
-
-=======
->>>>>>> origin/main
 ## D-2026-0001 - Unretrievable sources may be flagged and passed
 
 - **Status:** confirmed
@@ -2244,7 +2240,6 @@ content-improvement loop with no further cycle.
 
 ---
 
-<<<<<<< HEAD
 ## D-2026-0067 - EFMP-304 Units 4-6: reflective-practice Urdu terms banked; concept-label collision resolved
 
 - **Status:** confirmed (owner, 2026-10-11)
@@ -2256,10 +2251,8 @@ content-improvement loop with no further cycle.
   2. **Ten terms banked in `specs/content/terminology.csv`, as proposed:** Reflective Thinking `تاملی سوچ`, Reflective Process `تاملی عمل`, Reflective Practice `تاملی مشق`, Reflective Journal `تاملی جریدہ`, Reflective Cycle `تاملی چکر`, Descriptive Writing `بیانیہ تحریر`, Reflective Writing `تاملی تحریر`, Technical Reflection `فنی تامل`, Contextual Reflection `سیاقی تامل`, Dialectical Reflection `جدلیاتی تامل`. Later translators reuse these; the existing `Reflective Decision Making` entry is unchanged.
   3. **Follow-ups scheduled, not fixed in place:** the two English defects in Unit 6 (`topic-03.mdx` "did not understood"; `unit-assessment.mdx` RRQ 5 question/answer mismatch) go through `revise-topic` with fresh G2/G3/G5, because editing reviewed files would invalidate the bound evidence. EFMP-304 `.ur.svg` figure variants are scheduled as a BilingualAuthor task after the Semester 2 courses.
 - **Consequences:** G3/G4/G5 tracker rows for Units 4-6 record the agent passes as `▣` and stay open (ADR-0019); `translation_status` stays `draft`. Unit 4 G2 evidence regenerated because its concept table is a bound input.
-=======
 
 ---
->>>>>>> origin/main
 
 ## D-2026-0048 - EFMP-303 intake: identity, coverage, outcome traces, blueprint and structure approved; partition, calendar and readings escalated
 
@@ -2496,9 +2489,6 @@ content-improvement loop with no further cycle.
 
 ---
 
-<<<<<<< HEAD
-=======
-
 ---
 
 ## D-2026-0051 - GSOS-301 intake: identity, coverage, outcome traces and blueprints approved; partition and readings escalated; structure and decision residue fail for repair
@@ -2661,10 +2651,6 @@ content-improvement loop with no further cycle.
 
 ---
 
-
----
-
->>>>>>> origin/main
 ## D-2026-0059 - EFMP-303 re-intake after repairs: identity, partition, coverage, outcomes, blueprint, structure approved; readings and decision residue still need author repairs
 
 - **Status:** pending-owner-review
@@ -2936,24 +2922,7 @@ content-improvement loop with no further cycle.
 
 ---
 
-<<<<<<< HEAD
 ## D-2026-0048 - EFMP-303 intake: identity, coverage, outcome traces, blueprint and structure approved; partition, calendar and readings escalated
-=======
-
----
-
-## D-2026-0067 - EFMP-304 Units 4-6: reflective-practice Urdu terms banked; concept-label collision resolved
-
-- **Status:** confirmed (owner, 2026-10-11)
-- **Gate:** G4 ur-translation / G5 ur-review (terminology)
-- **Scope:** EFMP-304 Units 4-6 Urdu mirror (TEX-38, PR #118) and its G5 review (TEX-46, PR #132); raised by BilingualAuthor in TEX-47 and as advisories F1/F2 in the G5 reports.
-- **Decided by:** owner (M Yousif Channa), via board session, 2026-10-11
-- **Decision:**
-  1. **Concept-label collision resolved.** `CON:EFMP-304-4-2` Reflective process = `تاملی عمل`; `CON:EFMP-304-4-3` Reflective practice = `تاملی مشق`. `specs/content/efmp-304/concepts/unit-04.md` updated to match; Topic 4.1 depends on the two being distinct.
-  2. **Ten terms banked in `specs/content/terminology.csv`, as proposed:** Reflective Thinking `تاملی سوچ`, Reflective Process `تاملی عمل`, Reflective Practice `تاملی مشق`, Reflective Journal `تاملی جریدہ`, Reflective Cycle `تاملی چکر`, Descriptive Writing `بیانیہ تحریر`, Reflective Writing `تاملی تحریر`, Technical Reflection `فنی تامل`, Contextual Reflection `سیاقی تامل`, Dialectical Reflection `جدلیاتی تامل`. Later translators reuse these; the existing `Reflective Decision Making` entry is unchanged.
-  3. **Follow-ups scheduled, not fixed in place:** the two English defects in Unit 6 (`topic-03.mdx` "did not understood"; `unit-assessment.mdx` RRQ 5 question/answer mismatch) go through `revise-topic` with fresh G2/G3/G5, because editing reviewed files would invalidate the bound evidence. EFMP-304 `.ur.svg` figure variants are scheduled as a BilingualAuthor task after the Semester 2 courses.
-- **Consequences:** G3/G4/G5 tracker rows for Units 4-6 record the agent passes as `▣` and stay open (ADR-0019); `translation_status` stays `draft`. Unit 4 G2 evidence regenerated because its concept table is a bound input.
->>>>>>> origin/main
 
 ---
 
@@ -2973,7 +2942,6 @@ content-improvement loop with no further cycle.
 - **Consequences:** `specs/content/style-guide.md` is now v4.6. Every G2 manifest signed before this commit is stale relative to v4.6; `check:pipeline-gate` reports them as "gate-checked" (passing, not certified). The next translated unit inherits both rules instead of re-deciding per figure. TEX-25 A-03's "rule written into the style guide" half is met.
 - **Limits:** This decision records a ruling the board already executed by merging. It does not schedule or assign the 44-manifest regeneration. It certifies no content and qualifies no reviewer.
 
-<<<<<<< HEAD
 ## D-2026-0050 - GENG-301 intake: identity, partition, outcomes, readings (presence) and blueprint approved; coverage, structure and decision residue not approved
 
 - **Status:** confirmed (owner, 2026-10-10; escalations ruled in D-2026-0053; spec approval still requires the listed author repairs and a fresh intake)
@@ -3203,7 +3171,6 @@ content-improvement loop with no further cycle.
   in `D-2026-0050` or `D-2026-0056`. This entry certifies no content, qualifies no reviewer and
   authorises no publication (Art. VII.8).
 
-=======
 ---
 
 ## D-2026-0057 - GSOS-301 re-intake after repair: identity, partition, coverage, blueprint and decision residue approved; outcomes, readings and structure still fail on unrepaired items
@@ -3573,4 +3540,3 @@ content-improvement loop with no further cycle.
   author alignment, not a criterion defect and not escalated. `status: approved` awaits owner
   confirmation of this entry; until then no unit may be authored (FR-002/FR-016b). Supersedes
   the stale `D-2026-0052` on the repaired spec.
->>>>>>> origin/main

@@ -1920,7 +1920,6 @@
     "definition_ur": "کوئی نیا خیال، طریقہ یا حل جو پہلے سے موجود چیز کو بہتر بنائے۔"
   },
   {
-<<<<<<< HEAD
     "term": "Modes of writing",
     "definition_en": "The four broad purposes a piece of writing can serve: narration (telling a story), description (painting a picture), exposition (explaining and informing) and argumentation (persuading).",
     "definition_ur": "تحریر کے چار وسیع مقاصد: کہانی (بیان کرنا), تفصیل (تصویر کچھانا), تشریح (وضاحت دینا) اور دلیل (قائل کرنا)."
@@ -1978,7 +1977,7 @@
   {
     "term": "Mind-mapping",
     "definition_en": "A visual pre-writing technique in which the writer places the topic at the centre and draws branches for related ideas and details.",
-    "definition_ur": "ایک بصری قبل از تحریر ہنر جس میں مصنف موضوع کو مرکز میں رکھتا ہے اور متعلقہ خیالات اور تفصیلات کے لیڈ شاخیں بنتا ہے۔"
+    "definition_ur": "ایک بصری قبل از تحریر ہنر جس میں مصنف موضوع کو مرکز میں رکھتا ہے اور متعلقہ خیالات اور تفصیلات کے لیڑ شاخیں بنتا ہے۔"
   },
   {
     "term": "Outlining",
@@ -2109,7 +2108,8 @@
     "term": "Originality",
     "definition_en": "The quality of being new and produced by the writer, not copied or closely borrowed from another source.",
     "definition_ur": "نیا ہونے اور مصنف کی طرف سے تیار کیے جانے کا وصف، نہ کہ کسی دوسرے ماخذ سے نقل یا قرض۔"
-=======
+  },
+  {
     "term": "Sociology",
     "definition_en": "The systematic, evidence-based study of human social life, groups, and societies. It examines how social structures, relationships and institutions shape individual behaviour and collective life.",
     "definition_ur": "انسانی معاشرتی زندگی، گروہوں اور معاشروں کا منطقی اور شہادت پر مبنی مطالعہ۔ یہ دیکھتا ہے کہ سماجی ڈھانچے، رشتے اور ادارات انسان کے انفرادی اور اجتماعی رویے کو کیسے شکل دیتے ہیں۔"
@@ -2123,6 +2123,5 @@
     "term": "Socialization",
     "definition_en": "The lifelong process through which individuals learn the values, norms, beliefs, and behaviours of their society.",
     "definition_ur": "وہ زندگی بھر کا عمل جس کے ذریعے انفرادی اپنے معاشرے کی قدریں، معیار، عقائد، اور رویے سیکھتے ہیں۔"
->>>>>>> origin/main
   }
 ]
