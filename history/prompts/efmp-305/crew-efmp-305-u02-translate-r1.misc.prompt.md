@@ -1,6 +1,6 @@
 ---
 id: crew-efmp-305-u02-translate-r1
-title: crew translate EFMP-305 unit 2 continuation
+title: crew translate EFMP-305 unit 2
 stage: misc
 date: 2026-10-19
 surface: agent
@@ -60,25 +60,25 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Verified complete 5-file Urdu mirror for EFMP-305 Unit 2 against English baseline 9e6da648, authored G4 translation-handoff.md, updated tasks.md G4 tracker row, and confirmed all 13 content gates pass cleanly.
+Verified EFMP-305 Unit 2 complete Urdu mirror against English baseline 9e6da648, recorded durable G4 translation handoff and tracker row, and passed all 13 content gates.
 
 ## Outcome
 
-- Impact: translate continuation for EFMP-305 Unit 2 by agy (attempt 2 / revision 1).
-- Tests: npm run check:content passed in the job worktree before commit.
+- Impact: translate for EFMP-305 Unit 2 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 3 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Produced durable G4 translation-handoff.md, updated G4 tracker row in tasks.md with English baseline commit and handoff path, and validated 13/13 content gates.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job does not certify anything. translation_status stays draft pending independent G5 review.
-- Pending / next owner: crew lead (auto-merge when CI is green).
+- Shipped / changed: Verified EFMP-305 Unit 2 complete Urdu mirror against English baseline 9e6da648, recorded durable G4 translation handoff and tracker row, and passed all 13 content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All 4 .ur.svg figure variants are wired in topics 1 and 2 with exact carrier alt text matching the SVG `<desc>` tags.
-  - All 5 key_terms in `index.mdx` are bound to `terminology.csv`; `translation_status` remains `draft` pending independent G5 review.
-  - Proposed terms for curriculum owner: learner diversity (متعلمین کا تنوع), impairment (خرابی), handicap (ہینڈی کیپ / ماحولیاتی رکاوٹ), labelling (لیبلنگ / منفی ٹھپا لگانا), stigma (داغ / عیب).
+  - All 4 .ur.svg figure variants are wired in topics 1 and 2 with exact carrier alt matching SVG desc tags.
+  - All 5 key_terms in index.mdx are bound to terminology.csv; translation_status stays draft pending independent G5.
+  - Proposed terms for owner: learner diversity (متعلمین کا تنوع), impairment (خرابی), handicap (ہینڈی کیپ / ماحولیاتی رکاوٹ), labelling (لیبلنگ / منفی ٹھپا لگانا), stigma (داغ / عیب).
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
