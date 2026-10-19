@@ -20,8 +20,9 @@ G1 unit-spec affirmed at intake (D-2026-0019). G2 en-draft cleared by determinis
 | Unit 1 | G6 assets | ▢ | | |
 | Unit 1 | G7 publish | ▢ | | |
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0019; content-spec status: approved |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-300/reviews/unit-02/G2/20261013T123448220Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-300/reviews/unit-02/G2/20261019T140746718Z-gates.json |
 | Unit 2 | G3 en-review | ▣ | | Advisory independent agy G3 **revise** (thread 24f6f754-39a8-4a44-9598-84808a1e86be): missing blueprint comparison item, RRQ 3 arithmetic discrepancy, and leaf subtopic U2-05 (making predictions) omitted. Report: `specs/content/geng-300/reviews/unit-02/G3/agent-g3-geng-300-u2-run24f6f754.json`. G3 stays open, unsigned (ADR-0019). |
+| Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/geng-300/reviews/unit-02/G3/agent-g3-geng-300-u2-run24f6f754.json |
 | Unit 2 | G4 ur-translation | ▢ | | English-only course |
 | Unit 2 | G5 ur-review | ▢ | | English-only course |
 | Unit 2 | G6 assets | ▢ | | |
@@ -40,3 +41,5 @@ G1 unit-spec affirmed at intake (D-2026-0019). G2 en-draft cleared by determinis
 | Unit 4 | G5 ur-review | ▢ | | English-only course |
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
+| Unit 1 | G3 en-review | ▣ | | advisory: revise; repairs applied for `specs/content/geng-300/reviews/unit-01/G3/agent-g3-geng-300-u1-run7c5e7ce2.json`: corrected wordmark anchors and panel clearance in both variants, RRQ 3 allocation (4 marks total), explicit subjects in RRQ 4 and topic 1.2, and placed-figure preamble. Fresh independent review pending; G3 stays open and unsigned. |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-300/reviews/unit-01/G2/20261019T135001511Z-gates.json |

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Comparison of Major Sociological Perspectives</title><desc id="d">A comparison table of the three major sociological perspectives showing their core assumptions and levels of analysis.</desc>
-<style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671} .bg{fill:var(--bg)} .hdr{fill:var(--a1-fill);stroke:var(--ink);stroke-width:1.5} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700} .th{font-size:14px;font-weight:700;fill:var(--a1);text-anchor:middle} .wm{fill:var(--wm);font-size:11px}</style>
+<style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671} .bg{fill:var(--bg)} .hdr{fill:var(--a1-fill);stroke:var(--ink);stroke-width:1.5} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700} .th{font-size:14px;font-weight:700;fill:var(--a1);text-anchor:middle} .wm{fill:var(--wm);font-size:11px;text-anchor:end}</style>
 <rect class="bg" x="0" y="0" width="780" height="470"/>
 <!-- Table Boundary -->
 <rect x="25" y="35" width="730" height="385" fill="none" stroke="var(--ink)" stroke-width="2"/>
@@ -30,7 +30,8 @@
 <text x="225" y="245">social groups compete for power and scarce resources;</text>
 <text x="225" y="265">institutions maintain dominant group privilege.</text>
 <text class="h" x="580" y="235">Macro-level</text>
-<text x="580" y="255">Social classes &amp; power structures</text>
+<text x="580" y="255">Social classes &amp; power</text>
+<text x="580" y="275">structures</text>
 
 <!-- Row 3: Symbolic Interactionism -->
 <text class="h" x="40" y="355" fill="var(--a4)">Symbolic interactionism</text>

@@ -1,0 +1,3 @@
+COMMAND: node scripts/review-evidence.mjs validate specs/content/gqur-301/reviews/unit-02/G3/01a154ca-5b18-7000-872b-bb211ead24e7.json
+EXIT: 0
+Report structurally valid: escalate. This does not authorize gate completion.

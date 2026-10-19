@@ -19,14 +19,14 @@ as XML; page alt and SVG description agree for every placed figure.
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ▢ | | intake pending; do not mark until intake approves |
 | Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-01/G2/20261017T113130488Z-gates.json |
-| Unit 1 | G3 en-review | ▢ | | |
+| Unit 1 | G3 en-review | ▢ | | advisory: revise; figure text overflows, RRQ 5 model answer counting error, and missing topic-02 citations; report specs/content/gqur-301/reviews/unit-01/G3/459abd64-a834-454a-bb77-eaf0f571110a.json |
 | Unit 1 | G4 ur-translation | ▢ | | full Urdu mirror required (bilingual: true) |
 | Unit 1 | G5 ur-review | ▢ | | |
 | Unit 1 | G6 assets | ▢ | | |
 | Unit 1 | G7 publish | ▢ | | |
 | Unit 2 | G1 unit-spec | ▢ | | intake pending; do not mark until intake approves |
 | Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-02/G2/20261018T194041863Z-gates.json |
-| Unit 2 | G3 en-review | ▢ | | |
+| Unit 2 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only; findings: specs/content/gqur-301/reviews/unit-02/G3/01a154ca-5b18-7000-872b-bb211ead24e7.json; conflicting RRQ 10 guidance, source/provenance gaps and current render evidence pending. No certification. |
 | Unit 2 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 2 | G5 ur-review | ▢ | | |
 | Unit 2 | G6 assets | ▢ | | |
