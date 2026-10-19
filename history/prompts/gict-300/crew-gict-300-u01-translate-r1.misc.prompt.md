@@ -1,30 +1,29 @@
 ---
 id: crew-gict-300-u01-translate-r1
-title: crew translate GICT-300 unit 1 (attempt r1)
+title: crew translate GICT-300 unit 1
 stage: misc
-date: 2026-10-18
+date: 2026-10-19
 surface: agent
 model: agy
 feature: gict-300
 branch: crew/gict-300-u01-translate-r1
 user: crew
 command: crew translate
-labels: ["crew", "agy", "translate", "gict-300", "unit-01"]
+labels: ["crew", "agy", "translate"]
 links:
   spec: specs/content/gict-300/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
+ - history/prompts/gict-300/crew-gict-300-u01-translate-r1.misc.prompt.md
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gict-300/unit-01/index.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gict-300/unit-01/topic-03.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gict-300/unit-01/unit-assessment.mdx
  - specs/content/gict-300/reviews/unit-01/G4/translation-handoff.md
  - specs/content/gict-300/tasks.md
- - static/content-status.json
 tests:
  - npm run check:content
- - npm run figures:variants:check
 ---
 
 ## Prompt
@@ -62,29 +61,30 @@ the worker exited without committing any change
 
 ## Response snapshot
 
-Reconciled the GICT-300 Unit 1 Urdu translation mirror with English baseline ee13c3e2, bound declared key_terms in index.mdx to accepted terms in terminology.csv, polished embedded computer noun phrases in topic-03 and assessment summary, authored the translation handoff record at specs/content/gict-300/reviews/unit-01/G4/translation-handoff.md, updated the G4 tracker row with the handoff link, refreshed content status, and verified all 13 content gates pass cleanly.
+Reconciled GICT-300 Unit 1 Urdu mirror key_terms with terminology.csv, polished embedded computer noun phrases, authored the G4 translation handoff record, and updated the tasks tracker with all 13 content gates green.
 
 ## Outcome
 
-- Impact: complete G4 Urdu translation handoff and mirror verification for GICT-300 Unit 1 by agy (attempt r1).
-- Tests: `npm run check:content` (13/13 gates pass), `npm run figures:variants:check` (772 figures clean), temporary reviewed-flip parity check passed without error.
-- Files: 6 files touched / created.
-- Next prompts: fresh independent G5 Urdu review once G3 English review dependency is satisfied.
-- Reflection: previous worker exited without committing because the Urdu files were already drafted, but key_terms in index.mdx had not been bound to terminology.csv, no translation handoff was authored, and the tracker lacked the handoff record link. Completing these fulfills the G4 translation contract.
+- Impact: translate for GICT-300 Unit 1 by agy (attempt 2).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 6 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Bound key_terms in index.mdx to terminology.csv, polished embedded computing class references, authored specs/content/gict-300/reviews/unit-01/G4/translation-handoff.md with all 12 proposed unbanked concepts, updated tasks.md G4 row with handoff link, and refreshed static/content-status.json.
-- Decisions the team must respect: G4 remains in-progress (▣) and translation_status stays draft pending a fresh independent G5 review. No self-certification claimed.
+- Shipped / changed: Reconciled GICT-300 Unit 1 Urdu mirror key_terms with terminology.csv, polished embedded computer noun phrases, authored the G4 translation handoff record, and updated the tasks tracker with all 13 content gates green.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit 1 Urdu mirror has full 7-file structural, heading and component parity with English baseline ee13c3e2.
-  - All 12 unbanked concept labels from concepts/unit-01.md are recorded in reviews/unit-01/G4/translation-handoff.md for curriculum owner promotion.
-  - All 13 content gates pass cleanly.
-- Paperclip issues affected: none.
+  - Unit 1 Urdu mirror has complete 7-file structural, heading, and figure parity with English baseline ee13c3e2; translation_status remains draft pending fresh independent G5 review.
+  - Declared key_terms in index.mdx are bound to terminology.csv; all 12 unbanked concept labels from concepts/unit-01.md are documented in reviews/unit-01/G4/translation-handoff.md for curriculum owner review.
+  - A fresh G5 review will require satisfying the G3 review dependency first (advisory run001 was revise; run002 needed on repaired English).
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: previous worker exited without committing any change; addressed by completing the handoff and binding the key terms.
-- Graders run and results (PASS/FAIL): check:content PASS (13/13)
+- Failure modes observed: 1 earlier attempt(s); see the board history
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
