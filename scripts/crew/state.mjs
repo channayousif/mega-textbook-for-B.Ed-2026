@@ -42,7 +42,8 @@ export function save(name, value) {
   renameSync(`${file}.tmp`, file);
 }
 
-export const ACTIVE = ['queued', 'running', 'gate_red', 'pr_open'];
+// ready: finished, waiting for the hourly batch PR. batched: in an open batch PR (scripts/crew/batch.mjs).
+export const ACTIVE = ['queued', 'running', 'gate_red', 'pr_open', 'ready', 'batched'];
 export const TERMINAL = ['merged', 'closed'];
 
 export function jobId(course, unit, stage) {

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">عمرانیات کے چار بانی</title><desc id="d">ایک تصوراتی خاکہ جو عمرانیات کے چار بانیوں کو ان کے کلیدی تعاون سے جوڑتا ہے: کومٹ (مثبتیت اور سماجی ترتیب)، مارکس (طبقاتی تنازع اور سرمایہ داری)، دورکائم (سماجی حقائق اور یکجہتی)، ویبر (ویرشٹین اور پروٹسٹنٹ اخلاقیات)۔</desc>
+<style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} .center-panel{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2.5} .link{stroke:var(--line);stroke-width:2;fill:none} text{font-size:13px;fill:var(--ink);text-anchor:middle} .h{font-size:14px;font-weight:700} .m{font-size:11px;fill:var(--muted)} .wm{fill:var(--wm);font-size:11px}</style>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--line)"/></marker></defs>
+<rect class="bg" x="0" y="0" width="780" height="470"/>
+
+<!-- Center -->
+<ellipse class="center-panel" cx="390" cy="235" rx="100" ry="45"/>
+<text class="h" x="390" y="232" fill="var(--a1)">چار بانی</text>
+<text class="m" x="390" y="250">کلاسیکی عمرانیاتی نظریہ</text>
+
+<!-- Top Left: Comte -->
+<rect class="panel" x="30" y="35" width="225" height="120" rx="8"/>
+<text class="h" x="142" y="60" fill="var(--a2)">آگسٹ کومٹ (1798-1857)</text>
+<text class="m" x="142" y="80">کلیدی تصور: مثبتیت</text>
+<text class="m" x="142" y="98">سماجی ترتیب اور فکر کے تین مراحل</text>
+<text class="m" x="142" y="116">سائنسی بنیادوں پر سماجی اصلاح</text>
+<text class="m" x="142" y="134">مشاہدہ مذہبی عقائد کا نعم البدل</text>
+
+<!-- Top Right: Marx -->
+<rect class="panel" x="525" y="35" width="225" height="120" rx="8"/>
+<text class="h" x="637" y="60" fill="var(--a3)">کارل مارکس (1818-1883)</text>
+<text class="m" x="637" y="80">کلیدی تصور: طبقاتی تنازع</text>
+<text class="m" x="637" y="98">بورژوازی بمقابلہ پرولتاریہ</text>
+<text class="m" x="637" y="116">تاریخ کی مادی تعبیر</text>
+<text class="m" x="637" y="134">معاشی ڈھانچہ سماجی تبدیلی چلاتا ہے</text>
+
+<!-- Bottom Left: Durkheim -->
+<rect class="panel" x="30" y="305" width="225" height="120" rx="8"/>
+<text class="h" x="142" y="330" fill="var(--a4)">ایمائل دورکائم (1858-1917)</text>
+<text class="m" x="142" y="350">کلیدی تصور: سماجی حقائق</text>
+<text class="m" x="142" y="368">میکانکی بمقابلہ نامیاتی یکجہتی</text>
+<text class="m" x="142" y="386">انومی اور سماجی ہم آہنگی</text>
+<text class="m" x="142" y="404">خودکشی اور اداروں کا مقداری مطالعہ</text>
+
+<!-- Bottom Right: Weber -->
+<rect class="panel" x="525" y="305" width="225" height="120" rx="8"/>
+<text class="h" x="637" y="330" fill="var(--a1)">میکس ویبر (1864-1920)</text>
+<text class="m" x="637" y="350">کلیدی تصور: ویرشٹین (تفہیم)</text>
+<text class="m" x="637" y="368">پروٹسٹنٹ اخلاقیات اور سرمایہ داری</text>
+<text class="m" x="637" y="386">معقولیت، افسر شاہی اور اقتدار</text>
+<text class="m" x="637" y="404">سماجی عمل کے پس پردہ موضوعی معنی</text>
+
+<!-- Connecting lines -->
+<line class="link" x1="310" y1="205" x2="215" y2="155" marker-end="url(#ar)"/>
+<line class="link" x1="470" y1="205" x2="565" y2="155" marker-end="url(#ar)"/>
+<line class="link" x1="310" y1="265" x2="215" y2="305" marker-end="url(#ar)"/>
+<line class="link" x1="470" y1="265" x2="565" y2="305" marker-end="url(#ar)"/>
+<text class="wm" x="768" y="460" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

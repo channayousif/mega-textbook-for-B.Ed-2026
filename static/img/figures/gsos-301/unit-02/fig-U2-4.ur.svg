@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">میڈ کے معاشرتی بندی کے مراحل</title><desc id="d">میڈ کے معاشرتی بندی کے مراحل کا موازنہ کرنے والا جدول، جس میں ہر مرحلے کی عمر، بنیادی سرگرمی اور مثالیں دکھائی گئی ہیں۔</desc>
+<style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95} .bg{fill:var(--bg)} .hdr{fill:var(--a1-fill);stroke:var(--ink);stroke-width:1.5} text{font-size:12px;fill:var(--ink)} .h{font-size:13px;font-weight:700} .th{font-size:13px;font-weight:700;fill:var(--a1);text-anchor:middle} .wm{fill:var(--wm);font-size:11px}</style>
+<rect class="bg" x="0" y="0" width="780" height="470"/>
+<!-- Table Boundary -->
+<rect x="20" y="30" width="740" height="395" fill="none" stroke="var(--ink)" stroke-width="2"/>
+
+<!-- Header Row -->
+<rect class="hdr" x="20" y="30" width="740" height="50"/>
+<line x1="620" y1="30" x2="620" y2="425" stroke="var(--ink)" stroke-width="1.5"/>
+<line x1="510" y1="30" x2="510" y2="425" stroke="var(--ink)" stroke-width="1.5"/>
+<line x1="270" y1="30" x2="270" y2="425" stroke="var(--ink)" stroke-width="1.5"/>
+
+<text class="th" x="690" y="60">مرحلہ</text>
+<text class="th" x="565" y="60">عمر کا دائرہ</text>
+<text class="th" x="390" y="60">بنیادی سرگرمی</text>
+<text class="th" x="145" y="60">مثال</text>
+
+<!-- Row 1: Preparatory -->
+<line x1="20" y1="165" x2="760" y2="165" stroke="var(--ink)" stroke-width="1"/>
+<text class="h" x="745" y="112" text-anchor="end" fill="var(--a2)">تیاری کا مرحلہ</text>
+<text class="m" x="745" y="132" text-anchor="end" fill="var(--muted)">نقالی</text>
+<text x="565" y="122" text-anchor="middle">پیدائش سے</text>
+<text x="565" y="140" text-anchor="middle">تقریباً 2 سال تک</text>
+<text x="495" y="112" text-anchor="end">معنی سمجھے بغیر دوسروں کے اشاروں اور</text>
+<text x="495" y="130" text-anchor="end">الفاظ کی نقالی؛ الگ ذات کا کوئی</text>
+<text x="495" y="148" text-anchor="end">واضح احساس ابھی موجود نہیں</text>
+<text x="255" y="112" text-anchor="end">تالیاں بجانے کی نقل، مسکرانے پر</text>
+<text x="255" y="130" text-anchor="end">مسکرانا، یا سنے ہوئے الفاظ</text>
+<text x="255" y="148" text-anchor="end">کی دہرائی کرنا</text>
+
+<!-- Row 2: Play -->
+<line x1="20" y1="250" x2="760" y2="250" stroke="var(--ink)" stroke-width="1"/>
+<text class="h" x="745" y="200" text-anchor="end" fill="var(--a3)">کھیل کا مرحلہ</text>
+<text class="m" x="745" y="220" text-anchor="end" fill="var(--muted)">کردار اپنانا</text>
+<text x="565" y="208" text-anchor="middle">ابتدائی بچپن</text>
+<text x="565" y="226" text-anchor="middle">(2 سے 6 سال)</text>
+<text x="495" y="198" text-anchor="end">ایک وقت میں کسی ایک اہم فرد کا کردار</text>
+<text x="495" y="216" text-anchor="end">اپنانا؛ بڑوں کے کردار ادا کرنا اور</text>
+<text x="495" y="234" text-anchor="end">ابتدائی شعورِ ذات بنانا</text>
+<text x="255" y="198" text-anchor="end">بچوں کا گڑیوں یا بہن بھائیوں کے</text>
+<text x="255" y="216" text-anchor="end">ساتھ ڈاکٹر، والدین یا استاد بن کر</text>
+<text x="255" y="234" text-anchor="end">کھیلنا</text>
+
+<!-- Row 3: Game -->
+<line x1="20" y1="335" x2="760" y2="335" stroke="var(--ink)" stroke-width="1"/>
+<text class="h" x="745" y="285" text-anchor="end" fill="var(--a4)">گیم کا مرحلہ</text>
+<text class="m" x="745" y="305" text-anchor="end" fill="var(--muted)">متعدد کردار</text>
+<text x="565" y="293" text-anchor="middle">اسکول کی عمر</text>
+<text x="565" y="311" text-anchor="middle">(7 سال اور زائد)</text>
+<text x="495" y="283" text-anchor="end">بیک وقت متعدد کردار اپنانا؛</text>
+<text x="495" y="301" text-anchor="end">پورے گروہ کے اصولوں اور</text>
+<text x="495" y="319" text-anchor="end">توقعات کو سمجھنا</text>
+<text x="255" y="283" text-anchor="end">کرکٹ یا فٹ بال کھیلنا:</text>
+<text x="255" y="301" text-anchor="end">ہر پوزیشن کی ذمہ داری اور</text>
+<text x="255" y="319" text-anchor="end">ٹیم حکمتِ عملی کو جاننا</text>
+
+<!-- Row 4: Adult -->
+<text class="h" x="745" y="370" text-anchor="end" fill="var(--a1)">بالغ کا مرحلہ</text>
+<text class="m" x="745" y="390" text-anchor="end" fill="var(--muted)">عمومی دوسرا</text>
+<text x="565" y="378" text-anchor="middle">مراہقت اور</text>
+<text x="565" y="396" text-anchor="middle">بلوغت</text>
+<text x="495" y="368" text-anchor="end">"عمومی دوسرے" کو اندرونی بنانا؛</text>
+<text x="495" y="386" text-anchor="end">ثقافتی معیار، قوانین اور معاشرتی</text>
+<text x="495" y="404" text-anchor="end">توقعات کو اپنانا</text>
+<text x="255" y="368" text-anchor="end">زیرِ تربیت استاد کا پیشہ ورانہ</text>
+<text x="255" y="386" text-anchor="end">اخلاقیات اور شہری فرائض</text>
+<text x="255" y="404" text-anchor="end">کو قبول کرنا</text>
+<text class="wm" x="768" y="460" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

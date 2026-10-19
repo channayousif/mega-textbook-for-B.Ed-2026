@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Founders of Sociology</title><desc id="d">A concept map linking the four founders of sociology to their key contributions: Comte to positivism and social order, Marx to class conflict and capitalism, Durkheim to social facts and solidarity, Weber to verstehen and the Protestant ethic.</desc>
+<style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} .center-panel{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2.5} .link{stroke:var(--line);stroke-width:2;fill:none} text{font-size:13px;fill:var(--ink);text-anchor:middle} .h{font-size:14px;font-weight:700} .m{font-size:11px;fill:var(--muted)} .wm{fill:var(--wm);font-size:11px}</style>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--line)"/></marker></defs>
+<rect class="bg" x="0" y="0" width="780" height="470"/>
+
+<!-- Center -->
+<ellipse class="center-panel" cx="390" cy="235" rx="100" ry="45"/>
+<text class="h" x="390" y="232" fill="var(--a1)">Four founders</text>
+<text class="m" x="390" y="250">Classical sociological theory</text>
+
+<!-- Top Left: Comte -->
+<rect class="panel" x="30" y="35" width="225" height="120" rx="8"/>
+<text class="h" x="142" y="60" fill="var(--a2)">Auguste Comte (1798-1857)</text>
+<text class="m" x="142" y="80">Key concept: Positivism</text>
+<text class="m" x="142" y="98">Social order and three stages of thought</text>
+<text class="m" x="142" y="116">Sociology as scientific social reform</text>
+<text class="m" x="142" y="134">Observation replaces theological doctrine</text>
+
+<!-- Top Right: Marx -->
+<rect class="panel" x="525" y="35" width="225" height="120" rx="8"/>
+<text class="h" x="637" y="60" fill="var(--a3)">Karl Marx (1818-1883)</text>
+<text class="m" x="637" y="80">Key concept: Class conflict</text>
+<text class="m" x="637" y="98">Bourgeoisie vs Proletariat in capitalism</text>
+<text class="m" x="637" y="116">Materialist conception of history</text>
+<text class="m" x="637" y="134">Economic structure drives social change</text>
+
+<!-- Bottom Left: Durkheim -->
+<rect class="panel" x="30" y="305" width="225" height="120" rx="8"/>
+<text class="h" x="142" y="330" fill="var(--a4)">Emile Durkheim (1858-1917)</text>
+<text class="m" x="142" y="350">Key concept: Social facts</text>
+<text class="m" x="142" y="368">Mechanical vs Organic solidarity</text>
+<text class="m" x="142" y="386">Anomie and social cohesion</text>
+<text class="m" x="142" y="404">Quantitative study of suicide &amp; institutions</text>
+
+<!-- Bottom Right: Weber -->
+<rect class="panel" x="525" y="305" width="225" height="120" rx="8"/>
+<text class="h" x="637" y="330" fill="var(--a1)">Max Weber (1864-1920)</text>
+<text class="m" x="637" y="350">Key concept: Verstehen (understanding)</text>
+<text class="m" x="637" y="368">Protestant ethic and rise of capitalism</text>
+<text class="m" x="637" y="386">Rationalization, bureaucracy &amp; authority</text>
+<text class="m" x="637" y="404">Subjective meaning behind social action</text>
+
+<!-- Connecting lines -->
+<line class="link" x1="310" y1="205" x2="215" y2="155" marker-end="url(#ar)"/>
+<line class="link" x1="470" y1="205" x2="565" y2="155" marker-end="url(#ar)"/>
+<line class="link" x1="310" y1="265" x2="215" y2="305" marker-end="url(#ar)"/>
+<line class="link" x1="470" y1="265" x2="565" y2="305" marker-end="url(#ar)"/>
+<text class="wm" x="768" y="460" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

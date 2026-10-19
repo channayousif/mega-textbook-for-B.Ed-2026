@@ -1,3 +1,37 @@
+<<<<<<< HEAD
+=======
+# Curriculum Gaps & Discrepancies Log
+
+Per Constitution Art. II.3, any ambiguity or mismatch between the **board Scheme of Study** and
+the **course guides** is logged here and escalated to the curriculum owner (Yousif), never
+invented or silently resolved.
+
+Status: `open` (awaiting owner decision) · `resolved` (decision recorded).
+
+> **Scheme of Study - final authority (2026-09-10).** The curriculum owner has designated
+> `Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx` as the **final authority**
+> for the scheme of studies. `B.Ed 4 Year board.docx` is the superseded earlier scheme, retained
+> for provenance only. What the revision changed (diff of the two extractions):
+>
+> | Course | Superseded scheme | **Revised scheme (authoritative)** |
+> |---|---|---|
+> | GPKS-402 Pakistan Studies 2(2-0) | Semester IV | **Semester II** |
+> | GUHQ-301 Fehm-e-Quran I 1(0-1) | Semester II | **Semester III** |
+> | GUHQ-400 Fehm-e-Quran II 1(0-1) | Semester III | **Semester IV** |
+>
+> Credit-hour totals move accordingly: **Sem II 18 -> 19**, **Sem IV 17 -> 16**; Sem III
+> unchanged at 16; grand total still **132**. **Semester I is unchanged** by the revision.
+>
+> "Final authority" settles precedence *in general*, but each guide-vs-scheme conflict was still
+> decided on its own merits by the owner, recorded per gap below.
+
+---
+
+
+
+---
+
+>>>>>>> origin/main
 ## G-2026-01 - Sem I/II course guides extracted (was: pending PDF extraction)
 - **Status:** resolved
 - **Detail:** `1st 2026.pdf` and `2nd 2026.pdf` are text-extracted (via `pdfminer.six`/`pypdf` in a venv; `poppler-utils` needs root and was unavailable). Both follow the enriched 2026 structure: *Suggested Practical Activities (optional)*, *Suggested Instructional/Reading Materials*, *Teaching/Instructional Strategies*, *Practical Work*, *Assessment Criteria*, *Recommended Books*.
@@ -5,26 +39,46 @@
   - **Sem I (6, 18 CH):** GENG-300 Functional English · GNAS-301 Environmental Science · GICT-300 Application of ICT · GQUR-300 Quantitative Reasoning-I (Maths) · EFMP-301 Educational Psychology · EFMP-302 Teaching Profession.
   - **Sem II (7, 19 CH):** GQUR-301 Quantitative Reasoning-II (Statistics) · GSOS-301 Social Science (Sociology) · GENG-301 Expository Writing · EFMP-303 Educational Policies & Plans of Pakistan · EFMP-304 Critical Thinking & Reflective Practices · EFMP-305 Inclusive Education · **GPKS-402 Pakistan Studies** (moved in from Sem IV by the revision; the guide's "GPKS-302" is superseded, see G-2026-03).
 
+
+
+---
+
 ## G-2026-02 - GNAS code mismatch (Sem I)
 - **Status:** resolved (owner decision, 2026-09-10)
 - **Detail:** Environmental Science is coded **GNAS-301** in the Sem I course guide but **GNAS-401** in both the superseded and the revised board scheme. The revision did not touch Semester I, so the conflict stands on its own.
 - **Decision:** **GNAS-301** is authoritative. The Sem I course guide is the document teachers and students actually hold, the code is already the published content path (`docs/semester-1/gnas-301/`), and the scheme's `GNAS-401` is treated as a board-side numbering slip. This is the one case where the guide is taken over the scheme, decided deliberately rather than by the general precedence rule.
 - **Credit-hour reconciliation:** the guide states only `Credit Hours 3` with no lab split; the scheme states `3 (2-1)`. The catalog previously carried an invented `3 (3-0)`. Resolved to **`3 (2-1)`** - code from the guide, split from the scheme, which is the same posture taken for GSOS-301 in G-2026-05.
 
+
+
+---
+
 ## G-2026-03 - Pakistan Studies semester/code mismatch
 - **Status:** resolved (revised scheme, 2026-09-10)
 - **Detail:** The Sem II guide includes **GPKS-302 Pakistan Studies (2 CH)**. The superseded scheme listed Pakistan Studies as **GPKS-402** under **Semester IV**.
 - **Decision:** **GPKS-402, Semester II, 2 (2-0).** The revised scheme moves Pakistan Studies into Semester II, which vindicates the guide on *placement* and the scheme on *code*. `GPKS-302` is a guide-side numbering slip and is not used anywhere.
+
+
+
+---
 
 ## G-2026-04 - Fehm-e-Quran (GUHQ) code and semester
 - **Status:** resolved (revised scheme, 2026-09-10)
 - **Detail:** The superseded scheme listed **GUHQ-301 Fehm-e-Quran I (1 CH)** in Sem II, but the Sem II guide contained no such course; an "Understanding of Holy Quran I / **GUHQ-401**, Semester: 2nd" block appeared instead inside `3rd 2026.docx`.
 - **Decision:** **GUHQ-301 Fehm-e-Quran I, Semester III, 1 (0-1)** and **GUHQ-400 Fehm-e-Quran II, Semester IV, 1 (0-1)**. The revision moves Fehm-e-Quran I from Sem II to Sem III, which explains both anomalies at once: the Sem II guide has no such course *because it moved*, and the block in `3rd 2026.docx` is where it now belongs. The guide's `GUHQ-401` is a guide-side numbering slip.
 
+
+
+---
+
 ## G-2026-05 - GSOS-301 credit-hours mismatch (Sem II)
 - **Status:** resolved (owner decision, 2026-09-10)
 - **Detail:** Social Science (Sociology), GSOS-301, shows **3 CH** in the Sem II guide vs **2 (2-0)** in both the superseded and the revised scheme.
 - **Decision:** **2 (2-0).** Credit-hour values are a property of the degree-awarding scheme, so the scheme governs. This is consistent with the Sem II total of **19 CH** in the revised scheme (3+2+3+3+3+3+2).
+
+---
+
+
 
 ---
 
@@ -87,6 +141,10 @@ The following were raised by the first run of the intake evaluator (Constitution
 in shadow mode, against the frozen bundle at commit `5debd4a`. Its record is at
 `specs/content/efmp-302/intake/`. The evaluator recorded them rather than deciding them,
 which is the correct outcome: none is determined by the course guide.
+
+
+
+---
 
 ## G-2026-07 - EFMP-302 credit hours: two guide documents disagree with each other and one disagrees with the Scheme
 
@@ -163,6 +221,10 @@ which is the correct outcome: none is determined by the course guide.
   degree-awarding scheme, which points at `(3-0)`, and the register's header records that each
   conflict is decided on its merits by the owner.
 
+
+
+---
+
 ## G-2026-08 - EFMP-302 Unit 4: five sub-topics authored under bare guide headings, undisclosed
 
 - **Status:** **resolved** (owner decision `D-2026-0009`, 2026-09-20)
@@ -206,6 +268,10 @@ which is the correct outcome: none is determined by the course guide.
 - **Blocks:** Unit 4's `### Sub-topic checklist`. Proposed `D-2026-0005` approves only the
   completeness half of criterion 3 for this reason.
 
+
+
+---
+
 ## G-2026-09 - EFMP-302 reading list: one entry filed as guide-required is not in either guide, and one guide entry has no locator
 
 - **Status:** **resolved** (owner decision `D-2026-0010`, 2026-09-20)
@@ -241,6 +307,10 @@ which is the correct outcome: none is determined by the course guide.
   in the manner G-2026-06 uses.
 - **Blocks:** the `### Guide-required` table. Criterion 5 is not approved.
 
+
+
+---
+
 ## G-2026-10 - EFMP-302 CLO 4 has no unit whose guide topics deliver it
 
 - **Status:** **resolved** (owner decision `D-2026-0011`, 2026-09-20)
@@ -268,6 +338,10 @@ which is the correct outcome: none is determined by the course guide.
   does not list. Until then, the Unit 5 and Unit 6 CLO traces should not be read as evidence that
   CLO 4 is covered.
 - **Blocks:** the Unit 5 and Unit 6 CLO traces. Criterion 4 is not approved.
+
+
+
+---
 
 ## G-2026-11 - `D-2026-0002`'s superseded Unit 6 design survives in EFMP-302's course review plan
 
@@ -305,6 +379,10 @@ which is the correct outcome: none is determined by the course guide.
 - **Blocks:** the `## Course review plan` practicum briefs, and, downstream, the eventual
   `course-review.mdx`.
 
+
+
+---
+
 ## G-2026-12 - The intake bundle omitted inputs its own criteria depend on
 
 - **Status:** resolved (developer fix, 2026-09-19)
@@ -331,6 +409,10 @@ Raised by the intake evaluator (Constitution Art. VII.8) against the frozen bund
 `manifestFor()` and matching the bundle exactly). The evaluator's record is at
 `specs/content/efmp-304/intake/evaluation.md`. Both items below are recorded rather than decided:
 neither is determined by the course guide, and Art. VII.8.2 names both classes explicitly.
+
+
+
+---
 
 ## G-2026-13 - EFMP-304 has no guide week schedule, but the content-spec contract requires the section
 
@@ -364,6 +446,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   requirement needs amending rather than filling.
 - **Blocks:** `## Week schedule` and the "Weeks N-M" line opening each of the six `## Unit N`
   subsections. Nothing else: `D-2026-0006` and `D-2026-0007` are written to exclude the calendar.
+
+
+
+---
 
 ## G-2026-14 - EFMP-304's entire guide reading list is print-only, and Units 1 to 3 rest on one unopenable book
 
@@ -429,6 +515,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 - **Blocks:** `## Reading list` in full, and the `**Mapped readings**` line of every unit.
   Criterion 5 is **not approved**, and `D-2026-0007` is written to exclude it.
 
+
+
+---
+
 ## G-2026-15 - Recording an intake decision invalidates the manifest that decision binds to
 
 - **Status:** **resolved** (developer fix, 2026-09-20)
@@ -477,6 +567,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   `prepare-intake-evidence.mjs` must stay identical, which is what `778b76e` established.
 - **Blocks:** nothing substantive. `D-2026-0006` and `D-2026-0007` each carry a note pointing here
   so a reader checking their digests knows why two of 56 differ.
+
+
+
+---
 
 ## G-2026-16 - EFMP-304's term length and week distribution are the spec's construction, not the guide's
 
@@ -529,6 +623,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   deliberately, not in error.
 - **Blocks:** ~~`## Week schedule` and the "Weeks N-M" line opening each of the six `## Unit N`
   subsections.~~ **Unblocked by the decision above.**
+
+
+
+---
 
 ## G-2026-17 - `D-2026-0013`'s open-access floor is binding on paper and enforced by nothing
 
@@ -598,6 +696,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   withhold `status: approved`. It is recorded as a condition the owner should close **before any
   EFMP-304 unit is published** under `D-2026-0014`.
 
+
+
+---
+
 ## G-2026-18 - An EFMP-304 decision entry invalidates EFMP-302's review evidence
 
 - **Status:** **resolved** (developer fix, 2026-09-20)
@@ -650,6 +752,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 - **Blocks:** nothing in this evaluation. Reported because `check:pipeline-gate` is now red on
   `provisional-review-publication-tier` as a direct and expected result of recording these two
   decisions, and a reader who does not know why would reasonably read it as an EFMP-302 defect.
+
+
+
+---
 
 ## G-2026-19 - Translating a unit invalidates its English review evidence
 
@@ -724,6 +830,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 
 ---
 
+
+
+---
+
 ## G-2026-20 - EED-313 intake: the four-unit partition drops the guide's Unit 5
 
 - **Status:** **resolved** (owner decision, 2026-09-20)
@@ -744,6 +854,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 
 ---
 
+
+
+---
+
 ## G-2026-21 - EED-313 intake: four of six guide-suggested resources are missing from the reading list
 
 - **Status:** **resolved** (owner decision, 2026-09-20)
@@ -759,6 +873,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   Unretrievable print monographs bind the author to title-level support at point of use under
   `D-2026-0001`; no full-text access is required at G1.
 - **Blocks:** ~~the `readings` criterion of `D-2026-0018`~~ **unblocked**.
+
+---
+
+
 
 ---
 
@@ -801,6 +919,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   owner-determined on the guide's week calendar, in the manner `G-2026-16` settled EFMP-304's.
 - **Blocks:** ~~the `partition` criterion of `D-2026-0020`~~ **unblocked**. The "Weeks N-M" line
   opening each of the six `## Unit N` subsections stands as confirmed.
+
+
+
+---
 
 ## G-2026-23 - GNAS-301's guide reading list: five of seven entries do not resolve as printed, and the spec's open-access floor is neither owner-adopted nor enforced
 
@@ -867,6 +989,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 
 ---
 
+
+
+---
+
 ## G-2026-24 - GNAS-301 Unit 1 G3: two advisory cycles consumed; the third is owner-gated
 
 - **Status:** open
@@ -888,6 +1014,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 
 ---
 
+
+
+---
+
 ## G-2026-31 - GNAS-301 Unit 4 G3: two advisory cycles consumed; the third is owner-gated
 
 - **Status:** open
@@ -896,6 +1026,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 - **Question:** Unit 4 G3 ran two advisory cycles. Round 1 (reviews/unit-04/G3/agent-g3-gnas301-u4-run001.json) returned revise with 4 blocking findings. Round 2 (reviews/unit-04/G3/round-02/agent-g3-gnas301-u4-run002.json) verified the quotation rework and source declarations but returned revise with 2 remaining blocking findings: phantom abbasi2022 support for U4-08/U4-09 and phantom who-mental-health-work for U4-10. The author applied these repairs post-report (commit applying Unit 4 G3 round-2 repairs). ADR-0019 reserves further cycles to the owner after two.
 - **Needed, and from whom:** the curriculum owner, to accept the repaired state on the two advisory reports or authorise a third G3 cycle for Unit 4.
 - **Blocks:** a third G3 cycle for Unit 4; nothing else.
+
+---
+
+
 
 ---
 
@@ -910,6 +1044,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 
 ---
 
+
+
+---
+
 ## G-2026-33 - GNAS-301 Unit 6 G3: two advisory cycles consumed; the third is owner-gated
 
 - **Status:** open
@@ -918,6 +1056,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 - **Question:** Unit 6 G3 ran two advisory cycles. Round 1 (reviews/unit-06/G3/agent-g3-gnas301-u6-run001.json) returned revise with 4 blocking findings. Round 2 (reviews/unit-06/G3/round-02/agent-g3-gnas301-u6-run002.json) found the ERQ-04 rewrite and the RRQ-08 re-key had not actually been committed and returned revise with 4 blocking findings: ERQ-04 still covering only 6.4, the RRQ/MCQ surplus distribution off the blueprint, the misattributed WHO framing in topic-06, and the anwar2026 excerpt's verification claim. The author applied the full repair set post-report (commit applying the remaining Units 5-6 G3 round-2 repairs), and the G2 evidence was regenerated at the repaired commit. ADR-0019 reserves further cycles to the owner after two.
 - **Needed, and from whom:** the curriculum owner, to accept the repaired state on the two advisory reports or authorise a third G3 cycle for Unit 6.
 - **Blocks:** a third G3 cycle for Unit 6; nothing else.
+
+---
+
+
 
 ---
 
@@ -942,6 +1084,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   G-2026-33.
 - **Blocks:** G5 acceptance for Unit 2 (and, by the same rule, the other units); nothing
   else. G4 translation and the Urdu-side G5 findings stand on their own evidence.
+
+---
+
+
 
 ---
 
@@ -986,6 +1132,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   six `## Unit N` subsections. Nothing else: `D-2026-0030` is written to exclude the calendar,
   authoring does not depend on it, and no gate reads it.
 
+
+
+---
+
 ## G-2026-26 - GICT-300 review cycles closed at the two-cycle budget with post-cycle repairs applied
 
 - **Status:** open
@@ -1019,6 +1169,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   repair stops invalidating every unit's evidence).
 - **Needed from:** curriculum owner (review-policy decision); developer (the tooling
   question, only if the owner wants the binding extended).
+
+
+---
+
 ## G-2026-28 - GQUR-300 reading list: one guide-required entry unresolvable, one deferred with unverified additions, one false locator
 
 - **Status:** **resolved** (owner ruling, relayed via the orchestrator session, 2026-09-23)
@@ -1084,6 +1238,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 
 ---
 
+
+
+---
+
 ## G-2026-29 - GQUR-300 Unit 3: Linear inequalities (U3-03) has no verifiable external source in the course's source set
 
 - **Status:** open
@@ -1104,6 +1262,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   no-external-source posture for this sub-topic.
 - **Blocks:** nothing in the automated gates; the G3 sources criterion for Unit 3 records
   the gap explicitly. The English content itself is complete and internally verified.
+
+---
+
+
 
 ---
 
@@ -1131,6 +1293,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   marked done from agent findings, which is the designed ADR-0019 posture.
 - **Blocks:** the G5 tracker rows for Units 1-6 (all left unchecked, advisory); nothing
   in the automated gates. The Urdu content itself is complete and internally verified.
+
+---
+
+
 
 ---
 
@@ -1174,6 +1340,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   check fires only at translation_status: reviewed, and the key_terms blocks now
   present in every UR index will surface every unbanked term at that flip, which is
   the intended signal); the human quality pass before any reviewed flip.
+
+---
+
+
 
 ---
 
@@ -1229,6 +1399,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 
 ---
 
+
+
+---
+
 ## G-2026-53 - EFMP-301 extension: flipping the content-spec to `status: draft` makes the published Unit 1 fail `check:pipeline-gate`
 
 - **Status:** **resolved** (owner decision, 2026-09-24)
@@ -1263,6 +1437,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   evaluation itself, and nothing in the other content gates.
 
 ---
+
+---
+
+
 
 ---
 
@@ -1305,6 +1483,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 
 ---
 
+
+
+---
+
 ## G-2026-63 - EFMP-302 Unit 2 G3: two advisory cycles consumed; the post-report figure repair is unverified
 
 - **Status:** open
@@ -1331,6 +1513,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 - **Blocks:** a third G3 cycle for Unit 2; nothing else. G4 translation of Unit 2 is already
   complete (the rate probe), and the G5 review binds the current English inputs as its
   comparison base.
+
+---
+
+
 
 ---
 
@@ -1367,6 +1553,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 
 ---
 
+
+
+---
+
 ## G-2026-65 - EFMP-302: no accepted G3 evidence can cover the current English inputs for G5 (course-wide)
 
 - **Status:** open
@@ -1397,6 +1587,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 
 ---
 
+
+
+---
+
 ## G-2026-66 - EFMP-302 Unit 4 G5: two cycles consumed; the post-report residual repairs are unverified
 
 - **Status:** open
@@ -1420,6 +1614,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   garbles, minor semantic shifts, concept-label reworks for CON:4-12/CON:4-15) also carry.
 - **Blocks:** a third G5 cycle for Unit 4; nothing else. The G3 dependency (G-2026-65) blocks
   G5 acceptance independently.
+
+---
+
+
 
 ---
 
@@ -1447,6 +1645,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   certified G5 pass.
 - **Blocks:** a third G5 cycle for Unit 5; nothing else. The Urdu content is semantically
   verified; the register items are presentational.
+
+---
+
+
 
 ---
 
@@ -1485,6 +1687,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 - **Blocks:** a third G5 cycle for Unit 6; nothing else. The Urdu content is semantically
   verified; the register items are presentational.
 
+
+
+---
+
 ## G-2026-69 - Licence track pages are not assignable in classes
 
 - **Status:** open (accepted limitation)
@@ -1498,6 +1704,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 - **Needed, and from whom:** the owner, only if licence preparation should become assignable;
   that would need a page-keyed (not unit-keyed) assignment target, which is a later spec.
 - **Blocks:** nothing in Feature 024.
+
+---
+
+
 
 ---
 
@@ -1526,6 +1736,10 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
   silently on the remaining ~84 units.
 - **Blocks:** the `provisional` publication tier for EFMP-302 Units 3 and 4. Nothing in the
   automated gates - every content gate is green on the inserted images.
+
+---
+
+
 
 ---
 
@@ -1564,6 +1778,15 @@ neither is determined by the course guide, and Art. VII.8.2 names both classes e
 
 The generated raster illustration `fig-U4-12.webp` places the teacher at the front beside the board, which contradicts its prompt specifying a landscape scene of a male teacher "at the back of his own classroom". A repair or regeneration is needed before G3 can pass.
 
+<<<<<<< HEAD
+=======
+---
+
+
+
+---
+
+>>>>>>> origin/main
 ## G-2026-77 - EFMP-303 intake: the six-unit partition is the spec's construction over a guide that gives only a week table
 
 - **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
@@ -1591,6 +1814,10 @@ The generated raster illustration `fig-U4-12.webp` places the teacher at the fro
 - **Blocks:** the `partition` criterion of `D-2026-0048`, and therefore the spec's move to
   `status: approved`. If the owner supplies a different partition, every per-unit block
   (checklists, topic lists, figure plans, blueprints) must be re-cut and re-evaluated.
+
+
+
+---
 
 ## G-2026-78 - EFMP-303's `## Week schedule` says the guide has no week table, and its calendar contradicts the guide's
 
@@ -1627,6 +1854,10 @@ The generated raster illustration `fig-U4-12.webp` places the teacher at the fro
   lines; the evaluator does not repair the spec.
 - **Blocks:** `## Week schedule`, the six "Weeks N-M" unit opening lines, and the spec's move to
   `status: approved`. Depends on `G-2026-77` for the unit boundaries.
+
+
+
+---
 
 ## G-2026-79 - EFMP-303 reading list: three of five entries do not resolve as printed, both policy locators are false, and the open-access floor is declared as zero
 
@@ -1671,6 +1902,10 @@ The generated raster illustration `fig-U4-12.webp` places the teacher at the fro
   `unesco-epg` on one identified work.
 - **Blocks:** the `readings` criterion of `D-2026-0048`; the `**Mapped readings**` lines of all
   six units (Units 1, 3 and 4 most of all), and the spec's move to `status: approved`.
+
+
+---
+
 ## G-2026-72 - EFMP-305 credit hours: the Faculty guide states `03 (0-3)`, the revised Scheme and the catalog state `3 (3-0)`
 
 - **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
@@ -1705,6 +1940,10 @@ The generated raster illustration `fig-U4-12.webp` places the teacher at the fro
 - **Blocks:** the `identity` criterion; `content-spec.md:8`; the course-wide "Practical work" and
   "Teaching strategies" items (`:32-34`, `:49-51`); `catalog/courses.json` `credit_hours` is
   unaffected unless the owner rules for `(0-3)`. Blocks `status: approved`.
+
+
+
+---
 
 ## G-2026-73 - EFMP-305 has no reading list in its course guide
 
@@ -1749,6 +1988,10 @@ The generated raster illustration `fig-U4-12.webp` places the teacher at the fro
 - **Blocks:** the `readings` criterion; `## Reading list` (`:78-107`); every unit's `Mapped
   readings` column; G2 source binding for all six units. Blocks `status: approved`.
 
+
+
+---
+
 ## G-2026-74 - EFMP-305: three checklist sub-topics have no guide ancestor
 
 - **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
@@ -1778,6 +2021,10 @@ The generated raster illustration `fig-U4-12.webp` places the teacher at the fro
 - **Blocks:** U1-5 and Unit 1 Topic 1.2's row; U3-5 and Unit 3 Topic 3.3 entirely; U5-5 and
   Unit 5 Topics 5.1 and 5.3. Blocks `status: approved`.
 
+
+
+---
+
 ## G-2026-75 - EFMP-305: the formative/summative reading of the guide's marks table is not guide-given
 
 - **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
@@ -1798,6 +2045,10 @@ The generated raster illustration `fig-U4-12.webp` places the teacher at the fro
 - **Blocks:** only the sentence at `content-spec.md:46-48`. No unit-end bank and no gate depend on
   it.
 
+
+
+---
+
 ## G-2026-76 - EFMP-305 tracker records G1 as done on a spec that has never been approved
 
 - **Status:** open
@@ -1816,6 +2067,10 @@ The generated raster illustration `fig-U4-12.webp` places the teacher at the fro
   (this evaluator does not edit the tracker) and of the pre-approval authoring of Units 1 and 2,
   which will need re-checking against whatever the owner rules on `G-2026-72` to `G-2026-74`.
 - **Blocks:** nothing further in the spec; it blocks reliance on the tracker's G1 rows for EFMP-305.
+
+
+
+---
 
 ## G-2026-102 - EFMP-305 Unit 5: the guide's "Rights of Persons with Disabilities Act (2018)" does not resolve to one enacted Pakistani statute
 
@@ -1845,6 +2100,7 @@ The generated raster illustration `fig-U4-12.webp` places the teacher at the fro
   `U5-3`, `fig-U5-3`, `fig-U5-4`); `## Standards & frameworks anchors` second bullet; Unit 5 key
   term "Rights of Persons with Disabilities Act (RPwD)". Units 1-4 and 6 are not blocked by it.
 
+<<<<<<< HEAD
 ## G-2026-87 - GENG-301: checklist rows that go beyond the guide bullet they cite
 
 - **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
@@ -1944,3 +2200,256 @@ The generated raster illustration `fig-U4-12.webp` places the teacher at the fro
 - **Blocks:** nothing directly; the GENG-301 instance is reported as a `structure` failure under
   `D-2026-0050`.
 
+=======
+
+---
+
+## G-2026-92 - GSOS-301 intake: the six-unit partition and the Unit 6 topic split are the spec's construction over a guide that gives only a week table
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G0 intake / G1 unit-spec (partition criterion)
+- **Source:** `D-2026-0051`
+- **Detail:** The GSOS-301 guide block (`Scheme-and-Course-guides/extracted-text/2nd 2026.txt:776-968`)
+  carries a 16-week table and no unit headings: Weeks 1-7 (`:802-874`), Week 8 mid-term review
+  and exam (`:876-879`), Weeks 9-15 (`:881-935`), Week 16 final review and exam (`:937-942`). The
+  spec builds six units from it. By sub-topic membership, which matches the guide exactly:
+  Unit 1 = Weeks 1-3, Unit 2 = Weeks 4-5, Unit 3 = Weeks 6-7, Unit 4 = Weeks 9-10, Unit 5 =
+  Weeks 11-12, Unit 6 = Weeks 13-15 (teaching weeks 3/2/2/2/2/3).
+
+  What the guide **does** determine, verified: contiguous whole weeks, no guide topic reordered,
+  no week split across units, the mid-term and final weeks excluded from teaching units. Units
+  1-5 also split into topics exactly on the guide's week lines (one topic per week).
+
+  What the guide does **not** determine: the number of units and the boundaries. Any contiguous
+  merge is equally consistent with it. Two boundary choices in particular are judgements:
+  (a) Week 3 "Sociological Perspectives" joins Unit 1 rather than standing alone; (b) Unit 6
+  merges Week 14 "Social Problems" (`:921-927`) and Week 15 "Society and Contemporary Issues"
+  (`:929-935`) into one Topic 6.2 titled as "social problems", so media, human rights and the
+  environment are framed as social problems, which the guide does not do. A week-aligned
+  alternative is three topics in Unit 6 (Weeks 13/14/15).
+
+  Note: the spec's own `## Week schedule` (`content-spec.md:58-69`) does not record this
+  partition; it presents a "derived" 11-week calendar that contradicts the guide. That is a repair
+  item under `D-2026-0051` (decision residue), not part of this question.
+- **Needed, and from whom:** the curriculum owner, to confirm the six-unit merge (teaching weeks
+  3/2/2/2/2/3) or supply another, and to rule whether Unit 6 keeps two topics (Weeks 13 | 14-15)
+  or splits three ways on the guide's week lines. Precedent: `G-2026-22` (GNAS-301), `G-2026-52`
+  (EFMP-301).
+- **Blocks:** the `partition` criterion of `D-2026-0051`; `status: approved` for GSOS-301; the
+  Unit 6 `### Topic list`.
+
+
+
+---
+
+## G-2026-93 - GSOS-301 reading list: the guide's two entries are missing from the spec, and the four "Guide-required" rows are not the guide's and do not resolve as printed
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G0 intake (readings criterion)
+- **Source:** `D-2026-0051`
+- **Detail:** The guide's "Recommended Books" (`2nd 2026.txt:964-968`) are two bare URLs:
+  1. `https://api.pageplace.de/preview/DT0400.9781135034900_A24760348/preview-9781135034900_A24760348.pdf`
+     resolves (HTTP 200, `application/pdf`, 6,270,766 bytes, sha256 `ff612d5a30956f899c08e7ecf58598a7c67db3d1f096f096f6f1ac8def9c7b24`, fetched
+     2026-10-10). The PDF metadata names **Harry M. Johnson, *Sociology: A Systematic
+     Introduction*** (ISBN 9781135034900, a Routledge ebook reissue). It is a publisher
+     **preview** of roughly 70 pages, not the full text: a monograph under `D-2026-0001`, binding
+     authors to title-level support unless a copy is obtained.
+  2. `https://www.slideshare.net/slideshow/introduction-of-sociology-238865842/238865842` resolves
+     to a 31-slide deck "Introduction of Sociology" uploaded by Bhavesh Singh, framed around
+     sociology in nursing. It is not a scholarly work and is of doubtful use as a citable source.
+
+  The spec's `### Guide-required` table (`content-spec.md:39-46`) lists **neither**. It lists four
+  works the guide does not name, all labelled guide-required:
+  - `givens2023` "Givens & White (Eds.) (2023), *Sociology*, OpenStax": the URL resolves to
+    OpenStax *Introduction to Sociology 3e* by **Conerly, Holmes & Tamang (2021)**. Authors,
+    year and title as printed do not match the work at the URL.
+  - `henson2022` "Henson (2022), *Sociology: An introduction*, LibreTexts": the URL resolves to a
+    LibreTexts "Introduction to Sociology" bookshelf; no Henson attribution was found on the page.
+    Unverified as printed.
+  - `lindsey2020` "Lindsey, D. (2020), *Sociology* (7th ed.), Routledge": not found. Open Library
+    has Linda L. Lindsey & Stephen Beach, *Sociology*, Prentice Hall (1999-2003 editions).
+  - `anderson2016` "Anderson & Dolphin (2016), *Sociology: The essentials* (8th ed.), Cengage":
+    not found as printed. The real work is Margaret L. Andersen, Howard F. Taylor (& Kim A. Logio),
+    *Sociology: The Essentials*, Wadsworth/Cengage.
+  Authored Units 1-2 (before intake) already cite `givens2023` and `henson2022` as
+  `guide-required` in `sources/unit-0{1,2}.md`.
+- **Needed, and from whom:** the curriculum owner: (a) whether the two guide URLs constitute the
+  course reading list, and whether the slide deck is admitted as a source at all; (b) whether
+  Johnson is cited at title level only (`D-2026-0013` posture) or a copy is to be obtained;
+  (c) whether corrected open-access substitutes (OpenStax *Introduction to Sociology 3e*, the
+  LibreTexts text with its real attribution) may stand as `open-access-substitute`, not
+  `guide-required`; (d) that `lindsey2020` and `anderson2016` are removed or replaced with
+  correctly cited works. Correcting the misattributed citations is a repair once (a)-(c) are ruled.
+- **Blocks:** the `readings` criterion of `D-2026-0051`; `status: approved`; every unit's
+  `### Mapped readings`; G3 for authored Units 1-2 until their sources files are relabelled.
+
+
+
+---
+
+## G-2026-94 - GSOS-301's "binding" G2 open-access floor is self-declared, not owner-adopted, and not enforced
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G0 intake (readings criterion)
+- **Source:** `D-2026-0051`
+- **Detail:** `content-spec.md:48-56` states the spec "sets a binding requirement on G2
+  source-binding": at least one verifiable open-access source per unit for Units 1-6, resolved
+  through Crossref, OpenAlex, ERIC or DOAJ. A floor is binding only when the owner adopts it, as
+  `D-2026-0013` (EFMP-304) and `D-2026-0021` (GNAS-301) did; both are course-scoped and neither
+  extends to GSOS-301. The spec front matter declares no `open_access_floor`, so
+  `check:source-floor` exits 0 without checking anything for this course. Same pattern as
+  `G-2026-23`. Given `G-2026-93` (the guide's only book is a preview-only monograph), a floor is
+  the obvious mitigation, but adopting it is not an evaluator's call.
+- **Needed, and from whom:** the curriculum owner, to adopt, amend or reject the floor (count per
+  unit, registries), and if adopted, to have the front matter declare it so the gate enforces it.
+- **Blocks:** the `readings` criterion of `D-2026-0051`; `status: approved`; G2 source binding for
+  Units 3-6.
+
+## Intake evaluation, GPKS-402 (2026-10-10)
+
+Recorded by `agent:evaluator` under `D-2026-0052`, bound to
+`intake/GPKS-402/manifest.json` (manifest digest
+`513a177525d45102d39c8d4cee3a52d9f1c3b333575535987465988ed6c4512a`, commit `26ecd199`). Guide:
+`Scheme-and-Course-guides/extracted-text/2nd 2026.txt:972-1153`. Spec:
+`specs/content/gpks-402/content-spec.md` (status: draft). Evaluation record:
+`intake/GPKS-402/evaluation.md`.
+
+## G-2026-97 - GPKS-402 intake: the six-unit partition is the spec's construction over a guide that gives only a week table, and the spec's week schedule misstates the guide's weeks
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G0 intake / G1 unit-spec (partition criterion)
+- **Source:** `D-2026-0052`
+- **Detail:** The guide's "Course Contents / Weekly Breakdown" (`2nd 2026.txt:1008-1141`) numbers
+  sixteen weeks: teaching Weeks 1-8 (`:1010-1083`), "Week 9: Mid-Term Examination" (`:1085`),
+  teaching Weeks 10-15 (`:1087-1135`) and "Week 16: Review and Final Assessment" (`:1137-1141`).
+  It carries **no unit headings of any kind**. The spec derives six units. Reading the spec's own
+  sub-topic checklists (`Guide ref` column), the proposed partition is:
+
+  | Unit | Guide weeks (from the checklists) | Teaching weeks |
+  |---|---|---|
+  | 1 Introduction and Ideological Foundations | 1-2 | 2 |
+  | 2 Reform Movements and the Pakistan Movement | 3-4 | 2 |
+  | 3 Constitutional Development | 5-6 | 2 |
+  | 4 Governance, (Fundamental) Rights and Geography | 7, 8 and 10 (spans the Week 9 mid-term) | 3 |
+  | 5 Economy and Society | 11-12 | 2 |
+  | 6 Foreign Policy, Contemporary Issues and (the Role of) Education | 13-15 | 3 |
+
+  What the guide **does** determine, and the evaluator verified mechanically: the week numbers,
+  the mid-term and review placement, and that the checklist partition uses contiguous guide weeks,
+  reorders no guide topic and splits no week across units. What the guide does **not** determine:
+  the number of units (six), the block boundaries, and in particular the choice to join Weeks 7-8
+  (political structure, rights) with Week 10 (geography) across the mid-term. `G-2026-22`
+  (GNAS-301) is the precedent: the owner confirmed a comparable merge there, but that ruling is
+  course-specific and does not bind GPKS-402.
+
+  **Separate defect, guide-determined, for the author to repair (not an owner question):** the
+  spec's `## Week schedule` table (`content-spec.md:49-58`) does not match the guide or the spec's
+  own checklists. It gives Unit 4 as Weeks "7-8" (its checklist cites Week 10 at `:220-222`),
+  Unit 5 as "9-10" (guide Weeks 11-12, `:1095-1109`) and Unit 6 as "11-12" (guide Weeks 13-15,
+  `:1111-1135`); it omits the Week 9 mid-term and Week 16 entirely; and it presents this as guide
+  content with no "derived" label, which the content-spec contract as amended by `D-2026-0012`
+  forbids. The unit opening lines repeat the conflict in self-contradicting form:
+  `:256` "Weeks 9-10 (guide Week 11-12)" and `:303` "Weeks 11-15 (guide Week 13-15)". Unit titles
+  also drift between the table and the headings for Units 4 (`:56` vs `:199`) and 6 (`:58` vs
+  `:301`).
+- **Needed, and from whom:** the curriculum owner, to confirm the six-block partition above
+  (2/2/2/3/2/3 teaching weeks, Unit 4 spanning the mid-term) or supply another. The week
+  numbering itself needs no decision: it is guide-given, and the schedule table and unit opening
+  lines must be corrected to it by the author before re-intake.
+- **Blocks:** the `partition` criterion of `D-2026-0052`; the `## Week schedule` table and the
+  "Weeks N-M" line opening each `## Unit N` subsection. It does not block the sub-topic checklists,
+  whose `Guide ref` weeks are correct.
+
+## G-2026-98 - GPKS-402 reading list: one guide entry is ambiguous, all four are print-only, no open-access floor is declared, and both curated supplements are defective
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G0 intake (readings criterion)
+- **Source:** `D-2026-0052`
+- **Detail:** The guide lists four "Recommended Readings" (`2nd 2026.txt:1143-1153`); the spec
+  transcribes all four (`content-spec.md:33-40`). Verified by the evaluator on 2026-10-10 against
+  external catalogues (not bound inputs):
+
+  | Guide entry | Verification |
+  |---|---|
+  | Government of Pakistan. *Pakistan Studies Curriculum (HEC)* (`:1145`) | **ambiguous**: HEC publishes more than one document that fits (a 2007-08 Pakistan Studies degree curriculum and a 2025-26 "Pakistan Studies (AD, BS, MPhil/MS)" degree curriculum on hec.gov.pk's Revised Curricula page, plus an undergraduate compulsory-course outline). The guide does not say which; the spec gives no year or locator, and `sources/unit-01.md:17` records "no stable URL resolves from this host", although hec.gov.pk URLs for both degree curricula were located on this run |
+  | Ikram Rabbani. *Pakistan Studies* (`:1149`) | **resolves**: M. Ikram Rabbani, *Pakistan Studies*, Caravan Book House, Lahore; multiple editions, print only; edition unspecified |
+  | Hamid Khan. *Constitutional and Political History of Pakistan* (`:1151`) | **resolves**: Oxford University Press Pakistan, several editions (4th ed. ISBN 9780199060986); print only |
+  | Shahid Javed Burki. *Pakistan: Fifty Years of Nationhood* (`:1153`) | **resolves**: Westview Press, 3rd ed. 1999, ISBN 9780813336213; print only |
+
+  All four are monographs or official documents with no DOI. Under `D-2026-0001` an author is
+  bound to title-level support unless a copy is obtainable. Unlike EFMP-304 (`D-2026-0013`) and
+  GNAS-301 (`D-2026-0021`), the spec declares **no** open-access floor and no `open_access_floor`
+  front matter, so `check:source-floor` does not see GPKS-402 (exit 0 with no GPKS mention on this
+  run; the `G-2026-17` condition).
+
+  The `### Curated-supplementary (open access)` table (`:42-47`) has two entries, both defective:
+  - `ziad-pak-foreign-policy`: "Zia, S. (2020). Pakistan's foreign policy: Challenges and
+    opportunities. *Journal of the Research Society of Pakistan*, 57(2)." **Not locatable**: no
+    such article was found; similarly titled articles exist in other venues (e.g. CISS Insight).
+    The key ("ziad") and the author ("Zia") disagree, and the entry claims open access with no
+    URL.
+  - `goe-bloom`: Goe, Bell and Little (2008), ERIC ED521228, **is real**, but its subject is
+    approaches to evaluating teacher effectiveness, not "civic education in nation building" as
+    the note claims; it is tagged to Units "4, 8" and the course has no Unit 8; the key implies a
+    Bloom source it is not.
+
+  The reading list's `Units` column also disagrees with the per-unit `**Mapped readings**` lines:
+  `hamid-khan-const` is listed for Units 3-4 but mapped in Unit 2 (`:139`); `hec-pak-studies` is
+  listed for Units 1-3 but mapped in Unit 4 (`:238`) and not in Unit 2; `goe-bloom` is listed for
+  Units 4 and 8 but mapped only in Unit 6 (`:339`). The `burki-fifty-years` note says "first fifty
+  decades" (`:40`).
+- **Needed, and from whom:** the curriculum owner, to (a) name which HEC document the guide's
+  first entry means (or accept title-level citation of a named one); (b) decide whether GPKS-402
+  authors against this print-only list as it stands, and whether to adopt an open-access floor on
+  the `D-2026-0013` / `D-2026-0021` precedent, declared in front matter so `check:source-floor`
+  enforces it. The supplement defects and the Units-column inconsistencies are the author's to
+  repair, and a replacement for the unlocatable journal entry needs verifying before it is bound.
+- **Blocks:** the `readings` criterion of `D-2026-0052`; the `## Reading list` section and the
+  `**Mapped readings**` line of every unit. Units 1 and 2 are already authored against this list
+  (see `G-2026-100`).
+
+## G-2026-99 - GPKS-402 SLO 6-1 (foreign policy) traces to no stated course objective
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G0 intake (outcomes criterion)
+- **Source:** `D-2026-0052`
+- **Detail:** The guide states five course objectives (`2nd 2026.txt:996-1006`): ideological
+  foundations; the historical evolution of the Pakistan Movement; constitutional and political
+  developments; Pakistan's geography, economy and society; and national integration and civic
+  responsibility through education. The guide teaches foreign policy in Week 13 (`:1111-1117`),
+  but no objective names it. The spec traces `SLO:GPKS-402-6-1` (principles of foreign policy;
+  relations with neighbours; role in international organisations) to objectives 4 and 5
+  (`content-spec.md:305`). Neither covers foreign policy on its wording; the nearest reading is
+  objective 3's "political developments", which the spec does not cite. The SLO has a guide
+  ancestor in the week table, so it is not an added outcome, but its objective trace is the spec's
+  construction and the guide does not settle it. The guide gives no objective-to-week mapping
+  anywhere, so the trace is an interpretation either way.
+- **Needed, and from whom:** the curriculum owner, to state which objective Week 13 serves (3, 4,
+  another, or "content without a stated objective, retained because the guide teaches it"), in the
+  manner `D-2026-0011` settled EFMP-302's unmatched CLO 4.
+- **Blocks:** the `outcomes` criterion of `D-2026-0052` for `SLO:GPKS-402-6-1` only (the Unit 6
+  `**CLO/SLO refs**` line). The other thirteen SLO traces are approved.
+
+## G-2026-100 - GPKS-402 Units 1 and 2 were authored (EN and UR) against an unapproved spec, before G0/G1, and the spec has defects that reach them
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G0 intake / G1 unit-spec (process)
+- **Source:** `D-2026-0052`
+- **Detail:** At the bound commit `26ecd199`, `docs/semester-2/gpks-402/unit-01/` and `unit-02/`
+  exist with Urdu mirrors under `i18n/ur/.../semester-2/gpks-402/`, while the spec is
+  `status: draft`. `contracts/content-spec-frontmatter.schema.json` (bound) describes `approved` as
+  set by the owner "before any unit under this course may be drafted". `check:pipeline-gate`
+  reports this for both units (exit 1: "course content-spec.md is not approved (status:
+  'draft')"; no G2 en-draft row); `check:figures` also exits 1 on both units (every topic carries
+  prompt-only figure markers, none rendered). This evaluation judged the spec only and treated the
+  authored units as context. But three spec defects found here reach the authored units: the
+  ERQ blueprint arithmetic (`D-2026-0052`, blueprint criterion: "one per topic plus one integrative"
+  gives 3 ERQs for two-topic units, not the required 5), the reading list (`G-2026-98`) Units 1-2
+  were sourced from, and the unit week lines (`G-2026-97`).
+- **Needed, and from whom:** the curriculum owner, to decide the disposition of the two authored
+  units: retain them and re-check them against the repaired, re-approved spec, or withdraw them for
+  re-authoring after approval. Repairing the spec changes a bound input, so `D-2026-0052` is void
+  on repair and a fresh intake bundle is needed either way.
+- **Blocks:** any gate progress for GPKS-402 Units 1 and 2 (G2 onward) until the spec is approved.
+  It does not block the spec repairs themselves.
+>>>>>>> origin/main

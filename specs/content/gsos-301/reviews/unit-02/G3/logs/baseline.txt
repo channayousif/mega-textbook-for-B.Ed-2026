@@ -1,0 +1,1 @@
+Initial HEAD and origin/main both a4ecd9e2fae4d928b23654529a652ece427dd8d8; git status clean before manifest preparation; no origin/main..HEAD commits. Initial check:content therefore ran the main baseline bytes: 12 pass, missing static/content-status.json only.

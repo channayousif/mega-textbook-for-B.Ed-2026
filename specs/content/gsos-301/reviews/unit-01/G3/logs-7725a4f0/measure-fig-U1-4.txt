@@ -1,0 +1,6 @@
+✗ static/img/figures/gsos-301/unit-01/fig-U1-4.svg
+    overflows right edge by 3.7px: "department; foundation of functionalism"
+✗ static/img/figures/gsos-301/unit-01/fig-U1-4.dark.svg
+    overflows right edge by 3.7px: "department; foundation of functionalism"
+
+2 text-geometry problem(s).

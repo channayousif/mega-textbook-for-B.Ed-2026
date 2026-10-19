@@ -1,0 +1,8 @@
+render-review: SKIPPED
+Reason: The review brief forbids running `npm run build` or a dev server. render-review
+requires inspecting rendered HTML at 360px viewport and A4 print views, which is not
+possible without a build. This is a required command for a passing G3 report under the
+evidence contract (specs/014-agent-review-governance/contracts/review-evidence.md).
+Impact: accessibility criterion cannot be verified from renders; disposition escalated.
+Inspector: opencode (crew-efmp-303-u04-review_en)
+Timestamp: 2026-10-18T19:35:00Z
