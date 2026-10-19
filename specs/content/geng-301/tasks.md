@@ -49,3 +49,5 @@ reviewer initials). One row per unit per stage (`G1`–`G7`).
 | Unit 6 | G5 ur-review | ▢ | | |
 | Unit 6 | G6 assets | ▢ | | |
 | Unit 6 | G7 publish | ▢ | | |
+
+| Unit 3 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation; findings: specs/content/geng-301/reviews/unit-03/G3/crew-20261019.json; content repairs and fresh independent provenance/render review pending; no certification |
