@@ -2,7 +2,7 @@
 id: crew-gsos-301-u02-translate
 title: crew translate GSOS-301 unit 2
 stage: misc
-date: 2026-10-18
+date: 2026-10-19
 surface: agent
 model: agy
 feature: gsos-301
@@ -16,27 +16,24 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/general/0343-gsos301-u02-g4-translate.general.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-02/index.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-02/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-02/topic-02.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-02/unit-assessment.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-02/unit-teacher-notes.mdx
-  - specs/content/gsos-301/tasks.md
-  - static/img/figures/gsos-301/unit-02/fig-U2-1.ur.svg
-  - static/img/figures/gsos-301/unit-02/fig-U2-1.ur.dark.svg
-  - static/img/figures/gsos-301/unit-02/fig-U2-2.ur.svg
-  - static/img/figures/gsos-301/unit-02/fig-U2-2.ur.dark.svg
-  - static/img/figures/gsos-301/unit-02/fig-U2-3.ur.svg
-  - static/img/figures/gsos-301/unit-02/fig-U2-3.ur.dark.svg
-  - static/img/figures/gsos-301/unit-02/fig-U2-4.ur.svg
-  - static/img/figures/gsos-301/unit-02/fig-U2-4.ur.dark.svg
+ - history/prompts/general/0343-gsos301-u02-g4-translate.general.prompt.md
+ - history/prompts/gsos-301/crew-gsos-301-u02-translate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-02/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-02/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-02/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-02/unit-assessment.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gsos-301/unit-02/unit-teacher-notes.mdx
+ - specs/content/gsos-301/tasks.md
+ - static/img/figures/gsos-301/unit-02/fig-U2-1.ur.dark.svg
+ - static/img/figures/gsos-301/unit-02/fig-U2-1.ur.svg
+ - static/img/figures/gsos-301/unit-02/fig-U2-2.ur.dark.svg
+ - static/img/figures/gsos-301/unit-02/fig-U2-2.ur.svg
+ - static/img/figures/gsos-301/unit-02/fig-U2-3.ur.dark.svg
+ - static/img/figures/gsos-301/unit-02/fig-U2-3.ur.svg
+ - static/img/figures/gsos-301/unit-02/fig-U2-4.ur.dark.svg
+ - static/img/figures/gsos-301/unit-02/fig-U2-4.ur.svg
 tests:
-  - npm run check:content
-  - npm run figures:variants:check
-  - npm run check:no-em-dash
-  - npm run check:no-answer-keys
-  - npm run check:figures
+ - npm run check:content
 ---
 
 ## Prompt
@@ -68,32 +65,37 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit
    needs (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+## Notes from earlier jobs on this unit
+- (gsos-301-u02-review_en, review_en, agy) Reconcile topic-01 and topic-02 citations (Givens & White, Henson, Lindsey) against approved sources (Conerly et al. 2021, Lindsey & Beach 2001).
+- (gsos-301-u02-review_en, review_en, agy) Reconcile Mead socialization stages and ages across topic-02, fig-U2-4, and assessment items against OpenStax 5.1.
+- (gsos-301-u02-review_en, review_en, agy) Recalculate Bloom cognitive demand on MCQ-07, MCQ-08, RRQ-06, and refine ERQ-02/03/04 rubrics and coverage mappings.
+
+
 ## Response snapshot
 
-Translated GSOS-301 Unit 2 into its complete Urdu mirror at G4 per `.claude/skills/translate-unit/SKILL.md`:
-1. Localized all four figures into `.ur.svg` (`fig-U2-1.ur.svg`, `fig-U2-2.ur.svg`, `fig-U2-3.ur.svg`, `fig-U2-4.ur.svg`) with Nastaliq font stacks, RTL text anchors and reading order, and derived `.ur.dark.svg` via `npm run figures:variants`.
-2. Produced complete academic-plain Urdu translations for all 5 unit files (`index.mdx`, `topic-01.mdx`, `topic-02.mdx`, `unit-assessment.mdx`, and `unit-teacher-notes.mdx`), ensuring exact 1:1 heading vector parity, component count preservation, zero em dashes, and `key_terms` bound to `terminology.csv`.
-3. Translated 10/10/5 assessment bank and bounded answers section without English answer-key tokens.
-4. Updated `specs/content/gsos-301/tasks.md` G4 tracker row. All 13 content gates pass.
+Translated GSOS-301 Unit 2 into its complete 5-file Urdu mirror with localized SVG figure variants, exact heading parity, and terminology conformance passing all 13 content gates.
 
 ## Outcome
 
-- ✅ Impact: GSOS-301 Unit 2 complete G4 Urdu mirror created and verified against all content gates.
-- 🧪 Tests: `npm run check:content` passes all 13 gates.
-- 📁 Files: 5 MDX files in `i18n/ur/.../gsos-301/unit-02/`, 8 figure variant SVGs in `static/img/figures/gsos-301/unit-02/`, `specs/content/gsos-301/tasks.md`.
-- 🔁 Next prompts: G5 independent Urdu review.
-- 🧠 Reflection: Following translate-unit skill procedures systematically produced a clean, fully verified translation without regressions.
+- Impact: translate for GSOS-301 Unit 2 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 16 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Complete Urdu mirror and localized figures for GSOS-301 Unit 2.
-- Decisions the team must respect: translation_status stays draft; G4 row updated; no self-signing of G5.
-- Pending / next owner: Independent G5 Urdu reviewer session for GSOS-301 Unit 2.
-- Paperclip issues affected: null
+- Shipped / changed: Translated GSOS-301 Unit 2 into its complete 5-file Urdu mirror with localized SVG figure variants, exact heading parity, and terminology conformance passing all 13 content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - translation_status remains draft pending independent G5 review; G4 tracker row recorded with auto:gates.
+  - If English source citations or Mead stage age boundaries are later adjusted per G3 review notes, fig-U2-4.ur.svg and topic-02.mdx should be aligned accordingly.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: Pre-existing missing `content-status.json` built via `build:content-status`.
-- Graders run and results (PASS/FAIL): npm run check:content → 13 PASS / 0 FAIL.
-- Prompt variant (if applicable): null
-- Next experiment (smallest change to try): null
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
