@@ -54,7 +54,7 @@ Applied remaining Unit 4 G3 findings with matching Urdu edits, corrected source 
 ## Outcome
 
 - ✅ Impact: Repairs prepared for owner review without claiming G3 acceptance.
-- 🧪 Tests: Content gates compared against origin/main; final results recorded in follow-up validation record. Unit tests running.
+- 🧪 Tests: Content gates compared against origin/main; final results recorded in follow-up validation record. All 314 tests across 26 files passed.
 - 📁 Files: Unit 4 EN/UR topics, assessment, governance tables and PHR.
 - 🔁 Next prompts: Owner handles G-2026-31 before any third review cycle.
 - 🧠 Reflection: Shared excerpt edits stale Unit 3 evidence; corrected notes recorded in Unit 4 source record instead.
@@ -69,6 +69,14 @@ Applied remaining Unit 4 G3 findings with matching Urdu edits, corrected source 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Initial repair run invalidated G2 manifests; refresh Unit 4 evidence, preserve shared excerpts to avoid Unit 3 changes.
-- Graders run and results (PASS/FAIL): See final validation below.
+- Graders run and results (PASS/FAIL): 314 unit tests PASS; eight G2 draft checks PASS; final content-gate comparison recorded below.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Independent review only after owner authorization.
+
+## Final validation
+
+- Branch and origin/main each pass 12 of 13 content gates. Both fail only check:content-status because static/content-status.json is missing. No new findings remain.
+- All 314 tests in 26 unit-test files passed.
+- Eight deterministic G2 checks passed; fresh Unit 4 evidence and tracker reference recorded.
+- EN/UR MCQ key agreement checked after option swaps. git diff --check passed.
+- No push or PR; G3 remains unticked.

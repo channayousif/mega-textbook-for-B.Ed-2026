@@ -58,3 +58,4 @@ units may be authored.
 | Unit 6 | G7 publish | ▢ | | |
 
 | Unit 4 | G3 en-review | ▢ | | advisory: revise; repairs applied against reviews/unit-04/G3/agent-g3-gnas301-u4-run001.json and latest round-02/agent-g3-gnas301-u4-run002.json; source mappings and support notes corrected, citation scope and EN/UR prose repaired, concept item lists corrected, MCQ options redistributed, Further reading linked; prior repairs retained; G3 remains open, third cycle owner-gated (G-2026-31) |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-04/G2/20261019T150338371Z-gates.json |
