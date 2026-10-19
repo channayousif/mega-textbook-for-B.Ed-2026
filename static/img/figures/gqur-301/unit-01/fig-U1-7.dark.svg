@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d"><title id="t">Three charts from the same data</title><desc id="d">Three charts side by side using the same school examination results data: a bar chart on the left, a histogram in the middle, and a pie chart on the right, with brief labels showing what each emphasizes.</desc>
+  <defs>
+    <style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700;fill:var(--ink)} .sh{font-size:12px;font-weight:600;fill:var(--ink)} .m{font-size:12px;fill:var(--muted)} .c{text-anchor:middle} .wm{fill:var(--wm);font-size:11px} .b1{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2} .b2{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2} .b3{fill:var(--a3-fill);stroke:var(--a3);stroke-width:2} .b4{fill:var(--a4-fill);stroke:var(--a4);stroke-width:2} .line{stroke:var(--line);stroke-width:2}</style>
+  </defs>
+
+  <text x="760" y="460" class="wm" aria-hidden="true">textbook.com.pk</text>
+  <text x="30" y="30" class="title">Three charts from the same data: exam results (n=172)</text>
+  <text x="30" y="50" class="label">Distinction 45, First 78, Second 32, Third 12, Failed 5</text>
+
+  <!-- LEFT: Bar chart (correct for categorical) -->
+  <rect x="20" y="65" width="240" height="280" rx="6" fill="var(--panel)" stroke="var(--line)" stroke-width="0.8"/>
+  <text x="140" y="85" text-anchor="middle" class="chart-title">Bar chart (correct here)</text>
+  <text x="140" y="100" text-anchor="middle" class="label">Compares categories</text>
+
+  <!-- Y axis -->
+  <line x1="55" y1="110" x2="55" y2="320" class="axis"/>
+  <!-- X axis -->
+  <line x1="55" y1="320" x2="245" y2="320" class="axis"/>
+
+  <!-- Bars -->
+  <rect x="70" y="170" width="25" height="150" rx="2" class="bar-fill"/>
+  <rect x="110" y="110" width="25" height="210" rx="2" class="bar-fill"/>
+  <rect x="150" y="230" width="25" height="90" rx="2" class="bar-fill"/>
+  <rect x="190" y="285" width="25" height="35" rx="2" class="bar-fill"/>
+  <rect x="225" y="305" width="25" height="15" rx="2" class="bar-fill"/>
+
+  <!-- Bar labels -->
+  <text x="82" y="335" text-anchor="middle" class="label">Dist</text>
+  <text x="122" y="335" text-anchor="middle" class="label">First</text>
+  <text x="162" y="335" text-anchor="middle" class="label">Second</text>
+  <text x="202" y="335" text-anchor="middle" class="label">Third</text>
+  <text x="237" y="335" text-anchor="middle" class="label">Fail</text>
+
+  <!-- Y labels -->
+  <text x="50" y="320" text-anchor="end" class="label">0</text>
+  <text x="50" y="240" text-anchor="end" class="label">50</text>
+  <text x="50" y="160" text-anchor="end" class="label">100</text>
+
+  <!-- MIDDLE: Histogram (wrong for categorical) -->
+  <rect x="270" y="65" width="240" height="280" rx="6" fill="var(--panel)" stroke="var(--a3)" stroke-width="1.5"/>
+  <text x="390" y="85" text-anchor="middle" class="chart-title" fill="var(--a3)">Histogram (misuse)</text>
+  <text x="390" y="100" text-anchor="middle" class="label" fill="var(--a3)">Touching bars imply continuity</text>
+
+  <!-- Y axis -->
+  <line x1="305" y1="110" x2="305" y2="320" class="axis"/>
+  <!-- X axis -->
+  <line x1="305" y1="320" x2="495" y2="320" class="axis"/>
+
+  <!-- Touching bars (histogram style - wrong) -->
+  <rect x="305" y="170" width="40" height="150" rx="0" fill="var(--a3)" opacity="0.3"/>
+  <rect x="345" y="110" width="40" height="210" rx="0" fill="var(--a3)" opacity="0.3"/>
+  <rect x="385" y="230" width="40" height="90" rx="0" fill="var(--a3)" opacity="0.3"/>
+  <rect x="425" y="285" width="40" height="35" rx="0" fill="var(--a3)" opacity="0.3"/>
+  <rect x="465" y="305" width="30" height="15" rx="0" fill="var(--a3)" opacity="0.3"/>
+
+  <!-- Cross mark -->
+  <line x1="290" y1="100" x2="490" y2="320" class="cross"/>
+  <line x1="490" y1="100" x2="290" y2="320" class="cross"/>
+
+  <!-- RIGHT: Pie chart (shows proportions) -->
+  <rect x="520" y="65" width="240" height="280" rx="6" fill="var(--panel)" stroke="var(--line)" stroke-width="0.8"/>
+  <text x="640" y="85" text-anchor="middle" class="chart-title">Pie chart (also correct)</text>
+  <text x="640" y="100" text-anchor="middle" class="label">Shares proportions of whole</text>
+
+  <!-- Pie slices -->
+  <circle cx="620" cy="210" r="85" fill="none" stroke="var(--line)" stroke-width="0.5"/>
+  <!-- Distinction 26% -->
+  <path d="M 620,210 L 620,125 A 85,85 0 0,1 701.5,184 Z" class="slice1"/>
+  <!-- First 45% -->
+  <path d="M 620,210 L 701.5,184 A 85,85 0 0,1 644,293 Z" class="slice2"/>
+  <!-- Second 19% -->
+  <path d="M 620,210 L 644,293 A 85,85 0 0,1 541,278 Z" class="slice3"/>
+  <!-- Third 7% -->
+  <path d="M 620,210 L 541,278 A 85,85 0 0,1 535,210 Z" class="slice4"/>
+  <!-- Failed 3% -->
+  <path d="M 620,210 L 535,210 A 85,85 0 0,1 537,195 Z" class="slice5"/>
+
+  <!-- Pie legend -->
+  <text x="540" y="320" class="label" font-size="9px">Distinction 26%</text>
+  <text x="540" y="335" class="label" font-size="9px">First division 45%</text>
+  <text x="540" y="350" class="label" font-size="9px">Second 19%</text>
+  <text x="640" y="320" class="label" font-size="9px">Third 7%</text>
+  <text x="640" y="335" class="label" font-size="9px">Failed 3%</text>
+
+  <!-- Caption -->
+  <text x="30" y="380" class="caption">Caption: Bar chart and pie chart are both appropriate for categorical data. A histogram is wrong here</text>
+  <text x="30" y="400" class="caption">because the touching bars falsely imply continuity. Credit: textbook.com.pk.</text>
+</svg>
