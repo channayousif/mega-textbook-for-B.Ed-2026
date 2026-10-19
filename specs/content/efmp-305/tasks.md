@@ -43,7 +43,7 @@ per-topic layout: `index.mdx` + `topic-01…02.mdx` (nine-part cycles) + `unit-a
 | Unit 2 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
 | Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-02/G2/20261017T113324655Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | |
-| Unit 2 | G4 ur-translation | ▣ | | complete 5-file UR mirror verified against EN baseline (2026-10-18): 4 .ur.svg/.ur.dark.svg variants wired; structural parity, figure parity, and key_terms clean under temporary reviewed flip (reverted); translation_status stays draft pending fresh independent G5 |
+| Unit 2 | G4 ur-translation | ▣ | | mirror complete (2026-10-19): all 5 files translated and verified against EN 9e6da648; 4 .ur.svg/.ur.dark.svg figure variants synced; structural parity clean under temporary reviewed flip (reverted); all 5 key_terms conform to terminology.csv; handoff: reviews/unit-02/G4/translation-handoff.md; translation_status stays draft pending fresh independent G5 |
 | Unit 2 | G5 ur-review | ▢ | | |
 | Unit 2 | G6 assets | ▢ | | 4 schematic SVGs prompt-only |
 | Unit 2 | G7 publish | ▢ | | |
