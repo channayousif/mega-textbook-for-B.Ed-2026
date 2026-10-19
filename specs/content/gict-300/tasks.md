@@ -62,3 +62,5 @@ files at that commit. The geng-300 reds are recorded as known-stale-on-main in t
 | Unit 6 | G5 ur-review | ▢ | | advisory run 001 (disposition: revise; F1-F2 figure labels repaired) at reviews/unit-06/G5/agent-g5-gict300-u6-run001.json; agent reviews advisory under ADR-0019 |
 | Unit 6 | G6 assets | ▢ | | |
 | Unit 6 | G7 publish | ▢ | | |
+
+| Unit 4 | G3 en-review | ▢ | | advisory: revise; repairs applied for reviews/unit-04/G3/agent-g3-gict300-u4-run002.json; B1/B2/A1/A2 verified already repaired; A4 descriptive reading links in EN/UR, A5 integrative school data-protection plan and rubric in EN/UR, A7 source-support claim corrected; A3 approved-spec reading-list mismatch and A6 review tooling deferred to owners; see reviews/unit-04/G3/repair-run002.md; fresh independent review required. |
