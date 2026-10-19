@@ -28,7 +28,7 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit 2 | G1 unit-spec | ▢ | | pending G0 intake |
 | Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-02/G2/20261017T120753514Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | |
-| Unit 2 | G4 ur-translation | ▣ | auto:gates | full UR mirror (5 files) and 4 figure variants authored; gates pass; translation_status stays draft pending G5 |
+| Unit 2 | G4 ur-translation | ▣ | auto:gates | full UR mirror (5 files) and 4 figure variants retained; 2026-10-19 semantic and untranslated-prose repairs; 13 draft gates pass; parity probe has only expected G4/G5 status and derived-status failures; render pending; translation_status stays draft; handoff: figures/unit-02.translation-handoff.md |
 | Unit 2 | G5 ur-review | ▢ | | |
 | Unit 2 | G6 assets | ▢ | | |
 | Unit 2 | G7 publish | ▢ | | |
