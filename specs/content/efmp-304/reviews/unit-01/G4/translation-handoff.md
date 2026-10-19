@@ -1,6 +1,6 @@
 # EFMP-304 Unit 1: G4 draft translation handoff
 
-- Date: 2026-10-19. Translator: Antigravity, crew job `efmp-304-u01-translate-r1`.
+- Original attempt date: 2026-10-19. Translator: Antigravity, crew job `efmp-304-u01-translate-r1`.
 - English baseline commit: `4484e36ab9ba3c7bb20d8a49d45a78bed37419b6` (`origin/main` at start; English Unit 1 unchanged since `2740e030`).
 - Files authored in the Urdu mirror:
   - `i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-304/unit-01/index.mdx`
@@ -83,8 +83,13 @@ These are proposals for the owner, not additions to the frozen bank.
 
 ## Verification and Status
 
-- Fast content gates (`npm run check:content`): reports only the pre-existing finding on `origin/main` (`static/content-status.json` missing); all 12 other gates pass cleanly.
+- Final draft-state `npm run check:content`: all 13 gates PASS. `npm run figures:variants:check`: PASS (790 figures).
+- Continuation verification: moved this handoff into the review-evidence directory so it does not invalidate the unchanged English G2 input manifest. Generated the ignored local content-status artifact before rerunning the content gates.
 - Zero em dashes (U+2014, U+2015, U+2E3A, U+2E3B) confirmed across all Urdu files and SVGs.
-- Temporary flip check to `translation_status: reviewed`: `validate:content` (heading and component parity), `check:figures` (bilingual figures), and `check:pipeline-gate` (terminology check) all verified clean. Both index files were restored byte-for-byte to `draft`.
+- Continuation temporary `reviewed` check: `validate:content` and `check:figures` PASS, and no terminology finding. The full run correctly fails on the unfinished G4/G5 tracker rows and the temporary flag causing a stale status cache. Both index files were restored byte-for-byte to `draft`. Component counts, figure attributes and all 14 bank-bound terms also passed direct comparisons.
 - `translation_status` remains `draft` across all files pending fresh, independent G5 review.
 - G4 tracker row in `specs/content/efmp-304/tasks.md` updated to in-progress (`▣`) with empty reviewer initials. No self-certification or G5 review claimed.
+
+## Codex continuation
+
+The continuation preserves the prior translation, normalizes Eastern Urdu digits to the required Western digits across six pages, and records fresh deterministic checks. Builds and dev servers are forbidden by the crew brief, so full-page narrow-width and A4 Urdu rendering inspection remains pending with the next authorized review host. G3 and G5 remain open.
