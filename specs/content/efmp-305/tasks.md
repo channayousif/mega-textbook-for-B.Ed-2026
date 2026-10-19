@@ -157,7 +157,7 @@ the PHR and Paperclip handoff. No G3/G5 certification or publication is claimed.
 | Unit 6 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
 | Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-06/G2/20261017T113349684Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | independent review pending; CurriculumOwner handoff on TEX-78 |
-| Unit 6 | G4 ur-translation | ▢ | | separately scoped Urdu child; English-only assignment |
+| Unit 6 | G4 ur-translation | ▣ | | complete 6-file UR mirror verified against EN baseline (2026-10-18): 6 .ur.svg/.ur.dark.svg variants wired; structural parity, figure parity, and key_terms clean under temporary reviewed flip (reverted); translation_status stays draft pending fresh independent G5 |
 | Unit 6 | G5 ur-review | ▢ | | |
 | Unit 6 | G6 assets | ▢ | | 6 schematic figures prompt-only (1 concept-map, 1 flowchart, 1 diagram, 3 table) |
 | Unit 6 | G7 publish | ▢ | | |
