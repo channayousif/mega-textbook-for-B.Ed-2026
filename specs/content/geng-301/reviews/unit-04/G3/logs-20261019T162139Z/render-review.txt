@@ -1,0 +1,35 @@
+render-review — GENG-301 Unit 4 — 2026-10-19T16:21:39Z
+Reviewer: agent:g3-reviewer (opencode Claude session; independent of author commit 927b2530)
+Approach: The scripted render path (scripts/render-inspect.mjs) requires a built
+  site and a running server. The task brief forbids `npm run build` and dev servers,
+  and neither Chrome nor Playwright Chromium is installed on this host, so the
+  scripted render path cannot run here. Instead a bounded static render was used:
+  1. Each committed SVG (6 light variants) was rasterised to PNG at the displayed
+     size (780 px) using sharp. PNGs saved under
+     specs/content/geng-301/reviews/unit-04/G3/renders-20261019T162139Z/ .
+  2. Text geometry was measured with scripts/measure-figure-text.mjs, which
+     inspects the committed SVG source for glyph overflow past the viewBox and
+     overprint on the wordmark (check:figures does not measure glyph geometry).
+Accessibility findings from the render pass:
+  - All six figures carry descriptive alt text in the MDX; the <Figure> `alt`
+    strings are non-empty and matched the manifest `Alt text`.
+  - SVG accessibility wiring: every light SVG has role="img" and
+    aria-labelledby pointing at a <title> and a <desc>; the <desc> equals the MDX
+    alt (verified on fig-U4-1.svg: "A diagram comparing description...").
+  - Wordmark overflow (see findings): measure-figure-text reports the
+    "textbook.com.pk" wordmark overflowing the right viewBox edge on every light
+    SVG (43.0 px on fig-U4-1/2/3/4/6; 34.6 px on fig-U4-5) and on the three dark
+    variants checked. This is the SVG asset wordmark placement, not prose; it does
+    not block the reader but it is a consistent presentation defect.
+  - Heading order in the prose is well formed: topic files open with a level-2
+    situation heading, followed by ## Explanation, ### sub-headings for each
+    expository type, then the nine-part cycle. No skipped levels.
+  - The assessment answer key is correctly bounded: a single
+    ## Answers and marking guidance section is the last `##` section of
+    unit-assessment.mdx; front-matter answer-key keys are absent (passes
+    check:no-answer-keys).
+Narrow / print view: not measured directly (no browser available). The G3 rubric
+  flags wide tables at 360 px; the unit's tables are rendered as inline SVGs
+  (not HTML tables), so the documented HTML-table scroll-container case does not
+  apply to this unit. This limitation is recorded rather than waived.
+exit_code: 0

@@ -1,0 +1,255 @@
+{
+  "schema_version": 1,
+  "course_code": "GENG-301",
+  "unit_no": 1,
+  "stage": "G3",
+  "disposition": "revise",
+  "reviewer_id": "agent:opencode",
+  "author_run_id": "agent:claude-cd0e5584",
+  "reviewer_run_id": "opencode-20261019T000000000Z",
+  "model": "longcat/LongCat-2.0",
+  "started_at": "2026-10-19T00:00:00.000Z",
+  "completed_at": "2026-10-19T00:05:00.000Z",
+  "skill_digest": "eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b",
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g3.md": "074c8464b4bc0f2f2b76bbb19707c50b54cb907920407873a4e5d193e866f53f",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "715b493fec67701dfb45e2ac65749c5fc9069161aadd27a8397a72d89c0874da",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/licence-page.schema.json": "3fc99078935af7419b4545d21c7d77d66e80ed847755df38ddc500ee35775a3c",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-2/geng-301/course-overview.mdx": "9683d294d704f481d42ead21f2f7ff651db1c86a48d52d8b9a7003990221561c",
+    "docs/semester-2/geng-301/unit-01/index.mdx": "92486e3e082c631a487b7f1079d7e698282bc5d50efd54403e37f74fa6260ac1",
+    "docs/semester-2/geng-301/unit-01/topic-01.mdx": "4991014ca809054ef7d8013c00a60ae628f7ff9d8ed6528db53505d07c30c7b8",
+    "docs/semester-2/geng-301/unit-01/topic-02.mdx": "50ca7518bee149a80582ef41eab90df0025c4578f79b4407aff0862ac11ccf0d",
+    "docs/semester-2/geng-301/unit-01/topic-03.mdx": "b0635bdbf075ced7a94028b189721fe232b49e773ed789cc7753b9bbaa31b951",
+    "docs/semester-2/geng-301/unit-01/unit-assessment.mdx": "9a1032faa235b9f8638f15fcc4ad19f672e88b627afe4cb2f88e75b37601bce7",
+    "docs/semester-2/geng-301/unit-01/unit-teacher-notes.mdx": "7b0d5ea2a625696df514365582c2387c348f1f16c095b87cc61e0ecd76b5b4d5",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "dfaa7045af0a9199dba81a06dab16963cce6221905c506afb73f60fb8ced9625",
+    "scripts/check-no-answer-keys.mjs": "8d3f8cac335c50774ee622d61cb37d987c0393c99e54eff31f2bd042625a78c3",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "8ce3a62bd80534181cf1d74fa92bc3ea2b5d937b3f528e96c2a3e20c5a87047a",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "cc33a878d98865149b248c6a524be4e9d294293ddfaecc443dc19b7ace6af7cf",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "26edbdd3d86edf7587cbf8e01f0b0cbe45e19428827da34e26cfd0534f34f1b9",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/geng-301/concepts/unit-01.md": "09df3a00a6f9ab47073d151bc024407574a6d6f027aa0d0902777f4c5294dc6d",
+    "specs/content/geng-301/content-spec.md": "f20bcf67e56159cdfb1744e36b8bf57736359212d6d9a4b2b08346c78a33cbd8",
+    "specs/content/geng-301/coverage/unit-01.md": "86c64eee6542f79ebdfcaed22559387d7aca7b69a58acc517fbd3d983c79acbc",
+    "specs/content/geng-301/figures/unit-01.md": "c2bb9dfcd9ff8637a8e5f9ccee2f03f726adbadcd6083c56a177bb3f2122e936",
+    "specs/content/geng-301/intake-2/evaluation.md": "532b0c1609304aa2c7d51c680051b263cb56e1fd6a5dfdd694cd430cd911ce3e",
+    "specs/content/geng-301/intake-2/manifest.json": "0a8551c794d77d61f4d646a4e002f7ecf7192d56ddcbbb4108d92a94d8df5d73",
+    "specs/content/geng-301/intake-3/evaluation.md": "6dc2db526d26621ae21bf4e0f31eeb7ab58b5b42416e25c0163230503324685b",
+    "specs/content/geng-301/intake-3/manifest.json": "1fb696940bf899b60c680cfcc2ec9e58ef1d1ec012d5bf101561da30e3fca244",
+    "specs/content/geng-301/sources/texts/writing2015.md": "9fee5cf0627d85dc402a2ec7fc8211a7ec750d1e052c9cc6b50ba43e3466805d",
+    "specs/content/geng-301/sources/unit-01.md": "414bd4506da004be151f19f77d5606f988aa9abc55b93fe8b5995179e6b19deb",
+    "specs/content/style-guide.md": "79f6cafc03b436c0e77c49ea658ef9a7a4de408b5c42020be39011a02a00dd7f",
+    "static/img/figures/geng-301/unit-01/fig-U1-1.dark.svg": "93ac27c85f7ab8b363d9c2ea34f412752751f5c64c1bc66b8068eada9899cdcb",
+    "static/img/figures/geng-301/unit-01/fig-U1-1.svg": "86be912d0241375458225620e31e4be7e7e43342c399790f99035934dcf38f7a",
+    "static/img/figures/geng-301/unit-01/fig-U1-2.dark.svg": "11b284f284d7311a059d7ee621221dc0dbf77c36d9bc4b24927d3584325ebf9a",
+    "static/img/figures/geng-301/unit-01/fig-U1-2.svg": "913beba926a3d391d8add84c77a7dc5729275accaa1280b5027725a16041eb7e",
+    "static/img/figures/geng-301/unit-01/fig-U1-3.dark.svg": "c904bd9ac483aa9463e7d89788c50ab590ee29027bb933b2544cdc62a5fa1b51",
+    "static/img/figures/geng-301/unit-01/fig-U1-3.svg": "13b9d40b2bd5bb61dc4805c034af3b3dd51b30a252c97b96ba9de304bc422f0b",
+    "static/img/figures/geng-301/unit-01/fig-U1-4.dark.svg": "deffa21882bb093abebf3921934be46eadab90efa7bcab45ac75f7a3eeda8a17",
+    "static/img/figures/geng-301/unit-01/fig-U1-4.svg": "bef4492b6bc45b1003e67ac8f26a98b16ed4493edf630df1205de9dca94f004c",
+    "static/img/figures/geng-301/unit-01/fig-U1-5.dark.svg": "4822873961875b0a34905bad1ca64a5d67171ead10284d779cda80bd9a415a55",
+    "static/img/figures/geng-301/unit-01/fig-U1-5.svg": "6e2a52a7a3e9df2a283847d504c0ab4e0d16dc0c5202b5a787254f70fc8fe4c5",
+    "static/img/figures/geng-301/unit-01/fig-U1-6.dark.svg": "b0228bedc3cace59a52477147c871363f72a3d90c6ce1288f1d7c5f8da4f587f",
+    "static/img/figures/geng-301/unit-01/fig-U1-6.svg": "66a06c710706bc7ddbf42eeabacab0ee3b4631f1df00984172bd8c1df6ead623"
+  },
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        "specs/content/geng-301/content-spec.md: G1 approved; Unit 1 sub-topics match guide syllabus (2nd 2026.txt:44-48)",
+        "specs/content/geng-301/coverage/unit-01.md: all 7 sub-topics (U1-01..U1-7) mapped to topics 1.1-1.3",
+        "docs/semester-2/geng-301/unit-01/topic-01.mdx: covers U1-01, U1-02",
+        "docs/semester-2/geng-301/unit-01/topic-02.mdx: covers U1-03, U1-04, U1-05",
+        "docs/semester-2/geng-301/unit-01/topic-03.mdx: covers U1-06, U1-07"
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "pass",
+      "evidence": [
+        "specs/content/geng-301/sources/unit-01.md: writing2015 open-access source verified (CC BY-NC-SA, OpenAlex W7206719389), supports paragraph structure claims in topic-03.mdx",
+        "specs/content/geng-301/sources/texts/writing2015.md: section 6.2 confirms three-component paragraph model (topic sentence, body, conclusion) used in topic-03.mdx:39-63",
+        "specs/content/geng-301/sources/unit-01.md: print monographs graff2011, williams2017, strunk2000, axelrod2016 declared under ## Unverifiable sources per Constitution Art. III.5",
+        "specs/content/geng-301/reviews/unit-01/G3/logs-20261019T000000000Z/validate-content.txt: exit_code=0"
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "specs/content/geng-301/coverage/unit-01.md: 7 sub-topics mapped across 3 topics, all source-linked",
+        "specs/content/geng-301/content-spec.md: depth budget 7 sub-topics / 3 topics / 65-80 reading-min, met",
+        "docs/semester-2/geng-301/unit-01/unit-assessment.mdx: 10 MCQ + 10 RRQ + 5 ERQ per blueprint"
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "fail",
+      "evidence": [
+        "docs/semester-2/geng-301/unit-01/unit-assessment.mdx:205: RRQ 5 answer key states topic sentence is sentence 3 but the quoted passage is sentence 1 of the passage at lines 120-124. Factual error in model answer.",
+        "MCQ keys 1-10 independently verified correct against prose (MCQ-1 C, MCQ-2 B, MCQ-3 B, MCQ-4 B, MCQ-5 C, MCQ-6 C, MCQ-7 C, MCQ-8 C, MCQ-9 B, MCQ-10 C)",
+        "specs/content/geng-301/reviews/unit-01/G2/logs-20261018T190214168Z/check-bloom-bands.txt: Bloom tags honour blueprint bands"
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "pass",
+      "evidence": [
+        "specs/content/geng-301/figures/unit-01.md: 6 figures placed (concept-map, table, diagram, table, flowchart, table), all with alt text",
+        "static/img/figures/geng-301/unit-01/: all 6 figures have light + dark SVG variants (12 files)",
+        "specs/content/geng-301/reviews/unit-01/G3/logs-20261019T000000000Z/check-figures.txt: exit_code=0"
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "docs/semester-2/geng-301/unit-01/topic-01.mdx: classroom situation vignette opens each topic; definitions (Glossary), worked examples, misconceptions addressed",
+        "docs/semester-2/geng-301/unit-01/topic-02.mdx: clarity/coherence/organization explained with concrete before-and-after examples",
+        "docs/semester-2/geng-301/unit-01/topic-03.mdx: paragraph structure taught via annotated example, unity/completeness with practical check",
+        "Activities feasible in Pakistani classroom contexts; materials locally available"
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": [
+        "docs/semester-2/geng-301/unit-01/index.mdx: 4 unit learning outcomes aligned to CLOs 1 and 2",
+        "Each topic follows classroom-situation -> explanation -> activity -> check-understanding -> summary cycle",
+        "docs/semester-2/geng-301/unit-01/unit-teacher-notes.mdx: sequencing, misconception handling, practical work, practicum connection",
+        "docs/semester-2/geng-301/unit-01/unit-assessment.mdx: blueprint 10/10/5 with mini-rubrics and self-evaluation"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "blocking",
+      "message": "RRQ 5 answer key misidentifies the topic sentence. The model answer at unit-assessment.mdx:205 states the topic sentence is sentence 3 and quotes A library corner in a primary classroom encourages independent reading, but this sentence is the first sentence of the passage (line 120), not the third. The correct topic sentence is sentence 1. This is a factual error in the answer key that would mislead a self-study learner.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "Source binding inconsistency: content-spec.md lists openstax2021 sections 6.7 and 10.6 as a mapped open-access reading for Unit 1, but sources/unit-01.md binds writing2015 (University of Minnesota Writing for Success section 6.2) instead. The prose claims are supported by the bound sources, but the content-spec and sources-consulted records disagree on which open-access text was used. The open-access floor is met by writing2015.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "SVG wordmark overflow: the decorative textbook.com.pk watermark overflows the viewBox right edge by 43-47px in all 12 figure SVG files (6 figures x light/dark). Reported by scripts/measure-figure-text.mjs. The wordmark is aria-hidden=true so it does not affect screen-reader accessibility or instructional meaning, but it may clip visually at the right edge.",
+      "resolved": false
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/geng-301/reviews/unit-01/G3/logs-20261019T000000000Z/validate-content.txt"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/geng-301/reviews/unit-01/G3/logs-20261019T000000000Z/check-depth-gate.txt"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/geng-301/reviews/unit-01/G3/logs-20261019T000000000Z/check-figures.txt"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/geng-301/reviews/unit-01/G3/logs-20261019T000000000Z/check-no-em-dash.txt"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/geng-301/reviews/unit-01/G3/logs-20261019T000000000Z/check-no-answer-keys.txt"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/geng-301/reviews/unit-01/G3/logs-20261019T000000000Z/check-docs-sync.txt"
+    },
+    {
+      "name": "measure-figure-text",
+      "exit_code": 1,
+      "log_path": "specs/content/geng-301/reviews/unit-01/G3/logs-20261019T000000000Z/measure-figure-text.txt"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/geng-301/reviews/unit-01/G3/manifest.json": "32f03432967de74af32c12e42f8dd97356a008c2b3689456e18c5d64e09eb923",
+    "specs/content/geng-301/reviews/unit-01/G3/logs-20261019T000000000Z/validate-content.txt": "1faa9fa3a27fa37fffe0b64555a1fe45acf7bd12da30f96a4913da33b0fd835b",
+    "specs/content/geng-301/reviews/unit-01/G3/logs-20261019T000000000Z/check-depth-gate.txt": "883fc9525f467ea940cd3b635fc781d0d248c67777f8e6b39aec9568abc5d41f",
+    "specs/content/geng-301/reviews/unit-01/G3/logs-20261019T000000000Z/check-figures.txt": "9c01d9f93f1c7e1c82b9a5e5682a535f00c3ea073fd1d6b8f514aac5832e2b09",
+    "specs/content/geng-301/reviews/unit-01/G3/logs-20261019T000000000Z/check-no-em-dash.txt": "78bb0fe6ab256dcf6da3779e9d96fef54a7dedb74fba2e1d245ee9378fda463a",
+    "specs/content/geng-301/reviews/unit-01/G3/logs-20261019T000000000Z/check-no-answer-keys.txt": "a36521c301b4ecbee0671c01f09b50a822dac196402c4bd84011c30ab99859d5",
+    "specs/content/geng-301/reviews/unit-01/G3/logs-20261019T000000000Z/check-docs-sync.txt": "03d29ef36c29a5d258f0f17917e06f0a0ecd774ac6216bed3d27562586ce4cb5",
+    "specs/content/geng-301/reviews/unit-01/G3/logs-20261019T000000000Z/measure-figure-text.txt": "13b0e23d6abf1195f5e71f90004c5b8c175b5658bc7c3343c53575f4be3d6fe4"
+  },
+  "render-review": {
+    "performed": false,
+    "reason": "Brief constraint: never run npm run build or a dev server. No build directory available for browser/print inspection. Static accessibility checks (alt text, heading order, figure placement) performed instead."
+  },
+  "notes": "G3 English review of GENG-301 Unit 1. All deterministic gates pass. One blocking finding (RRQ 5 answer key error). Two advisory findings (source binding inconsistency, SVG wordmark overflow). Disposition: revise."
+}

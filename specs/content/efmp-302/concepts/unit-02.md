@@ -34,7 +34,7 @@ a poor label.
 | CON:EFMP-302-2-15 | Moral motivation | اخلاقی محرک | CON:EFMP-302-2-14 | 2.3 | SLO:EFMP-302-2-2 | RRQ-07, RRQ-08, ERQ-03 |
 | CON:EFMP-302-2-16 | Moral character | اخلاقی کردار | CON:EFMP-302-2-15 | 2.3 | SLO:EFMP-302-2-2 | MCQ-08, RRQ-07, ERQ-03 |
 | CON:EFMP-302-2-17 | The four-step decision framework | چار مرحلوں کا فیصلہ ساز ڈھانچہ | CON:EFMP-302-2-16 | 2.3 | SLO:EFMP-302-2-2 | MCQ-09, ERQ-04, ERQ-05 |
-| CON:EFMP-302-2-18 | Reflective decision making | غور و فکر پر مبنی فیصلہ سازی | CON:EFMP-302-2-17 | 2.3 | SLO:EFMP-302-2-2 | MCQ-09, ERQ-05 |
+| CON:EFMP-302-2-18 | Reflective decision making | غور و فکر پر مبنی فیصلہ سازی | CON:EFMP-302-2-17 | 2.3 | SLO:EFMP-302-2-2 | MCQ-09, ERQ-04, ERQ-05 |
 | CON:EFMP-302-2-19 | Ethical dilemma | اخلاقی مخمصہ | CON:EFMP-302-2-17 | 2.4 | SLO:EFMP-302-2-2 | MCQ-10, ERQ-04, ERQ-05 |
 | CON:EFMP-302-2-20 | The mark and the response | نمبر اور ردِ عمل کا فرق | CON:EFMP-302-2-19 | 2.4 | SLO:EFMP-302-2-2 | RRQ-09, ERQ-02 |
 | CON:EFMP-302-2-21 | Bounded confidentiality | محدود رازداری | CON:EFMP-302-2-19 | 2.4 | SLO:EFMP-302-2-2 | RRQ-10 |
