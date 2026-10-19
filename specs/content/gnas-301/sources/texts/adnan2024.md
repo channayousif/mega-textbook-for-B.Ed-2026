@@ -17,7 +17,11 @@ Pakistan. It seeks to illuminate recent floods' environmental, social, and econo
 implications, analyze the causes of the region's heightened climate change
 susceptibility, and evaluate current measures and policies to mitigate these effects.
 The assessment also seeks to identify research and policy gaps, particularly in
-environmental fund[ing] ...
+environmental funding and Sustainable Development Goals (SDGs). The results indicate
+that the current weather trends, including glacier melting, glacier lake outburst floods
+(GLOFs), and extraordinary monsoon rainfall, caused disastrous floods in July and
+September 2022. Pakistan's population suffers more from climate change despite
+contributing less than 1 % to global greenhouse gas emissions ...
 
 ## What this supports in GNAS-301 Unit 6
 
