@@ -82,3 +82,65 @@ for (const width of [390, 360, 320]) {
     }
   });
 }
+
+/**
+ * Regression - printed handouts had empty figure boxes and grey text (2026-10-19).
+ *
+ * Figures are `loading="lazy"`, so those below the fold (and the light copy a
+ * dark-mode reader never saw) were not fetched when the print snapshot was taken.
+ * And print kept the dark theme's light-grey text on white paper. The print
+ * button now loads every image before opening the dialog, and print media
+ * always uses the light palette with black body text.
+ */
+test('print button loads every figure and prints black text from dark mode', async ({ page }) => {
+  await page.addInitScript(() => {
+    try { localStorage.setItem('theme', 'dark'); } catch { /* storage blocked */ }
+    (window as unknown as { printed: number }).printed = 0;
+    window.print = () => { (window as unknown as { printed: number }).printed += 1; };
+  });
+  await page.goto('/semester-1/efmp-302/unit-02/topic-01');
+  await page.getByRole('button', { name: /print/i }).click();
+  await expect.poll(() => page.evaluate(() => (window as unknown as { printed: number }).printed)).toBe(1);
+
+  await page.emulateMedia({ media: 'print' });
+  const result = await page.evaluate(() => {
+    const shown = [...document.querySelectorAll<HTMLImageElement>('.figure img')]
+      .filter((img) => getComputedStyle(img).display !== 'none');
+    const p = document.querySelector('.markdown p');
+    return {
+      shown: shown.length,
+      loaded: shown.filter((img) => img.complete && img.naturalWidth > 0).length,
+      color: p ? getComputedStyle(p).color : null,
+    };
+  });
+  expect(result.shown).toBeGreaterThan(0);
+  expect(result.loaded).toBe(result.shown);
+  expect(result.color).toBe('rgb(0, 0, 0)');
+});
+
+/**
+ * Printed pages carry a QR code beside each link that leads off the page, and the
+ * browser's page header reads "subject | unit | topic" (owner request, 2026-10-19).
+ * Both exist only while printing: afterprint restores the title and removes the codes.
+ */
+test('printing adds link QR codes and a subject | unit | topic title, then restores the page', async ({ page }) => {
+  await page.addInitScript(() => {
+    (window as unknown as { printed: number }).printed = 0;
+    window.print = () => { (window as unknown as { printed: number }).printed += 1; };
+  });
+  await page.goto('/semester-1/efmp-302/unit-01/topic-01');
+  const pageTitle = await page.title();
+
+  await page.keyboard.press('Control+KeyP');
+  await expect.poll(() => page.evaluate(() => (window as unknown as { printed: number }).printed)).toBe(1);
+  const codes = page.locator('.print-qr');
+  await expect(codes.filter({ hasText: 'doi.org/10.1016/j.sbspro.2010.12.444' })).toHaveCount(1);
+  await expect(page.locator('.print-qr svg path').first()).toHaveAttribute('d', /^M/);
+
+  await page.evaluate(() => window.dispatchEvent(new Event('beforeprint')));
+  await expect(page).toHaveTitle(/^EFMP-302 .+ \| Unit 1 .+ \| Topic 1\.1 /);
+
+  await page.evaluate(() => window.dispatchEvent(new Event('afterprint')));
+  await expect(page).toHaveTitle(pageTitle);
+  await expect(codes).toHaveCount(0);
+});

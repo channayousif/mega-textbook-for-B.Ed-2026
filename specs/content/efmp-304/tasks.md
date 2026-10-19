@@ -14,7 +14,7 @@ G2 en-draft cleared by deterministic gates.
 | Unit 1 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
 | Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-01/G2/20261013T123653402Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | |
-| Unit 1 | G4 ur-translation | ▢ | | |
+| Unit 1 | G4 ur-translation | ▣ | | Seven-page Urdu mirror authored against English baseline on 2026-10-19 (crew efmp-304-u01-translate-r1): translated metadata, 14 bank-bound key terms, 10/10/5 assessment parity with Urdu MCQ option labels in order (الف/ب/ج/د), 10 mirrored Urdu SVGs with derived dark variants; check:content clean and parity/figures/key_terms verified clean under temporary reviewed flip (reverted). Handoff: `specs/content/efmp-304/reviews/unit-01/G4/translation-handoff.md`. translation_status stays draft pending fresh independent G5; no certification claimed |
 | Unit 1 | G5 ur-review | ▢ | | |
 | Unit 1 | G6 assets | ▢ | | |
 | Unit 1 | G7 publish | ▢ | | |
@@ -30,9 +30,9 @@ illustration `fig-U2-9` is left `prompt-only` in `figures/unit-02.banner.md` for
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-02/G2/20261013T123659954Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-02/G2/20261018T203159015Z-gates.json |
 | Unit 2 | G3 en-review | ▣ | | Advisory independent Codex G3 **escalate** (thread 01a14a38-39b5-7ca3-b776-327860ede213): conceptual/source/assessment defects and SVG clipping; author provenance and page/print renders missing. Report: `specs/content/efmp-304/reviews/unit-02/G3/01a14a38-39b5-7ca3-b776-327860ede213.json`. Separate author repairs, owner/host supplies missing evidence, then fresh review. G3 stays open, unsigned (ADR-0019). |
-| Unit 2 | G4 ur-translation | ▢ | | filed as a follow-up to TEX-23 |
+| Unit 2 | G4 ur-translation | ▣ | | Codex completed the six-page draft Urdu mirror against English `88efbd7d` on 2026-10-18, including 10/10/5 assessment parity, bank-bound key terms, eight Urdu SVGs and derived dark variants. Handoff: `specs/content/efmp-304/translations/unit-02/handoff.md`. Draft remains pending English G3 repairs, fresh independent G5 and full-page RTL/print inspection; no certification claimed |
 | Unit 2 | G5 ur-review | ▢ | | |
 | Unit 2 | G6 assets | ▣ | | 8 schematics placed; banner `fig-U2-9` prompt-only, raster handoff pending |
 | Unit 2 | G7 publish | ▢ | | |
@@ -51,7 +51,8 @@ intake; G2 cleared by deterministic gates.
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-03/G2/20261013T123703920Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | awaiting CurriculumOwner |
 | Unit 3 | G3 en-review | ▢ | | Advisory **escalate**: `specs/content/efmp-304/reviews/unit-03/G3/crew-efmp-304-u03-g3-r65d2428e.json`; limitations and follow-up: `specs/content/efmp-304/reviews/unit-03/G3/continuation-summary.md`. Render inspection, provenance and source support remain unresolved. CurriculumOwner to arrange follow-up; no G3 sign-off. |
-| Unit 3 | G4 ur-translation | ▢ | | filed as a follow-up to TEX-23 |
+| Unit 3 | G4 ur-translation | ▣ | | Crew job `efmp-304-u03-translate` retranslated the six-page Urdu mirror against English `88efbd7d` on 2026-10-18: academic-plain prose replacing the earlier draft (which inverted several validity claims), translated metadata and Bloom tags, bank-bound `key_terms` (Validity = صداقت), Urdu MCQ option labels in original order, and eight mirrored `.ur.svg` figures with derived dark variants. Handoff and proposed terms: `specs/content/efmp-304/reviews/unit-03/G4-20261018/handoff.md`. check:content 13/13; parity, figures and key_terms clean under a temporary `reviewed` flip (reverted). `translation_status` stays draft; fresh independent G5 and full-page RTL/print inspection pending. No certification claimed |
+| Unit 3 | G4 ur-translation | ▣ | | Continuation `efmp-304-u03-translate-r1` (2026-10-18): re-verified the six-page Urdu mirror against English `a5a089f0` (origin/main at task start). All 13 content gates pass; parity, figures and key_terms clean under a temporary `reviewed` flip (reverted). `translation_status` stays draft pending independent G5; no certification claimed |
 | Unit 3 | G5 ur-review | ▢ | | |
 | Unit 3 | G6 assets | ✅ | auto:gates | 8 schematics placed; banner `fig-U3-9` prompt-only, raster handoff pending |
 | Unit 3 | G7 publish | ▢ | | |
@@ -68,7 +69,7 @@ deterministic gates.
 | Unit 4 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
 | Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-04/G2/20261017T164737346Z-gates.json |
 | Unit 4 | G3 en-review | ▣ | | agent G3 (Reviewer, agy Gemini, run 501d802f) **pass**, zero findings: `specs/content/efmp-304/reviews/unit-04/G3/agent-g3-efmp-304-u4-run501d802f.json` (PR #126, TEX-45). Row stays open: agent evidence cannot close it (ADR-0019) |
-| Unit 4 | G4 ur-translation | ▣ | | Codex completed the existing six-page Urdu mirror against English `65d2428e` on 2026-10-17: translated metadata, bank-bound key terms, Urdu MCQ option labels, and eight mirrored Urdu SVGs with derived dark variants. Handoff: `specs/content/efmp-304/translations/unit-04/handoff.md`. Translation remains draft; fresh independent G5 and full-page RTL/print inspection pending. No certification claimed |
+| Unit 4 | G4 ur-translation | ▣ | | Six-page Urdu mirror verified complete against English baseline on 2026-10-18 (crew efmp-304-u04-translate-r1): translated metadata, 20 bank-bound key terms, Urdu MCQ option labels in order (الف/ب/ج/د), 8 mirrored Urdu SVGs with derived dark variants; check:content 13/13 pass and parity/figures/key_terms clean under temporary reviewed flip (reverted). Handoff: `specs/content/efmp-304/reviews/unit-04/G4/translation-handoff.md`. translation_status stays draft pending independent G5; no certification claimed |
 | Unit 4 | G5 ur-review | ▣ | | agent G5 (Reviewer, agy Gemini, run 36f939d6) **pass**, 3 advisories: `specs/content/efmp-304/reviews/unit-04/G5/agent-g5-efmp-304-u4-run36f939d6.json` (PR #132, TEX-46). Row stays open (ADR-0019) |
 | Unit 4 | G6 assets | ✅ | auto:gates | 8 schematics placed; dark variants derived |
 | Unit 4 | G7 publish | ▢ | | |
@@ -109,9 +110,9 @@ recorded resolved and F3 (no Urdu `.ur.svg` figure variants anywhere in EFMP-304
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 6 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-06/G2/20261013T131331005Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-06/G2/20261019T004901888Z-gates.json |
 | Unit 6 | G3 en-review | ▣ | | Fresh agent G3 after the D-2026-0067 item 3 repair (Reviewer, agy Gemini 3.1 Pro, run 620f3b74) **pass**, zero findings: `specs/content/efmp-304/reviews/unit-06/G3/agent-g3-efmp-304-u6-run620f3b74.json` (PR #135, TEX-50), bound to the repaired bytes at `276d37f8`. Supersedes run 501d802f (PR #126, TEX-45), which was bound to the pre-repair inputs. Row stays open: agent evidence cannot close it (ADR-0019) |
-| Unit 6 | G4 ur-translation | ▣ | | Urdu mirror complete (6 files, 12,275 words) through `276d37f8` (TEX-48 repair); key_terms bound to banked terms (D-2026-0067); `translation_status` stays draft pending certification |
+| Unit 6 | G4 ur-translation | ▣ | | Urdu mirror complete (6 files, 12,275 words) through `276d37f8` (TEX-48 repair); key_terms bound to banked terms (D-2026-0067); 8 Urdu `.ur.svg` figure variants authored and wired (`fig-U6-1…8`, addresses G5 advisory F3), dark variants derived; six Bloom summaries and remaining Topic/Unit labels translated in the continuation pass. Handoff: `specs/content/efmp-304/translations/unit-06/handoff.md`; `translation_status` stays draft pending fresh G5 review |
 | Unit 6 | G5 ur-review | ▣ | | Fresh agent G5 after the D-2026-0067 item 3 repair (Reviewer, agy Gemini 3.1 Pro, run 620f3b74) **pass**, 3 advisories: `specs/content/efmp-304/reviews/unit-06/G5/agent-g5-efmp-304-u6-run620f3b74.json` (PR #135, TEX-50). F1 (the English phrasing defects, repaired in both locales) and F2 (reflective-practice terminology banked) are recorded **resolved**; F3 stays open and is tracked as TEX-49, the course-wide Urdu figure-variant gap (no `.ur.svg` exists for any EFMP-304 unit, 1 to 6). Supersedes run 36f939d6 (PR #132, TEX-46). Row stays open (ADR-0019) |
 | Unit 6 | G6 assets | ✅ | auto:gates | 8 schematics placed; dark variants derived |
 | Unit 6 | G7 publish | ▢ | | |

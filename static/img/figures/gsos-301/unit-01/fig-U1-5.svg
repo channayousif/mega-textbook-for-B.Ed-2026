@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Three Major Sociological Perspectives</title><desc id="d">A concept map showing the three major sociological perspectives and their core assumptions: functionalism focuses on order and functions (Durkheim), conflict theory focuses on inequality and power (Marx), symbolic interactionism focuses on meaning and interaction (Mead and Blumer).</desc>
+<style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} .center-panel{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2.5} .link{stroke:var(--line);stroke-width:2;fill:none} text{font-size:12px;fill:var(--ink);text-anchor:middle} .h{font-size:14px;font-weight:700} .m{font-size:11px;fill:var(--muted)} .wm{fill:var(--wm);font-size:11px}</style>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--line)"/></marker></defs>
+<rect class="bg" x="0" y="0" width="780" height="470"/>
+
+<!-- Center -->
+<rect class="center-panel" x="250" y="40" width="280" height="70" rx="8"/>
+<text class="h" x="390" y="68" fill="var(--a1)">Three major perspectives</text>
+<text class="m" x="390" y="88">Theoretical lenses for analysing society</text>
+
+<!-- Left: Functionalism -->
+<rect class="panel" x="20" y="180" width="230" height="235" rx="8"/>
+<text class="h" x="135" y="210" fill="var(--a2)">Functionalism</text>
+<text class="m" x="135" y="230">Key thinkers: Durkheim, Parsons</text>
+<line x1="35" y1="245" x2="235" y2="245" stroke="var(--ink)" stroke-width="1"/>
+<text class="h" x="135" y="270">Core assumptions:</text>
+<text x="135" y="292">Society is a complex system</text>
+<text x="135" y="310">Parts work for stability &amp; order</text>
+<text x="135" y="328">Institutions meet social needs</text>
+<text class="h" x="135" y="358">Analytical focus:</text>
+<text x="135" y="378">Order, functions &amp; dysfunctions</text>
+<text x="135" y="396">Macro-level social consensus</text>
+
+<!-- Center: Conflict Theory -->
+<rect class="panel" x="275" y="180" width="230" height="235" rx="8"/>
+<text class="h" x="390" y="210" fill="var(--a3)">Conflict theory</text>
+<text class="m" x="390" y="230">Key thinker: Karl Marx</text>
+<line x1="290" y1="245" x2="490" y2="245" stroke="var(--ink)" stroke-width="1"/>
+<text class="h" x="390" y="270">Core assumptions:</text>
+<text x="390" y="292">Society is divided by inequality</text>
+<text x="390" y="310">Groups compete for resources</text>
+<text x="390" y="328">Power structures benefit elites</text>
+<text class="h" x="390" y="358">Analytical focus:</text>
+<text x="390" y="378">Inequality, power &amp; exploitation</text>
+<text x="390" y="396">Macro-level social struggle</text>
+
+<!-- Right: Symbolic Interactionism -->
+<rect class="panel" x="530" y="180" width="230" height="235" rx="8"/>
+<text class="h" x="645" y="210" fill="var(--a4)">Symbolic interactionism</text>
+<text class="m" x="645" y="230">Key thinkers: Mead, Blumer</text>
+<line x1="545" y1="245" x2="745" y2="245" stroke="var(--ink)" stroke-width="1"/>
+<text class="h" x="645" y="270">Core assumptions:</text>
+<text x="645" y="292">Society is actively constructed</text>
+<text x="645" y="310">Shared symbols define reality</text>
+<text x="645" y="328">Meanings emerge in interaction</text>
+<text class="h" x="645" y="358">Analytical focus:</text>
+<text x="645" y="378">Meaning, identity &amp; symbols</text>
+<text x="645" y="396">Micro-level daily interaction</text>
+
+<!-- Connector lines -->
+<line class="link" x1="310" y1="110" x2="155" y2="180" marker-end="url(#ar)"/>
+<line class="link" x1="390" y1="110" x2="390" y2="180" marker-end="url(#ar)"/>
+<line class="link" x1="470" y1="110" x2="625" y2="180" marker-end="url(#ar)"/>
+<text class="wm" x="768" y="460" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

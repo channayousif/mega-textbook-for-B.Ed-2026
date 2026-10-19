@@ -1883,6 +1883,468 @@ only and are not judged here.
 - **Blocks:** `readings` for EFMP-305; Unit 5 Topics 5.1 (`fig-U5-1`, `fig-U5-2`) and 5.2 (`U5-2`,
   `U5-3`, `fig-U5-3`, `fig-U5-4`); `## Standards & frameworks anchors` second bullet; Unit 5 key
   term "Rights of Persons with Disabilities Act (RPwD)". Units 1-4 and 6 are not blocked by it.
+  unadopted: `D-2026-0013`'s Limits make it a precedent only, and `D-2026-0021` shows that
+  adopting one is an owner act.
+- **Needed, and from whom:** the curriculum owner, to (a) confirm that `unesco-epg`,
+  `andrabi-pak` and `khan2018` are flagged as unresolvable with title-level support at most, or
+  supply the real works the guide means; (b) adopt an open-access floor per unit for EFMP-303
+  (the spec's prose proposes at least one per unit; the `D-2026-0013` and `D-2026-0021`
+  precedents used two for the units that lean on unopenable books), adopt it with other numbers,
+  or decline it; and (c) direct that the adopted floor be declared in `open_access_floor` front
+  matter so `check:source-floor` enforces it. Author repairs needing no ruling: replace the two
+  policy locators with document-level URLs that actually serve the policies, and settle
+  `unesco-epg` on one identified work.
+- **Blocks:** the `readings` criterion of `D-2026-0048`; the `**Mapped readings**` lines of all
+  six units (Units 1, 3 and 4 most of all), and the spec's move to `status: approved`.
+
+
+---
+
+## G-2026-72 - EFMP-305 credit hours: the Faculty guide states `03 (0-3)`, the revised Scheme and the catalog state `3 (3-0)`
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G0 intake, `identity` criterion. Constitution Art. II.3.
+- **Raised by:** agent:evaluator, 2026-10-10, under `D-2026-0047` (manifest
+  `scratchpad/intake/EFMP-305/manifest.json`, digest
+  `e3bcd12fc5ccddfd907816905a55b030b08c4a8082a4622fb83f95fe5b8f5f65`, commit `00c49f1a`).
+- **Detail:** the EFMP-305 course guide is the Faculty of Education block in
+  `Scheme-and-Course-guides/2nd 2026.pdf`, page 4. It reads "Course No.: EFMP-305 ... Credit
+  Hours: 03 (0-3)" (extract `extracted-text/2nd 2026.txt:190`, `:196`; re-extracted directly from
+  the PDF with pypdf this run, same text). The revised board Scheme, the designated final
+  authority, gives `EFMP-305 / Inclusive Education / 3 (3-0) / Major: Professional Course - V`
+  (`B.Ed 4 Year 2026 revised after board.txt:166-172`), and so does the superseded Scheme
+  (`B.Ed 4 Year board.txt:85-88`). `catalog/courses.json` carries `3 (3-0)`.
+  `(3-0)` is three theory hours and no practical; `(0-3)` is the reverse.
+
+  This is **not** covered by `D-2026-0003`. That ruling settled the `.specify/Course_guides_and_Scheme/`
+  departmental variant set, whose files say `(0-3)`; EFMP-305 has no file in that folder, and the
+  `(0-3)` here comes from the **Faculty** guide, the document `D-2026-0003` treated as governing.
+  `G-2026-05` held for GSOS-301 that "credit-hour values are a property of the degree-awarding
+  scheme", which points at `(3-0)`, but this register's header records that each guide-vs-scheme
+  conflict is decided on its own merits by the owner. **Not decided here.**
+
+  Consequences in the spec: `content-spec.md:8` states "3 (3-0) credit hours. Source:
+  `Scheme-and-Course-guides/2nd 2026.pdf`", attributing the Scheme's value to a guide that says
+  the opposite, without disclosure. `:49-51` records "Practical work: none listed in the guide"
+  and reads the guide's "lots of practice" (`2nd 2026.txt:298`) as non-practical; if `(0-3)` were
+  authoritative the course would be wholly practical and that reading would not stand.
+- **Needed, and from whom:** the curriculum owner, to state the credit-hour split for EFMP-305,
+  and whether the guide's `(0-3)` is a drafting slip (as the departmental `(0-3)` was found to be
+  for EFMP-301/302).
+- **Blocks:** the `identity` criterion; `content-spec.md:8`; the course-wide "Practical work" and
+  "Teaching strategies" items (`:32-34`, `:49-51`); `catalog/courses.json` `credit_hours` is
+  unaffected unless the owner rules for `(0-3)`. Blocks `status: approved`.
+
+
+
+---
+
+## G-2026-73 - EFMP-305 has no reading list in its course guide
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G0 intake, `readings` criterion.
+- **Raised by:** agent:evaluator, 2026-10-10, under `D-2026-0047` (same manifest).
+- **Detail:** the EFMP-305 guide block (`2nd 2026.txt:189-345`) carries a description, five
+  outcomes, a sixteen-week outline, a teaching-learning paragraph, a class-participation paragraph
+  and a marks table. It carries **no** "Recommended Books", "Suggested Readings" or reference list
+  of any kind. Under the evaluate-intake skill a course with no reading list cannot pass
+  `readings`; authoring against no sources is what produced EFMP-302's `sources` failures.
+
+  The spec (`content-spec.md:15-21`, `:52-54`, `:78-107`) records the silence, then supplies a
+  per-unit open-access binding floor modelled on `D-2026-0013`. Three things the guide does not
+  settle:
+  1. **Whether a floor stands in for a guide list at all, and at what level.** `D-2026-0013`
+     (EFMP-304) and `D-2026-0021` (GNAS-301) were each owner rulings scoped to one course; neither
+     extends to EFMP-305. The spec's floor (two sources for Units 1, 2 and 5; one for 3, 4 and 6)
+     is its own construction and is not machine-declared (`open_access_floor` absent from the front
+     matter, so `check:source-floor` cannot see it).
+  2. **The spec's framing is wrong on the precedent.** `:20-21` says "As with EFMP-302/304 this is
+     guide silence on *optional* enrichment sections". EFMP-302 has a 12-entry guide reading list
+     and EFMP-304 seven monographs (`D-2026-0013`); neither was guide-silent on readings.
+  3. **The three "course-wide anchors" are search targets, not resolvable entries.**
+     "UNESCO (2020). *Inclusive education: All means all. Education 2030*" misstates the title:
+     the 2020 Global Education Monitoring Report is *Inclusion and education: All means all*
+     (unesco.org/gem-report, checked 2026-10-10). "National Education Policy of Pakistan (latest
+     available; 2009 or successor)" names no edition. Only UNCRPD (2006) Article 24 resolves as
+     written. No row carries a key, DOI or URL, and every unit's "Mapped readings" cell is a topic
+     description, not a key.
+
+  For the owner's information only, not adopted: `extracted-text/3rd 2026.txt:290-295` carries an
+  inclusive-education reference list (Booth and Ainscow 2016; Mittler 2019; Loreman, Deppeler and
+  Harvey 2020; UNESCO 2017; Government of Pakistan 2018) attached to the **EFMP-406 Contemporary
+  Literacy** block, beside an "inclusive lesson plan" assessment that does not match that course.
+  It may be a misplaced list. Whether it belongs to EFMP-305 is a question about the world.
+- **Needed, and from whom:** the curriculum owner, to rule (a) whether EFMP-305 authors against a
+  binding open-access floor and at what per-unit level, as was ruled for EFMP-304 and GNAS-301, or
+  (b) supply or designate a reading list (including whether the `3rd 2026` list belongs to this
+  course). The drafter then repairs the anchors (correct UNESCO title, a named NEP edition, keys and
+  locators) and declares the floor in front matter.
+- **Blocks:** the `readings` criterion; `## Reading list` (`:78-107`); every unit's `Mapped
+  readings` column; G2 source binding for all six units. Blocks `status: approved`.
+
+
+
+---
+
+## G-2026-74 - EFMP-305: three checklist sub-topics have no guide ancestor
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G1 unit-spec, `coverage` criterion.
+- **Raised by:** agent:evaluator, 2026-10-10, under `D-2026-0047` (same manifest).
+- **Detail:** every guide week item (`2nd 2026.txt:227-294`) appears in the spec's checklists
+  exactly once, and 27 of the 30 rows are faithful decompositions (recorded in `D-2026-0047`).
+  Three rows trace to no guide week item, no guide sub-topic and no phrase of the course
+  description:
+  - **U1-5** "Common misconceptions about inclusion" (`content-spec.md:176`), Unit 1 Topic 1.2.
+    Weeks 1-2 list only meaning and concept, principles, and importance in Pakistan
+    (`:227`, `:231`). A misconceptions block is a structural requirement of every topic file; making
+    it an assessed sub-topic is an addition.
+  - **U3-5** "Putting the three strategies together in one lesson" (`:276`), which is the **whole**
+    of Topic 3.3 (`:284`). Weeks 5-7 list three strategies (`:264`, `:266`, `:270`) and no
+    synthesis. CLO 3 ("apply inclusive teaching strategies", `:217`) is an outcome ancestor, not a
+    sub-topic one.
+  - **U5-5** "From policy to practice: closing the gap" (`:374`), assigned to Topics 5.1 and 5.3.
+    Weeks 10-13 (`:280-286`) carry no implementation-gap item.
+  Under Art. II.2 and the skill's coverage rule, an addition is an escalation, not an evaluator
+  decision. The owner has previously confirmed authored decompositions under bare headings
+  (`D-2026-0009`), but these are not decompositions of any heading.
+- **Needed, and from whom:** the curriculum owner, to rule for each row: keep it as a disclosed
+  expansion (with its basis stated in the spec), fold it into a guide-anchored row, or remove it.
+  U1-5 is already authored in Unit 1 (`docs/semester-2/efmp-305/unit-01/topic-02.mdx`), so a
+  removal ruling reaches authored content.
+- **Blocks:** U1-5 and Unit 1 Topic 1.2's row; U3-5 and Unit 3 Topic 3.3 entirely; U5-5 and
+  Unit 5 Topics 5.1 and 5.3. Blocks `status: approved`.
+
+
+
+---
+
+## G-2026-75 - EFMP-305: the formative/summative reading of the guide's marks table is not guide-given
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G0 intake, course-wide assessment (Constitution Art. III.7).
+- **Raised by:** agent:evaluator, 2026-10-10, under `D-2026-0047` (same manifest).
+- **Detail:** the guide's marks table (`2nd 2026.txt:312-345`) gives Mid-Term 30, Final-Term 50,
+  Assignment/Presentation/Sessional 10, Attendance 10, Total 100. The spec transcribes it
+  correctly (`content-spec.md:38-44`) and that transcription is approved in `D-2026-0047`. It then
+  states (`:46-48`) that Assignment/Presentation **and Attendance** are formative, so "the split is
+  therefore 80 summative / 20 formative, which the guide specifies directly". The guide uses neither
+  word; attendance is not an assessment instrument; and Art. III.7 allows a deviation from 60/40
+  "justified in the unit spec", which this sentence asserts rather than justifies. `D-2026-0007`
+  recorded the identical bucketing for EFMP-304 as "a bucketing judgement the guide does not state"
+  and left it unsettled.
+- **Needed, and from whom:** the curriculum owner, to state whether a guide's own marks table
+  displaces the Art. III.7 default for EFMP-305 and how attendance is classified, or to accept the
+  table as the weighting with no formative/summative label.
+- **Blocks:** only the sentence at `content-spec.md:46-48`. No unit-end bank and no gate depend on
+  it.
+
+
+
+---
+
+## G-2026-76 - EFMP-305 tracker records G1 as done on a spec that has never been approved
+
+- **Status:** open
+- **Gate:** G1 unit-spec (record integrity). Spec 006 FR-002.
+- **Raised by:** agent:evaluator, 2026-10-10, under `D-2026-0047` (same manifest).
+- **Detail:** `specs/content/efmp-305/tasks.md` (not a bound input; read for context) marks
+  `Unit 1 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved` and the same for Unit 2,
+  and its Unit 1 note says "G1 unit-spec affirmed at intake". At commit `00c49f1a` the spec's
+  front matter is `status: draft` (`content-spec.md:3`), no `D-` entry approves EFMP-305 at any
+  gate, and `check:pipeline-gate` exits 1 with "course content-spec.md is not approved (status:
+  'draft')" for both units. Units 1 and 2 are authored on disk although the spec itself says
+  (`:11-13`) that no unit may be authored until G0/G1 sets `status: approved`. The tracker also
+  says Unit 2 is "not started" while `docs/semester-2/efmp-305/unit-02/` holds five files.
+  `D-2026-0047` is the first G0/G1 record for this course and does not approve the spec.
+- **Needed, and from whom:** the curriculum owner, to decide the disposition of the two G1 rows
+  (this evaluator does not edit the tracker) and of the pre-approval authoring of Units 1 and 2,
+  which will need re-checking against whatever the owner rules on `G-2026-72` to `G-2026-74`.
+- **Blocks:** nothing further in the spec; it blocks reliance on the tracker's G1 rows for EFMP-305.
+
+
+
+---
+
+## G-2026-102 - EFMP-305 Unit 5: the guide's "Rights of Persons with Disabilities Act (2018)" does not resolve to one enacted Pakistani statute
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G0 intake `readings`; G1 unit-spec, Unit 5. Constitution Art. II.3 (which external
+  instrument is meant is a question about the world).
+- **Raised by:** agent:evaluator, 2026-10-10, under `D-2026-0054` (manifest
+  `scratchpad/intake2/EFMP-305/manifest.json`, digest
+  `13d09407ed3ff1cbf2b04fbf5e83455517b4013b5d8bb85ba65143385353567a`, commit `bc61ff7a`).
+- **Detail:** the guide names the instrument at Week 11 (`2nd 2026.txt:282`, "Rights of Persons
+  with Disabilities Act (2018)"). The spec makes it the "primary national legal framework and the
+  spine of Unit 5" (`content-spec.md:139-141`) and builds `U5-2`, `U5-3`, `fig-U5-1` to `fig-U5-4`
+  and Topic 5.2 on it. No federal Pakistani statute of that name and year was enacted: the
+  federal instrument is the ICT Rights of Persons with Disabilities Act, 2020 (tabled as a bill in
+  2018; Ministry of Human Rights brief, mohr.gov.pk); the 2018 statute is provincial, the Sindh
+  Empowerment of Persons with Disabilities Act, 2018. The guide's name matches the first and its
+  year matches the second. Which one Unit 5 teaches, or whether it teaches both (and the other
+  provincial Acts), is a choice the guide does not determine. `D-2026-0053` item 2 permits the
+  author to bind verified works where a guide entry is ambiguous, but it also requires that
+  unresolvable or misattributed entries be corrected, not validated; and this one fixes what a
+  four-week unit's legal content is, not only which source supports it.
+- **Separately (author repair, not part of the question):** `content-spec.md:140-141` says the
+  guide "lists no specific statute". It does (`:282`).
+- **Needed, and from whom:** the curriculum owner, to rule which statute(s) Unit 5 teaches under
+  the guide's Week 11 item and Week 12 "School responsibilities under legal requirements".
+- **Blocks:** `readings` for EFMP-305; Unit 5 Topics 5.1 (`fig-U5-1`, `fig-U5-2`) and 5.2 (`U5-2`,
+  `U5-3`, `fig-U5-3`, `fig-U5-4`); `## Standards & frameworks anchors` second bullet; Unit 5 key
+  term "Rights of Persons with Disabilities Act (RPwD)". Units 1-4 and 6 are not blocked by it.
+
+
+---
+
+## G-2026-92 - GSOS-301 intake: the six-unit partition and the Unit 6 topic split are the spec's construction over a guide that gives only a week table
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G0 intake / G1 unit-spec (partition criterion)
+- **Source:** `D-2026-0051`
+- **Detail:** The GSOS-301 guide block (`Scheme-and-Course-guides/extracted-text/2nd 2026.txt:776-968`)
+  carries a 16-week table and no unit headings: Weeks 1-7 (`:802-874`), Week 8 mid-term review
+  and exam (`:876-879`), Weeks 9-15 (`:881-935`), Week 16 final review and exam (`:937-942`). The
+  spec builds six units from it. By sub-topic membership, which matches the guide exactly:
+  Unit 1 = Weeks 1-3, Unit 2 = Weeks 4-5, Unit 3 = Weeks 6-7, Unit 4 = Weeks 9-10, Unit 5 =
+  Weeks 11-12, Unit 6 = Weeks 13-15 (teaching weeks 3/2/2/2/2/3).
+
+  What the guide **does** determine, verified: contiguous whole weeks, no guide topic reordered,
+  no week split across units, the mid-term and final weeks excluded from teaching units. Units
+  1-5 also split into topics exactly on the guide's week lines (one topic per week).
+
+  What the guide does **not** determine: the number of units and the boundaries. Any contiguous
+  merge is equally consistent with it. Two boundary choices in particular are judgements:
+  (a) Week 3 "Sociological Perspectives" joins Unit 1 rather than standing alone; (b) Unit 6
+  merges Week 14 "Social Problems" (`:921-927`) and Week 15 "Society and Contemporary Issues"
+  (`:929-935`) into one Topic 6.2 titled as "social problems", so media, human rights and the
+  environment are framed as social problems, which the guide does not do. A week-aligned
+  alternative is three topics in Unit 6 (Weeks 13/14/15).
+
+  Note: the spec's own `## Week schedule` (`content-spec.md:58-69`) does not record this
+  partition; it presents a "derived" 11-week calendar that contradicts the guide. That is a repair
+  item under `D-2026-0051` (decision residue), not part of this question.
+- **Needed, and from whom:** the curriculum owner, to confirm the six-unit merge (teaching weeks
+  3/2/2/2/2/3) or supply another, and to rule whether Unit 6 keeps two topics (Weeks 13 | 14-15)
+  or splits three ways on the guide's week lines. Precedent: `G-2026-22` (GNAS-301), `G-2026-52`
+  (EFMP-301).
+- **Blocks:** the `partition` criterion of `D-2026-0051`; `status: approved` for GSOS-301; the
+  Unit 6 `### Topic list`.
+
+
+
+---
+
+## G-2026-93 - GSOS-301 reading list: the guide's two entries are missing from the spec, and the four "Guide-required" rows are not the guide's and do not resolve as printed
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G0 intake (readings criterion)
+- **Source:** `D-2026-0051`
+- **Detail:** The guide's "Recommended Books" (`2nd 2026.txt:964-968`) are two bare URLs:
+  1. `https://api.pageplace.de/preview/DT0400.9781135034900_A24760348/preview-9781135034900_A24760348.pdf`
+     resolves (HTTP 200, `application/pdf`, 6,270,766 bytes, sha256 `ff612d5a30956f899c08e7ecf58598a7c67db3d1f096f096f6f1ac8def9c7b24`, fetched
+     2026-10-10). The PDF metadata names **Harry M. Johnson, *Sociology: A Systematic
+     Introduction*** (ISBN 9781135034900, a Routledge ebook reissue). It is a publisher
+     **preview** of roughly 70 pages, not the full text: a monograph under `D-2026-0001`, binding
+     authors to title-level support unless a copy is obtained.
+  2. `https://www.slideshare.net/slideshow/introduction-of-sociology-238865842/238865842` resolves
+     to a 31-slide deck "Introduction of Sociology" uploaded by Bhavesh Singh, framed around
+     sociology in nursing. It is not a scholarly work and is of doubtful use as a citable source.
+
+  The spec's `### Guide-required` table (`content-spec.md:39-46`) lists **neither**. It lists four
+  works the guide does not name, all labelled guide-required:
+  - `givens2023` "Givens & White (Eds.) (2023), *Sociology*, OpenStax": the URL resolves to
+    OpenStax *Introduction to Sociology 3e* by **Conerly, Holmes & Tamang (2021)**. Authors,
+    year and title as printed do not match the work at the URL.
+  - `henson2022` "Henson (2022), *Sociology: An introduction*, LibreTexts": the URL resolves to a
+    LibreTexts "Introduction to Sociology" bookshelf; no Henson attribution was found on the page.
+    Unverified as printed.
+  - `lindsey2020` "Lindsey, D. (2020), *Sociology* (7th ed.), Routledge": not found. Open Library
+    has Linda L. Lindsey & Stephen Beach, *Sociology*, Prentice Hall (1999-2003 editions).
+  - `anderson2016` "Anderson & Dolphin (2016), *Sociology: The essentials* (8th ed.), Cengage":
+    not found as printed. The real work is Margaret L. Andersen, Howard F. Taylor (& Kim A. Logio),
+    *Sociology: The Essentials*, Wadsworth/Cengage.
+  Authored Units 1-2 (before intake) already cite `givens2023` and `henson2022` as
+  `guide-required` in `sources/unit-0{1,2}.md`.
+- **Needed, and from whom:** the curriculum owner: (a) whether the two guide URLs constitute the
+  course reading list, and whether the slide deck is admitted as a source at all; (b) whether
+  Johnson is cited at title level only (`D-2026-0013` posture) or a copy is to be obtained;
+  (c) whether corrected open-access substitutes (OpenStax *Introduction to Sociology 3e*, the
+  LibreTexts text with its real attribution) may stand as `open-access-substitute`, not
+  `guide-required`; (d) that `lindsey2020` and `anderson2016` are removed or replaced with
+  correctly cited works. Correcting the misattributed citations is a repair once (a)-(c) are ruled.
+- **Blocks:** the `readings` criterion of `D-2026-0051`; `status: approved`; every unit's
+  `### Mapped readings`; G3 for authored Units 1-2 until their sources files are relabelled.
+
+
+
+---
+
+## G-2026-94 - GSOS-301's "binding" G2 open-access floor is self-declared, not owner-adopted, and not enforced
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G0 intake (readings criterion)
+- **Source:** `D-2026-0051`
+- **Detail:** `content-spec.md:48-56` states the spec "sets a binding requirement on G2
+  source-binding": at least one verifiable open-access source per unit for Units 1-6, resolved
+  through Crossref, OpenAlex, ERIC or DOAJ. A floor is binding only when the owner adopts it, as
+  `D-2026-0013` (EFMP-304) and `D-2026-0021` (GNAS-301) did; both are course-scoped and neither
+  extends to GSOS-301. The spec front matter declares no `open_access_floor`, so
+  `check:source-floor` exits 0 without checking anything for this course. Same pattern as
+  `G-2026-23`. Given `G-2026-93` (the guide's only book is a preview-only monograph), a floor is
+  the obvious mitigation, but adopting it is not an evaluator's call.
+- **Needed, and from whom:** the curriculum owner, to adopt, amend or reject the floor (count per
+  unit, registries), and if adopted, to have the front matter declare it so the gate enforces it.
+- **Blocks:** the `readings` criterion of `D-2026-0051`; `status: approved`; G2 source binding for
+  Units 3-6.
+
+## Intake evaluation, GPKS-402 (2026-10-10)
+
+Recorded by `agent:evaluator` under `D-2026-0052`, bound to
+`intake/GPKS-402/manifest.json` (manifest digest
+`513a177525d45102d39c8d4cee3a52d9f1c3b333575535987465988ed6c4512a`, commit `26ecd199`). Guide:
+`Scheme-and-Course-guides/extracted-text/2nd 2026.txt:972-1153`. Spec:
+`specs/content/gpks-402/content-spec.md` (status: draft). Evaluation record:
+`intake/GPKS-402/evaluation.md`.
+
+## G-2026-97 - GPKS-402 intake: the six-unit partition is the spec's construction over a guide that gives only a week table, and the spec's week schedule misstates the guide's weeks
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G0 intake / G1 unit-spec (partition criterion)
+- **Source:** `D-2026-0052`
+- **Detail:** The guide's "Course Contents / Weekly Breakdown" (`2nd 2026.txt:1008-1141`) numbers
+  sixteen weeks: teaching Weeks 1-8 (`:1010-1083`), "Week 9: Mid-Term Examination" (`:1085`),
+  teaching Weeks 10-15 (`:1087-1135`) and "Week 16: Review and Final Assessment" (`:1137-1141`).
+  It carries **no unit headings of any kind**. The spec derives six units. Reading the spec's own
+  sub-topic checklists (`Guide ref` column), the proposed partition is:
+
+  | Unit | Guide weeks (from the checklists) | Teaching weeks |
+  |---|---|---|
+  | 1 Introduction and Ideological Foundations | 1-2 | 2 |
+  | 2 Reform Movements and the Pakistan Movement | 3-4 | 2 |
+  | 3 Constitutional Development | 5-6 | 2 |
+  | 4 Governance, (Fundamental) Rights and Geography | 7, 8 and 10 (spans the Week 9 mid-term) | 3 |
+  | 5 Economy and Society | 11-12 | 2 |
+  | 6 Foreign Policy, Contemporary Issues and (the Role of) Education | 13-15 | 3 |
+
+  What the guide **does** determine, and the evaluator verified mechanically: the week numbers,
+  the mid-term and review placement, and that the checklist partition uses contiguous guide weeks,
+  reorders no guide topic and splits no week across units. What the guide does **not** determine:
+  the number of units (six), the block boundaries, and in particular the choice to join Weeks 7-8
+  (political structure, rights) with Week 10 (geography) across the mid-term. `G-2026-22`
+  (GNAS-301) is the precedent: the owner confirmed a comparable merge there, but that ruling is
+  course-specific and does not bind GPKS-402.
+
+  **Separate defect, guide-determined, for the author to repair (not an owner question):** the
+  spec's `## Week schedule` table (`content-spec.md:49-58`) does not match the guide or the spec's
+  own checklists. It gives Unit 4 as Weeks "7-8" (its checklist cites Week 10 at `:220-222`),
+  Unit 5 as "9-10" (guide Weeks 11-12, `:1095-1109`) and Unit 6 as "11-12" (guide Weeks 13-15,
+  `:1111-1135`); it omits the Week 9 mid-term and Week 16 entirely; and it presents this as guide
+  content with no "derived" label, which the content-spec contract as amended by `D-2026-0012`
+  forbids. The unit opening lines repeat the conflict in self-contradicting form:
+  `:256` "Weeks 9-10 (guide Week 11-12)" and `:303` "Weeks 11-15 (guide Week 13-15)". Unit titles
+  also drift between the table and the headings for Units 4 (`:56` vs `:199`) and 6 (`:58` vs
+  `:301`).
+- **Needed, and from whom:** the curriculum owner, to confirm the six-block partition above
+  (2/2/2/3/2/3 teaching weeks, Unit 4 spanning the mid-term) or supply another. The week
+  numbering itself needs no decision: it is guide-given, and the schedule table and unit opening
+  lines must be corrected to it by the author before re-intake.
+- **Blocks:** the `partition` criterion of `D-2026-0052`; the `## Week schedule` table and the
+  "Weeks N-M" line opening each `## Unit N` subsection. It does not block the sub-topic checklists,
+  whose `Guide ref` weeks are correct.
+
+## G-2026-98 - GPKS-402 reading list: one guide entry is ambiguous, all four are print-only, no open-access floor is declared, and both curated supplements are defective
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G0 intake (readings criterion)
+- **Source:** `D-2026-0052`
+- **Detail:** The guide lists four "Recommended Readings" (`2nd 2026.txt:1143-1153`); the spec
+  transcribes all four (`content-spec.md:33-40`). Verified by the evaluator on 2026-10-10 against
+  external catalogues (not bound inputs):
+
+  | Guide entry | Verification |
+  |---|---|
+  | Government of Pakistan. *Pakistan Studies Curriculum (HEC)* (`:1145`) | **ambiguous**: HEC publishes more than one document that fits (a 2007-08 Pakistan Studies degree curriculum and a 2025-26 "Pakistan Studies (AD, BS, MPhil/MS)" degree curriculum on hec.gov.pk's Revised Curricula page, plus an undergraduate compulsory-course outline). The guide does not say which; the spec gives no year or locator, and `sources/unit-01.md:17` records "no stable URL resolves from this host", although hec.gov.pk URLs for both degree curricula were located on this run |
+  | Ikram Rabbani. *Pakistan Studies* (`:1149`) | **resolves**: M. Ikram Rabbani, *Pakistan Studies*, Caravan Book House, Lahore; multiple editions, print only; edition unspecified |
+  | Hamid Khan. *Constitutional and Political History of Pakistan* (`:1151`) | **resolves**: Oxford University Press Pakistan, several editions (4th ed. ISBN 9780199060986); print only |
+  | Shahid Javed Burki. *Pakistan: Fifty Years of Nationhood* (`:1153`) | **resolves**: Westview Press, 3rd ed. 1999, ISBN 9780813336213; print only |
+
+  All four are monographs or official documents with no DOI. Under `D-2026-0001` an author is
+  bound to title-level support unless a copy is obtainable. Unlike EFMP-304 (`D-2026-0013`) and
+  GNAS-301 (`D-2026-0021`), the spec declares **no** open-access floor and no `open_access_floor`
+  front matter, so `check:source-floor` does not see GPKS-402 (exit 0 with no GPKS mention on this
+  run; the `G-2026-17` condition).
+
+  The `### Curated-supplementary (open access)` table (`:42-47`) has two entries, both defective:
+  - `ziad-pak-foreign-policy`: "Zia, S. (2020). Pakistan's foreign policy: Challenges and
+    opportunities. *Journal of the Research Society of Pakistan*, 57(2)." **Not locatable**: no
+    such article was found; similarly titled articles exist in other venues (e.g. CISS Insight).
+    The key ("ziad") and the author ("Zia") disagree, and the entry claims open access with no
+    URL.
+  - `goe-bloom`: Goe, Bell and Little (2008), ERIC ED521228, **is real**, but its subject is
+    approaches to evaluating teacher effectiveness, not "civic education in nation building" as
+    the note claims; it is tagged to Units "4, 8" and the course has no Unit 8; the key implies a
+    Bloom source it is not.
+
+  The reading list's `Units` column also disagrees with the per-unit `**Mapped readings**` lines:
+  `hamid-khan-const` is listed for Units 3-4 but mapped in Unit 2 (`:139`); `hec-pak-studies` is
+  listed for Units 1-3 but mapped in Unit 4 (`:238`) and not in Unit 2; `goe-bloom` is listed for
+  Units 4 and 8 but mapped only in Unit 6 (`:339`). The `burki-fifty-years` note says "first fifty
+  decades" (`:40`).
+- **Needed, and from whom:** the curriculum owner, to (a) name which HEC document the guide's
+  first entry means (or accept title-level citation of a named one); (b) decide whether GPKS-402
+  authors against this print-only list as it stands, and whether to adopt an open-access floor on
+  the `D-2026-0013` / `D-2026-0021` precedent, declared in front matter so `check:source-floor`
+  enforces it. The supplement defects and the Units-column inconsistencies are the author's to
+  repair, and a replacement for the unlocatable journal entry needs verifying before it is bound.
+- **Blocks:** the `readings` criterion of `D-2026-0052`; the `## Reading list` section and the
+  `**Mapped readings**` line of every unit. Units 1 and 2 are already authored against this list
+  (see `G-2026-100`).
+
+## G-2026-99 - GPKS-402 SLO 6-1 (foreign policy) traces to no stated course objective
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G0 intake (outcomes criterion)
+- **Source:** `D-2026-0052`
+- **Detail:** The guide states five course objectives (`2nd 2026.txt:996-1006`): ideological
+  foundations; the historical evolution of the Pakistan Movement; constitutional and political
+  developments; Pakistan's geography, economy and society; and national integration and civic
+  responsibility through education. The guide teaches foreign policy in Week 13 (`:1111-1117`),
+  but no objective names it. The spec traces `SLO:GPKS-402-6-1` (principles of foreign policy;
+  relations with neighbours; role in international organisations) to objectives 4 and 5
+  (`content-spec.md:305`). Neither covers foreign policy on its wording; the nearest reading is
+  objective 3's "political developments", which the spec does not cite. The SLO has a guide
+  ancestor in the week table, so it is not an added outcome, but its objective trace is the spec's
+  construction and the guide does not settle it. The guide gives no objective-to-week mapping
+  anywhere, so the trace is an interpretation either way.
+- **Needed, and from whom:** the curriculum owner, to state which objective Week 13 serves (3, 4,
+  another, or "content without a stated objective, retained because the guide teaches it"), in the
+  manner `D-2026-0011` settled EFMP-302's unmatched CLO 4.
+- **Blocks:** the `outcomes` criterion of `D-2026-0052` for `SLO:GPKS-402-6-1` only (the Unit 6
+  `**CLO/SLO refs**` line). The other thirteen SLO traces are approved.
+
+## G-2026-100 - GPKS-402 Units 1 and 2 were authored (EN and UR) against an unapproved spec, before G0/G1, and the spec has defects that reach them
+
+- **Status:** resolved (owner decision, 2026-10-10, D-2026-0053)
+- **Gate:** G0 intake / G1 unit-spec (process)
+- **Source:** `D-2026-0052`
+- **Detail:** At the bound commit `26ecd199`, `docs/semester-2/gpks-402/unit-01/` and `unit-02/`
+  exist with Urdu mirrors under `i18n/ur/.../semester-2/gpks-402/`, while the spec is
+  `status: draft`. `contracts/content-spec-frontmatter.schema.json` (bound) describes `approved` as
+  set by the owner "before any unit under this course may be drafted". `check:pipeline-gate`
+  reports this for both units (exit 1: "course content-spec.md is not approved (status:
+  'draft')"; no G2 en-draft row); `check:figures` also exits 1 on both units (every topic carries
+  prompt-only figure markers, none rendered). This evaluation judged the spec only and treated the
+  authored units as context. But three spec defects found here reach the authored units: the
+  ERQ blueprint arithmetic (`D-2026-0052`, blueprint criterion: "one per topic plus one integrative"
+  gives 3 ERQs for two-topic units, not the required 5), the reading list (`G-2026-98`) Units 1-2
+  were sourced from, and the unit week lines (`G-2026-97`).
+- **Needed, and from whom:** the curriculum owner, to decide the disposition of the two authored
+  units: retain them and re-check them against the repaired, re-approved spec, or withdraw them for
+  re-authoring after approval. Repairing the spec changes a bound input, so `D-2026-0052` is void
+  on repair and a fresh intake bundle is needed either way.
+- **Blocks:** any gate progress for GPKS-402 Units 1 and 2 (G2 onward) until the spec is approved.
+  It does not block the spec repairs themselves.
 
 ## G-2026-82 - GQUR-301 intake: the six-unit partition is the spec's construction over a guide that gives only week-mapped chapters
 

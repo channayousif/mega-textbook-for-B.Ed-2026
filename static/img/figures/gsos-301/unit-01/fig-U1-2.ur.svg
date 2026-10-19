@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">عمرانی تخیل</title><desc id="d">ایک تصوراتی خاکہ جس کے مرکز میں "عمرانی تخیل" ہے، ایک طرف ذاتی مشکلات اور دوسری طرف عوامی مسائل ہیں، جو ظاہر کرتا ہے کہ ایک استاد دونوں کو کیسے آپس میں جوڑتا ہے۔</desc>
+<style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} .center-panel{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2.5} .teacher-panel{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2} .link{stroke:var(--line);stroke-width:2;fill:none} text{font-size:13px;fill:var(--ink);text-anchor:middle} .h{font-size:15px;font-weight:700} .m{font-size:12px;fill:var(--muted)} .wm{fill:var(--wm);font-size:11px}</style>
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="var(--line)"/></marker></defs>
+<rect class="bg" x="0" y="0" width="780" height="470"/>
+
+<!-- Center Box -->
+<rect class="center-panel" x="250" y="60" width="280" height="90" rx="10"/>
+<text class="h" x="390" y="95" fill="var(--a1)">عمرانی تخیل</text>
+<text class="m" x="390" y="117">سی رائٹ ملز (1959)</text>
+<text class="m" x="390" y="135">سوانح کو تاریخی سیاق سے جوڑنا</text>
+
+<!-- Left Box: Personal Troubles -->
+<rect class="panel" x="30" y="210" width="220" height="110" rx="8"/>
+<text class="h" x="140" y="238" fill="var(--a3)">ذاتی مشکلات</text>
+<text class="m" x="140" y="260">نجی و انفرادی نوعیت</text>
+<text class="m" x="140" y="278">قریبی تعلقات میں محسوس ہونے والی</text>
+<text class="m" x="140" y="296">مثال: "طالب علم کا جھجکنا یا غیر حاضر رہنا"</text>
+
+<!-- Right Box: Public Issues -->
+<rect class="panel" x="530" y="210" width="220" height="110" rx="8"/>
+<text class="h" x="640" y="238" fill="var(--a4)">عوامی مسائل</text>
+<text class="m" x="640" y="260">اداراتی ڈھانچے اور معاشرہ</text>
+<text class="m" x="640" y="278">انفرادی ماحول سے ماورا</text>
+<text class="m" x="640" y="296">مثال: "صنفی معیارات اور دیہی غربت"</text>
+
+<!-- Bottom Box: Teacher's Observation -->
+<rect class="teacher-panel" x="190" y="345" width="400" height="95" rx="8"/>
+<text class="h" x="390" y="373" fill="var(--a2)">استاد کا روزمرہ مشاہدہ</text>
+<text class="m" x="390" y="395">انفرادی غلطی کے بجائے پورے گروہ کے نمونوں کو دیکھنا</text>
+<text class="m" x="390" y="415">کلاس روم کے اتار چڑھاؤ وسیع تر کمیونٹی کی عکاسی کرتے ہیں</text>
+
+<!-- Connecting Lines -->
+<line class="link" x1="310" y1="150" x2="190" y2="210" marker-end="url(#ar)"/>
+<line class="link" x1="470" y1="150" x2="590" y2="210" marker-end="url(#ar)"/>
+<line class="link" x1="140" y1="320" x2="250" y2="365" marker-end="url(#ar)"/>
+<line class="link" x1="640" y1="320" x2="530" y2="365" marker-end="url(#ar)"/>
+<line class="link" x1="390" y1="150" x2="390" y2="345" marker-end="url(#ar)"/>
+<text class="wm" x="768" y="460" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>

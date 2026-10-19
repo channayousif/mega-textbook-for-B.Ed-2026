@@ -29,7 +29,7 @@ per-topic layout: `index.mdx` + `topic-01…02.mdx` (nine-part cycles) + `unit-a
 | Unit 1 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
 | Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-01/G2/20261017T113315187Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | |
-| Unit 1 | G4 ur-translation | ▢ | | |
+| Unit 1 | G4 ur-translation | ▣ | | Complete 5-file UR mirror reconciled with EN baseline 9e6da648 on 2026-10-18 (crew efmp-305-u01-translate-r1); semantic, register, and terminology polish; 4 .ur.svg/.ur.dark.svg figure variants wired; structural parity, figure parity, and bank-conformant key_terms (Inclusive Education) verified under temporary reviewed flip (reverted); 8 unbanked concept labels proposed separately; handoff: reviews/unit-01/G4/translation-handoff.md; translation_status stays draft pending fresh independent G5; no certification claimed. |
 | Unit 1 | G5 ur-review | ▢ | | |
 | Unit 1 | G6 assets | ▢ | | 4 schematic SVGs prompt-only |
 | Unit 1 | G7 publish | ▢ | | |
@@ -43,7 +43,7 @@ per-topic layout: `index.mdx` + `topic-01…02.mdx` (nine-part cycles) + `unit-a
 | Unit 2 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
 | Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-02/G2/20261017T113324655Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | |
-| Unit 2 | G4 ur-translation | ▢ | | |
+| Unit 2 | G4 ur-translation | ▣ | | mirror complete (2026-10-19): all 5 files translated and verified against EN 9e6da648; 4 .ur.svg/.ur.dark.svg figure variants synced; structural parity clean under temporary reviewed flip (reverted); all 5 key_terms conform to terminology.csv; handoff: reviews/unit-02/G4/translation-handoff.md; translation_status stays draft pending fresh independent G5 |
 | Unit 2 | G5 ur-review | ▢ | | |
 | Unit 2 | G6 assets | ▢ | | 4 schematic SVGs prompt-only |
 | Unit 2 | G7 publish | ▢ | | |
@@ -83,7 +83,7 @@ renders them.
 | Unit 4 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
 | Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-04/G2/20261017T113335543Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | |
-| Unit 4 | G4 ur-translation | ▢ | | |
+| Unit 4 | G4 ur-translation | ▣ | | mirror complete (2026-10-18): all 5 files translated and verified against EN c31cad8f; 4 .ur.svg/.ur.dark.svg figure variants synced; structural parity clean under temporary reviewed flip (reverted); all 3 key_terms conform to terminology.csv; handoff: reviews/unit-04/G4/translation-handoff.md; translation_status stays draft pending fresh independent G5 |
 | Unit 4 | G5 ur-review | ▢ | | |
 | Unit 4 | G6 assets | ▢ | | 4 schematic figures prompt-only (1 concept-map, 1 diagram, 2 table) |
 | Unit 4 | G7 publish | ▢ | | |
@@ -119,7 +119,7 @@ renders them. Statute framing follows `D-2026-0053` item 7: the Sindh Act is tau
 | Unit 5 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
 | Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-05/G2/20261017T113341540Z-gates.json |
 | Unit 5 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only, not certification: specs/content/efmp-305/reviews/unit-05/G3/01a14adc-fef3-7883-8e8f-dd0c7ca30b71.json. Assessment ambiguity, incomplete audit, privacy conflict, source overclaims; provenance and narrow/A4 renders unavailable. |
-| Unit 5 | G4 ur-translation | ▢ | | |
+| Unit 5 | G4 ur-translation | ▣ | | mirror complete (2026-10-19): all 6 files translated and verified against EN 3a8a8c0e; 6 .ur.svg/.ur.dark.svg figure variants synced; structural parity clean; all 3 key_terms conform to terminology.csv; handoff: reviews/unit-05/G4/translation-handoff.md; translation_status stays draft pending fresh independent G5 |
 | Unit 5 | G5 ur-review | ▢ | | |
 | Unit 5 | G6 assets | ▢ | | 6 schematic figures prompt-only (1 timeline, 1 concept-map, 1 diagram, 3 table) |
 | Unit 5 | G7 publish | ▢ | | |
@@ -157,7 +157,7 @@ the PHR and Paperclip handoff. No G3/G5 certification or publication is claimed.
 | Unit 6 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
 | Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-06/G2/20261017T113349684Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | independent review pending; CurriculumOwner handoff on TEX-78 |
-| Unit 6 | G4 ur-translation | ▢ | | separately scoped Urdu child; English-only assignment |
+| Unit 6 | G4 ur-translation | ▣ | | complete 6-file UR mirror verified against EN baseline (2026-10-18): 6 .ur.svg/.ur.dark.svg variants wired; structural parity, figure parity, and key_terms clean under temporary reviewed flip (reverted); translation_status stays draft pending fresh independent G5 |
 | Unit 6 | G5 ur-review | ▢ | | |
 | Unit 6 | G6 assets | ▢ | | 6 schematic figures prompt-only (1 concept-map, 1 flowchart, 1 diagram, 3 table) |
 | Unit 6 | G7 publish | ▢ | | |

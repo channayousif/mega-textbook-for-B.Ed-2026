@@ -196,7 +196,10 @@ jobs:
         run: npx --yes @lhci/cli@0.14.x autorun || echo "::warning::Lighthouse budget not met"
 
   rls:
-    needs: changes
+    # Waits for `build`, like `e2e`: when the build fails the run is red anyway, and an
+    # RLS suite started beside it only burns runner minutes and holds the shared-supabase
+    # queue for others (owner, 2026-10-18, after cancelling such runs by hand).
+    needs: [changes, build]
     if: needs.changes.outputs.app == 'true'
     runs-on: ubuntu-latest
     concurrency:

@@ -1,0 +1,42 @@
+{
+  "checks": [
+    {
+      "file": "index.mdx",
+      "en_sha256": "25c106de159b3791c074cbb1a53f7a8113e54fe1d7a6a5180c2927296c899052",
+      "ur_sha256": "6619353f02fa473380b8bc8427b1dfe6262fa1cf014eede638eed23562de0e2c",
+      "structural_parity": "pass"
+    },
+    {
+      "file": "topic-01.mdx",
+      "en_sha256": "35b9add379bd0c49dacdcadf9bfea001f39cc0ef4c6851ec5e25cdfc223331eb",
+      "ur_sha256": "550b7917a3e9c018cb2d836b9573fa20749ab059f8ee46be63211b819ea4cb11",
+      "structural_parity": "pass"
+    },
+    {
+      "file": "topic-02.mdx",
+      "en_sha256": "88587f11594f8a513161675d0be52e944ffd692c8be3b77e6be83ee040b6842a",
+      "ur_sha256": "064fb806f7e93350a1702cf84c7717d1c81638ceaf47e1e4cc9a07194d746f7b",
+      "structural_parity": "pass"
+    },
+    {
+      "file": "topic-03.mdx",
+      "en_sha256": "4b4d35f005aa61064525a28693058125772152f4442d515d5688d38edb3428c1",
+      "ur_sha256": "51d26c1744643d0858d118cad80f7ccd1386d0bd5498fea4b2115ac0553eb47f",
+      "structural_parity": "pass"
+    },
+    {
+      "file": "unit-assessment.mdx",
+      "en_sha256": "a37afff68ca0a66c442f8d7c05f96814c1716c524cdf783f57e30f2f8571967c",
+      "ur_sha256": "447ea4b7dfe23be9645948ac0a3f081c99f0c151234b9338dfce2fec8367d391",
+      "structural_parity": "pass"
+    },
+    {
+      "file": "unit-teacher-notes.mdx",
+      "en_sha256": "33bea166238a1d9eafb182d4d288bd6bb163dd4f5551a9d4e4dcbb21c8230805",
+      "ur_sha256": "245c687e13716bb281ccc68254766da883b961f16ad0243dab61afc5eaa31662",
+      "structural_parity": "pass"
+    }
+  ],
+  "declared_key_terms": "bank-conformant",
+  "limits": "Translator structural checks only; G5 and full-site rendering remain pending."
+}
