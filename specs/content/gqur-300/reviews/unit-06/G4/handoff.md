@@ -49,7 +49,16 @@ The index `key_terms` declares the five core terms (Budget, Interest, Loss, Prof
 - `translation_status` remains `draft` everywhere because no independent G5 review has taken place.
 - No Docusaurus build or dev server was run, strictly obeying the crew brief.
 
+## Retry review and repairs (2026-10-18, opencode)
+
+A pass-by comparison against the English baseline found two semantic errors in the agy mirror and repaired them:
+
+- `topic-01.mdx:47` - "مینہ" (not a valid Urdu word) replaced with "طوفان" for EN "rainstorm". A halving of fair customers by a storm is now legible.
+- `topic-02.mdx:66` and `unit-assessment.mdx:168` - the calque "انجینئر کیا گیا" (literal for "engineered") replaced with "تیار کیا گیا" (constructed/devised) in both the prose and the RRQ-7 model answer, matching academic-plain register.
+
+After repair: `npm run check:content` shows 12/13 gates pass; the single failure (`check:content-status`) is `static/content-status.json` missing and is pre-existing on `origin/main`. Component parity 6/6/5/0/0/0, MCQ item counts 50/50, MCQ answer keys and Bloom tag counts verified to match the English baseline commit `2976ef5e`. `check:no-em-dash` clean across all six UR files.
+
 ## Next owner and status
 
-`translation_status` remains `draft` in all files. G4 tracker row in `tasks.md` is updated to in-progress (`▣`) with this handoff reference; no G4 completion or review certification is claimed per `translate-unit` Step 7 and repository governance rules.
+`translation_status` remains `draft` in all files. G4 tracker row in `tasks.md` remains in-progress (`▣`) with this handoff reference; no G4 completion or review certification is claimed per `translate-unit` Step 7 and repository governance rules.
 A fresh, independent G5 review session is needed to evaluate the Urdu translation against the English baseline.
