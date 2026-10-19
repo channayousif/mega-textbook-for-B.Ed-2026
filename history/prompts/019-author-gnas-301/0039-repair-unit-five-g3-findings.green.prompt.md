@@ -26,9 +26,13 @@ files:
   - specs/content/gnas-301/tasks.md
   - specs/content/gnas-301/reviews/unit-05/20261019-repair-notes.md
   - history/prompts/019-author-gnas-301/0039-repair-unit-five-g3-findings.green.prompt.md
+  - specs/content/gnas-301/reviews/unit-05/G2/20261019T145133819Z-gates.json
+  - specs/content/gnas-301/reviews/unit-05/G2/logs-20261019T145133819Z/
 tests:
   - npm run check:content
   - scripts/heavy.sh npm test
+  - node scripts/prepare-gate-evidence.mjs GNAS-301 5
+  - manual XML geometry and EN/UR bank-count assertions
 ---
 
 ## Prompt
@@ -42,7 +46,7 @@ Reconciled latest G3 findings with existing repairs, updated EN/UR questions and
 ## Outcome
 
 - ✅ Impact: Minimal Unit 5 repairs with matching Urdu edits and complete RRQ traceability.
-- 🧪 Tests: Validation results recorded in the Unit 5 repair notes after checks complete.
+- 🧪 Tests: PASS: all 13 content gates; 26 test files and 314 tests; manual geometry and bank-count checks.
 - 📁 Files: Unit 5 EN/UR assessment and topic-04, governance tables, tracker, repair notes and this PHR.
 - 🔁 Next prompts: Owner authorization for any further independent G3 cycle under G-2026-32.
 - 🧠 Reflection: Inspected current bytes rather than relying on earlier repair commit messages.
@@ -50,13 +54,13 @@ Reconciled latest G3 findings with existing repairs, updated EN/UR questions and
 ## Handoff (for CEO and agents)
 
 - Shipped / changed: Unit 5 advisory repairs and a still-open G3 tracker row.
-- Decisions the team must respect: No certification, publication change, approved spec edits or historical report rewrites.
+- Decisions the team must respect: Refreshed deterministic G2 evidence after committing repaired inputs; no G3/G5 certification, publication change, approved spec edits or historical report rewrites.
 - Pending / next owner: Owner handles the two-cycle limit; tooling owner handles source binding; glossary owner handles course-wide glossary additions.
 - Paperclip issues affected: None named; links.ticket is null.
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Starting checkout lacked ignored content-status artifact; content edits stale the existing G2 input digests.
-- Graders run and results (PASS/FAIL): See repair notes for final gate and test results.
+- Graders run and results (PASS/FAIL): PASS: check:content (13/13), npm test (314/314), git diff --check, geometry and bank-count assertions.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Fresh independent review only when owner-authorized.

@@ -58,3 +58,13 @@ Report addressed: `G3/round-02/agent-g3-gnas301-u5-run002.json` (latest), carryi
 The clean starting checkout had no commits ahead of origin/main. Its check:content run
 passed 12 gates and failed only because ignored static/content-status.json was missing.
 Generated that local artifact with npm run build:content-status before rechecking.
+
+After edits, check:content identified stale Unit 5 G2 input digests and the resulting stale
+local status artifact. Committed the repaired inputs and regenerated deterministic G2
+evidence with node scripts/prepare-gate-evidence.mjs GNAS-301 5 (all eight checks passed).
+Updated only Unit 5's G2 evidence reference, then regenerated the ignored status artifact.
+
+Final validation: npm run check:content passed all 13 gates. scripts/heavy.sh npm test
+passed 26 test files and 314 tests. Direct XML checks confirmed nonoverlapping stage
+panels and three connected arrows in all four fig-U5-3 variants; direct item counts
+confirmed both EN and UR assessment banks remain 10/10/5. git diff --check passed.
