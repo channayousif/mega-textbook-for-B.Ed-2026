@@ -29,7 +29,7 @@ per-topic layout: `index.mdx` + `topic-01…02.mdx` (nine-part cycles) + `unit-a
 | Unit 1 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
 | Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-01/G2/20261017T113315187Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | |
-| Unit 1 | G4 ur-translation | ▢ | | |
+| Unit 1 | G4 ur-translation | ▣ | | Complete 5-file UR mirror reconciled with EN baseline 9e6da648 on 2026-10-18 (crew efmp-305-u01-translate-r1); semantic, register, and terminology polish; 4 .ur.svg/.ur.dark.svg figure variants wired; structural parity, figure parity, and bank-conformant key_terms (Inclusive Education) verified under temporary reviewed flip (reverted); 8 unbanked concept labels proposed separately; handoff: reviews/unit-01/G4/translation-handoff.md; translation_status stays draft pending fresh independent G5; no certification claimed. |
 | Unit 1 | G5 ur-review | ▢ | | |
 | Unit 1 | G6 assets | ▢ | | 4 schematic SVGs prompt-only |
 | Unit 1 | G7 publish | ▢ | | |
