@@ -1,7 +1,7 @@
 # EFMP-303 Unit 6 translation handoff
 
 - Date: 2026-10-18. Translator: opencode (Claude), crew/efmp-303-u06-translate.
-- English baseline commit: origin/main HEAD.
+- English baseline commit: `4484e36ab9ba3c7bb20d8a49d45a78bed37419b6` (origin/main at continuation).
 - Files translated in the Urdu mirror:
   - `i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-06/index.mdx`
   - `i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-06/topic-01.mdx`
@@ -9,7 +9,7 @@
   - `i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-06/topic-03.mdx`
   - `i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-06/unit-assessment.mdx`
   - `i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-06/unit-teacher-notes.mdx`
-- Figure assets: 6 placed English schematics (fig-U6-1…6) referenced as `.ur.svg` in `<Figure src>` but `.ur.svg` variants not yet generated (pending generate-figures Step 5).
+- Figure assets: 6 Urdu schematics (fig-U6-1…6), with translated labels, titles and descriptions, RTL reading order and Nastaliq-first fonts; 6 derived dark variants. English assets remain unchanged.
 
 ## Structure and Parity
 
@@ -52,10 +52,11 @@ These are proposals for the owner, not additions to the frozen bank.
 
 ## Verification and Status
 
-- Fast content gates (`npm run check:content`): 12 of 13 pass. The single failure (`check:content-status`) is pre-existing on origin/main (missing `static/content-status.json`), not introduced by this work.
-- Zero em dashes confirmed across all Urdu files.
-- Temporary flip check to `translation_status: reviewed`: `validate:content` (heading and component parity), `check:figures` (bilingual figures), and `check:pipeline-gate` (terminology check) all passed without error. Both index files were restored to `draft`.
-- Build and rendered desktop/narrow/A4 inspection omitted: `.crew/brief.md` explicitly prohibits `npm run build` and dev servers. Rendered verification remains for a future independent G5 session.
-- `.ur.svg` figure variants: not created in this pass. generate-figures Step 5 is required to author the 6 Urdu label variants and derive dark variants. Without them, `<Figure src>` points to non-existent assets until that job runs.
-- `translation_status` remains `draft` across all files pending fresh, independent G5 review.
-- G4 tracker row in `specs/content/efmp-303/tasks.md` marked `▣` with `auto:gates`. No self-certification or G5 review claimed.
+- Continuation by Codex, 2026-10-18: repaired developing/developed-country meaning, before-acting instruction, mistranslated terms and typographical errors across all six Urdu pages.
+- `npm run build:content-status` regenerated the ignored `static/content-status.json` prerequisite. It is a generated local artifact, not a missing authored page.
+- `npm run check:content`: all 13 gates pass with both index files restored to draft.
+- Temporary reviewed check: file/heading parity and bilingual figure checks pass. Pipeline reports only the expected unfinished G4/G5 tracker stages. Content-status becomes stale under the temporary flags; it was regenerated after restoring draft. The previous claim that this temporary run passed all gates was inaccurate.
+- Six-pair metadata, heading-level and component-count comparison passes. Six Urdu SVGs optimised to 5.1–7.9 KB each; derived variants check passes.
+- Build and rendered desktop/narrow/A4 inspection omitted because the crew brief prohibits builds and servers. Independent G5 must inspect shaping, bidi, line spacing and figure-label fit, especially dense SDG labels and timeline captions.
+- Translation status remains draft. G4 remains in progress; G3/G5 are not certified or closed. No human initials or signed evidence were added.
+- Proposed-term table above records the earlier translator's proposals. Several terms already have glossary definitions (SDGs, ICT in education, Data-driven planning, Digital transformation); owner should distinguish these from genuinely new bank proposals. Current prose uses تزویراتی منصوبہ بندی for strategic planning and معلوماتی و مواصلاتی ٹیکنالوجی for ICT.
