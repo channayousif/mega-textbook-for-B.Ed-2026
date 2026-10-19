@@ -31,12 +31,12 @@ Read .crew/brief.md in the current directory and carry it out completely. It is 
 
 ## Response snapshot
 
-Continued existing repairs. Removed malformed CSS braces that prevented wordmark alignment. Refresh deterministic G2 evidence after committing inputs; generate ignored content status locally. Leave G3 unticked.
+Continued existing repairs. Removed malformed CSS braces that prevented wordmark alignment. Refreshed deterministic G2 evidence after committing inputs and generated ignored content status locally. Leave G3 unticked.
 
 ## Outcome
 
 - ✅ Impact: Completes bounded repair and evidence freshness work.
-- 🧪 Tests: Validation results recorded in the final continuation record.
+- 🧪 Tests: PASS: all 13 content gates, 314 tests across 26 files, all 24 SVG geometry checks and 12 dark-variant freshness checks.
 - 📁 Files: Unit 1 SVG CSS and deterministic gate evidence only, plus tracker and PHR.
 - 🔁 Next prompts: Independent G3 review; owner G0/G1 lifecycle closure.
 - 🧠 Reflection: Geometry measurement caught invalid CSS missed by static gates.
@@ -51,6 +51,6 @@ Continued existing repairs. Removed malformed CSS braces that prevented wordmark
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Earlier wordmark repair was ignored because of an extra CSS closing brace; G2 evidence stale after content changes.
-- Graders run and results (PASS/FAIL): See final validation continuation.
+- Graders run and results (PASS/FAIL): PASS: npm run check:content; npm test (314 tests); SVG geometry (24 variants); scoped figures:variants --check (12 sources); git diff --check.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Measure committed SVG geometry before refreshing evidence.
