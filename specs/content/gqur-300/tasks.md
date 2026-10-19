@@ -43,7 +43,7 @@ on every unit).
 | Unit 5 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0042; content-spec status: approved |
 | Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-05/G2/20261013T123619395Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 2d5cd6a; report reviews/unit-05/G3/agent-g3-gqur300-u5-run001.json |
-| Unit 5 | G4 ur-translation | ▢ | | full Urdu mirror required |
+| Unit 5 | G4 ur-translation | ▣ | | mirror complete (2026-10-18): all 6 files verified against EN 2a224024; 12 .ur.svg/.ur.dark.svg figure variants verified; heading-level vectors, component counts and figure IDs synced; structural parity clean under temporary reviewed flip (reverted); all 11 key_terms unbanked in terminology.csv and proposed to owner; translation_status stays draft pending fresh independent G5; reviews/unit-05/G4/handoff.md |
 | Unit 5 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at 2af6a00; G3 dependency escalated (G-2026-30); report reviews/unit-05/G5/agent-g5-gqur300-u5-run001.json |
 | Unit 5 | G6 assets | ▢ | | |
 | Unit 5 | G7 publish | ▢ | | |
