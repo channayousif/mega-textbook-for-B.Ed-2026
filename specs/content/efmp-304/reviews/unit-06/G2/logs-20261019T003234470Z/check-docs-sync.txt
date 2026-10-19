@@ -1,0 +1,3 @@
+$ npm run check:docs-sync   (repo HEAD 81e1e68f, 2026-10-19T00:32:40.061Z)
+✓ docs are in sync with the code constants
+exit_code=0
