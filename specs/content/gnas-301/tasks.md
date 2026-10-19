@@ -56,3 +56,5 @@ units may be authored.
 | Unit 6 | G5 ur-review | ▢ | | advisory round 1: escalate (7 blocking, 9 advisory); report reviews/unit-06/G5/agent-g5-gnas301-u6-run001.json; 6 content blockings repaired post-report, dependency escalation folded into G-2026-34's owner question |
 | Unit 6 | G6 assets | ▢ | | |
 | Unit 6 | G7 publish | ▢ | | |
+
+| Unit 3 | G3 en-review | ▢ | | advisory: revise; repairs applied to agent-g3-gnas301-u3-run001.json and latest round-02/agent-g3-gnas301-u3-run002.json: bound noise-health sources, conventional ladder values, descriptive EN/UR links, balanced MCQ options, varied RRQ scenarios, corrected Bloom range and noise-controls concept; existing RRQ coverage, Lahore paraphrase and misconception repairs verified; no certification |
