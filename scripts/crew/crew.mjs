@@ -25,6 +25,7 @@ import { WORKERS, STAGES, QUOTA_RE, COOLDOWN_MIN, pickWorker } from './workers.m
 import { STATE_DIR, WT_DIR, LOG_DIR, load, save, ACTIVE, TERMINAL, jobId, now } from './state.mjs';
 import { send, reply, readInbox } from './notify.mjs';
 import { reviewFindingsSection, parseHandoff, priorHandoffsSection } from './handoff.mjs';
+import { freshChecks } from './checks.mjs';
 
 const ROOT = resolve(new URL('../..', import.meta.url).pathname);
 const MAX_PARALLEL = Number(process.env.CREW_MAX_PARALLEL || 3);
@@ -35,6 +36,7 @@ const MIN_FREE_MB = Number(process.env.CREW_MIN_FREE_MB || 3072);
 const MIN_FREE_DISK_MB = Number(process.env.CREW_MIN_FREE_DISK_MB || 8192);
 const SPARSE = ['/*', '!/specs/content/*/reviews/**/renders-*/'];
 const JOB_TIMEOUT = process.env.CREW_JOB_TIMEOUT || '3h';
+const PUSH_SETTLE_MS = 3 * 60e3;
 const STAGE_ORDER = ['salvage', 'fix', 'repair_en', 'review_en', 'review_ur', 'translate', 'figures', 'illustrate', 'author'];
 /** A PR touching any of these is never auto-merged; the owner is asked instead. */
 const PROTECTED = [/^specs\/content\/style-guide\.md$/, /^\.specify\//, /^history\/adr\//, /^\.github\//,
@@ -241,6 +243,9 @@ function launch(board, j, worker) {
   j.pid = child.pid;
   j.status = 'running';
   j.startedAt = now();
+  // A fix job's branch is already ahead of main, so "ahead of main" cannot show that the worker did
+  // anything; finishSuccess compares with this instead (cifix1 on #164 pushed only its PHR, 2026-10-18).
+  j.startHead = sh('git', ['rev-parse', 'HEAD'], j.worktree).out;
   j.attempts = (j.attempts || 0) + 1;
   j.tried = [...new Set([...(j.tried || []), worker])];
   log(board, j, `launched on ${worker} (attempt ${j.attempts})`);
@@ -411,7 +416,8 @@ function finishSuccess(board, j, logText) {
     sh('git', ['commit', '-q', '-m', `chore(crew): ${j.id} uncommitted work from ${j.worker}`], wt, { allowFail: true });
   }
   const ahead = Number(sh('git', ['rev-list', '--count', 'origin/main..HEAD'], wt).out || 0);
-  if (!ahead) return { ok: false, why: 'the worker exited without committing any change' };
+  const made = j.startHead ? Number(sh('git', ['rev-list', '--count', `${j.startHead}..HEAD`], wt, { allowFail: true }).out || 0) : ahead;
+  if (!ahead || !made) return { ok: false, why: 'the worker exited without committing any change' };
   const fresh = newFindings(wt);
   if (fresh.length) return { ok: false, why: `npm run check:content has ${fresh.length} finding(s) that main does not have:\n${fresh.slice(0, 40).join('\n')}` };
   const summary = (logText.match(/CREW-SUMMARY:\s*(.+)/g) || []).at(-1)?.replace(/CREW-SUMMARY:\s*/, '') || `${j.stage} for ${j.course} Unit ${j.unit}`;
@@ -421,6 +427,8 @@ function finishSuccess(board, j, logText) {
   sh('git', ['add', 'history/prompts'], wt);
   sh('git', ['commit', '-q', '-m', `docs(phr): crew ${j.id}`], wt, { allowFail: true });
   crewPush(wt, ['-q', '-u', 'origin', `HEAD:${j.branch}`, '--force-with-lease']);
+  const prJob = j.parent ? board.jobs.find((p) => p.id === j.parent) : j;
+  if (prJob) prJob.pushedAt = now();
   if (j.parent) return { ok: true, summary }; // CI-fix job: the push updated the parent's PR
   const title = `crew(${j.course.toLowerCase()}): ${j.stage} unit ${j.unit} by ${j.worker}`;
   const body = `${summary}\n\nCrew job \`${j.id}\`, worker **${j.worker}** (${j.family}), attempt ${j.attempts}. \`npm run check:content\` passed before push; CI builds the site.\n${j.supersedes ? `\nSupersedes ${String(j.supersedes).split(',').map((n) => `#${n}`).join(', ')}.\n` : ''}\n🤖 Generated with [Claude Code](https://claude.com/claude-code)`;
@@ -576,7 +584,11 @@ function managePrs(board, decisions, events) {
     const pr = JSON.parse(v.out);
     if (pr.state === 'MERGED') { j.status = 'merged'; log(board, j, 'merged'); cleanup(j); continue; }
     if (pr.state === 'CLOSED') { j.status = 'closed'; log(board, j, 'closed'); cleanup(j); continue; }
-    const checks = latestChecks(pr.statusCheckRollup || []);
+    // Right after a crew push GitHub still reports the old head's checks and mergeability: on
+    // 2026-10-18 a tick read #164's day-old failed build 1 s after the fix landed and queued a second
+    // fix while the new CI run was starting. Judge a PR only on checks that started after the push.
+    if (j.pushedAt && Date.now() - Date.parse(j.pushedAt) < PUSH_SETTLE_MS) continue;
+    const checks = freshChecks(latestChecks(pr.statusCheckRollup || []), j.pushedAt);
     // GitHub runs no PR CI while a PR conflicts, so waiting would stall it forever. Salvage
     // branches all append to the same registries, so each salvage that merges conflicts
     // the rest; resolving needs judgement (keep both sides, renumber clashing IDs).
