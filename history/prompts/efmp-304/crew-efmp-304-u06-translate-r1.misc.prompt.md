@@ -1,69 +1,139 @@
 ---
 id: crew-efmp-304-u06-translate-r1
-title: crew translate EFMP-304 unit 6 r1 figures
+title: crew translate EFMP-304 unit 6
 stage: misc
-date: 2026-10-18
+date: 2026-10-19
 surface: agent
-model: longcat/LongCat-2.0
+model: codex
 feature: efmp-304
 branch: crew/efmp-304-u06-translate-r1
 user: crew
-command: crew translate r1
-labels: ["crew","translate","figures"]
+command: crew translate
+labels: ["crew", "codex", "translate"]
 links:
   spec: specs/content/efmp-304/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
- - static/img/figures/efmp-304/unit-06/fig-U6-1.ur.svg
- - static/img/figures/efmp-304/unit-06/fig-U6-2.ur.svg
- - static/img/figures/efmp-304/unit-06/fig-U6-3.ur.svg
- - static/img/figures/efmp-304/unit-06/fig-U6-4.ur.svg
- - static/img/figures/efmp-304/unit-06/fig-U6-5.ur.svg
- - static/img/figures/efmp-304/unit-06/fig-U6-6.ur.svg
- - static/img/figures/efmp-304/unit-06/fig-U6-7.ur.svg
- - static/img/figures/efmp-304/unit-06/fig-U6-8.ur.svg
+ - history/prompts/efmp-304/crew-efmp-304-u06-translate-r1.misc.prompt.md
+ - history/prompts/general/0341-efmp304-unit-six-translation-continuation.general.prompt.md
+ - history/prompts/general/0342-efmp304-unit-six-manifest-repair.general.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-304/unit-06/index.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-304/unit-06/topic-01.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-304/unit-06/topic-02.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-304/unit-06/topic-03.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-304/unit-06/topic-04.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-304/unit-06/unit-assessment.mdx
+ - specs/content/efmp-304/reviews/unit-06/G2/20261019T003234470Z-gates.json
+ - specs/content/efmp-304/reviews/unit-06/G2/20261019T003355701Z-gates.json
+ - specs/content/efmp-304/reviews/unit-06/G2/20261019T004901888Z-gates.json
+ - specs/content/efmp-304/reviews/unit-06/G2/logs-20261019T003234470Z/check-bloom-bands.txt
+ - specs/content/efmp-304/reviews/unit-06/G2/logs-20261019T003234470Z/check-concept-graph.txt
+ - specs/content/efmp-304/reviews/unit-06/G2/logs-20261019T003234470Z/check-depth-gate.txt
+ - specs/content/efmp-304/reviews/unit-06/G2/logs-20261019T003234470Z/check-docs-sync.txt
+ - specs/content/efmp-304/reviews/unit-06/G2/logs-20261019T003234470Z/check-figures.txt
+ - specs/content/efmp-304/reviews/unit-06/G2/logs-20261019T003234470Z/check-no-answer-keys.txt
+ - specs/content/efmp-304/reviews/unit-06/G2/logs-20261019T003234470Z/check-no-em-dash.txt
+ - specs/content/efmp-304/reviews/unit-06/G2/logs-20261019T003234470Z/validate-content.txt
+ - specs/content/efmp-304/reviews/unit-06/G2/logs-20261019T003355701Z/check-bloom-bands.txt
+ - specs/content/efmp-304/reviews/unit-06/G2/logs-20261019T003355701Z/check-concept-graph.txt
+ - specs/content/efmp-304/reviews/unit-06/G2/logs-20261019T003355701Z/check-depth-gate.txt
+ - specs/content/efmp-304/reviews/unit-06/G2/logs-20261019T003355701Z/check-docs-sync.txt
+ - specs/content/efmp-304/reviews/unit-06/G2/logs-20261019T003355701Z/check-figures.txt
+ - specs/content/efmp-304/reviews/unit-06/G2/logs-20261019T003355701Z/check-no-answer-keys.txt
+ - specs/content/efmp-304/reviews/unit-06/G2/logs-20261019T003355701Z/check-no-em-dash.txt
+ - specs/content/efmp-304/reviews/unit-06/G2/logs-20261019T003355701Z/validate-content.txt
+ - specs/content/efmp-304/reviews/unit-06/G2/logs-20261019T004901888Z/check-bloom-bands.txt
+ - specs/content/efmp-304/reviews/unit-06/G2/logs-20261019T004901888Z/check-concept-graph.txt
+ - specs/content/efmp-304/reviews/unit-06/G2/logs-20261019T004901888Z/check-depth-gate.txt
+ - specs/content/efmp-304/reviews/unit-06/G2/logs-20261019T004901888Z/check-docs-sync.txt
+ - specs/content/efmp-304/reviews/unit-06/G2/logs-20261019T004901888Z/check-figures.txt
+ - specs/content/efmp-304/reviews/unit-06/G2/logs-20261019T004901888Z/check-no-answer-keys.txt
+ - specs/content/efmp-304/reviews/unit-06/G2/logs-20261019T004901888Z/check-no-em-dash.txt
+ - specs/content/efmp-304/reviews/unit-06/G2/logs-20261019T004901888Z/validate-content.txt
  - specs/content/efmp-304/tasks.md
  - specs/content/efmp-304/translations/unit-06/handoff.md
+ - static/img/figures/efmp-304/unit-06/fig-U6-1.ur.dark.svg
+ - static/img/figures/efmp-304/unit-06/fig-U6-1.ur.svg
+ - static/img/figures/efmp-304/unit-06/fig-U6-2.ur.dark.svg
+ - static/img/figures/efmp-304/unit-06/fig-U6-2.ur.svg
+ - static/img/figures/efmp-304/unit-06/fig-U6-3.ur.dark.svg
+ - static/img/figures/efmp-304/unit-06/fig-U6-3.ur.svg
+ - static/img/figures/efmp-304/unit-06/fig-U6-4.ur.dark.svg
+ - static/img/figures/efmp-304/unit-06/fig-U6-4.ur.svg
+ - static/img/figures/efmp-304/unit-06/fig-U6-5.ur.dark.svg
+ - static/img/figures/efmp-304/unit-06/fig-U6-5.ur.svg
+ - static/img/figures/efmp-304/unit-06/fig-U6-6.ur.dark.svg
+ - static/img/figures/efmp-304/unit-06/fig-U6-6.ur.svg
+ - static/img/figures/efmp-304/unit-06/fig-U6-7.ur.dark.svg
+ - static/img/figures/efmp-304/unit-06/fig-U6-7.ur.svg
+ - static/img/figures/efmp-304/unit-06/fig-U6-8.ur.dark.svg
+ - static/img/figures/efmp-304/unit-06/fig-U6-8.ur.svg
 tests:
  - npm run check:content
- - npm run figures:variants:check
- - grep em-dash over new .ur.svg
 ---
 
 ## Prompt
 
-Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.
+# Crew job efmp-304-u06-translate-r1
 
-(Crew job efmp-304-u06-translate-r1: translate EFMP-304 Unit 6 into its complete Urdu mirror at G4, bound to terminology.csv. The prose translation was already merged on main; this pass completes the 8 schematic figure variants that were the G5 F3 gap. Scope includes static/img/figures/efmp-304/unit-06/. translation_status stays draft.)
+You are the codex worker on the B.Ed bilingual textbook repo, working in this checkout on branch `crew/efmp-304-u06-translate-r1`.
+Read AGENTS.md and CLAUDE.md first and obey them: no em dash (U+2014) anywhere, heavy commands only through
+`scripts/heavy.sh`, never run `npm run build` or a dev server, never mark G3/G5 done, never self-sign or use
+human initials, never edit the style guide, constitution, ADRs, gate scripts, catalog or an approved content-spec.
+
+## Task
+Translate EFMP-304 Unit 6 into its complete Urdu mirror at G4 (translate-unit skill), bound to specs/content/terminology.csv. Record the G4 tracker row as the skill says; translation_status stays draft.
+
+Follow `.claude/skills/translate-unit/SKILL.md` exactly; read it and every file it references before starting.
+
+## Scope
+EFMP-304 Unit 6 only: its docs/licence and i18n files, its rows and folders under
+`specs/content/efmp-304/`, and `static/img/figures/efmp-304/unit-06/`.
+
+## Continue, do not restart
+Earlier attempts may have left work on this branch. Check `git log origin/main..HEAD` and `git status` and build on it.
+
+## Done when
+1. `npm run check:content` reports no finding that origin/main does not also report (run it, read every
+   failure, fix those in your scope, rerun). Findings that already exist on main belong to other jobs.
+2. All work is committed on this branch with a conventional commit message. Do not push and do not open a PR.
+3. Your final output ends with one line: `CREW-SUMMARY: <what you changed, in one sentence>`.
+4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit
+   needs (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
+
+## Feedback from the previous attempt
+npm run check:content has 2 finding(s) that main does not have:
+✗ Pipeline gate failed with 1 finding(s):
+- EFMP-304 Unit 6 (docs/semester-2/efmp-304/unit-06): G2 en-draft: stale or incomplete input manifest
+
 
 ## Response snapshot
 
-Authored 8 Urdu `.ur.svg` files for fig-U6-1…8 by translating every visible label, `<title>`, and `<desc>` to Urdu; mirroring x-coordinates around the viewBox midline (new_x = 780 - old_x) and flipping text-anchor for RTL column order; setting the Nastaliq-first font stack; syncing `<desc>` to the Urdu carrier alt so check:figures parity passes. Ran `optimize:figure` (<=20 KB each) and `figures:variants` for dark twins. Repointed the Urdu `<Figure src>` in the four topic files from `.svg` to `.ur.svg`. Updated the existing G4 tracker row note and wrote a handoff file. check:content clean except pre-existing check:content-status (gitignored report, also fails on origin/main). No em dash in new SVGs. Left translation_status draft and G4 row as ▣ per the skill.
+Continued the Unit 6 Urdu mirror, corrected assessment option lettering, and repaired stale G2 evidence.
 
 ## Outcome
 
-- Impact: closed the EFMP-304 G5 F3 figure-variant gap for Unit 6 (8 .ur.svg + 8 dark variants), completing the structural G4 mirror.
-- Tests: check:content 12/13 (only pre-existing content-status, out of scope); check:figures PASS; figures:variants:check OK; no em dash.
-- Files: 8 .ur.svg, 8 .ur.dark.svg, 4 topic-*.mdx src rewire, tasks.md tracker note, translations/unit-06/handoff.md.
-- Next prompts: fresh independent G5 review against the new .ur.svg bytes; then G7 publish when the G5 is accepted.
-- Reflection: the prose mirror was already merged, so the only G4 work left was the figure variants — which is what G5 F3 flagged. The temporary `reviewed` flip confirmed parity gates pass once figures are wired; the only `reviewed`-mode failures were the intentionally-draft tracker row and the pre-existing content-status gap.
+- Impact: translate for EFMP-304 Unit 6 by codex (attempt 3).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 54 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: 8 Urdu schematic variants (fig-U6-1…8) authored, optimized, dark-derived, and wired into the Urdu topic pages for EFMP-304 Unit 6. G4 tracker row note updated.
-- Decisions the team must respect: translation_status stays draft (skill rule); G4 row stays ▣; no self-certification. Fresh G5 review required against the new figure bytes.
-- Pending / next owner: independent G5 review of Unit 6 Urdu (prose + new figures); G7 publish after acceptance.
-- Paperclip issues affected: closes G5 advisory F3 for Unit 6 (the course-wide figure-variant gap TEX-49 still spans units 1-5).
+- Shipped / changed: Continued the Unit 6 Urdu mirror, corrected assessment option lettering, and repaired stale G2 evidence.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Translation remains draft; fresh independent G5 and full-page RTL/A4 inspection remain pending.
+  - Translation remains draft; fresh independent G5 and full-page RTL/A4 inspection remain pending.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: initial translated `<desc>` did not match the Urdu carrier alt, failing check:figures; fixed by syncing `<desc>` to the exact carrier alt.
-- Graders run and results (PASS/FAIL): check:content PASS (excl. pre-existing content-status); check:figures PASS; no-em-dash PASS.
-- Prompt variant (if applicable): crew brief v1 r1 (figure-variant completion pass)
+- Failure modes observed: 2 earlier attempt(s); see the board history
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
