@@ -34,7 +34,7 @@ tests:
   - node scripts/review-evidence.mjs validate specs/content/geng-301/reviews/unit-02/G3/04ddc645-f479-4d6d-a614-8f7e23db9fc0.json (structurally valid: revise)
   - node scripts/measure-figure-text.mjs static/img/figures/geng-301/unit-02/*.svg (16 overflow defects recorded)
   - npm run check:no-em-dash (clean)
-  - npm run check:content (12 of 13 passed, matching baseline)
+  - npm run check:content (clean, all 13 gates pass)
 ---
 
 ## Prompt

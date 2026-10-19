@@ -273,12 +273,12 @@
     },
     {
       "name": "check:content",
-      "exit_code": 1,
+      "exit_code": 0,
       "log_path": "specs/content/geng-301/reviews/unit-02/G3/logs-04ddc645/check-content.log"
     }
   ],
   "evidence_manifest": {
-    "specs/content/geng-301/reviews/unit-02/G3/04ddc645-f479-4d6d-a614-8f7e23db9fc0.md": "d0b2a393bb5b8141bdc75044e66bc3f4b3279e222e64cbacb7d0eb2a425b55fa",
+    "specs/content/geng-301/reviews/unit-02/G3/04ddc645-f479-4d6d-a614-8f7e23db9fc0.md": "3622d95aaeabdf0b49dc6169df92f627866679d7f88b656b96e735256807d945",
     "specs/content/geng-301/reviews/unit-02/G3/logs-04ddc645/validate-content.log": "5b3153a9d41a11051bff1d2f0396cf26eaaf00ae79e3b894c202823645c0e6a6",
     "specs/content/geng-301/reviews/unit-02/G3/logs-04ddc645/check-depth-gate.log": "15021f8f88122b596e67cfd48c2ff282fde912e1b86bb03c2137bcf9d8e062fd",
     "specs/content/geng-301/reviews/unit-02/G3/logs-04ddc645/check-figures.log": "54a388cb9954b9d2f07f84e5385ac0003b94a6a54023abb188e864346958b04f",
@@ -287,6 +287,6 @@
     "specs/content/geng-301/reviews/unit-02/G3/logs-04ddc645/check-docs-sync.log": "cbc9f6e4b0b674cb49e2d9b795d81ed78f23dc431cba1130e4d64cf6d0bed749",
     "specs/content/geng-301/reviews/unit-02/G3/logs-04ddc645/render-review.log": "6d17798d0cb8b4b7da2788141c1f53b142e9573f9e1414bd7c7a340c7cb26718",
     "specs/content/geng-301/reviews/unit-02/G3/logs-04ddc645/measure-figure-text.log": "798c66adb96d8ff8a72cbc2205c985fd61eabfbec59be623712b802b907b7133",
-    "specs/content/geng-301/reviews/unit-02/G3/logs-04ddc645/check-content.log": "5724f69dda538cb16e9753c1002ee61a1d8f534a1fb73c2449e66e2ec35adbdf"
+    "specs/content/geng-301/reviews/unit-02/G3/logs-04ddc645/check-content.log": "392042feed7e18a02c5710f18fc5eb7ebb9fea6589632aff7fd169fdf6aa5372"
   }
 }
