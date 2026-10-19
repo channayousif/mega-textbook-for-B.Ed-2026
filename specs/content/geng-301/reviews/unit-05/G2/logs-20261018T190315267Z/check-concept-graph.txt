@@ -1,0 +1,3 @@
+$ npm run check:concept-graph   (repo HEAD f2ced405, 2026-10-18T19:03:23.801Z)
+✓ Concept graph is consistent (coverage, no orphans, acyclic, resolvable prerequisites, assessment linkage).
+exit_code=0
