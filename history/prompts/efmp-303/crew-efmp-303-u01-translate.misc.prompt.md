@@ -21,9 +21,6 @@ files:
  - specs/content/efmp-303/tasks.md
 tests:
  - npm run check:content
- - npm run test:crew
- - npm run test:review
- - npm run figures:variants:check
 ---
 
 ## Prompt
@@ -59,27 +56,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-303-u01-review_en, review_en, agy) G3 disposition is escalate because host brief constraints prohibit running build or dev server for live interactive viewport (360x780) and A4 print emulation.
 - (efmp-303-u01-review_en, review_en, agy) Board G0/G1 intake status is noted as pending in tasks.md:15 despite approved content-spec.
 
+
 ## Response snapshot
 
-Verified EFMP-303 Unit 1 complete 7-file Urdu mirror at G4 with 8 wired .ur.svg/.ur.dark.svg figure variants, 10/10/5 assessment parity with bounded answers, and terminology compliance; created translation handoff, updated G4 tracker row in tasks.md to in-progress, and passed all 13 content gates.
+Verified EFMP-303 Unit 1 complete 7-file Urdu mirror at G4 with 8 wired figure variants, bank-bound terminology, translation handoff, and updated tasks.md tracker row.
 
 ## Outcome
 
-- Impact: translate for EFMP-303 Unit 1 by agy.
-- Tests: npm run check:content, test:crew, test:review, and figures:variants:check all passed.
+- Impact: translate for EFMP-303 Unit 1 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 3 file(s), listed above.
-- Next prompts: crew planner derives next stage (independent G5 ur-review).
-- Reflection: None.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Verified EFMP-303 Unit 1 complete 7-file Urdu mirror at G4 with wired figures and terminology compliance, created translation handoff, updated task tracker, and passed all content gates.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything. translation_status stays draft pending independent G5 review.
-- Pending / next owner: crew lead / independent G5 reviewer.
+- Shipped / changed: Verified EFMP-303 Unit 1 complete 7-file Urdu mirror at G4 with 8 wired figure variants, bank-bound terminology, translation handoff, and updated tasks.md tracker row.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All 8 .ur.svg figure variants are wired in topics 1-4 with matching carrier alt text and derived .ur.dark.svg twins; figures:variants:check passes cleanly.
-  - Structural, figure, and terminology parity verified clean under temporary reviewed flip (reverted to draft pending independent G5 review).
-  - Proposed terms for curriculum owner: Educational policy (تعلیمی پالیسی), Educational planning (تعلیمی منصوبہ بندی), Policy-planning relationship (پالیسی اور منصوبہ بندی کا تعلق), Education-society-development triangle (تعلیم، سماج اور ترقی کا تکون), Social factors shaping education (تعلیم کو تشکیل دینے والے معاشرتی عوامل), Colonial education legacy (نوآبادیاتی تعلیم کا وراثت), Post-independence education developments (آزادی کے بعد تعلیمی ترقیات), Sharif Commission (1959) (شریف کمیشن (1959)), Education milestones timeline (تعلیم کے سنگ میل کا خط زمانی), Human capital (انسانی سرمایہ); and note on Development sense split (نشوونما vs ترقی).
+  - All 8 .ur.svg figure variants and derived dark variants are wired in topics 1-4 with matching carrier alt text and passing figures:variants:check.
+  - Structural, figure, and terminology parity verified clean under temporary reviewed flip; translation_status stays draft pending independent G5 review.
+  - Proposed unbanked terms recorded in translation-handoff.md, including the Development sense split between child growth (نشوونما) and macro planning (ترقی).
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
