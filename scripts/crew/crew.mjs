@@ -29,6 +29,7 @@ import { freshChecks } from './checks.mjs';
 import { batchDue, batchCandidates, batchId, batchTitle, batchBody } from './batch.mjs';
 import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport } from './planner.mjs';
 import { walkUnits } from '../lib/content-roots.mjs';
+import { REGISTRIES, registryProblems } from './registries.mjs';
 
 const ROOT = resolve(new URL('../..', import.meta.url).pathname);
 const MAX_PARALLEL = Number(process.env.CREW_MAX_PARALLEL || 3);
@@ -396,6 +397,9 @@ ${summary}
  * change, say), a unit job that adds nothing new must still be able to land.
  */
 function gateFindings(cwd) {
+  // static/content-status.json is gitignored, so a fresh worktree lacks it and check:content-status fails
+  // there but not in ROOT. Regenerate it first, as ci.yml does; otherwise every batch member looks red.
+  sh('node', ['scripts/report-content-status.mjs'], cwd, { allowFail: true });
   const r = sh('npm', ['run', '-s', 'check:content'], cwd, { allowFail: true });
   if (r.ok) return [];
   return [...new Set((r.out + '\n' + r.err).split('\n')
@@ -424,6 +428,19 @@ function excludeCrewFiles(wt) {
   if (missing.length) { mkdirSync(join(common, 'info'), { recursive: true }); appendFileSync(file, `\n${missing.join('\n')}\n`); }
 }
 
+/** Damage to the shared registries in a worktree, against its merge base with main (scripts/crew/registries.mjs). */
+function registryDamage(wt) {
+  const base = sh('git', ['merge-base', 'origin/main', 'HEAD'], wt, { allowFail: true }).out;
+  if (!base) return [];
+  return REGISTRIES.flatMap((path) => {
+    const was = sh('git', ['show', `${base}:${path}`], wt, { allowFail: true });
+    const file = join(wt, path);
+    return registryProblems(path, was.ok ? was.out : null, existsSync(file) ? readFileSync(file, 'utf8') : null);
+  });
+}
+
+const REGISTRY_RULE = 'The shared registries are append-only: keep every entry main has exactly as it is, add this branch\'s entries after them, give a new entry whose ID main already uses the next free ID (and update its references), and keep glossary.json valid JSON.';
+
 function finishSuccess(board, j, logText) {
   const wt = j.worktree;
   if (sh('git', ['status', '--porcelain'], wt).out.replace(/^.. (\.crew|node_modules).*$/gm, '').trim()) {
@@ -436,6 +453,8 @@ function finishSuccess(board, j, logText) {
   if (!ahead || !made) return { ok: false, why: 'the worker exited without committing any change' };
   const fresh = newFindings(wt);
   if (fresh.length) return { ok: false, why: `npm run check:content has ${fresh.length} finding(s) that main does not have:\n${fresh.slice(0, 40).join('\n')}` };
+  const damage = registryDamage(wt);
+  if (damage.length) return { ok: false, why: `${REGISTRY_RULE} This branch breaks that:\n${damage.join('\n')}` };
   const summary = (logText.match(/CREW-SUMMARY:\s*(.+)/g) || []).at(-1)?.replace(/CREW-SUMMARY:\s*/, '') || `${j.stage} for ${j.course} Unit ${j.unit}`;
   j.handoff = parseHandoff(logText);
   if (j.handoff.length) j.handoffAt = now();
@@ -644,14 +663,14 @@ function batchPhase(board, events) {
     return false;
   };
   let members = ready.filter(tryMerge);
-  if (members.length && newFindings(wt).length) {
+  if (members.length && (newFindings(wt).length || registryDamage(wt).length)) {
     // Something fails only in combination: rebuild one job at a time, keeping each that leaves the gate clean.
     sh('git', ['reset', '-q', '--hard', 'origin/main'], wt);
     const tried = members;
     members = [];
     for (const j of tried) {
       if (!tryMerge(j)) continue;
-      const fresh = newFindings(wt);
+      const fresh = [...newFindings(wt), ...registryDamage(wt)];
       if (!fresh.length) { members.push(j); continue; }
       sh('git', ['reset', '-q', '--hard', 'HEAD^'], wt);
       why.set(j.id, `Merged onto main's latest state, ${j.branch} fails npm run check:content (it could not join the hourly batch):\n${fresh.slice(0, 20).join('\n')}`);
