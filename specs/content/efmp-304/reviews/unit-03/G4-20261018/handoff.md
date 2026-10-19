@@ -112,3 +112,18 @@ Unbanked terms used, **proposed for the curriculum owner** (not added to the ban
   build, which the crew brief forbids), and independent G5 review. The English G3 for this unit
   is still open with an advisory escalate, so an English repair may yet invalidate this mirror.
 - Translation time was not instrumented, so no rate is claimed.
+
+## r1 continuation: content-status freshness
+
+The continuation retained the existing six-page translation and G4 tracker records. A new
+check on 2026-10-18 reproduced the reported stale `static/content-status.json` failure, with
+the other 12 content gates passing. Regenerated the ignored report using
+`npm run build:content-status` after the tracker edits. Run that command after any further
+tracker change and before `npm run check:content`; tracker digests determine freshness.
+No generated report is committed because the repository ignores it.
+
+Six-page file, heading-level and component-count parity was checked again; both locales
+remain draft. English G3 follow-up, independent G5 and full-page RTL/print inspection remain
+with the owners identified above, under the crew build/server restriction.
+
+Final rerun: `npm run check:content` passed all 13 gates. `git diff --check` passed.
