@@ -16,11 +16,11 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/efmp-302/crew-efmp-302-u03-translate-r1.misc.prompt.md
-  - specs/content/efmp-302/reviews/unit-03/G4/translation-handoff.md
-  - specs/content/efmp-302/tasks.md
+ - history/prompts/efmp-302/crew-efmp-302-u03-translate-r1.misc.prompt.md
+ - specs/content/efmp-302/reviews/unit-03/G4/translation-handoff.md
+ - specs/content/efmp-302/tasks.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -55,11 +55,11 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Verified EFMP-302 Unit 3 complete Urdu mirror against the English baseline, recorded G4 tracker row and translation handoff, and confirmed all 13 content gates pass cleanly.
+Verified EFMP-302 Unit 3's complete Urdu mirror against English baseline, recorded G4 tracker row and translation handoff, and confirmed all 13 content gates pass cleanly.
 
 ## Outcome
 
-- Impact: translate for EFMP-302 Unit 3 by agy (attempt 2).
+- Impact: translate for EFMP-302 Unit 3 by agy (attempt 1).
 - Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 3 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
@@ -67,11 +67,13 @@ Verified EFMP-302 Unit 3 complete Urdu mirror against the English baseline, reco
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Verified EFMP-302 Unit 3 complete Urdu mirror against the English baseline, recorded G4 tracker row and translation handoff, and confirmed all 13 content gates pass cleanly.
+- Shipped / changed: Verified EFMP-302 Unit 3's complete Urdu mirror against English baseline, recorded G4 tracker row and translation handoff, and confirmed all 13 content gates pass cleanly.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - translation_status stays draft per the skill; G4/G5 tracker rows remain open per ADR-0019; independent G5 review in a fresh session is the next step.
+  - translation_status stays draft on all files pending independent G5 Urdu review; G4 and G5 tracker rows remain open per ADR-0019.
+  - Build and dev server inspection were omitted per the brief; current rendered Urdu inspection (360px and A4 print) remains owed by the independent G5 review session.
+  - Seventeen unbanked concept labels from concepts/unit-03.md remain recorded for curriculum owner review in reviews/unit-03/G4/translation-handoff.md.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
