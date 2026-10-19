@@ -1,0 +1,5 @@
+# Render inspection limitation
+
+No rendered page or A4 print inspection was executed. The crew brief prohibits npm run build and dev servers. The rubric explicitly requires rebuilding stale build output before review. No fresh rendered artifact bound to this commit was handed over. Source and SVG label inspection cannot establish narrow-screen, dark-mode, keyboard, print pagination or clipping behaviour. No successful render-review command or synthetic render is recorded.
+
+Source inspection: all eight light SVG title/desc/text sets inspected, with corresponding dark variants bound. Topic page alt strings match the light SVG descriptions. Generic alt for fig-U6-8 gives no strategy details. Figure U6-8 labels unsafe behaviours under Prevention; change the heading to Risk behaviour or rewrite the column as preventative actions. Figure U6-2 treats not learning something from a source as common knowledge, which can wrongly excuse remembered borrowed ideas. Both require author repair, not reviewer mutation. Glyph fit remains unverified.
