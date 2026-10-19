@@ -15,7 +15,7 @@ reviewer initials). One row per unit per stage (`G1`–`G7`).
 | Unit 1 | G6 assets | ▢ | | |
 | Unit 1 | G7 publish | ▢ | | |
 | Unit 2 | G1 unit-spec | ▣ | | intake in progress |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-02/G2/20261017T115158129Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-02/G2/20261019T231851684Z-gates.json |
 | Unit 2 | G3 en-review | ▣ | | Advisory independent agy G3 **revise** (thread 04ddc645-f479-4d6d-a614-8f7e23db9fc0): SVG text geometry overflow (all 8 figures), subtopic U2-05 assessment omission, RRQ 5 mark scheme arithmetic contradiction, and unverifiable source declarations. Report: specs/content/geng-301/reviews/unit-02/G3/04ddc645-f479-4d6d-a614-8f7e23db9fc0.json. G3 stays open, unsigned (ADR-0019). |
 | Unit 2 | G4 ur-translation | ▢ | | |
 | Unit 2 | G5 ur-review | ▢ | | |
