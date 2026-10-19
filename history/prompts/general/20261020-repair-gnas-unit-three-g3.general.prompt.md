@@ -32,9 +32,12 @@ files:
   - specs/content/gnas-301/sources/texts/nidcd-noise-2025.md
   - specs/content/gnas-301/sources/texts/who-noise-2011.md
   - specs/content/gnas-301/tasks.md
+  - specs/content/gnas-301/reviews/unit-03/G2/20261019T143441329Z-gates.json
+  - specs/content/gnas-301/reviews/unit-03/G2/logs-20261019T143441329Z/
 tests:
   - scripts/heavy.sh npm test (26 files, 314 tests passed)
-  - npm run check:content (structural gates passed; G2 evidence refresh required)
+  - npm run check:content (all 13 gates passed after G2 refresh)
+  - EN/UR MCQ balance, checklist preservation and figure-carrier preservation assertions (passed)
   - git diff --check (passed)
 ---
 
@@ -67,7 +70,7 @@ overriding revise-topic's normal no-commit posture. No push, PR, build or server
 ## Outcome
 
 - Impact: Remaining latest-report advisories repaired; review status remains advisory.
-- Tests: 314 unit tests passed; final content-gate verification follows G2 refresh.
+- Tests: 314 unit tests and all 13 content gates passed; fresh G2 evidence records the repaired inputs.
 - Files: Unit 3 EN/UR content, concept/source/coverage records, tracker and required PHR.
 - Next prompts: Independent review only through the existing owner-governed review policy.
 - Reflection: Check the latest report and existing repairs before editing.
@@ -76,12 +79,12 @@ overriding revise-topic's normal no-commit posture. No push, PR, build or server
 
 - Shipped / changed: Unit 3 bounded G3 repairs, including matching Urdu edits.
 - Decisions the team must respect: No G3/G5 certification or publication state change; source copy isolates Unit 3 from Unit 6 evidence.
-- Pending / next owner: Refresh Unit 3 G2 evidence after the content commit; independent reviewers own any further review. Two review rounds already exist.
+- Pending / next owner: G2 evidence refreshed for content commit d86017c9; independent reviewers own any further review. Two review rounds already exist.
 - Paperclip issues affected: none; links.ticket is null.
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Fresh checkout lacked ignored static/content-status.json; regenerated with npm run build:content-status. Source edits invalidated deterministic G2 evidence as expected.
-- Graders run and results (PASS/FAIL): Unit tests PASS, diff whitespace PASS; content structural gates PASS; final gate result recorded after refresh.
+- Graders run and results (PASS/FAIL): Unit tests PASS (314), diff whitespace PASS, all 13 content gates PASS, preservation assertions PASS.
 - Prompt variant (if applicable): none.
 - Next experiment (smallest change to try): none required.

@@ -29,7 +29,7 @@ units may be authored.
 | Unit 2 | G6 assets | ▢ | | |
 | Unit 2 | G7 publish | ▢ | | |
 | Unit 3 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0020 + owner resolutions G-2026-22/G-2026-23 + floor D-2026-0021; content-spec status: approved |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-03/G2/20261013T123607714Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-03/G2/20261019T143441329Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | advisory rounds 1-2: round-2 PASS; report reviews/unit-03/G3/round-02/agent-g3-gnas301-u3-run002.json (disposition pass, advisory) |
 | Unit 3 | G4 ur-translation | ✅ | auto:g4 | all 7 Urdu mirror files at i18n/ur/.../gnas-301/unit-03/, 2026-09-24; heading parity exact, terminology-bank-driven, .ur.svg figure variants, zero em-dash; translation_status stays draft pending G5 |
 | Unit 3 | G5 ur-review | ▢ | | advisory round 1: revise (1 blocking, 11 advisory); report reviews/unit-03/G5/agent-g5-gnas301-u3-run001.json; blocking finding and advisories repaired post-report |
