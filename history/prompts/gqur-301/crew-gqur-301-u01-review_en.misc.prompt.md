@@ -4,16 +4,16 @@ title: crew review_en GQUR-301 unit 1
 stage: misc
 date: 2026-10-19
 surface: agent
-model: Gemini 3.8 Flash (High)
+model: agy
 feature: gqur-301
 branch: crew/gqur-301-u01-review_en
 user: crew
 command: crew review_en
-labels: ["crew", "agy", "review_en", "gqur-301", "unit-01"]
+labels: ["crew", "agy", "review_en"]
 links:
   spec: specs/content/gqur-301/content-spec.md
   ticket: null
-  adr: history/adr/0019-agent-review-governance.md
+  adr: null
   pr: null
 files:
  - history/prompts/gqur-301/crew-gqur-301-u01-review_en.misc.prompt.md
@@ -33,46 +33,64 @@ files:
  - specs/content/gqur-301/tasks.md
 tests:
  - npm run check:content
- - node scripts/review-evidence.mjs validate specs/content/gqur-301/reviews/unit-01/G3/459abd64-a834-454a-bb77-eaf0f571110a.json
 ---
 
-### Prompt Text
+## Prompt
 
-```text
-Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.
-```
+# Crew job gqur-301-u01-review_en
 
-### Response Text
+You are the agy worker on the B.Ed bilingual textbook repo, working in this checkout on branch `crew/gqur-301-u01-review_en`.
+Read AGENTS.md and CLAUDE.md first and obey them: no em dash (U+2014) anywhere, heavy commands only through
+`scripts/heavy.sh`, never run `npm run build` or a dev server, never mark G3/G5 done, never self-sign or use
+human initials, never edit the style guide, constitution, ADRs, gate scripts, catalog or an approved content-spec.
 
-Executed independent G3 English review of GQUR-301 Unit 1 per `.claude/skills/review-unit/SKILL.md`, `.claude/agents/g3-reviewer.md`, and ADR-0019 review evidence governance contracts:
-1. Prepared input manifest binding 106 committed repository files.
-2. Verified all 7 required G3 criteria (authority, sources, coverage, assessment, accessibility, readability, pedagogy).
-3. Ran all deterministic gate commands; all 13 repository content gates pass cleanly.
-4. Independently solved all 10 MCQs blind (10/10 agreement with author key), solved all 10 RRQs and 5 ERQs.
-5. Measured SVG text geometries via `scripts/measure-figure-text.mjs` and identified 24 text-geometry overflow problems across all 8 SVG figures and their dark variants.
-6. Identified mathematical counting defect in RRQ 5 model answer (raw age counts are 2, 6, 4 vs author's 3, 5, 4).
-7. Identified missing mapped citations in `topic-02.mdx` (`lane2023` and `ncc-maths`).
-8. Produced structured JSON report with disposition `revise` and human-readable summary.
-9. Verified report structure using `node scripts/review-evidence.mjs validate`.
-10. Recorded advisory report reference in `specs/content/gqur-301/tasks.md` without ticking G3 or adding initials.
+## Task
+Act as the INDEPENDENT G3 English reviewer of GQUR-301 Unit 1 (review-unit skill, .claude/agents/g3-reviewer.md). You did not write this unit. Produce the evidence report the skill specifies and the advisory tracker row. Never tick G3, never add reviewer initials, never self-sign.
+
+Follow `.claude/skills/review-unit/SKILL.md` exactly; read it and every file it references before starting.
+
+## Scope
+GQUR-301 Unit 1 only: its docs/licence and i18n files, its rows and folders under
+`specs/content/gqur-301/`, and `static/img/figures/gqur-301/unit-01/`.
+
+## Continue, do not restart
+Earlier attempts may have left work on this branch. Check `git log origin/main..HEAD` and `git status` and build on it.
+
+## Done when
+1. `npm run check:content` reports no finding that origin/main does not also report (run it, read every
+   failure, fix those in your scope, rerun). Findings that already exist on main belong to other jobs.
+2. All work is committed on this branch with a conventional commit message. Do not push and do not open a PR.
+3. Your final output ends with one line: `CREW-SUMMARY: <what you changed, in one sentence>`.
+4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit
+   needs (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
+
+
+## Response snapshot
+
+Produced validated independent G3 English review evidence and summary for GQUR-301 Unit 1 with disposition revise, recording the advisory report in tasks.md without ticking G3 or self-signing.
+
+## Outcome
+
+- Impact: review_en for GQUR-301 Unit 1 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 15 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-### What shipped
-- Independent G3 English review evidence package for GQUR-301 Unit 1 under `specs/content/gqur-301/reviews/unit-01/G3/`:
-  - `manifest.json` (106 bound inputs)
-  - `459abd64-a834-454a-bb77-eaf0f571110a.json` (validated G3 review evidence report, disposition `revise`)
-  - `459abd64-a834-454a-bb77-eaf0f571110a.summary.md` (detailed review summary with repair guidance)
-  - Evidence logs and artifacts in `logs-459abd64/` (command logs, raster render `fig-U1-1-render.png`, geometry measurement `measure-figures.txt`, `render-review.txt`, `independent-assessment-derivation.md`)
-- Updated advisory note for Unit 1 G3 in `specs/content/gqur-301/tasks.md`.
+- Shipped / changed: Produced validated independent G3 English review evidence and summary for GQUR-301 Unit 1 with disposition revise, recording the advisory report in tasks.md without ticking G3 or self-signing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Fix 24 SVG text geometry overflows across all 8 figures in static/img/figures/gqur-301/unit-01/ (add text-anchor: end; to .wm class for wordmark; adjust x/width on fig-U1-1 continuous example).
+  - Fix RRQ 5 model answer table in docs/semester-2/gqur-301/unit-01/unit-assessment.mdx to frequencies 2, 6, 4 (author key incorrectly states 3, 5, 4 for the 12 teacher ages).
+  - Add lane2023 and ncc-maths citations to docs/semester-2/gqur-301/unit-01/topic-02.mdx prose and Further reading as mapped in coverage/unit-01.md.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
-### Decisions the team must respect
-- G3 review disposition is `revise`. G3 remains unticked (`▢`) with no reviewer initials until an authoring/revision session addresses the identified defects and a fresh independent reviewer validates the repairs.
-- In accordance with ADR-0019 and review scope rules, the reviewer does not alter authored unit prose, assessment answers, or figure assets.
+## Evaluation notes (flywheel)
 
-### What is pending and who owns it
-- Content author / implementer needs to:
-  1. Fix text-geometry overflows in `static/img/figures/gqur-301/unit-01/*.svg` and `*.dark.svg` (add `text-anchor: end;` to `.wm` class for wordmark; adjust x/width for `fig-U1-1` continuous example box).
-  2. Fix RRQ 5 model answer frequencies in `docs/semester-2/gqur-301/unit-01/unit-assessment.mdx` from 3, 5, 4 to 2, 6, 4.
-  3. Add mapped citations `lane2023` and `ncc-maths` to `docs/semester-2/gqur-301/unit-01/topic-02.mdx` prose and `## Further reading`.
-  4. (Advisory) Revise MCQ 10 Option B interval `17-20` to `17-19` for equal class width.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
