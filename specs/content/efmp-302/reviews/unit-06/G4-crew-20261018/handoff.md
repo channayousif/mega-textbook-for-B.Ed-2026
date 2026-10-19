@@ -28,3 +28,9 @@ Pending owner/reviewer work:
 3. English RRQ 4 and its model answer ask about a new-teacher transition freeing attention, while Topic 6.2 assigns freed attention to the experienced stage. This inherited baseline inconsistency is mirrored, not silently corrected in translation. English author/owner must resolve it before fresh bound G3/G5 review. Existing G3/G5 reports predate this translation and cannot certify it.
 
 This was a continuation and repair pass; the original translation duration cannot be measured from the inherited checkout. No Paperclip issue was supplied. No push or PR is part of this job.
+
+## Generated-status follow-up (2026-10-18)
+
+Continued from abf24dd1 in response to the crew retry feedback. Ran `npm run build:content-status` to restore the ignored generated `static/content-status.json`, then `npm run check:content`: all 13 gates PASS, with no findings. Output is preserved in `check-content-regenerated-status.log`. The generated JSON remains ignored under the repository convention and is not committed. A fresh checkout must run `npm run build:content-status` before the content gate suite (the normal prebuild/prestart hooks also generate it). The earlier missing-file logs above remain historical evidence, superseded by this clean run.
+
+Re-ran `check-parity.cjs`: all seven pages, frozen-bank key terms, assessment mapping and figure carriers PASS. No prose, figure assets, tracker status or publication state changed in this follow-up. Existing owner and independent-review handoffs above still apply.
