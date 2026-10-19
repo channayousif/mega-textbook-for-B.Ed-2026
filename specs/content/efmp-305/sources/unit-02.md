@@ -22,3 +22,10 @@ G1 stage: to be verified at G2.
 | unesco2020 | UNESCO. (2020). *Global education monitoring report 2020: Inclusion and education: All means all*. UNESCO. | DOI: 10.54676/JJNK6989 | U2-1, U2-3 | open-access (unverified at G1) |
 | westwood2018 | Westwood, P. (2018). *Commonsense methods for children with special educational needs* (7th ed.). Routledge. | (print) | U2-2, U2-4 | print monograph (unverified at G1) |
 | florian2014 | Florian, L. (2014). What counts as evidence of inclusive education? *European Journal of Special Needs Education*, 29(3), 286-294. | DOI: 10.1080/08856257.2014.933551 | U2-5 | open-access (green, University of Edinburgh repository); verified in Crossref and OpenAlex 2026-10-10 (previous DOI and pages were wrong) |
+
+## Further reading only (not bound to a sub-topic)
+
+Hornby, G. (2014). *Inclusive special education*. Springer New York.
+DOI: 10.1007/978-1-4939-1483-8. Listed in topic 2.1 `## Further reading` only; no sub-topic claim
+rests on it, so it carries no coverage row. Record (title, author, publisher, year) verified in
+Crossref 2026-10-19.

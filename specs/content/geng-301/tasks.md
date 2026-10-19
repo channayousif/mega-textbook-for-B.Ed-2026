@@ -9,14 +9,14 @@ reviewer initials). One row per unit per stage (`G1`–`G7`).
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ▣ | | intake in progress; spec drafted, repairs pending |
 | Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-01/G2/20261018T190214168Z-gates.json |
-| Unit 1 | G3 en-review | ▢ | | |
+| Unit 1 | G3 en-review | ▣ | | Advisory revise only: see reviews/unit-01/G3/20261019T000000000Z-g3.json and continuation-summary.md; RRQ 5 repair pending; render evidence unavailable; no certification. |
 | Unit 1 | G4 ur-translation | ▢ | | English-only course |
 | Unit 1 | G5 ur-review | ▢ | | English-only course |
 | Unit 1 | G6 assets | ▢ | | |
 | Unit 1 | G7 publish | ▢ | | |
 | Unit 2 | G1 unit-spec | ▣ | | intake in progress |
 | Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-02/G2/20261017T115158129Z-gates.json |
-| Unit 2 | G3 en-review | ▢ | | |
+| Unit 2 | G3 en-review | ▣ | | Advisory independent agy G3 **revise** (thread 04ddc645-f479-4d6d-a614-8f7e23db9fc0): SVG text geometry overflow (all 8 figures), subtopic U2-05 assessment omission, RRQ 5 mark scheme arithmetic contradiction, and unverifiable source declarations. Report: specs/content/geng-301/reviews/unit-02/G3/04ddc645-f479-4d6d-a614-8f7e23db9fc0.json. G3 stays open, unsigned (ADR-0019). |
 | Unit 2 | G4 ur-translation | ▢ | | |
 | Unit 2 | G5 ur-review | ▢ | | |
 | Unit 2 | G6 assets | ▢ | | |
@@ -37,7 +37,7 @@ reviewer initials). One row per unit per stage (`G1`–`G7`).
 | Unit 4 | G7 publish | ▢ | | |
 | Unit 5 | G1 unit-spec | ▣ | | intake in progress |
 | Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-05/G2/20261018T190315267Z-gates.json |
-| Unit 5 | G3 en-review | ▢ | | |
+| Unit 5 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only; author repairs and provenance/render evidence pending. Report: specs/content/geng-301/reviews/unit-05/G3/20261019-codex-review.json. No certification. |
 | Unit 5 | G4 ur-translation | ▢ | | |
 | Unit 5 | G5 ur-review | ▢ | | |
 | Unit 5 | G6 assets | ▢ | | |
@@ -50,4 +50,4 @@ reviewer initials). One row per unit per stage (`G1`–`G7`).
 | Unit 6 | G6 assets | ▢ | | |
 | Unit 6 | G7 publish | ▢ | | |
 
-| Unit 5 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only; author repairs and provenance/render evidence pending. Report: specs/content/geng-301/reviews/unit-05/G3/20261019-codex-review.json. No certification. |
+| Unit 3 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation; findings: specs/content/geng-301/reviews/unit-03/G3/crew-20261019.json; content repairs and fresh independent provenance/render review pending; no certification |
