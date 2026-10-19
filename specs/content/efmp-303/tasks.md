@@ -95,7 +95,7 @@ unit-spec at intake (board-run G0/G1 intake pending).
 | Unit 6 | G1 unit-spec | ▢ | | board G0/G1 intake pending |
 | Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-303/reviews/unit-06/G2/20261017T113157445Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | |
-| Unit 6 | G4 ur-translation | ▢ | | |
+| Unit 6 | G4 ur-translation | ▣ | auto:gates | complete 6-file UR mirror (index + topic-01…03 + unit-assessment + unit-teacher-notes) committed; 10/10/5 assessment bank with Urdu MCQ option labels (الف/ب/ج/د) in original order; bounded answers section translated; 9 bank-bound key_terms; translated metadata, Bloom tags, figure alt text; all 13 content gates pass and parity/figures/key_terms clean under temporary reviewed flip (reverted); .ur.svg figure variants referenced but pending generate-figures Step 5; translation_status stays draft pending independent G5 |
 | Unit 6 | G5 ur-review | ▢ | | |
 | Unit 6 | G6 assets | ✅ | auto:gates | 6 schematics placed |
 | Unit 6 | G7 publish | ▢ | | |
