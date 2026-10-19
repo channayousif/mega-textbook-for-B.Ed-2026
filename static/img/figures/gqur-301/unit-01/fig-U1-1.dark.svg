@@ -1,55 +1,55 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Types of data concept map</title><desc id="d">A concept map placing 'Data' at the centre, branching into Qualitative and Quantitative, with Quantitative branching further into Discrete and Continuous, each with two Pakistani classroom examples.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700;fill:var(--ink)} .sh{font-size:12px;font-weight:600;fill:var(--ink)} .m{font-size:12px;fill:var(--muted)} .c{text-anchor:middle} .wm{fill:var(--wm);font-size:11px} .b1{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2} .b2{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2} .b3{fill:var(--a3-fill);stroke:var(--a3);stroke-width:2} .b4{fill:var(--a4-fill);stroke:var(--a4);stroke-width:2} .line{stroke:var(--line);stroke-width:2}</style><rect class="bg" x="0" y="0" width="780"/><rect class="bg" x="0" y="0" width="780" height="470"/>
 
   <!-- Centre: Data -->
-  <rect class="b1" x="310" y="200" width="160" height="50" rx="8"/>
-  <text class="h c" x="390" y="232">Data</text>
+  <rect class="b1" x="310" y="30" width="160" height="44" rx="8"/>
+  <text class="h c" x="390" y="57">Data</text>
 
   <!-- Branch: Qualitative -->
-  <line class="line" x1="310" y1="225" x2="180" y2="140"/>
-  <rect class="b2" x="80" y="110" width="200" height="40" rx="6"/>
-  <text class="sh c" x="180" y="136">Qualitative</text>
+  <line class="line" x1="310" y1="52" x2="170" y2="110"/>
+  <rect class="b2" x="70" y="110" width="200" height="40" rx="6"/>
+  <text class="sh c" x="170" y="136">Qualitative</text>
 
   <!-- Branch: Quantitative -->
-  <line class="line" x1="470" y1="225" x2="580" y2="140"/>
-  <rect class="b2" x="500" y="110" width="200" height="40" rx="6"/>
-  <text class="sh c" x="600" y="136">Quantitative</text>
+  <line class="line" x1="470" y1="52" x2="590" y2="110"/>
+  <rect class="b2" x="490" y="110" width="200" height="40" rx="6"/>
+  <text class="sh c" x="590" y="136">Quantitative</text>
 
   <!-- Qualitative examples -->
-  <line class="line" x1="130" y1="150" x2="80" y2="200"/>
-  <rect class="panel" x="20" y="185" width="160" height="30" rx="4"/>
-  <text class="m c" x="100" y="205">e.g. subjects taught</text>
+  <line class="line" x1="130" y1="150" x2="90" y2="200"/>
+  <rect class="panel" x="20" y="200" width="140" height="30" rx="4"/>
+  <text class="m c" x="90" y="220">e.g. subjects taught</text>
 
-  <line class="line" x1="180" y1="150" x2="200" y2="200"/>
-  <rect class="panel" x="160" y="185" width="160" height="30" rx="4"/>
-  <text class="m c" x="240" y="205">e.g. gender (M/F)</text>
+  <line class="line" x1="210" y1="150" x2="250" y2="200"/>
+  <rect class="panel" x="180" y="200" width="140" height="30" rx="4"/>
+  <text class="m c" x="250" y="220">e.g. gender (M/F)</text>
 
   <!-- Discrete -->
-  <line class="line" x1="560" y1="150" x2="520" y2="200"/>
-  <rect class="b3" x="440" y="185" width="160" height="35" rx="5"/>
-  <text class="sh c" x="520" y="207">Discrete (counts)</text>
+  <line class="line" x1="550" y1="150" x2="455" y2="190"/>
+  <rect class="b3" x="370" y="190" width="170" height="35" rx="5"/>
+  <text class="sh c" x="455" y="212">Discrete (counts)</text>
 
   <!-- Continuous -->
-  <line class="line" x1="640" y1="150" x2="680" y2="200"/>
-  <rect class="b3" x="640" y="185" width="130" height="35" rx="5"/>
-  <text class="sh c" x="705" y="207">Continuous</text>
+  <line class="line" x1="630" y1="150" x2="680" y2="190"/>
+  <rect class="b3" x="600" y="190" width="160" height="35" rx="5"/>
+  <text class="sh c" x="680" y="212">Continuous</text>
 
   <!-- Discrete examples -->
-  <line class="line" x1="480" y1="220" x2="450" y2="270"/>
-  <rect class="panel" x="380" y="258" width="180" height="28" rx="4"/>
-  <text class="m c" x="470" y="277">e.g. pupils present (25, 26)</text>
+  <line class="line" x1="410" y1="225" x2="380" y2="255"/>
+  <rect class="panel" x="290" y="255" width="180" height="28" rx="4"/>
+  <text class="m c" x="380" y="274">e.g. pupils present (25, 26)</text>
 
-  <line class="line" x1="540" y1="220" x2="560" y2="270"/>
-  <rect class="panel" x="510" y="258" width="170" height="28" rx="4"/>
-  <text class="m c" x="595" y="277">e.g. correct answers (18/20)</text>
+  <line class="line" x1="500" y1="225" x2="520" y2="295"/>
+  <rect class="panel" x="380" y="295" width="190" height="28" rx="4"/>
+  <text class="m c" x="475" y="314">e.g. correct answers (18/20)</text>
 
   <!-- Continuous examples -->
-  <line class="line" x1="670" y1="220" x2="650" y2="270"/>
-  <rect class="panel" x="570" y="258" width="180" height="28" rx="4"/>
-  <text class="m c" x="660" y="277">e.g. height (145.2 cm)</text>
+  <line class="line" x1="650" y1="225" x2="655" y2="255"/>
+  <rect class="panel" x="580" y="255" width="150" height="28" rx="4"/>
+  <text class="m c" x="655" y="274">e.g. height (145.2 cm)</text>
 
-  <line class="line" x1="720" y1="220" x2="740" y2="270"/>
-  <rect class="panel" x="690" y="258" width="85" height="28" rx="4"/>
-  <text class="m c" x="733" y="277">e.g. time (12.4 min)</text>
+  <line class="line" x1="745" y1="225" x2="745" y2="295"/>
+  <rect class="panel" x="610" y="295" width="150" height="28" rx="4"/>
+  <text class="m c" x="685" y="314">e.g. time (12.4 min)</text>
 
   <!-- Caption -->
   <rect class="panel" x="30" y="340" width="720" height="100" rx="6"/>

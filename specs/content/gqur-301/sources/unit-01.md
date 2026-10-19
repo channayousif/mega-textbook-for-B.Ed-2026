@@ -19,13 +19,18 @@ Verified 2026-10-09 against the course guide (`Scheme-and-Course-guides/extracte
 
 ## Unverifiable sources
 
-- `pbs`: the Pakistan Bureau of Statistics portal (https://www.pbs.gov.pk/) is a
-  government data portal with no single stable document; the prose uses it only
-  as an example of a secondary source of Pakistan/Sindh statistics. This is a
-  title-level reference to a portal, not a bound document. A reviewer should
-  verify that the portal serves the referenced education and demographic data.
-- `ncc-maths`: the National Curriculum Council website (https://ncc.gov.pk/)
-  serves mathematics curriculum documents as open PDFs. The prose uses it as an
-  example of a curriculum strand reference. This is a portal-level reference;
-  a reviewer should verify that the mathematics data-handling strands are
-  present in the NCC documents.
+- `pbs`: Pakistan Bureau of Statistics portal (https://www.pbs.gov.pk/), a
+  government data portal with no single stable document. Retrieval attempted
+  2026-10-19: the portal returned HTTP 200 and lists census, labour-force and
+  literacy publications, so the portal exists and serves the kind of data the
+  prose describes. No single table or report is bound as an excerpt; the prose
+  uses it only as an example of a secondary source. Owner ruling 2026-09-19
+  (D-2026-0001): flag and proceed.
+- `ncc-maths`: National Curriculum Council, *Mathematics Progression Grid*
+  (https://ncc.gov.pk/). Retrieval attempted 2026-10-19: the portal returned
+  HTTP 200, but the mathematics progression grid PDF was not located from the
+  portal's landing and download pages, so the data-handling strand it is cited
+  for is unread. The prose (Topic 1.2) uses it only as an example of a
+  curriculum document that can serve as a secondary source. Could not be
+  retrieved on 2026-10-19. Owner ruling 2026-09-19 (D-2026-0001): flag and
+  proceed.
