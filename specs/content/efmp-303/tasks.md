@@ -15,7 +15,7 @@ with a `concept-map` and two `timeline`s as the Art. III.10 schematics. G1 unit-
 | Unit 1 | G1 unit-spec | ▢ | | board G0/G1 intake pending |
 | Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-303/reviews/unit-01/G2/20261017T113027449Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | |
-| Unit 1 | G4 ur-translation | ▢ | | |
+| Unit 1 | G4 ur-translation | ▣ | | complete 7-file UR mirror verified against EN baseline (2026-10-18): 8 .ur.svg/.ur.dark.svg variants wired; structural parity, figure parity, and key_terms clean under temporary reviewed flip (reverted); translation_status stays draft pending fresh independent G5 |
 | Unit 1 | G5 ur-review | ▢ | | |
 | Unit 1 | G6 assets | ✅ | auto:gates | 8 schematics placed |
 | Unit 1 | G7 publish | ▢ | | |
