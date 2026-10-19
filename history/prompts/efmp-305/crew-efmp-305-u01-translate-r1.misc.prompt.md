@@ -1,8 +1,8 @@
 ---
 id: crew-efmp-305-u01-translate-r1
-title: crew translate EFMP-305 unit 1 r1
+title: crew translate EFMP-305 unit 1
 stage: misc
-date: 2026-10-18
+date: 2026-10-19
 surface: agent
 model: agy
 feature: efmp-305
@@ -66,30 +66,30 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Audited and polished EFMP-305 Unit 1 Urdu mirror (5 files) for academic-plain Urdu register, grammar, and terminology; corrected translation defects (replacing spurious "پردگی" with "اخراج", fixing "بضدی" to "بمقابلہ", repairing typos and gender agreements); aligned figure alt text and SVG desc for fig-U1-4 and regenerated dark variant; authored G4 translation handoff; recorded G4 tracker row in tasks.md; verified with all 13 content gates passing.
+Reconciled and polished EFMP-305 Unit 1 Urdu translation across 5 content files and fig-U1-4, authored G4 translation handoff, and recorded the in-progress G4 row in tasks.md with all 13 content gates passing.
 
 ## Outcome
 
-- Impact: translate-r1 for EFMP-305 Unit 1 by agy.
-- Tests: npm run check:content passed (13/13 gates) in the worktree.
+- Impact: translate for EFMP-305 Unit 1 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 10 file(s), listed above.
-- Next prompts: fresh independent G5 Urdu review by an independent reviewer.
-- Reflection: none.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Polished and verified EFMP-305 Unit 1 Urdu mirror across all 5 files, created G4 translation handoff record, aligned fig-U1-4 desc and regenerated dark variant, recorded G4 tracker row as in progress (`▣`) with blank reviewer initials in tasks.md, all 13 content gates passing.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything. translation_status remains draft.
-- Pending / next owner: independent G5 Urdu reviewer.
+- Shipped / changed: Reconciled and polished EFMP-305 Unit 1 Urdu translation across 5 content files and fig-U1-4, authored G4 translation handoff, and recorded the in-progress G4 row in tasks.md with all 13 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit 1 Urdu mirror has complete 5-file structural, heading, and figure parity with English baseline 9e6da648; translation_status stays draft pending fresh independent G5 review.
-  - Declared key_terms in index.mdx conform to terminology.csv; 8 unbanked concept labels from concepts/unit-01.md and glossary.json are documented in reviews/unit-01/G4/translation-handoff.md for curriculum owner review.
-  - The concept graph file (concepts/unit-01.md) uses "شامل تعلیم" for "Inclusive education" while the bank mandates "شمولیتی تعلیم" - curriculum owner should reconcile before G5 review.
-- Paperclip issues affected: none.
+  - G5 Urdu review by an independent reviewer is the next step; translation_status stays draft across all 5 files.
+  - Bank term 'شمولیتی تعلیم' is strictly adhered to in all files; 8 unbanked concept labels are recorded in specs/content/efmp-305/reviews/unit-01/G4/translation-handoff.md for curriculum owner review.
+  - The concept graph file (concepts/unit-01.md) still carries 'شامل تعلیم' for Inclusive Education and should be reconciled by the curriculum owner before G5 review.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none.
-- Graders run and results (PASS/FAIL): check:content PASS (13/13).
-- Prompt variant (if applicable): crew brief v1.
-- Next experiment (smallest change to try): none.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
