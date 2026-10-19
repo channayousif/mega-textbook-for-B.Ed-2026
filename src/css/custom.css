@@ -872,6 +872,57 @@ html[data-theme='dark'] .figure__img--dark {
     size: A4;
     margin: 15mm;
   }
+  /* Paper is white, so print in ink whatever the screen theme is. A dark-mode
+     reader printed light-grey text (#e3e3e3) on white, and light mode's muted
+     greys (captions, secondary text) also came out faint. Restore the light
+     ramp, darken the greys and make body text pure black. Same specificity as
+     the dark-theme rules above and later in the file, so this wins in print. */
+  :root,
+  html[data-theme='dark'] {
+    --ifm-color-primary-darkest: #154b3e;
+    --ifm-color-primary-darker: #195b4b;
+    --ifm-color-primary-dark: #1c6554;
+    --ifm-color-primary: #1f6f5c;
+    --ifm-color-primary-light: #227b66;
+    --ifm-color-primary-lighter: #268770;
+    --ifm-color-primary-lightest: #2c9f84;
+    --ifm-color-emphasis-0: #fff;
+    --ifm-color-emphasis-100: #f5f6f7;
+    --ifm-color-emphasis-200: #ebedf0;
+    --ifm-color-emphasis-300: #b0b5bb;
+    --ifm-color-emphasis-400: #8d949e;
+    --ifm-color-emphasis-500: #606770;
+    --ifm-color-emphasis-600: #444950;
+    --ifm-color-emphasis-700: #303846;
+    --ifm-color-emphasis-800: #1c1e21;
+    --ifm-color-emphasis-900: #000;
+    --ifm-color-emphasis-1000: #000;
+    --ifm-color-content: #000;
+    --ifm-color-content-secondary: #303846;
+    --ifm-font-color-base: #000;
+    --ifm-font-color-secondary: #303846;
+    --ifm-heading-color: #000;
+    --ifm-background-color: #fff;
+    --ifm-background-surface-color: #fff;
+    --ifm-link-color: #195b4b;
+    --ifm-blockquote-color: #1c1e21;
+    --tone-story-bg: #fdf6e7;
+    --tone-task-bg: #eaf5f1;
+    --tone-warn-bg: #fdefee;
+    --tone-example-bg: #edf2fb;
+    --tone-rubric-bg: #f3effb;
+    color-scheme: light;
+  }
+  body {
+    color: #000;
+    background: #fff;
+  }
+  /* These pick the lighter shade for a dark screen; on paper they take the light one. */
+  html[data-theme='dark'] .theme-doc-markdown > h2,
+  html[data-theme='dark'] .topic-section > h2,
+  html[data-theme='dark'] .answer-note > summary {
+    color: var(--ifm-color-primary-darker);
+  }
   .navbar,
   .theme-doc-sidebar-container,
   .theme-doc-toc-desktop,
