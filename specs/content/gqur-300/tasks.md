@@ -15,7 +15,7 @@ on every unit).
 | Unit 1 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0042; content-spec status: approved |
 | Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-01/G2/20261013T123540557Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 93e6321; report reviews/unit-01/G3/agent-g3-gqur300-u1-run001.json |
-| Unit 1 | G4 ur-translation | ▢ | | draft mirror refreshed 2026-10-18; reviews/unit-01/G4/handoff.md; no completion claim per translate-unit Step 7 |
+| Unit 1 | G4 ur-translation | ▢ | | draft mirror rechecked 2026-10-18; comparative wording repaired; reviews/unit-01/G4/handoff.md and retry-parity.json; no completion claim per translate-unit Step 7 |
 | Unit 1 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at 2222688; G3 dependency escalated to owner; report reviews/unit-01/G5/agent-g5-gqur300-u1-run001.json |
 | Unit 1 | G6 assets | ▢ | | |
 | Unit 1 | G7 publish | ▢ | | |
