@@ -1,0 +1,1 @@
+Initial HEAD and origin/main both f88db171eafda4e13966a5f5aa8c69f139faefef; git status clean before prepare. Initial check-content.log records the same source state as origin/main. Only failure: missing ignored static/content-status.json. Generated with npm run build:content-status, exit 0.

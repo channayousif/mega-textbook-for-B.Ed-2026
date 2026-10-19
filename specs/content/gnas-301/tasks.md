@@ -22,8 +22,9 @@ units may be authored.
 | Unit 1 | G6 assets | ▢ | | |
 | Unit 1 | G7 publish | ▢ | | gate-checked tier pre-authorised by D-2026-0014 |
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0020 + owner resolutions G-2026-22/G-2026-23 + floor D-2026-0021; content-spec status: approved |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-02/G2/20261013T123554639Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-02/G2/20261019T142940752Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | advisory rounds 1-2: revise then PASS; round-2 report reviews/unit-02/G3/round-02/agent-g3-gnas301-u2-run002.json (disposition pass, advisory); round-2 advisories applied post-report |
+| Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied; report reviews/unit-02/G3/agent-g3-gnas301-u2-run001.json |
 | Unit 2 | G4 ur-translation | ✅ | auto:g4 | all 6 Urdu mirror files at i18n/ur/.../gnas-301/unit-02/, 2026-09-24; heading parity exact, terminology-bank-driven, .ur.svg figure variants, zero em-dash; translation_status stays draft pending G5 |
 | Unit 2 | G5 ur-review | ▢ | | advisory round 1: escalate (6 blocking, 12 advisory); report reviews/unit-02/G5/agent-g5-gnas301-u2-run001.json; content defects repaired post-report; stale G3 dependency recorded as G-2026-34 |
 | Unit 2 | G6 assets | ▢ | | |
@@ -50,11 +51,13 @@ units may be authored.
 | Unit 5 | G6 assets | ▢ | | |
 | Unit 5 | G7 publish | ▢ | | |
 | Unit 6 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0020 + owner resolutions G-2026-22/G-2026-23 + floor D-2026-0021; content-spec status: approved |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-06/G2/20261013T123627106Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-06/G2/20261019T152104631Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | advisory rounds 1-2: revise; reports reviews/unit-06/G3/agent-g3-gnas301-u6-run001.json + round-02/agent-g3-gnas301-u6-run002.json; round-2 blocking findings (ERQ-04 6.4+6.5 integration, RRQ/MCQ surplus, WHO framing, anwar2026 claim) repaired post-report; two-cycle limit reached, third cycle owner-gated (G-2026-33) |
+| Unit 6 | G3 en-review | ▢ | | advisory: revise; repairs applied; report reviews/unit-06/G3/agent-g3-gnas301-u6-run001.json |
 | Unit 6 | G4 ur-translation | ✅ | auto:g4 | all 9 Urdu mirror files at i18n/ur/.../gnas-301/unit-06/, 2026-09-24; heading parity exact, terminology-bank-driven, .ur.svg figure variants, zero em-dash; translation_status stays draft pending G5 |
 | Unit 6 | G5 ur-review | ▢ | | advisory round 1: escalate (7 blocking, 9 advisory); report reviews/unit-06/G5/agent-g5-gnas301-u6-run001.json; 6 content blockings repaired post-report, dependency escalation folded into G-2026-34's owner question |
 | Unit 6 | G6 assets | ▢ | | |
 | Unit 6 | G7 publish | ▢ | | |
-
+| Unit 1 | G3 en-review | ▢ | | advisory: revise; repairs applied; verified existing repairs against reviews/unit-01/G3/20260923T205300Z-g3-attempt-01.json and latest round-02/20260923T214406Z-g3-attempt-02.json; completed descriptive DOI links (EN/UR), cross-topic teacher references (EN/UR), and drinking-water source identification; course-overview credit split and shared excerpt heading remain for course owner; G3 unticked, fresh review owner-gated by G-2026-24 |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-01/G2/20261019T142036397Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | advisory: revise; repairs applied against reviews/unit-05/G3/round-02/agent-g3-gnas301-u5-run002.json and 20260924T001055Z-g3-attempt-01.json; EN/UR assessment, concept links, source dates and coverage reconciled; details reviews/unit-05/20261019-repair-notes.md; G3 unticked, fresh review owner-gated by G-2026-32 |

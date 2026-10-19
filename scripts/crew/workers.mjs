@@ -47,6 +47,16 @@ export const STAGES = {
   translate:  { chain: ['codex', 'claude', 'agy', 'opencode'], skill: 'translate-unit' },
   review_ur:  { chain: ['claude', 'agy', 'opencode', 'codex'], skill: 'review-unit', reviewOf: 'translate' },
   fix:        { chain: ['opencode', 'codex', 'agy', 'claude'], skill: null },
+  // Self-maintenance (scripts/crew/maintenance.mjs, intel.mjs). The distill job leads with agy and
+  // codex so the daily model call does not spend the Claude quota the weekly survey needs.
+  intel_distill:  { chain: ['agy', 'codex', 'opencode', 'claude'], skill: 'intel-distill' },
+  maint_survey:   { chain: ['claude', 'codex', 'agy', 'opencode'], skill: 'weekly-maintenance' },
+  maint_refactor: { chain: ['codex', 'claude', 'opencode', 'agy'], skill: 'weekly-maintenance' },
+  maint_docs:     { chain: ['claude', 'agy', 'codex', 'opencode'], skill: 'weekly-maintenance' },
+  maint_adr:      { chain: ['claude', 'codex', 'agy'], skill: 'weekly-maintenance' },
+  maint_skill:    { chain: ['claude', 'codex'], skill: 'weekly-maintenance' },
+  // `reviewOf: 'parent'`: never the family of the job whose PR is under review.
+  maint_review:   { chain: ['agy', 'codex', 'claude', 'opencode'], skill: 'weekly-maintenance', reviewOf: 'parent' },
 };
 
 /** Text in a worker's log that means "out of quota", not "bad work". */

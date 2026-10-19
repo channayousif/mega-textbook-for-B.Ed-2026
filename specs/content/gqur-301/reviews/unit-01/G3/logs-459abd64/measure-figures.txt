@@ -1,0 +1,50 @@
+✗ static/img/figures/gqur-301/unit-01/fig-U1-1.dark.svg
+    overflows right edge by 12.9px: "e.g. time (12.4 min)"
+✗ static/img/figures/gqur-301/unit-01/fig-U1-1.svg
+    overflows right edge by 12.9px: "e.g. time (12.4 min)"
+✗ static/img/figures/gqur-301/unit-01/fig-U1-2.dark.svg
+    overflows right edge by 53.9px: "textbook.com.pk"
+✗ static/img/figures/gqur-301/unit-01/fig-U1-2.svg
+    overflows right edge by 53.9px: "textbook.com.pk"
+✗ static/img/figures/gqur-301/unit-01/fig-U1-3.dark.svg
+    overflows right edge by 53.9px: "textbook.com.pk"
+✗ static/img/figures/gqur-301/unit-01/fig-U1-3.svg
+    overflows right edge by 53.9px: "textbook.com.pk"
+✗ static/img/figures/gqur-301/unit-01/fig-U1-4.dark.svg
+    overflows right edge by 53.9px: "textbook.com.pk"
+✗ static/img/figures/gqur-301/unit-01/fig-U1-4.svg
+    overflows right edge by 53.9px: "textbook.com.pk"
+✗ static/img/figures/gqur-301/unit-01/fig-U1-5.dark.svg
+    overflows right edge by 53.9px: "textbook.com.pk"
+✗ static/img/figures/gqur-301/unit-01/fig-U1-5.svg
+    overflows right edge by 53.9px: "textbook.com.pk"
+✗ static/img/figures/gqur-301/unit-01/fig-U1-6.dark.svg
+    overflows right edge by 53.9px: "textbook.com.pk"
+✗ static/img/figures/gqur-301/unit-01/fig-U1-6.svg
+    overflows right edge by 53.9px: "textbook.com.pk"
+✗ static/img/figures/gqur-301/unit-01/fig-U1-7.dark.svg
+    overflows right edge by 53.9px: "textbook.com.pk"
+✗ static/img/figures/gqur-301/unit-01/fig-U1-7.svg
+    overflows right edge by 53.9px: "textbook.com.pk"
+✗ static/img/figures/gqur-301/unit-01/fig-U1-8.dark.svg
+    overflows right edge by 53.9px: "textbook.com.pk"
+✗ static/img/figures/gqur-301/unit-01/fig-U1-8.svg
+    overflows right edge by 53.9px: "textbook.com.pk"
+✗ static/img/figures/gqur-301/unit-01/fig-U1-1.dark.svg
+    overflows right edge by 12.9px: "e.g. time (12.4 min)"
+✗ static/img/figures/gqur-301/unit-01/fig-U1-2.dark.svg
+    overflows right edge by 53.9px: "textbook.com.pk"
+✗ static/img/figures/gqur-301/unit-01/fig-U1-3.dark.svg
+    overflows right edge by 53.9px: "textbook.com.pk"
+✗ static/img/figures/gqur-301/unit-01/fig-U1-4.dark.svg
+    overflows right edge by 53.9px: "textbook.com.pk"
+✗ static/img/figures/gqur-301/unit-01/fig-U1-5.dark.svg
+    overflows right edge by 53.9px: "textbook.com.pk"
+✗ static/img/figures/gqur-301/unit-01/fig-U1-6.dark.svg
+    overflows right edge by 53.9px: "textbook.com.pk"
+✗ static/img/figures/gqur-301/unit-01/fig-U1-7.dark.svg
+    overflows right edge by 53.9px: "textbook.com.pk"
+✗ static/img/figures/gqur-301/unit-01/fig-U1-8.dark.svg
+    overflows right edge by 53.9px: "textbook.com.pk"
+
+24 text-geometry problem(s).
