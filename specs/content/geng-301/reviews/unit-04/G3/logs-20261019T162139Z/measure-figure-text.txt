@@ -1,0 +1,14 @@
+✗ static/img/figures/geng-301/unit-04/fig-U4-1.svg
+    overflows right edge by 43.0px: "textbook.com.pk"
+✗ static/img/figures/geng-301/unit-04/fig-U4-2.svg
+    overflows right edge by 43.0px: "textbook.com.pk"
+✗ static/img/figures/geng-301/unit-04/fig-U4-3.svg
+    overflows right edge by 43.0px: "textbook.com.pk"
+✗ static/img/figures/geng-301/unit-04/fig-U4-4.svg
+    overflows right edge by 43.0px: "textbook.com.pk"
+✗ static/img/figures/geng-301/unit-04/fig-U4-5.svg
+    overflows right edge by 34.6px: "textbook.com.pk"
+✗ static/img/figures/geng-301/unit-04/fig-U4-6.svg
+    overflows right edge by 43.0px: "textbook.com.pk"
+
+6 text-geometry problem(s).
