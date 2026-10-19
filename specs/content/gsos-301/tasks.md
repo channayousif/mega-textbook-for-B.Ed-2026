@@ -16,7 +16,7 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit 1 | G1 unit-spec | ▢ | | pending G0 intake |
 | Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-01/G2/20261017T120744171Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | advisory: revise; figure text overflows and citation mismatches; report specs/content/gsos-301/reviews/unit-01/G3/7725a4f0-f3eb-4a48-aed1-23a2605c30d8.json |
-| Unit 1 | G4 ur-translation | ▣ | auto:gates | authored; QC checks pending |
+| Unit 1 | G4 ur-translation | ▣ | auto:gates | full UR mirror (6 files) and 6 figure variants authored; gates pass; translation_status stays draft pending G5; handoff reviews/unit-01/G4/translation-handoff.md |
 | Unit 1 | G5 ur-review | ▢ | | awaiting CurriculumOwner |
 | Unit 1 | G6 assets | ▢ | | 6 figures prompt-only; schematic handoff pending |
 | Unit 1 | G7 publish | ▢ | | |

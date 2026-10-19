@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">عمرانیات اور متعلقہ شعبے</title><desc id="d">ایک وین ڈائیگرام جو عام شعور، نفسیات اور سوشل ورک کے ساتھ عمرانیات کے باہمی اشتراک کو دکھاتی ہے، جبکہ عمرانیات کا اپنا مخصوص دائرہ گروہوں، اداروں اور سماجی نمونوں کے منظم مطالعے کے طور پر نمایاں ہے۔</desc>
+<style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671} .bg{fill:var(--bg)} .circle{fill:var(--panel);stroke:var(--line);stroke-width:2;fill-opacity:0.45} .soc-circle{fill:var(--a1-fill);stroke:var(--a1);stroke-width:3;fill-opacity:0.6} text{font-size:13px;fill:var(--ink);text-anchor:middle} .h{font-size:15px;font-weight:700} .m{font-size:11px;fill:var(--muted)} .wm{fill:var(--wm);font-size:11px}</style>
+<rect class="bg" x="0" y="0" width="780" height="470"/>
+<!-- Overlapping Circles -->
+<circle class="circle" cx="240" cy="170" r="120"/>
+<circle class="circle" cx="540" cy="170" r="120"/>
+<circle class="circle" cx="390" cy="320" r="110"/>
+<!-- Central Sociology Circle -->
+<ellipse class="soc-circle" cx="390" cy="210" rx="140" ry="110"/>
+
+<!-- Outer Circle Labels -->
+<text class="h" x="180" y="120" fill="var(--a2)">عام شعور</text>
+<text class="m" x="180" y="140">غیر جانچے گئے روزمرہ عقائد</text>
+<text class="m" x="180" y="155">اور روایتی مفروضات</text>
+
+<text class="h" x="600" y="120" fill="var(--a3)">نفسیات</text>
+<text class="m" x="600" y="140">انفرادی ذہنی عمل،</text>
+<text class="m" x="600" y="155">ادراک اور نجی خصائص</text>
+
+<text class="h" x="390" y="395" fill="var(--a4)">سوشل ورک</text>
+<text class="m" x="390" y="415">عملی مداخلت، فلاحی بہبود</text>
+<text class="m" x="390" y="430">اور انفرادی مدد</text>
+
+<!-- Sociology Central Distinct Zone -->
+<text class="h" x="390" y="195" fill="var(--a1)">عمرانیات</text>
+<text class="m" x="390" y="215" font-weight="600">مخصوص دائرہ:</text>
+<text class="m" x="390" y="232">گروہوں، اداروں اور سماجی نمونوں</text>
+<text class="m" x="390" y="247">کا منظم مطالعہ</text>
+
+<!-- Overlap Explanations -->
+<text class="m" x="290" y="185">مشترکہ روزمرہ زندگی</text>
+<text class="m" x="490" y="185">سماجی نفسیات</text>
+<text class="m" x="390" y="285">اداراتی تجزیہ</text>
+<text class="wm" x="768" y="460" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>
