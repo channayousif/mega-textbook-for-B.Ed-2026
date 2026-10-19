@@ -63,7 +63,7 @@ Applied remaining Unit 4 G3 findings with matching Urdu edits, corrected source 
 
 - Shipped / changed: Bounded Unit 4 repairs and deterministic G2 evidence refresh.
 - Decisions the team must respect: G3 remains unticked; no self-certification or publication changes. Existing repairs retained.
-- Pending / next owner: Owner owns G-2026-31 third-cycle authorization. Missing generated static/content-status.json also fails on origin/main.
+- Pending / next owner: Owner owns G-2026-31 third-cycle authorization. Generated static/content-status.json is now present locally; it is ignored and must be regenerated in fresh checkouts before checking content status.
 - Paperclip issues affected: null; no TEX issue supplied.
 
 ## Evaluation notes (flywheel)
@@ -75,7 +75,8 @@ Applied remaining Unit 4 G3 findings with matching Urdu edits, corrected source 
 
 ## Final validation
 
-- Branch and origin/main each pass 12 of 13 content gates. Both fail only check:content-status because static/content-status.json is missing. No new findings remain.
+- Earlier attempt: branch and origin/main each passed 12 of 13 content gates, with the missing generated content-status artifact as the sole failure.
+- Completion run: npm run build:content-status generated the ignored local artifact; scripts/heavy.sh npm run check:content passed all 13 gates with no findings. No build or server was run.
 - All 314 tests in 26 unit-test files passed.
 - Eight deterministic G2 checks passed; fresh Unit 4 evidence and tracker reference recorded.
 - EN/UR MCQ key agreement checked after option swaps. git diff --check passed.
