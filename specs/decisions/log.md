@@ -3146,3 +3146,114 @@ content-improvement loop with no further cycle.
   - **No escalation.** Reserved codes `G-2026-150` to `G-2026-153` are unused.
   - Context only, not judged: authored Units 1-2 and their coverage, sources and figure files.
   - Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
+
+## D-2026-0052 - GPKS-402 intake: identity, coverage, outcome traces (except SLO 6-1), structure and decision residue approved; partition, readings escalated; blueprint fails
+
+- **Status:** confirmed (owner, 2026-10-10; escalations ruled in D-2026-0053; spec approval still requires the listed author repairs and a fresh intake)
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** GPKS-402 Pakistan Studies, `specs/content/gpks-402/content-spec.md` (status: draft)
+  at commit `26ecd199`. Settles only the five criteria approved below.
+- **Decided by:** agent:evaluator, 2026-10-10 (fresh session; did not draft the spec, which the
+  Paperclip BilingualAuthor agent drafted)
+- **Decision:**
+  1. **identity - approved.** GPKS-402, "Pakistan Studies", 2 (2-0), General Education,
+     Semester 2, as `catalog/courses.json` records. The guide's "GPKS - 302" is the guide-side
+     slip already adjudicated by the owner in `G-2026-03` (resolved), which binds; no new
+     Article II.3 question arises.
+  2. **coverage - approved at row level.** The guide's 43 teaching-week sub-topic bullets
+     (Weeks 1-8 and 10-15) map to the spec's 47 checklist rows (6/6/7/11/7/10), each exactly
+     once; the only expansions are three decompositions of compound bullets using the guide's own
+     words ("Constitutions of 1956 and 1962" into U3-02/U3-03; "Legislature, Executive,
+     Judiciary" into U4-02..U4-04; "Agriculture, industry, and trade" into U5-01/U5-02). No row
+     introduces a sub-topic the guide lacks. `### Topic list` cells form a total, disjoint
+     partition of every checklist, and every `Topic` column agrees (verified mechanically).
+  3. **outcomes - approved for 13 of 14 SLOs.** Every SLO paraphrases guide week bullets, and the
+     objective traces for Units 1-5 and `SLO:GPKS-402-6-2`/`6-3` are supported by the objectives'
+     wording. `SLO:GPKS-402-6-1` is escalated (`G-2026-99`).
+  4. **structure - approved against the bound inputs.** Front matter conforms to
+     `contracts/content-spec-frontmatter.schema.json`; every unit carries the checklist with a
+     `Topic` column, a `### Topic list`, a parseable `**Depth budget**` band, a figure plan with
+     at least two figures per topic and at least one concept-map/flowchart/timeline per unit, and
+     a unit-end blueprint line for the 10/10/5 bands of `specs/content/style-guide.md:227-230`.
+  5. **decision-residue - approved.** No confirmed decision is scoped to GPKS-402. The whole spec
+     was searched for the designs superseded by `G-2026-03` (code GPKS-302, Semester IV) and
+     `D-2026-0003` (`.specify` variant guides): "302" appears only in the descriptive note at
+     `content-spec.md:10`, never as an identifier; no Semester IV or `.specify` reference exists;
+     all unit paths are `docs/semester-2/gpks-402/`.
+- **Not approved:**
+  - **partition** - escalated, `G-2026-97`. The guide gives a 16-week table and no units; the
+    six-unit merge (Unit 4 spanning the Week 9 mid-term) is a judgement. The spec's
+    `## Week schedule` table and the Unit 4-6 opening lines also misstate the guide's weeks, a
+    guide-determined defect for the author to correct.
+  - **readings** - escalated, `G-2026-98`. One guide entry (the HEC curriculum) does not identify
+    a single document; all four are print-only; no open-access floor is declared; both curated
+    supplements are defective (one not locatable, one off-topic and tagged to a non-existent
+    Unit 8).
+  - **blueprint** - **fail**, a defect for the author to repair, not an owner question. Every
+    unit's ERQ line reads "ERQs (5): ... one per topic plus one integrative", which yields 3 ERQs
+    for the two-topic Units 1, 2, 3 and 5 and 4 for the three-topic Units 4 and 6, never the 5
+    the same line and the style guide require; Units 4 and 6 add an ambiguous "(at least 4.1,
+    4.2)" / "(at least 6.1, 6.2)". MCQ/RRQ bands, the Analyze-or-higher summative item and the
+    Article III.7 60/40 default are consistent.
+  - **outcomes for `SLO:GPKS-402-6-1`** - escalated, `G-2026-99`.
+- **Basis:** guide `Scheme-and-Course-guides/extracted-text/2nd 2026.txt` - code, credit hours and
+  semester `:980-982`; objectives `:996-1006`; weekly breakdown `:1008-1141` (mid-term `:1085`,
+  review `:1137-1141`); readings `:1143-1153`. Revised board Scheme (owner-designated final
+  authority) `B.Ed 4 Year 2026 revised after board.txt:90` (SEMESTER II heading) and `:176-186`
+  (`GPKS - 402 / Pakistan Studies / 2 (2-0) / General Education`). Deterministic checks and the
+  per-criterion locators are in the evaluation record.
+- **Bound to:** `intake/GPKS-402/manifest.json`, manifest digest
+  `513a177525d45102d39c8d4cee3a52d9f1c3b333575535987465988ed6c4512a` (63 inputs, recomputed with
+  `manifestFor()`, zero mismatches; registers `specs/decisions/log.md` and `specs/gaps.md`
+  matched at read time). A change to any bound input voids this approval (Art. VII.8.5).
+- **Blocked, by unit and section:** the `## Week schedule` table and every unit's "Weeks" line
+  (`G-2026-97`); the `## Reading list` and every unit's `**Mapped readings**` line (`G-2026-98`);
+  the Unit 6 `**CLO/SLO refs**` line for SLO 6-1 (`G-2026-99`); every unit's
+  `**Unit-end assessment blueprint**` ERQ line (blueprint fail); authored Units 1 and 2 (EN and
+  UR) pending the owner's disposition (`G-2026-100`).
+- **Limits:** this does not make the spec approvable. `status: approved` requires owner rulings on
+  `G-2026-97`, `-98` and `-99`, the author's repair of the ERQ blueprint, week schedule, unit
+  titles and reading-list defects, and a fresh intake on a newly prepared bundle (the repairs
+  change a bound input and void this entry). Coverage is approved at row level only: the
+  descriptive glosses inside rows (for example U3-04 "the gap between 1956 and 1973", U5-03
+  "poverty, inequality and debt", which overlaps U6-05, U5-05 "tribal", and the enumerations in
+  U4-09, U4-10, U6-02, U6-03, U6-07) are the spec's wording, not the guide's, and are left to G3.
+  The placement of the guide's Week 16 review items (`:1139-1141`) is not settled here. This
+  certifies no content, qualifies no reviewer, authorises no publication and says nothing about
+  the authored Units 1 and 2.
+
+## D-2026-0069 - GPKS-402 fresh G0/G1 intake: all eight criteria approved
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** GPKS-402 Pakistan Studies, all six units
+- **Decided by:** agent:evaluator, 2026-10-17
+- **Decision:** approve all eight intake criteria - identity, partition, coverage, outcomes,
+  readings, blueprint, structure, decision-residue. The three escalations the prior intake
+  (`D-2026-0052`) raised (`G-2026-97` partition, `G-2026-98` readings, `G-2026-99` outcomes)
+  were resolved by the confirmed owner ruling `D-2026-0053` (2026-10-10); this intake verifies
+  the repaired spec against that ruling rather than re-raising them. The blueprint and
+  source-floor defects `D-2026-0052` found are repaired and confirmed by the deterministic gates.
+- **Basis:** guide `Scheme-and-Course-guides/extracted-text/2nd 2026.txt` lines 979-1153 (code
+  `:980`, title `:982`, description `:986-994`, objectives `:996-1006`, weeks `:1008-1141`,
+  readings `:1143-1153`); revised board Scheme `B.Ed 4 Year 2026 revised after board.txt` (final
+  authority, `G-2026-03`); catalog `courses.json` Semester 2 `GPKS-402 / Pakistan Studies / 2 (2-0)`.
+  Owner ruling `D-2026-0053` confirmed the partition grouping (`G-2026-97`), the author-selected
+  readings approach with open-access floor (`G-2026-98`), and outcome derivation from
+  outcomes+readings (`G-2026-99`); Units 1-2 withdrawn (`G-2026-100`). Deterministic checks
+  (exit 0): em-dash, validate:content, bloom-bands, concept-graph, depth-gate, source-floor,
+  no-answer-keys, docs-sync. ERQ arithmetic verified for all six units (each sums to 5). Coverage:
+  43 teaching-week bullets → 47 rows via documented decomposition; every bullet once, no orphan
+  rows.
+- **Bound to:** `specs/content/gpks-402/intake-88/manifest.json`, manifest digest
+  `4b7ec0302eb9f10b4fbc2244368a1b872bf4087d85c24ad4e1a2b67d19b9b1d` (55 inputs, recomputed
+  with `manifestFor()`, zero path/digest mismatches; registers `specs/decisions/log.md`
+  `84ba9cd8...` and `specs/gaps.md` `1d14ea0e...` recorded at read time). A change to any bound
+  input voids this approval (Art. VII.8.5).
+- **Limits:** approves the *specification*, not any content - no units are authored, none
+  certified, no reviewer qualified, no publication authorised. Three reading-list Units-column
+  cross-references remain imprecise (`pak-constitution-1973` mapped by Unit 1, `hamid-khan-const`
+  by Unit 2, `hec-pak-studies` by Unit 4, against the reading-list Units column) - advisory for
+  author alignment, not a criterion defect and not escalated. `status: approved` awaits owner
+  confirmation of this entry; until then no unit may be authored (FR-002/FR-016b). Supersedes
+  the stale `D-2026-0052` on the repaired spec.
