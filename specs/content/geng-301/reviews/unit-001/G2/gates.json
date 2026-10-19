@@ -1,0 +1,18 @@
+{
+  "course": "GENG-301",
+  "unit": 1,
+  "stage": "G2",
+  "status": "pass",
+  "timestamp": "20261010T175917Z",
+  "commit": "6bbca82c",
+  "gates": {
+    "validate:content": "pass",
+    "check:depth-gate": "pass",
+    "check:figures": "pass",
+    "check:concept-graph": "pass",
+    "check:bloom-bands": "pass",
+    "check:no-em-dash": "pass",
+    "check:no-answer-keys": "pass",
+    "check:docs-sync": "pass"
+  }
+}
