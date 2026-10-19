@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { stubAuthEmail } from './_authEmail';
 
 /**
  * T025 [US1] — sign-up returns the user to the originating page, and the
@@ -23,6 +24,8 @@ test('sign-up page has email/password fields, a Google button, and an optional r
 });
 
 test('sign-up returns to the originating page and the navbar shows the account', async ({ page }) => {
+  // No real confirmation email unless E2E_REAL_EMAIL=1 (see _authEmail.ts).
+  await stubAuthEmail(page);
   const origin = '/semester-1/efmp-301/unit-01/';
   await page.goto(origin);
   await page.getByRole('link', { name: /sign in/i }).click();

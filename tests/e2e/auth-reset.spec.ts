@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { createClient } from '@supabase/supabase-js';
 import { deleteUsers } from './_cleanup';
+import { stubAuthEmail } from './_authEmail';
 
 /**
  * T032 [US2] — full reset journey: request -> link -> new password -> sign-in
@@ -10,8 +11,10 @@ import { deleteUsers } from './_cleanup';
  * (2026-07-19), not assumed up front:
  *
  * 1. UI test below: the REQUEST is submitted through the real `/app/reset`
- *    form (`resetPasswordForEmail`) — genuinely reaches GoTrue and triggers a
- *    real send through the production Resend relay (ADR-0006). Asserts the
+ *    form (`resetPasswordForEmail`). With E2E_REAL_EMAIL=1 it genuinely reaches
+ *    GoTrue and triggers a real send through the production Resend relay
+ *    (ADR-0006); by default the request is answered in the browser instead, so
+ *    CI does not spend the Resend quota (tests/e2e/_authEmail.ts). Asserts the
  *    uniform success message a real user's browser would see.
  * 2. API test below: the click-through/new-password/sign-in-swap mechanics,
  *    exercised via `verifyOtp` + `updateUser` directly rather than clicking
@@ -51,6 +54,10 @@ test('reset request: real UI submission reports uniform success (FR-004, no enum
   expect(createError).toBeNull();
 
   try {
+    // No real reset email unless E2E_REAL_EMAIL=1 (see _authEmail.ts). Stubbed, this
+    // proves the UI's uniform message; the server-side no-enumeration property is
+    // GoTrue's and is exercised when the real send is switched on.
+    await stubAuthEmail(page);
     await page.goto('/app/reset');
     await page.getByLabel(/email/i).fill(email);
     await page.getByRole('button', { name: /send reset link/i }).click();
