@@ -95,7 +95,7 @@ unit-spec at intake (board-run G0/G1 intake pending).
 | Unit 6 | G1 unit-spec | ▢ | | board G0/G1 intake pending |
 | Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-303/reviews/unit-06/G2/20261017T113157445Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | |
-| Unit 6 | G4 ur-translation | ▢ | | |
+| Unit 6 | G4 ur-translation | ▣ | | Complete six-file Urdu draft and 10/10/5 assessment bank; nine bank-bound key_terms; six Urdu SVGs and derived dark variants wired. Metadata, headings, components and figure parity checked; 13 draft content gates pass. Handoff: specs/content/efmp-303/reviews/unit-06/G4/translation-handoff.md. Rendered inspection and independent G5 pending; translation_status stays draft |
 | Unit 6 | G5 ur-review | ▢ | | |
 | Unit 6 | G6 assets | ✅ | auto:gates | 6 schematics placed |
 | Unit 6 | G7 publish | ▢ | | |
