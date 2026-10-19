@@ -396,6 +396,9 @@ ${summary}
  * change, say), a unit job that adds nothing new must still be able to land.
  */
 function gateFindings(cwd) {
+  // static/content-status.json is gitignored, so a fresh worktree lacks it and check:content-status fails
+  // there but not in ROOT. Regenerate it first, as ci.yml does; otherwise every batch member looks red.
+  sh('node', ['scripts/report-content-status.mjs'], cwd, { allowFail: true });
   const r = sh('npm', ['run', '-s', 'check:content'], cwd, { allowFail: true });
   if (r.ok) return [];
   return [...new Set((r.out + '\n' + r.err).split('\n')
