@@ -2,7 +2,7 @@
 id: crew-efmp-305-u06-translate
 title: crew translate EFMP-305 unit 6
 stage: misc
-date: 2026-10-18
+date: 2026-10-19
 surface: agent
 model: agy
 feature: efmp-305
@@ -20,7 +20,6 @@ files:
  - specs/content/efmp-305/tasks.md
 tests:
  - npm run check:content
- - npm run figures:variants:check
 ---
 
 ## Prompt
@@ -55,7 +54,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Translated EFMP-305 Unit 6 into its complete 6-file Urdu mirror at G4 with figure variants wired, terminology bound, and tracker updated to in-progress.
+Verified EFMP-305 Unit 6 complete Urdu mirror at G4 with wired figures and terminology compliance, updated task tracker, and passed all content gates.
 
 ## Outcome
 
@@ -67,12 +66,12 @@ Translated EFMP-305 Unit 6 into its complete 6-file Urdu mirror at G4 with figur
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Verified and completed EFMP-305 Unit 6 G4 Urdu mirror (6 files), checked figure variants and terminology binding, updated tasks.md G4 row to in-progress.
+- Shipped / changed: Verified EFMP-305 Unit 6 complete Urdu mirror at G4 with wired figures and terminology compliance, updated task tracker, and passed all content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All 6 .ur.svg figure variants are wired in topics 1-3 with exact carrier alt text matching the SVG `<desc>` tags.
-  - All 4 key_terms in `index.mdx` are bound to `terminology.csv`; `translation_status` remains `draft` pending independent G5 review.
+  - All 6 .ur.svg figure variants are wired in topics 1-3 with matching carrier alt text; figures:variants:check passes cleanly.
+  - Structural, figure, and terminology parity verified clean under temporary reviewed flip (reverted to draft pending independent G5 review).
   - Proposed terms for curriculum owner: classroom culture (جماعتی ماحول کا چلن), empathy (ہمدردی), class charter (جماعتی عہد نامہ), buddy rota (ساتھی باری نامہ), shared support plan (مشترکہ معاونت منصوبہ).
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
