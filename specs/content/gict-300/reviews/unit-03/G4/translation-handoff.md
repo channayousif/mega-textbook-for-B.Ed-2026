@@ -98,3 +98,67 @@ The G4 row remains in progress, and all translation statuses remain draft.
 
 Continuation validation: `npm run check:content` passed all 13 gates;
 `npm run figures:variants:check` passed for 746 sources. No new gate findings.
+
+
+## Continuation: crew gict-300-u03-translate-r1 (2026-10-18)
+
+Resumed the seven-file mirror already merged into `origin/main`. This checkout began at
+`7cdacb45536d01f7ec9c5fac066ff94ca875028a`, identical to `origin/main`, with no branch-only
+commits or uncommitted files. The English unit's last content change is still
+`b3b0eabcc27b3789b1c37eb3581800a93cfabc2e`; no English content changed in this continuation.
+
+Compared the current seven Urdu files with that English baseline. Repaired the remaining
+literal register in topics 3.1, 3.2 and 3.3 (the virtualisation technique, OS types, cupboard
+shelves, navigable folder tree and low-level device language). In `unit-assessment.mdx`,
+replaced studying with reading data from disk in MCQ 5 and RRQ model answer 4, made the
+payroll example explicit as calculating pay, aligned RRQ 4's double-click wording with
+its model answer and topic 3.2, and translated rubric clarity as clear writing rather
+than cleanliness. Option order, item numbering, marks and Bloom demand are preserved.
+The MCQ choices still correspond to English d,b,b,b,c,b,b,b,b,b.
+
+No new computing concept or terminology-bank entry was introduced. In addition to the
+13 concept-label proposals above, the existing unbanked glossary/core terms used in the
+mirror should be considered by the curriculum owner:
+
+| Proposed English term | Existing Urdu rendering |
+|---|---|
+| Operating system | آپریٹنگ سسٹم |
+| File | فائل |
+| File management | فائل مینجمنٹ |
+| Process | پروسیس |
+| Buffer | بفر |
+| Spooling | اسپولنگ |
+| Kernel | کرنل |
+| Scheduling | شیڈولنگ |
+| Memory management | میموری کا انتظام |
+| System call | سسٹم کال |
+| Metadata | میٹا ڈیٹا |
+
+The shared glossary's Urdu definitions were consulted without editing it. These are
+proposals, not accepted bank entries. Existing bank-conformant `key_terms` remain
+Assessment, Self-Assessment and Rubric; the bank remains unchanged.
+
+Validation for this continuation:
+
+- Direct assertions passed for all seven filenames, structural front matter, heading
+  level vectors, imports, component counts, glossary keys and citation URLs; all eight
+  Urdu figure paths, alt/desc pairs, dark-variant presence and SVG size budgets matched.
+- The assessment retains 10 MCQs, 10 RRQs and 5 ERQs; translated Bloom tags and MCQ
+  answer correspondence matched, and the answers section remains the final H2 section.
+- The temporary reviewed-index run passed content, heading, figure and terminology
+  validation. Its only pipeline findings were the intentionally unfinished G4/G5 rows.
+  Both indexes were restored byte-for-byte to draft in a finally block.
+- The first and temporary runs also reported missing `static/content-status.json` in
+  this fresh checkout. This is an ignored generated report, not a content defect; it
+  was regenerated with `npm run build:content-status` before the final draft run.
+- `npm run figures:variants:check` passed. Figure bytes were not changed.
+- Final draft `npm run check:content`: all 13 gates passed, with no findings beyond
+  `origin/main`. `git diff --check` passed.
+
+The brief prohibits site builds and servers, so no build or fresh rendered inspection
+was performed. Historical screenshots do not verify the current translation bytes.
+The review owner must resolve the accepted-G3 dependency and arrange fresh independent
+G5 with desktop, 360px and A4 Urdu inspection. The curriculum owner owns the terminology
+proposals. All pages remain `translation_status: draft`; the existing G4 row remains
+in progress and G3/G5 were not changed. No Paperclip issue was supplied. This continuation
+is a repair pass, not a measured full-unit translation throughput run.

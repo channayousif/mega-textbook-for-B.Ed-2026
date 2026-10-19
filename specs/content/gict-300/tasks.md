@@ -37,7 +37,7 @@ files at that commit. The geng-300 reds are recorded as known-stale-on-main in t
 | Unit 3 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0030; content-spec status: approved |
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-03/G2/20261013T123502518Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | advisory run 001 (disposition: revise; blocking F1 sources-chain, F2 render unverified under capacity directive) at reviews/unit-03/G3/agent-g3-gict300-u3-run001.json; F1 repair in progress; agent reviews advisory under ADR-0019 |
-| Unit 3 | G4 ur-translation | ▣ | | Complete 7-file UR mirror reconciled with EN baseline 02ec0cff on 2026-10-18 (crew gict-300-u03-translate); semantic, register, reference and figure-label repairs; bank-conformant key_terms; handoff: reviews/unit-03/G4/translation-handoff.md. translation_status stays draft pending fresh independent G5; no certification claimed. |
+| Unit 3 | G4 ur-translation | ▣ | | Complete 7-file UR mirror reconciled with unchanged EN baseline 7cdacb45 on 2026-10-18 (crew gict-300-u03-translate-r1); continuation repairs disk-reading, payroll, double-click and rubric clarity wording; structural/component/assessment parity and bank-conformant key_terms checked; handoff: reviews/unit-03/G4/translation-handoff.md. translation_status stays draft pending accepted G3 and fresh independent G5 with rendered inspection; no certification claimed. |
 | Unit 3 | G5 ur-review | ▢ | | advisory run 001 (disposition: revise; F1 stale G3 dependency, F2-F5 Urdu defects repaired) at reviews/unit-03/G5/agent-g5-gict300-u3-run001.json; agent reviews advisory under ADR-0019 |
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
