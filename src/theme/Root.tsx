@@ -19,7 +19,14 @@ import { AuthProvider } from '@site/src/contexts/AuthContext';
 import { useLocation } from '@docusaurus/router';
 import { trackEvent } from '@site/src/lib/analytics';
 import { useAuth } from '@site/src/contexts/AuthContext';
-import { loadImagesForPrint, printWithImages } from '@site/src/lib/printPage';
+import {
+  addLinkQrCodesNow,
+  loadImagesForPrint,
+  printHandout,
+  removeLinkQrCodes,
+  restorePageTitle,
+  setPrintTitle,
+} from '@site/src/lib/printPage';
 
 function RouteAnalytics() {
   const location = useLocation();
@@ -51,22 +58,33 @@ function RouteAnalytics() {
 
 export default function Root({ children }: { children: React.ReactNode }): React.ReactElement {
   useEffect(() => {
-    // Images with loading="lazy" are not fetched yet when a print starts, so the PDF
-    // got empty figure boxes. Ctrl/Cmd+P is taken over to load them first, then
-    // open the same native dialog (src/lib/printPage.ts). The browser's own menu
-    // cannot be delayed; beforeprint only starts the fetches there, best effort.
+    // Print preparation (src/lib/printPage.ts). Lazy images are not fetched yet when a
+    // print starts, and link QR codes need their encoder, so Ctrl/Cmd+P is taken over
+    // to do both first, then open the same native dialog. The browser's own menu
+    // cannot be delayed: beforeprint does what it can at once. In every case the
+    // printed title reads "subject | unit | topic", and afterprint puts things back.
     const onKey = (e: KeyboardEvent) => {
       if ((e.ctrlKey || e.metaKey) && !e.altKey && !e.shiftKey && e.key.toLowerCase() === 'p') {
         e.preventDefault();
-        void printWithImages();
+        void printHandout();
       }
     };
-    const onBeforePrint = () => void loadImagesForPrint();
+    const onBeforePrint = () => {
+      setPrintTitle();
+      addLinkQrCodesNow();
+      void loadImagesForPrint();
+    };
+    const onAfterPrint = () => {
+      restorePageTitle();
+      removeLinkQrCodes();
+    };
     window.addEventListener('keydown', onKey);
     window.addEventListener('beforeprint', onBeforePrint);
+    window.addEventListener('afterprint', onAfterPrint);
     return () => {
       window.removeEventListener('keydown', onKey);
       window.removeEventListener('beforeprint', onBeforePrint);
+      window.removeEventListener('afterprint', onAfterPrint);
     };
   }, []);
 

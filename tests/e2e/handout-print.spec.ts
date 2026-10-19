@@ -117,3 +117,30 @@ test('print button loads every figure and prints black text from dark mode', asy
   expect(result.loaded).toBe(result.shown);
   expect(result.color).toBe('rgb(0, 0, 0)');
 });
+
+/**
+ * Printed pages carry a QR code beside each link that leads off the page, and the
+ * browser's page header reads "subject | unit | topic" (owner request, 2026-10-19).
+ * Both exist only while printing: afterprint restores the title and removes the codes.
+ */
+test('printing adds link QR codes and a subject | unit | topic title, then restores the page', async ({ page }) => {
+  await page.addInitScript(() => {
+    (window as unknown as { printed: number }).printed = 0;
+    window.print = () => { (window as unknown as { printed: number }).printed += 1; };
+  });
+  await page.goto('/semester-1/efmp-302/unit-01/topic-01');
+  const pageTitle = await page.title();
+
+  await page.keyboard.press('Control+KeyP');
+  await expect.poll(() => page.evaluate(() => (window as unknown as { printed: number }).printed)).toBe(1);
+  const codes = page.locator('.print-qr');
+  await expect(codes.filter({ hasText: 'doi.org/10.1016/j.sbspro.2010.12.444' })).toHaveCount(1);
+  await expect(page.locator('.print-qr svg path').first()).toHaveAttribute('d', /^M/);
+
+  await page.evaluate(() => window.dispatchEvent(new Event('beforeprint')));
+  await expect(page).toHaveTitle(/^EFMP-302 .+ \| Unit 1 .+ \| Topic 1\.1 /);
+
+  await page.evaluate(() => window.dispatchEvent(new Event('afterprint')));
+  await expect(page).toHaveTitle(pageTitle);
+  await expect(codes).toHaveCount(0);
+});
