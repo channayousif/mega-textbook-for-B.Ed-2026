@@ -30,7 +30,8 @@ is healthy, the review waits while every other kind of job keeps flowing.
 3. **inbox**: owner replies and `crew ...` commands from Discord/WhatsApp are applied.
 4. **reap**: finished workers are checked. The job passes if `npm run check:content` shows no
    finding that main does not already have. Then the dispatcher writes the job's PHR, pushes the
-   branch and opens a PR. A failed attempt is retried with the gate output as feedback, and the
+   branch and marks the job `ready` (a job that touches a protected path opens its own PR at once
+   instead, so its owner question never holds up a batch). A failed attempt is retried with the gate output as feedback, and the
    third attempt goes to a different worker; after that the job is `gate_red` for the lead.
    Workers never talk to each other; the brief carries what one job leaves for the next
    (`scripts/crew/handoff.mjs`). A worker may end with up to 3 `CREW-HANDOFF: <note>` lines (known
@@ -38,14 +39,24 @@ is healthy, the review waits while every other kind of job keeps flowing.
    non-review jobs on the same unit (and a CI-fix job, from its parent) see the 5 newest. A
    `repair_en` brief also lists the open findings of the latest G3 report, most severe first.
    Review jobs never get handoff notes, so a G3/G5 reviewer is not primed by the producer.
-5. **PRs**: green CI leads to auto-merge (main auto-deploys). The merge uses `gh pr merge --admin`
+5. **batch** (`scripts/crew/batch.mjs`, owner ruling 2026-10-19): at most once an hour, and only
+   when no batch PR is open, the dispatcher merges every `ready` job onto main's head in a fresh
+   `crew/batch-<UTC time>` worktree, runs `npm run check:content` on the result and opens ONE PR for
+   all of them (its jobs become `batched`). A job that conflicts, or fails the gate only in
+   combination, is left out and gets a merge fix on its own branch; the rest go on. Why: one PR per
+   job pushed to main every few minutes, each push queued a full CI run (rls and e2e share one
+   database and run one at a time), and `scripts/deploy-prod.sh` deploys only main's head once its
+   own run passes, so main moved on before any run finished and production stopped deploying.
+   `CREW_BATCH_EVERY_MIN` changes the interval. A batch PR closed by hand holds its jobs
+   (`blocked`); a batch still red after two CI fixes stops batching until the lead acts.
+6. **PRs**: green CI leads to auto-merge (main auto-deploys). The merge uses `gh pr merge --admin`
    because every PR comes from the owner account, which cannot approve its own PR. The owner ruled
    "auto-merge when CI green" on 2026-10-17, so CI is the review gate. The merge uses `gh pr merge --admin`, because
    every PR comes from the owner account, which cannot approve its own PR; the owner ruled
    "auto-merge when CI green" on 2026-10-17, so CI is the review gate. Red CI queues a fix job on the same
    branch. A PR that touches a protected path (style guide, constitution, ADRs, scripts, catalog,
    `.github/`, an approved content-spec or intake) is never auto-merged: the owner is asked.
-6. **launch**: up to 3 jobs run at once, one per unit, and none start while the host has under
+7. **launch**: up to 3 jobs run at once, one per unit (a unit with `ready` or `batched` work waits for it to merge), and none start while the host has under
    3 GB of free memory or under 8 GB of free disk (`CREW_MIN_FREE_DISK_MB`). The crew never builds
    locally; CI builds every PR on GitHub's runners. Job worktrees are sparse: they leave out the
    `reviews/**/renders-*/` evidence folders (1.7 of a checkout's 2.3 GB, read by no gate), and the
