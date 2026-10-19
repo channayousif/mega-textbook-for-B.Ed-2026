@@ -1,0 +1,1 @@
+Final verification: check-content-post-cache.log records all 13 content gates passing, exit 0. The earlier check-content-final.log captured an intermediate stale generated status cache after the advisory tracker edit. Regenerating that ignored cache resolved it. No authored input changed.

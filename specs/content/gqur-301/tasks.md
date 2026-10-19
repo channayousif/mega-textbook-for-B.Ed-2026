@@ -26,7 +26,7 @@ as XML; page alt and SVG description agree for every placed figure.
 | Unit 1 | G7 publish | ▢ | | |
 | Unit 2 | G1 unit-spec | ▢ | | intake pending; do not mark until intake approves |
 | Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-02/G2/20261018T194041863Z-gates.json |
-| Unit 2 | G3 en-review | ▢ | | |
+| Unit 2 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only; findings: specs/content/gqur-301/reviews/unit-02/G3/01a154ca-5b18-7000-872b-bb211ead24e7.json; conflicting RRQ 10 guidance, source/provenance gaps and current render evidence pending. No certification. |
 | Unit 2 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 2 | G5 ur-review | ▢ | | |
 | Unit 2 | G6 assets | ▢ | | |
