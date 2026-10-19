@@ -66,7 +66,7 @@ Verified EFMP-303 Unit 4 complete 5-file Urdu mirror at G4 with 4 wired figure v
 ## Outcome
 
 - Impact: translate for EFMP-303 Unit 4 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before committing.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 3 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
@@ -79,7 +79,7 @@ Verified EFMP-303 Unit 4 complete 5-file Urdu mirror at G4 with 4 wired figure v
 - Notes for the next job on this unit:
   - All 4 .ur.svg figure variants and derived dark variants are wired in topics 1-2 with matching carrier alt text and passing figures:variants:check.
   - Structural, figure, and terminology parity verified clean under temporary reviewed flip; translation_status stays draft pending independent G5 review.
-  - Proposed unbanked terms recorded in translation-handoff.md.
+  - Proposed unbanked terms recorded in translation-handoff.md for curriculum owner review.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
