@@ -58,24 +58,24 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Verified EFMP-305 Unit 5 complete Urdu mirror against English baseline 3a8a8c0e, verified 6 .ur.svg and .ur.dark.svg figure assets, authored G4 translation handoff with 26 unbanked concept labels documented for curriculum owner, recorded G4 tracker row in tasks.md with translation_status preserved as draft pending independent G5 review, and passed all 13 content gates.
+Verified EFMP-305 Unit 5 Urdu mirror and bilingual figures against English baseline, authored G4 translation handoff with 26 unbanked concept terms, and recorded the in-progress G4 tracker row in tasks.md.
 
 ## Outcome
 
 - Impact: translate for EFMP-305 Unit 5 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before commit.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 3 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Verified EFMP-305 Unit 5 complete Urdu mirror against English baseline 3a8a8c0e, recorded durable G4 translation handoff and tracker row, and passed all 13 content gates.
+- Shipped / changed: Verified EFMP-305 Unit 5 Urdu mirror and bilingual figures against English baseline, authored G4 translation handoff with 26 unbanked concept terms, and recorded the in-progress G4 tracker row in tasks.md.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - All 6 .ur.svg/.ur.dark.svg figure variants are wired with exact carrier alt matching SVG desc tags.
-  - All 3 key_terms in index.mdx are bound to terminology.csv; translation_status stays draft pending independent G5 review.
+  - All 3 key_terms in index.mdx conform to terminology.csv; translation_status stays draft pending independent G5 review.
   - 26 unbanked concept labels documented in reviews/unit-05/G4/translation-handoff.md for curriculum owner review.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
