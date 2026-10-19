@@ -38,7 +38,7 @@ Specialised labels from `concepts/unit-02.md` and unit text proposed for owner c
 | NEP 2009 objectives | قومی تعلیمی پالیسی 2009 کے اہداف | CON:EFMP-303-2-3 |
 | NEP 2009 implementation | قومی تعلیمی پالیسی 2009 کا نفاذ | CON:EFMP-303-2-4 |
 | NEP 2009 outcomes and challenges | قومی تعلیمی پالیسی 2009 کے نتائج اور چیلنجز | CON:EFMP-303-2-5 |
-| NEP 2017 vision and framework | قومی تعلیمی پالیسی 2017 کا نظارہ اور فریم ورک | CON:EFMP-303-2-6 |
+| NEP 2017 vision and framework | قومی تعلیمی پالیسی 2017 کا تصور اور فریم ورک | CON:EFMP-303-2-6 |
 | NEP 2017 curriculum reforms | قومی تعلیمی پالیسی 2017 کی نصابی اصلاحات | CON:EFMP-303-2-7 |
 | NEP 2017 priorities | قومی تعلیمی پالیسی 2017 کی ترجیحات | CON:EFMP-303-2-8 |
 | Comparing NEP 2009 and 2017 | پالیسی 2009 اور 2017 کا موازنہ | CON:EFMP-303-2-9 |
@@ -63,3 +63,58 @@ These are proposals for the owner, not additions to the frozen bank.
 - Build and rendered desktop/narrow/A4 inspection omitted: `.crew/brief.md` explicitly prohibits builds and dev servers. Current rendered verification remains for a future independent G5 session.
 - `translation_status` remains `draft` across all files pending fresh, independent G5 review.
 - G4 tracker row in `specs/content/efmp-303/tasks.md` marked in progress (`▣`) with empty reviewer initials. No self-certification or G5 review claimed.
+
+
+## Codex continuation, 2026-10-19
+
+Continued the existing mirror rather than reauthoring it. Starting branch and `origin/main`
+were both `31c5870050a418492aa18af4986cfa9d880f252d`, with no uncommitted changes.
+The latest English unit change remains `5ea0764cfc2e5d0c47509895aad8c6e57765757f`.
+
+### Translation repairs
+
+- Replaced the literal sightseeing sense `نظارہ` with `تصور` for policy/ideological
+  "vision" throughout the index, topics 2.1 and 2.3, and the assessment summary.
+- Replaced assessment heading `ERQ روبرک` with `ERQ معیارِ جانچ`, using the frozen
+  bank's accepted translation of Rubric. No bank or concept-graph labels were edited.
+- Proposed unbanked term: Vision = تصور. Other proposed terms above remain for the owner.
+  The concept graph still carries the older label; owner resolution is pending.
+
+### Checks on this continuation
+
+- Before repairs, `npm run check:content` passed all 13 gates on the clean main baseline.
+- Direct EN/UR comparison passed for all six filenames, heading level vectors, invariant
+  front matter, import statements, component counts, Glossary keys and Urdu definitions,
+  Figure IDs/kinds/dimensions, and all six Urdu light/dark asset paths.
+- All three declared `key_terms` match the frozen terminology bank.
+- `npm run figures:variants:check` passed for 810 figures; no figure bytes changed.
+- Temporary reviewed check: 11/13 gates passed, including content parity and figures.
+  Pipeline findings were only the unfinished G4 and G5 rows; content-status was stale
+  because the temporary flag disagreed with generated draft metadata. No terminology
+  finding occurred. Both index files were restored in a `finally` block to `draft`.
+- Build and desktop/narrow/A4 inspection were not run: the crew brief prohibits builds
+  and dev servers, and this checkout has no build directory. No current render claim is made.
+
+### Review dependency and evidence caution
+
+The historical G5 summary `agent-g5-efmp303-u2-run54ea2d76.summary.md` lists reading
+minutes, key terms and rubric totals that do not describe the current files. Current EN/UR
+reading minutes are 4, 22, 23, 23, 14 and 6 (index, topics 1-3, assessment, teacher notes).
+Current RRQ marks are 3, 3, 2, 2, 3, 2, 3, 2, 2, 2; ERQ maxima are 3, 3, 4, 4, 4.
+These agree across the current mirror. The historical review and render log were preserved
+as records, not adopted as verification of these edited bytes. A fresh independent reviewer
+must compare the actual files and inspect current renders.
+
+`translation_status` remains `draft`. G3 English acceptance is still missing, G5 remains open,
+and this translation session claims no independent review or certification. The existing
+G4 row remains in progress with no reviewer initials, as explicitly requested by the crew
+brief; no duplicate row or done mark was added. The current skill's Step 7 otherwise says
+not to append a G4 row.
+
+
+### Final draft validation
+
+The final draft content check initially found only stale generated content-status metadata
+following the G4 tracker-note update. Ran `npm run build:content-status` to regenerate the
+ignored report, then reran all 13 content gates: 13/13 PASS. Assessment checks also confirmed the
+10/10/5 banks and all ten A/B/C/D to الف/ب/ج/د key mappings. Final `git diff --check` is clean.
