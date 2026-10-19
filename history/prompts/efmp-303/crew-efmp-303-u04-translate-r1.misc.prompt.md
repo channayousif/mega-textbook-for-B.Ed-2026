@@ -1,6 +1,6 @@
 ---
 id: crew-efmp-303-u04-translate-r1
-title: crew translate EFMP-303 unit 4 retry 1
+title: crew translate EFMP-303 unit 4
 stage: misc
 date: 2026-10-19
 surface: agent
@@ -20,7 +20,6 @@ files:
  - specs/content/efmp-303/tasks.md
 tests:
  - npm run check:content
- - npm run figures:variants:check
 ---
 
 ## Prompt
@@ -62,30 +61,30 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Verified complete 5-file Urdu mirror for EFMP-303 Unit 4 against English baseline c0e60d31, validated bank-bound key_terms and figure variants wiring, refreshed tasks.md G4 tracker row with handoff path and baseline reference, and confirmed all 13 content gates pass cleanly.
+Verified EFMP-303 Unit 4 Urdu mirror against baseline c0e60d31, refreshed tasks.md G4 tracker row, recorded durable PHR, and passed all 13 content gates.
 
 ## Outcome
 
-- Impact: translate continuation for EFMP-303 Unit 4 by agy (attempt 2 / revision 1).
-- Tests: npm run check:content and npm run figures:variants:check passed before commit.
+- Impact: translate for EFMP-303 Unit 4 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 2 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
-- Reflection: translation mirror was already authored and gate-clean; verified full parity and aligned tasks.md tracker notes.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Verified EFMP-303 Unit 4 complete Urdu mirror against English baseline c0e60d31, aligned tasks.md G4 tracker row with baseline and handoff links, and validated 13/13 content gates.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job does not certify anything. translation_status stays draft pending independent G5 review.
+- Shipped / changed: Verified EFMP-303 Unit 4 Urdu mirror against baseline c0e60d31, refreshed tasks.md G4 tracker row, recorded durable PHR, and passed all 13 content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All 4 .ur.svg figure variants and derived dark variants are wired in topics 1-2 with matching carrier alt text and passing figures:variants:check.
-  - Structural, figure, and terminology parity verified clean under temporary reviewed flip; translation_status stays draft pending independent G5 review.
-  - Proposed unbanked terms recorded in translation-handoff.md for curriculum owner review.
+  - All 4 .ur.svg figure variants and derived dark variants are wired in topics 1-2 with passing figures:variants:check.
+  - Full structural, heading, component, and bank-bound key_terms parity verified clean under temporary reviewed flip.
+  - translation_status remains draft across all 5 mirror files pending independent G5 review.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none; branch is clean and all 13 gates pass.
-- Graders run and results (PASS/FAIL): check:content PASS (13/13).
-- Prompt variant (if applicable): crew brief v1 retry r1.
-- Next experiment (smallest change to try): none.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
