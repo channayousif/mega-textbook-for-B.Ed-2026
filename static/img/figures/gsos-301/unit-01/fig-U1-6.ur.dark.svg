@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">بڑے عمرانی نقطہ نظر کا تقابل</title><desc id="d">تین بڑے عمرانی نقطہ نظر کا تقابلی جدول جس میں ان کی بنیادی فرضیات اور تجزیے کی سطحیں دکھائی گئی ہیں۔</desc>
-<style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671} .bg{fill:var(--bg)} .hdr{fill:var(--a1-fill);stroke:var(--ink);stroke-width:1.5} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700} .th{font-size:14px;font-weight:700;fill:var(--a1);text-anchor:middle} .wm{fill:var(--wm);font-size:11px}</style>
+<style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671} .bg{fill:var(--bg)} .hdr{fill:var(--a1-fill);stroke:var(--ink);stroke-width:1.5} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700} .th{font-size:14px;font-weight:700;fill:var(--a1);text-anchor:middle} .wm{fill:var(--wm);font-size:11px;text-anchor:end}</style>
 <rect class="bg" x="0" y="0" width="780" height="470"/>
 <!-- Table Boundary -->
 <rect x="25" y="35" width="730" height="385" fill="none" stroke="var(--ink)" stroke-width="2"/>
@@ -30,7 +30,8 @@
 <text x="225" y="245">طاقت اور محدود وسائل کے حصول کے لیے مقابلہ کرتے ہیں؛</text>
 <text x="225" y="265">ادارے بالادست طبقے کی مراعات کو تحفظ دیتے ہیں۔</text>
 <text class="h" x="580" y="235">میکرو سطح</text>
-<text x="580" y="255">سماجی طبقات اور طاقت کے ڈھانچے</text>
+<text x="580" y="255">سماجی طبقات اور</text>
+<text x="580" y="275">طاقت کے ڈھانچے</text>
 
 <!-- Row 3: Symbolic Interactionism -->
 <text class="h" x="40" y="355" fill="var(--a4)">علامتی باہمی تعامل</text>

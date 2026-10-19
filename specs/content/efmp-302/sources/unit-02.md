@@ -22,6 +22,18 @@ declared **wrongly**, and the third was missed entirely.
   location reported). The prose is written to attribute the model to Rest and only the exposition
   to the 1999 paper. The claim that the paper sets out the failure mode of each component is
   **unverified against the source text** and should be checked before this unit is certified.
+  **Update 2026-10-19 (G3 feat023-r2 advisory repair):** the full text was read from the copy
+  hosted on co-author Narvaez's university page
+  (`https://sites.nd.edu/darcianarvaez/files/2025/03/Bebeauetal1999pub.pdf`, a JSTOR scan of
+  pp. 18-26). Under "The Four Component Model" it defines all four components as the unit does,
+  says of Component 4 that without it a person "won't follow through ... and moral behavior will
+  fail", explains Component 3 failures (the assassin example) apart from Components 1 and 2,
+  states that "all four processes of morality need to be fostered" and that the framework's value
+  "lies in its usefulness for understanding the reasons for moral failing". This supports the
+  unit's "fail any one" claim. The paper does **not** tabulate a failure and remedy per stage,
+  so the topic-03 table stays labelled as the unit's own gloss. It also says the model is "not
+  ... a linear decision-making model"; topic-03 now states this beside the central claim (EN and
+  UR), since fig-U2-5 draws the components as a sequence.
 - **NACTE guidelines** (U2-09). The drafting note claimed these resolve to `npst-pakistan-2009`
   because NACTE "publishes no separate code of ethics" and accredits against the national
   standards. **That was wrong**, and it was an argument from a failed search rather than from a
