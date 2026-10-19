@@ -39,8 +39,6 @@ tests:
 
 ## Prompt
 
-Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.
-
 # Crew job efmp-305-u01-repair_en
 
 You are the agy worker on the B.Ed bilingual textbook repo, working in this checkout on branch `crew/efmp-305-u01-repair_en`.
@@ -82,27 +80,28 @@ From `specs/content/efmp-305/reviews/unit-01/G3/agent-g3-efmp-305-u1-run2f195870
 - (efmp-305-u01-translate, translate, opencode) Proposed terminology pending owner ratification - Segregation → علیحدگی, Integration → یکجائی, Equality → مساوات, Equity → انصاف (not in the frozen bank, drawn from glossery.json). The concept graph file uses "شامل تعلیم" for "Inclusive education" while the bank mandates "شمولیتی تعلیم" - owner should reconcile before G5 review.
 - (efmp-305-u01-translate, translate, opencode) G5 Urdu review by an independent reviewer is the next step. translation_status stays draft. The bounded answers section in the assessment is translated; no English answer-key prose remains.
 
+
 ## Response snapshot
 
-Applied repairs for EFMP-305 Unit 1 G3 review report (agent-g3-efmp-305-u1-run2f195870.json): corrected statutory citations from national RPwD Act 2018 to Sindh Empowerment of 'Persons with Disabilities' Act, 2018 across topic-02.mdx and unit-assessment.mdx, replaced bare URL in topic-01.mdx Further reading with descriptive link text, mirrored all repairs in Urdu translation files, appended the advisory revision row in tasks.md, and refreshed G2 gate evidence.
+Repaired EFMP-305 Unit 1 statutory citations to the Sindh 2018 Act, replaced bare UNESCO URL with descriptive link text, mirrored changes to Urdu, and recorded the advisory revision tracker row with refreshed G2 evidence.
 
 ## Outcome
 
-- Impact: repair_en for EFMP-305 Unit 1 by agy.
-- Tests: npm run check:content passed in the job worktree before completing the turn.
-- Files: listed above.
+- Impact: repair_en for EFMP-305 Unit 1 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 17 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
-- Reflection: none.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Corrected statutory citations from national RPwD Act 2018 to the provincial Sindh Empowerment of 'Persons with Disabilities' Act, 2018 in topic-02.mdx (Rights and law) and unit-assessment.mdx (RRQ-4, ERQ-3, ERQ-5); replaced bare URL in topic-01.mdx Further reading; mirrored changes into Urdu topic-01.mdx, topic-02.mdx, and unit-assessment.mdx; appended G3 advisory revision tracker row in tasks.md; refreshed G2 draft gate evidence.
-- Decisions the team must respect: G3 stays open/unticked pending fresh independent G3 review; translation_status stays draft pending fresh independent G5 review.
-- Pending / next owner: crew lead (auto-merge when CI is green).
+- Shipped / changed: Repaired EFMP-305 Unit 1 statutory citations to the Sindh 2018 Act, replaced bare UNESCO URL with descriptive link text, mirrored changes to Urdu, and recorded the advisory revision tracker row with refreshed G2 evidence.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Fresh independent G3 English review should be scheduled for EFMP-305 Unit 1 following these applied repairs.
-  - Independent G5 Urdu review is also pending; translation_status remains draft.
-- Paperclip issues affected: none (work tracked by crew board).
+  - Fresh independent G3 review should be scheduled for EFMP-305 Unit 1 to evaluate the repaired English text.
+  - Independent G5 Urdu review remains pending; translation_status stays draft across all five files.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
