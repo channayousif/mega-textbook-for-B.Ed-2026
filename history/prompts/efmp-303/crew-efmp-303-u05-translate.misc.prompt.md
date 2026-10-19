@@ -72,29 +72,30 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Authored complete five-file Urdu mirror for EFMP-303 Unit 5 (Quality Assurance and Development) and localized four schematic figure assets with derived dark variants, verified full parity and terminology conformance under check:content gates, recorded the in-progress G4 tracker row, and documented the translation handoff.
+Translated EFMP-303 Unit 5 into a complete five-file Urdu mirror at G4 with four localized SVG figures, derived dark variants, translation handoff document, and in-progress tracker row.
 
 ## Outcome
 
-- Impact: translate for EFMP-303 Unit 5 by agy.
-- Tests: npm run check:content passed in the job worktree before commit.
+- Impact: translate for EFMP-303 Unit 5 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 16 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Complete five-file Urdu mirror for EFMP-303 Unit 5, four localized SVG figures plus derived dark variants, G4 translation handoff document, and updated G4 tracker row in tasks.md.
-- Decisions the team must respect: G3/G5 stay advisory until qualified independent sign-off; translation_status stays draft in both locales; no self-certification.
+- Shipped / changed: Translated EFMP-303 Unit 5 into a complete five-file Urdu mirror at G4 with four localized SVG figures, derived dark variants, translation handoff document, and in-progress tracker row.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All five Urdu mirror files and four schematic figures are fully verified and pass 13/13 content gates; translation_status stays draft pending independent G5 review.
-  - Prior G3 English review was advisory escalation; author repairs and owner provenance remain open for English before G3/G5 resolution.
+  - EFMP-303 Unit 5 Urdu mirror is complete at G4 (5 files, 4 localized .ur.svg figures with dark variants, 13/13 content gates pass); translation_status stays draft pending independent G5 review.
+  - Prior G3 English review was an advisory escalation; closing G3 and addressing author repairs in English remain open before G5 resolution.
+  - Render inspection (desktop, narrow 360px, A4 print) was omitted per brief constraints and should be run during the independent G5 review session.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS (13/13 gates)
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
