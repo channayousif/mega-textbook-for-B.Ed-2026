@@ -72,3 +72,21 @@ Final `npm run check:content`: all 13 gates passed. Additional metadata/componen
 comparison passed for all six mirrored pages; assessment numbered-item counts
 match at 50/50, including the answer sections. The final G2 evidence is
 `20261019T003355701Z-gates.json`, prepared after committing the metadata changes.
+
+## Manifest freshness repair (2026-10-18)
+
+The prior G2 record became stale because this handoff was edited after evidence
+preparation. This continuation freezes this handoff before generating replacement
+G2 evidence. The tracker names the replacement record; do not edit this bound file
+after preparation without regenerating evidence again.
+
+The ten assessment option sets and corresponding answer references now use
+الف / ب / ج / د as the translation skill requires, preserving option order,
+correct choices, item wording and marks. Metadata and component counts match
+across all six pages. All 780 derived figure variants pass freshness validation.
+Temporary reviewed-mode validation passed file/heading parity, figures and
+bank-bound terminology; its findings were the intentionally open G4/G5 rows,
+the known stale G2 manifest and the temporary stale content-status report.
+Both index flags have been restored to draft. Full-page RTL/print inspection
+and fresh independent G5 remain with the next reviewer under the build/server
+restriction. No review or publication status is changed.
