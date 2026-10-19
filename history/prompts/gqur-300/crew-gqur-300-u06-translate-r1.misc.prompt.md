@@ -1,6 +1,6 @@
 ---
 id: crew-gqur-300-u06-translate-r1
-title: crew translate GQUR-300 unit 6 r1
+title: crew translate GQUR-300 unit 6
 stage: misc
 date: 2026-10-19
 surface: agent
@@ -18,7 +18,9 @@ links:
 files:
  - history/prompts/gqur-300/crew-gqur-300-u06-translate-r1.misc.prompt.md
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-06/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-06/topic-01.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-06/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gqur-300/unit-06/unit-assessment.mdx
  - specs/content/gqur-300/reviews/unit-06/G4/handoff.md
 tests:
  - npm run check:content
@@ -65,30 +67,30 @@ npm run check:content has 1 finding(s) that main does not have:
 
 ## Response snapshot
 
-Repaired Urdu phrasing and calques in index.mdx and topic-02.mdx, updated G4 handoff record, regenerated static/content-status.json to resolve gate failure, and confirmed all 13 content gates pass cleanly.
+Repaired Urdu translation phrasing in index.mdx and topic-02.mdx, regenerated content-status report to achieve a clean 13/13 content gates pass, and updated G4 handoff documentation alongside PHR record.
 
 ## Outcome
 
-- Impact: translate for GQUR-300 Unit 6 by agy (attempt 2).
-- Tests: npm run check:content passed in the job worktree before commit.
-- Files: 4 file(s), listed above.
+- Impact: translate for GQUR-300 Unit 6 by agy (attempt 3).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 6 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Repaired Urdu phrasing and calques in index.mdx and topic-02.mdx, updated G4 handoff record, regenerated static/content-status.json to resolve gate failure, and confirmed all 13 content gates pass cleanly.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything.
+- Shipped / changed: Repaired Urdu translation phrasing in index.mdx and topic-02.mdx, regenerated content-status report to achieve a clean 13/13 content gates pass, and updated G4 handoff documentation alongside PHR record.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - All 5 key_terms (Budget, Interest, Loss, Profit, Simple interest) and 11 concept graph labels are unbanked proposals awaiting curriculum owner decision.
-  - translation_status remains draft in front matter across all 6 unit files pending qualified independent G5 review per translate-unit skill.
+  - translation_status remains draft in front matter across all 6 unit files pending qualified independent G5 review.
   - G4 tracker row in specs/content/gqur-300/tasks.md is set to in-progress (▣) pointing to reviews/unit-06/G4/handoff.md with initials left blank.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: 1 earlier attempt(s); see the board history
+- Failure modes observed: 2 earlier attempt(s); see the board history
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
