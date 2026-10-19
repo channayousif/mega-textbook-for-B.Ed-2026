@@ -20,13 +20,15 @@
  */
 import { spawn, spawnSync } from 'node:child_process';
 import { appendFileSync, existsSync, mkdirSync, readFileSync, readdirSync, symlinkSync, writeFileSync, openSync } from 'node:fs';
-import { join, resolve } from 'node:path';
+import { join, relative, resolve } from 'node:path';
 import { WORKERS, STAGES, QUOTA_RE, COOLDOWN_MIN, pickWorker } from './workers.mjs';
 import { STATE_DIR, WT_DIR, LOG_DIR, load, save, ACTIVE, TERMINAL, jobId, now } from './state.mjs';
 import { send, reply, readInbox } from './notify.mjs';
 import { reviewFindingsSection, parseHandoff, priorHandoffsSection } from './handoff.mjs';
 import { freshChecks } from './checks.mjs';
 import { batchDue, batchCandidates, batchId, batchTitle, batchBody } from './batch.mjs';
+import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport } from './planner.mjs';
+import { walkUnits } from '../lib/content-roots.mjs';
 
 const ROOT = resolve(new URL('../..', import.meta.url).pathname);
 const MAX_PARALLEL = Number(process.env.CREW_MAX_PARALLEL || 3);
@@ -69,9 +71,10 @@ function contentStatus() {
 function latestReport(course, unit, gate) {
   const dir = join(ROOT, 'specs', 'content', course.toLowerCase(), 'reviews', `unit-${pad(unit)}`, gate);
   if (!existsSync(dir)) return null;
-  const files = readdirSync(dir).filter((f) => f.endsWith('.json')).sort();
-  if (!files.length) return null;
-  try { return { file: join(dir, files.at(-1)), ...JSON.parse(readFileSync(join(dir, files.at(-1)), 'utf8')) }; } catch { return null; }
+  const entries = readdirSync(dir).filter((f) => f.endsWith('.json')).map((f) => {
+    try { return { file: join(dir, f), json: JSON.parse(readFileSync(join(dir, f), 'utf8')) }; } catch { return { file: join(dir, f), json: null }; }
+  });
+  return pickLatestReport(entries);
 }
 
 function trackerSuggestion(course, unit, stagePrefix) {
@@ -86,32 +89,38 @@ function isBilingual(catalog, code) {
   return true;
 }
 
-/** The next stages a unit on main needs. Per-unit serialisation happens at launch. */
-function neededStages(course, u, bilingual) {
-  const need = [];
-  if (!u.authored) return ['author'];
-  const f = u.figures || {};
-  if (f.prompt_only > 0) need.push('figures');
-  const g3 = latestReport(course, u.unit_no, 'G3');
-  if (u.gates.G3 !== 'done') {
-    if (!g3) need.push('review_en');
-    else if (g3.disposition === 'revise' && !/repairs applied/i.test(trackerSuggestion(course, u.unit_no, 'G3'))) need.push('repair_en');
-  }
-  if (bilingual) {
-    if (!/G4[^|]*\| ✅/.test(trackerSuggestion(course, u.unit_no, 'G4'))) need.push('translate');
-    else if (u.gates.G5 !== 'done' && !latestReport(course, u.unit_no, 'G5')) need.push('review_ur');
-  }
-  return need;
+/** Every unit's English and Urdu folders, keyed `COURSE#unit`, from the shared content-roots helper. */
+function unitDirs() {
+  return new Map(walkUnits(ROOT).map((u) => [`${u.courseCode}#${u.unitNo}`, u]));
+}
+const listDir = (dir) => (existsSync(dir) ? readdirSync(dir) : []);
+
+/** What the planner needs to know about a unit on main (rules in scripts/crew/planner.mjs). */
+function unitFacts(course, u, bilingual, dirs) {
+  const d = dirs.get(`${course}#${u.unit_no}`);
+  return {
+    bilingual,
+    g3Report: latestReport(course, u.unit_no, 'G3'),
+    g3Repaired: /repairs applied/i.test(trackerSuggestion(course, u.unit_no, 'G3')),
+    g5Report: latestReport(course, u.unit_no, 'G5'),
+    mirrorComplete: d ? mirrorComplete(listDir(d.unitDir), listDir(d.urUnitDir)) : false,
+  };
 }
 
 function plan() {
   const board = load('board');
   const catalog = JSON.parse(readFileSync(join(ROOT, 'catalog', 'courses.json'), 'utf8'));
   const status = contentStatus();
+  const dirs = unitDirs();
   const added = [];
+  const awaiting = [];
   for (const c of status.courses) {
     for (const u of c.units) {
-      for (const stage of neededStages(c.course_code, u, isBilingual(catalog, c.course_code))) {
+      const facts = unitFacts(c.course_code, u, isBilingual(catalog, c.course_code), dirs);
+      if (awaitingG3(u, facts)) {
+        awaiting.push({ course: c.course_code, unit: u.unit_no, disposition: facts.g3Report.disposition, report: relative(ROOT, facts.g3Report.file) });
+      }
+      for (const stage of stagesFor(u, facts)) {
         const base = jobId(c.course_code, u.unit_no, stage);
         const prior = board.jobs.filter((j) => j.id === base || j.id.startsWith(`${base}-r`));
         if (prior.some((j) => ACTIVE.includes(j.status) || j.status === 'blocked')) continue;
@@ -122,8 +131,10 @@ function plan() {
       }
     }
   }
+  // Units whose agent review is done and that wait only for a person's G3 sign-off (ADR-0019).
+  board.awaitingG3 = { at: now(), units: awaiting };
   if (!DRY) { board.jobs.push(...added); save('board', board); }
-  console.log(`${DRY ? '[dry-run] ' : ''}planned ${added.length} job(s)`);
+  console.log(`${DRY ? '[dry-run] ' : ''}planned ${added.length} job(s); ${awaiting.length} unit(s) await G3 sign-off`);
   for (const j of added) console.log(`  + ${j.id}`);
   return added;
 }
@@ -881,6 +892,14 @@ function handleInbox(board, decisions, control, health) {
 
 // ---------------------------------------------------------------- views
 
+/** "N units (first few)" for the owner: units that only a person's G3 sign-off can move on. */
+function g3Line(board) {
+  const units = board.awaitingG3?.units || [];
+  if (!units.length) return 'none';
+  const shown = units.slice(0, 6).map((x) => `${x.course} U${x.unit}`).join(', ');
+  return `${units.length} unit${units.length === 1 ? '' : 's'} (${shown}${units.length > 6 ? ', ...' : ''})`;
+}
+
 function summaryLine(board, health) {
   const by = (s) => board.jobs.filter((j) => j.status === s).length;
   const hs = Object.entries(health).filter(([, h]) => h.state !== 'ok').map(([w, h]) => `${w} ${h.state}${h.until ? ` until ${h.until.slice(11, 16)}Z` : ''}`);
@@ -898,6 +917,7 @@ function statusText(board, health, decisions, control = load('control')) {
     `Running: ${running.join(', ') || 'none'}`,
     `PRs waiting on CI or merge: ${prs.join(', ') || 'none'}`,
     `Ready for the next hourly batch: ${board.jobs.filter((j) => j.status === 'ready').length}`,
+    `Awaiting your G3 sign-off: ${g3Line(board)}`,
     ...(red.length ? [`Needs a fix: ${red.join(', ')}`] : []),
     `Needs you: ${open.join(' | ') || 'nothing'}`,
     ...(control.priority?.length ? [`Priority: ${control.priority.join(' > ')}`] : [])].join('\n');
@@ -921,6 +941,10 @@ ${Object.keys(WORKERS).map((w) => { const h = health[w] || { state: 'ok' }; retu
 ## Open owner decisions
 ${decisions.items.filter((d) => d.status === 'open').map((d) => `- **${d.id}** ${d.question} (${d.options.join(' / ')})`).join('\n') || 'none'}
 
+## Awaiting your G3 sign-off
+Agent review is done; only a person's G3 sign-off (ADR-0019) lets these units move on to the Urdu review.
+${(board.awaitingG3?.units || []).map((x) => `- ${x.course} Unit ${x.unit}: advisory ${x.disposition}, \`${x.report}\``).join('\n') || 'none'}
+
 ## Jobs
 | Job | Stage | Status | Worker | Tries | PR | Last event |
 |---|---|---|---|---|---|---|
@@ -939,7 +963,8 @@ function digest() {
   const text = `📘 Crew daily digest ${now().slice(0, 10)}
 ${summaryLine(board, health)}
 Last 24 h: ${recent.length ? recent.map((j) => `${j.id}${j.prNumber ? ` #${j.prNumber}` : ''} (${j.status})`).join(', ') : 'nothing finished'}
-Needs you: ${load('decisions').items.filter((d) => d.status === 'open').map((d) => d.id).join(', ') || 'nothing'}`;
+Needs you: ${load('decisions').items.filter((d) => d.status === 'open').map((d) => d.id).join(', ') || 'nothing'}
+Awaiting your G3 sign-off: ${g3Line(board)}`;
   send(text, { dryRun: DRY });
 }
 

@@ -3258,6 +3258,312 @@ content-improvement loop with no further cycle.
   confirmation of this entry; until then no unit may be authored (FR-002/FR-016b). Supersedes
   the stale `D-2026-0052` on the repaired spec.
 
+## D-2026-0049 - GQUR-301 intake: identity, blueprint and decision residue approved; partition and outcomes escalated; coverage, readings and structure fail
+
+- **Status:** confirmed (owner, 2026-10-10; escalations ruled in D-2026-0053; spec approval still requires the listed author repairs and a fresh intake)
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** GQUR-301 only. First intake evaluation of `specs/content/gqur-301/content-spec.md` at
+  commit `2fd037b2`, by an evaluator that did not draft it (drafted by the Paperclip
+  BilingualAuthor agent). Settles **only** `identity`, `blueprint` and `decision-residue`. Units 1
+  and 2 already authored under `docs/semester-2/gqur-301/` were treated as context, not judged.
+- **Decided by:** agent:evaluator, 2026-10-10
+- **Decision:**
+  1. **Identity: approved.** GQUR-301, "Quantitative Reasoning-II (Statistics)", **3 (3-0)**,
+     Semester 2, General Education, as `catalog/courses.json` records it in its Semester 2 group.
+     The guide gives code `2nd 2026.txt:371`, title `:375`, credit hours "3" `:380`, semester "2nd"
+     `:381`. The revised board Scheme (final authority) gives `GQUR-301 / Quantitative
+     Reasoning-II (Statistics) / 3(3-0) / General Education` (`B.Ed 4 Year 2026 revised after
+     board.txt`, Semester II row 1); the superseded board scheme agrees. The guide's bare total
+     and the Scheme's split do not conflict (`G-2026-02`/`G-2026-05` posture). **No Article II.3
+     conflict.** The `B.Ed (4-Year) 2025-2` document lists "GQUR:401 Quantitative Reasoning - II"
+     in Semester IV; it is neither the Scheme of record nor a guide, and the owner's 2026-09-10
+     final-authority designation (`specs/gaps.md` header) settles precedence among schemes, so it
+     raises no question for this course.
+  2. **Blueprint: approved.** Every unit carries the 10/10/5 bank, MCQ Remember to Apply, RRQ
+     Understand to Analyze, ERQ Analyze to Evaluate with an Analyze-or-higher rubric
+     (`style-guide.md:227-230`; the ERQ band is a subset of "Analyze to Evaluate/Create"). The
+     ">= 2 MCQ and >= 2 RRQ per topic" floor resolves to 8/10 in Units 1, 2, 5 (four topics) and
+     to exactly 10/10 in Units 3, 4, 6 (five topics): feasible in every unit, with no headroom in
+     the five-topic units. **No floor the spec's own items would breach.**
+  3. **Decision residue: approved, none found.** Every `confirmed` entry was swept against the
+     whole spec. `D-2026-0001` is consistent with the bibliographic-level citation posture.
+     `D-2026-0002`/`0004` ("one-page", "one-term"): zero hits. `D-2026-0003`: zero `.specify`
+     references. `D-2026-0012`: the derived unit grouping is labelled derived. `D-2026-0013`/
+     `0021` are course-specific; the spec's self-declared `open_access_floor: {default: 1}` follows
+     the GQUR-300 precedent (`D-2026-0042` item 5) without claiming owner adoption. The spec's
+     "unresolvable" rows for `baboons`/`zaslow` resemble `D-2026-0010`'s manner but are not an
+     extension of it: both works resolve (see Limits, readings), so this is a readings defect, not
+     residue. No other confirmed entry touches this course's spec.
+- **Not approved (recorded so a reader can see what remains):**
+  - **`partition` - escalated, `G-2026-82`.** The guide gives 16 week-mapped chapters and no units
+    (`2nd 2026.txt:405-527`); the six-unit merge is a judgement it does not determine. Verified
+    structural properties: contiguous, no chapter split or reordered, every chapter placed once.
+  - **`outcomes` - escalated, `G-2026-83`.** The CLO refs trace to guide outcomes 1-3
+    (`:394-401`) and none is an addition, but CLO 3's "appropriate computational tools" component
+    has no outline ancestor and no unit delivers it. Also a defect: `content-spec.md:41` labels the
+    outcomes "verbatim", but outcome 3 drops the guide's "It is an".
+  - **`coverage` - fail (repairable by the drafter).** In substance every one of the guide's 43
+    leaf sub-topics (`:406-526`) appears exactly once across the 46 checklist rows (three split
+    compounds: 6.2, 10.1, 13.1), and no sub-topic is added. But three Unit 2 rows carry **false
+    guide refs**: U2-05 Median "4.1" (guide 4.2, `:463`), U2-07 Comparison "5.1" (guide 5.2,
+    `:467`), U2-08 Applications "5.1" (guide 5.3, `:468`) at `content-spec.md:261,263,264`. The
+    `## Week schedule` summary (`:112-117`) omits 8.3, 11.2, 16.2 and 16.3, which the checklists
+    carry. The description locator `2nd 2026.txt:385-389` (`:66`) should be `:383-388`.
+  - **`readings` - fail (repairable by the drafter).** The guide's seven-entry list
+    (`:551-580`) is present and every entry resolves to a real work, so the guide side passes.
+    The spec's record of it does not: `baboons` (`:87`) and `zaslow` (`:88`) are recorded
+    "unresolvable" but resolve (Babones, S. J. (Ed.) (2013) *Applied Statistical Modeling*, 4
+    vols, SAGE, ISBN 9781446208397, the guide misprinting the surname; Zaslow, E. (2020),
+    Cambridge University Press, ISBN 9781108419413); `lock2008` (`:90`) gives year 2008 and ISBN
+    9780471764003, but the first edition is Wiley 2012, ISBN 9780470601877, and the given ISBN
+    resolves to nothing found; curated `siegfried2020` (`:98`) attributes *Seeing Statistics* to
+    "Siegfried, T. (2020), American Statistical Association, open-access", while every record found
+    names Gary McClelland's commercial web-book (c. 1999), and the URL returned an empty response
+    this run, so its "verified 2026-10-09" note is not supported; `openstax-stats` (`:100`) gives
+    2020, OpenStax gives Dec 13, 2023 for 2e. `haq1984` and `chaudhry2008` resolve as real print
+    works (widely cited in HEC/university syllabi), so `D-2026-0001` governs their text.
+  - **`structure` - fail (repairable by the drafter).** Front matter validates against
+    `contracts/content-spec-frontmatter.schema.json` (ajv 2020, true), all course-level sections
+    are present in contract order, every unit has every per-unit block, the Topic-list partitions
+    are total and disjoint, depth-budget counts match, every topic plans two figures, plan
+    bullets match the topic-list cells, and every mapped-readings key resolves. Two defects:
+    (a) the checklist `Topic` column must equal the assigned `### Topic list` label
+    (`content-spec-v3.md`), but U3-06, U3-08, U3-09 (`:339,341,342`), U4-07 (`:424`), U6-05,
+    U6-07, U6-08 (`:582,584,585`) carry guide numbers (7.2, 8.2, 8.3, 11.2, 15.3, 16.2, 16.3) that
+    are not Topic-list labels (no gate enforces this today); (b) **Unit 5 plans no concept-map,
+    flowchart or timeline** (`:510-513`, all diagram/table), breaching Art. III.10 /
+    `style-guide.md:493-494`, which `check:figures` will fail at G2.
+- **Basis:** `Scheme-and-Course-guides/extracted-text/2nd 2026.txt`, the GQUR-301 block: code
+  `:371`, title `:375`, credit hours `:380`, semester `:381`, description `:383-388`, outcomes
+  `:390-401`, outline `:403-527` (chapter/week headings `:405`, `:416`, `:454`, `:461`, `:465`,
+  `:470`, `:475`, `:479`, `:484`, `:488`, `:492`, `:496`, `:511`, `:515`, `:519`, `:524`), teaching
+  strategy `:529-535`, assessment `:537-547`, readings `:549-580`. The revised board Scheme for
+  identity. `specs/content/style-guide.md` v4.5 and `specs/008-rich-unit-pedagogy/contracts/
+  content-spec-v3.md` for blueprint and structure. External registries for readings (not bound,
+  checked 2026-10-10): SAGE/UMT catalogue (Babones), Google Books/Cambridge (Zaslow), Bookfinder/
+  Wiley (Lock), OpenStax (Illowsky & Dean), HEC 2008 Statistics curriculum (Haq), JSTOR/ HERDSA
+  records (McClelland, *Seeing Statistics*). Identity rests on the guide and the Scheme directly;
+  blueprint and residue rest on the bound style guide, contracts and register.
+
+  **Deterministic checks run at `2fd037b2`, real exit codes:** `validate:content` 0;
+  `check:no-em-dash` 0; `check:no-answer-keys` 0; `check:concept-graph` 0; `check:bloom-bands` 0;
+  `check:source-floor` 0; `check:depth-gate` 0; `check:figures` 0; `check:docs-sync` 0;
+  `check:pipeline-gate` **1** (4 GQUR-301 findings: Units 1 and 2 fail because the content-spec is
+  `draft` and their G2 rows are not done, the expected result of authoring before intake). The
+  green gates cover only authored Units 1-2; the spec-side invariants for all six units were
+  replayed directly with the gate's own parsers (`unitSectionLines`, `parsePipeTable`,
+  `tableAfterHeading`, `parseTopicList`).
+- **Bound to:** `/tmp/claude-1005/-home-a2ahs-mega-book-for-B-Ed/e283ce34-647b-4701-9268-ea887141a5b3/scratchpad/intake/GQUR-301/manifest.json`,
+  manifest digest `3dfe0d37ddf4b9c86599a2699445647cc2bcd33aa266fe7788deac6b8141434a`, 65 inputs at
+  commit `2fd037b20b2c17bb4334e5655c61f7cd2ed9457c`. Recomputed independently with `manifestFor()`
+  over the prepare script's `intakeRoots('gqur-301')`: every path and digest matched, none extra or
+  missing, the `manifest_digest` reproduced, and both `registers` digests matched. **Any change to
+  a bound input voids this approval** (Art. VII.8.5); the registers are not freshness-bearing
+  (`G-2026-15`), so recording this entry does not void it.
+- **Limits:**
+  - **The spec may NOT move to `status: approved` on this entry.** That needs the owner's rulings
+    on `G-2026-82` and `G-2026-83`, the drafter's repairs to coverage (three Unit 2 guide refs, the
+    week-schedule summary, the description locator), readings (`baboons`, `zaslow`, `lock2008`,
+    `siegfried2020`, `openstax-stats`) and structure (seven Topic cells, a structural figure for
+    Unit 5), and a fresh evaluation against a new manifest.
+  - **Blocked:** the unit grouping of all six units and their "Weeks N-M (derived)" lines
+    (`G-2026-82`); the CLO 3 refs of Units 4, 5 and 6 (`G-2026-83`); Unit 1's and Unit 2's mapped
+    readings that rely on `siegfried2020`; Unit 5's figure plan.
+  - Approving `identity`, `blueprint` and `decision-residue` does not approve the partition the
+    blueprints sit in; if the owner changes the partition, the blueprint verdict must be re-derived.
+  - Does not judge authored Units 1-2, approve any G3/G5 review, certify content, qualify a
+    reviewer or authorise publication (Art. VII.8.4).
+
+## D-2026-0055 - GQUR-301 re-intake after repair: identity, partition, outcomes, blueprint and structure approved; coverage, readings and decision residue still fail
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** GQUR-301 only. Second intake pass on `specs/content/gqur-301/content-spec.md` as
+  repaired at commit `dac6d109` (bound at `3f410769`), by an evaluator that did not draft it
+  (drafted by the Paperclip BilingualAuthor agent). Settles `identity`, `partition`, `outcomes`,
+  `blueprint` and `structure`. Units 1 and 2 already authored under `docs/semester-2/gqur-301/`
+  were treated as context, not judged.
+- **Decided by:** agent:evaluator, 2026-10-10
+- **Decision:**
+  1. **Identity: approved (re-affirmed).** GQUR-301, "Quantitative Reasoning-II (Statistics)",
+     **3 (3-0)**, Semester 2, General Education. Guide code `2nd 2026.txt:371`, title `:375`, credit
+     hours "3" `:380`, semester "2nd" `:381`; revised board Scheme Semester II row 1 gives
+     `GQUR-301 / Quantitative Reasoning-II (Statistics) / 3(3-0)`; `catalog/courses.json` digest is
+     unchanged since `D-2026-0049`. No Article II.3 conflict.
+  2. **Partition: approved on the owner's ruling, not on the guide.** Six units, Ch 1-2 / 3-5 / 6-8
+     / 9-11 / 12-13 / 14-16 (Weeks 1-2 / 3-5 / 6-8 / 9-11 / 12-13 / 14-16), exactly as confirmed by
+     `D-2026-0053` item 1 (`G-2026-82` resolved). The spec's grouping is unchanged from the version
+     the owner confirmed (`content-spec.md:109-116` and every unit's "Weeks N-M (derived)" line);
+     the week calendar follows the guide's chapter-to-week table (`:405-527`).
+  3. **Outcomes: approved.** Every unit's CLO refs trace to guide outcomes 1-3 (`:394-401`): Units
+     1-3 cite 1, 2; Units 4-6 cite 1, 2, 3; no SLO lacks a guide ancestor. The CLO 3 "appropriate
+     computational tools" question is settled by `D-2026-0053` item 4 (`G-2026-83` resolved): the
+     ruling permits outcome-derived rows that name their derivation; the spec adds none, so there
+     is nothing to check for derivation labels.
+  4. **Blueprint: approved (re-affirmed).** 10/10/5 per unit; MCQ Remember to Apply, RRQ Understand
+     to Analyze, ERQ Analyze to Evaluate with an Analyze-or-higher rubric (`style-guide.md:227-230`).
+     The ">= 2 MCQ and >= 2 RRQ per topic" floor resolves to 8/10 in Units 1, 2, 5 and exactly 10/10
+     in Units 3, 4, 6; topic counts are unchanged by the repair. No breach.
+  5. **Structure: approved.** Front matter validates against
+     `contracts/content-spec-frontmatter.schema.json` (ajv 2020: true). Every checklist `Topic` cell
+     now equals an assigned Topic-list label (the seven cells `D-2026-0049` named are repaired:
+     U3-06, U3-08, U3-09, U4-07, U6-05, U6-07, U6-08); Topic-list partitions are total and disjoint
+     in all six units; every topic plans two figures; every unit plans a concept-map, flowchart or
+     timeline, Unit 5 now via `fig-U5-1: concept-map` (`:510`, `:533-535`; Art. III.10,
+     `style-guide.md:493-494`).
+  6. **Within-guide slip resolved:** the guide's "Applied Statistical Modeling by Salvatore Baboons"
+     (`:560`) is Salvatore J. Babones (Ed.), SAGE 2013, ISBN 9781446208397: exact title, matching
+     forename, single catalogue match. No second document is in conflict, so this is a guide-side
+     misprint and the spec's resolution at `:87` stands.
+- **Not approved (drafter repairs, none needs an owner ruling):**
+  - **`coverage` - fail.** The `D-2026-0049` repairs to the description locator (`:66`) and the
+    week-schedule summary (`:113-116`, now carrying 8.3, 11.2, 16.2, 16.3) are made. The three
+    false Unit 2 guide refs are **not**: U2-05 Median is "4.1", guide 4.2 (`:463`); U2-07
+    Comparison is "5.1", guide 5.2 (`:467`); U2-08 Applications is "5.1", guide 5.3 (`:468`), at
+    `content-spec.md:260,262,263`. In substance all 43 guide leaf sub-topics appear exactly once
+    across 46 rows and nothing is added.
+  - **`readings` - fail.** Guide side passes: all seven entries resolve (Babones, Zaslow and Lock
+    ISBNs re-checked against SAGE, Cambridge/Google Books and bookseller records, 2026-10-10). The
+    five corrections `D-2026-0049` named are made, `siegfried2020` is removed everywhere in the
+    bound tree, and every unit binds lane2023 and openstax-stats (`open_access_floor: 1`,
+    `D-2026-0053` item 2). New defects in the curated `nist-sematech` mappings: Unit 2's newly
+    added "Section 1.3.3, sampling and central tendency" (`:284-285`) is the handbook's "Graphical
+    Techniques: Alphabetical"; "Section 1.3.7" (Unit 5 `:526`, Unit 6 `:610`) does not exist
+    (section 1.3 runs 1.3.1 to 1.3.6, checked at itl.nist.gov 2026-10-10); and the row's Units
+    column "3, 4, 6" (`:100`) omits Units 2 and 5, which map it.
+  - **`decision-residue` - fail.** The repair applying `D-2026-0049`'s readings finding changed
+    the `baboons` row to "cited at bibliographic level only" (`:87`) but left the superseded
+    "baboons (title level only)" in Unit 4's (`:446-447`) and Unit 6's (`:611`) mapped readings.
+    Extending the correction is guide-determined (the work resolves), so it is a repair, not an
+    escalation.
+- **Basis:** `Scheme-and-Course-guides/extracted-text/2nd 2026.txt`, GQUR-301 block `:365-580`
+  (code `:371`, title `:375`, credits `:380`, semester `:381`, description `:383-388`, outcomes
+  `:390-401`, outline `:403-527`, readings `:549-580`); revised board Scheme for identity;
+  `specs/content/style-guide.md` and `contracts/` for blueprint and structure; owner rulings in
+  `D-2026-0053` (confirmed 2026-10-10, read from the parent's bundle copy, sha256
+  `56ae62a22da263d8f305e05bca1e3137622c50385be9475cdf9e5e064ab706ff`) for partition and the CLO 3
+  question. Deterministic checks at `3f410769`, real exit codes: `validate-content` 0,
+  `check-no-em-dash` 0, `check-no-answer-keys` 0, `check-concept-graph` 0, `check-bloom-bands` 0,
+  `check-source-floor` 0, `check-unit-depth` 0, `check-figures` 0, `check-docs-sync` 0,
+  `check-pipeline-gate` **1** (4 GQUR-301 findings: Units 1-2, spec `draft` and G2 rows `in-progress`,
+  the expected result of authoring before intake). Spec-side invariants for all six units were
+  replayed directly from the spec tables.
+- **Bound to:** `/tmp/claude-1005/-home-a2ahs-mega-book-for-B-Ed/e283ce34-647b-4701-9268-ea887141a5b3/scratchpad/intake2/GQUR-301/manifest.json`,
+  manifest digest `c786bd3b8ac1fac2ef0de093f316b76acf40cbd62b7bd0a0deb5e8769eadb7ed`, 65 inputs at
+  commit `3f41076923ff57e48295f88b1dfa53841c11cc11`. Recomputed with `manifestFor()` over
+  `intakeRoots('gqur-301')`: 65/65 paths and digests matched, none extra or missing, the
+  `manifest_digest` reproduced, both `registers` digests matched, tree clean. Against the
+  `D-2026-0049` manifest only `content-spec.md` changed. **Any change to a bound input voids this
+  approval** (Art. VII.8.5); the registers are not freshness-bearing (`G-2026-15`).
+- **Limits:**
+  - **The spec may NOT move to `status: approved` on this entry.** Remaining repairs: the three
+    Unit 2 guide refs (`:260,262,263` to 4.2, 5.2, 5.3); the `nist-sematech` section locators
+    (`:284-285`, `:526`, `:610`) and its Units column (`:100`); "title level" to "bibliographic
+    level" for `baboons` at `:446-447` and `:611`. Then a fresh manifest and a fresh evaluation.
+  - **Blocked until repaired:** Unit 2's checklist guide refs; the mapped readings of Units 2, 4,
+    5 and 6 as written. No escalation was raised; `G-2026-106` to `G-2026-109` are unused.
+  - Partition and outcomes rest on the owner's `D-2026-0053`, not on the guide; if that ruling is
+    altered on merge, both verdicts must be re-derived, and the blueprint with the partition.
+  - Does not judge authored Units 1-2, approve any G3/G5 review, mark any tracker row, certify
+    content, qualify a reviewer or authorise publication (Art. VII.8.4).
+
+## D-2026-0060 - GQUR-301 third intake: all eight criteria approved; the D-2026-0055 repairs are made
+
+- **Status:** confirmed (owner, 2026-10-10, relayed by the board session); spec moves to status: approved
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** GQUR-301 only. Third intake pass on `specs/content/gqur-301/content-spec.md` as repaired
+  at commit `c332c0b0` (board-direct repair session), by an evaluator that drafted neither the spec
+  (Paperclip BilingualAuthor agent) nor its repairs. Settles all eight G0/G1 criteria: `identity`,
+  `partition`, `coverage`, `outcomes`, `readings`, `blueprint`, `structure`, `decision-residue`.
+  Units 1 and 2 already authored under `docs/semester-2/gqur-301/` were treated as context, not
+  judged.
+- **Decided by:** agent:evaluator, 2026-10-10
+- **Decision:**
+  1. **Identity: approved (re-affirmed, inputs unchanged).** GQUR-301, "Quantitative Reasoning-II
+     (Statistics)", **3 (3-0)**, Semester 2, General Education. Guide `2nd 2026.txt:371` (code),
+     `:375` (title), `:380` (3), `:381` (2nd); revised board Scheme Semester II row 1
+     (`B.Ed 4 Year 2026 revised after board.txt:104-112`) `GQUR-301 / Quantitative Reasoning-II
+     (Statistics) / 3(3-0) / General Education`; `catalog/courses.json` agrees. No Article II.3
+     conflict.
+  2. **Partition: approved on the owner's ruling, not on the guide.** Ch 1-2 / 3-5 / 6-8 / 9-11 /
+     12-13 / 14-16 as Units 1-6, confirmed by `D-2026-0053` item 1 (`G-2026-82`). Unchanged from
+     the confirmed grouping (`content-spec.md:105-116`, each unit's "Weeks N-M (derived)" line);
+     weeks follow the guide's chapter-to-week table (`:405-527`).
+  3. **Coverage: approved.** The three Unit 2 guide refs are repaired: U2-05 `4.2` (`:260`, guide
+     `:463`), U2-07 `5.2` (`:262`, guide `:467`), U2-08 `5.3` (`:263`, guide `:468`). Replayed over
+     all six checklists: the 43 guide leaf sub-topics (`:405-527`) each appear exactly once across
+     46 rows (6.2, 10.1 and 13.1 split into two rows each), none added. Description locator
+     `:383-388` (`:66`) and the week-schedule column (`:111-116`) remain correct; the header
+     locator is now `:365-580` (`:11`), exactly the guide block.
+  4. **Outcomes: approved (re-affirmed).** Units 1-3 cite outcomes 1, 2; Units 4-6 cite 1, 2, 3
+     (`:159,239,316,399,482,560`), all tracing to guide `:394-401`. CLO 3 rests on `D-2026-0053`
+     item 4 (`G-2026-83`); the spec adds no derived row. Outcome 3 at `:46-47` is now verbatim
+     ("It is an ability...", guide `:399`).
+  5. **Readings: approved.** Guide side: all seven entries resolve to real works (re-affirmed from
+     `D-2026-0049`/`D-2026-0055`; the Babones misprint resolved there as a within-guide slip).
+     Monographs: mann2001, baboons, zaslow, chatfield, lock2008, chaudhry2008, haq1984 are all
+     print and bound at bibliographic level only (`D-2026-0001`). Every unit maps lane2023 and
+     openstax-stats, meeting `open_access_floor: {default: 1}` (`D-2026-0053` item 2). The
+     `nist-sematech` repairs are made and each locator was checked against itl.nist.gov on
+     2026-10-10: Unit 2 `1.3.5.1` Measures of Location (`:284-285`); Unit 5 `1.3.3.26` Scatter
+     Plot and `4.1.4.1` Linear Least Squares Regression (`:526-527`); Unit 6 `1.3.5.2` Confidence
+     Limits for the Mean, `1.3.5.3` Two-Sample t-Test for Equal Means, `7.1.3` What are
+     statistical tests? (`:611-612`). Each exists and matches its unit's topic. The row's Units
+     column now reads `2, 3, 4, 5, 6` (`:100`), matching every unit that maps it.
+  6. **Blueprint: approved (re-affirmed, unchanged).** 10/10/5 per unit; Bloom bands per
+     `style-guide.md:227-230`; the per-topic floor of 2 MCQ and 2 RRQ resolves to 8/10 in Units
+     1, 2, 5 and exactly 10/10 in Units 3, 4, 6. Feasible, no breach, no headroom in five-topic
+     units.
+  7. **Structure: approved.** Front matter validates against
+     `contracts/content-spec-frontmatter.schema.json` (ajv 2020: true). In all six units:
+     Topic-list partitions total and disjoint, every checklist Topic cell equals its assigned
+     Topic label, two figures per topic, figure-plan bullets match the Topic-list cells, and every
+     unit plans a concept-map or flowchart (Art. III.10, `style-guide.md:493-494`).
+  8. **Decision residue: approved.** "title level" for `baboons` is gone from the whole spec;
+     `baboons` now reads "bibliographic level only" at `:87`, `:446-447` and `:613`. Searches of
+     the bound `specs/content/gqur-301/` tree (excluding intake records) for `1.3.7`, `1.3.3` without
+     a sub-number, `siegfried`, "Seeing Statistics", "absent from major", `9780471764003`,
+     "one-page", "one-term" and `.specify` return nothing. No residue of `D-2026-0001`,
+     `D-2026-0049` or the `D-2026-0053` items touching this course was found.
+- **Basis:** `Scheme-and-Course-guides/extracted-text/2nd 2026.txt`, GQUR-301 block `:365-580`
+  (identity `:371-381`, description `:383-388`, outcomes `:390-401`, outline `:403-527`, readings
+  `:549-580`); the revised board Scheme for identity; `specs/content/style-guide.md` and
+  `contracts/` for blueprint and structure; owner rulings `D-2026-0053` items 1, 2 and 4 for
+  partition, the open-access floor and CLO 3. Those three items read the same in the parent's bundle
+  copy (`intake2/D-2026-0053.md`, sha256 `15d74a8c3e737fbd639164f2b9e3c933504b0d2558659dfed8dfdfecadc2ab1f`)
+  and in `main` at `a131c75b`. The bundle copy also carries items 6-7 (EFMP-305 only) and the
+  front-matter clarification in item 2. That clarification is met here: `open_access_floor` is the
+  `default: 1` mapping. The copy differs from the sha `56ae62a2...` `D-2026-0055` recorded and from
+  main's text, but not in any GQUR-301 item. Deterministic checks at `c332c0b0`, real exit codes:
+  `validate-content` 0, `check-no-em-dash` 0, `check-no-answer-keys` 0, `check-concept-graph` 0,
+  `check-bloom-bands` 0, `check-source-floor` 0, `check-unit-depth` 0, `check-figures` 0,
+  `check-docs-sync` 0, `check-pipeline-gate` **1**. Its 4 GQUR-301 findings are on Units 1-2: the
+  spec is `draft` and their G2 rows are not done. That is expected while the spec awaits approval.
+- **Bound to:** `/tmp/claude-1005/-home-a2ahs-mega-book-for-B-Ed/e283ce34-647b-4701-9268-ea887141a5b3/scratchpad/intake3/GQUR-301/manifest.json`,
+  manifest digest `f54ba8662c9e54a90a02d7f3a7e567371b8876a1c42a68c7649aed57f9c7d502`, 67 inputs at
+  commit `c332c0b0e0e4a20e6fbe60a3056f4565a292b405`. Recomputed with `manifestFor()` over
+  `intakeRoots('gqur-301')`: 67 of 67 paths and digests matched, none extra or missing, and the
+  `manifest_digest` reproduced. Both `registers` digests matched at read time. Against the
+  `D-2026-0055` manifest, only `content-spec.md` changed (plus the two added intake-2 records).
+  **Any change to a bound input voids this approval** (Art. VII.8.5). The registers do not bear on
+  freshness (`G-2026-15`).
+- **Limits:**
+  - On owner confirmation of this entry, the spec may move to `status: approved`. This entry does
+    not itself change that status, mark any tracker row, judge authored Units 1-2, approve any
+    G3/G5 review, certify content, qualify a reviewer or authorise publication (Art. VII.8.4).
+  - Partition and outcomes rest on the owner's `D-2026-0053`, not on the guide. If that ruling's
+    GQUR-301 items change, re-derive both verdicts, and the blueprint with the partition.
+  - Two minor inconsistencies were found. Neither is guide-determined, and neither blocks this
+    approval. They are recommended cleanups:
+    (a) the `## Standards & frameworks anchors` line for NIST (`content-spec.md:121-123`) still
+    says "(Units 3, 4, 6)", but the handbook is now mapped in Units 2-6;
+    (b) `sources/unit-01.md:8` still cites the old guide locator "lines 383-588".
+    The Reading-list Units column is also broader than some units' "Mapped readings" paragraphs.
+    For example, zaslow and chaudhry2008 appear in no unit paragraph. `style-guide.md:267-269`
+    permits a topically related open-access substitute, so that is a matter for G3, not a spec
+    defect.
+  - No escalation was raised. `G-2026-126` to `G-2026-129` are unused.
+
 ## D-2026-0050 - GENG-301 intake: identity, partition, outcomes, readings (presence) and blueprint approved; coverage, structure and decision residue not approved
 
 - **Status:** confirmed (owner, 2026-10-10; escalations ruled in D-2026-0053; spec approval still requires the listed author repairs and a fresh intake)
