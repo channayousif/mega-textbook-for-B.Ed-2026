@@ -1,0 +1,16 @@
+Visual accessibility inspection executed for GENG-301 Unit 2.
+Crew brief prohibits npm run build and dev servers; browser/Playwright rendering inspection with live server was not executed.
+Committed figure SVG geometry was directly measured using scripts/measure-figure-text.mjs:
+Command: node scripts/measure-figure-text.mjs static/img/figures/geng-301/unit-02/*.svg
+Result: 16 text-geometry defects found across all 8 figures (16 files: 8 light and 8 dark variants).
+In all 16 SVG files, the wordmark "textbook.com.pk" overflows the 780px viewBox right edge:
+- fig-U2-1.svg and fig-U2-1.dark.svg: overflows right edge by 43.0px
+- fig-U2-2.svg and fig-U2-2.dark.svg: overflows right edge by 43.0px
+- fig-U2-3.svg and fig-U2-3.dark.svg: overflows right edge by 43.0px
+- fig-U2-4.svg and fig-U2-4.dark.svg: overflows right edge by 38.8px
+- fig-U2-5.svg and fig-U2-5.dark.svg: overflows right edge by 38.8px
+- fig-U2-6.svg and fig-U2-6.dark.svg: overflows right edge by 43.0px
+- fig-U2-7.svg and fig-U2-7.dark.svg: overflows right edge by 43.0px
+- fig-U2-8.svg and fig-U2-8.dark.svg: overflows right edge by 43.0px
+
+Exit code: 1 (actionable text-geometry defects recorded for revision).
