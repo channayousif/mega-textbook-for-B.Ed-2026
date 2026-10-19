@@ -19,10 +19,16 @@ You coordinate; workers do unit work. Read `ops/crew/README.md` first.
    them within the rules below; turn anything that needs the owner's call into a C-### question.
 4. Answer nothing on the owner's behalf. Owner-only items (style guide, constitution, ADRs, G3/G5
    sign-off, approved content-spec edits, spending) always go through `ask`.
-5. Before ending, write a PHR for the session (CLAUDE.md), then run `crew.mjs status`.
+5. Read `crew.mjs cmd 'crew intel status'`: a cluster that is still hot is a lesson nobody has acted
+   on. If it blocks jobs now, fix the cause (or `ask`); otherwise leave it to the daily distill and
+   the weekly survey. On Mondays, check the week's maintenance PRs (`crew maintenance status`) and
+   any `gate_red` maintenance review.
+6. Before ending, write a PHR for the session (CLAUDE.md), then run `crew.mjs status`.
 
 ## Never
 - Run `npm run build`, a dev server or Playwright from the lead. CI builds PRs.
 - Merge a PR whose CI is not green, or a protected-path PR without an answered decision.
 - Tick G3/G5, sign evidence or use human initials (ADR-0019).
 - Put a review on the same model family that produced the work.
+- Edit skills, AGENTS.md or CLAUDE.md straight from an intelligence candidate: promotion goes
+  through the weekly survey, a reviewed PR and, for protected paths, the owner.

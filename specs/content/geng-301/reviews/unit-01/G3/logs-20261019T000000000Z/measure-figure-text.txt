@@ -1,0 +1,26 @@
+✗ static/img/figures/geng-301/unit-01/fig-U1-1.dark.svg
+    overflows right edge by 47.3px: "textbook.com.pk"
+✗ static/img/figures/geng-301/unit-01/fig-U1-1.svg
+    overflows right edge by 47.3px: "textbook.com.pk"
+✗ static/img/figures/geng-301/unit-01/fig-U1-2.dark.svg
+    overflows right edge by 47.3px: "textbook.com.pk"
+✗ static/img/figures/geng-301/unit-01/fig-U1-2.svg
+    overflows right edge by 47.3px: "textbook.com.pk"
+✗ static/img/figures/geng-301/unit-01/fig-U1-3.dark.svg
+    overflows right edge by 47.3px: "textbook.com.pk"
+✗ static/img/figures/geng-301/unit-01/fig-U1-3.svg
+    overflows right edge by 47.3px: "textbook.com.pk"
+✗ static/img/figures/geng-301/unit-01/fig-U1-4.dark.svg
+    overflows right edge by 47.3px: "textbook.com.pk"
+✗ static/img/figures/geng-301/unit-01/fig-U1-4.svg
+    overflows right edge by 47.3px: "textbook.com.pk"
+✗ static/img/figures/geng-301/unit-01/fig-U1-5.dark.svg
+    overflows right edge by 43.0px: "textbook.com.pk"
+✗ static/img/figures/geng-301/unit-01/fig-U1-5.svg
+    overflows right edge by 43.0px: "textbook.com.pk"
+✗ static/img/figures/geng-301/unit-01/fig-U1-6.dark.svg
+    overflows right edge by 43.0px: "textbook.com.pk"
+✗ static/img/figures/geng-301/unit-01/fig-U1-6.svg
+    overflows right edge by 43.0px: "textbook.com.pk"
+
+12 text-geometry problem(s).

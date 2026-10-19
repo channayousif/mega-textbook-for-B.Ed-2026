@@ -68,11 +68,56 @@ After a salvage PR merges, the tick deletes the Paperclip branches it replaced (
 `supersedes` PRs' head branches and its `base`), unless an open PR still uses one
 (owner ruling, 2026-10-17). Each job does this once and logs `retired superseded branches`.
 
+## Weekly maintenance (Sunday 02:00 PKT)
+
+The crew also tends the project itself (owner, 2026-10-19), spec-driven with reusable intelligence.
+Schedules come from the tick in Asia/Karachi time (`scripts/crew/maintenance.mjs`), so no crontab
+or daylight-saving change is needed; each slot runs once.
+
+1. **Survey** (`maint_survey`, claude first): writes `specs/maintenance/<YYYY-Www>/spec.md`,
+   `plan.md`, `tasks.md` (at most six rows) and `intelligence.md`, from what changed since the last
+   run, the standing checks and the week's intelligence candidates. It ships in the hourly batch.
+2. **Fan-out**: each `tasks.md` row becomes a job (`scripts/crew/maintjobs.mjs`): area `code` runs
+   as `maint_refactor` (codex first), `docs` and `artifacts` as `maint_docs`, `adr` as `maint_adr`
+   (the decision register `history/adr/README.md`), `skill` as `maint_skill`.
+3. **Own PR + independent review**: a maintenance job opens its own PR
+   (`crew(maint <week>): <task>`), never the content batch, and a `maint_review` job from another
+   model family reviews it (`CREW-VERDICT: pass|revise`). A revise queues one fix with the
+   reviewer's words; three review rounds without a pass go to the lead.
+4. **Merge**: CI green AND review pass AND no protected file (the list above plus `.claude/`)
+   merges automatically; otherwise the owner gets the usual C-### question.
+
+A self-maintenance diff that touches course content (`docs/`, `licence/`, the Urdu docs trees,
+`specs/content/`, `static/img/figures/`, `glossary.json`) fails: content is the corpus crew's.
+Skill: `.claude/skills/weekly-maintenance/`.
+
+## Intelligence (12-hourly harvest, daily distill, weekly promote)
+
+The crew forgets what it learns unless it is written where every worker reads it. On 2026-10-19
+one failure recurred 25 times before a person found it.
+
+- **Harvest, 00:00 and 12:00 PKT, no model** (`scripts/crew/intel.mjs`): everything new since the
+  cursor (board failures and handoff notes, worker logs, `cron.log`, PHR reflections, G3/G5
+  findings) becomes signals, folded into clusters by normalised signature in
+  `~/.crew/<project>/intel/`. A crew failure that turns hot (3 in one harvest or 5 in total) is
+  announced at once, at most five per harvest.
+- **Distill, 03:00 PKT, one model job** (`intel_distill`, agy first): the clusters that grew in 24 h
+  become typed candidates with evidence in `specs/intelligence/daily/<date>.md` (skill, gate,
+  brief or planner fix, AGENTS.md/CLAUDE.md rule, memory note, ADR suggestion, style-guide
+  proposal). Skill: `.claude/skills/intel-distill/`.
+- **Promote, weekly**: the survey turns the strongest candidates into tasks, and accepted items
+  get a row in `specs/intelligence/registry.md` naming the signature they target.
+- **Measure**: each harvest keeps per-slot counts, so the digest reports for every adopted item
+  whether its signal fell ("worked"), stayed ("no change") or rose ("worse").
+
 ## Owner commands (Discord or WhatsApp, only from the owner's own ID)
 
 - `C-007 merge` / `C-007 hold` / `C-007 yes ...`: answer a decision (free text after it is kept).
 - `crew status`, `crew pause`, `crew resume`, `crew prioritise EFMP-305`, `crew stop <job>`,
   `crew retry <job>`, `crew note <directions>`, `crew help`. A leading `/` is accepted.
+- `crew maintenance now` (an extra survey now; Sunday's still runs), `crew maintenance skip`
+  (skip this week), `crew maintenance status`; `crew intel now` (harvest and queue a distill now),
+  `crew intel status` (the week's top clusters).
 
 Two paths deliver them, and each command is applied once:
 
@@ -100,12 +145,15 @@ node scripts/crew/crew.mjs adopt 145 EFMP-301            # track an existing PR
 node scripts/crew/crew.mjs health codex cooling 2026-10-18T06:00:00Z
 node scripts/crew/crew.mjs ask "Approve X?" --options "yes|no"
 node scripts/crew/crew.mjs digest
+node scripts/crew/crew.mjs cmd 'crew intel status'     # hot clusters this week
+CREW_STATE_DIR=/tmp/state-copy node scripts/crew/crew.mjs tick --dry-run   # safe trial on a copy
 ```
 
 ## State (host-local, never committed)
 
 `~/.crew/mega-book/`: `board.json`, `health.json`, `decisions.json`, `control.json`, `inbox.json`,
-`owner.json` (the owner's WhatsApp number, Discord user ID and channel ID), `BOARD.md`, `logs/`.
+`owner.json` (the owner's WhatsApp number, Discord user ID and channel ID), `BOARD.md`, `logs/`,
+`intel/` (`clusters.json`, the append-only `ledger.jsonl` of raw signals).
 Job worktrees are under `~/crew-wt/<job>`. Any stand-in lead (cron, Codex, agy) reads the same files,
 so a lead running out of quota does not stop the crew.
 
