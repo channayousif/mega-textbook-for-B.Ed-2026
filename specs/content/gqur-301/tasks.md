@@ -15,35 +15,35 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ▢ | | guide Chapter 1; intake re-evaluation advised (D-2026-0070) |
-| Unit 1 | G2 en-draft | ▣ | | restructured under D-2026-0070; G2 gate evidence pending |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-01/G2/20261020T205917990Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | earlier advisory G3 reports describe the six-unit grouping and are archived under reviews/superseded-six-unit/; needs a fresh independent G3 review |
 | Unit 1 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 1 | G5 ur-review | ▢ | | |
 | Unit 1 | G6 assets | ▢ | | |
 | Unit 1 | G7 publish | ▢ | | |
 | Unit 2 | G1 unit-spec | ▢ | | guide Chapter 2; intake re-evaluation advised (D-2026-0070) |
-| Unit 2 | G2 en-draft | ▣ | | restructured under D-2026-0070; G2 gate evidence pending |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-02/G2/20261020T205923361Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | earlier advisory G3 reports describe the six-unit grouping and are archived under reviews/superseded-six-unit/; needs a fresh independent G3 review |
 | Unit 2 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 2 | G5 ur-review | ▢ | | |
 | Unit 2 | G6 assets | ▢ | | |
 | Unit 2 | G7 publish | ▢ | | |
 | Unit 3 | G1 unit-spec | ▢ | | guide Chapter 3; intake re-evaluation advised (D-2026-0070) |
-| Unit 3 | G2 en-draft | ▣ | | restructured under D-2026-0070; G2 gate evidence pending |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-03/G2/20261020T205927960Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | needs an independent G3 review |
 | Unit 3 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 3 | G5 ur-review | ▢ | | |
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
 | Unit 4 | G1 unit-spec | ▢ | | guide Chapter 4; intake re-evaluation advised (D-2026-0070) |
-| Unit 4 | G2 en-draft | ▣ | | restructured under D-2026-0070; G2 gate evidence pending |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-04/G2/20261020T205932410Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | needs an independent G3 review |
 | Unit 4 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 4 | G5 ur-review | ▢ | | |
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
 | Unit 5 | G1 unit-spec | ▢ | | guide Chapter 5; intake re-evaluation advised (D-2026-0070) |
-| Unit 5 | G2 en-draft | ▣ | | restructured under D-2026-0070; G2 gate evidence pending |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-05/G2/20261020T205936944Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | needs an independent G3 review |
 | Unit 5 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 5 | G5 ur-review | ▢ | | |

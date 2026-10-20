@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport } from '../../scripts/crew/planner.mjs';
+import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport, specUnitNumbers } from '../../scripts/crew/planner.mjs';
 
 const unit = (G3 = 'open', G5 = 'open', over = {}) => ({ authored: true, gates: { G3, G5 }, figures: { prompt_only: 0 }, ...over });
 const facts = (over = {}) => ({ bilingual: true, g3Report: null, g3Repaired: false, g5Report: null, mirrorComplete: true, ...over });
@@ -52,4 +52,12 @@ test('pickLatestReport skips manifests and orders by completion time', () => {
   ];
   assert.deepEqual(pickLatestReport(entries), { file: 'G3/agent-g3-run002.json', disposition: 'pass', completed_at: '2026-10-02T09:00:00Z' });
   assert.equal(pickLatestReport([{ file: 'G3/manifest.json', json: { files: [] } }]), null);
+});
+
+test('specUnitNumbers: units an approved spec defines, so unwritten ones get authored', () => {
+  const spec = (status, body) => `---\ncourse_code: GQUR-301\nstatus: ${status}\n---\n\n# Spec\n\n${body}`;
+  assert.deepEqual(specUnitNumbers(spec('approved', '## Unit 1: A\n\n### Topic list\n\n## Unit 2: B\n\n## Unit 10: C\n')), [1, 2, 10]);
+  assert.deepEqual(specUnitNumbers(spec('draft', '## Unit 1: A\n')), []);
+  assert.deepEqual(specUnitNumbers(spec('approved', '## Units overview\n## Unit 3: C\n')), [3]);
+  assert.deepEqual(specUnitNumbers('no front matter\n## Unit 1: A\n'), []);
 });
