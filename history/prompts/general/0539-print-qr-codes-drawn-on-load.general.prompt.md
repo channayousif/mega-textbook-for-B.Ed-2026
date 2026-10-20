@@ -14,7 +14,7 @@ links:
   spec: null
   ticket: null
   adr: null
-  pr: null
+  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/291
 files:
  - src/lib/printPage.ts
  - src/theme/Root.tsx
