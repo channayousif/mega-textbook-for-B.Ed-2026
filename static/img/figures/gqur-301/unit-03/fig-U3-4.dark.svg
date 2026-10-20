@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Choosing a sampling method</title><desc id="d">A flowchart for choosing a sampling method: start with the research question, then decide whether a sampling frame exists, whether random selection is practical, and whether the population has distinct subgroups.</desc><defs><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700;fill:var(--ink)} .sh{font-size:12px;font-weight:600;fill:var(--ink)} .m{font-size:12px;fill:var(--muted)} .c{text-anchor:middle} .wm{fill:var(--wm);font-size:11px;text-anchor:end} .b1{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2} .b2{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2} .b3{fill:var(--a3-fill);stroke:var(--a3);stroke-width:2} .b4{fill:var(--a4-fill);stroke:var(--a4);stroke-width:2} .line{stroke:var(--line);stroke-width:2}</style><marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="var(--line)"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="470"/>
+  <text class="h c" x="390" y="28">Choosing a sampling method: three questions</text>
+  <rect class="b1" x="290" y="44" width="200" height="36" rx="6"/>
+  <text class="sh c" x="390" y="64">Research question</text>
+  <line class="line" x1="390" y1="80" x2="390" y2="96" marker-end="url(#arr)"/>
+  <rect class="b2" x="260" y="98" width="260" height="44" rx="6"/>
+  <text class="sh c" x="390" y="118">1. Does a sampling frame exist?</text>
+  <text class="m c" x="390" y="134">(a complete list of the population)</text>
+  <line class="line" x1="260" y1="120" x2="214" y2="120" marker-end="url(#arr)"/>
+  <text class="m c" x="237" y="112">no</text>
+  <rect class="b3" x="30" y="98" width="182" height="44" rx="6"/>
+  <text class="sh c" x="121" y="118">Non-random:</text>
+  <text class="m c" x="121" y="134">convenience or purposive</text>
+  <line class="line" x1="390" y1="142" x2="390" y2="162" marker-end="url(#arr)"/>
+  <text class="m" x="402" y="156">yes</text>
+  <rect class="b2" x="260" y="164" width="260" height="44" rx="6"/>
+  <text class="sh c" x="390" y="184">2. Is random selection practical?</text>
+  <text class="m c" x="390" y="200">(travel, time, cost)</text>
+  <line class="line" x1="260" y1="186" x2="214" y2="186" marker-end="url(#arr)"/>
+  <text class="m c" x="237" y="178">no</text>
+  <rect class="b3" x="30" y="164" width="182" height="44" rx="6"/>
+  <text class="sh c" x="121" y="184">Non-random:</text>
+  <text class="m c" x="121" y="200">quota or purposive</text>
+  <line class="line" x1="390" y1="208" x2="390" y2="228" marker-end="url(#arr)"/>
+  <text class="m" x="402" y="222">yes</text>
+  <rect class="b2" x="260" y="230" width="260" height="44" rx="6"/>
+  <text class="sh c" x="390" y="250">3. Do distinct subgroups matter?</text>
+  <text class="m c" x="390" y="266">(e.g. urban and rural schools)</text>
+  <line class="line" x1="520" y1="252" x2="566" y2="252" marker-end="url(#arr)"/>
+  <text class="m c" x="543" y="244">yes</text>
+  <rect class="b1" x="568" y="230" width="182" height="44" rx="6"/>
+  <text class="sh c" x="659" y="250">Stratified random</text>
+  <text class="m c" x="659" y="266">sample each subgroup</text>
+  <line class="line" x1="390" y1="274" x2="390" y2="294" marker-end="url(#arr)"/>
+  <text class="m" x="402" y="288">no</text>
+  <rect class="b1" x="260" y="296" width="260" height="44" rx="6"/>
+  <text class="sh c" x="390" y="316">Simple random or systematic</text>
+  <text class="m c" x="390" y="332">every member has a known chance</text>
+  <rect x="20" y="356" width="740" height="78" rx="6" fill="var(--panel)" stroke="var(--line)" stroke-width="1"/>
+  <text class="sh" x="36" y="376">Caption: The answers to three questions point to a method</text>
+  <text class="m" x="36" y="392">Random methods need a complete list and must be practical; when they are not, a non-random method</text>
+  <text class="m" x="36" y="408">is used and its results are not generalised to the whole population. If the question is about one</text>
+  <text class="m" x="36" y="424">subgroup only, purposive sampling is the right choice. Credit: textbook.com.pk after Lane (2023).</text>
+  <text class="wm" x="760" y="460" aria-hidden="true">textbook.com.pk</text>
+</svg>

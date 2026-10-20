@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Mean, median and mode in three unimodal shapes</title><desc id="d">Three single-peaked distributions: symmetric with mean, median and mode together at the centre; skewed right with the mode at the peak, then the median, then the mean towards the long right tail; skewed left with the order reversed. A note says this order is usual for single-peaked data but not guaranteed.</desc><defs><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700;fill:var(--ink)} .sh{font-size:12px;font-weight:600;fill:var(--ink)} .m{font-size:12px;fill:var(--muted)} .c{text-anchor:middle} .wm{fill:var(--wm);font-size:11px;text-anchor:end} .b1{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2} .b2{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2} .b3{fill:var(--a3-fill);stroke:var(--a3);stroke-width:2} .b4{fill:var(--a4-fill);stroke:var(--a4);stroke-width:2} .line{stroke:var(--line);stroke-width:2}</style><marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="var(--line)"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="470"/>
+  <text class="h c" x="390" y="28">Mean, median and mode in three unimodal shapes</text>
+  <rect x="20" y="44" width="240" height="300" rx="6" fill="var(--panel)" stroke="var(--line)" stroke-width="1"/>
+  <text class="sh c" x="140" y="66">Symmetric</text>
+  <path d="M 40,280 C 100,280 110,160 140,160 C 170,160 180,280 240,280 Z" fill="var(--a1-fill)" stroke="var(--a1)" stroke-width="2"/>
+  <line x1="140" y1="150" x2="140" y2="284" stroke="var(--a4)" stroke-width="2"/>
+  <text class="m c" x="140" y="304">mean = median = mode</text>
+  <text class="m c" x="140" y="322">(one peak, at the centre)</text>
+  <rect x="270" y="44" width="240" height="300" rx="6" fill="var(--panel)" stroke="var(--line)" stroke-width="1"/>
+  <text class="sh c" x="390" y="66">Skewed right (long tail right)</text>
+  <path d="M 290,280 C 310,280 320,160 345,160 C 375,160 400,250 500,280 Z" fill="var(--a2-fill)" stroke="var(--a2)" stroke-width="2"/>
+  <line x1="345" y1="150" x2="345" y2="284" stroke="var(--a4)" stroke-width="2" stroke-dasharray=""/>
+  <text class="m c" x="345" y="304">mode</text>
+  <line x1="370" y1="150" x2="370" y2="284" stroke="var(--a4)" stroke-width="2" stroke-dasharray="5 3"/>
+  <text class="m c" x="370" y="320">median</text>
+  <line x1="398" y1="150" x2="398" y2="284" stroke="var(--a4)" stroke-width="2" stroke-dasharray="5 3"/>
+  <text class="m c" x="398" y="336">mean</text>
+  <rect x="520" y="44" width="240" height="300" rx="6" fill="var(--panel)" stroke="var(--line)" stroke-width="1"/>
+  <text class="sh c" x="640" y="66">Skewed left (long tail left)</text>
+  <path d="M 540,280 C 640,250 665,160 695,160 C 720,160 730,280 750,280 Z" fill="var(--a3-fill)" stroke="var(--a3)" stroke-width="2"/>
+  <line x1="695" y1="150" x2="695" y2="284" stroke="var(--a4)" stroke-width="2" stroke-dasharray=""/>
+  <text class="m c" x="695" y="304">mode</text>
+  <line x1="670" y1="150" x2="670" y2="284" stroke="var(--a4)" stroke-width="2" stroke-dasharray="5 3"/>
+  <text class="m c" x="670" y="320">median</text>
+  <line x1="642" y1="150" x2="642" y2="284" stroke="var(--a4)" stroke-width="2" stroke-dasharray="5 3"/>
+  <text class="m c" x="642" y="336">mean</text>
+  <rect x="20" y="356" width="740" height="78" rx="6" fill="var(--panel)" stroke="var(--line)" stroke-width="1"/>
+  <text class="sh" x="36" y="376">Caption: The usual order, a rule of thumb rather than a law</text>
+  <text class="m" x="36" y="392">For a single-peaked distribution the mean is pulled furthest towards the long tail, so right skew</text>
+  <text class="m" x="36" y="408">usually gives mode, then median, then mean. Data with two peaks, or small data sets, can break this</text>
+  <text class="m" x="36" y="424">pattern: 0, 0, 2, 2 is symmetric yet has two modes. Credit: textbook.com.pk after Illowsky and Dean (2023).</text>
+  <text class="wm" x="760" y="460" aria-hidden="true">textbook.com.pk</text>
+</svg>

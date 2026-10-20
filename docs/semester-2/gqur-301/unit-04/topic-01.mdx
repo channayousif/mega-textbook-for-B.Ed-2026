@@ -1,0 +1,194 @@
+---
+title: "Topic 4.1 - Mean (arithmetic average)"
+description: "The arithmetic mean: computing it from a list of values and from a frequency table, reading it as a balance point, and knowing when one extreme value distorts it."
+course_code: GQUR-301
+unit_no: 4
+topic_no: 1
+topic_label: "4.1"
+clo_refs:
+  - "SLO:GQUR-301-4-1"
+blooms_summary: "Remember the formula for the mean; understand the mean as a fair share and as a balance point; apply the computation to a list and to a frequency table; analyze how one extreme value changes the mean."
+est_reading_minutes: 8
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+import Glossary from '@site/src/components/Glossary';
+
+<PrintHandout />
+
+## A real classroom situation
+
+A grade 6 teacher at a government school in Mirpurkhas has marked a short quiz
+out of 20. The ten marks are 12, 14, 15, 16, 17, 17, 18, 18, 19 and 3. The head
+teacher asks her for "the class average" to put in the monthly report. She adds
+the marks, gets 149, divides by 10 and writes 14.9. Then she looks at the list
+again. Nine of the ten pupils scored 12 or more, and most scored 15 or more, yet
+the "average" is below 15. One pupil, who was ill on the day, scored 3.
+
+<Figure id="fig-U4-1" kind="flowchart" src="/img/figures/gqur-301/unit-04/fig-U4-1.svg" alt="A flowchart with two routes to the mean: from a list, add all the values, count them and divide (149 divided by 10 gives 14.9); from a frequency table, multiply each value by its frequency, add the products and the frequencies, and divide (64 divided by 10 gives 6.4)." width={780} height={470} />
+
+<Figure id="fig-U4-2" kind="diagram" src="/img/figures/gqur-301/unit-04/fig-U4-2.svg" alt="A number line from 0 to 20 with the ten quiz marks shown as dots and a fulcrum at the mean of 14.9, where the distances below and above the mean balance; the single low mark of 3 pulls the balance point left." width={780} height={470} />
+
+Her arithmetic is right. What she needs is a clear idea of what the number 14.9
+means, and when it is a fair summary. This topic gives you both.
+
+## Explanation
+
+### The mean: sharing the total equally
+
+A measure of central tendency is a single number that stands for the centre of
+a data set. The most familiar one is the <Glossary term="Mean" />, often called
+the arithmetic average: the sum of all the values divided by the number of
+values.
+
+**mean = Σx ÷ n**
+
+Here Σx (read "sigma x") means "add up every value" and n is the number of
+values. For the quiz marks:
+
+mean = (12 + 14 + 15 + 16 + 17 + 17 + 18 + 18 + 19 + 3) ÷ 10 = 149 ÷ 10 = **14.9**
+
+There are two useful ways to picture the result. The first is **fair sharing**:
+if the 149 marks were pooled and shared out equally, each pupil would get 14.9.
+The second is a **balance point** (see the second figure above): put the marks as weights on a beam
+and the beam balances at 14.9. The distances of the marks below 14.9 add to
+15.7, and the distances of the marks above it also add to 15.7, so they cancel
+exactly. This is true of the mean of any data set (Lane, 2023, Chapter 3).
+
+### The mean from a frequency table
+
+When values repeat, writing every one out is slow. A frequency table (Unit 2)
+lists each value once with its frequency f, and the mean becomes
+
+**mean = Σfx ÷ Σf**
+
+Multiply each value by its frequency, add the products, and divide by the total
+frequency. Suppose a 10-mark spelling test gave these results:
+
+| Mark x | Pupils f | f × x |
+|---|---|---|
+| 5 | 2 | 10 |
+| 6 | 3 | 18 |
+| 7 | 4 | 28 |
+| 8 | 1 | 8 |
+| **Total** | **10** | **64** |
+
+The mean is 64 ÷ 10 = 6.4. This is exactly what you would get by writing out
+5, 5, 6, 6, 6, 7, 7, 7, 7, 8 and dividing their sum by 10: the table only saves
+writing. A common error is to divide 64 by the number of rows (4) instead of by
+the number of pupils (10), which gives an impossible 16 on a 10-mark test.
+
+### Worked example: average class size
+
+A head teacher in Hyderabad wants to know the average number of pupils per
+section across her six grade 5 sections, to support a request for another
+teacher. The section sizes are 32, 38, 41, 35, 44 and 40.
+
+**Step 1: add.** 32 + 38 + 41 + 35 + 44 + 40 = 230.
+
+**Step 2: count.** There are 6 sections, so n = 6.
+
+**Step 3: divide.** 230 ÷ 6 = 38.33, which she reports as about 38 pupils per
+section.
+
+Notice that no section has exactly 38.33 pupils. The mean need not be one of
+the values, and it need not be a whole number even when every value is.
+
+### When one value distorts the mean
+
+Because every value enters the sum, every value moves the mean, and a value far
+from the rest moves it a long way. Without the mark of 3, the other nine quiz
+marks have a mean of 146 ÷ 9 = 16.2. Adding one low mark pulls the mean down
+by more than a mark. On the balance beam, a far-away weight has a long lever arm.
+
+A value that lies far from the rest of the data is called an outlier. Before
+reporting a mean, look at the data for outliers and ask whether the mean still
+describes a typical member of the group.
+
+**Common misconception.** Many trainees believe that "the mean is always the
+best measure of central tendency". The mean is the most widely used measure
+and it uses all the information, but that same property makes it sensitive to
+outliers and to skewed data. When the mean and the bulk of the data disagree,
+as in the quiz, another measure may describe the centre more honestly. Topic
+4.2 introduces that measure, the median.
+
+## Activity: Two routes to one mean
+
+Work in pairs. About 15 minutes.
+
+Ask the members of your group how many brothers and sisters each has, and
+collect answers from at least 12 people (use other groups' answers if needed).
+
+1. Write the raw list and compute the mean by adding and dividing.
+2. Build a frequency table (value, frequency, f × x) and compute the mean
+   with Σfx ÷ Σf.
+3. Check that both routes give the same answer. If they do not, find the error.
+4. Is there any value far from the rest? Compute the mean with and without it,
+   and write one sentence on how much it moved.
+
+## Check your understanding
+
+1. *(Remember)* Write the formula for the mean of a list of values, and say in
+   words what each symbol stands for.
+2. *(Understand)* Explain, using the idea of a balance point, why adding one very
+   high value to a data set raises the mean.
+3. *(Apply)* In a survey of 20 households, 4 households have 2 children, 9 have
+   3, 5 have 4 and 2 have 6. Compute the mean number of children per household
+   from the frequency table.
+
+## Summary
+
+The mean is the sum of the values divided by their number. It can be read as
+the equal share each member would get, or as the point where the data balance.
+For data in a frequency table, multiply each value by its frequency, add, and
+divide by the total frequency. Because every value counts, a single outlier can
+pull the mean away from where most of the data lie, so always look at the data
+before you report its mean.
+
+## Self-assessment checklist
+
+- [ ] I can compute the mean of a list of values.
+- [ ] I can compute the mean from a frequency table using the sum of f times x.
+- [ ] I can explain why an outlier changes the mean, using the balance-point idea.
+
+## Try this at your practicum school
+
+Ask your cooperating teacher for the attendance figures of one class for the
+last ten school days. Compute the mean daily attendance. Then look for any day
+that was very different (a holiday eve, a rainy day) and compute the mean
+without it. Write two sentences for the teacher on which figure better describes
+a normal day, and why.
+
+## Summative task
+
+A school records the number of days each of 12 pupils was absent in a term:
+0, 1, 1, 2, 2, 2, 3, 3, 4, 4, 5, 29.
+
+a) Compute the mean number of days absent.
+b) Build a frequency table for the same data and confirm the mean from it.
+c) Compute the mean without the pupil who was absent for 29 days.
+d) In 80-120 words, explain to the head teacher what the comparison of (a) and
+   (c) shows, and whether the mean in (a) describes a typical pupil.
+
+**Mini-rubric**
+
+| Criterion | Levels |
+|---|---|
+| *Computation (Apply)* | 0-3: means in (a), (b) and (c) all correct / two correct / one or none. |
+| *Analysis of the outlier's effect (Analyze)* | 0-3: names the outlier, quantifies how far it moves the mean and judges whether (a) describes a typical pupil / partial / none. |
+
+## Further reading
+
+Lane, D. M. (2023). *Online Statistics Education: A Multimedia Course of Study.*
+Rice University. https://onlinestatbook.com/2/summarizing_distributions/measures.html -
+Chapter 3, "Measures of Central Tendency", including the mean as a balance point.
+
+Illowsky, B., & Dean, S. (2023). *Introductory Statistics 2e.* OpenStax.
+https://openstax.org/books/introductory-statistics-2e/pages/2-5-measures-of-the-center-of-the-data -
+Section 2.5, measures of the centre of the data, including the mean of a
+frequency table.
+
+Mann, P. S. (2001). *Introductory Statistics.* Wiley. Print textbook cited at
+bibliographic level only: the guide's first recommended reading for this
+chapter.

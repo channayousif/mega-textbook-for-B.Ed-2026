@@ -1,0 +1,176 @@
+---
+title: "Topic 5.2 - Comparison of mean, median and mode"
+description: "Comparing the mean, median and mode: what each one uses, how outliers and skew separate them, and why their usual order is a rule of thumb rather than a law."
+course_code: GQUR-301
+unit_no: 5
+topic_no: 2
+topic_label: "5.2"
+clo_refs:
+  - "SLO:GQUR-301-5-2"
+blooms_summary: "Remember the properties of each measure; understand how skew and outliers separate the three; apply all three to one data set; analyze what their comparison suggests about the shape of the data, and its limits."
+est_reading_minutes: 7
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+
+<PrintHandout />
+
+## A real classroom situation
+
+A small garment workshop in Karachi employs 12 workers. The owner tells a
+visiting inspector that "the average weekly wage here is over Rs 31,000". The workers
+say most of them earn about Rs 25,000. Both can be telling the truth. The weekly
+wages (thousands of rupees) are 18, 20, 22, 24, 25, 25, 25, 28, 30, 35, 40, 85,
+and the last figure is the supervisor's. The owner quoted the mean; the workers
+are describing the median and the mode.
+
+<Figure id="fig-U5-3" kind="diagram" src="/img/figures/gqur-301/unit-05/fig-U5-3.svg" alt="Three single-peaked distributions: symmetric with mean, median and mode together at the centre; skewed right with the mode at the peak, then the median, then the mean towards the long right tail; skewed left with the order reversed. A note says this order is usual for single-peaked data but not guaranteed." width={780} height={470} />
+
+<Figure id="fig-U5-4" kind="table" src="/img/figures/gqur-301/unit-05/fig-U5-4.svg" alt="A table comparing mean, median and mode on five properties: uses every value, pulled by outliers, works for unordered categories, works for ranked categories, and always exactly one value." width={780} height={470} />
+
+This topic puts the three measures side by side so that you can see why they
+disagree, and what their disagreement tells you.
+
+## Explanation
+
+### Comparing mean, median and mode
+
+Each measure answers a slightly different question, and each has a property the
+others lack (the table above summarises them):
+
+- The **mean** uses every value. That makes it informative, and also means one
+  extreme value can drag it a long way.
+- The **median** uses only the order of the values. It ignores how far away the
+  extremes are, so outliers barely move it. It also works for **ranked
+  categories** such as grades A to E, where there is an order but no arithmetic:
+  if 11 pupils got grades A, A, B, B, B, C, C, D, D, E, E, the median grade is
+  the 6th, which is **C**.
+- The **mode** uses only the counts. It is the only measure for unordered
+  categories, and it is the only one that can be missing or have more than one
+  value.
+
+For the workshop wages:
+
+- **Mean:** sum = 377, n = 12, mean = 377 ÷ 12 = **31.4** (thousand rupees).
+- **Median:** the 6th and 7th sorted values are 25 and 25, so median = **25**.
+- **Mode:** 25 occurs three times, more than any other wage, so mode = **25**.
+
+The mean is about Rs 6,400 above the median because the supervisor's Rs 85,000
+pulls it up. Without that one wage, the mean of the other 11 is
+292 ÷ 11 = 26.5, close to the median.
+
+### What the comparison suggests about shape
+
+For many data sets with **one peak**, the three measures fall in a typical
+pattern (the first figure above):
+
+- **Roughly symmetric:** mean, median and mode are close together.
+- **Skewed right** (a long tail of high values, like wages or incomes): the
+  mean is pulled furthest towards the tail, so usually mode < median < mean.
+- **Skewed left** (a long tail of low values, like marks on an easy test with a
+  few very low scores): usually mean < median < mode.
+
+So if a report gives mean 45, median 38 and mode 32, a right skew is the most
+likely explanation, and it is worth looking at the data before trusting the
+mean. Illowsky and Dean (2023, Section 2.6) present the same pattern.
+
+### The limits of the rule
+
+This pattern is a **rule of thumb, not a law**, and a careful teacher states it
+as one:
+
+- **Symmetry does not guarantee one central mode.** The data 0, 0, 2, 2 are
+  perfectly symmetric, with mean and median both 1, yet they have two modes,
+  0 and 2, and neither is at the centre.
+- **Two-peaked data break the pattern.** If a class contains two groups with
+  different results, the mode may sit at either peak, far from the mean and
+  median.
+- **Small data sets are unreliable.** With only a few values, one tie can
+  decide the mode, and the order of the three measures can come out either way
+  even when the data look skewed.
+
+Use the comparison as a prompt to look at the data, ideally on a dot plot or
+histogram (Unit 2), not as a substitute for looking.
+
+**Common misconception.** Many trainees memorise "right skew means mean >
+median > mode" and apply it to every data set. The order holds for most
+single-peaked distributions, but it can fail for bimodal data, for small data
+sets, and for discrete data with ties. Always check the shape directly before
+drawing a conclusion from the order.
+
+## Activity: Same mean, different stories
+
+Work in pairs. About 20 minutes.
+
+Here are the marks (out of 10) of two groups of 9 pupils:
+
+- Group A: 3, 4, 5, 5, 5, 6, 6, 7, 4
+- Group B: 1, 2, 2, 2, 3, 8, 9, 9, 9
+
+1. Compute the mean, median and mode of each group.
+2. Draw a dot plot of each group on the same scale.
+3. Which group's three measures agree? Which group's measures disagree, and how
+   does the dot plot explain it?
+4. Write two sentences you would say to the class teacher about Group B that the
+   mean alone would hide.
+
+## Check your understanding
+
+1. *(Remember)* Name the measure of central tendency that uses every value, the
+   one that uses only the order, and the one that uses only the counts.
+2. *(Understand)* A data set has mean 25, median 28 and mode 30. Which skew is
+   most likely, and why should you still check the data directly?
+3. *(Apply)* Find the median grade of these 9 pupils: B, A, C, B, D, A, B, C, E.
+   Explain why the mean grade cannot be computed.
+
+## Summary
+
+The mean uses every value, the median uses only the order and the mode uses only
+the counts. Outliers and long tails pull the mean away from the other two, so
+comparing the three suggests the shape of the data: close together for roughly
+symmetric data, mean towards the tail for skewed data. This pattern is common
+for single-peaked data but is not guaranteed; bimodal and small data sets can
+break it, so the comparison is a reason to look at the data, not a replacement
+for looking.
+
+## Self-assessment checklist
+
+- [ ] I can compute and compare the mean, median and mode of one data set.
+- [ ] I can explain what a gap between the mean and the median suggests about the data.
+- [ ] I can give an example where the usual order of the three measures does not hold.
+
+## Try this at your practicum school
+
+With permission, take one set of class marks (names removed). Compute all three
+measures and draw a quick dot plot. Write a short paragraph for your cooperating
+teacher describing the shape of the marks, and say whether the three measures
+agree.
+
+## Summative task
+
+The ages (years) of 11 teachers at a school are 28, 29, 31, 33, 33, 35, 38, 40,
+42, 45, 58.
+
+a) Compute the mean, median and mode.
+b) In 100-150 words, describe what the comparison of the three measures
+   suggests about the shape of this distribution. State one reason why you
+   should check that suggestion against a dot plot rather than rely on the
+   order of the measures alone.
+
+**Mini-rubric**
+
+| Criterion | Levels |
+|---|---|
+| *Computation (Apply)* | 0-3: mean, median and mode all correct / two correct / one or none. |
+| *Interpretation and its limits (Analyze)* | 0-3: links the order of the measures to a likely skew, names the value responsible and states a valid limit of the rule / two of these / one or none. |
+
+## Further reading
+
+Illowsky, B., & Dean, S. (2023). *Introductory Statistics 2e.* OpenStax.
+https://openstax.org/books/introductory-statistics-2e/pages/2-6-skewness-and-the-mean-median-and-mode -
+Section 2.6, "Skewness and the Mean, Median, and Mode".
+
+Lane, D. M. (2023). *Online Statistics Education: A Multimedia Course of Study.*
+Rice University. https://onlinestatbook.com/2/summarizing_distributions/comparing_measures.html -
+Chapter 3, "Comparing Measures of Central Tendency".

@@ -1,14 +1,14 @@
 ---
-title: "Topic 3.1 - Population concepts"
-description: "Population concepts: what a population is, why we sample, and the relationship between population, sample, parameter and statistic."
+title: "Topic 2.1 - Tabular presentation of data"
+description: "Frequency distributions: building a frequency table from raw data, cumulative frequency, and using them to see patterns."
 course_code: GQUR-301
 unit_no: 2
 topic_no: 1
-topic_label: "3.1"
+topic_label: "2.1"
 clo_refs:
   - "SLO:GQUR-301-2-1"
-blooms_summary: "Remember the definitions of population, sample, parameter and statistic; understand why sampling is necessary; apply the concept to identify the population and sample in a described study."
-est_reading_minutes: 14
+blooms_summary: "Remember the structure of a frequency distribution table; understand why grouping data into intervals reveals patterns; apply the process to construct a frequency table and a cumulative frequency table from raw data."
+est_reading_minutes: 7
 translation_status: draft
 ---
 
@@ -19,144 +19,165 @@ import Glossary from '@site/src/components/Glossary';
 
 ## A real classroom situation
 
-A district education officer in Nawabshah wants to know the average number of
-pupils per classroom in all government primary schools in the district. There
-are 347 schools. She could visit every school and count every classroom, but
-that would take weeks she does not have. Instead, she selects 30 schools,
-counts their classrooms, and uses the result to estimate the district average.
-Her staff ask: "Can 30 schools really represent 347?" She is not entirely sure
-what guarantees that they can, or what can go wrong.
+A teacher has just marked a 30-mark quiz for her grade 7 class of 25 pupils.
+The marks, in no particular order, are: 18, 22, 15, 20, 23, 12, 19, 21, 17,
+24, 14, 16, 20, 22, 13, 18, 25, 11, 19, 17, 21, 16, 23, 15, 20. She wants to
+know how the class did overall, but the raw list tells her little. She could
+sort the numbers, but with 25 entries that only helps a little. She needs a way
+to see the shape of the marks at a glance - where they cluster, where they
+spread, whether there are very low or very high scores.
 
-<Figure id="fig-U2-1" kind="concept-map" src="/img/figures/gqur-301/unit-02/fig-U2-1.svg" alt="A concept map placing 'Population' at the centre, branching into Sample, Parameter and Statistic, with arrows showing the inference direction from sample to population." width={780} height={470} />
+<Figure id="fig-U2-1" kind="table" src="/img/figures/gqur-301/unit-02/fig-U2-1.svg" alt="A worked frequency distribution table with columns for class interval, tally, frequency and relative frequency, using the 25 quiz marks from the opening situation." width={780} height={470} />
 
-<Figure id="fig-U2-2" kind="diagram" src="/img/figures/gqur-301/unit-02/fig-U2-2.svg" alt="A diagram showing a large circle labelled 'Population: all 347 schools' with a smaller circle inside labelled 'Sample: 30 selected schools', and an arrow from the sample pointing to the population labelled 'inference'." width={780} height={470} />
+<Figure id="fig-U2-2" kind="flowchart" src="/img/figures/gqur-301/unit-02/fig-U2-2.svg" alt="A flowchart showing the steps to build a frequency table: sort the data, decide the number of intervals, set the interval width, tally each value into its interval, count the tally to get frequency." width={780} height={470} />
 
-Her question is the starting point for every statistical study: how do you learn
-about a large group by measuring a small one? This topic gives you the
-vocabulary to answer it.
+Her need is a common one. A <Glossary term="Frequency distribution" /> is a
+table that shows how often each value or each interval of values occurs. It
+turns a raw list into a picture of the data's shape. This topic shows you how
+to build one, step by step.
 
 ## Explanation
 
-### Population: the whole group you want to learn about
+### What a frequency distribution shows
 
-A <Glossary term="Population" /> is the complete set of individuals, items or
-measurements that you want to study. The population is defined by the research
-question, not by convenience. If the district officer wants to know about all
-government primary schools in the district, the population is all 347 schools -
-not the 30 she visits, not the ones near the road.
+A frequency distribution table has two essential columns: the **class
+intervals** (the ranges of values) and the **frequency** (the count of data
+points that fall in each interval). Two optional but useful columns are
+**relative frequency** (the proportion of the total in each interval) and
+**cumulative frequency** (the running total).
 
-A population can be large (all children in Sindh) or small (all pupils in one
-school). What matters is that it is the *entire* group the conclusion will be
-about. The numerical summary of a population - for example, the true average
-class size across all 347 schools - is called a <Glossary term="Parameter" />.
-A parameter is a fixed value, but in most studies it is unknown because you
-cannot measure the whole population.
+For the quiz marks above, grouping into intervals of width 5 gives:
 
-### Sample: the part you actually measure
+| Class interval | Frequency |
+|---|---|
+| 10-14 | 4 |
+| 15-19 | 10 |
+| 20-24 | 10 |
+| 25-29 | 1 |
 
-A <Glossary term="Sample" /> is a subset of the population that you select and
-measure. The numerical summary computed from the sample is called a
-<Glossary term="Statistic" />. The district officer computes the average class
-size of her 30 schools; that average is a statistic. She then uses the statistic
-to estimate the parameter.
+From this table you can see at a glance that 20 of the 25 marks cluster in the
+15-24 range, with the 15-19 and 20-24 intervals tied for the highest count (10
+each). Only 4 pupils scored below 15 and only 1 scored 25 or more. The raw list
+did not show this so clearly.
 
-### Why sample at all?
+### Step-by-step: building a frequency table from raw data
 
-Sampling is necessary for three practical reasons:
+Follow these steps for any small to medium data set.
 
-1. **Cost and time.** Measuring every school in a district, every household in
-   a tehsil, or every patient in a hospital is often prohibitively expensive
-   and slow.
-2. **Physical impossibility.** Some populations are infinite or inaccessible.
-   You cannot test every tablet in a production batch (destructive testing
-   would destroy them all), so you test a sample.
-3. **Accuracy.** A carefully collected sample can be *more* accurate than a
-   careless census. A rushed count of 347 schools with tired enumerators makes
-   more mistakes than a careful count of 30 well-trained ones.
+1. **Sort the data** from smallest to largest. This helps you see the range
+   and spot any values that look unusual.
+2. **Decide the number of intervals.** A common rule of thumb is 5 to 15
+   intervals. With 25 data points, 4 to 6 intervals usually works well. Too few
+   intervals hide the shape; too many leave most intervals empty.
+3. **Set the interval width.** Divide the range (largest value minus smallest)
+   by the number of intervals and round to a convenient number. For the quiz
+   marks, the range is 25 - 11 = 14; with 5 intervals the width is about 3,
+   but a width of 5 gives cleaner intervals.
+4. **Define the intervals** so that every data point falls in exactly one
+   interval. Use non-overlapping boundaries. Write them as "10-14", "15-19",
+   and so on.
+5. **Tally** each data point into its interval. A tally column (using vertical
+   strokes) makes counting easier.
+6. **Count** the tally strokes to get the frequency for each interval.
 
-### The inference arrow: from sample to sample to population
+### Cumulative frequency: a running total
 
-The whole point of sampling is to make an inference - to use what you learned
-from the sample to say something about the population. The arrow points from
-sample to population. This is easy to get backwards: the sample does not "come
-from" the population in the sense that the population is shaped by the sample.
-You select the sample *from* the population and then reason *back* to the
-population. Getting the direction right matters for understanding bias.
+A <Glossary term="Cumulative frequency" /> adds a third column to the table:
+for each interval, it gives the total frequency up to and including that
+interval. It answers the question "how many data points are at or below this
+value?"
 
-**Common misconception.** Many trainees think "a bigger population needs a
-bigger sample". The precision of an estimate depends on the *absolute* sample
-size, not on the fraction of the population sampled. A sample of 400 gives
-roughly the same precision whether the population is 10,000 or 10 million -
-provided the sample is well chosen.
+For the quiz marks table:
 
-## Activity: Identify the population and sample
+| Class interval | Frequency | Cumulative frequency |
+|---|---|---|
+| 10-14 | 4 | 4 |
+| 15-19 | 10 | 14 |
+| 20-24 | 10 | 24 |
+| 25-29 | 1 | 25 |
 
-Work in pairs. About 15 minutes.
+The cumulative frequency column tells you that 14 pupils scored 19 or below,
+and 24 scored 24 or below. This is useful when you want to know what proportion
+of the class scored at or below a certain level.
 
-For each of the three scenarios below, identify: (a) the population, (b) the
-sample, (c) the parameter of interest, (d) the statistic that would be
-computed from the sample.
+**Common misconception.** Many trainees assume that "frequency tables are only
+for small data sets and are not used in real statistical work." In fact,
+frequency distributions are the foundation of histograms and of the probability
+distributions you will meet in Unit 10. The skill of grouping data into
+intervals and counting frequencies is used throughout statistics, not only in
+classroom exercises.
 
-1. A researcher surveys 200 teachers in Shaheed Benazirabad to estimate the
-   average teaching experience of all government school teachers in Sindh.
-2. A school nurse weighs 40 pupils in grade 5 to estimate the average weight
-   of all 180 pupils in that grade.
-3. A quality inspector tests 50 tablets from a batch of 5,000 to estimate the
-   percentage that fail a drop test.
+## Activity: Build a table together
 
-Compare your answers with another pair. Where you disagree, discuss whether the
-sample is likely to represent the population well.
+Work in pairs. About 20 minutes.
+
+Use the following data set: the number of books read in the last month by 20
+pupils in a grade 6 class: 3, 5, 2, 7, 4, 6, 3, 8, 1, 5, 4, 6, 2, 7, 3, 5, 4,
+6, 5, 3.
+
+1. Sort the data and find the range.
+2. Decide on a reasonable number of intervals and interval width.
+3. Build the frequency table with class intervals, tally, frequency, and
+   cumulative frequency.
+4. Write one sentence describing what the table tells you about reading
+   habits in this class.
+
+Compare your table with another pair. If your intervals differ, discuss which
+grouping reveals the pattern more clearly.
 
 ## Check your understanding
 
-1. *(Remember)* Define population, sample, parameter and statistic in your own words.
-2. *(Understand)* Explain why a sample of 100 pupils can give a good estimate of the average height of all 2,000 pupils in a school, but a sample of 10 may not.
-3. *(Apply)* A researcher wants to estimate the average household income in a village of 500 households. She interviews 50. Identify the population, sample, parameter and statistic for this study.
+1. *(Remember)* Name the essential columns of a frequency distribution table and the two optional columns mentioned in this topic.
+2. *(Understand)* Explain why a data set of 100 values might need more intervals than a data set of 20 values.
+3. *(Apply)* The following marks (out of 10) were recorded for 16 pupils: 4, 6, 7, 5, 8, 3, 6, 7, 5, 4, 9, 6, 5, 7, 6, 5. Construct a frequency table with intervals of width 2, starting from 2-3. Include a cumulative frequency column.
 
 ## Summary
 
-A population is the complete group you want to learn about; a sample is the
-subset you actually measure. A parameter summarises the population (usually
-unknown); a statistic summarises the sample and is used to estimate the
-parameter. Sampling is necessary because measuring the whole population is
-often too costly, impossible, or less accurate than a well-collected sample.
+A frequency distribution table groups raw data into intervals and counts how
+many values fall in each. The steps are: sort, choose the number of intervals,
+set the width, tally, and count. Cumulative frequency adds a running total
+that tells you how many values lie at or below each interval. The table reveals
+the shape of the data - where it clusters and how it spreads - far more clearly
+than a raw list.
 
 ## Self-assessment checklist
 
-- [ ] I can define population, sample, parameter and statistic with a clear example.
-- [ ] I can explain why sampling is necessary.
-- [ ] I can identify the population, sample, parameter and statistic in a described study.
+- [ ] I can construct a frequency table from a raw data set.
+- [ ] I can add a cumulative frequency column and interpret what it shows.
+- [ ] I can choose a reasonable number of intervals for a given data set.
 
 ## Try this at your practicum school
 
-At your practicum school, find one example where the administration uses a
-sample to learn about a larger group (for example, checking attendance in a few
-classes instead of all, or testing a few water coolers instead of every one).
-Identify the population, sample, parameter and statistic. Bring your example to
-the next session.
+At your practicum school, collect a small data set of your choice (for example,
+the marks of one class on a recent quiz, or the number of pupils absent each
+day for one week). Build a frequency distribution table and a cumulative
+frequency table. Write two sentences describing what the tables reveal. Bring
+your work to the next session.
 
 ## Summative task
 
-A nutritionist wants to estimate the average daily calorie intake of
-government school children in a district with 120 schools. She selects 15
-schools and records the meals eaten by a random selection of 20 pupils in each
-selected school.
+The following are the heights (in cm) of 20 pupils in a grade 8 class: 142,
+148, 151, 145, 155, 139, 147, 152, 144, 150, 146, 153, 141, 149, 143, 154,
+140, 156, 138, 151.
 
-a) Identify the population, sample, parameter and statistic for this study.
-b) The nutritionist says, "My sample is 15 out of 120 schools, which is 12.5 per cent, so it is large enough." Explain whether the fraction of schools sampled determines the quality of the estimate, or whether something else matters more.
+Construct a frequency distribution table using intervals of width 5 starting
+from 135-139. Include a frequency column and a cumulative frequency column.
+Then answer: how many pupils are shorter than 150 cm? Write the answer using
+your cumulative frequency column.
 
 **Mini-rubric**
 
 | Criterion | Levels |
 |---|---|
-| *Identification* | 0-3: population, sample, parameter and statistic all correctly identified / three of four / two or fewer. |
-| *Explanation* | 0-3: clear explanation that absolute sample size matters more than the fraction, with a reason / partial explanation / none. |
+| *Table construction* | 0-3: intervals correct, frequencies correct, cumulative column correct / two of three correct / one or none. |
+| *Interpretation* | 0-2: correct count of pupils below 150 cm with reference to the cumulative column / correct count without reference / incorrect. |
 
 ## Further reading
 
 Lane, D. M. (2023). *Online Statistics Education.* Rice University.
-https://onlinestatbook.com/ - Chapter 1 covers populations and samples.
+https://onlinestatbook.com/ - Chapter 2 covers frequency distributions with
+interactive examples.
 
-Illowsky, B., et al. (2020). *Introductory Statistics 2e.* OpenStax.
-https://openstax.org/details/books/introductory-statistics-2e - Section 1.2 on
-data, sampling and variation (CC BY 4.0).
+Illowsky, B., & Dean, S. (2023). *Introductory Statistics 2e.* OpenStax.
+https://openstax.org/details/books/introductory-statistics-2e - Section 1.3
+on frequency and cumulative frequency (CC BY 4.0).

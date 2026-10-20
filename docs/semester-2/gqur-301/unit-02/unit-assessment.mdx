@@ -1,12 +1,12 @@
 ---
 title: "Unit 2 assessment"
-description: "Summative assessment for GQUR-301 Unit 2: 10 MCQs, 10 RRQs and 5 ERQs on population concepts, sampling techniques, mean, median and mode."
+description: "Summative assessment for GQUR-301 Unit 2: 10 MCQs, 10 RRQs and 5 ERQs on frequency distribution tables, cumulative frequency, bar charts, histograms and pie charts."
 course_code: GQUR-301
 unit_no: 2
 clo_refs:
   - "SLO:GQUR-301-2-1"
   - "SLO:GQUR-301-2-2"
-blooms_summary: "Remember population, sample, parameter, statistic and the sampling methods; understand the difference between random and non-random sampling; apply mean, median and mode computations to data sets; analyze a distribution to choose and justify the best measure of central tendency."
+blooms_summary: "Remember the parts of a frequency table and the three chart types; understand why grouping and chart choice matter; apply table construction to raw data; analyze and evaluate which presentation suits a data set and audience."
 est_reading_minutes: 12
 translation_status: draft
 ---
@@ -17,22 +17,20 @@ import PrintHandout from '@site/src/components/PrintHandout';
 
 ## Unit summary
 
-This unit gave you the language and tools to describe the centre of a data
-set and to understand where data come from.
+This unit, which follows Chapter 2 of the course guide, turned raw lists of
+figures into tables and pictures that show their pattern.
 
-- Topic 3.1 defined population, sample, parameter and statistic, and explained
-  why sampling is necessary.
-- Topic 3.2 covered random sampling (simple, systematic, stratified) and
-  non-random sampling (convenience, purposive, quota), with the three-question
-  rule for choosing a method.
-- Topic 3.3 showed how to compute the mean and median, and explained when the
-  median is preferred because it is robust to outliers.
-- Topic 3.4 introduced the mode and showed how the relationship between mean,
-  median and mode reveals the shape of a distribution.
+- Topic 2.1 showed how to build a frequency distribution table: sort the data,
+  choose a sensible number of equal-width intervals, tally, and count. A
+  cumulative frequency column adds a running total, answering "how many values
+  are at or below this level?"
+- Topic 2.2 gave three charts and the rule for choosing among them: bar charts
+  compare separate categories (gaps between bars), histograms show the shape of
+  grouped quantitative data (touching bars), and pie charts show how a whole is
+  divided among a few categories.
 
-Together these give you the foundation for inference: you can now draw a sample,
-compute a statistic, and choose the measure that most honestly represents your
-data.
+The type of data (Unit 1) and the question you are answering decide which table
+and which chart are appropriate.
 
 ## Summative assessment
 
@@ -40,155 +38,145 @@ data.
 
 Choose the single best answer for each question.
 
-1. *(Remember)* Which of the following is a parameter?
-   - A) The mean of a sample of 30 pupils
-   - B) The true average height of all pupils in the school
-   - C) The median of a data set
-   - D) The mode of a sample
+1. *(Remember)* In a frequency distribution table, the frequency of an interval
+   is:
+   - A) The width of the interval
+   - B) The number of data values that fall in the interval
+   - C) The midpoint of the interval
+   - D) The running total up to the interval
 
-2. *(Remember)* In which sampling method does every member of the population
-   have an equal chance of selection?
-   - A) Convenience sampling
-   - B) Purposive sampling
-   - C) Simple random sampling
-   - D) Quota sampling
+2. *(Understand)* Why should class intervals in a frequency table not overlap?
+   - A) So that the table fits on one page
+   - B) So that every value falls in exactly one interval
+   - C) So that every interval has the same frequency
+   - D) So that the intervals can be drawn as a pie chart
 
-3. *(Understand)* A teacher computes the mean and median of her class's test
-   marks. The mean is much lower than the median. What does this most
-   suggest about the data?
-   - A) The data are symmetric
-   - B) There are some very low marks pulling the mean down
-   - C) There are some very high marks pulling the mean up
-   - D) The median was calculated incorrectly
+3. *(Apply)* A frequency table for test marks shows the interval 40-49 with a
+   cumulative frequency of 28. What does this mean?
+   - A) 28 pupils scored between 40 and 49
+   - B) 28 pupils scored 49 or below
+   - C) 28 pupils scored exactly 40
+   - D) 28 pupils scored 40 or below
 
-4. *(Understand)* Why is the median described as "robust" while the mean is
-   "sensitive to outliers"?
-   - A) The median uses more data points than the mean
-   - B) The median is not affected by extreme values because it depends only on the middle position
-   - C) The mean is always wrong when there are outliers
-   - D) The median is easier to calculate
+4. *(Apply)* The marks (out of 20) of ten pupils are 12, 15, 8, 17, 11, 14, 9,
+   16, 13, 10. Which set of intervals is most appropriate for a frequency table?
+   - A) 0-4, 5-9, 10-14, 15-19, 20-24
+   - B) 8-10, 11-13, 14-16, 17-19
+   - C) 0-10, 10-20
+   - D) 8, 9, 10, 11, 12, 13, 14, 15, 16, 17
 
-5. *(Apply)* A researcher wants to estimate the average family size in a
-   district with both urban and rural areas. She believes family size differs
-   by area. Which sampling method is most appropriate?
-   - A) Convenience sampling
-   - B) Simple random sampling
-   - C) Stratified sampling (stratum = urban / rural)
-   - D) Purposive sampling
+5. *(Apply)* A frequency table has intervals 10-14, 15-19, 20-24 with
+   frequencies 4, 10 and 10. What is the cumulative frequency of 20-24?
+   - A) 10
+   - B) 14
+   - C) 20
+   - D) 24
 
-6. *(Apply)* The following data set is recorded: 5, 7, 8, 8, 9, 10, 45.
-   Which measure of central tendency best represents the typical value?
-   - A) Mean
-   - B) Median
-   - C) Mode
-   - D) All three are equally representative
+6. *(Understand)* Why are the bars of a histogram drawn touching each other?
+   - A) To save space on the page
+   - B) Because the intervals of continuous data cover the range without gaps
+   - C) Because histograms are always drawn by computer
+   - D) Because all the bars have the same height
 
-7. *(Apply)* A data set has mean = 42, median = 38, mode = 35. What can you
-   conclude about the shape of the distribution?
-   - A) It is symmetric
-   - B) It is right-skewed (tail to the right)
-   - C) It is left-skewed (tail to the left)
-   - D) It is bimodal
+7. *(Apply)* A head teacher wants to show how the school budget is divided
+   among five categories. Which chart best shows each category's share of the
+   whole?
+   - A) Bar chart
+   - B) Histogram
+   - C) Pie chart
+   - D) Frequency table
 
-8. *(Apply)* Which measure of central tendency can be used with qualitative
-   (categorical) data?
-   - A) Mean
-   - B) Median
-   - C) Mode
-   - D) Mean and median
+8. *(Apply)* Which data set is best displayed as a histogram?
+   - A) The number of pupils preferring each of five sports
+   - B) The heights of 60 pupils measured in centimetres
+   - C) The number of schools in each of eight districts
+   - D) The favourite colour of each pupil in a class
 
-9. *(Apply)* A quality inspector tests 20 light bulbs from a batch of 2,000
-   to estimate the percentage that fail. The 20 bulbs are the:
-   - A) Population
-   - B) Parameter
-   - C) Sample
-   - D) Statistic
+9. *(Remember)* In a bar chart of pupils' favourite subjects, the gaps between
+   the bars show that:
+   - A) Some data are missing
+   - B) The categories are separate, not a continuous scale
+   - C) The chart was drawn incorrectly
+   - D) The bars are in order of size
 
-10. *(Apply)* A teacher selects every 5th pupil from an alphabetical list of
-    100 pupils. This is an example of:
-    - A) Simple random sampling
-    - B) Systematic sampling
-    - C) Stratified sampling
-    - D) Convenience sampling
+10. *(Understand)* A pie chart is a poor choice for the number of pupils in each
+    of 12 grades mainly because:
+    - A) Pie charts cannot show numbers
+    - B) Twelve thin slices are hard to compare by eye
+    - C) Grades are continuous data
+    - D) Pie charts need exactly four categories
 
 ### Restricted-response questions (RRQs)
 
 Answer each question in a few sentences or a short paragraph.
 
-1. *(Remember)* State the difference between a population and a sample in your
-   own words, and give one example of each from a school context.
+1. *(Understand)* Explain why a teacher building a frequency table for 30 test
+   marks might choose an interval width of 10 rather than 2.
 
-2. *(Remember)* Define parameter and statistic. Explain how they are related.
+2. *(Apply)* The ages of 12 teachers at a school are 28, 35, 42, 31, 38, 45, 29,
+   33, 40, 36, 44, 32. Construct a frequency table with intervals of width 10,
+   starting at 20-29, with a frequency column.
 
-3. *(Understand)* Explain the difference between stratified sampling and quota
-   sampling. Which one is random and why?
+3. *(Apply)* The cumulative frequency column of a table shows 15 for the interval
+   30-39 and 27 for 40-49. How many values fall in 40-49? Show your reasoning.
 
-4. *(Understand)* A data set has mean = 50 and median = 45. Explain what this
-   tells you about the shape of the distribution.
+4. *(Understand)* Explain what question the cumulative frequency column answers
+   that the frequency column does not, with a classroom example.
 
-5. *(Apply)* The following marks (out of 30) were obtained by 8 pupils: 18, 22,
-   25, 19, 21, 23, 20, 4. Compute the mean and median. Show your working.
+5. *(Analyze)* A trainee groups 25 quiz marks (range 11 to 25) into intervals of
+   width 1. Analyze what is wrong with this choice and what the table would fail
+   to show.
 
-6. *(Apply)* A researcher wants to study the study habits of university
-   students in Sindh. She has no complete list of all students. Explain which
-   sampling method she can and cannot use, and why.
+6. *(Understand)* State one difference in how a bar chart and a histogram are
+   drawn, and explain what that difference communicates.
 
-7. *(Apply)* Find the mode of the following data set: 7, 8, 8, 9, 9, 9, 10,
-   10, 10, 11. What is the modality of this distribution?
+7. *(Apply)* A pie chart and a bar chart are drawn from the number of pupils in
+   each of four sections of grade 5. Give one advantage of each chart for this
+   data.
 
-8. *(Apply)* Explain why the mean is sensitive to outliers but the median is
-   not. Use a small numerical example (5-6 values) to illustrate.
+8. *(Apply)* A school has 172 grade 10 results: Distinction 45, First division
+   78, Second 32, Third 12, Failed 5. Name the chart you would use to show each
+   result category's share, and compute the percentage for First division.
 
-9. *(Analyze)* A newspaper reports that the "average household income in Sindh
-   is Rs 45,000 per month". Explain why this figure might overstate the
-   typical income and what additional information you would want before
-   accepting the claim.
+9. *(Analyze)* Two teachers chart the same week's daily attendance. Teacher A
+   draws a bar chart with one bar per day; Teacher B draws a histogram of
+   attendance grouped in intervals of 5. Explain what each chart emphasizes and
+   which is more useful for spotting a trend across the week.
 
-10. *(Analyze)* Two teachers compute the mean of the same class's test marks.
-    Teacher A gets 42. Teacher B gets 38. Both are correct. Explain one
-    possible reason for the difference (consider what each teacher might have
-    included or excluded from the data).
+10. *(Analyze)* A report shows a histogram of pupils' favourite sports. Explain
+    why this chart is inappropriate and what should replace it.
 
 ### Extended-response questions (ERQs)
 
 Answer each question in a structured paragraph or set of paragraphs.
 
-1. *(Analyze)* A researcher surveys 100 households in a village of 500 to
-   estimate the average number of children per household. She uses convenience
-   sampling (interviewing households near the main road).
-   a) Identify the population, sample, parameter and statistic.
-   b) Evaluate the sampling method: one strength and one limitation.
-   c) Recommend a better method and explain why it would be better.
+1. *(Analyze)* The marks (out of 30) of 24 pupils on a quiz are: 18, 22, 15, 20,
+   23, 12, 19, 21, 17, 24, 14, 16, 20, 22, 13, 18, 25, 11, 19, 17, 21, 16, 23, 15.
+   - Construct a frequency table with intervals of width 5 starting at 10-14,
+     with frequency and cumulative frequency columns.
+   - Write one paragraph (80-120 words) describing what the table shows about
+     the class's performance.
+
+2. *(Analyze)* A teacher has 60 pupils' heights in cm. She tries intervals of
+   width 2, 5 and 20. Analyze how each choice would change what the frequency
+   table reveals, and recommend one width with a reason. (Write 120-180 words.)
+
+3. *(Evaluate)* A district report uses a pie chart with nine slices to compare
+   the number of schools in nine talukas. Evaluate this choice: say what the
+   chart does well and badly, and recommend and justify a better presentation.
    (Write 120-180 words.)
 
-2. *(Analyze)* The following are the weekly wages (in thousands of rupees) of
-   12 workers at a small factory: 18, 20, 22, 24, 25, 26, 28, 30, 32, 35,
-   40, 85.
-   a) Compute the mean, median and mode.
-   b) Write one paragraph (80-120 words) explaining which measure best
-      represents the typical worker's wage and why. Identify the outlier and
-      describe its effect on the mean.
+4. *(Evaluate)* You must present your practicum school's results to the staff:
+   the number of pupils in each grade (1 to 10), the distribution of marks in
+   grade 8, and the share of pupils passing and failing overall. Choose a chart
+   for each, justify each choice, and name one common presentation mistake to
+   avoid. (Write 150-200 words.)
 
-3. *(Evaluate)* A head teacher claims that "our school's average test score is
-   75 out of 100, which is the highest in the district." On investigation, you
-   find that the school has 200 pupils, but the "average" was computed from
-   only the top 20 pupils' marks. Evaluate this claim by identifying the
-   sampling problem, explaining how it distorts the result, and stating what
-   the honest figure would require. (Write 120-180 words.)
-
-4. *(Evaluate)* Consider the following statement from a research report: "We
-   used a sample of 30 schools, which is 10 per cent of the 300 schools in
-   the district, so our results are representative." Evaluate this claim by
-   explaining whether the fraction of schools sampled determines
-   representativeness, what matters more, and what additional information
-   you would need to judge the claim. (Write 120-180 words.)
-
-5. *(Create)* You are asked to conduct a small study at your practicum school
-   to find out how many hours pupils spend on homework each week.
-   a) Describe the population and the parameter of interest.
-   b) Recommend a sampling method and explain your choice.
-   c) Describe how you would collect the data and which measure of central
-      tendency you would use to summarise it and why. (Write 150-200 words.)
+5. *(Evaluate)* A newspaper prints a frequency table of household incomes with
+   intervals 0-10,000, 10,000-50,000 and 50,000-500,000 rupees and a histogram
+   drawn from it with equal-width bars. Evaluate both the table and the chart:
+   identify the problems with the intervals and with the drawing, explain how
+   each could mislead a reader, and propose corrections. (Write 150-200 words.)
 
 ## Answers and marking guidance
 
@@ -196,73 +184,74 @@ Answer each question in a structured paragraph or set of paragraphs.
 
 | Item | Answer | Justification |
 |---|---|---|
-| 1 | B | The true average of all pupils is a population parameter. |
-| 2 | C | Simple random sampling gives every member an equal chance. |
-| 3 | B | The mean is pulled toward low outliers, making it lower than the median. |
-| 4 | B | The median depends only on the middle position, not the extreme values. |
-| 5 | C | Stratified sampling by urban/rural captures the known subgroup difference. |
-| 6 | B | The median is robust to the outlier (45). |
-| 7 | B | Mean > median > mode indicates a right-skewed distribution. |
-| 8 | C | The mode is the only measure applicable to qualitative data. |
-| 9 | C | The 20 bulbs are the subset tested; they constitute the sample. |
-| 10 | B | Selecting every kth member from a list is systematic sampling. |
+| 1 | B | Frequency is the count of values in the interval. |
+| 2 | B | Non-overlapping intervals place every value in exactly one interval. |
+| 3 | B | Cumulative frequency up to 40-49 counts every value of 49 or below. |
+| 4 | B | The range 8-17 splits into four equal intervals of width 3 covering all values. |
+| 5 | D | 4 + 10 + 10 = 24. |
+| 6 | B | Touching bars show continuous intervals with no gaps between them. |
+| 7 | C | A pie chart shows the parts of one whole. |
+| 8 | B | Heights are continuous quantitative data, grouped and shown as a histogram. |
+| 9 | B | Gaps signal separate categories rather than a continuous scale. |
+| 10 | B | Many thin slices cannot be compared by eye; a bar chart is clearer. |
 
 ### RRQ model answers and mark schemes
 
-1. Population is the complete group of interest; sample is the subset actually measured. Example of population: all pupils in a school. Example of sample: 30 pupils selected for a survey. (2 marks: 1 for the distinction, 1 for valid examples.)
+1. With 30 values, width 10 gives a few intervals that each hold several values, so the shape is visible. Width 2 gives many intervals with only zero, one or two values each, so the pattern is lost. (2 marks: 1 for the reason, 1 for the contrast.)
 
-2. A parameter is a numerical summary of a population (usually unknown); a statistic is a numerical summary of a sample (used to estimate the parameter). (2 marks: 1 for each definition.)
+2. 20-29: 2 (28, 29); 30-39: 6 (31, 32, 33, 35, 36, 38); 40-49: 4 (40, 42, 44, 45). Total 12. (3 marks: 1 for correct intervals, 2 for correct frequencies.)
 
-3. Stratified sampling divides the population into strata and draws a random sample from each; quota sampling fills predetermined quotas by any means. Stratified sampling is random because the selection within each stratum is probabilistic; quota sampling is not. (2 marks: 1 for the distinction, 1 for identifying which is random.)
+3. 27 - 15 = 12 values. The cumulative frequency up to 40-49 includes everything up to 30-39 plus the 40-49 interval itself. (2 marks: 1 for 12, 1 for the subtraction.)
 
-4. The mean (50) is higher than the median (45), suggesting a right-skewed distribution: some high values are pulling the mean up. (2 marks: 1 for right-skewed, 1 for the reasoning.)
+4. Cumulative frequency answers "how many values are at or below this level?". Example: if the cumulative frequency of 0-39 is 14 out of 25, then 14 pupils scored 39 or less, which is useful for judging how many fell below a pass mark. (2 marks: 1 for the question, 1 for the example.)
 
-5. Sorted: 4, 18, 19, 20, 21, 22, 23, 25. Sum = 152. Mean = 152 / 8 = 19. Median = (20 + 21) / 2 = 20.5. (3 marks: 1 for correct mean, 1 for correct median, 1 for showing working.)
+5. Width 1 with a range of 14 gives about 15 intervals for 25 values, so most intervals hold 0, 1 or 2 values. The table is almost as long as the raw list and does not show where the marks cluster. Wider intervals (for example 5) reveal the shape. (3 marks: 1 for too many intervals, 1 for sparse counts, 1 for the lost pattern.)
 
-6. She cannot use simple random or stratified sampling because she has no sampling frame (complete list of students). She could use convenience sampling (easiest but least representative) or purposive sampling (selecting specific types of students relevant to her question). (3 marks: 1 for why random methods are unavailable, 1 for naming a feasible method, 1 for the reason.)
+6. Bar chart bars have gaps; histogram bars touch. Gaps say the categories are separate; touching bars say the intervals follow each other on one continuous scale. (2 marks: 1 for the difference, 1 for its meaning.)
 
-7. Both 9 and 10 occur three times. The data set is bimodal (modes: 9 and 10). (2 marks: 1 for identifying both modes, 1 for bimodal.)
+7. Bar chart: easier to read and compare the exact number in each section from the scale. Pie chart: shows at a glance each section's share of all grade 5 pupils. (2 marks: 1 for each.)
 
-8. Example: data set 10, 12, 14, 16, 18. Mean = 14, median = 14. Add an outlier: 10, 12, 14, 16, 100. Mean = 30.4, median = 14. The mean is pulled up by the outlier; the median stays at the middle position. (2 marks: 1 for the correct example, 1 for the correct explanation.)
+8. A pie chart (or a bar chart of percentages). First division: 78 ÷ 172 × 100 = 45.3 per cent, about 45 per cent. (2 marks: 1 for the chart, 1 for the percentage.)
 
-9. The figure might overstate the typical income because the mean is sensitive to high outliers (a few very high incomes pull the mean up). The median would be more representative. I would want to know whether the report used the mean or median, the distribution shape, and the sample size. (3 marks: 1 for the outlier explanation, 1 for suggesting the median, 1 for naming additional information needed.)
+9. Teacher A's bar chart keeps the days in order, so the rise or fall across the week is visible. Teacher B's histogram shows how often attendance fell in each range but loses the day order. For a trend across the week, Teacher A's chart is more useful. (3 marks: 1 for each emphasis, 1 for the justified choice.)
 
-10. One possible reason: Teacher A included all pupils (including absentees who scored 0), lowering the mean. Teacher B excluded absentees. Alternatively, Teacher A included an outlier (a very low score) that Teacher B excluded. (2 marks: 1 for a plausible explanation, 1 for the reasoning.)
+10. Sports are unordered categories, but a histogram's touching bars imply a continuous numerical scale. A bar chart with gaps (or a pie chart if the shares of the whole matter) should replace it. (2 marks: 1 for the reason, 1 for the replacement.)
 
 ### ERQ rubrics
 
-**ERQ 1 (Analyze - sampling evaluation)**
+**ERQ 1 (Analyze - frequency table and interpretation)**
+
+Correct table: 10-14: 4 (cumulative 4); 15-19: 10 (14); 20-24: 9 (23); 25-29: 1 (24).
 
 | Criterion | Band 3 (Full) | Band 2 (Partial) | Band 1 (Limited) | Band 0 |
 |---|---|---|---|---|
-| Identification | Population, sample, parameter, statistic all correctly identified | Three of four correct | One or two correct | None correct |
-| Evaluation | Clear strength and limitation of convenience sampling | Partial evaluation | Minimal evaluation | None |
-| Recommendation | Better method with a clear reason tied to the specific scenario | Recommendation with partial reason | Recommendation without reason | No recommendation |
+| Table | Intervals, frequencies and cumulative frequencies all correct | Two of three correct | One correct | None |
+| Interpretation (Analyze) | Describes the cluster in 15-24 (19 of 24), the few low and high marks, and what this means for the class | Partial description | Minimal or inaccurate | None |
 
-**ERQ 2 (Analyze - mean/median/mode comparison)**
-
-| Criterion | Band 3 (Full) | Band 2 (Partial) | Band 1 (Limited) | Band 0 |
-|---|---|---|---|---|
-| Computation | Mean, median and mode all correct | Two of three correct | One correct | None correct |
-| Interpretation | Clear explanation with correct identification of the outlier and its effect on the mean | Partial explanation | Minimal explanation | None |
-
-**ERQ 3 (Evaluate - distorted claim)**
+**ERQ 2 (Analyze - effect of interval width)**
 
 | Criterion | Band 3 (Full) | Band 2 (Partial) | Band 1 (Limited) | Band 0 |
 |---|---|---|---|---|
-| Problem identification | Correctly identifies the sampling bias (only top pupils included) | Partial identification | Minimal identification | None |
-| Explanation | Clear explanation of how the bias inflates the average and what the honest figure requires | Partial explanation | Minimal explanation | None |
+| Effect of each width (Analyze) | Width 2 too many sparse intervals; width 20 too few, hiding the shape; width 5 shows the shape | Two widths analysed correctly | One analysed | None |
+| Recommendation | Recommends a moderate width with a reason tied to 60 values and the range | Recommendation with partial reason | Recommendation without reason | None |
 
-**ERQ 4 (Evaluate - representativeness claim)**
-
-| Criterion | Band 3 (Full) | Band 2 (Partial) | Band 1 (Limited) | Band 0 |
-|---|---|---|---|---|
-| Evaluation | Correct explanation that the sampling method matters more than the fraction; identifies what additional information is needed | Partial evaluation | Minimal evaluation | None |
-
-**ERQ 5 (Create - study design)**
+**ERQ 3 (Evaluate - judging a chart choice)**
 
 | Criterion | Band 3 (Full) | Band 2 (Partial) | Band 1 (Limited) | Band 0 |
 |---|---|---|---|---|
-| Population and parameter | Correctly identified | One correct | None correct | - |
-| Sampling method | Appropriate method with a clear reason | Method with partial reason | Method without reason | No method |
-| Data collection and measure | Clear description of data collection and appropriate measure of central tendency with reason | Partial description | Minimal description | None |
+| Strengths and weaknesses | Notes the pie shows shares of the district total but nine slices are hard to compare and exact counts are hidden | Partial | One point | None |
+| Better presentation (Evaluate) | Recommends a bar chart (sorted by size) and justifies it by ease of comparison | Recommendation with partial justification | Recommendation only | None |
+
+**ERQ 4 (Evaluate - choosing charts for a staff presentation)**
+
+| Criterion | Band 3 (Full) | Band 2 (Partial) | Band 1 (Limited) | Band 0 |
+|---|---|---|---|---|
+| Chart choices (Evaluate) | Bar chart for pupils per grade, histogram for grade 8 marks, pie chart for pass/fail share, each justified | Two justified | One justified | None |
+| Presentation mistake | A valid mistake (pie with too many slices, axis not starting at zero, missing labels) with its effect | Mistake without effect | Irrelevant point | None |
+
+**ERQ 5 (Evaluate - unequal intervals in a published table and chart)**
+
+| Criterion | Band 3 (Full) | Band 2 (Partial) | Band 1 (Limited) | Band 0 |
+|---|---|---|---|---|
+| Problems identified | Notes the very unequal widths, the overlapping boundaries (10,000 and 50,000 in two intervals) and the equal-width bars that misrepresent unequal intervals | Two problems | One problem | None |
+| How it misleads and corrections (Evaluate) | Explains how wide intervals hide detail and equal bars exaggerate them, and proposes equal, non-overlapping intervals (or bar areas proportional to frequency) | Partial explanation and correction | Correction without explanation | None |
