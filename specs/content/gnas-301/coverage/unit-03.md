@@ -9,8 +9,10 @@ the source key it is grounded in.
 |---|---|---|---|
 | U3-01 | topic-01.mdx | Air pollution: causes, effects and control strategies | who-air-2024 |
 | U3-01 | topic-01.mdx | Air pollution: causes, effects and control strategies | who-aqg-2021 |
-| U3-01 | topic-01.mdx | Air pollution: causes, effects and control strategies | anwar2026 |
+| U3-01 | topic-01.mdx | Air pollution: causes, effects and control strategies | anwar-unit-2026 |
 | U3-01 | topic-01.mdx | Air pollution: causes, effects and control strategies | holland-oxford |
+| U3-02 | topic-02.mdx | Noise pollution: sources, human health impacts and control measures | nidcd-noise-2025 |
+| U3-02 | topic-02.mdx | Noise pollution: sources, human health impacts and control measures | who-noise-2011 |
 | U3-02 | topic-02.mdx | Noise pollution: sources, human health impacts and control measures | who-hearing-2026 |
 | U3-02 | topic-02.mdx | Noise pollution: sources, human health impacts and control measures | phoon-chen |
 | U3-03 | topic-03.mdx | Health, safety and environment: hazards | who-occupational-health |
