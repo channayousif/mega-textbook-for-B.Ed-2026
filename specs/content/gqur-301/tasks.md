@@ -18,7 +18,7 @@ as XML; page alt and SVG description agree for every placed figure.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ▢ | | intake pending; do not mark until intake approves |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-01/G2/20261017T113130488Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-01/G2/20261019T235035407Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | advisory: revise; figure text overflows, RRQ 5 model answer counting error, and missing topic-02 citations; report specs/content/gqur-301/reviews/unit-01/G3/459abd64-a834-454a-bb77-eaf0f571110a.json |
 | Unit 1 | G4 ur-translation | ▢ | | full Urdu mirror required (bilingual: true) |
 | Unit 1 | G5 ur-review | ▢ | | |
@@ -59,3 +59,4 @@ as XML; page alt and SVG description agree for every placed figure.
 | Unit 6 | G5 ur-review | ▢ | | |
 | Unit 6 | G6 assets | ▢ | | |
 | Unit 6 | G7 publish | ▢ | | |
+| Unit 1 | G3 en-review | ▢ | | advisory: revise; repairs applied for report specs/content/gqur-301/reviews/unit-01/G3/459abd64-a834-454a-bb77-eaf0f571110a.json (crew gqur-301-u01-repair_en, 2026-10-19). Blocking: fig-U1-1 re-laid out so no example box overlaps or overflows the viewBox, wordmark right-anchored in fig-U1-2..8 (light and dark); RRQ 5 frequencies corrected to 2/6/4; topic-02 cites lane2023 and ncc-maths in prose and Further reading. Advisories: MCQ 10 option B now 17-19; pbs and ncc-maths carry dated D-2026-0001 declarations in sources/unit-01.md; live browser inspection (X2) still not run. Figures not re-measured in Chromium (crew brief bars browser runs). Needs a fresh independent G3 review; row stays open (ADR-0019). |
