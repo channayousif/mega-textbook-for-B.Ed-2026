@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { printTitle, printableLinkUrl, shortUrl } from '../../src/lib/printPage.ts';
+import { printTitle, printableLinkUrl, qrCacheKey, shortUrl } from '../../src/lib/printPage.ts';
 
 // Printed pages: the browser's page header reads "subject | unit | topic", and
 // links that lead somewhere else get a QR code (owner request, 2026-10-19).
@@ -48,5 +48,21 @@ describe('shortUrl', () => {
     const out = shortUrl(`https://example.org/${'a'.repeat(100)}`);
     expect(out.length).toBe(70);
     expect(out.endsWith('...')).toBe(true);
+  });
+});
+
+// Codes are drawn once per page and stored; they expire when the page changes.
+describe('qrCacheKey', () => {
+  const doi = 'https://doi.org/10.1016/j.sbspro.2010.12.444';
+
+  it('is the same for the same page and links', () => {
+    expect(qrCacheKey('/semester-1/efmp-302/unit-01/topic-01/', [doi])).toBe(qrCacheKey('/semester-1/efmp-302/unit-01/topic-01/', [doi]));
+  });
+
+  it('changes when the page or any of its links changes', () => {
+    const key = qrCacheKey('/semester-1/efmp-302/unit-01/topic-01/', [doi]);
+    expect(qrCacheKey('/semester-1/efmp-302/unit-01/topic-02/', [doi])).not.toBe(key);
+    expect(qrCacheKey('/semester-1/efmp-302/unit-01/topic-01/', [doi, 'https://example.org/'])).not.toBe(key);
+    expect(qrCacheKey('/semester-1/efmp-302/unit-01/topic-01/', [])).not.toBe(key);
   });
 });

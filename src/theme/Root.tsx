@@ -22,6 +22,7 @@ import { useAuth } from '@site/src/contexts/AuthContext';
 import {
   addLinkQrCodesNow,
   loadImagesForPrint,
+  prepareLinkQrCodes,
   printHandout,
   removeLinkQrCodes,
   restorePageTitle,
@@ -56,13 +57,34 @@ function RouteAnalytics() {
   return null;
 }
 
+/**
+ * Draws the link QR codes once each page has settled, on first load and after every
+ * client-side navigation, so a print can serve them at once (src/lib/printPage.ts).
+ */
+function PrintQrPreparer() {
+  const { pathname } = useLocation();
+
+  React.useEffect(() => {
+    const prepare = () => void prepareLinkQrCodes();
+    if ('requestIdleCallback' in window) {
+      const id = window.requestIdleCallback(prepare, { timeout: 3000 });
+      return () => window.cancelIdleCallback(id);
+    }
+    const id = setTimeout(prepare, 1000);
+    return () => clearTimeout(id);
+  }, [pathname]);
+
+  return null;
+}
+
 export default function Root({ children }: { children: React.ReactNode }): React.ReactElement {
   useEffect(() => {
     // Print preparation (src/lib/printPage.ts). Lazy images are not fetched yet when a
     // print starts, and link QR codes need their encoder, so Ctrl/Cmd+P is taken over
     // to do both first, then open the same native dialog. The browser's own menu
-    // cannot be delayed: beforeprint does what it can at once. In every case the
-    // printed title reads "subject | unit | topic", and afterprint puts things back.
+    // cannot be delayed: beforeprint serves the codes PrintQrPreparer stored and starts
+    // the image loads. In every case the printed title reads "subject | unit | topic",
+    // and afterprint puts things back.
     const onKey = (e: KeyboardEvent) => {
       if ((e.ctrlKey || e.metaKey) && !e.altKey && !e.shiftKey && e.key.toLowerCase() === 'p') {
         e.preventDefault();
@@ -91,6 +113,7 @@ export default function Root({ children }: { children: React.ReactNode }): React
   return (
     <AuthProvider>
       <RouteAnalytics />
+      <PrintQrPreparer />
       {children}
     </AuthProvider>
   );
