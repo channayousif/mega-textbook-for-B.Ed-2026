@@ -9,16 +9,17 @@ the source key it is grounded in.
 |---|---|---|---|
 | U4-01 | topic-01.mdx | Workplace environment: OSH issues in industry, construction, agriculture and service sectors | khan2024 |
 | U4-01 | topic-01.mdx | Workplace environment: OSH issues in industry, construction, agriculture and service sectors | nafees2019 |
+| U4-01 | topic-01.mdx | Workplace environment: OSH issues in industry, construction, agriculture and service sectors | abbasi2022 |
 | U4-01 | topic-01.mdx | Workplace environment: OSH issues in industry, construction, agriculture and service sectors | who-occupational-health |
 | U4-02 | topic-01.mdx | Accidents, injuries and workplace fatalities | harrington-gill |
 | U4-03 | topic-02.mdx | Occupational safety and health management systems (international and national) | harrington-gill |
 | U4-04 | topic-03.mdx | Safety management: regulations of health, safety and environment | abbasi2022 |
-| U4-05 | topic-03.mdx | Internal control and management philosophy | abbasi2022 |
+| U4-05 | topic-03.mdx | Internal control and management philosophy | harrington-gill |
 | U4-06 | topic-04.mdx | Duties and rights; strategies and goals | harrington-gill |
 | U4-07 | topic-04.mdx | Roles and responsibilities of occupational health and safety professionals | khan2024 |
 | U4-08 | topic-05.mdx | Key principles of management and HSE; measures and models | harrington-gill |
 | U4-09 | topic-05.mdx | Key principles of management and HSE; measures and models | harrington-gill |
-| U4-10 | topic-05.mdx | Organizational environment | who-occupational-health |
+| U4-10 | topic-05.mdx | Organizational environment | harrington-gill |
 | U4-11 | topic-06.mdx | HSE statutes and regulations | harrington-gill |
 | U4-12 | topic-06.mdx | Establishing HSE plans | harrington-gill |
 | U4-13 | topic-07.mdx | Challenges of health within the working environment | nafees2019 |

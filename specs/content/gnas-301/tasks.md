@@ -60,4 +60,7 @@ units may be authored.
 | Unit 6 | G7 publish | ▢ | | |
 | Unit 1 | G3 en-review | ▢ | | advisory: revise; repairs applied; verified existing repairs against reviews/unit-01/G3/20260923T205300Z-g3-attempt-01.json and latest round-02/20260923T214406Z-g3-attempt-02.json; completed descriptive DOI links (EN/UR), cross-topic teacher references (EN/UR), and drinking-water source identification; course-overview credit split and shared excerpt heading remain for course owner; G3 unticked, fresh review owner-gated by G-2026-24 |
 | Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-01/G2/20261019T142036397Z-gates.json |
+
+| Unit 4 | G3 en-review | ▢ | | advisory: revise; repairs applied against reviews/unit-04/G3/agent-g3-gnas301-u4-run001.json and latest round-02/agent-g3-gnas301-u4-run002.json; source mappings and support notes corrected, citation scope and EN/UR prose repaired, concept item lists corrected, MCQ options redistributed, Further reading linked; prior repairs retained; G3 remains open, third cycle owner-gated (G-2026-31) |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-04/G2/20261019T150338371Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | advisory: revise; repairs applied against reviews/unit-05/G3/round-02/agent-g3-gnas301-u5-run002.json and 20260924T001055Z-g3-attempt-01.json; EN/UR assessment, concept links, source dates and coverage reconciled; details reviews/unit-05/20261019-repair-notes.md; G3 unticked, fresh review owner-gated by G-2026-32 |
