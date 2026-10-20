@@ -21,3 +21,13 @@ A separate author owns English repairs. The host owns current source/provenance 
 The brief prohibits a build, dev server and Playwright. No rendered Urdu inspection was attempted and no render success is claimed. No temporary reviewed-status flip was appropriate because no Urdu mirror was produced. Follow the skill's explicit handoff rule not to append a G4 tracker row until its workflow is resolved by the owner; leave the existing row unchanged.
 
 Final `npm run check:content`: all 13 gates passed. The first run's sole failure was the missing ignored `static/content-status.json` cache at unchanged HEAD/origin/main; `npm run build:content-status` generated it before the successful rerun. No site build was run.
+
+## Continuation check: gqur-301-u02-translate-r1
+
+Rechecked on 2026-10-19 at `eedbf84bcfd74e5afb4e31f3bf60407dc4d28737`, equal to origin/main. The branch started clean with no commits ahead of main. RRQ 10 still states A = 42 and B = 38, while its guidance attributes A's result to including zeros or a very low score. Topic-04 still asserts universal equality under symmetry and universal skewness ordering. These are direct source checks, not a new G3 review.
+
+The translate-unit skill's explicit stop-on-incorrect-English rule still applies. No translation or tracker status was changed. A separate English author must repair the full existing G3 report before G4 resumes. Step 7 explicitly says not to append a G4 row. Build and rendered inspection remain prohibited by the brief.
+
+The initial content check passed 12 gates and failed only because the ignored static/content-status.json was missing, at unchanged HEAD equal to origin/main. Generated that cache with npm run build:content-status, without a site build, then reran all gates.
+
+Final continuation validation: npm run check:content passed all 13 gates. git diff --check passed.
