@@ -50,3 +50,12 @@ The current frozen `terminology.csv` has no `Data` entry, despite `concepts/unit
 The brief prohibits builds, dev servers and Playwright; none was run. No Urdu mirror or rendered inspection is claimed, and no temporary reviewed-status flip was appropriate. The existing G4 row remains unchanged under the skill's Step 7 instruction not to append a G4 row.
 
 The initial `npm run check:content` at unchanged HEAD/origin/main passed 12 gates and failed only because the ignored `static/content-status.json` cache was absent. `npm run build:content-status` generated that cache without building the site. Final `npm run check:content`: all 13 gates passed. `git diff --check` was also clean. The accompanying prompt history record documents the request and handoff.
+
+## Retry r1 verification (2026-10-19)
+
+- Job: `gqur-301-u01-translate-r1`, Codex.
+- Baseline: `4d7d41a83241913300549da2eaa98e0a668c5e0a`, identical to `origin/main`; clean checkout with no branch-only commits at entry.
+- The recorded English repair addressed other G3 findings. Both topic-03 tables and fig-U1-5 still contain the arithmetic errors documented above. Recounting the 25 actual marks with Node gives frequencies `4, 10, 10, 1`, relative frequencies `0.16, 0.40, 0.40, 0.04`, and cumulative frequencies `4, 14, 24, 25`.
+- The translate-unit stop condition remains binding. No Urdu translation was started or English correction made. Step 7 prohibits appending a G4 row; existing tracker rows and draft status remain unchanged.
+- Next owner: a separate English repair pass must correct both topic-03 tables, the tied-maximum interpretation, and fig-U1-5's counts, tallies, proportions and 20-of-25 interpretation, regenerate the dark variant, and refresh affected evidence. Resume translation against that repaired frozen baseline.
+- Validation: initial `npm run check:content` on unchanged origin/main passed 12 gates and failed only for the missing ignored status cache. `npm run build:content-status` generated that report without building the site; rerun passed all 13 gates. No build, dev server, Chromium or Playwright was run. Render inspection and G5 remain pending.
