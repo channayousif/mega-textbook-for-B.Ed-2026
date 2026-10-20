@@ -3792,3 +3792,36 @@ content-improvement loop with no further cycle.
   already give. `G-2026-90` (tracker) and `G-2026-91` (tooling) are untouched. Supersedes nothing
   in `D-2026-0050` or `D-2026-0056`. This entry certifies no content, qualifies no reviewer and
   authorises no publication (Art. VII.8).
+
+## D-2026-0070 - Follow the course guide's own structure; link the guide from every course intro page
+
+- **Status:** confirmed
+- **Gate:** G0 (course intake) and G1 (unit-spec); course intro pages
+- **Scope:** every course; applied first to GQUR-301 and to the 13 course intro pages on the site
+- **Decided by:** curriculum owner, 2026-10-20 (board-direct, relayed through Claude Code), after
+  reporting that `https://textbook.com.pk/semester-2/gqur-301/` "does not cover course guide,
+  units and topics are mixed"
+- **Decision:**
+  1. **Follow the guide whenever possible.** Where a course guide names its own units or chapters,
+     the course has one unit per guide unit or chapter, in the guide's order, and each topic is one
+     of that chapter's numbered sections (Topic N.k teaches guide section N.k). Grouping several
+     guide chapters into one unit is allowed only where the guide gives no unit or chapter
+     headings, as with the bare week tables of EFMP-303, GENG-301, GSOS-301 and GPKS-402; their
+     `D-2026-0053` item 1 groupings stand.
+  2. **GQUR-301 becomes 16 units.** Its guide (`2nd 2026.txt:403-503`) names 16 chapters, one per
+     week. This supersedes `D-2026-0053` item 1 for GQUR-301 only (`G-2026-82`): the six-unit
+     grouping is withdrawn. Existing Units 1-2 (guide Chapters 1-5) are restructured into Units
+     1-5, reusing their prose; Units 6-16 are authored new. Their G2 evidence and advisory G3
+     reports describe the old grouping and do not carry over.
+  3. **Guide on the intro page.** Every course intro page (EN and UR) links the official University
+     of Sindh course guide for that course as a PDF. The pages are cut from the semester guide PDFs
+     by `scripts/split-course-guides.py` into `static/guides/`, mapped in
+     `catalog/course-guides.json`, and shown by `src/components/CourseGuideNotice.tsx` from the
+     DocItem wrapper. It is not written into `course-overview.mdx`, which is a bound input of every
+     unit's G2/G3 evidence; an MDX edit would stale all 66 units awaiting G3 sign-off.
+- **Basis:** owner instruction 2026-10-20 ("follow the guide whenever possible, also include guide
+  on intro page for each course"; intro-page form: "Link to guide PDF"; GQUR-301 restructure and
+  crew fix: "Yes, proceed").
+- **Limits:** Certifies no content, qualifies no reviewer and authorises no publication
+  (Art. VII.8). The rewritten GQUR-301 content-spec is guide-determined under item 2; a fresh
+  intake evaluation of it is still advised before G3.

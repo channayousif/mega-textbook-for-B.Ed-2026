@@ -1,0 +1,18 @@
+{
+  "$comment": "Where each course's official University of Sindh course guide lives. Pages are 1-based and inclusive, in the semester PDF named by source. scripts/split-course-guides.py cuts each range into static/guides/<pdf>; validate-content.mjs requires the course overview to link to it.",
+  "courses": {
+    "GENG-300": { "source": "Scheme-and-Course-guides/1st 2026.pdf", "pages": [1, 2], "pdf": "guides/semester-1/geng-300.pdf" },
+    "GNAS-301": { "source": "Scheme-and-Course-guides/1st 2026.pdf", "pages": [3, 6], "pdf": "guides/semester-1/gnas-301.pdf" },
+    "GICT-300": { "source": "Scheme-and-Course-guides/1st 2026.pdf", "pages": [7, 9], "pdf": "guides/semester-1/gict-300.pdf" },
+    "GQUR-300": { "source": "Scheme-and-Course-guides/1st 2026.pdf", "pages": [10, 12], "pdf": "guides/semester-1/gqur-300.pdf" },
+    "EFMP-302": { "source": "Scheme-and-Course-guides/1st 2026.pdf", "pages": [13, 17], "pdf": "guides/semester-1/efmp-302.pdf" },
+    "EFMP-301": { "source": "Scheme-and-Course-guides/1st 2026.pdf", "pages": [18, 21], "pdf": "guides/semester-1/efmp-301.pdf" },
+    "GENG-301": { "source": "Scheme-and-Course-guides/2nd 2026.pdf", "pages": [1, 3], "pdf": "guides/semester-2/geng-301.pdf" },
+    "EFMP-305": { "source": "Scheme-and-Course-guides/2nd 2026.pdf", "pages": [4, 6], "pdf": "guides/semester-2/efmp-305.pdf" },
+    "GQUR-301": { "source": "Scheme-and-Course-guides/2nd 2026.pdf", "pages": [7, 10], "pdf": "guides/semester-2/gqur-301.pdf" },
+    "EFMP-304": { "source": "Scheme-and-Course-guides/2nd 2026.pdf", "pages": [11, 13], "pdf": "guides/semester-2/efmp-304.pdf" },
+    "GSOS-301": { "source": "Scheme-and-Course-guides/2nd 2026.pdf", "pages": [14, 16], "pdf": "guides/semester-2/gsos-301.pdf" },
+    "GPKS-402": { "source": "Scheme-and-Course-guides/2nd 2026.pdf", "pages": [17, 20], "pdf": "guides/semester-2/gpks-402.pdf" },
+    "EFMP-303": { "source": "Scheme-and-Course-guides/2nd 2026.pdf", "pages": [21, 24], "pdf": "guides/semester-2/efmp-303.pdf" }
+  }
+}
