@@ -129,6 +129,7 @@ test('printing adds link QR codes and a subject | unit | topic title, then resto
     window.print = () => { (window as unknown as { printed: number }).printed += 1; };
   });
   await page.goto('/semester-1/efmp-302/unit-01/topic-01');
+  await page.waitForLoadState('networkidle'); // the Ctrl+P handler exists only once React has hydrated
   const pageTitle = await page.title();
 
   await page.keyboard.press('Control+KeyP');
@@ -143,4 +144,30 @@ test('printing adds link QR codes and a subject | unit | topic title, then resto
   await page.evaluate(() => window.dispatchEvent(new Event('afterprint')));
   await expect(page).toHaveTitle(pageTitle);
   await expect(codes).toHaveCount(0);
+});
+
+/**
+ * The browser's own Print / Save as PDF menu fires beforeprint, which cannot wait for
+ * anything. The codes are drawn when the page settles, so beforeprint serves them at
+ * once; after a navigation the stored codes expire and the new page gets its own.
+ */
+test('the browser print menu gets the link QR codes stored when the page settled', async ({ page }) => {
+  // The codes are drawn in an idle callback (3 s timeout), then the encoder chunk loads.
+  const settle = async () => { await page.waitForTimeout(3500); await page.waitForLoadState('networkidle'); };
+  const codesAtBeforePrint = () => page.evaluate(() => {
+    window.dispatchEvent(new Event('beforeprint'));
+    const n = document.querySelectorAll('.print-qr').length;
+    const label = document.querySelector('.print-qr__url')?.textContent ?? '';
+    window.dispatchEvent(new Event('afterprint'));
+    return { n, label };
+  });
+
+  await page.goto('/semester-1/efmp-302/unit-01/topic-01');
+  await settle();
+  expect(await codesAtBeforePrint()).toEqual({ n: 1, label: 'doi.org/10.1016/j.sbspro.2010.12.444' });
+
+  await page.locator('a[href^="/semester-1/efmp-302/unit-01/topic-02"]').first().click(); // client-side navigation
+  await page.waitForURL(/topic-02/);
+  await settle();
+  expect(await codesAtBeforePrint()).toEqual({ n: 1, label: 'doi.org/10.1080/713698714' });
 });

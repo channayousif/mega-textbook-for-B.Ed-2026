@@ -10,7 +10,12 @@
  *
  * Links. A link cannot be clicked on paper, so each one that leads somewhere else
  * (another site or another textbook page) gets a QR code printed beside it. The
- * codes exist only while printing: added before the dialog, removed after, so the
+ * codes are drawn once, when the page settles after loading or navigating, and kept
+ * in memory under a key made of the page path and its link URLs. A print serves
+ * them from there at once, which is what lets the browser's own Print / Save as PDF
+ * menu (whose `beforeprint` cannot wait) carry them. When the page changes the key
+ * no longer matches, so the stored codes expire and are drawn again. In the page
+ * they exist only while printing: added before the dialog, removed after, so the
  * React-rendered page is left as it was.
  *
  * Title. The browser prints `document.title` at the top of every page; while
@@ -106,7 +111,7 @@ type QrCode = {
 };
 type QrFactory = (typeNumber: 0, errorCorrectionLevel: 'M') => QrCode;
 
-// Loaded on first print only, so the encoder never weighs on a normal page view.
+// Loaded once a page with links has settled, so it is ready before any print.
 let qrFactory: QrFactory | null = null;
 async function loadQrFactory(): Promise<QrFactory> {
   if (!qrFactory) qrFactory = (await import('qrcode-generator')).default as unknown as QrFactory;
@@ -150,8 +155,28 @@ function qrTargets(): Array<[HTMLAnchorElement, string]> {
   return out;
 }
 
+/** Identifies one version of a page's codes: they expire when the path or any link URL changes. */
+export function qrCacheKey(pathname: string, urls: string[]): string {
+  return [pathname, ...urls].join('\n');
+}
+
+let qrCache: { key: string; codes: Map<string, SVGSVGElement> } | null = null;
+
+/** The stored codes for the page as it is now, drawn again first when they have expired. */
+function currentCodes(factory: QrFactory, urls: string[]): Map<string, SVGSVGElement> {
+  const key = qrCacheKey(window.location.pathname, urls);
+  if (qrCache?.key !== key) {
+    const codes = new Map<string, SVGSVGElement>();
+    for (const url of urls) if (!codes.has(url)) codes.set(url, qrSvg(factory, url));
+    qrCache = { key, codes };
+  }
+  return qrCache.codes;
+}
+
 function insertQrCodes(factory: QrFactory): void {
-  for (const [a, url] of qrTargets()) {
+  const targets = qrTargets();
+  const codes = currentCodes(factory, targets.map(([, url]) => url));
+  for (const [a, url] of targets) {
     const box = document.createElement('span');
     box.className = 'print-qr';
     box.setAttribute('aria-hidden', 'true');
@@ -159,9 +184,19 @@ function insertQrCodes(factory: QrFactory): void {
     label.className = 'print-qr__url';
     label.dir = 'ltr';
     label.textContent = shortUrl(url);
-    box.append(qrSvg(factory, url), label);
+    box.append(codes.get(url)!.cloneNode(true), label);
     a.after(box);
   }
+}
+
+/**
+ * Draws and stores the codes for the page as it is now, ahead of any print. Pages
+ * without links never load the encoder.
+ */
+export async function prepareLinkQrCodes(): Promise<void> {
+  const urls = qrTargets().map(([, url]) => url);
+  if (!urls.length) return;
+  currentCodes(await loadQrFactory(), urls);
 }
 
 /** Prints a QR code beside every link that leads off the page. */
@@ -171,13 +206,15 @@ export async function addLinkQrCodes(): Promise<void> {
 }
 
 /**
- * For `beforeprint`, which cannot wait: adds the codes at once when the encoder
- * is already loaded, otherwise starts loading it (best effort for the browser's
- * own print menu).
+ * For `beforeprint`, which cannot wait: serves the stored codes at once (drawing
+ * them first if the page changed since). Only when a print starts before the page
+ * has settled is the encoder still missing; that print goes without codes, and the
+ * codes are prepared for the next one. Inserting them later would leave them in the
+ * page after `afterprint` has already cleared it.
  */
 export function addLinkQrCodesNow(): void {
   if (qrFactory) insertQrCodes(qrFactory);
-  else void addLinkQrCodes();
+  else void prepareLinkQrCodes();
 }
 
 export function removeLinkQrCodes(): void {
