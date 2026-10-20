@@ -16,6 +16,32 @@ links:
   adr: null
   pr: null
 files:
+ - docs/semester-1/gnas-301/unit-05/topic-04.mdx
+ - docs/semester-1/gnas-301/unit-05/unit-assessment.mdx
+ - history/prompts/019-author-gnas-301/0039-repair-unit-five-g3-findings.green.prompt.md
+ - history/prompts/general/0536-gnas301-u05-merge-conflict2.general.prompt.md
+ - history/prompts/gnas-301/0045-merge-origin-main-conflict4.misc.prompt.md
+ - history/prompts/gnas-301/crew-gnas-301-u05-repair_en-conflict1.misc.prompt.md
+ - history/prompts/gnas-301/crew-gnas-301-u05-repair_en-conflict2.misc.prompt.md
+ - history/prompts/gnas-301/crew-gnas-301-u05-repair_en-conflict3.misc.prompt.md
+ - history/prompts/gnas-301/crew-gnas-301-u05-repair_en-conflict4.misc.prompt.md
+ - history/prompts/gnas-301/crew-gnas-301-u05-repair_en-conflict5.misc.prompt.md
+ - history/prompts/gnas-301/crew-gnas-301-u05-repair_en.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/topic-04.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-05/unit-assessment.mdx
+ - specs/content/gnas-301/concepts/unit-05.md
+ - specs/content/gnas-301/coverage/unit-05.md
+ - specs/content/gnas-301/reviews/unit-05/20261019-repair-notes.md
+ - specs/content/gnas-301/reviews/unit-05/G2/20261019T145133819Z-gates.json
+ - specs/content/gnas-301/reviews/unit-05/G2/logs-20261019T145133819Z/check-bloom-bands.txt
+ - specs/content/gnas-301/reviews/unit-05/G2/logs-20261019T145133819Z/check-concept-graph.txt
+ - specs/content/gnas-301/reviews/unit-05/G2/logs-20261019T145133819Z/check-depth-gate.txt
+ - specs/content/gnas-301/reviews/unit-05/G2/logs-20261019T145133819Z/check-docs-sync.txt
+ - specs/content/gnas-301/reviews/unit-05/G2/logs-20261019T145133819Z/check-figures.txt
+ - specs/content/gnas-301/reviews/unit-05/G2/logs-20261019T145133819Z/check-no-answer-keys.txt
+ - specs/content/gnas-301/reviews/unit-05/G2/logs-20261019T145133819Z/check-no-em-dash.txt
+ - specs/content/gnas-301/reviews/unit-05/G2/logs-20261019T145133819Z/validate-content.txt
+ - specs/content/gnas-301/sources/unit-05.md
  - specs/content/gnas-301/tasks.md
 tests:
  - npm run check:content
@@ -57,24 +83,24 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Merged origin/main into crew/gnas-301-u05-repair_en. One conflict in specs/content/gnas-301/tasks.md (Unit 5 vs Unit 3 G3 rows) resolved by keeping both rows (Unit 3 first from main, then Unit 5 from branch). Regenerated static/content-status.json to clear the stale check. All 13 content gates pass; findings match origin/main.
+Resolved merge conflict in specs/content/gnas-301/tasks.md (Unit 3 and Unit 5 G3 rows kept, main order), regenerated content-status.json, committed merge and PHR, all 13 content gates pass matching origin/main.
 
 ## Outcome
 
-- Impact: conflict resolution for GNAS-301 Unit 5 branch (attempt 5).
-- Tests: npm run check:content passes (13/13 gates), same as origin/main.
-- Files: specs/content/gnas-301/tasks.md (merge conflict resolved), static/content-status.json (regenerated, gitignored).
-- Next prompts: crew lead derives next unit stage after merge lands.
+- Impact: fix for GNAS-301 Unit 5 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 27 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: resolved the sole merge conflict in tasks.md (Unit 3/Unit 5 G3 rows kept, main order), regenerated content-status.json, all 13 content gates pass.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this work does not certify anything.
-- Pending / next owner: crew lead.
+- Shipped / changed: Resolved merge conflict in specs/content/gnas-301/tasks.md (Unit 3 and Unit 5 G3 rows kept, main order), regenerated content-status.json, committed merge and PHR, all 13 content gates pass matching origin/main.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit 5 G3 review still owner-gated under G-2026-32  -  see specs/content/gnas-301/reviews/unit-05/20261019-repair-notes.md for glossary and source-binding follow-ups.
-- Paperclip issues affected: none.
+  - Unit 5 G3 review still owner-gated under G-2026-32; glossary and source-binding follow-ups remain in specs/content/gnas-301/reviews/unit-05/20261019-repair-notes.md.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
