@@ -38,7 +38,7 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 4 | G1 unit-spec | ▢ | | guide Chapter 4; intake re-evaluation advised (D-2026-0070) |
 | Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-04/G2/20261020T205932410Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | advisory independent agy G3 review (disposition: pass, thread 6124be59-7d79-48d3-9f3d-448c095baceb) at specs/content/gqur-301/reviews/unit-04/G3/6124be59-7d79-48d3-9f3d-448c095baceb.json; G3 stays open, unsigned (ADR-0019) |
-| Unit 4 | G4 ur-translation | ▢ | | full Urdu mirror required |
+| Unit 4 | G4 ur-translation | ▢ | | Complete draft Urdu mirror and four localized SVG pairs prepared; translation_status remains draft; independent G5 and rendered Urdu inspection pending. See reviews/unit-04/translation-validation/handoff.md; no completion claim. |
 | Unit 4 | G5 ur-review | ▢ | | |
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
@@ -51,7 +51,7 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 5 | G7 publish | ▢ | | |
 | Unit 6 | G1 unit-spec | ▢ | | guide Chapter 6; intake re-evaluation advised (D-2026-0070) |
 | Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-06/G2/20261021T054446544Z-gates.json |
-| Unit 6 | G3 en-review | ▢ | | |
+| Unit 6 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation: specs/content/gqur-301/reviews/unit-06/G3/01a16060-0dfb-7512-a36b-afc1aeed712a.json; precision and real-data assessment repairs requested; G1, provenance and narrow/A4 render evidence unresolved. G3 remains open and unsigned. |
 | Unit 6 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 6 | G5 ur-review | ▢ | | |
 | Unit 6 | G6 assets | ▢ | | |
@@ -133,8 +133,14 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 |---|---|---|---|---|
 | Unit 2 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only; F1-F4 require separate author repair; provenance, G1, source capture, answer-blind assessment review and rendered accessibility remain unresolved. Report: specs/content/gqur-301/reviews/unit-02/G3/01a15ce3-0ba2-75d2-aff3-2592f4a5fb48.json; G3 remains open. |
 
+## Advisory G3 Unit 7 review, 2026-10-22
+
+| Unit | Stage | Status | Reviewer | Notes |
+|---|---|---|---|---|
+| Unit 7 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only; G3 remains open. F1-F3 need separate author repair; current G1, author-run provenance and actual rendered accessibility remain unverified. Report: specs/content/gqur-301/reviews/unit-07/G3/01a16053-0c98-79b0-b814-6bb6281aec8c.json. |
+
 ## Advisory G3 Unit 8 review, 2026-10-22
 
-| Unit | Stage | Status | Reviewer | Suggestion |
+| Unit | Stage | Status | Reviewer | Notes |
 |---|---|---|---|---|
 | Unit 8 | G3 en-review | ▢ | agent:codex-g3-reviewer | Advisory escalation only; F1-F4 need separate author correction; provenance, G1, bound sources, answer-blind evidence and rendered inspection remain unresolved. Report: specs/content/gqur-301/reviews/unit-08/G3/01a1608a-2fc5-7f41-a824-c08320f0383b.json; G3 remains open, unsigned. |
