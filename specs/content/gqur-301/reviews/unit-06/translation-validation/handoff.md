@@ -38,3 +38,28 @@ No baseline finding was repaired or concealed.
 
 Rerun after recording this handoff: the same 12 passes and sole baseline
 `check:content-status` failure. See content-gates-rerun.txt. No new findings.
+
+## Continuation, 2026-10-22
+
+Resumed from b58127d2 without restarting translation. The source defects above
+remain present at topic-02 lines 54-55 and assessment lines 214 and 226.
+The translate-unit prerequisite still blocks translation; English author repairs
+are required before producing a faithful Urdu mirror. G4 and G5 remain open.
+
+Moved this handoff and its historical logs from translations/unit-06/ into
+reviews/unit-06/translation-validation/. The former location added bound inputs
+to the G2 manifest, producing the stale-evidence finding reported by the crew.
+The reviews directory is the documented evidence exclusion in
+scripts/lib/review-evidence.mjs. No historical gate record was regenerated or
+altered. Current and origin/main content-gate logs accompany this handoff.
+
+No build, server, Playwright or render inspection was run, per the brief.
+
+Validation correction: the first completed branch run reported stale generated
+static/content-status.json after the tracker note changed; isolated origin/main
+reported that generated file missing. Ran npm run build:content-status to refresh
+the ignored derived metadata, then reran the complete content gates. This is
+metadata generation, not a site build. See content-gates-final.txt for the final
+result and content-gates-main.txt for origin/main. Historical logs are unchanged.
+
+Final rerun: all 13 content gates passed. No findings beyond origin/main.
