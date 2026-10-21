@@ -16,25 +16,27 @@ links:
   adr: null
   pr: null
 files:
-  - specs/content/gqur-301/reviews/unit-04/G3/6124be59-7d79-48d3-9f3d-448c095baceb.json
-  - specs/content/gqur-301/reviews/unit-04/G3/6124be59-7d79-48d3-9f3d-448c095baceb.summary.md
-  - specs/content/gqur-301/reviews/unit-04/G3/manifest.json
-  - specs/content/gqur-301/reviews/unit-04/G3/logs-6124be59/validate-content.txt
-  - specs/content/gqur-301/reviews/unit-04/G3/logs-6124be59/check-depth-gate.txt
-  - specs/content/gqur-301/reviews/unit-04/G3/logs-6124be59/check-figures.txt
-  - specs/content/gqur-301/reviews/unit-04/G3/logs-6124be59/check-no-em-dash.txt
-  - specs/content/gqur-301/reviews/unit-04/G3/logs-6124be59/check-no-answer-keys.txt
-  - specs/content/gqur-301/reviews/unit-04/G3/logs-6124be59/check-docs-sync.txt
-  - specs/content/gqur-301/reviews/unit-04/G3/logs-6124be59/render-review.txt
-  - specs/content/gqur-301/reviews/unit-04/G3/logs-6124be59/measure-figure-text.txt
-  - specs/content/gqur-301/reviews/unit-04/G3/logs-6124be59/independent-assessment-derivation.md
-  - specs/content/gqur-301/reviews/unit-04/G3/logs-6124be59/fig-U4-1-render.png
-  - specs/content/gqur-301/reviews/unit-04/G3/logs-6124be59/fig-U4-2-render.png
-  - specs/content/gqur-301/reviews/unit-04/G3/logs-6124be59/fig-U4-3-render.png
-  - specs/content/gqur-301/reviews/unit-04/G3/logs-6124be59/fig-U4-4-render.png
-  - specs/content/gqur-301/tasks.md
+ - history/prompts/gqur-301/0545-gqur-301-u04-review_en.misc.prompt.md
+ - history/prompts/gqur-301/crew-gqur-301-u04-review_en.misc.prompt.md
+ - specs/content/gqur-301/reviews/unit-04/G3/6124be59-7d79-48d3-9f3d-448c095baceb.json
+ - specs/content/gqur-301/reviews/unit-04/G3/6124be59-7d79-48d3-9f3d-448c095baceb.summary.md
+ - specs/content/gqur-301/reviews/unit-04/G3/logs-6124be59/check-depth-gate.txt
+ - specs/content/gqur-301/reviews/unit-04/G3/logs-6124be59/check-docs-sync.txt
+ - specs/content/gqur-301/reviews/unit-04/G3/logs-6124be59/check-figures.txt
+ - specs/content/gqur-301/reviews/unit-04/G3/logs-6124be59/check-no-answer-keys.txt
+ - specs/content/gqur-301/reviews/unit-04/G3/logs-6124be59/check-no-em-dash.txt
+ - specs/content/gqur-301/reviews/unit-04/G3/logs-6124be59/fig-U4-1-render.png
+ - specs/content/gqur-301/reviews/unit-04/G3/logs-6124be59/fig-U4-2-render.png
+ - specs/content/gqur-301/reviews/unit-04/G3/logs-6124be59/fig-U4-3-render.png
+ - specs/content/gqur-301/reviews/unit-04/G3/logs-6124be59/fig-U4-4-render.png
+ - specs/content/gqur-301/reviews/unit-04/G3/logs-6124be59/independent-assessment-derivation.md
+ - specs/content/gqur-301/reviews/unit-04/G3/logs-6124be59/measure-figure-text.txt
+ - specs/content/gqur-301/reviews/unit-04/G3/logs-6124be59/render-review.txt
+ - specs/content/gqur-301/reviews/unit-04/G3/logs-6124be59/validate-content.txt
+ - specs/content/gqur-301/reviews/unit-04/G3/manifest.json
+ - specs/content/gqur-301/tasks.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -68,21 +70,24 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-review_en for GQUR-301 Unit 4
+Produced and validated independent G3 English review evidence report for GQUR-301 Unit 4 with pass disposition and recorded the advisory tracker row.
 
 ## Outcome
 
 - Impact: review_en for GQUR-301 Unit 4 by agy (attempt 1).
 - Tests: npm run check:content passed in the job worktree before the PR was opened.
-- Files: 17 file(s), listed above.
+- Files: 19 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: review_en for GQUR-301 Unit 4
+- Shipped / changed: Produced and validated independent G3 English review evidence report for GQUR-301 Unit 4 with pass disposition and recorded the advisory tracker row.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Advisory findings F1 and F2 note minor cosmetic background card rect overlap with the wordmark on fig-U4-3 (2.5px) and fig-U4-4 (4.5px).
+  - Unit 4 G3 review passed all 7 criteria; the unit is ready for G4 Urdu translation.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
