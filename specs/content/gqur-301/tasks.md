@@ -30,7 +30,7 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 2 | G7 publish | ▢ | | |
 | Unit 3 | G1 unit-spec | ▢ | | guide Chapter 3; intake re-evaluation advised (D-2026-0070) |
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-03/G2/20261020T205927960Z-gates.json |
-| Unit 3 | G3 en-review | ▢ | | needs an independent G3 review |
+| Unit 3 | G3 en-review | ▢ | | advisory run 001 (disposition: pass, advisory finding F1) at specs/content/gqur-301/reviews/unit-03/G3/0537b555-5784-429b-aaaa-e51e0af1897b.json; agent reviews advisory under ADR-0019 |
 | Unit 3 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 3 | G5 ur-review | ▢ | | |
 | Unit 3 | G6 assets | ▢ | | |
