@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">اوسط، میڈین اور عادہ کب استعمال کریں</title><desc id="d">ڈیٹا کی قسم اور تقسیم کی شکل کے لحاظ سے اوسط، میڈین اور عادہ کب استعمال کرنے کا جدول، اسکولی مثالوں کے ساتھ۔</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700;fill:var(--ink)} .sh{font-size:12px;font-weight:600;fill:var(--ink)} .m{font-size:12px;fill:var(--muted)} .c{text-anchor:middle} .s{text-anchor:end} .wm{fill:var(--wm);font-size:11px} .b1{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2} .b2{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2} .b3{fill:var(--a3-fill);stroke:var(--a3);stroke-width:2} .b4{fill:var(--a4-fill);stroke:var(--a4);stroke-width:2} .line{stroke:var(--line);stroke-width:2} line.bd{fill:none;stroke:var(--line);stroke-width:1} rect.hb{fill:var(--a2-fill);stroke:var(--line);stroke-width:1} rect.row1{fill:var(--a1-fill)} rect.row2{fill:var(--bg)}</style><rect class="bg" x="0" y="0" width="780"/><rect class="bg" x="0" y="0" width="780" height="470"/>
+
+  <text class="h" x="750" y="28" text-anchor="end">مرکزی رجحان کی ہر پیمائش کب استعمال کریں</text>
+
+  <!-- Header -->
+  <rect class="hb" x="20" y="40" width="740" height="28" rx="4"/>
+  <line class="bd" x1="200" y1="40" x2="200" y2="68"/>
+  <line class="bd" x1="420" y1="40" x2="420" y2="68"/>
+  <text class="h c" x="110" y="59">صورتحال</text>
+  <text class="h c" x="310" y="59">بہترین پیمائش</text>
+  <text class="h c" x="580" y="59">کیوں</text>
+
+  <!-- Row 1 -->
+  <rect class="row1" x="20" y="68" width="740" height="45"/>
+  <line class="bd" x1="200" y1="68" x2="200" y2="113"/>
+  <line class="bd" x1="420" y1="68" x2="420" y2="113"/>
+  <text class="sh c" x="110" y="88">مقداری، تشاکلی،</text>
+  <text class="sh c" x="110" y="102">کوئی انتہائی نہیں</text>
+  <text class="sh c" x="310" y="95">اوسط</text>
+  <text class="m c" x="580" y="88">تمام معلومات استعمال</text>
+  <text class="m c" x="580" y="102">کرتی ہے؛ بعد میں استدلال کی بنیاد</text>
+
+  <!-- Row 2 -->
+  <rect class="row2" x="20" y="113" width="740" height="45"/>
+  <line class="bd" x1="200" y1="113" x2="200" y2="158"/>
+  <line class="bd" x1="420" y1="113" x2="420" y2="158"/>
+  <text class="sh c" x="110" y="133">مقداری، ترھی</text>
+  <text class="sh c" x="110" y="147">یا انتہائی کے ساتھ</text>
+  <text class="sh c" x="310" y="140">میڈین</text>
+  <text class="m c" x="580" y="133">انتہا سے محفوظ؛</text>
+  <text class="m c" x="580" y="147">انتہائی قیمتوں سے نہیں کھنچتی</text>
+
+  <!-- Row 3 -->
+  <rect class="row1" x="20" y="158" width="740" height="45"/>
+  <line class="bd" x1="200" y1="158" x2="200" y2="203"/>
+  <line class="bd" x1="420" y1="158" x2="420" y2="203"/>
+  <text class="sh c" x="110" y="178">بے ترتیب اقسام</text>
+  <text class="sh c" x="110" y="192">(مثلاً پسندیدہ مضمون)</text>
+  <text class="sh c" x="310" y="185">عادہ</text>
+  <text class="m c" x="580" y="178">بے ترتیب اقسام کے لیے</text>
+  <text class="m c" x="580" y="192">واحد پیمائش</text>
+
+  <!-- Row 4 -->
+  <rect class="row2" x="20" y="203" width="740" height="45"/>
+  <line class="bd" x1="200" y1="203" x2="200" y2="248"/>
+  <line class="bd" x1="420" y1="203" x2="420" y2="248"/>
+  <text class="sh c" x="110" y="223">سب سے عام</text>
+  <text class="sh c" x="110" y="237">قسم چاہیے</text>
+  <text class="sh c" x="310" y="230">عادہ</text>
+  <text class="m c" x="580" y="223">بتاتا ہے کہ کیا</text>
+  <text class="m c" x="580" y="237">سب سے عام ہے</text>
+
+  <!-- Row 5 -->
+  <rect class="row1" x="20" y="248" width="740" height="45"/>
+  <line class="bd" x1="200" y1="248" x2="200" y2="293"/>
+  <line class="bd" x1="420" y1="248" x2="420" y2="293"/>
+  <text class="sh c" x="110" y="268">آمدنی، گھر کی قیمت،</text>
+  <text class="sh c" x="110" y="282">انتہائی نمبروں والے</text>
+  <text class="sh c" x="310" y="275">میڈین</text>
+  <text class="m c" x="580" y="268">انتہائی قیمتوں کو</text>
+  <text class="m c" x="580" y="282">شبہہ بگھیرنے سے روکتا ہے</text>
+
+  <!-- Caption -->
+  <rect x="20" y="320" width="740" height="100" rx="6" fill="var(--panel)" stroke="var(--line)" stroke-width="1"/>
+  <text class="sh" x="740" y="345" text-anchor="end">نوٹ: مرکزی رجحان کی پیمائش منتخب کرنے کا فیصلہ کار</text>
+  <text class="m" x="740" y="365" text-anchor="end">کوئی واحد درست پیمائش نہیں۔ صحیح انتخاب ڈیٹا کی قسم اور تقسیم کی شکل پر منحصر ہے۔</text>
+  <text class="m" x="740" y="380" text-anchor="end">شک ہو تو تینوں حساب کریں اور موازنہ ہی رہنمائی کرے۔</text>
+  <text class="m" x="740" y="395" text-anchor="end">اسکولی مثال: ٹیسٹ نمبروں کی ترھی تقسیم جس میں چند بہت کم نمبر ہوں،</text>
+  <text class="m" x="740" y="410" text-anchor="end">میڈین رپورٹ کریں تاکہ کم انتہائی قیمتیں اوسط نیچے کھینچ نہ لیں۔ حوالہ: textbook.com.pk۔</text>
+
+  <text class="wm" x="760" y="455" text-anchor="end" direction="ltr" aria-hidden="true">textbook.com.pk</text>
+</svg>

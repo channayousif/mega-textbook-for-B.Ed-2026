@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">عادہ تلاش کرنا</title><desc id="d">بائیں: پسندیدہ مضامین کا بار چارٹ، جماعت 30 طلباء کی، میتھس کی پٹی عادہ کے طور پر نمایاں۔ دائیں: دس نمبروں کا ڈاٹ پلاٹ جس میں 5 اور 8 ہر ایک تین بار آتے ہیں، لہٰذا ڈیٹا دو عادی ہے۔</desc><defs><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700;fill:var(--ink)} .sh{font-size:12px;font-weight:600;fill:var(--ink)} .m{font-size:12px;fill:var(--muted)} .c{text-anchor:middle} .wm{fill:var(--wm);font-size:11px;text-anchor:end} .b1{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2} .b2{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2} .b3{fill:var(--a3-fill);stroke:var(--a3);stroke-width:2} .b4{fill:var(--a4-fill);stroke:var(--a4);stroke-width:2} .line{stroke:var(--line);stroke-width:2}</style><marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="var(--line)"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="470"/>
+  <text class="h c" x="390" y="28">عادہ تلاش کرنا: سب سے زیادہ دہرائی جانے والی قیمت</text>
+  <rect x="20" y="44" width="360" height="270" rx="6" fill="var(--panel)" stroke="var(--line)" stroke-width="1"/>
+  <text class="sh c" x="200" y="64">پسندیدہ مضمون، جماعت 30</text>
+  <rect class="b2" x="52" y="158" width="44" height="112"/>
+  <text class="m c" x="74" y="152">8</text>
+  <text class="m c" x="74" y="288">اردو</text>
+  <rect class="b3" x="116" y="102" width="44" height="168"/>
+  <text class="m c" x="138" y="96">12</text>
+  <text class="m c" x="138" y="288">میتھس</text>
+  <rect class="b2" x="180" y="186" width="44" height="84"/>
+  <text class="m c" x="202" y="180">6</text>
+  <text class="m c" x="202" y="288">سائنس</text>
+  <rect class="b2" x="244" y="228" width="44" height="42"/>
+  <text class="m c" x="266" y="222">3</text>
+  <text class="m c" x="266" y="288">انگریزی</text>
+  <rect class="b2" x="308" y="256" width="44" height="14"/>
+  <text class="m c" x="330" y="250">1</text>
+  <text class="m c" x="330" y="288">سماجیات</text>
+  <line class="line" x1="44" y1="270" x2="364" y2="270"/>
+  <text class="sh c" x="138" y="302">عادہ = میتھس (12 طالب علم)</text>
+  <rect x="400" y="44" width="360" height="270" rx="6" fill="var(--panel)" stroke="var(--line)" stroke-width="1"/>
+  <text class="sh c" x="580" y="64">نمبر 10 میں سے، دس طلباء</text>
+  <circle cx="480" cy="250" r="8" fill="var(--bg)" stroke="var(--a2)" stroke-width="2"/>
+  <circle cx="530" cy="250" r="8" fill="var(--bg)" stroke="var(--a3)" stroke-width="2"/>
+  <circle cx="530" cy="228" r="8" fill="var(--bg)" stroke="var(--a3)" stroke-width="2"/>
+  <circle cx="530" cy="206" r="8" fill="var(--bg)" stroke="var(--a3)" stroke-width="2"/>
+  <circle cx="580" cy="250" r="8" fill="var(--bg)" stroke="var(--a2)" stroke-width="2"/>
+  <circle cx="630" cy="250" r="8" fill="var(--bg)" stroke="var(--a2)" stroke-width="2"/>
+  <circle cx="680" cy="250" r="8" fill="var(--bg)" stroke="var(--a3)" stroke-width="2"/>
+  <circle cx="680" cy="228" r="8" fill="var(--bg)" stroke="var(--a3)" stroke-width="2"/>
+  <circle cx="680" cy="206" r="8" fill="var(--bg)" stroke="var(--a3)" stroke-width="2"/>
+  <circle cx="730" cy="250" r="8" fill="var(--bg)" stroke="var(--a2)" stroke-width="2"/>
+  <line class="line" x1="430" y1="266" x2="750" y2="266"/>
+  <text class="m c" x="430" y="284">3</text>
+  <text class="m c" x="480" y="284">4</text>
+  <text class="m c" x="530" y="284">5</text>
+  <text class="m c" x="580" y="284">6</text>
+  <text class="m c" x="630" y="284">7</text>
+  <text class="m c" x="680" y="284">8</text>
+  <text class="m c" x="730" y="284">9</text>
+  <text class="sh c" x="580" y="302">دو عادی: عادی 5 اور 8</text>
+  <rect x="20" y="330" width="740" height="78" rx="6" fill="var(--panel)" stroke="var(--line)" stroke-width="1"/>
+  <text class="sh" x="744" y="350" text-anchor="end">نوٹ: عادہ سب سے لمبی پٹی یا سب سے اونچے اسٹیک سے پڑھی جاتی ہے</text>
+  <text class="m" x="744" y="366" text-anchor="end">بائیں: بے ترتیب اقسام کا کوئی اوسط یا میڈین نہیں، مگر عادہ ضرور ہے۔ دائیں: دو</text>
+  <text class="m" x="744" y="382" text-anchor="end">قیمتیں سب سے زیادہ گنتی کے برابر ہیں (ہر ایک 3 بار)، لہٰذا ڈیٹا میں دو عادی ہیں۔ اگر ہر قیمت</text>
+  <text class="m" x="744" y="398" text-anchor="end">برابر آتی تو عادہ ہی نہ ہوتا۔ حوالہ: textbook.com.pk بمطابق Lane (2023)۔</text>
+  <text class="wm" x="760" y="460" direction="ltr" aria-hidden="true">textbook.com.pk</text>
+</svg>
