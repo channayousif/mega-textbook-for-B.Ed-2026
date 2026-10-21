@@ -62,3 +62,15 @@ export function pickLatestReport(entries) {
   const last = reports.at(-1);
   return { file: last.file, ...last.json };
 }
+
+/**
+ * Unit numbers an approved content-spec defines (its `## Unit N` headings), or [] for a spec that
+ * is not approved. The planner walked only units already on disk, so a unit that was specified but
+ * never written was invisible and never got an `author` job: GQUR-301 sat at 2 of 16 units after
+ * D-2026-0070 split it one unit per guide chapter (2026-10-20).
+ */
+export function specUnitNumbers(specText) {
+  const fm = /^---\n([\s\S]*?)\n---/.exec(specText);
+  if (!fm || !/^status:\s*approved\s*$/m.test(fm[1])) return [];
+  return [...new Set([...specText.matchAll(/^## Unit (\d+)\b/gm)].map((m) => Number(m[1])))].sort((a, b) => a - b);
+}

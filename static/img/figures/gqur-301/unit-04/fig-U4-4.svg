@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 430" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Worked example: mean and median of ten quiz marks</title><desc id="d">A worked table computing the mean and median step by step from the 10 quiz marks: sorted values, sum 149, count 10, mean 14.9; then median positions 5 and 6, values 16 and 17, median 16.5.</desc><defs><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700;fill:var(--ink)} .sh{font-size:12px;font-weight:600;fill:var(--ink)} .m{font-size:12px;fill:var(--muted)} .c{text-anchor:middle} .wm{fill:var(--wm);font-size:11px;text-anchor:end} .b1{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2} .b2{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2} .b3{fill:var(--a3-fill);stroke:var(--a3);stroke-width:2} .b4{fill:var(--a4-fill);stroke:var(--a4);stroke-width:2} .line{stroke:var(--line);stroke-width:2}</style><marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="var(--line)"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="430"/>
+  <text class="h c" x="390" y="28">Worked example: mean and median of ten quiz marks</text>
+  <rect class="b1" x="30" y="44" width="720" height="50" rx="6"/>
+  <text class="sh c" x="390" y="64">Raw marks (out of 20)</text>
+  <text class="m c" x="390" y="80">12, 14, 15, 16, 17, 17, 18, 18, 19, 3</text>
+  <rect class="b1" x="30" y="104" width="720" height="50" rx="6"/>
+  <text class="sh c" x="390" y="124">Step 1: sort</text>
+  <text class="m c" x="390" y="140">3, 12, 14, 15, 16, 17, 17, 18, 18, 19</text>
+  <rect class="b2" x="30" y="164" width="350" height="118" rx="6"/>
+  <text class="sh c" x="205" y="184">Mean</text>
+  <text class="m c" x="205" y="200">sum = 3 + 12 + 14 + ... + 19 = 149</text>
+  <text class="m c" x="205" y="216">count n = 10</text>
+  <text class="m c" x="205" y="232">mean = 149 ÷ 10 = 14.9</text>
+  <text class="m c" x="205" y="248">(every mark is used)</text>
+  <rect class="b2" x="400" y="164" width="350" height="118" rx="6"/>
+  <text class="sh c" x="575" y="184">Median</text>
+  <text class="m c" x="575" y="200">n = 10 is even: use positions 5 and 6</text>
+  <text class="m c" x="575" y="216">5th value = 16, 6th value = 17</text>
+  <text class="m c" x="575" y="232">median = (16 + 17) ÷ 2 = 16.5</text>
+  <text class="m c" x="575" y="248">(only the middle matters)</text>
+  <rect class="b3" x="30" y="292" width="720" height="46" rx="6"/>
+  <text class="sh c" x="390" y="312">Result: mean 14.9, median 16.5</text>
+  <text class="m c" x="390" y="328">The median is higher because the low mark of 3 pulls the mean down.</text>
+  <rect x="20" y="352" width="740" height="62" rx="6" fill="var(--panel)" stroke="var(--line)" stroke-width="1"/>
+  <text class="sh" x="36" y="372">Caption: Worked computation of the mean and median from the same data</text>
+  <text class="m" x="36" y="388">Sort first: the median needs order, and sorting also makes the outlier easy to spot.</text>
+  <text class="m" x="36" y="404">Credit: textbook.com.pk after Lane (2023).</text>
+  <text class="wm" x="760" y="420" aria-hidden="true">textbook.com.pk</text>
+</svg>

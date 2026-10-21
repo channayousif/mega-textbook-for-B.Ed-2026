@@ -27,7 +27,7 @@ import { send, reply, readInbox } from './notify.mjs';
 import { reviewFindingsSection, parseHandoff, priorHandoffsSection } from './handoff.mjs';
 import { freshChecks } from './checks.mjs';
 import { batchDue, batchCandidates, batchId, batchTitle, batchBody } from './batch.mjs';
-import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport } from './planner.mjs';
+import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport, specUnitNumbers } from './planner.mjs';
 import { walkUnits } from '../lib/content-roots.mjs';
 import { REGISTRIES, registryProblems } from './registries.mjs';
 import { weekId, local, harvestSlot, slotsBetween, harvestDue, distillDue, maintenanceDue, contentFiles, maintenanceVerdict, parseVerdict } from './maintenance.mjs';
@@ -106,6 +106,20 @@ function unitDirs() {
 }
 const listDir = (dir) => (existsSync(dir) ? readdirSync(dir) : []);
 
+/** course code -> unit numbers its approved content-spec defines. */
+function specUnits() {
+  const out = new Map();
+  const dir = join(ROOT, 'specs', 'content');
+  for (const name of listDir(dir)) {
+    const file = join(dir, name, 'content-spec.md');
+    if (!existsSync(file)) continue;
+    const text = readFileSync(file, 'utf8');
+    const code = /^course_code:\s*"?([A-Z]{4}-\d{3})/m.exec(text)?.[1];
+    if (code) out.set(code, specUnitNumbers(text));
+  }
+  return out;
+}
+
 /** What the planner needs to know about a unit on main (rules in scripts/crew/planner.mjs). */
 function unitFacts(course, u, bilingual, dirs) {
   const d = dirs.get(`${course}#${u.unit_no}`);
@@ -125,22 +139,28 @@ function plan() {
   const dirs = unitDirs();
   const added = [];
   const awaiting = [];
+  const queue = (course, unit, stage) => {
+    const base = jobId(course, unit, stage);
+    const prior = board.jobs.filter((j) => j.id === base || j.id.startsWith(`${base}-r`));
+    if (prior.some((j) => ACTIVE.includes(j.status) || j.status === 'blocked')) return;
+    // A merged job whose need persists means its output did not change main's state; do not loop on it.
+    if (prior.filter((j) => j.status === 'merged').length >= 2) return;
+    const id = prior.length ? `${base}-r${prior.length}` : base;
+    added.push({ id, course, unit, stage, status: 'queued', attempts: 0, tried: [], createdAt: now() });
+  };
   for (const c of status.courses) {
     for (const u of c.units) {
       const facts = unitFacts(c.course_code, u, isBilingual(catalog, c.course_code), dirs);
       if (awaitingG3(u, facts)) {
         awaiting.push({ course: c.course_code, unit: u.unit_no, disposition: facts.g3Report.disposition, report: relative(ROOT, facts.g3Report.file) });
       }
-      for (const stage of stagesFor(u, facts)) {
-        const base = jobId(c.course_code, u.unit_no, stage);
-        const prior = board.jobs.filter((j) => j.id === base || j.id.startsWith(`${base}-r`));
-        if (prior.some((j) => ACTIVE.includes(j.status) || j.status === 'blocked')) continue;
-        // A merged job whose need persists means its output did not change main's state; do not loop on it.
-        if (prior.filter((j) => j.status === 'merged').length >= 2) continue;
-        const id = prior.length ? `${base}-r${prior.length}` : base;
-        added.push({ id, course: c.course_code, unit: u.unit_no, stage, status: 'queued', attempts: 0, tried: [], createdAt: now() });
-      }
+      for (const stage of stagesFor(u, facts)) queue(c.course_code, u.unit_no, stage);
     }
+  }
+  // Units an approved spec defines but nobody has written yet are not in the content status at all.
+  for (const [course, units] of specUnits()) {
+    const onDisk = new Set((status.courses.find((c) => c.course_code === course)?.units || []).map((u) => u.unit_no));
+    for (const n of units) if (!onDisk.has(n)) queue(course, n, 'author');
   }
   // Units whose agent review is done and that wait only for a person's G3 sign-off (ADR-0019).
   board.awaitingG3 = { at: now(), units: awaiting };

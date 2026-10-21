@@ -1,0 +1,176 @@
+---
+title: "Topic 4.2 - Median"
+description: "The median: finding the middle value for odd and even numbers of values, why it resists outliers, and how it compares with the mean on the same data."
+course_code: GQUR-301
+unit_no: 4
+topic_no: 2
+topic_label: "4.2"
+clo_refs:
+  - "SLO:GQUR-301-4-2"
+blooms_summary: "Remember the steps for finding the median; understand why the median is robust to outliers; apply the procedure to odd and even data sets; analyze which of mean and median better describes a skewed data set."
+est_reading_minutes: 7
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+import Glossary from '@site/src/components/Glossary';
+
+<PrintHandout />
+
+## A real classroom situation
+
+The Mirpurkhas teacher from Topic 4.1 is still unhappy with the 14.9 she
+reported. Her quiz marks were 12, 14, 15, 16, 17, 17, 18, 18, 19 and 3, and she
+knows the typical pupil in her class scored around 16 or 17, not 14.9. A
+colleague suggests: "Line the marks up from lowest to highest and take the one
+in the middle." She tries it, and gets a number much closer to what she sees in
+her class.
+
+<Figure id="fig-U4-3" kind="diagram" src="/img/figures/gqur-301/unit-04/fig-U4-3.svg" alt="A number line showing the 10 quiz marks as dots, with the mean marked at 14.9 and the median at 16.5, showing how the low outlier pulls the mean left." width={780} height={340} />
+
+<Figure id="fig-U4-4" kind="table" src="/img/figures/gqur-301/unit-04/fig-U4-4.svg" alt="A worked table computing the mean and median step by step from the 10 quiz marks: sorted values, sum 149, count 10, mean 14.9; then median positions 5 and 6, values 16 and 17, median 16.5." width={780} height={430} />
+
+The colleague has described the median. This topic shows you how to find it
+correctly every time, and why it behaves so differently from the mean.
+
+## Explanation
+
+### The median: the middle value
+
+The <Glossary term="Median" /> is the middle value when the data are arranged in
+order. Half of the values lie at or below it and half lie at or above it. To
+find the median:
+
+1. **Sort** the data from smallest to largest. This step is not optional.
+2. **Count** the number of values, n.
+3. If n is **odd**, the median is the value in position (n + 1) ÷ 2.
+4. If n is **even**, there are two middle values, in positions n ÷ 2 and
+   n ÷ 2 + 1, and the median is their average.
+
+**Odd example.** The ages of 7 teachers are 41, 29, 35, 52, 33, 38, 30.
+Sorted: 29, 30, 33, 35, 38, 41, 52. With n = 7, the median is in position
+(7 + 1) ÷ 2 = 4, so the median age is **35**.
+
+**Even example.** The quiz marks sorted are 3, 12, 14, 15, 16, 17, 17, 18, 18,
+19. With n = 10, the middle positions are 5 and 6, which hold 16 and 17, so the
+median is (16 + 17) ÷ 2 = **16.5**. Notice that 16.5 is not one of the marks:
+with an even number of values the median can fall between two of them.
+
+### Why the median resists outliers
+
+The median depends only on which values sit in the middle positions, not on how
+far away the extreme values are. If the pupil who scored 3 had scored 0, or 11,
+the sorted list would still have 16 and 17 in positions 5 and 6, and the median
+would still be 16.5. The mean, by contrast, would change every time.
+
+This is why the median is called **robust**. In the quiz, the mean (14.9) is
+lower than seven of the ten marks, while the median (16.5) sits
+with the cluster where most pupils actually scored (the figures above show both
+on the same number line). Lane (2023, Chapter 3) makes the same comparison and
+notes that the two measures agree closely only when the data are roughly
+symmetric.
+
+### Worked example: mean and median together
+
+**Data:** test marks (out of 50) of 8 pupils: 28, 35, 42, 38, 45, 31, 40, 36.
+
+**Step 1: sort.** 28, 31, 35, 36, 38, 40, 42, 45.
+
+**Step 2: mean.** Sum = 295, n = 8, mean = 295 ÷ 8 = 36.875, about 36.9.
+
+**Step 3: median.** n = 8 is even, so average the 4th and 5th values:
+(36 + 38) ÷ 2 = 37.
+
+**Result:** mean 36.9, median 37. Here the two are almost equal because the
+marks are spread evenly with no extreme value. A large gap between the mean and
+the median is a signal to look for outliers or a long tail in the data.
+
+### Choosing between mean and median
+
+- **Use the mean** when the data are roughly symmetric with no extreme values.
+  It uses all the information and later techniques build on it.
+- **Use the median** when the data contain outliers or a long tail, such as
+  family incomes or the quiz with one very low mark.
+- **Report both** when they differ, because the gap itself tells the reader
+  something about the data.
+
+**Common misconception.** Many trainees think "the median is just the middle
+number in the list". Taking the middle of the list *as it was written*, without
+sorting, gives a meaningless answer: in the unsorted quiz list the 5th and 6th
+entries are 17 and 17, which happens to look reasonable but is luck. A second
+mistake is to think the median must be one of the data values; with an even
+number of values it is the average of the two middle ones.
+
+## Activity: Move one mark
+
+Work in groups of three. About 15 minutes.
+
+Start from the sorted quiz marks: 3, 12, 14, 15, 16, 17, 17, 18, 18, 19.
+
+1. Compute the mean and the median.
+2. Change the 3 to 0. Recompute both. Then change it to 15. Recompute both.
+3. Change the 19 to 50 instead. Recompute both.
+4. Record your results in a table. As a group, write two sentences: one
+   describing what happened to the mean, and one describing what happened to
+   the median, and why.
+
+## Check your understanding
+
+1. *(Remember)* List the steps for finding the median of a data set with an
+   even number of values.
+2. *(Understand)* Explain why changing the largest value in a data set from 19
+   to 50 does not change the median.
+3. *(Apply)* Find the mean and the median of these monthly salaries (thousands
+   of rupees) of 9 school staff: 25, 28, 30, 32, 35, 38, 40, 45, 200. Which
+   better describes a typical salary, and why?
+
+## Summary
+
+The median is the middle value of sorted data: the value in position
+(n + 1) ÷ 2 when n is odd, or the average of the two middle values when n is
+even. It depends only on the middle positions, so outliers barely move it,
+while the mean moves with every value. When the data are roughly symmetric the
+two agree; when they differ, the median usually describes the typical value
+better, and reporting both tells the reader about the shape of the data.
+
+## Self-assessment checklist
+
+- [ ] I can find the median of a data set with an odd or an even number of values.
+- [ ] I can explain why the median is robust to outliers and the mean is not.
+- [ ] I can decide whether the mean or the median better describes a given data set.
+
+## Try this at your practicum school
+
+Obtain 10 to 15 marks from one class test (with names removed). Compute the
+mean and the median. If they differ by more than a mark or two, find the values
+responsible. Write a short note for your cooperating teacher saying which figure
+you would report as the class's typical mark, and why.
+
+## Summative task
+
+The monthly incomes (thousands of rupees) of 11 families in a neighbourhood are
+18, 22, 25, 28, 30, 32, 35, 38, 40, 45, 120.
+
+a) Compute the mean income.
+b) Compute the median income.
+c) In 80-120 words, explain which measure better represents the typical family
+   income and why. Identify the outlier and describe its effect on each
+   measure.
+
+**Mini-rubric**
+
+| Criterion | Levels |
+|---|---|
+| *Computation (Apply)* | 0-3: mean and median correct and outlier identified / two of three / one or none. |
+| *Judgement (Analyze)* | 0-3: chooses a measure and justifies it by analysing the outlier's different effect on mean and median / partial / none. |
+
+## Further reading
+
+Lane, D. M. (2023). *Online Statistics Education: A Multimedia Course of Study.*
+Rice University. https://onlinestatbook.com/2/summarizing_distributions/comparing_measures.html -
+Chapter 3, "Comparing Measures of Central Tendency".
+
+Illowsky, B., & Dean, S. (2023). *Introductory Statistics 2e.* OpenStax.
+https://openstax.org/books/introductory-statistics-2e/pages/2-5-measures-of-the-center-of-the-data -
+Section 2.5, including the median of data with an odd and an even number of
+values.

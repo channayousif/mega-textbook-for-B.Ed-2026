@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Population, sample, parameter and statistic</title><desc id="d">A concept map with Population and Parameter on the top row and Sample and Statistic on the bottom row: the sample is drawn from the population, each is summarised by its own number, and the statistic estimates the parameter, which is inference.</desc><defs><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700;fill:var(--ink)} .sh{font-size:12px;font-weight:600;fill:var(--ink)} .m{font-size:12px;fill:var(--muted)} .c{text-anchor:middle} .wm{fill:var(--wm);font-size:11px;text-anchor:end} .b1{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2} .b2{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2} .b3{fill:var(--a3-fill);stroke:var(--a3);stroke-width:2} .b4{fill:var(--a4-fill);stroke:var(--a4);stroke-width:2} .line{stroke:var(--line);stroke-width:2}</style><marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="var(--line)"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="470"/>
+  <text class="h c" x="390" y="28">Population, sample, parameter and statistic</text>
+  <rect class="b2" x="60" y="60" width="230" height="62" rx="6"/>
+  <text class="sh c" x="175" y="80">Population</text>
+  <text class="m c" x="175" y="96">all 347 schools in the district</text>
+  <rect class="b2" x="490" y="60" width="230" height="62" rx="6"/>
+  <text class="sh c" x="605" y="80">Parameter</text>
+  <text class="m c" x="605" y="96">true average class size (unknown)</text>
+  <rect class="b3" x="60" y="220" width="230" height="62" rx="6"/>
+  <text class="sh c" x="175" y="240">Sample</text>
+  <text class="m c" x="175" y="256">30 schools actually visited</text>
+  <rect class="b3" x="490" y="220" width="230" height="62" rx="6"/>
+  <text class="sh c" x="605" y="240">Statistic</text>
+  <text class="m c" x="605" y="256">average class size of the 30</text>
+  <line class="line" x1="290" y1="91" x2="488" y2="91" marker-end="url(#arr)"/>
+  <text class="m c" x="389" y="82">is summarised by</text>
+  <line class="line" x1="290" y1="251" x2="488" y2="251" marker-end="url(#arr)"/>
+  <text class="m c" x="389" y="242">is summarised by</text>
+  <line class="line" x1="175" y1="218" x2="175" y2="124" marker-end="url(#arr)"/>
+  <text class="m" x="110" y="176">is drawn from</text>
+  <line x1="605" y1="218" x2="605" y2="126" stroke="var(--a3)" stroke-width="3" marker-end="url(#arr)"/>
+  <text class="sh" x="615" y="168">estimates</text>
+  <text class="m" x="615" y="184">(inference)</text>
+  <rect x="20" y="312" width="740" height="78" rx="6" fill="var(--panel)" stroke="var(--line)" stroke-width="1"/>
+  <text class="sh" x="36" y="332">Caption: Two levels, two kinds of number</text>
+  <text class="m" x="36" y="348">The top row is what we want to know about; the bottom row is what we can actually measure. A statistic</text>
+  <text class="m" x="36" y="364">is computed from the sample and used to estimate the unknown parameter of the population: that step</text>
+  <text class="m" x="36" y="380">from sample to population is called inference. Credit: textbook.com.pk after Lane (2023).</text>
+  <text class="wm" x="760" y="460" aria-hidden="true">textbook.com.pk</text>
+</svg>
