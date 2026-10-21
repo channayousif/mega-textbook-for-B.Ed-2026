@@ -67,11 +67,11 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Produced validated G3 English review evidence report and recorded advisory open tracker row for GQUR-301 Unit 3 with all content gates passing.
+Completed independent G3 English review of GQUR-301 Unit 3 with disposition pass, recorded evidence artifacts and advisory open tracker row, and verified all 13 content gates pass cleanly.
 
 ## Outcome
 
-- Impact: review_en for GQUR-301 Unit 3 by agy (attempt 2 / r1).
+- Impact: review_en for GQUR-301 Unit 3 by agy (attempt 1).
 - Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 16 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
@@ -79,12 +79,12 @@ Produced validated G3 English review evidence report and recorded advisory open 
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Produced validated G3 English review evidence report and recorded advisory open tracker row for GQUR-301 Unit 3 with all content gates passing.
+- Shipped / changed: Completed independent G3 English review of GQUR-301 Unit 3 with disposition pass, recorded evidence artifacts and advisory open tracker row, and verified all 13 content gates pass cleanly.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - G3 review is advisory and unsigned (status ▢, no initials) under ADR-0019; disposition is pass with advisory finding F1 (headless render limitation).
-  - All four figure SVGs pass measure-figure-text cleanly with no viewBox overflow (two cosmetic wordmark collisions reported but not failed).
+  - All four figure SVGs pass measure-figure-text cleanly with no viewBox overflow (two cosmetic wordmark collisions reported in fig-U3-2 but not failed).
   - Next lifecycle stage for Unit 3 is G4 Urdu translation.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
