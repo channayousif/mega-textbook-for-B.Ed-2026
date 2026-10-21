@@ -1,0 +1,11 @@
+index.mdx: PASS invariant front matter, heading vector, imports, component counts, figure identities and dimensions, glossary keys, numbered lists.
+topic-01.mdx: PASS invariant front matter, heading vector, imports, component counts, figure identities and dimensions, glossary keys, numbered lists.
+topic-02.mdx: PASS invariant front matter, heading vector, imports, component counts, figure identities and dimensions, glossary keys, numbered lists.
+unit-assessment.mdx: PASS invariant front matter, heading vector, imports, component counts, figure identities and dimensions, glossary keys, numbered lists.
+unit-teacher-notes.mdx: PASS invariant front matter, heading vector, imports, component counts, figure identities and dimensions, glossary keys, numbered lists.
+PASS declared key_terms match frozen terminology bank. All translation_status values are draft.
+PASS MCQs: 10 items.
+PASS RRQs: 10 items.
+PASS ERQs: 5 items.
+PASS translated answers and marking guidance is the final H2 section.
+PASS MCQ key order: ب، ب، الف، ب، ب، ب، الف، ب، ب، ب. Arithmetic items independently recomputed: 8; 4.9; 35; 16.5.
