@@ -1,4 +1,4 @@
-# Independent assessment derivation — GQUR-301 Unit 9
+# Independent assessment derivation - GQUR-301 Unit 9
 
 Reviewer solved every item before consulting the answer key. MCQ and RRQ
 answers are recorded with reasoning; ERQ demand is classified from the
@@ -36,13 +36,13 @@ thinking actually required.
 
 ## Bloom demand classification (from thinking required)
 
-- MCQs 1, 2: Remember / Understand — match tags.
-- MCQs 3, 4, 5, 6, 7, 8, 9, 10: Apply or Understand — all within the approved band.
-- RRQs 1, 3: Understand — match tags.
-- RRQs 2, 4, 6, 7, 8: Apply — match tags.
-- RRQs 5, 9, 10: Analyze — match tags.
-- ERQs 1, 4, 5: Evaluate — match tags.
-- ERQs 2, 3: Analyze — match tags.
+- MCQs 1, 2: Remember / Understand - match tags.
+- MCQs 3, 4, 5, 6, 7, 8, 9, 10: Apply or Understand - all within the approved band.
+- RRQs 1, 3: Understand - match tags.
+- RRQs 2, 4, 6, 7, 8: Apply - match tags.
+- RRQs 5, 9, 10: Analyze - match tags.
+- ERQs 1, 4, 5: Evaluate - match tags.
+- ERQs 2, 3: Analyze - match tags.
 - Every ERQ rubric awards the top band for Analyze- or Evaluate-level reasoning.
 
 ## Discrepancies
