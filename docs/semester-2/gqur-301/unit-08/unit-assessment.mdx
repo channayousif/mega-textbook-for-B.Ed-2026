@@ -1,0 +1,276 @@
+---
+title: "Unit 8 assessment"
+description: "Summative assessment for GQUR-301 Unit 8: 10 MCQs, 10 RRQs and 5 ERQs on permutations, combinations and choosing a counting method to solve school problems."
+course_code: GQUR-301
+unit_no: 8
+clo_refs:
+  - "SLO:GQUR-301-8-1"
+  - "SLO:GQUR-301-8-2"
+  - "SLO:GQUR-301-8-3"
+blooms_summary: "Remember factorial notation and the two formulas; understand why order separates permutations from combinations; apply them to school counting problems; analyze and evaluate which method a problem needs and whether an answer is sensible."
+est_reading_minutes: 14
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+
+<PrintHandout />
+
+## Unit summary
+
+This unit, which follows Chapter 8 of the course guide, built two shortcuts on
+the multiplicative rule of Unit 7 and showed how to choose between them.
+
+- Topic 8.1 defined a permutation as an arrangement in which order matters.
+  n distinct items can be lined up in n! ways, where n! = n × (n - 1) × ... × 1
+  and 0! = 1. Arranging r of n distinct items gives P(n, r) = n! ÷ (n - r)!.
+  When some items are identical, divide by the factorials of the repeated
+  groups.
+- Topic 8.2 defined a combination as a selection in which order does not
+  matter. Each group of r items appears r! times in the permutation count, so
+  C(n, r) = n! ÷ (r! × (n - r)!), and choosing r is the same as leaving out
+  n - r. The swap test decides: if swapping two chosen items changes the
+  outcome, order matters.
+- Topic 8.3 turned the formulas into a problem-solving method: ask whether
+  order matters and whether items can repeat, multiply across stages, add
+  across separate cases, treat "together" items as a block, count "at least
+  one" by subtraction, and check every answer against a small case and common
+  sense.
+
+## Summative assessment
+
+### Multiple-choice questions (MCQs)
+
+Choose the single best answer for each question.
+
+1. *(Remember)* The value of 5! is:
+   - A) 25
+   - B) 120
+   - C) 3,125
+   - D) 15
+
+2. *(Remember)* A permutation is:
+   - A) A selection in which order does not matter
+   - B) An arrangement in which order matters
+   - C) A list of outcomes that may repeat
+   - D) The total of two separate counts
+
+3. *(Apply)* In how many ways can a head girl and a deputy head girl be chosen
+   from 9 candidates?
+   - A) 18
+   - B) 36
+   - C) 72
+   - D) 81
+
+4. *(Apply)* How many different arrangements can be made of all the letters of
+   the word SINDH?
+   - A) 25
+   - B) 60
+   - C) 120
+   - D) 3,125
+
+5. *(Remember)* The formula for C(n, r) is:
+   - A) n! ÷ (n - r)!
+   - B) n! ÷ (r! × (n - r)!)
+   - C) n × r
+   - D) nʳ
+
+6. *(Apply)* How many groups of 2 pupils can be chosen from 6 volunteers to
+   water the school plants, if both do the same job?
+   - A) 12
+   - B) 15
+   - C) 30
+   - D) 36
+
+7. *(Understand)* C(12, 10) has the same value as:
+   - A) C(12, 2)
+   - B) P(12, 2)
+   - C) C(10, 2)
+   - D) 12 × 10
+
+8. *(Understand)* Which of these situations is counted with a combination?
+   - A) Awarding gold, silver and bronze medals at a sports day
+   - B) Choosing 5 books to take on a trip from a shelf of 12
+   - C) Setting a 4-digit code for a school locker
+   - D) Arranging 6 pupils in a line for a photograph
+
+9. *(Apply)* A 3-digit code for a cupboard lock may use any of the digits 0 to
+   9, and digits may repeat. How many codes are possible?
+   - A) 30
+   - B) 120
+   - C) 720
+   - D) 1,000
+
+10. *(Apply)* A committee of 2 men and 1 woman is chosen from 4 men and 3
+    women, with no special posts. How many committees are possible?
+    - A) 18
+    - B) 21
+    - C) 35
+    - D) 72
+
+### Restricted-response questions (RRQs)
+
+Answer each question in a few sentences or a short paragraph.
+
+1. *(Understand)* A trainee writes "4! = 4 × 4 = 16". Explain the mistake and
+   give the correct value, saying what each factor in 4! stands for.
+
+2. *(Apply)* Seven pupils take part in a class quiz. In how many ways can the
+   first, second and third places be filled? Show the formula and the working.
+
+3. *(Analyze)* A teacher lists all the ways to arrange 4 pupils in a line and
+   finds 20 arrangements. Analyze why the list must be incomplete, and describe
+   a systematic way to list them that would find every one.
+
+4. *(Understand)* Explain, using the example of choosing 3 teachers from 8 for
+   a workshop, why C(n, r) is equal to P(n, r) divided by r!.
+
+5. *(Apply)* Compute the number of ways to choose 4 questions to attempt from
+   an examination paper of 7 questions. Show how C(n, r) = C(n, n - r) can
+   shorten the working.
+
+6. *(Analyze)* A headmaster says, "Choosing a sports committee of 3 from 10
+   teachers is a permutation because we choose one teacher after another."
+   Analyze this claim and say what would have to be true of the committee for
+   it to be a permutation.
+
+7. *(Apply)* Twelve schools enter a district hockey league in which every
+   school plays every other school once. How many matches are played? Explain
+   why this is a combination.
+
+8. *(Apply)* Five pupils stand in a line for a photograph, and two brothers
+   must stand next to each other. Find the number of possible lines and show
+   each stage.
+
+9. *(Analyze)* A trainee solves "how many 3-member committees from 6 boys and
+   4 girls include at least one girl?" by adding C(4, 1) + C(4, 2) + C(4, 3), which
+   gives 14. Analyze what the trainee has left out and find the right count.
+
+10. *(Analyze)* Compare the answers to these two questions about the digits 1
+    to 6: (a) how many 2-digit numbers with different digits can be made, and
+    (b) how many pairs of different digits can be chosen. Explain why one answer
+    is exactly twice the other.
+
+### Extended-response questions (ERQs)
+
+Answer each question in a structured paragraph or set of paragraphs.
+
+1. *(Analyze)* A school in Badin has 8 teachers and 3 different duties at a
+   parent-teacher meeting: welcome desk, registration and refreshments. Compute
+   the number of ways to assign the duties if each teacher does at most one.
+   Then analyze how the answer changes if the 3 teachers simply form a single
+   "meeting team" with no separate duties, and explain the link between the two
+   answers. (Write 100-150 words after your working.)
+
+2. *(Analyze)* A girls' school must pick a netball team of 7 from a squad
+   of 10. Compute the number of possible teams in two ways: directly with
+   C(10, 7) and by counting the players left out. Then analyze what changes if
+   the team must also name a captain and a vice-captain from the 7 chosen, and
+   compute the new total. (Write 120-160 words after your working.)
+
+3. *(Evaluate)* A trainee teacher sets this problem for Class 9: "How many
+   ways can 4 prefects be chosen from 12 pupils?" Two pupils give the answers
+   495 and 11,880. Evaluate both answers: identify the method each pupil used,
+   decide which is correct for the problem as written, and rewrite the problem
+   so that the other answer becomes correct. (Write 150-200 words.)
+
+4. *(Evaluate)* A school management committee wants to give every pupil in a
+   class of 30 a unique 3-character "library code" made of capital letters from
+   A to Z. One member proposes that letters may not repeat in a code; another
+   says repeats should be allowed. Compute the number of codes under each rule,
+   evaluate whether each rule gives enough codes for the class and for a school
+   of 1,500 pupils, and recommend a rule with reasons. (Write 150-200 words.)
+
+5. *(Evaluate)* Write and solve one counting problem drawn from a real
+   Pakistani school (such as a timetable, a team, a seating plan or a
+   committee) that needs at least two of the methods from this unit. Explain
+   how you decided which method to use at each stage, show one check that your
+   answer is sensible, and evaluate what the number tells the school about the
+   decision it faces. (Write 150-200 words.)
+
+## Answers and marking guidance
+
+### MCQ answer key
+
+| Item | Answer | Justification |
+|---|---|---|
+| 1 | B | 5! = 5 × 4 × 3 × 2 × 1 = 120. |
+| 2 | B | A permutation is an arrangement in which order matters. |
+| 3 | C | Two different posts, so P(9, 2) = 9 × 8 = 72. |
+| 4 | C | Five different letters arranged in all positions: 5! = 120. |
+| 5 | B | C(n, r) = n! ÷ (r! × (n - r)!). |
+| 6 | B | Same job, so order does not matter: C(6, 2) = 15. |
+| 7 | A | Choosing 10 of 12 is the same as leaving out 2: C(12, 10) = C(12, 2) = 66. |
+| 8 | B | Only the set of books matters, not the order in which they were picked. |
+| 9 | D | Order matters and digits repeat: 10 × 10 × 10 = 1,000. |
+| 10 | A | C(4, 2) × C(3, 1) = 6 × 3 = 18. |
+
+### RRQ model answers and mark schemes
+
+1. 4! is not 4 × 4. It is 4 × 3 × 2 × 1 = 24. The factors are the number of items still available for each place in turn: 4 for the first place, 3 for the second, 2 for the third and 1 for the last. (2 marks: 1 for the correct value, 1 for the meaning of the factors.)
+
+2. Order matters and nobody can take two places: P(7, 3) = 7 × 6 × 5 = 210. (2 marks: 1 for choosing P(7, 3), 1 for 210 with working.)
+
+3. Four pupils can be arranged in 4! = 24 ways, so a list of 20 has missed some. A systematic method fixes the first pupil and lists the 3! = 6 orders of the remaining three, then repeats for each of the 4 possible first pupils, giving 4 blocks of 6. (3 marks: 1 for 24, 1 for why 20 is incomplete, 1 for a systematic method.)
+
+4. P(8, 3) = 336 counts ordered choices. A group such as Ayesha, Farah and Saima appears in that count once for each of its 3! = 6 orders, but it is one group. Dividing by 3! removes the repeats: 336 ÷ 6 = 56 = C(8, 3). (3 marks: 1 for P(8, 3), 1 for the r! repeats, 1 for 56.)
+
+5. C(7, 4) = C(7, 3) = (7 × 6 × 5) ÷ (3 × 2 × 1) = 35. Choosing 4 to attempt is the same as choosing 3 to leave out, which needs fewer factors. (2 marks: 1 for 35, 1 for using C(7, 3) with a reason.)
+
+6. The claim is wrong: the order of choosing does not decide the method. If all three members have the same role, swapping two of them gives the same committee, so it is a combination, C(10, 3) = 120. It would be a permutation only if the members held different posts, such as chair, secretary and treasurer, giving P(10, 3) = 720. (3 marks: 1 for rejecting the claim, 1 for the swap test reason, 1 for the condition of distinct posts.)
+
+7. Each match is a pair of schools, and school A playing school B is the same match as B playing A, so order does not matter: C(12, 2) = 66 matches. (2 marks: 1 for 66, 1 for the reason.)
+
+8. Treat the brothers as one block, giving 4 units: 4! = 24 lines. The brothers can stand in 2! = 2 orders inside the block: 24 × 2 = 48. (2 marks: 1 for the block method, 1 for 48.)
+
+9. The trainee counted only the girls chosen and forgot to fill the rest of the committee with boys. Correctly: C(10, 3) - C(6, 3) = 120 - 20 = 100, or by cases 4 × 15 + 6 × 6 + 4 = 60 + 36 + 4 = 100. (3 marks: 1 for the error, 1 for a valid method, 1 for 100.)
+
+10. (a) P(6, 2) = 6 × 5 = 30 two-digit numbers. (b) C(6, 2) = 15 pairs. Each pair, such as 2 and 5, makes two numbers, 25 and 52, because 2 digits can be ordered in 2! = 2 ways, so 30 = 15 × 2. (3 marks: 1 for each count, 1 for the 2! explanation.)
+
+### ERQ rubrics
+
+**ERQ 1 (Analyze - duties versus a team)**
+
+Correct values: P(8, 3) = 336 assignments; C(8, 3) = 56 teams; 336 = 56 × 3!.
+
+| Criterion | Band 3 (Full) | Band 2 (Partial) | Band 1 (Limited) | Band 0 |
+|---|---|---|---|---|
+| Computation | Both counts correct with working | One correct | Attempted with errors | None |
+| Analysis of the link (Analyze) | Explains that each team can be given the three duties in 3! = 6 ways, so the duty count is six times the team count, using the swap test | Link stated without reason | Counts compared only by size | None |
+
+**ERQ 2 (Analyze - a team, then posts within it)**
+
+Correct values: C(10, 7) = C(10, 3) = 120 teams; with a captain and vice-captain from the 7, 120 × P(7, 2) = 120 × 42 = 5,040.
+
+| Criterion | Band 3 (Full) | Band 2 (Partial) | Band 1 (Limited) | Band 0 |
+|---|---|---|---|---|
+| Computation | Both routes to 120 and the total 5,040 correct | Two of three correct | One correct | None |
+| Analysis (Analyze) | Explains why leaving out 3 is equivalent to choosing 7, and why the two posts add an ordered second stage that multiplies the count | One of the two explained | Statements without reasons | None |
+
+**ERQ 3 (Evaluate - two pupils' answers)**
+
+Correct values: C(12, 4) = 495; P(12, 4) = 11,880 = 495 × 4!.
+
+| Criterion | Band 3 (Full) | Band 2 (Partial) | Band 1 (Limited) | Band 0 |
+|---|---|---|---|---|
+| Identifying methods | Names C(12, 4) for 495 and P(12, 4) for 11,880 and shows the 4! link | Names both methods without the link | Names one | None |
+| Judgement (Evaluate) | Judges 495 correct because the prefects as written have no separate posts, using the swap test, and notes the wording is open to doubt | Correct judgement with a weak reason | Judgement without reason | None |
+| Rewritten problem | Gives distinct posts (for example head, deputy, sports and library prefect) so that 11,880 is correct | Rewrite partly clear | Vague rewrite | None |
+
+**ERQ 4 (Evaluate - library codes)**
+
+Correct values: no repeats, P(26, 3) = 26 × 25 × 24 = 15,600; repeats allowed, 26³ = 17,576.
+
+| Criterion | Band 3 (Full) | Band 2 (Partial) | Band 1 (Limited) | Band 0 |
+|---|---|---|---|---|
+| Computation | Both counts correct, each matched to its rule | One correct | Attempted with errors | None |
+| Evaluation (Evaluate) | Concludes that both rules give far more codes than 30 or 1,500 pupils need, so the choice rests on other reasons (codes easy to read or remember, avoiding confusing repeats), and recommends a rule with a justified reason | Recommendation with partial reasons | Recommendation without reasons | None |
+
+**ERQ 5 (Evaluate - an original problem)**
+
+| Criterion | Band 3 (Full) | Band 2 (Partial) | Band 1 (Limited) | Band 0 |
+|---|---|---|---|---|
+| Problem design | A realistic Pakistani school problem that genuinely needs two or more methods | Realistic but needs only one method | Unclear or unrealistic | None |
+| Method choice (Analyze) | Justifies the method at each stage with the order and repetition questions, and the rule for stages or cases | Methods correct, reasons thin | Methods partly wrong | None |
+| Solution and check | Correct solution with a sensible check (small listed case, comparison, size check) | Correct without a check, or a check with a small error | Major errors | None |
+| Evaluation (Evaluate) | Explains what the number means for the school's decision, for example whether trying every option is realistic | Partial | Minimal | None |
