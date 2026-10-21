@@ -1,0 +1,37 @@
+render-review (NOT RUN — host policy limitation)
+=================================================
+Command: render-review (scripts/render-inspect.mjs <course> <unit>)
+Exit code: N/A (not executed)
+
+REASON NOT RUN:
+The crew brief for job gqur-301-u10-review_en explicitly forbids running
+a dev server or Playwright ("never run npm run build, a dev server or
+Playwright"). render-inspect.mjs launches a local Docusaurus server and
+drives Playwright (Chromium) to capture desktop 1280x900, narrow 360x780
+and A4-print 794px viewports. Running it would violate the host policy,
+which is non-negotiable on the shared 2-CPU/12 GB production host (see
+CLAUDE.md "Host resource limits").
+
+LIMITATION:
+Per review-unit/SKILL.md and review-evidence.md contract, a pass requires
+at least one actual rendered PNG/WebP/JPG artifact. No rendered artifact
+was produced because the inspection tool could not be invoked.
+Accessibility criteria (heading hierarchy at small viewports, figure
+clipping on A4 print, table scroll container behavior, bare-URL links)
+were not visually verified and are recorded as unverified.
+
+WHAT WAS VERIFIED WITHOUT A BROWSER:
+- All four <Figure> elements carry meaningful alt text (topic-01.mdx
+  fig-U10-1/2, topic-02.mdx fig-U10-3/4 — all alt strings present,
+  inspected by source).
+- Figure text geometry measured statically with measure-figure-text.mjs
+  on all 8 SVG files (4 light + 4 dark). No text overflows the viewBox
+  and no wordmark is overprinted in any variant.
+- Heading hierarchy is sequential (h1 -> h2 -> h3) across all four MDX
+  files by source inspection.
+
+RECOMMENDATION:
+A subsequent review run on a non-production host (or under explicit owner
+authorization) is needed to close the accessibility criterion before a
+pass is possible.
+exit_code=N/A (policy-limited)
