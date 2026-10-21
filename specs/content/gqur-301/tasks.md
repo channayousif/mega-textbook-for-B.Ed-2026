@@ -30,34 +30,34 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 2 | G7 publish | ▢ | | |
 | Unit 3 | G1 unit-spec | ▢ | | guide Chapter 3; intake re-evaluation advised (D-2026-0070) |
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-03/G2/20261020T205927960Z-gates.json |
-| Unit 3 | G3 en-review | ▢ | | needs an independent G3 review |
+| Unit 3 | G3 en-review | ▢ | | advisory run 001 (disposition: pass, advisory finding F1) at specs/content/gqur-301/reviews/unit-03/G3/0537b555-5784-429b-aaaa-e51e0af1897b.json; agent reviews advisory under ADR-0019 |
 | Unit 3 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 3 | G5 ur-review | ▢ | | |
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
 | Unit 4 | G1 unit-spec | ▢ | | guide Chapter 4; intake re-evaluation advised (D-2026-0070) |
 | Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-04/G2/20261020T205932410Z-gates.json |
-| Unit 4 | G3 en-review | ▢ | | needs an independent G3 review |
+| Unit 4 | G3 en-review | ▢ | | advisory independent agy G3 review (disposition: pass, thread 6124be59-7d79-48d3-9f3d-448c095baceb) at specs/content/gqur-301/reviews/unit-04/G3/6124be59-7d79-48d3-9f3d-448c095baceb.json; G3 stays open, unsigned (ADR-0019) |
 | Unit 4 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 4 | G5 ur-review | ▢ | | |
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
 | Unit 5 | G1 unit-spec | ▢ | | guide Chapter 5; intake re-evaluation advised (D-2026-0070) |
 | Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-05/G2/20261020T205936944Z-gates.json |
-| Unit 5 | G3 en-review | ▢ | | needs an independent G3 review |
+| Unit 5 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only: reviews/unit-05/G3/crew-review.json; RRQ 6 counterexample, RRQ 7 majority language, source/provenance and G1 evidence need resolution; current render inspection unavailable. No G3 sign-off. |
 | Unit 5 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 5 | G5 ur-review | ▢ | | |
 | Unit 5 | G6 assets | ▢ | | |
 | Unit 5 | G7 publish | ▢ | | |
 | Unit 6 | G1 unit-spec | ▢ | | guide Chapter 6; intake re-evaluation advised (D-2026-0070) |
-| Unit 6 | G2 en-draft | ▢ | | |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-06/G2/20261021T054446544Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | |
 | Unit 6 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 6 | G5 ur-review | ▢ | | |
 | Unit 6 | G6 assets | ▢ | | |
 | Unit 6 | G7 publish | ▢ | | |
 | Unit 7 | G1 unit-spec | ▢ | | guide Chapter 7; intake re-evaluation advised (D-2026-0070) |
-| Unit 7 | G2 en-draft | ▢ | | |
+| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-07/G2/20261021T055945099Z-gates.json |
 | Unit 7 | G3 en-review | ▢ | | |
 | Unit 7 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 7 | G5 ur-review | ▢ | | |
@@ -71,14 +71,14 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 8 | G6 assets | ▢ | | |
 | Unit 8 | G7 publish | ▢ | | |
 | Unit 9 | G1 unit-spec | ▢ | | guide Chapter 9; intake re-evaluation advised (D-2026-0070) |
-| Unit 9 | G2 en-draft | ▢ | | |
+| Unit 9 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-09/G2/20261021T061433933Z-gates.json |
 | Unit 9 | G3 en-review | ▢ | | |
 | Unit 9 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 9 | G5 ur-review | ▢ | | |
 | Unit 9 | G6 assets | ▢ | | |
 | Unit 9 | G7 publish | ▢ | | |
 | Unit 10 | G1 unit-spec | ▢ | | guide Chapter 10; intake re-evaluation advised (D-2026-0070) |
-| Unit 10 | G2 en-draft | ▢ | | |
+| Unit 10 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-10/G2/20261021T063742332Z-gates.json |
 | Unit 10 | G3 en-review | ▢ | | |
 | Unit 10 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 10 | G5 ur-review | ▢ | | |

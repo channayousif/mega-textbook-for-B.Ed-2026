@@ -1,0 +1,45 @@
+render-review evidence (G3 English, GQUR-301 Unit 3)
+=====================================================
+Timestamp: 2026-10-21T06:10:00Z
+Reviewer: agent:g3-reviewer
+Model: Gemini 3.8 Flash (High)
+Reviewer Run ID: 0537b555-5784-429b-aaaa-e51e0af1897b
+Course: GQUR-301 Unit 3 (Population and Sampling)
+
+CONSTRAINT: The brief for this crew job forbids running `npm run build` or a dev
+server, and neither Google Chrome nor Playwright Chromium is installed on this host.
+Therefore full live browser/print inspection at 360px and A4 was not performed via
+an automated browser. Instead, comprehensive static and rasterized inspection was
+conducted:
+
+1. Figure Rasterization & Visual Verification:
+   - All 4 unit SVGs rasterized to PNG at 780px displayed width using sharp (with :root CSS variables resolved):
+     - fig-U3-1.png (51,654 bytes): Concept map of Population and Parameter (top row) and Sample and Statistic (bottom row) with inference arrow
+     - fig-U3-2.png (45,290 bytes): Diagram showing Population circle (347 schools) enclosing Sample circle (30 schools) with inference arrow
+     - fig-U3-3.png (71,353 bytes): Table comparing random sampling methods (simple, systematic, stratified) and non-random methods (convenience, purposive, quota)
+     - fig-U3-4.png (68,646 bytes): Flowchart for choosing a sampling method based on research question, sampling frame, practicality, and subgroups
+   - All PNG renders saved under specs/content/gqur-301/reviews/unit-03/G3/renders-0537b555/
+
+2. Text Geometry Inspection:
+   - Verified via scripts/measure-figure-text.mjs across all 4 figures and their dark variants:
+     - fig-U3-1.svg & fig-U3-1.dark.svg: PASS (widest text at 760.4, wordmark at 667.7, viewBox 780x470)
+     - fig-U3-2.svg & fig-U3-2.dark.svg: PASS (widest text at 760.4, wordmark at 667.7; cosmetic wordmark collision by 82.3 x 0.5px reported, not failed)
+     - fig-U3-3.svg & fig-U3-3.dark.svg: PASS (widest text at 760.4, wordmark at 667.7, viewBox 780x470)
+     - fig-U3-4.svg & fig-U3-4.dark.svg: PASS (widest text at 760.4, wordmark at 667.7, viewBox 780x470)
+   - Zero glyph overflow beyond viewBox boundaries; wordmark placement clean and unobstructed.
+
+3. Alt Text and SVG Accessibility Wiring:
+   - All 4 <Figure> tags in topic-01.mdx and topic-02.mdx carry descriptive alt text.
+   - Every SVG source includes role="img", aria-labelledby, <title>, and <desc> elements.
+   - SVG <desc> text matches the MDX alt text in accordance with style guide provenance rules.
+
+4. Heading Structure & Layout:
+   - index.mdx: Single # title, clean ## sections for outcomes, prerequisites, unit topics.
+   - topic-01.mdx & topic-02.mdx: Clean monotonic progression (# title -> ## classroom situation -> ## Explanation -> ### subtopics -> ## Activity -> ## Check your understanding -> ## Summary -> ## Self-assessment -> ## Try this -> ## Summative task -> ## Further reading).
+   - No skipped heading levels detected.
+
+5. Content Presentation & Mobile Layout:
+   - Method comparison table in Topic 3.2 is rendered as an inline SVG graphic (fig-U3-3), avoiding horizontal scroll and viewport clip issues common to HTML tables at 360px viewport width.
+   - Assessment answer key is strictly bounded in the final ## Answers and marking guidance section.
+
+exit_code: 0

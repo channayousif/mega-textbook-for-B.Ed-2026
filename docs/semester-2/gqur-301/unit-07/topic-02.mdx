@@ -1,0 +1,221 @@
+---
+title: "Topic 7.2 - Multiplicative rule"
+description: "The multiplicative rule for choices made one after another, tree diagrams as a counting method, and deciding whether a school problem needs adding or multiplying."
+course_code: GQUR-301
+unit_no: 7
+topic_no: 2
+topic_label: "7.2"
+clo_refs:
+  - "SLO:GQUR-301-7-3"
+blooms_summary: "Remember the multiplicative rule; understand why choices made in stages multiply and how a tree diagram shows it; apply the rule to timetables, uniforms, meals and codes; analyze whether a problem needs adding, multiplying or both."
+est_reading_minutes: 9
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+import Glossary from '@site/src/components/Glossary';
+
+<PrintHandout />
+
+## A real classroom situation
+
+At a middle school in Larkana, the head teacher is drafting Monday's
+timetable for Class 6. Period 1 must be a language: Urdu, English or Sindhi.
+Period 2 must be Mathematics or Science. She asks a trainee teacher, "How
+many different ways can I fill the first two periods?" The trainee answers
+quickly: "Three languages plus two subjects, so five." The head teacher
+writes them out on the staffroom board: Urdu then Maths, Urdu then Science,
+English then Maths, English then Science, Sindhi then Maths, Sindhi then
+Science. There are six, not five. Adding gave the wrong answer because the
+two choices are not alternatives. Both are made, one after the other.
+
+<Figure id="fig-U7-3" kind="flowchart" src="/img/figures/gqur-301/unit-07/fig-U7-3.svg" alt="A tree diagram for choosing a school lunch in three stages: rice or roti, then daal, chicken or sabzi, then water or lassi. Every path from the start to an end point is one meal, and the 12 end points match 2 x 3 x 2 = 12." width={780} height={650} />
+
+<Figure id="fig-U7-4" kind="table" src="/img/figures/gqur-301/unit-07/fig-U7-4.svg" alt="Table of five school counting problems solved with the multiplicative rule, showing the stages and the ways at each stage: 6 timetables, 12 uniforms, 12 lunches, 400 ID codes and 6 seating orders." width={780} height={470} />
+
+This topic gives you the rule that the head teacher's list illustrates, and
+a way to see it.
+
+## Explanation
+
+### The multiplicative rule
+
+Many school decisions are made in **stages**: first one choice, then
+another, and every outcome needs a choice at each stage. The timetable has
+two stages. Stage 1 can be filled in 3 ways. For **each** of those 3, stage
+2 can be filled in 2 ways. So there are 3 groups of 2, which is 3 x 2 = 6
+timetables.
+
+This is the <Glossary term="Multiplicative rule" /> (also called the
+fundamental counting principle): if a first choice can be made in *m* ways
+and, for each of them, a second choice can be made in *n* ways, then the two
+choices together can be made in *m* x *n* ways (Abramson, 2021, Section 9.5).
+For more stages, keep multiplying. Lane (2023, Chapter 5) uses the same idea
+for a restaurant menu: 3 soups, 6 main dishes and 4 desserts give
+3 x 6 x 4 = 72 possible meals. The words that signal the rule are **"and
+then"**: this choice *and then* that one.
+
+**Worked example 1: uniforms.** The Hyderabad uniform from Topic 7.1 now
+adds a winter option: no sweater, a grey sweater or a maroon sweater.
+
+| Stage | Choice | Ways |
+|---|---|---|
+| 1 | Shirt (white, sky blue) | 2 |
+| 2 | Trousers (grey, navy) | 2 |
+| 3 | Sweater (none, grey, maroon) | 3 |
+
+Total uniforms = 2 x 2 x 3 = 12. Notice that "no sweater" counts as one of
+the options at stage 3. Leaving it out would give 2 x 2 x 2 = 8 and miss
+four uniforms.
+
+**Worked example 2: ID codes.** A school gives each pupil a code made of a
+section letter (A, B, C or D) followed by two digits (0 to 9 each), such as
+B07. There are 3 stages: 4 ways, then 10, then 10. The school can issue
+4 x 10 x 10 = 400 different codes. If it has 450 pupils, the system needs a
+third digit: 4 x 10 x 10 x 10 = 4,000 codes.
+
+**Worked example 3: when choices shrink.** Three pupils, Ali, Sana and Zara,
+are to sit in the three front seats. The first seat can take any of 3
+pupils. Once it is filled, only 2 pupils are left for the second seat, and
+then 1 for the third. The rule still works with the shrinking counts:
+3 x 2 x 1 = 6 seating orders. Unit 8 builds this idea into permutations.
+
+### Tree diagrams: seeing the rule
+
+A <Glossary term="Tree diagram" /> shows a staged choice as branches. Each
+stage adds a set of branches to every branch before it. Each path from the
+start to an end point is one outcome (Illowsky & Dean, 2023, Section 3.5).
+
+**Worked example 4: a school lunch.** A school canteen offers rice or roti,
+then daal, chicken or sabzi, then water or lassi. The tree starts with 2
+branches. Each of them splits into 3, giving 6. Each of those splits into 2,
+giving 12 end points (the first figure above). Counting the end points and
+multiplying 2 x 3 x 2 give the same answer, 12, which is exactly why the
+rule works.
+
+**Common misconception: "a tree diagram is only a drawing."** A tree is a
+counting method, not decoration. It lists every outcome in a systematic
+order (the method of Topic 7.1, drawn as branches), so it lets you check a
+multiplication, and it still works when the rule does not. Suppose each
+pupil chooses one sport, cricket or hockey, and then a position. Cricket
+offers 2 positions (batter, bowler) and hockey offers 3 (forward, midfield,
+defence). The number of positions depends on the sport, so there is no
+single number to multiply by at the second stage. The tree shows 2 end points under cricket and 3
+under hockey: 2 + 3 = 5 outcomes. Multiply along a path, add across
+separate branches.
+
+### Add or multiply? Deciding in a real problem
+
+The most common error in this unit is the trainee's in Larkana: **"choices
+made one after another should be added"**. They should be multiplied,
+because each option at the first stage combines with every option at the
+next. Before you calculate, ask two questions:
+
+1. **Does each outcome need one choice from every group?** If yes (a
+   timetable needs a Period 1 subject *and* a Period 2 subject), the choices
+   are stages: **multiply**.
+2. **Does each outcome use only one option in total?** If yes (an Annual Day
+   entry is one sport *or* one stage event), the groups are alternatives:
+   **add**, after checking that they do not overlap.
+
+**Worked example 5: both rules in one problem.** A pupil travels to a
+Sukkur school either by van (2 van routes) or by rickshaw and then on foot
+(3 rickshaw stands, then 2 walking paths from the stand). The rickshaw
+journey has stages: 3 x 2 = 6 ways. The van and rickshaw journeys are
+alternatives: 2 + 6 = 8 ways in all.
+
+## Activity: Build a timetable tree
+
+Work in groups of three. About 20 minutes.
+
+1. Your group plans the first three periods for one class. Period 1 is one
+   of 3 languages, Period 2 is Mathematics or Science, and Period 3 is one of
+   Art, Physical Education or Islamiat/Ethics (count Islamiat/Ethics as one
+   option, because pupils attend one or the other in the same period).
+2. One member works out the number of timetables with the multiplicative
+   rule. Another draws the tree on chart paper. The third lists the outcomes
+   systematically.
+3. Compare your three answers. If they disagree, find the mistake together.
+4. Now change one condition: on Fridays only Mathematics is allowed in
+   Period 2. Recount, and write one sentence on how the change shows up in
+   the tree.
+
+## Check your understanding
+
+1. *(Remember)* State the multiplicative rule in your own words, and name
+   the words that usually signal it.
+2. *(Understand)* Explain why 3 + 2 is the wrong count for the Larkana
+   timetable, using the idea of stages.
+3. *(Apply)* An examination paper is printed in 5 subjects, each in 3
+   versions (A, B and C). How many different papers must be printed?
+4. *(Apply)* A pupil chooses one of 4 houses and then one of 2 T-shirt
+   sizes for sports day. Draw a tree diagram and use it to count the kits.
+
+## Summary
+
+When a decision is made in stages and every outcome needs a choice at each
+stage, multiply the number of ways at each stage. A tree diagram shows why:
+each option branches into every option of the next stage, and every path is
+one outcome. Choices can stay the same at each stage or shrink as they are
+used up, and the rule handles both. When choices are alternatives, add
+instead. Many real problems need both: multiply along a path, add across
+separate branches.
+
+## Self-assessment checklist
+
+- [ ] I can use the multiplicative rule for a choice made in two or more stages.
+- [ ] I can draw a tree diagram and count outcomes from its end points.
+- [ ] I can decide whether a school counting problem needs adding, multiplying or both.
+- [ ] I can explain to a pupil why adding staged choices gives the wrong answer.
+
+## Try this at your practicum school
+
+Look at one real system at your practicum school that gives each pupil or
+item a code, such as admission numbers, locker labels or library book codes.
+Work out how many different codes the format allows, using the
+multiplicative rule, and compare it with the number of pupils or books.
+Note whether the format will run out as the school grows.
+
+## Summative task
+
+For the annual sports day, a school in Nawabshah gives each pupil a kit
+made of a T-shirt in one of 4 house colours, shorts or a tracksuit
+(2 choices), and a cap or no cap (2 choices). A teacher tells the store
+keeper, "We need 4 + 2 + 2 = 8 kit types."
+
+Separately, each pupil enters **one** event: one of 3 running races or one
+of 2 jumping events.
+
+a) Work out the correct number of kit types, and draw a tree diagram for
+   at least the first two stages.
+b) Work out the number of possible event entries.
+c) In 80-120 words, explain to the teacher why the kit types are
+   multiplied and the event entries are added. Use the two deciding
+   questions from this topic.
+
+**Mini-rubric**
+
+| Criterion | Levels |
+|---|---|
+| *Counting and tree (Apply)* | 0-3: 16 kit types and 5 entries with a correct tree / one correct count with tree / attempted / none. |
+| *Add or multiply decision (Analyze)* | 0-3: explains that every kit needs one choice from each group (stages) while an entry uses one option in total (alternatives), and shows why 8 undercounts / names the right rules without reasons / vague / none. |
+
+## Further reading
+
+Abramson, J. (2021). *College Algebra 2e.* OpenStax, Rice University.
+https://openstax.org/books/college-algebra-2e/pages/9-5-counting-principles -
+Section 9.5, "Counting Principles", which states the multiplication
+principle with an outfit example.
+
+Lane, D. M. (2023). *Online Statistics Education: A Multimedia Course of Study.*
+Rice University. https://onlinestatbook.com/2/probability/permutations.html -
+Chapter 5, "Permutations and Combinations", including the multiplied menu
+choices.
+
+Illowsky, B., & Dean, S. (2023). *Introductory Statistics 2e.* OpenStax.
+https://openstax.org/books/introductory-statistics-2e/pages/3-5-tree-and-venn-diagrams -
+Section 3.5, "Tree and Venn Diagrams".
+
+Chaudhry, S. M., & Kamal, S. (2008). *Introduction to Statistical Theory*
+(Parts I and II, 8th ed.). Ilmi Kitab Khana, Lahore. Print textbook named in
+the course guide, cited at bibliographic level only.
