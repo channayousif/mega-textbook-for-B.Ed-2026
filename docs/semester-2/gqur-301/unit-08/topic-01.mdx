@@ -1,0 +1,200 @@
+---
+title: "Topic 8.1 - Permutations"
+description: "Permutations: arrangements in which order matters, factorial notation, the formula P(n, r) = n! / (n - r)!, and arranging items when some are alike."
+course_code: GQUR-301
+unit_no: 8
+topic_no: 1
+topic_label: "8.1"
+clo_refs:
+  - "SLO:GQUR-301-8-1"
+blooms_summary: "Remember the meaning of n! and the permutation formula; understand why order makes each arrangement different and why 0! is 1; apply the formula to seating plans, prizes and posts; analyze whether a listed set of arrangements is complete."
+est_reading_minutes: 9
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+import Glossary from '@site/src/components/Glossary';
+
+<PrintHandout />
+
+## A real classroom situation
+
+A Class 5 teacher in Hyderabad is preparing the morning assembly. Three
+pupils, Ali, Sana and Bilal, will stand in a line at the front: the first
+recites the Qur'an verse, the second reads the thought for the day and the
+third leads the national anthem. Sana asks, "Can we take turns, so that every
+day we stand in a different order?" The teacher wonders how many school days
+that would last. With three pupils she can list the orders on the board. Then
+the head teacher adds two more pupils to the line, and listing suddenly looks
+much harder.
+
+<Figure id="fig-U8-1" kind="diagram" src="/img/figures/gqur-301/unit-08/fig-U8-1.svg" alt="The six different orders in which three pupils, Ali, Sana and Bilal, can stand in a line, with a tree showing 3 choices for the first place, 2 for the second and 1 for the third, giving 3 x 2 x 1 = 6 arrangements." width={780} height={470} />
+
+This topic shows you how to count such arrangements without listing them all.
+
+## Explanation
+
+### Arrangements: when order matters
+
+A <Glossary term="Permutation" /> is an arrangement of items in a definite
+order. "Ali, Sana, Bilal" and "Sana, Ali, Bilal" use the same three pupils, but
+they are different permutations, because a different pupil recites the verse.
+Lane (2023, Chapter 5) puts it simply: in permutations, order counts.
+
+**Worked example 1.** How many ways can the three pupils stand in the line?
+Use the multiplicative rule from Unit 7, one place at a time:
+
+- First place: any of the 3 pupils can stand there.
+- Second place: 2 pupils are left.
+- Third place: only 1 pupil is left.
+
+So there are 3 × 2 × 1 = **6** arrangements. The first figure above lists all
+six, so you can check that none is missing and none is repeated. Sana's plan
+lasts six school days.
+
+With five pupils the same reasoning gives 5 × 4 × 3 × 2 × 1 = **120**
+arrangements, which is about six months of school days. Listing 120 lines by
+hand is slow and easy to get wrong; multiplying is quick and certain.
+
+### Factorial notation
+
+Products like 5 × 4 × 3 × 2 × 1 appear so often that they have a short name.
+The <Glossary term="Factorial" /> of a whole number n, written **n!** and read
+"n factorial", is the product of all whole numbers from n down to 1:
+
+- 3! = 3 × 2 × 1 = 6
+- 4! = 4 × 3 × 2 × 1 = 24
+- 5! = 5 × 4 × 3 × 2 × 1 = 120
+- 6! = 720, and 10! = 3,628,800
+
+So **n distinct items can be arranged in a line in n! ways**. By agreement,
+**0! = 1**. This is not a trick: there is exactly one way to arrange nothing
+(do nothing), and the agreement makes the formula below work in every case
+(Abramson, 2021).
+
+**Common misconception.** Many trainees read 5! as 5 × 5 or as 5⁵. It is
+neither. A factorial multiplies a number by every smaller whole number down to
+1, so 5! = 120, while 5 × 5 = 25 and 5⁵ = 3,125. Ask what each factor stands
+for: in 5! the factors 5, 4, 3, 2, 1 are the shrinking number of pupils still
+available for each place in the line. Nobody can stand in two places at once,
+so the choices go down by one each time.
+
+### Arranging some of the items: P(n, r)
+
+Often we arrange only some of the items. Suppose 8 prefects are candidates, and
+the school will choose a head prefect and a deputy head prefect. The posts are
+different, so order matters: Hina as head with Kamran as deputy is not the same
+result as Kamran as head with Hina as deputy.
+
+**Worked example 2.** Head prefect: 8 choices. Deputy: 7 choices left. Total:
+8 × 7 = **56** ways.
+
+The number of permutations of n distinct items taken r at a time is written
+**P(n, r)** (many textbooks, including Chaudhry and Kamal (2008), write it as
+ⁿPᵣ). It is the product of r factors, starting at n and going down by one:
+
+**P(n, r) = n × (n - 1) × ... × (n - r + 1) = n! ÷ (n - r)!**
+
+Check it with the prefects: P(8, 2) = 8! ÷ 6! = 40,320 ÷ 720 = 56. The division
+simply cancels the 6 × 5 × 4 × 3 × 2 × 1 for the pupils who are not chosen.
+
+**Worked example 3.** A district speech competition in Sukkur has 10
+finalists. How many ways can the first, second and third prizes be awarded?
+P(10, 3) = 10 × 9 × 8 = **720**. When r = n, all items are arranged and
+P(n, n) = n! ÷ 0! = n!, which is why 0! must equal 1.
+
+<Figure id="fig-U8-2" kind="table" src="/img/figures/gqur-301/unit-08/fig-U8-2.svg" alt="A table of the permutation formula P(n, r) = n! divided by (n - r)! with four school examples: three pupils in a line give 6 orders, a head prefect and deputy from 8 candidates give 56, three prizes among 10 finalists give 720, and the letters of KARACHI give 2,520." width={780} height={470} />
+
+### When some items are alike
+
+The formula above assumes every item is different. If some items are
+identical, some arrangements look the same and must not be counted twice. A
+teacher arranging the letters of KARACHI on a display board has 7 letters, but
+the two A's are identical, so swapping them gives no new word. The count is
+7! ÷ 2! = 5,040 ÷ 2 = **2,520**. In general, divide n! by the factorial of the
+size of each group of identical items (Abramson, 2021).
+
+## Activity: How many ways to line up?
+
+Work in groups of four. About 15 minutes.
+
+1. Choose three members of your group. Physically stand in a line in every
+   possible order while a fourth member records each order. Did you find six?
+   How did you make sure you missed none?
+2. Now add the fourth member. Before you try, predict the number of orders
+   using factorials. Test your prediction by listing only the orders that start
+   with one particular person, then multiply by 4.
+3. Together, write one school situation in which order clearly matters (posts,
+   prizes, turns, a timetable) and compute its count with P(n, r).
+
+## Check your understanding
+
+1. *(Remember)* Write the meaning of 6! as a product and give its value. State
+   what 0! equals.
+2. *(Understand)* Explain why choosing a class monitor and an assistant monitor
+   from 30 pupils is a permutation, using the word "order".
+3. *(Apply)* A teacher has 7 different charts and space on the wall for 4 of
+   them in a row. How many different wall displays are possible? Show the
+   formula and the working.
+
+## Summary
+
+A permutation is an arrangement in which order matters. n distinct items can be
+arranged in n! ways, where n! multiplies n by every smaller whole number down
+to 1, and 0! = 1 by agreement. Arranging r of n distinct items gives
+P(n, r) = n! ÷ (n - r)!, which is just the multiplicative rule with fewer
+choices at each step. When some items are identical, divide by the factorials
+of the repeated groups.
+
+## Self-assessment checklist
+
+- [ ] I can work out a factorial and explain what each of its factors stands for.
+- [ ] I can explain why two arrangements of the same items are different permutations.
+- [ ] I can use P(n, r) to count arrangements of some of the items, and check the result by listing a small case.
+
+## Try this at your practicum school
+
+With your cooperating teacher's permission, find one real arrangement problem
+in the school: the order of speakers in an assembly, the order in which groups
+present, or the duties on a weekly classroom rota. Count the possible
+arrangements with a factorial or with P(n, r). Then suggest how the teacher
+could use the count, for example to make sure every pupil gets a fair turn at
+each duty over the term.
+
+## Summative task
+
+A school in Mirpurkhas has 6 teachers available for 3 different duties at the
+annual sports day: starter, timekeeper and announcer. Each teacher can do at
+most one duty.
+
+a) Compute the number of ways the duties can be assigned, using P(n, r), and
+   show the same answer with the multiplicative rule.
+b) A trainee lists the possibilities and finds only 20. Explain what mistake
+   the trainee has most likely made.
+c) In 60-100 words, analyze how the answer would change if two teachers were
+   identical twins whom nobody can tell apart, and whether that change matters
+   for the school.
+
+**Mini-rubric**
+
+| Criterion | Levels |
+|---|---|
+| *Computation (Apply)* | 0-3: P(6, 3) = 120 correct by both methods / correct by one method / attempted / none. |
+| *Error diagnosis (Analyze)* | 0-3: identifies that 20 is the number of selections ignoring the different duties, and explains why order matters here / partial / vague / none. |
+| *Reasoning about alike items (Analyze)* | 0-2: argues that the teachers are still different people with different duties, so the count is unchanged for the school, while noting when identical items do reduce a count / partial / none. |
+
+## Further reading
+
+Lane, D. M. (2023). *Online Statistics Education: A Multimedia Course of Study.*
+Rice University. https://onlinestatbook.com/2/probability/permutations.html -
+Chapter 5, "Permutations and Combinations", which counts orders with factorials
+and defines permutations of n things taken r at a time.
+
+Abramson, J. (2021). *Precalculus 2e.* OpenStax, Rice University.
+https://openstax.org/books/precalculus-2e/pages/11-5-counting-principles -
+Section 11.5, with P(n, r), 0! = 1 and permutations of items that are not all
+distinct.
+
+Chaudhry, S. M., & Kamal, S. (2008). *Introduction to Statistical Theory*
+(Parts I and II, 8th ed.). Ilmi Kitab Khana, Lahore. Print textbook cited at
+bibliographic level only.

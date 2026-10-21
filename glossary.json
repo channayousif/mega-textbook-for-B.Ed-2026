@@ -1560,6 +1560,31 @@
     "definition_ur": "ایک خاکہ جو مرحلہ وار انتخاب کو شاخوں کی صورت میں دکھاتا ہے؛ آغاز سے آخری نقطے تک ہر راستہ ایک نتیجہ ہے۔"
   },
   {
+    "term": "Factorial",
+    "definition_en": "For a whole number n, written n!, the product n x (n - 1) x ... x 1; it counts the ways to line up n different items. By agreement 0! = 1.",
+    "definition_ur": "کسی مکمل عدد n کے لیے، جسے n! لکھا جاتا ہے، حاصل ضرب n x (n - 1) x ... x 1؛ یہ n مختلف چیزوں کو ایک قطار میں لگانے کے طریقے گنتا ہے۔ اتفاقِ رائے سے 0! = 1۔"
+  },
+  {
+    "term": "Permutation",
+    "definition_en": "An arrangement of items in which order matters; r of n different items can be arranged in P(n, r) = n! / (n - r)! ways.",
+    "definition_ur": "چیزوں کی ایسی ترتیب جس میں ترتیب اہم ہو؛ n مختلف چیزوں میں سے r کو P(n, r) = n! / (n - r)! طریقوں سے ترتیب دیا جا سکتا ہے۔"
+  },
+  {
+    "term": "Combination",
+    "definition_en": "A selection of items in which order does not matter; r of n different items can be chosen in C(n, r) = n! / (r! (n - r)!) ways.",
+    "definition_ur": "چیزوں کا ایسا انتخاب جس میں ترتیب اہم نہ ہو؛ n مختلف چیزوں میں سے r کو C(n, r) = n! / (r! (n - r)!) طریقوں سے چنا جا سکتا ہے۔"
+  },
+  {
+    "term": "Arrangement",
+    "definition_en": "Items placed in a definite order, such as pupils in a line or prize positions; two arrangements of the same items in different orders count as different.",
+    "definition_ur": "چیزوں کو ایک طے شدہ ترتیب میں رکھنا، جیسے قطار میں طلبہ یا انعامی پوزیشنیں؛ ایک ہی چیزوں کی دو مختلف ترتیبیں الگ شمار ہوتی ہیں۔"
+  },
+  {
+    "term": "Selection",
+    "definition_en": "A group of items chosen without regard to order, such as a committee or a team; swapping two chosen items gives the same selection.",
+    "definition_ur": "ترتیب کا لحاظ کیے بغیر چنی گئی چیزوں کا گروہ، جیسے کمیٹی یا ٹیم؛ دو چنی ہوئی چیزوں کی جگہ بدلنے سے انتخاب وہی رہتا ہے۔"
+  },
+  {
     "term": "Profit",
     "definition_en": "Takings minus total costs; its percentage is always computed against costs, which is what lets stalls of different sizes compare themselves.",
     "definition_ur": "کل آمدنی منہا کل لاگت؛ اس کا فیصد ہمیشہ لاگت کے حساب سے لگایا جاتا ہے، اسی سے مختلف سائز کے کاروبار آپس میں موازنہ کر سکتے ہیں۔"

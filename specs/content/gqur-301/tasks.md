@@ -64,7 +64,7 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 7 | G6 assets | ▢ | | |
 | Unit 7 | G7 publish | ▢ | | |
 | Unit 8 | G1 unit-spec | ▢ | | guide Chapter 8; intake re-evaluation advised (D-2026-0070) |
-| Unit 8 | G2 en-draft | ▢ | | |
+| Unit 8 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-08/G2/20261021T061205981Z-gates.json |
 | Unit 8 | G3 en-review | ▢ | | |
 | Unit 8 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 8 | G5 ur-review | ▢ | | |

@@ -1,0 +1,207 @@
+---
+title: "Topic 8.3 - Applications in problem solving"
+description: "Choosing the right counting method for a real school problem: the order and repetition questions, combining methods for groups, restrictions and 'at least' conditions, and checking an answer."
+course_code: GQUR-301
+unit_no: 8
+topic_no: 3
+topic_label: "8.3"
+clo_refs:
+  - "SLO:GQUR-301-8-3"
+blooms_summary: "Remember the questions that select a counting method; understand why repetition and order change the count; apply permutations, combinations and the multiplicative rule together to multi-step school problems; analyze and evaluate which method a problem needs and whether an answer is sensible."
+est_reading_minutes: 10
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+
+<PrintHandout />
+
+## A real classroom situation
+
+At a teacher-training college in Jamshoro, two trainees are planning a
+mathematics lesson. They have written four problems for their Class 9 pupils:
+
+1. How many three-digit codes can be set on the school's stationery cupboard
+   lock, where digits may repeat?
+2. In how many ways can 5 pupils stand in a line for a class photograph if
+   two best friends insist on standing together?
+3. How many ways can a cleanliness committee of 2 boys and 2 girls be chosen
+   from 5 boys and 4 girls?
+4. How many committees of 3 can be chosen from those same 9 pupils if the
+   committee must include at least one girl?
+
+The first trainee says, "These are all just combinations." The second says,
+"No, they are all permutations." Both are wrong, and neither can explain why.
+What both are missing is a method for deciding.
+
+<Figure id="fig-U8-5" kind="flowchart" src="/img/figures/gqur-301/unit-08/fig-U8-5.svg" alt="A flowchart for choosing a counting method. If order does not matter, use a combination. If order matters and items can repeat, use the multiplicative rule, n to the power r. If order matters without repetition, use n factorial when all items are arranged, or P(n, r) when only some are. A note says to multiply across stages and add across separate cases." width={780} height={600} />
+
+## Explanation
+
+### Choosing the method: order and repetition
+
+Permutations and combinations are not interchangeable. For the same items
+they give different answers, so the first job in any counting problem is to
+decide which situation you are in. Two questions settle most school problems
+(the flowchart above):
+
+1. **Does order matter?** Use the swap test from Topic 8.2. If swapping two
+   chosen items gives a different outcome, order matters.
+2. **Can an item be used again?** In a lock code a digit can appear twice;
+   in a line of pupils a pupil cannot stand in two places.
+
+That gives three methods:
+
+| Order matters? | Repetition? | Method | Example |
+|---|---|---|---|
+| Yes | Yes | multiplicative rule, n × n × ... = nʳ | 3-digit lock code: 10 × 10 × 10 = 1,000 |
+| Yes | No | P(n, r), or n! if all n are arranged | 3-digit code with no repeated digit: P(10, 3) = 720 |
+| No | No | C(n, r) | 3 digits chosen as a set: C(10, 3) = 120 |
+
+**Common misconception.** "Permutations and combinations are interchangeable;
+just use whichever formula you remember." The table shows three different
+answers, 1,000, 720 and 120, for three different questions about the same ten
+digits. The numbers are linked (720 = 120 × 3!, because each set of 3 digits
+can be ordered in 3! ways), but they count different things. Choosing the
+wrong method does not give a slightly wrong answer; it answers a different
+question.
+
+**Worked example 1 (the lock).** A lock code is an ordered string, and the
+problem says digits may repeat: 10³ = **1,000** codes. If the school wanted a
+safer rule of "no repeated digit", the count would fall to P(10, 3) = 720.
+
+### Combining methods: stages, restrictions and cases
+
+Real problems often need more than one step. Unit 7's two rules still apply:
+**multiply** across stages done one after another, **add** across separate
+cases that cannot both happen (Abramson, 2021).
+
+**Worked example 2 (the committee of 2 boys and 2 girls).** This is done in
+two stages. Choose the boys: C(5, 2) = 10. Choose the girls: C(4, 2) = 6. Every
+pair of boys can go with every pair of girls, so multiply: 10 × 6 = **60**
+committees.
+
+**Worked example 3 (the photograph with two friends together).** Treat the two
+friends as a single block. Then there are 4 "units" to arrange: 4! = 24
+orders. Inside the block the friends can stand in 2! = 2 orders. Multiply:
+24 × 2 = **48** lines. Compare this with 5! = 120 for no restriction: the
+restriction reduces the count, as it should.
+
+**Worked example 4 (at least one girl).** "At least one" problems have many
+cases (1 girl, 2 girls, 3 girls). It is quicker to count everything and take
+away what is not allowed:
+
+- All committees of 3 from 9 pupils: C(9, 3) = 84.
+- Committees with no girl (all boys): C(5, 3) = 10.
+- Committees with at least one girl: 84 - 10 = **74**.
+
+You can check this by adding the cases: 1 girl, C(4, 1) × C(5, 2) = 40; 2 girls,
+C(4, 2) × C(5, 1) = 30; 3 girls, C(4, 3) = 4. And 40 + 30 + 4 = 74.
+
+<Figure id="fig-U8-6" kind="table" src="/img/figures/gqur-301/unit-08/fig-U8-6.svg" alt="A table of six solved school counting problems, each labelled with whether order matters, the method and the answer: a lock code with repeats gives 1,000, three prizes among 10 give 720, a team of 4 from 10 gives 210, 2 boys and 2 girls give 60, a line with two friends together gives 48, and a committee with at least one girl gives 74." width={780} height={470} />
+
+### Checking that an answer makes sense
+
+A counting answer is easy to get wrong and hard to "see", so build in checks:
+
+- **List a small case.** Shrink the problem (3 pupils instead of 9) and list
+  the outcomes. If the formula and the list disagree, the method is wrong.
+- **Compare with the unrestricted count.** A restriction ("must stand
+  together", "no repeats") can only lower the count.
+- **Compare combinations with permutations.** For the same n and r,
+  C(n, r) is never larger than P(n, r).
+- **Ask whether the size is believable.** If a class of 40 could be split
+  into groups in "3 ways", or a committee of 2 from 4 people in "1,000 ways",
+  something has gone wrong.
+
+These checks are the "evidence-based" part of quantitative reasoning: you do
+not just produce a number, you give reasons to trust it.
+
+## Activity: Sort, solve and swap
+
+Work in groups of three. About 20 minutes.
+
+1. Your tutor gives each group six problem cards drawn from school life
+   (timetables, teams, seating, codes, prizes, committees).
+2. Sort the cards into three piles using the flowchart: multiplicative rule,
+   permutation, combination. Some cards need two methods; put them on the
+   pile of their main step and note the second.
+3. Solve each card. One member solves, one checks with a small listed case,
+   and one writes the reason for the choice of method. Rotate roles for each
+   card.
+4. Swap your cards with another group and mark each other's work. Discuss any
+   card where the two groups chose different methods.
+
+## Check your understanding
+
+1. *(Remember)* State the two questions you ask to decide between the
+   multiplicative rule, a permutation and a combination.
+2. *(Understand)* Explain why "at least one" problems are often easier to
+   solve by subtracting from the total.
+3. *(Apply)* A school has 6 male and 5 female teachers. How many ways can a
+   4-member examination committee with exactly 2 men and 2 women be chosen?
+   Show each stage.
+
+## Summary
+
+Before counting, decide what kind of problem it is. If order matters and items
+can repeat, use the multiplicative rule, nʳ. If order matters without repeats,
+use P(n, r), or n! when everything is arranged. If order does not matter, use
+C(n, r). Multiply across stages, add across separate cases, treat "must be
+together" items as a block, and count "at least one" by taking away the cases
+that are not allowed. Always check the answer against a small listed case and
+against common sense.
+
+## Self-assessment checklist
+
+- [ ] I can use the order and repetition questions to choose a counting method, and give the reason.
+- [ ] I can solve a problem that needs two stages, a restriction or an "at least one" condition.
+- [ ] I can check a counting answer with a small case, a comparison and a size check.
+
+## Try this at your practicum school
+
+Look for a real decision in your practicum school that involves counting:
+setting the order of exam papers across a week, forming house teams, picking
+a quiz team with a captain, or choosing duty rosters. Write it as a counting
+problem, decide the method with the flowchart, and solve it. Then write two or
+three sentences on what the number tells the school, for example whether
+"trying every option" is realistic or whether a rule is needed.
+
+## Summative task
+
+The Head of a primary school in Larkana must form a 3-member welfare committee
+from 4 senior and 6 junior teachers. The committee will have a chair, a
+secretary and a treasurer, and must include at least one senior teacher.
+
+a) A colleague says, "It is a committee, so the answer is C(10, 3) = 120."
+   Analyze what is wrong with this answer. Name the two features of the
+   problem the colleague has ignored.
+b) Solve the problem correctly. (Hint: first count the 3-person groups that
+   include at least one senior teacher, then count the ways to give out the
+   three posts.)
+c) In 80-120 words, evaluate whether the method you used is the simplest one,
+   and describe one check you would use to trust the final number.
+
+**Mini-rubric**
+
+| Criterion | Levels |
+|---|---|
+| *Diagnosis (Analyze)* | 0-3: identifies both the distinct posts (order matters) and the "at least one senior" condition, with reasons / one feature with reason / features named without reason / none. |
+| *Solution (Apply)* | 0-3: C(10, 3) - C(6, 3) = 100 groups, × 3! = 600 assignments, correct and clearly staged / minor error / major error / none. |
+| *Evaluation and check (Evaluate)* | 0-3: compares with another valid route (for example P(10, 3) - P(6, 3) = 720 - 120 = 600) and gives a sensible check / one of these / vague / none. |
+
+## Further reading
+
+Abramson, J. (2021). *Precalculus 2e.* OpenStax, Rice University.
+https://openstax.org/books/precalculus-2e/pages/11-5-counting-principles -
+Section 11.5, which applies the addition and multiplication principles,
+permutations and combinations to multi-step problems.
+
+Lane, D. M. (2023). *Online Statistics Education: A Multimedia Course of Study.*
+Rice University. https://onlinestatbook.com/2/probability/permutations.html -
+Chapter 5, "Permutations and Combinations", which sets the counting methods
+used in probability.
+
+Chaudhry, S. M., & Kamal, S. (2008). *Introduction to Statistical Theory*
+(Parts I and II, 8th ed.). Ilmi Kitab Khana, Lahore. Print textbook cited at
+bibliographic level only.
