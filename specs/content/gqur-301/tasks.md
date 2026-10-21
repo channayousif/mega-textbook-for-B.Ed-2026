@@ -44,7 +44,7 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 4 | G7 publish | ▢ | | |
 | Unit 5 | G1 unit-spec | ▢ | | guide Chapter 5; intake re-evaluation advised (D-2026-0070) |
 | Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-05/G2/20261020T205936944Z-gates.json |
-| Unit 5 | G3 en-review | ▢ | | needs an independent G3 review |
+| Unit 5 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only: reviews/unit-05/G3/crew-review.json; RRQ 6 counterexample, RRQ 7 majority language, source/provenance and G1 evidence need resolution; current render inspection unavailable. No G3 sign-off. |
 | Unit 5 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 5 | G5 ur-review | ▢ | | |
 | Unit 5 | G6 assets | ▢ | | |
