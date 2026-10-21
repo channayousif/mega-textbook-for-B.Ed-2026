@@ -2258,5 +2258,35 @@
     "term": "Standard deviation",
     "definition_en": "The square root of the variance; the typical distance of a value from the mean, in the same units as the data.",
     "definition_ur": "تغیریت کا جذر؛ کسی قیمت کا اوسط سے عام فاصلہ، ڈیٹا ہی کی اکائی میں۔"
+  },
+  {
+    "term": "Explanatory variable",
+    "definition_en": "The variable in a bivariate data set that is used to explain or predict the other variable; conventionally placed on the horizontal axis of a scatter plot.",
+    "definition_ur": "دو متغیری ڈیٹا میں وہ متغیر جو دوسرے متغیر کی وضاحت یا پیش گوئی کے لیے استعمال ہوتا ہے؛ عام طور پر سکیٹر پلاٹ کی افقی محور پر رکھا جاتا ہے۔"
+  },
+  {
+    "term": "Response variable",
+    "definition_en": "The variable in a bivariate data set that is the outcome to be understood; conventionally placed on the vertical axis of a scatter plot.",
+    "definition_ur": "دو متغیری ڈیٹا میں وہ متغیر جو سمجھنے کا نتیجہ ہے؛ عام طور پر سکیٹر پلاٹ کی عمودی محور پر رکھا جاتا ہے۔"
+  },
+  {
+    "term": "Scatter plot",
+    "definition_en": "A graph that displays bivariate data as points on two axes, one point per case, to reveal the relationship between the two variables.",
+    "definition_ur": "ایک گراف جو دو متغیری ڈیٹا کو دو محوروں پر نقاط کے طور پر دکھاتا ہے، فی کیس ایک نقطہ، تاکہ دو متغیرات کے درمیان تعلق واضح ہو سکے۔"
+  },
+  {
+    "term": "Positive correlation",
+    "definition_en": "A relationship in which two variables tend to increase together; on a scatter plot, the cloud rises from left to right.",
+    "definition_ur": "ایک تعلق جس میں دو متغیرات ایک ساتھ بڑھنے کی رجحان رکھتے ہیں؛ سکیٹر پلاٹ پر بادل بائیں سے دائیں طرف اٹھتا ہے۔"
+  },
+  {
+    "term": "Negative correlation",
+    "definition_en": "A relationship in which one variable tends to decrease as the other increases; on a scatter plot, the cloud falls from left to right.",
+    "definition_ur": "ایک تعلق جس میں ایک متغیر دوسرے کے بڑھنے پر گھٹنے کی رجحان رکھتا ہے؛ سکیٹر پلاٹ پر بادل بائیں سے دائیں طرف گرتا ہے۔"
+  },
+  {
+    "term": "Outlier",
+    "definition_en": "A data point that falls far from the general pattern of the rest of the data in a plot or distribution.",
+    "definition_ur": "ایک ڈیٹا نقطہ جو پلٹ یo تقسیم میں باقی ڈیٹا کے عام نمونے سے بہت دور ہو۔"
   }
 ]

@@ -1,0 +1,165 @@
+---
+title: "Topic 12.1 - Scatter plots"
+description: "Bivariate data and scatter plots: plotting paired observations, labelling axes, and the parts of a scatter plot."
+course_code: GQUR-301
+unit_no: 12
+topic_no: 1
+topic_label: "12.1"
+clo_refs:
+  - "SLO:GQUR-301-12-1"
+  - "SLO:GQUR-301-12-2"
+blooms_summary: "Remember the parts of a scatter plot (axes, points, variable roles); understand why we plot pairs; apply the construction to a small school data set."
+est_reading_minutes: 7
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+import Glossary from '@site/src/components/Glossary';
+
+<PrintHandout />
+
+## A real classroom situation
+
+A mathematics teacher at a government high school in Sukkur keeps two records for each
+of her 10 pupils at the end of a term: the number of hours each pupil reported
+studying mathematics at home in a typical week, and the score each pupil obtained on
+the term mathematics test (out of 100). She suspects the two are related but cannot
+see the pattern from two separate lists. She asks you, "Can I show this on one
+diagram?"
+
+<Figure id="fig-U12-1" src="/img/figures/gqur-301/unit-12/fig-U12-1.svg" alt="Concept map placing 'Bivariate Analysis' at the centre, branching into scatter plot, direction, strength, form and outlier, showing the flow from data to plot to interpretation." />
+
+<Figure id="fig-U12-2" src="/img/figures/gqur-301/unit-12/fig-U12-2.svg" alt="Data table with two columns (study hours per week and test score out of 100) showing 10 paired observations from a Pakistani school." />
+
+That question is the starting point of bivariate analysis. This topic gives you the
+diagram she needs: the scatter plot.
+
+## Explanation
+
+### What makes data bivariate
+
+All the data you have worked with so far in this course have been **univariate**: one
+record per case. A list of test marks is univariate, one mark per pupil. A scatter
+plot needs **bivariate data**: two records, of the same kind, linked case by case.
+Each row gives a pair of values for one case. In the teacher's record, one row
+gives, for pupil A, 6 study hours and a score of 58. The pair belongs together;
+separating the two numbers destroys the information.
+
+The two variables in a bivariate pair are not equal in role. One is treated as the
+<Glossary term="Explanatory variable" /> (the variable you believe may explain or
+predict the other); the other is the <Glossary term="Response variable" /> (the
+outcome you want to understand). In the teacher's record, study hours is the
+explanatory variable and test score is the response variable, because the question is
+"does study time help explain the score?" The choice matters for how you plot and
+interpret the data, but it does not prove causation (a point Topic 12.2 returns to).
+
+### Plotting the points
+
+A <Glossary term="Scatter plot" /> puts one variable on the horizontal axis and the
+other on the vertical axis, then plots one point for each case at the coordinates
+given by its pair of values. The convention is to place the explanatory variable on
+the horizontal axis and the response variable on the vertical axis.
+
+For the teacher's data:
+
+1. Label the horizontal axis "Study hours per week" and mark a scale from 0 to the
+   maximum value (say, 0 to 12).
+2. Label the vertical axis "Test score (out of 100)" and mark a scale from 0 to 100.
+3. For each pupil, find the horizontal position from the study-hours value, then
+   move vertically to the test-score value, and place a point.
+4. Do not join the points. A scatter plot shows the pattern, not a path.
+
+**Worked example.** Pupil A studied 6 hours and scored 58. From the origin, move 6
+units right on the horizontal axis, then 58 units up on the vertical axis, and place
+a dot. Repeat for all 10 pupils. The result is a cloud of points; its shape,
+direction and spread are what you will learn to read in Topic 12.2.
+
+**Common misconception.** Many trainees think that the two axes can be swapped
+without consequence. In fact, swapping them changes which variable is treated as
+explanatory, which changes how you interpret the plot. Keep the explanatory variable
+on the horizontal axis and the response variable on the vertical axis unless you have
+a specific reason to do otherwise.
+
+### A small data set to practise with
+
+The table below gives the 10 pupils' data. Use it to construct your own scatter
+plot on graph paper.
+
+| Pupil | Study hours/week | Test score/100 |
+|---|---|---|
+| A | 6 | 58 |
+| B | 3 | 42 |
+| C | 8 | 71 |
+| D | 5 | 55 |
+| E | 9 | 78 |
+| F | 2 | 38 |
+| G | 7 | 65 |
+| H | 4 | 48 |
+| I | 10 | 82 |
+| J | 1 | 30 |
+
+Plotting these points should produce a cloud that rises from left to right, which is
+the visual signature of a positive relationship. Topic 12.2 teaches you to describe
+that signature in words.
+
+## Activity: Plot and compare
+
+Work in pairs. About 20 minutes.
+
+1. Using the data in the table above, each partner plots the scatter plot
+   independently on graph paper, labelling both axes and giving the plot a title.
+2. Compare your plots. Do the points fall in the same positions? If not, find the
+   discrepancy and correct it.
+3. Now swap the axes: plot study hours on the vertical axis and test score on the
+   horizontal axis. Discuss: does the shape of the cloud change? Does the
+   interpretation change? Write one sentence each.
+
+## Check your understanding
+
+1. *(Remember)* In your own words, state the difference between univariate and bivariate data in one sentence.
+2. *(Understand)* Explain why, in a scatter plot, we place the explanatory variable on the horizontal axis and the response variable on the vertical axis.
+3. *(Apply)* A nurse records, for each of eight patients, the number of hours of sleep the previous night and a wellness score the next morning. Identify the explanatory and response variables, and describe how you would set up the axes of the scatter plot.
+
+## Summary
+
+Bivariate data give two linked values per case. A scatter plot displays them as
+points on two axes, with the explanatory variable on the horizontal axis and the
+response variable on the vertical axis. Plot the points; do not join them. The
+cloud's shape is the raw material for the interpretation in Topic 12.2.
+
+## Self-assessment checklist
+
+- [ ] I can distinguish bivariate from univariate data.
+- [ ] I can identify the explanatory and response variables in a bivariate question.
+- [ ] I can construct a small scatter plot from a table of paired values.
+
+## Try this at your practicum school
+
+At your practicum school, collect a small bivariate data set of 8 to 12 paired values
+that a teacher or administrator might plausibly record (for example, number of
+absences and test score, or height in cm and weight in kg). Plot the scatter plot on
+paper, label the axes, and bring it to the next session.
+
+## Summative task
+
+Using the data in the table above (study hours and test score), construct a scatter
+plot on graph paper. Label both axes, give the plot a title, and then state the
+explanatory and response variables. In two or three sentences, describe what the
+overall shape of the cloud suggests about the relationship between study hours and
+test score.
+
+**Mini-rubric**
+
+| Criterion | Levels |
+|---|---|
+| *Plot construction* | 0-3: all 10 points correctly plotted and axes labelled / most points correct with minor errors / several errors. |
+| *Variable roles* | 0-2: correctly identifies and explains explanatory and response variables / identifies without clear explanation / neither. |
+| *Description* | 0-3: clear description of the cloud's direction and overall pattern / partial description / none. |
+
+## Further reading
+
+Lane, D. M. (2023). *Online Statistics Education: A Multimedia Course of Study.*
+Rice University. https://onlinestatbook.com/ - Chapter 4 introduces scatter plots
+and bivariate data with examples.
+
+
