@@ -31,7 +31,7 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 3 | G1 unit-spec | ▢ | | guide Chapter 3; intake re-evaluation advised (D-2026-0070) |
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-03/G2/20261020T205927960Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | needs an independent G3 review |
-| Unit 3 | G4 ur-translation | ▢ | | full Urdu mirror required |
+| Unit 3 | G4 ur-translation | ▢ | | Draft mirror and four Urdu SVG pairs prepared from 47e14253; translation_status remains draft. No G4 completion claim or new row under translate-unit Step 7. Handoff: translations/unit-03/handoff.md |
 | Unit 3 | G5 ur-review | ▢ | | |
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
