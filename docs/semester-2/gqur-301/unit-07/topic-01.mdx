@@ -1,0 +1,202 @@
+---
+title: "Topic 7.1 - Basic counting principles"
+description: "Outcomes, listing them systematically so none is missed or repeated, the addition rule for non-overlapping choices, and correcting a count when groups overlap."
+course_code: GQUR-301
+unit_no: 7
+topic_no: 1
+topic_label: "7.1"
+clo_refs:
+  - "SLO:GQUR-301-7-1"
+  - "SLO:GQUR-301-7-2"
+blooms_summary: "Remember what an outcome is and state the addition rule; understand why a systematic list beats a haphazard one and why overlapping groups are double counted; apply listing and the addition rule to school choices; analyze a reported count for double counting."
+est_reading_minutes: 8
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+import Glossary from '@site/src/components/Glossary';
+
+<PrintHandout />
+
+## A real classroom situation
+
+A government girls' school in Hyderabad is changing its summer uniform. The
+committee agrees that a shirt may be white or sky blue, and trousers may be
+grey or navy. The head teacher asks a trainee teacher to write down every
+possible uniform so that parents can see them all. The trainee writes the
+first combinations that come to mind: white with grey, sky blue with navy,
+white with navy, and then white with grey again. Her list has four lines, so
+she says there are four uniforms. One combination is missing and one is
+written twice. The count happens to be right, but the list is wrong, and a
+list that is right by luck cannot be trusted.
+
+<Figure id="fig-U7-1" kind="diagram" src="/img/figures/gqur-301/unit-07/fig-U7-1.svg" alt="Two lists of school uniforms made from two shirt colours and two trouser colours. The haphazard list repeats white with grey and misses sky blue with grey. The systematic list fixes the shirt and changes the trousers, giving all four uniforms once each." width={780} height={470} />
+
+<Figure id="fig-U7-2" kind="table" src="/img/figures/gqur-301/unit-07/fig-U7-2.svg" alt="Table of four school counting questions showing the method, the working and the count: listing gives 4 uniforms, the addition rule gives 5 Annual Day events and 11 library books, and the addition rule with the overlap removed gives 17 club members." width={780} height={470} />
+
+This topic shows you how to count possibilities without missing any or
+counting any twice.
+
+## Explanation
+
+### Outcomes and systematic listing
+
+An <Glossary term="Outcome" /> is one possible result of a choice or an
+event. Each complete uniform (a shirt together with trousers) is one outcome
+of the uniform decision. Counting means finding how many different outcomes
+there are.
+
+The simplest way to count is to list every outcome. A list is only useful if
+it is **systematic**: it follows a fixed order so that no outcome is missed
+and none is written twice. A reliable method is:
+
+1. **Fix** the first choice at its first option.
+2. **Run through** every option of the second choice.
+3. **Move** the first choice to its next option and repeat.
+
+**Worked example.** For the Hyderabad uniform, write W for white, B for sky
+blue, G for grey and N for navy.
+
+- Fix the shirt at W: WG, WN.
+- Move the shirt to B: BG, BN.
+
+The systematic list is WG, WN, BG, BN: four outcomes, each exactly once. The
+trainee's haphazard list missed BG and repeated WG (the first figure above).
+
+### The addition rule of counting
+
+Sometimes a choice is made from **separate groups**, and only one option is
+taken in total. At a school Annual Day in Larkana, each pupil enters exactly
+one event: one of 3 sports (cricket, kabaddi, sack race) **or** one of 2
+stage events (speech, tableau). No event belongs to both groups. The number
+of possible entries is 3 + 2 = 5.
+
+This is the <Glossary term="Addition rule of counting" />: if one choice can
+be made in *m* ways and a second, separate choice in *n* ways, and the two
+groups share no option, then choosing **one** option from either group can be
+done in *m* + *n* ways (Abramson, 2021, Section 9.5). The rule extends to
+three or more groups: just add each group's count. The word that signals it
+is **"or"**: one option from this group *or* from that group.
+
+The addition rule and the multiplicative rule of Topic 7.2 are together
+called the basic <Glossary term="Counting principle">counting principles</Glossary>. For further practice
+problems, the course guide names the Pakistani textbook by Chaudhry and Kamal
+(2008), a print text cited here at bibliographic level only.
+
+### When the groups overlap
+
+The addition rule needs groups that share no outcome. If they do overlap,
+adding counts the shared outcomes twice.
+
+**Worked example.** In a Class 7 section of 40 pupils, 12 are in the cricket
+club and 8 are in the science club. Three pupils are in both clubs. A teacher
+who adds 12 + 8 = 20 has counted those 3 pupils twice, once in each club. The
+number of pupils in at least one club is:
+
+12 + 8 - 3 = 17
+
+So 40 - 17 = 23 pupils are in neither club. The rule of thumb: add the
+groups, then subtract whatever was counted twice. A quick check is to list
+the shared members and ask, "Did I count this pupil once or twice?"
+
+### Common misconception: "you can always count by listing"
+
+Listing is the right first tool. It makes the outcomes visible and it is how
+we check a rule. But many trainees believe any counting problem can be solved
+by writing out every case. Consider the three-digit combination lock on a
+school's examination cupboard. Each digit can be 0 to 9, so the codes run
+from 000 to 999: that is 1,000 outcomes. Writing them all would take hours,
+and the chance of missing or repeating one is high. Listing works for small
+problems and for checking. For larger ones we need a rule that counts
+without listing, which is the job of Topic 7.2 (Lane, 2023, Chapter 5).
+
+## Activity: List it, then add it
+
+Work in pairs. About 15 minutes.
+
+1. Partner A writes a haphazard list of every possible "snack and drink"
+   choice at a school tuck shop that sells samosa or pakora, and water,
+   lassi or tea. Partner B writes a systematic list by fixing the snack first.
+2. Compare the two lists. Did either partner miss or repeat an outcome? How
+   many outcomes are there?
+3. Now the tuck shop runs a lunch offer: a pupil takes **one** item, either
+   one of 4 kinds of sandwich or one of 3 kinds of fruit. Count the choices
+   with the addition rule.
+4. Together, write one sentence explaining why the snack-and-drink question
+   and the lunch-offer question are counted differently.
+
+## Check your understanding
+
+1. *(Remember)* Define an outcome, and state the addition rule of counting,
+   including the condition it needs.
+2. *(Understand)* In the club example, explain in your own words why 12 + 8
+   gives the wrong number of pupils in at least one club.
+3. *(Apply)* A school library lets each pupil borrow one book this week,
+   chosen from 7 story books or 4 science books. How many different choices
+   are there? Which rule did you use?
+4. *(Apply)* List systematically every way to choose one class monitor from
+   Ali or Sana and one assistant from Zara, Bilal or Hina. How many outcomes
+   are there?
+
+## Summary
+
+An outcome is one possible result of a choice. Listing outcomes in a fixed
+order (fix the first choice, run through the second, then move on) makes
+sure none is missed or repeated. When one option is chosen from separate
+groups that share nothing, the addition rule gives the total: add the
+groups. When the groups overlap, subtract what was counted twice. Listing is
+the foundation and the check, but it becomes impractical for large problems.
+
+## Self-assessment checklist
+
+- [ ] I can list the outcomes of a two-part school choice systematically.
+- [ ] I can use the addition rule and say when it applies.
+- [ ] I can correct a count where two groups overlap.
+- [ ] I can explain why listing alone is not enough for large problems.
+
+## Try this at your practicum school
+
+Ask your cooperating teacher how pupils are grouped for one school activity,
+such as houses, clubs or co-curricular teams. Find out how many pupils are in
+two groups at once. Use the addition rule with the overlap removed to work
+out how many pupils take part in at least one group, and compare your answer
+with the school's own record.
+
+## Summative task
+
+A secondary school in Mirpurkhas runs two after-school clubs. The computer
+club has 25 members, the first-aid club has 18 members, and 6 pupils belong
+to both. In a report to the district office, the principal writes: "43 of our
+pupils take part in after-school clubs."
+
+a) Explain where the figure 43 came from and what is wrong with it.
+b) Work out the correct number of pupils in at least one club.
+c) Next term the school adds a third club, gardening, with 10 members, none
+   of whom are in the other two clubs. Use the addition rule to update your
+   answer, and say why the rule can be applied directly this time.
+d) In 60-100 words, advise the principal how to check such counts in
+   future.
+
+**Mini-rubric**
+
+| Criterion | Levels |
+|---|---|
+| *Counting (Apply)* | 0-3: correct totals in (b) and (c) with working / one correct / attempted / none. |
+| *Diagnosis of the error (Analyze)* | 0-3: identifies that the 6 pupils in both clubs were counted twice and explains why the addition rule needs groups that do not overlap / names double counting without the reason / vague / none. |
+| *Advice (Evaluate)* | 0-2: practical check such as listing shared members or subtracting overlaps, justified / advice without reason / none. |
+
+## Further reading
+
+Abramson, J. (2021). *College Algebra 2e.* OpenStax, Rice University.
+https://openstax.org/books/college-algebra-2e/pages/9-5-counting-principles -
+Section 9.5, "Counting Principles", which states the addition principle with
+a menu example.
+
+Lane, D. M. (2023). *Online Statistics Education: A Multimedia Course of Study.*
+Rice University. https://onlinestatbook.com/2/probability/permutations.html -
+Chapter 5, "Permutations and Combinations", which counts small sets of
+outcomes by listing.
+
+Chaudhry, S. M., & Kamal, S. (2008). *Introduction to Statistical Theory*
+(Parts I and II, 8th ed.). Ilmi Kitab Khana, Lahore. Print textbook named in
+the course guide, cited at bibliographic level only.
