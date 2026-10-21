@@ -43,7 +43,7 @@ Continued the inherited English draft, repaired statistical ambiguities, complet
 ## Outcome
 
 - ✅ Impact: Unit 10 English authoring ready for independent review.
-- 🧪 Tests: Content gates run repeatedly with every finding read and repaired; final results captured in G2 logs and final handoff. Main baseline passes all 13 gates.
+- 🧪 Tests: Content gates run repeatedly with every finding read and repaired; eight draft checks pass with logs bound to the committed inputs. Main baseline passes all 13 gates.
 - 📁 Files: Unit-only content, figures, source notes, governance and mandatory PHR.
 - 🔁 Next prompts: Independent G3 review, then separate Urdu translation and G5 review.
 - 🧠 Reflection: Current figure gate requires rendered assets despite older author-unit prompt-only instructions. Scoped glossary definitions remain inline because shared glossary is outside the authorized scope.
@@ -58,6 +58,6 @@ Continued the inherited English draft, repaired statistical ambiguities, complet
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Inherited undefined glossary tags; missing governance; prompt-only figures; confusing actual age with recorded whole-year age; symmetry and pooled-sample overclaims.
-- Graders run and results (PASS/FAIL): Origin/main: all 13 content gates PASS. Unit gates recorded in G2; final full content run required before closing.
+- Graders run and results (PASS/FAIL): Origin/main: all 13 content gates PASS. Unit gates recorded in G2; final full content run passes all 13 gates.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Independent assessment review of the frozen English bundle.
