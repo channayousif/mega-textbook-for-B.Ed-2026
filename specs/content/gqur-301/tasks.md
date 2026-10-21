@@ -51,7 +51,7 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 5 | G7 publish | ▢ | | |
 | Unit 6 | G1 unit-spec | ▢ | | guide Chapter 6; intake re-evaluation advised (D-2026-0070) |
 | Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-06/G2/20261021T054446544Z-gates.json |
-| Unit 6 | G3 en-review | ▢ | | |
+| Unit 6 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation: specs/content/gqur-301/reviews/unit-06/G3/01a16060-0dfb-7512-a36b-afc1aeed712a.json; precision and real-data assessment repairs requested; G1, provenance and narrow/A4 render evidence unresolved. G3 remains open and unsigned. |
 | Unit 6 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 6 | G5 ur-review | ▢ | | |
 | Unit 6 | G6 assets | ▢ | | |
