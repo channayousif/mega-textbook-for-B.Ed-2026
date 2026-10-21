@@ -2287,6 +2287,31 @@
   {
     "term": "Outlier",
     "definition_en": "A data point that falls far from the general pattern of the rest of the data in a plot or distribution.",
-    "definition_ur": "ایک ڈیٹا نقطہ جو پلٹ یo تقسیم میں باقی ڈیٹا کے عام نمونے سے بہت دور ہو۔"
+    "definition_ur": "ایک ڈیٹا نقطہ جو پلٹ یا تقسیم میں باقی ڈیٹا کے عام نمونے سے بہت دور ہو۔"
+  },
+  {
+    "term": "Correlation coefficient",
+    "definition_en": "A single number, denoted r, that measures the direction and strength of the linear relationship between two variables; it ranges from -1 (perfect negative) through 0 (no linear correlation) to +1 (perfect positive).",
+    "definition_ur": "ایک عدد، جسے r سے ظاہر کیا جاتا ہے، جو دو متغیرات کے درمیان خطی تعلق کی سمت اور طائیت کا ناپ ہے؛ یہ -1 (مکمل منفی) سے 0 (کوئی خطی تعلق نہیں) تا +1 (مکمل مثبت) تک ہو سکتا ہے۔"
+  },
+  {
+    "term": "Regression line",
+    "definition_en": "The straight line that best represents the linear pattern in a scatter plot, chosen by the least-squares method to minimise the total squared vertical distance from each point to the line.",
+    "definition_ur": "وہ سیدھی لکیر جو سکیٹر پلاٹ میں خطی نمونے کو بہترین طور پر نمائندگی کرتی ہے، جو کم از کم مربع طریقے سے منتخب کی جاتی ہے تاکہ ہر نقطے سے لکیر تک عمودی فاصلے کا مجموعہ کم ہو۔"
+  },
+  {
+    "term": "Slope",
+    "definition_en": "In a regression line, the amount the predicted response changes when the explanatory variable increases by one unit; it gives the steepness and direction of the line.",
+    "definition_ur": "واپسی لکیر میں، وہ مقدار جس سے متنبأ جواب بدلتا ہے جب وضاحتی متغیر اکھیک اکائی بڑھتا ہے؛ یہ لکیر کی ڑھلان اور سمت بتاتا ہے۔"
+  },
+  {
+    "term": "Intercept",
+    "definition_en": "In a regression line, the predicted value of the response variable when the explanatory variable is zero; it is the point where the line crosses the vertical axis.",
+    "definition_ur": "واپسی لکیر میں، متنبأ جوابی متغیر کی قیمت جب وضاحتی متغیر صفر ہو؛ یہ وہ نقطہ ہے جہاں لکیر عمودی محور کو قطع کرتی ہے۔"
+  },
+  {
+    "term": "Residual",
+    "definition_en": "The difference between an observed value and the value predicted by the regression line; a positive residual means the observation lies above the line, a negative residual means it lies below.",
+    "definition_ur": "مشاہدہ قیمت اور واپسی لکیر کے متنبأ قیمت کے درمیان فرق؛ مثبت باقیہ کا طلبہ ہے کہ مشاہدہ لکیر کے اوپر ہے، منفی باقیہ کا طلبہ ہے کہ لکیر کے نیچے ہے۔"
   }
 ]

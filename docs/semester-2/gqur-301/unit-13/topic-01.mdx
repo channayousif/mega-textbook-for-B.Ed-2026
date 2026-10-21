@@ -1,0 +1,230 @@
+---
+title: "Topic 13.1 - Correlation"
+description: "Correlation types and the correlation coefficient: measuring the direction and strength of a linear relationship between two variables."
+course_code: GQUR-301
+unit_no: 13
+topic_no: 1
+topic_label: "13.1"
+clo_refs:
+  - "SLO:GQUR-301-13-1"
+  - "SLO:GQUR-301-13-2"
+blooms_summary: "Remember the three types of correlation (positive, negative, zero); understand what the correlation coefficient measures; compute and interpret r for a small data set."
+est_reading_minutes: 7
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+import Glossary from '@site/src/components/Glossary';
+
+<PrintHandout />
+
+## A real classroom situation
+
+A teacher education college in Hyderabad asks its B.Ed trainees to investigate a
+practical question: "Do pupils who study longer each week tend to score higher on
+the monthly mathematics test?" Each trainee collects two numbers from 10 pupils at
+their practicum school: weekly study hours and the last test score. The scatter
+plot of the 10 pairs shows a cloud that rises from left to right, loosely, as you
+would expect. But the supervising lecturer asks, "How strong is that upward
+pattern? Can we put a number on it so we can compare it with another class?" The
+trainee hesitates. She knows the plot looks positive, but she has no single
+number to report.
+
+<Figure id="fig-U13-1" kind="diagram" src="/img/figures/gqur-301/unit-13/fig-U13-1.svg" alt="Four scatter plots showing strong positive (r near +0.9), weak positive (r near +0.3), weak negative (r near -0.3) and strong negative (r near -0.9) correlation between study hours and test score, each labelled with its coefficient range." />
+
+<Figure id="fig-U13-2" kind="table" src="/img/figures/gqur-301/unit-13/fig-U13-2.svg" alt="Correlation coefficient interpretation scale from -1.0 to +1.0 with descriptors: strong negative (-1.0 to -0.70), moderate negative (-0.70 to -0.30), weak or none (-0.30 to +0.30), moderate positive (+0.30 to +0.70), strong positive (+0.70 to +1.0), each with a classroom example." />
+
+That single number is the **correlation coefficient**, and learning to compute and
+interpret it is the work of this topic.
+
+## Explanation
+
+### Types of correlation
+
+In Unit 12 you described the direction of a scatter plot as positive, negative or
+none. **Correlation** is the formal name for that direction together with the
+strength of the linear pattern. We distinguish three types:
+
+- **Positive correlation**: the cloud rises from left to right. As one variable
+  increases, the other tends to increase. Study hours and test score usually show a
+  positive correlation.
+- **Negative correlation**: the cloud falls from left to right. As one variable
+  increases, the other tends to decrease. The number of absences and test score
+  usually show a negative correlation.
+- **Zero (or no) correlation**: the cloud shows no discernible linear slope. The two
+  variables do not move together in a straight-line pattern. A pupil's shoe size and
+  their test score, for example, show no linear correlation.
+
+These three types are about the *direction and approximate strength* of the linear
+pattern. The exact strength is captured by the correlation coefficient.
+
+### The correlation coefficient
+
+The <Glossary term="Correlation coefficient" /> (denoted **r**) is a single number
+that measures both the direction and the strength of the *linear* relationship
+between two variables. It always lies between -1 and +1:
+
+- **r = +1**: perfect positive linear correlation; all points lie exactly on a line
+  sloping upward.
+- **r = -1**: perfect negative linear correlation; all points lie exactly on a line
+  sloping downward.
+- **r = 0**: no linear correlation.
+- **0 < r < +1**: positive correlation; the closer to +1, the stronger the linear
+  pattern.
+- **-1 < r < 0**: negative correlation; the closer to -1, the stronger the linear
+  pattern.
+
+A common rule of thumb (Lane, 2023, Chapter 4) for interpreting the magnitude of r
+in classroom data:
+
+| Range of |r| | Descriptor |
+|---|---|
+| 0.00 - 0.30 | Weak or none |
+| 0.30 - 0.70 | Moderate |
+| 0.70 - 1.00 | Strong |
+
+Note that this scale describes *linear* correlation. Two variables can have a clear
+non-linear relationship (for example, a U-shaped curve) and still have r close to 0.
+The correlation coefficient only measures straight-line association.
+
+### Computing r for a small data set
+
+The formula for the Pearson correlation coefficient between two variables x and y,
+for n paired cases, is:
+
+$$r = \frac{n\sum xy - \sum x \sum y}{\sqrt{[n\sum x^2 - (\sum x)^2][n\sum y^2 - (\sum y)^2]}}$$
+
+You do not need to memorise this formula, but you should be able to compute r step
+by step for a small data set using a table. The steps are:
+
+1. List the n pairs (x, y).
+2. Compute x², y² and xy for each row.
+3. Sum each column: Σx, Σy, Σx², Σy², Σxy.
+4. Substitute into the formula.
+
+**Worked example.** The data below give weekly study hours (x) and test score (y)
+for 5 pupils (a smaller set than the trainee's 10, for easier arithmetic).
+
+| Pupil | x (hours) | y (score/100) | x² | y² | xy |
+|---|---|---|---|---|---|
+| A | 2 | 40 | 4 | 1600 | 80 |
+| B | 4 | 55 | 16 | 3025 | 220 |
+| C | 6 | 60 | 36 | 3600 | 360 |
+| D | 8 | 75 | 64 | 5625 | 600 |
+| E | 10 | 85 | 100 | 7225 | 850 |
+| **Sum** | **30** | **315** | **220** | **21075** | **2110** |
+
+Substituting (n = 5):
+
+- Numerator: 5(2110) - (30)(315) = 10550 - 9450 = 1100
+- Denominator part 1: 5(220) - (30)² = 1100 - 900 = 200
+- Denominator part 2: 5(21075) - (315)² = 105375 - 99225 = 6150
+- Denominator: √(200 × 6150) = √1230000 ≈ 1109.1
+- r ≈ 1100 / 1109.1 ≈ 0.99
+
+This r of approximately 0.99 indicates a very strong positive linear correlation
+between study hours and test score for these 5 pupils, which matches the near-straight
+cloud you would see on the scatter plot.
+
+**Common misconception.** Many trainees believe that a correlation of 0 means the
+two variables have no relationship at all. This is not so. r = 0 means no *linear*
+relationship; the variables could still follow a curved pattern. Always say "no
+linear correlation" rather than "no relationship" when you interpret r = 0.
+
+Another common error is to treat the correlation coefficient as a measure of
+causation. It is not. A high positive r between study hours and test score tells you
+the two variables move together in a straight-line pattern; it does not tell you that
+studying longer *causes* higher scores. That distinction matters every time you
+report a correlation.
+
+### What the sign and size of r tell a teacher
+
+In practicum work you will often face a question like, "Is there a link between
+pupil attendance and test performance?" Computing r gives you a defensible answer:
+
+- If r is close to -1 or +1, the linear pattern is strong; you can be confident the
+  link exists (though not that one causes the other).
+- If r is close to 0, there is no straight-line link; attendance and performance may
+  still relate in a non-linear way, but a straight-line summary would be misleading.
+- The sign tells you the direction: negative r means higher attendance goes with
+  lower scores (unusual, worth checking your data), positive r means they move
+  together.
+
+Report r with its sign and a brief interpretation, never as a bare number.
+
+## Activity: Compute and interpret r in pairs
+
+Work in pairs. About 25 minutes.
+
+1. Each pair receives (or constructs) a small bivariate data set of 6 to 8 paired
+   values from a plausible school situation: for example, number of library books
+   borrowed in a term and a reading test score.
+2. Compute r step by step using the table method shown above. One partner works
+   the first half of the arithmetic (columns x², y², xy), the other works the
+   second half (sums and the formula). Then swap and check each other's work.
+3. Write one sentence interpreting the sign and magnitude of r, and one sentence
+   stating what r does *not* tell you about the relationship.
+
+## Check your understanding
+
+1. *(Remember)* In your own words, state the difference between positive and negative correlation.
+2. *(Understand)* Explain why a correlation coefficient of 0 does not necessarily mean the two variables have no relationship at all.
+3. *(Apply)* A trainee computes r = -0.45 between the number of late arrivals and a pupil's end-of-term grade for 8 pupils. State the direction and strength of the correlation using the rule-of-thumb scale, and write one sentence describing what this means in plain language.
+
+## Summary
+
+Correlation describes the direction and strength of a linear relationship between
+two variables. The correlation coefficient r puts a number on that relationship:
+it ranges from -1 (perfect negative) through 0 (no linear correlation) to +1
+(perfect positive). The sign gives the direction; the absolute value gives the
+strength. r measures association, not causation, and it only captures straight-line
+patterns; a non-linear relationship can exist even when r is near 0.
+
+## Self-assessment checklist
+
+- [ ] I can distinguish positive, negative and zero correlation from a scatter plot.
+- [ ] I can compute the correlation coefficient r for a small data set using the table method.
+- [ ] I can interpret the sign and magnitude of r and state clearly that it does not imply causation.
+
+## Try this at your practicum school
+
+At your practicum school, collect two numerical variables from 8 to 10 pupils (for
+example, number of hours spent on homework in a week and the score on the most
+recent mathematics test). Plot the scatter plot, then compute r. Write a short
+paragraph (no more than 80 words) reporting r with its sign and strength, and end
+with one sentence stating what r does not tell you.
+
+## Summative task
+
+Using the data below (weekly hours of physical exercise and resting heart rate for
+6 adults), compute r step by step using the table method. Then interpret r: state its
+sign, its magnitude using the rule-of-thumb scale, and what the sign means in the
+context of exercise and heart rate. Finally, write one sentence explaining why a
+negative r here does not prove that exercise *causes* a lower heart rate.
+
+| Person | Exercise hrs/week | Heart rate (bpm) |
+|---|---|---|
+| 1 | 0 | 78 |
+| 2 | 2 | 74 |
+| 3 | 3 | 70 |
+| 4 | 5 | 68 |
+| 5 | 7 | 63 |
+| 6 | 10 | 58 |
+
+**Mini-rubric**
+
+| Criterion | Levels |
+|---|---|
+| *Computation* | 0-3: all columns correct, r computed accurately / minor arithmetic error / major error or incomplete. |
+| *Interpretation (Analyze)* | 0-3: sign, magnitude (with scale) and plain-language meaning all stated correctly / two elements correct / one or none. |
+| *Limitation* | 0-2: clearly states that correlation does not imply causation / vague statement / none. |
+
+## Further reading
+
+Lane, D. M. (2023). *Online Statistics Education: A Multimedia Course of Study.*
+Rice University. https://onlinestatbook.com/ - Chapter 4 (section on correlation)
+introduces the correlation coefficient and its interpretation with examples.
+
+Illowsky, B., & Dean, S. (2023). *Introductory Statistics 2e.* OpenStax, Rice
+University. https://openstax.org/details/books/introductory-statistics-2e -
+Chapter 12 covers correlation and regression (CC BY 4.0).
