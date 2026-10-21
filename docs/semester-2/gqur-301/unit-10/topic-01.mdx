@@ -1,0 +1,216 @@
+---
+title: "Topic 10.1 - Random variables"
+description: "Random variables as numbers produced by chance, and the difference between discrete random variables (counts) and continuous random variables (measurements)."
+course_code: GQUR-301
+unit_no: 10
+topic_no: 1
+topic_label: "10.1"
+clo_refs:
+  - "SLO:GQUR-301-10-1"
+blooms_summary: "Remember what a random variable is; understand the difference between discrete and continuous random variables; apply two simple tests to classify school examples; analyze why a rounded measurement is still continuous."
+est_reading_minutes: 9
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+
+<PrintHandout />
+
+## A real classroom situation
+
+Every morning a Class 6 teacher in Hyderabad calls the register of 40 pupils.
+On Monday 3 pupils were absent, on Tuesday 1, on Wednesday 5. She cannot say
+in advance how many will be absent tomorrow, but she knows it will be one of
+the numbers 0, 1, 2 and so on up to 40. In the same week the school health
+visitor measures each pupil's height: 138.4 cm, 141.0 cm, 139.7 cm. The
+teacher asks: "Both are numbers that change from pupil to pupil or day to day.
+Are they the same kind of number?" They are not, and this topic explains why
+the difference matters.
+
+<Figure id="fig-U10-1" src="/img/figures/gqur-301/unit-10/fig-U10-1.svg" alt="A concept map with ’random variable’ at the centre. One branch leads to discrete random variables, which are counted, such as absentees, quiz scores and siblings. The other leads to continuous random variables, which are measured, such as height, walking time and bag weight, with a note that rounding does not make them discrete." />
+
+## Explanation
+
+### What a random variable is
+
+In Unit 9 an outcome was a description, such as "head" or "pupil absent". Very
+often we care about a *number* attached to the outcome. A
+**random variable** is a rule that gives one number to every
+outcome of a chance process (Illowsky & Dean, 2023, Chapter 4). We name it
+with a capital letter, such as *X*, and write its values in small letters,
+such as *x* = 2.
+
+**Worked example.** Toss two coins. For independent fair coins, the four equally likely outcomes are HH,
+HT, TH and TT. Let *X* be the number of heads.
+
+| Outcome | HH | HT | TH | TT |
+|---|---|---|---|---|
+| Value of *X* | 2 | 1 | 1 | 0 |
+
+So *X* can take the values 0, 1 and 2. Before the toss we do not know which
+value we will get; that is what makes *X* random. After the toss *X* has one
+definite value.
+
+The word "variable" is the same one you met in Unit 1: something that varies.
+The word "random" adds that its value is decided by chance, so we can attach
+probabilities to its values. Random variables come in two kinds.
+
+### Discrete random variables
+
+A **discrete random variable** takes separate values that you
+can list and count, usually whole numbers, with gaps between them. It
+normally answers a "how many?" question.
+
+- *X* = the number of pupils absent from a class of 40 tomorrow. Values: 0, 1,
+  2, ..., 40.
+- *Y* = the number of correct answers a pupil gets on a 10-question quiz.
+  Values: 0, 1, 2, ..., 10.
+- *Z* = the number of children in a family in a Thatta village survey. Values:
+  0, 1, 2, ... with no fixed top value, but still separate whole numbers.
+
+Between 3 absentees and 4 absentees there is nothing: 3.6 pupils cannot be
+absent. That gap is the mark of a discrete variable. This matches the discrete
+*data* of Unit 1; a discrete random variable assigns numbers to the outcomes of that
+chance process.
+
+### Continuous random variables
+
+A **continuous random variable** can take any value in an
+interval, so between any two of its values there is always another possible
+value. It normally answers a "how much?" or "how long?" question and comes
+from *measuring*, not counting (Lane & Ziemer, n.d., "Distributions").
+
+- *H* = the height of a pupil chosen at random, in cm. Between 138 cm and
+  139 cm lie 138.5 cm, 138.25 cm, and so on without end.
+- *T* = the time a pupil in Mirpurkhas takes to walk to school, in minutes.
+- *W* = the weight of a school bag, in kg.
+
+Because there are endlessly many possible values, we do not ask for the
+probability of one exact height. We ask about an *interval*, such as "between
+140 cm and 145 cm". Topic 10.2 shows how this changes the way the
+distribution is drawn.
+
+### Telling them apart: two tests
+
+First define the quantity and the chance process, for example choosing a pupil
+at random and measuring their age. Then ask:
+
+1. **Can its possible values be listed?** Counts are discrete. So are values
+   awarded in fixed steps, such as 0, 0.5, 1 and 1.5 marks. Decimals alone do
+   not make a variable continuous.
+2. **Can it take every value in an interval?** Measured time, height and mass
+   are usually modelled as continuous. Finding just one value between two
+   others is not enough: half marks still leave gaps.
+
+These are modelling choices about a specified variable (NIST/SEMATECH,
+Section 1.3.6.1). Distinguish actual age from completed years recorded in a
+register. Actual age is continuous; the recorded whole-year value is a
+discrete variable derived from it. Rounding does not change actual age, but
+it does change the set of values in the recorded variable.
+
+**Worked example.** Classify *A* = the age of a Class 8 pupil.
+
+- Count or measure? Age is measured by time since birth, so it points to
+  continuous.
+- A value in between? Between 13 years and 14 years a pupil can be 13 years
+  and 5 months, so yes.
+- Decision: *A* is **continuous**, even though the admission register writes
+  "13" or "14".
+
+**Common misconception.** Many trainees think "a continuous variable can take
+only whole numbers" or, the other way round, that any variable written in
+whole numbers must be discrete. Writing a height as 139 cm or an age as 13 is
+only *rounding* when we record it. The quantity itself can take any value in
+between, so the random variable is still continuous. The test is what the
+variable could be, not how the register writes it.
+
+<Figure id="fig-U10-2" src="/img/figures/gqur-301/unit-10/fig-U10-2.svg" alt="A table of six school random variables. The number of absentees, quiz score and number of siblings are counted and discrete. Height, walking time and age are measured and continuous, even though age is usually recorded in whole years." />
+
+## Activity: Count or measure card sort
+
+Work in pairs. About 15 minutes.
+
+1. Each pair writes ten cards, one per random variable from your own school
+   life: for example "number of pupils who bring lunch", "length of the
+   morning assembly", "marks out of 50", "rainfall in Larkana in July".
+2. Swap cards with the next pair. Sort their cards into two piles, discrete and
+   continuous, using the two tests.
+3. For each card, write the possible values in a few words, as in the table
+   above.
+4. Return the cards. Discuss any card the two pairs sorted differently and
+   agree a reason. Marks out of 50 and money in rupees are good cards to argue
+   about.
+
+## Check your understanding
+
+1. *(Remember)* State in one sentence what a random variable is.
+2. *(Understand)* Explain the difference between a discrete and a continuous
+   random variable, with one school example of each.
+3. *(Apply)* Toss three coins and let *X* be the number of tails. List all the
+   values *X* can take.
+4. *(Apply)* Classify each as discrete or continuous and give a reason: (a) the
+   number of pupils in a school van, (b) the temperature in a classroom at
+   noon, (c) the time a pupil takes to finish a test.
+
+## Summary
+
+A random variable attaches a number to each outcome of a chance process.
+Discrete random variables come from counting and take separate values with
+gaps between them. Continuous random variables come from measuring and can
+take any value in an interval. Rounding a measurement when we record it does
+not make it discrete: decide by what the variable could be, not by how it is
+written.
+
+## Self-assessment checklist
+
+- [ ] I can explain what a random variable is and list its values for a simple chance process.
+- [ ] I can classify a random variable as discrete or continuous and give a reason.
+- [ ] I can explain why a rounded measurement, such as age in years, is still continuous.
+
+## Try this at your practicum school
+
+Look at one class register, marksheet or school record at your practicum
+school. Find two random variables in it, one discrete and one continuous (for
+example "number of absentees per day" and "height on the health card"). Write
+down the possible values of each and note how the school records them. Is the
+continuous one rounded?
+
+## Summative task
+
+A head teacher in Sanghar wants to study five things: (a) the number of
+pupils late each day, (b) the time the school van takes on its route, (c) the
+number of books a pupil borrows from the library in a month, (d) pupils'
+marks on a 20-mark test, and (e) the volume of water in the school tank each
+morning.
+
+a) For each, name the random variable and list or describe its possible
+   values.
+b) Classify each as discrete or continuous.
+c) In 80-120 words, analyze the case you found hardest to classify. Explain
+   which test settled it and why the way the school records it might mislead
+   someone.
+
+**Mini-rubric**
+
+| Criterion | Levels |
+|---|---|
+| *Values described (Apply)* | 0-3: possible values correct for all five / three or four / one or two. |
+| *Classification (Understand)* | 0-2: all five correct / three or four correct / fewer. |
+| *Analysis of the hard case (Analyze)* | 0-3: applies a named test, separates the variable from the way it is recorded, and explains the risk of misreading / partly / not at all. |
+
+## Further reading
+
+Illowsky, B., & Dean, S. (2023). *Introductory Statistics 2e.* OpenStax.
+https://openstax.org/books/introductory-statistics-2e/pages/4-introduction -
+Chapter 4 introduction, which defines a random variable and separates
+discrete from continuous ones.
+
+Lane, D. M., & Ziemer, H. (n.d.). *Distributions.* Online Statistics Education.
+Rice University. https://onlinestatbook.com/2/introduction/distributions.html -
+"Distributions", with examples of discrete and continuous variables.
+
+Haq, M. (1984). *Foundation of Probability and Statistics.* Tahir Sons,
+Karachi. Print textbook cited at bibliographic level only; it is a guide-listed reference, not a consulted full-text source.
+
+NIST/SEMATECH. (n.d.). *What is a Probability Distribution?*
+https://www.itl.nist.gov/div898/handbook/eda/section3/eda361.htm

@@ -1,0 +1,201 @@
+---
+title: "Topic 6.3 - Data interpretation using dispersion"
+description: "Reading the standard deviation in a classroom: comparing groups with the same mean, locating one pupil in standard deviations, and why more spread is not always bad."
+course_code: GQUR-301
+unit_no: 6
+topic_no: 3
+topic_label: "6.3"
+clo_refs:
+  - "SLO:GQUR-301-6-3"
+blooms_summary: "Understand what a small or large standard deviation says about a group; apply the mean and standard deviation together to compare two classes and to locate one pupil; analyze and evaluate what spread reveals and which teaching decision it supports."
+est_reading_minutes: 9
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+
+<PrintHandout />
+
+## A real classroom situation
+
+Back at the Hyderabad girls' school from Topic 6.1, the mathematics teacher has
+now computed the standard deviation of both Class 6 sections. Both have a mean
+of 12 out of 20. Section A has a standard deviation of about 1.1 marks; Section
+B has a standard deviation of about 6.0 marks. At the staff meeting the head
+teacher asks, "So which section is better?" The teacher's answer is that
+"better" is the wrong question. The two numbers tell her **how** to teach each
+section, not which one to praise. This topic shows you how to read a standard
+deviation and turn it into a decision.
+
+<Figure id="fig-U6-5" kind="diagram" src="/img/figures/gqur-301/unit-06/fig-U6-5.svg" alt="Two dot plots with the same mean of 12. Section A's eight marks are bunched between 10 and 14, with a standard deviation of about 1.1; Section B's eight marks are spread from 4 to 20, with a standard deviation of about 6.0. A band of one standard deviation either side of the mean is narrow for A and wide for B." width={780} height={470} />
+
+<Figure id="fig-U6-6" kind="table" src="/img/figures/gqur-301/unit-06/fig-U6-6.svg" alt="A guide to interpreting the standard deviation in a classroom. A small value means a consistent group that may suit one pace; a large value means a varied group that needs different levels of support; a very small value on a test may mean the test was too easy; a large value on a placement test is useful because it separates pupils." width={780} height={470} />
+
+## Explanation
+
+### Reading the standard deviation in a school context
+
+Topic 6.2 showed you how to compute the standard deviation (SD). Interpreting
+it means putting it **beside the mean** and asking what it says about the
+people behind the numbers.
+
+**Worked example.** Compare the two Class 6 sections.
+
+| | Section A | Section B |
+|---|---|---|
+| Marks (out of 20) | 10, 11, 12, 12, 12, 12, 13, 14 | 4, 5, 7, 10, 14, 17, 19, 20 |
+| Mean | 12 | 12 |
+| Range | 4 | 16 |
+| Squared deviations add to | 10 | 284 |
+| Variance (÷ 8) | 1.25 | 35.5 |
+| Standard deviation | about 1.1 | about 6.0 |
+
+1. **Same centre.** Both means are 12, so on average the sections did equally
+   well. The mean alone would end the discussion here.
+2. **Different spread.** Section A's SD (about 1.1 marks) says a typical pupil
+   is only about one mark from 12. Section B's SD (about 6.0 marks) says a
+   typical pupil is about six marks away from 12, either above or below.
+3. **What it means for teaching.** Section A is a **consistent** group: one
+   pace and one set of exercises will probably suit most pupils. Section B is a
+   **varied** group: some pupils need the basics retaught while others are ready
+   for harder work, so the teacher should plan groups or different levels of
+   task.
+
+A useful rough guide for single-peaked data is that many of the values lie
+within one SD of the mean, and a value more than two SDs from the mean is
+unusually far from it (Illowsky & Dean, 2023, Section 2.7). In Section A, the
+band from 12 - 1.1 to 12 + 1.1 (about 10.9 to 13.1) holds six of the eight
+pupils. In Section B the band is much wider, about 6.0 to 18.0, and it holds
+only four. The first figure above shows these two bands. Treat this as a rule
+of thumb, not a law: with eight pupils, and with data that are skewed or have
+two peaks, the proportions can be quite different.
+
+**Locating one pupil.** The SD also tells you how unusual a single mark is.
+Divide the pupil's distance from the mean by the SD:
+
+> **Distance in SDs = (mark - mean) ÷ SD**
+
+A mark of 14 in Section A is (14 - 12) ÷ 1.1, about **1.8 SDs** above the
+mean: one of the strongest results in that section. The same mark of 14 in
+Section B is (14 - 12) ÷ 6.0, only about **0.3 SDs** above the mean: an
+ordinary result in that section. The same raw mark means different things in
+different groups, and only the spread can show it.
+
+Finally, remember what Topic 6.2 showed: the SD is pulled by extreme values. If
+one or two marks are far from the rest, look at them separately before deciding
+that the whole class is "varied" (NIST/SEMATECH, Section 1.3.5.6).
+
+### Is more spread good or bad?
+
+**Common misconception.** Many trainees believe that "a larger standard deviation
+is always bad". The standard deviation is a description, not a grade. Whether a
+large or small spread is welcome depends on the purpose of the data:
+
+- **When large spread is useful.** A reading test given at the start of the
+  year to form reading groups *should* spread pupils out. If everyone got
+  nearly the same score, the teacher would learn nothing about who needs which
+  group.
+- **When small spread is a warning.** If every pupil in a class scores 18, 19
+  or 20 out of 20, the SD is tiny. That may mean excellent teaching, but it may
+  also mean the test was too easy to show what the stronger pupils can do.
+- **When small spread is the goal.** In daily attendance, a small SD around a
+  high mean is good news: almost every pupil comes almost every day. A large
+  SD would mean some pupils are missing much more school than others.
+- **When large spread is simply a fact.** A multi-grade class in a one-room
+  rural school in Tharparkar will naturally have widely spread ages and
+  reading levels. A large SD there is not a failure; it is information the
+  teacher must plan for.
+
+So the right question is never "is the SD large?" but "what does this spread
+mean for this purpose, and what should I do about it?" The second figure above
+summarises these readings.
+
+## Activity: Two sections, one staff meeting
+
+Work in groups of three. About 20 minutes.
+
+Two Class 8 English sections in a Karachi school took the same test out of 50.
+
+- Section Iqbal: mean 31, SD 3
+- Section Jinnah: mean 31, SD 11
+
+1. One member plays the head teacher, one the Section Iqbal teacher and one the
+   Section Jinnah teacher.
+2. Each teacher explains to the "head teacher", in two or three sentences, what
+   the SD says about their section and what they plan to do next term.
+3. The head teacher asks each teacher one question: "Where does a pupil with 42
+   marks stand in your section?" Each teacher answers using distance in SDs.
+4. Swap roles once, then together write one sentence the head teacher could put
+   in the school report that uses both the mean and the SD fairly.
+
+## Check your understanding
+
+1. *(Understand)* Two classes have the same mean mark. Class P has an SD of 2
+   and Class Q an SD of 9. Describe in two sentences how the two classes
+   differ.
+2. *(Apply)* In a class with mean 40 and SD 5, how many SDs above or below the
+   mean are the marks 50 and 35?
+3. *(Apply)* Give one school situation in which a large SD is useful, and one in
+   which a small SD is a warning sign. Explain each in one sentence.
+
+## Summary
+
+The standard deviation must be read beside the mean. A small SD means a
+consistent group, a large SD a varied one, and that difference often matters
+more for teaching than the mean itself. Distance in SDs shows how unusual one
+value is within its own group, so the same raw mark can be strong in one class
+and ordinary in another. A larger SD is not automatically bad: whether spread
+is welcome depends on the purpose of the data.
+
+## Self-assessment checklist
+
+- [ ] I can describe what a small and a large standard deviation say about a class.
+- [ ] I can compare two groups with the same mean by using their standard deviations.
+- [ ] I can work out how many standard deviations a mark is from the mean.
+- [ ] I can judge whether a given spread is helpful or a warning, for a stated purpose.
+
+## Try this at your practicum school
+
+Ask your cooperating teacher whether two sections, or two tests of the same
+class, could be compared (without pupils' names). Find the mean and SD of each.
+Write a short note to the teacher: what the spreads suggest, and one practical
+teaching idea that follows, such as grouping, extra practice for some pupils, or
+a harder extension task for others.
+
+## Summative task
+
+A Class 9 science teacher in Sukkur gives the same 20-mark test to two sections.
+
+- Section Rose: mean 13, SD 1.5
+- Section Lily: mean 13, SD 5.5
+
+A pupil named Ayesha scored 17 in Section Rose, and a pupil named Bilal scored 17
+in Section Lily.
+
+a) Find how many SDs above the mean each of the two pupils is.
+b) In 120-160 words, write a note to the head teacher that compares the two
+   sections using the mean and the SD, explains why Ayesha's and Bilal's equal
+   marks do not mean equal standing, and recommends one teaching decision for
+   each section.
+
+**Mini-rubric**
+
+| Criterion | Levels |
+|---|---|
+| *Computation (Apply)* | 0-2: Ayesha about 2.7 SDs and Bilal about 0.7 SDs above the mean / one correct / none. |
+| *Interpretation of spread (Analyze)* | 0-3: explains that the sections share a centre but differ in consistency, and uses the SDs to explain the different standing of equal marks / partial / none. |
+| *Justified teaching decision (Evaluate)* | 0-3: recommends a decision for each section that follows from its spread (for example one pace with extension for Rose, grouped or differentiated work for Lily) and avoids calling either section "better" / partial / none. |
+
+## Further reading
+
+Illowsky, B., & Dean, S. (2023). *Introductory Statistics 2e.* OpenStax.
+https://openstax.org/books/introductory-statistics-2e/pages/2-7-measures-of-the-spread-of-the-data -
+Section 2.7, including how to describe a value as a number of standard
+deviations from the mean.
+
+NIST/SEMATECH. *e-Handbook of Statistical Methods*, Section 1.3.5.6, "Measures of
+Scale". https://www.itl.nist.gov/div898/handbook/eda/section3/eda356.htm - on how
+the standard deviation responds to values in the tails.
+
+Lane, D. M. (2023). *Online Statistics Education: A Multimedia Course of Study.*
+Rice University. https://onlinestatbook.com/2/summarizing_distributions/variability.html
