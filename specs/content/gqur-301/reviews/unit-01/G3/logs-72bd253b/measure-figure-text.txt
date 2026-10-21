@@ -1,0 +1,8 @@
+✓ static/img/figures/gqur-301/unit-01/fig-U1-1.dark.svg (780x470, widest text ends at 760.4, wordmark at 667.7)
+✓ static/img/figures/gqur-301/unit-01/fig-U1-1.svg (780x470, widest text ends at 760.4, wordmark at 667.7)
+✓ static/img/figures/gqur-301/unit-01/fig-U1-2.dark.svg (780x470, widest text ends at 760.4, wordmark at 667.7)
+✓ static/img/figures/gqur-301/unit-01/fig-U1-2.svg (780x470, widest text ends at 760.4, wordmark at 667.7)
+✓ static/img/figures/gqur-301/unit-01/fig-U1-3.dark.svg (780x470, widest text ends at 760.4, wordmark at 667.7)
+✓ static/img/figures/gqur-301/unit-01/fig-U1-3.svg (780x470, widest text ends at 760.4, wordmark at 667.7)
+✓ static/img/figures/gqur-301/unit-01/fig-U1-4.dark.svg (780x470, widest text ends at 760.4, wordmark at 667.7)
+✓ static/img/figures/gqur-301/unit-01/fig-U1-4.svg (780x470, widest text ends at 760.4, wordmark at 667.7)
