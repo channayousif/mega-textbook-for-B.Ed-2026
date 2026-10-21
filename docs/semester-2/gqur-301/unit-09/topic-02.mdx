@@ -1,0 +1,101 @@
+---
+title: "9.2 Probability rules"
+description: "Use complement, addition and multiplication rules with school events, check overlap, and distinguish independence from mutual exclusivity."
+course_code: GQUR-301
+unit_no: 9
+topic_no: 2
+topic_label: "9.2"
+clo_refs:
+  - "SLO:GQUR-301-9-2"
+blooms_summary: "Remember and understand probability concepts; apply rules; analyze assumptions and evaluate school probability claims."
+est_reading_minutes: 10
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+
+<PrintHandout />
+
+# 9.2 Probability rules
+
+## A real classroom situation
+
+At a teacher-training college in Sukkur, trainees prepare reading and science activities for a practicum class. Of 30 fictional pupils, 18 join reading, 14 join science, and 8 join both. One trainee adds 18 and 14 and reports that 32 pupils join an activity. Another multiplies 18/30 by 14/30 to find the chance of joining both. Their mentor asks them to check what each rule assumes before trusting either calculation.
+
+<Figure id="fig-U9-3" src="/img/figures/gqur-301/unit-09/fig-U9-3.svg" alt="Reading and science overlap in eight pupils; ten join reading only, six science only and six neither, so twenty-four join at least one activity." kind="diagram" caption="Original teaching schematic. Credit: textbook.com.pk." />
+
+## Explanation
+
+### Probability rules
+
+Write A for joining reading and B for joining science. Select one pupil uniformly at random from the 30. **Union**, written A ∪ B, means A or B or both. **Intersection**, written A ∩ B, means both. The **complement** of A, written Aᶜ, means every outcome in the sample space that is not in A. Illowsky and Dean (2023, Section 3.1) explain these event relationships. In probability, 'or' normally includes the overlap. If you mean exactly one activity, say so explicitly.
+
+Use a single selection procedure throughout a calculation. 'A random pupil is in reading' differs from 'a random activity session is reading'. The first denominator is pupils; the second is sessions. Combining probabilities with different unstated denominators can produce a plausible number with no clear meaning.
+
+**Worked example: account for every pupil.** Start with the 8 who join both. Reading only is 18 - 8 = 10. Science only is 14 - 8 = 6. At least one activity therefore includes 10 + 8 + 6 = 24 pupils. Neither includes 30 - 24 = 6. The four separate regions sum to 10 + 8 + 6 + 6 = 30. This check confirms that the counts form a complete, non-overlapping record of this class.
+
+**Complement rule.** P(Aᶜ) = 1 - P(A) (Lane, 2023, Chapter 5). Reading membership has probability 18/30 = 0.6, so not reading has probability 1 - 0.6 = 0.4. Check by counting: science only and neither contribute 6 + 6 = 12; 12/30 = 0.4. 'Not reading' does not mean 'science': pupils in neither activity also belong to the complement of reading.
+
+A second useful complement is neither activity. Since at least one has probability 24/30, neither has probability 1 - 24/30 = 6/30. Be careful about what you negate. The complement of 'both' includes reading only, science only and neither; it is not just neither. Write the event in words before choosing the counts. This small step prevents an apparently neat subtraction from answering the wrong question.
+
+**Addition rule.** For any two events, P(A ∪ B) = P(A) + P(B) - P(A ∩ B). The overlap is subtracted once because adding the two totals counts it twice (Illowsky & Dean, 2023, Section 3.3). For our class, the calculation is 18/30 + 14/30 - 8/30 = 24/30 = 0.8. The mistaken total 32/30 fails the probability range check. But even if an incorrect sum were below 1, you would still need to check overlap.
+
+**Mutually exclusive events** have no shared outcomes. For example, when one slip is drawn from numbers 1 to 6, event C is drawing 1 or 2 and event D is drawing 5 or 6. They cannot happen together on that draw. Their intersection has probability 0, so the addition rule becomes P(C ∪ D) = P(C) + P(D) = 2/6 + 2/6 = 4/6. Reading and science membership are not mutually exclusive because eight pupils belong to both (Illowsky & Dean, 2023, Section 3.2).
+
+**Multiplication rule.** For two events, P(A ∩ B) = P(A) × P(B given A). The phrase 'B given A' means the chance of B among outcomes where A has already occurred. If A has positive probability, this conditional probability is the overlap count divided by the A count. In our class P(B given A) = 8/18, so P(A ∩ B) = (18/30) × (8/18) = 8/30. The fraction changes its denominator because we are now looking within the reading group (Illowsky & Dean, 2023, Section 3.3).
+
+**Independent events** satisfy P(B given A) = P(B), when that conditional probability is defined. Then P(A ∩ B) = P(A) × P(B). Independence needs justification; it is not a reward for having two different event names. In this class, 8/18 is not equal to 14/30. Equivalently, 8/30 is not equal to (18/30) × (14/30). Therefore the reading and science events for this uniformly selected pupil are not independent. A calculator gives about 0.2667 for the actual overlap and 0.28 for the independent product. Use exact fractions to avoid a rounding-based judgement.
+
+**Worked example: draws with replacement.** A classroom bag contains five identical counters, two blue and three white. A trainee mixes it, draws one counter without looking, records its colour, replaces it and mixes again. Let E mean blue on the first draw and F mean blue on the second. Under this random procedure the first result does not change the bag for the second draw. Each chance is 2/5 and P(E ∩ F) = (2/5) × (2/5) = 4/25. The two blue results can both occur, so these events are not mutually exclusive.
+
+**Worked example: draws without replacement.** Keep the same bag but set the first counter aside. After a blue first draw, only one blue counter remains among four counters. Now P(F given E) = 1/4, so P(E ∩ F) = (2/5) × (1/4) = 1/10. The first blue changes the second chance. This is dependence. Replacing the counter or removing it is a meaningful part of the experiment, not an optional detail added after calculation (Illowsky & Dean, 2023, Section 3.2).
+
+**Misconception: mutually exclusive means independent.** They ask different questions. Mutual exclusivity asks, 'Can both happen in this experiment?' Independence asks, 'Does knowing one happened change the chance of the other?' For two mutually exclusive events with positive probabilities, knowing A happened makes B impossible. Its chance changes from a positive value to zero, so the events are dependent. The positive-probability condition matters: the simple contradiction does not apply to an impossible event. Do not memorise a slogan that ignores this boundary.
+
+Consider a single die used in a classroom game. An even result and an odd result are mutually exclusive and each has positive probability. Knowing it is even rules out odd. In contrast, first toss heads and second toss heads for independent fair coin tosses can both happen. They are independent but not mutually exclusive. Match each claim to the complete experiment, including whether you are discussing one trial or separate trials.
+
+<Figure id="fig-U9-4" src="/img/figures/gqur-301/unit-09/fig-U9-4.svg" alt="A rule table pairs complement, overlap-corrected addition and conditional multiplication with their conditions and classroom examples." kind="table" caption="Original teaching schematic. Credit: textbook.com.pk." />
+
+**A method for choosing a rule.** First name the selected object and the event. A 'not' question suggests a complement. An 'at least one' or inclusive 'or' question suggests a union and an overlap check. A 'both' question suggests an intersection and a conditional or independent multiplication calculation. Finally check the result against the underlying counts and the 0-to-1 range. Keywords help you start, but they cannot establish independence or remove an overlap.
+
+For a sports-day planning problem, suppose a fictional estimate gives P(rain) = 0.3 and P(late transport) = 0.2. You cannot conclude that both have probability 0.06 unless you justify independence. Rain could affect travel. Ask for P(late transport given rain) or joint records before multiplying. NIST/SEMATECH (Section 1.3.6) stresses checking whether a model's assumptions suit the data. Here that means checking the school situation before using the shorter multiplication rule. Do not present invented estimates as a weather forecast.
+
+## Activity: Defend the rule
+
+**Work in groups of three for about 25 minutes.** Draw the four regions of the 30-pupil activity example on paper. Assign roles: event reader, calculator and assumption checker. Without reopening the explanation, calculate the chances of science, not science, either activity, neither activity and both. Rotate roles after two questions. Each calculation must include a sentence explaining its denominator and why its rule applies.
+
+Next compare the five-counter draws with and without replacement. One trainee argues that different draws are automatically independent. The other two must use the changing bag contents to challenge or defend the claim. End with a joint report that distinguishes an arithmetic error from an unsupported assumption. Ask another group to audit one of your conclusions using counts rather than your formula.
+
+## Check your understanding
+
+1. State the complement rule and explain what 'not A' includes. *(Remember)*
+2. Explain why an overlap must be subtracted in an inclusive 'or' calculation. *(Understand)*
+3. In a group of 40 pupils, 20 join reading, 16 join science and 6 join both. Find the probability that a uniformly selected pupil joins at least one. *(Apply)*
+4. A bag has three red and two white counters. Two are drawn without replacement. Calculate the chance of two red counters and state the conditional denominator. *(Apply)*
+
+## Summary
+
+Complements describe everything outside an event. Addition counts a union while correcting for overlap; multiplication uses the second chance under the first event's condition. Mutual exclusivity concerns shared outcomes, whereas independence concerns unchanged chances. The procedure and evidence must justify every shortcut.
+
+## Self-assessment checklist
+
+- [ ] I can distinguish union, intersection and complement in a school example.
+- [ ] I can calculate an inclusive 'or' probability without double-counting.
+- [ ] I can choose between conditional multiplication and its independent special case.
+- [ ] I can explain why positive-probability mutually exclusive events are dependent.
+
+## Try this at your practicum school
+
+Prepare a fictional class table with two overlapping clubs. Ask the cooperating teacher to check whether the totals could describe a real class and how the results could be explained to pupils. Avoid collecting named pupil data. Write one 'not', one 'or' and one 'both' question, explaining the selection procedure and suitable rule for each. If no visit is possible, exchange the table with a college peer and revise it after their audit.
+
+## Summative task
+
+For a fictional class of 50 pupils, 30 attend a reading club, 25 attend a science club and 15 attend both. A colleague says, 'These events overlap, so they must be dependent; the chance of either is 55/50.' Write a 200–300-word evaluation. Use the actual overlap to test independence, repair the union calculation, and explain why overlap alone does not settle dependence. Specify that one pupil is selected uniformly at random. *(Evaluate)*
+
+**Mini-rubric (10 marks):** complete event and selection definitions (2); union and intersection calculations (2); independence tested against the actual overlap with exact numbers (3, Analyze); justified evaluation of both claims and clear distinction from exclusivity (3, Evaluate).
+
+## Further reading
+
+- Illowsky, B., & Dean, S. (2023). *Introductory Statistics 2e*, [Section 3.2](https://openstax.org/books/introductory-statistics-2e/pages/3-2-independent-and-mutually-exclusive-events) and [Section 3.3](https://openstax.org/books/introductory-statistics-2e/pages/3-3-two-basic-rules-of-probability). Independence, exclusivity and event rules.
+- Lane, D. M. (2023). *Online Statistics Education: A Multimedia Course of Study*, Chapter 5, [Basic concepts](https://onlinestatbook.com/2/probability/basic.html). Complements and independent trials.
+- NIST/SEMATECH. (n.d.). *e-Handbook of Statistical Methods*, [Section 1.3.6](https://www.itl.nist.gov/div898/handbook/eda/section3/eda36.htm). Why distributional assumptions need checking; advanced distribution topics continue in later units.
