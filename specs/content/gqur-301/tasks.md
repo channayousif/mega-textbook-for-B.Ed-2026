@@ -52,7 +52,7 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 6 | G1 unit-spec | ▢ | | guide Chapter 6; intake re-evaluation advised (D-2026-0070) |
 | Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-06/G2/20261021T054446544Z-gates.json |
 | Unit 6 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation: specs/content/gqur-301/reviews/unit-06/G3/01a16060-0dfb-7512-a36b-afc1aeed712a.json; precision and real-data assessment repairs requested; G1, provenance and narrow/A4 render evidence unresolved. G3 remains open and unsigned. |
-| Unit 6 | G4 ur-translation | ▢ | | full Urdu mirror required |
+| Unit 6 | G4 ur-translation | ▢ | | Blocked by unresolved English precision and assessment defects under translate-unit prerequisite; see reviews/unit-06/translation-validation/handoff.md. No translation or completion claim; translation_status remains draft. |
 | Unit 6 | G5 ur-review | ▢ | | |
 | Unit 6 | G6 assets | ▢ | | |
 | Unit 6 | G7 publish | ▢ | | |
@@ -93,7 +93,7 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 11 | G7 publish | ▢ | | |
 | Unit 12 | G1 unit-spec | ▢ | | guide Chapter 12; intake re-evaluation advised (D-2026-0070) |
 | Unit 12 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-12/G2/20261021T065608298Z-gates.json |
-| Unit 12 | G3 en-review | ▢ | | |
+| Unit 12 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only: specs/content/gqur-301/reviews/unit-12/G3/crew-20261022.json; F1-F6 need separate author repair; provenance, G1/source bundle and rendered accessibility remain unresolved. G3 stays open, unsigned (ADR-0019). |
 | Unit 12 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 12 | G5 ur-review | ▢ | | |
 | Unit 12 | G6 assets | ▢ | | |
