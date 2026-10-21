@@ -1535,6 +1535,31 @@
     "definition_ur": "سب سے زیادہ دہرائی جانے والی قیمت؛ واحد اوسط جو اقسام کے لیے بھی چلتی ہے، جیسے سب سے عام سفر کا طریقہ۔"
   },
   {
+    "term": "Outcome",
+    "definition_en": "One possible result of a choice or an event, such as one complete uniform made from a shirt and trousers.",
+    "definition_ur": "کسی انتخاب یا واقعے کا ایک ممکنہ نتیجہ، جیسے قمیص اور پتلون سے بنی ایک مکمل وردی۔"
+  },
+  {
+    "term": "Counting principle",
+    "definition_en": "A rule for finding how many outcomes are possible without listing them all; the two basic ones are the addition rule and the multiplicative rule.",
+    "definition_ur": "تمام نتائج کی فہرست بنائے بغیر یہ معلوم کرنے کا اصول کہ کتنے نتائج ممکن ہیں؛ دو بنیادی اصول جمع کا اصول اور ضرب کا اصول ہیں۔"
+  },
+  {
+    "term": "Addition rule of counting",
+    "definition_en": "If one option is chosen from either of two groups that share no option, and the groups have m and n options, there are m + n possible choices.",
+    "definition_ur": "اگر دو ایسے گروہوں میں سے کسی ایک سے ایک انتخاب کیا جائے جن میں کوئی انتخاب مشترک نہ ہو، اور ان میں m اور n انتخاب ہوں، تو کل m + n ممکنہ انتخاب ہیں۔"
+  },
+  {
+    "term": "Multiplicative rule",
+    "definition_en": "If a first choice can be made in m ways and, for each of them, a second choice in n ways, the two choices together can be made in m x n ways.",
+    "definition_ur": "اگر پہلا انتخاب m طریقوں سے اور ان میں سے ہر ایک کے بعد دوسرا انتخاب n طریقوں سے ہو سکے، تو دونوں انتخاب مل کر m x n طریقوں سے ہو سکتے ہیں۔"
+  },
+  {
+    "term": "Tree diagram",
+    "definition_en": "A diagram that shows a choice made in stages as branches; each path from the start to an end point is one outcome.",
+    "definition_ur": "ایک خاکہ جو مرحلہ وار انتخاب کو شاخوں کی صورت میں دکھاتا ہے؛ آغاز سے آخری نقطے تک ہر راستہ ایک نتیجہ ہے۔"
+  },
+  {
     "term": "Profit",
     "definition_en": "Takings minus total costs; its percentage is always computed against costs, which is what lets stalls of different sizes compare themselves.",
     "definition_ur": "کل آمدنی منہا کل لاگت؛ اس کا فیصد ہمیشہ لاگت کے حساب سے لگایا جاتا ہے، اسی سے مختلف سائز کے کاروبار آپس میں موازنہ کر سکتے ہیں۔"
