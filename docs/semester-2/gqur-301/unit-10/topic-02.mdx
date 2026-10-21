@@ -1,0 +1,236 @@
+---
+title: "Topic 10.2 - Probability distributions"
+description: "Probability distributions of discrete random variables: building one from records, the two checks every valid distribution passes, the expected value, and continuous curves."
+course_code: GQUR-301
+unit_no: 10
+topic_no: 2
+topic_label: "10.2"
+clo_refs:
+  - "SLO:GQUR-301-10-2"
+  - "SLO:GQUR-301-10-3"
+blooms_summary: "Remember the two conditions of a valid probability distribution; understand how a distribution describes a random variable; apply them to build a distribution and compute an expected value; analyze whether a table is a valid distribution and what its expected value does and does not tell a teacher."
+est_reading_minutes: 10
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+
+<PrintHandout />
+
+## A real classroom situation
+
+A head teacher in Larkana must decide how many substitute worksheets to print
+for a class of 40 each day, one for every absent pupil. The class teacher has
+counted the absentees on the last 50 school days: no one was absent on 5 days,
+one pupil on 12 days, two on 15 days, three on 10 days, four on 6 days and five
+on 2 days. The head teacher asks two questions. "How likely is each number of
+absentees?" and "On average, how many worksheets will we need per day?" A
+probability distribution answers the first; its expected value answers the
+second.
+
+<Figure id="fig-U10-3" src="/img/figures/gqur-301/unit-10/fig-U10-3.svg" alt="Two panels. On the left, separate bars show the probability of 0 to 5 absentees, tallest at 2 absentees with probability 0.30. On the right, a smooth curve shows pupils' heights from 120 to 160 cm, where the probability of a height between 140 and 145 cm is the shaded area under the curve and the whole area equals 1." />
+
+## Explanation
+
+### What a probability distribution is
+
+The **probability distribution** of a discrete random variable
+lists every value the variable can take together with the probability of each
+value (Illowsky & Dean, 2023, Section 4.1). It can be written as a table, drawn
+as a bar chart with one bar per value, or given as a formula. We write
+*P*(*X* = *x*) for "the probability that *X* takes the value *x*".
+
+**Worked example: equally likely outcomes.** Toss two coins and let *X* be the
+number of heads. From Topic 10.1, the four equally likely outcomes give *X* = 2
+once, *X* = 1 twice and *X* = 0 once. So:
+
+| *x* | 0 | 1 | 2 |
+|---|---|---|---|
+| *P*(*X* = *x*) | 1/4 = 0.25 | 2/4 = 0.50 | 1/4 = 0.25 |
+
+### Building a distribution from records
+
+All school figures in this unit are invented teaching data, not findings about
+a named school's attendance. If we choose one of the 50 recorded days at
+random, relative frequencies give its exact distribution. Using that table
+for a future day is an estimate: we assume conditions remain similar. A
+holiday, illness outbreak or change in class size may make it unsuitable.
+The table gives zero observed frequency for 6 to 40 absentees, not proof that
+these counts are impossible on future days.
+
+When outcomes are not equally likely, we use records, as Unit 9 did with
+attendance registers. Divide each frequency by the total.
+
+**Worked example: absentees in Larkana.** Let *X* be the number of pupils
+absent on a school day. Over 50 days:
+
+| *x* (absentees) | 0 | 1 | 2 | 3 | 4 | 5 | Total |
+|---|---|---|---|---|---|---|---|
+| Days | 5 | 12 | 15 | 10 | 6 | 2 | 50 |
+| *P*(*X* = *x*) | 5/50 = 0.10 | 0.24 | 0.30 | 0.20 | 0.12 | 0.04 | 1.00 |
+
+The distribution shows at a glance that 2 absentees is the most likely
+number, and that 4 or more absentees happen on 0.12 + 0.04 = 0.16 of days.
+
+**Common misconception.** Many trainees think "a random variable is always
+evenly distributed", so that every value is equally likely. That is true for
+the score on one fair die, but not for absentees: 2 absentees (0.30) is
+seven and a half times as likely as 5 absentees (0.04). Even two fair coins
+give 1 head twice as often as 0 heads. Each random variable has its own
+distribution, and finding its shape is the point of the exercise.
+
+### Two checks every valid distribution passes
+
+A table is a valid probability distribution only if it passes both checks
+(Illowsky & Dean, 2023, Section 4.1, NIST/SEMATECH, Section 1.3.6.1):
+
+1. **Each probability lies between 0 and 1**, inclusive. No probability can be
+   negative or greater than 1.
+2. **The probabilities add up to exactly 1.** The list covers every possible
+   value, so one of them must happen.
+
+**Worked example.** A trainee proposes this distribution for *Y*, the number of
+correct answers out of 3:
+
+| *y* | 0 | 1 | 2 | 3 |
+|---|---|---|---|---|
+| *P*(*Y* = *y*) | 0.1 | 0.3 | 0.4 | 0.3 |
+
+Check 1: every value lies between 0 and 1, so it passes. Check 2: 0.1 + 0.3 +
+0.4 + 0.3 = 1.1, so it fails. The table is **not** a valid distribution;
+something has been counted twice or a probability is too large. Always run
+*both* checks: a table with probabilities 0.5, 0.6 and -0.1 adds to 1 but fails
+check 1.
+
+<Figure id="fig-U10-4" src="/img/figures/gqur-301/unit-10/fig-U10-4.svg" alt="A table of the absentee distribution over 50 days, with probabilities 0.10, 0.24, 0.30, 0.20, 0.12 and 0.04 for 0 to 5 absentees. Both checks are ticked: every probability lies between 0 and 1 and they add to 1. A last row multiplies each value by its probability, giving an expected value of 2.12 absentees per day." />
+
+### The expected value
+
+The **expected value** of a discrete random variable, written
+*E*(*X*), is the mean of its distribution. Multiply each value by its
+probability and add the results (Illowsky & Dean, 2023, Section 4.2):
+
+*E*(*X*) = sum of *x* × *P*(*X* = *x*)
+
+**Worked example.** For the Larkana absentees:
+
+*E*(*X*) = 0 × 0.10 + 1 × 0.24 + 2 × 0.30 + 3 × 0.20 + 4 × 0.12 + 5 × 0.04
+= 0 + 0.24 + 0.60 + 0.60 + 0.48 + 0.20 = **2.12**
+
+This is a weighted mean, like the weighted mean of Unit 4: each value is
+weighted by how often it happens. It means that over many days the school
+should expect *about* 2.12 absentees per day on average, so about 212
+worksheets for every 100 days.
+
+**Common misconception.** Many trainees think "the expected value is the value
+you will most likely see". It is not. No single day can have 2.12 absentees,
+and the most likely value is 2 (probability 0.30), which is the mode of the
+distribution. The expected value is a *long-run average* over many repetitions
+(Illowsky & Dean, 2023, Section 4.2). For two coins the expected number of
+heads is 0 × 0.25 + 1 × 0.50 + 2 × 0.25 = 1, which here happens to be the most
+likely value too, because this particular distribution is symmetric with its highest probability
+at the centre. Symmetry alone does not guarantee that a mean is the most
+likely value.
+
+### Distributions of continuous random variables
+
+A continuous random variable, such as a pupil's height, cannot be listed value
+by value. Its distribution can be represented by a density curve over the possible
+values; the curve need not be smooth or bell-shaped. The probability of a value falling in an interval is the *area* under
+the curve over that interval, and the whole area under the curve equals 1, the
+continuous form of check 2 (NIST/SEMATECH, Section 1.3.6.1). The probability of
+one exact value, such as exactly 140.000 cm, is zero; only intervals carry
+probability. The height of this curve is a density, not a probability. It may exceed 1;
+areas, which are probabilities, cannot exceed 1.
+
+## Activity: Two-coin experiment
+
+Work in groups of three. About 20 minutes.
+
+1. One member tosses two coins 20 times. Another records the number of heads
+   (0, 1 or 2) each time. The third checks the tally.
+2. Turn your tally into a distribution: divide each count by 20. Run both checks
+   on your table.
+3. Compute the expected number of heads from your own table.
+4. Compare your table and expected value with the theoretical ones (0.25, 0.50,
+   0.25, expected value 1). Pool the results of all groups in the class and
+   compare again. Discuss whether the pooled table is closer. A larger set often gives a
+   closer estimate, but it is not guaranteed on any one trial.
+
+## Check your understanding
+
+1. *(Remember)* State the two conditions a table must meet to be a valid
+   probability distribution.
+2. *(Understand)* Explain why the expected number of absentees can be 2.12 even
+   though 2.12 pupils can never be absent.
+3. *(Apply)* A spinner gives 1 point with probability 0.5, 2 points with
+   probability 0.3 and 5 points with probability 0.2. Compute the expected
+   number of points.
+4. *(Apply)* Over 20 days a canteen sold 0 extra samosas on 4 days, 1 on 10
+   days and 2 on 6 days. Build the probability distribution and check it.
+
+## Summary
+
+A probability distribution lists every value of a random variable with its
+probability. It can come from equally likely outcomes or from records. A table
+is valid only if every probability lies between 0 and 1 and the probabilities
+add up to 1. The expected value multiplies each value by its probability and
+adds: it is the long-run average, not the most likely value. A continuous
+random variable has a smooth curve instead, and probability is area under it.
+
+## Self-assessment checklist
+
+- [ ] I can build the probability distribution of a discrete random variable from a frequency table.
+- [ ] I can check whether a table is a valid probability distribution using both conditions.
+- [ ] I can compute an expected value and explain why it is not the same as the most likely value.
+
+## Try this at your practicum school
+
+With your cooperating teacher's permission, count the number of pupils absent
+in one class on each of the last 20 school days, using the register. Build the
+probability distribution, run both checks, and compute the expected number of
+absentees. Share one sentence with the teacher about what the expected value
+means for planning.
+
+## Summative task
+
+A school librarian in Nawabshah gives two tables for *X*, the number of books
+a pupil borrows in a week.
+
+| *x* | 0 | 1 | 2 | 3 |
+|---|---|---|---|---|
+| Table A: *P*(*X* = *x*) | 0.35 | 0.40 | 0.15 | 0.10 |
+| Table B: *P*(*X* = *x*) | 0.20 | 0.50 | 0.40 | -0.10 |
+
+a) Run both checks on each table and decide which is a valid probability
+   distribution.
+b) For the valid table, compute the expected value.
+c) In 80-120 words, analyze what the librarian can and cannot conclude from the
+   expected value when ordering new books for 300 pupils, and explain why
+   checking only that the probabilities add to 1 would have missed the problem
+   in the other table.
+
+**Mini-rubric**
+
+| Criterion | Levels |
+|---|---|
+| *Checks applied (Apply)* | 0-3: both checks run on both tables with the right verdicts / one table right / checks named but misapplied. |
+| *Expected value (Apply)* | 0-2: correct value with working / method right, arithmetic slip / incorrect. |
+| *Interpretation and validity (Analyze)* | 0-3: treats the expected value as a long-run average for planning, notes it is not a value any pupil borrows, and explains why one check alone is not enough / partly / not at all. |
+
+## Further reading
+
+Illowsky, B., & Dean, S. (2023). *Introductory Statistics 2e.* OpenStax.
+https://openstax.org/books/introductory-statistics-2e/pages/4-1-probability-distribution-function-pdf-for-a-discrete-random-variable -
+Section 4.1, the two characteristics of a discrete probability distribution.
+
+Illowsky, B., & Dean, S. (2023). *Introductory Statistics 2e.* OpenStax.
+https://openstax.org/books/introductory-statistics-2e/pages/4-2-mean-or-expected-value-and-standard-deviation -
+Section 4.2, the expected value as a long-run average.
+
+NIST/SEMATECH. *e-Handbook of Statistical Methods*, Section 1.3.6.1, "What is a
+Probability Distribution". https://www.itl.nist.gov/div898/handbook/eda/section3/eda361.htm
+
+Lane, D. M., & Ziemer, H. (n.d.). *Distributions.* Online Statistics Education.
+Rice University. https://onlinestatbook.com/2/introduction/distributions.html -
+"Distributions", including the continuous case.
