@@ -29,9 +29,9 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 2 | G6 assets | ▢ | | |
 | Unit 2 | G7 publish | ▢ | | |
 | Unit 3 | G1 unit-spec | ▢ | | guide Chapter 3; intake re-evaluation advised (D-2026-0070) |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-03/G2/20261020T205927960Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-03/G2/20261021T071753539Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | advisory run 001 (disposition: pass, advisory finding F1) at specs/content/gqur-301/reviews/unit-03/G3/0537b555-5784-429b-aaaa-e51e0af1897b.json; agent reviews advisory under ADR-0019 |
-| Unit 3 | G4 ur-translation | ▢ | | full Urdu mirror required |
+| Unit 3 | G4 ur-translation | ▢ | | Draft mirror and four Urdu SVG pairs prepared from 47e14253; translation_status remains draft. No G4 completion claim or new row under translate-unit Step 7. Handoff: translations/unit-03/handoff.md |
 | Unit 3 | G5 ur-review | ▢ | | |
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
@@ -64,7 +64,7 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 7 | G6 assets | ▢ | | |
 | Unit 7 | G7 publish | ▢ | | |
 | Unit 8 | G1 unit-spec | ▢ | | guide Chapter 8; intake re-evaluation advised (D-2026-0070) |
-| Unit 8 | G2 en-draft | ▢ | | |
+| Unit 8 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-08/G2/20261021T061205981Z-gates.json |
 | Unit 8 | G3 en-review | ▢ | | |
 | Unit 8 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 8 | G5 ur-review | ▢ | | |
@@ -92,7 +92,7 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 11 | G6 assets | ▢ | | |
 | Unit 11 | G7 publish | ▢ | | |
 | Unit 12 | G1 unit-spec | ▢ | | guide Chapter 12; intake re-evaluation advised (D-2026-0070) |
-| Unit 12 | G2 en-draft | ▢ | | |
+| Unit 12 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-12/G2/20261021T065608298Z-gates.json |
 | Unit 12 | G3 en-review | ▢ | | |
 | Unit 12 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 12 | G5 ur-review | ▢ | | |

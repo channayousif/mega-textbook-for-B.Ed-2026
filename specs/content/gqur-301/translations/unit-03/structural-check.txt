@@ -1,0 +1,6 @@
+PASS index.mdx: metadata, headings, component counts/keys, figure wiring/alt and numbered items
+PASS topic-01.mdx: metadata, headings, component counts/keys, figure wiring/alt and numbered items
+PASS topic-02.mdx: metadata, headings, component counts/keys, figure wiring/alt and numbered items
+PASS unit-assessment.mdx: metadata, headings, component counts/keys, figure wiring/alt and numbered items
+PASS unit-teacher-notes.mdx: metadata, headings, component counts/keys, figure wiring/alt and numbered items
+PASS 10/10/5 bank and MCQ correspondence: B C B C B C C B B C

@@ -1,0 +1,187 @@
+---
+title: "Topic 8.2 - Combinations"
+description: "Combinations: selections in which order does not matter, the formula C(n, r) = n! / (r! (n - r)!), its link to permutations, and why choosing r is the same as leaving out n - r."
+course_code: GQUR-301
+unit_no: 8
+topic_no: 2
+topic_label: "8.2"
+clo_refs:
+  - "SLO:GQUR-301-8-2"
+blooms_summary: "Remember the combination formula; understand why dividing a permutation count by r! removes repeated orders; apply C(n, r) to committees, teams and exam choices; analyze whether a described selection has roles that make order matter."
+est_reading_minutes: 9
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+import Glossary from '@site/src/components/Glossary';
+
+<PrintHandout />
+
+## A real classroom situation
+
+The head teacher of a girls' secondary school in Nawabshah must send 3 of her
+8 teachers to a two-day training workshop in Karachi. A trainee teacher in the
+staff room wants to know how many different groups could go. Using Topic 8.1,
+she writes 8 × 7 × 6 = 336. A senior teacher shakes her head: "It does not
+matter who is chosen first. Ms Ayesha, Ms Farah and Ms Saima are the same group
+whichever order you name them in." The trainee's 336 counts every group more
+than once. How many times, and what is the real answer?
+
+<Figure id="fig-U8-3" kind="diagram" src="/img/figures/gqur-301/unit-08/fig-U8-3.svg" alt="Two panels comparing arrangements and a committee. On the left, the same three pupils make six ordered arrangements. On the right, all six arrows point to one committee containing the same three pupils, showing that six permutations collapse into one combination." width={780} height={470} />
+
+This topic shows you how to count selections like this, where only the group
+matters and not the order.
+
+## Explanation
+
+### Selections: when order does not matter
+
+A <Glossary term="Combination" /> is a selection of items in which order does
+not matter. Only *which* items are chosen counts, not the order in which they
+are named. A workshop group, a cricket team picked from a squad, or the three
+questions a pupil attempts in an exam are all combinations. Lane (2023,
+Chapter 5) makes the contrast with permutations directly: in combinations,
+order does not count.
+
+**Common misconception.** Trainees often treat any committee as a
+permutation, because the members are chosen "one after another". The order of
+choosing does not decide the matter; the *result* does. If the three teachers
+in the workshop group all do the same job, then the group of Ayesha, Farah and Saima is
+one result however it was reached, so it is a combination. If instead the group had
+a leader, a note-taker and a presenter, swapping two people would change the
+result, and it would be a permutation. Ask: "If I swap two chosen people, is it
+a different outcome?" Yes means permutation; no means combination.
+
+### From permutations to combinations
+
+**Worked example 1.** Count the workshop groups in two steps.
+
+1. Count ordered choices as if order mattered: P(8, 3) = 8 × 7 × 6 = 336.
+2. Each group of 3 teachers appears in that count once for every order of its
+   members, and 3 people can be ordered in 3! = 6 ways (the first figure above).
+   So divide: 336 ÷ 6 = **56** different groups.
+
+The same reasoning gives the general rule. The number of combinations of n
+distinct items taken r at a time is written **C(n, r)** (also ⁿCᵣ or "n choose
+r"):
+
+**C(n, r) = P(n, r) ÷ r! = n! ÷ (r! × (n - r)!)**
+
+The extra r! in the bottom removes the r! orders of each chosen group
+(Abramson, 2021). Check: C(8, 3) = 40,320 ÷ (6 × 120) = 40,320 ÷ 720 = 56.
+
+**Worked example 2.** Three pupils, Ali, Sana and Bilal, volunteer and the
+teacher needs two of them to carry the class register to the office. The
+possible pairs are Ali and Sana, Ali and Bilal, and Sana and Bilal:
+C(3, 2) = 3.
+If instead one carries the register and the other carries the attendance
+sheet, the jobs differ and P(3, 2) = 6. Listing a small case like this is the
+best check that you have picked the right formula.
+
+<Glossary term="Selection" /> problems from school life are everywhere:
+
+- Choosing 11 players for a cricket team from a squad of 14:
+  C(14, 11) = 364.
+- A board examination paper that says "attempt any 5 questions out of 8":
+  C(8, 5) = 56 different sets of questions.
+- Ten teachers at a staff meeting each shake hands once with every other
+  teacher: C(10, 2) = 45 handshakes.
+
+<Figure id="fig-U8-4" kind="table" src="/img/figures/gqur-301/unit-08/fig-U8-4.svg" alt="A table of the combination formula C(n, r) = n! divided by r! times (n - r)! with five school examples: a workshop group of 3 from 8 teachers gives 56, two register carriers from 3 volunteers give 3, a cricket eleven from 14 gives 364, any 5 of 8 exam questions gives 56, and handshakes among 10 teachers give 45." width={780} height={470} />
+
+### Choosing r is the same as leaving out n - r
+
+Every time you choose 11 players from 14, you also decide which 3 are left
+out. So C(14, 11) = C(14, 3) = (14 × 13 × 12) ÷ (3 × 2 × 1) = 364, and the
+second form is far quicker to work out. In general **C(n, r) = C(n, n - r)**.
+In the examination example, choosing which 5 questions to attempt is the same
+as choosing which 3 to skip: C(8, 5) = C(8, 3) = 56. Two special cases follow:
+C(n, n) = 1 (take everything) and C(n, 0) = 1 (take nothing), which again
+relies on 0! = 1.
+
+A useful check follows from the formula. For the same n and r, a combination
+count is never larger than the permutation count, because each group is
+counted once instead of r! times. If your combination answer is larger, a
+step has gone wrong.
+
+## Activity: Committee or line-up?
+
+Work in pairs. About 15 minutes.
+
+1. Each partner writes four short school selection situations on separate slips
+   of paper. Make two of them situations where order matters (posts with
+   different jobs, positions in a race) and two where it does not (a group, a
+   team, a set of books).
+2. Swap slips. For each slip, your partner decides "permutation" or
+   "combination", gives the swap test reason, and computes the count.
+3. Discuss any slip where you disagreed. Rewrite its wording so that the
+   answer is no longer in doubt.
+
+## Check your understanding
+
+1. *(Remember)* Write the formula for C(n, r) and state what n and r stand for.
+2. *(Understand)* Explain why C(5, 2) is smaller than P(5, 2), and by what
+   factor.
+3. *(Apply)* A library committee of 4 teachers is to be chosen from 9 teachers,
+   with no special posts. How many different committees are possible? Show your
+   working, and use C(n, r) = C(n, n - r) if it helps.
+
+## Summary
+
+A combination is a selection in which order does not matter: only the group
+counts. Because each group of r items can be ordered in r! ways,
+C(n, r) = P(n, r) ÷ r! = n! ÷ (r! × (n - r)!). Choosing r items is the same as
+leaving out n - r, so C(n, r) = C(n, n - r). The swap test decides between the
+two methods: if swapping two chosen items changes the outcome, count
+permutations; if not, count combinations.
+
+## Self-assessment checklist
+
+- [ ] I can use the swap test to decide whether order matters in a selection.
+- [ ] I can compute C(n, r) and explain why it divides the permutation count by r!.
+- [ ] I can use C(n, r) = C(n, n - r) to shorten a calculation.
+
+## Try this at your practicum school
+
+Ask your cooperating teacher how pupils are chosen for a school activity, such
+as a quiz team, a cleanliness committee or a group for a science fair. Count
+how many different groups are possible with C(n, r). Then check whether the
+roles inside the group make order matter, and if they do, recount with
+P(n, r). Share both numbers with the teacher and explain the difference.
+
+## Summative task
+
+A school in Thatta will send 4 pupils from a Class 8 debating club of 10 to an
+inter-school contest.
+
+a) Compute the number of ways to choose the 4 pupils if they form one team with
+   no special roles.
+b) Compute the number of ways if the 4 pupils will speak first, second, third
+   and fourth.
+c) In 80-120 words, analyze the link between your two answers and explain to a
+   parent who thinks the second answer "must be a mistake" why it is so much
+   larger.
+
+**Mini-rubric**
+
+| Criterion | Levels |
+|---|---|
+| *Computation (Apply)* | 0-3: C(10, 4) = 210 and P(10, 4) = 5,040 both correct / one correct / attempted / none. |
+| *Analysis of the link (Analyze)* | 0-3: shows that 5,040 = 210 × 4! because each team can be ordered in 24 ways, and uses the swap test to explain when order matters / partial / vague / none. |
+| *Explanation for a parent* | 0-2: clear, jargon-light and accurate / partly clear / unclear. |
+
+## Further reading
+
+Lane, D. M. (2023). *Online Statistics Education: A Multimedia Course of Study.*
+Rice University. https://onlinestatbook.com/2/probability/permutations.html -
+Chapter 5, "Permutations and Combinations", which contrasts combinations, where
+order does not count, with permutations.
+
+Abramson, J. (2021). *Precalculus 2e.* OpenStax, Rice University.
+https://openstax.org/books/precalculus-2e/pages/11-5-counting-principles -
+Section 11.5, which derives C(n, r) by dividing P(n, r) by r! and shows that
+choosing r objects is the same as not choosing n - r.
+
+Chaudhry, S. M., & Kamal, S. (2008). *Introduction to Statistical Theory*
+(Parts I and II, 8th ed.). Ilmi Kitab Khana, Lahore. Print textbook cited at
+bibliographic level only.
