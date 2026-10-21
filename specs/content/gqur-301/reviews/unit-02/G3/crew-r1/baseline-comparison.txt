@@ -1,0 +1,5 @@
+Initial checkout HEAD and origin/main: 2186dd161e7665c93e140525fd949a6b07e00c88.
+Initial check:content run preceded all tracked modifications; new files were review artifacts only.
+Final rerun: 12/13 gates pass; check:content-status fails on absent ignored static/content-status.json.
+Compared complete failure sections and exit-code lines: identical.
+New gate findings versus origin/main baseline: zero.

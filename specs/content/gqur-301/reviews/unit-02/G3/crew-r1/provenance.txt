@@ -1,0 +1,6 @@
+Reviewed commit and origin/main: 2186dd161e7665c93e140525fd949a6b07e00c88
+2186dd161e7665c93e140525fd949a6b07e00c88
+Actual reviewer session: 01a15ce3-0ba2-75d2-aff3-2592f4a5fb48
+Author run identity: unavailable; no parent-prepared G3 manifest supplied.
+Prepared manifest verified against current implementation: 96 inputs, zero differences.
+No input bytes edited. No render executed due to explicit crew restrictions.
