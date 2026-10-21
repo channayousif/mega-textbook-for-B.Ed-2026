@@ -45,7 +45,7 @@ The following unbanked terms are proposals for the curriculum owner and independ
 
 ## Validation and limits
 
-- Full `npm run check:content` passes all 13 gates in final draft state. The first run's only finding was missing generated `static/content-status.json`, repaired with `npm run build:content-status`; no gate code or tracked status artifact was changed.
+- Historical pre-commit run: full `npm run check:content` passed all 13 gates in draft state before the translation records were tracked. The first run's only finding was missing generated `static/content-status.json`, repaired with `npm run build:content-status`; no gate code or tracked status artifact was changed.
 - Temporary `reviewed` parity probe passed `validate:content`, `check:figures`, and terminology conformance. Its only findings were G4 and G5 not done, expected because neither has been certified. Both indexes were restored byte-for-byte to draft afterwards. See `check-content-parity.txt`.
 - Direct structural comparison passed for file sets, invariant front matter, heading-level vectors, component counts, glossary keys, figure IDs/dimensions, SVG-description/page-alt equality, and numbered items. Assessment sections preserve 10 MCQ, 10 RRQ and 5 ERQ items. MCQ solutions and key correspond to B/C/B/C/B/C/C/B/B/C with Urdu option letters ب/ج/ب/ج/ب/ج/ج/ب/ب/ج. Marks, rubric bands and word limits are preserved.
 - Four Urdu SVGs were optimised to 3.5-6.4 KB. `figures:variants:check` passed. Local Sharp previews were inspected with the installed Noto Nastaliq Urdu font. Sharp does not resolve CSS variables here, so preview-only buffers substituted the existing palette values before rasterising; committed SVGs retain their token CSS.
@@ -56,3 +56,11 @@ The following unbanked terms are proposals for the curriculum owner and independ
 ## Next owners
 
 The curriculum owner settles unbanked terminology and the glossary-label difference. A separate G3 reviewer settles the English baseline; a separate G5 reviewer compares the complete passages and assessment demand after that dependency is accepted, and inspects actual narrow-width and A4 Urdu rendering. No Paperclip ticket was supplied.
+
+## Resume validation, 2026-10-21
+
+- Continued commit `ecaf019e`; no translation restart or English prose edits. Direct comparison reconfirmed all five file names, invariant metadata, heading vectors, component counts, glossary keys and all seven bank entries. `figures:variants:check` passed for 886 figures.
+- `origin/main` at `f3cd24e0` passed all 13 content gates in an isolated worktree with its content-status artifact generated. The branch initially failed only Unit 3 G2 freshness. The exact manifest difference was four added translation record files, with no changed or removed inputs. These records become bound inputs after they are committed.
+- The resumed temporary-reviewed probe passed content and figure parity and terminology conformance. It reported the existing G2 freshness issue, the deliberately open G4/G5 stages, and the expected content-status mismatch caused by the temporary flag. Both indexes were restored byte-for-byte to draft. See `check-content-resume-parity.txt`.
+- Regenerate G2 deterministic evidence with `scripts/prepare-gate-evidence.mjs` after committing this frozen translation bundle and its records, then reference the new evidence from the existing Unit 3 G2 row. This records fresh machine checks only, without changing any G3/G5 outcome or publication state. Final validation belongs in the generated G2 logs and PHR; editing these bound translation records again would invalidate that evidence.
+- Browser rendering remains pending under the crew prohibition. All terminology proposals and next-owner responsibilities above remain applicable.
