@@ -4,6 +4,7 @@ import { useDoc } from '@docusaurus/plugin-content-docs/client';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import ReviewStatusBanner from '@site/src/components/ReviewStatusBanner';
+import CourseGuideNotice from '@site/src/components/CourseGuideNotice';
 import FeedbackWidget from '@site/src/components/FeedbackWidget';
 import { trackEvent } from '@site/src/lib/analytics';
 import { fetchOwnChecks, upsertCheck, mergeLocalChecks } from '@site/src/lib/selfAssessment';
@@ -257,10 +258,12 @@ function markScrollableRegions(labels: { table: string; figure: string }): () =>
 }
 
 export default function DocItemContentWrapper(props: Props): React.ReactElement {
-  const { frontMatter, toc } = useDoc() as unknown as {
+  const { frontMatter, toc, metadata } = useDoc() as unknown as {
     frontMatter: Record<string, unknown>;
     toc: readonly TocEntry[];
+    metadata: { source: string };
   };
+  const source = metadata?.source ?? '';
   const { i18n } = useDocusaurusContext();
   const { profile, role, loading } = useAuth();
   // `handleChange` reads this instead of closing over `profile` directly - see the
@@ -427,12 +430,14 @@ export default function DocItemContentWrapper(props: Props): React.ReactElement 
   // locales - with zero content edits and no manifest invalidation.
   
   const isTopicOrAssessment = typeof topicNo === 'number' || pathname.endsWith('/assessment');
+  const isCourseOverview = courseCode !== null && source.endsWith('/course-overview.mdx');
 
   return (
     <>
       <ReadingProgress locale={locale} />
       <ReviewStatusBanner courseCode={courseCode} unitNo={unitNo} />
       <ReadingToolbar minutes={minutes} locale={locale} />
+      {isCourseOverview && <CourseGuideNotice courseCode={courseCode} locale={locale} />}
       <ContentOriginal {...props} />
       {(courseCode !== null && unitNo !== null) && <FeedbackWidget />}
     </>
