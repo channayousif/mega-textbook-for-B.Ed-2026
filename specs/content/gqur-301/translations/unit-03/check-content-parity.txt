@@ -1,0 +1,36 @@
+
+> bed-mega-textbook@0.1.0 build:content-status
+> node scripts/report-content-status.mjs
+
+✓ Wrote content status for 12 course(s) to static/content-status.json
+
+> bed-mega-textbook@0.1.0 check:content
+> node scripts/run-gates.mjs content
+
+Running 13 content gates
+
+  validate:content        PASS  0.6s
+  check:pipeline-gate     FAIL  10.0s
+  check:depth-gate        PASS  0.5s
+  check:figures           PASS  1.0s
+  check:no-em-dash        PASS  0.4s
+  check:no-answer-keys    PASS  0.5s
+  check:concept-graph     PASS  0.4s
+  check:bloom-bands       PASS  0.3s
+  check:source-floor      PASS  0.4s
+  check:licence           PASS  0.5s
+  licence:map:check       PASS  0.3s
+  check:content-status    PASS  1.0s
+  check:docs-sync         PASS  0.3s
+
+============================================================
+check:pipeline-gate
+============================================================
+
+✗ Pipeline gate failed with 2 finding(s):
+
+  - GQUR-301 Unit 3 (docs/semester-2/gqur-301/unit-03): 'G4 ur-translation' row for Unit 3 is not done (status: '▢')
+  - GQUR-301 Unit 3 (docs/semester-2/gqur-301/unit-03): 'G5 ur-review' row for Unit 3 is not done (status: '▢')
+
+
+1 of 13 content gates failed: check:pipeline-gate.
