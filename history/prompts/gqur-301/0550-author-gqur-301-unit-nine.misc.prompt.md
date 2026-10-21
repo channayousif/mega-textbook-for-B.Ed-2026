@@ -32,11 +32,11 @@ files:
   - specs/content/gqur-301/sources/unit-09.md
   - specs/content/gqur-301/figures/unit-09.md
   - specs/content/gqur-301/concepts/unit-09.md
-  - specs/content/gqur-301/coverage/unit-09-design.md
+  - specs/content/gqur-301/coverage/unit-09/design.md
   - specs/content/gqur-301/tasks.md
-  - specs/content/gqur-301/sources/texts/u09-lane2023.md
-  - specs/content/gqur-301/sources/texts/u09-nist-sematech.md
-  - specs/content/gqur-301/sources/texts/u09-openstax-stats.md
+  - specs/content/gqur-301/sources/texts/u09-lane-2023.md
+  - specs/content/gqur-301/sources/texts/u09-nist-2026.md
+  - specs/content/gqur-301/sources/texts/u09-openstax-2023.md
   - specs/content/gqur-301/sources/texts/unit-09/openalex-openstax.json
   - history/prompts/gqur-301/0550-author-gqur-301-unit-nine.misc.prompt.md
 tests:
@@ -75,3 +75,7 @@ Authored the English opening, two nine-part probability topics and a 10/10/5 sel
 - Graders run and results (PASS/FAIL): Intermediate: content validation, depth, figures, no-em-dash, no-answer-keys, concept graph, Bloom bands, source floor, licence checks and docs-sync pass. Final evidence and gate outcome will be appended before completion.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Fresh independent review of the frozen draft, with answer-blind assessment inspection.
+
+## Validation follow-up
+
+The 46 palette tests passed. Four figures and representative light/dark layouts were visually inspected using temporary raster previews with CSS tokens resolved for the local renderer; no browser was started. The first G2 evidence run passed all eight deterministic commands. The ensuing full gate run found that `coverage/unit-09-design.md` was treated as course-wide because the evidence parser requires a dot or slash after the unit number. Moved it to `coverage/unit-09/design.md`, then used citation keys ending in a four-digit year so the manifest includes each new reading-note file. No previously accepted unit evidence was rewritten. Regenerate Unit 9 G2 against these final filenames.

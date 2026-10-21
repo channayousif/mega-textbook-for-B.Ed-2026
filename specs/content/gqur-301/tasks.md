@@ -71,7 +71,7 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 8 | G6 assets | ▢ | | |
 | Unit 8 | G7 publish | ▢ | | |
 | Unit 9 | G1 unit-spec | ▢ | | guide Chapter 9; intake re-evaluation advised (D-2026-0070) |
-| Unit 9 | G2 en-draft | ▣ | | English two-topic draft, 10/10/5 assessment, coverage, sources, concept graph and four prompt-only figures authored; deterministic validation pending; independent G3 and Urdu remain separate jobs. |
+| Unit 9 | G2 en-draft | ▣ | | Regenerating deterministic evidence after correcting unit-only source and design record filenames. |
 | Unit 9 | G3 en-review | ▢ | | |
 | Unit 9 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 9 | G5 ur-review | ▢ | | |

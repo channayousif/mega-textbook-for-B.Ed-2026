@@ -4,11 +4,11 @@ Guide Chapter 9, sections 9.1 and 9.2, matches the approved Unit 9 partition. Pe
 
 | Sub-topic ID | File | Section | Source |
 |---|---|---|---|
-| U9-01 | topic-01.mdx | Basic probability concepts | u09-openstax-stats |
-| U9-01 | topic-01.mdx | Basic probability concepts | u09-lane2023 |
-| U9-02 | topic-02.mdx | Probability rules | u09-openstax-stats |
-| U9-02 | topic-02.mdx | Probability rules | u09-lane2023 |
-| U9-02 | topic-02.mdx | Probability rules | u09-nist-sematech |
+| U9-01 | topic-01.mdx | Basic probability concepts | u09-openstax-2023 |
+| U9-01 | topic-01.mdx | Basic probability concepts | u09-lane-2023 |
+| U9-02 | topic-02.mdx | Probability rules | u09-openstax-2023 |
+| U9-02 | topic-02.mdx | Probability rules | u09-lane-2023 |
+| U9-02 | topic-02.mdx | Probability rules | u09-nist-2026 |
 
 ## Backward design and Bloom alignment
 

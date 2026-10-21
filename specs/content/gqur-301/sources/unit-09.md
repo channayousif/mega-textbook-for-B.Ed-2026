@@ -4,9 +4,9 @@ The course guide block was read at `Scheme-and-Course-guides/extracted-text/2nd 
 
 | Key | Citation | URL/DOI | Supports | Kind |
 |---|---|---|---|---|
-| u09-lane2023 | Lane, D. M. (2023). *Online Statistics Education: A Multimedia Course of Study*. Rice University, Chapter 5, Basic Concepts. | https://onlinestatbook.com/2/probability/basic.html | Topic 9.1 equally likely outcomes and balancing misconception; Topic 9.2 complements and independent trials | open-access-substitute |
-| u09-openstax-stats | Illowsky, B., & Dean, S. (2023). *Introductory Statistics 2e*. OpenStax, Rice University, Sections 3.1–3.3. | https://openstax.org/books/introductory-statistics-2e/pages/3-1-terminology | U9-01, U9-02; OpenAlex W7205634858 consulted 2026-10-21; Topic 9.1 terminology and observed frequencies; Topic 9.2 event relations, independence, exclusivity and general rules | open-access-substitute |
-| u09-nist-sematech | NIST/SEMATECH. (n.d.). *e-Handbook of Statistical Methods*, Section 1.3.6, Probability Distributions. | https://www.itl.nist.gov/div898/handbook/eda/section3/eda36.htm | Topic 9.2 checking model assumptions before applying a method; no advanced distribution content imported | open-access-substitute |
+| u09-lane-2023 | Lane, D. M. (2023). *Online Statistics Education: A Multimedia Course of Study*. Rice University, Chapter 5, Basic Concepts. | https://onlinestatbook.com/2/probability/basic.html | Topic 9.1 equally likely outcomes and balancing misconception; Topic 9.2 complements and independent trials | open-access-substitute |
+| u09-openstax-2023 | Illowsky, B., & Dean, S. (2023). *Introductory Statistics 2e*. OpenStax, Rice University, Sections 3.1–3.3. | https://openstax.org/books/introductory-statistics-2e/pages/3-1-terminology | U9-01, U9-02; OpenAlex W7205634858 consulted 2026-10-21; Topic 9.1 terminology and observed frequencies; Topic 9.2 event relations, independence, exclusivity and general rules | open-access-substitute |
+| u09-nist-2026 | NIST/SEMATECH. (n.d.). *e-Handbook of Statistical Methods*, Section 1.3.6, Probability Distributions. | https://www.itl.nist.gov/div898/handbook/eda/section3/eda36.htm | Topic 9.2 checking model assumptions before applying a method; no advanced distribution content imported | open-access-substitute |
 
 ## Exact section locators
 
