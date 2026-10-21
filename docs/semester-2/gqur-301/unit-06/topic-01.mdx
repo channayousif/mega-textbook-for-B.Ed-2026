@@ -1,0 +1,179 @@
+---
+title: "Topic 6.1 - Range"
+description: "The range: the largest value minus the smallest, how to compute it, what it tells a teacher about spread, and why it can mislead."
+course_code: GQUR-301
+unit_no: 6
+topic_no: 1
+topic_label: "6.1"
+clo_refs:
+  - "SLO:GQUR-301-6-1"
+blooms_summary: "Remember the definition of dispersion and of the range; understand why the mean alone cannot describe a class; apply the range to test marks; analyze why two data sets with the same range can still be spread very differently."
+est_reading_minutes: 7
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+import Glossary from '@site/src/components/Glossary';
+
+<PrintHandout />
+
+## A real classroom situation
+
+A government girls' school in Hyderabad has two sections of Class 6. Both sat
+the same mathematics test, marked out of 20, and eight pupils from each section
+were checked. The mean in both sections is exactly 12. The head teacher says,
+"The two sections are performing the same." The mathematics teacher is not so
+sure. In Section A every pupil scored between 10 and 14. In Section B one pupil
+scored 4 and another scored 20. Same mean, but the teacher knows these are not
+the same class to teach.
+
+<Figure id="fig-U6-1" kind="diagram" src="/img/figures/gqur-301/unit-06/fig-U6-1.svg" alt="Two number lines of eight test marks each. Section A's marks sit between 10 and 14, a range of 4; Section B's marks stretch from 4 to 20, a range of 16; both have a mean of 12." width={780} height={470} />
+
+<Figure id="fig-U6-2" kind="table" src="/img/figures/gqur-301/unit-06/fig-U6-2.svg" alt="A table computing the range for two sections with the same mean of 12. Section A: largest 14, smallest 10, range 4. Section B: largest 20, smallest 4, range 16." width={780} height={470} />
+
+The teacher needs a number that describes how spread out the marks are. This
+topic gives you the simplest one.
+
+## Explanation
+
+### Range: the simplest measure of spread
+
+A measure of central tendency answers "where is the middle?" A measure of
+<Glossary term="Dispersion">dispersion</Glossary> answers a second question: "how spread out are
+the values around that middle?" Small dispersion means the values are close
+together. Large dispersion means they are scattered.
+
+The simplest measure of dispersion is the <Glossary term="Range">range</Glossary>:
+
+> **Range = largest value - smallest value**
+
+**Worked example.** Take Section A's marks from the classroom situation.
+
+1. **Sort** the values: 10, 11, 12, 12, 12, 12, 13, 14.
+2. **Find** the largest value (14) and the smallest value (10).
+3. **Subtract:** 14 - 10 = **4**.
+
+Now Section B: 4, 5, 7, 10, 14, 17, 19, 20. The largest is 20 and the smallest
+is 4, so the range is 20 - 4 = **16**. The second figure above sets out both
+computations side by side.
+
+Both sections have a mean of 12, but Section B's range is four times Section A's.
+The range has already told the teacher something the mean could not: Section A
+is a fairly even group, while Section B has pupils far below and far above the
+middle. Lane (2023, Chapter 3) and the NIST/SEMATECH *e-Handbook* (Section
+1.3.5.6) both define the range this way.
+
+Notice three facts about the range:
+
+- It is in the **same unit** as the data. A range of 16 marks is 16 marks.
+- It is **never negative**, and it is 0 only when every value is the same.
+- It is **quick**. A teacher can find it in seconds from a marks register.
+
+### What the range hides
+
+The range uses only **two** values: the largest and the smallest. Every value in
+between is ignored. That is its strength (it is fast) and its weakness.
+
+Look at a third section, Section C, which also sat the test: 4, 11, 12, 12, 12,
+12, 13, 20. Its mean is again 12, and its range is 20 - 4 = 16, exactly the
+same as Section B. Yet the two sections look very different:
+
+- In Section B the marks are scattered all the way from 4 to 20.
+- In Section C six of the eight pupils scored 11, 12 or 13. Only two pupils,
+  one at each end, are far from the middle.
+
+The range calls B and C equally spread. A teacher looking at the actual marks
+would not agree. Section C is mostly an even group with two pupils who need
+attention; Section B needs a different plan for almost every pupil.
+
+The range is also very sensitive to a single unusual value (an
+**outlier**). Suppose a ninth pupil, who had missed most of the term, joined
+Section A for the test and scored 2. The range would jump from 4 to 12, even
+though the other eight pupils had not changed at all. The NIST/SEMATECH *e-Handbook* (Section 1.3.5.6)
+warns for the same reason that the range depends on only two points and should
+be used with care.
+
+**Common misconception.** Many trainees believe that "the range tells you
+everything about spread". It does not. The range tells you the distance between
+the two most extreme values and nothing about how the other values are arranged
+between them. Sections B and C above have the same range but very different
+spreads. To describe how *all* the values sit around the mean, we need a
+measure that uses every value: the variance and standard deviation of Topic 6.2.
+
+## Activity: Same range, different story
+
+Work in pairs. About 15 minutes.
+
+1. Partner 1 writes down eight whole-number marks out of 20 with a range of
+   exactly 10 in which most marks are bunched together.
+2. Partner 2 writes down eight marks out of 20, also with a range of exactly 10,
+   in which the marks are spread evenly across the whole range.
+3. Swap lists. Each partner checks the other's range and draws both lists as
+   dots on a number line, as in the first figure above.
+4. Together, write two sentences: one on what the range told you about the two
+   lists, and one on what it did not tell you.
+
+## Check your understanding
+
+1. *(Remember)* Define dispersion in one sentence, and write the formula for the
+   range.
+2. *(Apply)* The number of days each of seven pupils was absent last term was
+   3, 0, 5, 2, 8, 1, 2. Find the range, showing the two values you used.
+3. *(Understand)* Explain why two data sets with the same mean and the same
+   range can still be spread differently. Use a short example of your own.
+
+## Summary
+
+Dispersion describes how spread out the values in a data set are, which the
+mean, median and mode cannot show. The range is the simplest measure of
+dispersion: the largest value minus the smallest. It is quick and easy to
+explain, but it uses only the two most extreme values, so it ignores how the
+rest of the data are arranged and it can be changed sharply by one unusual
+value. Two data sets with the same range can have very different spreads.
+
+## Self-assessment checklist
+
+- [ ] I can explain what dispersion means and why the mean alone is not enough.
+- [ ] I can compute the range of a set of marks.
+- [ ] I can explain, with an example, why the range can mislead.
+
+## Try this at your practicum school
+
+With your cooperating teacher's permission, look at the marks of one class in
+one recent test (without recording pupils' names). Find the mean and the range.
+Then look at the marks themselves: are most pupils bunched together with one or
+two far away, or are they spread right across the range? Write one sentence
+describing the class that uses both the range and what you saw in the marks.
+
+## Summative task
+
+Two Class 5 sections in a school in Larkana took the same Urdu dictation, marked
+out of 10.
+
+- Section Red: 2, 6, 6, 7, 7, 7, 8, 10
+- Section Blue: 2, 3, 4, 6, 8, 9, 9, 10
+
+a) Find the mean and the range of each section.
+b) Draw both sections as dots on two number lines.
+c) In 80-120 words, explain to the head teacher whether the range is enough to
+   compare the spread of the two sections, using what your number lines show.
+
+**Mini-rubric**
+
+| Criterion | Levels |
+|---|---|
+| *Computation (Apply)* | 0-3: both means (6.625 and 6.375) and both ranges (8 and 8) correct / most correct / few correct. |
+| *Analysis of the range (Analyze)* | 0-3: notes that the ranges are equal, uses the number lines to show that Red is bunched around 6-8 with one low score while Blue is spread out, and concludes that the range is not enough / partial / none. |
+
+## Further reading
+
+Lane, D. M. (2023). *Online Statistics Education: A Multimedia Course of Study.*
+Rice University. https://onlinestatbook.com/2/summarizing_distributions/variability.html -
+Chapter 3, "Measures of Variability", which defines the range.
+
+NIST/SEMATECH. *e-Handbook of Statistical Methods*, Section 1.3.5.6, "Measures of
+Scale". https://www.itl.nist.gov/div898/handbook/eda/section3/eda356.htm - on the
+range and why it depends on only two points.
+
+Chatfield, C. (1983). *Statistics for Technology: A Course in Applied Statistics.*
+Chapman & Hall. Print textbook cited at bibliographic level only.

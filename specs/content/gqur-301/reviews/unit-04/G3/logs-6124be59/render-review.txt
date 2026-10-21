@@ -1,0 +1,47 @@
+render-review - GQUR-301 Unit 4 - 2026-10-21T05:40:00Z
+Reviewer: agent:g3-reviewer
+Model: Gemini 3.8 Flash (High)
+Reviewer Run ID: 6124be59-7d79-48d3-9f3d-448c095baceb
+Exit code: 0
+
+Approach:
+  In accordance with repository resource constraints and crew instructions forbidding
+  `npm run build` and background dev servers, visual rendering and accessibility review
+  were conducted via static layout inspection, SVG DOM/geometry evaluation, and sharp rasterization.
+
+1. Static Raster Renders:
+   All 4 placed SVG figures in static/img/figures/gqur-301/unit-04/ were rasterised to PNG at displayed size (780px):
+   - fig-U4-1-render.png (8393 bytes)
+   - fig-U4-2-render.png (8393 bytes)
+   - fig-U4-3-render.png (6091 bytes)
+   - fig-U4-4-render.png (7677 bytes)
+   Saved in specs/content/gqur-301/reviews/unit-04/G3/logs-6124be59/.
+
+2. Heading and Semantic Structure:
+   - index.mdx: Single H1; clean H2s ("Unit learning outcomes", "Prerequisite knowledge", "In this unit", "How to use this unit").
+   - topic-01.mdx: Single H1 ("Topic 4.1 - Mean (arithmetic average)"); clean H2 nine-part learning cycle; H3 sub-topics.
+   - topic-02.mdx: Single H1 ("Topic 4.2 - Median"); clean H2 nine-part learning cycle; H3 sub-topics.
+   - unit-assessment.mdx: Single H1; clean H2 sections ("Unit summary", "Summative assessment", "Answers and marking guidance"); H3 per question bank.
+   - unit-teacher-notes.mdx: Single H1; clean H2/H3 instructional guidance.
+   - No skipped heading levels or heading structure anomalies.
+
+3. Figure Presentation and Accessibility Wiring:
+   - All 4 figures have placed carriers with matching src paths and dimensions.
+   - Alt text: Non-empty, highly descriptive instructional alt text present on all <Figure> tags matching specs/content/gqur-301/figures/unit-04.md.
+   - SVGs include role="img", aria-labelledby linking to <title> and <desc> elements.
+   - Both light and dark mode variants (.svg and .dark.svg) exist and are synchronized.
+   - Glyph text geometry (scripts/measure-figure-text.mjs): Widest text ends at 760.4 in 780 viewBox. Zero text-over-edge glyph overflows.
+   - Minor cosmetic note: Background rect in fig-U4-3 and fig-U4-4 overlaps wordmark by 2.5px and 4.5px (reported as non-blocking advisory finding).
+
+4. Descriptive Links and Navigation:
+   - Intra-unit navigation in index.mdx uses descriptive labels ([Mean (arithmetic average)](./topic-01), [Median](./topic-02)).
+   - No raw or ambiguous URLs in body prose.
+   - Further reading links use descriptive titles and valid targets.
+
+5. Assessment Section Isolation:
+   - Assessment answers and marking keys strictly bounded within ## Answers and marking guidance in unit-assessment.mdx.
+   - Zero leaked answer keys in frontmatter or topic prose. Passed check:no-answer-keys.
+
+6. Visual Layout & Print Adaptation:
+   - Tables in topic-01 and topic-02 are compact and well within viewport constraints.
+   - PrintHandout component embedded in all topic and assessment files.

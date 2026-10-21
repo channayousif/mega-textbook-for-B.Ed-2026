@@ -1,0 +1,12 @@
+✓ static/img/figures/gqur-301/unit-03/fig-U3-1.dark.svg (780x470, widest text ends at 760.4, wordmark at 667.7)
+✓ static/img/figures/gqur-301/unit-03/fig-U3-1.svg (780x470, widest text ends at 760.4, wordmark at 667.7)
+✓ static/img/figures/gqur-301/unit-03/fig-U3-2.dark.svg (780x470, widest text ends at 760.4, wordmark at 667.7)
+  ~ shape .rect [30,380,750,450] collides with the wordmark by 82.3 x 0.5px
+✓ static/img/figures/gqur-301/unit-03/fig-U3-2.svg (780x470, widest text ends at 760.4, wordmark at 667.7)
+  ~ shape .rect [30,380,750,450] collides with the wordmark by 82.3 x 0.5px
+✓ static/img/figures/gqur-301/unit-03/fig-U3-3.dark.svg (780x470, widest text ends at 760.4, wordmark at 667.7)
+✓ static/img/figures/gqur-301/unit-03/fig-U3-3.svg (780x470, widest text ends at 760.4, wordmark at 667.7)
+✓ static/img/figures/gqur-301/unit-03/fig-U3-4.dark.svg (780x470, widest text ends at 760.4, wordmark at 667.7)
+✓ static/img/figures/gqur-301/unit-03/fig-U3-4.svg (780x470, widest text ends at 760.4, wordmark at 667.7)
+
+2 cosmetic wordmark collision(s) - reported, not failed.

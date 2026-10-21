@@ -1,0 +1,218 @@
+---
+title: "Topic 6.2 - Variance and standard deviation"
+description: "Variance and standard deviation: measuring how far every value sits from the mean, the step-by-step computation, why the deviations are squared, and how the two measures are related."
+course_code: GQUR-301
+unit_no: 6
+topic_no: 2
+topic_label: "6.2"
+clo_refs:
+  - "SLO:GQUR-301-6-2"
+blooms_summary: "Remember the definitions of deviation, variance and standard deviation; understand why deviations are squared and why the square root is taken; apply the five-step computation to attendance and test data; analyze how one extreme value changes the result."
+est_reading_minutes: 9
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+import Glossary from '@site/src/components/Glossary';
+
+<PrintHandout />
+
+## A real classroom situation
+
+A head teacher in a primary school near Thatta is worried about attendance. She
+looks at the number of days each of eight Class 4 pupils was absent last month:
+2, 4, 4, 4, 5, 5, 7, 9. The mean is 5 days. "Are most pupils close to five
+days," she asks, "or are some much worse than others?" The range (9 - 2 = 7)
+only tells her about the two extreme pupils. She wants one number that takes
+**every** pupil into account and says how far, typically, a pupil is from the
+mean. That number is the standard deviation, and this topic shows you how to
+compute it.
+
+<Figure id="fig-U6-3" kind="flowchart" src="/img/figures/gqur-301/unit-06/fig-U6-3.svg" alt="A five-step flowchart for the variance and standard deviation of 2, 4, 4, 4, 5, 5, 7, 9: the mean is 5, the deviations add to 0, the squared deviations add to 32, the variance is 32 divided by 8, which is 4, and the standard deviation is the square root of 4, which is 2 days." width={780} height={560} />
+
+<Figure id="fig-U6-4" kind="table" src="/img/figures/gqur-301/unit-06/fig-U6-4.svg" alt="A computation table for eight pupils' days absent. The values add to 40, so the mean is 5; the deviations add to 0; the squared deviations add to 32, so the variance is 4 and the standard deviation is 2 days." width={780} height={560} />
+
+## Explanation
+
+### Variance: the average squared distance from the mean
+
+The idea is simple: measure how far each value is from the mean, then find a
+kind of average of those distances.
+
+The distance of one value from the mean is called its
+<Glossary term="Deviation">deviation</Glossary>:
+
+> **Deviation = value - mean**
+
+A value above the mean has a positive deviation; a value below the mean has a
+negative one. For the attendance data (mean 5), the pupil absent 9 days has a
+deviation of 9 - 5 = +4, and the pupil absent 2 days has a deviation of
+2 - 5 = -3.
+
+We cannot simply average the deviations. They always add to **zero**, because
+the mean is the balance point of the data (Unit 4): the values above it exactly
+balance the values below it. So we **square** each deviation first. Squaring
+makes every deviation positive, and it gives extra weight to values far from
+the mean (Illowsky & Dean, 2023, Section 2.7).
+
+The <Glossary term="Variance">variance</Glossary> is the mean of the squared deviations:
+
+> **Variance = (sum of squared deviations) ÷ N**
+
+where N is the number of values. Lane (2023, Chapter 3) describes the variance
+in exactly these words: the average squared difference of the values from
+their mean.
+
+**Worked example.** The figures above set out the full computation for the
+attendance data. Follow it line by line.
+
+| Days absent (x) | Deviation (x - 5) | Squared deviation |
+|---|---|---|
+| 2 | -3 | 9 |
+| 4 | -1 | 1 |
+| 4 | -1 | 1 |
+| 4 | -1 | 1 |
+| 5 | 0 | 0 |
+| 5 | 0 | 0 |
+| 7 | 2 | 4 |
+| 9 | 4 | 16 |
+| **Total: 40** | **0** | **32** |
+
+1. **Mean:** 40 ÷ 8 = 5 days.
+2. **Deviations:** subtract 5 from each value (second column). Check: they add
+   to 0.
+3. **Squares:** square each deviation (third column).
+4. **Variance:** add the squares and divide by N: 32 ÷ 8 = **4**.
+
+There is one problem with the variance. Because we squared the deviations, its
+unit is squared too. The variance here is 4 "days squared", which has no
+everyday meaning. That is why we take one more step.
+
+### Standard deviation: back to the original units
+
+The <Glossary term="Standard deviation">standard deviation</Glossary> is the square root of the variance:
+
+> **Standard deviation = √variance**
+
+5. **Standard deviation:** √4 = **2 days**.
+
+Taking the square root undoes the squaring, so the standard deviation is back in
+the same unit as the data: days, marks or rupees (Illowsky & Dean, 2023,
+Section 2.7). You can read it as "the typical distance of a value from the
+mean". For the Thatta class, a typical pupil's absence is about 2 days away
+from the mean of 5. The head teacher now has her answer: most pupils are
+fairly close to five days, though the pupil absent 9 days is twice the typical
+distance away and deserves a conversation.
+
+**Dividing by N or by n - 1.** In the worked example the eight pupils are the
+whole group the head teacher cares about, so we divide by N = 8. This is the
+**population** variance. When the values are a **sample** used to estimate the
+spread of a larger group (for example, eight pupils chosen to represent a whole
+district), statisticians divide by n - 1 instead, because dividing by n tends
+to underestimate the spread of the larger group (Lane, 2023, Chapter 3). For
+the same data that gives 32 ÷ 7 = 4.57 and a standard deviation of about 2.14
+days. Your calculator may show both: the population standard deviation is often
+labelled σ (the Greek letter sigma) and the sample one *s*. In this course,
+divide by N unless a question says the data are a sample.
+
+**Two more facts** worth knowing:
+
+- The standard deviation is **never negative**, and it is 0 only when every
+  value is the same (no spread at all).
+- Like the mean, it is **pulled by extreme values**. Because deviations are
+  squared, one value far from the mean adds a great deal. In the attendance
+  data, the single pupil absent 9 days contributes 16 of the total of 32
+  (NIST/SEMATECH, Section 1.3.5.6).
+
+**Common misconception.** Many trainees say that "variance and standard
+deviation are the same thing". They are closely related, but they are not the
+same number and not in the same unit. The standard deviation is the square root
+of the variance: a variance of 4 days squared is a standard deviation of 2 days,
+and a variance of 25 marks squared is a standard deviation of 5 marks. When you
+describe spread in words to a teacher or a parent, use the standard deviation,
+because it is in the units they understand. The variance is mainly a step on
+the way, and it is used in more advanced methods later in the course.
+
+## Activity: Pass the table
+
+Work in groups of four. About 20 minutes.
+
+Use the marks out of 10 of six pupils in a Mirpurkhas classroom: 3, 5, 6, 6, 7, 9.
+
+1. Pupil 1 finds the mean and writes it at the top of a blank computation table.
+2. Pupil 2 fills in the deviation column and checks that it adds to 0.
+3. Pupil 3 fills in the squared-deviation column and adds it up.
+4. Pupil 4 computes the variance (divide by N) and the standard deviation.
+5. As a group, check every step, then write one sentence that a parent could
+   understand, using the standard deviation in marks.
+6. Finally, change the 9 to 10 and predict, before computing, whether the
+   standard deviation will go up or down. Then check.
+
+## Check your understanding
+
+1. *(Remember)* Define a deviation, the variance and the standard deviation,
+   each in one sentence.
+2. *(Understand)* Explain why we square the deviations before averaging them,
+   and why we then take a square root.
+3. *(Apply)* Find the variance and the standard deviation of the marks 4, 6, 8,
+   10, 12, treating them as the whole group. Show the computation table.
+4. *(Apply)* A data set has a variance of 9 marks squared. State its standard
+   deviation, with its unit.
+
+## Summary
+
+A deviation is the distance of one value from the mean. Deviations always add
+to zero, so we square them before averaging. The variance is the mean of the
+squared deviations; it uses every value, but its unit is squared. The standard
+deviation is the square root of the variance, so it is back in the units of the
+data and can be read as the typical distance of a value from the mean. Divide
+by N for a whole group and by n - 1 for a sample used to estimate a larger
+group. Because the deviations are squared, a single extreme value can raise the
+standard deviation sharply.
+
+## Self-assessment checklist
+
+- [ ] I can compute the variance and standard deviation of a small data set, step by step.
+- [ ] I can explain why the deviations are squared and why we then take a square root.
+- [ ] I can explain the difference between the variance and the standard deviation, including their units.
+
+## Try this at your practicum school
+
+With your cooperating teacher's permission, take the scores of six to ten pupils
+on one short class test (no names). Build the computation table and find the
+standard deviation. Then compare it with your own estimate: before computing,
+write down a guess of the "typical distance from the mean" by looking at the
+marks. How close was your guess?
+
+## Summative task
+
+The number of homework tasks handed in by seven Class 7 pupils in a Nawabshah
+school over one month was: 6, 8, 9, 10, 10, 11, 16.
+
+a) Compute the mean, the deviations, the variance and the standard deviation,
+   treating the seven pupils as the whole group. Show the computation table.
+b) Remove the 16 and recompute the standard deviation of the remaining six.
+c) In 80-120 words, explain what part (b) shows about how the standard
+   deviation responds to one extreme value, and why that matters when a
+   teacher reports the spread of a class.
+
+**Mini-rubric**
+
+| Criterion | Levels |
+|---|---|
+| *Computation (Apply)* | 0-3: mean 10, squared deviations adding to 58, variance about 8.29 and standard deviation about 2.88; then mean 9, variance about 2.67 and standard deviation about 1.63 / most correct / few correct. |
+| *Analysis of the extreme value (Analyze)* | 0-3: explains that the single value 16 raises the standard deviation from about 1.63 to about 2.88 because its deviation is squared, and draws a sensible reporting consequence (mention the unusual pupil, or report the spread with and without it) / partial / none. |
+
+## Further reading
+
+Illowsky, B., & Dean, S. (2023). *Introductory Statistics 2e.* OpenStax.
+https://openstax.org/books/introductory-statistics-2e/pages/2-7-measures-of-the-spread-of-the-data -
+Section 2.7, on deviations, the variance and the standard deviation, including
+the n - 1 divisor for samples.
+
+Lane, D. M. (2023). *Online Statistics Education: A Multimedia Course of Study.*
+Rice University. https://onlinestatbook.com/2/summarizing_distributions/variability.html -
+Chapter 3, "Measures of Variability".
+
+NIST/SEMATECH. *e-Handbook of Statistical Methods*, Section 1.3.5.6, "Measures of
+Scale". https://www.itl.nist.gov/div898/handbook/eda/section3/eda356.htm
