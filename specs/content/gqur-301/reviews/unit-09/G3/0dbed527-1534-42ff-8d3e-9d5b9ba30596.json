@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "course_code": "GQUR-301",
+  "unit_no": 9,
+  "stage": "G3",
+  "disposition": "pass",
+  "reviewer_id": "agent:g3-reviewer",
+  "author_run_id": "a1b2c3d4-0000-0000-0000-000000000000",
+  "reviewer_run_id": "0dbed527-1534-42ff-8d3e-9d5b9ba30596",
+  "model": "LongCat-2.0 (longcat/LongCat-2.0), opencode CLI session",
+  "started_at": "2026-10-21T21:15:00Z",
+  "completed_at": "2026-10-21T21:25:00Z",
+  "skill_digest": "eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b",
+  "input_manifest": "specs/content/gqur-301/reviews/unit-09/G3/manifest.json",
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        "Course guide Chapter 9, Week 9 (2nd 2026.txt:484-486) names 9.1 Basic Probability Concepts and 9.2 Probability Rules — matches topics 9.1 and 9.2 exactly.",
+        "CLO refs SLO:GQUR-301-9-1 and SLO:GQUR-301-9-2 on all four unit files; content-spec Unit 9 maps to course outcomes 1, 2, 3.",
+        "coverage/unit-09.md rows U9-01 and U9-02 each trace to a guide section and an open-access source."
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "pass",
+      "evidence": [
+        "OpenStax Sections 3.1, 3.2, 3.3 fetched 2026-10-22; content supports terminology, event relations, independence, exclusivity, and the general addition/multiplication rules cited in both topics.",
+        "Lane Chapter 5 fetched; supports equally likely outcomes, complement, independence, and the balancing misconception in Topic 9.1.",
+        "NIST/SEMATECH Section 1.3.6 fetched; supports the model-assumption check in Topic 9.2.",
+        "Haq (1984) is listed at bibliographic level only in topic-01.md and sources/unit-09.md; no content claim relies on it.",
+        "All mapped sources agree with the unit's declared scope."
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "Sub-topic checklist rows U9-01 (Basic probability concepts) and U9-02 (Probability rules) both have Explanation sections, worked examples, retrieval items, self-assessment checklists, and an Analyze-or-higher summative task.",
+        "design.md records Apply/Analyze targets for U9-01 and Apply/Analyze/Evaluate for U9-02; the 10/10/5 bank covers both topics.",
+        "Unit assessment MCQ split (1-5 Topic 9.1, 6-10 Topic 9.2), RRQ split (1-5 / 6-10), ERQ split (1-2 / 3-4 / 5 integrative) matches the approved blueprint."
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "pass",
+      "evidence": [
+        "Independent derivation solved all 10 MCQs and 10 RRQs before consulting the key; every derived answer matches.",
+        "Bloom demand reclassified from thinking required: MCQ 1-2 Remember/Understand, MCQ 3-10 Apply/Understand; RRQ 1,3 Understand, RRQ 2,4,6,7,8 Apply, RRQ 5,9,10 Analyze; ERQ 1,4,5 Evaluate, ERQ 2,3 Analyze — all within approved bands and matching the tagged levels.",
+        "No conflicting keys or ambiguous MCQ distractors found. ERQ rubrics distinguish performance levels and reserve top marks for Analyze/Evaluate reasoning.",
+        "Full derivation saved at specs/content/gqur-301/reviews/unit-09/G3/logs-g3/independent-assessment-derivation.md."
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "pass",
+      "evidence": [
+        "Four SVGs (fig-U9-1..4) and their dark variants all carry role=\"img\", aria-labelledby, <title>, and <desc>; alt text in topic files matches the rendered descriptions.",
+        "measure-figure-text.mjs reports all text within viewBox, no wordmark overprint.",
+        "figure-palette tokens used; line/fill redundancy confirmed (labels and hatching, not colour alone).",
+        "Heading hierarchy: each topic opens with a single H1, subsections use H2/H3 in order; assessment page uses H2 for question groups.",
+        "No answer-key content leaks outside the bounded final section of unit-assessment.mdx (check:no-answer-keys passed).",
+        "Render inspection: SVG-based figures scale without clipping; narrow-viewport print behaviour not directly rendered in this session (gate-level check:figures passed, measure-figure-text passed)."
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "Prose targets HSC/intermediate register: short sentences, common vocabulary, no unexplained jargon. Terms (experiment, outcome, sample space, event, probability, complement, union, intersection, mutually exclusive, independent) are defined inline on first use.",
+        "Worked examples move from a school vignette to the calculation to an interpretation sentence. Numeracy demands stay at fraction/decimal/percentage conversion and simple counting.",
+        "The index notes prerequisites (Units 7-8 counting), confirms the fair-draw model is conditional on physical procedure, and flags that invented data are teaching examples."
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": [
+        "Each topic follows the nine-part cycle: classroom situation, explanation with worked examples, collaborative activity with roles and time, retrieval items, summary, self-assessment checklist, practicum transfer task, summative task with mini-rubric.",
+        "Activities (audit a lucky draw, defend the rule) are feasible with paper slips, counters, and invented class totals in a Pakistani/Sindh school context; no real pupil data required.",
+        "Misconception treatments are explicit: balancing fallacy, equal-category fallacy, P>1, mutually-exclusive-equals-independent.",
+        "Summative tasks require evaluating or analyzing a flawed probability claim about pupils, with rubrics rewarding justified reasoning over a single numerical answer."
+      ]
+    }
+  ],
+  "findings": [],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-301/reviews/unit-09/G3/logs-g3/validate-content.txt"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-301/reviews/unit-09/G3/logs-g3/check-depth-gate.txt"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-301/reviews/unit-09/G3/logs-g3/check-figures.txt"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-301/reviews/unit-09/G3/logs-g3/check-no-em-dash.txt"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-301/reviews/unit-09/G3/logs-g3/check-no-answer-keys.txt"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-301/reviews/unit-09/G3/logs-g3/check-docs-sync.txt"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-301/reviews/unit-09/G3/logs-g3/measure-figure-text.txt"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/gqur-301/reviews/unit-09/G3/manifest.json": "41f9439773e27931d29ea6b14a89cfabf291536fb251a54bfa3696a3eb5ba128",
+    "specs/content/gqur-301/reviews/unit-09/G3/logs-g3/validate-content.txt": "5b3153a9d41a11051bff1d2f0396cf26eaaf00ae79e3b894c202823645c0e6a6",
+    "specs/content/gqur-301/reviews/unit-09/G3/logs-g3/check-depth-gate.txt": "15021f8f88122b596e67cfd48c2ff282fde912e1b86bb03c2137bcf9d8e062fd",
+    "specs/content/gqur-301/reviews/unit-09/G3/logs-g3/check-figures.txt": "54a388cb9954b9d2f07f84e5385ac0003b94a6a54023abb188e864346958b04f",
+    "specs/content/gqur-301/reviews/unit-09/G3/logs-g3/check-no-em-dash.txt": "00405490c649d998b589b23505029de9134497966b02ff9ccefb1075aa414dd3",
+    "specs/content/gqur-301/reviews/unit-09/G3/logs-g3/check-no-answer-keys.txt": "539ba62183931f332c562e346956452b9cf751e100de762601b786b497a7d612",
+    "specs/content/gqur-301/reviews/unit-09/G3/logs-g3/check-docs-sync.txt": "cbc9f6e4b0b674cb49e2d9b795d81ed78f23dc431cba1130e4d64cf6d0bed749",
+    "specs/content/gqur-301/reviews/unit-09/G3/logs-g3/measure-figure-text.txt": "4a7ab73914244b5a1e091c1e1542fd0ccca404febf332b3cfacacc9b5ad0aea1",
+    "specs/content/gqur-301/reviews/unit-09/G3/logs-g3/independent-assessment-derivation.md": "a9bfcf7cd3910b93e366fcadd15b8576111df2af2ceeb4bcd60949305dee1a62"
+  }
+}
