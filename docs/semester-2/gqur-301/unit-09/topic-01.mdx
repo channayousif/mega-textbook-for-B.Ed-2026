@@ -1,0 +1,104 @@
+---
+title: "9.1 Basic probability concepts"
+description: "Describe experiments, outcomes and events, calculate probabilities from fair draws and attendance records, and interpret the probability scale."
+course_code: GQUR-301
+unit_no: 9
+topic_no: 1
+topic_label: "9.1"
+clo_refs:
+  - "SLO:GQUR-301-9-1"
+blooms_summary: "Remember and understand probability concepts; apply rules; analyze assumptions and evaluate school probability claims."
+est_reading_minutes: 10
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+
+<PrintHandout />
+
+# 9.1 Basic probability concepts
+
+## A real classroom situation
+
+At a government primary school in Hyderabad, a trainee prepares a lucky draw for choosing a pupil to present group work. She puts five identical folded slips in a bag, numbered 1 to 5. A pupil says that drawing an odd number must be just as likely as drawing an even number because there are only two categories. Another says that an even number is due after three odd draws. The trainee needs to explain both claims before using the draw.
+
+<Figure id="fig-U9-1" src="/img/figures/gqur-301/unit-09/fig-U9-1.svg" alt="A concept map connects a draw to one outcome, all five possible outcomes, the three odd outcomes and their probability of three fifths." kind="concept-map" caption="Original teaching schematic. Credit: textbook.com.pk." />
+
+## Explanation
+
+### Basic probability concepts
+
+An **experiment** is a stated procedure with a result we do not know in advance. An **outcome** is one possible result. The **sample space**, written S, lists every possible outcome. An **event** is a collection of outcomes that meet a stated condition. **Probability**, written P(A) for event A, measures its chance on a scale from 0 to 1. These terms follow Illowsky and Dean (2023, Section 3.1).
+
+For the trainee's draw, write the description before doing arithmetic:
+
+- Experiment: mix the bag and draw one slip without looking.
+- One outcome: the slip numbered 3.
+- Sample space: S = 1, 2, 3, 4, 5.
+- Event A: draw an odd number, so A contains 1, 3 and 5.
+
+The outcome is not the whole event. A draw gives one numbered slip; several different slips satisfy the event. Nor is the event a prediction that the next draw will be odd. It tells us which outcomes to count if they occur.
+
+For **equally likely outcomes**, each outcome has the same chance. Then P(A) equals the number of outcomes in A divided by the number in S (Lane, 2023, Chapter 5). Here P(A) = 3/5 = 0.6 = 60%. The event even contains 2 and 4, so its probability is 2/5. Merely naming two categories does not make their chances equal. The five numbered slips are the equally likely outcomes; the two categories collect different numbers of them.
+
+Before using that fraction, check the physical procedure. Use the same paper, fold every slip alike, mix thoroughly and draw without seeing or feeling a distinguishing mark. The calculation is conditional on that fair procedure. A pupil choosing the largest slip would not be using the stated model. A **model** here means a simplified description and its assumptions, not a claim that any bag automatically produces equal chances.
+
+**Worked example: a reading-card draw.** A trainee in Thatta has eight identical cards numbered 1 to 8. Cards 1, 2 and 3 contain a story question; the remaining cards contain a vocabulary question. One card is drawn fairly. First identify the event: a story question means one of cards 1, 2 or 3. Next count the favourable outcomes, 3, and all possible outcomes, 8. Divide: P(story) = 3/8 = 0.375. Finally interpret: under this procedure, story questions account for three eighths of the chance. The word favourable only means meeting the event's condition, not morally better or preferred by the learner.
+
+Notice why counting from Units 7 and 8 still matters. If two slips are drawn in order with replacement, the outcomes are ordered pairs. With five choices each time there are 5 × 5 = 25 pairs. The result (1, 2) differs from (2, 1) because the first number records the first draw. Calling the sample space simply odd and even loses that detail. You can group detailed outcomes later, but first make sure each detailed outcome has the same chance before dividing counts.
+
+**The probability scale.** In this finite fair-draw model, 0 means impossible and 1 means certain. Drawing 9 from slips numbered 1 to 5 has probability 0. Drawing a number from 1 to 5 has probability 1. A probability of 1/2 lies halfway between: the event and its non-occurrence have equal chance. The values 0.2, 0.5 and 0.8 are all valid. A negative value or a value above 1 is not a probability (Illowsky & Dean, 2023, Section 3.1).
+
+<Figure id="fig-U9-2" src="/img/figures/gqur-301/unit-09/fig-U9-2.svg" alt="A probability scale runs from impossible at zero to certain at one, with intermediate chances of 0.2, 0.5 and 0.8." kind="diagram" caption="Original teaching schematic. Credit: textbook.com.pk." />
+
+**From records to an estimate.** Sometimes we have records rather than a physical fair draw. A relative frequency is the number of observed occurrences divided by the number of observations. It provides an observed probability estimate (Illowsky & Dean, 2023, Section 3.1). Keep its denominator and time period visible.
+
+**Worked example: attendance records.** A trainee in Badin creates a fictional record of one class over 20 school days. On 15 days, at least 90% of enrolled pupils attended. Let A mean that a day meets this threshold. The observed proportion is 15/20 = 0.75. A report can say, 'The threshold was met on 75% of the 20 recorded days.' If one of those recorded days is selected uniformly at random, its chance of meeting the threshold is exactly 15/20. Using 0.75 for a future day is instead an estimate. A holiday, illness outbreak or heavy rain could make future conditions different.
+
+The two meanings should not be confused. The record gives exact counts about the past; it does not guarantee that the next four days will include exactly three high-attendance days. It also does not tell us that any particular pupil has a 75% attendance probability. Our observations were days meeting a class-level threshold, not individual attendance decisions. State what was selected, what was counted, and what conclusion the data can support.
+
+**Misconception: a short run must balance immediately.** For a fair coin with independent tosses, five heads in a row do not make tails due on the next toss. Its chance remains 1/2 (Lane, 2023, Chapter 5). Independence means that learning one result does not change the chance of the other; Topic 9.2 develops this idea. A coin does not remember its past. Likewise, replacing and remixing the slips restores the same draw conditions. A run can be surprising without making the next result compensate for it.
+
+A second misconception is that a probability above 1 can describe extra certainty. Suppose a calculation gives 15/12 for days meeting an attendance threshold. Do not convert it to 125% and report it. Check whether the numerator includes days outside the observation period or counts a day twice. An event cannot contain more observations than the whole set from which it is selected. Range checks help locate a mistake, although a value within the range can still come from a wrong model.
+
+When reporting a chance to a parent or colleague, use a complete sentence. '0.75' alone leaves the event unclear. 'In our invented 20-day record, 15 days met the class attendance threshold' identifies the event, the evidence and the limit of the claim. Use the same care with sports-day weather. Two possible labels, wet and dry, do not justify assigning 1/2 to each. You would need a relevant weather model or suitable records, not simply a count of category names.
+
+## Activity: Audit a lucky draw
+
+**Work in pairs for about 20 minutes.** Use five identical numbered paper slips and a covered container. No money or prizes are needed.
+
+One partner states the experiment, sample space and event 'number greater than 3' from memory. The other checks the list and explains why the event has that probability. Agree on the physical fairness conditions. Make 20 draws, replacing and mixing the slip each time, and tally the event. Swap roles after ten draws. Compare the observed fraction with your calculated fraction. Write two sentences together: one about what the record actually shows and one about what it cannot promise about the next draw. Exchange your report with another pair, who must identify the denominator and one assumption without asking you.
+
+## Check your understanding
+
+1. Define outcome, sample space and event using a single school draw example. *(Remember)*
+2. Explain why 'wet or dry' does not by itself justify a probability of 1/2 for rain. *(Understand)*
+3. A bag has twelve identical numbered slips. Five numbers meet a stated event. Calculate its probability as a fraction and decimal, and state one fairness condition. *(Apply)*
+4. A class attendance threshold was met on 18 of 24 recorded days. Write the observed probability estimate and a sentence limiting its use for next month. *(Apply)*
+
+## Summary
+
+Define the chance procedure and event before counting. Dividing favourable by total outcomes needs equally likely detailed outcomes. Observed fractions describe records and may estimate future chances only with suitable assumptions. A probability stays between 0 and 1; an independent trial does not owe a balancing result.
+
+## Self-assessment checklist
+
+- [ ] I can distinguish a single outcome from an event and the full sample space.
+- [ ] I can calculate a chance from equally likely outcomes and state the fairness conditions.
+- [ ] I can distinguish an observed proportion from a promise about future outcomes.
+- [ ] I can explain why two event labels need not have equal chances.
+
+## Try this at your practicum school
+
+With the cooperating teacher's permission, plan a paper-slip procedure for choosing one of six group presentations. Do not record pupil names. Show how the procedure gives groups equal chances, and ask a colleague to check for visible or tactile clues. Write the sample space, one event and its probability. If permission is unavailable, test the procedure with six invented group labels at college. Explain one improvement you made after the check.
+
+## Summative task
+
+A trainee reports: 'There are two possibilities, high attendance or low attendance, so each has probability 1/2. Our record shows high attendance on 16 of 20 days, but low attendance must now catch up.' Write 180–250 words evaluating both claims. Define the event as at least 90% of the class present, calculate the observed fraction, distinguish a randomly selected recorded day from a future day, and propose a cautious report to the headteacher. *(Evaluate)*
+
+**Mini-rubric (10 marks):** event and denominator identified (2); observed calculation and interpretation (2); analysis of equal-category and balancing errors using specific evidence (4, Analyze); justified reporting limit and clear replacement statement (2).
+
+## Further reading
+
+- Illowsky, B., & Dean, S. (2023). *Introductory Statistics 2e*, Section 3.1, [Terminology](https://openstax.org/books/introductory-statistics-2e/pages/3-1-terminology). Definitions, equally likely outcomes and observed frequencies.
+- Lane, D. M. (2023). *Online Statistics Education: A Multimedia Course of Study*, Chapter 5, [Basic concepts](https://onlinestatbook.com/2/probability/basic.html). Counting outcomes and the mistaken belief that a balancing result is due.
+- Haq, M. (1984). *Foundation of Probability and Statistics*. Tahir Sons, Karachi. Guide-required print reference, bibliographic listing only; not consulted for content claims.
