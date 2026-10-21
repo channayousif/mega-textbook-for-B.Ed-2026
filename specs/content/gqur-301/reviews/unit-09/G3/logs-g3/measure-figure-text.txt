@@ -1,0 +1,4 @@
+✓ static/img/figures/gqur-301/unit-09/fig-U9-1.svg (640x440, widest text ends at 628.2, wordmark at 535.7)
+✓ static/img/figures/gqur-301/unit-09/fig-U9-2.svg (640x440, widest text ends at 628.2, wordmark at 535.7)
+✓ static/img/figures/gqur-301/unit-09/fig-U9-3.svg (640x440, widest text ends at 628.2, wordmark at 535.7)
+✓ static/img/figures/gqur-301/unit-09/fig-U9-4.svg (640x440, widest text ends at 628.2, wordmark at 535.7)
