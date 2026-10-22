@@ -70,12 +70,12 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit 5 | G6 assets | ▢ | | |
 | Unit 5 | G7 publish | ▢ | | |
 
-**Unit 6 - Social Change and Social Problems:** not started.
+**Unit 6 - Social Change and Social Problems:** English content authored to the Spec 008 v3.0 per-topic layout: `index.mdx` + `topic-01..02.mdx` (nine-part cycles) + `unit-assessment.mdx` (10/10/5 bank + bounded answers) + `unit-teacher-notes.mdx`. Governance artefacts (coverage, sources, figures, concepts) committed. Figures rendered and placed (4 SVGs + dark variants). G1 unit-spec drafted (pending G0 intake approval).
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 6 | G1 unit-spec | ▢ | | pending G0 intake |
-| Unit 6 | G2 en-draft | ▢ | | |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-06/G2/20261022T202014023Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | |
 | Unit 6 | G4 ur-translation | ▢ | | |
 | Unit 6 | G5 ur-review | ▢ | | |
