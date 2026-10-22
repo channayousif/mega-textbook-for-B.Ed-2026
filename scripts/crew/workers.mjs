@@ -60,7 +60,9 @@ export const STAGES = {
 };
 
 /** Text in a worker's log that means "out of quota", not "bad work". */
-export const QUOTA_RE = /rate.?limit|quota|usage limit|session limit|too many requests|\b429\b|resource.?exhausted|insufficient (credits|balance)|hit your limit|limit reached|credit balance/i;
+// "hit your weekly limit" (claude) and "model is at capacity" (codex) slipped past this on
+// 2026-10-22, so eight jobs spent all three attempts on quota errors and went gate_red.
+export const QUOTA_RE = /rate.?limit|quota|usage limit|session limit|weekly limit|too many requests|\b429\b|resource.?exhausted|insufficient (credits|balance)|hit your (\w+ )?limit|limit reached|credit balance|at capacity/i;
 
 /** Backoff ladder for a worker that keeps hitting its limit, in minutes. */
 export const COOLDOWN_MIN = [30, 120, 360];

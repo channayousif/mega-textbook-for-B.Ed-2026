@@ -19,7 +19,7 @@
  * runners, which keeps this production host's RAM for the live site.
  */
 import { spawn, spawnSync } from 'node:child_process';
-import { appendFileSync, closeSync, existsSync, mkdirSync, openSync, readFileSync, readSync, readdirSync, renameSync, statSync, symlinkSync, writeFileSync } from 'node:fs';
+import { appendFileSync, closeSync, existsSync, mkdirSync, openSync, readFileSync, readSync, readdirSync, renameSync, rmSync, statSync, symlinkSync, writeFileSync } from 'node:fs';
 import { join, relative, resolve } from 'node:path';
 import { WORKERS, STAGES, QUOTA_RE, COOLDOWN_MIN, pickWorker } from './workers.mjs';
 import { STATE_DIR, WT_DIR, LOG_DIR, load, save, ACTIVE, TERMINAL, jobId, now } from './state.mjs';
@@ -312,6 +312,9 @@ function launch(board, j, worker) {
   const [bin, binArgs] = WORKERS[worker].cmd(prompt);
   j.log = join(LOG_DIR, `${j.id}.${(j.attempts || 0) + 1}.log`);
   const exitFile = `${j.log}.exit`;
+  // A requeued job reuses its log name (retry and a quota requeue both lower the attempt count),
+  // and a stale exit file would make reap take the old exit code while the worker still runs.
+  rmSync(exitFile, { force: true });
   const q = (s) => `'${String(s).replace(/'/g, `'\\''`)}'`;
   const line = `timeout ${JOB_TIMEOUT} ${[bin, ...binArgs].map(q).join(' ')} < /dev/null > ${q(j.log)} 2>&1; echo $? > ${q(exitFile)}`;
   const child = spawn('bash', ['-c', line], { cwd: j.worktree, detached: true, stdio: 'ignore' });
@@ -364,7 +367,7 @@ function launchQueued(board, health, control, events) {
     if (busyUnits.has(unitKey(j)) && j.stage !== 'fix' && !j.parent) continue;
     // Children of one parent (a review and a fix) share its worktree: one at a time.
     if (j.parent && running.some((r) => r.parent === j.parent)) continue;
-    const worker = pickWorker(j.stage, { health, running, excludeFamilies: excludedFamilies(board, j) });
+    const worker = pickWorker(j.stage, { health, running, excludeFamilies: excludedFamilies(board, j), avoid: j.avoid || [] });
     if (!worker) continue; // waits; other stages keep flowing
     if (DRY) { console.log(`[dry-run] would launch ${j.id} on ${worker}`); running.push({ worker }); continue; }
     try {
@@ -608,6 +611,8 @@ function reapOne(board, health, events, j) {
   if (quota || (code === 124 && !tail.trim())) {
     const mins = cool(health, j.worker, tail.slice(-300) || `exit ${code}`);
     j.status = 'queued';
+    // A limit says nothing about the work, so it must not use up one of the job's three attempts.
+    j.attempts = Math.max(0, (j.attempts || 1) - 1);
     log(board, j, `${j.worker} hit a limit (exit ${code}); cooling ${mins} min; requeued`);
     events.push(`⏸ ${j.worker} cooling ${mins} min; ${j.id} moves to the next worker`);
     return;
@@ -976,7 +981,7 @@ function handleCommand(text, { board, decisions, control, health }, via = 'cli')
       const j = board.jobs.find((x) => x.id === arg.split(/\s+/)[0]);
       if (!j) return `no job "${arg}". "crew status" lists job ids.`;
       if (v === 'stop') { if (j.pid && alive(j.pid)) try { process.kill(-j.pid); } catch {} j.status = 'blocked'; log(board, j, `stopped by owner via ${via}`); return `stopped ${j.id}`; }
-      j.status = 'queued'; j.attempts = 0; j.launchErrors = 0; log(board, j, `requeued by owner via ${via}`); return `requeued ${j.id}`;
+      j.status = 'queued'; j.attempts = 0; j.launchErrors = 0; delete j.avoid; delete j.feedback; log(board, j, `requeued by owner via ${via}`); return `requeued ${j.id}`;
     }
     if (v.startsWith('maint')) {
       const sub = (arg.split(/\s+/)[0] || 'status').toLowerCase();
