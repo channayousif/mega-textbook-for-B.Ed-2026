@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Point estimate on a number line</title><desc id="d">A number line from 28 to 42 with an unknown population mean shown as a question mark and the point estimate of 34.2 marked as a solid dot labelled 'our best single guess'.</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:15px;fill:var(--ink)} .h{font-size:16px;font-weight:700;fill:var(--ink)} .sh{font-size:14px;font-weight:600;fill:var(--ink)} .body{font-size:14px;fill:var(--ink)} .small{font-size:13px;fill:var(--muted)} .c{text-anchor:middle} .wm{fill:var(--wm);font-size:11px} .ah{fill:var(--ink)} .tick{stroke:var(--ink);stroke-width:1.5} .axis{stroke:var(--ink);stroke-width:2} .est{fill:var(--a1)} .est-ring{fill:none;stroke:var(--a1);stroke-width:2.5} .q{fill:var(--a3);font-size:22px;font-weight:700} .line{stroke:var(--line);stroke-width:2}</style><rect class="bg" x="0" y="0" width="780" height="420"/>
+
+  <!-- Axis line -->
+  <line class="axis" x1="60" y1="120" x2="720" y2="120"/>
+
+  <!-- Ticks every 2 units: 28,30,32,34,36,38,40,42 -->
+  <!-- spacing: 660px / 14 units = 47.14 px per unit, 2 units = 94.28 px -->
+  <g class="small">
+    <line class="tick" x1="60" y1="110" x2="60" y2="130"/><text class="c" x="60" y="150">28</text>
+    <line class="tick" x1="154" y1="115" x2="154" y2="125"/><text class="c" x="154" y="150">30</text>
+    <line class="tick" x1="249" y1="115" x2="249" y2="125"/><text class="c" x="249" y="150">32</text>
+    <line class="tick" x1="343" y1="110" x2="343" y2="130"/><text class="c" x="343" y="150">34</text>
+    <line class="tick" x1="437" y1="115" x2="437" y2="125"/><text class="c" x="437" y="150">36</text>
+    <line class="tick" x1="532" y1="115" x2="532" y2="125"/><text class="c" x="532" y="150">38</text>
+    <line class="tick" x1="626" y1="115" x2="626" y2="125"/><text class="c" x="626" y="150">40</text>
+    <line class="tick" x1="720" y1="110" x2="720" y2="130"/><text class="c" x="720" y="150">42</text>
+  </g>
+
+  <!-- Unknown population mean as a question mark (placed near 32) -->
+  <text class="q c" x="249" y="78">?</text>
+  <text class="small c" x="249" y="98">True population mean (unknown)</text>
+
+  <!-- Point estimate dot at 34.2 (just right of 34) -->
+  <circle class="est" cx="352" cy="120" r="9"/>
+  <circle class="est-ring" cx="352" cy="120" r="9"/>
+
+  <!-- Leader line and label for the point estimate -->
+  <line class="line" x1="352" y1="111" x2="430" y2="62"/>
+  <rect class="panel" x="300" y="30" width="230" height="36" rx="6"/>
+  <text class="sh c" x="415" y="52">Our best single guess: 34.2</text>
+
+  <!-- Annotation panel -->
+  <rect class="panel" x="60" y="200" width="660" height="180" rx="8"/>
+  <text class="h" x="85" y="232">Reading this figure</text>
+  <text class="body" x="85" y="258">The question mark near 32 on the line is the population mean we are</text>
+  <text class="body" x="85" y="278">trying to estimate. We do not know its value because we only visited a</text>
+  <text class="body" x="85" y="298">sample of 15 schools, not all 120.</text>
+  <text class="body" x="85" y="324">The solid dot at 34.2 is our point estimate: the single number from our</text>
+  <text class="body" x="85" y="344">sample that we report as our best guess of the population mean.</text>
+  <text class="body" x="85" y="370">Because the true value is unknown, we cannot say how close 34.2 is.</text>
+
+  <!-- Wordmark -->
+  <text class="wm" x="765" y="410" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>
