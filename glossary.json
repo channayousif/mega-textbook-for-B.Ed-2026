@@ -2288,5 +2288,40 @@
     "term": "Outlier",
     "definition_en": "A data point that falls far from the general pattern of the rest of the data in a plot or distribution.",
     "definition_ur": "ایک ڈیٹا نقطہ جو پلٹ یo تقسیم میں باقی ڈیٹا کے عام نمونے سے بہت دور ہو۔"
+  },
+  {
+    "term": "Estimator",
+    "definition_en": "A statistic used to estimate an unknown population parameter; for example, the sample mean is an estimator of the population mean.",
+    "definition_ur": "ایک شماریاتی مقدار جو کسی نامعلوم آبادی کے پیرامیٹر کا اندازہ لگانے کے لیے استعمال ہوتی ہے؛ مثال کے طور پر، نمون۔ اوسط آبادی اوسط کا اندازہ لگانے والا ہے۔"
+  },
+  {
+    "term": "Point estimate",
+    "definition_en": "A single value computed from a sample and used as the best guess of an unknown population parameter; for example, a sample mean of 34.2 is a point estimate of the population mean.",
+    "definition_ur": "نمونے سے حاصل کی گئی ایک واحد مقدار جو کسی نامعلوم آبادی پیرامیٹر کی بہترین اندازہ لگانے کے لیے استعمال ہوتی ہے؛ مثال کے طور پر، 34.2 کا نمونہ اوسط آبادی اوسط کا ایک نقطہ اندازہ ہے۔"
+  },
+  {
+    "term": "Interval estimate",
+    "definition_en": "A range of values, computed from a sample, within which a population parameter is estimated to lie; a confidence interval is the most common type.",
+    "definition_ur": "نمونے سے حاصل کی گئی مقداروں کی ایک حد جس کے اندر آبادی پیرامیٹر موجود ہونے کا اندازہ لگایا جاتا ہے؛ اعتماد وقفہ اس کا سب عام قسم ہے۔"
+  },
+  {
+    "term": "Confidence interval",
+    "definition_en": "An interval estimate, built around a point estimate, that is designed to contain the unknown population parameter with a chosen confidence level (commonly 95 per cent).",
+    "definition_ur": "ایک وقفہ اندازہ جو نقطہ اندازہ کے ارد گرد بنایا جاتا ہے اور اس مقصد سے کہ نامعلوم آبادی پیرامیٹر کو منتخب اعتماد کی سطح (عام طور پر 95 فیصد) کے ساتھ شامل کرے۔"
+  },
+  {
+    "term": "Confidence level",
+    "definition_en": "The percentage of confidence intervals that would capture the true population parameter if the sampling and interval-building process were repeated many times; 95 per cent is the most common choice.",
+    "definition_ur": "اعتماد  stoppages کا وہ فیصد جو اگر نمونہ بنانے اور وقفہ بنانے کا عمل کئی بار دہرایا جائے تو حقیقی آبادی پیرامیٹر کو پکڑ لے؛ 95 فیسب سب زیادہ عام انتخاب ہے۔"
+  },
+  {
+    "term": "Margin of error",
+    "definition_en": "The amount added to and subtracted from a point estimate to build a confidence interval; it equals the critical value multiplied by the standard error.",
+    "definition_ur": "وہ مقدار جو نقطہ اندازہ میں شامل کی جاتی ہے اور اسے میں سے کھینچا جاتا ہے تاکہ اعتماد وقفہ بنایا جا سکے؛ یہ نماوندی مقدار اور معیاری غلطی کے حاصل ضرب کے برابر ہے۔"
+  },
+  {
+    "term": "Normal model",
+    "definition_en": "A symmetric, bell-shaped probability distribution used to model many natural quantities and the sampling distribution of the mean; characterised by its mean and standard deviation.",
+    "definition_ur": "ایک تشہیری، گھنٹی کی شکل کا احتمال تقسیم جو بہت سی قدری مقداروں اور اوسط کے نمونہ تقسیم کی نمائندگی کے لیے استعمال ہوتا ہے؛ اپنے اوسط اور معیاری انحراف سے ممتاز۔"
   }
 ]

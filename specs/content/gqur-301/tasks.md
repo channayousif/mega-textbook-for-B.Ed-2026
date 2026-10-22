@@ -106,7 +106,7 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 13 | G6 assets | ▢ | | |
 | Unit 13 | G7 publish | ▢ | | |
 | Unit 14 | G1 unit-spec | ▢ | | guide Chapter 14; intake re-evaluation advised (D-2026-0070) |
-| Unit 14 | G2 en-draft | ▢ | | |
+| Unit 14 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-14/G2/20261022T002029Z-gates.json |
 | Unit 14 | G3 en-review | ▢ | | |
 | Unit 14 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 14 | G5 ur-review | ▢ | | |
