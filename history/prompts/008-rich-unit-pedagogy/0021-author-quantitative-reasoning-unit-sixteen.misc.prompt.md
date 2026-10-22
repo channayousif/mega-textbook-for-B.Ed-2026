@@ -40,9 +40,9 @@ files:
   - specs/content/gqur-301/concepts/unit-16.md
   - specs/content/gqur-301/authoring/unit-16/design.md
   - specs/content/gqur-301/authoring/unit-16/handoff.md
-  - specs/content/gqur-301/sources/texts/lane2023-u16.md
-  - specs/content/gqur-301/sources/texts/pbs-u16.md
-  - specs/content/gqur-301/sources/texts/openstax-stats-u16.md
+  - specs/content/gqur-301/sources/texts/lane-u16-2026.md
+  - specs/content/gqur-301/sources/texts/pbs-u16-2026.md
+  - specs/content/gqur-301/sources/texts/openstax-u16-2026.md
 tests:
   - npm run check:content (baseline and repair loop)
   - npm run check:figures
@@ -80,3 +80,7 @@ Authored the three English topic cycles, opening, teacher notes and 10/10/5 asse
 - Graders run and results (PASS/FAIL): Depth and figures PASS; palette 46 PASS. Final complete gate status recorded in authoring evidence after G2.
 - Prompt variant (if applicable): null
 - Next experiment (smallest change to try): Independent reviewer checks actual page and print layout in an authorised browser environment.
+
+## Evidence repair checkpoint
+
+The first G2 record became stale when an authoring handoff paragraph was added; that paragraph was removed. Manifest inspection also showed that excerpt keys with a unit suffix were not bound by the existing key parser. Unit-specific keys now end in -2026 so the supported parser binds all three real source-note files. The original evidence remains auditable as a superseded attempt; a fresh record will bind the repaired committed inputs. MDX syntax passed for all six pages.
