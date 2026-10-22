@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">نقطہ اندازے کا حل شدہ جدول</title><desc id="d">دو نقطہ اندازوں کا موازنہ کرنے والا جدول: کمرۂ جماعت کے حجم سے 34.2 طلبہ کا اوسط کا اندازہ، اور اسکول لائبریری کے سروے سے 0.60 کا تناسب کا اندازہ، فارمولوں کے ساتھ۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:15px;fill:var(--ink)} .h{font-size:16px;font-weight:700;fill:var(--ink)} .sh{font-size:14px;font-weight:600;fill:var(--ink)} .body{font-size:14px;fill:var(--ink)} .small{font-size:13px;fill:var(--muted)} .c{text-anchor:middle} .wm{fill:var(--wm);font-size:11px} .ah{fill:var(--ink)} .row1{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2} .row2{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2} .grid{stroke:var(--ink);stroke-width:1;opacity:0.3} .start{text-anchor:start}</style><rect class="bg" x="0" y="0" width="780" height="420"/>
+
+  <!-- Title -->
+  <text class="h" x="730" y="40" text-anchor="end">ضلعی سروے سے دو نقطہ اندازے</text>
+
+  <!-- Table header (columns mirrored for RTL) -->
+  <rect class="panel" x="50" y="58" width="680" height="40" rx="6"/>
+  <text class="sh c" x="590" y="84">اندازے کی قسم</text>
+  <text class="sh c" x="365" y="84">فارمولا</text>
+  <text class="sh c" x="165" y="84">حاصل شدہ قدر</text>
+
+  <!-- Row 1: Mean estimate -->
+  <rect class="row1" x="50" y="102" width="680" height="90" rx="6"/>
+  <text class="sh c" x="590" y="130">نمونے کا اوسط (x¯)</text>
+  <text class="body c" x="590" y="156">نمونے کی تمام قدروں کا</text>
+  <text class="body c" x="590" y="180">مجموعہ، n سے تقسیم</text>
+  <text class="body c" x="365" y="130" direction="ltr">x¯ = 513 / 15</text>
+  <text class="body c" x="365" y="156" direction="ltr">x¯ = 34.2</text>
+  <text class="sh c" x="165" y="140">34.2 طلبہ</text>
+  <text class="small c" x="165" y="166">فی کمرۂ جماعت</text>
+
+  <!-- Row 2: Proportion estimate -->
+  <rect class="row2" x="50" y="196" width="680" height="90" rx="6"/>
+  <text class="sh c" x="590" y="224">نمونے کا تناسب (p̂)</text>
+  <text class="body c" x="590" y="250">خاصیت والی اکائیوں کی تعداد،</text>
+  <text class="body c" x="590" y="274">n سے تقسیم</text>
+  <text class="body c" x="365" y="224" direction="ltr">p̂ = 9 / 15</text>
+  <text class="body c" x="365" y="250" direction="ltr">p̂ = 0.60</text>
+  <text class="sh c" x="165" y="234">0.60 (60 فیصد)</text>
+  <text class="small c" x="165" y="260">اسکولوں میں لائبریری ہے</text>
+
+  <!-- Grid lines between columns -->
+  <line class="grid" x1="450" y1="58" x2="450" y2="286"/>
+  <line class="grid" x1="280" y1="58" x2="280" y2="286"/>
+
+  <!-- Annotation panel -->
+  <rect class="panel" x="50" y="300" width="680" height="96" rx="8"/>
+  <text class="h" x="705" y="324" text-anchor="end">اس جدول کو کیسے پڑھیں</text>
+  <text class="body" x="705" y="352" text-anchor="end">دونوں قطاروں میں ایک ہی خیال ہے: نمونے سے حاصل ایک واحد عدد آبادی کی نامعلوم قدر کی جگہ لیتا ہے۔</text>
+  <text class="body" x="705" y="380" text-anchor="end">نمونے کا اوسط آبادی کے اوسط کا، اور نمونے کا تناسب آبادی کے تناسب کا اندازہ لگاتا ہے۔</text>
+
+  <!-- Wordmark -->
+  <text class="wm" x="15" y="412" text-anchor="start" aria-hidden="true">textbook.com.pk</text>
+</svg>

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 560" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">اعتماد وقفہ بنانے کے مراحل</title><desc id="d">پانچ خانوں اور تیروں پر مشتمل ایک بہاؤ نقشہ جو مراحل دکھاتا ہے: نمونے کا اوسط نکالیں، معیاری خطا نکالیں، فیصلہ کن قدر معلوم کریں، غلطی کی حد نکالیں، وقفہ بنائیں۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:15px;fill:var(--ink)} .h{font-size:16px;font-weight:700;fill:var(--ink)} .sh{font-size:14px;font-weight:600;fill:var(--ink)} .body{font-size:14px;fill:var(--ink)} .small{font-size:13px;fill:var(--muted)} .c{text-anchor:middle} .wm{fill:var(--wm);font-size:11px} .ah{fill:var(--ink)} .box{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2} .arrow{stroke:var(--ink);stroke-width:2.5;fill:none} .step{fill:var(--a1)}</style><rect class="bg" x="0" y="0" width="780" height="560"/>
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" class="ah"/></marker></defs>
+
+  <!-- Title -->
+  <text class="h" x="760" y="38" text-anchor="end">اوسط کے لیے 95 فیصد اعتماد وقفہ بنانے کے پانچ مراحل</text>
+
+  <!-- Step 1 -->
+  <rect class="box" x="240" y="56" width="300" height="56" rx="8"/>
+  <text class="sh c" x="390" y="90">مرحلہ 1: نمونے کا اوسط (x¯) نکالیں</text>
+
+  <line class="arrow" x1="390" y1="112" x2="390" y2="136" marker-end="url(#ar)"/>
+
+  <!-- Step 2 -->
+  <rect class="box" x="240" y="136" width="300" height="56" rx="8"/>
+  <text class="sh c" x="390" y="170">مرحلہ 2: معیاری خطا (s / √n) نکالیں</text>
+
+  <line class="arrow" x1="390" y1="192" x2="390" y2="216" marker-end="url(#ar)"/>
+
+  <!-- Step 3 -->
+  <rect class="box" x="240" y="216" width="300" height="56" rx="8"/>
+  <text class="sh c" x="390" y="240">مرحلہ 3: اعتماد سطح چنیں</text>
+  <text class="sh c" x="390" y="263">اور z* (1.96) معلوم کریں</text>
+
+  <line class="arrow" x1="390" y1="272" x2="390" y2="296" marker-end="url(#ar)"/>
+
+  <!-- Step 4 -->
+  <rect class="box" x="240" y="296" width="300" height="56" rx="8"/>
+  <text class="sh c" x="390" y="330">مرحلہ 4: غلطی کی حد (z* x SE) نکالیں</text>
+
+  <line class="arrow" x1="390" y1="352" x2="390" y2="376" marker-end="url(#ar)"/>
+
+  <!-- Step 5 -->
+  <rect class="box" x="240" y="376" width="300" height="56" rx="8"/>
+  <text class="sh c" x="390" y="400">مرحلہ 5: وقفہ بنائیں</text>
+  <text class="sh c" x="390" y="423" direction="ltr">(x¯ - حد, x¯ + حد)</text>
+
+  <!-- Annotation panel on the right (RTL reading order) -->
+  <rect class="panel" x="560" y="56" width="200" height="414" rx="8"/>
+  <text class="sh c" x="660" y="84">ہر مرحلہ کیا کرتا ہے</text>
+  <text class="small c" x="660" y="112">مرحلہ 1: نمونے کا</text>
+  <text class="small c" x="660" y="134">مرکز معلوم کریں۔</text>
+  <text class="small c" x="660" y="166">مرحلہ 2: ناپیں کہ نمونوں</text>
+  <text class="small c" x="660" y="188">کے اوسط کتنا بدلتے ہیں۔</text>
+  <text class="small c" x="660" y="220">مرحلہ 3: طے کریں کہ آپ</text>
+  <text class="small c" x="660" y="242">کتنا پُریقین ہونا چاہتے ہیں۔</text>
+  <text class="small c" x="660" y="274">مرحلہ 4: اس یقین کو</text>
+  <text class="small c" x="660" y="296">چوڑائی میں بدلیں۔</text>
+  <text class="small c" x="660" y="328">مرحلہ 5: مرکز میں یہ چوڑائی</text>
+  <text class="small c" x="660" y="350">جمع اور تفریق کریں۔</text>
+  <line x1="575" y1="366" x2="745" y2="366" stroke="var(--ink)" stroke-width="1" opacity="0.3"/>
+  <text class="small c" x="660" y="396">مرحلے 1 اور 2 نمونے کا ڈیٹا</text>
+  <text class="small c" x="660" y="420">استعمال کرتے ہیں۔ مرحلہ 3 چنی</text>
+  <text class="small c" x="660" y="444">گئی اعتماد سطح استعمال کرتا ہے۔</text>
+
+  <!-- Worked example panel on the left -->
+  <rect class="panel" x="20" y="56" width="200" height="414" rx="8"/>
+  <text class="sh c" x="120" y="84">حل شدہ مثال</text>
+  <text class="small c" x="120" y="110" direction="ltr">n = 15, x¯ = 34.2</text>
+  <text class="small c" x="120" y="132" direction="ltr">s = 3.8, z* = 1.96</text>
+  <line x1="35" y1="144" x2="205" y2="144" stroke="var(--ink)" stroke-width="1" opacity="0.3"/>
+  <text class="body c" x="120" y="170" direction="ltr">SE = 3.8 / √15</text>
+  <text class="body c" x="120" y="192" direction="ltr">= 3.8 / 3.87 = 0.98</text>
+  <line x1="35" y1="206" x2="205" y2="206" stroke="var(--ink)" stroke-width="1" opacity="0.3"/>
+  <text class="body c" x="120" y="232">غلطی کی حد</text>
+  <text class="body c" x="120" y="254" direction="ltr">1.96 x 0.98 = 1.92</text>
+  <line x1="35" y1="268" x2="205" y2="268" stroke="var(--ink)" stroke-width="1" opacity="0.3"/>
+  <text class="body c" x="120" y="294">وقفہ</text>
+  <text class="body c" x="120" y="316" direction="ltr">34.2 +/- 1.92</text>
+  <text class="sh c" x="120" y="340" direction="ltr">= (32.28, 36.12)</text>
+  <line x1="35" y1="354" x2="205" y2="354" stroke="var(--ink)" stroke-width="1" opacity="0.3"/>
+  <text class="small c" x="120" y="378">رپورٹ: "ہمارا اندازہ ہے کہ</text>
+  <text class="small c" x="120" y="400">کمرۂ جماعت کا اوسط حجم 32.3</text>
+  <text class="small c" x="120" y="422">اور 36.1 طلبہ کے درمیان ہے،</text>
+  <text class="small c" x="120" y="444">95 فیصد اعتماد کے ساتھ۔"</text>
+
+  <!-- Wordmark -->
+  <text class="wm" x="15" y="550" text-anchor="start" aria-hidden="true">textbook.com.pk</text>
+</svg>
