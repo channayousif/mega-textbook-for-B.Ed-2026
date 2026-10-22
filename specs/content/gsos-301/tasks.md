@@ -39,7 +39,7 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 3 | G1 unit-spec | ▢ | | pending G0 intake |
-| Unit 3 | G2 en-draft | ▢ | | |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | |
 | Unit 3 | G3 en-review | ▢ | | |
 | Unit 3 | G4 ur-translation | ▢ | | |
 | Unit 3 | G5 ur-review | ▢ | | |

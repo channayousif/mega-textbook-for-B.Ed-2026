@@ -2288,5 +2288,65 @@
     "term": "Outlier",
     "definition_en": "A data point that falls far from the general pattern of the rest of the data in a plot or distribution.",
     "definition_ur": "ایک ڈیٹا نقطہ جو پلٹ یo تقسیم میں باقی ڈیٹا کے عام نمونے سے بہت دور ہو۔"
+  },
+  {
+    "term": "Status",
+    "definition_en": "A socially recognized position in a group or society - such as teacher, student, mother, or union member. A person holds many statuses at the same time, and each comes with a set of expected behaviours (roles).",
+    "definition_ur": "گروہ یا معاشرے میں سماجی طور پر پہچانا گیا مقام - جیسے استاد، شاگرد، ماں، یا ینین رکن۔ انسان ایک ساتھ کئی مقامات رکھتا ہے، اور ہر ایک کے ساتھ متوقع رویے (کردار) ہوتے ہیں۔"
+  },
+  {
+    "term": "Role",
+    "definition_en": "The set of expected behaviours that goes with a particular status. A teacher's status comes with a role: to plan lessons, maintain discipline, and assess learning.",
+    "definition_ur": "متوقع رویے کا وہ مجموعہ جو کسی خاص مقام کے ساتھ ہوتا ہے۔ استاد کے مقام کے ساتھ ایک کردار ہوتا ہے: سبق کی منصوبہ بندی، نظم و ضبط برقرار رکھنا، اور سیکھنے کی تشخیص کرنا۔"
+  },
+  {
+    "term": "Role strain",
+    "definition_en": "The difficulty of meeting the demands of a single role - for example, a teacher who is expected to be both a strict disciplinarian and a warm mentor at the same time.",
+    "definition_ur": "ایک ہی کردار کے تقاضوں کو پورا کرنے میں دشواری - مثلاً ایک استاد جس سے ایک ہی وقت سخت ضابطہ کار اور گرم مربی دونوں ہونے کی توقع ہو۔"
+  },
+  {
+    "term": "Social group",
+    "definition_en": "Two or more people who interact regularly, share similar characteristics, and have a sense of belonging together. A family, a classroom, and a cricket team are all social groups.",
+    "definition_ur": "دو یا زیادہ لوگ جو باقاعدگی سے رابطہ رکھتے ہیں، مشکل ہی خصوصیات رکھتے ہیں، اور آپس میں شمولیت کا احساس رکھتے ہیں۔ خاندان، کلاس روم، اور کرکٹ ٹیم سب معاشرتی گروہ ہیں۔"
+  },
+  {
+    "term": "Primary group",
+    "definition_en": "A small, close, long-lasting group whose members share warm, personal, direct relationships - such as a family or a close circle of friends.",
+    "definition_ur": "ایک چھوٹا، قریبی، طویل مدتی گروہ جس کے اراکین گرم، ذاتی، براہ راست رشتے بانٹتے ہیں - جیسے خاندان یا دوستوں کا ایک قریبی حلقہ۔"
+  },
+  {
+    "term": "Secondary group",
+    "definition_en": "A larger, more formal, task-focused group whose members interact for a specific purpose and share more distant, impersonal relationships - such as a school staff, a government office, or a professional association.",
+    "definition_ur": "ایک بڑا، زیادہ رسمی، کام پر مبنی گروہ جس کے اراکین ایک مخصوص مقصد کے لیے رابطہ رکھتے ہیں اور دور، غیر ذاتی رشتے رکھتے ہیں - جیسے اسکول عملہ، سرکاری دفتر، یا پیشہ ورانہ ایسوسی ایشن۔"
+  },
+  {
+    "term": "Organization",
+    "definition_en": "A large, formal group designed to achieve specific goals - such as a school, a hospital, a government department, or a business.",
+    "definition_ur": "ایک بڑا، رسمی گروہ جو مخصوص اہداف کے لیے ترتیب دیا جاتا ہے - جیسے اسکول، ہسپتال، سرکاری محکمہ، یا کاروبار۔"
+  },
+  {
+    "term": "Bureaucracy",
+    "definition_en": "A form of organization that uses hierarchies, written rules, specialized roles, and formal procedures to carry out large-scale tasks. Weber argued it brings predictability and fairness, though critics call it slow and rigid.",
+    "definition_ur": "ایک تنظیم کا ایک روپ جو بڑے پیمانے پر کام انجام دینے کے لیے درجہ بندی، تحریری قواعد، مخصوص کردار، اور رسمی طریقہ کار استعمال کرتا ہے۔ ویبر کے مطابق یہ پیش گئی اور انصاف لاتا ہے، اگرچہ نقاد اسے سست اور سخت کہتے ہیں۔"
+  },
+  {
+    "term": "Cooperation",
+    "definition_en": "A form of social interaction in which individuals or groups work together toward a shared goal. A group of teachers planning a joint lesson is cooperating.",
+    "definition_ur": "معاشرتی تعامل کا ایک روپ جس میں افراد یا گروہ مشترکہ ہدف کی طرف مل کر کام کرتے ہیں۔ اساتذہ کا ایک گروہ جو مشترکہ سبق کی منصوبہ بندی کر رہا ہو تعاون کر رہا ہے۔"
+  },
+  {
+    "term": "Competition",
+    "definition_en": "A form of social interaction in which individuals or groups strive against each other for a limited reward - such as a promotion, a prize, or admission to a college. Unlike conflict, competition follows agreed rules.",
+    "definition_ur": "معاشرتی تعامل کا ایک روپ جس میں افراد یا گروہ محدود عام کے لیے ایک دوسرے سے مقابلہ کرتے ہیں - جیسے ترقی، انعام، یا کالج میں داخلہ۔ تصادم کے برعکس، مقابلہ متفقہ قواعد کی پیروی کرتا ہے۔"
+  },
+  {
+    "term": "Conflict",
+    "definition_en": "A form of social interaction in which individuals or groups deliberately oppose each other to achieve a goal or resist another's demands. Conflict can be destructive, but it can also drive positive social change.",
+    "definition_ur": "معاشرتی تعامل کا ایک روپ جس میں افراد یا گروہ جان بوجھ کر ایک دوسرے کے خلاف کھڑے ہوتے ہیں تاکہ کوئی ہدف حاصل کریں یا دوسرے کے تقاضوں کا مقابلہ کریں۔ تصادم تباہ کن ہو سکتا ہے، لیکن یہ مثبت معاشرتی تبدیلی کا بھی سبب بن سکتا ہے۔"
+  },
+  {
+    "term": "Social interaction",
+    "definition_en": "The process by which people act and react in relation to others - through cooperation, competition, conflict, communication, and other patterned exchanges.",
+    "definition_ur": "وہ عمل جس کے ذریعے لوگ ایک دوسرے کے ساتھ عمل اور ردعمل کرتے ہیں - تعاون، مقابلہ، تصادم، مواصلات، اور دوسرے پیچیدہ تبادلوں کے ذریعے۔"
   }
 ]
