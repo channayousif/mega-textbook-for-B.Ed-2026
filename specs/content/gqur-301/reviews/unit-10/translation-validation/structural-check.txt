@@ -1,0 +1,9 @@
+File-set parity: PASS (4 MDX files)
+index.mdx: metadata, heading levels, components/imports, numbered items, table shapes, MDX compile PASS
+topic-01.mdx: metadata, heading levels, components/imports, numbered items, table shapes, MDX compile PASS
+topic-02.mdx: metadata, heading levels, components/imports, numbered items, table shapes, MDX compile PASS
+unit-assessment.mdx: metadata, heading levels, components/imports, numbered items, table shapes, MDX compile PASS
+All 6 banked key_terms: PASS; 5 unbanked core terms recorded separately as proposals
+All 4 figure IDs, localized sources, page alt/SVG desc equality, Nastaliq stack, no direction attribute, SVG budgets: PASS
+Assessment 10/10/5 counts and final bounded answers section: PASS
+Translator MCQ self-check: الف، ب، ج، ج، ب، ب، ب، الف، ب، ب; matches translated and English option order/key (not independent G5 evidence)
