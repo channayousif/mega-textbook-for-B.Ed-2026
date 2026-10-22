@@ -1,0 +1,232 @@
+---
+title: "Topic 15.1 - Concept of hypothesis testing"
+description: "The logic of hypothesis testing: stating null and alternative hypotheses, the test statistic, the p-value, and the decision rule."
+course_code: GQUR-301
+unit_no: 15
+topic_no: 1
+topic_label: "15.1"
+clo_refs:
+  - "SLO:GQUR-301-15-1"
+blooms_summary: "Remember the five steps of a hypothesis test; understand what a p-value measures and what it does not; apply the steps to state hypotheses for a school claim; analyze what the decision means and what it leaves open."
+est_reading_minutes: 8
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+
+<PrintHandout />
+
+## A real classroom situation
+
+A head teacher in Matiari has introduced a new reading method for Class 4. The
+district average on the Grade 4 Urdu reading test over the past five years is
+72 marks out of 100, with a standard deviation of 10 marks. After one term, the
+head teacher tests a class of 35 pupils who used the new method. Their mean
+score is 75. She asks: "Is my class truly doing better than the district
+average, or could a rise of 3 marks just be the usual ups and downs of test
+scores?" A hypothesis test answers exactly this question. It does not prove the
+new method works. It measures how surprising the sample result would be if, in
+reality, the method made no difference.
+
+<Figure id="fig-U15-1" src="/img/figures/gqur-301/unit-15/fig-U15-1.svg" alt="A flowchart showing the five steps of a hypothesis test in order: state hypotheses, choose significance level, compute the test statistic, find the p-value, and decide whether to reject the null hypothesis by comparing the p-value with the significance level." />
+
+## Explanation
+
+### What a hypothesis test does
+
+A **hypothesis test** is a procedure that uses sample data to decide between
+two competing claims about a population (Illowsky & Dean, 2023, Chapter 9). One
+claim is called the **null hypothesis**, written *H*<sub>0</sub>. It represents
+"no effect" or "no difference" and is the claim we test against. The other is
+the **alternative hypothesis**, written *H*<sub>1</sub> (or *H*<sub>a</sub>).
+It represents the effect or difference the researcher suspects.
+
+The test does not prove *H*<sub>1</sub> is true. It asks: "If *H*<sub>0</sub>
+were true, how likely is it that we would see a sample result at least this
+extreme?" If that probability is very small, the data are hard to reconcile
+with *H*<sub>0</sub>, and we reject *H*<sub>0</sub> in favour of
+*H*<sub>1</sub>.
+
+### Step 1: State the hypotheses
+
+The null hypothesis always contains equality: *H*<sub>0</sub>: *μ* = *μ*<sub>0</sub>.
+The alternative may be two-tailed (*μ* ≠ *μ*<sub>0</sub>), left-tailed
+(*μ* &lt; *μ*<sub>0</sub>), or right-tailed (*μ* &gt; *μ*<sub>0</sub>),
+depending on the question.
+
+**Worked example.** A district mean reading score is 72. A head teacher wants to
+know whether the new method produces a *different* score (not specifically a
+higher one).
+
+- *H*<sub>0</sub>: *μ* = 72 (the new method gives the same mean as the district).
+- *H*<sub>1</sub>: *μ* ≠ 72 (the new method gives a different mean).
+
+If instead the head teacher wanted to test whether the new method gives a
+*higher* mean, the alternative would be *H*<sub>1</sub>: *μ* &gt; 72 (a
+one-tailed, right-tailed test). The choice depends on the research question, not
+on the data.
+
+### Step 2: Choose the significance level
+
+The **significance level**, written *α*, is the threshold for "too surprising".
+It is the probability of rejecting *H*<sub>0</sub> when *H*<sub>0</sub> is
+actually true (a "false alarm"). The most common choice is *α* = 0.05, meaning
+we accept a 5% risk of a false alarm. *α* = 0.01 is stricter; *α* = 0.10 is
+more lenient (Lane & Ziemer, n.d., "Hypothesis Testing").
+
+### Step 3: Choose the test and compute the test statistic
+
+The **test statistic** is a single number that measures how far the sample
+result is from what *H*<sub>0</sub> predicts, in units of standard error. For a
+mean with a known population standard deviation *σ*, the test statistic is a
+*z*-score:
+
+*z* = (<span style={{whiteSpace: 'nowrap'}}>x̄ − μ<sub>0</sub></span>) / (σ / √n)
+
+where x̄ is the sample mean, *μ*<sub>0</sub> is the value under *H*<sub>0</sub>,
+and *n* is the sample size.
+
+**Worked example.** For the Matiari reading class: x̄ = 75, μ<sub>0</sub> = 72,
+σ = 10, n = 35.
+
+Standard error = σ / √n = 10 / √35 = 10 / 5.92 = 1.69.
+
+*z* = (75 − 72) / 1.69 = 3 / 1.69 = **1.78**.
+
+A *z*-score of 1.78 means the sample mean is 1.78 standard errors above the
+district mean. Topic 15.2 works through the full calculation.
+
+### Step 4: Find the p-value
+
+The **p-value** is the probability of getting a test statistic at least as
+extreme as the one observed, *if H*<sub>0</sub> is true* (Illowsky & Dean,
+2023, Section 9.2, NIST/SEMATECH, Section 1.3.5.3). A small p-value means the
+observed result is unlikely under *H*<sub>0</sub>.
+
+<Figure id="fig-U15-2" src="/img/figures/gqur-301/unit-15/fig-U15-2.svg" alt="A normal distribution curve centred at the null hypothesis mean of 72. Both tails beyond the critical values are shaded, showing the rejection regions for a two-tailed test at the 5% significance level. The observed sample mean of 75 falls in the right tail." />
+
+For a two-tailed test with *z* = 1.78, the p-value is 2 × P(*Z* &gt; 1.78) =
+2 × 0.0375 = **0.075**. For a one-tailed (right) test it would be P(*Z* &gt;
+1.78) = 0.0375. Topic 15.2 explains how these come from the standard normal
+table.
+
+### Step 5: Make the decision
+
+Compare the p-value with *α*:
+
+- If p-value ≤ *α*: **reject *H*<sub>0</sub>**. The result is statistically
+  significant. The data provide enough evidence for *H*<sub>1</sub>.
+- If p-value &gt; *α*: **do not reject *H*<sub>0</sub>**. The result is not
+  statistically significant. The data do not provide enough evidence for
+  *H*<sub>1</sub>.
+
+**Worked example.** With *α* = 0.05 and a two-tailed p-value of 0.075:
+
+0.075 &gt; 0.05, so we **do not reject *H*<sub>0</sub>**. The 3-mark rise could
+plausibly happen by chance even if the new method made no real difference. The
+data do not provide sufficient evidence that the new method changes the mean
+score.
+
+**Common misconception.** Many trainees think "the null hypothesis is what the
+ researcher believes". It is the opposite: the null hypothesis is usually the
+ claim of "no effect" that the researcher is trying to challenge. The
+ researcher believes the *alternative* and hopes the data will reject the null.
+A second common error is thinking "a small p-value proves the alternative
+ hypothesis". A small p-value only says the data are surprising under the null.
+ It does not measure the size of the effect or prove the alternative is true.
+Third, "failing to reject the null" is **not** the same as proving the null is
+ true. It means the data are not surprising enough to rule it out. The
+ distinction matters when you report test results to a school.
+
+## Activity: State the hypotheses in pairs
+
+Work in pairs. About 15 minutes.
+
+1. Each pair writes five short claims a teacher or head teacher might make about
+   their school, for example "Our Class 6 math score is higher than the
+   district average of 65" or "The attendance rate on Fridays is different
+   from the rate on other days".
+2. For each claim, state *H*<sub>0</sub> and *H*<sub>1</sub> and say whether
+   the test is two-tailed, left-tailed or right-tailed. Give a reason.
+3. Swap your list with the next pair. Check their hypotheses. For any claim
+   where you disagree, discuss and agree. Claims about "higher" versus
+   "different" are the ones most likely to cause disagreement.
+4. As a class, collect the claims where pairs disagreed and discuss why the
+   wording of the claim decides the alternative.
+
+## Check your understanding
+
+1. *(Remember)* State in one sentence what a hypothesis test decides.
+2. *(Understand)* Explain the difference between the null hypothesis and the
+   alternative hypothesis, with one school example of each.
+3. *(Apply)* A coach claims that the average time a pupil takes to run 400
+   metres is less than 75 seconds. State *H*<sub>0</sub> and *H*<sub>1</sub>
+   and say whether the test is one-tailed or two-tailed.
+4. *(Apply)* A two-tailed test gives a p-value of 0.03 with *α* = 0.05. State
+   the decision and explain what it means in one sentence.
+
+## Summary
+
+A hypothesis test uses sample data to decide between a null hypothesis (no
+effect) and an alternative hypothesis (the suspected effect). You choose a
+significance level *α*, compute a test statistic, find the p-value (how
+surprising the result is under the null), and reject the null only when the
+p-value is at most *α*. A small p-value does not prove the alternative, and
+failing to reject the null does not prove the null is true.
+
+## Self-assessment checklist
+
+- [ ] I can state the null and alternative hypotheses for a school claim and choose the correct tail.
+- [ ] I can explain what a p-value measures and what it does not measure.
+- [ ] I can apply the decision rule: reject the null when the p-value is at most the significance level.
+- [ ] I can explain why "do not reject the null" is not the same as "the null is true".
+
+## Try this at your practicum school
+
+Ask your cooperating teacher for one claim they hear about teaching or pupil
+performance, for example "Group work improves test scores" or "Morning
+attendance is the same as afternoon attendance". Write *H*<sub>0</sub> and
+*H*<sub>1</sub> for that claim, say whether the test should be one-tailed or
+two-tailed, and explain what a p-value would mean to the teacher in plain
+language.
+
+## Summative task
+
+A district education officer in Shaheed Benazizabad says the average Class 7
+science score in the district is 60 out of 100. A teacher who uses group
+investigations thinks her class does *better* than this.
+
+a) State *H*<sub>0</sub> and *H*<sub>1</sub> and say whether the test is
+   one-tailed or two-tailed.
+
+b) The teacher tests 30 pupils and finds a mean of 64. Explain, without
+   calculating the test statistic, what a p-value would measure in this
+   context.
+
+c) In 80-120 words, analyze what it would mean if the p-value came out as
+   0.02 with *α* = 0.05. Explain what the teacher could and could not
+   conclude, and why the result would not "prove" that group investigation
+   raises scores.
+
+**Mini-rubric**
+
+| Criterion | Levels |
+|---|---|
+| *Hypotheses stated (Apply)* | 0-2: both hypotheses correct with the correct tail / one correct / neither. |
+| *p-value explained (Understand)* | 0-2: explains it measures how surprising the sample mean is if the district mean is truly 60 / partial explanation / incorrect. |
+| *Decision and limits (Analyze)* | 0-3: states reject H0, explains what that means for the officer's claim, and notes that statistical significance does not prove causation or measure the size of the improvement / two of these / one or none. |
+
+## Further reading
+
+Illowsky, B., & Dean, S. (2023). *Introductory Statistics 2e.* OpenStax.
+https://openstax.org/books/introductory-statistics-2e/pages/9-introduction -
+Chapter 9 introduction, which states the null and alternative hypotheses.
+
+Lane, D. M., & Ziemer, H. (n.d.). *Hypothesis Testing.* Online Statistics
+Education. Rice University.
+https://onlinestatbook.com/2/more_studies/hypothesis_testing.html -
+"The logic of hypothesis testing", with the p-value explained in plain language.
+
+NIST/SEMATECH. *e-Handbook of Statistical Methods*, Section 1.3.5.3, "What is
+a Hypothesis Test?"
+https://www.itl.nist.gov/div898/handbook/eda/section3/eda353.htm

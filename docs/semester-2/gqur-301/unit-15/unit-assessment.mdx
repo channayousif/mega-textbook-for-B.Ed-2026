@@ -1,0 +1,305 @@
+---
+title: "Unit 15 assessment"
+description: "Summative assessment for GQUR-301 Unit 15: 10 MCQs, 10 RRQs and 5 ERQs on hypothesis testing, the z-test and the t-test."
+course_code: GQUR-301
+unit_no: 15
+clo_refs:
+  - "SLO:GQUR-301-15-1"
+  - "SLO:GQUR-301-15-2"
+  - "SLO:GQUR-301-15-3"
+blooms_summary: "Remember what a hypothesis test is and when each test applies; understand the p-value and the decision rule; apply the z-test and t-test to school data; analyze and evaluate test results and claims about statistical significance."
+est_reading_minutes: 12
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+
+<PrintHandout />
+
+## Unit summary
+
+This unit, which follows Chapter 15 of the course guide, introduced the logic of
+hypothesis testing and the two tests a teacher uses most for a single mean.
+
+- Topic 15.1 described a hypothesis test as a five-step procedure: state the
+  null and alternative hypotheses, choose a significance level, compute the test
+  statistic, find the p-value, and decide by comparing the p-value with *α*. A
+  small p-value means the sample result is surprising under the null, not that
+  the alternative is proved. Failing to reject the null does not prove the null
+  is true.
+- Topic 15.2 gave the z-test, which applies when the population standard
+  deviation *σ* is known. The test statistic *z* = (x̄ − μ<sub>0</sub>) /
+  (σ / √n) is compared with the standard normal curve. The p-value depends on
+  whether the test is one-tailed or two-tailed.
+- Topic 15.3 gave the t-test, which applies when *σ* is unknown, especially for
+  a small sample. It replaces *σ* with the sample standard deviation *s* and
+  uses the t-distribution with df = *n* − 1, whose thicker tails make the test
+  more conservative. A complete result reports *t*, df, the p-value, and the
+  decision, followed by a plain-language conclusion.
+
+## Summative assessment
+
+### Multiple-choice questions (MCQs)
+
+Choose the single best answer for each question.
+
+1. *(Remember)* A hypothesis test decides between:
+   - A) Two sample means
+   - B) A null hypothesis and an alternative hypothesis about a population
+   - C) A population mean and a sample mean without any uncertainty
+   - D) A significant result and a correct result
+
+2. *(Understand)* The null hypothesis is the claim that:
+   - A) The researcher believes is true
+   - B) There is an effect or a difference
+   - C) There is no effect or no difference, and it is the claim being tested against
+   - D) The sample data will support
+
+3. *(Understand)* A p-value of 0.04 means that:
+   - A) There is a 4% chance the null hypothesis is true
+   - B) If the null hypothesis were true, the probability of a result at least this extreme is 0.04
+   - C) The alternative hypothesis is 96% likely to be true
+   - D) The result is not statistically significant at any level
+
+4. *(Apply)* A district mean is 70 with a known σ = 12. A class of 36 pupils has
+   a mean of 73. The test statistic for *H*<sub>1</sub>: *μ* &gt; 70 is:
+   - A) *z* = 0.25
+   - B) *z* = 1.50
+   - C) *z* = 3.00
+   - D) *z* = 18.00
+
+5. *(Apply)* For a right-tailed z-test with *z* = 1.75, the p-value is:
+   - A) P(*Z* &gt; 1.75)
+   - B) P(*Z* &lt; 1.75)
+   - C) 2 × P(*Z* &gt; 1.75)
+   - D) P(*Z* = 1.75)
+
+6. *(Remember)* A t-test differs from a z-test because it:
+   - A) Uses the sample standard deviation *s* instead of *σ* and the t-distribution with *n* − 1 degrees of freedom
+   - B) Requires the population standard deviation to be known
+   - C) Uses the normal distribution for any sample size
+   - D) Can only be used with a sample larger than 30
+
+7. *(Understand)* The t-distribution has thicker tails than the normal
+   distribution because:
+   - A) The sample mean is larger than the population mean
+   - B) Using *s* instead of *σ* adds uncertainty, which the thicker tails account for
+   - C) The significance level is always 0.01
+   - D) The sample size is always greater than 30
+
+8. *(Apply)* A sample of 16 pupils has a mean of 50, a sample standard deviation
+   of 8, and the null hypothesis is *μ* = 45. The t-test statistic is:
+   - A) *t* = 0.50
+   - B) *t* = 2.00
+   - C) *t* = 2.50
+   - D) *t* = 4.00
+
+9. *(Understand)* "Reject the null hypothesis at the 5% level" means:
+   - A) The null hypothesis is definitely false
+   - B) The p-value is at most 0.05, so the data are hard to reconcile with the null
+   - C) The sample mean equals the population mean
+   - D) The p-value is greater than 0.05
+
+10. *(Apply)* Which situation calls for a t-test?
+    - A) Testing a mean with a known population standard deviation and a sample of 40
+    - B) Testing a mean with an unknown population standard deviation and a sample of 12
+    - C) Testing a mean with a known population standard deviation and a sample of 10
+    - D) Testing a proportion with a large sample
+
+### Restricted-response questions (RRQs)
+
+Answer each question in a few sentences or a short paragraph.
+
+1. *(Understand)* Explain the difference between the null hypothesis and the
+   alternative hypothesis. Give a school example of a two-tailed alternative and
+   a one-tailed alternative.
+
+2. *(Apply)* A district mean is 80 with a known σ = 15. A class of 49 pupils
+   has a mean of 83. Compute the z-test statistic for *H*<sub>1</sub>: *μ*
+   &gt; 80 and find the p-value.
+
+3. *(Understand)* Explain in one sentence what the significance level *α* =
+   0.05 represents in a hypothesis test.
+
+4. *(Analyze)* A trainee says: "The p-value is 0.03, so there is a 3% chance
+   the null hypothesis is true." Analyze this statement: say what is wrong with
+   it and give the correct interpretation of a p-value of 0.03.
+
+5. *(Apply)* A sample of 20 pupils has a mean of 65 and a sample standard
+   deviation of 10. The null hypothesis is *μ* = 60. Compute the t-test
+   statistic and the degrees of freedom for a two-tailed test.
+
+6. *(Understand)* A t-table gives the critical value for df = 19 at *α* = 0.05
+   (two-tailed) as 2.093. For the *t* you computed in RRQ 5, state the decision
+   and explain what it means.
+
+7. *(Apply)* State three conditions that must hold for a z-test for a mean.
+
+8. *(Analyze)* A teacher rejects the null hypothesis that her class mean equals
+   the district mean of 70. She says: "This proves my teaching method is
+   better." Analyze this claim: separate what the test shows from what it does
+   not show.
+
+9. *(Understand)* Explain why a t-test is more conservative than a z-test on the
+   same data when the sample is small.
+
+10. *(Analyze)* A head teacher wants to compare two classes but runs two
+    separate tests at *α* = 0.05. Explain why the risk of a false alarm across
+    both tests is higher than 5%, and suggest a practical way to be more careful.
+
+### Extended-response questions (ERQs)
+
+Answer each question in a structured paragraph or set of paragraphs.
+
+1. *(Analyze)* A district education officer reports that the average Class 9
+   science score is 65 marks with a known standard deviation of 10 marks. A
+   teacher's class of 36 pupils scores a mean of 68.
+
+   a) Carry out a full two-tailed z-test at *α* = 0.05: state hypotheses,
+      compute the test statistic and p-value, and state the decision.
+
+   b) In 100-150 words, analyze what the officer and the teacher can and cannot
+      conclude from this result. Address whether the test shows the teacher's
+      class is truly above average, what other explanations exist, and what the
+      p-value means in plain language.
+
+2. *(Evaluate)* A school in Khairpur reports these two claims after testing
+   whether the Class 6 math mean differs from the district mean of 55.
+
+   - Teacher A: "*z* = 2.10, *p* = 0.036, so the result is significant and the
+     new method works."
+   - Teacher B: "*z* = 2.10, *p* = 0.036 for a one-tailed test, so the result
+     is not significant because I needed a two-tailed test."
+
+   Evaluate each claim. Identify the error in each, correct it, and explain in
+   100-150 words how the tail choice affects the p-value and the conclusion.
+
+3. *(Analyze)* A teacher in Nawabshah has a class of 14 pupils. Their mean score
+   on a test is 72 with a sample standard deviation of 8. The district mean is
+   68, but the district standard deviation is unknown.
+
+   a) Explain whether a z-test or a t-test is the right choice and why.
+
+   b) Carry out the appropriate test at *α* = 0.05 (two-tailed). The critical
+      value for df = 13 is 2.160.
+
+   c) In 80-120 words, analyze the result. Explain what the teacher can and
+      cannot conclude about her class, and why the small sample limits the
+      strength of the conclusion.
+
+4. *(Evaluate)* Two trainees discuss a hypothesis test that gave a p-value of
+   0.08 with *α* = 0.05.
+
+   - Trainee A: "The null hypothesis is not rejected, so the null is true and
+     there is no difference."
+   - Trainee B: "The null hypothesis is not rejected, so there is not enough
+     evidence to say there is a difference, but that does not prove there is
+     none."
+
+   Evaluate both statements. Identify which is correct, explain the error in
+   the other, and in 100-150 words discuss what practical steps a teacher might
+   take next (for example, collect more data or consider the size of the
+   observed difference) when a test does not reject the null.
+
+5. *(Evaluate)* A head teacher in Tharparkar says: "I will test every class mean
+   against the district average. Any class that is 'significant' at 5% will get
+   a reward, and any class that is not will get extra remedial help. This is
+   fair because the test decides objectively."
+
+   Evaluate this plan across Topics 15.1-15.3. Identify at least three errors or
+   risks in using hypothesis tests this way, and in 150-200 words propose a
+   fairer approach to comparing classes that uses statistics more responsibly.
+   Address the meaning of statistical significance, the risk of false alarms when
+   many tests are run, and the difference between a statistically significant
+   difference and a practically important one.
+
+## Answers and marking guidance
+
+### MCQ answer key
+
+| Item | Answer | Justification |
+|---|---|---|
+| 1 | B | A hypothesis test decides between the null and alternative hypotheses about a population. |
+| 2 | C | The null hypothesis is the claim of "no effect" or "no difference" that is tested against. |
+| 3 | B | The p-value is the probability of a result at least this extreme if H0 were true. |
+| 4 | B | SE = 12/√36 = 12/6 = 2. z = (73 − 70)/2 = 1.50. |
+| 5 | A | A right-tailed test uses the area to the right of z. |
+| 6 | A | A t-test uses s instead of σ and the t-distribution with df = n − 1. |
+| 7 | B | Using s instead of σ adds uncertainty; the thicker tails account for it. |
+| 8 | C | SE = 8/√16 = 8/4 = 2. t = (50 − 45)/2 = 2.50. |
+| 9 | B | Rejecting means the data are hard to reconcile with the null; the p-value is at most 0.05. |
+| 10 | B | A t-test applies when σ is unknown and the sample is small (n = 12). |
+
+### RRQ model answers and mark schemes
+
+1. The null hypothesis (*H*<sub>0</sub>) states "no effect" or "no difference" and contains equality; it is the claim being tested against. The alternative (*H*<sub>1</sub>) states the effect or difference the researcher suspects. Two-tailed example: "the class mean differs from 70" (could be higher or lower). One-tailed example: "the class mean is greater than 70" (specifically higher). (3 marks: 1 for each hypothesis defined, 1 for a correct pair of examples with tails.)
+
+2. SE = 15/√49 = 15/7 = 2.14. *z* = (83 − 80)/2.14 = 3/2.14 = 1.40. For a right-tailed test, p-value = P(*Z* &gt; 1.40) = 1 − 0.9192 = 0.0808. (3 marks: 1 for SE, 1 for z, 1 for p-value.)
+
+3. *α* = 0.05 is the probability of rejecting the null hypothesis when it is actually true (the risk of a false alarm the researcher accepts). (1 mark.)
+
+4. The trainee is wrong. A p-value of 0.03 does not mean there is a 3% chance the null is true. It means that if the null hypothesis were true, the probability of observing a sample result at least this extreme is 0.03. The p-value measures how surprising the data are under the null, not the probability that the null is true. (3 marks: 1 for identifying the error, 1 for the correct interpretation, 1 for explaining what the p-value actually measures.)
+
+5. SE = 10/√20 = 10/4.47 = 2.24. *t* = (65 − 60)/2.24 = 5/2.24 = 2.23. df = 20 − 1 = 19. (3 marks: 1 for SE, 1 for t, 1 for df.)
+
+6. The critical value for df = 19 at *α* = 0.05 (two-tailed) is 2.093. Since 2.23 &gt; 2.093, reject *H*<sub>0</sub>. The data provide sufficient evidence at the 5% level that the true mean differs from 60. (2 marks: 1 for the decision, 1 for the meaning.)
+
+7. (1) The data are a random sample from the population. (2) The population standard deviation *σ* is known. (3) The population is normally distributed or the sample is large enough (*n* ≥ 30) for the Central Limit Theorem to apply. (3 marks: 1 per condition.)
+
+8. The test shows only that the sample mean is surprisingly far from the district mean of 70 if the null were true. It does not prove the teaching method caused the difference. Other explanations include a stronger year group, extra tutoring, or the class being particularly motivated. The test judges the number, not the cause. (3 marks: 1 for what the test shows, 1 for naming an alternative explanation, 1 for stating that the test does not prove causation.)
+
+9. The t-distribution has thicker tails than the normal because using the sample standard deviation *s* instead of the known *σ* adds uncertainty. For the same test statistic, the t-test gives a larger p-value than the z-test, so it is harder to reject the null. This is the correct penalty for not knowing the population spread. (2 marks: 1 for the thicker-tail reason, 1 for the larger p-value consequence.)
+
+10. Each test at *α* = 0.05 has a 5% false-alarm risk. Running two tests raises the chance of at least one false alarm to about 1 − (0.95 × 0.05) ≈ 0.0975, or roughly 10%. A practical way to be more careful is to lower the significance level for each comparison (for example, 0.025 per test) or to focus on the size of the observed differences rather than just significance. (3 marks: 1 for explaining the combined risk, 1 for the approximate combined probability, 1 for a practical suggestion.)
+
+### ERQ rubrics
+
+**ERQ 1 (Analyze - two-tailed z-test on a district claim)**
+
+Correct values: *H*<sub>0</sub>: *μ* = 65, *H*<sub>1</sub>: *μ* ≠ 65. SE = 10/√36 = 10/6 = 1.67. *z* = (68 − 65)/1.67 = 1.80. p-value (two-tailed) = 2 × P(*Z* &gt; 1.80) = 2 × 0.0359 = 0.0718. Decision: do not reject *H*<sub>0</sub> (0.0718 &gt; 0.05).
+
+| Criterion | Band 3 (Full) | Band 2 (Partial) | Band 1 (Limited) | Band 0 |
+|---|---|---|---|---|
+| Test and computation | Hypotheses, SE, z and p-value all correct | Three correct | One or two correct | None |
+| Decision | Decision correct and stated | Decision stated but not linked to p-value | Wrong decision | None |
+| Analysis (Analyze) | Explains what the p-value means in plain language, notes the result is not significant at 5%, and names at least one alternative explanation for a sample mean of 68 | Two of these | One of these | None |
+
+**ERQ 2 (Evaluate - tail choice and the p-value)**
+
+Teacher A's error: a one-tailed p-value of 0.036 corresponds to *z* = 1.80 (approx), but the test claimed is two-tailed. A two-tailed test with *z* = 2.10 gives p = 0.036. Teacher A treats the one-tailed p-value as if the test is two-tailed and also overstates the conclusion ("the new method works"). Teacher B's error: a one-tailed p-value of 0.036 with *z* = 2.10 is not consistent; also, if the alternative is "differs" the test must be two-tailed, in which case the one-tailed p-value of 0.036 would become a two-tailed p-value of 0.072, and the result would not be significant at 5%. The tail choice matters because a two-tailed test splits *α* between both tails, so the p-value is twice the one-tailed p-value.
+
+| Criterion | Band 3 (Full) | Band 2 (Partial) | Band 1 (Limited) | Band 0 |
+|---|---|---|---|---|
+| Error in A | Identifies the tail mismatch and the overstated conclusion | One of the two | Identifies a problem without precision | None |
+| Error in B | Identifies the inconsistency and the correct tail rule | Partial | Vague | None |
+| Evaluation (Evaluate) | Explains the effect of the tail choice on the p-value and the conclusion clearly | Partial explanation | Restates the question | None |
+
+**ERQ 3 (Analyze - small-sample t-test)**
+
+Correct values: a t-test is right because σ is unknown and n = 14 is small. SE = 8/√14 = 8/3.74 = 2.14. *t* = (72 − 68)/2.14 = 4/2.14 = 1.87. df = 13. Decision: do not reject *H*<sub>0</sub> (1.87 &lt; 2.160).
+
+| Criterion | Band 3 (Full) | Band 2 (Partial) | Band 1 (Limited) | Band 0 |
+|---|---|---|---|---|
+| Test choice and reason | t-test chosen with both reasons (σ unknown, small n) | One reason | Wrong test or no reason | None |
+| Computation | t and df correct | One correct | Attempted | None |
+| Analysis (Analyze) | States the decision, explains what the teacher can and cannot conclude, and notes the small-sample limitation | Two of these | One | None |
+
+**ERQ 4 (Evaluate - interpreting a non-significant result)**
+
+Trainee B is correct. "Not rejected" means the data do not provide enough evidence for a difference; it does not prove the null is true. Trainee A is wrong: failing to reject does not prove there is no difference. Practical steps: collect more data to increase power, look at the size of the observed difference (it may be meaningful even if not significant), and consider a confidence interval instead of a yes/no test.
+
+| Criterion | Band 3 (Full) | Band 2 (Partial) | Band 1 (Limited) | Band 0 |
+|---|---|---|---|---|
+| Evaluates both statements | Identifies B correct and A wrong with a reason | One evaluated correctly | Neither or both wrong | None |
+| Error explanation (Evaluate) | Explains that "not rejected" does not prove the null, and why | Partial | Restates the question | None |
+| Practical steps | Gives at least two reasonable next steps | One | Vague | None |
+
+**ERQ 5 (Evaluate - using tests to reward and punish classes)**
+
+Errors/risks: (1) Running many tests at *α* = 0.05 produces many false alarms (roughly 5% of classes with no real difference will be falsely flagged). (2) Statistical significance does not mean practical importance - a class 1 marks above average with a large sample can be "significant" but meaningless. (3) The plan treats the test as an objective judge, but the significance level is a choice and the result depends on sample size. (4) Rewarding significance and punishing non-significance confuses "not enough evidence" with "no difference". Fairer approach: look at effect sizes, use confidence intervals, combine data across terms, and consider many factors (pupil background, resources) rather than a single test.
+
+| Criterion | Band 3 (Full) | Band 2 (Partial) | Band 1 (Limited) | Band 0 |
+|---|---|---|---|---|
+| Errors identified | At least three distinct errors or risks named | Two | One | None |
+| Evaluation (Evaluate) | Each error explained with the correct principle from Topics 15.1-15.3 | Most explained | Errors listed without reasons | None |
+| Fairer approach | A justified plan using effect sizes or confidence intervals, addresses multiple comparisons, and separates statistical from practical importance | A plan with partial reasoning | A vague suggestion | None |

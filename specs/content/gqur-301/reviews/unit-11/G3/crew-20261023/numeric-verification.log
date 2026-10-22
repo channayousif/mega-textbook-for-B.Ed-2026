@@ -1,0 +1,17 @@
+T1 P(X=5|5,.5)= 0.03125  P(X=2|5,.5)= 0.3125  5C2= 10
+T2 P(X=5|10,.25)=0.0584 P(X>=5)=0.0781 P(X>=3)=0.4744 P(X>=6)=0.0197
+T2 mode n=10: 2 [0.0563, 0.1877, 0.2816, 0.2503, 0.146]
+T2 P(X>=10|20,.25)=0.01386
+T2/ERQ2 P(X>=15|20,.25)=3.813e-06
+normal lower tail z=-2: 0.0228 ; z=-1: 0.1587
+T2 kits 2.5%: 250 ; precise: 228
+T2 attendance mean 90.0
+T1 normal 1360/1900/50: 1360.0 1900.0 50.0
+T1 summative ribbons 3600 expected attendance 180.0 juice expected 9000.0
+T1 CYU3 15000 CYU4 51.0
+T2 CYU1 10.0 CYU3 44
+MCQ5 5.0 MCQ7 5.0 MCQ8 35 75
+RRQ5 E,Var 10.0 5.0
+RRQ10 one item flawed E: 2.75  all items flawed E: 5.0
+ERQ1 TaskA 24000 TaskB expected/month 12.0 3600.0
+ERQ3 above80 rounded 200.0 precise 182 below50 rounded 1280.0 precise 1269
