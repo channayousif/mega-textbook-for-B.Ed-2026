@@ -21,3 +21,7 @@ All English `translation_status` values remain `draft`. G3 and G5 remain open. N
 ## Validation
 
 `npm run check:content` initially passed 12/13 gates, failing only because ignored `static/content-status.json` was missing on the clean baseline identical to `origin/main`. After `npm run build:content-status`, the rerun passed all 13 gates. `git diff --check` passed. No build, browser or print evidence is claimed.
+
+## Retry evidence repair
+
+Continuation at `36552c13` confirms the English F1-F6 blockers persist. The prior handoff is itself a bound G2 input; adding it invalidated the old G2 manifest. Refresh deterministic evidence through the repository tool, preserving historical evidence and G3/G4/G5 status. G2 success does not resolve semantic findings. Compare full gates against isolated origin/main. Builds and browser inspection remain prohibited.
