@@ -648,6 +648,7 @@ function reapOne(board, health, events, j) {
     log(board, j, `second failure on ${j.worker}; handing to another worker`);
   } else {
     j.status = 'gate_red';
+    j.feedback = result.why; // the lead needs the last failure, not the one before it
     log(board, j, `failed ${j.attempts} times; needs the lead`);
     events.push(`🔴 ${j.id} failed ${j.attempts} times (last: ${j.worker}). ${result.why.split('\n')[0]}`);
   }
