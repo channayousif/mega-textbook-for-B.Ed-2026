@@ -2325,6 +2325,91 @@
     "definition_ur": "ایک تشہیری، گھنٹی کی شکل کا احتمال تقسیم جو بہت سی قدری مقداروں اور اوسط کے نمونہ تقسیم کی نمائندگی کے لیے استعمال ہوتا ہے؛ اپنے اوسط اور معیاری انحراف سے ممتاز۔"
   },
   {
+    "term": "Social institution",
+    "definition_en": "A stable pattern of norms, roles, values and expectations that meets a core social need - such as family, education, religion, economy, politics or healthcare.",
+    "definition_ur": "معیارات، کردار، اقدار اور توقعات کا ایک پائیدار نمونہ جو ایک بنیادی سماجی ضرورت کو پورا کرتا ہے - جیسے خاندان، تعلیم، مذہب، معیشت، سیاست یا صحت۔"
+  },
+  {
+    "term": "Family",
+    "definition_en": "The social institution responsible for raising children, providing emotional support, giving members a social identity, and regulating reproduction and sexual behaviour.",
+    "definition_ur": "وہ سمادی ادارہ جو بچوں کی پرورش، جذباتی مدد، ارکان کو سماجی شناخت، اور تولید اور جنسی رویے کے ضابطے کا ذمہ دار ہے۔"
+  },
+  {
+    "term": "Education",
+    "definition_en": "The social institution that transmits knowledge and skills, sorts people through credentials and examinations, and teaches shared norms and values.",
+    "definition_ur": "وہ سماجی ادارہ جو علم اور مہارت منتقل کرتا ہے، اسناد اور امتحانات کے ذریعے لوگوں کی ترتیب دیتا ہے، اور مشترکہ معیارات اور اقدار سکھاتا ہے۔"
+  },
+  {
+    "term": "Religion",
+    "definition_en": "The social institution that provides a shared framework of meaning, moral guidance and a sense of purpose, and binds people into communities of shared belief.",
+    "definition_ur": "وہ سماجی ادارہ جو معنی کا ایک مشترکہ ڈھانچہ، اخلاقی رہنمائی اور مقصد کا احساس فراہم کرتا ہے، اور لوگوں کو مشترکہ عقیدے کی برادریوں میں جوڑتا ہے۔"
+  },
+  {
+    "term": "Economy",
+    "definition_en": "The social institution that organizes the production, distribution and consumption of goods and services in a society.",
+    "definition_ur": "وہ سماجی ادارہ جو معاشرے میں سامان اور خدمات کی پیداوار، تقسیم اور کھپت کو منظم کرتا ہے۔"
+  },
+  {
+    "term": "Politics",
+    "definition_en": "The social institution that makes and enforces collective decisions, distributes power and authority, and governs a society.",
+    "definition_ur": "وہ سماجی ادارہ جو اجتماعی فیصلے بناتا اور نافذ کرتا ہے، طاقت اور اختیارات تقسیم کرتا ہے، اور معاشرے کا حکومت کرتا ہے۔"
+  },
+  {
+    "term": "Healthcare",
+    "definition_en": "The social institution responsible for maintaining and restoring the health of a population through medical services, public health measures and access to care.",
+    "definition_ur": "وہ سماجی ادارہ جو طبی خدمات، عوامی صحت کے اقدامات اور علاج تک رسائی کے ذریعے آبادی کی صحت کو برقرار رکھنے اور بحال کرنے کا ذمہ دار ہے۔"
+  },
+  {
+    "term": "Institutional interdependence",
+    "definition_en": "The way social institutions depend on one another, so that a change in one institution, such as the economy, causes changes in others, such as family, education or health.",
+    "definition_ur": "سماجی اداروں کا ایک دوسرے پر انحصار، جس کی وجہ سے ایک ادارے، مثلاً معیشت، میں تبدیلی دوسرے اداروں، جیسے خاندان، تعلیم یا صحت، میں بھی تبدیلی لاتی ہے۔"
+  },
+  {
+    "term": "Joint family",
+    "definition_en": "A family form in which grandparents, their married sons, the sons' wives and children live together, often sharing one house, one kitchen and pooled income.",
+    "definition_ur": "خاندان کی وہ شکل جس میں دادا دادی، ان کے شادی شدہ بیٹے، بہوئیں اور بچے اکٹھے رہتے ہیں، اور اکثر ایک گھر، ایک باورچی خانہ اور مشترکہ آمدنی رکھتے ہیں۔"
+  },
+  {
+    "term": "Nuclear family",
+    "definition_en": "A family form made up of a married couple and their children living as a separate household.",
+    "definition_ur": "خاندان کی وہ شکل جس میں میاں بیوی اور ان کے بچے ایک الگ گھرانے کے طور پر رہتے ہیں۔"
+  },
+  {
+    "term": "Manifest function",
+    "definition_en": "An intended and openly recognised result of a social pattern or institution, such as a school teaching pupils to read.",
+    "definition_ur": "کسی سماجی نمونے یا ادارے کا وہ نتیجہ جو ارادتاً ہو اور کھلے طور پر تسلیم کیا جائے، جیسے اسکول کا بچوں کو پڑھنا سکھانا۔"
+  },
+  {
+    "term": "Latent function",
+    "definition_en": "An unintended or less recognised result of a social pattern or institution, such as pupils forming lasting friendships at school.",
+    "definition_ur": "کسی سماجی نمونے یا ادارے کا وہ نتیجہ جو غیر ارادی ہو یا کم پہچانا جائے، جیسے اسکول میں بچوں کی دیرپا دوستیاں بننا۔"
+  },
+  {
+    "term": "Hidden curriculum",
+    "definition_en": "The lessons about norms, behaviour and authority that pupils learn from the way school is organised rather than from the official syllabus.",
+    "definition_ur": "معیارات، رویّے اور اختیار کے وہ اسباق جو بچے سرکاری نصاب کے بجائے اسکول کے نظم و ترتیب سے سیکھتے ہیں۔"
+  },
+  {
+    "term": "Informal economy",
+    "definition_en": "Paid work that is not registered or protected by labour law, such as daily-wage labour, street vending and home-based piece work.",
+    "definition_ur": "وہ معاوضہ دار کام جو رجسٹرڈ نہ ہو اور جسے محنت کے قوانین کا تحفظ حاصل نہ ہو، جیسے دیہاڑی کی مزدوری، ریڑھی بانی اور گھر بیٹھے ٹکڑوں میں کام۔"
+  },
+  {
+    "term": "Political power",
+    "definition_en": "In sociology, the ability of a person or group to make others act as they wish, even against resistance; Max Weber's definition.",
+    "definition_ur": "عمرانیات میں کسی فرد یا گروہ کی یہ صلاحیت کہ وہ دوسروں سے، مزاحمت کے باوجود، اپنی مرضی کے مطابق عمل کروا سکے؛ یہ میکس ویبر کی تعریف ہے۔"
+  },
+  {
+    "term": "Authority",
+    "definition_en": "Power that people accept as rightful. Max Weber described three types: traditional, charismatic and legal-rational.",
+    "definition_ur": "وہ طاقت جسے لوگ جائز تسلیم کریں۔ میکس ویبر نے اس کی تین اقسام بیان کیں: روایتی، کرشماتی اور قانونی و عقلی۔"
+  },
+  {
+    "term": "Institutional change",
+    "definition_en": "A lasting change in the norms, roles and expectations of a social institution, rather than a change in the particular people who take part in it.",
+    "definition_ur": "کسی سماجی ادارے کے معیارات، کرداروں اور توقعات میں دیرپا تبدیلی، نہ کہ صرف اس میں شریک افراد کی تبدیلی۔"
+  },
+  {
     "term": "Status",
     "definition_en": "A socially recognized position in a group or society - such as teacher, student, mother, or union member. A person holds many statuses at the same time, and each comes with a set of expected behaviours (roles).",
     "definition_ur": "گروہ یا معاشرے میں سماجی طور پر پہچانا گیا مقام - جیسے استاد، شاگرد، ماں، یا ینین رکن۔ انسان ایک ساتھ کئی مقامات رکھتا ہے، اور ہر ایک کے ساتھ متوقع رویے (کردار) ہوتے ہیں۔"
