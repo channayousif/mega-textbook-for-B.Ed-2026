@@ -1,0 +1,107 @@
+---
+title: "Topic 16.1 - Statistical modeling exercises"
+description: "Build and check simple school models using assumptions, observed values and prediction differences, then revise a model that does not fit its purpose."
+course_code: GQUR-301
+unit_no: 16
+topic_no: 1
+topic_label: "16.1"
+clo_refs:
+  - "SLO:GQUR-301-16-1"
+  - "SLO:GQUR-301-16-2"
+  - "SLO:GQUR-301-16-3"
+blooms_summary: "Apply statistical concepts; analyze evidence; evaluate conclusions."
+est_reading_minutes: 9
+translation_status: draft
+---
+
+import TranslationStatusBadge from '@site/src/components/TranslationStatusBadge';
+import PrintHandout from '@site/src/components/PrintHandout';
+
+<TranslationStatusBadge status="draft" />
+
+<PrintHandout />
+
+## A real classroom situation
+
+At a government school in Hyderabad, a trainee wants to estimate how many reading sheets to prepare. A colleague suggests using yesterday's attendance. Another suggests using each pupil's recent attendance pattern. A third asks whether a festival week should be treated like an ordinary week. The head teacher needs a plan, but no one can promise exactly who will attend tomorrow. This is a teaching scenario; every number below is synthetic.
+
+<Figure id="fig-U16-1" src="/img/figures/gqur-301/unit-16/fig-U16-1.svg" alt="A modelling cycle starts with a question and assumptions, builds a model, checks it against observations, and returns to revision when needed." />
+
+## Explanation
+
+### Statistical modeling exercises
+
+A **statistical model** is a simplified description of a pattern in data that allows for variation. It may be a rule for a likely count, an average, a probability distribution, or a line linking two measurements. A model has a purpose. The attendance model helps prepare materials; it does not explain a child's reasons for absence. A **data-based decision** is a choice justified by observations, their limits, and the practical consequences of acting. It requires judgement as well as calculation.
+
+Start with the question: how many sheets should be ready for one class on an ordinary school day? Define attendance consistently, for example pupils present at the morning register. State the time period and class. A count taken after lunch answers a different question. Record what your rule assumes before checking whether the rule works. An assumption is a condition treated as reasonable for the purpose of the calculation, not a fact established by writing it down.
+
+Here is a first model: predict tomorrow's attendance with the mean attendance over five comparable days. The synthetic counts are 24, 26, 25, 23 and 27. Their sum is 125, so their mean is 125 / 5 = 25 pupils. The range is 27 - 23 = 4 pupils. The model gives a central prediction of 25. The range describes the observed variation; it is not a guaranteed interval for tomorrow. Preparing exactly 25 sheets may leave some pupils without one. Preparing 30 sheets for a class of 30 may be a sensible practical decision even though the central prediction stays 25.
+
+Notice the separation between a prediction and a decision. The prediction describes what the rule expects. The decision includes the cost of being wrong. An extra unused sheet has a different consequence from a pupil being excluded from work. Write both statements: "Our central estimate is 25" and "We will keep five spare sheets." Neither statement pretends that the model is certain. If materials can be reused, the decision about spares may change even when the numerical prediction does not.
+
+A second model concerns relationships. In a synthetic practicum exercise, let x be the number of reading sessions attended, from 1 to 5, and y the words read correctly in one minute. A candidate rule is predicted y = 40 + 3x. It predicts 43 words at one session and 55 at five sessions. The slope means three additional predicted words for each additional session within this exercise. The intercept, 40, is the rule's value at zero sessions. Because zero lies outside the observed range, do not treat it as a measured starting score.
+
+| Sessions x | Observed words y | Predicted words | Observed minus predicted |
+|---|---|---|---|
+| 1 | 44 | 43 | 1 |
+| 2 | 45 | 46 | -1 |
+| 3 | 49 | 49 | 0 |
+| 4 | 50 | 52 | -2 |
+| 5 | 57 | 55 | 2 |
+
+The rule was supplied for practice; it is not claimed to be the least-squares fit. In OpenStax Section 12.3, Illowsky and Dean (2023) distinguish a fitted prediction from an observation and explain the difference between them. Here the difference at four sessions is 50 - 52 = -2 words: the rule predicts two more words than were observed. At five sessions the difference is positive: the rule predicts too few. These differences help us inspect fit. Small differences in five invented records are useful practice, not evidence that the rule will work in every school.
+
+For a check, plot the paired observations using the same axes as the predicted line. Look for bends, unusually distant points, and differences that grow with x. If nearly every higher-session point lies above the rule, the rule may systematically underpredict there. Recheck data entry and the question before changing the rule. A recorded score of 570, for example, should be checked against the original record. Do not delete a difficult observation merely because it weakens the pattern you hoped to find.
+
+Another useful check is to reserve later comparable observations and see how the rule predicts them. A rule chosen to fit old data may work poorly with new data. Suppose the next pupil at four sessions reads 38 words. The prediction remains 52, leaving a difference of -14. Ask about the passage, timing and measurement procedure. Perhaps it was a harder passage. If the measurement conditions changed, adjusting the slope alone may hide the real issue. A model check therefore combines numerical comparison with knowledge of how the data were produced.
+
+<Figure id="fig-U16-2" src="/img/figures/gqur-301/unit-16/fig-U16-2.svg" alt="Three school situations are paired with a model choice and an observable check, showing that models must be tested against their intended use." />
+
+A third model uses probability. If 6 of 30 comparable recorded pupil-days were late, the observed proportion is 6 / 30 = 0.20. That may inform a provisional probability for a similar pupil-day. It does not mean exactly six late arrivals must occur in the next 30 pupil-days. Nor does it justify assuming all observations are independent. Repeated records for one pupil may share transport difficulties. The unit of observation and dependence matter before any probability distribution is chosen.
+
+**Common misconception: "a statistical conclusion is certain."** A model simplifies variation, and observations can disagree with its predictions. A neat equation does not remove measurement problems, sampling limits or changing conditions. A model of reading sessions also cannot establish that the sessions caused improvement. Pupils who attend more may differ in prior reading, home support or access to transport. Use the line to describe a possible relationship; plan a stronger comparison before claiming an effect.
+
+Keep a brief model card with six entries: question, variables and units, rule, assumptions, check, and permitted conclusion. For the reading example, the permitted conclusion is a prediction within the observed session range under comparable conditions. Predicting at twenty sessions is a different claim, far beyond the observed data. The model card makes that boundary visible to a colleague who did not make the calculation. It also makes later revision easier: you can identify which condition changed instead of replacing the entire investigation without explanation.
+
+## Activity: Competing model cards
+
+Work in groups of three for about 25 minutes. One person proposes an attendance model, one checks it, and one represents pupils who might be affected by the decision. Start from memory by explaining why a central prediction and the number of sheets prepared may differ. Then use the five attendance counts above. Produce a model card and agree on the number of sheets to prepare. Exchange cards with another group. The receiving group introduces a condition such as a changed timetable and identifies which assumption needs checking. Return the card with one reasoned revision; rotate roles before reporting.
+
+## Check your understanding
+
+1. Define a statistical model in one sentence and name two entries on a model card. *(Remember)*
+2. Explain why a prediction of 25 pupils does not require preparing exactly 25 sheets. *(Understand)*
+3. The reading rule predicts 49 words at three sessions. A new observation is 46 words. Calculate observed minus predicted and explain the sign. *(Apply)*
+4. Give one observation that would make you question the attendance model's use next week. Explain which assumption it challenges. *(Apply)*
+
+## Summary
+
+A statistical model is a useful simplification with a stated purpose and conditions. Check predictions against observations and investigate disagreements. Practical decisions also depend on consequences, so a model's central prediction need not be the final allocation of resources.
+
+## Self-assessment checklist
+
+- [ ] I can distinguish a model prediction from a practical decision.
+- [ ] I can calculate and interpret observed minus predicted values.
+- [ ] I can state an assumption and describe evidence that would challenge it.
+- [ ] I can limit a prediction to a defensible range and context.
+
+## Try this at your practicum school
+
+Ask your mentor which routine count is already available without accessing personal records. Use only an approved anonymous class total, or use the synthetic attendance counts here if access is unavailable. Write a proposed prediction rule and one future observation that could check it. Do not publish pupil names, attendance histories or individual reading scores. Bring a model card to your next tutorial and explain what you still do not know.
+
+## Summative task
+
+Write a 250–350 word model card and commentary for preparing reading materials. Compare a recent-mean model with using the class's full enrolment. Defend a decision, explain the consequence of under-preparation, and identify a check that could lead you to revise your approach. *(Evaluate)*
+
+| Criterion | 2 marks | 1 mark | 0 marks |
+|---|---|---|---|
+| Rule and quantities | Defines a usable rule with units and time period | Rule is usable but one quantity is unclear | Rule cannot be applied |
+| Assumptions | States two relevant conditions | States one relevant condition | Conditions absent |
+| Comparison and decision | Analyzes the trade-off and defends the allocation with evidence | Gives a choice with a partial reason | Unsupported choice |
+| Check and limits | Gives an observable check and a clear limit | Gives only a check or a limit | Neither provided |
+
+## Further reading
+
+- Illowsky, B., & Dean, S. (2023). *Introductory Statistics 2e*, [Section 12.3: The regression equation](https://openstax.org/books/introductory-statistics-2e/pages/12-3-the-regression-equation). Read the distinction between observation, prediction and their difference.
+- Lane, D. M. (n.d.). *Online Statistics Education: A Multimedia Course of Study*, [Chapter 1](https://onlinestatbook.com/2/introduction/introduction.html). Review variables and the boundary between description and inference.
+- The guide also names Babones, S. J. (Ed.). (2013). *Applied Statistical Modeling*. SAGE, and Zaslow, E. (2020). *Quantitative Reasoning: Thinking in Numbers*. Cambridge University Press. Bibliographic references only; no claim here depends on access to their full texts.
