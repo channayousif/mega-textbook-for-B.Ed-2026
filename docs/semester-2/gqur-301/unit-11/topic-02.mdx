@@ -1,0 +1,215 @@
+---
+title: "Topic 11.2 - Applications in real life"
+description: "Applications of probabilistic models in real life: multiple-choice guessing models, diagnostic screening with the normal distribution, and checking underlying assumptions."
+course_code: GQUR-301
+unit_no: 11
+topic_no: 2
+topic_label: "11.2"
+clo_refs:
+  - "SLO:GQUR-301-11-2"
+blooms_summary: "Remember guessing formulas and normal distribution cut-offs; understand the effect of assumption violations; apply binomial and normal models to real school test data; analyze whether classroom data meet theoretical model assumptions."
+est_reading_minutes: 10
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+
+<PrintHandout />
+
+## A real classroom situation
+
+In a fictional Nawabshah government high school, a pupil scores five on a
+20-item four-option science test and says every choice was a guess. The teacher
+explains that independent, equally likely choices give an expected score of
+`20 × 0.25 = 5`. The pupil asks whether a guesser could reach the pass mark of
+ten. The teacher investigates that possibility with a binomial model. She also
+asks whether the choices really were independent and equally likely.
+
+<Figure id="fig-U11-3" kind="diagram" src="/img/figures/gqur-301/unit-11/fig-U11-3.svg" alt="A binomial guessing model takes ten independent four-choice items as inputs; the most likely score is two, the mean is 2.5 and the chance of at least five is about 7.8%." caption="Original teaching schematic; based on Lane (2023) and Illowsky and Dean (2023)." />
+
+## Explanation
+
+### Real-life application 1: guessing on multiple-choice tests
+
+A guessing model describes a narrow process, not a pupil's learning. Assume
+one right option per item, uniform random choice among four options, independent
+choices and one mark per right response. Then p = 0.25 on every item. These
+conditions connect the test to the binomial distribution (Lane, 2023, Chapter 5;
+Illowsky & Dean, 2023, Section 4.3).
+
+**Worked example:** For ten items, `E(X) = 10 × 0.25 = 2.5`. The most likely
+whole-number score is two. To find the chance of passing at five, add every
+passing score's probability:
+
+`P(X ≥ 5) = P(X = 5) + P(X = 6) + ... + P(X = 10)`.
+
+The first term is `10C5 × 0.25^5 × 0.75^5 ≈ 0.0584`. Adding the remaining
+terms gives about 0.0781, or 7.8%. This means roughly eight passes per 100
+comparable tests across many repetitions, not exactly eight in every batch.
+The bar for five alone is about 5.8%; it is not the probability of five or more.
+
+| Pass mark on ten items | Probability of reaching it by blind guessing |
+|---|---|
+| Three | About 47.4% |
+| Five | About 7.8% |
+| Six | About 2.0% |
+
+The threshold of three gives weak protection against guessing. However, a higher
+threshold alone does not establish mastery. Set standards from learning goals,
+then use these probabilities as one check on test design. At a fixed passing
+percentage above 25%, a longer independent four-option test usually reduces
+blind-guessing risk. For twenty items and a threshold of ten, the probability
+is about 1.39%. These are calculated probabilities, not observed pass rates.
+
+A rare result does not prove dishonesty. If a pupil claims to have guessed
+15 of 20 correctly, `P(X ≥ 15) ≈ 0.00000381` under the stated model. That
+result is extremely rare but possible. Partial knowledge, clues in options or
+other departures from uniform guessing are also possibilities. Check the
+assumptions and seek further evidence before making a judgement about a pupil.
+
+### Real-life application 2: diagnostic assessment and the empirical rule
+
+A threshold is a score used to select a group for a stated purpose. A planner
+might estimate how many pupils fall below one or two standard deviations from
+the mean before budgeting for a follow-up reading check. The empirical rule
+provides approximate normal-curve areas for this calculation (Illowsky & Dean,
+2023, Section 6.1).
+
+**Worked planning example:** In an invented provincial exercise, suppose
+10,000 Grade 5 literacy scores are approximately normal with μ = 50 and σ = 12.
+The middle 68% is roughly between `50 - 12 = 38` and `50 + 12 = 62`.
+A proposed reading-kit rule selects scores below two standard deviations from
+the mean. Its cut-off is `50 - 2 × 12 = 26`.
+
+The rounded empirical rule puts about 2.5% below this cut-off:
+`10,000 × 0.025 = 250` kits. The more precise normal lower-tail area is about
+2.28%, so this rounded rule is unsuitable for a precise order. Actual counts
+can differ because of model error and variation. Check real eligibility counts
+where available and plan a reserve before ordering.
+
+A low score relative to peers does not diagnose a learning difficulty. A high
+score alone does not identify giftedness. Support decisions need evidence of
+what a pupil can do, language access, teaching opportunities and follow-up
+assessment. These are invented planning thresholds, not Sindh policy or clinical
+criteria. Even a well-fitting curve cannot decide which learning goals matter.
+
+<Figure id="fig-U11-4" kind="table" src="/img/figures/gqur-301/unit-11/fig-U11-4.svg" alt="Table matching four everyday school situations to suitable probabilistic models, detailing the situation, model used, key assumption, prediction made, and when the model fails." caption="Original teaching schematic; based on Lane (2023) and Illowsky and Dean (2023)." />
+
+### When models fail: checking underlying assumptions
+
+An assumption is a condition the model treats as true. Before applying a model,
+name what is being predicted, check its conditions and compare predictions with
+observations. Use the binomial conditions from Topic 11.1 rather than choosing
+that model just because the outcome is a count.
+
+**Worked attendance check:** A Badin school has 100 pupils, each with an estimated
+attendance probability of 0.9. There is a fixed number and two outcomes per pupil.
+But 30 pupils share a bus. A breakdown affects them together, making independence
+doubtful. The expected attendance of 90 may still help, while binomial spread
+can understate the risk. Compare normal-service days with disruption days before
+using the model to order meals.
+
+In five invented days, attendance counts are 86, 94, 89, 91 and 90. Their mean
+is 90, matching the forecast. But matching an average does not establish a good
+model. The first day's error is `86 - 90 = -4`: four fewer than predicted.
+Look for repeated errors on wet days or transport-disruption days. Check a model
+on fresh days as well as the records used to estimate p.
+
+For testing, item difficulty can produce different success probabilities when
+pupils answer from knowledge. Under blind uniform guessing, difficulty alone
+does not change p = 0.25. But if a pupil eliminates two implausible options,
+guessing between the remaining two gives p = 0.5. That pupil no longer follows
+the four-option guessing model. Distinct questions also do not guarantee
+independent choices.
+
+For a normal model, inspect a plot. A mastery test may have scores piled near
+the maximum, with a tail toward lower scores. This is not the symmetric bell
+shape the model assumes (Lane, 2023, Chapter 7). Similar mean, median and mode
+alone are insufficient evidence. A small class gives limited evidence about
+population shape, but a normal population can generate small samples. A large
+sample does not guarantee a normal distribution either.
+
+**Misconception: an imperfect model is useless.** Ask whether the errors matter
+for the decision. Revise a model or plan separately for rainy days when errors
+cluster then. Forcing marks into a bell curve changes evidence instead of
+checking model fit.
+
+A dropout-risk probability can guide support without labelling a child's future
+as fixed. Check whether observed rates match predicted risks for comparable
+groups and whether the model works similarly across schools. Protect individual
+data, allow record correction and consider circumstances the model misses.
+An exceptional pupil outcome alone neither validates nor refutes a model.
+
+## Activity: Simulating test guessing
+
+Work in pairs for about 20 minutes. Recall the four binomial conditions before
+opening your notes. Use four equally likely numbered slips; number one represents
+a right response.
+
+1. Draw a slip, record success or failure, replace it and mix thoroughly.
+2. Repeat ten times to simulate one test. Count its successes.
+3. Swap roles: one partner draws while the other records and checks replacement.
+4. Produce five simulated tests and calculate their average score.
+5. Pool results with four other pairs. Find the proportion scoring at least five.
+
+Compare the pooled mean with 2.5 and the passing proportion with about 7.8%.
+Discuss why 25 simulated tests need not match either value exactly. Explain how
+omitting replacement changes the process and may break independence or constant
+probability. Each pair reports one model condition and one observed difference.
+
+## Check your understanding
+
+1. *(Apply)* Find the expected score from independent blind guesses on a
+   40-item four-option test.
+2. *(Understand)* Explain why an illness spreading among pupils can violate the
+   independence assumption in an attendance model.
+3. *(Apply)* For approximately normal scores with μ = 60 and σ = 8, find the
+   cut-off with about 2.5% below it using the empirical rule.
+4. *(Apply)* Most pupils score full marks on a mastery test. Explain why the
+   normal empirical rule is a poor way to estimate its low-score group.
+
+## Summary
+
+The guessing model estimates chance outcomes under specific assumptions; it does
+not establish test quality or pupil honesty. The empirical rule estimates group
+counts when a normal approximation fits. Check predictions against data and use
+learning evidence before turning a planning threshold into a pupil decision.
+
+## Self-assessment checklist
+
+- [ ] I can calculate expected guessing scores and distinguish exact from tail probabilities.
+- [ ] I can estimate normal-model counts without treating them as diagnoses.
+- [ ] I can check independence and normal shape in school examples.
+- [ ] I can compare observed counts with predictions and suggest a revision.
+
+## Try this at your practicum school
+
+Ask your cooperating teacher to discuss an anonymous score histogram, or use the
+invented five-day attendance data above. Do not copy pupil records or collect
+names. In one paragraph, identify a proposed model, one checked condition, one
+unchecked condition and one planning decision. Ask what extra evidence would
+change your choice.
+
+## Summative task
+
+A district committee proposes a ten-item four-option numeracy screen for
+2,500 pupils. Policy 1 calls a score of three "competent". Policy 2 assumes a
+normal distribution and assigns the bottom 16% to summer classes.
+
+Evaluate both policies in 150–250 words. Use the guessing probabilities to
+analyze Policy 1. For Policy 2, explain what shape evidence is needed, what
+happens if the test has a ceiling effect, and why support requires evidence of
+learning needs. Propose a better decision process.
+
+### Mini-rubric
+
+| Criterion | Secure | Developing | Needs revision |
+|---|---|---|---|
+| Guessing analysis (Analyze) | Uses the 47.4% tail probability and learning goals to critique the threshold | Gives expected score only or leaves the policy link unclear | Confuses chance performance with competence |
+| Model and policy evaluation (Evaluate) | Checks shape and score limits, distinguishes estimates from diagnosis and justifies a better process | Checks shape but gives limited decision guidance | Assumes large numbers establish normality |
+
+## Further reading
+
+- Lane, D. M. (2023, course bibliography date). *Online Statistics Education.* [Binomial Distribution](https://onlinestatbook.com/2/probability/binomial.html) and [Introduction to Normal Distributions](https://onlinestatbook.com/2/normal_distribution/intro.html).
+- Illowsky, B., & Dean, S. (2023). *Introductory Statistics 2e.* OpenStax. [Section 4.3](https://openstax.org/books/introductory-statistics-2e/pages/4-3-binomial-distribution) and [Section 6.1](https://openstax.org/books/introductory-statistics-2e/pages/6-1-the-standard-normal-distribution).
+- Babones, S. J. (Ed.). (2013). *Applied Statistical Modeling* (4 vols). SAGE. Guide-required print reference, bibliographic mention only; not consulted for content claims.
