@@ -1,0 +1,21 @@
+
+> bed-mega-textbook@0.1.0 check:content
+> node scripts/run-gates.mjs content
+
+Running 13 content gates
+
+  validate:content        PASS  1.0s
+  check:pipeline-gate     PASS  18.9s
+  check:depth-gate        PASS  0.9s
+  check:figures           PASS  1.4s
+  check:no-em-dash        PASS  1.7s
+  check:no-answer-keys    PASS  1.3s
+  check:concept-graph     PASS  0.8s
+  check:bloom-bands       PASS  0.7s
+  check:source-floor      PASS  0.6s
+  check:licence           PASS  1.2s
+  licence:map:check       PASS  0.9s
+  check:content-status    PASS  1.8s
+  check:docs-sync         PASS  0.4s
+
+All content gates passed.

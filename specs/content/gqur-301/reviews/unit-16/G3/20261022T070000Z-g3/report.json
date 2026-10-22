@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "course_code": "GQUR-301",
+  "unit_no": 16,
+  "stage": "G3",
+  "disposition": "escalate",
+  "reviewer_id": "agent:opencode",
+  "author_run_id": "crew:gqur-301-u16-author",
+  "reviewer_run_id": "opencode:gqur-301-u16-review_en:20261022T070000Z",
+  "model": "LongCat-2.0 (longcat/LongCat-2.0)",
+  "started_at": "2026-10-22T01:30:00.000Z",
+  "completed_at": "2026-10-22T01:50:00.000Z",
+  "skill_digest": "eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b",
+  "input_manifest": "specs/content/gqur-301/reviews/unit-16/G3-prepare/manifest.json",
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        "content-spec.md Week schedule row 16 maps guide sections 16.1/16.2/16.3 to unit topics without scope change",
+        "index.mdx clo_refs SLO:GQUR-301-16-1/2/3 map to course outcomes 1, 2, 3",
+        "topic-01.mdx teaches 16.1 statistical modeling exercises",
+        "topic-02.mdx teaches 16.2 problem solving using statistical concepts",
+        "topic-03.mdx teaches 16.3 review and integration of concepts"
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "pass",
+      "evidence": [
+        "lane-u16-2026.md: Lane Chapter 1 distinguishes descriptive vs inferential; verified onlinestatbook.com/2/introduction/introduction.html, descriptive.html, inferential.html 2026-10-22",
+        "openstax-u16-2026.md: OpenStax Section 12.3 distinguishes observed y from fitted y (residual); verified openstax.org/books/introductory-statistics-2e/pages/12-3-the-regression-equation 2026-10-22",
+        "openstax Chapter 1 (pages/1-introduction) lists sampling methods and frequency tables",
+        "pbs-u16-2026.md: PBS 2023 census Excel index verified at pbs.gov.pk/result-excel/; Table 12 education listing confirmed",
+        "sources/unit-16.md: guide-required readings (baboons, zaslow, lock2008) declared bibliographic-only, no full-text claim made",
+        "All synthetic examples in topics explicitly labelled as teaching scenarios, not findings about real schools"
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "coverage/unit-16.md: U16-01, U16-02, U16-03 each mapped to topic file + source",
+        "content-spec.md Unit 16 row confirms three sub-topics matching guide",
+        "topic-01 covers modeling cycle, prediction/decision distinction, model card",
+        "topic-02 covers full problem-solving cycle with five-day table",
+        "topic-03 integrates all prior units with Group A/B comparison, formula table",
+        "Reinforcement row: U16-02 ERQs use PBS public-data task"
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "pass",
+      "evidence": [
+        "unit-assessment.mdx: 10 MCQ + 10 RRQ + 5 ERQ (correct 10/10/5 bank)",
+        "MCQ keys independently verified: 1B, 2A, 3D, 4C, 5B, 6A, 7D, 8C, 9B, 10A",
+        "RRQ 2: predicted y=30+4(3)=42, diff=39-42=-3 (model overpredicts)",
+        "RRQ 5: 12/80=15% among present, 12/100=12% among enrolled (different denominators)",
+        "RRQ 7: mean=8, median=8, range=8 for scores 4,6,8,10,12",
+        "RRQ 8: ordered 4x3=12, unordered 4!/(2!2!)=6",
+        "Bloom bands appropriate: MCQs Remember-Apply, RRQs Understand-Analyze, ERQs Analyze-Evaluate",
+        "Each ERQ rubric has 4 criteria at 3 marks each = 12 marks total",
+        "ERQ 4 requires real public data with provenance + alternative plan on access failure"
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "unverified",
+      "evidence": [
+        "Static checks only (render-review not run - host constraint per brief.md)",
+        "figures/unit-16.md: all 6 figures have descriptive alt text; .dark.svg variants exist for theming",
+        "node scripts/measure-figure-text.mjs: all 12 SVGs pass (widest text 625.2 within viewBox 640, wordmark at 532.7)",
+        "Headings properly structured in all topic/assessment/notes files",
+        "Further reading links are descriptive (Section 12.3: The regression equation, Chapter 1, etc.)",
+        "Tables use proper markdown table syntax with header rows",
+        "Cannot verify: rendered layout at 360px, A4 print views, reading order, figure clipping, color-contrast in rendered output"
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "Language is HSC-appropriate; jargon introduced with bold definitions",
+        "Worked examples use synthetic data (clearly labelled), not real pupil records",
+        "Common misconceptions addressed explicitly in each topic",
+        "Progression from concrete (attendance counts) to abstract (model card, formula table)",
+        "Further reading links provide open-access paths for deeper study"
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": [
+        "Unit 16 is a synthesis/integration capstone building on Units 1-15",
+        "model card tool (question/variables/rule/assumptions/check/conclusion) provides reusable framework",
+        "Activities are group-based with rotating roles, feasible with synthetic data",
+        "teacher-notes.mdx provides misconception support and sequencing guidance",
+        "Try-this-at-practicum tasks connect theory to placement without requiring personal records",
+        "concept-graph/unit-16.md maps 6 concepts with prerequisites across all three topics"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "uncertain",
+      "message": "render-review not performed. Accessibility criterion (rendered layout, small-screen scroll, A4 print, color-contrast) verified only statically. Host constraint (brief.md forbids build/dev/Playwright). Recommend a subsequent host-browser inspection to close this gap.",
+      "resolved": false
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-301/reviews/unit-16/G3/20261022T070000Z-g3/logs/validate-content.log"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-301/reviews/unit-16/G3/20261022T070000Z-g3/logs/check-unit-depth.log"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-301/reviews/unit-16/G3/20261022T070000Z-g3/logs/check-figures.log"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-301/reviews/unit-16/G3/20261022T070000Z-g3/logs/check-no-em-dash.log"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-301/reviews/unit-16/G3/20261022T070000Z-g3/logs/check-no-answer-keys.log"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/gqur-301/reviews/unit-16/G3/20261022T070000Z-g3/logs/check-docs-sync.log"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 1,
+      "log_path": "specs/content/gqur-301/reviews/unit-16/G3/20261022T070000Z-g3/logs/render-review.log"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/gqur-301/reviews/unit-16/G3/20261022T070000Z-g3/logs/validate-content.log": "d7e42f3c4281e87816a1d0a7aff8ad27d17bbc113bbbd8371562fd8232d2d9d5",
+    "specs/content/gqur-301/reviews/unit-16/G3/20261022T070000Z-g3/logs/check-unit-depth.log": "deed587a9a781e879e3fe9cfce091334313e4a6b703f09362a5d28816748bbb5",
+    "specs/content/gqur-301/reviews/unit-16/G3/20261022T070000Z-g3/logs/check-figures.log": "9be80e87b7d15bf108ee94922036d0282f7d9f20969dfa6899702d4e8734aa0",
+    "specs/content/gqur-301/reviews/unit-16/G3/20261022T070000Z-g3/logs/check-no-em-dash.log": "9b12b405049fd02af65d6ab46fb4fcb20c2cabfdfd6a2ae6a5400d69845a6932",
+    "specs/content/gqur-301/reviews/unit-16/G3/20261022T070000Z-g3/logs/check-no-answer-keys.log": "d2aba3138912a20e7973cba14edd5f4f8b7df71976229e8404ed3ed802598019",
+    "specs/content/gqur-301/reviews/unit-16/G3/20261022T070000Z-g3/logs/check-docs-sync.log": "c2740e93e689652723e8183dd16955a43082382a18419f7c72271379c604e887",
+    "specs/content/gqur-301/reviews/unit-16/G3/20261022T070000Z-g3/logs/render-review.log": "f4f62a2b2ad43a4d89e7192f464585d5d6e16a87ab658ee7cc0fd41ae641fe36"
+  }
+}

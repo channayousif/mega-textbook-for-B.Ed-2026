@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" direction="rtl" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">میں کون سی پیمائش رپورٹ کروں؟</title><desc id="d">مرکزی رجحان کی پیمائش منتخب کرنے کا فلوچارٹ: بے ترتیب اقسام عادہ کی طرف لے جاتے ہیں، درجہ بندی والے اقسام میڈین کی طرف، اور نمبر ایک دوسرے سوال کی طرف انتہائی قیمتوں یا شدید ترھے کے بارے میں، جو ہاں ہونے پر میڈین اور نہیں ہونے پر اوسط کی طرف لے جاتا ہے۔</desc><defs><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700;fill:var(--ink)} .sh{font-size:12px;font-weight:600;fill:var(--ink)} .m{font-size:12px;fill:var(--muted)} .c{text-anchor:middle} .wm{fill:var(--wm);font-size:11px;text-anchor:end} .b1{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2} .b2{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2} .b3{fill:var(--a3-fill);stroke:var(--a3);stroke-width:2} .b4{fill:var(--a4-fill);stroke:var(--a4);stroke-width:2} .line{stroke:var(--line);stroke-width:2}</style><marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="var(--line)"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="470"/>
+  <text class="h c" x="390" y="28">میں کون سی پیمائش رپورٹ کروں؟</text>
+  <rect class="b2" x="280" y="44" width="220" height="44" rx="6"/>
+  <text class="sh c" x="390" y="64">ڈیٹا کی کیا قسم ہے؟</text>
+  <line class="line" x1="330" y1="88" x2="120" y2="128" marker-end="url(#arr)"/>
+  <line class="line" x1="390" y1="88" x2="390" y2="128" marker-end="url(#arr)"/>
+  <line class="line" x1="450" y1="88" x2="650" y2="128" marker-end="url(#arr)"/>
+  <rect class="b1" x="30" y="130" width="180" height="60" rx="6"/>
+  <text class="sh c" x="120" y="150">بے ترتیب اقسام</text>
+  <text class="m c" x="120" y="166">مثلاً پسندیدہ مضمون</text>
+  <rect class="b1" x="300" y="130" width="180" height="60" rx="6"/>
+  <text class="sh c" x="390" y="150">درجہ بندی والے اقسام</text>
+  <text class="m c" x="390" y="166">مثلاً درجات A-E</text>
+  <rect class="b1" x="560" y="130" width="190" height="60" rx="6"/>
+  <text class="sh c" x="655" y="150">نمبر</text>
+  <text class="m c" x="655" y="166">مثلاً نمبر، عمر، آمدنی</text>
+  <line class="line" x1="120" y1="190" x2="120" y2="226" marker-end="url(#arr)"/>
+  <line class="line" x1="390" y1="190" x2="390" y2="226" marker-end="url(#arr)"/>
+  <line class="line" x1="655" y1="190" x2="655" y2="214" marker-end="url(#arr)"/>
+  <rect class="b3" x="30" y="228" width="180" height="44" rx="6"/>
+  <text class="sh c" x="120" y="248">عادہ رپورٹ کریں</text>
+  <rect class="b3" x="300" y="228" width="180" height="44" rx="6"/>
+  <text class="sh c" x="390" y="248">میڈین رپورٹ کریں</text>
+  <rect class="b2" x="560" y="216" width="190" height="44" rx="6"/>
+  <text class="sh c" x="655" y="236">انتہائی یا شدید ترھا؟</text>
+  <line class="line" x1="620" y1="260" x2="540" y2="292" marker-end="url(#arr)"/>
+  <line class="line" x1="690" y1="260" x2="690" y2="292" marker-end="url(#arr)"/>
+  <text class="m c" x="566" y="272">ہاں</text>
+  <text class="m c" x="704" y="280">نہیں</text>
+  <rect class="b3" x="460" y="294" width="150" height="44" rx="6"/>
+  <text class="sh c" x="535" y="314">میڈین رپورٹ کریں</text>
+  <rect class="b3" x="620" y="294" width="140" height="44" rx="6"/>
+  <text class="sh c" x="690" y="314">اوسط رپورٹ کریں</text>
+  <rect x="20" y="352" width="740" height="78" rx="6" fill="var(--panel)" stroke="var(--line)" stroke-width="1"/>
+  <text class="sh" x="744" y="372" text-anchor="end">نوٹ: پہلے ڈیٹا کی قسم، پھر شکل، پھر سوال</text>
+  <text class="m" x="744" y="388" text-anchor="end">جس راستے بھی جائیں، سوال پر غور کریں: "سب سے عام" کو عادہ چاہیے، "عام وسط" کو میڈین</text>
+  <text class="m" x="744" y="404" text-anchor="end">چاہیے، "برابر تقسیم" کو اوسط چاہیے۔ جب اوسط اور میڈین مختلف ہوں، دونوں رپورٹ</text>
+  <text class="m" x="744" y="420" text-anchor="end">کرنا قاری کو شکل کے بارے میں بتاتا ہے۔ حوالہ: textbook.com.pk بمطابق Lane (2023)۔</text>
+  <text class="wm" x="760" y="460" direction="ltr" aria-hidden="true">textbook.com.pk</text>
+</svg>

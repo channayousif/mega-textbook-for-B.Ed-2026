@@ -1,0 +1,181 @@
+---
+title: "Topic 14.1 - Point estimation"
+description: "Point estimation: using a single value from a sample (mean or proportion) to estimate an unknown population parameter, with worked examples from school data."
+course_code: GQUR-301
+unit_no: 14
+topic_no: 1
+topic_label: "14.1"
+clo_refs:
+  - "SLO:GQUR-301-14-1"
+  - "SLO:GQUR-301-14-2"
+blooms_summary: "Remember the definition of a point estimate; understand why the sample mean is the usual estimator of the population mean; apply the computation to school survey data; analyze the gap between a point estimate and the true value."
+est_reading_minutes: 7
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+import Glossary from '@site/src/components/Glossary';
+
+<PrintHandout />
+
+## A real classroom situation
+
+A district education officer in Sanghar wants to know the average number of
+pupils per classroom across all 120 government primary schools in the district.
+Visiting every school is too costly and time-consuming, so she visits a random
+sample of 15 schools and records the number of pupils in one classroom at each.
+The sample mean comes out to 34.2 pupils. She writes the report and types "the
+average classroom size in the district is 34.2 pupils", then pauses. She knows
+the number is based on only 15 schools. She wonders how much trust to put in a
+single number, and whether the true district average might be meaningfully
+different from 34.2.
+
+<Figure id="fig-U14-1" kind="diagram" src="/img/figures/gqur-301/unit-14/fig-U14-1.svg" alt="A number line from 28 to 42 with an unknown population mean shown as a question mark and the point estimate of 34.2 marked as a solid dot labelled 'our best single guess'." width={780} height={420} />
+
+Her hesitation is well placed. A single number from a sample is a useful start,
+but it is only an estimate. This topic teaches you how to compute that single
+best guess and how honest to be about what it does not tell you.
+
+## Explanation
+
+### From population parameter to sample statistic
+
+In Unit 3 you learned the difference between a <Glossary term="Parameter" />
+(a number that describes a population) and a <Glossary term="Statistic" /> (a
+number computed from a sample). The district's true average classroom size is a
+parameter: it exists, but the officer does not know it because she has not
+measured every school. The sample mean of 34.2 is a statistic: it is computed
+from the data she has.
+
+When we use a statistic to estimate a parameter, we call the statistic an
+<Glossary term="Estimator" />. The sample mean is the most common estimator of
+the population mean. The value it takes in a particular sample is called a
+<Glossary term="Point estimate" />. In the officer's case, 34.2 is the point
+estimate of the district's mean classroom size.
+
+### The logic of a point estimate
+
+Why the sample mean? Two reasons:
+
+1. **On average it is right.** If you repeated the sampling many times, the
+   sample means would centre on the true population mean. An estimator with this
+   property is called unbiased: it does not consistently over- or under-estimate.
+   The sample mean is an unbiased estimator of the population mean (Lane, 2023,
+   Chapter 9).
+
+2. **It uses all the data.** Unlike the median, the mean uses every observed
+   value, so it responds to the full shape of the sample.
+
+### Worked example: estimating a mean
+
+The officer's sample of 15 schools gives these classroom sizes:
+
+`31, 28, 35, 40, 33, 29, 36, 34, 32, 38, 30, 37, 34, 31, 35`
+
+Step 1: Sum the values.
+
+31 + 28 + 35 + 40 + 33 + 29 + 36 + 34 + 32 + 38 + 30 + 37 + 34 + 31 + 35 = 513
+
+Step 2: Divide by the sample size (n = 513 / 15 = 34.2).
+
+The point estimate of the population mean is 34.2 pupils per classroom.
+
+<Figure id="fig-U14-2" kind="table" src="/img/figures/gqur-301/unit-14/fig-U14-2.svg" alt="A table comparing two point estimates: a mean estimate of 34.2 pupils from classroom sizes and a proportion estimate of 0.60 from a school library survey, with formulas shown." width={780} height={420} />
+
+### Point estimates for proportions
+
+The same logic applies to proportions. If 9 of the 15 sampled schools have a
+functioning library, the point estimate of the district-wide proportion is:
+
+p = 9 / 15 = 0.60
+
+The officer would estimate that 60 per cent of schools in the district have a
+functioning library. Here the sample proportion is the estimator of the
+population proportion.
+
+### A point estimate is not the truth
+
+The most important thing to understand about a point estimate is what it is
+not. It is not the population value. The officer's 34.2 is her best guess, but
+the true district average might be 32 or 37. The sample gives her one plausible
+value, and the only reason to prefer it to any other single number is the logic
+above. Without more information, she has no way to say how close 34.2 is.
+
+**Common misconception.** Trainees often treat a point estimate as if it were
+the exact population value, especially when it comes from a large or official
+sample. A point estimate is always an inference, not a measurement. The larger
+and more carefully chosen the sample, the more trust you can place in it, but it
+remains an estimate until you see the whole population. The next topic shows how
+to express that uncertainty honestly.
+
+## Activity: Estimate from your own data
+
+Work in groups of three. About 20 minutes.
+
+Each group collects a small data set from around the school: for example, the
+number of books on five colleagues' shelves, the number of minutes it takes five
+pupils to solve a given problem, or the number of pupils in five randomly chosen
+classrooms.
+
+1. Compute the mean of your sample. This is your point estimate of the
+   population mean for your chosen question.
+2. One member of the group now adds an extreme value to the data (for example,
+   a colleague with 200 books). Recompute the mean.
+3. Discuss: how much did one value move the estimate? What does that tell you
+   about the trust you can place in a single number?
+
+## Check your understanding
+
+1. *(Remember)* In your own words, state the difference between a parameter and a point estimate in one sentence.
+2. *(Understand)* Explain why the sample mean is called an unbiased estimator of the population mean.
+3. *(Apply)* A random sample of 10 classrooms gives the following numbers of pupils: 28, 32, 35, 30, 34, 31, 29, 33, 36, 32. Compute the point estimate of the mean classroom size.
+
+## Summary
+
+A point estimate is a single number computed from a sample and used to estimate
+an unknown population parameter. The sample mean estimates the population mean;
+the sample proportion estimates the population proportion. A point estimate is a
+best guess, but it is not the truth. The next topic shows how to attach a range
+to that guess so that the uncertainty is visible.
+
+## Self-assessment checklist
+
+- [ ] I can distinguish a parameter from a point estimate.
+- [ ] I can compute a point estimate of a mean and a proportion from sample data.
+- [ ] I can explain why a point estimate is not the same as the population value.
+
+## Try this at your practicum school
+
+At your practicum school, ask the head teacher for the number of pupils in five
+classrooms (or choose five classrooms yourself). Compute the mean. Write one
+sentence stating your point estimate of the mean classroom size for the school,
+and one sentence explaining what this number does and does not tell you.
+
+## Summative task
+
+A teacher surveys a random sample of 12 households near her school to find the
+number of school-age children in each. The data are: 2, 3, 1, 4, 2, 3, 5, 2, 1,
+3, 2, 4.
+
+1. Compute the point estimate of the mean number of school-age children per household.
+2. A colleague says, "The true mean is exactly 2.67." Is this claim justified?
+   Explain your reasoning in two or three sentences.
+3. State one reason why the estimate might be too high and one reason why it might be too low.
+
+**Mini-rubric**
+
+| Criterion | Levels |
+|---|---|
+| *Computation* | 0-2: correct mean (2.67) with working / right answer with little working / incorrect. |
+| *Evaluating the claim (Analyze)* | 0-3: identifies that the sample mean is an estimate, not the true value, and gives a reason (sampling variability, the sample is small, not all households were surveyed) / partial reasoning / none. |
+| *Sources of error* | 0-2: one plausible reason each for over- and under-estimation / one reason only / none. |
+
+## Further reading
+
+Lane, D. M. (2023). *Online Statistics Education: A Multimedia Course of Study.*
+Rice University. https://onlinestatbook.com/ - Chapter 9 introduces sampling
+distributions and the logic of estimation.
+
+Illowsky, B., & Dean, S. (2023). *Introductory Statistics 2e.* OpenStax, Rice
+University. https://openstax.org/details/books/introductory-statistics-2e -
+Section 8.1 covers point estimates and the sampling distribution (CC BY 4.0).

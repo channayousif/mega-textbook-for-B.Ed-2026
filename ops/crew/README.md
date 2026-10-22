@@ -11,6 +11,7 @@ definition of done. Paperclip is paused (its data is kept); nothing here depends
 | claude | `claude -p` | anthropic | author, repair_en, review_ur, salvage |
 | codex | `codex exec` | openai | figures (SVG), translate (G4) |
 | agy | `agy -p` | google | review_en (G3), illustrate (ADR-0029) |
+| agy_claude | `agy -p --model claude-opus-4-6-thinking` | anthropic | none: next after claude in every chain that has claude (agy's separate Claude/GPT quota) |
 | opencode | `opencode run -m longcat/LongCat-2.0` | longcat | fix (mechanical gate repairs) |
 
 openclaw is not a worker. It is the owner channel: Discord `#etextbook-platform` for everything,

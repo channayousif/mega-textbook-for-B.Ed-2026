@@ -1,0 +1,6 @@
+render-review: NOT RUN (brief constraint - no build/dev/Playwright permitted on this host)
+Reason: brief.md explicitly forbids running `npm run build`, a dev server or Playwright.
+Impact: accessibility criterion (visual inspection of rendered pages, print views, small-screen layout)
+           cannot be fully verified. Static checks only (headings, alt text, table markup, SVG text-fit).
+Alternative: host-browser inspection in a subsequent session with build/Playwright permitted.
+EXIT:1 (not run - host constraint)

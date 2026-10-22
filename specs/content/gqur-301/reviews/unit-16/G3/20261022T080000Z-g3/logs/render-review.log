@@ -1,0 +1,11 @@
+render-review: NOT RUN (brief constraint - no build/dev/Playwright permitted on this host)
+Reason: brief.md explicitly forbids running `npm run build`, a dev server or Playwright.
+Static accessibility checks performed instead:
+  - All 6 figures have descriptive alt text in figures/unit-16.md and matching <Figure> alt props
+  - All 6 light + 6 dark SVGs pass measure-figure-text.mjs (widest text 625.2 within 640 viewBox)
+  - Headings properly hierarchical (h1 > h2 > h3) in all 5 content files
+  - Tables use markdown table syntax with header rows
+  - Further reading links are descriptive (Section 12.3: The regression equation, etc.)
+  - No colour-only meaning in figures (verified by check:figures)
+Cannot verify: rendered layout at 360px, A4 print views, reading order, figure clipping, color-contrast in live output.
+EXIT:1 (not run - host constraint)
