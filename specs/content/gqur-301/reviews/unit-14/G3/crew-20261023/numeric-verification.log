@@ -1,0 +1,15 @@
+# Command: python3 -I (statistics) independent recomputation of every Unit 14 data set; output below is the script's own stdout
+topic-01 worked data: sum=503 n=15 mean=33.5333 s=3.4198  (unit states 513, 34.2, s=3.8)
+topic-02 activity: sum=250 mean=20.8333 s=5.2020 95%: SE=1.5017 ME=2.9433 CI=(17.8900, 23.7766) 99%: SE=1.5017 ME=3.8743 CI=(16.9590, 24.7077)
+topic-01 CYU3 mean 32
+topic-01 summative mean 2.6667
+topic-02 worked (stated 34.2, 3.8, 15): SE=0.9812 ME=1.9231 CI=(32.2769, 36.1231)
+topic-02 worked with t(14)=2.145: SE=0.9812 ME=2.1046 CI=(32.0954, 36.3046)
+topic-02 CYU3: SE=2.6833 ME=5.2592 CI=(52.7408, 63.2592)
+topic-02 summative: SE=0.1400 ME=0.2744 CI=(2.1256, 2.6744) (rubric states 2.12 to 2.68)
+MCQ7 SE 2.0  MCQ8 ME 5.88  MCQ4 0.3
+MCQ10: SE=1.4606 ME=2.8628 CI=(69.1372, 74.8628)
+RRQ3 SE 1.6667  RRQ7: SE=8.9443 ME=17.5308 CI=(232.4692, 267.5308)  RRQ9: SE=3.7500 ME=7.3500 CI=(112.6500, 127.3500)
+ERQ1: SE=3.0984 ME=6.0728 CI=(33.9272, 46.0728)
+ERQ4 n=25: SE=4.0000 ME=7.8400 CI=(-7.8400, 7.8400)  n=100: SE=2.0000 ME=3.9200 CI=(-3.9200, 3.9200)
+exit=0
