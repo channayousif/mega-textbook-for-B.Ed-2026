@@ -63,3 +63,27 @@ metadata generation, not a site build. See content-gates-final.txt for the final
 result and content-gates-main.txt for origin/main. Historical logs are unchanged.
 
 Final rerun: all 13 content gates passed. No findings beyond origin/main.
+
+## Retry r1, 2026-10-22
+
+Checked clean branch crew/gqur-301-u06-translate-r1 at
+8f5587c386715c5e6f8b97f29615b76f059756ff, identical to origin/main,
+with no branch-only commits. The earlier handoff remains applicable.
+Current English still contains the positive-deviation error at
+topic-02.mdx:55 and unit-assessment.mdx:214, the universal School M
+inference at unit-assessment.mdx:226, and the placement-test inference
+in topic-03.mdx:32. No settled repaired English baseline is available.
+
+Per translate-unit's explicit out-of-scope stop instruction, no Urdu
+translation or figure variants were produced. The existing G4 tracker
+row remains blocked and translation_status remains draft. Separate
+English author repair is the next dependency; G3/G5 remain open.
+No build, server or Playwright was run under the brief's restrictions.
+
+The initial content check also measures origin/main: 12 gates pass;
+check:content-status fails because ignored static/content-status.json
+is missing. Generated this derived metadata with build:content-status
+(not a site build), then reran all gates. See content-gates-r1.txt.
+
+Final retry result: all 13 content gates passed. No new finding relative to
+origin/main. No authored content, tracker status or review evidence was changed.

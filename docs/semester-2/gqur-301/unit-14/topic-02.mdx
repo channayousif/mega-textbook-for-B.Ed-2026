@@ -1,0 +1,229 @@
+---
+title: "Topic 14.2 - Confidence intervals"
+description: "Confidence intervals: constructing and interpreting an interval estimate for a population mean, the meaning of the confidence level, margin of error, and the effect of sample size."
+course_code: GQUR-301
+unit_no: 14
+topic_no: 2
+topic_label: "14.2"
+clo_refs:
+  - "SLO:GQUR-301-14-2"
+  - "SLO:GQUR-301-14-3"
+blooms_summary: "Remember the form of a confidence interval; understand why a range is more honest than a single number; apply the formula for a confidence interval for a mean; analyze what the confidence level and margin of error mean and how sample size affects the interval."
+est_reading_minutes: 8
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+import Glossary from '@site/src/components/Glossary';
+
+<PrintHandout />
+
+## A real classroom situation
+
+The same district education officer from Topic 14.1 has her point estimate:
+34.2 pupils per classroom, from 15 schools. She now faces the harder question.
+The officer reviewing her report asks, "You are telling me the average is 34.2,
+but how sure are you? Could it be 30? Could it be 38?" The officer realizes that
+a single number does not answer that question honestly. She needs to report a
+range that captures the uncertainty, together with a statement of how confident
+she is that the true value lies inside it.
+
+<Figure id="fig-U14-3" kind="flowchart" src="/img/figures/gqur-301/unit-14/fig-U14-3.svg" alt="A flowchart with five boxes and arrows showing the steps: compute sample mean, compute standard error, find critical value, compute margin of error, build the interval." width={780} height={560} />
+
+## Explanation
+
+### Why a range is more honest than a single number
+
+A <Glossary term="Point estimate" /> says: "Our best guess is 34.2." A <Glossary
+term="Confidence interval" /> says: "Our best guess is 34.2, and a plausible
+range for the true value, given the data, is 30.5 to 37.9." The range
+communicates what the single number hides: that the sample might easily have
+come out a little higher or lower, and the true value could lie anywhere nearby.
+
+An interval estimate is built around the point estimate by adding and
+subtracting a <Glossary term="Margin of error" />:
+
+```
+Confidence interval = point estimate ± margin of error
+```
+
+The margin of error depends on three things: the variability in the data, the
+sample size, and how confident you want to be.
+
+### The pieces of a confidence interval for a mean
+
+When the population standard deviation is unknown (which is almost always the
+case in practice), we use the sample standard deviation (s) to estimate it, and
+the <Glossary term="Normal model" /> (or, for small samples, the t-model) to
+find the critical value.
+
+**Step 1: Compute the sample mean (x).** This is the point estimate from
+Topic 14.1.
+
+**Step 2: Compute the standard error.** The standard error measures how much
+sample means vary from sample to sample. It is:
+
+```
+Standard error = s / sqrt(n)
+```
+
+where s is the sample standard deviation and n is the sample size. A larger
+sample gives a smaller standard error: bigger samples produce more stable
+means.
+
+**Step 3: Choose the confidence level and find the critical value.** The
+confidence level is the percentage of intervals that would capture the true
+population value if you repeated the sampling many times. The most common
+choice is 95 per cent. For a 95 per cent confidence interval using the normal
+model, the critical value (z*) is 1.96 (Illowsky & Dean, 2023, Chapter 8).
+
+The <Glossary term="Confidence level" /> answers a subtle but important
+question. A 95 per cent confidence level does *not* mean there is a 95 per
+cent chance that the true value lies inside the particular interval you
+computed. It means: if you repeated this sampling and interval-building process
+many times, about 95 per cent of the intervals you built would contain the true
+value (Lane, 2023, Chapter 10). The interval you have in front of you either
+contains the true value or it does not; the confidence level describes the
+method's long-run success rate, not the probability for this one interval.
+
+**Step 4: Compute the margin of error.**
+
+```
+Margin of error = z* × (s / sqrt(n))
+```
+
+**Step 5: Build the interval.**
+
+```
+Confidence interval = x ± margin of error
+  = (x - margin of error,  x + margin of error)
+```
+
+### Worked example
+
+The officer's sample of 15 schools: x = 34.2, s = 3.8, n = 15.
+
+Step 1: x = 34.2
+
+Step 2: Standard error = 3.8 / sqrt(15) = 3.8 / 3.87 = 0.98
+
+Step 3: For a 95 per cent confidence level, z* = 1.96.
+
+Step 4: Margin of error = 1.96 × 0.98 = 1.92
+
+Step 5: Confidence interval = 34.2 ± 1.92 = (32.28, 36.12)
+
+The officer can report: "We estimate the mean classroom size in the district to
+be between 32.3 and 36.1 pupils, with 95 per cent confidence." This is a much
+more honest and useful statement than "34.2" alone.
+
+<Figure id="fig-U14-4" kind="diagram" src="/img/figures/gqur-301/unit-14/fig-U14-4.svg" alt="A number line with ten repeated-sample confidence intervals shown as line segments; nine contain the true population mean (dashed line at 33.5), one does not, and the officer's interval from 32.28 to 36.12 is highlighted." width={780} height={420} />
+
+### Common misconception
+
+The most common error is to say: "There is a 95 per cent probability that the
+true mean lies between 32.3 and 36.1." Once the interval is computed, the true
+mean is either inside it or not; there is no probability left to assign. The 95
+per cent refers to the reliability of the *process* that produced the interval,
+not to the particular interval you hold in your hands. Think of it like a
+net: a net that catches the fish 95 per cent of the time is a reliable net,
+but once you have cast it and pulled it in, you either caught the fish or
+you did not.
+
+### What makes an interval wider or narrower?
+
+Two things that the officer can control:
+
+1. **Sample size.** A larger sample gives a smaller standard error, which gives
+   a smaller margin of error, which gives a narrower interval. Doubling the
+   sample size does not halve the interval: because of the square root, you need
+   four times the sample size to halve the margin of error.
+
+2. **Confidence level.** A higher confidence level (99 per cent instead of 95
+   per cent) requires a larger critical value (2.58 instead of 1.96), which gives
+   a wider interval. More certainty costs more width.
+
+This is the fundamental trade-off: you cannot be more certain and more precise
+at the same time without collecting more data.
+
+## Activity: Build and compare intervals
+
+Work in pairs. About 25 minutes.
+
+Use the following sample (n = 12) of travel times (in minutes) from a survey of
+pupils at a government school in Hyderabad:
+
+`15, 20, 25, 18, 22, 30, 12, 28, 17, 23, 21, 19`
+
+1. Compute the sample mean and sample standard deviation (use the sample
+   formula, dividing by n-1 for s).
+2. Compute the standard error.
+3. Compute a 95 per cent confidence interval for the mean travel time.
+4. Now compute a 99 per cent confidence interval (use z* = 2.58).
+5. Compare the two intervals: which is wider, and why?
+6. If the sample had been 48 pupils with the same mean and standard deviation,
+   by roughly what factor would the margin of error shrink?
+
+## Check your understanding
+
+1. *(Remember)* State the formula for a confidence interval for a mean in terms of the point estimate, the critical value, and the standard error.
+2. *(Understand)* Explain the difference between the standard deviation of a sample and the standard error of the mean.
+3. *(Apply)* A sample of 20 pupils gives a mean test score of 58 with a standard deviation of 12. Compute a 95 per cent confidence interval for the population mean.
+
+## Summary
+
+A confidence interval is a point estimate plus or minus a margin of error,
+giving a plausible range for the population value. The margin of error depends
+on the data's variability, the sample size, and the confidence level. A 95 per
+cent confidence level means that in repeated sampling, 95 per cent of such
+intervals would capture the true value. A larger sample gives a narrower
+interval; a higher confidence level gives a wider one.
+
+## Self-assessment checklist
+
+- [ ] I can compute a confidence interval for a mean from sample data.
+- [ ] I can explain what a confidence level means without using the word "probability" for a single interval.
+- [ ] I can describe how sample size and confidence level affect the width of the interval.
+
+## Try this at your practicum school
+
+Ask five pupils at your practicum school how many minutes they spent on
+homework last night. Compute the mean and standard deviation, then build a 95
+per cent confidence interval for the mean homework time. Write one sentence
+explaining what the interval tells the teacher, and one sentence explaining
+what it does not tell her.
+
+## Summative task
+
+A researcher surveys a random sample of 25 government primary schools in a
+district and records the number of textbooks per pupil. The sample mean is 2.4
+with a standard deviation of 0.7.
+
+1. Compute a 95 per cent confidence interval for the mean number of textbooks per pupil.
+2. A policy document claims: "We are 95 per cent certain that the true mean is
+   between 2.1 and 2.7." Evaluate whether this statement correctly describes the
+   confidence interval. If not, rewrite it correctly.
+3. Explain what would happen to the width of the interval if the sample had 100
+   schools instead of 25 (assuming the same mean and standard deviation).
+
+**Mini-rubric**
+
+| Criterion | Levels |
+|---|---|
+| *Computation* | 0-2: correct standard error, margin, and interval (2.12 to 2.68) / one error / two or more errors. |
+| *Interpretation (Evaluate)* | 0-3: identifies that "95 per cent certain the true value is in this interval" is incorrect, explains the correct frequentist meaning, and rewrites the sentence / identifies the error but explanation is incomplete / none. |
+| *Sample-size reasoning (Analyze)* | 0-2: states the interval would be roughly half as wide because SE shrinks with the square root of n (from 25 to 100 is a factor of 4, so SE halves) / partial reasoning / none. |
+
+## Further reading
+
+Lane, D. M. (2023). *Online Statistics Education: A Multimedia Course of Study.*
+Rice University. https://onlinestatbook.com/ - Chapter 10 covers confidence
+intervals and the meaning of the confidence level.
+
+Illowsky, B., & Dean, S. (2023). *Introductory Statistics 2e.* OpenStax, Rice
+University. https://openstax.org/details/books/introductory-statistics-2e -
+Chapter 8 introduces confidence intervals for a mean (CC BY 4.0).
+
+NIST/SEMATECH. *e-Handbook of Statistical Methods.*
+https://www.itl.nist.gov/div898/handbook/ - Section 1.3.5.2 discusses
+estimation and confidence intervals.

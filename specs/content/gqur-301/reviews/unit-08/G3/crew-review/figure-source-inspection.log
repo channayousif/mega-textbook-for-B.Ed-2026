@@ -1,0 +1,196 @@
+static/img/figures/gqur-301/unit-08/fig-U8-1.svg: dark label equality True
+Three pupils, six arrangements
+The six different orders in which three pupils, Ali, Sana and Bilal, can stand in a line, with a tree showing 3 choices for the first place, 2 for the second and 1 for the third, giving 3 x 2 x 1 = 6 arrangements.
+Three pupils, six arrangements
+1st place
+2nd place
+3rd place
+Arrangement
+Start
+A
+S
+B
+Ali, Sana, Bilal
+B
+S
+Ali, Bilal, Sana
+S
+A
+B
+Sana, Ali, Bilal
+B
+A
+Sana, Bilal, Ali
+B
+A
+S
+Bilal, Ali, Sana
+S
+A
+Bilal, Sana, Ali
+3 choices
+2 choices left
+1 choice left
+Caption: 3 × 2 × 1 = 3! = 6 arrangements
+A = Ali, S = Sana, B = Bilal. Each path through the tree is one order, and no order repeats.
+Credit: textbook.com.pk after Lane (2023).
+textbook.com.pk
+
+static/img/figures/gqur-301/unit-08/fig-U8-2.svg: dark label equality True
+The permutation formula with school examples
+A table of the permutation formula P(n, r) = n! divided by (n - r)! with four school examples: three pupils in a line give 6 orders, a head prefect and deputy from 8 candidates give 56, three prizes among 10 finalists give 720, and the letters of KARACHI give 2,520.
+Permutations: P(n, r) = n! ÷ (n - r)!
+Situation
+Working
+Count
+3 pupils in an assembly line
+3! = 3 × 2 × 1
+6
+Head prefect and deputy from 8
+P(8, 2) = 8 × 7
+56
+1st, 2nd and 3rd prize from 10 finalists
+P(10, 3) = 10 × 9 × 8
+720
+Letters of KARACHI (two A’s alike)
+7! ÷ 2! = 5,040 ÷ 2
+2,520
+Caption: n! counts all orders, P(n, r) counts orders of r items
+Order matters in every row: swapping two people or letters gives a different result.
+Start at n and multiply r shrinking factors. If some items are alike, divide by their factorials.
+Credit: textbook.com.pk after Abramson (2021).
+textbook.com.pk
+
+static/img/figures/gqur-301/unit-08/fig-U8-3.svg: dark label equality True
+Arrangements and a committee of the same three pupils
+Two panels comparing arrangements and a committee. On the left, the same three pupils make six ordered arrangements. On the right, all six arrows point to one committee containing the same three pupils, showing that six permutations collapse into one combination.
+Order matters, or order does not matter?
+Order matters: arrangements
+Order does not matter: one committee
+1st
+2nd
+3rd
+A
+B
+C
+A
+C
+B
+B
+A
+C
+B
+C
+A
+C
+A
+B
+C
+B
+A
+Committee
+A
+B
+C
+the same group,
+whatever the order
+Caption: 6 arrangements = 1 combination, so divide by 3! = 6
+A, B and C are three pupils. Each committee of 3 appears 3! = 6 times among the arrangements.
+Credit: textbook.com.pk after Lane (2023).
+textbook.com.pk
+
+static/img/figures/gqur-301/unit-08/fig-U8-4.svg: dark label equality True
+The combination formula with school examples
+A table of the combination formula C(n, r) = n! divided by r! times (n - r)! with five school examples: a workshop group of 3 from 8 teachers gives 56, two register carriers from 3 volunteers give 3, a cricket eleven from 14 gives 364, any 5 of 8 exam questions gives 56, and handshakes among 10 teachers give 45.
+Combinations: C(n, r) = n! ÷ (r! × (n - r)!)
+Situation
+Working
+Count
+3 teachers for a workshop, from 8
+336 ÷ 3! = 336 ÷ 6
+56
+2 register carriers, from 3 volunteers
+C(3, 2)
+3
+A cricket XI from a squad of 14
+C(14, 11) = C(14, 3)
+364
+Any 5 of 8 examination questions
+C(8, 5) = C(8, 3)
+56
+Handshakes among 10 teachers
+C(10, 2) = 90 ÷ 2
+45
+Caption: C(n, r) = P(n, r) ÷ r!
+Order does not matter in any row: only the group counts.
+Choosing r is the same as leaving out n - r, so C(n, r) = C(n, n - r) often shortens the working.
+Credit: textbook.com.pk after Abramson (2021).
+textbook.com.pk
+
+static/img/figures/gqur-301/unit-08/fig-U8-5.svg: dark label equality True
+Which counting method?
+A flowchart for choosing a counting method. If order does not matter, use a combination. If order matters and items can repeat, use the multiplicative rule, n to the power r. If order matters without repetition, use n factorial when all items are arranged, or P(n, r) when only some are. A note says to multiply across stages and add across separate cases.
+Which counting method?
+Read the problem: what is being chosen,
+and from how many?
+Does order matter? (swap test)
+no
+Combination
+C(n, r) = n! ÷ (r! (n - r)!)
+yes
+Can an item be used again?
+yes
+Multiplicative rule
+n × n × ... = n to the power r
+no
+Are all n items arranged?
+yes
+n!
+no
+Permutation
+P(n, r) = n! ÷ (n - r)!
+Several stages? Count each stage, then multiply.
+Separate cases? Count each case, then add.
+Caption: two questions choose the method
+Swap test: if swapping two chosen items gives a different outcome, order matters.
+Then check the answer with a small listed case and a size check.
+Credit: textbook.com.pk after Abramson (2021).
+textbook.com.pk
+
+static/img/figures/gqur-301/unit-08/fig-U8-6.svg: dark label equality True
+Solved school counting problems
+A table of six solved school counting problems, each labelled with whether order matters, the method and the answer: a lock code with repeats gives 1,000, three prizes among 10 give 720, a team of 4 from 10 gives 210, 2 boys and 2 girls give 60, a line with two friends together gives 48, and a committee with at least one girl gives 74.
+Solved school counting problems
+School problem
+Order?
+Method
+Answer
+3-digit lock code, repeats allowed
+Yes
+10 × 10 × 10
+1,000
+1st, 2nd, 3rd prize among 10
+Yes
+P(10, 3)
+720
+Team of 4 debaters from 10
+No
+C(10, 4)
+210
+2 boys from 5 and 2 girls from 4
+No
+C(5, 2) × C(4, 2)
+60
+5 in a line, two friends together
+Yes
+4! × 2!
+48
+3 from 9, at least one girl
+No
+C(9, 3) - C(5, 3)
+74
+Caption: label the method before you calculate
+Multiply across stages (choose boys, then girls). Treat "together" items as one block.
+Count "at least one" as all cases minus the cases with none.
+Credit: textbook.com.pk after Abramson (2021).
+textbook.com.pk

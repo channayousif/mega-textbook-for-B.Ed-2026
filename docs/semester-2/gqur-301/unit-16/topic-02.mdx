@@ -1,0 +1,111 @@
+---
+title: "Topic 16.2 - Problem solving using statistical concepts"
+description: "Work through a complete school data investigation: define a question, plan collection, check records, analyse patterns and justify a limited decision."
+course_code: GQUR-301
+unit_no: 16
+topic_no: 2
+topic_label: "16.2"
+clo_refs:
+  - "SLO:GQUR-301-16-1"
+  - "SLO:GQUR-301-16-2"
+  - "SLO:GQUR-301-16-3"
+blooms_summary: "Apply statistical concepts; analyze evidence; evaluate conclusions."
+est_reading_minutes: 9
+translation_status: draft
+---
+
+import TranslationStatusBadge from '@site/src/components/TranslationStatusBadge';
+import PrintHandout from '@site/src/components/PrintHandout';
+
+<TranslationStatusBadge status="draft" />
+
+<PrintHandout />
+
+## A real classroom situation
+
+A government primary school in Mirpurkhas is deciding whether to move its shared reading period. Some teachers say pupils who arrive late miss the lesson. Others say the problem is the choice of reading material. A trainee offers to calculate an average test score, but the mentor asks what that average would tell them about the timetable. The group must first turn its concern into a question that records can help answer. This scenario and its numerical records are synthetic.
+
+<Figure id="fig-U16-3" src="/img/figures/gqur-301/unit-16/fig-U16-3.svg" alt="Five connected stages link the school question about reading access to a plan, checked data, analysis and a conclusion that can lead to a new question." />
+
+## Explanation
+
+### Problem solving using statistical concepts
+
+The **problem-solving cycle** is a connected process: define a problem, plan evidence collection, collect and check data, analyse them, then draw a limited conclusion and decide what to do next. The stages can be revisited. Discovering an unclear definition during collection is a reason to improve the plan. It is not a reason to continue with a definition that different observers interpret differently. This cycle is an organising aid for applying the course's statistical methods, rather than another formula to memorise.
+
+Begin by narrowing the question. "How can we improve reading?" is too broad for one attendance table. "During these five ordinary school days, what share of this class missed the start of the reading period?" names the group, time and outcome. A second question might ask whether arrival time and reading score are related. That requires paired measurements. A third asks whether changing the timetable would improve scores. That requires a design capable of comparing alternative explanations, rather than simply a table of current arrivals.
+
+**Common misconception: "the method is chosen before the question."** A favourite test cannot determine what evidence the school needs. If the question asks how many pupils arrived late, a count and a proportion may be sufficient. If it asks about two measurements for each pupil, inspect paired data. If it asks about a wider population, consider how the sample was selected and whether inference is justified. Lane's Chapter 1 distinguishes describing the observed data from making an inference beyond them. We use that distinction throughout this investigation (Lane, n.d.).
+
+Make a plan before looking for a pleasing result. Define late arrival, for example arrival after the scheduled start of the reading period. Keep the scheduled time consistent. Specify whether the unit of observation is a pupil, a school day, or a pupil-day. One pupil observed on five days produces five pupil-days but only one pupil. Treating those five records as five unrelated children changes the meaning of the evidence. Record absences separately from late arrivals; an absent child was not observed arriving on time.
+
+The following synthetic table tracks one class with 20 enrolled pupils on each day. The reading period starts at the same time throughout. Late pupils are included among those present. This is a five-day class record, not a random sample of Sindh schools.
+
+| Day | Enrolled | Present | Late among present |
+|---|---|---|---|
+| Monday | 20 | 18 | 3 |
+| Tuesday | 20 | 20 | 4 |
+| Wednesday | 20 | 16 | 2 |
+| Thursday | 20 | 18 | 3 |
+| Friday | 20 | 18 | 6 |
+| Total pupil-days | 100 | 90 | 18 |
+
+Check the table before calculating. Each day's late count must be no larger than its present count. Present must be no larger than enrolled. The totals should agree with the daily records. There are ten absent pupil-days because 100 - 90 = 10. Absence is not the same as missing data: here it is explicitly recorded. If Wednesday's late count were blank, a zero would be an unsupported replacement. Report it as unknown and seek the record before calculating a five-day late total.
+
+Now choose summaries that answer the stated question. The mean present count is 90 / 5 = 18 pupils per day. Across observed attendance occasions, the late proportion is 18 / 90 = 0.20, or 20%. Across all enrolled pupil-days, late arrival accounts for 18 / 100 = 18%. These fractions use different denominators and answer different questions. The absent share is 10 / 100 = 10%. Do not silently combine late arrival and absence unless you explicitly redefine the outcome as missing the reading-period start and know that the records support that definition.
+
+Daily late proportions are 3/18, 4/20, 2/16, 3/18 and 6/18. They are about 16.7%, 20%, 12.5%, 16.7% and 33.3%. Their unweighted mean is about 19.8%, which differs from the overall 20% because daily present counts differ. To describe all 90 observed attendance occasions, use total late divided by total present. To describe a typical day, first explain which daily summary you want. A clear denominator is more useful than an unexplained percentage with extra decimal places.
+
+A bar chart of late counts by day can make Friday's count visible. A companion table of present counts prevents the reader from assuming every day had the same number present. The range of late counts is 6 - 2 = 4. The mean late count is 18 / 5 = 3.6. That fractional mean is an average count across days, not a claim that part of a child arrived. Counts are whole numbers on each day; averages of counts need not be whole numbers.
+
+<Figure id="fig-U16-4" src="/img/figures/gqur-301/unit-16/fig-U16-4.svg" alt="A worked investigation links the reading-access question to five-day counts, a 20 percent late share among present pupil-days, and a cautious follow-up decision." />
+
+What can the school conclude? In these records, one fifth of present pupil-days involved late arrival. Friday deserves a follow-up question. We cannot infer that one fifth of individual pupils are habitually late because the same pupils may appear repeatedly. We cannot conclude that the reading period caused lateness. Transport, weather, family responsibilities and school routines are possible explanations to investigate, not facts established by these counts. Nor can we generalise the percentage to a district from this one class.
+
+A defensible next step is a small, reversible timetable trial with agreed follow-up measures, if the school considers it appropriate. Keep recording arrival in the same way, track reading access, and compare comparable periods. If scores are collected, use the same assessment conditions and record whether the pupil groups changed. A before-and-after improvement alone does not isolate the timetable's effect. The teacher can still use limited evidence to improve a routine while honestly explaining what remains uncertain.
+
+Use a calculator or spreadsheet as a checkable tool. Enter the daily counts in separate columns, keep missing entries distinct from zero, and compute totals before percentages. Independently hand-check one total and one fraction. A spreadsheet that divides late counts by enrolled pupils will give a valid calculation of the wrong quantity if the heading says "among those present." Label the output with the numerator, denominator, time period and unit of observation so another trainee can reproduce it.
+
+A short report can use four sentences: the question and context; the main numerical result; the limitation; the proposed action and check. Avoid identifying individual children. Presenting a proportion without its context invites overclaiming, while listing every calculation without a decision leaves the school with little practical help. Clear reporting joins evidence and action without making the evidence stronger than it is.
+
+## Activity: Investigation handover
+
+Work in pairs for about 25 minutes. Without reopening the explanation, each partner writes the five stages of the cycle. Reconcile the lists. One partner then prepares a four-sentence report from the table while the other checks denominators and limits. Exchange roles and consider this change: Wednesday's late count is missing. Agree which totals can still be reported and which conclusion must wait. Share your report with another pair, who must reproduce one calculation and challenge one inference. Revise the report together.
+
+## Check your understanding
+
+1. Name the five stages of the problem-solving cycle in order. *(Remember)*
+2. Explain the difference between a pupil and a pupil-day using this class record. *(Understand)*
+3. A class has 24 present pupils, of whom 6 arrive late. Calculate the late proportion among those present and state the denominator. *(Apply)*
+4. Explain how you would record a missing late count and why replacing it with zero changes the conclusion. *(Apply)*
+
+## Summary
+
+The question determines the evidence and the method. Check definitions, units and denominators before calculation. A good investigation ends with a decision linked to its evidence, an honest limitation, and a plan to learn from what happens next.
+
+## Self-assessment checklist
+
+- [ ] I can turn a broad school concern into an answerable statistical question.
+- [ ] I can check a small table and justify a denominator.
+- [ ] I can separate a class description from a wider inference.
+- [ ] I can propose a follow-up that tests whether a decision is useful.
+
+## Try this at your practicum school
+
+Discuss one routine decision with your mentor without requesting pupil files. Write an answerable question and list the anonymous totals needed. Specify definitions, time period and a missing-data rule. Use the synthetic table if real records are unavailable. Bring a proposed report to your tutorial; explain what permission and safeguards would be needed before collecting any new school data.
+
+## Summative task
+
+Write a 300–400 word investigation report from the five-day table. Include two summaries with justified denominators, an explanation of Friday's pattern, and a proposed follow-up. Separate what the records show from what would require more evidence. *(Analyze)*
+
+| Criterion | 2 marks | 1 mark | 0 marks |
+|---|---|---|---|
+| Question and plan | Specifies population, period and observation unit | One element missing | Question cannot guide collection |
+| Numerical evidence | Two accurate summaries with denominators | One justified summary | Unsupported calculation |
+| Analysis of claims | Separates observation, explanation and generalisation | Identifies one limit | Overstates evidence |
+| Action and follow-up | Links a feasible action and observable check | Gives action without useful check | Neither linked to evidence |
+
+## Further reading
+
+- Lane, D. M. (n.d.). *Online Statistics Education: A Multimedia Course of Study*, [Descriptive statistics](https://onlinestatbook.com/2/introduction/descriptive.html) and [Inferential statistics](https://onlinestatbook.com/2/introduction/inferential.html), Chapter 1. Use the distinction between reporting observations and reasoning beyond them.
+- Illowsky, B., & Dean, S. (2023). *Introductory Statistics 2e*, [Chapter 1](https://openstax.org/books/introductory-statistics-2e/pages/1-introduction), for sampling and data collection.
