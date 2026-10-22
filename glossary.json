@@ -2290,6 +2290,41 @@
     "definition_ur": "ایک ڈیٹا نقطہ جو پلٹ یo تقسیم میں باقی ڈیٹا کے عام نمونے سے بہت دور ہو۔"
   },
   {
+    "term": "Estimator",
+    "definition_en": "A statistic used to estimate an unknown population parameter; for example, the sample mean is an estimator of the population mean.",
+    "definition_ur": "ایک شماریاتی مقدار جو کسی نامعلوم آبادی کے پیرامیٹر کا اندازہ لگانے کے لیے استعمال ہوتی ہے؛ مثال کے طور پر، نمون۔ اوسط آبادی اوسط کا اندازہ لگانے والا ہے۔"
+  },
+  {
+    "term": "Point estimate",
+    "definition_en": "A single value computed from a sample and used as the best guess of an unknown population parameter; for example, a sample mean of 34.2 is a point estimate of the population mean.",
+    "definition_ur": "نمونے سے حاصل کی گئی ایک واحد مقدار جو کسی نامعلوم آبادی پیرامیٹر کی بہترین اندازہ لگانے کے لیے استعمال ہوتی ہے؛ مثال کے طور پر، 34.2 کا نمونہ اوسط آبادی اوسط کا ایک نقطہ اندازہ ہے۔"
+  },
+  {
+    "term": "Interval estimate",
+    "definition_en": "A range of values, computed from a sample, within which a population parameter is estimated to lie; a confidence interval is the most common type.",
+    "definition_ur": "نمونے سے حاصل کی گئی مقداروں کی ایک حد جس کے اندر آبادی پیرامیٹر موجود ہونے کا اندازہ لگایا جاتا ہے؛ اعتماد وقفہ اس کا سب عام قسم ہے۔"
+  },
+  {
+    "term": "Confidence interval",
+    "definition_en": "An interval estimate, built around a point estimate, that is designed to contain the unknown population parameter with a chosen confidence level (commonly 95 per cent).",
+    "definition_ur": "ایک وقفہ اندازہ جو نقطہ اندازہ کے ارد گرد بنایا جاتا ہے اور اس مقصد سے کہ نامعلوم آبادی پیرامیٹر کو منتخب اعتماد کی سطح (عام طور پر 95 فیصد) کے ساتھ شامل کرے۔"
+  },
+  {
+    "term": "Confidence level",
+    "definition_en": "The percentage of confidence intervals that would capture the true population parameter if the sampling and interval-building process were repeated many times; 95 per cent is the most common choice.",
+    "definition_ur": "اعتماد  stoppages کا وہ فیصد جو اگر نمونہ بنانے اور وقفہ بنانے کا عمل کئی بار دہرایا جائے تو حقیقی آبادی پیرامیٹر کو پکڑ لے؛ 95 فیسب سب زیادہ عام انتخاب ہے۔"
+  },
+  {
+    "term": "Margin of error",
+    "definition_en": "The amount added to and subtracted from a point estimate to build a confidence interval; it equals the critical value multiplied by the standard error.",
+    "definition_ur": "وہ مقدار جو نقطہ اندازہ میں شامل کی جاتی ہے اور اسے میں سے کھینچا جاتا ہے تاکہ اعتماد وقفہ بنایا جا سکے؛ یہ نماوندی مقدار اور معیاری غلطی کے حاصل ضرب کے برابر ہے۔"
+  },
+  {
+    "term": "Normal model",
+    "definition_en": "A symmetric, bell-shaped probability distribution used to model many natural quantities and the sampling distribution of the mean; characterised by its mean and standard deviation.",
+    "definition_ur": "ایک تشہیری، گھنٹی کی شکل کا احتمال تقسیم جو بہت سی قدری مقداروں اور اوسط کے نمونہ تقسیم کی نمائندگی کے لیے استعمال ہوتا ہے؛ اپنے اوسط اور معیاری انحراف سے ممتاز۔"
+  },
+  {
     "term": "Status",
     "definition_en": "A socially recognized position in a group or society - such as teacher, student, mother, or union member. A person holds many statuses at the same time, and each comes with a set of expected behaviours (roles).",
     "definition_ur": "گروہ یا معاشرے میں سماجی طور پر پہچانا گیا مقام - جیسے استاد، شاگرد، ماں، یا ینین رکن۔ انسان ایک ساتھ کئی مقامات رکھتا ہے، اور ہر ایک کے ساتھ متوقع رویے (کردار) ہوتے ہیں۔"
@@ -2320,16 +2355,6 @@
     "definition_ur": "ایک بڑا، زیادہ رسمی، کام پر مبنی گروہ جس کے اراکین ایک مخصوص مقصد کے لیے رابطہ رکھتے ہیں اور دور، غیر ذاتی رشتے رکھتے ہیں - جیسے اسکول عملہ، سرکاری دفتر، یا پیشہ ورانہ ایسوسی ایشن۔"
   },
   {
-    "term": "Organization",
-    "definition_en": "A large, formal group designed to achieve specific goals - such as a school, a hospital, a government department, or a business.",
-    "definition_ur": "ایک بڑا، رسمی گروہ جو مخصوص اہداف کے لیے ترتیب دیا جاتا ہے - جیسے اسکول، ہسپتال، سرکاری محکمہ، یا کاروبار۔"
-  },
-  {
-    "term": "Bureaucracy",
-    "definition_en": "A form of organization that uses hierarchies, written rules, specialized roles, and formal procedures to carry out large-scale tasks. Weber argued it brings predictability and fairness, though critics call it slow and rigid.",
-    "definition_ur": "ایک تنظیم کا ایک روپ جو بڑے پیمانے پر کام انجام دینے کے لیے درجہ بندی، تحریری قواعد، مخصوص کردار، اور رسمی طریقہ کار استعمال کرتا ہے۔ ویبر کے مطابق یہ پیش گئی اور انصاف لاتا ہے، اگرچہ نقاد اسے سست اور سخت کہتے ہیں۔"
-  },
-  {
     "term": "Cooperation",
     "definition_en": "A form of social interaction in which individuals or groups work together toward a shared goal. A group of teachers planning a joint lesson is cooperating.",
     "definition_ur": "معاشرتی تعامل کا ایک روپ جس میں افراد یا گروہ مشترکہ ہدف کی طرف مل کر کام کرتے ہیں۔ اساتذہ کا ایک گروہ جو مشترکہ سبق کی منصوبہ بندی کر رہا ہو تعاون کر رہا ہے۔"
@@ -2338,15 +2363,5 @@
     "term": "Competition",
     "definition_en": "A form of social interaction in which individuals or groups strive against each other for a limited reward - such as a promotion, a prize, or admission to a college. Unlike conflict, competition follows agreed rules.",
     "definition_ur": "معاشرتی تعامل کا ایک روپ جس میں افراد یا گروہ محدود عام کے لیے ایک دوسرے سے مقابلہ کرتے ہیں - جیسے ترقی، انعام، یا کالج میں داخلہ۔ تصادم کے برعکس، مقابلہ متفقہ قواعد کی پیروی کرتا ہے۔"
-  },
-  {
-    "term": "Conflict",
-    "definition_en": "A form of social interaction in which individuals or groups deliberately oppose each other to achieve a goal or resist another's demands. Conflict can be destructive, but it can also drive positive social change.",
-    "definition_ur": "معاشرتی تعامل کا ایک روپ جس میں افراد یا گروہ جان بوجھ کر ایک دوسرے کے خلاف کھڑے ہوتے ہیں تاکہ کوئی ہدف حاصل کریں یا دوسرے کے تقاضوں کا مقابلہ کریں۔ تصادم تباہ کن ہو سکتا ہے، لیکن یہ مثبت معاشرتی تبدیلی کا بھی سبب بن سکتا ہے۔"
-  },
-  {
-    "term": "Social interaction",
-    "definition_en": "The process by which people act and react in relation to others - through cooperation, competition, conflict, communication, and other patterned exchanges.",
-    "definition_ur": "وہ عمل جس کے ذریعے لوگ ایک دوسرے کے ساتھ عمل اور ردعمل کرتے ہیں - تعاون، مقابلہ، تصادم، مواصلات، اور دوسرے پیچیدہ تبادلوں کے ذریعے۔"
   }
 ]
