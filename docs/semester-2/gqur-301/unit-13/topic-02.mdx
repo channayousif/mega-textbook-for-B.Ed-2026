@@ -1,0 +1,201 @@
+---
+title: "Topic 13.2 - Regression analysis (linear regression)"
+description: "Fitting and using a least-squares regression line: slope, intercept, prediction and residuals."
+course_code: GQUR-301
+unit_no: 13
+topic_no: 2
+topic_label: "13.2"
+clo_refs:
+  - "SLO:GQUR-301-13-3"
+blooms_summary: "Remember the parts of a regression line (slope and intercept); understand how the least-squares line is chosen; fit the line and use it to predict; analyze residuals and what they reveal."
+est_reading_minutes: 8
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+import Glossary from '@site/src/components/Glossary';
+
+<PrintHandout />
+
+## A real classroom situation
+
+The same trainee from Topic 13.1 has now computed r = 0.99 for her 5-pupil study-hours
+and test-score data. Her supervising lecturer nods and asks a further question:
+"Very well. Now, if a new pupil tells you she studies 7 hours per week, what score
+would you predict for her on the same test?" The trainee has no answer yet. The
+correlation coefficient told her the pattern is strong and positive, but it gives no
+formula for prediction.
+
+<Figure id="fig-U13-3" kind="flowchart" src="/img/figures/gqur-301/unit-13/fig-U13-3.svg" alt="Step-by-step flowchart for fitting a least-squares regression line: raw data, compute means, compute slope b, compute intercept a, write equation, then use the line to predict a response value." />
+
+<Figure id="fig-U13-4" kind="diagram" src="/img/figures/gqur-301/unit-13/fig-U13-4.svg" alt="Scatter plot of study hours versus test score with the least-squares regression line drawn through the cloud, slope and intercept labelled on the diagram, and residuals shown as vertical arrows from each point to the line." />
+
+That prediction is the work of **linear regression**, and learning to make it is the
+goal of this topic.
+
+## Explanation
+
+### The regression line
+
+A <Glossary term="Regression line" /> (or **line of best fit**) is the straight
+line that best represents the linear pattern in a scatter plot. "Best" here means
+the line that minimises the total squared vertical distance from each point to the
+line. That method is called **least squares**, and the resulting line is the
+**least-squares regression line**.
+
+The equation of the regression line has the form:
+
+$$\hat{y} = a + bx$$
+
+where:
+
+- **ŷ** (pronounced "y-hat") is the predicted value of the response variable.
+- **x** is the explanatory variable.
+- **b** is the <Glossary term="Slope" />: the amount ŷ changes when x increases by
+  one unit.
+- **a** is the <Glossary term="Intercept" />: the value of ŷ when x = 0.
+
+**Worked example.** Using the study-hours and test-score data from Topic 13.1
+(n = 5, Σx = 30, Σy = 315):
+
+1. Compute the means: x̄ = 30 / 5 = 6, ȳ = 315 / 5 = 63.
+2. The slope b is computed from the formula b = (nΣxy - ΣxΣy) / (nΣx² - (Σx)²).
+   We already computed the numerator (1100) and the first part of the denominator
+   (200) in Topic 13.1. So b = 1100 / 200 = 5.5.
+3. The intercept a = ȳ - b(x̄) = 63 - 5.5(6) = 63 - 33 = 30.
+4. The regression line is: ŷ = 30 + 5.5x.
+
+Interpretation: for each additional hour of weekly study, the predicted test score
+rises by 5.5 points. A pupil who studies 0 hours is predicted to score 30 (the
+intercept), though that prediction is an extrapolation beyond the data.
+
+### Using the line to predict
+
+With the line ŷ = 30 + 5.5x in hand, the lecturer's question is easy to answer.
+For a pupil who studies 7 hours per week:
+
+ŷ = 30 + 5.5(7) = 30 + 38.5 = 68.5.
+
+The predicted test score is about 68 or 69 out of 100. This prediction is an
+**interpolation** if 7 hours lies within the range of the original data (which it
+does, since the data cover 2 to 10 hours). Interpolation is generally reliable.
+**Extrapolation** (predicting for an x value outside the data range) is riskier
+because the linear pattern may not hold beyond what you have observed.
+
+**Common misconception.** Many trainees believe the regression line always passes
+through the origin (0, 0). It does not. The intercept a is determined by the data,
+and unless the data themselves force a = 0, the line crosses the vertical axis at
+a. In the example above, the line crosses at (0, 30), not at (0, 0).
+
+### Residuals
+
+A <Glossary term="Residual" /> is the difference between an observed value and the
+value predicted by the regression line: residual = y - ŷ. Residuals tell you how
+far each point lies from the line:
+
+- A **positive residual** means the observed value is above the line (the pupil
+  scored higher than the line predicted).
+- A **negative residual** means the observed value is below the line.
+- A residual near 0 means the point lies close to the line.
+
+Residuals are useful for checking whether the line fits well. If the residuals show
+a pattern (for example, all large for low x and all small for high x), the
+straight-line model may be a poor choice. For this course, computing one or two
+residuals by hand is enough to build the intuition.
+
+**Worked example (continued).** For Pupil B (x = 4, y = 55): ŷ = 30 + 5.5(4) = 52,
+residual = 55 - 52 = +3. This pupil scored 3 points above the line's prediction.
+
+For Pupil E (x = 10, y = 85): ŷ = 30 + 5.5(10) = 85, residual = 85 - 85 = 0. This
+pupil lies exactly on the line.
+
+### What the regression line does not do
+
+The regression line gives you a prediction, not a causal explanation. It does not
+tell you that increasing study hours *will* raise a pupil's score by 5.5 points.
+It tells you that, on average within the observed data, each extra hour of study
+is associated with a 5.5-point higher score. Confusing prediction with causation
+is the same error as confusing correlation with causation (Topic 13.1), and it
+matters just as much.
+
+Also, a regression line is only as good as the linear pattern it summarises. If r
+is near 0, the line's slope will be near 0 and the prediction will be close to the
+mean ȷ for every x, which is uninformative. Always check that the correlation is
+meaningful before relying on a regression prediction.
+
+## Activity: Fit a line and predict
+
+Work in pairs. About 25 minutes.
+
+1. Using the same data set you used in Topic 13.1's activity, compute the
+   regression line ŷ = a + bx. One partner computes b, the other computes a.
+   Then swap and verify.
+2. Use the line to predict the response variable for a new x value that lies
+   within your data range. Write down the prediction.
+3. Compute the residual for one of the original data points. State whether it is
+   positive or negative and what that means in the context of your variables.
+4. One sentence: explain why your prediction is not a guarantee of what the new
+   case will actually score.
+
+## Check your understanding
+
+1. *(Remember)* Name the two parameters that define a regression line and state what each one tells you.
+2. *(Understand)* Explain the difference between interpolation and extrapolation in the context of regression prediction.
+3. *(Apply)* A regression line for predicting test score (y) from study hours (x) is ŷ = 40 + 4x. State the predicted score for a pupil who studies 5 hours, and interpret the slope in plain language.
+
+## Summary
+
+The least-squares regression line ŷ = a + bx summarises the linear pattern in a
+scatter plot with an equation. The slope b tells you how much the predicted
+response changes per unit of the explanatory variable; the intercept a tells you
+the predicted value when x = 0. Use the line to predict within the data range
+(interpolation); be cautious beyond it (extrapolation). Residuals (y - ŷ) show how
+far each point lies from the line and reveal how well the line fits. The line gives
+a prediction, not a causal explanation.
+
+## Self-assessment checklist
+
+- [ ] I can compute the slope and intercept of a least-squares regression line from a small data set.
+- [ ] I can use the regression line to predict a response value for a given x.
+- [ ] I can compute a residual and interpret what a positive or negative residual means.
+- [ ] I can explain the difference between prediction and causation in the context of regression.
+
+## Try this at your practicum school
+
+Using the same data you collected for Topic 13.1's practicum task, fit the
+regression line by computing the slope and intercept. Then use the line to predict
+the test score for a hypothetical pupil who studies the median number of hours in
+your data. Write a short paragraph (no more than 80 words) reporting the line
+equation, the prediction, and one limitation of using this line for decision-making.
+
+## Summative task
+
+Using the same data as Topic 13.1's summative task (exercise hours and heart rate
+for 6 adults), fit the least-squares regression line ŷ = a + bx. Show the steps:
+compute b, then a, then write the line equation. Then answer the following:
+
+1. Interpret the slope: what does it tell you about the relationship between
+   exercise and heart rate?
+2. Predict the heart rate for an adult who exercises 4 hours per week.
+3. Compute the residual for Person 4 (5 hours, heart rate 68 bpm).
+4. In one sentence, explain why this prediction does not prove that exercise
+   causes the predicted heart rate.
+
+**Mini-rubric**
+
+| Criterion | Levels |
+|---|---|
+| *Line computation* | 0-3: slope and intercept both correct / one correct / neither. |
+| *Slope interpretation* | 0-2: correct direction and plain-language meaning / partial / none. |
+| *Prediction and residual* | 0-3: both correct / one correct / neither. |
+| *Limitation (Analyze)* | 0-2: clearly distinguishes prediction from causation / vague / none. |
+
+## Further reading
+
+Lane, D. M. (2023). *Online Statistics Education: A Multimedia Course of Study.*
+Rice University. https://onlinestatbook.com/ - Chapter 14 introduces the
+regression line, slope, intercept and prediction with worked examples.
+
+NIST/SEMATECH. *e-Handbook of Statistical Methods.*
+https://www.itl.nist.gov/div898/handbook/ - Section 4.1.4.1 covers least-squares
+regression and residual analysis.
