@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">تین طالب علم، چھ ترتیبیں</title><desc id="d">تین طالب علم، علی، ثنا اور بلال، قطار میں کھڑے ہونے کے چھ مختلف طریقے؛ شاخہ میں پہلی جگہ کے لیے 3 اختیارات، دوسری کے لیے 2 اور تیسری کے لیے 1 نظر آ رہا ہے، جس سے 3 × 2 × 1 = 6 ترتیبیں بنتا ہے۔</desc><defs><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700;fill:var(--ink)} .sh{font-size:12px;font-weight:600;fill:var(--ink)} .m{font-size:12px;fill:var(--muted)} .c{text-anchor:middle} .wm{fill:var(--wm);font-size:11px;text-anchor:end} .b1{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2} .b2{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2} .b3{fill:var(--a3-fill);stroke:var(--a3);stroke-width:2} .b4{fill:var(--a4-fill);stroke:var(--a4);stroke-width:2} .line{stroke:var(--line);stroke-width:2}</style><marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="var(--line)"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="470"/>
+  <text class="h c" x="390" y="28">تین طالب علم، چھ ترتیبیں</text>
+  <text class="m c" x="150" y="54">پہلی جگہ</text>
+  <text class="m c" x="300" y="54">دوسری جگہ</text>
+  <text class="m c" x="440" y="54">تیسری جگہ</text>
+  <text class="m c" x="610" y="54">ترتیب</text>
+  <rect class="b2" x="20" y="196" width="70" height="36" rx="6"/>
+  <text class="sh c" x="55" y="219">آغاز</text>
+  <line class="line" x1="90" y1="214" x2="128" y2="105" marker-end="url(#arr)"/>
+  <rect class="b1" x="130" y="89" width="40" height="32" rx="6"/>
+  <text class="sh c" x="150" y="110">A</text>
+  <line class="line" x1="170" y1="105" x2="278" y2="80" marker-end="url(#arr)"/>
+  <rect class="b1" x="280" y="64" width="40" height="32" rx="6"/>
+  <text class="sh c" x="300" y="85">S</text>
+  <line class="line" x1="320" y1="80" x2="418" y2="80" marker-end="url(#arr)"/>
+  <rect class="b1" x="420" y="64" width="40" height="32" rx="6"/>
+  <text class="sh c" x="440" y="85">B</text>
+  <line class="line" x1="460" y1="80" x2="498" y2="80" marker-end="url(#arr)"/>
+  <rect class="b3" x="500" y="64" width="220" height="32" rx="6"/>
+  <text class="sh c" x="610" y="85">علی، ثنا، بلال</text>
+  <line class="line" x1="170" y1="105" x2="278" y2="130" marker-end="url(#arr)"/>
+  <rect class="b1" x="280" y="114" width="40" height="32" rx="6"/>
+  <text class="sh c" x="300" y="135">B</text>
+  <line class="line" x1="320" y1="130" x2="418" y2="130" marker-end="url(#arr)"/>
+  <rect class="b1" x="420" y="114" width="40" height="32" rx="6"/>
+  <text class="sh c" x="440" y="135">S</text>
+  <line class="line" x1="460" y1="130" x2="498" y2="130" marker-end="url(#arr)"/>
+  <rect class="b3" x="500" y="114" width="220" height="32" rx="6"/>
+  <text class="sh c" x="610" y="135">علی، بلال، ثنا</text>
+  <line class="line" x1="90" y1="214" x2="128" y2="205" marker-end="url(#arr)"/>
+  <rect class="b1" x="130" y="189" width="40" height="32" rx="6"/>
+  <text class="sh c" x="150" y="210">S</text>
+  <line class="line" x1="170" y1="205" x2="278" y2="180" marker-end="url(#arr)"/>
+  <rect class="b1" x="280" y="164" width="40" height="32" rx="6"/>
+  <text class="sh c" x="300" y="185">A</text>
+  <line class="line" x1="320" y1="180" x2="418" y2="180" marker-end="url(#arr)"/>
+  <rect class="b1" x="420" y="164" width="40" height="32" rx="6"/>
+  <text class="sh c" x="440" y="185">B</text>
+  <line class="line" x1="460" y1="180" x2="498" y2="180" marker-end="url(#arr)"/>
+  <rect class="b3" x="500" y="164" width="220" height="32" rx="6"/>
+  <text class="sh c" x="610" y="185">ثنا، علی، بلال</text>
+  <line class="line" x1="170" y1="205" x2="278" y2="230" marker-end="url(#arr)"/>
+  <rect class="b1" x="280" y="214" width="40" height="32" rx="6"/>
+  <text class="sh c" x="300" y="235">B</text>
+  <line class="line" x1="320" y1="230" x2="418" y2="230" marker-end="url(#arr)"/>
+  <rect class="b1" x="420" y="214" width="40" height="32" rx="6"/>
+  <text class="sh c" x="440" y="235">A</text>
+  <line class="line" x1="460" y1="230" x2="498" y2="230" marker-end="url(#arr)"/>
+  <rect class="b3" x="500" y="214" width="220" height="32" rx="6"/>
+  <text class="sh c" x="610" y="235">ثنا، بلال، علی</text>
+  <line class="line" x1="90" y1="214" x2="128" y2="305" marker-end="url(#arr)"/>
+  <rect class="b1" x="130" y="289" width="40" height="32" rx="6"/>
+  <text class="sh c" x="150" y="310">B</text>
+  <line class="line" x1="170" y1="305" x2="278" y2="280" marker-end="url(#arr)"/>
+  <rect class="b1" x="280" y="264" width="40" height="32" rx="6"/>
+  <text class="sh c" x="300" y="285">A</text>
+  <line class="line" x1="320" y1="280" x2="418" y2="280" marker-end="url(#arr)"/>
+  <rect class="b1" x="420" y="264" width="40" height="32" rx="6"/>
+  <text class="sh c" x="440" y="285">S</text>
+  <line class="line" x1="460" y1="280" x2="498" y2="280" marker-end="url(#arr)"/>
+  <rect class="b3" x="500" y="264" width="220" height="32" rx="6"/>
+  <text class="sh c" x="610" y="285">بلال، علی، ثنا</text>
+  <line class="line" x1="170" y1="305" x2="278" y2="330" marker-end="url(#arr)"/>
+  <rect class="b1" x="280" y="314" width="40" height="32" rx="6"/>
+  <text class="sh c" x="300" y="335">S</text>
+  <line class="line" x1="320" y1="330" x2="418" y2="330" marker-end="url(#arr)"/>
+  <rect class="b1" x="420" y="314" width="40" height="32" rx="6"/>
+  <text class="sh c" x="440" y="335">A</text>
+  <line class="line" x1="460" y1="330" x2="498" y2="330" marker-end="url(#arr)"/>
+  <rect class="b3" x="500" y="314" width="220" height="32" rx="6"/>
+  <text class="sh c" x="610" y="335">بلال، ثنا، علی</text>
+  <text class="m c" x="150" y="375">3 اختیارات</text>
+  <text class="m c" x="300" y="375">2 بچتے اختیارات</text>
+  <text class="m c" x="440" y="375">1 بچتا اختیار</text>
+  <rect x="20" y="388" width="740" height="62" rx="6" fill="var(--panel)" stroke="var(--line)" stroke-width="1"/>
+  <text class="sh" x="36" y="408">3 × 2 × 1 = 3! = 6 ترتیبیں</text>
+  <text class="m" x="36" y="424">الف = علی، س = ثنا، ب = بلال۔ درخت میں ہر راستہ ایک ترتیب ہے، اور کوئی ترتیب نہیں دہرائی جاتی۔</text>
+  <text class="m" x="36" y="440">حوالہ: textbook.com.pk بمطابق Lane (2023)۔</text>
+  <text class="wm" x="760" y="460" aria-hidden="true">textbook.com.pk</text>
+</svg>
