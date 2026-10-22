@@ -1,58 +1,89 @@
 ---
 id: crew-gsos-301-u04-translate
-title: Record Unit 4 translation blocker
+title: crew translate GSOS-301 unit 4
 stage: misc
 date: 2026-10-22
 surface: agent
-model: GPT-6
+model: codex
 feature: gsos-301
 branch: crew/gsos-301-u04-translate
-user: owner
-command: Read .crew/brief.md
-labels: [board-direct, gsos-301, translation, blocked]
+user: crew
+command: crew translate
+labels: ["crew", "codex", "translate"]
 links:
   spec: specs/content/gsos-301/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
-  - specs/content/gsos-301/tasks.md
-  - specs/content/gsos-301/reviews/unit-04/G4/translation-handoff.md
-  - specs/content/gsos-301/reviews/unit-04/G4/main-content.log
-  - specs/content/gsos-301/reviews/unit-04/G4/content.log
-  - history/prompts/gsos-301/crew-gsos-301-u04-translate.misc.prompt.md
+ - history/prompts/gsos-301/crew-gsos-301-u04-translate.misc.prompt.md
+ - specs/content/gsos-301/reviews/unit-04/G4/content.log
+ - specs/content/gsos-301/reviews/unit-04/G4/main-content.log
+ - specs/content/gsos-301/reviews/unit-04/G4/translation-handoff.md
+ - specs/content/gsos-301/tasks.md
 tests:
-  - scripts/heavy.sh npm run check:content (clean origin/main baseline)
-  - scripts/heavy.sh npm run check:content (final working tree)
-  - git diff --check
+ - npm run check:content
 ---
 
 ## Prompt
 
-Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.
+# Crew job gsos-301-u04-translate
+
+You are the codex worker on the B.Ed bilingual textbook repo, working in this checkout on branch `crew/gsos-301-u04-translate`.
+Read AGENTS.md and CLAUDE.md first and obey them: no em dash (U+2014) anywhere, heavy commands only through `scripts/heavy.sh`, never run `npm run build`, a dev server or Playwright, never mark G3/G5 done, never self-sign or use
+human initials, never edit the style guide, constitution, ADRs, gate scripts, catalog or an approved content-spec.
+
+## Task
+Translate GSOS-301 Unit 4 into its complete Urdu mirror at G4 (translate-unit skill), bound to specs/content/terminology.csv. Record the G4 tracker row as the skill says; translation_status stays draft.
+
+Follow `.claude/skills/translate-unit/SKILL.md` exactly; read it and every file it references before starting.
+
+## Scope
+GSOS-301 Unit 4 only: its docs/licence and i18n files, its rows and folders under
+`specs/content/gsos-301/`, and `static/img/figures/gsos-301/unit-04/`.
+
+## Continue, do not restart
+Earlier attempts may have left work on this branch. Check `git log origin/main..HEAD` and `git status` and build on it.
+
+## Done when
+1. `npm run check:content` reports no finding that origin/main does not also report (run it, read every
+   failure, fix those in your scope, rerun). Findings that already exist on main belong to other jobs.
+2. All work is committed on this branch with a conventional commit message. Do not push and do not open a PR.
+3. Your final output ends with one line: `CREW-SUMMARY: <what you changed, in one sentence>`.
+4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
+   (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
+
+## Notes from earlier jobs on this unit
+- (gsos-301-u04-review_en, review_en, codex) Separate author must repair assessment guidance, rubric tables, RRQ demand and coverage mappings; fresh review needs provenance and browser/print evidence.
+- (gsos-301-u04-review_en, review_en, codex) Separate author must repair assessment guidance, rubric tables, RRQ demand and coverage mappings; fresh review needs provenance and browser/print evidence.
+- (gsos-301-u04-author, author, opencode) G3 en-review and G4 ur-translation remain for downstream jobs; no Urdu mirror exists yet (English-only scope).
+
 
 ## Response snapshot
 
-Read the crew brief and required translate-unit skill. Confirmed the English MCQ guidance contradiction, malformed rubric rows and below-band RRQs identified by G3. The skill explicitly requires stopping when English is wrong, so recorded a blocked G4 handoff and existing-row note instead of copying known errors or repairing English outside the translation workflow. Translation is not complete.
+Documented the Unit 4 translation blocker and validation evidence; no Urdu translation was authored.
 
 ## Outcome
 
-- Impact: Preserved the explicit translation stop boundary and documented resumption requirements.
-- Tests: Baseline and final content checks logged in the unit G4 folder; final results in the handoff.
-- Files: Handoff, gate logs, G4 row note and this PHR only.
-- Next prompts: Separate author repairs English; resume translation against corrected baseline.
-- Reflection: A green G2 record does not remove known semantic baseline errors.
+- Impact: translate for GSOS-301 Unit 4 by codex (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 5 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Blocker documentation only; no Urdu content authored.
-- Decisions the team must respect: G4 remains incomplete; translation_status stays draft; no G3/G5 certification; no prohibited browser/build work.
-- Pending / next owner: Separate English author owns G3 repairs; host owns provenance/render access; subsequent translator owns full G4 mirror.
-- Paperclip issues affected: None supplied; links.ticket is null.
+- Shipped / changed: Documented the Unit 4 translation blocker and validation evidence; no Urdu translation was authored.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Separate English author must repair assessment and coverage findings before G4 resumes.
+  - Separate English author must repair assessment and coverage findings before G4 resumes.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: Known English defects conflict with the required settled-baseline translation workflow.
-- Graders run and results (PASS/FAIL): Both content runs: 12/13 PASS; identical pre-existing stale content-status failure after normalising timings. git diff --check PASS.
-- Prompt variant (if applicable): Crew translation brief.
-- Next experiment (smallest change to try): Correct English in a separate author job before resuming G4.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
