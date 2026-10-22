@@ -80,19 +80,19 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 10 | G1 unit-spec | ▢ | | guide Chapter 10; intake re-evaluation advised (D-2026-0070) |
 | Unit 10 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-10/G2/20261021T063742332Z-gates.json |
 | Unit 10 | G3 en-review | ▢ | | |
-| Unit 10 | G4 ur-translation | ▢ | | full Urdu mirror required |
+| Unit 10 | G4 ur-translation | ▢ | | Complete draft Urdu mirror and four localized SVG pairs prepared from ed514d03; translation_status remains draft. No completion claim or appended row under translate-unit Step 7. Independent G5 and rendered inspection pending; see reviews/unit-10/translation-validation/handoff.md. |
 | Unit 10 | G5 ur-review | ▢ | | |
 | Unit 10 | G6 assets | ▢ | | |
 | Unit 10 | G7 publish | ▢ | | |
 | Unit 11 | G1 unit-spec | ▢ | | guide Chapter 11; intake re-evaluation advised (D-2026-0070) |
-| Unit 11 | G2 en-draft | ▢ | | |
+| Unit 11 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-11/G2/20261022T192824904Z-gates.json |
 | Unit 11 | G3 en-review | ▢ | | |
 | Unit 11 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 11 | G5 ur-review | ▢ | | |
 | Unit 11 | G6 assets | ▢ | | |
 | Unit 11 | G7 publish | ▢ | | |
 | Unit 12 | G1 unit-spec | ▢ | | guide Chapter 12; intake re-evaluation advised (D-2026-0070) |
-| Unit 12 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-12/G2/20261021T065608298Z-gates.json |
+| Unit 12 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-12/G2/20261022T000224330Z-gates.json |
 | Unit 12 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only: specs/content/gqur-301/reviews/unit-12/G3/crew-20261022.json; F1-F6 need separate author repair; provenance, G1/source bundle and rendered accessibility remain unresolved. G3 stays open, unsigned (ADR-0019). |
 | Unit 12 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 12 | G5 ur-review | ▢ | | |
@@ -106,8 +106,8 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 13 | G6 assets | ▢ | | |
 | Unit 13 | G7 publish | ▢ | | |
 | Unit 14 | G1 unit-spec | ▢ | | guide Chapter 14; intake re-evaluation advised (D-2026-0070) |
-| Unit 14 | G2 en-draft | ▢ | | |
-| Unit 14 | G3 en-review | ▢ | | |
+| Unit 14 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-14/G2/20261022T002029Z-gates.json |
+| Unit 14 | G3 en-review | ▣ | agent:claude-g3-reviewer | Advisory escalation only: specs/content/gqur-301/reviews/unit-14/G3/crew-20261023.json; F1-F5 need separate author repair (data sum 503 not 513, 30.5-37.9 interval contradiction, z vs t with s, fig-U14-4 subtitle clipped, 14.2 rubric interval); G1 approval, bound sources and rendered accessibility remain unresolved. G3 stays open, unsigned (ADR-0019). |
 | Unit 14 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 14 | G5 ur-review | ▢ | | |
 | Unit 14 | G6 assets | ▢ | | |
@@ -120,9 +120,9 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 15 | G6 assets | ▢ | | |
 | Unit 15 | G7 publish | ▢ | | |
 | Unit 16 | G1 unit-spec | ▢ | | guide Chapter 16; intake re-evaluation advised (D-2026-0070) |
-| Unit 16 | G2 en-draft | ▢ | | |
+| Unit 16 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-16/G2/20261022T004408483Z-gates.json |
 | Unit 16 | G3 en-review | ▢ | | |
-| Unit 16 | G4 ur-translation | ▢ | | full Urdu mirror required |
+| Unit 16 | G4 ur-translation | ▢ | | Complete six-page draft mirror and six Urdu SVG pairs prepared from 89d7c508; translation_status remains draft. No completion claim or appended row under translate-unit Step 7. Handoff: reviews/unit-16/translation-validation/handoff.md |
 | Unit 16 | G5 ur-review | ▢ | | |
 | Unit 16 | G6 assets | ▢ | | |
 | Unit 16 | G7 publish | ▢ | | |
@@ -138,3 +138,9 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit | Stage | Status | Reviewer | Notes |
 |---|---|---|---|---|
 | Unit 7 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only; G3 remains open. F1-F3 need separate author repair; current G1, author-run provenance and actual rendered accessibility remain unverified. Report: specs/content/gqur-301/reviews/unit-07/G3/01a16053-0c98-79b0-b814-6bb6281aec8c.json. |
+
+## Advisory G3 Unit 8 review, 2026-10-22
+
+| Unit | Stage | Status | Reviewer | Notes |
+|---|---|---|---|---|
+| Unit 8 | G3 en-review | ▢ | agent:codex-g3-reviewer | Advisory escalation only; F1-F4 need separate author correction; provenance, G1, bound sources, answer-blind evidence and rendered inspection remain unresolved. Report: specs/content/gqur-301/reviews/unit-08/G3/01a1608a-2fc5-7f41-a824-c08320f0383b.json; G3 remains open, unsigned. |

@@ -1,0 +1,119 @@
+---
+title: "Topic 16.3 - Review and integration of concepts"
+description: "Connect data, sampling, centre, spread, probability, relationships and inference, choosing methods by the question and explaining their limits."
+course_code: GQUR-301
+unit_no: 16
+topic_no: 3
+topic_label: "16.3"
+clo_refs:
+  - "SLO:GQUR-301-16-1"
+  - "SLO:GQUR-301-16-2"
+  - "SLO:GQUR-301-16-3"
+blooms_summary: "Apply statistical concepts; analyze evidence; evaluate conclusions."
+est_reading_minutes: 11
+translation_status: draft
+---
+
+import TranslationStatusBadge from '@site/src/components/TranslationStatusBadge';
+import PrintHandout from '@site/src/components/PrintHandout';
+import Glossary from '@site/src/components/Glossary';
+
+<TranslationStatusBadge status="draft" />
+
+<PrintHandout />
+
+## A real classroom situation
+
+At a teacher education college in Sukkur, trainees present three investigations. One group reports a mean score without showing spread. A second group has a strong association between study time and marks and announces that extra study time caused the difference. A third uses a significance test on volunteers to claim a district-wide result. Their calculations look impressive, but their mentor asks each group to trace its conclusion back to the question and the collection plan. These are fictional examples of reasoning problems, not reports about actual trainees.
+
+<Figure id="fig-U16-5" src="/img/figures/gqur-301/unit-16/fig-U16-5.svg" alt="Course concepts connect through the investigation question: data and sampling support summaries, probability supports uncertainty, relationships support models, and inference requires justified scope." />
+
+## Explanation
+
+### Review and integration of concepts
+
+**Common misconception: "statistics is a set of separate formulas."** Each method answers a particular kind of question and rests on particular information. A mean has little meaning until we know what was measured and which observations were included. A probability model needs a defined outcome. A test needs a claim and assumptions. Integration means choosing a connected sequence of methods and explaining how each contributes to the conclusion. It does not mean using every formula on every data set.
+
+Begin with data and sources, from Unit 1. Is the variable a category, a count or a measurement? A list of transport types calls for category counts; calculating its mean would not make sense. A travel-time measurement can be summarised numerically. Ask whether the data were collected directly for this purpose or obtained from an existing record. A school register may be convenient, but its original definitions may not match your new question. An accurate record of morning attendance is not automatically an accurate record of participation in an afternoon activity.
+
+Then organise the observations, from Unit 2. A <Glossary term="Frequency distribution" /> records how often each value or group occurs. A bar chart compares categories; a <Glossary term="Histogram" /> shows the distribution of numerical observations grouped into intervals. Cumulative frequency helps answer questions about how many observations fall at or below a boundary. Inspect the distribution before selecting a summary. Organisation can expose a data entry problem that an average would conceal, such as a score larger than the test's maximum.
+
+Next consider Unit 3. A <Glossary term="Population" /> is the full group about which the question is asked, while a <Glossary term="Sample" /> is the subset observed. A randomly selected sample supports a different argument from a group of volunteers. Increasing the number of volunteers does not by itself repair a selection process that excludes some pupils. If we describe only one class, say so. If we want a school-wide estimate, explain how classes and absent pupils are represented. Lane's Chapter 1 supplies the distinction between descriptive and inferential work; the following school cases apply it (Lane, n.d.).
+
+For centre and spread, connect Units 4–6. Consider synthetic five-pupil scores from the same short test. Group A has 6, 7, 8, 9 and 10. Group B has 2, 5, 8, 11 and 14. Each total is 40 and each mean is 8. Both medians are also 8. Yet their ranges are 4 and 12. The mean alone hides a major difference in variation. If a teacher plans support only from the mean, pupils needing different kinds of help may receive the same worksheet.
+
+For a fuller check, deviations from the mean in A are -2, -1, 0, 1 and 2. Their squared sum is 10. In B the deviations are -6, -3, 0, 3 and 6, with squared sum 90. If these five scores are treated as samples for an exercise, sample variances are 10 / 4 = 2.5 and 90 / 4 = 22.5. Sample standard deviations are approximately 1.58 and 4.74 score points. If instead these are the entire populations being described, divide by 5 for population variance. State which quantity you calculated; the denominators are not interchangeable.
+
+Counting in Units 7–8 supports probability in Units 9–11. If three class representatives are assigned different roles, order matters. If three are simply chosen as a committee, it does not. That distinction changes how many outcomes are counted. Counting leads to probability only when the outcomes and their chances have been specified. A set of six possible transport categories does not imply that each category has probability one sixth. The fact that you can list outcomes says nothing by itself about equal likelihood.
+
+A random variable assigns a number to a chance outcome, such as the number of late pupils tomorrow. Its probability distribution describes possible values and their probabilities. In a school setting, common transport conditions may connect arrivals. Before using a model that assumes independent arrivals with a common probability, ask whether those conditions are plausible. This joins the probability units to the modelling exercise in Topic 16.1. You are checking whether the mathematical simplification fits the situation, not just recognising a named formula.
+
+Relationships in Units 12–13 require paired observations. To study travel time and arrival delay, keep the two measurements together for each observation. Draw a <Glossary term="Scatter plot" /> before interpreting a correlation or fitting a line. A strong curved pattern can be poorly represented by a straight line. A single unusual observation can change the apparent relationship. A fitted line describes a pattern under conditions; it cannot by itself establish cause. OpenStax Section 12.3 explains how observed outcomes can differ from fitted predictions (Illowsky & Dean, 2023).
+
+Finally, Units 14–15 distinguish estimation and testing. An estimate proposes a value for a population quantity. A confidence interval uses a procedure with a stated long-run coverage rate under its assumptions. It is not a range containing the stated percentage of individual pupil scores. A hypothesis test checks compatibility with a stated null claim using a chosen procedure. A small p-value does not measure the size or classroom importance of a difference. Failing to reject a null claim does not prove it true. Review those units before making any numerical inferential claim.
+
+<Figure id="fig-U16-6" src="/img/figures/gqur-301/unit-16/fig-U16-6.svg" alt="A course formula table pairs each expression with its purpose and a condition, reminding learners to choose a method before calculating." />
+
+| Tool | Compact expression | Meaning and condition |
+|---|---|---|
+| Mean | sum of observations / n | Centre for numerical data; sensitive to unusual values |
+| Median | middle ordered value, or mean of middle two | Centre based on order; useful with skewed numerical data |
+| Mode | most frequent value or category | Most common response; may be tied or absent |
+| Range | maximum - minimum | Distance between extremes; ignores interior values |
+| Sample variance | sum of squared deviations / (n - 1) | Sample spread in squared units; n must exceed 1 |
+| Standard deviation | square root of variance | Spread in original units; state sample or population version |
+| Multiplication rule for counts | m × k | Two successive choices with m options then k options for each |
+| Permutations | n! / (n - r)! | Ordered selections of r distinct objects without replacement |
+| Combinations | n! / [r!(n - r)!] | Unordered selections of r distinct objects without replacement |
+| Complement probability | 1 - P(A) | Probability that event A does not occur |
+| Addition rule | P(A) + P(B) - P(A and B) | Probability of A or B; subtract overlap |
+| Independent multiplication | P(A) × P(B) | Probability of both only when independence is justified |
+| Linear prediction | predicted y = a + bx | Expected pattern on a straight line within a defensible range |
+| Confidence interval | estimate ± margin of error | Interval for a population quantity under the procedure's assumptions |
+| One-mean z statistic | (sample mean - null mean) / (population SD / square root of n) | Requires known population SD and suitable sampling conditions |
+| One-mean t statistic | (sample mean - null mean) / (sample SD / square root of n) | Uses estimated spread; degrees of freedom n - 1 and suitable conditions |
+
+Here n is the number of observations, r the number selected, and n! the product of the whole numbers from 1 to n, with 0! = 1. In the final two rows, SD means standard deviation. These are reminders of earlier units, not permission to ignore their conditions. A calculator can evaluate the expression after you identify what each symbol represents in the investigation. A perfectly calculated t statistic cannot turn a convenience sample into a random one.
+
+## Activity: Method selection conference
+
+Work in groups of four for about 25 minutes. Allocate roles of question writer, methods adviser, calculation checker and claim checker. Use three cards: compare Group A and B scores; choose an unordered committee of three from eight trainees; investigate travel time and arrival delay. Before using notes, select a method and explain what it contributes. Then check the formula table. Rotate roles and challenge another group's choice by changing one condition. Produce one sentence explaining why a method you rejected would not answer the question.
+
+## Check your understanding
+
+1. State the difference between a population and a sample. *(Remember)*
+2. Explain why two equal means do not establish similar learning needs. *(Understand)*
+3. Six trainees choose a two-person committee with no distinct roles. Select and calculate the suitable count. *(Apply)*
+4. A teacher has paired travel times and delays. State the first graph to draw and one feature to inspect before fitting a line. *(Apply)*
+
+## Summary
+
+Statistical methods form a chain from the question and data to a limited conclusion. Centre and spread work together; counting depends on the role of order; models require checks. Inference adds assumptions about the wider group and uncertainty, rather than automatically strengthening every class description.
+
+## Self-assessment checklist
+
+- [ ] I can choose methods from the question and data type.
+- [ ] I can connect a numerical summary to information it leaves out.
+- [ ] I can explain why sampling and model conditions limit conclusions.
+- [ ] I can distinguish an estimate, an interval and a test decision.
+
+## Try this at your practicum school
+
+Select a non-sensitive question with your mentor, such as variation in anonymous class totals across days. Draw a methods map before any calculation. Name one descriptive tool, one possible model, and one claim the available data cannot support. If school records are unavailable, use the five-day table in Topic 16.2. Present the map and invite a peer to trace every conclusion back to an observation.
+
+## Summative task
+
+Write a 300–400 word critique of a report that uses the mean alone to compare Groups A and B, then claims that a new teaching method caused the result. Use the given scores, select a complementary summary, and propose evidence needed for a stronger claim. *(Evaluate)*
+
+| Criterion | 2 marks | 1 mark | 0 marks |
+|---|---|---|---|
+| Connected methods | Justifies centre and spread together | Names both without justification | Uses centre alone |
+| Calculation | Accurate summary and units | Minor arithmetic slip with sound method | No usable evidence |
+| Critical judgement | Analyzes why the causal claim is unsupported | Notes uncertainty without explaining it | Repeats unsupported claim |
+| Improved evidence | Proposes a comparison and checks relevant conditions | General request for more data | No improvement |
+
+## Further reading
+
+- Lane, D. M. (n.d.). *Online Statistics Education: A Multimedia Course of Study*, [Chapter 1](https://onlinestatbook.com/2/introduction/introduction.html), for the organising distinction between description and inference.
+- Illowsky, B., & Dean, S. (2023). *Introductory Statistics 2e*, [Chapter 12](https://openstax.org/books/introductory-statistics-2e/pages/12-introduction), for reviewing relationships and prediction. Return to the earlier course units for detailed calculation methods.
+- Lock, R. H., Lock, P. F., Lock Morgan, K., & Lock, E. F. (2012). *Statistics: Unlocking the Power of Data* (1st ed.). Wiley. Guide-required bibliographic reference only; no full-text claim is made.

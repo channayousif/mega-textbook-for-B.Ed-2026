@@ -25,6 +25,13 @@ export const WORKERS = {
     maxConcurrent: 1,
     cmd: (prompt) => ['agy', ['-p', prompt, '--dangerously-skip-permissions', '--print-timeout', '0s']],
   },
+  // agy also serves Claude through a quota separate from its Gemini one, so it is its own worker
+  // with its own health. It is anthropic family: a review never pairs it with claude's work.
+  agy_claude: {
+    family: 'anthropic',
+    maxConcurrent: 1,
+    cmd: (prompt) => ['agy', ['-p', prompt, '--model', process.env.CREW_AGY_CLAUDE_MODEL || 'claude-opus-4-6-thinking', '--dangerously-skip-permissions', '--print-timeout', '0s']],
+  },
   opencode: {
     family: 'longcat',
     maxConcurrent: 2,
@@ -38,29 +45,31 @@ export const WORKERS = {
  * `reviewOf` names the stage whose producer family a review must exclude.
  */
 export const STAGES = {
-  salvage:    { chain: ['claude', 'codex', 'agy', 'opencode'], skill: null },
-  author:     { chain: ['claude', 'codex', 'agy', 'opencode'], skill: 'author-unit' },
-  repair_en:  { chain: ['claude', 'codex', 'agy', 'opencode'], skill: 'revise-topic' },
-  figures:    { chain: ['codex', 'claude', 'agy', 'opencode'], skill: 'generate-figures' },
+  salvage:    { chain: ['claude', 'agy_claude', 'codex', 'agy', 'opencode'], skill: null },
+  author:     { chain: ['claude', 'agy_claude', 'codex', 'agy', 'opencode'], skill: 'author-unit' },
+  repair_en:  { chain: ['claude', 'agy_claude', 'codex', 'agy', 'opencode'], skill: 'revise-topic' },
+  figures:    { chain: ['codex', 'claude', 'agy_claude', 'agy', 'opencode'], skill: 'generate-figures' },
   illustrate: { chain: ['agy', 'codex'], skill: 'generate-figures' },
-  review_en:  { chain: ['agy', 'codex', 'opencode', 'claude'], skill: 'review-unit', reviewOf: 'author' },
-  translate:  { chain: ['codex', 'claude', 'agy', 'opencode'], skill: 'translate-unit' },
-  review_ur:  { chain: ['claude', 'agy', 'opencode', 'codex'], skill: 'review-unit', reviewOf: 'translate' },
-  fix:        { chain: ['opencode', 'codex', 'agy', 'claude'], skill: null },
+  review_en:  { chain: ['agy', 'codex', 'opencode', 'claude', 'agy_claude'], skill: 'review-unit', reviewOf: 'author' },
+  translate:  { chain: ['codex', 'claude', 'agy_claude', 'agy', 'opencode'], skill: 'translate-unit' },
+  review_ur:  { chain: ['claude', 'agy_claude', 'agy', 'opencode', 'codex'], skill: 'review-unit', reviewOf: 'translate' },
+  fix:        { chain: ['opencode', 'codex', 'agy', 'claude', 'agy_claude'], skill: null },
   // Self-maintenance (scripts/crew/maintenance.mjs, intel.mjs). The distill job leads with agy and
   // codex so the daily model call does not spend the Claude quota the weekly survey needs.
-  intel_distill:  { chain: ['agy', 'codex', 'opencode', 'claude'], skill: 'intel-distill' },
-  maint_survey:   { chain: ['claude', 'codex', 'agy', 'opencode'], skill: 'weekly-maintenance' },
-  maint_refactor: { chain: ['codex', 'claude', 'opencode', 'agy'], skill: 'weekly-maintenance' },
-  maint_docs:     { chain: ['claude', 'agy', 'codex', 'opencode'], skill: 'weekly-maintenance' },
-  maint_adr:      { chain: ['claude', 'codex', 'agy'], skill: 'weekly-maintenance' },
-  maint_skill:    { chain: ['claude', 'codex'], skill: 'weekly-maintenance' },
+  intel_distill:  { chain: ['agy', 'codex', 'opencode', 'claude', 'agy_claude'], skill: 'intel-distill' },
+  maint_survey:   { chain: ['claude', 'agy_claude', 'codex', 'agy', 'opencode'], skill: 'weekly-maintenance' },
+  maint_refactor: { chain: ['codex', 'claude', 'agy_claude', 'opencode', 'agy'], skill: 'weekly-maintenance' },
+  maint_docs:     { chain: ['claude', 'agy_claude', 'agy', 'codex', 'opencode'], skill: 'weekly-maintenance' },
+  maint_adr:      { chain: ['claude', 'agy_claude', 'codex', 'agy'], skill: 'weekly-maintenance' },
+  maint_skill:    { chain: ['claude', 'agy_claude', 'codex'], skill: 'weekly-maintenance' },
   // `reviewOf: 'parent'`: never the family of the job whose PR is under review.
-  maint_review:   { chain: ['agy', 'codex', 'claude', 'opencode'], skill: 'weekly-maintenance', reviewOf: 'parent' },
+  maint_review:   { chain: ['agy', 'codex', 'claude', 'agy_claude', 'opencode'], skill: 'weekly-maintenance', reviewOf: 'parent' },
 };
 
 /** Text in a worker's log that means "out of quota", not "bad work". */
-export const QUOTA_RE = /rate.?limit|quota|usage limit|session limit|too many requests|\b429\b|resource.?exhausted|insufficient (credits|balance)|hit your limit|limit reached|credit balance/i;
+// "hit your weekly limit" (claude) and "model is at capacity" (codex) slipped past this on
+// 2026-10-22, so eight jobs spent all three attempts on quota errors and went gate_red.
+export const QUOTA_RE = /rate.?limit|quota|usage limit|session limit|weekly limit|too many requests|\b429\b|resource.?exhausted|insufficient (credits|balance)|hit your (\w+ )?limit|limit reached|credit balance|at capacity/i;
 
 /** Backoff ladder for a worker that keeps hitting its limit, in minutes. */
 export const COOLDOWN_MIN = [30, 120, 360];

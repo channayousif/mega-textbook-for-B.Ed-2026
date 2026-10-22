@@ -1,0 +1,17 @@
+# Command: node scripts/measure-figure-text.mjs static/img/figures/gqur-301/unit-14/*.svg
+# Exit: non-zero (2 problems reported). Output captured verbatim from the reviewer session terminal (tail -30, full output shown).
+# Disclosure: this script launches headless Chromium via playwright-core. It was run once, without the
+# scripts/heavy.sh wrapper, before the reviewer noticed the import; the crew brief prohibits Playwright.
+# The process exited normally and was not rerun.
+✓ static/img/figures/gqur-301/unit-14/fig-U14-1.dark.svg (780x420, widest text ends at 765.4, wordmark at 672.7)
+✓ static/img/figures/gqur-301/unit-14/fig-U14-1.svg (780x420, widest text ends at 765.4, wordmark at 672.7)
+✓ static/img/figures/gqur-301/unit-14/fig-U14-2.dark.svg (780x420, widest text ends at 765.4, wordmark at 672.7)
+✓ static/img/figures/gqur-301/unit-14/fig-U14-2.svg (780x420, widest text ends at 765.4, wordmark at 672.7)
+✓ static/img/figures/gqur-301/unit-14/fig-U14-3.dark.svg (780x560, widest text ends at 765.4, wordmark at 672.7)
+✓ static/img/figures/gqur-301/unit-14/fig-U14-3.svg (780x560, widest text ends at 765.4, wordmark at 672.7)
+✗ static/img/figures/gqur-301/unit-14/fig-U14-4.dark.svg
+    overflows right edge by 95.6px: "Ten samples from the same population, each giving a 95 per c"
+✗ static/img/figures/gqur-301/unit-14/fig-U14-4.svg
+    overflows right edge by 95.6px: "Ten samples from the same population, each giving a 95 per c"
+
+2 text-geometry problem(s).
