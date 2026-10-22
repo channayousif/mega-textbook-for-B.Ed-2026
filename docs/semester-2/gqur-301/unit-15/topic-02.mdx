@@ -1,0 +1,201 @@
+---
+title: "Topic 15.2 - The z-test"
+description: "The z-test for a sample mean when the population standard deviation is known: computing the test statistic, finding the p-value, and making a decision."
+course_code: GQUR-301
+unit_no: 15
+topic_no: 2
+topic_label: "15.2"
+clo_refs:
+  - "SLO:GQUR-301-15-2"
+blooms_summary: "Remember the z-test formula and when it applies; understand how the p-value comes from the standard normal curve; apply the full five-step z-test to a school claim; analyze what the result does and does not tell a teacher."
+est_reading_minutes: 10
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+
+<PrintHandout />
+
+## A real classroom situation
+
+A mathematics teacher in Sukkur has been teaching Class 8 for several years.
+Over that time, the district-wide mean on the end-of-year Class 8 math test has
+settled at 68 marks out of 100, with a standard deviation of 12 marks. This year
+her class of 40 pupils scores a mean of 71.5. She wonders: "Is this class truly
+above the district average, or is a rise of 3.5 marks just normal year-to-year
+variation?" Because the district standard deviation is known from many years of
+data, a **z-test** answers the question.
+
+<Figure id="fig-U15-3" src="/img/figures/gqur-301/unit-15/fig-U15-3.svg" alt="The standard normal curve showing two-tailed rejection regions at the 5% significance level. The critical values are at z = -1.96 and z = +1.96. The observed test statistic z = 1.82 falls between them, inside the &quot;do not reject&quot; region." />
+
+## Explanation
+
+### When to use a z-test
+
+A **z-test for a mean** applies when three conditions hold (Illowsky & Dean,
+2023, Section 9.3, NIST/SEMATECH, Section 7.1.3):
+
+1. The data are a random sample from the population of interest.
+2. The population standard deviation *σ* is **known**.
+3. Either the population is normally distributed or the sample is large enough
+   (*n* ≥ 30) for the Central Limit Theorem to make the sample mean
+   approximately normal.
+
+In the Sukkur math example, *σ* = 12 is known from district data and *n* = 40 is
+large, so a z-test is appropriate. If *σ* were unknown or the sample were
+small, Topic 15.3's t-test would be the right choice.
+
+### The test statistic
+
+The **z-test statistic** measures how many standard errors the sample mean is
+from the null-hypothesis mean:
+
+> *z* = (x̄ − μ<sub>0</sub>) / (σ / √n)
+
+where x̄ is the sample mean, μ<sub>0</sub> is the value under *H*<sub>0</sub>,
+*σ* is the known population standard deviation, and *n* is the sample size.
+
+### Step-by-step: the Sukkur math class
+
+**Step 1 - State the hypotheses.** The teacher suspects her class does *better*
+than the district average, so:
+
+- *H*<sub>0</sub>: *μ* = 68.
+- *H*<sub>1</sub>: *μ* &gt; 68 (right-tailed test).
+
+**Step 2 - Choose the significance level.** The teacher chooses *α* = 0.05.
+
+**Step 3 - Compute the test statistic.**
+
+Standard error = σ / √n = 12 / √40 = 12 / 6.32 = 1.90.
+
+*z* = (71.5 − 68) / 1.90 = 3.5 / 1.90 = **1.84**.
+
+**Step 4 - Find the p-value.** For a right-tailed test, the p-value is the area
+to the right of *z* = 1.84 under the standard normal curve. From the standard
+normal table, P(*Z* &gt; 1.84) = 1 − 0.9671 = **0.0329**.
+
+**Step 5 - Decide.** Since 0.0329 ≤ 0.05, we **reject *H*<sub>0</sub>**. The
+data provide sufficient evidence at the 5% level to conclude that this class's
+mean is above the district average.
+
+<Figure id="fig-U15-4" src="/img/figures/gqur-301/unit-15/fig-U15-4.svg" alt="A summary table for the z-test: null hypothesis μ = 68, alternative μ &gt; 68, α = 0.05, sample mean 71.5, n = 40, population standard deviation 12, standard error 1.90, test statistic z = 1.84, p-value 0.0329, decision to reject the null hypothesis." />
+
+### One-tailed and two-tailed p-values
+
+How you find the p-value depends on the alternative hypothesis (Illowsky & Dean,
+2023, Section 9.2):
+
+- **Right-tailed** (*H*<sub>1</sub>: *μ* &gt; μ<sub>0</sub>): p-value = P(*Z*
+  &gt; *z*).
+- **Left-tailed** (*H*<sub>1</sub>: *μ* &lt; μ<sub>0</sub>): p-value =
+  P(*Z* &lt; *z*).
+- **Two-tailed** (*H*<sub>1</sub>: *μ* ≠ μ<sub>0</sub>): p-value = 2 × P(*Z*
+  &gt; |*z*|).
+
+**Common misconception.** Many trainees think "a small p-value proves the
+ alternative hypothesis". A small p-value means the observed sample mean would
+ be surprising *if the null were true*. It does not measure the size of the
+ difference (3.5 marks may be statistically significant but practically small),
+ and it does not rule out other explanations: the class may have had a
+ particularly strong year group, extra tutoring, or a teacher who also gave
+ extra practice. The test judges the number, not the cause.
+
+### What "reject" really means
+
+Rejecting *H*<sub>0</sub> means the data are hard to reconcile with the claim
+that the true mean equals μ<sub>0</sub>. It does **not** mean the effect is
+large, important, or caused by the factor the teacher suspects. A result can
+be statistically significant but trivial in practice. When you report a test
+result to a head teacher, always state the direction and the actual difference
+(x̄ − μ<sub>0</sub>), not just "significant" or "not significant".
+
+## Activity: Carry out a z-test in small groups
+
+Work in groups of three. About 20 minutes.
+
+1. Each group invents a teaching-data scenario: a known district mean and
+   standard deviation, a class size, and a sample mean. The numbers should be
+   realistic (a district mean between 50 and 80, a standard deviation between 8
+   and 15, a class size between 20 and 50).
+2. State *H*<sub>0</sub> and *H*<sub>1</sub> and choose *α* = 0.05.
+3. Compute the standard error, the test statistic, and the p-value (use a
+   standard normal table or a calculator). State the decision.
+4. Swap your scenario with the next group and check their work. Discuss any
+   disagreement. Groups that chose a two-tailed test while the next group
+   thinks it should be one-tailed are the most productive to argue about.
+
+## Check your understanding
+
+1. *(Remember)* State the three conditions for a z-test for a mean.
+2. *(Understand)* Explain why the standard error gets smaller as the sample
+   size gets larger, and what that means for the test.
+3. *(Apply)* A district mean is 70 with σ = 15. A class of 49 pupils has a mean
+   of 74. Compute the test statistic for *H*<sub>1</sub>: *μ* &gt; 70 and find
+   the p-value.
+4. *(Apply)* For the same scenario with a two-tailed alternative, what would
+   the p-value be and what decision would you make at *α* = 0.05?
+
+## Summary
+
+A z-test for a mean applies when the population standard deviation is known and
+the sample is large enough. Compute the test statistic *z* = (x̄ − μ<sub>0</sub>)
+/ (σ / √n), find the p-value from the standard normal curve (one-tailed or
+two-tailed depending on the alternative), and reject *H*<sub>0</sub> when the
+p-value is at most *α*. A statistically significant result means the data are
+surprising under the null, not that the effect is large or important.
+
+## Self-assessment checklist
+
+- [ ] I can state when a z-test is appropriate and when it is not.
+- [ ] I can compute the test statistic from the sample mean, the null mean, the known σ and the sample size.
+- [ ] I can find the p-value for a one-tailed and a two-tailed z-test from the standard normal table.
+- [ ] I can explain what "reject the null hypothesis" does and does not mean in plain language.
+
+## Try this at your practicum school
+
+Ask your cooperating teacher for a recent class test average and the school or
+subject average over the past few years (if one exists). Note the class size.
+Treat the school average as μ<sub>0</sub> and the past-year standard deviation
+(if available) as *σ*. State hypotheses, carry out a z-test, and write two
+sentences about what the result means for the teacher, including what it does
+not prove.
+
+## Summative task
+
+A school in Ghotki reports that the district mean on the Grade 6 English test
+is 60 marks with a standard deviation of 14 marks. A teacher's class of 44
+pairs pupils has a mean of 63.5 marks. The teacher claims the class is truly
+above the district average.
+
+a) State *H*<sub>0</sub> and *H*<sub>1</sub>, choose *α*, and compute the
+   test statistic and p-value.
+
+b) State the decision and explain what it means in one sentence.
+
+c) In 80-120 words, analyze what the head teacher can and cannot conclude
+   from this result. Address whether the test shows the teacher's method is
+   better, and what other explanations remain possible.
+
+**Mini-rubric**
+
+| Criterion | Levels |
+|---|---|
+| *Test statistic and p-value (Apply)* | 0-3: both correct with working / one correct / method right, arithmetic slip / incorrect. |
+| *Decision (Apply)* | 0-1: decision consistent with the p-value and stated in plain language. |
+| *Analysis of the conclusion (Analyze)* | 0-3: distinguishes statistical significance from practical importance, notes other explanations (prior ability, extra help), and says what the test does not show / two of these / one or none. |
+
+## Further reading
+
+Illowsky, B., & Dean, S. (2023). *Introductory Statistics 2e.* OpenStax.
+https://openstax.org/books/introductory-statistics-2e/pages/9-3-single-mean-and-known-standard-deviation -
+Section 9.3, the single-mean z-test with a known standard deviation.
+
+NIST/SEMATECH. *e-Handbook of Statistical Methods*, Section 7.1.3, "What is a
+Z-test?"
+https://www.itl.nist.gov/div898/handbook/eda/section3/eda353.htm#ZTEST
+
+Lane, D. M., & Ziemer, H. (n.d.). *Hypothesis Testing with z.* Online
+Statistics Education. Rice University.
+https://onlinestatbook.com/2/more_studies/hypothesis_testing_z.html -
+worked z-test examples with the standard normal table.
