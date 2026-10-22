@@ -85,7 +85,7 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 10 | G6 assets | ▢ | | |
 | Unit 10 | G7 publish | ▢ | | |
 | Unit 11 | G1 unit-spec | ▢ | | guide Chapter 11; intake re-evaluation advised (D-2026-0070) |
-| Unit 11 | G2 en-draft | ▢ | | |
+| Unit 11 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-11/G2/20261022T192824904Z-gates.json |
 | Unit 11 | G3 en-review | ▢ | | |
 | Unit 11 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 11 | G5 ur-review | ▢ | | |
@@ -107,7 +107,7 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 13 | G7 publish | ▢ | | |
 | Unit 14 | G1 unit-spec | ▢ | | guide Chapter 14; intake re-evaluation advised (D-2026-0070) |
 | Unit 14 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-14/G2/20261022T002029Z-gates.json |
-| Unit 14 | G3 en-review | ▢ | | |
+| Unit 14 | G3 en-review | ▣ | agent:claude-g3-reviewer | Advisory escalation only: specs/content/gqur-301/reviews/unit-14/G3/crew-20261023.json; F1-F5 need separate author repair (data sum 503 not 513, 30.5-37.9 interval contradiction, z vs t with s, fig-U14-4 subtitle clipped, 14.2 rubric interval); G1 approval, bound sources and rendered accessibility remain unresolved. G3 stays open, unsigned (ADR-0019). |
 | Unit 14 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 14 | G5 ur-review | ▢ | | |
 | Unit 14 | G6 assets | ▢ | | |
