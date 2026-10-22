@@ -1,0 +1,215 @@
+---
+title: "Topic 15.3 - The t-test"
+description: "The t-test for a sample mean when the population standard deviation is unknown: using the sample standard deviation, the t-distribution, and the degrees of freedom."
+course_code: GQUR-301
+unit_no: 15
+topic_no: 3
+topic_label: "15.3"
+clo_refs:
+  - "SLO:GQUR-301-15-3"
+blooms_summary: "Remember when to use a t-test instead of a z-test; understand how the t-distribution differs from the normal and why; apply the full t-test to a small-sample school claim; analyze what the result means and what it leaves open."
+est_reading_minutes: 10
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+
+<PrintHandout />
+
+## A real classroom situation
+
+A newly trained teacher in Jacobabad has been using group work in her Class 5
+science class. She wants to know whether the class mean differs from the
+district mean of 58 marks. She tests her class of 15 pupils and finds a mean of
+62 and a standard deviation of 7.5 marks from her own sample. She does not know
+the district's population standard deviation, and the class is small. A **t-test**
+handles exactly this situation: a small sample and an unknown population spread.
+
+<Figure id="fig-U15-5" src="/img/figures/gqur-301/unit-15/fig-U15-5.svg" alt="The standard normal (z) curve and the t-distribution with 14 degrees of freedom overlaid. The t-distribution is shorter in the centre and has thicker tails, showing that a larger test statistic is needed to reach the same tail probability when the sample standard deviation is used instead of the population standard deviation." />
+
+## Explanation
+
+### When to use a t-test
+
+A **t-test for a mean** applies when (Illowsky & Dean, 2023, Section 9.4):
+
+1. The data are a random sample.
+2. The population standard deviation *σ* is **unknown**.
+3. Either the population is approximately normal or the sample, though small,
+   shows no strong skew or outliers.
+
+The t-test replaces the unknown *σ* with the sample standard deviation *s*. The
+cost is a heavier-tailed distribution: the **t-distribution**. It has one
+parameter, the **degrees of freedom**, df = *n* − 1. As df grows, the
+t-distribution approaches the normal. With df ≥ 30 the two are close enough
+that a z-test gives nearly the same answer. Below df = 30 the difference
+matters.
+
+In the Jacobabad science example, *σ* is unknown, *n* = 15 gives df = 14, and
+the sample is small, so a t-test is the right choice.
+
+### The test statistic
+
+The **t-test statistic** has the same structure as the *z*, but uses *s* instead
+of *σ*:
+
+> *t* = (x̄ − μ<sub>0</sub>) / (s / √n)
+
+The denominator *s* / √n is the **standard error of the mean** estimated from
+the sample.
+
+### Step-by-step: the Jacobabad science class
+
+**Step 1 - State the hypotheses.** The teacher wants to know whether the mean
+*differs* (not specifically whether it is higher):
+
+- *H*<sub>0</sub>: *μ* = 58.
+- *H*<sub>1</sub>: *μ* ≠ 58 (two-tailed test).
+
+**Step 2 - Choose the significance level.** *α* = 0.05.
+
+**Step 3 - Compute the test statistic.**
+
+Standard error = *s* / √n = 7.5 / √15 = 7.5 / 3.87 = 1.94.
+
+*t* = (62 − 58) / 1.94 = 4 / 1.94 = **2.06**.
+
+Degrees of freedom = *n* − 1 = 15 − 1 = **14**.
+
+**Step 4 - Find the p-value.** For a two-tailed test with df = 14, the p-value
+is 2 × P(*T* &gt; 2.06). From a t-table, the critical value for df = 14 at
+*α* = 0.05 (two-tailed) is 2.145. Since 2.06 &lt; 2.145, the p-value is
+slightly **greater than 0.05**. (Using software, the exact two-tailed p-value
+is about 0.058.)
+
+**Step 5 - Decide.** Since the p-value &gt; 0.05, we **do not reject
+*H*<sub>0</sub>**. The data do not provide sufficient evidence at the 5% level
+to conclude that the class mean differs from the district mean.
+
+<Figure id="fig-U15-6" src="/img/figures/gqur-301/unit-15/fig-U15-6.svg" alt="A comparison table between the z-test and the t-test across six rows: when each applies, the distribution used, the sample size, the test formula, the tail thickness, and a school example." />
+
+### Why the thicker tails matter
+
+The t-distribution has thicker tails than the normal because using *s* instead
+of *σ* adds uncertainty. For a given sample result, the p-value from a t-test
+is usually larger than the p-value from a z-test on the same data. This is
+conservative: it makes it harder to reject the null when the population spread
+is unknown. **Never use a z-test with *s* in place of *σ*** for a small sample.
+That understates the p-value and can produce a false sense of significance.
+
+**Common misconception.** Many trainees think "a small p-value proves the
+ alternative hypothesis". As with the z-test, a small p-value only means the
+ observed sample mean is surprising if the null is true. It does not measure
+ the size of the difference or prove the alternative. A second error is using
+ the z-test when *σ* is unknown and *n* is small. The z-test assumes *σ* is
+ known; replacing it with *s* without switching to the t-distribution gives a
+ p-value that is too small. A third error is treating the significance level
+ as a bright line: a p-value of 0.058 and a p-value of 0.045 are not
+ meaningfully different, even though one is "not significant" and the other is
+ "significant" at *α* = 0.05. Report the actual p-value and let the reader judge.
+
+### Reporting the result
+
+A complete statement of a t-test result includes: the test statistic, the
+degrees of freedom, the p-value, and the decision, followed by a plain-language
+conclusion.
+
+> "A one-sample t-test gave *t*(14) = 2.06, *p* = 0.058. At the 5% level the
+> null hypothesis is not rejected. The data do not provide enough evidence to
+> conclude that the class mean differs from the district mean of 58. A larger
+> sample might reach a different conclusion."
+
+## Activity: z or t? decision practice
+
+Work in pairs. About 15 minutes.
+
+1. Each pair writes four short scenarios describing a teacher testing a claim
+   about a class mean. For two of them, the population standard deviation is
+   known (use a z-test). For the other two, it is unknown and the sample is
+   small (use a t-test).
+2. Swap scenarios with the next pair. For each scenario, decide whether a
+   z-test or a t-test is appropriate and give a reason in one sentence.
+3. For one of the t-test scenarios, compute the test statistic and degrees of
+   freedom from invented numbers.
+4. As a class, discuss any scenario where pairs disagreed. Scenarios where the
+   sample is large but *σ* is unknown are the most productive to debate (a
+   t-test still works, but with a large df it gives nearly the same answer as a
+   z-test).
+
+## Check your understanding
+
+1. *(Remember)* State two conditions that make a t-test the right choice
+   instead of a z-test.
+2. *(Understand)* Explain why the t-distribution has thicker tails than the
+   standard normal, and what that does to the p-value for the same test
+   statistic.
+3. *(Apply)* A sample of 10 pupils has a mean of 45 and a standard deviation
+   of 8. The null hypothesis is *μ* = 40. Compute *t* and the degrees of
+   freedom for a two-tailed test.
+4. *(Apply)* A t-table gives the critical value for df = 9 at *α* = 0.05
+   (two-tailed) as 2.262. For the *t* you computed in item 3, state the
+   decision and explain what it means in one sentence.
+
+## Summary
+
+A t-test applies when the population standard deviation is unknown, especially
+with a small sample. It replaces *σ* with the sample standard deviation *s* and
+uses the t-distribution with df = *n* − 1 instead of the normal. The thicker
+tails of the t-distribution make it harder to reject the null than a z-test on
+the same data, which is the correct penalty for the extra uncertainty. Report
+the test statistic, degrees of freedom, p-value, and decision, and interpret the
+result in plain language.
+
+## Self-assessment checklist
+
+- [ ] I can say when to use a t-test instead of a z-test and give a reason.
+- [ ] I can compute the t-test statistic and the degrees of freedom from a sample.
+- [ ] I can find the critical value from a t-table for a given significance level and degrees of freedom.
+- [ ] I can explain why using the z-test with *s* instead of *σ* for a small sample is wrong.
+
+## Try this at your practicum school
+
+With your cooperating teacher's permission, collect a small set of recent test
+marks (10-20 pupils) from one class, with no names. Compute the mean and
+standard deviation. Choose a comparison value (a school average, a district
+figure, or a pass mark). Carry out a t-test, report *t*, df and the p-value,
+and write two sentences about what the result means and what it does not prove.
+
+## Summative task
+
+A teacher in Dadu district claims her Class 6 math mean differs from the
+district mean of 55 marks. She tests a random sample of 12 pupils: the sample
+mean is 59 and the sample standard deviation is 6.5 marks.
+
+a) State *H*<sub>0</sub> and *H*<sub>1</sub>, explain why a t-test is the
+   right choice, and compute *t* and the degrees of freedom.
+
+b) The t-table gives the critical value for df = 11 at *α* = 0.05 (two-tailed)
+   as 2.201. State the decision and explain what it means.
+
+c) In 80-120 words, analyze what the teacher can and cannot conclude. Address
+   whether the result shows her teaching is better, what the p-value means in
+   plain language, and what other explanations remain possible.
+
+**Mini-rubric**
+
+| Criterion | Levels |
+|---|---|
+| *t and df (Apply)* | 0-2: both correct with working / one correct / both wrong. |
+| *Decision (Apply)* | 0-1: decision correct and stated in plain language. |
+| *Analysis (Analyze)* | 0-3: distinguishes statistical significance from practical importance, explains the p-value in plain language, notes the small-sample limitation and other explanations / two of these / one or none. |
+
+## Further reading
+
+Illowsky, B., & Dean, S. (2023). *Introductory Statistics 2e.* OpenStax.
+https://openstax.org/books/introductory-statistics-2e/pages/9-4-single-mean-and-unknown-standard-deviation -
+Section 9.4, the single-mean t-test with an unknown standard deviation.
+
+Lane, D. M., & Ziemer, H. (n.d.). *t-test for a Single Mean.* Online Statistics
+Education. Rice University.
+https://onlinestatbook.com/2/more_studies/hypothesis_testing_t.html -
+worked t-test examples with the t-distribution table.
+
+NIST/SEMATECH. *e-Handbook of Statistical Methods*, Section 1.3.6.7, "Student's
+t-distribution".
+https://www.itl.nist.gov/div898/handbook/eda/section3/eda358.htm
