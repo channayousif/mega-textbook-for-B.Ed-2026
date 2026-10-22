@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 420" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">عددی خط پر نقطہ اندازہ</title><desc id="d">28 سے 42 تک ایک عددی خط، جس پر آبادی کا نامعلوم اوسط سوالیہ نشان سے دکھایا گیا ہے اور 34.2 کا نقطہ اندازہ ایک ٹھوس نقطے سے نشان زد ہے جس پر 'ہمارا بہترین واحد اندازہ' لکھا ہے۔</desc><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:15px;fill:var(--ink)} .h{font-size:16px;font-weight:700;fill:var(--ink)} .sh{font-size:14px;font-weight:600;fill:var(--ink)} .body{font-size:14px;fill:var(--ink)} .small{font-size:13px;fill:var(--muted)} .c{text-anchor:middle} .wm{fill:var(--wm);font-size:11px} .ah{fill:var(--ink)} .tick{stroke:var(--ink);stroke-width:1.5} .axis{stroke:var(--ink);stroke-width:2} .est{fill:var(--a1)} .est-ring{fill:none;stroke:var(--a1);stroke-width:2.5} .q{fill:var(--a3);font-size:22px;font-weight:700} .line{stroke:var(--line);stroke-width:2}</style><rect class="bg" x="0" y="0" width="780" height="420"/>
+
+  <!-- Axis line -->
+  <line class="axis" x1="60" y1="120" x2="720" y2="120"/>
+
+  <!-- Ticks every 2 units: 28,30,32,34,36,38,40,42 -->
+  <!-- spacing: 660px / 14 units = 47.14 px per unit, 2 units = 94.28 px -->
+  <g class="small">
+    <line class="tick" x1="60" y1="110" x2="60" y2="130"/><text class="c" x="60" y="150">28</text>
+    <line class="tick" x1="154" y1="115" x2="154" y2="125"/><text class="c" x="154" y="150">30</text>
+    <line class="tick" x1="249" y1="115" x2="249" y2="125"/><text class="c" x="249" y="150">32</text>
+    <line class="tick" x1="343" y1="110" x2="343" y2="130"/><text class="c" x="343" y="150">34</text>
+    <line class="tick" x1="437" y1="115" x2="437" y2="125"/><text class="c" x="437" y="150">36</text>
+    <line class="tick" x1="532" y1="115" x2="532" y2="125"/><text class="c" x="532" y="150">38</text>
+    <line class="tick" x1="626" y1="115" x2="626" y2="125"/><text class="c" x="626" y="150">40</text>
+    <line class="tick" x1="720" y1="110" x2="720" y2="130"/><text class="c" x="720" y="150">42</text>
+  </g>
+
+  <!-- Unknown population mean as a question mark (placed near 32) -->
+  <text class="q c" x="249" y="78">?</text>
+  <text class="small c" x="249" y="100">آبادی کا حقیقی اوسط (نامعلوم)</text>
+
+  <!-- Point estimate dot at 34.2 (just right of 34) -->
+  <circle class="est" cx="352" cy="120" r="9"/>
+  <circle class="est-ring" cx="352" cy="120" r="9"/>
+
+  <!-- Leader line and label for the point estimate -->
+  <line class="line" x1="352" y1="111" x2="430" y2="62"/>
+  <rect class="panel" x="300" y="30" width="230" height="36" rx="6"/>
+  <text class="sh c" x="415" y="53">ہمارا بہترین واحد اندازہ: 34.2</text>
+
+  <!-- Annotation panel -->
+  <rect class="panel" x="60" y="200" width="660" height="180" rx="8"/>
+  <text class="h" x="695" y="230" text-anchor="end">اس شکل کو کیسے پڑھیں</text>
+  <text class="body" x="695" y="258" text-anchor="end">خط پر 32 کے قریب سوالیہ نشان آبادی کا وہ اوسط ہے جس کا ہم اندازہ لگا رہے ہیں۔</text>
+  <text class="body" x="695" y="284" text-anchor="end">ہم اس کی قدر نہیں جانتے کیونکہ ہم نے تمام 120 نہیں، صرف 15 اسکولوں کے نمونے کا دورہ کیا۔</text>
+  <text class="body" x="695" y="312" text-anchor="end">34.2 پر ٹھوس نقطہ ہمارا نقطہ اندازہ ہے: نمونے سے حاصل وہ واحد عدد جو ہم</text>
+  <text class="body" x="695" y="338" text-anchor="end">آبادی کے اوسط کے بہترین اندازے کے طور پر پیش کرتے ہیں۔</text>
+  <text class="body" x="695" y="366" text-anchor="end">چونکہ حقیقی قدر نامعلوم ہے، ہم نہیں کہہ سکتے کہ 34.2 اس سے کتنا قریب ہے۔</text>
+
+  <!-- Wordmark -->
+  <text class="wm" x="15" y="410" text-anchor="start" aria-hidden="true">textbook.com.pk</text>
+</svg>

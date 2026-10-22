@@ -1,0 +1,101 @@
+---
+title: "Unit 15 - Teacher notes"
+description: "Teaching strategies and practical work for GQUR-301 Unit 15: hypothesis testing, z-test and t-test."
+course_code: GQUR-301
+unit_no: 15
+clo_refs:
+  - "SLO:GQUR-301-15-1"
+  - "SLO:GQUR-301-15-2"
+  - "SLO:GQUR-301-15-3"
+blooms_summary: "No assessment items in this file; teaching strategies and practical work only."
+est_reading_minutes: 5
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+
+<PrintHandout />
+
+## Purpose
+
+These notes are for the teacher (or the trainee running a class session). They
+suggest how to sequence Unit 15, what misconceptions to expect and how to
+handle them, and a practical-work block that lets learners carry out a test by
+hand before relying on any technology.
+
+## Sequencing the three topics
+
+The unit runs over one week (guide Chapter 15). A suggested split:
+
+- **First half of the session (Topic 15.1).** Teach the logic of hypothesis
+  testing first, before any formula. Use the five-step flowchart (fig-U15-1)
+  as the spine. Have learners practise stating *H*<sub>0</sub> and
+  *H*<sub>1</sub> for several school claims before you mention test statistics.
+  The most productive wrong answer is "the null is what the researcher believes".
+  Have a counter-example ready: "A head teacher who hopes a new method works
+  still tests the null hypothesis that it makes no difference."
+
+- **Second half, first part (Topic 15.2).** Introduce the z-test as "what
+  happens when we know the population spread". Work through one full example on
+  the board, then let learners try a second in pairs. Keep the focus on what
+  the p-value means, not on arithmetic. A standard normal table should be
+  available; do not let the table become the point.
+
+- **Second half, second part (Topic 15.3).** Start by asking: "What changes
+  when we do not know σ?" Let learners see that *s* replaces *σ* and the
+  t-distribution replaces the normal. The key teaching point is why the tails
+  are thicker: using *s* adds uncertainty, so the test must be more cautious.
+
+## Likely misconceptions and how to handle them
+
+| Misconception | How to handle it |
+|---|---|
+| "The null hypothesis is what the researcher believes." | State explicitly that the null is usually the "no effect" claim the researcher hopes to challenge. Give an example where a teacher wants a method to work but writes *H*<sub>0</sub>: *μ* = district mean. |
+| "A small p-value proves the alternative hypothesis." | Restate: the p-value says how surprising the data would be *if the null were true*. It does not measure the probability the alternative is true. |
+| "Failing to reject the null proves it is true." | Explain that the test only checks whether the data are surprising enough to rule out the null. A lack of evidence against is not evidence for. |
+| "I can use a z-test with *s* instead of *σ*." | Show that this understates the p-value. Contrast the z and t critical values for the same df to make the penalty visible. |
+| "Significant means important." | Give an example: a 0.5-mark difference with a large class can be statistically significant but practically meaningless. |
+
+## Discussion prompts
+
+Use these when a test result comes back, instead of just stating "significant"
+or "not significant":
+
+1. "What does this p-value actually tell us about our sample and the claim we
+   are testing?"
+2. "If we collected another sample of the same size, would we get the same
+   decision? What might change?"
+3. "The test says the data are surprising under the null. What else could
+   explain a surprising result besides the factor we are testing?"
+
+## Practical work
+
+**Activity: run a t-test from a small invented data set.** About 20 minutes.
+
+1. Each group of four pupils invents a small data set (10-15 marks) for a
+   fictional class. The marks should cluster around a plausible mean, with
+   some spread.
+2. Each group computes the mean and sample standard deviation by hand (or with
+   a calculator). They choose a comparison value (for example, a district mean
+   or a pass mark).
+3. They state *H*<sub>0</sub> and *H*<sub>1</sub>, compute *t*, find the
+   critical value from a t-table, and state the decision.
+4. Groups swap their data set and check each other's calculations. Any group
+   that used a z-test instead of a t-test should be asked to explain why the
+   t-test is the correct choice.
+
+**Why this matters.** Carrying out the steps by hand makes the logic concrete.
+Learners who have computed a p-value once by hand are far less likely to treat
+the test as a black box that produces "the answer" afterwards.
+
+## Key points to close the unit
+
+- A hypothesis test is a structured argument from sample data to a decision
+  about a population, not a proof.
+- The p-value measures how surprising the data are under the null, not the
+  probability that the null or the alternative is true.
+- The z-test is for a known σ; the t-test is for an unknown σ, especially
+  with a small sample.
+- Report the result in plain language: the test statistic, the degrees of
+  freedom, the p-value, the decision, and what it means for the school claim
+  being tested.

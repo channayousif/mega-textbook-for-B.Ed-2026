@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 480" role="img" aria-labelledby="t d" font-family="'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif"><title id="t">بار بار لیے گئے نمونوں کے اعتماد وقفے</title><desc id="d">ایک عددی خط جس پر بار بار لیے گئے نمونوں کے دس اعتماد وقفے قطعاتِ خط کی صورت میں دکھائے گئے ہیں؛ نو میں آبادی کا حقیقی اوسط (33.5 پر نقطہ دار خط) شامل ہے، ایک میں نہیں، اور 32.28 سے 36.12 تک افسر کا وقفہ نمایاں کیا گیا ہے۔</desc><style>:root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:15px;fill:var(--ink)} .h{font-size:16px;font-weight:700;fill:var(--ink)} .sh{font-size:14px;font-weight:600;fill:var(--ink)} .body{font-size:14px;fill:var(--ink)} .small{font-size:13px;fill:var(--muted)} .c{text-anchor:middle} .wm{fill:var(--wm);font-size:11px} .ah{fill:var(--ink)} .tick{stroke:var(--ink);stroke-width:1.5} .axis{stroke:var(--ink);stroke-width:2} .ci{stroke:var(--ink);stroke-width:3} .miss{stroke:var(--a3);stroke-width:3} .officer{stroke:var(--a1);stroke-width:4} .true-mean{stroke:var(--a3);stroke-width:2;stroke-dasharray:8,4}</style><rect class="bg" x="0" y="0" width="780" height="480"/>
+
+  <!-- Title -->
+  <text class="h" x="730" y="34" text-anchor="end">95 فیصد اعتماد سطح کا مطلب</text>
+  <text class="small" x="730" y="62" text-anchor="end">ایک ہی آبادی سے دس نمونے، ہر ایک سے 95 فیصد وقفہ: نو میں حقیقی اوسط شامل ہے، ایک میں نہیں۔</text>
+
+  <!-- Mapping: x = 60 + (value - 28) * (660 / 14) = 60 + (value - 28) * 47.14 -->
+  <!-- True mean at 33.5: x = 60 + 5.5 * 47.14 = 60 + 259.3 = 319.3 -->
+
+  <!-- Vertical dashed line at true population mean -->
+  <line class="true-mean" x1="319" y1="78" x2="319" y2="400"/>
+  <text class="small c" x="319" y="417">حقیقی اوسط = 33.5</text>
+
+  <!-- Axis at bottom -->
+  <line class="axis" x1="60" y1="430" x2="720" y2="430"/>
+  <g class="small">
+    <line class="tick" x1="60" y1="424" x2="60" y2="436"/><text class="c" x="60" y="450">28</text>
+    <line class="tick" x1="154" y1="427" x2="154" y2="433"/><text class="c" x="154" y="450">30</text>
+    <line class="tick" x1="249" y1="427" x2="249" y2="433"/><text class="c" x="249" y="450">32</text>
+    <line class="tick" x1="343" y1="424" x2="343" y2="436"/><text class="c" x="343" y="450">34</text>
+    <line class="tick" x1="437" y1="427" x2="437" y2="433"/><text class="c" x="437" y="450">36</text>
+    <line class="tick" x1="532" y1="427" x2="532" y2="433"/><text class="c" x="532" y="450">38</text>
+    <line class="tick" x1="626" y1="427" x2="626" y2="433"/><text class="c" x="626" y="450">40</text>
+    <line class="tick" x1="720" y1="424" x2="720" y2="436"/><text class="c" x="720" y="450">42</text>
+  </g>
+
+  <!-- Ten intervals: y positions from 80 to 360, spacing 28 -->
+  <!-- Each interval: left = 60 + (lower - 28) * 47.14, right = 60 + (upper - 28) * 47.14 -->
+
+  <!-- Sample 1: (31.2, 35.8) contains 33.5 -->
+  <text class="small" x="28" y="98">1</text>
+  <line class="ci" x1="187" y1="95" x2="403" y2="95"/>
+
+  <!-- Sample 2: (30.5, 36.1) contains 33.5 -->
+  <text class="small" x="28" y="126">2</text>
+  <line class="ci" x1="154" y1="123" x2="432" y2="123"/>
+
+  <!-- Sample 3: (32.0, 35.4) contains 33.5 -->
+  <text class="small" x="28" y="154">3</text>
+  <line class="ci" x1="226" y1="151" x2="394" y2="151"/>
+
+  <!-- Sample 4: (31.8, 34.9) contains 33.5 -->
+  <text class="small" x="28" y="182">4</text>
+  <line class="ci" x1="216" y1="179" x2="370" y2="179"/>
+
+  <!-- Sample 5: (33.8, 37.2) does NOT contain 33.5 (miss!) -->
+  <text class="small" x="28" y="210">5</text>
+  <line class="miss" x1="357" y1="207" x2="523" y2="207"/>
+
+  <!-- Sample 6: (32.5, 36.0) contains 33.5 -->
+  <text class="small" x="28" y="238">6</text>
+  <line class="ci" x1="250" y1="235" x2="428" y2="235"/>
+
+  <!-- Sample 7: (31.0, 35.5) contains 33.5 -->
+  <text class="small" x="28" y="266">7</text>
+  <line class="ci" x1="178" y1="263" x2="399" y2="263"/>
+
+  <!-- Sample 8: (33.0, 36.4) contains 33.5 -->
+  <text class="small" x="28" y="294">8</text>
+  <line class="ci" x1="305" y1="291" x2="447" y2="291"/>
+
+  <!-- Sample 9: (32.2, 35.1) contains 33.5 -->
+  <text class="small" x="28" y="322">9</text>
+  <line class="ci" x1="236" y1="319" x2="385" y2="319"/>
+
+  <!-- Sample 10: (31.5, 34.6) contains 33.5 -->
+  <text class="small" x="28" y="350">10</text>
+  <line class="ci" x1="202" y1="347" x2="356" y2="347"/>
+
+  <!-- Officer's own interval (highlighted, below the ten) -->
+  <text class="sh" x="28" y="392">افسر</text>
+  <line class="officer" x1="258" y1="387" x2="436" y2="387"/>
+
+  <!-- Annotation (moved right so it clears sample 5's interval) -->
+  <rect class="panel" x="530" y="78" width="230" height="200" rx="8"/>
+  <text class="sh" x="745" y="104" text-anchor="end">اس شکل کو کیسے پڑھیں</text>
+  <text class="body" x="745" y="130" text-anchor="end">نقطہ دار خط آبادی کا</text>
+  <text class="body" x="745" y="154" text-anchor="end">حقیقی اوسط (33.5) دکھاتا ہے۔</text>
+  <text class="body" x="745" y="178" text-anchor="end">نمونہ 5 اس سے چوک جاتا ہے۔</text>
+  <text class="body" x="745" y="202" text-anchor="end">افسر کا وقفہ (موٹا خط) اسے</text>
+  <text class="body" x="745" y="226" text-anchor="end">شامل کرتا ہے۔</text>
+  <text class="body" x="745" y="252" text-anchor="end">10 میں سے 9 میں شامل: 95% کے قریب۔</text>
+
+  <!-- Wordmark -->
+  <text class="wm" x="15" y="470" text-anchor="start" aria-hidden="true">textbook.com.pk</text>
+</svg>

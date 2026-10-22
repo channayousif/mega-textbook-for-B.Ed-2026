@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T02:24:41.828Z",
+  "generated_at": "2026-10-22T21:00:47.030Z",
   "courses": [
     {
       "course_code": "EFMP-301",
@@ -1387,6 +1387,24 @@
           "figures_pending": []
         },
         {
+          "unit_no": 11,
+          "authored": true,
+          "translation_status": "draft",
+          "depth_check": "pass",
+          "gates": {
+            "G2": "done",
+            "G3": "open",
+            "G5": "open"
+          },
+          "publication": "gated",
+          "figures": {
+            "prompt_only": 0,
+            "generated": 0,
+            "placed": 4
+          },
+          "figures_pending": []
+        },
+        {
           "unit_no": 12,
           "authored": true,
           "translation_status": "draft",
@@ -1401,6 +1419,42 @@
             "prompt_only": 0,
             "generated": 0,
             "placed": 4
+          },
+          "figures_pending": []
+        },
+        {
+          "unit_no": 14,
+          "authored": true,
+          "translation_status": "draft",
+          "depth_check": "pass",
+          "gates": {
+            "G2": "done",
+            "G3": "open",
+            "G5": "open"
+          },
+          "publication": "gated",
+          "figures": {
+            "prompt_only": 0,
+            "generated": 0,
+            "placed": 4
+          },
+          "figures_pending": []
+        },
+        {
+          "unit_no": 16,
+          "authored": true,
+          "translation_status": "draft",
+          "depth_check": "pass",
+          "gates": {
+            "G2": "done",
+            "G3": "open",
+            "G5": "open"
+          },
+          "publication": "gated",
+          "figures": {
+            "prompt_only": 0,
+            "generated": 0,
+            "placed": 6
           },
           "figures_pending": []
         }
@@ -1462,11 +1516,29 @@
             "placed": 4
           },
           "figures_pending": []
+        },
+        {
+          "unit_no": 6,
+          "authored": true,
+          "translation_status": "draft",
+          "depth_check": "pass",
+          "gates": {
+            "G2": "done",
+            "G3": "open",
+            "G5": "open"
+          },
+          "publication": "gated",
+          "figures": {
+            "prompt_only": 0,
+            "generated": 0,
+            "placed": 4
+          },
+          "figures_pending": []
         }
       ]
     }
   ],
-  "commit": "b14509affd74901e575e7ce459ab6f8d2f94f353",
+  "commit": "0ed8ab9dfa8eed454dc1a2caa92073c3ef629fac",
   "trackers": {
     "specs/content/efmp-301/tasks.md": "b11e2a2a0a1f52518ee0f609fd56efe5bc6a6ffb3e6d48f3b281b55e2479f00b",
     "specs/content/efmp-302/tasks.md": "c5da2fd00a26658998db5a62a969e160d5b3ab6a0dea48282ad58101053074f2",
@@ -1479,7 +1551,7 @@
     "specs/content/efmp-305/tasks.md": "0868c973e5c71896c31ef0d7654572b60ddb00cec22cddfad22749f6d0779579",
     "specs/content/geng-301/tasks.md": "413520059dae1e8a8509cc25ba0e20f0525002930f4a212a4e26fcb174306c1f",
     "specs/content/gpks-402/tasks.md": "8d2b0c6015c1afb1c2820e81cc78f750ac9fa2e1decb507204a294da54bb12cf",
-    "specs/content/gqur-301/tasks.md": "9e1d7653be901d81ceb56c2d5dc9d6843aeb885ed427f8cca2e8ccca31c78bbc",
-    "specs/content/gsos-301/tasks.md": "9ec154c88d0c25e8748004177dfac4a5b663b0681c53d52b7f58be8df7cd93ef"
+    "specs/content/gqur-301/tasks.md": "034d59328c4058500b3704c54ffc006cbe8dff2d8e2ffc496cb53294f1835a14",
+    "specs/content/gsos-301/tasks.md": "71750878f5d17b577819de0a7ba4fdf1d84c6471416403d88e8e74c6aab3fc57"
   }
 }
