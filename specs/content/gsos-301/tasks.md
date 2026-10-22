@@ -58,16 +58,16 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
 
-**Unit 5 - Social Institutions:** not started.
+**Unit 5 - Social Institutions:** English content authored to the Spec 008 v3.0 per-topic layout: `index.mdx` + `topic-01..02.mdx` (nine-part cycles) + `unit-assessment.mdx` (10/10/5 bank + bounded answers) + `unit-teacher-notes.mdx`. Governance artefacts (coverage, sources, figures, concepts) committed. G2 en-draft gates pending run.
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 5 | G1 unit-spec | ▢ | | pending G0 intake |
-| Unit 5 | G2 en-draft | ▢ | | |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | authored; gates: rerun after glossary + concept fixes |
 | Unit 5 | G3 en-review | ▢ | | |
 | Unit 5 | G4 ur-translation | ▢ | | |
 | Unit 5 | G5 ur-review | ▢ | | |
-| Unit 5 | G6 assets | ▢ | | |
+| Unit 5 | G6 assets | ▢ | | 4 figures prompt-only |
 | Unit 5 | G7 publish | ▢ | | |
 
 **Unit 6 - Social Change and Social Problems:** not started.
