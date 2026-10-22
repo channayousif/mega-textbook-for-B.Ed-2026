@@ -1,0 +1,32 @@
+[
+  {
+    "name": "validate:content",
+    "exit_code": 0,
+    "log_path": "specs/content/gqur-301/reviews/unit-08/G3/crew-review/validate-content.log"
+  },
+  {
+    "name": "check:depth-gate",
+    "exit_code": 0,
+    "log_path": "specs/content/gqur-301/reviews/unit-08/G3/crew-review/check-depth-gate.log"
+  },
+  {
+    "name": "check:figures",
+    "exit_code": 0,
+    "log_path": "specs/content/gqur-301/reviews/unit-08/G3/crew-review/check-figures.log"
+  },
+  {
+    "name": "check:no-em-dash",
+    "exit_code": 0,
+    "log_path": "specs/content/gqur-301/reviews/unit-08/G3/crew-review/check-no-em-dash.log"
+  },
+  {
+    "name": "check:no-answer-keys",
+    "exit_code": 0,
+    "log_path": "specs/content/gqur-301/reviews/unit-08/G3/crew-review/check-no-answer-keys.log"
+  },
+  {
+    "name": "check:docs-sync",
+    "exit_code": 0,
+    "log_path": "specs/content/gqur-301/reviews/unit-08/G3/crew-review/check-docs-sync.log"
+  }
+]

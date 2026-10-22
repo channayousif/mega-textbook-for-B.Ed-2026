@@ -138,3 +138,9 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit | Stage | Status | Reviewer | Notes |
 |---|---|---|---|---|
 | Unit 7 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only; G3 remains open. F1-F3 need separate author repair; current G1, author-run provenance and actual rendered accessibility remain unverified. Report: specs/content/gqur-301/reviews/unit-07/G3/01a16053-0c98-79b0-b814-6bb6281aec8c.json. |
+
+## Advisory G3 Unit 8 review, 2026-10-22
+
+| Unit | Stage | Status | Reviewer | Notes |
+|---|---|---|---|---|
+| Unit 8 | G3 en-review | ▢ | agent:codex-g3-reviewer | Advisory escalation only; F1-F4 need separate author correction; provenance, G1, bound sources, answer-blind evidence and rendered inspection remain unresolved. Report: specs/content/gqur-301/reviews/unit-08/G3/01a1608a-2fc5-7f41-a824-c08320f0383b.json; G3 remains open, unsigned. |
