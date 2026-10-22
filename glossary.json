@@ -2357,6 +2357,56 @@
   {
     "term": "Healthcare",
     "definition_en": "The social institution responsible for maintaining and restoring the health of a population through medical services, public health measures and access to care.",
-    "definition_ur": "وہ سماجی ادارہ جو طبی خدمات، عام صحت اہداف اور دیکھ بھال تک رسائی کے ذریعے آبادی کی صحت کو برقرار رکھنے اور بحال کرنے کا ذمہ دار ہے۔"
+    "definition_ur": "وہ سماجی ادارہ جو طبی خدمات، عوامی صحت کے اقدامات اور علاج تک رسائی کے ذریعے آبادی کی صحت کو برقرار رکھنے اور بحال کرنے کا ذمہ دار ہے۔"
+  },
+  {
+    "term": "Institutional interdependence",
+    "definition_en": "The way social institutions depend on one another, so that a change in one institution, such as the economy, causes changes in others, such as family, education or health.",
+    "definition_ur": "سماجی اداروں کا ایک دوسرے پر انحصار، جس کی وجہ سے ایک ادارے، مثلاً معیشت، میں تبدیلی دوسرے اداروں، جیسے خاندان، تعلیم یا صحت، میں بھی تبدیلی لاتی ہے۔"
+  },
+  {
+    "term": "Joint family",
+    "definition_en": "A family form in which grandparents, their married sons, the sons' wives and children live together, often sharing one house, one kitchen and pooled income.",
+    "definition_ur": "خاندان کی وہ شکل جس میں دادا دادی، ان کے شادی شدہ بیٹے، بہوئیں اور بچے اکٹھے رہتے ہیں، اور اکثر ایک گھر، ایک باورچی خانہ اور مشترکہ آمدنی رکھتے ہیں۔"
+  },
+  {
+    "term": "Nuclear family",
+    "definition_en": "A family form made up of a married couple and their children living as a separate household.",
+    "definition_ur": "خاندان کی وہ شکل جس میں میاں بیوی اور ان کے بچے ایک الگ گھرانے کے طور پر رہتے ہیں۔"
+  },
+  {
+    "term": "Manifest function",
+    "definition_en": "An intended and openly recognised result of a social pattern or institution, such as a school teaching pupils to read.",
+    "definition_ur": "کسی سماجی نمونے یا ادارے کا وہ نتیجہ جو ارادتاً ہو اور کھلے طور پر تسلیم کیا جائے، جیسے اسکول کا بچوں کو پڑھنا سکھانا۔"
+  },
+  {
+    "term": "Latent function",
+    "definition_en": "An unintended or less recognised result of a social pattern or institution, such as pupils forming lasting friendships at school.",
+    "definition_ur": "کسی سماجی نمونے یا ادارے کا وہ نتیجہ جو غیر ارادی ہو یا کم پہچانا جائے، جیسے اسکول میں بچوں کی دیرپا دوستیاں بننا۔"
+  },
+  {
+    "term": "Hidden curriculum",
+    "definition_en": "The lessons about norms, behaviour and authority that pupils learn from the way school is organised rather than from the official syllabus.",
+    "definition_ur": "معیارات، رویّے اور اختیار کے وہ اسباق جو بچے سرکاری نصاب کے بجائے اسکول کے نظم و ترتیب سے سیکھتے ہیں۔"
+  },
+  {
+    "term": "Informal economy",
+    "definition_en": "Paid work that is not registered or protected by labour law, such as daily-wage labour, street vending and home-based piece work.",
+    "definition_ur": "وہ معاوضہ دار کام جو رجسٹرڈ نہ ہو اور جسے محنت کے قوانین کا تحفظ حاصل نہ ہو، جیسے دیہاڑی کی مزدوری، ریڑھی بانی اور گھر بیٹھے ٹکڑوں میں کام۔"
+  },
+  {
+    "term": "Political power",
+    "definition_en": "In sociology, the ability of a person or group to make others act as they wish, even against resistance; Max Weber's definition.",
+    "definition_ur": "عمرانیات میں کسی فرد یا گروہ کی یہ صلاحیت کہ وہ دوسروں سے، مزاحمت کے باوجود، اپنی مرضی کے مطابق عمل کروا سکے؛ یہ میکس ویبر کی تعریف ہے۔"
+  },
+  {
+    "term": "Authority",
+    "definition_en": "Power that people accept as rightful. Max Weber described three types: traditional, charismatic and legal-rational.",
+    "definition_ur": "وہ طاقت جسے لوگ جائز تسلیم کریں۔ میکس ویبر نے اس کی تین اقسام بیان کیں: روایتی، کرشماتی اور قانونی و عقلی۔"
+  },
+  {
+    "term": "Institutional change",
+    "definition_en": "A lasting change in the norms, roles and expectations of a social institution, rather than a change in the particular people who take part in it.",
+    "definition_ur": "کسی سماجی ادارے کے معیارات، کرداروں اور توقعات میں دیرپا تبدیلی، نہ کہ صرف اس میں شریک افراد کی تبدیلی۔"
   }
 ]
