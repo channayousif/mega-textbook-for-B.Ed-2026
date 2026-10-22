@@ -1,0 +1,32 @@
+[
+  {
+    "name": "validate:content",
+    "exit_code": 0,
+    "log_path": "specs/content/gsos-301/reviews/unit-04/G3/20261022-codex/validate-content.log"
+  },
+  {
+    "name": "check:depth-gate",
+    "exit_code": 0,
+    "log_path": "specs/content/gsos-301/reviews/unit-04/G3/20261022-codex/check-depth-gate.log"
+  },
+  {
+    "name": "check:figures",
+    "exit_code": 0,
+    "log_path": "specs/content/gsos-301/reviews/unit-04/G3/20261022-codex/check-figures.log"
+  },
+  {
+    "name": "check:no-em-dash",
+    "exit_code": 0,
+    "log_path": "specs/content/gsos-301/reviews/unit-04/G3/20261022-codex/check-no-em-dash.log"
+  },
+  {
+    "name": "check:no-answer-keys",
+    "exit_code": 0,
+    "log_path": "specs/content/gsos-301/reviews/unit-04/G3/20261022-codex/check-no-answer-keys.log"
+  },
+  {
+    "name": "check:docs-sync",
+    "exit_code": 0,
+    "log_path": "specs/content/gsos-301/reviews/unit-04/G3/20261022-codex/check-docs-sync.log"
+  }
+]
