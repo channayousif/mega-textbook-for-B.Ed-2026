@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Arrangements and a committee of the same three pupils</title><desc id="d">دو پینلز جو ترتیبوں اور کمیٹی کا موازنہ کرتے ہیں۔ بائیں طرف، تین ہی طلب علم چار ترتیبیں ترتیب دیتے ہیں۔ دائیں طرف، تمام چھ تیر ایک ہی کمیٹی کی طرف اشارہ کرتے ہیں جس میں تین طلب علم شامل ہیں، یہ دکھاتے ہوئے کہ چھ تبدیلیاں ایک تراکیب میں مل جاتی ہیں۔</desc><defs><style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95} .bg{fill:var(--bg)} .panel{fill:var(--panel);stroke:var(--ink);stroke-width:2} text{font-size:13px;fill:var(--ink)} .h{font-size:14px;font-weight:700;fill:var(--ink)} .sh{font-size:12px;font-weight:600;fill:var(--ink)} .m{font-size:12px;fill:var(--muted)} .c{text-anchor:middle} .wm{fill:var(--wm);font-size:11px;text-anchor:end} .b1{fill:var(--a1-fill);stroke:var(--a1);stroke-width:2} .b2{fill:var(--a2-fill);stroke:var(--a2);stroke-width:2} .b3{fill:var(--a3-fill);stroke:var(--a3);stroke-width:2} .b4{fill:var(--a4-fill);stroke:var(--a4);stroke-width:2} .line{stroke:var(--line);stroke-width:2}</style><marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="var(--line)"/></marker></defs><rect class="bg" x="0" y="0" width="780" height="470"/>
+  <text class="h c" x="390" y="28">ترتیب اہم ہے، یا ترتیب اہم نہیں؟</text>
+  <rect class="panel" x="20" y="44" width="330" height="320" rx="8"/>
+  <text class="h c" x="185" y="68">ترتیب اہم: ترتیبیں</text>
+  <rect class="panel" x="430" y="44" width="330" height="320" rx="8"/>
+  <text class="h c" x="595" y="68">ترتیب اہم نہیں: ایک کمیٹی</text>
+  <text class="m c" x="80" y="94">پہلی</text>
+  <text class="m c" x="150" y="94">دوسری</text>
+  <text class="m c" x="220" y="94">تیسری</text>
+  <rect class="b1" x="60" y="104" width="40" height="30" rx="6"/>
+  <text class="sh c" x="80" y="124">A</text>
+  <rect class="b1" x="130" y="104" width="40" height="30" rx="6"/>
+  <text class="sh c" x="150" y="124">B</text>
+  <rect class="b1" x="200" y="104" width="40" height="30" rx="6"/>
+  <text class="sh c" x="220" y="124">C</text>
+  <line class="line" x1="262" y1="119" x2="476" y2="174.0" marker-end="url(#arr)"/>
+  <rect class="b1" x="60" y="146" width="40" height="30" rx="6"/>
+  <text class="sh c" x="80" y="166">A</text>
+  <rect class="b1" x="130" y="146" width="40" height="30" rx="6"/>
+  <text class="sh c" x="150" y="166">C</text>
+  <rect class="b1" x="200" y="146" width="40" height="30" rx="6"/>
+  <text class="sh c" x="220" y="166">B</text>
+  <line class="line" x1="262" y1="161" x2="476" y2="186.0" marker-end="url(#arr)"/>
+  <rect class="b1" x="60" y="188" width="40" height="30" rx="6"/>
+  <text class="sh c" x="80" y="208">B</text>
+  <rect class="b1" x="130" y="188" width="40" height="30" rx="6"/>
+  <text class="sh c" x="150" y="208">A</text>
+  <rect class="b1" x="200" y="188" width="40" height="30" rx="6"/>
+  <text class="sh c" x="220" y="208">C</text>
+  <line class="line" x1="262" y1="203" x2="476" y2="198.0" marker-end="url(#arr)"/>
+  <rect class="b1" x="60" y="230" width="40" height="30" rx="6"/>
+  <text class="sh c" x="80" y="250">B</text>
+  <rect class="b1" x="130" y="230" width="40" height="30" rx="6"/>
+  <text class="sh c" x="150" y="250">C</text>
+  <rect class="b1" x="200" y="230" width="40" height="30" rx="6"/>
+  <text class="sh c" x="220" y="250">A</text>
+  <line class="line" x1="262" y1="245" x2="476" y2="210.0" marker-end="url(#arr)"/>
+  <rect class="b1" x="60" y="272" width="40" height="30" rx="6"/>
+  <text class="sh c" x="80" y="292">C</text>
+  <rect class="b1" x="130" y="272" width="40" height="30" rx="6"/>
+  <text class="sh c" x="150" y="292">A</text>
+  <rect class="b1" x="200" y="272" width="40" height="30" rx="6"/>
+  <text class="sh c" x="220" y="292">B</text>
+  <line class="line" x1="262" y1="287" x2="476" y2="222.0" marker-end="url(#arr)"/>
+  <rect class="b1" x="60" y="314" width="40" height="30" rx="6"/>
+  <text class="sh c" x="80" y="334">C</text>
+  <rect class="b1" x="130" y="314" width="40" height="30" rx="6"/>
+  <text class="sh c" x="150" y="334">B</text>
+  <rect class="b1" x="200" y="314" width="40" height="30" rx="6"/>
+  <text class="sh c" x="220" y="334">A</text>
+  <line class="line" x1="262" y1="329" x2="476" y2="234.0" marker-end="url(#arr)"/>
+  <circle cx="595" cy="204" r="100" fill="var(--a3-fill)" stroke="var(--a3)" stroke-width="2"/>
+  <text class="sh c" x="595" y="166">کمیٹی</text>
+  <rect class="b1" x="535" y="186" width="30" height="30" rx="6"/>
+  <text class="sh c" x="550" y="206">A</text>
+  <rect class="b1" x="580" y="186" width="30" height="30" rx="6"/>
+  <text class="sh c" x="595" y="206">B</text>
+  <rect class="b1" x="625" y="186" width="30" height="30" rx="6"/>
+  <text class="sh c" x="640" y="206">C</text>
+  <text class="m c" x="595" y="246">ایک ہی گروہ،</text>
+  <text class="m c" x="595" y="262">چاہے ترتیب کچھ بھی ہو</text>
+  <rect x="20" y="378" width="740" height="62" rx="6" fill="var(--panel)" stroke="var(--line)" stroke-width="1"/>
+  <text class="sh" x="36" y="398">6 ترتیبیں = 1 تراکیب، اس لیے 3! = 6 سے تقسیم کریں</text>
+  <text class="m" x="36" y="414">الف، ب اور ج تین طالب علم ہیں۔ ہر 3 رکنی کمیٹی ترتیبوں میں 3! = 6 بار نظر آتی ہے۔</text>
+  <text class="m" x="36" y="430">حوالہ: textbook.com.pk بمطابق Lane (2023)۔</text>
+  <text class="wm" x="760" y="460" aria-hidden="true">textbook.com.pk</text>
+</svg>

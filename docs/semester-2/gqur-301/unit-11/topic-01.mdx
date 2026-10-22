@@ -1,0 +1,212 @@
+---
+title: "Topic 11.1 - Introduction to probabilistic models"
+description: "Introduction to probabilistic models: deterministic versus probabilistic models, and the binomial and normal distributions with educational examples."
+course_code: GQUR-301
+unit_no: 11
+topic_no: 1
+topic_label: "11.1"
+clo_refs:
+  - "SLO:GQUR-301-11-1"
+blooms_summary: "Remember definitions of models and distribution conditions; understand the difference between deterministic and probabilistic formulations; apply binomial and normal models to calculate probabilities and expected values; analyze educational situations to choose an appropriate model."
+est_reading_minutes: 9
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+
+<PrintHandout />
+
+## A real classroom situation
+
+In a fictional government high school in Sukkur, the vice principal budgets
+Rs 6,000 for 120 answer booklets at Rs 50 each. These inputs give one fixed
+cost. Attendance records suggest that about 5% of pupils may be absent on exam
+day. A junior teacher treats that as exactly six absences and plans fewer seats.
+The vice principal asks what happens if only three pupils are absent. An expected
+count can help planning, but it does not promise a particular day's count.
+
+<Figure id="fig-U11-1" kind="concept-map" src="/img/figures/gqur-301/unit-11/fig-U11-1.svg" alt="A concept map placing Probabilistic Models at the centre, branching into Binomial Model for discrete counts of binary outcomes and Normal Model for continuous bell-shaped measurements, with conditions and school examples for each." caption="Original teaching schematic; based on Lane (2023) and Illowsky and Dean (2023)." />
+
+## Explanation
+
+### What is a model? Deterministic versus probabilistic
+
+A **model** is a simplified representation of a situation. A mathematical model
+uses numbers and relationships to describe selected features. It leaves out
+other details, so we must ask whether those omissions matter for our decision.
+
+A **deterministic model** has no random part. The same inputs produce the same
+output. For 120 booklets at Rs 50 each, `cost = 120 × 50 = Rs 6,000`.
+This is exact under the stated inputs, even though a real supplier might later
+change the price. Changing an input changes the calculation; it does not make
+the rule probabilistic.
+
+A **probabilistic model** assigns probabilities to possible outcomes. It
+represents uncertainty. Instead of promising six absences, an attendance model
+assigns probabilities to different absence counts. Lane's binomial distribution
+is one example of this approach (Lane, 2023, Chapter 5).
+
+**Worked comparison:** A Larkana teacher needs two worksheets per pupil for
+40 registered pupils. Printing for every pupil costs exactly `40 × 2 × Rs 3 =
+Rs 240` at Rs 3 per sheet. Predicting how many pupils will attend is different.
+If attendance probability is estimated at 0.9 for each pupil, the expected
+attendance is 36. That average can guide a forecast, but printing for exactly
+36 pupils risks leaving someone without work. The decision needs a safety
+margin as well as an average.
+
+<Figure id="fig-U11-2" kind="diagram" src="/img/figures/gqur-301/unit-11/fig-U11-2.svg" alt="A side-by-side comparison diagram showing a deterministic model with fixed single output on the left, and a probabilistic model with a range of probable outcomes on the right, using school examples." caption="Original teaching schematic; based on Lane (2023) and Illowsky and Dean (2023)." />
+
+### Two foundational probabilistic models: binomial and normal
+
+The **binomial model** describes a count of successes in repeated trials.
+A trial is one attempt or observation; success is simply the outcome being
+counted, not a judgement about a child. For example, success might mean a pupil
+is present. Lane (2023, Chapter 5) and Illowsky and Dean (2023, Section 4.3)
+require these conditions:
+
+1. A fixed number of trials, n.
+2. Two possible outcomes per trial: success or failure.
+3. The same success probability, p, on every trial.
+4. Independent trials: knowing one outcome does not change the probability
+   of another outcome.
+
+For X successes, the probability of exactly k is:
+
+`P(X = k) = nCk × p^k × (1 - p)^(n - k)`.
+
+Here `nCk = n! / (k! × (n - k)!)` counts the ways to choose which trials
+succeed. The factorial sign means multiply whole numbers down to one:
+`3! = 3 × 2 × 1 = 6`; by definition, `0! = 1`.
+The expected count is `E(X) = n × p`. Variance, a measure of spread in squared
+units, is `Var(X) = n × p × (1 - p)`.
+
+**Worked binomial example:** A pupil chooses randomly and independently on
+five true/false questions. There are five trials, two outcomes per trial,
+constant p = 0.5 and independent choices. Separate questions alone do not
+establish independence; it is an assumption about how the choices are made.
+
+The probability of all five being right is
+`P(X = 5) = 1 × 0.5^5 × 0.5^0 = 0.03125`, about 3.1%.
+The expected count is `5 × 0.5 = 2.5`, while variance is `5 × 0.5 × 0.5 = 1.25`.
+A pupil cannot get 2.5 whole questions right. This average describes what happens
+across many repetitions, not a required score on one test.
+
+For exactly two right, `5C2 = 5! / (2! × 3!) = 10`.
+Therefore `P(X = 2) = 10 × 0.5^2 × 0.5^3 = 0.3125`.
+The factor ten matters: the two successes can occur in different positions.
+
+The **normal model** uses a continuous, symmetric bell-shaped probability
+curve. Its centre is the mean, μ, and its spread is the standard deviation, σ.
+These two numbers are its parameters: they determine which normal curve is
+being used. Mean, median and mode coincide in the theoretical model, and total
+area under the curve is one (Lane, 2023, Chapter 7).
+
+The empirical rule gives approximate areas: 68% within μ ± σ, 95% within
+μ ± 2σ, and 99.7% within μ ± 3σ (Illowsky & Dean, 2023, Section 6.1).
+A percentage here describes a model area or expected proportion, not a quota
+that an observed class must satisfy.
+
+**Worked normal example:** In an invented Hyderabad district example, suppose
+2,000 mathematics scores are approximately normal with μ = 65 and σ = 10.
+The interval 55–75 is one standard deviation either side of the mean, so it
+contains about `0.68 × 2,000 = 1,360` pupils. The interval 45–85 contains
+about 95%, or 1,900 pupils. The remaining 5% is split equally between the tails,
+so about 2.5%, or 50 pupils, score above 85 using the rounded rule.
+
+Scores are discrete and bounded, while a normal curve is continuous and has no
+bounds. It is only an approximation to marks. Check that the observed shape
+is roughly symmetric and bell-shaped, with negligible predicted probability
+beyond the score limits. More pupils alone do not make scores normal.
+
+### Common misconceptions about statistical models
+
+**"An imperfect model is useless."** A useful approximation can improve planning.
+Check its errors against real data and the cost of a poor decision. An attendance
+average may help order meals while still requiring a reserve for busy days.
+
+**"Probability predicts each individual's outcome."** A probability can describe
+uncertainty about one pupil or a group, but it does not promise a result. A
+70% estimated pass probability allows both passing and failing. Across repeated
+comparable groups, about 70 passes per 100 are expected if the model fits.
+
+**"Every quantity follows a bell curve."** Counts of absences are discrete.
+An easy mastery test may have many high scores and a long tail toward lower
+scores. Neither must be forced into a normal curve.
+
+A **criterion-referenced assessment** compares work with stated learning goals;
+a **norm-referenced assessment** compares it with a reference group. Checking
+whether each Sukkur pupil can multiply two-digit numbers is different from
+ranking those pupils. Neither purpose requires changing marks to fit a bell.
+
+## Activity: Deterministic or probabilistic?
+
+Work in pairs for about 20 minutes. Without looking back, explain the difference
+between the two model families to each other. Then classify these situations:
+
+- Buying 45 textbooks at a fixed Rs 400 each.
+- Predicting how many pupils will miss school during a chickenpox outbreak.
+- Calculating a percentage from 72 marks out of 100.
+- Predicting marks on a new district test.
+- Counting heads in 50 independent tosses of a fair coin.
+
+One partner identifies inputs and possible outputs; the other challenges the
+choice. For uncertain situations, consider binomial, normal or neither. State
+which assumptions you would need to check. Swap roles halfway through, then
+compare with another pair. A plausible model choice needs evidence, not just a
+familiar formula.
+
+## Check your understanding
+
+1. *(Remember)* Define a deterministic model and a probabilistic model in one
+   sentence each.
+2. *(Understand)* State the four binomial conditions and explain why an expected
+   count can be fractional.
+3. *(Apply)* A school buys 250 exercise books at Rs 60 each. Calculate the cost
+   and justify which model family describes this calculation.
+4. *(Apply)* Assume 60 independent pupils each have a pass probability of 0.85.
+   Find the expected number passing and explain why it is not a guaranteed count.
+
+## Summary
+
+A deterministic rule gives one output from fixed inputs; a probabilistic model
+represents possible outcomes and uncertainty. The binomial model counts successes
+under four conditions, while the normal model describes a continuous bell-shaped
+distribution. A model is useful when its assumptions and errors suit the decision.
+
+## Self-assessment checklist
+
+- [ ] I can explain the difference between the two model families.
+- [ ] I can check the binomial conditions and calculate a simple probability.
+- [ ] I can use the empirical rule while distinguishing an estimate from a promise.
+- [ ] I can explain why an imperfect model can still help a teacher plan.
+
+## Try this at your practicum school
+
+Ask your cooperating teacher for one fixed-input planning calculation and one
+uncertain decision. Write a short comparison identifying inputs, outputs and
+one consequence of treating a forecast as certain. Use invented quantities if
+needed; do not collect pupil records or personal details.
+
+## Summative task
+
+A Larkana school has 200 pupils. Sports day needs three ribbons for each of
+60 events, at Rs 20 per ribbon. Each attending pupil also needs a Rs 50 juice
+box. Past events suggest attendance probability 0.9, but rain and shared transport
+can affect several pupils together. Unused juice cannot be returned.
+
+Write 150–250 words classifying the two requirements, calculating the fixed
+ribbon cost and expected attendance, and justifying a juice-order plan. Analyze
+both shortage and waste, and explain whether binomial independence is plausible.
+
+### Mini-rubric
+
+| Criterion | Secure | Developing | Needs revision |
+|---|---|---|---|
+| Model choice and calculations | Correct classifications, fixed cost and expected count | Some correct reasoning with a calculation error | Confuses forecast with fixed cost |
+| Risk analysis (Analyze) | Balances shortage and waste; checks shared causes of absence and justifies a buffer | Names one risk without balancing both | Treats expected attendance as certain |
+
+## Further reading
+
+- Lane, D. M. (2023, course bibliography date). *Online Statistics Education.* [Binomial Distribution](https://onlinestatbook.com/2/probability/binomial.html) and [Introduction to Normal Distributions](https://onlinestatbook.com/2/normal_distribution/intro.html).
+- Illowsky, B., & Dean, S. (2023). *Introductory Statistics 2e.* OpenStax. [Section 4.3](https://openstax.org/books/introductory-statistics-2e/pages/4-3-binomial-distribution) and [Section 6.1](https://openstax.org/books/introductory-statistics-2e/pages/6-1-the-standard-normal-distribution).
+- Babones, S. J. (Ed.). (2013). *Applied Statistical Modeling* (4 vols). SAGE. Guide-required print reference, bibliographic mention only; not consulted for content claims.
