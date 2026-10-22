@@ -17,10 +17,15 @@ links:
   pr: null
 files:
   - specs/content/gqur-301/translations/unit-12/handoff.md
+  - specs/content/gqur-301/tasks.md
+  - specs/content/gqur-301/reviews/unit-12/G2/20261022T000224330Z-gates.json
+  - specs/content/gqur-301/reviews/unit-12/translation-validation/
   - history/prompts/006-content-pipeline/0024-record-gqur301-unit12-translation-blocker.misc.prompt.md
 tests:
   - npm run check:content
   - npm run build:content-status
+  - npm run gates:evidence -- GQUR-301 12
+  - isolated origin/main npm run check:content
 ---
 
 ## Prompt
@@ -34,7 +39,7 @@ Continued the existing attempt. Verified the skill stop condition and English bl
 ## Outcome
 
 - Impact: Repair the stale G2 evidence caused by the prior handoff.
-- Tests: Content gates, isolated origin/main comparison, gate-evidence generation, diff check. Final command results retained in validation logs.
+- Tests: Content gates, isolated origin/main comparison, gate-evidence generation, diff check. Origin/main passed 12/13 with missing generated status; retry initially failed stale G2, then stale generated status. Regenerated ignored status and retained final rerun output in validation logs.
 - Files: Handoff, PHR, Unit 12 G2 evidence and tracker reference.
 - Next prompts: Separate English author resolves F1-F6, then fresh independent review.
 - Reflection: Supporting handoff files can invalidate bound evidence.

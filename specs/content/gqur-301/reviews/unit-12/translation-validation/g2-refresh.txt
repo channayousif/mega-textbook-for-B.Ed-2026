@@ -1,0 +1,15 @@
+
+> bed-mega-textbook@0.1.0 gates:evidence
+> node scripts/prepare-gate-evidence.mjs GQUR-301 12
+
+  PASS  validate:content
+  PASS  check:depth-gate
+  PASS  check:figures
+  PASS  check:concept-graph
+  PASS  check:bloom-bands
+  PASS  check:no-em-dash
+  PASS  check:no-answer-keys
+  PASS  check:docs-sync
+
+G2 evidence written: specs/content/gqur-301/reviews/unit-12/G2/20261022T000224330Z-gates.json
+Tracker row: | Unit 12 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-12/G2/20261022T000224330Z-gates.json |
