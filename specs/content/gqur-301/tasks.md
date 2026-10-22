@@ -122,7 +122,7 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 16 | G1 unit-spec | ▢ | | guide Chapter 16; intake re-evaluation advised (D-2026-0070) |
 | Unit 16 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-16/G2/20261022T004408483Z-gates.json |
 | Unit 16 | G3 en-review | ▢ | | |
-| Unit 16 | G4 ur-translation | ▢ | | full Urdu mirror required |
+| Unit 16 | G4 ur-translation | ▢ | | Complete six-page draft mirror and six Urdu SVG pairs prepared from 89d7c508; translation_status remains draft. No completion claim or appended row under translate-unit Step 7. Handoff: reviews/unit-16/translation-validation/handoff.md |
 | Unit 16 | G5 ur-review | ▢ | | |
 | Unit 16 | G6 assets | ▢ | | |
 | Unit 16 | G7 publish | ▢ | | |
