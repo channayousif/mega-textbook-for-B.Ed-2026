@@ -51,7 +51,7 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 4 | G1 unit-spec | ▢ | | pending G0 intake |
-| Unit 4 | G2 en-draft | ▢ | | |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-04/G2/20261022T022405266Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | |
 | Unit 4 | G4 ur-translation | ▢ | | |
 | Unit 4 | G5 ur-review | ▢ | | |
