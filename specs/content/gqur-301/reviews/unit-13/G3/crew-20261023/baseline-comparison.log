@@ -1,0 +1,2 @@
+origin/main and reviewed HEAD: e74f594cd8aa6e809bffa93ed0b68bae2a4cb575
+Both check:content executions exit 1. All 12 other gates pass. Exact diagnostic tail comparison matches: only stale static/content-status.json. No finding introduced by this review.
