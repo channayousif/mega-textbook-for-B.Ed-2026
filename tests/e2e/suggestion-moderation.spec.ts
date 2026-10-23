@@ -58,13 +58,17 @@ test('admin filters the queue and transitions a suggestion through its full life
   const teacherPage = await teacherContext.newPage();
 
   const suggestionIds: string[] = [];
+  // The admin queue lists every suggestion in the shared database, so a row left by an
+  // earlier aborted run would match a fixed body twice. Tag this run's bodies.
+  const bodyA = `Fix typo A ${tag}`;
+  const bodyB = `Fix fact B ${tag}`;
   try {
     const { data: teacherProfile } = await svc.from('profiles').select('id').eq('auth_user_id', teacher.user!.id).single();
     const { data: s1 } = await svc.from('improvement_suggestions').insert({
-      teacher_id: teacherProfile.id, page_slug: '/a', locale: 'en', course_code: 'EFMP-301', unit_no: 1, category: 'typo', body: 'Fix typo A',
+      teacher_id: teacherProfile.id, page_slug: '/a', locale: 'en', course_code: 'EFMP-301', unit_no: 1, category: 'typo', body: bodyA,
     }).select().single();
     const { data: s2 } = await svc.from('improvement_suggestions').insert({
-      teacher_id: teacherProfile.id, page_slug: '/b', locale: 'en', course_code: 'GICT-300', unit_no: 1, category: 'factual', body: 'Fix fact B',
+      teacher_id: teacherProfile.id, page_slug: '/b', locale: 'en', course_code: 'GICT-300', unit_no: 1, category: 'factual', body: bodyB,
     }).select().single();
     suggestionIds.push(s1.id, s2.id);
 
@@ -72,16 +76,16 @@ test('admin filters the queue and transitions a suggestion through its full life
     await adminPage.goto('/app/admin/suggestions');
 
     await adminPage.getByTestId('filter-category').selectOption('typo');
-    await expect(adminPage.getByTestId('moderation-row').filter({ hasText: 'Fix typo A' })).toBeVisible();
-    await expect(adminPage.getByTestId('moderation-row').filter({ hasText: 'Fix fact B' })).toHaveCount(0);
+    await expect(adminPage.getByTestId('moderation-row').filter({ hasText: bodyA })).toBeVisible();
+    await expect(adminPage.getByTestId('moderation-row').filter({ hasText: bodyB })).toHaveCount(0);
     await adminPage.getByTestId('filter-category').selectOption('');
 
     await adminPage.getByTestId('filter-course').fill('GICT-300');
-    await expect(adminPage.getByTestId('moderation-row').filter({ hasText: 'Fix fact B' })).toBeVisible();
-    await expect(adminPage.getByTestId('moderation-row').filter({ hasText: 'Fix typo A' })).toHaveCount(0);
+    await expect(adminPage.getByTestId('moderation-row').filter({ hasText: bodyB })).toBeVisible();
+    await expect(adminPage.getByTestId('moderation-row').filter({ hasText: bodyA })).toHaveCount(0);
     await adminPage.getByTestId('filter-course').fill('');
 
-    const row = adminPage.getByTestId('moderation-row').filter({ hasText: 'Fix typo A' });
+    const row = adminPage.getByTestId('moderation-row').filter({ hasText: bodyA });
     await row.getByRole('button', { name: 'under_review' }).click();
     await expect(row.getByTestId('moderation-status')).toContainText('under_review');
 
@@ -94,7 +98,7 @@ test('admin filters the queue and transitions a suggestion through its full life
 
     await signIn(teacherPage, teacherEmail);
     await teacherPage.goto('/app/teacher/feedback-suggestions');
-    const teacherRow = teacherPage.getByTestId('suggestion-row').filter({ hasText: 'Fix typo A' });
+    const teacherRow = teacherPage.getByTestId('suggestion-row').filter({ hasText: bodyA });
     await expect(teacherRow.getByTestId('suggestion-status')).toContainText(/published/i);
     await expect(teacherRow).toContainText('Confirmed typo.');
 
