@@ -1,0 +1,238 @@
+---
+title: "Unit 13 assessment"
+description: "Summative assessment for GQUR-301 Unit 13: 10 MCQs, 10 RRQs and 5 ERQs on correlation and linear regression."
+course_code: GQUR-301
+unit_no: 13
+clo_refs:
+  - "SLO:GQUR-301-13-1"
+  - "SLO:GQUR-301-13-2"
+  - "SLO:GQUR-301-13-3"
+blooms_summary: "Remember the types of correlation and the parts of a regression line; understand the correlation coefficient and residuals; apply the least-squares line to predict; analyze the difference between correlation and causation and the limits of regression prediction."
+est_reading_minutes: 12
+translation_status: draft
+---
+
+import PrintHandout from '@site/src/components/PrintHandout';
+
+<PrintHandout />
+
+## Unit summary
+
+This unit, which follows Chapter 13 of the course guide, made the visual
+assessment of a scatter plot quantitative.
+
+- Topic 13.1 introduced correlation. The correlation coefficient r measures the
+  direction and strength of a linear relationship on a scale from -1 (perfect
+  negative) through 0 (no linear correlation) to +1 (positive). r captures
+  straight-line association only; a non-linear pattern can exist even when r is
+  near 0, and r never implies causation.
+- Topic 13.2 introduced linear regression. The least-squares line ŷ = a + bx
+  summarises the linear pattern with an equation. The slope b gives the predicted
+  change in y per unit of x; the intercept a gives the predicted y when x = 0.
+  Use the line to predict within the data range (interpolation) and compute
+  residuals (y - ŷ) to check the fit. Regression gives prediction, not a causal
+  explanation.
+
+Together, correlation and regression complete the bivariate analysis sequence
+that began in Unit 12 and prepare you for the inference methods in Units 14-15.
+
+## Summative assessment
+
+### Multiple-choice questions (MCQs)
+
+Choose the single best answer for each question.
+
+1. *(Remember)* The correlation coefficient r measures:
+   - A) The strength of any relationship between two variables
+   - B) The direction and strength of the linear relationship between two variables
+   - C) Whether one variable causes the other
+   - D) The slope of the regression line
+
+2. *(Remember)* A scatter plot shows a cloud that falls from left to right. This indicates:
+   - A) Positive correlation
+   - B) Negative correlation
+   - C) Zero correlation
+   - D) Non-correlation only if r is exactly 0
+
+3. *(Understand)* A correlation coefficient of r = 0 means:
+   - A) There is no relationship of any kind between the variables
+   - B) There is no linear relationship between the variables
+   - C) One variable causes the other to be zero
+   - D) The regression line has a slope of 1
+
+4. *(Apply)* A trainee computes r = 0.85 between weekly study hours and test score for 12 pupils. Using the rule-of-thumb scale, how would you describe this correlation?
+   - A) Weak positive
+   - B) Moderate positive
+   - C) Strong positive
+   - D) No correlation
+
+5. *(Apply)* A regression line is given by ŷ = 20 + 3x. What is the predicted value of y when x = 5?
+   - A) 23
+   - B) 35
+   - C) 25
+   - D) 100
+
+6. *(Understand)* The slope of a regression line tells you:
+   - A) The value of y when x = 0
+   - B) The predicted change in y when x increases by one unit
+   - C) The correlation between x and y
+   - D) The residual for each point
+
+7. *(Apply)* A regression line for predicting test score (y) from study hours (x) is ŷ = 40 + 6x. A pupil who studies 3 hours is predicted to score 58. The pupil's actual score is 61. What is the residual?
+   - A) -3
+   - B) +3
+   - C) +61
+   - D) Cannot be determined
+
+8. *(Remember)* Which of the following is the correct interpretation of a correlation coefficient of r = -0.60?
+   - A) Strong positive correlation
+   - B) Moderate negative correlation
+   - C) Weak positive correlation
+   - D) No correlation
+
+9. *(Understand)* Prediction using an x value that lies outside the range of the original data is called:
+   - A) Interpolation
+   - B) Extrapolation
+   - C) Correlation
+   - D) Residual analysis
+
+10. *(Apply)* A researcher finds r = 0.90 between ice cream sales and the number of sunburns at a beach town. She concludes that ice cream causes sunburns. What is the most careful response?
+    - A) The data prove she is right because r is so high
+    - B) The correlation shows a strong linear association, but does not prove causation; a third variable (hot, sunny weather) could explain both
+    - C) The correlation is meaningless because r is not exactly 1
+    - D) She should reverse the variables and recompute r
+
+### Restricted-response questions (RRQs)
+
+Answer each question in a few sentences or a short paragraph.
+
+1. *(Remember)* Define correlation coefficient in one sentence, including its range of possible values.
+
+2. *(Understand)* Explain why r = 0 does not necessarily mean two variables are unrelated.
+
+3. *(Apply)* A trainee computes r = -0.40 between the number of days absent and the final grade for 15 pupils. State the direction and strength using the rule-of-thumb scale, and interpret what this means in plain language.
+
+4. *(Apply)* A regression line is ŷ = 50 + 4x. State the slope and intercept, interpret the slope in plain language, and predict y when x = 6.
+
+5. *(Analyze)* A teacher computes r = 0.02 between pupils' shoe size and their mathematics test score. She concludes there is no link between physical size and maths ability. Evaluate this conclusion: is it supported by the correlation, and what else should she consider? (Answer in 4-6 sentences.)
+
+6. *(Analyze)* A regression line for predicting monthly electricity bill (y, in rupees) from number of fans in a household (x) is ŷ = 800 + 200x. A household with 4 fans is billed 1700 rupees. Compute the residual and explain what it means in this context. Then explain why the slope alone does not prove that adding a fan causes the bill to rise by exactly 200 rupees. (Answer in 5-7 sentences.)
+
+7. *(Understand)* Explain the difference between interpolation and extrapolation. Why is extrapolation riskier?
+
+8. *(Apply)* Two scatter plots are drawn from the same data. Plot A shows a cloud tightly clustered around an invisible line; Plot B shows a wide, spread-out cloud with the same slope. Which plot would produce the larger absolute value of r, and why?
+
+9. *(Analyze)* A researcher claims that because r = 0.80 between weekly exercise time and a health score, "exercise causes better health". Critically evaluate this claim by identifying what r actually shows and what additional evidence would be needed to support a causal conclusion. (Answer in 5-7 sentences.)
+
+10. *(Evaluate)* A school head teacher reports: "We found r = 0.65 between the number of textbooks per pupil and average test scores across 20 schools. Providing more textbooks will raise our scores." Evaluate this claim by discussing: (a) what r = 0.65 actually tells us; (b) at least one third variable that could explain the correlation; and (c) what additional evidence would be needed to justify the policy. (Answer in 6-8 sentences.)
+
+### Extended-response questions (ERQs)
+
+Answer each question in a structured paragraph or set of paragraphs.
+
+1. *(Analyze)* The table below gives weekly study hours (x) and mathematics test scores (y) for 6 pupils at a government school in Sanghar.
+
+   | Pupil | x (hours) | y (score/100) |
+   |---|---|---|
+   | A | 3 | 45 |
+   | B | 5 | 55 |
+   | C | 7 | 70 |
+   | D | 9 | 75 |
+   | E | 4 | 50 |
+   | F | 6 | 62 |
+
+   (a) Compute the correlation coefficient r for this data set. Show your working.
+   (b) State the direction and strength of the correlation using the rule-of-thumb scale.
+   (c) Interpret r in the context of this question.
+   (Write 120-180 words for parts (b) and (c) together.)
+
+2. *(Analyze)* Using the data from ERQ 1, fit the least-squares regression line ŷ = a + bx. Show the steps: compute b, then a, then write the line. Interpret the slope in plain language. Then predict the test score for a pupil who studies 8 hours per week and compute the residual for Pupil D (9 hours, score 75). (Write 150-200 words.)
+
+3. *(Evaluate)* A newspaper headline reads: "Study proves that eating breakfast raises children's test scores: researchers found a strong correlation." The article reports r = 0.72 between a survey question about breakfast habits and standardised test scores in a sample of 200 children. Evaluate this claim by discussing: (a) what the correlation coefficient actually shows; (b) at least one third variable that could explain the correlation; (c) why the word "proves" is misleading; and (d) what additional evidence would be needed to support a causal conclusion. (Write 150-200 words.)
+
+4. *(Evaluate)* A trainee teacher collects two variables from 8 pupils: hours of television watched per week and a reading test score. She computes r = -0.78. She then fits a regression line and uses it to predict the reading score for a pupil who watches 15 hours of television per week, even though her original data range was 2 to 10 hours. Evaluate her analysis by discussing: (a) what r = -0.78 means; (b) the problem with her prediction; and (c) what she should have done instead. (Write 120-180 words.)
+
+5. *(Create)* Design a small classroom-based investigation that uses correlation or regression to answer a practical question. State: (a) your research question; (b) the two variables you would measure and how; (c) the sample size and why it is reasonable; (d) what pattern you would expect in the scatter plot; and (e) one limitation of your design. (Write 150-200 words.)
+
+## Answers and marking guidance
+
+### MCQ answer key
+
+| Item | Answer | Justification |
+|---|---|---|
+| 1 | B | r measures the direction and strength of the *linear* relationship. |
+| 2 | B | A cloud falling left to right indicates negative correlation. |
+| 3 | B | r = 0 means no linear relationship; a non-linear pattern may still exist. |
+| 4 | C | \|r\| = 0.85 is above 0.70, which falls in the strong range. |
+| 5 | B | ŷ = 20 + 3(5) = 35. |
+| 6 | B | The slope gives the predicted change in y per one-unit increase in x. |
+| 7 | B | Predicted ŷ = 40 + 6(3) = 58; residual = 61 - 58 = +3. |
+| 8 | B | \|r\| = 0.60 is moderate; the sign is negative. |
+| 9 | B | Prediction outside the data range is extrapolation. |
+| 10 | B | A high r shows strong association, not proven causation; a third variable (weather) could drive both. |
+
+### RRQ model answers and mark schemes
+
+1. The correlation coefficient r is a number between -1 and +1 that measures the direction and strength of the linear relationship between two variables. (2 marks: 1 for the definition, 1 for the correct range.)
+
+2. r = 0 means no *linear* correlation, but the two variables could still follow a non-linear pattern (for example, a U-shaped curve), so they are not necessarily unrelated. (2 marks: 1 for the linear-only point, 1 for the non-linear example.)
+
+3. r = -0.40 indicates a moderate negative correlation (negative sign, magnitude 0.40 falls in the 0.30-0.70 range). This means that, for these 15 pupils, higher absence tends to go with a lower final grade, with a moderate linear pattern. (3 marks: 1 for direction, 1 for strength, 1 for plain-language interpretation.)
+
+4. Slope = 4, intercept = 50. The slope means that for each one-unit increase in x, the predicted y rises by 4. Predicted y when x = 6: ŷ = 50 + 4(6) = 74. (3 marks: 1 for slope and intercept, 1 for slope interpretation, 1 for prediction.)
+
+5. r = 0.02 is near 0, so there is no linear correlation between shoe size and maths score. The conclusion is broadly supported for a linear link, but the correlation does not rule out a non-linear pattern, and "physical size and maths ability" is a broader claim than the data test. (3 marks: 1 for interpreting r near 0, 1 for the linear-only caveat, 1 for the scope-of-claim point.)
+
+6. Residual = 1700 - (800 + 200 × 4) = 1700 - 1600 = +100 rupees. This household's bill is 100 rupees above the line's prediction. The slope shows an association (each additional fan goes with 200 rupees more on average), but it does not prove causation: other factors (house size, appliance use, tariff changes) could also explain the difference, and households that buy more fans may differ in other ways. (3 marks: 1 for correct residual, 1 for interpretation, 1 for the causation caveat.)
+
+7. Interpolation is predicting for an x value that lies *within* the range of the original data; extrapolation is predicting for an x value *outside* that range. Extrapolation is riskier because the linear pattern observed in the data may not hold beyond it. (2 marks: 1 for each part.)
+
+8. Plot A produces the larger |r|. A tightly clustered cloud means the points follow the line closely, which gives a high absolute correlation. A wide cloud means more scatter around the line, which reduces |r|. The slope alone does not determine r. (2 marks: 1 for choosing Plot A, 1 for the reasoning.)
+
+9. r = 0.80 shows a strong positive linear association between exercise time and health score, not a proven causal link. To support causation, one would need to rule out third variables (for example, diet, socioeconomic status, pre-existing health), show a plausible mechanism, and ideally test the relationship in a controlled study. (3 marks: 1 for what r shows, 1 for a third variable or mechanism, 1 for additional evidence needed.)
+
+10. (a) r = 0.65 tells us there is a moderate positive linear association between textbooks per pupil and test scores across the 20 schools. (b) A plausible third variable is school funding: better-funded schools have more textbooks and also better teachers, facilities or pupil intake, any of which could drive higher scores. (c) To justify the policy, one would need evidence that increasing textbooks *causes* higher scores, ideally from a controlled trial, ruling out third variables. (3 marks: 1 for interpreting r, 1 for a plausible third variable, 1 for the additional evidence point.)
+
+### ERQ rubrics
+
+**ERQ 1 (Analyze - computing and interpreting r)**
+
+| Criterion | Band 3 (Full) | Band 2 (Partial) | Band 1 (Limited) | Band 0 |
+|---|---|---|---|---|
+| Computation of r | All columns and sums correct; r ≈ 0.99 (Σx = 34, Σy = 357, Σx² = 216, Σy² = 21919, Σxy = 2147; r = 744 / √(140 × 4065) ≈ 0.986; allow 0.98-0.99) | Minor arithmetic error but method correct | Major error or incomplete | Not attempted |
+| Direction and strength | Correctly states strong positive (\|r\| > 0.70) with scale reference | States strong positive without scale reference | Incorrect strength or direction | None |
+| Contextual interpretation | Clear interpretation in terms of study hours and test score, with causation caveat | Interpretation without causation caveat | Vague or inaccurate | None |
+
+**ERQ 2 (Analyze - fitting a regression line and computing a residual)**
+
+| Criterion | Band 3 (Full) | Band 2 (Partial) | Band 1 (Limited) | Band 0 |
+|---|---|---|---|---|
+| Line computation | b and a correct (b = 744 / 140 ≈ 5.31, a = 59.5 - 5.31(5.67) ≈ 29.4); equation written | One parameter correct | Neither correct | Not attempted |
+| Slope interpretation | Correct plain-language meaning (score rises about 5.3 points per additional study hour) | Partial interpretation | Incorrect | None |
+| Prediction and residual | Both prediction at x = 8 (≈ 71.9) and residual for Pupil D (75 - 77.2 ≈ -2.2) correct | One correct | Neither correct | None |
+
+**ERQ 3 (Evaluate - evaluating a causal claim from a correlation)**
+
+| Criterion | Band 3 (Full) | Band 2 (Partial) | Band 1 (Limited) | Band 0 |
+|---|---|---|---|---|
+| What r shows | Clearly states r = 0.72 indicates a strong linear association, not causation | States association but vague | Confuses association and causation | - |
+| Third variable | Names a plausible third variable (for example, household income, parental education) and explains how it could drive both | Names one but does not explain clearly | Names one vaguely | None |
+| "Proves" is misleading | Explains why "proves" is too strong for a correlation finding | Mentions it briefly | Not discussed | - |
+| Additional evidence (Evaluate) | Describes at least one further piece of evidence needed (for example, a controlled study, a plausible mechanism, ruling out confounds) | Mentions one piece without development | Minimal mention | None |
+
+**ERQ 4 (Evaluate - evaluating a regression analysis with extrapolation)**
+
+| Criterion | Band 3 (Full) | Band 2 (Partial) | Band 1 (Limited) | Band 0 |
+|---|---|---|---|---|
+| Interpretation of r = -0.78 | Correctly describes strong negative correlation with plain-language meaning | Partial description | Incorrect | None |
+| Extrapolation problem | Clearly identifies that 15 hours is outside the data range (2-10) and explains the risk | Identifies the problem but does not explain the risk | Mentions only briefly | None |
+| What she should have done | States that she should limit predictions to the data range (2-10 hours) or collect more data before predicting | Vague suggestion | None | - |
+
+**ERQ 5 (Create - designing a correlation or regression investigation)**
+
+| Criterion | Band 3 (Full) | Band 2 (Partial) | Band 1 (Limited) | Band 0 |
+|---|---|---|---|---|
+| Research question and variables | Clear question; two measurable variables with a practical data-collection method | Question and variables stated but method vague | Incomplete | None |
+| Sample size and rationale | Sample size appropriate (at least 8-10 cases) with a brief justification | Sample size stated without rationale | Unrealistic or no sample | None |
+| Expected pattern | Plausible description of the expected scatter-plot pattern | Vague description | None | - |
+| Limitation (Evaluate) | One genuine limitation of the design (for example, small sample, correlation not causation, measurement difficulty) | Vague limitation | None | - |
