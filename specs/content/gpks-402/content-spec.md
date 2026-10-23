@@ -212,7 +212,7 @@ Weeks 7-8 and 10. Unit Spec (G1) for `docs/semester-2/gpks-402/unit-04/`. Week 9
 - **CLO/SLO refs**: `SLO:GPKS-402-4-1` (federal system; legislature, executive, judiciary; civil-military relations), `SLO:GPKS-402-4-2` (fundamental rights; principles of policy; role of citizens), `SLO:GPKS-402-4-3` (physical features; climate and natural resources; strategic importance) - traces to guide objectives 3, 4.
 - **Key terms**: Federalism, Separation of Powers, Fundamental Rights, Strategic Importance.
 - **Topics** (from guide Week 7-8, 10): federal system; legislature, executive, judiciary; civil-military relations; fundamental rights; principles of policy; role of citizens; physical features; climate and natural resources; strategic importance of Pakistan.
-- **Assessment blueprint**: formative 5-8 items (Remember/Understand/Apply) on the branches of government, fundamental rights and the physical geography; summative includes one Analyze-or-higher item asking the learner to explain how geography shapes governance challenges. Weighting: 60/40 default.
+- **Assessment blueprint**: formative 9 items, 3 per topic (D-2026-0072) (Remember/Understand/Apply) on the branches of government, fundamental rights and the physical geography; summative includes one Analyze-or-higher item asking the learner to explain how geography shapes governance challenges. Weighting: 60/40 default.
 
 ### Sub-topic checklist
 
@@ -314,7 +314,7 @@ Weeks 13-15. Unit Spec (G1) for `docs/semester-2/gpks-402/unit-06/`. Week 16 is 
 - **CLO/SLO refs**: `SLO:GPKS-402-6-1` (principles of foreign policy; relations with neighbors; role in international organizations), `SLO:GPKS-402-6-2` (population growth; poverty and unemployment; terrorism and extremism; environmental issues), `SLO:GPKS-402-6-3` (education and national integration; civic education; responsibilities of teachers) - traces to guide objectives 4, 5.
 - **Key Terms**: Foreign Policy Principles, National Integration, Civic Education, Terrorism and Extremism.
 - **Topics** (from guide Week 13-15): principles of foreign policy; relations with neighboring countries; role in international organizations; population growth; poverty and unemployment; terrorism and extremism; environmental issues; education and national integration; civic education; responsibilities of teachers.
-- **Assessment blueprint**: formative 5-8 items (Remember/Understand/Apply) on foreign policy principles, contemporary issues and the role of education; summative includes one Analyze-or-higher item asking the learner to propose how a teacher can address one contemporary issue through civic education. Weighting: 60/40 default.
+- **Assessment blueprint**: formative 9 items, 3 per topic (D-2026-0072) (Remember/Understand/Apply) on foreign policy principles, contemporary issues and the role of education; summative includes one Analyze-or-higher item asking the learner to propose how a teacher can address one contemporary issue through civic education. Weighting: 60/40 default.
 
 ### Sub-topic checklist
 

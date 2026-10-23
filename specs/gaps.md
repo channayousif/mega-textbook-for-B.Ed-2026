@@ -2519,7 +2519,7 @@ Recorded by `agent:evaluator` under `D-2026-0071`, bound to
 
 ## G-2026-154 - Style guide: the unit "formative 5-8 items" default cannot hold for a per-topic unit with three or more topics
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-10-23, D-2026-0072)
 - **Gate:** G1 unit-spec (blueprint criterion)
 - **Source:** `D-2026-0071`
 - **Detail:** `specs/content/style-guide.md:227` sets the blueprint default "Formative: 5-8 items".

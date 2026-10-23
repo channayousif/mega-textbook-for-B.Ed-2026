@@ -3901,3 +3901,23 @@ content-improvement loop with no further cycle.
   glosses left to G3, or the Hamid Khan edition/ISBN (advisory). Notes, without editing it, that
   `D-2026-0069`'s recorded digest has 63 hex characters and does not match `intake-88/manifest.json`.
   Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
+
+## D-2026-0072 - Three-topic units carry 9 formative items, not the style guide's "5-8"
+
+- **Status:** confirmed
+- **Gate:** G1 unit-spec (blueprint criterion); G2 authoring
+- **Scope:** corpus-wide; applied first to GPKS-402 Units 4 and 6
+- **Decided by:** curriculum owner, 2026-10-23 (board-direct, relayed through Claude Code), ruling
+  on `G-2026-154`: "9 formative items instead of the style guide's \"5-8\""
+- **Decision:** a unit with three topics states and carries 9 formative items, 3 per topic, in
+  place of the style guide's "Formative: 5-8 items" default (`specs/content/style-guide.md:227`).
+  This matches the per-topic floor the depth gate already enforces (>= 3 numbered items under each
+  topic's `## Check your understanding`). Units with one or two topics keep the "5-8" default.
+- **Basis:** `G-2026-154` (raised by `D-2026-0071`): with three topics the per-topic floor gives at
+  least 9 items, so "5-8" could not be met.
+- **Applied in:** `specs/content/gpks-402/content-spec.md` Units 4 and 6 `**Assessment blueprint**`
+  lines ("formative 9 items, 3 per topic").
+- **Limits:** the style guide is not edited here; a style-guide edit re-opens bound G2 manifests
+  corpus-wide and goes in its own change. Other specs that state "formative 5-8" for a three-topic
+  unit are read under this ruling until they are next revised. Does not rule on units with four or
+  more topics. Approves no specification and authorises no publication.
