@@ -94,3 +94,32 @@ export function registryProblems(path, base, branch) {
   }
   return out;
 }
+
+/**
+ * Three-way merge of glossary.json for the hourly batch. Every unit appends its terms at the
+ * end of the array, so two concurrent branches always conflict there, and a merge-fix job
+ * cannot win the race against the next batch (GSOS-301 U6 spent five fixes, 2026-10-23).
+ * `ours` is main's side and keeps its entries and order; a term only `theirs` changed since
+ * `base` takes their edit; terms only `theirs` added follow, in their order. A term main
+ * removed stays removed. Returns the merged text, or null when any side is not a JSON array.
+ */
+export function mergeGlossary(base, ours, theirs) {
+  let b, o, t;
+  try {
+    [b, o, t] = [base ?? '[]', ours, theirs].map((x) => JSON.parse(x));
+  } catch { return null; }
+  if (![b, o, t].every(Array.isArray)) return null;
+  const key = (e) => String(e?.term ?? '').trim().toLowerCase();
+  const same = (x, y) => JSON.stringify(x) === JSON.stringify(y);
+  const byKey = (xs) => new Map(xs.map((e) => [key(e), e]));
+  const was = byKey(b);
+  const their = byKey(t);
+  const merged = o.map((e) => {
+    const k = key(e);
+    const x = their.get(k);
+    return x && was.has(k) && same(e, was.get(k)) && !same(x, e) ? x : e;
+  });
+  const have = new Set(o.map(key));
+  for (const e of t) if (!have.has(key(e)) && !was.has(key(e))) { merged.push(e); have.add(key(e)); }
+  return `${JSON.stringify(merged, null, 2)}\n`;
+}
