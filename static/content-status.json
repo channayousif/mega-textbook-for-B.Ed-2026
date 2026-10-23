@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T08:02:17.431Z",
+  "generated_at": "2026-10-23T15:47:46.869Z",
   "courses": [
     {
       "course_code": "EFMP-301",
@@ -1495,42 +1495,11 @@
           },
           "publication": "gated",
           "figures": {
-            "prompt_only": 5,
+            "prompt_only": 0,
             "generated": 0,
-            "placed": 1
+            "placed": 6
           },
-          "figures_pending": [
-            {
-              "course_code": "GQUR-301",
-              "unit_no": 15,
-              "topic": "15.1",
-              "figure_id": "fig-U15-2"
-            },
-            {
-              "course_code": "GQUR-301",
-              "unit_no": 15,
-              "topic": "15.2",
-              "figure_id": "fig-U15-3"
-            },
-            {
-              "course_code": "GQUR-301",
-              "unit_no": 15,
-              "topic": "15.2",
-              "figure_id": "fig-U15-4"
-            },
-            {
-              "course_code": "GQUR-301",
-              "unit_no": 15,
-              "topic": "15.3",
-              "figure_id": "fig-U15-5"
-            },
-            {
-              "course_code": "GQUR-301",
-              "unit_no": 15,
-              "topic": "15.3",
-              "figure_id": "fig-U15-6"
-            }
-          ]
+          "figures_pending": []
         },
         {
           "unit_no": 16,
@@ -1592,6 +1561,49 @@
           "figures_pending": []
         },
         {
+          "unit_no": 3,
+          "authored": true,
+          "translation_status": "draft",
+          "depth_check": "pass",
+          "gates": {
+            "G2": "done",
+            "G3": "open",
+            "G5": "open"
+          },
+          "publication": "gated",
+          "figures": {
+            "prompt_only": 4,
+            "generated": 0,
+            "placed": 0
+          },
+          "figures_pending": [
+            {
+              "course_code": "GSOS-301",
+              "unit_no": 3,
+              "topic": "3.1",
+              "figure_id": "fig-U3-1"
+            },
+            {
+              "course_code": "GSOS-301",
+              "unit_no": 3,
+              "topic": "3.1",
+              "figure_id": "fig-U3-2"
+            },
+            {
+              "course_code": "GSOS-301",
+              "unit_no": 3,
+              "topic": "3.2",
+              "figure_id": "fig-U3-3"
+            },
+            {
+              "course_code": "GSOS-301",
+              "unit_no": 3,
+              "topic": "3.2",
+              "figure_id": "fig-U3-4"
+            }
+          ]
+        },
+        {
           "unit_no": 4,
           "authored": true,
           "translation_status": "draft",
@@ -1648,7 +1660,7 @@
       ]
     }
   ],
-  "commit": "9908099a52ca64a22a3b5efd67e59728fa01daa7",
+  "commit": "c3fcbed619e38b5dfaab66c484e7387ea414e53b",
   "trackers": {
     "specs/content/efmp-301/tasks.md": "b11e2a2a0a1f52518ee0f609fd56efe5bc6a6ffb3e6d48f3b281b55e2479f00b",
     "specs/content/efmp-302/tasks.md": "c5da2fd00a26658998db5a62a969e160d5b3ab6a0dea48282ad58101053074f2",
@@ -1661,7 +1673,7 @@
     "specs/content/efmp-305/tasks.md": "0868c973e5c71896c31ef0d7654572b60ddb00cec22cddfad22749f6d0779579",
     "specs/content/geng-301/tasks.md": "413520059dae1e8a8509cc25ba0e20f0525002930f4a212a4e26fcb174306c1f",
     "specs/content/gpks-402/tasks.md": "8d2b0c6015c1afb1c2820e81cc78f750ac9fa2e1decb507204a294da54bb12cf",
-    "specs/content/gqur-301/tasks.md": "968f396777e207378fa1f7cbf813c0f13473587d7b753664418d550eb966d2a2",
-    "specs/content/gsos-301/tasks.md": "6cfcc420700fe075053fcafda7967df9314545820958b33716ec46a7e3df2f14"
+    "specs/content/gqur-301/tasks.md": "0a936058ba85f785cd59962ff6997289490e992d9e2d7aac82c7553eef14ed00",
+    "specs/content/gsos-301/tasks.md": "00725cc4724bc4a3a7235968bb1bad2d855a98926cc026ca2048a11bac8bf802"
   }
 }

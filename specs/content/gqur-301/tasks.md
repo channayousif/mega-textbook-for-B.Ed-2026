@@ -100,8 +100,8 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 12 | G7 publish | ▢ | | |
 | Unit 13 | G1 unit-spec | ▢ | | guide Chapter 13; intake re-evaluation advised (D-2026-0070) |
 | Unit 13 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-13/G2/20261023T000506787Z-gates.json |
-| Unit 13 | G3 en-review | ▢ | | |
-| Unit 13 | G4 ur-translation | ▢ | | full Urdu mirror required |
+| Unit 13 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only: specs/content/gqur-301/reviews/unit-13/G3/crew-20261023.json; F1-F5 require separate author repair (missing figures, RRQ8 same-data contradiction, slope/confidence claims and assessment demand); G1, source/provenance and current narrow/A4 render evidence unresolved. G3 remains open and unsigned (ADR-0019). |
+| Unit 13 | G4 ur-translation | ▢ | | Blocked by unresolved English RRQ8 contradiction and slope/inference defects under translate-unit prerequisite; see reviews/unit-13/translation-validation/handoff.md. No translation or completion claim; translation_status remains draft. |
 | Unit 13 | G5 ur-review | ▢ | | |
 | Unit 13 | G6 assets | ▢ | | |
 | Unit 13 | G7 publish | ▢ | | |
@@ -113,7 +113,7 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 14 | G6 assets | ▢ | | |
 | Unit 14 | G7 publish | ▢ | | |
 | Unit 15 | G1 unit-spec | ▢ | | guide Chapter 15; intake re-evaluation advised (D-2026-0070) |
-| Unit 15 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-15/G2/2026-10-22T1951231Z-gates.json |
+| Unit 15 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-15/G2/20261023T070714921Z-gates.json |
 | Unit 15 | G3 en-review | ▣ | agent:claude-g3-reviewer | Advisory escalation only: specs/content/gqur-301/reviews/unit-15/G3/crew-20261023.json; F1-F6 need separate author repair (five placed figures missing, fig-U15-2/3 contradict the worked examples, ERQ 2 and RRQ 10 keys wrong, 6 of 9 citation links broken); G1 approval, bound sources and rendered accessibility remain unresolved. G3 stays open, unsigned (ADR-0019). |
 | Unit 15 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 15 | G5 ur-review | ▢ | | |

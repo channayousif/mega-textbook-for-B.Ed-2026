@@ -2435,6 +2435,46 @@
     "definition_ur": "کسی سماجی ادارے کے معیارات، کرداروں اور توقعات میں دیرپا تبدیلی، نہ کہ صرف اس میں شریک افراد کی تبدیلی۔"
   },
   {
+    "term": "Status",
+    "definition_en": "A socially recognized position in a group or society - such as teacher, student, mother, or union member. A person holds many statuses at the same time, and each comes with a set of expected behaviours (roles).",
+    "definition_ur": "گروہ یا معاشرے میں سماجی طور پر پہچانا گیا مقام - جیسے استاد، شاگرد، ماں، یا ینین رکن۔ انسان ایک ساتھ کئی مقامات رکھتا ہے، اور ہر ایک کے ساتھ متوقع رویے (کردار) ہوتے ہیں۔"
+  },
+  {
+    "term": "Role",
+    "definition_en": "The set of expected behaviours that goes with a particular status. A teacher's status comes with a role: to plan lessons, maintain discipline, and assess learning.",
+    "definition_ur": "متوقع رویے کا وہ مجموعہ جو کسی خاص مقام کے ساتھ ہوتا ہے۔ استاد کے مقام کے ساتھ ایک کردار ہوتا ہے: سبق کی منصوبہ بندی، نظم و ضبط برقرار رکھنا، اور سیکھنے کی تشخیص کرنا۔"
+  },
+  {
+    "term": "Role strain",
+    "definition_en": "The difficulty of meeting the demands of a single role - for example, a teacher who is expected to be both a strict disciplinarian and a warm mentor at the same time.",
+    "definition_ur": "ایک ہی کردار کے تقاضوں کو پورا کرنے میں دشواری - مثلاً ایک استاد جس سے ایک ہی وقت سخت ضابطہ کار اور گرم مربی دونوں ہونے کی توقع ہو۔"
+  },
+  {
+    "term": "Social group",
+    "definition_en": "Two or more people who interact regularly, share similar characteristics, and have a sense of belonging together. A family, a classroom, and a cricket team are all social groups.",
+    "definition_ur": "دو یا زیادہ لوگ جو باقاعدگی سے رابطہ رکھتے ہیں، مشکل ہی خصوصیات رکھتے ہیں، اور آپس میں شمولیت کا احساس رکھتے ہیں۔ خاندان، کلاس روم، اور کرکٹ ٹیم سب معاشرتی گروہ ہیں۔"
+  },
+  {
+    "term": "Primary group",
+    "definition_en": "A small, close, long-lasting group whose members share warm, personal, direct relationships - such as a family or a close circle of friends.",
+    "definition_ur": "ایک چھوٹا، قریبی، طویل مدتی گروہ جس کے اراکین گرم، ذاتی، براہ راست رشتے بانٹتے ہیں - جیسے خاندان یا دوستوں کا ایک قریبی حلقہ۔"
+  },
+  {
+    "term": "Secondary group",
+    "definition_en": "A larger, more formal, task-focused group whose members interact for a specific purpose and share more distant, impersonal relationships - such as a school staff, a government office, or a professional association.",
+    "definition_ur": "ایک بڑا، زیادہ رسمی، کام پر مبنی گروہ جس کے اراکین ایک مخصوص مقصد کے لیے رابطہ رکھتے ہیں اور دور، غیر ذاتی رشتے رکھتے ہیں - جیسے اسکول عملہ، سرکاری دفتر، یا پیشہ ورانہ ایسوسی ایشن۔"
+  },
+  {
+    "term": "Cooperation",
+    "definition_en": "A form of social interaction in which individuals or groups work together toward a shared goal. A group of teachers planning a joint lesson is cooperating.",
+    "definition_ur": "معاشرتی تعامل کا ایک روپ جس میں افراد یا گروہ مشترکہ ہدف کی طرف مل کر کام کرتے ہیں۔ اساتذہ کا ایک گروہ جو مشترکہ سبق کی منصوبہ بندی کر رہا ہو تعاون کر رہا ہے۔"
+  },
+  {
+    "term": "Competition",
+    "definition_en": "A form of social interaction in which individuals or groups strive against each other for a limited reward - such as a promotion, a prize, or admission to a college. Unlike conflict, competition follows agreed rules.",
+    "definition_ur": "معاشرتی تعامل کا ایک روپ جس میں افراد یا گروہ محدود عام کے لیے ایک دوسرے سے مقابلہ کرتے ہیں - جیسے ترقی، انعام، یا کالج میں داخلہ۔ تصادم کے برعکس، مقابلہ متفقہ قواعد کی پیروی کرتا ہے۔"
+  },
+  {
     "term": "Social change",
     "definition_en": "A significant and lasting alteration of social structures, cultural patterns, institutions and behaviour over time.",
     "definition_ur": "سماجی ڈھانچوں، ثقافتی نمونوں، اداروں اور رویے میں وقت کے ساتھ ایک اہم اور پائیدار تبدیلی۔"
