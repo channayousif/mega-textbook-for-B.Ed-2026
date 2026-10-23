@@ -29,7 +29,7 @@ import { freshChecks } from './checks.mjs';
 import { batchDue, batchCandidates, batchId, batchTitle, batchBody } from './batch.mjs';
 import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport, specUnitNumbers } from './planner.mjs';
 import { walkUnits } from '../lib/content-roots.mjs';
-import { REGISTRIES, registryProblems } from './registries.mjs';
+import { REGISTRIES, registryProblems, mergeGlossary } from './registries.mjs';
 import { weekId, local, harvestSlot, slotsBetween, harvestDue, distillDue, maintenanceDue, contentFiles, maintenanceVerdict, parseVerdict } from './maintenance.mjs';
 import { OWN_PR, queueReview, recordReview, fanOutJobs } from './maintjobs.mjs';
 import { boardSignals, logSignals, cronSignals, phrSignals, reviewSignals, foldSignals, newlyHot, distillDigest, effect, parseRegistry } from './intel.mjs';
@@ -730,6 +730,30 @@ function queueCiFixes(board, red, events) {
   }
 }
 
+/**
+ * Files every unit touches, so concurrent branches conflict in them on almost every batch:
+ * glossary.json (terms appended at the end) and the generated static/content-status.json.
+ * When a batch merge conflicts in these alone, resolve it here instead of spending a merge-fix
+ * job: glossary by mergeGlossary, content-status by regenerating it. The batch's registry and
+ * content gates still run on the result. Returns false (caller aborts) for any other conflict.
+ */
+function resolveSharedConflicts(wt) {
+  const files = sh('git', ['diff', '--name-only', '--diff-filter=U'], wt, { allowFail: true }).out.split('\n').filter(Boolean);
+  if (!files.length || !files.every((f) => f === 'glossary.json' || f === 'static/content-status.json')) return false;
+  if (files.includes('glossary.json')) {
+    const stage = (n) => { const r = sh('git', ['show', `:${n}:glossary.json`], wt, { allowFail: true }); return r.ok ? r.out : null; };
+    const merged = mergeGlossary(stage(1), stage(2), stage(3));
+    if (merged === null) return false;
+    writeFileSync(join(wt, 'glossary.json'), merged);
+  }
+  if (files.includes('static/content-status.json')) {
+    sh('git', ['checkout', '--ours', '--', 'static/content-status.json'], wt);
+    if (!sh('node', ['scripts/report-content-status.mjs'], wt, { allowFail: true }).ok) return false;
+  }
+  sh('git', ['add', '--', ...files], wt);
+  return sh('git', ['commit', '-q', '--no-edit'], wt, { allowFail: true }).ok;
+}
+
 /** A ready job that could not join a batch gets a merge fix on its own branch, five at most. */
 function queueMergeFix(board, j, why, events) {
   const tries = board.jobs.filter((x) => x.parent === j.id && x.id.includes('-conflict')).length;
@@ -768,7 +792,7 @@ function batchPhase(board, events) {
     // The job's worktree branch is local to this checkout; its pushed copy is the fallback.
     const ref = sh('git', ['rev-parse', '--verify', '-q', j.branch], ROOT, { allowFail: true }).ok ? j.branch : `origin/${j.branch}`;
     const r = sh('git', ['merge', '--no-ff', '--no-edit', '-m', `crew: ${j.id} (${j.stage}, ${j.worker})`, ref], wt, { allowFail: true });
-    if (r.ok) return true;
+    if (r.ok || resolveSharedConflicts(wt)) return true;
     sh('git', ['merge', '--abort'], wt, { allowFail: true });
     why.set(j.id, `${j.branch} conflicts with main (it could not join the hourly batch).`);
     return false;

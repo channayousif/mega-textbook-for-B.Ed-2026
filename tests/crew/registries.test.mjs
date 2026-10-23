@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { registryProblems } from '../../scripts/crew/registries.mjs';
+import { registryProblems, mergeGlossary } from '../../scripts/crew/registries.mjs';
 
 const G = 'glossary.json';
 const gloss = (...terms) => JSON.stringify(terms.map(([term, def = 'd']) => ({ term, definition_en: def, definition_ur: 'u' })), null, 2);
@@ -50,4 +50,31 @@ test('new, unchanged and deleted registries', () => {
   assert.deepEqual(registryProblems(G, null, gloss(['A'])), []);
   assert.deepEqual(registryProblems(G, gloss(['A']), gloss(['A'])), []);
   assert.deepEqual(registryProblems(L, entry('D-2026-0001', 'x'), null), ['specs/decisions/log.md was deleted']);
+});
+
+test('mergeGlossary: main keeps its entries and order, the branch\'s new terms follow', () => {
+  const base = gloss(['Clarity'], ['Tone']);
+  const main = gloss(['Clarity'], ['Tone'], ['Status'], ['Role']);
+  const branch = gloss(['Clarity'], ['Tone'], ['Poverty'], ['Deviance']);
+  const out = JSON.parse(mergeGlossary(base, main, branch));
+  assert.deepEqual(out.map((e) => e.term), ['Clarity', 'Tone', 'Status', 'Role', 'Poverty', 'Deviance']);
+  assert.deepEqual(registryProblems(G, base, JSON.stringify(out)), []);
+});
+
+test('mergeGlossary: a term both sides added keeps main\'s; an edit only the branch made is kept', () => {
+  const base = gloss(['Clarity'], ['Tone']);
+  const main = gloss(['Clarity'], ['Tone'], ['Role', 'main wording']);
+  const branch = gloss(['Clarity', 'better wording'], ['Tone'], ['role', 'branch wording']);
+  const out = JSON.parse(mergeGlossary(base, main, branch));
+  assert.deepEqual(out.map((e) => [e.term, e.definition_en]), [['Clarity', 'better wording'], ['Tone', 'd'], ['Role', 'main wording']]);
+});
+
+test('mergeGlossary: main\'s edits and removals win; broken JSON gives null', () => {
+  const base = gloss(['Clarity'], ['Tone']);
+  const main = gloss(['Clarity', 'main fix']);
+  const branch = gloss(['Clarity', 'branch fix'], ['Tone'], ['Register']);
+  const out = JSON.parse(mergeGlossary(base, main, branch));
+  assert.deepEqual(out.map((e) => [e.term, e.definition_en]), [['Clarity', 'main fix'], ['Register', 'd']]);
+  assert.equal(mergeGlossary(base, '[{', branch), null);
+  assert.equal(mergeGlossary(base, '{}', branch), null);
 });
