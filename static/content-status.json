@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T06:54:43.793Z",
+  "generated_at": "2026-10-23T15:39:49.833Z",
   "courses": [
     {
       "course_code": "EFMP-301",
@@ -1495,42 +1495,11 @@
           },
           "publication": "gated",
           "figures": {
-            "prompt_only": 5,
+            "prompt_only": 0,
             "generated": 0,
-            "placed": 1
+            "placed": 6
           },
-          "figures_pending": [
-            {
-              "course_code": "GQUR-301",
-              "unit_no": 15,
-              "topic": "15.1",
-              "figure_id": "fig-U15-2"
-            },
-            {
-              "course_code": "GQUR-301",
-              "unit_no": 15,
-              "topic": "15.2",
-              "figure_id": "fig-U15-3"
-            },
-            {
-              "course_code": "GQUR-301",
-              "unit_no": 15,
-              "topic": "15.2",
-              "figure_id": "fig-U15-4"
-            },
-            {
-              "course_code": "GQUR-301",
-              "unit_no": 15,
-              "topic": "15.3",
-              "figure_id": "fig-U15-5"
-            },
-            {
-              "course_code": "GQUR-301",
-              "unit_no": 15,
-              "topic": "15.3",
-              "figure_id": "fig-U15-6"
-            }
-          ]
+          "figures_pending": []
         },
         {
           "unit_no": 16,
@@ -1673,7 +1642,7 @@
       ]
     }
   ],
-  "commit": "c536f5fdf67ef9c7efb68b45884f34540e62129e",
+  "commit": "d457cd04fdf33381866c0b65679b7a90bd3ff46b",
   "trackers": {
     "specs/content/efmp-301/tasks.md": "b11e2a2a0a1f52518ee0f609fd56efe5bc6a6ffb3e6d48f3b281b55e2479f00b",
     "specs/content/efmp-302/tasks.md": "c5da2fd00a26658998db5a62a969e160d5b3ab6a0dea48282ad58101053074f2",
@@ -1686,7 +1655,7 @@
     "specs/content/efmp-305/tasks.md": "0868c973e5c71896c31ef0d7654572b60ddb00cec22cddfad22749f6d0779579",
     "specs/content/geng-301/tasks.md": "413520059dae1e8a8509cc25ba0e20f0525002930f4a212a4e26fcb174306c1f",
     "specs/content/gpks-402/tasks.md": "8d2b0c6015c1afb1c2820e81cc78f750ac9fa2e1decb507204a294da54bb12cf",
-    "specs/content/gqur-301/tasks.md": "3bc28b9998f432fb45a4aeea130d92d31107c24d86d473448145bfdde3a9960a",
+    "specs/content/gqur-301/tasks.md": "9455c8d5e2f9f77411d8dcd66294b144714e467d358c5af2cdfa85d4f0a9da95",
     "specs/content/gsos-301/tasks.md": "9142575f7842093a131a4c37c36e0d3798acf123238f6d4ea436a5f363b8f0c8"
   }
 }
