@@ -2506,3 +2506,36 @@ Recorded by `agent:evaluator` under `D-2026-0052`, bound to
   outstanding manifests once.
 - **Blocks:** nothing directly; the GENG-301 instance is reported as a `structure` failure under
   `D-2026-0050`.
+
+---
+
+## Intake evaluation, GPKS-402 (2026-10-23)
+
+Recorded by `agent:evaluator` under `D-2026-0071`, bound to
+`specs/content/gpks-402/intake-20261023/manifest.json` (manifest digest
+`f496696957bb67e338afdbea40ebb613108119ed6788f11cc0a930ab4062a7a0`, commit `413d76ea`). Guide:
+`Scheme-and-Course-guides/extracted-text/2nd 2026.txt:972-1153`. Evaluation record:
+`specs/content/gpks-402/intake-20261023/evaluation.md`.
+
+## G-2026-154 - Style guide: the unit "formative 5-8 items" default cannot hold for a per-topic unit with three or more topics
+
+- **Status:** open
+- **Gate:** G1 unit-spec (blueprint criterion)
+- **Source:** `D-2026-0071`
+- **Detail:** `specs/content/style-guide.md:227` sets the blueprint default "Formative: 5-8 items".
+  The per-topic layout (`:234-237`) requires every `topic-NN.mdx` to carry `## Check your
+  understanding` with >= 3 numbered items, and the depth gate enforces that floor
+  (`scripts/lib/unit-depth.mjs:342-343`). A unit with three topics therefore carries >= 9
+  formative items, above the 8 the default allows. GPKS-402 Units 4 and 6 have three topics and
+  state "formative 5-8 items" (`specs/content/gpks-402/content-spec.md:214`, `:316`), so their own
+  items must breach the band their spec sets. Two-topic units (>= 6) are unaffected. The style
+  guide does not say which rule governs, and the course guide is silent on formative counts. The
+  same "formative 5-8" wording appears in specs already approved (for example
+  `specs/content/efmp-304/content-spec.md:226`), so the question is corpus-wide.
+- **Needed, and from whom:** the curriculum owner (as owner of the style guide), to say whether in
+  the per-topic layout the 5-8 default counts something other than the per-topic checks, is
+  superseded by the per-topic floor (so a three-topic unit states ">= 3 per topic"), or is to be
+  amended. A style-guide edit re-opens bound manifests corpus-wide, so a ruling recorded in the
+  decision log may be the cheaper instrument.
+- **Blocks:** the `**Assessment blueprint**` formative wording of GPKS-402 Units 4 and 6 only.
+  It blocks nothing else in this spec.
