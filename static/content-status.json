@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T00:06:05.597Z",
+  "generated_at": "2026-10-23T00:06:34.869Z",
   "courses": [
     {
       "course_code": "EFMP-301",
@@ -1630,7 +1630,7 @@
       ]
     }
   ],
-  "commit": "d1a8d631d753edeb8515efb69ca8255e3ea3de2b",
+  "commit": "3805ab93ae09e62a6e693a3eca2f48f8ae5df7ef",
   "trackers": {
     "specs/content/efmp-301/tasks.md": "b11e2a2a0a1f52518ee0f609fd56efe5bc6a6ffb3e6d48f3b281b55e2479f00b",
     "specs/content/efmp-302/tasks.md": "c5da2fd00a26658998db5a62a969e160d5b3ab6a0dea48282ad58101053074f2",
