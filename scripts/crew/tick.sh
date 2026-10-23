@@ -10,6 +10,8 @@ exec 9>"$STATE/tick.lock"
 flock -n 9 || { echo "tick already running"; exit 0; }
 export PATH="$HOME/.local/bin:$HOME/.nvm/versions/node/v22.22.1/bin:$PATH"
 git fetch -q origin
+# plan regenerates the tracked static/content-status.json here; drop it so the merge cannot abort.
+git checkout -q -- static/content-status.json
 git merge -q --ff-only origin/main 2>/dev/null || git merge -q --no-edit origin/main
 node scripts/crew/crew.mjs plan
 node scripts/crew/crew.mjs tick
