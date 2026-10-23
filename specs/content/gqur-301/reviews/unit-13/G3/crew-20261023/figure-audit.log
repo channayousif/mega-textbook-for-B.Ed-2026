@@ -1,0 +1,5 @@
+Source asset audit, no browser used.
+topic-01.mdx: static/img/figures/gqur-301/unit-13/fig-U13-1.svg exists=false
+topic-01.mdx: static/img/figures/gqur-301/unit-13/fig-U13-2.svg exists=false
+topic-02.mdx: static/img/figures/gqur-301/unit-13/fig-U13-3.svg exists=false
+topic-02.mdx: static/img/figures/gqur-301/unit-13/fig-U13-4.svg exists=false
