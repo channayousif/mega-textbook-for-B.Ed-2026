@@ -2325,6 +2325,31 @@
     "definition_ur": "ایک تشہیری، گھنٹی کی شکل کا احتمال تقسیم جو بہت سی قدری مقداروں اور اوسط کے نمونہ تقسیم کی نمائندگی کے لیے استعمال ہوتا ہے؛ اپنے اوسط اور معیاری انحراف سے ممتاز۔"
   },
   {
+    "term": "Correlation coefficient",
+    "definition_en": "A single number, denoted r, that measures the direction and strength of the linear relationship between two variables; it ranges from -1 (perfect negative) through 0 (no linear correlation) to +1 (perfect positive).",
+    "definition_ur": "ایک عدد، جسے r سے ظاہر کیا جاتا ہے، جو دو متغیرات کے درمیان خطی تعلق کی سمت اور طائیت کا ناپ ہے؛ یہ -1 (مکمل منفی) سے 0 (کوئی خطی تعلق نہیں) تا +1 (مکمل مثبت) تک ہو سکتا ہے۔"
+  },
+  {
+    "term": "Regression line",
+    "definition_en": "The straight line that best represents the linear pattern in a scatter plot, chosen by the least-squares method to minimise the total squared vertical distance from each point to the line.",
+    "definition_ur": "وہ سیدھی لکیر جو سکیٹر پلاٹ میں خطی نمونے کو بہترین طور پر نمائندگی کرتی ہے، جو کم از کم مربع طریقے سے منتخب کی جاتی ہے تاکہ ہر نقطے سے لکیر تک عمودی فاصلے کا مجموعہ کم ہو۔"
+  },
+  {
+    "term": "Slope",
+    "definition_en": "In a regression line, the amount the predicted response changes when the explanatory variable increases by one unit; it gives the steepness and direction of the line.",
+    "definition_ur": "واپسی لکیر میں، وہ مقدار جس سے متنبأ جواب بدلتا ہے جب وضاحتی متغیر اکھیک اکائی بڑھتا ہے؛ یہ لکیر کی ڑھلان اور سمت بتاتا ہے۔"
+  },
+  {
+    "term": "Intercept",
+    "definition_en": "In a regression line, the predicted value of the response variable when the explanatory variable is zero; it is the point where the line crosses the vertical axis.",
+    "definition_ur": "واپسی لکیر میں، متنبأ جوابی متغیر کی قیمت جب وضاحتی متغیر صفر ہو؛ یہ وہ نقطہ ہے جہاں لکیر عمودی محور کو قطع کرتی ہے۔"
+  },
+  {
+    "term": "Residual",
+    "definition_en": "The difference between an observed value and the value predicted by the regression line; a positive residual means the observation lies above the line, a negative residual means it lies below.",
+    "definition_ur": "مشاہدہ قیمت اور واپسی لکیر کے متنبأ قیمت کے درمیان فرق؛ مثبت باقیہ کا طلبہ ہے کہ مشاہدہ لکیر کے اوپر ہے، منفی باقیہ کا طلبہ ہے کہ لکیر کے نیچے ہے۔"
+  },
+  {
     "term": "Social institution",
     "definition_en": "A stable pattern of norms, roles, values and expectations that meets a core social need - such as family, education, religion, economy, politics or healthcare.",
     "definition_ur": "معیارات، کردار، اقدار اور توقعات کا ایک پائیدار نمونہ جو ایک بنیادی سماجی ضرورت کو پورا کرتا ہے - جیسے خاندان، تعلیم، مذہب، معیشت، سیاست یا صحت۔"
