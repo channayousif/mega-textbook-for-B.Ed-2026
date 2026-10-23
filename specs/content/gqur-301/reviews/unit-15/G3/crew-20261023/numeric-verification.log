@@ -1,0 +1,58 @@
+$ node /tmp/u15rev/verify.mjs   (script reproduced below; JS erf/Simpson t-density integration, no external libs)
+
+T15.1 Matiari worked example: SE=1.6903 z=1.7748 P(Z>z)=0.0380 2-tail=0.0759
+T15.1 two-tailed critical xbar = 72 +/- 1.96*SE = 68.6870, 75.3130
+T15.1 P(Z>1.78) table value = 0.0375
+T15.2 Sukkur worked example: SE=1.8974 z=1.8447 P(Z>z)=0.0325 2-tail=0.0651
+T15.2 P(Z>1.84)=0.0329; P(Z>1.82)=0.0344
+T15.2 CYU 3/4: SE=2.1429 z=1.8667 P(Z>z)=0.0310 2-tail=0.0619
+T15.2 Summative Ghotki: SE=2.1106 z=1.6583 P(Z>z)=0.0486 2-tail=0.0973
+T15.3 Jacobabad worked example: SE=1.9365 t=2.0656 df=14 P(T>t)=0.0289 2-tail=0.0579
+T15.3 with rounded t=2.06 df14 2-tail=0.0585
+T15.3 CYU 3/4: SE=2.5298 t=1.9764 df=9 P(T>t)=0.0398 2-tail=0.0795
+T15.3 Summative Dadu: SE=1.8764 t=2.1318 df=11 P(T>t)=0.0282 2-tail=0.0564
+MCQ 4: SE=2.0000 z=1.5000 P(Z>z)=0.0668 2-tail=0.1336
+MCQ 8: SE=2.0000 t=2.5000 df=15 P(T>t)=0.0123 2-tail=0.0245
+RRQ 2: SE=2.1429 z=1.4000 P(Z>z)=0.0808 2-tail=0.1615
+RRQ 5/6: SE=2.2361 t=2.2361 df=19 P(T>t)=0.0188 2-tail=0.0375
+RRQ 10: 1-0.95^2=0.0975; key formula 1-(0.95*0.05)=0.9525
+ERQ 1: SE=1.6667 z=1.8000 P(Z>z)=0.0359 2-tail=0.0719
+ERQ 2: z=2.10 one-tail p=0.0179, two-tail p=0.0357; one-tail p=0.036 -> z=1.80 check P(Z>1.80)=0.0359
+ERQ 3: SE=2.1381 t=1.8708 df=13 P(T>t)=0.0420 2-tail=0.0840
+t-table df=14 crit 2.145: 2-tail area=0.0500
+t-table df=9 crit 2.262: 2-tail area=0.0500
+t-table df=11 crit 2.201: 2-tail area=0.0500
+t-table df=19 crit 2.093: 2-tail area=0.0500
+t-table df=13 crit 2.16: 2-tail area=0.0500
+
+exit_code: 0
+
+--- script ---
+// Numeric re-derivation of every computed value in GQUR-301 Unit 15 (G3 review).
+const erf = x => { const t = 1/(1+0.5*Math.abs(x)); const y = 1 - t*Math.exp(-x*x-1.26551223+t*(1.00002368+t*(0.37409196+t*(0.09678418+t*(-0.18628806+t*(0.27886807+t*(-1.13520398+t*(1.48851587+t*(-0.82215223+t*0.17087277))))))))); return x>=0?y:-y; };
+const Phi = z => 0.5*(1+erf(z/Math.SQRT2));
+// Student t upper tail via numeric integration of the density
+const lgamma = x => { const g=7,c=[0.99999999999980993,676.5203681218851,-1259.1392167224028,771.32342877765313,-176.61502916214059,12.507343278686905,-0.13857109526572012,9.9843695780195716e-6,1.5056327351493116e-7]; if(x<0.5) return Math.log(Math.PI/Math.sin(Math.PI*x))-lgamma(1-x); x-=1; let a=c[0]; const t=x+g+0.5; for(let i=1;i<9;i++) a+=c[i]/(x+i); return 0.5*Math.log(2*Math.PI)+(x+0.5)*Math.log(t)-t+Math.log(a); };
+const tpdf = (t,v) => Math.exp(lgamma((v+1)/2)-lgamma(v/2)-0.5*Math.log(v*Math.PI)-(v+1)/2*Math.log(1+t*t/v));
+const tUpper = (t,v) => { let s=0; const N=200000, b=t+200, h=(b-t)/N; for(let i=0;i<=N;i++){ const w=(i===0||i===N)?1:(i%2?4:2); s+=w*tpdf(t+i*h,v);} return s*h/3; };
+const f = x => x.toFixed(4);
+const z = (xb,m,s,n,lab) => { const se=s/Math.sqrt(n), zz=(xb-m)/se; console.log(`${lab}: SE=${f(se)} z=${f(zz)} P(Z>z)=${f(1-Phi(zz))} 2-tail=${f(2*(1-Phi(Math.abs(zz))))}`); };
+const t = (xb,m,s,n,lab) => { const se=s/Math.sqrt(n), tt=(xb-m)/se, v=n-1, p=tUpper(tt,v); console.log(`${lab}: SE=${f(se)} t=${f(tt)} df=${v} P(T>t)=${f(p)} 2-tail=${f(2*p)}`); };
+z(75,72,10,35,'T15.1 Matiari worked example');
+console.log(`T15.1 two-tailed critical xbar = 72 +/- 1.96*SE = ${f(72-1.96*10/Math.sqrt(35))}, ${f(72+1.96*10/Math.sqrt(35))}`);
+console.log(`T15.1 P(Z>1.78) table value = ${f(1-Phi(1.78))}`);
+z(71.5,68,12,40,'T15.2 Sukkur worked example');
+console.log(`T15.2 P(Z>1.84)=${f(1-Phi(1.84))}; P(Z>1.82)=${f(1-Phi(1.82))}`);
+z(74,70,15,49,'T15.2 CYU 3/4');
+z(63.5,60,14,44,'T15.2 Summative Ghotki');
+t(62,58,7.5,15,'T15.3 Jacobabad worked example');
+console.log(`T15.3 with rounded t=2.06 df14 2-tail=${f(2*tUpper(2.06,14))}`);
+t(45,40,8,10,'T15.3 CYU 3/4');
+t(59,55,6.5,12,'T15.3 Summative Dadu');
+z(73,70,12,36,'MCQ 4'); t(50,45,8,16,'MCQ 8');
+z(83,80,15,49,'RRQ 2'); t(65,60,10,20,'RRQ 5/6');
+console.log(`RRQ 10: 1-0.95^2=${f(1-0.95**2)}; key formula 1-(0.95*0.05)=${f(1-0.95*0.05)}`);
+z(68,65,10,36,'ERQ 1');
+console.log(`ERQ 2: z=2.10 one-tail p=${f(1-Phi(2.1))}, two-tail p=${f(2*(1-Phi(2.1)))}; one-tail p=0.036 -> z=1.80 check P(Z>1.80)=${f(1-Phi(1.8))}`);
+t(72,68,8,14,'ERQ 3');
+for (const [v,c] of [[14,2.145],[9,2.262],[11,2.201],[19,2.093],[13,2.160]]) console.log(`t-table df=${v} crit ${c}: 2-tail area=${f(2*tUpper(c,v))}`);
