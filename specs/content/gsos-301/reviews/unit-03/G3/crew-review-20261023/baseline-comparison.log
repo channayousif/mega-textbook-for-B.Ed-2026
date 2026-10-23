@@ -1,0 +1,3 @@
+Compared complete failure sections and exit codes from origin/main and final branch check:content logs.
+Exact match: check:content-status only, stale static/content-status.json, exit 1.
+All other 12 gates pass on each checkout. No new gate finding.
