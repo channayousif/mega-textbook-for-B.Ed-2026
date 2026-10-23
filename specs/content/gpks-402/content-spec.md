@@ -36,9 +36,9 @@ Full references for the guide's "Recommended Readings" plus curated open-access 
 
 | Key | Citation | DOI/URL | Units | Note |
 |---|---|---|---|---|
-| hec-pak-studies | Government of Pakistan, Higher Education Commission. *Pakistan Studies Curriculum (HEC)*. | (HEC document) | 1, 2, 3 | the HEC-prescribed curriculum for Pakistan Studies at the undergraduate level; sets the scope and standards for the course. **Ambiguity note:** the guide's "Pakistan Studies Curriculum (HEC)" fits more than one HEC document; this entry binds the undergraduate-level curriculum as the authoritative scope document |
+| hec-pak-studies | Government of Pakistan, Higher Education Commission. *Pakistan Studies Curriculum (HEC)*. | (HEC document) | 1, 3, 4 | the HEC-prescribed curriculum for Pakistan Studies at the undergraduate level; sets the scope and standards for the course. **Title as printed does not identify one document:** HEC has issued more than one undergraduate-level Pakistan Studies curriculum and course outline, and the guide gives no year or locator. Flagged per D-2026-0001: title-level support only; no unit relies on it for a specific claim |
 | rabbani-pak-studies | Ikram Rabbani. *Pakistan Studies*. | (print) | 1, 2, 4, 5 | standard textbook covering the ideological basis, the Movement, and the geography and economy of Pakistan. Verified: Caravan Book House |
-| hamid-khan-const | Hamid Khan. *Constitutional and Political History of Pakistan*. | (print) | 3, 4 | authoritative account of constitutional development from the Objectives Resolution through 1973, and of civil-military relations. Verified: OUP Pakistan, 4th ed. ISBN 9780199060986 |
+| hamid-khan-const | Hamid Khan. *Constitutional and Political History of Pakistan*. | (print) | 2, 3, 4 | authoritative account of constitutional development from the Objectives Resolution through 1973, and of civil-military relations. Verified: Oxford University Press Pakistan, 3rd ed., ISBN 9780199407828 (Open Library, verified 2026-10-23); replaces ISBN 9780199060986, which Open Library does not list for this work |
 | burki-fifty-years | Shahid Javed Burki. *Pakistan: Fifty Years of Nationhood*. | (print) | 5, 6 | economic and social history of Pakistan's first fifty years; covers agriculture, industry, social structure and foreign policy challenges. Verified: Westview, 3rd ed. 1999, ISBN 9780813336213 |
 
 ### Author-selected (open access)
@@ -47,12 +47,13 @@ These supplement the guide's print-only list with verified open-access works cho
 
 | Key | Citation | DOI/URL | Units | Note |
 |---|---|---|---|---|
-| pbs-pak-stats | Government of Pakistan, Pakistan Bureau of Statistics. *Pakistan Statistical Yearbook*. | https://www.pbs.gov.pk/ | 4, 5 | official statistics on population, geography, economy and society; open access |
-| sbp-annual | State Bank of Pakistan. *Annual Report*. | https://www.sbp.org.pk/reports_annual.htm | 5 | economic data, trade and industry overview; open access |
-| mofa-foreign-policy | Government of Pakistan, Ministry of Foreign Affairs. *Foreign Policy of Pakistan*. | https://mofa.gov.pk/ | 6 | principles of foreign policy and relations with neighbours; open access |
-| pak-constitution-1973 | Government of Pakistan. *The Constitution of Pakistan 1973*. | https://na.gov.pk/uploads/documents/1973_constitution.pdf | 3, 4 | the full text of the 1973 Constitution, including fundamental rights and Islamic provisions; open access |
-| unesco-pak-education | UNESCO. *Education for All 2015 National Review: Pakistan*. | https://unesdoc.unesco.org/ark:/48223/pf0000232662 | 6 | education and national integration in Pakistan; open access |
-| na-lahore-resolution | Government of Pakistan, National Assembly. *Lahore Resolution 1940*. | https://na.gov.pk/ | 2 | the founding political document of the Pakistan Movement; open access |
+| durrani-dunne-2010 | Durrani, N., & Dunne, M. (2010). Curriculum and national identity: exploring the links between religion and nation in Pakistan. *Journal of Curriculum Studies*, 42(2), 215-240. | https://doi.org/10.1080/00220270903312208 (open copy: https://figshare.com/articles/journal_contribution/Curriculum_and_national_identity_exploring_the_links_between_religion_and_nation_in_Pakistan/23374475) | 1, 6 | how Pakistan's school curriculum and Pakistan Studies teaching construct national ideology and identity, and the place of religion in it; supports national ideology and identity and Pakistan Studies in its educational context (Unit 1) and the role of education in national integration (Unit 6). OpenAlex W2052051061, Crossref DOI, verified 2026-10-23 |
+| hassan-2020-two-nation | Hassan, M. (2020). The Two Nation Theory and the creation of Pakistan. *Asian Journal of Social Sciences and Management Studies*, 7(2), 80-88. | https://doi.org/10.20448/journal.500.2020.72.80.88 | 1, 2 | origin and significance of the Two-Nation Theory and its role in the demand for and creation of Pakistan. OpenAlex W3034006569, Crossref DOI, verified 2026-10-23 |
+| khan-khan-2020-aligarh | Khan, H., & Khan, M. U. (2020). The Aligarh miracle: a reappraisal in context of the causal dimensions of contemporary social movement theories. *Journal of History and Social Sciences*, 11(1), 17-38. University of Karachi. | https://doi.org/10.46422/jhss.v11i1.102 | 2 | Sir Syed Ahmad Khan's Aligarh Movement as a reform movement: the Muslim decline it answered, modern education, and its effect on the Muslim middle class and political consciousness. OpenAlex W3106934127, Crossref DOI, verified 2026-10-23 |
+| hussain-kokab-2012-18th | Hussain, M., & Kokab, R. U. (2012). Eighteenth Amendment in the Constitution of Pakistan: success and controversies. *Asian Social Science*, 8(1), 81. CC BY 4.0. | https://doi.org/10.5539/ass.v8n1p81 | 3, 4 | the 1973 Constitution as amended in 2010: restoration of its parliamentary form, provincial autonomy and the federal structure, and the debates the amendment raised. OpenAlex W2127299016, Crossref DOI, verified 2026-10-23 |
+| worldbank-pdu-2025 | World Bank. (2025). *Pakistan Development Update, October 2025: Staying the Course for Growth and Jobs*. World Bank, Washington, DC. CC BY 3.0 IGO. | https://doi.org/10.1596/45320 (repository: https://hdl.handle.net/10986/45320) | 5 | current data and analysis on Pakistan's growth, agriculture, industry, trade, poverty and debt. OpenAlex W7172064073, Crossref DOI, verified 2026-10-23 |
+| khan-2015-foreign-policy | Khan, R. M. (2015). Foreign policy of Pakistan in the changing regional and global settings. *Journal of Contemporary Studies*, 4(1), 14-30. National Defence University, Islamabad. | https://doi.org/10.54690/jcs.v4i1.74 | 6 | principles of Pakistan's foreign policy and its relations with neighbouring and major powers. OpenAlex W3208096173, Crossref DOI, verified 2026-10-23 |
+| pak-constitution-1973 | Government of Pakistan, National Assembly. *The Constitution of the Islamic Republic of Pakistan* (1973; amended to the Twentieth Amendment, 28 February 2012). | https://na.gov.pk/uploads/documents/1333523681_951.pdf | 1, 3, 4 | the full text of the 1973 Constitution, including the Preamble (Objectives Resolution), fundamental rights, principles of policy and Islamic provisions; open access. Primary text, not in a scholarly registry: National Assembly PDF checked 2026-10-23 (222 pages; title page states amendments to 28 February 2012); replaces `uploads/documents/1973_constitution.pdf`, which returns HTTP 404 |
 
 ## Week schedule
 
@@ -98,7 +99,7 @@ Weeks 1-2. Unit Spec (G1) for `docs/semester-2/gpks-402/unit-01/`.
 
 **Common misconceptions**: "Pakistan Studies is only a history subject"; "the Two-Nation Theory means Hindus and Muslims cannot live together"; " ideology and religion are the same thing"; "Pakistan Studies has no relevance to classroom teaching".
 
-**Mapped readings**: hec-pak-studies, rabbani-pak-studies, pak-constitution-1973.
+**Mapped readings**: hec-pak-studies, rabbani-pak-studies, pak-constitution-1973, durrani-dunne-2010, hassan-2020-two-nation.
 
 **Figure plan**:
   - fig-U1-1 - `concept-map` - Pakistan Studies at the centre, linked to its sub-disciplines (history, geography, economy, civics, culture) and to its purpose in teacher education (Topic 1.1)
@@ -144,7 +145,7 @@ Weeks 3-4. Unit Spec (G1) for `docs/semester-2/gpks-402/unit-02/`.
 
 **Common misconceptions**: "the Pakistan Movement started only in 1940"; "Sir Syed supported the Two-Nation Theory directly"; "Pakistan was created only because of Jinnah's leadership" (ignoring the broader social and intellectual groundwork).
 
-**Mapped readings**: rabbani-pak-studies, hamid-khan-const, na-lahore-resolution.
+**Mapped readings**: rabbani-pak-studies, hamid-khan-const, hassan-2020-two-nation, khan-khan-2020-aligarh.
 
 **Figure plan**:
   - fig-U2-1 - `timeline` - reform milestones: Shah Waliullah (early 1800s), Aligarh College founded (1875), Sir Syed's political thought, leading to the Muslim League (1906) (Topic 2.1)
@@ -191,7 +192,7 @@ Weeks 5-6. Unit Spec (G1) for `docs/semester-2/gpks-402/unit-03/`.
 
 **Common misconceptions**: "the 1973 Constitution was the first constitution of Pakistan"; "Islamic provisions mean Pakistan is a theocracy"; "the Objectives Resolution was part of the 1973 Constitution" (it became its preamble later, but was passed in 1949).
 
-**Mapped readings**: hamid-khan-const, hec-pak-studies.
+**Mapped readings**: hamid-khan-const, hec-pak-studies, pak-constitution-1973, hussain-kokab-2012-18th.
 
 **Figure plan**:
   - fig-U3-1 - `timeline` - constitutional milestones: 1949 (Objectives Resolution), 1956, 1962, 1973, and subsequent amendments (Topic 3.1)
@@ -211,7 +212,7 @@ Weeks 7-8 and 10. Unit Spec (G1) for `docs/semester-2/gpks-402/unit-04/`. Week 9
 - **CLO/SLO refs**: `SLO:GPKS-402-4-1` (federal system; legislature, executive, judiciary; civil-military relations), `SLO:GPKS-402-4-2` (fundamental rights; principles of policy; role of citizens), `SLO:GPKS-402-4-3` (physical features; climate and natural resources; strategic importance) - traces to guide objectives 3, 4.
 - **Key terms**: Federalism, Separation of Powers, Fundamental Rights, Strategic Importance.
 - **Topics** (from guide Week 7-8, 10): federal system; legislature, executive, judiciary; civil-military relations; fundamental rights; principles of policy; role of citizens; physical features; climate and natural resources; strategic importance of Pakistan.
-- **Assessment blueprint**: formative 5-8 items (Remember/Understand/Apply) on the branches of government, fundamental rights and the physical geography; summative includes one Analyze-or-higher item asking the learner to explain how geography shapes governance challenges. Weighting: 60/40 default.
+- **Assessment blueprint**: formative 9 items, 3 per topic (D-2026-0072) (Remember/Understand/Apply) on the branches of government, fundamental rights and the physical geography; summative includes one Analyze-or-higher item asking the learner to explain how geography shapes governance challenges. Weighting: 60/40 default.
 
 ### Sub-topic checklist
 
@@ -243,7 +244,7 @@ Weeks 7-8 and 10. Unit Spec (G1) for `docs/semester-2/gpks-402/unit-04/`. Week 9
 
 **Common misconceptions**: "Pakistan has always been governed by the military"; "fundamental rights are the same as in the US Constitution"; "Pakistan's geography is only desert"; "civil-military relations are only a problem, never a subject of study".
 
-**Mapped readings**: hamid-khan-const, rabbani-pak-studies, hec-pak-studies, pbs-pak-stats, pak-constitution-1973.
+**Mapped readings**: hamid-khan-const, rabbani-pak-studies, hec-pak-studies, pak-constitution-1973, hussain-kokab-2012-18th.
 
 **Figure plan**:
   - fig-U4-1 - `diagram` - the structure of Pakistan's government: legislature, executive and judiciary with their key organs (Topic 4.1)
@@ -293,7 +294,7 @@ Weeks 11-12. Unit Spec (G1) for `docs/semester-2/gpks-402/unit-05/`.
 
 **Common misconceptions**: "Pakistan's economy depends only on agriculture"; "cultural diversity is a weakness, not a strength"; "education has no direct link to economic growth"; "all of Pakistan shares one uniform culture".
 
-**Mapped readings**: burki-fifty-years, rabbani-pak-studies, pbs-pak-stats, sbp-annual.
+**Mapped readings**: burki-fifty-years, rabbani-pak-studies, worldbank-pdu-2025.
 
 **Figure plan**:
   - fig-U5-1 - `table` - the three sectors of the economy (agriculture, industry, services) with their GDP share, key products and main challenges (Topic 5.1)
@@ -313,7 +314,7 @@ Weeks 13-15. Unit Spec (G1) for `docs/semester-2/gpks-402/unit-06/`. Week 16 is 
 - **CLO/SLO refs**: `SLO:GPKS-402-6-1` (principles of foreign policy; relations with neighbors; role in international organizations), `SLO:GPKS-402-6-2` (population growth; poverty and unemployment; terrorism and extremism; environmental issues), `SLO:GPKS-402-6-3` (education and national integration; civic education; responsibilities of teachers) - traces to guide objectives 4, 5.
 - **Key Terms**: Foreign Policy Principles, National Integration, Civic Education, Terrorism and Extremism.
 - **Topics** (from guide Week 13-15): principles of foreign policy; relations with neighboring countries; role in international organizations; population growth; poverty and unemployment; terrorism and extremism; environmental issues; education and national integration; civic education; responsibilities of teachers.
-- **Assessment blueprint**: formative 5-8 items (Remember/Understand/Apply) on foreign policy principles, contemporary issues and the role of education; summative includes one Analyze-or-higher item asking the learner to propose how a teacher can address one contemporary issue through civic education. Weighting: 60/40 default.
+- **Assessment blueprint**: formative 9 items, 3 per topic (D-2026-0072) (Remember/Understand/Apply) on foreign policy principles, contemporary issues and the role of education; summative includes one Analyze-or-higher item asking the learner to propose how a teacher can address one contemporary issue through civic education. Weighting: 60/40 default.
 
 ### Sub-topic checklist
 
@@ -344,7 +345,7 @@ Weeks 13-15. Unit Spec (G1) for `docs/semester-2/gpks-402/unit-06/`. Week 16 is 
 
 **Common misconceptions**: "foreign policy is only about relations with India"; "terrorism is caused only by poverty"; "education cannot address extremism"; "civic education is only about voting"; "teachers have no role in nation building beyond the classroom".
 
-**Mapped readings**: burki-fifty-years, mofa-foreign-policy, unesco-pak-education.
+**Mapped readings**: burki-fifty-years, khan-2015-foreign-policy, durrani-dunne-2010.
 
 **Figure plan**:
   - fig-U6-1 - `diagram` - Pakistan's foreign policy: principles at the centre, linked to key relationships (India, Afghanistan, China, Iran) and international forums (Topic 6.1)

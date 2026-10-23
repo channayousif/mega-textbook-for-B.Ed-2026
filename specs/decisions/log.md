@@ -3825,3 +3825,99 @@ content-improvement loop with no further cycle.
 - **Limits:** Certifies no content, qualifies no reviewer and authorises no publication
   (Art. VII.8). The rewritten GQUR-301 content-spec is guide-determined under item 2; a fresh
   intake evaluation of it is still advised before G3.
+
+---
+
+## D-2026-0071 - GPKS-402 fresh G0/G1 intake: identity, partition, coverage, outcomes, structure approved; blueprint approved except the Units 4 and 6 formative line (escalated); readings and decision residue fail on determined repairs
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** GPKS-402 Pakistan Studies, `specs/content/gpks-402/content-spec.md` (status: draft) at
+  commit `413d76ea`. Settles identity, partition, coverage, outcomes and structure for all six
+  units, and the blueprint for Units 1, 2, 3 and 5 plus the unit-end bank lines of all six units.
+  Supersedes `D-2026-0069`, which is void under Art. VII.8.5 (`specs/content/terminology.csv`, a
+  bound input, changed after its bundle) and whose readings and decision-residue approvals this
+  evaluation does not reproduce. `D-2026-0069` is not edited.
+- **Decided by:** agent:evaluator, 2026-10-23 (fresh session; did not draft the spec)
+- **Decision:**
+  1. **identity - approved.** GPKS-402, "Pakistan Studies", 2 (2-0), General Education, Semester 2,
+     as `catalog/courses.json` and the revised Scheme record; the guide's "GPKS - 302" is the slip
+     `G-2026-03` (resolved) adjudicated.
+  2. **partition - approved on owner rulings.** The guide has a week table and no units; the
+     six-unit grouping (Weeks 1-2 / 3-4 / 5-6 / 7-8+10 / 11-12 / 13-15) is the one `G-2026-97`
+     recorded and `D-2026-0053` item 1 confirmed, and `D-2026-0070` item 1 keeps it. The week
+     numbers, the Week 9 and Week 16 placement and the unit titles in the schedule and headings
+     match the guide.
+  3. **coverage - approved at row level.** The guide's 43 teaching bullets map to the 47 checklist
+     rows exactly once each, with three compound bullets decomposed in the guide's words
+     (U3-02/03, U4-02/03/04, U5-01/02); no row adds a sub-topic.
+  4. **outcomes - approved.** All 14 SLOs have a guide-week ancestor; 13 trace to the stated
+     objectives on their wording; SLO 6-1 rests on `D-2026-0053` item 4 (resolving `G-2026-99`).
+  5. **blueprint - approved except one line.** Unit-end bank 10/10/5 with Bloom bands, per-topic
+     minimums and ERQ arithmetic (sums to 5 in every unit), summative Analyze-or-higher, 60/40 and
+     depth bands are consistent with `specs/content/style-guide.md`. The "formative 5-8 items"
+     line of Units 4 and 6 is not approved: with three topics, the gate-enforced per-topic floor
+     (>= 3 items each) yields >= 9. Escalated, `G-2026-154`.
+  6. **structure - approved.** Front matter valid against
+     `contracts/content-spec-frontmatter.schema.json`; every required section and per-unit block
+     present and parseable; `validate:content` exit 0.
+- **Not approved:**
+  - **readings - fail (author repair, determined by `D-2026-0053` item 2 as applied in
+    `D-2026-0066`).** `pak-constitution-1973` locator returns 404; `unesco-pak-education` ark
+    resolves to a different UNESCO document (the Director-General's 2015 reply to the Executive
+    Board); `sbp-annual` locator is an error page; `mofa-foreign-policy`, `na-lahore-resolution`
+    and `pbs-pak-stats` locate only site home pages; `hec-pak-studies` still names no single
+    document; no author-selected row records a registry identity and verification date, so no
+    unit can meet `check:source-floor` from the planned list; Unit 3's mapped readings
+    (`content-spec.md:194`) include no open-access source; the Units column disagrees with the
+    mapped lines so that, read either way, one unit has no open-access source.
+  - **decision-residue - fail (author repair, determined by `D-2026-0052`).** The Units-column
+    inconsistencies that `D-2026-0052`/`G-2026-98` named as author repairs survive
+    (`hamid-khan-const`, `hec-pak-studies`) and a third has appeared (`pak-constitution-1973`).
+  - **blueprint, Units 4 and 6 formative line** - escalated, `G-2026-154`.
+- **Basis:** guide `Scheme-and-Course-guides/extracted-text/2nd 2026.txt` - code and credit hours
+  `:980-982`; objectives `:996-1006`; weekly breakdown `:1008-1141` (mid-term `:1085`, review
+  `:1137-1141`); readings `:1143-1153`. Revised Scheme `B.Ed 4 Year 2026 revised after board.txt:90`
+  and `:178-184`. Owner rulings `G-2026-03`, `D-2026-0053` items 1, 2, 4, 5, `D-2026-0070` item 1;
+  confirmed `D-2026-0052` and `D-2026-0066`; `D-2026-0001`; `specs/content/style-guide.md:227-250`;
+  `scripts/check-source-floor.mjs:40-41,75-76`; `scripts/lib/unit-depth.mjs:342-343`. Deterministic
+  checks at `23c2f632`: validate:content, pipeline-gate, depth-gate, figures, no-em-dash,
+  no-answer-keys, concept-graph, bloom-bands, source-floor, licence, licence:map:check, docs-sync
+  exit 0 (vacuous for GPKS-402, which has no authored unit); content-status exit 1 (stale
+  `static/content-status.json`, unbound, unrelated). Locators and per-criterion detail are in
+  `specs/content/gpks-402/intake-20261023/evaluation.md`.
+- **Bound to:** `specs/content/gpks-402/intake-20261023/manifest.json`, manifest digest
+  `f496696957bb67e338afdbea40ebb613108119ed6788f11cc0a930ab4062a7a0` (57 inputs at commit
+  `413d76ea`; recomputed with `manifestFor()`, 0 digest mismatches, digest reproduced; the only
+  extra path in the recompute is the bundle's own `manifest.json`, committed after preparation;
+  registers `specs/decisions/log.md` `c462efad...` and `specs/gaps.md` `4ba99483...` matched at read
+  time). A change to any bound input voids this decision (Art. VII.8.5).
+- **Blocked, by unit and section:** the `## Reading list` and every unit's `**Mapped readings**`
+  line (readings and residue repairs); the `**Assessment blueprint**` formative wording of Units 4
+  and 6 (`content-spec.md:214`, `:316`) pending `G-2026-154`.
+- **Limits:** the spec stays `status: draft` and may not move to `approved` on confirmation of this
+  entry: the repairs change `content-spec.md`, which voids it, and a fresh bundle and intake are
+  needed. Does not settle the Week 16 course-review question `D-2026-0052` left open, the row
+  glosses left to G3, or the Hamid Khan edition/ISBN (advisory). Notes, without editing it, that
+  `D-2026-0069`'s recorded digest has 63 hex characters and does not match `intake-88/manifest.json`.
+  Certifies no content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
+
+## D-2026-0072 - Three-topic units carry 9 formative items, not the style guide's "5-8"
+
+- **Status:** confirmed
+- **Gate:** G1 unit-spec (blueprint criterion); G2 authoring
+- **Scope:** corpus-wide; applied first to GPKS-402 Units 4 and 6
+- **Decided by:** curriculum owner, 2026-10-23 (board-direct, relayed through Claude Code), ruling
+  on `G-2026-154`: "9 formative items instead of the style guide's \"5-8\""
+- **Decision:** a unit with three topics states and carries 9 formative items, 3 per topic, in
+  place of the style guide's "Formative: 5-8 items" default (`specs/content/style-guide.md:227`).
+  This matches the per-topic floor the depth gate already enforces (>= 3 numbered items under each
+  topic's `## Check your understanding`). Units with one or two topics keep the "5-8" default.
+- **Basis:** `G-2026-154` (raised by `D-2026-0071`): with three topics the per-topic floor gives at
+  least 9 items, so "5-8" could not be met.
+- **Applied in:** `specs/content/gpks-402/content-spec.md` Units 4 and 6 `**Assessment blueprint**`
+  lines ("formative 9 items, 3 per topic").
+- **Limits:** the style guide is not edited here; a style-guide edit re-opens bound G2 manifests
+  corpus-wide and goes in its own change. Other specs that state "formative 5-8" for a three-topic
+  unit are read under this ruling until they are next revised. Does not rule on units with four or
+  more topics. Approves no specification and authorises no publication.
