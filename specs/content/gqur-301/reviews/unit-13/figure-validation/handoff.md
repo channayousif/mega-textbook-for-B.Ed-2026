@@ -7,3 +7,5 @@
 - Inspected 640 px non-browser raster previews of English and Urdu figures in both palettes. Preview copies resolved CSS variables before serial rendering with sharp because the local SVG renderer does not resolve them. Corrected Urdu numeric-range bidi and added regression-axis padding. Source SVGs retain the required token variables.
 - Browser text measurements, site rendering, build and Playwright were not run because the crew brief expressly prohibits browser/build jobs. This inspection is production QA, not G3/G5 certification. Review gates remain open.
 - origin/main e22259e7 reports only the pre-existing stale static/content-status.json finding. Asset changes require refreshed G2 deterministic evidence; do not reuse the previous digest manifest.
+
+Final check:content: 12 gates pass; only check:content-status fails with the identical stale-file message observed on origin/main. G2 evidence refreshed using prepare-gate-evidence.mjs and its tracker reference updated. No new findings remain.
