@@ -26,7 +26,7 @@ import { STATE_DIR, WT_DIR, LOG_DIR, load, save, ACTIVE, TERMINAL, jobId, now } 
 import { send, reply, readInbox } from './notify.mjs';
 import { reviewFindingsSection, parseHandoff, priorHandoffsSection } from './handoff.mjs';
 import { freshChecks } from './checks.mjs';
-import { batchDue, batchCandidates, batchId, batchTitle, batchBody } from './batch.mjs';
+import { batchDue, batchCandidates, batchId, batchTitle, batchBody, exclusionReason } from './batch.mjs';
 import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport, specUnitNumbers } from './planner.mjs';
 import { walkUnits } from '../lib/content-roots.mjs';
 import { REGISTRIES, registryProblems, mergeGlossary } from './registries.mjs';
@@ -815,8 +815,9 @@ function batchPhase(board, events) {
     const ref = sh('git', ['rev-parse', '--verify', '-q', j.branch], ROOT, { allowFail: true }).ok ? j.branch : `origin/${j.branch}`;
     const r = sh('git', ['merge', '--no-ff', '--no-edit', '-m', `crew: ${j.id} (${j.stage}, ${j.worker})`, ref], wt, { allowFail: true });
     if (r.ok || resolveSharedConflicts(wt)) return true;
+    const conflictFiles = sh('git', ['diff', '--name-only', '--diff-filter=U'], wt, { allowFail: true }).out.split('\n').filter(Boolean);
     sh('git', ['merge', '--abort'], wt, { allowFail: true });
-    why.set(j.id, `${j.branch} conflicts with main (it could not join the hourly batch).`);
+    why.set(j.id, exclusionReason(j.branch, conflictFiles));
     return false;
   };
   let members = ready.filter(tryMerge);
