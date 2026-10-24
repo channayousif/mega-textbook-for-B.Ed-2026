@@ -12,6 +12,13 @@
  *  - The Urdu review (G5) compares the mirror against the ACCEPTED G3 English version, so it
  *    is planned only once G3 is done. Until a person signs G3 off, a unit whose agent
  *    review is finished is "awaiting G3": listed for the owner, not worked on.
+ *
+ * On 2026-10-25 (maintenance M2 of 2026-W43): translation waits while the latest G3 report is a
+ * `revise` that has not been repaired. Translate jobs queued behind open English defects only
+ * wrote handoffs ("separate English author must resolve ... before translation resumes"), or
+ * copied the defects into a mirror that then had to be redone (GSOS-301 U3). `repair_en` is
+ * planned instead; translation follows once the repair lands. A `pass`, an `escalate` or no
+ * G3 report at all still lets the draft mirror go ahead (English-first publication).
  */
 
 /**
@@ -22,13 +29,15 @@ export function stagesFor(u, f) {
   if (!u.authored) return ['author'];
   const need = [];
   if ((u.figures?.prompt_only || 0) > 0) need.push('figures');
+  const unrepairedRevise = u.gates.G3 !== 'done' && f.g3Report?.disposition === 'revise' && !f.g3Repaired;
   if (u.gates.G3 !== 'done') {
     if (!f.g3Report) need.push('review_en');
-    else if (f.g3Report.disposition === 'revise' && !f.g3Repaired) need.push('repair_en');
+    else if (unrepairedRevise) need.push('repair_en');
   }
   if (f.bilingual) {
-    if (!f.mirrorComplete) need.push('translate');
-    else if (u.gates.G3 === 'done' && u.gates.G5 !== 'done' && !f.g5Report) need.push('review_ur');
+    if (!f.mirrorComplete) {
+      if (!unrepairedRevise) need.push('translate');
+    } else if (u.gates.G3 === 'done' && u.gates.G5 !== 'done' && !f.g5Report) need.push('review_ur');
   }
   return need;
 }
