@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Run a heavy job in one of two host slots (CLAUDE.md "Host resource limits").
+# Run a heavy job in one of two host slots (AGENTS.md "Host resource limits").
 # Waits until a slot is free. Slot 1 is the original single lock, so any caller
 # still using `flock /tmp/mega-book-heavy.lock` counts against the same limit.
 # Usage: scripts/heavy.sh npm run build

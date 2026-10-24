@@ -15,7 +15,7 @@ needs evidence; skip a check that finds nothing.
 ## Docs and artifacts
 - README, `ops/crew/README.md`, `guides/`, `AGENTS.md`: commands, paths, numbers and behaviour
   that no longer match the code.
-- CLAUDE.md's "Active Technologies" and "Recent Changes" against what actually landed.
+- `.specify/memory/agent-reference.md`'s "Active Technologies" and "Recent Changes" against what actually landed.
 - `specs/backlog.md` and `specs/gaps.md`: items that are done or obsolete (propose; gaps are
   append-only, so a resolution is an appended status line, never a deletion).
 - PHR hygiene: duplicate IDs, PHRs missing a Handoff section.
@@ -23,7 +23,7 @@ needs evidence; skip a check that finds nothing.
 ## Decisions
 - ADRs amended or superseded by a later ADR whose status line does not say so.
 - Links between ADRs that do not resolve, and missing back-links.
-- Decisions made this week (owner rulings in PHRs, `D-YYYY-NNNN` entries) that meet the CLAUDE.md
+- Decisions made this week (owner rulings in PHRs, `D-YYYY-NNNN` entries) that meet the AGENTS.md
   ADR significance test: suggest, never create.
 
 ## Intelligence
