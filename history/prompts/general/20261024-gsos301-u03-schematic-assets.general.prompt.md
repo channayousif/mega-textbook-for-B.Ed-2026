@@ -53,6 +53,6 @@ Created four English schematics, four mirrored Urdu schematics and eight generat
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Figure edits stale G2 input evidence and derived content status. Sharp requires token substitution in temporary previews; committed SVG tokens preserved.
-- Graders run and results (PASS/FAIL): Palette 46/46 PASS; figure structural and variant checks PASS; final content gate results recorded in session.
+- Graders run and results (PASS/FAIL): Palette 46/46 PASS; figure structural and variant checks PASS; all 13 final content gates PASS.
 - Prompt variant (if applicable): None.
 - Next experiment (smallest change to try): Review the assets in the site after translation resumes.
