@@ -1,0 +1,94 @@
+---
+id: crew-gsos-301-u06-review_en
+title: crew review_en GSOS-301 unit 6
+stage: misc
+date: 2026-10-24
+surface: agent
+model: agy
+feature: gsos-301
+branch: crew/gsos-301-u06-review_en
+user: crew
+command: crew review_en
+labels: ["crew", "agy", "review_en"]
+links:
+  spec: specs/content/gsos-301/content-spec.md
+  ticket: null
+  adr: null
+  pr: null
+files:
+ - history/prompts/gsos-301/20261024-gsos-301-u06-independent-review.misc.prompt.md
+ - specs/content/gsos-301/reviews/unit-06/G3/a90a7de2-a9f8-4abe-9afa-e66589e688ca.json
+ - specs/content/gsos-301/reviews/unit-06/G3/logs-a90a7de2/check-content.txt
+ - specs/content/gsos-301/reviews/unit-06/G3/logs-a90a7de2/check-depth-gate.txt
+ - specs/content/gsos-301/reviews/unit-06/G3/logs-a90a7de2/check-docs-sync.txt
+ - specs/content/gsos-301/reviews/unit-06/G3/logs-a90a7de2/check-figures.txt
+ - specs/content/gsos-301/reviews/unit-06/G3/logs-a90a7de2/check-no-answer-keys.txt
+ - specs/content/gsos-301/reviews/unit-06/G3/logs-a90a7de2/check-no-em-dash.txt
+ - specs/content/gsos-301/reviews/unit-06/G3/logs-a90a7de2/render-review.txt
+ - specs/content/gsos-301/reviews/unit-06/G3/logs-a90a7de2/validate-content.txt
+ - specs/content/gsos-301/reviews/unit-06/G3/manifest.json
+ - specs/content/gsos-301/reviews/unit-06/G3/summary.md
+ - specs/content/gsos-301/tasks.md
+ - static/content-status.json
+tests:
+ - npm run check:content
+---
+
+## Prompt
+
+# Crew job gsos-301-u06-review_en
+
+You are the agy worker on the B.Ed bilingual textbook repo, working in this checkout on branch `crew/gsos-301-u06-review_en`.
+Read AGENTS.md and CLAUDE.md first and obey them: no em dash (U+2014) anywhere, heavy commands only through `scripts/heavy.sh`, never run `npm run build`, a dev server or Playwright, never mark G3/G5 done, never self-sign or use
+human initials, never edit the style guide, constitution, ADRs, gate scripts, catalog or an approved content-spec.
+
+## Task
+Act as the INDEPENDENT G3 English reviewer of GSOS-301 Unit 6 (review-unit skill, .claude/agents/g3-reviewer.md). You did not write this unit. Produce the evidence report the skill specifies and the advisory tracker row. Never tick G3, never add reviewer initials, never self-sign.
+
+Follow `.claude/skills/review-unit/SKILL.md` exactly; read it and every file it references before starting.
+
+## Scope
+GSOS-301 Unit 6 only: its docs/licence and i18n files, its rows and folders under
+`specs/content/gsos-301/`, and `static/img/figures/gsos-301/unit-06/`.
+
+## Continue, do not restart
+Earlier attempts may have left work on this branch. Check `git log origin/main..HEAD` and `git status` and build on it.
+
+## Done when
+1. `npm run check:content` reports no finding that origin/main does not also report (run it, read every
+   failure, fix those in your scope, rerun). Findings that already exist on main belong to other jobs.
+2. All work is committed on this branch with a conventional commit message. Do not push and do not open a PR.
+3. Your final output ends with one line: `CREW-SUMMARY: <what you changed, in one sentence>`.
+4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
+   (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
+
+
+## Response snapshot
+
+Executed independent G3 review of GSOS-301 Unit 6 with advisory escalate disposition, recorded contract evidence and logs, and updated tasks.md with G3 unchecked.
+
+## Outcome
+
+- Impact: review_en for GSOS-301 Unit 6 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 14 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
+
+## Handoff (for CEO and agents)
+
+- Shipped / changed: Executed independent G3 review of GSOS-301 Unit 6 with advisory escalate disposition, recorded contract evidence and logs, and updated tasks.md with G3 unchecked.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Replace (Hammond & Cheney, n.d.) citation in topic-02.mdx:58 for Pakistani media reach with an empirical Pakistani source, and fix the "Sialkit" typo in topic-01.mdx:60.
+  - Correct coverage/concept reinforcement mapping rows in coverage/unit-06.md and concepts/unit-06.md where media was mapped to environmental item RRQ-07 instead of RRQ-08.
+  - Live 360px viewport, table horizontal scrolling, and A4 print view require inspection under permitted browser tools before formal G3 certification.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
+
+## Evaluation notes (flywheel)
+
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
