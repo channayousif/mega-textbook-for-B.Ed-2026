@@ -57,7 +57,7 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 6 | G6 assets | ▢ | | |
 | Unit 6 | G7 publish | ▢ | | |
 | Unit 7 | G1 unit-spec | ▢ | | guide Chapter 7; intake re-evaluation advised (D-2026-0070) |
-| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-07/G2/20261021T055945099Z-gates.json |
+| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-07/G2/20261024T160350863Z-gates.json |
 | Unit 7 | G3 en-review | ▢ | | |
 | Unit 7 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 7 | G5 ur-review | ▢ | | |
@@ -138,6 +138,7 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit | Stage | Status | Reviewer | Notes |
 |---|---|---|---|---|
 | Unit 7 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only; G3 remains open. F1-F3 need separate author repair; current G1, author-run provenance and actual rendered accessibility remain unverified. Report: specs/content/gqur-301/reviews/unit-07/G3/01a16053-0c98-79b0-b814-6bb6281aec8c.json. |
+| Unit 7 | G3 en-review | ▢ | | advisory: revise; repairs applied for report specs/content/gqur-301/reviews/unit-07/G3/01a16053-0c98-79b0-b814-6bb6281aec8c.json (crew gqur-301-u07-repair_en, 2026-10-24). F1: ERQ 2 and ERQ 4 Band 3 no longer require an unasked change or code-length cost. F2: topic-02 Worked example 2, RRQ 10 (now with section sizes 110/100/90) and ERQ 4 test Proposal Y capacity per section. F3: ERQ 4 is now a real-data task on enrolment figures the trainee records from the practicum school's admission register (source and date required; judgement marked against those figures); teacher notes updated. F4: RRQ 9 rounds only the summed total. F5: ERQ 2 rubric says at least four days repeat, not four distinct timetables. G2 evidence refreshed. P1-P4 (author-run provenance, open G1, rendered inspection, answer-blind verification) are not author-repairable and remain for the evaluator/review host. No Urdu mirror exists yet. Needs a fresh independent G3 review; G3 stays open (ADR-0019). |
 
 ## Advisory G3 Unit 8 review, 2026-10-22
 
