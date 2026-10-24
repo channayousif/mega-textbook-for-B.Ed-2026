@@ -71,8 +71,12 @@ four uniforms.
 **Worked example 2: ID codes.** A school gives each pupil a code made of a
 section letter (A, B, C or D) followed by two digits (0 to 9 each), such as
 B07. There are 3 stages: 4 ways, then 10, then 10. The school can issue
-4 x 10 x 10 = 400 different codes. If it has 450 pupils, the system needs a
-third digit: 4 x 10 x 10 x 10 = 4,000 codes.
+4 x 10 x 10 = 400 different codes in all. Because the letter is the pupil's
+own section, each section has only 10 x 10 = 100 codes, so the format works
+only if no section has more than 100 pupils, whatever the school total. If
+the school has 450 pupils, four sections of 100 hold at most 400, so at
+least one section must run out. A third digit gives 10 x 10 x 10 = 1,000
+codes per section (4,000 in all).
 
 **Worked example 3: when choices shrink.** Three pupils, Ali, Sana and Zara,
 are to sit in the three front seats. The first seat can take any of 3
