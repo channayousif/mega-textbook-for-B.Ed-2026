@@ -33,6 +33,8 @@ import { REGISTRIES, registryProblems, mergeGlossary } from './registries.mjs';
 import { weekId, local, harvestSlot, slotsBetween, harvestDue, distillDue, maintenanceDue, contentFiles, maintenanceVerdict, parseVerdict } from './maintenance.mjs';
 import { OWN_PR, queueReview, recordReview, fanOutJobs } from './maintjobs.mjs';
 import { boardSignals, logSignals, cronSignals, phrSignals, reviewSignals, foldSignals, newlyHot, distillDigest, effect, parseRegistry } from './intel.mjs';
+import { noteStall, clearStall, stallAlertDue, heldFor, stallLine } from './stall.mjs';
+import { resumeHere } from './resume.mjs';
 
 const ROOT = resolve(new URL('../..', import.meta.url).pathname);
 const MAX_PARALLEL = Number(process.env.CREW_MAX_PARALLEL || 3);
@@ -231,7 +233,7 @@ function brief(j, board) {
   return `# Crew job ${j.id}
 
 You are the ${j.worker} worker on the B.Ed bilingual textbook repo, working in this checkout on branch \`${j.branch}\`.
-Read AGENTS.md and CLAUDE.md first and obey them: ${briefRules(j, selfJob(board, j))}
+Read AGENTS.md first and obey it (CLAUDE.md only imports it): ${briefRules(j, selfJob(board, j))}
 
 ## Task
 ${STAGE_TASK[j.stage](j)}
@@ -343,26 +345,46 @@ function excludedFamilies(board, j) {
   return producers.length ? [...new Set(producers)] : ['anthropic'];
 }
 
+/** Queued jobs in launch order: owner priority, then stage, then age. */
+function queueOrder(board, control) {
+  const prio = (j) => { const i = (control.priority || []).indexOf(j.course); return i < 0 ? 99 : i; };
+  return board.jobs.filter((j) => j.status === 'queued')
+    .sort((a, b) => prio(a) - prio(b) || STAGE_ORDER.indexOf(a.stage) - STAGE_ORDER.indexOf(b.stage) || a.createdAt.localeCompare(b.createdAt));
+}
+
+/** Hold launches below a resource floor, and track the hold (scripts/crew/stall.mjs). */
+function resourceHold(control, events, queued) {
+  const mem = memAvailableMb();
+  const disk = diskFreeMb();
+  const hold = !queued ? null
+    : mem < MIN_FREE_MB ? ['memory', `${mem} MB available, floor ${MIN_FREE_MB} MB`]
+      : disk < MIN_FREE_DISK_MB ? ['disk', `${(disk / 1024).toFixed(1)} GB free, floor ${Math.round(MIN_FREE_DISK_MB / 1024)} GB`] : null;
+  if (!hold) {
+    const ended = clearStall(control);
+    if (ended?.alertedAt) events.push(`✅ launches resumed after ${heldFor(ended)} held (${ended.reason})`);
+    return false;
+  }
+  const stall = noteStall(control, ...hold);
+  console.log(`${stallLine(stall)}; not launching`);
+  if (stallAlertDue(stall)) {
+    stall.alertedAt = now();
+    const fix = stall.reason === 'disk' ? 'free disk space (stale worktrees are the usual cause)' : 'wait, or stop a heavy job';
+    events.push(`⚠️ ${stallLine(stall)}: no new jobs until then; ${fix}`);
+  }
+  return true;
+}
+
 function launchQueued(board, health, control, events) {
   const running = board.jobs.filter((j) => j.status === 'running');
   const busyUnits = new Set(board.jobs.filter((j) => ['running', 'gate_red', 'pr_open', 'ready', 'batched'].includes(j.status) && j.stage !== 'fix').map(unitKey));
-  const prio = (j) => { const i = (control.priority || []).indexOf(j.course); return i < 0 ? 99 : i; };
-  const queue = board.jobs.filter((j) => j.status === 'queued')
-    .sort((a, b) => prio(a) - prio(b) || STAGE_ORDER.indexOf(a.stage) - STAGE_ORDER.indexOf(b.stage) || a.createdAt.localeCompare(b.createdAt));
+  const queue = queueOrder(board, control);
+  if (resourceHold(control, events, queue.length)) return 0;
   let launched = 0;
   for (const j of queue) {
     if (running.length >= MAX_PARALLEL) break;
+    // Each launch uses memory and disk, so the floors are checked again before the next one.
     if (memAvailableMb() < MIN_FREE_MB) { console.log(`memory below ${MIN_FREE_MB} MB; not launching`); break; }
-    const disk = diskFreeMb();
-    if (disk < MIN_FREE_DISK_MB) {
-      console.log(`disk free ${disk} MB below ${MIN_FREE_DISK_MB} MB; not launching`);
-      // Alert at most every 6 hours, not every tick.
-      if (!control.diskAlertAt || Date.now() - Date.parse(control.diskAlertAt) > 6 * 36e5) {
-        control.diskAlertAt = now();
-        events.push(`⚠️ disk free ${Math.round(disk / 1024)} GB (floor ${Math.round(MIN_FREE_DISK_MB / 1024)} GB): no new jobs until space is freed`);
-      }
-      break;
-    }
+    if (diskFreeMb() < MIN_FREE_DISK_MB) { console.log(`disk below ${MIN_FREE_DISK_MB} MB; not launching`); break; }
     // A fix or review works on its parent's open PR, so the parent's unit being busy is the point.
     if (busyUnits.has(unitKey(j)) && j.stage !== 'fix' && !j.parent) continue;
     // Children of one parent (a review and a fix) share its worktree: one at a time.
@@ -1093,6 +1115,7 @@ function statusText(board, health, decisions, control = load('control')) {
   const open = decisions.items.filter((d) => d.status === 'open').map((d) => `${d.id} ${d.question}`);
   return [`Crew status ${now().slice(0, 16).replace('T', ' ')} UTC${control.paused ? ' (PAUSED)' : ''}`,
     summaryLine(board, health),
+    ...(control.launchStall ? [`⚠️ ${stallLine(control.launchStall)}`] : []),
     `Running: ${running.join(', ') || 'none'}`,
     `PRs waiting on CI or merge: ${prs.join(', ') || 'none'}`,
     `Ready for the next hourly batch: ${board.jobs.filter((j) => j.status === 'ready').length}`,
@@ -1108,11 +1131,14 @@ function status() {
   const board = load('board');
   const health = load('health');
   const decisions = load('decisions');
+  const control = load('control');
   const rows = board.jobs.filter((j) => !TERMINAL.includes(j.status) || Date.now() - Date.parse(j.history?.at(-1)?.slice(0, 24) || j.createdAt) < 7 * 864e5)
     .sort((a, b) => a.course.localeCompare(b.course) || a.unit - b.unit);
   const md = `# Crew board
 
 Generated ${now()}. ${summaryLine(board, health)}
+
+${resumeHere({ board, decisions, control, nextUp: queueOrder(board, control) })}
 
 ## Workers
 | Worker | Family | State | Until | Last error |
@@ -1145,8 +1171,9 @@ function digest() {
   const health = load('health');
   const since = Date.now() - 864e5;
   const recent = board.jobs.filter((j) => (j.history || []).some((h) => Date.parse(h.slice(0, 24)) > since && /merged|done on/.test(h)));
+  const stall = load('control').launchStall;
   const text = `📘 Crew daily digest ${now().slice(0, 10)}
-${summaryLine(board, health)}
+${summaryLine(board, health)}${stall ? `\n⚠️ ${stallLine(stall)}` : ''}
 Last 24 h: ${recent.length ? recent.map((j) => `${j.id}${j.prNumber ? ` #${j.prNumber}` : ''} (${j.status})`).join(', ') : 'nothing finished'}
 Needs you: ${load('decisions').items.filter((d) => d.status === 'open').map((d) => d.id).join(', ') || 'nothing'}
 Awaiting your G3 sign-off: ${g3Line(board)}

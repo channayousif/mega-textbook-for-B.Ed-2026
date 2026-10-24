@@ -117,7 +117,7 @@ main() {
     log "ABORT: $REPO/.env.local missing (build-time Supabase URL/anon key)"
     exit 1
   fi
-  # Shared with dev sessions (CLAUDE.md "Host resource limits"): take one of the
+  # Shared with dev sessions (AGENTS.md "Host resource limits"): take one of the
   # two heavy-job slots so no more than two builds stack and exhaust the host's RAM.
   scripts/heavy.sh npm ci --no-audit --no-fund >>"$LOG" 2>&1
   scripts/heavy.sh npm run build >>"$LOG" 2>&1

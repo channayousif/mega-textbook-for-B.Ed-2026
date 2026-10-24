@@ -63,7 +63,15 @@ is healthy, the review waits while every other kind of job keeps flowing.
    `reviews/**/renders-*/` evidence folders (1.7 of a checkout's 2.3 GB, read by no gate), and the
    crew's leftover auto-commit uses `git add --sparse` so new renders are still committed. A
    launch that fails is logged on the job and retried next tick (`gate_red` after 3 failures);
-   it never aborts the tick, and the board is saved even when a phase throws.
+   it never aborts the tick, and the board is saved even when a phase throws. A hold below either
+   floor is tracked as `control.launchStall` (`scripts/crew/stall.mjs`): the owner is alerted at
+   once for disk and after an hour for memory, again every 6 hours, and told when launches
+   resume; the board, `crew status` and the digest show how long launches have been held.
+
+`BOARD.md` opens with a **Resume here** block (`scripts/crew/resume.mjs`): whether launches are
+flowing, what needs the owner (open decisions, held jobs, G3 sign-offs), what needs the lead
+(red jobs), what is running, which PRs wait, and which jobs start next. A fresh lead session
+reads that block first.
 
 After a salvage PR merges, the tick deletes the Paperclip branches it replaced (its
 `supersedes` PRs' head branches and its `base`), unless an open PR still uses one

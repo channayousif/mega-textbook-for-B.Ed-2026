@@ -1,9 +1,14 @@
 # Repository guidance
 
+This is the one rulebook for every agent on this repository: Claude Code, Codex, Antigravity
+(`agy`), OpenCode and any other CLI. `CLAUDE.md` only imports this file (`@AGENTS.md`), so a rule
+lives here once. Background that is not a rule (the full PHR procedure, the planning template,
+the technology history) is in `.specify/memory/agent-reference.md`; read it when a task needs it.
+
 ## Read first
 
-- Read `CLAUDE.md` for the existing project workflow and prompt-history requirements.
-- Read `.specify/memory/constitution.md` before making changes. It is the authoritative project constitution; older technology and policy summaries may be stale.
+- This file, then `.specify/memory/constitution.md` before making changes. The constitution is
+  authoritative; older technology and policy summaries may be stale.
 - Consult the relevant `specs/<feature>/spec.md`, `plan.md`, and `tasks.md`, plus applicable decisions in `history/adr/`.
 - Keep changes focused on the requested task. Never commit secrets or expose `.env.local` values.
 
@@ -12,8 +17,8 @@
 B.Ed textbook and learning platform: Docusaurus 3, React 18, TypeScript 5.6, self-hosted Supabase. Node.js 22+; npm.
 
 Two content tracks (Feature 015):
-- `docs/` — B.Ed degree corpus, grouped by `semester-NN/course-code/unit-NN/`
-- `licence/` — teaching-licence corpus, flat `course-code/unit-NN/` (no semesters)
+- `docs/` - B.Ed degree corpus, grouped by `semester-NN/course-code/unit-NN/`
+- `licence/` - teaching-licence corpus, flat `course-code/unit-NN/` (no semesters)
 
 Shared structure:
 - `src/`: pages, components, theme overrides, libs
@@ -30,19 +35,36 @@ Shared structure:
 Env loading: `.env.local` supplies `DOCUSAURUS_SUPABASE_URL`, `DOCUSAURUS_SUPABASE_ANON_KEY`; RLS tests additionally need `SUPABASE_SERVICE_ROLE_KEY`.
 
 Commands:
-- `npm start` / `npm run build` — run prestart hooks (`build-content-index`, `report-content-status`) automatically
-- `npm test` — vitest unit tests (`npm test -- <file>` for a focused run)
-- `npm run test:rls` — RLS tests; needs live Supabase + service-role key; config refuses to run unconfigured (no silent skip)
-- `npm run test:e2e` — Playwright; needs build + browsers
-- `npm run test:review` — review-evidence tests
-- `npm run check:content` — fast content gates (skill fix loops)
-- `npm run check:all` — full gate suite (CI superset)
+- `npm start` / `npm run build` - run prestart hooks (`build-content-index`, `report-content-status`) automatically
+- `npm test` - vitest unit tests (`npm test -- <file>` for a focused run)
+- `npm run test:rls` - RLS tests; needs live Supabase + service-role key; config refuses to run unconfigured (no silent skip)
+- `npm run test:e2e` - Playwright; needs build + browsers
+- `npm run test:review` - review-evidence tests
+- `npm run check:content` - fast content gates (skill fix loops)
+- `npm run check:all` - full gate suite (CI superset)
 
-Gate authority is `scripts/lib/gates.mjs` (`CONTENT_GATES` vs `FULL_GATES`). `check-docs-sync` asserts the CI workflow step list matches `FULL_GATES` both ways — a gate added here but forgotten in CI fails the build.
+Gate authority is `scripts/lib/gates.mjs` (`CONTENT_GATES` vs `FULL_GATES`). `check-docs-sync` asserts the CI workflow step list matches `FULL_GATES` both ways - a gate added here but forgotten in CI fails the build.
 
 CI runs against a live shared Supabase instance with concurrency serialization (`shared-supabase` group, `queue: max`). Running `test:rls` locally while CI is in flight races on shared fixture rows.
 
-Host limits: this host also serves production (2 CPU / 12 GB). Concurrent heavy jobs froze it on 2026-09-20 and 2026-09-24. Run build, start/serve, `npm ci`, vitest, Playwright/Chromium and `sharp` jobs at most two at a time, prefixed with `scripts/heavy.sh`; never from parallel sub-agents; kill any dev server when done. See CLAUDE.md "Host resource limits".
+## Host resource limits (production server, must follow)
+
+This repo is developed on the same 2-CPU / 12 GB OCI host that serves textbook.com.pk
+and its Supabase backend. Running heavy jobs concurrently exhausted RAM and froze the
+host (and the live site) on 2026-09-20 and 2026-09-24. Therefore:
+
+- **Heavy jobs** are `npm run build`, `npm run start`/`serve`, `npm ci`, Playwright or any
+  Chromium run (e2e, `render-inspect.mjs`, screenshot scripts), `sharp` batch work, and `vitest`.
+- Run **at most two heavy jobs at a time across all sessions and subagents** (owner ruling,
+  2026-10-13). Prefix every heavy job with `scripts/heavy.sh` so a third one queues instead of
+  stacking, e.g. `scripts/heavy.sh npm run build`. The script holds one of two slots
+  (`/tmp/mega-book-heavy.lock`, `/tmp/mega-book-heavy.2.lock`); a bare
+  `flock /tmp/mega-book-heavy.lock` still counts as slot 1.
+- Never run heavy jobs in parallel subagents. Subagents may read, grep and edit; builds,
+  dev servers and browser runs happen from the main session.
+- Stop any dev/preview server you start (`kill` it) as soon as the check is done; never leave
+  one running at the end of a task.
+- Before a heavy job, check `free -m`; if available memory is under 3 GB, wait or ask the user.
 
 ## Content work
 
@@ -52,32 +74,81 @@ Unit structure (Spec 008 per-topic standard): `unit-NN/index.mdx`, `topic-NN.mdx
 
 Content in Git; quiz banks/answer keys stay backend-only (RLS-protected, `verified_teacher`-gated). Answer keys are forbidden everywhere except the bounded final `## Answers and marking guidance` section of an assessment page. Assessment banks: 10 MC + 10 restricted-response + 5 extended-response per unit.
 
-Zero em dashes (U+2014, U+2015, U+2E3A, U+2E3B) in authored content — `check:no-em-dash`. En dash (U+2013) is permitted for numeric ranges.
+Zero em dashes (U+2014, U+2015, U+2E3A, U+2E3B) in authored content - `check:no-em-dash`. En dash (U+2013) is permitted for numeric ranges.
 
 Figure lifecycle: `prompt-only → generated → placed`. `Kind` archetypes: table, concept-map, flowchart, timeline, diagram, illustration. Manifest at `specs/content/<course>/figures/unit-NN.md`. Visual density: ≥2 figures per topic, ≥1 concept-map/flowchart/timeline per unit.
 
-English-first publication is permitted with the required untranslated banner; Urdu parity is a corpus-completion requirement (not a per-unit gate). G3/G5 reviews require independent reviewers — see `CLAUDE.md` and ADR-0019. Do not self-certify or fabricate human initials.
+English-first publication is permitted with the required untranslated banner; Urdu parity is a corpus-completion requirement (not a per-unit gate). G3/G5 reviews require independent reviewers - see "Review delegation" below and ADR-0019. Do not self-certify or fabricate human initials.
+
+## Review delegation (G3/G5)
+
+Use `.claude/agents/g3-reviewer.md` or `g5-reviewer.md` in a fresh session with the shared
+review-unit skill. Evidence preparation and validation are implemented in
+`scripts/review-evidence.mjs`. Agent execution is available; certification remains blocked
+until real qualification and a protected signing host are provisioned. Never self-register,
+self-sign, mark a gate done from advisory findings, or use human initials for an agent result.
+The trusted host uses signed registry/report evidence; `accept` itself is read-only.
+Follow ADR-0019 and the Feature 014 evidence contract. Existing human sign-off remains usable.
+
+## Visuals: Claude, Codex and Gemini roles
+
+ADR-0024 defines the cross-agent boundary for course visuals; ADR-0029 adds Gemini via `agy` as a raster producer.
+
+- **Claude owns meaning and deterministic schematics:** course research and prose, pedagogy,
+  citations, figure planning, generation prompts, alt text, figure manifests at `prompt-only`,
+  and hand-authored SVG tables, concept maps, flowcharts, timelines and diagrams.
+- **Codex owns raster production:** generated raster illustrations, edits to raster images,
+  visual inspection, WebP optimisation, placement in course files, raster manifest transitions,
+  and the relevant repository gates. Codex uses its built-in image-generation tool by default.
+- When a figure is `Kind: illustration`, Claude records a complete prompt, alt text, aspect and
+  target path at `prompt-only` first. ADR-0029 (2026-10-04) then lets Claude produce it with
+  Gemini via `agy generate_image` through `scripts/generate-illustration.mjs` (local, serial,
+  never in CI), optimise it, inspect it for pedagogy and cultural accuracy, and mark it
+  `generated` then `placed`. Codex remains an approved alternative producer; Claude never uses
+  any other image generator.
+- Either agent may identify a conceptual or accessibility problem. Claude remains responsible
+  for judging pedagogical meaning; a generated image is never accepted only because it rendered
+  successfully. G3/G5 independence and human escalation rules remain unchanged.
+- The figure marker and `specs/content/<course>/figures/unit-NN.md` row are the handoff contract.
+  Both agents preserve the figure ID, prompt and alt text unless a content correction is recorded.
 
 ## Work records
 
-Record user requests via `.specify/templates/phr-template.prompt.md` (routing in `CLAUDE.md`).
-
-**Strict PHR rule (board, 2026-10-04).** PHRs are how the Paperclip CEO and agents learn what was
-done outside Paperclip. Codex, Antigravity and every other CLI agent follow it exactly as Claude does;
+**Strict PHR rule (board, 2026-10-04).** PHRs are how the owner and agents learn what was done
+in other sessions. Codex, Antigravity and every other CLI agent follow it exactly as Claude does;
 having no shell or no slash command is not an exemption (write the file with your file tools):
 - Write one PHR for **every** user prompt that changes a file, makes or records a decision, or
-  touches Paperclip, the server or production (ops, deploys and status checks included).
+  touches the crew, the server or production (ops, deploys and status checks included).
 - Commit the PHR **in the same PR** as the work it records; a PR without its PHR is incomplete.
-- Board-direct sessions put `board-direct` in `labels`; Paperclip agent runs put their agent name.
-  `links.ticket` names the TEX issue, or `null`.
+- Board-direct sessions put `board-direct` in `labels`; crew and other agent runs put their agent
+  name. `links.ticket` names the issue, or `null`.
 - Fill the `## Handoff (for CEO and agents)` section: what shipped, decisions the team must respect,
-  what is pending and who owns it, and which Paperclip issues are affected.
+  what is pending and who owns it, and which issues are affected.
 
-Suggest significant architectural decisions for an ADR; do not create an ADR without authorization.
+How to write one: copy `.specify/templates/phr-template.prompt.md`, take the next free ID, and
+write it to `history/prompts/constitution/`, `history/prompts/<feature>/` or
+`history/prompts/general/` (`<ID>-<slug>.<stage>.prompt.md`). Fill every placeholder, keep the
+prompt verbatim and untruncated, and leave no `{{...}}` behind. The full procedure is in
+`.specify/memory/agent-reference.md`; `/sp.phr` follows it.
 
-## Visuals
+**ADR suggestions.** When a decision has long-term impact, had real alternatives and cuts across
+the system, say: "📋 Architectural decision detected: <brief>. Document? Run `/sp.adr <title>`."
+Never create an ADR without the owner's consent.
 
-ADR-0024 governs the Claude/Codex boundary. Claude owns prose, figure briefs, alt text, SVG schematics, and `prompt-only` manifest rows. Codex owns raster generation, WebP optimization, placement, and raster manifest transitions. Don't silently rewrite authored inputs during raster production.
+## Default policies (must follow)
+
+- Clarify first. When intent is ambiguous, a dependency is unexpected, or several approaches have
+  real trade-offs, ask the owner 2-3 targeted questions instead of guessing.
+- Do not invent APIs, data or contracts. Verify with the repository, CLI output or MCP tools
+  rather than memory.
+- Never hardcode secrets or tokens; use `.env` and docs.
+- Never use an em dash (U+2014). Zero em dash in any file: restructure or use a spaced hyphen.
+  Enforced in `docs/`, `guides/`, `i18n/`, `specs/content/` by `check:no-em-dash` (Constitution
+  Art. III.9); the same rule applies by convention everywhere else.
+- Prefer the smallest viable diff; do not refactor unrelated code.
+- Cite existing code as `path:line`; propose new code in fenced blocks.
+- Code quality, testing, performance and security principles are in the constitution.
+- Always use `uv` to install Python packages.
 
 ## Antigravity (`agy`) review and approved implementation jobs
 

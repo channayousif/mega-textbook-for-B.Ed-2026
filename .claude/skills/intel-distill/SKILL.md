@@ -42,9 +42,9 @@ an example and evidence (job ids, log files, PHR and report paths).
      check and what it compares.
    - **crew brief or planner fix**: the dispatcher sends workers into the problem
      (`scripts/crew/crew.mjs` briefs, `planner.mjs`).
-   - **AGENTS.md or CLAUDE.md rule**: a one-line rule every worker must follow.
+   - **AGENTS.md rule**: a one-line rule every worker must follow (CLAUDE.md only imports AGENTS.md).
    - **memory note**: only for the lead's own sessions (Claude memory), when no repo file fits.
-   - **ADR suggestion**: an architecturally significant decision (CLAUDE.md's three-part test).
+   - **ADR suggestion**: an architecturally significant decision (AGENTS.md's three-part test).
      Write the suggestion line; never create the ADR.
    - **style-guide proposal**: content standards are owner-only and re-open the corpus; propose,
      with the cost.

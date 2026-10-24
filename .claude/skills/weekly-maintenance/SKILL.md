@@ -27,7 +27,7 @@ Your brief names your stage and, for a task, its row. Do only that stage.
 - Smallest viable change. No behaviour change in a refactor unless the task says so. No new
   dependency without a task that says why.
 - Never change what an ADR decided. Never auto-create an ADR: if a finding is architecturally
-  significant, write the CLAUDE.md suggestion line in `intelligence.md` or your summary.
+  significant, write the AGENTS.md ADR suggestion line in `intelligence.md` or your summary.
 - No em dash (U+2014) anywhere. Heavy commands (vitest, Playwright, builds, `sharp`) only through
   `scripts/heavy.sh`; never `npm run build`, a dev server or Playwright yourself. CI builds the PR.
 - Protected paths (scripts, `.claude/`, ADRs, CLAUDE.md, AGENTS.md, catalog, CI, package files)

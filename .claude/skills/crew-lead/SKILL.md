@@ -23,7 +23,7 @@ You coordinate; workers do unit work. Read `ops/crew/README.md` first.
    on. If it blocks jobs now, fix the cause (or `ask`); otherwise leave it to the daily distill and
    the weekly survey. On Mondays, check the week's maintenance PRs (`crew maintenance status`) and
    any `gate_red` maintenance review.
-6. Before ending, write a PHR for the session (CLAUDE.md), then run `crew.mjs status`.
+6. Before ending, write a PHR for the session (AGENTS.md "Work records"), then run `crew.mjs status`.
 
 ## Never
 - Run `npm run build`, a dev server or Playwright from the lead. CI builds PRs.
