@@ -1,7 +1,7 @@
 # Crew: the multi-agent workforce that replaced the Paperclip CEO
 
-The crew finishes the B.Ed corpus with four separately-billed agent CLIs working in parallel, one
-unit-stage job each, in their own git worktrees. The existing content gates and CI are the only
+The crew finishes the B.Ed corpus with five separately-billed agent CLI workers working in parallel,
+one unit-stage job each, in their own git worktrees. The existing content gates and CI are the only
 definition of done. Paperclip is paused (its data is kept); nothing here depends on it.
 
 ## Who does what
@@ -17,7 +17,8 @@ definition of done. Paperclip is paused (its data is kept); nothing here depends
 openclaw is not a worker. It is the owner channel: Discord `#etextbook-platform` for everything,
 WhatsApp as well for urgent items and decisions.
 
-Every stage has a ranked chain over all four workers (`scripts/crew/workers.mjs`). A worker that
+Every stage has a ranked chain over the five workers (`scripts/crew/workers.mjs`; a few stages,
+such as `illustrate`, use only some of them). A worker that
 hits a quota, rate or session limit is put on cooldown (30 min, 2 h, 6 h) and its job moves to the
 next worker in the chain at once, continuing from the work already committed on the branch. A
 review job never goes to the model family that produced what it reviews; if no eligible reviewer
@@ -52,10 +53,8 @@ is healthy, the review waits while every other kind of job keeps flowing.
    (`blocked`); a batch still red after two CI fixes stops batching until the lead acts.
 6. **PRs**: green CI leads to auto-merge (main auto-deploys). The merge uses `gh pr merge --admin`
    because every PR comes from the owner account, which cannot approve its own PR. The owner ruled
-   "auto-merge when CI green" on 2026-10-17, so CI is the review gate. The merge uses `gh pr merge --admin`, because
-   every PR comes from the owner account, which cannot approve its own PR; the owner ruled
-   "auto-merge when CI green" on 2026-10-17, so CI is the review gate. Red CI queues a fix job on the same
-   branch. A PR that touches a protected path (style guide, constitution, ADRs, scripts, catalog,
+   "auto-merge when CI green" on 2026-10-17, so CI is the review gate. Red CI queues a fix job on the
+   same branch. A PR that touches a protected path (style guide, constitution, ADRs, scripts, catalog,
    `.github/`, an approved content-spec or intake) is never auto-merged: the owner is asked.
 7. **launch**: up to 3 jobs run at once, one per unit (a unit with `ready` or `batched` work waits for it to merge), and none start while the host has under
    3 GB of free memory or under 8 GB of free disk (`CREW_MIN_FREE_DISK_MB`). The crew never builds
@@ -155,6 +154,7 @@ node scripts/crew/crew.mjs health codex cooling 2026-10-18T06:00:00Z
 node scripts/crew/crew.mjs ask "Approve X?" --options "yes|no"
 node scripts/crew/crew.mjs digest
 node scripts/crew/crew.mjs cmd 'crew intel status'     # hot clusters this week
+npm run test:crew                                       # the crew's own tests (node --test tests/crew/*.test.mjs)
 CREW_STATE_DIR=/tmp/state-copy node scripts/crew/crew.mjs tick --dry-run   # safe trial on a copy
 ```
 
