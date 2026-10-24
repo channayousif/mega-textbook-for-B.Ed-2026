@@ -39,3 +39,21 @@ After metadata refresh all 13 content gates passed. Restored the tracked generat
 static/content-status.json afterward to keep this commit within Unit 13 scope.
 The restored file has the same baseline staleness as origin/main; no new content
 finding was introduced.
+
+## Re-check 2026-10-24 (crew job gqur-301-u13-translate-r1, claude)
+
+Baseline: d064fe72144f24a544de194cda53f8632ffc98d2 (origin/main at task start; no
+earlier branch commits). English Unit 13 has not changed since the blocker above
+apart from figure placement (ecda0868, 153d343f). All three confirmed defects are
+still present, so translation was again not started:
+
+- unit-assessment.mdx:123 (RRQ8 same-data premise) with guidance at line 190.
+- topic-02.mdx:121-124 (near-zero r implies near-zero slope).
+- topic-02.mdx:80 ("Interpolation is generally reliable", unqualified).
+
+New observation for the English author, not in the G3 report: topic-02.mdx:123
+writes the mean as "ȷ" (U+0237, dotless j), apparently a mangled y-bar.
+
+No Urdu MDX, SVG, key_terms or terminology proposal was written; the G4 row is
+unchanged; translation_status remains draft. Resume only after a separate English
+repair of G3 F1-F5 lands on main.
