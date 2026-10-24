@@ -2,7 +2,7 @@
 id: crew-intel-2026-10-25-distill
 title: crew intel_distill INTEL unit 0
 stage: misc
-date: 2026-10-25
+date: 2026-10-24
 surface: agent
 model: agy
 feature: crew-intelligence
@@ -16,10 +16,10 @@ links:
   adr: null
   pr: null
 files:
-  - specs/intelligence/daily/2026-10-25.md
+ - history/prompts/crew-intelligence/crew-intel-2026-10-25-distill.misc.prompt.md
+ - specs/intelligence/daily/2026-10-25.md
 tests:
-  - npm run check:content
-  - node --test tests/crew/intel.test.mjs
+ - npm run check:content
 ---
 
 ## Prompt
@@ -179,32 +179,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (intel-2026-10-23-distill, intel_distill, opencode) F1 (data sum 503 not 513) touches topic-01, topic-02, all four fig-U14 SVGs plus dark variants, and the RRQ 1 key; fix them together and re-measure fig-U14-4.
 - (intel-2026-10-23-distill, intel_distill, opencode) F3 (z vs t) may need an owner ruling if the course intends z only; until then items that supply z* stay answerable.
 
+
 ## Response snapshot
 
-Distilled 21 growing signal clusters into 10 prioritized intelligence candidates in specs/intelligence/daily/2026-10-25.md covering tracked content-status cron merge stalls (tick.sh), premature Urdu figure generation before topic translation, translation holds on unaddressed English G3 defects, style-guide formative item range tension (G-2026-154), intake reading list URL resolution, intake bundle nested directory exclusions, pre-existing shared-state test flakes in batch CI jobs, prompt-only figure manifest gaps during G3 review, governance/environmental review limitation routing, and translate-unit skill reviewed-flip pipeline failures.
+Distilled 21 growing clusters into 10 daily intelligence candidates in specs/intelligence/daily/2026-10-25.md led by tracked content-status cron stalls and premature Urdu figure placement.
 
 ## Outcome
 
 - Impact: intel_distill for INTEL Unit 0 by agy (attempt 1).
-- Tests: npm run check:content passed (13 of 13 gates PASS); node --test tests/crew/intel.test.mjs passed (8 of 8 tests PASS).
-- Files: specs/intelligence/daily/2026-10-25.md and this PHR.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 2 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
-- Reflection: None recorded by the dispatcher.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Distilled 21 growing clusters into 10 prioritized intelligence candidates in specs/intelligence/daily/2026-10-25.md and recorded execution in this PHR.
+- Shipped / changed: Distilled 21 growing clusters into 10 daily intelligence candidates in specs/intelligence/daily/2026-10-25.md led by tracked content-status cron stalls and premature Urdu figure placement.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - tick.sh aborted for ~6h due to merge conflicts on tracked static/content-status.json in the control checkout; task M1 untracking and tick.sh checkout clean resolve this.
-  - Figure jobs render .ur.svg files before Urdu topic MDX exists, requiring translators to wire them.
-  - Batch CI fix jobs failed on pre-existing e2e suggestion-moderation duplicate row state and shared Supabase 30s RLS timeouts.
-- Paperclip issues affected: none (Paperclip retired).
+  - `static/content-status.json` merge conflicts in the control checkout stalled `tick.sh` cron for ~6h; task M1 untracking and tick reset resolve this.
+  - Figure jobs generate `.ur.svg` schematics before Urdu topic MDX exists, requiring translation jobs to wire them.
+  - Batch CI fix jobs failed on pre-existing e2e suggestion-moderation row accumulation and shared Supabase 30s RLS timeouts.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS (13/13 gates); tests/crew/intel.test.mjs PASS (8/8 tests).
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
