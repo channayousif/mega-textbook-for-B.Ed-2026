@@ -77,7 +77,7 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit 6 | G1 unit-spec | ▢ | | pending G0 intake |
 | Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-06/G2/20261022T202014023Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | agent:agy | Advisory escalate: specs/content/gsos-301/reviews/unit-06/G3/a90a7de2-a9f8-4abe-9afa-e66589e688ca.json; citation misattribution, coverage/concept mapping repairs; visual render uninspected (brief prohibits build/server/browser); no certification |
-| Unit 6 | G4 ur-translation | ▢ | | |
+| Unit 6 | G4 ur-translation | ▢ | | Blocked before translation: unresolved English citation and coverage/concept mapping defects trigger translate-unit stop rule; separate author repair required; handoff reviews/unit-06/G4/translation-handoff.md; translation_status stays draft |
 | Unit 6 | G5 ur-review | ▢ | | |
 | Unit 6 | G6 assets | ▢ | | |
 | Unit 6 | G7 publish | ▢ | | |
