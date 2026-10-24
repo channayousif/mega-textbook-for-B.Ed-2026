@@ -39,3 +39,15 @@ These are proposals, not additions to the approved bank. No unresolved numerical
 - `translation_status` remains draft everywhere because G5 has not accepted this bundle. Updated only the note in the existing open G4 tracker row; no appended row, done mark, initials or signature, per translate-unit Step 7.
 - Curriculum owner / fresh independent reviewer owns G1 and G3 dependencies, followed by independent G5 and rendered evidence. Existing author-run provenance and real-school-data ERQ 4 review concerns remain open; this translation certifies neither.
 - Work was continued from an earlier draft; total translation time across attempts is unknown, so this run is not a reliable fresh-unit rate measurement.
+
+## Retry validation, 2026-10-25
+
+- Continued committed translation `6bccfb58`; no English or Urdu prose or figure bytes changed.
+- The retry reproduced the stale G2 input-manifest failure in `check-content-retry-before.log`. The earlier final-pass log did not establish a passing committed branch.
+- Ran `node scripts/prepare-gate-evidence.mjs GQUR-301 7` against committed inputs. All eight draft commands passed; new evidence is `reviews/unit-07/G2/20261024T194740254Z-gates.json`, bound to `6bccfb58`. Preserved the old evidence for audit and updated only Unit 7's G2 reference.
+- Regenerated the derived content-status artifact after the tracker update. `check-content-retry-final.log` records all 13 content gates passing, so there are no additional findings relative to main.
+- Fresh five-file comparison passed filename, invariant metadata, heading-level and component-count parity; all Urdu MDX bodies compiled. Both locales remain draft. Existing terminology proposals, G1/G3 dependencies and independent G5/rendered inspection handoff remain applicable. Build and browser inspection remain prohibited by this crew brief.
+
+### Committed-input follow-up
+
+The post-commit check caught that this handoff and its retry logs are themselves bound G2 inputs. Updating them after preparing evidence made that intermediate record stale. The retry therefore freezes these translation files first and prepares a subsequent G2 record against the committed bundle. The current Unit 7 G2 tracker row names the authoritative record. Final validation is run again after that record and tracker reference are committed; no translation files are changed after preparation.
