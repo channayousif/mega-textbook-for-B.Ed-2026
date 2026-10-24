@@ -47,11 +47,10 @@ These supplement the guide's print-only list with verified open-access works cho
 
 | Key | Citation | DOI/URL | Units | Note |
 |---|---|---|---|---|
-| durrani-dunne-2010 | Durrani, N., & Dunne, M. (2010). Curriculum and national identity: exploring the links between religion and nation in Pakistan. *Journal of Curriculum Studies*, 42(2), 215-240. | https://doi.org/10.1080/00220270903312208 (open copy: https://figshare.com/articles/journal_contribution/Curriculum_and_national_identity_exploring_the_links_between_religion_and_nation_in_Pakistan/23374475) | 1, 6 | how Pakistan's school curriculum and Pakistan Studies teaching construct national ideology and identity, and the place of religion in it; supports national ideology and identity and Pakistan Studies in its educational context (Unit 1) and the role of education in national integration (Unit 6). OpenAlex W2052051061, Crossref DOI, verified 2026-10-23 |
 | hassan-2020-two-nation | Hassan, M. (2020). The Two Nation Theory and the creation of Pakistan. *Asian Journal of Social Sciences and Management Studies*, 7(2), 80-88. | https://doi.org/10.20448/journal.500.2020.72.80.88 | 1, 2 | origin and significance of the Two-Nation Theory and its role in the demand for and creation of Pakistan. OpenAlex W3034006569, Crossref DOI, verified 2026-10-23 |
 | khan-khan-2020-aligarh | Khan, H., & Khan, M. U. (2020). The Aligarh miracle: a reappraisal in context of the causal dimensions of contemporary social movement theories. *Journal of History and Social Sciences*, 11(1), 17-38. University of Karachi. | https://doi.org/10.46422/jhss.v11i1.102 | 2 | Sir Syed Ahmad Khan's Aligarh Movement as a reform movement: the Muslim decline it answered, modern education, and its effect on the Muslim middle class and political consciousness. OpenAlex W3106934127, Crossref DOI, verified 2026-10-23 |
 | hussain-kokab-2012-18th | Hussain, M., & Kokab, R. U. (2012). Eighteenth Amendment in the Constitution of Pakistan: success and controversies. *Asian Social Science*, 8(1), 81. CC BY 4.0. | https://doi.org/10.5539/ass.v8n1p81 | 3, 4 | the 1973 Constitution as amended in 2010: restoration of its parliamentary form, provincial autonomy and the federal structure, and the debates the amendment raised. OpenAlex W2127299016, Crossref DOI, verified 2026-10-23 |
-| worldbank-pdu-2025 | World Bank. (2025). *Pakistan Development Update, October 2025: Staying the Course for Growth and Jobs*. World Bank, Washington, DC. CC BY 3.0 IGO. | https://doi.org/10.1596/45320 (repository: https://hdl.handle.net/10986/45320) | 5 | current data and analysis on Pakistan's growth, agriculture, industry, trade, poverty and debt. OpenAlex W7172064073, Crossref DOI, verified 2026-10-23 |
+| worldbank-pdu-2025 | World Bank. (2025). *Pakistan Development Update, October 2025: Staying the Course for Growth and Jobs*. World Bank, Washington, DC. CC BY-NC 3.0 IGO. | https://doi.org/10.1596/45320 (repository: https://hdl.handle.net/10986/45320) | 5 | current data and analysis on Pakistan's growth, agriculture, industry, trade, poverty and debt. OpenAlex W7172064073, Crossref DOI, verified 2026-10-23 |
 | khan-2015-foreign-policy | Khan, R. M. (2015). Foreign policy of Pakistan in the changing regional and global settings. *Journal of Contemporary Studies*, 4(1), 14-30. National Defence University, Islamabad. | https://doi.org/10.54690/jcs.v4i1.74 | 6 | principles of Pakistan's foreign policy and its relations with neighbouring and major powers. OpenAlex W3208096173, Crossref DOI, verified 2026-10-23 |
 | pak-constitution-1973 | Government of Pakistan, National Assembly. *The Constitution of the Islamic Republic of Pakistan* (1973; amended to the Twentieth Amendment, 28 February 2012). | https://na.gov.pk/uploads/documents/1333523681_951.pdf | 1, 3, 4 | the full text of the 1973 Constitution, including the Preamble (Objectives Resolution), fundamental rights, principles of policy and Islamic provisions; open access. Primary text, not in a scholarly registry: National Assembly PDF checked 2026-10-23 (222 pages; title page states amendments to 28 February 2012); replaces `uploads/documents/1973_constitution.pdf`, which returns HTTP 404 |
 
@@ -99,7 +98,7 @@ Weeks 1-2. Unit Spec (G1) for `docs/semester-2/gpks-402/unit-01/`.
 
 **Common misconceptions**: "Pakistan Studies is only a history subject"; "the Two-Nation Theory means Hindus and Muslims cannot live together"; " ideology and religion are the same thing"; "Pakistan Studies has no relevance to classroom teaching".
 
-**Mapped readings**: hec-pak-studies, rabbani-pak-studies, pak-constitution-1973, durrani-dunne-2010, hassan-2020-two-nation.
+**Mapped readings**: hec-pak-studies, rabbani-pak-studies, pak-constitution-1973, hassan-2020-two-nation.
 
 **Figure plan**:
   - fig-U1-1 - `concept-map` - Pakistan Studies at the centre, linked to its sub-disciplines (history, geography, economy, civics, culture) and to its purpose in teacher education (Topic 1.1)
@@ -345,7 +344,7 @@ Weeks 13-15. Unit Spec (G1) for `docs/semester-2/gpks-402/unit-06/`. Week 16 is 
 
 **Common misconceptions**: "foreign policy is only about relations with India"; "terrorism is caused only by poverty"; "education cannot address extremism"; "civic education is only about voting"; "teachers have no role in nation building beyond the classroom".
 
-**Mapped readings**: burki-fifty-years, khan-2015-foreign-policy, durrani-dunne-2010.
+**Mapped readings**: burki-fifty-years, khan-2015-foreign-policy.
 
 **Figure plan**:
   - fig-U6-1 - `diagram` - Pakistan's foreign policy: principles at the centre, linked to key relationships (India, Afghanistan, China, Iran) and international forums (Topic 6.1)

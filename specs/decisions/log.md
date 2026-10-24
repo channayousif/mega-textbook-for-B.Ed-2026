@@ -3921,3 +3921,147 @@ content-improvement loop with no further cycle.
   corpus-wide and goes in its own change. Other specs that state "formative 5-8" for a three-topic
   unit are read under this ruling until they are next revised. Does not rule on units with four or
   more topics. Approves no specification and authorises no publication.
+
+## D-2026-0073 - GPKS-402 re-intake after the reading-list repair: seven criteria approved; readings fail on two row corrections
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** GPKS-402 Pakistan Studies, `specs/content/gpks-402/content-spec.md` (status: draft) at
+  commit `01845105`, after the author repair `81f4c4c9` and the `D-2026-0072` blueprint wording
+  `d4a3ad23`. Settles identity, partition, coverage, outcomes, blueprint, structure and decision
+  residue for all six units. **Supersedes `D-2026-0071`**, which is void under Art. VII.8.5
+  (`content-spec.md`, a bound input, changed after its bundle). `D-2026-0071` is not edited.
+- **Decided by:** agent:evaluator, 2026-10-23 (fresh session; did not draft the spec or the repair)
+- **Decision:**
+  1. **identity - approved.** GPKS-402, "Pakistan Studies", 2 (2-0), General Education, Semester 2,
+     as `catalog/courses.json` and the revised Scheme record; the guide's "GPKS - 302" is the slip
+     `G-2026-03` (resolved) adjudicated.
+  2. **partition - approved on owner rulings.** The guide has a week table and no units; the
+     six-unit grouping (Weeks 1-2 / 3-4 / 5-6 / 7-8+10 / 11-12 / 13-15) is the one `D-2026-0053`
+     item 1 confirmed and `D-2026-0070` item 1 keeps. Week numbers, the Week 9 and Week 16
+     placement and the unit titles match the guide.
+  3. **coverage - approved at row level.** The guide's 43 teaching bullets map to the 47 checklist
+     rows exactly once each, with three compound bullets decomposed in the guide's words
+     (U3-02/03, U4-02/03/04, U5-01/02); no row adds a sub-topic.
+  4. **outcomes - approved.** All 14 SLOs have a guide-week ancestor; 13 trace to the stated
+     objectives on their wording; SLO 6-1 rests on `D-2026-0053` item 4.
+  5. **blueprint - approved.** Unit-end 10/10/5 bank, Bloom bands, per-topic minimums, ERQ
+     arithmetic, summative Analyze-or-higher and 60/40 are consistent with
+     `specs/content/style-guide.md:227-250`. Two-topic Units 1, 2, 3, 5 keep "formative 5-8"; the
+     three-topic Units 4 and 6 state "formative 9 items, 3 per topic" as the confirmed
+     `D-2026-0072` prescribes (`content-spec.md:215`, `:317`), consistent with the gate's
+     >= 3-per-topic floor. `G-2026-154` is resolved.
+  6. **structure - approved.** Front matter valid against
+     `contracts/content-spec-frontmatter.schema.json`; every required section and per-unit block
+     present and parseable; `validate:content` exit 0.
+  7. **decision-residue - approved.** Whole spec searched for each confirmed decision in scope
+     (`G-2026-03`, `D-2026-0003`, `D-2026-0052`, `D-2026-0053`, `D-2026-0070`, `D-2026-0072`).
+     The `D-2026-0052` Units-column repair is now made (all eleven keys agree with the mapped
+     lines); the six entries `D-2026-0071` found defective are gone; superseded locators survive
+     only inside replacement notes.
+- **Not approved:**
+  - **readings - fail (author repair, determined by `D-2026-0053` item 2 as applied in
+    `D-2026-0066`; no escalation).** Every repaired row was checked against Crossref, OpenAlex,
+    the publisher and the stated locator on 2026-10-23. All seven author-selected works are real
+    and are the works described; all six DOIs and six OpenAlex IDs are real and match. Every unit
+    maps at least one genuinely open-access, registry-verified source, and the Units column now
+    matches the mapped lines. Two rows are wrong as written: (a) `durrani-dunne-2010`
+    (`content-spec.md:50`) gives figshare 23374475 as its "open copy", but that record is
+    metadata only (figshare API `is_metadata_record: true`, no files; the Sussex page says "Full
+    text available: No") and the DOI copy is paywalled, so the row should not sit in the
+    open-access table as it stands; (b) `worldbank-pdu-2025` (`:54`) states CC BY 3.0 IGO, but
+    the OKR item records CC BY-NC 3.0 IGO.
+- **Basis:** guide `Scheme-and-Course-guides/extracted-text/2nd 2026.txt` - code and credit hours
+  `:980-982`; objectives `:996-1006`; weekly breakdown `:1008-1141` (mid-term `:1085`, review
+  `:1137-1141`); readings `:1143-1153`. Revised Scheme `B.Ed 4 Year 2026 revised after board.txt:90`
+  and `:178-184`. Owner rulings `G-2026-03`, `D-2026-0053` items 1, 2, 4, 5, `D-2026-0070` item 1,
+  `D-2026-0072`; confirmed `D-2026-0052` and `D-2026-0066`; `D-2026-0001`;
+  `scripts/check-source-floor.mjs:40-41,75-76`. Deterministic checks at `3ac8c6a4`:
+  validate:content, pipeline-gate, depth-gate, figures, no-em-dash, no-answer-keys, concept-graph,
+  bloom-bands, source-floor, licence, licence:map:check, docs-sync exit 0 (vacuous for GPKS-402,
+  which has no authored unit); content-status exit 1 (stale `static/content-status.json`, unbound,
+  unrelated). Per-row evidence is in `specs/content/gpks-402/intake-20261023b/evaluation.md`.
+- **Bound to:** `specs/content/gpks-402/intake-20261023b/manifest.json`, manifest digest
+  `68a2e2f824df346af047a966364d2f02859db27c3186b701e716c5afcce8b951` (59 inputs at commit
+  `01845105`; recomputed with `manifestFor()`, 0 digest mismatches, digest reproduced; the only
+  extra path in the recompute is the bundle's own `manifest.json`, committed after preparation;
+  registers `specs/decisions/log.md` `66604b26...` and `specs/gaps.md` `383dcc3b...` matched at read
+  time). A change to any bound input voids this decision (Art. VII.8.5).
+- **Blocked, by unit and section:** the `## Reading list` author-selected table rows
+  `durrani-dunne-2010` and `worldbank-pdu-2025`, and with the former the `**Mapped readings**`
+  lines of Units 1 and 6 (`:102`, `:348`) wherever they rely on it as open access. Nothing else.
+- **Limits:** the spec stays `status: draft` and may not move to `approved` on confirmation of this
+  entry: the readings repair changes `content-spec.md`, which voids it, and a fresh bundle is
+  needed. That intake may limit itself to the two rows and a fresh decision-residue search if
+  every other bound input is byte-identical. Does not settle the Week 16 course-review question
+  `D-2026-0052` left open or the row glosses left to G3. Advisories, no repair required: the
+  2012 Constitution edition predates later amendments touching the judiciary (check U4-04 against
+  the current text); `hussain-kokab-2012-18th` is dated 2011-12-30 online; the JHSS site carries
+  injected third-party links (cite the DOI). Opens no gap. Certifies no content, qualifies no
+  reviewer, authorises no publication (Art. VII.8.4).
+
+## D-2026-0074 - GPKS-402 re-intake after the two-row readings repair: all eight criteria approved
+
+- **Status:** pending-owner-review
+- **Gate:** G0 intake / G1 unit-spec
+- **Scope:** GPKS-402 Pakistan Studies, `specs/content/gpks-402/content-spec.md` (status: draft) at
+  commit `49c7cf87`, after the author repair of the two reading-list rows `D-2026-0073` named.
+  Settles identity, partition, coverage, outcomes, readings, blueprint, structure and decision
+  residue for all six units. **Supersedes `D-2026-0073`**, which is void under Art. VII.8.5
+  (`content-spec.md`, a bound input, changed after its bundle). `D-2026-0073` is not edited.
+- **Decided by:** agent:evaluator, 2026-10-23 (fresh session; did not draft the spec or either repair)
+- **Decision:**
+  1. **identity, partition, coverage, outcomes, blueprint - approved, carried from
+     `D-2026-0073`.** Entry-by-entry comparison of the two bundles shows the only changed
+     normative input is `content-spec.md`, and its diff (`git diff 01845105 49c7cf87`) is three
+     hunks confined to the author-selected reading table and the Units 1 and 6 Mapped readings
+     lines. Guide, Scheme, catalog, contracts, style guide, terminology, constitution, skill and
+     agent file are byte-identical, and no checklist, topic list, SLO, blueprint or schedule line
+     changed, so `D-2026-0073`'s checked findings for these five criteria still describe this
+     spec. Partition rests on `D-2026-0053` item 1 and `D-2026-0070` item 1; SLO 6-1 on
+     `D-2026-0053` item 4; Units 4 and 6 formative wording on `D-2026-0072`.
+  2. **readings - approved, re-verified in full.** `durrani-dunne-2010` is gone from the table and
+     from the Unit 1 and Unit 6 Mapped readings (`:101`, `:347`); `worldbank-pdu-2025` (`:53`) now
+     states CC BY-NC 3.0 IGO, matching the OKR item's `dc.rights`. All six remaining open-access
+     rows (`:50-55`) re-checked on 2026-10-23: each DOI and OpenAlex ID is real and matches the
+     row, and the full text of each was actually downloaded as a PDF whose opening page matches the
+     citation. The Units column equals the Mapped readings for all ten keys. Every unit maps >= 1
+     registry-verified open-access source (U1, U2 `hassan-2020-two-nation`; U2
+     `khan-khan-2020-aligarh`; U3, U4 `hussain-kokab-2012-18th`; U5 `worldbank-pdu-2025`; U6
+     `khan-2015-foreign-policy`), meeting `open_access_floor.default: 1` under `D-2026-0053`
+     item 2. The four guide entries are print, title-level under `D-2026-0001`.
+  3. **structure - approved.** Front matter re-validated against
+     `contracts/content-spec-frontmatter.schema.json` (Ajv 2020, valid); all required sections
+     present; `validate:content` exit 0.
+  4. **decision-residue - approved, redone over the whole spec** for `G-2026-03`, `D-2026-0001`,
+     `D-2026-0003`, `D-2026-0052`, `D-2026-0053`, `D-2026-0066`, `D-2026-0070`, `D-2026-0072`:
+     no superseded design survives; superseded locators occur only inside replacement notes
+     (`:41`, `:55`). The `D-2026-0073` repairs leave no residue (`durrani`, `figshare`,
+     "CC BY 3.0": 0 hits).
+- **Basis:** guide `Scheme-and-Course-guides/extracted-text/2nd 2026.txt` - code and credit hours
+  `:980-982`; objectives `:996-1006`; weekly breakdown `:1008-1141`; readings `:1143-1153`.
+  Revised Scheme `B.Ed 4 Year 2026 revised after board.txt:90`, `:178-184`. Owner rulings
+  `G-2026-03`, `D-2026-0053` items 1, 2, 4, 5, `D-2026-0070` item 1, `D-2026-0072`; confirmed
+  `D-2026-0052`, `D-2026-0066`; `D-2026-0001`. Carried findings:
+  `specs/content/gpks-402/intake-20261023b/evaluation.md` (locators at or after old `:50` are now
+  one lower). Deterministic checks at `99c9621e`: validate:content, pipeline-gate, depth-gate,
+  figures, no-em-dash, no-answer-keys, concept-graph, bloom-bands, source-floor, licence,
+  licence:map:check, docs-sync exit 0 (vacuous for GPKS-402, which has no authored unit);
+  content-status exit 1 (stale `static/content-status.json`, unbound, unrelated). Per-row evidence
+  in `specs/content/gpks-402/intake-20261023c/evaluation.md`.
+- **Bound to:** `specs/content/gpks-402/intake-20261023c/manifest.json`, manifest digest
+  `42398cabc89d1fdc4a8a72704715c2d4ce594c8a54fb7fe70c8b09d06251725c` (61 inputs at commit
+  `49c7cf87`; recomputed with `manifestFor()`, 0 digest mismatches, digest reproduced; the only
+  extra path in the recompute is the bundle's own `manifest.json`, committed after preparation;
+  registers `specs/decisions/log.md` `dfba85eb...` and `specs/gaps.md` `383dcc3b...` matched at
+  read time). A change to any bound input voids this decision (Art. VII.8.5).
+- **Blocked, by unit and section:** nothing.
+- **Limits:** the spec stays `status: draft`; this entry does not change it, and moving it to
+  `approved` is the owner's act on confirmation. Does not settle the Week 16 course-review
+  question `D-2026-0052` left open or the row glosses left to G3. Advisories, no repair required:
+  Unit 1's ideology/identity and educational-context rows and Unit 6's education-and-integration
+  rows (U6-08 to U6-10) now have no topic-specific open-access source (the floor is per unit and
+  is met); `worldbank-pdu-2025` is NC-licensed, so any figure redrawn from its data should be
+  checked at G3; the `D-2026-0073` advisories stand (2012 Constitution edition, check U4-04;
+  `hussain-kokab` online date; cite the JHSS DOI, not the site). Opens no gap. Certifies no
+  content, qualifies no reviewer, authorises no publication (Art. VII.8.4).
