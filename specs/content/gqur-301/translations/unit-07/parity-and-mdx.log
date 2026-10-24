@@ -1,0 +1,14 @@
+PASS index.mdx: draft, invariant metadata, heading/component/import/glossary parity, figure description, MDX compilation
+PASS topic-01.mdx: draft, invariant metadata, heading/component/import/glossary parity, figure description, MDX compilation
+PASS topic-02.mdx: draft, invariant metadata, heading/component/import/glossary parity, figure description, MDX compilation
+PASS unit-assessment.mdx: draft, invariant metadata, heading/component/import/glossary parity, figure description, MDX compilation
+PASS unit-teacher-notes.mdx: draft, invariant metadata, heading/component/import/glossary parity, figure description, MDX compilation
+PASS Learning Outcome: نتیجہ ہائے تعلم
+PASS Summative Assessment: مجموعی جائزہ
+PASS Self-Assessment: خود جائزہ
+PASS Rubric: معیارِ جانچ
+PASS Assessment: تشخیص
+PASS Teaching Strategy: حکمتِ تدریس
+PASS کثیرالانتخابی سوالات (MCQs): 10
+PASS محدود جواب کے سوالات (RRQs): 10
+PASS تفصیلی جواب کے سوالات (ERQs): 5
