@@ -41,7 +41,7 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit 3 | G1 unit-spec | ▢ | | pending G0 intake |
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-03/G2/20261022T004504074Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | agent:codex-g3-reviewer | Advisory escalate: specs/content/gsos-301/reviews/unit-03/G3/01a16968-f1c8-7233-add1-497c86787970.json; role conflict/strain, missing figures, assessment and source/mapping repairs; provenance/render evidence incomplete; no certification |
-| Unit 3 | G4 ur-translation | ▢ | | |
+| Unit 3 | G4 ur-translation | ▢ | | Blocked before translation: English role conflict/strain and assessment defects remain; translate-unit stop rule applies; separate author repair required; handoff reviews/unit-03/G4/translation-handoff.md; translation_status stays draft |
 | Unit 3 | G5 ur-review | ▢ | | |
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |

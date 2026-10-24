@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T16:00:11.511Z",
+  "generated_at": "2026-10-24T17:18:23.381Z",
   "courses": [
     {
       "course_code": "EFMP-301",
@@ -1635,7 +1635,7 @@
       ]
     }
   ],
-  "commit": "b2bf0e8cce869d27518935e05a00a0e85a9fa25e",
+  "commit": "d064fe72144f24a544de194cda53f8632ffc98d2",
   "trackers": {
     "specs/content/efmp-301/tasks.md": "b11e2a2a0a1f52518ee0f609fd56efe5bc6a6ffb3e6d48f3b281b55e2479f00b",
     "specs/content/efmp-302/tasks.md": "c5da2fd00a26658998db5a62a969e160d5b3ab6a0dea48282ad58101053074f2",
@@ -1649,6 +1649,6 @@
     "specs/content/geng-301/tasks.md": "413520059dae1e8a8509cc25ba0e20f0525002930f4a212a4e26fcb174306c1f",
     "specs/content/gpks-402/tasks.md": "8d2b0c6015c1afb1c2820e81cc78f750ac9fa2e1decb507204a294da54bb12cf",
     "specs/content/gqur-301/tasks.md": "e0a9766f4ee52ea7e87513b9cdd8bccb59e51f22e245d43f458dec65a30e6657",
-    "specs/content/gsos-301/tasks.md": "95b51454aa7f1380671f0c62b4c1af3589435c510e04e85a0facf381193873bd"
+    "specs/content/gsos-301/tasks.md": "c441b8d0140a4e4995b6847d0e56a00120dbd96d7ab71f5fafc9b959c56cdc6f"
   }
 }
