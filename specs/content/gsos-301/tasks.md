@@ -40,7 +40,7 @@ G1 unit-spec drafted (pending G0 intake approval).
 |---|---|---|---|---|
 | Unit 3 | G1 unit-spec | ▢ | | pending G0 intake |
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-03/G2/20261022T004504074Z-gates.json |
-| Unit 3 | G3 en-review | ▢ | | |
+| Unit 3 | G3 en-review | ▢ | agent:codex-g3-reviewer | Advisory escalate: specs/content/gsos-301/reviews/unit-03/G3/01a16968-f1c8-7233-add1-497c86787970.json; role conflict/strain, missing figures, assessment and source/mapping repairs; provenance/render evidence incomplete; no certification |
 | Unit 3 | G4 ur-translation | ▢ | | |
 | Unit 3 | G5 ur-review | ▢ | | |
 | Unit 3 | G6 assets | ▢ | | |
@@ -70,12 +70,12 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit 5 | G6 assets | ▢ | | 4 EN SVG figures placed with dark variants; `.ur.svg` labels pending G4 |
 | Unit 5 | G7 publish | ▢ | | |
 
-**Unit 6 - Social Change and Social Problems:** not started.
+**Unit 6 - Social Change and Social Problems:** English content authored to the Spec 008 v3.0 per-topic layout: `index.mdx` + `topic-01..02.mdx` (nine-part cycles) + `unit-assessment.mdx` (10/10/5 bank + bounded answers) + `unit-teacher-notes.mdx`. Governance artefacts (coverage, sources, figures, concepts) committed. Figures rendered and placed (4 SVGs + dark variants). G1 unit-spec drafted (pending G0 intake approval).
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 6 | G1 unit-spec | ▢ | | pending G0 intake |
-| Unit 6 | G2 en-draft | ▢ | | |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-06/G2/20261022T202014023Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | |
 | Unit 6 | G4 ur-translation | ▢ | | |
 | Unit 6 | G5 ur-review | ▢ | | |
