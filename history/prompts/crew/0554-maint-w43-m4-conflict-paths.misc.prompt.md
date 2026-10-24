@@ -31,7 +31,7 @@ Read .crew/brief.md in the current directory and carry it out completely. It is 
 
 ## Response snapshot
 
-Added a pure `exclusionReason(branch, paths)` helper to scripts/crew/batch.mjs that builds the batch-exclusion reason string. It starts with "<branch> conflicts with main" and lists at most five of the unmerged paths, with a count of the rest. Updated `tryMerge` in `batchPhase` (scripts/crew/crew.mjs) to read `git diff --name-only --diff-filter=U` before `git merge --abort` and pass those paths to the helper. Added tests covering zero, one and more than five paths. Added registry row I-0009 as proposed with an empty signature.
+Added a pure `exclusionReason(branch, paths)` helper to scripts/crew/batch.mjs that builds the batch-exclusion reason string. It starts with "<branch> conflicts with main" and lists at most five of the unmerged paths, with a count of the rest. Updated `tryMerge` in `batchPhase` (scripts/crew/crew.mjs) to read `git diff --name-only --diff-filter=U` before `git merge --abort` and pass those paths to the helper. Added tests covering zero, one and more than five paths. Added registry row I-0011 as proposed with an empty signature.
 
 ## Outcome
 
@@ -43,9 +43,9 @@ Added a pure `exclusionReason(branch, paths)` helper to scripts/crew/batch.mjs t
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: `exclusionReason` helper in batch.mjs; tryMerge now reads conflicting paths before aborting and uses the helper; tests; registry I-0009.
+- Shipped / changed: `exclusionReason` helper in batch.mjs; tryMerge now reads conflicting paths before aborting and uses the helper; tests; registry I-0011.
 - Decisions the team must respect: the reason string still starts with "<branch> conflicts with main" as the acceptance requires; the five-fix ceiling and resolveSharedConflicts are unchanged.
-- Pending / next owner: F5 follow-up - serialise branches by shared file so concurrent batches stop racing on the same conflict paths. I-0009 stays proposed until that lands.
+- Pending / next owner: F5 follow-up - serialise branches by shared file so concurrent batches stop racing on the same conflict paths. I-0011 stays proposed until that lands.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
