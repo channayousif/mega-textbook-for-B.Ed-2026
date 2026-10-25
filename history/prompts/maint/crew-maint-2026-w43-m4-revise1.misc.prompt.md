@@ -153,26 +153,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Renumbered the M4 registry row from I-0009 to I-0011 (and updated the PHR references) to avoid the ID clash with PR #326, which also adds an I-0009 row.
+1. Renumbered the M4 registry row from I-0009 to I-0011 (and updated the PHR references) to avoid the ID clash with PR #326.
+2. Merged origin/main into the branch (PR #328 had gone stale). Resolved one conflict in `specs/intelligence/registry.md`: main had added I-0007, I-0008, I-0009 with different content than the branch's I-0007 and I-0008. Kept main's entries in main's order, then renumbered the branch's colliding IDs (branch I-0007 -> I-0010, branch I-0008 -> I-0012) and kept I-0011. The branch's versions are not exact duplicates (different kind/home/status), so both sides are preserved.
+3. Regenerated `static/content-status.json` after the merge untracked it (M1's change); the file is gitignored.
 
 ## Outcome
 
-- Impact: fix for MAINT Unit 435 by opencode (attempt 1).
-- Tests: npm run check:content passed in the job worktree before the PR was opened.
-- Files: 6 file(s), listed above.
+- Impact: merge conflict resolution + registry renumbering for MAINT Unit 435 by opencode.
+- Tests: all 13 content gates pass; registries/batch/worktrees/intel unit tests pass (25/25).
+- Files: specs/intelligence/registry.md (conflict resolution + renumbering to I-0010/I-0012), static/content-status.json (regenerated after untrack).
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Renumbered the M4 registry row from I-0009 to I-0011 (and updated the PHR references) to avoid the ID clash with PR #326, which also adds an I-0009 row.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Shipped / changed: merged origin/main into crew/maint-2026-w43-m4; resolved the registry conflict by keeping main's I-0007/I-0008/I-0009 and renumbering the branch's colliding I-0007->I-0010 and I-0008->I-0012; regenerated the now-untracked content-status.json. No course content touched; no ADRs changed; no self-signing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything. The registry is append-only: both sides' entries preserved, never removed main entries.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS
+- Graders run and results (PASS/FAIL): check:content all 13 gates PASS; node --test tests/crew/registries.test.mjs batch.test.mjs worktrees.test.mjs intel.test.mjs 25/25 PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
