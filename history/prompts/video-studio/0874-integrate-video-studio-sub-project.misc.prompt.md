@@ -14,7 +14,7 @@ links:
   spec: specs/027-video-studio/spec.md
   ticket: null
   adr: history/adr/0031-video-studio-sub-project.md
-  pr: null
+  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/336
 files:
  - video-studio/** (62 files installed from package v1.6, incl. specs/000-discovery/discovery.md, history/adr/0011-kaggle-media-runner.md)
  - specs/027-video-studio/spec.md
@@ -69,7 +69,7 @@ would make every unit's G2/G3 evidence stale.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: `video-studio/` (package v1.6) on branch `feature/video-studio`, worktree `~/wt-video-studio`; root `.gitignore` media block; `tsconfig.json` exclude; root `.claude/settings.json` deny rules for video approvals; `scripts/check-no-media-in-video-studio.mjs` (`npm run check:no-media`); CI steps for it and for the em-dash gate on `video-studio/`; ADR-0031; spec 027; AGENTS.md pointer. Not pushed and no PR as of writing.
+- Shipped / changed: `video-studio/` (package v1.6) on branch `feature/video-studio`, worktree `~/wt-video-studio`; root `.gitignore` media block; `tsconfig.json` exclude; root `.claude/settings.json` deny rules for video approvals; `scripts/check-no-media-in-video-studio.mjs` (`npm run check:no-media`); CI steps for it and for the em-dash gate on `video-studio/`; ADR-0031; spec 027; AGENTS.md pointer. PR #336.
 - Decisions the team must respect: media never enters git (CI fails on it); renders run on Kaggle, never on the production host; agents never record video approvals; bare `ADR-NNNN` means the parent repo and `VS-ADR-NNNN` the sub-project; crew corpus jobs must not touch `video-studio/`.
 - Pending / next owner: owner approves `video-studio/specs/000-discovery/discovery.md` and answers its 5 open questions (notably: only 2 units are `certified`, 84 `gated`, so a certified-only filter yields 2 topics); owner sets up Kaggle token and `MEDIA_ROOT`; owner times the Art. VI.3 constitution wording amendment (v5.1.0) to coincide with the next standard change; crew lead verifies the planner ignores `video-studio/`.
 - Paperclip issues affected: none (Paperclip retired; crew owns corpus work).
