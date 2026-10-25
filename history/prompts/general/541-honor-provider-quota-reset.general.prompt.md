@@ -33,7 +33,7 @@ Read .crew/brief.md in the current directory and carry it out completely. It is 
 
 ## Response snapshot
 
-Implemented maintenance task M3: parse relative reset intervals, use the larger reset or strike cooldown, fix the stale worker-chain expectation, and add proposed intelligence I-0010.
+Implemented maintenance task M3: parse relative reset intervals, use the larger reset or strike cooldown, fix the stale worker-chain expectation, and add proposed intelligence I-0013.
 
 ## Outcome
 
