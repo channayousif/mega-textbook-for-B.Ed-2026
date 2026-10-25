@@ -1,0 +1,258 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "video-studio/script.schema.json",
+  "title": "Urdu short script",
+  "type": "object",
+  "required": [
+    "episode_id",
+    "language",
+    "source",
+    "learning_objective",
+    "lines",
+    "cta",
+    "on_screen_title_ur"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "episode_id": {
+      "type": "string"
+    },
+    "language": {
+      "const": "ur"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "url",
+        "path_ur",
+        "sha256",
+        "captured_at",
+        "excerpts"
+      ],
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "path_ur": {
+          "type": "string"
+        },
+        "excerpts": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "id",
+              "text"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "text": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$",
+          "description": "SHA-256 of the normalised Urdu source markdown at capture time; a mismatch later voids script approval"
+        },
+        "captured_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "revision": {
+          "type": "string",
+          "description": "git commit of the textbook repo when captured"
+        },
+        "language": {
+          "enum": [
+            "ur",
+            "en-adapted"
+          ],
+          "default": "ur",
+          "description": "en-adapted = Urdu page missing; script adapted from the English page - must be labelled and reviewed (VS-004 PI-01)"
+        }
+      }
+    },
+    "learning_objective": {
+      "type": "object",
+      "required": [
+        "ur",
+        "en"
+      ],
+      "description": "One observable objective. en is for the owner's review only and never appears on screen.",
+      "properties": {
+        "ur": {
+          "type": "string"
+        },
+        "en": {
+          "type": "string"
+        }
+      }
+    },
+    "on_screen_title_ur": {
+      "type": "string",
+      "maxLength": 40
+    },
+    "lines": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 14,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "segment",
+          "speaker",
+          "text_ur",
+          "visual"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^L[0-9]{2}$"
+          },
+          "segment": {
+            "enum": [
+              "hook",
+              "beat1",
+              "beat2",
+              "beat3",
+              "recap",
+              "cta"
+            ]
+          },
+          "speaker": {
+            "type": "string",
+            "description": "character key from brand-bible.yaml"
+          },
+          "text_ur": {
+            "type": "string"
+          },
+          "delivery": {
+            "type": "string",
+            "description": "short style note appended to the voice's locked style prompt, e.g. 'curious', 'warm, slower'"
+          },
+          "source_excerpt_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "required for factual lines (beats, recap)"
+          },
+          "gesture": {
+            "enum": [
+              "idle",
+              "explain",
+              "point",
+              "think",
+              "celebrate"
+            ]
+          },
+          "visual": {
+            "type": "object",
+            "required": [
+              "kind"
+            ],
+            "properties": {
+              "kind": {
+                "enum": [
+                  "character_only",
+                  "diagram",
+                  "title_card",
+                  "illustration",
+                  "broll",
+                  "end_card"
+                ]
+              },
+              "diagram": {
+                "type": "object",
+                "description": "Remotion-animated diagram spec",
+                "properties": {
+                  "type": {
+                    "enum": [
+                      "list",
+                      "steps",
+                      "compare",
+                      "cycle",
+                      "pyramid",
+                      "definition"
+                    ]
+                  },
+                  "items_ur": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "maxItems": 6
+                  }
+                }
+              },
+              "shot_id": {
+                "type": "string",
+                "description": "for illustration/broll - matches handoff + filename"
+              },
+              "prompt_en": {
+                "type": "string",
+                "description": "generation prompt for illustration/broll (English works best with Veo/image models)"
+              },
+              "overlay_text_ur": {
+                "type": "string",
+                "maxLength": 50
+              }
+            }
+          }
+        }
+      }
+    },
+    "cta": {
+      "type": "object",
+      "required": [
+        "template_id",
+        "text_ur",
+        "url"
+      ],
+      "properties": {
+        "template_id": {
+          "type": "string"
+        },
+        "text_ur": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "stats": {
+      "type": "object",
+      "properties": {
+        "word_count": {
+          "type": "integer",
+          "minimum": 110,
+          "maximum": 150
+        },
+        "est_seconds": {
+          "type": "number",
+          "minimum": 40,
+          "maximum": 60
+        },
+        "broll_count": {
+          "type": "integer",
+          "maximum": 2
+        }
+      }
+    }
+  }
+}

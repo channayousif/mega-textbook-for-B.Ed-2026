@@ -1,0 +1,379 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "video-studio/episode.schema.json",
+  "title": "Episode",
+  "type": "object",
+  "required": [
+    "episode_id",
+    "topic_id",
+    "status",
+    "created_at",
+    "history"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "episode_id": {
+      "type": "string",
+      "pattern": "^[0-9]{8}-[a-z0-9-]+$"
+    },
+    "topic_id": {
+      "type": "string"
+    },
+    "series": {
+      "type": "string",
+      "description": "optional series key from brand-bible series list"
+    },
+    "status": {
+      "enum": [
+        "queued",
+        "scripting",
+        "script_review",
+        "script_approved",
+        "awaiting_assets",
+        "asset_review",
+        "assets_approved",
+        "rendering",
+        "render_review",
+        "render_approved",
+        "packed",
+        "published",
+        "shelved"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source_url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "script_version": {
+      "type": "integer"
+    },
+    "assets": {
+      "type": "object",
+      "properties": {
+        "required": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "expected filenames from handoff"
+        },
+        "received": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "missing": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "manifest": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "item_id",
+              "path",
+              "kind",
+              "sha256",
+              "source_tool",
+              "rights_note",
+              "imported_at"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "item_id": {
+                "type": "string",
+                "description": "line id (L03) or shot id (B1)"
+              },
+              "path": {
+                "type": "string"
+              },
+              "kind": {
+                "enum": [
+                  "audio",
+                  "video",
+                  "image"
+                ]
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "source_tool": {
+                "type": "string",
+                "description": "e.g. google-ai-studio-tts, flow-veo-3.1-fast, gemini-image, chatgpt-image, human-recording"
+              },
+              "prompt": {
+                "type": "string"
+              },
+              "take": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "rights_note": {
+                "type": "string",
+                "description": "terms/licence/consent statement for this asset"
+              },
+              "imported_at": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "reviewed_by": {
+                "type": "string"
+              },
+              "status": {
+                "enum": [
+                  "pending",
+                  "accepted",
+                  "rejected"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "render": {
+      "type": "object",
+      "properties": {
+        "file": {
+          "type": "string"
+        },
+        "duration_s": {
+          "type": "number"
+        },
+        "lufs": {
+          "type": "number"
+        },
+        "audit_passed": {
+          "type": "boolean"
+        },
+        "subtitles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "captions.ur.srt, captions.ur.vtt"
+        },
+        "sha256": {
+          "type": "string"
+        }
+      }
+    },
+    "publish": {
+      "type": "object",
+      "properties": {
+        "platforms": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "platform"
+            ],
+            "properties": {
+              "platform": {
+                "enum": [
+                  "youtube",
+                  "instagram",
+                  "facebook",
+                  "tiktok"
+                ]
+              },
+              "url": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string",
+                "format": "date-time"
+              }
+            }
+          }
+        }
+      }
+    },
+    "history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "at",
+          "from",
+          "to",
+          "by"
+        ],
+        "properties": {
+          "at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "from": {
+            "type": "string"
+          },
+          "to": {
+            "type": "string"
+          },
+          "by": {
+            "enum": [
+              "owner",
+              "claude"
+            ]
+          },
+          "note": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "mode": {
+      "enum": [
+        "production",
+        "sample"
+      ],
+      "default": "production",
+      "description": "sample = fixture content; production commands refuse it"
+    },
+    "source_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "approvals": {
+      "type": "object",
+      "description": "each approval is bound to the hashes it approved; a hash change voids it",
+      "properties": {
+        "script": {
+          "type": "object",
+          "required": [
+            "by",
+            "at",
+            "hashes"
+          ],
+          "properties": {
+            "by": {
+              "type": "string"
+            },
+            "at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "hashes": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "description": "e.g. {source, script} for script; {assets manifest digest} for assets; {final.mp4} for render"
+            },
+            "checklist": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "review-checklist items ticked by the owner"
+            }
+          }
+        },
+        "assets": {
+          "type": "object",
+          "required": [
+            "by",
+            "at",
+            "hashes"
+          ],
+          "properties": {
+            "by": {
+              "type": "string"
+            },
+            "at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "hashes": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "description": "e.g. {source, script} for script; {assets manifest digest} for assets; {final.mp4} for render"
+            },
+            "checklist": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "review-checklist items ticked by the owner"
+            }
+          }
+        },
+        "render": {
+          "type": "object",
+          "required": [
+            "by",
+            "at",
+            "hashes"
+          ],
+          "properties": {
+            "by": {
+              "type": "string"
+            },
+            "at": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "hashes": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string"
+              },
+              "description": "e.g. {source, script} for script; {assets manifest digest} for assets; {final.mp4} for render"
+            },
+            "checklist": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "review-checklist items ticked by the owner"
+            }
+          }
+        }
+      }
+    },
+    "usage": {
+      "type": "object",
+      "description": "non-dollar subscription usage; metered cost is always 0 in v1",
+      "properties": {
+        "images_generated": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "clips_generated": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "voice_attempts": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "flow_credits": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "owner_minutes": {
+          "type": "number",
+          "minimum": 0
+        },
+        "render_seconds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "metered_cost_usd": {
+          "const": 0
+        }
+      }
+    }
+  }
+}

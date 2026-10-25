@@ -29,6 +29,8 @@ Shared structure:
 - `scripts/`: validation, generation, review tooling (`scripts/lib/gates.mjs` is the gate authority)
 - `supabase/`: backend config and migrations
 - `tests/`: unit, browser, rls, review
+- `video-studio/`: Urdu shorts video sub-project (ADR-0031, spec 027). Read `video-studio/CLAUDE.md`
+  before touching it. Its media never enters git (`npm run check:no-media`); renders run on Kaggle.
 
 ## Development and validation
 

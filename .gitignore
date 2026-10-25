@@ -92,3 +92,33 @@ build-*/
 # their brief in .crew/; neither is ever committed.
 /node_modules
 .crew/
+
+# Video sub-project (ADR-0031). Owner rule 2026-10-25: output videos and all media never enter
+# the repo. Mirrors video-studio/.gitignore so the rule holds even if that file is edited;
+# `npm run check:no-media` fails CI if anything slips through anyway.
+video-studio/**/*.mp4
+video-studio/**/*.mov
+video-studio/**/*.mkv
+video-studio/**/*.webm
+video-studio/**/*.avi
+video-studio/**/*.wav
+video-studio/**/*.mp3
+video-studio/**/*.m4a
+video-studio/**/*.aac
+video-studio/**/*.flac
+video-studio/**/*.ogg
+video-studio/**/*.png
+video-studio/**/*.jpg
+video-studio/**/*.jpeg
+video-studio/**/*.webp
+video-studio/**/*.gif
+video-studio/**/*.psd
+video-studio/**/*.srt
+video-studio/**/*.vtt
+video-studio/media/
+video-studio/brand/assets/
+video-studio/kaggle/out/
+video-studio/kaggle/bundle/
+kaggle.json
+# The package archive the sub-project was installed from
+video-studio-sdd-ri*.zip

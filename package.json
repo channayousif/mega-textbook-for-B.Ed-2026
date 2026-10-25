@@ -40,6 +40,7 @@
     "test:e2e": "playwright test",
     "test:rls": "vitest run --config vitest.rls.config.ts",
     "check:no-service-key": "node scripts/check-no-service-key.mjs",
+    "check:no-media": "node scripts/check-no-media-in-video-studio.mjs",
     "check:docs-sync": "node scripts/check-docs-sync.mjs",
     "check:content": "node scripts/run-gates.mjs content",
     "check:all": "node scripts/run-gates.mjs full",

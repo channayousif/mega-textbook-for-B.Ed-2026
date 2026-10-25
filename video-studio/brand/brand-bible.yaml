@@ -1,0 +1,108 @@
+# Brand bible - single source of truth for look and sound.
+# Locked keys (marked LOCK) change only via an ADR. TODO values are filled during Phase 1.
+# Path rule: "assets/..." resolves against $MEDIA_ROOT/brand-assets/ (media is never in git);
+# "repo:..." resolves against the parent repo root.
+version: 1
+status: draft            # draft → locked (after Checkpoint 1)
+
+channel:
+  name_ur: "میگا ٹیکسٹ بک"          # TODO confirm with owner
+  name_en: "Mega Textbook"
+  handle: "@textbookpk"              # TODO reserve on each platform
+  tagline_ur: "استاد بننے کا سفر، آسان اردو میں"   # TODO approve
+  site: "https://textbook.com.pk"
+  site_ur: "https://textbook.com.pk/ur/"
+
+format:                  # LOCK
+  width: 1080
+  height: 1920
+  fps: 30
+  target_seconds: 52
+  min_seconds: 40
+  max_seconds: 60
+  safe_zone: { top: 250, bottom: 420, sides: 60 }
+  pace_words_per_minute: 150        # calibrate after voice casting
+
+colors:                  # pre-filled 2026-10-26 from the site: src/css/custom.css (--ifm-color-primary ramp)
+                         # and scripts/lib/figure-palette.mjs LIGHT_TOKENS. Owner confirms before lock.
+  primary: "#1f6f5c"                # --ifm-color-primary / figure a1 (6.02:1 on white)
+  primary_dark: "#154b3e"           # --ifm-color-primary-darkest
+  accent: "#b8551d"                 # figure a3; active caption word, highlights
+  secondary: "#15476b"              # figure a2
+  background: "#ffffff"             # figure bg
+  panel: "#eef3f1"                  # figure panel
+  ink: "#132a24"                    # figure ink
+  muted: "#566b65"                  # figure muted
+  success: "#1f6f5c"
+  warning: "#b8551d"
+
+typography:              # LOCK after Phase 1
+  urdu_display: { family: "Noto Nastaliq Urdu", weight: 700, file: "assets/fonts/NotoNastaliqUrdu-Bold.ttf" }   # not on the site; fetch OFL Bold at build time
+  urdu_body:    { family: "Noto Nastaliq Urdu", weight: 400, file: "repo:static/fonts/NotoNastaliqUrdu-Regular.woff2" }   # the site's own self-hosted copy (OFL)
+  latin:        { family: "Inter", weight: 600, file: "assets/fonts/Inter-SemiBold.ttf" }   # URLs only
+  captions: { size_px: 68, line_height: 1.9, max_words_per_line: 4, max_lines: 2, stroke_px: 6 }
+  digits: "western"                 # "western" (123) or "urdu" (۱۲۳)
+
+logo:
+  full: "repo:static/img/logo.svg"     # the site's only logo; referenced, not copied
+  mark: "repo:static/img/favicon.svg"  # square mark; owner confirms
+
+sets:                    # backgrounds drawn once, reused
+  classroom: { file: "assets/sets/classroom.png", description: "Bright Sindh government-school classroom, green board, ceramic-tile floor, window light, potted plant, flat 2D illustration" }
+  staffroom: { file: "assets/sets/staffroom.png", description: "Teachers' staffroom, shelves of books, tea cups, warm light" }
+  studio:    { file: "assets/sets/studio.png",    description: "Plain brand-colour backdrop with subtle pattern for diagrams" }
+
+art_style:               # LOCK - appended to every image/B-roll prompt
+  prompt_suffix: >-
+    flat 2D vector illustration, soft cel shading, clean outlines, warm natural light,
+    palette of deep teal green #1f6f5c, burnt orange #b8551d and white with pale sage #eef3f1,
+    South Asian (Sindh, Pakistan) setting and people, modest everyday clothing,
+    friendly educational explainer style, no text, no letters, no logos, no watermarks
+  negative: "photorealistic, 3D render, text, captions, subtitles, logos, distorted hands, extra fingers"
+
+characters:              # LOCK after Checkpoint 1 - details in characters/*.md
+  ustani:
+    sheet: "characters/ustani-farzana.md"
+    display_name_ur: "استانی فرزانہ"
+    role: "host - experienced teacher educator; explains"
+    voice: { card: "voices/ustani.md", status: "pending VS-003 benchmark" }   # was a Gemini TTS guess (Kore)
+    style_prompt: "Speak in clear standard Urdu like a warm, confident teacher educator; moderate pace; friendly and encouraging."
+    puppet_dir: "assets/cast/ustani"
+  shagird:
+    sheet: "characters/shagird-bilal.md"
+    display_name_ur: "بلال"
+    role: "co-host - B.Ed student / licence aspirant; asks questions, gives the CTA"
+    voice: { card: "voices/shagird.md", status: "pending VS-003 benchmark" } # was a Gemini TTS guess (Puck)
+    style_prompt: "Speak in natural conversational Urdu like a curious, upbeat young trainee teacher; slightly faster pace."
+    puppet_dir: "assets/cast/shagird"
+
+audio:
+  music_bed: "assets/audio/bed-01.wav"        # TODO royalty-free or self-made; record licence in assets/README.md
+  music_duck_db: -18
+  sting: "assets/audio/sting.wav"
+  target_lufs: -14
+  true_peak_db: -1
+  line_gap_ms: 150
+
+cta_templates:           # Claude chooses one; text must remain within 6 seconds
+  - id: full-chapter
+    text_ur: "پورا سبق مفت پڑھیں، اردو اور انگریزی میں - لنک نیچے ہے۔"
+  - id: licence-prep
+    text_ur: "ٹیچنگ لائسنس کی مکمل تیاری مفت - textbook.com.pk پر۔"
+  - id: save-share
+    text_ur: "یہ ویڈیو اپنے ساتھی استاد کو بھیجیں، اور مکمل سبق ویب سائٹ پر دیکھیں۔"
+
+series:                  # optional recurring formats
+  - { key: "ek-minute", name_ur: "ایک منٹ میں", description: "one concept explained in under a minute" }
+  - { key: "licence-tip", name_ur: "لائسنس ٹِپ", description: "STEDA licence exam concept" }
+  - { key: "myth-fact", name_ur: "غلط فہمی یا حقیقت؟", description: "common classroom myth corrected" }
+
+pronunciation_lexicon:   # term → respelling given to TTS (seed 30 in T015)
+  - { term: "پیڈاگوجی", say: "پے ڈا گو جی", note: "pedagogy" }
+  - { term: "اسیسمنٹ", say: "اَ سیس مَنٹ", note: "assessment" }
+  - { term: "STEDA", say: "اسٹیڈا", note: "always spoken, written in Latin on screen" }
+
+publishing:
+  utm: "utm_source={platform}&utm_medium=shorts&utm_campaign={episode_id}"
+  hashtags_base: ["#ٹیچر_ٹریننگ", "#BEd", "#TeachingLicence", "#Sindh", "#اردو"]
+  ai_disclosure_ur: "اس ویڈیو میں AI سے بنائی گئی آواز اور تصاویر شامل ہیں۔"

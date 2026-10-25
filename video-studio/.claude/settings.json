@@ -1,0 +1,14 @@
+{
+  "_comment": "VS-004 PI-03: Claude must not record owner approvals. A guard against accidents, not a security boundary: the real control is the per-start owner token the Studio gate endpoint requires (specs/002-studio-console/contracts/api.md). The parent repo's root .claude/settings.json mirrors these rules for sessions started at the repo root.",
+  "permissions": {
+    "deny": [
+      "Bash(npm run approve:*)",
+      "Bash(npx tsx scripts/approve.ts:*)",
+      "Bash(curl:*/gate*)",
+      "Bash(*approvals.jsonl*)",
+      "Edit(episodes/**/approvals.jsonl)",
+      "Write(episodes/**/approvals.jsonl)",
+      "Read(~/.kaggle/kaggle.json)"
+    ]
+  }
+}

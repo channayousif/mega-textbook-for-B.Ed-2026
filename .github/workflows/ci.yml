@@ -160,6 +160,16 @@ jobs:
       - name: Add-course content-only check
         run: npm run check:add-course
 
+      # Video sub-project: no media or consent record is ever tracked (ADR-0031, owner rule 2026-10-25)
+      - name: No media in video-studio
+        run: node scripts/check-no-media-in-video-studio.mjs
+
+      # Same zero-em-dash rule for the video sub-project. Invoked with --scan-dir rather than by
+      # widening the gate's default roots: check-no-em-dash.mjs is a bound review-evidence input,
+      # so editing it would reopen every unit's G2/G3 evidence.
+      - name: No em dash in video-studio
+        run: node scripts/check-no-em-dash.mjs --scan-dir video-studio
+
       # Validator fixture tests (T013/T014/T032/T033)
       - name: Unit tests
         run: npm test
