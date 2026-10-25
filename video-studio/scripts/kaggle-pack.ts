@@ -2,6 +2,7 @@
 // as a PRIVATE dataset version.
 //   npm run kaggle:pack -- <episode-id>          # production: render inputs must be approved
 //   npm run kaggle:pack -- --sample              # Phase 0 proof from fixtures/ (mode: sample)
+//   npm run kaggle:pack -- --sample --voice-mms  # same, voiced on Kaggle with MMS-TTS Urdu (evaluation only)
 //   add --no-upload to build the bundle only
 // The bundle lives in $MEDIA_ROOT/kaggle/bundle/<id>/ (never in the repo).
 import { execFileSync } from 'node:child_process';
@@ -13,17 +14,18 @@ import { digestBytes } from './lib/hash.ts';
 import { evaluate } from './lib/invalidation.ts';
 import { datasetSlug, kaggle, kaggleUser } from './lib/kaggle.ts';
 import { assertEpisodeId, kaggleBundleDir, REPO_ROOT, VS_ROOT } from './lib/paths.ts';
-import { SAMPLE_EPISODE_ID, sampleProps } from './lib/sample.ts';
+import { SAMPLE_EPISODE_ID, SAMPLE_VOICE_EPISODE_ID, sampleProps, sampleVoiceProps } from './lib/sample.ts';
 import { toneWav } from './lib/wav.ts';
 
 const args = process.argv.slice(2);
 const sample = args.includes('--sample');
+const voice = args.includes('--voice-mms');
 const upload = !args.includes('--no-upload');
-const id = assertEpisodeId(sample ? SAMPLE_EPISODE_ID : args.find((a) => !a.startsWith('--')) ?? '');
+const id = assertEpisodeId(sample ? (voice ? SAMPLE_VOICE_EPISODE_ID : SAMPLE_EPISODE_ID) : args.find((a) => !a.startsWith('--')) ?? '');
 
 let props;
 if (sample) {
-  props = sampleProps();
+  props = voice ? sampleVoiceProps() : sampleProps();
 } else {
   // Production render needs a valid assets approval; the props builder lands in Phase 4/5 (T040+).
   const ep = readEpisode(id);
@@ -55,7 +57,7 @@ const pub = join(stage, 'remotion', 'public');
 mkdirSync(join(pub, 'fonts'), { recursive: true });
 copyFileSync(join(REPO_ROOT, 'static', 'fonts', 'NotoNastaliqUrdu-Regular.woff2'), join(pub, 'fonts', 'NotoNastaliqUrdu-Regular.woff2'));
 mkdirSync(join(pub, 'audio'), { recursive: true });
-writeFileSync(join(pub, 'audio', 'test-tone.wav'), toneWav(props.duration_s));
+if (props.audio) writeFileSync(join(pub, props.audio), toneWav(props.duration_s));
 writeFileSync(join(stage, 'props.json'), JSON.stringify(props, null, 2) + '\n');
 
 const manifestFiles: Record<string, string> = {};

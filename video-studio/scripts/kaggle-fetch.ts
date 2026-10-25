@@ -3,7 +3,7 @@
 // outputs under $MEDIA_ROOT/<id>/{render,stills}. Nothing is written into the repo except text state.
 //   npm run kaggle:fetch -- <episode-id>
 import { copyFileSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
-import { basename, join, relative } from 'node:path';
+import { basename, dirname, join, relative } from 'node:path';
 import { digestFile } from './lib/hash.ts';
 import { kaggle, kaggleUser, kernelSlug } from './lib/kaggle.ts';
 import { assertEpisodeId, episodeDir, episodeMediaDir, kaggleBundleDir, kaggleOutDir, mediaRoot } from './lib/paths.ts';
@@ -44,6 +44,7 @@ const media = episodeMediaDir(id);
 for (const sub of ['render', 'stills']) mkdirSync(join(media, sub), { recursive: true });
 for (const rel of Object.keys(om.outputs)) {
   const dest = rel.startsWith('stills/') ? join(media, rel) : join(media, 'render', rel);
+  mkdirSync(dirname(dest), { recursive: true });
   copyFileSync(join(outRoot, rel), dest);
 }
 copyFileSync(manifestPath, join(media, 'render', 'output-manifest.json'));

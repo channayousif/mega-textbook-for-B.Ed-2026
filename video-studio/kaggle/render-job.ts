@@ -37,9 +37,11 @@ const probe = JSON.parse(remotion(['ffprobe', '-v', 'error', '-show_streams', '-
 writeFileSync(join(out, 'probe.json'), JSON.stringify(probe, null, 2));
 
 await time('stills_s', () => {
-  for (const t of [1, 3, 5, 7, 9]) {
-    if (t >= props.duration_s) continue;
-    remotion(['ffmpeg', '-v', 'error', '-y', '-ss', String(t), '-i', finalPath, '-frames:v', '1', join(out, 'stills', `t${String(t).padStart(2, '0')}.png`)]);
+  // Six stills spread over the whole video, the last inside the end card.
+  const d = props.duration_s;
+  const times = [0.1, 0.3, 0.5, 0.7, 0.85].map((f) => Number((f * d).toFixed(1))).concat(Number((d - props.end_card.seconds / 2).toFixed(1)));
+  for (const t of times) {
+    remotion(['ffmpeg', '-v', 'error', '-y', '-ss', String(t), '-i', finalPath, '-frames:v', '1', join(out, 'stills', `t${t.toFixed(1).padStart(4, '0')}.png`)]);
   }
 });
 

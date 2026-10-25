@@ -4,8 +4,10 @@ Pushed by `npm run kaggle:run` as a script kernel. It:
   1. finds the private input dataset (manifest.json + project.tar.gz),
   2. verifies the tarball and every file inside it against manifest.json (fail closed),
   3. ensures Node 22 (checksum-verified download if the image lacks it) and Chrome libraries,
-  4. installs the pinned npm lockfile and runs kaggle/render-job.ts,
-  5. writes output-manifest.json with the SHA-256 of every output.
+  4. if props.json asks for TTS (evaluation only, VS-003), voices each line on the GPU and
+     retimes the captions to the real audio lengths,
+  5. installs the pinned npm lockfile and runs kaggle/render-job.ts,
+  6. writes output-manifest.json with the SHA-256 of every output.
 Only /kaggle/working/out is produced; the build tree lives in /tmp so it is not uploaded back.
 
 Local tamper test (no Kaggle needed):  python3 -I render.py --verify-only <bundle-dir>
@@ -110,6 +112,56 @@ def ensure_chrome_libs():
         print("render.py: apt step skipped: %s" % e, flush=True)
 
 
+def synthesize(work):
+    """Voice each line with the requested open-source TTS and rewrite the timings in props.json."""
+    props_path = os.path.join(work, "props.json")
+    props = json.load(open(props_path, encoding="utf-8"))
+    req = props.get("tts")
+    if not req:
+        return None
+    if req["engine"] != "mms-tts-urd":
+        die("unsupported tts engine: %s" % req["engine"])
+    import numpy as np
+    import torch
+    import wave
+    from transformers import AutoTokenizer, VitsModel
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    model = VitsModel.from_pretrained(req["model"]).to(device)
+    tok = AutoTokenizer.from_pretrained(req["model"])
+    rate = model.config.sampling_rate
+    audio_dir = os.path.join(work, "remotion", "public", "audio")
+    os.makedirs(audio_dir, exist_ok=True)
+    os.makedirs(os.path.join(OUT, "audio"), exist_ok=True)
+    t = req["lead_s"]
+    report = []
+    for line in props["lines"]:
+        torch.manual_seed(req["seed"])
+        with torch.no_grad():
+            wav = model(**tok(line["text_ur"], return_tensors="pt").to(device)).waveform[0].cpu().numpy()
+        pcm = (np.clip(wav, -1, 1) * 32767).astype("<i2").tobytes()
+        name = "%s.wav" % line["id"]
+        for dest in (os.path.join(audio_dir, name), os.path.join(OUT, "audio", name)):
+            with wave.open(dest, "wb") as w:
+                w.setnchannels(1)
+                w.setsampwidth(2)
+                w.setframerate(rate)
+                w.writeframes(pcm)
+        dur = len(wav) / rate
+        line["audio"] = "audio/" + name
+        line["from_s"] = round(t, 3)
+        line["to_s"] = round(t + dur, 3)
+        t = line["to_s"] + req["gap_s"]
+        report.append({"id": line["id"], "seconds": round(dur, 2), "sha256": sha256(os.path.join(audio_dir, name))})
+    props["duration_s"] = round(props["lines"][-1]["to_s"] + 0.5 + props["end_card"]["seconds"], 2)
+    json.dump(props, open(props_path, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+    info = {"engine": req["engine"], "model": req["model"],
+            "revision": getattr(model.config, "_commit_hash", None), "seed": req["seed"],
+            "sampling_rate": rate, "device": device, "licence": "CC-BY-NC-4.0 (MMS); evaluation only",
+            "lines": report, "duration_s": props["duration_s"]}
+    json.dump(info, open(os.path.join(OUT, "tts-report.json"), "w", encoding="utf-8"), indent=2)
+    return info
+
+
 def step(name, fn):
     t0 = time.time()
     try:
@@ -127,6 +179,8 @@ def main():
         die("expected exactly one manifest.json under /kaggle/input, found %d" % len(manifests))
     bundle_dir = os.path.dirname(manifests[0])
     manifest = step("verify_s", lambda: verify(bundle_dir, WORK))
+    os.makedirs(OUT, exist_ok=True)
+    step("tts_s", lambda: synthesize(WORK))
     node = step("node_s", ensure_node)
     step("apt_s", ensure_chrome_libs)
     step("npm_ci_s", lambda: run(["npm", "ci", "--no-audit", "--no-fund"], cwd=WORK))

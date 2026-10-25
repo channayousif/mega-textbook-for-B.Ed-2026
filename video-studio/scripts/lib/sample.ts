@@ -7,6 +7,8 @@ import type { ShortProps } from '../../remotion/src/props.ts';
 import { VS_ROOT } from './paths.ts';
 
 export const SAMPLE_EPISODE_ID = '20261026-sample-positive-reinforcement';
+/** Same fixture voiced with MMS-TTS Urdu on Kaggle (owner asked for a quick voiced demo, 2026-10-26). */
+export const SAMPLE_VOICE_EPISODE_ID = '20261026-sample-voice-mms';
 
 /** Rows of the fixture's scene table: [scene, time, text]. */
 export function fixtureRows(md: string): string[][] {
@@ -27,6 +29,16 @@ export function brandProps(): ShortProps['brand'] & { cast: ShortProps['cast'] }
     captions: { size_px: c.size_px, line_height: c.line_height, max_words_per_line: c.max_words_per_line, max_lines: c.max_lines, stroke_px: c.stroke_px },
     font_file: 'fonts/NotoNastaliqUrdu-Regular.woff2',
     cast: { ustani: b.characters.ustani.display_name_ur, shagird: b.characters.shagird.display_name_ur },
+  };
+}
+
+/** The voiced demo: no test tone; timings are rewritten on Kaggle from the real audio lengths. */
+export function sampleVoiceProps(): ShortProps {
+  return {
+    ...sampleProps(),
+    episode_id: SAMPLE_VOICE_EPISODE_ID,
+    audio: null,
+    tts: { engine: 'mms-tts-urd', model: 'facebook/mms-tts-urd-script_arabic', seed: 555, gap_s: 0.4, lead_s: 0.3 },
   };
 }
 

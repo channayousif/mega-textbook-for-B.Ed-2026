@@ -118,6 +118,7 @@ export const UrduShort: React.FC<ShortProps> = (props) => {
       <Puppet name={props.cast.shagird} color={colors.accent} active={speaking === 'shagird'} side="left" />
       {props.lines.map((l) => (
         <Sequence key={l.id} from={Math.round(l.from_s * fps)} durationInFrames={Math.round((l.to_s - l.from_s) * fps)} layout="none">
+          {l.audio ? <Audio src={staticFile(l.audio)} /> : null}
           <Captions line={l} props={props} />
         </Sequence>
       ))}

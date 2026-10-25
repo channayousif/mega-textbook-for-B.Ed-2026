@@ -6,6 +6,8 @@ export interface CaptionLine {
   text_ur: string;
   from_s: number;
   to_s: number;
+  /** Per-line voice file under public/, set after TTS or ingest. */
+  audio?: string;
 }
 
 export interface ShortProps {
@@ -17,6 +19,8 @@ export interface ShortProps {
   lines: CaptionLine[];
   end_card: { url: string; cta_ur: string; seconds: number };
   audio?: string | null;
+  /** Evaluation-only TTS request, resolved on Kaggle before render (VS-003 demo). */
+  tts?: { engine: 'mms-tts-urd'; model: string; seed: number; gap_s: number; lead_s: number } | null;
   cast: { ustani: string; shagird: string };
   brand: {
     colors: { primary: string; primary_dark: string; accent: string; background: string; panel: string; ink: string };
