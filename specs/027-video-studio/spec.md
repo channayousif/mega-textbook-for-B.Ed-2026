@@ -24,8 +24,9 @@ and points to them. Do not copy requirements here.
   by anything under `video-studio/`.
 - **FR-002** No media file (video, audio, image, stills, subtitle files), consent record or Kaggle
   credential is ever tracked in git. Checked by `scripts/check-no-media-in-video-studio.mjs` in CI.
-- **FR-003** Content is read only through `scripts/lib/content-roots.mjs`; only `certified` or
-  `provisional` units (`static/content-status.json`) may be scripted or linked in a CTA.
+- **FR-003** Content is read only through `scripts/lib/content-roots.mjs`; only published units
+  (`certified`, `provisional` or `gated` in `static/content-status.json`; owner ruling 2026-10-26)
+  may be scripted or linked in a CTA. `unpublished` units never are.
 - **FR-004** Terminology comes from `specs/content/terminology.csv` and `glossary.json`.
 - **FR-005** Heavy media work (render, alignment, audit, stills) runs on Kaggle or the owner's PC,
   never on the production host; any local heavy job uses `flock /tmp/mega-book-heavy.lock`.

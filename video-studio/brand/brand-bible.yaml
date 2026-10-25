@@ -8,7 +8,7 @@ status: draft            # draft → locked (after Checkpoint 1)
 channel:
   name_ur: "میگا ٹیکسٹ بک"          # TODO confirm with owner
   name_en: "Mega Textbook"
-  handle: "@textbookpk"              # TODO reserve on each platform
+  handle: "@textbookpk"              # use approved by owner 2026-10-26; TODO reserve on each platform
   tagline_ur: "استاد بننے کا سفر، آسان اردو میں"   # TODO approve
   site: "https://textbook.com.pk"
   site_ur: "https://textbook.com.pk/ur/"
@@ -44,8 +44,8 @@ typography:              # LOCK after Phase 1
   digits: "western"                 # "western" (123) or "urdu" (۱۲۳)
 
 logo:
-  full: "repo:static/img/logo.svg"     # the site's only logo; referenced, not copied
-  mark: "repo:static/img/favicon.svg"  # square mark; owner confirms
+  full: "repo:static/img/logo.svg"     # the site's only logo; use on social platforms approved by owner 2026-10-26
+  mark: "repo:static/img/favicon.svg"  # square mark; approved by owner 2026-10-26
 
 sets:                    # backgrounds drawn once, reused
   classroom: { file: "assets/sets/classroom.png", description: "Bright Sindh government-school classroom, green board, ceramic-tile floor, window light, potted plant, flat 2D illustration" }

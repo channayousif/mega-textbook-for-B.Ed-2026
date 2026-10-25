@@ -65,7 +65,9 @@ The token lives in `~/.kaggle/kaggle.json` (chmod 600), never in the repo. GPU h
   in `history/adr/` when it is a decision rather than a fix.
 
 ## Studio (main way the owner works)
-`npm run studio` → http://127.0.0.1:4310. Spec: `specs/002-studio-console/`. The Studio and
+`npm run studio` → http://127.0.0.1:4310 on the server (owner ruling 2026-10-26); the owner opens it
+through `ssh -L 4310:127.0.0.1:4310 <server>`. Never bind it to a public interface. Building its web
+app is a heavy job (`flock /tmp/mega-book-heavy.lock`); stop the server when a session ends. Spec: `specs/002-studio-console/`. The Studio and
 Claude Code edit the same files; keep both working. Every new pipeline capability needs its
 Studio screen (instructions, inputs, gate) in the same change. Generative and publishing steps
 go through providers (`config/providers.yaml`, VS-ADR-0006) - never call a tool directly from a stage.

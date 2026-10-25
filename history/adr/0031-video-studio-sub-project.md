@@ -31,8 +31,9 @@
    the content gates are unchanged; `video-studio` is excluded from `tsconfig.json`.
 2. **Read-only consumer of content.** The harvester reads units through
    `scripts/lib/content-roots.mjs` (ADR-0020), takes terminology from `specs/content/terminology.csv`
-   and `glossary.json`, and only scripts units whose publication tier (`static/content-status.json`)
-   is `certified` or `provisional`. It never edits content.
+   and `glossary.json`, and only scripts published units: tier (`static/content-status.json`)
+   `certified`, `provisional` or `gated` (owner ruling 2026-10-26; `gated` pages carry the site's
+   unreviewed notice, so their scripts get stricter source checks). It never edits content.
 3. **Media never enters git** (owner rule, 2026-10-25). Output videos, audio, images, stills,
    subtitle files, consent records and Kaggle bundles live under `MEDIA_ROOT` outside the working
    tree. Enforced three ways: `video-studio/.gitignore`, a mirrored block in the root `.gitignore`,
@@ -42,11 +43,13 @@
    (T4 x2), with private datasets and hash verification on both sides (`VS-ADR-0011`). The
    production host only packs, pushes, fetches and verifies; any local heavy job there obeys the
    `flock /tmp/mega-book-heavy.lock` rule.
-5. **Owner-only approvals.** Script, asset and render gates are recorded only by the owner (Studio
+5. **Studio on the production server**, bound to loopback and reached by SSH tunnel (owner ruling
+   2026-10-26); its web build is a heavy job under `flock`.
+6. **Owner-only approvals.** Script, asset and render gates are recorded only by the owner (Studio
    button with an in-memory owner token, or owner-typed `npm run approve`). Deny rules in
    `video-studio/.claude/settings.json` and the root `.claude/settings.json` guard against accidents;
    nothing is published automatically.
-6. **Subscriptions and free tiers only**, 0 USD metered spend; any charge needs a new ADR.
+7. **Subscriptions and free tiers only**, 0 USD metered spend; any charge needs a new ADR.
 
 ## Consequences
 

@@ -54,11 +54,17 @@ verified says "unknown - needs owner". **Status: awaiting owner approval** (bloc
 - **Conflicts:** installer dry run `NEW 61 · IDENTICAL 0 · CONFLICTS 0` (62 files incl. this one).
 - **Rollback:** revert the feature commits; back up `episodes/`, `queue/` first; media is in
   `MEDIA_ROOT` and unaffected.
-- **Open questions blocking implementation:**
-  1. Tier filter: allow `gated` units (published with notice) in shorts, or certified only?
-  2. Studio location: server via `ssh -L 4310:127.0.0.1:4310`, or the owner's PC?
-  3. Kaggle account phone-verified, and token placed at `~/.kaggle/kaggle.json` (chmod 600)?
-  4. Logo and channel handle use on social platforms; channel name confirmation.
-  5. Deny-rule syntax (`Bash(*approvals.jsonl*)`, `Bash(curl:*/gate*)`) to be verified against the
-     current Claude Code permissions docs.
-- **Owner approval (name / date):** pending
+- **Owner rulings (2026-10-26, verbatim "allow gated units, studio on server, kaggle is set up, yes"):**
+  1. Tier filter: **`gated` units are allowed** alongside `certified` and `provisional`;
+     `unpublished` stays excluded. With today's status that is 86 authored units, not 2.
+  2. Studio: **runs on the server**, bound to 127.0.0.1:4310, reached from the owner's browser with
+     `ssh -L 4310:127.0.0.1:4310 <server>`. Its web build (`vite build`) is a heavy job (`flock`).
+  3. Kaggle: **account set up** (owner). On this host on 2026-10-26: `kaggle` CLI 2.2.5 installed with
+     `uv tool install kaggle`; **no API token present yet** (`~/.kaggle/` absent, no `KAGGLE_*` env).
+     The owner places it before T006: `~/.kaggle/kaggle.json`, `chmod 600`.
+  4. Logo (`static/img/logo.svg`) and handle **may be used** on social platforms.
+- **Still open:** deny-rule syntax (`Bash(*approvals.jsonl*)`, `Bash(curl:*/gate*)`) to verify
+  against current Claude Code permissions docs during T001; channel name and handle reservation per
+  platform (brand bible TODOs, Phase 1).
+- **Owner approval (name / date):** pending. Rulings above answer the blocking questions; the owner
+  approves this report explicitly before T001.

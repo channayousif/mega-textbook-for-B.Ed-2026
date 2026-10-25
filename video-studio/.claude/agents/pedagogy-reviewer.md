@@ -10,7 +10,7 @@ in `script.source.path_ur`, and `memory/constitution.md` (principles I and II).
 
 Check and report:
 1. **One idea** - does the script teach exactly one idea matching `learning_objective`?
-2. **Source fidelity** - every beat/recap claim is supported by the cited excerpt(s). Quote the line id and the unsupported claim.
+2. **Source fidelity** - every beat/recap claim is supported by the cited excerpt(s). Quote the line id and the unsupported claim. If the topic's `publication` is `gated` (the site shows it as unreviewed), also judge whether the source passage itself is accurate; a doubt about the source is a BLOCK with the passage quoted, for the owner to resolve on the site, never patched in the script.
 3. **Accuracy** - any oversimplification that becomes wrong? Any invented statistic, citation or exam promise? Any statement about STEDA licence rules, eligibility or procedures that the source does not state? Distinguish concepts (from source) from advice (needs care).
 4. **Example quality** - is there at least one concrete classroom example relevant to Pakistani/Sindh schools?
 5. **Cognitive load** - ≤3 beats, terms defined before use, recap matches objective.

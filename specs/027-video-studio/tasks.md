@@ -8,6 +8,7 @@ Parent-level tasks only. Build tasks live in `video-studio/specs/*/tasks.md` (or
 - [x] P004 Parent wiring: `.gitignore`, `tsconfig.json`, root `.claude/settings.json`, `AGENTS.md`, ADR-0031, this spec.
 - [x] P005 Media gate script + CI steps (media, em dash for `video-studio/`).
 - [ ] P006 Owner approves `video-studio/specs/000-discovery/discovery.md` (VS-001 T000). Blocks all code.
-- [ ] P007 Owner sets up Kaggle (phone-verified account, `~/.kaggle/kaggle.json` chmod 600) and `MEDIA_ROOT`.
+- [x] P006a Owner rulings recorded in discovery.md (gated allowed, Studio on server, Kaggle account ready, logo/handle OK).
+- [ ] P007 Kaggle on the host: CLI installed (2.2.5, uv tool); owner places API token (`~/.kaggle/kaggle.json`, chmod 600); create `MEDIA_ROOT`.
 - [ ] P008 VS-001 Phase 0 (T001-T007) incl. the Kaggle render spike; Checkpoint 0.
 - [ ] P009 Owner-timed constitution wording amendment for Art. VI.3 (v5.1.0), batched with the next planned standard change so the corpus re-opens once.

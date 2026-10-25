@@ -25,9 +25,12 @@ description: Build or refresh queue/topics.json from the Mega Textbook Docusauru
 ## Publication tier filter (mandatory)
 Read `static/content-status.json` (generate it with `npm run build:content-status` at the parent
 root if missing; it is git-ignored). Each authored unit has `publication`:
-`certified` or `provisional` = eligible; `gated` = listed but flagged `gated`, never scripted
-without owner OK; `unpublished` = excluded. Unknown tier = treat as `gated`. A short must never
-send viewers to, or amplify, a page the site itself does not publish.
+`certified`, `provisional` and `gated` = eligible (owner ruling 2026-10-26); `unpublished` =
+excluded; an unknown tier is treated as `unpublished`. Record the tier on the topic. A `gated` page is
+published under a "no reviewer has read this" notice, so for `gated` topics the pedagogy reviewer
+checks every claim against the source with extra care, and a factual doubt about the source page
+itself is a BLOCK (report it to the owner; never correct the page from the video side). A short must
+never send viewers to a page the site does not publish.
 
 ## Procedure
 1. Run `npm run harvest` (scripts/harvest.ts). It walks both tracks via `content-roots.mjs`, pairs each English file with its Urdu mirror, reads front matter + headings, applies the tier filter.
