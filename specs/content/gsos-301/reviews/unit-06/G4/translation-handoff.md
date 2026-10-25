@@ -46,3 +46,20 @@ The final rerun is in `content.log`.
 
 Final rerun: all 13 content gates pass, matching the clean origin/main baseline.
 `git diff --check` passes. No build, server, browser or heavy job was run.
+
+## Retry r1 recheck (2026-10-25)
+
+Branch `crew/gsos-301-u06-translate-r1` starts at
+`cab502483b98d856eec44d5b6c70c4291c7e69b7`, identical to origin/main,
+with a clean tree and no local commits. The earlier handoff is retained.
+The citation at topic-02.mdx:58, Sialkit typo at topic-01.mdx:60, media
+coverage row and concept assessment mapping remain unresolved. The skill's
+English-error stop rule still applies. No translation, figure or tracker status
+was changed. The existing G4 blocker row remains accurate. Separate English
+author repair is the next dependency. No new terminology is proposed.
+
+The brief prohibits build, server and browser runs; no render success is claimed.
+
+Retry validation: all 13 `npm run check:content` gates pass both on the clean
+origin/main baseline and after this record update. `git diff --check` passes.
+No build, server, browser or heavy job was run.

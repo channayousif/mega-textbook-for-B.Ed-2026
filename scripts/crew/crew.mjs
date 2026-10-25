@@ -195,7 +195,7 @@ const STAGE_TASK = {
 
 /** The rules line every brief opens with; self-maintenance may touch what content jobs must not. */
 function briefRules(j, self) {
-  const common = 'no em dash (U+2014) anywhere, heavy commands only through `scripts/heavy.sh`, never run `npm run build`, a dev server or Playwright';
+  const common = 'no em dash (U+2014) anywhere, heavy commands only through `scripts/heavy.sh`, never run `npm run build`, a dev server or Playwright, keep all scratch files inside your worktree (for example `.crew/`), never use `/tmp`';
   if (!self) return `${common}, never mark G3/G5 done, never self-sign or use\nhuman initials, never edit the style guide, constitution, ADRs, gate scripts, catalog or an approved content-spec.`;
   return `${common}, and never touch course content (\`docs/\`, \`licence/\`, the Urdu docs trees,
 \`specs/content/\`, \`static/img/figures/\`, \`glossary.json\`): the dispatcher rejects any such change. Never change
@@ -270,7 +270,11 @@ function linkNodeModules(wt) {
 function prepareWorktree(board, j) {
   // A CI-fix job works on its parent's branch, which is already checked out in the parent's worktree.
   const parent = j.parent && board.jobs.find((p) => p.id === j.parent);
-  if (parent?.worktree && existsSync(parent.worktree)) { mkdirSync(join(parent.worktree, '.crew'), { recursive: true }); return parent.worktree; }
+  if (parent?.worktree && existsSync(parent.worktree)) {
+    mkdirSync(join(parent.worktree, '.crew'), { recursive: true });
+    sh('node', ['scripts/report-content-status.mjs'], parent.worktree);
+    return parent.worktree;
+  }
   const wt = join(WT_DIR, j.id);
   if (!existsSync(wt)) {
     mkdirSync(WT_DIR, { recursive: true });
@@ -283,6 +287,8 @@ function prepareWorktree(board, j) {
     linkNodeModules(wt);
   }
   mkdirSync(join(wt, '.crew'), { recursive: true });
+  // Gitignored generated report: refresh for new worktrees and every reused job worktree.
+  sh('node', ['scripts/report-content-status.mjs'], wt);
   return wt;
 }
 
@@ -754,7 +760,7 @@ function queueCiFixes(board, red, events) {
 
 /**
  * Files every unit touches, so concurrent branches conflict in them on almost every batch:
- * glossary.json (terms appended at the end) and the generated static/content-status.json.
+ * glossary.json (terms appended at the end) and, on older branches, static/content-status.json.
  * When a batch merge conflicts in these alone, resolve it here instead of spending a merge-fix
  * job: glossary by mergeGlossary, content-status by regenerating it. The batch's registry and
  * content gates still run on the result. Returns false (caller aborts) for any other conflict.
@@ -769,10 +775,12 @@ function resolveSharedConflicts(wt) {
     writeFileSync(join(wt, 'glossary.json'), merged);
   }
   if (files.includes('static/content-status.json')) {
-    sh('git', ['checkout', '--ours', '--', 'static/content-status.json'], wt);
+    // Older branches can modify the now-untracked report: resolve even a modify/delete
+    // conflict by removing its index entries, then rebuild the ignored working copy.
+    sh('git', ['rm', '-f', '--cached', '--', 'static/content-status.json'], wt);
     if (!sh('node', ['scripts/report-content-status.mjs'], wt, { allowFail: true }).ok) return false;
   }
-  sh('git', ['add', '--', ...files], wt);
+  if (files.includes('glossary.json')) sh('git', ['add', '--', 'glossary.json'], wt);
   return sh('git', ['commit', '-q', '--no-edit'], wt, { allowFail: true }).ok;
 }
 
