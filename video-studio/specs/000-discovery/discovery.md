@@ -66,5 +66,6 @@ verified says "unknown - needs owner". **Status: awaiting owner approval** (bloc
 - **Still open:** deny-rule syntax (`Bash(*approvals.jsonl*)`, `Bash(curl:*/gate*)`) to verify
   against current Claude Code permissions docs during T001; channel name and handle reservation per
   platform (brand bible TODOs, Phase 1).
-- **Owner approval (name / date):** pending. Rulings above answer the blocking questions; the owner
-  approves this report explicitly before T001.
+- **Owner approval (name / date):** M Yousif Channa, 2026-10-26 ("discovery approved, start phase 0").
+  Kaggle token placed by the owner at `~/.kaggle/access_token` (chmod 600, verified with
+  `kaggle kernels list --mine`, account `myousifchanna`).

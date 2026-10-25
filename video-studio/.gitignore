@@ -53,3 +53,6 @@ whisper/models/
 
 # Keep these
 !episodes/.gitkeep
+
+# Remotion public/ is staged from the parent repo (fonts, logo) by scripts; never committed
+remotion/public/

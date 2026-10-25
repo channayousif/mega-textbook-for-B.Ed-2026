@@ -1,0 +1,132 @@
+import { loadFont } from '@remotion/fonts';
+import React from 'react';
+import { AbsoluteFill, Audio, interpolate, Sequence, staticFile, useCurrentFrame, useVideoConfig } from 'remotion';
+import type { CaptionLine, ShortProps } from './props';
+
+const URDU = 'Noto Nastaliq Urdu';
+let fontRequested = '';
+function useUrduFont(file: string) {
+  if (fontRequested !== file) {
+    fontRequested = file;
+    loadFont({ family: URDU, url: staticFile(file), weight: '400' });
+  }
+}
+
+/** Split a line into caption windows of at most maxWords x maxLines words. */
+export function chunk(text: string, maxWords: number, maxLines: number): string[][] {
+  const words = text.split(/\s+/).filter(Boolean);
+  const perWindow = maxWords * maxLines;
+  const windows: string[][] = [];
+  for (let i = 0; i < words.length; i += perWindow) {
+    const w = words.slice(i, i + perWindow);
+    const rows: string[] = [];
+    for (let j = 0; j < w.length; j += maxWords) rows.push(w.slice(j, j + maxWords).join(' '));
+    windows.push(rows);
+  }
+  return windows;
+}
+
+const Captions: React.FC<{ line: CaptionLine; props: ShortProps }> = ({ line, props }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const c = props.brand.captions;
+  const windows = chunk(line.text_ur, c.max_words_per_line, c.max_lines);
+  const total = (line.to_s - line.from_s) * fps;
+  const idx = Math.min(windows.length - 1, Math.floor((frame / total) * windows.length));
+  return (
+    <div
+      dir="rtl"
+      lang="ur"
+      style={{
+        position: 'absolute',
+        left: props.brand.safe_zone.sides,
+        right: props.brand.safe_zone.sides,
+        bottom: props.brand.safe_zone.bottom,
+        textAlign: 'center',
+      }}
+    >
+      {/* A dark plate, not a text stroke: a stroke over a light set left the white fill invisible
+          (Phase 0 stills, 2026-10-26). The plate reads on any background, B-roll included. */}
+      <div
+        style={{
+          display: 'inline-block',
+          background: 'rgba(19, 42, 36, 0.88)',
+          borderRadius: 28,
+          padding: '8px 40px 28px',
+          fontFamily: URDU,
+          fontSize: c.size_px,
+          lineHeight: c.line_height,
+          color: '#ffffff',
+        }}
+      >
+        {windows[idx].map((row, i) => <div key={i}>{row}</div>)}
+      </div>
+    </div>
+  );
+};
+
+const Puppet: React.FC<{ name: string; color: string; active: boolean; side: 'left' | 'right' }> = ({ name, color, active, side }) => {
+  const frame = useCurrentFrame();
+  const bob = active ? Math.sin(frame / 4) * 6 : 0;
+  return (
+    <div style={{ position: 'absolute', top: 760 + bob, [side]: 110, width: 340, textAlign: 'center' }}>
+      <div style={{ width: 300, height: 300, margin: '0 auto', borderRadius: '50%', background: color, opacity: active ? 1 : 0.55 }} />
+      <div dir="rtl" lang="ur" style={{ fontFamily: URDU, fontSize: 48, color: '#132a24', marginTop: 24 }}>{name}</div>
+    </div>
+  );
+};
+
+const EndCard: React.FC<{ props: ShortProps }> = ({ props }) => {
+  const frame = useCurrentFrame();
+  const opacity = interpolate(frame, [0, 10], [0, 1], { extrapolateRight: 'clamp' });
+  const { colors } = props.brand;
+  return (
+    <AbsoluteFill style={{ background: colors.primary, opacity, alignItems: 'center', justifyContent: 'center', padding: 80 }}>
+      <div dir="rtl" lang="ur" style={{ fontFamily: URDU, fontSize: 64, lineHeight: 1.9, color: '#ffffff', textAlign: 'center' }}>
+        {props.end_card.cta_ur}
+      </div>
+      <div dir="ltr" style={{ unicodeBidi: 'isolate', fontFamily: 'sans-serif', fontSize: 44, fontWeight: 600, color: '#ffffff', marginTop: 40 }}>
+        {props.end_card.url.replace(/^https?:\/\//, '')}
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+export const UrduShort: React.FC<ShortProps> = (props) => {
+  useUrduFont(props.brand.font_file);
+  const { fps } = useVideoConfig();
+  const frame = useCurrentFrame();
+  const { colors, safe_zone } = props.brand;
+  const now = frame / fps;
+  const speaking = props.lines.find((l) => now >= l.from_s && now < l.to_s)?.speaker;
+  const endFrom = Math.round((props.duration_s - props.end_card.seconds) * fps);
+  return (
+    <AbsoluteFill style={{ background: colors.background }}>
+      {props.audio ? <Audio src={staticFile(props.audio)} /> : null}
+      <div
+        dir="rtl"
+        lang="ur"
+        style={{
+          position: 'absolute', top: safe_zone.top, left: safe_zone.sides, right: safe_zone.sides,
+          background: colors.panel, borderRadius: 32, padding: '24px 36px', textAlign: 'center',
+          fontFamily: URDU, fontSize: 72, lineHeight: 1.9, color: colors.primary_dark,
+        }}
+      >
+        {props.title_ur}
+      </div>
+      <Puppet name={props.cast.ustani} color={colors.primary} active={speaking === 'ustani'} side="right" />
+      <Puppet name={props.cast.shagird} color={colors.accent} active={speaking === 'shagird'} side="left" />
+      {props.lines.map((l) => (
+        <Sequence key={l.id} from={Math.round(l.from_s * fps)} durationInFrames={Math.round((l.to_s - l.from_s) * fps)} layout="none">
+          <Captions line={l} props={props} />
+        </Sequence>
+      ))}
+      {props.mode === 'sample' ? (
+        <div style={{ position: 'absolute', top: 60, left: -60, transform: 'rotate(-30deg)', background: '#b8551d', color: '#fff', padding: '8px 120px', fontFamily: 'sans-serif', fontSize: 34, fontWeight: 700 }}>SAMPLE</div>
+      ) : null}
+      <Sequence from={endFrom}>
+        <EndCard props={props} />
+      </Sequence>
+    </AbsoluteFill>
+  );
+};

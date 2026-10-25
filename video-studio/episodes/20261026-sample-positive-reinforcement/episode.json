@@ -1,0 +1,36 @@
+{
+  "episode_id": "20261026-sample-positive-reinforcement",
+  "topic_id": "sample-positive-reinforcement",
+  "status": "render_review",
+  "created_at": "2026-10-25T22:24:06.829Z",
+  "mode": "sample",
+  "history": [
+    {
+      "at": "2026-10-25T22:24:06.829Z",
+      "from": "rendering",
+      "to": "render_review",
+      "by": "claude",
+      "note": "Kaggle render fetched and verified (GPU 0: Tesla T4 (UUID: GPU-1719bb92-2afc-a5a1-a94d-536135c0db73)\nGPU 1: Tesla T4 (UUID: GPU-e718eb6b-fa38-6c5e-1b3a-adfa1172a6ba))"
+    },
+    {
+      "at": "2026-10-25T22:29:13.480Z",
+      "from": "render_review",
+      "to": "render_review",
+      "by": "claude",
+      "note": "Kaggle render fetched and verified (GPU 0: Tesla T4 (UUID: GPU-4af10f37-7021-2f4d-e27e-f75b552e4f78)\nGPU 1: Tesla T4 (UUID: GPU-c0185518-902a-a68e-7325-a4af267ba29c))"
+    }
+  ],
+  "render": {
+    "file": "20261026-sample-positive-reinforcement/render/final.mp4",
+    "duration_s": 10.005,
+    "sha256": "e11ccaf9b347f8a266d0457b3d935f53daeefb553a7edef614b2d3e5587bdd00",
+    "subtitles": [
+      "captions.ur.srt",
+      "captions.ur.vtt"
+    ]
+  },
+  "usage": {
+    "render_seconds": 15.321,
+    "metered_cost_usd": 0
+  }
+}

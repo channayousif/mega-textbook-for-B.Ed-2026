@@ -1,0 +1,8 @@
+{
+  "episode_id": "20261026-sample-positive-reinforcement",
+  "topic_id": "sample-positive-reinforcement",
+  "status": "scripting",
+  "created_at": "2026-10-26T00:00:00Z",
+  "mode": "sample",
+  "history": [{ "at": "2026-10-26T00:00:00Z", "from": "queued", "to": "scripting", "by": "claude" }]
+}
