@@ -424,7 +424,7 @@ function cool(health, worker, reason) {
   const h = health[worker] || {};
   const strikes = (h.strikes || 0) + 1;
   const mins = Math.max(COOLDOWN_MIN[Math.min(strikes, COOLDOWN_MIN.length) - 1], resetMinutes(reason) ?? 0);
-  health[worker] = { state: 'cooling', strikes, until: new Date(Date.now() + mins * 60000).toISOString(), last_error: reason.slice(0, 300) };
+  health[worker] = { state: 'cooling', strikes, until: new Date(Date.now() + mins * 60000).toISOString(), last_error: reason.slice(-300) };
   return mins;
 }
 

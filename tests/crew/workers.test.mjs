@@ -64,7 +64,7 @@ test('cool honors reset durations, strike backoff and fallback worker selection'
     assert.equal(cool(health, 'claude', reason), minutes);
     assert.equal(health.claude.strikes, strikes + 1);
     assert.equal(Date.parse(health.claude.until), now + minutes * 60000);
-    assert.equal(health.claude.last_error, reason.slice(0, 300));
+    assert.equal(health.claude.last_error, reason.slice(-300));
     assert.equal(pickWorker('author', { health, running: [] }), 'agy_claude');
   }
 });
