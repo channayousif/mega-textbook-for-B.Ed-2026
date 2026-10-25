@@ -12,11 +12,19 @@
  *  - The Urdu review (G5) compares the mirror against the ACCEPTED G3 English version, so it
  *    is planned only once G3 is done. Until a person signs G3 off, a unit whose agent
  *    review is finished is "awaiting G3": listed for the owner, not worked on.
+ *
+ * On 2026-10-25, 31 of the 83 units "awaiting G3" were `revise` verdicts whose repairs had landed
+ * but that no reviewer had checked, so the owner was asked to sign off unverified fixes. ADR-0019
+ * allows two repair/review cycles per stage, so a repaired `revise` from the first cycle now gets a
+ * fresh `review_en`. Only a unit whose cycles are used up waits for the owner.
  */
+
+/** ADR-0019: at most two repair/review cycles per stage per submission. */
+export const MAX_REVIEW_CYCLES = 2;
 
 /**
  * @param {object} u  content-status unit: { authored, gates: { G3, G5 }, figures }
- * @param {object} f  { bilingual, g3Report, g3Repaired, g5Report, mirrorComplete }
+ * @param {object} f  { bilingual, g3Report, g3Repaired, g3Cycles, g5Report, mirrorComplete }
  */
 export function stagesFor(u, f) {
   if (!u.authored) return ['author'];
@@ -25,6 +33,7 @@ export function stagesFor(u, f) {
   if (u.gates.G3 !== 'done') {
     if (!f.g3Report) need.push('review_en');
     else if (f.g3Report.disposition === 'revise' && !f.g3Repaired) need.push('repair_en');
+    else if (reReviewDue(f)) need.push('review_en');
   }
   if (f.bilingual) {
     if (!f.mirrorComplete) need.push('translate');
@@ -35,8 +44,13 @@ export function stagesFor(u, f) {
 
 /** A unit the crew has finished reviewing that waits only for a person's G3 sign-off. */
 export function awaitingG3(u, f) {
-  if (!u.authored || u.gates.G3 === 'done' || !f.g3Report) return false;
+  if (!u.authored || u.gates.G3 === 'done' || !f.g3Report || reReviewDue(f)) return false;
   return f.g3Report.disposition !== 'revise' || f.g3Repaired;
+}
+
+/** A repaired `revise` with a review cycle left: the crew re-reviews it before the owner sees it. */
+function reReviewDue(f) {
+  return f.g3Report?.disposition === 'revise' && f.g3Repaired && (f.g3Cycles ?? 1) < MAX_REVIEW_CYCLES;
 }
 
 /** True when every English page (.md/.mdx) has an Urdu file of the same name. */
@@ -60,7 +74,8 @@ export function pickLatestReport(entries) {
   const when = (e) => String(e.json.completed_at || e.json.started_at || '');
   reports.sort((a, b) => when(a).localeCompare(when(b)) || a.file.localeCompare(b.file));
   const last = reports.at(-1);
-  return { file: last.file, ...last.json };
+  // `cycles` counts the gate's reports: each is one review cycle under ADR-0019.
+  return { file: last.file, ...last.json, cycles: reports.length };
 }
 
 /**

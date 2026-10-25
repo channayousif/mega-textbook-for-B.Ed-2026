@@ -125,9 +125,11 @@ function specUnits() {
 /** What the planner needs to know about a unit on main (rules in scripts/crew/planner.mjs). */
 function unitFacts(course, u, bilingual, dirs) {
   const d = dirs.get(`${course}#${u.unit_no}`);
+  const g3Report = latestReport(course, u.unit_no, 'G3');
   return {
     bilingual,
-    g3Report: latestReport(course, u.unit_no, 'G3'),
+    g3Report,
+    g3Cycles: g3Report?.cycles ?? 0,
     g3Repaired: /repairs applied/i.test(trackerSuggestion(course, u.unit_no, 'G3')),
     g5Report: latestReport(course, u.unit_no, 'G5'),
     mirrorComplete: d ? mirrorComplete(listDir(d.unitDir), listDir(d.urUnitDir)) : false,
@@ -180,7 +182,7 @@ const STAGE_TASK = {
   repair_en: (j) => `Apply the findings of the latest G3 report under specs/content/${j.course.toLowerCase()}/reviews/unit-${pad(j.unit)}/G3/. Make the smallest edits that resolve each finding, then append a new tracker row for Unit ${j.unit} G3 whose Suggestion begins "advisory: revise; repairs applied" and names the report. Leave G3 unticked.`,
   figures: (j) => `Render every prompt-only schematic figure for ${j.course} Unit ${j.unit} (generate-figures skill): diagrams, tables, concept maps, flowcharts and timelines as SVG with their .ur.svg variants. Leave raster illustrations at prompt-only for the illustrate job.`,
   illustrate: (j) => `Produce the raster illustrations for ${j.course} Unit ${j.unit} with \`scripts/heavy.sh node scripts/generate-illustration.mjs\` per ADR-0029, inspect each for pedagogy and cultural accuracy, optimise, place, and move the manifest rows to placed.`,
-  review_en: (j) => `Act as the INDEPENDENT G3 English reviewer of ${j.course} Unit ${j.unit} (review-unit skill, .claude/agents/g3-reviewer.md). You did not write this unit. Produce the evidence report the skill specifies and the advisory tracker row. Never tick G3, never add reviewer initials, never self-sign.`,
+  review_en: (j) => `Act as the INDEPENDENT G3 English reviewer of ${j.course} Unit ${j.unit} (review-unit skill, .claude/agents/g3-reviewer.md). You did not write this unit. Produce the evidence report the skill specifies and the advisory tracker row. Never tick G3, never add reviewer initials, never self-sign.${latestReport(j.course, j.unit, 'G3') ? ' This is the second and last review cycle (ADR-0019): repairs were applied for the latest report under the unit\'s reviews/.../G3/ folder. Verify each of its findings against the current files, carry any that remain unresolved, and give a new name to your report.' : ''}`,
   translate: (j) => `Translate ${j.course} Unit ${j.unit} into its complete Urdu mirror at G4 (translate-unit skill), bound to specs/content/terminology.csv. Record the G4 tracker row as the skill says; translation_status stays draft.`,
   review_ur: (j) => `Act as the INDEPENDENT G5 Urdu reviewer of ${j.course} Unit ${j.unit} (review-unit skill, .claude/agents/g5-reviewer.md). You did not translate this unit. Produce the evidence report and advisory tracker row. Never tick G5, never self-sign.`,
   fix: (j) => j.task || `Make every content gate pass for ${j.course} Unit ${j.unit} with the smallest edits.`,
@@ -346,9 +348,12 @@ function excludedFamilies(board, j) {
     const parent = board.jobs.find((p) => p.id === j.parent);
     return parent?.family ? [parent.family] : [];
   }
-  const producers = board.jobs.filter((x) => unitKey(x) === unitKey(j) && x.stage === of && x.status === 'merged').map((x) => x.family);
+  const [first, ...more] = [of].flat();
+  const producedBy = (stage) => board.jobs.filter((x) => unitKey(x) === unitKey(j) && x.stage === stage && x.status === 'merged').map((x) => x.family);
+  const producers = producedBy(first);
   // Legacy units were produced by the Claude-based Paperclip authors, so Claude may not review them.
-  return producers.length ? [...new Set(producers)] : ['anthropic'];
+  // A re-review after a repair also excludes the repairer: it must not check its own fixes.
+  return [...new Set([...(producers.length ? producers : ['anthropic']), ...more.flatMap(producedBy)])];
 }
 
 /** Queued jobs in launch order: owner priority, then stage, then age. */

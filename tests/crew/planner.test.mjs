@@ -21,7 +21,7 @@ test('the Urdu review waits for an accepted G3', () => {
 test('English review, repair, figures, authoring and English-only courses', () => {
   assert.deepEqual(stagesFor(unit(), facts()), ['review_en']);
   assert.deepEqual(stagesFor(unit(), facts({ g3Report: { disposition: 'revise' } })), ['repair_en']);
-  assert.deepEqual(stagesFor(unit(), facts({ g3Report: { disposition: 'revise' }, g3Repaired: true })), []);
+  assert.deepEqual(stagesFor(unit(), facts({ g3Report: { disposition: 'revise' }, g3Repaired: true, g3Cycles: 2 })), []);
   assert.deepEqual(stagesFor(unit('open', 'open', { figures: { prompt_only: 2 } }), facts({ g3Report: { disposition: 'pass' } })), ['figures']);
   assert.deepEqual(stagesFor({ authored: false, gates: {} }, facts()), ['author']);
   assert.deepEqual(stagesFor(unit(), facts({ bilingual: false, mirrorComplete: false, g3Report: { disposition: 'pass' } })), []);
@@ -31,9 +31,19 @@ test('awaitingG3: agent review finished, G3 not signed off', () => {
   assert.equal(awaitingG3(unit(), facts({ g3Report: { disposition: 'pass' } })), true);
   assert.equal(awaitingG3(unit(), facts({ g3Report: { disposition: 'escalate' } })), true);
   assert.equal(awaitingG3(unit(), facts({ g3Report: { disposition: 'revise' } })), false);
-  assert.equal(awaitingG3(unit(), facts({ g3Report: { disposition: 'revise' }, g3Repaired: true })), true);
+  assert.equal(awaitingG3(unit(), facts({ g3Report: { disposition: 'revise' }, g3Repaired: true, g3Cycles: 2 })), true);
   assert.equal(awaitingG3(unit(), facts()), false);
   assert.equal(awaitingG3(unit('done'), facts({ g3Report: { disposition: 'pass' } })), false);
+});
+
+test('a repaired revise is re-reviewed while ADR-0019 leaves a cycle, then waits for the owner', () => {
+  // 2026-10-25: 31 units sat "awaiting G3" with repairs no reviewer had verified.
+  const repaired = (g3Cycles) => facts({ g3Report: { disposition: 'revise' }, g3Repaired: true, g3Cycles });
+  assert.deepEqual(stagesFor(unit(), repaired(1)), ['review_en']);
+  assert.equal(awaitingG3(unit(), repaired(1)), false);
+  assert.deepEqual(stagesFor(unit(), repaired(2)), []);
+  assert.equal(awaitingG3(unit(), repaired(2)), true);
+  assert.deepEqual(stagesFor(unit(), facts({ g3Report: { disposition: 'pass' }, g3Cycles: 1 })), []);
 });
 
 test('mirrorComplete compares page names only', () => {
@@ -50,7 +60,7 @@ test('pickLatestReport skips manifests and orders by completion time', () => {
     { file: 'G3/manifest.json', json: { files: [] } },
     { file: 'G3/broken.json', json: null },
   ];
-  assert.deepEqual(pickLatestReport(entries), { file: 'G3/agent-g3-run002.json', disposition: 'pass', completed_at: '2026-10-02T09:00:00Z' });
+  assert.deepEqual(pickLatestReport(entries), { file: 'G3/agent-g3-run002.json', disposition: 'pass', completed_at: '2026-10-02T09:00:00Z', cycles: 2 });
   assert.equal(pickLatestReport([{ file: 'G3/manifest.json', json: { files: [] } }]), null);
 });
 
