@@ -16,7 +16,8 @@
  * On 2026-10-25, 31 of the 83 units "awaiting G3" were `revise` verdicts whose repairs had landed
  * but that no reviewer had checked, so the owner was asked to sign off unverified fixes. ADR-0019
  * allows two repair/review cycles per stage, so a repaired `revise` from the first cycle now gets a
- * fresh `review_en`. Only a unit whose cycles are used up waits for the owner.
+ * fresh `review_en`, as does an `escalate` the owner sent back for repair. Only a unit whose
+ * cycles are used up waits for the owner.
  */
 
 /** ADR-0019: at most two repair/review cycles per stage per submission. */
@@ -48,9 +49,13 @@ export function awaitingG3(u, f) {
   return f.g3Report.disposition !== 'revise' || f.g3Repaired;
 }
 
-/** A repaired `revise` with a review cycle left: the crew re-reviews it before the owner sees it. */
+/**
+ * A repaired `revise` or `escalate` with a review cycle left: the crew re-reviews it before the
+ * owner sees it. An escalation is repaired only when the owner queues `repair_en` for it.
+ */
 function reReviewDue(f) {
-  return f.g3Report?.disposition === 'revise' && f.g3Repaired && (f.g3Cycles ?? 1) < MAX_REVIEW_CYCLES;
+  const d = f.g3Report?.disposition;
+  return (d === 'revise' || d === 'escalate') && f.g3Repaired && (f.g3Cycles ?? 1) < MAX_REVIEW_CYCLES;
 }
 
 /** True when every English page (.md/.mdx) has an Urdu file of the same name. */

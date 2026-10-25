@@ -44,7 +44,7 @@ report's findings.
 
 ## Outcome
 
-- ✅ Impact: about 31 units move from the owner's sign-off list to crew re-review
+- ✅ Impact: about 31 units move from the owner's sign-off list to crew re-review; escalations the owner sends back for repair (`crew.mjs add <COURSE> <unit> repair_en`) are re-reviewed too
 - 🧪 Tests: test:crew 64/65; the one failure predates this change
 - 📁 Files: planner.mjs, crew.mjs, workers.mjs, planner.test.mjs
 - 🔁 Next prompts: owner approves the PR (protected scripts/crew)

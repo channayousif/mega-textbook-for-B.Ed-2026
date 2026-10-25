@@ -44,6 +44,10 @@ test('a repaired revise is re-reviewed while ADR-0019 leaves a cycle, then waits
   assert.deepEqual(stagesFor(unit(), repaired(2)), []);
   assert.equal(awaitingG3(unit(), repaired(2)), true);
   assert.deepEqual(stagesFor(unit(), facts({ g3Report: { disposition: 'pass' }, g3Cycles: 1 })), []);
+  const escalated = (g3Repaired) => facts({ g3Report: { disposition: 'escalate' }, g3Repaired, g3Cycles: 1 });
+  assert.deepEqual(stagesFor(unit(), escalated(false)), []);
+  assert.equal(awaitingG3(unit(), escalated(false)), true);
+  assert.deepEqual(stagesFor(unit(), escalated(true)), ['review_en']);
 });
 
 test('mirrorComplete compares page names only', () => {
