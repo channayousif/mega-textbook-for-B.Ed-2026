@@ -63,7 +63,7 @@ the crew board (`~/.crew/mega-book/board.json`, read 2026-10-25 02:00 PKT) and t
   (`scripts/crew/crew.mjs:757-776`) exists because branches conflict on it in almost every batch.
   At `cab50248` the tracked copy happens to be current (`node scripts/report-content-status.mjs
   --check` passes), but every branch that touches content makes it stale for the next one.
-- **Intelligence:** the largest cluster all week: I-0007 in every digest (2026-10-20 C1,
+- **Intelligence:** the largest cluster all week: I-0011 in every digest (2026-10-20 C1,
   2026-10-21 C2 and C9, 2026-10-22 C1, 2026-10-23 C1 with 57 signals, 2026-10-24 C1 with 51
   signals and over 340 in total). 2026-10-24 C1 found the tracked-and-stale root cause; a G3
   reviewer reproduced it on clean main
@@ -74,7 +74,7 @@ the crew board (`~/.crew/mega-book/board.json`, read 2026-10-25 02:00 PKT) and t
   evidence.
 
 ### F2. Workers write scratch files to `/tmp` and headless runs reject the tool call
-- **Evidence:** registry I-0008; 2026-10-20 C2, 2026-10-21 C8, 2026-10-23 effects (25 total),
+- **Evidence:** registry I-0012; 2026-10-20 C2, 2026-10-21 C8, 2026-10-23 effects (25 total),
   2026-10-24 C5 (30 total; `log:efmp-301-u01-review_ur.1.log:238`,
   `log:efmp-302-u02-repair_en-conflict2.1.log:412`). The brief rules
   (`scripts/crew/crew.mjs:197-204`, `briefRules`) say nothing about where scratch files go.
