@@ -43,7 +43,14 @@ export function uploadDataset(dir: string, slug: string, message: string): void 
 export async function waitForDataset(slug: string): Promise<void> {
   const ref = `${kaggleUser()}/${slug}`;
   for (let i = 0; ; i++) {
-    const s = kaggle(['datasets', 'status', ref], { quiet: true }).trim();
+    let s: string;
+    try {
+      s = kaggle(['datasets', 'status', ref], { quiet: true }).trim();
+    } catch {
+      // `datasets status` has returned 403 for a large private dataset that exists and lists its
+      // files fine (2026-10-26). Listing files is then the readiness signal.
+      try { kaggle(['datasets', 'files', ref], { quiet: true }); return; } catch { s = 'unavailable'; }
+    }
     if (/ready/i.test(s)) return;
     if (i > 60) throw new Error(`dataset ${ref} not ready after 10 min: ${s}`);
     await sleep(10_000);

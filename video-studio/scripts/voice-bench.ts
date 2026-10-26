@@ -1,6 +1,6 @@
 // VS-003 voice benchmark on Kaggle (V003). Generates open-source candidate takes; manual AI Studio
 // and narrator takes are imported by voice-blind.ts. Media stays in $MEDIA_ROOT/voice-benchmark/.
-//   npm run voice:bench -- pack | run | fetch | all
+//   npm run voice:bench -- mirror | pack | run | fetch | all   (mirror once per gated model)
 import { copyFileSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { basename, dirname, join } from 'node:path';
 import { digestBytes, digestFile } from './lib/hash.ts';
@@ -15,6 +15,18 @@ const dsDir = join(root, 'kaggle', 'dataset');
 const kDir = join(root, 'kaggle', 'kernel');
 const outDir = join(root, 'kaggle', 'out');
 const INPUTS = ['candidates.json', 'passages.json'];
+const candidates = () => JSON.parse(readFileSync(join(SPEC, 'candidates.json'), 'utf8')).candidates as { id: string; model: string; model_dataset?: string }[];
+
+/** Upload a locally downloaded model folder as a private dataset (gated models: owner accepted terms). */
+function mirror() {
+  for (const c of candidates().filter((x) => x.model_dataset)) {
+    const dir = join(mediaRoot(), 'models', c.model.split('/').pop()!);
+    if (!existsSync(join(dir, 'config.json'))) throw new Error(`download ${c.model} to ${dir} first (huggingface_hub snapshot_download)`);
+    writeFileSync(join(dir, 'dataset-metadata.json'), JSON.stringify({ title: c.model_dataset, id: `${kaggleUser()}/${c.model_dataset}`, licenses: [{ name: 'apache-2.0' }] }, null, 2));
+    uploadDataset(dir, c.model_dataset!, `mirror of ${c.model}`);
+    console.log(`voice:bench: mirrored ${c.model} to private dataset ${kaggleUser()}/${c.model_dataset}`);
+  }
+}
 
 function pack() {
   rmSync(dsDir, { recursive: true, force: true });
@@ -32,12 +44,14 @@ function pack() {
 
 async function run() {
   await waitForDataset(DATASET);
+  for (const c of candidates().filter((x) => x.model_dataset)) await waitForDataset(c.model_dataset!);
   mkdirSync(kDir, { recursive: true });
   copyFileSync(join(VS_ROOT, 'kaggle', 'voice_bench.py'), join(kDir, 'voice_bench.py'));
   writeFileSync(join(kDir, 'kernel-metadata.json'), JSON.stringify({
     id: `${kaggleUser()}/${KERNEL}`, title: KERNEL, code_file: 'voice_bench.py', language: 'python', kernel_type: 'script',
     is_private: true, enable_gpu: true, enable_internet: true,
-    dataset_sources: [`${kaggleUser()}/${DATASET}`], competition_sources: [], kernel_sources: [],
+    dataset_sources: [`${kaggleUser()}/${DATASET}`, ...candidates().filter((c) => c.model_dataset).map((c) => `${kaggleUser()}/${c.model_dataset}`)],
+    competition_sources: [], kernel_sources: [],
   }, null, 2));
   const started = Date.now();
   kaggle(['kernels', 'push', '-p', kDir, '--accelerator', 'NvidiaTeslaT4']);
@@ -69,7 +83,8 @@ async function fetch() {
 
 const cmd = process.argv[2];
 if (cmd === 'pack') pack();
+else if (cmd === 'mirror') mirror();
 else if (cmd === 'run') await run();
 else if (cmd === 'fetch') await fetch();
 else if (cmd === 'all') { pack(); await run(); await fetch(); }
-else { console.error('usage: npm run voice:bench -- pack | run | fetch | all'); process.exit(1); }
+else { console.error('usage: npm run voice:bench -- mirror | pack | run | fetch | all'); process.exit(1); }

@@ -7,7 +7,10 @@
       "engine": "mms",
       "model": "facebook/mms-tts-urd-script_arabic",
       "licence": "CC-BY-NC-4.0 (non-commercial)",
-      "characters": { "ustani": {}, "shagird": {} },
+      "characters": {
+        "ustani": {},
+        "shagird": {}
+      },
       "note": "single speaker; same voice for both characters"
     },
     {
@@ -15,12 +18,17 @@
       "engine": "parler",
       "model": "ai4bharat/indic-parler-tts",
       "package": "parler-tts==0.2.3",
-      "licence": "Apache-2.0 (gated: accept terms on Hugging Face)",
-      "needs_secret": "HF_TOKEN",
+      "licence": "Apache-2.0 (gated on Hugging Face; terms accepted by the owner; mirrored privately)",
       "characters": {
-        "ustani": { "description": "A female speaker in her forties speaks Urdu in a warm, confident and encouraging tone at a moderate pace with a slightly low pitch. Very clear audio, close-sounding, no background noise." },
-        "shagird": { "description": "A young male speaker in his early twenties speaks Urdu in a curious, upbeat tone at a slightly fast pace with a moderate pitch. Very clear audio, close-sounding, no background noise." }
-      }
+        "ustani": {
+          "description": "A female speaker in her forties speaks Urdu in a warm, confident and encouraging tone at a moderate pace with a slightly low pitch. Very clear audio, close-sounding, no background noise."
+        },
+        "shagird": {
+          "description": "A young male speaker in his early twenties speaks Urdu in a curious, upbeat tone at a slightly fast pace with a moderate pitch. Very clear audio, close-sounding, no background noise."
+        }
+      },
+      "model_dataset": "vs-model-indic-parler-tts",
+      "note": "loaded from the private Kaggle dataset mirror; Kaggle does not serve secrets to API-pushed runs"
     }
   ]
 }

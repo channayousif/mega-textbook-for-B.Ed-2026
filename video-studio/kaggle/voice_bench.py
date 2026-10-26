@@ -32,6 +32,17 @@ def write_wav(path, samples, rate):
         w.writeframes(pcm)
 
 
+def model_path(cand):
+    """A privately mirrored model dataset if mounted, else the Hugging Face id."""
+    slug = cand.get("model_dataset")
+    if slug:
+        hits = [os.path.dirname(p) for p in glob.glob("/kaggle/input/**/config.json", recursive=True)
+                if "/%s/" % slug in p + "/" or os.path.basename(os.path.dirname(p)) == slug]
+        if hits:
+            return hits[0]
+    return cand["model"]
+
+
 def gen(cand, passages, takes):
     """Child process: generate all takes for one candidate."""
     import torch
@@ -47,17 +58,29 @@ def gen(cand, passages, takes):
     elif cand["engine"] == "parler":
         from parler_tts import ParlerTTSForConditionalGeneration
         from transformers import AutoTokenizer
-        model = ParlerTTSForConditionalGeneration.from_pretrained(cand["model"]).to(device)
-        tok = AutoTokenizer.from_pretrained(cand["model"])
+        src = model_path(cand)
+        model = ParlerTTSForConditionalGeneration.from_pretrained(src).to(device)
+        tok = AutoTokenizer.from_pretrained(src)
         dtok = AutoTokenizer.from_pretrained(model.config.text_encoder._name_or_path)
         rate, rev = model.config.sampling_rate, getattr(model.config, "_commit_hash", None)
 
+        import numpy as np
+        import re
+
         def synth(text, desc):
+            # Parler stops at about 30 s per generation (a 133-word passage came back cut at 30.2 s,
+            # 2026-10-26), so voice one sentence at a time and join with short pauses. The real
+            # pipeline voices lines of 22 words or fewer, so this is also the realistic test.
             d = dtok(desc, return_tensors="pt").to(device)
-            p = tok(text, return_tensors="pt").to(device)
-            g = model.generate(input_ids=d.input_ids, attention_mask=d.attention_mask,
-                               prompt_input_ids=p.input_ids, prompt_attention_mask=p.attention_mask)
-            return g.cpu().numpy().squeeze()
+            parts = [s.strip() for s in re.split(r"(?<=[\u06d4\u061f!?])\s+", text) if s.strip()]
+            pause = np.zeros(int(0.35 * rate), dtype="float32")
+            out = []
+            for s in parts:
+                p = tok(s, return_tensors="pt").to(device)
+                g = model.generate(input_ids=d.input_ids, attention_mask=d.attention_mask,
+                                   prompt_input_ids=p.input_ids, prompt_attention_mask=p.attention_mask)
+                out += [g.cpu().numpy().squeeze().astype("float32"), pause]
+            return np.concatenate(out[:-1])
     else:
         raise SystemExit("unknown engine " + cand["engine"])
     for character, opts in cand["characters"].items():
@@ -134,6 +157,9 @@ def main():
             time.sleep(5 * attempt)
     status = {}
     for cand in cands["candidates"]:
+        if cand.get("model_dataset") and model_path(cand) == cand["model"] and not env.get("HF_TOKEN"):
+            status[cand["id"]] = "skipped: model dataset %s not mounted and no HF_TOKEN" % cand["model_dataset"]
+            continue
         if cand.get("needs_secret") and not env.get(cand["needs_secret"]):
             status[cand["id"]] = "skipped: Kaggle secret %s unavailable (%s)" % (
                 cand["needs_secret"], secret_diag.get(cand["needs_secret"], "not looked up"))
