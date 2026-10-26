@@ -22,7 +22,8 @@ files:
 tests:
   - Unit 2 light SVG geometry: PASS
   - npm run figures:variants
-  - npm run check:content
+  - npm run build:content-status (ignored local cache)
+  - npm run check:content (13/13 PASS)
 ---
 
 ## Prompt
@@ -51,6 +52,6 @@ Repositioned inference labels, corrected mirrored Urdu text anchors, wrapped Eng
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Urdu end anchors directed labels into adjacent columns; English labels exceeded available width.
-- Graders run and results (PASS/FAIL): Geometry PASS; content gate results recorded in G2 logs.
+- Graders run and results (PASS/FAIL): Geometry PASS; eight G2 evidence checks PASS; full content suite 13/13 PASS after refreshing the ignored status cache.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Run fresh independent review against repaired figure inputs.
