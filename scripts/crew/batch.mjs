@@ -53,3 +53,17 @@ export function batchBody(members, { left = [], supersedes = [] } = {}) {
     '🤖 Generated with [Claude Code](https://claude.com/claude-code)',
   ].join('\n');
 }
+
+/**
+ * Build the exclusion reason for a job that could not join the hourly batch.
+ * Starts with "<branch> conflicts with main" and lists at most five of the
+ * unmerged paths, with a count of the rest.
+ */
+export function exclusionReason(branch, paths) {
+  const base = `${branch} conflicts with main`;
+  if (!paths.length) return `${base}.`;
+  const shown = paths.slice(0, 5);
+  const rest = paths.length - shown.length;
+  const list = rest ? `${shown.join(', ')} and ${rest} more` : shown.join(', ');
+  return `${base} (${list}).`;
+}

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { batchDue, batchCandidates, batchId, batchTitle, batchBody } from '../../scripts/crew/batch.mjs';
+import { batchDue, batchCandidates, batchId, batchTitle, batchBody, exclusionReason } from '../../scripts/crew/batch.mjs';
 
 const at = (iso) => Date.parse(iso);
 
@@ -46,4 +46,17 @@ test('batchId, title and body', () => {
   assert.match(body, /Left for the next batch \(a merge fix is queued\): `x-u01-fix`\./);
   assert.match(body, /Supersedes #119\./);
   assert.doesNotMatch(body, /\u2014/);
+});
+
+test('exclusionReason: zero, one and more than five paths', () => {
+  assert.equal(exclusionReason('crew/x-u01-author', []), 'crew/x-u01-author conflicts with main.');
+  assert.equal(
+    exclusionReason('crew/x-u01-author', ['glossary.json']),
+    'crew/x-u01-author conflicts with main (glossary.json).',
+  );
+  const many = ['glossary.json', 'specs/decisions/log.md', 'specs/content/efmp-301/tasks.md', 'specs/gaps.md', 'static/content-status.json', 'catalog/courses.json'];
+  assert.equal(
+    exclusionReason('crew/x-u01-author', many),
+    'crew/x-u01-author conflicts with main (glossary.json, specs/decisions/log.md, specs/content/efmp-301/tasks.md, specs/gaps.md, static/content-status.json and 1 more).',
+  );
 });
