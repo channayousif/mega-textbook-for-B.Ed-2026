@@ -74,6 +74,16 @@ export const QUOTA_RE = /rate.?limit|quota|usage limit|session limit|weekly limi
 /** Backoff ladder for a worker that keeps hitting its limit, in minutes. */
 export const COOLDOWN_MIN = [30, 120, 360];
 
+/** Relative provider reset duration in minutes, rounded up and capped at one week.
+ * Clock times have no reliable date/timezone here, so retain strike backoff for those.
+ */
+export function resetMinutes(text) {
+  const match = /\bresets?\s+in\s+(?:(\d+)h\s*)?(?:(\d+)m\s*)?(?:(\d+)s)?(?!\w)/i.exec(text);
+  if (!match || !match.slice(1).some((part) => part !== undefined)) return null;
+  const [, hours = '0', minutes = '0', seconds = '0'] = match;
+  return Math.min(10080, Math.ceil(Number(hours) * 60 + Number(minutes) + Number(seconds) / 60));
+}
+
 /**
  * First worker in the stage's chain that is healthy, below its concurrency cap,
  * and not of an excluded family. Returns null when none is eligible, so the job
