@@ -14,7 +14,9 @@
     "kaggle:pack": "tsx scripts/kaggle-pack.ts",
     "kaggle:run": "tsx scripts/kaggle-run.ts",
     "kaggle:fetch": "tsx scripts/kaggle-fetch.ts",
-    "approve": "tsx scripts/approve.ts"
+    "approve": "tsx scripts/approve.ts",
+    "voice:bench": "tsx scripts/voice-bench.ts",
+    "voice:blind": "tsx scripts/voice-blind.ts"
   },
   "dependencies": {
     "@remotion/bundler": "4.0.535",

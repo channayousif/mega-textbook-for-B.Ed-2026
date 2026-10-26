@@ -12,7 +12,7 @@ import { readApprovals } from './lib/approvals.ts';
 import { currentDigests, readEpisode } from './lib/episode.ts';
 import { digestBytes } from './lib/hash.ts';
 import { evaluate } from './lib/invalidation.ts';
-import { datasetSlug, kaggle, kaggleUser } from './lib/kaggle.ts';
+import { datasetSlug, kaggleUser, uploadDataset } from './lib/kaggle.ts';
 import { assertEpisodeId, kaggleBundleDir, REPO_ROOT, VS_ROOT } from './lib/paths.ts';
 import { SAMPLE_EPISODE_ID, SAMPLE_VOICE_EPISODE_ID, sampleProps, sampleVoiceProps } from './lib/sample.ts';
 import { toneWav } from './lib/wav.ts';
@@ -83,9 +83,6 @@ if (upload) {
   writeFileSync(join(out, 'dataset-metadata.json'), JSON.stringify({
     title: slug, id: `${user}/${slug}`, licenses: [{ name: 'other' }],
   }, null, 2));
-  let exists = true;
-  try { kaggle(['datasets', 'status', `${user}/${slug}`], { quiet: true }); } catch { exists = false; }
-  if (exists) kaggle(['datasets', 'version', '-p', out, '-m', `bundle ${manifest.bundle_sha256.slice(0, 12)}`, '-r', 'skip', '-q']);
-  else kaggle(['datasets', 'create', '-p', out, '-r', 'skip', '-q']); // private by default
+  uploadDataset(out, slug, `bundle ${manifest.bundle_sha256.slice(0, 12)}`);
   console.log(`kaggle:pack: uploaded private dataset ${user}/${slug}`);
 }

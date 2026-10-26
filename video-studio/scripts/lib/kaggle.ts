@@ -27,3 +27,42 @@ export function kaggleUser(): string {
 
 export const datasetSlug = (id: string) => `vs-${id}`;
 export const kernelSlug = (id: string) => `vs-render-${id}`;
+
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+/** Create the private dataset, or add a version if it exists. `dir` holds dataset-metadata.json. */
+export function uploadDataset(dir: string, slug: string, message: string): void {
+  const ref = `${kaggleUser()}/${slug}`;
+  let exists = true;
+  try { kaggle(['datasets', 'status', ref], { quiet: true }); } catch { exists = false; }
+  if (exists) kaggle(['datasets', 'version', '-p', dir, '-m', message, '-r', 'skip', '-q']);
+  else kaggle(['datasets', 'create', '-p', dir, '-r', 'skip', '-q']); // private by default
+}
+
+/** A dataset must finish processing before a kernel can mount it. */
+export async function waitForDataset(slug: string): Promise<void> {
+  const ref = `${kaggleUser()}/${slug}`;
+  for (let i = 0; ; i++) {
+    const s = kaggle(['datasets', 'status', ref], { quiet: true }).trim();
+    if (/ready/i.test(s)) return;
+    if (i > 60) throw new Error(`dataset ${ref} not ready after 10 min: ${s}`);
+    await sleep(10_000);
+  }
+}
+
+/** Poll a pushed kernel until it completes; returns wall minutes. Exits 1 on error/cancel. */
+export async function waitForKernel(slug: string, started = Date.now(), maxHours = 3): Promise<number> {
+  const ref = `${kaggleUser()}/${slug}`;
+  for (;;) {
+    await sleep(30_000);
+    const s = kaggle(['kernels', 'status', ref], { quiet: true }).trim();
+    const mins = (Date.now() - started) / 60_000;
+    console.log(`kaggle: ${mins.toFixed(1)} min  ${s}`);
+    if (/complete/i.test(s)) return mins;
+    if (/error|cancel/i.test(s)) {
+      console.error(`kaggle: kernel ${ref} failed; download its log with \`kaggle kernels output ${ref} -p <dir>\``);
+      process.exit(1);
+    }
+    if (mins > maxHours * 60) throw new Error(`kernel ${ref} still running after ${maxHours} h`);
+  }
+}

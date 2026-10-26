@@ -1,0 +1,26 @@
+{
+  "_comment": "VS-003 benchmark candidates generated on Kaggle (VS-ADR-0011). AI Studio and narrator takes are manual imports (handoff-ai-studio.md). Owner picks blind; nothing here is a locked voice.",
+  "takes": 3,
+  "candidates": [
+    {
+      "id": "mms-urd",
+      "engine": "mms",
+      "model": "facebook/mms-tts-urd-script_arabic",
+      "licence": "CC-BY-NC-4.0 (non-commercial)",
+      "characters": { "ustani": {}, "shagird": {} },
+      "note": "single speaker; same voice for both characters"
+    },
+    {
+      "id": "indic-parler",
+      "engine": "parler",
+      "model": "ai4bharat/indic-parler-tts",
+      "package": "parler-tts==0.2.3",
+      "licence": "Apache-2.0 (gated: accept terms on Hugging Face)",
+      "needs_secret": "HF_TOKEN",
+      "characters": {
+        "ustani": { "description": "A female speaker in her forties speaks Urdu in a warm, confident and encouraging tone at a moderate pace with a slightly low pitch. Very clear audio, close-sounding, no background noise." },
+        "shagird": { "description": "A young male speaker in his early twenties speaks Urdu in a curious, upbeat tone at a slightly fast pace with a moderate pitch. Very clear audio, close-sounding, no background noise." }
+      }
+    }
+  ]
+}
