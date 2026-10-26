@@ -171,3 +171,32 @@ test('the browser print menu gets the link QR codes stored when the page settled
   await settle();
   expect(await codesAtBeforePrint()).toEqual({ n: 1, label: 'doi.org/10.1080/713698714' });
 });
+
+/**
+ * Wide figures were cut off on Print / Save as PDF (owner report, 2026-10-26,
+ * EFMP-304 fig-U4-1). The phone rule that lets a 780px figure scroll sideways
+ * also matched the A4 page box (about 680px wide), and paper cannot scroll.
+ * Every printed figure must now fit its column.
+ */
+test('every figure fits the A4 column in print media', async ({ page }) => {
+  await page.setViewportSize({ width: 680, height: 960 });
+  await page.goto('/semester-2/efmp-304/unit-04/topic-01');
+  await page.emulateMedia({ media: 'print' });
+  // Lazy images load as they near the viewport; walk the page so each one does.
+  await page.evaluate(async () => {
+    for (const img of document.querySelectorAll<HTMLImageElement>('.figure img')) {
+      img.loading = 'eager';
+    }
+  });
+  const shown = page.locator('.figure img:visible');
+  await expect.poll(() => shown.evaluateAll((imgs) => imgs.every((i) => (i as HTMLImageElement).complete && (i as HTMLImageElement).naturalWidth > 0))).toBe(true);
+  const overflow = await shown.evaluateAll((imgs) => imgs.flatMap((img) => {
+    const fig = img.closest('.figure');
+    if (!fig) return [];
+    const a = img.getBoundingClientRect();
+    const b = fig.getBoundingClientRect();
+    return a.right > b.right + 1 || a.left < b.left - 1 ? [`${img.getAttribute('src')}: ${Math.round(a.width)}px in ${Math.round(b.width)}px`] : [];
+  }));
+  expect(await shown.count()).toBeGreaterThan(0);
+  expect(overflow).toEqual([]);
+});

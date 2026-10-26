@@ -139,7 +139,15 @@ After the SVG exists at the target path (Codex or Claude), for each figure:
    ```
    It strips comments/whitespace and **hard-fails if the result is > 20 KB**. If it fails,
    simplify the SVG (fewer nodes, shorter labels) - do not raise the budget.
-2. Self-check: every label legible on both themes; the `<title>` present; no colour-only
+2. Measure the text geometry (mandatory; see `references/svg-authoring.md` §"Fit and spacing"):
+   ```
+   flock /tmp/mega-book-heavy.lock node scripts/measure-figure-text.mjs static/img/figures/<course>/unit-NN/<figId>.svg
+   ```
+   It must exit 0: no text over other text, out of its panel, past the viewBox or over the
+   wordmark. On failure re-wrap the label or grow the row, never shrink below 12px, and measure
+   again. Do the same for the `.ur.svg` after Step 5. The dark twin shares the geometry, so
+   `npm run figures:variants` comes after a clean measure.
+3. Self-check: every label legible on both themes; the `<title>` present; no colour-only
    distinction (a relationship the figure encodes MUST also be carried by shape, label or dash
    pattern - Constitution Art. III.8); labels in the unit's plain register; no em dash in
    `<text>`.

@@ -76,7 +76,7 @@ Content in Git; quiz banks/answer keys stay backend-only (RLS-protected, `verifi
 
 Zero em dashes (U+2014, U+2015, U+2E3A, U+2E3B) in authored content - `check:no-em-dash`. En dash (U+2013) is permitted for numeric ranges.
 
-Figure lifecycle: `prompt-only → generated → placed`. `Kind` archetypes: table, concept-map, flowchart, timeline, diagram, illustration. Manifest at `specs/content/<course>/figures/unit-NN.md`. Visual density: ≥2 figures per topic, ≥1 concept-map/flowchart/timeline per unit.
+Figure lifecycle: `prompt-only → generated → placed`. `Kind` archetypes: table, concept-map, flowchart, timeline, diagram, illustration. Manifest at `specs/content/<course>/figures/unit-NN.md`. Visual density: ≥2 figures per topic, ≥1 concept-map/flowchart/timeline per unit. After writing or editing any SVG text (EN or `.ur.svg`), run `node scripts/measure-figure-text.mjs <svgs>` until it exits 0; CI measures every SVG a PR adds or changes (`figure-geometry` job).
 
 English-first publication is permitted with the required untranslated banner; Urdu parity is a corpus-completion requirement (not a per-unit gate). G3/G5 reviews require independent reviewers - see "Review delegation" below and ADR-0019. Do not self-certify or fabricate human initials.
 

@@ -64,6 +64,35 @@ jobs:
             echo "Content-only PR: rls and e2e skipped (they run on the main push)." >> "$GITHUB_STEP_SUMMARY"
           fi
 
+  # Figure geometry: text overlapping text, spilling out of its panel, or past the
+  # viewBox (scripts/measure-figure-text.mjs). Only SVGs this change adds or edits
+  # are measured, so the corpus's existing collisions (specs/gaps.md) never turn an
+  # unrelated PR red. Runs on content-only PRs too, which is where figures change.
+  figure-geometry:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - id: svgs
+        env:
+          BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: |
+          if [ -z "$BASE" ] || [ "$BASE" = "0000000000000000000000000000000000000000" ]; then echo "base=" >> "$GITHUB_OUTPUT"; exit 0; fi
+          echo "base=$BASE" >> "$GITHUB_OUTPUT"
+          n=$(git diff --name-only --diff-filter=AM "$BASE...HEAD" -- static/img/figures | grep -c '\.svg$' || true)
+          echo "count=$n" >> "$GITHUB_OUTPUT"
+      - if: steps.svgs.outputs.count > 0
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - if: steps.svgs.outputs.count > 0
+        run: npm ci && npx playwright install --with-deps chromium
+      - if: steps.svgs.outputs.count > 0
+        name: Measure changed figure SVGs
+        run: node scripts/measure-figure-text.mjs --changed ${{ steps.svgs.outputs.base }}
+
   build:
     runs-on: ubuntu-latest
     steps:
