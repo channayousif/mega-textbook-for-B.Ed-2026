@@ -23,7 +23,7 @@ files:
 tests:
   - Unit 16 light SVG text measurement: PASS, all 12 files
   - Text elements and viewBoxes unchanged: PASS
-  - Content gates and origin/main comparison: see final validation update
+  - Content gates: PASS, all 13 on final rerun after tracker update and cache refresh
 ---
 
 ## Prompt
@@ -86,6 +86,6 @@ Resolved all 30 spill findings by replacing mirrored rectangle transforms with e
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Spill checker compared text against untransformed mirrored rectangles.
-- Graders run and results (PASS/FAIL): Geometry PASS (12 SVGs, zero findings); other gate results recorded after completion.
+- Graders run and results (PASS/FAIL): Geometry PASS (12 SVGs, zero findings); check:content PASS (13/13); fresh G2 PASS (8/8), including read-only manifest/log validation. Baseline origin/main: 12 gates passed and content-status passed after generating its missing ignored cache. Tracker edits required regenerating the local ignored content-status cache before the final rerun.
 - Prompt variant (if applicable): null
 - Next experiment (smallest change to try): Use explicit rectangle coordinates in future RTL sources.
