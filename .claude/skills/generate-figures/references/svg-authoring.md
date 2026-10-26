@@ -46,7 +46,7 @@ Every diagram SVG starts from this shape:
     .ink     { fill: var(--ink); }          /* text + solid fills */
     .stroke  { stroke: var(--ink); stroke-width: 2.5; fill: none; }   /* thicker stroke for crisper lines */
     .stroke-a{ stroke: var(--a1); stroke-width: 2; fill: none; }       /* accent-coloured line */
-    .muted   { fill: var(--muted); }
+    .muted   { font-size: 14px; fill: var(--muted); }   /* size it: an unsized class inherits 15px and outgrows its column */
     .panel   { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
     .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }  /* tinted accent panel */
     .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
@@ -131,6 +131,36 @@ Label text on a tinted panel is always `--ink`, never the accent - `--ink` is wh
 - **Size ≤ 20 KB** after `npm run optimize:figure -- --svg`. Hand-authored flat SVGs land at
   2–8 KB; if you're near the limit you have too many nodes or over-long labels.
 - **No `<script>`, no `<foreignObject>`, no external `<image>`/`<use href="http…">`.**
+
+## Fit and spacing (no label may touch another)
+
+Most figure defects found in review are geometry, not meaning: a label running into the next
+table column, two labels printed on one another, text spilling out of its panel or past the
+viewBox. They come from guessing widths. Plan with the budget below, then **measure**.
+
+- **Width budget.** Plan Latin text at about **0.6 x font-size per character** (14px: about 8.4px a
+  character, so 20 characters is about 170px). Urdu Nastaliq is wider and much taller: plan it at
+  0.7 x font-size and measure it, never estimate it.
+- **Columns.** A cell's usable width is its column span minus **12px** (6px padding each side).
+  Neighbouring labels on the same line need **at least 8px** between them. Fix the column x
+  positions first, then write every label to fit its column.
+- **Wrap, don't shrink.** A label longer than its cell wraps onto another line: a second
+  `<text>` (or `<tspan x="<same x>" dy="1.25em">`) at the same x, about 17px lower for 14px text.
+  Never let a line run into the next column, and never drop below 12px to make it fit.
+- **Rows grow with the text.** Size each row or box from its longest wrapped cell:
+  lines x 17px + 2 x 12px padding. Grow the `viewBox` height (and move the wordmark to stay
+  12px inside the bottom-right corner) rather than crowding.
+- **Captions.** A caption under the figure gets at most about 90 characters a line at 13px on
+  a 780-wide canvas; wrap anything longer. It must end at least 12px before the wordmark.
+- **Every text class has an explicit `font-size`.** An unsized class silently inherits 15px.
+- **Measure, every time.** After writing the SVG, after any later text edit, and after the
+  Urdu translation:
+  ```
+  flock /tmp/mega-book-heavy.lock node scripts/measure-figure-text.mjs static/img/figures/<course>/unit-NN/<figId>.svg static/img/figures/<course>/unit-NN/<figId>.ur.svg
+  ```
+  It renders the SVG in Chromium and fails on text past the viewBox, text over the wordmark,
+  text over other text (or closer than 4px on the same line), and text spilling out of the
+  rect it starts in. It must exit 0. CI runs the same check on every SVG a PR adds or changes.
 
 ## The five layout patterns
 
@@ -226,3 +256,4 @@ Give the arrowhead **the same token as the line it terminates**. If the arrow's 
 - [ ] No colour-only distinction anywhere: delete all colour, does it still read?
 - [ ] No external font / image / script.
 - [ ] `npm run optimize:figure -- --svg <f> <f>` exits 0 and reports ≤ 20 KB.
+- [ ] `node scripts/measure-figure-text.mjs <f>` exits 0 (no overlap, spill or overflow), for the `.ur.svg` too.

@@ -33,6 +33,13 @@ For each schematic figure, Claude prepares a complete, self-contained prompt and
    - No colour-only meaning: every distinction the figure makes MUST also be carried by shape,
      label or dash pattern. A tick is a shape + the word, not green vs red.
    - No em dash (U+2014) in any `<text>` label. Use comma, colon or spaced hyphen.
+   - No label may touch another or leave its panel. Plan Latin text at 0.6 x font-size per
+     character; a cell's usable width is its column span minus 12px; same-line labels in
+     neighbouring columns keep at least 8px apart. Wrap long labels onto another line at the
+     same x (about 17px lower at 14px); grow the row or the viewBox height instead of shrinking
+     text below 12px. Give every text class an explicit `font-size`.
+   - Before reporting, run `node scripts/measure-figure-text.mjs <target path>` and fix every
+     problem it prints until it exits 0.
    - Use the `.bg` / `.panel` / `.link` / `.ink` / `.muted` / `.h` / `.wm` / `.ah` classes from
      the boilerplate; add custom classes only when the boilerplate ones do not cover the need.
 4. **The instruction**: "Read `references/svg-authoring.md` and `scripts/lib/figure-palette.mjs`

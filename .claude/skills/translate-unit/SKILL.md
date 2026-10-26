@@ -146,6 +146,7 @@ are already `placed` in English but have no Urdu variants (the normal case for a
 `generate-figures` Step 5 for the unit, then:
 
 ```bash
+flock /tmp/mega-book-heavy.lock node scripts/measure-figure-text.mjs static/img/figures/<course>/unit-NN/*.ur.svg  # must exit 0
 npm run figures:variants        # derives .ur.dark.svg from each .ur.svg
 npm run figures:variants:check  # must be clean
 ```

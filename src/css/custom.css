@@ -676,8 +676,10 @@ html[data-theme='dark'] .bloom-tag {
 
    `text-align: start` (not `left`) so the resting scroll position is correct in
    the Urdu RTL build; the centring on `.figure` would otherwise strand an
-   overflowing figure mid-scroll on first paint. */
-@media (max-width: 768px) {
+   overflowing figure mid-scroll on first paint. Screen only: in print the A4
+   page box (about 680px) also matches max-width: 768px, and paper cannot scroll,
+   so a 780px figure lost its right edge on Print / Save as PDF. */
+@media screen and (max-width: 768px) {
   .figure--table,
   .figure--concept-map,
   .figure--flowchart,
@@ -974,6 +976,13 @@ html[data-theme='dark'] .figure__img--dark {
   /* never split a figure across an A4 page boundary (Spec 009) */
   .figure {
     break-inside: avoid;
+    overflow: visible;
+    text-align: center;
+  }
+  /* Scale every figure to the printable width; nothing may be clipped on paper. */
+  .figure img {
+    max-width: 100% !important;
+    height: auto;
   }
   /* Paper is white whatever the screen was set to, so always print the light
      variant - a dark-mode reader used to get dark plates on white A4. */

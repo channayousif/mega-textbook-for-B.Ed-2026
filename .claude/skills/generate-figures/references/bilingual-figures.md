@@ -47,7 +47,10 @@ timeline could lose its Urdu variant and CI stayed green. It now keys on the ass
    ```
    Do **not** `@import` or reference a font file - name the family and let the OS / the site's
    already-loaded Nastaliq webfont resolve it. Give Urdu labels a little more line height
-   (Nastaliq is tall): bump `font-size` down ~1px and add vertical padding if labels collide.
+   (Nastaliq is tall): space wrapped lines about 20px apart, and where a translated label is
+   longer than its English source, wrap it or grow the row rather than shrinking it. Then run
+   `node scripts/measure-figure-text.mjs <figId>.ur.svg`; it must exit 0. Translation is where
+   most new collisions appear, because Urdu runs longer than English.
 5. **Optimise** - `npm run optimize:figure -- --svg <figId>.ur.svg <figId>.ur.svg`; ≤ 20 KB.
 6. **Wire it** - in
    `i18n/ur/docusaurus-plugin-content-docs/current/semester-N/<course>/unit-NN/topic-NN.mdx`,
