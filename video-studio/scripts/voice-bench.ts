@@ -1,6 +1,6 @@
 // VS-003 voice benchmark on Kaggle (V003). Generates open-source candidate takes; manual AI Studio
 // and narrator takes are imported by voice-blind.ts. Media stays in $MEDIA_ROOT/voice-benchmark/.
-//   npm run voice:bench -- mirror | pack | run | fetch | all   (mirror once per gated model)
+//   npm run voice:bench -- mirror | pack | run | fetch | all [--only=id,...]   (mirror once per gated model)
 import { copyFileSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { basename, dirname, join } from 'node:path';
 import { digestBytes, digestFile } from './lib/hash.ts';
@@ -14,8 +14,11 @@ const root = join(mediaRoot(), 'voice-benchmark');
 const dsDir = join(root, 'kaggle', 'dataset');
 const kDir = join(root, 'kaggle', 'kernel');
 const outDir = join(root, 'kaggle', 'out');
-const INPUTS = ['candidates.json', 'passages.json'];
-const candidates = () => JSON.parse(readFileSync(join(SPEC, 'candidates.json'), 'utf8')).candidates as { id: string; model: string; model_dataset?: string }[];
+const INPUTS = ['candidates.json', 'passages.json', 'passages-devanagari.json'];
+type Ref = { audio: string };
+const spec = () => JSON.parse(readFileSync(join(SPEC, 'candidates.json'), 'utf8'));
+/** Active candidates only: a rejected round stays on record but does not spend GPU time again. */
+const candidates = () => (spec().candidates as { id: string; model: string; model_dataset?: string; active?: boolean }[]).filter((c) => c.active !== false);
 
 /** Upload a locally downloaded model folder as a private dataset (gated models: owner accepted terms). */
 function mirror() {
@@ -32,9 +35,25 @@ function pack() {
   rmSync(dsDir, { recursive: true, force: true });
   mkdirSync(dsDir, { recursive: true });
   const files: Record<string, string> = {};
+  // `--only=id1,id2` reruns a subset: the packed candidates.json activates just those ids.
+  const only = process.argv.find((a) => a.startsWith('--only='))?.slice(7).split(',');
   for (const f of INPUTS) {
     copyFileSync(join(SPEC, f), join(dsDir, f));
+    if (f === 'candidates.json' && only) {
+      const c = spec();
+      for (const x of c.candidates) x.active = only.includes(x.id);
+      writeFileSync(join(dsDir, f), JSON.stringify(c, null, 2) + '\n');
+    }
     files[f] = digestBytes(readFileSync(join(dsDir, f)));
+  }
+  // Reference clips are media: they live in $MEDIA_ROOT/voice-benchmark/refs, never in the repo.
+  // Flat names, because the Kaggle upload skips subfolders.
+  const refs = Object.entries(spec().refs ?? {}).filter(([k]) => !k.startsWith('_')).flatMap(([, v]) => v as Ref[]);
+  for (const r of refs) {
+    const src = join(root, 'refs', r.audio);
+    if (!existsSync(src)) throw new Error(`missing reference clip ${src} (see refs in candidates.json)`);
+    copyFileSync(src, join(dsDir, r.audio));
+    files[r.audio] = digestBytes(readFileSync(join(dsDir, r.audio)));
   }
   writeFileSync(join(dsDir, 'manifest.json'), JSON.stringify({ files }, null, 2) + '\n');
   writeFileSync(join(dsDir, 'dataset-metadata.json'), JSON.stringify({ title: DATASET, id: `${kaggleUser()}/${DATASET}`, licenses: [{ name: 'other' }] }, null, 2));
