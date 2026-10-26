@@ -64,7 +64,7 @@ async function fetch() {
   for (const t of report.takes) copyFileSync(join(base, t.file), join(takes, basename(t.file)));
   copyFileSync(join(base, 'report.json'), join(root, 'kaggle-report.json'));
   console.log(`voice:bench: ${report.takes.length} takes verified into ${takes}`);
-  console.log(JSON.stringify({ status: report.status, normalisation: report.normalisation, gpu: report.gpu }, null, 2));
+  console.log(JSON.stringify({ status: report.status, secret: report.secret, normalisation: report.normalisation, gpu: report.gpu }, null, 2));
 }
 
 const cmd = process.argv[2];

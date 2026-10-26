@@ -119,15 +119,24 @@ def main():
     os.makedirs(OUT, exist_ok=True)
     cands = json.load(open(os.path.join(inputs, "candidates.json")))
     env = dict(os.environ)
-    try:
-        from kaggle_secrets import UserSecretsClient
-        env["HF_TOKEN"] = UserSecretsClient().get_secret("HF_TOKEN")
-    except Exception:  # noqa: BLE001 - the secret is optional; candidates needing it are skipped
-        pass
+    # Diagnostics only: whether Kaggle exposed a secrets channel and why a lookup failed. Never the value.
+    secret_diag = {"secrets_channel_present": bool(os.environ.get("KAGGLE_USER_SECRETS_TOKEN"))}
+    for attempt in range(1, 6):  # the secrets service has returned transient ConnectionErrors
+        try:
+            from kaggle_secrets import UserSecretsClient
+            value = UserSecretsClient().get_secret("HF_TOKEN")
+            if value:
+                env["HF_TOKEN"] = value
+            secret_diag["HF_TOKEN"] = ("found" if value else "empty") + " (attempt %d)" % attempt
+            break
+        except Exception as e:  # noqa: BLE001 - the secret is optional; candidates needing it are skipped
+            secret_diag["HF_TOKEN"] = "%s: %s (after %d attempts)" % (type(e).__name__, str(e)[:200], attempt)
+            time.sleep(5 * attempt)
     status = {}
     for cand in cands["candidates"]:
         if cand.get("needs_secret") and not env.get(cand["needs_secret"]):
-            status[cand["id"]] = "skipped: Kaggle secret %s is not attached to this notebook" % cand["needs_secret"]
+            status[cand["id"]] = "skipped: Kaggle secret %s unavailable (%s)" % (
+                cand["needs_secret"], secret_diag.get(cand["needs_secret"], "not looked up"))
             continue
         t0 = time.time()
         log_path = os.path.join(OUT, "log-%s.txt" % cand["id"])
@@ -153,7 +162,7 @@ def main():
         norm = normalise(os.path.join(OUT, r["file"]))
         r["sha256"] = sha256(os.path.join(OUT, r["file"]))
     gpu = subprocess.run(["nvidia-smi", "-L"], capture_output=True, text=True).stdout.strip() or "none"
-    json.dump({"status": status, "models": revisions, "normalisation": norm, "gpu": gpu, "takes": rows},
+    json.dump({"status": status, "secret": secret_diag, "models": revisions, "normalisation": norm, "gpu": gpu, "takes": rows},
               open(os.path.join(OUT, "report.json"), "w"), indent=2)
     outputs = {}
     for root, _d, files in os.walk(OUT):
