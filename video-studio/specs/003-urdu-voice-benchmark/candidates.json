@@ -75,7 +75,7 @@
     {
       "id": "urdu-tts",
       "round": 2,
-      "active": true,
+      "active": false,
       "engine": "tortoise",
       "model": "zohann/urdu-tts",
       "checkpoint": "models/urdu-multispeaker/ar-model.pth",
@@ -91,7 +91,8 @@
         "ustani": {},
         "shagird": {}
       },
-      "note": "tortoise autoregressive model finetuned on Urdu (ahmedHanzala/urdu-tts, 2023); reads Urdu script; clones the reference voice"
+      "note": "tortoise autoregressive model finetuned on Urdu (ahmedHanzala/urdu-tts, 2023); reads Urdu script; clones the reference voice",
+      "rejected": "owner ranked all takes worst, 2026-10-27"
     },
     {
       "id": "indicf5",
