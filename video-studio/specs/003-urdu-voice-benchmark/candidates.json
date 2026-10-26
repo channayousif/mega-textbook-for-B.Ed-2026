@@ -51,7 +51,8 @@
         "ustani": {},
         "shagird": {}
       },
-      "note": "Hindi single-language finetune of Chatterbox V3; reads the Devanagari transliteration; clones the FLEURS reference voice per take"
+      "note": "Hindi single-language finetune of Chatterbox V3; reads the Devanagari transliteration; clones the FLEURS reference voice per take",
+      "takes": 9
     },
     {
       "id": "chatterbox-v3",
@@ -115,7 +116,7 @@
     }
   ],
   "refs": {
-    "_comment": "Voice-cloning references for round 3 (2026-10-27): owner-supplied ElevenLabs Voice Library previews (Reva, Saira, Kamran; then Sample.mp3 for Ustani, round 3b). The voices belong to their creators and ElevenLabs, so they are EVALUATION ONLY (owner ruling 2026-10-27): a winning voice is used only after its rights are secured (an ElevenLabs plan or a consented recording, PI-08). The audio stays in $MEDIA_ROOT/voice-benchmark/refs/<audio> (originals in owner-samples/) and is packed into the private dataset.",
+    "_comment": "Voice-cloning references for round 3 (2026-10-27): owner-supplied ElevenLabs Voice Library previews (Reva, Saira, Kamran; then Sample.mp3 for Ustani, round 3b; round 4 adds sample-male.mp3 for Bilal). The voices belong to their creators and ElevenLabs, so they are EVALUATION ONLY (owner ruling 2026-10-27): a winning voice is used only after its rights are secured (an ElevenLabs plan or a consented recording, PI-08). The audio stays in $MEDIA_ROOT/voice-benchmark/refs/<audio> (originals in owner-samples/) and is packed into the private dataset.",
     "ustani": [
       {
         "audio": "ref-ustani-sample.wav",
@@ -126,8 +127,8 @@
     ],
     "shagird": [
       {
-        "audio": "ref-shagird-kamran.wav",
-        "source": "ElevenLabs Voice Library preview supplied by the owner: Kamran, dramatic and suspenseful (3.6 s)",
+        "audio": "ref-shagird-sample-male.wav",
+        "source": "ElevenLabs-generated sample supplied by the owner (sample-male.mp3, C2PA author Eleven Labs Inc., 38.2 s); first 13.4 s used",
         "text_ur": null,
         "text_deva": null
       }
@@ -179,6 +180,14 @@
         {
           "audio": "ref-ustani-saira.wav",
           "source": "ElevenLabs Voice Library preview supplied by the owner: Saira, poetic storyteller (14.7 s)",
+          "text_ur": null,
+          "text_deva": null
+        }
+      ],
+      "shagird": [
+        {
+          "audio": "ref-shagird-kamran.wav",
+          "source": "ElevenLabs Voice Library preview supplied by the owner: Kamran, dramatic and suspenseful (3.6 s)",
           "text_ur": null,
           "text_deva": null
         }

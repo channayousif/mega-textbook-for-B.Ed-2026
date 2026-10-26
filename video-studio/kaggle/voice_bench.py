@@ -1,6 +1,6 @@
 """Kaggle job for the VS-003 Urdu voice benchmark (VS-ADR-0011).
 
-Generates `takes` takes per character for each active open-source candidate in candidates.json,
+Generates `takes` takes per character (a candidate may set its own `takes`) for each active open-source candidate in candidates.json,
 using the texts in passages.json (or the candidate's own `passages` file, e.g. the Devanagari
 transliteration), then loudness-normalises them so the blind comparison is about the voice, not the
 volume. Cloning engines take the character's reference clips from `refs`, cycling one per take. Each
@@ -212,7 +212,7 @@ def main():
         cands = json.load(open(os.path.join(inputs, "candidates.json")))
         cand = next(c for c in cands["candidates"] if c["id"] == sys.argv[2])
         passages = json.load(open(os.path.join(inputs, cand.get("passages", "passages.json")), encoding="utf-8"))
-        gen(cand, passages, cands["takes"], cands.get("refs", {}), inputs)
+        gen(cand, passages, cand.get("takes", cands["takes"]), cands.get("refs", {}), inputs)
         return
     found = glob.glob("/kaggle/input/**/candidates.json", recursive=True)
     if len(found) != 1:
