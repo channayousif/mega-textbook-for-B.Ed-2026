@@ -115,23 +115,11 @@
     }
   ],
   "refs": {
-    "_comment": "Voice-cloning references for round 3 (2026-10-27): owner-supplied ElevenLabs Voice Library previews (Reva, Saira, Kamran). The voices belong to their creators and ElevenLabs, so they are EVALUATION ONLY (owner ruling 2026-10-27): a winning voice is used only after its rights are secured (an ElevenLabs plan or a consented recording, PI-08). The audio stays in $MEDIA_ROOT/voice-benchmark/refs/<audio> (originals in owner-samples/) and is packed into the private dataset.",
+    "_comment": "Voice-cloning references for round 3 (2026-10-27): owner-supplied ElevenLabs Voice Library previews (Reva, Saira, Kamran; then Sample.mp3 for Ustani, round 3b). The voices belong to their creators and ElevenLabs, so they are EVALUATION ONLY (owner ruling 2026-10-27): a winning voice is used only after its rights are secured (an ElevenLabs plan or a consented recording, PI-08). The audio stays in $MEDIA_ROOT/voice-benchmark/refs/<audio> (originals in owner-samples/) and is packed into the private dataset.",
     "ustani": [
       {
-        "audio": "ref-ustani-reva-warm.wav",
-        "source": "ElevenLabs Voice Library preview supplied by the owner: Reva, warm Urdu narration (10.2 s)",
-        "text_ur": null,
-        "text_deva": null
-      },
-      {
-        "audio": "ref-ustani-reva-soothing.wav",
-        "source": "ElevenLabs Voice Library preview supplied by the owner: Reva, soothing companion (8.6 s)",
-        "text_ur": null,
-        "text_deva": null
-      },
-      {
-        "audio": "ref-ustani-saira.wav",
-        "source": "ElevenLabs Voice Library preview supplied by the owner: Saira, poetic storyteller (14.7 s)",
+        "audio": "ref-ustani-sample.wav",
+        "source": "ElevenLabs-generated sample supplied by the owner (Sample.mp3, C2PA author Eleven Labs Inc., 44.1 s); first 13.3 s used",
         "text_ur": null,
         "text_deva": null
       }
@@ -171,6 +159,28 @@
           "source": "FLEURS ur_pk train 9911941154442049048.wav (male, 10.7 s)",
           "text_ur": "بطورِ عام کسی غیر ملک میں طویل مدت تک قیام کے لئے تمہیں پیشگی ویزا حاصل کرنا لازم ہے۔",
           "text_deva": "बतौर-ए-आम किसी ग़ैर मुल्क में तवील मुद्दत तक क़याम के लिए तुम्हें पेशगी वीज़ा हासिल करना लाज़िम है।"
+        }
+      ]
+    },
+    "_round3": {
+      "ustani": [
+        {
+          "audio": "ref-ustani-reva-warm.wav",
+          "source": "ElevenLabs Voice Library preview supplied by the owner: Reva, warm Urdu narration (10.2 s)",
+          "text_ur": null,
+          "text_deva": null
+        },
+        {
+          "audio": "ref-ustani-reva-soothing.wav",
+          "source": "ElevenLabs Voice Library preview supplied by the owner: Reva, soothing companion (8.6 s)",
+          "text_ur": null,
+          "text_deva": null
+        },
+        {
+          "audio": "ref-ustani-saira.wav",
+          "source": "ElevenLabs Voice Library preview supplied by the owner: Saira, poetic storyteller (14.7 s)",
+          "text_ur": null,
+          "text_deva": null
         }
       ]
     }
