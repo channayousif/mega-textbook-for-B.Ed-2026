@@ -120,5 +120,14 @@ video-studio/brand/assets/
 video-studio/kaggle/out/
 video-studio/kaggle/bundle/
 kaggle.json
+# Voice samples the owner drops at the repo root (owner request 2026-10-27). The site ships no
+# audio, so audio is ignored repo-wide; samples belong in $MEDIA_ROOT/voice-benchmark/owner-samples.
+base-voice-samples/
+*.mp3
+*.wav
+*.m4a
+*.aac
+*.flac
+*.ogg
 # The package archive the sub-project was installed from
 video-studio-sdd-ri*.zip

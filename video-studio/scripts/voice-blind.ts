@@ -27,7 +27,10 @@ if (process.argv.includes('--unblind')) {
     cells[cols.indexOf('model_or_voice')] = k.file;
     return cells.join(',');
   })];
-  const dest = join(SPEC, `results-${new Date().toISOString().slice(0, 10)}.csv`);
+  // Never overwrite an earlier round's results: a second unblind on the same day gets -2, -3, ...
+  const day = new Date().toISOString().slice(0, 10);
+  let dest = join(SPEC, `results-${day}.csv`);
+  for (let n = 2; existsSync(dest); n++) dest = join(SPEC, `results-${day}-${n}.csv`);
   writeFileSync(dest, out.join('\n') + '\n');
   console.log(`voice:blind: unblinded scorecard written to ${dest} (text only; commit it with a PHR)`);
   process.exit(0);
