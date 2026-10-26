@@ -22,9 +22,9 @@ files:
  - video-studio/kaggle/voice_bench.py
  - video-studio/scripts/voice-bench.ts, video-studio/scripts/voice-blind.ts
 tests:
- - voice:bench on Kaggle T4 x2, run 1 (15.9 min) and run 2 (17.9 min): chatterbox-hi and chatterbox-v3 OK, 12 takes hash-verified each run; urdu-tts errored (tortoise conditioning shape), rerun with --only=urdu-tts
+ - voice:bench on Kaggle T4 x2, run 1 (15.9 min) and run 2 (17.9 min): chatterbox-hi and chatterbox-v3 OK, 12 takes hash-verified each run; urdu-tts errored twice (tortoise wants each reference as a 22.05/24 kHz pair); third run OK, 6 takes in 44.8 min (about 10 min per Ustani take); Ustani takes 32.8-45.5 s against about 54 s for Chatterbox, so words may be dropped
  - V3 S3Gen decoder rejected by S3Gen(meanflow=True) and S3Gen(); takes use the V2 decoder (recorded in kaggle-report.json)
- - voice:blind: 12 Chatterbox takes blinded (U01-U06, B01-B06)
+ - voice:blind: 12 Chatterbox takes blinded (U01-U06, B01-B06), then 6 urdu-tts takes appended (U07-U09, B07-B09)
  - tsc --noEmit; node --test tests/*.test.ts 12/12; check:no-media OK; em-dash scan OK
 ---
 
@@ -47,7 +47,7 @@ urdu-tts engines to the Kaggle job with per-sentence generation and per-take ref
 
 ## Outcome
 
-- Impact: 12 Chatterbox takes ready to score blind; urdu-tts pending its rerun.
+- Impact: 18 takes ready to score blind (12 Chatterbox, 6 urdu-tts).
 - Tests: see `tests`.
 - Files: see `files`. No media in git (refs and takes live in MEDIA_ROOT).
 - Next prompts: owner checks the transliteration and scores the blind set; owner accepts the IndicF5 terms; owner records a 15-20 s consented reference clip (enables Seed-VC and a real cloning target).
@@ -57,7 +57,7 @@ urdu-tts engines to the Kaggle job with per-sentence generation and per-take ref
 
 - Shipped / changed: VS-003 round 2 candidates and engines (Chatterbox Hindi and V3, urdu-tts, IndicF5 inactive), Devanagari passages, `voice:bench --only=`, `voice:blind --append`. PR #336.
 - Decisions the team must respect: FLEURS speakers are evaluation references only; any published voice must clone a consented recording (PI-08). Round 1 voices are rejected by the owner. Media and the blind key stay in MEDIA_ROOT.
-- Pending / next owner: owner scores the blind set and corrects the transliteration if needed; owner accepts IndicF5 terms on Hugging Face; owner records a reference clip; Azure / Gemini / Uplift takes by the owner go to `inbox/`; Claude adds urdu-tts takes with `voice:blind -- --append` when its rerun succeeds.
+- Pending / next owner: owner scores the blind set and corrects the transliteration if needed; owner accepts IndicF5 terms on Hugging Face; owner records a reference clip; Azure / Gemini / Uplift takes by the owner go to `inbox/`.
 - Paperclip issues affected: none (Paperclip retired).
 
 ## Evaluation notes (flywheel)

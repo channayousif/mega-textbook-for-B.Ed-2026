@@ -136,11 +136,11 @@ def gen(cand, passages, takes, refs, inputs):
         from tortoise.utils.audio import load_audio
         tts = TextToSpeech(ar_checkpoint=hf_hub_download(cand["model"], cand["checkpoint"]))
         rate, rev = 24000, cand["checkpoint"]
-        # load_audio returns 1-D for a mono float WAV; this fork wants a list of voices, each a list
-        # of (channels, samples) clips (it reads voice_samples[i][0]).
-        clip = lambda path: (lambda a: a.unsqueeze(0) if a.dim() == 1 else a)(load_audio(path, 22050))
+        # This fork wants each reference as a pair (22.05 kHz clip, 24 kHz clip), each shaped
+        # (channels, samples); load_audio returns 1-D for a mono float WAV.
+        clip = lambda path, sr: (lambda a: a.unsqueeze(0) if a.dim() == 1 else a)(load_audio(path, sr))
         synth = lambda text, _opts, ref: by_sentence(
-            lambda s: tts.tts_with_preset(s, voice_samples=[[clip(ref["path"])]],
+            lambda s: tts.tts_with_preset(s, voice_samples=[[clip(ref["path"], 22050), clip(ref["path"], 24000)]],
                                           conditioning_latents=None, preset="fast").squeeze().cpu().numpy(), text, rate)
     elif cand["engine"] == "indicf5":
         from transformers import AutoModel
