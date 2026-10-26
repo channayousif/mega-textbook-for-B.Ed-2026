@@ -25,9 +25,9 @@
   <line x1="642" y1="150" x2="642" y2="284" stroke="var(--a4)" stroke-width="2" stroke-dasharray="5 3"/>
   <text class="m c" x="642" y="336">اوسط</text>
   <rect x="20" y="356" width="740" height="78" rx="6" fill="var(--panel)" stroke="var(--line)" stroke-width="1"/>
-  <text class="sh" x="744" y="376" text-anchor="end">نوٹ: عام ترتیب، ایک قاعدہ یقینی نہیں</text>
-  <text class="m" x="744" y="392" text-anchor="end">یک قلعی تقسیم میں اوسط طویل پونچھ کی طرف سب سے زیادہ کھنچتی ہے، لہٰذا دائیں ترھا عام طور پر</text>
-  <text class="m" x="744" y="408" text-anchor="end">عادہ، پھر میڈین، پھر اوسط دیتا ہے۔ دو قلعی یا چھوٹے ڈیٹا سیٹ اس نمونے کو توڑ سکتے</text>
-  <text class="m" x="744" y="424" text-anchor="end">ہیں: 0, 0, 2, 2 تشاکلی ہے مگر دو عادی ہیں۔ حوالہ: textbook.com.pk بمطابق Illowsky and Dean (2023)۔</text>
+   <text class="sh" x="744" y="376" text-anchor="start">نوٹ: عام ترتیب، ایک قاعدہ یقینی نہیں</text>
+   <text class="m" x="744" y="392" text-anchor="start">یک قلعی تقسیم میں اوسط طویل پونچھ کی طرف سب سے زیادہ کھنچتی ہے، لہٰذا دائیں ترھا عام طور پر</text>
+   <text class="m" x="744" y="408" text-anchor="start">عادہ، پھر میڈین، پھر اوسط دیتا ہے۔ دو قلعی یا چھوٹے ڈیٹا سیٹ اس نمونے کو توڑ سکتے</text>
+   <text class="m" x="744" y="424" text-anchor="start">ہیں: 0, 0, 2, 2 تشاکلی ہے مگر دو عادی ہیں۔ حوالہ: textbook.com.pk بمطابق Illowsky and Dean (2023)۔</text>
   <text class="wm" x="760" y="460" direction="ltr" aria-hidden="true">textbook.com.pk</text>
 </svg>
