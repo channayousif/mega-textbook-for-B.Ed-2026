@@ -92,8 +92,8 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 11 | G6 assets | ▢ | | |
 | Unit 11 | G7 publish | ▢ | | |
 | Unit 12 | G1 unit-spec | ▢ | | guide Chapter 12; intake re-evaluation advised (D-2026-0070) |
-| Unit 12 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-12/G2/20261022T000224330Z-gates.json |
-| Unit 12 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only: specs/content/gqur-301/reviews/unit-12/G3/crew-20261022.json; F1-F6 need separate author repair; provenance, G1/source bundle and rendered accessibility remain unresolved. G3 stays open, unsigned (ADR-0019). |
+| Unit 12 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-12/G2/20261027T153755706Z-gates.json |
+| Unit 12 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only: specs/content/gqur-301/reviews/unit-12/G3/crew-20261022.json; F1-F6 need separate author repair; provenance, G1/source bundle and rendered accessibility remain unresolved. G3 stays open, unsigned (ADR-0019). Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 12 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 12 | G5 ur-review | ▢ | | |
 | Unit 12 | G6 assets | ▢ | | |
