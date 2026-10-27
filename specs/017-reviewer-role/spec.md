@@ -104,6 +104,10 @@ gate.
   automatically, and this is **asserted by a test** rather than promised in on-screen text: the
   certify action issues no database mutation and writes no file. A certification is evidence a human produced; applying it stays an explicit act,
   through the ordinary PR flow (ADR-0015's accepted manual step).
+  *Amended by ADR-0032 (2026-10-27) for the admin G3 sign-off desk only:* that page writes the
+  owner's decision to the `g3_signoffs` ledger, which no gate reads; the crew turns it into a
+  certification and tracker row in a PR, and the unit is certified only when that PR merges.
+  The review-queue page keeps this FR's write-nothing behaviour.
 - FR-010: Qualification is recorded in `specs/reviewers/human-reviewers.md`, owner-maintained. The
   pipeline gate already accepts human initials with no registry lookup, so this feature adds **no
   gate change** - only the record of who was qualified, for what scope, on what evidence. See

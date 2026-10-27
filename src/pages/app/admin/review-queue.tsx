@@ -180,6 +180,7 @@ function ReviewQueueContent(): React.ReactElement {
     <main className="container margin-vert--lg">
       <h1>Review queue</h1>
       <p><Link to="/app/reviewer/workbench">Topic checklist and recommendations</Link></p>
+      {role === 'admin' && <p><Link to="/app/admin/g3-signoff">G3 sign-off desk</Link>: decide many units at once and let the crew commit them.</p>}
       <p>
         Units awaiting a G3 English review or a G5 Urdu review, derived from each course tracker.
         Certifying produces two files to commit; this page changes nothing by itself.

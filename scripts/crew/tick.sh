@@ -17,3 +17,9 @@ git merge -q --ff-only origin/main 2>/dev/null || git merge -q --no-edit origin/
 node scripts/crew/crew.mjs plan
 node scripts/crew/crew.mjs tick
 node scripts/crew/crew.mjs status > /dev/null
+# Owner G3 decisions from the sign-off desk become one PR (ADR-0032). The service key lives only in
+# $STATE/signoff.env and only this subshell sees it, so crew workers never inherit it. A failed sync
+# must not fail the tick.
+if [ -f "$STATE/signoff.env" ]; then
+  ( set -a; . "$STATE/signoff.env"; set +a; node scripts/crew/signoff-sync.mjs ) || echo "signoff-sync failed"
+fi
