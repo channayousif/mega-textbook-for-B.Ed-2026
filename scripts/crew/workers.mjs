@@ -42,7 +42,7 @@ export const WORKERS = {
 /**
  * Stage -> ranked worker chain. `skill` is the repo skill the brief names
  * (.claude/skills/<skill>/SKILL.md); every worker can read it as a file.
- * `reviewOf` names the stage whose producer family a review must exclude.
+ * `reviewOf` names the stage (or stages) whose producer family a review must exclude.
  */
 export const STAGES = {
   salvage:    { chain: ['claude', 'agy_claude', 'codex', 'agy', 'opencode'], skill: null },
@@ -50,7 +50,7 @@ export const STAGES = {
   repair_en:  { chain: ['claude', 'agy_claude', 'codex', 'agy', 'opencode'], skill: 'revise-topic' },
   figures:    { chain: ['codex', 'claude', 'agy_claude', 'agy', 'opencode'], skill: 'generate-figures' },
   illustrate: { chain: ['agy', 'codex'], skill: 'generate-figures' },
-  review_en:  { chain: ['agy', 'codex', 'opencode', 'claude', 'agy_claude'], skill: 'review-unit', reviewOf: 'author' },
+  review_en:  { chain: ['agy', 'codex', 'opencode', 'claude', 'agy_claude'], skill: 'review-unit', reviewOf: ['author', 'repair_en'] },
   translate:  { chain: ['codex', 'claude', 'agy_claude', 'agy', 'opencode'], skill: 'translate-unit' },
   review_ur:  { chain: ['claude', 'agy_claude', 'agy', 'opencode', 'codex'], skill: 'review-unit', reviewOf: 'translate' },
   fix:        { chain: ['opencode', 'codex', 'agy', 'claude', 'agy_claude'], skill: null },
