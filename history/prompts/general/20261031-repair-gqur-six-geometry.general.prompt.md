@@ -37,7 +37,7 @@ Continued the existing repair commit, wrapped English indicator labels, moved Ur
 ## Outcome
 
 - ✅ Impact: Remaining eight geometry findings resolved; earlier five fixes retained.
-- 🧪 Tests: All 12 light sources pass Chromium geometry measurement. Content gates and G2 evidence validation recorded with final follow-up.
+- 🧪 Tests: All 12 light sources pass Chromium geometry measurement. All eight G2 evidence commands pass; regenerated ignored content status after changing tracker evidence. Final content suite passes all 13 gates.
 - 📁 Files: Unit 6 SVG sources, generated dark variants, G2 evidence and tracker.
 - 🔁 Next prompts: Fresh independent G3 review.
 - 🧠 Reflection: A passing geometry check still requires checking that line breaks fit table rows.
@@ -52,6 +52,6 @@ Continued the existing repair commit, wrapped English indicator labels, moved Ur
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Initial inherited repair was partial and dark variants were stale.
-- Graders run and results (PASS/FAIL): Geometry PASS; final content gate results in follow-up.
+- Graders run and results (PASS/FAIL): Geometry PASS (12 sources); G2 PASS (8 commands); content suite PASS (13 gates).
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Fresh independent visual review.
