@@ -89,3 +89,12 @@ Repaired six Urdu wordmark anchors and widened and rewrapped the English SDG4 ma
 - Graders run and results (PASS/FAIL): PASS: light SVG measurement and source budgets. Content gates rerun after dark variant generation.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): No new experiment required; obtain fresh independent review.
+
+## Final validation follow-up
+
+- All 24 English and Urdu light and dark SVGs pass text measurement.
+- All 46 figure palette tests pass; all 1006 derived figure variants are fresh.
+- Fresh G2 evidence: `specs/content/efmp-303/reviews/unit-06/G2/20261027T005248524Z-gates.json`, bound to repair commit `cd311992`; all eight draft commands pass.
+- G2 tracker reference refreshed and G3 explicitly marked stale without changing its open status.
+- Final `npm run check:content`: all 13 gates PASS on this branch and on origin/main (`2db2a51c`) in an isolated baseline checkout. No new findings.
+- Intermediate failures were stale dark variants, the old G2 manifest, and the ignored generated content-status report; regenerated variants, refreshed G2 and rebuilt only the status JSON. No site build, server, e2e or publication run.
