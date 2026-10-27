@@ -31,12 +31,12 @@ Read .crew/brief.md in the current directory and carry it out completely. It is 
 
 ## Response snapshot
 
-Rewrapped table labels and repositioned decibel labels without changing wording, fonts or canvas dimensions. Regenerated dark variants. Refreshing G2 evidence and recording stale G3 review.
+Rewrapped table labels and repositioned decibel labels without changing wording, fonts or canvas dimensions. Regenerated dark variants. Refreshed G2 evidence and recorded stale G3 review.
 
 ## Outcome
 
 - ✅ Impact: Repaired all 17 reported geometry defects.
-- 🧪 Tests: All 16 EN/UR source SVGs pass geometry; content gate results recorded in follow-up commit.
+- 🧪 Tests: All 16 EN/UR source SVGs pass geometry; all eight G2 draft checks and dark-variant freshness pass. Refreshed the ignored content-status cache after changing tracker evidence.
 - 📁 Files: Four English SVGs, their generated dark variants, G2 evidence and unit tracker.
 - 🔁 Next prompts: Fresh independent G3 review remains necessary.
 - 🧠 Reflection: Measured actual text geometry and preserved existing Urdu sources.
@@ -51,6 +51,6 @@ Rewrapped table labels and repositioned decibel labels without changing wording,
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Long labels crossed columns or spilled beyond panels.
-- Graders run and results (PASS/FAIL): PASS: geometry for all light SVGs; remaining results recorded with evidence refresh.
+- Graders run and results (PASS/FAIL): PASS: geometry for all light SVGs, G2 draft checks and dark-variant freshness. All 13 final content gates pass after refreshing the ignored status cache.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Fresh independent review of repaired unit.
