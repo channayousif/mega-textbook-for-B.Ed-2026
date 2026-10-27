@@ -37,7 +37,7 @@ Moved the English Gender norms barrier into the right-hand gap and wrapped its l
 ## Outcome
 
 - ✅ Impact: Both reported text-geometry defects repaired.
-- 🧪 Tests: All eight light English and Urdu figures pass measurement. Content gates and G2 evidence recorded with the final result.
+- 🧪 Tests: All eight light English and Urdu figures pass measurement. G2 evidence passed all eight required checks. Content suite rerun after refreshing the generated status report.
 - 📁 Files: English figure source, generated dark twin, G2 evidence and Unit 5 tracker.
 - 🔁 Next prompts: Independent fresh G3 review remains required.
 - 🧠 Reflection: Wrapping the barrier label preserves the figure dimensions and carrier attributes.
@@ -52,6 +52,6 @@ Moved the English Gender norms barrier into the right-hand gap and wrapped its l
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Gender norms overlapped Better employment and started inside its panel.
-- Graders run and results (PASS/FAIL): Figure measurement PASS; see committed evidence for deterministic gate results.
+- Graders run and results (PASS/FAIL): Figure measurement PASS; G2 evidence PASS (8/8); content suite PASS (13/13).
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Independent review of current unit inputs.
