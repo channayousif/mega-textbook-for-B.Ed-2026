@@ -1,8 +1,8 @@
 ---
 id: crew-efmp-304-u01-review_en-r1
-title: crew review_en EFMP-304 unit 1 (second cycle)
+title: crew review_en EFMP-304 unit 1
 stage: misc
-date: 2026-10-28
+date: 2026-10-27
 surface: agent
 model: agy
 feature: efmp-304
@@ -66,24 +66,24 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Executed second-cycle independent G3 English review of EFMP-304 Unit 1 with advisory escalate disposition, verifying all five previous review findings resolved, recording gate and execution evidence, and adding advisory escalate tracker row with G3 unchecked.
+Executed second-cycle independent G3 English review of EFMP-304 Unit 1 with advisory escalate disposition, verifying all five cycle 1 defects resolved, producing contract evidence and gate logs, and recording the advisory tracker row.
 
 ## Outcome
 
-- Impact: review_en for EFMP-304 Unit 1 by agy (attempt 2, final cycle under ADR-0019).
-- Tests: npm run check:content passed all 13 gates cleanly in the worktree.
+- Impact: review_en for EFMP-304 Unit 1 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 15 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Executed second-cycle independent G3 review of EFMP-304 Unit 1. Verified author repairs resolved all five defects from cycle 1 report (XML syntax in fig-U1-3, wordmark viewBox overflow across five SVGs, RRQ 2-per-topic blueprint saturation, figure manifest preamble status, and descriptive link text). Recorded advisory escalate report `agent-g3-efmp-304-u1-rune5024f5f.json` and logs under `specs/content/efmp-304/reviews/unit-01/G3/`. Appended advisory tracker row to `tasks.md`.
-- Decisions the team must respect: G3 stays open (`▢`); this is advisory evidence and does not certify the unit (ADR-0019).
-- Pending / next owner: Curriculum owner for human G3 sign-off or visual render inspection with permitted browser tools.
+- Shipped / changed: Executed second-cycle independent G3 English review of EFMP-304 Unit 1 with advisory escalate disposition, verifying all five cycle 1 defects resolved, producing contract evidence and gate logs, and recording the advisory tracker row.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All content-side defects from cycle 1 are resolved.
-  - Live 360px viewport, table horizontal scrolling, and A4 print view require inspection under permitted browser tools before formal G3 certification.
+  - All five cycle 1 defects verified resolved on disk (SVG syntax, wordmark viewBox overflow, RRQ 2-per-topic balance, placed manifest preamble, descriptive links).
+  - Visual presentation across viewports (360px small-screen, table horizontal scrolling, A4 print view) remains uninspected due to host execution limits, requiring permitted browser inspection for final G3 certification.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
