@@ -28,8 +28,8 @@ files at that commit. The geng-300 reds are recorded as known-stale-on-main in t
 | Unit 1 | G6 assets | ▢ | | |
 | Unit 1 | G7 publish | ▢ | | |
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0030; content-spec status: approved |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-02/G2/20261013T123447966Z-gates.json |
-| Unit 2 | G3 en-review | ▢ | | advisory run 001 (disposition: pass, no blocking findings) at reviews/unit-02/G3/agent-g3-gict300-u2-run001.json; agent reviews advisory under ADR-0019 |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-02/G2/20261027T151836619Z-gates.json |
+| Unit 2 | G3 en-review | ▢ | | advisory run 001 (disposition: pass, no blocking findings) at reviews/unit-02/G3/agent-g3-gict300-u2-run001.json; agent reviews advisory under ADR-0019; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 2 | G4 ur-translation | ▣ | | Complete seven-file mirror reconciled with EN 37fcef38 on 2026-10-18 (Codex crew gict-300-u02-translate-r1); register, citation, assessment and eight Urdu figure-pair repairs; bank-conformant key_terms, computing terms proposed separately; handoff: reviews/unit-02/G4/translation-handoff.md. translation_status stays draft pending fresh independent G5 and rendered inspection; no certification claimed. |
 | Unit 2 | G5 ur-review | ▢ | | advisory run 001 (disposition: revise; F1-F3 figure-label defects repaired) at reviews/unit-02/G5/agent-g5-gict300-u2-run001.json; agent reviews advisory under ADR-0019 |
 | Unit 2 | G6 assets | ▢ | | |

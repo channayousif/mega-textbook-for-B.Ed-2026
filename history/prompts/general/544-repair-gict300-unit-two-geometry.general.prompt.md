@@ -37,7 +37,7 @@ Repositioned the storage arrow label, wrapped the English boot label, and center
 ## Outcome
 
 - ✅ Impact: All five reported geometry findings repaired without wording changes.
-- 🧪 Tests: All sixteen light SVGs pass geometry measurement; content gates and evidence results recorded in task handoff.
+- 🧪 Tests: All sixteen light SVGs pass geometry measurement; all eight G2 evidence gates and 46 palette tests pass. Full content run passes 12 of 13 gates; tracker digest refresh requires owner scope clarification.
 - 📁 Files: Three light SVGs, three generated dark twins, G2 evidence and tracker.
 - 🔁 Next prompts: Fresh independent G3 and G5 review remain pending.
 - 🧠 Reflection: Correct anchoring removes apparent adjacent-panel spills without altering Urdu copy.
@@ -46,12 +46,12 @@ Repositioned the storage arrow label, wrapped the English boot label, and center
 
 - Shipped / changed: Geometry repair and derived variants; refreshed G2 evidence.
 - Decisions the team must respect: Preserve all wording and publication/review status; no certification.
-- Pending / next owner: Independent reviewers own fresh G3/G5; owner owns rendered inspection.
+- Pending / next owner: Independent reviewers own fresh G3/G5; owner owns rendered inspection and permission for the required out-of-scope content-status digest refresh.
 - Paperclip issues affected: GICT-300 Unit 2; no ticket supplied.
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Rotated label exceeded measurement boundary; wide English line collided; Urdu end anchors placed labels outside their panels.
-- Graders run and results (PASS/FAIL): Geometry PASS for all light Unit 2 SVGs; see gate evidence and task output for content checks.
+- Graders run and results (PASS/FAIL): Geometry PASS for all light Unit 2 SVGs; dark geometry and variants freshness PASS; content gates 12/13 PASS with content-status stale after the required tracker edit.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Independent review of repaired figures.
