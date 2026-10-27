@@ -13,29 +13,29 @@ labels: ["crew", "agy", "review_en"]
 links:
   spec: specs/content/efmp-301/content-spec.md
   ticket: null
-  adr: history/adr/0019-independent-review-pipeline.md
+  adr: null
   pr: null
 files:
-  - specs/content/efmp-301/reviews/unit-06/G3/20f4255e-9449-4f10-a771-4653e5eee5e5.json
-  - specs/content/efmp-301/reviews/unit-06/G3/20f4255e-9449-4f10-a771-4653e5eee5e5.summary.md
-  - specs/content/efmp-301/reviews/unit-06/G3/logs-20f4255e/check-depth-gate.txt
-  - specs/content/efmp-301/reviews/unit-06/G3/logs-20f4255e/check-docs-sync.txt
-  - specs/content/efmp-301/reviews/unit-06/G3/logs-20f4255e/check-figures.txt
-  - specs/content/efmp-301/reviews/unit-06/G3/logs-20f4255e/check-no-answer-keys.txt
-  - specs/content/efmp-301/reviews/unit-06/G3/logs-20f4255e/check-no-em-dash.txt
-  - specs/content/efmp-301/reviews/unit-06/G3/logs-20f4255e/measure-figure-text.txt
-  - specs/content/efmp-301/reviews/unit-06/G3/logs-20f4255e/render-review.txt
-  - specs/content/efmp-301/reviews/unit-06/G3/logs-20f4255e/validate-content.txt
-  - specs/content/efmp-301/reviews/unit-06/G3/renders-20f4255e/fig-U6-1.png
-  - specs/content/efmp-301/reviews/unit-06/G3/renders-20f4255e/fig-U6-2.png
-  - specs/content/efmp-301/reviews/unit-06/G3/renders-20f4255e/fig-U6-3.png
-  - specs/content/efmp-301/reviews/unit-06/G3/renders-20f4255e/fig-U6-4.png
-  - specs/content/efmp-301/reviews/unit-06/G3/run-002/manifest.json
-  - specs/content/efmp-301/tasks.md
-  - static/content-status.json
+ - history/prompts/efmp-301/crew-efmp-301-u06-review_en.misc.prompt.md
+ - specs/content/efmp-301/reviews/unit-06/G3/20f4255e-9449-4f10-a771-4653e5eee5e5.json
+ - specs/content/efmp-301/reviews/unit-06/G3/20f4255e-9449-4f10-a771-4653e5eee5e5.summary.md
+ - specs/content/efmp-301/reviews/unit-06/G3/logs-20f4255e/check-depth-gate.txt
+ - specs/content/efmp-301/reviews/unit-06/G3/logs-20f4255e/check-docs-sync.txt
+ - specs/content/efmp-301/reviews/unit-06/G3/logs-20f4255e/check-figures.txt
+ - specs/content/efmp-301/reviews/unit-06/G3/logs-20f4255e/check-no-answer-keys.txt
+ - specs/content/efmp-301/reviews/unit-06/G3/logs-20f4255e/check-no-em-dash.txt
+ - specs/content/efmp-301/reviews/unit-06/G3/logs-20f4255e/measure-figure-text.txt
+ - specs/content/efmp-301/reviews/unit-06/G3/logs-20f4255e/render-review.txt
+ - specs/content/efmp-301/reviews/unit-06/G3/logs-20f4255e/validate-content.txt
+ - specs/content/efmp-301/reviews/unit-06/G3/renders-20f4255e/fig-U6-1.png
+ - specs/content/efmp-301/reviews/unit-06/G3/renders-20f4255e/fig-U6-2.png
+ - specs/content/efmp-301/reviews/unit-06/G3/renders-20f4255e/fig-U6-3.png
+ - specs/content/efmp-301/reviews/unit-06/G3/renders-20f4255e/fig-U6-4.png
+ - specs/content/efmp-301/reviews/unit-06/G3/run-002/manifest.json
+ - specs/content/efmp-301/tasks.md
+ - static/content-status.json
 tests:
-  - npm run check:content
-  - node scripts/review-evidence.mjs validate specs/content/efmp-301/reviews/unit-06/G3/20f4255e-9449-4f10-a771-4653e5eee5e5.json
+ - npm run check:content
 ---
 
 ## Prompt
@@ -66,28 +66,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Completed the independent G3 English cycle 2 review of EFMP-301 Unit 6 (Motivation and Emotion). Verified that round-1 repairs resolved the blocking false cross-reference and prior citation discrepancies. Generated the validated G3 review evidence report, execution logs, Sharp PNG renders, human-readable summary, and recorded the advisory G3 tracker row in tasks.md with all content gates passing.
+Completed EFMP-301 Unit 6 G3 English cycle 2 independent review with disposition pass, generated evidence artifacts and renders, and recorded the advisory tracker row.
 
 ## Outcome
 
-- Impact: Independent G3 English review (Cycle 2) for EFMP-301 Unit 6 with disposition pass.
-- Tests: `npm run check:content` (13 gates) and `node scripts/review-evidence.mjs validate` passed.
-- Files: 18 files (evidence report, summary, logs, renders, manifest, tasks.md, content-status.json, PHR).
-- Next prompts: Crew board schedules next stage based on tasks.md.
-- Reflection: Verified that all round-1 blocking findings were resolved in commit 3782e123 while carrying forward 8 non-blocking advisory findings.
+- Impact: review_en for EFMP-301 Unit 6 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 18 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: G3 Cycle 2 evidence report (disposition: pass) at `specs/content/efmp-301/reviews/unit-06/G3/20f4255e-9449-4f10-a771-4653e5eee5e5.json` and advisory tracker row in `specs/content/efmp-301/tasks.md`.
-- Decisions the team must respect: G3 remains open (▢) and advisory under ADR-0019 until qualified sign-off; no reviewer initials added.
-- Pending / next owner: G5 Urdu review or crew planner.
-- Paperclip issues affected: none.
+- Shipped / changed: Completed EFMP-301 Unit 6 G3 English cycle 2 independent review with disposition pass, generated evidence artifacts and renders, and recorded the advisory tracker row.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Cycle 2 G3 review passed with 8 non-blocking advisory findings carried forward (spec key terms, ERQ word count, MCQ key clustering, and figure text spacing tolerances under updated geometry checks).
+  - Stage G3 en-review remains open (▢) and advisory under ADR-0019; no reviewer initials added.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none; verified no em dashes (U+2014) in authored files.
-- Graders run and results (PASS/FAIL): check:content PASS, review-evidence validate PASS.
-- Prompt variant (if applicable): crew brief v1.
-- Next experiment (smallest change to try): none.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
