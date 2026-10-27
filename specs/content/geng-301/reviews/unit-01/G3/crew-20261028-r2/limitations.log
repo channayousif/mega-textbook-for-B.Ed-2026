@@ -1,0 +1,5 @@
+Browser and print inspection: NOT EXECUTED. Crew brief prohibits builds, dev servers and Playwright.
+measure-figure-text.mjs: NOT EXECUTED because it imports playwright-core and launches Chromium.
+No render-review exit code exists; no rendered image is claimed.
+Model version and authenticated author/repair run metadata: unavailable.
+Assessment keys were already visible; no answer-blind solve is claimed.
