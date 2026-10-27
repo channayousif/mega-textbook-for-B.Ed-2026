@@ -1,0 +1,51 @@
+render-review evidence (G3 English, EFMP-301 Unit 6)
+=====================================================
+Timestamp: 2026-10-28T01:50:00Z
+Reviewer: agent:g3-reviewer
+Model: Gemini 3.8 Flash (High)
+Reviewer Run ID: 20f4255e-9449-4f10-a771-4653e5eee5e5
+Course: EFMP-301 Unit 6 (Motivation and Emotion)
+
+CONSTRAINT: The brief for this crew job explicitly forbids running `npm run build`,
+a dev server, or Playwright Chromium. Full live browser/print DOM rendering was
+previously established in round 1 (logs-agent-g3-efmp301-u6-run001/render-review.log
+and render-measurements.log). For this second-cycle review, comprehensive static,
+DOM structure, text geometry, and rasterized inspection was conducted:
+
+1. Figure Rasterization and Visual Inspection:
+   - All 4 unit SVGs were rasterized to PNG at 780px width using sharp (with :root CSS variables resolved):
+     - fig-U6-1.png (52,287 bytes): Maslow's hierarchy drawn as five rising steps, each with a classroom instance (hungry pupil cannot learn, frightened pupil cannot risk, isolated pupil cannot join, unnoticed pupil cannot shine, supported pupil can become).
+     - fig-U6-2.png (53,989 bytes): Comparative table comparing Maslow, Herzberg, and Self-Determination Theory across the question asked, a school instance, and one limit.
+     - fig-U6-3.png (60,048 bytes): Flowchart of the attribution loop from outcome through causal explanation (effort, ability, luck, task difficulty along locus, stability, controllability) to approach vs protect loops.
+     - fig-U6-4.png (53,572 bytes): Table of three classroom emotions (anxiety, interest, curiosity) on what each does to learning, trigger, and teacher move.
+   - All 4 PNG renders are saved in specs/content/efmp-301/reviews/unit-06/G3/renders-20f4255e/ and verified non-blank (mean channel luminances 228.8 - 240.6).
+
+2. Figure Text Geometry & Spacing (measure-figure-text.mjs):
+   - All 8 committed SVGs (4 light, 4 dark) fit within the 780x470 viewBox with zero viewBox boundary overflow and zero wordmark collision.
+   - Text spacing and panel boundaries were checked against the updated measure-figure-text.mjs rules:
+     - fig-U6-1: text in step labels spills slightly past rect panel bounds (e.g. "1. physiological" spills 15.5px).
+     - fig-U6-2: 3.1px gap between labels "the midday meal that changed" and "the strict order does" (need 4px).
+     - fig-U6-3: label "the next attempt follows expectation" spills 36.1px out of panel.
+     - fig-U6-4: cell text overlap of 16.2px in table cell ("the demonstration jar, the story" / "keep personal:").
+     - These layout tolerances are recorded as an advisory finding for figure polish; they do not cause text truncation or viewBox clipping.
+
+3. Alt Text and Figure Accessibility:
+   - All 4 <Figure> tags in topic-01.mdx and topic-02.mdx carry complete descriptive alt text.
+   - Every SVG source includes role="img", aria-labelledby="t d", <title id="t">, and <desc id="d"> elements.
+   - SVG <desc> text exactly matches the carrier alt text.
+
+4. Heading Structure and Hierarchy:
+   - Monotonic heading progression verified across all 5 MDX files:
+     - index.mdx: Single # title, ## outcomes, ## prerequisites, ## in this unit.
+     - topic-01.mdx: Single # title, ## situation, ## Explanation (with 4 ### subtopics), ## Activity, ## Check your understanding, ## Summary, ## Self-assessment, ## Practicum, ## Summative task, ## Further reading.
+     - topic-02.mdx: Single # title, ## situation, ## Explanation (with 3 ### subtopics), ## Activity, ## Check your understanding, ## Summary, ## Self-assessment, ## Practicum, ## Summative task, ## Further reading.
+     - unit-assessment.mdx: Single # title, ## Unit summary, ## Assessment tasks (### MCQs, ### RRQs, ### ERQs), ## Answers and marking guidance.
+     - unit-teacher-notes.mdx: Single # title, ## Curriculum alignment, ## Sequencing across the week, ## Pedagogical rationale, ## Practical work, ## Assessment notes.
+   - Zero skipped heading levels across all files.
+
+5. Content Presentation and Mobile Layout:
+   - Wide comparison tables (fig-U6-2 and fig-U6-4) are implemented as self-contained SVG graphics, preventing uncontained mobile overflow.
+   - In unit-teacher-notes.mdx, the sequencing table has its own scroll container with tabindex, role, and aria-label as verified in round 1.
+   - Assessment answer key is strictly quarantined in the final bounded section.
+
+exit_code: 0
