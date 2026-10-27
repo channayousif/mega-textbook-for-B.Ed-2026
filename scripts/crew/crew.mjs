@@ -533,6 +533,20 @@ function excludeCrewFiles(wt) {
   if (missing.length) { mkdirSync(join(common, 'info'), { recursive: true }); appendFileSync(file, `\n${missing.join('\n')}\n`); }
 }
 
+/**
+ * Drop the folders a worker left in .crew/ once its job ends. Workers keep scratch there, and a
+ * worker that copied all of main into .crew/main-baseline (2.4 GB) for a before/after check left
+ * the host under the 8 GB launch floor on 2026-10-27. The dispatcher's own files there are plain
+ * files (brief.md, logs), so they stay.
+ */
+function pruneScratch(wt) {
+  const dir = join(wt, '.crew');
+  if (!existsSync(dir)) return;
+  for (const e of readdirSync(dir, { withFileTypes: true })) {
+    if (e.isDirectory()) rmSync(join(dir, e.name), { recursive: true, force: true });
+  }
+}
+
 /** Damage to the shared registries in a worktree, against its merge base with main (scripts/crew/registries.mjs). */
 function registryDamage(wt) {
   const base = sh('git', ['merge-base', 'origin/main', 'HEAD'], wt, { allowFail: true }).out;
@@ -634,6 +648,7 @@ function reapOne(board, health, events, j) {
   const code = existsSync(exitFile) ? Number(readFileSync(exitFile, 'utf8').trim()) : -1;
   const logText = existsSync(j.log) ? readFileSync(j.log, 'utf8') : '';
   const tail = logText.slice(-4000);
+  pruneScratch(j.worktree);
   const ahead = Number(sh('git', ['rev-list', '--count', 'origin/main..HEAD'], j.worktree, { allowFail: true }).out || 0);
   const quota = QUOTA_RE.test(tail.slice(-1500)) && (code !== 0 || !ahead);
   if (quota || (code === 124 && !tail.trim())) {
