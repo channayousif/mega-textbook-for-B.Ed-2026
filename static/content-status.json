@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T00:38:38.874Z",
+  "generated_at": "2026-10-27T19:46:52.430Z",
   "courses": [
     {
       "course_code": "EFMP-301",
@@ -1610,20 +1610,20 @@
       ]
     }
   ],
-  "commit": "a384f57578ccfb8571108cd86b1808115d8fc9b3",
+  "commit": "7eea134fbe31b661c2b3fe10ddc2ec5398b1d4a3",
   "trackers": {
-    "specs/content/efmp-301/tasks.md": "b11e2a2a0a1f52518ee0f609fd56efe5bc6a6ffb3e6d48f3b281b55e2479f00b",
+    "specs/content/efmp-301/tasks.md": "cd26beb7937903b7779882b1c8f84d470fe0cdf3f5ae8ecfb8daa99650cbec69",
     "specs/content/efmp-302/tasks.md": "c5da2fd00a26658998db5a62a969e160d5b3ab6a0dea48282ad58101053074f2",
     "specs/content/geng-300/tasks.md": "6ba6986c46c072708776af22d151ee960de6510e5d2e68b87f5bcddaccdac402",
     "specs/content/gict-300/tasks.md": "098a23c3d8a1b84350ca64a2db518dd3bcd74460e85fc3868d0ca6a3d3aa2305",
-    "specs/content/gnas-301/tasks.md": "b0f4ade7cfcf6cd79310ac41863cf1adeedc7b13d5016efdfd80de7c3a87aaad",
+    "specs/content/gnas-301/tasks.md": "b4995373acd2cb9699e5b25fa5f369d0a5c2eacbdd680f3605745ce73c7f5443",
     "specs/content/gqur-300/tasks.md": "3cc521732b020422ca65ada08d3f3ab0fa56f59f5164d747e42d3b42b1c2f8c7",
-    "specs/content/efmp-303/tasks.md": "2aee294e18ff6a0c9966e5d2fdad217fa7cd72a1f4ba7f635b5a140d67b4f5cc",
-    "specs/content/efmp-304/tasks.md": "51f5dd68f40463d1d1b738bc0d1732604648d5194d169b9b449290e703601e63",
+    "specs/content/efmp-303/tasks.md": "15df3e0ce683f767ba13343b748ced943c3f937be14b68d8a92fb97a97be0b29",
+    "specs/content/efmp-304/tasks.md": "56efd0cb154c4969e48a65e4653558dda3e19b27382a11a6929751df91d2bfe5",
     "specs/content/efmp-305/tasks.md": "0868c973e5c71896c31ef0d7654572b60ddb00cec22cddfad22749f6d0779579",
     "specs/content/geng-301/tasks.md": "413520059dae1e8a8509cc25ba0e20f0525002930f4a212a4e26fcb174306c1f",
     "specs/content/gpks-402/tasks.md": "8d2b0c6015c1afb1c2820e81cc78f750ac9fa2e1decb507204a294da54bb12cf",
-    "specs/content/gqur-301/tasks.md": "41362d4f2c0076eff2ea50f2bb38d5dca925cbeaacb1a6768e832b905ad3dbcc",
-    "specs/content/gsos-301/tasks.md": "61976bf093a34ee5551789ce423f94568f2d4332db9908f067a04c6ec6333194"
+    "specs/content/gqur-301/tasks.md": "77811a3f889f23ae7d769afe3ccc4111f8de06c68a523270e4b0d9c330bcd795",
+    "specs/content/gsos-301/tasks.md": "cd41eb766727374f9429a8b878b3571e207644b4a9605e6daf8f6a7eaa7960c2"
   }
 }
