@@ -15,8 +15,8 @@ units may be authored.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0020 + owner resolutions G-2026-22/G-2026-23 + floor D-2026-0021; content-spec status: approved |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-01/G2/20261013T123539502Z-gates.json |
-| Unit 1 | G3 en-review | ▢ | | advisory rounds 1-2: revise; reports reviews/unit-01/G3/20260923T205300Z-g3-attempt-01.json + round-02/20260923T214406Z-g3-attempt-02.json; round-2 blocking finding repaired post-report; two-cycle limit reached, third cycle owner-gated (G-2026-24) |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-01/G2/20261027T154441214Z-gates.json |
+| Unit 1 | G3 en-review | ▢ | | advisory rounds 1-2: revise; reports reviews/unit-01/G3/20260923T205300Z-g3-attempt-01.json + round-02/20260923T214406Z-g3-attempt-02.json; round-2 blocking finding repaired post-report; two-cycle limit reached, third cycle owner-gated (G-2026-24); Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 1 | G4 ur-translation | ✅ | auto:g4 | all 7 Urdu mirror files at i18n/ur/.../gnas-301/unit-01/, 2026-09-24; heading parity exact, terminology-bank-driven, .ur.svg figure variants, zero em-dash; translation_status stays draft pending G5 |
 | Unit 1 | G5 ur-review | ▢ | | advisory round 1: escalate (5 blocking, 11 advisory); report reviews/unit-01/G5/agent-g5-gnas301-u1-run001.json; content defects repaired post-report; dependency escalation folded into G-2026-34's owner question |
 | Unit 1 | G6 assets | ▢ | | |
@@ -59,7 +59,7 @@ units may be authored.
 | Unit 6 | G6 assets | ▢ | | |
 | Unit 6 | G7 publish | ▢ | | |
 | Unit 1 | G3 en-review | ▢ | | advisory: revise; repairs applied; verified existing repairs against reviews/unit-01/G3/20260923T205300Z-g3-attempt-01.json and latest round-02/20260923T214406Z-g3-attempt-02.json; completed descriptive DOI links (EN/UR), cross-topic teacher references (EN/UR), and drinking-water source identification; course-overview credit split and shared excerpt heading remain for course owner; G3 unticked, fresh review owner-gated by G-2026-24 |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-01/G2/20261019T142036397Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-01/G2/20261027T154441214Z-gates.json |
 
 | Unit 4 | G3 en-review | ▢ | | advisory: revise; repairs applied against reviews/unit-04/G3/agent-g3-gnas301-u4-run001.json and latest round-02/agent-g3-gnas301-u4-run002.json; source mappings and support notes corrected, citation scope and EN/UR prose repaired, concept item lists corrected, MCQ options redistributed, Further reading linked; prior repairs retained; G3 remains open, third cycle owner-gated (G-2026-31) |
 | Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-04/G2/20261019T150338371Z-gates.json |
