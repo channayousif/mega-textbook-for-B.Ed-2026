@@ -332,6 +332,8 @@ def evaluate(cands, inputs, env):
     for ch in ("ustani", "shagird"):
         mine = [c for c in clips if c["character"] == ch]
         main = [c for c in mine if c["arm"] == "main"]
+        if not main:  # an eval set may voice one character only (round 7)
+            continue
         has_emb = all(c["_emb"] is not None for c in mine)
         if has_emb:
             embs = np.array([c["_emb"] for c in main])
@@ -372,6 +374,8 @@ def evaluate(cands, inputs, env):
         norm = normalise(os.path.join(OUT, c["file"]))
     for ch in ("ustani", "shagird"):
         first = [c for c in clips if c["character"] == ch and c["arm"] == "main" and c["seed"] == es["seeds"][0]]
+        if not first:
+            continue
         parts = []
         for c in sorted(first, key=lambda c: c["segment"]):
             with wave.open(os.path.join(OUT, c["file"])) as w:

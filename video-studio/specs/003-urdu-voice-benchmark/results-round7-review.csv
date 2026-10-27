@@ -1,0 +1,89 @@
+file,segment,character,style,seed,arm,seconds,cer,coverage,terms_missed,longest_pause,chars_per_s,sim_ref,sim_centroid,flags,asr
+eval/ustani/t01_default_s2001.wav,t01,ustani,default,2001,main,5.76,0.514,1.49,,0.36,6.8,0.85,0.953,asr-mismatch | long (repeats?),آج ہم مصبت تقویت یعنی پوزیٹیو رینفورسمنٹ کے بارے میں بات کریں گے۔
+eval/ustani/t01_default_s2002.wav,t01,ustani,default,2002,main,5.88,0.486,1.46,,0.3,6.7,0.815,0.94,asr-mismatch | long (repeats?),آج ہم مصبت تقویت یعنی پوزیٹیو رینفوسمنٹ کے بارے میں بات کریں گے
+eval/ustani/t01_default_s2003.wav,t01,ustani,default,2003,main,5.68,0.543,1.51,,0.3,6.9,0.841,0.944,asr-mismatch | long (repeats?),آج ہم مصبت تقویت یعنی پوزیٹیو لی انفورسمنٹ کے بارے میں بات کریں گے۔
+eval/ustani/t02_default_s2001.wav,t02,ustani,default,2001,main,4.52,0.312,1.25,اضطراب,0.24,8.3,0.813,0.913,asr-mismatch | term?,آج ہم استراب یعنی انگزائٹی کے بارے میں بات کریں گے
+eval/ustani/t02_default_s2002.wav,t02,ustani,default,2002,main,4.68,0.344,1.28,اضطراب,0.28,7.9,0.822,0.941,asr-mismatch | long (repeats?) | term?,آج ہم استیراب یعنی انگزائٹی کے بارے میں بات کریں گے۔
+eval/ustani/t02_default_s2003.wav,t02,ustani,default,2003,main,4.64,0.312,1.25,اضطراب,0.28,8.0,0.808,0.936,asr-mismatch | term?,آج ہم اس دراب یعنی انگزائٹی کے بارے میں بات کریں گے
+eval/ustani/t03_default_s2001.wav,t03,ustani,default,2001,main,4.6,0.171,1.11,,0.18,8.8,0.812,0.93,,آج ہم میار جانچ یعنی روبرک کے بارے میں بات کریں گے۔
+eval/ustani/t03_default_s2002.wav,t03,ustani,default,2002,main,4.76,0.2,1.14,,0.4,8.5,0.786,0.897,,آج ہم میارے جانچ یعنی روپرک کے بارے میں بات کریں گے۔
+eval/ustani/t03_default_s2003.wav,t03,ustani,default,2003,main,4.6,0.2,1.14,,0.28,8.8,0.827,0.933,,آج ہم میارے جانچ یعنی روبرک کے بارے میں بات کریں گے۔
+eval/ustani/t04_default_s2001.wav,t04,ustani,default,2001,main,5.76,0.028,0.97,,0.26,7.1,0.84,0.951,,آج ہم ضابط اخلاق یعنی Code of Ethical Conduct کے بارے میں بات کریں گے۔
+eval/ustani/t04_default_s2002.wav,t04,ustani,default,2002,main,6.16,0.056,0.97,,0.3,6.5,0.823,0.93,,آج ہم ذابط اخلاق یعنی Code of Ethical Conduct کے بارے میں بات کریں گے
+eval/ustani/t04_default_s2003.wav,t04,ustani,default,2003,main,5.68,0.111,0.94,ضابطہ اخلاق,0.3,7.1,0.852,0.945,term?,آج ہم ذات اخلاق یعنی Code of Ethical Conduct کے بارے میں بات کریں گے۔
+eval/ustani/t05_default_s2001.wav,t05,ustani,default,2001,main,5.76,0.417,1.36,خود انضباطی,0.28,7.0,0.832,0.937,asr-mismatch | long (repeats?) | term?,آج ہم خود انجیباتی یعنی سیلف ریگولیشن کے بارے میں بات کریں گے۔
+eval/ustani/t05_default_s2002.wav,t05,ustani,default,2002,main,5.6,0.417,1.36,خود انضباطی,0.24,7.3,0.829,0.948,asr-mismatch | long (repeats?) | term?,آج ہم خود انجیباتی یعنی سیلف ریگولیشن کے بارے میں بات کریں گے۔
+eval/ustani/t05_default_s2003.wav,t05,ustani,default,2003,main,5.84,0.417,1.36,خود انضباطی,0.3,6.9,0.818,0.933,asr-mismatch | long (repeats?) | term?,آج ہم خود انزیباتی یعنی سیلف ریگولیشن کے بارے میں بات کریں گے
+eval/ustani/t06_default_s2001.wav,t06,ustani,default,2001,main,5.92,0.415,1.34,,0.24,7.7,0.798,0.933,asr-mismatch | long (repeats?),آج ہم ڈیجٹل پیشاواریت یعنی ڈیجٹل پروفیشنلزم کے بارے میں بات کریں گے۔
+eval/ustani/t06_default_s2002.wav,t06,ustani,default,2002,main,6.16,0.415,1.34,,0.34,7.5,0.84,0.948,asr-mismatch | long (repeats?),آج ہم ڈیجٹل پیشاواریت یعنی ڈیجٹل پروفیشنلزم کے بارے میں بات کریں گے۔
+eval/ustani/t06_default_s2003.wav,t06,ustani,default,2003,main,6.24,0.439,1.34,,0.3,7.3,0.827,0.939,asr-mismatch | long (repeats?),آج ہم دیجٹل پیشاواریت یعنی دیجٹل پروفیشنلزم کے بارے میں بات کریں گے۔
+eval/ustani/t07_default_s2001.wav,t07,ustani,default,2001,main,5.72,0.03,1.03,,0.28,6.5,0.826,0.938,,آج ہم طرزِ تعلوم یعنی Learning Style کے بارے میں بات کریں گے۔
+eval/ustani/t07_default_s2002.wav,t07,ustani,default,2002,main,5.04,0.0,1.0,,0.2,7.5,0.842,0.934,,آج ہم طرزِ تعلّم یعنی Learning Style کی بارے میں بات کریں گے۔
+eval/ustani/t07_default_s2003.wav,t07,ustani,default,2003,main,5.08,0.0,1.0,,0.12,7.5,0.864,0.945,,آج ہم طرزِ تعلم یعنی Learning Style کے بارے میں بات کریں گے۔
+eval/ustani/t08_default_s2001.wav,t08,ustani,default,2001,main,5.8,0.282,1.28,,0.22,7.5,0.847,0.953,asr-mismatch | long (repeats?),آج ہم ترقی پذیر ذہنیت یعنی گروتھ مائنسٹ کے بارے میں بات کریں گے۔
+eval/ustani/t08_default_s2002.wav,t08,ustani,default,2002,main,5.48,0.333,1.31,,0.26,8.0,0.817,0.953,asr-mismatch | long (repeats?),آج ہم ترقی پذیر جہنیت یعنی گروتھ مائنسیٹ کے بارے میں بات کریں گے۔
+eval/ustani/t08_default_s2003.wav,t08,ustani,default,2003,main,5.72,0.333,1.31,,0.34,7.7,0.84,0.947,asr-mismatch | long (repeats?),آج ہم ترقی پذیر جہنیت یعنی گروتھ مائنسیٹ کے بارے میں بات کریں گے۔
+eval/ustani/t09_default_s2001.wav,t09,ustani,default,2001,main,5.92,0.0,1.0,,0.42,7.2,0.85,0.94,,آج ہم تعلیمی نفسیات یعنی Educational Psychology کے بارے میں بات کریں گے۔
+eval/ustani/t09_default_s2002.wav,t09,ustani,default,2002,main,5.88,0.0,1.0,,0.32,7.2,0.829,0.939,,آج ہم تعلیمی نفسیات یعنی Educational Psychology کے بارے میں بات کریں گے۔
+eval/ustani/t09_default_s2003.wav,t09,ustani,default,2003,main,5.76,0.0,1.0,,0.34,7.4,0.828,0.934,,آج ہم تعلیمی نفسیات یعنی Educational Psychology کے بارے میں بات کریں گے۔
+eval/ustani/t10_default_s2001.wav,t10,ustani,default,2001,main,4.96,0.333,1.33,,0.32,7.6,0.781,0.94,asr-mismatch | long (repeats?),آج ہم تعمیریت یعنی کنسٹرکٹیوزم کے بارے میں بات کریں گے۔
+eval/ustani/t10_default_s2002.wav,t10,ustani,default,2002,main,5.04,0.333,1.33,,0.28,7.5,0.791,0.935,asr-mismatch | long (repeats?),آج ہم تعمیریت یعنی کنسٹرکٹیوزن کے بارے میں بات کریں گے۔
+eval/ustani/t10_default_s2003.wav,t10,ustani,default,2003,main,5.2,0.333,1.33,,0.32,7.2,0.836,0.956,asr-mismatch | long (repeats?),آج ہم تعمیریت یعنی کنسٹرکٹیوزم کے بارے میں بات کریں گے۔
+eval/ustani/t11_default_s2001.wav,t11,ustani,default,2001,main,5.72,0.457,1.43,,0.3,6.9,0.854,0.929,asr-mismatch | long (repeats?),آج ہم باطنی مہرک یعنی انٹرنسک موٹیویشن کے بارے میں بات کریں گے
+eval/ustani/t11_default_s2002.wav,t11,ustani,default,2002,main,6.48,0.429,1.43,,0.34,6.0,0.842,0.951,asr-mismatch | long (repeats?),آج ہم باطنی محرک یعنی انٹرنسک موٹیویشن کے بارے میں بات کریں گے۔
+eval/ustani/t11_default_s2003.wav,t11,ustani,default,2003,main,5.72,0.429,1.43,,0.28,6.9,0.837,0.937,asr-mismatch | long (repeats?),آج ہم باطنی محرک یعنی انٹرنسک موٹیویشن کے بارے میں بات کریں گے۔
+eval/ustani/t12_default_s2001.wav,t12,ustani,default,2001,main,5.92,0.543,1.51,,0.32,6.6,0.82,0.943,asr-mismatch | long (repeats?),آج ہم خارجی مہرلک یعنی ایکسٹرنسک موٹیویشن کے بارے میں بات کریں گے۔
+eval/ustani/t12_default_s2002.wav,t12,ustani,default,2002,main,5.96,0.543,1.51,,0.32,6.6,0.86,0.936,asr-mismatch | long (repeats?),آج ہم خارجی مہرلک یعنی ایکسٹرنسک موٹیویشن کے بارے میں بات کریں گے۔
+eval/ustani/t12_default_s2003.wav,t12,ustani,default,2003,main,6.36,0.543,1.51,,0.32,6.1,0.827,0.949,asr-mismatch | long (repeats?),آج ہم خارجی مہرلک یعنی ایکسٹرنسک موٹیویشن کے بارے میں بات کریں گے۔
+eval/ustani/t13_default_s2001.wav,t13,ustani,default,2001,main,6.16,0.487,1.41,,0.32,7.1,0.827,0.945,asr-mismatch | long (repeats?),آج ہم ادراکی نشونمہ یعنی کاؤگنیٹیو ڈیولپمنٹ کے بارے میں بات کریں گے۔
+eval/ustani/t13_default_s2002.wav,t13,ustani,default,2002,main,6.24,0.462,1.38,,0.44,7.0,0.79,0.915,asr-mismatch | long (repeats?),آج ہم ادراکی نشونمہ یعنی کاؤگنٹیو ڈیولپمنٹ کے بارے میں بات کریں گے۔
+eval/ustani/t13_default_s2003.wav,t13,ustani,default,2003,main,5.92,0.487,1.41,,0.3,7.4,0.78,0.938,asr-mismatch | long (repeats?),آج ہم ادراکی نشون امہ یعنی کاؤگنٹیو ڈیولپمنٹ کے بارے میں بات کریں گے
+eval/ustani/t14_default_s2001.wav,t14,ustani,default,2001,main,6.16,0.0,1.0,,0.42,7.4,0.846,0.96,,آج ہم انفرادی اختلافات یعنی individual differences کے بارے میں بات کریں گے۔
+eval/ustani/t14_default_s2002.wav,t14,ustani,default,2002,main,6.48,0.0,1.0,,0.32,7.0,0.813,0.937,,آج ہم انفرادی اختلافات یعنی individual differences کے بارے میں بات کریں گے۔
+eval/ustani/t14_default_s2003.wav,t14,ustani,default,2003,main,5.92,0.0,1.0,,0.26,7.7,0.848,0.914,,آج ہم انفرادی اختلافات یعنی individual differences کے بارے میں بات کریں گے
+eval/ustani/t15_default_s2001.wav,t15,ustani,default,2001,main,5.6,0.0,1.0,,0.38,7.4,0.836,0.941,,آج ہم تشکیلی تشخیص یعنی Formative Assessment کے بارے میں بات کریں گے
+eval/ustani/t15_default_s2002.wav,t15,ustani,default,2002,main,5.88,0.0,1.0,,0.36,7.0,0.869,0.948,,آج ہم تشکیلی تشخیص یعنی Formative Assessment کے بارے میں بات کریں گے۔
+eval/ustani/t15_default_s2003.wav,t15,ustani,default,2003,main,5.92,0.0,1.0,,0.48,7.0,0.838,0.941,,آج ہم تشکیلی تشخیص یعنی Formative Assessment کے بارے میں بات کریں گے۔
+eval/ustani/t16_default_s2001.wav,t16,ustani,default,2001,main,6.0,0.0,1.0,,0.32,6.9,0.843,0.946,,آج ہم مجموعی جائزہ یعنی Summative Assessment کے بارے میں بات کریں گے۔
+eval/ustani/t16_default_s2002.wav,t16,ustani,default,2002,main,5.28,0.0,1.0,,0.24,7.9,0.822,0.93,,آج ہم مجموعی جائزہ یعنی Summative Assessment کے بارے میں بات کریں گے۔
+eval/ustani/t16_default_s2003.wav,t16,ustani,default,2003,main,6.04,0.351,1.35,,0.28,6.9,0.836,0.943,asr-mismatch | long (repeats?),آج ہم مجموعی جائزہ یعنی سمیٹیو اسیسمنٹ کے بارے میں بات کریں گے۔
+eval/ustani/t17_default_s2001.wav,t17,ustani,default,2001,main,5.04,0.235,1.24,,0.22,7.7,0.846,0.939,asr-mismatch,آج ہم تدریسیات یعنی پیڑا گوجی کے بارے میں بات کریں گے
+eval/ustani/t17_default_s2002.wav,t17,ustani,default,2002,main,5.12,0.235,1.24,,0.32,7.7,0.798,0.928,asr-mismatch,آج ہم تدریسیات یعنی پیڑا گوجی کے بارے میں بات کریں گے۔
+eval/ustani/t17_default_s2003.wav,t17,ustani,default,2003,main,4.96,0.235,1.24,,0.38,7.9,0.791,0.887,asr-mismatch | voice drift,آج ہم تدریسیات یعنی پیڈاگوجی کے بارے میں بات کریں گے۔
+eval/ustani/t18_default_s2001.wav,t18,ustani,default,2001,main,5.68,0.4,1.4,,0.36,6.9,0.824,0.932,asr-mismatch | long (repeats?),آج ہم حکمت تدریس یعنی تیچنگ سٹریکٹیجی کے بارے میں بات کریں گے
+eval/ustani/t18_default_s2002.wav,t18,ustani,default,2002,main,5.44,0.371,1.37,,0.36,7.2,0.821,0.927,asr-mismatch | long (repeats?),آج ہم حکمت تدریس یعنی تیچنگ سٹراتیجی کے بارے میں بات کریں گے۔
+eval/ustani/t18_default_s2003.wav,t18,ustani,default,2003,main,5.72,0.0,1.0,,0.34,6.9,0.839,0.938,,آج ہم حکمت تدریس یعنی Teaching Strategy کے بارے میں بات کریں گے۔
+eval/ustani/t19_default_s2001.wav,t19,ustani,default,2001,main,6.0,0.368,1.37,,0.28,7.1,0.873,0.96,asr-mismatch | long (repeats?),آج ہم جماعتی انتظام یعنی کلاس روم مینجمنٹ کے بارے میں بات کریں گے۔
+eval/ustani/t19_default_s2002.wav,t19,ustani,default,2002,main,5.56,0.421,1.37,,0.32,7.7,0.868,0.95,asr-mismatch | long (repeats?),آج ہم جمعاتی انتظام یعنی کلاس روم مینجمنٹ کے بارے میں بات کریں گے۔
+eval/ustani/t19_default_s2003.wav,t19,ustani,default,2003,main,5.4,0.368,1.37,,0.3,7.9,0.83,0.886,asr-mismatch | long (repeats?) | voice drift,آج ہم جماعتی انتظام یعنی کلاسروم مینجمنٹ کے بارے میں بات کریں گے۔
+eval/ustani/t20_default_s2001.wav,t20,ustani,default,2001,main,6.0,0.0,1.0,,0.32,7.3,0.814,0.951,,آج ہم نتیجہ ہائے تعلم یعنی learning outcome کے بارے میں بات کریں گے۔
+eval/ustani/t20_default_s2002.wav,t20,ustani,default,2002,main,6.6,0.026,1.0,,0.38,6.5,0.796,0.918,,آج ہم نتیجہ ہائے تعلق یعنی Learning Outcome کے بارے میں بات کریں گے
+eval/ustani/t20_default_s2003.wav,t20,ustani,default,2003,main,6.0,0.026,1.03,,0.34,7.2,0.824,0.941,,آج ہم نتیجہ ہائے تعلوم یعنی Learning Outcome کے بارے میں بات کریں گے۔
+eval/ustani/t21_default_s2001.wav,t21,ustani,default,2001,main,6.68,0.341,1.32,,0.34,6.6,0.783,0.929,asr-mismatch | long (repeats?),آج ہم کلیل مدتی یاد داشت یعنی شورٹ ٹرم میموری کے بارے میں بات کریں گے۔
+eval/ustani/t21_default_s2002.wav,t21,ustani,default,2002,main,6.08,0.341,1.32,,0.3,7.5,0.81,0.945,asr-mismatch | long (repeats?),آج ہم کلیل مدتی یاد داشت یعنی شورٹ ٹرم میموری کے بارے میں بات کریں گے۔
+eval/ustani/t21_default_s2003.wav,t21,ustani,default,2003,main,6.48,0.341,1.32,,0.28,7.0,0.773,0.937,asr-mismatch | long (repeats?),آج ہم کلیل مدتی یاد داشت یعنی شورٹ ٹرم میموری کے بارے میں بات کریں گے۔
+eval/ustani/t22_default_s2001.wav,t22,ustani,default,2001,main,4.88,0.312,1.28,,0.32,7.5,0.852,0.911,asr-mismatch | long (repeats?),آج ہم مراحقت یعنی ایڈولیسنس کے بارے میں بات کریں گے
+eval/ustani/t22_default_s2002.wav,t22,ustani,default,2002,main,4.36,0.312,1.28,,0.32,8.6,0.813,0.923,asr-mismatch | long (repeats?),آج ہم مراحقت یعنی ایڈولیسنس کے بارے میں بات کریں گے۔
+eval/ustani/t22_default_s2003.wav,t22,ustani,default,2003,main,5.0,0.281,1.28,,0.32,7.3,0.83,0.924,asr-mismatch | long (repeats?),آج ہم مراہقت یعنی ایڈولیسنس کے بارے میں بات کریں گے۔
+eval/ustani/t23_default_s2001.wav,t23,ustani,default,2001,main,5.32,0.361,1.31,,0.2,7.7,0.822,0.932,asr-mismatch | long (repeats?),آج ہم مابار ادراک یعنی میٹا کاؤگنشن کے بارے میں بات کریں گے۔
+eval/ustani/t23_default_s2002.wav,t23,ustani,default,2002,main,4.92,0.333,1.31,,0.16,8.0,0.832,0.909,asr-mismatch | long (repeats?),آج ہم ماباد ادراک یعنی میٹا کولنیشن کے بارے میں بات کریں گے۔
+eval/ustani/t23_default_s2003.wav,t23,ustani,default,2003,main,5.28,0.361,1.33,,0.22,7.9,0.811,0.947,asr-mismatch | long (repeats?),آج ہم ماباد ادراک یعنی میٹا کاؤگنیشن کے بارے میں بات کریں گے۔
+eval/ustani/t24_default_s2001.wav,t24,ustani,default,2001,main,5.84,0.237,1.24,,0.32,7.3,0.836,0.946,asr-mismatch,آج ہم معاونتی تدریس یعنی سکیفورڈنگ کے بارے میں بات کریں گے۔
+eval/ustani/t24_default_s2002.wav,t24,ustani,default,2002,main,5.12,0.263,1.24,,0.24,8.5,0.855,0.948,asr-mismatch,آج ہم معاونتی پدریس یعنی سکیفالڈنگ کے بارے میں بات کریں گے۔
+eval/ustani/t24_default_s2003.wav,t24,ustani,default,2003,main,5.8,0.237,1.24,,0.4,7.4,0.851,0.949,asr-mismatch,آج ہم معاونتی تدریس یعنی سکیفولڈنگ کے بارے میں بات کریں گے
+eval/ustani/t25_default_s2001.wav,t25,ustani,default,2001,main,7.04,0.043,0.98,,0.28,7.2,0.822,0.932,,آج ہم علاقہ ہائے قربی نشونمہ یعنی Zone of Proximal Development کے بارے میں بات کریں گے۔
+eval/ustani/t25_default_s2002.wav,t25,ustani,default,2002,main,8.28,0.5,1.46,,0.4,6.0,0.842,0.952,asr-mismatch | long (repeats?),آج ہم علاقہ ہائے قربی نشونوما یعنی زون آف ٹروکسیمل ڈیولپمنٹ کے بارے میں بات کریں گے۔
+eval/ustani/t25_default_s2003.wav,t25,ustani,default,2003,main,7.36,0.5,1.43,,0.36,6.8,0.826,0.943,asr-mismatch | long (repeats?),آج ہم علاقہ ہائے قربی نشونمہ یعنی جون آف پروکسیمل ڈیولپمنٹ کے بارے میں بات کریں گے۔
+eval/ustani/t26_default_s2001.wav,t26,ustani,default,2001,main,5.6,0.0,1.0,,0.34,7.1,0.826,0.94,,آج ہم تنقیدی سوچ یعنی critical thinking کے بارے میں بات کریں گے
+eval/ustani/t26_default_s2002.wav,t26,ustani,default,2002,main,5.24,0.0,1.0,,0.26,7.6,0.792,0.934,,آج ہم تنقیدی سوچ یعنی critical thinking کے بارے میں بات کریں گے۔
+eval/ustani/t26_default_s2003.wav,t26,ustani,default,2003,main,5.08,0.0,1.0,,0.18,7.8,0.866,0.935,,آج ہم تنقیدی سوچ یعنی critical thinking کے بارے میں بات کریں گے۔
+eval/ustani/t27_default_s2001.wav,t27,ustani,default,2001,main,6.24,0.421,1.42,,0.26,6.8,0.859,0.946,asr-mismatch | long (repeats?),آج ہم شمولیتی تعلیم یعنی انکروسیو ایڈوکیشن کے بارے میں بات کریں گے۔
+eval/ustani/t27_default_s2002.wav,t27,ustani,default,2002,main,5.8,0.0,1.0,,0.34,7.3,0.864,0.926,,آج ہم شمولیتی تعلیم یعنی inclusive education کے بارے میں بات کریں گے
+eval/ustani/t27_default_s2003.wav,t27,ustani,default,2003,main,5.8,0.421,1.42,,0.32,7.3,0.82,0.926,asr-mismatch | long (repeats?),آج ہم شمولیتی تعلیم یعنی انکلوسیو ایڈوکیشن کے بارے میں بات کریں گے۔
+eval/ustani/t28_default_s2001.wav,t28,ustani,default,2001,main,5.2,0.059,1.0,,0.3,7.4,0.816,0.927,,آج ہم تعملی مشک یعنی reflective practice کے بارے میں بات کریں گے۔
+eval/ustani/t28_default_s2002.wav,t28,ustani,default,2002,main,5.56,0.059,1.0,,0.36,6.9,0.791,0.94,,آج ہم تعملی مشک یعنی reflective practice کے بارے میں بات کریں گے۔
+eval/ustani/t28_default_s2003.wav,t28,ustani,default,2003,main,5.04,0.059,1.0,,0.38,7.7,0.83,0.935,,آج ہم تعملی مشک یعنی reflective practice کے بارے میں بات کریں گے۔
+eval/ustani/t29_default_s2001.wav,t29,ustani,default,2001,main,5.96,0.054,1.0,,0.38,6.9,0.81,0.935,,آج ہم اخلاقی مکمسہ یعنی ethical dilemma کے بارے میں بات کریں گے۔
+eval/ustani/t29_default_s2002.wav,t29,ustani,default,2002,main,5.76,0.514,1.41,اخلاقی مخمصہ,0.34,7.2,0.842,0.956,asr-mismatch | long (repeats?) | term?,آج ہم اکھلاکی مکھمسہ یعنی ایتھیکل ڈیلیما کے بارے میں بات کریں گے۔
+eval/ustani/t29_default_s2003.wav,t29,ustani,default,2003,main,6.4,0.054,1.0,,0.34,6.4,0.846,0.961,,آج ہم اخلاقی مکمسہ یعنی ethical dilemma کے بارے میں بات کریں گے۔
+eval/reel-ustani.wav,reel,ustani,default,2001,reel,182.56,,,,,,,,,

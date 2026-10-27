@@ -1,0 +1,55 @@
+{
+  "status": {
+    "chatterbox-hi-eval": "ok in 859 s"
+  },
+  "models": {
+    "chatterbox-hi-eval": {
+      "model": "ResembleAI/Chatterbox-Multilingual-hi",
+      "revision": "hi",
+      "device": "cuda",
+      "licence": "MIT (output carries Resemble's inaudible Perth watermark)",
+      "decoder": "s3gen.pt from ResembleAI/chatterbox (V3 decoder did not load)"
+    }
+  },
+  "tools": {
+    "asr": "openai/whisper-large-v3",
+    "speaker": "speechbrain/spkrec-ecapa-voxceleb"
+  },
+  "thresholds": {
+    "max_cer": 0.2,
+    "max_pause_s": 0.9,
+    "pace_tol": 0.35,
+    "drift_sd": 3.0
+  },
+  "normalisation": "ffmpeg loudnorm I=-16 TP=-1.5, 48 kHz mono",
+  "gpu": "GPU 0: Tesla T4 (UUID: GPU-7e9935c7-e40b-41b0-0471-cbef0ea55c80)\nGPU 1: Tesla T4 (UUID: GPU-3f9882bf-4335-b874-b1a1-dddd4c781c5a)",
+  "summary": {
+    "ustani": {
+      "clips": 87,
+      "flagged": 54,
+      "segments_all_seeds_flagged": [
+        "t01",
+        "t02",
+        "t05",
+        "t06",
+        "t08",
+        "t10",
+        "t11",
+        "t12",
+        "t13",
+        "t17",
+        "t19",
+        "t21",
+        "t22",
+        "t23",
+        "t24"
+      ],
+      "sim_ref_mean": 0.828,
+      "sim_ref_min": 0.773,
+      "sim_centroid_mean": 0.937,
+      "sim_centroid_min": 0.886,
+      "median_cer": 0.312,
+      "median_chars_per_s": 7.3
+    }
+  }
+}

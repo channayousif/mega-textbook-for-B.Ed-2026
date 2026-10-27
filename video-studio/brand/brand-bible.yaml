@@ -97,10 +97,45 @@ series:                  # optional recurring formats
   - { key: "licence-tip", name_ur: "لائسنس ٹِپ", description: "STEDA licence exam concept" }
   - { key: "myth-fact", name_ur: "غلط فہمی یا حقیقت؟", description: "common classroom myth corrected" }
 
-pronunciation_lexicon:   # term → respelling given to TTS (seed 30 in T015)
-  - { term: "پیڈاگوجی", say: "پے ڈا گو جی", note: "pedagogy" }
-  - { term: "اسیسمنٹ", say: "اَ سیس مَنٹ", note: "assessment" }
-  - { term: "STEDA", say: "اسٹیڈا", note: "always spoken, written in Latin on screen" }
+pronunciation_lexicon:   # T015, verified by VS-003 rounds 6-7 (results-round7-review.csv)
+  # Owner rule 2026-10-27: a `gloss: true` term is spoken in Urdu, then in English, on first use in an
+  # episode: "<term>، یعنی <en>،". Captions keep the English in Latin letters; the TTS handoff speaks
+  # `deva` and `en_deva` (Chatterbox reads Devanagari; izafat joined, never "-ए-"). `term`/`en` come
+  # from the term bank specs/content/terminology.csv. risk: low = heard right 3 of 3 takes; medium =
+  # a sound slips in some takes; high = wrong in every take, whatever the spelling (the gloss carries it).
+  # `say` is an Urdu-script respelling for a TTS that reads Urdu script.
+  - { term: "مثبت تقویت", en: "Positive Reinforcement", deva: "मुस्बत तक़वियत", en_deva: "पॉज़िटिव रीइन्फ़ोर्समेंट", gloss: true, risk: low, tested: "r7 t01: 3/3" }
+  - { term: "اضطراب", en: "Anxiety", deva: "इज़्तिराब", en_deva: "ऐंग्ज़ायटी", gloss: true, risk: high, tested: "r7 t02: heard as استراب 3/3" }
+  - { term: "معیارِ جانچ", en: "Rubric", deva: "मेयारे जाँच", en_deva: "रूब्रिक", gloss: true, risk: low, tested: "r7 t03: 3/3" }
+  - { term: "ضابطہ اخلاق", en: "Code of Ethical Conduct", deva: "ज़ाब्तए अख़लाक़", en_deva: "कोड ऑफ़ एथिकल कंडक्ट", gloss: true, risk: medium, tested: "r7 t04: 1/3 heard as ذات اخلاق" }
+  - { term: "خود انضباطی", en: "Self-Regulation", deva: "ख़ुद इन्ज़िबाती", en_deva: "सेल्फ़ रेगुलेशन", gloss: true, risk: high, tested: "r7 t05: heard as انجیباتی 3/3" }
+  - { term: "ڈیجیٹل پیشہ واریت", en: "Digital Professionalism", deva: "डिजिटल पेशावारियत", en_deva: "डिजिटल प्रोफ़ेशनलिज़्म", gloss: true, risk: low, tested: "r7 t06: 3/3" }
+  - { term: "طرزِ تعلم", en: "Learning Style", deva: "तर्ज़े तअल्लुम", en_deva: "लर्निंग स्टाइल", gloss: true, risk: low, tested: "r7 t07: 3/3" }
+  - { term: "ترقی پذیر ذہنیت", en: "Growth Mindset", deva: "तरक़्क़ी-पज़ीर ज़ेहनियत", en_deva: "ग्रोथ माइंडसेट", gloss: true, risk: medium, tested: "r7 t08: ذ heard as ج 2/3" }
+  - { term: "تعلیمی نفسیات", en: "Educational Psychology", deva: "तालीमी नफ़सियात", en_deva: "एजुकेशनल साइकोलॉजी", gloss: true, risk: low, tested: "r7 t09: 3/3" }
+  - { term: "تعمیریت", en: "Constructivism", deva: "तामीरियत", en_deva: "कंस्ट्रक्टिविज़्म", gloss: true, risk: low, tested: "r7 t10: 3/3" }
+  - { term: "باطنی محرک", en: "Intrinsic Motivation", deva: "बातिनी मुहर्रिक", en_deva: "इंट्रिंसिक मोटिवेशन", gloss: true, risk: low, tested: "r7 t11: 3/3" }
+  - { term: "خارجی محرک", en: "Extrinsic Motivation", deva: "ख़ारिजी मुहर्रिक", en_deva: "एक्सट्रिंसिक मोटिवेशन", gloss: true, risk: medium, tested: "r7 t12: heard as مہرلک 3/3" }
+  - { term: "ادراکی نشوونما", en: "Cognitive Development", deva: "इदराकी नशोनुमा", en_deva: "कॉग्निटिव डेवलपमेंट", gloss: true, risk: low, tested: "r7 t13: 3/3" }
+  - { term: "انفرادی اختلافات", en: "Individual Differences", deva: "इन्फ़िरादी इख़्तिलाफ़ात", en_deva: "इंडिविजुअल डिफ़रेंसेज़", gloss: true, risk: low, tested: "r7 t14: 3/3" }
+  - { term: "تشکیلی تشخیص", en: "Formative Assessment", deva: "तश्कीली तशख़ीस", en_deva: "फ़ॉर्मेटिव असेसमेंट", gloss: true, risk: low, tested: "r7 t15: 3/3" }
+  - { term: "مجموعی جائزہ", en: "Summative Assessment", deva: "मजमूई जाइज़ा", en_deva: "समेटिव असेसमेंट", gloss: true, risk: low, tested: "r7 t16: 3/3" }
+  - { term: "تدریسیات", en: "Pedagogy", deva: "तदरीसियात", en_deva: "पेडागॉजी", gloss: true, risk: low, tested: "r7 t17: 3/3" }
+  - { term: "حکمتِ تدریس", en: "Teaching Strategy", deva: "हिकमते तदरीस", en_deva: "टीचिंग स्ट्रैटेजी", gloss: true, risk: low, tested: "r7 t18: 3/3" }
+  - { term: "جماعتی انتظام", en: "Classroom Management", deva: "जमाअती इंतिज़ाम", en_deva: "क्लासरूम मैनेजमेंट", gloss: true, risk: low, tested: "r7 t19: 3/3" }
+  - { term: "نتیجہ ہائے تعلم", en: "Learning Outcome", deva: "नतीजा हाए तअल्लुम", en_deva: "लर्निंग आउटकम", gloss: true, risk: low, tested: "r7 t20: 3/3" }
+  - { term: "قلیل مدتی یادداشت", en: "Short-Term Memory", deva: "क़लील मुद्दती याददाश्त", en_deva: "शॉर्ट टर्म मेमोरी", gloss: true, risk: medium, tested: "r7 t21: ق heard as ک 3/3" }
+  - { term: "مراہقت", en: "Adolescence", deva: "मुराहिक़त", en_deva: "एडोलेसेंस", gloss: true, risk: low, tested: "r7 t22: 3/3" }
+  - { term: "مابعد ادراک", en: "Metacognition", deva: "माबाद इदराक", en_deva: "मेटाकॉग्निशन", gloss: true, risk: low, tested: "r7 t23: 3/3" }
+  - { term: "معاونتی تدریس", en: "Scaffolding", deva: "मुआविनती तदरीस", en_deva: "स्कैफ़ोल्डिंग", gloss: true, risk: low, tested: "r7 t24: 3/3" }
+  - { term: "علاقہ ہائے قربی نشوونما", en: "Zone of Proximal Development", deva: "इलाक़ा हाए क़ुर्बी नशोनुमा", en_deva: "ज़ोन ऑफ़ प्रॉक्सिमल डेवलपमेंट", gloss: true, risk: low, tested: "r7 t25: 3/3" }
+  - { term: "تنقیدی سوچ", en: "Critical Thinking", deva: "तन्क़ीदी सोच", en_deva: "क्रिटिकल थिंकिंग", gloss: true, risk: low, tested: "r7 t26: 3/3" }
+  - { term: "شمولیتی تعلیم", en: "Inclusive Education", deva: "शुमूलियती तालीम", en_deva: "इन्क्लूसिव एजुकेशन", gloss: true, risk: low, tested: "r7 t27: 3/3" }
+  - { term: "تاملی مشق", en: "Reflective Practice", deva: "तअम्मुली मश्क़", en_deva: "रिफ़्लेक्टिव प्रैक्टिस", gloss: true, risk: medium, tested: "r7 t28: heard as تعملی مشک 3/3" }
+  - { term: "اخلاقی مخمصہ", en: "Ethical Dilemma", deva: "अख़लाक़ी मख़मसा", en_deva: "एथिकल डिलेमा", gloss: true, risk: medium, tested: "r7 t29: خ heard as ک 3/3" }
+  - { term: "طالب علم", deva: "तालिबे इल्म", gloss: false, risk: low, tested: "r6: heard right in 8 of 9 respelled takes (तालिब-ए-इल्म gave طالب اے علم)" }
+  - { term: "تحریکِ علی گڑھ", en: "Aligarh Movement", deva: "तहरीके अली गढ़", gloss: false, risk: low, tested: "r6 u19r 3/3; joined अलीगढ़ is heard as علیگرد, so no English gloss" }
+  - { term: "STEDA", say: "اسٹیڈا", gloss: false, note: "always spoken, written in Latin on screen; deva untested" }
 
 publishing:
   utm: "utm_source={platform}&utm_medium=shorts&utm_campaign={episode_id}"
