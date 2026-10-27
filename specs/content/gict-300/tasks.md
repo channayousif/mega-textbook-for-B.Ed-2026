@@ -50,8 +50,8 @@ files at that commit. The geng-300 reds are recorded as known-stale-on-main in t
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
 | Unit 5 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0030; content-spec status: approved |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-05/G2/20261013T123518696Z-gates.json |
-| Unit 5 | G3 en-review | ▢ | | advisory run 001 (disposition: pass; advisory F1-F8) at reviews/unit-05/G3/agent-g3-gict300-u5-run001.json; agent reviews advisory under ADR-0019 |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gict-300/reviews/unit-05/G2/20261027T163317063Z-gates.json |
+| Unit 5 | G3 en-review | ▢ | | advisory run 001 (disposition: pass; advisory F1-F8) at reviews/unit-05/G3/agent-g3-gict300-u5-run001.json; agent reviews advisory under ADR-0019; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 5 | G4 ur-translation | ▢ | | |
 | Unit 5 | G5 ur-review | ▢ | | advisory run 001 (disposition: revise; F1 ERQ-2 Urdu tag repaired) at reviews/unit-05/G5/agent-g5-gict300-u5-run001.json; agent reviews advisory under ADR-0019 |
 | Unit 5 | G6 assets | ▢ | | |

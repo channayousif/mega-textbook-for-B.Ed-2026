@@ -24,7 +24,7 @@ files:
   - specs/content/gict-300/reviews/unit-05/G2/
 tests:
   - Unit 5 light SVG text measurement: PASS (12 files)
-  - Content gates and G2 evidence: recorded below
+  - Content gates: 12/13 PASS; content-status stale on origin/main too; G2: 8/8 PASS
 ---
 
 ## Prompt
@@ -38,7 +38,7 @@ Wrapped the English responsibility label and widened the Urdu paraphrase panel, 
 ## Outcome
 
 - ✅ Impact: Repair all three reported geometry findings without wording changes.
-- 🧪 Tests: All 12 light SVGs pass geometry measurement. Content gate results recorded in follow-up.
+- 🧪 Tests: All 12 light SVGs pass geometry measurement. G2 preparation passes all eight gates; final content suite passes 12/13 with only the pre-existing content-status finding, reproduced on origin/main.
 - 📁 Files: Two source SVGs, derived dark variants, tracker, G2 evidence and this PHR.
 - 🔁 Next prompts: Independent fresh G3 review.
 - 🧠 Reflection: Wrapping and panel growth preserve wording and font sizes.
@@ -47,12 +47,12 @@ Wrapped the English responsibility label and widened the Urdu paraphrase panel, 
 
 - Shipped / changed: Unit 5 figure geometry repairs and derived variants.
 - Decisions the team must respect: Preserve wording, canvas dimensions, and G3/G5 statuses.
-- Pending / next owner: Fresh independent G3 review remains with review crew.
+- Pending / next owner: Fresh independent G3 review remains with review crew. Existing static/content-status.json modification left untouched; stale report also reproduced on origin/main.
 - Paperclip issues affected: GICT-300 Unit 5; no ticket supplied.
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: English neighbouring-label clearance and Urdu panel spill.
-- Graders run and results (PASS/FAIL): Geometry PASS; content gates pending completion.
+- Graders run and results (PASS/FAIL): Geometry PASS (12 files); G2 PASS (8 gates); content suite 12/13 PASS, pre-existing stale content-status on origin/main.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): No further geometry changes needed.
