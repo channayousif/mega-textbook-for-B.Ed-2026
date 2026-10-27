@@ -23,7 +23,9 @@ files:
   - specs/content/efmp-301/reviews/unit-04/G2/
 tests:
   - Light SVG geometry measurement: PASS, all 12 sources
-  - Content gates and fresh G2 evidence: results recorded below
+  - Content gates: PASS, all 13 on final rerun
+  - Fresh G2 evidence: PASS, eight commands and manifest/log digest validation
+  - Dark variant freshness: PASS, 1006 sources
 ---
 
 ## Prompt
@@ -59,7 +61,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Wrapped English labels and enlarged memory panels within the existing canvas. Repositioned the Urdu panel footer without changing wording. Regenerated dark variants. Refresh G2 evidence after committing and record G3 as stale.
+Wrapped English labels and enlarged memory panels within the existing canvas. Repositioned the Urdu panel footer without changing wording. Regenerated dark variants. Refreshed G2 evidence against b528ff79 after committing and recorded G3 as stale.
 
 ## Outcome
 
@@ -79,6 +81,6 @@ Wrapped English labels and enlarged memory panels within the existing canvas. Re
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Crowded labels and footer spilling below a memory panel.
-- Graders run and results (PASS/FAIL): Geometry PASS; content checks and refreshed evidence pending final recording.
+- Graders run and results (PASS/FAIL): Geometry PASS (all 12 light sources, zero text findings); final check:content PASS (13/13); fresh G2 PASS (8/8), including read-only manifest and log digest validation; dark variant freshness PASS. The first content run failed only on the stale Unit 4 G2 manifest, resolved by evidence refresh. Existing fig-U4-5.ur.svg cosmetic shape/wordmark warning remains non-failing.
 - Prompt variant (if applicable): null
 - Next experiment (smallest change to try): Measure wrapped labels and inspect icon spacing together.
