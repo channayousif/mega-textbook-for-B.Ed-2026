@@ -36,8 +36,8 @@ reviewer initials). One row per unit per stage (`G1`–`G7`).
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
 | Unit 5 | G1 unit-spec | ▣ | | intake in progress |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-05/G2/20261018T190315267Z-gates.json |
-| Unit 5 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only; author repairs and provenance/render evidence pending. Report: specs/content/geng-301/reviews/unit-05/G3/20261019-codex-review.json. No certification. |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-301/reviews/unit-05/G2/20261027T092255934Z-gates.json |
+| Unit 5 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only; author repairs and provenance/render evidence pending. Report: specs/content/geng-301/reviews/unit-05/G3/20261019-codex-review.json. No certification. Stale since the figure-geometry repair; needs a fresh G3 run. |
 | Unit 5 | G4 ur-translation | ▢ | | |
 | Unit 5 | G5 ur-review | ▢ | | |
 | Unit 5 | G6 assets | ▢ | | |
