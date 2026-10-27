@@ -36,9 +36,16 @@ terminology checks), `specs/content/terminology.csv` + `glossary.json` (parent r
 
 ## Urdu style
 - Standard Urdu, short sentences, active voice. Address viewer as "آپ".
-- Technical terms: use the site's Urdu term; add the English in brackets only the first time
-  and only if the site does. Apply `pronunciation_lexicon` respellings only in the TTS handoff,
-  never in captions.
+- Technical terms: use the site's Urdu term (term bank `specs/content/terminology.csv`). Owner rule
+  2026-10-27: a term with `gloss: true` in the brand `pronunciation_lexicon` is spoken in Urdu and
+  then in English on its first use in the episode, Urdu first: "مثبت تقویت، یعنی positive
+  reinforcement، ...". `text_ur` (and so the captions) keeps the English in Latin letters; later
+  uses say the Urdu term alone. Each gloss adds about 1.5 s, so count it in `est_seconds`.
+- The TTS handoff (never the captions) replaces each lexicon term with its `deva` spelling and each
+  gloss with its `en_deva` (Chatterbox reads Devanagari). Izafat is joined in Devanagari
+  (तालिबे इल्म, never तालिब-ए-इल्म), because a hyphenated "-ए-" is voiced as a separate long "اے".
+- A term marked `risk: high` is mispronounced whatever the spelling; keep its gloss on every use
+  that matters, or prefer a simpler phrasing.
 - Numbers: write as words in `text_ur` for speech ("تین مراحل"); diagrams may use digits per brand.
 - Avoid: exam guarantees, "سب سے بہترین", English filler ("so", "basically"), religious or political asides.
 
