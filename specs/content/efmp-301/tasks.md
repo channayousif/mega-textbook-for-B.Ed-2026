@@ -31,7 +31,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 1 | G5 ur-review | ▢ | | advisory run001: escalate; render inspection unavailable, all content gates pass; report reviews/unit-01/G5/agent-g5-efmp301-u1-run001.json |
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
 | Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-02/G2/20261027T011135868Z-gates.json |
-| Unit 2 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at acd0868f; report reviews/unit-02/G3/20260925T084500Z-g3-attempt-01.json; Stale since the figure-geometry repair; needs a fresh G3 run |
+| Unit 2 | G3 en-review | ▢ | | advisory run002: escalate; repair limit reached (ADR-0019 cycle 2/2); seifert-hk missing in sources/unit-02.md table; visual render uninspected; report reviews/unit-02/G3/22ba096a-360e-434d-bbff-e55d664db642.json |
 | Unit 2 | G4 ur-translation | ✅ | auto:gates | full UR mirror (7 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
 | Unit 2 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at 4ae665a5; G3 dependency escalated to owner; terminology rulings (Learning prose/figure conflict, new U2 coinages) escalated to owner; report reviews/unit-02/G5/agent-g5-efmp301-u2-run001.json |
 | Unit 2 | G6 assets | ▢ | | |
