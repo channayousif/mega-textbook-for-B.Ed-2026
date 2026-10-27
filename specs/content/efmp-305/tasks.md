@@ -83,8 +83,8 @@ renders them.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 4 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-04/G2/20261017T113335543Z-gates.json |
-| Unit 4 | G3 en-review | ▢ | | |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-04/G2/20261027T192354658Z-gates.json |
+| Unit 4 | G3 en-review | ▢ | | Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 4 | G4 ur-translation | ▣ | | mirror complete (2026-10-18): all 5 files translated and verified against EN c31cad8f; 4 .ur.svg/.ur.dark.svg figure variants synced; structural parity clean under temporary reviewed flip (reverted); all 3 key_terms conform to terminology.csv; handoff: reviews/unit-04/G4/translation-handoff.md; translation_status stays draft pending fresh independent G5 |
 | Unit 4 | G5 ur-review | ▢ | | |
 | Unit 4 | G6 assets | ▢ | | 4 schematic figures prompt-only (1 concept-map, 1 diagram, 2 table) |
