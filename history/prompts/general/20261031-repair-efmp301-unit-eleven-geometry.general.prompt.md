@@ -31,26 +31,26 @@ Read .crew/brief.md in the current directory and carry it out completely. It is 
 
 ## Response snapshot
 
-Repaired the Urdu final-row geometry, moved its wordmark to the lower-left, and regenerated the dark variant. Preparing fresh G2 evidence and marking G3 stale as requested.
+Repaired the Urdu final-row geometry, moved its wordmark to the lower-left, and regenerated the dark variant. Generated fresh G2 evidence at repair commit 6f05a751 and marked G3 stale as requested.
 
 ## Outcome
 
 - ✅ Impact: Removes the measured final-row wordmark collision without changing Urdu wording or the viewBox.
 - 🧪 Tests: All eight light SVGs pass geometry; all 13 content gates pass.
-- 📁 Files: Urdu SVG source and derived dark twin; fresh G2 evidence and Unit 11 tracker references follow in the evidence commit.
+- 📁 Files: Urdu SVG source and derived dark twin; fresh G2 evidence and Unit 11 tracker references recorded in the evidence commit.
 - 🔁 Next prompts: Independent fresh G3 review remains required.
 - 🧠 Reflection: Preserve wording and fix available space rather than reducing font size.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Urdu table geometry repair and regenerated dark variant; evidence refresh follows.
-- Decisions the team must respect: No prose, viewBox, publication status, G3 or G5 certification changes. Existing static/content-status.json edits excluded.
+- Shipped / changed: Urdu table geometry repair and regenerated dark variant; evidence refreshed at repair commit 6f05a751.
+- Decisions the team must respect: No prose, viewBox, publication status, G3 or G5 certification changes. Existing static/content-status.json edits excluded from commits; local report regenerated after tracker update.
 - Pending / next owner: Fresh G3 run owned by an independent reviewer.
 - Paperclip issues affected: EFMP-301 Unit 11; no ticket supplied.
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: Final Urdu label overlapped the bottom-right wordmark; panel ended above the final row.
+- Failure modes observed: Final Urdu label overlapped the bottom-right wordmark; panel ended above the final row. Tracker update required refreshing the local generated content-status report.
 - Graders run and results (PASS/FAIL): Geometry PASS; content gates PASS.
 - Prompt variant (if applicable): none
-- Next experiment (smallest change to try): Validate refreshed evidence and rerun content gates after tracker update.
+- Next experiment (smallest change to try): All 13 content gates pass after the tracker update; variant freshness also passes.
