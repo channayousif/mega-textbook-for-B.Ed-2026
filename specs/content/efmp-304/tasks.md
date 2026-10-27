@@ -68,8 +68,8 @@ deterministic gates.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 4 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-04/G2/20261026T222320327Z-gates.json |
-| Unit 4 | G3 en-review | ▣ | | agent G3 (Reviewer, agy Gemini, run 501d802f) **pass**, zero findings: `specs/content/efmp-304/reviews/unit-04/G3/agent-g3-efmp-304-u4-run501d802f.json` (PR #126, TEX-45). Row stays open: agent evidence cannot close it (ADR-0019). Stale since 2026-10-27: fig-U4-1 was re-wrapped to remove text overlap (owner print report), so a fresh G3 run is needed |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-04/G2/20261027T001752249Z-gates.json |
+| Unit 4 | G3 en-review | ▣ | | agent G3 (Reviewer, agy Gemini, run 501d802f) **pass**, zero findings: `specs/content/efmp-304/reviews/unit-04/G3/agent-g3-efmp-304-u4-run501d802f.json` (PR #126, TEX-45). Row stays open: agent evidence cannot close it (ADR-0019). Stale since 2026-10-27: fig-U4-1 was re-wrapped to remove text overlap (owner print report), so a fresh G3 run is needed; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 4 | G4 ur-translation | ▣ | | Six-page Urdu mirror verified complete against English baseline on 2026-10-18 (crew efmp-304-u04-translate-r1): translated metadata, 20 bank-bound key terms, Urdu MCQ option labels in order (الف/ب/ج/د), 8 mirrored Urdu SVGs with derived dark variants; check:content 13/13 pass and parity/figures/key_terms clean under temporary reviewed flip (reverted). Handoff: `specs/content/efmp-304/reviews/unit-04/G4/translation-handoff.md`. translation_status stays draft pending independent G5; no certification claimed |
 | Unit 4 | G5 ur-review | ▣ | | agent G5 (Reviewer, agy Gemini, run 36f939d6) **pass**, 3 advisories: `specs/content/efmp-304/reviews/unit-04/G5/agent-g5-efmp-304-u4-run36f939d6.json` (PR #132, TEX-46). Row stays open (ADR-0019) |
 | Unit 4 | G6 assets | ✅ | auto:gates | 8 schematics placed; dark variants derived |
