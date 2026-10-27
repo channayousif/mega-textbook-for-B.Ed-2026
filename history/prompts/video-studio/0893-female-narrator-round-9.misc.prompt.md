@@ -28,14 +28,16 @@ tests:
 
 ## Prompt
 
-added female voice /home/a2ahs/video-studio-media/voice-benchmark/owner-recordings/anna.wav it is self recorded and i have consent for use
+added female voice /home/a2ahs/video-studio-media/voice-benchmark/owner-recordings/[narrator file name redacted].wav it is self recorded and i have consent for use
 
-(follow-ups in the same exchange: "i have uploaded the correct file /home/a2ahs/video-studio-media/voice-benchmark/owner-recordings/Anna_ok.wav"; "ok, tell me when round 9 is done")
+(follow-ups in the same exchange: "i have uploaded the correct file /home/a2ahs/video-studio-media/voice-benchmark/owner-recordings/[narrator file name redacted].wav"; "ok, tell me when round 9 is done")
+
+(The narrator's name in the two file names is redacted: committed files cite her only as `narrator-02`, brand/consents/README.md. The prompts are otherwise verbatim.)
 
 ## Response snapshot
 
 The first file was byte-identical to the owner's male take bilal-rec-3.wav, so evaluation stopped
-until the correct file arrived (the duplicate was later deleted). Anna_ok.wav is clean, female and
+until the correct file arrived (the duplicate was later deleted). The second file is clean, female and
 a different speaker from the owner. Asked the consent scope (Kaggle agreed, all platforms, promo
 yes, published videos stay up on withdrawal, verbal only) and recorded `narrator-02`. Round 9
 cloned 20 Ustani explanations with her voice and the locked ElevenLabs voice: equal consistency
