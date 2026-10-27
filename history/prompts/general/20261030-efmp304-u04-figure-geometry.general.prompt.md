@@ -25,7 +25,7 @@ files:
 tests:
   - SVG geometry measurement: all 32 unit sources and variants passed
   - Visible wording comparison: passed
-  - Content gates: final verification after G2 refresh
+  - Content gates: all 13 passed after G2 refresh and local status regeneration
 ---
 
 ## Prompt
@@ -39,21 +39,21 @@ Repaired figure 5 wordmark anchoring and figure 7 table wrapping and row padding
 ## Outcome
 
 - ✅ Impact: Removed all 16 reported geometry failures without changing wording.
-- 🧪 Tests: All 32 SVG assets measure cleanly; wording comparison passes. Final content run follows refreshed G2 evidence.
+- 🧪 Tests: All 32 SVG assets measure cleanly; wording comparison passes. All 13 content gates passed after refreshed G2 evidence and regeneration of ignored local content status.
 - 📁 Files: Two light SVGs, their generated dark twins, G2 evidence and tracker.
 - 🔁 Next prompts: Independent G3 review, followed by dependent G5 review.
 - 🧠 Reflection: CSS text anchoring overrides presentation attributes; wrapping requires adequate row height.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Figure geometry repairs and regenerated variants; fresh G2 evidence is prepared after committing inputs.
+- Shipped / changed: Figure geometry repairs and regenerated variants; fresh G2 evidence prepared after committing inputs and linked from the tracker.
 - Decisions the team must respect: Preserve all English and Urdu wording, viewBoxes, prose and review status.
 - Pending / next owner: Curriculum owner arranges fresh independent G3 and dependent G5.
 - Paperclip issues affected: EFMP-304 Unit 4; no ticket supplied.
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: Initial content run identified stale G2 evidence and an intermediate generated variant, addressed before final verification.
-- Graders run and results (PASS/FAIL): Geometry PASS; wording preservation PASS; final content results recorded in completion commit.
+- Failure modes observed: Initial content run identified stale G2 evidence and an intermediate generated variant, addressed before final verification. Tracker changes also required regenerating ignored local content-status.json.
+- Graders run and results (PASS/FAIL): Geometry PASS; wording preservation PASS; content gates PASS (13/13).
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): No further geometry change planned.
