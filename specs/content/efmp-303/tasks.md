@@ -45,8 +45,8 @@ a `concept-map` and two `flowchart`s as the Art. III.10 schematics. G1 unit-spec
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 3 | G1 unit-spec | ▢ | | board G0/G1 intake pending |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-303/reviews/unit-03/G2/20261019T020228252Z-gates.json |
-| Unit 3 | G3 en-review | ▢ | | |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-303/reviews/unit-03/G2/20261027T052641849Z-gates.json |
+| Unit 3 | G3 en-review | ▢ | | Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 3 | G4 ur-translation | ▢ | | Six-file draft mirror and six Urdu figure pairs retained; R1 repairs (2026-10-19) restore activity grouping, boundary-wall means, lowest-performing/enrolment qualifiers and minimum rubric/checklist requirements; teacher-note register clarified. translation_status remains draft; translate-unit Step 7 leaves stage open. Handoff: specs/content/efmp-303/reviews/unit-03/G4/translation-handoff-r1.md |
 | Unit 3 | G5 ur-review | ▢ | | |
 | Unit 3 | G6 assets | ✅ | auto:gates | 6 schematics placed |
