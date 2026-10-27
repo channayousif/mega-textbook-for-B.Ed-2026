@@ -43,6 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       app: ${{ steps.classify.outputs.app }}
+      video: ${{ steps.classify.outputs.video }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -53,9 +54,13 @@ jobs:
           BASE: ${{ github.event.pull_request.base.sha }}
           HEAD: ${{ github.event.pull_request.head.sha }}
         run: |
-          if [ "$EVENT" != "pull_request" ]; then echo "app=true" >> "$GITHUB_OUTPUT"; exit 0; fi
-          content='^(docs|licence|guides|history|specs)/|^i18n/[^/]+/docusaurus-plugin-content-docs[^/]*/|^static/img/figures/'
-          other=$(git diff --name-only "$BASE...$HEAD" | grep -Ev "$content" || true)
+          if [ "$EVENT" != "pull_request" ]; then { echo "app=true"; echo "video=true"; } >> "$GITHUB_OUTPUT"; exit 0; fi
+          changed=$(git diff --name-only "$BASE...$HEAD")
+          # video-studio/ is a separate sub-project (ADR-0031): it gets its own job below and,
+          # touching neither the app nor the database, does not by itself trigger rls/e2e.
+          if echo "$changed" | grep -q '^video-studio/'; then echo "video=true" >> "$GITHUB_OUTPUT"; else echo "video=false" >> "$GITHUB_OUTPUT"; fi
+          content='^(docs|licence|guides|history|specs|video-studio)/|^i18n/[^/]+/docusaurus-plugin-content-docs[^/]*/|^static/img/figures/'
+          other=$(echo "$changed" | grep -Ev "$content" || true)
           if [ -n "$other" ]; then
             echo "app=true" >> "$GITHUB_OUTPUT"
             { echo "Full suite: non-content files changed:"; echo "$other" | head -20; } >> "$GITHUB_STEP_SUMMARY"
@@ -189,6 +194,16 @@ jobs:
       - name: Add-course content-only check
         run: npm run check:add-course
 
+      # Video sub-project: no media or consent record is ever tracked (ADR-0031, owner rule 2026-10-25)
+      - name: No media in video-studio
+        run: node scripts/check-no-media-in-video-studio.mjs
+
+      # Same zero-em-dash rule for the video sub-project. Invoked with --scan-dir rather than by
+      # widening the gate's default roots: check-no-em-dash.mjs is a bound review-evidence input,
+      # so editing it would reopen every unit's G2/G3 evidence.
+      - name: No em dash in video-studio
+        run: node scripts/check-no-em-dash.mjs --scan-dir video-studio
+
       # Validator fixture tests (T013/T014/T032/T033)
       - name: Unit tests
         run: npm test
@@ -223,6 +238,24 @@ jobs:
       # Lighthouse budget: a11y ≥ 0.9, FCP < 2.5s Slow-4G, total weight budget (SC-002, T038).
       - name: Lighthouse CI
         run: npx --yes @lhci/cli@0.14.x autorun || echo "::warning::Lighthouse budget not met"
+
+  # Video sub-project (ADR-0031): its own lockfile, typecheck and unit tests. No render here:
+  # renders run on Kaggle (VS-ADR-0011), never in CI.
+  video-studio:
+    needs: [changes]
+    if: needs.changes.outputs.video == 'true'
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: video-studio
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci --no-audit --no-fund
+      - run: npx tsc --noEmit -p .
+      - run: node --import tsx --test tests/*.test.ts
 
   rls:
     # Waits for `build`, like `e2e`: when the build fails the run is red anyway, and an

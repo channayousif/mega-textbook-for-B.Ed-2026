@@ -101,6 +101,6 @@ describe('RLS fixture isolation', () => {
   it('runs the database suites on every push to main', () => {
     // Content-only PRs may skip rls/e2e; main may not, because deploy-prod.sh
     // deploys only a main SHA whose ci.yml run succeeded.
-    expect(ci()).toMatch(/if \[ "\$EVENT" != "pull_request" \]; then echo "app=true"/);
+    expect(ci()).toMatch(/if \[ "\$EVENT" != "pull_request" \]; then (\{ )?echo "app=true"/);
   });
 });

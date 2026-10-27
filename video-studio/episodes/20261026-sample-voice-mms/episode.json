@@ -1,0 +1,29 @@
+{
+  "episode_id": "20261026-sample-voice-mms",
+  "topic_id": "sample-voice-mms",
+  "status": "render_review",
+  "created_at": "2026-10-25T23:30:12.505Z",
+  "mode": "sample",
+  "history": [
+    {
+      "at": "2026-10-25T23:30:12.505Z",
+      "from": "rendering",
+      "to": "render_review",
+      "by": "claude",
+      "note": "Kaggle render fetched and verified (GPU 0: Tesla T4 (UUID: GPU-7ccbb540-4fe4-20c2-3cb5-8792a9acab04)\nGPU 1: Tesla T4 (UUID: GPU-dcb2f6bf-f298-2b4e-49d7-b3b96522637a))"
+    }
+  ],
+  "render": {
+    "file": "20261026-sample-voice-mms/render/final.mp4",
+    "duration_s": 18.88,
+    "sha256": "5b1602977a869083132beaca9c37d02032209cfcf35d6148a1f9492a4e9fa7a4",
+    "subtitles": [
+      "captions.ur.srt",
+      "captions.ur.vtt"
+    ]
+  },
+  "usage": {
+    "render_seconds": 27.563,
+    "metered_cost_usd": 0
+  }
+}

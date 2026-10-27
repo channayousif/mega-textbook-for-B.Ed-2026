@@ -1,0 +1,14 @@
+{
+  "_comment": "ADR-0031 / video-studio VS-004 PI-03: agents must not record owner approvals for video episodes. Mirrors video-studio/.claude/settings.json for sessions started at the repo root (crew workers included). A guard against accidents, not a security boundary; the Studio's in-memory owner token is the real control.",
+  "permissions": {
+    "deny": [
+      "Bash(npm run approve:*)",
+      "Bash(npx tsx scripts/approve.ts:*)",
+      "Bash(curl:*/gate*)",
+      "Bash(*approvals.jsonl*)",
+      "Edit(video-studio/episodes/**/approvals.jsonl)",
+      "Write(video-studio/episodes/**/approvals.jsonl)",
+      "Read(~/.kaggle/kaggle.json)"
+    ]
+  }
+}

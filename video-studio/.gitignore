@@ -1,0 +1,62 @@
+# Owner rule (2026-10-25): output videos and all media NEVER enter the repo.
+# Media lives outside the working tree under MEDIA_ROOT (see CLAUDE.md "Media storage").
+# These patterns are defence in depth; `scripts/check-no-media-in-video-studio.mjs` in the
+# parent repo fails CI if a media file is ever tracked here.
+
+# Per-episode media folders (in case MEDIA_ROOT is pointed inside the repo by mistake)
+episodes/*/inbox/
+episodes/*/audio/
+episodes/*/clips/
+episodes/*/images/
+episodes/*/render/
+episodes/*/publish/
+episodes/*/stills/
+media/
+
+# Media by extension, anywhere in video-studio/
+*.mp4
+*.mov
+*.mkv
+*.webm
+*.avi
+*.wav
+*.mp3
+*.m4a
+*.aac
+*.flac
+*.ogg
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.psd
+*.srt
+*.vtt
+
+# Brand media, consents (personal data; the repo is public) and Kaggle round trips
+brand/assets/
+brand/consents/*
+!brand/consents/README.md
+kaggle/out/
+kaggle/bundle/
+kaggle.json
+
+# Tooling
+node_modules/
+remotion/out/
+remotion/build/
+.cache/
+whisper/models/
+.env
+.env.*
+
+# Keep these
+!episodes/.gitkeep
+
+# Remotion public/ is staged from the parent repo (fonts, logo) by scripts; never committed
+remotion/public/
+
+# Python bytecode
+__pycache__/
+*.pyc

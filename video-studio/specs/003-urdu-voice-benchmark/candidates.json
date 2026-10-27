@@ -1,0 +1,197 @@
+{
+  "_comment": "VS-003 benchmark candidates generated on Kaggle (VS-ADR-0011). Only active candidates run; round 1 (MMS, Parler) was rejected by the owner on 2026-10-26. AI Studio and narrator takes are manual imports (handoff-ai-studio.md). Owner picks blind; nothing here is a locked voice.",
+  "takes": 3,
+  "candidates": [
+    {
+      "id": "mms-urd",
+      "engine": "mms",
+      "model": "facebook/mms-tts-urd-script_arabic",
+      "licence": "CC-BY-NC-4.0 (non-commercial)",
+      "characters": {
+        "ustani": {},
+        "shagird": {}
+      },
+      "note": "single speaker; same voice for both characters",
+      "active": false,
+      "round": 1
+    },
+    {
+      "id": "indic-parler",
+      "engine": "parler",
+      "model": "ai4bharat/indic-parler-tts",
+      "package": "parler-tts==0.2.3",
+      "licence": "Apache-2.0 (gated on Hugging Face; terms accepted by the owner; mirrored privately)",
+      "characters": {
+        "ustani": {
+          "description": "A female speaker in her forties speaks Urdu in a warm, confident and encouraging tone at a moderate pace with a slightly low pitch. Very clear audio, close-sounding, no background noise."
+        },
+        "shagird": {
+          "description": "A young male speaker in his early twenties speaks Urdu in a curious, upbeat tone at a slightly fast pace with a moderate pitch. Very clear audio, close-sounding, no background noise."
+        }
+      },
+      "model_dataset": "vs-model-indic-parler-tts",
+      "note": "loaded from the private Kaggle dataset mirror; Kaggle does not serve secrets to API-pushed runs",
+      "active": false,
+      "round": 1
+    },
+    {
+      "id": "chatterbox-hi",
+      "round": 2,
+      "active": true,
+      "engine": "chatterbox",
+      "t3": "hi",
+      "model": "ResembleAI/Chatterbox-Multilingual-hi",
+      "licence": "MIT (output carries Resemble's inaudible Perth watermark)",
+      "python": "3.11",
+      "setup": [
+        "uv pip install -q --python $PY 'chatterbox-tts @ git+https://github.com/resemble-ai/chatterbox@5de7a54aa4e5e2baadb0182dde554908b48b85c2'"
+      ],
+      "passages": "passages-devanagari.json",
+      "characters": {
+        "ustani": {},
+        "shagird": {}
+      },
+      "note": "Hindi single-language finetune of Chatterbox V3; reads the Devanagari transliteration; clones the FLEURS reference voice per take",
+      "takes": 9
+    },
+    {
+      "id": "chatterbox-v3",
+      "round": 2,
+      "active": true,
+      "engine": "chatterbox",
+      "t3": "v3",
+      "model": "ResembleAI/chatterbox",
+      "licence": "MIT (output carries Resemble's inaudible Perth watermark)",
+      "python": "3.11",
+      "setup": [
+        "uv pip install -q --python $PY 'chatterbox-tts @ git+https://github.com/resemble-ai/chatterbox@5de7a54aa4e5e2baadb0182dde554908b48b85c2'"
+      ],
+      "passages": "passages-devanagari.json",
+      "characters": {
+        "ustani": {},
+        "shagird": {}
+      },
+      "note": "Chatterbox Multilingual V3 with language_id hi; same text and references as chatterbox-hi"
+    },
+    {
+      "id": "urdu-tts",
+      "round": 2,
+      "active": false,
+      "engine": "tortoise",
+      "model": "zohann/urdu-tts",
+      "checkpoint": "models/urdu-multispeaker/ar-model.pth",
+      "licence": "MIT (urdu-tts code and weights); Apache-2.0 (tortoise base models)",
+      "python": "3.10",
+      "setup": [
+        "git clone -q https://github.com/152334H/tortoise-tts-fast /tmp/ttf && git -C /tmp/ttf checkout -q f4820a8eabdd559eb369a07d60cbe03960ddd54d",
+        "uv pip install -q --python $PY -r /tmp/ttf/requirements.txt --no-deps",
+        "uv pip install -q --python $PY --no-deps -e /tmp/ttf",
+        "uv pip install -q --python $PY 'git+https://github.com/152334H/BigVGAN.git'"
+      ],
+      "characters": {
+        "ustani": {},
+        "shagird": {}
+      },
+      "note": "tortoise autoregressive model finetuned on Urdu (ahmedHanzala/urdu-tts, 2023); reads Urdu script; clones the reference voice",
+      "rejected": "owner ranked all takes worst, 2026-10-27"
+    },
+    {
+      "id": "indicf5",
+      "round": 2,
+      "active": false,
+      "engine": "indicf5",
+      "model": "ai4bharat/IndicF5",
+      "model_dataset": "vs-model-indicf5",
+      "licence": "MIT (gated on Hugging Face: owner must accept the terms, then mirror)",
+      "python": "3.10",
+      "setup": [
+        "uv pip install -q --python $PY 'git+https://github.com/ai4bharat/IndicF5.git'"
+      ],
+      "passages": "passages-devanagari.json",
+      "characters": {
+        "ustani": {},
+        "shagird": {}
+      },
+      "note": "inactive until the owner accepts the IndicF5 terms; needs the reference transcript (text_deva)"
+    }
+  ],
+  "refs": {
+    "_comment": "Voice-cloning references for round 3 (2026-10-27): owner-supplied ElevenLabs Voice Library previews (Reva, Saira, Kamran; then Sample.mp3 for Ustani, round 3b; round 4 adds sample-male.mp3 for Bilal). The voices belong to their creators and ElevenLabs, so they are EVALUATION ONLY (owner ruling 2026-10-27): a winning voice is used only after its rights are secured (an ElevenLabs plan or a consented recording, PI-08). The audio stays in $MEDIA_ROOT/voice-benchmark/refs/<audio> (originals in owner-samples/) and is packed into the private dataset.",
+    "ustani": [
+      {
+        "audio": "ref-ustani-sample.wav",
+        "source": "ElevenLabs-generated sample supplied by the owner (Sample.mp3, C2PA author Eleven Labs Inc., 44.1 s); first 13.3 s used",
+        "text_ur": null,
+        "text_deva": null
+      }
+    ],
+    "shagird": [
+      {
+        "audio": "ref-shagird-sample-male.wav",
+        "source": "ElevenLabs-generated sample supplied by the owner (sample-male.mp3, C2PA author Eleven Labs Inc., 38.2 s); first 13.4 s used",
+        "text_ur": null,
+        "text_deva": null
+      }
+    ],
+    "_round2": {
+      "ustani": [
+        {
+          "audio": "ref-ustani-a.wav",
+          "source": "FLEURS ur_pk train 15745140476818259697.wav (female, 10.3 s)",
+          "text_ur": "امریکی ارضیاتی سروے (یو ایس جی ایس) اور اس کے قومی زلزلہ انفارمیشن سنٹر کی طرف سے کسی نقصان کی کوئی فوری اطلاع موصول نہیں ہوئی ہے۔",
+          "text_deva": "अमरीकी अरज़ियाती सर्वे (यू एस जी एस) और इसके क़ौमी ज़लज़ला इन्फ़ॉर्मेशन सेंटर की तरफ़ से किसी नुक़सान की कोई फ़ौरी इत्तिला मौसूल नहीं हुई है।"
+        },
+        {
+          "audio": "ref-ustani-b.wav",
+          "source": "FLEURS ur_pk train 13096538911515877134.wav (female, 11.4 s)",
+          "text_ur": "اس قسم کے خیالات کے حال افراد منطقانہ سوچ رکھتے ہیں، پیٹرنز کو یاد رکھنے، مسائل کو حل کرنے اور سائنسی ٹیسٹوں پر کام کرنے کے قابل ہیں۔",
+          "text_deva": "इस क़िस्म के ख़यालात के हाल अफ़राद मंतिक़ाना सोच रखते हैं, पैटर्न्स को याद रखने, मसाइल को हल करने और साइंसी टेस्टों पर काम करने के क़ाबिल हैं।"
+        }
+      ],
+      "shagird": [
+        {
+          "audio": "ref-shagird-a.wav",
+          "source": "FLEURS ur_pk train 547077899087206242.wav (male, 10.4 s)",
+          "text_ur": "2015کے آخر میں ٹوگینیٹ نے ایسٹرونیٹ ریڈیو کو ذیلی اسٹیشن کے طور پر قائم کیا۔",
+          "text_deva": "दो हज़ार पंद्रह के आख़िर में टोगीनेट ने एस्ट्रोनेट रेडियो को ज़ैली स्टेशन के तौर पर क़ायम किया।"
+        },
+        {
+          "audio": "ref-shagird-b.wav",
+          "source": "FLEURS ur_pk train 9911941154442049048.wav (male, 10.7 s)",
+          "text_ur": "بطورِ عام کسی غیر ملک میں طویل مدت تک قیام کے لئے تمہیں پیشگی ویزا حاصل کرنا لازم ہے۔",
+          "text_deva": "बतौर-ए-आम किसी ग़ैर मुल्क में तवील मुद्दत तक क़याम के लिए तुम्हें पेशगी वीज़ा हासिल करना लाज़िम है।"
+        }
+      ]
+    },
+    "_round3": {
+      "ustani": [
+        {
+          "audio": "ref-ustani-reva-warm.wav",
+          "source": "ElevenLabs Voice Library preview supplied by the owner: Reva, warm Urdu narration (10.2 s)",
+          "text_ur": null,
+          "text_deva": null
+        },
+        {
+          "audio": "ref-ustani-reva-soothing.wav",
+          "source": "ElevenLabs Voice Library preview supplied by the owner: Reva, soothing companion (8.6 s)",
+          "text_ur": null,
+          "text_deva": null
+        },
+        {
+          "audio": "ref-ustani-saira.wav",
+          "source": "ElevenLabs Voice Library preview supplied by the owner: Saira, poetic storyteller (14.7 s)",
+          "text_ur": null,
+          "text_deva": null
+        }
+      ],
+      "shagird": [
+        {
+          "audio": "ref-shagird-kamran.wav",
+          "source": "ElevenLabs Voice Library preview supplied by the owner: Kamran, dramatic and suspenseful (3.6 s)",
+          "text_ur": null,
+          "text_deva": null
+        }
+      ]
+    }
+  }
+}

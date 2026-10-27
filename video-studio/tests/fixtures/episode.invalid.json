@@ -1,0 +1,9 @@
+{
+  "episode_id": "Sample Episode",
+  "topic_id": "x",
+  "status": "approved_by_magic",
+  "created_at": "yesterday",
+  "history": [],
+  "mode": "sample",
+  "unexpected": true
+}

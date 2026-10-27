@@ -1,0 +1,39 @@
+{
+  "name": "video-studio",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Urdu shorts pipeline for textbook.com.pk (sub-project; see CLAUDE.md). Separate from the site's package.json by design.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "doctor": "tsx scripts/doctor.ts",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "kaggle:pack": "tsx scripts/kaggle-pack.ts",
+    "kaggle:run": "tsx scripts/kaggle-run.ts",
+    "kaggle:fetch": "tsx scripts/kaggle-fetch.ts",
+    "approve": "tsx scripts/approve.ts",
+    "voice:bench": "tsx scripts/voice-bench.ts",
+    "voice:blind": "tsx scripts/voice-blind.ts"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.535",
+    "@remotion/cli": "4.0.535",
+    "@remotion/fonts": "4.0.535",
+    "@remotion/renderer": "4.0.535",
+    "ajv": "8.17.1",
+    "ajv-formats": "3.0.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.535",
+    "yaml": "2.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "22.18.6",
+    "@types/react": "18.3.23",
+    "tsx": "4.20.5",
+    "typescript": "5.6.3"
+  }
+}
