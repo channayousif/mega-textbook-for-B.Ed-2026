@@ -65,14 +65,14 @@ characters:              # LOCK after Checkpoint 1 - details in characters/*.md
     sheet: "characters/ustani-farzana.md"
     display_name_ur: "استانی فرزانہ"
     role: "host - experienced teacher educator; explains"
-    voice: { card: "voices/ustani.md", status: "pending VS-003 benchmark" }   # was a Gemini TTS guess (Kore)
+    voice: { card: "voices/ustani.md", status: "locked 2026-10-27, rights pending" }   # V005; publish blocked until the card records rights
     style_prompt: "Speak in clear standard Urdu like a warm, confident teacher educator; moderate pace; friendly and encouraging."
     puppet_dir: "assets/cast/ustani"
   shagird:
     sheet: "characters/shagird-bilal.md"
     display_name_ur: "بلال"
     role: "co-host - B.Ed student / licence aspirant; asks questions, gives the CTA"
-    voice: { card: "voices/shagird.md", status: "pending VS-003 benchmark" } # was a Gemini TTS guess (Puck)
+    voice: { card: "voices/shagird.md", status: "locked 2026-10-27, rights pending" } # V005; publish blocked until the card records rights
     style_prompt: "Speak in natural conversational Urdu like a curious, upbeat young trainee teacher; slightly faster pace."
     puppet_dir: "assets/cast/shagird"
 

@@ -16,7 +16,7 @@ As a Mega Textbook editor, I can generate or import an approved **Urdu** voice f
 - [x] V002 script benchmark and select 30–45 second passage.
 - [ ] V003 collect 3 independent takes per candidate (manual or free offline).
 - [ ] V004 create blinded listening worksheet, record owner ratings.
-- [ ] V005 lock chosen provider/voice/prompt and pronunciation lexicon.
+- [x] V005 lock chosen provider/voice/prompt and pronunciation lexicon. Owner approved 2026-10-27: `chatterbox-hi`, default style, Sample.mp3 (Ustani) and sample-male.mp3 (Bilal) references, `pronunciation_lexicon`; cards in `brand/voices/`. Reference rights are still not secured, so no episode with these voices passes the render gate until the cards record them.
 - [ ] V006 implement file-import validation and hash provenance (with PI007: consent scope + correction history).
 - [ ] V007 render one short with chosen voice and manual sentence-alignment fallback.
 
