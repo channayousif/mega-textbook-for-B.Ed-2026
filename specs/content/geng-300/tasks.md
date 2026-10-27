@@ -43,3 +43,5 @@ G1 unit-spec affirmed at intake (D-2026-0019). G2 en-draft cleared by determinis
 | Unit 4 | G7 publish | ▢ | | |
 | Unit 1 | G3 en-review | ▣ | | advisory: revise; repairs applied for `specs/content/geng-300/reviews/unit-01/G3/agent-g3-geng-300-u1-run7c5e7ce2.json`: corrected wordmark anchors and panel clearance in both variants, RRQ 3 allocation (4 marks total), explicit subjects in RRQ 4 and topic 1.2, and placed-figure preamble. Fresh independent review pending; G3 stays open and unsigned. |
 | Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-300/reviews/unit-01/G2/20261019T135001511Z-gates.json |
+
+| Unit 2 | G3 en-review | ▣ | agent:codex-g3-reviewer | advisory: escalate; final cycle: earlier substantive repairs verified; topic assessment minima, ERQ 3 stimulus, authority/provenance and current renders unresolved. advisory:specs/content/geng-300/reviews/unit-02/G3/20261028-codex-r1.json; unsigned, G3 open; owner escalation required (ADR-0019). |
