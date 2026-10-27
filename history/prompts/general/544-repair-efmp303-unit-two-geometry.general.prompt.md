@@ -18,6 +18,7 @@ links:
 files:
  - static/img/figures/efmp-303/unit-02/fig-U2-2.svg
  - static/img/figures/efmp-303/unit-02/fig-U2-2.dark.svg
+ - static/content-status.json
  - specs/content/efmp-303/tasks.md
  - specs/content/efmp-303/reviews/unit-02/G2/
 tests:
@@ -37,21 +38,21 @@ Wrapped the final focus cell of fig-U2-2 onto two lines, preserving wording, typ
 ## Outcome
 
 - ✅ Impact: Removed the final-row label collision.
-- 🧪 Tests: All twelve light SVG sources pass geometry measurement; content gate results recorded below after validation.
+- 🧪 Tests: All twelve light SVG sources pass geometry measurement; all 13 content gates pass.
 - 📁 Files: English light and derived dark figure, tracker, G2 evidence and this work record.
 - 🔁 Next prompts: Independent G3 review followed by dependent G5 review.
 - 🧠 Reflection: Wrapping the cell preserves the established layout without changing the figure dimensions.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Figure geometry repair and fresh deterministic G2 evidence.
+- Shipped / changed: Figure geometry repair, fresh deterministic G2 evidence, G3 stale note, and the required generated tracker digest.
 - Decisions the team must respect: Preserve all prose and Urdu wording; no G3/G5 completion or certification is claimed.
 - Pending / next owner: Independent reviewer owns fresh G3 and subsequent G5 review.
 - Paperclip issues affected: Crew job efmp-303-u02-fix; no ticket supplied.
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: Final-row focus label was only 0.3 px from the year label.
-- Graders run and results (PASS/FAIL): Geometry PASS for all twelve light SVGs. Further gate results recorded after execution.
+- Failure modes observed: Final-row focus label was only 0.3 px from the year label. The first content run correctly rejected stale G2 evidence; refreshing evidence and its tracker digest resolved both findings. The archived main comparison lacked its own Git index and produced unusable manifest results; final branch validation passed every gate, so no baseline exception is needed.
+- Graders run and results (PASS/FAIL): Geometry PASS for all twelve light SVGs; content gates PASS 13/13; G2 draft checks PASS 8/8; dark variant freshness PASS.
 - Prompt variant (if applicable): none.
 - Next experiment (smallest change to try): None required for the measured collision.

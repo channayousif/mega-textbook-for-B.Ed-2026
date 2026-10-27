@@ -29,8 +29,8 @@ pending).
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 2 | G1 unit-spec | ▢ | | board G0/G1 intake pending |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-303/reviews/unit-02/G2/20261017T113056723Z-gates.json |
-| Unit 2 | G3 en-review | ▢ | | |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-303/reviews/unit-02/G2/20261027T190312511Z-gates.json |
+| Unit 2 | G3 en-review | ▢ | | Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 2 | G4 ur-translation | ▣ | | Six-file Urdu mirror verified complete against English baseline (5ea0764c): all 6 files match structure, heading level vectors, components (<PrintHandout>, <Figure>, <Glossary>), and 10/10/5 assessment banks; 6 .ur.svg/.ur.dark.svg figure variants wired; 3 key_terms bank-accepted in terminology.csv; check:content 13/13 pass and parity/figures/key_terms clean under temporary reviewed flip (reverted). Handoff: specs/content/efmp-303/reviews/unit-02/G4/translation-handoff.md. translation_status stays draft pending independent G5; no certification claimed. Codex continuation 2026-10-19: policy vision wording and bank-bound Rubric heading repaired; current parity checks recorded in handoff; rendered inspection and accepted G3 dependency remain pending |
 | Unit 2 | G5 ur-review | ▢ | | |
 | Unit 2 | G6 assets | ✅ | auto:gates | 6 schematics placed |
