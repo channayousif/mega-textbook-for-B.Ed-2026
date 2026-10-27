@@ -47,8 +47,8 @@ need sudo, which this account lacks, so the owner runs them.
 - Shipped: boot volume grown to 200 GB at OCI.
 - Decisions to respect: the tenancy is now at the free 200 GB block storage cap; any new block
   or boot volume in this tenancy is billed.
-- Pending: owner runs `echo 1 | sudo tee /sys/class/block/sda/device/rescan`,
-  `sudo growpart /dev/sda 1`, `sudo resize2fs /dev/sda1`.
+- Done by the owner: rescan, `sudo growpart /dev/sda 1`, `sudo resize2fs /dev/sda1`;
+  `df -h /` now 193G size, 80G free (was 7.3G, below the crew's 8 GB launch floor).
 - Issues affected: none.
 
 ## Evaluation notes (flywheel)
