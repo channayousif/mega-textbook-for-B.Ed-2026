@@ -25,7 +25,10 @@ files:
 tests:
  - Unit 1 light SVG geometry: PASS (12 sources)
  - Visible wording equality: PASS
- - Content gates compared with origin/main; see follow-up evidence commit
+ - npm run check:content: PASS (13/13), matching origin/main
+ - npm run figures:variants:check: PASS
+ - Dark geometry: PASS (2 regenerated variants)
+ - G2 evidence: PASS (8/8 draft commands)
 ---
 
 ## Prompt
@@ -34,12 +37,12 @@ Read .crew/brief.md in the current directory and carry it out completely. It is 
 
 ## Response snapshot
 
-Rewrapped table labels and repositioned the Symbolic interactionism credit while preserving wording, font sizes and canvas dimensions. Regenerated dark variants; refresh G2 evidence after this commit and flag G3 stale.
+Rewrapped table labels and repositioned the Symbolic interactionism credit while preserving wording, font sizes and canvas dimensions. Regenerated dark variants; refreshed G2 evidence after the repair commit and flagged both G3 rows stale.
 
 ## Outcome
 
 - ✅ Impact: Removed all 14 reported geometry findings.
-- 🧪 Tests: Geometry passes for every light source; corpus gate comparison recorded with follow-up evidence.
+- 🧪 Tests: Geometry passes for every light source; all 13 content gates pass on branch and origin/main.
 - 📁 Files: Two English SVG sources, their derived variants, G2 evidence and tracker.
 - 🔁 Next prompts: Fresh independent G3 review.
 - 🧠 Reflection: Wrap text to column budgets before reducing type.
@@ -54,6 +57,6 @@ Rewrapped table labels and repositioned the Symbolic interactionism credit while
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Long English table labels crossed columns and spilled past the table edge.
-- Graders run and results (PASS/FAIL): PASS geometry and wording preservation; gate results in follow-up record.
+- Graders run and results (PASS/FAIL): PASS geometry and wording preservation; all 13 content gates on branch and origin/main; eight G2 checks; dark geometry and variant freshness.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Independent G3 inspection of repaired tables.
