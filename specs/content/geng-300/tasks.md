@@ -13,7 +13,7 @@ G1 unit-spec affirmed at intake (D-2026-0019). G2 en-draft cleared by determinis
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0019; content-spec status: approved |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-300/reviews/unit-01/G2/20261027T163722910Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-300/reviews/unit-01/G2/20261027T165057677Z-gates.json |
 | Unit 1 | G3 en-review | ▣ | | Advisory independent agy G3 **revise** (thread 7c5e7ce2-df0f-4b0d-9349-51c41fabe43d): SVG text geometry overflow (fig-U1-1, fig-U1-3), RRQ 3 arithmetic discrepancy and RRQ 4 clause classification error. Report: `specs/content/geng-300/reviews/unit-01/G3/agent-g3-geng-300-u1-run7c5e7ce2.json`. G3 stays open, unsigned (ADR-0019). Stale since the figure-geometry repair; needs a fresh G3 run. |
 | Unit 1 | G4 ur-translation | ▢ | | English-only course (bilingual: false); no Urdu mirror required |
 | Unit 1 | G5 ur-review | ▢ | | English-only course |
@@ -41,5 +41,3 @@ G1 unit-spec affirmed at intake (D-2026-0019). G2 en-draft cleared by determinis
 | Unit 4 | G5 ur-review | ▢ | | English-only course |
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
-| Unit 1 | G3 en-review | ▣ | | advisory: revise; repairs applied for `specs/content/geng-300/reviews/unit-01/G3/agent-g3-geng-300-u1-run7c5e7ce2.json`: corrected wordmark anchors and panel clearance in both variants, RRQ 3 allocation (4 marks total), explicit subjects in RRQ 4 and topic 1.2, and placed-figure preamble. Fresh independent review pending; G3 stays open and unsigned. |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-300/reviews/unit-01/G2/20261019T135001511Z-gates.json |
