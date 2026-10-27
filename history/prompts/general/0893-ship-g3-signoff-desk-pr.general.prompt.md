@@ -1,5 +1,5 @@
 ---
-id: 0890
+id: 0893
 title: Ship the G3 sign-off desk PR
 stage: general
 date: 2026-10-27
