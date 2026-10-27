@@ -46,7 +46,8 @@ test('the G3 sign-off desk shows the whole picture to an admin and nothing to a 
 
     // Every unit, whatever its state, is reachable from the table.
     await page.getByLabel('State').selectOption('');
-    const rows = page.locator('tbody tr');
+    // Scoped to the units table: the collapsed By-course table above it has hidden rows.
+    const rows = page.getByRole('table', { name: 'Units' }).locator('tbody tr');
     await expect(rows.first()).toBeVisible();
     await rows.first().getByRole('button', { name: 'Open' }).click();
     await expect(page.getByRole('heading', { level: 3, name: 'Criteria' })).toBeVisible();
