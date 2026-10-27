@@ -1,0 +1,20 @@
+{
+  "previous_manifest": "G3/run-002/manifest.json",
+  "changed_paths": [
+    "catalog/courses.json",
+    "scripts/check-figures.mjs",
+    "scripts/check-no-answer-keys.mjs",
+    "scripts/lib/content-roots.mjs",
+    "scripts/lib/gates.mjs",
+    "scripts/lib/review-evidence.mjs",
+    "specs/content/efmp-301/concepts/unit-05.md",
+    "specs/content/efmp-301/sources/texts/seifert2009.md",
+    "specs/content/efmp-301/sources/texts/spielman2020.md",
+    "specs/content/efmp-301/sources/texts/vosniadou2001.md",
+    "specs/content/style-guide.md",
+    "static/img/figures/efmp-301/unit-05/fig-U5-1.dark.svg",
+    "static/img/figures/efmp-301/unit-05/fig-U5-1.svg",
+    "contracts/licence-page.schema.json"
+  ],
+  "note": "Previous prepared bundle is stale. New local manifest is diagnostic only; no supplied author run identity or model snapshot established."
+}
