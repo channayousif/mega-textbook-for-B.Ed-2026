@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { runInNewContext } from 'node:vm';
@@ -90,4 +90,18 @@ test('common brief rules keep every worker scratch file inside its worktree', ()
     assert.match(rules({}, self), /keep all scratch files inside your worktree/);
     assert.match(rules({}, self), /never use `\/tmp`/);
   }
+});
+
+test('pruneScratch drops worker folders in .crew but keeps the dispatcher files', (t) => {
+  const wt = fixture(t);
+  mkdirSync(join(wt, '.crew', 'main-baseline', 'docs'), { recursive: true });
+  writeFileSync(join(wt, '.crew', 'main-baseline', 'docs', 'a.md'), 'x');
+  writeFileSync(join(wt, '.crew', 'brief.md'), 'brief');
+  writeFileSync(join(wt, '.crew', 'content-final.log'), 'log');
+  const prune = loadFunction('pruneScratch', '\n/**', { join, existsSync, readdirSync, rmSync });
+  prune(wt);
+  prune(join(wt, 'missing'));
+  assert.equal(existsSync(join(wt, '.crew', 'main-baseline')), false);
+  assert.equal(existsSync(join(wt, '.crew', 'brief.md')), true);
+  assert.equal(existsSync(join(wt, '.crew', 'content-final.log')), true);
 });
