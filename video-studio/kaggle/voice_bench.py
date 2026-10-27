@@ -8,7 +8,8 @@ candidate runs in its own process, and in its own uv venv when it pins packages.
 cannot run is reported as skipped or errored, never faked.
 
 Outputs in /kaggle/working/out: takes/<candidate>_<character>_take<k>.wav, report.json,
-output-manifest.json.
+output-manifest.json. With `"mode": "eval"` (voice:bench --eval) it instead runs the round 5 stress
+test from eval-set.json into eval/ (clips, two reels, review.csv).
 """
 import glob, hashlib, json, os, shutil, subprocess, sys, time, traceback, wave
 
@@ -175,6 +176,218 @@ def gen(cand, passages, takes, refs, inputs):
 
 CLONING = {"chatterbox", "tortoise", "indicf5"}
 
+# Round 5 eval mode (eval-set.json): screening thresholds. A flagged clip is one the owner should
+# listen to; Whisper's own Urdu errors make these a filter, not a verdict.
+MAX_CER, MAX_PAUSE_S, PACE_TOL, DRIFT_SD = 0.20, 0.9, 0.35, 3.0
+ECAPA = "speechbrain/spkrec-ecapa-voxceleb"  # Apache-2.0, independent of Chatterbox's own encoder
+WHISPER = "openai/whisper-large-v3"  # MIT
+
+
+def norm_ur(s):
+    """Urdu text for comparison: unify Arabic/Urdu letter variants, drop diacritics, punctuation,
+    spaces and digits (Whisper's spacing and numerals in Urdu are inconsistent)."""
+    import re
+    import unicodedata
+    s = unicodedata.normalize("NFC", s).translate(str.maketrans({
+        "ي": "ی", "ى": "ی", "ئ": "ی", "ے": "ی", "ۓ": "ی", "ك": "ک", "ه": "ہ", "ۂ": "ہ", "ۃ": "ہ",
+        "ة": "ہ", "ھ": "ہ", "أ": "ا", "إ": "ا", "آ": "ا", "ؤ": "و"}))
+    s = re.sub(r"[ً-ٰٟ‌‍،؛؟۔]", "", s)
+    return re.sub(r"[^؀-ۿ]", "", s)
+
+
+def lev(a, b):
+    prev = list(range(len(b) + 1))
+    for i, ca in enumerate(a, 1):
+        cur = [i]
+        for j, cb in enumerate(b, 1):
+            cur.append(min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (ca != cb)))
+        prev = cur
+    return prev[-1]
+
+
+def term_heard(term, hyp):
+    """True when the normalised term appears in the transcript within 25% edits."""
+    t = norm_ur(term)
+    if not t or t in hyp:
+        return bool(t)
+    best = min((lev(t, hyp[i:i + len(t) + d]) for d in (-1, 0, 1) for i in range(max(1, len(hyp) - len(t) + 2))),
+               default=len(t))
+    return best <= 0.25 * len(t)
+
+
+def pauses(wav16):
+    """Longest silence inside the speech (20 ms frames, 35 dB below the loudest frame) and the voiced span."""
+    import numpy as np
+    n = 320
+    rms = np.sqrt(np.mean(wav16[: len(wav16) // n * n].reshape(-1, n) ** 2, axis=1) + 1e-12)
+    voiced = np.flatnonzero(rms > rms.max() * 10 ** (-35 / 20))
+    if len(voiced) < 2:
+        return 0.0, 0.0
+    gaps = np.diff(voiced) - 1
+    return round(float(gaps.max()) * n / 16000, 2), (voiced[-1] - voiced[0] + 1) * n / 16000
+
+
+def evaluate_gen(inputs):
+    """Child process for eval mode: voice each segment with every seed (default style) and the style
+    arm, then screen every clip with a Whisper round trip and ECAPA speaker similarity."""
+    import numpy as np
+    import torch
+    import librosa
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    es = json.load(open(os.path.join(inputs, "eval-set.json"), encoding="utf-8"))
+    cands = json.load(open(os.path.join(inputs, "candidates.json")))
+    cand = next(c for c in cands["candidates"] if c["id"] == es["candidate"])
+    model, decoder = chatterbox(cand, device)
+    ref = {ch: os.path.join(inputs, cands["refs"][ch][0]["audio"]) for ch in ("ustani", "shagird")}
+    segs = {s["id"]: s for s in es["segments"]}
+    jobs = [(s, "default", seed, "main") for s in es["segments"] for seed in es["seeds"]]
+    for ch, arm in es["style_arm"].items():
+        jobs += [(segs[i], st, es["seeds"][0], "style") for i in arm["lines"] for st in arm["styles"] if st != "default"]
+    clips = []
+    for seg, style, seed, arm in jobs:
+        torch.manual_seed(seed)
+        opts = es["styles"][style]
+        t0 = time.time()
+        with torch.no_grad():
+            samples = by_sentence(lambda s: model.generate(s, language_id="hi", audio_prompt_path=ref[seg["character"]],
+                                                           **opts).cpu().numpy(), seg["text_deva"], model.sr)
+        rel = "eval/%s/%s_%s_s%d.wav" % (seg["character"], seg["id"], style, seed)
+        os.makedirs(os.path.dirname(os.path.join(OUT, rel)), exist_ok=True)
+        write_wav(os.path.join(OUT, rel), samples, model.sr)
+        clips.append({"file": rel, "segment": seg["id"], "character": seg["character"], "style": style, "seed": seed,
+                      "arm": arm, "seconds": round(len(samples) / model.sr, 2), "gen_seconds": round(time.time() - t0, 1)})
+    rate = model.sr
+    del model
+    torch.cuda.empty_cache()
+    from transformers import pipeline
+    try:
+        asr = pipeline("automatic-speech-recognition", model=WHISPER, dtype=torch.float16, device=device)
+    except TypeError:
+        asr = pipeline("automatic-speech-recognition", model=WHISPER, torch_dtype=torch.float16, device=device)
+    try:
+        # speechbrain 1.0.3 passes use_auth_token to hf_hub_download, which the huggingface_hub 1.x
+        # that Chatterbox needs rejects, even for a local source (two 2026-10-27 runs); drop the argument.
+        import huggingface_hub
+        _download = huggingface_hub.hf_hub_download
+        huggingface_hub.hf_hub_download = lambda *a, use_auth_token=None, **k: _download(*a, **k)
+        from speechbrain.inference.speaker import EncoderClassifier
+        enc = EncoderClassifier.from_hparams(source=ECAPA, savedir="/tmp/ecapa", run_opts={"device": device})
+        embed = lambda w: torch.nn.functional.normalize(enc.encode_batch(torch.tensor(w)[None].to(device)).squeeze(), dim=0)
+        ref_emb = {ch: embed(librosa.load(p, sr=16000)[0]) for ch, p in ref.items()}
+    except Exception:  # noqa: BLE001 - similarity is one of four measures; keep the rest
+        traceback.print_exc()
+        embed = None
+    for c in clips:
+        w16 = librosa.resample(librosa.load(os.path.join(OUT, c["file"]), sr=rate)[0], orig_sr=rate, target_sr=16000)
+        seg = segs[c["segment"]]
+        text = asr({"raw": w16, "sampling_rate": 16000}, generate_kwargs={"language": "urdu", "task": "transcribe"})["text"]
+        want, got = norm_ur(seg["text_ur"]), norm_ur(text)
+        pause, span = pauses(w16)
+        e = embed(w16) if embed else None
+        c.update({"asr": text.strip(), "cer": round(lev(want, got) / max(1, len(want)), 3),
+                  "coverage": round(len(got) / max(1, len(want)), 2),
+                  "terms_missed": [t for t in seg["terms"] if not term_heard(t, got)],
+                  "longest_pause": pause, "chars_per_s": round(len(want) / span, 1) if span else 0.0,
+                  "sim_ref": round(float(e @ ref_emb[c["character"]]), 3) if e is not None else None,
+                  "_emb": e.cpu().tolist() if e is not None else None})
+    json.dump({"revision": cand["t3"], "device": device, "decoder": decoder, "rate": rate, "clips": clips,
+               "tools": {"asr": WHISPER, "speaker": ECAPA}},
+              open(os.path.join(OUT, "_eval.json"), "w"), indent=2)
+
+
+def evaluate(cands, inputs, env):
+    """Eval mode (round 5): run evaluate_gen in the candidate's venv, then flag clips, build one reel
+    per character (seed 1, script order) for the consistency listen, and write review.csv."""
+    import csv
+    import numpy as np
+    es = json.load(open(os.path.join(inputs, "eval-set.json"), encoding="utf-8"))
+    cand = next(c for c in cands["candidates"] if c["id"] == es["candidate"])
+    cand = dict(cand, id=cand["id"] + "-eval", setup=cand["setup"] + ["uv pip install -q --python $PY speechbrain==1.0.3"])
+    t0 = time.time()
+    with open(os.path.join(OUT, "log-eval.txt"), "w") as log:
+        try:
+            py = python_for(cand, log)
+            subprocess.run([py, os.path.abspath(__file__), "--eval", inputs], check=True, env=env, stdout=log, stderr=log)
+            status = {cand["id"]: "ok in %.0f s" % (time.time() - t0)}
+        except Exception:  # noqa: BLE001
+            log.write(traceback.format_exc())
+            status = {cand["id"]: "error: see log-eval.txt"}
+    part = os.path.join(OUT, "_eval.json")
+    if not os.path.exists(part):
+        json.dump({"mode": "eval", "status": status, "takes": []}, open(os.path.join(OUT, "report.json"), "w"), indent=2)
+        return status
+    p = json.load(open(part))
+    os.remove(part)
+    clips = p["clips"]
+    summary = {}
+    for ch in ("ustani", "shagird"):
+        mine = [c for c in clips if c["character"] == ch]
+        main = [c for c in mine if c["arm"] == "main"]
+        has_emb = all(c["_emb"] is not None for c in mine)
+        if has_emb:
+            embs = np.array([c["_emb"] for c in main])
+            centroid = embs.mean(0) / np.linalg.norm(embs.mean(0))
+        for c in mine:
+            c["sim_centroid"] = round(float(np.array(c["_emb"]) @ centroid), 3) if has_emb else None
+        sims = np.array([c["sim_centroid"] for c in main]) if has_emb else None
+        pace = float(np.median([c["chars_per_s"] for c in main]))
+        for c in mine:
+            f = []
+            if c["cer"] > MAX_CER:
+                f.append("asr-mismatch")
+            if c["coverage"] < 0.8:
+                f.append("short (skipped words?)")
+            if c["coverage"] > 1.25:
+                f.append("long (repeats?)")
+            if c["terms_missed"]:
+                f.append("term?")
+            if c["longest_pause"] > MAX_PAUSE_S:
+                f.append("pause")
+            if abs(c["chars_per_s"] - pace) > PACE_TOL * pace:
+                f.append("pace")
+            if has_emb and c["sim_centroid"] < sims.mean() - DRIFT_SD * sims.std():
+                f.append("voice drift")
+            c["flags"] = f
+        segs = sorted({c["segment"] for c in main})
+        summary[ch] = {
+            "clips": len(main), "flagged": sum(1 for c in main if c["flags"]),
+            "segments_all_seeds_flagged": [s for s in segs if all(c["flags"] for c in main if c["segment"] == s)],
+            "sim_ref_mean": round(float(np.mean([c["sim_ref"] for c in main])), 3) if has_emb else None,
+            "sim_ref_min": round(float(np.min([c["sim_ref"] for c in main])), 3) if has_emb else None,
+            "sim_centroid_mean": round(float(sims.mean()), 3) if has_emb else None,
+            "sim_centroid_min": round(float(sims.min()), 3) if has_emb else None,
+            "median_cer": round(float(np.median([c["cer"] for c in main])), 3),
+            "median_chars_per_s": round(pace, 1)}
+    for c in clips:
+        c.pop("_emb")
+        norm = normalise(os.path.join(OUT, c["file"]))
+    for ch in ("ustani", "shagird"):
+        first = [c for c in clips if c["character"] == ch and c["arm"] == "main" and c["seed"] == es["seeds"][0]]
+        parts = []
+        for c in sorted(first, key=lambda c: c["segment"]):
+            with wave.open(os.path.join(OUT, c["file"])) as w:
+                parts += [np.frombuffer(w.readframes(w.getnframes()), "<i2").astype("float32") / 32767, np.zeros(int(0.6 * 48000), "float32")]
+        reel = "eval/reel-%s.wav" % ch
+        write_wav(os.path.join(OUT, reel), np.concatenate(parts[:-1]), 48000)
+        clips.append({"file": reel, "segment": "reel", "character": ch, "style": "default", "seed": es["seeds"][0],
+                      "arm": "reel", "seconds": round(sum(len(x) for x in parts[:-1]) / 48000, 2), "flags": []})
+    for c in clips:
+        c["sha256"] = sha256(os.path.join(OUT, c["file"]))
+    cols = ["file", "segment", "character", "style", "seed", "arm", "seconds", "cer", "coverage", "terms_missed",
+            "longest_pause", "chars_per_s", "sim_ref", "sim_centroid", "flags", "asr"]
+    with open(os.path.join(OUT, "eval", "review.csv"), "w", newline="", encoding="utf-8") as fh:
+        w = csv.writer(fh)
+        w.writerow(cols)
+        for c in clips:
+            w.writerow([" | ".join(v) if isinstance(v, list) else v for v in (c.get(k, "") for k in cols)])
+    gpu = subprocess.run(["nvidia-smi", "-L"], capture_output=True, text=True).stdout.strip() or "none"
+    json.dump({"mode": "eval", "status": status, "models": {cand["id"]: {"model": cand["model"], "revision": p["revision"],
+               "device": p["device"], "licence": cand["licence"], "decoder": p["decoder"]}}, "tools": p["tools"],
+               "thresholds": {"max_cer": MAX_CER, "max_pause_s": MAX_PAUSE_S, "pace_tol": PACE_TOL, "drift_sd": DRIFT_SD},
+               "normalisation": norm, "gpu": gpu, "summary": summary, "takes": clips},
+              open(os.path.join(OUT, "report.json"), "w"), indent=2, ensure_ascii=False)
+    return status
+
 
 def python_for(cand, log):
     """Interpreter for a candidate: the image's Python, or a uv venv built by `package` or `setup`
@@ -214,6 +427,9 @@ def main():
         passages = json.load(open(os.path.join(inputs, cand.get("passages", "passages.json")), encoding="utf-8"))
         gen(cand, passages, cand.get("takes", cands["takes"]), cands.get("refs", {}), inputs)
         return
+    if len(sys.argv) == 3 and sys.argv[1] == "--eval":
+        evaluate_gen(sys.argv[2])
+        return
     found = glob.glob("/kaggle/input/**/candidates.json", recursive=True)
     if len(found) != 1:
         raise SystemExit("expected one candidates.json under /kaggle/input, found %d" % len(found))
@@ -238,6 +454,11 @@ def main():
         except Exception as e:  # noqa: BLE001 - the secret is optional; candidates needing it are skipped
             secret_diag["HF_TOKEN"] = "%s: %s (after %d attempts)" % (type(e).__name__, str(e)[:200], attempt)
             time.sleep(5 * attempt)
+    if cands.get("mode") == "eval":
+        status = evaluate(cands, inputs, env)
+        write_output_manifest(inputs)
+        print("voice_bench eval: " + json.dumps(status), flush=True)
+        return
     status = {}
     cands["candidates"] = [c for c in cands["candidates"] if c.get("active", True)]
     for cand in cands["candidates"]:
@@ -274,6 +495,11 @@ def main():
     gpu = subprocess.run(["nvidia-smi", "-L"], capture_output=True, text=True).stdout.strip() or "none"
     json.dump({"status": status, "secret": secret_diag, "models": revisions, "normalisation": norm, "gpu": gpu, "takes": rows},
               open(os.path.join(OUT, "report.json"), "w"), indent=2)
+    write_output_manifest(inputs)
+    print("voice_bench: " + json.dumps(status), flush=True)
+
+
+def write_output_manifest(inputs):
     outputs = {}
     for root, _d, files in os.walk(OUT):
         for f in files:
@@ -281,7 +507,6 @@ def main():
             outputs[os.path.relpath(p, OUT)] = sha256(p)
     json.dump({"input_manifest_sha256": sha256(os.path.join(inputs, "manifest.json")), "outputs": outputs},
               open(os.path.join(OUT, "output-manifest.json"), "w"), indent=2)
-    print("voice_bench: " + json.dumps(status), flush=True)
 
 
 main()

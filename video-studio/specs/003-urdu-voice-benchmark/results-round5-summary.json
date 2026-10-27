@@ -1,0 +1,107 @@
+{
+  "_comment": "VS-003 round 5 Chatterbox stress test (2026-10-27), text summary of $MEDIA_ROOT/voice-benchmark/eval/eval-report.json; per-clip rows are in results-round5-review.csv. Speaker similarity (ECAPA) was computed on the server CPU after the Kaggle run because speechbrain's loader failed there.",
+  "status": {
+    "chatterbox-hi-eval": "ok in 926 s"
+  },
+  "models": {
+    "chatterbox-hi-eval": {
+      "model": "ResembleAI/Chatterbox-Multilingual-hi",
+      "revision": "hi",
+      "device": "cuda",
+      "licence": "MIT (output carries Resemble's inaudible Perth watermark)",
+      "decoder": "s3gen.pt from ResembleAI/chatterbox (V3 decoder did not load)"
+    }
+  },
+  "tools": {
+    "asr": "openai/whisper-large-v3",
+    "speaker": "speechbrain/spkrec-ecapa-voxceleb"
+  },
+  "thresholds": {
+    "max_cer": 0.2,
+    "max_pause_s": 0.9,
+    "pace_tol": 0.35,
+    "drift_sd": 3.0
+  },
+  "gpu": "GPU 0: Tesla T4 (UUID: GPU-43f41455-a5ce-680a-892f-1a9e0a6bb045)\nGPU 1: Tesla T4 (UUID: GPU-563d9a30-e16a-2e88-82de-62035ed66b7c)",
+  "summary": {
+    "ustani": {
+      "clips": 60,
+      "flagged": 19,
+      "segments_all_seeds_flagged": [
+        "u04",
+        "u12",
+        "u17",
+        "u18"
+      ],
+      "sim_ref_mean": null,
+      "sim_ref_min": null,
+      "sim_centroid_mean": null,
+      "sim_centroid_min": null,
+      "median_cer": 0.033,
+      "median_chars_per_s": 10.1
+    },
+    "shagird": {
+      "clips": 30,
+      "flagged": 6,
+      "segments_all_seeds_flagged": [],
+      "sim_ref_mean": null,
+      "sim_ref_min": null,
+      "sim_centroid_mean": null,
+      "sim_centroid_min": null,
+      "median_cer": 0.023,
+      "median_chars_per_s": 10.9
+    }
+  },
+  "similarity": {
+    "ustani": {
+      "sim_ref_mean": 0.838,
+      "sim_ref_min": 0.777,
+      "sim_centroid_mean": 0.922,
+      "sim_centroid_min": 0.834,
+      "sim_centroid_sd": 0.018,
+      "cross_voice_ref": 0.142,
+      "lowest": [
+        [
+          "u18",
+          2002,
+          0.834
+        ],
+        [
+          "u20",
+          2002,
+          0.89
+        ],
+        [
+          "u03",
+          2002,
+          0.891
+        ]
+      ]
+    },
+    "shagird": {
+      "sim_ref_mean": 0.735,
+      "sim_ref_min": 0.647,
+      "sim_centroid_mean": 0.909,
+      "sim_centroid_min": 0.854,
+      "sim_centroid_sd": 0.022,
+      "cross_voice_ref": 0.097,
+      "lowest": [
+        [
+          "b10",
+          2001,
+          0.854
+        ],
+        [
+          "b07",
+          2003,
+          0.863
+        ],
+        [
+          "b05",
+          2001,
+          0.873
+        ]
+      ]
+    }
+  }
+}

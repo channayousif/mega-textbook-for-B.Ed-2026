@@ -1,6 +1,7 @@
 // VS-003 voice benchmark on Kaggle (V003). Generates open-source candidate takes; manual AI Studio
 // and narrator takes are imported by voice-blind.ts. Media stays in $MEDIA_ROOT/voice-benchmark/.
 //   npm run voice:bench -- mirror | pack | run | fetch | all [--only=id,...]   (mirror once per gated model)
+//   npm run voice:bench -- all --eval   round 5 stress test from eval-set.json into $MEDIA_ROOT/voice-benchmark/eval/
 import { copyFileSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { basename, dirname, join } from 'node:path';
 import { digestBytes, digestFile } from './lib/hash.ts';
@@ -14,7 +15,8 @@ const root = join(mediaRoot(), 'voice-benchmark');
 const dsDir = join(root, 'kaggle', 'dataset');
 const kDir = join(root, 'kaggle', 'kernel');
 const outDir = join(root, 'kaggle', 'out');
-const INPUTS = ['candidates.json', 'passages.json', 'passages-devanagari.json'];
+const INPUTS = ['candidates.json', 'passages.json', 'passages-devanagari.json', 'eval-set.json'];
+const EVAL = process.argv.includes('--eval');
 type Ref = { audio: string };
 const spec = () => JSON.parse(readFileSync(join(SPEC, 'candidates.json'), 'utf8'));
 /** Active candidates only: a rejected round stays on record but does not spend GPU time again. */
@@ -39,9 +41,10 @@ function pack() {
   const only = process.argv.find((a) => a.startsWith('--only='))?.slice(7).split(',');
   for (const f of INPUTS) {
     copyFileSync(join(SPEC, f), join(dsDir, f));
-    if (f === 'candidates.json' && only) {
+    if (f === 'candidates.json' && (only || EVAL)) {
       const c = spec();
-      for (const x of c.candidates) x.active = only.includes(x.id);
+      if (only) for (const x of c.candidates) x.active = only.includes(x.id);
+      if (EVAL) c.mode = 'eval';
       writeFileSync(join(dsDir, f), JSON.stringify(c, null, 2) + '\n');
     }
     files[f] = digestBytes(readFileSync(join(dsDir, f)));
@@ -91,9 +94,22 @@ async function fetch() {
   for (const [rel, sha] of Object.entries<string>(m.outputs)) {
     if (!existsSync(join(base, rel)) || (await digestFile(join(base, rel))) !== sha) throw new Error(`hash mismatch: ${rel}`);
   }
+  const report = JSON.parse(readFileSync(join(base, 'report.json'), 'utf8'));
+  if (report.mode === 'eval') {
+    if (!report.takes.length) throw new Error(`eval run produced no clips: ${JSON.stringify(report.status)} (see log-eval.txt in ${base})`);
+    // Eval clips keep their eval/<character>/ layout; review.csv and the report come along.
+    for (const t of report.takes) {
+      mkdirSync(dirname(join(root, t.file)), { recursive: true });
+      copyFileSync(join(base, t.file), join(root, t.file));
+    }
+    if (existsSync(join(base, 'eval', 'review.csv'))) copyFileSync(join(base, 'eval', 'review.csv'), join(root, 'eval', 'review.csv'));
+    copyFileSync(join(base, 'report.json'), join(root, 'eval', 'eval-report.json'));
+    console.log(`voice:bench: ${report.takes.length} eval clips verified into ${join(root, 'eval')}`);
+    console.log(JSON.stringify({ status: report.status, summary: report.summary }, null, 2));
+    return;
+  }
   const takes = join(root, 'takes');
   mkdirSync(takes, { recursive: true });
-  const report = JSON.parse(readFileSync(join(base, 'report.json'), 'utf8'));
   for (const t of report.takes) copyFileSync(join(base, t.file), join(takes, basename(t.file)));
   copyFileSync(join(base, 'report.json'), join(root, 'kaggle-report.json'));
   console.log(`voice:bench: ${report.takes.length} takes verified into ${takes}`);
