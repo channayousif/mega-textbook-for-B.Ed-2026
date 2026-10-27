@@ -25,7 +25,7 @@ tests:
   - Unit 4 SVG geometry: all 32 light/dark English/Urdu assets pass
   - Palette tests: 46 passed
   - XML wording comparison: unchanged across all unit SVGs
-  - check:content: initial run 12/13, G2 stale after geometry repair; evidence refresh and final rerun follow
+  - check:content: all 13 gates passed after G2 and generated status refresh
 ---
 
 ## Prompt
@@ -34,13 +34,13 @@ Read .crew/brief.md in the current directory and carry it out completely. It is 
 
 ## Response snapshot
 
-Wrapped three English labels and moved two Urdu wordmarks left, preserving wording, type sizes and viewBoxes. Regenerated dark variants. Commit geometry before preparing fresh G2 evidence, update the Unit 4 tracker and leave G3 open with the required stale notice.
+Wrapped three English labels and moved two Urdu wordmarks left, preserving wording, type sizes and viewBoxes. Regenerated dark variants. Committed geometry before preparing fresh G2 evidence, updated the Unit 4 tracker and left G3 open with the required stale notice.
 
 ## Outcome
 
 - ✅ Impact: All six reported text-geometry defects repaired without prose changes.
-- 🧪 Tests: All 32 SVG geometry checks pass; 46 palette tests pass; wording invariant verified. Initial content gate failure is the expected stale Unit 4 G2 record and will be refreshed after this commit.
-- 📁 Files: Five light sources and their derived dark twins; G2 evidence and tracker refresh follow in a separate commit.
+- 🧪 Tests: All 32 SVG geometry checks pass; 46 palette tests pass; wording invariant verified. Fresh G2 evidence passes all eight draft gates; final content gates pass after refreshing the generated status report. Dark variant freshness passes for all 1006 sources. Light/dark contact-sheet inspection completed with palette variables resolved in scratch rendering because librsvg does not resolve them.
+- 📁 Files: Five light sources, five dark twins, fresh G2 evidence with eight gate logs, and two Unit 4 tracker rows. The existing dirty generated static/content-status.json was refreshed locally and remains unstaged.
 - 🔁 Next prompts: Fresh independent G3 review remains with the review owner.
 - 🧠 Reflection: Moving Latin wordmarks left with a system font preserves Nastaliq instructional text while removing collisions.
 
@@ -48,12 +48,12 @@ Wrapped three English labels and moved two Urdu wordmarks left, preserving wordi
 
 - Shipped / changed: Bounded geometry fixes for Unit 4 figures 3, 4, 6 and 7, with derived dark variants.
 - Decisions the team must respect: Keep all wording, font sizes, viewBoxes and draft translation status; no review certification.
-- Pending / next owner: Refresh G2 after the geometry commit, then rerun content gates and commit evidence; independent G3 belongs to a fresh reviewer.
+- Pending / next owner: Implementation and G2 refresh complete; independent G3 belongs to a fresh reviewer. No G3/G5 certification or translation-status changes.
 - Paperclip issues affected: Crew efmp-302-u04-fix; no issue number supplied.
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: English table/panel spills and Urdu wordmark overlap; expected G2 manifest invalidation.
-- Graders run and results (PASS/FAIL): PASS: geometry, wording invariant, palette. Initial check:content FAIL: Unit 4 G2 manifest stale after repair.
+- Graders run and results (PASS/FAIL): PASS: geometry, wording invariant, palette. Initial check:content FAIL on stale G2, then stale generated status; both resolved, final 13/13 PASS.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Run fresh independent G3 against the repaired committed inputs.
