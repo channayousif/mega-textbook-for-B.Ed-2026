@@ -14,7 +14,7 @@ links:
   spec: specs/017-reviewer-role/spec.md
   ticket: null
   adr: history/adr/0032-g3-signoff-intent-ledger.md
-  pr: null
+  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/345
 files:
  - scripts/lib/g3-desk.mjs (pass g3Cycles to awaitingG3)
  - tests/crew/signoff-sync.test.mjs
