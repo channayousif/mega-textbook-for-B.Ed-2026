@@ -16,6 +16,8 @@ static/content-index.json
 # Generated content-status report (Spec 010, T027) — same convention as
 # content-index.json above: rebuilt by prestart/prebuild, not source of truth.
 static/content-status.json
+# G3 sign-off desk data (ADR-0032), rebuilt by prestart/prebuild.
+static/g3-desk.json
 static/catalog-courses.json
 
 # Playwright
