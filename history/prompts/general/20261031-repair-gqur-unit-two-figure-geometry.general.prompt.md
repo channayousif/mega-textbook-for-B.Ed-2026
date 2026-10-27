@@ -22,7 +22,7 @@ files:
 tests:
   - Unit 2 light SVG text measurement: PASS (12 files)
   - npm run figures:variants
-  - npm run check:content (compared with origin/main)
+  - npm run check:content (initial failure: stale Unit 2 G2; rerun after refresh)
   - node scripts/prepare-gate-evidence.mjs GQUR-300 2
 ---
 
@@ -37,7 +37,7 @@ Repositioned labels, wrapped examples, extended table border, and regenerated da
 ## Outcome
 
 - ✅ Impact: Resolved all 11 reported text geometry problems without changing wording or canvas dimensions.
-- 🧪 Tests: Measurement passes for all 12 light SVGs; content gates and evidence checks recorded with the work.
+- 🧪 Tests: Measurement passes for all 12 light SVGs; G2 evidence generation passes all eight draft gates; all 13 content gates pass.
 - 📁 Files: Four light SVG sources, four generated dark twins, G2 evidence, tracker, and this PHR.
 - 🔁 Next prompts: Fresh independent G3 review.
 - 🧠 Reflection: Measure text bounds rather than guessing label fit.
@@ -51,7 +51,7 @@ Repositioned labels, wrapped examples, extended table border, and regenerated da
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: Labels began inside tile rectangles and spilled; long table examples crossed borders.
-- Graders run and results (PASS/FAIL): Figure measurement PASS; see gate logs for deterministic content checks.
+- Failure modes observed: Labels began inside tile rectangles and spilled; long table examples crossed borders. Tracker updates required regenerating the ignored content-status cache.
+- Graders run and results (PASS/FAIL): Figure measurement PASS; eight G2 draft gates PASS; dark variant freshness PASS; label wording preservation PASS; content suite rerun after tracker and ignored cache refresh.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): No further layout changes required.
