@@ -2,7 +2,7 @@
 id: crew-efmp-301-u10-review_en
 title: crew review_en EFMP-301 unit 10
 stage: misc
-date: 2026-10-28
+date: 2026-10-27
 surface: agent
 model: agy
 feature: efmp-301
@@ -16,30 +16,31 @@ links:
   adr: null
   pr: null
 files:
-  - specs/content/efmp-301/reviews/unit-10/G3/agent-g3-efmp301-u10-run002.json
-  - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/check-bloom-bands.log
-  - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/check-concept-graph.log
-  - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/check-depth-gate.log
-  - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/check-docs-sync.log
-  - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/check-figures.log
-  - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/check-no-answer-keys.log
-  - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/check-no-em-dash.log
-  - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/check-source-floor.log
-  - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/figures-variants-check.log
-  - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/independent-assessment-derivation.md
-  - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/manifest-verify.log
-  - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/measure-figure-text.log
-  - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/render-review.log
-  - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/validate-content.log
-  - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/fig-U10-1-render.png
-  - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/fig-U10-2-render.png
-  - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/fig-U10-3-render.png
-  - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/fig-U10-4-render.png
-  - specs/content/efmp-301/reviews/unit-10/G3/summary-run002.txt
-  - specs/content/efmp-301/tasks.md
-  - static/content-status.json
+ - history/prompts/efmp-301/crew-efmp-301-u10-review_en.misc.prompt.md
+ - specs/content/efmp-301/reviews/unit-10/G3/agent-g3-efmp301-u10-run002.json
+ - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/check-bloom-bands.log
+ - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/check-concept-graph.log
+ - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/check-depth-gate.log
+ - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/check-docs-sync.log
+ - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/check-figures.log
+ - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/check-no-answer-keys.log
+ - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/check-no-em-dash.log
+ - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/check-source-floor.log
+ - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/fig-U10-1-render.png
+ - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/fig-U10-2-render.png
+ - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/fig-U10-3-render.png
+ - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/fig-U10-4-render.png
+ - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/figures-variants-check.log
+ - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/independent-assessment-derivation.md
+ - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/manifest-verify.log
+ - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/measure-figure-text.log
+ - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/render-review.log
+ - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/validate-content.log
+ - specs/content/efmp-301/reviews/unit-10/G3/summary-run002.txt
+ - specs/content/efmp-301/tasks.md
+ - static/content-status.json
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -70,24 +71,29 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Completed the second and final independent G3 English review cycle for EFMP-301 Unit 10 under ADR-0019. Verified that all four blocking findings from run001 (assessment blueprint balance, teacher notes guide misattribution, fig-U10-1 header guide misattribution, fig-U10-4 text-overprint) were repaired at commit 2e19d4d8. Generated run002 evidence artifacts, raster renders, and validated report with disposition pass. Recorded advisory tracker row in specs/content/efmp-301/tasks.md and refreshed static/content-status.json.
+Executed the second independent G3 English review for EFMP-301 Unit 10, producing evidence report agent-g3-efmp301-u10-run002.json (pass) and recording the advisory tracker row in tasks.md.
 
 ## Outcome
 
-- Impact: review_en for EFMP-301 Unit 10 by agy (round 2 of 2, pass disposition).
-- Tests: npm run check:content passed in the job worktree before commit.
-- Files: 22 file(s), listed above.
-- Next prompts: the crew planner derives the unit's next stage from main after merge (unit awaits human G3 sign-off).
-- Reflection: none.
+- Impact: review_en for EFMP-301 Unit 10 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 23 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Produced G3 review run002 evidence, rendered PNG figures, validated report agent-g3-efmp301-u10-run002.json (disposition pass), and advisory tracker row in tasks.md.
+- Shipped / changed: Executed the second independent G3 English review for EFMP-301 Unit 10, producing evidence report agent-g3-efmp301-u10-run002.json (pass) and recording the advisory tracker row in tasks.md.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
-- Pending / next owner: crew lead / board for human G3 sign-off (ADR-0019 / ADR-0032).
-- Paperclip issues affected: none (Paperclip paused; work tracked by crew board).
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - All four run001 blocking findings were verified resolved by commit 2e19d4d8; disposition is pass.
+  - Six advisory findings (non-blocking) are carried in report agent-g3-efmp301-u10-run002.json.
+  - G3 tracker row left unticked with no reviewer initials, awaiting human G3 sign-off under ADR-0019.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
