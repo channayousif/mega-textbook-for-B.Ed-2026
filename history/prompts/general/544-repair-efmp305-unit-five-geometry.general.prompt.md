@@ -23,7 +23,7 @@ files:
 tests:
  - Unit 5 light SVG geometry: PASS (12 sources)
  - npm run figures:variants: PASS
- - npm run check:content: results recorded in follow-up commit
+ - npm run check:content: 12/13 PASS; content-status refresh needs scope exception
 ---
 
 ## Prompt
@@ -37,7 +37,7 @@ Wrapped the 2018 government-funded label at its existing hyphen, grew its panel 
 ## Outcome
 
 - ✅ Impact: Removes the single measured spill in Unit 5.
-- 🧪 Tests: All 12 light sources pass geometry; dark variant generated. Final content gates and evidence results recorded below when available.
+- 🧪 Tests: All 12 light sources pass geometry; dark variant generated. All eight G2 evidence commands PASS. Final content suite: 12/13 PASS, with only generated content-status stale after the required tracker update.
 - 📁 Files: English timeline source, generated dark twin, G2 evidence and unit tracker.
 - 🔁 Next prompts: Fresh independent G3 review remains required.
 - 🧠 Reflection: Wrap a long hyphenated label instead of reducing text size.
@@ -46,12 +46,12 @@ Wrapped the 2018 government-funded label at its existing hyphen, grew its panel 
 
 - Shipped / changed: Timeline label repair and refreshed deterministic evidence.
 - Decisions the team must respect: Preserve wording and review status; no certification or publication change.
-- Pending / next owner: Independent reviewer owns fresh G3; G5 remains pending.
+- Pending / next owner: Independent reviewer owns fresh G3; G5 remains pending. Owner clarification requested because refreshing static/content-status.json is outside the brief scope and it was already dirty on entry.
 - Paperclip issues affected: EFMP-305 Unit 5 crew job; no issue identifier supplied.
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Long label started inside the preceding panel and spilled; wrapping places it fully in its intended panel.
-- Graders run and results (PASS/FAIL): Geometry PASS on all 12 sources. Content gate results recorded after completion.
+- Graders run and results (PASS/FAIL): Geometry PASS on all 12 sources. All eight G2 evidence commands PASS. Final content suite: 12/13 PASS, only generated content-status stale. Baseline origin/main passes all 13 gates.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): No additional layout changes needed.
