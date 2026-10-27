@@ -133,6 +133,22 @@
         "text_deva": null
       }
     ],
+    "shagird-rec1": [
+      {
+        "audio": "ref-shagird-rec1.wav",
+        "source": "Owner's own voice, recorded with consent (owner-recordings/bilal-rec-1.mp4, WhatsApp AAC 48 kHz, 56.0 s); 1.2-15.6 s used (round 8)",
+        "text_ur": null,
+        "text_deva": null
+      }
+    ],
+    "shagird-rec3": [
+      {
+        "audio": "ref-shagird-rec3.wav",
+        "source": "Owner's own voice, recorded with consent (owner-recordings/bilal-rec-3.wav, PCM 48 kHz mono, 21.3 s, a cleaner copy of the bilal-rec-2.mp4 take); 0.5-13.95 s used (round 8)",
+        "text_ur": null,
+        "text_deva": null
+      }
+    ],
     "_round2": {
       "ustani": [
         {

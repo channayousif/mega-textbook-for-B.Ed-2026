@@ -1,0 +1,308 @@
+{
+ "_comment": "VS-003 round 7: verify the pronunciation lexicon (brand/brand-bible.yaml pronunciation_lexicon, T015) before use. Each of the 29 glossed term-bank entries is voiced in one Ustani carrier sentence, Urdu term first, then یعنی and the English term (owner 2026-10-27: Urdu first). text_ur keeps the English in Latin letters, so CER and coverage are advisory; the check that matters is whether Whisper hears the Urdu term. Rounds 5 and 6 are in eval-set-round5.json and eval-set-round6.json.",
+ "candidate": "chatterbox-hi",
+ "seeds": [
+  2001,
+  2002,
+  2003
+ ],
+ "styles": {
+  "default": {
+   "exaggeration": 0.5,
+   "cfg_weight": 0.5
+  }
+ },
+ "style_arm": {},
+ "segments": [
+  {
+   "id": "t01",
+   "character": "ustani",
+   "terms": [
+    "مثبت تقویت"
+   ],
+   "gloss": "Positive Reinforcement",
+   "text_ur": "آج ہم مثبت تقویت، یعنی Positive Reinforcement، کے بارے میں بات کریں گے۔",
+   "text_deva": "आज हम मुस्बत तक़वियत, यानी पॉज़िटिव रीइन्फ़ोर्समेंट, के बारे में बात करेंगे।"
+  },
+  {
+   "id": "t02",
+   "character": "ustani",
+   "terms": [
+    "اضطراب"
+   ],
+   "gloss": "Anxiety",
+   "text_ur": "آج ہم اضطراب، یعنی Anxiety، کے بارے میں بات کریں گے۔",
+   "text_deva": "आज हम इज़्तिराब, यानी ऐंग्ज़ायटी, के बारे में बात करेंगे।"
+  },
+  {
+   "id": "t03",
+   "character": "ustani",
+   "terms": [
+    "معیار جانچ"
+   ],
+   "gloss": "Rubric",
+   "text_ur": "آج ہم معیارِ جانچ، یعنی Rubric، کے بارے میں بات کریں گے۔",
+   "text_deva": "आज हम मेयारे जाँच, यानी रूब्रिक, के बारे में बात करेंगे।"
+  },
+  {
+   "id": "t04",
+   "character": "ustani",
+   "terms": [
+    "ضابطہ اخلاق"
+   ],
+   "gloss": "Code of Ethical Conduct",
+   "text_ur": "آج ہم ضابطہ اخلاق، یعنی Code of Ethical Conduct، کے بارے میں بات کریں گے۔",
+   "text_deva": "आज हम ज़ाब्तए अख़लाक़, यानी कोड ऑफ़ एथिकल कंडक्ट, के बारे में बात करेंगे।"
+  },
+  {
+   "id": "t05",
+   "character": "ustani",
+   "terms": [
+    "خود انضباطی"
+   ],
+   "gloss": "Self-Regulation",
+   "text_ur": "آج ہم خود انضباطی، یعنی Self-Regulation، کے بارے میں بات کریں گے۔",
+   "text_deva": "आज हम ख़ुद इन्ज़िबाती, यानी सेल्फ़ रेगुलेशन, के बारे में बात करेंगे।"
+  },
+  {
+   "id": "t06",
+   "character": "ustani",
+   "terms": [
+    "ڈیجیٹل پیشہ واریت"
+   ],
+   "gloss": "Digital Professionalism",
+   "text_ur": "آج ہم ڈیجیٹل پیشہ واریت، یعنی Digital Professionalism، کے بارے میں بات کریں گے۔",
+   "text_deva": "आज हम डिजिटल पेशावारियत, यानी डिजिटल प्रोफ़ेशनलिज़्म, के बारे में बात करेंगे।"
+  },
+  {
+   "id": "t07",
+   "character": "ustani",
+   "terms": [
+    "طرز تعلم"
+   ],
+   "gloss": "Learning Style",
+   "text_ur": "آج ہم طرزِ تعلم، یعنی Learning Style، کے بارے میں بات کریں گے۔",
+   "text_deva": "आज हम तर्ज़े तअल्लुम, यानी लर्निंग स्टाइल, के बारे में बात करेंगे।"
+  },
+  {
+   "id": "t08",
+   "character": "ustani",
+   "terms": [
+    "ترقی پذیر ذہنیت"
+   ],
+   "gloss": "Growth Mindset",
+   "text_ur": "آج ہم ترقی پذیر ذہنیت، یعنی Growth Mindset، کے بارے میں بات کریں گے۔",
+   "text_deva": "आज हम तरक़्क़ी-पज़ीर ज़ेहनियत, यानी ग्रोथ माइंडसेट, के बारे में बात करेंगे।"
+  },
+  {
+   "id": "t09",
+   "character": "ustani",
+   "terms": [
+    "تعلیمی نفسیات"
+   ],
+   "gloss": "Educational Psychology",
+   "text_ur": "آج ہم تعلیمی نفسیات، یعنی Educational Psychology، کے بارے میں بات کریں گے۔",
+   "text_deva": "आज हम तालीमी नफ़सियात, यानी एजुकेशनल साइकोलॉजी, के बारे में बात करेंगे।"
+  },
+  {
+   "id": "t10",
+   "character": "ustani",
+   "terms": [
+    "تعمیریت"
+   ],
+   "gloss": "Constructivism",
+   "text_ur": "آج ہم تعمیریت، یعنی Constructivism، کے بارے میں بات کریں گے۔",
+   "text_deva": "आज हम तामीरियत, यानी कंस्ट्रक्टिविज़्म, के बारे में बात करेंगे।"
+  },
+  {
+   "id": "t11",
+   "character": "ustani",
+   "terms": [
+    "باطنی محرک"
+   ],
+   "gloss": "Intrinsic Motivation",
+   "text_ur": "آج ہم باطنی محرک، یعنی Intrinsic Motivation، کے بارے میں بات کریں گے۔",
+   "text_deva": "आज हम बातिनी मुहर्रिक, यानी इंट्रिंसिक मोटिवेशन, के बारे में बात करेंगे।"
+  },
+  {
+   "id": "t12",
+   "character": "ustani",
+   "terms": [
+    "خارجی محرک"
+   ],
+   "gloss": "Extrinsic Motivation",
+   "text_ur": "آج ہم خارجی محرک، یعنی Extrinsic Motivation، کے بارے میں بات کریں گے۔",
+   "text_deva": "आज हम ख़ारिजी मुहर्रिक, यानी एक्सट्रिंसिक मोटिवेशन, के बारे में बात करेंगे।"
+  },
+  {
+   "id": "t13",
+   "character": "ustani",
+   "terms": [
+    "ادراکی نشوونما"
+   ],
+   "gloss": "Cognitive Development",
+   "text_ur": "آج ہم ادراکی نشوونما، یعنی Cognitive Development، کے بارے میں بات کریں گے۔",
+   "text_deva": "आज हम इदराकी नशोनुमा, यानी कॉग्निटिव डेवलपमेंट, के बारे में बात करेंगे।"
+  },
+  {
+   "id": "t14",
+   "character": "ustani",
+   "terms": [
+    "انفرادی اختلافات"
+   ],
+   "gloss": "Individual Differences",
+   "text_ur": "آج ہم انفرادی اختلافات، یعنی Individual Differences، کے بارے میں بات کریں گے۔",
+   "text_deva": "आज हम इन्फ़िरादी इख़्तिलाफ़ात, यानी इंडिविजुअल डिफ़रेंसेज़, के बारे में बात करेंगे।"
+  },
+  {
+   "id": "t15",
+   "character": "ustani",
+   "terms": [
+    "تشکیلی تشخیص"
+   ],
+   "gloss": "Formative Assessment",
+   "text_ur": "آج ہم تشکیلی تشخیص، یعنی Formative Assessment، کے بارے میں بات کریں گے۔",
+   "text_deva": "आज हम तश्कीली तशख़ीस, यानी फ़ॉर्मेटिव असेसमेंट, के बारे में बात करेंगे।"
+  },
+  {
+   "id": "t16",
+   "character": "ustani",
+   "terms": [
+    "مجموعی جائزہ"
+   ],
+   "gloss": "Summative Assessment",
+   "text_ur": "آج ہم مجموعی جائزہ، یعنی Summative Assessment، کے بارے میں بات کریں گے۔",
+   "text_deva": "आज हम मजमूई जाइज़ा, यानी समेटिव असेसमेंट, के बारे में बात करेंगे।"
+  },
+  {
+   "id": "t17",
+   "character": "ustani",
+   "terms": [
+    "تدریسیات"
+   ],
+   "gloss": "Pedagogy",
+   "text_ur": "آج ہم تدریسیات، یعنی Pedagogy، کے بارے میں بات کریں گے۔",
+   "text_deva": "आज हम तदरीसियात, यानी पेडागॉजी, के बारे में बात करेंगे।"
+  },
+  {
+   "id": "t18",
+   "character": "ustani",
+   "terms": [
+    "حکمت تدریس"
+   ],
+   "gloss": "Teaching Strategy",
+   "text_ur": "آج ہم حکمتِ تدریس، یعنی Teaching Strategy، کے بارے میں بات کریں گے۔",
+   "text_deva": "आज हम हिकमते तदरीस, यानी टीचिंग स्ट्रैटेजी, के बारे में बात करेंगे।"
+  },
+  {
+   "id": "t19",
+   "character": "ustani",
+   "terms": [
+    "جماعتی انتظام"
+   ],
+   "gloss": "Classroom Management",
+   "text_ur": "آج ہم جماعتی انتظام، یعنی Classroom Management، کے بارے میں بات کریں گے۔",
+   "text_deva": "आज हम जमाअती इंतिज़ाम, यानी क्लासरूम मैनेजमेंट, के बारे में बात करेंगे।"
+  },
+  {
+   "id": "t20",
+   "character": "ustani",
+   "terms": [
+    "نتیجہ ہائے تعلم"
+   ],
+   "gloss": "Learning Outcome",
+   "text_ur": "آج ہم نتیجہ ہائے تعلم، یعنی Learning Outcome، کے بارے میں بات کریں گے۔",
+   "text_deva": "आज हम नतीजा हाए तअल्लुम, यानी लर्निंग आउटकम, के बारे में बात करेंगे।"
+  },
+  {
+   "id": "t21",
+   "character": "ustani",
+   "terms": [
+    "قلیل مدتی یادداشت"
+   ],
+   "gloss": "Short-Term Memory",
+   "text_ur": "آج ہم قلیل مدتی یادداشت، یعنی Short-Term Memory، کے بارے میں بات کریں گے۔",
+   "text_deva": "आज हम क़लील मुद्दती याददाश्त, यानी शॉर्ट टर्म मेमोरी, के बारे में बात करेंगे।"
+  },
+  {
+   "id": "t22",
+   "character": "ustani",
+   "terms": [
+    "مراہقت"
+   ],
+   "gloss": "Adolescence",
+   "text_ur": "آج ہم مراہقت، یعنی Adolescence، کے بارے میں بات کریں گے۔",
+   "text_deva": "आज हम मुराहिक़त, यानी एडोलेसेंस, के बारे में बात करेंगे।"
+  },
+  {
+   "id": "t23",
+   "character": "ustani",
+   "terms": [
+    "مابعد ادراک"
+   ],
+   "gloss": "Metacognition",
+   "text_ur": "آج ہم مابعد ادراک، یعنی Metacognition، کے بارے میں بات کریں گے۔",
+   "text_deva": "आज हम माबाद इदराक, यानी मेटाकॉग्निशन, के बारे में बात करेंगे।"
+  },
+  {
+   "id": "t24",
+   "character": "ustani",
+   "terms": [
+    "معاونتی تدریس"
+   ],
+   "gloss": "Scaffolding",
+   "text_ur": "آج ہم معاونتی تدریس، یعنی Scaffolding، کے بارے میں بات کریں گے۔",
+   "text_deva": "आज हम मुआविनती तदरीस, यानी स्कैफ़ोल्डिंग, के बारे में बात करेंगे।"
+  },
+  {
+   "id": "t25",
+   "character": "ustani",
+   "terms": [
+    "علاقہ ہائے قربی نشوونما"
+   ],
+   "gloss": "Zone of Proximal Development",
+   "text_ur": "آج ہم علاقہ ہائے قربی نشوونما، یعنی Zone of Proximal Development، کے بارے میں بات کریں گے۔",
+   "text_deva": "आज हम इलाक़ा हाए क़ुर्बी नशोनुमा, यानी ज़ोन ऑफ़ प्रॉक्सिमल डेवलपमेंट, के बारे में बात करेंगे।"
+  },
+  {
+   "id": "t26",
+   "character": "ustani",
+   "terms": [
+    "تنقیدی سوچ"
+   ],
+   "gloss": "Critical Thinking",
+   "text_ur": "آج ہم تنقیدی سوچ، یعنی Critical Thinking، کے بارے میں بات کریں گے۔",
+   "text_deva": "आज हम तन्क़ीदी सोच, यानी क्रिटिकल थिंकिंग, के बारे में बात करेंगे।"
+  },
+  {
+   "id": "t27",
+   "character": "ustani",
+   "terms": [
+    "شمولیتی تعلیم"
+   ],
+   "gloss": "Inclusive Education",
+   "text_ur": "آج ہم شمولیتی تعلیم، یعنی Inclusive Education، کے بارے میں بات کریں گے۔",
+   "text_deva": "आज हम शुमूलियती तालीम, यानी इन्क्लूसिव एजुकेशन, के बारे में बात करेंगे।"
+  },
+  {
+   "id": "t28",
+   "character": "ustani",
+   "terms": [
+    "تاملی مشق"
+   ],
+   "gloss": "Reflective Practice",
+   "text_ur": "آج ہم تاملی مشق، یعنی Reflective Practice، کے بارے میں بات کریں گے۔",
+   "text_deva": "आज हम तअम्मुली मश्क़, यानी रिफ़्लेक्टिव प्रैक्टिस, के बारे में बात करेंगे।"
+  },
+  {
+   "id": "t29",
+   "character": "ustani",
+   "terms": [
+    "اخلاقی مخمصہ"
+   ],
+   "gloss": "Ethical Dilemma",
+   "text_ur": "آج ہم اخلاقی مخمصہ، یعنی Ethical Dilemma، کے بارے میں بات کریں گے۔",
+   "text_deva": "आज हम अख़लाक़ी मख़मसा, यानी एथिकल डिलेमा, के बारे में बात करेंगे।"
+  }
+ ]
+}

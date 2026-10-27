@@ -238,7 +238,8 @@ def evaluate_gen(inputs):
     cands = json.load(open(os.path.join(inputs, "candidates.json")))
     cand = next(c for c in cands["candidates"] if c["id"] == es["candidate"])
     model, decoder = chatterbox(cand, device)
-    ref = {ch: os.path.join(inputs, cands["refs"][ch][0]["audio"]) for ch in ("ustani", "shagird")}
+    # A segment's character may name a reference variant (e.g. shagird-rec1, round 8); each is its own voice.
+    ref = {ch: os.path.join(inputs, cands["refs"][ch][0]["audio"]) for ch in {s["character"] for s in es["segments"]}}
     segs = {s["id"]: s for s in es["segments"]}
     jobs = [(s, "default", seed, "main") for s in es["segments"] for seed in es["seeds"]]
     for ch, arm in es["style_arm"].items():
@@ -329,7 +330,8 @@ def evaluate(cands, inputs, env):
     os.remove(part)
     clips = p["clips"]
     summary = {}
-    for ch in ("ustani", "shagird"):
+    voices = sorted({c["character"] for c in clips})
+    for ch in voices:
         mine = [c for c in clips if c["character"] == ch]
         main = [c for c in mine if c["arm"] == "main"]
         if not main:  # an eval set may voice one character only (round 7)
@@ -372,7 +374,7 @@ def evaluate(cands, inputs, env):
     for c in clips:
         c.pop("_emb")
         norm = normalise(os.path.join(OUT, c["file"]))
-    for ch in ("ustani", "shagird"):
+    for ch in voices:
         first = [c for c in clips if c["character"] == ch and c["arm"] == "main" and c["seed"] == es["seeds"][0]]
         if not first:
             continue
