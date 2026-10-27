@@ -13,8 +13,8 @@ G1 unit-spec affirmed at intake (D-2026-0019). G2 en-draft cleared by determinis
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0019; content-spec status: approved |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-300/reviews/unit-01/G2/20261013T123434874Z-gates.json |
-| Unit 1 | G3 en-review | ▣ | | Advisory independent agy G3 **revise** (thread 7c5e7ce2-df0f-4b0d-9349-51c41fabe43d): SVG text geometry overflow (fig-U1-1, fig-U1-3), RRQ 3 arithmetic discrepancy and RRQ 4 clause classification error. Report: `specs/content/geng-300/reviews/unit-01/G3/agent-g3-geng-300-u1-run7c5e7ce2.json`. G3 stays open, unsigned (ADR-0019). |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-300/reviews/unit-01/G2/20261027T165057677Z-gates.json |
+| Unit 1 | G3 en-review | ▣ | | Advisory independent agy G3 **revise** (thread 7c5e7ce2-df0f-4b0d-9349-51c41fabe43d): SVG text geometry overflow (fig-U1-1, fig-U1-3), RRQ 3 arithmetic discrepancy and RRQ 4 clause classification error. Report: `specs/content/geng-300/reviews/unit-01/G3/agent-g3-geng-300-u1-run7c5e7ce2.json`. G3 stays open, unsigned (ADR-0019). Stale since the figure-geometry repair; needs a fresh G3 run. |
 | Unit 1 | G4 ur-translation | ▢ | | English-only course (bilingual: false); no Urdu mirror required |
 | Unit 1 | G5 ur-review | ▢ | | English-only course |
 | Unit 1 | G6 assets | ▢ | | |
@@ -28,18 +28,16 @@ G1 unit-spec affirmed at intake (D-2026-0019). G2 en-draft cleared by determinis
 | Unit 2 | G6 assets | ▢ | | |
 | Unit 2 | G7 publish | ▢ | | |
 | Unit 3 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0019; content-spec status: approved |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-300/reviews/unit-03/G2/20261013T123501910Z-gates.json |
-| Unit 3 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory preflight: escalate; provenance, authority and render handoff pending. advisory:specs/content/geng-300/reviews/unit-03/G3/20261017-crew-preflight.json; not certification |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-300/reviews/unit-03/G2/20261027T194042590Z-gates.json |
+| Unit 3 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory preflight: escalate; provenance, authority and render handoff pending. advisory:specs/content/geng-300/reviews/unit-03/G3/20261017-crew-preflight.json; not certification; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 3 | G4 ur-translation | ▢ | | English-only course |
 | Unit 3 | G5 ur-review | ▢ | | English-only course |
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
 | Unit 4 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0019; content-spec status: approved |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-300/reviews/unit-04/G2/20261013T123512154Z-gates.json |
-| Unit 4 | G3 en-review | ▢ | | |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-300/reviews/unit-04/G2/20261027T194941558Z-gates.json |
+| Unit 4 | G3 en-review | ▢ | | Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 4 | G4 ur-translation | ▢ | | English-only course |
 | Unit 4 | G5 ur-review | ▢ | | English-only course |
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
-| Unit 1 | G3 en-review | ▣ | | advisory: revise; repairs applied for `specs/content/geng-300/reviews/unit-01/G3/agent-g3-geng-300-u1-run7c5e7ce2.json`: corrected wordmark anchors and panel clearance in both variants, RRQ 3 allocation (4 marks total), explicit subjects in RRQ 4 and topic 1.2, and placed-figure preamble. Fresh independent review pending; G3 stays open and unsigned. |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-300/reviews/unit-01/G2/20261019T135001511Z-gates.json |
