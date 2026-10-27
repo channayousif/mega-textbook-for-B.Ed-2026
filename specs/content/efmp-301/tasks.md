@@ -37,8 +37,8 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 2 | G6 assets | ▢ | | |
 | Unit 2 | G7 publish | ▢ | | |
 | Unit 3 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-03/G2/20261013T123253099Z-gates.json |
-| Unit 3 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at b220ae5d; report reviews/unit-03/G3/agent-g3-efmp301-u3-run001.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-03/G2/20261027T090317364Z-gates.json |
+| Unit 3 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at b220ae5d; report reviews/unit-03/G3/agent-g3-efmp301-u3-run001.json; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 3 | G4 ur-translation | ✅ | auto:gates | full UR mirror (7 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
 | Unit 3 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at 17243da9; G3 dependency escalated to owner; terminology rulings (Learning prose/figure, coinages) escalated to owner; report reviews/unit-03/G5/agent-g5-efmp301-u3-run002.json |
 | Unit 3 | G6 assets | ▢ | | |
