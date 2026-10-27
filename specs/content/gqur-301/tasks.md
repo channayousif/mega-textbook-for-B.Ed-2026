@@ -99,8 +99,8 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 12 | G6 assets | ▢ | | |
 | Unit 12 | G7 publish | ▢ | | |
 | Unit 13 | G1 unit-spec | ▢ | | guide Chapter 13; intake re-evaluation advised (D-2026-0070) |
-| Unit 13 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-13/G2/20261023T155000674Z-gates.json |
-| Unit 13 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only: specs/content/gqur-301/reviews/unit-13/G3/crew-20261023.json; F1-F5 require separate author repair (missing figures, RRQ8 same-data contradiction, slope/confidence claims and assessment demand); G1, source/provenance and current narrow/A4 render evidence unresolved. G3 remains open and unsigned (ADR-0019). |
+| Unit 13 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-13/G2/20261027T160227315Z-gates.json |
+| Unit 13 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only: specs/content/gqur-301/reviews/unit-13/G3/crew-20261023.json; F1-F5 require separate author repair (missing figures, RRQ8 same-data contradiction, slope/confidence claims and assessment demand); G1, source/provenance and current narrow/A4 render evidence unresolved. G3 remains open and unsigned (ADR-0019). Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 13 | G4 ur-translation | ▢ | | Blocked by unresolved English RRQ8 contradiction and slope/inference defects under translate-unit prerequisite; see reviews/unit-13/translation-validation/handoff.md. No translation or completion claim; translation_status remains draft. |
 | Unit 13 | G5 ur-review | ▢ | | |
 | Unit 13 | G6 assets | ▢ | | |
