@@ -22,16 +22,16 @@ units may be authored.
 | Unit 1 | G6 assets | ▢ | | |
 | Unit 1 | G7 publish | ▢ | | gate-checked tier pre-authorised by D-2026-0014 |
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0020 + owner resolutions G-2026-22/G-2026-23 + floor D-2026-0021; content-spec status: approved |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-02/G2/20261019T142940752Z-gates.json |
-| Unit 2 | G3 en-review | ▢ | | advisory rounds 1-2: revise then PASS; round-2 report reviews/unit-02/G3/round-02/agent-g3-gnas301-u2-run002.json (disposition pass, advisory); round-2 advisories applied post-report |
-| Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied; report reviews/unit-02/G3/agent-g3-gnas301-u2-run001.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-02/G2/20261026T235040873Z-gates.json |
+| Unit 2 | G3 en-review | ▢ | | advisory rounds 1-2: revise then PASS; round-2 report reviews/unit-02/G3/round-02/agent-g3-gnas301-u2-run002.json (disposition pass, advisory); round-2 advisories applied post-report; Stale since the figure-geometry repair; needs a fresh G3 run |
+| Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied; report reviews/unit-02/G3/agent-g3-gnas301-u2-run001.json; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 2 | G4 ur-translation | ✅ | auto:g4 | all 6 Urdu mirror files at i18n/ur/.../gnas-301/unit-02/, 2026-09-24; heading parity exact, terminology-bank-driven, .ur.svg figure variants, zero em-dash; translation_status stays draft pending G5 |
 | Unit 2 | G5 ur-review | ▢ | | advisory round 1: escalate (6 blocking, 12 advisory); report reviews/unit-02/G5/agent-g5-gnas301-u2-run001.json; content defects repaired post-report; stale G3 dependency recorded as G-2026-34 |
 | Unit 2 | G6 assets | ▢ | | |
 | Unit 2 | G7 publish | ▢ | | |
 | Unit 3 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0020 + owner resolutions G-2026-22/G-2026-23 + floor D-2026-0021; content-spec status: approved |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-03/G2/20261019T143441329Z-gates.json |
-| Unit 3 | G3 en-review | ▢ | | advisory rounds 1-2: round-2 PASS; report reviews/unit-03/G3/round-02/agent-g3-gnas301-u3-run002.json (disposition pass, advisory) |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-03/G2/20261027T000227860Z-gates.json |
+| Unit 3 | G3 en-review | ▢ | | advisory rounds 1-2: round-2 PASS; report reviews/unit-03/G3/round-02/agent-g3-gnas301-u3-run002.json (disposition pass, advisory); Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 3 | G4 ur-translation | ✅ | auto:g4 | all 7 Urdu mirror files at i18n/ur/.../gnas-301/unit-03/, 2026-09-24; heading parity exact, terminology-bank-driven, .ur.svg figure variants, zero em-dash; translation_status stays draft pending G5 |
 | Unit 3 | G5 ur-review | ▢ | | advisory round 1: revise (1 blocking, 11 advisory); report reviews/unit-03/G5/agent-g5-gnas301-u3-run001.json; blocking finding and advisories repaired post-report |
 | Unit 3 | G6 assets | ▢ | | |
@@ -63,5 +63,5 @@ units may be authored.
 
 | Unit 4 | G3 en-review | ▢ | | advisory: revise; repairs applied against reviews/unit-04/G3/agent-g3-gnas301-u4-run001.json and latest round-02/agent-g3-gnas301-u4-run002.json; source mappings and support notes corrected, citation scope and EN/UR prose repaired, concept item lists corrected, MCQ options redistributed, Further reading linked; prior repairs retained; G3 remains open, third cycle owner-gated (G-2026-31) |
 | Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-04/G2/20261019T150338371Z-gates.json |
-| Unit 3 | G3 en-review | ▢ | | advisory: revise; repairs applied to agent-g3-gnas301-u3-run001.json and latest round-02/agent-g3-gnas301-u3-run002.json: bound noise-health sources, conventional ladder values, descriptive EN/UR links, balanced MCQ options, varied RRQ scenarios, corrected Bloom range and noise-controls concept; existing RRQ coverage, Lahore paraphrase and misconception repairs verified; no certification |
+| Unit 3 | G3 en-review | ▢ | | advisory: revise; repairs applied to agent-g3-gnas301-u3-run001.json and latest round-02/agent-g3-gnas301-u3-run002.json: bound noise-health sources, conventional ladder values, descriptive EN/UR links, balanced MCQ options, varied RRQ scenarios, corrected Bloom range and noise-controls concept; existing RRQ coverage, Lahore paraphrase and misconception repairs verified; no certification; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 5 | G3 en-review | ▢ | | advisory: revise; repairs applied against reviews/unit-05/G3/round-02/agent-g3-gnas301-u5-run002.json and 20260924T001055Z-g3-attempt-01.json; EN/UR assessment, concept links, source dates and coverage reconciled; details reviews/unit-05/20261019-repair-notes.md; G3 unticked, fresh review owner-gated by G-2026-32 |
