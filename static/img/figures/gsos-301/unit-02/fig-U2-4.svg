@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Mead's Stages of Socialization</title><desc id="d">A comparison table of Mead's stages of socialization showing age range, key activity and examples for each stage.</desc>
-<style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95} .bg{fill:var(--bg)} .hdr{fill:var(--a1-fill);stroke:var(--ink);stroke-width:1.5} text{font-size:12px;fill:var(--ink)} .h{font-size:13px;font-weight:700} .th{font-size:13px;font-weight:700;fill:var(--a1);text-anchor:middle} .wm{fill:var(--wm);font-size:11px}</style>
-<rect class="bg" x="0" y="0" width="780" height="470"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 490" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Mead's Stages of Socialization</title><desc id="d">A comparison table of Mead's stages of socialization showing age range, key activity and examples for each stage.</desc>
+<style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95} .bg{fill:var(--bg)} .hdr{fill:var(--a1-fill);stroke:var(--ink);stroke-width:1.5} text{font-size:12px;fill:var(--ink)} .h{font-size:13px;font-weight:700} .th{font-size:13px;font-weight:700;fill:var(--a1);text-anchor:middle} .wm{fill:var(--wm);font-size:11px;text-anchor:end}</style>
+<rect class="bg" x="0" y="0" width="780" height="490"/>
 <!-- Table Boundary -->
-<rect x="20" y="30" width="740" height="395" fill="none" stroke="var(--ink)" stroke-width="2"/>
+<rect x="20" y="30" width="740" height="430" fill="none" stroke="var(--ink)" stroke-width="2"/>
 
 <!-- Header Row -->
 <rect class="hdr" x="20" y="30" width="740" height="50"/>
-<line x1="160" y1="30" x2="160" y2="425" stroke="var(--ink)" stroke-width="1.5"/>
-<line x1="270" y1="30" x2="270" y2="425" stroke="var(--ink)" stroke-width="1.5"/>
-<line x1="510" y1="30" x2="510" y2="425" stroke="var(--ink)" stroke-width="1.5"/>
+<line x1="160" y1="30" x2="160" y2="460" stroke="var(--ink)" stroke-width="1.5"/>
+<line x1="270" y1="30" x2="270" y2="460" stroke="var(--ink)" stroke-width="1.5"/>
+<line x1="510" y1="30" x2="510" y2="460" stroke="var(--ink)" stroke-width="1.5"/>
 
 <text class="th" x="90" y="60">Stage</text>
 <text class="th" x="215" y="60">Age range</text>
@@ -16,53 +16,58 @@
 <text class="th" x="635" y="60">Example</text>
 
 <!-- Row 1: Preparatory -->
-<line x1="20" y1="165" x2="760" y2="165" stroke="var(--ink)" stroke-width="1"/>
+<line x1="20" y1="175" x2="760" y2="175" stroke="var(--ink)" stroke-width="1"/>
 <text class="h" x="30" y="112" fill="var(--a2)">Preparatory</text>
-<text class="m" x="30" y="130" fill="var(--muted)">Imitation</text>
+<text class="m" x="30" y="127" fill="var(--muted)">Imitation</text>
 <text x="175" y="122">Infancy to</text>
-<text x="175" y="140">approx. 2 years</text>
-<text x="285" y="112">Imitates gestures and words of others</text>
-<text x="285" y="130">without understanding meaning; no distinct</text>
-<text x="285" y="148">sense of separate self yet</text>
+<text x="175" y="137">approx. 2 years</text>
+<text x="285" y="112">Imitates gestures and words of</text>
+<text x="285" y="127">others without understanding</text>
+<text x="285" y="142">meaning; no distinct sense of</text>
+<text x="285" y="157">separate self yet</text>
 <text x="525" y="112">An infant copying clapping,</text>
-<text x="525" y="130">smiling when smiled at, or</text>
-<text x="525" y="148">repeating sounds heard</text>
+<text x="525" y="127">smiling when smiled at, or</text>
+<text x="525" y="142">repeating sounds heard</text>
 
 <!-- Row 2: Play -->
-<line x1="20" y1="250" x2="760" y2="250" stroke="var(--ink)" stroke-width="1"/>
-<text class="h" x="30" y="200" fill="var(--a3)">Play</text>
-<text class="m" x="30" y="218" fill="var(--muted)">Role-taking</text>
-<text x="175" y="208">Early childhood</text>
-<text x="175" y="226">(ages 2 to 6)</text>
-<text x="285" y="198">Takes the role of a single significant</text>
-<text x="285" y="216">other at a time; acts out adult roles</text>
-<text x="285" y="234">and develops a rudimentary self</text>
-<text x="525" y="198">A child playing doctor,</text>
-<text x="525" y="216">parent, or teacher to dolls</text>
-<text x="525" y="234">or siblings</text>
+<line x1="20" y1="270" x2="760" y2="270" stroke="var(--ink)" stroke-width="1"/>
+<text class="h" x="30" y="207" fill="var(--a3)">Play</text>
+<text class="m" x="30" y="222" fill="var(--muted)">Role-taking</text>
+<text x="175" y="217">Early childhood</text>
+<text x="175" y="232">(ages 2 to 6)</text>
+<text x="285" y="207">Takes the role of a single</text>
+<text x="285" y="222">significant other at a time;</text>
+<text x="285" y="237">acts out adult roles and</text>
+<text x="285" y="252">develops a rudimentary self</text>
+<text x="525" y="207">A child playing doctor,</text>
+<text x="525" y="222">parent, or teacher to dolls</text>
+<text x="525" y="237">or siblings</text>
 
 <!-- Row 3: Game -->
-<line x1="20" y1="335" x2="760" y2="335" stroke="var(--ink)" stroke-width="1"/>
-<text class="h" x="30" y="285" fill="var(--a4)">Game</text>
-<text class="m" x="30" y="303" fill="var(--muted)">Multiple roles</text>
-<text x="175" y="293">School age</text>
-<text x="175" y="311">(ages 7 and older)</text>
-<text x="285" y="283">Takes multiple roles simultaneously;</text>
-<text x="285" y="301">understands rules and expectations</text>
-<text x="285" y="319">of the whole group</text>
-<text x="525" y="283">Playing cricket or football:</text>
-<text x="525" y="301">knowing every position's duty</text>
-<text x="525" y="319">and team strategy</text>
+<line x1="20" y1="365" x2="760" y2="365" stroke="var(--ink)" stroke-width="1"/>
+<text class="h" x="30" y="302" fill="var(--a4)">Game</text>
+<text class="m" x="30" y="317" fill="var(--muted)">Multiple roles</text>
+<text x="175" y="292">School age</text>
+<text x="175" y="307">(ages 7 and</text>
+<text x="175" y="322">older)</text>
+<text x="285" y="302">Takes multiple roles</text>
+<text x="285" y="317">simultaneously; understands</text>
+<text x="285" y="332">rules and expectations</text>
+<text x="285" y="347">of the whole group</text>
+<text x="525" y="302">Playing cricket or football:</text>
+<text x="525" y="317">knowing every position's duty</text>
+<text x="525" y="332">and team strategy</text>
 
 <!-- Row 4: Adult -->
-<text class="h" x="30" y="370" fill="var(--a1)">Adult</text>
-<text class="m" x="30" y="388" fill="var(--muted)">Generalized other</text>
-<text x="175" y="378">Adolescence</text>
-<text x="175" y="396">&amp; adulthood</text>
-<text x="285" y="368">Internalizes the generalized other;</text>
-<text x="285" y="386">understands overarching cultural norms,</text>
-<text x="285" y="404">laws and community expectations</text>
-<text x="525" y="368">A trainee teacher adopting</text>
-<text x="525" y="386">professional ethics and</text>
-<text x="525" y="404">societal civic duties</text>
-<text class="wm" x="768" y="460" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>
+<text class="h" x="30" y="397" fill="var(--a1)">Adult</text>
+<text class="m" x="30" y="412" fill="var(--muted)">Generalized other</text>
+<text x="175" y="405">Adolescence</text>
+<text x="175" y="420">&amp; adulthood</text>
+<text x="285" y="397">Internalizes the generalized</text>
+<text x="285" y="412">other; understands overarching</text>
+<text x="285" y="427">cultural norms, laws and</text>
+<text x="285" y="442">community expectations</text>
+<text x="525" y="397">A trainee teacher adopting</text>
+<text x="525" y="412">professional ethics and</text>
+<text x="525" y="427">societal civic duties</text>
+<text class="wm" x="768" y="480" text-anchor="end" aria-hidden="true">textbook.com.pk</text></svg>
