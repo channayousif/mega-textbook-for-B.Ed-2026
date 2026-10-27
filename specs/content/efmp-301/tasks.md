@@ -44,8 +44,8 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
 | Unit 4 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-04/G2/20261013T123306198Z-gates.json |
-| Unit 4 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at a7a1a215; report reviews/unit-04/G3/agent-g3-efmp301-u4-run001.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-04/G2/20261027T011847706Z-gates.json |
+| Unit 4 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at a7a1a215; report reviews/unit-04/G3/agent-g3-efmp301-u4-run001.json; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 4 | G4 ur-translation | ✅ | auto:gates | full UR mirror (6 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
 | Unit 4 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at ff33d3a1; G3 dependency escalated to owner; terminology rulings (heuristic/means-ends/spotlight renderings) escalated to owner; report reviews/unit-04/G5/agent-g5-efmp301-u4-run001.json |
 | Unit 4 | G6 assets | ▢ | | |
