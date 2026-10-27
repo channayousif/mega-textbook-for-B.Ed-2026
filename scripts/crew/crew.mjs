@@ -21,12 +21,12 @@
 import { spawn, spawnSync } from 'node:child_process';
 import { appendFileSync, closeSync, existsSync, mkdirSync, openSync, readFileSync, readSync, readdirSync, renameSync, rmSync, statSync, symlinkSync, writeFileSync } from 'node:fs';
 import { join, relative, resolve } from 'node:path';
-import { WORKERS, STAGES, QUOTA_RE, COOLDOWN_MIN, pickWorker } from './workers.mjs';
+import { WORKERS, STAGES, QUOTA_RE, COOLDOWN_MIN, resetMinutes, pickWorker } from './workers.mjs';
 import { STATE_DIR, WT_DIR, LOG_DIR, load, save, ACTIVE, TERMINAL, jobId, now } from './state.mjs';
 import { send, reply, readInbox } from './notify.mjs';
 import { reviewFindingsSection, parseHandoff, priorHandoffsSection } from './handoff.mjs';
 import { freshChecks } from './checks.mjs';
-import { batchDue, batchCandidates, batchId, batchTitle, batchBody } from './batch.mjs';
+import { batchDue, batchCandidates, batchId, batchTitle, batchBody, exclusionReason } from './batch.mjs';
 import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport, specUnitNumbers } from './planner.mjs';
 import { walkUnits } from '../lib/content-roots.mjs';
 import { REGISTRIES, registryProblems, mergeGlossary } from './registries.mjs';
@@ -428,8 +428,8 @@ const alive = (pid) => { try { process.kill(pid, 0); return true; } catch { retu
 function cool(health, worker, reason) {
   const h = health[worker] || {};
   const strikes = (h.strikes || 0) + 1;
-  const mins = COOLDOWN_MIN[Math.min(strikes, COOLDOWN_MIN.length) - 1];
-  health[worker] = { state: 'cooling', strikes, until: new Date(Date.now() + mins * 60000).toISOString(), last_error: reason.slice(0, 300) };
+  const mins = Math.max(COOLDOWN_MIN[Math.min(strikes, COOLDOWN_MIN.length) - 1], resetMinutes(reason) ?? 0);
+  health[worker] = { state: 'cooling', strikes, until: new Date(Date.now() + mins * 60000).toISOString(), last_error: reason.slice(-300) };
   return mins;
 }
 
@@ -642,7 +642,7 @@ function reapOne(board, health, events, j) {
   const ahead = Number(sh('git', ['rev-list', '--count', 'origin/main..HEAD'], j.worktree, { allowFail: true }).out || 0);
   const quota = QUOTA_RE.test(tail.slice(-1500)) && (code !== 0 || !ahead);
   if (quota || (code === 124 && !tail.trim())) {
-    const mins = cool(health, j.worker, tail.slice(-300) || `exit ${code}`);
+    const mins = cool(health, j.worker, tail || `exit ${code}`);
     j.status = 'queued';
     // A limit says nothing about the work, so it must not use up one of the job's three attempts.
     j.attempts = Math.max(0, (j.attempts || 1) - 1);
@@ -828,8 +828,9 @@ function batchPhase(board, events) {
     const ref = sh('git', ['rev-parse', '--verify', '-q', j.branch], ROOT, { allowFail: true }).ok ? j.branch : `origin/${j.branch}`;
     const r = sh('git', ['merge', '--no-ff', '--no-edit', '-m', `crew: ${j.id} (${j.stage}, ${j.worker})`, ref], wt, { allowFail: true });
     if (r.ok || resolveSharedConflicts(wt)) return true;
+    const conflictFiles = sh('git', ['diff', '--name-only', '--diff-filter=U'], wt, { allowFail: true }).out.split('\n').filter(Boolean);
     sh('git', ['merge', '--abort'], wt, { allowFail: true });
-    why.set(j.id, `${j.branch} conflicts with main (it could not join the hourly batch).`);
+    why.set(j.id, exclusionReason(j.branch, conflictFiles));
     return false;
   };
   let members = ready.filter(tryMerge);

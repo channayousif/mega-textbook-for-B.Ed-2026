@@ -12,9 +12,9 @@ G2 en-draft cleared by deterministic gates.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-01/G2/20261019T121920528Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-01/G2/20261026T234000836Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | |
-| Unit 1 | G3 en-review | ▢ | | advisory: revise; repairs applied for `specs/content/efmp-304/reviews/unit-01/G3/agent-g3-efmp-304-u1-run5e4cc29c.json`: SVG syntax and wordmark geometry, RRQ 9 rebalanced to Topic 1.1 with Urdu model answer and concept mapping, placed manifest preamble, and descriptive article links in both locales. Fresh independent G3 and dependent G5 remain pending; no sign-off claimed. |
+| Unit 1 | G3 en-review | ▢ | | advisory: revise; repairs applied for `specs/content/efmp-304/reviews/unit-01/G3/agent-g3-efmp-304-u1-run5e4cc29c.json`: SVG syntax and wordmark geometry, RRQ 9 rebalanced to Topic 1.1 with Urdu model answer and concept mapping, placed manifest preamble, and descriptive article links in both locales. Fresh independent G3 and dependent G5 remain pending; no sign-off claimed. Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 1 | G4 ur-translation | ▣ | | Seven-page Urdu mirror authored against English baseline on 2026-10-19 (crew efmp-304-u01-translate-r1): translated metadata, 14 bank-bound key terms, 10/10/5 assessment parity with Urdu MCQ option labels in order (الف/ب/ج/د), 10 mirrored Urdu SVGs with derived dark variants; check:content clean and parity/figures/key_terms verified clean under temporary reviewed flip (reverted). Handoff: `specs/content/efmp-304/reviews/unit-01/G4/translation-handoff.md`. translation_status stays draft pending fresh independent G5; no certification claimed |
 | Unit 1 | G5 ur-review | ▢ | | |
 | Unit 1 | G6 assets | ▢ | | |
@@ -31,8 +31,8 @@ illustration `fig-U2-9` is left `prompt-only` in `figures/unit-02.banner.md` for
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-02/G2/20261018T203159015Z-gates.json |
-| Unit 2 | G3 en-review | ▣ | | Advisory independent Codex G3 **escalate** (thread 01a14a38-39b5-7ca3-b776-327860ede213): conceptual/source/assessment defects and SVG clipping; author provenance and page/print renders missing. Report: `specs/content/efmp-304/reviews/unit-02/G3/01a14a38-39b5-7ca3-b776-327860ede213.json`. Separate author repairs, owner/host supplies missing evidence, then fresh review. G3 stays open, unsigned (ADR-0019). |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-02/G2/20261026T232001442Z-gates.json |
+| Unit 2 | G3 en-review | ▣ | | Advisory independent Codex G3 **escalate** (thread 01a14a38-39b5-7ca3-b776-327860ede213): conceptual/source/assessment defects and SVG clipping; author provenance and page/print renders missing. Report: `specs/content/efmp-304/reviews/unit-02/G3/01a14a38-39b5-7ca3-b776-327860ede213.json`. Separate author repairs, owner/host supplies missing evidence, then fresh review. G3 stays open, unsigned (ADR-0019). Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 2 | G4 ur-translation | ▣ | | Codex completed the six-page draft Urdu mirror against English `88efbd7d` on 2026-10-18, including 10/10/5 assessment parity, bank-bound key terms, eight Urdu SVGs and derived dark variants. Handoff: `specs/content/efmp-304/translations/unit-02/handoff.md`. Draft remains pending English G3 repairs, fresh independent G5 and full-page RTL/print inspection; no certification claimed |
 | Unit 2 | G5 ur-review | ▢ | | |
 | Unit 2 | G6 assets | ▣ | | 8 schematics placed; banner `fig-U2-9` prompt-only, raster handoff pending |
@@ -68,8 +68,8 @@ deterministic gates.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 4 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-04/G2/20261017T164737346Z-gates.json |
-| Unit 4 | G3 en-review | ▣ | | agent G3 (Reviewer, agy Gemini, run 501d802f) **pass**, zero findings: `specs/content/efmp-304/reviews/unit-04/G3/agent-g3-efmp-304-u4-run501d802f.json` (PR #126, TEX-45). Row stays open: agent evidence cannot close it (ADR-0019) |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-04/G2/20261027T001752249Z-gates.json |
+| Unit 4 | G3 en-review | ▣ | | agent G3 (Reviewer, agy Gemini, run 501d802f) **pass**, zero findings: `specs/content/efmp-304/reviews/unit-04/G3/agent-g3-efmp-304-u4-run501d802f.json` (PR #126, TEX-45). Row stays open: agent evidence cannot close it (ADR-0019). Stale since 2026-10-27: fig-U4-1 was re-wrapped to remove text overlap (owner print report), so a fresh G3 run is needed; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 4 | G4 ur-translation | ▣ | | Six-page Urdu mirror verified complete against English baseline on 2026-10-18 (crew efmp-304-u04-translate-r1): translated metadata, 20 bank-bound key terms, Urdu MCQ option labels in order (الف/ب/ج/د), 8 mirrored Urdu SVGs with derived dark variants; check:content 13/13 pass and parity/figures/key_terms clean under temporary reviewed flip (reverted). Handoff: `specs/content/efmp-304/reviews/unit-04/G4/translation-handoff.md`. translation_status stays draft pending independent G5; no certification claimed |
 | Unit 4 | G5 ur-review | ▣ | | agent G5 (Reviewer, agy Gemini, run 36f939d6) **pass**, 3 advisories: `specs/content/efmp-304/reviews/unit-04/G5/agent-g5-efmp-304-u4-run36f939d6.json` (PR #132, TEX-46). Row stays open (ADR-0019) |
 | Unit 4 | G6 assets | ✅ | auto:gates | 8 schematics placed; dark variants derived |

@@ -27,6 +27,18 @@ test('English review, repair, figures, authoring and English-only courses', () =
   assert.deepEqual(stagesFor(unit(), facts({ bilingual: false, mirrorComplete: false, g3Report: { disposition: 'pass' } })), []);
 });
 
+test('translation waits while the latest G3 report is an unrepaired revise', () => {
+  // 2026-10-25 (W43 M2): translate jobs behind open English defects only wrote handoffs.
+  const draft = (over) => facts({ mirrorComplete: false, ...over });
+  assert.deepEqual(stagesFor(unit(), draft({ g3Report: { disposition: 'revise' } })), ['repair_en']);
+  // A repaired revise with a review cycle left is re-reviewed (ADR-0019); translation goes ahead either way.
+  assert.deepEqual(stagesFor(unit(), draft({ g3Report: { disposition: 'revise' }, g3Repaired: true })), ['review_en', 'translate']);
+  assert.deepEqual(stagesFor(unit(), draft({ g3Report: { disposition: 'revise' }, g3Repaired: true, g3Cycles: 2 })), ['translate']);
+  assert.deepEqual(stagesFor(unit(), draft({ g3Report: { disposition: 'pass' } })), ['translate']);
+  assert.deepEqual(stagesFor(unit(), draft({ g3Report: { disposition: 'escalate' } })), ['translate']);
+  assert.deepEqual(stagesFor(unit(), draft()), ['review_en', 'translate']);
+});
+
 test('awaitingG3: agent review finished, G3 not signed off', () => {
   assert.equal(awaitingG3(unit(), facts({ g3Report: { disposition: 'pass' } })), true);
   assert.equal(awaitingG3(unit(), facts({ g3Report: { disposition: 'escalate' } })), true);
