@@ -56,14 +56,15 @@
   <text x="610" y="223" text-anchor="middle" class="cell">whole (5 categories max)</text>
 
   <!-- Examples box -->
-  <rect x="30" y="255" width="720" height="130" rx="6" fill="var(--a1-fill)" stroke="var(--a1)" stroke-width="1"/>
+  <rect x="30" y="255" width="720" height="145" rx="6" fill="var(--a1-fill)" stroke="var(--a1)" stroke-width="1"/>
   <text x="50" y="280" class="cell" font-weight="600">School examples:</text>
   <text x="50" y="300" class="cell">Bar chart: number of pupils preferring each sport (categories: cricket, football, hockey, athletics).</text>
   <text x="50" y="320" class="cell">Histogram: distribution of test marks from 0 to 100 grouped into intervals of 10.</text>
-  <text x="50" y="340" class="cell">Pie chart: how the school budget is divided among 5 categories (salaries, materials, maintenance, transport, events).</text>
-  <text x="50" y="365" class="cell" font-weight="600">Rule of thumb:</text>
-  <text x="50" y="380" class="cell">Bar chart for comparing | Histogram for distribution shape | Pie chart for proportions of a whole.</text>
+  <text x="50" y="340" class="cell">Pie chart: how the school budget is divided among 5 categories (salaries, materials,</text>
+  <text x="50" y="355" class="cell">maintenance, transport, events).</text>
+  <text x="50" y="375" class="cell" font-weight="600">Rule of thumb:</text>
+  <text x="50" y="390" class="cell">Bar chart for comparing | Histogram for distribution shape | Pie chart for proportions of a whole.</text>
 
   <!-- Caption -->
-  <text x="30" y="410" class="caption">Caption: Chart-type selection guide with data requirements and school examples. Credit: textbook.com.pk.</text>
+  <text x="30" y="425" class="caption">Caption: Chart-type selection guide with data requirements and school examples. Credit: textbook.com.pk.</text>
 </svg>
