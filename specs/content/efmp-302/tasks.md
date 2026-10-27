@@ -52,8 +52,8 @@ register pass; `translation_status: reviewed` on all EN and UR unit-01 files;
 | Unit | Stage | Status | Reviewer | Suggestion |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ✅ | YM | |
-| Unit 1 | G2 en-draft | ✅ | YM | S008 v3.0 per-topic re-restructure - Content gate passed 2026-08-30 |
-| Unit 1 | G3 en-review | ✅ | YM | S008 v3.0 per-topic re-restructure - Content gate passed 2026-08-30 |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-302/reviews/unit-01/G2/20261027T190642552Z-gates.json |
+| Unit 1 | G3 en-review | ✅ | YM | S008 v3.0 per-topic re-restructure - Content gate passed 2026-08-30. Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 1 | G4 ur-translation | ✅ | YM | Full UR re-translation of all 7 files to the v3.0 per-topic layout + the Spec 012 figure retrofit (fig-U1-1..8); terminology-bank-driven, heading-parity exact, zero em-dash |
 | Unit 1 | G5 ur-review | ✅ | YM | Register / terminology pass (academic-plain, درسی مگر عام فہم); `Professionalism` / `Professionalization` bank terms confirmed at G5; `translation_status: reviewed`, `ur` route no longer falls back to EN |
 | Unit 1 | G6 assets | ✅ | YM | |
