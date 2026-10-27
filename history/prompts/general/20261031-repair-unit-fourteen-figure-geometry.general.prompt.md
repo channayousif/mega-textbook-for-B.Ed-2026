@@ -24,12 +24,16 @@ files:
   - static/img/figures/gqur-301/unit-14/fig-U14-4.ur.dark.svg
   - docs/semester-2/gqur-301/unit-14/topic-02.mdx
   - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-14/topic-02.mdx
+  - static/content-status.json
   - specs/content/gqur-301/tasks.md
   - specs/content/gqur-301/reviews/unit-14/G2/
 tests:
   - Figure text measurement: PASS, all eight light sources
   - Dark figure variants regenerated
-  - Content gates and G2 evidence: see final validation update
+  - npm run check:content: PASS, all 13 gates
+  - G2 evidence preparation: PASS, all eight gates
+  - npm run figures:variants:check: PASS
+  - SVG label wording comparison against origin/main: PASS
 ---
 
 ## Prompt
@@ -44,13 +48,13 @@ Fixed four geometry failures with spacing, wrapping and extra wordmark clearance
 
 - ✅ Impact: Four blocking geometry defects repaired.
 - 🧪 Tests: All eight light SVGs measure successfully. One existing cosmetic Urdu panel collision remains advisory.
-- 📁 Files: Three light sources, three generated dark variants, two Figure carriers, tracker and G2 evidence.
+- 📁 Files: Three light sources, three generated dark variants, two Figure carriers, tracker, derived content-status report and G2 evidence.
 - 🔁 Next prompts: Fresh independent G3 after separate academic repairs.
 - 🧠 Reflection: Measure font bounds instead of assuming baseline clearance.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Geometry repair and regenerated variants; G2 evidence refresh follows the repair commit.
+- Shipped / changed: Geometry repair and regenerated variants; fresh G2 evidence bound to dfe30c6d and tracker reference committed after the repair.
 - Decisions the team must respect: No prose, values, wording, translation status or certification changes.
 - Pending / next owner: Independent reviewer owns fresh G3; content author owns remaining academic findings.
 - Paperclip issues affected: GQUR-301 Unit 14; ticket not supplied.
@@ -58,6 +62,8 @@ Fixed four geometry failures with spacing, wrapping and extra wordmark clearance
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Subtitle overflow, annotation spill and Urdu wordmark overlap.
-- Graders run and results (PASS/FAIL): Geometry PASS; final content and evidence results recorded below.
+- Graders run and results (PASS/FAIL): Geometry PASS; all 13 content gates PASS; all eight G2 gates PASS; dark freshness PASS.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Review remaining academic findings in a separate authorised task.
+
+Validation update: The initial content check failed only because the geometry edit invalidated the old G2 input manifest. After the repair commit, fresh G2 evidence, tracker update and content-status regeneration, all 13 content gates passed. The derived report changed only provenance and this course tracker digest. No origin/main comparison was needed because the final run had zero findings.
