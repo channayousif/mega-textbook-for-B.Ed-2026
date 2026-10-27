@@ -1,0 +1,1 @@
+At start HEAD and origin/main both resolved to 6423af89ad3fe3d4a9307afb6330d5c3e33bf964; git log origin/main..HEAD was empty. Initial npm run check:content passed every gate, so there are no baseline failures to subtract. Pre-existing static/content-status.json changes affect generated_at/commit only.
