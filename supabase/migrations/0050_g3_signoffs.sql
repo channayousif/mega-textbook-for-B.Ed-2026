@@ -137,8 +137,8 @@ begin
   if not found then raise exception 'decision is not queued' using errcode = '22023'; end if;
 end; $$;
 
-revoke all on function public.record_g3_signoff(jsonb) from public;
-revoke all on function public.withdraw_g3_signoff(uuid) from public;
+revoke all on function public.record_g3_signoff(jsonb) from public, anon;
+revoke all on function public.withdraw_g3_signoff(uuid) from public, anon;
 revoke all on function public.mark_g3_signoff_synced(uuid,text,text,text) from public, anon, authenticated;
 grant execute on function public.record_g3_signoff(jsonb) to authenticated;
 grant execute on function public.withdraw_g3_signoff(uuid) to authenticated;
