@@ -269,7 +269,16 @@ def evaluate_gen(inputs):
         # that Chatterbox needs rejects, even for a local source (two 2026-10-27 runs); drop the argument.
         import huggingface_hub
         _download = huggingface_hub.hf_hub_download
-        huggingface_hub.hf_hub_download = lambda *a, use_auth_token=None, **k: _download(*a, **k)
+        # It also expects requests' 404 for the optional custom.py, and 1.x raises its own error (round 6).
+
+        def _hf_download(*a, use_auth_token=None, **k):
+            try:
+                return _download(*a, **k)
+            except Exception as e:  # noqa: BLE001
+                if "EntryNotFound" in type(e).__name__ or "404" in str(e):
+                    raise ValueError("File not found on HF hub") from e
+                raise
+        huggingface_hub.hf_hub_download = _hf_download
         from speechbrain.inference.speaker import EncoderClassifier
         enc = EncoderClassifier.from_hparams(source=ECAPA, savedir="/tmp/ecapa", run_opts={"device": device})
         embed = lambda w: torch.nn.functional.normalize(enc.encode_batch(torch.tensor(w)[None].to(device)).squeeze(), dim=0)

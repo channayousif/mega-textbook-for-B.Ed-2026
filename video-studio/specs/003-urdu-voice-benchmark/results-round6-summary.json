@@ -1,0 +1,61 @@
+{
+  "status": {
+    "chatterbox-hi-eval": "ok in 1180 s"
+  },
+  "models": {
+    "chatterbox-hi-eval": {
+      "model": "ResembleAI/Chatterbox-Multilingual-hi",
+      "revision": "hi",
+      "device": "cuda",
+      "licence": "MIT (output carries Resemble's inaudible Perth watermark)",
+      "decoder": "s3gen.pt from ResembleAI/chatterbox (V3 decoder did not load)"
+    }
+  },
+  "tools": {
+    "asr": "openai/whisper-large-v3",
+    "speaker": "speechbrain/spkrec-ecapa-voxceleb"
+  },
+  "thresholds": {
+    "max_cer": 0.2,
+    "max_pause_s": 0.9,
+    "pace_tol": 0.35,
+    "drift_sd": 3.0
+  },
+  "normalisation": "ffmpeg loudnorm I=-16 TP=-1.5, 48 kHz mono",
+  "gpu": "GPU 0: Tesla T4 (UUID: GPU-d00f7fc0-2017-ffd4-8f39-81dba96108b5)\nGPU 1: Tesla T4 (UUID: GPU-9a99f6c3-7b6f-b9f1-168a-15fc8155a83c)",
+  "summary": {
+    "ustani": {
+      "clips": 84,
+      "flagged": 48,
+      "segments_all_seeds_flagged": [
+        "u03l",
+        "u04d",
+        "u04l",
+        "u04r",
+        "u15r",
+        "u17d",
+        "u17e",
+        "u17l",
+        "u17r",
+        "u19e"
+      ],
+      "sim_ref_mean": null,
+      "sim_ref_min": null,
+      "sim_centroid_mean": null,
+      "sim_centroid_min": null,
+      "median_cer": 0.061,
+      "median_chars_per_s": 9.8
+    },
+    "shagird": {
+      "clips": 24,
+      "flagged": 6,
+      "segments_all_seeds_flagged": [],
+      "sim_ref_mean": null,
+      "sim_ref_min": null,
+      "sim_centroid_mean": null,
+      "sim_centroid_min": null,
+      "median_cer": 0.041,
+      "median_chars_per_s": 10.6
+    }
+  }
+}
