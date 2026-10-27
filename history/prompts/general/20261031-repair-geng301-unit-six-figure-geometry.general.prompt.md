@@ -17,6 +17,7 @@ links:
   pr: null
 files:
   - static/img/figures/geng-301/unit-06/*.svg
+  - static/content-status.json
   - specs/content/geng-301/tasks.md
   - specs/content/geng-301/reviews/unit-06/G2/
 tests:
@@ -36,7 +37,7 @@ Repaired wordmark alignment on all eight figures, cleared figure 5 cosmetic coll
 ## Outcome
 
 - ✅ Impact: Figure text fits the existing canvas without changing labels or prose.
-- 🧪 Tests: All eight SVG sources pass text geometry. Content checks initially report stale Unit 6 G2 only; evidence refresh follows the repair commit.
+- 🧪 Tests: All eight SVG sources pass text geometry. Content checks initially reported stale Unit 6 G2; evidence refresh passed all eight draft gates. Tracker edits required regenerating content-status.json. Baseline origin/main passes all 13 content gates.
 - 📁 Files: Eight light sources, eight derived dark variants, G2 evidence and tracker.
 - 🔁 Next prompts: Fresh independent G3 review after outstanding author and evidence work.
 - 🧠 Reflection: A shared text selector overrode the wordmark presentation attribute.
@@ -44,13 +45,13 @@ Repaired wordmark alignment on all eight figures, cleared figure 5 cosmetic coll
 ## Handoff (for CEO and agents)
 
 - Shipped / changed: Scoped CSS wordmark fix and regenerated variants; G2 refreshed in follow-up commit.
-- Decisions the team must respect: No wording, dimensions, prose, publication or review certification changes.
+- Decisions the team must respect: No wording, dimensions, prose, publication tier or review certification changes. Regenerate the content-status tracker digest after tracker edits.
 - Pending / next owner: Independent reviewer owns fresh G3; existing author and provenance/render repairs remain outstanding.
 - Paperclip issues affected: GENG-301 Unit 6; no ticket supplied.
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Shared text-anchor CSS pushed all eight wordmarks beyond the canvas.
-- Graders run and results (PASS/FAIL): Geometry PASS; variants regenerated; final content comparison recorded in completion report.
+- Graders run and results (PASS/FAIL): Geometry PASS; variants regenerated; final content suite PASS (13/13) after regenerating the tracker digest.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): No further experiment required.
