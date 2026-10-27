@@ -105,3 +105,24 @@ test('pruneScratch drops worker folders in .crew but keeps the dispatcher files'
   assert.equal(existsSync(join(wt, '.crew', 'brief.md')), true);
   assert.equal(existsSync(join(wt, '.crew', 'content-final.log')), true);
 });
+
+test('dropWaitingWorktrees removes folders of ready and batched jobs unless a running job uses them', (t) => {
+  const base = fixture(t);
+  const dirs = ['ready', 'batched', 'shared', 'running', 'red'].map((n) => { const d = join(base, n); mkdirSync(d); return d; });
+  const removed = [];
+  const drop = loadFunction('dropWaitingWorktrees', '\n/**', {
+    DRY: false, ROOT: base, existsSync, console,
+    sh(cmd, args) { removed.push(args.at(-1)); },
+  });
+  drop({ jobs: [
+    { id: 'a', status: 'ready', worktree: dirs[0] },
+    { id: 'b', status: 'batched', worktree: dirs[1] },
+    { id: 'c', status: 'ready', worktree: dirs[2] },
+    { id: 'c-cifix1', status: 'running', worktree: dirs[2] },
+    { id: 'd', status: 'running', worktree: dirs[3] },
+    { id: 'e', status: 'gate_red', worktree: dirs[4] },
+    { id: 'f', status: 'ready', worktree: join(base, 'gone') },
+    { id: 'g', status: 'ready' },
+  ] });
+  assert.deepEqual(removed, [dirs[0], dirs[1]]);
+});

@@ -710,6 +710,21 @@ function cleanup(j) {
   sh('git', ['worktree', 'remove', '--force', j.worktree], ROOT, { allowFail: true });
 }
 
+/**
+ * A job waiting for a batch PR needs no worktree. Its branch is pushed, batchPhase merges the local
+ * branch ref (`worktree remove` keeps it), and prepareWorktree rebuilds a folder from origin if a fix
+ * is queued. Each folder is about 0.7 GB: 19 waiting jobs held the host under the launch floor on
+ * 2026-10-27.
+ */
+function dropWaitingWorktrees(board) {
+  const busy = new Set(board.jobs.filter((x) => x.status === 'running').map((x) => x.worktree));
+  for (const j of board.jobs) {
+    if (!['ready', 'batched'].includes(j.status) || !j.worktree || busy.has(j.worktree) || !existsSync(j.worktree)) continue;
+    if (DRY) { console.log(`[dry-run] would remove the worktree of ${j.id}`); continue; }
+    sh('git', ['worktree', 'remove', '--force', j.worktree], ROOT, { allowFail: true });
+  }
+}
+
 function prFiles(n) {
   return sh('gh', ['pr', 'view', String(n), '--json', 'files', '-q', '.files[].path'], ROOT, { allowFail: true }).out.split('\n').filter(Boolean);
 }
@@ -1390,6 +1405,7 @@ function tick() {
     phase('inbox', () => handleInbox(board, decisions, control, health));
     phase('reap', () => reap(board, health, events));
     phase('batch', () => batchPhase(board, events));
+    phase('space', () => dropWaitingWorktrees(board));
     phase('intel', () => intelPhase(board, events));
     phase('maintenance', () => maintenancePhase(board, events));
     // A cooling worker becomes eligible again when its time passes; the next real job is the probe.
