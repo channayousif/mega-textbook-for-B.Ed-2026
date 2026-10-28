@@ -6,7 +6,7 @@
 
 | Unit | Title | EN draft | G3 review | UR translation | G5 review | Figures | Notes |
 |---|---|---|---|---|---|---|---|
-| 1 | Introduction and Ideological Foundations | ▣ | ☐ | ☐ | ☐ | placed | Withdrawn 2026-10-10 (owner, D-2026-0053 / G-2026-100); re-authored 2026-10-28 from the approved spec (D-2026-0074), English only; see stage rows below |
+| 1 | Introduction and Ideological Foundations | ✓ | ☐ | ☐ | ☐ | placed | Withdrawn 2026-10-10 (owner, D-2026-0053 / G-2026-100); re-authored 2026-10-28 from the approved spec (D-2026-0074), English only; see stage rows below |
 | 2 | Reform Movements and the Pakistan Movement | ☐ | ☐ | ☐ | ☐ | planned | Withdrawn 2026-10-10 (owner, D-2026-0053 / G-2026-100) |
 | 3 | Constitutional Development | ☐ | ☐ | ☐ | ☐ | planned | |
 | 4 | Governance, Rights and Geography | ☐ | ☐ | ☐ | ☐ | planned | |
@@ -21,7 +21,7 @@
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 1 | G2 en-draft | ▣ | | English re-authored 2026-10-28 (index, topic-01, topic-02, unit-assessment; no teacher notes, as the guide lists no teaching strategies); four schematic figures placed; G2 gate evidence pending |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-01/G2/20261028T093113893Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | awaiting an independent reviewer |
 | Unit 1 | G4 ur-translation | ▢ | | separate job |
 | Unit 1 | G5 ur-review | ▢ | | |
