@@ -34,6 +34,7 @@ per-topic layout: `index.mdx` + `topic-01…02.mdx` (nine-part cycles) + `unit-a
 | Unit 1 | G6 assets | ▢ | | 4 schematic SVGs prompt-only |
 | Unit 1 | G7 publish | ▢ | | |
 | Unit 1 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-305/reviews/unit-01/G3/agent-g3-efmp-305-u1-run2f195870.json |
+| Unit 1 | G3 en-review | ▢ | | advisory: escalate; final cycle; agent:codex-g3-reviewer; report specs/content/efmp-305/reviews/unit-01/G3/codex-01a17f6f.json; prior findings resolved, new assessment/source defects and missing render/provenance evidence require owner disposition; no certification |
 
 **Unit 2 - Understanding Learner Diversity (2026-10-09):** authored to the Spec 008 v3.0
 per-topic layout: `index.mdx` + `topic-01…02.mdx` (nine-part cycles) + `unit-assessment.mdx`
