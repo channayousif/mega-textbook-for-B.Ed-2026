@@ -54,3 +54,5 @@ on every unit).
 | Unit 6 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at 4725d17; G3 dependency escalated (G-2026-30); report reviews/unit-06/G5/agent-g5-gqur300-u6-run001.json |
 | Unit 6 | G6 assets | ▢ | | |
 | Unit 6 | G7 publish | ▢ | | |
+
+| Unit 3 | G3 en-review | ▢ | | advisory: pass (cycle 2); report specs/content/gqur-300/reviews/unit-03/G3/agent-g3-gqur300-u3-run90e224ef.json; all 3 previous blocking findings verified resolved (F1 no-source-u3-3 gap G-2026-29, F2 RRQ-8 decide step alignment, F3 fare-desk arithmetic 150 rupees); 5 advisory findings carried (F4 MCQ-b balance, F5 Bloom tag, F6 tutor problem repetition, F8 course SLO parenthetical, F11 multiplication sign); all 7 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; row stays open pending qualification (ADR-0019) |
