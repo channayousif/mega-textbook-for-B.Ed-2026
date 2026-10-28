@@ -1,6 +1,6 @@
 ---
 id: crew-gpks-402-u02-translate-conflict1
-title: crew fix GPKS-402 unit 2 translate conflict
+title: crew fix GPKS-402 unit 2
 stage: misc
 date: 2026-10-28
 surface: agent
@@ -16,7 +16,22 @@ links:
   adr: null
   pr: null
 files:
+ - history/prompts/gpks-402/crew-gpks-402-u02-translate-conflict1.misc.prompt.md
+ - history/prompts/gpks-402/crew-gpks-402-u02-translate.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gpks-402/unit-02/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gpks-402/unit-02/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gpks-402/unit-02/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gpks-402/unit-02/unit-assessment.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gpks-402/unit-02/unit-teacher-notes.mdx
  - specs/content/gpks-402/tasks.md
+ - static/img/figures/gpks-402/unit-02/fig-U2-1.ur.dark.svg
+ - static/img/figures/gpks-402/unit-02/fig-U2-1.ur.svg
+ - static/img/figures/gpks-402/unit-02/fig-U2-2.ur.dark.svg
+ - static/img/figures/gpks-402/unit-02/fig-U2-2.ur.svg
+ - static/img/figures/gpks-402/unit-02/fig-U2-3.ur.dark.svg
+ - static/img/figures/gpks-402/unit-02/fig-U2-3.ur.svg
+ - static/img/figures/gpks-402/unit-02/fig-U2-4.ur.dark.svg
+ - static/img/figures/gpks-402/unit-02/fig-U2-4.ur.svg
 tests:
  - npm run check:content
 ---
@@ -57,26 +72,25 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Merged origin/main into crew/gpks-402-u02-translate, resolved conflict in specs/content/gpks-402/tasks.md by keeping both the Unit 2 G4 ur-translation row and the incoming Unit 4 tracker rows, refreshed content status, and verified all 13 content gates pass.
+Merged origin/main into crew/gpks-402-u02-translate, resolved the conflict in specs/content/gpks-402/tasks.md by preserving Unit 2 G4 translation and Unit 4 rows, and verified all content gates pass.
 
 ## Outcome
 
 - Impact: fix for GPKS-402 Unit 2 by agy (attempt 1).
 - Tests: npm run check:content passed in the job worktree before the PR was opened.
-- Files: 1 file(s) in scope resolved (specs/content/gpks-402/tasks.md).
+- Files: 16 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/gpks-402-u02-translate, resolved conflict in specs/content/gpks-402/tasks.md by preserving both Unit 2 G4 translation tracker row and incoming Unit 4 tracker rows, and verified all 13 content gates pass.
+- Shipped / changed: Merged origin/main into crew/gpks-402-u02-translate, resolved the conflict in specs/content/gpks-402/tasks.md by preserving Unit 2 G4 translation and Unit 4 rows, and verified all content gates pass.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Preserved Unit 2 G4 translation tracker row alongside main's Unit 4 rows in specs/content/gpks-402/tasks.md.
-  - Urdu rendered-page inspection (`render-inspect --locale ur`) was not run because builds are forbidden; G5 needs it.
-  - The English has three unfixed inconsistencies, carried into the Urdu as written: fig-U2-4 is 820 wide but tagged 780; MCQ 10 says "twenty-five years" in the option but "two decades" in the key; MCQ 4 says "proportional representation" where the topic says "weightage".
-  - The bank spelling الی گڑھ (should be علی گڑھ) and the `پاکستان کے مطالعہ` form need an owner ruling before G5.
+  - Preserved Unit 2 G4 ur-translation tracker row alongside main's Unit 4 rows in specs/content/gpks-402/tasks.md.
+  - English draft inconsistencies (fig-U2-4 width, MCQ 10 duration, MCQ 4 weightage) and bank spelling الی گڑھ remain carried into Urdu and need review before G5.
+  - Rendered page inspection (render-inspect --locale ur) was not run because builds are forbidden; G5 review needs it.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
