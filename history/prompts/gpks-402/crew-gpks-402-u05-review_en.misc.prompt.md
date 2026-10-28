@@ -67,14 +67,20 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+## Feedback from the previous attempt
+worker exited 1:
+Permission deny rule (.claude/settings.json): Write(video-studio/episodes/**/approvals.jsonl) is not matched by file permission checks  -  only Edit(path) rules are. Use Edit(video-studio/episodes/**/approvals.jsonl) instead (Edit rules cover all file-editing tools).
+You've hit your 5-hour limit · resets 7:10pm (Etc/GMT-5)
+
+
 
 ## Response snapshot
 
-Executed independent G3 English review of GPKS-402 Unit 5 with advisory pass disposition, recorded validated review evidence manifest and command execution logs, generated Sharp PNG renders, and appended an advisory open tracker row to tasks.md.
+Executed independent G3 English review of GPKS-402 Unit 5 with advisory pass disposition, recorded validated review report and evidence logs, and appended an advisory open tracker row to tasks.md.
 
 ## Outcome
 
-- Impact: review_en for GPKS-402 Unit 5 by agy (attempt 1).
+- Impact: review_en for GPKS-402 Unit 5 by agy (attempt 2).
 - Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 19 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
@@ -82,18 +88,18 @@ Executed independent G3 English review of GPKS-402 Unit 5 with advisory pass dis
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Executed independent G3 English review of GPKS-402 Unit 5 with advisory pass disposition, recorded validated review evidence manifest and command logs, and appended an advisory open tracker row to tasks.md.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this review does not certify anything.
+- Shipped / changed: Executed independent G3 English review of GPKS-402 Unit 5 with advisory pass disposition, recorded validated review report and evidence logs, and appended an advisory open tracker row to tasks.md.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All seven criteria verified passing with evidence locators; 25 assessment items independently solved.
-  - All 8 SVG variants pass measure-figure-text.mjs with exit code 0.
-  - Advisory G3 tracker row appended to tasks.md with status open ▢ and unsigned per ADR-0019.
+  - All seven G3 evaluation criteria pass with concrete evidence locators; 25 assessment items independently solved; all 8 SVG variants pass measure-figure-text.mjs.
+  - Advisory G3 tracker row recorded in specs/content/gpks-402/tasks.md with status open ▢ and unsigned per ADR-0019; G3 remains open for trusted sign-off.
+  - Next lifecycle stages for Unit 5 are Urdu translation (G4 ur-translation) and independent Urdu review (G5 ur-review).
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none
+- Failure modes observed: 1 earlier attempt(s); see the board history
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
