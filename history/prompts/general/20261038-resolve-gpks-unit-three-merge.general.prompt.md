@@ -16,7 +16,7 @@ links:
   adr: null
   pr: null
 files:
-  - specs/content/gpks-402/sources/unit-03-constitution-notes.md
+  - specs/content/gpks-402/sources/unit-03/constitution-notes.md
   - specs/content/gpks-402/sources/texts/pak-constitution-1973.md
   - specs/content/gpks-402/tasks.md
   - specs/content/gpks-402/reviews/unit-03/G2/
@@ -37,7 +37,7 @@ Merged origin/main, preserved main source excerpts and branch reading notes in s
 ## Outcome
 
 - ✅ Impact: Resolved the add/add conflict while preserving both source records.
-- 🧪 Tests: All eight deterministic G2 commands passed. Full content checks compared against origin/main.
+- 🧪 Tests: All eight deterministic G2 commands and all 13 content gates passed. Origin/main also passed all 13.
 - 📁 Files: Shared source restored byte-for-byte to main; Unit 3 notes retained separately; tracker references fresh G2 evidence.
 - 🔁 Next prompts: Independent G3 review, Urdu translation, and SVG geometry validation remain separate work.
 - 🧠 Reflection: Separate unit-specific reading notes from shared excerpts to avoid invalidating unrelated evidence.
@@ -52,6 +52,8 @@ Merged origin/main, preserved main source excerpts and branch reading notes in s
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Initial shell lacked python; corrected with python3 before finalizing the merge. Shared-source edits stale unrelated evidence, resolved by unit-scoped notes.
-- Graders run and results (PASS/FAIL): G2 deterministic commands PASS; final content-gate comparison recorded below.
+- Graders run and results (PASS/FAIL): PASS: all eight G2 commands and all 13 content gates; origin/main also passes all 13.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Keep shared bound excerpts stable when adding unit-specific notes.
+
+Final validation: origin/main passes all 13 content gates. Unit-scoped notes use a unit-03/ directory because the evidence scope matcher requires a slash, dot, or end after the unit number. Fresh G2 evidence follows that move.
