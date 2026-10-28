@@ -45,7 +45,7 @@ Mark tasks `[x]` as they are completed and note the commit hash.
 - [ ] T030 asset-handoff skill produces `handoff.md` from `script.json` (voice lines grouped per character, B-roll prompts, illustration prompts, filenames).
 - [ ] T031 `scripts/ingest.ts`: match inbox files to expected names (tolerant to tool download names via a mapping prompt), normalise audio (48 kHz mono, loudnorm −16 LUFS, trim silence), clips (1080×1920 crop/pad, 30 fps, strip audio), images (fit 1080×1920).
 - [ ] T032 Missing/invalid report written into `episode.json.assets` and printed.
-- [ ] T032b Asset manifest: SHA-256, source tool, prompt, take, rights/consent note, import time, reviewer per accepted asset; usage counters.
+- [ ] T032b (voice audio done by VS-003 V006, `npm run voice:import`; clips and images open) Asset manifest: SHA-256, source tool, prompt, take, rights/consent note, import time, reviewer per accepted asset; usage counters.
 - [ ] T033 Budget tracking into `queue/budget.json`; warn at 80%.
 ⏸ CHECKPOINT 3 - one episode's assets ingested end to end.
 

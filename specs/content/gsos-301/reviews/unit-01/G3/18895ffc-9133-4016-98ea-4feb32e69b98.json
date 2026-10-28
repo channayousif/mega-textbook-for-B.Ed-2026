@@ -1,0 +1,280 @@
+{
+  "schema_version": 1,
+  "course_code": "GSOS-301",
+  "unit_no": 1,
+  "stage": "G3",
+  "disposition": "escalate",
+  "reviewer_id": "agent:agy",
+  "author_run_id": "commit:fb0aaaae",
+  "reviewer_run_id": "18895ffc-9133-4016-98ea-4feb32e69b98",
+  "model": "Gemini 3.8 Flash (High)",
+  "started_at": "2026-10-28T04:46:07.000Z",
+  "completed_at": "2026-10-28T04:54:00.000Z",
+  "skill_digest": "eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b",
+  "reviewed_commit": "fb0aaaae",
+  "supersedes": "specs/content/gsos-301/reviews/unit-01/G3/7725a4f0-f3eb-4a48-aed1-23a2605c30d8.json",
+  "rulings": {
+    "D-2026-0001": "bfd5624024eb20bb942f84aa16e29fdb18bb0afd93455f00a066a8c3878f379d",
+    "D-2026-0057": "c8d057de0f64cd31366859b616047cb3bc1e306c1b446ec6445bc15346b3998d"
+  },
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g3.md": "074c8464b4bc0f2f2b76bbb19707c50b54cb907920407873a4e5d193e866f53f",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "715b493fec67701dfb45e2ac65749c5fc9069161aadd27a8397a72d89c0874da",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/licence-page.schema.json": "3fc99078935af7419b4545d21c7d77d66e80ed847755df38ddc500ee35775a3c",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-2/gsos-301/course-overview.mdx": "0e5bfff3415216453f613ed1f9aa04cc053411341f9ff8ac9f3a9fd40ec1c134",
+    "docs/semester-2/gsos-301/unit-01/index.mdx": "1e7ada8cafa3006c99e0ce1033f6b5305f8c4c6710d5e0d738bdc2ab6111c12e",
+    "docs/semester-2/gsos-301/unit-01/topic-01.mdx": "da946861e28aea8f91c2a39722fd602abef8b3a95cd7176d202c204759b5b06d",
+    "docs/semester-2/gsos-301/unit-01/topic-02.mdx": "3f285810517d300fcba17c37f7b6d1cb00a6101c4e78e108eb53eff6f91db83a",
+    "docs/semester-2/gsos-301/unit-01/topic-03.mdx": "9a178622dad6998fab01b06c449fdc64e2e846e8c9a333a520f0433d1d3ad0e1",
+    "docs/semester-2/gsos-301/unit-01/unit-assessment.mdx": "2c3a08c375dc7a3a9e90dc0f8ad6acf2a7680f503596f71b3db0557a1246deec",
+    "docs/semester-2/gsos-301/unit-01/unit-teacher-notes.mdx": "ba7a1e560da89e7d587edad52157211ed2a6197cae7341fb8a5d9367c66e9264",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "dfaa7045af0a9199dba81a06dab16963cce6221905c506afb73f60fb8ced9625",
+    "scripts/check-no-answer-keys.mjs": "8d3f8cac335c50774ee622d61cb37d987c0393c99e54eff31f2bd042625a78c3",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "8ce3a62bd80534181cf1d74fa92bc3ea2b5d937b3f528e96c2a3e20c5a87047a",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "cc33a878d98865149b248c6a524be4e9d294293ddfaecc443dc19b7ace6af7cf",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "26edbdd3d86edf7587cbf8e01f0b0cbe45e19428827da34e26cfd0534f34f1b9",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/gsos-301/concepts/unit-01.md": "fda8bf269527f60523e168186a66326f7bb7b271572370aed816237f53b3c0e5",
+    "specs/content/gsos-301/content-spec.md": "e77688e01d5cd778e52b5fc27815a8025e29e3f4b8811e0628ca314b8567e670",
+    "specs/content/gsos-301/coverage/unit-01.md": "5259fb3e76f6752e55ae644bb1de182dd35c65c7fa3274695dcf452bd28233d8",
+    "specs/content/gsos-301/figures/unit-01.md": "e5e02f355b31340916208e07c5a073351fe812678d55e2daac44026f4ceeaf57",
+    "specs/content/gsos-301/intake-2/evaluation.md": "25458b6ef9297771dabe807f53bbf11eccdb93d0f83cfd860c3b57b69a48ec4c",
+    "specs/content/gsos-301/intake-2/manifest.json": "aa26d91fa93e1a277479f4c058bf6256d4bd645397138232f3a217cdf937f520",
+    "specs/content/gsos-301/intake-3/evaluation.md": "8e591d9899fc83d6a09848157839a9223a48726f4b66433244d7589f06f5086f",
+    "specs/content/gsos-301/intake-3/manifest.json": "218bc09c06f65f969fb2fbbb2f645d65ef784627ba98e7a64920cd57b6f6b5e3",
+    "specs/content/gsos-301/intake-4/evaluation.md": "a21f983d00267450f91422e02b8580c9b0910f5d4efd46146276e5f5e06af45c",
+    "specs/content/gsos-301/intake-4/manifest.json": "d5192fdc38ee9f3ce77dae16affcb04c78e1b85d38487ecca0aa517740e2a0f0",
+    "specs/content/gsos-301/sources/unit-01.md": "78fd140ca9e84a295ce9ff34c0cf375f2cb15ff190123f231d818bafda8e2f96",
+    "specs/content/style-guide.md": "79f6cafc03b436c0e77c49ea658ef9a7a4de408b5c42020be39011a02a00dd7f",
+    "static/img/figures/gsos-301/unit-01/fig-U1-1.dark.svg": "c016133cbf084a645235a4425140cc23db6a02d358693c90524c97277ffb5794",
+    "static/img/figures/gsos-301/unit-01/fig-U1-1.svg": "2f52185b7eb2fca0597af81d07f17f12eebbeac9698df03399126a82d815993a",
+    "static/img/figures/gsos-301/unit-01/fig-U1-2.dark.svg": "647f83fe8b968f57444f1a4cebee9aa869baf70f1691b7024a8e26f72d3c1adc",
+    "static/img/figures/gsos-301/unit-01/fig-U1-2.svg": "3b628d449f5988b1d2582e848b169f88365ec50e634fc213404db6f1fd4577c4",
+    "static/img/figures/gsos-301/unit-01/fig-U1-3.dark.svg": "de07b5fdae3a7982c74644edb8aac04b23e39274c33f887719cfa6d348c1416c",
+    "static/img/figures/gsos-301/unit-01/fig-U1-3.svg": "c725b748243a86549c1640c84dcd6d476045e1213cf96913b8bca12cafb540ef",
+    "static/img/figures/gsos-301/unit-01/fig-U1-4.dark.svg": "f6e5d6759a20cf320a22574fd9c1c0251c644d0335c1d4d6c0d9df21c2a73a0b",
+    "static/img/figures/gsos-301/unit-01/fig-U1-4.svg": "5046dcf8fdac1b54acee10169770063c5bad269eef4e4cfc9c444a933eb0f23f",
+    "static/img/figures/gsos-301/unit-01/fig-U1-5.dark.svg": "f212c063e269d18849800d96d81234bfa09be3e68a7b530963065e3ce591507c",
+    "static/img/figures/gsos-301/unit-01/fig-U1-5.svg": "8375da8a4781609e9aaa0db868f94b23057770bf95b2ee18f7093655cfd4cff9",
+    "static/img/figures/gsos-301/unit-01/fig-U1-6.dark.svg": "c43f173828a649f3dd08cabe7e44b1f6908bf1413e779066d33582dd21708209",
+    "static/img/figures/gsos-301/unit-01/fig-U1-6.svg": "e626b95fde785b9dce3b5acf0e63bf944aa55d4c34dcd3fc12fe9076f202d7e3"
+  },
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        "Scheme-and-Course-guides/extracted-text/2nd 2026.txt:802-828 (Weeks 1-3: Introduction to Sociology; Origins; Perspectives) directly maps to Topics 1.1, 1.2, 1.3",
+        "All 10 sub-topics U1-01 through U1-10 in specs/content/gsos-301/content-spec.md:124-135 covered in docs/semester-2/gsos-301/unit-01/topic-01..03.mdx",
+        "Course Learning Outcomes CLO 1 and CLO 6 correctly mapped to unit learning outcomes and concepts",
+        "validate:content passed with exit code 0"
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "pass",
+      "evidence": [
+        "Prior blocking defect S1 verified repaired: all citations and Further reading entries of Henson (2022) and Givens & White (2023) replaced with Hammond & Cheney (n.d.) and Conerly et al. (2021) in topic-01.mdx, topic-02.mdx, topic-03.mdx",
+        "Grounding aligns with open-access sources declared in specs/content/gsos-301/sources/unit-01.md: conerly2021 (OpenStax 3e) and hammondnd (LibreTexts, D-2026-0057 compliant)",
+        "Both sources declared under ## Unverifiable sources per Constitution Art. VII / D-2026-0001 with honest disclosure; underlying sociological concepts reflect standard scholarship"
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "All 10 sub-topics U1-01 through U1-10 mapped to dedicated sections across topic-01.mdx, topic-02.mdx, topic-03.mdx in specs/content/gsos-301/coverage/unit-01.md:3-14",
+        "All 11 concepts CON:GSOS-301-1-1 through CON:GSOS-301-1-11 mapped acyclically in specs/content/gsos-301/concepts/unit-01.md:3-15",
+        "Reading depth: 49 minutes total (topics: 9, 11, 11 min; index: 3 min; assessment: 10 min; teacher-notes: 5 min) within approved 45-60 min band; check:depth-gate passed with exit code 0"
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "pass",
+      "evidence": [
+        "10 MCQs independently solved blind in specs/content/gsos-301/reviews/unit-01/G3/logs-18895ffc/independent-assessment-derivation.md with 10/10 agreement with author keys (1-B, 2-C, 3-B, 4-B, 5-B, 6-B, 7-C, 8-B, 9-B, 10-B)",
+        "10 RRQs with clear model answers and point mark schemes (2 to 4 marks; 25 marks total)",
+        "5 ERQs with descriptive rubric levels and Bloom tags (Analyze to Evaluate/Create)",
+        "Answers strictly bounded in final ## Answers and marking guidance section; check:no-answer-keys passed with exit code 0"
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "unverified",
+      "evidence": [
+        "Prior blocking defect X1 verified repaired: scripts/heavy.sh node scripts/measure-figure-text.mjs verifies all 24 SVGs pass with exit code 0; wordmark styled with text-anchor: end; table cells re-wrapped within bounds",
+        "Heading hierarchy valid with single H1 and clean H2/H3 nesting across all 6 unit files",
+        "All 6 figures placed as <Figure> carriers with descriptive alt text matching manifest; visual density floor met",
+        "Rendered PNG captured at specs/content/gsos-301/reviews/unit-01/G3/logs-18895ffc/fig-U1-1-render.png via sharp",
+        "Live browser narrow-view (360x780) swipe testing and A4 print emulation omitted per crew brief host constraints (never run npm run build, a dev server, or Playwright); visual inspection remains unverified"
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "Register is plain-academic suitable for B.Ed pre-service trainees; technical terms defined before use with <Glossary> components",
+        "Concrete Pakistani context throughout (Hyderabad, Larkana, southern Punjab, Quetta, Faisalabad, katchi abadis, Gilgit-Baltistan)",
+        "Zero em-dash violations verified by check:no-em-dash with exit code 0"
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": [
+        "Full nine-part learning cycle in topic-01.mdx, topic-02.mdx, topic-03.mdx (situation, explanation, activity, check, summary, self-assessment, practicum, summative task, further reading)",
+        "Feasible Pakistani classroom activities with realistic groupings, materials, and timings",
+        "unit-teacher-notes.mdx provides pacing (6-8 hours contact time), practical work, and proactive handling of 3 common trainee misconceptions"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "advisory",
+      "message": "VERIFIED REPAIRED (X1 ACCESSIBILITY): In static/img/figures/gsos-301/unit-01/*.svg, all 12 prior figure text geometry overflows were resolved in commits 2a99c3aa and fb0aaaae. All 24 SVG variants pass measure-figure-text.mjs cleanly (exit code 0); wordmark uses text-anchor: end in .wm; table cell text in fig-U1-4 and fig-U1-6 re-wrapped within column boundaries.",
+      "resolved": true
+    },
+    {
+      "severity": "advisory",
+      "message": "VERIFIED REPAIRED (S1 SOURCES): In docs/semester-2/gsos-301/unit-01/topic-01.mdx, topic-02.mdx, and topic-03.mdx, all citations and Further reading references to Henson (2022) and Givens & White (2023) were replaced in commit 2a99c3aa with Hammond & Cheney (n.d.) and Conerly et al. (2021), aligning prose with sources/unit-01.md and ruling D-2026-0057.",
+      "resolved": true
+    },
+    {
+      "severity": "advisory",
+      "message": "A1 AUTHORITY / tracker and spec lifecycle: In specs/content/gsos-301/tasks.md:15-16, Unit 1 G0 is marked in-progress and G1 is marked not-started (\"pending G0 intake\"), though content-spec.md frontmatter status is \"approved\". CurriculumOwner should formally close the G0/G1 intake row once approved.",
+      "resolved": false
+    },
+    {
+      "severity": "uncertain",
+      "message": "X2 ACCESSIBILITY / live browser inspection: Automated live browser inspection (360x780 narrow viewport swipe testing and A4 print stylesheet DOM verification) was not executed due to host resource and crew brief constraints (\"never run npm run build, a dev server or Playwright\"). Structural accessibility, heading hierarchies, alt text, and SVG text geometry were verified statically. Live browser visual inspection remains unverified.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "RESOLVED IN REVIEW - INDEPENDENCE & ASSESSMENT DERIVATION: Reviewer acted independently and did not author or translate GSOS-301 Unit 1. All 10 MCQs were independently derived blind prior to reading the supplied answer key, achieving 10/10 agreement with author keys. All 10 RRQs and 5 ERQs were verified against Bloom taxonomy and course learning outcomes. Answers are strictly bounded in the final section.",
+      "resolved": true
+    },
+    {
+      "severity": "advisory",
+      "message": "CYCLE 2/2 FINAL ADVISORY ESCALATION: This review represents the second and final review cycle under ADR-0019 for GSOS-301 Unit 1 G3. Prior actionable content defects X1 and S1 are verified repaired. Live browser visual rendering remains unverified under host constraints. Review disposition is escalate; G3 remains open and uncertified; any further review cycle requires recorded owner authorization.",
+      "resolved": true
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gsos-301/reviews/unit-01/G3/logs-18895ffc/validate:content.txt"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/gsos-301/reviews/unit-01/G3/logs-18895ffc/check:depth-gate.txt"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/gsos-301/reviews/unit-01/G3/logs-18895ffc/check:figures.txt"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/gsos-301/reviews/unit-01/G3/logs-18895ffc/check:no-em-dash.txt"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/gsos-301/reviews/unit-01/G3/logs-18895ffc/check:no-answer-keys.txt"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/gsos-301/reviews/unit-01/G3/logs-18895ffc/check:docs-sync.txt"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 1,
+      "log_path": "specs/content/gsos-301/reviews/unit-01/G3/logs-18895ffc/render-review.txt"
+    },
+    {
+      "name": "check:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gsos-301/reviews/unit-01/G3/logs-18895ffc/check:content.txt"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/gsos-301/reviews/unit-01/G3/logs-18895ffc/check:content.txt": "f571ad1999c58bc7c989d5d3cd8900131369945e113a96c53252b2609b8fb4eb",
+    "specs/content/gsos-301/reviews/unit-01/G3/logs-18895ffc/check:depth-gate.txt": "15021f8f88122b596e67cfd48c2ff282fde912e1b86bb03c2137bcf9d8e062fd",
+    "specs/content/gsos-301/reviews/unit-01/G3/logs-18895ffc/check:docs-sync.txt": "cbc9f6e4b0b674cb49e2d9b795d81ed78f23dc431cba1130e4d64cf6d0bed749",
+    "specs/content/gsos-301/reviews/unit-01/G3/logs-18895ffc/check:figures.txt": "54a388cb9954b9d2f07f84e5385ac0003b94a6a54023abb188e864346958b04f",
+    "specs/content/gsos-301/reviews/unit-01/G3/logs-18895ffc/check:no-answer-keys.txt": "539ba62183931f332c562e346956452b9cf751e100de762601b786b497a7d612",
+    "specs/content/gsos-301/reviews/unit-01/G3/logs-18895ffc/check:no-em-dash.txt": "00405490c649d998b589b23505029de9134497966b02ff9ccefb1075aa414dd3",
+    "specs/content/gsos-301/reviews/unit-01/G3/logs-18895ffc/fig-U1-1-render.png": "6f077fb38f243d44de5955cfd8756e25faeefde029d85c65ad4e4039f547025f",
+    "specs/content/gsos-301/reviews/unit-01/G3/logs-18895ffc/independent-assessment-derivation.md": "c21aa096db21ec527e60b518c0ada0a7562f88431996227a796cb00d80949e5c",
+    "specs/content/gsos-301/reviews/unit-01/G3/logs-18895ffc/manifest.json": "c75ebd5b09cdeb3152c9585d7b5b850fbbb7c3517264a4451d11722dd2786bc8",
+    "specs/content/gsos-301/reviews/unit-01/G3/logs-18895ffc/measure-figure-text.txt": "fdf147c42f30b02e178a99202f088d506ef3bd8c87cd9956bedc41de50821199",
+    "specs/content/gsos-301/reviews/unit-01/G3/logs-18895ffc/render-review.txt": "52934eafbdee5f07ba27140f7f9ee3e4ae1436f3b316f2417bace42edf464199",
+    "specs/content/gsos-301/reviews/unit-01/G3/logs-18895ffc/validate:content.txt": "5b3153a9d41a11051bff1d2f0396cf26eaaf00ae79e3b894c202823645c0e6a6"
+  }
+}

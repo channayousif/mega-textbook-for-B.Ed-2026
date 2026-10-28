@@ -1,6 +1,7 @@
 import { loadFont } from '@remotion/fonts';
 import React from 'react';
 import { AbsoluteFill, Audio, interpolate, Sequence, staticFile, useCurrentFrame, useVideoConfig } from 'remotion';
+import { chunk } from './align';
 import type { CaptionLine, ShortProps } from './props';
 
 const URDU = 'Noto Nastaliq Urdu';
@@ -12,27 +13,23 @@ function useUrduFont(file: string) {
   }
 }
 
-/** Split a line into caption windows of at most maxWords x maxLines words. */
-export function chunk(text: string, maxWords: number, maxLines: number): string[][] {
-  const words = text.split(/\s+/).filter(Boolean);
-  const perWindow = maxWords * maxLines;
-  const windows: string[][] = [];
-  for (let i = 0; i < words.length; i += perWindow) {
-    const w = words.slice(i, i + perWindow);
-    const rows: string[] = [];
-    for (let j = 0; j < w.length; j += maxWords) rows.push(w.slice(j, j + maxWords).join(' '));
-    windows.push(rows);
-  }
-  return windows;
-}
+export { chunk };
 
 const Captions: React.FC<{ line: CaptionLine; props: ShortProps }> = ({ line, props }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const c = props.brand.captions;
-  const windows = chunk(line.text_ur, c.max_words_per_line, c.max_lines);
-  const total = (line.to_s - line.from_s) * fps;
-  const idx = Math.min(windows.length - 1, Math.floor((frame / total) * windows.length));
+  let rows: string[];
+  if (line.cues?.length) {
+    const now = line.from_s + frame / fps;
+    const cue = line.cues.find((q) => now < q.to_s) ?? line.cues[line.cues.length - 1];
+    rows = now < cue.from_s ? [] : chunk(cue.text_ur, c.max_words_per_line, 1e6)[0] ?? [];
+  } else {
+    const windows = chunk(line.text_ur, c.max_words_per_line, c.max_lines);
+    const total = (line.to_s - line.from_s) * fps;
+    rows = windows[Math.min(windows.length - 1, Math.floor((frame / total) * windows.length))];
+  }
+  if (!rows.length) return null;
   return (
     <div
       dir="rtl"
@@ -59,7 +56,7 @@ const Captions: React.FC<{ line: CaptionLine; props: ShortProps }> = ({ line, pr
           color: '#ffffff',
         }}
       >
-        {windows[idx].map((row, i) => <div key={i}>{row}</div>)}
+        {rows.map((row, i) => <div key={i}>{row}</div>)}
       </div>
     </div>
   );
@@ -85,7 +82,7 @@ const EndCard: React.FC<{ props: ShortProps }> = ({ props }) => {
       <div dir="rtl" lang="ur" style={{ fontFamily: URDU, fontSize: 64, lineHeight: 1.9, color: '#ffffff', textAlign: 'center' }}>
         {props.end_card.cta_ur}
       </div>
-      <div dir="ltr" style={{ unicodeBidi: 'isolate', fontFamily: 'sans-serif', fontSize: 44, fontWeight: 600, color: '#ffffff', marginTop: 40 }}>
+      <div dir="ltr" style={{ unicodeBidi: 'isolate', fontFamily: 'sans-serif', fontSize: 44, fontWeight: 600, color: '#ffffff', marginTop: 40, textAlign: 'center', overflowWrap: 'anywhere', maxWidth: '100%' }}>
         {props.end_card.url.replace(/^https?:\/\//, '')}
       </div>
     </AbsoluteFill>

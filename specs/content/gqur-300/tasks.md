@@ -22,6 +22,7 @@ on every unit).
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0042; content-spec status: approved |
 | Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-02/G2/20261027T050232399Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 93e6321; report reviews/unit-02/G3/agent-g3-gqur300-u2-run001.json; Stale since the figure-geometry repair; needs a fresh G3 run |
+| Unit 2 | G3 en-review | ▢ | | advisory cycle 2 (final), agent:codex-g3-reviewer: escalate; report reviews/unit-02/G3/codex-cycle2-20261028.json; exponent definition and ERQ-04 marking defects; current renders, source support and session provenance unavailable; owner escalation required; no completion or publication claim |
 | Unit 2 | G4 ur-translation | ▣ | | mirror complete (2026-10-18): all 6 files verified against EN 96f35fa3; 12 .ur.svg/.ur.dark.svg figure variants verified; teacher-notes activity names synced with topic-01 (بازار کا کھاتہ); structural parity clean under temporary reviewed flip (reverted); all 10 key_terms unbanked in terminology.csv and proposed to owner; translation_status stays draft pending fresh independent G5; continuation validation and owner handoff: reviews/unit-02/G4/handoff.md |
 | Unit 2 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at c61192e; G3 dependency escalated to owner; report reviews/unit-02/G5/agent-g5-gqur300-u2-run001.json |
 | Unit 2 | G6 assets | ▢ | | |
@@ -54,3 +55,9 @@ on every unit).
 | Unit 6 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at 4725d17; G3 dependency escalated (G-2026-30); report reviews/unit-06/G5/agent-g5-gqur300-u6-run001.json |
 | Unit 6 | G6 assets | ▢ | | |
 | Unit 6 | G7 publish | ▢ | | |
+
+| Unit 1 | G3 en-review | ▢ | | advisory: pass (cycle 2); report specs/content/gqur-300/reviews/unit-01/G3/agent-g3-gqur300-u1-run954d5f3b.json; all 6 previous findings verified resolved (figure geometry, coverage grounding, npst2009 point-of-use disclosure, CLO-SLO alignment, MCQ key distribution balanced across a-d, grammar); all 7 criteria pass; independent blind solve 10/10; row stays open pending qualification (ADR-0019) |
+
+| Unit 4 | G3 en-review | ▢ | | advisory cycle 2 (final), agent:codex-g3-reviewer: escalate; report reviews/unit-04/G3/codex-cycle2-20261028.json; prior blocking findings specifically repaired; residual courtyard geometry, source support and Bloom-demand concerns; current renders and blind solve unavailable; owner escalation required; no certification or publication claim |
+
+| Unit 6 | G3 en-review | ▢ | agent:codex-g3-reviewer | advisory cycle 2 (final): escalate; report specs/content/gqur-300/reviews/unit-06/G3/codex-cycle2-20261028.json; A1 and S1 repaired, S2 partly repaired; RRQ-09 arithmetic, source support and budget-order findings remain; current renders and external session provenance unavailable; owner escalation required, no completion or publication claim |
