@@ -21,11 +21,11 @@
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-01/G2/20261028T093113893Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-01/G2/20261028T110408565Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | awaiting an independent reviewer |
 | Unit 1 | G4 ur-translation | ▢ | | separate job |
 | Unit 1 | G5 ur-review | ▢ | | |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-04/G2/20261028T101739653Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-04/G2/20261028T110357781Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | awaiting an independent reviewer |
 | Unit 4 | G4 ur-translation | ▢ | | separate job |
 | Unit 4 | G5 ur-review | ▢ | | |
