@@ -34,7 +34,7 @@
 | Unit 4 | G3 en-review | ▢ | | awaiting an independent reviewer |
 | Unit 4 | G4 ur-translation | ▢ | | separate job |
 | Unit 4 | G5 ur-review | ▢ | | |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-06/G2/20261028T111933200Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-06/G2/20261028T170213919Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | awaiting an independent reviewer |
 | Unit 6 | G4 ur-translation | ▢ | | separate job |
 | Unit 6 | G5 ur-review | ▢ | | |
