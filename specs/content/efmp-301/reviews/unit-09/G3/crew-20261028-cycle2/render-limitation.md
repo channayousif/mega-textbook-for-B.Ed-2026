@@ -1,0 +1,1 @@
+Current narrow-view and A4 print review not executed. .crew/brief.md forbids npm run build, dev servers and Playwright. Prior rendered artifacts are not reused as current evidence. Geometry script also launches Chromium. Accessibility remains unverified; escalate.

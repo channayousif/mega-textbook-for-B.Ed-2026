@@ -1,0 +1,28 @@
+✓ static/img/figures/efmp-301/unit-04/fig-U4-1.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-04/fig-U4-1.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-04/fig-U4-1.ur.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-04/fig-U4-1.ur.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-04/fig-U4-2.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-04/fig-U4-2.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-04/fig-U4-2.ur.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-04/fig-U4-2.ur.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-04/fig-U4-3.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-04/fig-U4-3.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-04/fig-U4-3.ur.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-04/fig-U4-3.ur.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-04/fig-U4-4.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-04/fig-U4-4.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-04/fig-U4-4.ur.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-04/fig-U4-4.ur.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-04/fig-U4-5.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-04/fig-U4-5.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-04/fig-U4-5.ur.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+  ~ shape .panel-c [489,304,762,442] collides with the wordmark by 86.3 x 3.0px
+✓ static/img/figures/efmp-301/unit-04/fig-U4-5.ur.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+  ~ shape .panel-c [489,304,762,442] collides with the wordmark by 86.3 x 3.0px
+✓ static/img/figures/efmp-301/unit-04/fig-U4-6.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-04/fig-U4-6.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-04/fig-U4-6.ur.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-04/fig-U4-6.ur.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+
+2 cosmetic wordmark collision(s) - reported, not failed.
