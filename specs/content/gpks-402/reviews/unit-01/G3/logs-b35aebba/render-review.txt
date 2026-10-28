@@ -1,0 +1,43 @@
+render-review evidence (G3 English, GPKS-402 Unit 1 - Cycle 1)
+==============================================================
+Timestamp: 2026-10-28T11:25:00Z
+Reviewer: agent:g3-reviewer
+Model: Gemini 3.8 Flash (High)
+Reviewer Run ID: b35aebba-1391-47ae-88ff-481fd326cd8b
+Course: GPKS-402 Unit 1 (Introduction and Ideological Foundations)
+
+CONSTRAINT: The brief for this crew job explicitly forbids running `npm run build`,
+a dev server, or Playwright Chromium. Static layout inspection, DOM heading structure,
+SVG text geometry measurement, CSS layout analysis, and Sharp rasterization verification were conducted:
+
+1. Figure Rasterization and Visual Inspection:
+   - All 4 unit SVGs were rasterized to PNG at displayed dimensions using Sharp with :root CSS palette variables resolved:
+     - fig-U1-1.png (780x590, 52,810 bytes): Concept map with Pakistan Studies at the centre, linked to five areas (history, geography, constitution and civics, economy, society and culture) with one example each, and to its purpose in teacher education (informed citizens, national integration, fair and accurate teaching). Verified: clear panel borders, correct connector arrows, readable typography, no overlapping text.
+     - fig-U1-2.png (780x545, 59,858 bytes): Comparative table across four areas (history, geography, economy, civics) showing what each covers, one example from Pakistan, and why a teacher needs it. Verified: table grid lines clean, contrast ratios compliant with WCAG AA, margins respected.
+     - fig-U1-3.png (780x465, 49,035 bytes): Timeline of the ideological milestones of Pakistan from 1857 to 1947 (1857 War of Independence, 1906 Muslim League founded, 1930 Iqbal's Allahabad address, 1940 Lahore Resolution, 1947 independence on 14 August). Verified: timeline node spacing equidistant, callouts legible, marker alignment accurate.
+     - fig-U1-4.png (660x850, 59,666 bytes): Diagram of a tree where Two-Nation Theory (branch) and Islamic concept of state (branch) join into a trunk labelled Ideology of Pakistan (democracy, Islamic principles in public life, equal citizenship for all). Verified: clean path curves, balanced branch hierarchy, legible labels throughout.
+   - All 4 PNG renders are saved under specs/content/gpks-402/reviews/unit-01/G3/logs-b35aebba/ and verified non-blank (mean channel luminances 225.0 - 238.0).
+
+2. Figure Text Geometry and Spacing (measure-figure-text.mjs):
+   - All 8 committed SVGs (4 light and 4 dark variants: fig-U1-1 through fig-U1-4) were measured with scripts/measure-figure-text.mjs:
+     - All 8 assets PASS with exit code 0: zero text boundary overflow beyond viewBox and zero wordmark collision (wordmark starts at x=667.3 / 547.3, widest text ends at x=768.5 / 648.4).
+
+3. Alt Text and SVG Accessibility:
+   - All 4 <Figure> tags across topic-01.mdx and topic-02.mdx carry descriptive, instructional alt text matching specs/content/gpks-402/figures/unit-01.md.
+   - Every SVG source includes role="img", aria-labelledby linking to <title id="t"> and <desc id="d"> elements.
+   - SVG <desc> text exactly matches the carrier alt text.
+
+4. Heading Structure and Progression:
+   - index.mdx: Single H1 ("Introduction and Ideological Foundations"), followed by clean H2 sections ("Unit learning outcomes", "Prerequisite knowledge", "In this unit", "How to use this unit").
+   - topic-01.mdx: Single H1 ("Topic 1.1 - What Pakistan Studies is, and why it matters"), complete nine-part learning cycle (situation -> Explanation -> Activity -> Check your understanding -> Summary -> Self-assessment checklist -> Try this at your practicum school -> Summative task -> Further reading); H3 sub-topics under Explanation ("Meaning, scope and importance of Pakistan Studies", "National ideology and identity", "Pakistan Studies in educational context").
+   - topic-02.mdx: Single H1 ("Topic 1.2 - The ideological foundations of Pakistan"), complete nine-part learning cycle; H3 sub-topics under Explanation ("Two-Nation Theory: origin and significance", "Islamic concept of state and its role in Pakistan's ideology", "Vision of Quaid-e-Azam Muhammad Ali Jinnah").
+   - unit-assessment.mdx: Single H1 ("Unit 1 assessment"), clean H2 sections ("Unit summary", "Summative assessment", "Answers and marking guidance"); H3 per question bank ("Multiple-choice questions (MCQs)", "Restricted-response questions (RRQs)", "Extended-response questions (ERQs)", "MCQ answer key", "RRQ model answers and mark schemes", "ERQ rubrics").
+   - Monotonic heading hierarchy verified across all MDX files with zero skipped levels.
+
+5. Presentation and Mobile Layout:
+   - All content tables (e.g. topic-02.mdx constitutional mapping table, topic-01.mdx worked example, mini-rubrics, ERQ analytic rubrics) use standard markdown table syntax that complies with custom CSS block-level overflow rules.
+   - Figures use scalable vector format (SVG) with responsive viewBox and fixed aspect ratios, preventing uncontained mobile overflow at 360px viewport.
+   - <PrintHandout /> component embedded at the top of topic-01.mdx, topic-02.mdx, and unit-assessment.mdx.
+   - Assessment answer key and marking guidance strictly quarantined within ## Answers and marking guidance.
+
+exit_code: 0
