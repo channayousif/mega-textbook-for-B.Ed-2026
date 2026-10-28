@@ -103,3 +103,40 @@ export function specUnitNumbers(specText) {
   if (!fm || !/^status:\s*approved\s*$/m.test(fm[1])) return [];
   return [...new Set([...specText.matchAll(/^## Unit (\d+)\b/gm)].map((m) => Number(m[1])))].sort((a, b) => a - b);
 }
+
+/** Job states that are crew work in flight. `gate_red` and `blocked` wait on a person, so they never hold the crew. */
+export const IN_FLIGHT = ['queued', 'running', 'pr_open', 'ready', 'batched'];
+export const isCorpusStage = (stage) => !/^(maint|intel)_/.test(stage);
+
+/**
+ * The one course the crew works on first (owner ruling 2026-10-28: finish what was started
+ * before starting a new course). A course is started once it has an authored unit or crew work
+ * on the board (its first author jobs are in flight before any unit lands), and it is finished
+ * *for the crew* when no crew work is left on it; whatever remains waits on a person.
+ *
+ *  - Focus: the started course with crew work left and the fewest jobs remaining (the one
+ *    nearest done), ties in catalog order.
+ *  - With no started course left to work on, the first course in catalog order that has an
+ *    approved spec but no authored unit becomes the focus. Only the focus may start: the
+ *    planner withholds `author` jobs for every other unstarted course.
+ *
+ * @param {object} p
+ * @param {Map<string, boolean>} p.started   course code -> started (see above)
+ * @param {{course: string, stage: string, status?: string}[]} p.jobs  board jobs plus this pass's jobs for started courses
+ * @param {string[]} p.newCourses            approved but unstarted courses
+ * @param {string[]} p.catalogOrder          course codes in catalog order
+ * @returns {{course: string, reason: string} | null}
+ */
+export function focusCourse({ started, jobs, newCourses, catalogOrder }) {
+  const rank = (code) => { const i = catalogOrder.indexOf(code); return i < 0 ? catalogOrder.length : i; };
+  const left = new Map();
+  for (const j of jobs) {
+    if (!isCorpusStage(j.stage) || !IN_FLIGHT.includes(j.status ?? 'queued')) continue;
+    left.set(j.course, (left.get(j.course) || 0) + 1);
+  }
+  const open = [...left.keys()].filter((c) => started.get(c))
+    .sort((a, b) => left.get(a) - left.get(b) || rank(a) - rank(b));
+  if (open.length) return { course: open[0], reason: `finishing: ${left.get(open[0])} crew job(s) left` };
+  const next = [...newCourses].sort((a, b) => rank(a) - rank(b))[0];
+  return next ? { course: next, reason: 'new course: every started course is done for the crew' } : null;
+}

@@ -6,11 +6,11 @@
 
 | Unit | Title | EN draft | G3 review | UR translation | G5 review | Figures | Notes |
 |---|---|---|---|---|---|---|---|
-| 1 | Introduction and Ideological Foundations | ☐ | ☐ | ☐ | ☐ | planned | Withdrawn 2026-10-10 (owner, D-2026-0053 / G-2026-100): authored before intake; re-author after spec approval |
+| 1 | Introduction and Ideological Foundations | ✓ | ☐ | ☐ | ☐ | placed | Withdrawn 2026-10-10 (owner, D-2026-0053 / G-2026-100); re-authored 2026-10-28 from the approved spec (D-2026-0074), English only; see stage rows below |
 | 2 | Reform Movements and the Pakistan Movement | ☐ | ☐ | ☐ | ☐ | planned | Withdrawn 2026-10-10 (owner, D-2026-0053 / G-2026-100) |
 | 3 | Constitutional Development | ☐ | ☐ | ☐ | ☐ | planned | |
 | 4 | Governance, Rights and Geography | ☐ | ☐ | ☐ | ☐ | planned | |
-| 5 | Economy and Society | ☐ | ☐ | ☐ | ☐ | planned | |
+| 5 | Economy and Society | ✓ | ☐ | ☐ | ☐ | placed (EN) | English draft authored 2026-10-28; G2 deterministic checks pass; independent review and Urdu remain open |
 | 6 | Foreign Policy, Issues and Education | ✓ | ☐ | ☐ | ☐ | placed | English authored 2026-10-28; G2 gate evidence recorded below; G3/G5 remain open; Urdu is a separate job |
 
 **Key:** ▣ = in progress, ☐ = not started, ✓ = done, ✗ = escalated
@@ -21,6 +21,11 @@
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-01/G2/20261028T093113893Z-gates.json |
+| Unit 1 | G3 en-review | ▢ | | awaiting an independent reviewer |
+| Unit 1 | G4 ur-translation | ▢ | | separate job |
+| Unit 1 | G5 ur-review | ▢ | | |
+
 | Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-06/G2/20261028T102354806Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | awaiting an independent reviewer |
 | Unit 6 | G4 ur-translation | ▢ | | separate job |
@@ -37,3 +42,17 @@
 
 - `check:pipeline-gate` expected red until content-spec status changes to `approved` (board action).
 - `check:figures` expected red until schematics are rendered and placed (ADR-0024 handoff).
+
+
+## Unit 5 authoring pipeline
+
+The stage rows below govern Unit 5. No G1 re-evaluation or G3/G5 approval is recorded here.
+
+| Unit | Stage | Status | Initials | Notes |
+|---|---|---|---|---|
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-05/G2/20261028T102221722Z-gates.json |
+| Unit 5 | G3 en-review | ▢ | | Fresh independent review required |
+| Unit 5 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored here |
+| Unit 5 | G5 ur-review | ▢ | | Pending translation and independent review |
+| Unit 5 | G6 assets | ▣ | | Four English SVGs placed; geometry validation pending; Urdu localisation is separate |
+| Unit 5 | G7 publish | ▢ | | No deployment or publication action in this job |
