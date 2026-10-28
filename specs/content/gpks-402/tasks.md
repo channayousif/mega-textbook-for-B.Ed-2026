@@ -44,7 +44,7 @@ Only Unit 3 is updated by this authoring job. The approved content-spec is the d
 
 | Unit | Stage | Status | Reviewer | Notes |
 |---|---|---|---|---|
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-03/G2/20261028T094251597Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-03/G2/20261028T110307089Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | Independent expert review pending; no certification claimed |
 | Unit 3 | G4 ur-translation | ▢ | | Separate Urdu job; localise all four schematic sources and mirror RTL layout |
 | Unit 3 | G5 ur-review | ▢ | | Pending translation and independent review; authored concept labels require review |
