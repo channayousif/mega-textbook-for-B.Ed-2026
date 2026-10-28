@@ -11,7 +11,7 @@
 | 3 | Constitutional Development | ☐ | ☐ | ☐ | ☐ | planned | |
 | 4 | Governance, Rights and Geography | ✓ | ☐ | ☐ | ☐ | placed | Authored 2026-10-28 from the approved spec (D-2026-0074), English only; see stage rows below |
 | 5 | Economy and Society | ✓ | ☐ | ☐ | ☐ | placed (EN) | English draft authored 2026-10-28; G2 deterministic checks pass; independent review and Urdu remain open |
-| 6 | Foreign Policy, Issues and Education | ☐ | ☐ | ☐ | ☐ | planned | |
+| 6 | Foreign Policy, Issues and Education | ✓ | ☐ | ☐ | ☐ | placed | English authored 2026-10-28; G2 gate evidence recorded below; G3/G5 remain open; Urdu is a separate job |
 
 **Key:** ▣ = in progress, ☐ = not started, ✓ = done, ✗ = escalated
 
@@ -34,6 +34,10 @@
 | Unit 4 | G3 en-review | ▢ | | awaiting an independent reviewer |
 | Unit 4 | G4 ur-translation | ▢ | | separate job |
 | Unit 4 | G5 ur-review | ▢ | | |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-06/G2/20261028T170213919Z-gates.json |
+| Unit 6 | G3 en-review | ▢ | | awaiting an independent reviewer |
+| Unit 6 | G4 ur-translation | ▢ | | separate job |
+| Unit 6 | G5 ur-review | ▢ | | |
 
 ## Course-level
 
