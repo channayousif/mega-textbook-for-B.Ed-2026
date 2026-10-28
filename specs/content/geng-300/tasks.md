@@ -42,3 +42,4 @@ G1 unit-spec affirmed at intake (D-2026-0019). G2 en-draft cleared by determinis
 | Unit 4 | G5 ur-review | ▢ | | English-only course |
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
+| Unit 1 | G3 en-review | ▢ | | advisory cycle 2 (disposition: pass, advisory findings F1-F2) at specs/content/geng-300/reviews/unit-01/G3/agent-g3-geng-300-u1-run41b4c5ae.json; agent reviews advisory under ADR-0019 |
