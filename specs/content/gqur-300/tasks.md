@@ -54,3 +54,5 @@ on every unit).
 | Unit 6 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at 4725d17; G3 dependency escalated (G-2026-30); report reviews/unit-06/G5/agent-g5-gqur300-u6-run001.json |
 | Unit 6 | G6 assets | ▢ | | |
 | Unit 6 | G7 publish | ▢ | | |
+
+| Unit 1 | G3 en-review | ▢ | | advisory: pass (cycle 2); report specs/content/gqur-300/reviews/unit-01/G3/agent-g3-gqur300-u1-run954d5f3b.json; all 6 previous findings verified resolved (figure geometry, coverage grounding, npst2009 point-of-use disclosure, CLO-SLO alignment, MCQ key distribution balanced across a-d, grammar); all 7 criteria pass; independent blind solve 10/10; row stays open pending qualification (ADR-0019) |
