@@ -6,7 +6,7 @@
 
 | Unit | Title | EN draft | G3 review | UR translation | G5 review | Figures | Notes |
 |---|---|---|---|---|---|---|---|
-| 1 | Introduction and Ideological Foundations | ☐ | ☐ | ☐ | ☐ | planned | Withdrawn 2026-10-10 (owner, D-2026-0053 / G-2026-100): authored before intake; re-author after spec approval |
+| 1 | Introduction and Ideological Foundations | ✓ | ☐ | ☐ | ☐ | placed | Withdrawn 2026-10-10 (owner, D-2026-0053 / G-2026-100); re-authored 2026-10-28 from the approved spec (D-2026-0074), English only; see stage rows below |
 | 2 | Reform Movements and the Pakistan Movement | ☐ | ☐ | ☐ | ☐ | planned | Withdrawn 2026-10-10 (owner, D-2026-0053 / G-2026-100) |
 | 3 | Constitutional Development | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-10-28; G2 deterministic evidence recorded below; G3/G5 remain open; Urdu is a separate job |
 | 4 | Governance, Rights and Geography | ☐ | ☐ | ☐ | ☐ | planned | |
@@ -14,6 +14,17 @@
 | 6 | Foreign Policy, Issues and Education | ☐ | ☐ | ☐ | ☐ | planned | |
 
 **Key:** ▣ = in progress, ☐ = not started, ✓ = done, ✗ = escalated
+
+## Stage rows
+
+`check:pipeline-gate` reads these (`| Unit | Stage | Status | Initials | Notes |`); the last row for a unit and stage is authoritative.
+
+| Unit | Stage | Status | Initials | Notes |
+|---|---|---|---|---|
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-01/G2/20261028T093113893Z-gates.json |
+| Unit 1 | G3 en-review | ▢ | | awaiting an independent reviewer |
+| Unit 1 | G4 ur-translation | ▢ | | separate job |
+| Unit 1 | G5 ur-review | ▢ | | |
 
 ## Course-level
 

@@ -1,0 +1,53 @@
+render-review - GQUR-300 Unit 3 (en) - 2026-10-28T03:25:00Z
+Reviewer: agent:agy
+Model: Gemini 3.8 Flash (High)
+Reviewer Run ID: 90e224ef-4655-4493-8a83-c67e8275c04f
+Exit code: 0
+
+Approach:
+  In accordance with repository resource constraints and crew instructions forbidding
+  `npm run build`, a dev server, and Playwright, visual rendering and accessibility review
+  were conducted via static layout inspection, SVG DOM/geometry evaluation, CSS layout analysis,
+  and sharp rasterization.
+
+1. Static Raster Renders:
+   All 6 placed SVG figures in static/img/figures/gqur-300/unit-03/ were rasterised to PNG at displayed size with palette variables resolved:
+   - fig-U3-1-render.png (diagram, 780x470, 28,368 bytes)
+   - fig-U3-2-render.png (table, 780x482, 48,937 bytes)
+   - fig-U3-3-render.png (flowchart, 780x470, 47,926 bytes)
+   - fig-U3-4-render.png (diagram, 780x470, 28,744 bytes)
+   - fig-U3-5-render.png (concept-map, 780x470, 43,097 bytes)
+   - fig-U3-6-render.png (table, 780x470, 48,692 bytes)
+   Saved in specs/content/gqur-300/reviews/unit-03/logs-90e224ef/.
+
+2. Heading and Semantic Structure:
+   - index.mdx: Single H1 ("Algebraic Reasoning"); clean H2s ("Unit learning outcomes", "Prerequisite knowledge", "In this unit", "How to use this unit").
+   - topic-01.mdx: Single H1 ("Topic 3.1 - From patterns to algebra: variables and expressions"); clean H2 nine-part learning cycle; H3 sub-topics under Explanation ("Patterns and sequences", "Variables and algebraic expressions").
+   - topic-02.mdx: Single H1 ("Topic 3.2 - Linear equations and inequalities"); clean H2 nine-part learning cycle; H3 sub-topics under Explanation ("Linear equations", "Linear inequalities").
+   - topic-03.mdx: Single H1 ("Topic 3.3 - Using algebra in problem solving"); clean H2 nine-part learning cycle; H3 sub-topics under Explanation ("Use of algebra in problem solving").
+   - unit-assessment.mdx: Single H1 ("Unit 3 assessment"); clean H2 sections ("Unit summary", "Summative assessment", "Answers and marking guidance"); H3 per question bank ("Multiple-choice questions (MCQs)", "Restricted-response questions (RRQs)", "Extended-response questions (ERQs)", "MCQ answer key", "RRQ model answers and mark schemes", "ERQ rubrics").
+   - unit-teacher-notes.mdx: Single H1 ("Unit 3 teacher notes"); clean H2 instructional guidance ("Sequencing note", "Teaching strategies from the guide", "Common misconceptions to probe", "Running the activities", "Practical work", "Assessment guidance", "Practicum links").
+   - Zero skipped heading levels across all 6 unit files.
+
+3. Figure Presentation and Accessibility Wiring:
+   - All 6 figures have placed carriers with matching src paths and dimensions (780x470, and 780x482 for fig-U3-2).
+   - Alt text: Non-empty, descriptive instructional alt text present on all <Figure> tags matching specs/content/gqur-300/figures/unit-03.md.
+   - SVGs include role="img", aria-labelledby linking to <title> and <desc> elements.
+   - Both light and dark mode variants (.svg and .dark.svg) and Urdu variants (.ur.svg and .ur.dark.svg) exist and are synchronized (24 SVGs total).
+   - Glyph text geometry (scripts/measure-figure-text.mjs): Widest text within bounds across all 24 SVGs; zero text collisions and zero text-over-edge overflows (widest text at 768.4 in English variants, wordmark at 675.7; widest text at 739 in Urdu variants, wordmark at 12).
+
+4. Descriptive Links and Navigation:
+   - Intra-unit navigation in index.mdx uses descriptive labels.
+   - No raw or ambiguous URLs in body prose.
+   - Further reading links use descriptive titles and valid targets in all three topic files:
+     - topic-01.mdx: [Prealgebra 2e (Ch. 2 The Language of Algebra)](https://openstax.org/details/books/prealgebra-2e), [Promoting mathematical thinking of university students: The case of a numeracy course](https://doi.org/10.1007/s42330-024-00342-0).
+     - topic-02.mdx: [Prealgebra 2e (Ch. 8 Solving Linear Equations)](https://openstax.org/details/books/prealgebra-2e), [Mathematics: Suggested Guidelines (Grades 1-8)](https://ncc.gov.pk/Detail/ZjgzYzg2MmMtZDc0Zi00NjEzLTk5ZmYtZGJiNjc5ODljOGUx).
+     - topic-03.mdx: [Prealgebra 2e (Ch. 2 The Language of Algebra; Ch. 8 Solving Linear Equations)](https://openstax.org/details/books/prealgebra-2e), [Mathematics: Suggested Guidelines (Grades 1-8)](https://ncc.gov.pk/Detail/ZjgzYzg2MmMtZDc0Zi00NjEzLTk5ZmYtZGJiNjc5ODljOGUx).
+
+5. Assessment Section Isolation:
+   - Assessment answers and marking keys strictly bounded within ## Answers and marking guidance in unit-assessment.mdx:148.
+   - Zero leaked answer keys in frontmatter or topic prose. Passed check:no-answer-keys.
+
+6. Visual Layout & Print Adaptation:
+   - Content tables in topic files and markdown tables scale without horizontal viewport overflow.
+   - <PrintHandout /> component embedded in all topic, assessment, and teacher notes files.
