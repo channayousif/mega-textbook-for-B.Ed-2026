@@ -52,7 +52,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 4 | G7 publish | ▢ | | |
 | Unit 5 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
 | Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-05/G2/20261027T150443267Z-gates.json |
-| Unit 5 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at a1411cdc; report reviews/unit-05/G3/agent-g3-efmp301-u5-run001.json; Stale since the figure-geometry repair; needs a fresh G3 run |
+| Unit 5 | G3 en-review | ▢ | agent:codex-g3-reviewer | advisory cycle2: escalate; final authorised cycle, owner action required; report reviews/unit-05/G3/codex-crew-cycle2.json |
 | Unit 5 | G4 ur-translation | ✅ | auto:gates | full UR mirror (5 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
 | Unit 5 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at b8eabccc; G3 dependency escalated to owner; figure/prose vocabulary splits escalated to owner; report reviews/unit-05/G5/agent-g5-efmp301-u5-run001.json |
 | Unit 5 | G6 assets | ▢ | | |
