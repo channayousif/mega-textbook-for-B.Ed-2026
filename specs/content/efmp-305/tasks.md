@@ -34,6 +34,7 @@ per-topic layout: `index.mdx` + `topic-01…02.mdx` (nine-part cycles) + `unit-a
 | Unit 1 | G6 assets | ▢ | | 4 schematic SVGs prompt-only |
 | Unit 1 | G7 publish | ▢ | | |
 | Unit 1 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-305/reviews/unit-01/G3/agent-g3-efmp-305-u1-run2f195870.json |
+| Unit 1 | G3 en-review | ▢ | | advisory: escalate; final cycle; agent:codex-g3-reviewer; report specs/content/efmp-305/reviews/unit-01/G3/codex-01a17f6f.json; prior findings resolved, new assessment/source defects and missing render/provenance evidence require owner disposition; no certification |
 
 **Unit 2 - Understanding Learner Diversity (2026-10-09):** authored to the Spec 008 v3.0
 per-topic layout: `index.mdx` + `topic-01…02.mdx` (nine-part cycles) + `unit-assessment.mdx`
@@ -45,6 +46,7 @@ per-topic layout: `index.mdx` + `topic-01…02.mdx` (nine-part cycles) + `unit-a
 | Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-02/G2/20261019T134925266Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | |
 | Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied (2026-10-19) for agent-g3-efmp-305-u2-run5873b2cc: Florian (2014) Further reading corrected to the verified florian2014 record (29(3), 286-294, DOI); Hornby DOI given link text (EN and UR); Hornby (2014) recorded in sources/unit-02.md as further reading only; the two repo-wide gate findings (EFMP-305 Unit 6 depth, EFMP-304 alt text) are outside this unit and no longer reproduce; fresh independent G3 needed |
+| Unit 2 | G3 en-review | ▢ | | advisory: pass (cycle 2); report specs/content/efmp-305/reviews/unit-02/G3/agent-g3-efmp-305-u2-runfd523bce.json; cycle 1 citation repair verified landed in topic-02.mdx; check:depth-gate and check:figures clean at exit 0; all 7 criteria pass; independent blind solve 10/10; row stays open pending qualification (ADR-0019) |
 | Unit 2 | G4 ur-translation | ▣ | | mirror complete (2026-10-19): all 5 files translated and verified against EN 9e6da648; 4 .ur.svg/.ur.dark.svg figure variants synced; structural parity clean under temporary reviewed flip (reverted); all 5 key_terms conform to terminology.csv; handoff: reviews/unit-02/G4/translation-handoff.md; translation_status stays draft pending fresh independent G5 |
 | Unit 2 | G5 ur-review | ▢ | | |
 | Unit 2 | G6 assets | ▢ | | 4 schematic SVGs prompt-only |
@@ -83,8 +85,8 @@ renders them.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 4 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-04/G2/20261017T113335543Z-gates.json |
-| Unit 4 | G3 en-review | ▢ | | |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-04/G2/20261027T192354658Z-gates.json |
+| Unit 4 | G3 en-review | ▢ | | Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 4 | G4 ur-translation | ▣ | | mirror complete (2026-10-18): all 5 files translated and verified against EN c31cad8f; 4 .ur.svg/.ur.dark.svg figure variants synced; structural parity clean under temporary reviewed flip (reverted); all 3 key_terms conform to terminology.csv; handoff: reviews/unit-04/G4/translation-handoff.md; translation_status stays draft pending fresh independent G5 |
 | Unit 4 | G5 ur-review | ▢ | | |
 | Unit 4 | G6 assets | ▢ | | 4 schematic figures prompt-only (1 concept-map, 1 diagram, 2 table) |
@@ -119,8 +121,8 @@ renders them. Statute framing follows `D-2026-0053` item 7: the Sindh Act is tau
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 5 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-05/G2/20261017T113341540Z-gates.json |
-| Unit 5 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only, not certification: specs/content/efmp-305/reviews/unit-05/G3/01a14adc-fef3-7883-8e8f-dd0c7ca30b71.json. Assessment ambiguity, incomplete audit, privacy conflict, source overclaims; provenance and narrow/A4 renders unavailable. |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-05/G2/20261027T191833148Z-gates.json |
+| Unit 5 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only, not certification: specs/content/efmp-305/reviews/unit-05/G3/01a14adc-fef3-7883-8e8f-dd0c7ca30b71.json. Assessment ambiguity, incomplete audit, privacy conflict, source overclaims; provenance and narrow/A4 renders unavailable. Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 5 | G4 ur-translation | ▣ | | mirror complete (2026-10-19): all 6 files translated and verified against EN 3a8a8c0e; 6 .ur.svg/.ur.dark.svg figure variants synced; structural parity clean; all 3 key_terms conform to terminology.csv; handoff: reviews/unit-05/G4/translation-handoff.md; translation_status stays draft pending fresh independent G5 |
 | Unit 5 | G5 ur-review | ▢ | | |
 | Unit 5 | G6 assets | ▢ | | 6 schematic figures prompt-only (1 timeline, 1 concept-map, 1 diagram, 3 table) |
