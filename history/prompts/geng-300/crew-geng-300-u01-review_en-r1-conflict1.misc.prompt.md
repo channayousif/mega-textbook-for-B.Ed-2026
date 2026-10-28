@@ -1,6 +1,6 @@
 ---
 id: crew-geng-300-u01-review_en-r1-conflict1
-title: crew fix GENG-300 unit 1 (conflict1)
+title: crew fix GENG-300 unit 1
 stage: misc
 date: 2026-10-28
 surface: agent
@@ -9,15 +9,34 @@ feature: geng-300
 branch: crew/geng-300-u01-review_en-r1
 user: crew
 command: crew fix
-labels: ["crew", "agy", "fix", "conflict"]
+labels: ["crew", "agy", "fix"]
 links:
   spec: specs/content/geng-300/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
- - specs/content/geng-300/tasks.md
+ - history/prompts/geng-300/0898-geng-300-u01-review_en-r1.misc.prompt.md
  - history/prompts/geng-300/crew-geng-300-u01-review_en-r1-conflict1.misc.prompt.md
+ - history/prompts/geng-300/crew-geng-300-u01-review_en-r1.misc.prompt.md
+ - specs/content/geng-300/reviews/unit-01/G3/agent-g3-geng-300-u1-run41b4c5ae.json
+ - specs/content/geng-300/reviews/unit-01/G3/agent-g3-geng-300-u1-run41b4c5ae.summary.md
+ - specs/content/geng-300/reviews/unit-01/G3/crew-41b4c5ae/manifest.json
+ - specs/content/geng-300/reviews/unit-01/logs-41b4c5ae/check-depth-gate.txt
+ - specs/content/geng-300/reviews/unit-01/logs-41b4c5ae/check-docs-sync.txt
+ - specs/content/geng-300/reviews/unit-01/logs-41b4c5ae/check-figures.txt
+ - specs/content/geng-300/reviews/unit-01/logs-41b4c5ae/check-no-answer-keys.txt
+ - specs/content/geng-300/reviews/unit-01/logs-41b4c5ae/check-no-em-dash.txt
+ - specs/content/geng-300/reviews/unit-01/logs-41b4c5ae/measure-figure-text.txt
+ - specs/content/geng-300/reviews/unit-01/logs-41b4c5ae/render-review.txt
+ - specs/content/geng-300/reviews/unit-01/logs-41b4c5ae/validate-content.txt
+ - specs/content/geng-300/reviews/unit-01/renders-41b4c5ae/fig-U1-1.png
+ - specs/content/geng-300/reviews/unit-01/renders-41b4c5ae/fig-U1-2.png
+ - specs/content/geng-300/reviews/unit-01/renders-41b4c5ae/fig-U1-3.png
+ - specs/content/geng-300/reviews/unit-01/renders-41b4c5ae/fig-U1-4.png
+ - specs/content/geng-300/reviews/unit-01/renders-41b4c5ae/fig-U1-5.png
+ - specs/content/geng-300/reviews/unit-01/renders-41b4c5ae/fig-U1-6.png
+ - specs/content/geng-300/tasks.md
 tests:
  - npm run check:content
 ---
@@ -55,26 +74,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (geng-300-u01-fix, fix, opencode) G3 en-review stays open and stale; a fresh independent review is needed after the figure-geometry changes. No `.ur.svg` files exist for this English-only course.
 - (geng-300-u01-repair_en-conflict1, fix, opencode) G3 review for GENG-300 Unit 1 remains open and unsigned  -  fresh independent review is pending (not part of this merge job).
 
+
 ## Response snapshot
 
-Resolved merge conflict with origin/main in specs/content/geng-300/tasks.md by removing stale duplicate G2/G3 tracker rows from earlier repair work while preserving the cycle 2 G3 advisory review row. Regenerated static/content-status.json and verified all 13 content gates pass cleanly.
+Resolved merge conflict with origin/main in specs/content/geng-300/tasks.md by removing stale duplicate tracker rows from earlier repair work while preserving the cycle 2 G3 advisory review row.
 
 ## Outcome
 
-- Impact: conflict resolution for GENG-300 Unit 1 review_en by agy.
-- Tests: npm run check:content passed (13/13 gates PASS).
-- Files: 2 file(s), listed above.
+- Impact: fix for GENG-300 Unit 1 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 21 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Resolved merge conflict in specs/content/geng-300/tasks.md by removing stale duplicate tracker rows from earlier repair while retaining the cycle 2 G3 review row.
+- Shipped / changed: Resolved merge conflict with origin/main in specs/content/geng-300/tasks.md by removing stale duplicate tracker rows from earlier repair work while preserving the cycle 2 G3 advisory review row.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - G3 review for GENG-300 Unit 1 remains open and unsigned (cycle 2 advisory pass recorded under ADR-0019).
-  - GENG-300 is English-only (bilingual: false), G4 and G5 are waived; next pipeline step is G6 asset review.
+  - GENG-300 is English-only (bilingual: false) so G4 translation and G5 Urdu review are waived; next pipeline step is G6 asset review.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
