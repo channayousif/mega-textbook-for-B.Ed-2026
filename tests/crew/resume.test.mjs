@@ -34,6 +34,9 @@ test('resumeHere: a held crew says why, for how long, and what needs whom', () =
 test('resumeHere: an idle healthy crew reads as flowing with nothing pending', () => {
   const md = resumeHere({ board: { jobs: [] }, decisions: { items: [] }, control: {}, nextUp: [], nowMs });
   assert.match(md, /Launches: flowing/);
+  assert.match(md, /Focus: none/);
+  const focused = resumeHere({ board: { jobs: [], focus: { course: 'GPKS-402', reason: 'new course: every started course is done for the crew' } }, decisions: { items: [] }, control: {}, nextUp: [], nowMs });
+  assert.match(focused, /Focus: GPKS-402 \(new course: every started course is done for the crew\); a new course starts only when/);
   assert.match(md, /Needs the owner:\n  - nothing/);
   assert.match(md, /Needs the lead:\n  - nothing/);
   assert.match(md, /Starts next: nothing queued/);
