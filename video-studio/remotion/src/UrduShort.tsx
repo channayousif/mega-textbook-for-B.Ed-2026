@@ -82,8 +82,9 @@ const EndCard: React.FC<{ props: ShortProps }> = ({ props }) => {
       <div dir="rtl" lang="ur" style={{ fontFamily: URDU, fontSize: 64, lineHeight: 1.9, color: '#ffffff', textAlign: 'center' }}>
         {props.end_card.cta_ur}
       </div>
-      <div dir="ltr" style={{ unicodeBidi: 'isolate', fontFamily: 'sans-serif', fontSize: 44, fontWeight: 600, color: '#ffffff', marginTop: 40, textAlign: 'center', overflowWrap: 'anywhere', maxWidth: '100%' }}>
-        {props.end_card.url.replace(/^https?:\/\//, '')}
+      <div dir="ltr" style={{ unicodeBidi: 'isolate', fontFamily: 'sans-serif', fontSize: 44, fontWeight: 600, color: '#ffffff', marginTop: 40 }}>
+        {/* Domain only (owner 2026-10-28); the full lesson URL goes in the post description. */}
+        {new URL(props.end_card.url).host}
       </div>
     </AbsoluteFill>
   );

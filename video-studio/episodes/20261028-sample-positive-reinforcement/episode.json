@@ -60,6 +60,13 @@
       "to": "render_review",
       "by": "claude",
       "note": "Kaggle render fetched and verified (GPU 0: Tesla T4 (UUID: GPU-6b2d7b70-484c-fd24-0a5d-6e831bb238fc)\nGPU 1: Tesla T4 (UUID: GPU-b41424c5-099b-7b31-caf9-fd7d6b2413a9))"
+    },
+    {
+      "at": "2026-10-28T08:30:59.167Z",
+      "from": "render_review",
+      "to": "render_review",
+      "by": "claude",
+      "note": "Kaggle render fetched and verified (GPU 0: Tesla T4 (UUID: GPU-2792ab0b-16f9-7808-3b72-998f3581de98)\nGPU 1: Tesla T4 (UUID: GPU-a0a81c6f-1554-b084-2f0a-04f8f1e78479))"
     }
   ],
   "assets": {
@@ -195,14 +202,14 @@
   "render": {
     "file": "20261028-sample-positive-reinforcement/render/final.mp4",
     "duration_s": 40.277,
-    "sha256": "5b6bbb89a87eec7fef86165b238e1aa8e91b61fcab8c8bd57a8cc28942662dda",
+    "sha256": "8b1980f5c12efe2f77807f6a7e1c6d642beb995c7dd8db1c49fc4f5afc347c4e",
     "subtitles": [
       "captions.ur.srt",
       "captions.ur.vtt"
     ]
   },
   "usage": {
-    "render_seconds": 55.226,
+    "render_seconds": 54.182,
     "metered_cost_usd": 0
   }
 }
