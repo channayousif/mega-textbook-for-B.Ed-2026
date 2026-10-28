@@ -16,6 +16,26 @@ links:
   adr: null
   pr: null
 files:
+ - history/prompts/general/20261031-geng301-unit02-final-g3-review.general.prompt.md
+ - history/prompts/geng-301/crew-geng-301-u02-review_en-r1-conflict1.misc.prompt.md
+ - history/prompts/geng-301/crew-geng-301-u02-review_en-r1.misc.prompt.md
+ - specs/content/geng-301/reviews/unit-02/G3/crew-r1-20261028.json
+ - specs/content/geng-301/reviews/unit-02/G3/crew-r1-20261028.md
+ - specs/content/geng-301/reviews/unit-02/G3/crew-r1-20261028/assessment-check.md
+ - specs/content/geng-301/reviews/unit-02/G3/crew-r1-20261028/baseline.md
+ - specs/content/geng-301/reviews/unit-02/G3/crew-r1-20261028/check-content.log
+ - specs/content/geng-301/reviews/unit-02/G3/crew-r1-20261028/check-depth-gate.log
+ - specs/content/geng-301/reviews/unit-02/G3/crew-r1-20261028/check-docs-sync.log
+ - specs/content/geng-301/reviews/unit-02/G3/crew-r1-20261028/check-figures.log
+ - specs/content/geng-301/reviews/unit-02/G3/crew-r1-20261028/check-no-answer-keys.log
+ - specs/content/geng-301/reviews/unit-02/G3/crew-r1-20261028/check-no-em-dash.log
+ - specs/content/geng-301/reviews/unit-02/G3/crew-r1-20261028/commands.json
+ - specs/content/geng-301/reviews/unit-02/G3/crew-r1-20261028/final-check-content.log
+ - specs/content/geng-301/reviews/unit-02/G3/crew-r1-20261028/inspection.md
+ - specs/content/geng-301/reviews/unit-02/G3/crew-r1-20261028/manifest.json
+ - specs/content/geng-301/reviews/unit-02/G3/crew-r1-20261028/render-limitation.md
+ - specs/content/geng-301/reviews/unit-02/G3/crew-r1-20261028/report-validation.log
+ - specs/content/geng-301/reviews/unit-02/G3/crew-r1-20261028/validate-content.log
  - specs/content/geng-301/tasks.md
 tests:
  - npm run check:content
@@ -54,21 +74,22 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (geng-301-u02-repair_en, repair_en, claude) There is no Urdu mirror of Unit 2 yet, so these edits are English only. The content-spec still lists `openstax2021` as the open-access reading; changing that spec is an owner decision that affects all GENG-301 units.
 - (geng-301-u02-review_en-conflict1, fix, opencode) GENG-301 Unit 2's 5 blocking G3 revise defects (SVG wordmark overflow, U2-05 summative omission, RRQ 5 mark scheme contradiction, incomplete source declarations) remain from the earlier `agy` review  -  this branch's content was not touched, only the merge and gate fix.
 
+
 ## Response snapshot
 
-Merged origin/main into `crew/geng-301-u02-review_en-r1`, untracked `static/content-status.json` per main, resolved tracker merge conflict in `specs/content/geng-301/tasks.md` preserving both sides' entries in order, regenerated `static/content-status.json` locally, and verified all 13 `npm run check:content` gates pass.
+Merged origin/main into crew/geng-301-u02-review_en-r1, untracked static/content-status.json, resolved the tasks.md conflict preserving both sides' tracker entries, and verified all 13 content gates pass.
 
 ## Outcome
 
 - Impact: fix for GENG-301 Unit 2 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before completing the merge.
-- Files: 1 file(s) modified in conflict resolution (`specs/content/geng-301/tasks.md`).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 21 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Resolved merge conflicts between `crew/geng-301-u02-review_en-r1` and `origin/main` in `specs/content/geng-301/tasks.md` and untracked `static/content-status.json`.
+- Shipped / changed: Merged origin/main into crew/geng-301-u02-review_en-r1, untracked static/content-status.json, resolved the tasks.md conflict preserving both sides' tracker entries, and verified all 13 content gates pass.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
