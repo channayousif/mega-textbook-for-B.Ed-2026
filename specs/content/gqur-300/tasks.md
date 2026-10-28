@@ -22,6 +22,7 @@ on every unit).
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0042; content-spec status: approved |
 | Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-02/G2/20261027T050232399Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 93e6321; report reviews/unit-02/G3/agent-g3-gqur300-u2-run001.json; Stale since the figure-geometry repair; needs a fresh G3 run |
+| Unit 2 | G3 en-review | ▢ | | advisory cycle 2 (final), agent:codex-g3-reviewer: escalate; report reviews/unit-02/G3/codex-cycle2-20261028.json; exponent definition and ERQ-04 marking defects; current renders, source support and session provenance unavailable; owner escalation required; no completion or publication claim |
 | Unit 2 | G4 ur-translation | ▣ | | mirror complete (2026-10-18): all 6 files verified against EN 96f35fa3; 12 .ur.svg/.ur.dark.svg figure variants verified; teacher-notes activity names synced with topic-01 (بازار کا کھاتہ); structural parity clean under temporary reviewed flip (reverted); all 10 key_terms unbanked in terminology.csv and proposed to owner; translation_status stays draft pending fresh independent G5; continuation validation and owner handoff: reviews/unit-02/G4/handoff.md |
 | Unit 2 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at c61192e; G3 dependency escalated to owner; report reviews/unit-02/G5/agent-g5-gqur300-u2-run001.json |
 | Unit 2 | G6 assets | ▢ | | |
@@ -55,4 +56,5 @@ on every unit).
 | Unit 6 | G6 assets | ▢ | | |
 | Unit 6 | G7 publish | ▢ | | |
 
+| Unit 1 | G3 en-review | ▢ | | advisory: pass (cycle 2); report specs/content/gqur-300/reviews/unit-01/G3/agent-g3-gqur300-u1-run954d5f3b.json; all 6 previous findings verified resolved (figure geometry, coverage grounding, npst2009 point-of-use disclosure, CLO-SLO alignment, MCQ key distribution balanced across a-d, grammar); all 7 criteria pass; independent blind solve 10/10; row stays open pending qualification (ADR-0019) |
 | Unit 3 | G3 en-review | ▢ | | advisory: pass (cycle 2); report specs/content/gqur-300/reviews/unit-03/G3/agent-g3-gqur300-u3-run90e224ef.json; all 3 previous blocking findings verified resolved (F1 no-source-u3-3 gap G-2026-29, F2 RRQ-8 decide step alignment, F3 fare-desk arithmetic 150 rupees); 5 advisory findings carried (F4 MCQ-b balance, F5 Bloom tag, F6 tutor problem repetition, F8 course SLO parenthetical, F11 multiplication sign); all 7 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; row stays open pending qualification (ADR-0019) |

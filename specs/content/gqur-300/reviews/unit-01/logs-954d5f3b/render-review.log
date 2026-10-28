@@ -1,0 +1,53 @@
+render-review - GQUR-300 Unit 1 (en) - 2026-10-28T02:54:00Z
+Reviewer: agent:agy
+Model: Gemini 3.8 Flash (High)
+Reviewer Run ID: 954d5f3b-6a11-47dd-bb5b-0ed8e42c024d
+Exit code: 0
+
+Approach:
+  In accordance with repository resource constraints and crew instructions forbidding
+  `npm run build`, a dev server, and Playwright, visual rendering and accessibility review
+  were conducted via static layout inspection, SVG DOM/geometry evaluation, CSS layout analysis,
+  and sharp rasterization.
+
+1. Static Raster Renders:
+   All 6 placed SVG figures in static/img/figures/gqur-300/unit-01/ were rasterised to PNG at displayed size (780x470) with palette variables resolved:
+   - fig-U1-1-render.png (concept-map, 35,256 bytes, stdev 34.9)
+   - fig-U1-2-render.png (table, 50,126 bytes, stdev 43.5)
+   - fig-U1-3-render.png (diagram, 31,327 bytes, stdev 34.7)
+   - fig-U1-4-render.png (table, 50,267 bytes, stdev 46.5)
+   - fig-U1-5-render.png (flowchart, 40,753 bytes, stdev 39.0)
+   - fig-U1-6-render.png (table, 49,740 bytes, stdev 46.3)
+   Saved in specs/content/gqur-300/reviews/unit-01/logs-954d5f3b/.
+
+2. Heading and Semantic Structure:
+   - index.mdx: Single H1 ("Foundations of Quantitative Reasoning"); clean H2s ("Unit learning outcomes", "Prerequisite knowledge", "In this unit", "How to use this unit").
+   - topic-01.mdx: Single H1 ("Topic 1.1 - What is quantitative reasoning and why does it matter?"); clean H2 nine-part learning cycle; H3 sub-topics under Explanation ("The nature of quantitative reasoning", "The importance of quantitative reasoning for a teacher").
+   - topic-02.mdx: Single H1 ("Topic 1.2 - Number sense, estimation and approximation"); clean H2 nine-part learning cycle; H3 sub-topics under Explanation ("Numeracy and number sense", "Estimation and approximation").
+   - topic-03.mdx: Single H1 ("Topic 1.3 - Logical reasoning and problem-solving strategies"); clean H2 nine-part learning cycle; H3 sub-topics under Explanation ("Logical reasoning", "Problem-solving strategies").
+   - unit-assessment.mdx: Single H1 ("Unit 1 assessment"); clean H2 sections ("Unit summary", "Summative assessment", "Answers and marking guidance"); H3 per question bank ("Multiple-choice questions (MCQs)", "Restricted-response questions (RRQs)", "Extended-response questions (ERQs)", "MCQ answer key", "RRQ model answers and mark schemes", "ERQ rubrics").
+   - unit-teacher-notes.mdx: Single H1 ("Unit 1 teacher notes"); clean H2 instructional guidance ("Sequencing note", "Managing the activities", "Misconceptions to probe", "Practicum tasks and assessment evidence").
+   - Zero skipped heading levels across all 6 unit files.
+
+3. Figure Presentation and Accessibility Wiring:
+   - All 6 figures have placed carriers with matching src paths and dimensions (780x470).
+   - Alt text: Non-empty, descriptive instructional alt text present on all <Figure> tags matching specs/content/gqur-300/figures/unit-01.md.
+   - SVGs include role="img", aria-labelledby linking to <title> and <desc> elements.
+   - Both light and dark mode variants (.svg and .dark.svg) and Urdu variants (.ur.svg and .ur.dark.svg) exist and are synchronized (24 SVGs total).
+   - Glyph text geometry (scripts/measure-figure-text.mjs): Widest text within bounds across all 24 SVGs; zero text collisions and zero text-over-edge overflows (widest text at 768.4 in English variants, wordmark at 675.7; widest text at 743.4 in Urdu variants, wordmark at 12).
+
+4. Descriptive Links and Navigation:
+   - Intra-unit navigation in index.mdx uses descriptive labels.
+   - No raw or ambiguous URLs in body prose.
+   - Further reading links use descriptive titles and valid targets in all topic files:
+     - topic-01.mdx: Steen (2001) archive.org loan, Grawe (2012) ERIC EJ981327, NPST (2009) with bibliographic limit note (D-2026-0001).
+     - topic-02.mdx: Gula & Lovric (2025) Springer/ERIC EJ1489427.
+     - topic-03.mdx: Steen (2001) archive.org loan.
+
+5. Assessment Section Isolation:
+   - Assessment answers and marking keys strictly bounded within ## Answers and marking guidance in unit-assessment.mdx:154.
+   - Zero leaked answer keys in frontmatter or topic prose. Passed check:no-answer-keys.
+
+6. Visual Layout & Print Adaptation:
+   - Content tables in topic files (fig-U1-2, fig-U1-4, fig-U1-6) and markdown tables use `display: block; width: fit-content; overflow-x: auto`, reporting 0px document horizontal overflow on 360x780 viewport and remaining reachable.
+   - <PrintHandout /> component embedded in all topic, assessment, and teacher notes files.
