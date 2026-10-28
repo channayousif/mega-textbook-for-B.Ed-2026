@@ -1,0 +1,21 @@
+file,segment,character,style,seed,arm,seconds,cer,coverage,terms_missed,longest_pause,chars_per_s,sim_ref,sim_centroid,flags,asr
+eval/shagird/l01_default_s3001.wav,l01,shagird,default,3001,main,4.92,0.0,1.0,,0.38,10.0,0.784,0.879,,کیا ایک ستارہ یا تعریف واقعی شاگرد کا رویہ بدل سکتی ہے؟
+eval/shagird/l01_default_s3002.wav,l01,shagird,default,3002,main,5.12,0.023,1.0,,0.18,9.6,0.772,0.906,,کیا ایک ستارہ یا تعریف واقعی شاگرت کا رویہ بدل سکتی ہے؟
+eval/shagird/l01_default_s3003.wav,l01,shagird,default,3003,main,4.92,0.023,1.0,,0.16,10.6,0.749,0.902,,کیا ایک ستارہ یا تعریف واقعی شاگرز کا رویہ بدل سکتی ہے؟
+eval/ustani/l02_default_s3001.wav,l02,ustani,default,3001,main,4.92,0.021,1.0,,0.18,11.2,0.841,0.942,,تقویت کا ہمیشہ ایک ہی مطلب ہے رویہ زیادہ کسرت سے ہونے لگتا ہے
+eval/ustani/l02_default_s3002.wav,l02,ustani,default,3002,main,4.64,0.021,1.0,,0.16,11.9,0.847,0.936,,تقویت کا ہمیشہ ایک ہی مطلب ہے رویہ زیادہ کسرت سے ہونے لگتا ہے
+eval/ustani/l02_default_s3003.wav,l02,ustani,default,3003,main,4.92,0.021,1.0,,0.14,11.1,0.805,0.935,,تقویت کا ہمیشہ ایک ہی مطلب ہے رویہ زیادہ کسرت سے ہونے لگتا ہے
+eval/ustani/l03_default_s3001.wav,l03,ustani,default,3001,main,7.6,0.037,0.98,,0.34,7.7,0.841,0.948,,مصبت تقویت یعنی positive reinforcement وہ چیز شامل کرتی ہے جو شاگر چاہتا ہے تعریف یا ستارہ
+eval/ustani/l03_default_s3002.wav,l03,ustani,default,3002,main,7.32,0.056,1.0,,0.36,8.1,0.867,0.938,,مصبت تقویت یعنی positive reinforcement وہ چیز شامل کرتی ہیں جو شاگر چاہتا ہے تعریف یا ستارہ
+eval/ustani/l03_default_s3003.wav,l03,ustani,default,3003,main,7.24,0.056,0.98,,0.14,8.2,0.867,0.934,,مصبت تقویت یعنی positive reinforcement وہ چیز شامل کرتی ہے جو شاگر چاہتا ہے تاریف یا ستارہ
+eval/ustani/l04_default_s3001.wav,l04,ustani,default,3001,main,8.55,0.028,0.99,,0.94,8.9,0.737,0.918,pause,منفی تقویت وہ چیز ہٹاتی ہے جو شاگت پسند نہیں کرتا یہ سزا نہیں ہے یہ بھی رویہ مضبوط کرتی ہے
+eval/ustani/l04_default_s3002.wav,l04,ustani,default,3002,main,8.31,0.014,1.01,,0.94,9.2,0.813,0.957,pause,منفی تقویت وہ چیز ہٹاتی ہے جو شاگرد پسند نہیں کرتا یہ سزا نہیں ہے یہ بھی روئیہ مضبوط کرتی ہے
+eval/ustani/l04_default_s3003.wav,l04,ustani,default,3003,main,7.95,0.0,1.0,,0.96,9.7,0.682,0.869,pause,منفی تقویت وہ چیز ہٹاتی ہے جو شاگرد پسند نہیں کرتا یہ سزا نہیں ہے یہ بھی رویہ مضبوط کرتی ہے
+eval/shagird/l05_default_s3001.wav,l05,shagird,default,3001,main,5.2,0.0,1.0,,0.42,10.4,0.82,0.919,,یعنی دونوں تقویتیں رویہ بڑھاتی ہیں اور سزا اسے کم کرتی ہے
+eval/shagird/l05_default_s3002.wav,l05,shagird,default,3002,main,5.44,0.0,1.0,,0.16,11.1,0.861,0.925,,یعنی دونوں تقویتیں رویہ بڑھاتی ہیں اور سزا اسے کم کرتی ہے
+eval/shagird/l05_default_s3003.wav,l05,shagird,default,3003,main,4.88,0.0,1.0,,0.46,11.0,0.843,0.925,,یعنی دونوں تقویتیں رویہ بڑھاتی ہیں اور سزا اسے کم کرتی ہے
+eval/shagird/l06_default_s3001.wav,l06,shagird,default,3001,main,4.4,0.143,1.07,,0.16,4.0,0.817,0.893,pace,پورا سبب textbook.com.pk پر پڑھئیے
+eval/shagird/l06_default_s3002.wav,l06,shagird,default,3002,main,3.96,0.071,1.07,,0.12,4.3,0.77,0.887,pace,پورا سبق textbook.com.pk پر پڑھئیے
+eval/shagird/l06_default_s3003.wav,l06,shagird,default,3003,main,3.8,0.071,1.07,,0.16,4.9,0.827,0.916,pace,پورا سبق textbook.com.pk پر پڑھئیے
+eval/reel-shagird.wav,reel,shagird,default,3001,reel,15.72,,,,,,,,,
+eval/reel-ustani.wav,reel,ustani,default,3001,reel,22.27,,,,,,,,,

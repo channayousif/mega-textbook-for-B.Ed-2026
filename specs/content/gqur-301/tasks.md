@@ -145,3 +145,9 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit | Stage | Status | Reviewer | Notes |
 |---|---|---|---|---|
 | Unit 8 | G3 en-review | ▢ | agent:codex-g3-reviewer | Advisory escalation only; F1-F4 need separate author correction; provenance, G1, bound sources, answer-blind evidence and rendered inspection remain unresolved. Report: specs/content/gqur-301/reviews/unit-08/G3/01a1608a-2fc5-7f41-a824-c08320f0383b.json; G3 remains open, unsigned. |
+
+## Final-cycle advisory G3 Unit 7 review, 2026-10-28
+
+| Unit | Stage | Status | Reviewer | Suggestion |
+|---|---|---|---|---|
+| Unit 7 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only, final cycle: specs/content/gqur-301/reviews/unit-07/G3/crew-final-20261028.json. Prior F1-F5 verified repaired; P1-P4 remain unverified. ERQ 4 needs owner adjudication of annual admissions per section and ten-year capacity assumptions. G3 stays open, unsigned. Further cycles require recorded owner authorization. |

@@ -1,0 +1,208 @@
+{
+  "episode_id": "20261028-sample-positive-reinforcement",
+  "topic_id": "positive-reinforcement",
+  "status": "render_review",
+  "created_at": "2026-10-28T04:40:00Z",
+  "mode": "sample",
+  "history": [
+    {
+      "at": "2026-10-28T04:40:00Z",
+      "from": "queued",
+      "to": "awaiting_assets",
+      "by": "claude",
+      "note": "VS-003 V007 first voiced short; sample mode: script written by Claude from EFMP-301 U3 T1 (Urdu, translation_status draft), not owner-approved"
+    },
+    {
+      "at": "2026-10-28T04:32:08.091Z",
+      "from": "awaiting_assets",
+      "to": "awaiting_assets",
+      "by": "claude",
+      "note": "voice:import L01 (shagird) 01674f0c3dd6"
+    },
+    {
+      "at": "2026-10-28T04:32:09.644Z",
+      "from": "awaiting_assets",
+      "to": "awaiting_assets",
+      "by": "claude",
+      "note": "voice:import L02 (ustani) aa0ae7118f78"
+    },
+    {
+      "at": "2026-10-28T04:32:11.121Z",
+      "from": "awaiting_assets",
+      "to": "awaiting_assets",
+      "by": "claude",
+      "note": "voice:import L03 (ustani) dfadcc5218da"
+    },
+    {
+      "at": "2026-10-28T04:32:12.816Z",
+      "from": "awaiting_assets",
+      "to": "awaiting_assets",
+      "by": "claude",
+      "note": "voice:import L04 (ustani) 2e20aa5ca383"
+    },
+    {
+      "at": "2026-10-28T04:32:14.368Z",
+      "from": "awaiting_assets",
+      "to": "awaiting_assets",
+      "by": "claude",
+      "note": "voice:import L05 (shagird) 10f5f3f4ed22"
+    },
+    {
+      "at": "2026-10-28T04:32:15.819Z",
+      "from": "awaiting_assets",
+      "to": "awaiting_assets",
+      "by": "claude",
+      "note": "voice:import L06 (shagird) dbf07d8f7c24"
+    },
+    {
+      "at": "2026-10-28T04:35:45.169Z",
+      "from": "awaiting_assets",
+      "to": "render_review",
+      "by": "claude",
+      "note": "Kaggle render fetched and verified (GPU 0: Tesla T4 (UUID: GPU-6b2d7b70-484c-fd24-0a5d-6e831bb238fc)\nGPU 1: Tesla T4 (UUID: GPU-b41424c5-099b-7b31-caf9-fd7d6b2413a9))"
+    }
+  ],
+  "assets": {
+    "manifest": [
+      {
+        "item_id": "L01",
+        "path": "20261028-sample-positive-reinforcement/audio/L01.wav",
+        "kind": "audio",
+        "sha256": "01674f0c3dd6c6be5855c4147ec0bfe6a713fc69e8dbe49a4e76cb293fed3ea0",
+        "source_sha256": "6071f68079e58f899bdf42b35e26128a4139bf1d3b2b834d5c88f76d5a836666",
+        "source_file": "l01_default_s3001.wav",
+        "source_tool": "chatterbox-hi",
+        "model": "ResembleAI/Chatterbox-Multilingual-hi",
+        "prompt": "VS-003 V007 eval seed 3001",
+        "voice": {
+          "character": "shagird",
+          "card_sha256": "0fed484cdc8b4240bfbc511a1af48c0f7a023f3c0aa5ceca509b4974d55c77b4",
+          "reference_sha256": "7d227bafae29623504c427923546211175bd1f78e093c181843d8179a5711c8a",
+          "consent_id": "narrator-01",
+          "consent_sha256": "cbee0bcf1fe30591ea7073418a943f64da1d5c46f178d7ba9a0e608129ccf1b3"
+        },
+        "rights_note": "voice card brand/voices/shagird.md (cleared); consent narrator-01; source chatterbox-hi",
+        "imported_at": "2026-10-28T04:32:08.091Z",
+        "status": "pending"
+      },
+      {
+        "item_id": "L02",
+        "path": "20261028-sample-positive-reinforcement/audio/L02.wav",
+        "kind": "audio",
+        "sha256": "aa0ae7118f7882c5f275c654ccc0267e4a7eadfccc6831b4c532babeed2d3e33",
+        "source_sha256": "e9bd12ce76f21533084b8df073a9ecab24ff109443e193b0357f5c1ede885ef8",
+        "source_file": "l02_default_s3002.wav",
+        "source_tool": "chatterbox-hi",
+        "model": "ResembleAI/Chatterbox-Multilingual-hi",
+        "prompt": "VS-003 V007 eval seed 3002",
+        "voice": {
+          "character": "ustani",
+          "card_sha256": "425818aca8ae0f1a54df99f2bd423273b10a9d26981cc1a23b077d5089a06040",
+          "reference_sha256": "d05de3c55d275a8d34462222ed7760eb5eb2c040a738b93f787a1a32e901b5fa",
+          "consent_id": "narrator-02",
+          "consent_sha256": "bae013f40a64f5e5b4c8b1915f1e670305578e0c22296bf84bfe973150e23ce6"
+        },
+        "rights_note": "voice card brand/voices/ustani.md (cleared); consent narrator-02; source chatterbox-hi",
+        "imported_at": "2026-10-28T04:32:09.644Z",
+        "status": "pending"
+      },
+      {
+        "item_id": "L03",
+        "path": "20261028-sample-positive-reinforcement/audio/L03.wav",
+        "kind": "audio",
+        "sha256": "dfadcc5218da9d069b406770ef3fbc66fc6ca4ceb597455786e19ff272b06f59",
+        "source_sha256": "4493b83883668c065eff6d4e760f5d95babe8dc53cff52ed46f991bc6be7ab1e",
+        "source_file": "l03_default_s3001.wav",
+        "source_tool": "chatterbox-hi",
+        "model": "ResembleAI/Chatterbox-Multilingual-hi",
+        "prompt": "VS-003 V007 eval seed 3001",
+        "voice": {
+          "character": "ustani",
+          "card_sha256": "425818aca8ae0f1a54df99f2bd423273b10a9d26981cc1a23b077d5089a06040",
+          "reference_sha256": "d05de3c55d275a8d34462222ed7760eb5eb2c040a738b93f787a1a32e901b5fa",
+          "consent_id": "narrator-02",
+          "consent_sha256": "bae013f40a64f5e5b4c8b1915f1e670305578e0c22296bf84bfe973150e23ce6"
+        },
+        "rights_note": "voice card brand/voices/ustani.md (cleared); consent narrator-02; source chatterbox-hi",
+        "imported_at": "2026-10-28T04:32:11.121Z",
+        "status": "pending"
+      },
+      {
+        "item_id": "L04",
+        "path": "20261028-sample-positive-reinforcement/audio/L04.wav",
+        "kind": "audio",
+        "sha256": "2e20aa5ca38351e748e05926cea50cdaa13d4b9f70dcbb44336be67f029cff34",
+        "source_sha256": "9e31a43d791e459d758c9e245e191a84f3ba7a670b3f3d287dbd9ffa479b5f0a",
+        "source_file": "l04_default_s3002.wav",
+        "source_tool": "chatterbox-hi",
+        "model": "ResembleAI/Chatterbox-Multilingual-hi",
+        "prompt": "VS-003 V007 eval seed 3002",
+        "voice": {
+          "character": "ustani",
+          "card_sha256": "425818aca8ae0f1a54df99f2bd423273b10a9d26981cc1a23b077d5089a06040",
+          "reference_sha256": "d05de3c55d275a8d34462222ed7760eb5eb2c040a738b93f787a1a32e901b5fa",
+          "consent_id": "narrator-02",
+          "consent_sha256": "bae013f40a64f5e5b4c8b1915f1e670305578e0c22296bf84bfe973150e23ce6"
+        },
+        "rights_note": "voice card brand/voices/ustani.md (cleared); consent narrator-02; source chatterbox-hi",
+        "imported_at": "2026-10-28T04:32:12.816Z",
+        "status": "pending"
+      },
+      {
+        "item_id": "L05",
+        "path": "20261028-sample-positive-reinforcement/audio/L05.wav",
+        "kind": "audio",
+        "sha256": "10f5f3f4ed223df3b339c2dabaa0a7a1481413d7743cd6d300db92ca905bacd2",
+        "source_sha256": "4830ab644d9acbd4fa53645a3d464023f76457693994c34ddfdcae1b16047cf1",
+        "source_file": "l05_default_s3002.wav",
+        "source_tool": "chatterbox-hi",
+        "model": "ResembleAI/Chatterbox-Multilingual-hi",
+        "prompt": "VS-003 V007 eval seed 3002",
+        "voice": {
+          "character": "shagird",
+          "card_sha256": "0fed484cdc8b4240bfbc511a1af48c0f7a023f3c0aa5ceca509b4974d55c77b4",
+          "reference_sha256": "7d227bafae29623504c427923546211175bd1f78e093c181843d8179a5711c8a",
+          "consent_id": "narrator-01",
+          "consent_sha256": "cbee0bcf1fe30591ea7073418a943f64da1d5c46f178d7ba9a0e608129ccf1b3"
+        },
+        "rights_note": "voice card brand/voices/shagird.md (cleared); consent narrator-01; source chatterbox-hi",
+        "imported_at": "2026-10-28T04:32:14.368Z",
+        "status": "pending"
+      },
+      {
+        "item_id": "L06",
+        "path": "20261028-sample-positive-reinforcement/audio/L06.wav",
+        "kind": "audio",
+        "sha256": "dbf07d8f7c24fb37aa5d03c3d68297fac03115fbbf51aa12cccaeebd8a408de3",
+        "source_sha256": "e3078dbb02899d1546827f642848786864db7f5c8ef8670f91790fdd9c337c32",
+        "source_file": "l06_default_s3003.wav",
+        "source_tool": "chatterbox-hi",
+        "model": "ResembleAI/Chatterbox-Multilingual-hi",
+        "prompt": "VS-003 V007 eval seed 3003",
+        "voice": {
+          "character": "shagird",
+          "card_sha256": "0fed484cdc8b4240bfbc511a1af48c0f7a023f3c0aa5ceca509b4974d55c77b4",
+          "reference_sha256": "7d227bafae29623504c427923546211175bd1f78e093c181843d8179a5711c8a",
+          "consent_id": "narrator-01",
+          "consent_sha256": "cbee0bcf1fe30591ea7073418a943f64da1d5c46f178d7ba9a0e608129ccf1b3"
+        },
+        "rights_note": "voice card brand/voices/shagird.md (cleared); consent narrator-01; source chatterbox-hi",
+        "imported_at": "2026-10-28T04:32:15.819Z",
+        "status": "pending"
+      }
+    ]
+  },
+  "render": {
+    "file": "20261028-sample-positive-reinforcement/render/final.mp4",
+    "duration_s": 40.277,
+    "sha256": "5b6bbb89a87eec7fef86165b238e1aa8e91b61fcab8c8bd57a8cc28942662dda",
+    "subtitles": [
+      "captions.ur.srt",
+      "captions.ur.vtt"
+    ]
+  },
+  "usage": {
+    "render_seconds": 55.226,
+    "metered_cost_usd": 0
+  }
+}
