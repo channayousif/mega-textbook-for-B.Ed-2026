@@ -57,3 +57,4 @@ on every unit).
 | Unit 6 | G7 publish | ▢ | | |
 
 | Unit 1 | G3 en-review | ▢ | | advisory: pass (cycle 2); report specs/content/gqur-300/reviews/unit-01/G3/agent-g3-gqur300-u1-run954d5f3b.json; all 6 previous findings verified resolved (figure geometry, coverage grounding, npst2009 point-of-use disclosure, CLO-SLO alignment, MCQ key distribution balanced across a-d, grammar); all 7 criteria pass; independent blind solve 10/10; row stays open pending qualification (ADR-0019) |
+| Unit 5 | G3 en-review | ▢ | | advisory: pass (cycle 2); report specs/content/gqur-300/reviews/unit-05/G3/agent-g3-gqur300-u5-runbcf4c106.json; all 5 previous blocking findings verified resolved (fig-U5-5 data plot, flagship 14.02 pp gender gap, openstax-prealgebra coverage and citation traceability, PBS census conduct support); all 7 criteria pass; independent blind solve 10/10; row stays open pending qualification (ADR-0019) |
