@@ -3,9 +3,12 @@
 Verified 2026-09-24. Every URL below was fetched and its title, authors and year confirmed
 against the page itself; nothing is cited from memory (Art. III.5, `author-unit` Step 1.3).
 
-The course guide's own recommended books are both open access and both are bound here:
-the unit's teaching prose rests on them and on the already-verified IAE/UNESCO-IBE
-booklet. The guide's Chapter 2 (Weeks 3-4) supplies the scope and sequence.
+The unit's teaching prose rests on seifert2009 (guide book 2, bound below) and the
+already-verified IAE/UNESCO-IBE booklet. The second guide book (seifert-hk) is bound at
+course level for its development chapters (sources/texts/seifert-hk.md); its Chapter 3,
+Sections 3.1-3.3, revises the same development chapter as seifert2009's Chapter 3, so the
+unit cites the 2009 edition and no seifert-hk claim appears in the prose.
+The guide's Chapter 2 (Weeks 3-4) supplies the scope and sequence.
 
 ## Registry-verified open-access sources
 

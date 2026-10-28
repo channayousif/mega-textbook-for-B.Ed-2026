@@ -13,3 +13,20 @@ export function toneWav(seconds: number, hz = 220, sampleRate = 48_000, amplitud
   h.write('data', 36); h.writeUInt32LE(data.length, 40);
   return Buffer.concat([h, data]);
 }
+
+/** Duration of a PCM WAV from its header and data chunk size (the files voice:import writes). */
+export function wavSeconds(bytes: Buffer): number {
+  if (bytes.toString('latin1', 0, 4) !== 'RIFF' || bytes.toString('latin1', 8, 12) !== 'WAVE') throw new Error('not a WAV file');
+  let byteRate = 0;
+  for (let p = 12; p + 8 <= bytes.length;) {
+    const id = bytes.toString('latin1', p, p + 4);
+    const size = bytes.readUInt32LE(p + 4);
+    if (id === 'fmt ') byteRate = bytes.readUInt32LE(p + 16);
+    if (id === 'data') {
+      if (!byteRate) throw new Error('WAV data chunk before fmt chunk');
+      return Math.min(size, bytes.length - p - 8) / byteRate;
+    }
+    p += 8 + size + (size % 2);
+  }
+  throw new Error('WAV has no data chunk');
+}

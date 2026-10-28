@@ -1,5 +1,8 @@
 // Props for the UrduShort composition. Built by scripts (never hand-written) from episode files
 // and brand/brand-bible.yaml, so preview, Kaggle render and Studio all share one shape.
+/** One caption window with absolute times (VS-003 V007 sentence alignment). */
+export interface Cue { text_ur: string; from_s: number; to_s: number }
+
 export interface CaptionLine {
   id: string;
   speaker: 'ustani' | 'shagird';
@@ -8,6 +11,8 @@ export interface CaptionLine {
   to_s: number;
   /** Per-line voice file under public/, set after TTS or ingest. */
   audio?: string;
+  /** Caption windows; without them the line is split into equal windows. */
+  cues?: Cue[];
 }
 
 export interface ShortProps {
