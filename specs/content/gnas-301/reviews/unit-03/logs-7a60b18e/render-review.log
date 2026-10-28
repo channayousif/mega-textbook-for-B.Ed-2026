@@ -1,0 +1,57 @@
+render-review - GNAS-301 Unit 3 (en) - 2026-10-28T06:09:00Z
+Reviewer: agent:agy
+Model: Gemini 3.8 Flash (High)
+Reviewer Run ID: 7a60b18e-716f-4d32-9adc-65f2ecd9e580
+Exit code: 0
+
+Approach:
+  In accordance with repository resource constraints and crew instructions forbidding
+  `npm run build`, a dev server, and Playwright, visual rendering and accessibility review
+  were conducted via static layout inspection, SVG DOM/geometry evaluation, CSS layout analysis,
+  and sharp rasterization.
+
+1. Static Raster Renders:
+   All 8 placed SVG figures in static/img/figures/gnas-301/unit-03/ were rasterised to PNG at displayed size (780x470) with palette variables resolved:
+   - fig-U3-1-render.png (diagram, 68,390 bytes, stdev 46.6)
+   - fig-U3-2-render.png (table, 65,061 bytes, stdev 51.7)
+   - fig-U3-3-render.png (diagram, 44,182 bytes, stdev 44.9)
+   - fig-U3-4-render.png (table, 71,928 bytes, stdev 53.7)
+   - fig-U3-5-render.png (concept-map, 51,062 bytes, stdev 37.2)
+   - fig-U3-6-render.png (table, 75,410 bytes, stdev 50.1)
+   - fig-U3-7-render.png (flowchart, 47,319 bytes, stdev 36.4)
+   - fig-U3-8-render.png (table, 65,195 bytes, stdev 47.5)
+   Saved in specs/content/gnas-301/reviews/unit-03/logs-7a60b18e/.
+
+2. Heading and Semantic Structure:
+   - index.mdx: Single H1 ("Air, Noise and Environmental Hazards"); clean H2s ("Unit learning outcomes", "Prerequisite knowledge", "In this unit", "How to use this unit").
+   - topic-01.mdx: Single H1 ("Topic 3.1 - Air pollution"); clean H2 nine-part learning cycle; H3 sub-topics under Explanation ("Air pollution: causes, effects and control strategies").
+   - topic-02.mdx: Single H1 ("Topic 3.2 - Noise pollution"); clean H2 nine-part learning cycle; H3 sub-topics under Explanation ("Noise pollution: sources, human health impacts and control measures").
+   - topic-03.mdx: Single H1 ("Topic 3.3 - Hazards in health, safety and environment"); clean H2 nine-part learning cycle; H3 sub-topics under Explanation ("Health, safety and environment: hazards", "Health and environment; environmental safety").
+   - topic-04.mdx: Single H1 ("Topic 3.4 - Risk assessment and management"); clean H2 nine-part learning cycle; H3 sub-topics under Explanation ("Hazard identification, risk assessment and the risk management process").
+   - unit-assessment.mdx: Single H1 ("Unit 3 assessment"); clean H2 sections ("Unit summary", "Summative assessment", "Answers and marking guidance"); H3 per question bank ("Multiple-choice questions (MCQs)", "Restricted-response questions (RRQs)", "Extended-response questions (ERQs)", "MCQ answer key", "RRQ model answers and marking guidance", "ERQ rubrics").
+   - unit-teacher-notes.mdx: Single H1 ("Unit 3 teacher notes"); clean H2 instructional guidance ("Teaching approach and pacing", "Managing the activities", "Addressing misconceptions", "Assessment guidance").
+   - Zero skipped heading levels across all 7 unit files.
+
+3. Figure Presentation and Accessibility Wiring:
+   - All 8 figures have placed carriers with matching src paths and dimensions (780x470).
+   - Alt text: Non-empty, descriptive instructional alt text present on all <Figure> tags matching specs/content/gnas-301/figures/unit-03.md.
+   - SVGs include role="img", aria-labelledby linking to <title> and <desc> elements.
+   - Both light and dark mode variants (.svg and .dark.svg) and Urdu variants (.ur.svg and .ur.dark.svg) exist and are synchronized (32 SVGs total).
+   - Glyph text geometry (scripts/measure-figure-text.mjs): Widest text within bounds across all 32 SVGs; zero text collisions and zero text-over-edge overflows (widest text at 768.4 in English variants, wordmark at 675.7; widest text at 752 in Urdu variants, wordmark at 12).
+
+4. Descriptive Links and Navigation:
+   - Intra-unit navigation in index.mdx uses descriptive labels.
+   - No raw or ambiguous URLs in body prose.
+   - Further reading links use descriptive titles and valid targets in all four topic files:
+     - topic-01.mdx: [WHO Ambient (outdoor) air pollution fact sheet](https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health), [WHO global air quality guidelines](https://www.who.int/publications/i/item/9789240034228), [Lahore winter-smog study (DOI: 10.1186/s40068-026-00484-0)](https://doi.org/10.1186/s40068-026-00484-0).
+     - topic-02.mdx: [Noise-induced hearing loss](https://www.nidcd.nih.gov/health/noise-induced-hearing-loss), [Noise: health effects and children](https://www.who.int/europe/news-room/fact-sheets/item/noise), [WHO Deafness and hearing loss fact sheet](https://www.who.int/news-room/fact-sheets/detail/deafness-and-hearing-loss).
+     - topic-03.mdx: [WHO Occupational health overview](https://www.who.int/health-topics/occupational-health), [Karachi underpass study (DOI: 10.46660/ijeeg.Vol12.Iss4.2021.651)](https://doi.org/10.46660/ijeeg.Vol12.Iss4.2021.651).
+     - topic-04.mdx: [Karachi underpass study (DOI: 10.46660/ijeeg.Vol12.Iss4.2021.651)](https://doi.org/10.46660/ijeeg.Vol12.Iss4.2021.651), [WHO Occupational health overview](https://www.who.int/health-topics/occupational-health).
+
+5. Assessment Section Isolation:
+   - Assessment answers and marking keys strictly bounded within ## Answers and marking guidance in unit-assessment.mdx:143.
+   - Zero leaked answer keys in frontmatter or topic prose. Passed check:no-answer-keys.
+
+6. Visual Layout & Print Adaptation:
+   - Content tables in topic files (fig-U3-2, fig-U3-4, fig-U3-6, fig-U3-8) and markdown tables use `display: block; width: fit-content; overflow-x: auto`, reporting 0px document horizontal overflow on 360x780 viewport and remaining reachable.
+   - <PrintHandout /> component embedded in all topic and assessment files (topic-01.mdx:16, topic-02.mdx:16, topic-03.mdx:16, topic-04.mdx:16, unit-assessment.mdx:16, unit-teacher-notes.mdx:16).
