@@ -1,0 +1,48 @@
+render-review evidence (G3 English, GENG-300 Unit 1 - Cycle 2)
+==============================================================
+Timestamp: 2026-10-28T04:10:00Z
+Reviewer: agent:agy
+Model: Gemini 3.8 Flash (High)
+Reviewer Run ID: agy:41b4c5ae-ddf1-4fe4-819d-a560fddf0bdc
+Course: GENG-300 Unit 1 (Foundations of Functional English)
+
+CONSTRAINT: The brief for this crew job forbids running `npm run build`, a dev
+server, or Playwright. Therefore full live browser/print emulation inspection
+was not re-run via an automated browser. Instead, comprehensive static analysis,
+SVG text geometry measurement, and Sharp rasterization verification were conducted:
+
+1. Figure Rasterization & Visual Verification:
+   - All 6 unit SVGs rasterized to PNG at 780px displayed width using Sharp with CSS variables resolved:
+     - fig-U1-1.png: Concept map of vocabulary knowledge (contextual usage, register, collocation, connotation, synonyms, antonyms, idiomatic expressions)
+     - fig-U1-2.png: Diagram of word-formation processes (affixation, compounding, clipping, back formation)
+     - fig-U1-3.png: Diagram of English sound system (vowels, diphthongs, consonants with Urdu-absent sounds flagged)
+     - fig-U1-4.png: Comparison table of common grammatical errors with corrections and explanations
+     - fig-U1-5.png: Comparison table of sentence structures (simple, compound, complex, compound-complex)
+     - fig-U1-6.png: Table of pronunciation challenges and strategies for Urdu speakers
+   - All 6 PNG renders saved under specs/content/geng-300/reviews/unit-01/renders-41b4c5ae/
+
+2. Text Geometry Inspection & Prior Defect Verification:
+   - Verified via scripts/measure-figure-text.mjs across all 6 figures and their dark variants:
+     - fig-U1-1.svg & fig-U1-1.dark.svg: PASS (widest text at 768.4, wordmark at 675.7, viewBox 780x470). Wordmark viewBox overflow (run 7c5e7ce2 defect) is fully resolved.
+     - fig-U1-2.svg & fig-U1-2.dark.svg: PASS (widest text at 768.4, wordmark at 675.7, viewBox 780x470). Cosmetic wordmark overlap resolved.
+     - fig-U1-3.svg & fig-U1-3.dark.svg: Wordmark viewBox overflow is fully resolved (wordmark at 675.7, ends at 768.4 inside 780). Minor panel box spill detected: 3 consonant labels in column 6 ("zoo", "wet", "yes") extend 1.5px to 2.0px past the 765px right border of panel-c into the 15px canvas margin (bbox ends at 766.6px, well inside 780px canvas). Recorded as advisory finding.
+     - fig-U1-4.svg & fig-U1-4.dark.svg: PASS (widest text at 768.4, wordmark at 675.7, viewBox 780x470).
+     - fig-U1-5.svg & fig-U1-5.dark.svg: PASS (widest text at 768.4, wordmark at 675.7, viewBox 780x470).
+     - fig-U1-6.svg & fig-U1-6.dark.svg: PASS (widest text at 768.4, wordmark at 675.7, viewBox 780x470). Cosmetic wordmark overlap resolved.
+   - Zero glyph overflow beyond 780px viewBox boundaries across all 12 SVG assets.
+
+3. Alt Text and SVG Accessibility Wiring:
+   - All 6 <Figure> tags across topic-01.mdx, topic-02.mdx, and topic-03.mdx carry descriptive alt text.
+   - Every SVG source includes role="img", aria-labelledby="t d", <title>, and <desc> elements.
+   - SVG <desc> text matches the MDX alt text in accordance with style guide provenance rules.
+
+4. Heading Structure & Layout:
+   - index.mdx: Single # title, clean ## sections for unit learning outcomes, prerequisites, unit topics, how to use this unit.
+   - topic-01.mdx, topic-02.mdx, topic-03.mdx: Complete monotonic progression across the nine-part cycle (classroom situation -> Explanation -> Activity -> Check your understanding -> Summary -> Self-assessment checklist -> Try this at your practicum school -> Summative task -> Further reading).
+   - No skipped heading levels detected.
+
+5. Content Presentation & Mobile Layout:
+   - Wide comparison tables are delivered as inline SVGs (fig-U1-4, fig-U1-5, fig-U1-6), ensuring consistent responsive presentation at 360px viewport without unstyled clipping.
+   - Assessment answer keys are strictly bounded in the final ## Answers and marking guidance section.
+
+exit_code: 0

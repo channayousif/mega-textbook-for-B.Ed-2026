@@ -1,0 +1,79 @@
+G3 English review - EFMP-301 Unit 10 (Teaching-Learning Process) - run002
+=========================================================================
+Reviewer: agent:g3-reviewer (fresh independent session; model Gemini 3.8 Flash (High)), 2026-10-28.
+Reviewer Run ID: 530a0b0a-0c83-416c-8504-17579b7c94d6.
+Author: Claude Code agent session in 022-author-efmp-301, commit 0d8f9067; repairs at 2e19d4d8.
+Round: 2 of 2 (ADR-0019).
+DISPOSITION: PASS (0 blocking, 0 uncertain, 6 advisory findings; all run001 blocking findings resolved).
+
+Input binding
+-------------
+This report binds the exact 94-input manifest at reviewed commit c13ce228c97b62124648a27989a6d7a186e24751.
+All 94 bound input digests verified byte-for-byte against git index and disk (manifest-verify.log).
+Zero uncommitted, dirty or missing inputs.
+
+What was checked (evidence in logs- and renders- directories, hashed in the report)
+---------------------------------------------------------------------------
+Deterministic gates, all exit 0:
+- validate:content (validate-content.log)
+- check:depth-gate (check-depth-gate.log)
+- check:figures (check-figures.log)
+- check:no-em-dash (check-no-em-dash.log)
+- check:no-answer-keys (check-no-answer-keys.log)
+- check:docs-sync (check-docs-sync.log)
+- check:concept-graph (check-concept-graph.log)
+- check:bloom-bands (check-bloom-bands.log)
+- check:source-floor (check-source-floor.log)
+- figures:variants:check (figures-variants-check.log)
+- measure-figure-text (clean across all 16 SVG variants, zero text overflow, zero wordmark collision)
+Render inspection:
+- All 4 placed figures rasterized to PNG via sharp (fig-U10-1-render.png through fig-U10-4-render.png).
+- Heading and document hierarchy verified clean (single H1 per page, sequential H2/H3 nesting).
+- Table layout verified responsive (custom.css block fit-content scroll container).
+- Answer isolation verified (## Answers and marking guidance strictly bounded).
+Assessment solve:
+- All 25 bank items (10 MCQ, 10 RRQ, 5 ERQ) independently solved prior to answer key comparison.
+- All 10 MCQ keys agree.
+- All 10 RRQ model answers and 5 ERQ rubrics agree with derivations.
+
+Verification of run001 blocking findings
+----------------------------------------
+1. ASSESSMENT BLUEPRINT VIOLATION: RESOLVED.
+   RRQ topic spread rebalanced to exact 5/5 across topics 10.1 and 10.2 (Topic 10.1: RRQ 1-4, 9;
+   Topic 10.2: RRQ 5-8, 10) by replacing observable practices RRQ with lecture-misconception item in 10.1.
+   RRQ Bloom band spans Understand to Analyze (RRQ 9 at Analyze).
+   ERQ distribution restored to 2/2/1 (Topic 10.1: ERQ 1 & ERQ 4; Topic 10.2: ERQ 2 & ERQ 3; integrative: ERQ 5).
+   ERQ 5 explicitly specifies complete lesson design for a named Sindh class (name class and subject).
+2. GUIDE MISATTRIBUTION (teacher notes): RESOLVED.
+   docs/semester-1/efmp-301/unit-10/unit-teacher-notes.mdx:83-86 reworded to "The practical work for this
+   chapter (the unit's instantiation of the course guide's course-generic Practical Work list)", accurately
+   identifying the specific task as authored instantiation rather than guide-specified. Phrasing in
+   sources/unit-10.md:21 aligned.
+3. GUIDE MISATTRIBUTION (fig-U10-1): RESOLVED.
+   SVG column header updated to "one classroom use", carrier alt text in topic-01.mdx:40 and figure manifest
+   row 1 in specs/content/efmp-301/figures/unit-10.md updated to "one classroom use".
+4. FIGURE TEXT-OVERPRINT DEFECT (fig-U10-4): RESOLVED.
+   Fifth practice row cleanly split into practice name ("reads developmentally", col 1, x=112), description
+   ("where is this pupil, what is next", col 2, x=224), and unit reference ("Unit 2", col 3, x=556).
+   Zero text-on-text collision in light and dark SVGs; measure-figure-text clean.
+
+Advisory findings (recorded, non-blocking)
+------------------------------------------
+5. fig-U10-3 label: "check: does this produce it? for it?" is concise and functionally sound.
+6. MCQ key clustering: option b in 8 items, c in 2 items (acceptable, non-blocking).
+7. Prose slips: topic-02.mdx:99 "nameable in a observation"; index.mdx:56-58 pointer to assessment.
+8. Cited-but-unbound passages: seifert2009 Ch 9-10 details consistent without direct quotations.
+9. Input drift: resolved in run002 (exact commit bound).
+10. Glossary component imported but unused: non-blocking terminology note.
+11. Host resource limits: static layout inspection, geometry measurement, and sharp rasterization used
+    instead of live browser dev server.
+
+Criterion verdicts
+------------------
+authority PASS | sources PASS | coverage PASS | assessment PASS |
+accessibility PASS | readability PASS | pedagogy PASS.
+
+Disposition: PASS.
+
+Advisory only. This report does not certify the unit, mark any gate done, or alter any
+tracker row, translation_status or registry state.

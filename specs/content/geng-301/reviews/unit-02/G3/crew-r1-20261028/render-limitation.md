@@ -1,0 +1,1 @@
+No render-review command was executed. The crew brief prohibits build, dev server and Playwright. No PNG/WebP/JPG render evidence is claimed. SVG geometry measurement also launches playwright-core Chromium, so no measurement command was executed. Required desktop/narrow/A4 print inspection remains unavailable.

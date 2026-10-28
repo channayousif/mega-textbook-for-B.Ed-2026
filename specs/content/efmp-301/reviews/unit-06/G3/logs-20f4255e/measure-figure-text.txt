@@ -1,0 +1,36 @@
+✗ static/img/figures/efmp-301/unit-06/fig-U6-1.dark.svg
+    overlaps other text by 5.5px: "1. physiological" / "a frightened"
+    spills 15.5px out of its .panel-a [155,342,273,424]: "1. physiological"
+    spills 8.9px out of its .panel-b [273,282,391,424]: "pupil cannot risk"
+    spills 8.5px out of its .panel-c [391,222,509,424]: "pupil cannot join"
+    spills 20.9px out of its .panel-d [509,162,627,424]: "pupil cannot shine"
+    spills 16.4px out of its .panel [627,102,745,424]: "pupil can become"
+✗ static/img/figures/efmp-301/unit-06/fig-U6-1.svg
+    overlaps other text by 5.5px: "1. physiological" / "a frightened"
+    spills 15.5px out of its .panel-a [155,342,273,424]: "1. physiological"
+    spills 8.9px out of its .panel-b [273,282,391,424]: "pupil cannot risk"
+    spills 8.5px out of its .panel-c [391,222,509,424]: "pupil cannot join"
+    spills 20.9px out of its .panel-d [509,162,627,424]: "pupil cannot shine"
+    spills 16.4px out of its .panel [627,102,745,424]: "pupil can become"
+✓ static/img/figures/efmp-301/unit-06/fig-U6-1.ur.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-06/fig-U6-1.ur.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✗ static/img/figures/efmp-301/unit-06/fig-U6-2.dark.svg
+    only 3.1px from the next label (need 4): "the midday meal that changed" / "the strict order does"
+✗ static/img/figures/efmp-301/unit-06/fig-U6-2.svg
+    only 3.1px from the next label (need 4): "the midday meal that changed" / "the strict order does"
+✓ static/img/figures/efmp-301/unit-06/fig-U6-2.ur.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-06/fig-U6-2.ur.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✗ static/img/figures/efmp-301/unit-06/fig-U6-3.dark.svg
+    spills 36.1px out of its .panel [285,355,525,425]: "the next attempt follows expectation"
+✗ static/img/figures/efmp-301/unit-06/fig-U6-3.svg
+    spills 36.1px out of its .panel [285,355,525,425]: "the next attempt follows expectation"
+✓ static/img/figures/efmp-301/unit-06/fig-U6-3.ur.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-06/fig-U6-3.ur.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✗ static/img/figures/efmp-301/unit-06/fig-U6-4.dark.svg
+    overlaps other text by 16.2px: "the demonstration jar, the story" / "keep personal:"
+✗ static/img/figures/efmp-301/unit-06/fig-U6-4.svg
+    overlaps other text by 16.2px: "the demonstration jar, the story" / "keep personal:"
+✓ static/img/figures/efmp-301/unit-06/fig-U6-4.ur.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-06/fig-U6-4.ur.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+
+18 text-geometry problem(s).

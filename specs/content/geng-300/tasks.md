@@ -15,6 +15,7 @@ G1 unit-spec affirmed at intake (D-2026-0019). G2 en-draft cleared by determinis
 | Unit 1 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0019; content-spec status: approved |
 | Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-300/reviews/unit-01/G2/20261027T165057677Z-gates.json |
 | Unit 1 | G3 en-review | ▣ | | Advisory independent agy G3 **revise** (thread 7c5e7ce2-df0f-4b0d-9349-51c41fabe43d): SVG text geometry overflow (fig-U1-1, fig-U1-3), RRQ 3 arithmetic discrepancy and RRQ 4 clause classification error. Report: `specs/content/geng-300/reviews/unit-01/G3/agent-g3-geng-300-u1-run7c5e7ce2.json`. G3 stays open, unsigned (ADR-0019). Stale since the figure-geometry repair; needs a fresh G3 run. |
+| Unit 1 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/geng-300/reviews/unit-01/G3/agent-g3-geng-300-u1-run7c5e7ce2.json (all six findings already resolved in 8a0b7828 and 3a482d34, verified 2026-10-28; measure-figure-text exits 0) |
 | Unit 1 | G4 ur-translation | ▢ | | English-only course (bilingual: false); no Urdu mirror required |
 | Unit 1 | G5 ur-review | ▢ | | English-only course |
 | Unit 1 | G6 assets | ▢ | | |
@@ -23,6 +24,7 @@ G1 unit-spec affirmed at intake (D-2026-0019). G2 en-draft cleared by determinis
 | Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-300/reviews/unit-02/G2/20261019T140746718Z-gates.json |
 | Unit 2 | G3 en-review | ▣ | | Advisory independent agy G3 **revise** (thread 24f6f754-39a8-4a44-9598-84808a1e86be): missing blueprint comparison item, RRQ 3 arithmetic discrepancy, and leaf subtopic U2-05 (making predictions) omitted. Report: `specs/content/geng-300/reviews/unit-02/G3/agent-g3-geng-300-u2-run24f6f754.json`. G3 stays open, unsigned (ADR-0019). |
 | Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/geng-300/reviews/unit-02/G3/agent-g3-geng-300-u2-run24f6f754.json |
+| Unit 2 | G3 en-review | ▣ | agent:codex-g3-reviewer | advisory: escalate; final cycle: earlier substantive repairs verified; topic assessment minima, ERQ 3 stimulus, authority/provenance and current renders unresolved. advisory:specs/content/geng-300/reviews/unit-02/G3/20261028-codex-r1.json; unsigned, G3 open; owner escalation required (ADR-0019). |
 | Unit 2 | G4 ur-translation | ▢ | | English-only course |
 | Unit 2 | G5 ur-review | ▢ | | English-only course |
 | Unit 2 | G6 assets | ▢ | | |
@@ -41,3 +43,4 @@ G1 unit-spec affirmed at intake (D-2026-0019). G2 en-draft cleared by determinis
 | Unit 4 | G5 ur-review | ▢ | | English-only course |
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
+| Unit 1 | G3 en-review | ▢ | | advisory cycle 2 (disposition: pass, advisory findings F1-F2) at specs/content/geng-300/reviews/unit-01/G3/agent-g3-geng-300-u1-run41b4c5ae.json; agent reviews advisory under ADR-0019 |

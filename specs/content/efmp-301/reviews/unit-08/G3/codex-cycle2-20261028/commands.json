@@ -1,0 +1,37 @@
+[
+  {
+    "name": "validate:content",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-301/reviews/unit-08/G3/codex-cycle2-20261028/validate-content.log"
+  },
+  {
+    "name": "check:depth-gate",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-301/reviews/unit-08/G3/codex-cycle2-20261028/check-depth-gate.log"
+  },
+  {
+    "name": "check:figures",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-301/reviews/unit-08/G3/codex-cycle2-20261028/check-figures.log"
+  },
+  {
+    "name": "check:no-em-dash",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-301/reviews/unit-08/G3/codex-cycle2-20261028/check-no-em-dash.log"
+  },
+  {
+    "name": "check:no-answer-keys",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-301/reviews/unit-08/G3/codex-cycle2-20261028/check-no-answer-keys.log"
+  },
+  {
+    "name": "check:docs-sync",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-301/reviews/unit-08/G3/codex-cycle2-20261028/check-docs-sync.log"
+  },
+  {
+    "name": "check:content",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-301/reviews/unit-08/G3/codex-cycle2-20261028/check-content.log"
+  }
+]

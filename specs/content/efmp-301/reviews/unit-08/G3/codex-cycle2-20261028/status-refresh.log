@@ -1,0 +1,2 @@
+$ npm run build:content-status
+Executed after tracker change caused check:content-status failure. Exit 0. Generated status hash refreshed; no publication tier changed. Pre-existing generated metadata refresh included.
