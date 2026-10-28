@@ -59,7 +59,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 5 | G7 publish | ▢ | | |
 | Unit 6 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
 | Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-06/G2/20261027T054219823Z-gates.json |
-| Unit 6 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 067c2ff2; report reviews/unit-06/G3/agent-g3-efmp301-u6-run001.json; Stale since the figure-geometry repair; needs a fresh G3 run |
+| Unit 6 | G3 en-review | ▢ | | advisory run002 (disposition: pass) at specs/content/efmp-301/reviews/unit-06/G3/20f4255e-9449-4f10-a771-4653e5eee5e5.json; its input manifest predates the figure-geometry repair (8bac57e5), so it is stale; needs a fresh G3 run; agent reviews advisory under ADR-0019 |
 | Unit 6 | G4 ur-translation | ✅ | auto:gates | full UR mirror (5 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
 | Unit 6 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at 91844dfd; G3 dependency escalated to owner; figure/prose term unification escalated to owner; report reviews/unit-06/G5/agent-g5-efmp301-u6-run001.json |
 | Unit 6 | G6 assets | ▢ | | |
