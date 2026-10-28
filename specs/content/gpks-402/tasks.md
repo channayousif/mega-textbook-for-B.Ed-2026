@@ -8,7 +8,7 @@
 |---|---|---|---|---|---|---|---|
 | 1 | Introduction and Ideological Foundations | ☐ | ☐ | ☐ | ☐ | planned | Withdrawn 2026-10-10 (owner, D-2026-0053 / G-2026-100): authored before intake; re-author after spec approval |
 | 2 | Reform Movements and the Pakistan Movement | ☐ | ☐ | ☐ | ☐ | planned | Withdrawn 2026-10-10 (owner, D-2026-0053 / G-2026-100) |
-| 3 | Constitutional Development | ▣ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-10-28; G2 deterministic evidence being prepared; G3/G5 remain open; Urdu is a separate job |
+| 3 | Constitutional Development | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-10-28; G2 deterministic evidence recorded below; G3/G5 remain open; Urdu is a separate job |
 | 4 | Governance, Rights and Geography | ☐ | ☐ | ☐ | ☐ | planned | |
 | 5 | Economy and Society | ☐ | ☐ | ☐ | ☐ | planned | |
 | 6 | Foreign Policy, Issues and Education | ☐ | ☐ | ☐ | ☐ | planned | |
@@ -33,7 +33,7 @@ Only Unit 3 is updated by this authoring job. The approved content-spec is the d
 
 | Unit | Stage | Status | Reviewer | Notes |
 |---|---|---|---|---|
-| Unit 3 | G2 en-draft | ▣ | codex | Draft and four English schematics authored; deterministic evidence pending |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-03/G2/20261028T094251597Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | Independent expert review pending; no certification claimed |
 | Unit 3 | G4 ur-translation | ▢ | | Separate Urdu job; localise all four schematic sources and mirror RTL layout |
 | Unit 3 | G5 ur-review | ▢ | | Pending translation and independent review; authored concept labels require review |
