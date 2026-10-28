@@ -1,0 +1,8 @@
+Reviewed commit: 4285d7cb67c4ad4e5c70052dd95e12f7ea3bcd33
+origin/main equals reviewed HEAD. No pre-existing branch commits or worktree changes.
+Prepared locally because no current parent bundle was supplied. Previous G3 manifest is historical, not silently refreshed.
+Current manifest entries: 98
+Exact recomputation matches: true
+Skill digest matches: true
+Authoring and repair commits identifiable in git; platform author session IDs and serving model version were not supplied.
+Reviewer is this fresh Codex session; local attempt label is not a platform-issued session ID.
