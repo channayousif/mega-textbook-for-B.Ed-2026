@@ -16,10 +16,30 @@ links:
   adr: null
   pr: null
 files:
-  - specs/content/gqur-300/tasks.md
-  - history/prompts/gqur-300/crew-gqur-300-u06-review_en-conflict1.misc.prompt.md
+ - history/prompts/general/2431-gqur300-u06-final-g3-review.general.prompt.md
+ - history/prompts/gqur-300/crew-gqur-300-u06-review_en-conflict1.misc.prompt.md
+ - history/prompts/gqur-300/crew-gqur-300-u06-review_en.misc.prompt.md
+ - specs/content/gqur-300/reviews/unit-06/G3/codex-cycle2-20261028.json
+ - specs/content/gqur-300/reviews/unit-06/G3/codex-cycle2-20261028.summary.md
+ - specs/content/gqur-300/reviews/unit-06/G3/codex-cycle2-20261028/assessment-recomputation.md
+ - specs/content/gqur-300/reviews/unit-06/G3/codex-cycle2-20261028/check-content-baseline.log
+ - specs/content/gqur-300/reviews/unit-06/G3/codex-cycle2-20261028/check-content-final.log
+ - specs/content/gqur-300/reviews/unit-06/G3/codex-cycle2-20261028/check-content-rerun.log
+ - specs/content/gqur-300/reviews/unit-06/G3/codex-cycle2-20261028/check-depth-gate.log
+ - specs/content/gqur-300/reviews/unit-06/G3/codex-cycle2-20261028/check-docs-sync.log
+ - specs/content/gqur-300/reviews/unit-06/G3/codex-cycle2-20261028/check-figures.log
+ - specs/content/gqur-300/reviews/unit-06/G3/codex-cycle2-20261028/check-no-answer-keys.log
+ - specs/content/gqur-300/reviews/unit-06/G3/codex-cycle2-20261028/check-no-em-dash.log
+ - specs/content/gqur-300/reviews/unit-06/G3/codex-cycle2-20261028/commands.json
+ - specs/content/gqur-300/reviews/unit-06/G3/codex-cycle2-20261028/input-verification.log
+ - specs/content/gqur-300/reviews/unit-06/G3/codex-cycle2-20261028/manifest.json
+ - specs/content/gqur-300/reviews/unit-06/G3/codex-cycle2-20261028/refresh-content-status.log
+ - specs/content/gqur-300/reviews/unit-06/G3/codex-cycle2-20261028/source-check.md
+ - specs/content/gqur-300/reviews/unit-06/G3/codex-cycle2-20261028/validate-content.log
+ - specs/content/gqur-300/reviews/unit-06/G3/codex-cycle2-20261028/validate-report.log
+ - specs/content/gqur-300/tasks.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -58,19 +78,19 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Merged origin/main into crew/gqur-300-u06-review_en, resolved the conflict in specs/content/gqur-300/tasks.md by preserving both Unit 4 and Unit 6 advisory rows, refreshed content status, and verified all 13 content gates pass.
+Merged origin/main into crew/gqur-300-u06-review_en, resolved the task tracker conflict by retaining both Unit 4 and Unit 6 advisory review rows, and verified all 13 content gates pass.
 
 ## Outcome
 
 - Impact: fix for GQUR-300 Unit 6 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree.
-- Files: specs/content/gqur-300/tasks.md and history/prompts/gqur-300/crew-gqur-300-u06-review_en-conflict1.misc.prompt.md.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 22 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
-- Reflection: none.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main and resolved tracker conflict in specs/content/gqur-300/tasks.md, preserving both advisory rows.
+- Shipped / changed: Merged origin/main into crew/gqur-300-u06-review_en, resolved the task tracker conflict by retaining both Unit 4 and Unit 6 advisory review rows, and verified all 13 content gates pass.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
