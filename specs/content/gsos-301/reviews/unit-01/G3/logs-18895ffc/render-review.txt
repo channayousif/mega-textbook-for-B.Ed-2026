@@ -1,0 +1,67 @@
+render-review evidence (G3 English, GSOS-301 Unit 1)
+=====================================================
+Timestamp: 2026-10-28T09:52:00Z
+Reviewer: agent:agy
+Model: Gemini 3.8 Flash (High)
+Reviewer Run ID: 18895ffc-9133-4016-98ea-4feb32e69b98
+Reviewed Commit: fb0aaaae
+
+HOST & ENVIRONMENT CONSTRAINT:
+The crew brief and repository policy (AGENTS.md) strictly forbid running `npm run build`,
+a dev server (`npm start`/`serve`), or Playwright/Chromium browser automation during this
+review run. Therefore, dynamic live-browser viewport rendering (360x780 narrow viewport,
+swipe testing, table scroll container behaviour) and A4 print emulation could not be
+executed in a running browser environment.
+
+--- Source-Level Visual & Accessibility Inspection (Performed) ---
+
+1. Heading hierarchy across all 6 unit files:
+   - docs/semester-2/gsos-301/unit-01/index.mdx: single H1, clean H2 subheadings.
+   - docs/semester-2/gsos-301/unit-01/topic-01.mdx: single H1, H2 nine-part cycle sections, H3 subtopic sections.
+   - docs/semester-2/gsos-301/unit-01/topic-02.mdx: single H1, H2 nine-part cycle sections, H3 subtopic sections.
+   - docs/semester-2/gsos-301/unit-01/topic-03.mdx: single H1, H2 nine-part cycle sections, H3 subtopic sections.
+   - docs/semester-2/gsos-301/unit-01/unit-assessment.mdx: single H1, clean H2/H3 nesting.
+   - docs/semester-2/gsos-301/unit-01/unit-teacher-notes.mdx: single H1, clean H2/H3 nesting.
+   - Zero heading level skips across the entire unit.
+
+2. Alternative text and figure carriers:
+   - All 6 figures placed using <Figure> carrier component with descriptive alt attributes.
+   - fig-U1-1 (diagram): Venn diagram showing sociology overlapping with common sense, psychology and social work.
+   - fig-U1-2 (concept-map): Sociological imagination linking personal troubles to public issues.
+   - fig-U1-3 (concept-map): Four founders of sociology and key concepts.
+   - fig-U1-4 (table): Comparison table of the four founders (concept, method, legacy).
+   - fig-U1-5 (concept-map): Three major sociological perspectives and core assumptions.
+   - fig-U1-6 (table): Comparison table of the three perspectives (assumption, level of analysis).
+   - Alt text matches specifications in specs/content/gsos-301/figures/unit-01.md.
+
+3. Figure SVG text geometry measurement:
+   - Executed: scripts/heavy.sh node scripts/measure-figure-text.mjs static/img/figures/gsos-301/unit-01/*.svg
+   - Result: 24/24 SVG files pass with exit code 0.
+   - All 6 light SVGs, 6 dark SVGs, 6 Urdu SVGs, and 6 Urdu dark SVGs verified:
+     - Wordmark "textbook.com.pk" correctly styled with text-anchor: end in .wm CSS class; widest text ends at 768.4, wordmark at 675.7 within the 780px viewBox.
+     - fig-U1-4 Durkheim legacy cell text re-wrapped cleanly within column bounds.
+     - fig-U1-6 Conflict theory level-of-analysis cell text re-wrapped cleanly within column bounds.
+   - Prior defect X1 verified fully repaired.
+
+4. Visual density standard:
+   - Topic 1.1: 2 figures (diagram + concept-map)
+   - Topic 1.2: 2 figures (concept-map + table)
+   - Topic 1.3: 2 figures (concept-map + table)
+   - Meets the visual density floor (>= 2 figures per topic, >= 1 concept-map/flowchart/timeline per unit).
+
+5. Links and UI components:
+   - Relative internal links use descriptive text; no bare URLs in prose.
+   - <Glossary term="Sociology" /> present and functional.
+   - <PrintHandout /> component present on all topic and assessment pages.
+   - <TranslationStatusBadge status="draft" /> properly embedded in index.mdx.
+
+6. Rendered image evidence:
+   - static/img/figures/gsos-301/unit-01/fig-U1-1.svg rendered to PNG via sharp at
+     specs/content/gsos-301/reviews/unit-01/G3/logs-18895ffc/fig-U1-1-render.png.
+
+--- Unperformed Inspections (Host Constraint) ---
+- Dynamic 360px viewport table swipe and column visibility inspection in a live browser.
+- A4 print stylesheet DOM verification via Playwright/Puppeteer.
+- Render inspection exit code recorded as 1 due to host policy constraint.
+
+Exit code: 1 (live browser inspection unperformed per crew host rule)

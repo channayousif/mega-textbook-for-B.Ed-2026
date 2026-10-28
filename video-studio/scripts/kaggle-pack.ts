@@ -1,6 +1,7 @@
 // Step 1 of a Kaggle render (VS-ADR-0011): build a hashed bundle of approved inputs and upload it
 // as a PRIVATE dataset version.
-//   npm run kaggle:pack -- <episode-id>          # production: render inputs must be approved
+//   npm run kaggle:pack -- <episode-id>          # from the episode's script and imported voice audio;
+//                                                # production needs a valid assets approval, sample does not
 //   npm run kaggle:pack -- --sample              # Phase 0 proof from fixtures/ (mode: sample)
 //   npm run kaggle:pack -- --sample --voice-mms  # same, voiced on Kaggle with MMS-TTS Urdu (evaluation only)
 //   add --no-upload to build the bundle only
@@ -10,10 +11,11 @@ import { copyFileSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, w
 import { dirname, join, relative } from 'node:path';
 import { readApprovals } from './lib/approvals.ts';
 import { currentDigests, readEpisode } from './lib/episode.ts';
+import { episodeProps, readManualAlignment } from './lib/episode-props.ts';
 import { digestBytes } from './lib/hash.ts';
 import { evaluate } from './lib/invalidation.ts';
 import { datasetSlug, kaggleUser, uploadDataset } from './lib/kaggle.ts';
-import { assertEpisodeId, kaggleBundleDir, REPO_ROOT, VS_ROOT } from './lib/paths.ts';
+import { assertEpisodeId, episodeDir, kaggleBundleDir, REPO_ROOT, VS_ROOT } from './lib/paths.ts';
 import { SAMPLE_EPISODE_ID, SAMPLE_VOICE_EPISODE_ID, sampleProps, sampleVoiceProps } from './lib/sample.ts';
 import { toneWav } from './lib/wav.ts';
 
@@ -24,15 +26,22 @@ const upload = !args.includes('--no-upload');
 const id = assertEpisodeId(sample ? (voice ? SAMPLE_VOICE_EPISODE_ID : SAMPLE_EPISODE_ID) : args.find((a) => !a.startsWith('--')) ?? '');
 
 let props;
+let episodeAudio: Record<string, Buffer> = {};
 if (sample) {
   props = voice ? sampleVoiceProps() : sampleProps();
 } else {
-  // Production render needs a valid assets approval; the props builder lands in Phase 4/5 (T040+).
+  // A production render needs a valid assets approval; a sample-mode episode renders with the
+  // SAMPLE watermark and can never be render-approved (constitution X).
   const ep = readEpisode(id);
-  if (ep.mode === 'sample') throw new Error(`${id} is a sample episode; use --sample`);
-  const state = evaluate(readApprovals(id), currentDigests(id));
-  if (!state.assets.valid) throw new Error(`refusing to pack ${id}: assets approval is ${state.assets.reason}`);
-  throw new Error('production props are built from approved assets in VS-001 Phase 4/5; not implemented yet');
+  if (ep.mode !== 'sample') {
+    const state = evaluate(readApprovals(id), currentDigests(id));
+    if (!state.assets.valid) throw new Error(`refusing to pack ${id}: assets approval is ${state.assets.reason}`);
+  }
+  const script = JSON.parse(readFileSync(join(episodeDir(id), 'script.json'), 'utf8'));
+  const built = episodeProps(ep, script, { manual: readManualAlignment(id) });
+  props = built.props;
+  episodeAudio = built.audio;
+  console.log(`kaggle:pack: ${props.lines.length} lines, ${props.duration_s} s; alignment ${JSON.stringify(built.alignment)}`);
 }
 
 const out = kaggleBundleDir(id);
@@ -58,6 +67,7 @@ mkdirSync(join(pub, 'fonts'), { recursive: true });
 copyFileSync(join(REPO_ROOT, 'static', 'fonts', 'NotoNastaliqUrdu-Regular.woff2'), join(pub, 'fonts', 'NotoNastaliqUrdu-Regular.woff2'));
 mkdirSync(join(pub, 'audio'), { recursive: true });
 if (props.audio) writeFileSync(join(pub, props.audio), toneWav(props.duration_s));
+for (const [rel, bytes] of Object.entries(episodeAudio)) writeFileSync(join(pub, rel), bytes);
 writeFileSync(join(stage, 'props.json'), JSON.stringify(props, null, 2) + '\n');
 
 const manifestFiles: Record<string, string> = {};

@@ -134,6 +134,64 @@
                   "accepted",
                   "rejected"
                 ]
+              },
+              "source_sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$",
+                "description": "raw bytes of the imported file, before normalisation (V006)"
+              },
+              "source_file": {
+                "type": "string",
+                "description": "original file name"
+              },
+              "model": {
+                "type": "string",
+                "description": "engine model id, e.g. ResembleAI/Chatterbox-Multilingual-hi"
+              },
+              "voice": {
+                "type": "object",
+                "description": "voice provenance (PI-04, PI-08): card and consent digests at import time",
+                "required": [
+                  "character",
+                  "card_sha256",
+                  "consent_id",
+                  "consent_sha256"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "character": {
+                    "type": "string"
+                  },
+                  "card_sha256": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  },
+                  "reference_sha256": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  },
+                  "consent_id": {
+                    "type": "string",
+                    "pattern": "^narrator-\\d{2}$"
+                  },
+                  "consent_sha256": {
+                    "type": "string",
+                    "pattern": "^[a-f0-9]{64}$"
+                  }
+                }
+              },
+              "supersedes": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$",
+                "description": "sha256 of the take this one corrects"
+              },
+              "superseded_by": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$",
+                "description": "set on a replaced take (status rejected)"
+              },
+              "correction_reason": {
+                "type": "string"
               }
             }
           }
