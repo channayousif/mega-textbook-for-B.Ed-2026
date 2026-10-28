@@ -22,15 +22,15 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 1 | G6 assets | ▢ | | |
 | Unit 1 | G7 publish | ▢ | | |
 | Unit 2 | G1 unit-spec | ▢ | | guide Chapter 2; intake re-evaluation advised (D-2026-0070) |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-02/G2/20261020T205923361Z-gates.json |
-| Unit 2 | G3 en-review | ▢ | | earlier advisory G3 reports describe the six-unit grouping and are archived under reviews/superseded-six-unit/; needs a fresh independent G3 review |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-02/G2/20261027T193307831Z-gates.json |
+| Unit 2 | G3 en-review | ▢ | | earlier advisory G3 reports describe the six-unit grouping and are archived under reviews/superseded-six-unit/; needs a fresh independent G3 review; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 2 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 2 | G5 ur-review | ▢ | | |
 | Unit 2 | G6 assets | ▢ | | |
 | Unit 2 | G7 publish | ▢ | | |
 | Unit 3 | G1 unit-spec | ▢ | | guide Chapter 3; intake re-evaluation advised (D-2026-0070) |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-03/G2/20261021T071753539Z-gates.json |
-| Unit 3 | G3 en-review | ▢ | | advisory run 001 (disposition: pass, advisory finding F1) at specs/content/gqur-301/reviews/unit-03/G3/0537b555-5784-429b-aaaa-e51e0af1897b.json; agent reviews advisory under ADR-0019 |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-03/G2/20261027T195341319Z-gates.json |
+| Unit 3 | G3 en-review | ▢ | | advisory run 001 (disposition: pass, advisory finding F1) at specs/content/gqur-301/reviews/unit-03/G3/0537b555-5784-429b-aaaa-e51e0af1897b.json; agent reviews advisory under ADR-0019; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 3 | G4 ur-translation | ▢ | | Draft mirror and four Urdu SVG pairs prepared from 47e14253; translation_status remains draft. No G4 completion claim or new row under translate-unit Step 7. Handoff: translations/unit-03/handoff.md |
 | Unit 3 | G5 ur-review | ▢ | | |
 | Unit 3 | G6 assets | ▢ | | |
@@ -92,22 +92,22 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 11 | G6 assets | ▢ | | |
 | Unit 11 | G7 publish | ▢ | | |
 | Unit 12 | G1 unit-spec | ▢ | | guide Chapter 12; intake re-evaluation advised (D-2026-0070) |
-| Unit 12 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-12/G2/20261022T000224330Z-gates.json |
-| Unit 12 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only: specs/content/gqur-301/reviews/unit-12/G3/crew-20261022.json; F1-F6 need separate author repair; provenance, G1/source bundle and rendered accessibility remain unresolved. G3 stays open, unsigned (ADR-0019). |
+| Unit 12 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-12/G2/20261027T153755706Z-gates.json |
+| Unit 12 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only: specs/content/gqur-301/reviews/unit-12/G3/crew-20261022.json; F1-F6 need separate author repair; provenance, G1/source bundle and rendered accessibility remain unresolved. G3 stays open, unsigned (ADR-0019). Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 12 | G4 ur-translation | ▢ | | full Urdu mirror required |
 | Unit 12 | G5 ur-review | ▢ | | |
 | Unit 12 | G6 assets | ▢ | | |
 | Unit 12 | G7 publish | ▢ | | |
 | Unit 13 | G1 unit-spec | ▢ | | guide Chapter 13; intake re-evaluation advised (D-2026-0070) |
-| Unit 13 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-13/G2/20261023T155000674Z-gates.json |
-| Unit 13 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only: specs/content/gqur-301/reviews/unit-13/G3/crew-20261023.json; F1-F5 require separate author repair (missing figures, RRQ8 same-data contradiction, slope/confidence claims and assessment demand); G1, source/provenance and current narrow/A4 render evidence unresolved. G3 remains open and unsigned (ADR-0019). |
+| Unit 13 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-13/G2/20261027T160227315Z-gates.json |
+| Unit 13 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only: specs/content/gqur-301/reviews/unit-13/G3/crew-20261023.json; F1-F5 require separate author repair (missing figures, RRQ8 same-data contradiction, slope/confidence claims and assessment demand); G1, source/provenance and current narrow/A4 render evidence unresolved. G3 remains open and unsigned (ADR-0019). Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 13 | G4 ur-translation | ▢ | | Blocked by unresolved English RRQ8 contradiction and slope/inference defects under translate-unit prerequisite; see reviews/unit-13/translation-validation/handoff.md. No translation or completion claim; translation_status remains draft. |
 | Unit 13 | G5 ur-review | ▢ | | |
 | Unit 13 | G6 assets | ▢ | | |
 | Unit 13 | G7 publish | ▢ | | |
 | Unit 14 | G1 unit-spec | ▢ | | guide Chapter 14; intake re-evaluation advised (D-2026-0070) |
-| Unit 14 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-14/G2/20261022T002029Z-gates.json |
-| Unit 14 | G3 en-review | ▣ | agent:claude-g3-reviewer | Advisory escalation only: specs/content/gqur-301/reviews/unit-14/G3/crew-20261023.json; F1-F5 need separate author repair (data sum 503 not 513, 30.5-37.9 interval contradiction, z vs t with s, fig-U14-4 subtitle clipped, 14.2 rubric interval); G1 approval, bound sources and rendered accessibility remain unresolved. G3 stays open, unsigned (ADR-0019). |
+| Unit 14 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-14/G2/20261027T161905525Z-gates.json |
+| Unit 14 | G3 en-review | ▣ | agent:claude-g3-reviewer | Advisory escalation only: specs/content/gqur-301/reviews/unit-14/G3/crew-20261023.json; F1-F5 need separate author repair (data sum 503 not 513, 30.5-37.9 interval contradiction, z vs t with s, fig-U14-4 subtitle clipped, 14.2 rubric interval); G1 approval, bound sources and rendered accessibility remain unresolved. G3 stays open, unsigned (ADR-0019). Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 14 | G4 ur-translation | ▢ | | Complete four-page draft mirror and four Urdu SVG pairs prepared from 49b87768; translation_status remains draft. Mirrors the unrepaired English G3 findings F1-F5, so it must be re-run after the author repair. No completion claim or appended row under translate-unit Step 7. Handoff: reviews/unit-14/translation-validation/handoff.md |
 | Unit 14 | G5 ur-review | ▢ | | |
 | Unit 14 | G6 assets | ▢ | | |
@@ -131,7 +131,7 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 
 | Unit | Stage | Status | Reviewer | Notes |
 |---|---|---|---|---|
-| Unit 2 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only; F1-F4 require separate author repair; provenance, G1, source capture, answer-blind assessment review and rendered accessibility remain unresolved. Report: specs/content/gqur-301/reviews/unit-02/G3/01a15ce3-0ba2-75d2-aff3-2592f4a5fb48.json; G3 remains open. |
+| Unit 2 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only; F1-F4 require separate author repair; provenance, G1, source capture, answer-blind assessment review and rendered accessibility remain unresolved. Report: specs/content/gqur-301/reviews/unit-02/G3/01a15ce3-0ba2-75d2-aff3-2592f4a5fb48.json; G3 remains open; Stale since the figure-geometry repair; needs a fresh G3 run |
 
 ## Advisory G3 Unit 7 review, 2026-10-22
 

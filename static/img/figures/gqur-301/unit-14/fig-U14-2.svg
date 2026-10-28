@@ -36,9 +36,9 @@
   <!-- Annotation panel -->
   <rect class="panel" x="50" y="304" width="680" height="90" rx="8"/>
   <text class="h" x="75" y="332">Reading this table</text>
-  <text class="body" x="75" y="358">Both rows use the same idea: a single number from the sample stands in for</text>
-  <text class="body" x="75" y="378">the unknown population value. The sample mean estimates the population mean;</text>
-  <text class="body" x="75" y="394">the sample proportion estimates the population proportion.</text>
+  <text class="body" x="75" y="352">Both rows use the same idea: a single number from the sample stands in for</text>
+  <text class="body" x="75" y="370">the unknown population value. The sample mean estimates the population mean;</text>
+  <text class="body" x="75" y="388">the sample proportion estimates the population proportion.</text>
 
   <!-- Wordmark -->
   <text class="wm" x="765" y="410" text-anchor="end" aria-hidden="true">textbook.com.pk</text>

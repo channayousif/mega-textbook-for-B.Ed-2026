@@ -1,0 +1,117 @@
+$ npm run check:content
+Working tree: .crew/baseline
+
+> bed-mega-textbook@0.1.0 check:content
+> node scripts/run-gates.mjs content
+
+Running 13 content gates
+
+  validate:content        PASS  1.2s
+  check:pipeline-gate     FAIL  3.0s
+  check:depth-gate        PASS  1.0s
+  check:figures           PASS  1.3s
+  check:no-em-dash        PASS  0.7s
+  check:no-answer-keys    PASS  0.5s
+  check:concept-graph     PASS  0.3s
+  check:bloom-bands       PASS  0.3s
+  check:source-floor      PASS  0.3s
+  check:licence           PASS  0.6s
+  licence:map:check       PASS  0.4s
+  check:content-status    PASS  0.7s
+  check:docs-sync         PASS  0.2s
+
+============================================================
+check:pipeline-gate
+============================================================
+
+✗ Pipeline gate failed with 84 finding(s):
+
+  - EFMP-301 Unit 2 (docs/semester-1/efmp-301/unit-02): G2 en-draft: stale or incomplete input manifest
+  - EFMP-301 Unit 3 (docs/semester-1/efmp-301/unit-03): G2 en-draft: stale or incomplete input manifest
+  - EFMP-301 Unit 4 (docs/semester-1/efmp-301/unit-04): G2 en-draft: stale or incomplete input manifest
+  - EFMP-301 Unit 5 (docs/semester-1/efmp-301/unit-05): G2 en-draft: stale or incomplete input manifest
+  - EFMP-301 Unit 6 (docs/semester-1/efmp-301/unit-06): G2 en-draft: stale or incomplete input manifest
+  - EFMP-301 Unit 7 (docs/semester-1/efmp-301/unit-07): G2 en-draft: stale or incomplete input manifest
+  - EFMP-301 Unit 8 (docs/semester-1/efmp-301/unit-08): G2 en-draft: stale or incomplete input manifest
+  - EFMP-301 Unit 9 (docs/semester-1/efmp-301/unit-09): G2 en-draft: stale or incomplete input manifest
+  - EFMP-301 Unit 10 (docs/semester-1/efmp-301/unit-10): G2 en-draft: stale or incomplete input manifest
+  - EFMP-301 Unit 11 (docs/semester-1/efmp-301/unit-11): G2 en-draft: stale or incomplete input manifest
+  - EFMP-301 Unit 12 (docs/semester-1/efmp-301/unit-12): G2 en-draft: stale or incomplete input manifest
+  - EFMP-302 Unit 2 (docs/semester-1/efmp-302/unit-02): G2 en-draft: stale or incomplete input manifest
+  - EFMP-302 Unit 3 (docs/semester-1/efmp-302/unit-03): G2 en-draft: stale or incomplete input manifest
+  - EFMP-302 Unit 4 (docs/semester-1/efmp-302/unit-04): G2 en-draft: stale or incomplete input manifest
+  - EFMP-302 Unit 5 (docs/semester-1/efmp-302/unit-05): G2 en-draft: stale or incomplete input manifest
+  - EFMP-302 Unit 6 (docs/semester-1/efmp-302/unit-06): G2 en-draft: stale or incomplete input manifest
+  - GENG-300 Unit 1 (docs/semester-1/geng-300/unit-01): G2 en-draft: stale or incomplete input manifest
+  - GENG-300 Unit 2 (docs/semester-1/geng-300/unit-02): G2 en-draft: stale or incomplete input manifest
+  - GENG-300 Unit 3 (docs/semester-1/geng-300/unit-03): G2 en-draft: stale or incomplete input manifest
+  - GENG-300 Unit 4 (docs/semester-1/geng-300/unit-04): G2 en-draft: stale or incomplete input manifest
+  - GICT-300 Unit 1 (docs/semester-1/gict-300/unit-01): G2 en-draft: stale or incomplete input manifest
+  - GICT-300 Unit 2 (docs/semester-1/gict-300/unit-02): G2 en-draft: stale or incomplete input manifest
+  - GICT-300 Unit 3 (docs/semester-1/gict-300/unit-03): G2 en-draft: stale or incomplete input manifest
+  - GICT-300 Unit 4 (docs/semester-1/gict-300/unit-04): G2 en-draft: stale or incomplete input manifest
+  - GICT-300 Unit 5 (docs/semester-1/gict-300/unit-05): G2 en-draft: stale or incomplete input manifest
+  - GICT-300 Unit 6 (docs/semester-1/gict-300/unit-06): G2 en-draft: stale or incomplete input manifest
+  - GNAS-301 Unit 1 (docs/semester-1/gnas-301/unit-01): G2 en-draft: stale or incomplete input manifest
+  - GNAS-301 Unit 2 (docs/semester-1/gnas-301/unit-02): G2 en-draft: stale or incomplete input manifest
+  - GNAS-301 Unit 3 (docs/semester-1/gnas-301/unit-03): G2 en-draft: stale or incomplete input manifest
+  - GNAS-301 Unit 4 (docs/semester-1/gnas-301/unit-04): G2 en-draft: stale or incomplete input manifest
+  - GNAS-301 Unit 5 (docs/semester-1/gnas-301/unit-05): G2 en-draft: stale or incomplete input manifest
+  - GNAS-301 Unit 6 (docs/semester-1/gnas-301/unit-06): G2 en-draft: stale or incomplete input manifest
+  - GQUR-300 Unit 1 (docs/semester-1/gqur-300/unit-01): G2 en-draft: stale or incomplete input manifest
+  - GQUR-300 Unit 2 (docs/semester-1/gqur-300/unit-02): G2 en-draft: stale or incomplete input manifest
+  - GQUR-300 Unit 3 (docs/semester-1/gqur-300/unit-03): G2 en-draft: stale or incomplete input manifest
+  - GQUR-300 Unit 4 (docs/semester-1/gqur-300/unit-04): G2 en-draft: stale or incomplete input manifest
+  - GQUR-300 Unit 5 (docs/semester-1/gqur-300/unit-05): G2 en-draft: stale or incomplete input manifest
+  - GQUR-300 Unit 6 (docs/semester-1/gqur-300/unit-06): G2 en-draft: stale or incomplete input manifest
+  - EFMP-303 Unit 1 (docs/semester-2/efmp-303/unit-01): G2 en-draft: stale or incomplete input manifest
+  - EFMP-303 Unit 2 (docs/semester-2/efmp-303/unit-02): G2 en-draft: stale or incomplete input manifest
+  - EFMP-303 Unit 3 (docs/semester-2/efmp-303/unit-03): G2 en-draft: stale or incomplete input manifest
+  - EFMP-303 Unit 4 (docs/semester-2/efmp-303/unit-04): G2 en-draft: stale or incomplete input manifest
+  - EFMP-303 Unit 5 (docs/semester-2/efmp-303/unit-05): G2 en-draft: stale or incomplete input manifest
+  - EFMP-303 Unit 6 (docs/semester-2/efmp-303/unit-06): G2 en-draft: stale or incomplete input manifest
+  - EFMP-304 Unit 1 (docs/semester-2/efmp-304/unit-01): G2 en-draft: stale or incomplete input manifest
+  - EFMP-304 Unit 2 (docs/semester-2/efmp-304/unit-02): G2 en-draft: stale or incomplete input manifest
+  - EFMP-304 Unit 3 (docs/semester-2/efmp-304/unit-03): G2 en-draft: stale or incomplete input manifest
+  - EFMP-304 Unit 4 (docs/semester-2/efmp-304/unit-04): G2 en-draft: stale or incomplete input manifest
+  - EFMP-304 Unit 5 (docs/semester-2/efmp-304/unit-05): G2 en-draft: stale or incomplete input manifest
+  - EFMP-304 Unit 6 (docs/semester-2/efmp-304/unit-06): G2 en-draft: stale or incomplete input manifest
+  - EFMP-305 Unit 1 (docs/semester-2/efmp-305/unit-01): G2 en-draft: stale or incomplete input manifest
+  - EFMP-305 Unit 2 (docs/semester-2/efmp-305/unit-02): G2 en-draft: stale or incomplete input manifest
+  - EFMP-305 Unit 3 (docs/semester-2/efmp-305/unit-03): G2 en-draft: stale or incomplete input manifest
+  - EFMP-305 Unit 4 (docs/semester-2/efmp-305/unit-04): G2 en-draft: stale or incomplete input manifest
+  - EFMP-305 Unit 5 (docs/semester-2/efmp-305/unit-05): G2 en-draft: stale or incomplete input manifest
+  - EFMP-305 Unit 6 (docs/semester-2/efmp-305/unit-06): G2 en-draft: stale or incomplete input manifest
+  - GENG-301 Unit 1 (docs/semester-2/geng-301/unit-01): G2 en-draft: stale or incomplete input manifest
+  - GENG-301 Unit 2 (docs/semester-2/geng-301/unit-02): G2 en-draft: stale or incomplete input manifest
+  - GENG-301 Unit 3 (docs/semester-2/geng-301/unit-03): G2 en-draft: stale or incomplete input manifest
+  - GENG-301 Unit 4 (docs/semester-2/geng-301/unit-04): G2 en-draft: stale or incomplete input manifest
+  - GENG-301 Unit 5 (docs/semester-2/geng-301/unit-05): G2 en-draft: stale or incomplete input manifest
+  - GENG-301 Unit 6 (docs/semester-2/geng-301/unit-06): G2 en-draft: stale or incomplete input manifest
+  - GQUR-301 Unit 1 (docs/semester-2/gqur-301/unit-01): G2 en-draft: stale or incomplete input manifest
+  - GQUR-301 Unit 2 (docs/semester-2/gqur-301/unit-02): G2 en-draft: stale or incomplete input manifest
+  - GQUR-301 Unit 3 (docs/semester-2/gqur-301/unit-03): G2 en-draft: stale or incomplete input manifest
+  - GQUR-301 Unit 4 (docs/semester-2/gqur-301/unit-04): G2 en-draft: stale or incomplete input manifest
+  - GQUR-301 Unit 5 (docs/semester-2/gqur-301/unit-05): G2 en-draft: stale or incomplete input manifest
+  - GQUR-301 Unit 6 (docs/semester-2/gqur-301/unit-06): G2 en-draft: stale or incomplete input manifest
+  - GQUR-301 Unit 7 (docs/semester-2/gqur-301/unit-07): G2 en-draft: stale or incomplete input manifest
+  - GQUR-301 Unit 8 (docs/semester-2/gqur-301/unit-08): G2 en-draft: stale or incomplete input manifest
+  - GQUR-301 Unit 9 (docs/semester-2/gqur-301/unit-09): G2 en-draft: stale or incomplete input manifest
+  - GQUR-301 Unit 10 (docs/semester-2/gqur-301/unit-10): G2 en-draft: stale or incomplete input manifest
+  - GQUR-301 Unit 11 (docs/semester-2/gqur-301/unit-11): G2 en-draft: stale or incomplete input manifest
+  - GQUR-301 Unit 12 (docs/semester-2/gqur-301/unit-12): G2 en-draft: stale or incomplete input manifest
+  - GQUR-301 Unit 13 (docs/semester-2/gqur-301/unit-13): G2 en-draft: stale or incomplete input manifest
+  - GQUR-301 Unit 14 (docs/semester-2/gqur-301/unit-14): G2 en-draft: stale or incomplete input manifest
+  - GQUR-301 Unit 15 (docs/semester-2/gqur-301/unit-15): G2 en-draft: stale or incomplete input manifest
+  - GQUR-301 Unit 16 (docs/semester-2/gqur-301/unit-16): G2 en-draft: stale or incomplete input manifest
+  - GSOS-301 Unit 1 (docs/semester-2/gsos-301/unit-01): G2 en-draft: stale or incomplete input manifest
+  - GSOS-301 Unit 2 (docs/semester-2/gsos-301/unit-02): G2 en-draft: stale or incomplete input manifest
+  - GSOS-301 Unit 3 (docs/semester-2/gsos-301/unit-03): G2 en-draft: stale or incomplete input manifest
+  - GSOS-301 Unit 4 (docs/semester-2/gsos-301/unit-04): G2 en-draft: stale or incomplete input manifest
+  - GSOS-301 Unit 5 (docs/semester-2/gsos-301/unit-05): G2 en-draft: stale or incomplete input manifest
+  - GSOS-301 Unit 6 (docs/semester-2/gsos-301/unit-06): G2 en-draft: stale or incomplete input manifest
+
+
+1 of 13 content gates failed: check:pipeline-gate.
+
+Exit code: 1
