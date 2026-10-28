@@ -29,7 +29,7 @@ Mark tasks `[x]` as they are completed and note the commit hash.
 - [ ] T013 Owner generates images; Claude helps cut layers (or owner cuts in any editor) into `brand/assets/cast/<name>/` as transparent PNG at fixed canvas size.
 - [ ] T013b Voice benchmark = VS-003 tasks V001–V005 (`specs/003-urdu-voice-benchmark/`, `/video-voice-test`): candidates = Gemini/Google UI speech (if available to the owner), free open-source Urdu TTS on a free GPU (licence-checked), consented human narrator. Blinded scorecard, 3 takes on separate sessions. Until a voice is locked, the voice provider is `manual-import`.
 - [ ] T014 Voice casting from the VS-003 winner: per character, a locked voice card in `brand/voices/<character>.md` (provider, model/version, voice/preset or narrator, style prompt, reference sample hash, licence/consent); then update `brand/brand-bible.yaml` with owner approval.
-- [ ] T015 Pronunciation lexicon: seed 30 common teacher-education terms with respellings in brand bible.
+- [x] T015 Pronunciation lexicon: seed 30 common teacher-education terms with respellings in brand bible. (2026-10-27: 29 glossed term-bank entries plus 3, verified by VS-003 round 7; see `specs/003-urdu-voice-benchmark/spec.md`.)
 - [ ] T016 `scripts/lib/brand.ts` generates `remotion/src/brand.ts` from YAML (typed). Fails loudly on missing keys.
 ⏸ CHECKPOINT 1 - cast sheets approved; puppet layers present; voices locked.
 

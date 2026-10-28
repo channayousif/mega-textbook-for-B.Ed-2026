@@ -322,7 +322,7 @@ function Desk(): React.ReactElement {
       </div>
 
       <p>{shown.length} of {units.length} units shown.</p>
-      <div className={styles.tableWrap}><table className={styles.table}>
+      <div className={styles.tableWrap}><table className={styles.table} aria-label="Units">
         <thead><tr><th><span className="sr-only">Select</span></th><th>Unit</th><th>Agent</th><th>Criteria</th><th>Open findings</th><th>State</th><th /></tr></thead>
         <tbody>{shown.map((u) => {
           const key = unitKey(u.course_code, u.unit_no);

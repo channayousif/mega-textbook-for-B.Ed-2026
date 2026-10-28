@@ -1,0 +1,486 @@
+{
+ "_comment": "VS-003 round 6: pronunciation fixes for the round 5 problem terms (owner 2026-10-27: say tricky terms in English as well as Urdu, and fix spellings). Each line `of` a round 5 segment comes in four variants: r = respelled (joined izafat such as तालिबे इल्म, simpler conjuncts), d = Urdu term then 'یعنی' and the English term in Devanagari, l = the same with the English term in Latin script, e = English term first, then the Urdu term. u17r keeps the round 5 spelling as a same-session control. Round 5 is in eval-set-round5.json.",
+ "candidate": "chatterbox-hi",
+ "seeds": [
+  2001,
+  2002,
+  2003
+ ],
+ "styles": {
+  "default": {
+   "exaggeration": 0.5,
+   "cfg_weight": 0.5
+  }
+ },
+ "style_arm": {},
+ "segments": [
+  {
+   "id": "u03r",
+   "variant": "respell: joined izafat and simpler spellings, no gloss",
+   "text_ur": "مثبت تقویت کا مطلب ہے کہ اچھے رویے پر طالب علم کی حوصلہ افزائی کی جائے۔",
+   "text_deva": "मुस्बत तक़वियत का मतलब है कि अच्छे रवैये पर तालिबे इल्म की हौसला-अफ़ज़ाई की जाए।",
+   "character": "ustani",
+   "of": "u03",
+   "terms": [
+    "مثبت تقویت",
+    "طالب علم"
+   ],
+   "gloss": "positive reinforcement"
+  },
+  {
+   "id": "u03d",
+   "variant": "Urdu term, then English gloss in Devanagari",
+   "text_ur": "مثبت تقویت، یعنی پازیٹو ری انفورسمنٹ، کا مطلب ہے کہ اچھے رویے پر طالب علم کی حوصلہ افزائی کی جائے۔",
+   "text_deva": "मुस्बत तक़वियत, यानी पॉज़िटिव रीइन्फ़ोर्समेंट, का मतलब है कि अच्छे रवैये पर तालिबे इल्म की हौसला-अफ़ज़ाई की जाए।",
+   "character": "ustani",
+   "of": "u03",
+   "terms": [
+    "مثبت تقویت",
+    "طالب علم"
+   ],
+   "gloss": "positive reinforcement"
+  },
+  {
+   "id": "u03l",
+   "variant": "Urdu term, then English gloss in Latin script",
+   "text_ur": "مثبت تقویت، یعنی پازیٹو ری انفورسمنٹ، کا مطلب ہے کہ اچھے رویے پر طالب علم کی حوصلہ افزائی کی جائے۔",
+   "text_deva": "मुस्बत तक़वियत, यानी positive reinforcement, का मतलब है कि अच्छे रवैये पर तालिबे इल्म की हौसला-अफ़ज़ाई की जाए।",
+   "character": "ustani",
+   "of": "u03",
+   "terms": [
+    "مثبت تقویت",
+    "طالب علم"
+   ],
+   "gloss": "positive reinforcement"
+  },
+  {
+   "id": "u03e",
+   "variant": "English term in Devanagari first, then the Urdu term",
+   "text_ur": "پازیٹو ری انفورسمنٹ، یعنی مثبت تقویت، کا مطلب ہے کہ اچھے رویے پر طالب علم کی حوصلہ افزائی کی جائے۔",
+   "text_deva": "पॉज़िटिव रीइन्फ़ोर्समेंट, यानी मुस्बत तक़वियत, का मतलब है कि अच्छे रवैये पर तालिबे इल्म की हौसला-अफ़ज़ाई की जाए।",
+   "character": "ustani",
+   "of": "u03",
+   "terms": [
+    "مثبت تقویت",
+    "طالب علم"
+   ],
+   "gloss": "positive reinforcement"
+  },
+  {
+   "id": "u04r",
+   "variant": "respell: joined izafat and simpler spellings, no gloss",
+   "text_ur": "اضطراب اور دباؤ طالب علم کی توجہ اور یادداشت دونوں کو کمزور کر دیتے ہیں۔",
+   "text_deva": "इज़तिराब और दबाव तालिबे इल्म की तवज्जोह और याददाश्त दोनों को कमज़ोर कर देते हैं।",
+   "character": "ustani",
+   "of": "u04",
+   "terms": [
+    "اضطراب",
+    "دباؤ",
+    "توجہ",
+    "یادداشت"
+   ],
+   "gloss": "anxiety"
+  },
+  {
+   "id": "u04d",
+   "variant": "Urdu term, then English gloss in Devanagari",
+   "text_ur": "اضطراب، یعنی اینگزائٹی، اور دباؤ طالب علم کی توجہ اور یادداشت دونوں کو کمزور کر دیتے ہیں۔",
+   "text_deva": "इज़तिराब, यानी ऐंग्ज़ायटी, और दबाव तालिबे इल्म की तवज्जोह और याददाश्त दोनों को कमज़ोर कर देते हैं।",
+   "character": "ustani",
+   "of": "u04",
+   "terms": [
+    "اضطراب",
+    "دباؤ",
+    "توجہ",
+    "یادداشت"
+   ],
+   "gloss": "anxiety"
+  },
+  {
+   "id": "u04l",
+   "variant": "Urdu term, then English gloss in Latin script",
+   "text_ur": "اضطراب، یعنی اینگزائٹی، اور دباؤ طالب علم کی توجہ اور یادداشت دونوں کو کمزور کر دیتے ہیں۔",
+   "text_deva": "इज़तिराब, यानी anxiety, और दबाव तालिबे इल्म की तवज्जोह और याददाश्त दोनों को कमज़ोर कर देते हैं।",
+   "character": "ustani",
+   "of": "u04",
+   "terms": [
+    "اضطراب",
+    "دباؤ",
+    "توجہ",
+    "یادداشت"
+   ],
+   "gloss": "anxiety"
+  },
+  {
+   "id": "u04e",
+   "variant": "English term in Devanagari first, then the Urdu term",
+   "text_ur": "اینگزائٹی، یعنی اضطراب، اور دباؤ طالب علم کی توجہ اور یادداشت دونوں کو کمزور کر دیتے ہیں۔",
+   "text_deva": "ऐंग्ज़ायटी, यानी इज़तिराब, और दबाव तालिबे इल्म की तवज्जोह और याददाश्त दोनों को कमज़ोर कर देते हैं।",
+   "character": "ustani",
+   "of": "u04",
+   "terms": [
+    "اضطراب",
+    "دباؤ",
+    "توجہ",
+    "یادداشت"
+   ],
+   "gloss": "anxiety"
+  },
+  {
+   "id": "u09r",
+   "variant": "respell: joined izafat and simpler spellings, no gloss",
+   "text_ur": "معیارِ جانچ پہلے سے طلبہ کو دکھا دیں تاکہ انہیں معلوم ہو کہ کامیابی کیسی دکھتی ہے۔",
+   "text_deva": "मेयारे जाँच पहले से तलबा को दिखा दें ताकि उन्हें मालूम हो कि कामयाबी कैसी दिखती है।",
+   "character": "ustani",
+   "of": "u09",
+   "terms": [
+    "معیار جانچ"
+   ],
+   "gloss": "rubric"
+  },
+  {
+   "id": "u09d",
+   "variant": "Urdu term, then English gloss in Devanagari",
+   "text_ur": "معیارِ جانچ، یعنی روبرک، پہلے سے طلبہ کو دکھا دیں تاکہ انہیں معلوم ہو کہ کامیابی کیسی دکھتی ہے۔",
+   "text_deva": "मेयारे जाँच, यानी रूब्रिक, पहले से तलबा को दिखा दें ताकि उन्हें मालूम हो कि कामयाबी कैसी दिखती है।",
+   "character": "ustani",
+   "of": "u09",
+   "terms": [
+    "معیار جانچ"
+   ],
+   "gloss": "rubric"
+  },
+  {
+   "id": "u09l",
+   "variant": "Urdu term, then English gloss in Latin script",
+   "text_ur": "معیارِ جانچ، یعنی روبرک، پہلے سے طلبہ کو دکھا دیں تاکہ انہیں معلوم ہو کہ کامیابی کیسی دکھتی ہے۔",
+   "text_deva": "मेयारे जाँच, यानी rubric, पहले से तलबा को दिखा दें ताकि उन्हें मालूम हो कि कामयाबी कैसी दिखती है।",
+   "character": "ustani",
+   "of": "u09",
+   "terms": [
+    "معیار جانچ"
+   ],
+   "gloss": "rubric"
+  },
+  {
+   "id": "u09e",
+   "variant": "English term in Devanagari first, then the Urdu term",
+   "text_ur": "روبرک، یعنی معیارِ جانچ، پہلے سے طلبہ کو دکھا دیں تاکہ انہیں معلوم ہو کہ کامیابی کیسی دکھتی ہے۔",
+   "text_deva": "रूब्रिक, यानी मेयारे जाँच, पहले से तलबा को दिखा दें ताकि उन्हें मालूम हो कि कामयाबी कैसी दिखती है।",
+   "character": "ustani",
+   "of": "u09",
+   "terms": [
+    "معیار جانچ"
+   ],
+   "gloss": "rubric"
+  },
+  {
+   "id": "u12r",
+   "variant": "respell: joined izafat and simpler spellings, no gloss",
+   "text_ur": "ضابطۂ اخلاق استاد کو پیشہ ورانہ فیصلوں میں رہنمائی دیتا ہے۔",
+   "text_deva": "ज़ाब्तए अख़लाक़ उस्ताद को पेशावराना फ़ैसलों में रहनुमाई देता है।",
+   "character": "ustani",
+   "of": "u12",
+   "terms": [
+    "ضابطہ اخلاق",
+    "پیشہ ورانہ"
+   ],
+   "gloss": "code of conduct"
+  },
+  {
+   "id": "u12d",
+   "variant": "Urdu term, then English gloss in Devanagari",
+   "text_ur": "ضابطۂ اخلاق، یعنی کوڈ آف کنڈکٹ، استاد کو پیشہ ورانہ فیصلوں میں رہنمائی دیتا ہے۔",
+   "text_deva": "ज़ाब्तए अख़लाक़, यानी कोड ऑफ़ कंडक्ट, उस्ताद को पेशावराना फ़ैसलों में रहनुमाई देता है।",
+   "character": "ustani",
+   "of": "u12",
+   "terms": [
+    "ضابطہ اخلاق",
+    "پیشہ ورانہ"
+   ],
+   "gloss": "code of conduct"
+  },
+  {
+   "id": "u12l",
+   "variant": "Urdu term, then English gloss in Latin script",
+   "text_ur": "ضابطۂ اخلاق، یعنی کوڈ آف کنڈکٹ، استاد کو پیشہ ورانہ فیصلوں میں رہنمائی دیتا ہے۔",
+   "text_deva": "ज़ाब्तए अख़लाक़, यानी code of conduct, उस्ताद को पेशावराना फ़ैसलों में रहनुमाई देता है।",
+   "character": "ustani",
+   "of": "u12",
+   "terms": [
+    "ضابطہ اخلاق",
+    "پیشہ ورانہ"
+   ],
+   "gloss": "code of conduct"
+  },
+  {
+   "id": "u12e",
+   "variant": "English term in Devanagari first, then the Urdu term",
+   "text_ur": "کوڈ آف کنڈکٹ، یعنی ضابطۂ اخلاق، استاد کو پیشہ ورانہ فیصلوں میں رہنمائی دیتا ہے۔",
+   "text_deva": "कोड ऑफ़ कंडक्ट, यानी ज़ाब्तए अख़लाक़, उस्ताद को पेशावराना फ़ैसलों में रहनुमाई देता है।",
+   "character": "ustani",
+   "of": "u12",
+   "terms": [
+    "ضابطہ اخلاق",
+    "پیشہ ورانہ"
+   ],
+   "gloss": "code of conduct"
+  },
+  {
+   "id": "u15r",
+   "variant": "respell: joined izafat and simpler spellings, no gloss",
+   "text_ur": "خود انضباطی کی مدد سے طالب علم اپنے وقت اور جذبات کو قابو میں رکھتا ہے۔",
+   "text_deva": "ख़ुद इन्ज़िबाती की मदद से तालिबे इल्म अपने वक़्त और जज़्बात को क़ाबू में रखता है।",
+   "character": "ustani",
+   "of": "u15",
+   "terms": [
+    "خود انضباطی"
+   ],
+   "gloss": "self-discipline"
+  },
+  {
+   "id": "u15d",
+   "variant": "Urdu term, then English gloss in Devanagari",
+   "text_ur": "خود انضباطی، یعنی سیلف ڈسپلن، کی مدد سے طالب علم اپنے وقت اور جذبات کو قابو میں رکھتا ہے۔",
+   "text_deva": "ख़ुद इन्ज़िबाती, यानी सेल्फ़ डिसिप्लिन, की मदद से तालिबे इल्म अपने वक़्त और जज़्बात को क़ाबू में रखता है।",
+   "character": "ustani",
+   "of": "u15",
+   "terms": [
+    "خود انضباطی"
+   ],
+   "gloss": "self-discipline"
+  },
+  {
+   "id": "u15l",
+   "variant": "Urdu term, then English gloss in Latin script",
+   "text_ur": "خود انضباطی، یعنی سیلف ڈسپلن، کی مدد سے طالب علم اپنے وقت اور جذبات کو قابو میں رکھتا ہے۔",
+   "text_deva": "ख़ुद इन्ज़िबाती, यानी self-discipline, की मदद से तालिबे इल्म अपने वक़्त और जज़्बात को क़ाबू में रखता है।",
+   "character": "ustani",
+   "of": "u15",
+   "terms": [
+    "خود انضباطی"
+   ],
+   "gloss": "self-discipline"
+  },
+  {
+   "id": "u15e",
+   "variant": "English term in Devanagari first, then the Urdu term",
+   "text_ur": "سیلف ڈسپلن، یعنی خود انضباطی، کی مدد سے طالب علم اپنے وقت اور جذبات کو قابو میں رکھتا ہے۔",
+   "text_deva": "सेल्फ़ डिसिप्लिन, यानी ख़ुद इन्ज़िबाती, की मदद से तालिबे इल्म अपने वक़्त और जज़्बात को क़ाबू में रखता है।",
+   "character": "ustani",
+   "of": "u15",
+   "terms": [
+    "خود انضباطی"
+   ],
+   "gloss": "self-discipline"
+  },
+  {
+   "id": "u17r",
+   "variant": "respell: joined izafat and simpler spellings, no gloss",
+   "text_ur": "ڈیجیٹل پیشہ واریت کا مطلب ہے کہ استاد آن لائن بھی شائستگی اور احتیاط سے کام لے۔",
+   "text_deva": "डिजिटल पेशावारियत का मतलब है कि उस्ताद ऑनलाइन भी शाइस्तगी और एहतियात से काम ले।",
+   "character": "ustani",
+   "of": "u17",
+   "terms": [
+    "ڈیجیٹل",
+    "پیشہ واریت",
+    "آن لائن"
+   ],
+   "gloss": "digital professionalism"
+  },
+  {
+   "id": "u17d",
+   "variant": "Urdu term, then English gloss in Devanagari",
+   "text_ur": "ڈیجیٹل پیشہ واریت، یعنی ڈیجیٹل پروفیشنلزم، کا مطلب ہے کہ استاد آن لائن بھی شائستگی اور احتیاط سے کام لے۔",
+   "text_deva": "डिजिटल पेशावारियत, यानी डिजिटल प्रोफ़ेशनलिज़्म, का मतलब है कि उस्ताद ऑनलाइन भी शाइस्तगी और एहतियात से काम ले।",
+   "character": "ustani",
+   "of": "u17",
+   "terms": [
+    "ڈیجیٹل",
+    "پیشہ واریت",
+    "آن لائن"
+   ],
+   "gloss": "digital professionalism"
+  },
+  {
+   "id": "u17l",
+   "variant": "Urdu term, then English gloss in Latin script",
+   "text_ur": "ڈیجیٹل پیشہ واریت، یعنی ڈیجیٹل پروفیشنلزم، کا مطلب ہے کہ استاد آن لائن بھی شائستگی اور احتیاط سے کام لے۔",
+   "text_deva": "डिजिटल पेशावारियत, यानी digital professionalism, का मतलब है कि उस्ताद ऑनलाइन भी शाइस्तगी और एहतियात से काम ले।",
+   "character": "ustani",
+   "of": "u17",
+   "terms": [
+    "ڈیجیٹل",
+    "پیشہ واریت",
+    "آن لائن"
+   ],
+   "gloss": "digital professionalism"
+  },
+  {
+   "id": "u17e",
+   "variant": "English term in Devanagari first, then the Urdu term",
+   "text_ur": "ڈیجیٹل پروفیشنلزم، یعنی ڈیجیٹل پیشہ واریت، کا مطلب ہے کہ استاد آن لائن بھی شائستگی اور احتیاط سے کام لے۔",
+   "text_deva": "डिजिटल प्रोफ़ेशनलिज़्म, यानी डिजिटल पेशावारियत, का मतलब है कि उस्ताद ऑनलाइन भी शाइस्तगी और एहतियात से काम ले।",
+   "character": "ustani",
+   "of": "u17",
+   "terms": [
+    "ڈیجیٹل",
+    "پیشہ واریت",
+    "آن لائن"
+   ],
+   "gloss": "digital professionalism"
+  },
+  {
+   "id": "u19r",
+   "variant": "respell: joined izafat and simpler spellings, no gloss",
+   "text_ur": "سر سید احمد خان نے تحریکِ علی گڑھ کے ذریعے جدید تعلیم کو فروغ دیا۔",
+   "text_deva": "सर सैयद अहमद ख़ान ने तहरीके अली गढ़ के ज़रिए जदीद तालीम को फ़रोग़ दिया।",
+   "character": "ustani",
+   "of": "u19",
+   "terms": [
+    "سر سید احمد خان",
+    "علی گڑھ"
+   ],
+   "gloss": "Aligarh Movement"
+  },
+  {
+   "id": "u19d",
+   "variant": "Urdu term, then English gloss in Devanagari",
+   "text_ur": "سر سید احمد خان نے تحریکِ علی گڑھ، یعنی علی گڑھ موومنٹ، کے ذریعے جدید تعلیم کو فروغ دیا۔",
+   "text_deva": "सर सैयद अहमद ख़ान ने तहरीके अली गढ़, यानी अलीगढ़ मूवमेंट, के ज़रिए जदीद तालीम को फ़रोग़ दिया।",
+   "character": "ustani",
+   "of": "u19",
+   "terms": [
+    "سر سید احمد خان",
+    "علی گڑھ"
+   ],
+   "gloss": "Aligarh Movement"
+  },
+  {
+   "id": "u19l",
+   "variant": "Urdu term, then English gloss in Latin script",
+   "text_ur": "سر سید احمد خان نے تحریکِ علی گڑھ، یعنی علی گڑھ موومنٹ، کے ذریعے جدید تعلیم کو فروغ دیا۔",
+   "text_deva": "सर सैयद अहमद ख़ान ने तहरीके अली गढ़, यानी Aligarh Movement, के ज़रिए जदीद तालीम को फ़रोग़ दिया।",
+   "character": "ustani",
+   "of": "u19",
+   "terms": [
+    "سر سید احمد خان",
+    "علی گڑھ"
+   ],
+   "gloss": "Aligarh Movement"
+  },
+  {
+   "id": "u19e",
+   "variant": "English term in Devanagari first, then the Urdu term",
+   "text_ur": "سر سید احمد خان نے علی گڑھ موومنٹ، یعنی تحریکِ علی گڑھ، کے ذریعے جدید تعلیم کو فروغ دیا۔",
+   "text_deva": "सर सैयद अहमद ख़ान ने अलीगढ़ मूवमेंट, यानी तहरीके अली गढ़, के ज़रिए जदीद तालीम को फ़रोग़ दिया।",
+   "character": "ustani",
+   "of": "u19",
+   "terms": [
+    "سر سید احمد خان",
+    "علی گڑھ"
+   ],
+   "gloss": "Aligarh Movement"
+  },
+  {
+   "id": "b05r",
+   "variant": "respell: joined izafat and simpler spellings, no gloss",
+   "text_ur": "کیا ہر بچے کا طرزِ تعلم الگ ہوتا ہے؟",
+   "text_deva": "क्या हर बच्चे का तर्ज़े तअल्लुम अलग होता है?",
+   "character": "shagird",
+   "of": "b05",
+   "terms": [
+    "طرز تعلم"
+   ],
+   "gloss": "learning style"
+  },
+  {
+   "id": "b05d",
+   "variant": "Urdu term, then English gloss in Devanagari",
+   "text_ur": "کیا ہر بچے کا طرزِ تعلم، یعنی لرننگ اسٹائل، الگ ہوتا ہے؟",
+   "text_deva": "क्या हर बच्चे का तर्ज़े तअल्लुम, यानी लर्निंग स्टाइल, अलग होता है?",
+   "character": "shagird",
+   "of": "b05",
+   "terms": [
+    "طرز تعلم"
+   ],
+   "gloss": "learning style"
+  },
+  {
+   "id": "b05l",
+   "variant": "Urdu term, then English gloss in Latin script",
+   "text_ur": "کیا ہر بچے کا طرزِ تعلم، یعنی لرننگ اسٹائل، الگ ہوتا ہے؟",
+   "text_deva": "क्या हर बच्चे का तर्ज़े तअल्लुम, यानी learning style, अलग होता है?",
+   "character": "shagird",
+   "of": "b05",
+   "terms": [
+    "طرز تعلم"
+   ],
+   "gloss": "learning style"
+  },
+  {
+   "id": "b05e",
+   "variant": "English term in Devanagari first, then the Urdu term",
+   "text_ur": "کیا ہر بچے کا لرننگ اسٹائل، یعنی طرزِ تعلم، الگ ہوتا ہے؟",
+   "text_deva": "क्या हर बच्चे का लर्निंग स्टाइल, यानी तर्ज़े तअल्लुम, अलग होता है?",
+   "character": "shagird",
+   "of": "b05",
+   "terms": [
+    "طرز تعلم"
+   ],
+   "gloss": "learning style"
+  },
+  {
+   "id": "b06r",
+   "variant": "respell: joined izafat and simpler spellings, no gloss",
+   "text_ur": "ترقی پذیر ذہنیت والا طالب علم ناکامی کے بعد کیا کرتا ہے؟",
+   "text_deva": "तरक़्क़ी-पज़ीर ज़ेहनियत वाला तालिबे इल्म नाकामी के बाद क्या करता है?",
+   "character": "shagird",
+   "of": "b06",
+   "terms": [
+    "ترقی پذیر ذہنیت",
+    "طالب علم"
+   ],
+   "gloss": "growth mindset"
+  },
+  {
+   "id": "b06d",
+   "variant": "Urdu term, then English gloss in Devanagari",
+   "text_ur": "ترقی پذیر ذہنیت، یعنی گروتھ مائنڈ سیٹ، والا طالب علم ناکامی کے بعد کیا کرتا ہے؟",
+   "text_deva": "तरक़्क़ी-पज़ीर ज़ेहनियत, यानी ग्रोथ माइंडसेट, वाला तालिबे इल्म नाकामी के बाद क्या करता है?",
+   "character": "shagird",
+   "of": "b06",
+   "terms": [
+    "ترقی پذیر ذہنیت",
+    "طالب علم"
+   ],
+   "gloss": "growth mindset"
+  },
+  {
+   "id": "b06l",
+   "variant": "Urdu term, then English gloss in Latin script",
+   "text_ur": "ترقی پذیر ذہنیت، یعنی گروتھ مائنڈ سیٹ، والا طالب علم ناکامی کے بعد کیا کرتا ہے؟",
+   "text_deva": "तरक़्क़ी-पज़ीर ज़ेहनियत, यानी growth mindset, वाला तालिबे इल्म नाकामी के बाद क्या करता है?",
+   "character": "shagird",
+   "of": "b06",
+   "terms": [
+    "ترقی پذیر ذہنیت",
+    "طالب علم"
+   ],
+   "gloss": "growth mindset"
+  },
+  {
+   "id": "b06e",
+   "variant": "English term in Devanagari first, then the Urdu term",
+   "text_ur": "گروتھ مائنڈ سیٹ، یعنی ترقی پذیر ذہنیت، والا طالب علم ناکامی کے بعد کیا کرتا ہے؟",
+   "text_deva": "ग्रोथ माइंडसेट, यानी तरक़्क़ी-पज़ीर ज़ेहनियत, वाला तालिबे इल्म नाकामी के बाद क्या करता है?",
+   "character": "shagird",
+   "of": "b06",
+   "terms": [
+    "ترقی پذیر ذہنیت",
+    "طالب علم"
+   ],
+   "gloss": "growth mindset"
+  }
+ ]
+}

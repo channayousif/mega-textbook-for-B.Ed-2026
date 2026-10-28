@@ -1,0 +1,11 @@
+# Voice card: Bilal (بلال)
+
+- **Status:** locked by the owner, 2026-10-27 (V005, PHR 0890); reference changed to the owner's own voice by VS-ADR-0012 (PHR 0892). **Cleared to publish** under consent `narrator-01`.
+- **Provider / engine:** Chatterbox Multilingual, Hindi finetune `ResembleAI/Chatterbox-Multilingual-hi` (`chatterbox-hi` in `specs/003-urdu-voice-benchmark/candidates.json`), `chatterbox-tts` at commit `5de7a54aa4e5e2baadb0182dde554908b48b85c2`, run on Kaggle (VS-ADR-0011).
+- **Input:** Devanagari spelled by Urdu pronunciation, `language_id` `hi`; terms follow `pronunciation_lexicon` in `brand/brand-bible.yaml` (`deva` / `en_deva`, joined izafat).
+- **Settings:** default style, `exaggeration` 0.5, `cfg_weight` 0.5 (round 5: the adjusted styles sounded similar, owner 2026-10-27). Seeds are recorded per take; GPU runs are not bit-exact, so each take is hashed on import.
+- **Reference:** `$MEDIA_ROOT/voice-benchmark/refs/ref-shagird-rec3.wav`, SHA-256 `7d227bafae29623504c427923546211175bd1f78e093c181843d8179a5711c8a`; 0.5-13.95 s of the owner's WAV take, original `owner-recordings/bilal-rec-3.wav`, SHA-256 `138bbbd15d375a356a06dd668df2bd4b240ecc392a4e327bc9e11ad4c65e2434`. Fallback: `refs/ref-shagird-rec1.wav` (SHA-256 `f261c466d2a4cac8444df9e76e1151a819ae547658be9e8b6bec288bb45f37f4`). Audio never enters the repo.
+- **Style prompt:** none (Chatterbox clones the reference; the brand `style_prompt` applies to manual providers only).
+- **Evidence:** VS-003 round 8 (`results-round8-*`): centroid similarity 0.87 mean / 0.79 min over 30 clips, CER 0.011, similarity to the reference 0.78.
+- **Licence / consent:** engine MIT (outputs carry Resemble's inaudible Perth watermark). Voice: the owner's own, consent `narrator-01` (2026-10-27): all platforms, promotional use, Kaggle processing; published videos stay up on withdrawal. Previous reference (ElevenLabs `sample-male.mp3`) retired, evaluation only.
+- **Changing this card needs an ADR.**
