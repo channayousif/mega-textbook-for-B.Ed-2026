@@ -1,0 +1,24 @@
+Command: npm run check:content in clean detached origin/main c13ce228
+
+> bed-mega-textbook@0.1.0 check:content
+> node scripts/run-gates.mjs content
+
+Running 13 content gates
+
+  validate:content        PASS  3.4s
+  check:pipeline-gate     PASS  14.8s
+  check:depth-gate        PASS  0.6s
+  check:figures           PASS  0.9s
+  check:no-em-dash        PASS  0.6s
+  check:no-answer-keys    PASS  0.5s
+  check:concept-graph     PASS  0.5s
+  check:bloom-bands       PASS  0.3s
+  check:source-floor      PASS  0.3s
+  check:licence           PASS  0.4s
+  licence:map:check       PASS  0.3s
+  check:content-status    PASS  0.6s
+  check:docs-sync         PASS  0.4s
+
+All content gates passed.
+
+Exit code: 0

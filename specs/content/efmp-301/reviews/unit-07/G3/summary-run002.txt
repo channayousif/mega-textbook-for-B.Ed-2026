@@ -1,0 +1,51 @@
+G3 English review - EFMP-301 Unit 7 (Individual Differences and Special Needs)
+Run: agent-g3-efmp301-u7-run002 | Reviewer: agent:g3-reviewer (Gemini 3.8 Flash High)
+Reviewed at HEAD (round-1 repairs applied in 4dbe708a / a0ca5f66); report: agent-g3-efmp301-u7-run002.json
+Disposition: PASS (0 blocking, 0 uncertain, 1 advisory finding)
+
+Round 1 repair verification
+- Blocking Finding 1 (SOURCES - learning-styles evidence claim): RESOLVED.
+  Rohrer & Pashler (2012) is cited inline at the matched-teaching evidence verdict in
+  topic-01.mdx:47-51 ("a thoughtful review of the data provides no support for style-based
+  instruction"), sources/unit-07.md:16 registers the rohrer2012 row with its ERIC full-text
+  link, coverage/unit-07.md:9 maps U7-1 to rohrer2012, and topic-01.mdx:172-177 Further Reading
+  includes Rohrer & Pashler (2012) while appropriately scoping Spielman (2020) to Section 7.4.
+- Blocking Finding 2 (ASSESSMENT - blueprint spread deviation): RESOLVED.
+  The summative bank now conforms to the approved 5/5 blueprint spread across topics 7.1 and 7.2.
+  MCQs: items 1, 2, 3, 4, 9 test Topic 7.1 (5 items); items 5, 6, 7, 8, 10 test Topic 7.2 (5 items).
+  RRQs: items 1, 2, 3, 4, 5 test Topic 7.1 (5 items); items 6, 7, 8, 9, 10 test Topic 7.2 (5 items).
+  ERQs: items 1, 2 (Topic 7.1), items 3, 4 (Topic 7.2), item 5 (Integrative).
+- Advisory Finding 4 (Teacher notes practical attribution): RESOLVED.
+  unit-teacher-notes.mdx:86-90 now qualifies the wheelchair walk as "the unit's instantiation
+  of the course guide's course-generic group-assignment slot".
+- Advisory Finding 5 (Coverage reinforcement row U7-4): RESOLVED.
+  topic-02.mdx:111 fig-U7-4 comparison table compares slow, gifted, and disabled learners directly
+  within the Inclusive education section, providing substantive reinforcement for U7-4.
+
+What passed
+- Authority: guide Week 12 Chapter 7's three bullets all taught and assessed; SLO 7-1/7-2
+  CLO traces verified against the guide and intake record.
+- Coverage: all five sub-topics have real taught passages, activities, retrieval items, and
+  assessment items; depth budget 73 reading minutes matches the spec; concept graph consistent.
+- Assessment correctness: all 10 MCQs solved independently before reading the key; all match;
+  RRQ mark schemes and 20-mark analytic ERQ rubrics verified (criteria sum exactly 20);
+  Bloom bands within blueprint; answers section bounded and last.
+- Accessibility: figure text geometry clean across all 8 SVGs (measure-figure-text exit 0);
+  all 4 figures rasterized to PNG with sharp and inspected; alt text matches manifest prompts;
+  monotonic headings; tables formatted cleanly.
+- Readability and pedagogy: HSC-register prose, concrete Sindh classroom anchors, glossed key
+  terms, complete nine-part learning cycles, feasible zero-material activities, misconception
+  blocks, 10 formative retrieval items.
+
+Remaining advisory finding
+- MCQ option key clustering: 8 of 10 keys remain option (b) (items 1-5, 7, 8, 10 are b;
+  item 6 is c, item 9 is d). Advisory: shuffle distractor positions in a future maintenance pass.
+
+Commands run (all exit 0; logs in logs-agent-g3-efmp301-u7-run002/):
+validate:content, check:depth-gate, check:figures, check:no-em-dash,
+check:no-answer-keys, check:docs-sync, check:concept-graph, check:bloom-bands,
+measure-figure-text, render-review.
+Rendered evidence: 4 PNG figure rasters in logs-agent-g3-efmp301-u7-run002/.
+
+This report is advisory. It does not certify the unit, mark any gate done, or alter
+tracker/translation/registry state.
