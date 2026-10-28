@@ -1,6 +1,6 @@
 ---
 id: crew-efmp-301-u11-review_en-conflict1
-title: crew fix EFMP-301 unit 11 conflict1
+title: crew fix EFMP-301 unit 11
 stage: misc
 date: 2026-10-28
 surface: agent
@@ -17,6 +17,24 @@ links:
   pr: null
 files:
  - history/prompts/efmp-301/crew-efmp-301-u11-review_en-conflict1.misc.prompt.md
+ - history/prompts/efmp-301/crew-efmp-301-u11-review_en.misc.prompt.md
+ - history/prompts/general/20261031-efmp301-unit11-g3-cycle2.general.prompt.md
+ - specs/content/efmp-301/reviews/unit-11/G3/codex-cycle2-20261028-summary.md
+ - specs/content/efmp-301/reviews/unit-11/G3/codex-cycle2-20261028.json
+ - specs/content/efmp-301/reviews/unit-11/G3/codex-cycle2-20261028/assessment-and-repairs.md
+ - specs/content/efmp-301/reviews/unit-11/G3/codex-cycle2-20261028/check-content-baseline.log
+ - specs/content/efmp-301/reviews/unit-11/G3/codex-cycle2-20261028/check-content-final.log
+ - specs/content/efmp-301/reviews/unit-11/G3/codex-cycle2-20261028/check-depth-gate.log
+ - specs/content/efmp-301/reviews/unit-11/G3/codex-cycle2-20261028/check-docs-sync.log
+ - specs/content/efmp-301/reviews/unit-11/G3/codex-cycle2-20261028/check-figures.log
+ - specs/content/efmp-301/reviews/unit-11/G3/codex-cycle2-20261028/check-no-answer-keys.log
+ - specs/content/efmp-301/reviews/unit-11/G3/codex-cycle2-20261028/check-no-em-dash.log
+ - specs/content/efmp-301/reviews/unit-11/G3/codex-cycle2-20261028/commands.json
+ - specs/content/efmp-301/reviews/unit-11/G3/codex-cycle2-20261028/manifest.json
+ - specs/content/efmp-301/reviews/unit-11/G3/codex-cycle2-20261028/provenance.md
+ - specs/content/efmp-301/reviews/unit-11/G3/codex-cycle2-20261028/render-limitation.md
+ - specs/content/efmp-301/reviews/unit-11/G3/codex-cycle2-20261028/validate-content.log
+ - specs/content/efmp-301/reviews/unit-11/G3/codex-cycle2-20261028/verify-manifest.log
  - specs/content/efmp-301/tasks.md
 tests:
  - npm run check:content
@@ -57,24 +75,25 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Resolved merge conflicts with origin/main on specs/content/efmp-301/tasks.md and static/content-status.json, committed the merge, and verified that all 13 content gates pass.
+Resolved merge conflicts with origin/main in tasks.md and static/content-status.json, committed the merge and PHR, and verified all 13 content gates pass.
 
 ## Outcome
 
-- Impact: conflict resolution for EFMP-301 Unit 11 review_en by agy.
-- Tests: npm run check:content passed (13/13 gates).
-- Files: specs/content/efmp-301/tasks.md, history/prompts/efmp-301/crew-efmp-301-u11-review_en-conflict1.misc.prompt.md.
-- Next prompts: crew batch integration.
+- Impact: fix for EFMP-301 Unit 11 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 20 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Resolved merge conflicts with origin/main on tasks.md and static/content-status.json, keeping both main's updated G2 gate evidence and G3 cycle 2 advisory escalation row; untracked gitignored static/content-status.json.
-- Decisions the team must respect: G3 remains advisory cycle 2 escalated to owner; no third review cycle without owner authorisation.
-- Pending / next owner: crew lead.
+- Shipped / changed: Resolved merge conflicts with origin/main in tasks.md and static/content-status.json, committed the merge and PHR, and verified all 13 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Owner escalation required for clinical source support, render evidence and review provenance; no automatic third cycle.
-- Paperclip issues affected: none.
+  - Owner escalation required for clinical source support, render evidence and review provenance; no automatic third review cycle under ADR-0019.
+  - Untracked gitignored static/content-status.json to align with origin/main maintenance 2026-W43.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
