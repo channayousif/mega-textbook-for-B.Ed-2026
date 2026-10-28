@@ -1,0 +1,1 @@
+Brief explicitly prohibits npm run build, dev servers and Playwright. No current desktop, 360px narrow or A4 print render inspected; no render-review command executed. No success log or image fabricated. Accessibility remains unverified and requires owner escalation.
