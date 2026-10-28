@@ -2540,6 +2540,81 @@
     "definition_ur": "\"عظیم رہنما\": وہ لقب جس سے پاکستانی محمد علی جناح (1876-1948) کو یاد کرتے ہیں، جنہوں نے آل انڈیا مسلم لیگ کی قیادت کرتے ہوئے پاکستان حاصل کیا اور اس کے پہلے گورنر جنرل بنے۔"
   },
   {
+    "term": "Federalism",
+    "definition_en": "A system of government in which the constitution divides power between a central government and the governments of regions, such as provinces, so that each level has its own powers and neither can abolish the other.",
+    "definition_ur": "ایسا نظامِ حکومت جس میں آئین اختیارات کو مرکزی حکومت اور علاقائی حکومتوں، جیسے صوبوں، کے درمیان تقسیم کرتا ہے، تاکہ ہر سطح کے اپنے اختیارات ہوں اور کوئی سطح دوسری کو ختم نہ کر سکے۔"
+  },
+  {
+    "term": "Legislature",
+    "definition_en": "The branch of government that makes laws. In Pakistan the federal legislature is the Majlis-e-Shoora (Parliament): the President, the National Assembly and the Senate.",
+    "definition_ur": "حکومت کا وہ شعبہ جو قانون بناتا ہے۔ پاکستان میں وفاقی مقننہ مجلسِ شوریٰ (پارلیمنٹ) ہے، جو صدر، قومی اسمبلی اور سینیٹ پر مشتمل ہے۔"
+  },
+  {
+    "term": "Executive",
+    "definition_en": "The branch of government that carries out the laws and runs the government day to day. In Pakistan it is led by the Prime Minister and the Federal Cabinet, with the President as Head of State.",
+    "definition_ur": "حکومت کا وہ شعبہ جو قوانین پر عمل درآمد کرتا اور روزمرہ حکومت چلاتا ہے۔ پاکستان میں اس کی قیادت وزیرِ اعظم اور وفاقی کابینہ کرتے ہیں، اور صدر سربراہِ مملکت ہوتا ہے۔"
+  },
+  {
+    "term": "Judiciary",
+    "definition_en": "The branch of government that interprets the law and settles disputes, including disputes between citizens and the government. In Pakistan it includes the Supreme Court, the High Courts and the subordinate courts.",
+    "definition_ur": "حکومت کا وہ شعبہ جو قانون کی تشریح کرتا اور تنازعات کا فیصلہ کرتا ہے، بشمول شہریوں اور حکومت کے درمیان تنازعات۔ پاکستان میں اس میں سپریم کورٹ، ہائی کورٹس اور ماتحت عدالتیں شامل ہیں۔"
+  },
+  {
+    "term": "Separation of Powers",
+    "definition_en": "The principle that the legislature, the executive and the judiciary should be separate, so that no single person or body holds all the power of the State, and each branch can check the others.",
+    "definition_ur": "یہ اصول کہ مقننہ، انتظامیہ اور عدلیہ الگ الگ ہوں، تاکہ ریاست کا سارا اختیار کسی ایک فرد یا ادارے کے پاس نہ ہو اور ہر شعبہ دوسرے پر نظر رکھ سکے۔"
+  },
+  {
+    "term": "Civil-military relations",
+    "definition_en": "The relationship between a country's elected civilian government and its armed forces: who controls defence policy, who decides on war and peace, and how far the military takes part in politics.",
+    "definition_ur": "کسی ملک کی منتخب شہری حکومت اور اس کی مسلح افواج کے درمیان تعلق: دفاعی پالیسی پر کس کا اختیار ہے، جنگ اور امن کا فیصلہ کون کرتا ہے، اور فوج سیاست میں کس حد تک حصہ لیتی ہے۔"
+  },
+  {
+    "term": "Martial law",
+    "definition_en": "Rule by the armed forces in place of the normal civilian government and laws, usually after the constitution has been suspended or set aside.",
+    "definition_ur": "عام شہری حکومت اور قوانین کی جگہ مسلح افواج کی حکمرانی، جو عموماً آئین کو معطل یا منسوخ کرنے کے بعد نافذ کی جاتی ہے۔"
+  },
+  {
+    "term": "Fundamental Rights",
+    "definition_en": "Basic rights that the Constitution guarantees to people and that the State may not take away by ordinary law. In Pakistan they are set out in Articles 8 to 28 of the 1973 Constitution, and a law that conflicts with them is void.",
+    "definition_ur": "وہ بنیادی حقوق جن کی ضمانت آئین لوگوں کو دیتا ہے اور جنہیں ریاست عام قانون کے ذریعے ختم نہیں کر سکتی۔ پاکستان میں یہ 1973 کے آئین کی دفعات 8 تا 28 میں درج ہیں، اور ان سے متصادم قانون کالعدم ہوتا ہے۔"
+  },
+  {
+    "term": "Writ petition",
+    "definition_en": "An application to a High Court under Article 199 of the Constitution asking it to order a public official or government body to act according to law, or to enforce a fundamental right.",
+    "definition_ur": "آئین کی دفعہ 199 کے تحت ہائی کورٹ میں دی جانے والی درخواست، جس میں عدالت سے کہا جاتا ہے کہ وہ کسی سرکاری اہلکار یا ادارے کو قانون کے مطابق عمل کرنے کا حکم دے یا کسی بنیادی حق کو نافذ کرائے۔"
+  },
+  {
+    "term": "Principles of Policy",
+    "definition_en": "Goals set out in Articles 29 to 40 of the 1973 Constitution that every organ of the State should work towards, such as removing illiteracy and protecting minorities. Unlike fundamental rights, they cannot be enforced in a court.",
+    "definition_ur": "1973 کے آئین کی دفعات 29 تا 40 میں درج وہ مقاصد جن کے لیے ریاست کے ہر ادارے کو کام کرنا چاہیے، جیسے ناخواندگی کا خاتمہ اور اقلیتوں کا تحفظ۔ بنیادی حقوق کے برعکس انہیں عدالت کے ذریعے نافذ نہیں کرایا جا سکتا۔"
+  },
+  {
+    "term": "Citizen",
+    "definition_en": "A full member of a State, who holds rights from it and owes duties to it, such as loyalty to the State and obedience to the Constitution and law.",
+    "definition_ur": "کسی ریاست کا مکمل رکن، جو اس سے حقوق رکھتا ہے اور اس کے لیے فرائض ادا کرتا ہے، جیسے ریاست سے وفاداری اور آئین و قانون کی پابندی۔"
+  },
+  {
+    "term": "Indus River System",
+    "definition_en": "The Indus River and its tributaries, including the Jhelum, Chenab, Ravi and Sutlej, which flow from the northern mountains through the plains of Punjab and Sindh to the Arabian Sea and water most of Pakistan's farmland.",
+    "definition_ur": "دریائے سندھ اور اس کے معاون دریا، جن میں جہلم، چناب، راوی اور ستلج شامل ہیں، جو شمالی پہاڑوں سے پنجاب اور سندھ کے میدانوں سے گزر کر بحیرۂ عرب تک بہتے ہیں اور پاکستان کی بیشتر زرعی زمین کو سیراب کرتے ہیں۔"
+  },
+  {
+    "term": "Climate",
+    "definition_en": "The usual pattern of weather in a place over many years, including its temperature, rainfall and seasons.",
+    "definition_ur": "کسی جگہ کا کئی برسوں پر محیط موسم کا عمومی انداز، جس میں درجۂ حرارت، بارش اور موسم شامل ہیں۔"
+  },
+  {
+    "term": "Strategic Importance",
+    "definition_en": "The importance a place has for other countries because of its location, for example for trade, transport, energy or security.",
+    "definition_ur": "وہ اہمیت جو کسی جگہ کو اپنے محلِ وقوع کی وجہ سے دوسرے ممالک کے لیے حاصل ہوتی ہے، مثلاً تجارت، نقل و حمل، توانائی یا سلامتی کے لحاظ سے۔"
+  },
+  {
+    "term": "China-Pakistan Economic Corridor",
+    "definition_en": "A programme of roads, railways, energy projects and the port of Gwadar, begun in the 2010s as part of China's Belt and Road Initiative, to link western China with the Arabian Sea through Pakistan.",
+    "definition_ur": "سڑکوں، ریلوے، توانائی کے منصوبوں اور گوادر بندرگاہ کا ایک پروگرام، جو 2010 کی دہائی میں چین کے بیلٹ اینڈ روڈ منصوبے کے حصے کے طور پر شروع ہوا، تاکہ مغربی چین کو پاکستان کے راستے بحیرۂ عرب سے ملایا جائے۔"
+  },
+  {
     "term": "Foreign policy",
     "definition_en": "A state's official strategy and principles for managing its relations, diplomacy, trade and security with other countries and international bodies.",
     "definition_ur": "کسی ریاست کی دیگر ممالک اور بین الاقوامی اداروں کے ساتھ تعلقات، سفارت کاری، تجارت اور سلامتی کو چلانے کی باضابطہ حکمت عملی اور اصول۔"
