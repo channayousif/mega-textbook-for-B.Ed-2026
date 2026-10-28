@@ -16,45 +16,46 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-2/gpks-402/unit-06/index.mdx
-  - docs/semester-2/gpks-402/unit-06/topic-01.mdx
-  - docs/semester-2/gpks-402/unit-06/topic-02.mdx
-  - docs/semester-2/gpks-402/unit-06/topic-03.mdx
-  - docs/semester-2/gpks-402/unit-06/unit-assessment.mdx
-  - glossary.json
-  - specs/content/gpks-402/concepts/unit-06.md
-  - specs/content/gpks-402/coverage/unit-06.md
-  - specs/content/gpks-402/figures/unit-06.md
-  - specs/content/gpks-402/reviews/unit-06/G2/20261028T102354806Z-gates.json
-  - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T102354806Z/check-bloom-bands.txt
-  - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T102354806Z/check-concept-graph.txt
-  - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T102354806Z/check-depth-gate.txt
-  - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T102354806Z/check-docs-sync.txt
-  - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T102354806Z/check-figures.txt
-  - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T102354806Z/check-no-answer-keys.txt
-  - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T102354806Z/check-no-em-dash.txt
-  - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T102354806Z/validate-content.txt
-  - specs/content/gpks-402/sources/texts/dean-2005-citizenship.md
-  - specs/content/gpks-402/sources/texts/khan-2015-foreign-policy.md
-  - specs/content/gpks-402/sources/texts/mocc-2021-nccp.md
-  - specs/content/gpks-402/sources/texts/pak-constitution-1973.md
-  - specs/content/gpks-402/sources/texts/worldbank-pdu-2025.md
-  - specs/content/gpks-402/sources/unit-06.md
-  - specs/content/gpks-402/tasks.md
-  - static/img/figures/gpks-402/unit-06/fig-U6-1.dark.svg
-  - static/img/figures/gpks-402/unit-06/fig-U6-1.svg
-  - static/img/figures/gpks-402/unit-06/fig-U6-2.dark.svg
-  - static/img/figures/gpks-402/unit-06/fig-U6-2.svg
-  - static/img/figures/gpks-402/unit-06/fig-U6-3.dark.svg
-  - static/img/figures/gpks-402/unit-06/fig-U6-3.svg
-  - static/img/figures/gpks-402/unit-06/fig-U6-4.dark.svg
-  - static/img/figures/gpks-402/unit-06/fig-U6-4.svg
-  - static/img/figures/gpks-402/unit-06/fig-U6-5.dark.svg
-  - static/img/figures/gpks-402/unit-06/fig-U6-5.svg
-  - static/img/figures/gpks-402/unit-06/fig-U6-6.dark.svg
-  - static/img/figures/gpks-402/unit-06/fig-U6-6.svg
+ - docs/semester-2/gpks-402/unit-06/index.mdx
+ - docs/semester-2/gpks-402/unit-06/topic-01.mdx
+ - docs/semester-2/gpks-402/unit-06/topic-02.mdx
+ - docs/semester-2/gpks-402/unit-06/topic-03.mdx
+ - docs/semester-2/gpks-402/unit-06/unit-assessment.mdx
+ - glossary.json
+ - history/prompts/gpks-402/crew-gpks-402-u06-author.green.prompt.md
+ - specs/content/gpks-402/concepts/unit-06.md
+ - specs/content/gpks-402/coverage/unit-06.md
+ - specs/content/gpks-402/figures/unit-06.md
+ - specs/content/gpks-402/reviews/unit-06/G2/20261028T102354806Z-gates.json
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T102354806Z/check-bloom-bands.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T102354806Z/check-concept-graph.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T102354806Z/check-depth-gate.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T102354806Z/check-docs-sync.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T102354806Z/check-figures.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T102354806Z/check-no-answer-keys.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T102354806Z/check-no-em-dash.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T102354806Z/validate-content.txt
+ - specs/content/gpks-402/sources/texts/dean-2005-citizenship.md
+ - specs/content/gpks-402/sources/texts/khan-2015-foreign-policy.md
+ - specs/content/gpks-402/sources/texts/mocc-2021-nccp.md
+ - specs/content/gpks-402/sources/texts/pak-constitution-1973.md
+ - specs/content/gpks-402/sources/texts/worldbank-pdu-2025.md
+ - specs/content/gpks-402/sources/unit-06.md
+ - specs/content/gpks-402/tasks.md
+ - static/img/figures/gpks-402/unit-06/fig-U6-1.dark.svg
+ - static/img/figures/gpks-402/unit-06/fig-U6-1.svg
+ - static/img/figures/gpks-402/unit-06/fig-U6-2.dark.svg
+ - static/img/figures/gpks-402/unit-06/fig-U6-2.svg
+ - static/img/figures/gpks-402/unit-06/fig-U6-3.dark.svg
+ - static/img/figures/gpks-402/unit-06/fig-U6-3.svg
+ - static/img/figures/gpks-402/unit-06/fig-U6-4.dark.svg
+ - static/img/figures/gpks-402/unit-06/fig-U6-4.svg
+ - static/img/figures/gpks-402/unit-06/fig-U6-5.dark.svg
+ - static/img/figures/gpks-402/unit-06/fig-U6-5.svg
+ - static/img/figures/gpks-402/unit-06/fig-U6-6.dark.svg
+ - static/img/figures/gpks-402/unit-06/fig-U6-6.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -88,26 +89,25 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Authored English GPKS-402 Unit 6 (index, three topic cycles, 10/10/5 assessment bank with bounded answers section) with six placed schematic figures, coverage/sources/concept/figure records, five source-excerpt texts, five glossary terms, and G2 gate evidence; all 13 content gates pass.
+Authored English GPKS-402 Unit 6 (index, three nine-part topic cycles, 10/10/5 assessment bank with bounded answers), placed six schematic SVGs with derived dark twins, added governance records and five glossary terms, and verified that all 13 content gates pass.
 
 ## Outcome
 
 - Impact: author for GPKS-402 Unit 6 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before completing the job.
-- Files: 37 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 38 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored English GPKS-402 Unit 6 (index, three topics, 10/10/5 assessment) with six placed figures, governance records, five source-excerpt files, five glossary terms, and G2 gate evidence; all 13 content gates pass.
-- Decisions the team must respect: G3/G5 stay advisory until qualified independent review; this job claims no human certification.
-- Pending / next owner: crew lead (auto-merge when CI is green).
+- Shipped / changed: Authored English GPKS-402 Unit 6 (index, three nine-part topic cycles, 10/10/5 assessment bank with bounded answers), placed six schematic SVGs with derived dark twins, added governance records and five glossary terms, and verified that all 13 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Only content gates were run; the first full build will verify route rendering.
-  - Urdu mirror job will need `.ur.svg` versions of fig-U6-1 through fig-U6-6, and G5 review of authored concept labels in `concepts/unit-06.md`.
-  - Reading time is 96 min across the unit, well within the 90-125 min depth budget.
-- Paperclip issues affected: none (work tracked by crew board).
+  - Total reading time across the 5 unit files is 96 minutes (index: 4, topic-01: 22, topic-02: 24, topic-03: 21, unit-assessment: 25), inside the 90-125 min depth budget.
+  - Downstream Urdu mirror job will need .ur.svg localized twins of fig-U6-1 through fig-U6-6 and G5 review of authored Urdu concept labels in concepts/unit-06.md.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
