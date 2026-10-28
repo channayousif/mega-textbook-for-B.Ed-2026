@@ -31,7 +31,7 @@
 | Unit 2 | G5 ur-review | ▢ | | |
 | Unit 2 | G6 assets | ✅ | auto:gates | 4 schematic SVGs placed with dark variants |
 | Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-04/G2/20261028T110357781Z-gates.json |
-| Unit 4 | G3 en-review | ▢ | | awaiting an independent reviewer |
+| Unit 4 | G3 en-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/gpks-402/reviews/unit-04/G3/8e3bf462-d4af-437f-aa63-372eb41b9e7c.json; all 7 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; all 14 SVG variants pass geometry; G3 remains open and unsigned |
 | Unit 4 | G4 ur-translation | ▢ | | separate job |
 | Unit 4 | G5 ur-review | ▢ | | |
 
