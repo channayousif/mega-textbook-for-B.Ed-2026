@@ -1,6 +1,6 @@
 ---
 id: crew-efmp-301-u05-review_en-conflict1
-title: crew conflict1 EFMP-301 unit 5 review_en
+title: crew fix EFMP-301 unit 5
 stage: misc
 date: 2026-10-28
 surface: agent
@@ -8,14 +8,30 @@ model: agy
 feature: efmp-301
 branch: crew/efmp-301-u05-review_en
 user: crew
-command: crew conflict
-labels: ["crew", "agy", "conflict"]
+command: crew fix
+labels: ["crew", "agy", "fix"]
 links:
   spec: specs/content/efmp-301/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
+ - history/prompts/efmp-301/crew-efmp-301-u05-review_en-conflict1.misc.prompt.md
+ - history/prompts/efmp-301/crew-efmp-301-u05-review_en.misc.prompt.md
+ - history/prompts/general/20261031-review-efmp301-unit-five-english.general.prompt.md
+ - specs/content/efmp-301/reviews/unit-05/G3/codex-crew-cycle2.json
+ - specs/content/efmp-301/reviews/unit-05/G3/crew-cycle2/assessment-audit.md
+ - specs/content/efmp-301/reviews/unit-05/G3/crew-cycle2/check-content-final.log
+ - specs/content/efmp-301/reviews/unit-05/G3/crew-cycle2/check-depth-gate.log
+ - specs/content/efmp-301/reviews/unit-05/G3/crew-cycle2/check-docs-sync.log
+ - specs/content/efmp-301/reviews/unit-05/G3/crew-cycle2/check-figures.log
+ - specs/content/efmp-301/reviews/unit-05/G3/crew-cycle2/check-no-answer-keys.log
+ - specs/content/efmp-301/reviews/unit-05/G3/crew-cycle2/check-no-em-dash.log
+ - specs/content/efmp-301/reviews/unit-05/G3/crew-cycle2/figure-geometry.log
+ - specs/content/efmp-301/reviews/unit-05/G3/crew-cycle2/manifest-comparison.log
+ - specs/content/efmp-301/reviews/unit-05/G3/crew-cycle2/manifest.json
+ - specs/content/efmp-301/reviews/unit-05/G3/crew-cycle2/summary.md
+ - specs/content/efmp-301/reviews/unit-05/G3/crew-cycle2/validate-content.log
  - specs/content/efmp-301/tasks.md
 tests:
  - npm run check:content
@@ -53,21 +69,22 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-301-u05-fix, fix, codex) Unit 5 needs a fresh independent G3 review; pre-existing content-status metadata edits remain uncommitted.
 - (efmp-301-u05-fix, fix, codex) Unit 5 needs a fresh independent G3 review; pre-existing content-status metadata edits remain uncommitted.
 
+
 ## Response snapshot
 
-Resolved merge conflicts with origin/main in specs/content/efmp-301/tasks.md and static/content-status.json, committed the merge, regenerated untracked static/content-status.json, and verified that all 13 content gates pass.
+Merged origin/main into crew/efmp-301-u05-review_en, resolved tasks.md and content-status.json conflicts, and verified all content gates pass.
 
 ## Outcome
 
-- Impact: conflict resolution for crew/efmp-301-u05-review_en by agy.
-- Tests: npm run check:content passed in the job worktree.
-- Files: specs/content/efmp-301/tasks.md
+- Impact: fix for EFMP-301 Unit 5 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 17 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/efmp-301-u05-review_en, preserved main's updated G2 gate evidence and branch's second-cycle G3 escalation row in tasks.md, untracked static/content-status.json per main, and verified npm run check:content.
+- Shipped / changed: Merged origin/main into crew/efmp-301-u05-review_en, resolved tasks.md and content-status.json conflicts, and verified all content gates pass.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
