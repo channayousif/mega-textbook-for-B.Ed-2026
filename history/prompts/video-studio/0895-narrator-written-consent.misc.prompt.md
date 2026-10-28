@@ -14,7 +14,7 @@ links:
   spec: video-studio/specs/003-urdu-voice-benchmark/spec.md
   ticket: null
   adr: video-studio/history/adr/0013-ustani-voice-consented-narrator.md
-  pr: null
+  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/354
 files:
  - video-studio/brand/voices/ustani.md
  - video-studio/history/adr/0013-ustani-voice-consented-narrator.md
