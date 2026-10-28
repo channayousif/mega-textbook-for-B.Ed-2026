@@ -11,7 +11,7 @@
 | 3 | Constitutional Development | ☐ | ☐ | ☐ | ☐ | planned | |
 | 4 | Governance, Rights and Geography | ☐ | ☐ | ☐ | ☐ | planned | |
 | 5 | Economy and Society | ☐ | ☐ | ☐ | ☐ | planned | |
-| 6 | Foreign Policy, Issues and Education | ▣ | ☐ | ☐ | ☐ | placed | English authored 2026-10-28; G2 gate evidence pending; see stage rows below |
+| 6 | Foreign Policy, Issues and Education | ✓ | ☐ | ☐ | ☐ | placed | English authored 2026-10-28; G2 gate evidence recorded below; G3/G5 remain open; Urdu is a separate job |
 
 **Key:** ▣ = in progress, ☐ = not started, ✓ = done, ✗ = escalated
 
@@ -21,7 +21,7 @@
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 6 | G2 en-draft | ▣ | | English authored 2026-10-28 (index, topic-01, topic-02, topic-03, unit-assessment; no teacher notes, as the guide lists no teaching strategies); six schematic figures placed; G2 gate evidence pending |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-06/G2/20261028T102354806Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | awaiting an independent reviewer |
 | Unit 6 | G4 ur-translation | ▢ | | separate job |
 | Unit 6 | G5 ur-review | ▢ | | |
