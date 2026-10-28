@@ -26,30 +26,30 @@
   <!-- Row 1: Population Growth -->
   <rect class="panel" x="30" y="94" width="720" height="68" rx="4"/>
   <text class="sh" x="42" y="122"><tspan x="42" dy="0">Population</tspan><tspan x="42" dy="16" class="body">Growth</tspan></text>
-  <text class="body" x="175" y="120"><tspan x="175" dy="0">241.5M (2023 Census);</tspan><tspan x="175" dy="17">2.55% annual growth rate</tspan></text>
-  <text class="body" x="345" y="120"><tspan x="345" dy="0">Rural interior Sindh,</tspan><tspan x="345" dy="17">Balochistan, peri-urban hubs</tspan></text>
-  <text class="body" x="525" y="120"><tspan x="525" dy="0">Family planning, female education,</tspan><tspan x="525" dy="17">Lady Health Workers network</tspan></text>
+  <text class="body" x="175" y="114"><tspan x="175" dy="0">241.5M (2023 Census);</tspan><tspan x="175" dy="17">2.55% annual growth</tspan><tspan x="175" dy="17">rate</tspan></text>
+  <text class="body" x="345" y="114"><tspan x="345" dy="0">Rural interior Sindh,</tspan><tspan x="345" dy="17">Balochistan, peri-urban</tspan><tspan x="345" dy="17">hubs</tspan></text>
+  <text class="body" x="525" y="114"><tspan x="525" dy="0">Family planning, female</tspan><tspan x="525" dy="17">education, Lady Health</tspan><tspan x="525" dy="17">Workers network</tspan></text>
 
   <!-- Row 2: Poverty & Unemployment -->
   <rect class="panel" x="30" y="166" width="720" height="68" rx="4"/>
   <text class="sh" x="42" y="194"><tspan x="42" dy="0">Poverty and</tspan><tspan x="42" dy="16" class="body">Unemployment</tspan></text>
-  <text class="body" x="175" y="192"><tspan x="175" dy="0">~40% poverty headcount;</tspan><tspan x="175" dy="17">2-3M youth enter labour annually</tspan></text>
-  <text class="body" x="345" y="192"><tspan x="345" dy="0">Southern Punjab, interior Sindh,</tspan><tspan x="345" dy="17">newly merged KP districts</tspan></text>
-  <text class="body" x="525" y="192"><tspan x="525" dy="0">BISP targeted income support,</tspan><tspan x="525" dy="17">NAVTTC skills training, SME loans</tspan></text>
+  <text class="body" x="175" y="186"><tspan x="175" dy="0">~40% poverty</tspan><tspan x="175" dy="17">headcount; 2-3M youth</tspan><tspan x="175" dy="17">enter labour annually</tspan></text>
+  <text class="body" x="345" y="186"><tspan x="345" dy="0">Southern Punjab,</tspan><tspan x="345" dy="17">interior Sindh, newly</tspan><tspan x="345" dy="17">merged KP districts</tspan></text>
+  <text class="body" x="525" y="186"><tspan x="525" dy="0">BISP targeted income support,</tspan><tspan x="525" dy="17">NAVTTC skills training, SME</tspan><tspan x="525" dy="17">loans</tspan></text>
 
   <!-- Row 3: Terrorism & Extremism -->
   <rect class="panel" x="30" y="238" width="720" height="68" rx="4"/>
   <text class="sh" x="42" y="266"><tspan x="42" dy="0">Terrorism and</tspan><tspan x="42" dy="16" class="body">Extremism</tspan></text>
-  <text class="body" x="175" y="264"><tspan x="175" dy="0">Over 70,000 lives lost;</tspan><tspan x="175" dy="17">severe economic disruptions</tspan></text>
-  <text class="body" x="345" y="264"><tspan x="345" dy="0">Border belt of KP and Balochistan,</tspan><tspan x="345" dy="17">major urban centres</tspan></text>
+  <text class="body" x="175" y="258"><tspan x="175" dy="0">Over 70,000 lives</tspan><tspan x="175" dy="17">lost; severe economic</tspan><tspan x="175" dy="17">disruptions</tspan></text>
+  <text class="body" x="345" y="258"><tspan x="345" dy="0">Border belt of KP and</tspan><tspan x="345" dy="17">Balochistan, major</tspan><tspan x="345" dy="17">urban centres</tspan></text>
   <text class="body" x="525" y="264"><tspan x="525" dy="0">National Action Plan (NAP),</tspan><tspan x="525" dy="17">Paigham-e-Pakistan consensus</tspan></text>
 
   <!-- Row 4: Environment & Climate -->
   <rect class="panel" x="30" y="310" width="720" height="74" rx="4"/>
   <text class="sh" x="42" y="338"><tspan x="42" dy="0">Environmental</tspan><tspan x="42" dy="16" class="body">Degradation</tspan></text>
-  <text class="body" x="175" y="336"><tspan x="175" dy="0">Top-10 climate risk index;</tspan><tspan x="175" dy="17">water stress (under 1,000 m3)</tspan></text>
-  <text class="body" x="345" y="336"><tspan x="345" dy="0">Indus delta, drought-prone</tspan><tspan x="345" dy="17">Balochistan, vulnerable plains</tspan></text>
-  <text class="body" x="525" y="336"><tspan x="525" dy="0">Updated Climate Change Policy 2021,</tspan><tspan x="525" dy="17">afforestation, Living Indus initiative</tspan></text>
+  <text class="body" x="175" y="330"><tspan x="175" dy="0">Top-10 climate risk</tspan><tspan x="175" dy="17">index; water stress</tspan><tspan x="175" dy="17">(under 1,000 m3)</tspan></text>
+  <text class="body" x="345" y="330"><tspan x="345" dy="0">Indus delta,</tspan><tspan x="345" dy="17">drought-prone</tspan><tspan x="345" dy="17">Balochistan, vulnerable</tspan><tspan x="345" dy="17">plains</tspan></text>
+  <text class="body" x="525" y="330"><tspan x="525" dy="0">Updated Climate Change Policy</tspan><tspan x="525" dy="17">2021, afforestation, Living</tspan><tspan x="525" dy="17">Indus initiative</tspan></text>
 
   <!-- Wordmark -->
   <text class="wm" x="768" y="425" text-anchor="end" aria-hidden="true">textbook.com.pk</text>

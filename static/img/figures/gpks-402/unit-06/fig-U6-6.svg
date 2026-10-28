@@ -45,13 +45,13 @@
   <text class="body" x="38" y="186"><tspan x="38" dy="0">- Inquiry-based cooperative learning</tspan></text>
 
   <!-- Right: School Culture -->
-  <rect class="panel" x="520" y="65" width="235" height="150" rx="8"/>
+  <rect class="panel" x="520" y="65" width="235" height="170" rx="8"/>
   <rect class="panel-a" x="520" y="65" width="235" height="34" rx="8"/>
   <text class="sh" x="637" y="88" text-anchor="middle"><tspan x="637" dy="0">2. School Culture</tspan></text>
-  <text class="body" x="533" y="120"><tspan x="533" dy="0">- Inter-provincial and cultural harmony</tspan></text>
-  <text class="body" x="533" y="142"><tspan x="533" dy="0">- Inclusive climate for girls and minorities</tspan></text>
-  <text class="body" x="533" y="164"><tspan x="533" dy="0">- Collaborative councils and clubs</tspan></text>
-  <text class="body" x="533" y="186"><tspan x="533" dy="0">- Fair, non-violent discipline models</tspan></text>
+  <text class="body" x="533" y="116"><tspan x="533" dy="0">- Inter-provincial and cultural</tspan><tspan x="533" dy="16">harmony</tspan></text>
+  <text class="body" x="533" y="154"><tspan x="533" dy="0">- Inclusive climate for girls</tspan><tspan x="533" dy="16">and minorities</tspan></text>
+  <text class="body" x="533" y="192"><tspan x="533" dy="0">- Collaborative councils and clubs</tspan></text>
+  <text class="body" x="533" y="214"><tspan x="533" dy="0">- Fair, non-violent discipline models</tspan></text>
 
   <!-- Bottom: Community Leadership -->
   <rect class="panel" x="190" y="320" width="400" height="120" rx="8"/>

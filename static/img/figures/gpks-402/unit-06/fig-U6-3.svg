@@ -31,7 +31,7 @@
 
   <!-- Poverty to Extremism -->
   <path class="link" d="M630 150 L630 330" marker-end="url(#arrow)"/>
-  <text class="tag" x="638" y="245" text-anchor="start"><tspan x="638" dy="0">socioeconomic alienation</tspan></text>
+  <text class="tag" x="638" y="245" text-anchor="start"><tspan x="638" dy="0">socioeconomic</tspan><tspan x="638" dy="16">alienation</tspan></text>
 
   <!-- Environment to Poverty -->
   <path class="link" d="M150 330 L150 155" marker-end="url(#arrow)"/>

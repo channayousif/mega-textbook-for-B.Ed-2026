@@ -26,31 +26,31 @@
 
   <!-- Row 1: UN -->
   <rect class="panel" x="30" y="94" width="720" height="68" rx="4"/>
-  <text class="sh" x="42" y="122"><tspan x="42" dy="0">United Nations</tspan><tspan x="42" dy="16" class="body">(UN)</tspan></text>
+  <text class="sh" x="42" y="122"><tspan x="42" dy="0">United Nations</tspan><tspan x="42" dy="17">(UN)</tspan></text>
   <text class="body" x="165" y="130"><tspan x="165" dy="0">30 Sept 1947</tspan></text>
-  <text class="body" x="275" y="120"><tspan x="275" dy="0">Major troop contributor to peacekeeping</tspan><tspan x="275" dy="17">missions; advocate for self-determination</tspan></text>
-  <text class="body" x="545" y="120"><tspan x="545" dy="0">Global platform for Kashmir issue;</tspan><tspan x="545" dy="17">access to UNDP, UNICEF, UNESCO</tspan></text>
+  <text class="body" x="275" y="114"><tspan x="275" dy="0">Major troop contributor to</tspan><tspan x="275" dy="17">peacekeeping missions; advocate for</tspan><tspan x="275" dy="17">self-determination</tspan></text>
+  <text class="body" x="545" y="114"><tspan x="545" dy="0">Global platform for Kashmir</tspan><tspan x="545" dy="17">issue; access to UNDP,</tspan><tspan x="545" dy="17">UNICEF, UNESCO</tspan></text>
 
   <!-- Row 2: OIC -->
   <rect class="panel" x="30" y="166" width="720" height="68" rx="4"/>
-  <text class="sh" x="42" y="194"><tspan x="42" dy="0">Organisation of</tspan><tspan x="42" dy="16" class="body">Islamic Coop. (OIC)</tspan></text>
+  <text class="sh" x="42" y="186"><tspan x="42" dy="0">Organisation of</tspan><tspan x="42" dy="17">Islamic Coop.</tspan><tspan x="42" dy="17">(OIC)</tspan></text>
   <text class="body" x="165" y="202"><tspan x="165" dy="0">1969 (Founder)</tspan></text>
-  <text class="body" x="275" y="192"><tspan x="275" dy="0">Hosted 2nd Islamic Summit (1974 Lahore);</tspan><tspan x="275" dy="17">unified voice on Muslim rights and causes</tspan></text>
-  <text class="body" x="545" y="192"><tspan x="545" dy="0">Strong diplomatic backing on disputes;</tspan><tspan x="545" dy="17">development financing via IsDB</tspan></text>
+  <text class="body" x="275" y="186"><tspan x="275" dy="0">Hosted 2nd Islamic Summit (1974</tspan><tspan x="275" dy="17">Lahore); unified voice on Muslim</tspan><tspan x="275" dy="17">rights and causes</tspan></text>
+  <text class="body" x="545" y="186"><tspan x="545" dy="0">Strong diplomatic backing on</tspan><tspan x="545" dy="17">disputes; development</tspan><tspan x="545" dy="17">financing via IsDB</tspan></text>
 
   <!-- Row 3: SAARC -->
   <rect class="panel" x="30" y="238" width="720" height="68" rx="4"/>
-  <text class="sh" x="42" y="266"><tspan x="42" dy="0">South Asian Assoc.</tspan><tspan x="42" dy="16" class="body">(SAARC)</tspan></text>
+  <text class="sh" x="42" y="266"><tspan x="42" dy="0">South Asian</tspan><tspan x="42" dy="17">Assoc. (SAARC)</tspan></text>
   <text class="body" x="165" y="274"><tspan x="165" dy="0">1985 (Founder)</tspan></text>
-  <text class="body" x="275" y="264"><tspan x="275" dy="0">Hosted 4th (1988) and 12th (2004) summits;</tspan><tspan x="275" dy="17">advocated for SAFTA regional trade</tspan></text>
-  <text class="body" x="545" y="264"><tspan x="545" dy="0">Regional dialogue framework, though</tspan><tspan x="545" dy="17">progress stalled by bilateral tensions</tspan></text>
+  <text class="body" x="275" y="258"><tspan x="275" dy="0">Hosted 4th (1988) and 12th (2004)</tspan><tspan x="275" dy="17">summits; advocated for SAFTA</tspan><tspan x="275" dy="17">regional trade</tspan></text>
+  <text class="body" x="545" y="258"><tspan x="545" dy="0">Regional dialogue framework,</tspan><tspan x="545" dy="17">though progress stalled by</tspan><tspan x="545" dy="17">bilateral tensions</tspan></text>
 
   <!-- Row 4: SCO -->
   <rect class="panel" x="30" y="310" width="720" height="74" rx="4"/>
-  <text class="sh" x="42" y="338"><tspan x="42" dy="0">Shanghai Coop.</tspan><tspan x="42" dy="16" class="body">Org. (SCO)</tspan></text>
+  <text class="sh" x="42" y="338"><tspan x="42" dy="0">Shanghai Coop.</tspan><tspan x="42" dy="17">Org. (SCO)</tspan></text>
   <text class="body" x="165" y="346"><tspan x="165" dy="0">2017 (Full)</tspan></text>
-  <text class="body" x="275" y="336"><tspan x="275" dy="0">Active in counter-terrorism (RATS);</tspan><tspan x="275" dy="17">hosted Council of Heads of Govt (2024)</tspan></text>
-  <text class="body" x="545" y="336"><tspan x="545" dy="0">Deepened Eurasian ties; strategic and</tspan><tspan x="545" dy="17">energy partnership with Central Asia</tspan></text>
+  <text class="body" x="275" y="330"><tspan x="275" dy="0">Active in counter-terrorism (RATS);</tspan><tspan x="275" dy="17">hosted Council of Heads of Govt</tspan><tspan x="275" dy="17">(2024)</tspan></text>
+  <text class="body" x="545" y="330"><tspan x="545" dy="0">Deepened Eurasian ties;</tspan><tspan x="545" dy="17">strategic and energy</tspan><tspan x="545" dy="17">partnership with Central</tspan><tspan x="545" dy="17">Asia</tspan></text>
 
   <!-- Wordmark -->
   <text class="wm" x="768" y="425" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
