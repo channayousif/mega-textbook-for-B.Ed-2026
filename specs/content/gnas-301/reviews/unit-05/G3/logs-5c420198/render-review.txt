@@ -1,0 +1,46 @@
+render-review evidence (G3 English, GNAS-301 Unit 5 - Cycle 2)
+==============================================================
+Timestamp: 2026-10-28T01:55:00Z
+Reviewer: agent:g3-reviewer
+Model: Gemini 3.8 Flash (High)
+Reviewer Run ID: 5c420198-baaa-4562-ab56-91a01924a95a
+Course: GNAS-301 Unit 5 (Toxicology Essentials and Environmental Governance)
+
+CONSTRAINT: The brief for this crew job explicitly forbids running `npm run build`,
+a dev server, or Playwright Chromium. Full live browser/print DOM rendering was
+previously established in round 2 (specs/content/gnas-301/reviews/unit-05/G3/round-02/logs-20260924T003554Z/render-review.log
+and renders-20260924T003554Z/). For this second-cycle review, comprehensive static analysis,
+DOM heading structure, SVG text geometry measurement, and Sharp rasterization verification were conducted:
+
+1. Figure Rasterization and Visual Inspection:
+   - All 8 unit SVGs were rasterized to PNG at 780px displayed width using Sharp with :root CSS variables resolved:
+     - fig-U5-1.png (73,378 bytes): Diagram of atmospheric agent's route to harm, from emission through air, blood and target organ to effect, with carbon monoxide as the worked example.
+     - fig-U5-2.png (66,348 bytes): Table of six atmospheric agents with main source, target organ, impact, and one protection for each.
+     - fig-U5-3.png (54,075 bytes): Flowchart of the fate of a xenobiotic: absorption, distribution, biotransformation (detoxification and bioactivation), excretion or storage. Verified: panels re-spaced (x=26, 216, 406, 596; width 178) and connector arrows cleanly span the panel gaps (x=204-218, 394-408, 584-598) without overlaps or disconnected lines.
+     - fig-U5-4.png (43,374 bytes): Diagram of natural detoxification system: liver Phase 1 rework and Phase 2 conjugate handle, feeding kidneys, lungs, gut, and bile.
+     - fig-U5-5.png (43,390 bytes): Comparative table of genuine helps vs hinders of the natural detoxification system.
+     - fig-U5-6.png (37,890 bytes): Diagram of risk management cycle: avoid, reduce, transfer, accept, mapped to school and community scenarios.
+     - fig-U5-7.png (46,617 bytes): Timeline of six multilateral environmental agreements from Stockholm 1972 to Paris 2015.
+     - fig-U5-8.png (68,658 bytes): Table of seven SDGs for environment and health with targets, indicators, and Pakistan anchors (viewBox 780x510).
+   - All 8 PNG renders are saved under specs/content/gnas-301/reviews/unit-05/G3/renders-5c420198/ and verified non-blank (mean channel luminances 226.9 - 244.4).
+
+2. Figure Text Geometry and Spacing (measure-figure-text.mjs):
+   - All 32 committed SVGs (8 light, 8 dark, 8 Urdu light, 8 Urdu dark) were measured with scripts/measure-figure-text.mjs:
+     - All 32 assets PASS with zero text overflow beyond the viewBox (780x470 / 780x510) and zero wordmark collision (wordmark starts at x=675.7, widest text ends at x=768.4).
+     - Prior SVG text geometry defects in fig-U5-2, fig-U5-3, fig-U5-4, and fig-U5-8 resolved in commit 21f079c5.
+
+3. Alt Text and SVG Accessibility:
+   - All 8 <Figure> tags across topic-01.mdx, topic-02.mdx, topic-03.mdx, and topic-04.mdx carry descriptive alt text.
+   - Every SVG source includes role="img", aria-labelledby="t d", <title id="t">, and <desc id="d"> elements.
+   - SVG <desc> text exactly matches the carrier alt text.
+
+4. Heading Structure and Progression:
+   - index.mdx: Single # title, ## outcomes, ## prerequisites, ## in this unit.
+   - topic-01.mdx to topic-04.mdx: Complete monotonic progression across the nine-part cycle (situation -> Explanation -> Activity -> Check your understanding -> Summary -> Self-assessment -> Practicum -> Summative task -> Further reading).
+   - Zero skipped heading levels across all MDX files.
+
+5. Presentation and Mobile Layout:
+   - Comparison tables (fig-U5-2, fig-U5-5, fig-U5-8) and flowcharts (fig-U5-1, fig-U5-3, fig-U5-4, fig-U5-6, fig-U5-7) are delivered as self-contained SVG graphics, preventing uncontained mobile overflow at 360px.
+   - Assessment answer key and marking guidance strictly quarantined within the bounded final section.
+
+exit_code: 0

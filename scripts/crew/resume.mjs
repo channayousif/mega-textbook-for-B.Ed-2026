@@ -13,7 +13,7 @@ const lastEvent = (j) => (j.history?.at(-1) || '').slice(25);
 
 /**
  * @param {object} s
- * @param {object} s.board      crew board (jobs, awaitingG3)
+ * @param {object} s.board      crew board (jobs, awaitingG3, focus)
  * @param {object} s.decisions  owner decisions (items)
  * @param {object} s.control    crew control (paused, launchStall)
  * @param {object[]} s.nextUp   queued jobs in launch order
@@ -37,8 +37,12 @@ export function resumeHere({ board, decisions, control, nextUp, nowMs = Date.now
   const next = nextUp.slice(0, show).map((j) => `\`${j.id}\``);
   const more = nextUp.length > show ? ` and ${nextUp.length - show} more` : '';
   const list = (xs) => (xs.length ? xs.map((x) => `  - ${x}`).join('\n') : '  - nothing');
+  const focus = board.focus?.course
+    ? `${board.focus.course} (${board.focus.reason}); a new course starts only when no started course has crew work left`
+    : 'none (no crew work on any course)';
   return `## Resume here
 - Launches: ${launches}
+- Focus: ${focus}
 - Needs the owner:
 ${list(owner)}
 - Needs the lead:
