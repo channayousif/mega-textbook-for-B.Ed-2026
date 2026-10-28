@@ -30,7 +30,7 @@
 | Unit 2 | G4 ur-translation | ▢ | | separate job |
 | Unit 2 | G5 ur-review | ▢ | | |
 | Unit 2 | G6 assets | ✅ | auto:gates | 4 schematic SVGs placed with dark variants |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-04/G2/20261028T210510787Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-04/G2/20261028T213208553Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | awaiting an independent reviewer |
 | Unit 4 | G4 ur-translation | ▢ | | separate job |
 | Unit 4 | G5 ur-review | ▢ | | |
