@@ -16,33 +16,33 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/general/20261034-gnas-301-unit-six-review-reconciliation.general.prompt.md
-  - history/prompts/general/20261035-merge-unit-six-review-branch.general.prompt.md
-  - history/prompts/gnas-301/crew-gnas-301-u06-review_en-conflict1.misc.prompt.md
-  - history/prompts/gnas-301/crew-gnas-301-u06-review_en-conflict5.misc.prompt.md
-  - history/prompts/gnas-301/crew-gnas-301-u06-review_en.misc.prompt.md
-  - specs/content/gnas-301/reviews/unit-06/G3/codex-20261028-reconciliation.json
-  - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/assessment-derivation.md
-  - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/build-content-status.log
-  - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/check-content-before-cache-refresh.log
-  - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/check-content-final.log
-  - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/check-content-initial.log
-  - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/check-depth-gate.log
-  - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/check-docs-sync.log
-  - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/check-figures.log
-  - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/check-no-answer-keys.log
-  - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/check-no-em-dash.log
-  - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/commands.json
-  - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/manifest.json
-  - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/provenance.log
-  - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/render-limitation.md
-  - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/report-validation.log
-  - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/summary.md
-  - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/validate-content.log
-  - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028/manifest.json
-  - specs/content/gnas-301/tasks.md
+ - history/prompts/general/20261034-gnas-301-unit-six-review-reconciliation.general.prompt.md
+ - history/prompts/general/20261035-merge-unit-six-review-branch.general.prompt.md
+ - history/prompts/gnas-301/crew-gnas-301-u06-review_en-conflict1.misc.prompt.md
+ - history/prompts/gnas-301/crew-gnas-301-u06-review_en-conflict5.misc.prompt.md
+ - history/prompts/gnas-301/crew-gnas-301-u06-review_en.misc.prompt.md
+ - specs/content/gnas-301/reviews/unit-06/G3/codex-20261028-reconciliation.json
+ - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/assessment-derivation.md
+ - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/build-content-status.log
+ - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/check-content-before-cache-refresh.log
+ - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/check-content-final.log
+ - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/check-content-initial.log
+ - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/check-depth-gate.log
+ - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/check-docs-sync.log
+ - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/check-figures.log
+ - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/check-no-answer-keys.log
+ - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/check-no-em-dash.log
+ - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/commands.json
+ - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/manifest.json
+ - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/provenance.log
+ - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/render-limitation.md
+ - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/report-validation.log
+ - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/summary.md
+ - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028-final/validate-content.log
+ - specs/content/gnas-301/reviews/unit-06/G3/crew-20261028/manifest.json
+ - specs/content/gnas-301/tasks.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -81,24 +81,24 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Merged origin/main into crew/gnas-301-u06-review_en, resolved the tracker conflict in specs/content/gnas-301/tasks.md by keeping origin/main's Unit 4 review row followed by this branch's Unit 6 review row, refreshed content status, verified that all 13 content gates pass cleanly, and recorded the prompt history record.
+Merged origin/main into crew/gnas-301-u06-review_en, resolved the task tracker conflict in specs/content/gnas-301/tasks.md preserving both reviews, refreshed content status, and verified all 13 content gates pass.
 
 ## Outcome
 
-- Impact: conflict resolution for GNAS-301 Unit 6 by agy.
-- Tests: npm run check:content passed with 13 of 13 gates passing.
-- Files: specs/content/gnas-301/tasks.md, history/prompts/gnas-301/crew-gnas-301-u06-review_en-conflict5.misc.prompt.md.
+- Impact: fix for GNAS-301 Unit 6 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 25 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main, resolved the task tracker conflict in specs/content/gnas-301/tasks.md, refreshed content status, verified npm run check:content passes, and committed merge + PHR.
-- Decisions the team must respect: G3 stays open and advisory without certification; G-2026-33 cycle-count decision remains owner-owned.
+- Shipped / changed: Merged origin/main into crew/gnas-301-u06-review_en, resolved the task tracker conflict in specs/content/gnas-301/tasks.md preserving both reviews, refreshed content status, and verified all 13 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G-2026-33 and existing Unit 6 evidence gaps remain owner-owned; G3 stays open.
-- Paperclip issues affected: none (work tracked by the crew board).
+  - G-2026-33 cycle-count decision and existing Unit 6 evidence gaps remain owner-owned; G3 stays open.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
