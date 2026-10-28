@@ -1,0 +1,4 @@
+Actual command: npm run build:content-status
+Exit code: 0
+Output: Wrote content status for 12 course(s) to static/content-status.json
+This ignored generated artifact needed refreshing after the advisory tracker edit. No tracked publication records changed. Verified GQUR-300 Unit 2 remains G3=open, G5=open, translation_status=draft, publication=gated. Initial HEAD and origin/main both d8a8e0445e38ac8337cceb136aa34e877d954d6f; baseline and final content runs both pass all 13 gates. Intermediate stale-cache failure preserved in content-after-tracker.log.
