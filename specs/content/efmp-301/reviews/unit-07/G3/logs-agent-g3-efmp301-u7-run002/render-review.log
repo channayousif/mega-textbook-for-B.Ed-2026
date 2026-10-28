@@ -1,0 +1,43 @@
+render-review evidence (G3 English, EFMP-301 Unit 7)
+=====================================================
+Timestamp: 2026-10-27T21:15:00Z
+Reviewer: agent:g3-reviewer
+Reviewer Run ID: agent-g3-efmp301-u7-run002
+Conversation ID: a240a202-14f6-409f-8780-4b54731d4985
+Course: EFMP-301 Unit 7 (Individual Differences and Special Needs)
+
+EXECUTION CONTEXT:
+The crew execution brief forbids running 'npm run build', a dev server, or Playwright
+to respect host resource boundaries on the shared production server.
+In accordance with G3 rubric specifications and repository evidence standards, visual
+and accessibility inspection was executed via figure text geometry measurement, SVG
+accessibility attribute validation, alt text reconciliation, table layout analysis,
+and sharp vector-to-raster PNG verification:
+
+1. Figure Text Geometry & ViewBox Validation:
+   - Verified via scripts/measure-figure-text.mjs across all four unit SVGs and their dark variants:
+     - fig-U7-1.svg & .dark.svg (780x470): PASS (widest text at 768.4, wordmark at 675.7)
+     - fig-U7-2.svg & .dark.svg (780x470): PASS (widest text at 768.4, wordmark at 675.7)
+     - fig-U7-3.svg & .dark.svg (780x470): PASS (widest text at 768.4, wordmark at 675.7)
+     - fig-U7-4.svg & .dark.svg (780x470): PASS (widest text at 774.5, wordmark at 675.7)
+   - Zero glyph overflow beyond viewBox boundaries; wordmark clear across all files.
+
+2. Raster Inspection & PNG Artifact Generation:
+   - All 4 unit figures rasterized to PNG at full resolution using sharp:
+     - fig-U7-1.png: Comparison table of learning styles claim vs evidence vs what is worth keeping.
+     - fig-U7-2.png: Profile bar chart across six domains illustrating abilities as a shape not a point.
+     - fig-U7-3.png: Concept map of the inclusive classroom with four branches (slow, gifted, disabled, peers).
+     - fig-U7-4.png: Comparison table of three learners (slow, gifted, disabled), recognition, what hurts, what helps.
+   - PNG artifacts saved in logs-agent-g3-efmp301-u7-run002/ and registered in evidence_manifest.
+
+3. SVG Accessibility & Screen-Reader Support:
+   - All <Figure> tags in topic-01.mdx and topic-02.mdx carry descriptive, meaningful alt text.
+   - Every SVG source contains role="img", aria-labelledby, <title>, and <desc> elements.
+   - Wordmark contains aria-hidden="true".
+
+4. Typography, Tables & Mobile Layout:
+   - Comparison tables in topic-01.mdx and topic-02.mdx are presented as inline SVG components (fig-U7-1, fig-U7-4), avoiding HTML table mobile wrapping failure at 360px viewport width.
+   - Heading hierarchy strictly monotonic (# H1 title -> ## H2 sections -> ### H3 subtopics).
+   - Summative assessment answers and marking guidance are strictly bounded in the final ## Answers and marking guidance section.
+
+exit_code: 0

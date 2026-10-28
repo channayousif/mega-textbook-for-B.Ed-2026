@@ -31,7 +31,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 1 | G5 ur-review | ▢ | | advisory run001: escalate; render inspection unavailable, all content gates pass; report reviews/unit-01/G5/agent-g5-efmp301-u1-run001.json |
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
 | Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-02/G2/20261027T011135868Z-gates.json |
-| Unit 2 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at acd0868f; report reviews/unit-02/G3/20260925T084500Z-g3-attempt-01.json; Stale since the figure-geometry repair; needs a fresh G3 run |
+| Unit 2 | G3 en-review | ▢ | | advisory run002: escalate; repair limit reached (ADR-0019 cycle 2/2); seifert-hk missing in sources/unit-02.md table; visual render uninspected; report reviews/unit-02/G3/22ba096a-360e-434d-bbff-e55d664db642.json |
 | Unit 2 | G4 ur-translation | ✅ | auto:gates | full UR mirror (7 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
 | Unit 2 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at 4ae665a5; G3 dependency escalated to owner; terminology rulings (Learning prose/figure conflict, new U2 coinages) escalated to owner; report reviews/unit-02/G5/agent-g5-efmp301-u2-run001.json |
 | Unit 2 | G6 assets | ▢ | | |
@@ -45,7 +45,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 3 | G7 publish | ▢ | | |
 | Unit 4 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
 | Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-04/G2/20261027T011847706Z-gates.json |
-| Unit 4 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at a7a1a215; report reviews/unit-04/G3/agent-g3-efmp301-u4-run001.json; Stale since the figure-geometry repair; needs a fresh G3 run |
+| Unit 4 | G3 en-review | ▢ | agent:agy | Advisory escalate: specs/content/efmp-301/reviews/unit-04/G3/8d35e67d-a55f-4595-a37c-c29acbf04727.json; cycle 2 of 2; 5 blocking findings resolved; 1 uncertain (vosniadou2001 excerpt) carried; visual render uninspected (brief prohibits build/server/browser); no certification |
 | Unit 4 | G4 ur-translation | ✅ | auto:gates | full UR mirror (6 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
 | Unit 4 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at ff33d3a1; G3 dependency escalated to owner; terminology rulings (heuristic/means-ends/spotlight renderings) escalated to owner; report reviews/unit-04/G5/agent-g5-efmp301-u4-run001.json |
 | Unit 4 | G6 assets | ▢ | | |
@@ -66,7 +66,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 6 | G7 publish | ▢ | | |
 | Unit 7 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
 | Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-07/G2/20261013T123346154Z-gates.json |
-| Unit 7 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 4dbe708a; report reviews/unit-07/G3/agent-g3-efmp301-u7-run001.json |
+| Unit 7 | G3 en-review | ▢ | | advisory round 2: pass; round 1 blocking findings resolved (Rohrer & Pashler 2012 cited, 5/5 blueprint spread restored); all criteria pass; report reviews/unit-07/G3/agent-g3-efmp301-u7-run002.json |
 | Unit 7 | G4 ur-translation | ✅ | auto:gates | full UR mirror (5 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
 | Unit 7 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at fd019271; G3 dependency escalated to owner; Slow Learner bank conflict (کمزور متعلم vs the unit slow-!=-weak teaching) escalated to owner; report reviews/unit-07/G5/agent-g5-efmp301-u7-run001.json |
 | Unit 7 | G6 assets | ▢ | | |
@@ -87,7 +87,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 9 | G7 publish | ▢ | | |
 | Unit 10 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
 | Unit 10 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-10/G2/20261013T123408556Z-gates.json |
-| Unit 10 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at d837f4eb; report reviews/unit-10/G3/agent-g3-efmp301-u10-run001.json |
+| Unit 10 | G3 en-review | ▢ | | advisory run002: pass (all run001 blocking findings repaired); report reviews/unit-10/G3/agent-g3-efmp301-u10-run002.json; agent reviews advisory under ADR-0019 |
 | Unit 10 | G4 ur-translation | ✅ | auto:gates | full UR mirror (5 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
 | Unit 10 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at a527a7fa; G3 dependency escalated to owner; register/line-spacing advisories escalated to owner; report reviews/unit-10/G5/agent-g5-efmp301-u10-run001.json |
 | Unit 10 | G6 assets | ▢ | | |
@@ -102,10 +102,12 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 12 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
 | Unit 12 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-12/G2/20261013T123420959Z-gates.json |
 | Unit 12 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 678a6f2d; report reviews/unit-12/G3/agent-g3-efmp301-u12-run001.json |
+| Unit 12 | G3 en-review | ▢ | agent:codex-g3-reviewer | advisory run002: escalate (final cycle); prior repairs checked, current render unavailable, modelling claim and unstated ERQ word limits require owner action; report reviews/unit-12/G3/agent-codex-g3-u12-run002.json |
 | Unit 12 | G4 ur-translation | ✅ | auto:gates | full UR mirror (6 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
 | Unit 12 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at 12dfb47f + dd015e7d; G3 dependency escalated to owner; terminology rulings (Ethical Dilemma prose/figure split, Rubric convention, NPST phrase) escalated to owner; report reviews/unit-12/G5/agent-g5-efmp301-u12-run001.json |
 | Unit 12 | G6 assets | ▢ | | |
 | Unit 12 | G7 publish | ▢ | | |
+| Unit 9 | G3 en-review | ▢ | agent:codex-g3-reviewer | advisory cycle2: escalate; MCQ spread unresolved, source/pedagogy findings and current render evidence unavailable; owner handling required; report specs/content/efmp-301/reviews/unit-09/G3/codex-efmp301-u09-cycle2-01a17f38-14aa-7e12-b5ba-14390f06b2ef.json |
 
 ## Re-restructure in progress (2026-09-11)
 
