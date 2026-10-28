@@ -30,7 +30,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 1 | G4 ur-translation | ✅ | YM | full UR prose for all 7 files at the v3.4 per-topic layout, 2026-09-11; heading parity exact, terminology-bank-driven, zero em-dash; `translation_status` stays `draft` pending G5 |
 | Unit 1 | G5 ur-review | ▢ | | advisory run001: escalate; render inspection unavailable, all content gates pass; report reviews/unit-01/G5/agent-g5-efmp301-u1-run001.json |
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-02/G2/20261027T011135868Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-02/G2/20261028T083334957Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | advisory run002: escalate; repair limit reached (ADR-0019 cycle 2/2); seifert-hk missing in sources/unit-02.md table; visual render uninspected; report reviews/unit-02/G3/22ba096a-360e-434d-bbff-e55d664db642.json |
 | Unit 2 | G4 ur-translation | ✅ | auto:gates | full UR mirror (7 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
 | Unit 2 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at 4ae665a5; G3 dependency escalated to owner; terminology rulings (Learning prose/figure conflict, new U2 coinages) escalated to owner; report reviews/unit-02/G5/agent-g5-efmp301-u2-run001.json |
@@ -110,6 +110,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 12 | G7 publish | ▢ | | |
 | Unit 9 | G3 en-review | ▢ | agent:codex-g3-reviewer | advisory cycle2: escalate; MCQ spread unresolved, source/pedagogy findings and current render evidence unavailable; owner handling required; report specs/content/efmp-301/reviews/unit-09/G3/codex-efmp301-u09-cycle2-01a17f38-14aa-7e12-b5ba-14390f06b2ef.json |
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-02/G3/20261028T054347Z-g3-desk-d8a27feb.json |
+| Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied; sources/unit-02.md lines 6-8 corrected to bind only seifert2009 and vosniadou2001, with seifert-hk (guide book 1) bound at course level as a revised edition of the same Chapter 3, uncited in the prose; bare-URL Further Reading left as course convention; visual render still uninspected; fresh G3 run needed; report reviews/unit-02/G3/20261028T054347Z-g3-desk-d8a27feb.json |
 
 ## Re-restructure in progress (2026-09-11)
 
