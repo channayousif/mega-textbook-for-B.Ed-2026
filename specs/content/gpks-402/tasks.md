@@ -56,3 +56,4 @@ The stage rows below govern Unit 5. No G1 re-evaluation or G3/G5 approval is rec
 | Unit 5 | G5 ur-review | ▢ | | Pending translation and independent review |
 | Unit 5 | G6 assets | ▣ | | Four English SVGs placed; geometry validation pending; Urdu localisation is separate |
 | Unit 5 | G7 publish | ▢ | | No deployment or publication action in this job |
+| Unit 5 | G3 en-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/gpks-402/reviews/unit-05/G3/21030998-7c55-4596-9cef-92787e7cb7aa.json; all 7 criteria pass; all 8 SVGs pass geometry; G3 remains open and unsigned |
