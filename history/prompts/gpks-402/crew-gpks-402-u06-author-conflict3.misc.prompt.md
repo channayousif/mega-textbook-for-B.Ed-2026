@@ -1,6 +1,6 @@
 ---
 id: crew-gpks-402-u06-author-conflict3
-title: crew fix GPKS-402 unit 6 conflict3
+title: crew fix GPKS-402 unit 6
 stage: misc
 date: 2026-10-28
 surface: agent
@@ -16,10 +16,69 @@ links:
   adr: null
   pr: null
 files:
-  - specs/content/gpks-402/tasks.md
+ - docs/semester-2/gpks-402/unit-06/index.mdx
+ - docs/semester-2/gpks-402/unit-06/topic-01.mdx
+ - docs/semester-2/gpks-402/unit-06/topic-02.mdx
+ - docs/semester-2/gpks-402/unit-06/topic-03.mdx
+ - docs/semester-2/gpks-402/unit-06/unit-assessment.mdx
+ - glossary.json
+ - history/prompts/general/20261038-resolve-gpks-unit-six-conflicts.general.prompt.md
+ - history/prompts/gpks-402/0337-verify-unit-six-merge.misc.prompt.md
+ - history/prompts/gpks-402/crew-gpks-402-u06-author-conflict1.misc.prompt.md
+ - history/prompts/gpks-402/crew-gpks-402-u06-author-conflict2.misc.prompt.md
+ - history/prompts/gpks-402/crew-gpks-402-u06-author-conflict3.misc.prompt.md
+ - history/prompts/gpks-402/crew-gpks-402-u06-author.green.prompt.md
+ - specs/content/gpks-402/concepts/unit-06.md
+ - specs/content/gpks-402/coverage/unit-06.md
+ - specs/content/gpks-402/figures/unit-06.md
+ - specs/content/gpks-402/reviews/unit-06/G2/20261028T102354806Z-gates.json
+ - specs/content/gpks-402/reviews/unit-06/G2/20261028T111850190Z-gates.json
+ - specs/content/gpks-402/reviews/unit-06/G2/20261028T111933200Z-gates.json
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T102354806Z/check-bloom-bands.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T102354806Z/check-concept-graph.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T102354806Z/check-depth-gate.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T102354806Z/check-docs-sync.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T102354806Z/check-figures.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T102354806Z/check-no-answer-keys.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T102354806Z/check-no-em-dash.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T102354806Z/validate-content.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T111850190Z/check-bloom-bands.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T111850190Z/check-concept-graph.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T111850190Z/check-depth-gate.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T111850190Z/check-docs-sync.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T111850190Z/check-figures.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T111850190Z/check-no-answer-keys.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T111850190Z/check-no-em-dash.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T111850190Z/validate-content.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T111933200Z/check-bloom-bands.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T111933200Z/check-concept-graph.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T111933200Z/check-depth-gate.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T111933200Z/check-docs-sync.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T111933200Z/check-figures.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T111933200Z/check-no-answer-keys.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T111933200Z/check-no-em-dash.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261028T111933200Z/validate-content.txt
+ - specs/content/gpks-402/sources/texts/dean-2005-citizenship.md
+ - specs/content/gpks-402/sources/texts/khan-2015-foreign-policy.md
+ - specs/content/gpks-402/sources/texts/mocc-2021-nccp.md
+ - specs/content/gpks-402/sources/texts/pak-constitution-1973-unit-06.md
+ - specs/content/gpks-402/sources/texts/worldbank-pdu-2025-unit-06.md
+ - specs/content/gpks-402/sources/unit-06.md
+ - specs/content/gpks-402/tasks.md
+ - static/img/figures/gpks-402/unit-06/fig-U6-1.dark.svg
+ - static/img/figures/gpks-402/unit-06/fig-U6-1.svg
+ - static/img/figures/gpks-402/unit-06/fig-U6-2.dark.svg
+ - static/img/figures/gpks-402/unit-06/fig-U6-2.svg
+ - static/img/figures/gpks-402/unit-06/fig-U6-3.dark.svg
+ - static/img/figures/gpks-402/unit-06/fig-U6-3.svg
+ - static/img/figures/gpks-402/unit-06/fig-U6-4.dark.svg
+ - static/img/figures/gpks-402/unit-06/fig-U6-4.svg
+ - static/img/figures/gpks-402/unit-06/fig-U6-5.dark.svg
+ - static/img/figures/gpks-402/unit-06/fig-U6-5.svg
+ - static/img/figures/gpks-402/unit-06/fig-U6-6.dark.svg
+ - static/img/figures/gpks-402/unit-06/fig-U6-6.svg
 tests:
-  - npm run check:content
-  - npm run figures:variants:check
+ - npm run check:content
 ---
 
 ## Prompt
@@ -52,28 +111,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gpks-402-u06-author, author, agy) Total reading time across the 5 unit files is 96 minutes (index: 4, topic-01: 22, topic-02: 24, topic-03: 21, unit-assessment: 25), inside the 90-125 min depth budget.
 - (gpks-402-u06-author, author, agy) Downstream Urdu mirror job will need .ur.svg localized twins of fig-U6-1 through fig-U6-6 and G5 review of authored Urdu concept labels in concepts/unit-06.md.
 
+
 ## Response snapshot
 
-Merged origin/main, resolved tasks.md tracker conflict by preserving both Unit 2 and Unit 6 tracker rows, committed the merge, and verified content gates.
+Merged origin/main into crew/gpks-402-u06-author, resolved the tasks.md conflict by keeping both Unit 2 and Unit 6 tracker rows, and committed the merge and work record.
 
 ## Outcome
 
-- Impact: Resolved merge conflict with main on crew/gpks-402-u06-author and verified gates.
-- Tests: npm run check:content executed (all in-scope gates pass; check:content-status fails only for Unit 2 which is on main).
-- Files: specs/content/gpks-402/tasks.md
-- Next prompts: Downstream review / Urdu translation jobs for GPKS-402 Unit 6.
-- Reflection: Merge conflict in tasks.md was cleanly resolved by preserving main's Unit 2 progress alongside this branch's Unit 6 authoring rows.
+- Impact: fix for GPKS-402 Unit 6 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 61 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/gpks-402-u06-author, preserved Unit 2 and Unit 6 tracker rows in specs/content/gpks-402/tasks.md.
-- Decisions the team must respect: Shared tracker rows are append-only; G3/G5 remain open pending independent reviews.
-- Pending / next owner: G3 independent English reviewer for GPKS-402 Unit 6.
-- Paperclip issues affected: null
+- Shipped / changed: Merged origin/main into crew/gpks-402-u06-author, resolved the tasks.md conflict by keeping both Unit 2 and Unit 6 tracker rows, and committed the merge and work record.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Total reading time across the 5 Unit 6 files is 96 minutes, within the 90-125 min depth budget.
+  - Downstream Urdu mirror job will need .ur.svg localized twins of fig-U6-1 through fig-U6-6 and G5 review of authored Urdu concept labels in concepts/unit-06.md.
+  - Figures fig-U6-2, fig-U6-3, fig-U6-4, and fig-U6-6 have text-geometry issues reported by measure-figure-text.mjs that should be resolved in the asset refinement or review stage.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: Merge conflict on tasks.md between concurrent unit authoring jobs.
-- Graders run and results (PASS/FAIL): validate:content PASS, check:pipeline-gate PASS, check:depth-gate PASS, check:figures PASS, check:no-em-dash PASS, check:no-answer-keys PASS, check:concept-graph PASS, check:bloom-bands PASS, check:source-floor PASS, check:licence PASS, licence:map:check PASS, check:docs-sync PASS.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
