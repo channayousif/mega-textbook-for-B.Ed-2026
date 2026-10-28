@@ -26,16 +26,16 @@ files:
  - specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/check-figures.txt
  - specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/check-no-answer-keys.txt
  - specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/check-no-em-dash.txt
+ - specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/fig-U4-1.png
+ - specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/fig-U4-2.png
+ - specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/fig-U4-3.png
+ - specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/fig-U4-4.png
+ - specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/fig-U4-5.png
+ - specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/fig-U4-6.png
+ - specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/fig-U4-7.png
  - specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/measure-figure-text.txt
  - specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/render-review.txt
  - specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/validate-content.txt
- - specs/content/gpks-402/reviews/unit-04/G3/renders-8e3bf462/fig-U4-1.png
- - specs/content/gpks-402/reviews/unit-04/G3/renders-8e3bf462/fig-U4-2.png
- - specs/content/gpks-402/reviews/unit-04/G3/renders-8e3bf462/fig-U4-3.png
- - specs/content/gpks-402/reviews/unit-04/G3/renders-8e3bf462/fig-U4-4.png
- - specs/content/gpks-402/reviews/unit-04/G3/renders-8e3bf462/fig-U4-5.png
- - specs/content/gpks-402/reviews/unit-04/G3/renders-8e3bf462/fig-U4-6.png
- - specs/content/gpks-402/reviews/unit-04/G3/renders-8e3bf462/fig-U4-7.png
  - specs/content/gpks-402/reviews/unit-04/G3/summary.md
  - specs/content/gpks-402/tasks.md
 tests:
@@ -70,27 +70,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Executed independent G3 English review of GPKS-402 Unit 4 with advisory pass disposition, recorded validated review report and evidence logs, and updated advisory open tracker row in tasks.md.
+Executed independent G3 English review of GPKS-402 Unit 4 with advisory pass disposition, recorded validated report and evidence logs, and updated tasks.md.
 
 ## Outcome
 
-- Impact: review_en for GPKS-402 Unit 4 by agy.
-- Tests: node scripts/review-evidence.mjs validate passed; measure-figure-text.mjs passed for all 14 SVG variants; individual content gates passed.
+- Impact: review_en for GPKS-402 Unit 4 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 22 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Executed independent G3 English review of GPKS-402 Unit 4 with advisory pass disposition, recorded validated review report and evidence logs, and updated advisory open tracker row in tasks.md.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything.
+- Shipped / changed: Executed independent G3 English review of GPKS-402 Unit 4 with advisory pass disposition, recorded validated report and evidence logs, and updated tasks.md.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All seven G3 evaluation criteria pass with concrete evidence locators; 25 assessment items independently solved; all 14 SVG variants pass measure-figure-text.mjs.
-  - Advisory G3 tracker row recorded in specs/content/gpks-402/tasks.md with status open ▢ and unsigned per ADR-0019; G3 remains open for trusted sign-off.
-  - Next lifecycle stages for Unit 4 are Urdu translation (G4 ur-translation) and independent Urdu review (G5 ur-review).
+  - All seven G3 criteria pass with verified evidence; 25 assessment items independently solved; all 14 SVG variants pass measure-figure-text.
+  - G3 tracker row in specs/content/gpks-402/tasks.md is updated to open ▢ per ADR-0019; certification remains blocked pending trusted qualification.
+  - Unit 4 is ready for Urdu translation (G4 ur-translation) and subsequent independent Urdu review (G5 ur-review).
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
+
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
