@@ -23,7 +23,7 @@ test('prepareWorktree refreshes the report for new, reused and parent worktrees'
   const calls = [];
   const prepare = loadFunction('prepareWorktree', '\n/**', {
     WT_DIR: base, ROOT: base, SPARSE: [], join, existsSync, mkdirSync,
-    linkNodeModules() {},
+    linkNodeModules() {}, freeBranch() {},
     sh(cmd, args, cwd) {
       calls.push({ cmd, args: Array.from(args), cwd });
       if (args[0] === 'worktree') mkdirSync(args[5], { recursive: true });
@@ -36,6 +36,28 @@ test('prepareWorktree refreshes the report for new, reused and parent worktrees'
   prepare({ jobs: [{ id: 'parent', worktree: wt }] }, { parent: 'parent' });
   assert.equal(calls.filter((c) => c.cmd === 'node' && c.cwd === wt && c.args[0] === 'scripts/report-content-status.mjs').length, 3);
   assert.equal(calls.filter((c) => c.args[0] === 'worktree').length, 1);
+});
+
+test('freeBranch removes a leftover folder holding the branch, but never a running job\'s', (t) => {
+  const dir = fixture(t);
+  const repo = join(dir, 'repo');
+  const wtDir = join(dir, 'wt');
+  mkdirSync(repo);
+  const git = (cwd, ...args) => execFileSync('git', args, { cwd, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }).trim();
+  git(repo, 'init', '-q', '-b', 'main');
+  git(repo, '-c', 'user.email=t@example.invalid', '-c', 'user.name=t', 'commit', '-q', '--allow-empty', '-m', 'base');
+  const sh = (cmd, args, cwd = repo) => { try { return { ok: true, out: git(cwd, ...args) }; } catch { return { ok: false, out: '' }; } };
+  const free = loadFunction('freeBranch', '\n/**', { WT_DIR: wtDir, ROOT: repo, sh });
+  const left = join(wtDir, 'u05-conflict1');
+  git(repo, 'worktree', 'add', '-q', '-b', 'crew/u05', left);
+
+  free({ jobs: [{ status: 'running', worktree: left }] }, 'crew/u05');
+  assert.ok(existsSync(left), 'a running job keeps its folder');
+  free({ jobs: [] }, 'crew/other');
+  assert.ok(existsSync(left), 'another branch is untouched');
+  free({ jobs: [{ status: 'merged', worktree: left }] }, 'crew/u05');
+  assert.ok(!existsSync(left), 'the leftover folder is removed');
+  git(repo, 'worktree', 'add', '-q', '-B', 'crew/u05', join(wtDir, 'u05-conflict2'));
 });
 
 for (const oursDeletes of [true, false]) {
