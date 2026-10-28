@@ -116,24 +116,8 @@
     }
   ],
   "refs": {
-    "_comment": "Voice-cloning references for round 3 (2026-10-27): owner-supplied ElevenLabs Voice Library previews (Reva, Saira, Kamran; then Sample.mp3 for Ustani, round 3b; round 4 adds sample-male.mp3 for Bilal). The voices belong to their creators and ElevenLabs, so they are EVALUATION ONLY (owner ruling 2026-10-27): a winning voice is used only after its rights are secured (an ElevenLabs plan or a consented recording, PI-08). The audio stays in $MEDIA_ROOT/voice-benchmark/refs/<audio> (originals in owner-samples/) and is packed into the private dataset.",
+    "_comment": "Voice-cloning references for round 3 (2026-10-27): owner-supplied ElevenLabs Voice Library previews (Reva, Saira, Kamran; then Sample.mp3 for Ustani, round 3b; round 4 adds sample-male.mp3 for Bilal). The voices belong to their creators and ElevenLabs, so they are EVALUATION ONLY (owner ruling 2026-10-27): a winning voice is used only after its rights are secured (an ElevenLabs plan or a consented recording, PI-08). The audio stays in $MEDIA_ROOT/voice-benchmark/refs/<audio> (originals in owner-samples/) and is packed into the private dataset. Since 2026-10-28 the `ustani` and `shagird` keys hold the locked, consented references (VS-ADR-0012, VS-ADR-0013); rounds 8-9 compared them under the keys now archived in `_round8` and `_round9`.",
     "ustani": [
-      {
-        "audio": "ref-ustani-sample.wav",
-        "source": "ElevenLabs-generated sample supplied by the owner (Sample.mp3, C2PA author Eleven Labs Inc., 44.1 s); first 13.3 s used",
-        "text_ur": null,
-        "text_deva": null
-      }
-    ],
-    "shagird": [
-      {
-        "audio": "ref-shagird-sample-male.wav",
-        "source": "ElevenLabs-generated sample supplied by the owner (sample-male.mp3, C2PA author Eleven Labs Inc., 38.2 s); first 13.4 s used",
-        "text_ur": null,
-        "text_deva": null
-      }
-    ],
-    "ustani-rec1": [
       {
         "audio": "ref-ustani-rec1.wav",
         "source": "Consented female narrator (consent narrator-02), self-recorded (owner-recordings/, PCM 48 kHz mono, 26.8 s); 0.4-17.95 s used (round 9)",
@@ -141,18 +125,16 @@
         "text_deva": null
       }
     ],
-    "shagird-rec1": [
-      {
-        "audio": "ref-shagird-rec1.wav",
-        "source": "Owner's own voice, recorded with consent (owner-recordings/bilal-rec-1.mp4, WhatsApp AAC 48 kHz, 56.0 s); 1.2-15.6 s used (round 8)",
-        "text_ur": null,
-        "text_deva": null
-      }
-    ],
-    "shagird-rec3": [
+    "shagird": [
       {
         "audio": "ref-shagird-rec3.wav",
         "source": "Owner's own voice, recorded with consent (owner-recordings/bilal-rec-3.wav, PCM 48 kHz mono, 21.3 s, a cleaner copy of the bilal-rec-2.mp4 take); 0.5-13.95 s used (round 8)",
+        "text_ur": null,
+        "text_deva": null
+      },
+      {
+        "audio": "ref-shagird-rec1.wav",
+        "source": "Owner's own voice, recorded with consent (owner-recordings/bilal-rec-1.mp4, WhatsApp AAC 48 kHz, 56.0 s); 1.2-15.6 s used (round 8)",
         "text_ur": null,
         "text_deva": null
       }
@@ -212,6 +194,50 @@
         {
           "audio": "ref-shagird-kamran.wav",
           "source": "ElevenLabs Voice Library preview supplied by the owner: Kamran, dramatic and suspenseful (3.6 s)",
+          "text_ur": null,
+          "text_deva": null
+        }
+      ]
+    },
+    "_round8": {
+      "shagird": [
+        {
+          "audio": "ref-shagird-sample-male.wav",
+          "source": "ElevenLabs-generated sample supplied by the owner (sample-male.mp3, C2PA author Eleven Labs Inc., 38.2 s); first 13.4 s used",
+          "text_ur": null,
+          "text_deva": null
+        }
+      ],
+      "shagird-rec1": [
+        {
+          "audio": "ref-shagird-rec1.wav",
+          "source": "Owner's own voice, recorded with consent (owner-recordings/bilal-rec-1.mp4, WhatsApp AAC 48 kHz, 56.0 s); 1.2-15.6 s used (round 8)",
+          "text_ur": null,
+          "text_deva": null
+        }
+      ],
+      "shagird-rec3": [
+        {
+          "audio": "ref-shagird-rec3.wav",
+          "source": "Owner's own voice, recorded with consent (owner-recordings/bilal-rec-3.wav, PCM 48 kHz mono, 21.3 s, a cleaner copy of the bilal-rec-2.mp4 take); 0.5-13.95 s used (round 8)",
+          "text_ur": null,
+          "text_deva": null
+        }
+      ]
+    },
+    "_round9": {
+      "ustani": [
+        {
+          "audio": "ref-ustani-sample.wav",
+          "source": "ElevenLabs-generated sample supplied by the owner (Sample.mp3, C2PA author Eleven Labs Inc., 44.1 s); first 13.3 s used",
+          "text_ur": null,
+          "text_deva": null
+        }
+      ],
+      "ustani-rec1": [
+        {
+          "audio": "ref-ustani-rec1.wav",
+          "source": "Consented female narrator (consent narrator-02), self-recorded (owner-recordings/, PCM 48 kHz mono, 26.8 s); 0.4-17.95 s used (round 9)",
           "text_ur": null,
           "text_deva": null
         }

@@ -8,7 +8,7 @@ import { renderMedia, selectComposition } from '@remotion/renderer';
 import { execFileSync } from 'node:child_process';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
-import type { CaptionLine, ShortProps } from '../remotion/src/props.ts';
+import type { ShortProps } from '../remotion/src/props.ts';
 
 const [propsPath, outArg] = process.argv.slice(2);
 if (!propsPath || !outArg) throw new Error('usage: render-job.ts <props.json> <out-dir>');
@@ -50,9 +50,13 @@ const stamp = (s: number, sep: string) => {
   const p = (n: number, w = 2) => String(n).padStart(w, '0');
   return `${p(Math.floor(ms / 3_600_000))}:${p(Math.floor(ms / 60_000) % 60)}:${p(Math.floor(ms / 1000) % 60)}${sep}${p(ms % 1000, 3)}`;
 };
-const cues = (lines: CaptionLine[], sep: string) => lines.map((l, i) => `${sep === ',' ? `${i + 1}\n` : ''}${stamp(l.from_s, sep)} --> ${stamp(l.to_s, sep)}\n${l.text_ur}\n`).join('\n');
-writeFileSync(join(out, 'captions.ur.srt'), cues(props.lines, ','));
-writeFileSync(join(out, 'captions.ur.vtt'), `WEBVTT\n\n${cues(props.lines, '.')}`);
+// One sidecar cue per caption window when the line has sentence cues (V007), else one per line.
+const windows = props.lines.flatMap((l) => l.cues?.length ? l.cues : [{ text_ur: l.text_ur, from_s: l.from_s, to_s: l.to_s }]);
+const cues = (sep: string) => windows.map((c, i) => `${sep === ',' ? `${i + 1}\n` : ''}${stamp(c.from_s, sep)} --> ${stamp(c.to_s, sep)}\n${c.text_ur}\n`).join('\n');
+writeFileSync(join(out, 'captions.ur.srt'), cues(','));
+writeFileSync(join(out, 'captions.ur.vtt'), `WEBVTT\n\n${cues('.')}`);
+// The timings used, in the shape episodes/<id>/alignment.json takes, so the owner can correct them by hand.
+writeFileSync(join(out, 'alignment.json'), JSON.stringify(Object.fromEntries(props.lines.filter((l) => l.cues?.length).map((l) => [l.id, l.cues])), null, 2) + '\n');
 
 let nvenc = 'not tested';
 try {
