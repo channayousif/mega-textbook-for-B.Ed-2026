@@ -1,0 +1,16 @@
+manifest-verify record - EFMP-301 Unit 10, G3 run002
+====================================================
+Reviewer: agent:g3-reviewer
+Model: Gemini 3.8 Flash (High)
+Reviewer run ID: 530a0b0a-0c83-416c-8504-17579b7c94d6
+Target commit HEAD: c13ce228c97b62124648a27989a6d7a186e24751
+
+Manifest computation:
+  Input count: 94
+  Dirty inputs: 0
+  Skill digest: eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b
+  Missing from tree: []
+  Added since prepare: []
+  Digest mismatches: 0
+
+All 94 bound input files match the commit index and disk digests byte-for-byte.

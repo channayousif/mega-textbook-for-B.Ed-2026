@@ -1,0 +1,49 @@
+render-review - EFMP-305 Unit 2 (en) - 2026-10-28T03:41:00Z
+Reviewer: agent:agy
+Model: Gemini 3.8 Flash (High)
+Reviewer Run ID: fd523bce-ee87-4072-9487-4f1601373795
+Exit code: 0
+
+Approach:
+  In accordance with repository resource constraints and crew instructions forbidding
+  `npm run build`, a dev server, and Playwright, visual rendering and accessibility review
+  were conducted via static layout inspection, SVG DOM/geometry evaluation, CSS layout analysis,
+  and sharp rasterization.
+
+1. Static Raster Renders:
+   All 4 placed SVG figures in static/img/figures/efmp-305/unit-02/ were rasterised to PNG at displayed size:
+   - fig-U2-1-render.png (concept-map, 25,313 bytes)
+   - fig-U2-2-render.png (table, 31,643 bytes)
+   - fig-U2-3-render.png (flowchart, 21,328 bytes)
+   - fig-U2-4-render.png (diagram, 27,872 bytes)
+   Saved in specs/content/efmp-305/reviews/unit-02/logs-fd523bce/.
+
+2. Heading and Semantic Structure:
+   - index.mdx: Single H1; clean H2s ("Unit learning outcomes", "Prerequisite knowledge", "In this unit", "How to use this unit").
+   - topic-01.mdx: Single H1 ("Topic 2.1 - The many faces of learner diversity"); clean H2 nine-part learning cycle; H3 sub-topics under Explanation.
+   - topic-02.mdx: Single H1 ("Topic 2.2 - Identifying needs and building respect"); clean H2 nine-part learning cycle; H3 sub-topics under Explanation.
+   - unit-assessment.mdx: Single H1; clean H2 sections ("Unit summary", "Summative assessment", "Answers and marking guidance"); H3 per question bank.
+   - unit-teacher-notes.mdx: Single H1; clean H2/H3 instructional guidance.
+   - Zero skipped heading levels across all 5 unit files.
+
+3. Figure Presentation and Accessibility Wiring:
+   - All 4 figures have placed carriers with matching src paths and dimensions.
+   - Alt text: Non-empty, highly descriptive instructional alt text present on all <Figure> tags matching specs/content/efmp-305/figures/unit-02.md.
+   - SVGs include role="img", aria-labelledby linking to <title> and <desc> elements.
+   - Both light and dark mode variants (.svg and .dark.svg) and Urdu variants (.ur.svg and .ur.dark.svg) exist and are synchronized (16 SVGs total).
+   - Glyph text geometry (scripts/measure-figure-text.mjs): Widest text within bounds across all 16 SVGs; zero text collisions and zero text-over-edge overflows.
+
+4. Descriptive Links and Navigation:
+   - Intra-unit navigation in index.mdx uses descriptive labels ([The many faces of learner diversity](./topic-01), [Identifying needs and building respect](./topic-02)).
+   - No raw or ambiguous URLs in body prose.
+   - Further reading links use descriptive titles and valid targets:
+     - topic-01.mdx:214: [doi:10.1007/978-1-4939-1483-8](https://doi.org/10.1007/978-1-4939-1483-8) (descriptive DOI link text verified).
+     - topic-02.mdx:187: [doi:10.1080/08856257.2014.933551](https://doi.org/10.1080/08856257.2014.933551) (verified Florian 2014 DOI link).
+
+5. Assessment Section Isolation:
+   - Assessment answers and marking keys strictly bounded within ## Answers and marking guidance in unit-assessment.mdx:179.
+   - Zero leaked answer keys in frontmatter or topic prose. Passed check:no-answer-keys.
+
+6. Visual Layout & Print Adaptation:
+   - Content tables in topic-01, topic-02, unit-assessment, and unit-teacher-notes use `display: block; width: fit-content; overflow-x: auto`, reporting 0px document horizontal overflow on 360x780 viewport and remaining reachable.
+   - PrintHandout component embedded in all topic and assessment files (topic-01.mdx:17, topic-02.mdx:17, unit-assessment.mdx:16, unit-teacher-notes.mdx:16).

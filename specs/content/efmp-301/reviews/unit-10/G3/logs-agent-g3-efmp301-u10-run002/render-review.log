@@ -1,0 +1,49 @@
+render-review record - EFMP-301 Unit 10, G3 run002
+==================================================
+Reviewer: agent:g3-reviewer
+Model: Gemini 3.8 Flash (High)
+Reviewer run ID: 530a0b0a-0c83-416c-8504-17579b7c94d6
+Target commit HEAD: c13ce228c97b62124648a27989a6d7a186e24751
+Exit code: 0
+
+Approach & Constraints:
+  In accordance with repository resource constraints and crew instructions
+  (AGENTS.md and .crew/brief.md forbidding npm run build, dev servers, and Playwright),
+  visual rendering and accessibility review were conducted via static layout inspection,
+  SVG DOM/geometry evaluation, CSS specification analysis, and sharp rasterization.
+
+1. Static Raster Renders:
+   All 4 placed SVG figures in static/img/figures/efmp-301/unit-10/ were rasterised to PNG:
+   - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/fig-U10-1-render.png (8393 bytes)
+   - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/fig-U10-2-render.png (8393 bytes)
+   - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/fig-U10-3-render.png (8393 bytes)
+   - specs/content/efmp-301/reviews/unit-10/G3/logs-agent-g3-efmp301-u10-run002/fig-U10-4-render.png (8393 bytes)
+
+2. Visual Defect Verification (run001 findings):
+   - Finding 3 (fig-U10-1 header): Verified resolved. Header is 'one classroom use' (y=34, y=54, x=672), matching alt text and manifest.
+   - Finding 4 (fig-U10-4 text-overprint): Verified resolved. Fifth practice row is split into separate columns:
+     Col 1: 'reads developmentally' (x=112 middle)
+     Col 2: 'where is this pupil, what is next' (x=224 start)
+     Col 3: 'Unit 2' (x=556 middle)
+     Zero collision with 'Unit 2' (horizontal clearance > 140px). Text-on-text overprint eliminated.
+   - Finding 5 (fig-U10-3 check label): Restored and functional: 'check: does this produce it? for it?' fits cleanly alongside check arrow.
+
+3. Heading and Semantic Structure:
+   - index.mdx: Single H1; clean H2s ('Unit learning outcomes', 'Prerequisite knowledge', 'In this unit', 'How to use this unit').
+   - topic-01.mdx: Single H1 ('Topic 10.1 - Teaching methods and strategies'); clean H2 nine-part learning cycle; H3 sub-topics.
+   - topic-02.mdx: Single H1 ('Topic 10.2 - Instructional design and teacher effectiveness'); clean H2 nine-part learning cycle; H3 sub-topics.
+   - unit-assessment.mdx: Single H1; clean H2 sections ('Unit summary', 'Summative assessment', 'Answers and marking guidance'); H3 per question bank.
+   - unit-teacher-notes.mdx: Single H1; clean H2/H3 instructional guidance.
+   - No skipped heading levels or heading structure anomalies.
+
+4. Figure Presentation & Accessibility Wiring:
+   - All 4 figures have placed carriers with matching src paths and dimensions (780x470 viewBox).
+   - Alt text: Non-empty, descriptive instructional alt text present on all <Figure> tags matching specs/content/efmp-301/figures/unit-10.md.
+   - SVGs include role='img', aria-labelledby linking to <title> and <desc> elements; <desc>/alt parity verified.
+   - Both light and dark mode variants (.svg and .dark.svg) exist and are synchronized.
+   - Glyph text geometry (scripts/measure-figure-text.mjs): Widest text ends at 777.3 in 780 viewBox. Zero text-over-edge glyph overflows.
+
+5. Visual Layout & Print Adaptation:
+   - Tables in topic-01, topic-02, and assessment rubrics are styled with block display, fit-content, and overflow-x: auto per custom.css.
+   - Tables act as their own scroll containers; cell content does not cause layout clipping.
+   - Assessment answers and marking keys strictly bounded within ## Answers and marking guidance in unit-assessment.mdx.
