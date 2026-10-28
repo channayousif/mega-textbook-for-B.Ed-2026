@@ -1,0 +1,8 @@
+Prepared in this fresh independent Codex session; parent supplied no current frozen manifest. Historical manifest is superseded, not refreshed in place.
+Reviewed commit: c13ce228c97b62124648a27989a6d7a186e24751
+origin/main: c13ce228c97b62124648a27989a6d7a186e24751
+Initial git log origin/main..HEAD: empty. Initial dirty file: static/content-status.json (generated metadata only, outside review inputs); preserved.
+99 current input paths prepared using trusted CLI. Final validation recomputes every normalized digest.
+Author provenance: commit:f2e751aaa20268e85d279e80322cc5096e623133, identified by prior tracker and git history; this reviewer did not draft or translate these bytes. Actual host model version beyond GPT-6 is not exposed. Reviewer run identity is this named crew checkout/session, not a fabricated provider UUID.
+Initial check:content passes all 13 gates at the exact origin/main commit. No main failures require comparison or repair.
+Final derived-status exception: tracker change invalidated static/content-status.json; npm run build:content-status regenerated it. All 13 gates then passed. No bound input changed.
