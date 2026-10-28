@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 480" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="t">The teacher as a nation builder</title>
+  <desc id="d">Diagram of concentric circles illustrating the teacher's role as a nation builder radiating from classroom practice to school culture and community leadership.</desc>
+  <style>
+    :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+    .bg      { fill: var(--bg); }
+    .ink     { fill: var(--ink); }
+    .panel   { fill: var(--panel); stroke: var(--ink); stroke-width: 1.5; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    text     { font-size: 13px; fill: var(--ink); }
+    .h       { font-size: 17px; font-weight: 700; fill: var(--ink); }
+    .sh      { font-size: 14px; font-weight: 600; fill: var(--ink); }
+    .body    { font-size: 12px; fill: var(--ink); }
+    .wm      { fill: var(--wm); font-size: 11px; }
+    .link    { fill: none; stroke: var(--ink); stroke-width: 2; stroke-linecap: round; }
+    .ah      { fill: var(--ink); }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path class="ah" d="M0,1 L9,5 L0,9 Z"/>
+    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="780" height="480"/>
+  <text class="h" x="390" y="32" text-anchor="middle"><tspan x="390" dy="0">The Radiating Spheres of the Teacher as Nation Builder</tspan></text>
+
+  <!-- Radiating Links -->
+  <path class="link" d="M310 185 L245 155" marker-end="url(#arrow)"/>
+  <path class="link" d="M470 185 L535 155" marker-end="url(#arrow)"/>
+  <path class="link" d="M390 280 L390 315" marker-end="url(#arrow)"/>
+
+  <!-- Centre Core -->
+  <rect class="panel-a" x="255" y="180" width="270" height="95" rx="10"/>
+  <text class="sh" x="390" y="208" text-anchor="middle"><tspan x="390" dy="0">Core Professional Stance</tspan></text>
+  <text class="body" x="390" y="232" text-anchor="middle"><tspan x="390" dy="0">Impartiality, constitutional loyalty,</tspan></text>
+  <text class="body" x="390" y="252" text-anchor="middle"><tspan x="390" dy="0">and deep faith in every child's worth</tspan></text>
+
+  <!-- Left: Classroom Practice -->
+  <rect class="panel" x="25" y="65" width="235" height="150" rx="8"/>
+  <rect class="panel-a" x="25" y="65" width="235" height="34" rx="8"/>
+  <text class="sh" x="142" y="88" text-anchor="middle"><tspan x="142" dy="0">1. Classroom Practice</tspan></text>
+  <text class="body" x="38" y="120"><tspan x="38" dy="0">- Equal dignity for every student</tspan></text>
+  <text class="body" x="38" y="142"><tspan x="38" dy="0">- Fostering open, critical dialogue</tspan></text>
+  <text class="body" x="38" y="164"><tspan x="38" dy="0">- Demystifying bias and stereotypes</tspan></text>
+  <text class="body" x="38" y="186"><tspan x="38" dy="0">- Inquiry-based cooperative learning</tspan></text>
+
+  <!-- Right: School Culture -->
+  <rect class="panel" x="520" y="65" width="235" height="150" rx="8"/>
+  <rect class="panel-a" x="520" y="65" width="235" height="34" rx="8"/>
+  <text class="sh" x="637" y="88" text-anchor="middle"><tspan x="637" dy="0">2. School Culture</tspan></text>
+  <text class="body" x="533" y="120"><tspan x="533" dy="0">- Inter-provincial and cultural harmony</tspan></text>
+  <text class="body" x="533" y="142"><tspan x="533" dy="0">- Inclusive climate for girls and minorities</tspan></text>
+  <text class="body" x="533" y="164"><tspan x="533" dy="0">- Collaborative councils and clubs</tspan></text>
+  <text class="body" x="533" y="186"><tspan x="533" dy="0">- Fair, non-violent discipline models</tspan></text>
+
+  <!-- Bottom: Community Leadership -->
+  <rect class="panel" x="190" y="320" width="400" height="120" rx="8"/>
+  <rect class="panel-b" x="190" y="320" width="400" height="34" rx="8"/>
+  <text class="sh" x="390" y="343" text-anchor="middle"><tspan x="390" dy="0">3. Community Leadership</tspan></text>
+  <text class="body" x="205" y="375"><tspan x="205" dy="0">- Engaging parents and elders across social and linguistic lines</tspan></text>
+  <text class="body" x="205" y="397"><tspan x="205" dy="0">- Mobilising youth for local environmental and literacy drives</tspan></text>
+  <text class="body" x="205" y="419"><tspan x="205" dy="0">- Serving as an impartial mediator and civic role model</tspan></text>
+
+  <!-- Wordmark -->
+  <text class="wm" x="768" y="465" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>
