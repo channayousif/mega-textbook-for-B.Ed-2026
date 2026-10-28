@@ -203,8 +203,9 @@ body.append(f'<rect class="frame" x="{MX}" y="{MY}" width="{MAP_W}" height="{MAP
 for lon, lat, s in [(66.4, 33.6, "AFGHANISTAN"), (61.0, 27.2, "IRAN"), (77.6, 36.7, "CHINA"), (75.6, 27.6, "INDIA")]:
     x, y = P(lon, lat); text(x, y, s, "cn", "middle")
 x, y = P(64.2, 23.9); text(x, y, "ARABIAN SEA", "cn", "middle")
-x, y = P(79.9, 33.2)
-body.append(f'<text class="pol halo" x="{x}" y="{y}" text-anchor="middle" transform="rotate(90 {x} {y})">FRONTIER UNDEFINED</text>')
+x, y = P(80.45, 35.95)
+text(x, y, "FRONTIER", "pol", "end")
+text(x, y + 15, "UNDEFINED", "pol", "end")
 
 # physical regions (names from Topic 4.3)
 for lon, lat, s in [(75.75, 36.2, "Karakoram"), (71.3, 36.15, "Hindu Kush"), (73.85, 34.8, "Himalaya"),
