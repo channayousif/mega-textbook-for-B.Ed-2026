@@ -34,7 +34,7 @@ merge when green, turn on crew sync, Apply 0049 to production.
   - The service key reads `g3_signoffs` (200). The anon key is refused (401).
   - A dry run of `signoff-sync.mjs` printed "nothing queued".
   - The live `tick.sh` merges main every tick, so the sync starts on the first tick after #345 merges.
-- **Merge:** #345 merges when CI is green.
+- **Merge:** #345 merges when CI is green. The first run failed `e2e`: `page.locator('tbody tr')` matched the hidden rows of the collapsed By-course table. The units table now has `aria-label="Units"`, and the test scopes to it.
 
 ## Outcome
 
