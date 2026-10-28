@@ -1,7 +1,7 @@
 // VS-003 voice benchmark on Kaggle (V003). Generates open-source candidate takes; manual AI Studio
 // and narrator takes are imported by voice-blind.ts. Media stays in $MEDIA_ROOT/voice-benchmark/.
 //   npm run voice:bench -- mirror | pack | run | fetch | all [--only=id,...]   (mirror once per gated model)
-//   npm run voice:bench -- all --eval   eval round (rounds 5-8, see the eval-set _comment) from eval-set.json into $MEDIA_ROOT/voice-benchmark/eval/
+//   npm run voice:bench -- all --eval   eval round (rounds 5-9 and V007, see the eval-set _comment) from eval-set.json into $MEDIA_ROOT/voice-benchmark/eval/
 import { copyFileSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { basename, dirname, join } from 'node:path';
 import { digestBytes, digestFile } from './lib/hash.ts';

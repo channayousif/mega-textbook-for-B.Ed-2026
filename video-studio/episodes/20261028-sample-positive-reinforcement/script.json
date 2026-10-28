@@ -1,0 +1,121 @@
+{
+  "episode_id": "20261028-sample-positive-reinforcement",
+  "language": "ur",
+  "version": 1,
+  "source": {
+    "url": "https://textbook.com.pk/ur/semester-1/efmp-301/unit-03/topic-01/",
+    "path_ur": "i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-03/topic-01.mdx",
+    "sha256": "598790faf3b198e959a1eb56cf3c28f278e41846157a3560636f51aadb5baf3c",
+    "captured_at": "2026-10-28T04:40:00Z",
+    "revision": "5bd787cc9693b7f498792b30c365ed7946c9bea1",
+    "language": "ur",
+    "excerpts": [
+      {
+        "id": "E1",
+        "text": "**تقویت** کا ہمیشہ ایک ہی مطلب ہے: رویہ **زیادہ** کثرت سے ہوتا ہے۔"
+      },
+      {
+        "id": "E2",
+        "text": "**مثبت تقویت** وہ چیز شامل کرتی ہے جو شاگرد چاہتا ہے: تعریف، ستارہ، پودوں پر باری۔"
+      },
+      {
+        "id": "E3",
+        "text": "**منفی تقویت** وہ چیز ہٹاتی ہے جو شاگرد پسند نہیں کرتا"
+      },
+      {
+        "id": "E4",
+        "text": "منفی تقویت سزا نہیں ہے؛ یہ دونوں مضبوط کرنے والوں میں سے ایک ہے۔"
+      },
+      {
+        "id": "E5",
+        "text": "**سزا** کا ہمیشہ مطلب ہے رویہ **کم** کثرت سے ہوتا ہے۔"
+      }
+    ]
+  },
+  "learning_objective": {
+    "ur": "شاگرد مثبت اور منفی تقویت میں فرق بتا سکے اور جان لے کہ دونوں رویہ بڑھاتی ہیں۔",
+    "en": "Distinguish positive from negative reinforcement and state that both increase a behaviour."
+  },
+  "on_screen_title_ur": "مثبت اور منفی تقویت",
+  "lines": [
+    {
+      "id": "L01",
+      "segment": "hook",
+      "speaker": "shagird",
+      "text_ur": "کیا ایک ستارہ یا تعریف واقعی شاگرد کا رویہ بدل سکتی ہے؟",
+      "delivery": "curious",
+      "visual": {
+        "kind": "character_only"
+      }
+    },
+    {
+      "id": "L02",
+      "segment": "beat1",
+      "speaker": "ustani",
+      "text_ur": "تقویت کا ہمیشہ ایک ہی مطلب ہے: رویہ زیادہ کثرت سے ہونے لگتا ہے۔",
+      "delivery": "warm",
+      "source_excerpt_ids": [
+        "E1"
+      ],
+      "visual": {
+        "kind": "character_only"
+      }
+    },
+    {
+      "id": "L03",
+      "segment": "beat2",
+      "speaker": "ustani",
+      "text_ur": "مثبت تقویت، یعنی Positive Reinforcement، وہ چیز شامل کرتی ہے جو شاگرد چاہتا ہے: تعریف یا ستارہ۔",
+      "delivery": "warm",
+      "source_excerpt_ids": [
+        "E2"
+      ],
+      "visual": {
+        "kind": "character_only"
+      }
+    },
+    {
+      "id": "L04",
+      "segment": "beat3",
+      "speaker": "ustani",
+      "text_ur": "منفی تقویت وہ چیز ہٹاتی ہے جو شاگرد پسند نہیں کرتا۔ یہ سزا نہیں ہے؛ یہ بھی رویہ مضبوط کرتی ہے۔",
+      "delivery": "warm, clear",
+      "source_excerpt_ids": [
+        "E3",
+        "E4"
+      ],
+      "visual": {
+        "kind": "character_only"
+      }
+    },
+    {
+      "id": "L05",
+      "segment": "recap",
+      "speaker": "shagird",
+      "text_ur": "یعنی دونوں تقویتیں رویہ بڑھاتی ہیں، اور سزا اسے کم کرتی ہے!",
+      "delivery": "pleased",
+      "source_excerpt_ids": [
+        "E1",
+        "E5"
+      ],
+      "visual": {
+        "kind": "character_only"
+      }
+    },
+    {
+      "id": "L06",
+      "segment": "cta",
+      "speaker": "shagird",
+      "text_ur": "پورا سبق textbook.com.pk پر پڑھیے۔",
+      "delivery": "upbeat",
+      "visual": {
+        "kind": "character_only"
+      }
+    }
+  ],
+  "cta": {
+    "template_id": "read-lesson",
+    "text_ur": "پورا سبق textbook.com.pk پر پڑھیے۔",
+    "url": "https://textbook.com.pk/ur/semester-1/efmp-301/unit-03/topic-01/"
+  }
+}
