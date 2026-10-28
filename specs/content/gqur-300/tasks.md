@@ -57,3 +57,5 @@ on every unit).
 | Unit 6 | G7 publish | ▢ | | |
 
 | Unit 1 | G3 en-review | ▢ | | advisory: pass (cycle 2); report specs/content/gqur-300/reviews/unit-01/G3/agent-g3-gqur300-u1-run954d5f3b.json; all 6 previous findings verified resolved (figure geometry, coverage grounding, npst2009 point-of-use disclosure, CLO-SLO alignment, MCQ key distribution balanced across a-d, grammar); all 7 criteria pass; independent blind solve 10/10; row stays open pending qualification (ADR-0019) |
+
+| Unit 6 | G3 en-review | ▢ | agent:codex-g3-reviewer | advisory cycle 2 (final): escalate; report specs/content/gqur-300/reviews/unit-06/G3/codex-cycle2-20261028.json; A1 and S1 repaired, S2 partly repaired; RRQ-09 arithmetic, source support and budget-order findings remain; current renders and external session provenance unavailable; owner escalation required, no completion or publication claim |
