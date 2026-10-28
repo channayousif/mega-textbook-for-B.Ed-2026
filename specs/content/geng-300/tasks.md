@@ -15,6 +15,7 @@ G1 unit-spec affirmed at intake (D-2026-0019). G2 en-draft cleared by determinis
 | Unit 1 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0019; content-spec status: approved |
 | Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-300/reviews/unit-01/G2/20261027T165057677Z-gates.json |
 | Unit 1 | G3 en-review | ▣ | | Advisory independent agy G3 **revise** (thread 7c5e7ce2-df0f-4b0d-9349-51c41fabe43d): SVG text geometry overflow (fig-U1-1, fig-U1-3), RRQ 3 arithmetic discrepancy and RRQ 4 clause classification error. Report: `specs/content/geng-300/reviews/unit-01/G3/agent-g3-geng-300-u1-run7c5e7ce2.json`. G3 stays open, unsigned (ADR-0019). Stale since the figure-geometry repair; needs a fresh G3 run. |
+| Unit 1 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/geng-300/reviews/unit-01/G3/agent-g3-geng-300-u1-run7c5e7ce2.json (all six findings already resolved in 8a0b7828 and 3a482d34, verified 2026-10-28; measure-figure-text exits 0) |
 | Unit 1 | G4 ur-translation | ▢ | | English-only course (bilingual: false); no Urdu mirror required |
 | Unit 1 | G5 ur-review | ▢ | | English-only course |
 | Unit 1 | G6 assets | ▢ | | |
