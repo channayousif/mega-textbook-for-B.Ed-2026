@@ -74,25 +74,24 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Executed independent second-cycle G3 English review of GNAS-301 Unit 5 with advisory pass disposition, verified resolution of prior round-2 blocking defects (Topic 5.1 RRQ blueprint floor, WHO air 2024 claims, fig-U5-3 connector arrows and panel spacing, coverage matrix cells, alibhatti2017 author citations) and figure text geometry across all 32 SVG variants, recorded validated review contract evidence and command logs, rasterized figures to PNG via Sharp, and appended advisory row to tasks.md with G3 open.
+Executed independent cycle 2 G3 English review of GNAS-301 Unit 5 with advisory pass disposition, recorded validated review evidence manifest and command logs, and appended an advisory open tracker row to tasks.md.
 
 ## Outcome
 
-- Impact: review_en for GNAS-301 Unit 5 by agy (Cycle 2, pass).
-- Tests: npm run check:content passed all 13 gates with exit code 0.
+- Impact: review_en for GNAS-301 Unit 5 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 23 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Executed independent second-cycle G3 English review of GNAS-301 Unit 5 with advisory pass disposition, verified resolution of prior round-2 findings, recorded validated review contract evidence and command logs, and appended advisory row to tasks.md with G3 open.
+- Shipped / changed: Executed independent cycle 2 G3 English review of GNAS-301 Unit 5 with advisory pass disposition, recorded validated review evidence manifest and command logs, and appended an advisory open tracker row to tasks.md.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All 5 round-2 blocking defects resolved (RRQ balance 2/2/3/3 across topics 5.1-5.4, WHO 2024 claim alignment, fig-U5-3 panels and connector arrows across all 4 variants, coverage matrix U5-06 and U5-07 cells, and complete 5-author citation for alibhatti2017).
-  - All 32 SVG figure variants pass measure-figure-text.mjs with exit code 0.
-  - Carried advisories: MEA timeline figure plan divergence (6 delivered vs 8 planned) accepted per repair notes; missing glossary keys (Toxicant, Risk management, Environmental law) belong in repo-wide glossary.json; un-bound source excerpts (who-chemical-safety, un-paris, un-sdgs) exist on disk.
+  - Round-2 repairs verified resolved (Topic 5.1 RRQ blueprint floor, WHO air claims, fig-U5-3 panels/arrows in all 4 variants, coverage cells, and 5-author citation for alibhatti2017); all 32 SVG variants pass measure-figure-text.mjs.
+  - Advisory G3 tracker row appended to tasks.md with status open ▢ and unsigned per ADR-0019.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
