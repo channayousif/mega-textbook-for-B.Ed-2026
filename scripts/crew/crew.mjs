@@ -283,6 +283,7 @@ function prepareWorktree(board, j) {
     sh('git', ['fetch', '-q', 'origin']);
     const exists = sh('git', ['ls-remote', '--exit-code', '--heads', 'origin', j.branch], ROOT, { allowFail: true }).ok;
     const ref = exists ? `origin/${j.branch}` : j.base ? `origin/${j.base}` : 'origin/main';
+    freeBranch(board, j.branch);
     sh('git', ['worktree', 'add', '--no-checkout', '-B', j.branch, wt, ref]);
     sh('git', ['sparse-checkout', 'set', '--no-cone', ...SPARSE], wt);
     sh('git', ['reset', '-q', '--hard', 'HEAD'], wt);
@@ -292,6 +293,22 @@ function prepareWorktree(board, j) {
   // Gitignored generated report: refresh for new worktrees and every reused job worktree.
   sh('node', ['scripts/report-content-status.mjs'], wt);
   return wt;
+}
+
+/**
+ * `worktree add -B` fails while another folder has the branch checked out. A merge fix whose
+ * parent's folder was dropped (dropWaitingWorktrees) gets its own folder; until 2026-10-28 nothing
+ * removed it, so every later merge fix on that branch failed to launch ("already used by worktree
+ * ...-conflict1") and four units hit the five-fix limit. Free the branch unless a running job owns it.
+ */
+function freeBranch(board, branch) {
+  const busy = new Set(board.jobs.filter((x) => x.status === 'running').map((x) => x.worktree));
+  const list = sh('git', ['worktree', 'list', '--porcelain'], ROOT, { allowFail: true }).out || '';
+  for (const block of list.split('\n\n')) {
+    const path = block.match(/^worktree (.+)$/m)?.[1];
+    if (!path || !path.startsWith(WT_DIR) || busy.has(path) || !block.split('\n').includes(`branch refs/heads/${branch}`)) continue;
+    sh('git', ['worktree', 'remove', '--force', path], ROOT, { allowFail: true });
+  }
 }
 
 /**
@@ -673,6 +690,8 @@ function reapOne(board, health, events, j) {
       // A fix job only updated its parent's branch; the parent PR goes back to waiting on CI.
       j.status = 'merged';
       const parent = board.jobs.find((p) => p.id === j.parent);
+      // Its push updated the parent's branch; a folder of its own would keep holding that branch.
+      if (j.worktree && j.worktree !== parent?.worktree && existsSync(j.worktree)) sh('git', ['worktree', 'remove', '--force', j.worktree], ROOT, { allowFail: true });
       if (parent) {
         parent.status = parent.prNumber ? 'pr_open' : 'ready';
         log(board, parent, `fixed by ${j.id}`);
