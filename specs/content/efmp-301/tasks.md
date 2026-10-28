@@ -109,6 +109,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 12 | G6 assets | ▢ | | |
 | Unit 12 | G7 publish | ▢ | | |
 | Unit 9 | G3 en-review | ▢ | agent:codex-g3-reviewer | advisory cycle2: escalate; MCQ spread unresolved, source/pedagogy findings and current render evidence unavailable; owner handling required; report specs/content/efmp-301/reviews/unit-09/G3/codex-efmp301-u09-cycle2-01a17f38-14aa-7e12-b5ba-14390f06b2ef.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-02/G3/20261028T054347Z-g3-desk-d8a27feb.json |
 
 ## Re-restructure in progress (2026-09-11)
 
