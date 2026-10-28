@@ -21,11 +21,11 @@ videos stay up on withdrawal. The narrator is cited only by her consent id.
 + Ustani is cleared to publish; with VS-ADR-0012 no third-party voice rights remain for either character.
 + Fewer term flags than the ElevenLabs reference in round 9; same CER and centroid similarity.
 - Lower worst-case steadiness (0.796 vs 0.838 min); the per-episode drift check (VS-003) still applies.
-- Consent is verbal only. The owner should add a written note from the narrator to `narrator-02`;
-  until then the record rests on the owner's attestation.
+- Consent was first verbal; the owner confirmed on 2026-10-28 that written consent is held (PHR 0895).
+  A copy should be stored beside the `narrator-02` record in `$MEDIA_ROOT/consents/`.
 - Ustani now carries an identifiable person's voice in public; withdrawal follows `narrator-02`.
 
 ## Alternatives considered
 Keep the ElevenLabs reference (rejected: no rights, and an ElevenLabs plan would still need its terms
-checked for cloning into another engine); wait for written consent before switching (rejected by the
-owner's choice; the gap is recorded instead).
+checked for cloning into another engine); wait for written consent before switching (moot: the owner
+confirmed written consent the same day).
