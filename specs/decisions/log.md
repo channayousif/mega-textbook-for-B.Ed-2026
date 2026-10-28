@@ -4002,7 +4002,7 @@ content-improvement loop with no further cycle.
 
 ## D-2026-0074 - GPKS-402 re-intake after the two-row readings repair: all eight criteria approved
 
-- **Status:** pending-owner-review
+- **Status:** confirmed (owner, 2026-10-28, board-direct session); spec moves to status: approved
 - **Gate:** G0 intake / G1 unit-spec
 - **Scope:** GPKS-402 Pakistan Studies, `specs/content/gpks-402/content-spec.md` (status: draft) at
   commit `49c7cf87`, after the author repair of the two reading-list rows `D-2026-0073` named.

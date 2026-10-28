@@ -1,6 +1,6 @@
 ---
 course_code: GPKS-402
-status: draft
+status: approved
 open_access_floor:
   default: 1
 ---
