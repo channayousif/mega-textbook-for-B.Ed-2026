@@ -22,7 +22,7 @@
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-01/G2/20261028T093113893Z-gates.json |
-| Unit 1 | G3 en-review | ▢ | | awaiting an independent reviewer |
+| Unit 1 | G3 en-review | ▢ | | advisory: pass; report specs/content/gpks-402/reviews/unit-01/G3/b35aebba-1391-47ae-88ff-481fd326cd8b.json; all 7 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; all 8 SVG variants pass measure-figure-text; row stays open pending qualification (ADR-0019) |
 | Unit 1 | G4 ur-translation | ▢ | | separate job |
 | Unit 1 | G5 ur-review | ▢ | | |
 | Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-02/G2/20261028T094524432Z-gates.json |
