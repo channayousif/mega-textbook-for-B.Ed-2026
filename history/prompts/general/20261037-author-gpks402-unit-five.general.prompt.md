@@ -91,3 +91,25 @@ Authored the English Unit 5 opening, two nine-part topic cycles and the 10/10/5 
 - Graders run and results (PASS/FAIL): Baseline content gates PASS; first run identified four failing gates; second run narrowed to G2 evidence and wordmark aria-hidden. Final results appended below.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Use the same approved unit and source bundle for a fresh independent review, without author self-certification.
+
+## Completion update
+
+- Committed authoring inputs as `dcb20e76` before generating reproducible G2 evidence.
+- G2 preparation ran all eight required deterministic checks successfully and wrote
+  `specs/content/gpks-402/reviews/unit-05/G2/20261028T102221722Z-gates.json` plus hashed logs.
+  Only G2 is marked done, as `auto:gates`; G3/G4/G5/G7 remain open and G6 remains in progress.
+- Final `npm run check:content`: PASS, 13/13, no findings. The unchanged baseline was exactly
+  origin/main (`257d1d2a`) and also passed all 13 gates.
+- Figure palette tests: PASS, 46/46, run under `scripts/heavy.sh` after checking free memory.
+- `npm run figures:variants:check`: PASS. All four English light SVGs are below 20 KB.
+- Light and dark contact sheets inspected with Sharp-rendered scratch PNGs, resolving palette
+  variables in preview buffers only because librsvg does not resolve the SVG CSS variables.
+  No preview buffer or PNG is committed. No visual clipping or collision was apparent.
+- `node scripts/measure-figure-text.mjs` remains unrun. The brief says never to run Playwright,
+  while that mandatory repository checker launches Playwright Chromium. An explicit question
+  requesting a geometry-check-only exception was sent; no answer arrived during this work.
+  The browser prohibition was preserved. G6 stays in progress for this reason and for the
+  separately scoped Urdu figure localisation. Do not represent visual inspection as an
+  automated geometry pass. The next authorised session must run the checker on all eight SVGs.
+- No build, dev server, Playwright process, deployment, push or PR was started. No secrets,
+  protected governance rules, approved spec or unrelated unit were changed.
