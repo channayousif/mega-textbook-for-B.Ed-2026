@@ -26,14 +26,14 @@ files:
  - specs/content/gpks-402/reviews/unit-01/G3/logs-b35aebba/check-figures.txt
  - specs/content/gpks-402/reviews/unit-01/G3/logs-b35aebba/check-no-answer-keys.txt
  - specs/content/gpks-402/reviews/unit-01/G3/logs-b35aebba/check-no-em-dash.txt
- - specs/content/gpks-402/reviews/unit-01/G3/logs-b35aebba/independent-assessment.md
- - specs/content/gpks-402/reviews/unit-01/G3/logs-b35aebba/measure-figure-text.txt
- - specs/content/gpks-402/reviews/unit-01/G3/logs-b35aebba/render-review.txt
- - specs/content/gpks-402/reviews/unit-01/G3/logs-b35aebba/validate-content.txt
  - specs/content/gpks-402/reviews/unit-01/G3/logs-b35aebba/fig-U1-1.png
  - specs/content/gpks-402/reviews/unit-01/G3/logs-b35aebba/fig-U1-2.png
  - specs/content/gpks-402/reviews/unit-01/G3/logs-b35aebba/fig-U1-3.png
  - specs/content/gpks-402/reviews/unit-01/G3/logs-b35aebba/fig-U1-4.png
+ - specs/content/gpks-402/reviews/unit-01/G3/logs-b35aebba/independent-assessment.md
+ - specs/content/gpks-402/reviews/unit-01/G3/logs-b35aebba/measure-figure-text.txt
+ - specs/content/gpks-402/reviews/unit-01/G3/logs-b35aebba/render-review.txt
+ - specs/content/gpks-402/reviews/unit-01/G3/logs-b35aebba/validate-content.txt
  - specs/content/gpks-402/tasks.md
 tests:
  - npm run check:content
@@ -70,25 +70,25 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Executed independent G3 English review of GPKS-402 Unit 1 with advisory pass disposition, recorded validated review evidence manifest and command logs, and appended an advisory open tracker row to tasks.md.
+Completed independent G3 English advisory review of GPKS-402 Unit 1 with pass disposition, recorded full evidence manifest and command logs, and appended open advisory tracker row.
 
 ## Outcome
 
 - Impact: review_en for GPKS-402 Unit 1 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before committing.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 19 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Executed independent G3 English review of GPKS-402 Unit 1 with advisory pass disposition, recorded validated review evidence manifest and command logs, and appended an advisory open tracker row to tasks.md.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this review does not certify anything.
+- Shipped / changed: Completed independent G3 English advisory review of GPKS-402 Unit 1 with pass disposition, recorded full evidence manifest and command logs, and appended open advisory tracker row.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit 1 passes all 7 G3 review criteria (authority, sources, coverage, assessment, accessibility, readability, pedagogy); all 8 SVG variants pass measure-figure-text.mjs with zero overflows.
-  - Advisory G3 tracker row appended to tasks.md with status open ▢ and unsigned per ADR-0019.
-  - Urdu mirror job (G4 translation) and subsequent G5 review can proceed based on this frozen English unit.
+  - Unit 1 G3 English review passed with advisory report specs/content/gpks-402/reviews/unit-01/G3/b35aebba-1391-47ae-88ff-481fd326cd8b.json; G3 status remains open ▢ and unsigned in tasks.md per ADR-0019.
+  - All 7 criteria verified; all 8 SVG variants pass measure-figure-text.mjs (0 overflows); 10/10 MCQs, 10/10 RRQs, and 5/5 ERQs independently solved and matched to key.
+  - Urdu mirror job (G4 translation) and subsequent G5 review can proceed against this frozen English unit.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
