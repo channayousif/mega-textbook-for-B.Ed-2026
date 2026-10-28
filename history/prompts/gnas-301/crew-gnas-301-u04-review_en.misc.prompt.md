@@ -64,7 +64,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Executed independent second-cycle G3 English review of GNAS-301 Unit 4 with advisory escalate disposition, verified resolution of prior round-2 findings, recorded validated review contract evidence and command logs, and appended advisory row to tasks.md with G3 open.
+Completed independent cycle-2 G3 English review for GNAS-301 Unit 4 with advisory escalate disposition, verified resolution of round-2 findings, recorded validated review contract evidence and command logs, and appended advisory row to tasks.md with G3 open.
 
 ## Outcome
 
@@ -76,13 +76,13 @@ Executed independent second-cycle G3 English review of GNAS-301 Unit 4 with advi
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Executed independent second-cycle G3 English review of GNAS-301 Unit 4 with advisory escalate disposition, verified resolution of prior round-2 findings, recorded validated review contract evidence and command logs, and appended advisory row to tasks.md with G3 open.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit does not certify anything.
+- Shipped / changed: Completed independent cycle-2 G3 English review for GNAS-301 Unit 4 with advisory escalate disposition, verified resolution of round-2 findings, recorded validated review contract evidence and command logs, and appended advisory row to tasks.md with G3 open.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All 9 figure text-geometry defects across 6 SVGs are verified resolved; measure-figure-text.mjs exits 0 across all 56 variants.
-  - Live 360px viewport, table horizontal scrolling, and A4 print view inspection remain unperformed due to job brief limits and must be verified on a live build before G3 certification.
-  - who-hearing-2026.md and who-occupational-health.md headings retain Unit 3 labels, and who-mental-health-work.md retains a stale Topic 4.5 note; update when shared texts are next refreshed.
+  - Content repairs from round 2 were verified and confirmed resolved, and figure text geometry across all 56 SVG variants passes cleanly.
+  - Live 360px small-screen and A4 print view render inspection remains unperformed due to host job brief limits and must be verified on a live build before G3 certification.
+  - Shared excerpt note headings in who-hearing-2026.md and who-occupational-health.md retain Unit 3 labels and who-mental-health-work.md retains a stale Topic 4.5 note; update when shared texts are next refreshed.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
