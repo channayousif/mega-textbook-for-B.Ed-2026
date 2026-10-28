@@ -16,22 +16,22 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/gnas-301/crew-gnas-301-u01-review_en.misc.prompt.md
-  - specs/content/gnas-301/reviews/unit-01/G3/12ce2621-624d-4c79-bf71-dbaccdf17ac2.json
-  - specs/content/gnas-301/reviews/unit-01/G3/logs-12ce2621/check-content.txt
-  - specs/content/gnas-301/reviews/unit-01/G3/logs-12ce2621/check-depth-gate.txt
-  - specs/content/gnas-301/reviews/unit-01/G3/logs-12ce2621/check-docs-sync.txt
-  - specs/content/gnas-301/reviews/unit-01/G3/logs-12ce2621/check-figures.txt
-  - specs/content/gnas-301/reviews/unit-01/G3/logs-12ce2621/check-no-answer-keys.txt
-  - specs/content/gnas-301/reviews/unit-01/G3/logs-12ce2621/check-no-em-dash.txt
-  - specs/content/gnas-301/reviews/unit-01/G3/logs-12ce2621/measure-figure-text.txt
-  - specs/content/gnas-301/reviews/unit-01/G3/logs-12ce2621/render-review.txt
-  - specs/content/gnas-301/reviews/unit-01/G3/logs-12ce2621/validate-content.txt
-  - specs/content/gnas-301/reviews/unit-01/G3/summary.md
-  - specs/content/gnas-301/tasks.md
-  - static/content-status.json
+ - history/prompts/gnas-301/crew-gnas-301-u01-review_en.misc.prompt.md
+ - specs/content/gnas-301/reviews/unit-01/G3/12ce2621-624d-4c79-bf71-dbaccdf17ac2.json
+ - specs/content/gnas-301/reviews/unit-01/G3/logs-12ce2621/check-content.txt
+ - specs/content/gnas-301/reviews/unit-01/G3/logs-12ce2621/check-depth-gate.txt
+ - specs/content/gnas-301/reviews/unit-01/G3/logs-12ce2621/check-docs-sync.txt
+ - specs/content/gnas-301/reviews/unit-01/G3/logs-12ce2621/check-figures.txt
+ - specs/content/gnas-301/reviews/unit-01/G3/logs-12ce2621/check-no-answer-keys.txt
+ - specs/content/gnas-301/reviews/unit-01/G3/logs-12ce2621/check-no-em-dash.txt
+ - specs/content/gnas-301/reviews/unit-01/G3/logs-12ce2621/measure-figure-text.txt
+ - specs/content/gnas-301/reviews/unit-01/G3/logs-12ce2621/render-review.txt
+ - specs/content/gnas-301/reviews/unit-01/G3/logs-12ce2621/validate-content.txt
+ - specs/content/gnas-301/reviews/unit-01/G3/summary.md
+ - specs/content/gnas-301/tasks.md
+ - static/content-status.json
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -62,27 +62,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Executed independent second-cycle G3 review of GNAS-301 Unit 1 with advisory escalate disposition, verified resolution of prior round-2 findings, recorded contract evidence and logs, and updated tasks.md with G3 unticked.
+Executed independent second-cycle G3 English review of GNAS-301 Unit 1 with advisory escalate disposition, verified resolution of prior round-2 findings, recorded validated review contract evidence and command logs, and appended advisory row to tasks.md with G3 open.
 
 ## Outcome
 
-- Impact: review_en for GNAS-301 Unit 1 by agy (Cycle 2, ADR-0019).
-- Tests: npm run check:content passed in the job worktree.
+- Impact: review_en for GNAS-301 Unit 1 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 14 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Executed independent G3 review of GNAS-301 Unit 1 with advisory escalate disposition, validated report JSON against review evidence contract, recorded command execution logs, and appended advisory row to tasks.md with G3 open.
-- Decisions the team must respect: G3 stays open (`▢`) without reviewer initials or certification (ADR-0019).
-- Pending / next owner: graphics/figure repair pass for SVG text geometry adjustments on Unit 1 figures, followed by permitted visual render inspection.
+- Shipped / changed: Executed independent second-cycle G3 English review of GNAS-301 Unit 1 with advisory escalate disposition, verified resolution of prior round-2 findings, recorded validated review contract evidence and command logs, and appended advisory row to tasks.md with G3 open.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Measure-figure-text reports 10 text geometry defects across fig-U1-2, fig-U1-3.ur, fig-U1-6, and fig-U1-8 (spilling out of panels, overlapping text, and wordmark overprint); adjust text/panel coordinates in SVGs so measure-figure-text exits 0.
-  - Live 360px viewport, table horizontal scrolling, and A4 print view require inspection under permitted browser tools before formal G3 certification.
-  - who-water-2023.md:18 heading retains legacy Unit 2 label to avoid invalidating Unit 2 G2 evidence; make unit-neutral when Unit 2 evidence is refreshed.
+  - 10 figure text geometry defects detected across fig-U1-2, fig-U1-3.ur, fig-U1-6, and fig-U1-8 need SVG coordinate adjustments so measure-figure-text.mjs passes.
+  - Live 360px viewport, table horizontal scrolling, and A4 print view inspection remain unperformed due to job brief limits and must be verified on a live build before G3 certification.
+  - who-water-2023.md:18 heading retains legacy Unit 2 label to protect Unit 2 G2 evidence; make unit-neutral when Unit 2 evidence is refreshed.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
