@@ -115,9 +115,10 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gpks-402-u06-author, author, agy) Total reading time across the 5 unit files is 96 minutes (index: 4, topic-01: 22, topic-02: 24, topic-03: 21, unit-assessment: 25), inside the 90-125 min depth budget.
 - (gpks-402-u06-author, author, agy) Downstream Urdu mirror job will need .ur.svg localized twins of fig-U6-1 through fig-U6-6 and G5 review of authored Urdu concept labels in concepts/unit-06.md.
 
+
 ## Response snapshot
 
-Fetched origin and verified that branch is up to date with origin/main, confirmed all shared registries and tasks rows are intact, verified all 13 content gates pass cleanly, and committed the prompt work record.
+Verified origin/main merge state, confirmed all shared registries and tasks.md rows are clean, passed all 13 content gates, and recorded the conflict resolution PHR.
 
 ## Outcome
 
@@ -129,13 +130,12 @@ Fetched origin and verified that branch is up to date with origin/main, confirme
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Fetched origin and verified that branch is up to date with origin/main, confirmed all shared registries and tasks rows are intact, verified all 13 content gates pass cleanly, and committed the prompt work record.
+- Shipped / changed: Verified origin/main merge state, confirmed all shared registries and tasks.md rows are clean, passed all 13 content gates, and recorded the conflict resolution PHR.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Total reading time across the 5 Unit 6 files is 96 minutes, within the 90-125 min depth budget.
-  - Downstream Urdu mirror job will need .ur.svg localized twins of fig-U6-1 through fig-U6-6 and G5 review of authored Urdu concept labels in concepts/unit-06.md.
-  - Figures fig-U6-2, fig-U6-3, fig-U6-4, and fig-U6-6 have text-geometry issues reported by measure-figure-text.mjs that should be resolved in the asset refinement or review stage.
+  - Figures fig-U6-2, fig-U6-3, fig-U6-4, and fig-U6-6 have text-geometry issues reported by measure-figure-text.mjs that should be resolved in downstream asset refinement or review.
+  - Downstream Urdu mirror job will require .ur.svg localized twins of fig-U6-1 through fig-U6-6 and G5 review of Urdu concept labels in concepts/unit-06.md.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
