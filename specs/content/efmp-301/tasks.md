@@ -52,14 +52,14 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 4 | G7 publish | ▢ | | |
 | Unit 5 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
 | Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-05/G2/20261027T150443267Z-gates.json |
-| Unit 5 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at a1411cdc; report reviews/unit-05/G3/agent-g3-efmp301-u5-run001.json; Stale since the figure-geometry repair; needs a fresh G3 run |
+| Unit 5 | G3 en-review | ▢ | agent:codex-g3-reviewer | advisory cycle2: escalate; final authorised cycle, owner action required; report reviews/unit-05/G3/codex-crew-cycle2.json |
 | Unit 5 | G4 ur-translation | ✅ | auto:gates | full UR mirror (5 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
 | Unit 5 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at b8eabccc; G3 dependency escalated to owner; figure/prose vocabulary splits escalated to owner; report reviews/unit-05/G5/agent-g5-efmp301-u5-run001.json |
 | Unit 5 | G6 assets | ▢ | | |
 | Unit 5 | G7 publish | ▢ | | |
 | Unit 6 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
 | Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-06/G2/20261027T054219823Z-gates.json |
-| Unit 6 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 067c2ff2; report reviews/unit-06/G3/agent-g3-efmp301-u6-run001.json; Stale since the figure-geometry repair; needs a fresh G3 run |
+| Unit 6 | G3 en-review | ▢ | | advisory run002 (disposition: pass) at specs/content/efmp-301/reviews/unit-06/G3/20f4255e-9449-4f10-a771-4653e5eee5e5.json; its input manifest predates the figure-geometry repair (8bac57e5), so it is stale; needs a fresh G3 run; agent reviews advisory under ADR-0019 |
 | Unit 6 | G4 ur-translation | ✅ | auto:gates | full UR mirror (5 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
 | Unit 6 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at 91844dfd; G3 dependency escalated to owner; figure/prose term unification escalated to owner; report reviews/unit-06/G5/agent-g5-efmp301-u6-run001.json |
 | Unit 6 | G6 assets | ▢ | | |
@@ -73,7 +73,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 7 | G7 publish | ▢ | | |
 | Unit 8 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
 | Unit 8 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-08/G2/20261027T145309383Z-gates.json |
-| Unit 8 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at f2e751aa; Stale since the figure-geometry repair; needs a fresh G3 run; report reviews/unit-08/G3/agent-g3-efmp301-u8-run001.json |
+| Unit 8 | G3 en-review | ▢ | agent:codex-g3-reviewer | advisory run001: revise; repairs applied at f2e751aa; advisory cycle2: escalate; RRQ-10 untaught, ERQ limits unspecified; source/render evidence incomplete; owner action required; report reviews/unit-08/G3/codex-cycle2-20261028.json |
 | Unit 8 | G4 ur-translation | ✅ | auto:gates | full UR mirror (6 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
 | Unit 8 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at f688322d; G3 dependency escalated to owner; figure/prose term unification escalated to owner; report reviews/unit-08/G5/agent-g5-efmp301-u8-run001.json |
 | Unit 8 | G6 assets | ▢ | | |
@@ -95,6 +95,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 11 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
 | Unit 11 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-11/G2/20261027T171742067Z-gates.json |
 | Unit 11 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 3a31f523; report reviews/unit-11/G3/agent-g3-efmp301-u11-20260925T165209548Z.json; Stale since the figure-geometry repair; needs a fresh G3 run |
+| Unit 11 | G3 en-review | ▢ | agent:codex-g3-reviewer | advisory cycle 2: escalate; prior blocking repairs verified; clinical source support, current renders and handoff provenance unverified; owner escalation required; report reviews/unit-11/G3/codex-cycle2-20261028.json |
 | Unit 11 | G4 ur-translation | ✅ | auto:gates | full UR mirror (5 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
 | Unit 11 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at ee512a75; G3 dependency escalated to owner; register advisories escalated to owner; report reviews/unit-11/G5/agent-g5-efmp301-u11-run001.json |
 | Unit 11 | G6 assets | ▢ | | |

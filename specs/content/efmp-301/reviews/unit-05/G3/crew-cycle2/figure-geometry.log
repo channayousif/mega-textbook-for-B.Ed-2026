@@ -1,0 +1,28 @@
+✗ static/img/figures/efmp-301/unit-05/fig-U5-1.dark.svg
+    spills 1.3px out of its .panel [26,62,284,174]: "Spearman: one general"
+    spills 18.1px out of its .panel [26,62,284,174]: "factor, g, measurable and"
+    spills 52.6px out of its .panel [26,62,284,174]: "comparable among individuals"
+✗ static/img/figures/efmp-301/unit-05/fig-U5-1.svg
+    spills 1.3px out of its .panel [26,62,284,174]: "Spearman: one general"
+    spills 18.1px out of its .panel [26,62,284,174]: "factor, g, measurable and"
+    spills 52.6px out of its .panel [26,62,284,174]: "comparable among individuals"
+✓ static/img/figures/efmp-301/unit-05/fig-U5-1.ur.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-05/fig-U5-1.ur.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-05/fig-U5-2.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-05/fig-U5-2.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-05/fig-U5-2.ur.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-05/fig-U5-2.ur.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-05/fig-U5-3.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-05/fig-U5-3.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✗ static/img/figures/efmp-301/unit-05/fig-U5-3.ur.dark.svg
+    spills 2.8px out of its .note [566,296,754,422]: "تدریس سے چھوٹ"
+✗ static/img/figures/efmp-301/unit-05/fig-U5-3.ur.svg
+    spills 2.8px out of its .note [566,296,754,422]: "تدریس سے چھوٹ"
+✓ static/img/figures/efmp-301/unit-05/fig-U5-4.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-301/unit-05/fig-U5-4.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✗ static/img/figures/efmp-301/unit-05/fig-U5-4.ur.dark.svg
+    overprints the wordmark (ends 755, wordmark starts 675.7): "لیبل لگانے سے پہلے ہر مشاہدہ پڑھیں۔"
+✗ static/img/figures/efmp-301/unit-05/fig-U5-4.ur.svg
+    overprints the wordmark (ends 755, wordmark starts 675.7): "لیبل لگانے سے پہلے ہر مشاہدہ پڑھیں۔"
+
+10 text-geometry problem(s).

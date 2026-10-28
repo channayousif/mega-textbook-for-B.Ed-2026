@@ -1,0 +1,1 @@
+No current rendered-page, narrow viewport, A4 print or browser geometry inspection was executed. The crew brief explicitly forbids builds, dev servers and Playwright. No historical render was promoted to current evidence. Accessibility remains unverified.
