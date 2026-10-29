@@ -18,6 +18,7 @@ links:
 files:
  - src/pages/app/admin/reviewers.tsx
  - tests/e2e/reviewer-and-jobs.spec.ts
+ - src/pages/app/admin/records.tsx
  - history/prompts/general/2438-reviewer-picker-row-cap-and-crew-stall.general.prompt.md
 tests:
  - tsc --noEmit -p . (clean for both files)
@@ -57,7 +58,7 @@ Crew stall: batch-20261028-1715 is gate_red, and batchDue() blocks all new batch
 
 ## Handoff (for CEO and agents)
 
-- Shipped: paged reviewer Account picker; leak-proof cleanup in reviewer-and-jobs e2e.
+- Shipped: paged reviewer Account picker and admin records person/class pickers; leak-proof cleanup in reviewer-and-jobs e2e.
 - Decisions to respect: admin-wide reads go through fetchAllPages (src/lib/pagination.ts).
 - Pending: owner to approve purge of leaked e2e accounts in production Supabase; crew board entry for batch-20261028-1715 needs reset or manual merge (owner choice).
 - Paperclip issues affected: none (Paperclip retired).
