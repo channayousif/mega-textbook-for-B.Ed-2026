@@ -1,0 +1,26 @@
+file,segment,character,style,seed,arm,seconds,cer,coverage,terms_missed,longest_pause,chars_per_s,sim_ref,sim_centroid,flags,asr
+eval/shagird/l01_default_s3201.wav,l01,shagird,default,3201,main,4.84,0.023,1.0,,0.16,10.9,0.801,0.889,,کیا ایک ستارہ یا تعریف واقعی شاگرت کا رویہ بدل سکتی ہے؟
+eval/shagird/l05_default_s3201.wav,l05,shagird,default,3201,main,5.76,0.0,1.0,,0.42,9.9,0.858,0.93,,یعنی دونوں تقویتیں رویہ بڑھاتی ہیں اور سزا اسے کم کرتی ہے
+eval/shagird/l06_default_s3201.wav,l06,shagird,default,3201,main,5.0,0.143,1.07,,0.16,3.6,0.739,0.875,pace,پورا سبب textbook.com.pk پر پڑھئیے
+eval/shagird/b01_default_s3201.wav,b01,shagird,default,3201,main,4.64,0.0,1.0,,0.46,9.8,0.797,0.904,,استاد صاحبہ کیا ادراک اور توجہ ایک ہی چیز ہیں؟
+eval/shagird/b03_default_s3201.wav,b03,shagird,default,3201,main,4.2,0.0,1.0,,0.1,11.9,0.762,0.906,,اگر میں رٹا لگاؤں تو کیا یہ بھی سیکھنا کہلائے گا؟
+eval/shagird/b10_default_s3201.wav,b10,shagird,default,3201,main,5.27,0.0,1.0,,1.02,7.5,0.731,0.853,pause,واہ تو کیا اسی لیے آپ ہمیں گروہی کام دیتی ہیں؟
+eval/shagird/l01_lively_s3201.wav,l01,shagird,lively,3201,style,4.84,0.047,1.0,,0.12,11.1,0.776,0.868,,کیا ایک ستارہ یا تاریف واقعی شاگرد کا رویہ بدن سکتی ہے؟
+eval/shagird/l01_energetic_s3201.wav,l01,shagird,energetic,3201,style,5.16,0.0,1.0,,0.14,10.3,0.745,0.861,,کیا ایک ستارہ یا تعریف واقعی شاگرد کا رویہ بدل سکتی ہے؟
+eval/shagird/l01_max_s3201.wav,l01,shagird,max,3201,style,5.52,0.0,1.0,,0.14,9.9,0.723,0.85,,کیا ایک ستارہ یا تعریف واقعی شاگرد کا رویہ بدل سکتی ہے؟
+eval/shagird/l05_lively_s3201.wav,l05,shagird,lively,3201,style,5.72,0.0,1.0,,0.42,10.0,0.849,0.892,,یعنی دونوں تقویتیں رویہ بڑھاتی ہیں اور سزا اسے کم کرتی ہے
+eval/shagird/l05_energetic_s3201.wav,l05,shagird,energetic,3201,style,5.4,0.0,1.0,,0.24,10.6,0.871,0.925,,یعنی دونوں تقویتیں رویہ بڑھاتی ہیں اور سزا اسے کم کرتی ہے
+eval/shagird/l05_max_s3201.wav,l05,shagird,max,3201,style,5.4,0.0,1.0,,0.24,10.6,0.862,0.931,,یعنی دونوں تقویتیں رویہ بڑھاتی ہیں اور سزا اسے کم کرتی ہے
+eval/shagird/l06_lively_s3201.wav,l06,shagird,lively,3201,style,5.0,0.143,1.07,,0.12,3.6,0.739,0.86,pace,پورا سبب textbook.com.pk پر پڑھئیے
+eval/shagird/l06_energetic_s3201.wav,l06,shagird,energetic,3201,style,5.16,0.071,1.0,,0.14,3.4,0.757,0.872,pace,پورا سبب textbook.com.pk پر پڑھئے
+eval/shagird/l06_max_s3201.wav,l06,shagird,max,3201,style,5.68,0.071,1.07,,0.34,3.0,0.759,0.805,pace | voice drift,پورا سبق textbook.com.pk پر پڑھئیے
+eval/shagird/b01_lively_s3201.wav,b01,shagird,lively,3201,style,4.68,0.0,1.0,,0.24,9.8,0.811,0.849,,استاد صاحبہ کیا ادراک اور توجہ ایک ہی چیز ہیں؟
+eval/shagird/b01_energetic_s3201.wav,b01,shagird,energetic,3201,style,4.84,0.0,1.0,,0.32,9.3,0.795,0.872,,استاد صاحبہ کیا ادراک اور توجہ ایک ہی چیز ہیں؟
+eval/shagird/b01_max_s3201.wav,b01,shagird,max,3201,style,5.16,0.0,1.0,,0.54,8.5,0.752,0.869,,استاد صاحبہ کیا ادراک اور توجہ ایک ہی چیز ہیں؟
+eval/shagird/b03_lively_s3201.wav,b03,shagird,lively,3201,style,3.92,0.026,1.03,رٹا,0.1,12.2,0.811,0.884,term?,اگر میں رٹتا لگاؤں تو کیا یہ بھی سیکھنا کہلائے گا؟
+eval/shagird/b03_energetic_s3201.wav,b03,shagird,energetic,3201,style,4.64,0.0,1.0,,0.1,12.3,0.8,0.886,,اگر میں رٹا لگاؤں تو کیا یہ بھی سیکھنا کہلائے گا؟
+eval/shagird/b03_max_s3201.wav,b03,shagird,max,3201,style,4.2,0.0,1.0,,0.1,12.3,0.789,0.887,,اگر میں رٹا لگاؤں تو کیا یہ بھی سیکھنا کہلائے گا؟
+eval/shagird/b10_lively_s3201.wav,b10,shagird,lively,3201,style,5.23,0.0,1.0,,1.08,7.6,0.777,0.909,pause,واہ تو کیا اسی لیے آپ ہمیں گروہی کام دیتی ہیں؟
+eval/shagird/b10_energetic_s3201.wav,b10,shagird,energetic,3201,style,5.23,0.0,1.0,,1.08,7.6,0.791,0.913,pause,واہ تو کیا اسی لیے آپ ہمیں گروہی کام دیتی ہیں؟
+eval/shagird/b10_max_s3201.wav,b10,shagird,max,3201,style,5.75,0.029,0.97,,1.56,6.8,0.737,0.829,pause,واہ تو کیا اس لئے آپ ہمیں گروہی کام دیتی ہیں؟
+eval/reel-shagird.wav,reel,shagird,default,3201,reel,32.71,,,,,,,,,

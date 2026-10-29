@@ -1,18 +1,45 @@
 {
-  "_comment": "VS-003 V007 (2026-10-28): the six lines of the first voiced short (episode 20261028-sample-positive-reinforcement, mode sample), voiced with the locked, consented references (refs `ustani`, `shagird`), three seeds each; the best take per line is imported with `npm run voice:import`. Rounds 5-9 are in eval-set-round5.json to eval-set-round9.json.",
+  "_comment": "VS-003 round 10 (2026-10-29): owner found Bilal 'shallow and dull'. Six Bilal lines (V007 l01, l05, l06; round-8 b01, b03, b10) with the locked reference: the locked default style once, and three livelier Chatterbox styles (higher exaggeration, lower cfg_weight). EQ/compression variants are made locally from these clips. Earlier sets: eval-set-round5.json to eval-set-round9.json, eval-set-v007.json.",
   "candidate": "chatterbox-hi",
   "seeds": [
-    3001,
-    3002,
-    3003
+    3201
   ],
   "styles": {
     "default": {
       "exaggeration": 0.5,
       "cfg_weight": 0.5
+    },
+    "lively": {
+      "exaggeration": 0.75,
+      "cfg_weight": 0.35
+    },
+    "energetic": {
+      "exaggeration": 0.9,
+      "cfg_weight": 0.3
+    },
+    "max": {
+      "exaggeration": 1.1,
+      "cfg_weight": 0.25
     }
   },
-  "style_arm": {},
+  "style_arm": {
+    "shagird": {
+      "lines": [
+        "l01",
+        "l05",
+        "l06",
+        "b01",
+        "b03",
+        "b10"
+      ],
+      "styles": [
+        "default",
+        "lively",
+        "energetic",
+        "max"
+      ]
+    }
+  },
   "segments": [
     {
       "id": "l01",
@@ -20,31 +47,6 @@
       "terms": [],
       "text_ur": "کیا ایک ستارہ یا تعریف واقعی شاگرد کا رویہ بدل سکتی ہے؟",
       "text_deva": "क्या एक सितारा या तारीफ़ वाक़ई शागिर्द का रवैया बदल सकती है?"
-    },
-    {
-      "id": "l02",
-      "character": "ustani",
-      "terms": [],
-      "text_ur": "تقویت کا ہمیشہ ایک ہی مطلب ہے: رویہ زیادہ کثرت سے ہونے لگتا ہے۔",
-      "text_deva": "तक़वियत का हमेशा एक ही मतलब है: रवैया ज़्यादा कसरत से होने लगता है।"
-    },
-    {
-      "id": "l03",
-      "character": "ustani",
-      "terms": [
-        "مثبت تقویت"
-      ],
-      "text_ur": "مثبت تقویت، یعنی Positive Reinforcement، وہ چیز شامل کرتی ہے جو شاگرد چاہتا ہے: تعریف یا ستارہ۔",
-      "text_deva": "मुस्बत तक़वियत, यानी पॉज़िटिव रीइन्फ़ोर्समेंट, वो चीज़ शामिल करती है जो शागिर्द चाहता है: तारीफ़ या सितारा।"
-    },
-    {
-      "id": "l04",
-      "character": "ustani",
-      "terms": [
-        "منفی تقویت"
-      ],
-      "text_ur": "منفی تقویت وہ چیز ہٹاتی ہے جو شاگرد پسند نہیں کرتا۔ یہ سزا نہیں ہے؛ یہ بھی رویہ مضبوط کرتی ہے۔",
-      "text_deva": "मनफ़ी तक़वियत वो चीज़ हटाती है जो शागिर्द पसंद नहीं करता। ये सज़ा नहीं है; ये भी रवैया मज़बूत करती है।"
     },
     {
       "id": "l05",
@@ -59,6 +61,35 @@
       "terms": [],
       "text_ur": "پورا سبق textbook.com.pk پر پڑھیے۔",
       "text_deva": "पूरा सबक़ टेक्स्टबुक डॉट कॉम डॉट पी के पर पढ़िए।"
+    },
+    {
+      "id": "b01",
+      "character": "shagird",
+      "terms": [
+        "ادراک",
+        "توجہ"
+      ],
+      "text_ur": "استاد صاحبہ، کیا ادراک اور توجہ ایک ہی چیز ہیں؟",
+      "text_deva": "उस्ताद साहिबा, क्या इदराक और तवज्जोह एक ही चीज़ हैं?"
+    },
+    {
+      "id": "b03",
+      "character": "shagird",
+      "terms": [
+        "رٹا",
+        "سیکھنا"
+      ],
+      "text_ur": "اگر میں رٹا لگاؤں تو کیا یہ بھی سیکھنا کہلائے گا؟",
+      "text_deva": "अगर मैं रट्टा लगाऊँ तो क्या ये भी सीखना कहलाएगा?"
+    },
+    {
+      "id": "b10",
+      "character": "shagird",
+      "terms": [
+        "گروہی کام"
+      ],
+      "text_ur": "واہ! تو کیا اسی لیے آپ ہمیں گروہی کام دیتی ہیں؟",
+      "text_deva": "वाह! तो क्या इसी लिए आप हमें गिरोही काम देती हैं?"
     }
   ]
 }
