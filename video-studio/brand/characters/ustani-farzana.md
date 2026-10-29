@@ -16,9 +16,10 @@ Never lectures for more than two lines without an example or visual.
 - Holds a marker or a book in gesture poses.
 
 ## Turnaround / expression sheet prompt (Gemini or ChatGPT image)
+The full prompt set (master, blink, mouths, gestures, sets) is `brand/handoff-cast.md`.
 > Character design sheet of an original character: a warm South Asian woman teacher educator,
-> about 40, rectangular reading glasses, amber shalwar kameez with simple border, deep blue
-> dupatta over shoulders, soft smile. Front view, three-quarter view, side view, plus 6 facial
+> about 40, rectangular reading glasses, burnt orange (#b8551d) shalwar kameez with simple border,
+> deep teal green (#1f6f5c) dupatta over shoulders, soft smile. Front view, three-quarter view, side view, plus 6 facial
 > expressions (neutral, smiling, explaining, surprised, thinking, encouraging). Plain cream
 > background. + `art_style.prompt_suffix`
 
