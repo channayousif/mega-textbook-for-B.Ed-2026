@@ -4,6 +4,7 @@ import Link from '@docusaurus/Link';
 import OwnerConsoleGuard from '@site/src/components/OwnerConsoleGuard';
 import { getSupabase } from '@site/src/lib/supabase';
 import { fetchCatalog, type Catalog } from '@site/src/lib/catalog';
+import { fetchAllPages } from '@site/src/lib/pagination';
 
 type Profile = { id: string; full_name: string | null; email: string | null; role: string; status: string; deleted_at: string | null };
 type Application = { id: string; applicant_id: string; track: string; course_code: string | null; qualification_evidence: string; status: string; created_at: string };
@@ -26,7 +27,10 @@ function ReviewersContent(): React.ReactElement {
     const db = await getSupabase();
     if (!db) return;
     const [p, a, g, u] = await Promise.all([
-      db.from('profiles').select('id,full_name,role,status,deleted_at').is('deleted_at', null).order('full_name'),
+      // Paged: live profiles passed PostgREST's 1000-row cap, which silently dropped every
+      // account sorting after row 1000 (unnamed ones sort last) from the Account picker.
+      // `id` breaks full_name ties so pages never overlap or skip.
+      fetchAllPages<Omit<Profile, 'email'>>((from, to) => db.from('profiles').select('id,full_name,role,status,deleted_at').is('deleted_at', null).order('full_name').order('id').range(from, to)),
       db.from('reviewer_applications').select('*').order('created_at', { ascending: false }),
       db.from('reviewer_grants').select('*').order('granted_at', { ascending: false }),
       db.functions.invoke('admin-list-users', { method: 'GET' }),
