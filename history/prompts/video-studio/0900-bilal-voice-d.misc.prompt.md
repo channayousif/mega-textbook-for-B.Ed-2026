@@ -14,7 +14,7 @@ links:
   spec: video-studio/specs/003-urdu-voice-benchmark/spec.md
   ticket: null
   adr: video-studio/history/adr/0014-bilal-lively-style-tone-shaping.md
-  pr: null
+  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/374
 files:
  - video-studio/history/adr/0014-bilal-lively-style-tone-shaping.md (new)
  - video-studio/brand/voices/shagird.md (settings, post-processing, evidence)
