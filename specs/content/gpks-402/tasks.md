@@ -8,7 +8,7 @@
 |---|---|---|---|---|---|---|---|
 | 1 | Introduction and Ideological Foundations | ✓ | ☐ | ☐ | ☐ | placed | Withdrawn 2026-10-10 (owner, D-2026-0053 / G-2026-100); re-authored 2026-10-28 from the approved spec (D-2026-0074), English only; see stage rows below |
 | 2 | Reform Movements and the Pakistan Movement | ✓ | ☐ | ☐ | ☐ | placed | Withdrawn 2026-10-10 (owner, D-2026-0053 / G-2026-100); re-authored 2026-10-28 from the approved spec (D-2026-0074), English only; see stage rows below |
-| 3 | Constitutional Development | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-10-28; G2 deterministic evidence recorded below; G3/G5 remain open; Urdu is a separate job |
+| 3 | Constitutional Development | ✓ | ☐ | ▣ | ☐ | placed (EN + UR) | Four-page Urdu draft and four RTL SVG pairs prepared 2026-10-31; G3/G5 remain open; see reviews/unit-03/G4/translation-handoff.md |
 | 4 | Governance, Rights and Geography | ✓ | ☐ | ☐ | ☐ | placed | Authored 2026-10-28 from the approved spec (D-2026-0074), English only; see stage rows below |
 | 5 | Economy and Society | ✓ | ☐ | ☐ | ☐ | placed (EN) | English draft authored 2026-10-28; G2 deterministic checks pass; independent review and Urdu remain open |
 | 6 | Foreign Policy, Issues and Education | ✓ | ☐ | ☐ | ☐ | placed | English authored 2026-10-28; G2 gate evidence recorded below; G3/G5 remain open; Urdu is a separate job |
@@ -82,7 +82,7 @@ Only Unit 3 is updated by this authoring job. The approved content-spec is the d
 |---|---|---|---|---|
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-03/G2/20261030T113547697Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/gpks-402/reviews/unit-03/G3/608a5388-1312-4060-ac88-c7d64ddc8c72.json; all 7 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; all 8 SVG variants pass geometry; G3 remains open and unsigned |
-| Unit 3 | G4 ur-translation | ▢ | | Separate Urdu job; localise all four schematic sources and mirror RTL layout |
+| Unit 3 | G4 ur-translation | ▢ | | Draft Urdu mirror prepared 2026-10-31 by codex from 23c211bd6fe0b17fe3e7bcbade5c54b15b9642cb: four pages, full 10/10/5 assessment, four RTL Urdu SVGs and derived dark twins. Frozen-bank key_terms and structural parity checked; translation_status stays draft. Open per translate-unit Step 7; geometry and rendered inspection pending under crew browser restriction. Handoff: reviews/unit-03/G4/translation-handoff.md |
 | Unit 3 | G5 ur-review | ▢ | | Pending translation and independent review; authored concept labels require review |
-| Unit 3 | G6 assets | ▣ | codex | Four English light/dark pairs placed; Urdu variants pending |
+| Unit 3 | G6 assets | ▣ | codex | Four English and four Urdu light/dark pairs placed; Urdu geometry and rendered inspection pending under crew browser restriction |
 | Unit 3 | G7 publish | ▢ | | No deploy or PR in this job |
