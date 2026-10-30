@@ -15,8 +15,10 @@ master pixel by pixel, and every part lines up on the same canvas.
 - For every edit (prompts B to D): open the master in Nano Banana, attach it, and paste the edit
   prompt. Keep the chat on that master; start a new chat from the master if drift creeps in.
 - Reject an edit if anything outside the named part moved (head size, position, colours, crop).
-- Background: flat **magenta #FF00FF** everywhere. Teal is close to green, so a green screen would eat
-  the clothes; magenta is far from every brand colour.
+- Background: flat **magenta #FF00FF** or plain **white**; both cut cleanly (Ustani's set is on
+  white). Never green: teal is close to green, so a green screen would eat the clothes. A soft
+  gradient also cuts, but a busy or textured background does not.
+- Ask for **a single image, not a grid or collage**; a 2x2 grid cannot be lined up with the master.
 - Aspect **3:4 portrait** (Claude scales to the 1080x1440 puppet canvas). PNG if offered.
 
 ## Where to put the files
@@ -46,7 +48,7 @@ Avoid: photorealistic, 3D render, text, captions, logos, distorted hands, extra 
 ### A. Master (new chat, text to image)
 > Full-body character illustration of an original character: a warm South Asian woman teacher
 > educator, about 40, kind face, soft closed-mouth smile, eyes open looking at the viewer,
-> rectangular reading glasses, shoulder-length dark hair partly covered by a deep teal green
+> shoulder-length dark hair partly covered by a deep teal green
 > (#1f6f5c) dupatta loosely over her shoulders, burnt orange (#b8551d) shalwar kameez with a simple
 > border, small stud earrings. She stands facing the viewer, turned very slightly to her left,
 > relaxed posture, holding a closed book against her waist with both hands. Whole figure visible
@@ -55,7 +57,7 @@ Avoid: photorealistic, 3D render, text, captions, logos, distorted hands, extra 
 
 ### B. Blink (edit of the master)
 > Edit this image. Change only her eyes: both eyes gently closed, as in a natural blink, eyelids
-> relaxed. Keep everything else exactly the same: glasses, face shape, mouth, hair, clothes, pose,
+> relaxed. Keep everything else exactly the same: face shape, mouth, hair, clothes, pose,
 > position, size, colours and the magenta background.
 
 ### C. Mouth shapes (four edits of the master, one at a time)
@@ -66,10 +68,10 @@ Same opening and ending as B, with the change line:
 - `mouth_O`: "lips rounded into a small 'o' as when saying 'oo'"
 
 > Edit this image. Change only her mouth: <change line>. Keep everything else exactly the same:
-> eyes, glasses, face shape, hair, clothes, pose, position, size, colours and the magenta background.
+> eyes, face shape, hair, clothes, pose, position, size, colours and the magenta background.
 
 ### D. Gestures (four edits of the master)
-> Edit this image. Change only her arms and hands: <pose line>. Keep her head, face, glasses, body,
+> Edit this image. Change only her arms and hands: <pose line>. Keep her head, face, body,
 > clothes, position, size, colours and the magenta background exactly the same. Hands with five
 > fingers, natural proportions.
 
@@ -77,6 +79,22 @@ Same opening and ending as B, with the change line:
 - `pose_point`: "her right arm points up and to the left of the picture with the index finger, as when pointing at a board; her left hand holds the book at her waist"
 - `pose_think`: "her right hand rests lightly under her chin, thoughtful; her left hand holds the book at her waist"
 - `pose_celebrate`: "both hands are raised to shoulder height with open palms, delighted, as when praising a good answer; the book is tucked under her left arm"
+
+### F. Still needed for Ustani (2026-10-30)
+Her master `55236f60`, blink, open mouth (`mouth_A`) and all four gestures are cut. The earlier lip
+edits came back almost unchanged, so ask for the mouth more strongly, one edit per chat turn,
+starting from the master each time:
+
+> Edit this image. Change only her mouth, and make the change clearly visible: <change line>.
+> Keep everything else exactly the same: eyes, face shape, hair, clothes, pose, position, size,
+> colours and the plain white background. A single image, not a grid or collage.
+
+- `mouth_M`: "lips firmly pressed together in a straight line, as when saying 'm', no teeth and no smile gap visible"
+- `mouth_E`: "mouth open and stretched wide sideways as when saying 'ee', the upper and lower teeth both visible"
+- `mouth_O`: "lips pushed forward into a small round 'o' as when saying 'oo', a dark round opening in the middle"
+
+If one still looks like the master, say "the previous result did not change the mouth; make the
+lips clearly different" in the same chat.
 
 ### E. Reference sheet (for approval only, new chat with the master attached)
 > Character design sheet of the same woman as in the attached image, same clothes and colours:
@@ -99,7 +117,7 @@ Same opening and ending as B, with the change line:
 > portrait. + style line
 
 ### B and C. Blink and mouth shapes
-As for Ustani, with "his" for "her" and without the glasses.
+As for Ustani, with "his" for "her".
 
 ### D. Gestures (four edits of the master)
 Same edit wording as Ustani's D, with:

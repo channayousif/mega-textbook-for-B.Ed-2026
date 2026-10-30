@@ -11,7 +11,7 @@
 | 3 | Constitutional Development | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-10-28; G2 deterministic evidence recorded below; G3/G5 remain open; Urdu is a separate job |
 | 4 | Governance, Rights and Geography | ✓ | ☐ | ☐ | ☐ | placed | Authored 2026-10-28 from the approved spec (D-2026-0074), English only; see stage rows below |
 | 5 | Economy and Society | ✓ | ☐ | ☐ | ☐ | placed (EN) | English draft authored 2026-10-28; G2 deterministic checks pass; independent review and Urdu remain open |
-| 6 | Foreign Policy, Issues and Education | ☐ | ☐ | ☐ | ☐ | planned | |
+| 6 | Foreign Policy, Issues and Education | ✓ | ☐ | ☐ | ☐ | placed | English authored 2026-10-28; G2 gate evidence recorded below; G3/G5 remain open; Urdu is a separate job |
 
 **Key:** ▣ = in progress, ☐ = not started, ✓ = done, ✗ = escalated
 
@@ -30,10 +30,15 @@
 | Unit 2 | G4 ur-translation | ▢ | | separate job |
 | Unit 2 | G5 ur-review | ▢ | | |
 | Unit 2 | G6 assets | ✅ | auto:gates | 4 schematic SVGs placed with dark variants |
+| Unit 2 | G4 ur-translation | ✅ | auto:gates | full UR mirror (5 files) translated 2026-10-28 by the crew translate job from English at `f3d7619a`; 4 `.ur.svg` label variants (`fig-U2-1…4`, mirrored RTL layout) authored, measured clean and wired, `.ur.dark.svg` derived; `key_terms` bound to terminology.csv; heading parity exact; parity/figures/key_terms clean under a temporary `reviewed` flip (reverted). `translation_status` stays draft pending an independent G5 |
 | Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-04/G2/20261028T220210187Z-gates.json |
-| Unit 4 | G3 en-review | ▢ | | awaiting an independent reviewer |
+| Unit 4 | G3 en-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/gpks-402/reviews/unit-04/G3/8e3bf462-d4af-437f-aa63-372eb41b9e7c.json; all 7 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; all 14 SVG variants pass geometry; G3 remains open and unsigned |
 | Unit 4 | G4 ur-translation | ▢ | | separate job |
 | Unit 4 | G5 ur-review | ▢ | | |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-06/G2/20261028T180245793Z-gates.json |
+| Unit 6 | G3 en-review | ▢ | | awaiting an independent reviewer |
+| Unit 6 | G4 ur-translation | ▢ | | separate job |
+| Unit 6 | G5 ur-review | ▢ | | |
 
 ## Course-level
 
@@ -61,12 +66,16 @@ The stage rows below govern Unit 5. No G1 re-evaluation or G3/G5 approval is rec
 | Unit 5 | G7 publish | ▢ | | No deployment or publication action in this job |
 | Unit 5 | G3 en-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/gpks-402/reviews/unit-05/G3/21030998-7c55-4596-9cef-92787e7cb7aa.json; all 7 criteria pass; all 8 SVGs pass geometry; G3 remains open and unsigned |
 
-## Unit 3 stage evidence
+| Unit 2 | G3 en-review | ▢ | | advisory: escalate; report specs/content/gpks-402/reviews/unit-02/G3/01a18cbc-8067-7f42-995a-419ce6765add.json; date, arithmetic and assessment defects; sources, provenance and current screen/print inspection incomplete; unsigned, G3 remains open |
 
-Only Unit 3 is updated by this authoring job. The approved content-spec is the drafting authority; older course-level status prose above is retained for its other-unit history.
+## Unit 6 advisory English review
 
-| Unit | Stage | Status | Reviewer | Notes |
+| Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
+| Unit 6 | G3 en-review | ▢ | | advisory: escalate; agent:codex-g3-reviewer; report specs/content/gpks-402/reviews/unit-06/G3/01a18ccb-4a8c-7c60-8ed2-7c546d08340e.json; source provenance, assessment scoring and specialist vocabulary need author repair; author-run handoff and current narrow/A4 renders unavailable; unsigned, G3 remains open (ADR-0019) |
+## Unit 3 stage evidence
+Only Unit 3 is updated by this authoring job. The approved content-spec is the drafting authority; older course-level status prose above is retained for its other-unit history.
+| Unit | Stage | Status | Reviewer | Notes |
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-03/G2/20261030T113547697Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | Independent expert review pending; no certification claimed |
 | Unit 3 | G4 ur-translation | ▢ | | Separate Urdu job; localise all four schematic sources and mirror RTL layout |

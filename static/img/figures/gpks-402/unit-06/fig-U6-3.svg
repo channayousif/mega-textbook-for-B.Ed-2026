@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 500" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="t">Interconnections between Pakistan's contemporary challenges</title>
+  <desc id="d">Concept map illustrating the interconnections between Pakistan's contemporary challenges: population growth, poverty and unemployment, extremism and terrorism, and environmental stress.</desc>
+  <style>
+    :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+    .bg      { fill: var(--bg); }
+    .ink     { fill: var(--ink); }
+    .panel   { fill: var(--panel); stroke: var(--ink); stroke-width: 1.5; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    text     { font-size: 13px; fill: var(--ink); }
+    .h       { font-size: 17px; font-weight: 700; fill: var(--ink); }
+    .sh      { font-size: 14px; font-weight: 600; fill: var(--ink); }
+    .body    { font-size: 12px; fill: var(--ink); }
+    .tag     { font-size: 11px; fill: var(--muted); font-weight: 600; }
+    .wm      { fill: var(--wm); font-size: 11px; }
+    .link    { fill: none; stroke: var(--ink); stroke-width: 1.8; stroke-linecap: round; }
+    .ah      { fill: var(--ink); }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path class="ah" d="M0,1 L9,5 L0,9 Z"/>
+    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="780" height="500"/>
+  <text class="h" x="390" y="32" text-anchor="middle"><tspan x="390" dy="0">Web of Interconnected National Challenges</tspan></text>
+
+  <!-- Connectors between outer nodes -->
+  <!-- Population to Poverty -->
+  <path class="link" d="M270 105 L500 105" marker-end="url(#arrow)"/>
+  <text class="tag" x="385" y="97" text-anchor="middle"><tspan x="385" dy="0">demographic pressure on jobs</tspan></text>
+
+  <!-- Poverty to Extremism -->
+  <path class="link" d="M630 150 L630 330" marker-end="url(#arrow)"/>
+  <text class="tag" x="638" y="245" text-anchor="start"><tspan x="638" dy="0">socioeconomic</tspan><tspan x="638" dy="16">alienation</tspan></text>
+
+  <!-- Environment to Poverty -->
+  <path class="link" d="M150 330 L150 155" marker-end="url(#arrow)"/>
+  <text class="tag" x="142" y="245" text-anchor="end"><tspan x="142" dy="0">flood losses and rural decline</tspan></text>
+
+  <!-- Central Hub Connections -->
+  <path class="link" d="M340 185 L260 148" marker-end="url(#arrow)"/>
+  <path class="link" d="M440 185 L520 148" marker-end="url(#arrow)"/>
+  <path class="link" d="M340 275 L260 335" marker-end="url(#arrow)"/>
+  <path class="link" d="M440 275 L520 335" marker-end="url(#arrow)"/>
+
+  <!-- Centre: Contemporary Challenges -->
+  <rect class="panel-a" x="270" y="185" width="240" height="90" rx="10"/>
+  <text class="sh" x="390" y="218" text-anchor="middle"><tspan x="390" dy="0">Contemporary Challenges</tspan></text>
+  <text class="body" x="390" y="242" text-anchor="middle"><tspan x="390" dy="0">Mutual causes and compounding</tspan><tspan x="390" dy="16">effects requiring systemic response</tspan></text>
+
+  <!-- Top-Left: Rapid Population Growth -->
+  <rect class="panel" x="30" y="60" width="240" height="88" rx="8"/>
+  <text class="sh" x="150" y="85" text-anchor="middle"><tspan x="150" dy="0">Rapid Population Growth</tspan></text>
+  <text class="body" x="150" y="110" text-anchor="middle"><tspan x="150" dy="0">High fertility rate and 2.55% growth</tspan></text>
+  <text class="body" x="150" y="130" text-anchor="middle"><tspan x="150" dy="0">Strains schooling, health and food</tspan></text>
+
+  <!-- Top-Right: Poverty and Unemployment -->
+  <rect class="panel" x="510" y="60" width="240" height="88" rx="8"/>
+  <text class="sh" x="630" y="85" text-anchor="middle"><tspan x="630" dy="0">Poverty and Unemployment</tspan></text>
+  <text class="body" x="630" y="110" text-anchor="middle"><tspan x="630" dy="0">~40% poverty rate; youth bulge</tspan></text>
+  <text class="body" x="630" y="130" text-anchor="middle"><tspan x="630" dy="0">Shortage of formal job opportunities</tspan></text>
+
+  <!-- Bottom-Left: Environmental Stress -->
+  <rect class="panel" x="30" y="335" width="240" height="88" rx="8"/>
+  <text class="sh" x="150" y="360" text-anchor="middle"><tspan x="150" dy="0">Environmental Degradation</tspan></text>
+  <text class="body" x="150" y="385" text-anchor="middle"><tspan x="150" dy="0">Climate vulnerability, floods and heat</tspan></text>
+  <text class="body" x="150" y="405" text-anchor="middle"><tspan x="150" dy="0">Acute water stress and deforestation</tspan></text>
+
+  <!-- Bottom-Right: Terrorism and Extremism -->
+  <rect class="panel" x="510" y="335" width="240" height="88" rx="8"/>
+  <text class="sh" x="630" y="360" text-anchor="middle"><tspan x="630" dy="0">Terrorism and Extremism</tspan></text>
+  <text class="body" x="630" y="385" text-anchor="middle"><tspan x="630" dy="0">Sectarian discord and regional conflicts</tspan></text>
+  <text class="body" x="630" y="405" text-anchor="middle"><tspan x="630" dy="0">Disrupts social fabric and security</tspan></text>
+
+  <!-- Bottom summary note -->
+  <text class="body" x="390" y="460" text-anchor="middle"><tspan x="390" dy="0">Single-cause explanations fail: education, governance, and equity must address all four.</tspan></text>
+
+  <!-- Wordmark -->
+  <text class="wm" x="768" y="490" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

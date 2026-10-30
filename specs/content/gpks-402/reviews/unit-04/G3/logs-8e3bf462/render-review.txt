@@ -1,0 +1,46 @@
+render-review evidence (G3 English, GPKS-402 Unit 4)
+=============================================================
+Timestamp: 2026-10-28T17:40:00Z
+Reviewer: agent:g3-reviewer
+Model: Gemini 3.8 Flash (High)
+Reviewer Run ID: 8e3bf462-d4af-437f-aa63-372eb41b9e7c
+Course: GPKS-402 Unit 4 (Governance, Fundamental Rights and Geography)
+
+CONSTRAINT: The brief for this crew job explicitly forbids running `npm run build`,
+a dev server, or Playwright Chromium. Comprehensive visual, structural, and raster
+inspection was conducted within permitted host resources:
+
+1. Figure Rasterization and Visual Inspection:
+   - All seven unit SVGs were rasterized to PNG at 780px width using Sharp with :root CSS variables resolved:
+     - fig-U4-1.png (780x850): Three-column diagram of Pakistan's government under the 1973 Constitution (Legislature: NA and Senate; Executive: PM and Cabinet, President as Head of State; Judiciary: Supreme Court, High Courts, subordinate courts) with checks and balances arrows and provincial replication. Mean channel luminances [234.2, 237.5, 236.4, 255.0].
+     - fig-U4-2.png (780x720): Concept map of civil-military relations showing Causes (weak institutions, insecurity, military-civilian institutional disparity, corporate interests), Patterns (direct military rule, civilian oversight, post-2008 constitutional rule), and Consequences (constitutional breaks, institutional weakening, pre-1971 grievances, growth vs institutional debate) with a feedback loop and Article 245 reference. Mean channel luminances [226.8, 231.3, 229.8, 255.0].
+     - fig-U4-3.png (780x610): Horizontal timeline of civil-military relations from 1947 to the present, differentiating civilian periods (1947-1958, 1971-1977, 1988-1999, 2008-present) from military rule (Ayub Khan 1958-1969, Yahya Khan 1969-1971, Zia-ul-Haq 1977-1988, Pervez Musharraf 1999-2008), with key constitutional milestones marked (1956 Constitution, 1973 Constitution, 1985 Eighth Amendment, 2010 Eighteenth Amendment). Mean channel luminances [228.2, 232.6, 233.0, 255.0].
+     - fig-U4-4.png (780x956): Five-column landscape table of ten fundamental rights (Articles 9, 10A, 11, 14, 15-17, 19-19A, 20-22, 25, 25A, 28) with holders, plain-word scope, and concrete classroom-relevant examples. Mean channel luminances [239.0, 240.7, 240.2, 255.0].
+     - fig-U4-5.png (780x1300): Top-to-bottom decision flowchart detailing the route to a remedy when a fundamental right is violated (initial documentation -> administrative complaint -> ombudsman/Mohtasib -> legal counsel -> High Court writ petition under Article 199 -> Supreme Court public interest jurisdiction under Article 184(3) / appeals under Article 185). Mean channel luminances [240.1, 242.6, 241.7, 255.0].
+     - fig-U4-6.png (780x870): Map-style physical diagram showing Pakistan's relief zones: Northern mountains (Himalaya, Karakoram, Hindu Kush), Western ranges (Sulaiman, Kirthar), Potohar and Balochistan plateaus, Upper and Lower Indus plains, Deserts (Thal, Cholistan, Thar, Kharan), Coastal belt (Makran coast and Indus delta), with the Indus drainage system and neighbouring countries labelled. Mean channel luminances [232.6, 236.2, 235.3, 255.0].
+     - fig-U4-7.png (780x614): Four-column natural resources table categorized by sector (Agriculture, Water, Minerals, Energy) detailing resources, locations (Thar coal, Sui gas, Reko Diq, Khewra salt, Tarbela/Mangla hydro), and economic significance. Mean channel luminances [237.6, 239.6, 239.0, 255.0].
+   - All seven PNG renders are saved under specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/ and verified non-blank.
+
+2. Figure Text Geometry and Spacing (measure-figure-text.mjs):
+   - All 14 committed SVG variants (7 light, 7 dark twins) were measured with scripts/measure-figure-text.mjs:
+     - All 14 assets PASS with exit code 0, zero text overflow beyond the viewBox (widest text ends at x=768.4, well within viewBox width 780), and zero wordmark collision (wordmark starts at x=675.7).
+   - Text boxes, line padding, and contrast verified clean across all light and dark variants.
+
+3. Alt Text and SVG Accessibility:
+   - All seven <Figure> elements across topic-01.mdx, topic-02.mdx, and topic-03.mdx carry detailed descriptive alt text matching the visual diagrams and figures/unit-04.md manifest declarations.
+   - SVG sources include role="img", aria-labelledby="t d", <title id="t">, and <desc id="d"> elements with matching descriptions.
+
+4. Heading Structure and Monotonic Progression:
+   - docs/semester-2/gpks-402/unit-04/index.mdx: Single # title, ## outcomes, ## prerequisite knowledge, ## in this unit, ## how to use this unit.
+   - topic-01.mdx: # title, ## A real classroom situation, ## Explanation, ### The federal system..., ### The legislature..., ### The executive..., ### The judiciary..., ### Civil-military relations..., ## Activity..., ## Check your understanding, ## Summary, ## Self-assessment checklist, ## Try this at your practicum school, ## Summative task, ## Further reading.
+   - topic-02.mdx: # title, ## A real classroom situation, ## Explanation, ### Fundamental rights..., ### Principles of policy..., ### The role of citizens..., ## Activity..., ## Check your understanding, ## Summary, ## Self-assessment checklist, ## Try this at your practicum school, ## Summative task, ## Further reading.
+   - topic-03.mdx: # title, ## A real classroom situation, ## Explanation, ### Physical features..., ### Climate, water..., ### Strategic importance..., ## Activity..., ## Check your understanding, ## Summary, ## Self-assessment checklist, ## Try this at your practicum school, ## Summative task, ## Further reading.
+   - unit-assessment.mdx: # title, ## Unit summary, ## Summative assessment, ### MCQs, ### RRQs, ### ERQs, ## Answers and marking guidance, ### MCQ answer key, ### RRQ model answers and mark schemes, ### ERQ rubrics.
+   - Complete monotonic progression with zero skipped heading levels across all unit MDX files.
+
+5. Presentation and Mobile Layout:
+   - Content tables in MDX and SVG graphics adhere to display: block; overflow-x: auto; width: fit-content per src/css/custom.css.
+   - Assessment answer key and marking guidance are strictly quarantined within the bounded final section of unit-assessment.mdx.
+   - Zero em dashes (check-no-em-dash passes with exit 0).
+
+exit_code: 0
