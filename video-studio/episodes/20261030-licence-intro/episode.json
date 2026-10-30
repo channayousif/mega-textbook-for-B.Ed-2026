@@ -2,7 +2,7 @@
   "episode_id": "20261030-licence-intro",
   "topic_id": "licence-intro",
   "series": "licence",
-  "status": "script_review",
+  "status": "awaiting_assets",
   "created_at": "2026-10-30T19:00:00Z",
   "mode": "production",
   "source_url": "https://textbook.com.pk/ur/licence/",
@@ -15,6 +15,251 @@
       "to": "script_review",
       "by": "claude",
       "note": "Licence track episode 1 drafted by Claude from the \"ٹیچنگ لائسنس کیوں اہم ہے\" section (PR #382, revision cb393b06); awaiting pedagogy and Urdu reviews and the owner script gate"
+    },
+    {
+      "at": "2026-10-30T20:45:56.366Z",
+      "from": "script_review",
+      "to": "script_approved",
+      "by": "claude",
+      "note": "records the owner's script approval in approvals.jsonl (2026-10-30T20:45:56.366Z, script digest 30437478)"
+    },
+    {
+      "at": "2026-10-31T00:00:00Z",
+      "from": "script_approved",
+      "to": "awaiting_assets",
+      "by": "claude",
+      "note": "voicing: eval-set.json licence round, chatterbox-hi, seeds 3401-3403, Bilal lively"
+    },
+    {
+      "at": "2026-10-30T20:56:47.459Z",
+      "from": "awaiting_assets",
+      "to": "awaiting_assets",
+      "by": "claude",
+      "note": "voice:import L01 (shagird) 2f85d5ce7731"
+    },
+    {
+      "at": "2026-10-30T20:56:49.343Z",
+      "from": "awaiting_assets",
+      "to": "awaiting_assets",
+      "by": "claude",
+      "note": "voice:import L02 (ustani) 878dc4d1d333"
+    },
+    {
+      "at": "2026-10-30T20:56:50.656Z",
+      "from": "awaiting_assets",
+      "to": "awaiting_assets",
+      "by": "claude",
+      "note": "voice:import L03 (ustani) 482f05a82519"
+    },
+    {
+      "at": "2026-10-30T20:56:52.079Z",
+      "from": "awaiting_assets",
+      "to": "awaiting_assets",
+      "by": "claude",
+      "note": "voice:import L04 (ustani) 4eacf54fcaf1"
+    },
+    {
+      "at": "2026-10-30T20:56:53.470Z",
+      "from": "awaiting_assets",
+      "to": "awaiting_assets",
+      "by": "claude",
+      "note": "voice:import L05 (ustani) 05ab7fa62c8f"
+    },
+    {
+      "at": "2026-10-30T20:56:54.630Z",
+      "from": "awaiting_assets",
+      "to": "awaiting_assets",
+      "by": "claude",
+      "note": "voice:import L06 (ustani) 0629459a8fc6"
+    },
+    {
+      "at": "2026-10-30T20:56:56.215Z",
+      "from": "awaiting_assets",
+      "to": "awaiting_assets",
+      "by": "claude",
+      "note": "voice:import L07 (shagird) 96fd26525ab4"
+    },
+    {
+      "at": "2026-10-30T20:56:57.581Z",
+      "from": "awaiting_assets",
+      "to": "awaiting_assets",
+      "by": "claude",
+      "note": "voice:import L08 (shagird) 1d5602c974ed"
     }
-  ]
+  ],
+  "assets": {
+    "manifest": [
+      {
+        "item_id": "L01",
+        "path": "20261030-licence-intro/audio/L01.wav",
+        "kind": "audio",
+        "sha256": "2f85d5ce773136613fa36fa515cb7b404bceee080afe035de0f397b532e0ed93",
+        "source_sha256": "2dc0366fb0e806eecb1c3fe6179a8fbe5bde6503db222b56a58e47baebf4ffb2",
+        "source_file": "l01_lively_s3403.wav",
+        "source_tool": "chatterbox-hi",
+        "model": "ResembleAI/Chatterbox-Multilingual-hi",
+        "take": 3403,
+        "voice": {
+          "character": "shagird",
+          "card_sha256": "e10a4bff456f997a22636bf5a1e9b5c71131283ae9538daf6b3e01c91f62fc5a",
+          "reference_sha256": "7d227bafae29623504c427923546211175bd1f78e093c181843d8179a5711c8a",
+          "consent_id": "narrator-01",
+          "consent_sha256": "cbee0bcf1fe30591ea7073418a943f64da1d5c46f178d7ba9a0e608129ccf1b3",
+          "post": "warm, tempo 1.06"
+        },
+        "rights_note": "voice card brand/voices/shagird.md (cleared); consent narrator-01; source chatterbox-hi",
+        "imported_at": "2026-10-30T20:56:47.459Z",
+        "status": "pending"
+      },
+      {
+        "item_id": "L02",
+        "path": "20261030-licence-intro/audio/L02.wav",
+        "kind": "audio",
+        "sha256": "878dc4d1d333d7ff4515c4abde621106376e456a31ed1ecefb7ff5ba45ca9be5",
+        "source_sha256": "25ca9dad18ccf60a114277413e2a6c9b2e7e9d8052cae0d4bf505c87ace22ff7",
+        "source_file": "l02_default_s3401.wav",
+        "source_tool": "chatterbox-hi",
+        "model": "ResembleAI/Chatterbox-Multilingual-hi",
+        "take": 3401,
+        "voice": {
+          "character": "ustani",
+          "card_sha256": "425818aca8ae0f1a54df99f2bd423273b10a9d26981cc1a23b077d5089a06040",
+          "reference_sha256": "d05de3c55d275a8d34462222ed7760eb5eb2c040a738b93f787a1a32e901b5fa",
+          "consent_id": "narrator-02",
+          "consent_sha256": "bae013f40a64f5e5b4c8b1915f1e670305578e0c22296bf84bfe973150e23ce6"
+        },
+        "rights_note": "voice card brand/voices/ustani.md (cleared); consent narrator-02; source chatterbox-hi",
+        "imported_at": "2026-10-30T20:56:49.343Z",
+        "status": "pending"
+      },
+      {
+        "item_id": "L03",
+        "path": "20261030-licence-intro/audio/L03.wav",
+        "kind": "audio",
+        "sha256": "482f05a82519429f88f14a5f8fd829fb25a2a5ea7114c6213710695e4a3939f2",
+        "source_sha256": "48ab711f40b50ee4cfaa777a6b44b5c45e1fd7e146773c3d25efc6eaa8b2f396",
+        "source_file": "l03_default_s3403.wav",
+        "source_tool": "chatterbox-hi",
+        "model": "ResembleAI/Chatterbox-Multilingual-hi",
+        "take": 3403,
+        "voice": {
+          "character": "ustani",
+          "card_sha256": "425818aca8ae0f1a54df99f2bd423273b10a9d26981cc1a23b077d5089a06040",
+          "reference_sha256": "d05de3c55d275a8d34462222ed7760eb5eb2c040a738b93f787a1a32e901b5fa",
+          "consent_id": "narrator-02",
+          "consent_sha256": "bae013f40a64f5e5b4c8b1915f1e670305578e0c22296bf84bfe973150e23ce6"
+        },
+        "rights_note": "voice card brand/voices/ustani.md (cleared); consent narrator-02; source chatterbox-hi",
+        "imported_at": "2026-10-30T20:56:50.656Z",
+        "status": "pending"
+      },
+      {
+        "item_id": "L04",
+        "path": "20261030-licence-intro/audio/L04.wav",
+        "kind": "audio",
+        "sha256": "4eacf54fcaf1818ca07a8ef688855c20f290f8f58c1fecf723c65935f6f3ea41",
+        "source_sha256": "fc366f337e735fae383d217d2cb3529dcc4e8d0607ff17ddfaa1982d952e99a4",
+        "source_file": "l04_default_s3401.wav",
+        "source_tool": "chatterbox-hi",
+        "model": "ResembleAI/Chatterbox-Multilingual-hi",
+        "take": 3401,
+        "voice": {
+          "character": "ustani",
+          "card_sha256": "425818aca8ae0f1a54df99f2bd423273b10a9d26981cc1a23b077d5089a06040",
+          "reference_sha256": "d05de3c55d275a8d34462222ed7760eb5eb2c040a738b93f787a1a32e901b5fa",
+          "consent_id": "narrator-02",
+          "consent_sha256": "bae013f40a64f5e5b4c8b1915f1e670305578e0c22296bf84bfe973150e23ce6"
+        },
+        "rights_note": "voice card brand/voices/ustani.md (cleared); consent narrator-02; source chatterbox-hi",
+        "imported_at": "2026-10-30T20:56:52.079Z",
+        "status": "pending"
+      },
+      {
+        "item_id": "L05",
+        "path": "20261030-licence-intro/audio/L05.wav",
+        "kind": "audio",
+        "sha256": "05ab7fa62c8f736e5ff15320e11f416367395b00848a303f6ce5664255477b37",
+        "source_sha256": "1872369793dabc62dcd2789b4781643ac9675c3432e416f6fddd61e6d683c678",
+        "source_file": "l05_default_s3401.wav",
+        "source_tool": "chatterbox-hi",
+        "model": "ResembleAI/Chatterbox-Multilingual-hi",
+        "take": 3401,
+        "voice": {
+          "character": "ustani",
+          "card_sha256": "425818aca8ae0f1a54df99f2bd423273b10a9d26981cc1a23b077d5089a06040",
+          "reference_sha256": "d05de3c55d275a8d34462222ed7760eb5eb2c040a738b93f787a1a32e901b5fa",
+          "consent_id": "narrator-02",
+          "consent_sha256": "bae013f40a64f5e5b4c8b1915f1e670305578e0c22296bf84bfe973150e23ce6"
+        },
+        "rights_note": "voice card brand/voices/ustani.md (cleared); consent narrator-02; source chatterbox-hi",
+        "imported_at": "2026-10-30T20:56:53.470Z",
+        "status": "pending"
+      },
+      {
+        "item_id": "L06",
+        "path": "20261030-licence-intro/audio/L06.wav",
+        "kind": "audio",
+        "sha256": "0629459a8fc6c8c86a74b1d56edafa20905e43cc5297a10ac67e78bd3808b188",
+        "source_sha256": "af37692f4b3b50b828e95fe58da09832c45fe2bf0e175ccc068b35470597d932",
+        "source_file": "l06_default_s3403.wav",
+        "source_tool": "chatterbox-hi",
+        "model": "ResembleAI/Chatterbox-Multilingual-hi",
+        "take": 3403,
+        "voice": {
+          "character": "ustani",
+          "card_sha256": "425818aca8ae0f1a54df99f2bd423273b10a9d26981cc1a23b077d5089a06040",
+          "reference_sha256": "d05de3c55d275a8d34462222ed7760eb5eb2c040a738b93f787a1a32e901b5fa",
+          "consent_id": "narrator-02",
+          "consent_sha256": "bae013f40a64f5e5b4c8b1915f1e670305578e0c22296bf84bfe973150e23ce6"
+        },
+        "rights_note": "voice card brand/voices/ustani.md (cleared); consent narrator-02; source chatterbox-hi",
+        "imported_at": "2026-10-30T20:56:54.630Z",
+        "status": "pending"
+      },
+      {
+        "item_id": "L07",
+        "path": "20261030-licence-intro/audio/L07.wav",
+        "kind": "audio",
+        "sha256": "96fd26525ab4230b0c030bb6aa8a6c996718aaa1aa611521d0f6c1c82eae37b6",
+        "source_sha256": "90e0339e0b215f721c2148fa0f8285f7f24549bb31a1c2b8cee937c1183dc5ec",
+        "source_file": "l07_lively_s3401.wav",
+        "source_tool": "chatterbox-hi",
+        "model": "ResembleAI/Chatterbox-Multilingual-hi",
+        "take": 3401,
+        "voice": {
+          "character": "shagird",
+          "card_sha256": "e10a4bff456f997a22636bf5a1e9b5c71131283ae9538daf6b3e01c91f62fc5a",
+          "reference_sha256": "7d227bafae29623504c427923546211175bd1f78e093c181843d8179a5711c8a",
+          "consent_id": "narrator-01",
+          "consent_sha256": "cbee0bcf1fe30591ea7073418a943f64da1d5c46f178d7ba9a0e608129ccf1b3",
+          "post": "warm, tempo 1.06"
+        },
+        "rights_note": "voice card brand/voices/shagird.md (cleared); consent narrator-01; source chatterbox-hi",
+        "imported_at": "2026-10-30T20:56:56.215Z",
+        "status": "pending"
+      },
+      {
+        "item_id": "L08",
+        "path": "20261030-licence-intro/audio/L08.wav",
+        "kind": "audio",
+        "sha256": "1d5602c974eddcc2be489ada9844e314a29e22cd71a835452d2f53aaffa0ad02",
+        "source_sha256": "597ef2646252c4f317b475d0bc61bdd27a049d7860101f6b17db741cf49a1430",
+        "source_file": "l08_lively_s3403.wav",
+        "source_tool": "chatterbox-hi",
+        "model": "ResembleAI/Chatterbox-Multilingual-hi",
+        "take": 3403,
+        "voice": {
+          "character": "shagird",
+          "card_sha256": "e10a4bff456f997a22636bf5a1e9b5c71131283ae9538daf6b3e01c91f62fc5a",
+          "reference_sha256": "7d227bafae29623504c427923546211175bd1f78e093c181843d8179a5711c8a",
+          "consent_id": "narrator-01",
+          "consent_sha256": "cbee0bcf1fe30591ea7073418a943f64da1d5c46f178d7ba9a0e608129ccf1b3",
+          "post": "warm, tempo 1.06"
+        },
+        "rights_note": "voice card brand/voices/shagird.md (cleared); consent narrator-01; source chatterbox-hi",
+        "imported_at": "2026-10-30T20:56:57.581Z",
+        "status": "pending"
+      }
+    ]
+  }
 }
