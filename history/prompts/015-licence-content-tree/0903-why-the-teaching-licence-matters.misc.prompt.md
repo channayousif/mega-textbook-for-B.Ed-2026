@@ -14,7 +14,7 @@ links:
   spec: null
   ticket: null
   adr: null
-  pr: null
+  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/382
 files:
  - licence/index.mdx (new section "Why the Teaching Licence matters")
  - i18n/ur/docusaurus-plugin-content-docs-licence/current/index.mdx (Urdu mirror "ٹیچنگ لائسنس کیوں اہم ہے")
