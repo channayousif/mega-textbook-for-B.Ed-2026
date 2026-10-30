@@ -14,7 +14,7 @@ links:
   spec: video-studio/specs/001-urdu-shorts-pipeline/spec.md
   ticket: null
   adr: null
-  pr: null
+  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/380
 files:
  - video-studio/brand/characters/ustani-farzana.md (no glasses, puppet layer list, progress)
  - video-studio/brand/characters/shagird-bilal.md (puppet layers cut)
