@@ -11,7 +11,7 @@
 | 3 | Constitutional Development | ☐ | ☐ | ☐ | ☐ | planned | |
 | 4 | Governance, Rights and Geography | ✓ | ☐ | ☐ | ☐ | placed | Authored 2026-10-28 from the approved spec (D-2026-0074), English only; see stage rows below |
 | 5 | Economy and Society | ✓ | ☐ | ☐ | ☐ | placed (EN) | English draft authored 2026-10-28; G2 deterministic checks pass; independent review and Urdu remain open |
-| 6 | Foreign Policy, Issues and Education | ☐ | ☐ | ☐ | ☐ | planned | |
+| 6 | Foreign Policy, Issues and Education | ✓ | ☐ | ☐ | ☐ | placed | English authored 2026-10-28; G2 gate evidence recorded below; G3/G5 remain open; Urdu is a separate job |
 
 **Key:** ▣ = in progress, ☐ = not started, ✓ = done, ✗ = escalated
 
@@ -30,10 +30,15 @@
 | Unit 2 | G4 ur-translation | ▢ | | separate job |
 | Unit 2 | G5 ur-review | ▢ | | |
 | Unit 2 | G6 assets | ✅ | auto:gates | 4 schematic SVGs placed with dark variants |
+| Unit 2 | G4 ur-translation | ✅ | auto:gates | full UR mirror (5 files) translated 2026-10-28 by the crew translate job from English at `f3d7619a`; 4 `.ur.svg` label variants (`fig-U2-1…4`, mirrored RTL layout) authored, measured clean and wired, `.ur.dark.svg` derived; `key_terms` bound to terminology.csv; heading parity exact; parity/figures/key_terms clean under a temporary `reviewed` flip (reverted). `translation_status` stays draft pending an independent G5 |
 | Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-04/G2/20261028T220210187Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | awaiting an independent reviewer |
 | Unit 4 | G4 ur-translation | ▢ | | separate job |
 | Unit 4 | G5 ur-review | ▢ | | |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-06/G2/20261028T180245793Z-gates.json |
+| Unit 6 | G3 en-review | ▢ | | awaiting an independent reviewer |
+| Unit 6 | G4 ur-translation | ▢ | | separate job |
+| Unit 6 | G5 ur-review | ▢ | | |
 
 ## Course-level
 

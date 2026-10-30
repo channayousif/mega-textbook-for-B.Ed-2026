@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 440" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="t">Pakistan's role in international organisations</title>
+  <desc id="d">Table comparing Pakistan's role, contributions, and national benefits in four international organisations: UN, OIC, SAARC, and SCO.</desc>
+  <style>
+    :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+    .bg      { fill: var(--bg); }
+    .ink     { fill: var(--ink); }
+    .panel   { fill: var(--panel); stroke: var(--ink); stroke-width: 1.5; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 1.5; }
+    .grid    { stroke: var(--ink); stroke-width: 1; opacity: 0.25; }
+    text     { font-size: 13px; fill: var(--ink); }
+    .h       { font-size: 16px; font-weight: 700; fill: var(--ink); }
+    .sh      { font-size: 13px; font-weight: 600; fill: var(--ink); }
+    .body    { font-size: 12px; fill: var(--ink); }
+    .wm      { fill: var(--wm); font-size: 11px; }
+  </style>
+  <rect class="bg" x="0" y="0" width="780" height="440"/>
+  <text class="h" x="390" y="32" text-anchor="middle"><tspan x="390" dy="0">Pakistan's Engagement in International Organisations</tspan></text>
+
+  <!-- Table Header -->
+  <rect class="panel-a" x="30" y="52" width="720" height="38" rx="6"/>
+  <text class="sh" x="42" y="76"><tspan x="42" dy="0">Organisation</tspan></text>
+  <text class="sh" x="165" y="76"><tspan x="165" dy="0">Joined</tspan></text>
+  <text class="sh" x="275" y="76"><tspan x="275" dy="0">Key contributions by Pakistan</tspan></text>
+  <text class="sh" x="545" y="76"><tspan x="545" dy="0">Major national benefits</tspan></text>
+
+  <!-- Row 1: UN -->
+  <rect class="panel" x="30" y="94" width="720" height="68" rx="4"/>
+  <text class="sh" x="42" y="122"><tspan x="42" dy="0">United Nations</tspan><tspan x="42" dy="17">(UN)</tspan></text>
+  <text class="body" x="165" y="130"><tspan x="165" dy="0">30 Sept 1947</tspan></text>
+  <text class="body" x="275" y="114"><tspan x="275" dy="0">Major troop contributor to</tspan><tspan x="275" dy="17">peacekeeping missions; advocate for</tspan><tspan x="275" dy="17">self-determination</tspan></text>
+  <text class="body" x="545" y="114"><tspan x="545" dy="0">Global platform for Kashmir</tspan><tspan x="545" dy="17">issue; access to UNDP,</tspan><tspan x="545" dy="17">UNICEF, UNESCO</tspan></text>
+
+  <!-- Row 2: OIC -->
+  <rect class="panel" x="30" y="166" width="720" height="68" rx="4"/>
+  <text class="sh" x="42" y="186"><tspan x="42" dy="0">Organisation of</tspan><tspan x="42" dy="17">Islamic Coop.</tspan><tspan x="42" dy="17">(OIC)</tspan></text>
+  <text class="body" x="165" y="202"><tspan x="165" dy="0">1969 (Founder)</tspan></text>
+  <text class="body" x="275" y="186"><tspan x="275" dy="0">Hosted 2nd Islamic Summit (1974</tspan><tspan x="275" dy="17">Lahore); unified voice on Muslim</tspan><tspan x="275" dy="17">rights and causes</tspan></text>
+  <text class="body" x="545" y="186"><tspan x="545" dy="0">Strong diplomatic backing on</tspan><tspan x="545" dy="17">disputes; development</tspan><tspan x="545" dy="17">financing via IsDB</tspan></text>
+
+  <!-- Row 3: SAARC -->
+  <rect class="panel" x="30" y="238" width="720" height="68" rx="4"/>
+  <text class="sh" x="42" y="266"><tspan x="42" dy="0">South Asian</tspan><tspan x="42" dy="17">Assoc. (SAARC)</tspan></text>
+  <text class="body" x="165" y="274"><tspan x="165" dy="0">1985 (Founder)</tspan></text>
+  <text class="body" x="275" y="258"><tspan x="275" dy="0">Hosted 4th (1988) and 12th (2004)</tspan><tspan x="275" dy="17">summits; advocated for SAFTA</tspan><tspan x="275" dy="17">regional trade</tspan></text>
+  <text class="body" x="545" y="258"><tspan x="545" dy="0">Regional dialogue framework,</tspan><tspan x="545" dy="17">though progress stalled by</tspan><tspan x="545" dy="17">bilateral tensions</tspan></text>
+
+  <!-- Row 4: SCO -->
+  <rect class="panel" x="30" y="310" width="720" height="74" rx="4"/>
+  <text class="sh" x="42" y="338"><tspan x="42" dy="0">Shanghai Coop.</tspan><tspan x="42" dy="17">Org. (SCO)</tspan></text>
+  <text class="body" x="165" y="346"><tspan x="165" dy="0">2017 (Full)</tspan></text>
+  <text class="body" x="275" y="330"><tspan x="275" dy="0">Active in counter-terrorism (RATS);</tspan><tspan x="275" dy="17">hosted Council of Heads of Govt</tspan><tspan x="275" dy="17">(2024)</tspan></text>
+  <text class="body" x="545" y="330"><tspan x="545" dy="0">Deepened Eurasian ties;</tspan><tspan x="545" dy="17">strategic and energy</tspan><tspan x="545" dy="17">partnership with Central</tspan><tspan x="545" dy="17">Asia</tspan></text>
+
+  <!-- Wordmark -->
+  <text class="wm" x="768" y="425" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>
