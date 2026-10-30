@@ -177,6 +177,10 @@
                   "consent_sha256": {
                     "type": "string",
                     "pattern": "^[a-f0-9]{64}$"
+                  },
+                  "post": {
+                    "type": "string",
+                    "description": "tone-shaping preset and tempo applied at import (VS-ADR-0014)"
                   }
                 }
               },
