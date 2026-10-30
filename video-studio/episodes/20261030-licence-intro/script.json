@@ -1,0 +1,169 @@
+{
+  "episode_id": "20261030-licence-intro",
+  "language": "ur",
+  "version": 1,
+  "source": {
+    "url": "https://textbook.com.pk/ur/licence/",
+    "path_ur": "i18n/ur/docusaurus-plugin-content-docs-licence/current/index.mdx",
+    "sha256": "7267e6dbc73bbae7db3e7cbcbbf97ca8510f48e0cb37ddac64c440bd3184a863",
+    "captured_at": "2026-10-30T19:00:00Z",
+    "revision": "cb393b06e35573c0dbe34366fbbd60e5db866101",
+    "language": "ur",
+    "excerpts": [
+      {
+        "id": "E1",
+        "text": "سندھ ٹیچنگ لائسنس سندھ ٹیچر ایجوکیشن ڈویلپمنٹ اتھارٹی (STEDA) ان اساتذہ کو جاری کرتی ہے\nجو لائسنس ٹیسٹ پاس کریں۔"
+      },
+      {
+        "id": "E2",
+        "text": "علم اور تدریسی مہارت دونوں کو جانچتا ہے (STEDA، 2023)۔"
+      },
+      {
+        "id": "E3",
+        "text": "پرائمری (ADE رکھنے والوں کے لیے) جماعت 1 سے 5 تک پڑھانے کا اہل بناتا ہے،\n  ایلیمنٹری (بی ایڈ ایلیمنٹری) جماعت 1 سے 8 تک، اور سیکنڈری (بی ایڈ سیکنڈری) جماعت 6 سے 12 تک۔"
+      },
+      {
+        "id": "E4",
+        "text": "قسم آپ کی ڈگری کے مطابق ہے، اس لیے ADE یا بی ایڈ کا فارغ\n  التحصیل صرف ڈگری کی بنیاد پر درخواست دے سکتا ہے۔ حصہ دوم اس کا بڑا حصہ جانچتا ہے جو بی ایڈ\n  پہلے سے پڑھاتا ہے۔"
+      },
+      {
+        "id": "E5",
+        "text": "پہلے سے پڑھانے والے اساتذہ تجربے کے ساتھ درخواست دے سکتے ہیں:\n  پرائمری کے لیے ADE اور دو سال؛ ایلیمنٹری یا سیکنڈری کے لیے بی ایڈ، ایم ایڈ یا ایم اے\n  ایجوکیشن اور تین سال۔ نجی اسکولوں کے برسرِ کار اساتذہ بھی درخواست دے سکتے ہیں۔"
+      },
+      {
+        "id": "E6",
+        "text": "STEDA سے منظور شدہ مسلسل پیشہ ورانہ ترقی (CPD) کے کم از کم\n  پانچ کریڈٹ آورز کا ثبوت دینے پر لائسنس کی مزید پانچ سال کے لیے تجدید ہوتی ہے۔"
+      },
+      {
+        "id": "E7",
+        "text": "پالیسی اساتذہ کی بھرتی کے لیے ایک کم از کم معیار قائم کرتی ہے، جس سے\n  تدریس ایک زیادہ پرکشش پیشہ بنے گی، اور کہتی ہے کہ یہ لائسنس اساتذہ کے کیریئر اور مقام کو\n  بہتر بنانے میں مدد دے گا۔"
+      },
+      {
+        "id": "E8",
+        "text": "ہر مقصد کا ایک صفحہ ہے۔ وہ بتاتا ہے کہ ٹیسٹ کیا پوچھتا ہے، امتحانی نقطۂ نظر سے خلاصہ دیتا\nہے، اور ایک یا دو مشقی CRQ اور معیارِ جانچ پر ختم ہوتا ہے۔"
+      }
+    ]
+  },
+  "learning_objective": {
+    "ur": "دیکھنے والا جان لے کہ سندھ ٹیچنگ لائسنس کیا ہے، کون درخواست دے سکتا ہے، اور یہ موجودہ اور مستقبل کے اساتذہ کے لیے کیوں اہم ہے۔",
+    "en": "Know what the Sindh Teaching Licence is, who can apply, and why it matters to current and future teachers."
+  },
+  "on_screen_title_ur": "ٹیچنگ لائسنس کیوں اہم ہے",
+  "lines": [
+    {
+      "id": "L01",
+      "segment": "hook",
+      "speaker": "shagird",
+      "text_ur": "استانی جی، ٹیچنگ لائسنس کی تیاری آخر کیوں کروں؟",
+      "delivery": "curious",
+      "gesture": "explain",
+      "visual": {
+        "kind": "character_only"
+      }
+    },
+    {
+      "id": "L02",
+      "segment": "beat1",
+      "speaker": "ustani",
+      "text_ur": "یہ لائسنس STEDA دیتا ہے، ایک ٹیسٹ پاس کرنے پر، جو علم اور تدریسی مہارت دونوں جانچتا ہے۔",
+      "delivery": "warm",
+      "source_excerpt_ids": [
+        "E1",
+        "E2"
+      ],
+      "gesture": "explain",
+      "visual": {
+        "kind": "character_only"
+      }
+    },
+    {
+      "id": "L03",
+      "segment": "beat1",
+      "speaker": "ustani",
+      "text_ur": "اس کی تین قسمیں ہیں: پرائمری، ایلیمنٹری اور سیکنڈری، جماعت ایک سے بارہ تک۔",
+      "delivery": "clear, unhurried",
+      "source_excerpt_ids": [
+        "E3"
+      ],
+      "gesture": "point",
+      "visual": {
+        "kind": "character_only"
+      }
+    },
+    {
+      "id": "L04",
+      "segment": "beat2",
+      "speaker": "ustani",
+      "text_ur": "بی ایڈ کے بعد صرف ڈگری پر درخواست دیجیے؛ ٹیسٹ کا بڑا حصہ بی ایڈ ہی میں پڑھایا جاتا ہے۔",
+      "delivery": "encouraging",
+      "source_excerpt_ids": [
+        "E4"
+      ],
+      "gesture": "explain",
+      "visual": {
+        "kind": "character_only"
+      }
+    },
+    {
+      "id": "L05",
+      "segment": "beat2",
+      "speaker": "ustani",
+      "text_ur": "پڑھانے والے اساتذہ، نجی اسکولوں کے بھی، دو یا تین سال کے تجربے کے ساتھ درخواست دے سکتے ہیں۔",
+      "delivery": "warm",
+      "source_excerpt_ids": [
+        "E5"
+      ],
+      "gesture": "point",
+      "visual": {
+        "kind": "character_only"
+      }
+    },
+    {
+      "id": "L06",
+      "segment": "beat3",
+      "speaker": "ustani",
+      "text_ur": "لائسنس پانچ سال کا ہے، اور پیشہ ورانہ تربیت سے اس کی تجدید ہوتی ہے۔",
+      "delivery": "warm",
+      "source_excerpt_ids": [
+        "E6"
+      ],
+      "gesture": "think",
+      "visual": {
+        "kind": "character_only"
+      }
+    },
+    {
+      "id": "L07",
+      "segment": "recap",
+      "speaker": "shagird",
+      "text_ur": "اچھا! یعنی یہ لائسنس میرے کیریئر اور مقام کو بہتر بنائے گا!",
+      "delivery": "excited",
+      "source_excerpt_ids": [
+        "E7"
+      ],
+      "gesture": "celebrate",
+      "visual": {
+        "kind": "character_only"
+      }
+    },
+    {
+      "id": "L08",
+      "segment": "cta",
+      "speaker": "shagird",
+      "text_ur": "مشقی سوال اور معیارِ جانچ، یعنی Rubric، لائسنس ٹریک پر ہیں۔ آج ہی تیاری شروع کیجیے!",
+      "delivery": "upbeat",
+      "source_excerpt_ids": [
+        "E8"
+      ],
+      "gesture": "point",
+      "visual": {
+        "kind": "character_only"
+      }
+    }
+  ],
+  "cta": {
+    "template_id": "licence-prep",
+    "text_ur": "ٹیچنگ لائسنس کی مکمل تیاری مفت - textbook.com.pk پر۔",
+    "url": "https://textbook.com.pk/ur/licence/"
+  }
+}

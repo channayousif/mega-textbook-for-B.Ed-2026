@@ -1,0 +1,20 @@
+{
+  "episode_id": "20261030-licence-intro",
+  "topic_id": "licence-intro",
+  "series": "licence",
+  "status": "script_review",
+  "created_at": "2026-10-30T19:00:00Z",
+  "mode": "production",
+  "source_url": "https://textbook.com.pk/ur/licence/",
+  "source_sha256": "7267e6dbc73bbae7db3e7cbcbbf97ca8510f48e0cb37ddac64c440bd3184a863",
+  "script_version": 1,
+  "history": [
+    {
+      "at": "2026-10-30T19:00:00Z",
+      "from": "queued",
+      "to": "script_review",
+      "by": "claude",
+      "note": "Licence track episode 1 drafted by Claude from the \"ٹیچنگ لائسنس کیوں اہم ہے\" section (PR #382, revision cb393b06); awaiting pedagogy and Urdu reviews and the owner script gate"
+    }
+  ]
+}
