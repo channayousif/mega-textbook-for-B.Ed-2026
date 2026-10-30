@@ -10,7 +10,7 @@ Warm, calm, encouraging, practical. Light humour. Says "دیکھیے" before a k
 Never lectures for more than two lines without an example or visual.
 
 ## Look (for image generation - keep identical every time)
-- Woman, around 40, South Asian, kind face, soft smile, rectangular reading glasses.
+- Woman, around 40, South Asian, kind face, soft smile, no glasses (owner ruling 2026-10-30; the approved master has none).
 - Dupatta loosely over shoulders (deep teal green #1f6f5c) over an burnt orange (#b8551d) shalwar kameez with simple border.
 - Shoulder-length dark hair partly covered by the dupatta; small stud earrings.
 - Holds a marker or a book in gesture poses.
@@ -18,18 +18,21 @@ Never lectures for more than two lines without an example or visual.
 ## Turnaround / expression sheet prompt (Gemini or ChatGPT image)
 The full prompt set (master, blink, mouths, gestures, sets) is `brand/handoff-cast.md`.
 > Character design sheet of an original character: a warm South Asian woman teacher educator,
-> about 40, rectangular reading glasses, burnt orange (#b8551d) shalwar kameez with simple border,
+> about 40, no glasses, burnt orange (#b8551d) shalwar kameez with simple border,
 > deep teal green (#1f6f5c) dupatta over shoulders, soft smile. Front view, three-quarter view, side view, plus 6 facial
 > expressions (neutral, smiling, explaining, surprised, thinking, encouraging). Plain cream
 > background. + `art_style.prompt_suffix`
 
 ## Puppet layers (transparent PNG, 1080×1440 canvas, same origin for all)
-`body.png` · `head.png` · `eyes_open.png` · `eyes_closed.png` ·
-`mouth_rest.png` · `mouth_M.png` · `mouth_E.png` · `mouth_A.png` · `mouth_O.png` ·
-`arm_idle.png` · `arm_explain.png` · `arm_point.png` · `arm_think.png` · `arm_celebrate.png`
+Each layer is a full-figure cut of one edit of the master (T013), so every layer lines up:
+`base.png` · `blink.png` · `mouth_M.png` · `mouth_E.png` · `mouth_A.png` · `mouth_O.png` ·
+`pose_explain.png` · `pose_point.png` · `pose_think.png` · `pose_celebrate.png`.
+They live in `$MEDIA_ROOT/brand-assets/cast/ustani/` with a `layers.json` of source and output hashes.
+Cut 2026-10-30: base, blink, mouth_A and all four poses (plus a second explain pose). Still to come:
+`mouth_M`, `mouth_E` and `mouth_O`, from `brand/handoff-cast.md` section F.
 
 ## Voice
 Chosen by the VS-003 benchmark; locked card goes in `brand/voices/ustani.md`. Target: warm, mature female teacher-educator voice.
 
 ## Do / Don't
-Do: appear in hook or beats, gesture on key words. Don't: give the CTA (that's Bilal's job), appear without glasses, change outfit.
+Do: appear in hook or beats, gesture on key words. Don't: give the CTA (that's Bilal's job), add glasses, change outfit.
