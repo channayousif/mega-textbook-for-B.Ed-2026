@@ -1,0 +1,1 @@
+Current render review was not executed: .crew/brief.md prohibits npm run build, dev servers and Playwright. Desktop, 360px and A4 print appearance, keyboard table reachability and SVG glyph geometry remain unverified. No historical screenshot is relabelled as current evidence.

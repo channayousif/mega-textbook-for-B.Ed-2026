@@ -1,0 +1,5 @@
+
+> bed-mega-textbook@0.1.0 build:content-status
+> node scripts/report-content-status.mjs
+
+✓ Wrote content status for 12 course(s) to static/content-status.json
