@@ -14,7 +14,7 @@ links:
   spec: specs/001-urdu-shorts-pipeline/tasks.md
   ticket: null
   adr: null
-  pr: null
+  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/384
 files:
  - video-studio/episodes/20261030-licence-intro/script.json
  - (merge of feature/video-studio-cast-cut: T041 puppet files from PR #381)
