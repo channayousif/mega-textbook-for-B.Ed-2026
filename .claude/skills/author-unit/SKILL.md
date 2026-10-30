@@ -132,6 +132,8 @@ The nine canonical `##` headings, **in this exact order** (contract: `contracts/
    `## Explanation` - **≥ 2 markers per topic file**, and the unit as a whole needs **≥ 1
    `concept-map` / `flowchart` / `timeline`** (Constitution Art. III.10). Name the archetype for
    each in the content-spec `**Figure plan**` - see `references/figure-prompts.md`.
+   Never plan a freehand "map-style" schematic of a real place: a map is a sourced figure
+   (ADR-0033), so its marker says "sourced map" and names the data to use.
 2. `## Explanation` - the teaching. A `### …` sub-heading per sub-topic ID in this topic's
    slice; ~one concrete Pakistan-grounded example per sub-topic; paraphrase-and-cite the mapped
    readings; **name and correct this topic's misconception here**. Define new terms on first

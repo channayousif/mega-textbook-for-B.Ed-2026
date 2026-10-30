@@ -34,7 +34,12 @@ loadEnv({ path: '.env.local', quiet: true });
  */
 export default defineConfig({
   testDir: './tests/e2e',
-  timeout: 30_000,
+  // CI gets double the per-test and per-assertion time. Its Supabase backend
+  // shares a 2-CPU host with production and the crew, and under that load
+  // Supabase-backed specs rotated through 30s timeouts on 2026-10-28/29 with
+  // no code cause. Local runs keep the tight defaults.
+  timeout: process.env.CI ? 60_000 : 30_000,
+  expect: { timeout: process.env.CI ? 10_000 : 5_000 },
   // Retries in CI only, never locally, so a genuinely broken feature still
   // fails every attempt. NOTE: a CI failure on assignments-publish-submit.spec.ts
   // reproduced identically on the original run AND both retries (PR #4) —

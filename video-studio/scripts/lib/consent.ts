@@ -3,6 +3,7 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { digestText } from './hash.ts';
+import { FX_PRESETS } from './voice-fx.ts';
 
 export const CONSENT_ID_RE = /^narrator-\d{2}$/;
 
@@ -13,6 +14,8 @@ export interface VoiceCard {
   consent_id: string | null;
   reference_sha256: string | null;
   card_sha256: string;
+  /** Tone shaping and tempo applied at import (VS-ADR-0014), from the card's Post-processing line. */
+  post: { preset: string; tempo: number } | null;
 }
 
 export function readVoiceCard(voicesDir: string, character: string): VoiceCard {
@@ -25,12 +28,22 @@ export function readVoiceCard(voicesDir: string, character: string): VoiceCard {
   const status = /^- \*\*Status:\*\*(.*)$/m.exec(md)?.[1] ?? '';
   const licence = /^- \*\*Licence \/ consent:\*\*(.*)$/m.exec(md)?.[1] ?? '';
   const reference = /^- \*\*Reference:\*\*(.*)$/m.exec(md)?.[1] ?? '';
+  const postLine = /^- \*\*Post-processing:\*\*(.*)$/m.exec(md)?.[1];
+  let post: VoiceCard['post'] = null;
+  if (postLine !== undefined && !/^\s*none\b/i.test(postLine)) {
+    const preset = /preset `([a-z_]+)`/.exec(postLine)?.[1];
+    const tempo = Number(/tempo `([0-9.]+)`/.exec(postLine)?.[1] ?? 1);
+    if (!preset || !FX_PRESETS[preset]) throw new Error(`${path}: Post-processing names no known preset (${Object.keys(FX_PRESETS).join(', ')})`);
+    if (!(tempo >= 0.8 && tempo <= 1.25)) throw new Error(`${path}: Post-processing tempo ${tempo} outside 0.8-1.25`);
+    post = { preset, tempo };
+  }
   return {
     character, name,
     cleared: /\*\*Cleared to publish\*\*/.test(status),
     consent_id: /consent `(narrator-\d{2})`/.exec(licence)?.[1] ?? null,
     reference_sha256: /SHA-256 `([a-f0-9]{64})`/.exec(reference)?.[1] ?? null,
     card_sha256: digestText(md),
+    post,
   };
 }
 
