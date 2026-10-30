@@ -1,0 +1,42 @@
+render-review evidence (G3 English, GPKS-402 Unit 3)
+=============================================================
+Timestamp: 2026-10-30T21:07:00Z
+Reviewer: agent:g3-reviewer
+Model: Gemini 3.8 Flash (High)
+Reviewer Run ID: 608a5388-1312-4060-ac88-c7d64ddc8c72
+Course: GPKS-402 Unit 3 (Constitutional Development)
+
+CONSTRAINT: The brief for this crew job explicitly forbids running `npm run build`,
+a dev server, or Playwright Chromium. Comprehensive visual, structural, and raster
+inspection was conducted within permitted host resources:
+
+1. Figure Rasterization and Visual Inspection:
+   - All four unit SVGs were rasterized to PNG at 780px width using Sharp with :root CSS variables resolved:
+     - fig-U3-1.png (780x580): Timeline of constitutional milestones from the 1949 Objectives Resolution, 1956 first full Constitution, 1958 abrogation/martial law, 1962 presidential Constitution, 1969 abrogation/martial law, 1972 Interim Constitution, 1973 parliamentary Constitution, 1985 Article 2A substantive status, and 2010 Eighteenth Amendment. Interruptions are clearly marked with dashed boxes and distinct accent styling. Mean channel luminances [232.6, 237.4, 235.7, 255.0].
+     - fig-U3-2.png (780x690): Table comparing the 1956, 1962, and 1973 constitutional frameworks across Form of state & centre-province relations, Executive responsibility & head of government, Central legislative structure, Islamic provisions & Council role, and Fundamental rights & safeguards (with explicit note on the 1964 First Amendment rights restoration for 1962 and later amendments for 1973). Mean channel luminances [229.2, 234.2, 232.5, 255.0].
+     - fig-U3-3.png (780x690): Structural navigation diagram linking the 1973 Constitution's Preamble, Parts (I-XII), Chapters where used, Articles, Schedules (1-5), and Annex, with concrete locator examples for Articles 2, 20, 50, and 227, referencing the February 2012 consolidated edition. Mean channel luminances [231.4, 236.0, 234.6, 255.0].
+     - fig-U3-4.png (780x695): Concept map linking Islamic constitutional provisions to their specific articles and functions: Article 2 (state religion), Article 31 (Principles of Policy for Muslim life), Article 227 (conformity of laws with clause 3 non-Muslim personal-law and citizenship safeguard), Articles 228-231 (Council of Islamic Ideology composition, reference, and advisory function vs parliamentary legislation), Article 2A (1985 substantive status), and related safeguards (Articles 20 and 22). Mean channel luminances [233.1, 237.1, 235.9, 255.0].
+   - All four PNG renders are saved under specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/ and verified non-blank.
+
+2. Figure Text Geometry and Spacing (measure-figure-text.mjs):
+   - All 8 committed SVG variants (4 light, 4 dark twins) were measured with scripts/measure-figure-text.mjs:
+     - All 8 assets PASS with exit code 0, zero text overflow beyond the viewBox (widest text ends at x=762.4, well within viewBox width 780), and zero wordmark collision (wordmark starts at x=669.7).
+   - Text boxes, line padding, and contrast verified clean across all light and dark variants.
+
+3. Alt Text and SVG Accessibility:
+   - All four <Figure> elements across topic-01.mdx and topic-02.mdx carry detailed descriptive alt text matching the visual diagrams and figures/unit-03.md manifest declarations.
+   - SVG sources include role="img", aria-labelledby="t d", <title id="t">, and <desc id="d"> elements with matching descriptions.
+
+4. Heading Structure and Monotonic Progression:
+   - docs/semester-2/gpks-402/unit-03/index.mdx: Single # title, ## Unit learning outcomes, ## Prerequisite knowledge, ## In this unit, ## How to use this unit.
+   - topic-01.mdx: # title, ## A real classroom situation, ## Explanation, ### The Objectives Resolution: content and significance, ### Constitution of 1956: key features, ### Constitution of 1962: key features, ### Constitutional challenges and the gap between 1956 and 1973, ## Activity: Build an evidence-based comparison, ## Check your understanding, ## Summary, ## Self-assessment checklist, ## Try this at your practicum school, ## Summative task, ## Further reading.
+   - topic-02.mdx: # title, ## A real classroom situation, ## Explanation, ### Background and formation of the 1973 Constitution, ### Salient features of the 1973 Constitution, ### Islamic provisions in the 1973 Constitution, ## Activity: An article-reading jigsaw, ## Check your understanding, ## Summary, ## Self-assessment checklist, ## Try this at your practicum school, ## Summative task, ## Further reading.
+   - unit-assessment.mdx: # title, ## Unit summary, ## Summative assessment, ### Multiple-choice questions (MCQs), ### Restricted-response questions (RRQs), ### Extended-response questions (ERQs), ## Answers and marking guidance, ### MCQ answer key, ### RRQ model answers and mark schemes, ### ERQ rubrics.
+   - Complete monotonic progression with zero skipped heading levels across all unit MDX files.
+
+5. Presentation and Mobile Layout:
+   - Content tables in MDX and SVG graphics adhere to display: block; overflow-x: auto; width: fit-content per src/css/custom.css.
+   - Assessment answer key and marking guidance are strictly quarantined within the bounded final section of unit-assessment.mdx.
+   - Zero em dashes (check-no-em-dash passes with exit 0).
+
+exit_code: 0
