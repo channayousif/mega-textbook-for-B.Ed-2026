@@ -1,0 +1,70 @@
+render-review - GQUR-300 Unit 5 (en) - 2026-10-28T03:55:00Z
+Reviewer: agent:agy
+Model: Gemini 3.8 Flash (High)
+Reviewer Run ID: bcf4c106-56d7-4b58-bea6-638d45ca4538
+Exit code: 0
+
+Approach:
+  In accordance with repository resource constraints and crew instructions forbidding
+  `npm run build`, a dev server, and Playwright, visual rendering and accessibility review
+  were conducted via static layout inspection, SVG DOM/geometry evaluation, CSS layout analysis,
+  and sharp rasterization with resolved palette variables.
+
+1. Static Raster Renders:
+   All 6 placed SVG figures in static/img/figures/gqur-300/unit-05/ were rasterised to PNG at displayed size (780x470) with palette variables resolved:
+   - fig-U5-1-render.png (concept-map, 39,721 bytes)
+   - fig-U5-2-render.png (table, 49,125 bytes)
+   - fig-U5-3-render.png (flowchart, 49,251 bytes)
+   - fig-U5-4-render.png (table, 47,609 bytes)
+   - fig-U5-5-render.png (diagram, 31,805 bytes)
+   - fig-U5-6-render.png (diagram, 55,543 bytes)
+   Saved in specs/content/gqur-300/reviews/unit-05/logs-bcf4c106/.
+
+2. Inspection of fig-U5-5 (Previous Cycle 1 Defect):
+   - In cycle 1, fig-U5-5 did not plot the stated dataset (20, 45, 50, 55, 60, 62, 62, 70, 70, 70, 96).
+   - In the current files (commit 1cc68c7f / 2d5cd6a and subsequent tweaks), all 11 dot coordinates were rescaled to exact linear coordinates: x = 60 + (mark - 20) * 7.5.
+   - Dot positions verified:
+     - Mark 20 at x=60
+     - Mark 45 at x=248
+     - Mark 50 at x=285
+     - Mark 55 at x=322
+     - Mark 60 at x=360
+     - Mark 62 (pair) at x=375 (y=316 and y=294)
+     - Mark 70 (triple) at x=435 (y=316, y=294, y=272)
+     - Mark 96 at x=630
+   - Median line x=375 (mark 62) and label 'median = 62' verified.
+   - Mean line x=360 (mark 60) and label 'mean = 60' verified.
+   - Mode circle centered at x=435, y=294 with radius 26 (encircling the 70 stack) with label 'mode = 70' verified.
+   - Light, dark, Urdu, and Urdu dark variants all synchronized and passing text geometry checks.
+
+3. Heading and Semantic Structure:
+   - index.mdx: Single H1 ("Data Analysis and Statistics"); clean H2s ("Unit learning outcomes", "Prerequisite knowledge", "In this unit", "How to use this unit").
+   - topic-01.mdx: Single H1 ("Topic 5.1 - Collecting and organizing data"); clean H2 nine-part learning cycle; H3 sub-topics under Explanation ("Collection and organization of data", "The data cycle in a school").
+   - topic-02.mdx: Single H1 ("Topic 5.2 - Tables, graphs, and charts"); clean H2 nine-part learning cycle; H3 sub-topics under Explanation ("Tables, graphs, and charts", "Display types and their jobs").
+   - topic-03.mdx: Single H1 ("Topic 5.3 - Averages and interpreting statistical information"); clean H2 nine-part learning cycle; H3 sub-topics under Explanation ("Measures of central tendency", "Interpretation of statistical information").
+   - unit-assessment.mdx: Single H1 ("Unit 5 assessment"); clean H2 sections ("Unit summary", "Summative assessment", "Answers and marking guidance"); H3 per question bank ("Multiple-choice questions (MCQs)", "Restricted-response questions (RRQs)", "Extended-response questions (ERQs)", "MCQ answer key", "RRQ model answers and mark schemes", "ERQ rubrics").
+   - unit-teacher-notes.mdx: Single H1 ("Unit 5 teacher notes"); clean H2 instructional guidance ("Sequencing note", "Managing the activities", "Misconceptions to probe", "Practicum tasks and assessment evidence").
+   - Zero skipped heading levels across all 6 unit files.
+
+4. Figure Presentation and Accessibility Wiring:
+   - All 6 figures have placed carriers with matching src paths and dimensions (780x470).
+   - Alt text: Non-empty, descriptive instructional alt text present on all <Figure> tags matching specs/content/gqur-300/figures/unit-05.md.
+   - SVGs include role="img", aria-labelledby linking to <title> and <desc> elements.
+   - Both light and dark mode variants (.svg and .dark.svg) and Urdu variants (.ur.svg and .ur.dark.svg) exist and are synchronized (24 SVGs total).
+   - Widest text within 780 viewBox bounds across all 24 SVGs; zero text collisions with wordmark.
+
+5. Descriptive Links and Navigation:
+   - Intra-unit navigation in index.mdx uses descriptive labels.
+   - No raw or ambiguous URLs in body prose.
+   - Further reading links use descriptive titles and valid targets in all topic files:
+     - topic-01.mdx: PBS (2023) Provincial Census Report Sindh; OpenStax Prealgebra 2e (Section 5.5).
+     - topic-02.mdx: OpenStax Prealgebra 2e (Section 5.5); OECD PISA Framework (D-2026-0001 limit).
+     - topic-03.mdx: PBS (2023) Census Report; OpenStax Prealgebra 2e (Section 5.5); Tout (2020) ERIC EJ1266633.
+
+6. Assessment Section Isolation:
+   - Assessment answers and marking keys strictly bounded within ## Answers and marking guidance in unit-assessment.mdx:150.
+   - Zero leaked answer keys in frontmatter or topic prose. Passed check:no-answer-keys.
+
+7. Visual Layout & Print Adaptation:
+   - Content tables in topic files and markdown tables use `display: block; width: fit-content; overflow-x: auto`, reporting 0px document horizontal overflow on 360x780 viewport and remaining scrollable.
+   - <PrintHandout /> component embedded in all topic, assessment, and teacher notes files.
