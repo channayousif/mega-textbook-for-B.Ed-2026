@@ -27,6 +27,7 @@ const id = assertEpisodeId(sample ? (voice ? SAMPLE_VOICE_EPISODE_ID : SAMPLE_EP
 
 let props;
 let episodeAudio: Record<string, Buffer> = {};
+let episodeImages: Record<string, Buffer> = {};
 if (sample) {
   props = voice ? sampleVoiceProps() : sampleProps();
 } else {
@@ -41,6 +42,7 @@ if (sample) {
   const built = episodeProps(ep, script, { manual: readManualAlignment(id) });
   props = built.props;
   episodeAudio = built.audio;
+  episodeImages = built.images;
   console.log(`kaggle:pack: ${props.lines.length} lines, ${props.duration_s} s; alignment ${JSON.stringify(built.alignment)}`);
 }
 
@@ -68,6 +70,10 @@ copyFileSync(join(REPO_ROOT, 'static', 'fonts', 'NotoNastaliqUrdu-Regular.woff2'
 mkdirSync(join(pub, 'audio'), { recursive: true });
 if (props.audio) writeFileSync(join(pub, props.audio), toneWav(props.duration_s));
 for (const [rel, bytes] of Object.entries(episodeAudio)) writeFileSync(join(pub, rel), bytes);
+for (const [rel, bytes] of Object.entries(episodeImages)) {
+  mkdirSync(dirname(join(pub, rel)), { recursive: true });
+  writeFileSync(join(pub, rel), bytes);
+}
 writeFileSync(join(stage, 'props.json'), JSON.stringify(props, null, 2) + '\n');
 
 const manifestFiles: Record<string, string> = {};
