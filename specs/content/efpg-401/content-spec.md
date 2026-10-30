@@ -421,9 +421,9 @@ Guide section 6 (`:83-88`). Unit Spec (G1) for `docs/semester-3/efpg-401/unit-06
 Guide section 7 (`:90-92`). Unit Spec (G1) for `docs/semester-3/efpg-401/unit-07/`.
 
 - **CLO/SLO refs**: `SLO:EFPG-401-7-1` (constructing objective-type and subjective-type tests of English) - traces to guide objective 6.
-- **Key terms**: Objective-type test, Subjective-type test, Item, Marking scheme.
+- **Key terms**: Objective-type test, Subjective-type test, Item, Marking rubric.
 - **Topics**: 7.1 Construction of objective type test; 7.2 Construction of subject type test.
-- **Assessment blueprint**: formative 5-8 items (Remember/Understand/Apply); summative includes one Create-level item asking the learner to write a short English test with both item types and a marking scheme. Weighting: 60/40 default.
+- **Assessment blueprint**: formative 5-8 items (Remember/Understand/Apply); summative includes one Create-level item asking the learner to write a short English test with both item types and a marking rubric. Weighting: 60/40 default.
 
 ### Sub-topic checklist
 
@@ -451,7 +451,7 @@ Guide section 7 (`:90-92`). Unit Spec (G1) for `docs/semester-3/efpg-401/unit-07
   - fig-U7-1 - `table` - objective item types (multiple choice, true/false, matching, fill in the blank) with rules for writing each (Topic 7.1)
   - fig-U7-2 - `flowchart` - writing a multiple-choice item: outcome, stem, key, distractors, check (the unit's required schematic) (Topic 7.1)
   - fig-U7-3 - `table` - objective and subjective tests compared on what they measure, marking and reliability (Topic 7.2)
-  - fig-U7-4 - `diagram` - an essay question with its analytic marking scheme (Topic 7.2)
+  - fig-U7-4 - `diagram` - an essay question with its analytic marking rubric (Topic 7.2)
 
 **Unit-end assessment blueprint**:
   - MCQs (10): Remember to Apply; >= 2 per topic
