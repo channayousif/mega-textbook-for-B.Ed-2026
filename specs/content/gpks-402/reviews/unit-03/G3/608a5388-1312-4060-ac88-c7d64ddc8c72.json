@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "course_code": "GPKS-402",
+  "unit_no": 3,
+  "stage": "G3",
+  "disposition": "pass",
+  "reviewer_id": "agent:g3-reviewer",
+  "author_run_id": "commit:ccb03c76",
+  "reviewer_run_id": "608a5388-1312-4060-ac88-c7d64ddc8c72",
+  "model": "Gemini 3.8 Flash (High)",
+  "started_at": "2026-10-30T21:00:30.000Z",
+  "completed_at": "2026-10-30T21:08:00.000Z",
+  "skill_digest": "eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b",
+  "rulings": {
+    "D-2026-0001": "bfd5624024eb20bb942f84aa16e29fdb18bb0afd93455f00a066a8c3878f379d"
+  },
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g3.md": "074c8464b4bc0f2f2b76bbb19707c50b54cb907920407873a4e5d193e866f53f",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "715b493fec67701dfb45e2ac65749c5fc9069161aadd27a8397a72d89c0874da",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/licence-page.schema.json": "3fc99078935af7419b4545d21c7d77d66e80ed847755df38ddc500ee35775a3c",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-2/gpks-402/course-overview.mdx": "95b337787f3b87f6582223affc6d107c27c4c7d87563d663267fcef54ab5b3c6",
+    "docs/semester-2/gpks-402/unit-03/index.mdx": "93ce751c1af7dbdc75402fc1487e59771070da73b06d726199756d6d4978f7ad",
+    "docs/semester-2/gpks-402/unit-03/topic-01.mdx": "8b05947c801c720eac3927d2ac024e6c601a62c47dd5e740eee68f42a408e828",
+    "docs/semester-2/gpks-402/unit-03/topic-02.mdx": "5ec68710d2cdc182f4708f6acb7d68731c1dd8144f417beaed06a1c162184f3a",
+    "docs/semester-2/gpks-402/unit-03/unit-assessment.mdx": "f6e4140c91dca8bf93852db94215e53694bbb14c04057522cf83e5246b166648",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "dfaa7045af0a9199dba81a06dab16963cce6221905c506afb73f60fb8ced9625",
+    "scripts/check-no-answer-keys.mjs": "8d3f8cac335c50774ee622d61cb37d987c0393c99e54eff31f2bd042625a78c3",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "8ce3a62bd80534181cf1d74fa92bc3ea2b5d937b3f528e96c2a3e20c5a87047a",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "cc33a878d98865149b248c6a524be4e9d294293ddfaecc443dc19b7ace6af7cf",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "26edbdd3d86edf7587cbf8e01f0b0cbe45e19428827da34e26cfd0534f34f1b9",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/gpks-402/authoring/unit-03.md": "ee0e22c0b24dd5c14ee3b4e1c9f7ec492ab45d4db012281fedc18dcfdfc91472",
+    "specs/content/gpks-402/concepts/unit-03.md": "f914c7fe658fd26e4619d6c66148aaff122613dbbe460ae926ccea40496390e0",
+    "specs/content/gpks-402/content-spec.md": "497a60f26886a755a0ce4504547dc92a292f0bb9e7cfe16fa59a80ac68685f75",
+    "specs/content/gpks-402/coverage/unit-03.md": "f33f393517a7c35cf2c895df58670c458b015375373b399a919fafbee9ed9e3b",
+    "specs/content/gpks-402/figures/unit-03.md": "79d1dbf173fde9d265ac48f95176adfe1c109e80715ff8ac022aff59155dddb6",
+    "specs/content/gpks-402/intake-20261023/evaluation.md": "7ae6ab4ce6b43950ca2af06b76ed786407589995f7f09676352f6413768f5069",
+    "specs/content/gpks-402/intake-20261023/manifest.json": "e633596784c6c1c014eecd580fb32f79e19c18f19df8df5b89540941e03e9811",
+    "specs/content/gpks-402/intake-20261023b/evaluation.md": "cc99eac340dd136b7a62a671e3524ef85a4e165205e722f865a3f388742d8fb3",
+    "specs/content/gpks-402/intake-20261023b/manifest.json": "d6d8c78df7cd8dcc882f3646fba3bf8765100de9c1776c4bd9a3a5f8e1ebd795",
+    "specs/content/gpks-402/intake-20261023c/evaluation.md": "44d74f5c3c7e0d17f957486330f5f057bb3d25959ab2799a64ae463c29d829ba",
+    "specs/content/gpks-402/intake-20261023c/manifest.json": "a3085ca89b3a778a14813bb360e9cd918c8969fd2fe7165594309523ae89ebf2",
+    "specs/content/gpks-402/intake-88/evaluation.md": "d11e18019ca1092850f81ca06456ebeeaa3fb17322ca7e5c8b9374190076860e",
+    "specs/content/gpks-402/intake-88/manifest.json": "8ca51cce91435d07a7b8e33c0795ec080bbd41d8c088e08b8db660fcec45fb26",
+    "specs/content/gpks-402/sources/texts/constitution-1956.md": "96b3091e7bd055418f0b68f13440e0b5b4f07647704bdc3b53bb0a822c10275e",
+    "specs/content/gpks-402/sources/texts/constitution-1962.md": "3efb4678b8ab1f28f1fb4783ba3eda8d62c8b322996465c2391bc422362a5fb8",
+    "specs/content/gpks-402/sources/texts/first-amendment-1962.md": "7e9dcc81ae6d77765d2c900620b73dc56a1aa8fd0578389aaded141a010b7137",
+    "specs/content/gpks-402/sources/texts/pak-constitution-1973.md": "1e1c81dc0893b4839a9f1ad246cbed983502313e0ac277a830095b283a5d39fc",
+    "specs/content/gpks-402/sources/unit-03.md": "0bf0c1959d7457643476c0ab40c7970c56234003ea67a07610a522a16c23171e",
+    "specs/content/gpks-402/sources/unit-03/constitution-notes.md": "9635647469ea581cd809cd031d6f09aa31f573d9cf0f19e2e8b7fa1c886a158d",
+    "specs/content/style-guide.md": "79f6cafc03b436c0e77c49ea658ef9a7a4de408b5c42020be39011a02a00dd7f",
+    "static/img/figures/gpks-402/unit-03/fig-U3-1.dark.svg": "c643d360b7e5342df43521aa1c15a285d56dacc20ffa12039dd2f653e26fdf47",
+    "static/img/figures/gpks-402/unit-03/fig-U3-1.svg": "d4e54a22320a9b41c31d19f2ea28c5892b28389c49c164d5b38790524581953a",
+    "static/img/figures/gpks-402/unit-03/fig-U3-2.dark.svg": "963c198e0dfa9e4fe8737396a89e8679df3b46f9c82009a1c64efde3583cd17f",
+    "static/img/figures/gpks-402/unit-03/fig-U3-2.svg": "bcef4a50b3465651a6bb587a7eb94fea91a6fae40d712ffd64c4dd114f3f0de4",
+    "static/img/figures/gpks-402/unit-03/fig-U3-3.dark.svg": "540efc96367c936377a76982740e40d5e342797646913bb2a8741ace24a8b765",
+    "static/img/figures/gpks-402/unit-03/fig-U3-3.svg": "945caf5dd3c817fc3b64fa740b65ff7f99c866bc8dc64eeda8a7cae674adbf0a",
+    "static/img/figures/gpks-402/unit-03/fig-U3-4.dark.svg": "264bb4c27308b5974ea1788af0c25e78778a4be6e6ff779f49d1a7e981793c0e",
+    "static/img/figures/gpks-402/unit-03/fig-U3-4.svg": "eb922d7df95e9c671b176f9038dae7e6e16ec3a50be05902776773881d655fc3"
+  },
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        "Scheme-and-Course-guides/extracted-text/2nd 2026.txt:1063-1068 (Week 5: Objectives Resolution, Constitutions of 1956 and 1962, constitutional challenges; Week 6: Constitution of 1973: background, salient features, Islamic provisions).",
+        "specs/content/gpks-402/content-spec.md:171-180 (Sub-topic checklist maps U3-01 through U3-07 to topics 3.1 and 3.2).",
+        "SLO:GPKS-402-3-1 and SLO:GPKS-402-3-2 trace directly to course guide objective 3 (line 1003); clo_refs frontmatter is consistent across all unit files.",
+        "Course code GPKS-402 conforms to the University of Sindh approved scheme of studies per G-2026-03 (content-spec.md:12).",
+        "All seven sub-topics are taught under dedicated ### headings in docs/semester-2/gpks-402/unit-03/topic-01.mdx and topic-02.mdx."
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "pass",
+      "evidence": [
+        "Open-access floor of 1 met; 6 primary and secondary open-access sources consulted, verified, and bound in specs/content/gpks-402/sources/unit-03.md.",
+        "National Assembly Parliamentary History (na-parliamentary-history): verifies 12 March 1949 Objectives Resolution adoption, 1956 parliamentary design, 1958 and 1969 abrogations, 1970 election, 1972 Interim Constitution, and April-August 1973 sequence.",
+        "Historical 1956 Constitution (constitution-1956): verifies Islamic Republic title, federal form, unicameral legislature, East-West parity, Prime Minister executive leadership (Articles 37 & 43), and Part II rights.",
+        "Historical 1962 Constitution (constitution-1962): verifies presidential system, cabinet responsibility to President, Basic Democracies electoral college, and Articles 199-206 advisory Council.",
+        "First Amendment Act, 1963 (Act I of 1964) (first-amendment-1962): verifies sections 1, 3-4, assent on 10 January 1964, immediate commencement, Islamic Republic title restoration, and fundamental rights chapter insertion.",
+        "National Assembly Constitution text amended to 28 February 2012 (pak-constitution-1973): verifies Articles 1, 2, 2A footnote, 8, 20, 22, 25, 25A footnote, 30-31, 41(2), 48, 50, 73, 90-91(3), 141-142, 153-154, 227-231, 238-239, Fourth Schedule, and Annex.",
+        "Hussain & Kokab (2012) (hussain-kokab-2012-18th): verified via Crossref DOI (10.5539/ass.v8n1p81); confirms abolition of Concurrent Legislative List, devolution of powers, insertion of Article 25A, and parliamentary restoration.",
+        "Print monographs (Hamid Khan 2017 and HEC Pakistan Studies) are declared under Mapped-reading limits per D-2026-0001 as guide-recommended further reading; all factual propositions are fully grounded in verified open-access sources."
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "All 7 sub-topics covered completely: U3-01 (Objectives Resolution), U3-02 (Constitution of 1956), U3-03 (Constitution of 1962), U3-04 (Constitutional challenges and gap), U3-05 (1973 Background and formation), U3-06 (Salient features of 1973), and U3-07 (Islamic provisions).",
+        "Coverage matrix at specs/content/gpks-402/coverage/unit-03.md accurately links all sub-topics to exact sections and source keys.",
+        "Reading-time budget: 76 minutes total (index.mdx: 3 min, topic-01.mdx: 25 min, topic-02.mdx: 25 min, unit-assessment.mdx: 23 min), falling strictly within the approved 70-95 minute depth budget (content-spec.md:188)."
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "pass",
+      "evidence": [
+        "Independent solution of all 25 assessment items prior to consulting the answer key; 10/10 derived MCQ answers (1-B, 2-C, 3-A, 4-D, 5-C, 6-B, 7-D, 8-A, 9-C, 10-B) match the supplied answer key 100%.",
+        "RRQs: 10 items (5 for Topic 3.1, 5 for Topic 3.2), each with concise model answers and 4-mark analytic rubrics requiring explanation of institutional mechanisms and representation.",
+        "ERQs: 5 items (2 for Topic 3.1, 2 for Topic 3.2, 1 integrative across all 3 constitutions), each carrying a 4-criterion analytic rubric (0-3 marks each, total 12 marks) with explicit Analyze/Evaluate/Create demand.",
+        "Bloom taxonomy: MCQs Remember to Apply, RRQs Understand to Analyze, ERQs Analyze to Evaluate/Create; check:bloom-bands exits 0.",
+        "Concept graph: all 25 items mapped to concepts in specs/content/gpks-402/concepts/unit-03.md:7-17; check:concept-graph exits 0.",
+        "Marking guidance and answer keys are strictly quarantined in the bounded final section; check:no-answer-keys exits 0."
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "pass",
+      "evidence": [
+        "Monotonic heading progression verified across all unit MDX files with zero skipped levels.",
+        "Alt text on all four <Figure> tags matches SVG <desc> text and figures/unit-03.md manifest declarations.",
+        "scripts/measure-figure-text.mjs exits 0 across all 8 SVG variants (4 light, 4 dark twins) with zero text overflow (widest text x=762.4, viewBox width 780) and zero wordmark collision (wordmark starts at x=669.7).",
+        "All four SVGs rasterized to PNG at 780px width via Sharp with :root CSS variables resolved, verified non-blank with mean channel luminances 229.2 to 237.4.",
+        "Zero em dashes across all unit files; check:no-em-dash exits 0."
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "Clear plain-language definitions on first use for all core concepts: constitution, government, constituent assembly, Objectives Resolution, sovereignty, representation, fundamental rights, judiciary, federation, autonomy, parliamentary system, presidential system, unicameral, parity, electoral college, abrogation, amendment, bicameral, legislative competence, principles of policy, Islamic provisions, repugnant, personal law, council advice.",
+        "Carefully grounded in authentic Pakistani classroom contexts (Ayesha in Hyderabad secondary school, Bilal in Larkana teacher education college, Tharparkar practicum lesson, Mirpurkhas classroom).",
+        "Clear distinction between general concepts and illustrative classroom teaching cases and analogies (school committee, student council library debate, pupil delegates).",
+        "Appropriate vocabulary and tone for HSC/intermediate graduates without prior legal or specialist training."
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": [
+        "Full nine-part learning cycle strictly maintained across both topics (situation -> Explanation -> Activity -> Check your understanding -> Summary -> Self-assessment checklist -> Practicum -> Summative task -> Further reading).",
+        "Feasible, zero-cost classroom activities with explicit time and grouping guidance (Build an evidence-based comparison [30 min, groups of 4]; An article-reading jigsaw [35 min, groups of 4]).",
+        "Specific misconceptions systematically identified and refuted: 1973 as first constitution; Objectives Resolution as a complete constitution or only passed in 1985; Islamic provisions implying theocracy; presence of a President proving presidential government; strong centre meaning unitary state; Islamic Council enacting laws.",
+        "Practicum school tasks provide ethical observation guidance (examining school timelines/charts, preparing source-referenced replacement cards, avoiding disclosure of pupil political or religious beliefs)."
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Teaching case illustrations and hypothetical examples: Fictional classroom scenarios (Ayesha in Hyderabad secondary school, Bilal in Larkana teacher education college, student council and library analogies, Tharparkar practicum lesson) are original instructional examples designed for pedagogy and do not represent judicial records, school audits, or empirical survey findings."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Headless review tooling constraint: The crew job brief explicitly prohibits running npm run build, a dev server, or Playwright Chromium. Visual, structural, and presentation checks were conducted via measure-figure-text.mjs (all 8 SVG variants exit 0 with zero overflow or collision), static heading and table container analysis, and Sharp PNG rasterization with CSS variables resolved."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Official 2012 consolidated Constitution edition: Unit 3 explicitly refers to the National Assembly Constitution text updated to 28 February 2012 as a historical reading edition. It systematically discloses amendments (such as Article 2A in 1985 and the Eighteenth Amendment of 2010 including Article 25A) and advises that current legal matters require consulting the latest official text."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Print monographs declared under mapped reading limits: Hamid Khan (2017) and HEC Pakistan Studies text are retained as guide-recommended further reading per D-2026-0001; all factual propositions are fully grounded in verified open-access primary and secondary sources."
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/validate-content.txt"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/check-depth-gate.txt"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/check-figures.txt"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/check-no-em-dash.txt"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/check-no-answer-keys.txt"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/check-docs-sync.txt"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 0,
+      "log_path": "specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/render-review.txt"
+    },
+    {
+      "name": "check:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/check-content.txt"
+    },
+    {
+      "name": "measure-figure-text",
+      "exit_code": 0,
+      "log_path": "specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/measure-figure-text.txt"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/check-content.txt": "9322abfd8947e2ce17909d0545c345810bf7601ca152997c2a4f0be6152c900d",
+    "specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/check-depth-gate.txt": "15021f8f88122b596e67cfd48c2ff282fde912e1b86bb03c2137bcf9d8e062fd",
+    "specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/check-docs-sync.txt": "cbc9f6e4b0b674cb49e2d9b795d81ed78f23dc431cba1130e4d64cf6d0bed749",
+    "specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/check-figures.txt": "54a388cb9954b9d2f07f84e5385ac0003b94a6a54023abb188e864346958b04f",
+    "specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/check-no-answer-keys.txt": "539ba62183931f332c562e346956452b9cf751e100de762601b786b497a7d612",
+    "specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/check-no-em-dash.txt": "00405490c649d998b589b23505029de9134497966b02ff9ccefb1075aa414dd3",
+    "specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/fig-U3-1.png": "febeb847b6d2a75170d2178dcccf7f4fc7f88307c9bb376195ea434de5b2d97e",
+    "specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/fig-U3-2.png": "b2377b20efa0aa5a7528592b1b6b4f3f0a219f5f5a9689fde6d6195ad5313c73",
+    "specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/fig-U3-3.png": "5c2d0b7d9a0bf3a98a4dd85c5856a49a0bcd4d410c41fd7bee8134dd4110bfd3",
+    "specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/fig-U3-4.png": "e8859f58f5dc0378bfe942fa92c20c7ea2d70519fec8a76f1e6223ddc62a8ba4",
+    "specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/measure-figure-text.txt": "269f800de7587533ab2b97b6f81c5c9156e0e375e39f71f6e5d0010c57bad045",
+    "specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/render-review.txt": "bd1a22b7aa564b3fe8a3c6999ef64baa47c96a720a2f288bb9e5cf0d3f0970d6",
+    "specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/validate-content.txt": "5b3153a9d41a11051bff1d2f0396cf26eaaf00ae79e3b894c202823645c0e6a6"
+  }
+}

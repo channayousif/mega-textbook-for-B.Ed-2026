@@ -79,8 +79,9 @@ The stage rows below govern Unit 5. No G1 re-evaluation or G3/G5 approval is rec
 Only Unit 3 is updated by this authoring job. The approved content-spec is the drafting authority; older course-level status prose above is retained for its other-unit history.
 
 | Unit | Stage | Status | Reviewer | Notes |
+|---|---|---|---|---|
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-03/G2/20261030T113547697Z-gates.json |
-| Unit 3 | G3 en-review | ▢ | | Independent expert review pending; no certification claimed |
+| Unit 3 | G3 en-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/gpks-402/reviews/unit-03/G3/608a5388-1312-4060-ac88-c7d64ddc8c72.json; all 7 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; all 8 SVG variants pass geometry; G3 remains open and unsigned |
 | Unit 3 | G4 ur-translation | ▢ | | Separate Urdu job; localise all four schematic sources and mirror RTL layout |
 | Unit 3 | G5 ur-review | ▢ | | Pending translation and independent review; authored concept labels require review |
 | Unit 3 | G6 assets | ▣ | codex | Four English light/dark pairs placed; Urdu variants pending |
