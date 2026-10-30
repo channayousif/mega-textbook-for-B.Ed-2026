@@ -1,0 +1,291 @@
+{
+  "schema_version": 1,
+  "course_code": "GPKS-402",
+  "unit_no": 4,
+  "stage": "G3",
+  "disposition": "pass",
+  "reviewer_id": "agent:g3-reviewer",
+  "author_run_id": "commit:6bf2c85c",
+  "reviewer_run_id": "8e3bf462-d4af-437f-aa63-372eb41b9e7c",
+  "model": "Gemini 3.8 Flash (High)",
+  "started_at": "2026-10-28T17:30:00.000Z",
+  "completed_at": "2026-10-28T17:42:00.000Z",
+  "skill_digest": "eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b",
+  "rulings": {
+    "D-2026-0001": "bfd5624024eb20bb942f84aa16e29fdb18bb0afd93455f00a066a8c3878f379d"
+  },
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g3.md": "074c8464b4bc0f2f2b76bbb19707c50b54cb907920407873a4e5d193e866f53f",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "715b493fec67701dfb45e2ac65749c5fc9069161aadd27a8397a72d89c0874da",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/licence-page.schema.json": "3fc99078935af7419b4545d21c7d77d66e80ed847755df38ddc500ee35775a3c",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-2/gpks-402/course-overview.mdx": "95b337787f3b87f6582223affc6d107c27c4c7d87563d663267fcef54ab5b3c6",
+    "docs/semester-2/gpks-402/unit-04/index.mdx": "0eb6c41c80e6aed8ae34c599f4359122fe3ab47b1fac4d1edc00168d0c8db793",
+    "docs/semester-2/gpks-402/unit-04/topic-01.mdx": "71196d8354e08cc8fb89cd30f8bc27e13a064fa97fc2b542c4c93631a37a5363",
+    "docs/semester-2/gpks-402/unit-04/topic-02.mdx": "39a073cd64eadfd7670d199b658695d809d19d7971eed79f33b647cbd3d2786f",
+    "docs/semester-2/gpks-402/unit-04/topic-03.mdx": "eee586becb58bc70522733790900fdb70d4c6494a4c93f6d164699d83953b778",
+    "docs/semester-2/gpks-402/unit-04/unit-assessment.mdx": "6842874f088ac3c8fc671c881f5a12a9dc23c76a73f8ff4bf04745c5d3857d8f",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "dfaa7045af0a9199dba81a06dab16963cce6221905c506afb73f60fb8ced9625",
+    "scripts/check-no-answer-keys.mjs": "8d3f8cac335c50774ee622d61cb37d987c0393c99e54eff31f2bd042625a78c3",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "8ce3a62bd80534181cf1d74fa92bc3ea2b5d937b3f528e96c2a3e20c5a87047a",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "cc33a878d98865149b248c6a524be4e9d294293ddfaecc443dc19b7ace6af7cf",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "26edbdd3d86edf7587cbf8e01f0b0cbe45e19428827da34e26cfd0534f34f1b9",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/gpks-402/concepts/unit-04.md": "68f30c52ec8c8dbb89e712f6c459ef87987ff9cd824f2bd25c3a2dbf1606eea9",
+    "specs/content/gpks-402/content-spec.md": "0d22ab07ddc8d57e9c0ba3fae83c8b0af7972c8414c6cb8186a94af9a41c912e",
+    "specs/content/gpks-402/coverage/unit-04.md": "c2a04f1494688b47b2eef7d02c41e49bebd7ea98ede92061c26ad63f1c6ce9d0",
+    "specs/content/gpks-402/figures/unit-04.md": "f3386e5ce6d9b87bba1f397f0d166fabc274f676565e645f37c0120756888c8a",
+    "specs/content/gpks-402/intake-20261023/evaluation.md": "7ae6ab4ce6b43950ca2af06b76ed786407589995f7f09676352f6413768f5069",
+    "specs/content/gpks-402/intake-20261023/manifest.json": "e633596784c6c1c014eecd580fb32f79e19c18f19df8df5b89540941e03e9811",
+    "specs/content/gpks-402/intake-20261023b/evaluation.md": "cc99eac340dd136b7a62a671e3524ef85a4e165205e722f865a3f388742d8fb3",
+    "specs/content/gpks-402/intake-20261023b/manifest.json": "d6d8c78df7cd8dcc882f3646fba3bf8765100de9c1776c4bd9a3a5f8e1ebd795",
+    "specs/content/gpks-402/intake-20261023c/evaluation.md": "44d74f5c3c7e0d17f957486330f5f057bb3d25959ab2799a64ae463c29d829ba",
+    "specs/content/gpks-402/intake-20261023c/manifest.json": "a3085ca89b3a778a14813bb360e9cd918c8969fd2fe7165594309523ae89ebf2",
+    "specs/content/gpks-402/intake-88/evaluation.md": "d11e18019ca1092850f81ca06456ebeeaa3fb17322ca7e5c8b9374190076860e",
+    "specs/content/gpks-402/intake-88/manifest.json": "8ca51cce91435d07a7b8e33c0795ec080bbd41d8c088e08b8db660fcec45fb26",
+    "specs/content/gpks-402/sources/texts/pak-constitution-1973.md": "1e1c81dc0893b4839a9f1ad246cbed983502313e0ac277a830095b283a5d39fc",
+    "specs/content/gpks-402/sources/unit-04.md": "09e4051a954beafafab80ed9eccc595fbc7bf1ff0f19c8caf559383bb24be26d",
+    "specs/content/style-guide.md": "79f6cafc03b436c0e77c49ea658ef9a7a4de408b5c42020be39011a02a00dd7f",
+    "static/img/figures/gpks-402/unit-04/fig-U4-1.dark.svg": "8d040dc5ca2b4e251332f7de28984ddf1054196079eb652d34e8b521a11dbe98",
+    "static/img/figures/gpks-402/unit-04/fig-U4-1.svg": "37ece67c9a5eac8e0bf9574bf780f064b7440e064e6d9e7566e891da76263f98",
+    "static/img/figures/gpks-402/unit-04/fig-U4-2.dark.svg": "653fe23b0472f5e37b9d6475d1f7a5252fb6f45f70eefffa0a4ff07e7ef27fa2",
+    "static/img/figures/gpks-402/unit-04/fig-U4-2.svg": "171e6a25763fc5ad1e53fed7b87ba617a72bbaf0ade52a6ace66ff3bd7202071",
+    "static/img/figures/gpks-402/unit-04/fig-U4-3.dark.svg": "546140dbc8a1bcf9b3cb7b9adad3739a7419f88c764163cbced224216c2145ef",
+    "static/img/figures/gpks-402/unit-04/fig-U4-3.svg": "930ed9c921b3aa0d9ea7785c9db6e8e3c9d7ef90d64e225ac3b31b176df7c177",
+    "static/img/figures/gpks-402/unit-04/fig-U4-4.dark.svg": "ff3bd08b42a21bd7ed07430407f42c12dfe7f4dac3748676b78a5c7750912be4",
+    "static/img/figures/gpks-402/unit-04/fig-U4-4.svg": "4ae124658fce2ed0812cab19bb0a47cb27f7425cbf1e5824d3be18d50005dc68",
+    "static/img/figures/gpks-402/unit-04/fig-U4-5.dark.svg": "31d9100647cfd4b0b3a686873b6ee3a679c96259a8ec1a7b09df5e2c28889457",
+    "static/img/figures/gpks-402/unit-04/fig-U4-5.svg": "47a7983de5420bc8ae04e17e67d10e9e59e442375a1420982d5a2d4812030eed",
+    "static/img/figures/gpks-402/unit-04/fig-U4-6.dark.svg": "78fe182e2666ec94736997d8c0cc110457436d41eec822f7514a1f6beb8d88ea",
+    "static/img/figures/gpks-402/unit-04/fig-U4-6.svg": "38bd449d5ac348bf68a815de37a90e291a3c8a5a93504eabd6845744c9f6f819",
+    "static/img/figures/gpks-402/unit-04/fig-U4-7.dark.svg": "b151f1e3e54e966f0aee05538729dae6bd6c0fd6e17bc5fd99dc2be9b4ce2dd9",
+    "static/img/figures/gpks-402/unit-04/fig-U4-7.svg": "cddd35edb8f61dbf1bd3450af59b5486801e8b98bc032be27d3f3ce4cedc0f6a"
+  },
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        "Scheme-and-Course-guides/extracted-text/2nd 2026.txt:1069-1094: guide Week 7 (Political and Administrative Structure: federal system; legislature, executive, judiciary; civil-military relations), Week 8 (Fundamental Rights and Duties: fundamental rights; principles of policy; role of citizens), and Week 10 (Geography: physical features; climate and natural resources; strategic importance of Pakistan) map one-to-one to sub-topics U4-01..U4-11 in specs/content/gpks-402/content-spec.md:220-230; no guide leaf item is untaught and no unit topic exceeds the guide.",
+        "docs/semester-2/gpks-402/unit-04/index.mdx:29-39: unit learning outcomes restate the guide items; each sub-topic is taught under its own ### heading across topic-01.mdx, topic-02.mdx, and topic-03.mdx.",
+        "specs/content/gpks-402/content-spec.md:211: SLO:GPKS-402-4-1, SLO:GPKS-402-4-2, and SLO:GPKS-402-4-3 trace directly to guide objectives 3 and 4 (guide lines 1003-1005); clo_refs carry these three across every unit file.",
+        "Course code GPKS-402 follows University of Sindh scheme of studies authority per G-2026-03 (content-spec.md:12).",
+        "Mapped print monographs (hamid-khan-const and rabbani-pak-studies) handled per D-2026-0001 under Unverifiable sources in specs/content/gpks-402/sources/unit-04.md:16-19."
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "pass",
+      "evidence": [
+        "specs/content/gpks-402/sources/unit-04.md:3-14: open-access floor of 1 met (7 open-access works consulted and bound: pak-constitution-1973, hussain-kokab-2012-18th, rizvi-2004-civil-military, taj-2016-civil-military, qureshi-2011-indus, otto-2023-floods, wolf-2017-cpec).",
+        "specs/content/gpks-402/sources/texts/pak-constitution-1973.md: primary text confirms federal structure (Articles 1, 140A, 142, 153, 155, 160), Parliament (50-52, 59, 70, 73, 75), executive (41, 48, 58, 90, 91), judiciary (175, 175A, 184, 185, 189, 199), Armed Forces (6, 39, 245), fundamental rights (7-28, 233), principles of policy (29-40), citizenship (5, 51), and resource revenue (161); verified against official National Assembly text; grounds topic-01, topic-02, topic-03, and fig-U4-1, fig-U4-2, fig-U4-4, fig-U4-5.",
+        "specs/content/gpks-402/sources/texts/hussain-kokab-2012-18th.md: confirms abolition of Concurrent List devolving education to provinces, repeal of Article 58(2)(b) presidential dismissal power, establishment of Judicial Commission, and addition of fundamental rights 10A, 19A, and 25A; grounds topic-01.mdx:42, 97, 122 and topic-02.mdx:47.",
+        "specs/content/gpks-402/sources/texts/rizvi-2004-civil-military.md: confirms chronology of military rule and civilian governance 1947-1988, causes of intervention (weak political institutions, external insecurity, institutional disparity, military interests), post-1988 pattern, and foreign alignments (1950s pacts, 1979 Soviet Afghan invasion); grounds topic-01.mdx:143-164 and topic-03.mdx:116, 132.",
+        "specs/content/gpks-402/sources/texts/taj-2016-civil-military.md: confirms approximately 32 years of direct military domination (1958-1971, 1977-1988, 1999-2008) and the Musharraf period; grounds topic-01.mdx:151, 156 and fig-U4-3.",
+        "specs/content/gpks-402/sources/texts/qureshi-2011-indus.md: confirms Indus Basin as largest contiguous irrigation system supporting 90% of food production, low per-capita storage, reservoir sedimentation, and waterlogging/salinity; grounds topic-03.mdx:81-83 and fig-U4-7.",
+        "specs/content/gpks-402/sources/texts/otto-2023-floods.md: confirms 2022 floods as worst in Pakistan's history, increased intense monsoon rainfall associated with warming, and vulnerability factors driving disaster damage; grounds topic-03.mdx:79-80.",
+        "specs/content/gpks-402/sources/texts/wolf-2017-cpec.md: confirms CPEC as part of Belt and Road Initiative, hailed as economic game changer, and military security role; grounds topic-03.mdx:120, 129.",
+        "hamid-khan-const and rabbani-pak-studies declared under Unverifiable sources in sources/unit-04.md:16-19 with honest non-reliance note per D-2026-0001; cited in further reading and broad physical regions."
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "All 11 guide leaf sub-topics taught in prose under dedicated ### headings: U4-01 topic-01.mdx:32 (The federal system: centre and provinces); U4-02 topic-01.mdx:65 (The legislature: National Assembly and Senate); U4-03 topic-01.mdx:89 (The executive: Prime Minister, President and the Cabinet); U4-04 topic-01.mdx:110 (The judiciary: Supreme Court, High Courts and the judicial system); U4-05 topic-01.mdx:137 (Civil-military relations: patterns and consequences); U4-06 topic-02.mdx:32 (Fundamental rights under the 1973 Constitution); U4-07 topic-02.mdx:97 (Principles of policy and their relationship to fundamental rights); U4-08 topic-02.mdx:134 (The role of citizens in a democratic Pakistan); U4-09 topic-03.mdx:32 (Physical features: mountains, plains, deserts and the Indus system); U4-10 topic-03.mdx:60 (Climate, water and natural resources); U4-11 topic-03.mdx:103 (Strategic importance of Pakistan's location).",
+        "specs/content/gpks-402/coverage/unit-04.md: accurately maps all 11 sub-topics to exact headings and external sources.",
+        "Depth budget verified: 95 minutes total (index 5, topic-01 28, topic-02 24, topic-03 21, assessment 17), strictly within the approved 95-130 minute unit budget (content-spec.md:240); check:depth-gate exit 0."
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "pass",
+      "evidence": [
+        "All 25 assessment items independently solved prior to consulting ## Answers and marking guidance. Derived MCQ keys: 1-B, 2-B, 3-C, 4-B, 5-A, 6-B, 7-C, 8-B, 9-C, 10-B match supplied key in unit-assessment.mdx:126-135 100%; distractors are plausible and stems unambiguous.",
+        "RRQ distribution: 4 items for Topic 4.1 (RRQ-01..04), 3 items for Topic 4.2 (RRQ-05..07), and 3 items for Topic 4.3 (RRQ-08..10), satisfying the approved blueprint requirement of >= 2 RRQs per topic (content-spec.md:259).",
+        "ERQ distribution: 1 item for Topic 4.1 (ERQ-01), 1 item for Topic 4.2 (ERQ-02), 1 item for Topic 4.3 (ERQ-03), and 2 integrative items (ERQ-04 on geography/governance and ERQ-05 on lesson design), exactly matching the blueprint (content-spec.md:260).",
+        "Bloom classifications verified from cognitive demand: MCQs span Remember to Apply; RRQs span Understand to Analyze; ERQs span Analyze to Evaluate and Create.",
+        "Concept graph traceability: every MCQ, RRQ, and ERQ is linked to its concept in specs/content/gpks-402/concepts/unit-04.md:7-21; check:concept-graph exit 0.",
+        "ERQ rubrics: each carries an analytic 4-criterion rubric (3 marks each, totaling 12 marks) with explicit Analyze/Evaluate/Create demand.",
+        "Marking guidance and answer keys quarantined within the bounded final section; check:no-answer-keys exit 0."
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "pass",
+      "evidence": [
+        "Monotonic heading hierarchy verified across all MDX files with zero skipped levels.",
+        "All seven <Figure> tags carry descriptive alt text matching SVG <desc> text and figures/unit-04.md manifest declarations.",
+        "SVG text geometry: node scripts/measure-figure-text.mjs static/img/figures/gpks-402/unit-04/*.svg passes with exit code 0 across all 14 SVG variants (7 light, 7 dark twins), zero viewBox overflow (widest text x=768.4), and zero wordmark collision (wordmark x=675.7).",
+        "Figure rasterization: all 7 SVGs rasterized to PNG at 780px width with :root CSS variables resolved and verified non-blank with mean channel luminances 226.8 to 242.6.",
+        "Zero em dashes across all unit files; check:no-em-dash exit 0."
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "Plain-language definitions on first use: federalism (topic-01:34), legislature (topic-01:67), executive (topic-01:91), judiciary (topic-01:112), separation of powers (topic-01:124), civil-military relations (topic-01:139), martial law (topic-01:146), fundamental rights (topic-02:34), writ petition (topic-02:79), principles of policy (topic-02:99), citizen (topic-02:136), Indus River system (topic-03:40), climate (topic-03:62), natural resources (topic-03:85), strategic importance (topic-03:105), CPEC (topic-03:120).",
+        "Authentic Pakistani classroom contexts throughout: Sukkur Class 10 civics discussion with Bilal, Hyderabad girls' school with Ayesha handling Rukhsana's out-of-school sister, Mithi (Tharparkar) Social Studies with Zainab connecting local desert to national physical geography, Thatta school sanitation, and Khairpur textbook logistics.",
+        "Clear distinction between general concepts and illustrative classroom teaching cases; appropriate register for HSC graduates; check:depth-gate exit 0."
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": [
+        "Nine-part learning cycle strictly maintained across all three topics (situation -> Explanation -> Activity -> Check your understanding -> Summary -> Self-assessment checklist -> Practicum -> Summative task -> Further reading).",
+        "Feasible, zero-cost classroom activities with explicit time and grouping guidance: Which branch, which level? (30 min, groups of 4, 8 situation slips); Rights in our school (30 min, groups of 3, 4 case cards); Map, resource and problem (35 min, groups of 4 with defined roles: mapper, resource expert, climate expert, reporter).",
+        "Specific misconceptions systematically identified and refuted: The Prime Minister makes the laws; Pakistan has always been governed by the military (refuted with factual 32-year timeline analysis); Civil-military relations are only a problem, never a subject of study; Fundamental rights are the same as in the US Constitution; Citizenship means only obeying; Pakistan's geography is only desert.",
+        "Practicum school tasks provide ethical observation guidance (investigating administrative reporting chains, out-of-school children, school water sources and flood impacts)."
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Teaching case illustrations and hypothetical examples: Fictional cases (Bilal in Sukkur, Ayesha in Hyderabad, Zainab in Mithi, school bus safety bill, Khairpur textbook delivery, Thatta school toilets, Badin village school) are original instructional cases designed for pedagogy and do not represent judicial records or official government audit findings."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Headless review tooling constraint: The crew job brief explicitly prohibits running npm run build, a dev server, or Playwright Chromium. Visual and presentation checks were conducted via measure-figure-text.mjs (all 14 SVG variants exit 0 with zero overflow or collision), static heading and table container analysis, and Sharp PNG rasterization with CSS variables resolved."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Global glossary entries: Unit 4 tags 15 key terms with <Glossary term=\"...\">. All 15 terms are mapped in glossary.json and concepts/unit-04.md."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Print monographs declared under Unverifiable sources: Hamid Khan and Ikram Rabbani were unavailable as open access and are declared in specs/content/gpks-402/sources/unit-04.md:16-19 per D-2026-0001. No specific proposition relies on them; verified open-access substitutes ground all unit prose."
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/validate-content.txt"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/check-depth-gate.txt"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/check-figures.txt"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/check-no-em-dash.txt"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/check-no-answer-keys.txt"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/check-docs-sync.txt"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 0,
+      "log_path": "specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/render-review.txt"
+    },
+    {
+      "name": "check:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/check-content.txt"
+    },
+    {
+      "name": "measure-figure-text",
+      "exit_code": 0,
+      "log_path": "specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/measure-figure-text.txt"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/check-content.txt": "50530cd144f4be628a3a01cc1030e5b9808ddeb2cf8d730c273d5033623c5689",
+    "specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/check-depth-gate.txt": "15021f8f88122b596e67cfd48c2ff282fde912e1b86bb03c2137bcf9d8e062fd",
+    "specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/check-docs-sync.txt": "cbc9f6e4b0b674cb49e2d9b795d81ed78f23dc431cba1130e4d64cf6d0bed749",
+    "specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/check-figures.txt": "54a388cb9954b9d2f07f84e5385ac0003b94a6a54023abb188e864346958b04f",
+    "specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/check-no-answer-keys.txt": "539ba62183931f332c562e346956452b9cf751e100de762601b786b497a7d612",
+    "specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/check-no-em-dash.txt": "00405490c649d998b589b23505029de9134497966b02ff9ccefb1075aa414dd3",
+    "specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/fig-U4-1.png": "7d504de39f7131930075a40e4ec8bfeec9cd9f867c9c5d4bf5e12c13ce28bc6d",
+    "specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/fig-U4-2.png": "ea5d708a67fec5f098bbd3d9885715726c080e54a1bf8fe681813841bb9ef466",
+    "specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/fig-U4-3.png": "d02477bd74550b5a1ed9f4ce5472da3b37ea90e7d655063e64a25ac792ad418e",
+    "specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/fig-U4-4.png": "f7b3fe4adc424c2690171b3684c0155eac9252c74d02b1ea32df0a733b9e67e7",
+    "specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/fig-U4-5.png": "c0d00fd50780fc7e9642c487e2afeaccea818c173e0df75f14a828339c6e786f",
+    "specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/fig-U4-6.png": "9be3dfd14857afbe67936d5a2ea1de30ed30a3ac8fd29b191fdf2347e669c187",
+    "specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/fig-U4-7.png": "8dd3c15e19e26f126591689e5b8f82333043b027ed9bcdb5f71aef407c01ca8c",
+    "specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/measure-figure-text.txt": "af984ec8fe4494679a5361ad22f2642d2e63cfa199e64069224e4b5d438f8172",
+    "specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/render-review.txt": "281c68aefd15a3ae8be8cc84e62346def8b2261ed821e7afdc43ab457d1d764b",
+    "specs/content/gpks-402/reviews/unit-04/G3/logs-8e3bf462/validate-content.txt": "5b3153a9d41a11051bff1d2f0396cf26eaaf00ae79e3b894c202823645c0e6a6"
+  }
+}
