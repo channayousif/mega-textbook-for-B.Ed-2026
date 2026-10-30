@@ -24,7 +24,7 @@ The full prompt set (master, blink, mouths, gestures) is `brand/handoff-cast.md`
 > background. + `art_style.prompt_suffix`
 
 ## Puppet layers
-Same layer list and canvas as Ustani Farzana; `arm_*` includes `arm_notebook.png` for idle.
+Same layer list and canvas as Ustani Farzana; his idle pose (notebook at chest) is `base.png`. All ten layers were cut on 2026-10-30 into `$MEDIA_ROOT/brand-assets/cast/bilal/`.
 
 ## Voice
 Chosen by the VS-003 benchmark; locked card goes in `brand/voices/shagird.md`. Target: young, upbeat male voice clearly distinct from Ustani Farzana.
