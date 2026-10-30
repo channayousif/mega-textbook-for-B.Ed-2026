@@ -17,7 +17,7 @@ export const LEAD_S = 0.3;
 export const GAP_S = 0.35;
 export const TAIL_S = 0.5;
 export const END_CARD_S = 3;
-export const DEFAULT_SET = 'classroom';
+export const DEFAULT_SET = 'studio';
 /** Gesture when script.json gives none: the segment's usual move. */
 const SEGMENT_POSE: Record<string, Pose> = { hook: 'explain', beat1: 'explain', beat2: 'point', beat3: 'explain', recap: 'celebrate', cta: 'point' };
 
