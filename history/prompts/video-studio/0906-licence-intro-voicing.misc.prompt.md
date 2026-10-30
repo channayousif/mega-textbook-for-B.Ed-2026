@@ -14,7 +14,7 @@ links:
   spec: specs/003-urdu-voice-benchmark/spec.md
   ticket: null
   adr: null
-  pr: null
+  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/386
 files:
  - video-studio/specs/003-urdu-voice-benchmark/eval-set.json
  - video-studio/specs/003-urdu-voice-benchmark/eval-set-adr0014.json
