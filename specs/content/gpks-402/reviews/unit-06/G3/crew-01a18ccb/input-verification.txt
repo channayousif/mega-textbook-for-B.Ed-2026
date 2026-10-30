@@ -1,0 +1,6 @@
+Prepared and independently recomputed with inputManifest: all 104 normalized path/digest pairs match.
+Reviewed commit: 81c6ed4b0b9e4d095555035219e718babaaa2fda
+Initial HEAD equals origin/main: 81c6ed4b0b9e4d095555035219e718babaaa2fda. Initial git status and origin/main..HEAD log empty.
+No parent-prepared immutable bundle or author session identity was supplied. This locally prepared inventory does not establish that missing provenance.
+Reviewer session: 01a18ccb-4a8c-7c60-8ed2-7c546d08340e
+No review inputs edited.
