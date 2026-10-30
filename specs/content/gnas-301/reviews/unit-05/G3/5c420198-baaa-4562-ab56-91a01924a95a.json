@@ -1,0 +1,323 @@
+{
+  "schema_version": 1,
+  "course_code": "GNAS-301",
+  "unit_no": 5,
+  "stage": "G3",
+  "disposition": "pass",
+  "reviewer_id": "agent:g3-reviewer",
+  "author_run_id": "commit:9070a452",
+  "reviewer_run_id": "5c420198-baaa-4562-ab56-91a01924a95a",
+  "model": "Gemini 3.8 Flash (High)",
+  "started_at": "2026-10-28T01:46:00.000Z",
+  "completed_at": "2026-10-28T01:56:00.000Z",
+  "skill_digest": "eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b",
+  "supersedes": "specs/content/gnas-301/reviews/unit-05/G3/round-02/agent-g3-gnas301-u5-run002.json",
+  "rulings": {
+    "D-2026-0001": "bfd5624024eb20bb942f84aa16e29fdb18bb0afd93455f00a066a8c3878f379d",
+    "D-2026-0020": "678f33ecd3b2e1250b18d05fa4791211a60cda44df0d1392dcb1db2e4e402d97",
+    "D-2026-0021": "dc57cf3d031b0de79ecf3f6ce1bdb7cf8b6d13ea0475c97c7d6762f7578721e4"
+  },
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g3.md": "074c8464b4bc0f2f2b76bbb19707c50b54cb907920407873a4e5d193e866f53f",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "715b493fec67701dfb45e2ac65749c5fc9069161aadd27a8397a72d89c0874da",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/licence-page.schema.json": "3fc99078935af7419b4545d21c7d77d66e80ed847755df38ddc500ee35775a3c",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-1/gnas-301/course-overview.mdx": "41dce7cbd1847a767e780693e7375cb99e4a5e803caef0d7bb54c78b14fbf8ee",
+    "docs/semester-1/gnas-301/unit-05/index.mdx": "843bc42d12df31ceb84d13aa3abaf7c24d1fc43931430467ff7484b7fd90b7a6",
+    "docs/semester-1/gnas-301/unit-05/topic-01.mdx": "5b0dd379a7a9928cd4669ca30fd10fc9b9e244aa8d5225e716e1b353336d8a65",
+    "docs/semester-1/gnas-301/unit-05/topic-02.mdx": "0e874cf97bea80494038b945642223cd4a1db73d5e3aff3dbf75ceaa3140f341",
+    "docs/semester-1/gnas-301/unit-05/topic-03.mdx": "df4275e4075b990fc9d88e3068165ee5b89e51255c9938b4f103f45d25270c5c",
+    "docs/semester-1/gnas-301/unit-05/topic-04.mdx": "c974b65e360cffeee1329760a98fe7ad3c68dc728eda1f802606c1b489306743",
+    "docs/semester-1/gnas-301/unit-05/unit-assessment.mdx": "aa7b8d9d0641bee392efe78b78f685e9bed7d6f75f0e75d5b837955a4b48d512",
+    "docs/semester-1/gnas-301/unit-05/unit-teacher-notes.mdx": "62ea99dca01b0a66caeedd5ebd359a840abd9dacfd24c0a15df2b1076c129a86",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "dfaa7045af0a9199dba81a06dab16963cce6221905c506afb73f60fb8ced9625",
+    "scripts/check-no-answer-keys.mjs": "8d3f8cac335c50774ee622d61cb37d987c0393c99e54eff31f2bd042625a78c3",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "8ce3a62bd80534181cf1d74fa92bc3ea2b5d937b3f528e96c2a3e20c5a87047a",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "cc33a878d98865149b248c6a524be4e9d294293ddfaecc443dc19b7ace6af7cf",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "26edbdd3d86edf7587cbf8e01f0b0cbe45e19428827da34e26cfd0534f34f1b9",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/gnas-301/concepts/unit-05.md": "87411f57e065d3b5ac17586d81ff3c0856b7bbcccfb42ca8d43002f4bca237ff",
+    "specs/content/gnas-301/content-spec.md": "e2b7b7b30af27baff40be1be9e60cd47ee657f98963c4a4fc7a8af65f46eaefc",
+    "specs/content/gnas-301/coverage/unit-05.md": "0452055b0a745f470d2fc5f3e60791fcd4ade5b779966158da7d47243b8467e5",
+    "specs/content/gnas-301/figures/unit-05.md": "7a0ded655cd2a55573499df7faab42ff0119ace6c7cdd0a96f1e798f65080aaf",
+    "specs/content/gnas-301/sources/texts/alibhatti2017.md": "7390f51de2044c176f280826509ab605328d814da73aa86da690d428d842439f",
+    "specs/content/gnas-301/sources/texts/guardans2013.md": "971c266938703d1196db2c1e60b614710960984eb7f8a6fba86cb0edf2e4aec6",
+    "specs/content/gnas-301/sources/texts/who-air-2024.md": "8698e0efef2db62ec02d3b3e409f4b6d913ea7fae67494688c30990866eb4a9e",
+    "specs/content/gnas-301/sources/texts/who-aqg-2021.md": "60b887aff2c0545ec568cd8bda275c28f7d7437ade7fef3aeb39cdd60617384f",
+    "specs/content/gnas-301/sources/unit-05.md": "080e72b0b19a4612be9feb10d5d3eac97ad4a42f149c676f9fa203c472c35eef",
+    "specs/content/style-guide.md": "79f6cafc03b436c0e77c49ea658ef9a7a4de408b5c42020be39011a02a00dd7f",
+    "static/img/figures/gnas-301/unit-05/fig-U5-1.dark.svg": "f4ad5c83c3320edf82ec9126e60f6de8f8f7ba9562ca6c691769a83b2136ae97",
+    "static/img/figures/gnas-301/unit-05/fig-U5-1.svg": "a21b41e1eaedd439a76163a5764791d6b5e5e201fb67c36fff4fa315eea4313f",
+    "static/img/figures/gnas-301/unit-05/fig-U5-2.dark.svg": "893c25fc94ce645af245e559c4a7af59055897a3527a66f22218d3f5e48cb1ea",
+    "static/img/figures/gnas-301/unit-05/fig-U5-2.svg": "a4f7a9b38ed059875cab1f406d023e1f624b731222c57c5b0af548de08a5ae3d",
+    "static/img/figures/gnas-301/unit-05/fig-U5-3.dark.svg": "b194c6cf55e8f28d3495bda7c3a9d983ef47674e9c12737f3dc3f0c6aabf9bcb",
+    "static/img/figures/gnas-301/unit-05/fig-U5-3.svg": "a13375eb127905ee10547f27449e6084d2dd350e41ef384644f498b1236a66bd",
+    "static/img/figures/gnas-301/unit-05/fig-U5-4.dark.svg": "13a275a7cae1a17dc3ea0ce00a18839bf713b4d9a3807d164ecb2a19cb8f27db",
+    "static/img/figures/gnas-301/unit-05/fig-U5-4.svg": "c63917277e1b50e30c9c7f5f22d796f12480d1cbd9ed9a93a0f0bda07eb2e566",
+    "static/img/figures/gnas-301/unit-05/fig-U5-5.dark.svg": "b4e9455bdc81e0145a8c9216667340ab9501efc8aaa40044611bb2bbdf66e358",
+    "static/img/figures/gnas-301/unit-05/fig-U5-5.svg": "93c647f192097b8965a8c2530cf0ecc6d120e631a65a637a1e9c7c4d851a58ff",
+    "static/img/figures/gnas-301/unit-05/fig-U5-6.dark.svg": "d784e0689a82306a079b1f1a3ef2cfc20be1b19c1bac7c384d6be8faac763ace",
+    "static/img/figures/gnas-301/unit-05/fig-U5-6.svg": "09a5cc2db8dbdbe6d72d1836d405c98961e777fb9111f1d0c5554b56f13972eb",
+    "static/img/figures/gnas-301/unit-05/fig-U5-7.dark.svg": "5a3809bf5ea36f019388fbf8c8e31fa47f9c2ac557e23c4946c9ec455ab90f2a",
+    "static/img/figures/gnas-301/unit-05/fig-U5-7.svg": "b1058eae6ace638c076b458406e5634d1cd67b15163f2cdeeebe894d12e699ac",
+    "static/img/figures/gnas-301/unit-05/fig-U5-8.dark.svg": "6b5bbd92cad9f9c6ae597fdc23c82bd6ed22eecd9682fff2865de3ca988bfc6d",
+    "static/img/figures/gnas-301/unit-05/fig-U5-8.svg": "bf3abd95a469213097dd21b8a594f22d69c8a5a49da1d6c91b69b9f76e4bc77c"
+  },
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        "Scheme-and-Course-guides/extracted-text/1st 2026.txt:282-293: guide Weeks 11-12 outline items 11.1-11.4 and 12.1-12.3 map one-to-one to sub-topics U5-01..U5-07 in specs/content/gnas-301/content-spec.md:770-778; no guide leaf item is untaught and no unit topic exceeds the guide.",
+        "docs/semester-1/gnas-301/unit-05/index.mdx:26-38: unit learning outcomes restate the guide items; each is taught under its own ### heading in topic-01.mdx through topic-04.mdx.",
+        "specs/content/gnas-301/content-spec.md:744-747: SLO:GNAS-301-5-1 and SLO:GNAS-301-5-2 trace to guide CLOs 3-5 (guide lines 169-191); unit clo_refs carry exactly these two across every unit file.",
+        "guide lines 352-366: the two guide-named monographs referenced by the unit (Haines & Frumkin item 2; Park & Park item 7) are handled per D-2026-0001/D-2026-0021 as recorded in specs/content/gnas-301/sources/unit-05.md:24-36."
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "pass",
+      "evidence": [
+        "specs/content/gnas-301/sources/unit-05.md:7-10: open-access floor of 2 (D-2026-0021) met: guardans2013 Crossref-verified, alibhatti2017 DOAJ-verified, plus WHO/UN sources verified by direct fetch.",
+        "specs/content/gnas-301/sources/texts/who-aqg-2021.md: confirms CO among the pollutants of concern in the 2021 guidelines; grounds topic-01.mdx:46-47.",
+        "specs/content/gnas-301/sources/texts/alibhatti2017.md: confirms arsenic in Sindh groundwater across 24 Indus-bank districts; grounds topic-01.mdx:63-65 and topic-04.mdx:96-99.",
+        "specs/content/gnas-301/sources/texts/guardans2013.md: confirms POPs harm even at low levels in organisms including humans; Stockholm POPs adoption 2001, entry into force 2004; grounds topic-04.mdx:62-66.",
+        "specs/content/gnas-301/sources/texts/who-air-2024.md: verified that fine particles cause cardiovascular and respiratory disease and cancers, with 4.2 million premature deaths; topic-01.mdx:52-54, unit-assessment.mdx:24-25, and sources/unit-05.md:17 now accurately adhere to what the source supports; round-2 finding RESOLVED.",
+        "alibhatti2017 citation author list: all five authors (Alibhatti, Z., Qureshi, K., Bhatti, I., Khuhawar, M. Y., & Unar, I. N.) verified across all four occurrences (sources/unit-05.md:15, topic-02.mdx:134, topic-03.mdx:131, topic-04.mdx:179); round-2 finding RESOLVED.",
+        "specs/content/gnas-301/sources/texts/who-chemical-safety.md, un-paris.md, un-sdgs.md: verified on-disk committed excerpts grounding topics 5.2/5.3 and 5.4.",
+        "haines-frumkin and park-park declared under ## Unverifiable sources with retrieval attempts, date 2026-09-23, and owner authorisation (D-2026-0001, G-2026-23, D-2026-0021) at sources/unit-05.md:24-36; cited by reference only in Further reading and title-level support, no undisclosed reliance."
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "All seven guide leaf sub-topics taught in prose under dedicated ### headings: U5-01 topic-01.mdx (Toxic impacts of atmospheric agents); U5-02 topic-02.mdx (Fate of absorbed toxins and xenobiotics, including detoxification and bioactivation); U5-03 topic-03.mdx (Natural detoxification processes); U5-04 topic-04.mdx (Risk management); U5-05 topic-04.mdx (Multilateral environmental agreements); U5-06 topic-04.mdx (Sustainable Development Goals (SDGs)); U5-07 topic-04.mdx (Environmental laws, policies, guidelines and strategies related to public health).",
+        "specs/content/gnas-301/coverage/unit-05.md: line 18 maps U5-06 to exact heading Sustainable Development Goals (SDGs) with source un-sdgs; line 20 maps U5-07 to exact heading Environmental laws, policies, guidelines and strategies related to public health with source haines-frumkin; round-2 coverage matrix cell findings RESOLVED.",
+        "Reinforcement rows verified: unit-assessment.mdx:20-35 (Unit summary, U5-01) and unit-teacher-notes.mdx:41-54 (Common misconceptions to probe, U5-05).",
+        "Estimated reading minutes total 78 (5+12+14+12+18+11+6), well inside the 65-85 minute depth budget (content-spec.md:791); check:depth-gate exit 0."
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "pass",
+      "evidence": [
+        "All 25 assessment items independently solved before consulting ## Answers and marking guidance. Derived MCQ keys: 1-b, 2-c, 3-c, 4-a, 5-d, 6-b, 7-c, 8-a, 9-d, 10-c match supplied key in unit-assessment.mdx:143-154 exactly; option distribution balanced (a:2, b:2, c:4, d:2) with option d present; round-2 advisory finding RESOLVED.",
+        "Topic 5.1 restricted-response coverage: RRQ-01 (CO odour mechanism) and RRQ-02 (emission-to-effect chain walk) both cover Topic 5.1; RRQ bank balanced across topics: 5.1: 2, 5.2: 2, 5.3: 3, 5.4: 3 (total 10 items), satisfying the >= 2 RRQ per topic blueprint requirement (content-spec.md:847-848); round-2 blocking finding RESOLVED.",
+        "Concept graph traceability: every RRQ is linked to its respective concept in specs/content/gnas-301/concepts/unit-05.md:16-25, including RRQ-02, RRQ-04, RRQ-07, and RRQ-10; check:concept-graph exit 0; round-2 advisory finding RESOLVED.",
+        "Summative differentiation: RRQ-03, RRQ-04, RRQ-05, RRQ-06, and RRQ-09 recast as short situations distinct from formative CYU items; round-2 advisory finding RESOLVED.",
+        "SDG assessment coverage: RRQ-10 directly tests SDG 6 targets and indicators; round-2 advisory finding RESOLVED.",
+        "ERQ rubrics analytic, summing to 10 marks each; Bloom tags verified (Analyze to Evaluate); answer keys quarantined within bounded final section; check:no-answer-keys exit 0."
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "pass",
+      "evidence": [
+        "Monotonic heading hierarchy verified across all MDX files with zero skipped levels.",
+        "All eight <Figure> tags carry descriptive alt text matching SVG <desc> text and figures/unit-05.md manifest declarations.",
+        "fig-U5-3 flowchart geometry: panel spacing re-spaced to x=26, 216, 406, 596 (width 178) and connector arrows placed at x=204-218, 394-408, 584-598 across all four variants (fig-U5-3.svg, .dark.svg, .ur.svg, .ur.dark.svg); no overlapping panels and all arrows connect boxes; round-2 blocking finding RESOLVED.",
+        "node scripts/measure-figure-text.mjs static/img/figures/gnas-301/unit-05/*.svg: all 32 SVG variants pass with exit code 0, zero viewBox boundary overflows, zero text clipping, and zero wordmark collision; text-geometry defects repaired in commit 21f079c5; round-2 blocking finding RESOLVED.",
+        "Rasterization verified: all 8 unit SVGs rasterized to PNG at 780px width via Sharp with :root CSS variables resolved; verified non-blank with mean channel luminances 226.9-244.4 (saved under specs/content/gnas-301/reviews/unit-05/G3/renders-5c420198/).",
+        "Zero em dashes across all unit files; check:no-em-dash exit 0."
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "Plain-language definitions on first use: toxic agent (topic-01.mdx:37-39), xenobiotic (topic-02.mdx:37-39), biotransformation/detoxification/bioactivation (topic-02.mdx:47-54), MEA (topic-04.mdx:51-54), SDGs (topic-04.mdx:74-78), PEPA/NEQS (topic-04.mdx:85-88).",
+        "Concrete Pakistani contexts throughout: Karachi load-shedding generator (topic-01), lower-Sindh cotton sprayer (topic-02), staffroom heat/weakness idiom (topic-03:107-109), Sindh Indus-bank groundwater arsenic study (topic-01, topic-04), union council drain (topic-04).",
+        "HSC-appropriate register with clear analogies before abstraction; zero unexplained technical jargon; check:depth-gate exit 0."
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": [
+        "Nine-part learning cycle strictly maintained across all four topics (situation -> Explanation -> Activity -> Check your understanding -> Summary -> Self-assessment checklist -> Practicum -> Summative task -> Further reading).",
+        "Feasible zero-cost classroom activities with explicit time and grouping guidance: Chain the agent (25 min, pairs), Journey map (20 min, pairs), The honest label (25 min, groups of three), The wall timeline (25 min, groups of four).",
+        "Each topic directly identifies and corrects one misconception; worked examples complete each explanation (CO chain, sprayer bioactivation, tea vs liver system, arsenic governance stack).",
+        "Teacher notes provide realistic weekly pacing, sequencing rationale, activity management, and misconception probing questions."
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "blocking",
+      "resolved": true,
+      "message": "ROUND-2 BLOCKING FINDING RESOLVED (RRQ blueprint distribution): Topic 5.1 now carries two restricted-response questions (RRQ-01 CO odour mechanism and RRQ-02 emission-to-effect chain walk). The bank has been rebalanced to 2/2/3/3 across topics 5.1/5.2/5.3/5.4 (total 10 RRQs), satisfying the approved blueprint requirement of >= 2 RRQ per topic (specs/content/gnas-301/content-spec.md:847-848)."
+    },
+    {
+      "severity": "blocking",
+      "resolved": true,
+      "message": "ROUND-2 BLOCKING FINDING RESOLVED (WHO air 2024 citation claims): In docs/semester-1/gnas-301/unit-05/topic-01.mdx:52-54, unit-assessment.mdx:24-25, and specs/content/gnas-301/sources/unit-05.md:17, ungrounded claims regarding blood penetration and single heaviest ranking were replaced with what the cited fact sheet supports: fine particles cause cardiovascular and respiratory disease and cancers, contributing to 4.2 million premature deaths annually."
+    },
+    {
+      "severity": "blocking",
+      "resolved": true,
+      "message": "ROUND-2 BLOCKING FINDING RESOLVED (fig-U5-3 geometry and connector arrows): In static/img/figures/gnas-301/unit-05/fig-U5-3.svg, fig-U5-3.dark.svg, fig-U5-3.ur.svg, and fig-U5-3.ur.dark.svg, panels are re-spaced to x=26, 216, 406, 596 (width 178) and connector arrows are moved to span the panel gaps (x=204-218, 394-408, 584-598). No panels overlap and all connector arrows link stages 1->2, 2->3, and 3->4 cleanly."
+    },
+    {
+      "severity": "blocking",
+      "resolved": true,
+      "message": "ROUND-2 BLOCKING FINDING RESOLVED (coverage matrix cells): In specs/content/gnas-301/coverage/unit-05.md, line 18 maps U5-06 to exact heading 'Sustainable Development Goals (SDGs)' backed by source un-sdgs; line 20 maps U5-07 to exact heading 'Environmental laws, policies, guidelines and strategies related to public health' backed by source haines-frumkin."
+    },
+    {
+      "severity": "blocking",
+      "resolved": true,
+      "message": "ROUND-2 BLOCKING FINDING RESOLVED (alibhatti2017 author list): In specs/content/gnas-301/sources/unit-05.md:15 and Further reading sections in topic-02.mdx:134, topic-03.mdx:131, and topic-04.mdx:179, the citation now includes all five authors (Alibhatti, Z., Qureshi, K., Bhatti, I., Khuhawar, M. Y., & Unar, I. N.), matching DOAJ and source excerpt."
+    },
+    {
+      "severity": "advisory",
+      "resolved": true,
+      "message": "ROUND-2 ADVISORY FINDINGS RESOLVED: (a) Stockholm POPs adoption/force dates aligned in sources/unit-05.md:14 ('adopted 2001, in force 2004'); (b) topic-04.mdx:76 corrected from 'half of them' to 'seven of them'; (c) MCQ answer key distributed across options (a:2, b:2, c:4, d:2); (d) RRQ-04, RRQ-07, and RRQ-10 linked to concepts in concepts/unit-05.md; (e) RRQ-03/04/05/06/09 recast as short situations distinct from formative CYU items; (f) RRQ-10 directly tests SDG 6 targets and indicators."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "MEA timeline plan divergence: the approved figure plan in content-spec.md:841-843 lists eight markers including Kyoto 1997 and Rotterdam 1998, while the delivered figure fig-U5-7 and prose carry six (Stockholm 1972, Basel 1989, Rio 1992, Stockholm POPs 2001, Minamata 2013, Paris 2015). Documented accepted divergence per 20261019-repair-notes.md; does not affect course guide coverage."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Repository glossary keys: three Unit 5 key terms (Toxicant, Risk management, Environmental law) are defined inline on first use but do not yet have standalone entries in global glossary.json. Repo-wide glossary task outside unit scope; carried from round 2."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Un-bound excerpt keys in manifest tooling: who-chemical-safety, un-paris, and un-sdgs have committed excerpts under sources/texts/ that ground unit prose, but are not bound by review-evidence.mjs manifest generation due to year-suffix key filtering. Inspected directly as committed on-disk sources."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Headless review tooling constraint: The crew job brief explicitly prohibits running npm run build, a dev server, or Playwright Chromium. Full live browser/print DOM rendering was established in round 2 (renders-20260924T003554Z/). For Cycle 2, static structure, CSS variables, DOM heading hierarchy, SVG text geometry via measure-figure-text.mjs (all 32 variants exit 0), and Sharp rasterization of all 8 unit SVGs were performed and verified non-blank."
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-05/G3/logs-5c420198/validate-content.txt"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-05/G3/logs-5c420198/check-depth-gate.txt"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-05/G3/logs-5c420198/check-figures.txt"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-05/G3/logs-5c420198/check-no-em-dash.txt"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-05/G3/logs-5c420198/check-no-answer-keys.txt"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-05/G3/logs-5c420198/check-docs-sync.txt"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-05/G3/logs-5c420198/render-review.txt"
+    },
+    {
+      "name": "check:content",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-05/G3/logs-5c420198/check-content.txt"
+    },
+    {
+      "name": "measure-figure-text",
+      "exit_code": 0,
+      "log_path": "specs/content/gnas-301/reviews/unit-05/G3/logs-5c420198/measure-figure-text.txt"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/gnas-301/reviews/unit-05/G3/logs-5c420198/check-content.txt": "a3c2d635d463294bcd901eb38bba5b358c29ca887b6a4b756ee24a8d5131d496",
+    "specs/content/gnas-301/reviews/unit-05/G3/logs-5c420198/check-depth-gate.txt": "15021f8f88122b596e67cfd48c2ff282fde912e1b86bb03c2137bcf9d8e062fd",
+    "specs/content/gnas-301/reviews/unit-05/G3/logs-5c420198/check-docs-sync.txt": "cbc9f6e4b0b674cb49e2d9b795d81ed78f23dc431cba1130e4d64cf6d0bed749",
+    "specs/content/gnas-301/reviews/unit-05/G3/logs-5c420198/check-figures.txt": "54a388cb9954b9d2f07f84e5385ac0003b94a6a54023abb188e864346958b04f",
+    "specs/content/gnas-301/reviews/unit-05/G3/logs-5c420198/check-no-answer-keys.txt": "539ba62183931f332c562e346956452b9cf751e100de762601b786b497a7d612",
+    "specs/content/gnas-301/reviews/unit-05/G3/logs-5c420198/check-no-em-dash.txt": "00405490c649d998b589b23505029de9134497966b02ff9ccefb1075aa414dd3",
+    "specs/content/gnas-301/reviews/unit-05/G3/logs-5c420198/measure-figure-text.txt": "c6d6c8e0450443aba47977f31473108635fa70498137d47c3f308c55afe556e6",
+    "specs/content/gnas-301/reviews/unit-05/G3/logs-5c420198/render-review.txt": "447f55ad97d6b6b5bae8bcb24bba842b3af48083b351ff9d1c68f46c3e678395",
+    "specs/content/gnas-301/reviews/unit-05/G3/logs-5c420198/validate-content.txt": "5b3153a9d41a11051bff1d2f0396cf26eaaf00ae79e3b894c202823645c0e6a6",
+    "specs/content/gnas-301/reviews/unit-05/G3/renders-5c420198/fig-U5-1.png": "ab2e5bbb01e3426b3aa56f981b063735001fa55367a2bb4ee6c4c77d59429078",
+    "specs/content/gnas-301/reviews/unit-05/G3/renders-5c420198/fig-U5-2.png": "7b890cbe73633501ec99a34bc359e06613d21a3c7158a275db40c8922be2563f",
+    "specs/content/gnas-301/reviews/unit-05/G3/renders-5c420198/fig-U5-3.png": "70a5c7c5d67d435760cbd63ed1a414718ee82267d392023282e989d890665f3d",
+    "specs/content/gnas-301/reviews/unit-05/G3/renders-5c420198/fig-U5-4.png": "5005bfefd99d58757baba349b36d1aad91302405f8e89a05eac1d517ccaeea58",
+    "specs/content/gnas-301/reviews/unit-05/G3/renders-5c420198/fig-U5-5.png": "899b36101ff8c07c16fa0b4172d9b37135fb0e1454d63b45c1f50f4f0f1350b1",
+    "specs/content/gnas-301/reviews/unit-05/G3/renders-5c420198/fig-U5-6.png": "0b4a3f5cdf302cca9cfa7b7941be31397627b8121f9a428e0dbb6ab27d630c91",
+    "specs/content/gnas-301/reviews/unit-05/G3/renders-5c420198/fig-U5-7.png": "9d6f3402ff9ce1427e75d7be1d7a95f337058c3a47aed602d8ac6a981510464a",
+    "specs/content/gnas-301/reviews/unit-05/G3/renders-5c420198/fig-U5-8.png": "bc556c9b328029b5d0eabad465e7c4e1bc2a506d515689dc4e521476aca2e87e"
+  }
+}

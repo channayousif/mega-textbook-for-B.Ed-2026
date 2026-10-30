@@ -1,11 +1,12 @@
 // Voice line import with hash provenance (VS-003 V006; VS-004 PI-04, PI-08, PI-09). Pure apart from
 // the files it reads and writes, so tests run it against temporary roots.
-import { lstatSync, mkdirSync, renameSync, existsSync } from 'node:fs';
+import { existsSync, lstatSync, mkdirSync, readFileSync, renameSync, rmSync, writeFileSync } from 'node:fs';
 import { basename, dirname, extname, join, relative } from 'node:path';
-import { AUDIO_EXTS, MAX_AUDIO_BYTES, MAX_SECONDS, MIN_SECONDS, normaliseAudio, probeAudio, sniffAudio } from './audio.ts';
+import { AUDIO_EXTS, decodeAudio, MAX_AUDIO_BYTES, MAX_SECONDS, MIN_SECONDS, normaliseAudio, probeAudio, sniffAudio } from './audio.ts';
 import { consentProblems, readConsent, readVoiceCard } from './consent.ts';
 import { digestFile } from './hash.ts';
 import { isInside } from './paths.ts';
+import { applyFx, FX_PRESETS, readPcm16, writePcm16 } from './voice-fx.ts';
 
 export const LINE_ID_RE = /^L\d{2}$/;
 /** Statuses after the asset gate: a new asset sends the episode back to asset_review. */
@@ -74,7 +75,22 @@ export async function importVoiceLine(o: ImportOptions): Promise<ImportResult> {
   const dest = join(audioDir, `${o.lineId}.wav`);
   const tmp = join(audioDir, `.${o.lineId}.importing.wav`);
   mkdirSync(audioDir, { recursive: true });
-  normaliseAudio(o.file, tmp);
+  if (card.post) {
+    // Tone shaping on the decoded PCM, then tempo and loudness in FFmpeg (VS-ADR-0014).
+    const raw = join(audioDir, `.${o.lineId}.raw.wav`);
+    const fx = join(audioDir, `.${o.lineId}.fx.wav`);
+    try {
+      decodeAudio(o.file, raw);
+      const { fs, x } = readPcm16(readFileSync(raw));
+      writeFileSync(fx, writePcm16(applyFx(x, fs, FX_PRESETS[card.post.preset]), fs));
+      normaliseAudio(fx, tmp, { tempo: card.post.tempo });
+    } finally {
+      rmSync(raw, { force: true });
+      rmSync(fx, { force: true });
+    }
+  } else {
+    normaliseAudio(o.file, tmp);
+  }
   const out = probeAudio(tmp);
   if (out.sample_rate !== 48_000 || out.channels !== 1 || out.codec !== 'pcm_s16le') {
     fail(`normalised file is ${out.codec} ${out.sample_rate} Hz x${out.channels}, expected pcm_s16le 48000 Hz mono`);
@@ -116,6 +132,7 @@ export async function importVoiceLine(o: ImportOptions): Promise<ImportResult> {
       ...(card.reference_sha256 ? { reference_sha256: card.reference_sha256 } : {}),
       consent_id: consent.id,
       consent_sha256: consent.sha256,
+      ...(card.post ? { post: `${card.post.preset}, tempo ${card.post.tempo}` } : {}),
     },
     rights_note: `voice card brand/voices/${o.character}.md (cleared); consent ${consent.id}; source ${o.sourceTool}`,
     imported_at: now,

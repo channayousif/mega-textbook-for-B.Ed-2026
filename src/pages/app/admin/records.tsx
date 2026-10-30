@@ -3,6 +3,7 @@ import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import OwnerConsoleGuard from '@site/src/components/OwnerConsoleGuard';
 import { getSupabase } from '@site/src/lib/supabase';
+import { fetchAllPages } from '@site/src/lib/pagination';
 
 type Person = { id: string; full_name: string | null; email: string | null; role: string; status: string; deleted_at: string | null };
 type ClassRow = { id: string; name: string; course_code: string; teacher_id: string; status: string };
@@ -22,8 +23,10 @@ function Records(): React.ReactElement {
   const load = useCallback(async () => {
     const db = await getSupabase(); if (!db) return;
     const [p,c,u] = await Promise.all([
-      db.from('profiles').select('id,full_name,role,status,deleted_at').is('deleted_at',null).order('full_name'),
-      db.from('classes').select('id,name,course_code,teacher_id,status').order('created_at',{ascending:false}),
+      // Paged past PostgREST's 1000-row cap, same as reviewers.tsx: an unpaged read silently
+      // dropped every person or class past row 1000 from the pickers.
+      fetchAllPages<Omit<Person, 'email'>>((from, to) => db.from('profiles').select('id,full_name,role,status,deleted_at').is('deleted_at',null).order('full_name').order('id').range(from, to)),
+      fetchAllPages<ClassRow>((from, to) => db.from('classes').select('id,name,course_code,teacher_id,status').order('created_at',{ascending:false}).order('id').range(from, to)),
       db.functions.invoke('admin-list-users', { method: 'GET' }),
     ]);
     if (p.error || c.error) setError(p.error?.message || c.error?.message || 'Could not load records.');

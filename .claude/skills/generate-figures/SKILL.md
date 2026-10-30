@@ -80,6 +80,12 @@ figures for a unit that has no per-topic markers yet.
      **shape + label**.
    - `illustration` - a scene that needs pictorial depth: people, a classroom, a place, a
      photograph-like image. Rare in a textbook figure set.
+   - **A map of a real country or region is never drawn or generated (ADR-0033).** Build it from
+     Natural Earth (Pakistan point-of-view layers) with a committed script under
+     `ops/figure-sources/<course>/`. Check it against the Survey of Pakistan map, put a `Source:`
+     note in the row's Prompt cell, and open the PR as a draft for owner sign-off. A photo or
+     document of a real place or person may be reused from PD, CC0 or CC BY sources, with
+     author, licence and URL in the row. `npm run check:map-sources` rejects an unsourced map row.
    - A prompt that says "clean flat vector" is a schematic, even if it depicts a scene
      (e.g. a two-panel "industrial vs inquiry" classroom drawn as flat labelled panels →
      `diagram`).

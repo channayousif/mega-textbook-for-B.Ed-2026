@@ -16,9 +16,10 @@ Represents the viewer - never foolish, never mocked.
 - Carries a notebook with an burnt orange (#b8551d) cover.
 
 ## Turnaround / expression sheet prompt
+The full prompt set (master, blink, mouths, gestures) is `brand/handoff-cast.md`.
 > Character design sheet of an original character: a friendly young South Asian man, about 23,
-> trainee teacher, short neat hair, light stubble, white kurta with rolled sleeves, deep blue
-> waistcoat, satchel strap, holding an amber notebook. Front, three-quarter and side views,
+> trainee teacher, short neat hair, light stubble, white kurta with rolled sleeves, deep teal
+> green (#1f6f5c) waistcoat, satchel strap, holding a burnt orange (#b8551d) notebook. Front, three-quarter and side views,
 > plus 6 expressions (curious, confused, excited, thinking, smiling, "aha!"). Plain cream
 > background. + `art_style.prompt_suffix`
 

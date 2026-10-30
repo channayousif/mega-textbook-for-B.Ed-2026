@@ -1,0 +1,42 @@
+render-review evidence (G3 English, GPKS-402 Unit 5)
+=============================================================
+Timestamp: 2026-10-28T11:55:00Z
+Reviewer: agent:g3-reviewer
+Model: Gemini 3.8 Flash (High)
+Reviewer Run ID: 21030998-7c55-4596-9cef-92787e7cb7aa
+Course: GPKS-402 Unit 5 (Economy and Society)
+
+CONSTRAINT: The brief for this crew job explicitly forbids running `npm run build`,
+a dev server, or Playwright Chromium. Comprehensive visual, structural, and raster
+inspection was conducted within permitted host resources:
+
+1. Figure Rasterization and Visual Inspection:
+   - All four unit SVGs were rasterized to PNG at 780px width using Sharp with :root CSS variables resolved:
+     - fig-U5-1.png (780x594): Table of three connected economic sectors (Agriculture 23.54%, Industry 18.07%, Services 58.39%) based on provisional FY2024-25 GDP shares at constant FY2015-16 prices, with illustrative activities and potential challenges. Mean channel luminances [232.7, 237.4, 235.9].
+     - fig-U5-2.png (780x582): Diagram of the education and economic development cycle: Accessible education -> Useful skills -> Productive work -> Income and public resources -> Reinvestment, with explicit conditioning factors (safe access, suitable opportunities, reliable infrastructure, fair public decisions). Mean channel luminances [236.0, 240.4, 239.3].
+     - fig-U5-3.png (780x730): Concept map of cultural diversity across provinces and regions, placing shared belonging at the centre, with branches for languages, traditions, arts, and cuisine. Explicit note that people and practices cross regional boundaries and no child represents an entire community. Mean channel luminances [235.8, 239.6, 238.4].
+     - fig-U5-4.png (780x728): Comparative table of rural and urban settlement dimensions vs overlapping tribal kinship relationships across family/care, livelihoods, education access, and traditions. Questions rather than fixed traits. Mean channel luminances [228.7, 233.8, 232.1].
+   - All four PNG renders are saved under specs/content/gpks-402/reviews/unit-05/G3/renders-21030998/ and verified non-blank.
+
+2. Figure Text Geometry and Spacing (measure-figure-text.mjs):
+   - All 8 committed SVG variants (4 light, 4 dark twins) were measured with scripts/measure-figure-text.mjs:
+     - All 8 assets PASS with exit code 0, zero text overflow beyond the viewBox (widest text ends at x=764.4), and zero wordmark collision (wordmark at x=671.7).
+   - Text boxes, padding, and layout verified clean across light and dark variants.
+
+3. Alt Text and SVG Accessibility:
+   - All four <Figure> elements across topic-01.mdx and topic-02.mdx carry detailed descriptive alt text matching the visual diagrams and figures/unit-05.md manifest declarations.
+   - SVG sources include role="img", aria-labelledby="t d", <title id="t">, and <desc id="d"> elements with matching descriptions.
+
+4. Heading Structure and Monotonic Progression:
+   - docs/semester-2/gpks-402/unit-05/index.mdx: Single # title, ## outcomes, ## prerequisite knowledge, ## in this unit, ## how to use this unit.
+   - topic-01.mdx: # title, ## A real classroom situation, ## Explanation, ### Agriculture..., ### Industry and trade..., ### Economic challenges..., ### The role of education..., ## Activity..., ## Check your understanding, ## Summary, ## Self-assessment checklist, ## Try this at your practicum school, ## Summative task, ## Further reading.
+   - topic-02.mdx: # title, ## A real classroom situation, ## Explanation, ### Social structure..., ### Cultural diversity..., ### Languages and traditions..., ## Activity..., ## Check your understanding, ## Summary, ## Self-assessment checklist, ## Try this at your practicum school, ## Summative task, ## Further reading.
+   - unit-assessment.mdx: # title, ## Unit summary, ## Summative assessment, ### MCQs, ### RRQs, ### ERQs, ## Answers and marking guidance, ### MCQ answer key, ### RRQ model answers, ### ERQ rubrics.
+   - Complete monotonic progression with zero skipped heading levels across all unit MDX files.
+
+5. Presentation and Mobile Layout:
+   - Content tables in MDX and SVG graphics adhere to display: block; overflow-x: auto; width: fit-content per src/css/custom.css.
+   - Assessment answer key and marking guidance are strictly quarantined within the bounded final section of unit-assessment.mdx.
+   - Zero em dashes (check-no-em-dash passes with exit 0).
+
+exit_code: 0
