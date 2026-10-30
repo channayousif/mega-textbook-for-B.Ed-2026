@@ -5,9 +5,11 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { alignLines } from '../../remotion/src/align.ts';
-import type { CaptionLine, Cue, ShortProps } from '../../remotion/src/props.ts';
+import { FPS, type CaptionLine, type Cue, type Pose, type ShortProps } from '../../remotion/src/props.ts';
 import { digestBytes } from './hash.ts';
+import { visemes } from './lipsync.ts';
 import { episodeDir, mediaRoot } from './paths.ts';
+import { loadCast } from './rig.ts';
 import { brandProps } from './sample.ts';
 import { wavSeconds } from './wav.ts';
 
@@ -15,10 +17,19 @@ export const LEAD_S = 0.3;
 export const GAP_S = 0.35;
 export const TAIL_S = 0.5;
 export const END_CARD_S = 3;
+export const DEFAULT_SET = 'studio';
+/** Gesture when script.json gives none: the segment's usual move. */
+const SEGMENT_POSE: Record<string, Pose> = { hook: 'explain', beat1: 'explain', beat2: 'point', beat3: 'explain', recap: 'celebrate', cta: 'point' };
 
-export interface EpisodeRender { props: ShortProps; audio: Record<string, Buffer>; alignment: Record<string, 'manual' | 'sentence'> }
+export interface EpisodeRender {
+  props: ShortProps;
+  audio: Record<string, Buffer>;
+  /** Puppet and set images, keyed by their path under public/. */
+  images: Record<string, Buffer>;
+  alignment: Record<string, 'manual' | 'sentence'>;
+}
 
-export function episodeProps(ep: any, script: any, opts: { media?: string; manual?: Record<string, Cue[]> } = {}): EpisodeRender {
+export function episodeProps(ep: any, script: any, opts: { media?: string; manual?: Record<string, Cue[]>; set?: string } = {}): EpisodeRender {
   const media = opts.media ?? mediaRoot();
   const production = ep.mode !== 'sample';
   const usable = (a: any) => a.kind === 'audio' && (production ? a.status === 'accepted' : a.status !== 'rejected');
@@ -36,10 +47,13 @@ export function episodeProps(ep: any, script: any, opts: { media?: string; manua
     const rel = `audio/${l.id}.wav`;
     audio[rel] = bytes;
     const dur = wavSeconds(bytes);
-    lines.push({ id: l.id, speaker: l.speaker, text_ur: l.text_ur, from_s: round(t), to_s: round(t + dur), audio: rel });
+    const gesture: Pose = l.gesture ?? SEGMENT_POSE[l.segment] ?? 'idle';
+    lines.push({ id: l.id, speaker: l.speaker, text_ur: l.text_ur, from_s: round(t), to_s: round(t + dur), audio: rel, gesture, mouth: visemes(bytes, FPS) });
     t += dur + GAP_S;
   }
   if (missing.length) throw new Error(`voice audio missing for ${missing.join(', ')}; import with npm run voice:import`);
+  const castFiles = loadCast(media, opts.set ?? DEFAULT_SET);
+  if (production && !castFiles.puppets) throw new Error('puppet rigs missing under $MEDIA_ROOT/brand-assets/cast/; build them with tools/cast/cast_rig.py');
   const { cast, ...brand } = brandProps();
   const aligned = alignLines(lines, opts.manual ?? {}, brand.captions.max_words_per_line, brand.captions.max_lines);
   const last = lines[lines.length - 1].to_s;
@@ -53,9 +67,12 @@ export function episodeProps(ep: any, script: any, opts: { media?: string; manua
       end_card: { url: script.cta.url, cta_ur: script.cta.text_ur, seconds: END_CARD_S },
       audio: null,
       cast,
+      puppets: castFiles.puppets,
+      set: castFiles.set,
       brand,
     },
     audio,
+    images: castFiles.files,
     alignment: aligned.source,
   };
 }

@@ -1,8 +1,9 @@
 import { loadFont } from '@remotion/fonts';
 import React from 'react';
-import { AbsoluteFill, Audio, interpolate, Sequence, staticFile, useCurrentFrame, useVideoConfig } from 'remotion';
+import { AbsoluteFill, Audio, Img, interpolate, Sequence, staticFile, useCurrentFrame, useVideoConfig } from 'remotion';
 import { chunk } from './align';
-import type { CaptionLine, ShortProps } from './props';
+import type { CaptionLine, ShortProps, Viseme } from './props';
+import { POSE_FADE, Puppet, type PoseSpan } from './Puppet';
 
 const URDU = 'Noto Nastaliq Urdu';
 let fontRequested = '';
@@ -62,7 +63,7 @@ const Captions: React.FC<{ line: CaptionLine; props: ShortProps }> = ({ line, pr
   );
 };
 
-const Puppet: React.FC<{ name: string; color: string; active: boolean; side: 'left' | 'right' }> = ({ name, color, active, side }) => {
+const Placeholder: React.FC<{ name: string; color: string; active: boolean; side: 'left' | 'right' }> = ({ name, color, active, side }) => {
   const frame = useCurrentFrame();
   const bob = active ? Math.sin(frame / 4) * 6 : 0;
   return (
@@ -89,6 +90,26 @@ const EndCard: React.FC<{ props: ShortProps }> = ({ props }) => {
   );
 };
 
+/** Puppet height and feet line on the 1080x1920 frame; captions sit over the lower legs. */
+const PUPPET_H = 1180;
+const FEET_Y = 1880;
+
+/** A character's gestures (its own lines, inset so the fades finish inside the line) and mouth now. */
+const Cast: React.FC<{ props: ShortProps; who: 'ustani' | 'shagird'; centerX: number }> = ({ props, who, centerX }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const own = props.lines.filter((l) => l.speaker === who);
+  const spans: PoseSpan[] = own.map((l) => ({
+    from: Math.round(l.from_s * fps) + 2, to: Math.max(Math.round(l.from_s * fps) + 2 + 2 * POSE_FADE, Math.round(l.to_s * fps) - 2), pose: l.gesture ?? 'idle',
+  }));
+  const line = own.find((l) => frame >= Math.round(l.from_s * fps) && frame < Math.round(l.to_s * fps));
+  const mouth = ((line?.mouth ?? '')[frame - Math.round((line?.from_s ?? 0) * fps)] ?? 'X') as Viseme;
+  return (
+    <Puppet rig={props.puppets![who]} seed={`${props.episode_id}-${who}`} spans={spans} mouth={line ? mouth : 'X'}
+      active={!!line} centerX={centerX} bottom={FEET_Y} height={PUPPET_H} />
+  );
+};
+
 export const UrduShort: React.FC<ShortProps> = (props) => {
   useUrduFont(props.brand.font_file);
   const { fps } = useVideoConfig();
@@ -99,6 +120,7 @@ export const UrduShort: React.FC<ShortProps> = (props) => {
   const endFrom = Math.round((props.duration_s - props.end_card.seconds) * fps);
   return (
     <AbsoluteFill style={{ background: colors.background }}>
+      {props.set ? <Img src={staticFile(props.set)} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} /> : null}
       {props.audio ? <Audio src={staticFile(props.audio)} /> : null}
       <div
         dir="rtl"
@@ -111,8 +133,18 @@ export const UrduShort: React.FC<ShortProps> = (props) => {
       >
         {props.title_ur}
       </div>
-      <Puppet name={props.cast.ustani} color={colors.primary} active={speaking === 'ustani'} side="right" />
-      <Puppet name={props.cast.shagird} color={colors.accent} active={speaking === 'shagird'} side="left" />
+      {props.puppets ? (
+        <>
+          {/* Ustani on the right, Bilal on the left: the order an RTL viewer reads the exchange. */}
+          <Cast props={props} who="shagird" centerX={290} />
+          <Cast props={props} who="ustani" centerX={800} />
+        </>
+      ) : (
+        <>
+          <Placeholder name={props.cast.ustani} color={colors.primary} active={speaking === 'ustani'} side="right" />
+          <Placeholder name={props.cast.shagird} color={colors.accent} active={speaking === 'shagird'} side="left" />
+        </>
+      )}
       {props.lines.map((l) => (
         <Sequence key={l.id} from={Math.round(l.from_s * fps)} durationInFrames={Math.round((l.to_s - l.from_s) * fps)} layout="none">
           {l.audio ? <Audio src={staticFile(l.audio)} /> : null}
