@@ -73,8 +73,11 @@ The stage rows below govern Unit 5. No G1 re-evaluation or G3/G5 approval is rec
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 6 | G3 en-review | ▢ | | advisory: escalate; agent:codex-g3-reviewer; report specs/content/gpks-402/reviews/unit-06/G3/01a18ccb-4a8c-7c60-8ed2-7c546d08340e.json; source provenance, assessment scoring and specialist vocabulary need author repair; author-run handoff and current narrow/A4 renders unavailable; unsigned, G3 remains open (ADR-0019) |
+
 ## Unit 3 stage evidence
+
 Only Unit 3 is updated by this authoring job. The approved content-spec is the drafting authority; older course-level status prose above is retained for its other-unit history.
+
 | Unit | Stage | Status | Reviewer | Notes |
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-03/G2/20261030T113547697Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | Independent expert review pending; no certification claimed |
