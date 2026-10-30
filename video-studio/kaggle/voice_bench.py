@@ -241,7 +241,9 @@ def evaluate_gen(inputs):
     # A segment's character may name a reference variant (e.g. shagird-rec1, round 8); each is its own voice.
     ref = {ch: os.path.join(inputs, cands["refs"][ch][0]["audio"]) for ch in {s["character"] for s in es["segments"]}}
     segs = {s["id"]: s for s in es["segments"]}
-    jobs = [(s, "default", seed, "main") for s in es["segments"] for seed in es["seeds"]]
+    # A character whose card locks another style (Bilal, VS-ADR-0014) is voiced in it.
+    main_style = lambda ch: es.get("character_styles", {}).get(ch, "default")
+    jobs = [(s, main_style(s["character"]), seed, "main") for s in es["segments"] for seed in es["seeds"]]
     for ch, arm in es["style_arm"].items():
         jobs += [(segs[i], st, es["seeds"][0], "style") for i in arm["lines"] for st in arm["styles"] if st != "default"]
     clips = []

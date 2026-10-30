@@ -18,12 +18,13 @@ mkdirSync(join(media, 'consents'), { recursive: true });
 mkdirSync(join(media, EP, 'inbox'), { recursive: true });
 mkdirSync(voices, { recursive: true });
 
-const card = (cleared: boolean) => [
+const card = (cleared: boolean, post = '') => [
   '# Voice card: Ustani Farzana (test)',
   '',
   `- **Status:** locked. ${cleared ? '**Cleared to publish** under consent `narrator-09`.' : '**Not cleared to publish.**'}`,
   '- **Reference:** `refs/x.wav`, SHA-256 `' + 'a'.repeat(64) + '`.',
   '- **Licence / consent:** engine MIT. Voice: consent `narrator-09`.',
+  ...(post ? [`- **Post-processing:** ${post}`] : []),
   '',
 ].join('\n');
 const consent = (extra = '') => [
@@ -34,8 +35,8 @@ const consent = (extra = '') => [
   '- Processing by third parties: agreed (private Kaggle datasets)',
   extra,
 ].join('\n');
-const setup = (o: { cleared?: boolean; consentExtra?: string } = {}) => {
-  writeFileSync(join(voices, 'ustani.md'), card(o.cleared ?? true));
+const setup = (o: { cleared?: boolean; consentExtra?: string; post?: string } = {}) => {
+  writeFileSync(join(voices, 'ustani.md'), card(o.cleared ?? true, o.post));
   writeFileSync(join(media, 'consents', '2026-10-narrator-09.md'), consent(o.consentExtra));
 };
 const inbox = (name: string, bytes: Buffer) => { const p = join(media, EP, 'inbox', name); writeFileSync(p, bytes); return p; };
@@ -108,4 +109,19 @@ test('files: outside MEDIA_ROOT, symlinks, disguised or wrong-speaker lines are 
   await assert.rejects(importVoiceLine(opts({ file: inbox('text.wav', Buffer.from('not audio at all')) })), /not audio/);
   await assert.rejects(importVoiceLine(opts({ lineId: 'L01' })), /spoken by shagird/);
   await assert.rejects(importVoiceLine(opts({ file: inbox('blip.wav', toneWav(0.1)) })), /duration/);
+});
+
+test('a card post-processing line shapes the tone and tempo; unknown presets fail closed', async () => {
+  setup({ post: 'preset `warm` (VS-ADR-0014), tempo `1.06`' });
+  const r = await importVoiceLine(opts({ episode: episode(), file: inbox('fx.wav', toneWav(2.12, 220, 44_100)) }));
+  const out = probeAudio(join(media, r.entry.path));
+  assert.equal(r.entry.voice.post, 'warm, tempo 1.06');
+  assert.ok(Math.abs(out.duration_s - 2.0) < 0.05, `tempo 1.06 shortens 2.12 s to about 2 s, got ${out.duration_s}`);
+  assert.deepEqual([out.sample_rate, out.channels, out.codec], [48_000, 1, 'pcm_s16le']);
+  assert.ok(!existsSync(join(media, EP, 'audio', '.L02.raw.wav')) && !existsSync(join(media, EP, 'audio', '.L02.fx.wav')), 'temporary files removed');
+  setup({ post: 'preset `loud`' });
+  await assert.rejects(importVoiceLine(opts({})), /no known preset/);
+  setup({ post: 'none' });
+  const plain = await importVoiceLine(opts({ episode: episode(), file: inbox('plain.wav', toneWav(1.5, 220, 44_100)) }));
+  assert.equal(plain.entry.voice.post, undefined);
 });
