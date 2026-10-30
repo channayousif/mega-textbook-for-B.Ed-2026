@@ -1,0 +1,1 @@
+No render-review command was executed. The crew brief explicitly prohibits builds, dev servers and Playwright. No current learner-page render, 360px inspection, keyboard table test or A4 print inspection is available. Source and SVG inspection are not a visual pass. No image is represented as rendered learner evidence. No browser or heavy job was started.
