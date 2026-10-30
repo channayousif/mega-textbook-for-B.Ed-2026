@@ -1,0 +1,8 @@
+✓ static/img/figures/gpks-402/unit-03/fig-U3-1.dark.svg (780x580, widest text ends at 762.4, wordmark at 669.7)
+✓ static/img/figures/gpks-402/unit-03/fig-U3-1.svg (780x580, widest text ends at 762.4, wordmark at 669.7)
+✓ static/img/figures/gpks-402/unit-03/fig-U3-2.dark.svg (780x690, widest text ends at 762.4, wordmark at 669.7)
+✓ static/img/figures/gpks-402/unit-03/fig-U3-2.svg (780x690, widest text ends at 762.4, wordmark at 669.7)
+✓ static/img/figures/gpks-402/unit-03/fig-U3-3.dark.svg (780x690, widest text ends at 762.4, wordmark at 669.7)
+✓ static/img/figures/gpks-402/unit-03/fig-U3-3.svg (780x690, widest text ends at 762.4, wordmark at 669.7)
+✓ static/img/figures/gpks-402/unit-03/fig-U3-4.dark.svg (780x695, widest text ends at 762.4, wordmark at 669.7)
+✓ static/img/figures/gpks-402/unit-03/fig-U3-4.svg (780x695, widest text ends at 762.4, wordmark at 669.7)
