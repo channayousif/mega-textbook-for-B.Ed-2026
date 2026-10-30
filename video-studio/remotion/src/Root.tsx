@@ -1,9 +1,8 @@
 import React from 'react';
 import { Composition } from 'remotion';
-import type { ShortProps } from './props';
+import { FPS, type ShortProps } from './props';
 import { UrduShort } from './UrduShort';
 
-const FPS = 30;
 
 // Placeholder defaults only so the composition registers; real props always come from scripts.
 const defaults: ShortProps = {
