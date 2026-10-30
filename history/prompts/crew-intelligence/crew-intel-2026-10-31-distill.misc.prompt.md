@@ -2,7 +2,7 @@
 id: crew-intel-2026-10-31-distill
 title: crew intel_distill INTEL unit 0
 stage: misc
-date: 2026-10-31
+date: 2026-10-30
 surface: agent
 model: agy
 feature: crew-intelligence
@@ -16,11 +16,10 @@ links:
   adr: null
   pr: null
 files:
-  - specs/intelligence/daily/2026-10-31.md
-  - history/prompts/crew-intelligence/crew-intel-2026-10-31-distill.misc.prompt.md
+ - history/prompts/crew-intelligence/crew-intel-2026-10-31-distill.misc.prompt.md
+ - specs/intelligence/daily/2026-10-31.md
 tests:
-  - npm run check:content
-  - node --test tests/crew/*.test.mjs
+ - npm run check:content
 ---
 
 ## Prompt
@@ -180,32 +179,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (intel-2026-10-29-distill, intel_distill, agy) Claude CLI's quota message 'hit your 5-hour limit' evades scripts/crew/workers.mjs QUOTA_RE because \w does not match the hyphen in 5-hour, burning job retry attempts.
 - (intel-2026-10-29-distill, intel_distill, agy) Concurrent jobs in course focus repeatedly collide on specs/content/<course>/tasks.md table rows; extending resolveSharedConflicts with markdown table row reconciliation would eliminate mass batch exclusions.
 
+
 ## Response snapshot
 
-Distilled 10 daily intelligence candidates for 2026-10-31 covering translation dispatch suppression during active G3 escalations, leaked e2e test users hitting PostgREST max_rows limits, tasks.md table row merge conflict deduplication, source quotation authenticity checks, assessment question stem vs rubric alignment, generated content-status invalidation, review evidence provenance propagation, and Video Studio synthetic audio pacing.
+10 candidates; hold translation on G3 escalations, leak-proof e2e users, and reconcile tasks.md table rows.
 
 ## Outcome
 
-- Impact: intel_distill for INTEL Unit 0 by agy on 2026-10-31.
-- Tests: `npm run check:content` passed (13 gates green); `node --test tests/crew/*.test.mjs` passed (83 tests green).
+- Impact: intel_distill for INTEL Unit 0 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 2 file(s), listed above.
-- Next prompts: the weekly survey / crew lead promotes candidates to registry.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Created `specs/intelligence/daily/2026-10-31.md` with 10 ranked intelligence candidates, effect evaluations for adopted registry items, and signal retention rationale.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit does not certify anything.
+- Shipped / changed: 10 candidates; hold translation on G3 escalations, leak-proof e2e users, and reconcile tasks.md table rows.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Translation and retry jobs should be held when G3 report disposition is escalate or revise with unresolved blocking defects (candidate C1).
   - Unpaged PostgREST queries in admin pages risk hitting the 1000-row limit when test accounts accumulate; use fetchAllPages (candidate C2).
   - Merging tasks.md table rows across concurrent course jobs requires row reconciliation by (Unit, Stage) to avoid duplicate rows and pipeline gate failures (candidate C3).
-- Paperclip issues affected: none (Paperclip retired).
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS, node --test tests/crew/*.test.mjs PASS.
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
