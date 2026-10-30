@@ -2,7 +2,7 @@
 id: crew-gpks-402-u03-review_en
 title: crew review_en GPKS-402 unit 3
 stage: misc
-date: 2026-10-31
+date: 2026-10-30
 surface: agent
 model: agy
 feature: gpks-402
@@ -16,34 +16,30 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/gpks-402/crew-gpks-402-u03-review_en.misc.prompt.md
-  - specs/content/gpks-402/reviews/unit-03/G3/608a5388-1312-4060-ac88-c7d64ddc8c72.json
-  - specs/content/gpks-402/reviews/unit-03/G3/608a5388-1312-4060-ac88-c7d64ddc8c72.summary.md
-  - specs/content/gpks-402/reviews/unit-03/G3/crew-608a5388/manifest.json
-  - specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/check-content.txt
-  - specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/check-depth-gate.txt
-  - specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/check-docs-sync.txt
-  - specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/check-figures.txt
-  - specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/check-no-answer-keys.txt
-  - specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/check-no-em-dash.txt
-  - specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/fig-U3-1.png
-  - specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/fig-U3-2.png
-  - specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/fig-U3-3.png
-  - specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/fig-U3-4.png
-  - specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/measure-figure-text.txt
-  - specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/render-review.txt
-  - specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/validate-content.txt
-  - specs/content/gpks-402/reviews/unit-03/G3/summary.md
-  - specs/content/gpks-402/tasks.md
+ - history/prompts/gpks-402/crew-gpks-402-u03-review_en.misc.prompt.md
+ - specs/content/gpks-402/reviews/unit-03/G3/608a5388-1312-4060-ac88-c7d64ddc8c72.json
+ - specs/content/gpks-402/reviews/unit-03/G3/608a5388-1312-4060-ac88-c7d64ddc8c72.summary.md
+ - specs/content/gpks-402/reviews/unit-03/G3/crew-608a5388/manifest.json
+ - specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/check-content.txt
+ - specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/check-depth-gate.txt
+ - specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/check-docs-sync.txt
+ - specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/check-figures.txt
+ - specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/check-no-answer-keys.txt
+ - specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/check-no-em-dash.txt
+ - specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/fig-U3-1.png
+ - specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/fig-U3-2.png
+ - specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/fig-U3-3.png
+ - specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/fig-U3-4.png
+ - specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/measure-figure-text.txt
+ - specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/render-review.txt
+ - specs/content/gpks-402/reviews/unit-03/G3/logs-608a5388/validate-content.txt
+ - specs/content/gpks-402/reviews/unit-03/G3/summary.md
+ - specs/content/gpks-402/tasks.md
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
-
-Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.
-
-### Brief contents (.crew/brief.md)
 
 # Crew job gpks-402-u03-review_en
 
@@ -71,25 +67,26 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Executed independent G3 English review of GPKS-402 Unit 3 with advisory pass disposition, recorded validated report and evidence logs, and updated tasks.md.
+Executed independent G3 English review for GPKS-402 Unit 3 with advisory pass disposition, recorded validated report and evidence logs, and updated tasks.md.
 
 ## Outcome
 
 - Impact: review_en for GPKS-402 Unit 3 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before committing.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 19 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Executed independent G3 English review of GPKS-402 Unit 3 with advisory pass disposition, recorded validated report and evidence logs, and updated tasks.md.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this commit does not certify anything.
+- Shipped / changed: Executed independent G3 English review for GPKS-402 Unit 3 with advisory pass disposition, recorded validated report and evidence logs, and updated tasks.md.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All seven G3 criteria pass with verified evidence; 25 assessment items independently solved; all 8 SVG variants pass measure-figure-text.
+  - All seven G3 English criteria verified passing with evidence; all 25 assessment items independently solved; all 8 SVG variants pass geometry.
   - G3 tracker row in specs/content/gpks-402/tasks.md is updated to open ▢ per ADR-0019; certification remains blocked pending trusted qualification.
   - Unit 3 is ready for Urdu translation (G4 ur-translation) and subsequent independent Urdu review (G5 ur-review).
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
@@ -98,3 +95,5 @@ Executed independent G3 English review of GPKS-402 Unit 3 with advisory pass dis
 
 - Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
