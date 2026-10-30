@@ -99,7 +99,9 @@ test('application, direct grant, review decision and job retry are reachable', a
     await adminPage.reload();
     await expect(jobCard.getByRole('link', { name: 'Open draft pull request' })).toHaveAttribute('href', 'https://github.com/example/repo/pull/12');
   } finally {
-    await adminContext.close(); await reviewerContext.close();
+    // Delete first: on a timeout the contexts are already gone and close() throws, which
+    // skipped this cleanup and leaked three users into the shared database per failure.
     await deleteUsers(svc, admin.data.user!.id, reviewer.data.user!.id, direct.data.user!.id);
+    await adminContext.close().catch(() => {}); await reviewerContext.close().catch(() => {});
   }
 });
