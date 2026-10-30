@@ -23,6 +23,7 @@
     "check:pipeline-gate": "node scripts/check-pipeline-gate.mjs",
     "check:depth-gate": "node scripts/check-unit-depth.mjs",
     "check:figures": "node scripts/check-figures.mjs",
+    "check:map-sources": "node scripts/check-map-sources.mjs",
     "check:no-em-dash": "node scripts/check-no-em-dash.mjs",
     "check:licence": "node scripts/check-licence.mjs --allow-missing",
     "licence:map": "node scripts/build-licence-map.mjs",

@@ -27,7 +27,7 @@ import { send, reply, readInbox } from './notify.mjs';
 import { reviewFindingsSection, parseHandoff, priorHandoffsSection } from './handoff.mjs';
 import { freshChecks } from './checks.mjs';
 import { batchDue, batchCandidates, batchId, batchTitle, batchBody, exclusionReason } from './batch.mjs';
-import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport, specUnitNumbers } from './planner.mjs';
+import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport, specUnitNumbers, focusCourse, IN_FLIGHT, isCorpusStage } from './planner.mjs';
 import { walkUnits } from '../lib/content-roots.mjs';
 import { REGISTRIES, registryProblems, mergeGlossary } from './registries.mjs';
 import { weekId, local, harvestSlot, slotsBetween, harvestDue, distillDue, maintenanceDue, contentFiles, maintenanceVerdict, parseVerdict } from './maintenance.mjs';
@@ -166,10 +166,21 @@ function plan() {
     const onDisk = new Set((status.courses.find((c) => c.course_code === course)?.units || []).map((u) => u.unit_no));
     for (const n of units) if (!onDisk.has(n)) queue(course, n, 'author');
   }
+  // One course at a time (owner ruling 2026-10-28): finish what was started; only the focus
+  // course may start, so author jobs for every other unstarted course are withheld.
+  const started = new Map();
+  for (const c of status.courses) if (c.units.some((u) => u.authored)) started.set(c.course_code, true);
+  for (const j of board.jobs) if (IN_FLIGHT.includes(j.status) && isCorpusStage(j.stage)) started.set(j.course, true);
+  const newCourses = [...new Set(added.filter((j) => !started.has(j.course)).map((j) => j.course))];
+  const catalogOrder = catalog.semesters.flatMap((s) => s.courses.map((c) => c.code));
+  const focus = focusCourse({ started, jobs: [...board.jobs, ...added.filter((j) => started.has(j.course))], newCourses, catalogOrder });
+  board.focus = { course: focus?.course ?? null, reason: focus?.reason ?? 'no crew work', at: now() };
+  const held = added.filter((j) => !started.has(j.course) && j.course !== board.focus.course);
+  if (held.length) added.splice(0, added.length, ...added.filter((j) => !held.includes(j)));
   // Units whose agent review is done and that wait only for a person's G3 sign-off (ADR-0019).
   board.awaitingG3 = { at: now(), units: awaiting };
   if (!DRY) { board.jobs.push(...added); save('board', board); }
-  console.log(`${DRY ? '[dry-run] ' : ''}planned ${added.length} job(s); ${awaiting.length} unit(s) await G3 sign-off`);
+  console.log(`${DRY ? '[dry-run] ' : ''}planned ${added.length} job(s); ${awaiting.length} unit(s) await G3 sign-off; focus: ${board.focus.course ?? 'none'} (${board.focus.reason})${held.length ? `; held ${held.length} author job(s) for ${[...new Set(held.map((j) => j.course))].join(', ')}` : ''}`);
   for (const j of added) console.log(`  + ${j.id}`);
   return added;
 }
@@ -283,6 +294,7 @@ function prepareWorktree(board, j) {
     sh('git', ['fetch', '-q', 'origin']);
     const exists = sh('git', ['ls-remote', '--exit-code', '--heads', 'origin', j.branch], ROOT, { allowFail: true }).ok;
     const ref = exists ? `origin/${j.branch}` : j.base ? `origin/${j.base}` : 'origin/main';
+    freeBranch(board, j.branch);
     sh('git', ['worktree', 'add', '--no-checkout', '-B', j.branch, wt, ref]);
     sh('git', ['sparse-checkout', 'set', '--no-cone', ...SPARSE], wt);
     sh('git', ['reset', '-q', '--hard', 'HEAD'], wt);
@@ -292,6 +304,22 @@ function prepareWorktree(board, j) {
   // Gitignored generated report: refresh for new worktrees and every reused job worktree.
   sh('node', ['scripts/report-content-status.mjs'], wt);
   return wt;
+}
+
+/**
+ * `worktree add -B` fails while another folder has the branch checked out. A merge fix whose
+ * parent's folder was dropped (dropWaitingWorktrees) gets its own folder; until 2026-10-28 nothing
+ * removed it, so every later merge fix on that branch failed to launch ("already used by worktree
+ * ...-conflict1") and four units hit the five-fix limit. Free the branch unless a running job owns it.
+ */
+function freeBranch(board, branch) {
+  const busy = new Set(board.jobs.filter((x) => x.status === 'running').map((x) => x.worktree));
+  const list = sh('git', ['worktree', 'list', '--porcelain'], ROOT, { allowFail: true }).out || '';
+  for (const block of list.split('\n\n')) {
+    const path = block.match(/^worktree (.+)$/m)?.[1];
+    if (!path || !path.startsWith(WT_DIR) || busy.has(path) || !block.split('\n').includes(`branch refs/heads/${branch}`)) continue;
+    sh('git', ['worktree', 'remove', '--force', path], ROOT, { allowFail: true });
+  }
 }
 
 /**
@@ -358,7 +386,9 @@ function excludedFamilies(board, j) {
 
 /** Queued jobs in launch order: owner priority, then stage, then age. */
 function queueOrder(board, control) {
-  const prio = (j) => { const i = (control.priority || []).indexOf(j.course); return i < 0 ? 99 : i; };
+  // The owner's "crew prioritise" list wins; then the planner's focus course (one course at a time).
+  const order = [...(control.priority || []), ...(board.focus?.course ? [board.focus.course] : [])];
+  const prio = (j) => { const i = order.indexOf(j.course); return i < 0 ? 99 : i; };
   return board.jobs.filter((j) => j.status === 'queued')
     .sort((a, b) => prio(a) - prio(b) || STAGE_ORDER.indexOf(a.stage) - STAGE_ORDER.indexOf(b.stage) || a.createdAt.localeCompare(b.createdAt));
 }
@@ -673,6 +703,8 @@ function reapOne(board, health, events, j) {
       // A fix job only updated its parent's branch; the parent PR goes back to waiting on CI.
       j.status = 'merged';
       const parent = board.jobs.find((p) => p.id === j.parent);
+      // Its push updated the parent's branch; a folder of its own would keep holding that branch.
+      if (j.worktree && j.worktree !== parent?.worktree && existsSync(j.worktree)) sh('git', ['worktree', 'remove', '--force', j.worktree], ROOT, { allowFail: true });
       if (parent) {
         parent.status = parent.prNumber ? 'pr_open' : 'ready';
         log(board, parent, `fixed by ${j.id}`);

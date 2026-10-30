@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport, specUnitNumbers } from '../../scripts/crew/planner.mjs';
+import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport, specUnitNumbers, focusCourse } from '../../scripts/crew/planner.mjs';
 
 const unit = (G3 = 'open', G5 = 'open', over = {}) => ({ authored: true, gates: { G3, G5 }, figures: { prompt_only: 0 }, ...over });
 const facts = (over = {}) => ({ bilingual: true, g3Report: null, g3Repaired: false, g5Report: null, mirrorComplete: true, ...over });
@@ -86,4 +86,27 @@ test('specUnitNumbers: units an approved spec defines, so unwritten ones get aut
   assert.deepEqual(specUnitNumbers(spec('draft', '## Unit 1: A\n')), []);
   assert.deepEqual(specUnitNumbers(spec('approved', '## Units overview\n## Unit 3: C\n')), [3]);
   assert.deepEqual(specUnitNumbers('no front matter\n## Unit 1: A\n'), []);
+});
+
+test('focusCourse: finish a started course before a new one starts (owner ruling 2026-10-28)', () => {
+  const catalogOrder = ['EFMP-301', 'GNAS-301', 'GPKS-402', 'EFMP-408'];
+  const started = new Map([['EFMP-301', true], ['GNAS-301', true]]);
+  const job = (course, stage, status = 'queued') => ({ course, stage, status });
+
+  // A started course with crew work left beats an approved new course.
+  assert.equal(focusCourse({ started, jobs: [job('GNAS-301', 'fix')], newCourses: ['GPKS-402'], catalogOrder }).course, 'GNAS-301');
+  // The started course nearest done wins; equal counts go in catalog order.
+  const two = [job('EFMP-301', 'review_en'), job('EFMP-301', 'translate'), job('GNAS-301', 'fix')];
+  assert.equal(focusCourse({ started, jobs: two, newCourses: [], catalogOrder }).course, 'GNAS-301');
+  assert.equal(focusCourse({ started, jobs: [job('GNAS-301', 'fix'), job('EFMP-301', 'fix')], newCourses: [], catalogOrder }).course, 'EFMP-301');
+  // Work that waits on a person (gate_red, blocked), finished work and self-maintenance do not hold the crew.
+  const idle = [job('EFMP-301', 'fix', 'gate_red'), job('GNAS-301', 'review_en', 'blocked'), job('GNAS-301', 'author', 'merged'), job('EFMP-301', 'maint_survey')];
+  const next = focusCourse({ started, jobs: idle, newCourses: ['EFMP-408', 'GPKS-402'], catalogOrder });
+  assert.equal(next.course, 'GPKS-402');
+  assert.match(next.reason, /new course/);
+  // A new course with author jobs in flight is started (the planner marks it so) and keeps the focus.
+  const begun = new Map([...started, ['GPKS-402', true]]);
+  assert.equal(focusCourse({ started: begun, jobs: [job('GPKS-402', 'author', 'running')], newCourses: ['EFMP-408'], catalogOrder }).course, 'GPKS-402');
+  // Nothing to do anywhere.
+  assert.equal(focusCourse({ started, jobs: [], newCourses: [], catalogOrder }), null);
 });
