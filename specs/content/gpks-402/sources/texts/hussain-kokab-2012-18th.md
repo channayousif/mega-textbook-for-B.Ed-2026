@@ -41,3 +41,13 @@ PML-N on issues of judges' appointment and renaming of the NWFP".
 
 "Rights of education, fair trial and information have been added in the constitution and the
 clauses about right of association have been repaired."
+
+## Broad interpretation (used by Unit 3; paraphrased, not quoted)
+
+Crossref metadata and the publisher PDF were also checked on 2026-10-28: the title, two authors, volume, issue, DOI and PDF pages agree. Crossref records online publication in December 2011; the issue and PDF use January 2012.
+
+The abstract and sections on democracy, provincial interests and Parliament interpret the Eighteenth Amendment as strengthening parliamentary authority and provincial autonomy. The discussion treats rights additions, institutional reform and controversy together; it does not demonstrate that the amendment ended constitutional conflict. The conclusion presents it as a major milestone.
+
+## Limits on use (Unit 3)
+
+Unit 3 uses that broad interpretation only. Detailed legal rules are checked against the separately bound official 2012 Constitution. In particular, the article's discussion of the Council of Common Interests contains a meeting-frequency statement that should not replace Article 154's actual wording. The unit repeats neither that statement nor the paper's award-number claim. Scholarly analysis supplies context, not a substitute constitutional text.
