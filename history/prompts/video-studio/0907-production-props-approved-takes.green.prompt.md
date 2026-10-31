@@ -14,7 +14,7 @@ links:
   spec: specs/004-production-integrity/spec.md
   ticket: null
   adr: null
-  pr: null
+  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/389
 files:
  - video-studio/scripts/lib/episode-props.ts
  - video-studio/scripts/kaggle-pack.ts
