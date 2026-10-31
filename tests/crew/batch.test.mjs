@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { batchDue, batchCandidates, batchId, batchTitle, batchBody, exclusionReason } from '../../scripts/crew/batch.mjs';
+import { batchDue, batchCandidates, batchId, batchTitle, batchBody, exclusionReason, mergeAppendOnly } from '../../scripts/crew/batch.mjs';
 
 const at = (iso) => Date.parse(iso);
 
@@ -59,4 +59,59 @@ test('exclusionReason: zero, one and more than five paths', () => {
     exclusionReason('crew/x-u01-author', many),
     'crew/x-u01-author conflicts with main (glossary.json, specs/decisions/log.md, specs/content/efmp-301/tasks.md, specs/gaps.md, static/content-status.json and 1 more).',
   );
+});
+
+const tracker = [
+  '# GPKS-402 tracker',
+  '',
+  '| Unit | Stage | Status | Initials | Notes |',
+  '|---|---|---|---|---|',
+  '| 1 | G2 | done | crew | authored |',
+  '',
+  '## Notes',
+  '',
+  'Last row for a unit and stage wins.',
+  '',
+].join('\n');
+const rowA = '| 2 | G2 | done | crew | unit 2 authored |';
+const rowB = '| 3 | G2 | done | crew | unit 3 authored |';
+const insertAfter = (text, anchor, line) => text.replace(`${anchor}\n`, `${anchor}\n${line}\n`);
+
+test('mergeAppendOnly: both sides append rows at the end, ours first', () => {
+  const merged = mergeAppendOnly(tracker, `${tracker}${rowA}\n`, `${tracker}${rowB}\n`);
+  assert.equal(merged, `${tracker}${rowA}\n${rowB}\n`);
+});
+
+test('mergeAppendOnly: both sides append at the same table row point', () => {
+  const last = '| 1 | G2 | done | crew | authored |';
+  const merged = mergeAppendOnly(tracker, insertAfter(tracker, last, rowA), insertAfter(tracker, last, rowB));
+  assert.equal(merged, insertAfter(tracker, last, `${rowA}\n${rowB}`));
+});
+
+test('mergeAppendOnly: appends at different points keep each in place', () => {
+  const last = '| 1 | G2 | done | crew | authored |';
+  const ours = insertAfter(tracker, last, rowA);
+  const theirs = `${tracker}## Unit 3\n\n${rowB}\n`;
+  const merged = mergeAppendOnly(tracker, ours, theirs);
+  assert.equal(merged, `${insertAfter(tracker, last, rowA)}## Unit 3\n\n${rowB}\n`);
+  assert.equal(mergeAppendOnly(tracker, theirs, ours), merged);
+});
+
+test('mergeAppendOnly: the same insertion on both sides is kept once', () => {
+  assert.equal(mergeAppendOnly(tracker, `${tracker}${rowA}\n`, `${tracker}${rowA}\n`), `${tracker}${rowA}\n`);
+});
+
+test('mergeAppendOnly: a side that edits or deletes a base row returns null', () => {
+  const edited = tracker.replace('| 1 | G2 | done | crew | authored |', '| 1 | G2 | done | crew | re-authored |');
+  assert.equal(mergeAppendOnly(tracker, edited, `${tracker}${rowB}\n`), null);
+  assert.equal(mergeAppendOnly(tracker, `${tracker}${rowA}\n`, edited), null);
+  const deleted = tracker.replace('Last row for a unit and stage wins.\n', '');
+  assert.equal(mergeAppendOnly(tracker, `${tracker}${rowA}\n`, deleted), null);
+});
+
+test('mergeAppendOnly: a missing stage returns null', () => {
+  assert.equal(mergeAppendOnly(null, `${tracker}${rowA}\n`, `${tracker}${rowB}\n`), null);
+  assert.equal(mergeAppendOnly(undefined, rowA, rowB), null);
+  assert.equal(mergeAppendOnly(tracker, null, `${tracker}${rowB}\n`), null);
+  assert.equal(mergeAppendOnly(tracker, `${tracker}${rowA}\n`, null), null);
 });
