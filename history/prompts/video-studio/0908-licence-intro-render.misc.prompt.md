@@ -14,7 +14,7 @@ links:
   spec: specs/001-urdu-shorts-pipeline/spec.md
   ticket: null
   adr: null
-  pr: null
+  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/390
 files:
  - video-studio/episodes/20261030-licence-intro/approvals.jsonl
 tests:
