@@ -94,10 +94,11 @@ export function mergeAppendOnly(base, ours, theirs) {
   const o = inserts(ours);
   const t = inserts(theirs);
   if (!o || !t) return null;
+  const sameInsert = (a, b) => a.length === b.length && a.every((line, k) => line === b[k]);
   const out = [];
   for (let i = 0; i <= b.length; i += 1) {
     out.push(...o[i]);
-    if (o[i].join('\n') !== t[i].join('\n')) out.push(...t[i]);
+    if (!sameInsert(o[i], t[i])) out.push(...t[i]);
     if (i < b.length) out.push(b[i]);
   }
   return out.join('\n');

@@ -101,6 +101,29 @@ test('mergeAppendOnly: the same insertion on both sides is kept once', () => {
   assert.equal(mergeAppendOnly(tracker, `${tracker}${rowA}\n`, `${tracker}${rowA}\n`), `${tracker}${rowA}\n`);
 });
 
+test('mergeAppendOnly: preserves a blank line inserted on one side at a shared point', () => {
+  const base = 'line1\nline2\nline3';
+  const ours = 'line1\n\nline2\nline3';
+  const theirs = 'line1\nline2\nline3';
+  assert.equal(mergeAppendOnly(base, ours, ours), ours);
+  assert.equal(mergeAppendOnly(base, base, ours), ours);
+  assert.equal(mergeAppendOnly(base, theirs, theirs), theirs);
+  assert.equal(mergeAppendOnly(base, base, theirs), theirs);
+});
+
+test('mergeAppendOnly: preserves blank lines inserted on both sides at different points', () => {
+  const base = 'line1\nline2\nline3';
+  const ours = 'line1\n\nline2\nline3';
+  const theirs = 'line1\nline2\n\nline3';
+  assert.equal(mergeAppendOnly(base, ours, theirs), 'line1\n\nline2\n\nline3');
+});
+
+test('mergeAppendOnly: identical blank line insertion on both sides is kept once', () => {
+  const base = 'line1\nline2\nline3';
+  const both = 'line1\n\nline2\nline3';
+  assert.equal(mergeAppendOnly(base, both, both), both);
+});
+
 test('mergeAppendOnly: a side that edits or deletes a base row returns null', () => {
   const edited = tracker.replace('| 1 | G2 | done | crew | authored |', '| 1 | G2 | done | crew | re-authored |');
   assert.equal(mergeAppendOnly(tracker, edited, `${tracker}${rowB}\n`), null);
