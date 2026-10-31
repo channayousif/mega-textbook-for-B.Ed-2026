@@ -29,6 +29,14 @@ is healthy, the review waits while every other kind of job keeps flowing.
 1. **sync**: the control checkout fast-forwards to `origin/main`.
 2. **plan**: `crew.mjs plan` derives each unit's next stage from main (`report-content-status.mjs`,
    the course tracker, the review reports) and queues missing jobs. Nothing is hand-typed.
+   **One course at a time** (owner ruling 2026-10-28, `focusCourse` in `scripts/crew/planner.mjs`):
+   a course is started once it has an authored unit or crew work in flight on the board. The focus
+   is the started course with crew work left and the fewest jobs remaining (ties in catalog order);
+   when no started course has crew work left, the first approved but unstarted course in catalog
+   order becomes the focus. The planner withholds `author` jobs for every other unstarted course
+   and logs them as `held n author job(s)`, so missing author jobs for a new course are the rule
+   working, not a planner bug. The choice is saved as `board.focus` and shown as the **Focus** line
+   of `BOARD.md`; launch order puts the focus course right after the owner's `crew prioritise` list.
 3. **inbox**: owner replies and `crew ...` commands from Discord/WhatsApp are applied.
 4. **reap**: finished workers are checked. The job passes if `npm run check:content` shows no
    finding that main does not already have. Then the dispatcher writes the job's PHR, pushes the
@@ -71,6 +79,19 @@ is healthy, the review waits while every other kind of job keeps flowing.
 flowing, what needs the owner (open decisions, held jobs, G3 sign-offs), what needs the lead
 (red jobs), what is running, which PRs wait, and which jobs start next. A fresh lead session
 reads that block first.
+
+**G3 sign-off sync** (`scripts/crew/signoff-sync.mjs`, ADR-0032). After plan, tick and status,
+`tick.sh` runs the sync only when `~/.crew/mega-book/signoff.env` exists; the service key lives in
+that file and only the sync's subshell loads it, so workers never inherit it, and a failed sync
+does not fail the tick. The sync reads the owner's `queued` rows from the `g3_signoffs` ledger
+(decisions made on the sign-off desk, `/app/admin/g3-signoff`) and, in a fresh
+`crew/g3-signoff-<UTC time>` worktree of `origin/main`, refuses a row as `stale` when the unit is
+already G3-certified or its review inputs changed since the decision; otherwise it writes the
+Spec 017 certification JSON under `reviews/unit-NN/G3/` and appends the tracker row (certify done,
+revise or escalate pending). It then runs `check:pipeline-gate`, commits with a PHR, opens one PR
+and marks the rows `synced` (rows it refused become `stale` or `failed`). The crew never merges
+that PR: merging it is the owner's sign-off. `node scripts/crew/signoff-sync.mjs --dry-run` writes
+the files and prints the commit without pushing or touching the ledger.
 
 After a salvage PR merges, the tick deletes the Paperclip branches it replaced (its
 `supersedes` PRs' head branches and its `base`), unless an open PR still uses one
@@ -162,7 +183,8 @@ CREW_STATE_DIR=/tmp/state-copy node scripts/crew/crew.mjs tick --dry-run   # saf
 
 `~/.crew/mega-book/`: `board.json`, `health.json`, `decisions.json`, `control.json`, `inbox.json`,
 `owner.json` (the owner's WhatsApp number, Discord user ID and channel ID), `BOARD.md`, `logs/`,
-`intel/` (`clusters.json`, the append-only `ledger.jsonl` of raw signals).
+`intel/` (`clusters.json`, the append-only `ledger.jsonl` of raw signals), and the optional
+`signoff.env` (the service key for the G3 sign-off sync).
 Job worktrees are under `~/crew-wt/<job>`. Any stand-in lead (cron, Codex, agy) reads the same files,
 so a lead running out of quota does not stop the crew.
 
