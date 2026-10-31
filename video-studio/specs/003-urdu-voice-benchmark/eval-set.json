@@ -1,10 +1,10 @@
 {
-  "_comment": "VS-ADR-0014 (2026-10-30): Bilal's three V007 lines (l01, l05, l06) re-voiced in his locked `lively` style, three seeds, to replace the V007 takes; voice:import then applies the card's `warm` tone shaping and tempo 1.06. Earlier sets: eval-set-round5.json to eval-set-round10.json, eval-set-v007.json.",
+  "_comment": "Licence track episode 1 (2026-10-31): the eight lines of 20261030-licence-intro (mode production, script approved by the owner 2026-10-30), three seeds each, Bilal in his locked `lively` style (VS-ADR-0014); the best take per line is imported with `npm run voice:import`, which applies Bilal's `warm` tone and tempo 1.06. STEDA is spoken as اسٹیڈا (brand-bible lexicon; Devanagari untested before this round). Earlier sets: eval-set-round5.json to eval-set-round10.json, eval-set-v007.json, eval-set-adr0014.json.",
   "candidate": "chatterbox-hi",
   "seeds": [
-    3301,
-    3302,
-    3303
+    3401,
+    3402,
+    3403
   ],
   "styles": {
     "default": {
@@ -25,22 +25,59 @@
       "id": "l01",
       "character": "shagird",
       "terms": [],
-      "text_ur": "کیا ایک ستارہ یا تعریف واقعی شاگرد کا رویہ بدل سکتی ہے؟",
-      "text_deva": "क्या एक सितारा या तारीफ़ वाक़ई शागिर्द का रवैया बदल सकती है?"
+      "text_ur": "استانی جی، ٹیچنگ لائسنس کی تیاری آخر کیوں کروں؟",
+      "text_deva": "उस्तानी जी, टीचिंग लाइसेंस की तैयारी आख़िर क्यों करूँ?"
+    },
+    {
+      "id": "l02",
+      "character": "ustani",
+      "terms": [],
+      "text_ur": "یہ لائسنس STEDA دیتا ہے، ایک ٹیسٹ پاس کرنے پر، جو علم اور تدریسی مہارت دونوں جانچتا ہے۔",
+      "text_deva": "ये लाइसेंस इस्टीडा देता है, एक टेस्ट पास करने पर, जो इल्म और तदरीसी महारत दोनों जाँचता है।"
+    },
+    {
+      "id": "l03",
+      "character": "ustani",
+      "terms": [],
+      "text_ur": "اس کی تین قسمیں ہیں: پرائمری، ایلیمنٹری اور سیکنڈری، جماعت ایک سے بارہ تک۔",
+      "text_deva": "इस की तीन क़िस्में हैं: प्राइमरी, एलीमेंट्री और सेकेंडरी, जमाअत एक से बारह तक।"
+    },
+    {
+      "id": "l04",
+      "character": "ustani",
+      "terms": [],
+      "text_ur": "بی ایڈ کے بعد صرف ڈگری پر درخواست دیجیے؛ ٹیسٹ کا بڑا حصہ بی ایڈ ہی میں پڑھایا جاتا ہے۔",
+      "text_deva": "बी एड के बाद सिर्फ़ डिग्री पर दरख़्वास्त दीजिए; टेस्ट का बड़ा हिस्सा बी एड ही में पढ़ाया जाता है।"
     },
     {
       "id": "l05",
-      "character": "shagird",
+      "character": "ustani",
       "terms": [],
-      "text_ur": "یعنی دونوں تقویتیں رویہ بڑھاتی ہیں، اور سزا اسے کم کرتی ہے!",
-      "text_deva": "यानी दोनों तक़वियतें रवैया बढ़ाती हैं, और सज़ा उसे कम करती है!"
+      "text_ur": "پڑھانے والے اساتذہ، نجی اسکولوں کے بھی، دو یا تین سال کے تجربے کے ساتھ درخواست دے سکتے ہیں۔",
+      "text_deva": "पढ़ाने वाले असातिज़ा, निजी स्कूलों के भी, दो या तीन साल के तजुर्बे के साथ दरख़्वास्त दे सकते हैं।"
     },
     {
       "id": "l06",
+      "character": "ustani",
+      "terms": [],
+      "text_ur": "لائسنس پانچ سال کا ہے، اور پیشہ ورانہ تربیت سے اس کی تجدید ہوتی ہے۔",
+      "text_deva": "लाइसेंस पाँच साल का है, और पेशावराना तरबियत से इस की तजदीद होती है।"
+    },
+    {
+      "id": "l07",
       "character": "shagird",
       "terms": [],
-      "text_ur": "پورا سبق textbook.com.pk پر پڑھیے۔",
-      "text_deva": "पूरा सबक़ टेक्स्टबुक डॉट कॉम डॉट पी के पर पढ़िए।"
+      "text_ur": "اچھا! یعنی یہ لائسنس میرے کیریئر اور مقام کو بہتر بنائے گا!",
+      "text_deva": "अच्छा! यानी ये लाइसेंस मेरे करियर और मक़ाम को बेहतर बनाएगा!"
+    },
+    {
+      "id": "l08",
+      "character": "shagird",
+      "terms": [
+        "معیارِ جانچ"
+      ],
+      "text_ur": "مشقی سوال اور معیارِ جانچ، یعنی Rubric، لائسنس ٹریک پر ہیں۔ آج ہی تیاری شروع کیجیے!",
+      "text_deva": "मश्क़ी सवाल और मेयारे जाँच, यानी रूब्रिक, लाइसेंस ट्रैक पर हैं। आज ही तैयारी शुरू कीजिए!"
     }
   ]
 }
