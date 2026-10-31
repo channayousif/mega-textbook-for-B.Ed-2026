@@ -29,10 +29,16 @@ export interface EpisodeRender {
   alignment: Record<string, 'manual' | 'sentence'>;
 }
 
-export function episodeProps(ep: any, script: any, opts: { media?: string; manual?: Record<string, Cue[]>; set?: string } = {}): EpisodeRender {
+/**
+ * `assetsApproved` must be the result of the owner's assets gate (evaluate() in invalidation.ts).
+ * That approval binds the digest of exactly the non-rejected takes, so production uses those takes;
+ * a take imported after the approval changes the digest and makes the approval stale.
+ */
+export function episodeProps(ep: any, script: any, opts: { media?: string; manual?: Record<string, Cue[]>; set?: string; assetsApproved?: boolean } = {}): EpisodeRender {
   const media = opts.media ?? mediaRoot();
   const production = ep.mode !== 'sample';
-  const usable = (a: any) => a.kind === 'audio' && (production ? a.status === 'accepted' : a.status !== 'rejected');
+  if (production && opts.assetsApproved !== true) throw new Error(`${ep.episode_id}: production props need a valid assets approval`);
+  const usable = (a: any) => a.kind === 'audio' && a.status !== 'rejected';
   const manifest: any[] = (ep.assets?.manifest ?? []).filter(usable);
   const missing: string[] = [];
   const audio: Record<string, Buffer> = {};
@@ -40,7 +46,7 @@ export function episodeProps(ep: any, script: any, opts: { media?: string; manua
   const lines: CaptionLine[] = [];
   for (const l of script.lines) {
     const a = manifest.filter((m) => m.item_id === l.id);
-    if (a.length !== 1) { missing.push(`${l.id} (${a.length ? 'several takes' : production ? 'no accepted take' : 'no take'})`); continue; }
+    if (a.length !== 1) { missing.push(`${l.id} (${a.length ? 'several takes' : 'no take'})`); continue; }
     const bytes = readFileSync(join(media, a[0].path));
     if (digestBytes(bytes) !== a[0].sha256) throw new Error(`${a[0].path} does not match its manifest SHA-256; refusing`);
     if (a[0].voice?.character && a[0].voice.character !== l.speaker) throw new Error(`${l.id} audio is ${a[0].voice.character}, line speaker is ${l.speaker}`);

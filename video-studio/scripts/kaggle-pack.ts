@@ -34,12 +34,13 @@ if (sample) {
   // A production render needs a valid assets approval; a sample-mode episode renders with the
   // SAMPLE watermark and can never be render-approved (constitution X).
   const ep = readEpisode(id);
-  if (ep.mode !== 'sample') {
+  const assetsApproved = ep.mode !== 'sample';
+  if (assetsApproved) {
     const state = evaluate(readApprovals(id), currentDigests(id));
     if (!state.assets.valid) throw new Error(`refusing to pack ${id}: assets approval is ${state.assets.reason}`);
   }
   const script = JSON.parse(readFileSync(join(episodeDir(id), 'script.json'), 'utf8'));
-  const built = episodeProps(ep, script, { manual: readManualAlignment(id) });
+  const built = episodeProps(ep, script, { manual: readManualAlignment(id), assetsApproved });
   props = built.props;
   episodeAudio = built.audio;
   episodeImages = built.images;
