@@ -2,7 +2,7 @@
   "episode_id": "20261030-licence-intro",
   "topic_id": "licence-intro",
   "series": "licence",
-  "status": "awaiting_assets",
+  "status": "render_review",
   "created_at": "2026-10-30T19:00:00Z",
   "mode": "production",
   "source_url": "https://textbook.com.pk/ur/licence/",
@@ -85,6 +85,13 @@
       "to": "awaiting_assets",
       "by": "claude",
       "note": "voice:import L08 (shagird) 1d5602c974ed"
+    },
+    {
+      "at": "2026-10-31T09:13:32.212Z",
+      "from": "awaiting_assets",
+      "to": "render_review",
+      "by": "claude",
+      "note": "Kaggle render fetched and verified (GPU 0: Tesla T4 (UUID: GPU-d8707bc6-f246-3da3-07fb-6a55ad991152)\nGPU 1: Tesla T4 (UUID: GPU-1f7319e7-c0e4-0d87-aae9-3c6b731b6a20))"
     }
   ],
   "assets": {
@@ -261,5 +268,18 @@
         "status": "pending"
       }
     ]
+  },
+  "render": {
+    "file": "20261030-licence-intro/render/final.mp4",
+    "duration_s": 56.917,
+    "sha256": "d57a13f30df81e08145e34e221dd1f989517992d6335e820c85f33ce6b60308a",
+    "subtitles": [
+      "captions.ur.srt",
+      "captions.ur.vtt"
+    ]
+  },
+  "usage": {
+    "render_seconds": 144.318,
+    "metered_cost_usd": 0
   }
 }
