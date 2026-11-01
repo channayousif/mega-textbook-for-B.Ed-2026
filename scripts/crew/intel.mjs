@@ -70,7 +70,7 @@ export function boardSignals(jobs, since) {
 // (a first harvest on 2026-10-19 found `console.error(...)`, `} catch (error) {`, Markdown bullets and
 // table rows among the "errors").
 const LOG_ERROR = /^(\[?(error|fatal|err!)\]?[:\s]|✗|\w*Error\b|npm (err|error)|.{0,60}\b(failed|rejected|denied|ENOENT|EACCES|timed out)\b)/i;
-const LOG_NOISE = /^(at |\d+\s*\||[{}[\]],?$|[*|#>$-]|\/\/)|console\.|=>|[{;]\s*$|\bcatch\s*\(|DeprecationWarning|ExperimentalWarning|\b0 (errors|failed)\b/;
+const LOG_NOISE = /^(at |\d+\s*\||[{}[\]],?$|[?*|#>$-]|\/\/)|console\.|=>|[{;]\s*$|\bcatch\s*\(|DeprecationWarning|ExperimentalWarning|\b0 (errors|failed)\b|reported, not failed/;
 
 /** Error-looking lines from one worker log (at most `max`, de-duplicated by signature). */
 export function logSignals(text, source, at, max = 5) {

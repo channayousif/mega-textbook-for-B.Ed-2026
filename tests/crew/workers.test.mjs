@@ -12,6 +12,7 @@ test('every worker limit message seen in the logs counts as quota, not bad work'
     "You've hit your session limit · resets 2:50pm (Etc/GMT-5)",
     'ERROR: You’ve hit your usage limit. Upgrade to Pro',
     'RESOURCE_EXHAUSTED (code 429): Individual quota reached.',
+    "You've hit your 5-hour limit · resets 7:10pm (Etc/GMT-5)",
   ]) assert.ok(QUOTA_RE.test(msg), msg);
   assert.ok(!QUOTA_RE.test('✗ Pipeline gate failed with 2 finding(s):'));
 });
@@ -37,7 +38,7 @@ test('resetMinutes parses relative durations and rounds seconds up', () => {
 });
 
 test('resetMinutes leaves clock times and missing durations to strike backoff', () => {
-  for (const text of ['resets 11pm', 'try again at 7:00 AM', 'quota reached',
+  for (const text of ["You've hit your 5-hour limit · resets 7:10pm (Etc/GMT-5)", 'resets 11pm', 'try again at 7:00 AM', 'quota reached',
     'Resets in', 'Resets in -2h', 'Resets in 2hours', 'Resets in 1.5h']) {
     assert.equal(resetMinutes(text), null, text);
   }
