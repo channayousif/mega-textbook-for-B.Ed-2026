@@ -2,7 +2,7 @@
 
 > **Scope**: Document decision clusters, not individual technology choices. Group related decisions that work together (e.g., "Frontend Stack" not separate ADRs for framework, styling, deployment).
 
-- **Status:** Accepted by owner instruction on 2026-09-15; amended by ADR-0029 (2026-10-04) for points 2, 3 and 5, and by ADR-0030 (2026-10-17) for point 1 (SVG schematic authors)
+- **Status:** Accepted by owner instruction on 2026-09-15; amended by ADR-0029 (2026-10-04) for points 2, 3 and 5, and by ADR-0030 (2026-10-17) for point 1 (SVG schematic authors); amended by ADR-0033 (2026-10-29) for sourced maps of real territory and reuse of real-world images
 - **Date:** 2026-09-15
 - **Feature:** Cross-cutting course authoring and figure rendering
 - **Context:** Two agents share the repository. Claude is text-only in this workflow; Codex has a
