@@ -41,11 +41,36 @@ tests:
 
 ## Prompt
 
-Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.
+# Crew job efmp-406-u01-review_en
+
+You are the agy worker on the B.Ed bilingual textbook repo, working in this checkout on branch `crew/efmp-406-u01-review_en`.
+Read AGENTS.md first and obey it (CLAUDE.md only imports it): no em dash (U+2014) anywhere, heavy commands only through `scripts/heavy.sh`, never run `npm run build`, a dev server or Playwright, keep all scratch files inside your worktree (for example `.crew/`), never use `/tmp`, never mark G3/G5 done, never self-sign or use
+human initials, never edit the style guide, constitution, ADRs, gate scripts, catalog or an approved content-spec.
+
+## Task
+Act as the INDEPENDENT G3 English reviewer of EFMP-406 Unit 1 (review-unit skill, .claude/agents/g3-reviewer.md). You did not write this unit. Produce the evidence report the skill specifies and the advisory tracker row. Never tick G3, never add reviewer initials, never self-sign.
+
+Follow `.claude/skills/review-unit/SKILL.md` exactly; read it and every file it references before starting.
+
+## Scope
+EFMP-406 Unit 1 only: its docs/licence and i18n files, its rows and folders under
+`specs/content/efmp-406/`, and `static/img/figures/efmp-406/unit-01/`.
+
+## Continue, do not restart
+Earlier attempts may have left work on this branch. Check `git log origin/main..HEAD` and `git status` and build on it.
+
+## Done when
+1. `npm run check:content` reports no finding that origin/main does not also report (run it, read every
+   failure, fix those in your scope, rerun). Findings that already exist on main belong to other jobs.
+2. All work is committed on this branch with a conventional commit message. Do not push and do not open a PR.
+3. Your final output ends with one line: `CREW-SUMMARY: <what you changed, in one sentence>`.
+4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
+   (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
+
 
 ## Response snapshot
 
-Executed independent G3 English review for EFMP-406 Unit 1 with advisory pass disposition, recorded validated report and evidence logs, and updated tasks.md.
+Completed independent G3 English review for EFMP-406 Unit 1 with advisory pass disposition, recorded validated evidence report and execution logs, updated tasks.md, and added session PHR.
 
 ## Outcome
 
@@ -57,7 +82,7 @@ Executed independent G3 English review for EFMP-406 Unit 1 with advisory pass di
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Executed independent G3 English review for EFMP-406 Unit 1 with advisory pass disposition, recorded validated report and evidence logs, and updated tasks.md.
+- Shipped / changed: Completed independent G3 English review for EFMP-406 Unit 1 with advisory pass disposition, recorded validated evidence report and execution logs, updated tasks.md, and added session PHR.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
