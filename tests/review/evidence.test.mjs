@@ -517,3 +517,68 @@ test('editing a bound .ur.svg still invalidates the G5 that inspected it', (t) =
   assert.notEqual(inputManifest(f.root, 'EFMP-301', 1, 'G5')[`${FIGDIR}/fig-U1-4.ur.svg`], before,
     'a bound asset changing must change the manifest');
 });
+
+/**
+ * Per-course catalog binding (owner ruling 2026-11-02). `catalog/courses.json` was
+ * bound whole, so adding a course made every reviewed unit's evidence stale. These
+ * pin both sides of the narrowing: other courses stop invalidating, this course's
+ * own entry (and the catalog's shared structure) still does, and unknown shapes
+ * fall back to binding the whole file.
+ */
+test('per-course catalog binding: other courses do not invalidate, this course does', (t) => {
+  const f = fixture(t);
+  const cat = 'catalog/courses.json';
+  const catalog = {
+    _note: 'fixture',
+    semesters: [
+      { number: 1, priority: 1, courses: [{ code: 'EFMP-301', title_en: 'One' }, { code: 'GENG-300', title_en: 'English' }] },
+      { number: 3, priority: 3, courses: [] },
+    ],
+    tracks: [{ id: 'licence', title_en: 'Licence', courses: [] }],
+  };
+  const put = (c) => { f.write(cat, `${JSON.stringify(c, null, 2)}\n`); f.track(); };
+  put(catalog);
+  const base = JSON.stringify(inputManifest(f.root, 'EFMP-301', 1, 'G3'));
+  assert.ok(JSON.parse(base)[cat], 'the catalog must stay bound');
+  const changed = () => JSON.stringify(inputManifest(f.root, 'EFMP-301', 1, 'G3')) !== base;
+  const clone = () => JSON.parse(JSON.stringify(catalog));
+
+  // must NOT invalidate
+  let c = clone(); c.semesters[1].courses.push({ code: 'EFMP-406', title_en: 'New' }); put(c);
+  assert.equal(changed(), false, 'adding a course to another semester must not invalidate');
+  c = clone(); c.semesters[0].courses.push({ code: 'GICT-300', title_en: 'ICT' }); put(c);
+  assert.equal(changed(), false, 'adding a course to this semester must not invalidate');
+  c = clone(); c.semesters[0].courses[1].title_en = 'English, renamed'; put(c);
+  assert.equal(changed(), false, "editing another course's entry must not invalidate");
+  c = clone(); c.tracks[0].courses.push({ code: 'LICE-101' }); put(c);
+  assert.equal(changed(), false, 'adding a licence course must not invalidate');
+
+  // MUST invalidate
+  c = clone(); c.semesters[0].courses[0].title_en = 'One, renamed'; put(c);
+  assert.equal(changed(), true, "editing this course's own entry MUST invalidate");
+  c = clone(); c.semesters[0].courses[0].bilingual = false; put(c);
+  assert.equal(changed(), true, "changing this course's bilingual flag MUST invalidate");
+  c = clone(); c.semesters[1].courses.push(c.semesters[0].courses.shift()); put(c);
+  assert.equal(changed(), true, 'moving this course to another semester MUST invalidate');
+  c = clone(); c.semesters[0].priority = 9; put(c);
+  assert.equal(changed(), true, "editing this course's semester fields MUST invalidate");
+  c = clone(); c._note = 'edited'; put(c);
+  assert.equal(changed(), true, 'editing top-level catalog fields MUST invalidate');
+  c = clone(); c.semesters[0].courses.shift(); put(c);
+  assert.equal(changed(), true, 'removing this course MUST invalidate');
+});
+
+test('per-course catalog binding: unknown structure binds the whole file', (t) => {
+  const f = fixture(t);
+  const cat = 'catalog/courses.json';
+  const at = (text) => { f.write(cat, text); f.track(); return inputManifest(f.root, 'EFMP-301', 1, 'G3')[cat]; };
+  const whole = (text) => digest(Buffer.from(text));
+  const missing = `${JSON.stringify({ semesters: [{ number: 1, courses: [{ code: 'GENG-300' }] }] })}\n`;
+  assert.equal(at(missing), whole(missing), 'a course absent from the catalog binds the whole file');
+  const broken = '{ "semesters": [ \n';
+  assert.equal(at(broken), whole(broken), 'unparseable JSON binds the whole file');
+  const odd = `${JSON.stringify({ semesters: { one: [] } })}\n`;
+  assert.equal(at(odd), whole(odd), 'an unexpected shape binds the whole file');
+  const ok = `${JSON.stringify({ semesters: [{ number: 1, courses: [{ code: 'EFMP-301' }, { code: 'GENG-300' }] }] })}\n`;
+  assert.notEqual(at(ok), whole(ok), 'a well-formed catalog is projected, not hashed whole');
+});

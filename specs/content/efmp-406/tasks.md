@@ -21,12 +21,12 @@
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-01/G2/20261102T073045659Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-01/G2/20261102T081459685Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | awaiting an independent reviewer |
 | Unit 1 | G4 ur-translation | ▢ | | separate job |
 | Unit 1 | G5 ur-review | ▢ | | |
 
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-06/G2/20261102T084025797Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-06/G2/20261102T091818158Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | awaiting an independent reviewer |
 | Unit 6 | G4 ur-translation | ▢ | | separate job; translate prose, nine concept labels and four SVGs with RTL layout |
 | Unit 6 | G5 ur-review | ▢ | | independent Urdu review pending |
