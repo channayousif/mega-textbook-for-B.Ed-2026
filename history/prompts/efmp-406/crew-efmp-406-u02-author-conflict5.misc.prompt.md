@@ -21,7 +21,15 @@ files:
  - docs/semester-3/efmp-406/unit-02/topic-02.mdx
  - docs/semester-3/efmp-406/unit-02/unit-assessment.mdx
  - docs/semester-3/efmp-406/unit-02/unit-teacher-notes.mdx
+ - history/prompts/efmp-406/crew-efmp-406-u02-author-conflict1.green.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u02-author-conflict1.misc.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u02-author-conflict2.misc.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u02-author-conflict3.misc.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u02-author-conflict4.misc.prompt.md
  - history/prompts/efmp-406/crew-efmp-406-u02-author-conflict5.misc.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u02-author.green.prompt.md
+ - history/prompts/general/20261051-author-efmp406-unit-two.general.prompt.md
+ - history/prompts/general/20261052-efmp406-unit-two-g2-evidence.general.prompt.md
  - specs/content/efmp-406/concepts/unit-02.md
  - specs/content/efmp-406/coverage/unit-02.md
  - specs/content/efmp-406/design/unit-02-course-overview-proposal.md
@@ -29,6 +37,51 @@ files:
  - specs/content/efmp-406/design/unit-02-validation.md
  - specs/content/efmp-406/design/unit-02.md
  - specs/content/efmp-406/figures/unit-02.md
+ - specs/content/efmp-406/reviews/unit-01/G2/20261102T092118159Z-gates.json
+ - specs/content/efmp-406/reviews/unit-01/G2/20261102T142934562Z-gates.json
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261102T092118159Z/check-bloom-bands.txt
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261102T092118159Z/check-concept-graph.txt
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261102T092118159Z/check-depth-gate.txt
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261102T092118159Z/check-docs-sync.txt
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261102T092118159Z/check-figures.txt
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261102T092118159Z/check-no-answer-keys.txt
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261102T092118159Z/check-no-em-dash.txt
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261102T092118159Z/validate-content.txt
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261102T142934562Z/check-bloom-bands.txt
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261102T142934562Z/check-concept-graph.txt
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261102T142934562Z/check-depth-gate.txt
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261102T142934562Z/check-docs-sync.txt
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261102T142934562Z/check-figures.txt
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261102T142934562Z/check-no-answer-keys.txt
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261102T142934562Z/check-no-em-dash.txt
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261102T142934562Z/validate-content.txt
+ - specs/content/efmp-406/reviews/unit-02/G2/20261102T074938805Z-gates.json
+ - specs/content/efmp-406/reviews/unit-02/G2/20261102T092118336Z-gates.json
+ - specs/content/efmp-406/reviews/unit-02/G2/logs-20261102T074938805Z/check-bloom-bands.txt
+ - specs/content/efmp-406/reviews/unit-02/G2/logs-20261102T074938805Z/check-concept-graph.txt
+ - specs/content/efmp-406/reviews/unit-02/G2/logs-20261102T074938805Z/check-depth-gate.txt
+ - specs/content/efmp-406/reviews/unit-02/G2/logs-20261102T074938805Z/check-docs-sync.txt
+ - specs/content/efmp-406/reviews/unit-02/G2/logs-20261102T074938805Z/check-figures.txt
+ - specs/content/efmp-406/reviews/unit-02/G2/logs-20261102T074938805Z/check-no-answer-keys.txt
+ - specs/content/efmp-406/reviews/unit-02/G2/logs-20261102T074938805Z/check-no-em-dash.txt
+ - specs/content/efmp-406/reviews/unit-02/G2/logs-20261102T074938805Z/validate-content.txt
+ - specs/content/efmp-406/reviews/unit-02/G2/logs-20261102T092118336Z/check-bloom-bands.txt
+ - specs/content/efmp-406/reviews/unit-02/G2/logs-20261102T092118336Z/check-concept-graph.txt
+ - specs/content/efmp-406/reviews/unit-02/G2/logs-20261102T092118336Z/check-depth-gate.txt
+ - specs/content/efmp-406/reviews/unit-02/G2/logs-20261102T092118336Z/check-docs-sync.txt
+ - specs/content/efmp-406/reviews/unit-02/G2/logs-20261102T092118336Z/check-figures.txt
+ - specs/content/efmp-406/reviews/unit-02/G2/logs-20261102T092118336Z/check-no-answer-keys.txt
+ - specs/content/efmp-406/reviews/unit-02/G2/logs-20261102T092118336Z/check-no-em-dash.txt
+ - specs/content/efmp-406/reviews/unit-02/G2/logs-20261102T092118336Z/validate-content.txt
+ - specs/content/efmp-406/reviews/unit-03/G2/20261102T114853349Z-gates.json
+ - specs/content/efmp-406/reviews/unit-03/G2/logs-20261102T114853349Z/check-bloom-bands.txt
+ - specs/content/efmp-406/reviews/unit-03/G2/logs-20261102T114853349Z/check-concept-graph.txt
+ - specs/content/efmp-406/reviews/unit-03/G2/logs-20261102T114853349Z/check-depth-gate.txt
+ - specs/content/efmp-406/reviews/unit-03/G2/logs-20261102T114853349Z/check-docs-sync.txt
+ - specs/content/efmp-406/reviews/unit-03/G2/logs-20261102T114853349Z/check-figures.txt
+ - specs/content/efmp-406/reviews/unit-03/G2/logs-20261102T114853349Z/check-no-answer-keys.txt
+ - specs/content/efmp-406/reviews/unit-03/G2/logs-20261102T114853349Z/check-no-em-dash.txt
+ - specs/content/efmp-406/reviews/unit-03/G2/logs-20261102T114853349Z/validate-content.txt
  - specs/content/efmp-406/reviews/unit-05/G2/20261102T155654755Z-gates.json
  - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T155654755Z/check-bloom-bands.txt
  - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T155654755Z/check-concept-graph.txt
@@ -38,7 +91,9 @@ files:
  - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T155654755Z/check-no-answer-keys.txt
  - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T155654755Z/check-no-em-dash.txt
  - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T155654755Z/validate-content.txt
- - specs/content/efmp-406/sources/texts/minott-2011-critical.md
+ - specs/content/efmp-406/sources/texts/alcolea-2020-mil.md
+ - specs/content/efmp-406/sources/texts/jisc-digital-capabilities.md
+ - specs/content/efmp-406/sources/texts/unesco-2021-mil.md
  - specs/content/efmp-406/sources/unit-02.md
  - specs/content/efmp-406/tasks.md
  - static/img/figures/efmp-406/unit-02/fig-U2-1.dark.svg
@@ -86,27 +141,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-406-u02-author-conflict3, fix, opencode) Course overview still says only Unit 1 is available; update that line once Units 2 and 3 merge.
 - (efmp-406-u02-author-conflict3, fix, opencode) Unit 2 design files under `specs/content/efmp-406/design/` bind to every unit's manifest (their `unit-02-*` names miss the unit-scoping regex), so future Unit 2 additions there re-invalidate other units' G2 evidence.
 
+
 ## Response snapshot
 
-Merged origin/main, resolved the minott-2011-critical.md add/add conflict by keeping both Unit 2 and Unit 5 notes, refreshed Unit 5's stale G2 gate evidence, and left npm run check:content fully green.
+Merged origin/main, resolved the minott-2011-critical.md add/add conflict keeping both Unit 2 and Unit 5 notes, refreshed Unit 5's stale G2 gate evidence, and left `npm run check:content` fully green.
 
 ## Outcome
 
 - Impact: fix for EFMP-406 Unit 2 by opencode (attempt 1).
 - Tests: npm run check:content passed in the job worktree before the PR was opened.
-- Files: 33 file(s), listed above.
+- Files: 88 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main, resolved the minott-2011-critical.md add/add conflict, refreshed Unit 5's stale G2 gate evidence, and left npm run check:content fully green.
+- Shipped / changed: Merged origin/main, resolved the minott-2011-critical.md add/add conflict keeping both Unit 2 and Unit 5 notes, refreshed Unit 5's stale G2 gate evidence, and left `npm run check:content` fully green.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Course overview still says only Unit 1 is available; update that line once Units 2 and 3 merge.
   - Unit 2 design files under `specs/content/efmp-406/design/` still bind to every unit's manifest (`unit-02-*` names miss the unit-scoping regex); Unit 5's G2 evidence was refreshed to absorb them, so the next Unit 2 addition there will re-invalidate other units' G2 evidence again.
-  - `tasks.md` Unit 5 G2 evidence now points at `20261102T155654755Z`; Unit 1 at `20261102T142934562Z`; Unit 3 at `20261102T114853349Z`. Keep the newest on any later merge.
+  - `tasks.md` G2 evidence paths: Unit 5 at `20261102T155654755Z`, Unit 1 at `20261102T142934562Z`, Unit 3 at `20261102T114853349Z`; keep the newest on any later merge.
+  - Course overview still says only Unit 1 is available; update that line once Units 2 and 3 merge.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
