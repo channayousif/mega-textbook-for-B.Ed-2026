@@ -21,11 +21,11 @@
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-01/G2/20261102T081459685Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-01/G2/20261102T092118159Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | awaiting an independent reviewer |
 | Unit 1 | G4 ur-translation | ▢ | | separate job |
 | Unit 1 | G5 ur-review | ▢ | | |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-02/G2/20261102T074938805Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-02/G2/20261102T092118336Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
 | Unit 2 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notices |
 | Unit 2 | G5 ur-review | ▢ | | |
