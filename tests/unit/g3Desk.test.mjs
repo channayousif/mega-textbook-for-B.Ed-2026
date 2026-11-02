@@ -7,6 +7,7 @@ import { describe, it, expect } from 'vitest';
 import {
   latestByUnit, deskState, decidable, batchEligible, prefillCriteria,
   signoffProblem, signoffItem, summarize, unitKey,
+  laneOf, suggestion, revisionNote, rulingQuestions, questionKey, applyRulings, laneInput, OWNER_CHECKED,
 } from '../../src/lib/g3Desk.ts';
 import { CERTIFICATION_CRITERIA } from '../../src/lib/reviewQueue.ts';
 
@@ -159,5 +160,67 @@ describe('summarize', () => {
       { course: 'EFMP-302', total: 2, certified: 1, awaiting: 1 },
       { course: 'GENG-301', total: 1, certified: 0, awaiting: 1 },
     ]);
+  });
+});
+
+describe('lanes and suggestions', () => {
+  const a = () => unit().agent;
+  const withAgent = (over) => unit({ agent: { ...a(), ...over } });
+  const blocking = { severity: 'blocking', resolved: false, message: 'RRQ 10 model answer asserts facts absent from the case.' };
+  const uncertain = { severity: 'uncertain', resolved: false, message: 'Is the Vosniadou binding supported?' };
+
+  it('a clean pass is ready, and an agent render-review gap does not stop it (the owner attests that)', () => {
+    expect(laneOf(unit(), 'awaiting')).toBe('ready');
+    expect(laneOf(withAgent({ commands: [{ name: 'validate:content', exit_code: 0 }, { name: 'render-review', exit_code: null }] }), 'awaiting')).toBe('ready');
+    expect(suggestion(unit(), 'awaiting').decision).toBe('certify');
+  });
+  it('a failed criterion, open blocking finding, failing gate or revise verdict is send_back', () => {
+    expect(laneOf(withAgent({ criteria: a().criteria.map((c, i) => (i ? c : { ...c, status: 'fail' })) }), 'awaiting')).toBe('send_back');
+    expect(laneOf(withAgent({ disposition: 'escalate', findings: [blocking] }), 'awaiting')).toBe('send_back');
+    expect(laneOf(withAgent({ commands: [{ name: 'check:figures', exit_code: 1 }] }), 'awaiting')).toBe('send_back');
+    expect(laneOf(unit({ agent: { ...a(), disposition: 'revise' }, repaired: true }), 'awaiting')).toBe('send_back');
+  });
+  it('only open uncertain findings or unverified criteria make a ruling', () => {
+    const u = withAgent({ disposition: 'escalate', findings: [uncertain, { ...blocking, resolved: true }],
+      criteria: a().criteria.map((c) => (c.id === 'accessibility' ? { ...c, status: 'unverified' } : c)) });
+    expect(laneOf(u, 'awaiting')).toBe('ruling');
+    expect(rulingQuestions(u).map(questionKey)).toEqual(['f0', 'c:accessibility']);
+    expect(suggestion(u, 'awaiting').decision).toBeNull();
+  });
+  it('nothing outside the owner\'s hands gets a lane', () => {
+    for (const s of ['certified', 'queued', 'pr_open', 'in_review']) expect(laneOf(unit(), s)).toBeNull();
+    expect(laneOf(unit({ agent: null }), 'awaiting')).toBeNull();
+    expect(laneOf(unit({ inputs_dirty: true }), 'awaiting')).toBeNull();
+  });
+  it('revisionNote lists failures and open findings only, and is capped', () => {
+    const u = withAgent({ criteria: a().criteria.map((c, i) => (i ? c : { ...c, status: 'fail' })),
+      findings: [blocking, { ...uncertain, resolved: true }, { severity: 'advisory', resolved: false, message: 'nit' }] });
+    const note = revisionNote(u);
+    expect(note).toMatch(new RegExp(`Failed criteria: ${G3[0]}`));
+    expect(note).toMatch(/\[blocking\] RRQ 10/);
+    expect(note).not.toMatch(/Vosniadou|nit/);
+    const long = withAgent({ findings: Array.from({ length: 40 }, () => ({ ...blocking, message: 'x'.repeat(500) })) });
+    expect(revisionNote(long).length).toBeLessThanOrEqual(1000);
+    expect(revisionNote(withAgent({ disposition: 'revise' })).length).toBeGreaterThanOrEqual(5);
+  });
+  it('accepting every ruling certifies with the owner as evidence; one fix makes it a revise naming only that', () => {
+    const u = withAgent({ disposition: 'escalate', findings: [uncertain, { ...uncertain, message: 'Second question' }],
+      criteria: a().criteria.map((c) => (c.id === 'accessibility' ? { ...c, status: 'unverified' } : c)) });
+    expect(applyRulings(u, { f0: 'accept' })).toBeNull();
+    const ok = applyRulings(u, { f0: 'accept', f1: 'accept', 'c:accessibility': 'accept' });
+    expect(ok.decision).toBe('certify');
+    expect(ok.criteria.accessibility).toEqual({ status: 'pass', evidence: OWNER_CHECKED });
+    expect(ok.findings.every((f) => f.resolved)).toBe(true);
+    expect(signoffProblem(input(ok))).toBeNull();
+    const fix = applyRulings(u, { f0: 'accept', f1: 'fix', 'c:accessibility': 'accept' });
+    expect(fix.decision).toBe('revise');
+    expect(fix.note).toMatch(/Second question/);
+    expect(fix.note).not.toMatch(/Vosniadou/);
+    expect(signoffProblem(input(fix))).toBeNull();
+  });
+  it('one-click lane inputs always satisfy the 0050 trigger mirror', () => {
+    expect(signoffProblem(laneInput(unit(), 'certify', 'YM', true, true))).toBeNull();
+    expect(signoffProblem(laneInput(withAgent({ findings: [blocking] }), 'revise', 'YM', true, false))).toBeNull();
+    expect(signoffProblem(laneInput(unit(), 'certify', 'YM', true, false))).toMatch(/rendered/);
   });
 });
