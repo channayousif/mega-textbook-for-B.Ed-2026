@@ -1,0 +1,46 @@
+render-review evidence (G5 Urdu, GPKS-402 Unit 3)
+=============================================================
+Timestamp: 2026-11-02T17:44:40Z
+Reviewer: agent:g5-reviewer
+Model: Gemini 3.8 Flash (High)
+Reviewer Run ID: f08da193-6363-4286-bcf6-4be1f27181bd
+Course: GPKS-402 Unit 3 (Constitutional Development / آئینی ارتقا)
+Stage: G5 Urdu independent review
+
+CONSTRAINT: The brief for this crew job explicitly forbids running npm run build,
+a dev server, or Playwright Chromium. Comprehensive visual, structural, and raster
+inspection was conducted within permitted host resources:
+
+1. Figure Rasterization and Visual Inspection:
+   - All four unit Urdu SVGs were rasterized to PNG at full viewBox resolution using Sharp with :root CSS variables resolved:
+     - fig-U3-1.ur.png (780x580): Timeline of constitutional milestones from the 1949 Objectives Resolution, 1956 first full Constitution, 1958 abrogation/martial law, 1962 presidential Constitution, 1969 abrogation/martial law, 1972 Interim Constitution, 1973 parliamentary Constitution, 1985 Article 2A substantive status, and 2010 Eighteenth Amendment. Mirrored RTL layout progresses right-to-left. Interruptions clearly marked with dashed boxes and distinct accent styling. Mean channel luminances [235.0, 239.6, 238.0, 255.0].
+     - fig-U3-2.ur.png (780x690): Comparative table of the three constitutional frameworks (1956, 1962, 1973) across Form of state & centre-province relations, Executive responsibility & head of government, Central legislative structure, Islamic provisions & Council role, and Fundamental rights & safeguards. Mirrored RTL table column alignment and right-aligned text anchors. Mean channel luminances [232.6, 237.3, 235.7, 255.0].
+     - fig-U3-3.ur.png (780x690): Structural navigation diagram linking the 1973 Constitution Preamble, Parts (I-XII), Chapters, Articles, Schedules (1-5), and Annex, with concrete locator examples for Articles 2, 20, 50, and 227 referencing the February 2012 consolidated edition. Mean channel luminances [235.3, 239.5, 238.2, 255.0].
+     - fig-U3-4.ur.png (780x695): Concept map linking Islamic constitutional provisions to specific articles and functions: Article 2 (state religion), Article 31 (Principles of Policy for Muslim life), Article 227 (conformity of laws with clause 3 non-Muslim personal-law and citizenship safeguard), Articles 228-231 (Council of Islamic Ideology composition, reference, and advisory function vs parliamentary legislation), Article 2A (1985 substantive status), and related safeguards (Articles 20 and 22). Mean channel luminances [236.7, 240.4, 239.3, 255.0].
+   - All four PNG renders are saved under specs/content/gpks-402/reviews/unit-03/G5/logs-f08da193/ and verified non-blank and non-corrupt.
+
+2. Figure Text, Font Shaping, and RTL Geometry:
+   - All four light and four dark Urdu figure variants declare font-family "'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif".
+   - Text elements use text-anchor="end" for right alignment or text-anchor="middle" within symmetric badge containers.
+   - Wordmark 'textbook.com.pk' positioned at bottom-left (x=18, text-anchor="start") without colliding with right-aligned Urdu labels (ending at x=750-752).
+   - Arabic and Nastaliq ligatures, bidi numeral rendering (dates 1949, 1956, 1958, 1962, 1969, 1972, 1973, 1985, 2010), and article alphanumeric designations (2A, 25A) inspected with zero clipping.
+
+3. Alt Text and SVG Accessibility:
+   - All four <Figure> elements across topic-01.mdx and topic-02.mdx carry detailed descriptive Urdu alt text matching the visual diagrams and figures/unit-03.md manifest declarations.
+   - SVG sources include role="img", aria-labelledby="t d", <title id="t">, and <desc id="d"> elements with matching descriptions.
+
+4. Heading Structure and Monotonic Progression:
+   - i18n/ur/.../unit-03/index.mdx: Single # title, ## یونٹ کے نتیجہ ہائے تعلم, ## پہلے سے درکار علم, ## اس یونٹ میں, ## اس یونٹ سے کیسے پڑھیں۔
+   - topic-01.mdx: # ابتدائی آئین اور قراردادِ مقاصد, ## جماعت کی ایک حقیقی صورتِ حال, ## وضاحت, ### قراردادِ مقاصد: متن اور اہمیت, ### 1956 کا آئین: اہم خصوصیات, ### 1962 کا آئین: اہم خصوصیات, ### آئینی مسائل اور 1956 سے 1973 کے درمیان وقفہ, ## سرگرمی: شواہد پر مبنی موازنہ بنائیں, ## اپنی سمجھ جانچیں, ## خلاصہ, ## خود جائزے کی فہرست, ## اپنے تدریسی مشق کے اسکول میں آزمائیں, ## مجموعی جائزے کا کام, ## مزید مطالعہ۔
+   - topic-02.mdx: # 1973 کا آئین: پاکستان کا برقرار رہنے والا ڈھانچہ, ## جماعت کی ایک حقیقی صورتِ حال, ## وضاحت, ### 1973 کے آئین کا پس منظر اور تشکیل, ### 1973 کے آئین کی نمایاں خصوصیات, ### 1973 کے آئین کی اسلامی دفعات, ## سرگرمی: آرٹیکل پڑھنے کی باہمی مشق, ## اپنی سمجھ جانچیں, ## خلاصہ, ## خود جائزے کی فہرست, ## اپنے تدریسی مشق کے اسکول میں آزمائیں, ## مجموعی جائزے کا کام, ## مزید مطالعہ۔
+   - unit-assessment.mdx: # آئینی ارتقا - تشخیص اور دہرائی, ## یونٹ کا خلاصہ, ## مجموعی جائزہ, ### کثیر الانتخابی سوالات, ### محدود جواب کے سوالات, ### تفصیلی جواب کے سوالات, ## جوابات اور نمبر دہی کی رہنمائی, ### کثیر الانتخابی سوالات کے جوابات, ### محدود جواب کے نمونے اور نمبر دہی, ### تفصیلی جواب کے معیارِ جانچ۔
+   - Monotonic h1 -> h2 -> h3 hierarchy strictly observed with zero skipped levels.
+
+5. RTL Presentation and Bidi Punctuation:
+   - All four pages use appropriate RTL typographic marks: Arabic semicolon (؛), Urdu full stop (۔), and question mark (؟).
+   - Paragraph and list directionality flows naturally right-to-left.
+   - Embedded Latin expressions (SLO:GPKS-402-3-1, MCQs, RRQs, ERQs, Article 2A, Article 25A) wrapped cleanly without reversing adjacent Urdu characters.
+   - Zero em dashes across all files (check:no-em-dash exits 0).
+   - Assessment answer key and marking guidance strictly quarantined within the bounded final section of unit-assessment.mdx (check:no-answer-keys exits 0).
+
+exit_code: 0

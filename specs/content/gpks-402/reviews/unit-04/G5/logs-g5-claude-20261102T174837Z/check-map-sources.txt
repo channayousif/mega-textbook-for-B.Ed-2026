@@ -1,0 +1,2 @@
+$ npm run --silent check:map-sources
+✓ Map provenance gate passed (611 manifest row(s) scanned; every rendered map names its source).

@@ -50,7 +50,7 @@
 | Unit 5 | G4 ur-translation | ▢ | | separate job |
 | Unit 5 | G5 ur-review | ▢ | | |
 | Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-06/G2/20261102T171620632Z-gates.json |
-| Unit 6 | G3 en-review | ▢ | | awaiting an independent reviewer |
+| Unit 6 | G3 en-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/efmp-406/reviews/unit-06/G3/f39ce2ec-8915-4b91-be9c-d3b7ce713df8.json; all 7 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; all 8 SVG variants pass geometry; G3 remains open and unsigned |
 | Unit 6 | G4 ur-translation | ▢ | | separate job; translate prose, nine concept labels and four SVGs with RTL layout |
 | Unit 6 | G5 ur-review | ▢ | | independent Urdu review pending |
 
@@ -60,3 +60,5 @@
 - Four EN schematics and generated dark twins are placed. Non-browser Sharp renders were inspected in both themes. `measure-figure-text.mjs` uses Playwright/Chromium and was not run because `.crew/brief.md` prohibits Playwright. The next authorised browser session owns that geometry check; no build, server or browser ran here.
 - Source notes distinguish abstract-only, official-overview and indexed-PDF support. The mapped Booth and Ainscow print book was not available and carries no claim. No current district rates, tool-effectiveness findings or policy-achievement claims were invented.
 - Literacy rate, access and out-of-school children are defined inline. Global glossary additions are outside this Unit 6-only job. Equity, AI and SDGs reuse existing glossary entries. The Urdu job owns the corresponding vocabulary work and concept-label review.
+
+| Unit 2 | G3 en-review | ▢ | | advisory: escalate by agent:codex-g3-reviewer; report at specs/content/efmp-406/reviews/unit-02/G3/crew-efmp-406-u02-review-en.json; RRQ 2/3/9 prompt-scheme alignment repairs requested; source verification, actual author run provenance and browser/print evidence unavailable; G3 remains open and unsigned |

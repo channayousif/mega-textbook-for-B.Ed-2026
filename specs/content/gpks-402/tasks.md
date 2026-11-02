@@ -34,7 +34,7 @@
 | Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-04/G2/20261102T072758427Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/gpks-402/reviews/unit-04/G3/8e3bf462-d4af-437f-aa63-372eb41b9e7c.json; all 7 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; all 14 SVG variants pass geometry; G3 remains open and unsigned |
 | Unit 4 | G4 ur-translation | ▢ | | Complete five-page draft mirror and seven Urdu SVG pairs prepared from 64ced416; translation_status remains draft. Status retained per translate-unit Step 7; independent G5 and rendered inspection pending. Handoff: specs/content/gpks-402/reviews/unit-04/G4/translation-handoff.md |
-| Unit 4 | G5 ur-review | ▢ | | |
+| Unit 4 | G5 ur-review | ▢ | | advisory: escalate (agent:claude, unsigned); report specs/content/gpks-402/reviews/unit-04/G5/g5-claude-20261102T174837Z.json; 3 blocking figure repairs (fig-U4-6.ur.svg is the freehand map withdrawn in #368, fig-U4-8 missing from the Urdu page, fig-U4-6 Urdu alt describes the old map; G4 baseline 64ced416 predates #368/#369); owner rulings needed on "checks" = نگرانی and 16 unbanked terms; prose and assessment equivalent (MCQ solve matches key); rendered RTL/print inspection not possible in crew; row stays open (ADR-0019) |
 | Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-06/G2/20261102T072758692Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | awaiting an independent reviewer |
 | Unit 6 | G4 ur-translation | ▢ | | separate job |
@@ -65,6 +65,7 @@ The stage rows below govern Unit 5. No G1 re-evaluation or G3/G5 approval is rec
 | Unit 5 | G6 assets | ▣ | | Four English SVGs and four Urdu SVGs placed with dark variants; all 8 SVGs pass geometry |
 | Unit 5 | G7 publish | ▢ | | No deployment or publication action in this job |
 | Unit 5 | G3 en-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/gpks-402/reviews/unit-05/G3/21030998-7c55-4596-9cef-92787e7cb7aa.json; all 7 criteria pass; all 8 SVGs pass geometry; G3 remains open and unsigned |
+| Unit 5 | G5 ur-review | ▢ | | advisory: escalate (agent:g5-reviewer, unsigned); report specs/content/gpks-402/reviews/unit-05/G5/g5-claude-20261102T183940Z.json; render inspection unavailable in crew, accessibility/rtl unverified; 2 uncertain findings (F2 better value rendered cheaper, F3 learning-outcome terminology drift) and 7 advisory; row stays open (ADR-0019) |
 
 | Unit 2 | G3 en-review | ▢ | | advisory: escalate; report specs/content/gpks-402/reviews/unit-02/G3/01a18cbc-8067-7f42-995a-419ce6765add.json; date, arithmetic and assessment defects; sources, provenance and current screen/print inspection incomplete; unsigned, G3 remains open |
 
@@ -83,7 +84,7 @@ Only Unit 3 is updated by this authoring job. The approved content-spec is the d
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-03/G2/20261102T072758295Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/gpks-402/reviews/unit-03/G3/608a5388-1312-4060-ac88-c7d64ddc8c72.json; all 7 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; all 8 SVG variants pass geometry; G3 remains open and unsigned |
 | Unit 3 | G4 ur-translation | ▢ | | Draft Urdu mirror prepared 2026-10-31 by codex from 23c211bd6fe0b17fe3e7bcbade5c54b15b9642cb: four pages, full 10/10/5 assessment, four RTL Urdu SVGs and derived dark twins. Frozen-bank key_terms and structural parity checked; translation_status stays draft. Open per translate-unit Step 7; geometry and rendered inspection pending under crew browser restriction. Handoff: reviews/unit-03/G4/translation-handoff.md |
-| Unit 3 | G5 ur-review | ▢ | | Pending translation and independent review; authored concept labels require review |
+| Unit 3 | G5 ur-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/gpks-402/reviews/unit-03/G5/f08da193-6363-4286-bcf6-4be1f27181bd.json; all 10 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; RTL and font shaping verified; G5 remains open and unsigned |
 | Unit 3 | G6 assets | ▣ | codex | Four English and four Urdu light/dark pairs placed; Urdu geometry and rendered inspection pending under crew browser restriction |
 | Unit 3 | G7 publish | ▢ | | No deploy or PR in this job |
 | Unit 1 | G3 en-review | ✅ | CMY | review:specs/content/gpks-402/reviews/unit-01/G3/20261102T140729Z-g3-desk-b1f9d57a.json |

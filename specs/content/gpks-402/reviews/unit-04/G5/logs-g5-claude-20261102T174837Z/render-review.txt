@@ -1,0 +1,12 @@
+render-review attempt, 2026-11-02T17:52:48Z, host hcp.textbook.com.pk
+Crew brief forbids npm run build, dev/preview servers and Playwright/Chromium in this job, so no page, narrow-viewport (360px) or A4 print render was produced. scripts/measure-figure-text.mjs launches Chromium (playwright-core, line 36/62) and was therefore not run.
+Fallback rasteriser probe:
+$ command -v rsvg-convert inkscape chromium google-chrome
+(none found, exit 1)
+$ convert -list format | grep -i svg
+     MSVG  SVG       rw+   ImageMagick's own SVG internal renderer
+      SVG  SVG       rw+   Scalable Vector Graphics (XML 2.9.14)
+     SVGZ  SVG       rw+   Compressed Scalable Vector Graphics (XML 2.9.14)
+Without an rsvg/browser delegate, no available renderer performs Arabic-script shaping, so any output could not evidence Nastaliq legibility. No PNG was produced.
+Label text of every .ur.svg was inspected as data only (see report findings F1, F2).
+RESULT: not inspected (exit 1)

@@ -1,0 +1,17 @@
+HEAD and origin/main: ef96639058eeb0592719065ee40c6d257a10850a ef96639058eeb0592719065ee40c6d257a10850a
+Prepared manifest: 103 inputs; unchanged tracked baseline at start.
+Reviewer session: 01a19d88-c3e6-77b0-b88f-021aa503d91b
+Translator run identity: not supplied; commit 772fbe4a3e39222c8127d686cb141485686aa500 is provenance, not a session identity.
+Human G3 reference: specs/content/gqur-301/reviews/unit-09/G3/20261102T140729Z-g3-desk-342e3991.json
+Human G3 English digest comparison:
+docs/semester-2/gqur-301/unit-09/index.mdx: True
+docs/semester-2/gqur-301/unit-09/topic-01.mdx: True
+docs/semester-2/gqur-301/unit-09/topic-02.mdx: True
+docs/semester-2/gqur-301/unit-09/unit-assessment.mdx: True
+G3 signature present: False
+Historical human G3 record retained; not treated as automatic signed G5 dependency.
+Referenced Urdu assets:
+static/img/figures/gqur-301/unit-09/fig-U9-1.ur.svg: exists=False
+static/img/figures/gqur-301/unit-09/fig-U9-2.ur.svg: exists=False
+static/img/figures/gqur-301/unit-09/fig-U9-3.ur.svg: exists=False
+static/img/figures/gqur-301/unit-09/fig-U9-4.ur.svg: exists=False
