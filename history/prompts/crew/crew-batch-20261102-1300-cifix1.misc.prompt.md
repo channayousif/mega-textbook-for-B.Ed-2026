@@ -1,6 +1,6 @@
 ---
 id: crew-batch-20261102-1300-cifix1
-title: crew fix batch-20261102-1300-cifix1 figure geometry
+title: crew fix CREW unit 0
 stage: misc
 date: 2026-11-02
 surface: agent
@@ -8,20 +8,73 @@ model: opencode
 feature: crew
 branch: crew/batch-20261102-1300
 user: crew
-command: Read .crew/brief.md and carry it out completely
-labels: ["crew", "opencode", "fix", "efmp-406", "figure-geometry"]
+command: crew fix
+labels: ["crew", "opencode", "fix"]
 links:
-  spec: specs/content/efmp-406/content-spec.md
+  spec: specs/content/crew/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
-  - static/img/figures/efmp-406/unit-01/fig-U1-2.ur.svg
-  - static/img/figures/efmp-406/unit-01/fig-U1-2.ur.dark.svg
-  - history/prompts/crew/crew-batch-20261102-1300-cifix1.misc.prompt.md
+ - history/prompts/crew/crew-batch-20261102-1300-cifix1.misc.prompt.md
+ - history/prompts/efmp-406/0001-unit-three-advisory-g3-review.misc.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u01-translate.misc.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u03-review_en.misc.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u04-author-r1.green.prompt.md
+ - history/prompts/general/20261051-efmp406-u01-urdu-translation.general.prompt.md
+ - history/prompts/general/20261052-efmp406-u01-g2-evidence-refresh.general.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-406/unit-01/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-406/unit-01/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-406/unit-01/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-406/unit-01/unit-assessment.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-406/unit-01/unit-teacher-notes.mdx
+ - specs/content/efmp-406/authoring/unit-04.md
+ - specs/content/efmp-406/reviews/unit-01/G2/20261102T120245720Z-gates.json
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261102T120245720Z/check-bloom-bands.txt
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261102T120245720Z/check-concept-graph.txt
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261102T120245720Z/check-depth-gate.txt
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261102T120245720Z/check-docs-sync.txt
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261102T120245720Z/check-figures.txt
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261102T120245720Z/check-no-answer-keys.txt
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261102T120245720Z/check-no-em-dash.txt
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261102T120245720Z/validate-content.txt
+ - specs/content/efmp-406/reviews/unit-03/G3/01a19c22-e969-7f80-81b7-f2e304f416df.json
+ - specs/content/efmp-406/reviews/unit-03/G3/01a19c22-e969-7f80-81b7-f2e304f416df.summary.md
+ - specs/content/efmp-406/reviews/unit-03/G3/crew-01a19c22/assessment-review.md
+ - specs/content/efmp-406/reviews/unit-03/G3/crew-01a19c22/build-content-status.txt
+ - specs/content/efmp-406/reviews/unit-03/G3/crew-01a19c22/check-content-after-status.txt
+ - specs/content/efmp-406/reviews/unit-03/G3/crew-01a19c22/check-content-final.txt
+ - specs/content/efmp-406/reviews/unit-03/G3/crew-01a19c22/check-content.txt
+ - specs/content/efmp-406/reviews/unit-03/G3/crew-01a19c22/check-depth-gate.txt
+ - specs/content/efmp-406/reviews/unit-03/G3/crew-01a19c22/check-docs-sync.txt
+ - specs/content/efmp-406/reviews/unit-03/G3/crew-01a19c22/check-figures.txt
+ - specs/content/efmp-406/reviews/unit-03/G3/crew-01a19c22/check-no-answer-keys.txt
+ - specs/content/efmp-406/reviews/unit-03/G3/crew-01a19c22/check-no-em-dash.txt
+ - specs/content/efmp-406/reviews/unit-03/G3/crew-01a19c22/commands.json
+ - specs/content/efmp-406/reviews/unit-03/G3/crew-01a19c22/manifest.json
+ - specs/content/efmp-406/reviews/unit-03/G3/crew-01a19c22/provenance.md
+ - specs/content/efmp-406/reviews/unit-03/G3/crew-01a19c22/render-limitations.md
+ - specs/content/efmp-406/reviews/unit-03/G3/crew-01a19c22/source-retrieval.txt
+ - specs/content/efmp-406/reviews/unit-03/G3/crew-01a19c22/source-support.md
+ - specs/content/efmp-406/reviews/unit-03/G3/crew-01a19c22/started-at.txt
+ - specs/content/efmp-406/reviews/unit-03/G3/crew-01a19c22/validate-content.txt
+ - specs/content/efmp-406/tasks.md
+ - specs/content/efmp-406/translations/unit-01/handoff.md
+ - specs/content/efmp-406/translations/unit-01/logs/check-content-draft.txt
+ - specs/content/efmp-406/translations/unit-01/logs/check-content-origin-main.txt
+ - specs/content/efmp-406/translations/unit-01/logs/check-content-temporary-reviewed.txt
+ - specs/content/efmp-406/translations/unit-01/logs/mdx-syntax.txt
+ - specs/content/efmp-406/translations/unit-01/logs/parity-self-check.txt
+ - static/img/figures/efmp-406/unit-01/fig-U1-1.ur.dark.svg
+ - static/img/figures/efmp-406/unit-01/fig-U1-1.ur.svg
+ - static/img/figures/efmp-406/unit-01/fig-U1-2.ur.dark.svg
+ - static/img/figures/efmp-406/unit-01/fig-U1-2.ur.svg
+ - static/img/figures/efmp-406/unit-01/fig-U1-3.ur.dark.svg
+ - static/img/figures/efmp-406/unit-01/fig-U1-3.ur.svg
+ - static/img/figures/efmp-406/unit-01/fig-U1-4.ur.dark.svg
+ - static/img/figures/efmp-406/unit-01/fig-U1-4.ur.svg
 tests:
-  - npm run check:content (13/13 pass)
-  - npm run figures:variants:check (1075 figures OK)
+ - npm run check:content
 ---
 
 ## Prompt
@@ -56,28 +109,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (batch-20261102-0900-cifix1, fix, opencode) `fig-U3-4` table body type is now 11px and headers 13px (the repo's stated minimum label size); a reviewer wanting larger type should widen the columns, which needs about 808px at 13px/14px.
 - (batch-20261102-0900-cifix1, fix, opencode) `fig-U3-1` right boxes are x=520 w=270 (text x=535); `fig-U3-3` left cards are 360 wide with arrows at x1=400 and x2=410.
 
+
 ## Response snapshot
 
-Read the figure-geometry failure from `gh run view --log-failed`: `fig-U1-2.ur.svg` and its dark twin each reported four labels spilling about 106px out of the first-column panel. The Urdu table mirrored its panels with per-shape `transform="translate(780 0) scale(-1 1)"`, which `measure-figure-text.mjs` cannot see past, so the third-column labels were measured against the unmirrored first-column panel. Rewrote the panel and rule coordinates in the mirrored space and dropped the transforms, regenerated the dark variant, and confirmed the rendered figure is pixel-identical to the previous version. `npm run check:content` passes 13/13 and `npm run figures:variants:check` passes for 1075 figures.
+Rewrote fig-U1-2.ur.svg and its dark variant from transform-based RTL mirroring to coordinate mirroring so the figure-geometry gate measures the intended panels, leaving the rendered figure unchanged.
 
 ## Outcome
 
-- ✅ Impact: the figure-geometry job should no longer flag Unit 1's Urdu comparison table; the rendered figure is unchanged.
-- 🧪 Tests: `npm run check:content` 13/13 PASS; `npm run figures:variants:check` PASS (1075 figures); old and new SVG rendered pixel-identical with sharp.
-- 📁 Files: `fig-U1-2.ur.svg` and `fig-U1-2.ur.dark.svg` geometry rewritten; this PHR.
-- 🔁 Next prompts: independent G5 Urdu review of Unit 1, including render inspection.
-- 🧠 Reflection: the repo's own `mirror-figure-rtl.mjs` rewrites coordinates rather than using transforms precisely so measurement tools compare like with like; the translate job's transform shortcut defeated the geometry gate.
+- Impact: fix for CREW Unit 0 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 57 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Unit 1 Urdu table figure now uses coordinate mirroring (no transforms); dark variant regenerated.
-- Decisions the team must respect: only `.ur.svg` files changed, so Unit 1's G2 input manifest is untouched (Urdu variants bind to G5 only); no G3/G5 status changed.
-- Pending / next owner: independent G5 reviewer should still run geometry and render inspection; the other three Unit 1 Urdu figures still use transforms and pass only by layout coincidence, so a future edit could re-expose the same false positive.
-- Paperclip issues affected: Crew job batch-20261102-1300-cifix1; no issue identifier supplied.
+- Shipped / changed: Rewrote fig-U1-2.ur.svg and its dark variant from transform-based RTL mirroring to coordinate mirroring so the figure-geometry gate measures the intended panels, leaving the rendered figure unchanged.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - The other three Unit 1 Urdu figures (fig-U1-1/3/4) still use per-shape transforms and pass the geometry gate only by layout coincidence; a future edit there could re-expose the same false positive.
+  - Only `.ur.svg` files changed, so Unit 1's G2 input manifest is untouched (Urdu variants bind to G5 only); no G3/G5 status changed.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: transform-based RTL mirroring hides shape geometry from `measure-figure-text.mjs`, producing a false-positive spill.
-- Graders run and results (PASS/FAIL): PASS: `npm run check:content` (13/13), `npm run figures:variants:check`. NOT RUN: `measure-figure-text.mjs` (Playwright forbidden by the brief).
-- Prompt variant (if applicable): none
-- Next experiment (smallest change to try): convert the remaining Unit 1 `.ur.svg` figures to coordinate mirroring for consistency, or teach the measure script to apply shape transforms.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
