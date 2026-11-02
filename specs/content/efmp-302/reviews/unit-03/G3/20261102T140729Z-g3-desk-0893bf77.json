@@ -1,0 +1,294 @@
+{
+  "schema_version": 1,
+  "course_code": "EFMP-302",
+  "unit_no": 3,
+  "stage": "G3",
+  "reviewer_id": "CMY",
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g3.md": "074c8464b4bc0f2f2b76bbb19707c50b54cb907920407873a4e5d193e866f53f",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "16873d570541a3e3f7a6fa2578283f15c54e824c0aa7623c069996b9f2b87929",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/licence-page.schema.json": "3fc99078935af7419b4545d21c7d77d66e80ed847755df38ddc500ee35775a3c",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-1/efmp-302/course-overview.mdx": "7dcacdcd8198a7f6f0feda4f29023a3dbe145722ad0a8413d5de5d4e5dfaf450",
+    "docs/semester-1/efmp-302/unit-03/_category_.json": "49b67ac10b168bb2d83ce361a84b8b493e5585a6d639706b330381efc7e65924",
+    "docs/semester-1/efmp-302/unit-03/index.mdx": "3bbbde42e2722b9cee3bc73036616521f538762259e8526f4cce83869dd04640",
+    "docs/semester-1/efmp-302/unit-03/topic-01.mdx": "708451fb1beed1920bb681eee55ae48a263ceb153a9d931101752e0c9140f942",
+    "docs/semester-1/efmp-302/unit-03/topic-02.mdx": "a2194ddeaac21389606f6f571b17ccee6358a2f3caf30b14b1829a137d9d8e55",
+    "docs/semester-1/efmp-302/unit-03/topic-03.mdx": "c695a476940f1cc9c36ba37b704d57a078ebddd93206b11f94bdee2158dbdda7",
+    "docs/semester-1/efmp-302/unit-03/topic-04.mdx": "a54931403173125198805570733adc8703c51e8506f8b29eab3c609263fed9b2",
+    "docs/semester-1/efmp-302/unit-03/topic-05.mdx": "123247202908377c3fc7ca688924303b3a6abed11f5ddd992f3c177892854a82",
+    "docs/semester-1/efmp-302/unit-03/unit-assessment.mdx": "dd2903be6d5d03f5ab675acd5ed2c5817c4a1fdc075d28dadf0f1f9bbcf60c9d",
+    "docs/semester-1/efmp-302/unit-03/unit-teacher-notes.mdx": "7b2928d50e405968c4993f7a55ec5eed0a77ff2edb5894db7e9908ff3b5a374a",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "dfaa7045af0a9199dba81a06dab16963cce6221905c506afb73f60fb8ced9625",
+    "scripts/check-no-answer-keys.mjs": "8d3f8cac335c50774ee622d61cb37d987c0393c99e54eff31f2bd042625a78c3",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "8ce3a62bd80534181cf1d74fa92bc3ea2b5d937b3f528e96c2a3e20c5a87047a",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "cc33a878d98865149b248c6a524be4e9d294293ddfaecc443dc19b7ace6af7cf",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "9a37137e672608679b865fc0bda041f15f471905ff78cef3282a04e5f4f3f3ab",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/efmp-302/concepts/unit-03.md": "f41a214572d92c9e1214309a39a139b7c45bb0e282c819fa4acd1e09993d6255",
+    "specs/content/efmp-302/content-spec.md": "1a6e9230885fafc55382deab18d0e83c2f1ff4afce9476d60c355604774eb047",
+    "specs/content/efmp-302/coverage/unit-03.md": "29648b8fa1992dd9e3ad84b9f31f2d69ba29adf1f7dff25173ceebd9cf54672e",
+    "specs/content/efmp-302/figures/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "specs/content/efmp-302/figures/unit-03.banner.md": "6e372be7bb94b23a2c84bb3927bb0a618ad5eb62be5c46daa3a2d27578533ac2",
+    "specs/content/efmp-302/figures/unit-03.md": "22b8b4c53433bbe785e5cf4181d5577ac5951d269d3fe3acd44f76d72d99c09e",
+    "specs/content/efmp-302/sources/texts/furlich2016.md": "21cc51c8077ed340a972787a8c67f8350eaadd16c9879069f931e89c4a51541c",
+    "specs/content/efmp-302/sources/texts/goe2008.md": "388cfb823b621e2c423eef36231a655bffece69adb0cc6d1de14dd44681e3524",
+    "specs/content/efmp-302/sources/texts/keelson2024.md": "9b352bfc8520a366d4fb51c79fac7d6a17bd3b3d24e645166f41084981c7361a",
+    "specs/content/efmp-302/sources/texts/suarez2022.md": "087030ea5418db5446200ba57a105f36097ee7e1ed08547fb0b10b8b17b799b3",
+    "specs/content/efmp-302/sources/texts/taylor2023.md": "3ee551c2e1f0989ac74bc64da43bf4841e354f5ff9d35742aec56ffc6ad458f3",
+    "specs/content/efmp-302/sources/unit-03.md": "a165155a046c0183cdb8b92ccac4f413117c7ed6e44e86e429d781cfaea1a670",
+    "specs/content/style-guide.md": "79f6cafc03b436c0e77c49ea658ef9a7a4de408b5c42020be39011a02a00dd7f",
+    "static/img/figures/efmp-302/unit-03/fig-U3-1.dark.svg": "86a42a386b09f8ac035f199017df50721230fc45dc8f8c6e36c8b8e3cf163f8f",
+    "static/img/figures/efmp-302/unit-03/fig-U3-1.svg": "99636ae827386c113c6dc26c121d680edceefbdeaa89d7c5d290a849a8b20c73",
+    "static/img/figures/efmp-302/unit-03/fig-U3-10.dark.svg": "d92b770674b0104c437df6f3fd6c61965fb830c304b4b78dc85aa995f7719331",
+    "static/img/figures/efmp-302/unit-03/fig-U3-10.svg": "7789c71350aec5f8d7e40614e16f2c452a2707cb83ee4d71a87a39068dc07648",
+    "static/img/figures/efmp-302/unit-03/fig-U3-11.webp": "b71d547ac1167900d9f3c3f43859cc834d202898576d0a16cb71e6caadcbd832",
+    "static/img/figures/efmp-302/unit-03/fig-U3-12.webp": "481c6ecd9dd6cc74b30a481b98b7a360c347aa99993f995b80af113e5b6ccc70",
+    "static/img/figures/efmp-302/unit-03/fig-U3-13.webp": "9a5c74c4f3b329f86349b6026c20380ceaf37d4fbc80fd3228da25067f133869",
+    "static/img/figures/efmp-302/unit-03/fig-U3-14.webp": "78cc668c5c4635e86a688e97d984329cc085285f38b5461685cc16770e5700ff",
+    "static/img/figures/efmp-302/unit-03/fig-U3-15.webp": "66b4f0c479df4717e9d5bfe44447ecb48e5a2d340501449db5259e4a44eeec78",
+    "static/img/figures/efmp-302/unit-03/fig-U3-16.webp": "d1f859ae79a0672472095ab67143e035a2ba7e76ff985e8dfdef0345ecb6b6da",
+    "static/img/figures/efmp-302/unit-03/fig-U3-2.dark.svg": "89c7c2d85ccf08f868fc4aebf194f75f05f09e03dc1082d7bfe12e51807ff2e6",
+    "static/img/figures/efmp-302/unit-03/fig-U3-2.svg": "6226a14b5ed8d487452d00fbabcf6612fee2f7c0e8ebe176b8e74304816ae079",
+    "static/img/figures/efmp-302/unit-03/fig-U3-3.dark.svg": "171bbab773cd2c753ae8bce0c97b7098eec355a2e63c7bae56c59c1785546649",
+    "static/img/figures/efmp-302/unit-03/fig-U3-3.svg": "8addb426c0496ed1444a6b2e52bf9c3a57089a4894fe7d4813dc4a6cf9256720",
+    "static/img/figures/efmp-302/unit-03/fig-U3-4.dark.svg": "63bf27a00606a2f6378ed5f4b60b8d52236b312111271754a26807db82bc0b6b",
+    "static/img/figures/efmp-302/unit-03/fig-U3-4.svg": "6b69f0b7c49aafb075eda9e38575f0bf76e14074359ec84eb701baedeeb2d232",
+    "static/img/figures/efmp-302/unit-03/fig-U3-5.dark.svg": "5900b1e118437ae636e6f6fd37a813b0e1e308d2bc23d3b2063084ffcb80c6f0",
+    "static/img/figures/efmp-302/unit-03/fig-U3-5.svg": "a7db5eab2db1300b50d500aab8c463e24cc251d268a9d9de5d3cfbf51a872e56",
+    "static/img/figures/efmp-302/unit-03/fig-U3-6.dark.svg": "7cc986b4d31791d2607a68a1111af460d61a92e5678969d9ef55f02277a0b390",
+    "static/img/figures/efmp-302/unit-03/fig-U3-6.svg": "05c1761f1216ca5c5bae5ec607ad200a5ae878de41f6d5a68a5fe5262b967812",
+    "static/img/figures/efmp-302/unit-03/fig-U3-7.dark.svg": "eea1d7c2bfabeb933a37ca1393c318a2029bde1541f3a217ab8d299eab1fa837",
+    "static/img/figures/efmp-302/unit-03/fig-U3-7.svg": "8af622bac3f86c00f81d744d9f54d6f0e0e5b4773548f61e1c012065350722fe",
+    "static/img/figures/efmp-302/unit-03/fig-U3-8.dark.svg": "709ce40efa64807f8cc0cd21945658481d93b8f464f84779271890da3f48c928",
+    "static/img/figures/efmp-302/unit-03/fig-U3-8.svg": "a21406d69ba4b448e9c15e3bc7d5904452101d5b7c1a4c29878b84160488fcc7",
+    "static/img/figures/efmp-302/unit-03/fig-U3-9.dark.svg": "2492e00eddf9747ad86fd3e2508b02c6567817becc4c11b871d8bcc7da217962",
+    "static/img/figures/efmp-302/unit-03/fig-U3-9.svg": "510ec44d6c8d25113eb2bbfbf28513184855dd9fcf35d89155aea876c22f2016"
+  },
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0
+    },
+    {
+      "name": "render-review",
+      "exit_code": 0
+    }
+  ],
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        "G3 sign-off desk, ledger row 0893bf77-59b7-4d27-9639-83c768d0e4d9"
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "pass",
+      "evidence": [
+        "G3 sign-off desk, ledger row 0893bf77-59b7-4d27-9639-83c768d0e4d9"
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "G3 sign-off desk, ledger row 0893bf77-59b7-4d27-9639-83c768d0e4d9"
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "pass",
+      "evidence": [
+        "G3 sign-off desk, ledger row 0893bf77-59b7-4d27-9639-83c768d0e4d9"
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "pass",
+      "evidence": [
+        "G3 sign-off desk, ledger row 0893bf77-59b7-4d27-9639-83c768d0e4d9"
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "G3 sign-off desk, ledger row 0893bf77-59b7-4d27-9639-83c768d0e4d9"
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": [
+        "G3 sign-off desk, ledger row 0893bf77-59b7-4d27-9639-83c768d0e4d9"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "blocking",
+      "message": "CYCLE-1 B-01 REPAIR VERIFIED (blocking -> resolved). The 69bae9e repair reverted all unit-03 figure files to their pre-b8f8ffe (38d8e7f) geometry and re-applied the one repair b8f8ffe had incidentally absorbed: run-007 A-01, the fig-U3-6 outcome-box/wordmark collision, fixed by shrinking the box's bottom edge (64 to 56, i.e. 504 to 496) and moving the wordmark to y=512 in both variants. Verified in bytes (git diff 38d8e7f..HEAD: 18 of 20 files identical; fig-U3-6 carries exactly the two-line wordmark fix), in rendered-DOM geometry (zero bbox overlaps between distinct text elements across all 20 SVGs), in pixel ink-intersection (zero glyph collisions; wordmark clear of all text and painted rects; fig-U3-6 wordmark ink y 502-515 clears the box bottom 496 by 6px), and by a negative control that reproduces cycle-1's 18 superpositions when run over the b8f8ffe bytes (logs-feat023-r2/fig-text-overlap-control-b8f8ffe.json). The rebuilt site serves exactly these bytes. No text-on-text superposition remains in any of the 10 figures, in either theme variant.",
+      "resolved": true
+    },
+    {
+      "severity": "advisory",
+      "message": "CYCLE-1 A-N1 RESOLVED (stale carrier dimensions). After the revert, every <Figure> carrier in the topic files carries width/height exactly equal to its SVG viewBox (900x400, 900x460, 900x470, 800x470, 880x470, 880x520, 860x400, 860x490, 900x420, 900x470), so the 50px letterboxing cycle-1 measured is gone and each figure fills its reserved box. Verified by comparing every carrier attribute against its committed viewBox this run.",
+      "resolved": true
+    },
+    {
+      "severity": "advisory",
+      "message": "A-02 (carried from run-007 via cycle-1, re-verified in current bytes). fig-U3-3's 'How it fails when overdone' cell for Resilience reads 'Endures what should be reported', while topic-02.mdx:127-129 teaches 'Overdone, it becomes stubbornness: persisting with a method for four years because giving it up would feel like defeat.' These are different failure modes (tolerating what should be escalated vs refusing to abandon a method), and unit-assessment.mdx RRQ 4 awards a mark for the failure mode with the model answer following the prose. REPAIR: align the fig-U3-3 cell with the prose, or add the second failure mode to both the prose and the RRQ 4 scheme.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "A-03 (carried from run-007 via cycle-1, re-verified in current bytes). fig-U3-5's link labels give illustrative instances where the prose and the RRQ 5 mark scheme require purposes: colleagues 'so a hard class can be handed over' (prose: 'so that practice improves and so that a pupil is not handled inconsistently'), head 'so a problem is heard early' (prose: 'so that you can get things done that require permission, and so that when you raise something difficult it is heard'), community 'so a girl is allowed to keep attending' (prose: 'so the school can ask things of it'), parents 'so a parent will act' (prose also requires 'and so that you learn what you cannot see', topic-03.mdx:55-60). Only the pupils link matches. RRQ 5 is a five-mark recall item scored one per relationship and fig-U3-5 is the opening visual of the topic it examines. REPAIR: bring the labels into line with the prose or widen the RRQ 5 scheme to credit the figure's wording.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "A-04 (carried from run-007 via cycle-1, re-verified in current bytes). fig-U3-9's closing caption says 'A teacher today is still expected to transmit content accurately and still expected to instruct - while also doing the three that came after.' No count of three fits: the timeline has four stations (Transmitter, Instructor, Facilitator, 'And also, now'), so two stations come after Instructor, the 'And also, now' box lists four roles, and the unit teaches five roles overall. REPAIR: state the count the figure shows, or drop the number.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "A-06 (carried from run-005 via run-007 and cycle-1, re-verified). MCQ option-length cue: the key is the longest option by a clear margin on items 5, 6, 7 and 8 of unit-assessment.mdx, and on 6 and 7 it is more than twice the length of every distractor. REPAIR: lengthen the distractors or compress the keys.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "A-07 (carried from run-005 via run-007 and cycle-1, re-verified). Bloom labels overstate demand on two MCQs: unit-assessment.mdx MCQ 4 (empathy at excess) and MCQ 7 ('Does everyone understand?') are labelled (Apply) but each is recall of a sentence stated verbatim in topic-02.mdx:100-102 and topic-04.mdx:57-59 with no new case to transfer to. Of the three Apply-labelled MCQs only item 9 requires application. The content-spec blueprint range 'Remember to Apply' is not breached. REPAIR: relabel or re-case the two items.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "A-08 (carried from run-005 via run-007 and cycle-1, re-verified). unit-assessment.mdx:9 blooms_summary says 'ERQs at Analyze and Evaluate', but ERQ 4 is labelled (Create) and its rubric row is 'Design reasoning (Create)'. The content-spec Unit 3 blueprint permits 'Analyze to Evaluate/Create', so the item is in scope and it is the front-matter description that is inaccurate. REPAIR: amend blooms_summary to include Create.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "A-09 (carried from run-005 via run-007 and cycle-1, re-verified). Two declared-unretrievable sources are attributed at point of use without an uncorroborated marker, and U3-11's grounding is nominal: topic-02.mdx:48-52 attributes a specific list to Hurst and Reding ('punctuality, preparedness, the willingness to be interrupted by a pupil's question, follow-through on what was promised') and topic-05.mdx:105-108 attributes a comparative claim to Brookfield ('development that consists of collecting courses is weaker than...'), while coverage/unit-03.md grounds U3-11 (facilitator and researcher) in brookfield2017 although the facilitator/researcher section at topic-05.mdx:42-70 carries no Brookfield citation (his only topic-05 citation is at :105, inside the life-long learner section). ASSESSED UNDER D-2026-0001 AND NOT FAILED: sources/unit-03.md's declarations are honest and complete, name the level of support and the exact sub-topic set each key grounds, and volunteer that U3-11 rests on the unread source alone; the attributions are general characterisations of well-known works, not statistics or reported findings. REPAIR options for the owner: reground U3-11 as no-external-source, cite Brookfield in that section once the book is obtainable, or add point-of-use scope notes on the Unit 6 model.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "A-10 (carried from run-005 via run-007 and cycle-1, re-verified). topic-04.mdx:117 and Further reading at :259-262 say '614 university students in Ghana'; the bound record (keelson2024.md:19-28) confirms 614 and the tertiary setting but derives Ghana from the authors' Takoradi Technical University affiliation rather than a stated study location, and recommends 'a technical university in Ghana'. Not false; more precise about location than the record supports. REPAIR: adopt the record's preferred phrasing if the sentence is revisited.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "A-11 (carried from run-005 via run-007 and cycle-1, re-verified against the bound excerpt). topic-01.mdx:121-123: 'Goe and colleagues are explicit that different components are appropriate for different purposes, and that an instrument built for professional development should not be reused for high-stakes appraisal.' goe2008.md supports the purpose-before-measure and single-score caution passages verbatim; the reuse direction is a paraphrase of the opposite direction from the one the excerpt states (a value-added score 'would be less helpful in providing teachers with guidance on how to improve their performance'), and 'explicit' overstates. REPAIR: bind a covering passage or mark the direction as an inference the way topic-01 marks the Taylor and Thion extension.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "A-12b (carried from run-007 via cycle-1, re-verified against the guide PDF re-extracted this run; A-12a remains repaired). content-spec.md:445 traces Unit 3 to 'guide CLOs 1, 5'. The guide PDF's own CLO order (verified this run via ghostscript re-extraction) makes CLO 2, 'Identify and exhibit the characteristics and qualities of an effective teacher', the on-point outcome for this unit; CLO 1 ('Define and explain the role and responsibilities of teachers in education') maps only loosely to Topic 3.5's roles, and CLO 5 ('Evaluate the impact of teacher effectiveness on student learning outcomes') is on point for 3.1. Imprecise, not contradictory; every guide leaf bullet for 3.1-3.5 is taught. REPAIR: re-trace to CLOs 2 and 5.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "A-13 (carried from run-005 via run-007 and cycle-1, re-verified). 'Immediacy' is introduced as a research construct at topic-04.mdx:68 and :76-82 and glossed inline by apposition rather than by a glossary entry; style-guide.md:118 requires a bilingual glossary entry for graduate-level jargon, and the entry would also serve the Urdu pass. REPAIR: add the entry when the glossary is next versioned.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "A-15 (carried from run-005 via run-007 and cycle-1, not re-derived this run). Three limits in scripts/lib/unit-depth.mjs checkSourceScopeAgreement recorded at run-007: an empty claimed-ID set short-circuits the loop, no-external-source rows are skipped entirely, and the check is set equality on IDs that never verifies the prose section for a grounded sub-topic actually cites the key (which is why A-09 survives a passing gate). The gate passed at exit 0 this run (logs-feat023-r2/check-depth-gate.log). Owner tooling item.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "A-05 (carried from run-007 via cycle-1, scoped). The review-ref/ untracked git-ignored full-repository snapshot that run-007 recorded as a review hazard does not exist in this worktree, so it cannot have influenced this attempt; the main-checkout cleanup remains an owner action from run-007. Recorded so the item is not lost.",
+      "resolved": false
+    },
+    {
+      "severity": "advisory",
+      "message": "A-N3 (carried from cycle-1, re-verified by render-inspect section A). Bare-URL link text on the Further reading lists of topic-01, topic-03, topic-04 and topic-05 (DOI and ERIC links). Bare URLs are conventional in citation lists, and the G3 rubric asks for descriptive links; descriptive text (for example 'Goe, Bell and Little 2008 (PDF)') would serve screen-reader users better. Low priority; no repair required for correctness.",
+      "resolved": false
+    }
+  ],
+  "disposition": "pass",
+  "started_at": "2026-11-02T14:07:29.445426+00:00",
+  "completed_at": "2026-11-02T14:17:46.653Z"
+}
