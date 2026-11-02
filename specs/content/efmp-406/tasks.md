@@ -9,7 +9,7 @@
 | 1 | Concept and Evolution of Literacy | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-02 by the crew author job (claude); G2 gate evidence recorded below; G3 and Urdu remain open |
 | 2 | Contemporary Forms of Literacy | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-02 by the crew author job (claude); G2 gate evidence recorded below; G3 and Urdu remain open |
 | 3 | Literacy, Language, and Society | ✓ | ☐ | ☐ | ☐ | placed (EN) | English draft authored from approved content-spec (D-2026-0075) |
-| 4 | Literacy in the Digital Era | ☐ | ☐ | ☐ | ☐ | - | |
+| 4 | Literacy in the Digital Era | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-02 by the crew author job (codex); G2 gate evidence recorded below; G3 and Urdu remain open |
 | 5 | Pedagogical Approaches to Contemporary Literacy | ☐ | ☐ | ☐ | ☐ | - | |
 | 6 | Issues, Challenges, and Future Directions | ☐ | ☐ | ☐ | ☐ | - | |
 
@@ -38,3 +38,9 @@
 | Unit 3 | G5 ur-review | ▢ | | |
 | Unit 3 | G6 assets | ✅ | auto:gates | 4 schematics placed with dark variants |
 | Unit 3 | G7 publish | ▢ | | |
+| Unit 4 | G2 en-draft | ▣ | | Five English files drafted; four English schematics placed; structural checks recorded in authoring/unit-04.md; unpublished with coming_soon: true; no accepted G2 evidence issued |
+| Unit 4 | G3 en-review | ▢ | | Independent review required; no author certification |
+| Unit 4 | G4 ur-translation | ▢ | | Separate job: five-file mirror, four translated RTL SVGs and terminology checks |
+| Unit 4 | G5 ur-review | ▢ | | Requires independent Urdu review and appropriate accepted English dependency |
+| Unit 4 | G6 assets | ▣ | | Four EN light/dark schematic pairs placed; Urdu assets deferred with the Urdu job |
+| Unit 4 | G7 publish | ▢ | | No publication authorised or performed by this job |
