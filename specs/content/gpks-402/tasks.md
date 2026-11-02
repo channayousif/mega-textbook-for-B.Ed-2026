@@ -9,7 +9,7 @@
 | 1 | Introduction and Ideological Foundations | ✓ | ☐ | ☐ | ☐ | placed | Withdrawn 2026-10-10 (owner, D-2026-0053 / G-2026-100); re-authored 2026-10-28 from the approved spec (D-2026-0074), English only; see stage rows below |
 | 2 | Reform Movements and the Pakistan Movement | ✓ | ☐ | ☐ | ☐ | placed | Withdrawn 2026-10-10 (owner, D-2026-0053 / G-2026-100); re-authored 2026-10-28 from the approved spec (D-2026-0074), English only; see stage rows below |
 | 3 | Constitutional Development | ✓ | ☐ | ▣ | ☐ | placed (EN + UR) | Four-page Urdu draft and four RTL SVG pairs prepared 2026-10-31; G3/G5 remain open; see reviews/unit-03/G4/translation-handoff.md |
-| 4 | Governance, Rights and Geography | ✓ | ☐ | ☐ | ☐ | placed | Authored 2026-10-28 from the approved spec (D-2026-0074), English only; see stage rows below |
+| 4 | Governance, Rights and Geography | ✓ | ☐ | ▣ | ☐ | placed | English baseline authored 2026-10-28 (D-2026-0074); complete Urdu draft prepared 2026-11-02; independent G5 pending; see stage rows below |
 | 5 | Economy and Society | ✓ | ☐ | ☐ | ☐ | placed (EN) | English draft authored 2026-10-28; G2 deterministic checks pass; independent review and Urdu remain open |
 | 6 | Foreign Policy, Issues and Education | ✓ | ☐ | ☐ | ☐ | placed | English authored 2026-10-28; G2 gate evidence recorded below; G3/G5 remain open; Urdu is a separate job |
 
@@ -33,7 +33,7 @@
 | Unit 2 | G4 ur-translation | ✅ | auto:gates | full UR mirror (5 files) translated 2026-10-28 by the crew translate job from English at `f3d7619a`; 4 `.ur.svg` label variants (`fig-U2-1…4`, mirrored RTL layout) authored, measured clean and wired, `.ur.dark.svg` derived; `key_terms` bound to terminology.csv; heading parity exact; parity/figures/key_terms clean under a temporary `reviewed` flip (reverted). `translation_status` stays draft pending an independent G5 |
 | Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-04/G2/20261028T220210187Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/gpks-402/reviews/unit-04/G3/8e3bf462-d4af-437f-aa63-372eb41b9e7c.json; all 7 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; all 14 SVG variants pass geometry; G3 remains open and unsigned |
-| Unit 4 | G4 ur-translation | ▢ | | separate job |
+| Unit 4 | G4 ur-translation | ▢ | | Complete five-page draft mirror and seven Urdu SVG pairs prepared from 64ced416; translation_status remains draft. Status retained per translate-unit Step 7; independent G5 and rendered inspection pending. Handoff: specs/content/gpks-402/reviews/unit-04/G4/translation-handoff.md |
 | Unit 4 | G5 ur-review | ▢ | | |
 | Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-06/G2/20261028T180245793Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | awaiting an independent reviewer |
