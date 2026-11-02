@@ -1,6 +1,6 @@
 ---
 id: crew-gqur-301-u04-review_ur-r1
-title: crew review_ur-r1 GQUR-301 unit 4
+title: crew review_ur GQUR-301 unit 4
 stage: misc
 date: 2026-11-02
 surface: agent
@@ -16,23 +16,23 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/gqur-301/crew-gqur-301-u04-review_ur-r1.misc.prompt.md
-  - specs/content/gqur-301/reviews/unit-04/G5/0333a7a5-e17d-4366-9d59-35aaff232a33.json
-  - specs/content/gqur-301/reviews/unit-04/G5/0333a7a5-e17d-4366-9d59-35aaff232a33.summary.md
-  - specs/content/gqur-301/reviews/unit-04/G5/logs-0333a7a5/advisory-tracker-row.md
-  - specs/content/gqur-301/reviews/unit-04/G5/logs-0333a7a5/check-depth-gate.txt
-  - specs/content/gqur-301/reviews/unit-04/G5/logs-0333a7a5/check-docs-sync.txt
-  - specs/content/gqur-301/reviews/unit-04/G5/logs-0333a7a5/check-figures.txt
-  - specs/content/gqur-301/reviews/unit-04/G5/logs-0333a7a5/check-no-answer-keys.txt
-  - specs/content/gqur-301/reviews/unit-04/G5/logs-0333a7a5/check-no-em-dash.txt
-  - specs/content/gqur-301/reviews/unit-04/G5/logs-0333a7a5/exit-codes.txt
-  - specs/content/gqur-301/reviews/unit-04/G5/logs-0333a7a5/independent-urdu-mcq-derivation.md
-  - specs/content/gqur-301/reviews/unit-04/G5/logs-0333a7a5/measure-figure-text.txt
-  - specs/content/gqur-301/reviews/unit-04/G5/logs-0333a7a5/render-review.txt
-  - specs/content/gqur-301/reviews/unit-04/G5/logs-0333a7a5/validate-content.txt
-  - specs/content/gqur-301/reviews/unit-04/G5/prep-0333a7a5/manifest.json
+ - history/prompts/gqur-301/crew-gqur-301-u04-review_ur-r1.misc.prompt.md
+ - specs/content/gqur-301/reviews/unit-04/G5/0333a7a5-e17d-4366-9d59-35aaff232a33.json
+ - specs/content/gqur-301/reviews/unit-04/G5/0333a7a5-e17d-4366-9d59-35aaff232a33.summary.md
+ - specs/content/gqur-301/reviews/unit-04/G5/logs-0333a7a5/advisory-tracker-row.md
+ - specs/content/gqur-301/reviews/unit-04/G5/logs-0333a7a5/check-depth-gate.txt
+ - specs/content/gqur-301/reviews/unit-04/G5/logs-0333a7a5/check-docs-sync.txt
+ - specs/content/gqur-301/reviews/unit-04/G5/logs-0333a7a5/check-figures.txt
+ - specs/content/gqur-301/reviews/unit-04/G5/logs-0333a7a5/check-no-answer-keys.txt
+ - specs/content/gqur-301/reviews/unit-04/G5/logs-0333a7a5/check-no-em-dash.txt
+ - specs/content/gqur-301/reviews/unit-04/G5/logs-0333a7a5/exit-codes.txt
+ - specs/content/gqur-301/reviews/unit-04/G5/logs-0333a7a5/independent-urdu-mcq-derivation.md
+ - specs/content/gqur-301/reviews/unit-04/G5/logs-0333a7a5/measure-figure-text.txt
+ - specs/content/gqur-301/reviews/unit-04/G5/logs-0333a7a5/render-review.txt
+ - specs/content/gqur-301/reviews/unit-04/G5/logs-0333a7a5/validate-content.txt
+ - specs/content/gqur-301/reviews/unit-04/G5/prep-0333a7a5/manifest.json
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -66,25 +66,25 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Conducted independent G5 Urdu review of GQUR-301 Unit 4, produced validated escalate evidence report, summary, gate logs, independent MCQ derivations, and advisory tracker row.
+Completed independent G5 Urdu review of GQUR-301 Unit 4, generating validated advisory escalate evidence, summary, gate logs, independent MCQ derivations, and PHR.
 
 ## Outcome
 
-- Impact: review_ur for GQUR-301 Unit 4 by agy (attempt 2, retry 1).
-- Tests: npm run check:content passed in the job worktree before committing.
+- Impact: review_ur for GQUR-301 Unit 4 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 15 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Conducted independent G5 Urdu review of GQUR-301 Unit 4, generated validated advisory escalate evidence report, summary, gate logs, independent MCQ derivations, and advisory tracker row.
+- Shipped / changed: Completed independent G5 Urdu review of GQUR-301 Unit 4, generating validated advisory escalate evidence, summary, gate logs, independent MCQ derivations, and PHR.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - F1 (blocking content defect): In topic-01.mdx:34 and topic-02.mdx:34, self-closing `<Glossary term="Mean" />` and `<Glossary term="Median" />` tags lack Urdu child text, leaking English words into Urdu learner prose. Repair: update to `<Glossary term="Mean">حسابی اوسط</Glossary>` and `<Glossary term="Median">وسطانیہ</Glossary>`.
-  - F2 (render limitation): Real browser visual inspection of Urdu pages (desktop, 360px mobile viewport, and A4 print view) must be run on a host with browser access before G5 certification.
-  - F4 (candidate terminology): Curriculum owner should review candidate terms in concepts/unit-04.md (مرکزی رجحان کی پیمائش, حسابی اوسط, تعددی جدول کی اوسط, غیر معمولی قدر, وسطانیہ, وسطانیہ کی پائیداری) and promote into terminology.csv.
+  - Repair F1 in topic-01.mdx:34 and topic-02.mdx:34 by adding Urdu children to Glossary tags (<Glossary term="Mean">حسابی اوسط</Glossary> and <Glossary term="Median">وسطانیہ</Glossary>).
+  - Real browser rendering of Urdu pages (desktop, 360px viewport, A4 print) remains unverified and must be run on a browser-capable host before G5 certification.
+  - The curriculum owner should review candidate terms in concepts/unit-04.md (مرکزی رجحان کی پیمائش, حسابی اوسط, تعددی جدول کی اوسط, غیر معمولی قدر, وسطانیہ, وسطانیہ کی پائیداری) for promotion into terminology.csv.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
