@@ -9,7 +9,7 @@ religious-content review by a qualified scholar remains requested by the course 
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 4 | G2 en-draft | ▣ | | English draft and governance records authored; deterministic evidence pending. |
+| Unit 4 | G2 en-draft | ▣ | | English draft and governance records authored; 12/13 content gates pass. G2 evidence preparation blocked by missing docs/semester-3/giss-401/course-overview.mdx, outside this Unit 4-only brief. No evidence fabricated. |
 | Unit 4 | G3 en-review | ▢ | | Independent review pending; no certification claimed. |
 | Unit 4 | G4 ur-translation | ▢ | | Separate Urdu job; English pages retain translation_status: draft. |
 | Unit 4 | G5 ur-review | ▢ | | Pending accepted English baseline and translated mirror. |

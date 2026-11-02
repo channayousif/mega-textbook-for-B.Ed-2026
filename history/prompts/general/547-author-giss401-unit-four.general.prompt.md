@@ -79,7 +79,7 @@ approved specification, shared rules, catalog and gate scripts remain unchanged.
 ## Outcome
 
 - ✅ Impact: English Unit 4 provides source-based social and governance teaching with local school applications.
-- 🧪 Tests: Origin/main baseline clean; MDX syntax clean; final deterministic gate evidence pending at initial commit.
+- 🧪 Tests: Origin/main baseline clean; MDX syntax clean; 12/13 content gates PASS after repairs; pipeline remains open because G2 evidence preparation refuses the missing course overview.
 - 📁 Files: Four English pages, four governance records, two source-text notes, tracker, eight SVG variants and this PHR.
 - 🔁 Next prompts: Independent G3 with religious-content expertise; separate Urdu translation and G5; geometry validation if browser restriction is lifted.
 - 🧠 Reflection: Gate implementation is newer than the skill's prompt-only figure and source-binding descriptions.
@@ -97,3 +97,12 @@ approved specification, shared rules, catalog and gate scripts remain unchanged.
 - Graders run and results (PASS/FAIL): Baseline 13/13 PASS; MDX compiler PASS; draft run identified expected G2 and generated-status failures plus repaired source-binding, coverage and figure findings.
 - Prompt variant (if applicable): Crew brief giss-401-u04-author.
 - Next experiment (smallest change to try): Freeze this baseline for independent review; retain bounded conclusions about doctrine and democratic procedures.
+
+## Completion update
+
+- English content committed in 9ea33c3a0. G2 evidence generation was attempted with the repository tool and failed immediately: `missing required input: docs/semester-3/giss-401/course-overview.mdx`.
+- Course-level overview is outside the explicit Unit 4-only scope. Asked for a narrow scope extension; a proposed minimal overview is prepared and syntax-checked in ignored `.crew/proposed-course-overview.mdx`. No dependent action without the response.
+- `npm run check:content` after repairs: 12 of 13 PASS; sole finding is Unit 4 G2 remains in progress. Origin/main baseline had all 13 PASS. This is an outstanding blocker, not a pre-existing failure.
+- `npm test -- tests/unit/figure-palette.test.mjs` through `scripts/heavy.sh`: 46/46 PASS. Dark variant freshness PASS; all four final MDX pages compile. SVGs are 2.3-3.3 KB each. Four representative light/dark previews inspected without a browser.
+- No build, dev server, Chromium or Playwright run. The required browser geometry checker remains unrun under the brief's prohibition, pending explicit clarification. G6 remains in progress.
+- Final authoring output is not represented as fully gate-cleared. Downstream owner must resolve overview scope, then commit it, generate G2 evidence, update only Unit 4's G2 row with the emitted reference, regenerate ignored content status and rerun `npm run check:content`. Independent G3/G5 and Urdu work remain open.
