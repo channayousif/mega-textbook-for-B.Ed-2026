@@ -1,0 +1,13 @@
+Comparison of static/img/figures/gpks-402/unit-04/fig-U4-6.ur.svg with the freehand fig-U4-6.svg withdrawn in c1301f27 (PR #368) and the current EN fig-U4-6.svg
+withdrawn version: git show c1301f27^:static/img/figures/gpks-402/unit-04/fig-U4-6.svg sha256 38bd449d5ac348bf68a815de37a90e291a3c8a5a93504eabd6845744c9f6f819
+paths: withdrawn 31, current UR 31, current EN 23; UR paths identical to withdrawn: 31; UR paths shared with current EN: 0
+withdrawn subtitle: Schematic, not to scale. No exact borders implied.
+UR subtitle: خاکہ، پیمانے کے مطابق نہیں۔ درست سرحدیں ظاہر نہیں کی گئیں۔
+UR contains 'کشمیر': False
+UR contains 'کنٹرول': False
+UR contains 'Natural Earth': False
+UR contains 'Survey': False
+EN contains 'JAMMU AND KASHMIR': True
+EN contains 'Line of Control': True
+EN contains 'Natural Earth': True
+EN contains 'Survey of Pakistan': True
