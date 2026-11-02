@@ -9,7 +9,7 @@
 | 1 | Introduction and Ideological Foundations | ✓ | ☐ | ☐ | ☐ | placed | Withdrawn 2026-10-10 (owner, D-2026-0053 / G-2026-100); re-authored 2026-10-28 from the approved spec (D-2026-0074), English only; see stage rows below |
 | 2 | Reform Movements and the Pakistan Movement | ✓ | ☐ | ☐ | ☐ | placed | Withdrawn 2026-10-10 (owner, D-2026-0053 / G-2026-100); re-authored 2026-10-28 from the approved spec (D-2026-0074), English only; see stage rows below |
 | 3 | Constitutional Development | ☐ | ☐ | ☐ | ☐ | planned | |
-| 4 | Governance, Rights and Geography | ✓ | ☐ | ☐ | ☐ | placed | Authored 2026-10-28 from the approved spec (D-2026-0074), English only; see stage rows below |
+| 4 | Governance, Rights and Geography | ✓ | ☐ | ▣ | ☐ | placed | English baseline authored 2026-10-28 (D-2026-0074); complete Urdu draft prepared 2026-11-02; independent G5 pending; see stage rows below |
 | 5 | Economy and Society | ✓ | ☐ | ☐ | ☐ | placed (EN) | English draft authored 2026-10-28; G2 deterministic checks pass; independent review and Urdu remain open |
 | 6 | Foreign Policy, Issues and Education | ☐ | ☐ | ☐ | ☐ | planned | |
 
@@ -32,7 +32,7 @@
 | Unit 2 | G6 assets | ✅ | auto:gates | 4 schematic SVGs placed with dark variants |
 | Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-04/G2/20261028T110357781Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | awaiting an independent reviewer |
-| Unit 4 | G4 ur-translation | ▢ | | separate job |
+| Unit 4 | G4 ur-translation | ▢ | | Complete five-page draft mirror and seven Urdu SVG pairs prepared from 64ced416; translation_status remains draft. Status retained per translate-unit Step 7; independent G5 and rendered inspection pending. Handoff: specs/content/gpks-402/reviews/unit-04/G4/translation-handoff.md |
 | Unit 4 | G5 ur-review | ▢ | | |
 
 ## Course-level
