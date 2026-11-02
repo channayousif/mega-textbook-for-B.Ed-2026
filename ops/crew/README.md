@@ -26,7 +26,10 @@ is healthy, the review waits while every other kind of job keeps flowing.
 
 ## The loop (`scripts/crew/tick.sh`, cron every 15 min)
 
-1. **sync**: the control checkout fast-forwards to `origin/main`.
+1. **sync**: the control checkout fast-forwards to `origin/main`, and so does `main` in the owner's
+   working checkout (`scripts/crew/sync-owner-checkout.sh`, `CREW_OWNER_CHECKOUT`, default
+   `~/mega_book_for_B.Ed`). That step is fast-forward only: when local commits, a tracked edit or an
+   untracked file is in the way, it logs `owner-sync: ... blocked` to `cron.log` and changes nothing.
 2. **plan**: `crew.mjs plan` derives each unit's next stage from main (`report-content-status.mjs`,
    the course tracker, the review reports) and queues missing jobs. Nothing is hand-typed.
    **One course at a time** (owner ruling 2026-10-28, `focusCourse` in `scripts/crew/planner.mjs`):
