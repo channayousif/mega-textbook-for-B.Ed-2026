@@ -2,7 +2,7 @@
 id: crew-giss-401-u03-author
 title: crew author GISS-401 unit 3
 stage: misc
-date: 2026-11-03
+date: 2026-11-02
 surface: agent
 model: agy
 feature: giss-401
@@ -16,39 +16,39 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-3/giss-401/_category_.json
-  - docs/semester-3/giss-401/course-overview.mdx
-  - docs/semester-3/giss-401/unit-03/index.mdx
-  - docs/semester-3/giss-401/unit-03/topic-01.mdx
-  - docs/semester-3/giss-401/unit-03/topic-02.mdx
-  - docs/semester-3/giss-401/unit-03/unit-assessment.mdx
-  - history/prompts/giss-401/crew-giss-401-u03-author.green.prompt.md
-  - specs/content/giss-401/concepts/unit-03.md
-  - specs/content/giss-401/coverage/unit-03.md
-  - specs/content/giss-401/figures/unit-03.md
-  - specs/content/giss-401/reviews/unit-03/G2/20261102T230636766Z-gates.json
-  - specs/content/giss-401/reviews/unit-03/G2/logs-20261102T230636766Z/check-bloom-bands.txt
-  - specs/content/giss-401/reviews/unit-03/G2/logs-20261102T230636766Z/check-concept-graph.txt
-  - specs/content/giss-401/reviews/unit-03/G2/logs-20261102T230636766Z/check-depth-gate.txt
-  - specs/content/giss-401/reviews/unit-03/G2/logs-20261102T230636766Z/check-docs-sync.txt
-  - specs/content/giss-401/reviews/unit-03/G2/logs-20261102T230636766Z/check-figures.txt
-  - specs/content/giss-401/reviews/unit-03/G2/logs-20261102T230636766Z/check-no-answer-keys.txt
-  - specs/content/giss-401/reviews/unit-03/G2/logs-20261102T230636766Z/check-no-em-dash.txt
-  - specs/content/giss-401/reviews/unit-03/G2/logs-20261102T230636766Z/validate-content.txt
-  - specs/content/giss-401/sources/texts/quran-translation.md
-  - specs/content/giss-401/sources/texts/sutomo-2014-akhlaq.md
-  - specs/content/giss-401/sources/unit-03.md
-  - specs/content/giss-401/tasks.md
-  - static/img/figures/giss-401/unit-03/fig-U3-1.dark.svg
-  - static/img/figures/giss-401/unit-03/fig-U3-1.svg
-  - static/img/figures/giss-401/unit-03/fig-U3-2.dark.svg
-  - static/img/figures/giss-401/unit-03/fig-U3-2.svg
-  - static/img/figures/giss-401/unit-03/fig-U3-3.dark.svg
-  - static/img/figures/giss-401/unit-03/fig-U3-3.svg
-  - static/img/figures/giss-401/unit-03/fig-U3-4.dark.svg
-  - static/img/figures/giss-401/unit-03/fig-U3-4.svg
+ - docs/semester-3/giss-401/_category_.json
+ - docs/semester-3/giss-401/course-overview.mdx
+ - docs/semester-3/giss-401/unit-03/index.mdx
+ - docs/semester-3/giss-401/unit-03/topic-01.mdx
+ - docs/semester-3/giss-401/unit-03/topic-02.mdx
+ - docs/semester-3/giss-401/unit-03/unit-assessment.mdx
+ - history/prompts/giss-401/crew-giss-401-u03-author.green.prompt.md
+ - specs/content/giss-401/concepts/unit-03.md
+ - specs/content/giss-401/coverage/unit-03.md
+ - specs/content/giss-401/figures/unit-03.md
+ - specs/content/giss-401/reviews/unit-03/G2/20261102T230636766Z-gates.json
+ - specs/content/giss-401/reviews/unit-03/G2/logs-20261102T230636766Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-03/G2/logs-20261102T230636766Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-03/G2/logs-20261102T230636766Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-03/G2/logs-20261102T230636766Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-03/G2/logs-20261102T230636766Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-03/G2/logs-20261102T230636766Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-03/G2/logs-20261102T230636766Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-03/G2/logs-20261102T230636766Z/validate-content.txt
+ - specs/content/giss-401/sources/texts/quran-translation.md
+ - specs/content/giss-401/sources/texts/sutomo-2014-akhlaq.md
+ - specs/content/giss-401/sources/unit-03.md
+ - specs/content/giss-401/tasks.md
+ - static/img/figures/giss-401/unit-03/fig-U3-1.dark.svg
+ - static/img/figures/giss-401/unit-03/fig-U3-1.svg
+ - static/img/figures/giss-401/unit-03/fig-U3-2.dark.svg
+ - static/img/figures/giss-401/unit-03/fig-U3-2.svg
+ - static/img/figures/giss-401/unit-03/fig-U3-3.dark.svg
+ - static/img/figures/giss-401/unit-03/fig-U3-3.svg
+ - static/img/figures/giss-401/unit-03/fig-U3-4.dark.svg
+ - static/img/figures/giss-401/unit-03/fig-U3-4.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -79,9 +79,10 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Authored English GISS-401 Unit 3 ("Worship and the Moral System of Islam") with two 9-part topic cycles, 25-item Bloom-aligned assessment bank, four SVG figures with dark variants, verified open-access sources, and full content gate verification.
+Authored GISS-401 Unit 3 English content, four SVG figures with dark variants, 25-item Bloom-aligned assessment bank, and G2 gate evidence.
 
 ## Outcome
 
@@ -93,13 +94,13 @@ Authored English GISS-401 Unit 3 ("Worship and the Moral System of Islam") with 
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored English GISS-401 Unit 3 ("Worship and the Moral System of Islam") with two 9-part topic cycles, 25-item Bloom-aligned assessment bank, four SVG figures with dark variants, verified open-access sources, and full content gate verification.
+- Shipped / changed: Authored GISS-401 Unit 3 English content, four SVG figures with dark variants, 25-item Bloom-aligned assessment bank, and G2 gate evidence.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - English Unit 3 draft is complete, G2 evidence recorded, and all 13 content gates pass.
+  - English Unit 3 draft is complete, G2 gate evidence is recorded, and all 13 content gates pass.
   - G3 independent English review is ready to be scheduled with a separate reviewer run.
-  - Urdu translation (G4) and review (G5) remain separate downstream tasks.
+  - Urdu translation (G4) and Urdu review (G5) remain open downstream tasks.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
