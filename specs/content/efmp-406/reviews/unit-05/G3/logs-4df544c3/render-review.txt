@@ -1,0 +1,43 @@
+render-review evidence (G3 English, EFMP-406 Unit 5)
+=============================================================
+Timestamp: 2026-11-02T15:08:00Z
+Reviewer: agent:g3-reviewer
+Model: Gemini 3.8 Flash (High)
+Reviewer Run ID: 4df544c3-c825-473c-8c69-940a86171cf5
+Course: EFMP-406 Unit 5 (Pedagogical Approaches to Contemporary Literacy)
+
+CONSTRAINT: The brief for this crew job explicitly forbids running `npm run build`,
+a dev server, or Playwright Chromium. Comprehensive visual, structural, and raster
+inspection was conducted within permitted host resources:
+
+1. Figure Rasterization and Visual Inspection:
+   - All four unit SVGs were rasterized to PNG at 780px width using Sharp with :root CSS variables resolved:
+     - fig-U5-1.png (780x470): Flowchart of a literacy inquiry project across seven stages (Ask, Find, Read, Judge, Make, Share, Reflect) with Class 5 safe drinking water examples and return loop from reflection to new questions. Mean channel luminances [242.8, 244.5, 243.9, 255.0].
+     - fig-U5-2.png (780x470): Comparison table of teacher-centred vs learner-centred literacy lessons across 5 rows (who talks most, who chooses, what pupils read, what pupils write, who checks learning). Mean channel luminances [233.8, 236.7, 235.8, 255.0].
+     - fig-U5-3.png (780x470): Table of four low-cost ICT tools (mobile phone, projector, radio/recorded audio, offline e-books) with descriptions and classroom literacy uses. Mean channel luminances [234.0, 236.9, 235.9, 255.0].
+     - fig-U5-4.png (780x470): Diagram of five literacy assessment methods (observation, reading record, portfolio, rubric, test) surrounding a central learner, showing a comprehensive assessment profile. Mean channel luminances [234.4, 237.6, 236.5, 255.0].
+   - All four PNG renders are saved under specs/content/efmp-406/reviews/unit-05/G3/logs-4df544c3/ and verified non-blank with high contrast.
+
+2. Figure Text Geometry and Spacing (measure-figure-text.mjs):
+   - All 8 committed SVG variants (4 light, 4 dark twins) were measured with scripts/measure-figure-text.mjs:
+     - All 8 assets PASS with exit code 0, zero text overflow beyond the viewBox (widest text ends at x=768.4, well within viewBox width 780), and zero wordmark collision (wordmark starts at x=675.7).
+   - Text boxes, line padding, and contrast verified clean across all light and dark variants.
+
+3. Alt Text and SVG Accessibility:
+   - All four <Figure> elements across topic-01.mdx and topic-02.mdx carry detailed descriptive alt text matching the visual diagrams and figures/unit-05.md manifest declarations.
+   - SVG sources include role="img", aria-labelledby="t d", <title id="t">, and <desc id="d"> elements with matching descriptions.
+
+4. Heading Structure and Monotonic Progression:
+   - docs/semester-3/efmp-406/unit-05/index.mdx: # title, ## Unit learning outcomes, ## Prerequisite knowledge, ## In this unit, ## How to use this unit.
+   - topic-01.mdx: # title, ## A real classroom situation, ## Explanation, ### Learner-centred literacy instruction, #### What the teacher does, #### Worked example: turning a teacher-centred lesson into a learner-centred one, #### Correcting a common misconception, ### Inquiry-based and project-based learning, #### Where the approaches come from, #### The stages of a literacy inquiry project, #### Worked example: planning a short literacy project, #### Correcting a second misconception, ## Activity: Redesign a lesson, ## Check your understanding, ## Summary, ## Self-assessment checklist, ## Try this at your practicum school, ## Summative task, ## Further reading.
+   - topic-02.mdx: # title, ## A real classroom situation, ## Explanation, ### Integration of ICT in literacy teaching, #### What teachers need, #### Matching tools to literacy purposes, #### Worked example: from "using" to "integrating", #### Correcting a common misconception, ### Assessment and evaluation of literacy skills, #### Types of assessment, from classroom to examination, #### Ways to assess literacy, #### Worked example: a reading record, #### Correcting a second misconception, #### Assessing learner-centred and ICT-supported work, ## Activity: Assessment toolkit for one lesson, ## Check your understanding, ## Summary, ## Self-assessment checklist, ## Try this at your practicum school, ## Summative task, ## Further reading.
+   - unit-assessment.mdx: # title, ## Unit summary, ## Summative assessment, ### Multiple-choice questions (MCQs), ### Restricted-response questions (RRQs), ### Extended-response questions (ERQs), ## Answers and marking guidance, ### MCQ answer key, ### RRQ model answers and mark schemes, ### ERQ rubrics.
+   - unit-teacher-notes.mdx: # title, ## Sequencing, ## Discussion prompt and a likely wrong answer, ## Likely misconceptions and how to handle them, ## Practical work.
+   - Complete monotonic progression with zero skipped heading levels across all unit MDX files.
+
+5. Presentation and Mobile Layout:
+   - Content tables in MDX and SVG graphics adhere to display: block; overflow-x: auto; width: fit-content per src/css/custom.css.
+   - Assessment answer key and marking guidance are strictly quarantined within the bounded final section of unit-assessment.mdx.
+   - Zero em dashes (check-no-em-dash passes with exit 0).
+
+exit_code: 0
