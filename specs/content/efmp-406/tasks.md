@@ -11,7 +11,7 @@
 | 3 | Literacy, Language, and Society | ☐ | ☐ | ☐ | ☐ | - | |
 | 4 | Literacy in the Digital Era | ☐ | ☐ | ☐ | ☐ | - | |
 | 5 | Pedagogical Approaches to Contemporary Literacy | ☐ | ☐ | ☐ | ☐ | - | |
-| 6 | Issues, Challenges, and Future Directions | ▣ | ☐ | ☐ | ☐ | placed (EN) | English authored by codex crew job 2026-11-02; G2 evidence pending below; G3 and Urdu remain open. Browser geometry check deferred under crew prohibition on Playwright. |
+| 6 | Issues, Challenges, and Future Directions | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored by codex crew job 2026-11-02; G2 gate evidence recorded below; G3 and Urdu remain open. Browser geometry check deferred under crew prohibition on Playwright. |
 
 **Key:** ▣ = in progress, ☐ = not started, ✓ = done, ✗ = escalated
 
@@ -26,7 +26,7 @@
 | Unit 1 | G4 ur-translation | ▢ | | separate job |
 | Unit 1 | G5 ur-review | ▢ | | |
 
-| Unit 6 | G2 en-draft | ▣ | codex | English draft committed before preparing deterministic gate evidence; no certification claimed |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-06/G2/20261102T084025797Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | awaiting an independent reviewer |
 | Unit 6 | G4 ur-translation | ▢ | | separate job; translate prose, nine concept labels and four SVGs with RTL layout |
 | Unit 6 | G5 ur-review | ▢ | | independent Urdu review pending |
