@@ -16,9 +16,60 @@ links:
   adr: null
   pr: null
 files:
-  - history/prompts/efmp-406/crew-efmp-406-u06-author-conflict5.misc.prompt.md
+ - docs/semester-3/efmp-406/unit-06/index.mdx
+ - docs/semester-3/efmp-406/unit-06/topic-01.mdx
+ - docs/semester-3/efmp-406/unit-06/topic-02.mdx
+ - docs/semester-3/efmp-406/unit-06/unit-assessment.mdx
+ - docs/semester-3/efmp-406/unit-06/unit-teacher-notes.mdx
+ - history/prompts/efmp-406/crew-efmp-406-u06-author-conflict1.misc.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u06-author-conflict2.misc.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u06-author-conflict3.misc.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u06-author-conflict4.misc.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u06-author-conflict5.misc.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u06-author.green.prompt.md
+ - history/prompts/general/20261051-author-efmp406-unit-six.general.prompt.md
+ - history/prompts/general/20261052-merge-efmp406-unit-six-main.general.prompt.md
+ - history/prompts/general/20261053-resolve-efmp406-unit-six-merge.general.prompt.md
+ - history/prompts/general/20261054-merge-efmp406-unit-six-main.general.prompt.md
+ - specs/content/efmp-406/concepts/unit-06.md
+ - specs/content/efmp-406/coverage/unit-06.md
+ - specs/content/efmp-406/figures/unit-06.md
+ - specs/content/efmp-406/reviews/unit-06/G2/20261102T084025797Z-gates.json
+ - specs/content/efmp-406/reviews/unit-06/G2/20261102T091818158Z-gates.json
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T084025797Z/check-bloom-bands.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T084025797Z/check-concept-graph.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T084025797Z/check-depth-gate.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T084025797Z/check-docs-sync.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T084025797Z/check-figures.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T084025797Z/check-no-answer-keys.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T084025797Z/check-no-em-dash.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T084025797Z/validate-content.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T091818158Z/check-bloom-bands.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T091818158Z/check-concept-graph.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T091818158Z/check-depth-gate.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T091818158Z/check-docs-sync.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T091818158Z/check-figures.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T091818158Z/check-no-answer-keys.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T091818158Z/check-no-em-dash.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T091818158Z/validate-content.txt
+ - specs/content/efmp-406/sources/texts/ahmad-2011-efa.md
+ - specs/content/efmp-406/sources/texts/gop-2018-nep-framework.md
+ - specs/content/efmp-406/sources/texts/rehman-2016-literacy-rate.md
+ - specs/content/efmp-406/sources/texts/un-goal4.md
+ - specs/content/efmp-406/sources/texts/unesco-2017-inclusion.md
+ - specs/content/efmp-406/sources/texts/unesco-ai-education.md
+ - specs/content/efmp-406/sources/unit-06.md
+ - specs/content/efmp-406/tasks.md
+ - static/img/figures/efmp-406/unit-06/fig-U6-1.dark.svg
+ - static/img/figures/efmp-406/unit-06/fig-U6-1.svg
+ - static/img/figures/efmp-406/unit-06/fig-U6-2.dark.svg
+ - static/img/figures/efmp-406/unit-06/fig-U6-2.svg
+ - static/img/figures/efmp-406/unit-06/fig-U6-3.dark.svg
+ - static/img/figures/efmp-406/unit-06/fig-U6-3.svg
+ - static/img/figures/efmp-406/unit-06/fig-U6-4.dark.svg
+ - static/img/figures/efmp-406/unit-06/fig-U6-4.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -54,23 +105,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-406-u06-author, author, codex) Browser geometry measurement remains pending because the brief prohibits Playwright; non-browser renders were inspected.
 - (efmp-406-u06-author, author, codex) Independent G3/G5 review and Urdu translation remain open.
 
+
 ## Response snapshot
 
-Fetched origin and found origin/main already an ancestor of the branch, so `git merge origin/main` was a no-op and no merge commit was needed. Confirmed the four shared registries are byte-identical to main, confirmed main's tracker rows survive in order ahead of the branch's Unit 6 rows, and passed all 13 content gates.
+Verified origin/main is already merged into the branch, confirmed the append-only registries match main, passed all 13 content gates, and committed the conflict5 PHR.
 
 ## Outcome
 
-- ✅ Impact: fix for EFMP-406 Unit 6 by opencode (attempt 1).
-- 🧪 Tests: npm run check:content passed 13/13 gates on the branch.
-- 📁 Files: 1 file(s), listed above.
-- 🔁 Next prompts: the crew planner derives the unit's next stage from main after merge.
-- 🧠 Reflection: none recorded by the dispatcher.
+- Impact: fix for EFMP-406 Unit 6 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 52 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Verified the branch already contains origin/main; no merge commit was required; all content gates pass.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job does not certify anything.
+- Shipped / changed: Verified origin/main is already merged into the branch, confirmed the append-only registries match main, passed all 13 content gates, and committed the conflict5 PHR.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - origin/main (5be22ec4) was already an ancestor of this branch via conflict4's merge 40a0c1d3, so the requested merge was a no-op and no merge commit was created.
+  - shared registries (glossary.json, specs/decisions/log.md, specs/gaps.md, specs/content/terminology.csv) are byte-identical to main; the only tasks.md delta is the intended Unit 6 status update.
+  - G3/G5 review, G4 Urdu translation and the authorised browser geometry check remain open for EFMP-406 Unit 6.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
