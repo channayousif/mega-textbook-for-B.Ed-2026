@@ -32,7 +32,7 @@
 | Unit 2 | G6 assets | ▣ | | four original English schematics placed with dark variants; `measure-figure-text` geometry check runs in CI |
 | Unit 2 | G7 publish | ▢ | | no publication requested by this authoring job |
 | Unit 3 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-03/G2/20261102T104941955Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-03/G2/20261102T114853349Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | awaiting independent reviewer |
 | Unit 3 | G4 ur-translation | ▢ | | separate job |
 | Unit 3 | G5 ur-review | ▢ | | |
