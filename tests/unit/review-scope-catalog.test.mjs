@@ -10,7 +10,11 @@ const current = degreeCourseCodes(catalog);
 
 describe('review authorization course map', () => {
   it('seeds the current B.Ed catalog and syncs future additions from metadata', () => {
-    expect(mapped).toEqual(current);
+    // The 0046 seed is history: courses added later reach review_course_scopes through
+    // `agent-job sync-catalog` (0048), not a migration per course. So every seeded code
+    // must still be a catalog course, and the catalog may hold more than the seed.
+    expect(mapped.length).toBeGreaterThan(0);
+    expect(current).toEqual(expect.arrayContaining(mapped));
     const expanded = structuredClone(catalog);
     expanded.semesters[0].courses.push({ code: 'TEST-999' });
     expect(degreeCourseCodes(expanded)).toContain('TEST-999');
