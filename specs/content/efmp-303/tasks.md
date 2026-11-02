@@ -105,3 +105,4 @@ unit-spec at intake (board-run G0/G1 intake pending).
 | Unit | Stage | Status | Reviewer | Notes |
 |---|---|---|---|---|
 | Unit 3 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation: diagram order, allocation table, assessment and source repairs; provenance and current page render evidence incomplete. Findings: specs/content/efmp-303/reviews/unit-03/G3/01a14b3d-bdfb-7200-a7e0-06c201e5f0bb.json; readable summary: specs/content/efmp-303/reviews/unit-03/G3/01a14b3d-bdfb-7200-a7e0-06c201e5f0bb/summary.md. G3 remains open. |
+| Unit 6 | G3 en-review | ✅ | CMY | review:specs/content/efmp-303/reviews/unit-06/G3/20261102T140729Z-g3-desk-218f29ab.json |
