@@ -57,8 +57,14 @@ test('episode props: timeline from the audio lengths, hashes re-checked, missing
   assert.equal(r.props.mode, 'sample');
   assert.equal(Object.keys(r.audio).length, 2);
 
-  // Production uses accepted takes only.
-  assert.throws(() => episodeProps({ ...ep, mode: 'production' }, script, { media: root }), /no accepted take/);
+  // Production needs the owner's assets approval; with it, the approved (non-rejected) takes are used,
+  // so the audio passes and only the missing puppet rigs in this temp root stop it.
+  const prod = { ...ep, mode: 'production' };
+  assert.throws(() => episodeProps(prod, script, { media: root }), /need a valid assets approval/);
+  assert.throws(() => episodeProps(prod, script, { media: root, assetsApproved: true }), /puppet rigs missing/);
+  // A rejected take is never used.
+  const rejected = { ...ep, assets: { manifest: [entry('L01', a1, 'rejected', 'shagird'), entry('L02', a2)] } };
+  assert.throws(() => episodeProps(rejected, script, { media: root }), /L01 \(no take\)/);
   // Tampered bytes and wrong speaker fail closed.
   writeFileSync(join(root, EP, 'audio', 'L02.wav'), toneWav(2.5, 440));
   assert.throws(() => episodeProps(ep, script, { media: root }), /does not match its manifest/);

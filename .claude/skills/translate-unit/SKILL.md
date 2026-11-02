@@ -170,6 +170,21 @@ To get real coverage before handing off, flip **both** `index.mdx` files to `rev
 `npm run check:content`, fix everything it finds, then **flip them back**. The flag is a claim
 about G5, and G5 has not happened yet.
 
+**Two pipeline-gate findings are expected while flipped.** With the Urdu `index.mdx` at
+`reviewed`, `check:pipeline-gate` also asserts that this unit's `G4 ur-translation` and
+`G5 ur-review` tracker rows are done, so it reports each of them as not done (`no 'G4
+ur-translation' row found for Unit N` or `'G4 ur-translation' row for Unit N is not done`, and
+the same for `G5 ur-review`), and `check:content` exits non-zero even on a clean unit. Those
+two findings for this unit are expected mid-translation: ignore them, and do not "fix" them by
+writing or editing tracker rows in `tasks.md` (this skill never appends a tracker row, Step 7).
+Every other finding is real and must be fixed before you flip back, including a `key term ...
+is not in terminology.csv` or `key term ... declares ur:... but terminology.csv accepts ...`
+finding: set the `key_terms` entry to a term the bank accepts (Step 3), or drop a term the bank
+does not hold from `key_terms` and list it as a proposed term in the handoff (Step 1); never
+edit `terminology.csv` to make it pass. (Evidence: digests 2026-10-24 C2, 2026-10-25 C10,
+2026-10-26 C8 and 2026-10-28 C2, 16 pipeline-gate log errors and 4 job failures on 2026-10-28;
+registry I-0017.)
+
 ```bash
 # after the check, confirm you reverted:
 grep -n "^translation_status:" docs/<...>/unit-NN/index.mdx \

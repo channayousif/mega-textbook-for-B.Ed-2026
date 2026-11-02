@@ -1,0 +1,32 @@
+[
+  {
+    "name": "validate:content",
+    "exit_code": 0,
+    "log_path": "specs/content/gpks-402/reviews/unit-02/G3/crew-20261030/validate-content.txt"
+  },
+  {
+    "name": "check:depth-gate",
+    "exit_code": 0,
+    "log_path": "specs/content/gpks-402/reviews/unit-02/G3/crew-20261030/check-depth-gate.txt"
+  },
+  {
+    "name": "check:figures",
+    "exit_code": 0,
+    "log_path": "specs/content/gpks-402/reviews/unit-02/G3/crew-20261030/check-figures.txt"
+  },
+  {
+    "name": "check:no-em-dash",
+    "exit_code": 0,
+    "log_path": "specs/content/gpks-402/reviews/unit-02/G3/crew-20261030/check-no-em-dash.txt"
+  },
+  {
+    "name": "check:no-answer-keys",
+    "exit_code": 0,
+    "log_path": "specs/content/gpks-402/reviews/unit-02/G3/crew-20261030/check-no-answer-keys.txt"
+  },
+  {
+    "name": "check:docs-sync",
+    "exit_code": 0,
+    "log_path": "specs/content/gpks-402/reviews/unit-02/G3/crew-20261030/check-docs-sync.txt"
+  }
+]

@@ -17,8 +17,16 @@
  * `revise` that has not been repaired. Translate jobs queued behind open English defects only
  * wrote handoffs ("separate English author must resolve ... before translation resumes"), or
  * copied the defects into a mirror that then had to be redone (GSOS-301 U3). `repair_en` is
- * planned instead; translation follows once the repair lands. A `pass`, an `escalate` or no
- * G3 report at all still lets the draft mirror go ahead (English-first publication).
+ * planned instead; translation follows once the repair lands. A `pass` or no G3 report at all
+ * still lets the draft mirror go ahead (English-first publication).
+ *
+ * On 2026-11-01 (maintenance M3 of 2026-W44, GPKS-402 U6 evidence): translation also waits while
+ * the latest G3 report is an unrepaired `escalate`. GPKS-402 U6 was translated and retried while
+ * its G3 report was an `escalate` with blocking source and scoring findings; both jobs only wrote
+ * stop handoffs. An escalated unit already waits for the owner, and `reReviewDue` treats an owner
+ * send-back as `g3Repaired`, so holding translation until then loses nothing; `repair_en` is not
+ * planned for an escalate (only a `revise` is repaired by the crew). Translation is planned again
+ * once `g3Repaired` is true or G3 is done.
  *
  * On 2026-10-25, 31 of the 83 units "awaiting G3" were `revise` verdicts whose repairs had landed
  * but that no reviewer had checked, so the owner was asked to sign off unverified fixes. ADR-0019
@@ -39,6 +47,7 @@ export function stagesFor(u, f) {
   const need = [];
   if ((u.figures?.prompt_only || 0) > 0) need.push('figures');
   const unrepairedRevise = u.gates.G3 !== 'done' && f.g3Report?.disposition === 'revise' && !f.g3Repaired;
+  const unrepairedEscalate = u.gates.G3 !== 'done' && f.g3Report?.disposition === 'escalate' && !f.g3Repaired;
   if (u.gates.G3 !== 'done') {
     if (!f.g3Report) need.push('review_en');
     else if (unrepairedRevise) need.push('repair_en');
@@ -46,7 +55,7 @@ export function stagesFor(u, f) {
   }
   if (f.bilingual) {
     if (!f.mirrorComplete) {
-      if (!unrepairedRevise) need.push('translate');
+      if (!unrepairedRevise && !unrepairedEscalate) need.push('translate');
     } else if (u.gates.G3 === 'done' && u.gates.G5 !== 'done' && !f.g5Report) need.push('review_ur');
   }
   return need;

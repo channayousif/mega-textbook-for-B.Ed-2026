@@ -77,3 +77,19 @@ test('effect compares the rate before and after adoption', () => {
   assert.equal(effect(c([1, 1, 4, 4]), '2026-10-18-00', slots), 'worse');
   assert.equal(effect(c([1, 1, 1, 1]), '2026-10-17-00', slots), 'too early');
 });
+
+test('logSignals drops reported failures and question lines but keeps real errors', () => {
+  const realError = 'Error: git add failed with EACCES';
+  for (const noise of [
+    'Errors were reported, not failed during the survey',
+    '? Should failed jobs be retried?',
+    '   ? Why was permission denied?',
+  ]) assert.deepEqual(logSignals(noise, 'log:a', 't'), [], noise);
+  const signals = logSignals([
+    'Errors were reported, not failed during the survey',
+    '   ? Why was permission denied?',
+    realError,
+  ].join('\n'), 'log:a', 't');
+  assert.equal(signals.length, 1);
+  assert.equal(signals[0].text, realError);
+});

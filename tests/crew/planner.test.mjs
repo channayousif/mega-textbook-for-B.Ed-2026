@@ -35,8 +35,22 @@ test('translation waits while the latest G3 report is an unrepaired revise', () 
   assert.deepEqual(stagesFor(unit(), draft({ g3Report: { disposition: 'revise' }, g3Repaired: true })), ['review_en', 'translate']);
   assert.deepEqual(stagesFor(unit(), draft({ g3Report: { disposition: 'revise' }, g3Repaired: true, g3Cycles: 2 })), ['translate']);
   assert.deepEqual(stagesFor(unit(), draft({ g3Report: { disposition: 'pass' } })), ['translate']);
-  assert.deepEqual(stagesFor(unit(), draft({ g3Report: { disposition: 'escalate' } })), ['translate']);
+  assert.deepEqual(stagesFor(unit(), draft({ g3Report: { disposition: 'escalate' } })), []);
   assert.deepEqual(stagesFor(unit(), draft()), ['review_en', 'translate']);
+});
+
+test('translation waits while the latest G3 report is an unrepaired escalate', () => {
+  // 2026-11-01 (W44 M3, GPKS-402 U6): translate jobs behind an escalate only wrote stop handoffs.
+  const draft = (over) => facts({ mirrorComplete: false, ...over });
+  // Unrepaired escalate: no translate and no repair_en (only a revise is crew-repaired).
+  assert.deepEqual(stagesFor(unit(), draft({ g3Report: { disposition: 'escalate' } })), []);
+  // Repaired escalate with a review cycle left is re-reviewed (ADR-0019); translation goes ahead.
+  assert.deepEqual(stagesFor(unit(), draft({ g3Report: { disposition: 'escalate' }, g3Repaired: true, g3Cycles: 1 })), ['review_en', 'translate']);
+  assert.deepEqual(stagesFor(unit(), draft({ g3Report: { disposition: 'escalate' }, g3Repaired: true, g3Cycles: 2 })), ['translate']);
+  // Once G3 is signed off, an old escalate report no longer blocks translation.
+  assert.deepEqual(stagesFor(unit('done'), draft({ g3Report: { disposition: 'escalate' } })), ['translate']);
+  // awaitingG3 still returns true for an unrepaired escalate (the owner must send it back).
+  assert.equal(awaitingG3(unit(), facts({ g3Report: { disposition: 'escalate' } })), true);
 });
 
 test('awaitingG3: agent review finished, G3 not signed off', () => {

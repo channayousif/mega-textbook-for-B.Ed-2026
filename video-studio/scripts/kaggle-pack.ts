@@ -27,20 +27,23 @@ const id = assertEpisodeId(sample ? (voice ? SAMPLE_VOICE_EPISODE_ID : SAMPLE_EP
 
 let props;
 let episodeAudio: Record<string, Buffer> = {};
+let episodeImages: Record<string, Buffer> = {};
 if (sample) {
   props = voice ? sampleVoiceProps() : sampleProps();
 } else {
   // A production render needs a valid assets approval; a sample-mode episode renders with the
   // SAMPLE watermark and can never be render-approved (constitution X).
   const ep = readEpisode(id);
-  if (ep.mode !== 'sample') {
+  const assetsApproved = ep.mode !== 'sample';
+  if (assetsApproved) {
     const state = evaluate(readApprovals(id), currentDigests(id));
     if (!state.assets.valid) throw new Error(`refusing to pack ${id}: assets approval is ${state.assets.reason}`);
   }
   const script = JSON.parse(readFileSync(join(episodeDir(id), 'script.json'), 'utf8'));
-  const built = episodeProps(ep, script, { manual: readManualAlignment(id) });
+  const built = episodeProps(ep, script, { manual: readManualAlignment(id), assetsApproved });
   props = built.props;
   episodeAudio = built.audio;
+  episodeImages = built.images;
   console.log(`kaggle:pack: ${props.lines.length} lines, ${props.duration_s} s; alignment ${JSON.stringify(built.alignment)}`);
 }
 
@@ -68,6 +71,10 @@ copyFileSync(join(REPO_ROOT, 'static', 'fonts', 'NotoNastaliqUrdu-Regular.woff2'
 mkdirSync(join(pub, 'audio'), { recursive: true });
 if (props.audio) writeFileSync(join(pub, props.audio), toneWav(props.duration_s));
 for (const [rel, bytes] of Object.entries(episodeAudio)) writeFileSync(join(pub, rel), bytes);
+for (const [rel, bytes] of Object.entries(episodeImages)) {
+  mkdirSync(dirname(join(pub, rel)), { recursive: true });
+  writeFileSync(join(pub, rel), bytes);
+}
 writeFileSync(join(stage, 'props.json'), JSON.stringify(props, null, 2) + '\n');
 
 const manifestFiles: Record<string, string> = {};

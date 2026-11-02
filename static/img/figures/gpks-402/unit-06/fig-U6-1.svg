@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 500" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="t">Pakistan's foreign policy framework</title>
+  <desc id="d">Diagram of Pakistan's foreign policy framework showing core principles at the centre linked to four neighbouring relationships: China, Afghanistan, Iran, and India, and multilateral organisations.</desc>
+  <style>
+    :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+    .bg      { fill: var(--bg); }
+    .ink     { fill: var(--ink); }
+    .stroke  { stroke: var(--ink); stroke-width: 2.5; fill: none; }
+    .stroke-a{ stroke: var(--a1); stroke-width: 2; fill: none; }
+    .muted   { font-size: 14px; fill: var(--muted); }
+    .panel   { fill: var(--panel); stroke: var(--ink); stroke-width: 2; }
+    .panel-a { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .panel-b { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    text     { font-size: 14px; fill: var(--ink); }
+    .h       { font-size: 17px; font-weight: 700; fill: var(--ink); }
+    .sh      { font-size: 15px; font-weight: 600; fill: var(--ink); }
+    .body    { font-size: 13px; fill: var(--ink); }
+    .wm      { fill: var(--wm); font-size: 11px; }
+    .ah      { fill: var(--ink); }
+    .link    { fill: none; stroke: var(--ink); stroke-width: 2; stroke-linecap: round; }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path class="ah" d="M0,1 L9,5 L0,9 Z"/>
+    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="780" height="500"/>
+  <text class="h" x="390" y="34" text-anchor="middle"><tspan x="390" dy="0">Pakistan's Foreign Policy: Principles and Key Relationships</tspan></text>
+
+  <!-- Connectors -->
+  <path class="link" d="M270 120 L310 175" marker-end="url(#arrow)"/>
+  <path class="link" d="M510 120 L470 175" marker-end="url(#arrow)"/>
+  <path class="link" d="M270 380 L310 325" marker-end="url(#arrow)"/>
+  <path class="link" d="M510 380 L470 325" marker-end="url(#arrow)"/>
+  <path class="link" d="M390 320 L390 428" marker-end="url(#arrow)"/>
+
+  <!-- Centre: Core Principles -->
+  <rect class="panel-a" x="240" y="175" width="300" height="145" rx="10"/>
+  <text class="sh" x="390" y="202" text-anchor="middle"><tspan x="390" dy="0">Core Constitutional Principles</tspan></text>
+  <text class="body" x="390" y="228" text-anchor="middle"><tspan x="390" dy="0">Sovereignty and territorial integrity</tspan></text>
+  <text class="body" x="390" y="250" text-anchor="middle"><tspan x="390" dy="0">Peaceful coexistence and non-interference</tspan></text>
+  <text class="body" x="390" y="272" text-anchor="middle"><tspan x="390" dy="0">Adherence to UN Charter and international law</tspan></text>
+  <text class="body" x="390" y="294" text-anchor="middle"><tspan x="390" dy="0">Muslim world solidarity (Article 40)</tspan></text>
+
+  <!-- Top-Left: China -->
+  <rect class="panel" x="25" y="70" width="245" height="90" rx="8"/>
+  <text class="sh" x="147" y="96" text-anchor="middle"><tspan x="147" dy="0">China</tspan></text>
+  <text class="body" x="147" y="122" text-anchor="middle"><tspan x="147" dy="0">All-weather strategic partnership</tspan></text>
+  <text class="body" x="147" y="144" text-anchor="middle"><tspan x="147" dy="0">CPEC economic connectivity</tspan></text>
+
+  <!-- Top-Right: Afghanistan -->
+  <rect class="panel" x="510" y="70" width="245" height="90" rx="8"/>
+  <text class="sh" x="632" y="96" text-anchor="middle"><tspan x="632" dy="0">Afghanistan</tspan></text>
+  <text class="body" x="632" y="122" text-anchor="middle"><tspan x="632" dy="0">Shared historical and ethnic bonds</tspan></text>
+  <text class="body" x="632" y="144" text-anchor="middle"><tspan x="632" dy="0">Border stability and transit trade</tspan></text>
+
+  <!-- Bottom-Left: Iran -->
+  <rect class="panel" x="25" y="340" width="245" height="90" rx="8"/>
+  <text class="sh" x="147" y="366" text-anchor="middle"><tspan x="147" dy="0">Iran</tspan></text>
+  <text class="body" x="147" y="392" text-anchor="middle"><tspan x="147" dy="0">Cultural and historical affinity</tspan></text>
+  <text class="body" x="147" y="414" text-anchor="middle"><tspan x="147" dy="0">Energy and border cooperation</tspan></text>
+
+  <!-- Bottom-Right: India -->
+  <rect class="panel" x="510" y="340" width="245" height="90" rx="8"/>
+  <text class="sh" x="632" y="366" text-anchor="middle"><tspan x="632" dy="0">India</tspan></text>
+  <text class="body" x="632" y="392" text-anchor="middle"><tspan x="632" dy="0">Unresolved Kashmir dispute</tspan></text>
+  <text class="body" x="632" y="414" text-anchor="middle"><tspan x="632" dy="0">Quest for dialogue and durable peace</tspan></text>
+
+  <!-- Bottom: Multilateral Forums -->
+  <rect class="panel-b" x="175" y="430" width="430" height="42" rx="8"/>
+  <text class="body" x="390" y="456" text-anchor="middle"><tspan x="390" dy="0">Multilateral: UN Peacekeeping, OIC Solidarity, SAARC, SCO</tspan></text>
+
+  <!-- Wordmark -->
+  <text class="wm" x="768" y="490" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>

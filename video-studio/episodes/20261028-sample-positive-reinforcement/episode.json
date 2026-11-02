@@ -60,13 +60,41 @@
       "to": "render_review",
       "by": "claude",
       "note": "Kaggle render fetched and verified (GPU 0: Tesla T4 (UUID: GPU-6b2d7b70-484c-fd24-0a5d-6e831bb238fc)\nGPU 1: Tesla T4 (UUID: GPU-b41424c5-099b-7b31-caf9-fd7d6b2413a9))"
+    },
+    {
+      "at": "2026-10-29T19:32:47.063Z",
+      "from": "render_review",
+      "to": "asset_review",
+      "by": "claude",
+      "note": "voice:import L01 (shagird) 96523bd2c801, replaces 01674f0c3dd6"
+    },
+    {
+      "at": "2026-10-29T19:32:48.227Z",
+      "from": "asset_review",
+      "to": "asset_review",
+      "by": "claude",
+      "note": "voice:import L05 (shagird) c169bf973d8d, replaces 10f5f3f4ed22"
+    },
+    {
+      "at": "2026-10-29T19:32:49.363Z",
+      "from": "asset_review",
+      "to": "asset_review",
+      "by": "claude",
+      "note": "voice:import L06 (shagird) 9363d5c26f26, replaces dbf07d8f7c24"
+    },
+    {
+      "at": "2026-10-29T19:36:42.666Z",
+      "from": "asset_review",
+      "to": "render_review",
+      "by": "claude",
+      "note": "Kaggle render fetched and verified (GPU 0: Tesla T4 (UUID: GPU-c51526d5-66a7-b39e-a537-1a8d6a6294cc)\nGPU 1: Tesla T4 (UUID: GPU-24d2bebc-8d05-00ed-b51b-28a9e15e9ddc))"
     }
   ],
   "assets": {
     "manifest": [
       {
         "item_id": "L01",
-        "path": "20261028-sample-positive-reinforcement/audio/L01.wav",
+        "path": "20261028-sample-positive-reinforcement/audio/superseded/L01.01674f0c3dd6.wav",
         "kind": "audio",
         "sha256": "01674f0c3dd6c6be5855c4147ec0bfe6a713fc69e8dbe49a4e76cb293fed3ea0",
         "source_sha256": "6071f68079e58f899bdf42b35e26128a4139bf1d3b2b834d5c88f76d5a836666",
@@ -83,7 +111,8 @@
         },
         "rights_note": "voice card brand/voices/shagird.md (cleared); consent narrator-01; source chatterbox-hi",
         "imported_at": "2026-10-28T04:32:08.091Z",
-        "status": "pending"
+        "status": "rejected",
+        "superseded_by": "96523bd2c801383ea942c88332b9bc61cb56d489fe81d48c184d2b5858fab1be"
       },
       {
         "item_id": "L02",
@@ -150,7 +179,7 @@
       },
       {
         "item_id": "L05",
-        "path": "20261028-sample-positive-reinforcement/audio/L05.wav",
+        "path": "20261028-sample-positive-reinforcement/audio/superseded/L05.10f5f3f4ed22.wav",
         "kind": "audio",
         "sha256": "10f5f3f4ed223df3b339c2dabaa0a7a1481413d7743cd6d300db92ca905bacd2",
         "source_sha256": "4830ab644d9acbd4fa53645a3d464023f76457693994c34ddfdcae1b16047cf1",
@@ -167,11 +196,12 @@
         },
         "rights_note": "voice card brand/voices/shagird.md (cleared); consent narrator-01; source chatterbox-hi",
         "imported_at": "2026-10-28T04:32:14.368Z",
-        "status": "pending"
+        "status": "rejected",
+        "superseded_by": "c169bf973d8d5a9d3b3c81512a69a2be44ffb174b9a4795e3113dbeb5c7c86fe"
       },
       {
         "item_id": "L06",
-        "path": "20261028-sample-positive-reinforcement/audio/L06.wav",
+        "path": "20261028-sample-positive-reinforcement/audio/superseded/L06.dbf07d8f7c24.wav",
         "kind": "audio",
         "sha256": "dbf07d8f7c24fb37aa5d03c3d68297fac03115fbbf51aa12cccaeebd8a408de3",
         "source_sha256": "e3078dbb02899d1546827f642848786864db7f5c8ef8670f91790fdd9c337c32",
@@ -188,21 +218,94 @@
         },
         "rights_note": "voice card brand/voices/shagird.md (cleared); consent narrator-01; source chatterbox-hi",
         "imported_at": "2026-10-28T04:32:15.819Z",
-        "status": "pending"
+        "status": "rejected",
+        "superseded_by": "9363d5c26f2635d539cb97d884c7a052c5bebedf1a7f254d120a20b3824f2b35"
+      },
+      {
+        "item_id": "L01",
+        "path": "20261028-sample-positive-reinforcement/audio/L01.wav",
+        "kind": "audio",
+        "sha256": "96523bd2c801383ea942c88332b9bc61cb56d489fe81d48c184d2b5858fab1be",
+        "source_sha256": "8408e740f18cd3adb1cc74d10526f6ee6dc22ee73f3943e97ce06d3dc47d0ef7",
+        "source_file": "l01_lively_s3302.wav",
+        "source_tool": "chatterbox-hi",
+        "model": "ResembleAI/Chatterbox-Multilingual-hi",
+        "prompt": "VS-ADR-0014 lively, eval seed 3302",
+        "voice": {
+          "character": "shagird",
+          "card_sha256": "e10a4bff456f997a22636bf5a1e9b5c71131283ae9538daf6b3e01c91f62fc5a",
+          "reference_sha256": "7d227bafae29623504c427923546211175bd1f78e093c181843d8179a5711c8a",
+          "consent_id": "narrator-01",
+          "consent_sha256": "cbee0bcf1fe30591ea7073418a943f64da1d5c46f178d7ba9a0e608129ccf1b3",
+          "post": "warm, tempo 1.06"
+        },
+        "rights_note": "voice card brand/voices/shagird.md (cleared); consent narrator-01; source chatterbox-hi",
+        "imported_at": "2026-10-29T19:32:47.063Z",
+        "status": "pending",
+        "supersedes": "01674f0c3dd6c6be5855c4147ec0bfe6a713fc69e8dbe49a4e76cb293fed3ea0",
+        "correction_reason": "VS-ADR-0014: Bilal lively style, warm tone shaping, tempo 1.06 (owner chose reel D)"
+      },
+      {
+        "item_id": "L05",
+        "path": "20261028-sample-positive-reinforcement/audio/L05.wav",
+        "kind": "audio",
+        "sha256": "c169bf973d8d5a9d3b3c81512a69a2be44ffb174b9a4795e3113dbeb5c7c86fe",
+        "source_sha256": "a86fddb5f3a0da1f8ceab1da3e315cccce08e0be090287aa75839dbf75a160d5",
+        "source_file": "l05_lively_s3301.wav",
+        "source_tool": "chatterbox-hi",
+        "model": "ResembleAI/Chatterbox-Multilingual-hi",
+        "prompt": "VS-ADR-0014 lively, eval seed 3301",
+        "voice": {
+          "character": "shagird",
+          "card_sha256": "e10a4bff456f997a22636bf5a1e9b5c71131283ae9538daf6b3e01c91f62fc5a",
+          "reference_sha256": "7d227bafae29623504c427923546211175bd1f78e093c181843d8179a5711c8a",
+          "consent_id": "narrator-01",
+          "consent_sha256": "cbee0bcf1fe30591ea7073418a943f64da1d5c46f178d7ba9a0e608129ccf1b3",
+          "post": "warm, tempo 1.06"
+        },
+        "rights_note": "voice card brand/voices/shagird.md (cleared); consent narrator-01; source chatterbox-hi",
+        "imported_at": "2026-10-29T19:32:48.227Z",
+        "status": "pending",
+        "supersedes": "10f5f3f4ed223df3b339c2dabaa0a7a1481413d7743cd6d300db92ca905bacd2",
+        "correction_reason": "VS-ADR-0014: Bilal lively style, warm tone shaping, tempo 1.06 (owner chose reel D)"
+      },
+      {
+        "item_id": "L06",
+        "path": "20261028-sample-positive-reinforcement/audio/L06.wav",
+        "kind": "audio",
+        "sha256": "9363d5c26f2635d539cb97d884c7a052c5bebedf1a7f254d120a20b3824f2b35",
+        "source_sha256": "af62dcfb8ebe32fc594c327216236754ddb8b3956b439b57d1e3e16ec7e5d193",
+        "source_file": "l06_lively_s3302.wav",
+        "source_tool": "chatterbox-hi",
+        "model": "ResembleAI/Chatterbox-Multilingual-hi",
+        "prompt": "VS-ADR-0014 lively, eval seed 3302",
+        "voice": {
+          "character": "shagird",
+          "card_sha256": "e10a4bff456f997a22636bf5a1e9b5c71131283ae9538daf6b3e01c91f62fc5a",
+          "reference_sha256": "7d227bafae29623504c427923546211175bd1f78e093c181843d8179a5711c8a",
+          "consent_id": "narrator-01",
+          "consent_sha256": "cbee0bcf1fe30591ea7073418a943f64da1d5c46f178d7ba9a0e608129ccf1b3",
+          "post": "warm, tempo 1.06"
+        },
+        "rights_note": "voice card brand/voices/shagird.md (cleared); consent narrator-01; source chatterbox-hi",
+        "imported_at": "2026-10-29T19:32:49.363Z",
+        "status": "pending",
+        "supersedes": "dbf07d8f7c24fb37aa5d03c3d68297fac03115fbbf51aa12cccaeebd8a408de3",
+        "correction_reason": "VS-ADR-0014: Bilal lively style, warm tone shaping, tempo 1.06 (owner chose reel D)"
       }
     ]
   },
   "render": {
     "file": "20261028-sample-positive-reinforcement/render/final.mp4",
-    "duration_s": 40.277,
-    "sha256": "5b6bbb89a87eec7fef86165b238e1aa8e91b61fcab8c8bd57a8cc28942662dda",
+    "duration_s": 42.112,
+    "sha256": "2c7463540502259bb002c88417476a303769339cc76d8dca91800cb772b3fd8a",
     "subtitles": [
       "captions.ur.srt",
       "captions.ur.vtt"
     ]
   },
   "usage": {
-    "render_seconds": 55.226,
+    "render_seconds": 60.982,
     "metered_cost_usd": 0
   }
 }

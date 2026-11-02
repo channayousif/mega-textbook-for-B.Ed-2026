@@ -26,7 +26,7 @@ import { STATE_DIR, WT_DIR, LOG_DIR, load, save, ACTIVE, TERMINAL, jobId, now } 
 import { send, reply, readInbox } from './notify.mjs';
 import { reviewFindingsSection, parseHandoff, priorHandoffsSection } from './handoff.mjs';
 import { freshChecks } from './checks.mjs';
-import { batchDue, batchCandidates, batchId, batchTitle, batchBody, exclusionReason } from './batch.mjs';
+import { batchDue, batchCandidates, batchId, batchTitle, batchBody, exclusionReason, mergeAppendOnly } from './batch.mjs';
 import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport, specUnitNumbers, focusCourse, IN_FLIGHT, isCorpusStage } from './planner.mjs';
 import { walkUnits } from '../lib/content-roots.mjs';
 import { REGISTRIES, registryProblems, mergeGlossary } from './registries.mjs';
@@ -827,14 +827,26 @@ function queueCiFixes(board, red, events) {
 
 /**
  * Files every unit touches, so concurrent branches conflict in them on almost every batch:
- * glossary.json (terms appended at the end) and, on older branches, static/content-status.json.
- * When a batch merge conflicts in these alone, resolve it here instead of spending a merge-fix
- * job: glossary by mergeGlossary, content-status by regenerating it. The batch's registry and
- * content gates still run on the result. Returns false (caller aborts) for any other conflict.
+ * glossary.json (terms appended at the end), the course tracker specs/content/<course>/tasks.md
+ * (each unit job appends its own rows; 45 of 85 exclusions in W44 F2) and, on older branches,
+ * static/content-status.json. When a batch merge conflicts in these alone, resolve it here
+ * instead of spending a merge-fix job: glossary by mergeGlossary, a tracker by mergeAppendOnly
+ * (only when both sides purely insert lines), content-status by regenerating it. The batch's
+ * registry and content gates still run on the result. Returns false (caller aborts) for any
+ * other conflict.
  */
 function resolveSharedConflicts(wt) {
   const files = sh('git', ['diff', '--name-only', '--diff-filter=U'], wt, { allowFail: true }).out.split('\n').filter(Boolean);
-  if (!files.length || !files.every((f) => f === 'glossary.json' || f === 'static/content-status.json')) return false;
+  const trackers = files.filter((f) => /^specs\/content\/[^/]+\/tasks\.md$/.test(f));
+  if (!files.length || !files.every((f) => f === 'glossary.json' || f === 'static/content-status.json' || trackers.includes(f))) return false;
+  for (const f of trackers) {
+    // Read stages untrimmed: sh() trims, which would drop the tracker's final newline.
+    const stage = (n) => { const r = spawnSync('git', ['show', `:${n}:${f}`], { cwd: wt, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 }); return r.status === 0 ? r.stdout : null; };
+    const merged = mergeAppendOnly(stage(1), stage(2), stage(3));
+    if (merged === null) return false;
+    writeFileSync(join(wt, f), merged);
+    sh('git', ['add', '--', f], wt);
+  }
   if (files.includes('glossary.json')) {
     const stage = (n) => { const r = sh('git', ['show', `:${n}:glossary.json`], wt, { allowFail: true }); return r.ok ? r.out : null; };
     const merged = mergeGlossary(stage(1), stage(2), stage(3));

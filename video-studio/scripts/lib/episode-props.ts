@@ -5,9 +5,11 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { alignLines } from '../../remotion/src/align.ts';
-import type { CaptionLine, Cue, ShortProps } from '../../remotion/src/props.ts';
+import { FPS, type CaptionLine, type Cue, type Pose, type ShortProps } from '../../remotion/src/props.ts';
 import { digestBytes } from './hash.ts';
+import { visemes } from './lipsync.ts';
 import { episodeDir, mediaRoot } from './paths.ts';
+import { loadCast } from './rig.ts';
 import { brandProps } from './sample.ts';
 import { wavSeconds } from './wav.ts';
 
@@ -15,13 +17,28 @@ export const LEAD_S = 0.3;
 export const GAP_S = 0.35;
 export const TAIL_S = 0.5;
 export const END_CARD_S = 3;
+export const DEFAULT_SET = 'studio';
+/** Gesture when script.json gives none: the segment's usual move. */
+const SEGMENT_POSE: Record<string, Pose> = { hook: 'explain', beat1: 'explain', beat2: 'point', beat3: 'explain', recap: 'celebrate', cta: 'point' };
 
-export interface EpisodeRender { props: ShortProps; audio: Record<string, Buffer>; alignment: Record<string, 'manual' | 'sentence'> }
+export interface EpisodeRender {
+  props: ShortProps;
+  audio: Record<string, Buffer>;
+  /** Puppet and set images, keyed by their path under public/. */
+  images: Record<string, Buffer>;
+  alignment: Record<string, 'manual' | 'sentence'>;
+}
 
-export function episodeProps(ep: any, script: any, opts: { media?: string; manual?: Record<string, Cue[]> } = {}): EpisodeRender {
+/**
+ * `assetsApproved` must be the result of the owner's assets gate (evaluate() in invalidation.ts).
+ * That approval binds the digest of exactly the non-rejected takes, so production uses those takes;
+ * a take imported after the approval changes the digest and makes the approval stale.
+ */
+export function episodeProps(ep: any, script: any, opts: { media?: string; manual?: Record<string, Cue[]>; set?: string; assetsApproved?: boolean } = {}): EpisodeRender {
   const media = opts.media ?? mediaRoot();
   const production = ep.mode !== 'sample';
-  const usable = (a: any) => a.kind === 'audio' && (production ? a.status === 'accepted' : a.status !== 'rejected');
+  if (production && opts.assetsApproved !== true) throw new Error(`${ep.episode_id}: production props need a valid assets approval`);
+  const usable = (a: any) => a.kind === 'audio' && a.status !== 'rejected';
   const manifest: any[] = (ep.assets?.manifest ?? []).filter(usable);
   const missing: string[] = [];
   const audio: Record<string, Buffer> = {};
@@ -29,17 +46,20 @@ export function episodeProps(ep: any, script: any, opts: { media?: string; manua
   const lines: CaptionLine[] = [];
   for (const l of script.lines) {
     const a = manifest.filter((m) => m.item_id === l.id);
-    if (a.length !== 1) { missing.push(`${l.id} (${a.length ? 'several takes' : production ? 'no accepted take' : 'no take'})`); continue; }
+    if (a.length !== 1) { missing.push(`${l.id} (${a.length ? 'several takes' : 'no take'})`); continue; }
     const bytes = readFileSync(join(media, a[0].path));
     if (digestBytes(bytes) !== a[0].sha256) throw new Error(`${a[0].path} does not match its manifest SHA-256; refusing`);
     if (a[0].voice?.character && a[0].voice.character !== l.speaker) throw new Error(`${l.id} audio is ${a[0].voice.character}, line speaker is ${l.speaker}`);
     const rel = `audio/${l.id}.wav`;
     audio[rel] = bytes;
     const dur = wavSeconds(bytes);
-    lines.push({ id: l.id, speaker: l.speaker, text_ur: l.text_ur, from_s: round(t), to_s: round(t + dur), audio: rel });
+    const gesture: Pose = l.gesture ?? SEGMENT_POSE[l.segment] ?? 'idle';
+    lines.push({ id: l.id, speaker: l.speaker, text_ur: l.text_ur, from_s: round(t), to_s: round(t + dur), audio: rel, gesture, mouth: visemes(bytes, FPS) });
     t += dur + GAP_S;
   }
   if (missing.length) throw new Error(`voice audio missing for ${missing.join(', ')}; import with npm run voice:import`);
+  const castFiles = loadCast(media, opts.set ?? DEFAULT_SET);
+  if (production && !castFiles.puppets) throw new Error('puppet rigs missing under $MEDIA_ROOT/brand-assets/cast/; build them with tools/cast/cast_rig.py');
   const { cast, ...brand } = brandProps();
   const aligned = alignLines(lines, opts.manual ?? {}, brand.captions.max_words_per_line, brand.captions.max_lines);
   const last = lines[lines.length - 1].to_s;
@@ -53,9 +73,12 @@ export function episodeProps(ep: any, script: any, opts: { media?: string; manua
       end_card: { url: script.cta.url, cta_ur: script.cta.text_ur, seconds: END_CARD_S },
       audio: null,
       cast,
+      puppets: castFiles.puppets,
+      set: castFiles.set,
       brand,
     },
     audio,
+    images: castFiles.files,
     alignment: aligned.source,
   };
 }

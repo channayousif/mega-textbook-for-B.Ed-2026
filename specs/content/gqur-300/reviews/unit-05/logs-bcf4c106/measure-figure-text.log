@@ -1,0 +1,13 @@
+=== measure-figure-text: CI scope (--changed origin/main) ===
+no figure SVGs changed since origin/main
+
+=== measure-figure-text: Repaired fig-U5-5 variants ===
+✓ static/img/figures/gqur-300/unit-05/fig-U5-5.dark.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gqur-300/unit-05/fig-U5-5.svg (780x470, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/gqur-300/unit-05/fig-U5-5.ur.dark.svg (780x470, widest text ends at 727.6, wordmark at 12)
+✓ static/img/figures/gqur-300/unit-05/fig-U5-5.ur.svg (780x470, widest text ends at 727.6, wordmark at 12)
+
+=== measure-figure-text: Unit 5 overall report (--report) ===
+gqur-300/unit-05	10/24 files	14 problem(s)
+
+14 problem(s) in 1 of 1 unit folder(s), 24 SVGs measured.

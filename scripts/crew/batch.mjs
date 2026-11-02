@@ -67,3 +67,39 @@ export function exclusionReason(branch, paths) {
   const list = rest ? `${shown.join(', ')} and ${rest} more` : shown.join(', ');
   return `${base} (${list}).`;
 }
+
+/**
+ * Three-way merge for an append-only file such as a course tracker
+ * (specs/content/<course>/tasks.md, W44 M1). Concurrent unit jobs each add their own rows at
+ * the same place, which git reports as a conflict although neither side removed anything.
+ * When both `ours` and `theirs` only insert whole lines relative to `base`, the result is base
+ * with both sides' insertions, ours before theirs at a shared point (an identical insertion on
+ * both sides is kept once). Returns null when a stage is missing or either side changes or
+ * deletes a base line, so the caller falls back to a merge fix. Base lines are matched in
+ * order, first occurrence first.
+ */
+export function mergeAppendOnly(base, ours, theirs) {
+  if (typeof base !== 'string' || typeof ours !== 'string' || typeof theirs !== 'string') return null;
+  const b = base.split('\n');
+  const inserts = (side) => {
+    const s = side.split('\n');
+    const gaps = b.map(() => []).concat([[]]);
+    let i = 0;
+    for (const line of s) {
+      if (i < b.length && line === b[i]) i += 1;
+      else gaps[i].push(line);
+    }
+    return i === b.length ? gaps : null;
+  };
+  const o = inserts(ours);
+  const t = inserts(theirs);
+  if (!o || !t) return null;
+  const sameInsert = (a, b) => a.length === b.length && a.every((line, k) => line === b[k]);
+  const out = [];
+  for (let i = 0; i <= b.length; i += 1) {
+    out.push(...o[i]);
+    if (!sameInsert(o[i], t[i])) out.push(...t[i]);
+    if (i < b.length) out.push(b[i]);
+  }
+  return out.join('\n');
+}

@@ -53,8 +53,15 @@ export function probeAudio(path: string): AudioProbe {
   };
 }
 
-/** Decode, loudness-normalise and write PCM 16-bit 48 kHz mono without metadata. */
-export function normaliseAudio(src: string, dest: string): void {
-  run('ffmpeg', ['-nostdin', '-hide_banner', '-loglevel', 'error', '-y', '-i', src, '-vn', '-map_metadata', '-1',
-    '-af', LOUDNORM, '-ar', '48000', '-ac', '1', '-c:a', 'pcm_s16le', '-fflags', '+bitexact', '-flags:a', '+bitexact', dest]);
+const PCM_OUT = ['-ar', '48000', '-ac', '1', '-c:a', 'pcm_s16le', '-fflags', '+bitexact', '-flags:a', '+bitexact'];
+
+/** Decode, optionally change tempo (pitch kept), loudness-normalise and write PCM 16-bit 48 kHz mono without metadata. */
+export function normaliseAudio(src: string, dest: string, opts: { tempo?: number } = {}): void {
+  const af = [...(opts.tempo && opts.tempo !== 1 ? [`atempo=${opts.tempo}`] : []), LOUDNORM].join(',');
+  run('ffmpeg', ['-nostdin', '-hide_banner', '-loglevel', 'error', '-y', '-i', src, '-vn', '-map_metadata', '-1', '-af', af, ...PCM_OUT, dest]);
+}
+
+/** Decode only, to PCM 16-bit 48 kHz mono (input to the tone-shaping step). */
+export function decodeAudio(src: string, dest: string): void {
+  run('ffmpeg', ['-nostdin', '-hide_banner', '-loglevel', 'error', '-y', '-i', src, '-vn', '-map_metadata', '-1', ...PCM_OUT, dest]);
 }

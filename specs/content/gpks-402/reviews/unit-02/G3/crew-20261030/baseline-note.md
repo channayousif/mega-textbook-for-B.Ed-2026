@@ -1,0 +1,1 @@
+The origin/main archive diagnostic is not an authoritative baseline: it lacks its own Git index, so manifest enumeration and ignored generated content-status metadata cannot validate. Its failures are harness artifacts, not findings attributed to origin/main. Current branch initial content check passes all 13 gates; no failing finding requires comparison.

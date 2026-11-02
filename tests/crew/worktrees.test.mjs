@@ -2,8 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
-import { execFileSync } from 'node:child_process';
+import { execFileSync, spawnSync } from 'node:child_process';
 import { runInNewContext } from 'node:vm';
+import { mergeAppendOnly } from '../../scripts/crew/batch.mjs';
 
 // Exercise the orchestrator functions without importing its stateful CLI entry point.
 const source = readFileSync(new URL('../../scripts/crew/crew.mjs', import.meta.url), 'utf8');
@@ -105,6 +106,54 @@ for (const oursDeletes of [true, false]) {
     assert.equal(git('check-ignore', 'static/content-status.json'), 'static/content-status.json');
   });
 }
+
+function trackerRepo(t) {
+  const wt = fixture(t);
+  const git = (...args) => execFileSync('git', args, { cwd: wt, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] }).trim();
+  git('init', '-q');
+  git('config', 'user.email', 'test@example.invalid');
+  git('config', 'user.name', 'Crew test');
+  mkdirSync(join(wt, 'specs/content/gpks-402'), { recursive: true });
+  const file = join(wt, 'specs/content/gpks-402/tasks.md');
+  const base = '| Unit | Stage | Status | Initials | Notes |\n|---|---|---|---|---|\n| 1 | G2 | done | crew | u1 |\n';
+  writeFileSync(file, base);
+  git('add', '.');
+  git('commit', '-qm', 'base');
+  git('branch', 'other');
+  const commit = (text) => { writeFileSync(file, text); git('add', '-u'); git('commit', '-qm', 'change'); };
+  const resolveConflicts = loadFunction('resolveSharedConflicts', '\n/**', {
+    join, writeFileSync, spawnSync, mergeAppendOnly,
+    sh(cmd, args, cwd, { allowFail = false } = {}) {
+      try { return { ok: true, out: git(...args) }; }
+      catch (error) { if (!allowFail) throw error; return { ok: false, out: '' }; }
+    },
+  });
+  return { wt, git, file, base, commit, resolveConflicts };
+}
+
+test('a course tracker conflict where both sides append rows is merged and committed', (t) => {
+  const { git, file, base, commit, resolveConflicts } = trackerRepo(t);
+  commit(`${base}| 2 | G2 | done | crew | u2 |\n`);
+  git('checkout', '-q', 'other');
+  commit(`${base}| 3 | G2 | done | crew | u3 |\n`);
+  git('checkout', '-q', '-');
+  assert.throws(() => git('merge', '--no-edit', 'other'));
+  assert.equal(resolveConflicts(git('rev-parse', '--show-toplevel')), true);
+  assert.equal(git('status', '--porcelain'), '');
+  assert.equal(readFileSync(file, 'utf8'), `${base}| 2 | G2 | done | crew | u2 |\n| 3 | G2 | done | crew | u3 |\n`);
+});
+
+test('a course tracker conflict where one side edits a row is left for a merge fix', (t) => {
+  const { git, base, commit, resolveConflicts } = trackerRepo(t);
+  commit(base.replace('| u1 |', '| u1 redone |'));
+  git('checkout', '-q', 'other');
+  commit(base.replace('| u1 |', '| u1 again |'));
+  git('checkout', '-q', '-');
+  assert.throws(() => git('merge', '--no-edit', 'other'));
+  assert.equal(resolveConflicts(git('rev-parse', '--show-toplevel')), false);
+  assert.match(git('diff', '--name-only', '--diff-filter=U'), /specs\/content\/gpks-402\/tasks\.md/);
+  git('merge', '--abort');
+});
 
 test('common brief rules keep every worker scratch file inside its worktree', () => {
   const rules = loadFunction('briefRules', '\n/**', {});

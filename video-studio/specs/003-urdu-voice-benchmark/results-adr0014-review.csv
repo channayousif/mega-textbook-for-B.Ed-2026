@@ -1,0 +1,11 @@
+file,segment,character,style,seed,arm,seconds,cer,coverage,terms_missed,longest_pause,chars_per_s,sim_ref,sim_centroid,flags,asr
+eval/shagird/l01_lively_s3301.wav,l01,shagird,lively,3301,main,5.08,0.047,1.02,,0.14,10.7,0.787,0.879,,کیا ایک ستارہ یا تعریف واقعی شاگیند کا رویہ بدل سکتی ہے؟
+eval/shagird/l01_lively_s3302.wav,l01,shagird,lively,3302,main,6.72,0.023,1.02,,0.52,8.2,0.807,0.91,,کیا ایک ستارہ یا تعریف واقعی شاگرد کا روئیہ بدل سکتی ہے؟
+eval/shagird/l01_lively_s3303.wav,l01,shagird,lively,3303,main,5.84,0.023,1.0,,0.4,9.0,0.806,0.882,,کیا ایک ستارہ یا تعریف واقعی شاگرد کا رویہ بدن سکتی ہے؟
+eval/shagird/l05_lively_s3301.wav,l05,shagird,lively,3301,main,6.0,0.0,1.0,,0.54,9.1,0.857,0.926,,یعنی دونوں تقویتیں رویہ بڑھاتی ہیں اور سزا اسے کم کرتی ہے
+eval/shagird/l05_lively_s3302.wav,l05,shagird,lively,3302,main,5.4,0.022,1.0,,0.44,9.7,0.82,0.916,,یعنی دونوں تقویتیں رویہ بڑھاتی ہیں اور سجا اسے کم کرتی ہے
+eval/shagird/l05_lively_s3303.wav,l05,shagird,lively,3303,main,5.44,0.0,1.0,,0.18,9.7,0.769,0.876,,یعنی دونوں تقویتیں رویہ بڑھاتی ہیں اور سزا اسے کم کرتی ہے
+eval/shagird/l06_lively_s3301.wav,l06,shagird,lively,3301,main,4.08,0.071,1.07,,0.12,4.1,0.821,0.906,pace,پورا سبق textbook.com.pk پر پڑھئیے
+eval/shagird/l06_lively_s3302.wav,l06,shagird,lively,3302,main,4.28,0.0,1.0,,0.12,4.3,0.808,0.886,pace,پورا سبق textbook.com.pk پر پڑھئے
+eval/shagird/l06_lively_s3303.wav,l06,shagird,lively,3303,main,4.96,0.143,1.07,,0.46,3.6,0.76,0.895,pace,پورا سبک textbook.com.pk پر پڑھئیے
+eval/reel-shagird.wav,reel,shagird,default,3301,reel,16.36,,,,,,,,,
