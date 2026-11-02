@@ -1,0 +1,37 @@
+render-review attempt (G5 Urdu, GPKS-402 Unit 5)
+================================================
+Timestamp: 2026-11-02T18:39:40Z
+Reviewer: agent:g5-reviewer
+Model: longcat/LongCat-2.0
+Reviewer run ID: crew:gpks-402-u05-review_ur:g5-claude-20261102T183940Z
+Course: GPKS-402 Unit 5 (Economy and Society)
+
+CONSTRAINT: The crew brief for this job forbids `npm run build`, a dev/preview server,
+Playwright and Chromium. No rendered page, narrow-viewport or A4 print view of the Urdu
+locale was therefore produced. A browser-based inspection is required by the G5 rubric
+(Urdu figures, RTL and print) and remains outstanding.
+
+Fallback rasteriser probe:
+$ command -v rsvg-convert inkscape chromium google-chrome chromium-browser
+(none found, exit 1)
+
+Fallback actually available and used:
+$ node (sharp) on the four committed Urdu SVG variants, :root CSS variables resolved
+  fig-U5-1.ur.png (780x594), mean channel luminances 235.5, 239.9, 238.5
+  fig-U5-2.ur.png (780x582), mean channel luminances 239.5, 243.7, 242.7
+  fig-U5-3.ur.png (780x730), mean channel luminances 239.5, 243.0, 241.9
+  fig-U5-4.ur.png (780x728), mean channel luminances 232.7, 237.5, 235.8
+All four renders are non-blank. They evidence the placed figure assets only, not page
+layout, Nastaliq shaping in a browser, bidi punctuation, table order, wrapping, clipping or
+print pagination.
+
+Static checks performed in place of the render:
+1. measure-figure-text.mjs on all 16 SVG variants (4 EN light/dark, 4 UR light/dark):
+   exit 0, zero viewBox overflow, zero wordmark collision.
+2. Urdu figure text extracted and compared with the English variants and the UR prose:
+   labels, province/language lists, conditions and notes correspond; one compressed
+   traditions cell in fig-U5-4 loses the "adapted" verb (finding F6).
+3. Heading hierarchy and component parity (Figure, Glossary, PrintHandout) verified across
+   all four EN/UR file pairs; Glossary children are Urdu in all nine tags.
+
+RESULT: not inspected (exit 1). Escalation required for accessibility and rtl criteria.
