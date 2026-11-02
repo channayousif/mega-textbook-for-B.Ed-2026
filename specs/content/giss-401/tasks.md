@@ -4,7 +4,7 @@ This tracker records only the Unit 6 crew authoring scope. It makes no claim abo
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 6 | G2 en-draft | ▣ | agent:codex | English draft and four governance artefacts authored; deterministic evidence pending |
+| Unit 6 | G2 en-draft | ▣ | agent:codex | English draft and four governance artefacts authored; G2 evidence blocked by missing course-overview.mdx outside the Unit 6-only scope |
 | Unit 6 | G3 en-review | ▢ | | Independent Islamic Studies reviewer required; no certification claimed |
 | Unit 6 | G4 ur-translation | ▢ | | Separate job; English pages carry untranslated notices |
 | Unit 6 | G5 ur-review | ▢ | | Pending translation and independent review |
@@ -33,3 +33,9 @@ The guide lists no Unit 6 teaching strategies or practical-work section, so no t
 The crew brief prohibits Playwright, so `scripts/measure-figure-text.mjs` (which launches Chromium through Playwright) and browser layout checks were not run. Six light and six dark figure previews were rasterised serially through Sharp under `scripts/heavy.sh` and visually inspected. CSS variables were resolved only in the scratch preview input because the local raster renderer does not support them; committed SVGs retain the published tokens. A browser geometry run remains for the next permitted validation session.
 
 The full UDHR text could not be fetched from official routes on this host; its indexed wording was checked but its source is explicitly declared unverifiable pending G3 retrieval. G3 must include an independent Islamic Studies subject review. Translation, Urdu figure labels and global glossary banking are separate jobs. No build, dev server, Playwright, push or PR is part of this crew run.
+
+## Final crew validation
+
+`npm run check:content` after refreshing the ignored status report passes 12 of 13 gates. The sole finding is this unit's incomplete G2 row. `node scripts/prepare-gate-evidence.mjs GISS-401 6` stops before running gates with `missing required input: docs/semester-3/giss-401/course-overview.mdx`. The baseline at `origin/main` passed all 13 gates, so this is a new unresolved dependency, not inherited debt. A minimal overview candidate is prepared at `.crew/course-overview.mdx`; adding the course-level file requires a scope exception from the owner. No evidence or done row is fabricated.
+
+All five authored MDX bodies compile with `@mdx-js/mdx`. All 46 figure-palette tests pass; six light and six dark variants pass the figure gate and dark freshness check. Once the overview is authorised and committed, prepare G2 evidence, update only Unit 6's G2 row, refresh content status and rerun the content suite.

@@ -45,7 +45,7 @@ files:
   - static/img/figures/giss-401/unit-06/fig-U6-6.dark.svg
   - static/img/figures/giss-401/unit-06/fig-U6-6.svg
 tests:
-  - npm run check:content (baseline passed; final run after G2 evidence)
+  - npm run check:content (baseline passed; final run: 12/13 pass; G2 blocked by missing out-of-scope overview)
   - npm run check:depth-gate (passed)
   - npm run check:figures (passed)
   - npm run check:concept-graph (passed)
@@ -111,3 +111,12 @@ Authored the English Unit 6 opening, three topic cycles, 10/10/5 assessment with
 - Graders run and results (PASS/FAIL): Scoped gates PASS; palette 46/46 PASS; final content result recorded below. Browser-based geometry NOT RUN because brief prohibits Playwright.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Independent reviewer checks scriptural inference, partial rights comparison and all assessment reasoning without author self-certification.
+
+## Final validation update
+
+- Authoring commit: `e27d1ff38`.
+- `npm run check:content`: 12/13 PASS. Sole failure: GISS-401 Unit 6 G2 row remains in progress. Baseline at origin/main passed 13/13.
+- `node scripts/prepare-gate-evidence.mjs GISS-401 6`: blocked with `missing required input: docs/semester-3/giss-401/course-overview.mdx`. No G2 evidence was generated.
+- Requested the narrow scope exception via user input after preparing `.crew/course-overview.mdx`. No course-level file is added without that answer.
+- All five MDX files compile; all 46 palette tests pass; figure, depth, concept, source-floor, Bloom, safety, licence, status and docs-sync gates pass. Light/dark SVG previews visually inspected without a browser.
+- G3/G5 remain open. Browser geometry and full independent UDHR retrieval remain explicit next-job checks. No build, Playwright, dev server, push or PR was run.
