@@ -14,6 +14,8 @@ git fetch -q origin
 # merge cannot abort. Since b1b4ee90 it is untracked, so checkout fails and must not kill the tick (set -e).
 git checkout -q -- static/content-status.json 2>/dev/null || true
 git merge -q --ff-only origin/main 2>/dev/null || git merge -q --no-edit origin/main
+# Keep the owner's own checkout's main level with origin too (fast-forward only, never fails the tick).
+bash scripts/crew/sync-owner-checkout.sh || true
 node scripts/crew/crew.mjs plan
 node scripts/crew/crew.mjs tick
 node scripts/crew/crew.mjs status > /dev/null
