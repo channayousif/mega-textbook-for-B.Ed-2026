@@ -62,3 +62,8 @@
 - Literacy rate, access and out-of-school children are defined inline. Global glossary additions are outside this Unit 6-only job. Equity, AI and SDGs reuse existing glossary entries. The Urdu job owns the corresponding vocabulary work and concept-label review.
 
 | Unit 2 | G3 en-review | ▢ | | advisory: escalate by agent:codex-g3-reviewer; report at specs/content/efmp-406/reviews/unit-02/G3/crew-efmp-406-u02-review-en.json; RRQ 2/3/9 prompt-scheme alignment repairs requested; source verification, actual author run provenance and browser/print evidence unavailable; G3 remains open and unsigned |
+| Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-406/reviews/unit-01/G3/20261102T210200Z-g3-desk-ca7ba17e.json |
+| Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-406/reviews/unit-05/G3/20261102T210517Z-g3-desk-41391a8a.json |
+| Unit 6 | G3 en-review | ✅ | CMY | review:specs/content/efmp-406/reviews/unit-06/G3/20261102T210705Z-g3-desk-d3bd5a8a.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-406/reviews/unit-02/G3/20261102T211054Z-g3-desk-55b3ba13.json |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-406/reviews/unit-03/G3/20261102T211054Z-g3-desk-40674f87.json |
