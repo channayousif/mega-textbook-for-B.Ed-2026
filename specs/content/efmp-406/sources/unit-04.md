@@ -1,0 +1,12 @@
+# EFMP-406 Unit 4 Sources Consulted
+
+| Key | Citation | URL/DOI | Supports | Kind |
+|---|---|---|---|---|
+| furenes-2021-screen | Furenes, M. I., Kucirkova, N., & Bus, A. G. (2021). A comparison of children's reading on paper versus screen: A meta-analysis. Review of Educational Research, 91(4), 483–517. | https://doi.org/10.3102/0034654321998074 | U4-01, U4-02: comprehension, book design and adult support for children aged 1–8; limits on generalisation; Crossref verified 2026-11-02, DOI/title/authors/licence | open-access-substitute |
+| greenhow-2009-sns | Greenhow, C., & Robelia, B. (2009). Old communication, new literacies: Social network sites as social learning resources. Journal of Computer-Mediated Communication, 14(4), 1130–1161. | https://doi.org/10.1111/j.1083-6101.2009.01484.x | U4-03: communication and social learning in a qualitative study of eleven older US teenagers; no platform prescription | open-access-substitute |
+| alcolea-2020-mil | Alcolea-Díaz, G., Reig, R., & Mancinas-Chávez, R. (2020). UNESCO's Media and Information Literacy curriculum for teachers from the perspective of Structural Considerations of Information. Comunicar, 28(62), 103–114. | https://doi.org/10.3916/c62-2020-09 | U4-03: examining ownership and interests behind media messages | open-access-substitute |
+| cc-licenses | Creative Commons. (n.d.). The CC licenses. | https://creativecommons.org/cc-licenses/ | U4-04: licence conditions and distinguishing attribution from permission for a planned use | open-access-substitute |
+
+Consulted 2026-11-02. Furenes and Greenhow publisher pages resolved with abstracts and article text. Alcolea's DOI landing page failed in this tool; the journal's indexed primary-source record and abstract resolved in search at https://revistacomunicar.com/indice/articulo.php?numero=62-2020-09 . Claims are confined to its stated focus on structural interests and teacher media literacy, not unverified detailed findings. Creative Commons' own licence overview resolved. No source is claimed as support for a specific Pakistani legal exception.
+
+The guide's literacy unit and strategies were checked at `Scheme-and-Course-guides/extracted-text/3rd 2026.txt:264-284,296-304`. The mapped open-access list is authorised by the confirmed owner ruling in D-2026-0075. Fictional cases, model drafts, lesson routines and rubrics are original pedagogical applications. No guide-listed inclusion reading is misrepresented as a literacy evidence source.
