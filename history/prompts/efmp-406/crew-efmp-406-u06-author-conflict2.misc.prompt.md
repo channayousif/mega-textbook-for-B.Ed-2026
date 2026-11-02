@@ -1,61 +1,128 @@
 ---
 id: crew-efmp-406-u06-author-conflict2
-title: Merge origin/main and resolve EFMP-406 tasks.md conflict
-stage: merge-conflict
+title: crew fix EFMP-406 unit 6
+stage: misc
 date: 2026-11-02
-surface: opencode
-model: longcat/LongCat-2.0
+surface: agent
+model: opencode
 feature: efmp-406
 branch: crew/efmp-406-u06-author
 user: crew
-command: .crew/brief.md
-labels: [opencode]
+command: crew fix
+labels: ["crew", "opencode", "fix"]
 links:
-  spec: null
-  ticket: efmp-406-u06
+  spec: specs/content/efmp-406/content-spec.md
+  ticket: null
   adr: null
   pr: null
 files:
-  - path: specs/content/efmp-406/tasks.md
-    action: edit
-    reason: resolved merge conflict - kept main's Unit 3 rows then branch's Unit 6 rows + handoff
-  - path: static/content-status.json
-    action: regenerate
-    reason: merge made it stale; npm run build:content-status refreshed
+ - docs/semester-3/efmp-406/unit-06/index.mdx
+ - docs/semester-3/efmp-406/unit-06/topic-01.mdx
+ - docs/semester-3/efmp-406/unit-06/topic-02.mdx
+ - docs/semester-3/efmp-406/unit-06/unit-assessment.mdx
+ - docs/semester-3/efmp-406/unit-06/unit-teacher-notes.mdx
+ - history/prompts/efmp-406/crew-efmp-406-u06-author-conflict1.misc.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u06-author-conflict2.misc.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u06-author.green.prompt.md
+ - history/prompts/general/20261051-author-efmp406-unit-six.general.prompt.md
+ - history/prompts/general/20261052-merge-efmp406-unit-six-main.general.prompt.md
+ - specs/content/efmp-406/concepts/unit-06.md
+ - specs/content/efmp-406/coverage/unit-06.md
+ - specs/content/efmp-406/figures/unit-06.md
+ - specs/content/efmp-406/reviews/unit-06/G2/20261102T084025797Z-gates.json
+ - specs/content/efmp-406/reviews/unit-06/G2/20261102T091818158Z-gates.json
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T084025797Z/check-bloom-bands.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T084025797Z/check-concept-graph.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T084025797Z/check-depth-gate.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T084025797Z/check-docs-sync.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T084025797Z/check-figures.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T084025797Z/check-no-answer-keys.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T084025797Z/check-no-em-dash.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T084025797Z/validate-content.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T091818158Z/check-bloom-bands.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T091818158Z/check-concept-graph.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T091818158Z/check-depth-gate.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T091818158Z/check-docs-sync.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T091818158Z/check-figures.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T091818158Z/check-no-answer-keys.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T091818158Z/check-no-em-dash.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T091818158Z/validate-content.txt
+ - specs/content/efmp-406/sources/texts/ahmad-2011-efa.md
+ - specs/content/efmp-406/sources/texts/gop-2018-nep-framework.md
+ - specs/content/efmp-406/sources/texts/rehman-2016-literacy-rate.md
+ - specs/content/efmp-406/sources/texts/un-goal4.md
+ - specs/content/efmp-406/sources/texts/unesco-2017-inclusion.md
+ - specs/content/efmp-406/sources/texts/unesco-ai-education.md
+ - specs/content/efmp-406/sources/unit-06.md
+ - specs/content/efmp-406/tasks.md
+ - static/img/figures/efmp-406/unit-06/fig-U6-1.dark.svg
+ - static/img/figures/efmp-406/unit-06/fig-U6-1.svg
+ - static/img/figures/efmp-406/unit-06/fig-U6-2.dark.svg
+ - static/img/figures/efmp-406/unit-06/fig-U6-2.svg
+ - static/img/figures/efmp-406/unit-06/fig-U6-3.dark.svg
+ - static/img/figures/efmp-406/unit-06/fig-U6-3.svg
+ - static/img/figures/efmp-406/unit-06/fig-U6-4.dark.svg
+ - static/img/figures/efmp-406/unit-06/fig-U6-4.svg
 tests:
-  - name: npm run check:content
-    result: 13/13 pass
+ - npm run check:content
 ---
 
 ## Prompt
 
-Read .crew/brief.md and carry it out completely. Merge origin/main into crew/efmp-406-u06-author, resolve every conflict, keep shared registries append-only, commit, and make npm run check:content pass. Scope: EFMP-406 Unit 6 only.
+# Crew job efmp-406-u06-author-conflict2
+
+You are the opencode worker on the B.Ed bilingual textbook repo, working in this checkout on branch `crew/efmp-406-u06-author`.
+Read AGENTS.md first and obey it (CLAUDE.md only imports it): no em dash (U+2014) anywhere, heavy commands only through `scripts/heavy.sh`, never run `npm run build`, a dev server or Playwright, keep all scratch files inside your worktree (for example `.crew/`), never use `/tmp`, never mark G3/G5 done, never self-sign or use
+human initials, never edit the style guide, constitution, ADRs, gate scripts, catalog or an approved content-spec.
+
+## Task
+crew/efmp-406-u06-author conflicts with main (specs/content/efmp-406/tasks.md). Run `git fetch origin && git merge origin/main` on this branch and resolve every conflict. Shared registries (glossary.json, specs/decisions/log.md, specs/gaps.md, specs/content/terminology.csv) are append-only: keep BOTH sides' entries, in main's order then this branch's, and drop exact duplicates. If an ID this branch added (D-YYYY-NNNN, G-YYYY-NN, a glossary key) is already used on main for something else, give this branch's entry the next free ID and update every reference to it in this branch's files. Never change or remove an entry that main already has. Commit the merge, then make `npm run check:content` pass.
+
+## Scope
+EFMP-406 Unit 6 only: its docs/licence and i18n files, its rows and folders under
+`specs/content/efmp-406/`, and `static/img/figures/efmp-406/unit-06/`.
+
+## Continue, do not restart
+Earlier attempts may have left work on this branch. Check `git log origin/main..HEAD` and `git status` and build on it.
+
+## Done when
+1. `npm run check:content` reports no finding that origin/main does not also report (run it, read every
+   failure, fix those in your scope, rerun). Findings that already exist on main belong to other jobs.
+2. All work is committed on this branch with a conventional commit message. Do not push and do not open a PR.
+3. Your final output ends with one line: `CREW-SUMMARY: <what you changed, in one sentence>`.
+4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
+   (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
+
+## Notes from earlier jobs on this unit
+- (efmp-406-u06-author, author, codex) Browser geometry measurement remains pending because the brief prohibits Playwright; non-browser renders were inspected.
+- (efmp-406-u06-author, author, codex) Independent G3/G5 review and Urdu translation remain open.
+- (efmp-406-u06-author, author, codex) Browser geometry measurement remains pending because the brief prohibits Playwright; non-browser renders were inspected.
+
 
 ## Response snapshot
 
-- Fetched origin/main, merged. Single conflict: specs/content/efmp-406/tasks.md.
-- Resolved by keeping main's Unit 3 stage rows first, then this branch's Unit 6 stage rows and authoring-handoff section. No duplicate entries; all IDs distinct.
-- Committed merge. Ran npm run check:content: check:content-status failed because the merge made static/content-status.json stale.
-- Ran npm run build:content-status to regenerate it; all 13 content gates pass.
+Merged origin/main into crew/efmp-406-u06-author, resolved the single conflict in tasks.md preserving both Unit 3 (main) and Unit 6 (branch) stage rows, regenerated static/content-status.json, and confirmed all 13 content gates pass.
 
 ## Outcome
 
-- ✅ Impact: branch now contains all of main (Unit 1 G3 review evidence, Unit 3 author + G2 evidence) alongside this branch's Unit 6 authoring. No content lost.
-- 🧪 Tests: 13/13 content gates pass.
-- 📁 Files: specs/content/efmp-406/tasks.md (conflict resolved), static/content-status.json (regenerated), plus the full main merge tree (Unit 3 docs, figures, sources, concepts, coverage, reviews; Unit 1 G3 review; PHRs).
-- 🔁 Next prompts: G3 independent review and G4 Urdu translation for Unit 6 remain open per the unit's tracker rows.
-- 🧠 Reflection: Only one conflict because this branch's work was Unit 6-only and main's concurrent work was Units 1 and 3. The append-only registry rule was trivially satisfied.
+- Impact: fix for EFMP-406 Unit 6 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 47 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: merged 17 commits from origin/main into crew/efmp-406-u06-author; resolved the only conflict in tasks.md with both sides' entries preserved in order.
-- Decisions the team must respect: main's order precedes this branch's in shared lists; no entries removed.
-- Pending / next owner: G3 en-review (awaiting independent reviewer), G4 ur-translation, G5 ur-review, browser geometry check for Unit 6 (deferred under Playwright prohibition). Next authorised browser session owns the figure geometry check.
-- Paperclip issues affected: null
+- Shipped / changed: Merged origin/main into crew/efmp-406-u06-author, resolved the single conflict in tasks.md preserving both Unit 3 (main) and Unit 6 (branch) stage rows, regenerated static/content-status.json, and confirmed all 13 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Unit 6 G3 review, G4 Urdu translation, G5 review, and the browser geometry check (Playwright-prohibited) remain open; next authorised browser session owns the figure geometry pass.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: content-status.json staleness after merge; resolved with the documented prestart hook.
-- Graders run and results (PASS/FAIL): PASS (13/13 content gates).
-- Prompt variant (if applicable): null
-- Next experiment (smallest change to try): null
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
