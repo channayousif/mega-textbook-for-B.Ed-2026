@@ -74,14 +74,14 @@ The concept graph currently uses جائزہ for evaluation. The translation inst
 ## Validation and limitations
 
 - `npm run check:content`: all 13 gates pass in the final draft state, with no findings to compare against origin/main.
-- Temporary `reviewed` flags on both index files exercised conditional parity, figure and terminology checks. The only two findings were the expected open G4 and G5 rows. Both flags were restored to `draft`.
+- Temporary `reviewed` flags on both index files exercised conditional parity, figure and terminology checks. The retry found only the expected open G4 and G5 pipeline rows and a transient `check:content-status` mismatch caused by the temporary flags. Both flags were restored to `draft`; the generated status file was not changed.
 - Direct structural comparison passed for all five filenames, metadata invariants, heading-level vectors, component counts, imports, numbered-item counts and figure-description equality.
 - All five Urdu pages passed MDX compilation without a site build.
 - `npm run figures:variants:check` passes.
 - Translator's Urdu MCQ solve: ب، ج، ج، الف، ج، ب، ب، ج، ج، ب, matching the translated key. This is a translator check, not independent review.
 - No site build, dev server, Playwright or Chromium was run, as the crew brief explicitly prohibits them. `measure-figure-text.mjs` launches Playwright Chromium too, so SVG text geometry is **not measured**. Desktop, 360px, A4 print, Nastaliq shaping, bidi behaviour and label clipping still need actual inspection. Do not treat the structural checks as rendered evidence.
 
-`translation_status` remains `draft` in every page. No G3/G5 status, signature or reviewer identity was changed. The current translate-unit skill expressly forbids appending a G4 row; the existing open tracker row is preserved. An attempted descriptive edit to that row made the globally generated `static/content-status.json` stale, so it was reverted rather than expanding this unit-only job into global generated state. This file records the translation delivery without changing gate state.
+`translation_status` remains `draft` in every page. No G3/G5 status, signature or reviewer identity was changed. The current translate-unit skill expressly forbids appending a G4 row; the existing open tracker row is preserved. This file records the translation delivery without changing gate state. It is stored under the unit review-record folder because it is translation lifecycle metadata. Keeping it under `translations/unit-05/` added a bound English input and made the existing G2 manifest incomplete; moving it here preserves that manifest without changing English content or review evidence.
 
 ## Next owner
 
