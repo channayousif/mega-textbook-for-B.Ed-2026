@@ -1,12 +1,33 @@
-# EFMP-406 - Unit 2 task tracker
+# EFMP-406 Contemporary Literacies - Task tracker
 
-This crew job records Unit 2 only. Other unit trackers belong to their own authoring jobs. G0/G1 approval is the owner-confirmed D-2026-0075; this author makes no intake or review certification. Catalog insertion remains deferred under that ruling.
+## Status: content spec approved (G0/G1, D-2026-0075..0080); authoring in progress
+
+## Units
+
+| Unit | Title | EN draft | G3 review | UR translation | G5 review | Figures | Notes |
+|---|---|---|---|---|---|---|---|
+| 1 | Concept and Evolution of Literacy | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-02 by the crew author job (claude); G2 gate evidence recorded below; G3 and Urdu remain open |
+| 2 | Contemporary Forms of Literacy | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-02 by the crew author job (claude); G2 gate evidence recorded below; G3 and Urdu remain open |
+| 3 | Literacy, Language, and Society | ☐ | ☐ | ☐ | ☐ | - | |
+| 4 | Literacy in the Digital Era | ☐ | ☐ | ☐ | ☐ | - | |
+| 5 | Pedagogical Approaches to Contemporary Literacy | ☐ | ☐ | ☐ | ☐ | - | |
+| 6 | Issues, Challenges, and Future Directions | ☐ | ☐ | ☐ | ☐ | - | |
+
+**Key:** ▣ = in progress, ☐ = not started, ✓ = done, ✗ = escalated
+
+## Stage rows
+
+`check:pipeline-gate` reads these (`| Unit | Stage | Status | Initials | Notes |`); the last row for a unit and stage is authoritative.
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 2 | G2 en-draft | ▣ | | English draft and governance artifacts authored; G2 evidence blocked by missing course-overview.mdx outside Unit 2 scope |
-| Unit 2 | G3 en-review | ▢ | | Fresh independent reviewer required; no review performed by author |
-| Unit 2 | G4 ur-translation | ▢ | | Separate job; English-only draft with untranslated notices |
-| Unit 2 | G5 ur-review | ▢ | | Pending translation and independent qualified review |
-| Unit 2 | G6 assets | ▣ | | Four original English schematics placed with generated dark variants; visual inspection passed after label repair; required Playwright-based geometry measurement awaits permission under the crew brief |
-| Unit 2 | G7 publish | ▢ | | No publication requested or authorized by this authoring job |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-01/G2/20261102T073045659Z-gates.json |
+| Unit 1 | G3 en-review | ▢ | | awaiting an independent reviewer |
+| Unit 1 | G4 ur-translation | ▢ | | separate job |
+| Unit 1 | G5 ur-review | ▢ | | |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-02/G2/20261102T074938805Z-gates.json |
+| Unit 2 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
+| Unit 2 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notices |
+| Unit 2 | G5 ur-review | ▢ | | |
+| Unit 2 | G6 assets | ▣ | | four original English schematics placed with dark variants; `measure-figure-text` geometry check runs in CI |
+| Unit 2 | G7 publish | ▢ | | no publication requested by this authoring job |
