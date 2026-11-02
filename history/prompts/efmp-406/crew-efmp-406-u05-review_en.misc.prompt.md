@@ -70,7 +70,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Completed independent G3 English review for EFMP-406 Unit 5 with advisory pass disposition, recorded validated evidence report and execution logs, updated tasks.md, and added session PHR.
+Completed independent G3 English review of EFMP-406 Unit 5 with an advisory pass evidence report and execution logs, updated tasks.md, and committed all review artifacts with session PHR.
 
 ## Outcome
 
@@ -82,12 +82,12 @@ Completed independent G3 English review for EFMP-406 Unit 5 with advisory pass d
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Completed independent G3 English review for EFMP-406 Unit 5 with advisory pass disposition, recorded validated evidence report and execution logs, updated tasks.md, and added session PHR.
+- Shipped / changed: Completed independent G3 English review of EFMP-406 Unit 5 with an advisory pass evidence report and execution logs, updated tasks.md, and committed all review artifacts with session PHR.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All seven G3 English criteria verified passing with evidence; all 25 assessment items independently solved; all 8 SVG variants pass geometry.
-  - G3 tracker row in specs/content/efmp-406/tasks.md is updated to open ▢ per ADR-0019; certification remains blocked pending trusted qualification.
+  - All 7 G3 criteria pass, 25 assessment items independently solved, and all 8 SVG variants pass geometry; report validated with advisory pass disposition.
+  - The G3 tracker row in specs/content/efmp-406/tasks.md is updated to open ▢ per ADR-0019; certification remains blocked pending trusted qualification.
   - Unit 5 is ready for Urdu translation (G4 ur-translation) and subsequent independent Urdu review (G5 ur-review).
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
