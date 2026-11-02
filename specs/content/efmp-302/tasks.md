@@ -94,6 +94,8 @@ register pass; `translation_status: reviewed` on all EN and UR unit-01 files;
 | Unit 6 | G5 ur-review | ▣ | | feature-023 cycles complete: r1 revise (one figure defect: fig-U6-7's Urdu variants missing two margin-note boxes, plus six wrong-word findings) repaired at e99c1a2; r2 (`agent-g5-efmp302-u6-feat023-r2.json`, 2026-09-25, run by a fresh reviewer once the harness classifier outage cleared) all ten criteria pass - the cycle-1 repair verified four ways (source bytes, served build, in-render DOM, pixel ink in both variants) with every English path byte-identical to what the G3 and r1 reviewed; escalate on the G3 dependency (G-2026-65) + nine unresolved advisories (register bundle, comparative drops, CON:6-6 label, fig-U6-2 bilingual overflow), recorded as G-2026-68. 12 of 13 concept labels confirmed (CON:6-6 flagged for owner term decision). Row stays open (ADR-0019) |
 | Unit 6 | G6 assets | ▢ | | |
 | Unit 6 | G7 publish | ▢ | | |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-302/reviews/unit-02/G3/20261102T142352Z-g3-desk-dcbd5b6d.json |
+| Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-302/reviews/unit-06/G3/20261102T142352Z-g3-desk-b23badf2.json |
 
 ## Note - Unit 3's revoked provisional tier
 

@@ -165,3 +165,7 @@ the PHR and Paperclip handoff. No G3/G5 certification or publication is claimed.
 | Unit 6 | G5 ur-review | ▢ | | |
 | Unit 6 | G6 assets | ▢ | | 6 schematic figures prompt-only (1 concept-map, 1 flowchart, 1 diagram, 3 table) |
 | Unit 6 | G7 publish | ▢ | | |
+| Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-01/G3/20261102T142352Z-g3-desk-48f5f98c.json |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-03/G3/20261102T142352Z-g3-desk-96017bba.json |
+| Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-05/G3/20261102T142352Z-g3-desk-bb2bba40.json |
+| Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-06/G3/20261102T142352Z-g3-desk-a9fe5033.json |

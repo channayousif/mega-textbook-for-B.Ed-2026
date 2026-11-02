@@ -86,3 +86,5 @@ Only Unit 3 is updated by this authoring job. The approved content-spec is the d
 | Unit 3 | G5 ur-review | ▢ | | Pending translation and independent review; authored concept labels require review |
 | Unit 3 | G6 assets | ▣ | codex | Four English and four Urdu light/dark pairs placed; Urdu geometry and rendered inspection pending under crew browser restriction |
 | Unit 3 | G7 publish | ▢ | | No deploy or PR in this job |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gpks-402/reviews/unit-02/G3/20261102T142352Z-g3-desk-0bc00d63.json |
+| Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gpks-402/reviews/unit-06/G3/20261102T142352Z-g3-desk-9df9dc96.json |
