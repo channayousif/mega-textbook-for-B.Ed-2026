@@ -1,0 +1,280 @@
+{
+  "schema_version": 1,
+  "course_code": "EFMP-406",
+  "unit_no": 5,
+  "stage": "G3",
+  "disposition": "pass",
+  "reviewer_id": "agent:g3-reviewer",
+  "author_run_id": "commit:93a6ad99",
+  "reviewer_run_id": "4df544c3-c825-473c-8c69-940a86171cf5",
+  "model": "Gemini 3.8 Flash (High)",
+  "started_at": "2026-11-02T15:00:25.000Z",
+  "completed_at": "2026-11-02T15:10:00.000Z",
+  "skill_digest": "eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b",
+  "rulings": {
+    "D-2026-0001": "bfd5624024eb20bb942f84aa16e29fdb18bb0afd93455f00a066a8c3878f379d",
+    "D-2026-0053": "0184a477ffbebc5d943a38129d2db9c59f656e468abc89b608aff1d2e93c108c"
+  },
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g3.md": "074c8464b4bc0f2f2b76bbb19707c50b54cb907920407873a4e5d193e866f53f",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "7d22d5e2efac85397549fbf2a9e248a05468ac13b38a9e6557bc3c1d3bf44e65",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/licence-page.schema.json": "3fc99078935af7419b4545d21c7d77d66e80ed847755df38ddc500ee35775a3c",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-3/efmp-406/course-overview.mdx": "f4f773e8c0da02080a785cb751e96f521c224fcd8a24212b3bce6feb90a32a2e",
+    "docs/semester-3/efmp-406/unit-05/index.mdx": "3e509e89ca7356156601eaca0fdf0b89a4f077ced9f8bf81b35c4b85f09651bb",
+    "docs/semester-3/efmp-406/unit-05/topic-01.mdx": "6afca6df14d8fad1c2a25e720fe703f1f596010220d5b3f5ce64045320080bd4",
+    "docs/semester-3/efmp-406/unit-05/topic-02.mdx": "aba48ee7cd5952c0691198d2b97d730a95fff283e7658a66e346fd3b107ea349",
+    "docs/semester-3/efmp-406/unit-05/unit-assessment.mdx": "0385f8b88cfe651706c8d8cee128b3b65a487dab6cd6a53b0319fa3591963960",
+    "docs/semester-3/efmp-406/unit-05/unit-teacher-notes.mdx": "f7f5e2053d44c7ab16b26159638f22911f1453202031c0188941e1707567d645",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "dfaa7045af0a9199dba81a06dab16963cce6221905c506afb73f60fb8ced9625",
+    "scripts/check-no-answer-keys.mjs": "8d3f8cac335c50774ee622d61cb37d987c0393c99e54eff31f2bd042625a78c3",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "8ce3a62bd80534181cf1d74fa92bc3ea2b5d937b3f528e96c2a3e20c5a87047a",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "cc33a878d98865149b248c6a524be4e9d294293ddfaecc443dc19b7ace6af7cf",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "9a37137e672608679b865fc0bda041f15f471905ff78cef3282a04e5f4f3f3ab",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/efmp-406/authoring/unit-05.md": "d27a397a567dcbe6c580952f84abecce86309ee32ede32c62b5e5d5dd547534e",
+    "specs/content/efmp-406/concepts/unit-05.md": "5a4dd6ec0c9e1db1a116b0fa4056f7f2656830dee2269fb6b24d1ef739454a65",
+    "specs/content/efmp-406/content-spec.md": "81fabe77d6b3b5a3626a3b74c4e7058b37adeaf38be4d73f1fb712109a930e16",
+    "specs/content/efmp-406/coverage/unit-05.md": "db115ed9b9efdb3438feaede1a16958715830cf7cc5ffe708e99b06e8ba17731",
+    "specs/content/efmp-406/figures/unit-05.md": "02fe1bb360838d839bd91c58185c8ce299a638c5fcac97db81215fba081ee624",
+    "specs/content/efmp-406/sources/unit-05.md": "9fa1c79142df45938310368cd5d2157e7834f90b79ed0d75f771c097bfc9e74c",
+    "specs/content/style-guide.md": "79f6cafc03b436c0e77c49ea658ef9a7a4de408b5c42020be39011a02a00dd7f",
+    "static/img/figures/efmp-406/unit-05/fig-U5-1.dark.svg": "c503f99599e6313c2ac7b3c3cff001b3f9d389523a969083243bdfb61f9d2167",
+    "static/img/figures/efmp-406/unit-05/fig-U5-1.svg": "3f1b1f132922a025673eaec9502723036cb80408f3220a0e5dd0c7960801c215",
+    "static/img/figures/efmp-406/unit-05/fig-U5-2.dark.svg": "b02915a41d756d0c2adb6fb2e8312153fe05749200cfe2f0f4dd71e3e5e6b8e4",
+    "static/img/figures/efmp-406/unit-05/fig-U5-2.svg": "f58b74a34b9a0cc1b3fe83b0eb242cdb830fb18ee4abad7fa53f4695f456d78c",
+    "static/img/figures/efmp-406/unit-05/fig-U5-3.dark.svg": "8e7a03897a824e0cb8d845e8c09954a1a003826e7755e0d9d331aa8f3f52dfa8",
+    "static/img/figures/efmp-406/unit-05/fig-U5-3.svg": "e3138ebc1de3fe4e2fcc88be1d537bb034d3cc2f31242d96fdbf4b6cc9277652",
+    "static/img/figures/efmp-406/unit-05/fig-U5-4.dark.svg": "c979dc0b6b67dd2a02e642e4184549e0fe62d3e31557f93f2bba5a3f0f3317d8",
+    "static/img/figures/efmp-406/unit-05/fig-U5-4.svg": "e6160cb8cf5dc1ffd9f078e3c02a24ccb71b67370876e226b94c4bff1e6cc17b"
+  },
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        "Aligned with official B.Ed (4-Year) Scheme and Course Guide for EFMP-406 Contemporary Literacy (Semester 3), extracted text Scheme-and-Course-guides/extracted-text/3rd 2026.txt:228-310.",
+        "All four Guide Unit 5 bullet topics (:269-273) are directly covered: U5-01 (Learner-centred literacy instruction) in Topic 5.1; U5-02 (Inquiry-based and project-based learning) in Topic 5.1; U5-03 (Integration of ICT in literacy teaching) in Topic 5.2; U5-04 (Assessment and evaluation of literacy skills) in Topic 5.2.",
+        "Maps to Guide Learning Outcomes 4 (\"Apply contemporary literacy teaching strategies in classroom settings\", SLO:EFMP-406-5-1) and 5 (\"Design literacy activities that promote critical thinking and learner engagement\", SLO:EFMP-406-5-2).",
+        "Approved content specification G0/G1 authority in specs/content/efmp-406/content-spec.md:256-299 (under decisions D-2026-0075..0080); coverage matrix verified in specs/content/efmp-406/coverage/unit-05.md:5-12."
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "pass",
+      "evidence": [
+        "All 4 sources cited in specs/content/efmp-406/sources/unit-05.md:5-10 verified against bound source texts in specs/content/efmp-406/sources/texts/.",
+        "minott-2011-critical (Minott, 2011): Used in Topic 5.1 (topic-01.mdx:49-57) for teacher tasks in a critical reading classroom (time for judgement, guiding evaluations, questioning, multiple viewpoints, journals); honest declaration that text was read from Semantic Scholar abstract due to repository HTTP 403.",
+        "gasque-2016-inquiry (Gasque, 2016): Full text read from SciELO Wayback Machine PDF; supports Dewey's 4 conditions (topic-01.mdx:85-92), research project parts adapted into 7 inquiry stages (topic-01.mdx:94-110), information literacy definition, Harada & Yoshina's 8 features, Yu et al. finding on ICT vs IL (topic-02.mdx:77), and continuous assessment in projects (topic-02.mdx:126).",
+        "hafifah-2020-ict (Hafifah & Sulistyo, 2020): Full text read from DergiPark PDF; accurately cites survey of 280 Indonesian lecturers, training/frequency correlations, facilities/training/support barriers (topic-02.mdx:42-47), and technology taking on teacher roles; notes context is Indonesian higher education with cautious application to Pakistan.",
+        "rti-2016-egra (RTI International, 2016): Full text read from USAID/RTI PDF; accurately cites assessment continuum (examinations, surveys, classroom assessments) after Kanjee (2009), low-stakes classroom purpose (topic-02.mdx:90), EGRA oral individual format, subtasks, and explicit warnings that no single instrument measures all reading skills and that oral assessments complement written tests (topic-02.mdx:92, 122).",
+        "All instructional examples (Mr Akbar, Ms Rubina, Mr Sajjad, Ms Hina, Zainab, Bilal) are clearly presented as original hypothetical teaching cases without statistical claims."
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "Complete coverage of all 4 sub-topics across Topic 5.1 and Topic 5.2: U5-01 (Learner-centred literacy instruction), U5-02 (Inquiry-based and project-based learning), U5-03 (Integration of ICT in literacy teaching), U5-04 (Assessment and evaluation of literacy skills).",
+        "Rigorous execution of the standard 9-part learning cycle in both topics: real classroom situation, explanation with worked examples and misconception correction, activity with group guidance and timing, check your understanding (5 retrieval items), summary, self-assessment checklist, practicum school task, summative task with mini-rubric, and further reading.",
+        "Word count and reading time: index.mdx (462 words, 3 min), topic-01.mdx (2,700 words, 15 min), topic-02.mdx (2,910 words, 16 min), unit-assessment.mdx (3,740 words, 20 min), unit-teacher-notes.mdx (750 words, 4 min). Total: 58 min, within the approved 55-75 min depth budget. check:depth-gate exits 0."
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "pass",
+      "evidence": [
+        "Independent solution of all 25 assessment items in docs/semester-3/efmp-406/unit-05/unit-assessment.mdx:",
+        "MCQs: 10 items (MCQ-01 to MCQ-05 Topic 5.1; MCQ-06 to MCQ-10 Topic 5.2). Independently solved: 1-B, 2-C, 3-C, 4-A, 5-C, 6-B, 7-B, 8-C, 9-C, 10-B. All derived answers match the answer key exactly. Clear distractors, unambiguous stems, correct single answers.",
+        "RRQs: 10 items (RRQ-01 to RRQ-05 Topic 5.1; RRQ-06 to RRQ-10 Topic 5.2). Independently verified; each has complete model answer, length constraint, and explicit analytic mark allocation.",
+        "ERQs: 5 items (ERQ-01/02 Topic 5.1; ERQ-03/04 Topic 5.2; ERQ-05 integrative). Each carries an analytic 4-criterion rubric (0-3 marks each, total 12 marks) with explicit Analyze/Evaluate/Create demand. ERQ-05 fulfills the exact content-spec requirement for designing a Grade 5 literacy activity with an assessment plan.",
+        "Bloom taxonomy progression: MCQs Remember to Apply, RRQs Understand to Analyze, ERQs Analyze to Evaluate/Create; check:bloom-bands exits 0.",
+        "Concept graph: all 25 items mapped to concepts CON:EFMP-406-5-1 through CON:EFMP-406-5-12 in specs/content/efmp-406/concepts/unit-05.md:7-18; check:concept-graph exits 0.",
+        "Marking guidance and answer keys are strictly quarantined in the bounded final section; check:no-answer-keys exits 0."
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "pass",
+      "evidence": [
+        "Monotonic heading hierarchy verified across all 5 unit MDX files (index.mdx, topic-01.mdx, topic-02.mdx, unit-assessment.mdx, unit-teacher-notes.mdx) with zero skipped levels.",
+        "Alt text on all four <Figure> tags matches SVG <desc> text and figures/unit-05.md manifest declarations.",
+        "SVG sources carry role=\"img\", aria-labelledby=\"t d\", <title id=\"t\">, and <desc id=\"d\"> elements with matching descriptions.",
+        "scripts/measure-figure-text.mjs exits 0 across all 8 SVG variants (4 light, 4 dark twins) with zero text overflow (viewBox width 780, widest text x=768.4) and zero wordmark collision (wordmark starts at x=675.7).",
+        "All four SVGs rasterized to PNG at 780px width via Sharp with :root CSS variables resolved, verified non-blank with high contrast and mean channel luminances 233.8 to 244.5.",
+        "Zero em dashes across all unit files; check:no-em-dash exits 0.",
+        "Mobile tables and print layout verified: display: block; overflow-x: auto; width: fit-content; PrintHandout component on topics and assessment."
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "Clear plain-language definitions on first use for all core concepts: learner-centred literacy instruction, teacher-centred lesson, inquiry-based learning, project-based learning, information literacy, ICT, ICT integration, ICT literacy, assessment, evaluation, formative assessment, summative assessment, examinations, assessment surveys, classroom assessments, reading record.",
+        "Appropriate vocabulary, syntactic simplicity, and accessible tone for HSC/intermediate graduates without prior specialist academic pedagogy training.",
+        "Authentic Pakistani classroom and community context grounding (Mirpurkhas government school, safe drinking water inquiry, Sukkur bazaar signs project, Hyderabad private school projector, Badin village school offline phone, Thatta school without internet, Zainab and Bilal reading records).",
+        "Clear distinction between general pedagogical principles and illustrative fictional teaching scenarios."
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": [
+        "Full nine-part learning cycle strictly maintained across both topics (situation -> Explanation -> Activity -> Check your understanding -> Summary -> Self-assessment checklist -> Practicum -> Summative task -> Further reading).",
+        "Feasible, zero-cost classroom activities with explicit time and grouping guidance: \"Redesign a lesson\" (35 min, groups of 3-4); \"Assessment toolkit for one lesson\" (35 min, groups of 4).",
+        "Specific misconceptions systematically identified and refuted in both topics: learner-centred means the teacher does nothing; project work is only for science; ICT integration means showing slides; a written test is the only way to assess reading.",
+        "Practicum school tasks provide ethical observation guidance (five-minute interval mapping of teacher vs pupil talk; conducting a 50-word reading record with cooperating teacher permission and pupil privacy respected).",
+        "Comprehensive teacher notes provided (unit-teacher-notes.mdx) covering sequencing, discussion prompts with likely wrong answers, misconception handling, and practical work guidelines."
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Teaching case illustrations and hypothetical examples: Fictional classroom scenarios (Mr Akbar, Ms Rubina, Mr Sajjad, Ms Hina, Zainab, Bilal) are original instructional examples designed for pedagogy and do not represent empirical case studies or official school inspection records."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Headless review tooling constraint: The crew job brief explicitly prohibits running npm run build, a dev server, or Playwright Chromium. Visual, structural, and presentation checks were conducted within permitted host resources via measure-figure-text.mjs (all 8 SVG variants exit 0 with zero overflow or collision), static heading and table container analysis, and Sharp PNG rasterization with CSS variables resolved."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Abstract-level citation for Minott (2011): The publisher full text returned HTTP 403 on 2026-11-02, so citations are strictly limited to findings and teacher tasks reported in the published abstract retrieved via Semantic Scholar."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Mapped reading context for Hafifah & Sulistyo (2020): The study surveyed Indonesian higher education lecturers; lessons are cautiously applied to Pakistani primary and middle school literacy contexts with explicit recognition of contextual differences."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Catalog entry pending owner ruling: EFMP-406 is proposed for Semester 3 in catalog/courses.json but not yet committed pending an owner ruling, as noted in content-spec.md."
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-406/reviews/unit-05/G3/logs-4df544c3/validate-content.txt"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-406/reviews/unit-05/G3/logs-4df544c3/check-depth-gate.txt"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-406/reviews/unit-05/G3/logs-4df544c3/check-figures.txt"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-406/reviews/unit-05/G3/logs-4df544c3/check-no-em-dash.txt"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-406/reviews/unit-05/G3/logs-4df544c3/check-no-answer-keys.txt"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-406/reviews/unit-05/G3/logs-4df544c3/check-docs-sync.txt"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-406/reviews/unit-05/G3/logs-4df544c3/render-review.txt"
+    },
+    {
+      "name": "check:content",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-406/reviews/unit-05/G3/logs-4df544c3/check-content.txt"
+    },
+    {
+      "name": "measure-figure-text",
+      "exit_code": 0,
+      "log_path": "specs/content/efmp-406/reviews/unit-05/G3/logs-4df544c3/measure-figure-text.txt"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/efmp-406/reviews/unit-05/G3/logs-4df544c3/check-content.txt": "487e6975228bac4e78ca6440deb6eec0788120982cac89e9e8ec45ba11d1d07d",
+    "specs/content/efmp-406/reviews/unit-05/G3/logs-4df544c3/check-depth-gate.txt": "15021f8f88122b596e67cfd48c2ff282fde912e1b86bb03c2137bcf9d8e062fd",
+    "specs/content/efmp-406/reviews/unit-05/G3/logs-4df544c3/check-docs-sync.txt": "cbc9f6e4b0b674cb49e2d9b795d81ed78f23dc431cba1130e4d64cf6d0bed749",
+    "specs/content/efmp-406/reviews/unit-05/G3/logs-4df544c3/check-figures.txt": "54a388cb9954b9d2f07f84e5385ac0003b94a6a54023abb188e864346958b04f",
+    "specs/content/efmp-406/reviews/unit-05/G3/logs-4df544c3/check-no-answer-keys.txt": "539ba62183931f332c562e346956452b9cf751e100de762601b786b497a7d612",
+    "specs/content/efmp-406/reviews/unit-05/G3/logs-4df544c3/check-no-em-dash.txt": "00405490c649d998b589b23505029de9134497966b02ff9ccefb1075aa414dd3",
+    "specs/content/efmp-406/reviews/unit-05/G3/logs-4df544c3/fig-U5-1.png": "57a470a00f283ec6b0dd0855cdd16876f222583687628871beec307c59ee38b7",
+    "specs/content/efmp-406/reviews/unit-05/G3/logs-4df544c3/fig-U5-2.png": "f90d2c7dd7aad54fbe643623bcee9bbf5f033333d83ab920d5db8cadc5ed21c0",
+    "specs/content/efmp-406/reviews/unit-05/G3/logs-4df544c3/fig-U5-3.png": "acc076103b7982d9a1b627f46db6334b49085fc03cba8888f99acf767feb7655",
+    "specs/content/efmp-406/reviews/unit-05/G3/logs-4df544c3/fig-U5-4.png": "d7fa7f0ff3134dea37d6c729bf70196601797ea50ac4d61c9d83668ba3a7a75c",
+    "specs/content/efmp-406/reviews/unit-05/G3/logs-4df544c3/measure-figure-text.txt": "86b95ac8c23a7aa6fce16527e6bdc62897dee4557ca01c5e923ab78edfbb863b",
+    "specs/content/efmp-406/reviews/unit-05/G3/logs-4df544c3/render-review.txt": "3df86087d1e49618f3e7ab059d0db31d6efcb2772eb8d3917a89c313646130a4",
+    "specs/content/efmp-406/reviews/unit-05/G3/logs-4df544c3/validate-content.txt": "5b3153a9d41a11051bff1d2f0396cf26eaaf00ae79e3b894c202823645c0e6a6"
+  }
+}
