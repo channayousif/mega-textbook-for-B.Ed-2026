@@ -2539,3 +2539,655 @@ Recorded by `agent:evaluator` under `D-2026-0071`, bound to
   decision log may be the cheaper instrument.
 - **Blocks:** the `**Assessment blueprint**` formative wording of GPKS-402 Units 4 and 6 only.
   It blocks nothing else in this spec.
+
+---
+
+```markdown
+## G-2026-155 - EFMP-406 title: the guide says "Contemporary Literacy", the revised Scheme says "Contemporary Literacies"
+
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0075`: the spec is approved as drafted)
+- **Gate:** G0 intake, `identity` criterion (Art. II.3)
+- **Raised by:** agent:evaluator, 2026-10-31, under `D-2026-0075`
+  (`specs/content/efmp-406/intake/manifest.json`, digest `0888f607...53faf`)
+- **Detail:** the Faculty course guide titles the course "Contemporary Literacy"
+  (`Scheme-and-Course-guides/extracted-text/3rd 2026.txt:235`). The revised board Scheme (final
+  authority) lists "Contemporary Literacies" (`B.Ed 4 Year 2026 revised after board.txt:248`), and
+  so does the superseded scheme (`B.Ed 4 Year board.txt:130`). The guide's own body uses the
+  singular throughout (`:242`, `:245`, `:269`, `:277`). The spec's proposed catalog entry follows
+  the Scheme (`content-spec.md:12-14`). The gaps-log header (`:23-24`) holds that each
+  guide-vs-scheme conflict is decided by the owner on its merits, and no ruling covers this title.
+  The difference changes no content.
+- **Needed, and from whom:** the curriculum owner, to state the course's English title of record.
+- **Blocks:** the `identity` criterion for EFMP-406 and the `title_en` of its catalog entry.
+
+---
+
+## G-2026-156 - EFMP-406 has no `catalog/courses.json` entry; adding one re-opens every bound G2/G3 manifest
+
+- **Status:** open (owner approved the proposed entry on 2026-11-02 under `D-2026-0075`; insertion waits for per-course evidence binding)
+- **Gate:** G0 intake, `identity` criterion
+- **Raised by:** agent:evaluator, 2026-10-31, under `D-2026-0075`
+- **Detail:** `catalog/courses.json` Semester 3 is empty. The `_note` calls Semesters 3-8
+  "placeholders pending G0 course intake", and EFMP-406 is not listed. The `identity` criterion
+  compares the catalog with the guide and Scheme, so it cannot pass while there is no entry. The spec
+  states a proposed entry instead (`content-spec.md:12`): `EFMP-406`, `3 (3-0)`,
+  "Major: Professional", Semester 3. This evaluation found the code, credit hours, semester and
+  category consistent with guide and Scheme. The title is `G-2026-155`. `title_ur` ("عصری خواندگیاں")
+  is not determined by any bound input, and "literacy" is not in `specs/content/terminology.csv`.
+  Every G2/G3 manifest binds `catalog/courses.json` whole (open `G-2026-71`), so adding this course
+  stales all outstanding review evidence. The same applies to every other Semester 3 course whose
+  intake runs now.
+- **Needed, and from whom:** the curriculum owner, to rule whether and when Semester 3 entries are
+  added (singly or as one batch), and to approve `title_en` and `title_ur`. Possibly the owner and
+  WebLead together, if `G-2026-71`'s narrowing of the catalog binding is decided first.
+- **Blocks:** the `identity` criterion for EFMP-406; any G2 authoring for the course (`docs/`
+  validation keys on the catalog).
+
+---
+
+## G-2026-157 - EFMP-406: the guide's unit bullets are unnumbered, so `D-2026-0070` item 1 does not settle the topic grouping
+
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0075`: the spec is approved as drafted)
+- **Gate:** G1 unit-spec, `partition` criterion (topic level)
+- **Raised by:** agent:evaluator, 2026-10-31, under `D-2026-0075`
+- **Detail:** the guide gives six named units, each with four **unnumbered** bullets
+  (`3rd 2026.txt:249-278`). `D-2026-0070` item 1 requires "each topic is one of that chapter's
+  numbered sections (Topic N.k teaches guide section N.k)". The spec groups each unit's four
+  bullets two-and-two into two topics (`### Topic list` in each `## Unit N`; drafting note 3,
+  `content-spec.md:350`). That grouping is the drafter's construction. Under the alternative
+  reading (a bullet is a section, one topic per bullet), each unit has four topics, and the
+  blueprint breaks against itself:
+  - "2 ERQs per topic + 1" would need 9 ERQs in a bank of 5;
+  - the per-topic formative floor gives 12 items, above "5-8", and `D-2026-0072` rules only on
+    three-topic units;
+  - the figure plan would need 8 figures per unit.
+- **Needed, and from whom:** the curriculum owner, to rule whether unnumbered guide bullets count
+  as "sections" under `D-2026-0070` item 1. If they do, the owner should also rule the formative
+  count for four-topic units, which `D-2026-0072` leaves open. Other Semester 3 guides with
+  unnumbered bullets raise the same question.
+- **Blocks:** the `### Topic list` of all six EFMP-406 units. `D-2026-0075`'s blueprint and
+  structure approvals are contingent on the grouping as drafted.
+
+---
+
+## G-2026-158 - EFMP-406: the guide block's reading list, project and school-visit strategy are about inclusive education, not literacy
+
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0075`: the spec is approved as drafted)
+- **Gate:** G0 intake, `readings` criterion (Art. II.3: which document is authoritative)
+- **Raised by:** agent:evaluator, 2026-10-31, under `D-2026-0075`
+- **Detail:** the EFMP-406 block's outline (`3rd 2026.txt:248-278`) and outcomes (`:242-246`) are
+  about literacy. Its references (`:290-295`) are about inclusive education: Booth and Ainscow 2016;
+  Mittler 2019; Loreman, Deppeler and Harvey 2020; UNESCO 2017; Government of Pakistan 2018. So are
+  its 30% project, "Developing an inclusive lesson plan" (`:288`), and its "Visits to inclusive
+  schools" strategy (`:283`). The spec concedes the list supports one checklist row of 24 (U6-02)
+  and relies on it for no literacy claim (`content-spec.md:39`). `G-2026-73` already reported this
+  list "may be a misplaced list" (EFMP-305 has none), for information only, and `D-2026-0053` did
+  not rule on it. Two entries also carry years that resolve to no edition in Crossref or OpenAlex:
+  Mittler 2019 (Crossref `10.4324/9780203386149` is the 2012 Routledge reissue of the 2000 work)
+  and Loreman et al. 2020 (2005 and 2010 editions only).
+- **Needed, and from whom:** the curriculum owner, if necessary with the Faculty, to say:
+  - whether the inclusion material in the EFMP-406 block belongs to EFMP-406 or was carried over
+    from another course (EFMP-305);
+  - if it does belong, whether the 30% project stays an inclusive lesson plan;
+  - which editions the two unresolved years stand for.
+- **Blocks:** the `readings` criterion for EFMP-406; `## Reading list` "Guide-listed" (`:37-47`);
+  Unit 6 `**Mapped readings**`. It informs, but does not block, the course-wide assessment line.
+
+---
+
+## G-2026-159 - EFMP-406: author-selected readings and the open-access floor rely on `D-2026-0053` item 2, which is scoped to Semester 2
+
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0075`: the spec is approved as drafted)
+- **Gate:** G0 intake, `readings` criterion
+- **Raised by:** agent:evaluator, 2026-10-31, under `D-2026-0075`
+- **Detail:** with the guide's list unusable for Units 1-5 (`G-2026-158`), the spec binds eleven
+  author-selected open-access works and declares `open_access_floor: {default: 1}`, both "under
+  `D-2026-0053` item 2" (`content-spec.md:35`, `:51`). `D-2026-0053`'s scope is "Semester 2 courses
+  EFMP-305, EFMP-303, GQUR-301, GENG-301, GSOS-301, GPKS-402", and no confirmed decision extends it.
+  The eleven works themselves check out: each DOI resolves in Crossref to the cited work, each is
+  open access in OpenAlex, and every unit maps at least one. Only the authority to use them is in
+  question.
+- **Needed, and from whom:** the curriculum owner, to rule whether `D-2026-0053` item 2 (verified
+  author-selected readings, labelled as such, with at least one open-access source per unit in the
+  mapping form) extends to EFMP-406, or to all Semester 3 courses. The other Semester 3 intakes
+  running now may raise the same question, and one ruling can answer them all.
+- **Blocks:** the `readings` criterion for EFMP-406; `## Reading list` "Author-selected" (`:49-65`);
+  every unit's `**Mapped readings**`; the front-matter `open_access_floor` declaration.
+```
+
+IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`, `G-2026-159`.
+`G-2026-160` to `G-2026-164` are unused.
+
+---
+
+## G-2026-165 - EFMP-407 is not in `catalog/courses.json`, and adding it re-opens every bound G2/G3 manifest
+
+- **Status:** open (owner approved the proposed entry on 2026-11-02 under `D-2026-0076`; insertion waits for per-course evidence binding)
+- **Gate:** G0 intake (identity criterion)
+- **Source:** `D-2026-0076`
+- **Detail:** The identity criterion compares `catalog/courses.json` with the guide and the
+  Scheme. The catalog's Semester 3 group is empty, so the spec states a proposed entry instead
+  (`specs/content/efmp-407/content-spec.md:12`). The proposed values agree with the guide
+  (`3rd 2026.txt:316-324`) and the revised Scheme (`B.Ed 4 Year 2026 revised after
+  board.txt:258-264`), and `D-2026-0076` item 1 approves those values. Every G2 and G3 evidence
+  manifest binds `catalog/courses.json` whole, so adding any course voids the evidence of every
+  reviewed unit. This is a question about process and timing, which the guide cannot answer. The
+  same question applies to every Semester 3 spec in this intake batch (EFMP-406, EFPG-401,
+  GICP-400, GISS-401, GUHQ-301), which have no catalog entries either. The proposed `title_ur` is
+  not guide-given and not banked in `terminology.csv`.
+- **Needed, and from whom:** the curriculum owner, to decide when and how Semester 3 courses
+  enter the catalog. For example, the owner could add them all in one change before Semester 3
+  authoring, or narrow what G2/G3 manifests bind from the catalog first. The owner should also
+  confirm the Urdu title.
+- **Blocks:** authoring and publication of any unit under `docs/semester-3/efmp-407/`. It does not
+  block the other approved criteria of `D-2026-0076`.
+
+## G-2026-166 - EFMP-407's author-selected readings and open-access floor cite `D-2026-0053` item 2, which is scoped to Semester 2
+
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0076`: the spec is approved as drafted)
+- **Gate:** G0 intake (readings criterion)
+- **Source:** `D-2026-0076`
+- **Detail:** The spec adds 14 author-selected open-access works (`content-spec.md:57-70`) and
+  declares `open_access_floor: {default: 1}`. Its stated authority is `D-2026-0053` item 2
+  (`:34`, `:53`). `D-2026-0053`'s scope line names only the Semester 2 courses EFMP-305,
+  EFMP-303, GQUR-301, GENG-301, GSOS-301 and GPKS-402. The course guide does not determine
+  author-selected readings. The guide's own list (`3rd 2026.txt:380-387`) exists but is defective
+  (`G-2026-167`), which is the condition item 2 addresses, but applying the ruling here would
+  extend an owner ruling past its declared scope. The 14 works themselves all verify:
+  - Crossref metadata and OpenAlex IDs match;
+  - every licence or open-access claim matches OpenAlex;
+  - every unit maps at least one open-access source;
+  - the `Units` column agrees with every `**Mapped readings**` line.
+
+  The same citation of `D-2026-0053` appears in at least the `efmp-406`, `efpg-401` and
+  `gicp-400` specs.
+- **Needed, and from whom:** the curriculum owner, to say whether `D-2026-0053` item 2 (and,
+  if wanted, item 4) extends to Semester 3 or corpus-wide.
+- **Blocks:** the readings criterion for all eight EFMP-407 units, and with it every unit's
+  open-access floor.
+
+## G-2026-167 - EFMP-407 guide reading list: entries that do not resolve as printed
+
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0076`: the spec is approved as drafted)
+- **Gate:** G0 intake (readings criterion)
+- **Source:** `D-2026-0076`
+- **Detail:** All lookups below use Crossref and OpenAlex, 2026-10-31.
+  1. **Jones, Selby & Sterling (2010)** (`3rd 2026.txt:381`). The guide's DOI
+     `10.4324/9781849770712` is Poore, *Changing Landscapes* (Routledge, 2012). The book cited is
+     `10.4324/9781849776516` (Routledge, 2010), which the spec substitutes.
+  2. **Orr (1992)** (`:383`). The entry mixes two works:
+     - Orr, *Ecological Literacy: Education and the Transition to a Postmodern World* (SUNY, 1992;
+       OpenAlex W1567553845) matches the author, publisher and year.
+     - Stone & Barlow (eds.), *Ecological Literacy: Educating Our Children for a Sustainable World*
+       (2005; OpenAlex W351659903) matches the subtitle.
+
+     The spec picks Orr and does not name the other candidate.
+  3. **Tilbury & Wortman (2004)** (`:384`). The work is real: a 2005 review has DOI
+     `10.1017/s0814062600001026`. The drafter reports that the guide's IUCN URL (node 8327) is an
+     unrelated record. The evaluator did not test this.
+  4. **UNESCO (2014) DESD final report** (`:386`). There is no Crossref or OpenAlex record, and
+     unesdoc returns HTTP 403 to this host (`D-2026-0001`).
+  5. **Government of Pakistan (2021) National SDG framework** (`:382`). The guide gives no locator
+     and qualifies its own citation. There is no registry record, and the year is unverified.
+
+  The guide is internally inconsistent on items 1 and 2 and silent on item 5's locator.
+  Correcting a guide citation against an external registry is not something the guide determines.
+  For Semester 2 the owner directed such corrections (`D-2026-0053` item 2), but that direction
+  does not reach this course.
+- **Needed, and from whom:** the curriculum owner, to rule four things:
+  - whether the spec may carry corrected locators for guide entries;
+  - which *Ecological Literacy* the guide requires;
+  - whether UNESCO 2014 and the Government of Pakistan framework may stand flagged under
+    `D-2026-0001`;
+  - whether the guide's misprints should be reported to the Faculty.
+- **Blocks:** the readings criterion. The rows affected are jones-selby-sterling-2010,
+  orr-1992-ecoliteracy, tilbury-wortman-2004, unesco-2014-desd-final and
+  gop-national-sdg-framework (Units 1, 2, 3, 4, 7, 8).
+
+## G-2026-168 - EFMP-407 Topic 3.2 teaches Pakistan's National SDG Framework with no retrievable source for it
+
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0076`: the spec is approved as drafted)
+- **Gate:** G0 intake (readings criterion); G1 unit-spec for Unit 3
+- **Source:** `D-2026-0076`
+- **Detail:** Guide section `3rd 2026.txt:351` is "Pakistan's National SDG Framework", so the
+  document is the topic itself. Its only bound reading is gop-national-sdg-framework, which has no
+  working locator (`content-spec.md:44`). Unit 3's other mapped readings (akkari-maleq-2020-gce,
+  khoo-jorgensen-2021, unesco-2017-esd-objectives) are not about Pakistan's framework.
+  - fig-U3-3 plans "how the national framework passes priorities from federal to provincial plans
+    and to schools", and fig-U3-4 plans "selected national priority goals" (`:221-222`). Both
+    need the framework's content.
+  - Drafting note 2 (`:466`) says "No unit relies on a figure from it", and the row note says "no
+    unit relies on it for a specific figure" (`:44`). Both statements are contradicted by these
+    figures and by Topic 3.2.
+  - Unit 7's policy timeline fig-U7-1 also maps to the framework (`:404`, `:407`).
+
+  The style guide (`:290-293`) allows a sub-topic with no findable source to be covered from the
+  guide and general knowledge with a `no-external-source` row, but it requires the gap to be
+  escalated, which this entry does.
+- **Needed, and from whom:**
+  - The curriculum owner, to choose one of three routes: provide a retrievable copy of the
+    framework; authorise a verified substitute that describes it (which depends on
+    `G-2026-166`); or rule that Topic 3.2 is taught at title level with that limit disclosed and
+    the figure plans narrowed.
+  - The author, to correct drafting note 2 and the row note whichever route is chosen.
+- **Blocks:** Unit 3 Topic 3.2 (U3-03, fig-U3-3, fig-U3-4), and the sourcing of fig-U7-1.
+
+## G-2026-169 - EFMP-407 Unit 1: the guide lists "Brundtland" as a global conference; the spec teaches that as a misconception
+
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0076`: the spec is approved as drafted)
+- **Gate:** G1 unit-spec (coverage criterion, framing only)
+- **Source:** `D-2026-0076`
+- **Detail:** The guide's section 1.2 is "Major global conferences (Stockholm, Brundtland,
+  Rio+20)" (`3rd 2026.txt:343`). The spec covers the item once (U1-03, `content-spec.md:104`),
+  and the row is approved. Its framing departs from the guide in four places:
+  - U1-03 names it "The Brundtland Report, *Our Common Future* (1987)".
+  - The topic keeps the title "The global conferences that shaped the idea" (`:113`).
+  - fig-U1-4 compares "the three milestones" on "who met" (`:128`).
+  - The unit lists "the Brundtland Report was a conference" as a common misconception (`:120`).
+
+  So the unit would teach the guide's own wording as an error, and student-teachers examined
+  against the guide may meet the guide's framing. Whether to teach against the guide's text is a
+  guide-versus-world question the guide does not settle. The precedent is `G-2026-102` (EFMP-305
+  statute), which the owner ruled in `D-2026-0053` item 7. Relatedly, the spec correctly does
+  not add the 1992 Rio Earth Summit as a sub-topic. The owner may wish to say whether U1-01's
+  "evolution of SD" prose and the fig-U1-3 timeline may mention it.
+- **Needed, and from whom:** the curriculum owner, to rule how Topic 1.2 presents Brundtland.
+  The options include: as the 1987 commission report, noting the guide's wording; as the guide
+  words it; or as a report placed among conferences, without a misconception line.
+- **Blocks:** Unit 1 Topic 1.2: U1-03's wording, the topic title, fig-U1-3, fig-U1-4 and the
+  Brundtland misconception line.
+
+---
+
+## G-2026-175 - EFPG-401 is not in `catalog/courses.json`; its entry and `bilingual` flag need an owner ruling
+
+- **Status:** open (owner approved the proposed entry on 2026-11-02 under `D-2026-0077`; insertion waits for per-course evidence binding)
+- **Gate:** G0 intake (identity criterion)
+- **Source:** `D-2026-0077`
+- **Detail:** The guide (`3rd 2026.txt:6-15`) and the revised Scheme (`B.Ed 4 Year 2026 revised
+  after board.txt:268-278`) agree on EFPG-401, "Teaching of English", 3 (3-0), Major Pedagogy
+  Course - I, Semester III, and the spec's proposed entry (`specs/content/efpg-401/content-spec.md:12`)
+  matches them. But `catalog/courses.json` Semester 3 is empty, so the identity criterion, which
+  reads the catalog, cannot be checked. Adding the entry changes a file every G2/G3 evidence
+  manifest binds whole, which re-opens reviewed units corpus-wide. Separately, whether this course
+  carries an Urdu mirror is not guide-determined: the course teaches the teaching of English, and
+  GENG-301, an English-language course, is catalogued `"bilingual": false`.
+- **Needed, and from whom:** the curriculum owner, to (a) authorise adding the EFPG-401 entry (and
+  say when, given the manifest re-opening), and (b) say whether it is bilingual.
+- **Blocks:** the identity criterion and the spec's move to `status: approved`. Nothing else.
+
+## G-2026-176 - Units with four to seven topics: the formative item count is ruled by neither the style guide nor D-2026-0072
+
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0077`: the spec is approved as drafted)
+- **Gate:** G1 unit-spec (blueprint criterion)
+- **Source:** `D-2026-0077`
+- **Detail:** `specs/content/style-guide.md:227` sets "Formative: 5-8 items"; the per-topic floor
+  (`:236-237`, enforced by the depth gate) requires >= 3 items per topic. `D-2026-0072` resolved
+  the clash for three-topic units only and states it "Does not rule on units with four or more
+  topics". Because `D-2026-0070` makes each guide section a topic, EFPG-401 has Units 1 (4 topics),
+  2 and 6 (5), 3 (6) and 5 (7). The spec states 12, 15, 15, 18 and 21 formative items,
+  "3 per topic (extends D-2026-0072 ...)" (`content-spec.md:89, 154, 372, 208, 307`). The
+  extension may well be what the owner wants, but no bound input decides it. Other Semester 3
+  specs following `D-2026-0070` are likely to raise the same question.
+- **Needed, and from whom:** the curriculum owner (as owner of the style guide), to say whether
+  `D-2026-0072`'s "3 per topic" extends to units of four or more topics, or what governs them.
+- **Blocks:** the `**Assessment blueprint**` formative line of EFPG-401 Units 1, 2, 3, 5 and 6
+  only.
+
+## G-2026-177 - EFPG-401 Unit 4 derives two checklist rows under D-2026-0053 item 4, which is scoped to Semester 2
+
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0077`: the spec is approved as drafted)
+- **Gate:** G0 intake (coverage, outcomes)
+- **Source:** `D-2026-0077`
+- **Detail:** Guide section 4 has one line, "4.1. Functional approach towards grammar teaching"
+  (`3rd 2026.txt:72`). The spec adds U4-02 "Presenting grammar inductively and deductively" and
+  U4-03 "Practising grammar through meaningful tasks" (`content-spec.md:273-274`), each naming its
+  derivation (objective 3, `:23`; `celce-murcia-1991`; `koca-2024-grammar`), and SLO 4-1 adds
+  "with its presentation and practice" (`:263`). The rows comply with the form `D-2026-0053` item
+  4 permits, but that decision's scope is the six Semester 2 courses. Applying it to a Semester 3
+  course is a scope judgement, not something the guide settles.
+- **Needed, and from whom:** the curriculum owner, to say whether `D-2026-0053` item 4 (derived
+  sub-topics naming their outcome or reading) applies to EFPG-401, or corpus-wide.
+- **Blocks:** rows U4-02 and U4-03 and SLO 4-1's "with its presentation and practice". U4-01 and
+  the rest of Unit 4 are approved.
+
+## G-2026-178 - EFPG-401 reading list: two guide-required books cannot be shown to exist, and Cook's edition is undetermined
+
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0077`: the spec is approved as drafted)
+- **Gate:** G0 intake (readings criterion)
+- **Source:** `D-2026-0077`
+- **Detail:** The guide lists five print books (`3rd 2026.txt:94-101`). Checked 2026-10-31:
+  1. **Mohammad, T. (1998)**, *Modern Approaches to the Teaching of English as Second Language*,
+     Lahore: Majeed Book Depot (`:96-97`): not found in Open Library by title, author or
+     publisher. `D-2026-0001` covers a text that cannot be obtained, not a work that cannot be
+     shown to exist (`G-2026-28`); the spec's "title-level support only" (`content-spec.md:43`)
+     presumes the work is real.
+  2. **Sheikh, N. A. (1998)**, *Teaching of English as a Second Language*, Lahore: "Carvan Book
+     House" (`:101`): not found. The spec silently prints "Caravan" (`content-spec.md:46`).
+  3. **Cook, V. (1991)**, "2nd ed." (`:95`): the work resolves (Open Library OL2943629W), but 1991
+     is the first edition and the 2nd edition is 1996. The guide does not say which it means, and
+     page-level citation differs between them.
+  The other two entries resolve (Celce-Murcia 1991, OL16476622W; Nolasco & Arthur 1987,
+  OL4682039W) and need only determined repairs, listed in `D-2026-0077`. The 13 author-selected
+  open-access rows all resolve and are open access.
+- **Needed, and from whom:** the curriculum owner, to (a) supply a resolvable record for Mohammad
+  and Sheikh or direct that they be recorded unresolvable in the `D-2026-0010` / `G-2026-28`
+  manner (guide-required, bibliographic level only, limit stated at point of use); and (b) say
+  which Cook edition authors cite.
+- **Blocks:** the readings criterion for EFPG-401. Authoring may not bind claims to Mohammad or
+  Sheikh until ruled.
+
+## G-2026-179 - EFPG-401: the guide's dated media (cassette player, video cassettes, VCR) are glossed with modern equivalents the guide does not name
+
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0077`: the spec is approved as drafted)
+- **Gate:** G0 intake (coverage)
+- **Source:** `D-2026-0077`
+- **Detail:** The guide names "Cassette-player" and "Video-Cassettes" for listening
+  (`3rd 2026.txt:35-36`) and "Radio, Cassette player, Language Laboratory" and "Television, VCR,
+  Movies" as AV aids (`:86-87`). The spec keeps these items and adds parenthetical readings:
+  "(audio recordings)" U1-03, "(video)" U1-04, "(audio player)" U6-03, "(video)" U6-04
+  (`content-spec.md:97-98, 380-381`), and plans figures on them (fig-U6-5 "radio, cassette
+  player, mobile phone audio", `:407`; fig-U6-8 video sources, `:410`). The drafter's own note
+  (`:467`) asks for owner confirmation. Whether units teach the named equipment, its present-day
+  equivalent, or both is a scope reading the guide does not determine.
+- **Needed, and from whom:** the curriculum owner, to say whether authors may teach the guide's
+  media through their modern equivalents (and whether the obsolete equipment is still to be
+  taught).
+- **Blocks:** the parenthetical glosses on U1-03, U1-04, U6-03 and U6-04 and figures fig-U6-5 and
+  fig-U6-8 insofar as they rest on them. The guide-worded rows themselves are approved.
+
+---
+
+## G-2026-185 - GICP-400 has no `catalog/courses.json` entry; adding one re-opens every bound G2/G3 manifest
+
+- **Status:** open (owner approved the proposed entry on 2026-11-02 under `D-2026-0078`; insertion waits for per-course evidence binding)
+- **Gate:** G0 intake (identity criterion)
+- **Source:** `D-2026-0078`
+- **Detail:** The `catalog/courses.json` Semester 3 group is empty. The spec states a "Proposed
+  catalog entry" instead (`specs/content/gicp-400/content-spec.md:12`), because every G2 and G3
+  evidence manifest binds the catalog whole, so adding a course stales them all.
+  - **Approved under `D-2026-0078`:** the entry's code, title, credit hours `2 (2-0)`,
+    Semester 3 and category General Education match the guide (`3rd 2026.txt:573-574`) and the
+    revised Scheme (`B.Ed 4 Year 2026 revised after board.txt:234-240`).
+  - **Not guide-given:** the Urdu title `نظریہ اور آئینِ پاکستان`, which is a translation choice.
+  - Likely common to all six Semester 3 intakes run on 2026-10-31.
+- **Needed, and from whom:** the curriculum owner, to rule:
+  1. whether and when Semester 3 courses enter the catalog, given the manifest cost (one batched
+     addition, or a change to what G2/G3 manifests bind);
+  2. on confirming the Urdu title.
+- **Blocks:** the identity criterion's catalog record. Unit authoring and any G2 manifest for
+  GICP-400 cannot bind a catalog entry that does not exist.
+
+## G-2026-186 - GICP-400 intake: the seven-unit partition is the spec's construction over a guide that gives only a week table
+
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0078`: the spec is approved as drafted)
+- **Gate:** G0 intake / G1 unit-spec (partition criterion)
+- **Source:** `D-2026-0078`
+- **Detail:** The guide (`3rd 2026.txt:583-646`) gives 16 titled weeks and no unit or chapter
+  headings. The spec (`content-spec.md:61-74`) groups them as:
+
+  | Unit | Weeks | Teaching weeks |
+  |---|---|---|
+  | 1 Ideology, Constitution and the Ideological Foundations of Pakistan | 1-2 | 2 |
+  | 2 Muslim Political Thought and the Pakistan Movement | 3-4 | 2 |
+  | 3 Constitution-Making, 1947-1962 | 5-6 | 2 |
+  | 4 Constitutional Crises and the Making of the 1973 Constitution | 7-9 | 3 |
+  | 5 The 1973 Constitution: Features, Fundamental Rights and Principles of Policy | 10-12 | 3 |
+  | 6 Structure of Government and Constitutional Amendments | 13-14 | 2 |
+  | 7 Education for Ideology and the Constitution | 15 (single topic) | 1 |
+  | - Review and final assessment | 16 | - |
+
+  **Verified, and determined by the guide:** the blocks are contiguous; no week is reordered or
+  split; each week is one topic carrying its guide title; and the unit opening lines, the schedule
+  and the checklist `Guide ref` cells agree.
+
+  **Not determined by the guide:** the number of units, the boundaries, and the single-week
+  Unit 7. The spec cites:
+  - `D-2026-0053` item 1, which confirms only six named Semester 2 groupings;
+  - `D-2026-0070` item 1, which permits grouping where a guide gives only weeks but chooses no
+    grouping.
+- **Needed, and from whom:** the curriculum owner, to do one of:
+  - confirm the 2/2/2/3/3/2/1 grouping above;
+  - supply another grouping;
+  - extend `D-2026-0053` item 1 to Semester 3.
+- **Blocks:** the `## Week schedule` table and the boundaries of all seven units. It does not
+  block the sub-topic checklists, whose rows and `Guide ref` weeks are guide-determined.
+
+## G-2026-187 - GICP-400 reading list: the guide's "Ishtiaq Husain Qureshi. The Pakistan Movement" does not resolve to a work
+
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0078`: the spec is approved as drafted)
+- **Gate:** G0 intake (readings criterion)
+- **Source:** `D-2026-0078`
+- **Detail:** `3rd 2026.txt:650` lists "Ishtiaq Husain Qureshi. The Pakistan Movement". On
+  2026-10-31, Open Library listed 36 works by Qureshi and none had that title; a title-plus-author
+  search returned 0. The spec binds key `qureshi-struggle` to *The Struggle for Pakistan*
+  (University of Karachi, 1965; OL11551W) "pending the owner's confirmation" (`content-spec.md:43`;
+  drafting note 3, `:410`). Other candidates exist, among them *A Nation Born of Sacrifice* (1976)
+  and *Pakistan* (1950). Which work the guide intends is not determined by the guide.
+- **Needed, and from whom:** the curriculum owner (or the guide's issuing department), to name the
+  intended work, or to rule that the entry be dropped as unresolvable.
+- **Blocks:** the `qureshi-struggle` row (`:43`) and Unit 2's Mapped readings (`:155`).
+
+## G-2026-188 - GICP-400 binds author-selected readings and an open-access floor under `D-2026-0053` item 2, a ruling scoped to Semester 2
+
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0078`: the spec is approved as drafted)
+- **Gate:** G0 intake (readings criterion)
+- **Source:** `D-2026-0078`
+- **Detail:** The spec's `### Author-selected (open access)` table (`content-spec.md:46-59`) cites
+  `D-2026-0053` item 2 as its authority (`:36`, `:48`), as does its
+  `open_access_floor: {default: 1}` front matter (`:4-5`). That ruling's Scope is six named
+  Semester 2 courses. All seven rows are real and open access: the DOIs resolve on Crossref, the
+  W-IDs on OpenAlex, and the Act at legislation.gov.uk returns HTTP 200. Their *authority* is the
+  question, not their reality. Likely common to all six Semester 3 intakes run on 2026-10-31.
+- **Needed, and from whom:** the curriculum owner, to extend `D-2026-0053` item 2, the
+  author-selected readings and the per-unit open-access floor, to Semester 3 (or to GICP-400), or
+  to rule otherwise.
+- **Blocks:** the author-selected rows and the open-access floor, and with them the open-access
+  coverage of every unit. Separately, the two author repairs listed in `D-2026-0078` (the Unit 3
+  Constitution mapping, and a post-2018 source for U6-05) are guide-determined and need no ruling.
+
+## G-2026-189 - GICP-400: objective 4 and the course description name "duties of citizens", but no week of the guide teaches them
+
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0078`: the spec is approved as drafted)
+- **Gate:** G0 intake / G1 unit-spec (outcomes and coverage criteria)
+- **Source:** `D-2026-0078`
+- **Detail:** This is a within-guide inconsistency:
+  - Course Objective 4 reads "Understand fundamental rights and duties of citizens"
+    (`3rd 2026.txt:581`), and the Course Description names "the rights and duties of citizens"
+    (`:576`).
+  - The weekly breakdown (`:585-646`) teaches fundamental rights (Week 11, `:624-627`) and no
+    duties.
+  - The spec follows the weekly breakdown: "duties" appears only in the reproduced objective
+    (`content-spec.md:22`) and in a figure about state duties (`:310`).
+
+  Adding a citizens' duties sub-topic (for example under Topic 5.2) would be an addition. The
+  outcome-derived sub-topic permission in `D-2026-0053` item 4 is scoped to Semester 2. This is
+  not a numbering slip the evaluator may resolve.
+- **Needed, and from whom:** the curriculum owner, to rule whether citizens' duties are taught as
+  a derived sub-topic, and where, or whether objective 4 is met by the rights content alone.
+- **Blocks:** any duties-of-citizens checklist row or SLO wording. It does not block the
+  approved SLO traces or the existing 44 checklist rows.
+
+---
+
+## G-2026-195 - GISS-401 intake: the seven-unit partition is the spec's construction over a guide that gives only a week table
+
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0079`: the spec is approved as drafted)
+- **Gate:** G0 intake / G1 unit-spec (partition criterion)
+- **Source:** `D-2026-0079`
+- **Detail:** The guide's "Course Contents / Weekly Breakdown" (`3rd 2026.txt:407-469`) gives
+  sixteen titled weeks, Week 16 "Review and Final Assessment" (`:467-469`), and no unit or
+  chapter headings. The spec (`content-spec.md:61-70`) proposes:
+
+  | Unit | Guide weeks | Topics |
+  |---|---|---|
+  | 1 Introduction to Islamic Studies and the Fundamental Beliefs of Islam | 1-2 | 2 |
+  | 2 Sources of Islamic Knowledge: the Qur'an and the Sunnah | 3-5 | 3 |
+  | 3 Worship and the Moral System of Islam | 6-7 | 2 |
+  | 4 The Social System and the State in Islam | 8-9 | 2 |
+  | 5 The Economic and Political Systems of Islam | 10-11 | 2 |
+  | 6 Islam, Education, Civilization and Contemporary Issues | 12-14 | 3 |
+  | 7 Islamic Ethics in Professional Life | 15 | 1 |
+  | none | 16 (review) | - |
+
+  Verified: contiguous weeks, no week split, no topic reordered, each topic one guide week under
+  its guide title, all line references correct. Not determined by the guide: seven units, the
+  boundaries, the single-week Unit 7, and Week 16 carried as no unit. `D-2026-0070` item 1 permits
+  grouping a bare week table but confirms no particular grouping; `D-2026-0053` item 1, which the
+  spec cites (`:59`), confirmed named Semester 2 groupings only. Fifteen one-week units is an
+  equally guide-faithful alternative.
+- **Needed, and from whom:** the curriculum owner, to confirm the seven-unit grouping above,
+  choose one unit per week, or supply another; and to say how Week 16's course review and student
+  presentations are carried.
+- **Blocks:** the `partition` criterion of `D-2026-0079`; the `## Week schedule` and unit
+  boundaries of GISS-401. Not the checklists, whose guide references are correct.
+
+## G-2026-196 - GISS-401 has no `catalog/courses.json` entry; adding one re-opens bound evidence corpus-wide
+
+- **Status:** open (owner approved the proposed entry on 2026-11-02 under `D-2026-0079`; insertion waits for per-course evidence binding)
+- **Gate:** G0 intake (identity criterion)
+- **Source:** `D-2026-0079`
+- **Detail:** `catalog/courses.json:109-113` lists Semester 3 with `"courses": []`. The spec
+  states a proposed entry instead (`content-spec.md:12`): `{"code": "GISS-401", "title_en":
+  "Islamic Studies", "title_ur": "اسلامیات", "credit_hours": "2 (2-0)", "category": "General
+  Education"}`. Code, title, credit hours, semester and category match the guide (`3rd
+  2026.txt:397-398`) and the revised Scheme (`:218-226`) and are approved in `D-2026-0079`.
+  `title_ur` is not guide-given. The Scheme pairs GETH-401 "Ethics for non-Muslims" as the
+  alternative in the same row (`:228-230`), and the catalog has no field for an alternative.
+  The spec notes that every G2/G3 evidence manifest binds `catalog/courses.json` whole, so
+  adding a course voids existing review evidence. The same question applies to the other
+  Semester 3 specs evaluated in this batch.
+- **Needed, and from whom:** the curriculum owner, to rule whether and when Semester 3 courses
+  are added to the catalog (given the evidence re-open), to confirm `title_ur`, and to say how
+  the GETH-401 alternative is represented.
+- **Blocks:** the catalog leg of the `identity` criterion of `D-2026-0079`; authoring any
+  GISS-401 unit (no catalog entry for the content tree to hang from).
+
+## G-2026-197 - GISS-401 relies on `D-2026-0053` item 2 (author-selected readings, open-access floor), whose scope is Semester 2
+
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0079`: the spec is approved as drafted)
+- **Gate:** G0 intake / G1 unit-spec (readings criterion)
+- **Source:** `D-2026-0079`
+- **Detail:** The guide gives four readings (`3rd 2026.txt:470-474`): the Qur'an (translation and
+  tafseer), Sahih Bukhari and Sahih Muslim, *Islami Nazriya-e-Hayat* (no author given; resolves
+  to Khurshid Ahmad, University of Karachi, 1st ed. 1960), and Maududi, *Towards Understanding
+  Islam*. All four resolve. The spec adds six author-selected open-access articles
+  (`content-spec.md:48-55`, all verified real against Crossref and OpenAlex) and declares
+  `open_access_floor: {default: 1}`, citing `D-2026-0053` item 2 (`:33`, `:46`). That ruling's
+  scope is the six named Semester 2 courses. The guide does not determine adding sources beyond
+  its list, and `G-2026-94` (a self-declared floor) was resolved for Semester 2 only. The
+  question likely recurs for every Semester 3 spec.
+- **Needed, and from whom:** the curriculum owner, to say whether `D-2026-0053` item 2 (and item
+  1, see `G-2026-195`) extends to Semester 3 and later courses, or to rule for GISS-401 alone.
+  Two determined repairs stand regardless: the Unit 1 open-access floor source (needed only if
+  the floor applies) and the Maududi ISBN/edition row.
+- **Blocks:** the `readings` criterion of `D-2026-0079`; the `## Reading list` and every unit's
+  `**Mapped readings**` line.
+
+---
+
+## G-2026-205 - GUHQ-301 has no `catalog/courses.json` entry; adding one re-opens bound G2/G3 manifests
+- **Status:** open (owner approved the proposed entry on 2026-11-02 under `D-2026-0080`; insertion waits for per-course evidence binding)
+- **Raised by:** `D-2026-0080` (agent:evaluator, 2026-10-31), GUHQ-301 intake
+- **Detail:**
+  - The identity values are settled: `G-2026-04` rules GUHQ-301, Fehm-e-Quran I, Semester III,
+    1 (0-1). The spec's proposed entry (`specs/content/guhq-301/content-spec.md:14`) matches it and
+    the Scheme (`B.Ed 4 Year 2026 revised after board.txt:281-289`, General Education).
+  - `catalog/courses.json` lists no Semester 3 courses, so the intake `identity` criterion cannot
+    be checked against the catalog.
+  - Every G2 and G3 evidence manifest binds `catalog/courses.json` whole, so adding the entry
+    stales them all.
+  - The proposed `title_ur` "فہمِ قرآن - I" is given by neither the guide nor the Scheme.
+- **Needed from the owner:**
+  - whether and when to add the GUHQ-301 catalog entry, given the corpus-wide manifest
+    invalidation;
+  - confirmation of the Urdu title.
+- **Blocks:** the catalog entry; authoring any GUHQ-301 unit under `docs/semester-3/guhq-301/`.
+
+## G-2026-206 - GUHQ-301 topic partition: weeks as topics, against `D-2026-0070` item 1's "Topic N.k teaches guide section N.k"
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0080`: the spec is approved as drafted)
+- **Raised by:** `D-2026-0080` (agent:evaluator, 2026-10-31), GUHQ-301 intake
+- **Detail:**
+  - The guide names seven units (`3rd 2026.txt:135-217`). `D-2026-0070` item 1 (confirmed,
+    every course) makes each topic one of the unit's numbered sections.
+  - The spec makes each guide **week** a topic instead (`content-spec.md:59-69`; drafting notes
+    4-5, `:410-411`). That gives units of 2, 4, 2, 3, 2, 1 and 1 topics. Topic 7.1 spans two
+    weeks, despite the "one per week" column.
+  - The guide's numbering is partial, so literal application needs positional numbering the guide
+    does not print:
+    - Unit 1 Week 1 (`:138-140`), Unit 2 Weeks 5-6 (`:158-164`) and Unit 3 Week 8
+      (`:172-174`) are unnumbered;
+    - Unit 4 (`:178-189`) is wholly unnumbered;
+    - numbered items are one-line points.
+  - A literal application gives units of 6, 12, 6, 9, 6, 4 and 4-6 topics.
+  - Whether the ruling reaches one-line items in a week-divided guide is a scope question about
+    an owner ruling.
+- **Needed from the owner:** one of the following.
+  - (a) Apply `D-2026-0070` item 1 literally (one topic per guide item, unnumbered items numbered
+    by position).
+  - (b) Confirm weeks as topics for GUHQ-301, stating how Week 15-16 is handled.
+  - (c) Another grouping.
+- **Blocks:** every unit's `### Topic list`, the `## Week schedule` topic column, the figure plans,
+  reading-minute bands and per-topic bank distributions for Units 1-7. `G-2026-207` depends on it.
+
+## G-2026-207 - GUHQ-301 Unit 2 formative count for a four-topic unit is not ruled
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0080`: the spec is approved as drafted)
+- **Raised by:** `D-2026-0080` (agent:evaluator, 2026-10-31), GUHQ-301 intake
+- **Detail:**
+  - Unit 2's blueprint states "formative 12 items, 3 per topic" for four topics
+    (`content-spec.md:124`), extending `D-2026-0072`.
+  - `D-2026-0072` "does not rule on units with four or more topics" (`specs/decisions/log.md:3921-3922`).
+  - `style-guide.md:227` gives "5-8". The per-topic floor (`style-guide.md:237`) forces at least
+    12.
+  - The figure is internally consistent, but no ruling authorises it.
+- **Needed from the owner:** the formative count for units of four or more topics (corpus-wide or
+  for GUHQ-301), after `G-2026-206` fixes Unit 2's topic count.
+- **Blocks:** the Unit 2 `**Assessment blueprint**` line.
+
+## G-2026-208 - GUHQ-301 reading list: none of the guide's six entries identifies a single work
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0080`: the spec is approved as drafted)
+- **Raised by:** `D-2026-0080` (agent:evaluator, 2026-10-31), GUHQ-301 intake
+- **Detail:** the guide's list (`3rd 2026.txt:219-224`):
+
+  | Line | Entry | Problem |
+  |---|---|---|
+  | `:219` | "MuallimUl Quran (Vol 3) & related volumes" | no author or publisher |
+  | `:220` | Fehmul Quran translations and commentaries, "various authors/editions" | a category, not a work |
+  | `:221` | "Books on Asbāb al-Nuzūl ... and Seerah texts" | a category, not a work |
+  | `:222` | "Rahman, U. (2025). Muallimul Quran (Vols. 3-5). [Course Book]." | no publisher |
+  | `:223` | "TafseerTalim-ul-Quran (2 Vols.). Maktaba-tul-Madinah" | no author or edition |
+  | `:224` | "Mafhoom-al-Quran (2nd ed.)" | no author; more than one Urdu work has a similar title |
+
+  The spec:
+  - merges `:219` and `:222` into one key (`content-spec.md:42`), a drafter judgement the guide
+    does not make;
+  - leaves `mafhoom-al-quran` bound to no unit (`:46`);
+  - treats all six as print-only and title-level under `D-2026-0001`.
+- **Needed from the owner:**
+  - the intended work and edition (author, publisher, year) for `:219`, `:222`, `:223` and
+    `:224`;
+  - whether `:219` and `:222` are one series;
+  - whether the two category entries may stand as categories;
+  - whether any copy is obtainable, so that authors are not bound to title-level support.
+- **Blocks:** the `## Reading list` Guide-listed table; the readings criterion for every unit.
+
+## G-2026-209 - GUHQ-301 relies on `D-2026-0053` item 2 (author-selected sources, open-access floor), which is scoped to Semester 2
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0080`: the spec is approved as drafted)
+- **Raised by:** `D-2026-0080` (agent:evaluator, 2026-10-31), GUHQ-301 intake
+- **Detail:**
+  - The spec binds author-selected open-access sources and an `open_access_floor` `default: 1`
+    "under `D-2026-0053` item 2" (`content-spec.md:34`).
+  - That ruling's scope is "Semester 2 courses EFMP-305, EFMP-303, GQUR-301, GENG-301, GSOS-301,
+    GPKS-402" (`specs/decisions/log.md:2541-2543`). GUHQ-301 is Semester 3.
+  - The rows themselves check out:
+    - `dukes-2010-treebank` (DOI `10.63317/5ca39mfekwbt`, OpenAlex `W48549471`) and
+      `kadir-2022-asbab` (DOI `10.6007/ijarbss/v12-i6/13322`, OpenAlex `W4283369090`, diamond OA)
+      resolve as cited;
+    - every unit maps at least one OA row.
+  - Units 1, 4 and 7 meet the floor only with Quran.com and the Leeds Quranic Arabic Corpus,
+    which are primary-text and reference tools rather than scholarship.
+- **Needed from the owner:** whether `D-2026-0053` item 2 extends to Semester 3 courses
+  (corpus-wide or for GUHQ-301), and whether primary-text and reference tools satisfy the
+  open-access floor.
+- **Blocks:** the `## Reading list` Author-selected table and the `open_access_floor` front matter
+  as a binding floor.
