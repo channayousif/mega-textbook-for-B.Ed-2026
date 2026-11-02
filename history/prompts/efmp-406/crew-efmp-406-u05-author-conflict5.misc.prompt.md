@@ -16,10 +16,58 @@ links:
   adr: null
   pr: null
 files:
-  - specs/content/efmp-406/tasks.md
-  - history/prompts/efmp-406/crew-efmp-406-u05-author-conflict5.misc.prompt.md
+ - docs/semester-3/efmp-406/unit-05/index.mdx
+ - docs/semester-3/efmp-406/unit-05/topic-01.mdx
+ - docs/semester-3/efmp-406/unit-05/topic-02.mdx
+ - docs/semester-3/efmp-406/unit-05/unit-assessment.mdx
+ - docs/semester-3/efmp-406/unit-05/unit-teacher-notes.mdx
+ - history/prompts/efmp-406/20261103-merge-unit-five-conflicts.misc.prompt.md
+ - history/prompts/efmp-406/20261104-verify-unit-five-merge.misc.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u05-author-conflict1.misc.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u05-author-conflict2.misc.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u05-author-conflict3.misc.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u05-author-conflict4.misc.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u05-author-conflict5.misc.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u05-author.green.prompt.md
+ - history/prompts/general/20261051-merge-efmp406-unit-five-main.general.prompt.md
+ - specs/content/efmp-406/authoring/unit-05.md
+ - specs/content/efmp-406/concepts/unit-05.md
+ - specs/content/efmp-406/coverage/unit-05.md
+ - specs/content/efmp-406/figures/unit-05.md
+ - specs/content/efmp-406/reviews/unit-05/G2/20261102T082423803Z-gates.json
+ - specs/content/efmp-406/reviews/unit-05/G2/20261102T113317211Z-gates.json
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T082423803Z/check-bloom-bands.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T082423803Z/check-concept-graph.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T082423803Z/check-depth-gate.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T082423803Z/check-docs-sync.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T082423803Z/check-figures.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T082423803Z/check-no-answer-keys.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T082423803Z/check-no-em-dash.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T082423803Z/validate-content.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T113317211Z/check-bloom-bands.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T113317211Z/check-concept-graph.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T113317211Z/check-depth-gate.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T113317211Z/check-docs-sync.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T113317211Z/check-figures.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T113317211Z/check-no-answer-keys.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T113317211Z/check-no-em-dash.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T113317211Z/validate-content.txt
+ - specs/content/efmp-406/sources/texts/gasque-2016-inquiry.md
+ - specs/content/efmp-406/sources/texts/hafifah-2020-ict.md
+ - specs/content/efmp-406/sources/texts/minott-2011-critical.md
+ - specs/content/efmp-406/sources/texts/rti-2016-egra.md
+ - specs/content/efmp-406/sources/unit-05.md
+ - specs/content/efmp-406/tasks.md
+ - static/img/figures/efmp-406/unit-05/fig-U5-1.dark.svg
+ - static/img/figures/efmp-406/unit-05/fig-U5-1.svg
+ - static/img/figures/efmp-406/unit-05/fig-U5-2.dark.svg
+ - static/img/figures/efmp-406/unit-05/fig-U5-2.svg
+ - static/img/figures/efmp-406/unit-05/fig-U5-3.dark.svg
+ - static/img/figures/efmp-406/unit-05/fig-U5-3.svg
+ - static/img/figures/efmp-406/unit-05/fig-U5-4.dark.svg
+ - static/img/figures/efmp-406/unit-05/fig-U5-4.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -55,22 +103,23 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-406-u05-author, author, claude) `specs/content/efmp-406/sources/texts/minott-2011-critical.md` is also added on branch `crew/efmp-406-u02-author`. This branch keeps Unit 2's text unchanged and adds a Unit 5 section at the end, so if the two conflict, take this branch's version.
 - (efmp-406-u05-author, author, claude) Nobody has looked at the four Unit 5 figures on the page yet, and they have no Urdu `.ur.svg` versions. The concept-graph Urdu labels are mostly my own wording and need G5 review. Note that it uses جائزہ for "evaluation", while the terminology bank uses that word inside "Summative Assessment".
 
+
 ## Response snapshot
 
-Merged origin/main into `crew/efmp-406-u05-author`; the only conflict was `specs/content/efmp-406/tasks.md`. Kept main's Unit 3 G3 advisory row first, then this branch's Unit 5 G2/G3/G4/G5 rows. The four shared registries were unchanged on both sides since the merge base, so no renumbering was needed. Regenerated the gitignored `static/content-status.json` and committed the merge; all 13 content gates pass.
+Merged origin/main into `crew/efmp-406-u05-author`, resolved the lone `specs/content/efmp-406/tasks.md` conflict by keeping main's Unit 3 G3 advisory row then this branch's Unit 5 rows, regenerated the gitignored content-status report, and committed the merge plus its PHR with all 13 content gates passing.
 
 ## Outcome
 
-- ✅ Impact: fix for EFMP-406 Unit 5 by opencode (attempt 5).
-- 🧪 Tests: `npm run check:content` passed on the merged branch (13/13).
-- 📁 Files: conflict-resolved `specs/content/efmp-406/tasks.md` and this PHR.
-- 🔁 Next prompts: independent G3 review and the Urdu translation job remain separate.
-- 🧠 Reflection: none recorded by the dispatcher.
+- Impact: fix for EFMP-406 Unit 5 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 50 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main; resolved the lone `tasks.md` conflict by keeping main's Unit 3 G3 advisory row plus this branch's Unit 5 rows; regenerated the gitignored content-status report; all 13 content gates pass.
-- Decisions the team must respect: the four shared registries are byte-identical to origin/main, so no ID renumbering was required; G3/G5 stay open and unsigned.
+- Shipped / changed: Merged origin/main into `crew/efmp-406-u05-author`, resolved the lone `specs/content/efmp-406/tasks.md` conflict by keeping main's Unit 3 G3 advisory row then this branch's Unit 5 rows, regenerated the gitignored content-status report, and committed the merge plus its PHR with all 13 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Unit 5's four figures still have no Urdu `.ur.svg` versions and their concept-graph Urdu labels need G5 review (they use جائزہ for "evaluation" while the terminology bank reserves it inside "Summative Assessment").
@@ -81,6 +130,6 @@ Merged origin/main into `crew/efmp-406-u05-author`; the only conflict was `specs
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): `npm run check:content` PASS (13/13) on the merged branch.
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
