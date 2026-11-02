@@ -1,0 +1,8 @@
+Prepared locally in fresh independent reviewer session; no parent-prepared bundle supplied.
+All 94 bound paths and implementation-normalized digests recomputed and matched.
+HEAD and origin/main at preparation: ef96639058eeb0592719065ee40c6d257a10850a.
+Author commit b4631598 is provenance only, not an author run identity. Author run ID and exact model version unavailable. Reviewer host session ID unavailable; crew job is efmp-406-u02-review_en. Model known from system: GPT-6; exact deployed version unavailable.
+No earlier commits or dirty files on this branch at entry. No earlier Unit 2 G3 report. This session did not draft or translate inputs.
+Source text notes under sources/texts are absent from the prepared input manifest. Reading them does not silently turn them into bound primary-source evidence. Source verification remains unverified.
+
+After the advisory tracker row, check:content reported only stale generated static/content-status.json. npm run build:content-status refreshed the ignored cache; no tracked candidate inputs changed. Initial baseline and final rerun logs are retained separately.
