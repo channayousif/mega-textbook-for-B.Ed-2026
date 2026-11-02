@@ -16,34 +16,55 @@ links:
   adr: null
   pr: null
 files:
- - docs/semester-3/efmp-406/unit-04/index.mdx
- - docs/semester-3/efmp-406/unit-04/topic-01.mdx
- - docs/semester-3/efmp-406/unit-04/topic-02.mdx
- - docs/semester-3/efmp-406/unit-04/unit-assessment.mdx
- - docs/semester-3/efmp-406/unit-04/unit-teacher-notes.mdx
- - history/prompts/efmp-406/crew-efmp-406-u04-author-conflict1.misc.prompt.md
- - history/prompts/efmp-406/crew-efmp-406-u04-author-conflict2.misc.prompt.md
- - history/prompts/efmp-406/crew-efmp-406-u04-author.green.prompt.md
- - history/prompts/general/20261051-author-efmp-406-unit-four.general.prompt.md
- - specs/content/efmp-406/authoring/unit-04.md
- - specs/content/efmp-406/concepts/unit-04.md
- - specs/content/efmp-406/coverage/unit-04.md
- - specs/content/efmp-406/figures/unit-04.md
- - specs/content/efmp-406/glossary/unit-04.json
- - specs/content/efmp-406/sources/texts/alcolea-2020-mil.md
- - specs/content/efmp-406/sources/texts/cc-licenses.md
- - specs/content/efmp-406/sources/texts/furenes-2021-screen.md
- - specs/content/efmp-406/sources/texts/greenhow-2009-sns.md
- - specs/content/efmp-406/sources/unit-04.md
+ - docs/semester-3/efmp-406/unit-05/index.mdx
+ - docs/semester-3/efmp-406/unit-05/topic-01.mdx
+ - docs/semester-3/efmp-406/unit-05/topic-02.mdx
+ - docs/semester-3/efmp-406/unit-05/unit-assessment.mdx
+ - docs/semester-3/efmp-406/unit-05/unit-teacher-notes.mdx
+ - history/prompts/efmp-406/20261103-merge-unit-five-conflicts.misc.prompt.md
+ - history/prompts/efmp-406/20261104-verify-unit-five-merge.misc.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u05-author-conflict1.misc.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u05-author-conflict2.misc.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u05-author-conflict3.misc.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u05-author-conflict4.misc.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u05-author.green.prompt.md
+ - history/prompts/general/20261051-merge-efmp406-unit-five-main.general.prompt.md
+ - specs/content/efmp-406/authoring/unit-05.md
+ - specs/content/efmp-406/concepts/unit-05.md
+ - specs/content/efmp-406/coverage/unit-05.md
+ - specs/content/efmp-406/figures/unit-05.md
+ - specs/content/efmp-406/reviews/unit-05/G2/20261102T082423803Z-gates.json
+ - specs/content/efmp-406/reviews/unit-05/G2/20261102T113317211Z-gates.json
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T082423803Z/check-bloom-bands.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T082423803Z/check-concept-graph.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T082423803Z/check-depth-gate.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T082423803Z/check-docs-sync.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T082423803Z/check-figures.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T082423803Z/check-no-answer-keys.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T082423803Z/check-no-em-dash.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T082423803Z/validate-content.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T113317211Z/check-bloom-bands.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T113317211Z/check-concept-graph.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T113317211Z/check-depth-gate.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T113317211Z/check-docs-sync.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T113317211Z/check-figures.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T113317211Z/check-no-answer-keys.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T113317211Z/check-no-em-dash.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261102T113317211Z/validate-content.txt
+ - specs/content/efmp-406/sources/texts/gasque-2016-inquiry.md
+ - specs/content/efmp-406/sources/texts/hafifah-2020-ict.md
+ - specs/content/efmp-406/sources/texts/minott-2011-critical.md
+ - specs/content/efmp-406/sources/texts/rti-2016-egra.md
+ - specs/content/efmp-406/sources/unit-05.md
  - specs/content/efmp-406/tasks.md
- - static/img/figures/efmp-406/unit-04/fig-U4-1.dark.svg
- - static/img/figures/efmp-406/unit-04/fig-U4-1.svg
- - static/img/figures/efmp-406/unit-04/fig-U4-2.dark.svg
- - static/img/figures/efmp-406/unit-04/fig-U4-2.svg
- - static/img/figures/efmp-406/unit-04/fig-U4-3.dark.svg
- - static/img/figures/efmp-406/unit-04/fig-U4-3.svg
- - static/img/figures/efmp-406/unit-04/fig-U4-4.dark.svg
- - static/img/figures/efmp-406/unit-04/fig-U4-4.svg
+ - static/img/figures/efmp-406/unit-05/fig-U5-1.dark.svg
+ - static/img/figures/efmp-406/unit-05/fig-U5-1.svg
+ - static/img/figures/efmp-406/unit-05/fig-U5-2.dark.svg
+ - static/img/figures/efmp-406/unit-05/fig-U5-2.svg
+ - static/img/figures/efmp-406/unit-05/fig-U5-3.dark.svg
+ - static/img/figures/efmp-406/unit-05/fig-U5-3.svg
+ - static/img/figures/efmp-406/unit-05/fig-U5-4.dark.svg
+ - static/img/figures/efmp-406/unit-05/fig-U5-4.svg
 tests:
  - npm run check:content
 ---
@@ -79,23 +100,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-406-u05-author, author, claude) Nobody has looked at the four Unit 5 figures on the page yet, and they have no Urdu `.ur.svg` versions. The concept-graph Urdu labels are mostly my own wording and need G5 review. Note that it uses جائزہ for "evaluation", while the terminology bank uses that word inside "Summative Assessment".
 - (efmp-406-u05-author, author, claude) `course-overview.mdx` still says only Unit 1 is available. It was outside this job's scope.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/efmp-406-u05-author, resolved the single tasks.md conflict by keeping main's Unit 4 rows and this branch's Unit 5 rows, regenerated static/content-status.json, and confirmed all 13 content gates pass.
+Merged origin/main into `crew/efmp-406-u05-author`, resolved the lone `tasks.md` conflict by keeping main's Unit 4 rows plus this branch's Unit 5 rows, regenerated `static/content-status.json`, and committed the merge and its PHR with all 13 content gates passing.
 
 ## Outcome
 
 - Impact: fix for EFMP-406 Unit 5 by opencode (attempt 1).
-- Tests: npm run check:content passed in the job worktree (13/13 gates).
-- Files: 28 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 49 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merge commit 81382651 folds origin/main into the Unit 5 author branch; tasks.md now carries both Unit 4 (codex) and Unit 5 (claude) tracker rows.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Merged origin/main into `crew/efmp-406-u05-author`, resolved the lone `tasks.md` conflict by keeping main's Unit 4 rows plus this branch's Unit 5 rows, regenerated `static/content-status.json`, and committed the merge and its PHR with all 13 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Unit 5's four figures still have no Urdu `.ur.svg` versions and their concept-graph Urdu labels need G5 review (they use جائزہ for "evaluation" while the terminology bank reserves it inside "Summative Assessment").
+  - `course-overview.mdx` still says only Unit 1 is available; it was outside this job's scope.
+  - `specs/content/efmp-406/sources/texts/minott-2011-critical.md` is also added on branch `crew/efmp-406-u02-author`; this branch's version keeps Unit 2 unchanged and appends a Unit 5 section.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
