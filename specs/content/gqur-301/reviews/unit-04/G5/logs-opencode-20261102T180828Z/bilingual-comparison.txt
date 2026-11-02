@@ -1,0 +1,72 @@
+GQUR-301 Unit 4 - G5 bilingual comparison (opencode, 2026-11-02)
+
+Inputs: docs/semester-2/gqur-301/unit-04/*.mdx (EN) vs
+i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-04/*.mdx (UR),
+plus static/img/figures/gqur-301/unit-04/*.ur.svg.
+
+Method: every EN section, paragraph, list item, table row, assessment item and figure
+alt was read against its UR counterpart. Numbers, option order, marks and rubric bands
+were compared explicitly. The Urdu SVGs were inspected as text and geometry; the
+light/dark twins carry identical text.
+
+Headings and sections
+- index: all five EN sections present (outcomes, prerequisites, in this unit, how to
+  use). UR adds only the required key_terms block (3 banked pairs).
+- topic-01: all EN headings present (situation; explanation x4; activity; check x3;
+  summary; checklist x3; practicum; summative a-d; mini-rubric; further reading x3).
+- topic-02: all EN headings present (situation; explanation x4; activity x4; check x3;
+  summary; checklist x3; practicum; summative a-c; mini-rubric; further reading x2).
+- unit-assessment: all EN headings present (summary; 10 MCQ; 10 RRQ; 5 ERQ; bounded
+  answers with 10-row key, 10 RRQ models, 5 ERQ rubrics).
+- unit-teacher-notes: all EN sections present (sequencing table; strategies x2;
+  misconceptions table x3; practical work x2; assessment guidance; materials x2;
+  connections x2).
+
+Numbers and quantities verified equal
+- quiz marks 12,14,15,16,17,17,18,18,19,3; sum 149; mean 14.9; balance distances 15.7;
+  146/9 = 16.2; frequency table 64/10 = 6.4; class size 230/6 = 38.33;
+  median 35 (7 ages); median 16.5 (10 marks); 295/8 = 36.875 -> 36.9; median 37;
+  salaries 25..200; incomes 18..120; absence sum 56, 56/12 = 4.67, 27/11 = 2.45;
+  income sum 433/11 = 39.4, median 32; schools P 61/70, Q 64/63.
+- MCQ option order A-D maps to الف-د identically in all ten items; the UR key
+  ب/ب/الف/ب/ب/ب/الف/ب/ب/ب equals the EN key B/B/A/B/B/B/A/B/B/B.
+- RRQ marks 2,2,3,3,3,2,3,2,3,2 and ERQ rubric bands are identical.
+
+Material divergences
+1. BLOCKING (completeness/semantics). Two self-closing Glossary tags render the
+   English term inline because src/components/Glossary.tsx:24 renders
+   `children ?? term`:
+   - UR topic-01.mdx:34 `<Glossary term="Mean" />` -> the sentence subject is the
+     English word "Mean"; the Urdu term حسابی اوسط does not appear there.
+   - UR topic-02.mdx:34 `<Glossary term="Median" />` -> the sentence subject is the
+     English word "Median"; the Urdu term وسطانیہ does not appear there.
+   EN counterparts: topic-01.mdx:41 and topic-02.mdx:40 (English pages are correct).
+2. Advisory (register/terminology). UR topic-02.mdx:41 "وسطانی عمر" for "median age":
+   وسطانی is the adjective and also reads as the life-stage phrase "middle age";
+   the consistent noun form is وسطانیہ عمر.
+3. Advisory (register). UR topic-01.mdx:22 "ایک بچے کے، جو اس دن بیمار تھا، 3 نمبر
+   آئے تھے" is awkward; prefer "ایک بچے کو، جو اس دن بیمار تھا، 3 نمبر ملے تھے".
+
+Figures
+- All four .ur.svg files are horizontally mirrored (panels reflected, captions
+  right-aligned, wordmark moved from x=760/end to x=20/start). The UR fig-U4-1
+  caption correctly says "دائیں: موضوع 4.1 کے کوئز کے 10 نمبر" for the mirrored
+  layout. Numerical axes still increase left to right.
+- UR figure text is faithful to the EN text; no omitted label. The .ur.dark.svg
+  twins carry identical text (diff empty).
+- measure-figure-text exits 0 on all eight UR variants; widest text ends at 749
+  (viewBox 780). Six cosmetic wordmark collisions are reported, not failed; the
+  UR caption cards on fig-U4-3 (13.0px) and fig-U4-4 (15.0px) overlap the wordmark
+  more than the EN ones (2.5px, 4.5px). See measure-figure-text-ur.txt.
+
+Terminology
+- The frozen bank has no statistical entries. The UR mirror consistently uses the
+  concept-graph labels: مرکزی رجحان کی پیمائش، حسابی اوسط، تعددی جدول کی اوسط،
+  غیر معمولی قدر، وسطانیہ، وسطانیہ کی پائیداری. Banked pairs used correctly:
+  Assessment = تشخیص, Summative Assessment = مجموعی جائزہ, Learning Outcome =
+  نتیجہ ہائے تعلم. No banked-term drift.
+
+Not verified
+- No rendered normal/narrow/A4 inspection was possible (see render-review.txt).
+  RTL shaping, bidi punctuation, table order and clipping on the page remain
+  unverified. Figure SVGs were checked as text and geometry only.
