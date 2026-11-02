@@ -1,0 +1,11 @@
+render-review attempt, 2026-11-02T17:36:47Z, host hcp.textbook.com.pk
+Crew brief forbids npm run build, dev/preview servers and Playwright/Chromium in this job, so no page, narrow-viewport or A4 print render was produced.
+Fallback rasteriser probe:
+$ command -v rsvg-convert inkscape chromium google-chrome
+(none found, exit 1)
+$ convert -list format | grep -i svg
+     MSVG  SVG       rw+   ImageMagick's own SVG internal renderer
+      SVG  SVG       rw+   Scalable Vector Graphics (XML 2.9.14)
+     SVGZ  SVG       rw+   Compressed Scalable Vector Graphics (XML 2.9.14)
+ImageMagick would fall back to its internal MSVG renderer (rsvg-convert delegate missing), which does not perform Arabic-script shaping, so its output cannot evidence Nastaliq legibility. No PNG was produced.
+RESULT: not inspected (exit 1)
