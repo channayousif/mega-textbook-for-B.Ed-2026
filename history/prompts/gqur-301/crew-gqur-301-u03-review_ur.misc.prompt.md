@@ -16,6 +16,7 @@ links:
   adr: null
   pr: null
 files:
+ - history/prompts/gqur-301/crew-gqur-301-u03-review_ur.misc.prompt.md
  - specs/content/gqur-301/reviews/unit-03/G5/aa728971-e15b-4b7e-9402-70a2f68221bd.json
  - specs/content/gqur-301/reviews/unit-03/G5/aa728971-e15b-4b7e-9402-70a2f68221bd.summary.md
  - specs/content/gqur-301/reviews/unit-03/G5/logs-aa728971/check-depth-gate.txt
@@ -65,26 +66,26 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Added an unsigned advisory G5 escalate report for GQUR-301 Unit 3 with its summary, logs and manifest, and recorded the advisory outcome in `tasks.md` leaving G5 open.
+Conducted independent G5 Urdu review of GQUR-301 Unit 3, generated validated advisory escalate evidence report, summary, gate logs, and updated the open G5 row in tasks.md.
 
 ## Outcome
 
 - Impact: review_ur for GQUR-301 Unit 3 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before commit.
-- Files: 14 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 15 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Added an unsigned advisory G5 escalate report for GQUR-301 Unit 3 with its summary, logs, independent MCQ derivation and manifest, and updated the open G5 row in `tasks.md`.
-- Decisions the team must respect: G3/G5 remain advisory until qualified sign-off; no gate is marked done and nothing is certified.
-- Pending / next owner: crew lead (auto-merge when CI is green).
+- Shipped / changed: Conducted independent G5 Urdu review of GQUR-301 Unit 3, generated validated advisory escalate evidence report, summary, gate logs, and updated the open G5 row in tasks.md.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Real browser visual inspection of Urdu pages (normal 1280px, narrow 360px viewport, and A4 print view) must be run on an authorised host with browser access before G5 certification.
-  - The curriculum owner should review candidate terms in `concepts/unit-03.md` and harmonise `glossary.json` (which defines Statistic as شماریاتی عدد vs unit text شماریہ) before promoting into `terminology.csv`.
-  - In `fig-U3-3`, the table graphic contains 5 method rows while caption and alt text mention quota sampling; owner/author may consider adding a quota sampling row during future revisions.
-- Paperclip issues affected: none.
+  - Real browser inspection of Urdu pages (desktop, 360px mobile viewport, and A4 print view) must be run on a host with browser access before G5 certification.
+  - The curriculum owner should review candidate terms in concepts/unit-03.md and harmonise glossary.json (which defines Statistic as شماریاتی عدد vs unit text شماریہ) before promoting into terminology.csv.
+  - In fig-U3-3, the table graphic contains 5 method rows while caption and alt text mention quota sampling; owner/author may consider adding a quota sampling row during future revisions.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
