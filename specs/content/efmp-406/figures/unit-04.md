@@ -1,0 +1,10 @@
+# EFMP-406 Unit 4 Figure Manifest
+
+Contract: `specs/009-figure-rendering/contracts/figure-manifest-v2.md`.
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U4-1 | 4.1 | table | table comparing paper and screen reading across comprehension, attention, navigation and teacher support, with conditional rather than universal claims, clean flat vector, labelled, high contrast, no colour-only meaning, landscape | Paper and screen reading compared through comprehension, attention, navigation and the support a teacher can provide. | /img/figures/efmp-406/unit-04/fig-U4-1.svg | placed |
+| fig-U4-2 | 4.1 | diagram | diagram showing the digital writing process plan, draft, link, share, receive comments and revise, with a return arrow from revise to draft and a private classroom audience, clean flat vector, labelled, high contrast, no colour-only meaning, landscape | A digital writing cycle connects planning, drafting, linking, sharing with a chosen audience, receiving comments and revising. | /img/figures/efmp-406/unit-04/fig-U4-2.svg | placed |
+| fig-U4-3 | 4.2 | flowchart | flowchart for checking a digital resource before use or sharing, identify creator and ownership, check permission or licence, add credit, check accuracy and privacy, then choose the audience or stop and seek help, clean flat vector, labelled, high contrast, no colour-only meaning, landscape | Before using or sharing a resource, check ownership, permission, credit, accuracy, privacy and audience, stopping when a necessary check is unresolved. | /img/figures/efmp-406/unit-04/fig-U4-3.svg | placed |
+| fig-U4-4 | 4.2 | table | table of responsible online conduct with columns rule, reason and classroom example, covering checking a claim, respectful feedback, permission and credit, privacy and an offline participation route, clean flat vector, labelled, high contrast, no colour-only meaning, landscape | Responsible online conduct links checking, respectful feedback, permission, credit, privacy and fair participation to classroom actions. | /img/figures/efmp-406/unit-04/fig-U4-4.svg | placed |
