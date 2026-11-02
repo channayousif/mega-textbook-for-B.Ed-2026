@@ -10,7 +10,7 @@ G3/G5 require independent qualified evidence. No review or human initials are cl
 | Unit | Stage | Status | Reviewer | Suggestion |
 |---|---|---|---|---|
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | Approved spec and owner ruling D-2026-0079, 2026-11-02; not a new intake evaluation |
-| Unit 2 | G2 en-draft | ▣ | | English draft and four governance artifacts prepared; deterministic evidence pending |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-02/G2/20261102T232136964Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | Fresh independent review needed, including qualified Islamic Studies scholar review of belief and law |
 | Unit 2 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored here |
 | Unit 2 | G5 ur-review | ▢ | | Pending G3 and Urdu translation; authored concept labels also need review |
