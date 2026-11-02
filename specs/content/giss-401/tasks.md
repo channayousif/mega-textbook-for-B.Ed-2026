@@ -23,7 +23,7 @@
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 3 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 3 | G2 en-draft | ▣ | | English draft authored; deterministic gate checks in progress |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-03/G2/20261102T230636766Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
 | Unit 3 | G4 ur-translation | ▢ | | separate job |
 | Unit 3 | G5 ur-review | ▢ | | |
