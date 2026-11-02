@@ -33,3 +33,19 @@
 .pre { white-space: pre-wrap; font-size: 0.85rem; }
 .sticky { position: sticky; bottom: 0; z-index: 2; background: var(--ifm-background-color); border-top: 1px solid var(--ifm-color-emphasis-300); padding-block: 0.6rem; }
 @media (max-width: 768px) { .criterion { grid-template-columns: 1fr; } }
+.lane { border: 1px solid var(--ifm-color-emphasis-300); border-inline-start-width: 5px; border-radius: 0.6rem; padding: 0.75rem 1rem; margin-block: 1rem; }
+.lane-ready { border-inline-start-color: var(--ifm-color-success); }
+.lane-ruling { border-inline-start-color: var(--ifm-color-warning); }
+.lane-send_back { border-inline-start-color: var(--ifm-color-danger); }
+.laneHead { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.5rem; }
+.laneHead h2 { margin: 0; font-size: 1.25rem; }
+.count { display: inline-block; min-width: 2rem; padding: 0 0.5rem; border-radius: 999px; background: var(--ifm-color-emphasis-200); font-size: 1rem; text-align: center; font-variant-numeric: tabular-nums; }
+.laneList { list-style: none; padding: 0; margin: 0.5rem 0 0; }
+.laneRow { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem; padding-block: 0.5rem; border-top: 1px solid var(--ifm-color-emphasis-200); }
+.laneRow .work-actions, .laneRow :global(.work-actions) { margin: 0; }
+.reason { font-size: 0.85rem; color: var(--ifm-color-emphasis-700); }
+.suggest { border: 1px solid var(--ifm-color-emphasis-300); border-inline-start-width: 5px; border-radius: 0.5rem; padding: 0.6rem 0.9rem; margin-block: 0.75rem; }
+.suggest p { margin: 0.25rem 0 0; }
+.questions { margin-block: 0.75rem; }
+.details { margin-block-start: 1rem; }
+.details > summary { cursor: pointer; font-weight: 600; }
