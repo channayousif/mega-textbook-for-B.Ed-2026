@@ -155,3 +155,4 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 3 | G3 en-review | ✅ | CMY | review:specs/content/gqur-301/reviews/unit-03/G3/20261102T140729Z-g3-desk-356db976.json |
 | Unit 4 | G3 en-review | ✅ | CMY | review:specs/content/gqur-301/reviews/unit-04/G3/20261102T140729Z-g3-desk-01cb7d7c.json |
 | Unit 9 | G3 en-review | ✅ | CMY | review:specs/content/gqur-301/reviews/unit-09/G3/20261102T140729Z-g3-desk-342e3991.json |
+| Unit 7 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-07/G3/20261102T213256Z-g3-desk-017a8f92.json |
