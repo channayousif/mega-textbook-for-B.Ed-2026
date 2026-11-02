@@ -50,7 +50,7 @@
 | Unit 5 | G4 ur-translation | ▢ | | separate job |
 | Unit 5 | G5 ur-review | ▢ | | |
 | Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-06/G2/20261102T171620632Z-gates.json |
-| Unit 6 | G3 en-review | ▢ | | awaiting an independent reviewer |
+| Unit 6 | G3 en-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/efmp-406/reviews/unit-06/G3/f39ce2ec-8915-4b91-be9c-d3b7ce713df8.json; all 7 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; all 8 SVG variants pass geometry; G3 remains open and unsigned |
 | Unit 6 | G4 ur-translation | ▢ | | separate job; translate prose, nine concept labels and four SVGs with RTL layout |
 | Unit 6 | G5 ur-review | ▢ | | independent Urdu review pending |
 

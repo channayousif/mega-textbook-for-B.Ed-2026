@@ -1,0 +1,8 @@
+✓ static/img/figures/efmp-406/unit-06/fig-U6-1.dark.svg (780x650, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-406/unit-06/fig-U6-1.svg (780x650, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-406/unit-06/fig-U6-2.dark.svg (780x620, widest text ends at 768.7, wordmark at 675.7)
+✓ static/img/figures/efmp-406/unit-06/fig-U6-2.svg (780x620, widest text ends at 768.7, wordmark at 675.7)
+✓ static/img/figures/efmp-406/unit-06/fig-U6-3.dark.svg (780x590, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-406/unit-06/fig-U6-3.svg (780x590, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-406/unit-06/fig-U6-4.dark.svg (780x550, widest text ends at 768.4, wordmark at 675.7)
+✓ static/img/figures/efmp-406/unit-06/fig-U6-4.svg (780x550, widest text ends at 768.4, wordmark at 675.7)
