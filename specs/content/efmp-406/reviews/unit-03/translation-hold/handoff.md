@@ -28,3 +28,21 @@ Validation: all 13 `npm run check:content` gates passed. The initial checkout ex
 origin/main, so this also establishes the baseline result. The accompanying log records the
 actual run. No build, dev server, browser or print inspection was run, as prohibited by the
 crew brief. This is a blocked handoff, not delivery of G4 or a complete Urdu mirror.
+
+## Continuation: evidence-location repair
+
+The continuation verified that origin/main is still the English baseline named above and
+that the cited categorical claims remain unchanged. Translation remains blocked by the
+translate-unit stop-on-English-errors instruction. No G4 row is added: despite the brief's
+request to record one, its required skill expressly prohibits doing so at Step 7.
+
+The earlier translation hold and log were moved from `translations/unit-03/` into
+`reviews/unit-03/translation-hold/`. They are lifecycle evidence, not learner content.
+The former location added two tracked inputs to G2 and invalidated its manifest. The
+review-evidence contract excludes `reviews/` specifically to prevent recording results
+from invalidating their inputs. After relocation, the original G2 input manifest matches
+exactly, with no content edits, evidence regeneration or changes to gate policy.
+
+The historical PHR retains its original paths as a record of that earlier attempt.
+Current validation is recorded in `check-content-continuation.txt` beside this handoff.
+Build and rendered Urdu inspection remain prohibited by the crew brief.
