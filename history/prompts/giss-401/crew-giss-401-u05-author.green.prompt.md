@@ -2,7 +2,7 @@
 id: crew-giss-401-u05-author
 title: crew author GISS-401 unit 5
 stage: misc
-date: 2026-11-03
+date: 2026-11-02
 surface: agent
 model: agy
 feature: giss-401
@@ -16,42 +16,42 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-3/giss-401/_category_.json
-  - docs/semester-3/giss-401/course-overview.mdx
-  - docs/semester-3/giss-401/unit-05/index.mdx
-  - docs/semester-3/giss-401/unit-05/topic-01.mdx
-  - docs/semester-3/giss-401/unit-05/topic-02.mdx
-  - docs/semester-3/giss-401/unit-05/unit-assessment.mdx
-  - history/prompts/giss-401/crew-giss-401-u05-author.green.prompt.md
-  - specs/content/giss-401/authoring/unit-05.md
-  - specs/content/giss-401/concepts/unit-05.md
-  - specs/content/giss-401/coverage/unit-05.md
-  - specs/content/giss-401/figures/unit-05.md
-  - specs/content/giss-401/reviews/unit-05/G2/20261102T233631738Z-gates.json
-  - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-bloom-bands.txt
-  - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-concept-graph.txt
-  - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-depth-gate.txt
-  - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-docs-sync.txt
-  - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-figures.txt
-  - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-no-answer-keys.txt
-  - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-no-em-dash.txt
-  - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/validate-content.txt
-  - specs/content/giss-401/sources/texts/abdel-salam-2015-democracy.md
-  - specs/content/giss-401/sources/texts/pak-constitution-1973.md
-  - specs/content/giss-401/sources/texts/quran-translation.md
-  - specs/content/giss-401/sources/texts/rahman-2020-zakat.md
-  - specs/content/giss-401/sources/unit-05.md
-  - specs/content/giss-401/tasks.md
-  - static/img/figures/giss-401/unit-05/fig-U5-1.dark.svg
-  - static/img/figures/giss-401/unit-05/fig-U5-1.svg
-  - static/img/figures/giss-401/unit-05/fig-U5-2.dark.svg
-  - static/img/figures/giss-401/unit-05/fig-U5-2.svg
-  - static/img/figures/giss-401/unit-05/fig-U5-3.dark.svg
-  - static/img/figures/giss-401/unit-05/fig-U5-3.svg
-  - static/img/figures/giss-401/unit-05/fig-U5-4.dark.svg
-  - static/img/figures/giss-401/unit-05/fig-U5-4.svg
+ - docs/semester-3/giss-401/_category_.json
+ - docs/semester-3/giss-401/course-overview.mdx
+ - docs/semester-3/giss-401/unit-05/index.mdx
+ - docs/semester-3/giss-401/unit-05/topic-01.mdx
+ - docs/semester-3/giss-401/unit-05/topic-02.mdx
+ - docs/semester-3/giss-401/unit-05/unit-assessment.mdx
+ - history/prompts/giss-401/crew-giss-401-u05-author.green.prompt.md
+ - specs/content/giss-401/authoring/unit-05.md
+ - specs/content/giss-401/concepts/unit-05.md
+ - specs/content/giss-401/coverage/unit-05.md
+ - specs/content/giss-401/figures/unit-05.md
+ - specs/content/giss-401/reviews/unit-05/G2/20261102T233631738Z-gates.json
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/validate-content.txt
+ - specs/content/giss-401/sources/texts/abdel-salam-2015-democracy.md
+ - specs/content/giss-401/sources/texts/pak-constitution-1973.md
+ - specs/content/giss-401/sources/texts/quran-translation.md
+ - specs/content/giss-401/sources/texts/rahman-2020-zakat.md
+ - specs/content/giss-401/sources/unit-05.md
+ - specs/content/giss-401/tasks.md
+ - static/img/figures/giss-401/unit-05/fig-U5-1.dark.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-1.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-2.dark.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-2.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-3.dark.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-3.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-4.dark.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-4.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -82,27 +82,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Authored English GISS-401 Unit 5 ("The Economic and Political Systems of Islam") with two 9-part topic cycles, 25-item Bloom-aligned assessment bank, four SVG figures with dark variants, verified open-access sources, G2 gate evidence, and full content gate verification.
+Authored GISS-401 Unit 5 English content with two topic cycles, a 25-item assessment bank, four schematic SVGs with dark variants, verified sources, and passing content gates.
 
 ## Outcome
 
 - Impact: author for GISS-401 Unit 5 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before committing.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 34 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Authored English GISS-401 Unit 5 ("The Economic and Political Systems of Islam") with two 9-part topic cycles, 25-item Bloom-aligned assessment bank, four SVG figures with dark variants, verified open-access sources, G2 gate evidence recorded, and full content gate verification.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job records deterministic G2 gate evidence only and does not certify review.
+- Shipped / changed: Authored GISS-401 Unit 5 English content with two topic cycles, a 25-item assessment bank, four schematic SVGs with dark variants, verified sources, and passing content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - English Unit 5 draft is complete, G2 evidence recorded, and all 13 content gates pass cleanly.
-  - G3 independent English review is ready to be scheduled with a separate reviewer run.
-  - Urdu translation (G4) and review (G5) remain separate downstream tasks.
+  - G2 deterministic gate evidence is recorded; G3 independent English review and G4/G5 Urdu translation remain separate downstream jobs.
+  - Unit 5 concept graph has ten authored Urdu labels flagged for G5 review because the course key terms are not yet banked in terminology.csv.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
