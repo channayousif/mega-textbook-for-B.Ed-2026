@@ -106,3 +106,9 @@ unit-spec at intake (board-run G0/G1 intake pending).
 |---|---|---|---|---|
 | Unit 3 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation: diagram order, allocation table, assessment and source repairs; provenance and current page render evidence incomplete. Findings: specs/content/efmp-303/reviews/unit-03/G3/01a14b3d-bdfb-7200-a7e0-06c201e5f0bb.json; readable summary: specs/content/efmp-303/reviews/unit-03/G3/01a14b3d-bdfb-7200-a7e0-06c201e5f0bb/summary.md. G3 remains open. |
 | Unit 6 | G3 en-review | ✅ | CMY | review:specs/content/efmp-303/reviews/unit-06/G3/20261102T140729Z-g3-desk-218f29ab.json |
+
+## Unit 6 advisory Urdu review (2026-11-02)
+
+| Unit | Stage | Status | Reviewer | Notes |
+|---|---|---|---|---|
+| Unit 6 | G5 ur-review | ▣ | agent:g5-reviewer | Advisory escalation only: specs/content/efmp-303/reviews/unit-06/G5/claude-session-a2c8ddac-e057-4a8a-967b-505507f1979e.json. Content complete and faithful, MCQ key independently confirmed. The review has three blockers: no rendered Urdu inspection, an unsigned G3 dependency, and a register repair list. Terminology drift also needs an owner ruling. Unsigned; G5 remains open. |
