@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 470" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="t">Comparison: Zakat (Obligatory Due) vs. Sadaqah (Voluntary Charity)</title>
+  <desc id="d">Table comparing Zakat and voluntary charity (sadaqah) across legal obligation, rates and thresholds, beneficiary restrictions, timing, and behavioural scope.</desc>
+  <style>
+    :root{--bg:#1b1b1d;--panel:#24282a;--ink:#e7ece9;--muted:#9aa7a2;--line:#38c6a4;--a1:#38c6a4;--a1-fill:#1f302c;--a2:#2f91d6;--a2-fill:#1e2931;--a3:#f0bd9f;--a3-fill:#33251c;--a4:#c387cd;--a4-fill:#2c212e;--wm:#6b7671}
+    .bg { fill: var(--bg); }
+    .panel { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .cell { fill: var(--panel); stroke: var(--line); stroke-width: 1; }
+    text { fill: var(--ink); }
+    .h { font-size: 18px; font-weight: 700; }
+    .th { font-size: 15px; font-weight: 700; fill: var(--ink); }
+    .label { font-size: 14px; font-weight: 600; }
+    .support { font-size: 13px; fill: var(--muted); }
+    .wm { fill: var(--wm); font-size: 11px; }
+  </style>
+
+  <rect class="bg" x="0" y="0" width="780" height="470" />
+
+  <!-- Title -->
+  <text class="h" x="20" y="32" text-anchor="start">Zakat (Obligatory Due) and Sadaqah (Voluntary Charity) Compared</text>
+
+  <!-- Table Header -->
+  <rect class="panel" x="20" y="50" width="160" height="45" rx="8" />
+  <text class="th" x="30" y="78" text-anchor="start">Dimension</text>
+
+  <rect class="panel" x="185" y="50" width="280" height="45" rx="8" />
+  <text class="th" x="195" y="78" text-anchor="start">Zakat (Obligatory Due)</text>
+
+  <rect class="panel" x="470" y="50" width="290" height="45" rx="8" />
+  <text class="th" x="480" y="78" text-anchor="start">Sadaqah (Voluntary Charity)</text>
+
+  <!-- Row 1: Legal Status -->
+  <rect class="cell" x="20" y="105" width="160" height="65" rx="6" />
+  <text class="label" x="30" y="132" text-anchor="start">Legal Status</text>
+  <text class="support" x="30" y="152" text-anchor="start">Obligation type</text>
+
+  <rect class="cell" x="185" y="105" width="280" height="65" rx="6" />
+  <text class="support" x="195" y="132" text-anchor="start">Mandatory pillar of Islam (Fard Ayn);</text>
+  <text class="support" x="195" y="152" text-anchor="start">divine command with legal accountability</text>
+
+  <rect class="cell" x="470" y="105" width="290" height="65" rx="6" />
+  <text class="support" x="480" y="132" text-anchor="start">Voluntary benevolence (Nafl / Mustahabb);</text>
+  <text class="support" x="480" y="152" text-anchor="start">highly rewarded but not legally mandated</text>
+
+  <!-- Row 2: Rate & Threshold -->
+  <rect class="cell" x="20" y="175" width="160" height="65" rx="6" />
+  <text class="label" x="30" y="202" text-anchor="start">Rate &amp; Threshold</text>
+  <text class="support" x="30" y="222" text-anchor="start">Calculation basis</text>
+
+  <rect class="cell" x="185" y="175" width="280" height="65" rx="6" />
+  <text class="support" x="195" y="202" text-anchor="start">Fixed statutory rate (usually 2.5%); strictly</text>
+  <text class="support" x="195" y="222" text-anchor="start">requires net surplus exceeding Nisab limit</text>
+
+  <rect class="cell" x="470" y="175" width="290" height="65" rx="6" />
+  <text class="support" x="480" y="202" text-anchor="start">No minimum threshold; donor determines</text>
+  <text class="support" x="480" y="222" text-anchor="start">amount according to personal capacity</text>
+
+  <!-- Row 3: Eligible Recipients -->
+  <rect class="cell" x="20" y="245" width="160" height="65" rx="6" />
+  <text class="label" x="30" y="272" text-anchor="start">Eligible Recipients</text>
+  <text class="support" x="30" y="292" text-anchor="start">Target groups</text>
+
+  <rect class="cell" x="185" y="245" width="280" height="65" rx="6" />
+  <text class="support" x="195" y="272" text-anchor="start">Strictly limited to eight categories specified</text>
+  <text class="support" x="195" y="292" text-anchor="start">in Qur'an (9:60); cannot fund buildings</text>
+
+  <rect class="cell" x="470" y="245" width="290" height="65" rx="6" />
+  <text class="support" x="480" y="272" text-anchor="start">Open to any person in need, relatives,</text>
+  <text class="support" x="480" y="292" text-anchor="start">non-Muslims, public schools, or hospitals</text>
+
+  <!-- Row 4: Timing & Recurrence -->
+  <rect class="cell" x="20" y="315" width="160" height="65" rx="6" />
+  <text class="label" x="30" y="342" text-anchor="start">Timing &amp; Recurrence</text>
+  <text class="support" x="30" y="362" text-anchor="start">Schedule of giving</text>
+
+  <rect class="cell" x="185" y="315" width="280" height="65" rx="6" />
+  <text class="support" x="195" y="342" text-anchor="start">Due once every lunar year after maintaining</text>
+  <text class="support" x="195" y="362" text-anchor="start">surplus wealth for a full year (Hawl)</text>
+
+  <rect class="cell" x="470" y="315" width="290" height="65" rx="6" />
+  <text class="support" x="480" y="342" text-anchor="start">Given at any time; spontaneous response to</text>
+  <text class="support" x="480" y="362" text-anchor="start">hardship or ongoing daily acts of generosity</text>
+
+  <!-- Row 5: Scope of Action -->
+  <rect class="cell" x="20" y="385" width="160" height="65" rx="6" />
+  <text class="label" x="30" y="412" text-anchor="start">Scope of Action</text>
+  <text class="support" x="30" y="432" text-anchor="start">Material vs moral</text>
+
+  <rect class="cell" x="185" y="385" width="280" height="65" rx="6" />
+  <text class="support" x="195" y="412" text-anchor="start">Financial levy on specific assets (cash, gold,</text>
+  <text class="support" x="195" y="432" text-anchor="start">livestock, merchandise, and harvest)</text>
+
+  <rect class="cell" x="470" y="385" width="290" height="65" rx="6" />
+  <text class="support" x="480" y="412" text-anchor="start">Includes money, goods, smiling at peers,</text>
+  <text class="support" x="480" y="432" text-anchor="start">kind guidance, and clearing public hazards</text>
+
+  <!-- Wordmark -->
+  <text class="wm" x="768" y="460" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>
