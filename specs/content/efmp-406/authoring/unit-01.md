@@ -37,4 +37,4 @@ All four planned figures are schematics (concept-map, table, timeline, diagram);
 
 - No `glossary.json` entries were added (the file is outside this job's scope); key terms are defined in bold on first use. Candidate glossary terms: Literacy, Functional literacy, Literacy practice, Multiliteracies, Lifelong learning.
 - `terminology.csv` has no entry for any of the spec's key terms; the concept-graph Urdu labels are authored and flagged for G5.
-- The course is not yet in `catalog/courses.json` (owner ruling pending, as the content spec records). A course-level `_category_.json` was added so the sidebar shows the course name; there is no `course-overview.mdx` yet.
+- The course is not yet in `catalog/courses.json` (owner ruling pending, as the content spec records). A course-level `_category_.json` and a `course-overview.mdx` (guide outcomes, unit list, weights; required as a bound input by G2 evidence) were added; later units should extend the overview rather than replace it.
