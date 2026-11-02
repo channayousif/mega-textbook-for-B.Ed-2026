@@ -1,0 +1,37 @@
+[
+  {
+    "name": "validate:content",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-406/reviews/unit-03/G3/crew-01a19c22/validate-content.txt"
+  },
+  {
+    "name": "check:depth-gate",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-406/reviews/unit-03/G3/crew-01a19c22/check-depth-gate.txt"
+  },
+  {
+    "name": "check:figures",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-406/reviews/unit-03/G3/crew-01a19c22/check-figures.txt"
+  },
+  {
+    "name": "check:no-em-dash",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-406/reviews/unit-03/G3/crew-01a19c22/check-no-em-dash.txt"
+  },
+  {
+    "name": "check:no-answer-keys",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-406/reviews/unit-03/G3/crew-01a19c22/check-no-answer-keys.txt"
+  },
+  {
+    "name": "check:docs-sync",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-406/reviews/unit-03/G3/crew-01a19c22/check-docs-sync.txt"
+  },
+  {
+    "name": "check:content",
+    "exit_code": 0,
+    "log_path": "specs/content/efmp-406/reviews/unit-03/G3/crew-01a19c22/check-content.txt"
+  }
+]
