@@ -1,0 +1,8 @@
+validate:content 0
+check:depth-gate 0
+check:figures 0
+check:no-em-dash 0
+check:no-answer-keys 0
+check:docs-sync 0
+measure-figure-text 0
+render-review 1
