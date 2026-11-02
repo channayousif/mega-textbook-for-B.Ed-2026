@@ -109,7 +109,50 @@
     {
       "number": 3,
       "priority": 3,
-      "courses": []
+      "courses": [
+        {
+          "code": "GISS-401",
+          "title_en": "Islamic Studies",
+          "title_ur": "اسلامیات",
+          "credit_hours": "2 (2-0)",
+          "category": "General Education"
+        },
+        {
+          "code": "GICP-400",
+          "title_en": "Ideology and Constitution of Pakistan",
+          "title_ur": "نظریہ اور آئینِ پاکستان",
+          "credit_hours": "2 (2-0)",
+          "category": "General Education"
+        },
+        {
+          "code": "EFMP-406",
+          "title_en": "Contemporary Literacies",
+          "title_ur": "عصری خواندگیاں",
+          "credit_hours": "3 (3-0)",
+          "category": "Major: Professional"
+        },
+        {
+          "code": "EFMP-407",
+          "title_en": "Education for Sustainable Development",
+          "title_ur": "پائیدار ترقی کے لیے تعلیم",
+          "credit_hours": "3 (3-0)",
+          "category": "Major: Professional"
+        },
+        {
+          "code": "EFPG-401",
+          "title_en": "Teaching of English",
+          "title_ur": "انگریزی کی تدریس",
+          "credit_hours": "3 (3-0)",
+          "category": "Major: Pedagogy"
+        },
+        {
+          "code": "GUHQ-301",
+          "title_en": "Fehm-e-Quran - I",
+          "title_ur": "فہمِ قرآن - I",
+          "credit_hours": "1 (0-1)",
+          "category": "General Education"
+        }
+      ]
     },
     {
       "number": 4,

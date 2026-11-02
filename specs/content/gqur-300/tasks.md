@@ -13,14 +13,14 @@ on every unit).
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0042; content-spec status: approved |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-01/G2/20261027T084800859Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-01/G2/20261102T072753580Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 93e6321; report reviews/unit-01/G3/agent-g3-gqur300-u1-run001.json; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 1 | G4 ur-translation | ▢ | | draft mirror rechecked 2026-10-18; comparative wording repaired; reviews/unit-01/G4/handoff.md and retry-parity.json; no completion claim per translate-unit Step 7 |
 | Unit 1 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at 2222688; G3 dependency escalated to owner; report reviews/unit-01/G5/agent-g5-gqur300-u1-run001.json |
 | Unit 1 | G6 assets | ▢ | | |
 | Unit 1 | G7 publish | ▢ | | |
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0042; content-spec status: approved |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-02/G2/20261027T050232399Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-02/G2/20261102T072753758Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 93e6321; report reviews/unit-02/G3/agent-g3-gqur300-u2-run001.json; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 2 | G3 en-review | ▢ | | advisory cycle 2 (final), agent:codex-g3-reviewer: escalate; report reviews/unit-02/G3/codex-cycle2-20261028.json; exponent definition and ERQ-04 marking defects; current renders, source support and session provenance unavailable; owner escalation required; no completion or publication claim |
 | Unit 2 | G4 ur-translation | ▣ | | mirror complete (2026-10-18): all 6 files verified against EN 96f35fa3; 12 .ur.svg/.ur.dark.svg figure variants verified; teacher-notes activity names synced with topic-01 (بازار کا کھاتہ); structural parity clean under temporary reviewed flip (reverted); all 10 key_terms unbanked in terminology.csv and proposed to owner; translation_status stays draft pending fresh independent G5; continuation validation and owner handoff: reviews/unit-02/G4/handoff.md |
@@ -28,28 +28,28 @@ on every unit).
 | Unit 2 | G6 assets | ▢ | | |
 | Unit 2 | G7 publish | ▢ | | |
 | Unit 3 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0042; content-spec status: approved |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-03/G2/20261027T162101088Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-03/G2/20261102T072753951Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 78f0366; gap G-2026-29 open; report reviews/unit-03/G3/agent-g3-gqur300-u3-run001.json; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 3 | G4 ur-translation | ▣ | | mirror complete (2026-10-18): all 6 files verified against EN 86531818; 12 .ur.svg/.ur.dark.svg figure variants verified; Bloom tags, option letters and bounded answers synced; G5 advisory repairs applied; structural parity clean under temporary reviewed flip (reverted); all 8 key_terms unbanked in terminology.csv and proposed to owner; translation_status stays draft pending fresh independent G5; reviews/unit-03/G4/handoff.md |
 | Unit 3 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at 451a1f8; terminology rulings escalated to owner; report reviews/unit-03/G5/agent-g5-gqur300-u3-run001.json |
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
 | Unit 4 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0042; content-spec status: approved |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-04/G2/20261027T162332529Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-04/G2/20261102T072754078Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 78f0366; Stale since the figure-geometry repair; needs a fresh G3 run; report reviews/unit-04/G3/agent-g3-gqur300-u4-run001.json |
 | Unit 4 | G4 ur-translation | ▣ | | mirror complete: all 6 files verified against EN; 12 .ur.svg/.ur.dark.svg figure variants verified; structural parity clean under temporary reviewed flip (reverted); all 12 key_terms unbanked in terminology.csv and proposed to owner; translation_status stays draft pending fresh independent G5; reviews/unit-04/G4/handoff.md |
 | Unit 4 | G5 ur-review | ▢ | | advisory run001: revise (report binds 59faad3; a later concurrent commit changed one non-cited input); repairs applied at 1b191de; report reviews/unit-04/G5/agent-g5-gqur300-u4-run001.json |
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
 | Unit 5 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0042; content-spec status: approved |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-05/G2/20261013T123619395Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-05/G2/20261102T072754194Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 2d5cd6a; report reviews/unit-05/G3/agent-g3-gqur300-u5-run001.json |
 | Unit 5 | G4 ur-translation | ▣ | | mirror complete (2026-10-18): all 6 files verified against EN 2a224024; 12 .ur.svg/.ur.dark.svg figure variants verified; heading-level vectors, component counts and figure IDs synced; structural parity clean under temporary reviewed flip (reverted); all 11 key_terms unbanked in terminology.csv and proposed to owner; translation_status stays draft pending fresh independent G5; reviews/unit-05/G4/handoff.md |
 | Unit 5 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at 2af6a00; G3 dependency escalated (G-2026-30); report reviews/unit-05/G5/agent-g5-gqur300-u5-run001.json |
 | Unit 5 | G6 assets | ▢ | | |
 | Unit 5 | G7 publish | ▢ | | |
 | Unit 6 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0042; content-spec status: approved |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-06/G2/20261027T051750248Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-06/G2/20261102T072754309Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 2d5cd6a; report reviews/unit-06/G3/agent-g3-gqur300-u6-run001.json; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 6 | G4 ur-translation | ▣ | | mirror complete (2026-10-18): all 6 files verified against EN 2976ef5e; 12 .ur.svg/.ur.dark.svg figure variants verified; Bloom tags, option letters and bounded answers synced; structural parity clean; all 5 key_terms unbanked in terminology.csv and proposed to owner; translation_status stays draft pending fresh independent G5; reviews/unit-06/G4/handoff.md |
 | Unit 6 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at 4725d17; G3 dependency escalated (G-2026-30); report reviews/unit-06/G5/agent-g5-gqur300-u6-run001.json |

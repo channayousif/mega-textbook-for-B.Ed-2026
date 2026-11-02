@@ -121,9 +121,52 @@ function sliceSpec(text, unitNo) {
 
 // Only exact YAML frontmatter lifecycle lines are normalized. No body, prose or
 // similarly named nested field is excluded. Tracker and report files are separate.
+/**
+ * The catalog as one course's evidence sees it: every semester and track keeps
+ * its own fields, but its `courses` list keeps only the reviewed course.
+ *
+ * Why (owner ruling 2026-11-02): `catalog/courses.json` was bound whole, so
+ * adding Semester 3's six courses would have made the G2/G3 evidence of every
+ * reviewed unit stale, although no reviewed unit's own entry changed. New
+ * courses arrive every semester, so the whole-file binding blocked the
+ * catalog's normal growth.
+ *
+ * What still invalidates: any edit to this course's own entry (title, code,
+ * credit hours, `bilingual`, ...), moving it to another semester or track,
+ * removing it, and any edit to a semester's or track's own fields or to the
+ * catalog's top-level keys. As with `sliceSpec`, unknown structure fails
+ * toward binding more: unparseable JSON, an unexpected shape, or a course
+ * that is not in the catalog all bind the whole file.
+ */
+function sliceCatalog(text, courseCode) {
+  let catalog;
+  try { catalog = JSON.parse(text); } catch { return text; }
+  if (!catalog || typeof catalog !== 'object' || Array.isArray(catalog)) return text;
+  let found = false;
+  const project = (groups) => {
+    if (groups === undefined) return undefined;
+    if (!Array.isArray(groups)) throw new Error('unexpected catalog shape');
+    return groups.map((g) => {
+      if (!g || typeof g !== 'object' || !Array.isArray(g.courses)) throw new Error('unexpected catalog shape');
+      const mine = g.courses.filter((c) => c && c.code === courseCode);
+      if (mine.length) found = true;
+      return { ...g, courses: mine };
+    });
+  };
+  let out;
+  try {
+    out = { ...catalog, semesters: project(catalog.semesters), tracks: project(catalog.tracks) };
+  } catch { return text; }
+  if (!found) return text;
+  return JSON.stringify(out, null, 2);
+}
+
 function normalized(path, bytes, scope = null) {
   if (scope && path === `${scope.coursePrefix}/content-spec.md`) {
     return Buffer.from(sliceSpec(bytes.toString('utf8'), scope.unitNo));
+  }
+  if (scope?.courseCode && path === 'catalog/courses.json') {
+    return Buffer.from(sliceCatalog(bytes.toString('utf8'), scope.courseCode));
   }
   if (!path.endsWith('.mdx')) return bytes;
   const text = bytes.toString('utf8');
@@ -327,6 +370,7 @@ function unitScope(root, course, unit, stage) {
   const coursePrefix = `specs/content/${course.toLowerCase()}`;
   return {
     coursePrefix,
+    courseCode: course,
     unitNo: Number(unit),
     citedKeys: citedKeysFor(root, coursePrefix, Number(unit), tracked(root)),
     renderedFigures: renderedFiguresFor(root, course, Number(unit), stage),
