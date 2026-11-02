@@ -32,7 +32,7 @@
 | Unit 3 | G5 ur-review | ▢ | | |
 | Unit 3 | G6 assets | ✅ | auto:gates | 4 schematics placed with dark variants |
 | Unit 3 | G7 publish | ▢ | | |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-05/G2/20261102T082423803Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-05/G2/20261102T113317211Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | awaiting an independent reviewer |
 | Unit 5 | G4 ur-translation | ▢ | | separate job |
 | Unit 5 | G5 ur-review | ▢ | | |
