@@ -1,0 +1,19 @@
+# Source support inspection
+
+This supplemental inspection is diagnostic only: neither local sources/texts file nor the newly downloaded primary PDF belongs to the prepared 89-input manifest. A fresh parent bundle must bind the actual source evidence before accepted review.
+
+Papen (2023), DOI 10.1007/s43638-023-00067-1: successfully downloaded publisher PDF and extracted all 18 pages with installed fitz after pdftotext proved unavailable. Exact download digest and commands are recorded in source-retrieval.txt. Inspected printed pp. 69-73, especially sections 2 (skills discourse), 3 (NLS), 4 (multiliteracies) and 5 (home-school links).
+
+The original supports socially situated literacy, relations to power and exclusion, multiple modes/languages, and bridging home/community texts into learning. These support the broad approach of topic-01.mdx. The original describes sociocultural accounts as complementing cognitive research (section 6, p. 72), which is an important qualification to the unit's polarizing presentation of cognitive skills and contextual practice.
+
+The local Papen file's later Unit 3 blocks present extended prose as quotations. The block headed 'Literacy events and literacy practices' is attributed to pp. 71-73, but the inspected pages instead discuss multiliteracies, home-school links and materialities. Its continuous quoted paragraph is not present in the extracted original. The block headed 'Dominant versus vernacular literacies, identity, and power' is attributed to pp. 74-77, where the article turns to the deaf multiliteracies project and activities. These should be checked against the original and clearly labelled as author synthesis if paraphrased; they cannot stand as verified verbatim quotations. Do not infer fabricated underlying theory from a false quotation format: obtain the appropriate original source for the concepts.
+
+Ashraf et al. (2021), DOI 10.1177/21582440211004140: web tool failed to retrieve article text; publisher curl header request ended in a Cloudflare 403 challenge. The local candidate excerpts were read but no original text was obtained. sources/unit-03.md declares both sources verified without an Unverifiable sources section. An undeclared unavailable source cannot meet the rubric's exception. The excerpted material cannot independently establish the unit's strong claims of cognitive harm, dropout, automatic skill transfer, and dramatic gains.
+
+Specific unsupported or overstated passages requiring repair:
+- topic-02.mdx, Explanation / Literacy for citizenship: the 'ultimate purpose' asserted for Article 25-A, the four-dimension taxonomy as a fixed framework, and the Freire attribution have no corresponding source binding in sources/unit-03.md. Bind primary sources or explicitly identify teaching synthesis, separating statutory text from interpretation.
+- topic-02.mdx:135-146 and :169-176: general claims about inevitable comprehension collapse, increased dropout, automatic cross-language transfer, elimination of fear and dramatic gains require qualified evidence. The provided declaration does not identify study populations, methods, limits or support passages.
+- topic-02.mdx Activity: the purported government admission notice supplies no issuer, date or source. Label it fictional and teach verification of requirements rather than treating it as legal authority; do likewise for the worked water notice and its unexplained section 144 reference.
+- unit-assessment.mdx ERQ 3: 'millions' is unreferenced. ERQ 4's premise and mandated superior alternative should be bounded by available research and allow evidence-based alternatives.
+
+No conclusion here purports to verify current law or provide legal guidance. The repair is to cite and distinguish authoritative text, teaching interpretation and invented classroom scenarios.
