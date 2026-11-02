@@ -1,0 +1,13 @@
+# Figure manifest - EFMP-406 Unit 3 (Literacy, Language, and Society)
+
+Per `specs/009-figure-rendering/contracts/figure-manifest-v2.md` (v3 `Kind` vocabulary, Spec 012).
+One row per figure carrier in the unit's `topic-*.mdx` files; `Topic` is the `topic_label` of the
+file the carrier sits in. **Two figures per topic** (Constitution Art. III.10), and the unit
+carries a `concept-map` (`fig-U3-1`) as its required schematic. Carrier-ID set == this table's ID set both ways (`scripts/check-figures.mjs`).
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U3-1 | 3.1 | concept-map | clean flat vector concept map, landscape; literacy practices linked to home, school, mosque or temple, market and workplace in a Pakistani community; labelled nodes and connective arrows; high contrast, no colour-only meaning | Concept map linking diverse everyday literacy practices across home, school, religious institutions, market and workplace in a Pakistani community. | /img/figures/efmp-406/unit-03/fig-U3-1.svg | placed |
+| fig-U3-2 | 3.1 | table | clean flat vector comparison table, landscape; who decides what counts as literacy, comparing dominant school literacies and vernacular community literacies across language variety, authority, recognition, and classroom treatment; labelled, high contrast, no colour-only meaning | Table comparing dominant school literacies and vernacular community literacies across language variety, authority, social recognition, and classroom implications in Pakistan. | /img/figures/efmp-406/unit-03/fig-U3-2.svg | placed |
+| fig-U3-3 | 3.2 | diagram | clean flat vector diagram, landscape; the literate citizen showing four connected capacities: reading civic information, judging claims and bias, voicing community perspectives, and democratic participation; high contrast, no colour-only meaning | Diagram showing four interconnected dimensions of civic literacy: reading information, evaluating claims critically, expressing civic voice, and active democratic participation. | /img/figures/efmp-406/unit-03/fig-U3-3.svg | placed |
+| fig-U3-4 | 3.2 | table | clean flat vector comparison table, landscape; languages in a Pakistani child's life: home language, Urdu, and English, comparing primary domain, classroom role, and contribution to literacy development; labelled, high contrast, no colour-only meaning | Table comparing home languages, Urdu, and English in a Pakistani pupil's life across primary domains, classroom role, and contribution to literacy development. | /img/figures/efmp-406/unit-03/fig-U3-4.svg | placed |
