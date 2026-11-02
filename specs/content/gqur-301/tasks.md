@@ -151,3 +151,7 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit | Stage | Status | Reviewer | Suggestion |
 |---|---|---|---|---|
 | Unit 7 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only, final cycle: specs/content/gqur-301/reviews/unit-07/G3/crew-final-20261028.json. Prior F1-F5 verified repaired; P1-P4 remain unverified. ERQ 4 needs owner adjudication of annual admissions per section and ten-year capacity assumptions. G3 stays open, unsigned. Further cycles require recorded owner authorization. |
+| Unit 1 | G3 en-review | ✅ | CMY | review:specs/content/gqur-301/reviews/unit-01/G3/20261102T140729Z-g3-desk-5ac63c06.json |
+| Unit 3 | G3 en-review | ✅ | CMY | review:specs/content/gqur-301/reviews/unit-03/G3/20261102T140729Z-g3-desk-356db976.json |
+| Unit 4 | G3 en-review | ✅ | CMY | review:specs/content/gqur-301/reviews/unit-04/G3/20261102T140729Z-g3-desk-01cb7d7c.json |
+| Unit 9 | G3 en-review | ✅ | CMY | review:specs/content/gqur-301/reviews/unit-09/G3/20261102T140729Z-g3-desk-342e3991.json |
