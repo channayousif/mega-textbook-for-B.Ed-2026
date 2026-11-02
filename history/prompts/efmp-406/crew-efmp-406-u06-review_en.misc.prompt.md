@@ -70,7 +70,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Completed independent G3 English review of EFMP-406 Unit 6 with an advisory pass evidence report and execution logs, updated tasks.md, and committed all review artifacts with session PHR.
+Conducted independent G3 English review of EFMP-406 Unit 6, validated advisory pass evidence report, updated tasks.md tracker row, and committed all artifacts with clean content gates.
 
 ## Outcome
 
@@ -82,7 +82,7 @@ Completed independent G3 English review of EFMP-406 Unit 6 with an advisory pass
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Completed independent G3 English review of EFMP-406 Unit 6 with an advisory pass evidence report and execution logs, updated tasks.md, and committed all review artifacts with session PHR.
+- Shipped / changed: Conducted independent G3 English review of EFMP-406 Unit 6, validated advisory pass evidence report, updated tasks.md tracker row, and committed all artifacts with clean content gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
