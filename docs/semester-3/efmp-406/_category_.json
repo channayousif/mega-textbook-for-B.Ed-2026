@@ -1,5 +1,9 @@
 {
-  "label": "EFMP-406 Contemporary Literacies",
+  "label": "EFMP-406 · Contemporary Literacies",
   "position": 4,
-  "collapsed": true
+  "collapsed": true,
+  "link": {
+    "type": "doc",
+    "id": "semester-3/efmp-406/course-overview"
+  }
 }
