@@ -1,0 +1,28 @@
+# render-review: G5 EFMP-303 Unit 6, crew job efmp-303-u06-review_ur
+# recorded 2026-11-02T17:18:35Z, checkout 8e53c97716db5306aec048da223a5e6809dc0963 (branch crew/efmp-303-u06-review_ur)
+# Outcome: NOT PERFORMED. No rendered Urdu page or figure inspection was possible in this session.
+
+Constraint: the crew brief for this job forbids npm run build, any dev/preview server and
+Playwright/Chromium. The repository's page renderer (render-inspect.mjs) and the figure text
+measurer (scripts/measure-figure-text.mjs) both need Chromium, so neither was run.
+No build/ directory exists in this worktree, so no served HTML could be inspected either.
+
+Fallback attempted (non-browser rasteriser), result unusable:
+$ scripts/heavy.sh bash -c 'for i in 1..6: convert -density 96 MSVG:static/img/figures/efmp-303/unit-06/fig-U6-$i.ur.svg <png>'
+  ImageMagick 6 internal MSVG renderer (no rsvg-convert delegate, no cairosvg installed).
+  Every file: "unrecognized color 'var(--bg)'" / "non-conforming drawing primitive definition 'fill'".
+  fig-U6-4.ur.svg: "Attribute x2 redefined", no image produced.
+  Output PNGs for 1,2,3,5,6 were 399-442 bytes (blank canvases); deleted, not evidence.
+  This renderer also has no HarfBuzz shaping, so even a successful raster could not show
+  Nastaliq joining or bidi order. It is not a substitute for a browser inspection.
+
+Inspection actually done instead (source-level, not visual):
+  - Text-element counts and label strings of all six fig-U6-N.svg / .ur.svg pairs compared
+    (35/35, 37/36, 17/17, 22/22, 28/28, 18/18; fig-U6-2 difference is line-wrapping of one label).
+  - <title>/<desc> of each .ur.svg compared with the page alt text in the Urdu topic files.
+  - Urdu font stack: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif.
+  - npm run check:figures exit 0 (see check-figures.log).
+
+Still required before any G5 pass: desktop (1280 wide), narrow (360 wide) and A4 print
+inspection of all six Urdu pages and the six .ur.svg / .ur.dark.svg figures in a real browser,
+plus node scripts/measure-figure-text.mjs on the twelve Urdu SVG variants.
