@@ -1,0 +1,4 @@
+$ npm run check:no-em-dash
+# started 2026-11-02T17:18:05Z at 8e53c97716db5306aec048da223a5e6809dc0963
+✓ no em dash in authored content (scanned: docs, licence, guides, i18n, specs/content, glossary.json)
+# exit 0

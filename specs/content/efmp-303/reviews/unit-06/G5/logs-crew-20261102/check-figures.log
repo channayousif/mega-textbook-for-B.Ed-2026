@@ -1,0 +1,4 @@
+$ npm run check:figures
+# started 2026-11-02T17:18:00Z at 8e53c97716db5306aec048da223a5e6809dc0963
+✓ Figure gate passed (≥ 2 RENDERED figures per topic, a placed schematic per unit, well-formed, unique; manifest consistent; placed assets exist).
+# exit 0
