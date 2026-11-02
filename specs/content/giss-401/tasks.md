@@ -14,5 +14,5 @@ G3/G5 require independent qualified evidence. No review or human initials are cl
 | Unit 2 | G3 en-review | ▢ | | Fresh independent review needed, including qualified Islamic Studies scholar review of belief and law |
 | Unit 2 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored here |
 | Unit 2 | G5 ur-review | ▢ | | Pending G3 and Urdu translation; authored concept labels also need review |
-| Unit 2 | G6 assets | ▢ | | Six prompt-only schematic figures; generation and placement are a later pass |
+| Unit 2 | G6 assets | ▣ | | Six original English SVG schematics placed with derived dark variants; Urdu `.ur.svg` assets belong to the translation job; browser text-geometry measurement not run (crew bars Chromium), CI figure-geometry job pending |
 | Unit 2 | G7 publish | ▢ | | No publication claimed; catalog integration and owner authority remain separate |
