@@ -10,7 +10,7 @@
 | 2 | Contemporary Forms of Literacy | ☐ | ☐ | ☐ | ☐ | - | |
 | 3 | Literacy, Language, and Society | ☐ | ☐ | ☐ | ☐ | - | |
 | 4 | Literacy in the Digital Era | ☐ | ☐ | ☐ | ☐ | - | |
-| 5 | Pedagogical Approaches to Contemporary Literacy | ☐ | ☐ | ☐ | ☐ | - | |
+| 5 | Pedagogical Approaches to Contemporary Literacy | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-02 by the crew author job (claude); G2 gate evidence recorded below; G3 and Urdu remain open |
 | 6 | Issues, Challenges, and Future Directions | ☐ | ☐ | ☐ | ☐ | - | |
 
 **Key:** ▣ = in progress, ☐ = not started, ✓ = done, ✗ = escalated
