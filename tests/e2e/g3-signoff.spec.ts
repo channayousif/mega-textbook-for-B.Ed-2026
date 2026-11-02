@@ -44,12 +44,20 @@ test('the G3 sign-off desk shows the whole picture to an admin and nothing to a 
     await expect(page.getByText('Awaiting your decision')).toBeVisible();
     await expect(page.getByRole('tab', { name: /Records/ })).toBeVisible();
 
-    // Every unit, whatever its state, is reachable from the table.
+    // The default view is the to-do list: lanes with a suggested action each, or the empty message.
+    await expect(page.getByRole('tab', { name: 'To do' })).toHaveAttribute('aria-selected', 'true');
+    await expect(page.getByRole('heading', { level: 2, name: /Ready to certify|Your ruling needed|Send back to the crew/ }).first()
+      .or(page.getByText('Nothing is waiting for you'))).toBeVisible();
+
+    // Every unit, whatever its state, is reachable from the advanced table.
+    await page.getByRole('tab', { name: /All units/ }).click();
     await page.getByLabel('State').selectOption('');
     // Scoped to the units table: the collapsed By-course table above it has hidden rows.
     const rows = page.getByRole('table', { name: 'Units' }).locator('tbody tr');
     await expect(rows.first()).toBeVisible();
     await rows.first().getByRole('button', { name: 'Open' }).click();
+    // The full form sits under the drawer's collapsed Details section.
+    await page.locator('summary', { hasText: /^Details/ }).click();
     await expect(page.getByRole('heading', { level: 3, name: 'Criteria' })).toBeVisible();
     await expect(page.getByRole('heading', { level: 3, name: 'G3 tracker history' })).toBeVisible();
     await page.getByRole('button', { name: 'Close' }).click();
