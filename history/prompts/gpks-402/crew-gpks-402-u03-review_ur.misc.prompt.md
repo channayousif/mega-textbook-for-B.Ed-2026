@@ -13,13 +13,13 @@ labels: ["crew", "agy", "review_ur"]
 links:
   spec: specs/content/gpks-402/content-spec.md
   ticket: null
-  adr: history/adr/0019-two-person-review-pipeline.md
+  adr: null
   pr: null
 files:
  - history/prompts/gpks-402/crew-gpks-402-u03-review_ur.misc.prompt.md
+ - specs/content/gpks-402/reviews/unit-03/G5/crew-f08da193/manifest.json
  - specs/content/gpks-402/reviews/unit-03/G5/f08da193-6363-4286-bcf6-4be1f27181bd.json
  - specs/content/gpks-402/reviews/unit-03/G5/f08da193-6363-4286-bcf6-4be1f27181bd.summary.md
- - specs/content/gpks-402/reviews/unit-03/G5/crew-f08da193/manifest.json
  - specs/content/gpks-402/reviews/unit-03/G5/logs-f08da193/check-content.txt
  - specs/content/gpks-402/reviews/unit-03/G5/logs-f08da193/check-depth-gate.txt
  - specs/content/gpks-402/reviews/unit-03/G5/logs-f08da193/check-docs-sync.txt
@@ -66,32 +66,31 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
    (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
+
 ## Response snapshot
 
-Executed independent G5 Urdu review for GPKS-402 Unit 3 with advisory pass disposition, recorded validated report and evidence logs, and updated tasks.md.
+Conducted independent G5 Urdu review of GPKS-402 Unit 3, generated full evidence manifest and Sharp PNG renders, updated the advisory tracker row, and committed all review artifacts.
 
 ## Outcome
 
 - Impact: review_ur for GPKS-402 Unit 3 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before committing.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 18 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Executed independent G5 Urdu review for GPKS-402 Unit 3 with advisory pass disposition, recorded validated report and evidence logs, and updated tasks.md.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job does not certify anything.
+- Shipped / changed: Conducted independent G5 Urdu review of GPKS-402 Unit 3, generated full evidence manifest and Sharp PNG renders, updated the advisory tracker row, and committed all review artifacts.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All 10 G5 Urdu criteria verified passing with evidence; all 25 assessment items independently solved in Urdu; all 4 Urdu SVG variants inspected with Sharp PNG rasterization.
-  - G5 tracker row in specs/content/gpks-402/tasks.md is updated to open ▢ per ADR-0019; certification remains blocked pending trusted qualification.
-  - Unit 3 has verified English review (G3 signed by CMY) and verified Urdu review (G5 advisory pass).
-- Paperclip issues affected: none (work tracked by the crew board).
+  - Unit 3 G5 Urdu review is advisory (pass); all 10 criteria pass, 25 assessment items independently solved in Urdu, and G5 remains open and unsigned pending trusted qualification.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: check:content-status required regenerating static/content-status.json after tasks.md edit.
+- Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
