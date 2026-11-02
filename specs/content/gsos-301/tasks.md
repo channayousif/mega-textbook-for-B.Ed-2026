@@ -14,7 +14,7 @@ G1 unit-spec drafted (pending G0 intake approval).
 |---|---|---|---|---|
 | Unit 1 | G0 course-intake | ▣ | | content-spec status: draft, pending G0/G1 intake |
 | Unit 1 | G1 unit-spec | ▢ | | pending G0 intake |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-01/G2/20261027T003456620Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-01/G2/20261102T072801368Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | advisory: revise; figure text overflows and citation mismatches; report specs/content/gsos-301/reviews/unit-01/G3/7725a4f0-f3eb-4a48-aed1-23a2605c30d8.json; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 1 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/gsos-301/reviews/unit-01/G3/7725a4f0-f3eb-4a48-aed1-23a2605c30d8.json; X1 geometry verified across 24 variants; S1 EN/UR citations aligned; A1 G0/G1 closure remains CurriculumOwner action; X2 mobile/print inspection pending permitted browser review; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 1 | G3 en-review | ▢ | agent:agy | Advisory escalate (cycle 2/2, final): report specs/content/gsos-301/reviews/unit-01/G3/18895ffc-9133-4016-98ea-4feb32e69b98.json; prior X1 figure geometry and S1 citation/Further reading verified repaired; A1 G0/G1 intake closure remains CurriculumOwner action; visual 360px/print inspection unperformed under host constraints; G3 remains open, no certification; further cycles require recorded owner authorization |
@@ -28,7 +28,7 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 2 | G1 unit-spec | ▢ | | pending G0 intake |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-02/G2/20261027T055052042Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-02/G2/20261102T072801489Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 2 | G4 ur-translation | ▣ | auto:gates | full UR mirror (5 files) and 4 figure variants retained; 2026-10-19 semantic and untranslated-prose repairs; 13 draft gates pass; parity probe has only expected G4/G5 status and derived-status failures; render pending; translation_status stays draft; handoff: figures/unit-02.translation-handoff.md |
 | Unit 2 | G5 ur-review | ▢ | | |
@@ -40,7 +40,7 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 3 | G1 unit-spec | ▢ | | pending G0 intake |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-03/G2/20261024T180249405Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-03/G2/20261102T072801628Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | agent:codex-g3-reviewer | Advisory escalate: specs/content/gsos-301/reviews/unit-03/G3/01a16968-f1c8-7233-add1-497c86787970.json; role conflict/strain, missing figures, assessment and source/mapping repairs; provenance/render evidence incomplete; no certification |
 | Unit 3 | G4 ur-translation | ▢ | agent:claude-translate-unit | Urdu mirror drafted (5 files, .ur.svg wired, key_terms bank-conformant; flip probe clean except G4/G5 rows) against English 27261f59; faithful to unrepaired English incl. G3 role conflict/strain and RRQ 3 defects; handoff reviews/unit-03/G4/translation-handoff.md; translation_status stays draft; awaits English repair and independent G5 |
 | Unit 3 | G5 ur-review | ▢ | | |
@@ -52,7 +52,7 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 4 | G1 unit-spec | ▢ | | pending G0 intake |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-04/G2/20261027T171321662Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-04/G2/20261102T072801779Z-gates.json |
 | Unit 4 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalate: specs/content/gsos-301/reviews/unit-04/G3/20261022-codex.json; numeric guidance, ERQ tables, RRQ demand and coverage mappings need author repair; provenance/source/render evidence incomplete; no certification; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 4 | G4 ur-translation | ▢ | | Blocked before translation: confirmed English assessment errors trigger translate-unit stop rule; separate author repair required; handoff reviews/unit-04/G4/translation-handoff.md; translation_status stays draft |
 | Unit 4 | G5 ur-review | ▢ | | |
@@ -64,7 +64,7 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 5 | G1 unit-spec | ▢ | | pending G0 intake |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-05/G2/20261022T202830186Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-05/G2/20261102T072801898Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | |
 | Unit 5 | G4 ur-translation | ▢ | | |
 | Unit 5 | G5 ur-review | ▢ | | |
@@ -76,7 +76,7 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 6 | G1 unit-spec | ▢ | | pending G0 intake |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-06/G2/20261022T202014023Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gsos-301/reviews/unit-06/G2/20261102T072802091Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | agent:agy | Advisory escalate: specs/content/gsos-301/reviews/unit-06/G3/a90a7de2-a9f8-4abe-9afa-e66589e688ca.json; citation misattribution, coverage/concept mapping repairs; visual render uninspected (brief prohibits build/server/browser); no certification |
 | Unit 6 | G4 ur-translation | ▢ | | Blocked before translation: unresolved English citation and coverage/concept mapping defects trigger translate-unit stop rule; separate author repair required; handoff reviews/unit-06/G4/translation-handoff.md; translation_status stays draft |
 | Unit 6 | G5 ur-review | ▢ | | |
