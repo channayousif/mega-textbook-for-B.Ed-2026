@@ -84,3 +84,8 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit 6 | G7 publish | ▢ | | |
 
 | Unit 2 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalate: specs/content/gsos-301/reviews/unit-02/G3/01a150d2-88d4-7793-864c-89e5aeafc08d.json; citation, stage, Bloom and mapping repairs; provenance and render evidence missing; no certification |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/gsos-301/reviews/unit-03/G3/20261102T212207Z-g3-desk-ece43fa7.json |
+| Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/gsos-301/reviews/unit-04/G3/20261102T212207Z-g3-desk-a27ebd77.json |
+| Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/gsos-301/reviews/unit-05/G3/20261102T212207Z-g3-desk-92fc9b44.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gsos-301/reviews/unit-02/G3/20261102T212207Z-g3-desk-c859e67a.json |
+| Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gsos-301/reviews/unit-06/G3/20261102T212740Z-g3-desk-c2180039.json |
