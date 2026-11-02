@@ -2,7 +2,7 @@
 id: crew-batch-20261102-2130-cifix1
 title: crew fix CREW unit 0
 stage: misc
-date: 2026-11-03
+date: 2026-11-02
 surface: agent
 model: opencode
 feature: crew
@@ -11,14 +11,49 @@ user: crew
 command: crew fix
 labels: ["crew", "opencode", "fix"]
 links:
-  spec: specs/content/efmp-406/content-spec.md
+  spec: specs/content/crew/content-spec.md
   ticket: null
   adr: null
-  pr: 418
+  pr: null
 files:
  - history/prompts/crew/crew-batch-20261102-2130-cifix1.misc.prompt.md
- - static/img/figures/efmp-406/unit-06/fig-U6-1.ur.svg
+ - history/prompts/efmp-406/crew-efmp-406-u06-translate.misc.prompt.md
+ - history/prompts/general/20261106-efmp406-u06-urdu-translation.general.prompt.md
+ - history/prompts/general/20261109-repair-efmp406-u06-translation-evidence.general.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-406/unit-06/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-406/unit-06/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-406/unit-06/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-406/unit-06/unit-assessment.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-406/unit-06/unit-teacher-notes.mdx
+ - specs/content/efmp-406/reviews/unit-06/G2/20261102T204643842Z-gates.json
+ - specs/content/efmp-406/reviews/unit-06/G2/continuation-20261103/README.md
+ - specs/content/efmp-406/reviews/unit-06/G2/continuation-20261103/before.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/continuation-20261103/final-draft.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/continuation-20261103/origin-main.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/continuation-20261103/temporary-reviewed.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T204643842Z/check-bloom-bands.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T204643842Z/check-concept-graph.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T204643842Z/check-depth-gate.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T204643842Z/check-docs-sync.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T204643842Z/check-figures.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T204643842Z/check-no-answer-keys.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T204643842Z/check-no-em-dash.txt
+ - specs/content/efmp-406/reviews/unit-06/G2/logs-20261102T204643842Z/validate-content.txt
+ - specs/content/efmp-406/tasks.md
+ - specs/content/efmp-406/translations/unit-06/handoff.md
+ - specs/content/efmp-406/translations/unit-06/logs/check-content-draft.txt
+ - specs/content/efmp-406/translations/unit-06/logs/check-content-origin-main.txt
+ - specs/content/efmp-406/translations/unit-06/logs/check-content-temporary-reviewed.txt
+ - specs/content/efmp-406/translations/unit-06/logs/mdx-syntax.txt
+ - specs/content/efmp-406/translations/unit-06/logs/parity-self-check.txt
  - static/img/figures/efmp-406/unit-06/fig-U6-1.ur.dark.svg
+ - static/img/figures/efmp-406/unit-06/fig-U6-1.ur.svg
+ - static/img/figures/efmp-406/unit-06/fig-U6-2.ur.dark.svg
+ - static/img/figures/efmp-406/unit-06/fig-U6-2.ur.svg
+ - static/img/figures/efmp-406/unit-06/fig-U6-3.ur.dark.svg
+ - static/img/figures/efmp-406/unit-06/fig-U6-3.ur.svg
+ - static/img/figures/efmp-406/unit-06/fig-U6-4.ur.dark.svg
+ - static/img/figures/efmp-406/unit-06/fig-U6-4.ur.svg
 tests:
  - npm run check:content
 ---
@@ -55,32 +90,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (batch-20261102-0900-conflict1, fix, opencode) `static/content-status.json` is gitignored and was regenerated locally; CI's prestart hook rebuilds it.
 - (batch-20261102-0900-cifix1, fix, opencode) Unit 3's G2 input manifest was refreshed in place (6 figure hashes); any further edit under `static/img/figures/efmp-406/unit-03/` re-opens it, so recompute with `inputManifest(root, 'EFMP-406', 3, 'G3')`.
 
+
 ## Response snapshot
 
-Converted fig-U6-1.ur.svg and its dark variant from per-shape transform mirroring to coordinate mirroring (rect x becomes 780-x-width and the transform is dropped), so the figure-geometry gate measures each Urdu label against its real panel. The rendered figure is pixel-identical. Regenerated the dark variant with the repository's variant builder.
+Converted Unit 6 `fig-U6-1.ur.svg` and its dark variant from transform-based RTL mirroring to coordinate mirroring so the geometry gate checks real panels, leaving the rendered figure pixel-identical, and committed the fix with its PHR.
 
 ## Outcome
 
 - Impact: fix for CREW Unit 0 by opencode (attempt 1).
-- Tests: npm run check:content passed 13/13 in the job worktree. The geometry gate was not run because the crew brief forbids Playwright; a DejaVu-metric simulation reproduced all 7 CI spills exactly (150.4px) before the change and 0 after.
-- Files: 3 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 38 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Rewrote fig-U6-1.ur.svg and its dark variant from transform-based RTL mirroring to coordinate mirroring, so measure-figure-text.mjs compares labels against the intended panels. Rendered output is pixel-identical (sharp render diff max channel delta 1).
-- Decisions the team must respect: G3/G5 stay advisory; this PR does not certify anything. The `.ur.svg` files are not in Unit 6's G2 input manifest (only the English variants are), so no gate-evidence refresh was needed. Only the two failing files changed.
+- Shipped / changed: Converted Unit 6 `fig-U6-1.ur.svg` and its dark variant from transform-based RTL mirroring to coordinate mirroring so the geometry gate checks real panels, leaving the rendered figure pixel-identical, and committed the fix with its PHR.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - `measure-figure-text.mjs` was not run (it launches Playwright Chromium, which the brief forbids). The fix was checked with a local DejaVu advance-metric simulation of the gate and a sharp render diff, both matching CI's observed numbers.
-  - Under CI's fallback font, Unit 6 fig-U6-1 response row 4 line 2 ("کریں اور محفوظ رسائی کی ضروریات کا حوالہ دیں") measures about 344px in a 322px panel (bbox x1 about -10), so it can clip at the viewBox left edge. The gate does not test left overflow, and under the production Nastaliq font the sharp render fits (ink min x about 79). A render inspection with production fonts should confirm this line.
-  - fig-U6-2/3/4.ur.svg still use per-shape transforms and were not touched; they passed the CI geometry run.
+  - `measure-figure-text.mjs` was not run (Playwright forbidden); the fix was validated by a DejaVu advance-metric simulation that reproduced all 7 CI spills exactly before the change and 0 after, plus a pixel-diff render check showing the figure is unchanged.
+  - Under CI's fallback font, response row 4 line 2 ("کریں اور محفوظ رسائی کی ضروریات کا حوالہ دیں") measures ~344px in a 322px panel; the gate ignores left overflow and production Nastaliq fits, but a future render inspection should confirm it.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none beyond the known transform-vs-coordinate false positive, reproduced exactly by simulation.
-- Graders run and results (PASS/FAIL): check:content PASS; figure-geometry predicted PASS by simulation (not executed).
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
