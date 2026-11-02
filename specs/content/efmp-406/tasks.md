@@ -11,7 +11,7 @@
 | 3 | Literacy, Language, and Society | ✓ | ☐ | ☐ | ☐ | placed (EN) | English draft authored from approved content-spec (D-2026-0075) |
 | 4 | Literacy in the Digital Era | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-02 by the crew author job (codex); G2 gate evidence recorded below; G3 and Urdu remain open |
 | 5 | Pedagogical Approaches to Contemporary Literacy | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-02 by the crew author job (claude); G2 gate evidence recorded below; G3 and Urdu remain open |
-| 6 | Issues, Challenges, and Future Directions | ☐ | ☐ | ☐ | ☐ | - | |
+| 6 | Issues, Challenges, and Future Directions | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored by codex crew job 2026-11-02; G2 gate evidence recorded below; G3 and Urdu remain open. Browser geometry check deferred under crew prohibition on Playwright. |
 
 **Key:** ▣ = in progress, ☐ = not started, ✓ = done, ✗ = escalated
 
@@ -49,3 +49,14 @@
 | Unit 5 | G3 en-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/efmp-406/reviews/unit-05/G3/4df544c3-c825-473c-8c69-940a86171cf5.json; all 7 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; all 8 SVG variants pass geometry; G3 remains open and unsigned |
 | Unit 5 | G4 ur-translation | ▢ | | separate job |
 | Unit 5 | G5 ur-review | ▢ | | |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-06/G2/20261102T171620632Z-gates.json |
+| Unit 6 | G3 en-review | ▢ | | awaiting an independent reviewer |
+| Unit 6 | G4 ur-translation | ▢ | | separate job; translate prose, nine concept labels and four SVGs with RTL layout |
+| Unit 6 | G5 ur-review | ▢ | | independent Urdu review pending |
+
+## Unit 6 authoring handoff
+
+- Reading time is 63 minutes at 200 words per minute: opening 2, Topic 6.1 18, Topic 6.2 19, assessment 18 and teacher notes 6. Front matter, imports, figure carriers and link targets are excluded from the visible-word estimate. This fits the approved 55–75 minute budget without changing the spec.
+- Four EN schematics and generated dark twins are placed. Non-browser Sharp renders were inspected in both themes. `measure-figure-text.mjs` uses Playwright/Chromium and was not run because `.crew/brief.md` prohibits Playwright. The next authorised browser session owns that geometry check; no build, server or browser ran here.
+- Source notes distinguish abstract-only, official-overview and indexed-PDF support. The mapped Booth and Ainscow print book was not available and carries no claim. No current district rates, tool-effectiveness findings or policy-achievement claims were invented.
+- Literacy rate, access and out-of-school children are defined inline. Global glossary additions are outside this Unit 6-only job. Equity, AI and SDGs reuse existing glossary entries. The Urdu job owns the corresponding vocabulary work and concept-label review.
