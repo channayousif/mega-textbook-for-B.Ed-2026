@@ -45,7 +45,7 @@
 | Unit 4 | G6 assets | ▣ | | Four EN light/dark schematic pairs placed; Urdu assets deferred with the Urdu job |
 | Unit 4 | G7 publish | ▢ | | No publication authorised or performed by this job |
 | Unit 3 | G3 en-review | ▢ | | advisory: escalate by agent:codex-g3-reviewer; report at specs/content/efmp-406/reviews/unit-03/G3/01a19c22-e969-7f80-81b7-f2e304f416df.json; source support, assessment demand/rubrics, readability and civic-example repairs required; actual author run identity and browser/print evidence unavailable; all 13 content gates pass; G3 remains open and unsigned |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-05/G2/20261102T113317211Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-05/G2/20261102T155654755Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | awaiting an independent reviewer |
 | Unit 5 | G4 ur-translation | ▢ | | separate job |
 | Unit 5 | G5 ur-review | ▢ | | |
