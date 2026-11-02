@@ -1,0 +1,56 @@
+render-review - EFMP-305 Unit 2 (ur) - 2026-11-02T17:36:00Z
+Reviewer: agent:opencode
+Model: LongCat-2.0
+Reviewer Run ID: crew-run:efmp-305-u02-g5-rabe274b8
+Exit code: 1 (page-level browser render not obtainable)
+
+WHY EXIT 1.
+  The crew brief for this job forbids `npm run build`, a dev server and Playwright, and
+  AGENTS.md classes any Chromium run as a heavy job. No built site exists in this worktree
+  (`build/` is absent), so the rendered Urdu pages cannot be inspected in a browser at
+  normal/narrow viewports or A4 print. The G5 rubric requires actual rendered-page
+  inspection and states that missing render access requires escalation. This log therefore
+  records a PARTIAL, static inspection and the limitation, and the report escalates.
+
+WHAT WAS INSPECTED INSTEAD.
+  1. Static layout inspection of all 5 Urdu MDX files (headings, tables, list structure,
+     PrintHandout wiring, figure carriers, alt text, frontmatter) against the English
+     files. Heading-level vectors, table row/column counts and paragraph-block counts
+     match exactly across every file pair.
+  2. Sharp rasterisation of the four committed Urdu figure variants and their dark
+     twins (8 PNGs, fig-U2-1..fig-U2-4 .ur.svg and .ur.dark.svg) at intrinsic size.
+     The Urdu labels are real Nastaliq-script SVG text (font-family 'Noto Nastaliq
+     Urdu', installed at ~/.local/share/fonts/NotoNastaliqUrdu-Regular.ttf).
+  3. Glyph geometry: `scripts/heavy.sh node scripts/measure-figure-text.mjs
+     static/img/figures/efmp-305/unit-02/*.svg` exited 0: zero text-over-viewBox
+     overflows, zero text-on-text collisions and zero wordmark overprints across all 16
+     SVG variants. The Urdu variants place the wordmark at x=15 (left edge), correctly
+     mirrored for RTL, against the English right-edge wordmarks.
+  4. RTL configuration: docusaurus.config.ts:124 declares the ur locale with
+     direction 'rtl' and htmlLang 'ur'; src/css/custom.css:45-69 applies the Nastaliq
+     font stack, 2.2 line-height and the 72ch reading measure under html[dir='rtl'];
+     custom.css:708-713 makes content tables display:block; width:fit-content;
+     overflow-x:auto; custom.css:877+ carries the A4 print stylesheet.
+  5. Bidi/punctuation scan of the Urdu prose: no em dash (check:no-em-dash exit 0), no
+     spaced hyphens in figure alt text or <title>/<desc> (style guide v4.6 satisfied),
+     Latin technical terms consistently parenthesised, Western digits used
+     consistently, no Urdu-digit runs.
+
+LIMITATION (recorded as an uncertain finding in the report).
+  No page-level render was possible, and this review model cannot read image content, so
+  Nastaliq legibility, shaping, bidi punctuation placement, table reading order,
+  wrapping, clipping and the A4 print layout were NOT visually verified. The 8 committed
+  PNGs and the geometry log are the evidence a human should inspect. Criteria
+  `accessibility` and `rtl` are recorded as `unverified` for this reason.
+
+Inspected artifacts:
+  specs/content/efmp-305/reviews/unit-02/logs-abe274b8/render-figures.log
+  specs/content/efmp-305/reviews/unit-02/logs-abe274b8/fig-U2-1-ur-svg.png
+  specs/content/efmp-305/reviews/unit-02/logs-abe274b8/fig-U2-1-ur-dark-svg.png
+  specs/content/efmp-305/reviews/unit-02/logs-abe274b8/fig-U2-2-ur-svg.png
+  specs/content/efmp-305/reviews/unit-02/logs-abe274b8/fig-U2-2-ur-dark-svg.png
+  specs/content/efmp-305/reviews/unit-02/logs-abe274b8/fig-U2-3-ur-svg.png
+  specs/content/efmp-305/reviews/unit-02/logs-abe274b8/fig-U2-3-ur-dark-svg.png
+  specs/content/efmp-305/reviews/unit-02/logs-abe274b8/fig-U2-4-ur-svg.png
+  specs/content/efmp-305/reviews/unit-02/logs-abe274b8/fig-U2-4-ur-dark-svg.png
+  specs/content/efmp-305/reviews/unit-02/logs-abe274b8/measure-figure-text.log
