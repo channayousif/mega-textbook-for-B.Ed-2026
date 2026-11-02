@@ -4071,7 +4071,8 @@ content-improvement loop with no further cycle.
 ```markdown
 ## D-2026-0075 - EFMP-406 intake: partition (units), coverage, outcomes, blueprint, structure and decision residue approved; identity, topic grouping and readings escalated
 
-- **Status:** pending-owner-review
+- **Status:** confirmed (owner, 2026-11-02, board-direct session); spec moves to status: approved
+- **Owner ruling (2026-11-02):** the owner approves the spec and accepts every escalated item as drafted, including its reliance on `D-2026-0053` item 2 (author-selected open-access readings and the open-access floor) for Semester 3. The proposed catalog entry is approved as written (default `bilingual: true`); it is added to `catalog/courses.json` only once review evidence binds each course's own catalog entry, so adding a course does not re-open reviewed units.
 - **Gate:** G0 intake / G1 unit-spec
 - **Scope:** EFMP-406 Contemporary Literacies only, `specs/content/efmp-406/content-spec.md`
   (`status: draft`) at commit `815d59fd`. First intake. Evaluated in a fresh session that did not
@@ -4152,7 +4153,8 @@ content-improvement loop with no further cycle.
 
 ## D-2026-0076 - EFMP-407 intake: identity (proposed entry), partition, coverage, outcomes, blueprint, structure and decision residue approved; readings, the Brundtland framing and the catalog entry escalated
 
-- **Status:** pending-owner-review
+- **Status:** confirmed (owner, 2026-11-02, board-direct session); spec moves to status: approved
+- **Owner ruling (2026-11-02):** the owner approves the spec and accepts every escalated item as drafted, including its reliance on `D-2026-0053` item 2 (author-selected open-access readings and the open-access floor) for Semester 3. The proposed catalog entry is approved as written (default `bilingual: true`); it is added to `catalog/courses.json` only once review evidence binds each course's own catalog entry, so adding a course does not re-open reviewed units.
 - **Gate:** G0 intake / G1 unit-spec
 - **Scope:** EFMP-407 Education for Sustainable Development, `specs/content/efmp-407/content-spec.md`
   (status: draft), bundle prepared at commit `815d59fd`. This entry settles seven things:
@@ -4260,7 +4262,8 @@ content-improvement loop with no further cycle.
 
 ## D-2026-0077 - EFPG-401 intake: partition and residue approved; structure fails one determined repair; identity, coverage, outcomes and blueprint approved in part; catalog entry, 4+-topic formative counts, Unit 4 additions, readings and dated-media glosses escalated
 
-- **Status:** pending-owner-review
+- **Status:** confirmed (owner, 2026-11-02, board-direct session); spec moves to status: approved
+- **Owner ruling (2026-11-02):** the owner approves the spec and accepts every escalated item as drafted, including its reliance on `D-2026-0053` item 2 (author-selected open-access readings and the open-access floor) for Semester 3. The proposed catalog entry is approved as written (default `bilingual: true`); it is added to `catalog/courses.json` only once review evidence binds each course's own catalog entry, so adding a course does not re-open reviewed units. Determined repairs applied before approval: celce-murcia-1991 row given its Open Library locator (OL16476622W) and its false "not returned" note corrected; nolasco-1987-conversation re-attributed to Nolasco & Arthur; sheikh-1998-tesl imprint restored to the guide's "Carvan", with "Caravan" marked unverified. The `check:no-answer-keys` "marking scheme" defect was already repaired in the evaluation commit (gate exits 0).
 - **Gate:** G0 intake / G1 unit-spec
 - **Scope:** EFPG-401 (Teaching of English), `specs/content/efpg-401/content-spec.md` as bound in
   the manifest below. Settles the guide-determined parts listed under Decision; settles nothing
@@ -4335,7 +4338,8 @@ content-improvement loop with no further cycle.
 
 ## D-2026-0078 - GICP-400 intake: identity values, coverage, outcome traces, blueprint, structure and decision residue approved; partition, readings, the catalog record and objective 4 escalated
 
-- **Status:** pending-owner-review
+- **Status:** confirmed (owner, 2026-11-02, board-direct session); spec moves to status: approved
+- **Owner ruling (2026-11-02):** the owner approves the spec and accepts every escalated item as drafted, including its reliance on `D-2026-0053` item 2 (author-selected open-access readings and the open-access floor) for Semester 3. The proposed catalog entry is approved as written (default `bilingual: true`); it is added to `catalog/courses.json` only once review evidence binds each course's own catalog entry, so adding a course does not re-open reviewed units.
 - **Gate:** G0 intake / G1 unit-spec
 - **Scope:** GICP-400 Ideology and Constitution of Pakistan,
   `specs/content/gicp-400/content-spec.md` (status: draft) at commit `815d59fd`. Settles the
@@ -4436,7 +4440,8 @@ content-improvement loop with no further cycle.
 
 ## D-2026-0079 - GISS-401 intake: identity (proposed entry), coverage, outcomes, blueprint, structure and decision residue approved; partition, catalog entry and readings scope escalated; readings fails on two determined repairs
 
-- **Status:** pending-owner-review
+- **Status:** confirmed (owner, 2026-11-02, board-direct session); spec moves to status: approved
+- **Owner ruling (2026-11-02):** the owner approves the spec and accepts every escalated item as drafted, including its reliance on `D-2026-0053` item 2 (author-selected open-access readings and the open-access floor) for Semester 3. The proposed catalog entry is approved as written (default `bilingual: true`); it is added to `catalog/courses.json` only once review evidence binds each course's own catalog entry, so adding a course does not re-open reviewed units. Determined repairs applied before approval: Unit 1 now maps `bhat-2019-education` (Crossref/OpenAlex-verified open access, already in the spec) for topic 1.1, so the declared open-access floor holds in every unit; the Maududi row gives the 1980 Kazi edition its own ISBN (9780686184799).
 - **Gate:** G0 intake / G1 unit-spec
 - **Scope:** GISS-401 Islamic Studies, `specs/content/giss-401/content-spec.md` (status: draft) at
   commit `815d59fd` (bundle committed in `d7aabb98`). Settles identity for the spec's proposed
@@ -4519,7 +4524,8 @@ content-improvement loop with no further cycle.
 
 ## D-2026-0080 - GUHQ-301 intake: identity values, unit partition, coverage, outcomes, structure and most of the blueprint approved; topic partition, Unit 2 formative count, readings, catalog entry and decision residue escalated
 
-- **Status:** pending-owner-review
+- **Status:** confirmed (owner, 2026-11-02, board-direct session); spec moves to status: approved
+- **Owner ruling (2026-11-02):** the owner approves the spec and accepts every escalated item as drafted, including its reliance on `D-2026-0053` item 2 (author-selected open-access readings and the open-access floor) for Semester 3. The proposed catalog entry is approved as written (default `bilingual: true`); it is added to `catalog/courses.json` only once review evidence binds each course's own catalog entry, so adding a course does not re-open reviewed units.
 - **Gate:** G0 intake / G1 unit-spec
 - **Scope:** GUHQ-301 Fehm-e-Quran - I. Settles only items 1-7 below. Does not settle the topic
   partition, the Unit 2 formative count, the reading list, the catalog entry or the residue items

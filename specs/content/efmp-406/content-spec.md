@@ -1,6 +1,6 @@
 ---
 course_code: EFMP-406
-status: draft
+status: approved
 open_access_floor:
   default: 1
 ---

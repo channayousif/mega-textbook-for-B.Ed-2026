@@ -1,6 +1,6 @@
 ---
 course_code: GISS-401
-status: draft
+status: approved
 open_access_floor:
   default: 1
 ---
@@ -39,7 +39,7 @@ From the course guide (paraphrased, `:399-400`): the course gives students a ful
 | quran-translation | *The Holy Qur'an* (translation and tafseer). Text and English translations at Quran.com. | https://quran.com | 1-7 | open access, HTTP 200 on 2026-10-31. The guide names no translation or tafseer; units cite by surah and ayah and name the translation they quote |
 | sahih-bukhari-muslim | *Sahih al-Bukhari* and *Sahih Muslim* (selected ahadith). Online at Sunnah.com. | https://sunnah.com/bukhari ; https://sunnah.com/muslim | 2 | the two most-cited hadith collections; Sunnah.com returned HTTP 403 to this host on 2026-10-31 (`D-2026-0001`). Units cite by collection and hadith number |
 | islami-nazriya-e-hayat | *Islami Nazriya-e-Hayat* ("HEC Recommended", as printed). | (print, Urdu) | 1, 4, 6 | **not found in Open Library**; the guide gives no author or publisher. Commonly attributed to a University of Karachi textbook edited by Khurshid Ahmad; that attribution is unverified here. Title-level support only |
-| maududi-towards-understanding | Maududi, S. A. A. *Towards Understanding Islam.* | (print; many editions) | 1, 2, 3 | Open Library OL12324456W (UK Islamic Mission, 1960) and OL8313410W (Kazi, 1980, ISBN 9780933511798); English rendering of *Risala-e-Diniyat*. Title-level support (`D-2026-0001`) |
+| maududi-towards-understanding | Maududi, S. A. A. *Towards Understanding Islam.* | (print; many editions) | 1, 2, 3 | Open Library OL12324456W (UK Islamic Mission, 1960) and OL8313410W (Kazi, 1980, ISBN 9780686184799; the 1992 Kazi edition is ISBN 9780933511798); English rendering of *Risala-e-Diniyat*. Title-level support (`D-2026-0001`) |
 
 ### Author-selected (open access)
 
@@ -51,7 +51,7 @@ Verified real works chosen for relevance to the guide's objectives (`D-2026-0053
 | sutomo-2014-akhlaq | Sutomo, I. (2014). Modification of character education into akhlaq education for the global community life. *Indonesian Journal of Islam and Muslim Societies*, 4(2), 291-316. | https://doi.org/10.18326/ijims.v4i2.291-316 | 3 | akhlaq as character education; OpenAlex W2596245887 (gold OA) |
 | abdel-salam-2015-democracy | Abdel Salam, E. F. (2015). The questions of compatibility between Islam, democracy and secularism. *TAFHIM: IKIM Journal of Islam and the Contemporary World*, 1(3), 107-127. | https://doi.org/10.56389/tafhim.vol1no3.6 | 4, 5 | the scholarly debate on Islam and democracy; OpenAlex W2621401696 (diamond OA) |
 | rahman-2020-zakat | Rahman, A., & Siradjuddin, S. (2020). Islamic economic concept in poverty alleviation. *Journal of Asian Multicultural Research for Economy and Management Study*, 1(2), 67-74. | https://doi.org/10.47616/jamrems.v1i2.68 | 5 | zakat and the Islamic economic approach to poverty; OpenAlex W3115899813 (diamond OA) |
-| bhat-2019-education | Bhat, A. M. (2019). Islamic philosophy of education. *Journal of Culture and Values in Education*, 2(2), 73-76. | https://doi.org/10.46303/jcve.02.02.5 | 6 | knowledge and education in Islam; OpenAlex W3028482776 (diamond OA) |
+| bhat-2019-education | Bhat, A. M. (2019). Islamic philosophy of education. *Journal of Culture and Values in Education*, 2(2), 73-76. | https://doi.org/10.46303/jcve.02.02.5 | 1, 6 | knowledge and education in Islam (Unit 1 topic 1.1, the importance of Islamic education); OpenAlex W3028482776 (diamond OA) |
 | tambak-2020-teachers | Tambak, S., & Sukenti, D. (2020). Strengthening Islamic behavior and Islamic psychosocial in developing professional madrasah teachers. *Jurnal Cakrawala Pendidikan*, 39(1), 65-78. | https://doi.org/10.21831/cp.v39i1.26001 | 7 | Islamic values in teachers' professional conduct; OpenAlex W3003291306 (gold OA) |
 
 ## Week schedule
@@ -102,7 +102,7 @@ Weeks 1-2 (`3rd 2026.txt:408-415`). Unit Spec (G1) for `docs/semester-3/giss-401
 
 **Common misconceptions**: "Islamic Studies is only about rituals"; "Tauheed only means believing that God exists"; "belief has no link to daily conduct".
 
-**Mapped readings**: quran-translation, maududi-towards-understanding, islami-nazriya-e-hayat.
+**Mapped readings**: quran-translation, bhat-2019-education, maududi-towards-understanding, islami-nazriya-e-hayat.
 
 **Figure plan**:
   - fig-U1-1 - `concept-map` - Islam as a complete code of life: belief, worship, morals, society, economy, state (the unit's required schematic) (Topic 1.1)

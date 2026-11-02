@@ -2545,7 +2545,7 @@ Recorded by `agent:evaluator` under `D-2026-0071`, bound to
 ```markdown
 ## G-2026-155 - EFMP-406 title: the guide says "Contemporary Literacy", the revised Scheme says "Contemporary Literacies"
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0075`: the spec is approved as drafted)
 - **Gate:** G0 intake, `identity` criterion (Art. II.3)
 - **Raised by:** agent:evaluator, 2026-10-31, under `D-2026-0075`
   (`specs/content/efmp-406/intake/manifest.json`, digest `0888f607...53faf`)
@@ -2564,7 +2564,7 @@ Recorded by `agent:evaluator` under `D-2026-0071`, bound to
 
 ## G-2026-156 - EFMP-406 has no `catalog/courses.json` entry; adding one re-opens every bound G2/G3 manifest
 
-- **Status:** open
+- **Status:** open (owner approved the proposed entry on 2026-11-02 under `D-2026-0075`; insertion waits for per-course evidence binding)
 - **Gate:** G0 intake, `identity` criterion
 - **Raised by:** agent:evaluator, 2026-10-31, under `D-2026-0075`
 - **Detail:** `catalog/courses.json` Semester 3 is empty. The `_note` calls Semesters 3-8
@@ -2587,7 +2587,7 @@ Recorded by `agent:evaluator` under `D-2026-0071`, bound to
 
 ## G-2026-157 - EFMP-406: the guide's unit bullets are unnumbered, so `D-2026-0070` item 1 does not settle the topic grouping
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0075`: the spec is approved as drafted)
 - **Gate:** G1 unit-spec, `partition` criterion (topic level)
 - **Raised by:** agent:evaluator, 2026-10-31, under `D-2026-0075`
 - **Detail:** the guide gives six named units, each with four **unnumbered** bullets
@@ -2612,7 +2612,7 @@ Recorded by `agent:evaluator` under `D-2026-0071`, bound to
 
 ## G-2026-158 - EFMP-406: the guide block's reading list, project and school-visit strategy are about inclusive education, not literacy
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0075`: the spec is approved as drafted)
 - **Gate:** G0 intake, `readings` criterion (Art. II.3: which document is authoritative)
 - **Raised by:** agent:evaluator, 2026-10-31, under `D-2026-0075`
 - **Detail:** the EFMP-406 block's outline (`3rd 2026.txt:248-278`) and outcomes (`:242-246`) are
@@ -2637,7 +2637,7 @@ Recorded by `agent:evaluator` under `D-2026-0071`, bound to
 
 ## G-2026-159 - EFMP-406: author-selected readings and the open-access floor rely on `D-2026-0053` item 2, which is scoped to Semester 2
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0075`: the spec is approved as drafted)
 - **Gate:** G0 intake, `readings` criterion
 - **Raised by:** agent:evaluator, 2026-10-31, under `D-2026-0075`
 - **Detail:** with the guide's list unusable for Units 1-5 (`G-2026-158`), the spec binds eleven
@@ -2662,7 +2662,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 
 ## G-2026-165 - EFMP-407 is not in `catalog/courses.json`, and adding it re-opens every bound G2/G3 manifest
 
-- **Status:** open
+- **Status:** open (owner approved the proposed entry on 2026-11-02 under `D-2026-0076`; insertion waits for per-course evidence binding)
 - **Gate:** G0 intake (identity criterion)
 - **Source:** `D-2026-0076`
 - **Detail:** The identity criterion compares `catalog/courses.json` with the guide and the
@@ -2684,7 +2684,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 
 ## G-2026-166 - EFMP-407's author-selected readings and open-access floor cite `D-2026-0053` item 2, which is scoped to Semester 2
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0076`: the spec is approved as drafted)
 - **Gate:** G0 intake (readings criterion)
 - **Source:** `D-2026-0076`
 - **Detail:** The spec adds 14 author-selected open-access works (`content-spec.md:57-70`) and
@@ -2708,7 +2708,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 
 ## G-2026-167 - EFMP-407 guide reading list: entries that do not resolve as printed
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0076`: the spec is approved as drafted)
 - **Gate:** G0 intake (readings criterion)
 - **Source:** `D-2026-0076`
 - **Detail:** All lookups below use Crossref and OpenAlex, 2026-10-31.
@@ -2746,7 +2746,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 
 ## G-2026-168 - EFMP-407 Topic 3.2 teaches Pakistan's National SDG Framework with no retrievable source for it
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0076`: the spec is approved as drafted)
 - **Gate:** G0 intake (readings criterion); G1 unit-spec for Unit 3
 - **Source:** `D-2026-0076`
 - **Detail:** Guide section `3rd 2026.txt:351` is "Pakistan's National SDG Framework", so the
@@ -2774,7 +2774,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 
 ## G-2026-169 - EFMP-407 Unit 1: the guide lists "Brundtland" as a global conference; the spec teaches that as a misconception
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0076`: the spec is approved as drafted)
 - **Gate:** G1 unit-spec (coverage criterion, framing only)
 - **Source:** `D-2026-0076`
 - **Detail:** The guide's section 1.2 is "Major global conferences (Stockholm, Brundtland,
@@ -2801,7 +2801,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 
 ## G-2026-175 - EFPG-401 is not in `catalog/courses.json`; its entry and `bilingual` flag need an owner ruling
 
-- **Status:** open
+- **Status:** open (owner approved the proposed entry on 2026-11-02 under `D-2026-0077`; insertion waits for per-course evidence binding)
 - **Gate:** G0 intake (identity criterion)
 - **Source:** `D-2026-0077`
 - **Detail:** The guide (`3rd 2026.txt:6-15`) and the revised Scheme (`B.Ed 4 Year 2026 revised
@@ -2818,7 +2818,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 
 ## G-2026-176 - Units with four to seven topics: the formative item count is ruled by neither the style guide nor D-2026-0072
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0077`: the spec is approved as drafted)
 - **Gate:** G1 unit-spec (blueprint criterion)
 - **Source:** `D-2026-0077`
 - **Detail:** `specs/content/style-guide.md:227` sets "Formative: 5-8 items"; the per-topic floor
@@ -2836,7 +2836,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 
 ## G-2026-177 - EFPG-401 Unit 4 derives two checklist rows under D-2026-0053 item 4, which is scoped to Semester 2
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0077`: the spec is approved as drafted)
 - **Gate:** G0 intake (coverage, outcomes)
 - **Source:** `D-2026-0077`
 - **Detail:** Guide section 4 has one line, "4.1. Functional approach towards grammar teaching"
@@ -2853,7 +2853,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 
 ## G-2026-178 - EFPG-401 reading list: two guide-required books cannot be shown to exist, and Cook's edition is undetermined
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0077`: the spec is approved as drafted)
 - **Gate:** G0 intake (readings criterion)
 - **Source:** `D-2026-0077`
 - **Detail:** The guide lists five print books (`3rd 2026.txt:94-101`). Checked 2026-10-31:
@@ -2879,7 +2879,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 
 ## G-2026-179 - EFPG-401: the guide's dated media (cassette player, video cassettes, VCR) are glossed with modern equivalents the guide does not name
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0077`: the spec is approved as drafted)
 - **Gate:** G0 intake (coverage)
 - **Source:** `D-2026-0077`
 - **Detail:** The guide names "Cassette-player" and "Video-Cassettes" for listening
@@ -2900,7 +2900,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 
 ## G-2026-185 - GICP-400 has no `catalog/courses.json` entry; adding one re-opens every bound G2/G3 manifest
 
-- **Status:** open
+- **Status:** open (owner approved the proposed entry on 2026-11-02 under `D-2026-0078`; insertion waits for per-course evidence binding)
 - **Gate:** G0 intake (identity criterion)
 - **Source:** `D-2026-0078`
 - **Detail:** The `catalog/courses.json` Semester 3 group is empty. The spec states a "Proposed
@@ -2920,7 +2920,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 
 ## G-2026-186 - GICP-400 intake: the seven-unit partition is the spec's construction over a guide that gives only a week table
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0078`: the spec is approved as drafted)
 - **Gate:** G0 intake / G1 unit-spec (partition criterion)
 - **Source:** `D-2026-0078`
 - **Detail:** The guide (`3rd 2026.txt:583-646`) gives 16 titled weeks and no unit or chapter
@@ -2955,7 +2955,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 
 ## G-2026-187 - GICP-400 reading list: the guide's "Ishtiaq Husain Qureshi. The Pakistan Movement" does not resolve to a work
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0078`: the spec is approved as drafted)
 - **Gate:** G0 intake (readings criterion)
 - **Source:** `D-2026-0078`
 - **Detail:** `3rd 2026.txt:650` lists "Ishtiaq Husain Qureshi. The Pakistan Movement". On
@@ -2970,7 +2970,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 
 ## G-2026-188 - GICP-400 binds author-selected readings and an open-access floor under `D-2026-0053` item 2, a ruling scoped to Semester 2
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0078`: the spec is approved as drafted)
 - **Gate:** G0 intake (readings criterion)
 - **Source:** `D-2026-0078`
 - **Detail:** The spec's `### Author-selected (open access)` table (`content-spec.md:46-59`) cites
@@ -2988,7 +2988,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 
 ## G-2026-189 - GICP-400: objective 4 and the course description name "duties of citizens", but no week of the guide teaches them
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0078`: the spec is approved as drafted)
 - **Gate:** G0 intake / G1 unit-spec (outcomes and coverage criteria)
 - **Source:** `D-2026-0078`
 - **Detail:** This is a within-guide inconsistency:
@@ -3012,7 +3012,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 
 ## G-2026-195 - GISS-401 intake: the seven-unit partition is the spec's construction over a guide that gives only a week table
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0079`: the spec is approved as drafted)
 - **Gate:** G0 intake / G1 unit-spec (partition criterion)
 - **Source:** `D-2026-0079`
 - **Detail:** The guide's "Course Contents / Weekly Breakdown" (`3rd 2026.txt:407-469`) gives
@@ -3044,7 +3044,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 
 ## G-2026-196 - GISS-401 has no `catalog/courses.json` entry; adding one re-opens bound evidence corpus-wide
 
-- **Status:** open
+- **Status:** open (owner approved the proposed entry on 2026-11-02 under `D-2026-0079`; insertion waits for per-course evidence binding)
 - **Gate:** G0 intake (identity criterion)
 - **Source:** `D-2026-0079`
 - **Detail:** `catalog/courses.json:109-113` lists Semester 3 with `"courses": []`. The spec
@@ -3065,7 +3065,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 
 ## G-2026-197 - GISS-401 relies on `D-2026-0053` item 2 (author-selected readings, open-access floor), whose scope is Semester 2
 
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0079`: the spec is approved as drafted)
 - **Gate:** G0 intake / G1 unit-spec (readings criterion)
 - **Source:** `D-2026-0079`
 - **Detail:** The guide gives four readings (`3rd 2026.txt:470-474`): the Qur'an (translation and
@@ -3087,7 +3087,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 ---
 
 ## G-2026-205 - GUHQ-301 has no `catalog/courses.json` entry; adding one re-opens bound G2/G3 manifests
-- **Status:** open
+- **Status:** open (owner approved the proposed entry on 2026-11-02 under `D-2026-0080`; insertion waits for per-course evidence binding)
 - **Raised by:** `D-2026-0080` (agent:evaluator, 2026-10-31), GUHQ-301 intake
 - **Detail:**
   - The identity values are settled: `G-2026-04` rules GUHQ-301, Fehm-e-Quran I, Semester III,
@@ -3105,7 +3105,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 - **Blocks:** the catalog entry; authoring any GUHQ-301 unit under `docs/semester-3/guhq-301/`.
 
 ## G-2026-206 - GUHQ-301 topic partition: weeks as topics, against `D-2026-0070` item 1's "Topic N.k teaches guide section N.k"
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0080`: the spec is approved as drafted)
 - **Raised by:** `D-2026-0080` (agent:evaluator, 2026-10-31), GUHQ-301 intake
 - **Detail:**
   - The guide names seven units (`3rd 2026.txt:135-217`). `D-2026-0070` item 1 (confirmed,
@@ -3131,7 +3131,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
   reading-minute bands and per-topic bank distributions for Units 1-7. `G-2026-207` depends on it.
 
 ## G-2026-207 - GUHQ-301 Unit 2 formative count for a four-topic unit is not ruled
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0080`: the spec is approved as drafted)
 - **Raised by:** `D-2026-0080` (agent:evaluator, 2026-10-31), GUHQ-301 intake
 - **Detail:**
   - Unit 2's blueprint states "formative 12 items, 3 per topic" for four topics
@@ -3145,7 +3145,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 - **Blocks:** the Unit 2 `**Assessment blueprint**` line.
 
 ## G-2026-208 - GUHQ-301 reading list: none of the guide's six entries identifies a single work
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0080`: the spec is approved as drafted)
 - **Raised by:** `D-2026-0080` (agent:evaluator, 2026-10-31), GUHQ-301 intake
 - **Detail:** the guide's list (`3rd 2026.txt:219-224`):
 
@@ -3172,7 +3172,7 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
 - **Blocks:** the `## Reading list` Guide-listed table; the readings criterion for every unit.
 
 ## G-2026-209 - GUHQ-301 relies on `D-2026-0053` item 2 (author-selected sources, open-access floor), which is scoped to Semester 2
-- **Status:** open
+- **Status:** resolved (owner decision, 2026-11-02, `D-2026-0080`: the spec is approved as drafted)
 - **Raised by:** `D-2026-0080` (agent:evaluator, 2026-10-31), GUHQ-301 intake
 - **Detail:**
   - The spec binds author-selected open-access sources and an `open_access_floor` `default: 1`

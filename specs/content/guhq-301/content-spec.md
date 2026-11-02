@@ -1,6 +1,6 @@
 ---
 course_code: GUHQ-301
-status: draft
+status: approved
 open_access_floor:
   default: 1
 ---

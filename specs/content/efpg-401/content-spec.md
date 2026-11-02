@@ -1,6 +1,6 @@
 ---
 course_code: EFPG-401
-status: draft
+status: approved
 open_access_floor:
   default: 1
 ---
@@ -41,9 +41,9 @@ All five are print monographs. Each was searched in Open Library on 2026-10-31.
 |---|---|---|---|---|
 | cook-1991-sll | Cook, V. (1991). *Second Language Learning and Language Teaching.* London: Edward Arnold. | (print) | 1, 3 | Open Library OL2943629W (1991). The guide prints "2nd ed." with the year 1991; the 1991 printing is the first edition, so the edition as printed does not match the year. Title-level support (`D-2026-0001`) |
 | mohammad-1998-modern | Mohammad, T. (1998). *Modern Approaches to the Teaching of English as Second Language.* Lahore: Majeed Book Depot. | (print) | 2, 3 | a local Pakistani text; not found in Open Library. Real-world existence not verified here; title-level support only |
-| celce-murcia-1991 | Celce-Murcia, M. (Ed.). (1991). *Teaching English as a Second or Foreign Language* (2nd ed.). Newbury House. | (print) | 1, 2, 3, 4, 5, 7 | the guide prints "New Bury House: A Division of Harper Collins". Not returned by an Open Library search on 2026-10-31; title-level support only |
-| nolasco-1987-conversation | Nolasco, R. (1987). *Conversation.* Oxford University Press. | (print) | 1 | **the guide prints "Rob Nohand (1993)"**; Open Library lists *Conversation* by Rob Nolasco, OUP 1987, ISBN 9780194370967 (OL4682039W). Title-level support |
-| sheikh-1998-tesl | Sheikh, N. A. (1998). *Teaching of English as a Second Language.* Lahore: Caravan Book House. | (print) | 2, 5 | a local Pakistani text; not found in Open Library. Title-level support only |
+| celce-murcia-1991 | Celce-Murcia, M. (Ed.). (1991). *Teaching English as a Second or Foreign Language* (2nd ed.). Newbury House. | (print) | 1, 2, 3, 4, 5, 7 | the guide prints "New Bury House: A Division of Harper Collins". Open Library OL16476622W (*Teaching English as a Second or Foreign Language*, Newbury House, 1991), found by author search on 2026-10-31; title-level support (`D-2026-0001`) |
+| nolasco-1987-conversation | Nolasco, R., & Arthur, L. (1987). *Conversation.* Oxford University Press. | (print) | 1 | **the guide prints "Rob Nohand (1993)"**; Open Library lists *Conversation* by Rob Nolasco & Lois Arthur, OUP 1987 (Resource Books for Teachers), ISBN 9780194370967 (OL4682039W). Title-level support |
+| sheikh-1998-tesl | Sheikh, N. A. (1998). *Teaching of English as a Second Language.* Lahore: Carvan Book House. | (print) | 2, 5 | a local Pakistani text; not found in Open Library. Imprint reproduced as the guide prints it ("Carvan"); "Caravan" is a likely but unverified correction. Title-level support only |
 
 ### Author-selected (open access)
 
