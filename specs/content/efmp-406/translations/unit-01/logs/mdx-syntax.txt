@@ -1,0 +1,5 @@
+MDX syntax OK: index.mdx
+MDX syntax OK: topic-01.mdx
+MDX syntax OK: topic-02.mdx
+MDX syntax OK: unit-assessment.mdx
+MDX syntax OK: unit-teacher-notes.mdx

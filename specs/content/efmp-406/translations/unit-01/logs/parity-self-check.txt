@@ -1,0 +1,7 @@
+index.mdx: metadata, heading levels, components/imports, numbering, tables, links and figure descriptions match
+topic-01.mdx: metadata, heading levels, components/imports, numbering, tables, links and figure descriptions match
+topic-02.mdx: metadata, heading levels, components/imports, numbering, tables, links and figure descriptions match
+unit-assessment.mdx: metadata, heading levels, components/imports, numbering, tables, links and figure descriptions match
+unit-teacher-notes.mdx: metadata, heading levels, components/imports, numbering, tables, links and figure descriptions match
+Assessment: 40 ordered options, 10/10/5 questions plus 10/10 guidance entries; RRQ marks preserved
+All declared key_terms conform to the frozen bank
