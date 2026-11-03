@@ -138,13 +138,13 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 11 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-11/G3/20261102T212207Z-g3-desk-c705dbc8.json |
 | Unit 12 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-12/G3/20261102T212207Z-g3-desk-1ab85eaa.json |
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-02/G3/20261102T212207Z-g3-desk-4eaf1d0f.json |
-| Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-04/G3/20261102T213456Z-g3-desk-147d237b.json |
 | Unit 3 | G3 en-review | ▢ | | advisory: revise; repairs applied; report reviews/unit-03/G3/20261102T211054Z-g3-desk-1ffb278b.json; EN/UR assessment and mechanism repairs, coverage bindings and introduction corrected; render/glyph geometry and provenance remain owner handoff items; fresh independent review required |
 
 | Unit 12 | G3 en-review | ▢ | | advisory: revise; repairs applied; report reviews/unit-12/G3/20261102T212207Z-g3-desk-1ab85eaa.json; modelling, running question, case status and assessment guidance repaired in EN and UR; visual inspection and historical provenance remain unverified; owner must authorise any further review after exhausted cycles; see reviews/unit-12/G3/repair-en-20261103.md |
 | Unit 9 | G3 en-review | ▢ | agent:codex | advisory: revise; repairs applied; report specs/content/efmp-301/reviews/unit-09/G3/20261102T212207Z-g3-desk-b282fccc.json; EN and UR assessment, authority, pedagogy and figure repairs; current render and authenticated provenance remain owner handoffs; no certification |
 
 | Unit 5 | G3 en-review | ▢ | | advisory: revise; repairs applied; multimodal claims and IQ prediction claims qualified across topics, assessment and figures; fig-U5-1 geometry verified and Thurstone/CHC positions restored; ERQ 5 widened to blueprint integrative pupil profile with explicit 250-300 word conditions; Seifert and Rohrer source/coverage locators corrected; early finisher framed as hypothesis; report specs/content/efmp-301/reviews/unit-05/G3/20261102T211054Z-g3-desk-5bdd915a.json |
+| Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-04/G3/20261102T213456Z-g3-desk-147d237b.json |
 
 ## Re-restructure in progress (2026-09-11)
 
