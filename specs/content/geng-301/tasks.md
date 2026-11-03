@@ -73,3 +73,5 @@ reviewer initials). One row per unit per stage (`G1`–`G7`).
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/geng-301/reviews/unit-03/G3/20261102T212207Z-g3-desk-bbbec948.json |
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/geng-301/reviews/unit-05/G3/20261102T212207Z-g3-desk-0ea60289.json |
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/geng-301/reviews/unit-06/G3/20261102T212207Z-g3-desk-f5b7ea25.json |
+
+| Unit 1 | G3 en-review | ▣ | | advisory: revise; repairs applied for report specs/content/geng-301/reviews/unit-01/G3/20261102T212207Z-g3-desk-df5b9545.json (Codex crew geng-301-u01-repair_en-r1, 2026-11-03). Six approved types now taught and assessed; fig-U1-1 and fig-U1-5 corrected; RRQ 3 component diagnosis repaired; dated source retrieval limits and D-2026-0001 recorded, unchecked attributions removed; paragraph count scaffold clarified; Bloom tags and ERQ 5 descriptors repaired. See reviews/unit-01/repair-en-r1.md. G3 remains open, unsigned; no certification. |
