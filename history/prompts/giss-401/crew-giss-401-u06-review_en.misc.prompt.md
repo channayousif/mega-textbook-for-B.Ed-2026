@@ -19,7 +19,6 @@ files:
  - history/prompts/giss-401/crew-giss-401-u06-review_en.misc.prompt.md
  - specs/content/giss-401/reviews/unit-06/G3/ad110b4d-3d0d-4777-98c5-9930d6961900.json
  - specs/content/giss-401/reviews/unit-06/G3/ad110b4d-3d0d-4777-98c5-9930d6961900.summary.md
- - specs/content/giss-401/reviews/unit-06/G3/prep-ad110b4d/manifest.json
  - specs/content/giss-401/reviews/unit-06/G3/logs-ad110b4d/check-content.txt
  - specs/content/giss-401/reviews/unit-06/G3/logs-ad110b4d/check-depth-gate.txt
  - specs/content/giss-401/reviews/unit-06/G3/logs-ad110b4d/check-docs-sync.txt
@@ -34,6 +33,7 @@ files:
  - specs/content/giss-401/reviews/unit-06/G3/logs-ad110b4d/fig-U6-6.png
  - specs/content/giss-401/reviews/unit-06/G3/logs-ad110b4d/render-review.txt
  - specs/content/giss-401/reviews/unit-06/G3/logs-ad110b4d/validate-content.txt
+ - specs/content/giss-401/reviews/unit-06/G3/prep-ad110b4d/manifest.json
  - specs/content/giss-401/reviews/unit-06/G3/summary.md
  - specs/content/giss-401/tasks.md
 tests:
@@ -71,7 +71,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Completed independent G3 English review for GISS-401 Unit 6 with advisory pass disposition, recorded command logs and rasterized figure evidence, updated tasks.md advisory row, and committed all review artifacts.
+Conducted independent G3 English review of GISS-401 Unit 6 with advisory pass disposition, recorded command logs and rasterized figure evidence, updated tasks.md advisory row, and committed all artifacts.
 
 ## Outcome
 
@@ -83,13 +83,13 @@ Completed independent G3 English review for GISS-401 Unit 6 with advisory pass d
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Completed independent G3 English review for GISS-401 Unit 6 with advisory pass disposition, recorded command logs and rasterized figure evidence, updated tasks.md advisory row, and committed all review artifacts.
+- Shipped / changed: Conducted independent G3 English review of GISS-401 Unit 6 with advisory pass disposition, recorded command logs and rasterized figure evidence, updated tasks.md advisory row, and committed all artifacts.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - GISS-401 Unit 6 English draft passes independent G3 evaluation with advisory report at specs/content/giss-401/reviews/unit-06/G3/ad110b4d-3d0d-4777-98c5-9930d6961900.json.
-  - G3 tracker row remains open ▢ per ADR-0019 pending trusted qualification and the specialized Islamic Studies reviewer sign-off noted in the course spec.
-  - Unit 6 is ready for the subsequent Urdu translation job (G4 ur-translation) and mirrored figures.
+  - GISS-401 Unit 6 English draft passed independent G3 advisory review with pass disposition; G3 tracker row remains open ▢ without certification.
+  - All six unit SVG figures rasterized to PNG with verified mean luminance; geometry measurement via measure-figure-text.mjs was skipped per crew brief constraint against launching Playwright/Chromium and is deferred to CI figure-geometry check.
+  - Unit 6 is ready for Urdu translation (G4 ur-translation) and Urdu figure mirror asset generation.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
