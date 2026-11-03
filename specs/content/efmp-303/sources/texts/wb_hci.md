@@ -2,7 +2,7 @@
 
 **Source:** World Bank. (2020). *Pakistan Human Capital Index 2020.* World Bank Group.
 
-**Document Locator:** https://openknowledge.worldbank.org/handle/10986/34432 (OpenAlex: https://openalex.org/W3088219904, verified 2024-06-15)
+**Registry:** OpenAlex (verified 2024-06-15)
 
 **Excerpt:**
 
