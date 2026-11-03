@@ -34,8 +34,7 @@
 | Unit 4 | G5 ur-review | ▢ | | Pending accepted English baseline and translated mirror. |
 | Unit 4 | G6 assets | ▣ | | Four English schematics and dark variants placed to meet current figure gates; geometry validation pending; Urdu localisation is a separate job. |
 | Unit 4 | G7 publish | ▢ | | Publication is outside this authoring job. |
-
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-06/G2/20261103T000422959Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-06/G2/20261103T011742805Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | Independent Islamic Studies reviewer required; no certification claimed |
 | Unit 6 | G4 ur-translation | ▢ | | Separate job; English pages carry untranslated notices |
 | Unit 6 | G5 ur-review | ▢ | | Pending translation and independent review |
