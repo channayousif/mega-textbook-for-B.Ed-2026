@@ -1,0 +1,12 @@
+# GISS-401 Unit 4 - Figure manifest
+
+Four English schematics are generated and placed, with derived dark variants.
+Urdu localisation belongs to the separate translation job.
+Contract: `specs/009-figure-rendering/contracts/figure-manifest-v2.md`.
+
+| Figure ID | Topic | Kind | Prompt | Alt text | Src | Status |
+|---|---|---|---|---|---|---|
+| fig-U4-1 | 4.1 | concept-map | concept-map of the family in Islam with labelled links showing mutual care among spouses, parents and children, and relatives, with child care and kindness at the centre, clean flat vector, high contrast, no colour-only meaning, landscape | Family relationships connect spouses, parents, children and relatives through responsibilities of care and kindness, with children receiving care rather than earning it. | /img/figures/giss-401/unit-04/fig-U4-1.svg | placed |
+| fig-U4-2 | 4.1 | table | table comparing rights of Allah and rights of people, with columns category, meaning and school example, worship and sincere intention in the first category, returning property and fair treatment in the second, a note that categories can overlap, clean flat vector, labelled, high contrast, no colour-only meaning, landscape | Table distinguishes duties towards Allah from responsibilities towards people and notes that honest and caring conduct can also express obedience to Allah. | /img/figures/giss-401/unit-04/fig-U4-2.svg | placed |
+| fig-U4-3 | 4.2 | diagram | diagram of foundations of the Islamic state with four labelled supports, sovereignty of Allah, khilafat as entrusted responsibility, consultation and justice, beneath public authority accountable for its decisions, clean flat vector, high contrast, no colour-only meaning, landscape | Four foundations link public authority with Allah's sovereignty, human responsibility, consultation and justice, showing that holding office does not remove accountability. | /img/figures/giss-401/unit-04/fig-U4-3.svg | placed |
+| fig-U4-4 | 4.2 | table | table of questions where scholars compare Islamic governance and democracy, rows participation, accountability, majority procedure and ultimate authority, columns possible agreement and unresolved distinction, show consultation is not identical to every democratic institution, clean flat vector, labelled, high contrast, no colour-only meaning, landscape | Comparison table links consultation and accountability with democratic participation while distinguishing majority procedures from the question of ultimate moral authority. | /img/figures/giss-401/unit-04/fig-U4-4.svg | placed |
