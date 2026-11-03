@@ -16,37 +16,36 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-1/efmp-301/unit-05/topic-01.mdx
-  - docs/semester-1/efmp-301/unit-05/topic-02.mdx
-  - docs/semester-1/efmp-301/unit-05/unit-assessment.mdx
-  - docs/semester-1/efmp-301/unit-05/unit-teacher-notes.mdx
-  - history/prompts/efmp-301/crew-efmp-301-u05-repair_en.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-05/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-05/topic-02.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-05/unit-assessment.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-05/unit-teacher-notes.mdx
-  - specs/content/efmp-301/concepts/unit-05.md
-  - specs/content/efmp-301/coverage/unit-05.md
-  - specs/content/efmp-301/reviews/unit-05/G2/20261103T044540225Z-gates.json
-  - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/check-bloom-bands.txt
-  - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/check-concept-graph.txt
-  - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/check-depth-gate.txt
-  - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/check-docs-sync.txt
-  - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/check-figures.txt
-  - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/check-no-answer-keys.txt
-  - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/check-no-em-dash.txt
-  - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/validate-content.txt
-  - specs/content/efmp-301/sources/unit-05.md
-  - specs/content/efmp-301/tasks.md
-  - static/img/figures/efmp-301/unit-05/fig-U5-1.dark.svg
-  - static/img/figures/efmp-301/unit-05/fig-U5-1.svg
-  - static/img/figures/efmp-301/unit-05/fig-U5-2.dark.svg
-  - static/img/figures/efmp-301/unit-05/fig-U5-2.svg
-  - static/img/figures/efmp-301/unit-05/fig-U5-4.dark.svg
-  - static/img/figures/efmp-301/unit-05/fig-U5-4.svg
+ - docs/semester-1/efmp-301/unit-05/topic-01.mdx
+ - docs/semester-1/efmp-301/unit-05/topic-02.mdx
+ - docs/semester-1/efmp-301/unit-05/unit-assessment.mdx
+ - docs/semester-1/efmp-301/unit-05/unit-teacher-notes.mdx
+ - history/prompts/efmp-301/crew-efmp-301-u05-repair_en.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-05/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-05/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-05/unit-assessment.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-05/unit-teacher-notes.mdx
+ - specs/content/efmp-301/concepts/unit-05.md
+ - specs/content/efmp-301/coverage/unit-05.md
+ - specs/content/efmp-301/reviews/unit-05/G2/20261103T044540225Z-gates.json
+ - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/check-bloom-bands.txt
+ - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/check-concept-graph.txt
+ - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/check-depth-gate.txt
+ - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/check-docs-sync.txt
+ - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/check-figures.txt
+ - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/check-no-answer-keys.txt
+ - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/check-no-em-dash.txt
+ - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/validate-content.txt
+ - specs/content/efmp-301/sources/unit-05.md
+ - specs/content/efmp-301/tasks.md
+ - static/img/figures/efmp-301/unit-05/fig-U5-1.dark.svg
+ - static/img/figures/efmp-301/unit-05/fig-U5-1.svg
+ - static/img/figures/efmp-301/unit-05/fig-U5-2.dark.svg
+ - static/img/figures/efmp-301/unit-05/fig-U5-2.svg
+ - static/img/figures/efmp-301/unit-05/fig-U5-4.dark.svg
+ - static/img/figures/efmp-301/unit-05/fig-U5-4.svg
 tests:
-  - npm run check:content
-  - scripts/heavy.sh node scripts/measure-figure-text.mjs static/img/figures/efmp-301/unit-05/*.svg
+ - npm run check:content
 ---
 
 ## Prompt
@@ -100,31 +99,33 @@ From `specs/content/efmp-301/reviews/unit-05/G3/20261102T211054Z-g3-desk-5bdd915
 - (efmp-301-u05-fix, fix, codex) Unit 5 needs a fresh independent G3 review; pre-existing content-status metadata edits remain uncommitted.
 - (efmp-301-u05-fix, fix, codex) Unit 5 needs a fresh independent G3 review; pre-existing content-status metadata edits remain uncommitted.
 
+
 ## Response snapshot
 
-Repaired all open G3 desk review findings for EFMP-301 Unit 5: qualified multimodal and IQ prediction claims across topics, assessment and figures; verified fig-U5-1 geometry and restored Thurstone and Cattell-Horn-Carroll positions; widened ERQ 5 to the blueprint integrative pupil profile with explicit word count conditions; corrected Seifert and Rohrer source and coverage locators; framed early completion as a hypothesis to check; mirrored all prose repairs into Urdu; appended an advisory unticked G3 tracker row; and refreshed deterministic G2 draft gate evidence.
+Repaired all open G3 desk review findings for EFMP-301 Unit 5 across English and Urdu files, restored Thurstone/CHC positions and figure geometry, widened ERQ 5 to the integrative pupil profile, appended an advisory unticked G3 tracker row, and refreshed G2 draft evidence.
 
 ## Outcome
 
-- Impact: repair_en for EFMP-301 Unit 5 by agy.
-- Tests: All 13 content gates passed cleanly (`npm run check:content`); figure text geometry verified with 0 findings across all 16 SVGs (`scripts/heavy.sh node scripts/measure-figure-text.mjs static/img/figures/efmp-301/unit-05/*.svg`).
-- Files: 28 files modified or generated across English docs, Urdu i18n, unit figures, unit specs, G2 evidence and this PHR.
-- Next prompts: fresh independent G3 review of EFMP-301 Unit 5 on current HEAD.
-- Reflection: Shared course-level source texts (seifert2009.md, spielman2020.md) were kept intact to preserve course-wide G2 manifest validity across units 2-12, while all Unit 5-specific source, coverage, and concept locators were aligned.
+- Impact: repair_en for EFMP-301 Unit 5 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 28 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Repaired all open G3 desk findings for EFMP-301 Unit 5 in English and Urdu, restored Thurstone/CHC positions, widened ERQ 5 to integrative profile, qualified IQ and multimodal claims, appended unticked G3 tracker row, and refreshed G2 draft evidence.
-- Decisions the team must respect: G3 remains unticked (`▢`) with advisory suggestion; G3/G5 stay advisory until qualified review and sign-off; no em dashes used.
-- Pending / next owner: Fresh independent G3 review on current HEAD. Visual render at 360px and A4 print remains open (prohibited in crew jobs).
+- Shipped / changed: Repaired all open G3 desk review findings for EFMP-301 Unit 5 across English and Urdu files, restored Thurstone/CHC positions and figure geometry, widened ERQ 5 to the integrative pupil profile, appended an advisory unticked G3 tracker row, and refreshed G2 draft evidence.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Unit 5 G2 evidence has been refreshed to `20261103T044540225Z-gates.json`. Any further content edit will invalidate it.
-  - Geometry for `fig-U5-1.svg` and `.dark.svg` passes with widest text ending at 768.4px inside 780px viewBox.
+  - Unit 5 G2 gate evidence refreshed to 20261103T044540225Z-gates.json; any further content edit will invalidate its manifest.
+  - All 16 Unit 5 SVGs pass measure-figure-text cleanly (fig-U5-1 widest text 768.4px in 780px viewBox); narrow-viewport and print inspection remain pending live browser run.
+  - Shared course texts (seifert2009, spielman2020) were left unchanged to protect course-wide G2 manifest validity across units 2-12.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS (13/13)
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
