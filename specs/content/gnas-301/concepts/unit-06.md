@@ -15,9 +15,9 @@ flag** (see the list at the foot of this file).
 |---|---|---|---|---|---|---|
 | CON:GNAS-301-6-1 | Toxicology's four questions | زہریات کے چار سوال | - | 6.1 | SLO:GNAS-301-6-1 | MCQ-01, RRQ-01, ERQ-01 |
 | CON:GNAS-301-6-2 | Origin axis of poisons | زہر کا اصل کا محور | CON:GNAS-301-6-1 | 6.1 | SLO:GNAS-301-6-1 | MCQ-02, RRQ-02, ERQ-01 |
-| CON:GNAS-301-6-3 | Effect classes and clocks | اثر کی اقسام اور گھڑیاں | CON:GNAS-301-6-1 | 6.2 | SLO:GNAS-301-6-1 | MCQ-04, RRQ-03, ERQ-02 |
-| CON:GNAS-301-6-4 | Dose-response curves | خوراک-جواب منحنی | CON:GNAS-301-6-3 | 6.2 | SLO:GNAS-301-6-1 | MCQ-05, RRQ-04, ERQ-02 |
-| CON:GNAS-301-6-5 | Essentiality ladder | ضروریت کی سیڑھی | CON:GNAS-301-6-1 | 6.3 | SLO:GNAS-301-6-1 | MCQ-06, RRQ-05 |
+| CON:GNAS-301-6-3 | Effect classes and clocks | اثر کی اقسام اور گھڑیاں | CON:GNAS-301-6-1 | 6.2 | SLO:GNAS-301-6-1 | MCQ-04, RRQ-03, RRQ-04, ERQ-02 |
+| CON:GNAS-301-6-4 | Dose-response curves | خوراک-جواب منحنی | CON:GNAS-301-6-3 | 6.2 | SLO:GNAS-301-6-1 | MCQ-05 |
+| CON:GNAS-301-6-5 | Essentiality ladder | ضروریت کی سیڑھی | CON:GNAS-301-6-1 | 6.3 | SLO:GNAS-301-6-1 | MCQ-06 |
 | CON:GNAS-301-6-6 | Routes of absorption | جذب کے راستے | CON:GNAS-301-6-1 | 6.3 | SLO:GNAS-301-6-1 | MCQ-07, RRQ-05 |
 | CON:GNAS-301-6-7 | Bioaccumulation and magnification | حیاتیاتی جمع اور حیاتیاتی بڑھوتری | CON:GNAS-301-6-6 | 6.3 | SLO:GNAS-301-6-1 | RRQ-06, ERQ-03 |
 | CON:GNAS-301-6-8 | Greenhouse mechanism | گرین ہاؤس کا طریقۂ کار | - | 6.4 | SLO:GNAS-301-6-2 | MCQ-08, RRQ-07, ERQ-04 |

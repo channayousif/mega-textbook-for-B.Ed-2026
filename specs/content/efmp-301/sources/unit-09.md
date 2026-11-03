@@ -17,4 +17,13 @@ own recommended book (Chapters 11-12), whose assessment chapters are this unit's
 
 | Key | Citation | URL/DOI | Supports | Kind |
 |---|---|---|---|---|
-| guide-efmp301 | Faculty of Education, University of Sindh. *B.Ed (Elementary 4 Year) Semester-I course guide, EFMP-301 Educational Psychology*, Chapter 9, Week 14. | `Scheme-and-Course-guides/extracted-text/1st 2026.txt` | scope and sequence for the unit as a whole; the guide's own assessment naming behind the types row (U9-2) and the teacher notes' practical work (U9-5) | guide-required |
+| guide-efmp301 | Faculty of Education, University of Sindh. *B.Ed (Elementary 4 Year) Semester-I course guide, EFMP-301 Educational Psychology*, Chapter 9, Week 14. | `Scheme-and-Course-guides/extracted-text/1st 2026.txt` | scope and sequence for the unit as a whole; the guide's own assessment naming behind the types row (U9-2) and general practical categories only; the teacher notes' double-marking exercise is an authored implementation of measurement-quality practice | guide-required |
+
+## Repair clarification (2026-11-03)
+
+The two-room case and the elicit-interpret-act cycle are authored illustrations
+and teaching summaries. Chapter 11 supports assessment across planning and
+instruction, summative reporting, and influences of assessment and feedback on
+motivation and confidence. It does not establish an inevitable threat response,
+a one-month timescale, or a ban on using the same evidence for both purposes.
+The December-to-January example is an explicit application of those passages.

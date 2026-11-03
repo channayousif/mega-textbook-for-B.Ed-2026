@@ -27,13 +27,17 @@ Two are bound below.
 
 ## Unverifiable sources
 
-- `bassham2010`: the guide's mapped reading for this unit is a print monograph (McGraw-Hill, 2010)
-  with no DOI and no open-access edition. The authoring host cannot retrieve the full text, so the
-  prose uses it for **title-and-catalogue-level support only**: that this textbook is the course's
-  named source for deductive and inductive reasoning, common patterns, validity, soundness,
-  strength and cogency. **No page reference, no quotation and no numbered taxonomy is attributed
-  to it**, because title-level support cannot carry those. Every specific claim in this unit is
-  either carried by one of the two open-access bindings above or is an ordinary analytical point
-  worked out on the unit's own Pakistani examples. A reviewer with access to the book must still
-  confirm that the patterns and definitions as presented match its treatment (Constitution Art.
-  III.5; `D-2026-0001`).
+- `bassham2010`: bibliographic-only, as required by D-2026-0013. Retrieval attempt on
+  **2026-11-03**: searched for the 2010 fourth edition and opened the publisher product page
+  https://www.mheducation.com/highered/product/Critical-Thinking-A-Students-Introduction-Bassham.html.
+  It supplies a newer release's catalogue, purchase and access options, not an accessible verified
+  fourth-edition full text. Search results include third-party copies, which were not used to
+  establish an authorised edition. The prose uses it for **title-and-catalogue-level support only**:
+  that this textbook is the course's named source for deductive and inductive reasoning, common
+  patterns, validity, soundness, strength and cogency. **No page reference, no quotation and no
+  numbered taxonomy is attributed to it**, because title-level support cannot carry those. Each
+  topic's reading entry states this bibliographic limit at the point of use. Every specific claim
+  in this unit is either carried by one of the two open-access bindings above or is an ordinary
+  analytical point worked out on the unit's own Pakistani examples. A reviewer with access to the
+  book must still confirm that the patterns and definitions as presented match its treatment
+  (Constitution Art. III.5; `D-2026-0001`).

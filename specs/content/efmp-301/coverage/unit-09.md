@@ -22,4 +22,7 @@ Where a sub-topic is revisited outside the section that first teaches it.
 | U9-4 | topic-03.mdx | Formative evaluation: assessment that teaches | seifert2009 |
 | U9-5 | topic-01.mdx | Types of assessment and the decisions they feed | seifert2009 |
 | U9-6 | unit-assessment.mdx | Unit summary | seifert2009 |
-| U9-5 | unit-teacher-notes.mdx | Practical work | guide-efmp301 |
+| U9-4 | unit-teacher-notes.mdx | Practical work | seifert2009 |
+
+The teacher-notes double-marking exercise is an authored implementation of U9-4.
+The guide lists general practical categories, not this chapter-specific task.
