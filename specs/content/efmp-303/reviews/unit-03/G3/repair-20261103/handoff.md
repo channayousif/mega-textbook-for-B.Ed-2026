@@ -33,7 +33,7 @@ This is repair provenance, not review or certification. It does not establish th
 
 - `npm test`: 28 files, 347 tests passed.
 - `origin/main` at `6af892047`: all 13 content gates passed in a real detached worktree under `.crew/`.
-- Final branch gate result and refreshed G2 logs are recorded with the accompanying G2 evidence.
+- Final branch: all 13 content gates passed, with no baseline or new failures. See check-content.log. Refreshed G2 evidence: specs/content/efmp-303/reviews/unit-03/G2/20261103T071326507Z-gates.json.
 - Browser builds, dev servers and Playwright were explicitly prohibited by the brief. Therefore
   `measure-figure-text.mjs`, which launches Playwright Chromium, and page/mobile/A4 renders were
   not run. Non-browser SVG previews are advisory and do not replace browser geometry checks.
