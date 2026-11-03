@@ -1,6 +1,6 @@
 ---
 id: crew-gnas-301-u06-repair_en-r1
-title: crew repair_en GNAS-301 unit 6 (G3 desk report r1)
+title: crew repair_en GNAS-301 unit 6
 stage: misc
 date: 2026-11-03
 surface: agent
@@ -8,7 +8,7 @@ model: opencode
 feature: gnas-301
 branch: crew/gnas-301-u06-repair_en-r1
 user: crew
-command: Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.
+command: crew repair_en
 labels: ["crew", "opencode", "repair_en"]
 links:
   spec: specs/content/gnas-301/content-spec.md
@@ -16,30 +16,28 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-1/gnas-301/unit-06/topic-03.mdx
-  - docs/semester-1/gnas-301/unit-06/topic-04.mdx
-  - docs/semester-1/gnas-301/unit-06/unit-assessment.mdx
-  - docs/semester-1/gnas-301/unit-06/unit-teacher-notes.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-06/topic-03.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-06/topic-04.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-06/unit-assessment.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-06/unit-teacher-notes.mdx
-  - specs/content/gnas-301/concepts/unit-06.md
-  - specs/content/gnas-301/tasks.md
-  - specs/content/gnas-301/reviews/unit-06/G2/20261103T051634155Z-gates.json
-  - specs/content/gnas-301/reviews/unit-06/G2/logs-20261103T051634155Z/check-bloom-bands.txt
-  - specs/content/gnas-301/reviews/unit-06/G2/logs-20261103T051634155Z/check-concept-graph.txt
-  - specs/content/gnas-301/reviews/unit-06/G2/logs-20261103T051634155Z/check-depth-gate.txt
-  - specs/content/gnas-301/reviews/unit-06/G2/logs-20261103T051634155Z/check-docs-sync.txt
-  - specs/content/gnas-301/reviews/unit-06/G2/logs-20261103T051634155Z/check-figures.txt
-  - specs/content/gnas-301/reviews/unit-06/G2/logs-20261103T051634155Z/check-no-answer-keys.txt
-  - specs/content/gnas-301/reviews/unit-06/G2/logs-20261103T051634155Z/check-no-em-dash.txt
-  - specs/content/gnas-301/reviews/unit-06/G2/logs-20261103T051634155Z/validate-content.txt
-  - history/prompts/gnas-301/crew-gnas-301-u06-repair_en-r1.misc.prompt.md
+ - docs/semester-1/gnas-301/unit-06/topic-03.mdx
+ - docs/semester-1/gnas-301/unit-06/topic-04.mdx
+ - docs/semester-1/gnas-301/unit-06/unit-assessment.mdx
+ - docs/semester-1/gnas-301/unit-06/unit-teacher-notes.mdx
+ - history/prompts/gnas-301/crew-gnas-301-u06-repair_en-r1.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-06/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-06/topic-04.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-06/unit-assessment.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-06/unit-teacher-notes.mdx
+ - specs/content/gnas-301/concepts/unit-06.md
+ - specs/content/gnas-301/reviews/unit-06/G2/20261103T051634155Z-gates.json
+ - specs/content/gnas-301/reviews/unit-06/G2/logs-20261103T051634155Z/check-bloom-bands.txt
+ - specs/content/gnas-301/reviews/unit-06/G2/logs-20261103T051634155Z/check-concept-graph.txt
+ - specs/content/gnas-301/reviews/unit-06/G2/logs-20261103T051634155Z/check-depth-gate.txt
+ - specs/content/gnas-301/reviews/unit-06/G2/logs-20261103T051634155Z/check-docs-sync.txt
+ - specs/content/gnas-301/reviews/unit-06/G2/logs-20261103T051634155Z/check-figures.txt
+ - specs/content/gnas-301/reviews/unit-06/G2/logs-20261103T051634155Z/check-no-answer-keys.txt
+ - specs/content/gnas-301/reviews/unit-06/G2/logs-20261103T051634155Z/check-no-em-dash.txt
+ - specs/content/gnas-301/reviews/unit-06/G2/logs-20261103T051634155Z/validate-content.txt
+ - specs/content/gnas-301/tasks.md
 tests:
-  - npm run check:content (13/13 passed)
-  - npm run check:no-em-dash (0 em dashes)
-  - npm run check:pipeline-gate (passed after the G2 evidence refresh)
+ - npm run check:content
 ---
 
 ## Prompt
@@ -89,34 +87,33 @@ From `specs/content/gnas-301/reviews/unit-06/G3/20261102T212207Z-g3-desk-06be9f9
 - (gnas-301-u06-review_en, review_en, codex) Owner must resolve G-2026-33; current rendering, source binding, provenance and assessment evidence remain incomplete.
 - (gnas-301-u06-review_en, review_en, codex) Owner must resolve G-2026-33; current rendering, source binding, provenance and assessment evidence remain incomplete.
 
+
 ## Response snapshot
 
-Applied the five actionable findings from the latest G3 desk report (20261102T212207Z-g3-desk-06be9f9b.json) to GNAS-301 Unit 6, English first and then the Urdu mirror:
-1. concepts/unit-06.md: moved RRQ-04 and ERQ-02 from CON:GNAS-301-6-4 to CON:GNAS-301-6-3 (effect classes), leaving MCQ-05 as the dose-response item; removed RRQ-05 from CON:GNAS-301-6-5 (essentiality), leaving MCQ-06. RRQ-05 stays with CON:GNAS-301-6-6 (routes).
-2. topic-03 activity and ERQ-03 rubric: replaced the totals-only ladder with a dimensionally specified card set (water 0.01 mg/L; plankton 1 mg/kg; small fish 5 mg/kg; large fish 25 mg/kg; family about 12 mg retained) and the concentration formula (food kg x food concentration x kept share, divided by body kg).
-3. ERQ-02 relabelled Apply; ERQ-05 Create criterion raised from 0-1 to 0-2 and reworded as a synthesis close; MCQ-05 relabelled Understand. Frontmatter blooms_summary updated to "ERQs from Apply to Create".
-4. RRQ-04 reworded to "often appear only after one or more earlier exposures", with marking guidance accepting variable delay; RRQ-05 now requires the formulation, duration and protection assumptions, and the mark scheme rewards them.
-5. topic-04 pane activity and teacher notes now state that the lamp-and-glass model is an analogy and does not reproduce the atmosphere's long-wave absorption and re-radiation.
-Appended the unticked Unit 6 G3 tracker row naming the report, refreshed the G2 gate evidence, and regenerated the gitignored content-status cache.
+Applied the latest G3 report's actionable findings to GNAS-301 Unit 6 (concept mappings, dimensionally specified ladder, Bloom label alignment, RRQ premises, pane-model limits) in English and Urdu, appended the unticked G3 tracker row, and refreshed the G2 evidence.
 
 ## Outcome
 
-- Impact: the five actionable G3 findings are repaired in EN and UR; the four uncertain findings are recorded as owner-owned and were not certifiable under the brief's browser/build prohibition.
-- Tests: npm run check:content (13/13 passed).
+- Impact: repair_en for GNAS-301 Unit 6 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 20 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
-- Reflection: the G2 input manifest is bound to the English bytes, so any content repair invalidates it; prepare-gate-evidence.mjs --refresh-stale re-anchors it in one run.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Unit 6 G3 advisory repairs in EN and UR, the unticked G3 tracker row, and refreshed G2 gate evidence.
-- Decisions the team must respect: G3 stays unticked and advisory; no certification or publication transition is claimed. The four uncertain findings (accessibility, author provenance, source binding, blind assessment derivation) remain owner-owned, and G-2026-33's cycle-count conflict is unresolved.
-- Pending / next owner: owner resolution of G-2026-33 and a fresh authorised G3 review; the next job should re-check the concept mappings and the new Bloom labels against the content-spec blueprint.
-- Paperclip issues affected: none.
+- Shipped / changed: Applied the latest G3 report's actionable findings to GNAS-301 Unit 6 (concept mappings, dimensionally specified ladder, Bloom label alignment, RRQ premises, pane-model limits) in English and Urdu, appended the unticked G3 tracker row, and refreshed the G2 evidence.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - G3 stays unticked; the four uncertain findings (accessibility, author provenance, source binding, blind assessment derivation) remain owner-owned and G-2026-33's cycle-count conflict is unresolved.
+  - The next job should re-check the corrected concept mappings and the new Bloom labels (ERQ-02 Apply, ERQ-05 Create 0-2, MCQ-05 Understand) against the content-spec blueprint.
+  - G2 evidence was refreshed at the repaired HEAD (20261103T051634155Z-gates.json); the gitignored static/content-status.json cache was regenerated locally.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: check:pipeline-gate failed on a stale G2 input manifest after the content edits; resolved by running prepare-gate-evidence.mjs --refresh-stale at the repaired HEAD.
-- Graders run and results (PASS/FAIL): npm run check:content PASS (13/13).
-- Prompt variant (if applicable): crew brief r1.
-- Next experiment (smallest change to try): none.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
