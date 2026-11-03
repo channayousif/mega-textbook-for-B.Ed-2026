@@ -67,11 +67,12 @@ host (and the live site) on 2026-09-20 and 2026-09-24. Therefore:
 - Stop any dev/preview server you start (`kill` it) as soon as the check is done; never leave
   one running at the end of a task.
 - Before a heavy job, check `free -m`; if available memory is under 3 GB, wait or ask the user.
-- The host's OCI tenancy (Toronto) is at its Always Free limits. Never create OCI resources
-  (instances, volumes, backups, load balancers, buckets), grow or reshape anything, or upload
-  non-backup objects to Object Storage (10 GB free; `textbook-db-backups` is for DB backups only).
-  `~/bin/oci-free-watch.py` checks every 15 minutes, alerts the crew Discord channel and takes
-  reversible countermeasures.
+- Owner rule: keep every OCI resource under the documented Always Free limits (Oracle's
+  "Always Free Resources" page). The Toronto tenancy already uses its full A1 compute and 200 GB
+  block storage, so never create OCI resources, grow or reshape anything, or upload non-backup
+  objects to Object Storage (`textbook-db-backups` is for DB backups only).
+  `~/bin/oci-free-watch.py` re-parses the documented limits daily, checks usage every 15 minutes,
+  alerts the crew Discord channel and takes reversible countermeasures.
 
 ## Content work
 
