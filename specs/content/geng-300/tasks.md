@@ -37,7 +37,7 @@ G1 unit-spec affirmed at intake (D-2026-0019). G2 en-draft cleared by determinis
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
 | Unit 4 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0019; content-spec status: approved |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-300/reviews/unit-04/G2/20261102T072751825Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/geng-300/reviews/unit-04/G2/20261103T080843667Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 4 | G4 ur-translation | ▢ | | English-only course |
 | Unit 4 | G5 ur-review | ▢ | | English-only course |
@@ -53,3 +53,4 @@ G1 unit-spec affirmed at intake (D-2026-0019). G2 en-draft cleared by determinis
 | Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/geng-300/reviews/unit-04/G3/20261102T212207Z-g3-desk-f85a6c35.json |
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/geng-300/reviews/unit-03/G3/20261102T213029Z-g3-desk-24e957fb.json |
 | Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/geng-300/reviews/unit-02/G3/20261102T211054Z-g3-desk-5d4f13a0.json (A1 Topic 2.3 MCQ 8/10 and RRQ 5, A2 ERQ 3 stimulus and rubric, P1, C1, S1 labels); E1, E2, U1 need owner or render host; fresh independent G3 needed |
+| Unit 4 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/geng-300/reviews/unit-04/G3/20261102T212207Z-g3-desk-f85a6c35.json (fig-U4-1 geometry canvas/baseline adjusted; source limitations disclosed in topics 4.1-4.3 and sources ledger; render-review deferred to full build/server run); G3 remains open and unsigned |
