@@ -1,8 +1,8 @@
 ---
 id: crew-efmp-305-u05-repair_en-conflict2
-title: crew fix EFMP-305 unit 5 (conflict2)
+title: crew fix EFMP-305 unit 5
 stage: misc
-date: 2026-11-04
+date: 2026-11-03
 surface: agent
 model: opencode
 feature: efmp-305
@@ -16,27 +16,54 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-1/efmp-301/unit-04/topic-01.mdx
-  - docs/semester-1/efmp-301/unit-04/unit-assessment.mdx
-  - history/prompts/efmp-301/crew-efmp-301-u04-repair_en.misc.prompt.md
-  - history/prompts/general/2446-efmp-301-u04-repair-en.general.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-04/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-04/unit-assessment.mdx
-  - specs/content/efmp-301/coverage/unit-04.md
-  - specs/content/efmp-301/reviews/unit-04/G2/20261103T174846654Z-gates.json
-  - specs/content/efmp-301/reviews/unit-04/G2/logs-20261103T174846654Z/check-bloom-bands.txt
-  - specs/content/efmp-301/reviews/unit-04/G2/logs-20261103T174846654Z/check-concept-graph.txt
-  - specs/content/efmp-301/reviews/unit-04/G2/logs-20261103T174846654Z/check-depth-gate.txt
-  - specs/content/efmp-301/reviews/unit-04/G2/logs-20261103T174846654Z/check-docs-sync.txt
-  - specs/content/efmp-301/reviews/unit-04/G2/logs-20261103T174846654Z/check-figures.txt
-  - specs/content/efmp-301/reviews/unit-04/G2/logs-20261103T174846654Z/check-no-answer-keys.txt
-  - specs/content/efmp-301/reviews/unit-04/G2/logs-20261103T174846654Z/check-no-em-dash.txt
-  - specs/content/efmp-301/reviews/unit-04/G2/logs-20261103T174846654Z/validate-content.txt
-  - specs/content/efmp-301/sources/unit-04.md
-  - specs/content/efmp-301/tasks.md
-  - history/prompts/efmp-305/crew-efmp-305-u05-repair_en-conflict2.misc.prompt.md
+ - docs/semester-2/efmp-305/unit-05/topic-01.mdx
+ - docs/semester-2/efmp-305/unit-05/topic-02.mdx
+ - docs/semester-2/efmp-305/unit-05/topic-03.mdx
+ - docs/semester-2/efmp-305/unit-05/unit-assessment.mdx
+ - docs/semester-2/efmp-305/unit-05/unit-teacher-notes.mdx
+ - history/prompts/efmp-305/crew-efmp-305-u05-repair_en-conflict1.misc.prompt.md
+ - history/prompts/efmp-305/crew-efmp-305-u05-repair_en-conflict2.misc.prompt.md
+ - history/prompts/efmp-305/crew-efmp-305-u05-repair_en.misc.prompt.md
+ - history/prompts/general/20261035-repair-efmp305-unit-five-findings.general.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-305/unit-05/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-305/unit-05/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-305/unit-05/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-305/unit-05/unit-assessment.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-305/unit-05/unit-teacher-notes.mdx
+ - specs/content/efmp-305/figures/unit-05.md
+ - specs/content/efmp-305/reviews/unit-05/G2/20261103T131119616Z-gates.json
+ - specs/content/efmp-305/reviews/unit-05/G2/20261103T180403253Z-gates.json
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T131119616Z/check-bloom-bands.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T131119616Z/check-concept-graph.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T131119616Z/check-depth-gate.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T131119616Z/check-docs-sync.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T131119616Z/check-figures.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T131119616Z/check-no-answer-keys.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T131119616Z/check-no-em-dash.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T131119616Z/validate-content.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T180403253Z/check-bloom-bands.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T180403253Z/check-concept-graph.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T180403253Z/check-depth-gate.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T180403253Z/check-docs-sync.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T180403253Z/check-figures.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T180403253Z/check-no-answer-keys.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T180403253Z/check-no-em-dash.txt
+ - specs/content/efmp-305/reviews/unit-05/G2/logs-20261103T180403253Z/validate-content.txt
+ - specs/content/efmp-305/reviews/unit-05/repair-en-20261103/content-baseline.log
+ - specs/content/efmp-305/reviews/unit-05/repair-en-20261103/content-final.log
+ - specs/content/efmp-305/reviews/unit-05/repair-en-20261103/geometry.log
+ - specs/content/efmp-305/reviews/unit-05/repair-en-20261103/repair-notes.md
+ - specs/content/efmp-305/reviews/unit-05/repair-en-20261103/source-check.md
+ - specs/content/efmp-305/reviews/unit-05/repair-en-20261103/unit-tests.log
+ - specs/content/efmp-305/reviews/unit-05/repair-en-20261103/validation.md
+ - specs/content/efmp-305/sources/unit-05.md
+ - specs/content/efmp-305/tasks.md
+ - static/img/figures/efmp-305/unit-05/fig-U5-4.dark.svg
+ - static/img/figures/efmp-305/unit-05/fig-U5-4.svg
+ - static/img/figures/efmp-305/unit-05/fig-U5-4.ur.dark.svg
+ - static/img/figures/efmp-305/unit-05/fig-U5-4.ur.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -72,33 +99,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-305-u05-repair_en, repair_en, codex) Refresh static/content-status.json after scope approval, then rerun check:content.
 - (efmp-305-u05-repair_en, repair_en, codex) Owner/host must supply F1 provenance/rendering and arrange fresh independent G3, including MCQ re-solve; G3 remains unticked.
 
+
 ## Response snapshot
 
-Fetched origin/main and merged it into `crew/efmp-305-u05-repair_en`. The merge was clean: conflict1 had already resolved the `specs/content/efmp-305/tasks.md` conflict, and main's only new work since that merge was the EFMP-301 Unit 4 repair, which does not touch this branch's files. The four shared registries were unchanged on both sides since the merge base, so no append-only union or ID renumbering was needed. Regenerated the gitignored `static/content-status.json` and confirmed all 14 content gates pass.
+Merged origin/main into `crew/efmp-305-u05-repair_en`, refreshed gitignored `static/content-status.json`, and committed the conflict2 PHR so all 14 content gates pass.
 
 ## Outcome
 
-- Impact: fix for EFMP-305 Unit 5 by opencode (attempt 2, conflict sync).
-- Tests: `npm run check:content` passed (14/14 content gates).
-- Files: 19 file(s), listed above (18 brought in by the main merge, plus this PHR).
+- Impact: fix for EFMP-305 Unit 5 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 46 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: merged origin/main (`b7f563c7c`) into `crew/efmp-305-u05-repair_en` as `merge: sync crew/efmp-305-u05-repair_en with origin/main`; no conflicts remained, no shared-registry union or ID renumbering was required; regenerated `static/content-status.json`; all 14 content gates pass.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch certifies nothing.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Merged origin/main into `crew/efmp-305-u05-repair_en`, refreshed gitignored `static/content-status.json`, and committed the conflict2 PHR so all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The branch's Unit 5 G2 row (`20261103T180403253Z-gates.json`) is the authoritative last matching row; main's Unit 3 row is preserved unchanged.
+  - The stated tasks.md conflict was already resolved by conflict1's merge `cda326287`; this run only synced main's later EFMP-301 Unit 4 repair.
   - F1 provenance/rendering and a fresh independent G3 with MCQ re-solve remain owner/host work; G3 stays unticked.
   - `static/content-status.json` is gitignored and was regenerated locally; CI generates it before the gate.
-  - The brief's stated `tasks.md` conflict was already resolved by conflict1's merge `cda326287`; this run only synced main's later EFMP-301 Unit 4 repair.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
-- Prompt variant (if applicable): crew brief v1 (conflict2)
+- Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
