@@ -1,0 +1,42 @@
+render-review evidence (G3 English, GISS-401 Unit 1)
+=============================================================
+Timestamp: 2026-11-03T00:23:00Z
+Reviewer: agent:g3-reviewer
+Model: Gemini 3.8 Flash (High)
+Reviewer Run ID: fb1baf5a-8583-4edd-a5d3-bf7e01304eaf
+Course: GISS-401 Unit 1 (Introduction to Islamic Studies and the Fundamental Beliefs of Islam)
+
+CONSTRAINT: The brief for this crew job explicitly forbids running `npm run build`,
+a dev server, or Playwright Chromium. Comprehensive visual, structural, and raster
+inspection was conducted within permitted host resources:
+
+1. Figure Rasterization and Visual Inspection:
+   - All four unit SVGs were rasterized to PNG at 780px width using Sharp with :root CSS variables resolved:
+     - fig-U1-1.png (780x540): Concept map of Islam as a complete code of life (din) at the centre, linked to six connected areas: belief, worship, morals, society, economy, and the state, with dashed interconnecting lines and caption. Mean channels: [239, 242, 241, 255].
+     - fig-U1-2.png (780x512): Two-column table of eight branches of Islamic Studies (Ulum al-Qur'an and Tafsir, Ulum al-Hadith, Aqidah, Fiqh and Usul al-Fiqh, Seerah and Islamic history, Akhlaq, Islamic social/economic/political thought, Comparative religion) with what each studies. Mean channels: [232, 235, 234, 255].
+     - fig-U1-3.png (780x502): Three-column table of the six articles of faith (belief in Allah, angels, books, messengers, the Last Day, and divine decree), each with meaning and Qur'anic/hadith citation. Mean channels: [233, 236, 235, 255].
+     - fig-U1-4.png (780x470): Diagram of Tauheed, Risalat and Akhirat as three pillars standing on faith (Iman) and supporting a believer's life and conduct, with roles "whom we worship", "how we live", and "why it matters". Mean channels: [232, 237, 237, 255].
+   - All four PNG renders are saved under specs/content/giss-401/reviews/unit-01/G3/logs-fb1baf5a/ and verified non-blank with high contrast.
+
+2. Figure Assets and Geometry:
+   - All 4 light SVGs and 4 dark variants exist under static/img/figures/giss-401/unit-01/.
+   - Clean XML structure, exact viewBox dimensions (780x540, 780x512, 780x502, 780x470), tokenized palette conforming to scripts/lib/figure-palette.mjs.
+   - Text boxes, line padding, and contrast verified clean across all light and dark variants.
+
+3. Alt Text and SVG Accessibility:
+   - All four <Figure> elements across topic-01.mdx and topic-02.mdx carry detailed descriptive alt text matching the visual diagrams and figures/unit-01.md manifest declarations.
+   - SVG sources include role="img", aria-labelledby="t d", <title id="t">, and <desc id="d"> elements with matching descriptions.
+
+4. Heading Structure and Monotonic Progression:
+   - docs/semester-3/giss-401/unit-01/index.mdx: # title, ## Unit learning outcomes, ## Prerequisite knowledge, ## In this unit, ## How to use this unit.
+   - topic-01.mdx: # title, ## A real classroom situation, ## Explanation, ### Meaning and scope of Islamic Studies, #### The meaning of Islam, #### The meaning of Islamic Studies, #### The branches of Islamic Studies, #### Worked example: which branch answers the question?, #### Correcting a common misconception, ### Importance of Islamic education, #### Knowledge in the Qur'an, #### The aims of Islamic education, #### Islamic education in Pakistan, #### Worked example: what Islamic education adds to a lesson, ### Islam as a complete code of life, #### What "complete code of life" means, #### What "complete" does and does not mean, #### Worked example: one school day through the six areas, #### Correcting the misconception again, ## Activity: Sort the questions, ## Check your understanding, ## Summary, ## Self-assessment checklist, ## Try this at your practicum school, ## Summative task, ## Further reading.
+   - topic-02.mdx: # title, ## A real classroom situation, ## Explanation, ### Concept of Tauheed, #### What Tauheed means, #### The effects of Tauheed on a person's life, #### Correcting a common misconception, #### Worked example: testing a statement against the three aspects, ### Risalat and Akhirat, #### Risalat: guidance through the prophets, #### Akhirat: life after death and accountability, #### Correcting a second misconception, #### Worked example: how belief in Akhirat shapes a teacher's day, ### Articles of faith, #### The six articles, #### Understanding the divine decree, #### Worked example: from article to answer, ## Activity: From belief to behaviour, ## Check your understanding, ## Summary, ## Self-assessment checklist, ## Try this at your practicum school, ## Summative task, ## Further reading.
+   - unit-assessment.mdx: # title, ## Unit summary, ## Summative assessment, ### Multiple-choice questions (MCQs), ### Restricted-response questions (RRQs), ### Extended-response questions (ERQs), ## Answers and marking guidance, ### MCQ answer key, ### RRQ model answers and mark schemes, ### ERQ rubrics.
+   - Complete monotonic progression with zero skipped heading levels across all unit MDX files.
+
+5. Presentation and Mobile Layout:
+   - Content tables in MDX and SVG graphics adhere to display: block; overflow-x: auto; width: fit-content per src/css/custom.css.
+   - Assessment answer key and marking guidance are strictly quarantined within the bounded final section of unit-assessment.mdx.
+   - Zero em dashes (check-no-em-dash passes with exit 0).
+
+exit_code: 0
