@@ -131,3 +131,16 @@ Coverage: U4-01 to U4-04, as specified in coverage/unit-04.md. Classroom procedu
 institutional comparisons are labelled applications in the prose. The notes do not establish
 family-law rulings or prescribe one modern governmental design. Independent religious-content
 review remains pending.
+
+## U6-01, U6-02, U6-07, U6-08, U6-09
+
+Unit 6 paraphrases these passages and does not quote them. Its English display translation is Mustafa Khattab, *The Clear Quran*, at Quran.com (https://quran.com/96/1-5 ; https://quran.com/16/125 ; https://quran.com/49/11-13 ; https://quran.com/5/8 ; https://quran.com/2/256 ; https://quran.com/49/6), consulted 2026-11-03. The notes below are reading notes in paraphrase, not verse text.
+
+- **96:1-5**: reading, teaching and the pen are related to the Creator. No modern lesson timetable is specified.
+- **16:125**: wisdom, good counsel and the manner of discussion concern invitation to Allah's way. Classroom use is an explicitly identified inference.
+- **49:11-13**: the passage addresses ridicule, degrading labels and human diversity.
+- **5:8**: dislike must not lead believers away from justice.
+- **2:256**: compulsion in religion is rejected.
+- **49:6**: unchecked news can lead to harm through ignorance.
+
+Applications to school procedures are the Unit 6 author's reasoning, not additional verse text.
