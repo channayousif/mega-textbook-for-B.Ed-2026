@@ -15,14 +15,16 @@ bound below.
 volume, issue, pages, year, author surnames and licence URL were compared field by field with the
 citation recorded here. That is a *metadata and licence* verification. **No full text was
 retrieved**, so no row below supports a quotation or a page-specific claim. No other registry
-(OpenAlex, ERIC, DOAJ) was queried and none is claimed.
+(OpenAlex, ERIC, DOAJ) was queried and none is claimed. On 2026-11-03 the full texts of
+`subandiyah2025`, `serman2026` and `cast2024` were retrieved and bound; see "Full-text
+verification, 2026-11-03" below. `vernon2020` and `florian2014` remain metadata-only.
 
 ## Author-selected bindings, open access, Crossref-verified
 
 | Key | Citation | URL/DOI | Supports | Kind |
 |---|---|---|---|---|
-| subandiyah2025 | Subandiyah, H., Nasrullah, R., Ramadhan, R., Supratno, H., Raharjo, R. P., & Lukman, F. (2025). The impact of differentiated instruction on student engagement and achievement in Indonesian language learning. *Cogent Education, 12*(1). | https://doi.org/10.1080/2331186X.2025.2516378 | U3-1 (that differentiation changes engagement as well as attainment), U3-2 (differentiating content, process and product in a real school system) | author-selected; open access, CC BY 4.0; Crossref-verified (metadata and licence) 2026-10-15; full text not retrieved |
-| serman2026 | Serman, & Ningrum. (2026). Cooperative learning in inclusive classrooms: Improving slow learners' fraction addition achievement. *Journal of Innovation and Research in Primary Education, 5*(3), 5273-5281. | https://doi.org/10.56916/jirpe.v5i3.3993 | U3-3 (cooperative structures used with pupils who are behind, in an ordinary primary classroom) | author-selected; open access, CC BY-SA 4.0; Crossref-verified (metadata and licence) 2026-10-15; full text not retrieved |
+| subandiyah2025 | Subandiyah, H., Nasrullah, R., Ramadhan, R., Supratno, H., Raharjo, R. P., & Lukman, F. (2025). The impact of differentiated instruction on student engagement and achievement in Indonesian language learning. *Cogent Education, 12*(1). | https://doi.org/10.1080/2331186X.2025.2516378 | U3-1 (that differentiation changes engagement as well as attainment), U3-2 (differentiating content, process and product in a real school system) | author-selected; open access, CC BY 4.0; Crossref-verified (metadata and licence) 2026-10-15; full text read 2026-11-03, excerpt bound at `sources/texts/subandiyah2025.md` |
+| serman2026 | Serman, & Ningrum. (2026). Cooperative learning in inclusive classrooms: Improving slow learners' fraction addition achievement. *Journal of Innovation and Research in Primary Education, 5*(3), 5273-5281. | https://doi.org/10.56916/jirpe.v5i3.3993 | U3-3 (cooperative structures used with pupils who are behind, in an ordinary primary classroom) | author-selected; open access, CC BY-SA 4.0; Crossref-verified (metadata and licence) 2026-10-15; full text read 2026-11-03, excerpt bound at `sources/texts/serman2026.md` |
 
 ## Author-selected bindings, Crossref-verified, not open access
 
@@ -35,37 +37,45 @@ retrieved**, so no row below supports a quotation or a page-specific claim. No o
 
 | Key | Citation | URL/DOI | Supports | Kind |
 |---|---|---|---|---|
-| cast2024 | CAST. (2024). *Universal Design for Learning guidelines* (version 3.0). CAST. | https://udlguidelines.cast.org | U3-1, U3-2 (the three "multiple means" as a planning vocabulary), U3-5 (designing for the range from the start rather than retrofitting) | author-selected; open-access framework document, no DOI, so no registry lookup is possible and none is claimed; version 3.0 is the current release named in the content spec as `cast2024`; **page content not retrieved from this host** |
+| cast2024 | CAST. (2024). *Universal Design for Learning guidelines* (version 3.0). CAST. | https://udlguidelines.cast.org | U3-1, U3-2 (the three "multiple means" as a planning vocabulary), U3-5 (designing for the range from the start rather than retrofitting) | author-selected; open-access framework document, no DOI, so no registry lookup is possible and none is claimed; version 3.0 is the current release named in the content spec as `cast2024`; page retrieved 2026-11-03 and hashed, excerpt bound at `sources/texts/cast2024.md` |
+
+## Full-text verification, 2026-11-03
+
+Added in the G3 repair pass for report
+`reviews/unit-03/G3/20261102T212207Z-g3-desk-d26592ad.json` (finding: no full text retrieved).
+Three of the five sources were retrieved from this host and now have bound excerpts under
+`specs/content/efmp-305/sources/texts/`. Each excerpt file records the retrieval route, the date
+and what the text does and does not support.
+
+- `subandiyah2025` (`texts/subandiyah2025.md`): the full text confirms DI lessons in Indonesian
+  language classes at three junior high schools, with gains in learning behaviour and post-test
+  achievement and no attendance effect. The prose's scope cautions match the study. The study
+  varies grouping, task difficulty and products, but does not itself use the content / process /
+  product vocabulary.
+- `serman2026` (`texts/serman2026.md`): the full text confirms a STAD cooperative structure in an
+  inclusive Grade 6 classroom, 26 pupils including six slow learners, with fraction-addition
+  mastery rising across two action-research cycles. Peer tutoring was the weakest observed
+  behaviour, so the study supports the peer-mediated structure more firmly than peer
+  explanation as the mechanism.
+- `cast2024` (`texts/cast2024.md`): the version 3.0 page names the three principles as multiple
+  means of engagement, representation, and action and expression, as the unit uses them.
 
 ## Unverifiable sources
 
-Every source bound to this unit is **unverifiable at G1** in the sense the depth gate means: the
-bibliographic record and, where applicable, the licence have been checked against Crossref, but
-**no full text was retrieved from this authoring host** and no excerpt is bound under
-`specs/content/efmp-305/sources/texts/`. Support is title-and-bibliographic level only, per
-`D-2026-0001`; a reviewer must verify each specific claim against the source text at G2.
+The two subscription sources below remain **unverifiable** in the sense the depth gate means:
+the bibliographic record has been checked against Crossref, but **no full text was retrieved
+from this authoring host** and no excerpt is bound under `specs/content/efmp-305/sources/texts/`.
+Support is title-and-bibliographic level only, per `D-2026-0001`; a reviewer must verify each
+specific claim against the source text.
 
-- `subandiyah2025`: supports U3-1, U3-2. CC BY 4.0, so G2 should be able to retrieve and bind an
-  excerpt without difficulty. **Scope caution the prose must respect:** this is a study of
-  *Indonesian language* learning in Indonesian schools. It is cited for the differentiation
-  mechanism and for the fact that engagement moves with it, never for a claim about Pakistani
-  classrooms or about any other subject.
-- `serman2026`: supports U3-3. CC BY-SA 4.0. **Scope cautions:** a single small study, in
-  primary mathematics (fraction addition), published in a low-profile journal in 2026. It is
-  cited as one illustration that cooperative structures reach pupils who are behind, never as
-  the evidence base for cooperative learning as a whole, and never for an effect size.
 - `vernon2020`: supports U3-3. Subscription journal. The stronger methodological source for the
-  claim that the *structure* is what works; G2 should retrieve it before the prose leans harder.
+  claim that the *structure* is what works; it should be retrieved before the prose leans harder.
 - `florian2014`: supports U3-1, U3-4. Subscription journal; same record as Unit 2's.
-- `cast2024`: supports U3-1, U3-2, U3-5. A living web document, which means its content can
-  change under a stable URL. G2 must record the retrieval date alongside the version.
 
 ## Verification still owed at G2
 
-- Retrieve `subandiyah2025` and `serman2026` (both openly licensed) and bind excerpts; they are
-  the two rows carrying the open-access floor, and they are currently the least-examined.
-- Retrieve `cast2024` and pin the version 3.0 wording of the three "multiple means", which
-  Topics 3.1 and 3.3 use as their organising vocabulary.
+- Done 2026-11-03: `subandiyah2025`, `serman2026` and `cast2024` retrieved and bound (see
+  above). Still owed: `vernon2020` and `florian2014`, both subscription journals.
 - The unit makes no claim about effect sizes, and must not acquire one before the underlying
   texts are read. Where the prose needs a general statement about what differentiation or
   cooperative learning achieves, it is written as what the cited study found in its own setting.
