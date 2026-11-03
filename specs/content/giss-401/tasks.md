@@ -29,7 +29,7 @@
 | Unit 1 | G6 assets | ▣ | | four English schematics placed with dark variants; `measure-figure-text` not run (crew brief bars Chromium), CI `figure-geometry` is the first measured check |
 | Unit 1 | G7 publish | ▢ | | no publication requested by this authoring job |
 | Unit 3 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-03/G2/20261103T021930441Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-03/G2/20261103T031913180Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
 | Unit 3 | G4 ur-translation | ▢ | | separate job |
 | Unit 3 | G5 ur-review | ▢ | | |
@@ -48,7 +48,7 @@
 | Unit 5 | G5 ur-review | ▢ | | |
 | Unit 5 | G6 assets | ✅ | auto:gates | 4 schematics placed with dark variants |
 | Unit 5 | G7 publish | ▢ | | no publication requested by this authoring job |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-06/G2/20261103T011742805Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-06/G2/20261103T031913754Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | Independent Islamic Studies reviewer required; no certification claimed |
 | Unit 6 | G4 ur-translation | ▢ | | Separate job; English pages carry untranslated notices |
 | Unit 6 | G5 ur-review | ▢ | | Pending translation and independent review |
