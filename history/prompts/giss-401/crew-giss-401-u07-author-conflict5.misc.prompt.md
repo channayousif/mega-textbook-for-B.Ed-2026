@@ -16,8 +16,51 @@ links:
   adr: null
   pr: null
 files:
- - specs/content/giss-401/sources/texts/quran-translation.md
+ - docs/semester-3/giss-401/unit-07/index.mdx
+ - docs/semester-3/giss-401/unit-07/topic-01.mdx
+ - docs/semester-3/giss-401/unit-07/unit-assessment.mdx
+ - history/prompts/general/20261110-resolve-giss-unit-seven-conflicts.general.prompt.md
+ - history/prompts/giss-401/0001-verify-unit-seven-merge.misc.prompt.md
+ - history/prompts/giss-401/20261113-resolve-unit-seven-merge.misc.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u07-author-conflict1.misc.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u07-author-conflict2.misc.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u07-author-conflict3.misc.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u07-author-conflict4.misc.prompt.md
  - history/prompts/giss-401/crew-giss-401-u07-author-conflict5.misc.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u07-author.green.prompt.md
+ - specs/content/giss-401/authoring/unit-07.md
+ - specs/content/giss-401/concepts/unit-07.md
+ - specs/content/giss-401/coverage/unit-07.md
+ - specs/content/giss-401/figures/unit-07.md
+ - specs/content/giss-401/reviews/unit-07/G2/20261103T004215688Z-gates.json
+ - specs/content/giss-401/reviews/unit-07/G2/20261103T013310659Z-gates.json
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T004215688Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T004215688Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T004215688Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T004215688Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T004215688Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T004215688Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T004215688Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T004215688Z/validate-content.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T013310659Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T013310659Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T013310659Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T013310659Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T013310659Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T013310659Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T013310659Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T013310659Z/validate-content.txt
+ - specs/content/giss-401/sources/texts/quran-translation.md
+ - specs/content/giss-401/sources/texts/sahih-bukhari-33-893.md
+ - specs/content/giss-401/sources/texts/tambak-2020-teachers.md
+ - specs/content/giss-401/sources/unit-07.md
+ - specs/content/giss-401/tasks.md
+ - static/img/figures/giss-401/unit-07/fig-U7-1.dark.svg
+ - static/img/figures/giss-401/unit-07/fig-U7-1.svg
+ - static/img/figures/giss-401/unit-07/fig-U7-2.dark.svg
+ - static/img/figures/giss-401/unit-07/fig-U7-2.svg
+ - static/img/figures/giss-401/unit-07/fig-U7-3.dark.svg
+ - static/img/figures/giss-401/unit-07/fig-U7-3.svg
 tests:
  - npm run check:content
 ---
@@ -55,31 +98,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (giss-401-u07-author, author, claude) `sources/texts/quran-translation.md` (U7 section appended at the end) and `tasks.md` stage rows will conflict with sibling GISS-401 unit branches on merge; the hadith use the separate key `sahih-bukhari-33-893`.
 - (giss-401-u07-author, author, claude) Figures fig-U7-1..3 were not measured by measure-figure-text (Chromium barred); Urdu `.ur.svg` mirrors and the G3 Islamic Studies scholar review remain open.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/giss-401-u07-author. The only conflict was `specs/content/giss-401/sources/texts/quran-translation.md`, where main appended a Unit 2 bound-passage section and this branch appended the U7-01..U7-03 section at the same trailing position. Resolved by keeping both, main's section first then the branch's, with no lost entries. Regenerated the gitignored `static/content-status.json` (stale after the merge). All 13 content gates pass.
+Resolved the quran-translation.md merge conflict by preserving both main's Unit 2 and the branch's Unit 7 sections, regenerated the stale content-status report, and committed the merge plus PHR with all 13 content gates passing.
 
 ## Outcome
 
-- Impact: fix for GISS-401 Unit 7 by opencode (conflict5).
-- Tests: npm run check:content passed 13/13 after regenerating the gitignored content-status report.
-- Files: 2 file(s), listed above.
+- Impact: fix for GISS-401 Unit 7 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 45 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: resolved the quran-translation.md conflict by keeping main's Unit 2 bound-passage section and this branch's U7-01..U7-03 section (main first, branch second); regenerated the gitignored `static/content-status.json`; all 13 content gates pass.
-- Decisions the team must respect: append-only resolution kept both sides with no entries removed; no ID needed reassignment (D-2026-0001 is pre-existing and identical on both sides; no branch-added G-YYYY-NN or glossary key collided).
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Resolved the quran-translation.md merge conflict by preserving both main's Unit 2 and the branch's Unit 7 sections, regenerated the stale content-status report, and committed the merge plus PHR with all 13 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - `measure-figure-text` was never run on fig-U7-1..3 (Chromium barred); CI `figure-geometry` is the first measured check.
   - Urdu `.ur.svg` mirrors and the G3 Islamic Studies scholar review remain open; reading time sits at the top of the 25-40 band (40 min, 41 if rounded up).
+  - No ID reassignment was needed (D-2026-0001 is pre-existing and identical on both sides; no branch-added G-YYYY-NN or glossary key collided).
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none beyond the expected trailing-append conflict.
+- Failure modes observed: none
 - Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
