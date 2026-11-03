@@ -17,10 +17,30 @@ links:
   pr: null
 files:
  - docs/semester-3/giss-401/course-overview.mdx
- - specs/content/giss-401/sources/texts/abdel-salam-2015-democracy.md
- - specs/content/giss-401/sources/texts/quran-translation.md
- - specs/content/giss-401/tasks.md
+ - docs/semester-3/giss-401/unit-05/index.mdx
+ - docs/semester-3/giss-401/unit-05/topic-01.mdx
+ - docs/semester-3/giss-401/unit-05/topic-02.mdx
+ - docs/semester-3/giss-401/unit-05/unit-assessment.mdx
+ - history/prompts/general/547-verify-giss401-unit-five-merge.general.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u05-author-conflict1.misc.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u05-author-conflict2.misc.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u05-author-conflict3.misc.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u05-author.green.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u05-conflict1.green.prompt.md
+ - specs/content/giss-401/authoring/unit-05.md
+ - specs/content/giss-401/concepts/unit-05.md
+ - specs/content/giss-401/coverage/unit-05.md
+ - specs/content/giss-401/figures/unit-05.md
+ - specs/content/giss-401/reviews/unit-01/G2/20261103T001231244Z-gates.json
  - specs/content/giss-401/reviews/unit-01/G2/20261103T021608724Z-gates.json
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T001231244Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T001231244Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T001231244Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T001231244Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T001231244Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T001231244Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T001231244Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T001231244Z/validate-content.txt
  - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T021608724Z/check-bloom-bands.txt
  - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T021608724Z/check-concept-graph.txt
  - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T021608724Z/check-depth-gate.txt
@@ -38,7 +58,25 @@ files:
  - specs/content/giss-401/reviews/unit-04/G2/logs-20261103T021608931Z/check-no-answer-keys.txt
  - specs/content/giss-401/reviews/unit-04/G2/logs-20261103T021608931Z/check-no-em-dash.txt
  - specs/content/giss-401/reviews/unit-04/G2/logs-20261103T021608931Z/validate-content.txt
+ - specs/content/giss-401/reviews/unit-05/G2/20261102T233631738Z-gates.json
+ - specs/content/giss-401/reviews/unit-05/G2/20261103T001231439Z-gates.json
  - specs/content/giss-401/reviews/unit-05/G2/20261103T021609105Z-gates.json
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/validate-content.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T001231439Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T001231439Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T001231439Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T001231439Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T001231439Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T001231439Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T001231439Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T001231439Z/validate-content.txt
  - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T021609105Z/check-bloom-bands.txt
  - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T021609105Z/check-concept-graph.txt
  - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T021609105Z/check-depth-gate.txt
@@ -47,6 +85,20 @@ files:
  - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T021609105Z/check-no-answer-keys.txt
  - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T021609105Z/check-no-em-dash.txt
  - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T021609105Z/validate-content.txt
+ - specs/content/giss-401/sources/texts/abdel-salam-2015-democracy.md
+ - specs/content/giss-401/sources/texts/pak-constitution-1973.md
+ - specs/content/giss-401/sources/texts/quran-translation.md
+ - specs/content/giss-401/sources/texts/rahman-2020-zakat.md
+ - specs/content/giss-401/sources/unit-05.md
+ - specs/content/giss-401/tasks.md
+ - static/img/figures/giss-401/unit-05/fig-U5-1.dark.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-1.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-2.dark.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-2.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-3.dark.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-3.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-4.dark.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-4.svg
 tests:
  - npm run check:content
 ---
@@ -84,23 +136,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (giss-401-u05-author, author, agy) G2 deterministic gate evidence is recorded; G3 independent English review and G4/G5 Urdu translation remain separate downstream jobs.
 - (giss-401-u05-author, author, agy) Unit 5 concept graph has ten authored Urdu labels flagged for G5 review because the course key terms are not yet banked in terminology.csv.
 
+
 ## Response snapshot
 
-Merged origin/main into `crew/giss-401-u05-author` and resolved all four conflicts, then refreshed the stale G2 gate evidence the merge invalidated.
+Merged origin/main into crew/giss-401-u05-author, resolved all four conflicts, refreshed the stale G2 evidence for Units 1, 4 and 5, and committed the merge, refresh and PHR.
 
 ## Outcome
 
 - Impact: fix for GISS-401 Unit 5 by opencode (attempt 1).
-- Tests: `npm run check:content` passes (13/13 gates) after `prepare-gate-evidence.mjs --refresh-stale` and `npm run build:content-status`.
-- Files: 30 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 83 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: merge commit `be0e14cae` resolves the four conflicts (course-overview unit availability, abdel-salam bound notes, quran-translation Unit 4/5 sections, tasks.md unit and stage rows); commit `adba27f2a` refreshes the G2 evidence for Units 1, 4 and 5 and repoints the tracker rows.
-- Decisions the team must respect: the merged `quran-translation.md` keeps main's Unit 4 notes before this branch's U5 sections, and its intro now reads "Units 1, 4 and 5"; the merged `abdel-salam-2015-democracy.md` keeps main's citation and passage locators and appends this branch's U5 excerpts; `tasks.md` marks Units 4 and 5 both drafted and keeps main's Unit 1 G2 evidence path.
-- Pending / next owner: Unit 5 G3 English review and G4/G5 Urdu translation remain separate downstream jobs; no G3/G5 row is marked done.
+- Shipped / changed: Merged origin/main into crew/giss-401-u05-author, resolved all four conflicts, refreshed the stale G2 evidence for Units 1, 4 and 5, and committed the merge, refresh and PHR.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - Merged `quran-translation.md` keeps main's Unit 4 notes before this branch's U5 sections and its intro now reads "Units 1, 4 and 5"; `abdel-salam-2015-democracy.md` keeps main's citation and passage locators and appends this branch's U5 excerpts.
+  - Unit 5 G3 English review and G4/G5 Urdu translation remain open downstream jobs; no G3/G5 row is marked done.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
