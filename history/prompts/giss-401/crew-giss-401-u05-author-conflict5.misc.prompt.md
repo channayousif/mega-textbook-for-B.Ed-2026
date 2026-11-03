@@ -156,26 +156,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (giss-401-u05-author-conflict3, fix, opencode) Merged `quran-translation.md` keeps main's Unit 4 notes before this branch's U5 sections and its intro now reads "Units 1, 4 and 5"; `abdel-salam-2015-democracy.md` keeps main's citation and passage locators and appends this branch's U5 excerpts.
 - (giss-401-u05-author-conflict3, fix, opencode) Unit 5 G3 English review and G4/G5 Urdu translation remain open downstream jobs; no G3/G5 row is marked done.
 
+
 ## Response snapshot
 
-Merged origin/main into the GISS-401 Unit 5 branch. The merge was clean: main had not modified `specs/content/giss-401/tasks.md` since the shared merge base, so no conflict resolution was needed and both sides' rows are intact. The merge brought in main's Unit 1 Urdu translation, its G4 evidence, and refreshed G2 evidence for Units 1, 3, 4 and 6. All 13 content gates pass.
+Merged origin/main into `crew/giss-401-u05-author` (clean merge bringing Unit 1 Urdu translation, G4 evidence and refreshed G2 evidence), committed it with a conventional message, and left all 13 content gates passing.
 
 ## Outcome
 
-- Impact: fix for GISS-401 Unit 5 by opencode (attempt 5).
-- Tests: npm run check:content passed (13/13 gates).
+- Impact: fix for GISS-401 Unit 5 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 103 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into the GISS-401 Unit 5 branch; the merge was clean and brought in Unit 1 Urdu translation, G4 evidence and refreshed G2 evidence for Units 1, 3, 4 and 6.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this run does not certify anything.
+- Shipped / changed: Merged origin/main into `crew/giss-401-u05-author` (clean merge bringing Unit 1 Urdu translation, G4 evidence and refreshed G2 evidence), committed it with a conventional message, and left all 13 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Unit 5 G3 English review and G4/G5 Urdu translation remain open downstream jobs; no G3/G5 row is marked done.
-  - The merge was clean because main had not touched `specs/content/giss-401/tasks.md` since the merge base; both sides' rows are intact.
+  - The merge was clean because main had not touched `specs/content/giss-401/tasks.md` since the merge base, so both sides' rows are intact.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
