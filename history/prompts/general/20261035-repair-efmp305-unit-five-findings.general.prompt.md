@@ -50,8 +50,8 @@ Applied the G3 content repairs in English and Urdu, reconciled assets and source
 ## Outcome
 
 - ✅ Impact: Single-best-answer MCQ, complete audit, optional private reflection, qualified legal and source claims.
-- 🧪 Tests: Baseline gates, unit tests and geometry pass; final gate outcomes in the repair validation record.
-- 📁 Files: Unit 5 EN/UR pages, fig-U5-4 variants, manifest, source record, tracker, repair handoff and this PHR.
+- 🧪 Tests: Baseline gates, unit tests and geometry pass; final content result: 12/13 PASS, generated status scope blocker recorded in repair validation.md.
+- 📁 Files: Unit 5 EN/UR pages, fig-U5-4 variants, manifest, source record, tracker, fresh G2 evidence, repair handoff, actual validation logs and this PHR.
 - 🔁 Next prompts: Owner/host supplies F1 provenance and rendering; independent G3 then G5.
 - 🧠 Reflection: Full source retrieval revealed internal inconsistencies, so the source inference was narrowed.
 
@@ -65,6 +65,6 @@ Applied the G3 content repairs in English and Urdu, reconciled assets and source
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Content edits stale G2 evidence and generated status; generated status path is outside brief scope.
-- Graders run and results (PASS/FAIL): 353 unit tests PASS; four SVG measurements PASS; final content result recorded alongside repair notes.
+- Graders run and results (PASS/FAIL): 353 unit tests PASS; four SVG measurements PASS; final content 12/13 PASS, content-status FAIL outside scope.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Fresh independent review with provenance and rendered evidence.
