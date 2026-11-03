@@ -14,7 +14,7 @@ links:
   spec: null
   ticket: null
   adr: null
-  pr: https://github.com/channayousif/mega_book_for_B.Ed/pull/440
+  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/440
 files:
   - src/css/custom.css
   - tests/e2e/reader-width.spec.ts
