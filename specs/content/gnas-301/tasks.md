@@ -51,7 +51,7 @@ units may be authored.
 | Unit 5 | G6 assets | ▢ | | |
 | Unit 5 | G7 publish | ▢ | | |
 | Unit 6 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0020 + owner resolutions G-2026-22/G-2026-23 + floor D-2026-0021; content-spec status: approved |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-06/G2/20261102T072753374Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-06/G2/20261103T051634155Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | advisory rounds 1-2: revise; reports reviews/unit-06/G3/agent-g3-gnas301-u6-run001.json + round-02/agent-g3-gnas301-u6-run002.json; round-2 blocking findings (ERQ-04 6.4+6.5 integration, RRQ/MCQ surplus, WHO framing, anwar2026 claim) repaired post-report; two-cycle limit reached, third cycle owner-gated (G-2026-33) |
 | Unit 6 | G3 en-review | ▢ | | advisory: revise; repairs applied; report reviews/unit-06/G3/agent-g3-gnas301-u6-run001.json; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 6 | G4 ur-translation | ✅ | auto:g4 | all 9 Urdu mirror files at i18n/ur/.../gnas-301/unit-06/, 2026-09-24; heading parity exact, terminology-bank-driven, .ur.svg figure variants, zero em-dash; translation_status stays draft pending G5 |
@@ -72,5 +72,16 @@ units may be authored.
 | Unit 4 | G3 en-review | ▢ | | Advisory escalate: specs/content/gnas-301/reviews/unit-04/G3/4361ffe1-f35e-49e5-877d-83d1f34398a8.json; round-2 repairs verified (phantom abbasi2022 and who-mental-health-work, duplicate khan2024 row, balanced MCQs, citation scope, fire factory phrasing, concepts item lists, descriptive links, 56 SVG variants clean); visual render unperformed (crew constraints); G3 stays open, unsigned (ADR-0019) |
 | Unit 5 | G3 en-review | ▢ | | advisory cycle 2 (disposition: pass) at specs/content/gnas-301/reviews/unit-05/G3/5c420198-baaa-4562-ab56-91a01924a95a.json; round-2 repairs verified (5.1 RRQ blueprint, WHO claims, fig-U5-3 arrows, coverage cells, alibhatti authors); all 32 SVGs pass geometry; G3 stays open, unsigned (ADR-0019) |
 | Unit 6 | G3 en-review | ▢ | agent:codex-g3-reviewer | advisory: escalate; repair reconciliation in reviews/unit-06/G3/codex-20261028-reconciliation.json; four prior blocking repairs verified, unresolved concept mappings and ladder assumptions recorded; current render/source/provenance evidence incomplete; G-2026-33 cycle-count conflict remains owner-owned; no certification |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gnas-301/reviews/unit-02/G3/20261102T142352Z-g3-desk-6d88f1d9.json |
+| Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gnas-301/reviews/unit-06/G3/20261102T142352Z-g3-desk-f818650d.json |
 | Unit 3 | G3 en-review | ✅ | CMY | review:specs/content/gnas-301/reviews/unit-03/G3/20261102T140729Z-g3-desk-1e744dc1.json |
 | Unit 5 | G3 en-review | ✅ | CMY | review:specs/content/gnas-301/reviews/unit-05/G3/20261102T140729Z-g3-desk-6da9f991.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gnas-301/reviews/unit-02/G3/20261102T211054Z-g3-desk-207756e4.json |
+| Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gnas-301/reviews/unit-06/G3/20261102T211054Z-g3-desk-c9e52a96.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gnas-301/reviews/unit-02/G3/20261102T212207Z-g3-desk-bc87d518.json |
+| Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gnas-301/reviews/unit-06/G3/20261102T212207Z-g3-desk-06be9f9b.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-02/G2/20261103T045242860Z-gates.json |
+| Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied; report reviews/unit-02/G3/20261102T212207Z-g3-desk-bc87d518.json; CONTENT-01 boiling vs chemical safety fixed, NEQS S.R.O. 549(I)/2000 and further WHO health-care waste passages bound, handling detail deferred to provincial law, risk ranking removed, bin-audit safety aligned, fig-U2-6 cells completed, concept links remapped, MCQ 3 relabelled Remember; GOV-01/EVID-01/RENDER-01/ASSESS-01 need owner/orchestrator action; needs a fresh G3 run |
+| Unit 6 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/gnas-301/reviews/unit-06/G3/20261102T212207Z-g3-desk-06be9f9b.json; corrected CON:GNAS-301-6-4/6-5 mappings (RRQ-04 and ERQ-02 to effect classes, RRQ-05 stays with routes); topic-03 ladder activity and ERQ-03 rubric now carry masses, concentrations and retention; ERQ-02 relabelled Apply, ERQ-05 Create criterion raised to 0-2, MCQ-05 relabelled Understand; RRQ-04/RRQ-05 premises reworded with marking guidance matched; topic-04 pane activity and teacher notes state the model limit; uncertain findings (accessibility, provenance, source binding, blind assessment evidence) remain owner-owned; G3 unticked, fresh review owner-gated by G-2026-33 |
+| Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/gnas-301/reviews/unit-01/G3/20261102T213114Z-g3-desk-00b73da1.json |
+| Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/gnas-301/reviews/unit-04/G3/20261102T213139Z-g3-desk-94b67cf2.json |

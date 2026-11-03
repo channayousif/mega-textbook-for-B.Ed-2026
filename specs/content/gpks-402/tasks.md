@@ -87,7 +87,13 @@ Only Unit 3 is updated by this authoring job. The approved content-spec is the d
 | Unit 3 | G5 ur-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/gpks-402/reviews/unit-03/G5/f08da193-6363-4286-bcf6-4be1f27181bd.json; all 10 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; RTL and font shaping verified; G5 remains open and unsigned |
 | Unit 3 | G6 assets | ▣ | codex | Four English and four Urdu light/dark pairs placed; Urdu geometry and rendered inspection pending under crew browser restriction |
 | Unit 3 | G7 publish | ▢ | | No deploy or PR in this job |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gpks-402/reviews/unit-02/G3/20261102T142352Z-g3-desk-0bc00d63.json |
+| Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gpks-402/reviews/unit-06/G3/20261102T142352Z-g3-desk-9df9dc96.json |
 | Unit 1 | G3 en-review | ✅ | CMY | review:specs/content/gpks-402/reviews/unit-01/G3/20261102T140729Z-g3-desk-b1f9d57a.json |
 | Unit 3 | G3 en-review | ✅ | CMY | review:specs/content/gpks-402/reviews/unit-03/G3/20261102T140729Z-g3-desk-85679ed3.json |
 | Unit 4 | G3 en-review | ✅ | CMY | review:specs/content/gpks-402/reviews/unit-04/G3/20261102T140729Z-g3-desk-8621b0c7.json |
 | Unit 5 | G3 en-review | ✅ | CMY | review:specs/content/gpks-402/reviews/unit-05/G3/20261102T140729Z-g3-desk-e7015f81.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gpks-402/reviews/unit-02/G3/20261102T211054Z-g3-desk-19a9764e.json |
+| Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gpks-402/reviews/unit-06/G3/20261102T211054Z-g3-desk-fd0a1ec1.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gpks-402/reviews/unit-02/G3/20261102T212207Z-g3-desk-94983dc8.json |
+| Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gpks-402/reviews/unit-06/G3/20261102T212207Z-g3-desk-181b4e13.json |

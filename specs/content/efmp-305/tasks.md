@@ -27,7 +27,7 @@ per-topic layout: `index.mdx` + `topic-01…02.mdx` (nine-part cycles) + `unit-a
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-01/G2/20261102T072756146Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-01/G2/20261103T085709740Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | |
 | Unit 1 | G4 ur-translation | ▣ | | Complete 5-file UR mirror reconciled with EN baseline 9e6da648 on 2026-10-18 (crew efmp-305-u01-translate-r1); semantic, register, and terminology polish; 4 .ur.svg/.ur.dark.svg figure variants wired; structural parity, figure parity, and bank-conformant key_terms (Inclusive Education) verified under temporary reviewed flip (reverted); 8 unbanked concept labels proposed separately; handoff: reviews/unit-01/G4/translation-handoff.md; translation_status stays draft pending fresh independent G5; no certification claimed. |
 | Unit 1 | G5 ur-review | ▢ | | |
@@ -35,6 +35,7 @@ per-topic layout: `index.mdx` + `topic-01…02.mdx` (nine-part cycles) + `unit-a
 | Unit 1 | G7 publish | ▢ | | |
 | Unit 1 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-305/reviews/unit-01/G3/agent-g3-efmp-305-u1-run2f195870.json |
 | Unit 1 | G3 en-review | ▢ | | advisory: escalate; final cycle; agent:codex-g3-reviewer; report specs/content/efmp-305/reviews/unit-01/G3/codex-01a17f6f.json; prior findings resolved, new assessment/source defects and missing render/provenance evidence require owner disposition; no certification |
+| Unit 1 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-305/reviews/unit-01/G3/20261102T212207Z-g3-desk-65386ad3.json; topic-01 summative task now rewards segregation, opening verb and Further reading (UNESCO, Miles) aligned; topic-02 UNICEF/NEP claims bound to unicef2014/nep2009 with honest limits, Hehir limit added, Ainscow Further reading aligned; assessment RRQ 5 key, MCQ 10, RRQ 9 Hehir limit and ERQ rubric aggregation repaired; index and teacher-notes wording repaired; UR mirrors updated; G3 left unticked |
 
 **Unit 2 - Understanding Learner Diversity (2026-10-09):** authored to the Spec 008 v3.0
 per-topic layout: `index.mdx` + `topic-01…02.mdx` (nine-part cycles) + `unit-assessment.mdx`
@@ -165,6 +166,18 @@ the PHR and Paperclip handoff. No G3/G5 certification or publication is claimed.
 | Unit 6 | G5 ur-review | ▢ | | |
 | Unit 6 | G6 assets | ▢ | | 6 schematic figures prompt-only (1 concept-map, 1 flowchart, 1 diagram, 3 table) |
 | Unit 6 | G7 publish | ▢ | | |
+| Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-01/G3/20261102T142352Z-g3-desk-48f5f98c.json |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-03/G3/20261102T142352Z-g3-desk-96017bba.json |
+| Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-05/G3/20261102T142352Z-g3-desk-bb2bba40.json |
+| Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-06/G3/20261102T142352Z-g3-desk-a9fe5033.json |
 | Unit 2 | G3 en-review | ✅ | CMY | review:specs/content/efmp-305/reviews/unit-02/G3/20261102T140729Z-g3-desk-5da9d105.json |
 | Unit 4 | G3 en-review | ✅ | CMY | review:specs/content/efmp-305/reviews/unit-04/G3/20261102T140729Z-g3-desk-75d4e208.json |
 | Unit 4 | G5 ur-review | ▢ | agent:codex-g5-reviewer | advisory: escalate; report specs/content/efmp-305/reviews/unit-04/G5/01a19d42-cab2-79c3-9b37-ac2bf916690b.json; decoration exclusion reversed, place-value mistranslation and corrupt RRQ 10 guidance; fresh signed G3 dependency, translator provenance and normal/narrow/A4 renders unavailable; no certification |
+| Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-01/G3/20261102T211054Z-g3-desk-75c78135.json |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-03/G3/20261102T211054Z-g3-desk-68a046eb.json |
+| Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-05/G3/20261102T211054Z-g3-desk-161c2504.json |
+| Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-06/G3/20261102T211054Z-g3-desk-5e601a1c.json |
+| Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-01/G3/20261102T212207Z-g3-desk-65386ad3.json |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-03/G3/20261102T212207Z-g3-desk-d26592ad.json |
+| Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-05/G3/20261102T212207Z-g3-desk-6054cf1d.json |
+| Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-06/G3/20261102T212207Z-g3-desk-5907f448.json |

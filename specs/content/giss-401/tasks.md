@@ -7,12 +7,12 @@
 | Unit | Title | EN draft | G3 review | UR translation | G5 review | Figures | Notes |
 |---|---|---|---|---|---|---|---|
 | 1 | Introduction to Islamic Studies and the Fundamental Beliefs of Islam | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-03 by the crew author job (claude); G2 gate evidence recorded below; G3 (with the qualified Islamic Studies reviewer the spec asks for) and Urdu remain open |
-| 2 | Sources of Islamic Knowledge: the Qur'an and the Sunnah | ☐ | ☐ | ☐ | ☐ | | |
+| 2 | Sources of Islamic Knowledge: the Qur'an and the Sunnah | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-03 by the crew author job; G2 gate evidence recorded below; G3 (with the qualified Islamic Studies reviewer the spec asks for) and Urdu remain open |
 | 3 | Worship and the Moral System of Islam | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-03 by the crew author job (agy); G2 gate evidence recorded below; G3 and Urdu remain open |
 | 4 | The Social System and the State in Islam | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-03 by the crew author job (claude); G2 gate evidence recorded below; G3 (with the qualified Islamic Studies reviewer the spec asks for) and Urdu remain open |
 | 5 | The Economic and Political Systems of Islam | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-03 by the crew author job (agy); G2 gate evidence recorded below; G3 and Urdu remain open |
 | 6 | Islam, Education, Civilization and Contemporary Issues | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-03 by the crew author job; G2 gate evidence recorded below; G3 (with a qualified Islamic Studies reviewer) and Urdu remain open |
-| 7 | Islamic Ethics in Professional Life | ☐ | ☐ | ☐ | ☐ | | |
+| 7 | Islamic Ethics in Professional Life | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-03 by the crew author job (claude); G2 gate evidence recorded below; G3 (with the qualified Islamic Studies reviewer the spec asks for) and Urdu remain open |
 
 **Key:** ▣ = in progress, ☐ = not started, ✓ = done, ✗ = escalated
 
@@ -29,8 +29,9 @@
 | Unit 1 | G6 assets | ▣ | | four English schematics placed with dark variants; `measure-figure-text` not run (crew brief bars Chromium), CI `figure-geometry` is the first measured check |
 | Unit 1 | G7 publish | ▢ | | no publication requested by this authoring job |
 | Unit 3 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-03/G2/20261103T021930441Z-gates.json |
+| Unit 3 | G3 en-review | ▢ | | advisory: escalate (agent:codex-g3-reviewer); report at specs/content/giss-401/reviews/unit-03/G3/01a19f68-d755-7131-a30e-d230853e3b7a.json; author-run provenance and parent-prepared handoff absent; required browser/print inspection barred by crew brief; qualified Islamic Studies scholar review pending; G3 remains open and unsigned |
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-03/G2/20261103T031913180Z-gates.json |
-| Unit 3 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
 | Unit 3 | G4 ur-translation | ▢ | | separate job |
 | Unit 3 | G5 ur-review | ▢ | | |
 | Unit 3 | G6 assets | ✅ | auto:gates | 4 schematics placed with dark variants |
@@ -41,6 +42,15 @@
 | Unit 4 | G5 ur-review | ▢ | | Pending accepted English baseline and translated mirror. |
 | Unit 4 | G6 assets | ▣ | | Four English schematics and dark variants placed to meet current figure gates; geometry validation pending; Urdu localisation is a separate job. |
 | Unit 4 | G7 publish | ▢ | | Publication is outside this authoring job. |
+| Unit 2 | G1 unit-spec | ✅ | auto:gates | Approved spec and owner ruling D-2026-0079, 2026-11-02; not a new intake evaluation |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-02/G2/20261103T012756049Z-gates.json |
+| Unit 2 | G3 en-review | ▢ | | Fresh independent review needed, including qualified Islamic Studies scholar review of belief and law |
+| Unit 2 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored here |
+| Unit 2 | G5 ur-review | ▢ | | Pending G3 and Urdu translation; authored concept labels also need review |
+| Unit 2 | G6 assets | ▣ | | Six original English SVG schematics placed with derived dark variants; Urdu `.ur.svg` assets belong to the translation job; browser text-geometry measurement not run (crew bars Chromium), CI figure-geometry job pending |
+| Unit 2 | G7 publish | ▢ | | No publication claimed; catalog integration and owner authority remain separate |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-06/G2/20261103T011742805Z-gates.json |
+| Unit 6 | G3 en-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/giss-401/reviews/unit-06/G3/ad110b4d-3d0d-4777-98c5-9930d6961900.json; all 7 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; 6 Sharp PNG renders verified; G3 remains open and unsigned |
 | Unit 5 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
 | Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-05/G2/20261103T021609105Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
@@ -49,10 +59,15 @@
 | Unit 5 | G6 assets | ✅ | auto:gates | 4 schematics placed with dark variants |
 | Unit 5 | G7 publish | ▢ | | no publication requested by this authoring job |
 | Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-06/G2/20261103T031913754Z-gates.json |
-| Unit 6 | G3 en-review | ▢ | | Independent Islamic Studies reviewer required; no certification claimed |
 | Unit 6 | G4 ur-translation | ▢ | | Separate job; English pages carry untranslated notices |
 | Unit 6 | G5 ur-review | ▢ | | Pending translation and independent review |
 | Unit 6 | G6 assets | ▣ | | Six English schematics placed with derived dark variants; Urdu localisation pending |
+| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-07/G2/20261103T013310659Z-gates.json |
+| Unit 7 | G3 en-review | ▢ | | awaiting an independent reviewer and a qualified Islamic Studies reviewer (content spec, drafting note 2); no review performed by author |
+| Unit 7 | G4 ur-translation | ▢ | | separate job |
+| Unit 7 | G5 ur-review | ▢ | | |
+| Unit 7 | G6 assets | ▣ | | three English schematics placed with dark variants; `measure-figure-text` not run (crew brief bars Chromium), CI `figure-geometry` is the first measured check |
+| Unit 7 | G7 publish | ▢ | | no publication requested by this authoring job |
 
 ## Unit 6 authoring notes
 
