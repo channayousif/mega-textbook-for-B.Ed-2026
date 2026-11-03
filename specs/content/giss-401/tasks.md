@@ -29,7 +29,7 @@
 | Unit 1 | G6 assets | ▣ | | four English schematics placed with dark variants; `measure-figure-text` not run (crew brief bars Chromium), CI `figure-geometry` is the first measured check |
 | Unit 1 | G7 publish | ▢ | | no publication requested by this authoring job |
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | Approved spec and owner ruling D-2026-0079, 2026-11-02; not a new intake evaluation |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-02/G2/20261102T232136964Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-02/G2/20261103T011905925Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | Fresh independent review needed, including qualified Islamic Studies scholar review of belief and law |
 | Unit 2 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored here |
 | Unit 2 | G5 ur-review | ▢ | | Pending G3 and Urdu translation; authored concept labels also need review |
