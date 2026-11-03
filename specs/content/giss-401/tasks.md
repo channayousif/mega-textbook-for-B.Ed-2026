@@ -43,7 +43,7 @@
 | Unit 4 | G6 assets | ▣ | | Four English schematics and dark variants placed to meet current figure gates; geometry validation pending; Urdu localisation is a separate job. |
 | Unit 4 | G7 publish | ▢ | | Publication is outside this authoring job. |
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | Approved spec and owner ruling D-2026-0079, 2026-11-02; not a new intake evaluation |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-02/G2/20261103T012756049Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-02/G2/20261103T120850909Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | Fresh independent review needed, including qualified Islamic Studies scholar review of belief and law |
 | Unit 2 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored here |
 | Unit 2 | G5 ur-review | ▢ | | Pending G3 and Urdu translation; authored concept labels also need review |
@@ -62,7 +62,7 @@
 | Unit 6 | G4 ur-translation | ▢ | | Separate job; English pages carry untranslated notices |
 | Unit 6 | G5 ur-review | ▢ | | Pending translation and independent review |
 | Unit 6 | G6 assets | ▣ | | Six English schematics placed with derived dark variants; Urdu localisation pending |
-| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-07/G2/20261103T013310659Z-gates.json |
+| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-07/G2/20261103T120851056Z-gates.json |
 | Unit 7 | G3 en-review | ▢ | | awaiting an independent reviewer and a qualified Islamic Studies reviewer (content spec, drafting note 2); no review performed by author |
 | Unit 7 | G4 ur-translation | ▢ | | separate job |
 | Unit 7 | G5 ur-review | ▢ | | |
