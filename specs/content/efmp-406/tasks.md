@@ -67,3 +67,7 @@
 | Unit 6 | G3 en-review | ✅ | CMY | review:specs/content/efmp-406/reviews/unit-06/G3/20261102T210705Z-g3-desk-d3bd5a8a.json |
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-406/reviews/unit-02/G3/20261102T211054Z-g3-desk-55b3ba13.json |
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-406/reviews/unit-03/G3/20261102T211054Z-g3-desk-40674f87.json |
+| Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-406/reviews/unit-01/G3/20261102T212036Z-g3-desk-45e9b45b.json |
+| Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-406/reviews/unit-05/G3/20261102T212135Z-g3-desk-466a27a9.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-406/reviews/unit-02/G3/20261102T212207Z-g3-desk-e7c99b68.json |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-406/reviews/unit-03/G3/20261102T212207Z-g3-desk-41db593c.json |
