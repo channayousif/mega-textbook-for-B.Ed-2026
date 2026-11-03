@@ -30,7 +30,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 1 | G4 ur-translation | ✅ | YM | full UR prose for all 7 files at the v3.4 per-topic layout, 2026-09-11; heading parity exact, terminology-bank-driven, zero em-dash; `translation_status` stays `draft` pending G5 |
 | Unit 1 | G5 ur-review | ▢ | | advisory run001: escalate; render inspection unavailable, all content gates pass; report reviews/unit-01/G5/agent-g5-efmp301-u1-run001.json |
 | Unit 2 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-02/G2/20261102T072749222Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-02/G2/20261103T041919512Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | advisory run002: escalate; repair limit reached (ADR-0019 cycle 2/2); seifert-hk missing in sources/unit-02.md table; visual render uninspected; report reviews/unit-02/G3/22ba096a-360e-434d-bbff-e55d664db642.json |
 | Unit 2 | G4 ur-translation | ✅ | auto:gates | full UR mirror (7 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
 | Unit 2 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at 4ae665a5; G3 dependency escalated to owner; terminology rulings (Learning prose/figure conflict, new U2 coinages) escalated to owner; report reviews/unit-02/G5/agent-g5-efmp301-u2-run001.json |
@@ -111,17 +111,33 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 9 | G3 en-review | ▢ | agent:codex-g3-reviewer | advisory cycle2: escalate; MCQ spread unresolved, source/pedagogy findings and current render evidence unavailable; owner handling required; report specs/content/efmp-301/reviews/unit-09/G3/codex-efmp301-u09-cycle2-01a17f38-14aa-7e12-b5ba-14390f06b2ef.json |
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-02/G3/20261028T054347Z-g3-desk-d8a27feb.json |
 | Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied; sources/unit-02.md lines 6-8 corrected to bind only seifert2009 and vosniadou2001, with seifert-hk (guide book 1) bound at course level as a revised edition of the same Chapter 3, uncited in the prose; bare-URL Further Reading left as course convention; visual render still uninspected; fresh G3 run needed; report reviews/unit-02/G3/20261028T054347Z-g3-desk-d8a27feb.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-02/G3/20261102T142352Z-g3-desk-690ed36f.json |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-03/G3/20261102T142352Z-g3-desk-c9a0cfe5.json |
+| Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-05/G3/20261102T142352Z-g3-desk-a05ecd7f.json |
+| Unit 8 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-08/G3/20261102T142352Z-g3-desk-13bb6394.json |
+| Unit 9 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-09/G3/20261102T142352Z-g3-desk-f72b8c56.json |
+| Unit 11 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-11/G3/20261102T142352Z-g3-desk-644c3252.json |
+| Unit 12 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-12/G3/20261102T142352Z-g3-desk-e7aea2c7.json |
 | Unit 6 | G3 en-review | ✅ | CMY | review:specs/content/efmp-301/reviews/unit-06/G3/20261102T140729Z-g3-desk-490cb9af.json |
 | Unit 7 | G3 en-review | ✅ | CMY | review:specs/content/efmp-301/reviews/unit-07/G3/20261102T140729Z-g3-desk-e8869756.json |
 | Unit 10 | G3 en-review | ✅ | CMY | review:specs/content/efmp-301/reviews/unit-10/G3/20261102T140729Z-g3-desk-2aa34b72.json |
 | Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-04/G3/20261102T141142Z-g3-desk-26537ed9.json |
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-02/G3/20261102T211054Z-g3-desk-8fe42573.json |
+| Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied; report reviews/unit-02/G3/20261102T211054Z-g3-desk-8fe42573.json; sources criterion (finding 2): seifert-hk (guide book 1) added to the sources/unit-02.md table and grounded in coverage rows U2-1, U2-4, U2-6 from its bound Chapter 3 excerpts; prose still cites the seifert2009 edition; G2 evidence refreshed; render-review (360px, print) still uninspected; ADR-0019 cycles exhausted, so a fresh G3 run needs owner authorisation |
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-03/G3/20261102T211054Z-g3-desk-1ffb278b.json |
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-05/G3/20261102T211054Z-g3-desk-5bdd915a.json |
 | Unit 8 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-08/G3/20261102T211054Z-g3-desk-f27564cd.json |
 | Unit 9 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-09/G3/20261102T211054Z-g3-desk-15f0d2e9.json |
 | Unit 11 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-11/G3/20261102T211054Z-g3-desk-baae4994.json |
 | Unit 12 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-12/G3/20261102T211054Z-g3-desk-c6d3f3b3.json |
+| Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-04/G3/20261102T211929Z-g3-desk-a812ec4a.json |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-03/G3/20261102T212207Z-g3-desk-aaa9f247.json |
+| Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-05/G3/20261102T212207Z-g3-desk-99b62591.json |
+| Unit 8 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-08/G3/20261102T212207Z-g3-desk-04504f15.json |
+| Unit 9 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-09/G3/20261102T212207Z-g3-desk-b282fccc.json |
+| Unit 11 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-11/G3/20261102T212207Z-g3-desk-c705dbc8.json |
+| Unit 12 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-12/G3/20261102T212207Z-g3-desk-1ab85eaa.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-02/G3/20261102T212207Z-g3-desk-4eaf1d0f.json |
 | Unit 5 | G3 en-review | ▢ | | advisory: revise; repairs applied; multimodal claims and IQ prediction claims qualified across topics, assessment and figures; fig-U5-1 geometry verified and Thurstone/CHC positions restored; ERQ 5 widened to blueprint integrative pupil profile with explicit 250-300 word conditions; Seifert and Rohrer source/coverage locators corrected; early finisher framed as hypothesis; report specs/content/efmp-301/reviews/unit-05/G3/20261102T211054Z-g3-desk-5bdd915a.json |
 
 ## Re-restructure in progress (2026-09-11)
