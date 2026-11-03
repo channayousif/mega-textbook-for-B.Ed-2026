@@ -9,6 +9,11 @@ Hutchinson & Waters (1987) and Downes (2010) are Cambridge University Press titl
 is an Anchor Press title. Brown & Levinson (1987) is a Cambridge University Press title. All are
 flagged per D-2026-0001.
 
+Repair note (2026-11-03): Topics 4.1 to 4.3 now disclose the unverified attributions and
+chapter references beside their explanations. No source text was newly retrieved in this
+repair. D-2026-0001 permits disclosed limitations; it does not establish claim-level support.
+A future independent reviewer needs source text before recording independent verification.
+
 ## Unverifiable sources
 
 Bound excerpts could not be committed for these keys. Recorded here so `check:depth-gate`

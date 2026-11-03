@@ -47,3 +47,5 @@ G1 unit-spec affirmed at intake (D-2026-0019). G2 en-draft cleared by determinis
 | Unit 1 | G3 en-review | ✅ | CMY | review:specs/content/geng-300/reviews/unit-01/G3/20261102T140729Z-g3-desk-8d754faa.json |
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/geng-300/reviews/unit-02/G3/20261102T211054Z-g3-desk-5d4f13a0.json |
 | Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/geng-300/reviews/unit-04/G3/20261102T211054Z-g3-desk-a52b78de.json |
+
+| Unit 4 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/geng-300/reviews/unit-04/G3/20261102T211054Z-g3-desk-a52b78de.json; fig-U4-1 wordmark moved below table in both themes; render review and independent source verification remain pending; repair details: specs/content/geng-300/reviews/unit-04/repair-en-20261103.md; G3 remains open and unsigned. |
