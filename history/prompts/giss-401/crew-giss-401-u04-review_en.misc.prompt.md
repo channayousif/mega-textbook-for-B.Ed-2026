@@ -70,7 +70,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Conducted independent G3 English review of GISS-401 Unit 4, validated advisory pass evidence report, updated tasks.md tracker row, and committed all artifacts with clean content gates.
+Completed independent G3 English review for GISS-401 Unit 4 with advisory pass disposition, recorded command logs and rasterized figure evidence, updated tasks.md advisory row, and committed all review artifacts.
 
 ## Outcome
 
@@ -82,13 +82,13 @@ Conducted independent G3 English review of GISS-401 Unit 4, validated advisory p
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Conducted independent G3 English review of GISS-401 Unit 4, validated advisory pass evidence report, updated tasks.md tracker row, and committed all artifacts with clean content gates.
+- Shipped / changed: Completed independent G3 English review for GISS-401 Unit 4 with advisory pass disposition, recorded command logs and rasterized figure evidence, updated tasks.md advisory row, and committed all review artifacts.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All 7 G3 criteria pass, 25 assessment items independently solved, and all 8 SVG variants pass geometry; report validated with advisory pass disposition.
-  - The G3 tracker row in specs/content/giss-401/tasks.md is updated to open ▢ per ADR-0019; certification remains blocked pending trusted qualification.
-  - Unit 4 is ready for Urdu translation (G4 ur-translation) and subsequent independent Urdu review (G5 ur-review).
+  - GISS-401 Unit 4 English draft passes independent G3 evaluation with advisory report at specs/content/giss-401/reviews/unit-04/G3/a5031c12-2079-4b0e-b718-bb161d2381bc.json.
+  - G3 tracker row remains open ▢ per ADR-0019 pending trusted qualification and the specialized Islamic Studies reviewer sign-off noted in the course spec.
+  - Unit 4 is ready for the subsequent Urdu translation job (G4 ur-translation) and mirrored figures.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
