@@ -51,7 +51,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
 | Unit 5 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-05/G2/20261102T072749572Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-05/G2/20261103T044540225Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | agent:codex-g3-reviewer | advisory cycle2: escalate; final authorised cycle, owner action required; report reviews/unit-05/G3/codex-crew-cycle2.json |
 | Unit 5 | G4 ur-translation | ✅ | auto:gates | full UR mirror (5 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
 | Unit 5 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at b8eabccc; G3 dependency escalated to owner; figure/prose vocabulary splits escalated to owner; report reviews/unit-05/G5/agent-g5-efmp301-u5-run001.json |
@@ -122,6 +122,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 9 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-09/G3/20261102T211054Z-g3-desk-15f0d2e9.json |
 | Unit 11 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-11/G3/20261102T211054Z-g3-desk-baae4994.json |
 | Unit 12 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-12/G3/20261102T211054Z-g3-desk-c6d3f3b3.json |
+| Unit 5 | G3 en-review | ▢ | | advisory: revise; repairs applied; multimodal claims and IQ prediction claims qualified across topics, assessment and figures; fig-U5-1 geometry verified and Thurstone/CHC positions restored; ERQ 5 widened to blueprint integrative pupil profile with explicit 250-300 word conditions; Seifert and Rohrer source/coverage locators corrected; early finisher framed as hypothesis; report specs/content/efmp-301/reviews/unit-05/G3/20261102T211054Z-g3-desk-5bdd915a.json |
 
 ## Re-restructure in progress (2026-09-11)
 
