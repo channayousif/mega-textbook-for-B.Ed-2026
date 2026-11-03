@@ -2,7 +2,7 @@
 
 *The Holy Qur'an*, Saheeh International English translation (Quran.com translation id 20). https://quran.com
 
-Each Unit 1 verse below was retrieved from `https://api.quran.com/api/v4/quran/translations/20?verse_key=<surah:ayah>` on 2026-11-03 (footnote markers removed). Unit 1 quotes only short phrases from these verses and cites each by surah and ayah; the verses are listed here so that a reviewer can check every reference offline. The Unit 3 verses follow under `## Verified verses cited in Unit 3`. Doctrinal readings of the verses in the units are standard ones and are for the qualified Islamic Studies reviewer to confirm at G3 (content spec, drafting note 2).
+Each Unit 1 verse below was retrieved from `https://api.quran.com/api/v4/quran/translations/20?verse_key=<surah:ayah>` on 2026-11-03 (footnote markers removed). Unit 1 quotes only short phrases from these verses and cites each by surah and ayah; the verses are listed here so that a reviewer can check every reference offline. The Unit 3 verses follow under `## Verified verses cited in Unit 3`, and the Unit 4 notes under `## Unit 4 - bound source notes`. Doctrinal readings of the verses in the units are standard ones and are for the qualified Islamic Studies reviewer to confirm at G3 (content spec, drafting note 2).
 
 ## U1-01
 
@@ -107,3 +107,27 @@ The translation and commentary for selected verses cited in GISS-401 Unit 3 were
 ### Surah Al-Qalam (68:4) - Noble moral character (Akhlaq)
 "And indeed, you are of a great moral character."
 - *Supports*: U3-03, U3-05 (The Prophetic example as the living paradigm of integrated moral excellence and character education).
+## Unit 4 - bound source notes
+
+GISS-401 Unit 4. English translation consulted: Mustafa Khattab, *The Clear Quran*,
+at Quran.com, accessed 2026-11-03. These are paraphrased verification notes, not a copied
+translation or an independent tafsir. The linked passages remain the source text for review.
+
+- https://quran.com/30/21 : marriage is associated with tranquillity, affection and mercy.
+- https://quran.com/17/23-24 : worship of Allah is joined with respectful, gentle treatment of parents.
+- https://quran.com/2/233 : the infant-care passage includes provision, avoidance of harm and mutual consultation.
+- https://quran.com/4/36 : worship is joined with kindness to parents, relatives, people in need and neighbours, among others.
+- https://quran.com/4/7 : both men and women are named as holders of inheritance shares; this note does not calculate them.
+- https://quran.com/4/135 : justice and testimony must not bend to self, family, wealth or poverty.
+- https://quran.com/49/13 : human diversity is addressed without treating ancestry as the basis of honour before Allah.
+- https://quran.com/5/8 : hostility towards a people must not lead to injustice.
+- https://quran.com/4/58 : trusts must be returned and judgement conducted fairly.
+- https://quran.com/12/40 : ultimate judgement belongs to Allah in a passage about worship and authority.
+- https://quran.com/2/30 : the passage introduces a khalifah on earth; institutional deductions require interpretation.
+- https://quran.com/42/38 : mutual consultation describes the conduct of shared affairs.
+- https://quran.com/3/159 : gentleness, consultation, resolve and trust in Allah are connected.
+
+Coverage: U4-01 to U4-04, as specified in coverage/unit-04.md. Classroom procedures and modern
+institutional comparisons are labelled applications in the prose. The notes do not establish
+family-law rulings or prescribe one modern governmental design. Independent religious-content
+review remains pending.
