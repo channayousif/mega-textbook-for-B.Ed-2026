@@ -29,7 +29,7 @@
 | Unit 1 | G6 assets | ▣ | | four English schematics placed with dark variants; `measure-figure-text` not run (crew brief bars Chromium), CI `figure-geometry` is the first measured check |
 | Unit 1 | G7 publish | ▢ | | no publication requested by this authoring job |
 | Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-04/G2/20261103T002225277Z-gates.json |
-| Unit 4 | G3 en-review | ▢ | | Independent review pending; no certification claimed. |
+| Unit 4 | G3 en-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/giss-401/reviews/unit-04/G3/a5031c12-2079-4b0e-b718-bb161d2381bc.json; all 7 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; all 8 SVG variants pass geometry; G3 remains open and unsigned |
 | Unit 4 | G4 ur-translation | ▢ | | Separate Urdu job; English pages retain translation_status: draft. |
 | Unit 4 | G5 ur-review | ▢ | | Pending accepted English baseline and translated mirror. |
 | Unit 4 | G6 assets | ▣ | | Four English schematics and dark variants placed to meet current figure gates; geometry validation pending; Urdu localisation is a separate job. |
