@@ -59,7 +59,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Merged origin/main (37 commits) into crew/giss-401-u02-author and resolved both add/add conflicts by keeping both sides' entries: main's Unit 6 bound passages before this branch's Unit 2 passages in quran-translation.md, and both sides' Unit 2 and Unit 6 tracker rows plus the Unit 6 authoring notes in tasks.md. Confirmed the shared registries were already identical between HEAD and origin/main, regenerated the gitignored static/content-status.json, and left all 13 content gates passing.
+Merged origin/main into crew/giss-401-u02-author and resolved both add/add conflicts by keeping both sides' entries: main's Unit 6 bound passages before this branch's Unit 2 passages in quran-translation.md, and both sides' Unit 2 and Unit 6 tracker rows plus the Unit 6 authoring notes in tasks.md. origin/main advanced during the job (Unit 1 Urdu translation), so a second merge brought the branch level with main. Confirmed the shared registries were already identical between HEAD and origin/main, regenerated the gitignored static/content-status.json, and left all 13 content gates passing.
 
 ## Outcome
 
@@ -71,7 +71,7 @@ Merged origin/main (37 commits) into crew/giss-401-u02-author and resolved both 
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/giss-401-u02-author, resolved both add/add conflicts keeping both sides' entries, regenerated the gitignored content-status report, and left all 13 content gates passing.
+- Shipped / changed: Merged origin/main into crew/giss-401-u02-author (twice, as main advanced during the job), resolved both add/add conflicts keeping both sides' entries, regenerated the gitignored content-status report, and left all 13 content gates passing.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
