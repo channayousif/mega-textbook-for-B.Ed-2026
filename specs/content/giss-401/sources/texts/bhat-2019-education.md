@@ -14,3 +14,7 @@ Page 75, on the aims of Islamic education: the human being "is reflected as vice
 Page 75: the Islamic sources of education are the "Quran and Sunnah of Prophet Muhammad (pbuh)".
 
 Page 76: "A teacher is considered heir of the Prophets", and the teacher is described "as role model for society".
+
+## U6-01, U6-03
+
+Unit 6 uses the same review only as educational context, consulted from the publisher PDF on 2026-11-03. Paraphrase: page 73, the opening of the review, introduces the book's educational aims including character and spiritual growth; page 75 (the aims extract under U1-02 above) describes integrated development across several domains; page 76 discusses teacher conduct and the teacher as a role model. The review supplies neither empirical classroom results nor an exhaustive definition of *ilm* or *hikmah*. Unit 6's cases and working distinctions are the author's original explanations.

@@ -2,7 +2,7 @@
 
 *The Holy Qur'an*, Saheeh International English translation (Quran.com translation id 20). https://quran.com
 
-Each verse below was retrieved from `https://api.quran.com/api/v4/quran/translations/20?verse_key=<surah:ayah>` on 2026-11-03 (footnote markers removed). Unit 1 quotes only short phrases from these verses and cites each by surah and ayah; the verses are listed here so that a reviewer can check every reference offline. Doctrinal readings of the verses in the unit are standard ones and are for the qualified Islamic Studies reviewer to confirm at G3 (content spec, drafting note 2).
+Each Unit 1 verse below was retrieved from `https://api.quran.com/api/v4/quran/translations/20?verse_key=<surah:ayah>` on 2026-11-03 (footnote markers removed). Unit 1 quotes only short phrases from these verses and cites each by surah and ayah; the verses are listed here so that a reviewer can check every reference offline. The Unit 3 verses follow under `## Verified verses cited in Unit 3`, and the Unit 4 notes under `## Unit 4 - bound source notes`. Doctrinal readings of the verses in the units are standard ones and are for the qualified Islamic Studies reviewer to confirm at G3 (content spec, drafting note 2).
 
 ## U1-01
 
@@ -66,6 +66,47 @@ Each verse below was retrieved from `https://api.quran.com/api/v4/quran/translat
 - **2:286**: "Allāh does not charge a soul except [with that within] its capacity. It will have [the consequence of] what [good] it has gained, and it will bear [the consequence of] what [evil] it has earned. "Our Lord, do not impose blame upon us if we have forgotten or erred. Our Lord, and lay not upon us a burden like that which You laid upon those before us. Our Lord, and burden us not with that which we have no ability to bear. And pardon us; and forgive us; and have mercy upon us. You are our protector, so give us victory over the disbelieving people.""
 - **13:11**: "For him [i.e., each one] are successive [angels] before and behind him who protect him by the decree of Allāh. Indeed, Allāh will not change the condition of a people until they change what is in themselves. And when Allāh intends for a people ill, there is no repelling it. And there is not for them besides Him any patron."
 
+## Access and verified support
+
+The translation and commentary for selected verses cited in GISS-401 Unit 3 were retrieved and verified on 2026-10-31 and checked on 2026-11-03. English renderings consult the widely recognized translation by Sahih International and Muhsin Khan, cross-referenced with standard classical tafseer commentaries.
+
+## Verified verses cited in Unit 3
+
+### Surah Al-Ankabut (29:45) - Salat and moral restraint
+"Recite what has been revealed to you of the Book and establish prayer. Indeed, prayer restrains from shameful and unjust deeds, and the remembrance of Allah is greater. And Allah knows what you do."
+- *Supports*: U3-01, U3-02 (Salat as regular spiritual discipline that directly restrains unethical conduct and fosters moral mindfulness).
+
+### Surah At-Tawbah (9:60) - Zakat recipients and social solidarity
+"Zakat expenditures are only for the poor and for the needy and for those employed to collect it and for bringing hearts together and for freeing captives and for those in debt and for the cause of Allah and for the stranded traveler - an obligation imposed by Allah. And Allah is Knowing and Wise."
+- *Supports*: U3-01, U3-02 (Zakat as an institutional financial obligation with eight defined beneficiary categories, distinguishing it from general voluntary charity).
+
+### Surah Al-Baqarah (2:183) - Saum and taqwa
+"O you who have believed, decreed upon you is fasting as it was decreed upon those before you that you may become righteous [attain taqwa]."
+- *Supports*: U3-01, U3-02 (Fasting as an annual spiritual and moral training designed to cultivate self-restraint, empathy, and God-consciousness).
+
+### Surah Al-Hajj (22:27-28) - Hajj and universal assembly
+"And proclaim to the people the Hajj; they will come to you on foot and on every lean camel; they will come from every distant pass - that they may witness benefits for themselves and mention the name of Allah on known days..."
+- *Supports*: U3-01, U3-02 (Hajj as an international gathering demonstrating human equality, solidarity, and shared devotion without distinction of race, wealth, or status).
+
+### Surah At-Tawbah (9:119) - Truthfulness (Sidq)
+"O you who have believed, fear Allah and be with those who are true [in word and deed]."
+- *Supports*: U3-03, U3-04 (Truthfulness as an indispensable moral imperative in speech, academic integrity, and personal character).
+
+### Surah An-Nisa (4:135) - Justice (Adl)
+"O you who have believed, be persistently standing firm in justice, witnesses for Allah, even if it be against yourselves or parents and relatives. Whether one is rich or poor, Allah is more worthy of both. So follow not personal inclination, lest you not be just."
+- *Supports*: U3-03, U3-04 (Justice as impartial, principled fairness requiring educators to avoid bias, favouritism, or discrimination).
+
+### Surah An-Nisa (4:58) - Honesty and trust (Amanah)
+"Indeed, Allah commands you to render trusts to whom they are due and when you judge between people to judge with justice."
+- *Supports*: U3-03, U3-04 (Amanah as fulfilling moral and professional trusts, treating students and educational duties as sacred responsibilities).
+
+### Surah Al-Baqarah (2:153) - Patience and perseverance (Sabr)
+"O you who have believed, seek help through patience and prayer. Indeed, Allah is with the patient."
+- *Supports*: U3-03, U3-04 (Sabr as steadfast endurance, emotional self-regulation, and active perseverance in teaching and character building).
+
+### Surah Al-Qalam (68:4) - Noble moral character (Akhlaq)
+"And indeed, you are of a great moral character."
+- *Supports*: U3-03, U3-05 (The Prophetic example as the living paradigm of integrated moral excellence and character education).
 ## Unit 4 - bound source notes
 
 GISS-401 Unit 4. English translation consulted: Mustafa Khattab, *The Clear Quran*,
@@ -90,3 +131,16 @@ Coverage: U4-01 to U4-04, as specified in coverage/unit-04.md. Classroom procedu
 institutional comparisons are labelled applications in the prose. The notes do not establish
 family-law rulings or prescribe one modern governmental design. Independent religious-content
 review remains pending.
+
+## U6-01, U6-02, U6-07, U6-08, U6-09
+
+Unit 6 paraphrases these passages and does not quote them. Its English display translation is Mustafa Khattab, *The Clear Quran*, at Quran.com (https://quran.com/96/1-5 ; https://quran.com/16/125 ; https://quran.com/49/11-13 ; https://quran.com/5/8 ; https://quran.com/2/256 ; https://quran.com/49/6), consulted 2026-11-03. The notes below are reading notes in paraphrase, not verse text.
+
+- **96:1-5**: reading, teaching and the pen are related to the Creator. No modern lesson timetable is specified.
+- **16:125**: wisdom, good counsel and the manner of discussion concern invitation to Allah's way. Classroom use is an explicitly identified inference.
+- **49:11-13**: the passage addresses ridicule, degrading labels and human diversity.
+- **5:8**: dislike must not lead believers away from justice.
+- **2:256**: compulsion in religion is rejected.
+- **49:6**: unchecked news can lead to harm through ignorance.
+
+Applications to school procedures are the Unit 6 author's reasoning, not additional verse text.
