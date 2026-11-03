@@ -27,7 +27,7 @@ per-topic layout: `index.mdx` + `topic-01…02.mdx` (nine-part cycles) + `unit-a
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-01/G2/20261102T072756146Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-01/G2/20261103T085709740Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | |
 | Unit 1 | G4 ur-translation | ▣ | | Complete 5-file UR mirror reconciled with EN baseline 9e6da648 on 2026-10-18 (crew efmp-305-u01-translate-r1); semantic, register, and terminology polish; 4 .ur.svg/.ur.dark.svg figure variants wired; structural parity, figure parity, and bank-conformant key_terms (Inclusive Education) verified under temporary reviewed flip (reverted); 8 unbanked concept labels proposed separately; handoff: reviews/unit-01/G4/translation-handoff.md; translation_status stays draft pending fresh independent G5; no certification claimed. |
 | Unit 1 | G5 ur-review | ▢ | | |
@@ -35,6 +35,7 @@ per-topic layout: `index.mdx` + `topic-01…02.mdx` (nine-part cycles) + `unit-a
 | Unit 1 | G7 publish | ▢ | | |
 | Unit 1 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-305/reviews/unit-01/G3/agent-g3-efmp-305-u1-run2f195870.json |
 | Unit 1 | G3 en-review | ▢ | | advisory: escalate; final cycle; agent:codex-g3-reviewer; report specs/content/efmp-305/reviews/unit-01/G3/codex-01a17f6f.json; prior findings resolved, new assessment/source defects and missing render/provenance evidence require owner disposition; no certification |
+| Unit 1 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-305/reviews/unit-01/G3/20261102T212207Z-g3-desk-65386ad3.json; topic-01 summative task now rewards segregation, opening verb and Further reading (UNESCO, Miles) aligned; topic-02 UNICEF/NEP claims bound to unicef2014/nep2009 with honest limits, Hehir limit added, Ainscow Further reading aligned; assessment RRQ 5 key, MCQ 10, RRQ 9 Hehir limit and ERQ rubric aggregation repaired; index and teacher-notes wording repaired; UR mirrors updated; G3 left unticked |
 
 **Unit 2 - Understanding Learner Diversity (2026-10-09):** authored to the Spec 008 v3.0
 per-topic layout: `index.mdx` + `topic-01…02.mdx` (nine-part cycles) + `unit-assessment.mdx`
