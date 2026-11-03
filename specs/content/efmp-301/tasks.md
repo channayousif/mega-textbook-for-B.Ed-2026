@@ -129,6 +129,14 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 9 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-09/G3/20261102T211054Z-g3-desk-15f0d2e9.json |
 | Unit 11 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-11/G3/20261102T211054Z-g3-desk-baae4994.json |
 | Unit 12 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-12/G3/20261102T211054Z-g3-desk-c6d3f3b3.json |
+| Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-04/G3/20261102T211929Z-g3-desk-a812ec4a.json |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-03/G3/20261102T212207Z-g3-desk-aaa9f247.json |
+| Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-05/G3/20261102T212207Z-g3-desk-99b62591.json |
+| Unit 8 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-08/G3/20261102T212207Z-g3-desk-04504f15.json |
+| Unit 9 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-09/G3/20261102T212207Z-g3-desk-b282fccc.json |
+| Unit 11 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-11/G3/20261102T212207Z-g3-desk-c705dbc8.json |
+| Unit 12 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-12/G3/20261102T212207Z-g3-desk-1ab85eaa.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-02/G3/20261102T212207Z-g3-desk-4eaf1d0f.json |
 
 ## Re-restructure in progress (2026-09-11)
 

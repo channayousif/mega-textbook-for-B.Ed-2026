@@ -75,3 +75,5 @@ files at that commit. The geng-300 reds are recorded as known-stale-on-main in t
 | Unit 6 | G3 en-review | ✅ | CMY | review:specs/content/gict-300/reviews/unit-06/G3/20261102T140729Z-g3-desk-f3d07d33.json |
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/gict-300/reviews/unit-03/G3/20261102T211054Z-g3-desk-44d19b33.json |
 | Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/gict-300/reviews/unit-04/G3/20261102T211054Z-g3-desk-1865df22.json |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/gict-300/reviews/unit-03/G3/20261102T212207Z-g3-desk-319cad35.json |
+| Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/gict-300/reviews/unit-04/G3/20261102T212207Z-g3-desk-3326366e.json |

@@ -101,6 +101,8 @@ register pass; `translation_status: reviewed` on all EN and UR unit-01 files;
 | Unit 5 | G3 en-review | ✅ | CMY | review:specs/content/efmp-302/reviews/unit-05/G3/20261102T140729Z-g3-desk-1fa7b86a.json |
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-302/reviews/unit-02/G3/20261102T211054Z-g3-desk-4739b695.json |
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-302/reviews/unit-06/G3/20261102T211054Z-g3-desk-cb70bbb5.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-302/reviews/unit-02/G3/20261102T212207Z-g3-desk-d78cf623.json |
+| Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-302/reviews/unit-06/G3/20261102T212207Z-g3-desk-d7dcc6df.json |
 
 ## Note - Unit 3's revoked provisional tier
 

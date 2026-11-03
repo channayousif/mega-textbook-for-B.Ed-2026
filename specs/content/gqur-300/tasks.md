@@ -73,3 +73,6 @@ on every unit).
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-300/reviews/unit-02/G3/20261102T211054Z-g3-desk-6800ea3b.json |
 | Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-300/reviews/unit-04/G3/20261102T211054Z-g3-desk-2268cf24.json |
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-300/reviews/unit-06/G3/20261102T211054Z-g3-desk-b63419c3.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-300/reviews/unit-02/G3/20261102T212207Z-g3-desk-710069ea.json |
+| Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-300/reviews/unit-06/G3/20261102T212207Z-g3-desk-48a77ab7.json |
+| Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-300/reviews/unit-04/G3/20261102T212207Z-g3-desk-186abd28.json |

@@ -127,3 +127,6 @@ recorded resolved and F3 (no Urdu `.ur.svg` figure variants anywhere in EFMP-304
 | Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-304/reviews/unit-01/G3/20261102T211054Z-g3-desk-a0711672.json |
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-304/reviews/unit-02/G3/20261102T211054Z-g3-desk-3c60113a.json |
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-304/reviews/unit-03/G3/20261102T211054Z-g3-desk-98445761.json |
+| Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-304/reviews/unit-01/G3/20261102T212207Z-g3-desk-9cac2bab.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-304/reviews/unit-02/G3/20261102T212207Z-g3-desk-0bfd5e8f.json |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-304/reviews/unit-03/G3/20261102T212207Z-g3-desk-fc9b67f2.json |

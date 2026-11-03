@@ -176,3 +176,7 @@ the PHR and Paperclip handoff. No G3/G5 certification or publication is claimed.
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-03/G3/20261102T211054Z-g3-desk-68a046eb.json |
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-05/G3/20261102T211054Z-g3-desk-161c2504.json |
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-06/G3/20261102T211054Z-g3-desk-5e601a1c.json |
+| Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-01/G3/20261102T212207Z-g3-desk-65386ad3.json |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-03/G3/20261102T212207Z-g3-desk-d26592ad.json |
+| Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-05/G3/20261102T212207Z-g3-desk-6054cf1d.json |
+| Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-06/G3/20261102T212207Z-g3-desk-5907f448.json |

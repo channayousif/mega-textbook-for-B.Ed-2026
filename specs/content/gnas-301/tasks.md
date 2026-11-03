@@ -78,3 +78,5 @@ units may be authored.
 | Unit 5 | G3 en-review | ✅ | CMY | review:specs/content/gnas-301/reviews/unit-05/G3/20261102T140729Z-g3-desk-6da9f991.json |
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gnas-301/reviews/unit-02/G3/20261102T211054Z-g3-desk-207756e4.json |
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gnas-301/reviews/unit-06/G3/20261102T211054Z-g3-desk-c9e52a96.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gnas-301/reviews/unit-02/G3/20261102T212207Z-g3-desk-bc87d518.json |
+| Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gnas-301/reviews/unit-06/G3/20261102T212207Z-g3-desk-06be9f9b.json |

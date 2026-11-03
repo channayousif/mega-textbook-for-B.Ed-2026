@@ -120,3 +120,8 @@ unit-spec at intake (board-run G0/G1 intake pending).
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-03/G3/20261102T211054Z-g3-desk-9d18c8b6.json |
 | Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-04/G3/20261102T211054Z-g3-desk-9e5135f9.json |
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-05/G3/20261102T211054Z-g3-desk-66c20ca8.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-02/G3/20261102T212207Z-g3-desk-4de29bbc.json |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-03/G3/20261102T212207Z-g3-desk-4e7be754.json |
+| Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-04/G3/20261102T212207Z-g3-desk-a0d82ff4.json |
+| Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-05/G3/20261102T212207Z-g3-desk-58144d8a.json |
+| Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-01/G3/20261102T212819Z-g3-desk-140ce781.json |
