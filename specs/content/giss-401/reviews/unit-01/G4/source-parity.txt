@@ -1,0 +1,4 @@
+index.mdx: metadata, headings, components, figures, numbered items, MDX compilation PASS
+topic-01.mdx: metadata, headings, components, figures, numbered items, MDX compilation PASS
+topic-02.mdx: metadata, headings, components, figures, numbered items, MDX compilation PASS
+unit-assessment.mdx: metadata, headings, components, figures, numbered items, MDX compilation PASS
