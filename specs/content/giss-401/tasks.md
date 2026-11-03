@@ -30,7 +30,7 @@
 | Unit 1 | G7 publish | ▢ | | no publication requested by this authoring job |
 | Unit 3 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-03/G2/20261103T021930441Z-gates.json |
-| Unit 3 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
+| Unit 3 | G3 en-review | ▢ | | advisory: escalate (agent:codex-g3-reviewer); report at specs/content/giss-401/reviews/unit-03/G3/01a19f68-d755-7131-a30e-d230853e3b7a.json; author-run provenance and parent-prepared handoff absent; required browser/print inspection barred by crew brief; qualified Islamic Studies scholar review pending; G3 remains open and unsigned |
 | Unit 3 | G4 ur-translation | ▢ | | separate job |
 | Unit 3 | G5 ur-review | ▢ | | |
 | Unit 3 | G6 assets | ✅ | auto:gates | 4 schematics placed with dark variants |
