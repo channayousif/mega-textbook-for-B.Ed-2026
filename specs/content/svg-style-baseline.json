@@ -1,0 +1,1858 @@
+{
+ "static/img/figures/efmp-301/unit-01/fig-U1-1.svg": [
+  "font-size:17",
+  "canvas-width:700"
+ ],
+ "static/img/figures/efmp-301/unit-01/fig-U1-1.ur.svg": [
+  "font-size:17",
+  "canvas-width:700"
+ ],
+ "static/img/figures/efmp-301/unit-01/fig-U1-2.svg": [
+  "font-size:12.5",
+  "canvas-width:702"
+ ],
+ "static/img/figures/efmp-301/unit-01/fig-U1-2.ur.svg": [
+  "font-size:12.5",
+  "canvas-width:702"
+ ],
+ "static/img/figures/efmp-301/unit-01/fig-U1-3.svg": [
+  "font-size:12.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-301/unit-01/fig-U1-3.ur.svg": [
+  "font-size:12.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-301/unit-01/fig-U1-4.svg": [
+  "canvas-width:820"
+ ],
+ "static/img/figures/efmp-301/unit-01/fig-U1-4.ur.svg": [
+  "canvas-width:820"
+ ],
+ "static/img/figures/efmp-301/unit-01/fig-U1-5.svg": [
+  "font-size:12.5",
+  "font-size:13.5",
+  "canvas-width:700"
+ ],
+ "static/img/figures/efmp-301/unit-01/fig-U1-5.ur.svg": [
+  "font-size:12.5",
+  "font-size:13.5",
+  "canvas-width:700"
+ ],
+ "static/img/figures/efmp-301/unit-01/fig-U1-6.svg": [
+  "font-size:12.5",
+  "canvas-width:840"
+ ],
+ "static/img/figures/efmp-301/unit-01/fig-U1-6.ur.svg": [
+  "font-size:12.5",
+  "canvas-width:840"
+ ],
+ "static/img/figures/efmp-301/unit-01/fig-U1-7.svg": [
+  "font-size:12.5",
+  "canvas-width:852"
+ ],
+ "static/img/figures/efmp-301/unit-01/fig-U1-7.ur.svg": [
+  "font-size:12.5",
+  "canvas-width:852"
+ ],
+ "static/img/figures/efmp-301/unit-01/fig-U1-8.svg": [
+  "stroke-width:3.5",
+  "canvas-width:888"
+ ],
+ "static/img/figures/efmp-301/unit-01/fig-U1-8.ur.svg": [
+  "stroke-width:3.5",
+  "canvas-width:888"
+ ],
+ "static/img/figures/efmp-301/unit-01/fig-U1-9.svg": [
+  "font-size:12.5",
+  "canvas-width:758"
+ ],
+ "static/img/figures/efmp-301/unit-01/fig-U1-9.ur.svg": [
+  "font-size:12.5",
+  "canvas-width:758"
+ ],
+ "static/img/figures/efmp-301/unit-02/fig-U2-1.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-02/fig-U2-2.ur.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-02/fig-U2-3.svg": [
+  "stroke-width:5"
+ ],
+ "static/img/figures/efmp-301/unit-02/fig-U2-3.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "stroke-width:5"
+ ],
+ "static/img/figures/efmp-301/unit-02/fig-U2-4.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-02/fig-U2-5.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-02/fig-U2-6.ur.svg": [
+  "font-size:12.5",
+  "font-size:13.5"
+ ],
+ "static/img/figures/efmp-301/unit-02/fig-U2-7.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-02/fig-U2-7.ur.svg": [
+  "font-size:11.5"
+ ],
+ "static/img/figures/efmp-301/unit-02/fig-U2-8.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "font-size:13.5"
+ ],
+ "static/img/figures/efmp-301/unit-03/fig-U3-1.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-03/fig-U3-2.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "font-size:13.5"
+ ],
+ "static/img/figures/efmp-301/unit-03/fig-U3-3.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "font-size:13.5"
+ ],
+ "static/img/figures/efmp-301/unit-03/fig-U3-4.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "font-size:13.5"
+ ],
+ "static/img/figures/efmp-301/unit-03/fig-U3-5.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "font-size:13.5"
+ ],
+ "static/img/figures/efmp-301/unit-03/fig-U3-6.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "font-size:13.5"
+ ],
+ "static/img/figures/efmp-301/unit-03/fig-U3-7.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "font-size:13.5"
+ ],
+ "static/img/figures/efmp-301/unit-03/fig-U3-8.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "font-size:13.5"
+ ],
+ "static/img/figures/efmp-301/unit-03/fig-U3-9.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "font-size:13.5"
+ ],
+ "static/img/figures/efmp-301/unit-04/fig-U4-1.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-04/fig-U4-2.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-04/fig-U4-3.svg": [
+  "stroke-width:1.8"
+ ],
+ "static/img/figures/efmp-301/unit-04/fig-U4-3.ur.svg": [
+  "stroke-width:1.8",
+  "canvas-width:1000"
+ ],
+ "static/img/figures/efmp-301/unit-04/fig-U4-4.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-04/fig-U4-5.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-04/fig-U4-6.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-05/fig-U5-1.svg": [
+  "font-size:22"
+ ],
+ "static/img/figures/efmp-301/unit-05/fig-U5-1.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "font-size:22"
+ ],
+ "static/img/figures/efmp-301/unit-05/fig-U5-2.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-05/fig-U5-3.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-05/fig-U5-4.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-06/fig-U6-1.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-06/fig-U6-2.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-06/fig-U6-2.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-06/fig-U6-3.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-06/fig-U6-4.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-07/fig-U7-1.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-07/fig-U7-1.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-07/fig-U7-2.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-07/fig-U7-3.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-07/fig-U7-3.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-07/fig-U7-4.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-07/fig-U7-4.ur.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-08/fig-U8-1.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-08/fig-U8-1.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-08/fig-U8-2.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-08/fig-U8-2.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-08/fig-U8-3.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-08/fig-U8-3.ur.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-08/fig-U8-4.svg": [
+  "font-size:12.5",
+  "font-size:13.5"
+ ],
+ "static/img/figures/efmp-301/unit-08/fig-U8-4.ur.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-08/fig-U8-5.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-08/fig-U8-5.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-08/fig-U8-6.svg": [
+  "font-size:12.5",
+  "font-size:13.5"
+ ],
+ "static/img/figures/efmp-301/unit-08/fig-U8-6.ur.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-09/fig-U9-1.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-09/fig-U9-1.ur.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-09/fig-U9-2.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-09/fig-U9-2.ur.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-09/fig-U9-3.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-09/fig-U9-3.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-09/fig-U9-4.svg": [
+  "font-size:12.5",
+  "font-size:13.5"
+ ],
+ "static/img/figures/efmp-301/unit-09/fig-U9-4.ur.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-09/fig-U9-5.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-09/fig-U9-5.ur.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-09/fig-U9-6.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-09/fig-U9-6.ur.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-10/fig-U10-1.svg": [
+  "font-size:11.5"
+ ],
+ "static/img/figures/efmp-301/unit-10/fig-U10-1.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-10/fig-U10-2.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-10/fig-U10-2.ur.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-10/fig-U10-3.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-10/fig-U10-3.ur.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-10/fig-U10-4.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-10/fig-U10-4.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-11/fig-U11-1.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-11/fig-U11-1.ur.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-11/fig-U11-2.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-11/fig-U11-3.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-11/fig-U11-3.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-11/fig-U11-4.svg": [
+  "font-size:11.5"
+ ],
+ "static/img/figures/efmp-301/unit-11/fig-U11-4.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-12/fig-U12-1.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-12/fig-U12-1.ur.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-12/fig-U12-2.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-12/fig-U12-2.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-12/fig-U12-3.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-12/fig-U12-4.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-12/fig-U12-4.ur.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-12/fig-U12-5.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-12/fig-U12-5.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-12/fig-U12-6.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-301/unit-12/fig-U12-6.ur.svg": [
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-302/unit-01/fig-U1-1.svg": [
+  "canvas-width:772"
+ ],
+ "static/img/figures/efmp-302/unit-01/fig-U1-1.ur.svg": [
+  "canvas-width:772"
+ ],
+ "static/img/figures/efmp-302/unit-01/fig-U1-2.svg": [
+  "font-size:17",
+  "canvas-width:800"
+ ],
+ "static/img/figures/efmp-302/unit-01/fig-U1-2.ur.svg": [
+  "canvas-width:800"
+ ],
+ "static/img/figures/efmp-302/unit-01/fig-U1-3.svg": [
+  "canvas-width:420"
+ ],
+ "static/img/figures/efmp-302/unit-01/fig-U1-3.ur.svg": [
+  "canvas-width:420"
+ ],
+ "static/img/figures/efmp-302/unit-01/fig-U1-4.svg": [
+  "font-size:17",
+  "canvas-width:860"
+ ],
+ "static/img/figures/efmp-302/unit-01/fig-U1-4.ur.svg": [
+  "canvas-width:860"
+ ],
+ "static/img/figures/efmp-302/unit-01/fig-U1-5.svg": [
+  "font-size:17",
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-302/unit-01/fig-U1-5.ur.svg": [
+  "font-size:17",
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-302/unit-01/fig-U1-6.svg": [
+  "canvas-width:820"
+ ],
+ "static/img/figures/efmp-302/unit-01/fig-U1-6.ur.svg": [
+  "canvas-width:820"
+ ],
+ "static/img/figures/efmp-302/unit-01/fig-U1-7.svg": [
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-01/fig-U1-7.ur.svg": [
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-01/fig-U1-8.svg": [
+  "canvas-width:640"
+ ],
+ "static/img/figures/efmp-302/unit-01/fig-U1-8.ur.svg": [
+  "canvas-width:640"
+ ],
+ "static/img/figures/efmp-302/unit-03/fig-U3-1.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-03/fig-U3-1.ur.svg": [
+  "font-size:12.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-03/fig-U3-10.svg": [
+  "font-size:12.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-03/fig-U3-10.ur.svg": [
+  "font-size:12.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-03/fig-U3-2.svg": [
+  "font-size:10.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-03/fig-U3-2.ur.svg": [
+  "font-size:10.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-03/fig-U3-3.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-03/fig-U3-3.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-03/fig-U3-4.svg": [
+  "canvas-width:800"
+ ],
+ "static/img/figures/efmp-302/unit-03/fig-U3-4.ur.svg": [
+  "canvas-width:800"
+ ],
+ "static/img/figures/efmp-302/unit-03/fig-U3-5.svg": [
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-302/unit-03/fig-U3-5.ur.svg": [
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-302/unit-03/fig-U3-6.svg": [
+  "font-size:12.5",
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-302/unit-03/fig-U3-6.ur.svg": [
+  "font-size:12.5",
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-302/unit-03/fig-U3-7.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "canvas-width:860"
+ ],
+ "static/img/figures/efmp-302/unit-03/fig-U3-7.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "canvas-width:860"
+ ],
+ "static/img/figures/efmp-302/unit-03/fig-U3-8.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "stroke-width:1.8",
+  "canvas-width:860"
+ ],
+ "static/img/figures/efmp-302/unit-03/fig-U3-8.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "stroke-width:1.8",
+  "canvas-width:860"
+ ],
+ "static/img/figures/efmp-302/unit-03/fig-U3-9.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-03/fig-U3-9.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-04/fig-U4-1.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-04/fig-U4-1.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-04/fig-U4-2.svg": [
+  "font-size:12.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-04/fig-U4-2.ur.svg": [
+  "font-size:12.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-04/fig-U4-3.svg": [
+  "font-size:10.5",
+  "stroke-width:1.8",
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-302/unit-04/fig-U4-3.ur.svg": [
+  "font-size:10.5",
+  "stroke-width:1.8",
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-302/unit-04/fig-U4-4.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "canvas-width:940"
+ ],
+ "static/img/figures/efmp-302/unit-04/fig-U4-4.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "canvas-width:940"
+ ],
+ "static/img/figures/efmp-302/unit-04/fig-U4-5.svg": [
+  "font-size:12.5",
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-302/unit-04/fig-U4-5.ur.svg": [
+  "font-size:12.5",
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-302/unit-04/fig-U4-6.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-04/fig-U4-6.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-04/fig-U4-7.svg": [
+  "font-size:10.5",
+  "font-size:11.5",
+  "canvas-width:920"
+ ],
+ "static/img/figures/efmp-302/unit-04/fig-U4-7.ur.svg": [
+  "font-size:10.5",
+  "font-size:11.5",
+  "canvas-width:920"
+ ],
+ "static/img/figures/efmp-302/unit-04/fig-U4-8.svg": [
+  "font-size:11.5",
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-302/unit-04/fig-U4-8.ur.svg": [
+  "font-size:11.5",
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-302/unit-05/fig-U5-1.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-302/unit-05/fig-U5-1.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-302/unit-05/fig-U5-2.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "canvas-width:1030"
+ ],
+ "static/img/figures/efmp-302/unit-05/fig-U5-2.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "canvas-width:1030"
+ ],
+ "static/img/figures/efmp-302/unit-05/fig-U5-3.svg": [
+  "font-size:10.5",
+  "font-size:11.5",
+  "font-size:12.5",
+  "canvas-width:920"
+ ],
+ "static/img/figures/efmp-302/unit-05/fig-U5-3.ur.svg": [
+  "font-size:10.5",
+  "font-size:11.5",
+  "font-size:12.5",
+  "canvas-width:920"
+ ],
+ "static/img/figures/efmp-302/unit-05/fig-U5-4.svg": [
+  "font-size:11.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-05/fig-U5-4.ur.svg": [
+  "font-size:11.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-05/fig-U5-5.svg": [
+  "font-size:11.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-05/fig-U5-5.ur.svg": [
+  "font-size:11.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-05/fig-U5-6.svg": [
+  "font-size:11.5",
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-302/unit-05/fig-U5-6.ur.svg": [
+  "font-size:11.5",
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-302/unit-05/fig-U5-7.svg": [
+  "font-size:11.5",
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-302/unit-05/fig-U5-7.ur.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-302/unit-05/fig-U5-8.svg": [
+  "font-size:11.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-05/fig-U5-8.ur.svg": [
+  "font-size:11.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-06/fig-U6-1.svg": [
+  "font-size:11.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-06/fig-U6-1.ur.svg": [
+  "font-size:11.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-06/fig-U6-2.svg": [
+  "font-size:11.5",
+  "canvas-width:924"
+ ],
+ "static/img/figures/efmp-302/unit-06/fig-U6-2.ur.svg": [
+  "font-size:10.5",
+  "font-size:11.5",
+  "canvas-width:924"
+ ],
+ "static/img/figures/efmp-302/unit-06/fig-U6-3.svg": [
+  "font-size:11.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-06/fig-U6-3.ur.svg": [
+  "font-size:10.5",
+  "font-size:11.5",
+  "font-size:12.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-06/fig-U6-4.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-06/fig-U6-4.ur.svg": [
+  "font-size:11.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-06/fig-U6-5.svg": [
+  "font-size:11.5",
+  "canvas-width:936"
+ ],
+ "static/img/figures/efmp-302/unit-06/fig-U6-5.ur.svg": [
+  "font-size:11.5",
+  "canvas-width:936"
+ ],
+ "static/img/figures/efmp-302/unit-06/fig-U6-6.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-302/unit-06/fig-U6-6.ur.svg": [
+  "font-size:11.5",
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-302/unit-06/fig-U6-7.svg": [
+  "font-size:11.5",
+  "font-size:12.5",
+  "stroke-width:1.8",
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-302/unit-06/fig-U6-7.ur.svg": [
+  "font-size:11.5",
+  "stroke-width:1.8",
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-302/unit-06/fig-U6-8.svg": [
+  "font-size:11.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-302/unit-06/fig-U6-8.ur.svg": [
+  "font-size:11.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-303/unit-01/fig-U1-1.ur.svg": [
+  "font-size:10"
+ ],
+ "static/img/figures/efmp-303/unit-01/fig-U1-2.ur.svg": [
+  "font-size:10",
+  "font-size:17"
+ ],
+ "static/img/figures/efmp-303/unit-01/fig-U1-3.ur.svg": [
+  "font-size:10",
+  "font-size:17"
+ ],
+ "static/img/figures/efmp-303/unit-01/fig-U1-4.ur.svg": [
+  "font-size:10"
+ ],
+ "static/img/figures/efmp-303/unit-01/fig-U1-5.svg": [
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-303/unit-01/fig-U1-5.ur.svg": [
+  "font-size:10",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-303/unit-01/fig-U1-6.ur.svg": [
+  "font-size:10"
+ ],
+ "static/img/figures/efmp-303/unit-01/fig-U1-7.svg": [
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-303/unit-01/fig-U1-7.ur.svg": [
+  "font-size:10",
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-303/unit-01/fig-U1-8.ur.svg": [
+  "font-size:10"
+ ],
+ "static/img/figures/efmp-303/unit-02/fig-U2-1.ur.svg": [
+  "font-size:10"
+ ],
+ "static/img/figures/efmp-303/unit-02/fig-U2-2.ur.svg": [
+  "font-size:10"
+ ],
+ "static/img/figures/efmp-303/unit-02/fig-U2-3.ur.svg": [
+  "font-size:10"
+ ],
+ "static/img/figures/efmp-303/unit-02/fig-U2-4.ur.svg": [
+  "font-size:10"
+ ],
+ "static/img/figures/efmp-303/unit-02/fig-U2-5.ur.svg": [
+  "font-size:10"
+ ],
+ "static/img/figures/efmp-303/unit-02/fig-U2-6.ur.svg": [
+  "font-size:10"
+ ],
+ "static/img/figures/efmp-303/unit-05/fig-U5-1.ur.svg": [
+  "font-size:10"
+ ],
+ "static/img/figures/efmp-303/unit-05/fig-U5-2.ur.svg": [
+  "font-size:10"
+ ],
+ "static/img/figures/efmp-303/unit-05/fig-U5-3.ur.svg": [
+  "font-size:10"
+ ],
+ "static/img/figures/efmp-303/unit-05/fig-U5-4.ur.svg": [
+  "font-size:10"
+ ],
+ "static/img/figures/efmp-304/unit-01/fig-U1-10.ur.svg": [
+  "font-size:10.5",
+  "font-size:11.5"
+ ],
+ "static/img/figures/efmp-304/unit-01/fig-U1-3.ur.svg": [
+  "font-size:10.5"
+ ],
+ "static/img/figures/efmp-304/unit-01/fig-U1-4.ur.svg": [
+  "font-size:13.5"
+ ],
+ "static/img/figures/efmp-304/unit-01/fig-U1-6.ur.svg": [
+  "font-size:10.5"
+ ],
+ "static/img/figures/efmp-304/unit-01/fig-U1-7.ur.svg": [
+  "font-size:10.5",
+  "font-size:11.5"
+ ],
+ "static/img/figures/efmp-304/unit-01/fig-U1-8.ur.svg": [
+  "font-size:10.5",
+  "font-size:11.5",
+  "font-size:12.5"
+ ],
+ "static/img/figures/efmp-304/unit-01/fig-U1-9.ur.svg": [
+  "font-size:10",
+  "font-size:10.5"
+ ],
+ "static/img/figures/efmp-304/unit-02/fig-U2-1.svg": [
+  "canvas-width:820"
+ ],
+ "static/img/figures/efmp-304/unit-02/fig-U2-1.ur.svg": [
+  "canvas-width:820"
+ ],
+ "static/img/figures/efmp-304/unit-02/fig-U2-2.svg": [
+  "stroke-width:4"
+ ],
+ "static/img/figures/efmp-304/unit-02/fig-U2-2.ur.svg": [
+  "stroke-width:4"
+ ],
+ "static/img/figures/efmp-304/unit-02/fig-U2-3.svg": [
+  "canvas-width:820"
+ ],
+ "static/img/figures/efmp-304/unit-02/fig-U2-3.ur.svg": [
+  "canvas-width:820"
+ ],
+ "static/img/figures/efmp-304/unit-02/fig-U2-4.svg": [
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-304/unit-02/fig-U2-4.ur.svg": [
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-304/unit-02/fig-U2-5.svg": [
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-304/unit-02/fig-U2-5.ur.svg": [
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-304/unit-02/fig-U2-6.svg": [
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-304/unit-02/fig-U2-6.ur.svg": [
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-304/unit-02/fig-U2-7.svg": [
+  "canvas-width:820"
+ ],
+ "static/img/figures/efmp-304/unit-02/fig-U2-7.ur.svg": [
+  "canvas-width:820"
+ ],
+ "static/img/figures/efmp-304/unit-02/fig-U2-8.svg": [
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-304/unit-02/fig-U2-8.ur.svg": [
+  "canvas-width:900"
+ ],
+ "static/img/figures/efmp-304/unit-03/fig-U3-1.svg": [
+  "canvas-width:820"
+ ],
+ "static/img/figures/efmp-304/unit-03/fig-U3-1.ur.svg": [
+  "font-stack",
+  "canvas-width:820"
+ ],
+ "static/img/figures/efmp-304/unit-03/fig-U3-2.ur.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/efmp-304/unit-03/fig-U3-3.svg": [
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-304/unit-03/fig-U3-3.ur.svg": [
+  "font-stack",
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-304/unit-03/fig-U3-4.ur.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/efmp-304/unit-03/fig-U3-5.svg": [
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-304/unit-03/fig-U3-5.ur.svg": [
+  "font-stack",
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-304/unit-03/fig-U3-6.svg": [
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-304/unit-03/fig-U3-6.ur.svg": [
+  "font-stack",
+  "canvas-width:880"
+ ],
+ "static/img/figures/efmp-304/unit-03/fig-U3-7.svg": [
+  "canvas-width:820"
+ ],
+ "static/img/figures/efmp-304/unit-03/fig-U3-7.ur.svg": [
+  "font-stack",
+  "canvas-width:820"
+ ],
+ "static/img/figures/efmp-304/unit-03/fig-U3-8.ur.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/efmp-304/unit-04/fig-U4-1.ur.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/efmp-304/unit-04/fig-U4-2.ur.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/efmp-304/unit-04/fig-U4-3.ur.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/efmp-304/unit-04/fig-U4-4.ur.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/efmp-304/unit-04/fig-U4-5.ur.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/efmp-304/unit-04/fig-U4-6.ur.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/efmp-304/unit-04/fig-U4-7.ur.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/efmp-304/unit-04/fig-U4-8.ur.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/efmp-304/unit-05/fig-U5-1.ur.svg": [
+  "font-size:10.5"
+ ],
+ "static/img/figures/efmp-304/unit-05/fig-U5-2.ur.svg": [
+  "font-size:10.5"
+ ],
+ "static/img/figures/efmp-304/unit-05/fig-U5-3.ur.svg": [
+  "font-size:10.5"
+ ],
+ "static/img/figures/efmp-304/unit-05/fig-U5-4.ur.svg": [
+  "font-size:10.5"
+ ],
+ "static/img/figures/efmp-304/unit-05/fig-U5-5.ur.svg": [
+  "font-size:10.5"
+ ],
+ "static/img/figures/efmp-304/unit-05/fig-U5-6.ur.svg": [
+  "font-size:10.5"
+ ],
+ "static/img/figures/efmp-304/unit-05/fig-U5-7.ur.svg": [
+  "font-size:10.5"
+ ],
+ "static/img/figures/efmp-304/unit-05/fig-U5-8.ur.svg": [
+  "font-size:10.5"
+ ],
+ "static/img/figures/efmp-304/unit-06/fig-U6-1.ur.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/efmp-304/unit-06/fig-U6-2.ur.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/efmp-304/unit-06/fig-U6-3.ur.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/efmp-304/unit-06/fig-U6-4.ur.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/efmp-304/unit-06/fig-U6-5.ur.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/efmp-304/unit-06/fig-U6-6.ur.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/efmp-304/unit-06/fig-U6-7.ur.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/efmp-304/unit-06/fig-U6-8.ur.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/efmp-305/unit-01/fig-U1-1.svg": [
+  "empty-class",
+  "font-size:23",
+  "font-stack",
+  "canvas-width:960"
+ ],
+ "static/img/figures/efmp-305/unit-01/fig-U1-1.ur.svg": [
+  "empty-class",
+  "font-size:23",
+  "canvas-width:960"
+ ],
+ "static/img/figures/efmp-305/unit-01/fig-U1-2.svg": [
+  "empty-class",
+  "font-size:23",
+  "font-stack",
+  "canvas-width:1080"
+ ],
+ "static/img/figures/efmp-305/unit-01/fig-U1-2.ur.svg": [
+  "empty-class",
+  "font-size:23",
+  "canvas-width:1080"
+ ],
+ "static/img/figures/efmp-305/unit-01/fig-U1-3.svg": [
+  "empty-class",
+  "font-size:23",
+  "font-stack",
+  "canvas-width:1000"
+ ],
+ "static/img/figures/efmp-305/unit-01/fig-U1-3.ur.svg": [
+  "empty-class",
+  "font-size:23",
+  "canvas-width:1000"
+ ],
+ "static/img/figures/efmp-305/unit-01/fig-U1-4.svg": [
+  "empty-class",
+  "font-size:23",
+  "font-stack",
+  "canvas-width:960"
+ ],
+ "static/img/figures/efmp-305/unit-01/fig-U1-4.ur.svg": [
+  "empty-class",
+  "font-size:23",
+  "canvas-width:960"
+ ],
+ "static/img/figures/efmp-305/unit-02/fig-U2-1.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "font-stack",
+  "canvas-width:1000"
+ ],
+ "static/img/figures/efmp-305/unit-02/fig-U2-1.ur.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "canvas-width:1000"
+ ],
+ "static/img/figures/efmp-305/unit-02/fig-U2-2.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "font-stack",
+  "canvas-width:1200"
+ ],
+ "static/img/figures/efmp-305/unit-02/fig-U2-2.ur.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "canvas-width:1200"
+ ],
+ "static/img/figures/efmp-305/unit-02/fig-U2-3.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "font-stack",
+  "canvas-width:820"
+ ],
+ "static/img/figures/efmp-305/unit-02/fig-U2-3.ur.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "canvas-width:820"
+ ],
+ "static/img/figures/efmp-305/unit-02/fig-U2-4.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "font-stack",
+  "canvas-width:1100"
+ ],
+ "static/img/figures/efmp-305/unit-02/fig-U2-4.ur.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "canvas-width:1100"
+ ],
+ "static/img/figures/efmp-305/unit-03/fig-U3-1.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "font-stack",
+  "canvas-width:1100"
+ ],
+ "static/img/figures/efmp-305/unit-03/fig-U3-1.ur.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "canvas-width:1100"
+ ],
+ "static/img/figures/efmp-305/unit-03/fig-U3-2.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "font-stack",
+  "canvas-width:1200"
+ ],
+ "static/img/figures/efmp-305/unit-03/fig-U3-2.ur.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "canvas-width:1200"
+ ],
+ "static/img/figures/efmp-305/unit-03/fig-U3-3.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "font-stack",
+  "canvas-width:1000"
+ ],
+ "static/img/figures/efmp-305/unit-03/fig-U3-3.ur.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "canvas-width:1000"
+ ],
+ "static/img/figures/efmp-305/unit-03/fig-U3-4.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "font-stack",
+  "canvas-width:1200"
+ ],
+ "static/img/figures/efmp-305/unit-03/fig-U3-4.ur.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "canvas-width:1200"
+ ],
+ "static/img/figures/efmp-305/unit-03/fig-U3-5.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "font-stack",
+  "canvas-width:820"
+ ],
+ "static/img/figures/efmp-305/unit-03/fig-U3-5.ur.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "canvas-width:820"
+ ],
+ "static/img/figures/efmp-305/unit-03/fig-U3-6.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "font-stack",
+  "canvas-width:1200"
+ ],
+ "static/img/figures/efmp-305/unit-03/fig-U3-6.ur.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "canvas-width:1200"
+ ],
+ "static/img/figures/efmp-305/unit-04/fig-U4-1.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "font-stack",
+  "canvas-width:1000"
+ ],
+ "static/img/figures/efmp-305/unit-04/fig-U4-1.ur.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "canvas-width:1000"
+ ],
+ "static/img/figures/efmp-305/unit-04/fig-U4-2.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "font-stack",
+  "canvas-width:1200"
+ ],
+ "static/img/figures/efmp-305/unit-04/fig-U4-2.ur.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "canvas-width:1200"
+ ],
+ "static/img/figures/efmp-305/unit-04/fig-U4-3.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "font-stack",
+  "canvas-width:1200"
+ ],
+ "static/img/figures/efmp-305/unit-04/fig-U4-3.ur.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "canvas-width:1200"
+ ],
+ "static/img/figures/efmp-305/unit-04/fig-U4-4.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "font-stack",
+  "canvas-width:1200"
+ ],
+ "static/img/figures/efmp-305/unit-04/fig-U4-4.ur.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "canvas-width:1200"
+ ],
+ "static/img/figures/efmp-305/unit-05/fig-U5-1.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "font-stack",
+  "canvas-width:1200"
+ ],
+ "static/img/figures/efmp-305/unit-05/fig-U5-1.ur.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "canvas-width:1200"
+ ],
+ "static/img/figures/efmp-305/unit-05/fig-U5-2.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "font-stack",
+  "canvas-width:1200"
+ ],
+ "static/img/figures/efmp-305/unit-05/fig-U5-2.ur.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "canvas-width:1200"
+ ],
+ "static/img/figures/efmp-305/unit-05/fig-U5-3.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "font-stack",
+  "canvas-width:1200"
+ ],
+ "static/img/figures/efmp-305/unit-05/fig-U5-3.ur.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "canvas-width:1200"
+ ],
+ "static/img/figures/efmp-305/unit-05/fig-U5-4.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "font-stack",
+  "canvas-width:1000"
+ ],
+ "static/img/figures/efmp-305/unit-05/fig-U5-4.ur.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "canvas-width:1000"
+ ],
+ "static/img/figures/efmp-305/unit-05/fig-U5-5.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "font-stack",
+  "canvas-width:1100"
+ ],
+ "static/img/figures/efmp-305/unit-05/fig-U5-5.ur.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "canvas-width:1100"
+ ],
+ "static/img/figures/efmp-305/unit-05/fig-U5-6.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "font-stack",
+  "canvas-width:1200"
+ ],
+ "static/img/figures/efmp-305/unit-05/fig-U5-6.ur.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "canvas-width:1200"
+ ],
+ "static/img/figures/efmp-305/unit-06/fig-U6-1.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "font-stack",
+  "canvas-width:1000"
+ ],
+ "static/img/figures/efmp-305/unit-06/fig-U6-1.ur.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "canvas-width:1000"
+ ],
+ "static/img/figures/efmp-305/unit-06/fig-U6-2.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "font-stack"
+ ],
+ "static/img/figures/efmp-305/unit-06/fig-U6-2.ur.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22"
+ ],
+ "static/img/figures/efmp-305/unit-06/fig-U6-3.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "font-stack",
+  "canvas-width:820"
+ ],
+ "static/img/figures/efmp-305/unit-06/fig-U6-3.ur.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "canvas-width:820"
+ ],
+ "static/img/figures/efmp-305/unit-06/fig-U6-4.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "font-stack"
+ ],
+ "static/img/figures/efmp-305/unit-06/fig-U6-4.ur.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22"
+ ],
+ "static/img/figures/efmp-305/unit-06/fig-U6-5.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "font-stack",
+  "canvas-width:1100"
+ ],
+ "static/img/figures/efmp-305/unit-06/fig-U6-5.ur.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "canvas-width:1100"
+ ],
+ "static/img/figures/efmp-305/unit-06/fig-U6-6.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22",
+  "font-stack"
+ ],
+ "static/img/figures/efmp-305/unit-06/fig-U6-6.ur.svg": [
+  "empty-class",
+  "font-size:19",
+  "font-size:22"
+ ],
+ "static/img/figures/efmp-406/unit-03/fig-U3-1.svg": [
+  "canvas-width:800"
+ ],
+ "static/img/figures/efmp-406/unit-03/fig-U3-2.svg": [
+  "canvas-width:820"
+ ],
+ "static/img/figures/efmp-406/unit-03/fig-U3-3.svg": [
+  "canvas-width:800"
+ ],
+ "static/img/figures/efmp-406/unit-03/fig-U3-4.svg": [
+  "canvas-width:820"
+ ],
+ "static/img/figures/efmp-406/unit-06/fig-U6-1.svg": [
+  "empty-class",
+  "font-stack"
+ ],
+ "static/img/figures/efmp-406/unit-06/fig-U6-1.ur.svg": [
+  "empty-class"
+ ],
+ "static/img/figures/efmp-406/unit-06/fig-U6-2.svg": [
+  "empty-class",
+  "font-stack"
+ ],
+ "static/img/figures/efmp-406/unit-06/fig-U6-2.ur.svg": [
+  "empty-class"
+ ],
+ "static/img/figures/efmp-406/unit-06/fig-U6-3.svg": [
+  "empty-class",
+  "font-stack"
+ ],
+ "static/img/figures/efmp-406/unit-06/fig-U6-3.ur.svg": [
+  "empty-class"
+ ],
+ "static/img/figures/efmp-406/unit-06/fig-U6-4.svg": [
+  "empty-class",
+  "font-stack"
+ ],
+ "static/img/figures/efmp-406/unit-06/fig-U6-4.ur.svg": [
+  "empty-class"
+ ],
+ "static/img/figures/geng-301/unit-04/fig-U4-5.svg": [
+  "font-size:10"
+ ],
+ "static/img/figures/geng-301/unit-06/fig-U6-1.svg": [
+  "font-size:10"
+ ],
+ "static/img/figures/gict-300/unit-01/fig-U1-5.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/gict-300/unit-01/fig-U1-5.ur.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/gict-300/unit-03/fig-U3-7.svg": [
+  "stroke-width:4"
+ ],
+ "static/img/figures/gict-300/unit-03/fig-U3-7.ur.svg": [
+  "stroke-width:4"
+ ],
+ "static/img/figures/giss-401/unit-02/fig-U2-1.svg": [
+  "canvas-width:820"
+ ],
+ "static/img/figures/giss-401/unit-02/fig-U2-2.svg": [
+  "canvas-width:860"
+ ],
+ "static/img/figures/giss-401/unit-02/fig-U2-3.svg": [
+  "canvas-width:860"
+ ],
+ "static/img/figures/giss-401/unit-02/fig-U2-4.svg": [
+  "canvas-width:820"
+ ],
+ "static/img/figures/giss-401/unit-02/fig-U2-5.svg": [
+  "canvas-width:840"
+ ],
+ "static/img/figures/giss-401/unit-02/fig-U2-6.svg": [
+  "canvas-width:860"
+ ],
+ "static/img/figures/giss-401/unit-04/fig-U4-1.svg": [
+  "canvas-width:640"
+ ],
+ "static/img/figures/giss-401/unit-04/fig-U4-1.ur.svg": [
+  "canvas-width:640"
+ ],
+ "static/img/figures/giss-401/unit-04/fig-U4-2.svg": [
+  "canvas-width:640"
+ ],
+ "static/img/figures/giss-401/unit-04/fig-U4-2.ur.svg": [
+  "canvas-width:640"
+ ],
+ "static/img/figures/giss-401/unit-04/fig-U4-3.svg": [
+  "canvas-width:640"
+ ],
+ "static/img/figures/giss-401/unit-04/fig-U4-3.ur.svg": [
+  "canvas-width:640"
+ ],
+ "static/img/figures/giss-401/unit-04/fig-U4-4.svg": [
+  "canvas-width:640"
+ ],
+ "static/img/figures/giss-401/unit-04/fig-U4-4.ur.svg": [
+  "canvas-width:640"
+ ],
+ "static/img/figures/giss-401/unit-05/fig-U5-1.svg": [
+  "canvas-width:800"
+ ],
+ "static/img/figures/giss-401/unit-05/fig-U5-3.svg": [
+  "canvas-width:800"
+ ],
+ "static/img/figures/giss-401/unit-06/fig-U6-1.svg": [
+  "empty-class"
+ ],
+ "static/img/figures/giss-401/unit-06/fig-U6-2.svg": [
+  "empty-class"
+ ],
+ "static/img/figures/giss-401/unit-06/fig-U6-3.svg": [
+  "empty-class"
+ ],
+ "static/img/figures/giss-401/unit-06/fig-U6-4.svg": [
+  "empty-class"
+ ],
+ "static/img/figures/giss-401/unit-06/fig-U6-5.svg": [
+  "empty-class"
+ ],
+ "static/img/figures/giss-401/unit-06/fig-U6-6.svg": [
+  "empty-class"
+ ],
+ "static/img/figures/gpks-402/unit-01/fig-U1-1.svg": [
+  "stroke-width:14"
+ ],
+ "static/img/figures/gpks-402/unit-01/fig-U1-1.ur.svg": [
+  "stroke-width:14"
+ ],
+ "static/img/figures/gpks-402/unit-01/fig-U1-2.svg": [
+  "stroke-width:14"
+ ],
+ "static/img/figures/gpks-402/unit-01/fig-U1-2.ur.svg": [
+  "stroke-width:14"
+ ],
+ "static/img/figures/gpks-402/unit-01/fig-U1-3.svg": [
+  "stroke-width:14"
+ ],
+ "static/img/figures/gpks-402/unit-01/fig-U1-3.ur.svg": [
+  "stroke-width:14"
+ ],
+ "static/img/figures/gpks-402/unit-01/fig-U1-4.svg": [
+  "stroke-width:14",
+  "canvas-width:660"
+ ],
+ "static/img/figures/gpks-402/unit-01/fig-U1-4.ur.svg": [
+  "stroke-width:14",
+  "canvas-width:660"
+ ],
+ "static/img/figures/gpks-402/unit-02/fig-U2-4.svg": [
+  "canvas-width:820"
+ ],
+ "static/img/figures/gpks-402/unit-02/fig-U2-4.ur.svg": [
+  "canvas-width:820"
+ ],
+ "static/img/figures/gpks-402/unit-04/fig-U4-6.svg": [
+  "stroke-width:1.2",
+  "stroke-width:1.4",
+  "stroke-width:1.8",
+  "stroke-width:2.6",
+  "stroke-width:3.5",
+  "canvas-width:900"
+ ],
+ "static/img/figures/gpks-402/unit-04/fig-U4-6.ur.svg": [
+  "stroke-width:0.7",
+  "stroke-width:0.8",
+  "stroke-width:4",
+  "stroke-width:5"
+ ],
+ "static/img/figures/gpks-402/unit-06/fig-U6-1.svg": [
+  "font-size:17"
+ ],
+ "static/img/figures/gpks-402/unit-06/fig-U6-3.svg": [
+  "font-size:17",
+  "stroke-width:1.8"
+ ],
+ "static/img/figures/gpks-402/unit-06/fig-U6-5.svg": [
+  "font-size:17"
+ ],
+ "static/img/figures/gpks-402/unit-06/fig-U6-6.svg": [
+  "font-size:17"
+ ],
+ "static/img/figures/gqur-300/unit-02/fig-U2-5.svg": [
+  "stroke-width:1.2"
+ ],
+ "static/img/figures/gqur-300/unit-02/fig-U2-5.ur.svg": [
+  "stroke-width:1.2"
+ ],
+ "static/img/figures/gqur-300/unit-03/fig-U3-4.svg": [
+  "stroke-width:6"
+ ],
+ "static/img/figures/gqur-300/unit-03/fig-U3-4.ur.svg": [
+  "stroke-width:6"
+ ],
+ "static/img/figures/gqur-300/unit-04/fig-U4-3.svg": [
+  "stroke-width:6"
+ ],
+ "static/img/figures/gqur-300/unit-04/fig-U4-3.ur.svg": [
+  "stroke-width:6"
+ ],
+ "static/img/figures/gqur-301/unit-01/fig-U1-3.svg": [
+  "font-size:10",
+  "stroke-width:0.8"
+ ],
+ "static/img/figures/gqur-301/unit-02/fig-U2-2.svg": [
+  "stroke-width:0.8"
+ ],
+ "static/img/figures/gqur-301/unit-02/fig-U2-3.svg": [
+  "font-size:9",
+  "font-size:10",
+  "stroke-width:0.5",
+  "stroke-width:0.8"
+ ],
+ "static/img/figures/gqur-301/unit-07/fig-U7-1.ur.svg": [
+  "font-size:17"
+ ],
+ "static/img/figures/gqur-301/unit-07/fig-U7-2.ur.svg": [
+  "font-size:17"
+ ],
+ "static/img/figures/gqur-301/unit-07/fig-U7-3.ur.svg": [
+  "font-size:17"
+ ],
+ "static/img/figures/gqur-301/unit-07/fig-U7-4.ur.svg": [
+  "font-size:17"
+ ],
+ "static/img/figures/gqur-301/unit-08/fig-U8-1.ur.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/gqur-301/unit-08/fig-U8-2.ur.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/gqur-301/unit-08/fig-U8-3.ur.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/gqur-301/unit-08/fig-U8-4.ur.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/gqur-301/unit-08/fig-U8-5.ur.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/gqur-301/unit-08/fig-U8-6.ur.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/gqur-301/unit-09/fig-U9-1.svg": [
+  "empty-class",
+  "font-stack",
+  "canvas-width:640"
+ ],
+ "static/img/figures/gqur-301/unit-09/fig-U9-2.svg": [
+  "empty-class",
+  "font-stack",
+  "canvas-width:640"
+ ],
+ "static/img/figures/gqur-301/unit-09/fig-U9-3.svg": [
+  "empty-class",
+  "font-stack",
+  "canvas-width:640"
+ ],
+ "static/img/figures/gqur-301/unit-09/fig-U9-4.svg": [
+  "empty-class",
+  "font-stack",
+  "canvas-width:640"
+ ],
+ "static/img/figures/gqur-301/unit-10/fig-U10-1.svg": [
+  "font-size:19",
+  "font-size:23",
+  "font-size:24",
+  "canvas-width:960"
+ ],
+ "static/img/figures/gqur-301/unit-10/fig-U10-1.ur.svg": [
+  "font-size:17",
+  "font-size:21",
+  "font-size:22",
+  "canvas-width:960"
+ ],
+ "static/img/figures/gqur-301/unit-10/fig-U10-2.svg": [
+  "canvas-width:960"
+ ],
+ "static/img/figures/gqur-301/unit-10/fig-U10-2.ur.svg": [
+  "font-size:17",
+  "canvas-width:960"
+ ],
+ "static/img/figures/gqur-301/unit-10/fig-U10-3.svg": [
+  "font-size:17",
+  "font-size:22",
+  "canvas-width:960"
+ ],
+ "static/img/figures/gqur-301/unit-10/fig-U10-3.ur.svg": [
+  "font-size:21",
+  "canvas-width:960"
+ ],
+ "static/img/figures/gqur-301/unit-10/fig-U10-4.svg": [
+  "font-size:19",
+  "font-size:21",
+  "font-size:23",
+  "canvas-width:960"
+ ],
+ "static/img/figures/gqur-301/unit-10/fig-U10-4.ur.svg": [
+  "font-size:19",
+  "font-size:22",
+  "canvas-width:960"
+ ],
+ "static/img/figures/gqur-301/unit-11/fig-U11-1.svg": [
+  "empty-class"
+ ],
+ "static/img/figures/gqur-301/unit-11/fig-U11-1.ur.svg": [
+  "empty-class"
+ ],
+ "static/img/figures/gqur-301/unit-11/fig-U11-2.svg": [
+  "empty-class"
+ ],
+ "static/img/figures/gqur-301/unit-11/fig-U11-2.ur.svg": [
+  "empty-class"
+ ],
+ "static/img/figures/gqur-301/unit-11/fig-U11-3.svg": [
+  "empty-class"
+ ],
+ "static/img/figures/gqur-301/unit-11/fig-U11-3.ur.svg": [
+  "empty-class"
+ ],
+ "static/img/figures/gqur-301/unit-11/fig-U11-4.ur.svg": [
+  "empty-class"
+ ],
+ "static/img/figures/gqur-301/unit-13/fig-U13-4.svg": [
+  "empty-class"
+ ],
+ "static/img/figures/gqur-301/unit-13/fig-U13-4.ur.svg": [
+  "empty-class"
+ ],
+ "static/img/figures/gqur-301/unit-14/fig-U14-1.svg": [
+  "font-size:22"
+ ],
+ "static/img/figures/gqur-301/unit-14/fig-U14-1.ur.svg": [
+  "font-size:22"
+ ],
+ "static/img/figures/gqur-301/unit-14/fig-U14-4.svg": [
+  "stroke-width:4"
+ ],
+ "static/img/figures/gqur-301/unit-14/fig-U14-4.ur.svg": [
+  "stroke-width:4"
+ ],
+ "static/img/figures/gqur-301/unit-15/fig-U15-1.svg": [
+  "font-size:7",
+  "font-size:9",
+  "font-size:10",
+  "canvas-width:600"
+ ],
+ "static/img/figures/gqur-301/unit-15/fig-U15-1.ur.svg": [
+  "font-size:7",
+  "font-size:9",
+  "font-size:10",
+  "canvas-width:600"
+ ],
+ "static/img/figures/gqur-301/unit-16/fig-U16-1.svg": [
+  "empty-class",
+  "canvas-width:640"
+ ],
+ "static/img/figures/gqur-301/unit-16/fig-U16-1.ur.svg": [
+  "empty-class",
+  "font-size:17",
+  "canvas-width:640"
+ ],
+ "static/img/figures/gqur-301/unit-16/fig-U16-2.svg": [
+  "empty-class",
+  "canvas-width:640"
+ ],
+ "static/img/figures/gqur-301/unit-16/fig-U16-2.ur.svg": [
+  "empty-class",
+  "font-size:17",
+  "canvas-width:640"
+ ],
+ "static/img/figures/gqur-301/unit-16/fig-U16-3.svg": [
+  "empty-class",
+  "canvas-width:640"
+ ],
+ "static/img/figures/gqur-301/unit-16/fig-U16-3.ur.svg": [
+  "empty-class",
+  "font-size:17",
+  "canvas-width:640"
+ ],
+ "static/img/figures/gqur-301/unit-16/fig-U16-4.svg": [
+  "empty-class",
+  "canvas-width:640"
+ ],
+ "static/img/figures/gqur-301/unit-16/fig-U16-4.ur.svg": [
+  "empty-class",
+  "font-size:17",
+  "canvas-width:640"
+ ],
+ "static/img/figures/gqur-301/unit-16/fig-U16-5.svg": [
+  "empty-class",
+  "canvas-width:640"
+ ],
+ "static/img/figures/gqur-301/unit-16/fig-U16-5.ur.svg": [
+  "empty-class",
+  "font-size:17",
+  "canvas-width:640"
+ ],
+ "static/img/figures/gqur-301/unit-16/fig-U16-6.svg": [
+  "empty-class",
+  "canvas-width:640"
+ ],
+ "static/img/figures/gqur-301/unit-16/fig-U16-6.ur.svg": [
+  "empty-class",
+  "font-size:17",
+  "canvas-width:640"
+ ],
+ "static/img/figures/gsos-301/unit-03/fig-U3-1.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/gsos-301/unit-03/fig-U3-2.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/gsos-301/unit-03/fig-U3-3.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/gsos-301/unit-03/fig-U3-4.svg": [
+  "font-stack"
+ ],
+ "static/img/figures/gsos-301/unit-04/fig-U4-3.svg": [
+  "canvas-width:860"
+ ],
+ "static/img/figures/gsos-301/unit-05/fig-U5-1.svg": [
+  "font-size:17",
+  "canvas-width:860"
+ ],
+ "static/img/figures/gsos-301/unit-05/fig-U5-2.svg": [
+  "font-size:17",
+  "canvas-width:860"
+ ],
+ "static/img/figures/gsos-301/unit-05/fig-U5-3.svg": [
+  "font-size:17",
+  "canvas-width:860"
+ ],
+ "static/img/figures/gsos-301/unit-05/fig-U5-4.svg": [
+  "font-size:17",
+  "canvas-width:860"
+ ],
+ "static/img/figures/licence/a-methods-and-foundations/fig-A03-1.svg": [
+  "canvas-width:960"
+ ],
+ "static/img/figures/licence/a-methods-and-foundations/fig-A03-1.ur.svg": [
+  "canvas-width:960"
+ ],
+ "static/img/figures/licence/a-methods-and-foundations/fig-A08-1.svg": [
+  "canvas-width:1000"
+ ],
+ "static/img/figures/licence/a-methods-and-foundations/fig-A08-1.ur.svg": [
+  "canvas-width:1000"
+ ],
+ "static/img/figures/licence/a-methods-and-foundations/fig-A11-1.svg": [
+  "canvas-width:740"
+ ],
+ "static/img/figures/licence/a-methods-and-foundations/fig-A11-1.ur.svg": [
+  "canvas-width:740"
+ ]
+}

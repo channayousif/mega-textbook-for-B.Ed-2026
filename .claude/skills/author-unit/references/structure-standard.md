@@ -32,6 +32,9 @@ docs/semester-N/<course>/course-review.mdx   # OPTIONAL, course-level (not autho
 - `topic-NN.mdx` - zero-padded, contiguous from `01`. Front matter: unit schema **+**
   `topic_no` (== filename ordinal) **+** `topic_label` (the `### Topic list` label). No
   `sidebar_position` on any file except `course-review.mdx` (`900`).
+- Topic numbering: `topic_label` == `"<unit_no>.<topic_no>"`; `title` == `"Topic <label> - <Title>"`
+  (Urdu `"موضوع <label> - <Title>"`); an H1, if present, == `title`. `validate:content` fails
+  anything else.
 - Opt-in: a unit is on this standard only when **both** `topic-*.mdx` files exist **and** the
   content-spec `## Unit N` subsection has a `### Topic list` table. Exactly one → loud
   depth-gate failure.

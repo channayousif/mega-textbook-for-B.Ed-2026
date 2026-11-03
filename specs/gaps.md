@@ -3191,3 +3191,20 @@ IDs used: `D-2026-0075`; `G-2026-155`, `G-2026-156`, `G-2026-157`, `G-2026-158`,
   open-access floor.
 - **Blocks:** the `## Reading list` Author-selected table and the `open_access_floor` front matter
   as a binding floor.
+
+## G-2026-210 - Arts, Craft and Calligraphy: guide says EFID-604 Semester 3, scheme says EFPG-607 Semester VII
+- **Status:** resolved (owner decision, 2026-11-03: follow the final-authority scheme)
+- **Raised by:** board-direct session, 2026-11-03, while cutting the Semester 3 course-guide PDFs
+- **Detail:**
+  - `Scheme-and-Course-guides/3rd 2026.docx` pages 21-22 (PDF export) carry a guide headed
+    "B. Ed (Elementary 4 Year)", "Course.EFID-604", "Semester- 03", "Teaching of Arts, Craft and
+    Calligraphy", 3 credit hours.
+  - The final-authority scheme `B.Ed 4 Year 2026 revised after board.docx` lists "Teaching of Arts,
+    Craft and Calligraphy" as **EFPG-607**, 3 (3-0), Major: Pedagogy Course-VI, under SEMESTER VII
+    (`extracted-text/B.Ed 4 Year 2026 revised after board.txt:597-603`), and uses **EFID-604** for
+    "Science Technology and Society" (`:679-683`).
+- **Ruling:** the catalog follows the scheme. EFPG-607 is added to Semester 7 of
+  `catalog/courses.json`, and its course guide is the 3rd-semester file's pages 21-22
+  (`static/guides/semester-7/efpg-607.pdf`). The guide's own code and semester are not used.
+- **Still open:** confirmation from the university of which code and semester are current; the
+  course still needs G0 intake (content-spec) before any unit is authored.

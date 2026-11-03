@@ -24,6 +24,7 @@ export const CONTENT_GATES = [
   'check:pipeline-gate',
   'check:depth-gate',
   'check:figures',
+  'check:svg-style',
   'check:no-em-dash',
   'check:no-answer-keys',
   'check:concept-graph',

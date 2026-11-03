@@ -103,7 +103,9 @@ Work one file at a time, in reading order: `index.mdx`, `topic-01 … topic-NN`,
 
 For each file, the invariant is: **an Urdu reader and an English reader reach the same place.**
 
-- **Front matter.** Translate `title`, `description`, `blooms_summary`. Keep `course_code`,
+- **Front matter.** Translate `title`, `description`, `blooms_summary`. A topic `title` keeps its
+  numbered lead as `موضوع <topic_label> - <translated title>` (spaced hyphen, never a colon), and an
+  H1, if present, repeats the title exactly; `validate:content` checks both. Keep `course_code`,
   `unit_no`, `topic_no`, `topic_label`, `clo_refs`, `est_reading_minutes` and
   `translation_status` byte-identical to the English. Reading minutes are not re-estimated:
   they describe the same content.

@@ -18,7 +18,7 @@
 <!-- Row 1: Preparatory -->
 <line x1="20" y1="165" x2="760" y2="165" stroke="var(--ink)" stroke-width="1"/>
 <text class="h" x="745" y="112" text-anchor="end" fill="var(--a2)">تیاری کا مرحلہ</text>
-<text class="m" x="745" y="132" text-anchor="end" fill="var(--muted)">نقالی</text>
+<text x="745" y="132" text-anchor="end" fill="var(--muted)">نقالی</text>
 <text x="565" y="122" text-anchor="middle">پیدائش سے</text>
 <text x="565" y="140" text-anchor="middle">تقریباً 2 سال تک</text>
 <text x="495" y="112" text-anchor="end">معنی سمجھے بغیر دوسروں کے اشاروں اور</text>
@@ -31,7 +31,7 @@
 <!-- Row 2: Play -->
 <line x1="20" y1="250" x2="760" y2="250" stroke="var(--ink)" stroke-width="1"/>
 <text class="h" x="745" y="200" text-anchor="end" fill="var(--a3)">کھیل کا مرحلہ</text>
-<text class="m" x="745" y="220" text-anchor="end" fill="var(--muted)">کردار اپنانا</text>
+<text x="745" y="220" text-anchor="end" fill="var(--muted)">کردار اپنانا</text>
 <text x="565" y="208" text-anchor="middle">ابتدائی بچپن</text>
 <text x="565" y="226" text-anchor="middle">(2 سے 6 سال)</text>
 <text x="495" y="198" text-anchor="end">ایک وقت میں کسی ایک اہم فرد کا کردار</text>
@@ -44,7 +44,7 @@
 <!-- Row 3: Game -->
 <line x1="20" y1="335" x2="760" y2="335" stroke="var(--ink)" stroke-width="1"/>
 <text class="h" x="745" y="285" text-anchor="end" fill="var(--a4)">گیم کا مرحلہ</text>
-<text class="m" x="745" y="305" text-anchor="end" fill="var(--muted)">متعدد کردار</text>
+<text x="745" y="305" text-anchor="end" fill="var(--muted)">متعدد کردار</text>
 <text x="565" y="293" text-anchor="middle">اسکول کی عمر</text>
 <text x="565" y="311" text-anchor="middle">(7 سال اور زائد)</text>
 <text x="495" y="283" text-anchor="end">بیک وقت متعدد کردار اپنانا؛</text>
@@ -56,7 +56,7 @@
 
 <!-- Row 4: Adult -->
 <text class="h" x="745" y="370" text-anchor="end" fill="var(--a1)">بالغ کا مرحلہ</text>
-<text class="m" x="745" y="390" text-anchor="end" fill="var(--muted)">عمومی دوسرا</text>
+<text x="745" y="390" text-anchor="end" fill="var(--muted)">عمومی دوسرا</text>
 <text x="565" y="378" text-anchor="middle">مراہقت اور</text>
 <text x="565" y="396" text-anchor="middle">بلوغت</text>
 <text x="495" y="368" text-anchor="end">"عمومی دوسرے" کو اندرونی بنانا؛</text>

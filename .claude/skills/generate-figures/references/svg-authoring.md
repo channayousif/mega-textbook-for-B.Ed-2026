@@ -107,7 +107,20 @@ Label text on a tinted panel is always `--ink`, never the accent - `--ink` is wh
 ### Rules
 
 - **`viewBox` only** - no `width`/`height` attributes on `<svg>`. `.figure--diagram img` caps the
-  on-page width at 640 px; the SVG scales.
+  on-page width at 760 px (`src/css/custom.css`); the SVG scales. Draw on a **780-wide canvas** so
+  it renders at about 1:1. A 1200-wide canvas renders at 0.63 scale, so 13 px labels read as 8 px.
+- **Drawing-style gate** (`npm run check:svg-style`, rules in `scripts/lib/svg-style.mjs`):
+  - every class you use must be defined in the file's own `<style>`; an undefined class renders
+    in default black, invisible on the dark plate. Use the boilerplate classes above; add a new
+    one only when they cannot express the need. No `class=""`.
+  - font sizes from the scale 11 (wordmark only), 12, 13, 14, 15, 16, 18, 20;
+    stroke widths from 1, 1.5, 2, 2.5, 3.
+  - root `font-family` exactly as the boilerplate (English) or
+    `'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', system-ui, sans-serif` (`.ur.svg`).
+  - canvas width 780 (or 760).
+  - `<marker>` shapes stay inside the marker's own `viewBox` (an RTL mirror must not move them).
+  Older figures are grandfathered in `specs/content/svg-style-baseline.json`; a file you touch
+  should leave the baseline, never add to it.
 - **`role="img"` + `<title>` + `<desc>`** so the file is described even if opened standalone. The
   page-level description still comes from `<Figure alt>`.
 - **System-font stack** - never `@import` or `<link>` a web font, never reference a font file. The
