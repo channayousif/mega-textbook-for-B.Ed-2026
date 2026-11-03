@@ -8,4 +8,4 @@
 | U2-05 | topic-02.mdx | Reading strategies | swan2016 |
 | U2-04 | topic-02.mdx | Active listening | kintsch1998 |
 | U2-06 | topic-02.mdx | Active listening | johns2011 |
-| U2-07 | topic-03.mdx | Purpose and audience in Pakistani English media | kachru2006 |
+| U2-07 | topic-03.mdx | Analysing a complete text | kachru2006 |
