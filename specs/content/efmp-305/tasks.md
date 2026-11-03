@@ -48,7 +48,7 @@ per-topic layout: `index.mdx` + `topic-01…02.mdx` (nine-part cycles) + `unit-a
 | Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied (2026-10-19) for agent-g3-efmp-305-u2-run5873b2cc: Florian (2014) Further reading corrected to the verified florian2014 record (29(3), 286-294, DOI); Hornby DOI given link text (EN and UR); Hornby (2014) recorded in sources/unit-02.md as further reading only; the two repo-wide gate findings (EFMP-305 Unit 6 depth, EFMP-304 alt text) are outside this unit and no longer reproduce; fresh independent G3 needed |
 | Unit 2 | G3 en-review | ▢ | | advisory: pass (cycle 2); report specs/content/efmp-305/reviews/unit-02/G3/agent-g3-efmp-305-u2-runfd523bce.json; cycle 1 citation repair verified landed in topic-02.mdx; check:depth-gate and check:figures clean at exit 0; all 7 criteria pass; independent blind solve 10/10; row stays open pending qualification (ADR-0019) |
 | Unit 2 | G4 ur-translation | ▣ | | mirror complete (2026-10-19): all 5 files translated and verified against EN 9e6da648; 4 .ur.svg/.ur.dark.svg figure variants synced; structural parity clean under temporary reviewed flip (reverted); all 5 key_terms conform to terminology.csv; handoff: reviews/unit-02/G4/translation-handoff.md; translation_status stays draft pending fresh independent G5 |
-| Unit 2 | G5 ur-review | ▢ | | |
+| Unit 2 | G5 ur-review | ▢ | agent:opencode | advisory: escalate; report specs/content/efmp-305/reviews/unit-02/G5/crew-efmp-305-u02-g5-rabe274b8.json; page-level render inspection unavailable (no build/dev server/Playwright), accessibility+rtl unverified; terminology bank departures (Assessment جانچ vs تشخیص, Slow Learner سست طالب علم vs کمزور متعلم, Learning Outcome تعلیمی نتائج vs نتیجہ ہائے تعلم, Labelling unbanked لیبل/لیبلنگ/ٹھپا) need owner ruling; all six deterministic gates pass; no certification |
 | Unit 2 | G6 assets | ▢ | | 4 schematic SVGs prompt-only |
 | Unit 2 | G7 publish | ▢ | | |
 
@@ -169,3 +169,10 @@ the PHR and Paperclip handoff. No G3/G5 certification or publication is claimed.
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-03/G3/20261102T142352Z-g3-desk-96017bba.json |
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-05/G3/20261102T142352Z-g3-desk-bb2bba40.json |
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-06/G3/20261102T142352Z-g3-desk-a9fe5033.json |
+| Unit 2 | G3 en-review | ✅ | CMY | review:specs/content/efmp-305/reviews/unit-02/G3/20261102T140729Z-g3-desk-5da9d105.json |
+| Unit 4 | G3 en-review | ✅ | CMY | review:specs/content/efmp-305/reviews/unit-04/G3/20261102T140729Z-g3-desk-75d4e208.json |
+| Unit 4 | G5 ur-review | ▢ | agent:codex-g5-reviewer | advisory: escalate; report specs/content/efmp-305/reviews/unit-04/G5/01a19d42-cab2-79c3-9b37-ac2bf916690b.json; decoration exclusion reversed, place-value mistranslation and corrupt RRQ 10 guidance; fresh signed G3 dependency, translator provenance and normal/narrow/A4 renders unavailable; no certification |
+| Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-01/G3/20261102T211054Z-g3-desk-75c78135.json |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-03/G3/20261102T211054Z-g3-desk-68a046eb.json |
+| Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-05/G3/20261102T211054Z-g3-desk-161c2504.json |
+| Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-06/G3/20261102T211054Z-g3-desk-5e601a1c.json |

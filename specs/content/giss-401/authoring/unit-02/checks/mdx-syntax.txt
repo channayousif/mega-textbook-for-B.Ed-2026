@@ -1,0 +1,7 @@
+Direct @mdx-js/mdx compile, with YAML front matter stripped.
+index.mdx: PASS
+topic-01.mdx: PASS
+topic-02.mdx: PASS
+topic-03.mdx: PASS
+unit-assessment.mdx: PASS
+No site build, dev server or Playwright run.

@@ -88,3 +88,7 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/gsos-301/reviews/unit-03/G3/20261102T142352Z-g3-desk-2f2bdb04.json |
 | Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/gsos-301/reviews/unit-04/G3/20261102T142352Z-g3-desk-e047a191.json |
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/gsos-301/reviews/unit-05/G3/20261102T142352Z-g3-desk-8053c292.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gsos-301/reviews/unit-02/G3/20261102T211054Z-g3-desk-85a7509f.json |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/gsos-301/reviews/unit-03/G3/20261102T211054Z-g3-desk-e8ae8fe7.json |
+| Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/gsos-301/reviews/unit-04/G3/20261102T211054Z-g3-desk-66606b66.json |
+| Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/gsos-301/reviews/unit-05/G3/20261102T211054Z-g3-desk-e8c12563.json |

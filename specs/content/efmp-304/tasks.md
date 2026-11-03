@@ -121,3 +121,9 @@ recorded resolved and F3 (no Urdu `.ur.svg` figure variants anywhere in EFMP-304
 | Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-304/reviews/unit-01/G3/20261102T142352Z-g3-desk-480084d1.json |
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-304/reviews/unit-02/G3/20261102T142352Z-g3-desk-e26bcfbf.json |
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-304/reviews/unit-03/G3/20261102T142352Z-g3-desk-08af083d.json |
+| Unit 4 | G3 en-review | ✅ | CMY | review:specs/content/efmp-304/reviews/unit-04/G3/20261102T140729Z-g3-desk-797b9070.json |
+| Unit 5 | G3 en-review | ✅ | CMY | review:specs/content/efmp-304/reviews/unit-05/G3/20261102T140729Z-g3-desk-5e8a8ded.json |
+| Unit 6 | G3 en-review | ✅ | CMY | review:specs/content/efmp-304/reviews/unit-06/G3/20261102T140729Z-g3-desk-9ef61257.json |
+| Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-304/reviews/unit-01/G3/20261102T211054Z-g3-desk-a0711672.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-304/reviews/unit-02/G3/20261102T211054Z-g3-desk-3c60113a.json |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-304/reviews/unit-03/G3/20261102T211054Z-g3-desk-98445761.json |

@@ -1,0 +1,8 @@
+✓ static/img/figures/giss-401/unit-04/fig-U4-1.dark.svg (640x498, widest text ends at 620.2, wordmark at 527.7)
+✓ static/img/figures/giss-401/unit-04/fig-U4-1.svg (640x498, widest text ends at 620.2, wordmark at 527.7)
+✓ static/img/figures/giss-401/unit-04/fig-U4-2.dark.svg (640x502, widest text ends at 620.2, wordmark at 527.7)
+✓ static/img/figures/giss-401/unit-04/fig-U4-2.svg (640x502, widest text ends at 620.2, wordmark at 527.7)
+✓ static/img/figures/giss-401/unit-04/fig-U4-3.dark.svg (640x534, widest text ends at 620.2, wordmark at 527.7)
+✓ static/img/figures/giss-401/unit-04/fig-U4-3.svg (640x534, widest text ends at 620.2, wordmark at 527.7)
+✓ static/img/figures/giss-401/unit-04/fig-U4-4.dark.svg (640x626, widest text ends at 620.2, wordmark at 527.7)
+✓ static/img/figures/giss-401/unit-04/fig-U4-4.svg (640x626, widest text ends at 620.2, wordmark at 527.7)

@@ -32,7 +32,7 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-03/G2/20261102T072759364Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | advisory run 001 (disposition: pass, advisory finding F1) at specs/content/gqur-301/reviews/unit-03/G3/0537b555-5784-429b-aaaa-e51e0af1897b.json; agent reviews advisory under ADR-0019; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 3 | G4 ur-translation | ▢ | | Draft mirror and four Urdu SVG pairs prepared from 47e14253; translation_status remains draft. No G4 completion claim or new row under translate-unit Step 7. Handoff: translations/unit-03/handoff.md |
-| Unit 3 | G5 ur-review | ▢ | | |
+| Unit 3 | G5 ur-review | ▢ | agent:g5-reviewer | advisory: escalate (Gemini 3.8 Flash (High), unsigned); report specs/content/gqur-301/reviews/unit-03/G5/aa728971-e15b-4b7e-9402-70a2f68221bd.json; content complete and faithful, 10/10 MCQs independently confirmed, 7 bank terms and candidate terms consistent; real browser desktop/narrow/A4 renders unavailable under crew brief constraints, G3 dependency is unsigned human desk record, candidate terminology harmonisation needed for Statistic (شماریہ vs شماریاتی عدد); G5 stays open (ADR-0019) |
 | Unit 3 | G6 assets | ▢ | | |
 | Unit 3 | G7 publish | ▢ | | |
 | Unit 4 | G1 unit-spec | ▢ | | guide Chapter 4; intake re-evaluation advised (D-2026-0070) |
@@ -161,3 +161,17 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 13 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-13/G3/20261102T142352Z-g3-desk-13640309.json |
 | Unit 14 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-14/G3/20261102T142352Z-g3-desk-a2f1efa0.json |
 | Unit 15 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-15/G3/20261102T142352Z-g3-desk-3c07394a.json |
+| Unit 1 | G3 en-review | ✅ | CMY | review:specs/content/gqur-301/reviews/unit-01/G3/20261102T140729Z-g3-desk-5ac63c06.json |
+| Unit 3 | G3 en-review | ✅ | CMY | review:specs/content/gqur-301/reviews/unit-03/G3/20261102T140729Z-g3-desk-356db976.json |
+| Unit 4 | G3 en-review | ✅ | CMY | review:specs/content/gqur-301/reviews/unit-04/G3/20261102T140729Z-g3-desk-01cb7d7c.json |
+| Unit 9 | G3 en-review | ✅ | CMY | review:specs/content/gqur-301/reviews/unit-09/G3/20261102T140729Z-g3-desk-342e3991.json |
+| Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-05/G3/20261102T211054Z-g3-desk-60dc4d7c.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-02/G3/20261102T211054Z-g3-desk-3c59593c.json |
+| Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-06/G3/20261102T211054Z-g3-desk-70ddf80d.json |
+| Unit 8 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-08/G3/20261102T211054Z-g3-desk-3d8b226c.json |
+| Unit 10 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-10/G3/20261102T211054Z-g3-desk-8149f093.json |
+| Unit 11 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-11/G3/20261102T211054Z-g3-desk-3f0cadea.json |
+| Unit 12 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-12/G3/20261102T211054Z-g3-desk-8b7b7b5e.json |
+| Unit 13 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-13/G3/20261102T211054Z-g3-desk-01b39467.json |
+| Unit 14 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-14/G3/20261102T211054Z-g3-desk-4de3fcfe.json |
+| Unit 15 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-15/G3/20261102T211054Z-g3-desk-fa040404.json |

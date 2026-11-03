@@ -1,0 +1,10 @@
+validate-content exit=0
+check-depth-gate exit=0
+check-figures exit=0
+check-map-sources exit=0
+check-no-em-dash exit=0
+check-no-answer-keys exit=0
+check-docs-sync exit=0
+check-content exit=0
+render-review exit=1
+measure-figure-text not-run (Chromium forbidden by brief)

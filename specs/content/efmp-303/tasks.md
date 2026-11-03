@@ -109,3 +109,14 @@ unit-spec at intake (board-run G0/G1 intake pending).
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-03/G3/20261102T142352Z-g3-desk-4b88ab15.json |
 | Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-04/G3/20261102T142352Z-g3-desk-3462000f.json |
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-05/G3/20261102T142352Z-g3-desk-8a0f7f09.json |
+| Unit 6 | G3 en-review | ✅ | CMY | review:specs/content/efmp-303/reviews/unit-06/G3/20261102T140729Z-g3-desk-218f29ab.json |
+
+## Unit 6 advisory Urdu review (2026-11-02)
+
+| Unit | Stage | Status | Reviewer | Notes |
+|---|---|---|---|---|
+| Unit 6 | G5 ur-review | ▣ | agent:g5-reviewer | Advisory escalation only: specs/content/efmp-303/reviews/unit-06/G5/claude-session-a2c8ddac-e057-4a8a-967b-505507f1979e.json. Content complete and faithful, MCQ key independently confirmed. The review has three blockers: no rendered Urdu inspection, an unsigned G3 dependency, and a register repair list. Terminology drift also needs an owner ruling. Unsigned; G5 remains open. |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-02/G3/20261102T211054Z-g3-desk-d1467a99.json |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-03/G3/20261102T211054Z-g3-desk-9d18c8b6.json |
+| Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-04/G3/20261102T211054Z-g3-desk-9e5135f9.json |
+| Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-05/G3/20261102T211054Z-g3-desk-66c20ca8.json |
