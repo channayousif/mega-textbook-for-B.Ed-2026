@@ -56,27 +56,28 @@ From `specs/content/geng-300/reviews/unit-03/G3/20261102T213029Z-g3-desk-24e957f
 - [uncertain] Conflicting duplicate D-2026-0019 entries at specs/decisions/log.md:744 and :787; intake Partition still cites placeholder owner confirmation. Owner clarification required.
 - [uncertain] Fresh narrow-view and A4 print inspection unavailable within brief prohibition on builds and dev servers; full semantic and independent assessment review not performed.
 
+
 ## Response snapshot
 
-Verified the three desk-report findings are provenance, authority and render handoff items with no author-repairable content defect, and appended an unticked Unit 3 G3 advisory repair row naming the latest desk report (20261102T213029Z-g3-desk-24e957fb.json).
+Verified the three latest Unit 3 G3 desk findings are provenance/authority/render handoff items with no author-repairable content defect, and appended the required unticked advisory repair row naming report 20261102T213029Z-g3-desk-24e957fb.json.
 
 ## Outcome
 
 - Impact: repair_en for GENG-300 Unit 3 by opencode (attempt 1).
-- Tests: npm run check:content passed (13/13) after regenerating static/content-status.json.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 2 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Verified the three desk-report findings are provenance, authority and render handoff items with no author-repairable content defect, and appended an unticked Unit 3 G3 advisory repair row naming the latest desk report (20261102T213029Z-g3-desk-24e957fb.json).
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Verified the three latest Unit 3 G3 desk findings are provenance/authority/render handoff items with no author-repairable content defect, and appended the required unticked advisory repair row naming report 20261102T213029Z-g3-desk-24e957fb.json.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All three findings are owner/host handoff: author-run identity and parent frozen-bundle handoff unavailable; the D-2026-0019 three-vs-four-unit conflict and the D-2026-00XX intake placeholder need owner clarification; fresh narrow-view/A4 render inspection needs a permitted render host.
-  - No content edit was made because the desk report contains no author-repairable content finding; check:content passes 13/13.
-  - Fresh independent G3 needs owner authorisation under ADR-0019 (cycle limit).
+  - All three desk-report findings are owner/host handoff, not author-repairable: author-run identity and parent frozen-bundle handoff unavailable; the D-2026-0019 three-vs-four-unit conflict and the D-2026-00XX intake placeholder need owner clarification; fresh narrow-view/A4 render inspection needs a permitted render host.
+  - No content edit was made because the desk report contains no author-repairable content finding; check:content passes 13/13 and the figure geometry measure exits 0 on all Unit 3 SVGs.
+  - Fresh independent G3 needs owner authorisation under ADR-0019 (cycle limit); G3 remains unticked.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
