@@ -21,21 +21,21 @@
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-01/G2/20261102T072758045Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-01/G2/20261103T112243670Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | advisory: pass; report specs/content/gpks-402/reviews/unit-01/G3/b35aebba-1391-47ae-88ff-481fd326cd8b.json; all 7 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; all 8 SVG variants pass measure-figure-text; row stays open pending qualification (ADR-0019) |
 | Unit 1 | G4 ur-translation | ▢ | | Draft mirror authored 2026-10-28 by codex; four pages and four Urdu SVGs with dark twins; see reviews/unit-01/G4/translation-handoff.md. Status retained per translate-unit Step 7; no G5 certification. |
 | Unit 1 | G5 ur-review | ▢ | | advisory: escalate (agent:claude, unsigned); report specs/content/gpks-402/reviews/unit-01/G5/g5-claude-20261102T173409Z.json; 4 blocking translator repairs (9 Glossary tags render English, "self-governing" vs "خود مختار", 3 grammar errors, "draws on Islam" overstated); owner rulings needed on "civics" = شہریت and the frozen oblique forms پاکستان کے مطالعہ / پاکستان کے نظریے; rendered RTL/print inspection not possible in crew; row stays open (ADR-0019) |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-02/G2/20261102T072758169Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-02/G2/20261103T112243823Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | awaiting an independent reviewer |
 | Unit 2 | G4 ur-translation | ▢ | | separate job |
 | Unit 2 | G5 ur-review | ▢ | | |
 | Unit 2 | G6 assets | ✅ | auto:gates | 4 schematic SVGs placed with dark variants |
 | Unit 2 | G4 ur-translation | ✅ | auto:gates | full UR mirror (5 files) translated 2026-10-28 by the crew translate job from English at `f3d7619a`; 4 `.ur.svg` label variants (`fig-U2-1…4`, mirrored RTL layout) authored, measured clean and wired, `.ur.dark.svg` derived; `key_terms` bound to terminology.csv; heading parity exact; parity/figures/key_terms clean under a temporary `reviewed` flip (reverted). `translation_status` stays draft pending an independent G5 |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-04/G2/20261102T072758427Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-04/G2/20261103T112244243Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/gpks-402/reviews/unit-04/G3/8e3bf462-d4af-437f-aa63-372eb41b9e7c.json; all 7 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; all 14 SVG variants pass geometry; G3 remains open and unsigned |
 | Unit 4 | G4 ur-translation | ▢ | | Complete five-page draft mirror and seven Urdu SVG pairs prepared from 64ced416; translation_status remains draft. Status retained per translate-unit Step 7; independent G5 and rendered inspection pending. Handoff: specs/content/gpks-402/reviews/unit-04/G4/translation-handoff.md |
 | Unit 4 | G5 ur-review | ▢ | | advisory: escalate (agent:claude, unsigned); report specs/content/gpks-402/reviews/unit-04/G5/g5-claude-20261102T174837Z.json; 3 blocking figure repairs (fig-U4-6.ur.svg is the freehand map withdrawn in #368, fig-U4-8 missing from the Urdu page, fig-U4-6 Urdu alt describes the old map; G4 baseline 64ced416 predates #368/#369); owner rulings needed on "checks" = نگرانی and 16 unbanked terms; prose and assessment equivalent (MCQ solve matches key); rendered RTL/print inspection not possible in crew; row stays open (ADR-0019) |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-06/G2/20261102T072758692Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-06/G2/20261103T112244603Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | awaiting an independent reviewer |
 | Unit 6 | G4 ur-translation | ▢ | | separate job |
 | Unit 6 | G5 ur-review | ▢ | | |
@@ -58,7 +58,7 @@ The stage rows below govern Unit 5. No G1 re-evaluation or G3/G5 approval is rec
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-05/G2/20261102T072758552Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-05/G2/20261103T112244469Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | Fresh independent review required |
 | Unit 5 | G4 ur-translation | ▢ | | Complete four-page draft mirror and four Urdu SVG pairs prepared from dcb20e76; translation_status remains draft. No G4 completion claim per translate-unit Step 7. Handoff: specs/content/gpks-402/reviews/unit-05/G4/handoff.md |
 | Unit 5 | G5 ur-review | ▢ | | Pending translation and independent review |
@@ -81,7 +81,7 @@ Only Unit 3 is updated by this authoring job. The approved content-spec is the d
 
 | Unit | Stage | Status | Reviewer | Notes |
 |---|---|---|---|---|
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-03/G2/20261102T072758295Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gpks-402/reviews/unit-03/G2/20261103T112243997Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/gpks-402/reviews/unit-03/G3/608a5388-1312-4060-ac88-c7d64ddc8c72.json; all 7 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; all 8 SVG variants pass geometry; G3 remains open and unsigned |
 | Unit 3 | G4 ur-translation | ▢ | | Draft Urdu mirror prepared 2026-10-31 by codex from 23c211bd6fe0b17fe3e7bcbade5c54b15b9642cb: four pages, full 10/10/5 assessment, four RTL Urdu SVGs and derived dark twins. Frozen-bank key_terms and structural parity checked; translation_status stays draft. Open per translate-unit Step 7; geometry and rendered inspection pending under crew browser restriction. Handoff: reviews/unit-03/G4/translation-handoff.md |
 | Unit 3 | G5 ur-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/gpks-402/reviews/unit-03/G5/f08da193-6363-4286-bcf6-4be1f27181bd.json; all 10 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; RTL and font shaping verified; G5 remains open and unsigned |

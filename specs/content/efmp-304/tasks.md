@@ -12,7 +12,7 @@ G2 en-draft cleared by deterministic gates.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-01/G2/20261102T072755213Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-01/G2/20261103T112240704Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | |
 | Unit 1 | G3 en-review | ▢ | | advisory: revise; repairs applied for `specs/content/efmp-304/reviews/unit-01/G3/agent-g3-efmp-304-u1-run5e4cc29c.json`: SVG syntax and wordmark geometry, RRQ 9 rebalanced to Topic 1.1 with Urdu model answer and concept mapping, placed manifest preamble, and descriptive article links in both locales. Fresh independent G3 and dependent G5 remain pending; no sign-off claimed. Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 1 | G3 en-review | ▢ | | Advisory **escalate**: `specs/content/efmp-304/reviews/unit-01/G3/agent-g3-efmp-304-u1-rune5024f5f.json`; second cycle re-review verified author repairs resolved all 5 previous findings (SVG syntax, wordmark viewBox overflow, RRQ topic balance, manifest preamble, descriptive links); all deterministic gates pass; visual render uninspected (brief prohibits build/server/browser); no certification |
@@ -70,7 +70,7 @@ deterministic gates.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 4 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-04/G2/20261102T072755771Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-04/G2/20261103T112241419Z-gates.json |
 | Unit 4 | G3 en-review | ▣ | | agent G3 (Reviewer, agy Gemini, run 501d802f) **pass**, zero findings: `specs/content/efmp-304/reviews/unit-04/G3/agent-g3-efmp-304-u4-run501d802f.json` (PR #126, TEX-45). Row stays open: agent evidence cannot close it (ADR-0019). Stale since 2026-10-27: fig-U4-1 was re-wrapped to remove text overlap (owner print report), so a fresh G3 run is needed; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 4 | G4 ur-translation | ▣ | | Six-page Urdu mirror verified complete against English baseline on 2026-10-18 (crew efmp-304-u04-translate-r1): translated metadata, 20 bank-bound key terms, Urdu MCQ option labels in order (الف/ب/ج/د), 8 mirrored Urdu SVGs with derived dark variants; check:content 13/13 pass and parity/figures/key_terms clean under temporary reviewed flip (reverted). Handoff: `specs/content/efmp-304/reviews/unit-04/G4/translation-handoff.md`. translation_status stays draft pending independent G5; no certification claimed |
 | Unit 4 | G5 ur-review | ▣ | | agent G5 (Reviewer, agy Gemini, run 36f939d6) **pass**, 3 advisories: `specs/content/efmp-304/reviews/unit-04/G5/agent-g5-efmp-304-u4-run36f939d6.json` (PR #132, TEX-46). Row stays open (ADR-0019) |
@@ -86,7 +86,7 @@ open-access source bound against a declared floor of one. G1 unit-spec affirmed 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 5 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-05/G2/20261102T072755913Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-05/G2/20261103T112241546Z-gates.json |
 | Unit 5 | G3 en-review | ▣ | | agent G3 (Reviewer, agy Gemini, run 501d802f) **pass**, zero findings: `specs/content/efmp-304/reviews/unit-05/G3/agent-g3-efmp-304-u5-run501d802f.json` (PR #126, TEX-45). Row stays open: agent evidence cannot close it (ADR-0019). Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 5 | G4 ur-translation | ✅ | auto:gates | full UR mirror (6 files; BilingualAuthor, TEX-38, PR #118) completed 2026-10-17 by the crew translate job: 8 `.ur.svg` label variants authored, measured and wired (`fig-U5-1…8`, closes G5 advisory F3), `blooms_summary` translated, `Topic`/`Unit` labels set to موضوع/یونٹ; check:content 13/13 pass and parity/figures/key_terms clean under a temporary `reviewed` flip (reverted). `translation_status` stays draft pending G5 |
 | Unit 5 | G5 ur-review | ▣ | | agent G5 (Reviewer, agy Gemini, run 36f939d6) **pass**, 3 advisories: `specs/content/efmp-304/reviews/unit-05/G5/agent-g5-efmp-304-u5-run36f939d6.json` (PR #132, TEX-46). Row stays open (ADR-0019). The Urdu mirror changed on 2026-10-17 (G4 completion: `.ur.svg` figures, translated `blooms_summary`, موضوع/یونٹ labels), so this run's inputs are stale and a fresh G5 is needed |
@@ -113,7 +113,7 @@ recorded resolved and F3 (no Urdu `.ur.svg` figure variants anywhere in EFMP-304
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 6 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-06/G2/20261102T072756028Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-06/G2/20261103T112241677Z-gates.json |
 | Unit 6 | G3 en-review | ▣ | | Fresh agent G3 after the D-2026-0067 item 3 repair (Reviewer, agy Gemini 3.1 Pro, run 620f3b74) **pass**, zero findings: `specs/content/efmp-304/reviews/unit-06/G3/agent-g3-efmp-304-u6-run620f3b74.json` (PR #135, TEX-50), bound to the repaired bytes at `276d37f8`. Supersedes run 501d802f (PR #126, TEX-45), which was bound to the pre-repair inputs. Row stays open: agent evidence cannot close it (ADR-0019) Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 6 | G4 ur-translation | ▣ | | Urdu mirror complete (6 files, 12,275 words) through `276d37f8` (TEX-48 repair); key_terms bound to banked terms (D-2026-0067); 8 Urdu `.ur.svg` figure variants authored and wired (`fig-U6-1…8`, addresses G5 advisory F3), dark variants derived; six Bloom summaries and remaining Topic/Unit labels translated in the continuation pass. Handoff: `specs/content/efmp-304/translations/unit-06/handoff.md`; `translation_status` stays draft pending fresh G5 review |
 | Unit 6 | G5 ur-review | ▣ | | Fresh agent G5 after the D-2026-0067 item 3 repair (Reviewer, agy Gemini 3.1 Pro, run 620f3b74) **pass**, 3 advisories: `specs/content/efmp-304/reviews/unit-06/G5/agent-g5-efmp-304-u6-run620f3b74.json` (PR #135, TEX-50). F1 (the English phrasing defects, repaired in both locales) and F2 (reflective-practice terminology banked) are recorded **resolved**; F3 stays open and is tracked as TEX-49, the course-wide Urdu figure-variant gap (no `.ur.svg` exists for any EFMP-304 unit, 1 to 6). Supersedes run 36f939d6 (PR #132, TEX-46). Row stays open (ADR-0019) |
@@ -132,6 +132,6 @@ recorded resolved and F3 (no Urdu `.ur.svg` figure variants anywhere in EFMP-304
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-304/reviews/unit-02/G3/20261102T212207Z-g3-desk-0bfd5e8f.json |
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-304/reviews/unit-03/G3/20261102T212207Z-g3-desk-fc9b67f2.json |
 | Unit 2 | G3 en-review | ⏳ | codex | advisory: revise; repairs applied to `20261102T212207Z-g3-desk-0bfd5e8f.json`; support patterns, audience/context, source limits, assessment alignment and figure labels repaired in EN/UR. Fresh independent G3 and G5 plus permitted rendering/provenance handoff remain required; no certification. |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-02/G2/20261103T075914906Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-02/G2/20261103T112241128Z-gates.json |
 | Unit 3 | G3 en-review | ⏳ | agy | advisory: revise; repairs applied for specs/content/efmp-304/reviews/unit-03/G3/20261102T212207Z-g3-desk-fc9b67f2.json; removed specific claims attributed to unverifiable monograph bassham2010 in topic prose and disclosed bibliographic-only limit at point of use in Further reading in EN and UR; recorded 2026-11-03 publisher retrieval attempt in sources. Visual browser/print inspection remains unexecuted under crew constraints; full G3 certification is not claimed and stage stays open (ADR-0019) |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-03/G2/20261103T083114356Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-03/G2/20261103T112241282Z-gates.json |
