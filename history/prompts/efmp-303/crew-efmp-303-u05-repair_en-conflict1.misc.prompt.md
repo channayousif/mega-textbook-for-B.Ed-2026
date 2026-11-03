@@ -20,6 +20,8 @@ files:
  - docs/semester-2/efmp-303/unit-05/topic-02.mdx
  - docs/semester-2/efmp-303/unit-05/unit-assessment.mdx
  - history/prompts/efmp-303/crew-efmp-303-u05-repair_en-conflict1.misc.prompt.md
+ - history/prompts/efmp-303/crew-efmp-303-u05-repair_en-r1.misc.prompt.md
+ - history/prompts/efmp-303/crew-efmp-303-u05-repair_en.misc.prompt.md
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-05/topic-01.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-05/topic-02.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-05/unit-assessment.mdx
@@ -95,26 +97,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-303-u05-fix, fix, codex) Regenerated static/content-status.json remains uncommitted; it was already modified at task start.
 - (efmp-303-u05-fix, fix, codex) G3 needs a fresh independent run.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/efmp-303-u05-repair_en, union-resolved the EFMP-303 tasks.md tracker conflict keeping main's Unit 4 and Unit 3 rows then this branch's Unit 5 row, regenerated the gitignored content-status report, and committed the PHR.
+Merged origin/main into crew/efmp-303-u05-repair_en, union-resolved the tasks.md tracker conflict (main's Unit 4 and Unit 3 rows, then this branch's Unit 5 row), regenerated the gitignored content-status report, and committed the merge plus its PHR with all 13 content gates passing.
 
 ## Outcome
 
 - Impact: fix for EFMP-303 Unit 5 by opencode (attempt 1).
-- Tests: npm run check:content passed in the job worktree before the merge commit.
-- Files: 42 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 44 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/efmp-303-u05-repair_en, union-resolved the EFMP-303 tasks.md tracker conflict keeping main's Unit 4 and Unit 3 rows then this branch's Unit 5 row, regenerated the gitignored content-status report, and committed the PHR.
+- Shipped / changed: Merged origin/main into crew/efmp-303-u05-repair_en, union-resolved the tasks.md tracker conflict (main's Unit 4 and Unit 3 rows, then this branch's Unit 5 row), regenerated the gitignored content-status report, and committed the merge plus its PHR with all 13 content gates passing.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The merge pulled main's Unit 3 and Unit 4 repair changes into this branch; they are out of Unit 5 scope but now present.
-  - `static/content-status.json` is gitignored and was regenerated with `npm run build:content-status`; regenerate it again after any tracker edit or the gate fails as stale.
+  - `specs/content/efmp-303/tasks.md` now carries main's Unit 4 and Unit 3 advisory rows followed by this branch's Unit 5 row; the merge also pulled main's Unit 3/Unit 4 repair changes into the branch.
+  - `static/content-status.json` is gitignored and was regenerated with `npm run build:content-status`; regenerate it again after any tracker edit or `check:content-status` fails as stale.
+  - Unit 5 G3 stays advisory/open; a fresh independent G3 run (then G5) owns acceptance.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
