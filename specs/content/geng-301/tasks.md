@@ -58,3 +58,8 @@ reviewer initials). One row per unit per stage (`G1`–`G7`).
 | Unit 1 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalate, final cycle: specs/content/geng-301/reviews/unit-01/G3/crew-20261028-r2.json. RRQ 5 repaired; expository-type coverage conflict, RRQ 3 model defect, source declarations and pedagogy defects remain. Render/geometry and provenance unverified; owner action required before another cycle. Unsigned; no certification. |
 | Unit 2 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalate, second/final cycle: specs/content/geng-301/reviews/unit-02/G3/crew-r1-20261028.json. Prior F2/F3/F4/F6 resolved; wordmark CSS repaired but geometry/render evidence unverified; source mapping/support, self-review vs peer review, Figure 4 alt sequence and assessment evidence pending owner escalation. G3 stays open, unsigned; no certification. |
 | Unit 4 | G3 en-review | ✅ | CMY | review:specs/content/geng-301/reviews/unit-04/G3/20261102T140729Z-g3-desk-5aeebfbe.json |
+| Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/geng-301/reviews/unit-01/G3/20261102T211054Z-g3-desk-78d0fea3.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/geng-301/reviews/unit-02/G3/20261102T211054Z-g3-desk-bb0b1e2c.json |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/geng-301/reviews/unit-03/G3/20261102T211054Z-g3-desk-2d9a4830.json |
+| Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/geng-301/reviews/unit-05/G3/20261102T211054Z-g3-desk-ab4639b1.json |
+| Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/geng-301/reviews/unit-06/G3/20261102T211054Z-g3-desk-a3fc70f8.json |

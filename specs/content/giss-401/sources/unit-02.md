@@ -1,0 +1,19 @@
+# GISS-401 Unit 2 sources consulted
+
+Sources contract: `specs/007-content-depth-standard/contracts/sources-consulted.md`.
+Checked 2026-11-03. Classroom situations, comparisons and applications are original fictional
+teaching examples. Doctrinal claims are distinguished from these applications in the prose.
+
+| Key | Citation | URL/DOI | Supports | Kind |
+|---|---|---|---|---|
+| quran-translation | The Holy Qur'an. English meanings checked against Khattab, M., The Clear Quran, on Quran.com. References 2:2; 4:58–59, 135; 5:90; 17:23–24; 33:21, 70; 96:1–5; Al-'Alaq surah information. Paraphrases only, not copied translations. Pages opened through web retrieval on 2026-11-03. | https://quran.com/ | U2-01, U2-03, U2-04, U2-05, U2-06, U2-07, U2-09; foundational guidance, thematic verses and the Prophetic example | guide-required |
+| sahih-bukhari-muslim | Al-Bukhari, Sahih al-Bukhari, reports 1 and 631; Muslim, Sahih Muslim, Introduction narration 3 and reports 2003a, 2593. English and Arabic entries checked on Sunnah.com, 2026-11-03. Use the site's collection-specific numbering. | https://sunnah.com/bukhari:1 ; https://sunnah.com/bukhari:631 ; https://sunnah.com/muslim:3 ; https://sunnah.com/muslim:2003a ; https://sunnah.com/muslim:2593 | U2-02, U2-03, U2-07, U2-08, U2-09; report/example distinction, intentions, prayer, gentleness, attribution and general intoxicant text | guide-required |
+| mudawam-2021-usul | Mudawam, S. (2021). The Uṣūl al-Fiqh approach on the understanding of Islamic law in contemporary era: Source and contextualization. Asy-Syir'ah: Jurnal Ilmu Syari'ah dan Hukum, 55(2), 315–334. Crossref API DOI record checked 2026-11-03; publisher abstract and 20-page open PDF read. Metadata API lists starting page 315; PDF runs through 334. | https://doi.org/10.14421/ajish.v55i2.1004 ; https://asy-syirah.uin-suka.com/index.php/AS/article/download/1004/303 | U2-03; primary and dependent sources, disciplined reasoning and purposes. Fulfils the approved one-source registry-verified open-access floor. | open-access-substitute |
+| von-denffer-ulum | Von Denffer, A. (1983). Ulum al-Qur'an: An introduction to the sciences of the Qur'an. The Islamic Foundation. Open transcription hosted by The Islamic Bulletin; sections Sura and Aya and Makkan and Madinan Revelations checked 2026-11-03. Used for technical introduction instead of relying on the title-only Maududi reading. | https://islamicbulletin.org/en/ebooks/quran/ul_umal_quran.pdf | U2-04; surahs and ayat, revelation periods, chapter order and broad thematic patterns | open-access-substitute |
+| mufti-2019-hasan | Ahmad Ayoup @ Ayub, M. M. (2019, March 25). Irsyad al-Hadith series 358: Hadith hassan. Federal Territories Mufti Department, Malaysia. Author, date and definitions checked on the department's page 2026-11-03. | https://www.muftiwp.gov.my/en/artikel/irsyad-al-hadith/3233-irsyad-al-hadith-siri-ke-358-hadith-hasan | U2-08; hasan, precision, supporting routes and accepted evidential use | open-access-substitute |
+| motala-2023-sahih | Motala, S. (2023, July 27). The definition of as-sahih li dhatihi. Hadith Answers, Darul Hadith; approved on the source page by M. Abasoomar. Page and cited Arabic references checked 2026-11-03. | https://hadithanswers.com/the-definition-of-as-sahih-li-dhatihi/ | U2-08; continuity, integrity, precision, absence of hidden defect and contradiction with stronger transmission | open-access-substitute |
+
+The guide's mapped Maududi, *Towards Understanding Islam*, remains a title-level reading.
+No detailed doctrinal claim is attributed to an unread edition. Its role here is replaced
+by directly checked primary texts and the topic-specific open sources above, following
+`D-2026-0001` and the author-unit substitution rule. No source gap is concealed by a citation.
