@@ -28,3 +28,9 @@
 | Unit 1 | G5 ur-review | ▢ | | |
 | Unit 1 | G6 assets | ▣ | | four English schematics placed with dark variants; `measure-figure-text` not run (crew brief bars Chromium), CI `figure-geometry` is the first measured check |
 | Unit 1 | G7 publish | ▢ | | no publication requested by this authoring job |
+| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-07/G2/20261103T004215688Z-gates.json |
+| Unit 7 | G3 en-review | ▢ | | awaiting an independent reviewer and a qualified Islamic Studies reviewer (content spec, drafting note 2); no review performed by author |
+| Unit 7 | G4 ur-translation | ▢ | | separate job |
+| Unit 7 | G5 ur-review | ▢ | | |
+| Unit 7 | G6 assets | ▣ | | three English schematics placed with dark variants; `measure-figure-text` not run (crew brief bars Chromium), CI `figure-geometry` is the first measured check |
+| Unit 7 | G7 publish | ▢ | | no publication requested by this authoring job |
