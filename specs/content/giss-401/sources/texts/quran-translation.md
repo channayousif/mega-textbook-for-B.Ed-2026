@@ -65,3 +65,27 @@ Each verse below was retrieved from `https://api.quran.com/api/v4/quran/translat
 - **54:49**: "Indeed, all things We created with predestination."
 - **2:286**: "Allāh does not charge a soul except [with that within] its capacity. It will have [the consequence of] what [good] it has gained, and it will bear [the consequence of] what [evil] it has earned. "Our Lord, do not impose blame upon us if we have forgotten or erred. Our Lord, and lay not upon us a burden like that which You laid upon those before us. Our Lord, and burden us not with that which we have no ability to bear. And pardon us; and forgive us; and have mercy upon us. You are our protector, so give us victory over the disbelieving people.""
 - **13:11**: "For him [i.e., each one] are successive [angels] before and behind him who protect him by the decree of Allāh. Indeed, Allāh will not change the condition of a people until they change what is in themselves. And when Allāh intends for a people ill, there is no repelling it. And there is not for them besides Him any patron."
+
+## U7-01, U7-02, U7-03
+
+Retrieved from `https://api.quran.com/api/v4/quran/translations/20?verse_key=<surah:ayah>` on 2026-11-03 (footnote markers removed). Unit 7 quotes only short phrases from these verses.
+
+- **33:72**: "Indeed, We offered the Trust to the heavens and the earth and the mountains, and they declined to bear it and feared it; but man [undertook to] bear it. Indeed, he was unjust and ignorant."
+- **4:58**: "Indeed, Allāh commands you to render trusts to whom they are due and when you judge between people to judge with justice. Excellent is that which Allāh instructs you. Indeed, Allāh is ever Hearing and Seeing."
+- **23:8**: "And they who are to their trusts and their promises attentive"
+- **8:27**: "O you who have believed, do not betray Allāh and the Messenger or betray your trusts while you know [the consequence]."
+- **28:26**: "One of the women said, "O my father, hire him. Indeed, the best one you can hire is the strong and the trustworthy.""
+- **17:34**: "And do not approach the property of an orphan, except in the way that is best, until he reaches maturity. And fulfill [every] commitment. Indeed, the commitment is ever [that about which one will be] questioned."
+- **5:8**: "O you who have believed, be persistently standing firm for Allāh, witnesses in justice, and do not let the hatred of a people prevent you from being just. Be just; that is nearer to righteousness. And fear Allāh; indeed, Allāh is [fully] Aware of what you do."
+- **83:1-3**: "Woe to those who give less [than due], Who, when they take a measure from people, take in full. But if they give by measure or by weight to them, they cause loss."
+- **49:6**: "O you who have believed, if there comes to you a disobedient one with information, investigate, lest you harm a people out of ignorance and become, over what you have done, regretful."
+- **16:90**: "Indeed, Allāh orders justice and good conduct and giving [help] to relatives and forbids immorality and bad conduct and oppression. He admonishes you that perhaps you will be reminded."
+- **4:135**: "O you who have believed, be persistently standing firm in justice, witnesses for Allāh, even if it be against yourselves or parents and relatives. Whether one is rich or poor, Allāh is more worthy of both. So follow not [personal] inclination, lest you not be just. And if you distort [your testimony] or refuse [to give it], then indeed Allāh is ever, of what you do, Aware."
+- **42:38**: "And those who have responded to their Lord and established prayer and whose affair is [determined by] consultation among themselves, and from what We have provided them, they spend,"
+- **3:159**: "So by mercy from Allāh, [O Muḥammad], you were lenient with them. And if you had been rude [in speech] and harsh in heart, they would have disbanded from about you. So pardon them and ask forgiveness for them and consult them in the matter. And when you have decided, then rely upon Allāh. Indeed, Allāh loves those who rely [upon Him]."
+- **33:21**: "There has certainly been for you in the Messenger of Allāh an excellent pattern for anyone whose hope is in Allāh and the Last Day and [who] remembers Allāh often."
+- **68:4**: "And indeed, you are of a great moral character."
+- **61:2-3**: "O you who have believed, why do you say what you do not do? Greatly hateful in the sight of Allāh is that you say what you do not do."
+- **2:44**: "Do you order righteousness of the people and forget yourselves while you recite the Scripture? Then will you not reason?"
+
+Readings applied in the unit (amanah as the teaching post, short measure as short teaching, *shura* in a school) are the author's applications for the G3 Islamic Studies reviewer to confirm, not verse text.

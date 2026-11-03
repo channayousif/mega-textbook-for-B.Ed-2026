@@ -12,7 +12,7 @@
 | 4 | The Social System and the State in Islam | ☐ | ☐ | ☐ | ☐ | | |
 | 5 | The Economic and Political Systems of Islam | ☐ | ☐ | ☐ | ☐ | | |
 | 6 | Islam, Education, Civilization and Contemporary Issues | ☐ | ☐ | ☐ | ☐ | | |
-| 7 | Islamic Ethics in Professional Life | ☐ | ☐ | ☐ | ☐ | | |
+| 7 | Islamic Ethics in Professional Life | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-03 by the crew author job (claude); G2 gate evidence recorded below; G3 (with the qualified Islamic Studies reviewer the spec asks for) and Urdu remain open |
 
 **Key:** ▣ = in progress, ☐ = not started, ✓ = done, ✗ = escalated
 
