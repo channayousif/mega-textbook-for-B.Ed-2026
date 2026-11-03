@@ -8,3 +8,7 @@ Report addressed: `20261102T212207Z-g3-desk-a0d82ff4.json` (revise).
 - Render-review remains unresolved. The crew brief forbids builds, dev servers and Playwright. An independent reviewer on a permitted host must inspect the current unit on a small screen and in A4 print, including figure clipping. This repair pass supplies no rendered evidence or certification.
 
 G3 stays unticked. All translation statuses remain draft. The original report is unchanged; the appended tracker row records repairs only. No stale passage or missing translation was encountered.
+
+Validation: baseline matched `origin/main` at `6af89204762cf2504247cf237ee5d9228a244fe2` and all 13 content gates passed. The post-edit run exposed stale G2 evidence and the tracker-derived content-status cache. Fresh Unit 4 G2 evidence was generated using `scripts/prepare-gate-evidence.mjs EFMP-303 4`, with all eight draft gates passing. The tracker G2 reference was refreshed without changing its status. Unit tests passed: 28 files, 347 tests.
+
+Final `npm run check:content`: 12/13 pass. Only `check:content-status` fails because `static/content-status.json` is stale after the required tracker changes. That tracked generated file is outside the brief scope; an owner scope exception was requested before regenerating or committing it. No cache or publication-state edits were made.

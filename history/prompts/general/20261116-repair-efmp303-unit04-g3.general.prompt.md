@@ -40,7 +40,7 @@ Applied minimal bilingual citation repairs, corrected the concept label, and app
 ## Outcome
 
 - ✅ Impact: Removed unsupported source reliance without claiming verification.
-- 🧪 Tests: 347 unit tests passed. Baseline content gates passed; post-edit evidence/cache refresh underway.
+- 🧪 Tests: 347 unit tests passed. Baseline content gates passed. Fresh G2 evidence and pipeline gate pass; generated status cache requires an out-of-scope refresh.
 - 📁 Files: Two EN/UR topic pairs, concept graph, tracker, repair handoff, and this PHR.
 - 🔁 Next prompts: Independent G3 review on a host permitted to render the unit.
 - 🧠 Reflection: Preserve approved SLO mapping rather than adding an unrelated SLO from an advisory suggestion.
@@ -49,12 +49,12 @@ Applied minimal bilingual citation repairs, corrected the concept label, and app
 
 - Shipped / changed: Citation repairs mirrored in Urdu; duplicate process label removed; advisory tracker row appended.
 - Decisions the team must respect: G3 unticked, translation statuses draft, original report preserved. SLO 4-1 follows the approved spec.
-- Pending / next owner: Independent reviewer and permitted render host own small-screen, A4 print and clipping inspection.
+- Pending / next owner: Owner response pending for generated static/content-status.json scope exception. Independent reviewer and permitted render host own small-screen, A4 print and clipping inspection.
 - Paperclip issues affected: efmp-303-u04-repair_en; no issue identifier supplied.
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Render-review cannot run under crew restrictions. Initial python command unavailable; used python3 without installing packages.
-- Graders run and results (PASS/FAIL): PASS: 347 tests across 28 files; git diff --check. Initial post-edit check:content: 11/13 pass; stale G2 evidence and generated content-status cache require refresh.
+- Graders run and results (PASS/FAIL): PASS: 347 tests across 28 files; git diff --check; all eight G2 draft gates; refreshed pipeline gate. Final check:content: 12/13 pass; only check:content-status fails because the generated cache remains stale pending scope exception.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Fresh independent rendered review of the repaired unit.
