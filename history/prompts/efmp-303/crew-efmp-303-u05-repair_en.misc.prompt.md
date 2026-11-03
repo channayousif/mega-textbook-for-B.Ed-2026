@@ -4,51 +4,70 @@ title: crew repair_en EFMP-303 unit 5
 stage: misc
 date: 2026-11-03
 surface: agent
-model: agy
+model: opencode
 feature: efmp-303
 branch: crew/efmp-303-u05-repair_en
 user: crew
 command: crew repair_en
-labels: ["crew", "agy", "repair_en"]
+labels: ["crew", "opencode", "repair_en"]
 links:
   spec: specs/content/efmp-303/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
-  - docs/semester-2/efmp-303/unit-05/topic-01.mdx
-  - docs/semester-2/efmp-303/unit-05/topic-02.mdx
-  - docs/semester-2/efmp-303/unit-05/unit-assessment.mdx
-  - history/prompts/efmp-303/crew-efmp-303-u05-repair_en.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-05/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-05/topic-02.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-05/unit-assessment.mdx
-  - specs/content/efmp-303/concepts/unit-05.md
-  - specs/content/efmp-303/coverage/unit-05.md
-  - specs/content/efmp-303/reviews/unit-05/G2/20261103T071412577Z-gates.json
-  - specs/content/efmp-303/reviews/unit-05/G3/crew-repair-en-handoff.md
-  - specs/content/efmp-303/sources/texts/gem-report2020.md
-  - specs/content/efmp-303/sources/texts/nep2009.md
-  - specs/content/efmp-303/sources/texts/wb_hci.md
-  - specs/content/efmp-303/sources/unit-05.md
-  - specs/content/efmp-303/tasks.md
-  - static/img/figures/efmp-303/unit-05/fig-U5-2.dark.svg
-  - static/img/figures/efmp-303/unit-05/fig-U5-2.svg
-  - static/img/figures/efmp-303/unit-05/fig-U5-2.ur.dark.svg
-  - static/img/figures/efmp-303/unit-05/fig-U5-2.ur.svg
-  - static/img/figures/efmp-303/unit-05/fig-U5-4.dark.svg
-  - static/img/figures/efmp-303/unit-05/fig-U5-4.svg
-  - static/img/figures/efmp-303/unit-05/fig-U5-4.ur.dark.svg
-  - static/img/figures/efmp-303/unit-05/fig-U5-4.ur.svg
+ - docs/semester-2/efmp-303/unit-05/topic-01.mdx
+ - docs/semester-2/efmp-303/unit-05/topic-02.mdx
+ - docs/semester-2/efmp-303/unit-05/unit-assessment.mdx
+ - history/prompts/efmp-303/crew-efmp-303-u05-repair_en-r1.misc.prompt.md
+ - history/prompts/efmp-303/crew-efmp-303-u05-repair_en.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-05/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-05/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-05/unit-assessment.mdx
+ - specs/content/efmp-303/concepts/unit-05.md
+ - specs/content/efmp-303/coverage/unit-05.md
+ - specs/content/efmp-303/reviews/unit-05/G2/20261103T071412577Z-gates.json
+ - specs/content/efmp-303/reviews/unit-05/G2/20261103T084218376Z-gates.json
+ - specs/content/efmp-303/reviews/unit-05/G2/logs-20261103T071412577Z/check-bloom-bands.txt
+ - specs/content/efmp-303/reviews/unit-05/G2/logs-20261103T071412577Z/check-concept-graph.txt
+ - specs/content/efmp-303/reviews/unit-05/G2/logs-20261103T071412577Z/check-depth-gate.txt
+ - specs/content/efmp-303/reviews/unit-05/G2/logs-20261103T071412577Z/check-docs-sync.txt
+ - specs/content/efmp-303/reviews/unit-05/G2/logs-20261103T071412577Z/check-figures.txt
+ - specs/content/efmp-303/reviews/unit-05/G2/logs-20261103T071412577Z/check-no-answer-keys.txt
+ - specs/content/efmp-303/reviews/unit-05/G2/logs-20261103T071412577Z/check-no-em-dash.txt
+ - specs/content/efmp-303/reviews/unit-05/G2/logs-20261103T071412577Z/validate-content.txt
+ - specs/content/efmp-303/reviews/unit-05/G2/logs-20261103T084218376Z/check-bloom-bands.txt
+ - specs/content/efmp-303/reviews/unit-05/G2/logs-20261103T084218376Z/check-concept-graph.txt
+ - specs/content/efmp-303/reviews/unit-05/G2/logs-20261103T084218376Z/check-depth-gate.txt
+ - specs/content/efmp-303/reviews/unit-05/G2/logs-20261103T084218376Z/check-docs-sync.txt
+ - specs/content/efmp-303/reviews/unit-05/G2/logs-20261103T084218376Z/check-figures.txt
+ - specs/content/efmp-303/reviews/unit-05/G2/logs-20261103T084218376Z/check-no-answer-keys.txt
+ - specs/content/efmp-303/reviews/unit-05/G2/logs-20261103T084218376Z/check-no-em-dash.txt
+ - specs/content/efmp-303/reviews/unit-05/G2/logs-20261103T084218376Z/validate-content.txt
+ - specs/content/efmp-303/reviews/unit-05/G3/crew-repair-en-handoff.md
+ - specs/content/efmp-303/sources/texts/gem-unitfive-2020.md
+ - specs/content/efmp-303/sources/texts/nep-unitfive-2009.md
+ - specs/content/efmp-303/sources/texts/wb-unitfive-2023.md
+ - specs/content/efmp-303/sources/unit-05.md
+ - specs/content/efmp-303/sources/unit-05/ncc.md
+ - specs/content/efmp-303/tasks.md
+ - static/img/figures/efmp-303/unit-05/fig-U5-2.dark.svg
+ - static/img/figures/efmp-303/unit-05/fig-U5-2.svg
+ - static/img/figures/efmp-303/unit-05/fig-U5-2.ur.dark.svg
+ - static/img/figures/efmp-303/unit-05/fig-U5-2.ur.svg
+ - static/img/figures/efmp-303/unit-05/fig-U5-4.dark.svg
+ - static/img/figures/efmp-303/unit-05/fig-U5-4.svg
+ - static/img/figures/efmp-303/unit-05/fig-U5-4.ur.dark.svg
+ - static/img/figures/efmp-303/unit-05/fig-U5-4.ur.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
 
 # Crew job efmp-303-u05-repair_en
 
-You are the agy worker on the B.Ed bilingual textbook repo, working in this checkout on branch `crew/efmp-303-u05-repair_en`.
+You are the opencode worker on the B.Ed bilingual textbook repo, working in this checkout on branch `crew/efmp-303-u05-repair_en`.
 Read AGENTS.md first and obey it (CLAUDE.md only imports it): no em dash (U+2014) anywhere, heavy commands only through `scripts/heavy.sh`, never run `npm run build`, a dev server or Playwright, keep all scratch files inside your worktree (for example `.crew/`), never use `/tmp`, never mark G3/G5 done, never self-sign or use
 human initials, never edit the style guide, constitution, ADRs, gate scripts, catalog or an approved content-spec.
 
@@ -92,31 +111,41 @@ From `specs/content/efmp-303/reviews/unit-05/G3/20261102T212207Z-g3-desk-58144d8
 - (efmp-303-u05-translate-r1, translate, agy) EFMP-303 Unit 5 Urdu mirror is complete at G4 (5 files, 4 localized .ur.svg figures with dark variants, 13/13 content gates pass); translation_status stays draft pending independent G5 review.
 - (efmp-303-u05-translate-r1, translate, agy) Render inspection (desktop, narrow 360px, A4 print) was omitted per brief constraints and should be run during the independent G5 review session.
 
+## Feedback from the previous attempt
+npm run check:content has 5 finding(s) that main does not have:
+✗ Pipeline gate failed with 4 finding(s):
+- EFMP-303 Unit 1 (docs/semester-2/efmp-303/unit-01): G2 en-draft: stale or incomplete input manifest
+- EFMP-303 Unit 2 (docs/semester-2/efmp-303/unit-02): G2 en-draft: stale or incomplete input manifest
+- EFMP-303 Unit 4 (docs/semester-2/efmp-303/unit-04): G2 en-draft: stale or incomplete input manifest
+- EFMP-303 Unit 6 (docs/semester-2/efmp-303/unit-06): G2 en-draft: stale or incomplete input manifest
+
+
 ## Response snapshot
 
-Applied all findings from the latest G3 review report (20261102T212207Z-g3-desk-58144d8a.json) to EFMP-303 Unit 5 across English and Urdu mirrored files, refreshed G2 deterministic evidence, and appended an unticked advisory G3 repair row.
+Completed and committed the EFMP-303 Unit 5 G3 repair set across EN/UR topics, assessment, concepts, sources, figures and G2 evidence, with all content gates green.
 
 ## Outcome
 
-- Impact: repair_en for EFMP-303 Unit 5 by agy (attempt 1).
-- Tests: npm run check:content passed for all scoped gates; local individual gate scripts passed 100%.
-- Files: 24 file(s), listed above.
+- Impact: repair_en for EFMP-303 Unit 5 by opencode (attempt 2).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 43 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Applied all G3 findings for EFMP-303 Unit 5 in English and Urdu, registered bound source texts (nep2009, gem-report2020), resolved khan2018 and wb_hci locators, remapped concept assessments, balanced MCQ keys, updated RRQ/ERQ scoring rubrics, framed opening scenarios as illustrative cases, fixed figure remits and SVG geometry, refreshed G2 gate manifest, and recorded the advisory G3 repair row.
+- Shipped / changed: Completed and committed the EFMP-303 Unit 5 G3 repair set across EN/UR topics, assessment, concepts, sources, figures and G2 evidence, with all content gates green.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All findings from G3 report 20261102T212207Z-g3-desk-58144d8a are confirmed resolved in both EN and UR; Unit 5 requires a fresh independent G3 review run.
-  - G4 Urdu mirror (5 files, 4 localized SVG figures) remains synchronized and intact with translation_status set to draft pending independent G5 review.
+  - G3 row left unticked with the advisory repair suggestion; a fresh independent G3 run (then G5) owns acceptance.
+  - `specs/content/efmp-303/sources/texts/nep2009.md` and `gem-report2020.md` must stay deleted because other units cite those keys and their presence invalidates Units 1, 2, 4 and 6 G2 evidence.
+  - `static/content-status.json` is gitignored and must be regenerated locally (`npm run build:content-status`) after tracker edits.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none
-- Graders run and results (PASS/FAIL): validate:content PASS, check:depth-gate PASS, check:figures PASS, check:no-em-dash PASS, check:no-answer-keys PASS, check:concept-graph PASS, check:bloom-bands PASS, check:source-floor PASS, check:licence PASS, licence:map:check PASS, check:content-status PASS, check:docs-sync PASS
+- Failure modes observed: 1 earlier attempt(s); see the board history
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
