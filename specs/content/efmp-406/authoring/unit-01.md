@@ -38,3 +38,10 @@ All four planned figures are schematics (concept-map, table, timeline, diagram);
 - No `glossary.json` entries were added (the file is outside this job's scope); key terms are defined in bold on first use. Candidate glossary terms: Literacy, Functional literacy, Literacy practice, Multiliteracies, Lifelong learning.
 - `terminology.csv` has no entry for any of the spec's key terms; the concept-graph Urdu labels are authored and flagged for G5.
 - The course is not yet in `catalog/courses.json` (owner ruling pending, as the content spec records). A course-level `_category_.json` and a `course-overview.mdx` (guide outcomes, unit list, weights; required as a bound input by G2 evidence) were added; later units should extend the overview rather than replace it.
+
+## G3 advisory repairs (2026-11-03, crew repair_en)
+
+Applied repairs for the four advisory findings in `specs/content/efmp-406/reviews/unit-01/G3/20261102T212036Z-g3-desk-45e9b45b.json`:
+- Explicitly labeled classroom scenarios and family cases (Nadia in Tando Allahyar, Bilal in Sukkur, Sana, Imran, Mariam's mother, munshi and khata cases) as original instructional illustrations designed for pedagogy in `index.mdx`, `topic-01.mdx`, `topic-02.mdx`, `unit-teacher-notes.mdx`, and `sources/unit-01.md`, mirrored in Urdu.
+- Qualified Shakir et al. (2012) citations in topic prose, assessment marking model, and Further reading as strictly limited to findings reported in the published study abstract, mirrored in Urdu.
+- Reaffirmed headless review tooling constraints and pending catalog entry status per ADR-0019 / ADR-0032.
