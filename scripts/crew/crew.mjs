@@ -27,7 +27,8 @@ import { send, reply, readInbox } from './notify.mjs';
 import { reviewFindingsSection, parseHandoff, priorHandoffsSection } from './handoff.mjs';
 import { freshChecks } from './checks.mjs';
 import { batchDue, batchCandidates, batchId, batchTitle, batchBody, exclusionReason, mergeAppendOnly } from './batch.mjs';
-import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport, specUnitNumbers, focusCourse, IN_FLIGHT, isCorpusStage } from './planner.mjs';
+import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport, specUnitNumbers, focusCourse, IN_FLIGHT, isCorpusStage, figureBacklog, limitIllustrate } from './planner.mjs';
+import { readManifest } from '../lib/figure-manifest.mjs';
 import { walkUnits } from '../lib/content-roots.mjs';
 import { REGISTRIES, registryProblems, mergeGlossary } from './registries.mjs';
 import { weekId, local, harvestSlot, slotsBetween, harvestDue, distillDue, maintenanceDue, contentFiles, maintenanceVerdict, parseVerdict } from './maintenance.mjs';
@@ -133,7 +134,14 @@ function unitFacts(course, u, bilingual, dirs) {
     g3Repaired: /repairs applied/i.test(trackerSuggestion(course, u.unit_no, 'G3')),
     g5Report: latestReport(course, u.unit_no, 'G5'),
     mirrorComplete: d ? mirrorComplete(listDir(d.unitDir), listDir(d.urUnitDir)) : false,
+    figureBacklog: figureBacklog(manifestRows(course, u.unit_no)),
   };
+}
+
+/** A unit's figure manifest rows, including the ADR-0029 banner sidecar (unit-NN.banner.md). */
+function manifestRows(course, unit) {
+  const dir = join(ROOT, 'specs', 'content', course.toLowerCase(), 'figures');
+  return ['', '.banner'].flatMap((s) => readManifest(join(dir, `unit-${pad(unit)}${s}.md`)) ?? []);
 }
 
 function plan() {
@@ -177,6 +185,7 @@ function plan() {
   board.focus = { course: focus?.course ?? null, reason: focus?.reason ?? 'no crew work', at: now() };
   const held = added.filter((j) => !started.has(j.course) && j.course !== board.focus.course);
   if (held.length) added.splice(0, added.length, ...added.filter((j) => !held.includes(j)));
+  added.splice(0, added.length, ...limitIllustrate(added, board.jobs.filter((j) => IN_FLIGHT.includes(j.status))));
   // Units whose agent review is done and that wait only for a person's G3 sign-off (ADR-0019).
   board.awaitingG3 = { at: now(), units: awaiting };
   if (!DRY) { board.jobs.push(...added); save('board', board); }
@@ -192,7 +201,7 @@ const STAGE_TASK = {
   author: (j) => `Author ${j.course} Unit ${j.unit} from its approved content-spec, following the author-unit skill end to end (English only; the Urdu mirror is a separate job). Topic titles read "Topic N.M - Title" (validate:content checks it).`,
   repair_en: (j) => `Apply the findings of the latest G3 report under specs/content/${j.course.toLowerCase()}/reviews/unit-${pad(j.unit)}/G3/. Make the smallest edits that resolve each finding, then append a new tracker row for Unit ${j.unit} G3 whose Suggestion begins "advisory: revise; repairs applied" and names the report. Leave G3 unticked.`,
   figures: (j) => `Render every prompt-only schematic figure for ${j.course} Unit ${j.unit} (generate-figures skill): diagrams, tables, concept maps, flowcharts and timelines as SVG with their .ur.svg variants. Leave raster illustrations at prompt-only for the illustrate job. Every SVG must pass npm run check:svg-style; render each one to PNG and look at it (light and dark) before placing it.`,
-  illustrate: (j) => `Produce the raster illustrations for ${j.course} Unit ${j.unit} with \`scripts/heavy.sh node scripts/generate-illustration.mjs\` per ADR-0029, inspect each for pedagogy and cultural accuracy, optimise, place, and move the manifest rows to placed.`,
+  illustrate: (j) => `Produce the raster illustrations for ${j.course} Unit ${j.unit} per ADR-0029. Run \`scripts/heavy.sh node scripts/generate-illustration.mjs ${j.course} ${j.unit}\` for the topic scenes and again with \`--banner\` for the unit banner (unit-NN.banner.md); it generates with agy, optimises to WebP and moves each row to generated. Then read every image, including any row already at generated: reject one with text, wrong dress or setting, a scene that does not teach the row's point, or one that contradicts its alt text (set its Status back to prompt-only and rerun with \`--id <fig>\`). Never edit an approved prompt or alt text to fit an image. Place each accepted image as a <Figure> in the English topic file and its Urdu mirror (generate-figures skill), set the row to placed, and run npm run check:content. Do not draw SVGs in this job.`,
   review_en: (j) => `Act as the INDEPENDENT G3 English reviewer of ${j.course} Unit ${j.unit} (review-unit skill, .claude/agents/g3-reviewer.md). You did not write this unit. Produce the evidence report the skill specifies and the advisory tracker row. Never tick G3, never add reviewer initials, never self-sign.${latestReport(j.course, j.unit, 'G3') ? ' This is the second and last review cycle (ADR-0019): repairs were applied for the latest report under the unit\'s reviews/.../G3/ folder. Verify each of its findings against the current files, carry any that remain unresolved, and give a new name to your report.' : ''}`,
   translate: (j) => `Translate ${j.course} Unit ${j.unit} into its complete Urdu mirror at G4 (translate-unit skill), bound to specs/content/terminology.csv. Record the G4 tracker row as the skill says; translation_status stays draft. Topic titles read "موضوع N.M - ...", matching the English numbering.`,
   review_ur: (j) => `Act as the INDEPENDENT G5 Urdu reviewer of ${j.course} Unit ${j.unit} (review-unit skill, .claude/agents/g5-reviewer.md). You did not translate this unit. Produce the evidence report and advisory tracker row. Never tick G5, never self-sign.`,

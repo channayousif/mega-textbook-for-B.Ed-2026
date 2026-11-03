@@ -158,19 +158,23 @@ After the SVG exists at the target path (Codex or Claude), for each figure:
    pattern - Constitution Art. III.8); labels in the unit's plain register; no em dash in
    `<text>`.
 
-## Step 3 - Illustrations: prepare the Codex handoff
+## Step 3 - Illustrations: hand them to the `illustrate` job
 
-Per `references/raster-codex-handoff.md`, for each `Kind: illustration` figure:
+In a schematic (`figures`) run, for each `Kind: illustration` figure:
 
-1. Do not invoke an image generator, fetch generated image bytes, edit a raster, run raster
-   optimisation, place the raster, or advance its status. Those actions belong to Codex.
+1. Do not generate, edit or place the raster in this run. Since ADR-0029 the crew's separate
+   `illustrate` job produces it (Gemini via `scripts/generate-illustration.mjs`, Codex as the
+   alternative producer under `references/raster-codex-handoff.md`). The planner queues that job
+   from any `prompt-only` illustration row, including the unit banner in `unit-NN.banner.md`.
 2. Verify that the marker and manifest contain the exact figure ID, topic, complete generation
-   prompt and accessible alt text. Add an aspect hint and the exact target `.webp` path to
-   `specs/content/<course-lowercase>/figures/unit-NN.brief.md`.
-3. Leave the marker in the topic file, leave `Src` blank and keep `Status: prompt-only`.
-4. Report the handoff to the owner as ready for Codex. Continue rendering every schematic figure
-   in the same run. If a raw raster is already staged, leave it untouched and report its path to
-   Codex.
+   prompt and accessible alt text, plus an aspect hint and the target `.webp` path.
+3. Leave the marker in the topic file and keep `Status: prompt-only`.
+
+In an `illustrate` run: run `scripts/heavy.sh node scripts/generate-illustration.mjs <course> <unit>`
+(and `--banner` for the banner sidecar). It generates, optimises to WebP and moves each row to
+`generated`. Then read every image yourself and regenerate (`--id <fig>`) any that shows text,
+wrong dress or setting, or does not teach the row's point. Place each accepted image with Step 4's
+`<Figure>` pattern in the English topic file and its Urdu mirror, and set the row to `placed`.
 
 ## Step 4 - Place schematics: marker → `<Figure>`, manifest row → v2
 
