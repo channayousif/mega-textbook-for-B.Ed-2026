@@ -144,6 +144,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 9 | G3 en-review | ▢ | agent:codex | advisory: revise; repairs applied; report specs/content/efmp-301/reviews/unit-09/G3/20261102T212207Z-g3-desk-b282fccc.json; EN and UR assessment, authority, pedagogy and figure repairs; current render and authenticated provenance remain owner handoffs; no certification |
 
 | Unit 5 | G3 en-review | ▢ | | advisory: revise; repairs applied; multimodal claims and IQ prediction claims qualified across topics, assessment and figures; fig-U5-1 geometry verified and Thurstone/CHC positions restored; ERQ 5 widened to blueprint integrative pupil profile with explicit 250-300 word conditions; Seifert and Rohrer source/coverage locators corrected; early finisher framed as hypothesis; report specs/content/efmp-301/reviews/unit-05/G3/20261102T211054Z-g3-desk-5bdd915a.json |
+| Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-04/G3/20261102T213456Z-g3-desk-147d237b.json |
 
 ## Re-restructure in progress (2026-09-11)
 

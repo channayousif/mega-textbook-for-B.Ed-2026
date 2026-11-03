@@ -1,0 +1,266 @@
+/* CourseNavBar: sticky breadcrumb dropdowns under the navbar. Logical properties
+   throughout so the Urdu (RTL) site mirrors without extra rules. */
+
+.bar {
+  position: sticky;
+  top: var(--ifm-navbar-height);
+  z-index: calc(var(--ifm-z-index-fixed) - 1);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-block-end: 1rem;
+  padding: 0.4rem 0.25rem;
+  background: var(--ifm-background-color);
+  border-block-end: 1px solid var(--ifm-toc-border-color);
+}
+
+.crumbs {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.15rem;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.crumb {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.crumb + .crumb::before {
+  content: '›';
+  padding-inline: 0.2rem;
+  color: var(--ifm-color-emphasis-500);
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+html[dir='rtl'] .crumb + .crumb::before {
+  content: '‹';
+}
+
+.segment {
+  position: relative;
+  min-width: 0;
+}
+
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  max-width: 22rem;
+  min-height: 2.25rem;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-font-color-base);
+  font: inherit;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background var(--ifm-transition-fast), border-color var(--ifm-transition-fast);
+}
+
+.crumb:last-child .trigger {
+  font-weight: var(--ifm-font-weight-semibold);
+  background: var(--ifm-color-primary-contrast-background);
+}
+
+.trigger:hover,
+.triggerOpen {
+  border-color: var(--ifm-color-primary-light);
+  background: var(--ifm-color-emphasis-200);
+}
+
+.trigger:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+.triggerLabel {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.caret {
+  flex: none;
+  width: 0.45rem;
+  height: 0.45rem;
+  margin-block-start: -0.2rem;
+  border-inline-end: 2px solid currentColor;
+  border-block-end: 2px solid currentColor;
+  transform: rotate(45deg);
+  opacity: 0.7;
+}
+
+.triggerOpen .caret {
+  margin-block-start: 0.2rem;
+  transform: rotate(-135deg);
+}
+
+.backdrop {
+  display: none;
+}
+
+.menu {
+  position: absolute;
+  inset-block-start: calc(100% + 0.35rem);
+  inset-inline-start: 0;
+  z-index: var(--ifm-z-index-dropdown);
+  min-width: 16rem;
+  max-width: min(28rem, 90vw);
+  max-height: min(60vh, 28rem);
+  overflow-y: auto;
+  margin: 0;
+  padding: 0.35rem;
+  list-style: none;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: var(--ifm-global-radius);
+  box-shadow: var(--ifm-global-shadow-md);
+}
+
+.option {
+  display: block;
+  padding: 0.45rem 0.65rem;
+  border-radius: calc(var(--ifm-global-radius) - 2px);
+  color: var(--ifm-font-color-base);
+  font-size: 0.9rem;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.option:hover,
+.option:focus-visible {
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-font-color-base);
+  text-decoration: none;
+  outline: none;
+}
+
+.optionCurrent {
+  font-weight: var(--ifm-font-weight-semibold);
+  color: var(--ifm-color-primary);
+  box-shadow: inset 3px 0 0 var(--ifm-color-primary);
+}
+
+html[dir='rtl'] .optionCurrent {
+  box-shadow: inset -3px 0 0 var(--ifm-color-primary);
+}
+
+.optionEnglish::after {
+  content: 'EN';
+  margin-inline-start: 0.4rem;
+  padding: 0 0.3rem;
+  border-radius: 3px;
+  background: var(--ifm-color-emphasis-200);
+  font-size: 0.7rem;
+  font-weight: var(--ifm-font-weight-semibold);
+}
+
+.treeToggle {
+  display: none;
+  flex: none;
+  align-items: center;
+  gap: 0.4rem;
+  min-height: 2.25rem;
+  padding: 0.25rem 0.7rem;
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--ifm-font-color-base);
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.treeToggle:hover {
+  background: var(--ifm-color-emphasis-100);
+}
+
+.treeToggle:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+.treeToggleOn {
+  border-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+}
+
+.treeIcon {
+  width: 0.9rem;
+  height: 0.7rem;
+  border-block: 2px solid currentColor;
+  background: linear-gradient(currentColor, currentColor) center / 100% 2px no-repeat;
+}
+
+/* The tree only exists at desktop widths (upstream hides its container below 997px). */
+@media (min-width: 997px) {
+  .treeToggle {
+    display: inline-flex;
+  }
+}
+
+/* Phones and tablets: one scrolling row; each menu opens as a bottom sheet. */
+@media (max-width: 996px) {
+  .bar {
+    margin-inline: calc(-1 * var(--ifm-spacing-horizontal));
+    padding-inline: var(--ifm-spacing-horizontal);
+  }
+
+  .crumbs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .crumbs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .crumb {
+    flex: none;
+  }
+
+  .trigger {
+    max-width: 14rem;
+  }
+
+  .backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: calc(var(--ifm-z-index-overlay) - 1);
+    background: rgb(0 0 0 / 0.4);
+  }
+
+  .menu {
+    position: fixed;
+    inset-block: auto 0;
+    inset-inline: 0;
+    z-index: var(--ifm-z-index-overlay);
+    min-width: 0;
+    max-width: none;
+    max-height: 70vh;
+    padding: 0.5rem 0.5rem calc(0.5rem + env(safe-area-inset-bottom));
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .option {
+    padding: 0.7rem 0.8rem;
+    font-size: 1rem;
+  }
+}
+
+@media print {
+  .bar {
+    display: none;
+  }
+}
