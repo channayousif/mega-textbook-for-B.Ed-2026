@@ -23,7 +23,7 @@
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-01/G2/20261103T002225035Z-gates.json |
-| Unit 1 | G3 en-review | ▢ | | awaiting an independent reviewer and a qualified Islamic Studies reviewer (content spec, drafting note 2); no review performed by author |
+| Unit 1 | G3 en-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/giss-401/reviews/unit-01/G3/fb1baf5a-8583-4edd-a5d3-bf7e01304eaf.json; all 7 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; 4 Sharp PNG renders verified; G3 remains open and unsigned |
 | Unit 1 | G4 ur-translation | ▢ | | separate job |
 | Unit 1 | G5 ur-review | ▢ | | |
 | Unit 1 | G6 assets | ▣ | | four English schematics placed with dark variants; `measure-figure-text` not run (crew brief bars Chromium), CI `figure-geometry` is the first measured check |
