@@ -1,6 +1,6 @@
 ---
 id: crew-efmp-305-u06-repair_en-conflict1
-title: crew repair_en EFMP-305 unit 6 conflict resolution
+title: crew fix EFMP-305 unit 6
 stage: misc
 date: 2026-11-03
 surface: agent
@@ -8,19 +8,21 @@ model: opencode
 feature: efmp-305
 branch: crew/efmp-305-u06-repair_en
 user: crew
-command: crew repair_en
-labels: ["crew", "opencode", "repair_en"]
+command: crew fix
+labels: ["crew", "opencode", "fix"]
 links:
   spec: specs/content/efmp-305/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
- - specs/content/efmp-305/tasks.md
+ - history/prompts/efmp-305/2445-unit-six-g3-repair-verification.misc.prompt.md
  - history/prompts/efmp-305/crew-efmp-305-u06-repair_en-conflict1.misc.prompt.md
+ - history/prompts/efmp-305/crew-efmp-305-u06-repair_en.misc.prompt.md
+ - specs/content/efmp-305/reviews/unit-06/G3/20261103-repair-notes.md
+ - specs/content/efmp-305/tasks.md
 tests:
  - npm run check:content
- - npm run build:content-status (ignored local cache refresh)
 ---
 
 ## Prompt
@@ -56,31 +58,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-305-u06-translate-r1, translate, codex) Translation remains draft pending independent G5 review; fresh rendered Urdu inspection is still required.
 - (efmp-305-u06-translate-cifix1, fix, opencode) The test:review ENOTEMPTY in "unit-scoped binding: a sibling unit does not invalidate this unit" is a cleanup race in the harness, not a content issue  -  a re-run should clear it.
 
+
 ## Response snapshot
 
-Merged origin/main into `crew/efmp-305-u06-repair_en`. The only conflict was `specs/content/efmp-305/tasks.md`: main's appended Unit 3 G3 row and this branch's appended Unit 6 G3 row. Kept both, main's first then the branch's, with the branch's blank-line separator. The four shared registries were untouched by this branch, so they are byte-identical to main and no ID collisions arose. Committed the merge, refreshed the gitignored `static/content-status.json` cache, and verified all 14 content gates pass.
+Merged origin/main into crew/efmp-305-u06-repair_en, resolving the tasks.md conflict by keeping both sides' G3 rows (main's Unit 3 first, then the branch's Unit 6), and all 14 content gates pass.
 
 ## Outcome
 
-- Impact: conflict resolution for EFMP-305 Unit 6 by opencode (attempt 1).
-- Tests: npm run check:content passed (14/14 content gates) after the ignored content-status cache refresh.
-- Files: merge commit on `specs/content/efmp-305/tasks.md` plus this PHR.
+- Impact: fix for EFMP-305 Unit 6 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 5 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: merge of origin/main with the tasks.md conflict resolved (both sides' G3 rows kept, main first) and this PHR.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything.
+- Shipped / changed: Merged origin/main into crew/efmp-305-u06-repair_en, resolving the tasks.md conflict by keeping both sides' G3 rows (main's Unit 3 first, then the branch's Unit 6), and all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Fresh checkouts need `npm run build:content-status` before validation; `static/content-status.json` is gitignored.
+  - Fresh checkouts need `npm run build:content-status` before `npm run check:content` (the report is gitignored).
   - G3 remains unticked pending fresh independent review; Urdu translation remains draft pending independent G5 and fresh rendered inspection.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS (14/14) after `npm run build:content-status`.
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
