@@ -1,0 +1,3 @@
+$ npm run validate:content   (repo HEAD 13f55bb64, 2026-11-03T06:51:10.671Z)
+✓ Content validation passed.
+exit_code=0
