@@ -36,7 +36,7 @@ Repaired six-type coverage, assessment alignment, source disclosures and paragra
 ## Outcome
 
 - ✅ Impact: Bounded English author repairs address F1-F4 and F8.
-- 🧪 Tests: Final validation results recorded below after checks finish.
+- 🧪 Tests: All 14 content gates pass on the repaired branch and origin/main after generating ignored content status. All 368 tests in 31 files passed. Scoped figure dark variants pass freshness checks.
 - 📁 Files: Unit 1 prose, assessment, coverage, concepts, sources, figure manifest, two figures and dark variants, tracker and repair handoff.
 - 🔁 Next prompts: Owner resolves source mapping and review evidence gaps.
 - 🧠 Reflection: Source code inspection cannot substitute for prohibited browser geometry checks.
@@ -51,6 +51,15 @@ Repaired six-type coverage, assessment alignment, source disclosures and paragra
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Content edits stale G2 manifests; refresh only after committing bound inputs.
-- Graders run and results (PASS/FAIL): Pending final run; see final validation addendum.
+- Graders run and results (PASS/FAIL): PASS: check:content (14/14), npm test (368/368), scoped figures:variants --check, git diff --check. Browser geometry and print were prohibited, not passed.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Independent review with an authenticated frozen bundle and render evidence when authorised.
+
+## Final validation addendum
+
+The first content run found stale G2 inputs and a figure font-stack issue. The repaired run also
+caught declaration-scope formatting, which was fixed and rechecked. The final branch and isolated
+origin/main baseline both pass all 14 content gates after build:content-status generates the ignored
+status artifact. No site build or browser was run. The G2 record generated at 20261103T183724789Z
+binds author commit 82b1502a8; its eight draft checks passed. Unit 1's existing G2 row now points to
+that record. G3 remains in progress. All work is local; no push or pull request.

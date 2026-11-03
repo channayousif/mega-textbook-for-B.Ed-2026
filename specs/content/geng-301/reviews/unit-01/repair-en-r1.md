@@ -21,3 +21,9 @@ No Urdu or licence Unit 1 mirror exists. This course is English-only under its a
 ## Validation
 
 Content gates and the required unit suite are run by the main worker. G2 evidence must bind the final committed content; refreshing that deterministic record does not certify G3. See the accompanying G2 evidence and the PHR for final results.
+
+Final results: all 14 content gates pass, as do all 14 gates on an isolated origin/main baseline
+(after generating ignored content status in each). The required suite passed 368 tests in 31 files.
+Scoped dark-variant freshness and git diff whitespace checks pass. The refreshed deterministic G2
+record is G2/20261103T183724789Z-gates.json, bound to content commit 82b1502a8. Browser geometry,
+print, authenticated provenance and answer-blind assessment solving remain unverified.
