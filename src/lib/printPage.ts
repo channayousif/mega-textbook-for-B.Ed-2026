@@ -62,8 +62,11 @@ let savedTitle: string | null = null;
 /** Puts the print title in place of the page title until restorePageTitle(). */
 export function setPrintTitle(): void {
   if (savedTitle !== null) return;
-  const crumbs = Array.from(document.querySelectorAll('.theme-doc-breadcrumbs .breadcrumbs__item'))
-    .map((li) => li.textContent ?? '');
+  // CourseNavBar marks each sidebar level with data-crumb (the programme segment is not one);
+  // the stock breadcrumb list is the fallback.
+  const marked = Array.from(document.querySelectorAll<HTMLElement>('[data-crumb]')).map((li) => li.dataset.crumb ?? '');
+  const crumbs = marked.length ? marked
+    : Array.from(document.querySelectorAll('.theme-doc-breadcrumbs .breadcrumbs__item')).map((li) => li.textContent ?? '');
   const title = printTitle(crumbs);
   if (!title) return;
   savedTitle = document.title;

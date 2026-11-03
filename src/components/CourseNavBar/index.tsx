@@ -168,7 +168,8 @@ export default function CourseNavBar(): React.ReactElement | null {
         )}
         {levels.map((level, i) => (
           // pathname in the key closes any open menu when the page changes
-          <li className={styles.crumb} key={`${i}:${pathname}`}>
+          // data-crumb feeds the print title ("subject | unit | topic", src/lib/printPage.ts)
+          <li className={styles.crumb} key={`${i}:${pathname}`} data-crumb={level.label}>
             <Menu level={level} locale={locale} />
           </li>
         ))}
