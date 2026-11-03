@@ -181,3 +181,5 @@ the PHR and Paperclip handoff. No G3/G5 certification or publication is claimed.
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-03/G3/20261102T212207Z-g3-desk-d26592ad.json |
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-05/G3/20261102T212207Z-g3-desk-6054cf1d.json |
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-06/G3/20261102T212207Z-g3-desk-5907f448.json |
+
+| Unit 6 | G3 en-review | ▢ | agent:codex | advisory: revise; repairs applied; report specs/content/efmp-305/reviews/unit-06/G3/20261102T212207Z-g3-desk-5907f448.json; current EN estimates total 149 minutes (6 + 33 + 38 + 34 + 29 + 9), within approved 140-170 band, so reported 193-minute overrun no longer reproduces; no prose trim or approved-band change; UNICEF full PDF retrieved and relevant passages checked 2026-11-03 with matching SHA-256, provenance and corrected page locators recorded in reviews/unit-06/G3/20261103-repair-notes.md; research caveats preserved; independent G3 pending, no certification |
