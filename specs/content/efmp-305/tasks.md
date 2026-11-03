@@ -114,9 +114,8 @@ checked** and the sources file and teacher notes both say so.
 Governance files written: `coverage/unit-05.md`, `sources/unit-05.md` (nine keys, three with bound
 full-text excerpts, floor met), `concepts/unit-05.md` (28 concepts; six statutory terms carry an
 explicit instruction to the G4 translator to keep the English in parentheses and never paraphrase a
-quoted clause), `figures/unit-05.md` (6 figures, all `prompt-only`). `check:figures` reports the
-expected prompt-only findings for this unit (two per topic file, plus the schematic floor) until G6
-renders them. Statute framing follows `D-2026-0053` item 7: the Sindh Act is taught as the guide's
+quoted clause), `figures/unit-05.md` (6 placed figures with English/Urdu and dark SVG variants).
+The former prompt-only description is superseded; placement does not certify review or rendering. Statute framing follows `D-2026-0053` item 7: the Sindh Act is taught as the guide's
 2018 Act, with the federal ICT Act, 2020 confined to one passage and one figure.
 
 | Unit | Stage | Status | Initials | Notes |
@@ -126,7 +125,7 @@ renders them. Statute framing follows `D-2026-0053` item 7: the Sindh Act is tau
 | Unit 5 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only, not certification: specs/content/efmp-305/reviews/unit-05/G3/01a14adc-fef3-7883-8e8f-dd0c7ca30b71.json. Assessment ambiguity, incomplete audit, privacy conflict, source overclaims; provenance and narrow/A4 renders unavailable. Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 5 | G4 ur-translation | ▣ | | mirror complete (2026-10-19): all 6 files translated and verified against EN 3a8a8c0e; 6 .ur.svg/.ur.dark.svg figure variants synced; structural parity clean; all 3 key_terms conform to terminology.csv; handoff: reviews/unit-05/G4/translation-handoff.md; translation_status stays draft pending fresh independent G5 |
 | Unit 5 | G5 ur-review | ▢ | | |
-| Unit 5 | G6 assets | ▢ | | 6 schematic figures prompt-only (1 timeline, 1 concept-map, 1 diagram, 3 table) |
+| Unit 5 | G6 assets | ▢ | | 6 schematic figures placed with EN/UR and dark variants; current browser/print inspection pending (1 timeline, 1 concept-map, 1 diagram, 3 table) |
 | Unit 5 | G7 publish | ▢ | | |
 
 **Unit 6 - Collaboration and Parental Involvement (2026-10-16):** preserved the interrupted
@@ -181,3 +180,7 @@ the PHR and Paperclip handoff. No G3/G5 certification or publication is claimed.
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-03/G3/20261102T212207Z-g3-desk-d26592ad.json |
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-05/G3/20261102T212207Z-g3-desk-6054cf1d.json |
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-06/G3/20261102T212207Z-g3-desk-5907f448.json |
+
+| Unit | Stage | Status | Initials | Suggestion |
+|---|---|---|---|---|
+| Unit 5 | G3 en-review | ▣ | agent:codex | advisory: revise; repairs applied for 20261102T212207Z-g3-desk-6054cf1d.json (F2–F8); see reviews/unit-05/repair-en-20261103/repair-notes.md. F1 provenance and browser/print evidence remain owner/host work; fresh independent review and MCQ re-solve required. G3 remains unticked. |
