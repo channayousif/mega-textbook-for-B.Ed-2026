@@ -57,7 +57,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Reconciled origin/main with crew/geng-300-u03-repair_en, preserved the Unit 3 G3 advisory repair row in specs/content/geng-300/tasks.md, and verified all 13 content gates pass.
+Reconciled origin/main with crew/geng-300-u03-repair_en, verified all 13 content gates pass, and committed merge reconciliation records.
 
 ## Outcome
 
@@ -69,13 +69,13 @@ Reconciled origin/main with crew/geng-300-u03-repair_en, preserved the Unit 3 G3
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Reconciled origin/main with crew/geng-300-u03-repair_en, preserved the Unit 3 G3 advisory repair row in specs/content/geng-300/tasks.md, and verified all 13 content gates pass.
+- Shipped / changed: Reconciled origin/main with crew/geng-300-u03-repair_en, verified all 13 content gates pass, and committed merge reconciliation records.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All three desk-report findings are owner/host handoff, not author-repairable: author-run identity and parent frozen-bundle handoff unavailable; the D-2026-0019 three-vs-four-unit conflict and the D-2026-00XX intake placeholder need owner clarification; fresh narrow-view/A4 render inspection needs a permitted render host.
-  - No content edit was made because the desk report contains no author-repairable content finding; check:content passes 13/13 and the figure geometry measure exits 0 on all Unit 3 SVGs.
-  - Fresh independent G3 needs owner authorisation under ADR-0019 (cycle limit); G3 remains unticked.
+  - All three desk-report findings are owner/host handoff items; no author-repairable content defects exist in Unit 3.
+  - Fresh independent G3 review requires owner authorisation under ADR-0019 (cycle limit); G3 remains unticked.
+  - Branch is level with origin/main and passes all 13 content gates.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
