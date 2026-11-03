@@ -38,7 +38,7 @@ files:
   - specs/content/efmp-301/reviews/unit-09/repairs/20261103-codex/handoff.md
   - history/prompts/general/20261115-repair-efmp301-unit-nine.general.prompt.md
 tests:
-  - "npm run check:content: baseline 13/13 passed; final rerun after evidence refresh"
+  - "npm run check:content: baseline and final 13/13 passed after Unit 9 G2 evidence refresh"
   - "TMPDIR=$PWD/.crew/test-tmp scripts/heavy.sh npm test: 28 files, 347 tests passed"
   - "node scripts/measure-figure-text.mjs: all four changed SVGs passed"
   - "npm run validate:content and npm run check:depth-gate: passed after repairs"
@@ -50,13 +50,13 @@ Read .crew/brief.md in the current directory and carry it out completely. It is 
 
 ## Response snapshot
 
-Applied the latest Unit 9 G3 content findings in English and Urdu, corrected figure 6 and assessment mappings, recorded the advisory repair row, and retained render/provenance owner handoffs. Committing only on the assigned branch.
+Applied the latest Unit 9 G3 content findings in English and Urdu, corrected figure 6 and assessment mappings, recorded the advisory repair row, and retained render/provenance owner handoffs. Committed only on the assigned branch; no push or PR.
 
 ## Outcome
 
 - ✅ Impact: Repaired assessment spread, option positions, Bloom demand, scenario continuity, practical authority, dual-use claims, activity timing, reliability uncertainty and ERQ marking.
-- 🧪 Tests: 347 unit tests and changed-SVG geometry passed; baseline content gates green; refresh final deterministic evidence and rerun content gates.
-- 📁 Files: Five English and five Urdu MDX files, four governance tables, tracker, four SVG variants, repair handoff and PHR; deterministic evidence refresh follows.
+- 🧪 Tests: 347 unit tests and changed-SVG geometry passed; baseline and final 13/13 content gates green; fresh Unit 9 G2 evidence accepted; frozen manifest matches 99 current inputs.
+- 📁 Files: Five English and five Urdu MDX files, four governance tables, tracker, four SVG variants, repair handoff and PHR; fresh Unit 9 deterministic evidence, frozen manifest and verification logs.
 - 🔁 Next prompts: Owner arranges permitted current render review and authenticated independent review within cycle limits.
 - 🧠 Reflection: A single score cannot establish reliability; edited content requires fresh deterministic input digests.
 
@@ -70,6 +70,6 @@ Applied the latest Unit 9 G3 content findings in English and Urdu, corrected fig
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: First edited gate run caught a 201-character description, coverage/source key mismatch, stale G2 digest and generated status cache; corrected inputs before refreshing evidence.
-- Graders run and results (PASS/FAIL): PASS: baseline 13 content gates, 347 unit tests, four SVG geometry checks, corrected validation/depth; final gate run pending evidence refresh.
+- Graders run and results (PASS/FAIL): PASS: baseline 13 content gates, 347 unit tests, four SVG geometry checks, corrected validation/depth; final 13 content gates and fresh G2 evidence.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Use the committed clean input manifest for permitted render inspection and independent review.

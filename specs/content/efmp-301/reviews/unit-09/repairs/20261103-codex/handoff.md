@@ -2,7 +2,7 @@
 
 This is an author repair record, not an independent review or certification.
 It answers the unresolved findings in
-`../G3/20261102T212207Z-g3-desk-b282fccc.json` (relative to the unit review directory).
+`specs/content/efmp-301/reviews/unit-09/G3/20261102T212207Z-g3-desk-b282fccc.json`.
 Earlier reports and manifests remain unchanged. G3 stays unticked; translation
 status stays draft. No build, server, Playwright or render inspection was run.
 
@@ -57,10 +57,14 @@ The starting clean HEAD equalled origin/main at
 347 unit tests across 28 files passed with the heavy-job wrapper. All four changed
 SVG variants passed `measure-figure-text.mjs`.
 
-Content edits invalidate Unit 9's old G2 digest. Refresh only this unit's evidence
-from committed inputs, retaining its existing G2 status and leaving G3/G5 open.
-A clean-input manifest prepared after the content commit is a reproducible input
-inventory, not authenticated author-session provenance.
+All 13 final content gates passed, matching the green origin/main baseline.
+Unit 9's G2 evidence was refreshed at
+`G2/20261103T054027035Z-gates.json` (under this unit's review directory)
+from committed repair inputs at `c71847127`; its existing status is unchanged.
+The G2 validator accepted the evidence. The prepared `frozen-input/manifest.json`
+matches all 99 current G3 inputs. This is a reproducible input inventory, not
+authenticated author-session provenance. G3/G5 stay open. Logs are preserved here;
+the unit-test log records the 347 passing tests, not an independent content review.
 
 - **Owner/render host:** arrange current frozen-input narrow/mobile and A4 checks,
   including English and Urdu glyph inspection. Text measurement is not render review.
