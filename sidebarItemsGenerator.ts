@@ -33,7 +33,9 @@ const LABELS = {
 
 /** "Topic 2.1 - Water on Earth" / "موضوع 2.1 - ..." -> ["2.1", "Water on Earth"]. */
 function splitNumbered(title: string): [string | null, string] {
-  const m = title.match(/^\s*(?:Topic|موضوع|Unit|یونٹ)?\s*(\d+(?:\.\d+)?)\s*[-–·:]\s*(.+)$/);
+  const m = title.match(/^\s*(?:Topic|موضوع|Unit|یونٹ)?\s*(\d+(?:\.\d+)?)\s*[-–·:]\s*(.+)$/)
+    // "2.1 Reading the world" (no separator): only a dotted N.M counts, so "1973 Constitution" stays whole.
+    ?? title.match(/^\s*(?:Topic|موضوع)?\s*(\d+\.\d+)\s+(.+)$/);
   return m ? [m[1], m[2].trim()] : [null, title.trim()];
 }
 
@@ -77,7 +79,11 @@ export const textbookSidebarItems: SidebarItemsGeneratorOption = async ({ defaul
     if (base === 'unit-teacher-notes') return en({ ...it, label: W.notes }, english);
     if (/^topic-\d+$/.test(base)) {
       const [num, title] = splitNumbered(docs.get(it.id)?.title ?? it.label ?? base);
-      return en({ ...it, label: num ? `${W.topic} ${num} · ${title}` : title }, english);
+      // A title without its "Topic N.M" prefix (owner report, 2026-11-03: Semester 3)
+      // still gets its number, from the unit-NN/topic-NN path.
+      const unit = it.id.match(/unit-(\d+)\/topic-(\d+)$/);
+      const label = num ?? (unit ? `${Number(unit[1])}.${Number(unit[2])}` : null);
+      return en({ ...it, label: label ? `${W.topic} ${label} · ${title}` : title }, english);
     }
     return it;
   };

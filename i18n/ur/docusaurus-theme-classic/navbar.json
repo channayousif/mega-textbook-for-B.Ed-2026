@@ -7,9 +7,17 @@
     "message": "بی ایڈ میگا ٹیکسٹ بک",
     "description": "The alt text of navbar logo"
   },
-  "item.label.Licence track": {
-    "message": "لائسنس ٹریک",
-    "description": "Navbar item with label Licence track"
+  "item.label.Programmes": {
+    "message": "پروگرام",
+    "description": "Navbar item with label Programmes"
+  },
+  "item.label.B.Ed": {
+    "message": "بی ایڈ",
+    "description": "Navbar item with label B.Ed"
+  },
+  "item.label.Teaching licence": {
+    "message": "تدریسی لائسنس",
+    "description": "Navbar item with label Teaching licence"
   },
   "item.label.Pricing": {
     "message": "Pricing",

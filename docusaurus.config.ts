@@ -268,13 +268,22 @@ const config: Config = {
       logo: { alt: 'Mega Textbook', src: 'img/logo.svg', width: 28, height: 28 },
       title: 'Mega Textbook',
       items: [
+        // Programme switcher first (owner request, 2026-11-03), the same choice
+        // the CourseNavBar's first segment offers on every docs page. It is the
+        // licence track's navbar entry (Feature 015, T027); the track stays out of
+        // the semester sidebar because EED-313 is not part of the approved 2026
+        // scheme (research R3).
+        {
+          type: 'dropdown',
+          label: 'Programmes',
+          position: 'left',
+          items: [
+            { to: '/intro', label: 'B.Ed', activeBaseRegex: '/(semester-\\d|intro)' },
+            { to: '/licence/', label: 'Teaching licence', activeBaseRegex: '/licence/' },
+          ],
+        },
         { to: '/about', label: 'About', position: 'left' },
         { to: '/contact', label: 'Contact', position: 'left' },
-        // Feature 015, T027 - the licence track's only navigation entry.
-        // Article X-bis discoverability is met here plus offline search; the
-        // track is deliberately absent from the semester sidebar, because
-        // EED-313 is not part of the approved 2026 scheme (research R3).
-        { to: '/licence/', label: 'Licence track', position: 'left' },
         // Spec 010 follow-up, 2026-09-07 - registers
         // src/components/MobileTopBarWidgets.tsx; renders nothing at
         // desktop widths, a compact locale-switch + sign-in-status pair at
