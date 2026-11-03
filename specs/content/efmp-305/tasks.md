@@ -35,6 +35,7 @@ per-topic layout: `index.mdx` + `topic-01…02.mdx` (nine-part cycles) + `unit-a
 | Unit 1 | G7 publish | ▢ | | |
 | Unit 1 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-305/reviews/unit-01/G3/agent-g3-efmp-305-u1-run2f195870.json |
 | Unit 1 | G3 en-review | ▢ | | advisory: escalate; final cycle; agent:codex-g3-reviewer; report specs/content/efmp-305/reviews/unit-01/G3/codex-01a17f6f.json; prior findings resolved, new assessment/source defects and missing render/provenance evidence require owner disposition; no certification |
+| Unit 1 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-305/reviews/unit-01/G3/20261102T212207Z-g3-desk-65386ad3.json; topic-01 summative task now rewards segregation, opening verb and Further reading (UNESCO, Miles) aligned; topic-02 UNICEF/NEP claims bound to unicef2014/nep2009 with honest limits, Hehir limit added, Ainscow Further reading aligned; assessment RRQ 5 key, MCQ 10, RRQ 9 Hehir limit and ERQ rubric aggregation repaired; index and teacher-notes wording repaired; UR mirrors updated; G3 left unticked |
 
 **Unit 2 - Understanding Learner Diversity (2026-10-09):** authored to the Spec 008 v3.0
 per-topic layout: `index.mdx` + `topic-01…02.mdx` (nine-part cycles) + `unit-assessment.mdx`
