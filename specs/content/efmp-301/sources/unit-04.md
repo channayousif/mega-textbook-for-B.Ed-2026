@@ -16,7 +16,16 @@ exactly this content, open access.
 | spielman2020 | Spielman, R., Jenkins, W., & Lovett, M. (2020). *Psychology 2e*. OpenStax, Rice University. CC BY-NC-SA 4.0. | https://openstax.org/books/psychology-2e | U4-1 (attention as the gateway; the spotlight's properties; inattentional blindness); U4-2 (sensation versus perception; active interpretation); U4-3 (the three memory systems and their jobs and capacities); U4-4 (encoding, storage, retrieval; active rehearsal; the study-strategy evidence); U4-5 (the perception-concept link in the reinforcement table) | open-access-substitute, retrieved and read 2026-09-24; bound excerpt in sources/texts/spielman2020.md |
 | seifert2009 | Seifert, K., & Sutton, R. (2009). *Educational Psychology* (2nd ed.). CC BY 3.0. | https://home.cc.umanitoba.ca/~seifert/EdPsy2009.pdf | U4-1, U4-3, U4-4 (the reinforcement rows: attention's gateway framing, the working-memory constraint, the design rules); U4-5 (concepts and transfer); U4-6 (problem-solving strategies and obstacles); U4-7 (the reasoning framing) | guide-required, retrieved and read 2026-09-24, Chapter 9 excerpt added at G3 repair 2026-09-25; bound excerpt in sources/texts/seifert2009.md |
 | ariel2018 | Ariel, R., & Karpicke, J. D. (2018). Improving self-regulated learning with a retrieval practice intervention. *Proceedings of the 40th Annual Conference of the Cognitive Science Society*. ERIC ED599268. | https://files.eric.ed.gov/fulltext/ED599268.pdf | U4-4 (the spacing and retrieval-practice evidence behind the study-strategy guidance: repeated retrieval practice over restudying; the spacing of retrieval attempts) | open-access supplement, ERIC full-text, retrieved and read 2026-09-25; bound excerpt in sources/texts/ariel2018.md |
-| vosniadou2001 | Vosniadou, S. (2001). *How children learn*. Educational Practices Series No. 7. International Academy of Education / UNESCO IBE. | https://eric.ed.gov/?id=ED455955 | U4-4 (relating new information to prior knowledge; taking time to practice); U4-5 (concept formation) | open-access-substitute, ERIC-verified (first 2026-09-11, re-retrieved 2026-09-24); bound excerpt in sources/texts/vosniadou2001.md |
+
+## Further reading only (no coverage binding)
+
+Vosniadou, S. (2001). *How children learn*. Educational Practices Series No. 7.
+International Academy of Education / UNESCO IBE. https://eric.ed.gov/?id=ED455955.
+ERIC-verified (first 2026-09-11, re-retrieved 2026-09-24). Listed under Further Reading in
+Topics 4.2 and 4.3 only. Its bound excerpt (sources/texts/vosniadou2001.md) carries only
+Principle 11 (developmental differences), so it no longer backs any U4 sub-topic: the U4-4
+and U4-5 support rows were removed at the G3 repair of 2026-11-03, and no unit claim rests
+on it.
 
 ## Guide-required sources
 
