@@ -73,3 +73,5 @@ reviewer initials). One row per unit per stage (`G1`–`G7`).
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/geng-301/reviews/unit-03/G3/20261102T212207Z-g3-desk-bbbec948.json |
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/geng-301/reviews/unit-05/G3/20261102T212207Z-g3-desk-0ea60289.json |
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/geng-301/reviews/unit-06/G3/20261102T212207Z-g3-desk-f5b7ea25.json |
+
+| Unit 5 | G3 en-review | ▣ | | advisory: revise; repairs applied for report specs/content/geng-301/reviews/unit-05/G3/20261102T212207Z-g3-desk-0ea60289.json, blocking findings 1-6 in 20261019-codex-review/summary.md. Fictional study labelled; assessment evidence, hedging and keys repaired; register guidance and figure labels qualified; weeks 14-15 restored. Repair record: reviews/unit-05/repairs/20261103-repair-en.md. No Urdu mirror exists. Provenance and current desktop/narrow/A4 inspection remain pending; fresh independent G3 required. G3 remains incomplete. |
