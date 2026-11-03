@@ -51,7 +51,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
 | Unit 5 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-05/G2/20261102T072749572Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-05/G2/20261103T044540225Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | agent:codex-g3-reviewer | advisory cycle2: escalate; final authorised cycle, owner action required; report reviews/unit-05/G3/codex-crew-cycle2.json |
 | Unit 5 | G4 ur-translation | ✅ | auto:gates | full UR mirror (5 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
 | Unit 5 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at b8eabccc; G3 dependency escalated to owner; figure/prose vocabulary splits escalated to owner; report reviews/unit-05/G5/agent-g5-efmp301-u5-run001.json |
@@ -79,7 +79,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 8 | G6 assets | ▢ | | |
 | Unit 8 | G7 publish | ▢ | | |
 | Unit 9 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0044; content-spec status: approved |
-| Unit 9 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-09/G2/20261102T072750073Z-gates.json |
+| Unit 9 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-301/reviews/unit-09/G2/20261103T054027035Z-gates.json |
 | Unit 9 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at b2ff0b3b; report reviews/unit-09/G3/agent-g3-efmp301-u9-run001.json |
 | Unit 9 | G4 ur-translation | ✅ | auto:gates | full UR mirror (6 files) committed 2026-09-25; check:pipeline-gate pass; translation_status stays draft pending G5 |
 | Unit 9 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at 0a8eff4a; G3 dependency escalated to owner; terminology rulings (generic جانچ vs banked تشخیص; bank Reliability Arabic-yeh defect) escalated to owner; report reviews/unit-09/G5/agent-g5-efmp301-u9-run001.json |
@@ -141,6 +141,10 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 3 | G3 en-review | ▢ | | advisory: revise; repairs applied; report reviews/unit-03/G3/20261102T211054Z-g3-desk-1ffb278b.json; EN/UR assessment and mechanism repairs, coverage bindings and introduction corrected; render/glyph geometry and provenance remain owner handoff items; fresh independent review required |
 
 | Unit 12 | G3 en-review | ▢ | | advisory: revise; repairs applied; report reviews/unit-12/G3/20261102T212207Z-g3-desk-1ab85eaa.json; modelling, running question, case status and assessment guidance repaired in EN and UR; visual inspection and historical provenance remain unverified; owner must authorise any further review after exhausted cycles; see reviews/unit-12/G3/repair-en-20261103.md |
+| Unit 9 | G3 en-review | ▢ | agent:codex | advisory: revise; repairs applied; report specs/content/efmp-301/reviews/unit-09/G3/20261102T212207Z-g3-desk-b282fccc.json; EN and UR assessment, authority, pedagogy and figure repairs; current render and authenticated provenance remain owner handoffs; no certification |
+
+| Unit 5 | G3 en-review | ▢ | | advisory: revise; repairs applied; multimodal claims and IQ prediction claims qualified across topics, assessment and figures; fig-U5-1 geometry verified and Thurstone/CHC positions restored; ERQ 5 widened to blueprint integrative pupil profile with explicit 250-300 word conditions; Seifert and Rohrer source/coverage locators corrected; early finisher framed as hypothesis; report specs/content/efmp-301/reviews/unit-05/G3/20261102T211054Z-g3-desk-5bdd915a.json |
+| Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-04/G3/20261102T213456Z-g3-desk-147d237b.json |
 
 ## Re-restructure in progress (2026-09-11)
 

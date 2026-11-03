@@ -4,7 +4,8 @@ Per `specs/008-rich-unit-pedagogy/contracts/coverage-matrix-v2.md`. Every `U3-NN
 `### Sub-topic checklist` of `specs/content/efmp-304/content-spec.md` (`## Unit 3` subsection) is
 mapped below to the **topic file** and the **exact `###` heading** (under that topic's
 `## Explanation`) that covers it, and to the source key it is grounded in (keys resolve in
-`specs/content/efmp-304/sources/unit-03.md`).
+`specs/content/efmp-304/sources/unit-03.md`). Mapped Bassham rows record guide-reading alignment
+only, not verified claim support; see sources/unit-03.md.
 
 `File` is one of the new-shape set: `index.mdx`, `topic-01.mdx … topic-04.mdx`,
 `unit-assessment.mdx`. Every `topic-NN.mdx` is named by at least one row, and every checklist ID
