@@ -125,6 +125,11 @@ Front matter = the unit schema **plus** `topic_no` (== the filename ordinal) and
 (the `### Topic list` label, e.g. `"1.1"`). `clo_refs` = the subset the topic serves. Add
 `<PrintHandout />` at the top (a topic cycle is a self-contained printable lesson).
 
+**Topic numbering (gated by `validate:content`).** `topic_label` is `"<unit_no>.<topic_no>"`.
+`title` leads with it, a spaced hyphen, then the `### Topic list` title:
+`title: "Topic 2.1 - Reading the world critically"`. Not a bare title, not `2.1 Reading…`, not
+`Topic 2.1: Reading…`. If the page has an `#` H1, it repeats the `title` exactly.
+
 The nine canonical `##` headings, **in this exact order** (contract: `contracts/topic-cycle.md`):
 
 1. `## A real classroom situation` - a short, concrete, Pakistan/Sindh-grounded vignette that
@@ -212,7 +217,7 @@ npm run check:content
 npm run check:all
 ```
 
-`check:content` runs, in order: `validate:content` -> `check:pipeline-gate` -> `check:depth-gate` -> `check:figures` -> `check:no-em-dash` -> `check:no-answer-keys` -> `check:concept-graph` -> `check:bloom-bands` -> `check:source-floor` -> `check:licence` -> `licence:map:check` -> `check:content-status` -> `check:docs-sync`.
+`check:content` runs, in order: `validate:content` -> `check:pipeline-gate` -> `check:depth-gate` -> `check:figures` -> `check:svg-style` -> `check:no-em-dash` -> `check:no-answer-keys` -> `check:concept-graph` -> `check:bloom-bands` -> `check:source-floor` -> `check:licence` -> `licence:map:check` -> `check:content-status` -> `check:docs-sync`.
 <!-- END GENERATED gate-commands -->
 
 `check:pipeline-gate` may be **red** for this unit until its `tasks.md` G2/G3 rows re-clear the

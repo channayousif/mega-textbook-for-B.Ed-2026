@@ -71,6 +71,12 @@ describe('EN<->UR parity gate — per-topic layout', () => {
   const body = (headings = ['## A real classroom situation', '## Explanation']) =>
     `\n# Topic\n\n${headings.map((h) => `${h}\n\ntext\n`).join('\n')}`;
 
+  // A topic page's title leads with its number and any H1 repeats it (validate-content).
+  const topic = (dir, urDir, n, headings) => {
+    const title = `${dir === urDir ? 'موضوع' : 'Topic'} 1.${n} - x`;
+    return fm({ topic_no: n, topic_label: `1.${n}`, title }) + body(headings).replace('# Topic', `# ${title}`);
+  };
+
   function makeNewShape({ dropUrHeading = false, omitUrTopic2 = false } = {}) {
     const r = mkdtempSync(join(tmpdir(), 'bed-parity-topic-'));
     const enDir = join(r, 'docs', 'semester-1', 'efmp-302', 'unit-01');
@@ -82,13 +88,13 @@ describe('EN<->UR parity gate — per-topic layout', () => {
     for (const dir of [enDir, urDir]) {
       writeFileSync(join(dir, 'index.mdx'), fm() + '\n# Unit\n\n## In this unit\n\n1. one\n2. two\n');
       writeFileSync(join(dir, 'unit-assessment.mdx'), fm() + body(['## Unit summary', '## Summative assessment']));
-      writeFileSync(join(dir, 'topic-01.mdx'), fm({ topic_no: 1, topic_label: '1.1' }) + body());
+      writeFileSync(join(dir, 'topic-01.mdx'), topic(dir, urDir, 1));
       if (!(dir === urDir && omitUrTopic2)) {
-        writeFileSync(join(dir, 'topic-02.mdx'), fm({ topic_no: 2, topic_label: '1.2' }) + body());
+        writeFileSync(join(dir, 'topic-02.mdx'), topic(dir, urDir, 2));
       }
     }
     if (dropUrHeading) {
-      writeFileSync(join(urDir, 'topic-01.mdx'), fm({ topic_no: 1, topic_label: '1.1' }) + body(['## A real classroom situation']));
+      writeFileSync(join(urDir, 'topic-01.mdx'), topic(urDir, urDir, 1, ['## A real classroom situation']));
     }
     return r;
   }
