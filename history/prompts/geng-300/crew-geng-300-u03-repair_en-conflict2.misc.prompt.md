@@ -16,7 +16,9 @@ links:
   adr: null
   pr: null
 files:
+ - history/prompts/geng-300/crew-geng-300-u03-repair_en-conflict1.misc.prompt.md
  - history/prompts/geng-300/crew-geng-300-u03-repair_en-conflict2.misc.prompt.md
+ - history/prompts/geng-300/crew-geng-300-u03-repair_en.misc.prompt.md
  - specs/content/geng-300/tasks.md
 tests:
  - npm run check:content
@@ -55,27 +57,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (geng-300-u03-repair_en, repair_en, opencode) All three desk-report findings are owner/host handoff, not author-repairable: author-run identity and parent frozen-bundle handoff unavailable; the D-2026-0019 three-vs-four-unit conflict and the D-2026-00XX intake placeholder need owner clarification; fresh narrow-view/A4 render inspection needs a permitted render host.
 - (geng-300-u03-repair_en, repair_en, opencode) No content edit was made because the desk report contains no author-repairable content finding; check:content passes 13/13 and the figure geometry measure exits 0 on all Unit 3 SVGs.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/geng-300-u03-repair_en, union-resolved the one tracker conflict (specs/content/geng-300/tasks.md) with main's Unit 4 row first and this branch's Unit 3 row last, and verified all 13 content gates pass.
+Merged origin/main, union-resolved the append-only tasks.md conflict (main's rows first, branch's last), and verified all 13 content gates pass with the PHR committed.
 
 ## Outcome
 
 - Impact: fix for GENG-300 Unit 3 by opencode (attempt 1).
-- Tests: npm run check:content passed (13/13) after regenerating the git-ignored static/content-status.json.
-- Files: 2 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 4 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: merge of origin/main into crew/geng-300-u03-repair_en with the append-only tracker conflict resolved; PHR recorded.
-- Decisions the team must respect: tracker rows are append-only; on conflict keep both sides, main's rows first, the incoming rows last. G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything.
+- Shipped / changed: Merged origin/main, union-resolved the append-only tasks.md conflict (main's rows first, branch's last), and verified all 13 content gates pass with the PHR committed.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All three desk-report findings are owner/host handoff items; no author-repairable content defects exist in Unit 3.
-  - Fresh independent G3 review requires owner authorisation under ADR-0019 (cycle limit); G3 remains unticked.
   - check:content-status reads the git-ignored static/content-status.json; regenerate it with `npm run build:content-status` in a fresh worktree before judging that gate.
+  - Unit 3 G3 stays unticked; all three desk findings are owner/render-host handoff, not author-repairable.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
