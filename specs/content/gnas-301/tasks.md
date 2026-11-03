@@ -72,7 +72,11 @@ units may be authored.
 | Unit 4 | G3 en-review | ▢ | | Advisory escalate: specs/content/gnas-301/reviews/unit-04/G3/4361ffe1-f35e-49e5-877d-83d1f34398a8.json; round-2 repairs verified (phantom abbasi2022 and who-mental-health-work, duplicate khan2024 row, balanced MCQs, citation scope, fire factory phrasing, concepts item lists, descriptive links, 56 SVG variants clean); visual render unperformed (crew constraints); G3 stays open, unsigned (ADR-0019) |
 | Unit 5 | G3 en-review | ▢ | | advisory cycle 2 (disposition: pass) at specs/content/gnas-301/reviews/unit-05/G3/5c420198-baaa-4562-ab56-91a01924a95a.json; round-2 repairs verified (5.1 RRQ blueprint, WHO claims, fig-U5-3 arrows, coverage cells, alibhatti authors); all 32 SVGs pass geometry; G3 stays open, unsigned (ADR-0019) |
 | Unit 6 | G3 en-review | ▢ | agent:codex-g3-reviewer | advisory: escalate; repair reconciliation in reviews/unit-06/G3/codex-20261028-reconciliation.json; four prior blocking repairs verified, unresolved concept mappings and ladder assumptions recorded; current render/source/provenance evidence incomplete; G-2026-33 cycle-count conflict remains owner-owned; no certification |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gnas-301/reviews/unit-02/G3/20261102T142352Z-g3-desk-6d88f1d9.json |
+| Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gnas-301/reviews/unit-06/G3/20261102T142352Z-g3-desk-f818650d.json |
 | Unit 3 | G3 en-review | ✅ | CMY | review:specs/content/gnas-301/reviews/unit-03/G3/20261102T140729Z-g3-desk-1e744dc1.json |
 | Unit 5 | G3 en-review | ✅ | CMY | review:specs/content/gnas-301/reviews/unit-05/G3/20261102T140729Z-g3-desk-6da9f991.json |
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gnas-301/reviews/unit-02/G3/20261102T211054Z-g3-desk-207756e4.json |
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gnas-301/reviews/unit-06/G3/20261102T211054Z-g3-desk-c9e52a96.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gnas-301/reviews/unit-02/G3/20261102T212207Z-g3-desk-bc87d518.json |
+| Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gnas-301/reviews/unit-06/G3/20261102T212207Z-g3-desk-06be9f9b.json |
