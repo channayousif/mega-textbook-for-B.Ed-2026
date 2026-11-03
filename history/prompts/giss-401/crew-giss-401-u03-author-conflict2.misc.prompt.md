@@ -25,15 +25,15 @@ files:
  - specs/content/giss-401/concepts/unit-03.md
  - specs/content/giss-401/coverage/unit-03.md
  - specs/content/giss-401/figures/unit-03.md
- - specs/content/giss-401/reviews/unit-03/G2/20261103T011416059Z-gates.json
- - specs/content/giss-401/reviews/unit-03/G2/logs-20261103T011416059Z/check-bloom-bands.txt
- - specs/content/giss-401/reviews/unit-03/G2/logs-20261103T011416059Z/check-concept-graph.txt
- - specs/content/giss-401/reviews/unit-03/G2/logs-20261103T011416059Z/check-depth-gate.txt
- - specs/content/giss-401/reviews/unit-03/G2/logs-20261103T011416059Z/check-docs-sync.txt
- - specs/content/giss-401/reviews/unit-03/G2/logs-20261103T011416059Z/check-figures.txt
- - specs/content/giss-401/reviews/unit-03/G2/logs-20261103T011416059Z/check-no-answer-keys.txt
- - specs/content/giss-401/reviews/unit-03/G2/logs-20261103T011416059Z/check-no-em-dash.txt
- - specs/content/giss-401/reviews/unit-03/G2/logs-20261103T011416059Z/validate-content.txt
+ - specs/content/giss-401/reviews/unit-03/G2/20261103T012212981Z-gates.json
+ - specs/content/giss-401/reviews/unit-03/G2/logs-20261103T012212981Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-03/G2/logs-20261103T012212981Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-03/G2/logs-20261103T012212981Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-03/G2/logs-20261103T012212981Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-03/G2/logs-20261103T012212981Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-03/G2/logs-20261103T012212981Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-03/G2/logs-20261103T012212981Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-03/G2/logs-20261103T012212981Z/validate-content.txt
  - specs/content/giss-401/sources/texts/quran-translation.md
  - specs/content/giss-401/sources/texts/sutomo-2014-akhlaq.md
  - specs/content/giss-401/sources/unit-03.md
@@ -85,24 +85,24 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Merged origin/main into crew/giss-401-u03-author and resolved all three add/add conflicts: kept main's guide-accurate course-overview.mdx, combined main's Unit 1 excerpts with Unit 3's verses in quran-translation.md, and kept both Unit 1 and Unit 3 rows in tasks.md. Refreshed Unit 3's G2 gate evidence against the post-merge tree; all 13 content gates pass.
+Merged origin/main into crew/giss-401-u03-author twice: main advanced mid-job to include GISS-401 Unit 4. First merge resolved three add/add conflicts (kept main's guide-accurate course-overview.mdx, combined main's Unit 1 excerpts with Unit 3's verses in quran-translation.md, kept both Unit 1 and Unit 3 rows in tasks.md). Second merge appended main's Unit 4 verses to quran-translation.md and Unit 4 rows to tasks.md. Refreshed Unit 3's G2 gate evidence after each merge; all 13 content gates pass.
 
 ## Outcome
 
 - Impact: fix for GISS-401 Unit 3 by opencode (attempt 1).
 - Tests: npm run check:content passed in the job worktree before the PR was opened.
-- Files: 29 file(s), listed above.
+- Files: 30 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/giss-401-u03-author and resolved three add/add conflicts (course-overview.mdx, quran-translation.md, tasks.md); refreshed Unit 3 G2 gate evidence; all 13 content gates pass.
-- Decisions the team must respect: course-overview.mdx stays main's guide-accurate version (the spec's "Course Objectives", reading list and GETH-401 note); Unit 3's verses live under `## Verified verses cited in Unit 3` in the shared quran-translation.md. G3/G5 stay open and unsigned.
+- Shipped / changed: Merged origin/main into crew/giss-401-u03-author twice (main advanced to include Unit 4 mid-job); resolved course-overview.mdx, quran-translation.md and tasks.md conflicts; refreshed Unit 3 G2 gate evidence after each merge; all 13 content gates pass.
+- Decisions the team must respect: course-overview.mdx stays main's guide-accurate version (the spec's "Course Objectives", reading list and GETH-401 note); quran-translation.md is a shared per-unit excerpt file carrying Unit 1, Unit 3 and Unit 4. G3/G5 stay open and unsigned.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The shared quran-translation.md now carries both Unit 1 and Unit 3 verses; do not collapse it back to one unit.
-  - Unit 3's G2 evidence was refreshed at `specs/content/giss-401/reviews/unit-03/G2/20261103T011416059Z-gates.json`; the older `20261102T230636766Z` evidence is superseded but left in place.
+  - The shared quran-translation.md now carries Unit 1, Unit 3 and Unit 4 verses; do not collapse it back to one unit.
+  - Unit 3's G2 evidence was refreshed twice; the current file is `specs/content/giss-401/reviews/unit-03/G2/20261103T012212981Z-gates.json`. Older evidence (`20261102T230636766Z`, `20261103T011416059Z`) is superseded but left in place.
   - `static/content-status.json` is gitignored and generated; rebuild it with `npm run build:content-status` after any tracker edit.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
