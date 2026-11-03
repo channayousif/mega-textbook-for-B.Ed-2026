@@ -1,6 +1,6 @@
 ---
 id: crew-efmp-301-u03-repair_en-conflict1
-title: crew repair_en-conflict1 EFMP-301 unit 3
+title: crew fix EFMP-301 unit 3
 stage: misc
 date: 2026-11-03
 surface: agent
@@ -8,16 +8,43 @@ model: agy
 feature: efmp-301
 branch: crew/efmp-301-u03-repair_en
 user: crew
-command: crew repair_en-conflict1
-labels: ["crew", "agy", "repair_en", "conflict"]
+command: crew fix
+labels: ["crew", "agy", "fix"]
 links:
   spec: specs/content/efmp-301/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
+ - docs/semester-1/efmp-301/unit-03/index.mdx
+ - docs/semester-1/efmp-301/unit-03/topic-01.mdx
+ - docs/semester-1/efmp-301/unit-03/topic-03.mdx
+ - docs/semester-1/efmp-301/unit-03/unit-assessment.mdx
  - history/prompts/efmp-301/crew-efmp-301-u03-repair_en-conflict1.misc.prompt.md
+ - history/prompts/efmp-301/crew-efmp-301-u03-repair_en.misc.prompt.md
+ - history/prompts/general/20261114-repair-efmp301-unit-three-g3.general.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-03/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-03/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-03/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-03/unit-assessment.mdx
+ - specs/content/efmp-301/coverage/unit-03.md
+ - specs/content/efmp-301/figures/unit-03.md
+ - specs/content/efmp-301/reviews/unit-03/G2/20261103T042148102Z-gates.json
+ - specs/content/efmp-301/reviews/unit-03/G2/logs-20261103T042148102Z/check-bloom-bands.txt
+ - specs/content/efmp-301/reviews/unit-03/G2/logs-20261103T042148102Z/check-concept-graph.txt
+ - specs/content/efmp-301/reviews/unit-03/G2/logs-20261103T042148102Z/check-depth-gate.txt
+ - specs/content/efmp-301/reviews/unit-03/G2/logs-20261103T042148102Z/check-docs-sync.txt
+ - specs/content/efmp-301/reviews/unit-03/G2/logs-20261103T042148102Z/check-figures.txt
+ - specs/content/efmp-301/reviews/unit-03/G2/logs-20261103T042148102Z/check-no-answer-keys.txt
+ - specs/content/efmp-301/reviews/unit-03/G2/logs-20261103T042148102Z/check-no-em-dash.txt
+ - specs/content/efmp-301/reviews/unit-03/G2/logs-20261103T042148102Z/validate-content.txt
+ - specs/content/efmp-301/reviews/unit-03/G3/20261103-repair-notes.md
+ - specs/content/efmp-301/sources/unit-03.md
  - specs/content/efmp-301/tasks.md
+ - static/img/figures/efmp-301/unit-03/fig-U3-6.dark.svg
+ - static/img/figures/efmp-301/unit-03/fig-U3-6.svg
+ - static/img/figures/efmp-301/unit-03/fig-U3-6.ur.dark.svg
+ - static/img/figures/efmp-301/unit-03/fig-U3-6.ur.svg
 tests:
  - npm run check:content
 ---
@@ -58,24 +85,24 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Merged origin/main into crew/efmp-301-u03-repair_en, resolved tracker conflict in specs/content/efmp-301/tasks.md by keeping main rows followed by branch advisory row, refreshed content status, and verified all 13 content gates pass.
+Merged origin/main into crew/efmp-301-u03-repair_en, union-resolved the G3 tracker conflict in specs/content/efmp-301/tasks.md, and verified all 13 content gates pass.
 
 ## Outcome
 
-- Impact: repair_en-conflict1 for EFMP-301 Unit 3 by agy.
-- Tests: npm run check:content passed in the job worktree before completing.
-- Files: specs/content/efmp-301/tasks.md, history/prompts/efmp-301/crew-efmp-301-u03-repair_en-conflict1.misc.prompt.md.
+- Impact: fix for EFMP-301 Unit 3 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 29 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/efmp-301-u03-repair_en, union-resolved tasks.md G3 tracker rows, refreshed content-status, and verified content gates pass.
+- Shipped / changed: Merged origin/main into crew/efmp-301-u03-repair_en, union-resolved the G3 tracker conflict in specs/content/efmp-301/tasks.md, and verified all 13 content gates pass.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
-- Pending / next owner: crew lead (auto-merge when CI is green).
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Owner must resolve render/glyph and provenance evidence before acceptance.
-  - Unit 3 G3 remains open pending fresh independent review.
+  - Unit 3 G3 remains open pending a fresh independent review cycle.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
