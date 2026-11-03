@@ -39,17 +39,44 @@ Open access (CC BY 4.0). Publisher PDF (https://link.springer.com/content/pdf/10
 
 "It works on the assumption that for literacy curricula to be meaningful they must be closely linked to the learners' own everyday uses of literacy. Literacy teaching should focus on 'real' or authentic texts from the learners' environment: for example, signboards, bureaucratic forms, religious texts and other documents."
 
-## Literacy as social practice and the critique of the autonomous model (used by U3-01)
+## Unit 3 bindings (used by U3-01, U3-02)
 
-From pages 68-71:
-"The New Literacy Studies (NLS) emerged in the 1980s as a critical alternative to traditional, cognitive conceptualizations of literacy. Traditional views, which Brian Street termed the 'autonomous model', treat literacy as an independent, neutral cognitive technology - a set of universal decoding and encoding skills that exist separately from social context. In contrast, NLS proposes an 'ideological model', arguing that literacy is always socially situated, culturally shaped, and inextricably bound to power relations. Rather than viewing literacy as a single, static ability that a person either possesses or lacks, NLS approaches literacy as multiple, dynamic 'literacy practices' that vary across different cultural, institutional, and historical contexts."
+Corrected 2026-11-03 (EFMP-406 Unit 3 G3 repair). An earlier version of this file carried three
+blocks for Unit 3, attributed to pp. 68-71, 71-73 and 74-77, that were formatted as quotations but
+were the author's own paraphrase and synthesis. The G3 review (report
+`20261102T212207Z-g3-desk-41db593c`) found that they do not occur in the article. They have been
+removed. The publisher PDF was downloaded again on 2026-11-03 from the URL above and extracted with
+`pdftotext -layout`; every passage below is copied from that extraction.
 
-## Literacy events and literacy practices (used by U3-01)
+### Section 3, p. 70 (U3-01: literacy as social practice; autonomous and ideological models)
 
-From pages 71-73:
-"Central to the social practice view is the conceptual distinction formulated by David Barton and Mary Hamilton between 'literacy events' and 'literacy practices'. A literacy event is any observable occasion in which a written text is central to the nature of the participants' interactions and their interpretive processes. In contrast, literacy practices are the broader cultural models, values, attitudes, and social relations that give meaning to those events. Practices are not directly observable; they encompass folk models of what reading and writing are for, who has the authority to interpret a text, and how literacy connects to social status, religious duty, economic survival, or institutional compliance."
+"Beginning with the works of Brian Street (1984, 1993), Shirley Brice Heath (1983, 2012) and others (e.g. Barton 2007), the NLS put forward an understanding of literacy as social and cultural practice: embedded in, shaped by and shaping values, beliefs and power relations."
 
-## Dominant versus vernacular literacies, identity, and power (used by U3-02)
+"Literacy practices are understood here to mean shared cultural ways of using and valuing literacy in different contexts. Driving this view, which Street (2003) aptly termed an 'ideological model' of literacy, is a strong commitment to inclusion and social justice and to understanding what students bring to their learning regardless of their backgrounds."
 
-From pages 74-77:
-"In any society, not all literacies carry equal weight or prestige. NLS distinguishes between 'dominant literacies' - those codified, regulated, and demanded by formal institutions such as schools, courts, banks, and state bureaucracies - and 'vernacular literacies', which originate in everyday community life, home domains, informal work, and grassroots networks. Dominant literacies are associated with social power, formal credentials, and economic mobility. When educational institutions fail to recognize learners' vernacular literacies and home language varieties, they communicate that the pupils' linguistic identities and cultural funds of knowledge are deficient. Effective and inclusive pedagogy requires understanding that literacy practices shape learner identity and that schooling must build bridges between community practices and formal academic expectations."
+"They investigate how these pedagogies lead to exclusion related to, for example, race and class, when only those practices that match mainstream views of literacy are valued and count under the existing regimes of assessment (Rowsell et al. 2019)."
+
+### Section 2, p. 70 (U3-02: literacy, personhood and prejudice)
+
+"As literacy in this view is seen as a 'property' of the individual (Prinsloo and Krause 2019, p. 159), it becomes connected to personhood - to how one is seen and positioned by others (Power-Carter and Zakeri 2019) - and linked to class, race and ethnicity-related prejudices and negative stereotypes."
+
+(The original uses an em dash on each side of the middle phrase; it is rendered here as a spaced hyphen under the repository's no-em-dash rule.)
+
+### Sections 4 and 5, pp. 71-72 (U3-02: languages, home literacies and school)
+
+"The 'multi' dimension of multiliteracies encompasses two elements: the use and recognition of multiple languages and socially and culturally appropriate forms of language (including non-standard, popular language varieties) and the central role of multiple modes (including visual and gestural) in communication and learning (Cope and Kalantzis 2009)."
+
+"the home practices of families from non-mainstream backgrounds do not always match the practices valued in schools. Therefore, pedagogies are needed that allow children and young people to draw from their own literacy experiences in the context of school curricula and standards for literacy and language. A key driver behind that work is that failing to acknowledge the diversity of literacy practices children bring to school is not only alienating these children from school curricula and learning, setting them up for failure, but that insisting on the narrow canon of what counts as literacy ends up impoverishing these same literacy and language curricula (Burnett et al. 2020)."
+
+### Section 6, p. 72 (qualification used by U3-01)
+
+"Sociocultural accounts of literacy learning and use offer a counter-perspective to the skills view of literacy and complement cognitively oriented research."
+
+### What this source does not support
+
+Papen (2023) does not define the terms *literacy event* or *literacy practice* as a pair, and does
+not use the labels *dominant literacies* and *vernacular literacies*. Topic 3.1 therefore presents
+the event/practice distinction and the dominant/vernacular distinction as working terms that this
+textbook explains in its own words, quoting Papen only for the definition of literacy practices
+above. No original source for those two distinctions is bound for Unit 3; see
+`specs/content/efmp-406/sources/unit-03.md`.
