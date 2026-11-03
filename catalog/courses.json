@@ -180,7 +180,15 @@
     {
       "number": 7,
       "priority": 7,
-      "courses": []
+      "courses": [
+        {
+          "code": "EFPG-607",
+          "title_en": "Teaching of Arts, Craft and Calligraphy",
+          "title_ur": "فنون، دستکاری اور خطاطی کی تدریس",
+          "credit_hours": "3 (3-0)",
+          "category": "Major: Pedagogy"
+        }
+      ]
     },
     {
       "number": 8,

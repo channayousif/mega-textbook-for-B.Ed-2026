@@ -120,6 +120,28 @@ function checkOverview(courseDir, courseCode) {
 }
 
 /**
+ * D-2026-0070 item 3: every B.Ed course overview links its official course guide
+ * PDF. CourseGuideNotice renders nothing for a course missing from
+ * catalog/course-guides.json, so without this check a new semester ships with no
+ * guide link and every gate stays green (owner report, 2026-11-03: Semester 3).
+ * A fixture root without its own catalog file skips the check.
+ */
+const GUIDES_FILE = join(ROOT, 'catalog', 'course-guides.json');
+const guides = existsSync(GUIDES_FILE) ? JSON.parse(readFileSync(GUIDES_FILE, 'utf8')).courses ?? {} : null;
+
+function checkCourseGuide(courseDir, courseCode, track) {
+  if (!guides || track.id !== 'pre-service') return;
+  const ovFile = join(courseDir, 'course-overview.mdx');
+  if (!existsSync(ovFile)) return;
+  const guide = guides[courseCode];
+  if (!guide) {
+    err(ovFile, `no entry for ${courseCode} in catalog/course-guides.json, so the overview shows no course guide link`);
+  } else if (!existsSync(join(ROOT, 'static', guide.pdf))) {
+    err(ovFile, `course guide PDF static/${guide.pdf} does not exist (run scripts/split-course-guides.py)`);
+  }
+}
+
+/**
  * Spec 008 FR-006: an optional course-level `course-review.mdx` — front matter only
  * (body headings are the human Content gate's concern). Mirrors checkOverview().
  */
@@ -236,6 +258,29 @@ function checkUnitLegacy(unitDir, urUnitDir, courseCode, unitNo, bilingual) {
   }
 }
 
+/**
+ * Topic numbering (owner report, 2026-11-03: 10 of 12 Semester 3 units titled
+ * topics four different ways). `topic_label` is "<unit>.<topic>", the title leads
+ * with it ("Topic 2.1 - ..." / "موضوع 2.1 - ..."), and an H1, if the page has
+ * one, repeats the title. The rule lives in the author-unit and translate-unit
+ * skills; the style guide gets it at its next planned bump.
+ */
+const TOPIC_WORD = { en: 'Topic', ur: 'موضوع' };
+
+function checkTopicTitle(file, fm, unitNo, topicNo, lang) {
+  const want = `${unitNo}.${topicNo}`;
+  const label = String(fm.topic_label ?? '').trim();
+  if (label !== want) err(file, `topic_label '${label}' should be '${want}' (unit.topic)`);
+  const prefix = `${TOPIC_WORD[lang]} ${want} - `;
+  const title = String(fm.title ?? '').trim();
+  if (!title.startsWith(prefix) || title.length === prefix.length) {
+    err(file, `title '${title}' should read '${prefix}<title>'`);
+  }
+  const body = readFileSync(file, 'utf8').replace(/^---[\s\S]*?\n---/, '').replace(/```[\s\S]*?```/g, '');
+  const h1 = body.match(/^# (.+)$/m);
+  if (h1 && h1[1].trim() !== title) err(file, `H1 '${h1[1].trim()}' should equal the title '${title}'`);
+}
+
 // ---- Spec 008 per-topic layout ------------------------------------------------
 function checkUnitTopic(unitDir, urUnitDir, courseCode, unitNo, bilingual, topicFiles) {
   // required files
@@ -281,6 +326,10 @@ function checkUnitTopic(unitDir, urUnitDir, courseCode, unitNo, bilingual, topic
       }
       if (!fm.topic_label || String(fm.topic_label).trim() === '') {
         err(file, `topic file is missing a non-empty 'topic_label' front-matter field`);
+      } else {
+        checkTopicTitle(file, fm, unitNo, ord, 'en');
+        const urFile = join(urUnitDir, f);
+        if (existsSync(urFile)) checkTopicTitle(urFile, matter(readFileSync(urFile, 'utf8')).data, unitNo, ord, 'ur');
       }
     }
   }
@@ -318,6 +367,7 @@ function walk() {
     }
     checkCategory(course.courseDir);
     checkOverview(course.courseDir, course.courseCode);
+    checkCourseGuide(course.courseDir, course.courseCode, course.track);
     checkCourseReview(course.courseDir, course.courseCode);
   }
 

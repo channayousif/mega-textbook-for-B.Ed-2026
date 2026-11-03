@@ -1,0 +1,3 @@
+# Unit 5 bound source notes: National Curriculum Council
+
+Retrieved 2026-11-03: https://ncc.gov.pk/GoPInitiative, National Curriculum of Pakistan Frequently Asked Questions, questions on core curriculum, provincial autonomy and Sindh. Paraphrase: core curriculum defines minimum learning expectations and allows additional content. NCC describes collaboration with provinces according to their contextual needs, including teacher development work with Sindh. Common standards therefore do not establish identical implementation across provinces. This supports U5-02 and the accreditation/curriculum distinction, not a claim that any reform is the latest.

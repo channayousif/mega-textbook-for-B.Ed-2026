@@ -30,7 +30,7 @@ first heading that is missing or out of place **and** the topic file.
 
 ```mdx
 ---
-title: "Topic 1.1 — What makes teaching a profession"
+title: "Topic 1.1 - What makes teaching a profession"
 course_code: EFMP-302
 unit_no: 1
 topic_no: 1
@@ -45,7 +45,7 @@ import Glossary from '@site/src/components/Glossary';
 
 <PrintHandout />
 
-# Topic 1.1 — What makes teaching a profession
+# Topic 1.1 - What makes teaching a profession
 
 ## A real classroom situation
 {/* FIGURE[fig-U1-1]: clean flat vector comparison table, three columns (government-school

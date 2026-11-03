@@ -18,7 +18,7 @@
 <!-- Row 1: Preparatory -->
 <line x1="20" y1="175" x2="760" y2="175" stroke="var(--ink)" stroke-width="1"/>
 <text class="h" x="30" y="112" fill="var(--a2)">Preparatory</text>
-<text class="m" x="30" y="127" fill="var(--muted)">Imitation</text>
+<text x="30" y="127" fill="var(--muted)">Imitation</text>
 <text x="175" y="122">Infancy to</text>
 <text x="175" y="137">approx. 2 years</text>
 <text x="285" y="112">Imitates gestures and words of</text>
@@ -32,7 +32,7 @@
 <!-- Row 2: Play -->
 <line x1="20" y1="270" x2="760" y2="270" stroke="var(--ink)" stroke-width="1"/>
 <text class="h" x="30" y="207" fill="var(--a3)">Play</text>
-<text class="m" x="30" y="222" fill="var(--muted)">Role-taking</text>
+<text x="30" y="222" fill="var(--muted)">Role-taking</text>
 <text x="175" y="217">Early childhood</text>
 <text x="175" y="232">(ages 2 to 6)</text>
 <text x="285" y="207">Takes the role of a single</text>
@@ -46,7 +46,7 @@
 <!-- Row 3: Game -->
 <line x1="20" y1="365" x2="760" y2="365" stroke="var(--ink)" stroke-width="1"/>
 <text class="h" x="30" y="302" fill="var(--a4)">Game</text>
-<text class="m" x="30" y="317" fill="var(--muted)">Multiple roles</text>
+<text x="30" y="317" fill="var(--muted)">Multiple roles</text>
 <text x="175" y="292">School age</text>
 <text x="175" y="307">(ages 7 and</text>
 <text x="175" y="322">older)</text>
@@ -60,7 +60,7 @@
 
 <!-- Row 4: Adult -->
 <text class="h" x="30" y="397" fill="var(--a1)">Adult</text>
-<text class="m" x="30" y="412" fill="var(--muted)">Generalized other</text>
+<text x="30" y="412" fill="var(--muted)">Generalized other</text>
 <text x="175" y="405">Adolescence</text>
 <text x="175" y="420">&amp; adulthood</text>
 <text x="285" y="397">Internalizes the generalized</text>

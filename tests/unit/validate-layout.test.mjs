@@ -72,9 +72,10 @@ function makeLayoutFixture(opts = {}) {
     const topicFiles = opts.topicFiles ?? ['topic-01.mdx', 'topic-02.mdx'];
     for (const tf of topicFiles) {
       const n = Number(/^topic-(\d{2})\.mdx$/.exec(tf)[1]);
-      let extra = { topic_no: n, topic_label: `1.${n}` };
+      let extra = { topic_no: n, topic_label: `1.${n}`, title: `Topic 1.${n} - Fixture topic` };
       if (tf === 'topic-02.mdx' && opts.topic2Fm) extra = { ...extra, ...opts.topic2Fm };
-      writeFileSync(join(unitDir, tf), fm(extra) + BODY);
+      // Topic pages carry no stray H1: an H1 must repeat the numbered title.
+      writeFileSync(join(unitDir, tf), fm(extra) + BODY.replace('# Heading\n\n', ''));
     }
   }
 
@@ -133,6 +134,22 @@ describe('validate-content.mjs — per-topic layout', () => {
     const { code, out } = run(root);
     expect(code).toBe(1);
     expect(out).toMatch(/topic_no/);
+  });
+
+  it('fails a topic title without its "Topic N.M - " lead (owner report, 2026-11-03)', () => {
+    for (const title of ['Fixture topic', '1.2 Fixture topic', 'Topic 1.2: Fixture topic']) {
+      root = makeLayoutFixture({ topic2Fm: { title } });
+      const { code, out } = run(root);
+      expect(code).toBe(1);
+      expect(out).toMatch(/should read 'Topic 1\.2 - <title>'/);
+    }
+  });
+
+  it('fails a topic_label that is not unit.topic', () => {
+    root = makeLayoutFixture({ topic2Fm: { topic_label: '2', title: 'Topic 1.2 - Fixture topic' } });
+    const { code, out } = run(root);
+    expect(code).toBe(1);
+    expect(out).toMatch(/topic_label '2' should be '1\.2'/);
   });
 
   it('fails when a topic file has no topic_label', () => {

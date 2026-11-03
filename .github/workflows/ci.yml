@@ -133,6 +133,13 @@ jobs:
       - name: Figure marker gate
         run: npm run check:figures
 
+      # Figure drawing-style gate: classes used but never defined (render black),
+      # arrowhead markers drawn off their own viewBox, and off-scale font sizes,
+      # stroke widths, font stacks and canvas widths. Existing violations are
+      # grandfathered in specs/content/svg-style-baseline.json; new ones fail.
+      - name: Figure drawing-style gate
+        run: npm run check:svg-style
+
       - name: Docs/code sync gate (shared constants, style-guide freeze marker, CI coverage)
         run: npm run check:docs-sync
 
