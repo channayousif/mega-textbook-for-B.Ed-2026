@@ -54,6 +54,12 @@ for U3/U6 that would have masked main's newer advisory reports, ran
 fast-forwarded the local crew branch, and set the job to `ready` under tick.lock.
 `crew retry` was not used because it requeues to re-author.
 
+Addendum (14:16Z): crew batches #436/#437 merged while #435 CI ran, re-conflicting five trackers
+on in-place repointed G2 rows. Took main's pointers, then `--refresh-stale` repointed 13 units
+whose manifests #435's gate changes made stale. GISS-401 Unit 5 (merged by the crew before #435)
+broke #435's new rules: topic titles and H1s renamed to `Topic 5.N - ...`, and fig-U5-1/fig-U5-3
+(800-wide canvases) added to `svg-style-baseline.json` as pre-rule corpus. check:content 13/13.
+
 ## Outcome
 
 - ✅ Impact: #420, #433 merged; #434 already merged; #435 refreshed; crew running; red 0.
@@ -69,7 +75,8 @@ fast-forwarded the local crew branch, and set the job to `ready` under tick.lock
 - Decisions the team must respect: append-only tracker conflicts are resolved as a union with
   main's rows first; a branch-only placeholder row must not be placed after a newer advisory row
   for the same gate. Admin merge was authorised for this session only.
-- Pending / next owner: #435 merge after CI (this session). 22 units await owner G3 sign-off.
+- Pending / next owner: #435 merge after CI (this session). Redrawing fig-U5-1/fig-U5-3 at 780
+  wide would let them leave the svg-style baseline (content job, not urgent). 22 units await owner G3 sign-off.
 - Paperclip issues affected: none.
 
 ## Evaluation notes (flywheel)
