@@ -16,9 +16,73 @@ links:
   adr: null
   pr: null
 files:
- - specs/content/giss-401/sources/texts/quran-translation.md
- - specs/content/giss-401/tasks.md
+ - docs/semester-3/giss-401/unit-02/index.mdx
+ - docs/semester-3/giss-401/unit-02/topic-01.mdx
+ - docs/semester-3/giss-401/unit-02/topic-02.mdx
+ - docs/semester-3/giss-401/unit-02/topic-03.mdx
+ - docs/semester-3/giss-401/unit-02/unit-assessment.mdx
+ - history/prompts/general/20261110-author-giss401-unit-two-english.general.prompt.md
+ - history/prompts/general/20261111-place-giss401-unit-two-figures.general.prompt.md
+ - history/prompts/general/20261112-merge-origin-main-giss401-unit-two.general.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u02-author-conflict1.misc.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u02-author-conflict2.misc.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u02-author-conflict3.misc.prompt.md
  - history/prompts/giss-401/crew-giss-401-u02-author-conflict4.misc.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u02-author.green.prompt.md
+ - specs/content/giss-401/authoring/unit-02.md
+ - specs/content/giss-401/authoring/unit-02/checks/baseline-content.txt
+ - specs/content/giss-401/authoring/unit-02/checks/draft-content.txt
+ - specs/content/giss-401/authoring/unit-02/checks/mdx-syntax.txt
+ - specs/content/giss-401/concepts/unit-02.md
+ - specs/content/giss-401/coverage/unit-02.md
+ - specs/content/giss-401/figures/unit-02.md
+ - specs/content/giss-401/reviews/unit-02/G2/20261102T232136964Z-gates.json
+ - specs/content/giss-401/reviews/unit-02/G2/20261103T011905925Z-gates.json
+ - specs/content/giss-401/reviews/unit-02/G2/20261103T012756049Z-gates.json
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261102T232136964Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261102T232136964Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261102T232136964Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261102T232136964Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261102T232136964Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261102T232136964Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261102T232136964Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261102T232136964Z/validate-content.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261103T011905925Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261103T011905925Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261103T011905925Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261103T011905925Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261103T011905925Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261103T011905925Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261103T011905925Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261103T011905925Z/validate-content.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261103T012756049Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261103T012756049Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261103T012756049Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261103T012756049Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261103T012756049Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261103T012756049Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261103T012756049Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261103T012756049Z/validate-content.txt
+ - specs/content/giss-401/sources/texts/motala-2023-sahih.md
+ - specs/content/giss-401/sources/texts/mudawam-2021-usul.md
+ - specs/content/giss-401/sources/texts/mufti-2019-hasan.md
+ - specs/content/giss-401/sources/texts/quran-translation.md
+ - specs/content/giss-401/sources/texts/sahih-bukhari-muslim.md
+ - specs/content/giss-401/sources/texts/von-denffer-ulum.md
+ - specs/content/giss-401/sources/unit-02.md
+ - specs/content/giss-401/tasks.md
+ - static/img/figures/giss-401/unit-02/fig-U2-1.dark.svg
+ - static/img/figures/giss-401/unit-02/fig-U2-1.svg
+ - static/img/figures/giss-401/unit-02/fig-U2-2.dark.svg
+ - static/img/figures/giss-401/unit-02/fig-U2-2.svg
+ - static/img/figures/giss-401/unit-02/fig-U2-3.dark.svg
+ - static/img/figures/giss-401/unit-02/fig-U2-3.svg
+ - static/img/figures/giss-401/unit-02/fig-U2-4.dark.svg
+ - static/img/figures/giss-401/unit-02/fig-U2-4.svg
+ - static/img/figures/giss-401/unit-02/fig-U2-5.dark.svg
+ - static/img/figures/giss-401/unit-02/fig-U2-5.svg
+ - static/img/figures/giss-401/unit-02/fig-U2-6.dark.svg
+ - static/img/figures/giss-401/unit-02/fig-U2-6.svg
 tests:
  - npm run check:content
 ---
@@ -59,23 +123,23 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Merged origin/main into crew/giss-401-u02-author and resolved both add/add conflicts by keeping both sides' entries: main's Unit 6 bound passages before this branch's Unit 2 passages in quran-translation.md, and both sides' Unit 2 and Unit 6 tracker rows plus the Unit 6 authoring notes in tasks.md. origin/main advanced during the job (Unit 1 Urdu translation), so a second merge brought the branch level with main. Confirmed the shared registries were already identical between HEAD and origin/main, regenerated the gitignored static/content-status.json, and left all 13 content gates passing.
+Merged origin/main into crew/giss-401-u02-author, resolved the quran-translation.md and tasks.md add/add conflicts keeping both sides' Unit 2 and Unit 6 entries, and left all 13 content gates passing.
 
 ## Outcome
 
-- Impact: fix for GISS-401 Unit 2 by opencode (attempt 4).
+- Impact: fix for GISS-401 Unit 2 by opencode (attempt 1).
 - Tests: npm run check:content passed in the job worktree before the PR was opened.
-- Files: 3 file(s), listed above.
+- Files: 67 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/giss-401-u02-author (twice, as main advanced during the job), resolved both add/add conflicts keeping both sides' entries, regenerated the gitignored content-status report, and left all 13 content gates passing.
+- Shipped / changed: Merged origin/main into crew/giss-401-u02-author, resolved the quran-translation.md and tasks.md add/add conflicts keeping both sides' Unit 2 and Unit 6 entries, and left all 13 content gates passing.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Six Unit 2 SVGs have never been through measure-figure-text.mjs (Chromium barred locally); CI figure-geometry is their first real check, and the Urdu mirror still needs .ur.svg versions (generator lives in gitignored .crew/figgen/gen.py).
+  - Six Unit 2 SVGs have never been through measure-figure-text.mjs (Chromium barred locally); CI figure-geometry is their first real check, and the Urdu mirror still needs `.ur.svg` versions.
   - G3 needs a fresh independent review including a qualified Islamic Studies scholar; older Unit 2 G2 evidence files are unreferenced and the tracker points at `20261103T012756049Z-gates.json`.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
