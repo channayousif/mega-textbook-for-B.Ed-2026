@@ -32,9 +32,21 @@ files:
   - specs/content/efmp-302/reviews/unit-06/G3/crew-repair-en-handoff.md
   - specs/content/efmp-302/sources/unit-06.md
   - specs/content/efmp-302/tasks.md
+  - specs/content/efmp-302/reviews/unit-06/G2/20261103T060725821Z-gates.json
+  - specs/content/efmp-302/reviews/unit-06/G2/logs-20261103T060725821Z/check-bloom-bands.txt
+  - specs/content/efmp-302/reviews/unit-06/G2/logs-20261103T060725821Z/check-concept-graph.txt
+  - specs/content/efmp-302/reviews/unit-06/G2/logs-20261103T060725821Z/check-depth-gate.txt
+  - specs/content/efmp-302/reviews/unit-06/G2/logs-20261103T060725821Z/check-docs-sync.txt
+  - specs/content/efmp-302/reviews/unit-06/G2/logs-20261103T060725821Z/check-figures.txt
+  - specs/content/efmp-302/reviews/unit-06/G2/logs-20261103T060725821Z/check-no-answer-keys.txt
+  - specs/content/efmp-302/reviews/unit-06/G2/logs-20261103T060725821Z/check-no-em-dash.txt
+  - specs/content/efmp-302/reviews/unit-06/G2/logs-20261103T060725821Z/validate-content.txt
 tests:
-  - npm run check:content (baseline 13/13; post-edit stale G2 only, refresh and final rerun required)
+  - npm run check:content (baseline and final 13/13 PASS; stale G2 and generated status repaired)
   - scripts/heavy.sh npm test (28 files, 347 tests pass)
+  - npm run figures:variants:check (1127 figures PASS)
+  - node scripts/prepare-gate-evidence.mjs EFMP-302 6 (8 draft checks PASS)
+  - npm run build:content-status (generated status refreshed)
   - git diff --check (pass)
 ---
 
@@ -44,12 +56,12 @@ Read .crew/brief.md in the current directory and carry it out completely. It is 
 
 ## Response snapshot
 
-Applied Unit 6 G3 repairs in English and Urdu, recorded source and platform limits, and left G3 open. Committing repairs and refreshing deterministic G2 evidence before the final gate rerun. No push or PR.
+Applied Unit 6 G3 repairs in English and Urdu, recorded source and platform limits, and left G3 open. Repairs committed at c79f0e34a; deterministic G2 evidence refreshed, generated status regenerated, and final content gates passed 13/13. No push or PR.
 
 ## Outcome
 
 - ✅ Impact: Unsupported mappings and undeclared source limits corrected; pedagogy, assessment and desktop figure readability repaired.
-- 🧪 Tests: Baseline equals origin/main and passes all 13 content gates. Unit tests pass 347/347. Post-edit pipeline failure requires a fresh G2 manifest; final run recorded in the handoff.
+- 🧪 Tests: Baseline equals origin/main and passes all 13 content gates. Unit tests pass 347/347. Post-edit stale G2 manifest and generated status were refreshed; final content run passed 13/13 with no findings relative to origin/main.
 - 📁 Files: Unit 6 EN/UR topics and assessment; unit-local CSS; coverage, sources, concepts, tracker and repair handoff; this PHR.
 - 🔁 Next prompts: Independent review under owner cycle authorisation; platform scroll-region naming; source access.
 - 🧠 Reflection: Reading-list metadata is not source support. Disclose uncertainty instead of inventing citations.
@@ -64,6 +76,6 @@ Applied Unit 6 G3 repairs in English and Urdu, recorded source and platform limi
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Old report includes figure defects already repaired in current baseline; content edits invalidate G2 evidence.
-- Graders run and results (PASS/FAIL): 347 unit tests PASS; baseline content 13/13 PASS; post-edit 12/13, stale Unit 6 G2 only; refresh and rerun required.
+- Graders run and results (PASS/FAIL): 347 unit tests PASS; baseline content 13/13 PASS; post-edit stale Unit 6 G2 and generated status repaired; final content 13/13 PASS, figures:variants:check PASS.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Have an authorised independent reviewer verify current content with source access and actual page renders.

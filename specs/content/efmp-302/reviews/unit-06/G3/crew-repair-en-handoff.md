@@ -29,6 +29,11 @@ Unit 6's stale G2 manifest, expected after changing bound inputs. Unit tests pas
 28 files, 347 tests. G2 evidence is regenerated after committing the repaired content,
 then content gates are rerun to verify no additional findings relative to origin/main.
 
+Final result: all 13 content gates PASS after refreshing G2 evidence at
+`reviews/unit-06/G2/20261103T060725821Z-gates.json` and regenerating the ignored
+`static/content-status.json`. `npm run figures:variants:check` also passes for all 1127
+figures. `git diff --check` passes. No failures remain relative to origin/main.
+
 The crew brief forbids builds, dev servers and Playwright, so full-page desktop/mobile/print
 inspection and browser text geometry were not run. Existing SVG repairs were inspected in
 source bytes; no SVG text changed. A fresh independent G3/G5 review must assess these repairs
