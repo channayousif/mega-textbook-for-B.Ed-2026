@@ -67,8 +67,8 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
    failure, fix those in your scope, rerun). Findings that already exist on main belong to other jobs.
 2. All work is committed on this branch with a conventional commit message. Do not push and do not open a PR.
 3. Your final output ends with one line: `CREW-SUMMARY: <what you changed, in one sentence>`.
-4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit
-   needs (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
+4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
+   (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
 
 ## Open findings from the latest G3 report
 From `specs/content/gnas-301/reviews/unit-06/G3/20261102T212207Z-g3-desk-06be9f9b.json` (disposition: revise). Resolve each one:
