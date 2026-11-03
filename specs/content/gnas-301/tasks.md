@@ -80,3 +80,5 @@ units may be authored.
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gnas-301/reviews/unit-06/G3/20261102T211054Z-g3-desk-c9e52a96.json |
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gnas-301/reviews/unit-02/G3/20261102T212207Z-g3-desk-bc87d518.json |
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gnas-301/reviews/unit-06/G3/20261102T212207Z-g3-desk-06be9f9b.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gnas-301/reviews/unit-02/G2/20261103T045242860Z-gates.json |
+| Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied; report reviews/unit-02/G3/20261102T212207Z-g3-desk-bc87d518.json; CONTENT-01 boiling vs chemical safety fixed, NEQS S.R.O. 549(I)/2000 and further WHO health-care waste passages bound, handling detail deferred to provincial law, risk ranking removed, bin-audit safety aligned, fig-U2-6 cells completed, concept links remapped, MCQ 3 relabelled Remember; GOV-01/EVID-01/RENDER-01/ASSESS-01 need owner/orchestrator action; needs a fresh G3 run |
