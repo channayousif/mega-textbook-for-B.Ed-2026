@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <title id="t">How Zakat Moves Wealth: Assessment, Rate, and Distribution</title>
+  <desc id="d">Flowchart illustrating how Zakat moves wealth from surplus holders above the nisab threshold through institutional collection to the eight Quranic beneficiary categories.</desc>
+  <style>
+    :root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95}
+    .bg { fill: var(--bg); }
+    .panel { fill: var(--a1-fill); stroke: var(--a1); stroke-width: 2; }
+    .panel-blue { fill: var(--a2-fill); stroke: var(--a2); stroke-width: 2; }
+    .panel-amber { fill: var(--a3-fill); stroke: var(--a3); stroke-width: 2; }
+    .cell { fill: var(--panel); stroke: var(--line); stroke-width: 1; }
+    .link { fill: none; stroke: var(--line); stroke-width: 2; stroke-linecap: round; }
+    .arrow { fill: var(--line); }
+    text { fill: var(--ink); }
+    .h { font-size: 18px; font-weight: 700; }
+    .th { font-size: 14px; font-weight: 700; }
+    .label { font-size: 13px; font-weight: 600; }
+    .support { font-size: 12px; fill: var(--muted); }
+    .note { font-size: 12px; font-weight: 500; fill: var(--ink); }
+    .wm { fill: var(--wm); font-size: 11px; }
+  </style>
+
+  <rect class="bg" x="0" y="0" width="800" height="480" />
+
+  <!-- Title -->
+  <text class="h" x="25" y="32" text-anchor="start">How Zakat Moves Wealth: Assessment, Rate, and Distribution</text>
+
+  <!-- Stage 1: Wealth Holders -->
+  <rect class="panel" x="25" y="55" width="220" height="80" rx="8" />
+  <text class="th" x="35" y="80" text-anchor="start">1. Qualifying Wealth Holders</text>
+  <text class="support" x="35" y="100" text-anchor="start">Surplus held for 1 lunar year (Hawl)</text>
+  <text class="support" x="35" y="118" text-anchor="start">Exceeds Nisab (87.48g gold / 612.36g silver)</text>
+
+  <!-- Arrow 1 to 2 -->
+  <path class="link" d="M 245 95 L 285 95" />
+  <polygon class="arrow" points="285,90 295,95 285,100" />
+
+  <!-- Stage 2: Prescribed Rates -->
+  <rect class="panel-blue" x="295" y="55" width="220" height="80" rx="8" />
+  <text class="th" x="305" y="80" text-anchor="start">2. Statutory Zakat Rates</text>
+  <text class="support" x="305" y="100" text-anchor="start">Cash, gold, silver, trade goods: 2.5%</text>
+  <text class="support" x="305" y="118" text-anchor="start">Agriculture (Ushr): 5% irrigated, 10% rain</text>
+
+  <!-- Arrow 2 to 3 -->
+  <path class="link" d="M 515 95 L 545 95" />
+  <polygon class="arrow" points="545,90 555,95 545,100" />
+
+  <!-- Stage 3: Institutional Purpose -->
+  <rect class="panel-amber" x="555" y="55" width="220" height="80" rx="8" />
+  <text class="th" x="565" y="80" text-anchor="start">3. Collection &amp; Purpose</text>
+  <text class="support" x="565" y="100" text-anchor="start">Divine right of the needy (haqq, 51:19)</text>
+  <text class="support" x="565" y="118" text-anchor="start">Circulates capital; stops hoarding (59:7)</text>
+
+  <!-- Flow down to Beneficiaries -->
+  <path class="link" d="M 405 135 L 405 165" />
+  <polygon class="arrow" points="400,165 405,175 410,165" />
+
+  <!-- Beneficiary Group Header -->
+  <rect class="panel" x="25" y="175" width="750" height="35" rx="6" />
+  <text class="th" x="400" y="198" text-anchor="middle">Eight Lawful Beneficiary Categories (Surah At-Tawbah 9:60)</text>
+
+  <!-- Beneficiary Card 1: Fuqara & Masakin -->
+  <rect class="cell" x="25" y="225" width="235" height="115" rx="6" />
+  <text class="label" x="35" y="250" text-anchor="start">Direct Poverty Relief</text>
+  <text class="support" x="35" y="272" text-anchor="start">• Al-Fuqara: Destitute with no wealth</text>
+  <text class="support" x="35" y="292" text-anchor="start">• Al-Masakin: Needy whose income</text>
+  <text class="support" x="35" y="310" text-anchor="start">  falls short of basic subsistence</text>
+  <text class="support" x="35" y="328" text-anchor="start">Guarantees dignity and livelihood</text>
+
+  <!-- Beneficiary Card 2: Administrative & Social -->
+  <rect class="cell" x="282" y="225" width="236" height="115" rx="6" />
+  <text class="label" x="292" y="250" text-anchor="start">Institutional &amp; Social Needs</text>
+  <text class="support" x="292" y="272" text-anchor="start">• Al-Amilina Alayha: Authorized staff</text>
+  <text class="support" x="292" y="292" text-anchor="start">• Muallafat al-Qulub: Reconciling hearts</text>
+  <text class="support" x="292" y="310" text-anchor="start">• Fir-Riqab: Freeing bonded persons</text>
+  <text class="support" x="292" y="328" text-anchor="start">Maintains transparent institutions</text>
+
+  <!-- Beneficiary Card 3: Debt & Community -->
+  <rect class="cell" x="540" y="225" width="235" height="115" rx="6" />
+  <text class="label" x="550" y="250" text-anchor="start">Emergency &amp; Public Good</text>
+  <text class="support" x="550" y="272" text-anchor="start">• Al-Gharimin: Debtor relief for need</text>
+  <text class="support" x="550" y="292" text-anchor="start">• Fi Sabilillah: Community welfare</text>
+  <text class="support" x="550" y="310" text-anchor="start">• Ibn As-Sabil: Stranded travelers</text>
+  <text class="support" x="550" y="328" text-anchor="start">Safety net for sudden distress</text>
+
+  <!-- Bottom Summary Panel -->
+  <rect class="panel-blue" x="25" y="355" width="750" height="75" rx="8" />
+  <text class="th" x="35" y="380" text-anchor="start">Macroeconomic Cycle &amp; Social Impact</text>
+  <text class="note" x="35" y="400" text-anchor="start">Zakat transforms passive surplus into active purchasing power for low-income households.</text>
+  <text class="note" x="35" y="418" text-anchor="start">By penalizing stagnant wealth and banning interest, Islam motivates productive real trade and social equity.</text>
+
+  <!-- Wordmark -->
+  <text class="wm" x="785" y="470" text-anchor="end" aria-hidden="true">textbook.com.pk</text>
+</svg>
