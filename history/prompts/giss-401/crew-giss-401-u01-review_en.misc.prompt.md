@@ -69,25 +69,25 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Conducted independent G3 English review of GISS-401 Unit 1, validated advisory pass evidence report, updated tasks.md advisory tracker row with G3 open and unsigned, and confirmed all 13 content gates pass.
+Conducted independent G3 English review of GISS-401 Unit 1, validated advisory pass evidence report and summary, updated tasks.md advisory row, and confirmed all 13 content gates pass.
 
 ## Outcome
 
 - Impact: review_en for GISS-401 Unit 1 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before commit.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 18 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Conducted independent G3 English review of GISS-401 Unit 1, validated advisory pass evidence report, updated tasks.md advisory tracker row with G3 open and unsigned, and confirmed all 13 content gates pass.
+- Shipped / changed: Conducted independent G3 English review of GISS-401 Unit 1, validated advisory pass evidence report and summary, updated tasks.md advisory row, and confirmed all 13 content gates pass.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All 7 G3 criteria pass, 25 assessment items independently solved (10/10 MCQs, 10/10 RRQs, 5/5 ERQs), and all 4 SVG figures verified via Sharp PNG rasterization; report validated with advisory pass disposition.
-  - The G3 tracker row in specs/content/giss-401/tasks.md is updated to open ▢ per ADR-0019; certification remains blocked pending trusted qualification.
-  - Unit 1 is ready for Urdu translation (G4 ur-translation) and subsequent independent Urdu review (G5 ur-review).
+  - GISS-401 Unit 1 G3 English review passed all 7 criteria with advisory pass evidence; G3 remains open (▢) and unsigned pending qualified theological sign-off per content spec drafting note 2.
+  - All four English SVGs and dark variants are placed and verified non-blank via Sharp rasterization; Playwright Chromium geometry measurement was deferred per brief.
+  - Unit 1 English text and structure are clean and ready for Urdu translation (G4 ur-translation).
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
