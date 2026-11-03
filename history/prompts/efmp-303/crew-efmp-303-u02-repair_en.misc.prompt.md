@@ -66,24 +66,24 @@ From `specs/content/efmp-303/reviews/unit-02/G3/20261102T212207Z-g3-desk-4de29bb
 
 ## Response snapshot
 
-Confirmed resolution of 20261102T212207Z-g3-desk-4de29bbc G3 findings for EFMP-303 Unit 2 (fig-U2-1 geometry overflow resolved via merged PR #150 with measure-figure-text clean, external URLs confirmed accessible, and check:figures clean repository-wide), and appended an unticked advisory G3 tracker row.
+Verified resolution of G3 findings for EFMP-303 Unit 2 and appended an unticked advisory repair row to the course tracker.
 
 ## Outcome
 
 - Impact: repair_en for EFMP-303 Unit 2 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree before committing.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 2 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Confirmed resolution of 20261102T212207Z-g3-desk-4de29bbc G3 findings for EFMP-303 Unit 2 (fig-U2-1 geometry overflow resolved via merged PR #150 with measure-figure-text clean, external URLs confirmed accessible, and check:figures clean repository-wide), and appended an unticked advisory G3 tracker row.
+- Shipped / changed: Verified resolution of G3 findings for EFMP-303 Unit 2 and appended an unticked advisory repair row to the course tracker.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - All G3 findings for Unit 2 from report 20261102T212207Z-g3-desk-4de29bbc are resolved; the unit is ready for a fresh independent G3 review run.
-  - G4 Urdu mirror is already complete and verified; translation_status stays draft pending independent G5 review after G3.
+  - All findings from G3 report 20261102T212207Z-g3-desk-4de29bbc are confirmed resolved; Unit 2 requires a fresh independent G3 review.
+  - Existing G4 Urdu mirror (6 files, 6 figures) remains verified and intact with translation_status set to draft pending independent G5 review.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
