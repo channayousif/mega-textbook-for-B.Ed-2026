@@ -1,6 +1,6 @@
 ---
 id: crew-gnas-301-u06-repair_en-r1-conflict1
-title: crew repair_en-r1 conflict1 GNAS-301 unit 6
+title: crew fix GNAS-301 unit 6
 stage: misc
 date: 2026-11-03
 surface: agent
@@ -8,14 +8,34 @@ model: opencode
 feature: gnas-301
 branch: crew/gnas-301-u06-repair_en-r1
 user: crew
-command: crew repair_en-r1 conflict1
-labels: ["crew", "opencode", "repair_en", "conflict1"]
+command: crew fix
+labels: ["crew", "opencode", "fix"]
 links:
   spec: specs/content/gnas-301/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
+ - docs/semester-1/gnas-301/unit-06/topic-03.mdx
+ - docs/semester-1/gnas-301/unit-06/topic-04.mdx
+ - docs/semester-1/gnas-301/unit-06/unit-assessment.mdx
+ - docs/semester-1/gnas-301/unit-06/unit-teacher-notes.mdx
+ - history/prompts/gnas-301/crew-gnas-301-u06-repair_en-r1-conflict1.misc.prompt.md
+ - history/prompts/gnas-301/crew-gnas-301-u06-repair_en-r1.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-06/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-06/topic-04.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-06/unit-assessment.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/gnas-301/unit-06/unit-teacher-notes.mdx
+ - specs/content/gnas-301/concepts/unit-06.md
+ - specs/content/gnas-301/reviews/unit-06/G2/20261103T051634155Z-gates.json
+ - specs/content/gnas-301/reviews/unit-06/G2/logs-20261103T051634155Z/check-bloom-bands.txt
+ - specs/content/gnas-301/reviews/unit-06/G2/logs-20261103T051634155Z/check-concept-graph.txt
+ - specs/content/gnas-301/reviews/unit-06/G2/logs-20261103T051634155Z/check-depth-gate.txt
+ - specs/content/gnas-301/reviews/unit-06/G2/logs-20261103T051634155Z/check-docs-sync.txt
+ - specs/content/gnas-301/reviews/unit-06/G2/logs-20261103T051634155Z/check-figures.txt
+ - specs/content/gnas-301/reviews/unit-06/G2/logs-20261103T051634155Z/check-no-answer-keys.txt
+ - specs/content/gnas-301/reviews/unit-06/G2/logs-20261103T051634155Z/check-no-em-dash.txt
+ - specs/content/gnas-301/reviews/unit-06/G2/logs-20261103T051634155Z/validate-content.txt
  - specs/content/gnas-301/tasks.md
 tests:
  - npm run check:content
@@ -54,23 +74,24 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gnas-301-u06-review_en-conflict5, fix, agy) G-2026-33 cycle-count decision and existing Unit 6 evidence gaps remain owner-owned; G3 stays open.
 - (gnas-301-u06-review_en-conflict1, fix, codex) G-2026-33 and existing Unit 6 evidence gaps remain owner-owned; G3 stays open.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/gnas-301-u06-repair_en-r1. The only conflict was specs/content/gnas-301/tasks.md, where this branch's Unit 6 G3 advisory row and main's Unit 2 G2/G3 rows both appended at end of file; kept both sides' rows (main's two rows first, then this branch's Unit 6 row) and dropped no entry. No shared registry (glossary.json, specs/decisions/log.md, specs/gaps.md, specs/content/terminology.csv) was touched by either side in the merged range, so no ID renumbering was needed; G-2026-33 already names this Unit 6 cycle gate. Regenerated the gitignored static/content-status.json cache after the merge.
+Merged origin/main into crew/gnas-301-u06-repair_en-r1, resolved the sole tasks.md conflict by keeping both sides' rows, regenerated static/content-status.json, and committed the merge plus PHR; npm run check:content passes 13/13.
 
 ## Outcome
 
-- Impact: merge conflict resolution for GNAS-301 Unit 6 repair_en-r1 (opencode, attempt 1).
-- Tests: npm run check:content passed after the merge (13/13 gates).
-- Files: 1 tracked file changed (specs/content/gnas-301/tasks.md); 1 gitignored cache regenerated (static/content-status.json).
+- Impact: fix for GNAS-301 Unit 6 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 21 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: resolved the tasks.md merge conflict by keeping both sides' rows; merged origin/main (9 commits) into crew/gnas-301-u06-repair_en-r1; regenerated static/content-status.json.
-- Decisions the team must respect: the merge is committed on the branch, not pushed and no PR opened; G3/G5 stay unticked.
-- Pending / next owner: crew lead (merge when CI is green).
+- Shipped / changed: Merged origin/main into crew/gnas-301-u06-repair_en-r1, resolved the sole tasks.md conflict by keeping both sides' rows, regenerated static/content-status.json, and committed the merge plus PHR; npm run check:content passes 13/13.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - G3 stays unticked; the four uncertain findings (accessibility, author provenance, source binding, blind assessment derivation) remain owner-owned and G-2026-33's cycle-count conflict is unresolved.
   - The next job should re-check the corrected concept mappings and the new Bloom labels (ERQ-02 Apply, ERQ-05 Create 0-2, MCQ-05 Understand) against the content-spec blueprint.
