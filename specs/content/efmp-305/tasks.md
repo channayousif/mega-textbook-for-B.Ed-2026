@@ -65,7 +65,7 @@ the 4 expected prompt-only findings until G6 renders them.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 3 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-03/G2/20261102T072756489Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-03/G2/20261103T124014823Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | |
 | Unit 3 | G4 ur-translation | ▢ | | |
 | Unit 3 | G5 ur-review | ▢ | | |
@@ -86,7 +86,7 @@ renders them.
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 4 | G1 unit-spec | ▢ | | spec approved (D-2026-0065); row is the evaluator's to set, not the author's |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-04/G2/20261102T072756675Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-04/G2/20261103T124015000Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 4 | G4 ur-translation | ▣ | | mirror complete (2026-10-18): all 5 files translated and verified against EN c31cad8f; 4 .ur.svg/.ur.dark.svg figure variants synced; structural parity clean under temporary reviewed flip (reverted); all 3 key_terms conform to terminology.csv; handoff: reviews/unit-04/G4/translation-handoff.md; translation_status stays draft pending fresh independent G5 |
 | Unit 4 | G5 ur-review | ▢ | | |
@@ -181,3 +181,4 @@ the PHR and Paperclip handoff. No G3/G5 certification or publication is claimed.
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-03/G3/20261102T212207Z-g3-desk-d26592ad.json |
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-05/G3/20261102T212207Z-g3-desk-6054cf1d.json |
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-06/G3/20261102T212207Z-g3-desk-5907f448.json |
+| Unit 3 | G3 en-review | ▢ | | advisory: revise; repairs applied; report reviews/unit-03/G3/20261102T212207Z-g3-desk-d26592ad.json (crew efmp-305-u03-repair_en, 2026-11-03). Blocking repository-gate finding (EFMP-305 Unit 6 depth, EFMP-304 figure alt text) is already resolved on main: all 13 content gates pass, no Unit 3 edit needed. Sources (uncertain): full texts of subandiyah2025, serman2026 and cast2024 (v3.0) retrieved and bound under sources/texts/ and found to support the prose as worded; vernon2020 and florian2014 stay declared unverifiable (subscription, D-2026-0001). Terminology (advisory): concepts/unit-03.md note corrected, since the nine EFMP-305 pairs were owner-banked in terminology.csv on 2026-10-16 (TEX-80) and the UR mirror already uses them; four unit-level labels stay unbanked. No prose or UR change. G2 evidence refreshed for Units 3 and 4 (cast2024 excerpt binds both). Needs a fresh independent G3 review; row stays open (ADR-0019) |
