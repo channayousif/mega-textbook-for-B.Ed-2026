@@ -7,7 +7,7 @@
 | Unit | Title | EN draft | G3 review | UR translation | G5 review | Figures | Notes |
 |---|---|---|---|---|---|---|---|
 | 1 | Introduction to Islamic Studies and the Fundamental Beliefs of Islam | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-03 by the crew author job (claude); G2 gate evidence recorded below; G3 (with the qualified Islamic Studies reviewer the spec asks for) and Urdu remain open |
-| 2 | Sources of Islamic Knowledge: the Qur'an and the Sunnah | ☐ | ☐ | ☐ | ☐ | | |
+| 2 | Sources of Islamic Knowledge: the Qur'an and the Sunnah | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-03 by the crew author job; G2 gate evidence recorded below; G3 (with the qualified Islamic Studies reviewer the spec asks for) and Urdu remain open |
 | 3 | Worship and the Moral System of Islam | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-03 by the crew author job (agy); G2 gate evidence recorded below; G3 and Urdu remain open |
 | 4 | The Social System and the State in Islam | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-03 by the crew author job (claude); G2 gate evidence recorded below; G3 (with the qualified Islamic Studies reviewer the spec asks for) and Urdu remain open |
 | 5 | The Economic and Political Systems of Islam | ☐ | ☐ | ☐ | ☐ | | |
@@ -41,6 +41,13 @@
 | Unit 4 | G5 ur-review | ▢ | | Pending accepted English baseline and translated mirror. |
 | Unit 4 | G6 assets | ▣ | | Four English schematics and dark variants placed to meet current figure gates; geometry validation pending; Urdu localisation is a separate job. |
 | Unit 4 | G7 publish | ▢ | | Publication is outside this authoring job. |
+| Unit 2 | G1 unit-spec | ✅ | auto:gates | Approved spec and owner ruling D-2026-0079, 2026-11-02; not a new intake evaluation |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-02/G2/20261103T012756049Z-gates.json |
+| Unit 2 | G3 en-review | ▢ | | Fresh independent review needed, including qualified Islamic Studies scholar review of belief and law |
+| Unit 2 | G4 ur-translation | ▢ | | Separate job; no Urdu mirror authored here |
+| Unit 2 | G5 ur-review | ▢ | | Pending G3 and Urdu translation; authored concept labels also need review |
+| Unit 2 | G6 assets | ▣ | | Six original English SVG schematics placed with derived dark variants; Urdu `.ur.svg` assets belong to the translation job; browser text-geometry measurement not run (crew bars Chromium), CI figure-geometry job pending |
+| Unit 2 | G7 publish | ▢ | | No publication claimed; catalog integration and owner authority remain separate |
 | Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-06/G2/20261103T011742805Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | Independent Islamic Studies reviewer required; no certification claimed |
 | Unit 6 | G4 ur-translation | ▢ | | Separate job; English pages carry untranslated notices |
