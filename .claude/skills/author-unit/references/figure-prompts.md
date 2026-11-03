@@ -2,9 +2,17 @@
 
 Teaching figures are planned now as **inline MDX comments** and tracked in a per-unit manifest.
 **Nothing renders yet** - the `generate-figures` skill (Spec 009) is the separate rendering pass:
-it classifies each marker by archetype and hand-authors the schematic ones as SVG. Under
-ADR-0024, Claude leaves an `illustration` as a complete prompt-only handoff for Codex, which
-generates, inspects, optimises and places the raster. The rendering workflow **replaces** the
+it classifies each marker by archetype and hand-authors the schematic ones as SVG. An
+`illustration` row is produced by the crew's `illustrate` job (ADR-0029: Gemini via
+`scripts/generate-illustration.mjs`, Codex as the alternative), which generates, inspects,
+optimises and places the raster.
+
+**Plan the raster images too (ADR-0029 point 5).** Each unit gets one 16:9 banner scene for its
+`index.mdx`, written as a row in `specs/content/<course>/figures/unit-NN.banner.md` (same columns
+as the manifest; see `efmp-304/figures/unit-02.banner.md`). A topic may add one `illustration`
+marker for a classroom scene where a picture teaches something the prose cannot. It is extra:
+it does not count toward the topic's ≥ 2 schematic figures. Every prompt says Sindh setting,
+Pakistani dress, and no text, maps, flags or emblems. The rendering workflow **replaces** the
 marker with a `<Figure>` element, mirrors it into the Urdu topic file, and moves the manifest
 row `prompt-only → generated → placed`. That is **not this skill's job** - author-unit stops at
 **≥ 2 good markers per topic** (with a planned archetype each) + matching `Status: prompt-only`

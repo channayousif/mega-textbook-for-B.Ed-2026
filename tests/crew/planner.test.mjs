@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport, specUnitNumbers, focusCourse } from '../../scripts/crew/planner.mjs';
+import { stagesFor, awaitingG3, mirrorComplete, pickLatestReport, specUnitNumbers, focusCourse, figureBacklog, limitIllustrate } from '../../scripts/crew/planner.mjs';
 
 const unit = (G3 = 'open', G5 = 'open', over = {}) => ({ authored: true, gates: { G3, G5 }, figures: { prompt_only: 0 }, ...over });
 const facts = (over = {}) => ({ bilingual: true, g3Report: null, g3Repaired: false, g5Report: null, mirrorComplete: true, ...over });
@@ -123,4 +123,28 @@ test('focusCourse: finish a started course before a new one starts (owner ruling
   assert.equal(focusCourse({ started: begun, jobs: [job('GPKS-402', 'author', 'running')], newCourses: ['EFMP-408'], catalogOrder }).course, 'GPKS-402');
   // Nothing to do anywhere.
   assert.equal(focusCourse({ started, jobs: [], newCourses: [], catalogOrder }), null);
+});
+
+test('illustrations go to illustrate, schematics to figures (2026-11-03: illustrate never ran)', () => {
+  const passed = facts({ g3Report: { disposition: 'pass' } });
+  const rows = [
+    { status: 'prompt-only', kind: 'illustration' },
+    { status: 'placed', kind: 'illustration' },
+    { status: 'prompt-only', kind: 'flowchart' },
+    { status: 'prompt-only', kind: '' },
+    { status: 'generated', kind: 'illustration' }, // generated but not inspected or placed
+  ];
+  assert.deepEqual(figureBacklog(rows), { schematic: 2, illustration: 2 });
+  assert.deepEqual(figureBacklog(null), { schematic: 0, illustration: 0 });
+  assert.deepEqual(stagesFor(unit(), { ...passed, figureBacklog: { schematic: 0, illustration: 1 } }), ['illustrate']);
+  assert.deepEqual(stagesFor(unit(), { ...passed, figureBacklog: { schematic: 1, illustration: 1 } }), ['figures', 'illustrate']);
+  // A unit whose only prompt-only row is an illustration no longer queues a no-op figures job.
+  assert.deepEqual(stagesFor(unit('open', 'open', { figures: { prompt_only: 1 } }), { ...passed, figureBacklog: { schematic: 0, illustration: 1 } }), ['illustrate']);
+});
+
+test('one illustrate job at a time: generation is serial', () => {
+  const j = (id, stage) => ({ id, stage });
+  const added = [j('a', 'illustrate'), j('b', 'figures'), j('c', 'illustrate')];
+  assert.deepEqual(limitIllustrate(added, []).map((x) => x.id), ['a', 'b']);
+  assert.deepEqual(limitIllustrate(added, [j('z', 'illustrate')]).map((x) => x.id), ['b']);
 });
