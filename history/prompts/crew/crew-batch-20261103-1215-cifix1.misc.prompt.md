@@ -1,6 +1,6 @@
 ---
 id: crew-batch-20261103-1215-cifix1
-title: crew fix GISS-401 Unit 5 figure geometry
+title: crew fix CREW unit 0
 stage: misc
 date: 2026-11-03
 surface: agent
@@ -16,16 +16,97 @@ links:
   adr: null
   pr: null
 files:
- - static/img/figures/giss-401/unit-05/fig-U5-1.svg
- - static/img/figures/giss-401/unit-05/fig-U5-1.dark.svg
- - static/img/figures/giss-401/unit-05/fig-U5-2.svg
- - static/img/figures/giss-401/unit-05/fig-U5-2.dark.svg
- - static/img/figures/giss-401/unit-05/fig-U5-3.svg
- - static/img/figures/giss-401/unit-05/fig-U5-3.dark.svg
- - static/img/figures/giss-401/unit-05/fig-U5-4.svg
- - static/img/figures/giss-401/unit-05/fig-U5-4.dark.svg
- - specs/content/giss-401/tasks.md
+ - docs/semester-3/giss-401/course-overview.mdx
+ - docs/semester-3/giss-401/unit-05/index.mdx
+ - docs/semester-3/giss-401/unit-05/topic-01.mdx
+ - docs/semester-3/giss-401/unit-05/topic-02.mdx
+ - docs/semester-3/giss-401/unit-05/unit-assessment.mdx
+ - history/prompts/crew/crew-batch-20261103-1215-cifix1.misc.prompt.md
+ - history/prompts/general/547-verify-giss401-unit-five-merge.general.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u05-author-conflict1.misc.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u05-author-conflict2.misc.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u05-author-conflict3.misc.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u05-author-conflict4.misc.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u05-author-conflict5.misc.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u05-author.green.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u05-conflict1.green.prompt.md
+ - specs/content/giss-401/authoring/unit-05.md
+ - specs/content/giss-401/concepts/unit-05.md
+ - specs/content/giss-401/coverage/unit-05.md
+ - specs/content/giss-401/figures/unit-05.md
+ - specs/content/giss-401/reviews/unit-01/G2/20261103T001231244Z-gates.json
+ - specs/content/giss-401/reviews/unit-01/G2/20261103T021608724Z-gates.json
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T001231244Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T001231244Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T001231244Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T001231244Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T001231244Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T001231244Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T001231244Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T001231244Z/validate-content.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T021608724Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T021608724Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T021608724Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T021608724Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T021608724Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T021608724Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T021608724Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T021608724Z/validate-content.txt
+ - specs/content/giss-401/reviews/unit-02/G2/20261103T120850909Z-gates.json
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261103T120850909Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261103T120850909Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261103T120850909Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261103T120850909Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261103T120850909Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261103T120850909Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261103T120850909Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-02/G2/logs-20261103T120850909Z/validate-content.txt
+ - specs/content/giss-401/reviews/unit-03/G2/20261103T031913180Z-gates.json
+ - specs/content/giss-401/reviews/unit-03/G2/logs-20261103T031913180Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-03/G2/logs-20261103T031913180Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-03/G2/logs-20261103T031913180Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-03/G2/logs-20261103T031913180Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-03/G2/logs-20261103T031913180Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-03/G2/logs-20261103T031913180Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-03/G2/logs-20261103T031913180Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-03/G2/logs-20261103T031913180Z/validate-content.txt
+ - specs/content/giss-401/reviews/unit-04/G2/20261103T021608931Z-gates.json
+ - specs/content/giss-401/reviews/unit-04/G2/logs-20261103T021608931Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-04/G2/logs-20261103T021608931Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-04/G2/logs-20261103T021608931Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-04/G2/logs-20261103T021608931Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-04/G2/logs-20261103T021608931Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-04/G2/logs-20261103T021608931Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-04/G2/logs-20261103T021608931Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-04/G2/logs-20261103T021608931Z/validate-content.txt
+ - specs/content/giss-401/reviews/unit-05/G2/20261102T233631738Z-gates.json
+ - specs/content/giss-401/reviews/unit-05/G2/20261103T001231439Z-gates.json
+ - specs/content/giss-401/reviews/unit-05/G2/20261103T021609105Z-gates.json
  - specs/content/giss-401/reviews/unit-05/G2/20261103T130415550Z-gates.json
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/validate-content.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T001231439Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T001231439Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T001231439Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T001231439Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T001231439Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T001231439Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T001231439Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T001231439Z/validate-content.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T021609105Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T021609105Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T021609105Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T021609105Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T021609105Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T021609105Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T021609105Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T021609105Z/validate-content.txt
  - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T130415550Z/check-bloom-bands.txt
  - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T130415550Z/check-concept-graph.txt
  - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T130415550Z/check-depth-gate.txt
@@ -34,7 +115,38 @@ files:
  - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T130415550Z/check-no-answer-keys.txt
  - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T130415550Z/check-no-em-dash.txt
  - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T130415550Z/validate-content.txt
- - history/prompts/crew/crew-batch-20261103-1215-cifix1.misc.prompt.md
+ - specs/content/giss-401/reviews/unit-06/G2/20261103T031913754Z-gates.json
+ - specs/content/giss-401/reviews/unit-06/G2/logs-20261103T031913754Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-06/G2/logs-20261103T031913754Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-06/G2/logs-20261103T031913754Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-06/G2/logs-20261103T031913754Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-06/G2/logs-20261103T031913754Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-06/G2/logs-20261103T031913754Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-06/G2/logs-20261103T031913754Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-06/G2/logs-20261103T031913754Z/validate-content.txt
+ - specs/content/giss-401/reviews/unit-07/G2/20261103T120851056Z-gates.json
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T120851056Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T120851056Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T120851056Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T120851056Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T120851056Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T120851056Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T120851056Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T120851056Z/validate-content.txt
+ - specs/content/giss-401/sources/texts/abdel-salam-2015-democracy.md
+ - specs/content/giss-401/sources/texts/pak-constitution-1973.md
+ - specs/content/giss-401/sources/texts/quran-translation.md
+ - specs/content/giss-401/sources/texts/rahman-2020-zakat.md
+ - specs/content/giss-401/sources/unit-05.md
+ - specs/content/giss-401/tasks.md
+ - static/img/figures/giss-401/unit-05/fig-U5-1.dark.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-1.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-2.dark.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-2.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-3.dark.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-3.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-4.dark.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-4.svg
 tests:
  - npm run check:content
 ---
@@ -71,27 +183,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (batch-20261103-0200-cifix1, fix, codex) CI must verify browser geometry; the brief prohibited local Playwright.
 - (batch-20261102-2130-cifix1, fix, opencode) `measure-figure-text.mjs` was not run (Playwright forbidden); the fix was validated by a DejaVu advance-metric simulation that reproduced all 7 CI spills exactly before the change and 0 after, plus a pixel-diff render check showing the figure is unchanged.
 
+
 ## Response snapshot
 
-Reduced the label font sizes in all four GISS-401 Unit 5 schematics to the 11px floor (support) and 12px (th/label), widened the fig-U5-1 top panels from 220 to 237 and the fig-U5-3 pillar cells from 235 to 245, and reworded three labels that still overflowed the CI fallback font. Regenerated the four dark variants and refreshed the stale G2 gate evidence that the SVG edits invalidated.
+Fixed the figure-geometry CI failure by resizing and reflowing the four GISS-401 Unit 5 schematic SVGs (plus dark variants) to fit the CI fallback font, and refreshed the stale G2 gate evidence those edits invalidated.
 
 ## Outcome
 
-- Impact: fix for GISS-401 Unit 5 figure geometry by opencode (attempt 1).
-- Tests: npm run check:content passed (all 13 gates) in the job worktree.
-- Files: 19 file(s), listed above.
+- Impact: fix for CREW Unit 0 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 131 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: All four GISS-401 Unit 5 SVGs now fit the CI fallback font (DejaVu Sans) at the 11px minimum label size; dark variants regenerated; G2 gate evidence refreshed and the tracker row repointed.
-- Decisions the team must respect: the figures keep their archetypes, figure IDs, alt text and manifest rows; only label text, font sizes and box widths changed. G3/G5 stay open and this PR does not certify anything.
+- Shipped / changed: Fixed the figure-geometry CI failure by resizing and reflowing the four GISS-401 Unit 5 schematic SVGs (plus dark variants) to fit the CI fallback font, and refreshed the stale G2 gate evidence those edits invalidated.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - `measure-figure-text.mjs` was not run locally (Playwright prohibited by the brief). The fix was validated with a DejaVu advance-metric simulation (fontTools hmtx + kern, SVG whitespace rules) that reproduced the CI log's 45 unique spills before the change and 0 after; the CI rerun is the confirmation.
-  - The tightest remaining margins under the simulation are about 4px (fig-U5-3 "Independent judiciary with no executive") and 6px (fig-U5-1 "Circulates capital; stops hoarding (59:7)"), so a future text edit there could re-expose a spill.
-  - The G2 evidence refresh repointed `specs/content/giss-401/tasks.md` to `specs/content/giss-401/reviews/unit-05/G2/20261103T130415550Z-gates.json`; the old evidence file is left in place.
+  - `measure-figure-text.mjs` was not run locally (Playwright prohibited); the fix was validated by a DejaVu advance-metric simulation that reproduced the CI log's 45 unique spills before and 0 after, so the CI rerun is the confirmation.
+  - tightest remaining margins are about 4px (fig-U5-3 "Independent judiciary with no executive") and 6px (fig-U5-1 "Circulates capital; stops hoarding (59:7)"); a future text edit there could re-expose a spill.
+  - G2 evidence was refreshed to `specs/content/giss-401/reviews/unit-05/G2/20261103T130415550Z-gates.json` and `specs/content/giss-401/tasks.md` repointed; the old evidence file is left in place.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
