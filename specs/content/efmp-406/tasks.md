@@ -21,18 +21,18 @@
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-01/G2/20261102T142934562Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-01/G2/20261103T112248137Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/efmp-406/reviews/unit-01/G3/5be15169-67ce-493e-9ccd-e4c8e6b64a2d.json; all 7 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; all 8 SVG variants pass geometry; G3 remains open and unsigned |
 | Unit 1 | G4 ur-translation | ▢ | | separate job |
 | Unit 1 | G5 ur-review | ▢ | | |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-02/G2/20261102T193204741Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-02/G2/20261103T112248340Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
 | Unit 2 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notices |
 | Unit 2 | G5 ur-review | ▢ | | |
 | Unit 2 | G6 assets | ▣ | | four original English schematics placed with dark variants; `measure-figure-text` geometry check runs in CI |
 | Unit 2 | G7 publish | ▢ | | no publication requested by this authoring job |
 | Unit 3 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-03/G2/20261102T114853349Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-03/G2/20261103T112248471Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | awaiting independent reviewer |
 | Unit 3 | G4 ur-translation | ▢ | | separate job |
 | Unit 3 | G5 ur-review | ▢ | | |
@@ -45,11 +45,11 @@
 | Unit 4 | G6 assets | ▣ | | Four EN light/dark schematic pairs placed; Urdu assets deferred with the Urdu job |
 | Unit 4 | G7 publish | ▢ | | No publication authorised or performed by this job |
 | Unit 3 | G3 en-review | ▢ | | advisory: escalate by agent:codex-g3-reviewer; report at specs/content/efmp-406/reviews/unit-03/G3/01a19c22-e969-7f80-81b7-f2e304f416df.json; source support, assessment demand/rubrics, readability and civic-example repairs required; actual author run identity and browser/print evidence unavailable; all 13 content gates pass; G3 remains open and unsigned |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-05/G2/20261102T155654755Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-05/G2/20261103T112248594Z-gates.json |
 | Unit 5 | G3 en-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/efmp-406/reviews/unit-05/G3/4df544c3-c825-473c-8c69-940a86171cf5.json; all 7 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; all 8 SVG variants pass geometry; G3 remains open and unsigned |
 | Unit 5 | G4 ur-translation | ▢ | | separate job |
 | Unit 5 | G5 ur-review | ▢ | | |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-06/G2/20261102T204643842Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-06/G2/20261103T112248781Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/efmp-406/reviews/unit-06/G3/f39ce2ec-8915-4b91-be9c-d3b7ce713df8.json; all 7 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; all 8 SVG variants pass geometry; G3 remains open and unsigned |
 | Unit 6 | G4 ur-translation | ▢ | | Draft mirror delivered: five MDX files and four Urdu light/dark SVG pairs; handoff at translations/unit-06/handoff.md. Stage remains open per translate-unit Step 7; independent G5 and permitted browser/print checks pending. |
 | Unit 6 | G5 ur-review | ▢ | | independent Urdu review pending |
