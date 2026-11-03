@@ -29,7 +29,7 @@
 | Unit 1 | G6 assets | ▣ | | four English schematics placed with dark variants; `measure-figure-text` not run (crew brief bars Chromium), CI `figure-geometry` is the first measured check |
 | Unit 1 | G7 publish | ▢ | | no publication requested by this authoring job |
 | Unit 3 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-03/G2/20261102T230636766Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-03/G2/20261103T011416059Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
 | Unit 3 | G4 ur-translation | ▢ | | separate job |
 | Unit 3 | G5 ur-review | ▢ | | |
