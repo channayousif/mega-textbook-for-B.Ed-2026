@@ -62,11 +62,21 @@ html[dir='rtl'] code {
 
 /* --- Reading typography (UX refresh, 2026-10-04) ----------------------------
    Long-form readability for the doc column only: larger text, generous
-   leading, a ~72-character measure for running text, and section headings
-   that visibly separate the topic cycle. Tables and figures keep the full
-   column width. The RTL block above wins on line-height by specificity. */
+   leading, and section headings that visibly separate the topic cycle. The RTL
+   block above wins on line-height by specificity.
+
+   One shared column (owner ruling, 2026-11-04). Running text used to stop at a
+   72ch measure inside a wider column, so at 1920px paragraphs ended about 224px
+   short of the cards, rules and images around them and no right edge lined up.
+   The column itself is now the measure: the toolbar, title, text, cards, tables,
+   figures and page footer all share both edges. `max-width` lets it shrink when
+   the viewport or the open sidebar leaves less room.
+
+   The selector targets the container's CSS-module class by prefix on purpose.
+   `html.docs-doc-page` looks like the stable hook, but Helmet drops it briefly
+   while hydrating, and measured loads caught the column jumping to full width. */
 :root {
-  --reading-measure: 72ch;
+  --reading-column: 53.75rem; /* 860px at the default root size */
   --reading-font-size: 1.0625rem;
   --ifm-paragraph-margin-bottom: 1.1rem;
 }
@@ -82,18 +92,9 @@ html[dir='rtl'] code {
   line-height: 1.75;
 }
 
-.theme-doc-markdown > p,
-.theme-doc-markdown > ul,
-.theme-doc-markdown > ol,
-.theme-doc-markdown > blockquote,
-.theme-doc-markdown > h2,
-.theme-doc-markdown > h3,
-.theme-doc-markdown > h4,
-.topic-section > p,
-.topic-section > ul,
-.topic-section > ol,
-.topic-section > h3 {
-  max-width: var(--reading-measure);
+[class*='docItemContainer_'] {
+  max-width: var(--reading-column);
+  margin-inline: auto;
 }
 
 .theme-doc-markdown li + li {
@@ -500,16 +501,23 @@ html[data-theme='dark'] .pagination-nav__label {
   color: var(--ifm-color-primary-lighter);
 }
 
-/* Desktop text justification for LTR prose. Scoped to paragraph elements so
-   headings, lists, and table cells keep their default left-align. Only applies
-   above Docusaurus's 996px sidebar breakpoint where the content column is wide
-   enough that justified text looks intentional rather than stretched.
-   RTL (Urdu) prose is excluded; its text-align: start is set above. */
-@media (min-width: 997px) {
-  html:not([dir='rtl']) .markdown p {
+/* Desktop text justification for LTR prose: paragraphs, list items and callouts
+   end on the column edge (owner ruling, 2026-11-04). Headings, table cells and
+   captions keep their default alignment. Only applies above Docusaurus's 996px
+   sidebar breakpoint where the column is wide enough that justified text looks
+   intentional rather than stretched. RTL (Urdu) prose is excluded; its
+   text-align: start is set above. The dyslexia-friendly mode is excluded too,
+   because uneven word gaps are what that reader asked to get away from. */
+@media screen and (min-width: 997px) {
+  html:not([dir='rtl']):not([data-dyslexic-font]) .markdown :is(p, li) {
     text-align: justify;
     hyphens: auto;
     -webkit-hyphens: auto;
+  }
+  html:not([dir='rtl']) .markdown :is(td, th, figcaption) :is(p, li) {
+    text-align: start;
+    hyphens: manual;
+    -webkit-hyphens: manual;
   }
 }
 
@@ -659,6 +667,16 @@ html[data-theme='dark'] .bloom-tag {
 .figure--diagram img {
   max-width: min(100%, 760px);
 }
+/* Above phone width every figure fills the shared reading column, so its border
+   lines up with the text. Phones keep the scroll behaviour below, and print keeps
+   the rules further down. These are SVG or generously sized WebP, so the small
+   upscale stays sharp. Specificity beats the archetype cap just above. */
+@media screen and (min-width: 769px) {
+  .markdown .figure img {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 
 /* --- Schematics on a phone: scroll rather than scale past legibility -------
    Fitting a schematic to a phone and keeping it readable are in direct tension.
@@ -711,6 +729,14 @@ html[data-theme='dark'] .bloom-tag {
   width: fit-content;
   max-width: 100%;
   overflow-x: auto;
+}
+/* A desktop table fills the shared reading column like everything else. */
+@media screen and (min-width: 997px) {
+  .markdown > table,
+  .markdown table {
+    display: table;
+    width: 100%;
+  }
 }
 
 /* The scroll container above works, but at rest it gave no sign that anything was
