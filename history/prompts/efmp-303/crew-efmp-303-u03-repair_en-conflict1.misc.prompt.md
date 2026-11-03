@@ -1,6 +1,6 @@
 ---
 id: crew-efmp-303-u03-repair_en-conflict1
-title: crew repair_en EFMP-303 unit 3
+title: crew fix EFMP-303 unit 3
 stage: misc
 date: 2026-11-03
 surface: agent
@@ -8,16 +8,63 @@ model: opencode
 feature: efmp-303
 branch: crew/efmp-303-u03-repair_en
 user: crew
-command: crew repair_en
-labels: ["crew", "opencode", "repair_en"]
+command: crew fix
+labels: ["crew", "opencode", "fix"]
 links:
   spec: specs/content/efmp-303/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
+ - docs/semester-2/efmp-303/unit-03/topic-01.mdx
+ - docs/semester-2/efmp-303/unit-03/topic-02.mdx
+ - docs/semester-2/efmp-303/unit-03/topic-03.mdx
+ - docs/semester-2/efmp-303/unit-03/unit-assessment.mdx
+ - docs/semester-2/efmp-303/unit-03/unit-teacher-notes.mdx
  - history/prompts/efmp-303/crew-efmp-303-u03-repair_en-conflict1.misc.prompt.md
+ - history/prompts/efmp-303/crew-efmp-303-u03-repair_en.misc.prompt.md
+ - history/prompts/general/20261116-repair-efmp303-unit-three-g3.general.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-03/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-03/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-03/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-03/unit-assessment.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/efmp-303/unit-03/unit-teacher-notes.mdx
+ - specs/content/efmp-303/concepts/unit-03.md
+ - specs/content/efmp-303/coverage/unit-03.md
+ - specs/content/efmp-303/figures/unit-03.md
+ - specs/content/efmp-303/reviews/unit-03/G2/20261103T071326507Z-gates.json
+ - specs/content/efmp-303/reviews/unit-03/G2/logs-20261103T071326507Z/check-bloom-bands.txt
+ - specs/content/efmp-303/reviews/unit-03/G2/logs-20261103T071326507Z/check-concept-graph.txt
+ - specs/content/efmp-303/reviews/unit-03/G2/logs-20261103T071326507Z/check-depth-gate.txt
+ - specs/content/efmp-303/reviews/unit-03/G2/logs-20261103T071326507Z/check-docs-sync.txt
+ - specs/content/efmp-303/reviews/unit-03/G2/logs-20261103T071326507Z/check-figures.txt
+ - specs/content/efmp-303/reviews/unit-03/G2/logs-20261103T071326507Z/check-no-answer-keys.txt
+ - specs/content/efmp-303/reviews/unit-03/G2/logs-20261103T071326507Z/check-no-em-dash.txt
+ - specs/content/efmp-303/reviews/unit-03/G2/logs-20261103T071326507Z/validate-content.txt
+ - specs/content/efmp-303/reviews/unit-03/G3/repair-20261103/check-content.log
+ - specs/content/efmp-303/reviews/unit-03/G3/repair-20261103/handoff.md
+ - specs/content/efmp-303/reviews/unit-03/G3/repair-20261103/origin-main-check-content.log
+ - specs/content/efmp-303/sources/texts/u03-coombs.md
+ - specs/content/efmp-303/sources/texts/u03-nep2009.md
+ - specs/content/efmp-303/sources/texts/u03-vision2025.md
+ - specs/content/efmp-303/sources/unit-03.md
  - specs/content/efmp-303/tasks.md
+ - static/img/figures/efmp-303/unit-03/fig-U3-2.dark.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-2.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-2.ur.dark.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-2.ur.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-3.dark.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-3.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-3.ur.dark.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-3.ur.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-4.dark.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-4.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-4.ur.dark.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-4.ur.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-5.dark.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-5.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-5.ur.dark.svg
+ - static/img/figures/efmp-303/unit-03/fig-U3-5.ur.svg
 tests:
  - npm run check:content
 ---
@@ -55,26 +102,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-303-u03-translate-r1, translate, codex) English G3 repairs and Urdu page/mobile/A4 inspection remain pending; translation_status stays draft.
 - (efmp-303-u03-translate-r1, translate, codex) English G3 repairs and Urdu page/mobile/A4 inspection remain pending; translation_status stays draft.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/efmp-303-u03-repair_en, resolved the single tasks.md conflict by keeping both sides' G3 en-review rows, rebuilt static/content-status.json, and confirmed all 13 content gates pass.
+Merged origin/main into crew/efmp-303-u03-repair_en, resolved the single tasks.md conflict by keeping both sides' G3 en-review rows, and confirmed all 13 content gates pass.
 
 ## Outcome
 
-- Impact: repair_en for EFMP-303 Unit 3 by opencode (attempt 2).
-- Tests: npm run check:content passed in the job worktree after the merge.
-- Files: 2 file(s), listed above.
+- Impact: fix for EFMP-303 Unit 3 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 49 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/efmp-303-u03-repair_en and resolved the tasks.md conflict, keeping main's Unit 4 G3 row then this branch's Unit 3 G3 row.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this merge does not certify anything.
+- Shipped / changed: Merged origin/main into crew/efmp-303-u03-repair_en, resolved the single tasks.md conflict by keeping both sides' G3 en-review rows, and confirmed all 13 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G3 remains open; independent review, browser inspection and owner G1/figure-plan decisions remain pending.
-  - Branch added no shared-registry entries, so no ID reassignments were needed.
+  - G3 for Unit 3 remains open; independent review, browser inspection and owner G1/figure-plan decisions are still pending.
+  - The merge pulled main's Unit 4 repair changes into this branch; they are out of Unit 3 scope but now present. static/content-status.json is gitignored, so a fresh worktree needs `npm run build:content-status` before check:content.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
