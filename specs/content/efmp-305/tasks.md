@@ -186,4 +186,4 @@ the PHR and Paperclip handoff. No G3/G5 certification or publication is claimed.
 |---|---|---|---|---|
 | Unit 5 | G3 en-review | ▣ | agent:codex | advisory: revise; repairs applied for 20261102T212207Z-g3-desk-6054cf1d.json (F2–F8); see reviews/unit-05/repair-en-20261103/repair-notes.md. F1 provenance and browser/print evidence remain owner/host work; fresh independent review and MCQ re-solve required. G3 remains unticked. |
 
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-05/G2/20261103T131119616Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-305/reviews/unit-05/G2/20261103T180403253Z-gates.json |
