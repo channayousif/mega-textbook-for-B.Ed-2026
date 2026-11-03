@@ -49,7 +49,7 @@
 | Unit 2 | G6 assets | ▣ | | Six original English SVG schematics placed with derived dark variants; Urdu `.ur.svg` assets belong to the translation job; browser text-geometry measurement not run (crew bars Chromium), CI figure-geometry job pending |
 | Unit 2 | G7 publish | ▢ | | No publication claimed; catalog integration and owner authority remain separate |
 | Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-06/G2/20261103T011742805Z-gates.json |
-| Unit 6 | G3 en-review | ▢ | | Independent Islamic Studies reviewer required; no certification claimed |
+| Unit 6 | G3 en-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/giss-401/reviews/unit-06/G3/ad110b4d-3d0d-4777-98c5-9930d6961900.json; all 7 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; 6 Sharp PNG renders verified; G3 remains open and unsigned |
 | Unit 6 | G4 ur-translation | ▢ | | Separate job; English pages carry untranslated notices |
 | Unit 6 | G5 ur-review | ▢ | | Pending translation and independent review |
 | Unit 6 | G6 assets | ▣ | | Six English schematics placed with derived dark variants; Urdu localisation pending |
