@@ -126,3 +126,5 @@ unit-spec at intake (board-run G0/G1 intake pending).
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-05/G3/20261102T212207Z-g3-desk-58144d8a.json |
 | Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-01/G3/20261102T212819Z-g3-desk-140ce781.json |
 | Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied; report reviews/unit-02/G3/20261102T212207Z-g3-desk-4de29bbc.json; fig-U2-1.svg geometry overflow resolved via PR #150 (TEX-74) with measure-figure-text clean (774.8 <= 780); external URLs in topic-02 and topic-03 accessible; repository check:figures green; needs a fresh G3 run |
+
+| Unit 4 | G3 en-review | ▢ | | advisory: revise; repairs applied; report reviews/unit-04/G3/20261102T212207Z-g3-desk-a0d82ff4.json; unsupported GDP figures and Coombs cycle attribution removed in EN and UR; duplicate concept label fixed; SLO 4-1 retained per approved Topic 4.1 mapping. Render-review remains blocked by crew host restrictions; fresh independent G3 with small-screen, A4 print and figure-clipping inspection required. |
