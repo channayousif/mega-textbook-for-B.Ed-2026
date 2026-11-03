@@ -11,7 +11,7 @@
 | 3 | Worship and the Moral System of Islam | ☐ | ☐ | ☐ | ☐ | | |
 | 4 | The Social System and the State in Islam | ☐ | ☐ | ☐ | ☐ | | |
 | 5 | The Economic and Political Systems of Islam | ☐ | ☐ | ☐ | ☐ | | |
-| 6 | Islam, Education, Civilization and Contemporary Issues | ☐ | ☐ | ☐ | ☐ | | |
+| 6 | Islam, Education, Civilization and Contemporary Issues | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-03 by the crew author job; G2 gate evidence recorded below; G3 (with a qualified Islamic Studies reviewer) and Urdu remain open |
 | 7 | Islamic Ethics in Professional Life | ☐ | ☐ | ☐ | ☐ | | |
 
 **Key:** ▣ = in progress, ☐ = not started, ✓ = done, ✗ = escalated
@@ -28,11 +28,11 @@
 | Unit 1 | G5 ur-review | ▢ | | |
 | Unit 1 | G6 assets | ▣ | | four English schematics placed with dark variants; `measure-figure-text` not run (crew brief bars Chromium), CI `figure-geometry` is the first measured check |
 | Unit 1 | G7 publish | ▢ | | no publication requested by this authoring job |
-| Unit 6 | G2 en-draft | ▣ | agent:codex | English draft and four governance artefacts authored; G2 evidence pending |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-06/G2/20261103T000422959Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | Independent Islamic Studies reviewer required; no certification claimed |
 | Unit 6 | G4 ur-translation | ▢ | | Separate job; English pages carry untranslated notices |
 | Unit 6 | G5 ur-review | ▢ | | Pending translation and independent review |
-| Unit 6 | G6 assets | ▢ | | Six English schematics placed with derived dark variants; Urdu localisation pending |
+| Unit 6 | G6 assets | ▣ | | Six English schematics placed with derived dark variants; Urdu localisation pending |
 
 ## Unit 6 authoring notes
 
@@ -62,6 +62,4 @@ The full UDHR text could not be fetched from official routes on this host; its i
 
 ### Final crew validation
 
-`npm run check:content` after refreshing the ignored status report passes 12 of 13 gates. The sole finding is this unit's incomplete G2 row. `node scripts/prepare-gate-evidence.mjs GISS-401 6` stops before running gates with `missing required input: docs/semester-3/giss-401/course-overview.mdx`. The baseline at `origin/main` passed all 13 gates, so this is a new unresolved dependency, not inherited debt. A minimal overview candidate is prepared at `.crew/course-overview.mdx`; adding the course-level file requires a scope exception from the owner. No evidence or done row is fabricated.
-
-All five authored MDX bodies compile with `@mdx-js/mdx`. All 46 figure-palette tests pass; six light and six dark variants pass the figure gate and dark freshness check. Once the overview is authorised and committed, prepare G2 evidence, update only Unit 6's G2 row, refresh content status and rerun the content suite.
+After merging `origin/main` (which added the course overview), `node scripts/prepare-gate-evidence.mjs GISS-401 6` passed all eight draft gates and wrote `reviews/unit-06/G2/20261103T000422959Z-gates.json`. All five authored MDX bodies compile with `@mdx-js/mdx`; six light and six dark figure variants pass the figure gate and dark freshness check. Unit 6 appended its own sections to the shared bound excerpts `quran-translation.md` and `bhat-2019-education.md`; Unit 1's entries there are unchanged.
