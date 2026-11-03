@@ -92,7 +92,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Merged origin/main into crew/efmp-301-u09-repair_en, union-resolved the G3 tracker conflict in specs/content/efmp-301/tasks.md, regenerated static/content-status.json, and verified all 13 content gates pass.
+Merged origin/main, union-resolved the EFMP-301 tasks.md G3 tracker conflict keeping both sides' rows, refreshed content-status, and confirmed all content gates pass.
 
 ## Outcome
 
@@ -104,12 +104,12 @@ Merged origin/main into crew/efmp-301-u09-repair_en, union-resolved the G3 track
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/efmp-301-u09-repair_en, union-resolved the G3 tracker conflict (kept main's Unit 3 and Unit 12 advisory rows and this branch's Unit 9 advisory row), regenerated static/content-status.json, and verified all 13 content gates pass.
+- Shipped / changed: Merged origin/main, union-resolved the EFMP-301 tasks.md G3 tracker conflict keeping both sides' rows, refreshed content-status, and confirmed all content gates pass.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - G3 remains unticked; owner must arrange current mobile/A4 rendering and authenticated independent review provenance.
-  - Unit 9 G3 remains open pending a fresh independent review cycle.
+  - Unit 9 G3 stays unticked; owner must arrange current mobile/A4 rendering and authenticated independent review provenance.
+  - The shared registries (glossary.json, specs/decisions/log.md, specs/gaps.md, terminology.csv) were untouched by both sides, so no union or ID renumbering was needed.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
