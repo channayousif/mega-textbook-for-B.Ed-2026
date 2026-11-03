@@ -47,3 +47,4 @@ G1 unit-spec affirmed at intake (D-2026-0019). G2 en-draft cleared by determinis
 | Unit 1 | G3 en-review | ✅ | CMY | review:specs/content/geng-300/reviews/unit-01/G3/20261102T140729Z-g3-desk-8d754faa.json |
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/geng-300/reviews/unit-02/G3/20261102T211054Z-g3-desk-5d4f13a0.json |
 | Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/geng-300/reviews/unit-04/G3/20261102T211054Z-g3-desk-a52b78de.json |
+| Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/geng-300/reviews/unit-02/G3/20261102T211054Z-g3-desk-5d4f13a0.json (A1 Topic 2.3 MCQ 8/10 and RRQ 5, A2 ERQ 3 stimulus and rubric, P1, C1, S1 labels); E1, E2, U1 need owner or render host; fresh independent G3 needed |
