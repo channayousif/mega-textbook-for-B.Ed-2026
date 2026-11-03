@@ -20,8 +20,8 @@ files:
  - docs/semester-3/efmp-406/unit-03/topic-01.mdx
  - docs/semester-3/efmp-406/unit-03/topic-02.mdx
  - docs/semester-3/efmp-406/unit-03/unit-assessment.mdx
- - history/prompts/efmp-406/crew-efmp-406-u03-repair_en.misc.prompt.md
  - history/prompts/efmp-406/crew-efmp-406-u03-repair_en-conflict1.misc.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u03-repair_en.misc.prompt.md
  - history/prompts/general/2447-efmp-406-u03-repair-en.general.prompt.md
  - specs/content/efmp-406/coverage/unit-03.md
  - specs/content/efmp-406/glossary/unit-03.json
@@ -75,23 +75,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-406-u03-translate, translate, codex) Author must repair English/source defects before G4 resumes; G3/G5 remain open.
 - (efmp-406-u03-translate, translate, codex) Author must repair English/source defects before G4 resumes; G3/G5 remain open.
 
+
 ## Response snapshot
 
-Merged origin/main into the branch and found it already up to date: origin/main b7f563c7c is an ancestor of HEAD 20f9e7fae, so the reported tasks.md conflict does not reproduce against main and no merge commit was required. Ran `npm run check:content`: all 14 content gates pass. Committed this PHR as the conflict-fix record.
+Verified the branch already contains origin/main with no reproducible conflict, passed all 14 content gates, and committed the conflict-fix PHR.
 
 ## Outcome
 
 - Impact: fix for EFMP-406 Unit 3 by opencode (attempt 1).
-- Tests: npm run check:content passed (14 of 14 gates).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 22 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Verified the branch already contains origin/main (no conflict to resolve), passed all 14 content gates, and committed the conflict-fix PHR.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job does not certify anything.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path). Batch PR #439 (crew/batch-20261103-1902) is open and will advance main with the Unit 2 tracker updates; a later merge of main may conflict again in specs/content/efmp-406/tasks.md and need the append-only union resolution (main's rows first, then this branch's).
+- Shipped / changed: Verified the branch already contains origin/main with no reproducible conflict, passed all 14 content gates, and committed the conflict-fix PHR.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - origin/main `b7f563c7c` is already an ancestor of this branch (ahead 5, behind 0), so there was no conflict to resolve and no merge commit exists.
+  - Batch PR #439 (`crew/batch-20261103-1902`) is still open and will advance main with the Unit 2 tracker row update and advisory row; expect a fresh append-only conflict in `specs/content/efmp-406/tasks.md` when merging main after it lands.
+  - All 14 content gates pass on the committed branch; G3/G5 remain open and unsigned.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
