@@ -1,0 +1,9 @@
+Command: TMPDIR="$PWD/.crew/test-tmp" scripts/heavy.sh npm test
+Exit code: 0
+
+Summary excerpt from Vitest output (individual test names omitted):
+ Test Files  28 passed (28)
+      Tests  347 passed (347)
+   Start at  10:37:47
+   Duration  67.53s (transform 976ms, setup 0ms, collect 1.73s, tests 52.02s, environment 7ms, prepare 4.34s)
+

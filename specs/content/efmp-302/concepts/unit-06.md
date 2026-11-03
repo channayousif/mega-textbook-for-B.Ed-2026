@@ -25,7 +25,7 @@ Development` and `Professional Learning Community`. The remaining thirteen are a
 | CON:EFMP-302-6-7 | The new teacher stage | نئے استاد کا مرحلہ | CON:EFMP-302-6-6 | 6.2 | SLO:EFMP-302-6-1 | MCQ-05, RRQ-04, RRQ-05, ERQ-02 |
 | CON:EFMP-302-6-8 | The experienced teacher stage | تجربہ کار استاد کا مرحلہ | CON:EFMP-302-6-7 | 6.2 | SLO:EFMP-302-6-1 | MCQ-06, RRQ-04, RRQ-06, ERQ-02 |
 | CON:EFMP-302-6-9 | Mismatch between support offered and support needed | مطلوبہ اور فراہم کردہ معاونت کا فرق | CON:EFMP-302-6-8 | 6.2 | SLO:EFMP-302-6-1 | RRQ-06, ERQ-02 |
-| CON:EFMP-302-6-10 | Development routes compared | ترقی کے راستوں کا موازنہ | CON:EFMP-302-6-5 | 6.3 | SLO:EFMP-302-6-2 | MCQ-07, RRQ-07, ERQ-03 |
+| CON:EFMP-302-6-10 | Development routes compared | ترقی کے راستوں کا موازنہ | CON:EFMP-302-6-5 | 6.3 | SLO:EFMP-302-6-2 | MCQ-07, RRQ-07, RRQ-08, ERQ-03 |
 | CON:EFMP-302-6-11 | Professional learning community | پیشہ ورانہ تعلمی برادری | CON:EFMP-302-6-10 | 6.3 | SLO:EFMP-302-6-2 | MCQ-07, ERQ-03 |
 | CON:EFMP-302-6-12 | Reflective practice as method | تاملی مشق بطور طریقہ کار | CON:EFMP-302-6-10 | 6.3 | SLO:EFMP-302-6-2 | RRQ-08 |
 | CON:EFMP-302-6-13 | Lesson study | سبق کا مشترکہ مطالعہ | CON:EFMP-302-6-12 | 6.3 | SLO:EFMP-302-6-2 | MCQ-08 |

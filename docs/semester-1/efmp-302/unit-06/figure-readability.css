@@ -1,0 +1,24 @@
+/* Unit 6: keep schematic labels at their authored size on screen. */
+@media screen {
+.markdown #fig-U6-1,
+.markdown #fig-U6-2,
+.markdown #fig-U6-3,
+.markdown #fig-U6-4,
+.markdown #fig-U6-5,
+.markdown #fig-U6-6,
+.markdown #fig-U6-7,
+.markdown #fig-U6-8 {
+  overflow-x: auto;
+  text-align: start;
+}
+.markdown #fig-U6-1 img,
+.markdown #fig-U6-2 img,
+.markdown #fig-U6-3 img,
+.markdown #fig-U6-4 img,
+.markdown #fig-U6-5 img,
+.markdown #fig-U6-6 img,
+.markdown #fig-U6-7 img,
+.markdown #fig-U6-8 img {
+  max-width: none;
+}
+}

@@ -151,6 +151,16 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit | Stage | Status | Reviewer | Suggestion |
 |---|---|---|---|---|
 | Unit 7 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only, final cycle: specs/content/gqur-301/reviews/unit-07/G3/crew-final-20261028.json. Prior F1-F5 verified repaired; P1-P4 remain unverified. ERQ 4 needs owner adjudication of annual admissions per section and ten-year capacity assumptions. G3 stays open, unsigned. Further cycles require recorded owner authorization. |
+| Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-06/G3/20261102T142352Z-g3-desk-d5420c47.json |
+| Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-05/G3/20261102T142352Z-g3-desk-ac7fbe39.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-02/G3/20261102T142352Z-g3-desk-fc6aeea0.json |
+| Unit 8 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-08/G3/20261102T142352Z-g3-desk-763b3723.json |
+| Unit 10 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-10/G3/20261102T142352Z-g3-desk-ae23ece1.json |
+| Unit 11 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-11/G3/20261102T142352Z-g3-desk-5fdfde1d.json |
+| Unit 12 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-12/G3/20261102T142352Z-g3-desk-ee6621f2.json |
+| Unit 13 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-13/G3/20261102T142352Z-g3-desk-13640309.json |
+| Unit 14 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-14/G3/20261102T142352Z-g3-desk-a2f1efa0.json |
+| Unit 15 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-15/G3/20261102T142352Z-g3-desk-3c07394a.json |
 | Unit 1 | G3 en-review | ✅ | CMY | review:specs/content/gqur-301/reviews/unit-01/G3/20261102T140729Z-g3-desk-5ac63c06.json |
 | Unit 3 | G3 en-review | ✅ | CMY | review:specs/content/gqur-301/reviews/unit-03/G3/20261102T140729Z-g3-desk-356db976.json |
 | Unit 4 | G3 en-review | ✅ | CMY | review:specs/content/gqur-301/reviews/unit-04/G3/20261102T140729Z-g3-desk-01cb7d7c.json |
@@ -165,3 +175,13 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 13 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-13/G3/20261102T211054Z-g3-desk-01b39467.json |
 | Unit 14 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-14/G3/20261102T211054Z-g3-desk-4de3fcfe.json |
 | Unit 15 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-15/G3/20261102T211054Z-g3-desk-fa040404.json |
+| Unit 10 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-10/G3/20261102T212207Z-g3-desk-36d2970a.json |
+| Unit 11 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-11/G3/20261102T212207Z-g3-desk-7832f50b.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-02/G3/20261102T212207Z-g3-desk-7dd700f4.json |
+| Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-05/G3/20261102T212207Z-g3-desk-4bace7e3.json |
+| Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-06/G3/20261102T212207Z-g3-desk-f6cc2233.json |
+| Unit 8 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-08/G3/20261102T212207Z-g3-desk-d528518f.json |
+| Unit 12 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-12/G3/20261102T212207Z-g3-desk-a6099778.json |
+| Unit 13 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-13/G3/20261102T212207Z-g3-desk-ddaaaeb1.json |
+| Unit 14 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-14/G3/20261102T212207Z-g3-desk-b6a93c25.json |
+| Unit 15 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-15/G3/20261102T212207Z-g3-desk-b5cee406.json |
