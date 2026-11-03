@@ -45,7 +45,12 @@ export const MAX_REVIEW_CYCLES = 2;
 export function stagesFor(u, f) {
   if (!u.authored) return ['author'];
   const need = [];
-  if ((u.figures?.prompt_only || 0) > 0) need.push('figures');
+  // Kind decides the producer (ADR-0024/0029): schematics go to `figures` (SVG), illustrations to
+  // `illustrate` (raster). The content status counts prompt-only rows without Kind, so until
+  // 2026-11-03 an illustration queued no-op `figures` jobs and `illustrate` never ran at all.
+  const backlog = f.figureBacklog ?? { schematic: u.figures?.prompt_only || 0, illustration: 0 };
+  if (backlog.schematic > 0) need.push('figures');
+  if (backlog.illustration > 0) need.push('illustrate');
   const unrepairedRevise = u.gates.G3 !== 'done' && f.g3Report?.disposition === 'revise' && !f.g3Repaired;
   const unrepairedEscalate = u.gates.G3 !== 'done' && f.g3Report?.disposition === 'escalate' && !f.g3Repaired;
   if (u.gates.G3 !== 'done') {
@@ -59,6 +64,33 @@ export function stagesFor(u, f) {
     } else if (u.gates.G3 === 'done' && u.gates.G5 !== 'done' && !f.g5Report) need.push('review_ur');
   }
   return need;
+}
+
+/**
+ * Unfinished figure rows split by producer. `rows` are parsed manifest rows (unit-NN.md plus the
+ * unit-NN.banner.md sidecar, which carries the ADR-0029 unit banner). A row with no Kind is a
+ * schematic: that is what the `figures` job draws. An illustration still at `generated` also
+ * needs the illustrate job: the script never places, so a person or agent must inspect it first.
+ */
+export function figureBacklog(rows) {
+  const out = { schematic: 0, illustration: 0 };
+  for (const r of rows ?? []) {
+    if (r.kind === 'illustration') {
+      if (r.status === 'prompt-only' || r.status === 'generated') out.illustration++;
+    } else if (r.status === 'prompt-only') out.schematic++;
+  }
+  return out;
+}
+
+/** Raster generation is serial (one lock, one image quota): keep one illustrate job in flight. */
+export function limitIllustrate(added, inFlight) {
+  let slot = !inFlight.some((j) => j.stage === 'illustrate');
+  return added.filter((j) => {
+    if (j.stage !== 'illustrate') return true;
+    if (!slot) return false;
+    slot = false;
+    return true;
+  });
 }
 
 /** A unit the crew has finished reviewing that waits only for a person's G3 sign-off. */

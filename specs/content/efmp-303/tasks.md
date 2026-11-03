@@ -45,7 +45,7 @@ a `concept-map` and two `flowchart`s as the Art. III.10 schematics. G1 unit-spec
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 3 | G1 unit-spec | ▢ | | board G0/G1 intake pending |
-| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-303/reviews/unit-03/G2/20261102T072754690Z-gates.json |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-303/reviews/unit-03/G2/20261103T071326507Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 3 | G4 ur-translation | ▢ | | Six-file draft mirror and six Urdu figure pairs retained; R1 repairs (2026-10-19) restore activity grouping, boundary-wall means, lowest-performing/enrolment qualifiers and minimum rubric/checklist requirements; teacher-note register clarified. translation_status remains draft; translate-unit Step 7 leaves stage open. Handoff: specs/content/efmp-303/reviews/unit-03/G4/translation-handoff-r1.md |
 | Unit 3 | G5 ur-review | ▢ | | |
@@ -61,7 +61,7 @@ a `flowchart` and a `concept-map` as the Art. III.10 schematics. G1 unit-spec at
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 4 | G1 unit-spec | ▢ | | board G0/G1 intake pending |
-| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-303/reviews/unit-04/G2/20261102T072754822Z-gates.json |
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-303/reviews/unit-04/G2/20261103T065114781Z-gates.json |
 | Unit 4 | G3 en-review | ▣ | | agent G3 (Reviewer, agy Gemini, run d3ec05d7) advisory escalation: specs/content/efmp-303/reviews/unit-04/G3/crew-20261018.json. Row stays open: agent evidence cannot close it (ADR-0019). Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 4 | G4 ur-translation | ▣ | | Complete 5-file Urdu mirror verified against EN baseline (c0e60d31): 4 .ur.svg/.ur.dark.svg variants wired; structural parity, figure parity, and key_terms clean under temporary reviewed flip (reverted). Handoff: specs/content/efmp-303/reviews/unit-04/G4/translation-handoff.md. translation_status stays draft pending fresh independent G5 |
 | Unit 4 | G5 ur-review | ▢ | | |
@@ -126,3 +126,6 @@ unit-spec at intake (board-run G0/G1 intake pending).
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-05/G3/20261102T212207Z-g3-desk-58144d8a.json |
 | Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-01/G3/20261102T212819Z-g3-desk-140ce781.json |
 | Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied; report reviews/unit-02/G3/20261102T212207Z-g3-desk-4de29bbc.json; fig-U2-1.svg geometry overflow resolved via PR #150 (TEX-74) with measure-figure-text clean (774.8 <= 780); external URLs in topic-02 and topic-03 accessible; repository check:figures green; needs a fresh G3 run |
+
+| Unit 4 | G3 en-review | ▢ | | advisory: revise; repairs applied; report reviews/unit-04/G3/20261102T212207Z-g3-desk-a0d82ff4.json; unsupported GDP figures and Coombs cycle attribution removed in EN and UR; duplicate concept label fixed; SLO 4-1 retained per approved Topic 4.1 mapping. Render-review remains blocked by crew host restrictions; fresh independent G3 with small-screen, A4 print and figure-clipping inspection required. |
+| Unit 3 | G3 en-review | ▢ | agent:codex | advisory: revise; repairs applied; report specs/content/efmp-303/reviews/unit-03/G3/20261102T212207Z-g3-desk-4e7be754.json; figures, source boundaries, worked examples, assessment guidance and semantic mappings repaired in EN and draft UR. G3 remains open; fresh independent blind solving, author provenance, frozen handoff, page renders and owner G1 reconciliation pending. |
