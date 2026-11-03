@@ -138,6 +138,7 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 11 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-11/G3/20261102T212207Z-g3-desk-c705dbc8.json |
 | Unit 12 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-12/G3/20261102T212207Z-g3-desk-1ab85eaa.json |
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-02/G3/20261102T212207Z-g3-desk-4eaf1d0f.json |
+| Unit 8 | G3 en-review | ▢ | | advisory: revise; repairs applied; report reviews/unit-08/G3/20261102T212207Z-g3-desk-04504f15.json; RRQ 10 replaced with a taught Topic 8.2 item (feedback at the centre, next step vs ranking) so RRQs spread 3/4/3, guidance and UR mirror aligned; ERQs given an explicit 400-500 word limit and rubric rows reworded to match; MCQ keys rebalanced to 3a/3b/2c/2d by reordering options (EN+UR); sources/unit-08.md corrects the guide practical-work attribution, separates the unit ladder and five-part framework (synthesis) from the bound Seifert Chapter 7 findings, and adds a scope-of-support note; comparative proximity and misbehaviour claims qualified in topic-01/topic-03 (EN+UR); fig-U8-1 manifest prompt now carries the not-silence tagline; narrow-screen and A4 render still uninspected; ADR-0019 cycles exhausted, so this is the final cycle and the remaining items escalate to the owner |
 
 ## Re-restructure in progress (2026-09-11)
 
