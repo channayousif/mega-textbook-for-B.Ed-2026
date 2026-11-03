@@ -1,0 +1,120 @@
+---
+id: crew-efmp-406-u01-repair_en
+title: crew repair_en EFMP-406 unit 1
+stage: misc
+date: 2026-11-03
+surface: agent
+model: agy
+feature: efmp-406
+branch: crew/efmp-406-u01-repair_en
+user: crew
+command: crew repair_en
+labels: ["crew", "agy", "repair_en"]
+links:
+  spec: specs/content/efmp-406/content-spec.md
+  ticket: null
+  adr: null
+  pr: null
+files:
+ - docs/semester-3/efmp-406/unit-01/index.mdx
+ - docs/semester-3/efmp-406/unit-01/topic-01.mdx
+ - docs/semester-3/efmp-406/unit-01/topic-02.mdx
+ - docs/semester-3/efmp-406/unit-01/unit-assessment.mdx
+ - docs/semester-3/efmp-406/unit-01/unit-teacher-notes.mdx
+ - history/prompts/efmp-406/crew-efmp-406-u01-repair_en.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-406/unit-01/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-406/unit-01/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-406/unit-01/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-406/unit-01/unit-assessment.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-406/unit-01/unit-teacher-notes.mdx
+ - specs/content/efmp-406/authoring/unit-01.md
+ - specs/content/efmp-406/reviews/unit-01/G2/20261103T131848586Z-gates.json
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261103T131848586Z/check-bloom-bands.txt
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261103T131848586Z/check-concept-graph.txt
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261103T131848586Z/check-depth-gate.txt
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261103T131848586Z/check-docs-sync.txt
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261103T131848586Z/check-figures.txt
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261103T131848586Z/check-no-answer-keys.txt
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261103T131848586Z/check-no-em-dash.txt
+ - specs/content/efmp-406/reviews/unit-01/G2/logs-20261103T131848586Z/validate-content.txt
+ - specs/content/efmp-406/sources/unit-01.md
+ - specs/content/efmp-406/tasks.md
+tests:
+ - npm run check:content
+---
+
+## Prompt
+
+# Crew job efmp-406-u01-repair_en
+
+You are the agy worker on the B.Ed bilingual textbook repo, working in this checkout on branch `crew/efmp-406-u01-repair_en`.
+Read AGENTS.md first and obey it (CLAUDE.md only imports it): no em dash (U+2014) anywhere, heavy commands only through `scripts/heavy.sh`, never run `npm run build`, a dev server or Playwright, keep all scratch files inside your worktree (for example `.crew/`), never use `/tmp`, never mark G3/G5 done, never self-sign or use
+human initials, never edit the style guide, constitution, ADRs, gate scripts, catalog or an approved content-spec.
+
+## Task
+Apply the findings of the latest G3 report under specs/content/efmp-406/reviews/unit-01/G3/. Make the smallest edits that resolve each finding, then append a new tracker row for Unit 1 G3 whose Suggestion begins "advisory: revise; repairs applied" and names the report. Leave G3 unticked.
+
+Follow `.claude/skills/revise-topic/SKILL.md` exactly; read it and every file it references before starting.
+
+## Scope
+EFMP-406 Unit 1 only: its docs/licence and i18n files, its rows and folders under
+`specs/content/efmp-406/`, and `static/img/figures/efmp-406/unit-01/`.
+
+## Continue, do not restart
+Earlier attempts may have left work on this branch. Check `git log origin/main..HEAD` and `git status` and build on it.
+
+## Done when
+1. `npm run check:content` reports no finding that origin/main does not also report (run it, read every
+   failure, fix those in your scope, rerun). Findings that already exist on main belong to other jobs.
+2. All work is committed on this branch with a conventional commit message. Do not push and do not open a PR.
+3. Your final output ends with one line: `CREW-SUMMARY: <what you changed, in one sentence>`.
+4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
+   (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
+
+## Open findings from the latest G3 report
+From `specs/content/efmp-406/reviews/unit-01/G3/20261102T212036Z-g3-desk-45e9b45b.json` (disposition: revise). Resolve each one:
+- [advisory] Teaching case illustrations and hypothetical examples: Fictional classroom scenarios (Nadia in Tando Allahyar, Bilal in Sukkur, Sana, Imran, Mariam's mother, munshi and khata cases) are original instructional examples designed for pedagogy and do not represent empirical case studies or official school inspection records.
+- [advisory] Headless review tooling constraint: The crew job brief explicitly prohibits running npm run build, a dev server, or Playwright Chromium. Visual, structural, and presentation checks were conducted via measure-figure-text.mjs (all 8 SVG variants exit 0 with zero overflow or collision), static heading and table container analysis, and Sharp PNG rasterization with CSS variables resolved.
+- [advisory] Abstract-level citation for Shakir et al. (2012): The publisher full text returned HTTP 403 on 2026-11-02, so citations are strictly limited to findings reported in the published abstract retrieved via Semantic Scholar.
+- [advisory] Catalog entry pending owner ruling: EFMP-406 is proposed for Semester 3 in catalog/courses.json but not yet committed pending an owner ruling, as noted in content-spec.md.
+
+## Notes from earlier jobs on this unit
+- (efmp-406-u01-translate, translate, claude) The Urdu pages have never been checked as rendered (Playwright, narrow width, A4 print); the G5 review session needs to do this.
+- (efmp-406-u01-translate, translate, claude) Proposed Urdu terms the term bank does not hold are listed in specs/content/efmp-406/translations/unit-01/handoff.md and need an owner ruling.
+- (efmp-406-u01-translate, translate, claude) Merging main made the Unit 1 G2 gate record stale; after any later main merge, rerun prepare-gate-evidence.mjs and point the G2 row at the new file.
+- (efmp-406-u01-review_en, review_en, agy) All seven G3 English criteria verified passing with evidence; all 25 assessment items independently solved; all 8 SVG variants pass geometry.
+- (efmp-406-u01-review_en, review_en, agy) G3 tracker row in specs/content/efmp-406/tasks.md is updated to open ▢ per ADR-0019; certification remains blocked pending trusted qualification.
+
+
+## Response snapshot
+
+Applied repairs for the four advisory findings in `specs/content/efmp-406/reviews/unit-01/G3/20261102T212036Z-g3-desk-45e9b45b.json` to EFMP-406 Unit 1:
+- Explicitly labeled classroom scenarios and family cases (Nadia in Tando Allahyar, Bilal in Sukkur, Sana, Imran, Mariam's mother, munshi and khata cases) as original instructional illustrations designed for pedagogy in `index.mdx`, `topic-01.mdx`, `topic-02.mdx`, `unit-teacher-notes.mdx`, and `sources/unit-01.md`, mirrored in Urdu.
+- Qualified Shakir et al. (2012) citations in topic prose, assessment marking model, and Further reading as strictly limited to findings reported in the published study abstract (with publisher full text HTTP 403 noted), mirrored in Urdu.
+- Re-ran `prepare-gate-evidence.mjs` to refresh Unit 1 G2 gate evidence (`specs/content/efmp-406/reviews/unit-01/G2/20261103T131848586Z-gates.json`).
+- Updated `specs/content/efmp-406/tasks.md` G2 row and appended an unticked advisory G3 tracker row naming the desk report with repairs applied.
+
+## Outcome
+
+- Impact: repair_en for EFMP-406 Unit 1 by agy.
+- Tests: `npm run check:content` passed with zero errors across all 13 content gates.
+- Files: 23 files (12 content files + 1 G2 evidence JSON + 8 G2 log files + tasks.md + PHR).
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none.
+
+## Handoff (for CEO and agents)
+
+- Shipped / changed: Applied G3 advisory repairs for EFMP-406 Unit 1 across English and Urdu topic/assessment/notes files and source ledger, refreshed G2 gate evidence, and appended unticked G3 tracker row recording repairs applied.
+- Decisions the team must respect: G3 stays open/unticked per ADR-0019 pending trusted human qualification; no G3/G5 gate was marked done.
+- Pending / next owner: independent G3 re-review / G5 Urdu review once permitted; catalog entry for EFMP-406 pending owner ruling.
+- Notes for the next job on this unit:
+  - Urdu rendered pages (Playwright, narrow width, A4 print) remain uninspected under brief resource constraints.
+  - Proposed Urdu terms listed in `specs/content/efmp-406/translations/unit-01/handoff.md` await an owner ruling.
+- Paperclip issues affected: none.
+
+## Evaluation notes (flywheel)
+
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
