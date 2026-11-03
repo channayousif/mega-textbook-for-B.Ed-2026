@@ -16,25 +16,50 @@ links:
   adr: null
   pr: null
 files:
- - history/prompts/general/2440-translate-giss401-unit-one.general.prompt.md
- - history/prompts/giss-401/crew-giss-401-u01-translate.misc.prompt.md
+ - docs/semester-3/giss-401/unit-07/index.mdx
+ - docs/semester-3/giss-401/unit-07/topic-01.mdx
+ - docs/semester-3/giss-401/unit-07/unit-assessment.mdx
+ - history/prompts/general/20261110-resolve-giss-unit-seven-conflicts.general.prompt.md
+ - history/prompts/giss-401/0001-verify-unit-seven-merge.misc.prompt.md
+ - history/prompts/giss-401/20261113-resolve-unit-seven-merge.misc.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u07-author-conflict1.misc.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u07-author-conflict2.misc.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u07-author-conflict3.misc.prompt.md
  - history/prompts/giss-401/crew-giss-401-u07-author-conflict4.misc.prompt.md
- - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/giss-401/unit-01/index.mdx
- - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/giss-401/unit-01/topic-01.mdx
- - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/giss-401/unit-01/topic-02.mdx
- - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/giss-401/unit-01/unit-assessment.mdx
- - specs/content/giss-401/reviews/unit-01/G4/conditional-parity-gates.txt
- - specs/content/giss-401/reviews/unit-01/G4/content-gates.txt
- - specs/content/giss-401/reviews/unit-01/G4/source-parity.txt
- - specs/content/giss-401/reviews/unit-01/G4/translation-handoff.md
- - static/img/figures/giss-401/unit-01/fig-U1-1.ur.dark.svg
- - static/img/figures/giss-401/unit-01/fig-U1-1.ur.svg
- - static/img/figures/giss-401/unit-01/fig-U1-2.ur.dark.svg
- - static/img/figures/giss-401/unit-01/fig-U1-2.ur.svg
- - static/img/figures/giss-401/unit-01/fig-U1-3.ur.dark.svg
- - static/img/figures/giss-401/unit-01/fig-U1-3.ur.svg
- - static/img/figures/giss-401/unit-01/fig-U1-4.ur.dark.svg
- - static/img/figures/giss-401/unit-01/fig-U1-4.ur.svg
+ - history/prompts/giss-401/crew-giss-401-u07-author.green.prompt.md
+ - specs/content/giss-401/authoring/unit-07.md
+ - specs/content/giss-401/concepts/unit-07.md
+ - specs/content/giss-401/coverage/unit-07.md
+ - specs/content/giss-401/figures/unit-07.md
+ - specs/content/giss-401/reviews/unit-07/G2/20261103T004215688Z-gates.json
+ - specs/content/giss-401/reviews/unit-07/G2/20261103T013310659Z-gates.json
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T004215688Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T004215688Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T004215688Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T004215688Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T004215688Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T004215688Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T004215688Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T004215688Z/validate-content.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T013310659Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T013310659Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T013310659Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T013310659Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T013310659Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T013310659Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T013310659Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-07/G2/logs-20261103T013310659Z/validate-content.txt
+ - specs/content/giss-401/sources/texts/quran-translation.md
+ - specs/content/giss-401/sources/texts/sahih-bukhari-33-893.md
+ - specs/content/giss-401/sources/texts/tambak-2020-teachers.md
+ - specs/content/giss-401/sources/unit-07.md
+ - specs/content/giss-401/tasks.md
+ - static/img/figures/giss-401/unit-07/fig-U7-1.dark.svg
+ - static/img/figures/giss-401/unit-07/fig-U7-1.svg
+ - static/img/figures/giss-401/unit-07/fig-U7-2.dark.svg
+ - static/img/figures/giss-401/unit-07/fig-U7-2.svg
+ - static/img/figures/giss-401/unit-07/fig-U7-3.dark.svg
+ - static/img/figures/giss-401/unit-07/fig-U7-3.svg
 tests:
  - npm run check:content
 ---
@@ -70,23 +95,27 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (giss-401-u07-author, author, claude) `sources/texts/quran-translation.md` (U7 section appended at the end) and `tasks.md` stage rows will conflict with sibling GISS-401 unit branches on merge; the hadith use the separate key `sahih-bukhari-33-893`.
 - (giss-401-u07-author, author, claude) Figures fig-U7-1..3 were not measured by measure-figure-text (Chromium barred); Urdu `.ur.svg` mirrors and the G3 Islamic Studies scholar review remain open.
 
+
 ## Response snapshot
 
-Merged origin/main into the Unit 7 authoring branch. The merge was conflict-free: main's new commits (GISS-401 unit 1 Urdu translation, PR #425) touch only unit-01 files, while this branch's Unit 7 source and tracker changes are untouched by main. Verified the append-only boundary in `specs/content/giss-401/sources/texts/quran-translation.md` keeps main's U1/U6 sections and this branch's U7 section in order with no duplicate heading, and that no shared registry changed on either side in this merge window. Ran the content gate suite.
+Merged origin/main (GISS-401 unit 1 Urdu, PR #425) into crew/giss-401-u07-author conflict-free, preserved Unit 7's source and tracker rows, and committed the merge plus PHR with all 13 content gates passing.
 
 ## Outcome
 
-- Impact: merge fix for GISS-401 Unit 7 by opencode (attempt 1).
-- Tests: npm run check:content passed, 13/13 content gates, no findings.
-- Files: 19 file(s), listed above (18 brought in from origin/main plus this work record).
+- Impact: fix for GISS-401 Unit 7 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 44 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main (GISS-401 unit 1 Urdu translation, PR #425) into `crew/giss-401-u07-author`; the merge was conflict-free and Unit 7's source and tracker rows are preserved.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this merge does not certify anything.
+- Shipped / changed: Merged origin/main (GISS-401 unit 1 Urdu, PR #425) into crew/giss-401-u07-author conflict-free, preserved Unit 7's source and tracker rows, and committed the merge plus PHR with all 13 content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - `measure-figure-text` was never run on fig-U7-1..3 (Chromium barred); CI `figure-geometry` is the first measured check.
+  - Urdu `.ur.svg` mirrors and the G3 Islamic Studies scholar review remain open; reading time sits at the top of the 25-40 band (40 min, 41 if rounded up).
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
