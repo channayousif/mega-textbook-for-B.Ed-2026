@@ -168,6 +168,10 @@ the PHR and Paperclip handoff. No G3/G5 certification or publication is claimed.
 | Unit 2 | G3 en-review | ✅ | CMY | review:specs/content/efmp-305/reviews/unit-02/G3/20261102T140729Z-g3-desk-5da9d105.json |
 | Unit 4 | G3 en-review | ✅ | CMY | review:specs/content/efmp-305/reviews/unit-04/G3/20261102T140729Z-g3-desk-75d4e208.json |
 | Unit 4 | G5 ur-review | ▢ | agent:codex-g5-reviewer | advisory: escalate; report specs/content/efmp-305/reviews/unit-04/G5/01a19d42-cab2-79c3-9b37-ac2bf916690b.json; decoration exclusion reversed, place-value mistranslation and corrupt RRQ 10 guidance; fresh signed G3 dependency, translator provenance and normal/narrow/A4 renders unavailable; no certification |
+| Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-01/G3/20261102T211054Z-g3-desk-75c78135.json |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-03/G3/20261102T211054Z-g3-desk-68a046eb.json |
+| Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-05/G3/20261102T211054Z-g3-desk-161c2504.json |
+| Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-06/G3/20261102T211054Z-g3-desk-5e601a1c.json |
 | Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-01/G3/20261102T212207Z-g3-desk-65386ad3.json |
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-03/G3/20261102T212207Z-g3-desk-d26592ad.json |
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-305/reviews/unit-05/G3/20261102T212207Z-g3-desk-6054cf1d.json |

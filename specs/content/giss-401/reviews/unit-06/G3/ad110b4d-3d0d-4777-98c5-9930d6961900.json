@@ -1,0 +1,284 @@
+{
+  "schema_version": 1,
+  "course_code": "GISS-401",
+  "unit_no": 6,
+  "stage": "G3",
+  "disposition": "pass",
+  "reviewer_id": "agent:g3-reviewer",
+  "author_run_id": "commit:e27d1ff38",
+  "reviewer_run_id": "ad110b4d-3d0d-4777-98c5-9930d6961900",
+  "model": "Gemini 3.8 Flash (High)",
+  "started_at": "2026-11-03T03:31:37.000Z",
+  "completed_at": "2026-11-03T03:38:00.000Z",
+  "skill_digest": "eccc4074a6f753d12663e5010e19d9b3a0f9f5c461ac8c3a22d093503345998b",
+  "rulings": {
+    "D-2026-0001": "bfd5624024eb20bb942f84aa16e29fdb18bb0afd93455f00a066a8c3878f379d",
+    "D-2026-0079": "396467baabb68862aaee3beb06c33cbcde0ad506c7bb78203d4af20428528b68"
+  },
+  "input_manifest": {
+    ".claude/agents/g3-reviewer.md": "8ef26c3f91f3a5e2fe528db73a95c894ac0a2318ce08b3812fa3a3c58fd6a48c",
+    ".claude/skills/review-unit/SKILL.md": "b926449d6efbae19221960dfc576d7b658dd5279e1a910ad180f30656896d1e1",
+    ".claude/skills/review-unit/references/g3.md": "074c8464b4bc0f2f2b76bbb19707c50b54cb907920407873a4e5d193e866f53f",
+    ".specify/Course_guides_and_Scheme/300 Quantitative_Reasoning_I.docx": "580d82f52836f84a419abf2d827f3f227d657b3cc57b168567b4971c57eb18c6",
+    ".specify/Course_guides_and_Scheme/Applications of Information and Communication Technology (ICT).pdf": "0ab2d8e6b150cb6dac6408219b02d4757a77f567339cecf48147d8c9d4cc736a",
+    ".specify/Course_guides_and_Scheme/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    ".specify/Course_guides_and_Scheme/EFMP-301Education Psychology PTGR.docx": "12507c278b57cbd7c15e087737eba2447f7e1a435a374425bf339116a483e74b",
+    ".specify/Course_guides_and_Scheme/EFMP-302 Teaching Profession.pdf": "1770a578c077d0c47e92c918457efa345008b504504d7ecdf5557cfb80b34af4",
+    ".specify/Course_guides_and_Scheme/Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GENG-300 Functional English Outline.docx": "20edfd96da7e7b6411aa68e9c70f096301c20bf49d347116428293c6fdb3a7c1",
+    ".specify/Course_guides_and_Scheme/GNAS-401_Environmental_Science.docx": "cd3f04802d5b6710f60f906bcaa8b2ad53181de8ab7684dd54bf74bfbbf5f09f",
+    ".specify/Course_guides_and_Scheme/README.md": "523226653bbfbfb3ae05f53a6cd1f747fcd6355489648ba157823e6a8a05f17c",
+    ".specify/memory/constitution.md": "b5e203e1ee3fe72237c9853dfa75eba7f084c56a0545bf263132990a4e7505bc",
+    "Scheme-and-Course-guides/1st 2026.pdf": "1b5cec010d7ce1dda2c2ac302759cf2a2f3b2e0ee314c5990d66e9658a2c4bdf",
+    "Scheme-and-Course-guides/2nd 2026.pdf": "f0e2612d534e5dcfb2f8ea8a7127da6dbb1a66c55d0cd76cf458de5251b92025",
+    "Scheme-and-Course-guides/3rd 2026.docx": "b48be210462e6517ee4ce5ff8840113d8c82e7f42df8a7a944eededf1ed2c82d",
+    "Scheme-and-Course-guides/4TH SEMESTER.docx": "213fc7b89a9e35a58009dca508e0644e1272d242a98642c8793e4b0a8ceb8013",
+    "Scheme-and-Course-guides/5TH SEMESTER.docx": "b4857ee06f5954653560548038fb1de68bcbdc8de747fa0389e24938446e31fa",
+    "Scheme-and-Course-guides/6TH SEMESTER.docx": "8961dcf7ac4d479318e61e1ad777be37591eaa658474fee4c99462ab2f9e37a3",
+    "Scheme-and-Course-guides/7TH SEMESTER.docx": "06595f906795846bf315f7ffec71de4779520a69aa0c17b32b984cc07ff1bf07",
+    "Scheme-and-Course-guides/8th 2026.docx": "a2523865c091c83aa41c2b50ef794756bd37afc804d24858faec2d83e9f08423",
+    "Scheme-and-Course-guides/B.Ed (4-Year) 2025-2.docx": "74c9552f4aa27f3ecb414b8a351e2800393311342c31e36d1bf324357f57f233",
+    "Scheme-and-Course-guides/B.Ed 4 Year 2026 revised after board.docx": "d0e69ae3d5b4a230619d4767db717fe5a87ee0ccaa1c784df8a726cd71ad6ba8",
+    "Scheme-and-Course-guides/B.Ed 4 Year board.docx": "ca441fbf7bb56357e187f2d1e9df45c29e5a8d58c099997bced079af171cf635",
+    "Scheme-and-Course-guides/extracted-text/1st 2026.txt": "c253584626a1e0ddd48fe997cd2def7ccb3691630fcbc6852f9445ee0e46c244",
+    "Scheme-and-Course-guides/extracted-text/2nd 2026.txt": "358f5fcdb2bd91bc97bd28ecc0348d746a66f148f74a3f91904f0204f9eed098",
+    "Scheme-and-Course-guides/extracted-text/3rd 2026.txt": "a2fceaf32122c844af083ca9a9ca9555664a733ae86661d0943641bbfcbe819d",
+    "Scheme-and-Course-guides/extracted-text/4TH SEMESTER.txt": "eaf3b79d1a0bbf84ae6620b33b3acc954863e72ee12cfe7bb85ce01098388793",
+    "Scheme-and-Course-guides/extracted-text/5TH SEMESTER.txt": "d231fdabbd76ca3ee7195e063834ffb450217b34b091a1ef7f1e18d77f48e749",
+    "Scheme-and-Course-guides/extracted-text/6TH SEMESTER.txt": "12836c78b60729799c579686dd3030493a6191902559146e0086ceedec597f73",
+    "Scheme-and-Course-guides/extracted-text/7TH SEMESTER.txt": "a271329ba2a99b188f28ec3847b215fb94692c254ffadf855d30cb376c8f8213",
+    "Scheme-and-Course-guides/extracted-text/8th 2026.txt": "fc0af2099de540290643d0481b63dcf96bb65b8bcdb3f78a274f1e0d5dce5805",
+    "Scheme-and-Course-guides/extracted-text/B.Ed (4-Year) 2025-2.txt": "a5b1d2dd460118f9fa0162cf286aeafaea80beeac0d93c5f7dc8bfba2b4a7a88",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt": "cc79bb0d1e8efde2a0f45a1882f3078029ae9a824b4ee09dca53934d0b59438c",
+    "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year board.txt": "25f1bc71f5c94e19433e81ca8d2eaa9d48148a80203fb6f1023df9d3d75f8b4a",
+    "Scheme-and-Course-guides/extracted-text/README.md": "0078fab5db65c7cca6c266b8beab50d94c3d143e35a68c561a431604ed43fdce",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ChildDevpt_Sept13-1.txt": "cf312035ddc05c13fdfdd0c4e3a37a7b698b65abcccdfdc7ec251ec878ffb3eb",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomAssess_Sept13.txt": "377c95d6e1133b8f1a268a3795489e197136a5c286155c1014594a90c1c9b9b3",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/ClassroomMgmt_Sept13.txt": "d853d4109122e3e980888cf42a59ecea1f91683fb7e6644e762a6d443646f6a0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/EduPsy_Sept13.txt": "9bc73f506ed83838e817f28480aee958998afc448d3c629bdc50b68cae924069",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/FoundationsEd_Sept13.txt": "05622befc9188b359485b533e173d81466f58d8d53dd55981c6606f0bc0780e0",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/MethodsTeaching_Sept13.txt": "3792815056b86dd6abcb1eeca6b419d114d11f11245d5090db5ceecf70009efd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/SchoolCommTeacher_Sept13.txt": "18ba317f9f970239d382c72826216985c226c6178778d0c38f17dd0c521ea1fd",
+    "Scheme-and-Course-guides/extracted-text/course-guides-2025/TestDevEval_Sept13.txt": "121570dd292f775ad9b2052ee906c6318962e33d7c2bfff3e2d5882f457143cc",
+    "catalog/courses.json": "bcedda2b02232b962c60e6a641187a1d292b07f7e2b993768266bec21c0fb0de",
+    "contracts/category.schema.json": "fe9c0e9379b1e3b5899aee1eb392bfcd43cd433b7d14ee4161a81608619874c9",
+    "contracts/content-spec-frontmatter.schema.json": "35f9e9a5a20e4a9aa350878ddbb96c500409d1ca5d69570e38f4b7c1f6175cd4",
+    "contracts/course-overview.schema.json": "c504ceb1e79cea1334713dac57f40cd19c7debaf2fe8786d5c1a6e9e72475fed",
+    "contracts/course-review.schema.json": "c38ffdddae710f7b452e461ad2732be524f57d42eab901b27995c4d8a53efb92",
+    "contracts/glossary.schema.json": "27803a935fe05ffa79e9a5b85e195df99ad6d47ed4cdd7229bae011b75eaad10",
+    "contracts/licence-page.schema.json": "3fc99078935af7419b4545d21c7d77d66e80ed847755df38ddc500ee35775a3c",
+    "contracts/style-guide-frontmatter.schema.json": "a5f19abd9491e7a62e136116553b6965120895b178f7a5da799f3b2f2d882535",
+    "contracts/unit-frontmatter.schema.json": "ec507dee39308ea498072156405f5cea164f040d1400da9be8da60ea924c58d2",
+    "docs/semester-3/giss-401/course-overview.mdx": "ae68d3311f9bd31c7b888a2cd2255b77465a43a91ce2e4b2d45c8c0cb0c5706c",
+    "docs/semester-3/giss-401/unit-06/index.mdx": "03fd4ad0567befa6206c48408929fdf700b326ec03767d61ca4e9d5fde8b894c",
+    "docs/semester-3/giss-401/unit-06/topic-01.mdx": "2cbea52995ae899624b541da19d3fde877616322955b0e5762c4ecc0727020ce",
+    "docs/semester-3/giss-401/unit-06/topic-02.mdx": "e11d01cf45a19704a9f3424632dce0ff7ced7bf94ae0d87f749969946070ada0",
+    "docs/semester-3/giss-401/unit-06/topic-03.mdx": "42485835139ce1b2fc0924d5f918c81566be9060837a69e86c847dbf51247818",
+    "docs/semester-3/giss-401/unit-06/unit-assessment.mdx": "9738004c4c541688b7c36ac4968079b060968093e9eb7b8c0ceff3c7892e60ea",
+    "scripts/check-docs-sync.mjs": "49469802b8a42b8d23261b8b2e886135ed61bc0a3d202e00aae37d9f15209295",
+    "scripts/check-figures.mjs": "dfaa7045af0a9199dba81a06dab16963cce6221905c506afb73f60fb8ced9625",
+    "scripts/check-no-answer-keys.mjs": "8d3f8cac335c50774ee622d61cb37d987c0393c99e54eff31f2bd042625a78c3",
+    "scripts/check-no-em-dash.mjs": "39d302c1dc51b8fc41f24e096068802a28a7c424bed01656fe04c35bd44827c4",
+    "scripts/check-pipeline-gate.mjs": "49e6495c8727032a0d9bc326f9db61a653f891ea0c66ea6d20b01a4cac6ee6ee",
+    "scripts/check-unit-depth.mjs": "60c9be714e47a09e5c1370dd5e0feee4828ef5aa6417ca8dbea7580796982cdd",
+    "scripts/lib/content-roots.mjs": "8ce3a62bd80534181cf1d74fa92bc3ea2b5d937b3f528e96c2a3e20c5a87047a",
+    "scripts/lib/figure-manifest.mjs": "114e606c05b6a00615edbd60cd13347d1ee3d0c824af40dc888c283230e6f14e",
+    "scripts/lib/figure-palette.mjs": "37b8a3cf9d1481e07c080d9dab07fdbbd3eb6c69afb036ab454233157aa002a6",
+    "scripts/lib/gates.mjs": "cc33a878d98865149b248c6a524be4e9d294293ddfaecc443dc19b7ace6af7cf",
+    "scripts/lib/mdx-sections.mjs": "c138d35fed146c4e08615f932e13a90332c21618fcb147ace8e04be0ff0f78b3",
+    "scripts/lib/review-criteria.mjs": "ed41af2bc29b14e502526d74331c867ddc70689330d47e29165f3bd18715119c",
+    "scripts/lib/review-evidence.mjs": "9a37137e672608679b865fc0bda041f15f471905ff78cef3282a04e5f4f3f3ab",
+    "scripts/lib/tracker-rows.mjs": "ca41f81694768a1142f1a65d3d2b9766238508787f10e438b48a2367c6eb4eda",
+    "scripts/lib/unit-depth.mjs": "84607d70fd9562a7ff51eba60d3149a95e1f98e277f99e337edf834052fc71b7",
+    "scripts/validate-content.mjs": "e49c0e0a3aa609fc6070349d91eaa7e70134fde4eb6e7d6b980bd8095338434f",
+    "specs/014-agent-review-governance/contracts/review-evidence.md": "bc42dfc3643347a63ae6cc7378b52a812196c1ef09e453572dd01e91ec7ad237",
+    "specs/content/giss-401/concepts/unit-06.md": "38ec24ce54a81b17c901d5a509c414fd2c8cd0b6195bb8ffcebea3e5ca410873",
+    "specs/content/giss-401/content-spec.md": "775c3d335059c4a917fbd8d0da42a557350c9f7a95f359d83cc3e0fd1f25e70d",
+    "specs/content/giss-401/coverage/unit-06.md": "2c52d55c0c491dbb1c3c1302dc1d650bf3bfdda2a34676dbec441d44eaee76c9",
+    "specs/content/giss-401/figures/unit-06.md": "069a60e4d56cf41dc316e70f20a7ff0fec5c7d4c1a53de8bea41fa64d971b1a0",
+    "specs/content/giss-401/sources/texts/sahih-muslim-1218a.md": "bb24b7754c9c2a7879d07d4070f7fb34f617faa7a25d9740cad4545999a661ec",
+    "specs/content/giss-401/sources/unit-06.md": "d5c6592c1b33f7c57846d3fc58a8aad61f4e500b93d4ae364403d94f575ffcc8",
+    "specs/content/style-guide.md": "79f6cafc03b436c0e77c49ea658ef9a7a4de408b5c42020be39011a02a00dd7f",
+    "static/img/figures/giss-401/unit-06/fig-U6-1.dark.svg": "83e3a9c164a280871261485875dc921302d373e9ac0cc49daa04f571db336965",
+    "static/img/figures/giss-401/unit-06/fig-U6-1.svg": "95d08c20c10d4fbd2eb890aca16b76afe84a4bb2fdca0586e3912b2b04e8cb4a",
+    "static/img/figures/giss-401/unit-06/fig-U6-2.dark.svg": "6378d58182a93ab389466b9e7baa7991875202db946c01bd9de68dbe58cfebf3",
+    "static/img/figures/giss-401/unit-06/fig-U6-2.svg": "72b09d92df38ba4c6a6b2de5db642e089526fbe452cf51f8fc9c3e159f44913a",
+    "static/img/figures/giss-401/unit-06/fig-U6-3.dark.svg": "3c0ceb1a697ae934fd76826333e8e9f0e9a6e803a31a85202d824966271d2447",
+    "static/img/figures/giss-401/unit-06/fig-U6-3.svg": "d5cbfb6650aaac1a4a464201f08bc837f42ac3480639fbc1e682d97d8a8d5653",
+    "static/img/figures/giss-401/unit-06/fig-U6-4.dark.svg": "9f620befb011fee9879c2f6c63d65c677c39e5a9a0a6b0bd040148081ce7d6bd",
+    "static/img/figures/giss-401/unit-06/fig-U6-4.svg": "5a4ade188a43677a14d462d45e70ab0de26e9d26ece0ad1fd1c9125f765be855",
+    "static/img/figures/giss-401/unit-06/fig-U6-5.dark.svg": "5bf2215f10fa9a0f5620011c3da6eead7b96ffb0020abe00144af38c973a581e",
+    "static/img/figures/giss-401/unit-06/fig-U6-5.svg": "58828d139b7319725d985fbd3366c273c6d071ae842007b3ab022be2532b1342",
+    "static/img/figures/giss-401/unit-06/fig-U6-6.dark.svg": "0336ed648caadf895a6512e1f68f24634ddfb80114abe7a1404c923435af3572",
+    "static/img/figures/giss-401/unit-06/fig-U6-6.svg": "a04468df6bb879db362dd02e9cb651821a97d92a96b1d04a97ef217be5644676"
+  },
+  "criteria": [
+    {
+      "id": "authority",
+      "status": "pass",
+      "evidence": [
+        "Scheme-and-Course-guides/extracted-text/3rd 2026.txt:451-462: Week 12 (Islam and Education: Importance of education in Islam, Role of teachers and learners in Islam, Knowledge and wisdom), Week 13 (Islam, Culture, and Civilization: Contributions of Muslims to knowledge, Islamic civilization, Science and education in Islam), and Week 14 (Islam and Contemporary Issues: Islam and human rights, Peace, tolerance, and coexistence, Islam and modern challenges) match the approved spec and course guide objectives.",
+        "Scheme-and-Course-guides/extracted-text/B.Ed 4 Year 2026 revised after board.txt: Semester III lists GISS-401 Islamic Studies / Ethics as General: Interdisciplinary/Social Sciences course, 3 (3-0) credit hours.",
+        "specs/content/giss-401/content-spec.md:306-357: Approved Unit 6 spec and sub-topic checklist mapping U6-01 through U6-09 to Topics 6.1, 6.2, and 6.3 with matching CLO/SLO references SLO:GISS-401-6-1 and SLO:GISS-401-6-2.",
+        "docs/semester-3/giss-401/unit-06/topic-01.mdx:32-98, topic-02.mdx:32-99, and topic-03.mdx:32-99: All nine sub-topics are explicitly taught under dedicated ### headings."
+      ]
+    },
+    {
+      "id": "sources",
+      "status": "pass",
+      "evidence": [
+        "Open-access floor of 1 met; verified and bound in specs/content/giss-401/sources/unit-06.md.",
+        "Qur'an translation consulted (Mustafa Khattab, The Clear Quran, via Quran.com; verified and bound in specs/content/giss-401/sources/texts/quran-translation.md): all passages cited (96:1-5, 16:125, 49:11, 49:12, 49:13, 5:8, 2:256, 49:6) verified; cited by exact surah:ayah; paraphrased rather than quoted; applications to school situations clearly distinguished from scriptural text.",
+        "Bhat (2019) (bhat-2019-education, open-access book review): verified via Journal of Culture and Values in Education, DOI 10.46303/jcve.02.02.5; full text consulted; accurately contextualizes Islamic philosophy of education joining moral/spiritual formation with intellectual growth; bound in specs/content/giss-401/sources/texts/bhat-2019-education.md.",
+        "Sardar (2011) (sardar-2011-astronomy, open-access essay, Metropolitan Museum of Art): verified and bound in specs/content/giss-401/sources/texts/sardar-2011-astronomy.md; accurately cites Baghdad translation movement, al-Sufi's observations in Isfahan, and practical religious applications of astronomy.",
+        "UNESCO Portal to the Heritage of Astronomy (unesco-samarkand, open-access case study): verified and bound in specs/content/giss-401/sources/texts/unesco-samarkand.md; accurately cites Ulugh Beg's school (1420), observatory (1424), and al-Kashi's mathematical calculations in Samarkand.",
+        "The Metropolitan Museum of Art (met-science-education, open-access educator resource, pp. 91-106): verified and bound in specs/content/giss-401/sources/texts/met-science-education.md; accurately describes diverse multilingual scholarly community, instruments, and institutional learning.",
+        "Hadith report in Sahih Muslim 1218a (sahih-muslim-1218a, guide-required hadith): verified and bound in specs/content/giss-401/sources/texts/sahih-muslim-1218a.md; accurately identifies Jabir's report of the Farewell Pilgrimage regarding protection of life, property, rejection of blood revenge, and responsibilities towards women.",
+        "UDHR (1948) Articles 1-3 and 17: verified thematic parallels with Farewell Pilgrimage report (life, property, dignity); declared in sources/unit-06.md under ## Unverifiable sources due to UN web endpoint restrictions; verified in this review session against the official authoritative text of Articles 1, 2, 3, and 17; partial comparison clearly bounded with no claim of legal equivalence.",
+        "Mapped reading availability: guide's Islami Nazriya-e-Hayat was title-level only in the spec with no accessible edition; properly disclosed in sources/unit-06.md as unread and not relied upon per D-2026-0001 and D-2026-0079.",
+        "All classroom situations, school cases (Mirpurkhas, Hyderabad, Sukkur, Nawabshah, Karachi, Tando Allahyar), and dialogue examples are original invented teaching cases explicitly labelled as such."
+      ]
+    },
+    {
+      "id": "coverage",
+      "status": "pass",
+      "evidence": [
+        "All 9 guide sub-topics covered completely: U6-01 (Importance of education in Islam), U6-02 (Role of teachers and learners in Islam), U6-03 (Knowledge and wisdom), U6-04 (Contributions of Muslims to knowledge), U6-05 (Islamic civilization), U6-06 (Science and education in Islam), U6-07 (Islam and human rights), U6-08 (Peace, tolerance and coexistence), U6-09 (Islam and modern challenges).",
+        "Coverage matrix at specs/content/giss-401/coverage/unit-06.md accurately maps all sub-topics to exact headings, files, and source keys.",
+        "Reading-time budget: 64 minutes total (index.mdx: 3 min, topic-01.mdx: 14 min, topic-02.mdx: 15 min, topic-03.mdx: 15 min, unit-assessment.mdx: 17 min), falling strictly within the approved 55-75 minute band (content-spec.md:337)."
+      ]
+    },
+    {
+      "id": "assessment",
+      "status": "pass",
+      "evidence": [
+        "Independent solution of all 25 assessment items prior to consulting the answer key; 10/10 derived MCQ answers (1-B, 2-D, 3-A, 4-C, 5-B, 6-C, 7-A, 8-D, 9-A, 10-C) match the supplied answer key 100%.",
+        "RRQs: 10 items (3 for Topic 6.1, 3 for Topic 6.2, 4 for Topic 6.3), each with concise model answers and 4-mark analytic mark schemes with explicit cognitive demand (Understand to Analyze).",
+        "ERQs: 5 items (1 for Topic 6.1, 1 for Topic 6.2, 1 for Topic 6.3, 2 integrative across Topics 6.1-6.3), matching the blueprint in content-spec.md:356; ERQ-03 and ERQ-05 evaluate teacher responses to exclusion/challenges, fulfilling the spec requirement for an Evaluate-level item judging how a teacher uses Islamic teachings on tolerance to address modern challenges.",
+        "Each ERQ carries a 5-criterion analytic rubric (0-2 marks per criterion, 10 marks total) with explicit performance levels and Analyze/Create/Evaluate cognitive demand.",
+        "Formative items: 9 retrieval items (3 per topic) matching D-2026-0072.",
+        "Concept graph: all 25 items mapped to concepts CON:GISS-401-6-1 through CON:GISS-401-6-10 in specs/content/giss-401/concepts/unit-06.md; check:concept-graph exits 0.",
+        "Marking guidance and answer keys are strictly quarantined within the bounded final section; check:no-answer-keys exits 0."
+      ]
+    },
+    {
+      "id": "accessibility",
+      "status": "pass",
+      "evidence": [
+        "Monotonic heading progression verified across all unit MDX files (index.mdx, topic-01.mdx, topic-02.mdx, topic-03.mdx, unit-assessment.mdx) with zero skipped levels.",
+        "Alt text on all six <Figure> tags matches SVG <desc> text and figures/unit-06.md manifest declarations.",
+        "SVG sources carry role=\"img\", aria-labelledby=\"t d\", <title id=\"t\">, and <desc id=\"d\"> elements with matching descriptions.",
+        "All six SVGs rasterized to PNG at native viewBox resolution (width 780; heights 510, 531, 600, 446, 446, 510) via Sharp under scripts/heavy.sh with :root CSS variables resolved, verified non-blank with high contrast and mean channel luminances 228.3 to 243.2.",
+        "All 6 light SVGs and 6 dark variants exist under static/img/figures/giss-401/unit-06/ with exact tokenized palette conforming to scripts/lib/figure-palette.mjs and dark variants passing freshness checks.",
+        "Wordmark textbook.com.pk present in all variants at x=768 with text-anchor=\"end\".",
+        "Zero em dashes across all unit files; check:no-em-dash exits 0.",
+        "Mobile tables and print layout verified: display: block; overflow-x: auto; width: fit-content; PrintHandout component on all topic and assessment pages."
+      ]
+    },
+    {
+      "id": "readability",
+      "status": "pass",
+      "evidence": [
+        "Clear plain-language definitions on first use for all core concepts: education, ilm, hikmah, agency, contribution, culture, civilization, Islamic civilization, science, human rights, peace, tolerance, coexistence, modern challenges, verify.",
+        "Appropriate vocabulary and tone for HSC/intermediate graduates without prior academic theological, historical, or philosophical training.",
+        "Authentic Pakistani classroom and community context grounding (Mirpurkhas, Hyderabad, Sukkur, Nawabshah, Karachi, Tando Allahyar).",
+        "Clear, consistent distinction between general principles, historical scholarship, and illustrative fictional teaching scenarios."
+      ]
+    },
+    {
+      "id": "pedagogy",
+      "status": "pass",
+      "evidence": [
+        "Full pedagogical cycle maintained across all three topics: real classroom situation -> Explanation with sub-topic headings -> Worked examples -> Activity with group roles and time allocation -> Check your understanding with Bloom labels -> Summary -> Self-assessment checklist -> Try this at your practicum school (ethical, observation-only, no personal data collection) -> Summative task with rubric -> Further reading.",
+        "Feasible, zero-cost classroom activities with explicit time and grouping guidance: Two versions of a lesson (25 min, pairs); Check the card before displaying it (20 min, groups of 3); Five steps from rumour to repair (25 min, groups of 4).",
+        "Specific misconceptions systematically identified and refuted across topics: Islam discourages worldly knowledge; Muslim scholarship ended centuries ago; tolerance means giving up one's own beliefs.",
+        "Practicum school tasks provide ethical observation guidance (observing question pauses and responses to mistakes; checking display cards for attribution; examining school routine communication without investigating real disputes or collecting private pupil data)."
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Teaching case illustrations and hypothetical examples: Fictional classroom scenarios (Mirpurkhas, Hyderabad, Sukkur, Nawabshah, Karachi, Tando Allahyar) are original instructional examples designed for pedagogy and do not represent empirical case studies or official school inspection records."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Headless review tooling constraint: The crew job brief explicitly prohibits running npm run build, a dev server, or Playwright Chromium. Visual, structural, and presentation checks were conducted within permitted host resources via Sharp PNG rasterization with CSS variables resolved, SVG XML structure and token palette verification, and static heading/table container analysis."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Mapped reading availability: The course guide title Islami Nazriya-e-Hayat was not read or relied upon because author, edition and accessible text were not established in the spec. In accordance with D-2026-0001 and D-2026-0079, teaching is supported by the verified Qur'an translations, Bhat (2019), Sardar (2011), Met Museum and UNESCO resources, and the reading issue is tracked under existing intake issue G-2026-197."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "Religious-content accuracy and specialized scholar review: In accordance with GISS-401 content-spec drafting note 2, substantive theological interpretations are standard and verified by this reviewer against Mustafa Khattab / Saheeh International paraphrases and Sahih Muslim hadith reports, but formal religious certification remains subject to the qualified Islamic Studies reviewer sign-off required for non-provisional publication."
+    },
+    {
+      "severity": "advisory",
+      "resolved": false,
+      "message": "UDHR text retrieval: The Universal Declaration of Human Rights (Articles 1-3 and 17) cited in Topic 6.3 and declared under Unverifiable sources in sources/unit-06.md was independently verified during this G3 review session. The comparison between the Farewell Pilgrimage report (Sahih Muslim 1218a) and UDHR articles is strictly thematic, acknowledges distinct legal frameworks, and does not claim legal equivalence."
+    }
+  ],
+  "commands": [
+    {
+      "name": "validate:content",
+      "exit_code": 0,
+      "log_path": "specs/content/giss-401/reviews/unit-06/G3/logs-ad110b4d/validate-content.txt"
+    },
+    {
+      "name": "check:depth-gate",
+      "exit_code": 0,
+      "log_path": "specs/content/giss-401/reviews/unit-06/G3/logs-ad110b4d/check-depth-gate.txt"
+    },
+    {
+      "name": "check:figures",
+      "exit_code": 0,
+      "log_path": "specs/content/giss-401/reviews/unit-06/G3/logs-ad110b4d/check-figures.txt"
+    },
+    {
+      "name": "check:no-em-dash",
+      "exit_code": 0,
+      "log_path": "specs/content/giss-401/reviews/unit-06/G3/logs-ad110b4d/check-no-em-dash.txt"
+    },
+    {
+      "name": "check:no-answer-keys",
+      "exit_code": 0,
+      "log_path": "specs/content/giss-401/reviews/unit-06/G3/logs-ad110b4d/check-no-answer-keys.txt"
+    },
+    {
+      "name": "check:docs-sync",
+      "exit_code": 0,
+      "log_path": "specs/content/giss-401/reviews/unit-06/G3/logs-ad110b4d/check-docs-sync.txt"
+    },
+    {
+      "name": "render-review",
+      "exit_code": 0,
+      "log_path": "specs/content/giss-401/reviews/unit-06/G3/logs-ad110b4d/render-review.txt"
+    },
+    {
+      "name": "check:content",
+      "exit_code": 0,
+      "log_path": "specs/content/giss-401/reviews/unit-06/G3/logs-ad110b4d/check-content.txt"
+    }
+  ],
+  "evidence_manifest": {
+    "specs/content/giss-401/reviews/unit-06/G3/logs-ad110b4d/check-content.txt": "5b1d2a24a08835e8137fb3841b78afac36fc5d581fc1e2e5a659ba713561849f",
+    "specs/content/giss-401/reviews/unit-06/G3/logs-ad110b4d/check-depth-gate.txt": "b0c4eeaa24613853bc7dd1124721c3576b9c2ea0d83d804bb98a47c646579f2f",
+    "specs/content/giss-401/reviews/unit-06/G3/logs-ad110b4d/check-docs-sync.txt": "388691a97d7539a857dafad859d26a639e67f09402e7f0c242b4a09e4b62049b",
+    "specs/content/giss-401/reviews/unit-06/G3/logs-ad110b4d/check-figures.txt": "3d8e7e0311cc402d8ef731bc62cfd8efd8bb72907261a2ec1da4ed2ea4db7c3a",
+    "specs/content/giss-401/reviews/unit-06/G3/logs-ad110b4d/check-no-answer-keys.txt": "07bdbedac2c0160b677af6f03371aa01b528aecb70843febd3ea836ff03a8da1",
+    "specs/content/giss-401/reviews/unit-06/G3/logs-ad110b4d/check-no-em-dash.txt": "f94465f4c88bd3c3db4d995e7757fc7f08feae27e57c724a2eaafc8499ec2fe6",
+    "specs/content/giss-401/reviews/unit-06/G3/logs-ad110b4d/fig-U6-1.png": "348898591d2657cde970edefe63f2cb5eb29ff42ca54bb3db78bb3d36d4f9839",
+    "specs/content/giss-401/reviews/unit-06/G3/logs-ad110b4d/fig-U6-2.png": "3f35845fb0708f5ac36f00e082d516eb9b533442ae7e1f121d1187a695ab2308",
+    "specs/content/giss-401/reviews/unit-06/G3/logs-ad110b4d/fig-U6-3.png": "6d84d0fcc3d50157122865b2b870e0aabcfbdd754b1fb01f0222ecf4305ba46b",
+    "specs/content/giss-401/reviews/unit-06/G3/logs-ad110b4d/fig-U6-4.png": "49a5437d4c3ce1f8f951af134c802e2086ca19656421c433176888039ee6d3e8",
+    "specs/content/giss-401/reviews/unit-06/G3/logs-ad110b4d/fig-U6-5.png": "f62a5dcea0c316150d9d293914b893e61296854aca2c1942efa20d536e59f97f",
+    "specs/content/giss-401/reviews/unit-06/G3/logs-ad110b4d/fig-U6-6.png": "27bc036a79e532f2e16dacf632e6e8782547c2af35a42527201d0af41ae9ef7b",
+    "specs/content/giss-401/reviews/unit-06/G3/logs-ad110b4d/render-review.txt": "b52d94bba763017358248f48cb95a475d0539aef3d66f9c03220ff20ad65af91",
+    "specs/content/giss-401/reviews/unit-06/G3/logs-ad110b4d/validate-content.txt": "0753463dcc4f70bfeed270f5eb8accdfb2113670791fc90775ea247c275de426"
+  }
+}

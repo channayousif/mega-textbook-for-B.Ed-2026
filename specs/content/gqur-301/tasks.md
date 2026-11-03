@@ -155,6 +155,16 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 3 | G3 en-review | ✅ | CMY | review:specs/content/gqur-301/reviews/unit-03/G3/20261102T140729Z-g3-desk-356db976.json |
 | Unit 4 | G3 en-review | ✅ | CMY | review:specs/content/gqur-301/reviews/unit-04/G3/20261102T140729Z-g3-desk-01cb7d7c.json |
 | Unit 9 | G3 en-review | ✅ | CMY | review:specs/content/gqur-301/reviews/unit-09/G3/20261102T140729Z-g3-desk-342e3991.json |
+| Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-05/G3/20261102T211054Z-g3-desk-60dc4d7c.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-02/G3/20261102T211054Z-g3-desk-3c59593c.json |
+| Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-06/G3/20261102T211054Z-g3-desk-70ddf80d.json |
+| Unit 8 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-08/G3/20261102T211054Z-g3-desk-3d8b226c.json |
+| Unit 10 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-10/G3/20261102T211054Z-g3-desk-8149f093.json |
+| Unit 11 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-11/G3/20261102T211054Z-g3-desk-3f0cadea.json |
+| Unit 12 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-12/G3/20261102T211054Z-g3-desk-8b7b7b5e.json |
+| Unit 13 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-13/G3/20261102T211054Z-g3-desk-01b39467.json |
+| Unit 14 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-14/G3/20261102T211054Z-g3-desk-4de3fcfe.json |
+| Unit 15 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-15/G3/20261102T211054Z-g3-desk-fa040404.json |
 | Unit 10 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-10/G3/20261102T212207Z-g3-desk-36d2970a.json |
 | Unit 11 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-11/G3/20261102T212207Z-g3-desk-7832f50b.json |
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-02/G3/20261102T212207Z-g3-desk-7dd700f4.json |

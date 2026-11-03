@@ -1,0 +1,29 @@
+file set EN: index.mdx, topic-01.mdx, topic-02.mdx, unit-assessment.mdx, unit-teacher-notes.mdx
+file set UR: index.mdx, topic-01.mdx, topic-02.mdx, unit-assessment.mdx, unit-teacher-notes.mdx
+file set identical: true
+front matter identifiers identical: true
+heading vector index.mdx EN[1 2 2 2 2] UR[1 2 2 2 2] OK
+heading vector topic-01.mdx EN[1 2 2 3 3 2 2 2 2 2 2 2] UR[1 2 2 3 3 2 2 2 2 2 2 2] OK
+heading vector topic-02.mdx EN[1 2 2 3 3 2 2 2 2 2 2 2] UR[1 2 2 3 3 2 2 2 2 2 2 2] OK
+heading vector unit-assessment.mdx EN[1 2 2 3 3 3 2 3 3 3] UR[1 2 2 3 3 3 2 3 3 3] OK
+heading vector unit-teacher-notes.mdx EN[1 2 2 2 2 2] UR[1 2 2 2 2 2] OK
+component Figure EN=4 UR=4
+component Glossary EN=3 UR=3
+component PrintHandout EN=4 UR=4
+import sequence EN: import TranslationStatusBadge from '@site/src/components/TranslationStatusBadge'; || import PrintHandout from '@site/src/components/PrintHandout'; | import Glossary from '@site/src/components/Glossary'; || import PrintHandout from '@site/src/components/PrintHandout'; | import Glossary from '@site/src/components/Glossary'; || import PrintHandout from '@site/src/components/PrintHandout'; || import PrintHandout from '@site/src/components/PrintHandout';
+import sequence UR: import TranslationStatusBadge from '@site/src/components/TranslationStatusBadge'; || import PrintHandout from '@site/src/components/PrintHandout'; | import Glossary from '@site/src/components/Glossary'; || import PrintHandout from '@site/src/components/PrintHandout'; | import Glossary from '@site/src/components/Glossary'; || import PrintHandout from '@site/src/components/PrintHandout'; || import PrintHandout from '@site/src/components/PrintHandout';
+table row counts EN: 0,5,5,0,0 UR: 0,5,5,0,0
+internal links EN: ](./topic-01),](./topic-02),](./unit-assessment),](./unit-teacher-notes) |  |  |  | 
+internal links UR: ](./topic-01),](./topic-02),](./unit-assessment),](./unit-teacher-notes) |  |  |  | 
+alt/desc fig-U6-1 MATCH
+alt/desc fig-U6-2 MATCH
+alt/desc fig-U6-3 MATCH
+alt/desc fig-U6-4 MATCH
+key_term Assessment -> تشخیص BANK-OK
+key_term Formative Assessment -> تشکیلی تشخیص BANK-OK
+key_term Summative Assessment -> مجموعی جائزہ BANK-OK
+key_term Rubric -> معیارِ جانچ BANK-OK
+key_term Self-Assessment -> خود جائزہ BANK-OK
+key_term Group Work -> گروہی کام BANK-OK
+key_term Lesson Plan -> سبقی منصوبہ BANK-OK
+key_term Reflective Journal -> تاملی جریدہ BANK-OK
