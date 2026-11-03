@@ -132,3 +132,4 @@ recorded resolved and F3 (no Urdu `.ur.svg` figure variants anywhere in EFMP-304
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-304/reviews/unit-02/G3/20261102T212207Z-g3-desk-0bfd5e8f.json |
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-304/reviews/unit-03/G3/20261102T212207Z-g3-desk-fc9b67f2.json |
 | Unit 2 | G3 en-review | ⏳ | codex | advisory: revise; repairs applied to `20261102T212207Z-g3-desk-0bfd5e8f.json`; support patterns, audience/context, source limits, assessment alignment and figure labels repaired in EN/UR. Fresh independent G3 and G5 plus permitted rendering/provenance handoff remain required; no certification. |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-304/reviews/unit-02/G2/20261103T075914906Z-gates.json |

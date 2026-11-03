@@ -54,7 +54,7 @@ Applied the latest Unit 2 G3 findings to English and Urdu prose, assessments, so
 ## Outcome
 
 - ✅ Impact: Removed contradictory support rules and mismatched marking requirements.
-- 🧪 Tests: 347 unit tests pass; content gates rerun after refreshing deterministic G2 evidence.
+- 🧪 Tests: 347 unit tests pass; final content gates pass 13/13 after refreshing deterministic G2 evidence.
 - 📁 Files: Unit 2 EN/UR topics and assessment; source/coverage records, figures, tracker and handoff.
 - 🔁 Next prompts: Host supplies permitted geometry/rendering and frozen independent G3/G5 review.
 - 🧠 Reflection: Keep source summaries distinct from passage-level evidence and support patterns distinct from conclusion topics.
@@ -69,6 +69,6 @@ Applied the latest Unit 2 G3 findings to English and Urdu prose, assessments, so
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Stale G2 input manifest after repairs; original source claims exceeded bound evidence; SVG clipping.
-- Graders run and results (PASS/FAIL): npm test PASS (347); origin/main check:content PASS after ignored index generation; final content gate result recorded in subsequent G2 evidence.
+- Graders run and results (PASS/FAIL): npm test PASS (347); origin/main check:content PASS after ignored index generation; final check:content PASS (13/13), fresh G2 evidence recorded.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Fresh independent review of frozen repaired inputs.

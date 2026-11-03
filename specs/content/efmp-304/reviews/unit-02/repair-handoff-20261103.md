@@ -37,7 +37,9 @@ Report addressed: `G3/20261102T212207Z-g3-desk-0bfd5e8f.json` (revise).
 
 The full unit test suite passes: 28 files, 347 tests. `origin/main` content gates pass after
 regenerating its ignored content-status index. Repair-stage content checks found stale G2 evidence,
-which requires a fresh deterministic record against committed inputs, not a G3 approval.
+which was refreshed against committed inputs at `G2/20261103T075914906Z-gates.json`.
+Final `npm run check:content`: all 13 gates pass, with no new finding relative to origin/main.
+This deterministic record is not a G3 approval.
 
 The brief forbids builds, servers and Playwright. Therefore neither browser-based
 `measure-figure-text.mjs` nor Docusaurus 360px, keyboard/table, RTL and A4 rendering was run.
