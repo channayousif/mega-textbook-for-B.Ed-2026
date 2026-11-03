@@ -44,4 +44,11 @@ G1 unit-spec affirmed at intake (D-2026-0019). G2 en-draft cleared by determinis
 | Unit 4 | G6 assets | ▢ | | |
 | Unit 4 | G7 publish | ▢ | | |
 | Unit 1 | G3 en-review | ▢ | | advisory cycle 2 (disposition: pass, advisory findings F1-F2) at specs/content/geng-300/reviews/unit-01/G3/agent-g3-geng-300-u1-run41b4c5ae.json; agent reviews advisory under ADR-0019 |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/geng-300/reviews/unit-02/G3/20261102T142352Z-g3-desk-dc66e88f.json |
+| Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/geng-300/reviews/unit-04/G3/20261102T142352Z-g3-desk-da6d229a.json |
 | Unit 1 | G3 en-review | ✅ | CMY | review:specs/content/geng-300/reviews/unit-01/G3/20261102T140729Z-g3-desk-8d754faa.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/geng-300/reviews/unit-02/G3/20261102T211054Z-g3-desk-5d4f13a0.json |
+| Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/geng-300/reviews/unit-04/G3/20261102T211054Z-g3-desk-a52b78de.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/geng-300/reviews/unit-02/G3/20261102T212207Z-g3-desk-f989dc4f.json |
+| Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/geng-300/reviews/unit-04/G3/20261102T212207Z-g3-desk-f85a6c35.json |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/geng-300/reviews/unit-03/G3/20261102T213029Z-g3-desk-24e957fb.json |
