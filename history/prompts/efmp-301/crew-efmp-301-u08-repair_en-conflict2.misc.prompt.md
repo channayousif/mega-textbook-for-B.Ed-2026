@@ -16,8 +16,28 @@ links:
   adr: null
   pr: null
 files:
- - specs/content/efmp-301/tasks.md
+ - docs/semester-1/efmp-301/unit-08/topic-01.mdx
+ - docs/semester-1/efmp-301/unit-08/topic-03.mdx
+ - docs/semester-1/efmp-301/unit-08/unit-assessment.mdx
+ - history/prompts/efmp-301/crew-efmp-301-u08-repair_en-conflict1.misc.prompt.md
  - history/prompts/efmp-301/crew-efmp-301-u08-repair_en-conflict2.misc.prompt.md
+ - history/prompts/efmp-301/crew-efmp-301-u08-repair_en.misc.prompt.md
+ - history/prompts/general/20261115-verify-efmp301-unit-eight-merge.general.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-08/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-08/topic-03.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-08/unit-assessment.mdx
+ - specs/content/efmp-301/figures/unit-08.md
+ - specs/content/efmp-301/reviews/unit-08/G2/20261103T053653429Z-gates.json
+ - specs/content/efmp-301/reviews/unit-08/G2/logs-20261103T053653429Z/check-bloom-bands.txt
+ - specs/content/efmp-301/reviews/unit-08/G2/logs-20261103T053653429Z/check-concept-graph.txt
+ - specs/content/efmp-301/reviews/unit-08/G2/logs-20261103T053653429Z/check-depth-gate.txt
+ - specs/content/efmp-301/reviews/unit-08/G2/logs-20261103T053653429Z/check-docs-sync.txt
+ - specs/content/efmp-301/reviews/unit-08/G2/logs-20261103T053653429Z/check-figures.txt
+ - specs/content/efmp-301/reviews/unit-08/G2/logs-20261103T053653429Z/check-no-answer-keys.txt
+ - specs/content/efmp-301/reviews/unit-08/G2/logs-20261103T053653429Z/check-no-em-dash.txt
+ - specs/content/efmp-301/reviews/unit-08/G2/logs-20261103T053653429Z/validate-content.txt
+ - specs/content/efmp-301/sources/unit-08.md
+ - specs/content/efmp-301/tasks.md
 tests:
  - npm run check:content
 ---
@@ -55,28 +75,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-301-u08-review_en, review_en, codex) Owner action needed on untaught RRQ-10, unspecified ERQ word limits, and missing source/render evidence.
 - (efmp-301-u08-review_en, review_en, codex) Owner action needed on untaught RRQ-10, unspecified ERQ word limits, and missing source/render evidence.
 
+
 ## Response snapshot
 
-Resolved the single conflict in `specs/content/efmp-301/tasks.md` by keeping main's Unit 3 and Unit 12 rows ahead of this branch's Unit 8 rows, committed the merge, and ran the content gate.
+Resolved the sole origin/main conflict in `specs/content/efmp-301/tasks.md` by keeping both sides' rows (main first), committed the merge and its PHR, and left `npm run check:content` with only the pre-existing `check:content-status` failure.
 
 ## Outcome
 
-- Impact: merge conflict resolution for EFMP-301 Unit 8 by opencode (attempt conflict2).
-- Tests: `npm run check:content` - 12 of 13 gates pass; `check:content-status` fails on the gitignored `static/content-status.json`, which is absent on origin/main and whose on-disk digest matches neither the current tree nor origin/main, so the failure is pre-existing.
-- Files: 2 file(s), listed above.
+- Impact: fix for EFMP-301 Unit 8 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 22 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: merge commit `6b3fb7514` resolving `specs/content/efmp-301/tasks.md`; both sides' rows kept, main's first, no exact duplicates.
-- Decisions the team must respect: this branch added no `D-`/`G-` IDs, so no ID collision needed renumbering; the shared registries were unchanged on both sides relative to the merge base.
-- Pending / next owner: `check:content-status` needs `npm run build:content-status` (separate fix job); the Urdu "کاؤنٹرائزنگ" mistranslation and the narrow-screen/A4 render check remain open for a G5/translation or owner job.
+- Shipped / changed: Resolved the sole origin/main conflict in `specs/content/efmp-301/tasks.md` by keeping both sides' rows (main first), committed the merge and its PHR, and left `npm run check:content` with only the pre-existing `check:content-status` failure.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - `check:content-status` fails on both branches because the gitignored `static/content-status.json` is stale/missing; regenerating it needs `npm run build:content-status` (separate fix job).
+  - Urdu Unit 8 still carries the "کاؤنٹرائزنگ" mistranslation for "management" and the narrow-screen/A4 render check is uninspected; both need a G5/translation or owner job.
+  - `specs/content/efmp-301/tasks.md` now holds main's Unit 3 and Unit 12 rows followed by this branch's Unit 8 rows; no ID collisions required renumbering.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: `check:content-status` fails on both this branch and origin/main because the gitignored `static/content-status.json` is stale or missing.
-- Graders run and results (PASS/FAIL): `npm run check:content` - 12 PASS, 1 pre-existing FAIL.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
