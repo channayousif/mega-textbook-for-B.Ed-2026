@@ -77,7 +77,7 @@ a `flowchart` and a `concept-map` as the Art. III.10 schematics. G1 unit-spec at
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
 | Unit 5 | G1 unit-spec | ▢ | | board G0/G1 intake pending |
-| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-303/reviews/unit-05/G2/20261103T112240382Z-gates.json |
+| Unit 5 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-303/reviews/unit-05/G2/20261103T084218376Z-gates.json |
 | Unit 5 | G3 en-review | ▣ | agent:codex-g3-reviewer | Advisory escalation only: specs/content/efmp-303/reviews/unit-05/G3/crew-20261018.json; source support, assessment mappings/scoring, provenance and current renders unresolved. Unsigned; G3 remains open. Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 5 | G4 ur-translation | ▣ | | Five-file Urdu mirror verified complete against English baseline (409ea262): all 5 files match structure, heading level vectors, components (<PrintHandout>, <Figure>, <Glossary>), and 10/10/5 assessment banks; 4 .ur.svg/.ur.dark.svg figure variants wired; 3 key_terms bank-accepted in terminology.csv; check:content 13/13 pass and parity/figures/key_terms clean under temporary reviewed flip (reverted). Handoff: specs/content/efmp-303/reviews/unit-05/G4/translation-handoff.md. translation_status stays draft pending independent G5; no certification claimed |
 | Unit 5 | G5 ur-review | ▢ | | |
@@ -126,6 +126,6 @@ unit-spec at intake (board-run G0/G1 intake pending).
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-05/G3/20261102T212207Z-g3-desk-58144d8a.json |
 | Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-303/reviews/unit-01/G3/20261102T212819Z-g3-desk-140ce781.json |
 | Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied; report reviews/unit-02/G3/20261102T212207Z-g3-desk-4de29bbc.json; fig-U2-1.svg geometry overflow resolved via PR #150 (TEX-74) with measure-figure-text clean (774.8 <= 780); external URLs in topic-02 and topic-03 accessible; repository check:figures green; needs a fresh G3 run |
-
 | Unit 4 | G3 en-review | ▢ | | advisory: revise; repairs applied; report reviews/unit-04/G3/20261102T212207Z-g3-desk-a0d82ff4.json; unsupported GDP figures and Coombs cycle attribution removed in EN and UR; duplicate concept label fixed; SLO 4-1 retained per approved Topic 4.1 mapping. Render-review remains blocked by crew host restrictions; fresh independent G3 with small-screen, A4 print and figure-clipping inspection required. |
 | Unit 3 | G3 en-review | ▢ | agent:codex | advisory: revise; repairs applied; report specs/content/efmp-303/reviews/unit-03/G3/20261102T212207Z-g3-desk-4e7be754.json; figures, source boundaries, worked examples, assessment guidance and semantic mappings repaired in EN and draft UR. G3 remains open; fresh independent blind solving, author provenance, frozen handoff, page renders and owner G1 reconciliation pending. |
+| Unit 5 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-303/reviews/unit-05/G3/20261102T212207Z-g3-desk-58144d8a.json; sources registered with bound excerpts, concepts remapped, assessment scoring and distractors repaired, illustrative opening scenarios framed, and figure remits/geometry resolved; needs a fresh G3 run |

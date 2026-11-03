@@ -23,11 +23,17 @@ inclusion (`CON:EFMP-305-1-7`) and Unit 2's observation and identification
 
 **Terminology note.** Three labels below use pairs already banked in
 `specs/content/terminology.csv`: Differentiated instruction `متنوع ہدایات`, Scaffolding
-`معاونتی تدریس`, Formative assessment `تشکیلی تشخیص`. The remaining labels are **new to this
-course and not yet banked**. They are proposed for banking in the TEX-69 handoff rather than
-written into `terminology.csv` here, because `terminology.csv` freezes as a pair with
-`style-guide.md` (Spec 006 FR-007) and banking is an owner decision (precedent: `D-2026-0067`).
-The G4 translator must use these labels, not invent alternatives.
+`معاونتی تدریس`, Formative assessment `تشکیلی تشخیص`. The owner then banked nine EFMP-305
+pairs in `terminology.csv` (TEX-80, 2026-10-16): Differentiating content / process / product
+`مواد / عمل / حاصلِ کار میں تنوع`, Tiered activities `درجہ بند سرگرمیاں`, Accommodation
+`سہولت کاری`, Modification `ترمیم`, Universal Design for Learning `تعلم کے لیے عالمگیر ڈیزائن`,
+Cooperative learning `اشتراکی تعلم`, Positive interdependence `مثبت باہمی انحصار`, Individual
+accountability `انفرادی جوابدہی` and Flexible assessment `لچکدار تشخیص`. Four labels remain
+unbanked unit-level phrases: Cooperative structures, Assessment criteria held constant, Inclusive
+lesson planning order and Barrier table. They are not written into `terminology.csv` here,
+because `terminology.csv` freezes as a pair with `style-guide.md` (Spec 006 FR-007) and banking
+is an owner decision (precedent: `D-2026-0067`). The G4 translator must use the labels in this
+table, not invent alternatives.
 
 | Concept ID | Label EN | Label UR | Prerequisites | Topic | SLO refs | Assessment item IDs |
 |---|---|---|---|---|---|---|

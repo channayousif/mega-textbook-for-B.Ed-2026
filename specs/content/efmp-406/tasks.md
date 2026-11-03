@@ -21,7 +21,7 @@
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-01/G2/20261103T112248137Z-gates.json |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-01/G2/20261103T131848586Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/efmp-406/reviews/unit-01/G3/5be15169-67ce-493e-9ccd-e4c8e6b64a2d.json; all 7 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; all 8 SVG variants pass geometry; G3 remains open and unsigned |
 | Unit 1 | G4 ur-translation | ▢ | | separate job |
 | Unit 1 | G5 ur-review | ▢ | | |
@@ -71,3 +71,4 @@
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-406/reviews/unit-05/G3/20261102T212135Z-g3-desk-466a27a9.json |
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-406/reviews/unit-02/G3/20261102T212207Z-g3-desk-e7c99b68.json |
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-406/reviews/unit-03/G3/20261102T212207Z-g3-desk-41db593c.json |
+| Unit 1 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-406/reviews/unit-01/G3/20261102T212036Z-g3-desk-45e9b45b.json; teaching cases explicitly labeled as illustrative instructional examples in index, topics, teacher notes, and sources; Shakir et al. (2012) citations qualified as strictly limited to published abstract scope; headless review tooling constraints and pending catalog entry noted per ADR-0019; G3 remains open and unsigned |
