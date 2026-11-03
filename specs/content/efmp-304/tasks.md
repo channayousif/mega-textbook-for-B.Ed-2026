@@ -118,9 +118,15 @@ recorded resolved and F3 (no Urdu `.ur.svg` figure variants anywhere in EFMP-304
 | Unit 6 | G5 ur-review | ▣ | | Fresh agent G5 after the D-2026-0067 item 3 repair (Reviewer, agy Gemini 3.1 Pro, run 620f3b74) **pass**, 3 advisories: `specs/content/efmp-304/reviews/unit-06/G5/agent-g5-efmp-304-u6-run620f3b74.json` (PR #135, TEX-50). F1 (the English phrasing defects, repaired in both locales) and F2 (reflective-practice terminology banked) are recorded **resolved**; F3 stays open and is tracked as TEX-49, the course-wide Urdu figure-variant gap (no `.ur.svg` exists for any EFMP-304 unit, 1 to 6). Supersedes run 36f939d6 (PR #132, TEX-46). Row stays open (ADR-0019) |
 | Unit 6 | G6 assets | ✅ | auto:gates | 8 schematics placed; dark variants derived |
 | Unit 6 | G7 publish | ▢ | | |
+| Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-304/reviews/unit-01/G3/20261102T142352Z-g3-desk-480084d1.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-304/reviews/unit-02/G3/20261102T142352Z-g3-desk-e26bcfbf.json |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-304/reviews/unit-03/G3/20261102T142352Z-g3-desk-08af083d.json |
 | Unit 4 | G3 en-review | ✅ | CMY | review:specs/content/efmp-304/reviews/unit-04/G3/20261102T140729Z-g3-desk-797b9070.json |
 | Unit 5 | G3 en-review | ✅ | CMY | review:specs/content/efmp-304/reviews/unit-05/G3/20261102T140729Z-g3-desk-5e8a8ded.json |
 | Unit 6 | G3 en-review | ✅ | CMY | review:specs/content/efmp-304/reviews/unit-06/G3/20261102T140729Z-g3-desk-9ef61257.json |
 | Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-304/reviews/unit-01/G3/20261102T211054Z-g3-desk-a0711672.json |
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-304/reviews/unit-02/G3/20261102T211054Z-g3-desk-3c60113a.json |
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-304/reviews/unit-03/G3/20261102T211054Z-g3-desk-98445761.json |
+| Unit 1 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-304/reviews/unit-01/G3/20261102T212207Z-g3-desk-9cac2bab.json |
+| Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-304/reviews/unit-02/G3/20261102T212207Z-g3-desk-0bfd5e8f.json |
+| Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-304/reviews/unit-03/G3/20261102T212207Z-g3-desk-fc9b67f2.json |
