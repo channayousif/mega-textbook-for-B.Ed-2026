@@ -81,7 +81,7 @@ does not grant publication authority or certify the content.
 At branch start, HEAD matched origin/main and all 13 content gates passed. After authoring,
 10 of 13 pass: content schema, unit depth and source excerpts, punctuation, public-answer
 bounds, concept graph, Bloom bands, source floor, licence checks and documentation sync.
-The actual logs are in `authoring/unit-02-checks/`; these are author check logs, not G2 evidence.
+The actual logs are in `authoring/unit-02/checks/`; these are author check logs, not G2 evidence.
 All five pages also compile through the MDX compiler. No build, dev server or Playwright ran.
 
 Three checks remain red relative to main:
