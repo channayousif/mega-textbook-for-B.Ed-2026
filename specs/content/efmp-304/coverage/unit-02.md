@@ -2,6 +2,7 @@
 
 Per `specs/008-rich-unit-pedagogy/contracts/coverage-matrix-v2.md`. Every `U2-NN` row in the
 `### Sub-topic checklist` of `specs/content/efmp-304/content-spec.md` (`## Unit 2` subsection) is
+Mapped Bassham rows record guide-reading alignment only, not verified claim support; Malone rows are qualified further reading. Specific analytical support uses Van Cleave. Each is
 mapped below to the **topic file** and the **exact `###` heading** (under that topic's
 `## Explanation`) that covers it, and to the source key it is grounded in (keys resolve in
 `specs/content/efmp-304/sources/unit-02.md`).
@@ -20,12 +21,18 @@ has at least one row naming the exact `topic-NN.mdx` its `### Topic list` row as
 | U2-04 | topic-02.mdx | Issue questions and information questions | bassham2010 |
 | U2-04 | topic-02.mdx | Issue questions and information questions | qin2016 |
 | U2-05 | topic-03.mdx | Types of argument | bassham2010 |
-| U2-05 | topic-03.mdx | Types of argument | yuzenker2022 |
+| U2-05 | topic-03.mdx | Types of argument | vancleave2016 |
 | U2-06 | topic-04.mdx | Identifying premises | bassham2010 |
 | U2-06 | topic-04.mdx | Identifying premises | malone2003 |
 | U2-07 | topic-04.mdx | Identifying conclusions | bassham2010 |
 | U2-08 | topic-04.mdx | What is not an argument | bassham2010 |
 | U2-08 | topic-04.mdx | What is not an argument | malone2003 |
+
+| U2-01 | topic-01.mdx | Argument distinguished from explanation | vancleave2016 |
+| U2-02 | topic-01.mdx | The classical form of an argument | vancleave2016 |
+| U2-06 | topic-04.mdx | Identifying premises | vancleave2016 |
+| U2-07 | topic-04.mdx | Identifying conclusions | vancleave2016 |
+| U2-08 | topic-04.mdx | What is not an argument | vancleave2016 |
 
 ## Reinforcement
 

@@ -14,5 +14,7 @@ is mapped below to the **topic file** and the **exact `###` heading** (under tha
 | U1-3 | topic-02.mdx | ## Explanation > Principles of inclusion | ainscow2020 |
 | U1-4 | topic-02.mdx | ## Explanation > Why inclusion matters in Pakistan | rpwd2018 |
 | U1-4 | topic-02.mdx | ## Explanation > Why inclusion matters in Pakistan | unCRPD |
+| U1-4 | topic-02.mdx | ## Explanation > Why inclusion matters in Pakistan | unicef2014 |
+| U1-4 | topic-02.mdx | ## Explanation > Why inclusion matters in Pakistan | nep2009 |
 | U1-5 | topic-02.mdx | ## Explanation > Common misconceptions about inclusion | hehir2016 |
 | U1-5 | topic-02.mdx | ## Explanation > Common misconceptions about inclusion | ainscow2020 |

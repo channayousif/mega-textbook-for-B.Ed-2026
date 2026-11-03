@@ -4,10 +4,10 @@ Verified 2026-09-24. Every URL below was fetched and its title, authors and year
 against the page itself; nothing is cited from memory (Art. III.5, `author-unit` Step 1.3).
 
 The unit's teaching prose rests on seifert2009 (guide book 2, bound below) and the
-already-verified IAE/UNESCO-IBE booklet. The second guide book (seifert-hk) is bound at
-course level for its development chapters (sources/texts/seifert-hk.md); its Chapter 3,
-Sections 3.1-3.3, revises the same development chapter as seifert2009's Chapter 3, so the
-unit cites the 2009 edition and no seifert-hk claim appears in the prose.
+already-verified IAE/UNESCO-IBE booklet. The second guide book (seifert-hk, guide book 1)
+is also bound below (excerpt in sources/texts/seifert-hk.md); its Chapter 3, Sections
+3.1-3.3, revises the same development chapter as seifert2009's Chapter 3, so the unit cites
+the 2009 edition and no seifert-hk claim appears in the prose.
 The guide's Chapter 2 (Weeks 3-4) supplies the scope and sequence.
 
 ## Registry-verified open-access sources
@@ -15,6 +15,7 @@ The guide's Chapter 2 (Weeks 3-4) supplies the scope and sequence.
 | Key | Citation | URL/DOI | Supports | Kind |
 |---|---|---|---|---|
 | seifert2009 | Seifert, K., & Sutton, R. (2009). *Educational Psychology* (2nd ed.). CC BY 3.0. | https://home.cc.umanitoba.ca/~seifert/EdPsy2009.pdf | U2-1..U2-10 (the definition, engines, principles, physical development, puberty, Piaget's stages, conservation, reversibility, decentration, the domains framing, matched teaching) | guide-required, retrieved and read 2026-09-24; bound excerpt in sources/texts/seifert2009.md |
+| seifert-hk | Seifert, K. *Educational Psychology* (revised ed., Connexions col11302). CC BY-SA 4.0. Open Textbooks for Hong Kong. | https://www.opentextbooks.org.hk/system/files/export/6/6118/pdf/Educational_Psychology_6118.pdf | U2-1, U2-4, U2-6 (mapped reading, content-spec: seifert-hk Chapter 3; Sections 3.1, 3.2 and 3.3 corroborate the definition of development, physical development and Piaget; the prose cites the seifert2009 edition of the same chapter) | guide-required (guide book 1), retrieved and read 2026-09-25; bound excerpt in sources/texts/seifert-hk.md |
 | vosniadou2001 | Vosniadou, S. (2001). *How children learn*. Educational Practices Series No. 7. International Academy of Education / UNESCO IBE. | https://eric.ed.gov/?id=ED455955 | U2-6, U2-10 (developmental and individual differences; new representations with age; the school's response) | open-access-substitute, ERIC-verified (first 2026-09-11, re-retrieved 2026-09-24); bound excerpt in sources/texts/vosniadou2001.md |
 
 ## Guide-required sources

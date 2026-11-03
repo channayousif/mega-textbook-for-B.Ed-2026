@@ -12,7 +12,7 @@
 | 4 | The Social System and the State in Islam | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-03 by the crew author job (claude); G2 gate evidence recorded below; G3 (with the qualified Islamic Studies reviewer the spec asks for) and Urdu remain open |
 | 5 | The Economic and Political Systems of Islam | ☐ | ☐ | ☐ | ☐ | | |
 | 6 | Islam, Education, Civilization and Contemporary Issues | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-03 by the crew author job; G2 gate evidence recorded below; G3 (with a qualified Islamic Studies reviewer) and Urdu remain open |
-| 7 | Islamic Ethics in Professional Life | ☐ | ☐ | ☐ | ☐ | | |
+| 7 | Islamic Ethics in Professional Life | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-03 by the crew author job (claude); G2 gate evidence recorded below; G3 (with the qualified Islamic Studies reviewer the spec asks for) and Urdu remain open |
 
 **Key:** ▣ = in progress, ☐ = not started, ✓ = done, ✗ = escalated
 
@@ -53,6 +53,12 @@
 | Unit 6 | G4 ur-translation | ▢ | | Separate job; English pages carry untranslated notices |
 | Unit 6 | G5 ur-review | ▢ | | Pending translation and independent review |
 | Unit 6 | G6 assets | ▣ | | Six English schematics placed with derived dark variants; Urdu localisation pending |
+| Unit 7 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-07/G2/20261103T013310659Z-gates.json |
+| Unit 7 | G3 en-review | ▢ | | awaiting an independent reviewer and a qualified Islamic Studies reviewer (content spec, drafting note 2); no review performed by author |
+| Unit 7 | G4 ur-translation | ▢ | | separate job |
+| Unit 7 | G5 ur-review | ▢ | | |
+| Unit 7 | G6 assets | ▣ | | three English schematics placed with dark variants; `measure-figure-text` not run (crew brief bars Chromium), CI `figure-geometry` is the first measured check |
+| Unit 7 | G7 publish | ▢ | | no publication requested by this authoring job |
 
 ## Unit 6 authoring notes
 
