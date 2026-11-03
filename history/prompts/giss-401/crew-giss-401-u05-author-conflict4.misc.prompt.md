@@ -16,7 +16,40 @@ links:
   adr: null
   pr: null
 files:
+ - docs/semester-3/giss-401/course-overview.mdx
+ - docs/semester-3/giss-401/unit-05/index.mdx
+ - docs/semester-3/giss-401/unit-05/topic-01.mdx
+ - docs/semester-3/giss-401/unit-05/topic-02.mdx
+ - docs/semester-3/giss-401/unit-05/unit-assessment.mdx
+ - history/prompts/general/547-verify-giss401-unit-five-merge.general.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u05-author-conflict1.misc.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u05-author-conflict2.misc.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u05-author-conflict3.misc.prompt.md
  - history/prompts/giss-401/crew-giss-401-u05-author-conflict4.misc.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u05-author.green.prompt.md
+ - history/prompts/giss-401/crew-giss-401-u05-conflict1.green.prompt.md
+ - specs/content/giss-401/authoring/unit-05.md
+ - specs/content/giss-401/concepts/unit-05.md
+ - specs/content/giss-401/coverage/unit-05.md
+ - specs/content/giss-401/figures/unit-05.md
+ - specs/content/giss-401/reviews/unit-01/G2/20261103T001231244Z-gates.json
+ - specs/content/giss-401/reviews/unit-01/G2/20261103T021608724Z-gates.json
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T001231244Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T001231244Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T001231244Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T001231244Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T001231244Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T001231244Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T001231244Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T001231244Z/validate-content.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T021608724Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T021608724Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T021608724Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T021608724Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T021608724Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T021608724Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T021608724Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-01/G2/logs-20261103T021608724Z/validate-content.txt
  - specs/content/giss-401/reviews/unit-03/G2/20261103T031913180Z-gates.json
  - specs/content/giss-401/reviews/unit-03/G2/logs-20261103T031913180Z/check-bloom-bands.txt
  - specs/content/giss-401/reviews/unit-03/G2/logs-20261103T031913180Z/check-concept-graph.txt
@@ -26,6 +59,42 @@ files:
  - specs/content/giss-401/reviews/unit-03/G2/logs-20261103T031913180Z/check-no-answer-keys.txt
  - specs/content/giss-401/reviews/unit-03/G2/logs-20261103T031913180Z/check-no-em-dash.txt
  - specs/content/giss-401/reviews/unit-03/G2/logs-20261103T031913180Z/validate-content.txt
+ - specs/content/giss-401/reviews/unit-04/G2/20261103T021608931Z-gates.json
+ - specs/content/giss-401/reviews/unit-04/G2/logs-20261103T021608931Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-04/G2/logs-20261103T021608931Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-04/G2/logs-20261103T021608931Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-04/G2/logs-20261103T021608931Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-04/G2/logs-20261103T021608931Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-04/G2/logs-20261103T021608931Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-04/G2/logs-20261103T021608931Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-04/G2/logs-20261103T021608931Z/validate-content.txt
+ - specs/content/giss-401/reviews/unit-05/G2/20261102T233631738Z-gates.json
+ - specs/content/giss-401/reviews/unit-05/G2/20261103T001231439Z-gates.json
+ - specs/content/giss-401/reviews/unit-05/G2/20261103T021609105Z-gates.json
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261102T233631738Z/validate-content.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T001231439Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T001231439Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T001231439Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T001231439Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T001231439Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T001231439Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T001231439Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T001231439Z/validate-content.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T021609105Z/check-bloom-bands.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T021609105Z/check-concept-graph.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T021609105Z/check-depth-gate.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T021609105Z/check-docs-sync.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T021609105Z/check-figures.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T021609105Z/check-no-answer-keys.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T021609105Z/check-no-em-dash.txt
+ - specs/content/giss-401/reviews/unit-05/G2/logs-20261103T021609105Z/validate-content.txt
  - specs/content/giss-401/reviews/unit-06/G2/20261103T031913754Z-gates.json
  - specs/content/giss-401/reviews/unit-06/G2/logs-20261103T031913754Z/check-bloom-bands.txt
  - specs/content/giss-401/reviews/unit-06/G2/logs-20261103T031913754Z/check-concept-graph.txt
@@ -35,8 +104,20 @@ files:
  - specs/content/giss-401/reviews/unit-06/G2/logs-20261103T031913754Z/check-no-answer-keys.txt
  - specs/content/giss-401/reviews/unit-06/G2/logs-20261103T031913754Z/check-no-em-dash.txt
  - specs/content/giss-401/reviews/unit-06/G2/logs-20261103T031913754Z/validate-content.txt
+ - specs/content/giss-401/sources/texts/abdel-salam-2015-democracy.md
+ - specs/content/giss-401/sources/texts/pak-constitution-1973.md
  - specs/content/giss-401/sources/texts/quran-translation.md
+ - specs/content/giss-401/sources/texts/rahman-2020-zakat.md
+ - specs/content/giss-401/sources/unit-05.md
  - specs/content/giss-401/tasks.md
+ - static/img/figures/giss-401/unit-05/fig-U5-1.dark.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-1.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-2.dark.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-2.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-3.dark.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-3.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-4.dark.svg
+ - static/img/figures/giss-401/unit-05/fig-U5-4.svg
 tests:
  - npm run check:content
 ---
@@ -74,27 +155,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (giss-401-u05-author-conflict1, fix, opencode) The merge changed shared bound inputs (`course-overview.mdx`, `pak-constitution-1973.md`), so both units' G2 evidence was re-recorded; a later main change to those files needs the same `prepare-gate-evidence.mjs --refresh-stale` step.
 - (giss-401-u05-author-conflict1, fix, opencode) `static/content-status.json` is gitignored and was regenerated locally; CI's prestart hooks regenerate it too.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/giss-401-u05-author and resolved the two conflicts. `quran-translation.md` keeps main's Unit 1/3/4 material and its Unit 6 notes, with this branch's U5-01 to U5-06 sections before them and an intro covering Units 1, 3, 4, 5 and 6. `tasks.md` keeps main's Unit 3 and Unit 6 rows and G3 advisory rows, takes this branch's newer Unit 1/4 G2 evidence rows and its Unit 5 rows. The merge changed shared bound inputs, so the stale G2 evidence for Units 3 and 6 was refreshed with `prepare-gate-evidence.mjs --refresh-stale`, `static/content-status.json` was regenerated, and all 13 content gates pass.
+Merged origin/main into the GISS-401 Unit 5 branch, resolved the quran-translation.md and tasks.md conflicts preserving both sides, refreshed the stale Unit 3/6 G2 evidence, and left all content gates passing.
 
 ## Outcome
 
-- Impact: fix for GISS-401 Unit 5 by opencode (conflict4).
-- Tests: npm run check:content passed in the job worktree after the refresh.
-- Files: 21 file(s), listed above.
+- Impact: fix for GISS-401 Unit 5 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 102 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/giss-401-u05-author, resolved the `quran-translation.md` and `tasks.md` conflicts preserving both sides, refreshed the stale G2 evidence for Units 3 and 6, regenerated `static/content-status.json`, and left all content gates passing with the work committed.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Merged origin/main into the GISS-401 Unit 5 branch, resolved the quran-translation.md and tasks.md conflicts preserving both sides, refreshed the stale Unit 3/6 G2 evidence, and left all content gates passing.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - `quran-translation.md` now carries U1, U3, U4, U5 and U6 material; the intro names all five units and the section pointers.
-  - `tasks.md` Unit 1/4 G2 rows point at this branch's refreshed evidence (20261103T021608724Z, 20261103T021608931Z); Unit 3/6 G2 rows were repointed to 20261103T031913180Z and 20261103T031913754Z after the merge.
   - Unit 5 G3 English review and G4/G5 Urdu translation remain open downstream jobs; no G3/G5 row is marked done.
+  - The merge changed shared bound inputs, so Units 3 and 6 G2 evidence was refreshed; a later main change to `course-overview.mdx` or `quran-translation.md` needs `prepare-gate-evidence.mjs --refresh-stale` again.
+  - `static/content-status.json` is gitignored and was regenerated locally; CI's prestart hooks regenerate it too.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
