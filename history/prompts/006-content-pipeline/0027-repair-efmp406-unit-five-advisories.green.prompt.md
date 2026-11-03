@@ -27,8 +27,11 @@ files:
   - specs/content/efmp-406/tasks.md
   - specs/content/efmp-406/reviews/unit-05/G3/repair-handoff.md
   - history/prompts/006-content-pipeline/0027-repair-efmp406-unit-five-advisories.green.prompt.md
+  - specs/content/efmp-406/reviews/unit-05/G2/20261103T182100457Z-gates.json
+  - specs/content/efmp-406/reviews/unit-05/G2/logs-20261103T182100457Z/
 tests:
-  - "npm run check:content: baseline all 14 passed; final rerun pending G2 refresh"
+  - "Static comparison: EN/UR headings, checklist items and Figure elements unchanged"
+  - "npm run check:content: baseline and final all 14 passed"
   - "scripts/heavy.sh npm test: 31 files, 368 tests passed"
 ---
 
@@ -38,13 +41,13 @@ Read .crew/brief.md in the current directory and carry it out completely. It is 
 
 ## Response snapshot
 
-Applied the five report advisories as bounded bilingual clarifications and an explicit handoff of owner/tooling limits. G3 stays open. Refreshing stale Unit 5 G2 evidence before final checks and local commit.
+Applied the five report advisories as bounded bilingual clarifications and an explicit handoff of owner/tooling limits. G3 stays open. Refreshed Unit 5 G2 evidence; all 14 content gates and 368 unit tests pass. Work is committed locally without push or PR.
 
 ## Outcome
 
 - ✅ Impact: Fictional examples and source limits are explicit in English and Urdu.
-- 🧪 Tests: All 368 unit tests passed; final 14-gate rerun follows deterministic evidence refresh.
-- 📁 Files: Four EN/UR page pairs, Unit 5 tracker and repair handoff, PHR; fresh Unit 5 G2 logs/evidence to follow.
+- 🧪 Tests: All 368 unit tests passed; all 14 final content gates passed after deterministic evidence refresh.
+- 📁 Files: Four EN/UR page pairs, Unit 5 tracker and repair handoff, PHR; fresh Unit 5 G2 logs/evidence included.
 - 🔁 Next prompts: Fresh independent review, permitted browser/print checks and owner catalog ruling.
 - 🧠 Reflection: Existing source notes had the limits, but reader-facing summaries needed the same precision.
 
@@ -58,6 +61,6 @@ Applied the five report advisories as bounded bilingual clarifications and an ex
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Editing unit prose invalidated its existing G2 manifest and ignored derived content-status report.
-- Graders run and results (PASS/FAIL): Unit tests PASS (368); origin/main baseline PASS (14 gates); final rerun pending.
+- Graders run and results (PASS/FAIL): Unit tests PASS (368); origin/main baseline PASS (14 gates); final rerun PASS (14 gates).
 - Prompt variant (if applicable): none
-- Next experiment (smallest change to try): Refresh only Unit 5 deterministic evidence and rerun the complete content tier.
+- Next experiment (smallest change to try): Fresh independent review of the repaired unit when permitted.
