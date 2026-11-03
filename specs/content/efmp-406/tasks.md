@@ -72,3 +72,5 @@
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-406/reviews/unit-02/G3/20261102T212207Z-g3-desk-e7c99b68.json |
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-406/reviews/unit-03/G3/20261102T212207Z-g3-desk-41db593c.json |
 | Unit 1 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-406/reviews/unit-01/G3/20261102T212036Z-g3-desk-45e9b45b.json; teaching cases explicitly labeled as illustrative instructional examples in index, topics, teacher notes, and sources; Shakir et al. (2012) citations qualified as strictly limited to published abstract scope; headless review tooling constraints and pending catalog entry noted per ADR-0019; G3 remains open and unsigned |
+
+| Unit 5 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-406/reviews/unit-05/G3/20261102T212135Z-g3-desk-466a27a9.json; fictional teaching examples labeled in EN/UR; Minott abstract-only scope and Indonesian higher education context clarified; tooling and catalog limits recorded in reviews/unit-05/G3/repair-handoff.md; G3 remains open and unsigned |
