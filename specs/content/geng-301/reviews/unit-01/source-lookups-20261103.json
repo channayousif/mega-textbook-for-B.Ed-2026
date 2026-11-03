@@ -1,0 +1,118 @@
+{
+  "graff2011": {
+    "url": "https://openlibrary.org/search.json?q=They+Say+I+Say+Graff+Birkenstein&limit=3&fields=title%2Cebook_access%2Cfirst_publish_year",
+    "result": {
+      "numFound": 46,
+      "start": 0,
+      "numFoundExact": true,
+      "num_found": 46,
+      "documentation_url": "https://openlibrary.org/dev/docs/api/search",
+      "q": "They Say I Say Graff Birkenstein",
+      "offset": null,
+      "docs": [
+        {
+          "ebook_access": "printdisabled",
+          "first_publish_year": 2021,
+          "title": "\"They Say / I Say\" with Readings--fifth edition"
+        },
+        {
+          "ebook_access": "printdisabled",
+          "first_publish_year": 2005,
+          "title": "\"They Say / I Say\""
+        },
+        {
+          "ebook_access": "no_ebook",
+          "first_publish_year": 2018,
+          "title": "They Say / I Say"
+        }
+      ]
+    }
+  },
+  "williams2017": {
+    "url": "https://openlibrary.org/search.json?q=Style+Lessons+in+Clarity+and+Grace+Williams+Bizup&limit=3&fields=title%2Cebook_access%2Cfirst_publish_year",
+    "result": {
+      "numFound": 4,
+      "start": 0,
+      "numFoundExact": true,
+      "num_found": 4,
+      "documentation_url": "https://openlibrary.org/dev/docs/api/search",
+      "q": "Style Lessons in Clarity and Grace Williams Bizup",
+      "offset": null,
+      "docs": [
+        {
+          "ebook_access": "printdisabled",
+          "first_publish_year": 1981,
+          "title": "Style"
+        },
+        {
+          "ebook_access": "no_ebook",
+          "first_publish_year": 2015,
+          "title": "Style"
+        },
+        {
+          "ebook_access": "no_ebook",
+          "first_publish_year": 2020,
+          "title": "Revel for Style"
+        }
+      ]
+    }
+  },
+  "strunk2000": {
+    "url": "https://openlibrary.org/search.json?q=The+Elements+of+Style+Strunk+White&limit=3&fields=title%2Cebook_access%2Cfirst_publish_year",
+    "result": {
+      "numFound": 60,
+      "start": 0,
+      "numFoundExact": true,
+      "num_found": 60,
+      "documentation_url": "https://openlibrary.org/dev/docs/api/search",
+      "q": "The Elements of Style Strunk White",
+      "offset": null,
+      "docs": [
+        {
+          "ebook_access": "public",
+          "first_publish_year": 1920,
+          "title": "The Elements of Style"
+        },
+        {
+          "ebook_access": "printdisabled",
+          "first_publish_year": 2016,
+          "title": "Elements of Style"
+        },
+        {
+          "ebook_access": "printdisabled",
+          "first_publish_year": 1918,
+          "title": "Elements of Style"
+        }
+      ]
+    }
+  },
+  "axelrod2016": {
+    "url": "https://openlibrary.org/search.json?q=The+St+Martins+Guide+to+Writing+Axelrod+Cooper&limit=3&fields=title%2Cebook_access%2Cfirst_publish_year",
+    "result": {
+      "numFound": 81,
+      "start": 0,
+      "numFoundExact": true,
+      "num_found": 81,
+      "documentation_url": "https://openlibrary.org/dev/docs/api/search",
+      "q": "The St Martins Guide to Writing Axelrod Cooper",
+      "offset": null,
+      "docs": [
+        {
+          "ebook_access": "printdisabled",
+          "first_publish_year": 1985,
+          "title": "The St. Martin's Guide to Writing"
+        },
+        {
+          "ebook_access": "printdisabled",
+          "first_publish_year": 2001,
+          "title": "St. Martin's Guide to Writing"
+        },
+        {
+          "ebook_access": "printdisabled",
+          "first_publish_year": 2015,
+          "title": "The concise St. Martin's guide to writing"
+        }
+      ]
+    }
+  }
+}
