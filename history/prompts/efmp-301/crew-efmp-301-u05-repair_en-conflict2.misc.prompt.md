@@ -16,38 +16,38 @@ links:
   adr: null
   pr: null
 files:
-  - docs/semester-1/efmp-301/unit-05/topic-01.mdx
-  - docs/semester-1/efmp-301/unit-05/topic-02.mdx
-  - docs/semester-1/efmp-301/unit-05/unit-assessment.mdx
-  - docs/semester-1/efmp-301/unit-05/unit-teacher-notes.mdx
-  - history/prompts/efmp-301/crew-efmp-301-u05-repair_en-conflict1.misc.prompt.md
-  - history/prompts/efmp-301/crew-efmp-301-u05-repair_en-conflict2.misc.prompt.md
-  - history/prompts/efmp-301/crew-efmp-301-u05-repair_en.misc.prompt.md
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-05/topic-01.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-05/topic-02.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-05/unit-assessment.mdx
-  - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-05/unit-teacher-notes.mdx
-  - specs/content/efmp-301/concepts/unit-05.md
-  - specs/content/efmp-301/coverage/unit-05.md
-  - specs/content/efmp-301/reviews/unit-05/G2/20261103T044540225Z-gates.json
-  - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/check-bloom-bands.txt
-  - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/check-concept-graph.txt
-  - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/check-depth-gate.txt
-  - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/check-docs-sync.txt
-  - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/check-figures.txt
-  - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/check-no-answer-keys.txt
-  - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/check-no-em-dash.txt
-  - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/validate-content.txt
-  - specs/content/efmp-301/sources/unit-05.md
-  - specs/content/efmp-301/tasks.md
-  - static/img/figures/efmp-301/unit-05/fig-U5-1.dark.svg
-  - static/img/figures/efmp-301/unit-05/fig-U5-1.svg
-  - static/img/figures/efmp-301/unit-05/fig-U5-2.dark.svg
-  - static/img/figures/efmp-301/unit-05/fig-U5-2.svg
-  - static/img/figures/efmp-301/unit-05/fig-U5-4.dark.svg
-  - static/img/figures/efmp-301/unit-05/fig-U5-4.svg
+ - docs/semester-1/efmp-301/unit-05/topic-01.mdx
+ - docs/semester-1/efmp-301/unit-05/topic-02.mdx
+ - docs/semester-1/efmp-301/unit-05/unit-assessment.mdx
+ - docs/semester-1/efmp-301/unit-05/unit-teacher-notes.mdx
+ - history/prompts/efmp-301/crew-efmp-301-u05-repair_en-conflict1.misc.prompt.md
+ - history/prompts/efmp-301/crew-efmp-301-u05-repair_en-conflict2.misc.prompt.md
+ - history/prompts/efmp-301/crew-efmp-301-u05-repair_en.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-05/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-05/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-05/unit-assessment.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-1/efmp-301/unit-05/unit-teacher-notes.mdx
+ - specs/content/efmp-301/concepts/unit-05.md
+ - specs/content/efmp-301/coverage/unit-05.md
+ - specs/content/efmp-301/reviews/unit-05/G2/20261103T044540225Z-gates.json
+ - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/check-bloom-bands.txt
+ - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/check-concept-graph.txt
+ - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/check-depth-gate.txt
+ - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/check-docs-sync.txt
+ - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/check-figures.txt
+ - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/check-no-answer-keys.txt
+ - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/check-no-em-dash.txt
+ - specs/content/efmp-301/reviews/unit-05/G2/logs-20261103T044540225Z/validate-content.txt
+ - specs/content/efmp-301/sources/unit-05.md
+ - specs/content/efmp-301/tasks.md
+ - static/img/figures/efmp-301/unit-05/fig-U5-1.dark.svg
+ - static/img/figures/efmp-301/unit-05/fig-U5-1.svg
+ - static/img/figures/efmp-301/unit-05/fig-U5-2.dark.svg
+ - static/img/figures/efmp-301/unit-05/fig-U5-2.svg
+ - static/img/figures/efmp-301/unit-05/fig-U5-4.dark.svg
+ - static/img/figures/efmp-301/unit-05/fig-U5-4.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
@@ -83,13 +83,14 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-301-u05-repair_en, repair_en, agy) All 16 Unit 5 SVGs pass measure-figure-text cleanly (fig-U5-1 widest text 768.4px in 780px viewBox); narrow-viewport and print inspection remain pending live browser run.
 - (efmp-301-u05-repair_en, repair_en, agy) Shared course texts (seifert2009, spielman2020) were left unchanged to protect course-wide G2 manifest validity across units 2-12.
 
+
 ## Response snapshot
 
-Verified the branch already has origin/main merged (merge commit f02fdf6b2), the EFMP-301 tasks.md union keeps both sides' rows, the shared registries are unchanged on both sides, and all 13 content gates pass; added the conflict2 PHR.
+Verified crew/efmp-301-u05-repair_en already has origin/main merged with the tasks.md union intact and all 13 content gates passing, and committed the conflict2 PHR.
 
 ## Outcome
 
-- Impact: fix for EFMP-301 Unit 5 by opencode (attempt 2).
+- Impact: fix for EFMP-301 Unit 5 by opencode (attempt 1).
 - Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 30 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
@@ -97,15 +98,13 @@ Verified the branch already has origin/main merged (merge commit f02fdf6b2), the
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Verified the branch already has origin/main merged (merge commit f02fdf6b2), the EFMP-301 tasks.md union keeps both sides' rows, the shared registries are unchanged on both sides, and all 13 content gates pass; added the conflict2 PHR.
+- Shipped / changed: Verified crew/efmp-301-u05-repair_en already has origin/main merged with the tasks.md union intact and all 13 content gates passing, and committed the conflict2 PHR.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - specs/content/efmp-301/tasks.md carries main's newer Unit 5 G3 desk row (`20261102T212207Z-g3-desk-99b62591.json`) after this branch's older advisory row (`20261102T211054Z-g3-desk-5bdd915a.json`); both sides' Unit 2/Unit 5 G2 evidence updates are preserved.
-  - `static/content-status.json` is gitignored and was regenerated with `npm run build:content-status`; regenerate it again after any tracker edit or the gate fails as stale.
-  - Unit 5 G2 gate evidence is refreshed to 20261103T044540225Z-gates.json; any further content edit will invalidate its manifest.
-  - All 16 Unit 5 SVGs pass measure-figure-text cleanly (fig-U5-1 widest text 768.4px in 780px viewBox); narrow-viewport and print inspection remain pending live browser run.
-  - Shared course texts (seifert2009, spielman2020) were left unchanged to protect course-wide G2 manifest validity across units 2-12.
+  - Branch already carried conflict1's merge of origin/main (f02fdf6b2); I verified the tasks.md union and shared registries rather than re-merging, and added the conflict2 PHR.
+  - Unit 5 G2 evidence is fresh at 20261103T044540225Z-gates.json; any further content edit invalidates its manifest.
+  - Narrow-viewport and A4 print inspection remain pending a live browser run; shared course texts (seifert2009, spielman2020) were left unchanged to protect course-wide G2 manifests.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
