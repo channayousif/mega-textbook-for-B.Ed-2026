@@ -139,6 +139,8 @@ unit. Units 2-12 are authored under Spec 022 on branch `022-author-efmp-301`.
 | Unit 12 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-12/G3/20261102T212207Z-g3-desk-1ab85eaa.json |
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-301/reviews/unit-02/G3/20261102T212207Z-g3-desk-4eaf1d0f.json |
 
+| Unit 12 | G3 en-review | ▢ | | advisory: revise; repairs applied; report reviews/unit-12/G3/20261102T212207Z-g3-desk-1ab85eaa.json; modelling, running question, case status and assessment guidance repaired in EN and UR; visual inspection and historical provenance remain unverified; owner must authorise any further review after exhausted cycles; see reviews/unit-12/G3/repair-en-20261103.md |
+
 ## Re-restructure in progress (2026-09-11)
 
 Unit 1 is being brought to style-guide **v3.4** as the Art. VI.1 golden-unit re-proof. Two
