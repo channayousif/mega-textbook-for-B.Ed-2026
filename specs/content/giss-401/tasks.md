@@ -1,6 +1,6 @@
 # GISS-401 Islamic Studies - Task tracker
 
-## Status: content spec approved (G0/G1); authoring in progress
+## Status: content spec approved (G0/G1, D-2026-0079); authoring in progress
 
 ## Units
 
@@ -8,7 +8,7 @@
 |---|---|---|---|---|---|---|---|
 | 1 | Introduction to Islamic Studies and the Fundamental Beliefs of Islam | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-03 by the crew author job (claude); G2 gate evidence recorded below; G3 (with the qualified Islamic Studies reviewer the spec asks for) and Urdu remain open |
 | 2 | Sources of Islamic Knowledge: the Qur'an and the Sunnah | ☐ | ☐ | ☐ | ☐ | | |
-| 3 | Worship and the Moral System of Islam | ☐ | ☐ | ☐ | ☐ | | |
+| 3 | Worship and the Moral System of Islam | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-03 by the crew author job (agy); G2 gate evidence recorded below; G3 and Urdu remain open |
 | 4 | The Social System and the State in Islam | ✓ | ☐ | ☐ | ☐ | placed (EN) | English authored 2026-11-03 by the crew author job (claude); G2 gate evidence recorded below; G3 (with the qualified Islamic Studies reviewer the spec asks for) and Urdu remain open |
 | 5 | The Economic and Political Systems of Islam | ☐ | ☐ | ☐ | ☐ | | |
 | 6 | Islam, Education, Civilization and Contemporary Issues | ☐ | ☐ | ☐ | ☐ | | |
@@ -28,6 +28,13 @@
 | Unit 1 | G5 ur-review | ▢ | | |
 | Unit 1 | G6 assets | ▣ | | four English schematics placed with dark variants; `measure-figure-text` not run (crew brief bars Chromium), CI `figure-geometry` is the first measured check |
 | Unit 1 | G7 publish | ▢ | | no publication requested by this authoring job |
+| Unit 3 | G1 unit-spec | ✅ | auto:gates | content-spec status: approved |
+| Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-03/G2/20261103T012212981Z-gates.json |
+| Unit 3 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
+| Unit 3 | G4 ur-translation | ▢ | | separate job |
+| Unit 3 | G5 ur-review | ▢ | | |
+| Unit 3 | G6 assets | ✅ | auto:gates | 4 schematics placed with dark variants |
+| Unit 3 | G7 publish | ▢ | | no publication requested by this authoring job |
 | Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/giss-401/reviews/unit-04/G2/20261103T002225277Z-gates.json |
 | Unit 4 | G3 en-review | ▢ | | Independent review pending; no certification claimed. |
 | Unit 4 | G4 ur-translation | ▢ | | Separate Urdu job; English pages retain translation_status: draft. |
