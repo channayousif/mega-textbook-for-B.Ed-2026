@@ -13,27 +13,32 @@ labels: ["crew", "agy", "repair_en"]
 links:
   spec: specs/content/geng-300/content-spec.md
   ticket: null
-  adr: history/adr/0019-independent-agents-for-g3-g5-review.md
+  adr: null
   pr: null
 files:
-  - docs/semester-1/geng-300/unit-04/topic-01.mdx
-  - docs/semester-1/geng-300/unit-04/topic-02.mdx
-  - docs/semester-1/geng-300/unit-04/topic-03.mdx
-  - history/prompts/geng-300/crew-geng-300-u04-repair_en.misc.prompt.md
-  - specs/content/geng-300/reviews/unit-04/G2/20261103T080843667Z-gates.json
-  - specs/content/geng-300/reviews/unit-04/repair-en-20261103.md
-  - specs/content/geng-300/sources/unit-04.md
-  - specs/content/geng-300/tasks.md
-  - static/content-status.json
-  - static/img/figures/geng-300/unit-04/fig-U4-1.dark.svg
-  - static/img/figures/geng-300/unit-04/fig-U4-1.svg
+ - docs/semester-1/geng-300/unit-04/topic-01.mdx
+ - docs/semester-1/geng-300/unit-04/topic-02.mdx
+ - docs/semester-1/geng-300/unit-04/topic-03.mdx
+ - history/prompts/geng-300/crew-geng-300-u04-repair_en.misc.prompt.md
+ - specs/content/geng-300/reviews/unit-04/G2/20261103T080843667Z-gates.json
+ - specs/content/geng-300/reviews/unit-04/G2/logs-20261103T080843667Z/check-bloom-bands.txt
+ - specs/content/geng-300/reviews/unit-04/G2/logs-20261103T080843667Z/check-concept-graph.txt
+ - specs/content/geng-300/reviews/unit-04/G2/logs-20261103T080843667Z/check-depth-gate.txt
+ - specs/content/geng-300/reviews/unit-04/G2/logs-20261103T080843667Z/check-docs-sync.txt
+ - specs/content/geng-300/reviews/unit-04/G2/logs-20261103T080843667Z/check-figures.txt
+ - specs/content/geng-300/reviews/unit-04/G2/logs-20261103T080843667Z/check-no-answer-keys.txt
+ - specs/content/geng-300/reviews/unit-04/G2/logs-20261103T080843667Z/check-no-em-dash.txt
+ - specs/content/geng-300/reviews/unit-04/G2/logs-20261103T080843667Z/validate-content.txt
+ - specs/content/geng-300/reviews/unit-04/repair-en-20261103.md
+ - specs/content/geng-300/sources/unit-04.md
+ - specs/content/geng-300/tasks.md
+ - static/img/figures/geng-300/unit-04/fig-U4-1.dark.svg
+ - static/img/figures/geng-300/unit-04/fig-U4-1.svg
 tests:
-  - npm run check:content
+ - npm run check:content
 ---
 
 ## Prompt
-
-Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.
 
 # Crew job geng-300-u04-repair_en
 
@@ -70,33 +75,33 @@ From `specs/content/geng-300/reviews/unit-04/G3/20261102T212207Z-g3-desk-f85a6c3
 ## Notes from earlier jobs on this unit
 - (geng-300-u04-fix, fix, opencode) G3 en-review row is marked stale  -  needs a fresh independent G3 review run after this geometry fix. The figure geometry check (measure-figure-text.mjs) exits 0 for all unit-04 SVGs; the earlier "panel collides with wordmark" note is cosmetic only.
 
+
 ## Response snapshot
 
-Applied repairs for the latest Unit 4 G3 report (20261102T212207Z-g3-desk-f85a6c35.json):
-1. Fixed fig-U4-1 SVG geometry by extending the canvas from 470 to 500 px high, moving the wordmark baseline from y=460 to y=488 outside the table panels, and wrapping letter closing text to eliminate collision. Regenerated the dark variant and updated topic-01.mdx Figure carrier height to 500.
-2. Disclosed unverified source limitations in topics 4.1, 4.2 and 4.3 explanations and in specs/content/geng-300/sources/unit-04.md under D-2026-0001.
-3. Noted render-review blocker deferral to build/server environment in repair-en-20261103.md and tracker.
-4. Merged origin/main, union-resolved tracker conflict, and appended the advisory repairs tracker row for Unit 4 G3 naming report 20261102T212207Z-g3-desk-f85a6c35.json with G3 unticked.
-5. Re-evidenced G2 en-draft gate via prepare-gate-evidence.mjs after input commits, updated G2 tracker row, rebuilt content status, and verified all 13 content gates pass.
+Repaired GENG-300 Unit 4 by expanding fig-U4-1 SVG canvas to separate wordmark and table panel, disclosing unverified source limitations in topics 4.1-4.3 and sources ledger, updating G2 gate evidence, and appending the advisory repair tracker row for G3 report 20261102T212207Z-g3-desk-f85a6c35.json while leaving G3 open.
 
 ## Outcome
 
-- ✅ Impact: Bounded repair of latest Unit 4 G3 findings; G3 remains open and unticked.
-- 🧪 Tests: `npm run check:content` passed (13/13 gates).
-- 📁 Files: Unit 4 topics, figures, sources, tasks, G2 gate evidence, repair handoff.
-- 🔁 Next prompts: Fresh independent G3 review run for Unit 4.
-- 🧠 Reflection: G2 gate evidence binds committed inputs; refreshing G2 after content revisions keeps the pipeline gate green.
+- Impact: repair_en for GENG-300 Unit 4 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 18 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Separated fig-U4-1 wordmark footer, disclosed source limitations, refreshed G2 gates, updated G3 tracker row.
-- Decisions the team must respect: G3 remains open and unsigned; original reports preserved; no push or PR.
-- Pending / next owner: Independent G3 reviewer to perform review with full renders and print inspection.
-- Paperclip issues affected: null
+- Shipped / changed: Repaired GENG-300 Unit 4 by expanding fig-U4-1 SVG canvas to separate wordmark and table panel, disclosing unverified source limitations in topics 4.1-4.3 and sources ledger, updating G2 gate evidence, and appending the advisory repair tracker row for G3 report 20261102T212207Z-g3-desk-f85a6c35.json while leaving G3 open.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - The next independent G3 review must be run in a browser-capable environment to execute render-review and measure-figure-text.mjs.
+  - Primary sources (hutchinson1987, downes2010, hall1976, brownLevinson1987) remain declared unverified under D-2026-0001 until print monographs are retrieved.
+  - G3 remains open (unticked) with an advisory repairs tracker row citing report 20261102T212207Z-g3-desk-f85a6c35.json.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: G2 input manifest stale after content edits; refreshed via prepare-gate-evidence.mjs.
-- Graders run and results (PASS/FAIL): `npm run check:content` PASS 13/13.
-- Prompt variant (if applicable): null
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
