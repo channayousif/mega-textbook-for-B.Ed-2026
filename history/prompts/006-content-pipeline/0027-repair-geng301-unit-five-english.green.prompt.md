@@ -27,9 +27,11 @@ files:
   - specs/content/geng-301/figures/unit-05.md
   - specs/content/geng-301/tasks.md
   - specs/content/geng-301/reviews/unit-05/repairs/20261103-repair-en.md
+  - specs/content/geng-301/reviews/unit-05/G2/20261103T185029661Z-gates.json
+  - specs/content/geng-301/reviews/unit-05/G2/logs-20261103T185029661Z/
 tests:
-  - npm run check:content (baseline passes; repair validation and evidence refresh in progress)
-  - scripts/heavy.sh npm test (in progress)
+  - npm run check:content (baseline and final: all 14 gates pass)
+  - scripts/heavy.sh npm test (31 files, 368 tests passed)
   - scoped dark-variant freshness check (pass)
 ---
 
@@ -44,7 +46,7 @@ Applied the six requested author repairs and appended an advisory G3 row. Kept p
 ## Outcome
 
 - ✅ Impact: Corrected evidence, hedging, register and scheduling defects in Unit 5.
-- 🧪 Tests: Baseline content gates pass; final results recorded after evidence refresh.
+- 🧪 Tests: Baseline and final content runs pass all 14 gates; eight G2 draft checks and all 368 unit tests pass.
 - 📁 Files: Unit 5 English prose, assessment, figure labels, tracker and repair record.
 - 🔁 Next prompts: Parent prepares frozen handoff and fresh independent G3 review.
 - 🧠 Reflection: Playwright prohibition takes precedence over browser-dependent SVG measurement.
@@ -59,6 +61,6 @@ Applied the six requested author repairs and appended an advisory G3 row. Kept p
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Content changes invalidate G2 evidence and the generated content-status record.
-- Graders run and results (PASS/FAIL): Baseline content gates and scoped dark variants PASS; final checks pending at initial commit.
+- Graders run and results (PASS/FAIL): Baseline and final content gates, eight G2 draft checks, 368 unit tests and scoped dark variants PASS.
 - Prompt variant (if applicable): none
-- Next experiment (smallest change to try): Refresh Unit 5 deterministic evidence and rerun content gates.
+- Next experiment (smallest change to try): Fresh independent G3 review with original provenance and current rendered evidence.
