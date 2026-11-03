@@ -12,10 +12,10 @@
     .arrow { fill: var(--line); }
     text { fill: var(--ink); }
     .h { font-size: 18px; font-weight: 700; }
-    .th { font-size: 14px; font-weight: 700; }
-    .label { font-size: 13px; font-weight: 600; }
-    .support { font-size: 12px; fill: var(--muted); }
-    .note { font-size: 12px; font-weight: 500; fill: var(--ink); }
+    .th { font-size: 12px; font-weight: 700; }
+    .label { font-size: 12px; font-weight: 600; }
+    .support { font-size: 11px; fill: var(--muted); }
+    .note { font-size: 11px; font-weight: 500; fill: var(--ink); }
     .wm { fill: var(--wm); font-size: 11px; }
   </style>
 
@@ -25,30 +25,30 @@
   <text class="h" x="25" y="32" text-anchor="start">How Zakat Moves Wealth: Assessment, Rate, and Distribution</text>
 
   <!-- Stage 1: Wealth Holders -->
-  <rect class="panel" x="25" y="55" width="220" height="80" rx="8" />
+  <rect class="panel" x="25" y="55" width="237" height="80" rx="8" />
   <text class="th" x="35" y="80" text-anchor="start">1. Qualifying Wealth Holders</text>
   <text class="support" x="35" y="100" text-anchor="start">Surplus held for 1 lunar year (Hawl)</text>
-  <text class="support" x="35" y="118" text-anchor="start">Exceeds Nisab (87.48g gold / 612.36g silver)</text>
+  <text class="support" x="35" y="118" text-anchor="start">Nisab: 87.48g gold / 612.36g silver</text>
 
   <!-- Arrow 1 to 2 -->
-  <path class="link" d="M 245 95 L 285 95" />
-  <polygon class="arrow" points="285,90 295,95 285,100" />
+  <path class="link" d="M 262 95 L 272 95" />
+  <polygon class="arrow" points="272,90 282,95 272,100" />
 
   <!-- Stage 2: Prescribed Rates -->
-  <rect class="panel-blue" x="295" y="55" width="220" height="80" rx="8" />
-  <text class="th" x="305" y="80" text-anchor="start">2. Statutory Zakat Rates</text>
-  <text class="support" x="305" y="100" text-anchor="start">Cash, gold, silver, trade goods: 2.5%</text>
-  <text class="support" x="305" y="118" text-anchor="start">Agriculture (Ushr): 5% irrigated, 10% rain</text>
+  <rect class="panel-blue" x="282" y="55" width="237" height="80" rx="8" />
+  <text class="th" x="292" y="80" text-anchor="start">2. Statutory Zakat Rates</text>
+  <text class="support" x="292" y="100" text-anchor="start">Cash, gold, silver, trade goods: 2.5%</text>
+  <text class="support" x="292" y="118" text-anchor="start">Ushr: 5% irrigated, 10% rain</text>
 
   <!-- Arrow 2 to 3 -->
-  <path class="link" d="M 515 95 L 545 95" />
-  <polygon class="arrow" points="545,90 555,95 545,100" />
+  <path class="link" d="M 519 95 L 529 95" />
+  <polygon class="arrow" points="529,90 539,95 529,100" />
 
   <!-- Stage 3: Institutional Purpose -->
-  <rect class="panel-amber" x="555" y="55" width="220" height="80" rx="8" />
-  <text class="th" x="565" y="80" text-anchor="start">3. Collection &amp; Purpose</text>
-  <text class="support" x="565" y="100" text-anchor="start">Divine right of the needy (haqq, 51:19)</text>
-  <text class="support" x="565" y="118" text-anchor="start">Circulates capital; stops hoarding (59:7)</text>
+  <rect class="panel-amber" x="539" y="55" width="237" height="80" rx="8" />
+  <text class="th" x="549" y="80" text-anchor="start">3. Collection &amp; Purpose</text>
+  <text class="support" x="549" y="100" text-anchor="start">Divine right of the needy (haqq, 51:19)</text>
+  <text class="support" x="549" y="118" text-anchor="start">Circulates capital; stops hoarding (59:7)</text>
 
   <!-- Flow down to Beneficiaries -->
   <path class="link" d="M 405 135 L 405 165" />

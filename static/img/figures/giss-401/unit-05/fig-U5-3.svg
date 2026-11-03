@@ -12,9 +12,9 @@
     .arrow { fill: var(--line); }
     text { fill: var(--ink); }
     .h { font-size: 18px; font-weight: 700; }
-    .th { font-size: 14px; font-weight: 700; }
-    .label { font-size: 13px; font-weight: 600; }
-    .support { font-size: 12px; fill: var(--muted); }
+    .th { font-size: 12px; font-weight: 700; }
+    .label { font-size: 12px; font-weight: 600; }
+    .support { font-size: 11px; fill: var(--muted); }
     .wm { fill: var(--wm); font-size: 11px; }
   </style>
 
@@ -66,7 +66,7 @@
 
   <!-- Three Columns of Governance Principles -->
   <!-- Pillar 1: Impartial Justice -->
-  <rect class="cell" x="25" y="270" width="235" height="150" rx="8" />
+  <rect class="cell" x="25" y="270" width="245" height="150" rx="8" />
   <text class="th" x="35" y="295" text-anchor="start">1. Impartial Justice (Adl)</text>
   <text class="support" x="35" y="320" text-anchor="start">• Rule of law binds rulers and citizens</text>
   <text class="support" x="35" y="340" text-anchor="start">• Independent judiciary with no executive</text>
@@ -75,22 +75,22 @@
   <text class="support" x="35" y="396" text-anchor="start">  ethnicity, or social background (5:8)</text>
 
   <!-- Pillar 2: Mutual Consultation -->
-  <rect class="cell" x="282" y="270" width="236" height="150" rx="8" />
-  <text class="th" x="292" y="295" text-anchor="start">2. Consultation (Shura)</text>
-  <text class="support" x="292" y="320" text-anchor="start">• Collaborative decision-making on</text>
-  <text class="support" x="292" y="340" text-anchor="start">  unregulated public policy (ijtihad)</text>
-  <text class="support" x="292" y="358" text-anchor="start">• Valuing knowledge and diverse views</text>
-  <text class="support" x="292" y="378" text-anchor="start">• Institutional councils prevent autocracy</text>
-  <text class="support" x="292" y="396" text-anchor="start">  and executive despotism</text>
+  <rect class="cell" x="278" y="270" width="245" height="150" rx="8" />
+  <text class="th" x="288" y="295" text-anchor="start">2. Consultation (Shura)</text>
+  <text class="support" x="288" y="320" text-anchor="start">• Collaborative decision-making on</text>
+  <text class="support" x="288" y="340" text-anchor="start">  unregulated public policy (ijtihad)</text>
+  <text class="support" x="288" y="358" text-anchor="start">• Valuing knowledge and diverse views</text>
+  <text class="support" x="288" y="378" text-anchor="start">• Institutional councils prevent autocracy</text>
+  <text class="support" x="288" y="396" text-anchor="start">  and executive despotism</text>
 
   <!-- Pillar 3: Public Accountability -->
-  <rect class="cell" x="540" y="270" width="235" height="150" rx="8" />
-  <text class="th" x="550" y="295" text-anchor="start">3. Accountability (Muhasabah)</text>
-  <text class="support" x="550" y="320" text-anchor="start">• Leaders directly answerable to public</text>
-  <text class="support" x="550" y="340" text-anchor="start">• Transparent management of public funds</text>
-  <text class="support" x="550" y="358" text-anchor="start">  and institutional resources</text>
-  <text class="support" x="550" y="378" text-anchor="start">• Civic right to question administrative</text>
-  <text class="support" x="550" y="396" text-anchor="start">  decisions and propose improvements</text>
+  <rect class="cell" x="531" y="270" width="245" height="150" rx="8" />
+  <text class="th" x="541" y="295" text-anchor="start">3. Accountability (Muhasabah)</text>
+  <text class="support" x="541" y="320" text-anchor="start">• Leaders directly answerable to public</text>
+  <text class="support" x="541" y="340" text-anchor="start">• Transparent public funds management</text>
+  <text class="support" x="541" y="358" text-anchor="start">  and institutional resources</text>
+  <text class="support" x="541" y="378" text-anchor="start">• Civic right to question administrative</text>
+  <text class="support" x="541" y="396" text-anchor="start">  decisions and propose improvements</text>
 
   <!-- Wordmark -->
   <text class="wm" x="785" y="470" text-anchor="end" aria-hidden="true">textbook.com.pk</text>

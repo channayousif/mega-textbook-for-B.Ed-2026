@@ -9,8 +9,8 @@
     text { fill: var(--ink); }
     .h { font-size: 18px; font-weight: 700; }
     .th { font-size: 15px; font-weight: 700; fill: var(--ink); }
-    .label { font-size: 14px; font-weight: 600; }
-    .support { font-size: 13px; fill: var(--muted); }
+    .label { font-size: 12px; font-weight: 600; }
+    .support { font-size: 11px; fill: var(--muted); }
     .wm { fill: var(--wm); font-size: 11px; }
   </style>
 
