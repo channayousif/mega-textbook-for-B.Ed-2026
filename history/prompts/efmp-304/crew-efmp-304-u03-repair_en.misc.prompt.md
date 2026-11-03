@@ -85,24 +85,24 @@ From `specs/content/efmp-304/reviews/unit-03/G3/20261102T212207Z-g3-desk-fc9b67f
 
 ## Response snapshot
 
-Repaired EFMP-304 Unit 3 G3 findings from 20261102T212207Z-g3-desk-fc9b67f2.json by replacing specific claims attributed to unverifiable monograph bassham2010 in topic prose with honest analytical phrasing, disclosing the bibliographic-only limit at point of use in Further reading in English and Urdu, documenting the 2026-11-03 publisher retrieval attempt in sources/unit-03.md, appending an unticked G3 advisory repair row to tasks.md, and refreshing deterministic G2 draft evidence.
+Repaired EFMP-304 Unit 3 G3 findings by withdrawing specific claims attributed to unverifiable monograph bassham2010 in topic prose, disclosing bibliographic-only limits at point of use in Further reading in EN and UR, recording publisher retrieval in sources, appending an unticked G3 advisory repair row, and refreshing G2 evidence.
 
 ## Outcome
 
 - Impact: repair_en for EFMP-304 Unit 3 by agy (attempt 1).
-- Tests: npm run check:content passed in the job worktree.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 22 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Repaired EFMP-304 Unit 3 G3 findings from 20261102T212207Z-g3-desk-fc9b67f2.json: removed specific claims attributed to unverifiable monograph bassham2010 in topic prose, disclosed bibliographic-only limit at point of use in Further reading in EN and UR, recorded publisher retrieval attempt in sources/unit-03.md, appended an unticked Unit 3 G3 advisory repair row to tasks.md, and refreshed deterministic G2 draft evidence.
+- Shipped / changed: Repaired EFMP-304 Unit 3 G3 findings by withdrawing specific claims attributed to unverifiable monograph bassham2010 in topic prose, disclosing bibliographic-only limits at point of use in Further reading in EN and UR, recording publisher retrieval in sources, appending an unticked G3 advisory repair row, and refreshing G2 evidence.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Visual browser/print inspection (360px viewport, table scrollability, A4 print) remains unexecuted because crew job constraints prohibit build/server/Playwright; full G3 certification needs permitted browser tooling on a live build.
-  - Fresh independent G3 and dependent G5 remain pending; row stays open (ADR-0019).
+  - Visual browser and print inspection (360px viewport, table scrollability, A4 print) remains unexecuted because crew job constraints prohibit build/server/Playwright; full G3 certification needs permitted browser tooling on a live build.
+  - Fresh independent G3 and dependent G5 review remain pending; stage stays open without certification.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
