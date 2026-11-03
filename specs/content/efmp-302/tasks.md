@@ -104,6 +104,8 @@ register pass; `translation_status: reviewed` on all EN and UR unit-01 files;
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-302/reviews/unit-02/G3/20261102T212207Z-g3-desk-d78cf623.json |
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-302/reviews/unit-06/G3/20261102T212207Z-g3-desk-d7dcc6df.json |
 
+| Unit 6 | G3 en-review | ▣ | | advisory: revise; repairs applied for report reviews/unit-06/G3/20261102T212207Z-g3-desk-d7dcc6df.json (Codex, crew efmp-302-u06-repair_en). EN/UR source-limit disclosures and seven unsupported coverage mappings corrected; missing misconception and identity thread added; RRQ 4 clarified, RRQ 8 now assesses reflection with matching marks and concept links, ERQ 3 requires conferences; desktop schematic readability repaired. X2 and transition-label geometry already repaired in current SVG bytes. S3 full-text evidence remains uncertain under D-2026-0001/G-2026-64; X1 generic scroll-region names require platform work outside scope. Repair handoff: reviews/unit-06/G3/crew-repair-en-handoff.md. G3 remains open; no certification or new review claimed. |
+
 ## Note - Unit 3's revoked provisional tier
 
 Unit 3 was the first unit in the repository to publish provisionally, on run 005's passing review.
