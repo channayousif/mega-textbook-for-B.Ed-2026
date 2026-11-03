@@ -1,6 +1,6 @@
 ---
 id: crew-geng-301-u02-repair_en-r1
-title: crew repair_en GENG-301 unit 2 r1
+title: crew repair_en GENG-301 unit 2
 stage: misc
 date: 2026-11-03
 surface: agent
@@ -32,7 +32,6 @@ files:
  - specs/content/geng-301/reviews/unit-02/G2/logs-20261103T184648108Z/check-no-em-dash.txt
  - specs/content/geng-301/reviews/unit-02/G2/logs-20261103T184648108Z/validate-content.txt
  - specs/content/geng-301/tasks.md
- - static/content-status.json
  - static/img/figures/geng-301/unit-02/fig-U2-4.dark.svg
  - static/img/figures/geng-301/unit-02/fig-U2-4.svg
 tests:
@@ -84,27 +83,28 @@ From `specs/content/geng-301/reviews/unit-02/G3/20261102T212207Z-g3-desk-90a8568
 - (geng-301-u02-repair_en, repair_en, claude) The wordmark fix was not re-measured with `scripts/measure-figure-text.mjs`, because that script runs Chromium and this job was barred from it; the next G3 reviewer should run it on `static/img/figures/geng-301/unit-02/`.
 - (geng-301-u02-repair_en, repair_en, claude) There is no Urdu mirror of Unit 2 yet, so these edits are English only. The content-spec still lists `openstax2021` as the open-access reading; changing that spec is an owner decision that affects all GENG-301 units.
 
+
 ## Response snapshot
 
-Applied all findings from G3 report 20261102T212207Z-g3-desk-90a85687.json: removed and qualified uncorroborated print claims in topic-02 and topic-03 Further reading and topic-04 fresh-eyes attribution; updated topic-04 Summative task to require peer exchange and reflection on received feedback with rubric crediting accurate checks on error-free drafts; aligned fig-U2-4 alt text, SVG description, dark variant and manifest with the actual penultimate peer-review sequence; updated RRQ 10 stem to explicitly request focus analysis; updated MCQ 10 to authentic application testing outlining; retagged and reformulated ERQ 2 and its rubric for Analyze; refreshed Unit 2 G2 gate evidence; updated content status; and appended an unticked advisory G3 tracker row.
+Resolved GENG-301 Unit 2 G3 report findings across sources, peer-review task/rubric, Figure 4 sequence alignment, and assessment demands, refreshed G2 gate evidence, and appended an unticked advisory G3 tracker row.
 
 ## Outcome
 
-- Impact: repair_en for GENG-301 Unit 2 by agy (attempt 2).
-- Tests: npm run check:content passed in the job worktree.
-- Files: 19 file(s), listed above.
+- Impact: repair_en for GENG-301 Unit 2 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 18 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Applied all findings from report 20261102T212207Z-g3-desk-90a85687 (uncorroborated source claims qualified/removed, topic-04 peer review task and non-penalizing rubric updated, fig-U2-4 sequence aligned across all visual and text surfaces, RRQ 10, MCQ 10 and ERQ 2 assessment alignment), refreshed G2 gate evidence, rebuilt content status, and appended an unticked G3 tracker row.
-- Decisions the team must respect: G3 stays open and unticked; this run applies content repairs only and does not certify review.
-- Pending / next owner: crew lead / owner for visual geometry inspection and authorized review run.
+- Shipped / changed: Resolved GENG-301 Unit 2 G3 report findings across sources, peer-review task/rubric, Figure 4 sequence alignment, and assessment demands, refreshed G2 gate evidence, and appended an unticked advisory G3 tracker row.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - Figure wordmark geometry was not re-measured with Chromium because browser runs are barred from this job; owner or next reviewer should verify rendered geometry.
-  - The content-spec still lists openstax2021 as open-access reading; aligning the frozen spec with writing2015 remains an owner decision.
-- Paperclip issues affected: null
+  - Wordmark text geometry in static/img/figures/geng-301/unit-02/ was not inspected with Chromium because browser runs were barred; owner or subsequent reviewer should verify rendered geometry.
+  - The content-spec continues to map openstax2021 while unit prose/sources bind writing2015; reconciling the approved spec remains an owner decision.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
