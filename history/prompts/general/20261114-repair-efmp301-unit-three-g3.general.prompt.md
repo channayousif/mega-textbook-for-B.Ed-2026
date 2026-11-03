@@ -25,8 +25,8 @@ files:
   - specs/content/efmp-301/reviews/unit-03/G3/20261103-repair-notes.md
   - static/img/figures/efmp-301/unit-03/fig-U3-6*.svg
 tests:
-  - npm run check:content (baseline all 13 pass; final validation pending)
-  - scripts/heavy.sh npm test (running)
+  - npm run check:content (baseline all 13 pass; final 12 pass, content-status blocked by scope)
+  - scripts/heavy.sh npm test (28 files, 347 tests passed)
   - FIGURE_ROOT=static/img/figures/efmp-301/unit-03 node scripts/build-figure-variants.mjs
 ---
 
@@ -36,12 +36,12 @@ Read .crew/brief.md in the current directory and carry it out completely. It is 
 
 ## Response snapshot
 
-Applied bilingual assessment, learning-mechanism, coverage and introduction repairs. Appended an unticked advisory G3 row naming the report. Recorded missing render, glyph and provenance evidence. Refreshing G2 evidence; content-status scope approval requested.
+Applied bilingual assessment, learning-mechanism, coverage and introduction repairs. Appended an unticked advisory G3 row naming the report. Recorded missing render, glyph and provenance evidence. Refreshed committed-input G2 evidence; content-status scope approval requested.
 
 ## Outcome
 
 - ✅ Impact: Corrected the actionable G3 findings without certification.
-- 🧪 Tests: Baseline content gates passed. Post-edit checks found stale G2 evidence, an unused source binding and stale derived status. Repairs and final checks in progress.
+- 🧪 Tests: Baseline content gates passed. Corrected unused source binding and refreshed G2 evidence. Final content gates: 12 pass; content-status fails solely because the required tracker change updates its digest. Generated a reviewable candidate under .crew; course data is byte-equivalent after JSON parsing. Approval to modify out-of-scope static/content-status.json is pending.
 - 📁 Files: Unit 3 EN/UR prose, coverage, sources, figure manifest/assets, tracker and repair record; mandatory PHR.
 - 🔁 Next prompts: Owner to resolve render/provenance evidence and independent review escalation.
 - 🧠 Reflection: Removing unsupported source bindings also requires moving background reading outside the coverage registry.
@@ -56,6 +56,6 @@ Applied bilingual assessment, learning-mechanism, coverage and introduction repa
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Initial edit script stopped on an exact-string mismatch and was resumed on the verified current anchor. No stale feedback was silently skipped.
-- Graders run and results (PASS/FAIL): Baseline 13/13 PASS; final validation pending.
+- Graders run and results (PASS/FAIL): Baseline 13/13 PASS; final 12/13 PASS, derived status scope blocked; vitest 347/347 PASS; figure variants PASS.
 - Prompt variant (if applicable): none
-- Next experiment (smallest change to try): Validate fresh G2 evidence against committed repaired inputs.
+- Next experiment (smallest change to try): After scope approval, regenerate derived status and rerun check:content.

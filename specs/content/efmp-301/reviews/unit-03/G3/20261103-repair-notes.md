@@ -38,3 +38,16 @@ This records the repair baseline only. The original author-run identity, parent 
 handoff and exact model build remain unsupplied; this session cannot reconstruct them.
 The owner must resolve that provenance. G3/G5 remain open and no certification is made.
 Fresh independent review requires owner handling of existing cycle/escalation limits.
+
+## Validation
+
+Baseline origin/main and HEAD were identical; all 13 content gates passed before edits.
+The repaired inputs have fresh G2 evidence at
+`../G2/20261103T042148102Z-gates.json`; all eight draft commands passed.
+Vitest passed 347 tests in 28 files via scripts/heavy.sh. Figure variants check passed.
+Final check:content passes 12 gates. The remaining content-status failure is the
+EFMP-301 tracker digest in static/content-status.json, outside the brief scope.
+A candidate was generated under .crew and compared: course data is unchanged, and
+only that tracker digest differs apart from ignored generation time/commit metadata.
+Scope approval for the generated update is pending; do not claim the full gate suite
+passes until it is applied and checked. No build, server or Playwright was run.
