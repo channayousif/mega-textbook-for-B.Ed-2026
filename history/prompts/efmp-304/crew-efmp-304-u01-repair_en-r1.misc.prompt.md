@@ -61,26 +61,27 @@ From `specs/content/efmp-304/reviews/unit-01/G3/20261102T212207Z-g3-desk-9cac2ba
 - (efmp-304-u01-repair_en-conflict5, fix, codex) Fresh independent G3/G5 review and narrow-width/A4 inspection remain pending; inspect Figure 3’s footer.
 - (efmp-304-u01-repair_en-conflict5, fix, codex) Fresh independent G3/G5 review and narrow-width/A4 inspection remain pending; inspect Figure 3’s footer.
 
+
 ## Response snapshot
 
-Verified the five cycle-1 repairs are already resolved in the current bytes and appended an unticked advisory repair row naming the latest desk report; no content edit was needed.
+Verified the five cycle-1 G3 repairs are already resolved on disk and appended an unticked Unit 1 G3 advisory repair row naming the latest desk report (20261102T212207Z-g3-desk-9cac2bab.json).
 
 ## Outcome
 
-- Impact: repair_en for EFMP-304 Unit 1 by opencode (attempt r1).
-- Tests: npm run check:content passed (13/13) after refreshing the generated static/content-status.json.
+- Impact: repair_en for EFMP-304 Unit 1 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
 - Files: 2 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Appended an unticked Unit 1 G3 advisory repair row naming `20261102T212207Z-g3-desk-9cac2bab.json`; verified all five cycle-1 repairs already resolved on disk; refreshed the generated content-status file.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the branch touches a protected path).
+- Shipped / changed: Verified the five cycle-1 G3 repairs are already resolved on disk and appended an unticked Unit 1 G3 advisory repair row naming the latest desk report (20261102T212207Z-g3-desk-9cac2bab.json).
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Visual browser/print inspection (360px viewport, table scrollability, A4 print) remains unexecuted; full G3 certification needs permitted browser tooling on a live build.
-  - Figure 3's cosmetic footer/wordmark intersection (88.7 x 15.0px in the `.ur` variants; 88.3 x 4.5px in fig-U1-6/8/9) is non-failing; the next rendered inspection should check the footer.
+  - Figure 3's cosmetic footer/wordmark intersection (88.7 x 15.0px in `.ur` variants; 88.3 x 4.5px in fig-U1-6/8/9) is non-failing; the next rendered inspection should check the footer.
   - Fresh independent G3 and dependent G5 remain pending; ADR-0019's two-cycle limit may need owner authorisation for any further run.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
