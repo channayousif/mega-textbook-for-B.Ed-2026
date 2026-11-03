@@ -120,3 +120,11 @@ Authored the English Unit 6 opening, three topic cycles, 10/10/5 assessment with
 - Requested the narrow scope exception via user input after preparing `.crew/course-overview.mdx`. No course-level file is added without that answer.
 - All five MDX files compile; all 46 palette tests pass; figure, depth, concept, source-floor, Bloom, safety, licence, status and docs-sync gates pass. Light/dark SVG previews visually inspected without a browser.
 - G3/G5 remain open. Browser geometry and full independent UDHR retrieval remain explicit next-job checks. No build, Playwright, dev server, push or PR was run.
+
+## Continuation update (2026-11-03, claude worker)
+
+- Prompt: "Read .crew/brief.md in the current directory and carry it out completely. It is your whole task." The brief's feedback named one new finding: the Unit 6 G2 en-draft row was not done.
+- Resolution: `origin/main` had since merged GISS-401 Unit 1, which supplies `docs/semester-3/giss-401/course-overview.mdx` and `_category_.json`, so no scope exception was needed. Merged `origin/main` (commit `1102e5bed`). Conflicts in the shared `tasks.md`, `sources/texts/quran-translation.md` and `sources/texts/bhat-2019-education.md` were resolved by keeping main's Unit 1 content verbatim and appending Unit 6 rows and sections.
+- `node scripts/prepare-gate-evidence.mjs GISS-401 6`: 8/8 PASS, evidence `specs/content/giss-401/reviews/unit-06/G2/20261103T000422959Z-gates.json`; Unit 6 G2 row set to `auto:gates` done; summary row 6 marked EN draft done, figures placed (EN).
+- `npm run check:content`: 13/13 PASS; Unit 1 G2 evidence remains accepted after the shared excerpt appends.
+- Handoff: G3 (qualified Islamic Studies reviewer, independent UDHR retrieval), Urdu mirror and `.ur.svg` labels, and browser `measure-figure-text` remain open. Sibling GISS-401 unit branches will also append to the shared tracker and the two shared excerpt files; expect add/add conflicts there and keep each unit's sections.
