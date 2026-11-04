@@ -122,6 +122,22 @@ function siteStats() {
   };
 }
 
+/** Per-course counts for the catalogue, from the same sources as siteStats(). */
+function courseStatus() {
+  const report = JSON.parse(readFileSync('./static/content-status.json', 'utf8'));
+  const urduRoot = './i18n/ur/docusaurus-plugin-content-docs/current';
+  const urduFiles = (readdirSync(urduRoot, { recursive: true }) as string[]).map((p) => p.replaceAll('\\', '/'));
+  const status: Record<string, { units: number; urdu: number }> = {};
+  for (const course of report.courses as { course_code: string; units?: { authored?: boolean }[] }[]) {
+    const units = (course.units ?? []).filter((u) => u.authored).length;
+    if (units === 0) continue;
+    const folder = `/${course.course_code.toLowerCase()}/unit-`;
+    const urdu = urduFiles.filter((p) => p.includes(folder) && /unit-\d+\/index\.mdx$/.test(p)).length;
+    status[course.course_code] = { units, urdu };
+  }
+  return status;
+}
+
 const config: Config = {
   title: SITE_TITLE,
   tagline: 'A bilingual textbook collection and learning platform for ADE, B.Ed Hons, STEDA teacher-licence aspirants, and Grades 9-12.',
@@ -170,6 +186,7 @@ const config: Config = {
     supabaseAnonKey: process.env.DOCUSAURUS_SUPABASE_ANON_KEY ?? '',
     reviewNotices: reviewNotices(),
     siteStats: siteStats(),
+    courseStatus: courseStatus(),
   },
 
   presets: [

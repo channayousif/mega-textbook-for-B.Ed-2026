@@ -15,7 +15,7 @@ test('the bar shows the programme and lists the semesters', async ({ page }) => 
   await page.goto(TEXTBOOK_HOME);
   await expect(bar(page)).toBeVisible();
   await expect(bar(page).getByRole('button', { name: /Programme: B\.Ed/ })).toBeVisible();
-  await bar(page).getByRole('button', { name: 'textbook.com.pk' }).click();
+  await bar(page).getByRole('button', { name: 'B.Ed courses' }).click();
   await expect(bar(page).getByRole('link', { name: 'Semester 1' })).toBeVisible();
 });
 
@@ -32,7 +32,7 @@ test('a unit page shows its Semester → Course → Unit path, current item mark
 test('a unit is reachable within 3 navigation steps (SC-003)', async ({ page }) => {
   await page.goto(TEXTBOOK_HOME);
   // Step 1: choose Semester 1 → Step 2: choose the course → Step 3: choose the unit.
-  await bar(page).getByRole('button', { name: 'textbook.com.pk' }).click();
+  await bar(page).getByRole('button', { name: 'B.Ed courses' }).click();
   await bar(page).getByRole('link', { name: 'Semester 1' }).click();
   await bar(page).getByRole('button', { name: /^[A-Z]{4}-\d{3} · / }).click();
   await bar(page).getByRole('link', { name: /^EFMP-301/ }).click();
