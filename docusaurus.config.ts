@@ -99,8 +99,11 @@ function reviewNotices(): Record<string, PublicationTier> {
   return notices;
 }
 
+/** Owner ruling, 2026-11-04: the site is textbook.com.pk, and درسی کتابیں on Urdu pages. */
+const SITE_TITLE = process.env.DOCUSAURUS_CURRENT_LOCALE === 'ur' ? 'درسی کتابیں' : 'textbook.com.pk';
+
 const config: Config = {
-  title: 'Mega Textbook',
+  title: SITE_TITLE,
   tagline: 'A bilingual textbook collection and learning platform for ADE, B.Ed Hons, STEDA teacher-licence aspirants, and Grades 9-12.',
   favicon: 'img/favicon.svg',
   url: 'https://textbook.com.pk',
@@ -156,7 +159,7 @@ const config: Config = {
         },
         blog: false,
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: ['./src/css/tokens.css', './src/css/custom.css'],
         },
         gtag: {
           trackingID: 'G-2DCL2X01DL',
@@ -261,12 +264,10 @@ const config: Config = {
     metadata: [
       { name: 'keywords', content: 'textbooks, Grades 9-12, teacher education, ADE, B.Ed Hons, STEDA, teaching licence, Sindh, learning platform, LMS, Pakistan, bilingual textbook, Urdu, EFMP, GECE' },
       { name: 'twitter:card', content: 'summary_large_image' },
-      { property: 'og:site_name', content: 'Mega Textbook' },
+      { property: 'og:site_name', content: SITE_TITLE },
       { property: 'og:type', content: 'website' },
     ],
     navbar: {
-      logo: { alt: 'Mega Textbook', src: 'img/logo.svg', width: 28, height: 28 },
-      title: 'Mega Textbook',
       items: [
         // Programme switcher first (owner request, 2026-11-03), the same choice
         // the CourseNavBar's first segment offers on every docs page. It is the
@@ -315,7 +316,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: 'Mega Textbook - a bilingual textbook collection and learning platform for ADE, B.Ed Hons, STEDA teacher-licence aspirants, and Grades 9-12.',
+      copyright: 'textbook.com.pk - a bilingual textbook collection and learning platform for ADE, B.Ed Hons, STEDA teacher-licence aspirants, and Grades 9-12.',
     },
   } satisfies Preset.ThemeConfig,
 };

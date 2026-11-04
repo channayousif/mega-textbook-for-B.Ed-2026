@@ -1,0 +1,107 @@
+/* ==========================================================================
+   Design tokens for the site redesign: fonts, surfaces, shape and motion.
+   Loaded before custom.css. Colour ramps for Infima live in custom.css.
+   ========================================================================== */
+
+/* English headings. Reading text stays on the device's own font to save data. */
+@font-face {
+  font-family: 'Nunito';
+  src: url('/fonts/Nunito-latin-variable.woff2') format('woff2');
+  font-weight: 500 800;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+20AC, U+2122, U+2212;
+}
+
+/* Urdu small text. unicode-range keeps it off English pages. */
+@font-face {
+  font-family: 'Noto Naskh Arabic';
+  src: url('/fonts/NotoNaskhArabic-arabic-variable.woff2') format('woff2');
+  font-weight: 400 700;
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+0750-077F, U+FB50-FDFF, U+FE70-FEFC;
+}
+
+:root {
+  /* Logo kit */
+  --brand-ink: #102b35;
+  --brand-jade: #087c6b;
+  --brand-mint: #77e2c1;
+
+  /* Surfaces and text */
+  --ifm-background-color: #f8f5ef;
+  --ifm-background-surface-color: #ffffff;
+  --ifm-font-color-base: #102b35;
+  --ifm-heading-color: #102b35;
+  --ifm-color-content: #102b35;
+  --ifm-color-content-secondary: #2c3f47; /* 10.11:1 on the page ground */
+
+  /* Links: darker than jade so they pass on tinted table rows and cards. */
+  --ifm-link-color: var(--ifm-color-primary-dark);
+
+  /* Type */
+  --ifm-heading-font-family: 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --ifm-heading-font-weight: 800;
+
+  /* Shape */
+  --ifm-button-border-radius: 999px;
+  --ifm-card-border-radius: 18px;
+
+  /* Motion: every job always moves the same way. */
+  --motion-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --motion-fast: 160ms;
+  --motion-base: 240ms;
+  --motion-slow: 320ms;
+}
+
+html[data-theme='dark'] {
+  --ifm-background-color: #12232b;
+  --ifm-background-surface-color: #1a2f38;
+  --ifm-font-color-base: #e9f1ef;
+  --ifm-heading-color: #e9f1ef;
+  --ifm-color-content: #e9f1ef;
+  --ifm-color-content-secondary: #c3d3d1;
+  --ifm-link-color: var(--ifm-color-primary);
+}
+
+.navbar__brand { margin-inline-end: 1.25rem; }
+.brand-logo { display: block; width: auto; height: 32px; }
+html[dir='rtl'] .brand-logo { height: 48px; }
+@media (max-width: 996px) {
+  .brand-logo { height: 24px; }
+  html[dir='rtl'] .brand-logo { height: 42px; }
+}
+
+/* Urdu small text is Naskh: Nastaliq needs too much height at these sizes. */
+html[dir='rtl'] :is(
+  .navbar, .navbar-sidebar, .menu, .table-of-contents, .theme-doc-toc-mobile,
+  .footer, .footer-logos, .button, .pagination-nav, .breadcrumbs, .badge,
+  [data-testid='course-nav-bar'], .reading-toolbar, .print-handout, .markdown table, .markdown figcaption,
+  small, input, select, textarea
+) {
+  font-family: 'Noto Naskh Arabic', 'Noto Nastaliq Urdu', serif;
+  line-height: 1.85;
+}
+
+/* Links inside running text are underlined, so colour is never the only cue. */
+.markdown a:not(.button) {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+/* press */
+.button {
+  transition: transform var(--motion-fast) var(--motion-ease-out),
+    background-color var(--motion-fast), border-color var(--motion-fast), color var(--motion-fast);
+}
+.button:active { transform: scale(0.98); }
+
+/* Reduced motion: changes still happen, without travel. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+  .button:active { transform: none; }
+}
