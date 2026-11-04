@@ -9,7 +9,6 @@ import steda from '@site/static/img/logos/steda.png';
 import gec from '@site/static/img/logos/gec.png';
 import adtti from '@site/static/img/logos/adtti.png';
 import detrc from '@site/static/img/logos/detrc.png';
-import reec from '@site/static/img/logos/reec.png';
 import pite from '@site/static/img/logos/pite.png';
 
 const LOGOS = [
@@ -20,17 +19,16 @@ const LOGOS = [
   { src: gec, w: 445, h: 449, alt: 'Government Elementary Colleges, Sindh' },
   { src: adtti, w: 144, h: 150, alt: 'Additional Director, TTIs' },
   { src: detrc, w: 447, h: 447, alt: 'DETRC' },
-  { src: reec, w: 448, h: 446, alt: 'REEC' },
   { src: pite, w: 258, h: 197, alt: 'PITE Sindh' },
 ];
 
 /**
- * Owner request, 2026-11-04: partner logos revolve automatically at the end of every
- * page. WCAG 2.2.2 requires a way to stop content that moves for more than five
+ * Owner request, 2026-11-04: partner logos revolve automatically at the end of the
+ * landing page. REEC is left out until the owner supplies a cleaner logo. WCAG 2.2.2 requires a way to stop content that moves for more than five
  * seconds, so it pauses on hover and focus and has a button, and it stands still for
  * readers who ask for reduced motion. The track moves by half its width, so each half
  * must be wider than the band or a gap shows at the end of the cycle: one set is about
- * 1030px, hence four. Only the first is exposed to assistive technology. Fixed image dimensions
+ * 925px, hence four. Only the first is exposed to assistive technology. Fixed image dimensions
  * keep the width steady while lazy images load, or the loop would jump.
  */
 export default function LogoCarousel(): React.ReactElement {

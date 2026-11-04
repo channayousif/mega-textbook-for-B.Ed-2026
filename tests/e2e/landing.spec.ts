@@ -37,6 +37,14 @@ test('the partner logos revolve, and the visitor can stop them', async ({ page }
   await expect(page.getByRole('button', { name: 'Play logos' })).toBeVisible();
 });
 
+test('the partner logos appear only on the landing page, without REEC', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.getByRole('img', { name: 'STEDA' })).toHaveCount(1);
+  await expect(page.getByRole('img', { name: 'REEC' })).toHaveCount(0);
+  await page.goto('/about/');
+  await expect(page.getByRole('button', { name: 'Pause logos' })).toHaveCount(0);
+});
+
 test('the logo band never shows a gap at the end of its cycle', async ({ page }) => {
   await page.setViewportSize({ width: 1920, height: 1000 });
   await page.goto('/');
