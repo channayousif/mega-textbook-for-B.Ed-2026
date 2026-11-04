@@ -28,6 +28,7 @@ const HANDOUTS = [
 for (const path of HANDOUTS) {
   test(`handout page ${path} has a print control and hides chrome in print media`, async ({ page }) => {
     await page.goto(path);
+    await page.getByRole('button', { name: /reading options/i }).click();
     await expect(page.getByRole('button', { name: /print/i })).toBeVisible();
 
     await page.emulateMedia({ media: 'print' });
@@ -99,6 +100,7 @@ test('print button loads every figure and prints black text from dark mode', asy
     window.print = () => { (window as unknown as { printed: number }).printed += 1; };
   });
   await page.goto('/semester-1/efmp-302/unit-02/topic-01');
+  await page.getByRole('button', { name: /reading options/i }).click();
   await page.getByRole('button', { name: /print/i }).click();
   await expect.poll(() => page.evaluate(() => (window as unknown as { printed: number }).printed)).toBe(1);
 
@@ -166,7 +168,7 @@ test('the browser print menu gets the link QR codes stored when the page settled
   await settle();
   expect(await codesAtBeforePrint()).toEqual({ n: 1, label: 'doi.org/10.1016/j.sbspro.2010.12.444' });
 
-  await page.locator('a[href^="/semester-1/efmp-302/unit-01/topic-02"]').first().click(); // client-side navigation
+  await page.locator('.pagination-nav a[href^="/semester-1/efmp-302/unit-01/topic-02"]').click(); // client-side navigation
   await page.waitForURL(/topic-02/);
   await settle();
   expect(await codesAtBeforePrint()).toEqual({ n: 1, label: 'doi.org/10.1080/713698714' });

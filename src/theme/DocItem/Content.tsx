@@ -10,7 +10,9 @@ import FeedbackWidget from '@site/src/components/FeedbackWidget';
 import { trackEvent } from '@site/src/lib/analytics';
 import { fetchOwnChecks, upsertCheck, mergeLocalChecks } from '@site/src/lib/selfAssessment';
 import { useLocation } from '@docusaurus/router';
-import { ReadingToolbar, ReadingProgress, useAnswerNotes } from '@site/src/components/ReadingTools';
+import { ReadingMenu, ReadingProgress, useAnswerNotes } from '@site/src/components/ReadingTools';
+import ReaderBottomBar from '@site/src/components/ReaderBottomBar';
+import { useSidebarBreadcrumbs } from '@docusaurus/plugin-content-docs/client';
 
 /**
  * Swizzled DocItem/Content (Spec 010 T013).
@@ -262,9 +264,10 @@ export default function DocItemContentWrapper(props: Props): React.ReactElement 
   const { frontMatter, toc, metadata } = useDoc() as unknown as {
     frontMatter: Record<string, unknown>;
     toc: readonly TocEntry[];
-    metadata: { source: string; title?: string };
+    metadata: { source: string; title?: string; previous?: { permalink: string; title: string }; next?: { permalink: string; title: string } };
   };
   const source = metadata?.source ?? '';
+  const hasNavBar = Boolean(useSidebarBreadcrumbs());
   const { i18n } = useDocusaurusContext();
   const { profile, role, loading } = useAuth();
   // `handleChange` reads this instead of closing over `profile` directly - see the
@@ -443,10 +446,12 @@ export default function DocItemContentWrapper(props: Props): React.ReactElement 
     <>
       <ReadingProgress locale={locale} />
       <ReviewStatusBanner courseCode={courseCode} unitNo={unitNo} />
-      <ReadingToolbar minutes={minutes} locale={locale} />
+      {/* With a course bar, the menu sits in the bar (CourseNavBar); otherwise it sits here. */}
+      {!hasNavBar && <div className="reader-menu-fallback"><ReadingMenu minutes={minutes} locale={locale} /></div>}
       {isCourseOverview && <CourseGuideNotice courseCode={courseCode} locale={locale} />}
       <ContentOriginal {...props} />
       {(courseCode !== null && unitNo !== null) && <FeedbackWidget />}
+      <ReaderBottomBar locale={locale} minutes={minutes} previous={metadata?.previous} next={metadata?.next} />
     </>
   );
 }
