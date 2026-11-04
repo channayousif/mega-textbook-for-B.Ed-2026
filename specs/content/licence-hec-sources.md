@@ -6,8 +6,11 @@ binds all 57 licence objectives to the eight guides below.
 
 - **Source page:** https://www.hec.gov.pk/english/services/universities/RevisedCurricula/Pages/Education.aspx
 - **Retrieved:** 2026-11-04
-- **In git:** this README only. The PDFs are ignored (see `.gitignore`), as with `course-guides-2025/`.
-  To restore them, download each linked file below and check its SHA-256.
+- **Local folder:** `Scheme-and-Course-guides/teaching-License-course-guides-resources/`. The PDFs are
+  git-ignored, as with `course-guides-2025/`. To restore them, download each linked file below and
+  check its SHA-256.
+- **Why this record is not in that folder:** `manifestRoots` in `scripts/lib/review-evidence.mjs` binds
+  every tracked file under `Scheme-and-Course-guides/`, so committing there makes all G2 evidence stale.
 
 Licence headings (`catalog/licence-objectives.json`): a = Methods of Teaching and Foundations of
 Education; b = Child Development and Education Psychology; c = Classroom Management; d = Classroom

@@ -16,7 +16,7 @@ links:
   adr: null
   pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/444
 files:
-  - Scheme-and-Course-guides/teaching-License-course-guides-resources/README.md
+  - specs/content/licence-hec-sources.md
   - .gitignore
   - history/prompts/general/20261122-download-licence-hec-guides.general.prompt.md
 tests:
@@ -33,21 +33,21 @@ download all required files for teacheing license in /home/a2ahs/mega_book_for_B
 
 ## Response snapshot
 
-Scoped "required" from the repository: `catalog/licence-objectives.json` binds all 57 licence objectives to eight HEC guides. Plan approved by the owner. Downloaded those eight, the Child Development faculty resources and three scheme documents (12 PDFs, 61 MB) to the owner's folder on the main checkout. Added a README with source URLs and SHA-256 values, and a `.gitignore` rule for the PDFs.
+Scoped "required" from the repository: `catalog/licence-objectives.json` binds all 57 licence objectives to eight HEC guides. Plan approved by the owner. Downloaded those eight, the Child Development faculty resources and three scheme documents (12 PDFs, 61 MB) to the owner's folder on the main checkout. Added a record with source URLs and SHA-256 values (first a folder README, moved to `specs/content/licence-hec-sources.md` after CI failed; see PHR 20261123), and a `.gitignore` rule for the PDFs.
 
 ## Outcome
 
 - ✅ Impact: The licence source documents are in one folder, with a restorable record of where each came from.
 - 🧪 Tests: All checks listed in the front matter passed.
-- 📁 Files: README, `.gitignore` and this PHR are committed; the 12 PDFs are local only.
+- 📁 Files: The record, `.gitignore` and this PHR are committed; the 12 PDFs are local only.
 - 🔁 Next prompts: Decide whether the three scheme documents need extracted text under `extracted-text/`.
 - 🧠 Reflection: The nine guide files were already held in `course-guides-2025/`, byte-identical; only the schemes were new.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: `Scheme-and-Course-guides/teaching-License-course-guides-resources/` holds 12 HEC PDFs on the host's main checkout, git-ignored; README lists URL, size and SHA-256 for each.
+- Shipped / changed: `Scheme-and-Course-guides/teaching-License-course-guides-resources/` holds 12 HEC PDFs on the host's main checkout, git-ignored; `specs/content/licence-hec-sources.md` lists URL, size and SHA-256 for each.
 - Decisions the team must respect: Scope follows `catalog/licence-objectives.json`. Other HEC guides (English, Maths, Science and so on) were left out because Part I is assessed from the school curriculum. Catalog, blueprint and `licence/` content were not changed.
-- Pending / next owner: Owner merges the PR. After that, the main checkout needs updating to get the README and the ignore rule; until then the PDFs show as untracked there.
+- Pending / next owner: Owner merges the PR. After that, the main checkout needs updating to get the ignore rule; until then the PDFs show as untracked there.
 - Paperclip issues affected: none
 
 ## Evaluation notes (flywheel)
