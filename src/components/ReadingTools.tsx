@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import PrintHandout from '@site/src/components/PrintHandout';
+import styles from './ReadingTools.module.css';
 
 /**
  * Reading tools for doc pages (UX refresh, 2026-10-04), modelled on the TU Delft
@@ -21,8 +23,12 @@ const DEFAULT_PREFS: Prefs = { size: 0, dyslexic: false, contrast: false };
 const T = {
   minutes: { en: (n: number) => `${n} min read`, ur: (n: number) => `${n} منٹ کا مطالعہ` },
   toolbar: { en: 'Reading options', ur: 'مطالعے کے اختیارات' },
-  smaller: { en: 'Smaller text', ur: 'چھوٹا متن' },
-  larger: { en: 'Larger text', ur: 'بڑا متن' },
+  size: { en: 'Text size', ur: 'متن کا سائز' },
+  sizes: { en: ['Normal', 'Large', 'Larger'], ur: ['عام', 'بڑا', 'مزید بڑا'] },
+  font: { en: 'Font', ur: 'فونٹ' },
+  standard: { en: 'Standard', ur: 'معیاری' },
+  contrastLabel: { en: 'Contrast', ur: 'تضاد' },
+  contrastHigh: { en: 'High', ur: 'زیادہ' },
   dyslexic: { en: 'Dyslexia-friendly font', ur: 'ڈسلیکسیا کے لیے موزوں فونٹ' },
   contrast: { en: 'High contrast', ur: 'زیادہ تضاد' },
   progress: { en: 'Reading progress', ur: 'مطالعے کی پیش رفت' },
@@ -59,9 +65,15 @@ function applyPrefs(p: Prefs): void {
   html.toggleAttribute('data-high-contrast', p.contrast);
 }
 
-/** Toolbar shown above every doc page: reading time plus reader preferences. */
-export function ReadingToolbar({ minutes, locale }: { minutes: number | null; locale: Locale }) {
+/**
+ * The "Aa" reading menu: one small button instead of a row of controls above every
+ * page, so the title and text come first. Holds reading time, text size, font,
+ * contrast and print. `up` opens the panel upward for the phone's bottom bar.
+ */
+export function ReadingMenu({ minutes, locale, up = false }: { minutes: number | null; locale: Locale; up?: boolean }) {
   const [prefs, setPrefs] = useState<Prefs>(DEFAULT_PREFS);
+  const [open, setOpen] = useState(false);
+  const rootRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const stored = readJson(PREFS_KEY, DEFAULT_PREFS);
@@ -69,51 +81,60 @@ export function ReadingToolbar({ minutes, locale }: { minutes: number | null; lo
     applyPrefs(stored);
   }, []);
 
+  useEffect(() => {
+    if (!open) return undefined;
+    const onPointer = (e: PointerEvent) => {
+      if (!rootRef.current?.contains(e.target as Node)) setOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setOpen(false);
+    };
+    document.addEventListener('pointerdown', onPointer);
+    document.addEventListener('keydown', onKey);
+    return () => {
+      document.removeEventListener('pointerdown', onPointer);
+      document.removeEventListener('keydown', onKey);
+    };
+  }, [open]);
+
   const update = (next: Prefs) => {
     setPrefs(next);
     applyPrefs(next);
     write(PREFS_KEY, JSON.stringify(next));
   };
+  const seg = (legend: string, options: { label: string; on: boolean; pick: () => void }[]) => (
+    <div className={styles.group} role="group" aria-label={legend}>
+      <span className={styles.legend}>{legend}</span>
+      <div className={styles.seg}>
+        {options.map((o) => (
+          <button key={o.label} type="button" className={o.on ? styles.segOn : undefined} aria-pressed={o.on} onClick={o.pick}>{o.label}</button>
+        ))}
+      </div>
+    </div>
+  );
 
   return (
-    <div className="reading-toolbar print-hidden" role="toolbar" aria-label={T.toolbar[locale]}>
-      {minutes ? <span className="reading-toolbar__time">{T.minutes[locale](minutes)}</span> : null}
-      <span className="reading-toolbar__controls">
-        <button
-          type="button"
-          className="reading-toolbar__btn"
-          aria-label={T.smaller[locale]}
-          title={T.smaller[locale]}
-          disabled={prefs.size === 0}
-          onClick={() => update({ ...prefs, size: (prefs.size - 1) as Prefs['size'] })}>
-          A−
-        </button>
-        <button
-          type="button"
-          className="reading-toolbar__btn"
-          aria-label={T.larger[locale]}
-          title={T.larger[locale]}
-          disabled={prefs.size === 2}
-          onClick={() => update({ ...prefs, size: (prefs.size + 1) as Prefs['size'] })}>
-          A+
-        </button>
-        <button
-          type="button"
-          className="reading-toolbar__btn"
-          aria-pressed={prefs.dyslexic}
-          title={T.dyslexic[locale]}
-          onClick={() => update({ ...prefs, dyslexic: !prefs.dyslexic })}>
-          {T.dyslexic[locale]}
-        </button>
-        <button
-          type="button"
-          className="reading-toolbar__btn"
-          aria-pressed={prefs.contrast}
-          title={T.contrast[locale]}
-          onClick={() => update({ ...prefs, contrast: !prefs.contrast })}>
-          {T.contrast[locale]}
-        </button>
-      </span>
+    <div className={`${styles.menu} reading-menu print-hidden`} ref={rootRef}>
+      <button type="button" className={styles.aa} aria-expanded={open} aria-label={`Aa, ${T.toolbar[locale]}`} onClick={() => setOpen((v) => !v)}>Aa</button>
+      {open && (
+        <div className={up ? `${styles.panel} ${styles.panelUp}` : styles.panel}>
+          {minutes ? <p className={styles.time}>{T.minutes[locale](minutes)}</p> : null}
+          {seg(T.size[locale], [0, 1, 2].map((size) => ({
+            label: T.sizes[locale][size],
+            on: prefs.size === size,
+            pick: () => update({ ...prefs, size: size as Prefs['size'] }),
+          })))}
+          {seg(T.font[locale], [
+            { label: T.standard[locale], on: !prefs.dyslexic, pick: () => update({ ...prefs, dyslexic: false }) },
+            { label: T.dyslexic[locale], on: prefs.dyslexic, pick: () => update({ ...prefs, dyslexic: true }) },
+          ])}
+          {seg(T.contrastLabel[locale], [
+            { label: T.standard[locale], on: !prefs.contrast, pick: () => update({ ...prefs, contrast: false }) },
+            { label: T.contrastHigh[locale], on: prefs.contrast, pick: () => update({ ...prefs, contrast: true }) },
+          ])}
+          <PrintHandout />
+        </div>
+      )}
     </div>
   );
 }
