@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import ContentOriginal from '@theme-original/DocItem/Content';
 import { useDoc } from '@docusaurus/plugin-content-docs/client';
+import { saveLastRead } from '@site/src/lib/lastRead';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { useAuth } from '@site/src/contexts/AuthContext';
 import ReviewStatusBanner from '@site/src/components/ReviewStatusBanner';
@@ -261,7 +262,7 @@ export default function DocItemContentWrapper(props: Props): React.ReactElement 
   const { frontMatter, toc, metadata } = useDoc() as unknown as {
     frontMatter: Record<string, unknown>;
     toc: readonly TocEntry[];
-    metadata: { source: string };
+    metadata: { source: string; title?: string };
   };
   const source = metadata?.source ?? '';
   const { i18n } = useDocusaurusContext();
@@ -278,6 +279,12 @@ export default function DocItemContentWrapper(props: Props): React.ReactElement 
   const { pathname } = useLocation();
   const minutes = typeof frontMatter?.est_reading_minutes === 'number' ? frontMatter.est_reading_minutes : null;
   useAnswerNotes(locale, pathname);
+
+  // The landing page's "Continue reading": course and licence pages only, kept on this device.
+  useEffect(() => {
+    if (!metadata?.title || (courseCode === null && !pathname.includes('/licence/'))) return;
+    saveLastRead({ url: pathname.replace(/^\/ur(?=\/)/, ''), title: metadata.title });
+  }, [courseCode, metadata?.title, pathname]);
 
   useEffect(() => {
     if (courseCode === null || unitNo === null || topicNo === null) return undefined;

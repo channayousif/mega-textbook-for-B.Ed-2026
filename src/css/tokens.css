@@ -74,7 +74,7 @@ html[dir='rtl'] .brand-logo { height: 48px; }
 /* Urdu small text is Naskh: Nastaliq needs too much height at these sizes. */
 html[dir='rtl'] :is(
   .navbar, .navbar-sidebar, .menu, .table-of-contents, .theme-doc-toc-mobile,
-  .footer, .footer-logos, .button, .pagination-nav, .breadcrumbs, .badge,
+  .footer, .button, .pagination-nav, .breadcrumbs, .badge,
   [data-testid='course-nav-bar'], .reading-toolbar, .print-handout, .markdown table, .markdown figcaption,
   small, input, select, textarea
 ) {
@@ -87,6 +87,21 @@ html[dir='rtl'] :is(
   text-decoration: underline;
   text-underline-offset: 0.15em;
 }
+
+/* The navbar's one call to action. */
+.navbar .navbar-cta.navbar__link {
+  background: var(--ifm-color-primary);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+  margin-inline-start: 0.5rem;
+  font-weight: 700;
+}
+.navbar .navbar-cta.navbar__link:hover { background: var(--ifm-color-primary-dark); color: #fff; }
+html[data-theme='dark'] .navbar .navbar-cta.navbar__link,
+html[data-theme='dark'] .navbar .navbar-cta.navbar__link:hover { color: var(--brand-ink); }
+
+.footer--dark { --ifm-footer-background-color: var(--brand-ink); }
 
 /* press */
 .button {
