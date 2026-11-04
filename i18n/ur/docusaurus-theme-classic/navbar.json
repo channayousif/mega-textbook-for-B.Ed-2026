@@ -1,12 +1,4 @@
 {
-  "title": {
-    "message": "بی ایڈ ٹیکسٹ بک",
-    "description": "The title in the navbar"
-  },
-  "logo.alt": {
-    "message": "بی ایڈ میگا ٹیکسٹ بک",
-    "description": "The alt text of navbar logo"
-  },
   "item.label.Programmes": {
     "message": "پروگرام",
     "description": "Navbar item with label Programmes"

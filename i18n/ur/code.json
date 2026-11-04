@@ -1,6 +1,6 @@
 {
   "home.title": {
-    "message": "میگا ٹیکسٹ بک"
+    "message": "درسی کتابیں"
   },
   "home.subtitle": {
     "message": "دو لسانی (انگریزی اور اردو) نصابی کتابوں کا مجموعہ اور سیکھنے کا پلیٹ فارم۔ ایم وی پی ADE اور B.Ed(H) طلباء اور ان کے اساتذہ، اور سندھ حکومت کے تحت STEDA تیچنگ لاسنس کے متمنیوں کی خدمت کرتا ہے۔"
@@ -426,5 +426,14 @@
   "theme.tags.tagsPageTitle": {
     "message": "ٹیگز",
     "description": "The title of the tag list page"
+  },
+  "print.label": {
+    "message": "پرنٹ کریں / PDF میں محفوظ کریں"
+  },
+  "print.aria": {
+    "message": "یہ صفحہ پرنٹ کریں یا PDF میں محفوظ کریں"
+  },
+  "nav.signIn": {
+    "message": "سائن ان"
   }
 }

@@ -1,3 +1,4 @@
+import Translate from '@docusaurus/Translate';
 import React from 'react';
 import { useLocation } from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
@@ -97,7 +98,7 @@ export default function MobileTopBarWidgets({
           </a>
         ) : (
           <a className={styles.pill} href={loginUrlWithReturnTo(location.pathname, 'login')}>
-            Sign in
+            <Translate id="nav.signIn">Sign in</Translate>
           </a>
         )
       )}

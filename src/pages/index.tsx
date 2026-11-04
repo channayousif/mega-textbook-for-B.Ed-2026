@@ -14,7 +14,7 @@ export default function Home(): JSX.Element {
           <div className="row">
             <div className="col">
               <h1 className="hero__title text--center margin-bottom--lg">
-                <Translate id="home.title">Mega Textbook</Translate>
+                <Translate id="home.title">textbook.com.pk</Translate>
               </h1>
 
               <p className="hero__subtitle text--center margin-bottom--xl">
