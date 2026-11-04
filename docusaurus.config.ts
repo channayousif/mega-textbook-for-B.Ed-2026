@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto';
-import { readFileSync } from 'node:fs';
+import { readdirSync, readFileSync } from 'node:fs';
 import { config as loadEnv } from 'dotenv';
 import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
@@ -102,6 +102,26 @@ function reviewNotices(): Record<string, PublicationTier> {
 /** Owner ruling, 2026-11-04: the site is textbook.com.pk, and درسی کتابیں on Urdu pages. */
 const SITE_TITLE = process.env.DOCUSAURUS_CURRENT_LOCALE === 'ur' ? 'درسی کتابیں' : 'textbook.com.pk';
 
+/**
+ * Landing page counts, from the same build-time report as the notices above, so they
+ * can never go stale or be typed by hand. Urdu units are counted from the Urdu tree,
+ * because a unit's translation_status says how far review went, not whether it exists.
+ */
+function siteStats() {
+  const report = JSON.parse(readFileSync('./static/content-status.json', 'utf8'));
+  const units = report.courses.flatMap((c: { units?: { authored?: boolean; figures?: { placed?: number } }[] }) => c.units ?? []);
+  const authored = units.filter((u: { authored?: boolean }) => u.authored);
+  const urduRoot = './i18n/ur/docusaurus-plugin-content-docs/current';
+  const urduUnits = (readdirSync(urduRoot, { recursive: true }) as string[])
+    .filter((p) => /unit-\d+[\\/]index\.mdx$/.test(p)).length;
+  return {
+    courses: report.courses.filter((c: { units?: { authored?: boolean }[] }) => c.units?.some((u) => u.authored)).length,
+    units: authored.length,
+    urduUnits,
+    figures: authored.reduce((sum: number, u: { figures?: { placed?: number } }) => sum + (u.figures?.placed ?? 0), 0),
+  };
+}
+
 const config: Config = {
   title: SITE_TITLE,
   tagline: 'A bilingual textbook collection and learning platform for ADE, B.Ed Hons, STEDA teacher-licence aspirants, and Grades 9-12.',
@@ -117,6 +137,13 @@ const config: Config = {
   headTags: [
     { tagName: 'link', attributes: { rel: 'icon', type: 'image/png', sizes: '48x48', href: '/img/favicon.png' } },
     { tagName: 'link', attributes: { rel: 'apple-touch-icon', sizes: '180x180', href: '/img/apple-touch-icon.png' } },
+    // Marks a returning visitor before paint, the reason `data-theme` works without a
+    // flash (ADR-0018), so the landing page can reserve the welcome strip's height.
+    {
+      tagName: 'script',
+      attributes: {},
+      innerHTML: "try{var k=Object.keys(localStorage);if(localStorage.getItem('last-read')||k.some(function(x){return x.indexOf('sb-')===0&&x.slice(-11)==='-auth-token'}))document.documentElement.setAttribute('data-returning','1')}catch(e){}",
+    },
   ],
 
   i18n: {
@@ -142,6 +169,7 @@ const config: Config = {
     supabaseUrl: process.env.DOCUSAURUS_SUPABASE_URL ?? '',
     supabaseAnonKey: process.env.DOCUSAURUS_SUPABASE_ANON_KEY ?? '',
     reviewNotices: reviewNotices(),
+    siteStats: siteStats(),
   },
 
   presets: [
@@ -283,8 +311,9 @@ const config: Config = {
             { to: '/licence/', label: 'Teaching licence', activeBaseRegex: '/licence/' },
           ],
         },
-        { to: '/about', label: 'About', position: 'left' },
-        { to: '/contact', label: 'Contact', position: 'left' },
+        { to: '/#features', label: 'Features', position: 'left', activeBaseRegex: '^$' },
+        { to: '/guides/teacher-guide/', label: 'Teachers', position: 'left' },
+        { to: '/contact', label: 'Institutions', position: 'left' },
         // Spec 010 follow-up, 2026-09-07 - registers
         // src/components/MobileTopBarWidgets.tsx; renders nothing at
         // desktop widths, a compact locale-switch + sign-in-status pair at
@@ -301,20 +330,17 @@ const config: Config = {
         // Spec 002, T030 - registers src/components/NavbarAuthWidget.tsx via
         // the swizzled src/theme/NavbarItem/ComponentTypes.tsx.
         { type: 'custom-authWidget', position: 'right' },
+        { to: '/intro', label: 'Start reading', position: 'right', className: 'navbar-cta' },
       ],
     },
     footer: {
       style: 'dark',
+      logo: { alt: 'textbook.com.pk', src: 'img/brand/bilingual-reverse.svg', height: 64 },
       links: [
-        {
-          title: 'Legal',
-          items: [
-            {
-              label: 'Privacy & Cookies',
-              to: '/privacy',
-            },
-          ],
-        },
+        { title: 'Programmes', items: [{ label: 'B.Ed', to: '/intro' }, { label: 'Teaching licence', to: '/licence/' }] },
+        { title: 'For you', items: [{ label: 'Create an account', to: '/app/signup' }, { label: 'Become a reviewer', to: '/app/reviewer/apply' }] },
+        { title: 'Guides', items: [{ label: 'Student guide', to: '/guides/student-guide/' }, { label: 'Teacher guide', to: '/guides/teacher-guide/' }] },
+        { title: 'About', items: [{ label: 'About', to: '/about' }, { label: 'Contact', to: '/contact' }, { label: 'Privacy & Cookies', to: '/privacy' }] },
       ],
       copyright: 'textbook.com.pk - a bilingual textbook collection and learning platform for ADE, B.Ed Hons, STEDA teacher-licence aspirants, and Grades 9-12.',
     },

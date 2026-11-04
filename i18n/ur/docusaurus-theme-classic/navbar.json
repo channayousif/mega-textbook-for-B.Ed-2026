@@ -26,5 +26,21 @@
   "item.label.Contact": {
     "message": "رابطہ",
     "description": "Navbar item with label Contact"
+  },
+  "item.label.Features": {
+    "message": "خصوصیات",
+    "description": "Navbar item with label Features"
+  },
+  "item.label.Teachers": {
+    "message": "اساتذہ",
+    "description": "Navbar item with label Teachers"
+  },
+  "item.label.Institutions": {
+    "message": "ادارے",
+    "description": "Navbar item with label Institutions"
+  },
+  "item.label.Start reading": {
+    "message": "پڑھنا شروع کریں",
+    "description": "Navbar item with label Start reading"
   }
 }
