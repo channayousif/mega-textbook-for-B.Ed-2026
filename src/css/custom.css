@@ -315,60 +315,6 @@ html[data-theme='dark'] {
   font-display: swap;
 }
 
-.reading-toolbar {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-  padding: 0.4rem 0.6rem;
-  border-radius: 8px;
-  background: var(--ifm-color-emphasis-100);
-  font-size: 0.85rem;
-}
-
-.reading-toolbar__time {
-  font-weight: 600;
-  color: var(--ifm-color-primary-darker);
-}
-
-html[data-theme='dark'] .reading-toolbar__time {
-  color: var(--ifm-color-primary-lighter);
-}
-
-.reading-toolbar__controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-}
-
-.reading-toolbar__btn {
-  min-height: 2rem;
-  padding: 0.2rem 0.6rem;
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: 6px;
-  background: var(--ifm-background-surface-color);
-  color: var(--ifm-font-color-base);
-  font: inherit;
-  cursor: pointer;
-}
-
-.reading-toolbar__btn:disabled {
-  opacity: 0.45;
-  cursor: default;
-}
-
-.reading-toolbar__btn[aria-pressed='true'] {
-  border-color: var(--ifm-color-primary);
-  background: var(--ifm-color-primary);
-  color: #fff;
-}
-
-html[data-theme='dark'] .reading-toolbar__btn[aria-pressed='true'] {
-  color: #10221d;
-}
-
 .reading-progress {
   position: fixed;
   top: var(--ifm-navbar-height);
