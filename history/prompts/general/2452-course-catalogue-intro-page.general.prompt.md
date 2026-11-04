@@ -14,7 +14,7 @@ links:
   spec: null
   ticket: null
   adr: null
-  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/
+  pr: https://github.com/channayousif/mega-textbook-for-B.Ed-2026/pull/445
 files:
   - src/components/CourseCatalog/index.tsx
   - docs/intro.mdx
