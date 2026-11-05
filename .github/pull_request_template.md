@@ -1,5 +1,5 @@
 <!--
-  PR template for the B.Ed Mega Textbook platform.
+  PR template for the textbook.com.pk platform.
   Keep it short. Under SDD, a PR should trace to a spec (specs/NNN-*/) and clear the
   applicable review gates in the project Constitution (Article VII).
 -->
