@@ -58,7 +58,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Merged origin/main into `crew/gqur-301-u05-repair_en`, resolved the append-only `specs/content/gqur-301/tasks.md` conflict by keeping this branch's Unit 5 row and main's Unit 8 row (no registry changes or ID renumbering needed), regenerated the gitignored content-status report, and passed all 14 `check:content` gates.
+Merged origin/main into `crew/gqur-301-u05-repair_en`, resolved the append-only `specs/content/gqur-301/tasks.md` conflict by keeping main's Unit 8 row then this branch's Unit 5 row (no registry changes or ID renumbering needed), regenerated the gitignored content-status report, and passed all 14 `check:content` gates.
 
 ## Outcome
 
@@ -70,7 +70,7 @@ Merged origin/main into `crew/gqur-301-u05-repair_en`, resolved the append-only 
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into `crew/gqur-301-u05-repair_en`, resolved the append-only `specs/content/gqur-301/tasks.md` conflict by keeping this branch's Unit 5 row and main's Unit 8 row (no registry changes or ID renumbering needed), regenerated the gitignored content-status report, and passed all 14 `check:content` gates.
+- Shipped / changed: Merged origin/main into `crew/gqur-301-u05-repair_en`, resolved the append-only `specs/content/gqur-301/tasks.md` conflict by keeping main's Unit 8 row then this branch's Unit 5 row (no registry changes or ID renumbering needed), regenerated the gitignored content-status report, and passed all 14 `check:content` gates.
 - Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything.
 - Pending / next owner: crew lead (merge when CI is green).
 - Notes for the next job on this unit:
