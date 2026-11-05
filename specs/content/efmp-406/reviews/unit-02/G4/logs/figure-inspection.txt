@@ -1,0 +1,10 @@
+
+> bed-mega-textbook@0.1.0 figures:variants:check
+> node scripts/build-figure-variants.mjs --check
+
+figures:variants --check OK (1138 figure(s))
+Static Sharp previews inspected: fig-U2-1 through fig-U2-4, light and dark.
+Noto Nastaliq Urdu installed and used. Mirrored column order, upright shaped glyphs, return arrow, panel labels and left wordmark inspected.
+Corrected helper-added tspan end anchors in centred nodes, then re-rendered and inspected.
+Palette variables substituted in scratch render buffer only because this librsvg renderer does not resolve the SVG CSS custom properties.
+No visible panel collision in the final static previews. Browser geometry, 360px page inspection, A4 page inspection and full build NOT RUN: forbidden by crew brief.
