@@ -49,7 +49,7 @@ on every unit).
 | Unit 5 | G6 assets | ▢ | | |
 | Unit 5 | G7 publish | ▢ | | |
 | Unit 6 | G1 unit-spec | ✅ | auto:gates | intake D-2026-0042; content-spec status: approved |
-| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-06/G2/20261103T112239542Z-gates.json |
+| Unit 6 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-06/G2/20261105T125412430Z-gates.json |
 | Unit 6 | G3 en-review | ▢ | | advisory run001: revise; repairs applied at 2d5cd6a; report reviews/unit-06/G3/agent-g3-gqur300-u6-run001.json; Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 6 | G4 ur-translation | ▣ | | mirror complete (2026-10-18): all 6 files verified against EN 2976ef5e; 12 .ur.svg/.ur.dark.svg figure variants verified; Bloom tags, option letters and bounded answers synced; structural parity clean; all 5 key_terms unbanked in terminology.csv and proposed to owner; translation_status stays draft pending fresh independent G5; reviews/unit-06/G4/handoff.md |
 | Unit 6 | G5 ur-review | ▢ | | advisory run001: revise; repairs applied at 4725d17; G3 dependency escalated (G-2026-30); report reviews/unit-06/G5/agent-g5-gqur300-u6-run001.json |
@@ -84,3 +84,5 @@ on every unit).
 | Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied for N01, N02, P05, N03, N04 and E03; report reviews/unit-02/G3/20261102T212207Z-g3-desk-710069ea.json; remaining owner evidence and editorial decisions in reviews/unit-02/G3/repair-en-20261105.md; fresh independent review required |
 
 | Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-02/G2/20261105T123854707Z-gates.json |
+
+| Unit 6 | G3 en-review | ▢ | | advisory: revise; repairs applied (report specs/content/gqur-300/reviews/unit-06/G3/20261102T212207Z-g3-desk-48a77ab7.json); cited McClure 2020 in U6-05 and aligned ERIC record summary; removed indicator-construction overclaim from U6-06; corrected RRQ-09 pupil-teacher ratio arithmetic to 60+3*20=120 (ratio 30); added D-2026-0001 bibliographic point-of-use disclosures for Steen 2001 in topic-01 and topic-02; classified PBS as curated-supplementary in sources/unit-06.md; balanced MCQ key distribution across a-d; aligned budget sequence (savings before variable costs) across summaries; taught markup and discount in topic-01 and linked Claim in topic-02; added interest-for-borrowers misconception to topic-01 and teacher notes; mapped ERQ-04 to profit-percent concept; all edits mirrored in Urdu |
