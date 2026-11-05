@@ -76,3 +76,11 @@ on every unit).
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-300/reviews/unit-02/G3/20261102T212207Z-g3-desk-710069ea.json |
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-300/reviews/unit-06/G3/20261102T212207Z-g3-desk-48a77ab7.json |
 | Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-300/reviews/unit-04/G3/20261102T212207Z-g3-desk-186abd28.json |
+
+| Unit 4 | G3 en-review | ▢ | | advisory: revise; repairs applied for report reviews/unit-04/G3/20261102T212207Z-g3-desk-186abd28.json; conditional courtyard boundary cases, rice-order analysis, assessment guidance, cylinder scaffolding, concept mappings, EN/UR shelf-length method and limited source attributions repaired; see reviews/unit-04/G3/repair-20261105.md; source authorisation, shared glossary, current renders, blind solve and provenance remain owner follow-ups; no certification |
+
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-04/G2/20261105T122519489Z-gates.json |
+
+| Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied for N01, N02, P05, N03, N04 and E03; report reviews/unit-02/G3/20261102T212207Z-g3-desk-710069ea.json; remaining owner evidence and editorial decisions in reviews/unit-02/G3/repair-en-20261105.md; fresh independent review required |
+
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-02/G2/20261105T123854707Z-gates.json |

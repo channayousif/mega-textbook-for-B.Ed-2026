@@ -186,3 +186,5 @@ authored. The earlier advisory G3 reports and translation blockers are archived 
 | Unit 14 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-14/G3/20261102T212207Z-g3-desk-b6a93c25.json |
 | Unit 15 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-15/G3/20261102T212207Z-g3-desk-b5cee406.json |
 | Unit 7 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-301/reviews/unit-07/G3/20261102T213256Z-g3-desk-017a8f92.json |
+| Unit 2 | G3 en-review | ▢ | agent:codex | advisory: revise; repairs applied for F1-F4 from specs/content/gqur-301/reviews/unit-02/G3/20261102T212207Z-g3-desk-7dd700f4.json; corrected chart geometry and alt, conditional interval choices, scored grouping analysis and worked chart procedures. G3 remains open; fresh independent review and unresolved evidence/authority checks required. |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-301/reviews/unit-02/G2/20261105T135028825Z-gates.json |

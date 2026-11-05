@@ -7,13 +7,20 @@
 | U6-01 | topic-01.mdx | ### Principles of Pakistan's foreign policy | burki-fifty-years |
 | U6-02 | topic-01.mdx | ### Relations with neighboring countries: India, Afghanistan, China, Iran | khan-2015-foreign-policy |
 | U6-03 | topic-01.mdx | ### Role in international organizations: UN, OIC, SAARC | khan-2015-foreign-policy |
-| U6-04 | topic-02.mdx | ### Population growth: causes, consequences and policy responses | worldbank-pdu-2025-unit-06 |
+| U6-04 | topic-02.mdx | ### Population growth: causes, consequences and policy responses | pbs-census-2023 |
+| U6-04 | topic-02.mdx | ### Population growth: causes, consequences and policy responses | unicef-education-2024 |
+| U6-04 | topic-02.mdx | ### Population growth: causes, consequences and policy responses | national-nutrition-survey-2018 |
 | U6-04 | topic-02.mdx | ### Population growth: causes, consequences and policy responses | burki-fifty-years |
 | U6-05 | topic-02.mdx | ### Poverty and unemployment | worldbank-pdu-2025-unit-06 |
+| U6-05 | topic-02.mdx | ### Poverty and unemployment | worldbank-poverty-equity-brief-2024 |
 | U6-05 | topic-02.mdx | ### Poverty and unemployment | pak-constitution-1973-unit-06 |
 | U6-05 | topic-02.mdx | ### Poverty and unemployment | burki-fifty-years |
+| U6-06 | topic-02.mdx | ### Terrorism and extremism: origins, impact and responses | nacta-nap-2014 |
+| U6-06 | topic-02.mdx | ### Terrorism and extremism: origins, impact and responses | paigham-e-pakistan-2018 |
+| U6-06 | topic-02.mdx | ### Terrorism and extremism: origins, impact and responses | satp-pakistan-fatalities |
 | U6-06 | topic-02.mdx | ### Terrorism and extremism: origins, impact and responses | burki-fifty-years |
 | U6-07 | topic-02.mdx | ### Environment: climate change, deforestation, water scarcity | mocc-2021-nccp |
+| U6-07 | topic-02.mdx | ### Environment: climate change, deforestation, water scarcity | national-water-policy-2018 |
 | U6-08 | topic-03.mdx | ### Education and national integration | pak-constitution-1973-unit-06 |
 | U6-09 | topic-03.mdx | ### Civic education: what it is and why it matters | dean-2005-citizenship |
 | U6-09 | topic-03.mdx | ### Civic education: what it is and why it matters | pak-constitution-1973-unit-06 |
