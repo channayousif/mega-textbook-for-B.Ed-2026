@@ -76,4 +76,13 @@ on every unit).
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-300/reviews/unit-02/G3/20261102T212207Z-g3-desk-710069ea.json |
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-300/reviews/unit-06/G3/20261102T212207Z-g3-desk-48a77ab7.json |
 | Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-300/reviews/unit-04/G3/20261102T212207Z-g3-desk-186abd28.json |
+
+| Unit 4 | G3 en-review | ▢ | | advisory: revise; repairs applied for report reviews/unit-04/G3/20261102T212207Z-g3-desk-186abd28.json; conditional courtyard boundary cases, rice-order analysis, assessment guidance, cylinder scaffolding, concept mappings, EN/UR shelf-length method and limited source attributions repaired; see reviews/unit-04/G3/repair-20261105.md; source authorisation, shared glossary, current renders, blind solve and provenance remain owner follow-ups; no certification |
+
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-04/G2/20261105T122519489Z-gates.json |
+
+| Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied for N01, N02, P05, N03, N04 and E03; report reviews/unit-02/G3/20261102T212207Z-g3-desk-710069ea.json; remaining owner evidence and editorial decisions in reviews/unit-02/G3/repair-en-20261105.md; fresh independent review required |
+
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-02/G2/20261105T123854707Z-gates.json |
+
 | Unit 6 | G3 en-review | ▢ | | advisory: revise; repairs applied (report specs/content/gqur-300/reviews/unit-06/G3/20261102T212207Z-g3-desk-48a77ab7.json); cited McClure 2020 in U6-05 and aligned ERIC record summary; removed indicator-construction overclaim from U6-06; corrected RRQ-09 pupil-teacher ratio arithmetic to 60+3*20=120 (ratio 30); added D-2026-0001 bibliographic point-of-use disclosures for Steen 2001 in topic-01 and topic-02; classified PBS as curated-supplementary in sources/unit-06.md; balanced MCQ key distribution across a-d; aligned budget sequence (savings before variable costs) across summaries; taught markup and discount in topic-01 and linked Claim in topic-02; added interest-for-borrowers misconception to topic-01 and teacher notes; mapped ERQ-04 to profit-percent concept; all edits mirrored in Urdu |
