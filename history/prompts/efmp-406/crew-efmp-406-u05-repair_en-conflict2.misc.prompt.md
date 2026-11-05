@@ -16,8 +16,30 @@ links:
   adr: null
   pr: null
 files:
- - specs/content/efmp-406/tasks.md
+ - docs/semester-3/efmp-406/unit-05/index.mdx
+ - docs/semester-3/efmp-406/unit-05/topic-01.mdx
+ - docs/semester-3/efmp-406/unit-05/topic-02.mdx
+ - docs/semester-3/efmp-406/unit-05/unit-assessment.mdx
+ - history/prompts/006-content-pipeline/0027-repair-efmp406-unit-five-advisories.green.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u05-repair_en-conflict1.misc.prompt.md
  - history/prompts/efmp-406/crew-efmp-406-u05-repair_en-conflict2.misc.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u05-repair_en.misc.prompt.md
+ - history/prompts/general/2447-verify-unit-five-merge-readiness.general.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-406/unit-05/index.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-406/unit-05/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-406/unit-05/topic-02.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-3/efmp-406/unit-05/unit-assessment.mdx
+ - specs/content/efmp-406/reviews/unit-05/G2/20261103T182100457Z-gates.json
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261103T182100457Z/check-bloom-bands.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261103T182100457Z/check-concept-graph.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261103T182100457Z/check-depth-gate.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261103T182100457Z/check-docs-sync.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261103T182100457Z/check-figures.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261103T182100457Z/check-no-answer-keys.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261103T182100457Z/check-no-em-dash.txt
+ - specs/content/efmp-406/reviews/unit-05/G2/logs-20261103T182100457Z/validate-content.txt
+ - specs/content/efmp-406/reviews/unit-05/G3/repair-handoff.md
+ - specs/content/efmp-406/tasks.md
 tests:
  - npm run check:content
 ---
@@ -55,28 +77,32 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-406-u05-translate, translate, codex) Urdu rendering, SVG geometry inspection and independent G5 review remain pending.
 - (efmp-406-u05-review_en, review_en, agy) All 7 G3 criteria pass, 25 assessment items independently solved, and all 8 SVG variants pass geometry; report validated with advisory pass disposition.
 
+
 ## Response snapshot
 
-Merged origin/main and resolved the single conflict in `specs/content/efmp-406/tasks.md` by keeping both sides' appended G3 rows (main's Unit 2 revise row first, then this branch's Unit 5 revise row). No shared registry was touched by either side, so no ID renumbering was needed. Regenerated the gitignored `static/content-status.json` after the merge and passed all 14 content gates.
+Merged origin/main into `crew/efmp-406-u05-repair_en`, resolved the single `specs/content/efmp-406/tasks.md` conflict by keeping both main's Unit 2 and this branch's Unit 5 G3 revise rows, regenerated the gitignored content-status report, and passed all 14 content gates.
 
 ## Outcome
 
-- Impact: fix for EFMP-406 Unit 5 by opencode (attempt 2, conflict resolution).
-- Tests: npm run check:content passed (14 of 14 gates) after regenerating the local content-status report.
-- Files: 2 file(s), listed above.
+- Impact: fix for EFMP-406 Unit 5 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 24 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: origin/main merged into `crew/efmp-406-u05-repair_en`; the Unit 2 and Unit 5 G3 revise rows are both present in the tracker, main's first.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this merge does not certify anything and does not push or open a PR.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path); independent G3/G5 review, browser/print checks and the owner's catalog ruling remain pending.
+- Shipped / changed: Merged origin/main into `crew/efmp-406-u05-repair_en`, resolved the single `specs/content/efmp-406/tasks.md` conflict by keeping both main's Unit 2 and this branch's Unit 5 G3 revise rows, regenerated the gitignored content-status report, and passed all 14 content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - G3 and G5 remain open and unsigned; independent review, browser/print checks and the owner's catalog ruling are still pending for Unit 5.
+  - `static/content-status.json` is gitignored and was regenerated locally after the merge; a clean checkout will need `npm run build:content-status` before `check:content` passes.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS (14/14)
-- Prompt variant (if applicable): crew brief conflict2
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
