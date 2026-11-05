@@ -1,23 +1,40 @@
 ---
 id: crew-geng-301-u02-repair_en-r1-conflict1
-title: crew merge main GENG-301 unit 2
+title: crew fix GENG-301 unit 2
 stage: misc
 date: 2026-11-05
 surface: agent
-model: longcat/LongCat-2.0
+model: opencode
 feature: geng-301
 branch: crew/geng-301-u02-repair_en-r1
 user: crew
-command: crew repair_en (merge main and resolve conflicts)
-labels: ["crew", "opencode", "repair_en", "merge"]
+command: crew fix
+labels: ["crew", "opencode", "fix"]
 links:
   spec: specs/content/geng-301/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
- - Merge commit: Merge remote-tracking branch 'origin/main' into crew/geng-301-u02-repair_en-r1 (52787d830)
+ - docs/semester-2/geng-301/unit-02/topic-02.mdx
+ - docs/semester-2/geng-301/unit-02/topic-03.mdx
+ - docs/semester-2/geng-301/unit-02/topic-04.mdx
+ - docs/semester-2/geng-301/unit-02/unit-assessment.mdx
  - history/prompts/geng-301/crew-geng-301-u02-repair_en-r1-conflict1.misc.prompt.md
+ - history/prompts/geng-301/crew-geng-301-u02-repair_en-r1.misc.prompt.md
+ - specs/content/geng-301/figures/unit-02.md
+ - specs/content/geng-301/reviews/unit-02/G2/20261103T184648108Z-gates.json
+ - specs/content/geng-301/reviews/unit-02/G2/logs-20261103T184648108Z/check-bloom-bands.txt
+ - specs/content/geng-301/reviews/unit-02/G2/logs-20261103T184648108Z/check-concept-graph.txt
+ - specs/content/geng-301/reviews/unit-02/G2/logs-20261103T184648108Z/check-depth-gate.txt
+ - specs/content/geng-301/reviews/unit-02/G2/logs-20261103T184648108Z/check-docs-sync.txt
+ - specs/content/geng-301/reviews/unit-02/G2/logs-20261103T184648108Z/check-figures.txt
+ - specs/content/geng-301/reviews/unit-02/G2/logs-20261103T184648108Z/check-no-answer-keys.txt
+ - specs/content/geng-301/reviews/unit-02/G2/logs-20261103T184648108Z/check-no-em-dash.txt
+ - specs/content/geng-301/reviews/unit-02/G2/logs-20261103T184648108Z/validate-content.txt
+ - specs/content/geng-301/tasks.md
+ - static/img/figures/geng-301/unit-02/fig-U2-4.dark.svg
+ - static/img/figures/geng-301/unit-02/fig-U2-4.svg
 tests:
  - npm run check:content
 ---
@@ -55,28 +72,33 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (geng-301-u02-review_en-r1, review_en, codex) Owner must resolve remaining content findings and arrange visual, geometry and assessment evidence; this was the final authorized review cycle.
 - (geng-301-u02-review_en-r1, review_en, codex) Owner must resolve remaining content findings and arrange visual, geometry and assessment evidence; this was the final authorized review cycle.
 
+
 ## Response snapshot
 
-Fetched origin/main (5663b5d45) and merged it into crew/geng-301-u02-repair_en-r1. The merge was clean: no conflict markers, no unmerged paths, and no file under the GENG-301 Unit 2 scope needed manual reconciliation. Verified the shared registries (glossary.json, specs/decisions/log.md, specs/gaps.md, specs/content/terminology.csv) are byte-identical to origin/main, so no branch-added ID collided and no main entry was dropped. Verified specs/content/geng-301/tasks.md keeps every main row in order and appends this branch's new Unit 2 G3 advisory row. All 14 content gates pass.
+Merged origin/main (5663b5d45) into `crew/geng-301-u02-repair_en-r1` with no conflicts, verified the shared registries and Unit 2 tracker kept both sides' entries, committed the merge plus its PHR, and all 14 content gates pass.
 
 ## Outcome
 
-- ✅ Impact: branch now contains origin/main plus the existing Unit 2 G3 repair work; merge commit 52787d830.
-- 🧪 Tests: npm run check:content - all 14 gates PASS (validate:content, check:pipeline-gate, check:depth-gate, check:figures, check:svg-style, check:no-em-dash, check:no-answer-keys, check:concept-graph, check:bloom-bands, check:source-floor, check:licence, licence:map:check, check:content-status, check:docs-sync).
-- 📁 Files: merge commit only; no scope-file edits were required because main did not touch the GENG-301 Unit 2 files this branch changed.
-- 🔁 Next prompts: none for this merge job; the unit still needs a fresh independent G3 review and owner decisions on the deferred findings.
-- 🧠 Reflection: the brief predicted a tasks.md conflict, but at fetch time origin/main had not changed that file since the merge base, so git's ort strategy merged cleanly. The append-only union rule was checked and needed no edits.
+- Impact: fix for GENG-301 Unit 2 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 19 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: merge commit 52787d830 on crew/geng-301-u02-repair_en-r1 bringing in origin/main 5663b5d45; all content gates pass.
-- Decisions the team must respect: G3 stays open and unsigned (ADR-0019); this merge does not certify anything and does not change the Unit 2 tracker row status.
-- Pending / next owner: owner must resolve the deferred F1 wordmark geometry, openstax2021 source mapping and session provenance, and arrange a fresh independent G3 review.
-- Paperclip issues affected: none.
+- Shipped / changed: Merged origin/main (5663b5d45) into `crew/geng-301-u02-repair_en-r1` with no conflicts, verified the shared registries and Unit 2 tracker kept both sides' entries, committed the merge plus its PHR, and all 14 content gates pass.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - The merge was clean; no scope-file edits were needed because origin/main had not touched the Unit 2 files this branch changed.
+  - F1 wordmark geometry in `static/img/figures/geng-301/unit-02/` is still unverified in Chromium; the openstax2021 vs writing2015 source mapping and session provenance remain owner decisions.
+  - G3 stays open and unsigned (ADR-0019); a fresh independent G3 review is still required.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: none - the merge was clean and all gates passed without intervention.
-- Graders run and results (PASS/FAIL): npm run check:content - PASS (14/14).
-- Prompt variant (if applicable): crew brief v1 (conflict1).
-- Next experiment (smallest change to try): none.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
