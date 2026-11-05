@@ -16,7 +16,26 @@ links:
   adr: null
   pr: null
 files:
+ - docs/semester-2/gqur-301/unit-05/topic-01.mdx
+ - docs/semester-2/gqur-301/unit-05/unit-assessment.mdx
+ - history/prompts/gqur-301/crew-gqur-301-u05-repair_en-conflict1.misc.prompt.md
+ - history/prompts/gqur-301/crew-gqur-301-u05-repair_en-conflict2.misc.prompt.md
  - history/prompts/gqur-301/crew-gqur-301-u05-repair_en-conflict3.misc.prompt.md
+ - history/prompts/gqur-301/crew-gqur-301-u05-repair_en.misc.prompt.md
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-05/topic-01.mdx
+ - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-05/unit-assessment.mdx
+ - specs/content/gqur-301/coverage/unit-05.md
+ - specs/content/gqur-301/reviews/unit-05/G2/20261105T131356969Z-gates.json
+ - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/check-bloom-bands.txt
+ - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/check-concept-graph.txt
+ - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/check-depth-gate.txt
+ - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/check-docs-sync.txt
+ - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/check-figures.txt
+ - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/check-no-answer-keys.txt
+ - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/check-no-em-dash.txt
+ - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/validate-content.txt
+ - specs/content/gqur-301/sources/texts/lane-u05-2026.md
+ - specs/content/gqur-301/sources/unit-05.md
  - specs/content/gqur-301/tasks.md
 tests:
  - npm run check:content
@@ -58,21 +77,21 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Merged origin/main into `crew/gqur-301-u05-repair_en`, resolved the append-only `specs/content/gqur-301/tasks.md` conflict by keeping main's Unit 8 row then this branch's Unit 5 row (no registry changes or ID renumbering needed), regenerated the gitignored content-status report, and passed all 14 `check:content` gates.
+Merged origin/main into `crew/gqur-301-u05-repair_en`, resolved the `specs/content/gqur-301/tasks.md` conflict main-first (Unit 8 then Unit 5), regenerated the gitignored content-status report, and left all 14 content gates passing with the PHR committed.
 
 ## Outcome
 
-- Impact: fix for GQUR-301 Unit 5 by opencode (attempt 3).
-- Tests: npm run check:content passed (14/14 gates) after regenerating static/content-status.json.
-- Files: 2 file(s), listed above.
+- Impact: fix for GQUR-301 Unit 5 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 21 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into `crew/gqur-301-u05-repair_en`, resolved the append-only `specs/content/gqur-301/tasks.md` conflict by keeping main's Unit 8 row then this branch's Unit 5 row (no registry changes or ID renumbering needed), regenerated the gitignored content-status report, and passed all 14 `check:content` gates.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch does not certify anything.
-- Pending / next owner: crew lead (merge when CI is green).
+- Shipped / changed: Merged origin/main into `crew/gqur-301-u05-repair_en`, resolved the `specs/content/gqur-301/tasks.md` conflict main-first (Unit 8 then Unit 5), regenerated the gitignored content-status report, and left all 14 content gates passing with the PHR committed.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Unit 5 P1-P4 (author/run provenance, open G1 under D-2026-0070, answer-blind verification, rendered narrow/A4 inspection) remain open for the evaluator/review host; G3 stays open (ADR-0019).
   - G5 should verify Nastaliq rendering and text-fit inside the inherited viewBox at narrow width and A4 print.
@@ -82,6 +101,6 @@ Merged origin/main into `crew/gqur-301-u05-repair_en`, resolved the append-only 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: none
-- Graders run and results (PASS/FAIL): check:content PASS (14/14)
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
