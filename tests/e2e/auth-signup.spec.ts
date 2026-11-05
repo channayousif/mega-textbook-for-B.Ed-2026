@@ -31,7 +31,8 @@ test('sign-up returns to the originating page and the navbar shows the account',
   await page.getByRole('link', { name: /sign in/i }).click();
   await expect(page).toHaveURL(/\/app\/login/);
 
-  await page.getByRole('link', { name: /create an account/i }).click();
+  // Scoped to the page: the site footer has a link with the same name.
+  await page.getByRole('main').getByRole('link', { name: /create an account/i }).click();
   await expect(page).toHaveURL(/\/app\/signup/);
 
   const email = `e2e-${Date.now()}@example.test`;

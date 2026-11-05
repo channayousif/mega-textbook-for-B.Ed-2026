@@ -1,37 +1,4 @@
 {
-  "home.title": {
-    "message": "میگا ٹیکسٹ بک"
-  },
-  "home.subtitle": {
-    "message": "دو لسانی (انگریزی اور اردو) نصابی کتابوں کا مجموعہ اور سیکھنے کا پلیٹ فارم۔ ایم وی پی ADE اور B.Ed(H) طلباء اور ان کے اساتذہ، اور سندھ حکومت کے تحت STEDA تیچنگ لاسنس کے متمنیوں کی خدمت کرتا ہے۔"
-  },
-  "home.licenceTitle": {
-    "message": "لائسنس امتحان کی تیاری"
-  },
-  "home.licenceDesc": {
-    "message": "لائسنس ٹریک کے ساتھ اساتذہ کے لائسنس کے امتحان کی تیاری کریں: نصاب کی ہر سرخی کی وضاحت، مفت، انگریزی اور اردو دونوں میں۔"
-  },
-  "home.licenceAction": {
-    "message": "لائسنس ٹریک کھولیں"
-  },
-  "home.textbookTitle": {
-    "message": "نصابی کتابوں کا مجموعہ"
-  },
-  "home.textbookDesc": {
-    "message": "آن لائن مفت دو لسانی نصابی کتابیں پڑھیں - ADE اور B.Ed(H) پروگرام اور STEDA تیچنگ لاسنس کا نصاب۔ سمسٹر، کورس اور یونٹ انگریزی اور اردو میں دیکھیں۔"
-  },
-  "home.textbookAction": {
-    "message": "نصابی کتابیں دیکھیں"
-  },
-  "home.appTitle": {
-    "message": "سیکھنے کا پلیٹ فارم"
-  },
-  "home.appDesc": {
-    "message": "ادارے ہمارے سائن ان والے پلیٹ فارم پر جماعتیں، اسائنمنٹ، جمع کرائے گئے کام، نمبر لگانے کا عمل اور اساتذہ کی سند بندی کے ڈیش بورڈ چلا سکتے ہیں۔"
-  },
-  "home.appAction": {
-    "message": "/app/ پر اکاؤنٹ بنائیں"
-  },
   "pricing.title": {
     "message": "Licence Practice Pass"
   },
@@ -426,5 +393,23 @@
   "theme.tags.tagsPageTitle": {
     "message": "ٹیگز",
     "description": "The title of the tag list page"
+  },
+  "print.label": {
+    "message": "پرنٹ کریں / PDF میں محفوظ کریں"
+  },
+  "print.aria": {
+    "message": "یہ صفحہ پرنٹ کریں یا PDF میں محفوظ کریں"
+  },
+  "nav.signIn": {
+    "message": "سائن ان"
+  },
+  "partners.label": {
+    "message": "تعاون کرنے والے ادارے:"
+  },
+  "partners.pause": {
+    "message": "لوگو روکیں"
+  },
+  "partners.play": {
+    "message": "لوگو چلائیں"
   }
 }

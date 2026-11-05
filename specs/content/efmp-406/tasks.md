@@ -25,7 +25,7 @@
 | Unit 1 | G3 en-review | ▢ | | advisory: pass (ADR-0019); report at specs/content/efmp-406/reviews/unit-01/G3/5be15169-67ce-493e-9ccd-e4c8e6b64a2d.json; all 7 criteria pass; independent solve 10/10 MCQs, 10/10 RRQs, 5/5 ERQs; all 8 SVG variants pass geometry; G3 remains open and unsigned |
 | Unit 1 | G4 ur-translation | ▢ | | separate job |
 | Unit 1 | G5 ur-review | ▢ | | |
-| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-02/G2/20261103T112248340Z-gates.json |
+| Unit 2 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-02/G2/20261103T180513037Z-gates.json |
 | Unit 2 | G3 en-review | ▢ | | awaiting an independent reviewer; no review performed by author |
 | Unit 2 | G4 ur-translation | ▢ | | separate job; English-only draft with untranslated notices |
 | Unit 2 | G5 ur-review | ▢ | | |
@@ -72,5 +72,6 @@
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-406/reviews/unit-02/G3/20261102T212207Z-g3-desk-e7c99b68.json |
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/efmp-406/reviews/unit-03/G3/20261102T212207Z-g3-desk-41db593c.json |
 | Unit 1 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-406/reviews/unit-01/G3/20261102T212036Z-g3-desk-45e9b45b.json; teaching cases explicitly labeled as illustrative instructional examples in index, topics, teacher notes, and sources; Shakir et al. (2012) citations qualified as strictly limited to published abstract scope; headless review tooling constraints and pending catalog entry noted per ADR-0019; G3 remains open and unsigned |
+| Unit 2 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-406/reviews/unit-02/G3/20261102T212207Z-g3-desk-e7c99b68.json; RRQ 2, 3 and 9 prompts now request the fairer wording, the example and the barrier explanation their schemes reward (RRQ 2/3 scheme wording aligned, RRQ 9 model answer adds the explanation); MCQ 4 and 8 stems reframed as routine application of a taught rule within the approved Apply band; Topic 2.2 check item 2 trimmed to recall to match its Remember tag; source passage bundle, author run provenance and narrow-screen/A4/SVG geometry evidence remain unavailable to this job and need the coordinator and an authorised browser host; G3 remains open and unsigned |
 | Unit 3 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-406/reviews/unit-03/G2/20261103T182710608Z-gates.json |
 | Unit 3 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-406/reviews/unit-03/G3/20261102T212207Z-g3-desk-41db593c.json; Papen and Ashraf excerpts replaced with verbatim passages from fresh retrievals (non-verbatim blocks removed), unsupported claims qualified or removed, Article 25-A text separated from interpretation, fictional notices labelled, formative and MCQ 10 Bloom demand fixed, rubric performance anchors added, prose simplified and glossary/unit-03.json added; no source bound for event/practice or dominant/vernacular terms; author run identity and browser/print evidence still unavailable; G3 remains open and unsigned |
