@@ -16,6 +16,7 @@ links:
   adr: null
   pr: null
 files:
+ - history/prompts/gict-300/crew-gict-300-u03-repair_en-r1.misc.prompt.md
  - specs/content/gict-300/reviews/unit-03/G3/repair-desk-319cad35.md
  - specs/content/gict-300/tasks.md
 tests:
@@ -68,24 +69,29 @@ From `specs/content/gict-300/reviews/unit-03/G3/20261102T212207Z-g3-desk-319cad3
 - (gict-300-u03-repair_en, repair_en, claude) Both G3 review runs allowed by ADR-0019 are used up; a G3 run 003 needs owner authorisation in `specs/decisions/log.md`.
 - (gict-300-u03-translate-r1, translate, codex) Translation stays draft pending accepted G3 and fresh independent G5 with rendered Urdu inspection.
 
+
 ## Response snapshot
 
-Verified all findings of latest G3 desk report 20261102T212207Z-g3-desk-319cad35 are repaired and documented in repair-desk-319cad35.md, and appended an unticked advisory repairs-applied tracker row in tasks.md.
+Verified all findings of G3 report 20261102T212207Z-g3-desk-319cad35, documented resolutions in repair-desk-319cad35.md, and appended an unticked advisory repairs-applied tracker row in tasks.md with clean content gates.
 
 ## Outcome
 
 - Impact: repair_en for GICT-300 Unit 3 by agy (attempt 1).
-- Tests: npm run check:content passed with all 14 content gates clean.
-- Files: 2 file(s) changed, plus this record.
-- Next prompts: fresh independent G3 review once authorized or G4 translation continuation.
-- Reflection: None.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 3 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Documented resolutions for G3 desk review 20261102T212207Z-g3-desk-319cad35 in repair-desk-319cad35.md, appended unticked advisory tracker row to tasks.md, and validated check:content.
-- Decisions the team must respect: G3 remains unticked; F9 (year-less ostep key) is an owner decision; ADR-0019 two-cycle budget is exhausted.
-- Pending / next owner: Curriculum owner for review authorization or fresh independent review.
-- Paperclip issues affected: null
+- Shipped / changed: Verified all findings of G3 report 20261102T212207Z-g3-desk-319cad35, documented resolutions in repair-desk-319cad35.md, and appended an unticked advisory repairs-applied tracker row in tasks.md with clean content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - F9 (the ostep key has no year) remains an open owner decision touching approved content-spec or tooling.
+  - ADR-0019 two-cycle G3 budget is exhausted; any fresh G3 run requires owner authorisation in specs/decisions/log.md.
+  - G3 remains open and unticked pending owner review; translation stays draft.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
