@@ -16,6 +16,6 @@ Guide Chapter 13 (`D-2026-0070`: one unit per guide chapter).
 
 | Sub-topic ID | File | Section | Source |
 |---|---|---|---|
-| U13-01 | unit-assessment.mdx | MCQ 1, 2, 3, 4, 8; RRQ 1, 2, 3, 5, 8; ERQ 1, 3 | lane2023 |
-| U13-02 | unit-assessment.mdx | MCQ 7, 10; RRQ 4, 7; ERQ 1, 2 | openstax-stats |
-| U13-03 | unit-assessment.mdx | MCQ 5, 6, 9; RRQ 4, 6, 9, 10; ERQ 2, 4, 5 | lane2023 |
+| U13-01 | unit-assessment.mdx | MCQ 1, 2, 3, 4, 8; RRQ 1, 2, 3, 5, 8, 9, 10; MCQ 10; ERQ 1, 3, 5 | lane2023 |
+| U13-02 | unit-assessment.mdx | ERQ 1, 5 | openstax-stats |
+| U13-03 | unit-assessment.mdx | MCQ 5, 6, 7, 9; RRQ 4, 6, 7; ERQ 2, 4, 5 | lane2023 |
