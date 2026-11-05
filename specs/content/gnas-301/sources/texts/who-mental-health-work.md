@@ -14,10 +14,8 @@ page's "Key facts" section was read and is excerpted below.
 - An estimated 12 billion working days are lost annually to depression and anxiety,
   costing US$ 1 trillion per year in lost productivity.
 
-## What this supports in GNAS-301 Unit 4
+## What this supports in GNAS-301
 
-Topic 4.5 (U4-10) cites this source for the organizational environment's measurability:
-poor working environments pose mental health risks, which is what a safety-climate survey
-reads. Topic 4.7 (U4-13) cites it for the stress challenge's scale, 12 billion working
-days lost annually to depression and anxiety. The unit does not rely on this source for
-any figure it does not state here.
+In Unit 4, Topic 4.7 (U4-13) cites this source for the stress challenge's scale, 12
+billion working days lost annually to depression and anxiety. The unit does not rely on
+this source for any figure it does not state here.
