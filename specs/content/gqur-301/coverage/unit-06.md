@@ -20,3 +20,4 @@ Guide Chapter 6 (`D-2026-0070`: one unit per guide chapter).
 | U6-02 | unit-assessment.mdx | MCQ 4, 7; RRQ 4, 5, 7; ERQ 2 | lane2023 |
 | U6-03 | unit-assessment.mdx | MCQ 5-6; RRQ 6; ERQ 2 | openstax-stats |
 | U6-04 | unit-assessment.mdx | MCQ 8-10; RRQ 8-10; ERQ 3-5 | openstax-stats |
+| U6-04 | unit-assessment.mdx | ERQ 5 real Pakistan population-share interpretation | pbs-census2023 |
