@@ -59,3 +59,18 @@ renders for inspection. The brief forbids builds, dev servers and Playwright. Co
 changed SVG text still requires host geometry measurement. Source checks and dark freshness do
 not establish rendered accessibility. G3 remains in progress and unsigned. Respect ADR-0019's
 cycle limit; the owner must authorise any further independent review if that limit is exhausted.
+
+## Validation
+
+- `scripts/heavy.sh npm test`: 31 files, 368 tests passed.
+- Fresh G2 draft evidence: `G2/20261105T095511606Z-gates.json`, bound to committed
+  author inputs `3998da8ed`; all eight draft commands passed. The tracker points to it.
+  Direct `acceptGateEvidence` validation succeeds for the current Unit 6 bytes.
+- `FIGURE_ROOT=static/img/figures/geng-301/unit-06 node scripts/build-figure-variants.mjs --check`:
+  all eight figure pairs fresh.
+- `git diff --check`: passed. Changed tracked files contain no forbidden dash characters.
+- Clean `origin/main` baseline `99473fec3`: all 14 content gates passed after regenerating
+  its missing ignored `static/content-status.json`. The repair checkout's ignored status cache
+  is regenerated too; neither generated cache is committed.
+- Final repaired checkout `npm run check:content`: all 14 gates passed. No new findings
+  relative to the passing origin/main baseline.

@@ -38,12 +38,12 @@ Read .crew/brief.md in the current directory and carry it out completely. It is 
 
 ## Response snapshot
 
-Applied F1-F8 author repairs, retained open G3, documented unavailable host provenance/render evidence and missing Urdu mirror. Refreshing G2 evidence after committing repaired inputs.
+Applied F1-F8 author repairs, retained open G3, documented unavailable host provenance/render evidence and missing Urdu mirror. G2 evidence refreshed after committing repaired inputs; 368 unit tests passed.
 
 ## Outcome
 
 - ✅ Impact: Repairs address source provenance, worked examples, assessment fairness and coverage, figure meaning and scheduling.
-- 🧪 Tests: Content checks initially found stale G2 and generated status cache; baseline confirms cache absence. Final results recorded in repair-en.md.
+- 🧪 Tests: Content checks initially found stale G2 and generated status cache; baseline confirms cache absence. Final results recorded in repair-en.md; all 368 unit tests and eight draft checks passed.
 - 📁 Files: Unit 6 English topics, assessment, notes, concept/source/figure records, tracker and six SVG assets; repair handoff and PHR.
 - 🔁 Next prompts: Host supplies genuine provenance, SVG geometry and fresh render evidence; independent review subject to cycle-limit authorisation.
 - 🧠 Reflection: Fictional exercise data must be labelled at the point of use and must never authenticate a real source.
@@ -58,6 +58,6 @@ Applied F1-F8 author repairs, retained open G3, documented unavailable host prov
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Content edits stale G2 manifests. Geometry tool requires prohibited Playwright; source-only checks cannot certify accessibility.
-- Graders run and results (PASS/FAIL): Final deterministic check and test results recorded in repair-en.md after completion.
+- Graders run and results (PASS/FAIL): PASS: all 14 content gates on repair checkout and origin/main baseline; 31 unit-test files and 368 tests; eight draft evidence checks; dark freshness; diff whitespace. Geometry/render review not run due to the brief prohibition.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Fresh host-bound geometry and render inspection, followed by authorised independent review.
