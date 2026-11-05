@@ -1,19 +1,19 @@
 ---
 id: crew-efmp-406-u06-review_ur
-title: crew review ur EFMP-406 unit 6
+title: crew review_ur EFMP-406 unit 6
 stage: misc
 date: 2026-11-05
 surface: agent
-model: gemini-3.8-flash
+model: agy
 feature: efmp-406
 branch: crew/efmp-406-u06-review_ur
 user: crew
 command: crew review_ur
-labels: ["crew", "agy", "review_ur", "g5"]
+labels: ["crew", "agy", "review_ur"]
 links:
   spec: specs/content/efmp-406/content-spec.md
   ticket: null
-  adr: history/adr/0019-agent-review-governance.md
+  adr: null
   pr: null
 files:
  - history/prompts/efmp-406/crew-efmp-406-u06-review_ur.misc.prompt.md
@@ -30,37 +30,64 @@ files:
  - specs/content/efmp-406/reviews/unit-06/G5/crew-5b89c8ab/summary.md
  - specs/content/efmp-406/reviews/unit-06/G5/crew-5b89c8ab/validate-content.log
 tests:
- - node scripts/review-evidence.mjs validate specs/content/efmp-406/reviews/unit-06/G5/5b89c8ab-b21b-47d8-a039-009f638815d0.json
  - npm run check:content
- - npm run check:no-em-dash
 ---
 
 ## Prompt
 
-Read .crew/brief.md in the current directory and carry it out completely. It is your whole task.
+# Crew job efmp-406-u06-review_ur
+
+You are the agy worker on the B.Ed bilingual textbook repo, working in this checkout on branch `crew/efmp-406-u06-review_ur`.
+Read AGENTS.md first and obey it (CLAUDE.md only imports it): no em dash (U+2014) anywhere, heavy commands only through `scripts/heavy.sh`, never run `npm run build`, a dev server or Playwright, keep all scratch files inside your worktree (for example `.crew/`), never use `/tmp`, never mark G3/G5 done, never self-sign or use
+human initials, never edit the style guide, constitution, ADRs, gate scripts, catalog or an approved content-spec.
+
+## Task
+Act as the INDEPENDENT G5 Urdu reviewer of EFMP-406 Unit 6 (review-unit skill, .claude/agents/g5-reviewer.md). You did not translate this unit. Produce the evidence report and advisory tracker row. Never tick G5, never self-sign.
+
+Follow `.claude/skills/review-unit/SKILL.md` exactly; read it and every file it references before starting.
+
+## Scope
+EFMP-406 Unit 6 only: its docs/licence and i18n files, its rows and folders under
+`specs/content/efmp-406/`, and `static/img/figures/efmp-406/unit-06/`.
+
+## Continue, do not restart
+Earlier attempts may have left work on this branch. Check `git log origin/main..HEAD` and `git status` and build on it.
+
+## Done when
+1. `npm run check:content` reports no finding that origin/main does not also report (run it, read every
+   failure, fix those in your scope, rerun). Findings that already exist on main belong to other jobs.
+2. All work is committed on this branch with a conventional commit message. Do not push and do not open a PR.
+3. Your final output ends with one line: `CREW-SUMMARY: <what you changed, in one sentence>`.
+4. Optional, just before it: up to 3 lines `CREW-HANDOFF: <note>` for facts the next job on this unit needs
+   (known leftovers, risky spots it should check). Not a summary; omit them when there is nothing.
+
 
 ## Response snapshot
 
-Executed independent G5 Urdu review of EFMP-406 Unit 6 per `.claude/skills/review-unit/SKILL.md` and `.claude/agents/g5-reviewer.md`. Prepared input manifest (114 inputs), ran the required validation gates (all exit 0), performed an independent blind solve of all 10 Urdu MCQs (10/10 match with English/Urdu keys), aligned all source passages and rubrics, and conducted a thorough bilingual comparison. Emitted structured G5 review report with escalate disposition due to (1) sentence truncation omission in topic-02.mdx:46 and clause omission in topic-01.mdx:76 (F1), (2) host headless environment restrictions prohibiting browser/Playwright rendering (F2), (3) unsigned human desk G3 baseline and stale automated G3 manifest (F3), and (4) candidate course terminology awaiting banking (F4). Created advisory tracker row file under review directory; G5 remains open and unsigned.
+Completed independent G5 Urdu review for EFMP-406 Unit 6, producing a validated escalate report, evidence bundle, and advisory tracker row highlighting content omission in topic-02.mdx:46 and headless render constraints.
 
 ## Outcome
 
-- ✅ Impact: Independent G5 review evidence produced and validated for EFMP-406 Unit 6; advisory tracker row documented without editing tracker or signing evidence.
-- 🧪 Tests: `node scripts/review-evidence.mjs validate` passed; `npm run check:no-em-dash` passed; `npm run check:content` passed (14/14 gates).
-- 📁 Files: `specs/content/efmp-406/reviews/unit-06/G5/` files and PHR record.
-- 🔁 Next prompts: Translation repair job to address F1 (sentence truncation in topic-02.mdx:46 and clause in topic-01.mdx:76) and polish findings in F5.
-- 🧠 Reflection: Headless environment correctly halts at escalation when browser rendering is restricted by brief; content omission in topic-02.mdx:46 was caught through complete passage-by-passage bilingual comparison.
+- Impact: review_ur for EFMP-406 Unit 6 by agy (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 13 file(s), listed above.
+- Next prompts: the crew planner derives the unit's next stage from main after merge.
+- Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: G5 review report `specs/content/efmp-406/reviews/unit-06/G5/5b89c8ab-b21b-47d8-a039-009f638815d0.json`, evidence logs, blind MCQ derivations, summary, and advisory tracker row.
-- Decisions the team must respect: G5 remains open and unsigned per ADR-0019; translation_status remains draft; tasks.md was not edited; no human initials used.
-- Pending / next owner: Repair job for translator to complete the truncated sentence in `topic-02.mdx:46` and list question in `topic-01.mdx:76`; authorised browser session for visual inspection and text geometry; owner adjudication on candidate terminology.
-- Paperclip issues affected: None.
+- Shipped / changed: Completed independent G5 Urdu review for EFMP-406 Unit 6, producing a validated escalate report, evidence bundle, and advisory tracker row highlighting content omission in topic-02.mdx:46 and headless render constraints.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
+- Notes for the next job on this unit:
+  - F1 blocking content defect: `topic-02.mdx:46` contains a truncated sentence dropping the clause translation for supported word reading (`اگر بچہ اس جملے کو پڑھ نہیں سکتا، ۔`), and `topic-01.mdx:76` omits words in the three-question list (`کردار ہے؟`).
+  - Real browser rendering (desktop, 360px mobile, A4 print) was unverified under crew brief tool restrictions; an authorised browser session must inspect Nastaliq shaping and RTL layout before qualification.
+  - Automated G5 certification remains open because the G3 dependency is an unsigned human desk review (CMY) and the earlier automated G3 manifest is stale against post-review commits.
+- Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: Sentence truncation in Urdu translation where half a sentence was omitted during drafting.
-- Graders run and results (PASS/FAIL): PASS (`node scripts/review-evidence.mjs validate`, `npm run check:content`, `npm run check:no-em-dash`).
-- Prompt variant (if applicable): crew brief `efmp-406-u06-review_ur`.
-- Next experiment (smallest change to try): Translate repair prompt to fix F1 findings.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
+- Prompt variant (if applicable): crew brief v1
+- Next experiment (smallest change to try): none
