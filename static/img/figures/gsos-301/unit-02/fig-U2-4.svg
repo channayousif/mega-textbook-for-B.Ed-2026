@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 490" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Mead's Stages of Socialization</title><desc id="d">A comparison table of Mead's stages of socialization showing age range, key activity and examples for each stage.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 490" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"><title id="t">Childhood Stages and Adult Socialization</title><desc id="d">A table comparing Mead's three childhood stages with adult socialization as separate lifelong learning, with developmental periods, activities and examples.</desc>
 <style>:root{--bg:#ffffff;--panel:#eef3f1;--ink:#132a24;--muted:#566b65;--line:#1f6f5c;--a1:#1f6f5c;--a1-fill:#e6efed;--a2:#15476b;--a2-fill:#e6ebf0;--a3:#b8551d;--a3-fill:#f0e9e5;--a4:#7b3886;--a4-fill:#ede7ee;--wm:#8b9a95} .bg{fill:var(--bg)} .hdr{fill:var(--a1-fill);stroke:var(--ink);stroke-width:1.5} text{font-size:12px;fill:var(--ink)} .h{font-size:13px;font-weight:700} .th{font-size:13px;font-weight:700;fill:var(--a1);text-anchor:middle} .wm{fill:var(--wm);font-size:11px;text-anchor:end}</style>
 <rect class="bg" x="0" y="0" width="780" height="490"/>
 <!-- Table Boundary -->
@@ -11,7 +11,7 @@
 <line x1="510" y1="30" x2="510" y2="460" stroke="var(--ink)" stroke-width="1.5"/>
 
 <text class="th" x="90" y="60">Stage</text>
-<text class="th" x="215" y="60">Age range</text>
+<text class="th" x="215" y="60">Period</text>
 <text class="th" x="390" y="60">Key activity</text>
 <text class="th" x="635" y="60">Example</text>
 
@@ -19,8 +19,7 @@
 <line x1="20" y1="175" x2="760" y2="175" stroke="var(--ink)" stroke-width="1"/>
 <text class="h" x="30" y="112" fill="var(--a2)">Preparatory</text>
 <text x="30" y="127" fill="var(--muted)">Imitation</text>
-<text x="175" y="122">Infancy to</text>
-<text x="175" y="137">approx. 2 years</text>
+<text x="175" y="122">Infancy</text>
 <text x="285" y="112">Imitates gestures and words of</text>
 <text x="285" y="127">others without understanding</text>
 <text x="285" y="142">meaning; no distinct sense of</text>
@@ -34,7 +33,6 @@
 <text class="h" x="30" y="207" fill="var(--a3)">Play</text>
 <text x="30" y="222" fill="var(--muted)">Role-taking</text>
 <text x="175" y="217">Early childhood</text>
-<text x="175" y="232">(ages 2 to 6)</text>
 <text x="285" y="207">Takes the role of a single</text>
 <text x="285" y="222">significant other at a time;</text>
 <text x="285" y="237">acts out adult roles and</text>
@@ -47,9 +45,7 @@
 <line x1="20" y1="365" x2="760" y2="365" stroke="var(--ink)" stroke-width="1"/>
 <text class="h" x="30" y="302" fill="var(--a4)">Game</text>
 <text x="30" y="317" fill="var(--muted)">Multiple roles</text>
-<text x="175" y="292">School age</text>
-<text x="175" y="307">(ages 7 and</text>
-<text x="175" y="322">older)</text>
+<text x="175" y="292">Later childhood</text>
 <text x="285" y="302">Takes multiple roles</text>
 <text x="285" y="317">simultaneously; understands</text>
 <text x="285" y="332">rules and expectations</text>
@@ -60,13 +56,12 @@
 
 <!-- Row 4: Adult -->
 <text class="h" x="30" y="397" fill="var(--a1)">Adult</text>
-<text x="30" y="412" fill="var(--muted)">Generalized other</text>
-<text x="175" y="405">Adolescence</text>
-<text x="175" y="420">&amp; adulthood</text>
-<text x="285" y="397">Internalizes the generalized</text>
-<text x="285" y="412">other; understands overarching</text>
-<text x="285" y="427">cultural norms, laws and</text>
-<text x="285" y="442">community expectations</text>
+<text x="30" y="412" fill="var(--muted)">Lifelong learning</text>
+<text x="175" y="405">Adulthood</text>
+<text x="285" y="397">Learns new roles through</text>
+<text x="285" y="412">life transitions; not a fourth</text>
+<text x="285" y="427">stage in Mead's childhood</text>
+<text x="285" y="442">account</text>
 <text x="525" y="397">A trainee teacher adopting</text>
 <text x="525" y="412">professional ethics and</text>
 <text x="525" y="427">societal civic duties</text>
