@@ -12,7 +12,7 @@ with a `concept-map` and two `timeline`s as the Art. III.10 schematics. G1 unit-
 
 | Unit | Stage | Status | Initials | Notes |
 |---|---|---|---|---|
-| Unit 1 | G1 unit-spec | ▢ | | board G0/G1 intake pending |
+| Unit 1 | G1 unit-spec | ▢ | | G0/G1 intake approved under D-2026-0063 (owner-confirmed 2026-10-10; specs/content/efmp-303/intake-3/evaluation.md) and content-spec.md is status: approved; tick awaits CurriculumOwner formalization |
 | Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-303/reviews/unit-01/G2/20261103T112239754Z-gates.json |
 | Unit 1 | G3 en-review | ▢ | | Stale since the figure-geometry repair; needs a fresh G3 run |
 | Unit 1 | G4 ur-translation | ▣ | | complete 7-file UR mirror verified against EN baseline (2026-10-18): 8 .ur.svg/.ur.dark.svg variants wired; structural parity, figure parity, and key_terms clean under temporary reviewed flip (reverted); translation_status stays draft pending fresh independent G5 |
@@ -129,3 +129,5 @@ unit-spec at intake (board-run G0/G1 intake pending).
 | Unit 4 | G3 en-review | ▢ | | advisory: revise; repairs applied; report reviews/unit-04/G3/20261102T212207Z-g3-desk-a0d82ff4.json; unsupported GDP figures and Coombs cycle attribution removed in EN and UR; duplicate concept label fixed; SLO 4-1 retained per approved Topic 4.1 mapping. Render-review remains blocked by crew host restrictions; fresh independent G3 with small-screen, A4 print and figure-clipping inspection required. |
 | Unit 3 | G3 en-review | ▢ | agent:codex | advisory: revise; repairs applied; report specs/content/efmp-303/reviews/unit-03/G3/20261102T212207Z-g3-desk-4e7be754.json; figures, source boundaries, worked examples, assessment guidance and semantic mappings repaired in EN and draft UR. G3 remains open; fresh independent blind solving, author provenance, frozen handoff, page renders and owner G1 reconciliation pending. |
 | Unit 5 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-303/reviews/unit-05/G3/20261102T212207Z-g3-desk-58144d8a.json; sources registered with bound excerpts, concepts remapped, assessment scoring and distractors repaired, illustrative opening scenarios framed, and figure remits/geometry resolved; needs a fresh G3 run |
+| Unit 1 | G3 en-review | ▢ | | advisory: revise; repairs applied; report specs/content/efmp-303/reviews/unit-01/G3/20261102T212819Z-g3-desk-140ce781.json; stale G1 tracker note reconciled with D-2026-0063 (status left for CurriculumOwner); fig-U1-8 wordmark moved below the last panel in EN, dark and UR variants (measure-figure-text clean, no collision). Narrow 360px and A4 print render inspection still not done (crew host forbids build/browser); needs a fresh independent G3 run |
+| Unit 1 | G2 en-draft | ✅ | auto:gates | gates:specs/content/efmp-303/reviews/unit-01/G2/20261103T183510555Z-gates.json |

@@ -10,13 +10,24 @@
 
 ## Unverifiable sources
 
-The following sources are print monographs recommended by the course guide. No open-access
-excerpt could be bound; they are cited by reference only per Constitution Art. III.5.
+The following guide-recommended print works remain unverified. On 2026-11-03, a title/author
+lookup through the Open Library search API requested the first three results and their ebook
+access fields. This limited retrieval attempt did not obtain the cited editions' full text;
+it does not establish that no accessible copy exists elsewhere. Owner authorisation:
+[D-2026-0001](../../../decisions/log.md#d-2026-0001---unretrievable-sources-may-be-flagged-and-passed)
+(confirmed 2026-09-19, corpus-wide) permits proceeding with dated disclosure, not claiming verification.
 
-- `graff2011`: Graff & Birkenstein (2011), *They Say / I Say*. Covers expository writing modes and purpose.
-- `williams2017`: Williams & Bizup (2017), *Style: Lessons in Clarity and Grace*. Covers clarity and coherence.
-- `strunk2000`: Strunk & White (2000), *The Elements of Style*. Covers organization and paragraph construction.
-- `axelrod2016`: Axelrod & Cooper (2016), *The St. Martin's Guide to Writing*. Covers paragraph structure, unity and completeness.
+- `graff2011`: U1-01, U1-02. [Open Library lookup](https://openlibrary.org/search.json?q=They+Say+I+Say+Graff+Birkenstein&limit=3&fields=title%2Cebook_access%2Cfirst_publish_year) returned access fields `printdisabled, printdisabled, no_ebook`. Could not be retrieved on 2026-11-03. D-2026-0001 applies; bibliographic further reading only, not checked support for the teaching claims.
+- `williams2017`: U1-03, U1-04. [Open Library lookup](https://openlibrary.org/search.json?q=Style+Lessons+in+Clarity+and+Grace+Williams+Bizup&limit=3&fields=title%2Cebook_access%2Cfirst_publish_year) returned access fields `printdisabled, no_ebook, no_ebook`. Could not be retrieved on 2026-11-03. D-2026-0001 applies; bibliographic further reading only, not checked support for the teaching claims.
+- `strunk2000`: U1-05. [Open Library lookup](https://openlibrary.org/search.json?q=The+Elements+of+Style+Strunk+White&limit=3&fields=title%2Cebook_access%2Cfirst_publish_year) returned access fields `public, printdisabled, printdisabled`. The public result lists first publication as 1920 and does not verify the cited 2000 fourth edition. Could not be retrieved on 2026-11-03. D-2026-0001 applies; bibliographic further reading only, not checked support for the teaching claims.
+- `axelrod2016`: U1-06, U1-07. [Open Library lookup](https://openlibrary.org/search.json?q=The+St+Martins+Guide+to+Writing+Axelrod+Cooper&limit=3&fields=title%2Cebook_access%2Cfirst_publish_year) returned access fields `printdisabled, printdisabled, printdisabled`. Could not be retrieved on 2026-11-03. D-2026-0001 applies; bibliographic further reading only, not checked support for the teaching claims.
+
+Unchecked conversation, two-move clarity and chapter-level attributions have been removed from
+Topics 1.1-1.3. Their further-reading notes disclose the unavailable text. The claim about most
+Pakistani pupils was removed. The six-type introduction follows the approved content-spec introduction;
+school passages are constructed teaching examples. Coverage rows naming these print keys record
+reading alignment only; they do not assert retrieved textual evidence. `writing2015` supplies
+accessible support for paragraph structure; it does not verify the print works.
 
 ## Open-access binding note
 
