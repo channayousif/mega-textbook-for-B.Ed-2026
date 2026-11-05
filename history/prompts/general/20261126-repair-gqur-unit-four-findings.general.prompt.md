@@ -34,8 +34,8 @@ files:
   - specs/content/gqur-300/reviews/unit-04/G3/repair-20261105.md
 tests:
   - SVG text measurement: PASS for four changed variants
-  - check:content: initial stale G2 manifest; refresh and rerun pending
-  - npm test via scripts/heavy.sh: running
+  - check:content: PASS all 14 gates after G2 evidence and ignored local report refresh
+  - npm test via scripts/heavy.sh: PASS, 31 files and 368 tests
 ---
 
 ## Prompt
@@ -96,12 +96,12 @@ From `specs/content/gqur-300/reviews/unit-04/G3/20261102T212207Z-g3-desk-186abd2
 
 ## Response snapshot
 
-Applied bounded EN/UR repairs and recorded owner-dependent source, glossary and review follow-ups. G3 remains open. Refreshing deterministic G2 evidence before final validation.
+Applied bounded EN/UR repairs and recorded owner-dependent source, glossary and review follow-ups. G3 remains open. Refreshed deterministic G2 evidence; final validation is recorded in the repair handoff.
 
 ## Outcome
 
 - ✅ Impact: Conditional courtyard marking, analytical rice comparison and scaffolding corrected.
-- 🧪 Tests: SVG measurements pass; final gate and unit-test results will be recorded in the repair handoff.
+- 🧪 Tests: All 14 content gates and 368 unit tests pass; four changed SVG variants pass text measurement.
 - 📁 Files: Unit 4 English/Urdu topics and assessment, concept/source records, tracker, shelf figure variants and repair handoff.
 - 🔁 Next prompts: Owner to resolve source support, glossary banking, current renders, blind solve and trusted review provenance.
 - 🧠 Reflection: Content edits invalidate G2 manifests; regenerate evidence from committed inputs without certifying review.
@@ -116,6 +116,6 @@ Applied bounded EN/UR repairs and recorded owner-dependent source, glossary and 
 ## Evaluation notes (flywheel)
 
 - Failure modes observed: Initial content gate correctly detected stale G2 input manifest after repairs.
-- Graders run and results (PASS/FAIL): SVG text measurement PASS; content gates and unit tests recorded in repair handoff after rerun.
+- Graders run and results (PASS/FAIL): SVG text measurement PASS; all 14 content gates PASS; 31 unit-test files and 368 tests PASS.
 - Prompt variant (if applicable): none
 - Next experiment (smallest change to try): Fresh authorised independent verification of changed inputs.

@@ -78,3 +78,5 @@ on every unit).
 | Unit 4 | G3 en-review | ⏳ | CMY | review:specs/content/gqur-300/reviews/unit-04/G3/20261102T212207Z-g3-desk-186abd28.json |
 
 | Unit 4 | G3 en-review | ▢ | | advisory: revise; repairs applied for report reviews/unit-04/G3/20261102T212207Z-g3-desk-186abd28.json; conditional courtyard boundary cases, rice-order analysis, assessment guidance, cylinder scaffolding, concept mappings, EN/UR shelf-length method and limited source attributions repaired; see reviews/unit-04/G3/repair-20261105.md; source authorisation, shared glossary, current renders, blind solve and provenance remain owner follow-ups; no certification |
+
+| Unit 4 | G2 en-draft | ✅ | auto:gates | gates:specs/content/gqur-300/reviews/unit-04/G2/20261105T122519489Z-gates.json |
