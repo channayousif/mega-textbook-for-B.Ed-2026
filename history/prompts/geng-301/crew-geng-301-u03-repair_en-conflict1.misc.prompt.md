@@ -94,7 +94,7 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Merged origin/main into the branch, resolved the one conflict in the Unit 3 G3 tracker table by keeping main's three advisory rows (Units 1, 6, 2) then this branch's Unit 3 row, regenerated the stale content-status report, and passed all 14 content gates.
+Merged origin/main into crew/geng-301-u03-repair_en, resolved the Unit 3 G3 tracker-table conflict keeping both sides' rows, regenerated the stale content-status report, and passed all 14 content gates.
 
 ## Outcome
 
@@ -106,13 +106,12 @@ Merged origin/main into the branch, resolved the one conflict in the Unit 3 G3 t
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into `crew/geng-301-u03-repair_en` and resolved the single conflict in `specs/content/geng-301/tasks.md`, keeping main's Unit 1, Unit 6 and Unit 2 advisory rows ahead of this branch's Unit 3 row (no duplicates, no main entry altered). Regenerated `static/content-status.json` so `check:content-status` passes.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this merge does not certify anything.
+- Shipped / changed: Merged origin/main into crew/geng-301-u03-repair_en, resolved the Unit 3 G3 tracker-table conflict keeping both sides' rows, regenerated the stale content-status report, and passed all 14 content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The branch added no shared-registry entries (glossary, decisions log, gaps, terminology), so no ID renumbering was needed; all shared registries auto-merged cleanly.
-  - `static/content-status.json` is generated; any future content-status edit requires `npm run build:content-status` before `check:content` will pass.
-  - G3 remains open; independent assessment, frozen handoff/provenance, narrow/print rendering and SVG geometry verification remain pending.
+  - G3 remains open; independent assessment, frozen handoff/provenance, narrow/print rendering and SVG geometry verification are still pending.
+  - `static/content-status.json` is generated; run `npm run build:content-status` after any content-status edit or `check:content` will fail.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
