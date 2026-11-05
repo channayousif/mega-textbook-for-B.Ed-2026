@@ -1,0 +1,58 @@
+[
+  {
+    "url": "https://openstax.org/books/introduction-sociology-3e/pages/3-1-what-is-culture",
+    "retrieved_utc": "2026-11-05",
+    "status": 200,
+    "sha256": "37e0d4ddc7d99722359ba68ba97d2686186d79fdb8262feb3d6403b2905b8768",
+    "note": "Frozen short verbatim excerpts extracted from retrieved chapter HTML; raw response SHA-256 recorded, full response not retained. These excerpts support bounded repairs, not all unit claims.",
+    "excerpts": [
+      "Culture can be material or nonmaterial. Metro passes and bus tokens are",
+      "cultural relativism. Cultural relativism is the practice of assessing a culture by"
+    ]
+  },
+  {
+    "url": "https://openstax.org/books/introduction-sociology-3e/pages/3-2-elements-of-culture",
+    "retrieved_utc": "2026-11-05",
+    "status": 200,
+    "sha256": "142dc1aa8b3822d840f740f248762d59eef2de90003443ad8320944ed0fe4820",
+    "note": "Frozen short verbatim excerpts extracted from retrieved chapter HTML; raw response SHA-256 recorded, full response not retained. These excerpts support bounded repairs, not all unit claims.",
+    "excerpts": [
+      "Values are deeply embedded and are critical for learning a culture’s beliefs,",
+      "norms of society and uphold its values, they are often rewarded. A"
+    ]
+  },
+  {
+    "url": "https://openstax.org/books/introduction-sociology-3e/pages/5-1-theories-of-self-development",
+    "retrieved_utc": "2026-11-05",
+    "status": 200,
+    "sha256": "13152ab9f8804476987335387f1710c6d72c67ae57284e1fb6e5c743b1f83717",
+    "note": "Frozen short verbatim excerpts extracted from retrieved chapter HTML; raw response SHA-256 recorded, full response not retained. These excerpts support bounded repairs, not all unit claims.",
+    "excerpts": [
+      "preparatory stage, children are only capable",
+      "play stage, during which children begin",
+      "game stage, children learn to consider",
+      "generalized other, the common behavioral expectations"
+    ]
+  },
+  {
+    "url": "https://openstax.org/books/introduction-sociology-3e/pages/5-3-agents-of-socialization",
+    "retrieved_utc": "2026-11-05",
+    "status": 200,
+    "sha256": "abc4cbbc1a1eebe560c1e3f0a9eafe9349ecc13de0d036452a6db2f159480b23",
+    "note": "Frozen short verbatim excerpts extracted from retrieved chapter HTML; raw response SHA-256 recorded, full response not retained. These excerpts support bounded repairs, not all unit claims.",
+    "excerpts": [
+      "Family is the first agent of socialization. Mothers and fathers, siblings and",
+      "peer groups and families, plus both formal and informal social institutions."
+    ]
+  },
+  {
+    "url": "https://openstax.org/books/introduction-sociology-3e/pages/5-4-socialization-across-the-life-course",
+    "retrieved_utc": "2026-11-05",
+    "status": 200,
+    "sha256": "98b39c295943dc58aa1645af9ee3d36dda842f4871141f51067b1c9cc19c49c4",
+    "note": "Frozen short verbatim excerpts extracted from retrieved chapter HTML; raw response SHA-256 recorded, full response not retained. These excerpts support bounded repairs, not all unit claims.",
+    "excerpts": [
+      "lifelong process."
+    ]
+  }
+]
