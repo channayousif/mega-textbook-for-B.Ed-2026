@@ -18,6 +18,7 @@ links:
 files:
  - docs/semester-2/gqur-301/unit-05/topic-01.mdx
  - docs/semester-2/gqur-301/unit-05/unit-assessment.mdx
+ - history/prompts/gqur-301/crew-gqur-301-u05-repair_en-conflict1.misc.prompt.md
  - history/prompts/gqur-301/crew-gqur-301-u05-repair_en.misc.prompt.md
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-05/topic-01.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-05/unit-assessment.mdx
@@ -74,25 +75,25 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 
 ## Response snapshot
 
-Merged origin/main into crew/gqur-301-u05-repair_en, resolved the one append-only conflict in specs/content/gqur-301/tasks.md (kept main's Unit 2 G3/G2 rows then this branch's Unit 5 G3 row), regenerated static/content-status.json, and made all 14 content gates pass.
+Merged origin/main into crew/gqur-301-u05-repair_en, resolved the append-only tasks.md conflict keeping both sides' rows, regenerated content-status.json, and passed all 14 content gates.
 
 ## Outcome
 
 - Impact: fix for GQUR-301 Unit 5 by opencode (attempt 1).
-- Tests: npm run check:content passed in the job worktree before the merge was committed.
-- Files: 18 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 19 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merged origin/main into crew/gqur-301-u05-repair_en, resolved the one append-only conflict in specs/content/gqur-301/tasks.md (kept main's Unit 2 G3/G2 rows then this branch's Unit 5 G3 row), regenerated static/content-status.json, and made all 14 content gates pass.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this merge does not certify anything.
-- Pending / next owner: crew lead (auto-merge when CI is green, unless the merge touches a protected path).
+- Shipped / changed: Merged origin/main into crew/gqur-301-u05-repair_en, resolved the append-only tasks.md conflict keeping both sides' rows, regenerated content-status.json, and passed all 14 content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The conflict was only in tasks.md; shared registries were untouched by this branch, so no ID renumbering was needed.
-  - P1-P4 (author/run provenance, open G1 under D-2026-0070, answer-blind verification, rendered narrow/A4 inspection) remain open for the evaluator/review host.
-  - G3 stays open for Unit 5; a fresh independent G3 review is required (ADR-0019).
+  - The only conflict was specs/content/gqur-301/tasks.md; shared registries were untouched by this branch, so no ID renumbering was needed.
+  - Unit 5 P1-P4 (author/run provenance, open G1 under D-2026-0070, answer-blind verification, rendered narrow/A4 inspection) remain open for the evaluator/review host; G3 stays open (ADR-0019).
+  - G5 should verify Nastaliq rendering and text-fit inside the inherited viewBox at narrow width and A4 print.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
