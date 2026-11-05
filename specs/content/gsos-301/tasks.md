@@ -97,3 +97,5 @@ G1 unit-spec drafted (pending G0 intake approval).
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/gsos-301/reviews/unit-05/G3/20261102T212207Z-g3-desk-92fc9b44.json |
 | Unit 2 | G3 en-review | ⏳ | CMY | review:specs/content/gsos-301/reviews/unit-02/G3/20261102T212207Z-g3-desk-c859e67a.json |
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/gsos-301/reviews/unit-06/G3/20261102T212740Z-g3-desk-c2180039.json |
+
+| Unit 2 | G3 en-review | ▢ | agent:codex | advisory: revise; repairs applied; report specs/content/gsos-301/reviews/unit-02/G3/20261102T212207Z-g3-desk-c859e67a.json; F1-F5 and F8 repaired in EN/UR; F6 render inspection and F7 original provenance/complete source evidence remain open; fresh independent review required; no certification |
