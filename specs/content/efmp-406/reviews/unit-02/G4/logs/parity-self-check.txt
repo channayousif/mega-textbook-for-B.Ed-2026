@@ -1,0 +1,8 @@
+index.mdx: metadata, heading levels, component counts, figure wiring, MDX syntax OK
+topic-01.mdx: metadata, heading levels, component counts, figure wiring, MDX syntax OK
+topic-02.mdx: metadata, heading levels, component counts, figure wiring, MDX syntax OK
+Assessment numbered groups: 10/10/5/10/10/5
+MCQ self-solve from Urdu: ب، ج، الف، د، ب، ج، د، الف، ج، ب; agrees with preserved key.
+unit-assessment.mdx: metadata, heading levels, component counts, figure wiring, MDX syntax OK
+unit-teacher-notes.mdx: metadata, heading levels, component counts, figure wiring, MDX syntax OK
+key_terms: all ten entries match frozen bank. No Glossary components in English; no glossary lookup required.
