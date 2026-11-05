@@ -20,6 +20,7 @@ files:
  - docs/semester-2/gqur-301/unit-11/unit-assessment.mdx
  - docs/semester-2/gqur-301/unit-11/unit-teacher-notes.mdx
  - history/prompts/gqur-301/20261129-merge-unit-11-repair-conflict.misc.prompt.md
+ - history/prompts/gqur-301/crew-gqur-301-u11-repair_en-conflict1.misc.prompt.md
  - history/prompts/gqur-301/crew-gqur-301-u11-repair_en.misc.prompt.md
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-11/topic-01.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-11/unit-assessment.mdx
@@ -83,7 +84,7 @@ Resolved the Unit 11 merge conflict, preserved existing repairs, and verified al
 
 - Impact: fix for GQUR-301 Unit 11 by codex (attempt 1).
 - Tests: npm run check:content passed in the job worktree before the PR was opened.
-- Files: 21 file(s), listed above.
+- Files: 22 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
