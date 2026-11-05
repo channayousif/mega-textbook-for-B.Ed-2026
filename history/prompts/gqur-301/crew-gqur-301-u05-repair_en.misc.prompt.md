@@ -18,21 +18,22 @@ links:
 files:
  - docs/semester-2/gqur-301/unit-05/topic-01.mdx
  - docs/semester-2/gqur-301/unit-05/unit-assessment.mdx
+ - history/prompts/gqur-301/crew-gqur-301-u05-repair_en.misc.prompt.md
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-05/topic-01.mdx
  - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gqur-301/unit-05/unit-assessment.mdx
  - specs/content/gqur-301/coverage/unit-05.md
- - specs/content/gqur-301/sources/unit-05.md
- - specs/content/gqur-301/sources/texts/lane-u05-2026.md
- - specs/content/gqur-301/tasks.md
  - specs/content/gqur-301/reviews/unit-05/G2/20261105T131356969Z-gates.json
- - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/validate-content.txt
- - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/check-depth-gate.txt
- - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/check-figures.txt
- - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/check-concept-graph.txt
  - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/check-bloom-bands.txt
- - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/check-no-em-dash.txt
- - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/check-no-answer-keys.txt
+ - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/check-concept-graph.txt
+ - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/check-depth-gate.txt
  - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/check-docs-sync.txt
+ - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/check-figures.txt
+ - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/check-no-answer-keys.txt
+ - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/check-no-em-dash.txt
+ - specs/content/gqur-301/reviews/unit-05/G2/logs-20261105T131356969Z/validate-content.txt
+ - specs/content/gqur-301/sources/texts/lane-u05-2026.md
+ - specs/content/gqur-301/sources/unit-05.md
+ - specs/content/gqur-301/tasks.md
 tests:
  - npm run check:content
 ---
@@ -82,32 +83,32 @@ From `specs/content/gqur-301/reviews/unit-05/G3/20261102T212207Z-g3-desk-4bace7e
 - (gqur-301-u05-translate, translate, opencode) brief noted earlier G3 escalation items (RRQ 6 counterexample, RRQ 7 majority language, source/provenance) remain open on the English baseline; this Urdu mirror follows the current English text as-is.
 - (gqur-301-u05-review_en, review_en, codex) Resolve assessment findings, G1/source evidence, run provenance and rendered inspection before fresh review.
 
+
 ## Response snapshot
 
-Repaired the two blocking assessment findings (RRQ 6 now uses a valid right-skewed counterexample, RRQ 7 now distinguishes the modal wage from a majority), removed the grouped-mode formula attribution from the bibliographic-only Chaudhry and Kamal text, bound a Unit 5-specific Lane Chapter 3 excerpt, mirrored every edit into the Urdu files, refreshed the Unit 5 G2 gate evidence and appended an advisory G3 repair row with G3 left open.
+Repaired Unit 5's RRQ 6 right-skewed counterexample and RRQ 7 modal-vs-majority wording, removed the bibliographic-only formula attribution, bound a Unit 5 Lane Chapter 3 note, mirrored the edits into Urdu, refreshed G2 evidence and appended an advisory G3 repair row.
 
 ## Outcome
 
 - Impact: repair_en for GQUR-301 Unit 5 by opencode (attempt 1).
-- Tests: npm run check:content passes every gate except check:content-status, which already fails on origin/main (static/content-status.json missing there, stale here; a generated, git-ignored file).
-- Files: 17 file(s), listed above.
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 18 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: RRQ 6 right-skewed counterexample (2, 2, 2, 3, 10) and aligned mark scheme; RRQ 7 modal-frequency-vs-majority wording; Topic 5.1 formula attribution removed from the body and Further reading; new Unit 5 bound Lane note `sources/texts/lane-u05-2026.md` carrying Chapter 3 support, with Unit 5 coverage/sources re-pointed from `lane2023` to `lane-u05-2026`; Urdu mirror updated; G2 evidence refreshed; advisory G3 row appended, G3 unticked.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this branch certifies nothing. The Lane key change is Unit 5-only; other units still cite `lane2023`, whose shared excerpt still lacks Chapter 3 and remains a course-level gap for a future job.
-- Pending / next owner: fresh independent G3 review; owner/evaluator to settle current G1 evidence, author/reviewer run provenance, solve-before-key verification and rendered narrow/A4 inspection.
+- Shipped / changed: Repaired Unit 5's RRQ 6 right-skewed counterexample and RRQ 7 modal-vs-majority wording, removed the bibliographic-only formula attribution, bound a Unit 5 Lane Chapter 3 note, mirrored the edits into Urdu, refreshed G2 evidence and appended an advisory G3 repair row.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
+- Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - P1-P4 (author/run provenance, open G1 under D-2026-0070, answer-blind verification, rendered inspection) were not author-repairable and remain open.
-  - The Urdu mirror was updated to match the English repairs; G5 should confirm the new RRQ 6/7 wording and the removed formula attribution.
-  - The G2 evidence at `reviews/unit-05/G2/20261105T131356969Z-gates.json` is fresh against the repaired bytes.
+  - P1-P4 (author/run provenance, open G1 under D-2026-0070, answer-blind verification, rendered narrow/A4 inspection) remain open for the evaluator/review host.
+  - Other GQUR-301 units still cite the shared `lane2023` excerpt, which lacks Chapter 3; that course-level gap is outside this Unit 5 job.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
 
-- Failure modes observed: the first attempt edited the shared `sources/texts/lane2023.md`, which invalidated the G2 evidence of 14 GQUR-301 units; reverted and used the established unit-specific `lane-uNN-YYYY` pattern instead.
-- Graders run and results (PASS/FAIL): check:content PASS except the pre-existing check:content-status failure.
+- Failure modes observed: none
+- Graders run and results (PASS/FAIL): check:content PASS
 - Prompt variant (if applicable): crew brief v1
 - Next experiment (smallest change to try): none
