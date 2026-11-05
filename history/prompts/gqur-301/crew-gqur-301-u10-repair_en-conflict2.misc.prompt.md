@@ -16,7 +16,12 @@ links:
   adr: null
   pr: null
 files:
+ - history/prompts/general/20261126-gqur-unit-ten-render-blocker.general.prompt.md
+ - history/prompts/gqur-301/crew-gqur-301-u10-repair_en-conflict1.misc.prompt.md
  - history/prompts/gqur-301/crew-gqur-301-u10-repair_en-conflict2.misc.prompt.md
+ - history/prompts/gqur-301/crew-gqur-301-u10-repair_en.misc.prompt.md
+ - specs/content/gqur-301/reviews/unit-10/repair-en-handoff.md
+ - specs/content/gqur-301/tasks.md
 tests:
  - npm run check:content
 ---
@@ -54,22 +59,23 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gqur-301-u10-repair_en, repair_en, codex) Rendering remains blocked pending an authorised non-production host.
 - (gqur-301-u10-translate, translate, codex) Translation remains draft; independent G3/G5 review, terminology approval and browser/A4 Urdu inspection remain pending.
 
+
 ## Response snapshot
 
-Verified the branch already contains origin/main at c8cf9e9d7 through merge commit 5d7cc00db, confirmed the tasks.md resolution keeps main's Unit 2 and Unit 6 rows then this branch's Unit 10 row, found no shared-registry drift and no conflict markers, regenerated the gitignored content-status artifact, and confirmed all 14 content gates pass. No further merge or content change was required.
+Verified the existing origin/main merge on `crew/gqur-301-u10-repair_en` is complete and correct (tasks.md keeps main's rows plus the branch's Unit 10 row, shared registries unchanged), confirmed all 14 content gates pass, and committed the conflict2 PHR.
 
 ## Outcome
 
-- Impact: verification for GQUR-301 Unit 10 by opencode (attempt 2).
-- Tests: npm run check:content passed in the job worktree.
-- Files: 1 file(s), listed above.
+- Impact: fix for GQUR-301 Unit 10 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 6 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Verified the existing origin/main merge on `crew/gqur-301-u10-repair_en` (commit 5d7cc00db) is complete and correct; no new merge or content repair was needed.
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this job does not certify anything.
+- Shipped / changed: Verified the existing origin/main merge on `crew/gqur-301-u10-repair_en` is complete and correct (tasks.md keeps main's rows plus the branch's Unit 10 row, shared registries unchanged), confirmed all 14 content gates pass, and committed the conflict2 PHR.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - Unit 10 G3 stays open and unsigned (ADR-0019), blocked on an authorised non-production render host; no content repair was possible or required.
