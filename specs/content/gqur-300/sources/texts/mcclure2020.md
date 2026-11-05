@@ -11,13 +11,13 @@ read from this host.
 
 The article reports the development and assessment of a continuing-education unit in
 quantitative literacy designed for high-school STEM teachers. It describes the unit's
-design - building teachers' capacity to read and use quantitative information in their
-subjects - and its assessment, arguing that quantitative-literacy professional
-development for teachers must include reading an indicator's or a claim's construction
-before using it to argue.
+design - building teachers' understanding of quantitative literacy and strategies for
+embedding it into science instruction - and its assessment through pre- and post-unit
+surveys, showing measurable gains in teachers' understanding and subsequent classroom
+practice.
 
 ## What this supports
 
-GQUR-300 Unit 6 (topic-03.mdx, U6-05, U6-06): reading an indicator's construction
-before using it to argue; quantitative-literacy professional development for teachers as
-the frame for the decision loop. Supported at record level.
+GQUR-300 Unit 6 (topic-03.mdx, U6-05): continuing professional development for
+teachers in quantitative literacy as a foundation for data-informed decision-making.
+Supported at record level.

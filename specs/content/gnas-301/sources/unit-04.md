@@ -42,14 +42,15 @@ and any G3 reviewer see the limitation explicitly rather than inferring it from 
 
 ## Unit 4 excerpt support notes
 
-The shared excerpts also bind Unit 3 and are preserved here without modification.
-For Unit 4, their support is limited to these actual uses:
+The shared excerpts bind across units and have been updated to unit-neutral headings
+with aligned support notes. The shared excerpt `who-hearing-2026` is preserved without
+modification to protect Unit 3's bound G2 gate evidence. For Unit 4, their support
+corresponds to these uses:
 
 - who-hearing-2026: topic-07, U4-13, all-cause disabling hearing loss scale, with
   noise a named cause rather than the cause of all cases.
 - who-occupational-health: topic-01, U4-01, mental health and workplace violence
   among service-sector concerns. No U4-10 claim is grounded on this excerpt.
 - who-mental-health-work: topic-07, U4-13, 12 billion working days lost to
-  depression and anxiety. The shared excerpt's note asserting a topic-05 U4-10
-  citation is incorrect; topic-05 does not cite it. This unit's source and coverage
-  rows supersede that support note for Unit 4.
+  depression and anxiety. The stale Topic 4.5 U4-10 assertion in its excerpt note
+  has been removed.
