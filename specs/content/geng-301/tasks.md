@@ -73,3 +73,5 @@ reviewer initials). One row per unit per stage (`G1`–`G7`).
 | Unit 3 | G3 en-review | ⏳ | CMY | review:specs/content/geng-301/reviews/unit-03/G3/20261102T212207Z-g3-desk-bbbec948.json |
 | Unit 5 | G3 en-review | ⏳ | CMY | review:specs/content/geng-301/reviews/unit-05/G3/20261102T212207Z-g3-desk-0ea60289.json |
 | Unit 6 | G3 en-review | ⏳ | CMY | review:specs/content/geng-301/reviews/unit-06/G3/20261102T212207Z-g3-desk-f5b7ea25.json |
+
+| Unit 3 | G3 en-review | ▣ | | advisory: revise; repairs applied for report specs/content/geng-301/reviews/unit-03/G3/20261102T212207Z-g3-desk-bbbec948.json (crew geng-301-u03-repair_en, 2026-11-05). Thesis scope aligned across prose, figures and concept graph; unsupported source claims removed or qualified; coverage and assessment mappings, MCQ 5, RRQ floors/scoring, mixed conclusions, whole-essay evaluation and jumbled-essay practice repaired; activity inputs and weeks 8-10 aligned. No Urdu mirror exists. Fresh independent assessment, frozen handoff, actual provenance and narrow/print/figure geometry verification remain pending; no certification. |
