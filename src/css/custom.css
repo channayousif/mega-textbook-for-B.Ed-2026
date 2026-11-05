@@ -11,39 +11,45 @@
   unicode-range: U+0600-06FF, U+0750-077F, U+FB50-FDFF, U+FE70-FEFF;
 }
 
-/* --- Brand palette (Spec 013) ---------------------------------------------
-   Before Spec 013 this block was two declarations. Infima needs all SEVEN
-   shades - the other five silently fell back to its stock green, so hover and
-   link tints were off-brand - and there was no dark ramp at all, leaving a
-   low-luminance teal on a near-black surface in dark mode.
+/* --- Brand palette (owner's logo kit, 2026-11-04) ---------------------------
+   Infima needs all SEVEN shades, or the missing ones fall back to its stock
+   green. Jade on the warm page ground in light mode, mint on deep ink in dark.
+   Ratios are against the mode's own ground. Anything used for body text or a
+   button ground must clear WCAG AA.
 
-   `--ifm-color-primary` is also `--a1` in the figure token set
-   (scripts/lib/figure-palette.mjs), so figures and site chrome share one hue.
-   Contrast against the mode's own ground is noted per shade; anything used for
-   body text or a button ground clears WCAG AA. */
+   Figures keep token `--a1` #1f6f5c (scripts/lib/figure-palette.mjs), a close
+   relative of jade. That file is imported by gate scripts: do not edit it to
+   follow a site colour change. */
 :root {
-  --ifm-color-primary-darkest: #154b3e;  /* 9.96:1 on white */
-  --ifm-color-primary-darker: #195b4b;   /* 7.96:1 */
-  --ifm-color-primary-dark: #1c6554;     /* 6.91:1 */
-  --ifm-color-primary: #1f6f5c;          /* 6.02:1 */
-  --ifm-color-primary-light: #227b66;    /* 5.13:1 */
-  --ifm-color-primary-lighter: #268770;  /* 4.39:1 - decorative only */
-  --ifm-color-primary-lightest: #2c9f84; /* 3.28:1 - borders/accents only */
+  --ifm-color-primary-darkest: #065548;  /* 8.04:1 */
+  --ifm-color-primary-darker: #066255;   /* 6.69:1 */
+  --ifm-color-primary-dark: #076F60;     /* 5.59:1 */
+  --ifm-color-primary: #087C6B;         /* 4.70:1 */
+  --ifm-color-primary-light: #0A8878;    /* 4.02:1 */
+  --ifm-color-primary-lighter: #0C9482;  /* 3.46:1 */
+  --ifm-color-primary-lightest: #10AE97; /* 2.57:1 */
 }
 
 html[data-theme='dark'] {
-  --ifm-color-primary-darkest: #2b967c;  /* 4.71:1 on #1b1b1d */
-  --ifm-color-primary-darker: #31ae90;   /* 6.21:1 */
-  --ifm-color-primary-dark: #35ba9a;     /* 7.08:1 */
-  --ifm-color-primary: #38c6a4;          /* 8.01:1 */
-  --ifm-color-primary-light: #47cbac;    /* 8.52:1 */
-  --ifm-color-primary-lighter: #57d0b3;  /* 9.07:1 */
-  --ifm-color-primary-lightest: #73d7bf; /* 9.99:1 */
+  --ifm-color-primary-darkest: #42CDA3;  /* 8.07:1 */
+  --ifm-color-primary-darker: #52D3AC;   /* 8.66:1 */
+  --ifm-color-primary-dark: #64DAB6;     /* 9.41:1 */
+  --ifm-color-primary: #77E2C1;         /* 10.32:1 */
+  --ifm-color-primary-light: #8AE7CB;    /* 11.05:1 */
+  --ifm-color-primary-lighter: #9DEBD3;  /* 11.73:1 */
+  --ifm-color-primary-lightest: #B6F0DF; /* 12.70:1 */
 }
 
 /* --- RTL / Nastaliq rendering (FR-002, FR-013, T019) ----------------------- */
+/* Infima draws headings and the body through these variables, so setting
+   `font-family` on <html> alone left headings on the system fallback. Nastaliq
+   has one weight here, so headings stay Regular rather than a smeared fake bold. */
 html[dir='rtl'] {
-  font-family: 'Noto Nastaliq Urdu', 'Noto Naskh Arabic', 'Jameel Noori Nastaleeq', serif;
+  --ifm-font-family-base: 'Noto Nastaliq Urdu', 'Noto Naskh Arabic', 'Jameel Noori Nastaleeq', serif;
+  --ifm-heading-font-family: var(--ifm-font-family-base);
+  --ifm-heading-font-weight: 400;
+  --ifm-heading-line-height: 1.9;
+  font-family: var(--ifm-font-family-base);
 }
 
 html[dir='rtl'] .markdown {
@@ -62,11 +68,21 @@ html[dir='rtl'] code {
 
 /* --- Reading typography (UX refresh, 2026-10-04) ----------------------------
    Long-form readability for the doc column only: larger text, generous
-   leading, a ~72-character measure for running text, and section headings
-   that visibly separate the topic cycle. Tables and figures keep the full
-   column width. The RTL block above wins on line-height by specificity. */
+   leading, and section headings that visibly separate the topic cycle. The RTL
+   block above wins on line-height by specificity.
+
+   One shared column (owner ruling, 2026-11-04). Running text used to stop at a
+   72ch measure inside a wider column, so at 1920px paragraphs ended about 224px
+   short of the cards, rules and images around them and no right edge lined up.
+   The column itself is now the measure: the toolbar, title, text, cards, tables,
+   figures and page footer all share both edges. `max-width` lets it shrink when
+   the viewport or the open sidebar leaves less room.
+
+   The selector targets the container's CSS-module class by prefix on purpose.
+   `html.docs-doc-page` looks like the stable hook, but Helmet drops it briefly
+   while hydrating, and measured loads caught the column jumping to full width. */
 :root {
-  --reading-measure: 72ch;
+  --reading-column: 53.75rem; /* 860px at the default root size */
   --reading-font-size: 1.0625rem;
   --ifm-paragraph-margin-bottom: 1.1rem;
 }
@@ -82,18 +98,9 @@ html[dir='rtl'] code {
   line-height: 1.75;
 }
 
-.theme-doc-markdown > p,
-.theme-doc-markdown > ul,
-.theme-doc-markdown > ol,
-.theme-doc-markdown > blockquote,
-.theme-doc-markdown > h2,
-.theme-doc-markdown > h3,
-.theme-doc-markdown > h4,
-.topic-section > p,
-.topic-section > ul,
-.topic-section > ol,
-.topic-section > h3 {
-  max-width: var(--reading-measure);
+[class*='docItemContainer_'] {
+  max-width: var(--reading-column);
+  margin-inline: auto;
 }
 
 .theme-doc-markdown li + li {
@@ -140,7 +147,7 @@ html[data-theme='dark'] .topic-section > h2 {
   --tone-story-bg: #fdf6e7;
   --tone-story-edge: #d99a2b;
   --tone-task-bg: #eaf5f1;
-  --tone-task-edge: #2c9f84;
+  --tone-task-edge: #0C9482;
   --tone-warn-bg: #fdefee;
   --tone-warn-edge: #c4473f;
   --tone-example-bg: #edf2fb;
@@ -272,7 +279,7 @@ html[data-theme='dark'] {
 }
 
 .bloom-chip--remember { background: #4b6584; }
-.bloom-chip--understand { background: #1f6f5c; }
+.bloom-chip--understand { background: #087C6B; }
 .bloom-chip--apply { background: #8a5a00; }
 .bloom-chip--analyze { background: #7655c2; }
 .bloom-chip--evaluate { background: #b03a48; }
@@ -306,60 +313,6 @@ html[data-theme='dark'] {
   src: url('/fonts/OpenDyslexic-Bold.woff2') format('woff2');
   font-weight: 700;
   font-display: swap;
-}
-
-.reading-toolbar {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
-  padding: 0.4rem 0.6rem;
-  border-radius: 8px;
-  background: var(--ifm-color-emphasis-100);
-  font-size: 0.85rem;
-}
-
-.reading-toolbar__time {
-  font-weight: 600;
-  color: var(--ifm-color-primary-darker);
-}
-
-html[data-theme='dark'] .reading-toolbar__time {
-  color: var(--ifm-color-primary-lighter);
-}
-
-.reading-toolbar__controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem;
-}
-
-.reading-toolbar__btn {
-  min-height: 2rem;
-  padding: 0.2rem 0.6rem;
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: 6px;
-  background: var(--ifm-background-surface-color);
-  color: var(--ifm-font-color-base);
-  font: inherit;
-  cursor: pointer;
-}
-
-.reading-toolbar__btn:disabled {
-  opacity: 0.45;
-  cursor: default;
-}
-
-.reading-toolbar__btn[aria-pressed='true'] {
-  border-color: var(--ifm-color-primary);
-  background: var(--ifm-color-primary);
-  color: #fff;
-}
-
-html[data-theme='dark'] .reading-toolbar__btn[aria-pressed='true'] {
-  color: #10221d;
 }
 
 .reading-progress {
@@ -500,16 +453,23 @@ html[data-theme='dark'] .pagination-nav__label {
   color: var(--ifm-color-primary-lighter);
 }
 
-/* Desktop text justification for LTR prose. Scoped to paragraph elements so
-   headings, lists, and table cells keep their default left-align. Only applies
-   above Docusaurus's 996px sidebar breakpoint where the content column is wide
-   enough that justified text looks intentional rather than stretched.
-   RTL (Urdu) prose is excluded; its text-align: start is set above. */
-@media (min-width: 997px) {
-  html:not([dir='rtl']) .markdown p {
+/* Desktop text justification for LTR prose: paragraphs, list items and callouts
+   end on the column edge (owner ruling, 2026-11-04). Headings, table cells and
+   captions keep their default alignment. Only applies above Docusaurus's 996px
+   sidebar breakpoint where the column is wide enough that justified text looks
+   intentional rather than stretched. RTL (Urdu) prose is excluded; its
+   text-align: start is set above. The dyslexia-friendly mode is excluded too,
+   because uneven word gaps are what that reader asked to get away from. */
+@media screen and (min-width: 997px) {
+  html:not([dir='rtl']):not([data-dyslexic-font]) .markdown :is(p, li) {
     text-align: justify;
     hyphens: auto;
     -webkit-hyphens: auto;
+  }
+  html:not([dir='rtl']) .markdown :is(td, th, figcaption) :is(p, li) {
+    text-align: start;
+    hyphens: manual;
+    -webkit-hyphens: manual;
   }
 }
 
@@ -601,11 +561,14 @@ html[data-theme='dark'] .review-banner--gated {
 .print-handout {
   border: 1px solid var(--ifm-color-primary);
   background: var(--ifm-color-primary);
-  color: #fff;
+  color: #fff; /* 5.11:1 on jade */
   border-radius: 6px;
   padding: 0.4rem 0.8rem;
   cursor: pointer;
   margin-bottom: 1rem;
+}
+html[data-theme='dark'] .print-handout {
+  color: var(--brand-ink); /* white on mint is 1.56:1 */
 }
 .bloom-tag {
   display: inline-block;
@@ -658,6 +621,16 @@ html[data-theme='dark'] .bloom-tag {
 .figure--timeline img,
 .figure--diagram img {
   max-width: min(100%, 760px);
+}
+/* Above phone width every figure fills the shared reading column, so its border
+   lines up with the text. Phones keep the scroll behaviour below, and print keeps
+   the rules further down. These are SVG or generously sized WebP, so the small
+   upscale stays sharp. Specificity beats the archetype cap just above. */
+@media screen and (min-width: 769px) {
+  .markdown .figure img {
+    width: 100%;
+    max-width: 100%;
+  }
 }
 
 /* --- Schematics on a phone: scroll rather than scale past legibility -------
@@ -712,6 +685,14 @@ html[data-theme='dark'] .bloom-tag {
   max-width: 100%;
   overflow-x: auto;
 }
+/* A desktop table fills the shared reading column like everything else. */
+@media screen and (min-width: 997px) {
+  .markdown > table,
+  .markdown table {
+    display: table;
+    width: 100%;
+  }
+}
 
 /* The scroll container above works, but at rest it gave no sign that anything was
    off-screen, and it could not be reached from a keyboard at all. Measured at 360px:
@@ -760,7 +741,7 @@ html[data-theme='dark'] .markdown table[data-scrollable='true'] {
   margin-inline-start: 0.5rem;
   font-size: 0.75rem;
   letter-spacing: 0.02em;
-  color: var(--ifm-color-emphasis-500);
+  color: var(--ifm-color-content-secondary);
 }
 .figure__caption-text + .figure__credit::before {
   content: '·';
@@ -886,13 +867,15 @@ html[data-theme='dark'] .figure__img--dark {
      the dark-theme rules above and later in the file, so this wins in print. */
   :root,
   html[data-theme='dark'] {
-    --ifm-color-primary-darkest: #154b3e;
-    --ifm-color-primary-darker: #195b4b;
-    --ifm-color-primary-dark: #1c6554;
-    --ifm-color-primary: #1f6f5c;
-    --ifm-color-primary-light: #227b66;
-    --ifm-color-primary-lighter: #268770;
-    --ifm-color-primary-lightest: #2c9f84;
+    --ifm-background-color: #fff;
+    --ifm-background-surface-color: #fff;
+    --ifm-color-primary-darkest: #065548;
+    --ifm-color-primary-darker: #066255;
+    --ifm-color-primary-dark: #076F60;
+    --ifm-color-primary: #087C6B;
+    --ifm-color-primary-light: #0A8878;
+    --ifm-color-primary-lighter: #0C9482;
+    --ifm-color-primary-lightest: #10AE97;
     --ifm-color-emphasis-0: #fff;
     --ifm-color-emphasis-100: #f5f6f7;
     --ifm-color-emphasis-200: #ebedf0;
@@ -1245,57 +1228,6 @@ html[dir='rtl'] .dashboard-shell__sidebar {
   }
 }
 
-/* --- Institutional logo strip (footer) ------------------------------------
-   Wordmark placeholders for partner institutions. Replace each .footer-logos__abbr
-   span with an <img> of the official logo when the assets are provided. */
-.footer-logos {
-  border-bottom: 1px solid var(--ifm-color-emphasis-200);
-  background: var(--ifm-background-surface-color);
-}
-
- .footer-logos__heading {
-   font-size: 0.8rem;
-   font-weight: 600;
-   text-transform: uppercase;
-   letter-spacing: 0.06em;
-   color: var(--ifm-color-emphasis-800);
- }
-
-.footer-logos__strip {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 1.25rem 2rem;
-}
-
-.footer-logos__item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 2.5rem;
-}
-
-.footer-logos__abbr {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.35rem 0.75rem;
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: 4px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-  color: var(--ifm-color-emphasis-700);
-  background: var(--ifm-background-color);
-  white-space: nowrap;
-}
-
-.footer-logos__item img {
-  max-height: 2.5rem;
-  max-width: 6rem;
-  object-fit: contain;
-}
 
 @media print {
   .footer-logos {

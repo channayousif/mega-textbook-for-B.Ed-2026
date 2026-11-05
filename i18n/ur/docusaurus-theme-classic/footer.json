@@ -1,14 +1,58 @@
 {
-  "link.title.Legal": {
-    "message": "قانونی",
-    "description": "The title of the footer links column with title=Legal in the footer"
-  },
   "link.item.label.Privacy & Cookies": {
     "message": "پرائیویسی اور کوکیز",
     "description": "The label of footer link with label=Privacy & Cookies linking to /privacy"
   },
   "copyright": {
-    "message": "بی ایڈ (چار سالہ) میگا ٹیکسٹ بک - جامعہ سندھ، شعبۂ تعلیم۔",
+    "message": "textbook.com.pk - دو لسانی نصابی کتابوں کا مجموعہ اور سیکھنے کا پلیٹ فارم۔",
     "description": "The footer copyright"
+  },
+  "link.title.Programmes": {
+    "message": "پروگرام",
+    "description": "The title of the footer links column with title=Programmes"
+  },
+  "link.title.For you": {
+    "message": "آپ کے لیے",
+    "description": "The title of the footer links column with title=For you"
+  },
+  "link.title.Guides": {
+    "message": "رہنمائی",
+    "description": "The title of the footer links column with title=Guides"
+  },
+  "link.title.About": {
+    "message": "تعارف",
+    "description": "The title of the footer links column with title=About"
+  },
+  "link.item.label.B.Ed": {
+    "message": "بی ایڈ",
+    "description": "The label of footer link with label=B.Ed"
+  },
+  "link.item.label.Teaching licence": {
+    "message": "تدریسی لائسنس",
+    "description": "The label of footer link with label=Teaching licence"
+  },
+  "link.item.label.Create an account": {
+    "message": "اکاؤنٹ بنائیں",
+    "description": "The label of footer link with label=Create an account"
+  },
+  "link.item.label.Become a reviewer": {
+    "message": "جائزہ کار بنیں",
+    "description": "The label of footer link with label=Become a reviewer"
+  },
+  "link.item.label.Student guide": {
+    "message": "طلبہ کی رہنمائی",
+    "description": "The label of footer link with label=Student guide"
+  },
+  "link.item.label.Teacher guide": {
+    "message": "اساتذہ کی رہنمائی",
+    "description": "The label of footer link with label=Teacher guide"
+  },
+  "link.item.label.About": {
+    "message": "تعارف",
+    "description": "The label of footer link with label=About"
+  },
+  "link.item.label.Contact": {
+    "message": "رابطہ",
+    "description": "The label of footer link with label=Contact"
   }
 }
