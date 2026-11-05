@@ -1,32 +1,29 @@
 # Bound excerpt - mocc-2021-nccp
 
 Government of Pakistan, Ministry of Climate Change. (2021). *Updated National Climate Change Policy
-2021*. Government of Pakistan, Islamabad.
+2021*. Government of Pakistan, Islamabad. https://mocc.gov.pk/SiteImage/Policy/NCCP%202021.pdf
 
-Official government policy document, published open access for public guidance and implementation.
-Extracts below cover national environmental priorities, climate vulnerabilities, and institutional
-responses.
+Official government policy document, published open access. The content below is paraphrase,
+checked against the ministry PDF (retrieved 2026-11-05); it is not verbatim quotation.
 
-## Climate vulnerability and disaster impacts (used by Unit 6, U6-07)
+## Climate vulnerability (used by Unit 6, U6-07)
 
-From Section 1 (Introduction and Background): "Pakistan consistently ranks among the top ten most
-vulnerable countries to the adverse impacts of climate change on the Global Climate Risk Index,
-despite contributing less than 1 percent of global greenhouse gas emissions. The country faces
-increased frequency and intensity of extreme climate events, including catastrophic riverine floods,
-prolonged droughts, heatwaves, and erratic monsoon patterns."
+Paraphrase of the Introduction: Pakistan makes a tiny contribution to total global greenhouse gas
+emissions, among the lowest in the world, yet it is among the countries most vulnerable to climate
+change and has very low technical and financial capacity to adapt. The policy identifies increased
+frequency and intensity of extreme weather events, floods, droughts, heatwaves and glacial melt as
+the main climate risks.
 
-## Water scarcity and glacial retreat (used by Unit 6, U6-07)
+## Forests (used by Unit 6, U6-07)
 
-From Section 3 (Water Resources): "Pakistan has transitioned from a water-abundant country to a
-water-stressed nation, with per capita annual water availability declining toward the acute scarcity
-threshold of 1,000 cubic metres. Accelerated melting of glaciers in the Hindukush-Karakoram-Himalaya
-ranges poses long-term risks to flow stability in the Indus River Basin, threatening agricultural
-food security and domestic drinking water supply."
+Paraphrase of Section 4.4 (Forestry): only 5.45 percent of Pakistan's total land area is under
+forest. The policy prioritises afforestation, catchment protection and community-based sustainable
+forest management. It does not state a "25 percent" international forest standard; that figure is
+not in this document and must not be attributed to it.
 
-## Deforestation and ecosystem restoration (used by Unit 6, U6-07)
+## Water (used by Unit 6, U6-07)
 
-From Section 4 (Forestry and Ecosystems): "Total forest cover in Pakistan stands below 5 percent of
-total land mass, well below the internationally recommended 25 percent standard. Severe
-deforestation accelerates land degradation, biodiversity loss, and soil erosion while amplifying
-downstream flood severity. Policy responses prioritise national afforestation programmes, catchment
-protection, and community-based sustainable forest management."
+The policy identifies water scarcity and insufficient clean water availability as climate risks. It
+does not state the "1,000 cubic metres" benchmark. The unit's water-availability figures come from
+the National Water Policy 2018 and the Pakistan Council of Research in Water Resources, not from
+this policy.
