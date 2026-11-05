@@ -1,6 +1,6 @@
 ---
 id: crew-gpks-402-u06-repair_en-conflict1
-title: crew repair_en conflict1 GPKS-402 unit 6
+title: crew fix GPKS-402 unit 6
 stage: misc
 date: 2026-11-05
 surface: agent
@@ -8,45 +8,42 @@ model: opencode
 feature: gpks-402
 branch: crew/gpks-402-u06-repair_en
 user: crew
-command: crew repair_en conflict1
-labels: ["crew", "opencode", "repair_en"]
+command: crew fix
+labels: ["crew", "opencode", "fix"]
 links:
   spec: specs/content/gpks-402/content-spec.md
   ticket: null
   adr: null
   pr: null
 files:
- - docs/semester-2/gpks-402/unit-02/topic-01.mdx
- - docs/semester-2/gpks-402/unit-02/topic-02.mdx
- - docs/semester-2/gpks-402/unit-02/unit-assessment.mdx
- - docs/semester-2/gpks-402/unit-02/unit-teacher-notes.mdx
- - history/prompts/gpks-402/crew-gpks-402-u02-repair_en.misc.prompt.md
+ - docs/semester-2/gpks-402/unit-06/topic-01.mdx
+ - docs/semester-2/gpks-402/unit-06/topic-02.mdx
+ - docs/semester-2/gpks-402/unit-06/topic-03.mdx
+ - docs/semester-2/gpks-402/unit-06/unit-assessment.mdx
+ - history/prompts/gpks-402/550-repair-gpks402-u06-g3.general.prompt.md
  - history/prompts/gpks-402/crew-gpks-402-u06-repair_en-conflict1.misc.prompt.md
- - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gpks-402/unit-02/topic-01.mdx
- - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gpks-402/unit-02/topic-02.mdx
- - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gpks-402/unit-02/unit-assessment.mdx
- - i18n/ur/docusaurus-plugin-content-docs/current/semester-2/gpks-402/unit-02/unit-teacher-notes.mdx
- - specs/content/gpks-402/figures/unit-02.md
- - specs/content/gpks-402/reviews/unit-02/G2/20261105T111715992Z-gates.json
- - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/check-bloom-bands.txt
- - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/check-concept-graph.txt
- - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/check-depth-gate.txt
- - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/check-docs-sync.txt
- - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/check-figures.txt
- - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/check-no-answer-keys.txt
- - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/check-no-em-dash.txt
- - specs/content/gpks-402/reviews/unit-02/G2/logs-20261105T111715992Z/validate-content.txt
- - specs/content/gpks-402/sources/texts/khan-khan-2020-aligarh.md
- - specs/content/gpks-402/sources/unit-02.md
+ - history/prompts/gpks-402/crew-gpks-402-u06-repair_en.misc.prompt.md
+ - specs/content/gpks-402/coverage/unit-06.md
+ - specs/content/gpks-402/reviews/unit-06/G2/20261105T112904958Z-gates.json
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261105T112904958Z/check-bloom-bands.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261105T112904958Z/check-concept-graph.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261105T112904958Z/check-depth-gate.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261105T112904958Z/check-docs-sync.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261105T112904958Z/check-figures.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261105T112904958Z/check-no-answer-keys.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261105T112904958Z/check-no-em-dash.txt
+ - specs/content/gpks-402/reviews/unit-06/G2/logs-20261105T112904958Z/validate-content.txt
+ - specs/content/gpks-402/sources/texts/mocc-2021-nccp.md
+ - specs/content/gpks-402/sources/texts/nacta-nap-2014.md
+ - specs/content/gpks-402/sources/texts/national-nutrition-survey-2018.md
+ - specs/content/gpks-402/sources/texts/national-water-policy-2018.md
+ - specs/content/gpks-402/sources/texts/paigham-e-pakistan-2018.md
+ - specs/content/gpks-402/sources/texts/satp-pakistan-fatalities.md
+ - specs/content/gpks-402/sources/texts/unicef-education-2024.md
+ - specs/content/gpks-402/sources/texts/worldbank-pdu-2025-unit-06.md
+ - specs/content/gpks-402/sources/texts/worldbank-poverty-equity-brief-2024.md
+ - specs/content/gpks-402/sources/unit-06.md
  - specs/content/gpks-402/tasks.md
- - static/img/figures/gpks-402/unit-02/fig-U2-1.dark.svg
- - static/img/figures/gpks-402/unit-02/fig-U2-1.svg
- - static/img/figures/gpks-402/unit-02/fig-U2-1.ur.dark.svg
- - static/img/figures/gpks-402/unit-02/fig-U2-1.ur.svg
- - static/img/figures/gpks-402/unit-02/fig-U2-4.dark.svg
- - static/img/figures/gpks-402/unit-02/fig-U2-4.svg
- - static/img/figures/gpks-402/unit-02/fig-U2-4.ur.dark.svg
- - static/img/figures/gpks-402/unit-02/fig-U2-4.ur.svg
 tests:
  - npm run check:content
 ---
@@ -84,27 +81,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (gpks-402-u06-translate-r1, translate, codex) English author must repair scoring and unresolved G3 findings before translation resumes; status remains draft.
 - (gpks-402-u06-translate-r1, translate, codex) English author must repair scoring and unresolved G3 findings before translation resumes; status remains draft.
 
+
 ## Response snapshot
 
-Merged origin/main into crew/gpks-402-u06-repair_en and resolved the single conflict in specs/content/gpks-402/tasks.md by keeping both sides' appended G3 rows: main's Unit 2 advisory-revise row first, then this branch's Unit 6 advisory-revise row. No shared-registry conflict (glossary.json, specs/decisions/log.md, specs/gaps.md, specs/content/terminology.csv were identical on both sides), so no ID renumbering was needed. The merge imported main's 152 other files (mostly other courses' repair commits). Regenerated the gitignored static/content-status.json so check:content-status compares current; all 14 content gates pass.
+Merged origin/main into `crew/gpks-402-u06-repair_en`, resolved the single `specs/content/gpks-402/tasks.md` conflict by keeping both sides' appended G3 advisory-revise rows (main's Unit 2 row first, then the branch's Unit 6 row), regenerated the gitignored content-status report, and committed the merge plus its PHR with all content gates green.
 
 ## Outcome
 
-- Impact: conflict1 merge for GPKS-402 Unit 6 by opencode (attempt 1).
-- Tests: npm run check:content passed (14/14 content gates) after regenerating the gitignored content-status report.
-- Files: 31 file(s), listed above.
+- Impact: fix for GPKS-402 Unit 6 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 28 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: merge commit 2e973e560 resolving the tasks.md conflict with main; both G3 advisory-revise rows retained (main's Unit 2 row first, then the branch's Unit 6 row); no shared-registry entries changed.
-- Decisions the team must respect: tasks.md stage rows are append-only and the last row per unit/stage is authoritative; main's Unit 2 G3 row precedes the branch's Unit 6 G3 row.
+- Shipped / changed: Merged origin/main into `crew/gpks-402-u06-repair_en`, resolved the single `specs/content/gpks-402/tasks.md` conflict by keeping both sides' appended G3 advisory-revise rows (main's Unit 2 row first, then the branch's Unit 6 row), regenerated the gitignored content-status report, and committed the merge plus its PHR with all content gates green.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
   - F01 (author-run provenance) and F08 (rendered narrow/A4 evidence) remain host-supplied; G3 stays open under ADR-0019.
   - No Urdu mirror exists for Unit 6, so translation remains a separate job.
-  - A fresh independent G3 review is needed before the unit can be ticked; the refreshed G2 evidence is at `reviews/unit-06/G2/20261105T112904958Z-gates.json`.
+  - A fresh independent G3 review is needed before the unit can be ticked; refreshed G2 evidence is at `specs/content/gpks-402/reviews/unit-06/G2/20261105T112904958Z-gates.json`.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
