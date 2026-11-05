@@ -16,7 +16,28 @@ links:
   adr: null
   pr: null
 files:
+ - docs/semester-3/efmp-406/unit-03/index.mdx
+ - docs/semester-3/efmp-406/unit-03/topic-01.mdx
+ - docs/semester-3/efmp-406/unit-03/topic-02.mdx
+ - docs/semester-3/efmp-406/unit-03/unit-assessment.mdx
+ - history/prompts/efmp-406/crew-efmp-406-u03-repair_en-conflict1.misc.prompt.md
  - history/prompts/efmp-406/crew-efmp-406-u03-repair_en-conflict2.misc.prompt.md
+ - history/prompts/efmp-406/crew-efmp-406-u03-repair_en.misc.prompt.md
+ - history/prompts/general/2447-efmp-406-u03-repair-en.general.prompt.md
+ - specs/content/efmp-406/coverage/unit-03.md
+ - specs/content/efmp-406/glossary/unit-03.json
+ - specs/content/efmp-406/reviews/unit-03/G2/20261103T182710608Z-gates.json
+ - specs/content/efmp-406/reviews/unit-03/G2/logs-20261103T182710608Z/check-bloom-bands.txt
+ - specs/content/efmp-406/reviews/unit-03/G2/logs-20261103T182710608Z/check-concept-graph.txt
+ - specs/content/efmp-406/reviews/unit-03/G2/logs-20261103T182710608Z/check-depth-gate.txt
+ - specs/content/efmp-406/reviews/unit-03/G2/logs-20261103T182710608Z/check-docs-sync.txt
+ - specs/content/efmp-406/reviews/unit-03/G2/logs-20261103T182710608Z/check-figures.txt
+ - specs/content/efmp-406/reviews/unit-03/G2/logs-20261103T182710608Z/check-no-answer-keys.txt
+ - specs/content/efmp-406/reviews/unit-03/G2/logs-20261103T182710608Z/check-no-em-dash.txt
+ - specs/content/efmp-406/reviews/unit-03/G2/logs-20261103T182710608Z/validate-content.txt
+ - specs/content/efmp-406/sources/texts/ashraf-2021-multilingual.md
+ - specs/content/efmp-406/sources/texts/papen-2023-nls.md
+ - specs/content/efmp-406/sources/unit-03.md
  - specs/content/efmp-406/tasks.md
 tests:
  - npm run check:content
@@ -55,27 +76,28 @@ Earlier attempts may have left work on this branch. Check `git log origin/main..
 - (efmp-406-u03-repair_en, repair_en, claude) The Papen and Ashraf source files previously held invented quotes; both are now real quotes, and Ashraf must not be cited for reading outcomes, dropout or MTB-MLE effects.
 - (efmp-406-u03-repair_en, repair_en, claude) No source is attached for the literacy event/practice or dominant/vernacular terms (Topic 3.1 presents them as working terms); a later job could add Barton and Hamilton.
 
+
 ## Response snapshot
 
-Merged origin/main (99473fec3) into the branch, resolved the single append-only conflict in `specs/content/efmp-406/tasks.md` by keeping main's Unit 2 G3 advisory row before this branch's Unit 3 G2 and G3 rows, regenerated the gitignored `static/content-status.json`, and confirmed all 14 content gates pass.
+Merged origin/main into the branch, resolved the tasks.md append-only conflict keeping both sides, regenerated content-status, and passed all 14 content gates.
 
 ## Outcome
 
-- Impact: fix for EFMP-406 Unit 3 by opencode (attempt 2).
-- Tests: npm run check:content passed after the merge (14/14 gates).
-- Files: 2 file(s), listed above.
+- Impact: fix for EFMP-406 Unit 3 by opencode (attempt 1).
+- Tests: npm run check:content passed in the job worktree before the PR was opened.
+- Files: 23 file(s), listed above.
 - Next prompts: the crew planner derives the unit's next stage from main after merge.
 - Reflection: none recorded by the dispatcher.
 
 ## Handoff (for CEO and agents)
 
-- Shipped / changed: Merge commit a16013f04 brings origin/main into the branch; the tasks.md conflict was resolved append-only (main's Unit 2 G3 row, then this branch's Unit 3 G2/G3 rows).
-- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this merge does not certify anything.
+- Shipped / changed: Merged origin/main into the branch, resolved the tasks.md append-only conflict keeping both sides, regenerated content-status, and passed all 14 content gates.
+- Decisions the team must respect: G3/G5 stay advisory until a qualified sign-off; this PR does not certify anything.
 - Pending / next owner: crew lead (auto-merge when CI is green, unless the PR touches a protected path).
 - Notes for the next job on this unit:
-  - The merge is committed locally on `crew/efmp-406-u03-repair_en`; do not push or open a PR from this job.
-  - `static/content-status.json` is gitignored and must be regenerated (`npm run build:content-status`) after any tracker edit or the content-status gate fails.
+  - `static/content-status.json` is gitignored; run `npm run build:content-status` after any tracker edit or the content-status gate fails.
   - G3/G5 remain open and unsigned; the Unit 3 G3 advisory row still records missing author run identity and browser/print evidence.
+  - Merge is local only on `crew/efmp-406-u03-repair_en`; do not push or open a PR.
 - Paperclip issues affected: none (Paperclip paused; work tracked by the crew board).
 
 ## Evaluation notes (flywheel)
